@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["potassium"]={"potassium","[pə'tæsɪəm]","[pə'tæsɪəm]","n.钾",'n.钾','No potassium did we find in this mineral.','在这种矿石中我们没有发现钾。','||Potassium|| is necessary to the existence of all living things.','钾是所有生物生存必须的。'}

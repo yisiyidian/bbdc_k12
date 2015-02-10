@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["succinct"]={"succinct","[sək'sɪŋ(k)t]","[sək'sɪŋkt]","adj.简洁的",'adj.简洁的|||adj.[古]紧身的','The decoration style is so succinct.','装修风格如此简约。','Please give me a succinct summary of your points.','请你简明扼要的概括下你的观点。'}

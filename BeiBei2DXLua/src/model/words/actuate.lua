@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["actuate"]={"actuate","['æktʃʊeɪt; -tjʊ-]","['æktʃuet]","v.促使",'v.促使,激励|||vt.驱使','He was actuated solely by greed.','他完全是受了贪欲的驱使。','The speech actuated dissent.','该演讲激起了异议。'}

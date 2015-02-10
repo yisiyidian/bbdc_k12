@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imbecile"]={"imbecile","['ɪmbɪsiːl]","['ɪmbɪsaɪl]","n.心智能力极低的人",'n.心智能力极低的人|||adj.愚蠢的，傻的','I don\'t want to deal with these imbeciles any longer.','我再也不想和这些笨蛋打交道了。','It was an imbecile thing to do.','这么做是一件蠢事。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["skilled"]={"skilled","[skɪld]","[skɪld]","adj.有技能的",'adj.有技能的,熟练的','He is a skilled worker.','他是个熟练工人。','We have many skilled seamen on our ship.','我们船上有很多有经验的水手。'}

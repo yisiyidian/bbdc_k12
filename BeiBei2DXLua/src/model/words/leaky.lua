@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["leaky"]={"leaky","['liːkɪ]","['liki]","adj.泄露的",'adj.出现裂缝的，泄漏的','A leaky roof; a leaky defense system.','有漏缝的屋顶；被泄密的防御体系','The plumber went down to the cellar to fix the leaky pipe.','管道工到地下室去修漏水的管子。'}

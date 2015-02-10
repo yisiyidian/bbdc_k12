@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["appealing"]={"appealing","[ə'piːlɪŋ]","[ə'pilɪŋ]","adj.引起兴趣的",'adj.引起兴趣的,动人的','I am appealing on behalf of the famine victims.','我代表饥民恳求援助.','He was appealing for funds to build a new school.','他在恳求拨款修建一所新学校。'}

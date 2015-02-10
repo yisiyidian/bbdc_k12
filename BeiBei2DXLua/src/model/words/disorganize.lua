@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disorganize"]={"disorganize","[dɪs'ɔːɡənaɪz]","[ dis'ɔ:ɡənaiz ]","vt.破坏组织",'vt.破坏组织,搅乱秩序,使混乱','Dynamo\'s defense looks disorganized.','迪纳摩队的防守看起来已瓦解了。','My boss is completely disorganized.','我的老板完全陷入了人生的困境。'}

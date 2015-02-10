@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incipient"]={"incipient","[ɪn'sɪpɪənt]","[ɪn'sɪpɪənt]","adj.起初的",'adj.起初的,发端的,初期的','There were signs of incipient panic.','出现了早期的恐慌迹象。','monitor the health of the financial system and sniff out incipient problems','监督金融体系的健康和嗅出早期问题'}

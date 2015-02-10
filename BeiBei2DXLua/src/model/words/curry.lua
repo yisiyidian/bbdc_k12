@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["curry"]={"curry","['kʌrɪ]","['kɝi]","n.咖哩粉",'n.咖哩粉,咖哩饭菜|||vt.用咖哩粉调味,用马栉梳,制革','I went for a curry last night.','昨晚我去吃了咖喱菜。','Heat the curry thoroughly and serve it on a bed of rice.','把咖喱热透后浇在米饭上。'}

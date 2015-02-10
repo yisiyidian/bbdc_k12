@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cope"]={"cope","[kəʊp]","[kop]","v.竞争",'v.(with)竞争,对抗,对付,妥善处理|||vi.对付,妥善处理','How do you cope with the problem of poor vision?','怎样解决视力不好这一难题呢?','I cannot cope with such a pile of work.','我无法处理这么多工作。'}

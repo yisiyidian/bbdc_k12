@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stupendous"]={"stupendous","[stjuː'pendəs]","[stu'pɛndəs]","adj.惊人的",'adj.惊人的,巨大的','He made a stupendous mistake.','他犯了一个极大的错误。','The opera was quite stupendous.','这部歌剧很精彩。'}

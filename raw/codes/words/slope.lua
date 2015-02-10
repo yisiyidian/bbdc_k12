@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slope"]={"slope","[sləʊp]","[slop]","n.倾斜",'n.倾斜,斜坡,斜面,斜线|||vt.使倾斜|||vi.倾斜,有坡度','The car skidded off the road and rolled over and over down the slope.','汽车滑出路面，打着滚翻下坡去。','The slope increases as you go up the curve.','上了弯道以后，路越来越陡。'}

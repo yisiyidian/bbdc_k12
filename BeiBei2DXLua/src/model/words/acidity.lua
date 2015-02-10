@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["acidity"]={"acidity","[ə'sɪdɪtɪ]","[ə'sɪdəti]","n.酸性",'n.酸性,酸度','Abnormal acidity of the blood.','酸血症血液中不正常的酸度','Some freshwater fish such as pike can withstand levels of acidity.','一些诸如梭鱼等淡水鱼可以抵御相当程度的酸性。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chemistry"]={"chemistry","['kemɪstrɪ]","['kɛmɪstri]","n.化学",'n.化学,化学性质,相互作用','They may choose to study foreign languages, advanced mathematics or science, such as physics or chemistry.','他们可以选择学习外国语文、高等数学或像物理、化学的科学。','No one can cope with him in ||Chemistry||.','在化学方面，谁也比不上他。'}

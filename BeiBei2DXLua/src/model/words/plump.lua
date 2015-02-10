@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plump"]={"plump","[plʌmp]","[plʌmp]","adj.丰满的",'adj.丰满的,丰富的,直接的|||vi.下降,支持,变丰满|||vt.突然放下,支持,使丰满|||n.突然膨胀,坠落|||adv.骤降,直线下降,不加限制的','She plumped out the truth at the oddest times.','她在最不合适的时候讲出了实话。','He switched on the light and plumped up the cushions.','他打开了灯，拍松了靠垫。'}

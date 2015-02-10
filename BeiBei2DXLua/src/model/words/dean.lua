@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dean"]={"dean","[din]","[ di:n ]","n.系主任",'n.系主任,学院院长|||vi.当系主任','He rushed off another10 copies dean.','他又给主任赶印了10份。','The dean returned in the late afternoon.','系主任是在傍晚时分回来的。'}

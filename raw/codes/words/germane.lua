@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["germane"]={"germane","[dʒɜː'meɪn]","[dʒɝ'men]","adj.有密切关系的",'adj.有密切关系的,适切的,剀切的','The fact is not germane to this issue.','事实与这个问题没有密切关系。','They are germane to each other.','他们俩关系密切。'}

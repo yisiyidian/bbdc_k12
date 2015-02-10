@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["application"]={"application","[ˌæplɪ'keɪʃ(ə)n]","[ˌæpləˈkeʃən]","n.应用",'n.适用，应用，运用；申请，请求，申请表格；勤勉，用功；敷用，敷用药','The committee were unanimous that the application should be turned down.','委员会一致同意拒绝这项申请。','I didn\'t receive an acknowledgement of my application.','对我的申请，我还没有收到回信。'}

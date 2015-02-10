@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seashell"]={"seashell","['siːʃel]","['si'ʃɛl]","n.海贝",'n.海贝，贝壳','Small seashells were often used as a primitive kind of money.','小贝壳常被用作简单的货币。','',''}

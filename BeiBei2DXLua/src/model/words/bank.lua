@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bank"]={"bank","[bæŋk]","[bæŋk]","n.银行",'n.银行,堤,岸|||vt.堆积|||vi.开户,把...存入银行','The town stands on the left bank of the river.','城镇位于河的左岸。','Clouds are banking up.','云层正在堆积。'}

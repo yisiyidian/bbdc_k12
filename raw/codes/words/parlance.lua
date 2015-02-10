@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["parlance"]={"parlance","['pɑːl(ə)ns]","['pɑrləns]","n.说法",'n.说法,语调，辩论','In programmers\' parlance, it\'s a feature, not a bug.','按照程序员的说法，它是一个功能，而不是一个缺陷。','The phrase is common diplomatic parlance for spying.','这种说法是指代间谍行为的常用外交辞令。'}

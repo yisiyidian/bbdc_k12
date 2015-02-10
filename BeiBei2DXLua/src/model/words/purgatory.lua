@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["purgatory"]={"purgatory","['pɜːgət(ə)rɪ]","['pɝɡətɔri]","n.灵魂的净化",'n.灵魂的净化,涤罪,炼狱|||adj.涤罪的','||Purgatory|| is a religious word which is a place for people to wash away their sins.','炼狱是个宗教词汇，是洗脱人罪过的地方。','He\'s so impatient that waiting in queues is sheer purgatory for him.','他毫无耐性，对他来说排队等候完全是活受罪。'}

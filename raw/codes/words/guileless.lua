@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["guileless"]={"guileless","['gaɪllɪs]","[ 'ɡaillis ]","adj.不狡猾的",'adj.不狡猾的,诚实的','She gave him a guileless look, but he knew he couldn\'t really trust her.','她朝他诚恳地看了一眼，但是他知道他不能真正地相信她。','He is a guileless young man.','他是个诚实的年轻人。'}

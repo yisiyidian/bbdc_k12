@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hospitality"]={"hospitality","[hɒspɪ'tælɪtɪ]","[,hɑspɪ'tæləti]","n.好客",'n.好客,殷勤','I hope it\'s not imposing on you/your hospitality, but could I stay to dinner?','我可以在您这儿吃顿饭吗? 不过希望不要使您为难[觉得我不知趣].','In response to their hospitality, we wrote a thank-you note.','为回报他们的热情, 我们写了一封感谢信。'}

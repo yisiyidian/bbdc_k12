@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["potato"]={"potato","[pə'teɪtəʊ]","[pə'teto]","n.马铃薯",'n.马铃薯,土豆','Stick the fork into the potato.','用叉子插土豆.','The potato is a vegetable, not a fruit.','马铃薯是一种蔬菜，不是一种水果。'}

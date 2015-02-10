@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["internet"]={"internet","['ɪntənet]","['ɪntɚnɛt]","n.因特网",'n.因特网','People lose control of the time they spend on the ||Internet||.','人们不能控制他们在网络上所花费的时间.','I surf the ||Internet|| two hours a day.','我每天上网冲浪两个小时.'}

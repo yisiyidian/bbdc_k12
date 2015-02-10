@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enthusiast"]={"enthusiast","[ɪn'θjuːzɪæst; en-]","[ɪn'θuzɪæst]","n.热心人",'n.热心人，热衷者','A person who is filled with enthusiasm, as for a pursuit or hobby; an enthusiast.','耽迷者充满热情的人, 如为了某种追求或嗜好; 热心者','A horseracing enthusiast, especially one who watches races at the outer rail of the track.','比赛狂赛马的迷恋者, 尤指在跑道外侧栅栏处观看比赛的人'}

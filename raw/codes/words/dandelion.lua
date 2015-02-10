@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dandelion"]={"dandelion","['dændɪlaɪən]","['dændɪlaɪən]","n.蒲公英",'n.蒲公英','The downy flower head of a dandelion that has gone to seed.','蒲公英的绒毛花蒲公英的长茸的花头, 吹散后可以播种','We regard dandelion as an emblem of hope.','我们把蒲公英看作希望的象征。'}

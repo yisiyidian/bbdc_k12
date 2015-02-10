@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jaguar"]={"jaguar","['dʒægjʊə]","[ˈdʒæɡˌwɑr, ˈdʒæɡjuˌɑr]","n.美洲虎",'n.美洲虎','And so dawns the Age of the ||Jaguar||.','美洲虎时代开始了','Look!it is a jaguar.','看！它是一只美洲虎。'}

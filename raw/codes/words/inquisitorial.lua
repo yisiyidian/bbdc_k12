@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inquisitorial"]={"inquisitorial","[ɪn,kwɪzɪ'tɔːrɪəl]","[ɪn,kwɪzə'torɪəl]","adj.询问者的",'adj.询问者的,严格审问的,好询问的','a true inquisitorial talents','真正的询问信息的天才','An English information was inquisitorial in nature. 英格兰诉讼本质上是调查审问式的。','0'}

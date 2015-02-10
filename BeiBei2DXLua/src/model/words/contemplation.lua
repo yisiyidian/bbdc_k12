@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["contemplation"]={"contemplation","[,kɒntem'pleɪʃ(ə)n]","[,kɑntəm'pleʃən]","n.注视",'n.注视,沉思,打算','She seemed lost in contemplation.','她似乎已陷入浑然忘我的沉思中。','Each morning the priest spent an hour in quiet contemplation.','每天早晨神父静静地沉思一小时。'}

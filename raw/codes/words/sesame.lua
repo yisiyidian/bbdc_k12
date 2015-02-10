@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sesame"]={"sesame","['sesəmɪ]","['sɛsəmi]","n.芝麻",'n.芝麻','His uncle\'s advice become his open sesame during his entire career.','他舅舅的忠告成了他整个事业中的成功诀窍。','||Sesame|| is good for health','芝麻有利于身体健康'}

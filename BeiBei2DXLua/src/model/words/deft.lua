@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deft"]={"deft","[deft]","[ deft ]","adj.敏捷熟练的",'adj.敏捷熟练的,灵巧的','With deft fingers she untangled the wire.','她用灵巧的手指解开了金属线。','She is deft at dealing with reporters.','她善於与记者周旋。'}

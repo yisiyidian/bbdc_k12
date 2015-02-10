@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stitch"]={"stitch","[stɪtʃ]","[stɪtʃ]","n.一针",'n.一针,疼痛,碎布条|||vt.&vi.缝合','Will you stitch a button on this shirt?','请你在这件衬衫上钉一颗钮扣好吗？','A stitch in time saves nine.','小洞不补大洞吃苦.'}

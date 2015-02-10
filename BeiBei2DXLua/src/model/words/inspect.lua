@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inspect"]={"inspect","[ɪn'spekt]","[ɪn'spɛkt]","vt.调查",'vt.调查,检阅|||vi.调查','A man employed to inspect and repair railroad tracks.','铁路养路工检查和修理铁轨的工人','The stewards will inspect the course to see if racing is possible.','那些干事将检视赛马场看是否适宜比赛。'}

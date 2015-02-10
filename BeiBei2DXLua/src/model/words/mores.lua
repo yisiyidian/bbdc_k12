@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mores"]={"mores","['mɔːreɪz; -riːz]","['mɔrez]","n.风俗",'n.风俗,习惯,民德,道德观念','Traditional mores hold sway around you, most important in the preference for sons over daughters.','传统观念阻碍着你，尤其是偏爱儿子而非女儿的这件事上。','They assumed that immigrants would quickly adopt the mores of their host societies.','他们认为，移民者会很快入乡随俗，向主流社会靠近。'}

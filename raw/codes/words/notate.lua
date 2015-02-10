@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["notate"]={"notate","['notet]","[ nəu'teit, 'nəuteit ]","vt.写标志",'vt.写标志','He notated the key point of the book.','他=把书中的重点标记出来。','||Notating|| is good for memorizing.','笔记对记忆有好处。'}

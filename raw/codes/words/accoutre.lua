@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accoutre"]={"accoutre","[ə'kuːtə]","[ ə'ku:tə ]","vt.供给服装",'vt.供给服装,装备|||=accouter','Hikers are accoutred with walking sticks, water bottles, trail maps, and compasses。','远足的人配备了手杖、水瓶、地形图和指南针。','accoutre','v. 供给服装,装备'}

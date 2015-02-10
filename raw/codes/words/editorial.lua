@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["editorial"]={"editorial","[edɪ'tɔːrɪəl]","[,ɛdɪ'tɔrɪəl]","n.社论",'n.社论|||adj.编辑的','I am on the editorial staff of the newspaper.','我在这家报纸的编辑部工作。','The editorial is entitled "..." .','这篇社论的题目是《。。。》。'}

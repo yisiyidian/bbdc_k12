@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["repine"]={"repine","[rɪ'paɪn]","[ ri'pain ]","v.不满",'v.不满,心中抱怨','He repined against his unhappy lot.','他自叹命运多舛。','You mustn\'t let yourself repine.','你决不能容许自己牢骚满腹。'}

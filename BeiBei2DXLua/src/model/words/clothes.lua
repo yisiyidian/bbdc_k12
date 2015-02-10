@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clothes"]={"clothes","[kləʊ(ð)z]","[kloðz]","n.衣服",'n.衣服','We have to wear woolen clothes in the cold winter.','寒冷的冬天，我们不得不穿毛织品。','The wet clothes will soon dry in the sun.','湿衣服在太阳下很快就会干的。'}

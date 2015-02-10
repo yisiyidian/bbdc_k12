@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sausage"]={"sausage","['sɒsɪdʒ]","['sɔsɪdʒ]","n.香肠",'n.香肠,腊肠','She loves sausage and mash.','她喜欢香肠和土豆泥。','The sausage began to spit in the pan.','锅里香肠开始滋滋作响.'}

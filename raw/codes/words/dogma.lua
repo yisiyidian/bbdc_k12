@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dogma"]={"dogma","['dɒgmə]","['dɔɡmə]","n.教条",'n.教条，信条','Every dogma must have its day.','每一种教条都必定自有其得意之时。','The dogmas of the quiet past are inadequate to the stormy present','“平静的过去时代的那些信条，不适用于暴风骤雨式的现代社会了”'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interrogate"]={"interrogate","[ɪn'terəgeɪt]","[ɪn'tɛrəɡet]","v.质问",'v.质问,讯问,审问','He was interrogated by the police for over 12 hours.','他被警察审问了12个多小时。','The lawyer took two hours to interrogate the witness.','律师费两个小时的时间讯问证人。'}

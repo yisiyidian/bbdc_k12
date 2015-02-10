@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fitful"]={"fitful","['fɪtfʊl; -f(ə)l]","['fɪtfəl]","adj.断断续续的",'adj.断断续续的,一阵阵的','I worried half the night and had a fitful sleep.','我半个晚上都一直在担心，故而时醒时睡。','The fitful signals annoyed everyone listening the radio.','断断续续的信号惹恼了所有听广播的人。'}

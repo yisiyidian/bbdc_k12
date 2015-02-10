@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["come"]={"come","[kʌm]","[kʌm]","vi.来",'vt.接近，扮演|||vi.来，发生，达到，进入','The train slowly ||came|| to the station.','火车缓缓地进站。','Your family should always come before your job.','你的家庭应该比你的工作重要。'}

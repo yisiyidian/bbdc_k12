@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["moldy"]={"moldy","['məʊldɪ]","['moldi]","adj.发霉的",'adj.发霉的','We had a moldy holiday - it rained every day.','我们的假日过得好无聊，每天都下雨。','They\'ve given us a pretty moldy pay increase this year.','我们今年的加薪少的可怜。'}

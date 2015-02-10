@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["garland"]={"garland","['gɑːlənd]","['gɑrlənd]","n.花环",'n.花环|||v.戴花环','A garland of flowers, especially one worn around the neck.','花环，花冠用鲜花制成的花环，尤指戴在脖子上的花环','One flower makes no garland.','【谚】一朵鲜花，难做花环。'}

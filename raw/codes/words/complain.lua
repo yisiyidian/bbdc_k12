@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["complain"]={"complain","[kəm'pleɪn]","[kəm'plen]","vi.抱怨",'vi.抱怨,悲叹,控诉','Stop grumbling! You\'ve got nothing to complain about.','别抱怨了! 你没什麽可抱怨的.','You\'ve got nothing to complain about.','你没什么可抱怨的。'}

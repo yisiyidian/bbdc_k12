@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["microscopic"]={"microscopic","[maɪkrə'skɒpɪk]","[,maɪkrə'skɑpɪk]","adj.显微镜的",'adj.显微镜的，极小的，微观的','The lady look one another over with microscopic carelessness.','女士们以显微镜式的、好象漫不经心的眼光彼此察看了（一会儿）。','It\'s impossible to read his microscopic handwriting.','不可能看清他那极小的书写字迹。'}

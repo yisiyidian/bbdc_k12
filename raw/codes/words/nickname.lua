@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nickname"]={"nickname","['nɪkneɪm]","['nɪk'nem]","n.绰号",'n.绰号,昵称|||v.给...取绰号,叫错名字','As he was always cheerful he had the nickname Smiler\'.','他总是快快乐乐的, 因而得了个外号叫｀乐乐＇.','They nicknamed him "Lofty" because he was so tall.','他们给他起了个绰号叫“高个儿”， 因为他身材很高。'}

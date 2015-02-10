@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incandescent"]={"incandescent","[ɪnkæn'des(ə)nt]","['ɪnkən'dɛsnt]","adj.光亮的",'adj.光亮的,发白热光的,白热化的|||n.白炽灯泡','The embers were still incandescent although the flames had disappeared.','尽管火焰已灭，余烬仍然炽热。','The incandescent lamp we use in daily life was invented by Edison.','我们日常生活中用的白炽灯，是爱迪生发明的'}

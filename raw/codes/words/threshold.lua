@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["threshold"]={"threshold","['θreʃəʊld; 'θreʃ,həʊld]","['θrɛʃhold]","n.极限",'n.极限,门槛,入口,开端','The treaty will be the threshold of lasting peace.','这个条约将成为持久和平的开端。','The tax threshold for a single pensioner is 450 dollars.','单身养老金领取者的征税起点是450美元。'}

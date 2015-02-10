@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dinosaur"]={"dinosaur","['daɪnəsɔː]","['daɪnə'sɔr]","n.恐龙",'n.恐龙|||n.(俚)过时、落伍的人或事物','The old, big-city teaching hospital looks like a dinosaur','“古老的大城市教学医院象是一个恐龙”','The natural history museum have a special exhibition of dinosaur.','自然历史博物馆专门搞了一次恐龙展览。'}

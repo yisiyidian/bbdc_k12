@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["croak"]={"croak","[krəʊk]","[krok]","v.嗄嗄叫",'v.嗄嗄叫,发牢骚,死|||n.嗄嗄声,哇哇声','He sat on the playground listening to the distant croak.','他坐在操场上，聆听远处的蛙鸣。','A bullfrog was croaking in the distance.','一只牛蛙在远处呱呱地叫。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coefficient"]={"coefficient","[,kəʊɪ'fɪʃ(ə)nt]","[,koɪ'fɪʃnt]","n.系数",'n.系数','A coefficient of one means the markets move perfectly in step.','系数为1表示各个市场的步调完全一致。','The value of the sticking coefficient may have to be revised.','附着系数的值可能应有所修正.'}

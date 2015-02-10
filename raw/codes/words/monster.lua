@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["monster"]={"monster","['mɒnstə]","['mɑnstɚ]","n.怪物",'n.怪物，巨物，有威慑力的力量，恶人，超于常人的成功|||adj.巨大的，庞大的','I\'m frightened of the monster.','我怕妖怪。','He was possessed with a monster.','他被一个怪物缠上了。'}

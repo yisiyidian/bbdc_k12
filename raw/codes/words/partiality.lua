@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["partiality"]={"partiality","[pɑːʃɪ'ælɪtɪ]","['pɑrʃɪ'æləti]","n.偏袒",'n.偏袒,偏心，癖好','The umpire showed partiality for that team.','那个裁判偏向那个队。','She is criticized by some others for her one-sidedness and partiality.','还有一些人批评她片面、偏心。'}

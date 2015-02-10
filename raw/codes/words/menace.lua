@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["menace"]={"menace","['menəs]","['mɛnəs]","n.威胁",'n.威胁,胁迫|||v.威吓,胁迫','Our country is menaced by war.','我们的国家受到战争威胁。','That film creates an atmosphere of menace.','那部影片营造出吓人的气氛。'}

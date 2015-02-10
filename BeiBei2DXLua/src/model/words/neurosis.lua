@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["neurosis"]={"neurosis","[,njʊə'rəʊsɪs]","[nʊ'rosɪs]","n.神经症",'n.神经症,神经衰弱症','He was anxious to the point of neurosis.','他的忧虑达到了神经机能病症状的程度。','She had a neurosis about chemicals and imagined them everywhere doing her harm.','她的神经官能症对化学药品有反应，这让她总是幻想药品对自己有害。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["practitioner"]={"practitioner","[præk'tɪʃ(ə)nə]","[præk'tɪʃənɚ]","n.从业者",'n.从业者','A licensed practitioner of psychoanalysis.','心理分析医生有开业许可证的心理分析医生','She was a medical practitioner before she entered politics.','从政前她是个开业医生.'}

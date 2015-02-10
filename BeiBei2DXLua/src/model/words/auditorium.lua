@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["auditorium"]={"auditorium","[ɔːdɪ'tɔːrɪəm]","[,ɔdɪ'tɔrɪəm]","n.礼堂",'n.礼堂，观众席','That auditorium is as large again as this.','那个大礼堂比这个大一倍。','The auditorium was packed that night.','这天晚上，礼堂里挤满了人。'}

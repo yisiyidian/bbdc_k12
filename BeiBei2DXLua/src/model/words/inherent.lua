@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inherent"]={"inherent","[ɪn'hɪər(ə)nt; -'her(ə)nt]","[ɪn'hɪrənt]","adj.内在的",'adj.内在的,固有的','The desire for freedom is inherent in us all.','对自由的渴望是我们所有人的天性。','He has an inherent distrust of foreigners.','他天生对外国人不信任。'}

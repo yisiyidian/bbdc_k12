@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["packet"]={"packet","['pækɪt]","['pækɪt]","n.储存器",'n.储存器,讯息封,小包|||v.打包,装进小包','The Government has clapped an extra ten pence on a packet of cigarettes.','政府对每包香烟额外提价十便士.','The postman tried to crush the packet through the letter-box.','邮递员使劲把邮件塞进信箱里.'}

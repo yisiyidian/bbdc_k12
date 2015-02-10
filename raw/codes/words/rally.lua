@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rally"]={"rally","['rælɪ]","['ræli]","n.集会",'n.集会,重振旗鼓,示威运动,回合|||vi.(人)集合起来,重整旗鼓,恢复精神|||vt.重新召集,激励,嘲弄','The team was thrown on(to) the defensive as their opponents ||rallied||.','该队在对手重整旗鼓後, 被迫采取守势.','They will hold a peace rally.','他们要举行一个拥护和平的大会。'}

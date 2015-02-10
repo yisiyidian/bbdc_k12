@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pad"]={"pad","[pæd]","[pæd]","n.填补",'n.填补,衬垫,印色盒,信笺簿|||vt.走过,用软物塞填,夸大|||vi.徒步','I made my speech longer by padding it with a few jokes.','我插进了几则笑话，把我的讲话拉长了。','He jotted down a note on the pad by the telephone.','他在电话机旁的便笺本草草记下一个通知。'}

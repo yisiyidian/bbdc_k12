@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["altercation"]={"altercation","[ɒltə'keɪʃ(ə)n]","[,ɔltɚ'keʃən]","n.争论",'n.争论,口角','Throughout the entire altercation, not one sensible word was uttered.','争了半天，没有一句话是切合实际的。','I had a slight altercation with some people who objected to our filming.','我和一些反对我们拍摄的人发生了小小的口角。'}

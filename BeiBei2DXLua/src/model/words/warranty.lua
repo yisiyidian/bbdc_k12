@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["warranty"]={"warranty","['wɒr(ə)ntɪ]","['wɔrənti]","n.担保",'n.担保,保证,根据','The car is sold with a twelve-month warranty.','该车出售时附有一张一年的保质单。','The machine is still under warranty.','这台机器仍在保修期内。'}

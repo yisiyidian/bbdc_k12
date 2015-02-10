@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["donor"]={"donor","['dəʊnə; -nɔː]","['donɚ]","n.捐赠人",'n.捐赠人|||[计算机]施主','The donor\'s blood is compatible with the recipient\'s.','供血者的血和受血者的血是相容的。','They are not allowed to reveal the identity of the sperm donor.','他们不能透露精子捐献者的身份。'}

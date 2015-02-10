@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recusant"]={"recusant","['rekjʊz(ə)nt]","[rə'kjuzənt]","n.拒绝服从的人",'adj.不服从规章的|||n.拒绝服从的人','This remote county was full of Popish recusants.','这个偏远的县里满是不服天主教的人。','I come from a recusant family and was educated at Catholic schools.','我出生在一个不服英国国教的家庭，在天主教学校里接受的教育。'}

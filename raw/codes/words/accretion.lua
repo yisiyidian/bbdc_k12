@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accretion"]={"accretion","[ə'kriːʃ(ə)n]","[ə'kriʃən]","n.增大",'n.增大,添加,添加物|||n.[地]冲击层','Every culture is an accretion.','每一种文化都是长期积淀的结果。','A coral reef is built by the accretion of tiny, identical organisms.','珊瑚礁是由许多相同的微生物不断堆积而成。'}

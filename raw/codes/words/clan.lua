@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clan"]={"clan","[klæn]","[klæn]","n.氏族",'n.氏族,宗族,党派','All the higher- grade engineer have forme a little clan of their own.','所有的高级工程师组成了他们自己的小团体。','The whole clan is coming to stay with them at Christmas.','他们那一大帮亲戚要在圣诞节期间来他们这里住。'}

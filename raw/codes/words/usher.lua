@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["usher"]={"usher","['ʌʃə]","['ʌʃɚ]","n.带位员",'n.带位员,招待员|||vt.引导,护送|||vi.做招待,担任引座员','The usher stood at the door giving out programs.','招待员站在门口分发节目单。','She ushered the visitor into the room.','她把来访者引进屋子里。'}

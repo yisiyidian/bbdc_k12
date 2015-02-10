@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["smarmy"]={"smarmy","['smɑːmɪ]","['smɑrmi]","adj.令人厌烦的",'adj.令人厌烦的,爱说奉承话的','Will the movie take its smarmy misogyny all the way, or will it pull back in the end?','N/A','a tone of smarmy self-satisfaction','令人厌烦的自我满足的腔调。'}

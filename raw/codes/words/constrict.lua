@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["constrict"]={"constrict","[kən'strɪkt]","[kən'strɪkt]","v.压缩",'v.压缩,束紧,使收缩','The tight collar constricted his neck.','紧领子勒着他的脖子。','Tight shoes constrict the feet.','鞋子太紧会挤脚。'}

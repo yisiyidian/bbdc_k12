@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lower"]={"lower","['ləʊə]","['loɚ]","v.降低",'adj.低的,下级的,下层的|||vt.降低,跌落,减弱,贬低|||vi.皱眉,降低,阴沉,变少|||n.皱眉,下级,阴沉的样子,前兆','The meat will scorch if you don\'t lower the gas.','如果你不把煤气调小一点，肉就要焦了。','They had to lower their sights and buy a smaller house than they would have liked.','他们原来想买一所大房子，後来不得不降低要求买一所较小的。'}

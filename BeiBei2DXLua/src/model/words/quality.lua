@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quality"]={"quality","['kwɒlɪtɪ]","['kwɑləti]","n.品质",'n.品质,特质,才能|||adj.高品质的','We should improve what is called the quality of living.','我们应该改进所谓的生活品质。','It\'s difficult to recruit teachers of quality.','要聘请到素质好的老师是很困难的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bilious"]={"bilious","['bɪlɪəs]","['bɪlɪəs]","adj.胆汁的",'adj.胆汁的，胆汁过多的,坏脾气的','He was a bilious old gentleman.','他是一位脾气乖戾的老先生。','His speech was a bilious, rancorous attack on young people.','他的讲话是对年轻人满怀敌意的狂暴攻击。'}

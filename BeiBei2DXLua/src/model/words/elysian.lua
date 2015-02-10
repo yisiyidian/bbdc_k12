@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["elysian"]={"elysian","[ɪ'lɪʒən]","[ i'liziən ]","adj.快乐的",'adj.快乐的','People always think that life is of little elysian.','人们总是觉得生命中的快乐是有限的。','The summer, in some climates, makes possible to man a sort of ||Elysian|| life.','在有些地方，夏天可以让人过上天堂般的生活。'}

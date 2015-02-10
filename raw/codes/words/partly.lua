@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["partly"]={"partly","['pɑːtlɪ]","['pɑrtli]","adv.部分地",'adv.在一定程度上，部分地，不完全地','The scheme is partly financed by a government grant.','此计画有一部分是政府资助的.','His attitudes were shaped partly by early experiences.','他的想法在一定程度上是由他早期的经历决定的.'}

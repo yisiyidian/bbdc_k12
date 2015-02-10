@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["customer"]={"customer","['kʌstəmə]","['kʌstəmɚ]","n.顾客",'n.顾客，家伙','a satisfied customer','一位满意的顾客','The quality of customer service is extremely important.','客户服务质量极其重要。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["appease"]={"appease","[ə'piːz]","[ə'piz]","v.安抚",'v.安抚,缓和,平息，姑息','He hunted up a restaurant to appease his hunger.','他好容易找到一家餐馆去填饱肚子。','He has to appease his young brother.','他不得不迁就他的弟弟。'}

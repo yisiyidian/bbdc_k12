@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["persistent"]={"persistent","[pə'sɪst(ə)nt]","[pə'zɪstənt]","adj.坚持的",'adj.固执的,坚持的,连续的','His persistent questions finally goaded me into an angry reply.','他三番五次地问问题惹得我回答时也没有好气.','She resented his persistent approaches.','他一再地表示亲近使她很反感.'}

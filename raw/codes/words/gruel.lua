@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gruel"]={"gruel","['grʊəl]","['ɡruəl]","n.稀粥",'n.稀粥','Patients need gruel rather than rice.','病人需要稀粥而不是米饭。','During the depression, people only eat bread and gruel that was offered from government.','大萧条时期，人们每天只能吃政府发放的稀粥和面包。'}

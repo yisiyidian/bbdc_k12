@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tomato"]={"tomato","[tə'mɑːtəʊ]","[tə'meto]","n.西红柿",'n.西红柿','Is a tomato a fruit or a vegetable?','蕃茄是水果还是蔬菜?','Would you like some tomato juice?','你想要些番茄汁吗？'}

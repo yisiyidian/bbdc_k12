@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rampant"]={"rampant","['ræmp(ə)nt]","['ræmpənt]","adj.猖獗的",'adj.猖獗的,蔓延的,奔放的','That area is full of rampant lawlessness.','那个地区充斥着犯罪事件。','Sickness was rampant in the country.','疾病在这个国家很猖獗。'}

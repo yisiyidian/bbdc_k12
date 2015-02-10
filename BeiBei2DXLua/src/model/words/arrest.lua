@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arrest"]={"arrest","[ə'rest]","[ə'rɛst]","n.逮捕",'n.逮捕,监禁|||vt.拘捕,妨碍,吸引','The police arrested the thief.','警察逮捕了小偷。','The police made several arrests.','警察逮捕了好几个人。'}

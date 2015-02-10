@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["auxiliary"]={"auxiliary","[ɔːg'zɪlɪərɪ; ɒg-]","[ɔːɡ'zɪlɪəri]","n.帮助者",'n.帮助者,辅助物,助动词|||adj.附加的,辅助的','She is an auxiliary nurse.','她是一名助理护士。','He is our auxiliary.','他是我们的帮助者。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["great"]={"great","[greɪt]","[ɡret]","adj.伟大的",'adj.大量的,很好的,美好的,伟大的,重要的|||adv.(口语)好极了','It\'s a great relief to know you\'re safe.','知你平安无事才放下心来','It\'s great to have met you!','与您会面令人十分愉快'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flash"]={"flash","[flæʃ]","[flæʃ]","n.闪光",'n.闪光,闪现,闪烁物,花哨,一瞬间,电脑动画技术|||vi.闪现,闪烁|||vt.传送,用光联络,流露出|||adj.花哨的,炫耀的,昙花一现的','His first novel was a flash in the pan, and he hasn\'t written anything decent since.','他的第一部小说如昙花一现，此後他再没写出像样的东西。','||Flashes|| are not allowed to be used in this museum.','这个博物馆里不准使用闪光灯。'}

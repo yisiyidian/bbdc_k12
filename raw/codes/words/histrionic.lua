@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["histrionic"]={"histrionic","[,hɪstrɪ'ɒnɪk]","['hɪstrɪ'ɑnɪk]","adj.演员的",'adj.演员的,演剧的,有如演戏的|||n.演员,演剧,戏剧性','Dorothea let out a histrionic groan.','多罗西娅装腔作势地呻吟了一声。','Mid-term elections do not normally generate such histrionic imagery.','中期选举通常不会有如此戏剧化的情景。'}

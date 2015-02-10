@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["skew"]={"skew","[skjuː]","[skju]","adj.斜交的(不对称的",'adj.斜交的(不对称的,误解的)|||n.斜交(歪斜,歪轮,斜砌石)|||vt.歪斜,扭转|||vi.歪斜,斜视','The picture is a bit skew.','这幅画有点歪.','The arithmetic of nuclear running costs has been skewed by the fall in the cost of other fuels.','对核运行费用的计算因其他燃料费用的下降而出现了偏差。'}

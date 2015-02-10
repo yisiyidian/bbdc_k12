@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prehensile"]={"prehensile","[prɪ'hensaɪl]","[prɪ'hɛnsl]","adj.可以抓住的",'adj.可以抓住的，可以掌握、领悟的','Monkey’s prehensile tails allow them to cling to trees in seemingly impossible position.','猴子的尾巴适于抓握，这让它们得以用看似不可能的姿势攀附着树木。','The meaning of this paper is prehensile.','这篇文章很容易理解。'}

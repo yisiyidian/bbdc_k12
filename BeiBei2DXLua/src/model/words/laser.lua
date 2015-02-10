@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["laser"]={"laser","['leɪzə]","['lezɚ]","n.激光",'n.激光','We keep a laser record.','我们保存激光唱片.','The first liquid laser was operated in January of 1963.','第一个液体激光器是在1963年1月运转的.'}

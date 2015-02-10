@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["iron"]={"iron","['aɪən]","['aɪɚn]","n.铁",'adj.刚强的|||n.铁,熨斗,坚强,(复数)铁制物|||vt.熨烫(平),用铁装备|||vi.熨烫(平)','Tom didn\'t iron his shirt yesterday.','汤姆昨天没有熨衬衣。','The period in which man learnt to make tools of iron is called the Iron Age.','人类学会用铁制造工具的时代称为铁器时代。'}

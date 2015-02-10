@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["down"]={"down","[daʊn]","[daʊn]","adj.向下的",'adj.向下的,降低的,情绪低落,停止运行|||adv.向下的,下跌,在南方|||n.绒毛,汗毛,轻视|||prep.沿着...而下','She\'s got a down on me.','她很讨厌我.','She\'s terribly down on people who don\'t do things her way.','她对不按她的要求做事的人十分不满。'}

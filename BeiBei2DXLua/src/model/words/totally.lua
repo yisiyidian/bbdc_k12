@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["totally"]={"totally","['təʊtəlɪ]","['totəli]","adv.完全",'adv.完全','The rampart was destroyed totally.','壁垒被彻底摧毁了。','I am totally bewildered by the clues to this crossword puzzle.','这个纵横字谜的提示完全把我弄糊涂了.'}

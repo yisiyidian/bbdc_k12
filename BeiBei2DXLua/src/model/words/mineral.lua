@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mineral"]={"mineral","['mɪn(ə)r(ə)l]","['mɪnərəl]","adj.矿物的",'adj.矿物的|||n.矿物,矿石','We are digging for mineral deposits.','我们正在掘地探矿.','They have sold up ten crates of mineral water in the afternoon.','他们这个下午卖掉了十箱矿泉水。'}

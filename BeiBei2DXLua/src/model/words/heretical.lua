@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heretical"]={"heretical","[hɪ'retɪk(ə)l]","[ hi'retikəl ]","adj.异教的",'adj.异教的,异端的','One who originates or is the chief proponent of a heresy or heretical movement.','异端创始或领导人异端邪说或运动的发起者或主要倡导者','A heretical or unorthodox religious belief.','宗教信仰异教的或非正统的宗教信仰'}

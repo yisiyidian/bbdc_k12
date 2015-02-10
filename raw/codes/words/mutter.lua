@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mutter"]={"mutter","['mʌtə]","['mʌtɚ]","n.喃喃低语",'n.喃喃低语|||v.喃喃自语,作低沉声,出怨言','She kept on muttering to herself.','她老是一个人嘀嘀咕咕。','Actors often mutter to themselves when rehearsing their lines.','演员背台词的时候经常自己嘀嘀咕咕。'}

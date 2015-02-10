@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deafen"]={"deafen","['def(ə)n]","['dɛfən]","vt.使聋",'vt.使聋，把...震聋','We\'re being deafened by next door\'s stereo.','隔壁的立体声音响要把我们耳朵震聋.','The head injury deafened her for life.','她头部受伤以致终身耳聋.'}

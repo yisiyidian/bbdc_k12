@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["phoenix"]={"phoenix","['fiːnɪks]","['finɪks]","n.凤凰",'n.凤凰,长生(不死)鸟|||引申为重生','Out of the ashes of the economic shambles, a phoenix of recovery can arise.','复苏之凤会从经济废墟的灰烬中腾飞而起。','suddenly there he was like a phoenix rising form the ashes.','突然他出现.就好像凤凰重生一样.'}

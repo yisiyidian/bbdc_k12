@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["secrete"]={"secrete","[sɪ'kriːt]","[sɪ'krit]","v.隐秘",'v.隐秘,隐藏,隐匿|||v.分泌','Tears are secreted by an organ under the upper eyelid.','眼泪由上眼睑下面的器官分泌。','The kidneys secrete urine.','肾脏是分泌尿液的器官。'}

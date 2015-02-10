@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["immense"]={"immense","[ɪ'mens]","[ɪ'mɛns]","adj.巨大的",'adj.巨大的,广大的,非常好的','They made an immense improvement in English.','在英语方面他们取得了巨大的进步.','Her services to the state have been immense.','她对国家的贡献极大.'}

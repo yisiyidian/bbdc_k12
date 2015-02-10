@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sane"]={"sane","[seɪn]","[sen]","adj.心智健全的",'adj.心智健全的,理智的','She have a sane attitude towards diving and never go too fast.','她对於跳水的态度很明智，从不操之过急。','Guilt had been eating into his conscience for sane months.','几个月来他的良心一直受到折磨。'}

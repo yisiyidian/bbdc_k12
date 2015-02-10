@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["virgin"]={"virgin","['vɜːdʒɪn]","['vɝdʒɪn]","n.处女",'n.处女,未婚女子|||adj.纯洁的,原始的，未开发的|||维尔京群岛','virgin snow.','洁白的雪','Roman Christian who, according to tradition, was martyred as a virgin at the age of13. She is the patron saint of young girls.','阿格尼斯罗马基督徒，据传13岁时作为处女而殉教。她是年轻少女的保护神'}

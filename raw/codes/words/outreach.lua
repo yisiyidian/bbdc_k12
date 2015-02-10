@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outreach"]={"outreach","[aʊt'riːtʃ]","[,aʊt'ritʃ]","n.能达到的范围",'n.能达到的范围|||vt.比...到达更远,超过','An educational outreach to illiterate adults.','对文盲的教育服务项目扩大','She had to outreach her opponent to win the fencing match.','要赢得这场击剑比赛的胜利她就必须战胜对手'}

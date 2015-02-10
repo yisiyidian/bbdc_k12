@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jingoism"]={"jingoism","['dʒɪŋɡoɪzəm]","[ 'dʒiŋɡəuizəm ]","n.沙文主义",'n.主战论,武力外交政策,沙文主义','Patriotism can turn into jingoism very quickly.','爱国主义可以很快转变为沙文主义。','Such pantomime jingoism sells newspapers, but misses the nuanced position of locals.','这种童话剧般的极端爱国主义会提高报纸的销量，但是却忽视了当地人微妙的地位。'}

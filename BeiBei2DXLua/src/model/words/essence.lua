@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["essence"]={"essence","['es(ə)ns]","['ɛsns]","n.本质",'n.本质,精髓,要素,香精','Simplicity is the essence of good taste.','纯朴是情趣高尚的主要因素。','The two arguments are in essence the same.','这两个论点大致相同.'}

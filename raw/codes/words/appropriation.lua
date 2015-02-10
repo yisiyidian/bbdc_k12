@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["appropriation"]={"appropriation","[ə,prəʊprɪ'eɪʃ(ə)n]","[ə,proprɪ'eʃən]","n.拨用",'n.拨用,挪用,拨款','He was accused of appropriation.','他被控挪用公款。','The government raised defense appropriations by 12 percent.','政府将国防拨款提高了12%。'}

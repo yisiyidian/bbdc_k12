@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["book"]={"book","[bʊk]","[bʊk]","n.书",'n.书,本子|||vt.登记,预订|||vi.通过...预订','He was booked by the referee for foul play.','他因为动作犯规而被裁判记下姓名。','He\'s always careful to do things by the book.','他总是小心翼翼地按规章办事。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hostel"]={"hostel","['hɒst(ə)l]","['hɑstl]","n.招待所",'n.招待所','The Probation Officer got Andrew a job in the paper-mills and arranged board and lodging for him in the Working Boys’ hostel.','缓刑犯监视员在纸厂里替安德鲁找到一份工作，并在职工宿舍安排了他的膳宿。','I have just arrived in Scotland and I\'m staying at a Youth ||Hostel||.','我刚到苏格兰，我住在一家青年招待所。'}

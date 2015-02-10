@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wild"]={"wild","[waɪld]","[waɪld]","adj.野生的",'adj.放荡的,未开发的,野生的,原始的|||n.荒野,野生状态|||adv.野性地,未被约束地,偏离预计路线地','In nature, all animals are wild and free.','在自然界, 一切动物都是野生的, 自由自在的.','His wild behavior was a great distress to his mother.','他的放荡的行为使他的母亲极为苦恼。'}

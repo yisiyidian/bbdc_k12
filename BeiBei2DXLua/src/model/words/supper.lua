@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supper"]={"supper","['sʌpə]","['sʌpɚ]","n.晚餐",'n.晚餐,晚饭','I\'ll just throw together a quick supper.','我马上做一顿简便的晚餐吧.','He had some rice for supper.','晚饭时他吃了一些米饭。'}

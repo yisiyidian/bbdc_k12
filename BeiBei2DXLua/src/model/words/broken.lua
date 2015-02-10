@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["broken"]={"broken","['brəʊk(ə)n]","['brokən]","adj.坏掉的",'adj.坏掉的,打破的,断掉的|||v.打破,弄坏(break的过去分词)','I cut my hand on some broken glass.','碎玻璃割伤了我的手。','Don\'t cut your finger on the broken glass.','别让碎玻璃割伤你的手。'}

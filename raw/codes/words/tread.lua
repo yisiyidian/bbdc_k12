@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tread"]={"tread","[tred]","[trɛd]","n.踏",'n.踏,梯级|||v.踏,行走','This is sanctified ground, and we may not tread upon it.','这是圣地，我们不可践踏。','I don\'t want to tread on anybody\'s toes so I won\'t say what I think.','我谁也不想得罪，所以我不把想法说出来。'}

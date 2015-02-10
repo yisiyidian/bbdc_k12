@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stairway"]={"stairway","['steəweɪ]","['stɛr'we]","n.楼梯",'n.楼梯','The stone stairway was covered with lichen.','那石级长满了地衣。','...the stairway leading to the top floor.','…通往顶层的楼梯。'}

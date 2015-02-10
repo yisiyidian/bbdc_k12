@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hamper"]={"hamper","['hæmpə]","['hæmpɚ]","n.食盒",'n.食盒,食篮|||v.阻碍,使...困累,困累','There are some apples in a picnic hamper.','野餐用的大篮子里有一些苹果。','The bad weather hampered rescue operations.','恶劣的天气阻碍了救助行动。'}

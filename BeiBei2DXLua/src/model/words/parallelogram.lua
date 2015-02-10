@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parallelogram"]={"parallelogram","[,pærə'leləgræm]","['pærə'lɛlə'græm]","n.平行四边形",'n.平行四边形','parallelogram','平行四边形','||Parallelogram|| is a special quadrilateral','平行四边形是一种特殊的四边形。'}

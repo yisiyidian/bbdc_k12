@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rosy"]={"rosy","['rəʊzɪ]","['rozi]","adj.玫瑰色的",'adj.玫瑰色的，美好的','In the evening the rosy clouds were gorgeous.','傍晚的云霞绚丽多彩。','She by the name of Rose has rosy cheeks.','叫做玫瑰的她有玫瑰一样红润的脸颊。'}

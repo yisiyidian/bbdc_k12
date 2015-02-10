@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dyskinesia"]={"dyskinesia","[,dɪskɪ'niʒə]","[ ,diskai'ni:ziə ]","n.运动障碍",'n.运动障碍','My leg in the left was hurt before,as result of dyskinesia.','我的左腿以前受过伤，导致运动障碍。','My leg in the left was hurt before,as result of dyskinesia.','我的左腿以前受过伤，导致运动障碍。'}

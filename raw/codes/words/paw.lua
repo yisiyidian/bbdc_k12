@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paw"]={"paw","[pɔː]","[pɔ]","n.手掌",'n.手掌,手爪|||v.以蹄扒地,笨拙地使用,费力地前进','The dog was howling its paw was hurt.','那条狗在嗥叫--它的爪子受伤了.','The dog gave a yelp when I trod on its paw.','我踩了那狗的爪子，它嚎叫了一声。'}

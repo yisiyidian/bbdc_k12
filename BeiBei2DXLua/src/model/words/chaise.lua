@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chaise"]={"chaise","[ʃeɪz]","[ʃez]","n.一种轻马车",'n.一种轻马车（通常有车蓬，尤指单马双轮者）','It\'s a wonderful chaise!','多么精致的一辆马车啊!','She agitated hand waved to them from a chaise window.','她从车窗里向他们挥动着激动的手.'}

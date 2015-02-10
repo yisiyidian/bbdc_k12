@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sedative"]={"sedative","['sedətɪv]","['sɛdətɪv]","adj.使安静的",'adj.使安静的,使镇静的|||n.镇静剂,能使安静的东西','The patient is sedated with intravenous use of sedative drugs.','静脉注射了镇静剂后病人安然入睡。','Amber bath oil has a sedative effect.','琥珀沐浴油有镇静安神效用。'}

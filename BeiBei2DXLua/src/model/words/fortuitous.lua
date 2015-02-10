@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fortuitous"]={"fortuitous","[fɔː'tjuːɪtəs]","[fɔr'tuɪtəs]","adj.偶然的",'adj.偶然的,意外的，幸运的','The occurrence of such things is by no means fortuitous.','出现这种问题绝不是偶然的。','Their success is the result of a fortuitous combination of circumstances.','他们的成功是各种环境因素偶然联系在一起的幸运产物。'}

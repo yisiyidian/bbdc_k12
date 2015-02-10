@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["emancipation"]={"emancipation","[ɪ,mænsɪ'peɪʃ(ə)n]","[ɪ,mænsə'peʃən]","n.释放",'n.释放,解放','The ||Emancipation|| Proclamation abolished slavery in the United States.','《解放黑人奴隶宣言》废除了美国的奴隶制。','The emancipation of women depends on themselves.','妇女的解放依靠她们自己。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mercenary"]={"mercenary","['mɜːsɪn(ə)rɪ]","['mɝsənɛri]","adj.唯利是图的",'adj.唯利是图的，雇佣的|||n.唯利是图的人，雇佣兵','They suggest that my motives for proposing reform are self-serving and mercenary.','他们暗示说我之所以提议改革是贪图金钱，想谋取私利。','James is so mercenary that he’d turn in his own mother for the reward money.','詹姆斯太唯利是图了，他为领取赏钱竟出卖了自己的母亲。'}

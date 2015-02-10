@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reconcile"]={"reconcile","['rek(ə)nsaɪl]","['rɛkənsaɪl]","vt.和解",'vt.和解,调和,妥协|||vi.调和','How can he reconcile it to his conscience?','他怎能问心无愧呢？','He finally reconciled himself to the change in management.','他最终使自己接受了管理上的那个变化。'}

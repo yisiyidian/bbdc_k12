@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perhaps"]={"perhaps","[pə'hæps]","[pɚ'hæps]","adv.也许",'adv.也许,可能','Yes, perhaps I\'m wrong there.','是的，在这点上也许我错了。','As she\'s been ill perhaps she\'ll need some help.','她由於生病可能需要些帮助。'}

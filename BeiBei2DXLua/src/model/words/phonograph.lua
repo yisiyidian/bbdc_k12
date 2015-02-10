@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["phonograph"]={"phonograph","['fəʊnəgrɑːf]","['fonəɡræf]","n.留声机",'n.留声机,电唱机,蜡管留声机|||v.灌入留声机','A phonograph record, especially a forty-five, having one song on each side.','单曲唱片一种留声机唱片，尤指密纹唱片，每面只有一首歌','The trouble with phonograph is that it\'s an expensive hobby.','拥有留声机的烦恼在于它是一个昂贵的业余爱好。'}

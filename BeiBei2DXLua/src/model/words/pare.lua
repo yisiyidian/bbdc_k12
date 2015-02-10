@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pare"]={"pare","[peə]","[pɛr]","v.剥",'v.剥,削,消减','Our budget has been pared to the bone.','我们的预算已削减到最低限度。','Expenditures by the Federal Government have been steadily pared.','联邦政府的开支正在逐渐削减。'}

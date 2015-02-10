@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sown"]={"sown","[səʊn]","[ səun ]","v.播",'v.播','Are the seeds of criminal behaviour sown early in life?','犯罪行为的根源是否始自幼时?','The seeds were sown broadcast.','种子用撒播法下种。'}

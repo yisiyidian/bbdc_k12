@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pacify"]={"pacify","['pæsɪfaɪ]","['pæsə'fai]","vt.使...平静",'vt.使...平静,安慰','He tried to pacify his creditor by repaying part of the money.','他为安抚债权人偿还了部分借款。','He tried to pacify the protesters with promise of reform.','他试图以改革的承诺安抚抗议者。'}

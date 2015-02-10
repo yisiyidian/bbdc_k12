@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["confluence"]={"confluence","['kɒnflʊəns]","['kɑnfluəns]","n.合流",'n.合流,合流点,集合','It emerges from a confluence of factors, some very subtle.','它是多种因素的汇集，其中有的十分微妙。','Is there a confluence of Yellow River and Yangze River?','黄河和长江有交集吗？'}

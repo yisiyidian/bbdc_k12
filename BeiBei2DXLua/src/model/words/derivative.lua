@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["derivative"]={"derivative","[dɪ'rɪvətɪv]","[də'rɪvətɪv]","adj.引出的",'adj.引出的,系出的|||n.引出之物,系出物,衍生字|||n.导数,微商','Many English words are derivatives of Latin words.','许多英语词来自拉丁语。','I found this novel thin and derivative.','我发现这本小说平淡无味，毫无创意。'}

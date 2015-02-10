@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["euphoria"]={"euphoria","[juː'fɔːrɪə]","[jʊ'fɔrɪə]","n.幸福愉快感",'n.幸福愉快感','After the euphoria of yesterday\'s celebrations, the country will come down to earth today.','经过昨天热烈的庆祝之后，这个国家今天将会回到现实中来。','The euphoria is giving way to a more sober assessment of the situation.','兴高采烈的情绪不见了，取而代之的是对局面更为清醒的认识。'}

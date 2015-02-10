@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["data"]={"data","['deɪtə]","['detə]","n.(datum的复数)数据",'n.(datum的复数)资料,数据','The data should be updated once a week.','这些数据应该每星期更新一次。','The computer malfunctioned and printed out the wrong data.','计算机出了故障, 印出的资料不正确.'}

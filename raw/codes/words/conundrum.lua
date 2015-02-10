@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conundrum"]={"conundrum","[kə'nʌndrəm]","[kə'nʌndrəm]","n.迷",'n.迷,难题,迷样的人','He is facing with a conundrum of trying to find a job with no experience.','要找一份不需要经验的工作对他来说是个难题。','This seems to be a real conundrum, even for a college professor.','甚至对于一个大学教授来说，这都是一个难题。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diffidence"]={"diffidence","['dɪfɪd(ə)ns]","[ 'difidəns ]","n.无自信",'n.无自信,内向,羞怯','He entered the room with a certain diffidence.','他怯生生地走进房间。','Kim’s innate diffidence kept him from boasting about her amazing scientific discoveries.','金生性害羞，不会吹嘘自己在科学方面的惊人发现。'}

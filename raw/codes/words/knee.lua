@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["knee"]={"knee","[niː]","[ni]","n.膝盖",'n.膝盖,像膝盖的东西,护膝,屈膝鞠躬|||vt.用膝盖顶','I\'ve bumped my knee on the wall.','我的膝盖撞上了墙壁。','He rubbed some ointment on his knee.','他往膝盖上擦了一些药膏。'}

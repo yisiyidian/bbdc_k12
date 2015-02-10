@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["request"]={"request","[rɪ'kwest]","[rɪ'kwɛst]","n.要求",'n.要求,请求|||vt.请求,要求','By popular request, the chairman was re-elected.','徇众要求，主席获重选连任。','Your presence is requested at the meeting.','请你务必出席会议。'}

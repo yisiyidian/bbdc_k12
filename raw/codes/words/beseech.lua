@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beseech"]={"beseech","[bɪ'siːtʃ]","[bɪ'sitʃ]","v.恳求",'v.恳求','I beseech you to tell me.','我恳求你告诉我。','He ||besought|| a favor of the judge.','他恳求法官开恩。'}

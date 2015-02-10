@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["league"]={"league","[liːg]","[lig]","n.联盟",'n.联盟,社团','Beaten by the worst team in the league? They\'ll never live it down!','让联赛中最差劲的队打败了? 这是永远也忘不了的事!','He is a member of the Ivy ||League||.','他是长春藤联合会的一员。'}

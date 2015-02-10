@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["panegyric"]={"panegyric","[,pænɪ'dʒɪrɪk]","[ˌpænə'dʒɪrɪk]","n.赞辞",'n.赞辞,夸大的颂词','He breaks into a lengthy panegyric on English culture.','他突然开始长篇大论地颂扬英国文化。','he earned the panegyric from manager','他从经理那得到了表扬'}

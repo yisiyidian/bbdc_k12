@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["twee"]={"twee","[twiː]","[twi]","adj.矫揉造作的",'adj.矫揉造作的，过于考究的','She has a rather twee manner that I find irritating.','她娇里娇气, 我觉得很讨厌.','I can\'t stand those twee little frills.','我看不惯那些花哨的零碎儿.'}

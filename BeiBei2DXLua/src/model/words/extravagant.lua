@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extravagant"]={"extravagant","[ɪk'strævəg(ə)nt; ek-]","[ɪk'strævəgənt]","adj.奢侈的",'adj.奢侈的,浪费的,过度的,大量的','In his youth he was an extravagant epicurean.','他年轻时是个花花公子。','She accused us of being extravagant talk about the pot calling the kettle black!','她指责我们铺张浪费--老鸹别嫌猪黑!'}

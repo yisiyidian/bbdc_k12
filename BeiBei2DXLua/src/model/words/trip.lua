@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trip"]={"trip","[trɪp]","[trɪp]","n.旅行",'n.旅行,摔倒,差错,轻快的步伐|||vt.使跌倒,使犯错,使失败,起锚,竖帆|||vi.轻快地走,绊倒,失误,结巴,旅行','She came tripping down the garden path.','她轻快地沿花园小径跑过来。','They planned to make a wedding trip to Paris.','他们计划到巴黎旅行度蜜月。'}

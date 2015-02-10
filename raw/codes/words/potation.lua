@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["potation"]={"potation","[pə(ʊ)'teɪʃ(ə)n]","[ pəu'teiʃən ]","n.畅饮",'n.畅饮,饮料','Actually, reasonable potation is not able to hurt nerve cell.','其实，适量饮酒不会对神经细胞造成伤害。','Actually, reasonable potation is not able to hurt nerve cell.','其实，适量饮酒不会对神经细胞造成伤害。'}

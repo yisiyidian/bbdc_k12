@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mauve"]={"mauve","[məʊv]","[mov]","n.淡紫色",'n.淡紫色|||adj.淡紫色的','This mauve flower is beautiful.','这朵淡紫色的花很好看。','It bears clusters of mauve flowers in early summer.','初夏时节，它开出了一簇簇淡紫色的花。'}

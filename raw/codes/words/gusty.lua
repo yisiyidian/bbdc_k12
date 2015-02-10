@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gusty"]={"gusty","['gʌstɪ]","['ɡʌsti]","adj.阵阵猛急的",'adj.阵阵猛急的,突发的','Weather forecasts predict more hot weather, gusty winds and lightning strikes.','天气预报预测高温、大风和雷电天气将继续。','Some gusty pains come from my stomach.','从我的肚子传来阵阵的疼痛。'}

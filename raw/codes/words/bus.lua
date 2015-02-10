@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bus"]={"bus","[bʌs]","[bʌs]","n.公共汽车",'n.公共汽车','The busman stopped the bus.','公共汽车司机停下了车。','When the bus came to a stop, some passengers got on.','当公车一到站时, 一些乘客上了车。'}

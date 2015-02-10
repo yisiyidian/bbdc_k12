@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["transient"]={"transient","['trænzɪənt]","['trænzɪrnt]","adj.短暂的",'adj.短暂的|||n.短期居留者,瞬间的变化','Her feeling of depression was transient.','她那抑郁的心情很快就过去了。','We stayed at the inn as transient guests.','我们在小酒馆中只作短暂停留。'}

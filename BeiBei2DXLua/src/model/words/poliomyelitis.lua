@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["poliomyelitis"]={"poliomyelitis","[,pəʊlɪəʊmaɪə'laɪtɪs; ,pɒlɪəʊ-]","[,polɪo,maɪə'laɪtɪs]","n.脊髓灰质炎",'n.脊髓灰质炎','He had poliomyelitis at tow and a half.','他在两岁的时候患了小儿麻痹症。','By 1995 poliomyelitis had been totally eliminated.','1995年，已消灭脊髓灰质炎。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["corpus"]={"corpus","['kɔːpəs]","['kɔrpəs]","n.[计]语料库",'n.[计]语料库；文集；本金','I\'ve got the corpus of Shakespeare\'s works.','我有莎士比亚全集.','A linguist can use a corpus to comment objectively on frequency of usage.','语言学家使用一个语料库来客观地评论使用的频率。'}

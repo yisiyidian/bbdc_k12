@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insurrection"]={"insurrection","[,ɪnsə'rekʃ(ə)n]","[ ,insə'rekʃən ]","n.叛乱",'n.叛乱,暴动,作乱','In all countries any person who incites others to insurrection is guilty of treason.','在任何国家里，煽动他人谋反都属犯叛国罪。','It organized an insurrection against the aggressors.','它组织了一个反侵略的起义。'}

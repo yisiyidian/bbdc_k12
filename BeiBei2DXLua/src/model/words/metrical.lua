@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["metrical"]={"metrical","['metrɪk(ə)l]","['mɛtrɪkl]","adj.韵律的",'adj.韵律的,测量的|||=metric','A metrical unit consisting of seven feet.','七韵步由七个音步组成的格律单位','A line of verse consisting of five metrical feet.','五音步的每行有五个韵脚的一种诗'}

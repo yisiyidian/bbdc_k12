@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["culture"]={"culture","['kʌltʃə]","['kʌltʃɚ]","n.文化",'n.文化,教养,种植|||vt.培养','The culture areas are essentially coincident with language areas.','文化区与语言区基本重合。','Jewish culture is famous.','犹太人的文化很著名。'}

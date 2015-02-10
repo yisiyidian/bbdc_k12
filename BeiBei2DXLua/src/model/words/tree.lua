@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tree"]={"tree","[triː]","[tri]","n.树",'n.树','If you think that, you\'re barking up the wrong tree altogether.','你要是那样想, 你就大错特错了.','The tree was fenced around with wire.','那棵树被铁丝网围了起来。'}

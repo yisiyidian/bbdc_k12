@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["radish"]={"radish","['rædɪʃ]","['rædɪʃ]","n.萝卜",'n.萝卜','I bought a large bunch of radishes.','我买了一大捆萝卜。','This radish has gone spongy.','这萝卜糠了.'}

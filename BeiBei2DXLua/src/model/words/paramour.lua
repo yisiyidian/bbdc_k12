@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["paramour"]={"paramour","['pærəmʊə]","['pærəmʊr]","n.奸夫(妇)",'n.奸夫(妇),情夫','His wife suspected that he had a paramour.','他的妻子怀疑他有情妇。','Superman returns from a five-year journey to Krypton to find paramour Lois Lane is now a mother who is about to be married.','从历时五年的氪星之旅归来的超人发现，爱人路易斯•莱恩已为人母，即将出嫁。'}

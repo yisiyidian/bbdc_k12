@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["innuendo"]={"innuendo","[,ɪnjʊ'endəʊ]","[,ɪnju'ɛndo]","n.讽刺",'n.讽刺,讥讽|||vi.说讽刺话','There have been too many unpleasant innuendoes in this debate and not enough facts.','在这场辩论中据实而争者少，含沙射影者多，令人生厌。','He had been subject to a campaign of innuendo in the press.','他一直受到新闻界指桑骂槐的影射。'}

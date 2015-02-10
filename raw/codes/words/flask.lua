@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flask"]={"flask","[flɑːsk]","[flæsk]","n.细颈瓶",'n.细颈瓶,烧瓶,小水瓶','The graduations are marked on the side of the flask.','烧瓶侧面有刻度标志.','I want to drink a flask of wine.','我想喝一瓶酒。'}

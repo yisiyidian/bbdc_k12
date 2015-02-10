@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["electron"]={"electron","[ɪ'lektrɒn]","[ɪ'lɛktrɑn]","n.电子",'n.电子','An electron has a negative charge,a proton has a positive charge.','电子带负电荷，质子带正电荷。','The number of electron pairs an atom can share with other atoms.','共用电子对数，共价一个原子与其他原子共用的电子的对数'}

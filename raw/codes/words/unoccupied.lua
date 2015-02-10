@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unoccupied"]={"unoccupied","[ʌn'ɒkjʊpaɪd]","[,ʌn'ɑkjupaɪd]","adj.空闲的",'adj.空闲的,没人住的','An empty or unoccupied space.','[空的]或未被占用的地方','That small office is unoccupied.','那间小办公室空闲着。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rivet"]={"rivet","['rɪvɪt]","['rɪvɪt]","n.铆钉",'n.铆钉|||v.铆接,固定,钉牢|||v.集中(目光、注意力)，吸引','Can I fasten these metal plates with rivets?','我可以用铆钉把这些金属板固定在一起吗？','I was absolutely riveted by her story.','她的故事完全把我吸引住了。'}

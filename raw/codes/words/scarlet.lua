@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scarlet"]={"scarlet","['skɑːlət]","['skɑrlɪt]","n.深红色",'n.深红色,斐红色,红衣|||adj.肥斐色的,深红色的','Lobsters turn scarlet when they are boiled.','龙虾在被煮熟的时候会变红。','The flowering shrubs were a scarlet flame.','花丛一片嫣红.'}

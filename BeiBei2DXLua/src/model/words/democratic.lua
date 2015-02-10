@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["democratic"]={"democratic","[demə'krætɪk]","['dɛmə'krætɪk]","adj.民主的",'adj.民主的,大众的,平等的','Is it more truly democratic to hold a referendum?','举行公民投票是否真的更民主 呢 ?','If we want to live a peaceful and democratic life, we cannot help objecting to war.','如果我们要过和平与民主的生活，一定要反对战争。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["artisan"]={"artisan","[,ɑːtɪ'zæn; 'ɑːtɪzæn]","['ɑrtəzn]","n.工匠",'n.工匠,技工','The vase made by the artisan is wonderful.','那个手艺人做的花瓶棒极了。','He is an artisan in leatherwork.','他是个皮匠。'}

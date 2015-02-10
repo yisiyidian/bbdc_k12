@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["by"]={"by","[baɪ]","[baɪ]","prep.被",'prep.被,经由,在...之前,根据|||adv.靠近,经过,放在一旁地|||adj.在旁边的,附带的|||n.次要的事件','It is fun eating by stealth without being found.','偷吃而不被人发现很有趣。','He sent me a package by post.','他邮寄给我一个包裹。'}

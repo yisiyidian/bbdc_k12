@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["multicellular"]={"multicellular","[mʌltɪ'seljʊlə]","[,mʌlti'sɛljəlɚ; ,mʌltaɪsɛljəlɚ]","adj.多细胞的",'adj.多细胞的','That makes up multicellular organisms.','这构成多细胞生物.','They inhabit virtually all environments, including soil, water, organic matter, and the Bodies of multicellular animals.','几乎可在所有的环境下生存，包括土壤、水、有机物质，以及多细胞动物体内。'}

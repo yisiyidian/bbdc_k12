@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nonconformist"]={"nonconformist","[nɒnkən'fɔːmɪst]","[,nɑnkən'fɔrmɪst]","adj.不遵照传统生活的",'adj.不遵照传统生活的，|||Nonconformist:不信奉英国国教的','Oscar Wilde was a noted nonconformist.','奥斯卡.王尔德是一位著名的非国教徒.','Major\'s elders disliked him because he was such a flagrant nonconformist.','梅杰的长辈不喜欢他,因为他这样公开地违反了他们心目中的生活准则.'}

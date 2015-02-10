@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stooge"]={"stooge","[stuːdʒ]","[studʒ]","n.傀儡",'n.傀儡,助手,喜剧里的配（丑）角|||vi.做配角,充当傀儡','She\'s fed up with being her husband\'s stooge.','她再也不愿意当丈夫的附属品了.','He has vehemently rejected claims that he is a government stooge.','他激烈地驳斥了称自己是政府的走狗的说法。'}

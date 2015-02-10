@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sure"]={"sure","[ʃɔː; ʃʊə]","[ʃʊr]","adv.当然",'adj.确信,必然的,必定的|||adv.当然,确实地,无疑地','He is clever, to be sure, but not very hard-working.','他聪明是聪明，但是不怎么勤奋。','She is sure to pass the examination.','她一定会通过考试。'}

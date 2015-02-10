@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["twelve"]={"twelve","[twelv]","[twɛlv]","adj.十二",'adj.十二,12','She often puts in twelve hours\' work a day.','她常常一天工作十二小时','At midnight you\'ll hear the clock strike twelve.','午夜时你会听到钟打12点。'}

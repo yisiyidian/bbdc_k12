@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dive"]={"dive","[daɪv]","[daɪv]","n.潜水",'n.潜水,跳水|||vt.跳水,俯冲|||vi.把...伸入','Throw your arms out in front of you as you dive.','跳水时手臂迅速前伸.','What a beautiful dive!','多么优美的跳水！'}

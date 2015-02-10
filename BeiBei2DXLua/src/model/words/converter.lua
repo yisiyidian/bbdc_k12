@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["converter"]={"converter","[kən'vɜːtə]","[kən'vɝtɚ]","n.转换器",'n.转换器|||=convertor','The converter tool displays the migration status.','转换器工具将显示迁移状态。','MID ||Converter|| includes a built-in sequencer engine.','中间的转换器包括一台固定的音序器引擎。'}

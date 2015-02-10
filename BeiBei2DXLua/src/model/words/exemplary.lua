@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exemplary"]={"exemplary","[ɪg'zemplərɪ; eg-]","[ɪɡ'zɛmpləri]","adj.可仿效的",'adj.可仿效的,可做模范的','He led an exemplary life.','他的一生堪作楷模。','Their performance is exemplary.','他们的性能都很优良。'}

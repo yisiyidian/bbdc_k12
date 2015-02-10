@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["robber"]={"robber","['rɒbə]","['rɑbɚ]","n.盗贼",'n.盗贼,强盗','The police put a shadow on the suspected robber.','警方派探员盯住那个抢劫疑犯.','The robber swooped up the banknotes.','劫匪把钞票一把抢走了.'}

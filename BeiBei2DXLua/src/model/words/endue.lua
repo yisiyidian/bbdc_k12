@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["endue"]={"endue","[ɪn'djuː; en-]","[ in'dju: ]","v.赋与实质",'v.授与,赋与,穿','He prayed to God night and day to endue him with the spirit of holiness.','他日夜祈求上帝赋予他虔敬的心。','He prayed to God to endue him with wisdom.','他祈求上帝赋予他智慧。'}

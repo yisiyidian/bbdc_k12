@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hefty"]={"hefty","['heftɪ]","['hɛfti]","adj.重的",'adj.重的,肌肉发达的','A hefty serving of mashed potatoes; received a hefty bonus.','一道丰富的土豆泥菜；得到大量奖金','She earns a hefty salary.','她的薪水很高.'}

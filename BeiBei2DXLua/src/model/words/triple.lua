@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["triple"]={"triple","['trɪp(ə)l]","['trɪpl]","adj.三倍的",'n.三倍之数,三个一组|||adj.三倍的','The plan has a triple purpose.','该计划有三个目的。','He is a triple murderer.','他谋杀了三个人。'}

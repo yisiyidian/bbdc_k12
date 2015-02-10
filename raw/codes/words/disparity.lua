@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disparity"]={"disparity","[dɪ'spærɪtɪ]","[dɪ'spærəti]","n.不一致",'n.不一致','Rich and poor live side by side but in conditions of extraordinary disparity.','虽然富人和穷人住在一起，但是贫富差距极为悬殊。','',''}

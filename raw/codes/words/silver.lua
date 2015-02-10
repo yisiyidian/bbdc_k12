@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["silver"]={"silver","['sɪlvə]","['sɪlvɚ]","adj.银色的",'adj.银色的,银的|||n.银,银币,银器|||vt.镀银,变成银白色','Every cloud has a silver lining.','黑暗中总有一丝光明.','In a silver frame on the table there is a photograph of her husband.','在桌上的银相框里有张她丈夫的照片。'}

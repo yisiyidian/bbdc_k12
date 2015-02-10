@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["echo"]={"echo","['ekəʊ]","['ɛko]","n.回声",'n.回声,回音,回波,反响,共鸣|||vt.发回声,回响,重复,仿效|||vi.回响,回荡|||n.[计算机]DOS命令:禁止(或允许)批处理命令行显示屏幕上','Her performance was cheered to the echo.','她的表演获得长时间的喝采。','She shouted on the mountaintop and listened for the echo.','她在山顶上大声喊着，然后聆听着回声。'}

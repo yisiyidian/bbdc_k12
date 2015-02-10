@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["championship"]={"championship","['tʃæmpɪənʃɪp]","['tʃæmpɪənʃɪp]","n.锦标赛",'n.锦标赛,冠军，拥护','She persevered in her efforts to win the championship.','她为赢得冠军而不断努力.','Which football team is the leader in the football championship?','现在哪个队在足球锦标赛中领先？'}

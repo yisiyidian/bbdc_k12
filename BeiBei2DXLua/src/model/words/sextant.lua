@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sextant"]={"sextant","['sekst(ə)nt]","['sɛkstənt]","n.六分仪(航海定向仪器)",'n.六分仪(航海定向仪器)','A sextant is an instrument used for measuring angles.','六分仪是用来测量角度的仪器。','Is the sextant still widely used for navigation?','六分仪现在仍然广泛应用于航海吗？'}

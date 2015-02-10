@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diversion"]={"diversion","[daɪ'vɜːʃ(ə)n; dɪ-]","[daɪ'vɝʒn]","n.转向",'n.转向,转移,娱乐活动','Chess is his favorite diversion.','象棋是他最喜欢的娱乐活动.','One of the gang created a diversion in the street while the others robbed the bank.','一名匪徒在街上制造事端引人注目，其余匪徒则抢劫银行。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dumbfound"]={"dumbfound","[dʌm'faʊnd]","[ dʌm'faund,-də ]","vt.使...惊呆",'vt.使...惊呆,使...发愣|||=dumfound','This suggestion dumbfounded Joe.','这个建议使乔伊惊呆了。','This suggestion dumbfounded Joe.','这个建议使乔伊惊呆了。'}

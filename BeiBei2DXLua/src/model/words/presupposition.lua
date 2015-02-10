@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["presupposition"]={"presupposition","['prisʌpə'zɪʃən]","[ ,pri:sʌpə'ziʃən ]","n.预先假定",'n.预先假定,臆测','You have made several unjustified presuppositions.','你作了一些毫无根据的假设.','Bail was refused on the presupposition of his guilt.','已料到他罪名成立而不准保释.'}

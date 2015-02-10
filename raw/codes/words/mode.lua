@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mode"]={"mode","[məʊd]","[mod]","n.方式",'n.方式,样式,模式,风格,时兴|||[音乐]调式','Living separately from parents after marriage is all the mode today.','现在非常流行婚后与父母分开住。','He switched automatically into interview mode.','他自动切换到访谈模式。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["river"]={"river","['rɪvə]","['rɪvɚ]","n.河",'n.江,河','The current strengthened as we moved down the river.','我们顺流而下时, 水流更急了.','Navigation is difficult on this river because of the hidden rocks.','因为河上有暗礁，所以在这条河上航行很困难。'}

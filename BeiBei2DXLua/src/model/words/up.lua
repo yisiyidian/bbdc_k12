@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["up"]={"up","[ʌp]","[ʌp]","adv.向上",'adv.向上,增加,用尽,完全,储存,靠近|||adj.向上的,直立的,完成的,高兴的,在进行的|||prep.向上,迎着|||n.上司,上坡,繁荣,上面|||vt.升起,增加|||vi.上升','Put the packet up on the top shelf.','把这个包放到架子顶格上去。','She is going up to Oxford in October.','她在十月份要上牛津大学。'}

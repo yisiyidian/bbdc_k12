@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hurtle"]={"hurtle","['hɜːt(ə)l]","['hɝtl]","v.急飞",'v.急飞,猛烈碰撞,猛掷','The van hurtled round the corner.','客货车疾驶转过街角。','She slipped and went ||hurtling|| downstairs.','她一失足咕噜噜跌下楼梯。'}

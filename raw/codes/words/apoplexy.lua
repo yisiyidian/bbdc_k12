@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apoplexy"]={"apoplexy","['æpəpleksɪ]","['æpəplɛksi]","n.中风",'n.中风，狂怒','The old man died of apoplexy.','这位老人死于中风。','He has already caused apoplexy with his books on class and on war.','他关于阶级和战争的书已经激起了极大的愤怒。'}

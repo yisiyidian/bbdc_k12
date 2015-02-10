@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["concept"]={"concept","['kɒnsept]","['kɑnsɛpt]","n.概念",'n.概念,观念','Who originated the concept of stereo sound?','立体声是谁发明的？','The concept of health holds different meanings for different people and groups.','健康观念因人和群体的不同而不同。'}

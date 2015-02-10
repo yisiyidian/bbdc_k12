@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["more"]={"more","[mɔː]","[mɔr]","adv.更",'adv.更，更多；达到或处于更大的范围或程度；此外，更加|||adj.更多的；(many)的比较级；附加的，额外的|||pron.更多的或附加的人或事物|||n.更多；附加，添加','It took more or less a whole day to paint the ceiling.','粉刷天花板用了将近一整天的时间。','He couldn\'t lift the table and no more could I.','他抬不动那张桌子，我也抬不动'}

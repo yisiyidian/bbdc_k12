@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extravagance"]={"extravagance","[ɪk'strævəg(ə)ns; ek-]","[ɪk'strævəɡəns]","n.奢侈",'n.奢侈,浪费,放肆的言行','My father rather gave me snuff about my extravagance, but I was prepared for that.','我父亲对我的铺张浪费大加谴责, 不过我早就有了思想准备。','His latest extravagance is a hand-made silk shirt.','他最近有的奢侈品是一件手工缝制的丝绸衬衫。'}

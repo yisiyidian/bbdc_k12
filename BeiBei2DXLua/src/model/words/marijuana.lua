@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["marijuana"]={"marijuana","[,mærɪ'hwɑːnə]","[,mærə'wɑnə]","n.大麻",'n.大麻','Intoxicated by or as if by alcohol or a drug, such as cocaine or marijuana.','使醉的喝醉了的，被麻醉品例如可卡因或大麻麻醉了的','One who habitually smokes marijuana.','吸大麻者习惯性吸食大麻者'}

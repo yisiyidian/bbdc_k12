@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["platitudinous"]={"platitudinous","[,plætə'tjʊdnəs]","[ ,plæti'tju:dinəs ]","adj.陈腐的",'adj.平凡的,陈腐的','I hope it wasn\'t overly platitudinous.','但愿不都是些陈词滥调','The whole speech was platitudinous nonsense.','整篇讲话都是陈谷子烂芝麻.'}

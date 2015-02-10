@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["complacency"]={"complacency","[kəm'pleɪs(ə)nsɪ]","[kəm'plesnsi]","n.自满",'n.自满，沾沾自喜','He had an air of complacency.','他脸上显出得意的神气。','It\'s my conviction that complacency is at the root of our troubles.','我深信自满情绪是我们各种问题的根源.'}

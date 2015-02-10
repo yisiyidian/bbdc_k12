@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["automate"]={"automate","['ɔːtəmeɪt]","['ɔtəmet]","v.自动化",'v.自动化|||vt.使自动化','This part of the assembly process is now fully automated.','装配过程的这一部分现在是全自动的.','automate a factory.','使工厂自动操作'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["landslide"]={"landslide","['læn(d)slaɪd]","['lændslaɪd]","n.山崩",'n.山崩|||n.(竞选中)压倒多数的选票','The landslide earthed up the pool where the animals usually drank.','滑坡填塞了动物通常来饮水的这个水坑。','The village was destroyed by a landslide.','滑坡摧毀了村庄.'}

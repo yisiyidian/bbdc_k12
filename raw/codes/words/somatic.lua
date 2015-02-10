@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["somatic"]={"somatic","[sə'mætɪk]","[so'mætɪk]","adj.身体的",'adj.身体的,肉体的,体壁的','The spiritual pain is much more difficult ot heal than the somatic one.','精神上的痛苦比身体上的疼痛要难以治愈的多。','||Somatic|| desire is endless.','肉体的欲望是无止境的。'}

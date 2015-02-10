@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flower"]={"flower","['flaʊə]","['flaʊɚ]","n.花",'n.花,华丽,盛年,精英,自然发展的结果|||vi.成熟,开花|||vt.使开花,用花装饰','The roses have been in flower for a week.','这些玫瑰花已经开了一星期了。','Cherry trees flower in the early spring.','樱桃树在早春开花。'}

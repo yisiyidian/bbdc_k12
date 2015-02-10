@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hew"]={"hew","[hjuː]","[hju]","vt.砍",'vt.砍,砍成|||vi.砍，固守','Every student must hew to the rules and regulations of the college.','每个学生都要遵守学校的规章制度。','They hewed their way through the dense jungle.','他们在浓密的丛林里开辟出一条路来。'}

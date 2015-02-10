@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infinitesimal"]={"infinitesimal","[,ɪnfɪnɪ'tesɪm(ə)l]","['ɪnfɪnə'tɛsəml]","adj.极小的",'adj.极小的,极微的,无限小的|||n.极小量,极微量,无限小','There was an infinitesimal pause.','其中有一个极短暂的停顿。','Personally, I believe numbers can be infinitesimal endlessly.','我个人认为数字可以无限地小下去。'}

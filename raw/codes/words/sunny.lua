@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sunny"]={"sunny","['sʌnɪ]","['sʌni]","adj.阳光充足的",'adj.阳光充足的,睛朗的,明媚的','A high over southern Europe is bringing fine sunny weather to all parts.','欧洲南部上空的反气旋给各地区带来了晴朗的好天气.','The sunny intervals we were promised have been few and far between.','我们原可望能有几阵晴天，结果却很稀少。'}

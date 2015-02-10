@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["automatic"]={"automatic","[ɔːtə'mætɪk]","['ɔtə'mætɪk]","adj.自动的",'n.自动装置,半自动武器|||adj.自动的,机械的,半自动化的','Many workers in the sorting office lost their jobs when an automatic sorter was introduced.','拣信室安装了自动拣信机之後, 许多拣信员都失业了.','This heating system has an automatic temperature control.','这个暖气系统有自动化的温度调节系统。'}

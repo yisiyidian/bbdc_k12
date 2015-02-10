@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["here"]={"here","[hɪə]","[hɪr]","adv.在这里",'adv.在这里；这时；在这一点上|||n.这里|||int.喂；嗨','Life goes on for those of us who remain here below.','对於我们凡人来说，生活依旧。','He has been here in London for many years.','他已在伦敦呆了很多年了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["garrison"]={"garrison","['gærɪs(ə)n]","['gærəsn]","n.守备队",'n.守备队,驻军,要塞|||v.守备队,派兵驻守,使当守备队镇守','The soldiers garrisoned the town.','军队驻守城镇。','In the old days this used to be a garrison town.','在过去，这里曾是有驻军的要塞城镇。'}

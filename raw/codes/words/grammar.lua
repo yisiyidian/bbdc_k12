@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grammar"]={"grammar","['græmə]","['græmɚ]","n.语法",'n.语法','That is not, properly speaking, a dictionary but a grammar book.','严格地说，那不是一本字典，而是一本语法书。','You should finish your English grammar drills in the class.','你应该在课堂上完成语法练习。'}

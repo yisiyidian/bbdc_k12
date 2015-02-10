@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pharaoh"]={"pharaoh","['fɛro]","[ 'fεərəu ]","n.法老",'n.法老，暴君','And ||Pharaoh|| said unto Joseph, I have set thee over all the land of Egypt.','法老对约瑟夫说，我已任命你为全埃及的统治者。','||Pharaoh||\'s courtiers saw her and praised her to Pharaoh, and she was taken into Pharaoh\'s household.','法老的臣子看见她，就把她举荐给法老，于是她就被带去收进法老的内宫中。'}

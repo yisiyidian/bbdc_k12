@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bulge"]={"bulge","[bʌldʒ]","[bʌldʒ]","n.膨胀",'n.膨胀,优势,暴增|||vt.使...膨胀|||vi.膨胀,充满','I can\'t eat any more; my stomach is ||bulging||.','我一点也吃不下，肚子都鼓起来了。','My pockets were ||bulging|| with apples.','我的口袋因装着苹果而鼓起来了。'}

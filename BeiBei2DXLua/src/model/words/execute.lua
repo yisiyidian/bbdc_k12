@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["execute"]={"execute","['eksɪkjuːt]","['ɛksɪkjut]","vt.执行",'vt.执行,处决，实行,完成|||[计算机]执行','They executed the king.','他们把国王处决了。','One group claimed to have executed the hostage.','一个组织声称他们已处死了那名人质。'}

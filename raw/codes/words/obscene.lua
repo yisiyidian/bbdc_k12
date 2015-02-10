@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obscene"]={"obscene","[əb'siːn]","[əb'sin]","adj.淫秽的",'adj.淫秽的,猥亵的','Her use of obscene language offends against the proprieties.','她使用下流的语言是很失礼的事.','His comments are not repeatable,eg because they were rude, obscene, etc.','他的话别人实在说不出口（如因粗俗、 下流等）.'}

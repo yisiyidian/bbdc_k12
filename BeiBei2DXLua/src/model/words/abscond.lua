@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abscond"]={"abscond","[əb'skɒnd; æb-]","[əb'skɑnd]","vi.潜逃",'vi.潜逃,逃匿','He absconded from the bank with all the money.','他拿走了银行的全部现金，潜逃无踪。','He absconded from the country.','他已潜逃出境。'}

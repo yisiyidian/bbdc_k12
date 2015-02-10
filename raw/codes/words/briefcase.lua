@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["briefcase"]={"briefcase","['briːfkeɪs]","['brifkes]","n.公文包",'n.公文包','He carried a leather briefcase embossed with his initials.','他带着一个饰有浮凸的姓名首字母的皮公事包。','He put all the files into his briefcase.','他将所有文件都装进公文包。'}

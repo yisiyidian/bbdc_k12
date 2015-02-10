@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["skittish"]={"skittish","['skɪtɪʃ]","['skɪtɪʃ]","adj.易激动的",'adj.易激动的,轻佻的','She gets very skittish when her boy-friend is around.','她男朋友在场时，她就显得格外轻佻。','With consumers so skittish, service industries are not faring well either.','鉴于消费者如此易受波动，服务业进展得亦不如人意。'}

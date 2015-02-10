@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["erudition"]={"erudition","[,erʊ'dɪʃ(ə)n]","[,ɛru'dɪʃən]","n.博学",'n.博学','His erudition was apparently endless.','他显然学识渊博。','His erudition made him be respected.','他的博学使他受人尊敬。'}

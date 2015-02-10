@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gland"]={"gland","[glænd]","[ɡlænd]","n.腺",'n.腺','She is suffering from swollen glands.','她正患腺体肿胀病。','Pigs don\'t have sweat glands。','猪没有汗腺。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fashion"]={"fashion","['fæʃ(ə)n]","['fæʃən]","n.流行",'n.流行,风尚,时样,时装|||v.形成,造,作','Long skirts have come into fashion again.','长裙子又流行起来。','She paints in the fashion of Picasso.','她模仿毕加索的绘画风格'}

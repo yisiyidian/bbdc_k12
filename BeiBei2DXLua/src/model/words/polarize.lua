@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["polarize"]={"polarize","['polə'raɪz]","[ 'pəuləraiz ]","vt.极化",'vt.极化(使...偏振化,使...两极分化)','Public opinion has polarized on this issue.','在这个问题上公众的意见已两极分化.','Senior positions have polarized opinion on this issue','高层领导人在这个问题上的意见两极分化。'}

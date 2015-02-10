@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["white"]={"white","[waɪt]","[waɪt]","adj.白色的",'adj.白色的,白种的,纯洁的,幸运的|||n.白色,白种人','The smoke had blackened the white walls of the kitchen.','烟把厨房白色的墙壁熏黑了。','white wine.','白葡萄酒'}

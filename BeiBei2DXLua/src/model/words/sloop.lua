@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sloop"]={"sloop","[sluːp]","[slup]","n.小帆船",'n.小帆船，单桅纵帆船','An enemy frigate bore down on the sloop.','一艘敌驱逐舰向这只护航舰逼过来。','They heeled the sloop well over, skimming it along to windward.','他们使单桅小船倾斜适当, 让它顶着风向前滑去.'}

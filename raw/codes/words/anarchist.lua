@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anarchist"]={"anarchist","['ænəkɪst]","['ænɚkɪst]","n.无政府主义者",'n.无政府主义者','Harry claims to be an anarchist but he\'s really only striking an attitude to be provocative.','哈里自称是一名无政府主义者，但是他实际上只是在装腔作势以引起人们的议论。','West Berlin always had a large anarchist community.','西柏林一直有一个庞大的无政府主义群体。'}

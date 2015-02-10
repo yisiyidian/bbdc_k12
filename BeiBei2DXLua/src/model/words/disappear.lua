@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disappear"]={"disappear","[dɪsə'pɪə]","['dɪsə'pɪr]","vi.消失",'vi.消失,灭绝|||vt.引起消失','The sun disappeared behind a cloud.','太阳消失在一片云后面。','Many beautiful fish are fast disappearing because of the severe pollution.','因为污染严重，许多美丽的鱼类正在面临绝种。'}

@@ -12,6 +12,7 @@ echo "Enter < NUMBER > of app type"
 echo "Debug:            \\033[31m0\\033[0m"
 echo "Release:          \\033[31m1\\033[0m"
 echo "Release for test: \\033[31m2\\033[0m"
+echo "Development:      \\033[31m3\\033[0m"
 
 read APPTYPE 
 
@@ -21,6 +22,8 @@ elif [ $APPTYPE = "1" ] ; then
     echo "Release" 
 elif [ $APPTYPE = "2" ] ; then 
     echo "Release for test" 
+elif [ $APPTYPE = "3" ] ; then 
+    echo "Development" 
 else 
     echo "Wrong App Type" 
     exit 0
@@ -148,6 +151,7 @@ fi
 # BUILD_TARGET_DEBUG = '0'
 # BUILD_TARGET_RELEASE = '1'
 # BUILD_TARGET_RELEASE_TEST = '2'
+# BUILD_TYPE_DEVELOPMENT  = '3'
 
 if __name__ == "__main__":
     if sys.argv[1] == '0':
@@ -156,6 +160,8 @@ if __name__ == "__main__":
         cmd = 'APPTYPE="1"' + inputChannelId() + resetCodesAndProjectsConfigsForChannel()
     elif sys.argv[1] == '2':
         cmd = 'APPTYPE="2"' + inputChannelId() + resetCodesAndProjectsConfigsForChannel()
+    elif sys.argv[1] == '3':
+        cmd = 'APPTYPE="3"' + inputChannelId() + resetCodesAndProjectsConfigsForChannel()
     else:
         cmd = inputAppType() + inputChannelId() + resetCodesAndProjectsConfigsForChannel() + packageApk()
 

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["figurine"]={"figurine","['fɪgəriːn; -gjʊ-]","[,fɪɡjə'rin]","n.小塑像",'n.小塑像,小雕像','There is a figurine in the middle of the park.','在公园中心有一座小雕塑。','There are many famous people\'s figurines in the wax work museum in Hongkong.','香港蜡像馆里有许多名人的雕像。'}

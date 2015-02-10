@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grumble"]={"grumble","['grʌmb(ə)l]","['ɡrʌmbl]","v.发牢骚",'v.发牢骚,抱怨，轰鸣|||n.怨言,牢骚，轰隆声','I don\'t want to hear another grumble from you.','我不愿再听到你的抱怨.','He has everything he needs, but he is still full of grumbles.','他需要的一切都得到了，却还牢骚满腹。'}

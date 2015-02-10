@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["liable"]={"liable","['laɪəb(ə)l]","['laɪəbl]","adj.有义务的",'adj.有义务的,应负责的,有...倾向','Failure to pay your taxes will make you liable to prosecution.','不缴纳税款就可能被起诉。','We are liable to make mistakes.','我们都易犯错误。'}

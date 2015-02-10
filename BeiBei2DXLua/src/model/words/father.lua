@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["father"]={"father","['fɑːðə]","['fɑðɚ]","n.父亲",'n.父亲,鼻祖|||vt.作为父亲生育子女|||vi.像父亲般照顾','My father and mother went for a walk.','爸爸妈妈去散步了。','His father is a customs officer.','他父亲是一位海关官员。'}

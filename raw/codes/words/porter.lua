@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["porter"]={"porter","['pɔːtə]","['pɔrtɚ]","n.搬运工",'n.搬运工,门房,(火车卧铺车厢或豪华车厢的)乘务员,(医院,商店中的)清洁工|||n.(旧时)黑啤酒|||n.波特(人名)','The porter was weighed down by all the luggage.','搬运工扛著这些行李压得直不起腰来.','Did you remember to tip the porter?','你记得给搬运工小费了吗？'}

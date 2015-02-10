@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stretch"]={"stretch","[stretʃ]","[strɛtʃ]","n.伸展",'n.伸展,张开|||adj.可伸缩的|||vt.&vi.伸展,张开,延伸','She stretched across the table for the butter.','她探身去取放在餐桌对面的黄油。','The desert stretched away into the distance.','沙漠一直延伸到远方。'}

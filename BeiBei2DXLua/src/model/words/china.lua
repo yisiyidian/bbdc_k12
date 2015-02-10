@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["china"]={"china","['tʃaɪnə]","['tʃaɪnə]","n.瓷器",'n.瓷器；中国（大写时）|||adj.瓷制的','Beijing is the capital of ||China||.','北京是中国的首都。','All our glass and china is kept in the cupboard.','我们所有的玻璃和陶瓷器皿都放在柜橱里。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chin"]={"chin","[tʃɪn]","[tʃɪn]","n.下巴",'n.下巴,颏|||vt.做单杠|||vi.作引体向上,聊天','You\'ve got a cut on your chin.','你下巴上有一道伤口.','He rubbed his chin thoughtfully.','他抚摩著下巴, 陷入沉思.'}

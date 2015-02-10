@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apothegm"]={"apothegm","['æpəθem]","[ 'æpəθem ]","n.格言",'n.格言','Her mother endlessly repeated the apothegm "Cleanliness is next to godliness".','她的母亲不厌其烦地重复这句格言：“清洁仅次于圣洁”。','some apothegms let me think','某些格言能够让我思考'}

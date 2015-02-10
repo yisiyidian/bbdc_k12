@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["biofeedback"]={"biofeedback","[baɪəʊ'fiːdbæk]","[,baɪo'fidbæk]","n.生物反馈",'n.生物反馈','emg-biofeedback therapy for scapulohumeral periarthritis','生物反馈治疗肩周炎','improving postural consistency of archers by emg biofeedback','借助emg反馈提高射箭运动员动作一致性的研究'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["minutiae"]={"minutiae","[mɪ'njuːʃɪiː; maɪ-; -ʃɪaɪ]","[mɪ'nuʃɪi]","n.细枝末节",'n.细枝末节，琐事|||名词minutia的复数形式','I won\'t discuss the minutiae of the contract now.','我现在不商谈合同的细节。','Much of his early work is concerned with the minutiae of rural life.','他早期的许多作品关注的是农村生活中一些鸡毛蒜皮的琐事。'}

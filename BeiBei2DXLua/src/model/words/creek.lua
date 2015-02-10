@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["creek"]={"creek","[kriːk]","[krik]","n.小湾",'n.小湾,小溪','I\'ll be up the creek if I don\'t pass this history test.','我若不能通过这次历史考试，麻烦可就大了。','I was really up the creek when I lost my keys.','我丢掉钥匙之后，真正遇到了麻烦。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kayak"]={"kayak","['kaɪæk]","['kaɪæk]","n.爱斯基摩人用的皮船",'n.爱斯基摩人用的皮船,皮船','kayaked rapids of the Colorado River.','坐爱斯基摩划子划过科罗拉多河的湍流','I have ever had a kayak.','我曾经有一条皮船。'}

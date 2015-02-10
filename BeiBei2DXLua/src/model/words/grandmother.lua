@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grandmother"]={"grandmother","['græn(d)mʌðə]","['ɡrænmʌðɚ]","n.(外)祖母",'n.(外)祖母','He went to see his grandmother every now and then.','他时而去看看他的祖母。','Do not try to teach your ||Grandmother|| to suck eggs.','【谚】不要班门弄斧。'}

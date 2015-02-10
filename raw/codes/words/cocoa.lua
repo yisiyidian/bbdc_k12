@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cocoa"]={"cocoa","['kəʊkəʊ]","['koko]","n.可可粉",'n.可可粉,可可饮料,可可色','The seed of this plant, used in making chocolate, cocoa, and cocoa butter.','可可种可可树的种子，用于制造巧克力、可可粉和可可油','He has a mug of cocoa before bed.','他临睡前喝一缸子可可.'}

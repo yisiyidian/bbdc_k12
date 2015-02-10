@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sardonic"]={"sardonic","[sɑː'dɒnɪk]","[sɑr'dɑnɪk]","adj.讥讽的",'adj.讥讽的，嘲笑的,冷笑的','she gave him a sardonic smile','她朝他讥讽地笑了一笑。','The moive is a sardonic look at modern life.','这电影讽刺了现代生活。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["auction"]={"auction","['ɔːkʃ(ə)n]","['ɔkʃən]","n.拍卖",'n.拍卖|||vt.拍卖','We had a private view of the jewels before the public auction.','那些珠宝公开拍卖以前我们私下看了预展.','How much did the painting go for at the auction?','这幅画在拍卖中值多少钱?'}

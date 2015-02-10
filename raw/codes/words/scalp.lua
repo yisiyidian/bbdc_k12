@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scalp"]={"scalp","[skælp]","[skælp]","n.头皮(胜利品)",'n.头皮(胜利品)|||vt刮光(拨顶)','The Indians came back with their enemy\'s scalps.','印地安人带着敌人的头皮回来了。','You\'ve just about scalped me!','你把我的头发剃得太短了！'}

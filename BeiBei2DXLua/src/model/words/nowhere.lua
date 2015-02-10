@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nowhere"]={"nowhere","['nəʊhweə]","['no'wɛr]","adv.任何地方都不",'adv.任何地方都不|||n.不知道的地方,无处','The young girl would go nowhere without her chaperon.','这个年轻女孩去任何地方都有监护人跟着。','He\'s had nowhere to live since his eviction.','他自从被驱逐出住所以来, 就一直无处栖身.'}

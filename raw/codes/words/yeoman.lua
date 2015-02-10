@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["yeoman"]={"yeoman","['jəʊmən]","['jomən]","n.自耕农",'n.自耕农，小地主，侍从，[美]海军文书','The yeoman could never own and work on their land after the movement.','那场运动后，自耕农再也不能拥有并在他们自己的土地上耕耘了。','||Yeoman|| used to act on their free will, but later they were forced to be servants of the royal.','自耕农曾经是自由的人，但之后他们被迫成为皇室的仆人。'}

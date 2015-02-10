@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["redirect"]={"redirect","[riːdaɪ'rekt; -dɪ'rekt]","[,ridə'rɛkt]","adj.再直接的",'adj.再直接的|||v.重新传入,重新寄送','The package will be redirected when it is sent back.','包裹被退回后会重新寄送。','I redirected his letters to his new house.','我把他的信件改寄到他的新住所。'}

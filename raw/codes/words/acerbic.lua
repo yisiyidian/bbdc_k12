@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acerbic"]={"acerbic","[ə'sɜːbɪk]","[ə'sɝbɪk]","adj.酸的(尖酸刻薄的)",'adj.酸的(尖酸刻薄的)','At times, the playwright allows an acerbic tone to pierce through otherwise arid or flowery prose','“有时，剧作家在枯燥或华丽的散文中插入刻薄的语调”','He was acclaimed for his acerbic wit and repartee.','他以自己尖刻的风趣和巧妙的应答迎来喝彩。'}

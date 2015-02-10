@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["membership"]={"membership","['membəʃɪp]","['mɛmbɚʃɪp]","n.成员资格",'n.成员资格,会员全体，从属关系','Residence in the area qualifies you for membership.','只要在本区居住就可入会.','He is excluded from membership of the society.','他被拒绝入会。'}

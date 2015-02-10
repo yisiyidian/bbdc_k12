@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["module"]={"module","['mɒdjuːl]","['mɑdʒul]","n.[计算机]模块",'n.[计算机]模块|||n.组件','My desk is my command module.','我的书桌就是我的主要工作场所。','The definition of a global symbol that is not explicitly available for reference by modules linked with the module in which the definition occurs.','一种全局符号定义，它不能被与定义该全局符号的模块相链接的其它模块直接引用。'}

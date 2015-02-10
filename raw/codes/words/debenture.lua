@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["debenture"]={"debenture","[dɪ'bentʃə]","[dɪ'bɛntʃɚ]","n.信用债券;公司债",'n.信用债券;公司债,公司债券,退税证明书','||Debentures|| are loans that are usually secured and are said to have either fixed or floating charges with them.','债券是通常有担保的贷款，分固定收费和不固定收费两种。','||Debenture|| holder has priority over ordinary shareholder.','信用债券；公司债,公司债券,退税证明书'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["graceful"]={"graceful","['greɪsfʊl; -f(ə)l]","['ɡresfl]","adj.优雅的",'adj.优雅的','We admired the graceful poise of the dancer.','我们很欣赏那位舞蹈演员的优美舞姿。','Her every movement is very graceful.','她的一举一动都很优美。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["latitude"]={"latitude","['lætɪtjuːd]","['lætɪtud]","n.纬度",'n.纬度，界限,自由选择权','The latitude of the island is 30 degrees north.','这个岛的纬度是北纬三十度。','The new law allows firms a lot less latitude than before in fixing the price of their goods.','在各商行给产品定价上，新法律给予的自由要比以前少得多。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["zero"]={"zero","['zɪərəʊ]","['zɪro]","num.&n.零",'num.&n.零','The probability of a peace agreement being reached is zero.','达成和平协定的概率是零。','His hope was reduced to zero.','他的希望化为乌有。'}

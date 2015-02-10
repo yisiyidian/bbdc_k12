@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fling"]={"fling","[flɪŋ]","[flɪŋ]","n.投掷",'n.投掷,一时的行乐,漫不经心的一段(尝试或感情)|||vt.投,粗暴地推向...,猛冲,激动地说,全身心投入|||vi.急冲,(动物)猛跳','He ||flung|| his arm out just in time to stop her falling.','他急忙伸出手臂把她扶住，她才没有跌倒。','She ||flung|| on her coat and ran to the bus-stop.','她匆匆穿上大衣就向公共汽车站跑去。'}

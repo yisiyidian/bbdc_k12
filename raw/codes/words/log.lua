@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["log"]={"log","[lɒg]","[lɔɡ]","n.圆木",'n.记录,圆木,日志,计程仪|||vt.伐木,切,记录,航行,度过(时间)|||vi.采伐','The strongest man (that) you can think of cannot tear the log apart with bare hands.','就连你所能想到的最壮的人也不能光用手就将木头撕裂。','They are sawing a log into planks.','他们把原木锯成一块块厚板。'}

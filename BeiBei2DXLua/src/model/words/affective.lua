@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["affective"]={"affective","[ə'fektɪv]","[ə'fɛktɪv]","adj.情感的",'adj.情感的','affective disorders.','情感性精神紊乱','||Affective|| factor is one of the main factors that affect teaching effect.','情感因素是影响教学效果的主要因素之一。'}

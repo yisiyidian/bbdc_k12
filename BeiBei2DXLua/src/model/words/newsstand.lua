@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["newsstand"]={"newsstand","['njuːzstænd]","['njʊz,stænd]","n.报摊",'n.报摊,杂志摊','You can buy it at newsstand.','你可以在书报摊买到.','Is there a newsstand near here?','这附近有书报摊吗？'}

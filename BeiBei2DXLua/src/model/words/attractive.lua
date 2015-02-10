@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["attractive"]={"attractive","[ə'træktɪv]","[ə'træktɪv]","adj.有吸引力的",'adj.有吸引力的,引起注意的','Ice cream is attractive to children.','冰淇淋对孩子们非常有吸引力。','I think she is a very attractive girl.','我认为她是很有魅力的女孩。'}

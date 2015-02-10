@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vulgar"]={"vulgar","['vʌlgə]","['vʌlɡɚ]","adj.通俗的",'adj.通俗的,粗俗的','Slurping soup directly from the bowl is vulgar.','直接从碗里咕嘟咕嘟地喝汤是粗俗的','Putting food into one\'s mouth with a knife is considered vulgar in England.','在英国，用刀把食物送进嘴里被认为是粗鲁的行为。'}

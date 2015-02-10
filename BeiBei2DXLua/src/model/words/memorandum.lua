@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["memorandum"]={"memorandum","[memə'rændəm]","[,mɛmə'rændəm]","n.备忘录",'n.备忘录','Kindly forward these by fast freight. enclosed please find a draft as per memorandum bill you send us.','上述货物，请尽快发货。按照贵公司寄我司的价格单，同函寄上汇票一份，请查收。','Let\'s give this memorandum the once-over.','让我们大略地看一下备忘录'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["profuse"]={"profuse","[prə'fjuːs]","[prə'fjus]","adj.丰富的",'adj.很多的,丰富的，浪费的','His speech was too profuse.','他的讲话太长了。','He made profuse apologies.','他再三道歉。'}

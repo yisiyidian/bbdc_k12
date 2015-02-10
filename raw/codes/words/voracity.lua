@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["voracity"]={"voracity","[vɔ'ræsəti]","[ vɔ'ræsəti ]","n.贪食",'n.贪食,贪婪','Hunt and voracity are unnatural to him.','捕杀动物与贪食不是人类的本性。','It\'s a kind of social curiosity, an intellectual voracity.','这是一种对社会的好奇心，一种知识上的贪娈。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["undertake"]={"undertake","[ʌndə'teɪk]","[,ʌndɚ'tek]","vt.从事",'vt.从事,保证','I\'ll undertake for your security.','我将保证你的安全。','He ||undertook|| to finish the job by Friday.','他答应星期五之前完成这项工作。'}

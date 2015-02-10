@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["often"]={"often","['ɒf(tə)n]","['ɔf(tə)n]","adv.经常",'adv.经常','American girls are often very pretty.','美国女孩多很漂亮。','How often do you go there?','你多长时间去一次那里？'}

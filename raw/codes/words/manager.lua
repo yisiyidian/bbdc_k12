@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["manager"]={"manager","['mænɪdʒə]","['mænɪdʒɚ]","n.经理",'n.经理','The manager let us cut the cackle.','经理让我们不要闲谈。','A manager has to learn some economics if he wants to improve his management.','一个管理人员要想改善管理的话，就必须学点经济学。'}

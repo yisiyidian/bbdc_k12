@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["healthy"]={"healthy","['helθɪ]","['hɛlθi]","adj.健康的",'adj.健康的','Although my uncle is old, he looks very strong and healthy.','我的叔叔虽然老了，但他看上去还是很健壮。','A healthy shoot should form a strong graft.','健康的嫩枝可以长成强壮的接穗。'}

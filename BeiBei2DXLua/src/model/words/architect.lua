@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["architect"]={"architect","['ɑːkɪtekt]","['ɑrkɪtɛkt]","n.建筑师",'n.建筑师','The architect was given/presented with a blank cheque to design a new city centre.','设计师被授予全权设计一个新的城市中心区.','The author of the guidebook is an architect by profession.','该手册的作者任职建筑师.'}

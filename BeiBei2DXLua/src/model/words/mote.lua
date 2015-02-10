@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mote"]={"mote","[məʊt]","[ məut ]","n.微尘(尘埃,瑕疵)",'n.微尘(尘埃,瑕疵)','The air was thick with motes.','空气中满是尘埃。','Sometimes I think about the life, I have to confess we human are just motes of the universe.','有时候我想想人生，我不得不承认我们人类只是宇宙中的微尘。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seamy"]={"seamy","['siːmɪ]","['simi]","adj.不愉快的",'adj.不愉快的，黑暗的,恶劣的，有接缝的','The novel gives a vivid description of the seamy side of the city life.','这本小说生动地描绘了城市生活的阴暗面。','Human character has two sides, and everyone has his normal side and seamy side.','人的性格是有两面性的，每个人都会有其性格的正常面和阴暗面。'}

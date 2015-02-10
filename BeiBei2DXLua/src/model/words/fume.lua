@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fume"]={"fume","[fjuːm]","[fjum]","n.臭气",'n.臭气,烟,激怒|||v.熏,冒烟','The fireman was suffocated by the fumes.','那个消防队员让浓烟憋死了.','The burnt heaps of wood were still ||fuming||.','燃烧的木堆仍在冒着烟。'}

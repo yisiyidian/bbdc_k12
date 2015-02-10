@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swagger"]={"swagger","['swægə]","['swæɡɚ]","v.大摇大摆地走",'v.大摇大摆地走，吹嘘|||n.大摇大摆,吹牛|||adj.漂亮的，时髦的','He took his prize and swaggered back to his seat.','他领奖後洋洋得意地回到自己的座位上.','Don\'t swagger (around) just because you got the job.','别因为得到了这份工作就得意忘形.'}

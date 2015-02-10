@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["propose"]={"propose","[prə'pəʊz]","[prə'poz]","v.向...提议",'v.计划,打算,向...提议;求婚','I wish to propose a toast to our friendship.','我提议为我们的友谊干杯。','He proposed that a change should be made.','他建议做一些改变。'}

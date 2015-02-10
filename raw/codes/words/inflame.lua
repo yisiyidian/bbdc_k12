@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inflame"]={"inflame","[ɪn'fleɪm]","[ɪn'flem]","v.（使）激怒",'v.（使）激怒,（使）燃烧,（使）发炎','The setting sun inflames the sky.','落日映红天空。','He was inflamed with anger.','他满腔怒火。'}

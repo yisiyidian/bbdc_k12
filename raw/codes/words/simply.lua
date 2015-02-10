@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["simply"]={"simply","['sɪmplɪ]","['sɪmpli]","adv.&adj.简单地",'adv.&adj.简单地,仅仅','He goes there simply because he likes to.','他去那儿只是因为他喜欢去。','The holidays simply sped by.','假期简直是一晃而过。'}

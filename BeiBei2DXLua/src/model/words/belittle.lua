@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["belittle"]={"belittle","[bɪ'lɪt(ə)l]","[bɪ'lɪtl]","vt.轻视",'vt.轻视,贬低，使相形见小','It makes no sense to belittle the enormity of the disaster.','没有理由低估这场灾难的严重性。','It is wrong to belittle or neglect popularization.','轻视和忽视普及工作的态度是错误的。'}

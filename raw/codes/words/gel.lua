@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gel"]={"gel","[dʒel]","[dʒɛl]","n.凝胶",'n.凝胶,发胶,彩色透明滤光版|||vi.形成胶冻','This liquid gels faster in cold weather.','这种液体天冷时凝结得快些.','My ideas are beginning to gel.','我的想法逐渐形成了.'}

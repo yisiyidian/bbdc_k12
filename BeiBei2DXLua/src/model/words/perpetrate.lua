@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perpetrate"]={"perpetrate","['pɜːpɪtreɪt]","['pɝpətret]","vt.做（坏事）",'vt.做（坏事）,犯(罪)','Only an insane person could perpetrate such a horrible crime.','只有疯子才犯这种令人发指的罪行。','A high proportion of crime in any country is perpetrated by young males in their teens and twenties.','在任何国家的犯罪者中，十几二十几岁的青年男性都占了很高的比例。'}

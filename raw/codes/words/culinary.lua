@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["culinary"]={"culinary","['kʌlɪn(ə)rɪ]","['kʌlɪnɛri]","adj.厨房的",'adj.厨房的,烹调的','As a housewife, it\'s important to improve my culinary skill.','作为一名家庭主妇，提高自己的烹饪技术是非常重要的。','A chef does not give away all his culinary secrets.','一个厨师是不会把他的烹调秘诀都说出来的。'}

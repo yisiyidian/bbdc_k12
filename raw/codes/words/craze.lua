@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["craze"]={"craze","[kreɪz]","[krez]","n.狂热",'n.狂热,大流行，(陶瓷器等表面的)裂纹|||v.(使)发狂,(使)产生裂纹','The boys had a craze for collecting stamps.','那些男孩子们热衷于集邮。','Skateboards are the latest craze.','滑板运动是目前最时兴的玩意儿.'}

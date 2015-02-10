@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swollen"]={"swollen","['swəʊlən]","['swolən]","adj.肿大的",'adj.肿大的，水涨的|||动词swell的过去分词形式','His face was swollen (up) with toothache.','他的脸因牙痛而肿了起来.','Your ankle is badly swollen; I think the doctor ought to look at it.','你的脚腕子肿得很厉害, 我认为得请医生看看了.'}

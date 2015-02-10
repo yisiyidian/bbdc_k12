@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trove"]={"trove","[trəʊv]","[trov]","n.被发现的东西",'n.被发现的东西,收藏的东西','He assembled a rich trove of Chinese porcelain.','他收集了一批中国瓷器.','The gallery is a treasure trove of medieval art.','这个画廊是中世纪艺术的宝库。'}

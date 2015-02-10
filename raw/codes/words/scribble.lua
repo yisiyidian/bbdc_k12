@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scribble"]={"scribble","['skrɪb(ə)l]","['skrɪbl]","v.潦草地书写",'v.潦草地书写,乱写,滥写|||n.潦草的写法,潦草写成的东西,杂文','His writing is nothing but a scribble.','他的书写简直太潦草了。','Do not scribble on the wall!','不要在墙上乱涂！'}

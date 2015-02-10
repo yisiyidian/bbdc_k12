@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["august"]={"august","[ɔ:ˈgʌst]","[ˈɔːɡəst]","n.八月(大写时）",'n.八月(大写时）|||adj.威严的,尊严的(小写时）','The firm publishes its accounts in ||August||.','该商行于八月份公布会计帐目。','In ||August|| the place is lousy with tourists.','八月里这地方游客多如牛毛。'}

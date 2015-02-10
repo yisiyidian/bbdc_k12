@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cholesterol"]={"cholesterol","[kə'lestərɒl]","[kə'lɛstərɔl]","n.胆固醇",'n.胆固醇','Fat provides very valuable calories and every cell needs fat and cholesterol to grow.','脂肪提供非常宝贵的热量，并且每个细胞都需要脂肪和胆固醇才能生长。','A low cholesterol diet.','低胆固醇饮食'}

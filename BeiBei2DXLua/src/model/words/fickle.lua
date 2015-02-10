@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fickle"]={"fickle","['fɪk(ə)l]","['fɪkl]","adj.变幻无常的",'adj.变幻无常的,轻浮的，（爱情或友情上）易变的','It\'s the third time that he changed his mind; he\'s so fickle!','他改变主意已经是第三回了，他这人太反复无常了！','New England\'s weather can be fickle.','新英格兰的天气变幻莫测。'}

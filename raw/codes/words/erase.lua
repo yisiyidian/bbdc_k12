@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["erase"]={"erase","[ɪ'reɪz]","[ɪ'res]","v.抹去",'v.抹去,擦掉|||[计算机]擦除','Also, access a full-screen menu, such as call, will erase the snapshot from memory.','同样进入全屏菜单，如Call，也会从内存中删除快照。','Had to erase all thoughts of failure from his mind.','必须抹去他头脑中所有有关失败的记忆'}

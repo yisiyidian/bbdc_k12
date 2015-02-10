@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["live"]={"live","[lɪv]","[lɪv]","v.活",'adj.活的,生动的,精力充沛的,直播的|||v.活,居住,过著','Now you\'ve been left some money you can afford to live it up a bit.','既然留有这些钱，你就可以痛快享受一番了。','After she died he had nothing to live for.','她去世後，他便没有了生活目标。'}

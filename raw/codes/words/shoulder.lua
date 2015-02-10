@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shoulder"]={"shoulder","['ʃəʊldə]","['ʃoldɚ]","n.肩膀",'n.肩膀,角度,交接处|||vt.肩负,承担,用肩推挤|||vi.用肩推挤','He felt a dull ache in his shoulder.','他感到肩膀隐隐作痛。','The bullet wounded his shoulder.','子弹打伤了他的肩膀。'}

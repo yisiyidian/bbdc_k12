@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["superimpose"]={"superimpose","[,suːp(ə)rɪm'pəʊz; ,sjuː-]","[,supərɪm'poz]","vt.重叠",'vt.重叠(安装,添加)','When she takes the message,she superimposes her own opinion.','她转告口信时，加上了她自己的观点。','His picture was superimposed on a muscular body.','他的照片被移花接木，放在了一个肌肉发达的身体上。'}

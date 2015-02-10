@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prestige"]={"prestige","[pre'stiː(d)ʒ]","[prɛ'stidʒ]","n.威望",'n.威望,声望','The company would do anything but risk their prestige at stake.','公司绝不愿将自己的信誉孤注一掷。','The old universities of Oxford and Cambridge still have a lot of prestige.','历史悠久的牛津大学和剑桥大学仍然享有很高的声望。'}

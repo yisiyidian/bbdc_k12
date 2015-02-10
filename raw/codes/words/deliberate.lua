@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deliberate"]={"deliberate","[dɪ'lɪb(ə)rət]","[dɪ'lɪbərət]","adj.故意的",'adj.故意的,深思熟虑的,从容不迫的|||vi.仔细考虑|||vt.研讨','He told us a deliberate lie.','他存心说谎。','It had more the appearance of a deliberate crime than an accident.','那很像是蓄意的罪行, 而不像是意外的事故.'}

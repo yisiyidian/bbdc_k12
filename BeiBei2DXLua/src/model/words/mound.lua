@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mound"]={"mound","[maʊnd]","[maʊnd]","n.土墩",'n.土墩,堤,小山|||v.筑堤,用土堆防卫','A mound of earth or stone built to hold back water or to support a roadway.','堤用以阻挡水或支持公路而建造的土堆或石堆','A platform or mound of earth within a fort from which guns are fired over the parapet.','炮墩，炮座堡垒内部的平台或土墩，大炮可从中越过胸墙而发射'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contractor"]={"contractor","[kən'træktə]","[kən'træktɚ]","n.立契约的人",'n.立契约的人,承包商','My boss have give me a free hand in deciding which outside contractor to use.','老板已经给了我自主权，让我决定用哪家承包商。','The Detroit contractor was asked to kick$5, 000 back as commission.','那个底特律的承包商被要求退还5000美元作为佣金。'}

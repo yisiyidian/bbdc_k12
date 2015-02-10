@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tightly"]={"tightly","['taɪtlɪ]","['taɪtli]","adv.紧紧地",'adv.紧紧地,坚固地','She felt his arms close tightly around her.','她觉得他把她搂得很紧.','He took hold of the rope tightly.','他紧紧抓住了绳子。'}

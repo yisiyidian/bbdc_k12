@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["meticulous"]={"meticulous","[mə'tɪkjələs]","[mə'tɪkjələs]","adj.一丝不苟的",'adj.一丝不苟的,精确的','The painting had been executed with meticulous attention to detail.','画这幅画的时候，画家非常注意细节。','He was so meticulous about everything.','他对任何事情都很小心谨慎。'}

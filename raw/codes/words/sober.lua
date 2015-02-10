@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sober"]={"sober","['səʊbə]","['sobɚ]","adj.清醒的",'adj.清醒的,沉着冷静的,稳重的,颜色暗淡的|||vt.使清醒,使沉着|||vi.清醒,冷静下来','sober attire.','朴素的衣着','Give her some black coffee that\'ll help to sober her up.','给她一些清咖啡－－让她清醒清醒。'}

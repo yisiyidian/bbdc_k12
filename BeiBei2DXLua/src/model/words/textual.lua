@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["textual"]={"textual","['tekstjʊəl]","['tɛkstʃuəl]","adj.本文的",'adj.本文的,原文的','Mail permits network users to send textual messages to each other.','电子邮件允许网络用户彼此传送文本消息。','||Textual|| analysis identified the author as Shakespeare.','对原文的分析研究鉴定出作者是莎士比亚.'}

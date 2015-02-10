@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dehydration"]={"dehydration","[,diːhaɪ'dreɪʃən]","[,dihaɪ'dreʃən]","n.脱水",'n.脱水','One of the symptom of the stroke is dehydration.','中风的症状之一是脱水','He died from severe dehydration.','他死于严重脱水。'}

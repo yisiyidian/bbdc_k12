@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hesitate"]={"hesitate","['hezɪteɪt]","['hɛzɪtet]","vi.犹豫",'vi.犹豫,停顿，口吃，迟疑，踌躇|||vt.用犹疑的态度表示','I hesitated about taking his side until I knew the whole story.','我在完全了解事实真相后，才打消顾虑，支持他的立场。','She hesitated to hurt the child\'s feelings.','她不想伤害孩子的感情。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tennis"]={"tennis","['tenɪs]","['tɛnɪs]","n.网球",'n.网球','He hit the tennis ball over the net.','他把网球打过了网。','They were adversaries in the tennis match.','在网球赛中，他们是对手。'}

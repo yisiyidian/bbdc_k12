@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["messy"]={"messy","['mesɪ]","['mɛsi]","adj.散乱的",'adj.散乱的,污秽的,麻烦的','The kitchen\'s always so messy after we\'ve had guests. Give me a hand to do it over, will you?','家里来了客人之后，厨房总是那么乱，请你帮助我们清扫一下好吗？','I\'d like to know who wished off this messy job on me.','我想知道是谁把脏活推给我做的。'}

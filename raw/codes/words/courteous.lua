@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["courteous"]={"courteous","['kɜːtjəs]","['kɝtɪəs]","adj.有礼貌的",'adj.有礼貌的，殷勤的','A person who is virtuous is also courteous.','有德者必知礼。','She needed to soften her request to make it as polite and courteous as she could.','她需要使请求语气柔婉，以便尽可能把它变成有礼貌与客气。'}

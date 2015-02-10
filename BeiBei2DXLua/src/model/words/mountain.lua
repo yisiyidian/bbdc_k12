@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mountain"]={"mountain","['maʊntɪn]","['maʊntn]","n.山",'n.山,山脉,大量','Never make a mountain of a molehill.','【谚】切勿小题大做。','There are rows of tents at the foot of the mountain.','山脚下有几排帐篷。'}

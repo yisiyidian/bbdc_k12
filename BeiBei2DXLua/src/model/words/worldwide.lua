@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["worldwide"]={"worldwide","['wɜːl(d)waɪd; wɜːl(d)'waɪd]","['wɝldwaɪd]","adj.全世界的",'adj.全世界的','The society expanded into a worldwide organization.','这个社团已扩大成为一个世界性的组织.','Our society expanded into a worldwide organization.','我们的协会扩大成一个世界性组织。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inviting"]={"inviting","[ɪn'vaɪtɪŋ]","[ɪn'vaɪtɪŋ]","adj.吸引人的",'adj.吸引人的,诱人的|||动词invite的现在分词','We ||invited|| twenty people, but only a handful of them came.','我们邀请了20 个人，但只来了寥寥数人。','Leaving the windows open is inviting thieves to enter.','窗户不关犹如开门揖盗.'}

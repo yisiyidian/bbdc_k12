@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["are"]={"are","[ɑː]","[ɑr]","vi.是",'vi.是,在(be动词,系动词)','Don\'t cry, you are a big boy now.','别哭，你现在已经是大男孩了。','These people who were young fifty years back are now gray haired.','50年前的年轻人，现在已经白发苍苍了。'}

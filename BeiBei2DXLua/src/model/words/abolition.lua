@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abolition"]={"abolition","[æbə'lɪʃ(ə)n]","[,æbə'lɪʃən]","n.废除",'n.废除,废止','Advocacy of the abolition of slavery.','废奴主义废除奴隶制的主张','Few people would not exult at the abolition of slavery.','奴隶制被废除了，人们无不为之欢乐鼓舞。'}

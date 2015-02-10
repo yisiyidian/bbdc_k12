@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["beige"]={"beige","[beɪʒ; beɪdʒ]","[beʒ]","adj.米黄色的",'adj.米黄色的|||n.薄斜纹呢,米黄色','As far as I\'m concerned, the beige one is better.','就我而言, 米色的那个更好。','The walls are beige.','墙是淡棕色的。'}

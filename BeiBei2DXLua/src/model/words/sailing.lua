@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sailing"]={"sailing","['seɪlɪŋ]","['selɪŋ]","n.航行",'n.航行,航海术,启航','The wind favoured their sailing at dawn.','这风便於他们在黎明时航行.','I must renew my membership of the sailing club.','我必须延续我的航海俱乐部会员资格。'}

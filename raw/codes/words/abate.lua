@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abate"]={"abate","[ə'beɪt]","[ə'bet]","v.缓和",'v.缓和,减弱','The ship sailed when the storm abated.','这船在暴风雨减弱时起航。','We must abate the smoke nuisance in our big cities.','我们必须消除大城市里烟尘污染。'}

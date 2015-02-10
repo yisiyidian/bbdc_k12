@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["channel"]={"channel","['tʃæn(ə)l]","['tʃænl]","n.通道",'n.通道,频道,海峡,方法|||vt.引导,开导,形成河道,输送','This channel comes on the air every morning at 7 am.','这个频道每天早晨7点钟开始播放.','Ships must follow the channel into the port.','船只必须沿航道进入港口。'}

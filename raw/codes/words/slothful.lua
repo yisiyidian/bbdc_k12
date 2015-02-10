@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slothful"]={"slothful","['sləʊθfʊl; -f(ə)l]","['sloθfl]","adj.怠惰的",'adj.怠惰的,懒惰的,迟钝的','Lazy, slothful people sow poverty tomorrow.','颓惰自甘,家园终替。','I\'ve never been tardy, absent, disobedient, slothful or disrespectful.','我从未缓慢, 缺席, 不服从, 懒惰或者不敬.'}

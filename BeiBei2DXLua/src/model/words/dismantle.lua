@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dismantle"]={"dismantle","[dɪs'mænt(ə)l]","[dɪs'mæntl]","vt.拆除",'vt.拆除,剥除,分解,取消','I had to dismantle the engine in order to repair it.','我得把发动机拆开来修理。','Public services of all kinds are being dismantled.','林林总总的公共设施正被逐渐废除。'}

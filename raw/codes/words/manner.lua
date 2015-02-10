@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["manner"]={"manner","['mænə]","['mænɚ]","n.方式",'n.样子,礼貌,风格,方式','It is bad manners to interrupt.','打断别人说话是不礼貌的。','This fresco is typical of the painter\'s early manner.','这幅壁画法是这个画家典型的早期风格'}

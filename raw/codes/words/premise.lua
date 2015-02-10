@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["premise"]={"premise","['premɪs]","[ˈpremɪs]","n.前提",'n.前提|||vt.提论,预述，假设','Keep off the premises.','请勿入内。','British justice works on the premise that an accused person is innocent until he\'s proved guilty.','英国司法运作的前提是被告在被证明有罪之前是清白的。'}

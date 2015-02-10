@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cobbler"]={"cobbler","['kɒblə]","['kɑblɚ]","n.补鞋匠",'n.补鞋匠','The cobbler is a spy in disguise.','补鞋匠是个伪装的间谍。','This cobbler is rather clumsy.','这个补鞋匠真是笨手笨脚。'}

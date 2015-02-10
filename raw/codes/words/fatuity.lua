@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fatuity"]={"fatuity","[fə'tjʊ(ː)ɪtɪ]","[ fə'tju(:)iti ]","n.愚蠢",'n.愚蠢,愚昧','This is no doubt the first step out of confusion and fatuity.','这无疑是摆脱混乱与愚味的第一步。','Therefore, ignorance of history often leads to fatuity in politics.','历史的无知，往往导致政治上的昏庸。'}

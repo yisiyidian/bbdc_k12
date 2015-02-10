@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["attic"]={"attic","['ætɪk]","['ætɪk]","n.阁楼",'n.阁楼','I spent the day ferreting (about) in the attic (for old photographs).','我一整天都在阁楼上翻找（旧照片）.','I unearthed the portrait from the attic.','我从阁楼上搜出这幅画像.'}

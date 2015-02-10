@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arrant"]={"arrant","['ær(ə)nt]","['ærənt]","adj.彻头彻尾的",'adj.彻头彻尾的，极端的','Don\'t trust him; he is an arrant hypocrite.','别相信他, 他是个彻头彻尾的伪君子。','an arrant fool; the arrant luxury of the ocean liner.','十足的傻瓜；极其豪华的定期远洋客轮'}

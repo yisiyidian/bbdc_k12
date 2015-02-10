@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inerrancy"]={"inerrancy","[ɪn'ɛrənsi]","[ in'erənsi ]","n.不会错(绝对正确)",'n.不会错(绝对正确)','I believe myself inerrancy.','我坚信自己不会错。','I believe myself inerrancy.','我坚信自己不会错。'}

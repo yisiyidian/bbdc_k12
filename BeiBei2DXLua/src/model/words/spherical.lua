@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spherical"]={"spherical","['sferɪk(ə)l]","['sfɪərɪkəl]","adj.球的",'adj.球的,球面的,球状的','The oil-lamp needs a new globe, spherical lampshade.','这油灯需配个新的圆灯罩.','The basketball is spherical.','篮球是球状的。'}

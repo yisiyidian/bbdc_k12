@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transistor"]={"transistor","[træn'zɪstə; trɑːn-; -'sɪ-]","[træn'zɪstɚ]","n.晶体管",'n.晶体管，晶体管收音机','The old man always carries about a transistor.','这位老人总是随身携带一台晶体管收音机。','A new type of transistor radio has been brought out in that factory.','那家工厂生产了一种新型的半导体收音机。'}

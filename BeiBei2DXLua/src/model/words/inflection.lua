@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inflection"]={"inflection","[ɪn'flekʃ(ə)n]","[ɪn'flɛkʃən]","n.屈曲",'n.屈曲,变调,音调变化','In English, some questions have a rising inflection.','在英语中有些疑问句需要用升调。','I predict that the next inflection point won’t be about numbers of users. It will be about engagement.','而我预言，下一个拐点不会再以用户的数量来衡量其价值，而是对所有人的占有。'}

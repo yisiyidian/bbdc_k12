@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["humility"]={"humility","[hjʊ'mɪlɪtɪ]","[hju'mɪləti]","n.谦逊",'n.谦逊,谦虚,谦卑','It is not a sign of humility to declaim against pride.','慷慨激昂地攻击傲慢，并非谦逊的标志。','The girl has the great virtues of humility and kindness.','这姑娘具有谦恭和善良两大美德。'}

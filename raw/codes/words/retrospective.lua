@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["retrospective"]={"retrospective","[retrə(ʊ)'spektɪv]","[,rɛtrə'spɛktɪv]","adj.回顾的",'adj.回顾的,向后看的,怀旧的n.作品回顾展出','The legislation was made retrospective.','该项法规具有追溯效力。','A retrospective influence pervaded the whole performance.','整个演出都充斥着怀旧的氛围。'}

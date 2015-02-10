@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spectacle"]={"spectacle","['spektək(ə)l]","['spɛktəkl]","n.值得看的东西",'n.值得看的东西,光景,眼镜','The children took in the spectacle open-mouthed.','孩子们张著嘴注视精彩表演.','The celebrations provided a magnificent spectacle.','庆祝活动呈现一派宏伟的景象。'}

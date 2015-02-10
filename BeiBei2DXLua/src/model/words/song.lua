@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["song"]={"song","[sɒŋ]","[sɔŋ]","n.歌曲",'n.歌曲,歌唱艺术,诗歌','The song has plaintive melody.','这首歌曲的曲调悲伤。','I woke up and was greeted by bird song.','我一觉醒来，鸟鸣之声不绝于耳。'}

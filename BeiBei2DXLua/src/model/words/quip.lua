@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quip"]={"quip","[kwɪp]","[kwɪp]","n.警句",'n.警句,名言,讽刺|||v.说讽刺的话,嘲弄,托辞','He ended his speech with a merry quip .','他以十分风趣的话结束了演讲。','||Quiping|| about something needs intelligient and humor.','讽刺需要有智慧与幽默。'}

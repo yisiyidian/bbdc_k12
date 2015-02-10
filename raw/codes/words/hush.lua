@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hush"]={"hush","[hʌʃ]","[hʌʃ]","n.肃静",'n.肃静,安静,沉默|||v.肃静,安静,缄默|||int.肃静','There was a sudden hush.','突然肃静下来。','She hushed the baby to sleep.','她使婴儿安静入睡。'}

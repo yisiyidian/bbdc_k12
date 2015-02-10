@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subtle"]={"subtle","['sʌt(ə)l]","['sʌtl]","adj.微妙的",'adj.微妙的,敏感的,精细的,狡诈的,不明显的','Note the subtle gradation of colour in this painting.','注意这幅画中色彩的细微变化.','||Subtle|| lighting helps people relax.','光线暗淡有助於人们松弛精神.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disseminate"]={"disseminate","[dɪ'semɪneɪt]","[dɪ'sɛmɪnet]","vt.散播",'vt.散播,公开,宣传','They use the press to disseminate right-wing views.','他们利用报刊来传播右翼观点。','The news was soon disseminated.','消息很快传开来了。'}

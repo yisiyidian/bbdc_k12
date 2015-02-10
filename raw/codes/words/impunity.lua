@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impunity"]={"impunity","[ɪm'pjuːnɪtɪ]","[ɪm'pjunəti]","n.不受惩罚",'n.不受惩罚,无事,无患','One cannot commit crimes with impunity.','一个人不能犯了罪不受惩罚。','I will guarantee your impunity as long as you tell me the truth.','只要你和我说真话，我将会担保你不受惩罚。'}

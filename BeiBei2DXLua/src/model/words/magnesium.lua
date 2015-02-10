@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["magnesium"]={"magnesium","[mæg'niːzɪəm]","[mæg'nizɪrm]","n.镁",'n.镁','||Magnesium|| is the nutrient element in plant growth.','镁是植物生长的营养要素.','The water contains high amounts of magnesium.','这水含有大量的镁.'}

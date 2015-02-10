@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["martyr"]={"martyr","['mɑːtə]","['mɑrtɚ]","n.烈士",'n.烈士,殉道者|||vt.杀害,折磨,牺牲','He was martyred by the Romans.','他被罗马人处死而成为殉道者。','A simple plaque marks the spot where the martyr died.','有一块朴素的饰板用以纪念该烈士的殉难处.'}

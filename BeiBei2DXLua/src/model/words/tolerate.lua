@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tolerate"]={"tolerate","['tɒləreɪt]","['tɑləret]","v.忍受",'v.忍受,容忍,容许,宽恕|||vt.容忍,忍受,容许','He could not tolerate the extremes of heat in the desert.','他忍受不住沙漠的酷热.','She\'s not a woman to tolerate being played with','她不是一个能容忍别人玩弄的女子。'}

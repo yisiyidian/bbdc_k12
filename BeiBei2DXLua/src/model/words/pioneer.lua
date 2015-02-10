@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pioneer"]={"pioneer","[paɪə'nɪə]","[,paɪə'nɪr]","n.先锋",'n.先锋,拓荒者,先驱生物|||vt.提倡,开辟|||vi.做先驱','She pioneered the use of the drug.','是她最先使用的这种药品。','He was a pioneer in the use of X-rays.','他是最早使用X光的人。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["worker"]={"worker","['wɜːkə]","['wɝkɚ]","n.工人",'n.工人，工作者','The worker repaired the barrel with a hoop iron.','这个工人用一个铁箍修桶。','He is not so much a genius as a hard worker.','他的努力胜于天分。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gleam"]={"gleam","[gliːm]","[ɡlim]","n.微弱的闪光",'n.微弱的闪光,瞬息的一现|||v.闪烁,隐约地闪现','The plans for the new town hall were then still only a gleam in the architect\'s eye.','当时有关新市政大厅的计画还仅仅是那建筑师酝酿中的意念。','His face gleamed with pleasure.','他的脸上闪现出欢快的神色。'}

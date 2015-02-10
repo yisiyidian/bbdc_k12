@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["paramount"]={"paramount","['pærəmaʊnt]","['pærəmaʊnt]","adj.极为重要的",'adj.极为重要的|||Paramount.派拉蒙(美电影公司)','This matter is of paramount importance.','此事至关重要。','The reduction of unemployment should be paramount.','降低失业率应是头等大事。'}

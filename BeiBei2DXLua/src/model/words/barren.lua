@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["barren"]={"barren","['bær(ə)n]","['bærən]","adj.贫瘠的",'adj.不育的,贫瘠的','Such a barren desert can support very few creatures.','在这样荒瘠的沙漠里, 很少生物能够存活.','The once barren hillsides are now good farmland.','昔日荒坡，今日良田。'}

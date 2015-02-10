@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["effluent"]={"effluent","['eflʊənt]","['ɛflʊənt]","adj.流出的",'adj.流出的|||n.流出物,由河,湖等流出之水流','Dangerous effluent is being poured into our rivers.','有害的废水正流入我们的江河里。','The chemical companies are poisoning our rivers with effluent.','这些化学公司排出废水污染著我们的河流。'}

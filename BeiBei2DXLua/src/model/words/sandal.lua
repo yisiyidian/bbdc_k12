@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sandal"]={"sandal","['sænd(ə)l]","['sændl]","n.凉鞋",'n.便鞋,凉鞋','She wears sandals every day in summer.','夏天她每天都穿凉鞋。','...a pair of old sandals.','…一双旧凉鞋。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["motive"]={"motive","['məʊtɪv]","['motɪv]","adj.发动的",'adj.发动的,运动的,积极的,动机的|||n.动机,主题|||vt.促使,使有动机','Can we assign jealousy as the motive for the crime?','我们能否确定这一犯罪动机是出於嫉妒?','He showed his sinister motive at last.','他终于露出了他那邪恶的用心。'}

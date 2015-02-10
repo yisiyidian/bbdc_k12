@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exclaim"]={"exclaim","[ɪk'skleɪm; ek-]","[ɪk'sklem]","v.大叫",'v.大叫,呼喊,大声叫','She exclaimed at the beautiful view.','这美丽的景色令她欢呼。','The newspapers exclaimed against the government\'s action.','报纸指责政府的行动。'}

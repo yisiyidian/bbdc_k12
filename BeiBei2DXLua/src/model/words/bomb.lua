@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bomb"]={"bomb","[bɒm]","[bɑm]","n.炸弹",'n.炸弹,高压罐,火山口喷出的熔岩|||vt.轰炸,大败,长传|||vi.失败','Terrorists bombed several police stations.','恐怖分子炸毁了几所警察分局。','My new car goes like a bomb.','我的新车跑得很快。'}

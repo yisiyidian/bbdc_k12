@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irresolute"]={"irresolute","[ɪ'rezəluːt]","[ɪ'rɛzə'lʊt]","adj.未决定的",'adj.未决定的,优柔寡断的,踌躇不定的','The irresolute spend the most precious moments of life regretting.','犹豫不决的人常把生命最珍贵的时刻浪费在懊悔上。','I stood irresolute beside my car.','我犹豫不决地站在我的车旁。'}

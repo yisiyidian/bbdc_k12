@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ethnicity"]={"ethnicity","[eθ'nɪsɪtɪ]","[ɛθ'nɪsəti]","n.种族划分",'n.种族划分,属于少数民族','Music is beyond ethnicity.','音乐是没有种族的。','The problems of ethnicity around the world have not abated with the progress of human civilisation and society, but have exacerbated instead.','世界各个角落所存在的种族问题不但没有因文明社会的进步而有所改善，反而有越演越烈之势。'}

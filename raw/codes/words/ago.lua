@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ago"]={"ago","[ə'gəʊ]","[ə'ɡo]","adv.以前",'adv.以前','It happened quite some time ago.','那是很久以前的事.','They were supposed to be here an hour ago.','他们应该在一小时以前到达这里。'}

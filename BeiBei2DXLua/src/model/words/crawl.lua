@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crawl"]={"crawl","[krɔːl]","[krɔl]","vi.爬行",'vi.爬行，卑躬屈膝，自由式游泳|||n.爬行,匍匐而行，[体育]自由式游泳','He can swim breaststroke, backstroke and crawl.','他会游蛙泳、仰泳和自由泳。','The baby often crawls on all fours.','婴儿经常匍匐而行。'}

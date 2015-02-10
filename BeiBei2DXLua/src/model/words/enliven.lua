@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enliven"]={"enliven","[ɪn'laɪv(ə)n; en-]","[ɪn'laɪvən]","vt.使活跃",'vt.使活跃','The journey is enlivened by the presence of these young people.','由于有这些年轻人，所以旅程充满生气。','How can we enliven this party?','我们怎样才能使晚会更活泼？'}

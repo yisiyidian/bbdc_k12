@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["combine"]={"combine","[kəm'baɪn]","[kəm'baɪn]","vi.结合",'n.集团,联合收割机|||v.化合,结合,联合|||vi.结合,联合|||vt.使结合,使联合','The choreography, which combines artistry and athletics, is extremely innovative.','兼有艺术和运动的舞蹈艺术是极具创新意义的','He combines creative imagination and true scholarship.','他同时具有创造性想象力和真正的治学谨严学风。'}

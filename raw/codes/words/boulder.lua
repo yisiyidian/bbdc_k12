@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["boulder"]={"boulder","['bəʊldə]","['boldɚ]","n.大圆石",'n.大圆石，巨砾','It required superhuman effort to lift the huge boulder.','要搬起这块大石头需要有超人的力量.','The boulder is too big to put into the cave.','石头太大了，塞不进洞里。'}

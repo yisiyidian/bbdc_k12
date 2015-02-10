@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["measurement"]={"measurement","['meʒəm(ə)nt]","['mɛʒɚmənt]","n.测量",'n.测量,衡量,尺寸,大小','The overall measurement of this room is 80 square meters.','这个屋子的面积是80平方米。','When did the first measurement of the speed of sound take?','第一次测量声速是在什么时候？'}

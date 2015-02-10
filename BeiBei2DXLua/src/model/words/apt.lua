@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["apt"]={"apt","[æpt]","[æpt]","adj.恰当的",'adj.恰当的；有…倾向的；灵敏的','He is a clever boy but apt to get into mischief.','他是个聪明却很调皮的孩子。','She is apt to take offense easily.','她很容易发脾气。'}

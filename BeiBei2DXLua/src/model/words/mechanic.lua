@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mechanic"]={"mechanic","[mɪ'kænɪk]","[mə'kænɪk]","adj.手工的",'adj.手工的|||n.技工,机修工','I\'ve got a tame mechanic who keeps my car in order.','我有个随和的汽车修理工, 他把我的车保养得很好.','The mechanic drained all the oil from the engine.','机械工将发动机中的油全部放走.'}

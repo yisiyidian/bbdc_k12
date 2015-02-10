@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["noncommittal"]={"noncommittal","[,nɒnkə'mɪtəl]","[,nɑnkə'mɪtl]","adj.不表示意见的(不承担义务的)",'adj.不表示意见的(不承担义务的)','I asked him if he approved of our plan, but he was noncommittal.','我问他是否赞同我们的计划，但他态度不明朗。','If asked about a controversial topic, give an honest but noncommittal answer.','被问到有争议的问题时，你要做出一个诚实但中立的答案。'}

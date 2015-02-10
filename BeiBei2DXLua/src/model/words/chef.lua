@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chef"]={"chef","[ʃef]","[ʃɛf]","n.厨师",'n.厨师,主厨','The chef is not interested in Greek food.','厨师对希腊饭不感兴趣。','The defendant\'s fate is in the hands of the jury. Dinner is in the hands of the chef.','被告人的命运掌握在陪审团的手上。晚餐由主厨负责'}

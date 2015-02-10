@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["identify"]={"identify","[aɪ'dentɪfaɪ]","[aɪ'dɛntɪfaɪ]","vt.识别",'vt.识别，认出；确定；使参与；把…看成一样|||vi.确定；认同','I found it hard to identify with any of the characters in the film.','我对这部影片里的任何角色都难以认同。','She ||identified|| that the man was her attacker.','她认出那个男人就是袭击过她的人。'}

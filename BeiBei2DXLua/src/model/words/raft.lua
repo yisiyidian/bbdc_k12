@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["raft"]={"raft","[rɑːft]","[ræft]","n.筏",'n.筏,救生艇,大量|||v.乘筏,制成筏','The raft was floating gently down the river.','筏子顺河水缓缓漂流.','Many people get away from the wrecked ship on a raft.','许多人乘救生艇离开遇难的船。'}

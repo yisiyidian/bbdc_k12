@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hoe"]={"hoe","[həʊ]","[ho]","n.锄头",'n.锄头|||v.锄地，铲除','She bought herself a hoe and a sickle.','她给自己买了一把锄头和一把镰刀.','I\'d like to hoe in the field.','我愿在田里锄地。'}

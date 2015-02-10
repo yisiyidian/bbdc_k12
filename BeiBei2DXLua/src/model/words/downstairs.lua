@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["downstairs"]={"downstairs","[daʊn'steəz]","['daʊn'stɛrz]","adj.楼下的",'adj.楼下的|||adv.在楼下|||n.楼下','She slipped and went hurtling downstairs.','她一失足咕噜噜跌下楼梯.','He returned downstairs in disgust.','他厌恶地转身下楼。'}

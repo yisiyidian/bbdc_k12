@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["guild"]={"guild","[gɪld]","[ɡɪld]","n.公会",'n.公会,协会','She works in the ||Guild|| of Surgeons.','她在外科医生同业公会工作。','I belong to a guild of wine butlers.','我属于主管酒类的男仆同业公会.'}

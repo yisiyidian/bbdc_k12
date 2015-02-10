@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["competitiveness"]={"competitiveness","[kəm'petətɪvnɪs]","[kəm'pɛtətɪvnɪs]","n.竞争能力",'n.竞争能力','Our factory\'s competitiveness is very strong in the world','在世界上我们工厂的竞争能力很强','We believe that the strength of the team is our core competitiveness.','我们相信，团队的力量是我们的核心竞争力'}

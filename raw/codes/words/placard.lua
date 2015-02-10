@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["placard"]={"placard","['plækɑːd]","['plækɑrd]","n.招贴",'n.招贴,布告|||vt.张贴布告','A large, usually printed placard, bill, or announcement, often illustrated, that is posted to advertise or publicize something.','海报通常印刷而成的大布告、招贴或公告，常附有插图，张贴以用来宣传或公布某事','The placards condemned the government\'s action.','那些标语牌上写著谴责政府措施的词句.'}

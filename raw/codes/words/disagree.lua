@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disagree"]={"disagree","[dɪsə'griː]","[,dɪsə'ɡri]","v.不同意",'v.不一致,有分歧，不适应，不适宜,不同意','In some countries, people who disagree with the government are classed as criminals.','在某些国家，凡是同政府持有不同意见的人都被视为罪犯。','Initially, I disagree with his proposal, but later I changed my mind.','起初我不同意他的提议，不过后来我改了主意。'}

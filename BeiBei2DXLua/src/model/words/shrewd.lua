@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shrewd"]={"shrewd","[ʃruːd]","[ʃrud]","adj.精明的",'adj.精明的','His skill in negotiating earned him a reputation as a shrewd tactician.','他的谈判技巧使他赢得了精明战略家的名声。','He\'s an artist, a scientist and a shrewd businessman all rolled into one.','他既是艺术家，又是科学家，同时还是个精明的生意人。'}

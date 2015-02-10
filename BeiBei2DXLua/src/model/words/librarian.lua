@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["librarian"]={"librarian","[laɪ'breərɪən]","[laɪ'brɛrɪən]","n.图书管理员",'n.图书管理员','She inquired of the librarian whether they had got the book.','她询问图书馆管理员，他们有没有这本书。','I have asked the librarian to look me out book on butterflies.','我已经请求图书管理员给我查找一本有关蝴蝶的书。'}

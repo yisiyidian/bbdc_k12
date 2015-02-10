@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prospect"]={"prospect","['prɒspekt]","['prɑspɛkt]","n.展望",'n.景色,希望,展望|||v.探勘,寻找','I see little prospect of an improvement in his condition.','我看他的情况没有什麽改进的希望。','A rich harvest is in prospect.','丰收在望。'}

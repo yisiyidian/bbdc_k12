@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coincide"]={"coincide","[,kəʊɪn'saɪd]","[,koɪn'saɪd]","v.与...一致",'v.与...一致,符合,暗合','The demonstration had been carefully stage-managed to coincide with the Prime Minister\'s visit.','这次示威活动事先作了精心安排, 正好在首相访问时进行.','They didn\'t coincide in opinion.','他们的意见不统一。'}

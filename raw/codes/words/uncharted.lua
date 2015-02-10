@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["uncharted"]={"uncharted","[ʌn'tʃɑːtɪd]","[,ʌn'tʃɑrtɪd]","adj.地图上没标明的",'adj.地图上没标明的','The nation\'s geopolitical strategy is yet uncharted.','该国的地缘政治的策略还不被人所知','The ship had drifted into uncharted waters.','船漂到了海图上未载明的海域.'}

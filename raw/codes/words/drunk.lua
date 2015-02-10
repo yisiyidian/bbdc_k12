@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["drunk"]={"drunk","[drʌŋk]","[drʌŋk]","adj.喝醉了的",'adj.喝醉了的|||vbl.喝,喝酒','He was obviously drunk.','他显然是醉了。','He\'d drunk so much that he found it hard to remain perpendicular.','他喝酒太多，简直站都站不直了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["filial"]={"filial","['fɪlɪəl]","['fɪlɪəl]","adj.子女的",'adj.子女的,子女应做的，孝顺的','She had done her filial respect to her mother.','她已经对母亲尽了孝心。','My husband is a filial son.','我丈夫是一个孝顺的儿子。'}

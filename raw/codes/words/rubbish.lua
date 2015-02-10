@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rubbish"]={"rubbish","['rʌbɪʃ]","['rʌbɪʃ]","n.垃圾",'adj.毫无价值的|||n.废话,垃圾,废物','The film was rubbished by the critics.','影评家把这部影片贬得一无是处。','The government\'s plan was rubbished by the opposition parties.','政府的计划被反对党批得一钱不值。'}

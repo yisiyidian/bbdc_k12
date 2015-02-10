@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["store"]={"store","[stɔː]","[stɔr]","n.商店",'n.商店,贮藏,仓库|||vt.储存,贮藏,供给,保存|||adj.储备的|||(在计算机里)存贮；记忆','He stored foods in his cupboard.','他把食品存放在碗橱里。','There is a large store in the village.','村里有家大百货店。'}

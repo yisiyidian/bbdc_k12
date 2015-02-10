@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diligence"]={"diligence","['dɪlɪdʒ(ə)ns]","['dɪlɪdʒəns]","n.勤奋",'n.勤奋','The police are pursuing their inquiries with great diligence.','警方正不知疲倦地进行调查。','She shows great diligence in her schoolwork.','她上学非常用功。'}

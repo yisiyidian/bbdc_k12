@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cabinet"]={"cabinet","['kæbɪnɪt]","['kæbɪnət]","n.橱柜",'n.橱柜,内阁|||adj.私人的','The ||Cabinet|| meets regularly.','内阁定期开会.','A built-in cabinet is a common fixture in bathrooms and kitchens','内置的橱柜是卫生间和厨房的常用固定装置。'}

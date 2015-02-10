@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ideal"]={"ideal","[aɪ'dɪəl; aɪ'diːəl]","[aɪ'diəl]","adj.理想的",'adj.理想的,完美的,高尚的|||n.理想,典范,目标','Her breadth of experience makes her ideal for the job.','她经验丰富, 最能胜任这项工作.','Knighthood was an ideal in medieval Europe.','在中世纪的欧洲，骑士是一种风范。'}

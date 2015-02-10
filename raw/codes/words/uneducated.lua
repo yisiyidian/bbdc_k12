@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["uneducated"]={"uneducated","[ʌn'edjʊkeɪtɪd]","[ʌn'ɛdʒuketɪd]","adj.没受教育的",'adj.没受教育的,文盲的,无知的','He\'s rough and uneducated, but his heart is in the right place.','他很粗鲁又没文化, 可他心肠不坏。','I\'d put him down as an uneducated man.','我把他看成是个没受过教育的人。'}

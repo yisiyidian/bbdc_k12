@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insert"]={"insert","[ɪn'sɜːt]","['ɪnsɝt]","vt.&vi.插入",'n.插入物|||vt.&vi.插入','||Insert|| the key in the lock.','把钥匙插入锁中。','The newspaper had an insert of pages of pictures.','该报带有数页插图.'}

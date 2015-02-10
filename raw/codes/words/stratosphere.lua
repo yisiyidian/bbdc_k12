@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stratosphere"]={"stratosphere","['strætə,sfɪə]","['strætəsfɪr]","n.[气]同温层",'n.[气]同温层,最上层,最高阶段','the governmental stratosphere; business expenses in the stratosphere.','政府最高层；极高的商业支出费用','He’s now at the top of the political stratosphere.','他现在身处政治高层的顶点。'}

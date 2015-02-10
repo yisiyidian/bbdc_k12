@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["panda"]={"panda","['pændə]","['pændə]","n.熊猫",'n.熊猫','I have never seen a panda.','我从未见过猫熊。','The panda is now a rare animal.','熊猫现在是稀有动物.'}

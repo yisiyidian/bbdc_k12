@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["breakfast"]={"breakfast","['brekfəst]","['brɛkfəst]","n.早餐",'n.早餐|||vt.吃早餐|||vi.提供早餐','She juiced an orange for her breakfast.','她用一只橙子榨汁作早餐饮料。','We were having breakfast.','我们正在吃早餐。'}

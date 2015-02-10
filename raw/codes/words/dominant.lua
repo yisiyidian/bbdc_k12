@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dominant"]={"dominant","['dɒmɪnənt]","['dɑmɪnənt]","adj.占优势的",'adj.占优势的，主导的，显性的|||n.主宰者','Brown eyes are dominant and blue eyes are recessive.','棕色眼睛是显性的，蓝色眼睛是隐性的。','The right hand is dominant in most people.','大多数人的右手是优势手。'}

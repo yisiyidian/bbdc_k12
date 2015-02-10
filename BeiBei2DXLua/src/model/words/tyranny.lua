@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tyranny"]={"tyranny","['tɪr(ə)nɪ]","['tɪrəni]","n.暴政",'n.暴政，苛政，专制','The people lifted up their voice against his tyranny.','人民大声疾呼，反对他的暴政。','People will remember the ||tyrannies|| of his reign.','人们不会忘记他统治时期的暴行。'}

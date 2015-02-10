@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["excellent"]={"excellent","['eks(ə)l(ə)nt]","['ɛksələnt]","adj.极好的",'adj.极好的,优秀的','This hall would make an excellent theatre.','这座大厅可当作极好的剧院.','This magazine published excellent stories.','这本杂志登载优秀的小说。'}

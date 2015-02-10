@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["underlying"]={"underlying","[ʌndə'laɪɪŋ]","[,ʌndɚ'laɪɪŋ]","adj.在下面的",'adj.在下面的,基本的,隐含的','underlying strata.','下层','an underlying meaning.','潜在的意义'}

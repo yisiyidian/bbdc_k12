@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["builder"]={"builder","['bɪldə]","['bɪldɚ]","n.建立者",'n.建立者，建筑工人|||n.增洁剂','We asked our builder to estimate for the repair of the ceiling.','我们要求营造商估算一下修理天花板的费用.','The builder reckons 15 man-hours for the job.','建筑者估计这个活儿需要15个工时.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stolid"]={"stolid","['stɒlɪd]","['stɑlɪd]","adj.迟钝的",'adj.迟钝的,神经麻木的','He conceals his feelings behind a rather stolid manner.','他装作无动於衷的样子以掩盖自己的感情.','the incredibly massive and stolid bureaucracy of the Soviet system','“苏维埃制度下令人难以置信的普遍的冷漠官僚主义”'}

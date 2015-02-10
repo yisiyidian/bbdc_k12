@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["barn"]={"barn","[bɑːn]","[bɑrn]","n.谷仓",'n.谷仓,牲口棚','The old barn we bought to convert into flats was practically tumbling down.','那个旧谷仓我们买下想改建住房的, 实际上已经快塌了.','Owls visited the barn to rest.','猫头鹰飞落在谷仓处.'}

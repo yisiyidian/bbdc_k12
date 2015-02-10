@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vulpine"]={"vulpine","['vʌlpaɪn]","['vʌlpaɪn]","adj.狐狸的",'adj.狐狸的,狡猾的','She disliked his sly ways, but granted him certain vulpine intelligence.','她厌恶他狡猾的行事，但承认他的机智。','You should pay more attention on him, for he is such a vulpine businessman.','他是如此狡猾的一个商人，你应该多注意他一点。'}

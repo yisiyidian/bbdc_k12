@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bother"]={"bother","['bɒðə]","['bɑðɚ]","vt.烦扰",'vt.烦扰|||vi.烦扰,操心|||n.烦扰','He could produce excellent work but usually he can\'t be bothered.','他其实可以把工作做好，可他往往嫌费事而不干。','The problem has been bothering me for weeks.','那问题已经困扰了我几个星期。'}

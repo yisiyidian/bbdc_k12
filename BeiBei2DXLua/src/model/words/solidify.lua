@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["solidify"]={"solidify","[sə'lɪdɪfaɪ]","[sə'lɪdɪfaɪ]","vt.使牢固",'vt.使牢固，使团结|||vi.变坚固，变结实','The thicker lava would have taken two weeks to solidify.','较厚的熔岩需要两周的时间才能凝固。','Opinions are beginning to solidify.','意见开始成形.'}

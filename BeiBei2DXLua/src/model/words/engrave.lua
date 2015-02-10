@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["engrave"]={"engrave","[ɪn'greɪv; en-]","[ɪn'ɡrev]","v.雕刻",'v.雕刻','His memorial was engraved on the stone.','纪念他的碑文刻在石碑上。','The terrible scene was engraved on his memory.','那可怕的情景铭记在他的记忆里。'}

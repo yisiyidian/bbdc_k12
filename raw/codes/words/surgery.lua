@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["surgery"]={"surgery","['sɜːdʒ(ə)rɪ]","['sɝdʒəri]","n.外科手术",'n.外科,外科手术,诊所','I hope the doctors won\'t have recourse to surgery.','我希望医生可别非动手术不可.','If you do not require surgery you can be treated as an out-patient.','不必动手术的可在门诊就医.'}

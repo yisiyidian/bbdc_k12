@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overt"]={"overt","[əʊ'vɜːt; 'əʊvət]","[o'vɝt]","adj.公开的",'adj.公开的,明显的,公然的','Although there is no overt hostility, black and white students do not mix much.','虽然没有明显的敌意，但黑人学生和白人学生的交往还是不多。','He has a overt hostility towards our tutor','他对我们导员有公开的敌意'}

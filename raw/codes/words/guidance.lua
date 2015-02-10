@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["guidance"]={"guidance","['gaɪd(ə)ns]","['gaɪdns]","n.引导",'n.引导,指导,导航系统','She is a marriage guidance counselor.','她是婚姻问题的顾问。','He is not only an actor but also a fighting skill guidance.','他不仅是演员还是武术指导。'}

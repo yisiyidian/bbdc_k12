@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["premium"]={"premium","['priːmɪəm]","['primɪəm]","n.额外费用",'n.额外费用,奖金;奖品保险费|||n.(商)溢价|||adj.高价的;优质的','Shares are selling at a premium.','股票按超出票面价值出售。','The high risk of infection puts a premium on the use of sterile needles.','由於受感染的风险很大，无菌注射针的使用受到了重视。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enfeeble"]={"enfeeble","[ɪn'fiːb(ə)l; en-]","[ in'fi:bl ]","vt.使衰弱",'vt.使衰弱','He was enfeebled by a long illness.','他因长期患病而虚弱无力。','The boy was enfeebled by the cold.','那个男孩因感冒而虚弱无力。'}

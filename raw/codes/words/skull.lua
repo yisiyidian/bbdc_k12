@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["skull"]={"skull","[skʌl]","[skʌl]","n.头骨",'n.头骨,骷髅头|||vt.击打头部','The victim\'s skull had been stove in by a heavy instrument.','遇害者的头颅是用重物击穿的.','The farmer turned up a human skull while ploughing the field.','那农民　地时挖出一个人类的头颅骨.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hearth"]={"hearth","[hɑːθ]","[hɑrθ]","n.炉床",'n.炉床,灶台,炉边','He hulked up from his chair by the hearth.','他从火炉边的椅子里懒洋洋地站起来。','A bright fire was burning in the hearth.','壁炉里炉火烧得正旺.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tanker"]={"tanker","['tæŋkə]","['tæŋkɚ]","n.油轮",'n.油轮，坦克中一员','The tanker was/went/ran aground.','油船搁浅了.','The holed tanker was disgorging oil.','撞了个窟窿的油船正在喷油。'}

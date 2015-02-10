@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scum"]={"scum","[skʌm]","[skʌm]","n.浮渣",'n.浮渣,水金秀,槽粕|||v.将浮渣去除掉,产生浮渣','These scum who fight at the football matches must be severely dealt with!','必须对那些专在足球比赛时打架的社会渣滓严加惩处！','When the meat is boiling, remove the scum.','当肉煮沸时，把浮在上面的浮渣撇掉。'}

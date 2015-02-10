@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fraught"]={"fraught","[frɔːt]","[frɔt]","adj.充满(不愉快事物）的",'adj.充满(不愉快事物）的,伴随的,忧伤的，忧虑的','The expedition through the jungle was fraught with difficulties and danger.','穿越森林的探险充满了艰辛和危险。','The earliest operations employing this technique were fraught with dangers.','最早使用这种技术的手术充满了危险。'}

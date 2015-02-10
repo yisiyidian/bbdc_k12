@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scan"]={"scan","[skæn]","[skæn]","n.扫描",'n.扫描,押韵,细查|||vt.扫描,细看,详细调查,押韵|||vi.押韵','The doctors gave him an ultrasonic brain scan.','医生给他做了脑部超声波扫描检查。','I scanned the newspaper when I was waiting for the bus.','等公共汽车的时候，我匆匆浏览了一下报纸。'}

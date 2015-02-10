@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["everybody"]={"everybody","['evrɪbɒdɪ]","['ɛvrɪbɑdi]","pron.每人",'pron.每人,人人，各人','Stop showing off in front of everybody.','别再在大伙跟前卖弄了。','I can\'t spare him today we need everybody here.','我今天需要他－－我们需要人人都到齐。'}

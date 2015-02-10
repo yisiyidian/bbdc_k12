@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gym"]={"gym","[dʒɪm]","[dʒɪm]","n.健身房",'n.健身房,体育馆,体育课','The basketball players are working out at the gym.','篮球运动员们正在体育馆进行训练。','After several sessions at the gym, I feel a lot fitter.','我在健身房锻炼了几次以後，觉得身体好多了。'}

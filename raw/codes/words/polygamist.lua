@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["polygamist"]={"polygamist","[pə'liɡəmist]","[ pə'liɡəmist ]","n.一夫多妻者",'n.一夫多妻者，一妻多夫者','He was arrested as a polygamist when his two wives filed complaints about him.','在他的两个妻子对他提出控告之后，他因一夫多妻而遭逮捕。','Prosecutors say documents found at the FLDS polygamist ranch outside Eldorado','检察官说，在文件项以上领域外埃尔多拉多一夫多妻农场发现'}

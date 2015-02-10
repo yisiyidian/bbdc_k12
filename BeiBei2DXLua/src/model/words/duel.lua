@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["duel"]={"duel","['djuːəl]","['dʊəl]","n.决斗",'n.决斗，斗争|||v.决斗，斗争','a challenge to a duel','挑战要求决斗','a duel or battle with firearms','枪战用火器进行的决斗或战斗'}

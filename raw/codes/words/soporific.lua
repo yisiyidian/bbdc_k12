@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["soporific"]={"soporific","[,sɒpə'rɪfɪk]","[,sɑpə'rɪfɪk]","adj.催眠的",'adj.催眠的,想睡的|||n.催眠剂','I dozed off during the soporific music.','我听到这催人入睡的音乐，便不知不觉打起盹儿来了。','The warmth of the room and the monotony of the speaker\'s voice grew soporific.','房间里的热气和发言人单调的声音让人昏昏欲睡。'}

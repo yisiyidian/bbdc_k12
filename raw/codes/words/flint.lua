@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flint"]={"flint","[flɪnt]","[flɪnt]","n.打火石",'n.打火石,极硬的东西','A piece of flint used as a tool by primitive human beings.','打火石原始人作为工具用的一块打火石','This wall is made of flint.','这堵墙是用燧石建成的。'}

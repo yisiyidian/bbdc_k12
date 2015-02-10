@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spray"]={"spray","[spreɪ]","[spre]","vt.&vi.喷雾",'n.水沫,喷雾器|||vt.&vi.喷雾,扫射,喷射','We parked the car by the sea and it got covered with spray.','我们把汽车停在海边，结果车上全是水沫。','The gangsters sprayed the car with machinegun bullets.','匪徒们用机枪狂扫汽车。'}

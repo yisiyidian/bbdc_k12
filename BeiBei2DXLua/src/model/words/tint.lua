@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tint"]={"tint","[tɪnt]","[tɪnt]","n.色彩",'n.色彩，浅色，染发剂|||vt.给…染色','She tint each flower in her painting a different color.','她将画里每一枝花都画成不同的颜色。','I like to look at the tints of pink in the sky at dawn.','我喜欢看黎明时天空中浓淡不同的粉色。'}

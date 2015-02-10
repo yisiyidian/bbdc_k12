@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["corrosive"]={"corrosive","[kə'rəʊsɪv]","[kə'rosɪv]","adj.腐蚀的",'adj.腐蚀的,腐蚀性的,蚀坏的|||n.腐蚀物,腐蚀药','Acid is corrosive.','酸是有腐蚀性的。','Many highly corrosive substances are used in the nuclear industry.','核工业会使用许多腐蚀性很强的物质。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["justifiable"]={"justifiable","['dʒʌstɪ,faɪəb(ə)l]","['dʒʌstɪfaɪəbl]","adj.可辩解的",'adj.可辩解的,可证明的,有理的','justifiable resentment.','情有可原的忿恨','The violence of the revolutionary years was justifiable on the grounds of political necessity.','出于政治需要的立场，革命年代的暴力行为是无可非议的。'}

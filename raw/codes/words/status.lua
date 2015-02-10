@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["status"]={"status","['steɪtəs]","['stetəs]","n.状态",'n.地位,身份,情形,状况','He only bought the yacht as a status symbol he hates sailing.','他买游艇只是为了显示身分--其实他根本不喜欢玩游艇.','He is a person of important social status.','他是一个有重要社会地位的人。'}

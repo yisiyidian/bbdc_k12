@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transpire"]={"transpire","[træn'spaɪə; trɑːn-]","[træn'spaɪɚ]","v.1.泄露",'v.使...蒸发,排出；泄露、为人所知；发生','It transpired that George was actually a corporate spy and had been stealing company secrets for some time.','后来人们得知，其实乔治是个商业间谍，窃取公司机密已有一段时间。','It transpired that she has got married.','后来才知道她已经结婚了。'}

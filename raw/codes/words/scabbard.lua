@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scabbard"]={"scabbard","['skæbəd]","['skæbɚd]","n.(刀、剑)鞘",'n.(刀、剑)鞘,枪套','It would be some time before the sword and its scabbard fitted together.','而剑与鞘要正好相配还得一段时间。','He made a very beautiful scabbard for his knife.','他为他的刀做了一个漂亮的鞘。'}

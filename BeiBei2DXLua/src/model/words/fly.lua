@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fly"]={"fly","[flaɪ]","[flaɪ]","vt.&vi.飞",'n.苍蝇,两翼昆虫,飞行,升高|||vt.&vi.飞,飞翔,逃走,飞逝,猛然移动','I wish I could be a fly on the wall when they discuss my future.','在他们讨论我的前途时，我恨不得能偷偷旁观。','Five thousand people were ||flown|| to Paris during the Easter weekend.','在复活节的周末有五千人乘飞机去巴黎。'}

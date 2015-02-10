@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prostitute"]={"prostitute","['prɒstɪtjuːt]","['prɑstətut]","n.娼妓",'n.娼妓,为赚钱而作坏事的人adj.卖淫的,堕落的vt.卖身,贬损(自己)','One, especially a robber or prostitute, who walks the streets at night.','夜间游荡的人夜间在街上游荡的人，尤指拦路抢劫者或妓女','She prostituted herself in order to support her children.','她为养活子女而操皮肉生涯.'}

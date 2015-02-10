@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["highland"]={"highland","['haɪlənd]","['haɪlənd]","n.高地",'n.高地,山地|||Highland:苏格兰高地','The highland chieftain has two daughters.','高地酋长有两个女儿。','He was born in the ||Highland||.','他出生于苏格兰高地。'}

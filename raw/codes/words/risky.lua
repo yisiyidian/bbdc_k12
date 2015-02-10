@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["risky"]={"risky","['rɪskɪ]","['rɪski]","adj.危险的",'adj.危险的(冒险的,大胆的)','He is well aware how risky this investment is.','他心里对这项投资的风险十分清楚.','So risky as to require very deft handling.','冒险的冒险的，需灵巧处理的'}

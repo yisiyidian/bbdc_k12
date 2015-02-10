@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["well"]={"well","[wel]","[wɛl]","adv.很好地",'n.井,源泉,楼梯井|||adj.健康的,良好的,适宜的|||adv.很好地,适当地|||vi.涌出|||interj.好吧,啊','Read the document well before you sign it.','仔细审阅文件後方可签字。','The plan didn\'t work out very well.','这一计画实行起来不大满意。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tabulate"]={"tabulate","['tæbjʊleɪt]","['tæbjulet]","v.作成表",'v.作成表,作成一览表,使成平面|||adj.平板状的,平面的','Please tabulate the numbers in order.','请把那些数字按顺序制成表。','It took me ten hours to tabulate the results.','我花了十个小时把结果制成表格.'}

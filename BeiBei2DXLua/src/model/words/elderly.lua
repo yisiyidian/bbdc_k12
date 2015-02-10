@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["elderly"]={"elderly","['eldəlɪ]","['ɛldɚli]","adj.过了中年的",'adj.过了中年的,稍老的','Vicious thugs attacked an elderly man.','歹徒们袭击了一个老大爷.','In the presence of elderly visitors, our son was a model of decorum.','我们的儿子在来访的长辈面前彬彬有礼.'}

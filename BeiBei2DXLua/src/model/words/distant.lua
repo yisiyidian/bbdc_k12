@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["distant"]={"distant","['dɪst(ə)nt]","['dɪstənt]","adj.遥远的",'adj.遥远的,疏远的，远房的，陌生的，远行的','We could hear the distant drone of the traffic.','我们可以听到远处传来的车辆往来的嗡嗡声。','The mountains rolled away to a distant horizon.','群山绵延至遥远的天边。'}

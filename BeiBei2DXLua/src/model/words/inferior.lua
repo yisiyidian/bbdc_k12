@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inferior"]={"inferior","[ɪn'fɪərɪə]","[ɪn'fɪrɪɚ]","adj.次等的",'adj.次等的,较低的,不如的','A cheaper camera is not always inferior to a more expensive one.','廉价照相机的质量并不总比昂贵的差。','Woman is inferior to man in strength.','女人力量不及男人。'}

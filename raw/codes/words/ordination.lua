@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ordination"]={"ordination","[ɔːdɪ'neɪʃ(ə)n]","[,ɔrdn'eʃən]","n.任命",'n.任命,神职授任,命令','For him the Church\'s decision to allow the ordination of women had been the last straw.','教会同意授给女性神职的决定使他终于忍无可忍。','Accordingly, only men are eligible for licensure and ordination by the church.','因此，只有男性才有资格在教会里被许可并被任命。'}

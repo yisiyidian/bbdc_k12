@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disfigure"]={"disfigure","[dɪs'fɪgə]","[dɪs'fɪɡjɚ]","vt.使丑陋",'vt.使丑陋,损毁(外貌)','The accident disfigured him for life.','那次事故使他毁容，终生无法恢复。','This landscape is disfigured by a power station.','风景被发电厂破坏了。'}

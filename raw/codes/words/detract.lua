@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["detract"]={"detract","[dɪ'trækt]","[dɪ'trækt]","vi.减损",'vi.减损|||vt.转移','His high voice and unpleasant appearance detract from his effectiveness as a speaker.','说话语调高，加之外貌不太好看，有损于他作为演讲者的影响。','A little crack detracts from the value of the vase.','小小的裂痕减损那个花瓶的价值。'}

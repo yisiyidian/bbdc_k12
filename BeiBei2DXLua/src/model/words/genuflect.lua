@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["genuflect"]={"genuflect","['dʒenjʊflekt]","['dʒɛnjuflɛkt]","vi.曲膝",'vi.曲膝,跪拜(尤指做宗教仪式时)，屈从','They genuflected before the altar in the church.','他们在教堂的祭坛前行跪拜礼。','They refrained from genuflecting to the laws of political economy.','他们拒不向政治经济学定律顶礼膜拜。'}

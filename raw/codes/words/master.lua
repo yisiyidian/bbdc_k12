@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["master"]={"master","['mɑːstə]","['mæstɚ]","n.主人",'n.主人,硕士,母机|||adj.主人的,主要的|||v.征服,控制,精通','The dog came bounding up to its master.','那狗蹿到主人面前.','The young servant is waiting upon his master to have dinner.','青年仆人正服侍他的主人进晚餐。'}

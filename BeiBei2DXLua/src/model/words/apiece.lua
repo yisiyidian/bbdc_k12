@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["apiece"]={"apiece","[ə'piːs]","[ə'pis]","adv.每人",'adv.每人,每个,各','There is enough bread for everyone to have two slices apiece.','这儿有足够的面包，每人可吃两块','He and I had two fish apiece.','我和他每人有两条鱼。'}

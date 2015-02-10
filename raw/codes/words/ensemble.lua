@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ensemble"]={"ensemble","[ɒn'sɒmb(ə)l]","[ɑn'sɑmbl]","n.全体",'n.全体,合唱曲,女人的全套服装','We should consider the buildings as an ensemble.','我们应把那些建筑物视作一个整体','This is an amateur ensemble.','这是一个小型的业余合唱团。'}

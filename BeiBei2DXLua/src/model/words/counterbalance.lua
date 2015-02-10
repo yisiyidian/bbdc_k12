@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["counterbalance"]={"counterbalance","['kaʊntə,bæl(ə)ns]","[,kaʊntɚ'bæləns]","n.平衡",'n.平衡,平衡力|||v.抵销|||vt.使平衡,抵销','His wife\'s calm nature acts as a counterbalance to his excitability.','他妻子的沉着冷静抵销了他的急性子脾气。','Add honey to counterbalance the acidity.','加点蜂蜜来调和酸味。'}

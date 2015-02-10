@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gesture"]={"gesture","['dʒestʃə]","['dʒɛstʃɚ]","n.手势",'n.手势,姿态|||vt.&vi.作手势表达','We all dislike her for her imperious gesture.','因她那傲慢的样子，我们都不喜欢她。','He put his arm round her in a protective gesture.','他用一只手臂围住她做出保护的姿势。'}

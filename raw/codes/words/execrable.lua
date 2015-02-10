@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["execrable"]={"execrable","['eksɪkrəb(ə)l]","['ɛksɪkrəbl]","adj.恶劣的",'adj.恶劣的，该诅咒的,极坏的','He stood at the desk, labouring in his execrable handwriting.','他站在桌前，用他那拙劣的笔迹吃力地写着。','Convenience is, however, in all affairs of life, an execrable test of value.','然而在生活事务的各方面，利益是可恶的价值准则。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jumpy"]={"jumpy","['dʒʌmpɪ]","['dʒʌmpi]","adj.跳跃的",'adj.跳跃的,跳动的,神经质的，紧张不安的','I told myself not to be so jumpy.','我告诉自己别那么坐立不安。','When he spoke his voice was jumpy.','他说话的声音听起来很紧张。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prorogue"]={"prorogue","[prə'rəʊg]","[ prəu'rəuɡ ]","v.休会",'v.休会,延期，必会','Parliament is prorogue for the summer recess.','因暑假议会休会。','Parliament is prorogue for the summer recess .','因暑假议会休会。'}

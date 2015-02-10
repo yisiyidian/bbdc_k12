@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crucial"]={"crucial","['kruːʃ(ə)l]","['krʊʃəl]","adj.关键的",'adj.关键的,决定性的','A crucial problem.','非常重要的问题','We have succeeded in one crucial regard: making this scandal public.','我们办成了一件大事: 将这件丑事公之於众.'}

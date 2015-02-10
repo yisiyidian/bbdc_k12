@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dogged"]={"dogged","['dɒgɪd]","['dɔɡɪd]","adj.顽固的",'adj.顽固的,顽强的|||动词dog的过去式和过去分词','He\'s been dogged by failure in the past year.','过去一年中他连续遭到失败。','The only way to improve is through hard work and dogged perseverance.','要想进步，唯一的途径就是刻苦奋斗，不屈不挠。'}

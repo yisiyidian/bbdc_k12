@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["edentate"]={"edentate","['iːdənteɪt]","[ɪ'dɛn,tet]","adj.无齿的",'adj.无齿的,贫齿类的|||n.贫齿类','Anteaters are edentate animals.','食蚁类动物都是贫齿类的动物。','edentate   edentate  edentate','adj. 无齿的,贫齿类的 n. 贫齿类'}

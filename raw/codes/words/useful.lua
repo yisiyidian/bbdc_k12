@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["useful"]={"useful","['juːsfʊl; -f(ə)l]","['jusfl]","adj.有用的",'adj.有用的','It is a useful book and, what is more, not an expensive one.','这是有用的书，更难得的是不贵。','It\'s more useful to learn modern languages, such as English and German, than Latin.','学习英语和德语等现代语言比学习拉丁语更为有用。'}

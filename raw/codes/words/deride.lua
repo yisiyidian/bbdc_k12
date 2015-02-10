@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deride"]={"deride","[dɪ'raɪd]","[dɪ'raɪd]","vt.嘲弄",'vt.嘲弄,挖苦','He derides her naive attitude.','他嘲弄她天真的态度。','They derided his efforts as childish.','他们嘲笑他的做法很幼稚。'}

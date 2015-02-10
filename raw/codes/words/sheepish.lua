@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sheepish"]={"sheepish","['ʃiːpɪʃ]","[ 'ʃi:piʃ ]","adj.驯服的",'adj.驯服的，胆怯的','a sheepish grin.','局促不安的咧嘴一笑','I asked him why. He looked a little sheepish when he answered.','我问他为什么。他回答时看起来有点困窘。'}

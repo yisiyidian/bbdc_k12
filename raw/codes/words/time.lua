@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["time"]={"time","[taɪm]","[taɪm]","n.时间",'n.时间；时刻；时代；次|||vt.为…安排时间；测定…的时间；调准（机械的）速度；拨准（钟、表）的快慢|||vi.合拍；和谐；打拍子|||adj.定时的；定期的；[美国英语]分期（付款）的','He timed that shot beautifully.','他这一击时间恰到好处。','Only time will tell if you are right.','只有时间才能证明你是否正确。'}

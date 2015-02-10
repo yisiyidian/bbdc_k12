@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["native"]={"native","['neɪtɪv]","['netɪv]","adj.本土的",'adj.本国的,本土的,出生地的,天生的|||n.本地人,土著人','He\'s emigrated to the USA and gone completely native.','他已移居美国，完全成了美国人。','The kangaroo is a native of Australia.','袋鼠是产於澳洲的动物。'}

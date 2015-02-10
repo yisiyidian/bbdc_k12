@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["energy"]={"energy","['enədʒɪ]","['ɛnɚdʒi]","n.能量",'n.活力,精力,能力,能,能量','The solar cell can convert the energy of sunlight into electric energy.','太阳能电池能把阳光的能量转化为电能。','Young people usually have more energy than the old.','青年人通常比老年人精力充沛些。'}

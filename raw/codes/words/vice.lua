@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vice"]={"vice","[vaɪs]","[vaɪs]","prep.副",'n.恶习,恶行,罪恶,缺陷,恶癖,老虎钳|||vt.钳住|||prep.代替,副,次','The vice is bolted to the work-bench.','老虎钳是用螺栓拧在工作台上的.','Virtue and vice are two different things: the former/that/the one leads to peace, the latter/this/the other to misery.','美德与邪恶是不同的，前者带来和平，后者导致痛苦。'}

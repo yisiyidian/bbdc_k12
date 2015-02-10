@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bribery"]={"bribery","['braɪbərɪ]","['braɪbəri]","n.贿络行为",'n.贿络行为,行贿,受贿','This accusationof bribery is a vile smear on an honourable citizen.','这项有关贿赂的指控是对一个正直公民的无耻诽谤.','This accusation of bribery is a vile smear on an honorable citizen.','这项有关贿赂的指控是对一个正直公民的无耻诽谤。'}

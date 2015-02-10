@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["industrious"]={"industrious","[ɪn'dʌstrɪəs]","[ɪn'dʌstrɪəs]","adj.勤劳的",'adj.勤劳的,勤奋的','If the tiller is industrious, the farmland is productive.','人勤地不懒.','He may not be so clever as Peter, but he is as industrious as can be.','他也许不如彼得聪明，但却用功极了。'}

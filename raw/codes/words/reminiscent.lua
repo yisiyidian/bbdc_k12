@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reminiscent"]={"reminiscent","[remɪ'nɪs(ə)nt]","[,rɛmɪ'nɪsnt]","adj.回忆的",'adj.回忆的,怀旧的,耽于回想的|||n.回忆者,回忆录作者','His style is reminiscent of Picasso\'s.','他的艺术风格很像毕加索的.','an evening reminiscent of happier times.','令人回想幸福时光的傍晚'}

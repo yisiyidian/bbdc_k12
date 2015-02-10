@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dopamine"]={"dopamine","['dəʊpəmiːn]","['dopəmin]","n.多巴胺(一种治脑神经病的药物)",'n.多巴胺(一种治脑神经病的药物)','dopamine','n. 多巴胺(一种治脑神经病的药物)','||Dopamine|| Receptors','多巴胺受体'}

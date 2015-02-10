@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["execution"]={"execution","[,eksɪ'kjuːʃ(ə)n]","[,ɛksɪ'kjuʃən]","n.实行",'n.实行,完成,执行','US forces are fully prepared for the execution of any action once the order is given by the president.','美国军队充分准备好随时执行总统的任何指令','The ideas in the show\'s presentation were good, but failed in execution.','那场展览陈述的想法很好，但是没能实现'}

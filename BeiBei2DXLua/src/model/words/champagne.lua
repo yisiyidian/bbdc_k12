@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["champagne"]={"champagne","[ʃæm'peɪn]","[ʃæm'pen]","n.香槟酒",'n.香槟酒,香槟色','Let\'s lash out and have champagne.','咱们挥霍一下, 喝香槟吧.','I\'m really going to indulge myself tonight with a bottle of champagne.','今天晚上我可真要放纵一下自己, 喝他一瓶香槟.'}

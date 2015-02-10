@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indigence"]={"indigence","['ɪndɪdʒ(ə)ns]","[ 'indidʒəns,-dʒənsi ]","n.贫穷",'n.贫穷','his present indigence is a sufficient punishment for former folly.','他现在的潦倒足以惩罚他曾经的胡作非为了。','||Indigence|| creates crime easily.','贫穷容易导致犯罪。'}

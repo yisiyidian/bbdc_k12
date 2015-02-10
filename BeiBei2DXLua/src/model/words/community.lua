@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["community"]={"community","[kə'mjuːnɪtɪ]","[kə'mjʊnəti]","n.社区",'n.社区,团体','More state help is needed for the disadvantaged sections of the community.','国家需要向社区的贫困阶层提供更多救济.','His wife has become a woman of some standing in the community.','他的妻子在那个群体中成为颇有地位的女子。'}

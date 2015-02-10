@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mountainous"]={"mountainous","['maʊntɪnəs]","['maʊntənəs]","adj.多山的",'adj.多山的，如山一般的','He lives in a mountainous district.','他住在山区。','The mountainous island loomed on the horizon.','那座巨大的岛屿隐隐约约浮现在地平线上。'}

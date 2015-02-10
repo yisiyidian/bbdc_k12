@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["repertory"]={"repertory","['repət(ə)rɪ]","['rɛpɚtɔri]","n.仓库",'n.仓库(积贮,全部剧目)','She acted with a repertory company for three years.','她在一个轮演剧目剧团里演出三年。','Jane weighed down her repertory with these plays.','简加上这几出戏，使她的演出剧目得到了加强。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alert"]={"alert","[ə'lɜːt]","[ə'lɝt]","adj.警觉的",'adj.警觉的,灵敏的|||n.警戒,警报|||vt.警惕,使意识到','Troops are on the alert against any possible aggression.','军队戒备着可能的来犯。','The alert leopard went up to a deer quietly.','警觉的豹子静悄悄地走近一只鹿。'}

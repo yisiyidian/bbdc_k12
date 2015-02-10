@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["carpal"]={"carpal","['kɑːp(ə)l]","['kɑrpl]","adj.腕骨的",'adj.腕骨的|||n.腕骨','carpal joint 腕关节A small, hook-shaped carpal bone of the wrist.  钩骨腕子上一种小的、钩状的腕骨','.','My carpal bone was seriously  injured .','我腕骨受了重伤。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anticlockwise"]={"anticlockwise","[æntɪ'klɒkwaɪz]","['æntɪ'klɑkwaɪz]","adj.逆时针转的",'adj.逆时针转的|||adv.逆时针转','Turn the key anticlockwise/in an,anticlockwise direction.','逆时针方向转动钥匙.','She stared into the teacup, rotating it anticlockwise（anti-clockwise).','她瞪着茶杯，并逆时针旋转它。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["arboretum"]={"arboretum","[,ɑːbə'riːtəm]","[,ɑrbə'ritəm]","n.植物园",'n.植物园，树木园','We can go to the arboretum in the southern suburb.','我们可以去南郊的植物园。','United States National ||Arboretum||','美国国家植物园'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["speaker"]={"speaker","['spiːkə]","['spikɚ]","n.说话者",'n.说话者,发言者,说某种语言者,扬声器','A crowd quickly congregated round the speaker.','大群的人迅速地在演说者周围聚集起来。','They listened to the speaker with profound interest.','他们怀着浓厚的兴趣聆听着演讲者。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intonation"]={"intonation","[ɪntə'neɪʃ(ə)n]","[,ɪntə'neʃən]","n.语调",'n.语调,声调','Russian-born American violinist noted for his pure intonation and interpretive sense.','津巴利斯特，埃弗莱姆1889－1985俄裔美国小提琴家，他以纯正的音调和解释的能力而著名','Good intonation.','语调很好。'}

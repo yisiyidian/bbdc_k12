@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diffuse"]={"diffuse","[dɪ'fjuːz]","[dɪ'fjus]","vt.散播",'vt.散播,使(气体或液体)慢慢混合|||vi.弥漫,扩散|||adj.冗长的,四散的,散漫的','Fashion trends diffuse themselves rapidly around the globe.','时装新潮很快就在全世界流行起来。','The light was diffused by the leaves.','树叶使光线漫射。'}

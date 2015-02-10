@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glance"]={"glance","[glɑːns]","[ɡlæns]","vi.一瞥",'vi.一瞥；闪微光；掠过，擦过；随便提到，简略地触及|||n.浏览；闪光；歪斜，一掠','She glanced round the room before she left.','她略微环视了一下房间才离开。','He gave her an admiring glance.','他向她投以敬慕的一瞥。'}

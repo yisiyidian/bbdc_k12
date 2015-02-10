@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clinic"]={"clinic","['klɪnɪk]","['klɪnɪk]","n.诊所",'n.诊所,门诊部,科室','The road bears off towards the left when it reaches the brigade clinic.','这条路通到大队卫生站后渐渐转向左边去了。','It is practicable in clinic.','在临床是切实可行的。'}

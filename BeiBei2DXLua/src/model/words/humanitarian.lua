@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["humanitarian"]={"humanitarian","[hjʊ,mænɪ'teərɪən]","[hju,mænɪ'tɛrɪən]","n.人道主义者",'n.人道主义者,博爱者,基督凡人论者|||adj.人道主义的,博爱的,相信基督为凡人的','She has many humanitarian interests and contributes a lot to them.','她拥有很多慈善事业,并作了很大的贡献.','The British government has now suspended humanitarian aid to the area.','英国政府现已暂停对这一地区的人道主义援助.'}

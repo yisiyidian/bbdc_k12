@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["saccharine"]={"saccharine","['sækəraɪn; -ɪn; -iːn]","[ 'sækərain ]","n.美",'n.美;糖精|||adj.糖质的,含糖的','I found the film far too saccharine.','我觉得这部电影太缠绵了。','She smiled with saccharine sweetness.','她的笑里只有虚情假意的甜蜜。'}

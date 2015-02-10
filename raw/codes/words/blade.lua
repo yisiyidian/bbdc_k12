@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blade"]={"blade","[bleɪd]","[bled]","n.刀锋",'n.刀锋,刀口','the blade of an oar; the blade of a food processor.','桨叶；食品加工机叶片','The blade slashed his leg open.','刀刃把他的腿划破了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conversation"]={"conversation","[kɒnvə'seɪʃ(ə)n]","[,kɑnvɚ'seʃən]","n.会话",'n.会话,谈话','He told the newspapermen about the conversation, but would not play them the actual tape of it.','他向新闻记者讲了这次谈话的情况，却不愿把实况录音磁带放给他们听。','His French has come on a lot since he joined the conversation class.','他自从参加了会话班，法语取得了很大进步。'}

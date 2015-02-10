@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["decidedly"]={"decidedly","[dɪ'saɪdɪdlɪ]","[dɪ'saɪdɪdli]","adv.断然",'adv.断然，果断地,明确地,毫无疑问','She was decidedly cool about the proposal.','她对这个提议漠然置之.','She had a decidedly murky past.','她的历史背景令人捉摸不透.'}

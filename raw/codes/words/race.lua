@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["race"]={"race","[reɪs]","[res]","n.赛跑",'n.种族,赛跑|||v.赛跑,竞赛','Every morning he spent two hours training for the race.','他每天早晨花两个小时练习赛跑。','It was a race against time to stop people dying from starvation.','为抢救那些即将饿死的人而分秒必争。'}

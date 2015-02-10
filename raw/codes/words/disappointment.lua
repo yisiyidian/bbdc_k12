@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disappointment"]={"disappointment","[dɪsə'pɒɪntm(ə)nt]","[,dɪsə'pɔɪntmənt]","n.失望",'n.失望，令人失望的人或事','To my disappointment, my father doesn\'t agree to buy me a new bike.','我父亲不同意给我买新脚踏车, 我很失望。','After months of disappointment, his perseverance was finally rewarded.','数月来他经历挫折而不断努力，终於有了收获。'}

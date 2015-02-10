@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["specialist"]={"specialist","['speʃ(ə)lɪst]","['spɛʃəlɪst]","n.专家",'n.专家','The provision of specialist teachers is being increased.','配备专业教员的人数有所增加.','A specialist in the theory and practice of education.','教育家教育理论和实践方面的专家'}

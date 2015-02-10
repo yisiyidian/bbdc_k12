@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brisk"]={"brisk","[brɪsk]","[brɪsk]","adj.敏锐的",'adj.敏锐的,凛冽的|||adj.活泼的,活跃的,快的','Business is always brisk before Christmas.','圣诞节前生意总是很兴隆。','Trading was brisk on the Stock Exchangetoday.','今日证券交易所交投活跃.'}

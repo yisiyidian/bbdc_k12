@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["materialism"]={"materialism","[mə'tɪərɪəlɪz(ə)m]","[mə'tɪrɪəlɪzəm]","n.唯物主义",'n.唯物主义，唯物论，实利主义','Idealism is opposite to materialism.','唯心主义和唯物主义是对立的。','Crass materialism causes people to forget spiritual values.','极端唯物主义使人忘掉精神价值。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["boor"]={"boor","[bɔː; bʊə]","[ buə ]","n.粗野的人",'n.粗野的人,不懂礼貌的人,农民','I\'m a bit of a boor, so I hope you won\'t mind if I speak bluntly.','我是一个粗人,说话直来直去, 你可别见怪.','a boor are wild','粗鲁的人'}

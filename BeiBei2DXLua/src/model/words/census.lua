@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["census"]={"census","['sensəs]","['sɛnsəs]","n.户口普查",'n.户口普查|||v.实施统计调查','In the United States there is a census every ten years.','在美国每十年做一次户囗调查。','According to the latest census, our population has increased.','根据最近调查，我国的人口有增加。'}

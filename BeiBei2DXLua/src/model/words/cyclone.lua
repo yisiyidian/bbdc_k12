@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cyclone"]={"cyclone","['saɪkləʊn]","['saɪklon]","n.旋风",'n.旋风,飓风，气旋,旋风分离器','Rye lodged by the cyclone.','台风将麦子吹倒了','A tropical cyclone occurring in the western Pacific or Indian oceans.','台风发生在西太平洋或印度洋的热带暴风'}

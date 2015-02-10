@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["industry"]={"industry","['ɪndəstrɪ]","['ɪndəstri]","n.工业",'n.工业,产业,勤勉,刻苦','The auto industry has brought many people to Detroit.','汽车工业把许多人吸引到了底特律。','His new play is a satire on the fashion industry.','他的新剧本是一部讽刺时装业的作品。'}

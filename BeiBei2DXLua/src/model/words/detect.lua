@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["detect"]={"detect","[dɪ'tekt]","[dɪ'tɛkt]","vt.检测",'vt.发现,探测信息,侦查|||vi.当侦探','Do I detect a tinge of irony?','我觉得这话有点儿像反话吧?','Do I detect a touch of jaundice in that remark?','我听出那话里有点儿忌妒之意吧?'}

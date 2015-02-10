@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jolly"]={"jolly","['dʒɒlɪ]","['dʒɑli]","adj.愉快的",'adj.愉快的,高兴的,宜人的|||v.恭维,哄，开玩笑，戏虐|||adv.非常,极为|||n.（尤英)欢乐，欢庆|||(复数）jollies:娱乐，乐趣','Your mother is a jolly, easy-going woman.','你妈妈是个乐呵呵的容易相处的人。','He is a jolly good man.','他是一个大好人。'}

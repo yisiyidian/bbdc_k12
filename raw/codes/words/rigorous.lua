@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rigorous"]={"rigorous","['rɪg(ə)rəs]","['rɪɡərəs]","adj.严厉的",'adj.严厉的,严酷的,严格的,细致的','The arms trade should be subject to rigorous controls.','对军火贸易应该严加限制.','He makes a rigorous study of the plant in the area.','他对该地的植物进行了慎密的研究。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["additive"]={"additive","['ædɪtɪv]","['ædətɪv]","n.附加物(加法)",'n.附加物(加法)|||adj.加添的','It says on the packet that these crisps contain no additives.','包装上说这些炸薯片不含添加剂。','Strict safety tests are carried out on food additives.','对食品添加剂进行了严格的安全检测。'}

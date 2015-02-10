@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ignorant"]={"ignorant","['ɪgn(ə)r(ə)nt]","['ɪɡnərənt]","adj.无知的",'adj.不知道的,无知的,愚昧的','She regarded her critics as ignorant and prejudiced.','她认为那些批评她的人既无知又存有偏见。','He confessed himself (to be) totally ignorant of their plans.','他承认自己对於他们的计划一无所知.'}

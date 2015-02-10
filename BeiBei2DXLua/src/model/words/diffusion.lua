@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diffusion"]={"diffusion","[dɪ'fjuːʒ(ə)n]","[dɪ'fjʊʒən]","n.散布",'n.散布,传播,蔓延','cultural diffusion','文化传播','Clouds cause the diffusion of light from the sun.','云使阳光漫射。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["decimate"]={"decimate","['desɪmeɪt]","['dɛsə,met]","vt.十中抽一",'vt.十中抽一(取...的1/10,毁灭...的大部分)','Student numbers have been decimated by cuts in grants.','助学金削减后，学生人数大大减少。','Disease has decimated the population.','疾病导致人口数量大幅下降。'}

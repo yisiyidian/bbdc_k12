@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["delusion"]={"delusion","[dɪ'l(j)uːʒ(ə)n]","[dɪ'luʒn]","n.错觉",'n.错觉','He labours under the delusion that he\'s a fine actor.','他自以为自己是个好演员。','Your hope of promotion is a mere delusion.','你提升的希望只不过是一种幻觉。'}

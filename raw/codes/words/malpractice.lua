@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["malpractice"]={"malpractice","[mæl'præktɪs]","[,mæl'præktɪs]","n.失职",'n.失职,行为不当','Various malpractices by police officers were brought to light by the enquiry.','警察的各种不法行为经调查已揭露出来.','There were only one or two serious allegations of malpractice.','只有一两起严肃的渎职指控。'}

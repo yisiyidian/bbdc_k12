@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consort"]={"consort","['kɒnsɔːt]","['kɑn,sɔrt]","n.（君王的）配偶",'n.（君王的）配偶,夫妻|||v.陪伴,结交,符合','Don\'t consort with criminals.','不要和犯罪分子结交。','The queen consort has come together with the king.','王后也随同国王前来。'}

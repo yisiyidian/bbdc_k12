@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["navy"]={"navy","['neɪvɪ]","['nevi]","n.海军",'n.海军,船队,深蓝色','They enlisted four hundred recruits for the navy.','他们为海军徵募了四百名新兵.','He messed with me/We messed together when we were in the ||Navy||.','我们在海军时, 他和我共餐[我们共餐].'}

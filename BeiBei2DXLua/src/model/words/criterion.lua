@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["criterion"]={"criterion","[kraɪ'tɪərɪən]","[kraɪ'tɪrɪən]","n.标准",'n.标准,准则','Only social practice can be the criterion of truth.','只有社会实践才能是检验真理的唯一标准.','Practice is the sole criterion for testing truth.','实践是检验真理的唯一标准.'}

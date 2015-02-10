@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["filth"]={"filth","[fɪlθ]","[fɪlθ]","n.污秽(肮脏的)",'n.污秽(肮脏的)','Go and wash that filth off your hand.','去把你手上的脏东西洗掉。','I don\'t know how you can read such filth.','我不知道你怎么会看这种猥亵的读物。'}

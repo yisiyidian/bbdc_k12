@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["parliament"]={"parliament","['pɑːləm(ə)nt]","['pɑrləmənt]","n.议会",'n.议会,国会','||Parliament|| won\'t be in session again until after Christmas.','国会将等到圣诞节后才再进入会期。','||Parliament|| will debate the nationalization issue next week.','议会将在下周辩论国有化议题。'}

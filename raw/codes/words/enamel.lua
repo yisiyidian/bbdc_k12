@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enamel"]={"enamel","[ɪ'næm(ə)l]","[ɪ'næml]","v.涂以瓷釉",'n.珐琅,瓷釉|||v.涂以瓷釉','Some of the enamel on this pan is chipped off.','这平底锅上的搪瓷有些已脱落.','The pots are made with blue enamel.','这些锅上有蓝色的搪瓷。'}

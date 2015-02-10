@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["feud"]={"feud","[fjuːd]","[fjʊd]","n.长期不和",'n.长期不和，争执|||n.封地|||v.长期斗争，结世仇','Because of a family feud, the two brothers haven\'t spoken to each other for ten years.','因为长期家庭不和，这兄弟俩已经１０年互不理睬了。','He eventually killed her because of a long-standing feud.','因为宿怨，他最终杀了她。'}

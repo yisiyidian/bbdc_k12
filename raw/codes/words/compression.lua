@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["compression"]={"compression","[kəm'preʃ(ə)n]","[kəm'prɛʃən]","n.压缩",'n.压缩,压榨,缩小','A physical sensation produced by compression of a part of the body.','压迫感身体上某一部分由压迫而引起的生理上的感觉','The application of continuous force by one body on another that it is touching; compression.','压紧，压缩相靠着的物体中其中一物对另一物的连续挤压式的涂敷；'}

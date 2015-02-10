@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irregular"]={"irregular","[ɪ'regjʊlə]","[ɪ'rɛɡjəlɚ]","adj.不规则的",'n.不合规格之物|||adj.不规则的,不整齐的,不合法的','She tested the whole class on irregular verbs.','她对全班学生进行不规则动词测验.','This dictionary has several appendices, including one on irregular verbs.','这部词典有几项附录, 包括不规则动词附录.'}

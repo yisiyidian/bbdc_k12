@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fanatic"]={"fanatic","[fə'nætɪk]","[fə'nætɪk]","adj.狂热的",'adj.狂热的,盲信的|||n.狂热,狂热者,盲信','Stanley is our resident crossword fanatic.','斯坦利是我们中间的填纵横字谜的游戏迷。','She\'s fanatic about pop music.','她对流行音乐很狂热。'}

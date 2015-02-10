@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["retiring"]={"retiring","[rɪ'taɪərɪŋ]","[ ri'taiəriŋ ]","adj.隐居的",'adj.隐居的,不喜社交的|||动词retire的现在分词','He is a naturally shy, retiring man.','他天生腼腆，不爱交际。','He is emphatically a retiring and unassuming man.','他的确是一个与世无争、谦虚纯朴的人。'}

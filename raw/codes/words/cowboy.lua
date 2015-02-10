@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cowboy"]={"cowboy","['kaʊbɒɪ]","['kaʊbɔɪ]","n.牛仔",'n.牛仔','One evening the school showed a cowboy film.','有天晚上学校放映了一部西部片。','In his last film he starred as a cowboy.','他在最近的一部影片中主演一位牛仔。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outbreak"]={"outbreak","['aʊtbreɪk]","['aʊtbrek]","n.爆发",'n.爆发','The area was struck by an outbreak of cholera.','该地区突然发生了霍乱.','The hospital wards were fumigated after the outbreak of typhus.','发现斑疹伤寒以後, 医院的病房进行了烟熏消毒.'}

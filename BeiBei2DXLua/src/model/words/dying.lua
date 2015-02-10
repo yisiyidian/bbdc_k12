@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dying"]={"dying","['daɪɪŋ]","['daɪɪŋ]","adj.垂死的",'adj.垂死的,临终的|||n.死,死亡','It was a race against time to stop people dying from starvation.','为抢救那些即将饿死的人而分秒必争。','||Dying|| is as natural as living.','【谚】有生必有死。'}

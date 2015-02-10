@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discovery"]={"discovery","[dɪ'skʌv(ə)rɪ]","[dɪ'skʌvəri]","n.发现",'n.发现,发现物','The discovery caused a tremendous commotion in the scientific world.','那项发现在科学界引起极大的震动。','The discovery that her husband was unfaithful to her was a rude (ie shocking) awakening.','她发觉丈夫对自己不忠而猛醒.'}

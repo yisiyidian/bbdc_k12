@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["miserable"]={"miserable","['mɪz(ə)rəb(ə)l]","['mɪzrəbl]","adj.悲惨的",'adj.悲惨的,痛苦的,贫乏的','Her wretchedness made him feel miserable.','她的不幸让他感到十分难受。','The handmaid led a miserable life.','婢女过着悲惨的生活。'}

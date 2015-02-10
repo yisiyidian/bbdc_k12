@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trouble"]={"trouble","['trʌb(ə)l]","['trʌbl]","n.困扰",'n.困扰,麻烦,困难,故障|||vt.&vi.困扰,麻烦','I\'m sorry to have to put you to so much trouble.','很抱歉，给您添了这麽多麻烦。','Don\'t mention my name or you\'ll get me into trouble.','别提我的名字，免得给我惹麻烦。'}

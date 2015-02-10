@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mission"]={"mission","['mɪʃ(ə)n]","['mɪʃən]","n.任务",'n.任务,代表团,使命,传教|||vt.传教|||[计算机]使命','The Air Commodore briefed the bomber crew on their dangerous mission.','空军准将向轰炸机机组下达执行危险任务的各项指示。','The mission of a university is teaching and research.','大学的任务是教学和科研。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pay"]={"pay","[peɪ]","[pe]","vt.支付",'n.薪资,付款,报偿|||vt.支付,付清,报偿,给予|||vi.债清，值得，承担后果|||adj.投币的，要钱的','She ||paid|| no heed to our warnings.','她不把我们的警告放在心上。','He gets his pay each Friday.','他每星期五领工资。'}

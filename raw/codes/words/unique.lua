@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unique"]={"unique","[juː'niːk]","[jʊ'nik]","adj.独一无二的",'adj.独一无二的,独特的,稀罕的','The elephant\'s trunk is a unique form of appendage.','象鼻是一种独特的附肢。','The tranquil beauty of the village scenery is unique.','这乡村景色的宁静是绝无仅有的。'}

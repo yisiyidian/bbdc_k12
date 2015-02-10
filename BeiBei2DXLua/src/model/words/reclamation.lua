@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reclamation"]={"reclamation","[,reklə'meɪʃən]","[,rɛklə'meʃən]","n.开垦",'n.开垦,收复','We should encourage reclamation and recycling.','我们应当鼓励废物的回收和利用。','The reclamation nozzle captures a portion of the spent driver gas.','回收喷管收集一部分用过的驱动气体.'}

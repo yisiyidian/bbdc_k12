@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jam"]={"jam","[dʒæm]","[dʒæm]","n.果酱",'n.果酱,拥塞之物,堵塞,窘境|||vt.&vi.挤,塞满,混杂','The key turned halfway and then jammed.','钥匙转了一半就卡住了。','How am I going to get out of this jam?','我怎样才能摆脱困境呢？'}

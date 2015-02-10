@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frond"]={"frond","[frɒnd]","[frɑnd]","n.蕨叶",'n.蕨叶,叶状体，藻体','The virus looks like frond.','这种病毒是藻状体的。','Ferns and palms have fronds.','蕨类植物和棕榈树都长有窄长的叶子。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mobilize"]={"mobilize","['məʊbəlaɪz]","['mobəlaɪz]","v.动员",'v.动员,赋予可动性,使流通|||v.动员','Our country\'s in great danger; we must mobilize the army.','我们正处于严重危险之中，我们必须把军人动员起来。','The student mobilize quickly.','学生们很快就动员起来了。'}

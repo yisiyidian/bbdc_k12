@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frustrate"]={"frustrate","[frʌ'streɪt; 'frʌs-]","['frʌstret]","vt.挫败",'vt.挫败,击败,破坏|||adj.无益的,挫败的,挫折的','I\'m feeling rather frustrated in my present job','我感到现在干得很不顺心','The terrible weather frustrated our hopes of going out.','恶劣的天气使我们外出的愿望无法实现。'}

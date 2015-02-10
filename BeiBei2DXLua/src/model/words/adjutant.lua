@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adjutant"]={"adjutant","['ædʒʊt(ə)nt]","['ædʒʊtənt]","n.(军队的)副官",'n.(军队的)副官,助手','I\'m going out myself with the adjutant to recce training areas.','我要亲自和副官出去侦察一下训练地区。','the senator\'s adjutants and aides always arrive ahead of him on the campaign trail','战役结束后这个参议员的助手们总是护在他的前面。'}

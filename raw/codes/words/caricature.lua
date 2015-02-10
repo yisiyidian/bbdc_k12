@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["caricature"]={"caricature","['kærɪkətjʊə; 'kærɪkətʃɔː]","['kærɪkətʃɚ]","n.讽刺画",'n.讽刺画,漫画,讽刺描述法，笨拙的模仿|||v.画成漫画,讽刺，使滑稽化','||Caricature|| is the tribute that mediocrity pays to genius.','笨拙的模仿，是凡人对天才呈献的赞词。','The trial was a caricature of justice.','这次审判是对正义的滑稽模仿。'}

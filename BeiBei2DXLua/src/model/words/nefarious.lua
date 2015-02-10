@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nefarious"]={"nefarious","[nɪ'feərɪəs]","[ ni'fεəriəs ]","adj.违法的",'adj.违法的,邪恶的','Waging a war over innocent people is nefarious in any consideration.','对无辜的人们发起战争不管如何都是非常邪恶的。','The traditional conclusion of most fairy tales is the defeat of the nefarious villain by the young hero.','大多数童话故事传统的结局，都是年轻的英雄打败凶恶的坏人。'}

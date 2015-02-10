@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["compel"]={"compel","[kəm'pel]","[kəm'pɛl]","v.强迫",'v.强迫,迫使','His cleverness and skill compel our admiration.','他的聪明和技巧使我们赞叹不已。','The heavy rain compelled us to stay indoors.','大雨迫使我们呆在户内。'}

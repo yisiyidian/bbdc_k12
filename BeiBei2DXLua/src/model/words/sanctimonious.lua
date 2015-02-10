@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sanctimonious"]={"sanctimonious","[,sæŋ(k)tɪ'məʊnɪəs]","[,sæŋktɪ'monɪəs]","adj.伪装虔诚的",'adj.伪装虔诚的','He is often sanctimonious in process of pray.','在祈祷过程中，他老是假装虔诚。','You sanctimonious little hypocrite!','你这个道貌岸然的伪君子！'}

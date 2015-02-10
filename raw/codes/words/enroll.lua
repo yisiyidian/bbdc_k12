@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enroll"]={"enroll","[ɪn'rəʊl]","[ɪn'rol]","vt.&vi.登记",'vt.&vi.登记,使加入,卷起','||Enrolled|| compulsorily; drafted.','被征募入伍的被迫登记的；被征的','He enrolled with an employment agency for a secretary.','他在职业介绍所登记要当秘书。'}

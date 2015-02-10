@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sect"]={"sect","[sekt]","[sɛkt]","n.宗派",'n.宗派,教派','He was rejoiced at so early an opportunity of distinguishing his faith in his new sect.','他很高兴这么快就能有机会表明他新近才参加的教派的信仰.','When he was sixteen he joined a religious sect.','他16岁的时候加入了一个宗教教派.'}

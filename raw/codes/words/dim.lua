@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dim"]={"dim","[dɪm]","[dɪm]","adj.暗淡的",'adj.暗淡的,模糊的,笨的|||vt.使暗淡,使失去光泽|||vi.变暗|||n.车头灯的短焦距光','Old age hasn\'t dimmed her memory.','她虽然年事已高，但记忆并未模糊。','I made out two dim shapes in the gloom.','我在朦胧中看出有两个模糊的影子.'}

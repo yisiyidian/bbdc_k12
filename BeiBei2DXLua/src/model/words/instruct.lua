@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["instruct"]={"instruct","[ɪn'strʌkt]","[ɪn'strʌkt]","v.指导",'v.教,命令,指导|||[计算机]指示','My job is to instruct her in english.','我的工作是教她学习英语','Please instruct me how to do my work.','请指导一下我如何工作'}

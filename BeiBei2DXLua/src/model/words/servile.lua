@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["servile"]={"servile","['sɜːvaɪl]","['sɝvɪl]","adj.卑屈的",'adj.卑屈的,奴隶的','An honest judge cannot be servile to public opinion.','一个正直的法官不能一味顺从舆论。','They said she had a servile attitude to her employer.','他们说她对她的老板阿谀逢迎。'}

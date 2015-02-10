@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shamble"]={"shamble","['ʃæmb(ə)l]","['ʃæmbl]","vi.蹒跚地走",'n.蹒跚,摇晃的脚步|||vi.蹒跚地走,摇摇晃晃地走,摇晃不稳','The tired old man shambles.','那个疲倦的老人蹒跚而行。','They shamble, unused to walking on two legs, and find the human\'s mild sensory depravation unnerving.','他们摇摇晃晃，不习惯用两条腿走路，并且觉得人类温和的感观会使他们失常堕落。'}

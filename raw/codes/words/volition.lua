@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["volition"]={"volition","[və'lɪʃ(ə)n]","[və'lɪʃən]","n.自决",'n.自决,自主，意志力','She offered to help us of her own volition.','她自愿提出要帮助我们。','I did not ask him to go; he went of his own volition.','我没有要求他去，他是出于自愿的。'}

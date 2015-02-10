@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amiss"]={"amiss","[ə'mɪs]","[ə'mɪs]","adj.有毛病的",'adj.有毛病的,出差错的,有缺点的，不合适的|||adv.有毛病地,出差错地，不合适地','A few words of introduction may not come amiss.','说几句开场白会很合适的。','His joke was taken amiss by some of the company.','他的玩笑让几个朋友感到很不高兴。'}

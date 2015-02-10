@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["raze"]={"raze","[reɪz]","[rez]","vt.摧毁",'vt.摧毁，消除,抹去','The bombs razed the building to the ground.','炸弹把那座建筑夷为平地。','The city was razed by an earthquake.','地震把这个城市夷为平地。'}

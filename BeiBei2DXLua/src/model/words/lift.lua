@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lift"]={"lift","[lɪft]","[lɪft]","vt.抬起",'vt.抬起；提升；鼓舞|||vi.消散；升起；耸立|||n.电梯；举起；起重机；搭车','The mist began to lift.','雾开始消散。','I lifted the child down from the tree.','我把孩子从树上抱了下来。'}

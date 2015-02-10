@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["modest"]={"modest","['mɒdɪst]","['mɑdɪst]","adj.谦虚的",'adj.谦虚的,适度的,端庄的','We should be modest and prudent.','我们应该谦虚谨慎。','The girl has a quiet, modest demeanor.','这个女孩子的态度娴静而谦逊。'}

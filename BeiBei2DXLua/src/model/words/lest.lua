@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lest"]={"lest","[lest]","[lɛst]","conj.惟恐",'conj.惟恐,以免|||prep.唯恐,以免','Beware your hat, lest it should be blown away.','当心你的帽子别被吹走。','He took a flashlight lest it should get dark before he returned.','为了预防回来以前天就黑了，所以他带着手电筒。'}

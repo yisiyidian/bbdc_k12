@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["epigram"]={"epigram","['epɪgræm]","[ 'epiɡræm ]","n.警句",'n.警句,讽刺短诗，精辟的措辞','His epigrams were as sharp as razors.','他的俏皮话像剃刀一样锋利。','The playwright Oscar Wilde was noted for his epigrams.','剧作家奥斯卡·王尔德以他的诙谐短诗著称。'}

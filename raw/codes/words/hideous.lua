@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hideous"]={"hideous","['hɪdɪəs]","[ 'hidiəs ]","adj.丑陋的",'adj.丑陋的,可怕的','She calls the new opera house \'that hideous erection\'.','她把新歌剧院称作｀那讨厌的庞然大物＇.','A hideous monster attacked the helpless villagers.','有个丑恶的怪物袭击了手无寸铁的村民.'}

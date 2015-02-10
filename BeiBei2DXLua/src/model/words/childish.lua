@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["childish"]={"childish","['tʃaɪldɪʃ]","['tʃaɪldɪʃ]","adj.孩子气的",'adj.孩子气的,幼稚的，简单的，年老糊涂的','They derided his efforts as childish.','他们嘲笑他的做法很幼稚。','The little girl spoke in a high childish voice.','小女孩说话时声音尖尖的，带着童音。'}

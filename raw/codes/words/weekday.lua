@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["weekday"]={"weekday","['wiːkdeɪ]","['wikde]","n.工作日",'n.工作日','A newspaper published every day or every weekday.','日报，周报每天或每周出版的报纸','The library is open on weekdays only.','这个图书馆星期一至星期六都开放。'}

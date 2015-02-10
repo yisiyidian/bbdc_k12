@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ethnology"]={"ethnology","[eθ'nɒlədʒɪ]","[ eθ'nɔlədʒi ]","n.人种学",'n.人种学，社会人类学','||Ethnology|| is a branch of anthropology.','人种学是人类学的一个分科。','It is a conclusion of deep importance in ethnology.','这个结论在人类学上是极为重要的。'}

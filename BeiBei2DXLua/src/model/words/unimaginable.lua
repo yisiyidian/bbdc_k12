@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unimaginable"]={"unimaginable","[ʌnɪ'mædʒɪnəb(ə)l]","[,ʌnɪ'mædʒɪnəbl]","adj.不能想象的",'adj.不能想象的(想象不到的,难以理解的)','She is an unimaginable person and has a one-track mind.','她是一个不可想像的人，并且头脑偏狭。','John raved against his closest friends, accusing them of unimaginable crimes.','约翰痛骂他的密友们，指责他们犯了难以想象的罪行。'}

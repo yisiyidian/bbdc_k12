@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wherever"]={"wherever","[weər'evə]","[wɛr'ɛvɚ]","adv.无论什么地方",'adv.无论什么地方，在......的各个地方|||conj.无论在哪里','Remember you are a Chinese wherever you go.','记住你是中国人，不论你到哪里。','We\'ll go wherever you like.','你爱去哪儿我们就去哪儿。'}

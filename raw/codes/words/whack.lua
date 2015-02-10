@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whack"]={"whack","[wæk]","[wæk]","v.敲击",'v.敲击,重打,瓜分|||n.重击,重打,尝试,一份','He copped a nasty whack on the head.','他头上受一重击.','Some people are not doing their whack.','有的人没有尽力.'}

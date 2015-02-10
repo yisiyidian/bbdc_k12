@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dearth"]={"dearth","[dɜːθ]","[ də:θ ]","n.缺乏",'n.缺乏,粮食不足,饥谨','Many soldiers died because of dearth of food.','很多士兵因为缺少粮食死去。','There seems to be a dearth of good young players at the moment.','目前好的年轻选手似乎太少了。'}

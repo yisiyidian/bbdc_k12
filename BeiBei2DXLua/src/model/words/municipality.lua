@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["municipality"]={"municipality","[mjʊ,nɪsɪ'pælɪtɪ]","[mjʊ'nɪsə'pæləti]","n.自治市",'n.自治市,市当局','An official who receives the rents and fees of a municipality; a treasurer.','财务管理人收取市政租金和费用的官员; 司库','a mature municipality','一个成熟的大都市'}

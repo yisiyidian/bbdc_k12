@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pollen"]={"pollen","['pɒlən]","['pɑlən]","n.花粉",'n.花粉|||v.授粉给','Ben is allergic to pollen.','班对花粉过敏。','Stamen is in the middle of a flower and may produce pollen.','雄蕊长在花的中央，能产生花粉。'}

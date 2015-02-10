@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chase"]={"chase","[tʃeɪs]","[ tʃeis ]","n.追求",'n.追求,狩猎|||v.追捕,追逐,在金属上打花样','Why do modern people chase material possessions?','为什么现在的人们追求物质财富？','They caught the puppy after a long chase.','他们追了很久才把小狗逮住。'}

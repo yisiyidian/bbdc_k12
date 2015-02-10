@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consequent"]={"consequent","['kɒnsɪkw(ə)nt]","['kɑnsəkwənt]","adj.作为结果的",'adj.作为结果的,随之发生的，合乎逻辑的|||n.推论，结论，[数]后项','There is always confusion consequent to an earthquake.','地震过后总是会发生混乱。','tried to prevent an oil spill and the consequent damage to wildlife.','尽量避免漏油以及随之发生的对野生动植物的破坏'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quote"]={"quote","[kwəʊt]","[kwot]","n.引用",'n.引用|||v.引述,举证,报价','He quotes the Bible to support his beliefs.','他引用《圣经》来支持他的信仰。','It was quoted 5 dollars.','这在市面上开价5美元。'}

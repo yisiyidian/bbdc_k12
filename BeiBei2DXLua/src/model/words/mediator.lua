@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mediator"]={"mediator","['miːdɪeɪtə]","['midɪetɚ]","n.调解人",'n.调解人,中介人','She called in a mediator to settle the dispute.','她请了一位调停人来调解这次争执。','He always takes the role of a mediator in any dispute.','他总是在争论中充当调停人的角色.'}

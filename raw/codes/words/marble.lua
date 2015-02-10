@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["marble"]={"marble","['mɑːb(ə)l]","['mɑrbl]","adj.大理石的",'adj.大理石的,冷酷的|||n.大理石|||vt.使有大理石的花纹','Michelangelo carved in marble.','米开朗琪罗在大理石上雕刻.','||Marble|| Arch is a famous London landmark.','大理石拱门是著名的伦敦标志.'}

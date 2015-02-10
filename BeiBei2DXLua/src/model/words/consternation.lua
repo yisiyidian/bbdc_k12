@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consternation"]={"consternation","[kɒnstə'neɪʃ(ə)n]","[,kɑnstɚ'neʃən]","n.惊愕",'n.惊愕,恐怖,惊惶失措','To my consternation, his attitude is very rude.','令我惊愕的是，他的态度如此粗鲁。','To our consternation, the child darted out in front of the speeding car.','使我们极为惊恐的是，那孩子窜向疾驰着的汽车前面。'}

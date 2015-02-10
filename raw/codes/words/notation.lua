@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["notation"]={"notation","[nəʊ'teɪʃ(ə)n]","[no'teʃən]","n.记号法",'n.记号法,表示法,注释|||[计算机]记法','The advantage of this notation is that it is unambiguous.','这种记号的优点在于它不会混淆.','Music has a special system of notation.','音乐有一套特殊的标记法.'}

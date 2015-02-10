@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hindmost"]={"hindmost","['haɪn(d)məʊst]","[ 'haindməust ]","adj.最后方的",'adj.最后方的','The enemy soldiers fled and let the devil catch the hindmost.','敌兵纷纷逃窜，听任后面的人遭殃。','It\'s a situation of dog-eat-dog and the devil take the hindmost.','这是一个自相残杀、落后遭殃的局面。'}

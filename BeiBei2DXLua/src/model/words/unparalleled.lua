@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unparalleled"]={"unparalleled","[ʌn'pærəleld]","[ʌn'pærəlɛld]","adj.无比的",'adj.无比的,优良无比的,空前的','The Renaissance was an epoch of unparalleled cultural achievement.','文艺复兴是一个文化上取得空前成就的时代.','Our specialist library is unparalleled.','我们的专家图书馆是独一无二的.'}

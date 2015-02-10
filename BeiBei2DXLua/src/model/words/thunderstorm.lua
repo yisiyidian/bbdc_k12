@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thunderstorm"]={"thunderstorm","['θʌndəstɔːm]","['θʌndɚstɔrm]","n.雷暴雨(大雷雨)",'n.雷暴雨(大雷雨)','The child was frightened to death by the violent thunderstorm.','那孩子让狂风暴雨吓得要命.','You slept right through the thunderstorm.','你一直睡著, 这场雷雨都没把你吵醒.'}

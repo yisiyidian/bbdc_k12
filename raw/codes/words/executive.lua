@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["executive"]={"executive","[ɪg'zekjʊtɪv; eg-]","[ɪɡ'zɛkjətɪv]","adj.执行的",'n.总经理；行政部门；[计算机]执行指令|||adj.执行的；管理的；政府部门的','Bill is chairman of the executive committee.','比尔是执行委员会主席。','He seems more like a military officer than a business executive.','他似乎比较像一个军官，而不像一个商业行政主管。'}

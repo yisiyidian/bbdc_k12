@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["snob"]={"snob","[snɒb]","[snɑb]","n.势利小人",'n.势利小人，自命不凡的人|||[英]鞋匠','This car sells well because of its snob value.','这种汽车很 有派头, 因此很畅销.','She protested strongly at being called a snob.','她极力反对别人说她势利眼.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blunt"]={"blunt","[blʌnt]","[blʌnt]","adj.迟钝的",'adj.迟钝的,钝的,直接的|||vt.&vi.使变钝|||n.混了大麻的雪茄','||Blunt|| scissors don\'t cut cleanly.','钝剪刀剪不齐.','I suffered a blunt refusal when I called him.','当我打电话给他时遭到他的断然拒绝。'}

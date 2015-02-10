@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flier"]={"flier","['flaɪə]","['flaɪɚ]","n.飞行员",'n.飞行员,投机，传单|||=flyer','He took a flier in politics soon after getting his degree.','取得学位后不久, 他就从事政治投机活动。','He had fliers run off and distributed to all the newspapers in the district.','他把传单印了出来, 分发给这个地区所有的报纸。'}

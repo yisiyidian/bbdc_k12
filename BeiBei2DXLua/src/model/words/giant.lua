@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["giant"]={"giant","['dʒaɪənt]","['dʒaɪənt]","adj.巨大的",'adj.巨大的|||n.巨人,伟人,巨大的东西','Ba jin is a literary giant.','巴金是一位文坛巨匠。','The hero smote the giant with his sword.','英雄用剑猛劈巨人。'}

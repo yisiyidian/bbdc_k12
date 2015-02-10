@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["leukemia"]={"leukemia","[lʊ'kimɪə]","[ lju'ki:miə ]","n.白血病",'n.白血病','leukemia','一种疾病','She had leukemia. Maybe she didn\'t tell you.','她得了白血病，可能她没有告诉你。'}

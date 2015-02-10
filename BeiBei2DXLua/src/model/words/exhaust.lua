@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exhaust"]={"exhaust","[ɪg'zɔːst; eg-]","[ɪɡ'zɔst]","v.耗尽",'n.排气,排气装置|||v.用尽,耗尽,使...精疲力尽|||[计算机]排除','The exhaust pipe shot sparks.','排气管中射出了火星。','tobacco crops that exhausted the soil.','消耗土壤肥力的烟草'}

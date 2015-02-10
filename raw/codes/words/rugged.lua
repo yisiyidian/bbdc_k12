@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rugged"]={"rugged","['rʌgɪd]","['rʌɡɪd]","adj.高低不平的",'adj.高低不平的,崎岖的,粗糙的','The mountain path is narrow and rugged.','狭隘的山路崎岖不平。','The path to glory is always rugged.','通向光荣的道路常常是崎岖的。'}

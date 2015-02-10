@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amplify"]={"amplify","['æmplɪfaɪ]","['æmplɪfaɪ]","v.扩大",'v.扩大,详述,使...增幅','Let me amplify so that you will understand the overall problem.','让我来详细解释一下，这样你就会理解整个问题了。','This landscape seemed to trap and amplify sounds.','这种地貌好像可以笼住并放大声音。'}

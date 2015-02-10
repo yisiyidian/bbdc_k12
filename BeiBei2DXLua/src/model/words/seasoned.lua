@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seasoned"]={"seasoned","['siːznd]","['siznd]","adj.经验丰富的",'adj.经验丰富的','He began acting with the confidence of a seasoned performer.','作为一名久经历练的表演者，他满怀自信地开始演出。','A pie or turnover, especially one filled with seasoned meat or fish.','肉馅饼馅饼或半圆形卷饼，尤指内有加了调料的肉体或鱼的'}

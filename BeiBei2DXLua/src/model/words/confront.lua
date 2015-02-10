@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["confront"]={"confront","[kən'frʌnt]","[kən'frʌnt]","vt.面临",'vt.面临,对抗,遭遇','He swung round to confront his accusers.','他突然转过身来面对著那些指控他的人。','A soldier often has to confront danger.','士兵常常要身临险境。'}

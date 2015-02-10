@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sandstone"]={"sandstone","['sæn(d)stəʊn]","['sænd'ston]","n.砂岩",'n.砂岩','||Sandstone|| cuts easily.','砂岩容易切割.','...the reddish sandstone walls.','…微红的砂岩墙。'}

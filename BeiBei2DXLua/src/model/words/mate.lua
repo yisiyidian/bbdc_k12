@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mate"]={"mate","[meɪt]","[met]","n.配偶",'n.配偶,同事,助手|||v.使...配对,交配,使...一致,结伴','He is looking for a wife but he hasn\'t found his ideal mate.','他正在寻找未来的妻子，但还没有找到理想人选。','The male hunts for food while his mate guards the nest.','雌性动物守巢时，雄性动物猎食。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["congruent"]={"congruent","['kɒŋgrʊənt]","['kɑŋɡruənt]","adj.全等的",'adj.合适的，一致的，全等的','All of these are congruent triangles.','所有这些都是全等三角形.','They want to work in an organization whose values are congruent with their own.','他们想在一家与他们自己的价值观相同的组织里工作。'}

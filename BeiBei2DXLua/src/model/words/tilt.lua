@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tilt"]={"tilt","[tɪlt]","[tɪlt]","vi.倾斜",'vi.倾斜；翘起；以言词或文字抨击|||vt.使倾斜；使翘起|||n.倾斜','The table top suddenly tilted and all the plates and glasses crashed onto the floor.','桌面突然翘起，所有的盘子和玻璃制品都滑落到地板上打碎了。','He drove full tilt intothe lamppost.','他车开得飞快, 撞上了路灯柱.'}

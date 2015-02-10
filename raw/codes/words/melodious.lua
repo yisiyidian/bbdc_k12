@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["melodious"]={"melodious","[mɪ'ləʊdɪəs]","[mə'lodɪəs]","adj.旋律美妙的",'adj.旋律美妙的,调子优美的,音乐性的','This piece of music is melodious.','这首音乐音调优美。','She plays a melodious cello.','她拉着一手悦耳的大提琴。'}

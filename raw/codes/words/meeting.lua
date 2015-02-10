@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["meeting"]={"meeting","['miːtɪŋ]","['mitɪŋ]","n.会议",'n.会议','The meeting will deal with these problems.','本次会议将就这些问题作出处理。','There were 200 people present at the meeting.','有200人到会.'}

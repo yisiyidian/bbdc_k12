@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jump"]={"jump","[dʒʌmp]","[dʒʌmp]","n.跳跃",'n.跳跃,跳动,上涨|||vt.&vi.跳越,突升,惊跳','I couldn\'t understand his lecture because he kept jumping from one topic to another.','我听不懂他的演讲，他总是从一项内容跳到另一项内容。','The gang jumped an old woman in the subway.','一伙歹徒在地下人行道突然袭击一老妇人。'}

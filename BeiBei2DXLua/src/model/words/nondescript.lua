@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nondescript"]={"nondescript","['nɒndɪskrɪpt]","['nɑndɪskrɪpt]","adj.莫可名状的",'adj.莫可名状的,难以区别的,无特徵的|||n.难以名状,不属任何型类的人','He\'s such a nondescript that you\'d never notice him in a crowd.','他没有什么特征，在人群中显不出他来。','Their performance was disappointingly nondescript.','他们的演出令人失望，味同嚼蜡。'}

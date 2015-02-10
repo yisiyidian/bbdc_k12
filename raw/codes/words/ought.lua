@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ought"]={"ought","[ɔːt]","[ɔt]","conj.应该",'conj.应该,大概','She failed one of the exam papers, but we ought to make allowance for the fact that she was ill.','她有一门不及格，但我们必须考虑到她当时有病。','He ought to have kept his promise.','他原本应该遵守自己的诺言。'}

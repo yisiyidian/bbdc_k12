@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hermitage"]={"hermitage","['hɜːmɪtɪdʒ]","['hɝmɪtɪdʒ]","n.隐居之处",'n.隐居之处','He lived in a hermitage when he was old.','他老的时候住在修道院。','We dance on the green, dine at the hermitage, and wander in the woods by moonlight.','我们在绿茵上跳舞，在僻静的住所晚餐，在月光下漫步于森林中。'}

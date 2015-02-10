@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imprint"]={"imprint","[ɪm'prɪnt]","['ɪmprɪnt]","vt.刻上记号",'vt.刻上记号(加特征,印刷,盖印,压印,铭记)|||n.印记(痕迹,特征,印象)','He tried to imprint the number on his memory.','他试图把那个号码牢牢记住','Her face bore the deep imprint of suffering.','她的脸上带著受过苦难的深深的痕迹.'}

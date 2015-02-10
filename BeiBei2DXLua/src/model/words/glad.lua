@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glad"]={"glad","[glæd]","[ɡlæd]","adj.高兴的",'adj.高兴的，乐意的；令人高兴的，使人愉快的；（风光）明媚的，（景色）美丽的；充满欢乐的，兴高采烈的|||vt.使高兴','I\'d be glad to lend you the money.','我很乐意借给你钱.','If you\'d like me to help you, I\'d be only too glad to.','若要我帮忙, 我十分乐意相助.'}

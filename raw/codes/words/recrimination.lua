@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recrimination"]={"recrimination","[rɪ,krɪmɪ'neɪʃ(ə)n]","[rɪ,krɪmɪ'neʃən]","n.反控告",'n.反控告,反责','Let\'s make friends, instead of wasting our time on recriminations.','我们交个朋友吧，不要浪费时间互相指责。','The war sweeps up everyone in hatred and recrimination.','战争让大家充满仇恨并相互指责。'}

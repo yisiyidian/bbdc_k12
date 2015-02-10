@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quarterly"]={"quarterly","['kwɔːtəlɪ]","['kwɔrtɚli]","adj.季度的",'adj.季度的|||adv.每季一次|||n.季刊','a quarterly magazine; a quarterly payment.','季刊杂志；按季度付款','The committee meets quarterly.','委员会每季度开一次会。'}

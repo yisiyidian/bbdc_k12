@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["carver"]={"carver","['kɑrvɚ]","[ 'kɑ:və ]","n.雕刻匠",'n.雕刻匠,雕工,切肉刀|||Carver|||n.卡沃尔(人名)','||Carver||, who was black, was born in Missouri in1864.','卡佛是个黑人，1864年出生在密苏里州。','He is a famous carver','他是一个著名的雕刻家'}

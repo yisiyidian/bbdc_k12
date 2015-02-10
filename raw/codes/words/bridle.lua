@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bridle"]={"bridle","['braɪd(ə)l]","['braɪdl]","n.马笼头",'n.马笼头，约束|||vt.给...套笼头，控制（感情等）|||vi.动怒','She bridled at his remarks.','她蔑视他的言论。','Tell him to put a bridle on his tongue.','告诉他说话要谨慎。'}

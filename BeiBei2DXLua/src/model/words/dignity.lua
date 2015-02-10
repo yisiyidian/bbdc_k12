@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dignity"]={"dignity","['dɪgnɪtɪ]","['dɪɡnəti]","n.尊严",'n.尊严,高贵,端庄','She bears herself with dignity.','她举止庄重大方。','There was something impressive about Julia\'s quiet dignity.','朱丽亚的宁静端庄给人印象很深。'}

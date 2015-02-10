@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pathogenic"]={"pathogenic","[,pæθə'dʒenɪk]","[,pæθə'dʒɛnɪk]","adj.致病的",'adj.致病的','Conliform is a knid of pathogenic bacteria','大肠菌是一种致病菌','',''}

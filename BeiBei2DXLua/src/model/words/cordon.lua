@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cordon"]={"cordon","['kɔːd(ə)n]","['kɔrdn]","n.警戒线",'n.哨兵线,警戒线,饰带|||vt.围起警戒线','Demonstrators broke through the police cordon.','示威群众突破了警戒线。','The police cordon was unable to hold back the crowd.','警方的警戒线阻挡不住人群。'}

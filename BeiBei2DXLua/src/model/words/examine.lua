@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["examine"]={"examine","[ɪg'zæmɪn; eg-]","[ɪg'zæmɪn]","vt.检查",'vt.检查，调查；考试；诊察；审问|||vi.检查；调查','They put a screen around his bed so that the doctor could examine him.','他们在他床的四周放上屏风，以便医生给他检查。','examine a patient.','诊察患者'}

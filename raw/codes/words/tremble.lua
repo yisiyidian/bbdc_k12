@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tremble"]={"tremble","['tremb(ə)l]","['trɛmbl]","n.战悚",'n.战悚,颤抖|||v.战悚,忧虑,微动','The whole house trembled when the train went by.','火车经过时，整座房子都在震颤。','He was ||trembling|| with rage.','他气得发抖。'}

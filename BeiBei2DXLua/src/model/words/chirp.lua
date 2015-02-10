@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chirp"]={"chirp","[tʃɜːp]","[tʃɝp]","n.喳喳声",'n.喳喳声,唧唧声|||v.吱喳而鸣','Birds had begun to chirp among the trees.','鸟儿们已经开始在树林里叽叽喳喳地叫了。','I was awakened by the chirps of the birds this morning.','今天早晨我被鸟叫声唤醒。'}

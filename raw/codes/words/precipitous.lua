@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["precipitous"]={"precipitous","[prɪ'sɪpɪtəs]","[prɪ'sɪpɪtəs]","adj.险峻的",'adj.险峻的|||adj.突然的,急躁的','From a precipitous height we look at the town spread out below.','我们从险峻的高处眺望铺展在下面的城镇。','We have a precipitous climb to the peak.','我们向着陡峭的山顶攀登。'}

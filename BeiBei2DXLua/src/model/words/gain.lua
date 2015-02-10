@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gain"]={"gain","[geɪn]","[ɡen]","n.增益",'n.增益,获得,利润|||vt.得到,增进,获利|||vi.增加,得到,(钟,表等)走得快','After swimming for an hour, he finally gained the shore.','他游了一小时以後，终於到达岸边。','He has gained rich experience in these years.','这些年来，他取得了丰富的经验。'}

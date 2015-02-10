@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["court"]={"court","[kɔːt]","[kɔrt]","n.法院",'n.法院,庭院,奉承,球场|||v.献殷勤,追求,招致（危险、失败等）','The court of King Solomon was noted for its splendor.','所罗门国王的宫廷以其华丽著称。','The court moves to the country in the summer.','夏天王室上下都移居到乡下去。'}

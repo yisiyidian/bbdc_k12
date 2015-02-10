@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["maiden"]={"maiden","['meɪd(ə)n]","['medn]","n.未婚女子",'n.未婚女子,断头机,从未赢过的赛马|||adj.未婚的,处女的,初次的','She resumed her maiden name after the divorce.','她离婚後重新使用娘家的姓.','After her divorce she reverted to her maiden name.','她离婚后又重新使用娘家的姓。'}

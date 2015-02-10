@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["approximate"]={"approximate","[ə'prɒksɪmət]","[ə'prɑksɪmət]","adj.大约的",'adj.大约的,近似的|||vt.&vi.接近,约等于','This is just an approximate figure.','这仅仅是个大概数字。','The color of the curtains approximates that of the rug.','窗帘的颜色和地毯相近。'}

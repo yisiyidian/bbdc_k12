@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wristband"]={"wristband","['rɪs(t)bænd]","['rɪstbænd]","n.袖口",'n.袖口','wristband','袖口','Mr Tabuni wears a wristband emblazoned with the morning star.','塔布尼手腕上带着一个饰有晨星图案的腕带。'}

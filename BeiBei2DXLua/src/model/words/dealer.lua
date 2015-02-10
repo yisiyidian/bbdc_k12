@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dealer"]={"dealer","['diːlə]","['dilɚ]","n.经销商",'n.经销商；商人；发牌者，庄家；[俚语]毒品贩子，贩毒者','She\'s now firmly established (in business) as an art dealer.','她已稳固地奠定了艺术品商的地位.','Let\'s cut for dealer.','咱们切牌决定由谁发牌吧。'}

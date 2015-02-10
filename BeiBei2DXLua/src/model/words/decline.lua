@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decline"]={"decline","[dɪ'klaɪn]","[dɪ'klaɪn]","v.降低",'n.衰微,跌落;晚年|||v.降低,婉谢','She is on the decline, and may die soon.','她的健康每况愈下，可能不久于人世。','The wall declined slightly on account of the earthquake.','墙壁因地震而倾斜。'}

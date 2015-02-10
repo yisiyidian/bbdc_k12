@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wan"]={"wan","[wɒn]","[wɑn]","adj.苍白的",'adj.苍白的，病态的，暗淡的|||vi.变苍白，呈病态|||abbr.广域网（=wideareanetwork)','Her face wanned after her long illness.','她久病后脸色变得苍白。','All she could manage was a thin, wan smile.','她只能挤出一丝疲惫的笑容。'}

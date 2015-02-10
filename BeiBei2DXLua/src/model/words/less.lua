@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["less"]={"less","[les]","[lɛs]","adj.更少的",'adj.更少的,更小的|||adv.更少地,更小地|||n.少量,次要|||prep.减','He is less tall than she is.','他不如她高。','Work more and dream less, you will be much happier.','多做事少空想，这样你会愉快得多。'}

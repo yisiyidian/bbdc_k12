@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["turnover"]={"turnover","['tɜːnəʊvə]","['tɝn'ovɚ]","n.翻覆",'n.翻覆,翻折,半圆卷饼,营业额,成交量|||adj.翻折的领子','The shop have a turnover of 500,000 dollars a week.','该店营业额为每周五十万元。','We aim for a quick turnover of stock in our stores.','我们的目的是要加速本百货店的库存周转.'}

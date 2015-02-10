@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disable"]={"disable","[dɪs'eɪb(ə)l]","[dɪs'ebl]","v.使...失去能力",'v.使...失去能力','A trap for large animals in which a heavy weight is arranged to fall on and kill or disable the prey.','陷阱用来捕获大动物的陷阱，其中准备重物落下并杀死或使猎物就范','The soldier disabled by wounds in his leg is buried in sadness.','那个腿部受伤致残的士兵正沉浸在悲哀之中。'}

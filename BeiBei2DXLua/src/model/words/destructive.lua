@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["destructive"]={"destructive","[dɪ'strʌktɪv]","[dɪ'strʌktɪv]","adj.破坏性的",'adj.破坏性的,有害的','Effective, punitive, or destructive action.','有效的行为有效的、惩罚的或破坏性的行为','A locust is a kind of destructive insect.','蝗虫是一种害虫。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stone"]={"stone","[stəʊn]","[ston]","n.石头",'n.石头；宝石；矿石；（膀胱或肾脏中的）结石|||vt.向扔石块；用石头铺；以石掷向；除（水果的）硬核|||adj.石制的；石头似的；[S-]石器时代的；粗陶制的|||adv.石一般的','The beetle scuttled away when I lifted the stone.','我把石头搬起来时，那只甲虫跑了。','She stepped on a loose stone and twisted her ankle.','她踩到一块松动的石头上，扭伤了脚踝。'}

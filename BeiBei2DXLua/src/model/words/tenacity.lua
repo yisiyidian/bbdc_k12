@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tenacity"]={"tenacity","[tɪ'næsɪtɪ]","[tə'næsɪti]","n.坚韧",'n.坚韧，固执,不屈不挠,顽固','Talent, hard work and sheer tenacity are all crucial to career success.','事业要成功，才能、勤奋和顽强的意志都至关重要。','I feel I must respond to your tenacity','我感觉我必须对你的坚韧做出回应。'}

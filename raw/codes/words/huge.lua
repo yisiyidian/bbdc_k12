@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["huge"]={"huge","[hjuːdʒ]","[hjudʒ]","adj.巨大的",'adj.巨大的,程度高的','The discount was very huge.','折扣的幅度非常大。','The atomic explosion is always accompanied by huge fireball.','原子弹爆炸总是伴随着巨大的火球。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indent"]={"indent","[ɪn'dent]","[ɪn'dɛnt]","n.契约",'n.契约,订货单|||v.切割成锯齿状,缩排,定货|||[计算机]缩排,缩进','Please indent the first line of each paragraph.','请于每段第一行缩格书写。','The mountains indent the horizon.','山峦使地平线成锯齿状.'}

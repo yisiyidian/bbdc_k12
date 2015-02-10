@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["competent"]={"competent","['kɒmpɪt(ə)nt]","['kɑmpɪtənt]","adj.有能力的",'adj.有能力的,胜任的,足够的','Her drawing is competent, but her composition is poor.','她的画有功力, 但布局欠佳.','I summed her up as a competent manager.','我认为她是个很能干的经理.'}

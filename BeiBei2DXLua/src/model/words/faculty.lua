@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["faculty"]={"faculty","['fæk(ə)ltɪ]","['fæklti]","n.（大学的）系",'n.能力，才能；全体教职员；[英]（大学的）专科，系；特权，特许','The faculty expressed their sympathy with the students\' action.','全体教员对学生的行动都表示赞成。','He has a great faculty for learning foreign languages.','他有学习外语的天赋。'}

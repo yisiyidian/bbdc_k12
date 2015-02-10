@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carnation"]={"carnation","[kɑː'neɪʃ(ə)n]","[kɑr'neʃən]","n.康乃馨(一种花)",'n.康乃馨(一种花)','A carnation having pale petals bordered by a darker color.','花边香石竹浅色花瓣由深色边围绕的康乃馨','He wore a red carnation in his buttonhole.','他的扣洞上了一朵红色康乃馨。'}

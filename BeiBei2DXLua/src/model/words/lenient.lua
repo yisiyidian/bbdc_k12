@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lenient"]={"lenient","['liːnɪənt]","['linɪənt]","adj.宽大的",'adj.宽大的,仁慈的','In your case, we are prepared to be lenient.','根据你的情况，我们拟予从宽处理','I think if people marry it ought to be for life; the laws are altogether too lenient with them.','我认为，人们要是结婚，就应结为终身伴侣；法律对他们（离婚者）太宽大了。'}

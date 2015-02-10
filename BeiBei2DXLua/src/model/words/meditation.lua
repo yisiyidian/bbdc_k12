@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["meditation"]={"meditation","[medɪ'teɪʃ(ə)n]","[,mɛdɪ'teʃən]","n.沉思",'n.沉思,冥想','He is deep in meditation.','他陷入沉思中。','Many busy executives have begun to practice yoga and meditation.','许多忙碌的主管开始练习瑜伽和冥想。'}

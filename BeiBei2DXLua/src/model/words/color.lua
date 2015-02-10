@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["color"]={"color","['kʌlə(r)]","['kʌlɚ]","n.颜色",'n.颜色,气色,风格|||vt.把...涂颜色,粉饰|||vi.脸红','Andrew couldn\'t help noticing that she colored slightly.','安德鲁不禁注意到她微微有些脸红。','Stick to your colors.','坚持你的立场'}

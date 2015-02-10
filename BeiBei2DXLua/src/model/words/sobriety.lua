@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sobriety"]={"sobriety","[sə'braɪətɪ]","[sə'braɪəti]","n.清醒",'n.清醒,严肃，节制','When women started working in offices, they opted for severity in dress in order to imply sobriety.','女性开始在办公室上班后，就会选择朴素而简洁的着装，以看上去持重冷静。','They did a sobriety test on him.','他们对他做了酒精测试。'}

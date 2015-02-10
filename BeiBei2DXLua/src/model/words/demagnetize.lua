@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["demagnetize"]={"demagnetize","[diː'mægnɪtaɪz]","[,di'mægnət,aɪz]","v.消磁",'v.消磁','my card has demagnetized for a long time','我的卡消磁很久啦','If we mix the mobile phone and our bank card up ,then the card will be demagnetized.','如果我们把手机和银行卡放在一起那么卡就会被消磁。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["originate"]={"originate","[ə'rɪdʒɪneɪt; ɒ-]","[ə'rɪdʒɪnet]","vt.发起",'vt.发起|||vi.开始|||[计算机]起始','The hot dog did not originate in the United States, but in Germany.','热狗不是起源于美国, 而是德国。','The style of architecture originated from the ancient Greeks.','这种建筑风格起源于古希腊。'}

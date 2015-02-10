@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deploy"]={"deploy","[dɪ'plɒɪ]","[dɪ'plɔɪ]","vt.&vi.展开",'vt.&vi.展开,配置,部署','The infantry began to deploy at dawn.','步兵黎明时开始进入战斗位置。','Artillery was deployed in the west.','炮兵部署在西边。'}

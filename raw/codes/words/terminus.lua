@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["terminus"]={"terminus","['tɜːmɪnəs]","['tɝmɪnəs]","n.终点",'n.终点,终站，界限','We arrived at the terminus.','我们到达了终点站。','I can have a rest on the bus, becase I\'ll get off at the terminus.','我可以在公交车上休息一会儿，因为我到终点站才下车。'}

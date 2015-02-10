@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stringent"]={"stringent","['strɪn(d)ʒ(ə)nt]","['strɪndʒənt]","adj.严格的",'adj.严格的,(银根)紧缩的,变紧的','Financiers are calling for a relaxation of these stringent measures.','金融家呼吁对这些严厉的措施予以放宽。','Some of the conditions in the contract are too stringent.','合同中有几项条件太苛刻。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intermission"]={"intermission","[ɪntə'mɪʃ(ə)n]","['ɪntɚ'mɪʃən]","n.中止",'n.中止,中断,停顿','During the intermission, let\'s go out for some fresh air.','幕间休息时，我们出去呼吸呼吸新鲜空气吧。','The intermission between halves in certain games, such as basketball or football.','中场休息在诸如篮球、足球等比赛项目的上、下半场间的休息'}

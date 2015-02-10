@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["primitive"]={"primitive","['prɪmɪtɪv]","['prɪmətɪv]","adj.原始的",'adj.原始的|||n.原始人,文艺复兴前的艺术家','||Primitive|| peoples deified the sun.','原始部落将太阳奉为神。','The book is about the mythologies of primitive races.','这本书是原始民族神话集。'}

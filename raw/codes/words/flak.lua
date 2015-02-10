@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flak"]={"flak","[flæk]","[flæk]","n.高射炮",'n.高射炮,对空炮火，抨击，指责|||=flack','He took a lot of flak for his stand against abortion.','他因坚持反对堕胎而饱受责难。','The pilot jibbed at the idea of a straight bomb run, for it would mean flying through heavy flak.','领航员不赞成采用笔直的轰炸航线，因为这样做就得飞过密集的高射炮火。'}

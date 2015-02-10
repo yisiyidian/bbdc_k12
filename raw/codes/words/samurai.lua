@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["samurai"]={"samurai","['sæm(j)ʊraɪ]","['sæmuraɪ]","n.(日本的)武士",'n.(日本的)武士','samurai','武士','Japanese salarymen, who were once regarded as modern-day samurai, are today known as soshoku-danshi (wussy, unambitious “grass-eating men”).','日本的工薪阶层曾被认为是现代版的日本武士，而如今却成了众所周知的soshoku-danshi（懦弱无欲无求的“草根一族”）。'}

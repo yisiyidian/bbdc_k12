@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["banana"]={"banana","[bə'nɑːnə]","[bə'nænə]","n.香蕉",'n.香蕉','||Banana||, grape, apple, daisy which of these is the odd one out?','香蕉、葡萄、苹果、雏菊－－这几样东西哪一样与众不同？','I gave Mary an apple in exchange for my favorite banana.','我送给玛丽一个苹果换我最喜欢吃的香蕉。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["everything"]={"everything","['evrɪθɪŋ]","['ɛvrɪ'θɪŋ]","pron.每件事",'pron.每件事,一切','Thank you for everything.','感谢你做的一切。','I resent having to get his permission for everything I do.','我讨厌做每件事都要得到他的许可。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clock"]={"clock","[klɒk]","[klɑk]","n.时钟",'n.时钟,计时器','Rescue services have been working round the clock to free stranded motorists.','救援工作一直在昼夜不停地进行着，来解救被困的驾驶员们。','This clock has outlasted several owners.','这座时钟的寿命比它的几个主人的寿命都长.'}

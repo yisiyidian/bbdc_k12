@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gesticulation"]={"gesticulation","[dʒə,stɪkjʊ'leɪʃ(ə)n; dʒe,stɪkjʊ'leɪʃ(ə)n]","[ dʒes,tikju'leiʃən ]","n.手势",'n.手势,姿势','He beckon me to come nearer with a hidden gesticulation.','他偷偷向我做了个手势示意我过去。','He is better than delimiting to a saleswoman with gesticulation a period of time.','他用手势向一位女售货员比划了好一阵子。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["them"]={"them","[ðem; ðəm]","[ðəm]","pron.他(她",'pron.他(她,它)们','My mother tacked the sleeves on before sewing them.','我妈妈在把袖子缝好之前，先用大针脚把它们缝好。','She put the sugar into the coffee and mixed them up with a spoon.','她把糖放进咖啡里，用勺子把它们混合起来。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intestine"]={"intestine","[ɪn'testɪn]","[ɪn'tɛstɪn]","adj.国内的",'adj.国内的,内部的|||n.肠','Surgical incision into the intestine.','肠切开术对肠实施的外科切开术','The absence or closure of a normal body orifice or tubular passage such as the anus, intestine, or external ear canal.','（先天性）闭锁，无孔正常的身体孔或管道，如肛门、肠或外耳道的缺失或闭合'}

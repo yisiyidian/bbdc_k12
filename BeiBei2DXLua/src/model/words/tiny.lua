@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tiny"]={"tiny","['taɪnɪ]","['taɪni]","adj.极小的",'adj.极小的,微小的','A tiny fishing boat was drifting slowly along.','一只小小的渔船在缓缓地漂去。','They will soon be hearing the patter of tiny feet.','他们很快就会有个小宝宝了。'}

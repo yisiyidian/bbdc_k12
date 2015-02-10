@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sinecure"]={"sinecure","['sɪnɪkjʊə(r)]","['saɪnɪkjʊr]","n.挂名职务",'n.挂名职务，闲差事|||n.','Since her father owns this company, May is basically having a sinecure.','这公司是她老爸开的，她也就挂了份闲职。','She found him an exalted sinecure as a Fellow of the Library of Congress.','她给他找了一个级别很高的闲职：国会图书馆研究员。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flat"]={"flat","[flæt]","[flæt]","adj.平坦的",'adj.平坦的,单调的,扁平的|||adv.平直地,干脆地|||n.[英]公寓|||vt.变平|||vi.降调','The colours used are flat and unvaried.','使用的颜色既单调又无层次。','He spread the map flat out on the floor.','他把地图平铺在地上。'}

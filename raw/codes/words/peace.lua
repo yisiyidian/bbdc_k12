@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["peace"]={"peace","[piːs]","[pis]","n.和平",'n.和平,安静','His rage was soon calmed down by the rustic peace.','乡村的宁静很快就使他的怒气平静下来。','There is an atmosphere of peace and calm in the country, quite different from the atmosphere of a big city.','在乡间有一种和平宁静的气氛，和大城市的气氛截然不同。'}

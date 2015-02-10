@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["provender"]={"provender","['prɒvɪndə]","['prɑvɪndɚ]","n.刍草",'n.刍草，粮秣，食物','I\'ve prepared enough provender for the party tonight.','我已经为今晚的聚会准备了足够的食物。','||Provender|| is considered before army is occupied.','兵马未动，粮草先行。'}

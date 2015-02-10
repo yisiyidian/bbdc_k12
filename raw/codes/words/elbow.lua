@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elbow"]={"elbow","['elbəʊ]","['ɛlbo]","n.手肘",'n.手肘,急弯,扶手|||v.用手肘推开,推挤','You jogged my elbow and spoiled what I was drawing.','你撞到了我的手肘，弄坏了我正在画的图画。','Leave a radio at the patient\'s elbow.','在病人手边留一个收音机。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["memory"]={"memory","['mem(ə)rɪ]","['mɛməri]","n.记忆",'n.记忆,内存,回忆','His best music was inspired by the memory of his mother.','他最好的乐曲创作灵感来自怀念他的母亲。','These frightful experiences are branded on his memory.','这些可怕的经历深深印入他的记忆。'}

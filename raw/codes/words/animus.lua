@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["animus"]={"animus","['ænɪməs]","['ænɪməs]","n.基本态度",'n.基本态度，主导精神|||n.敌意,恶意|||n.[心理]（女性人格中的）男性基质','When you have an animus against a person, you should give it up.','当你对别人怀有敌意时, 你应当放弃这种想法。','Your animus toward him suggests that you are the wrong man for the job.','你对他有看法表明你不是这份工作的合适人选。'}

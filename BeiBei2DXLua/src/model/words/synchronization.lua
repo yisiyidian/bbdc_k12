@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["synchronization"]={"synchronization","[,sɪŋkrənaɪ'zeɪʃən]","[,sɪnkrənaɪ'zeʃən]","n.同步化",'n.同步化','||SYNCHRONIZATION|| MEASURE CIRCUIT FAULT','同期测量电路故障','||Synchronization|| with SAP HR module for approval hierarchy.','与SAP HR板块的审批层次同步'}

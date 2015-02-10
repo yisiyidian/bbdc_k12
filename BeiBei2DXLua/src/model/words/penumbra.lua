@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["penumbra"]={"penumbra","[pɪ'nʌmbrə]","[pɪ'nʌmbrə]","n.半阴影",'n.半阴影，边缘部分','The First Amendment has a penumbra where privacy is protected from governmental intrusion.','第一修正案在个人隐私不受政府侵犯方面较为模糊。','moon enters penumbra ，moon leaves penumbra','月半影食始 ，月半影食终'}

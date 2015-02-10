@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ultimately"]={"ultimately","['ʌltɪmətlɪ]","['ʌltɪmətli]","adv.最后",'adv.最后,最终','His rashness led ultimately to his ruin.','他的急躁鲁莽最终导致了他的毁灭。','Every value they created ultimately redounded to their boss.','他们创造的价值最后全进了他们老板的腰包。'}

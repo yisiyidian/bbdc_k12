@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dormitory"]={"dormitory","['dɔːmɪt(ə)rɪ]","['dɔrmətɔri]","n.(集体)宿舍",'n.(集体)宿舍','He soon gets accustom to dormitory life and make two or three friend.','他不久就逐渐习惯了宿舍的生活并交了两三个朋友。','Every girl must sign in when she comes back to the dormitory.','每个女生回到宿舍的时候都必须签到。'}

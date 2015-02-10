@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["renunciation"]={"renunciation","[rɪnʌnsɪ'eɪʃ(ə)n]","[rɪ,nʌnsɪ'eʃən]","n.放弃",'n.放弃,废弃,弃权','The talks were dependent on a renunciation of terrorism.','会谈以放弃恐怖主义为前提。','||Renunciation|| of pleasure has always been very hard to man.','摒弃快乐对人来说总是不易做到的.'}

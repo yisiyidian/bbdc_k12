@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infringe"]={"infringe","[ɪn'frɪn(d)ʒ]","[ɪn'frɪndʒ]","v.破坏",'v.破坏,犯,违反','The publishing house infringed his copyright.','出版社侵犯了他的版权。','Everybody have privacy, and we should punish that infringe upon others\' privacy.','每人都有隐私，我们应该惩罚侵犯他人隐私的人。'}

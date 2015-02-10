@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oneself"]={"oneself","[wʌn'self]","[wʌn'sɛlf]","pron.自己",'pron.自己,自身','She demonstrated how best to defend oneself.','她示范最有效的自卫方法.','One cannot inure oneself altogether to such malicious criticism.','谁也不能总是忍受这种恶意批评.'}

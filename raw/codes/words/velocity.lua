@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["velocity"]={"velocity","[vəˈlɒsəti]","[və'lɑsəti]","n.速度",'n.速度,速率,迅速','Lashing velocity of pump is concerned with nature of air.','泵的抽气速率与气体的性质有关。','The car was moving at such a velocity!','那辆汽车的速度简直太快了！'}

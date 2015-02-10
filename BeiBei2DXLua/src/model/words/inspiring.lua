@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inspiring"]={"inspiring","[ɪn'spaɪərɪŋ]","[ɪn'spaɪərɪŋ]","adj.令人振奋的",'adj.令人振奋的,激励人的,鼓舞人心的','The audience was carried away by his inspiring speech.','他鼓舞人心的发言使听众听入了神。','His inaugural speech was very inspiring.','他的就职演说很鼓动人心.'}

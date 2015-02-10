@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["declaration"]={"declaration","[deklə'reɪʃ(ə)n]","[,dɛklə'reʃən]","n.宣布",'n.宣布,宣言','These events led to the declaration of war.','这些事件导致了宣战。','Please make a written declaration of all the goods you bought abroad.','请书面申报你在国外购买的全部商品。'}

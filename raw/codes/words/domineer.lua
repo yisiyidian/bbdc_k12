@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["domineer"]={"domineer","[,dɒmɪ'nɪə]","[ ,dɔmi'niə ]","v.擅权",'v.擅权,作威作福','Big boys sometimes domineer their younger brothers and sisters.','大男孩有时会欺压自己的弟妹们。','So, in the long run, do those that rely on a domineering leader.','但长远来看，那些一人独揽大权的公司下场其实也是如此。'}

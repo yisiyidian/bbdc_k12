@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["weave"]={"weave","[wiːv]","[wiv]","v.编织",'n.编法,织法,编织|||v.编织,组合,编排','Spiders weave webs.','蜘蛛结网。','I ||wove|| a garland of flowers.','我编了一个花环。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["desirable"]={"desirable","[dɪ'zaɪərəb(ə)l]","[dɪ'zaɪərəbl]","adj.值得有的",'adj.值得有的,令人满意的,有吸引力的|||n.有吸引力的人','It is desirable that atomic energy should be used for peaceful purpose.','原子能应该为了和平的目的而使用，这是合乎情理的。','It is desirable that we (should) provide for the poor at Christmas.','在圣诞节施舍穷人是可喜的事。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tongue"]={"tongue","[tʌŋ]","[tʌŋ]","n.舌头",'n.舌头,语言,口条,语言,说话方式|||vt.舔,闲谈,斥责|||vi.吹乐器','The dog\'s tongue was hanging out.','这条狗把舌头伸在外面。','The tongue is one of the vocals.','舌头是发声器官之一。'}

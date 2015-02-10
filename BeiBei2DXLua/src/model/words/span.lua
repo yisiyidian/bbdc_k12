@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["span"]={"span","[spæn]","[spæn]","n.跨度",'n.跨度,跨距,范围|||vt.持续,贯穿,跨越','They always keep their kitchen spick and span.','他们的厨房总是很整洁.','Modern medicine has increased man\'s life span.','现代医学延长了人的寿命。'}

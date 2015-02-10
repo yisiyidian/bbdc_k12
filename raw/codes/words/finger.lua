@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["finger"]={"finger","['fɪŋgə]","['fɪŋɡɚ]","n.手指",'n.手指,指针|||vt.用手指触碰（演奏），（用手）指，|||vi.触摸，用手指演奏乐器，','The pen slips out of my fingers.','钢笔从我指缝中滑下去了。','She fingered the rich silk.','她抚摸着华丽的丝绒。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["marathon"]={"marathon","['mærəθ(ə)n]","['mærə,θɑn]","n.马拉松",'n.马拉松,耐力的考验','After running in the marathon, she was flat out for a week.','她参加马拉松比赛後一星期都疲惫不堪.','||Marathon|| runners need plenty of stamina.','参加马拉松长跑要有耐力.'}

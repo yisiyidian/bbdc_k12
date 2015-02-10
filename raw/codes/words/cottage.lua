@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cottage"]={"cottage","['kɒtɪdʒ]","['kɑtɪdʒ]","n.村舍",'n.村舍,小屋','He has a house in London and a cottage near the sea.','他在伦敦有一所房子, 在海边还有一个小屋.','From the cottage window a few lamps were glimmering in the distance.','远处的农舍窗户闪烁着几盏微弱的灯。'}

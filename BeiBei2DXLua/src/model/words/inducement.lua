@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inducement"]={"inducement","[ɪn'djuːsm(ə)nt]","[ɪn'dusmənt]","n.诱因",'n.诱因,动机,刺激物','They have little inducement to work harder.','没有什么可以使他们更加努力工作。','I gave him money as an inducement to leave.','我给他钱，诱使他离去。'}

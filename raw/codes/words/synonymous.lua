@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["synonymous"]={"synonymous","[sɪ'nɒnɪməs]","[sɪ'nɑnɪməs]","adj.同义的",'adj.同义的','His deeds had made his name synonymous with victory.','他的英勇事迹使他的名字成了胜利的代名词.','Time is synonymous with money.','时间就是金钱。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impassive"]={"impassive","[ɪm'pæsɪv]","[ɪm'pæsɪv]","adj.无感情的",'adj.无感情的,无神经的,平静的','He was rigid, erect, and impassive.','他一动不动，笔直地站着，脸上毫无表情。','He was content to stand by as an impassive spectator.','他满足于站在旁边做一个冷漠的旁观者。'}

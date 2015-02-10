@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tablet"]={"tablet","['tæblɪt]","['tæblət]","n.药片",'n.药片,匾,片状物','An engraved slab or tablet bearing an inscription or a device.','匾，碑上面刻有铭文或图案的一块石板或匾','Fill a glass with water and dissolve this tablet in it.','倒杯水把药片放进去溶解了.'}

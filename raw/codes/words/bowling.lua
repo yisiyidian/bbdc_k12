@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bowling"]={"bowling","['bəʊlɪŋ]","['bolɪŋ]","n.保龄球",'n.保龄球','We were bowling along (the motorway) at seventy miles per hour.','我们以每小时七十英里的速度(在高速公路上)飞驰.','The aim in bowling is to knock down all the pins with one or two bowls.','保龄球的目标是一球或两球击倒所有瓶形滚柱.'}

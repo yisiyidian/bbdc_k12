@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cottonwood"]={"cottonwood","['kɒt(ə)nwʊd]","['kɑtnwʊd]","n.杨木",'n.杨木','A rain of fluffy cottonwood seeds','如雨般落下的白杨子','ts banks were shaded by cottonwood and redwood trees.','河流的两岸被棉花树和红木树遮蔽住了。'}

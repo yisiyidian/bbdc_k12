@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emit"]={"emit","[ɪ'mɪt]","[ɪ'mɪt]","v.发出",'v.发出,放射,吐露|||[计算机]发射','The cheese was emitting a strong smell.','干酪散发出强烈的气味。','A volcano emits smoke and ashes.','火山散发着烟和灰。'}

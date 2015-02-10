@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jewelry"]={"jewelry","['dʒuːəlrɪ]","['dʒʊəlri]","n.珠宝",'n.珠宝,珠宝类','The conjunction of workmanship and artistry in making jewelry decides the value of the jewelry.','在珠宝饰物的制造中，手工与艺术的结合决定了珠宝的价值。','There is a very high tariff on jewelry.','宝石的税率很高。'}

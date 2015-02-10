@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chassis"]={"chassis","['ʃæsɪ; -iː]","['ʃæsi]","n.底盘",'n.底盘','This kind of car is not suitable to drive in country roads because its chassis is too low.','这种车不适合在乡村道路上行驶，因为它的底盘太低了。','Okay, let\'s get it on chassis.','.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["difficult"]={"difficult","['dɪfɪk(ə)lt]","['dɪfɪkəlt]","adj.困难的",'adj.困难的,(人)难取悦的,难相处的','The quest for gold was difficult.','寻找金矿是很困难的。','So far as English is concerned, it is not so difficult as you might think.','就英文而言，它并不像你所认为的那样难。'}

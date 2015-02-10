@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["purple"]={"purple","['pɜːp(ə)l]","['pɝpl]","adj.紫色的",'adj.帝王的,紫色的,辞藻华丽的|||n.紫色,皇室,皇权|||vi.&vt.变紫','That plant with purple flowers is flag.','那种开紫花的植物是菖蒲。','The juniper is a type of evergreen bush with purple berries.','杜松子是一种生有紫红色浆果的常绿灌木。'}

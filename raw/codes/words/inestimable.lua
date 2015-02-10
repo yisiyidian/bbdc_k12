@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inestimable"]={"inestimable","[ɪn'estɪməb(ə)l]","[ɪn'ɛstɪməbl]","adj.无价的",'adj.无价的,无法估计的','I have not tallied up the inestimable benefit.','我尚未计算那些无法估量的利益。','The value of that antique is inestimable.','那件古董的价值无法估计。'}

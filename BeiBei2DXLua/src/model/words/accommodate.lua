@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accommodate"]={"accommodate","[ə'kɒmədeɪt]","[ə'kɑmədet]","vi.使自己适应",'vi.使自己适应|||vt.使一致，和解；提供方便；容纳；顾及','The bank is ||accommodating|| its customers more than it used to.','这家银行现在给客户贷款比以前多了。','The cottage could accommodate up to five people.','这间小屋最多能容纳5个人。'}

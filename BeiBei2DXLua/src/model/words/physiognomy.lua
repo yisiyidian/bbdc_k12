@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["physiognomy"]={"physiognomy","[,fɪzɪ'ɒ(g)nəmɪ]","['fɪzɪ'ɑnəmi]","n.相面术",'n.相面术，外貌,地貌','||Physiognomy|| is the idea that a person’s face is a reflection of his character.','面相学认为一个人的脸反映了他的性格。','He was fascinated by her physiognomy — the prominent nose, brooding eyes and thick hair.','他被她的外表——高挺的鼻梁、深邃的双眸和浓密的秀发——迷住了。'}

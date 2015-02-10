@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["portray"]={"portray","[pɔː'treɪ]","[pɔr'tre]","v.描写",'v.描写,描写...的肖像,逼真地描写','The picture portrays a beautiful sunset.','这幅画描绘了落日美景。','The book portrays the life of an actor.','这本书描述了一个演员的一生。'}

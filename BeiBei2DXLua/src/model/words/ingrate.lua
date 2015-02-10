@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ingrate"]={"ingrate","['ɪngreɪt; ɪn'greɪt]","[ɪn'ɡret]","n.忘恩负义的人",'n.忘恩负义的人','He didn\'t realize that he has gradually became a ingrate.','他没意识到自己已经慢慢的变成一个忘恩负义的人了。','You ingrate bastard!','你个忘恩负义的畜生！'}

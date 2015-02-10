@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sinister"]={"sinister","['sɪnɪstə]","['sɪnɪstɚ]","adj.不吉利的",'adj.不吉利的,凶恶的,左边的','She had a sinister foreboding that the plane would crash.','她有种不祥的预感，飞机要失事。','His sinister look frightened them.','他那阴险的神情吓坏了他们。'}

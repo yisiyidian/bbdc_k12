@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tract"]={"tract","[trækt]","[trækt]","n.广阔的土地",'n.广阔的土地,地域,器官系统,宣传小册子','In the past nothing could grow on this tract of land.','过去这块地不立苗。','A vast tract of land is ready for development.','一大片土地正待开发。'}

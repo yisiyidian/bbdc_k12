@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["melodrama"]={"melodrama","['melə(ʊ)drɑːmə]","['mɛlədrɑmə]","n.音乐剧",'n.音乐剧,通俗剧,戏剧似的事健','I love Victorian melodrama(s).','我喜爱维多利亚时代的情节剧.','And sadly, there is hypocrisy all around in this melodrama.','令人悲哀的是, 这场闹剧中充满了只许州官放火,不许百姓点灯的双重标准.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tumultuous"]={"tumultuous","[tjʊ'mʌltjʊəs]","[tu'mʌltʃuəs]","adj.喧哗的",'adj.喧哗的，骚动的，激动的','A tumultuous, confused rush.','混乱喧哗、混乱的一阵忙乱或冲动','The political conversation was very tumultuous; but the senator, by his speech, cast oil on the troubled water.','那场政治会谈的气氛非常激烈，但这位参议员的发言使气氛和缓下来。'}

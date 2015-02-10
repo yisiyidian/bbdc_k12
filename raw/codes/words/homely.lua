@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["homely"]={"homely","['həʊmlɪ]","['homli]","adj.家常的",'adj.家常的,平凡的,相貌平庸的','We had a homely meal of bread and cheese.','我们吃了一顿面包加乳酪的家常便餐。','a homely child.','丑孩子'}

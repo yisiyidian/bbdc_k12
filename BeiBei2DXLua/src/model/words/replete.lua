@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["replete"]={"replete","[rɪ'pliːt]","[rɪ'plit]","adj.饱满的",'adj.饱满的,塞满的','The Harbor was replete with boats.','港口里满是船只。','History is replete with examples of populations out of control.','历史上人口失控的例子比比皆是。'}

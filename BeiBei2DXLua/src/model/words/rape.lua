@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rape"]={"rape","[reɪp]","[rep]","n.抢夺",'n.抢夺,掠夺,强奸|||vt.掠夺,抢夺,强奸','They seeded in the field of rape.','他们已经在油菜地里播了种。','She showed a prurient interest in the details of the rape case.','她对那强奸案的细节津津乐道.'}

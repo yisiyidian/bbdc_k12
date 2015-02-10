@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nicety"]={"nicety","['naɪsɪtɪ]","['naɪsəti]","n.精确",'n.精确，谨慎，精细，细微的区别','The manner in which she received him was calculated to a nicety to seem cool without being uncivil.','她接待他时始终准确地把握好分寸，看似冷淡，却不失礼。','The character of the hero is depicted to a nicety.','男主人公的性格刻画得非常细腻。'}

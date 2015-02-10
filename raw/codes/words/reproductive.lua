@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reproductive"]={"reproductive","[,riːprə'dʌktɪv]","[,riprə'dʌktɪv]","adj.复制的",'adj.复制的,生殖的|||n.（尤指群居昆虫的）母体','Every animal has reproductive organs.','每种动物都有生殖器官.','The male reproductive organs are exterior to the body.','男性生殖器在身体的外部.'}

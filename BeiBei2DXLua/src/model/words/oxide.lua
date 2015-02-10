@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oxide"]={"oxide","['ɒksaɪd]","['ɑksaɪd]","n.氧化物",'n.氧化物','||Oxide|| is usually seen in our daily life.','在我们的日常生活中氧化物很常见.','How can you get rid of this oxide coating?','你们该怎样除去这些氧化皮？'}

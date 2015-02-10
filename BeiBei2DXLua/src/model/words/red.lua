@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["red"]={"red","[red]","[rɛd]","adj.红色的",'adj.红色的|||n.红色','The sky slowly changed from blue to red.','天空慢慢由蓝色变为红色。','I received a bunch of red roses on my birthday.','生日那天，我收到一束红玫瑰。'}

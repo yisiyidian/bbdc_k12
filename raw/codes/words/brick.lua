@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brick"]={"brick","[brɪk]","[brɪk]","n.砖",'adj.砖似的|||n.砖|||v.用砖围砌,用砖填补|||vt.(up)用砖砌,用砖堵住','He had a brick thrown at him at that meeting.','那次集会时, 他的头部被一块砖头击中。','His new house was built by himself, brick by brick.','他的新房子是他自己一块砖一块砖砌起来的。'}

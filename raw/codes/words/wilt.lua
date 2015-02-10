@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wilt"]={"wilt","[wɪlt]","[wɪlt]","v.（使)枯萎",'v.（使)枯萎,（使)萎靡|||n.枯萎，憔悴','plants wilting in the heat.','因炎热而枯萎的植物','The flowers are wilting for lack of water.','这些花因缺水而渐渐枯萎。'}

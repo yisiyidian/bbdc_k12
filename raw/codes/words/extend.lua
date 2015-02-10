@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extend"]={"extend","[ɪk'stend; ek-]","[ɪk'stɛnd]","v.扩充",'v.扩充,延伸,伸展,扩展','My garden extends as far as the river.','我的花园一直伸展到河边。','The hot weather extended into October.','炎热天气一直持续到十月。'}

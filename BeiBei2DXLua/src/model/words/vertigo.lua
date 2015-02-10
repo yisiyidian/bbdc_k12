@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vertigo"]={"vertigo","['vɜːtɪgəʊ]","['vɝtɪɡo]","n.眩晕",'n.眩晕','If you have vertigo it seems as if the whole room is spinning round you.','如果你头晕，就会觉得整个房间都旋转起来。','||Vertigo|| can be caused by problems in the brain or inner ear.','脑或内耳出了问题，都可能导致眩晕。'}

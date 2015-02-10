@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["producer"]={"producer","[prə'djuːsə]","[prə'dʊsɚ]","n.生产者",'n.生产者,制片人','The radios producers could not find a market for them.','这些收音机制造厂的产品打不开销路。','The conflicting interests of producers and consumers will be everlasting.','生产者与消费者之间的利益冲突将永远存在。'}

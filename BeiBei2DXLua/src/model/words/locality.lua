@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["locality"]={"locality","[lə(ʊ)'kælɪtɪ]","[lo'kæləti]","n.地区",'n.地区，位置，地点，发生地','A group of people living in the same locality and under the same government.','居民住在相同地区和隶属相同政府下的一群人','People in this locality used to take two meals a day.','这儿的居民过去每天吃两餐饭。'}

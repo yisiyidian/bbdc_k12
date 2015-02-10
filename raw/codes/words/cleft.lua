@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cleft"]={"cleft","[kleft]","[klɛft]","adj.裂开的",'adj.裂开的|||n.裂缝','The man cleft a block of wood in two with an axe.','那人用斧头把一块木头劈成两半。','He found himself in a cleft stick.','他感到进退两难。'}

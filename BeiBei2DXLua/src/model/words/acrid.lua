@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["acrid"]={"acrid","['ækrɪd]","['ækrɪd]","adj.苦味的",'adj.苦味的,辛辣的,尖刻的','I gulped the acrid liquid.','我把辛辣的药水一口咽了下去。','There is an acrid tone to your remarks.','你说这些话的口气带有讥刺意味。'}

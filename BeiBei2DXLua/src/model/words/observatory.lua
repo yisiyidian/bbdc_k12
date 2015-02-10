@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["observatory"]={"observatory","[əb'zɜːvət(ə)rɪ]","[əb'zɝvətɔri]","n.天文台",'n.天文台,气象台,了望台','The stadium lights polluted the sky around the observatory.','体育馆的灯光使得天文台周围的天空不那么宜于观测了','||Observatory|| is an important device and place to observe stars.','天文台是观察星星的好地方和设备。'}

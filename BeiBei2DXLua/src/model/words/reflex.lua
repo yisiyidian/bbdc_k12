@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reflex"]={"reflex","['riːfleks]","['riflɛks]","n.反射",'n.反射(映象,回复,习惯性思维)|||adj.反射的(来复的)','Motor coordination; a motor reflex.','肌肉运动的协调；肌肉运动反射','A tonic reflex.','肌肉紧张反射'}

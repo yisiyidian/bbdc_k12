@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["corruption"]={"corruption","[kə'rʌpʃ(ə)n]","[kə'rʌpʃən]","n.腐败",'n.腐败,堕落,贪污','Associated with development of China,the corruption problem has became severe.','随着中国的发展，贪污问题变得严峻。','Accusations of corruption have been made/brought/laid against him.','对他贪污的控告已经提出.'}

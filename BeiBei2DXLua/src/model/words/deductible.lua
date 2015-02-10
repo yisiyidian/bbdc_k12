@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deductible"]={"deductible","[dɪ'dʌktɪb(ə)l]","[dɪ'dʌktəbl]","adj.可扣除的",'adj.可扣除的|||n.可减免的东西,扣除条款','deductible expenses.','可减免的花费','Not deductible, especially for income-tax purposes.','不扣除的不扣除的, 尤指为所得税的目的而不扣除的'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unseasonably"]={"unseasonably","[ʌn'si:znəbli]","[ ʌn'si:znəbli ]","adv.不合时令地",'adv.不合时令地(不合时宜地,不适时地)','He looked like a ghost evoked unseasonably from the grave.','他那副样子就像是一个从坟墓中不合时宜地钻出来的鬼魂.','It was unseasonably mild for late January.','一月下旬天气就这么暖和有点反常。'}

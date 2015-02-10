@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["discard"]={"discard","[dɪ'skɑːd]","[dɪs'kɑrd]","n.丢牌",'n.丢牌,废牌|||vt.丢弃,抛弃|||vi.丢牌','History discarded him.','他被历史所抛弃。','You\'ve got to discard before you can pick up another card.','你得先打出一张牌，才能拿另一张牌。'}

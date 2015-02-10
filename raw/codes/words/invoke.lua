@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invoke"]={"invoke","[ɪn'vəʊk]","[ɪn'vok]","vt.调用",'vt.求助,用咒语召唤,请求,应用,引起|||[计算机]调用','They invoked help in the desperate situation.','他们在走投无路的情况下恳求援助。','The government has invoked the official secret act in having the book banned.','政府援引国家机密保密法以禁该书。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["captivity"]={"captivity","[kæp'tɪvɪtɪ]","[kæp'tɪvəti]","n.囚禁",'n.囚禁,被俘虏','They prayed for an early deliverance from captivity.','他们为早日获释而祈祷.','Pandas rarely mate (with each other) in captivity.','猫熊在豢养环境中很少（彼此）交配.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["maudlin"]={"maudlin","['mɔːdlɪn]","['mɔdlɪn]","adj.容易流泪的",'adj.容易流泪的,感伤的,醉后好哭的|||n.易流泪','We saw a maudlin movie about an orphan who lost his parents in the war.','我们看了一部令人落泪的电影，讲的是一个在战争中失去父母的孤儿。','Lin Daiyu is maudlin and she always crys.','林黛玉很多愁善感，经常哭泣。'}

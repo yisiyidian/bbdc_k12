@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beloved"]={"beloved","[bɪ'lʌvɪd; -'lʌvd]","[bɪ'lʌvd]","adj.心爱的",'adj.心爱的','Wherefore are you, my beloved?','你怎么啦，我的宝贝？','The man endeavored to please his beloved wife.','那人尽量使他深爱的妻子快乐。'}

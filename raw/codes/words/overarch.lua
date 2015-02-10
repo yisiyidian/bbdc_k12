@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overarch"]={"overarch","[əʊvər'ɑːtʃ]","[,ovɚ'ɑrtʃ]","v.（使)形成拱形",'v.（使)形成拱形，成为……的中心','Grape vines overarched the garden path.','葡萄藤在花园小路上方形成了拱形','The street is overarched by ginkgoes.','那条街道给拱形的银杏树遮盖着。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["selection"]={"selection","[sɪ'lekʃ(ə)n]","[sɪ'lɛkʃən]","n.选择",'n.选择,挑选,挑选出来的人或事','And now for your further delectation, we present a selection of popular melodies.','为使你们更加愉快, 我们奉献给你们一组精选的流行歌曲.','In making the selection we passed this short piece by quite inadvertently.','在挑选时我们完全出自疏忽而漏过了这篇短文。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overestimate"]={"overestimate","[əʊvər'estɪmeɪt]","[,ovər'ɛstɪmət]","vt.过高评价",'vt.过高评价,过高出价|||n.估计过高,评价过高,出价过高','I overestimated the amount of milk we\'d need for the weekend.','我过高估计了我们周末的用奶量.','Don\'t overestimate seriousness of the problem.','别把问题看重了.'}

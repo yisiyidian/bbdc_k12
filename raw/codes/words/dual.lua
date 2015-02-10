@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dual"]={"dual","['djuːəl]","['dʊəl]","adj.双重的",'adj.双重的,成双的|||n.双数','He has a dual interest in the football team; he\'s the trainer and his son plays for them.','他跟那个足球队有双重关系，他是足球队教练，他的儿子是队员。','The road opened out into a dual carriageway.','这条路已扩展成了复式车行道.'}

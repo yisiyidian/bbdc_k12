@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["candid"]={"candid","['kændɪd]","['kændɪd]","adj.率直的",'adj.忠实的,率直的,坦诚的','You must be absolutely honest and candid.','你必须绝对坦诚。','Give me a candid hearing.','请你公正地听我说。'}

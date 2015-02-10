@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["most"]={"most","[məʊst]","[most]","adv.最",'adv.最，最多（大）；much的最高级；非常，很；几乎|||adj.many的最高级；最多的，最大的；大概的；大多数的，大部分的|||n.最大限度；大部分；大多数人','This is the area that attracts the most attention.','这是最受关注的地区。','That party was the most!','那一晚会精彩极了'}

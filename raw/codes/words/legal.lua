@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["legal"]={"legal","['liːg(ə)l]","['ligl]","adj.法律的",'adj.法律的,合法的,法定的','The contract was formulated in difficult legal language.','该合同是用深奥的法律术语订立的。','You should go through the legal formality.','你应该办理合法手续。'}

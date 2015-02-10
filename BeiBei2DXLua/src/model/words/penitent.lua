@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["penitent"]={"penitent","['penɪt(ə)nt]","['pɛnətənt]","adj.忏悔的",'adj.忏悔的,悔悟的|||n.改过迁善的人,忏悔的人,悔罪者','Those who were penitent obtained absolution.','悔过者获得了赦免。','Robert Gates sat before them, almost penitent about the past.','罗伯特·盖茨坐在他们面前，对过去的事几乎无颜以对。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["squeeze"]={"squeeze","[skwiːz]","[skwiz]","vt.挤压",'n.压榨,榨出的少量,佣金,经济拮据|||vt.紧握,挤压,使经济困难|||vi.让步,压迫,险胜','It took some ingenuity to squeeze all the furniture into the little room.','把全部家具都塞进那个小房间是很费了一番心思的。','We managed to get all the luggage into the car but it was a tight squeeze.','我们总算把行李都塞进汽车里了, 不过挤得要命.'}

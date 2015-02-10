@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transportation"]={"transportation","[trænspɔː'teɪʃ(ə)n; trɑːns-]","[,trænspɔr'teʃən]","n.运输",'n.运输,运输系统,运输工具','The building of the bridge is very important for the transportation between the two towns.','这座桥的建造对这两个镇的交通很重要。','The train is a safe means of transportation.','火车是一种安全的交通工具。'}

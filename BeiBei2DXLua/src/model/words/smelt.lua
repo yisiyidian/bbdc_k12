@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["smelt"]={"smelt","[smelt]","[smɛlt]","vt.熔炼",'n.香鱼，胡瓜鱼|||vt.熔炼|||动词smell的过去式和过去分词','The dog\'s nose twitched as it smelt the meat.','那狗一闻到肉味, 鼻子直抽动.','The dog smelt the rabbit a long way off.','那条狗嗅出远处有兔子.'}

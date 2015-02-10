@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["make"]={"make","[meɪk]","[mek]","vt.做",'vt.做，制造；生产，制定；使成为；使产生|||vi.开始；尝试；行进；增大|||n.制造；生产量；性格；形状，样式','She would have ||made|| an excellent teacher.','她本可以成为杰出的教师。','The stone ||made|| a dent in the roof of my car.','我的汽车顶让石头砸了个坑。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exodus"]={"exodus","['eksədəs]","['ɛksədəs]","n.大批的离去",'n.大批的离去|||Exodus：（《圣经·旧约》中的）出埃及记','There are a mass exodus of workers from the villages to the towns in this country.','该国有一大批工人从农村涌向城市。','The play was so awful that there was a general exodus from the theatre at the interval.','那部剧太糟糕了，幕间休息时观众纷纷离场。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scurry"]={"scurry","['skʌrɪ]","['skɝi]","vt.快跑(飞散)",'vt.快跑(飞散)|||n.快跑(飞散)','The rain sent everyone scurrying for shelter.','这阵雨把大家浇得纷纷找地方躲避。','The mouse ||scurried|| into its hole when the cat appeared.','猫一露面，老鼠急忙钻进自己的洞里。'}

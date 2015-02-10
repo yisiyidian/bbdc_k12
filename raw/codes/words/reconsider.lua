@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reconsider"]={"reconsider","[riːkən'sɪdə]","[,rikən'sɪdɚ]","v.重新考虑",'v.重新考虑,再斟酌','We regret that we are unable to reconsider your case.','我们很遗憾无法再考虑你的情况。','If he were you, he would reconsider my proposal.','他要是你，他会重新考虑我的建议。'}

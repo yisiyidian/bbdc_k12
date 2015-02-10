@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["approve"]={"approve","[ə'pruːv]","[ə'prʊv]","vt.批准",'vt.批准,核准,证实|||vi.赞同','Can we deduce from your silence that you do not approve?','你保持沉默，我们是否可以据此而推断出你不赞成？','You can join the class if you parents approve.','如果你父母同意，你可以参加这个班。'}

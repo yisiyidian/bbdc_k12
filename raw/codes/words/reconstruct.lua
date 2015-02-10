@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reconstruct"]={"reconstruct","[riːkən'strʌkt]","[,rikən'strʌkt]","vt.重建",'vt.重建,修复,重现','We reconstructed what the dinosaur looked like from a few of its bones.','我们根据恐龙的一些骨头重组恐龙的原貌.','We reconstructed what the dinosaur looked like from a few of its bones.','我们根据恐龙的一些骨头重组恐龙的原貌.'}

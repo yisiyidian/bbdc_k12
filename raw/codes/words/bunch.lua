@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bunch"]={"bunch","[bʌn(t)ʃ]","[bʌntʃ]","n.一串",'n.一串,一束,一组,凸起,大量|||vi.凸起,使成一束(或一群等)|||vt.使成一束','He goes round with a bunch of thugs.','他经常和一帮流氓厮混.','Your friends are all just a bunch of nobodies.','你的朋友都不过是无名之辈.'}

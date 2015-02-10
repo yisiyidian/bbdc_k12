@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inexpensive"]={"inexpensive","[ɪnɪk'spensɪv; ɪnek-]","[,ɪnɪk'spɛnsɪv]","adj.花费不多的",'adj.花费不多的，廉价的','We stocked a wide range of inexpensive wines.','我们贮有多种廉价酒.','Those shoes are very inexpensive.','那些鞋子很便宜.'}

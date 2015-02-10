@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["concerning"]={"concerning","[kən'sɜːnɪŋ]","[kən'sɝnɪŋ]","prep.关于",'prep.关于','Let me see all the official documents concerning the sale of this land.','让我看看买卖这块土地的所有官方文件。','I wrote to the head of the firm concerning Robert.','我曾就罗伯特的问题写信给公司的主管.'}

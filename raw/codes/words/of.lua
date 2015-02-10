@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["of"]={"of","[ɒv; (ə)v]","[əv]","prep.…的",'prep.…的,出生于,住在,关于','I\'m under a lot of pressure.','我的压力很大。','My phone was out of order.','我的电话坏了。'}

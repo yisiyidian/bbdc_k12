@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shell"]={"shell","[ʃel]","[ʃɛl]","n.贝壳",'n.贝壳,壳,外形|||vt.&vi.去壳,脱落,炮击,拾贝壳|||n.[计算机]DOS命令:安装备用的COMMAND.COM文件,并改变环境尺寸','All that remained of the building after the fire was an empty shell.','一场大火过后，这座建筑剩下的只是一个空壳。','||Shells|| were bursting all around.','炮弹在四处爆炸。'}

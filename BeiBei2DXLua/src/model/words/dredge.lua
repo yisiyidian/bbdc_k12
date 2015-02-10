@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dredge"]={"dredge","[dredʒ]","[drɛdʒ]","n.挖泥机",'n.挖泥机,捞网|||v.用挖泥机疏浚|||v.把粉撒在','A barge or boat equipped with a dredge.','挖泥船装有挖掘机的船','Can we dredge the river to make it deeper?','我们能不能把这条河疏浚得深一点？'}

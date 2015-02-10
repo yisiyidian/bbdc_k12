@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fresh"]={"fresh","[freʃ]","[frɛʃ]","adj.新鲜的",'adj.新鲜的；淡水的；新的；无经验的|||adv.刚；最新的|||n.开始；新生；泛滥；淡水流','Some tribes migrate with their cattle in search of fresh grass.','有些部落为了寻找新鲜的牧草而带着他们的牲畜迁移。','I feel really fresh after my holiday.','我度假之後真觉得又精神饱满了。'}

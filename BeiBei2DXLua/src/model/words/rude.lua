@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rude"]={"rude","[ruːd]","[rud]","adj.粗鲁的",'adj.粗鲁的,无礼的','It\'s strange for her to be so rude.','真奇怪，她竟然会如此粗暴无礼。','`Do you consider yourself a rude person?\' `Certainly not!\'','｀你认为你是个粗鲁的人吗?＇｀当然不是!＇'}

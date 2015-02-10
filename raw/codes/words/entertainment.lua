@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["entertainment"]={"entertainment","[entə'teɪnm(ə)nt]","['ɛntɚ'tenmənt]","n.娱乐",'n.娱乐','Wrestling is in a twilight zone between sport and entertainment.','摔交是介於运动和娱乐两者之间的活动.','The Arabian Nights\' ||Entertainment|| is very interesting.','《一千零一夜》的故事非常有趣。'}

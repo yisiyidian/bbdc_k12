@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["contaminate"]={"contaminate","[kən'tæmɪneɪt]","[kən'tæmɪnet]","vt.弄脏",'vt.弄脏,污染','Flies contaminate food.','苍蝇会污染食物。','They are ||contaminating|| the minds of our young people with these subversive ideas.','他们这些颠覆性的思想是对我们年轻人的精神污染。'}

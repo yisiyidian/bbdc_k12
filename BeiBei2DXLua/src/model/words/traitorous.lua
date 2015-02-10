@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["traitorous"]={"traitorous","['treɪt(ə)rəs]","['tretərəs]","adj.叛国的",'adj.叛国的,不忠的,背信弃义的','a traitorous act.','卖国行为','Now the president’s people boast that the “traitorous” opposition has been broken and the country is back to normal.','现在，总统的支持者声称，那些“背信弃义”的反对派已经瓦解，伊朗已经返回正轨。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mutate"]={"mutate","[mjuː'teɪt]","['mjutet]","vi.变异",'vi.变异,突变|||vt.使变异,使突变','The process by which some microbes differentiate or mutate.','离异, 分离变异一些微生物变异或经历突变的过程','The virus mutates in the carrier\'s body.','该病毒在携带者体内发生突变。'}

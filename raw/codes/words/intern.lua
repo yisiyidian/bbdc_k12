@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intern"]={"intern","['ɪntɜːn]","['ɪntɝn]","n.实习生",'n.实习生,拘留犯|||vt.扣留|||vi.作实习生','I worked as an intern in that firm last summer.','去年夏天我在那家商行实习。','He was interned as an enemy alien at the outbreak of the Second World War.','他在第二次世界大战爆发时被作为敌国侨民扣押了。'}

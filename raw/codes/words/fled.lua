@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fled"]={"fled","[fled]","[ fled ]","（过去式和过去分词）vi.逃跑",'（过去式和过去分词）vi.逃跑,逃走,消失|||vt.避免,回避','The troops fled in disarray.','部队仓皇逃散.','The customers fled (from the bank) when the alarm sounded.','警铃响起, 顾客纷纷(从银行)逃走.'}

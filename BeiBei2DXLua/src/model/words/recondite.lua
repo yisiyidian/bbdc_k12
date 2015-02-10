@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["recondite"]={"recondite","['rek(ə)ndaɪt; rɪ'kɒn-]","['rɛkəndaɪt]","adj.深奥的",'adj.深奥的,难解的,隐藏的','Her poems are modishly experimental in style and recondite in subject-matter.','她的诗在风格上是时髦的实验派，主题艰深难懂。','This question is too recondite to the primmary students.','这个问题对小学生来说太深奥了。'}

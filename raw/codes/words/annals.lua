@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["annals"]={"annals","['æn(ə)lz]","['ænlz]","n.纪年表",'n.纪年表,年鉴,年报|||名词annal的名词形式','He has become a legend in the annals of military history.','他成了军事编年史上的一个传奇。','The tournament added a brilliant page to the annals of world table-tennis.','这次比赛给世界乒乓球史增添了光辉的一页。'}

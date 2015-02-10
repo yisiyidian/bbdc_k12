@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indoors"]={"indoors","[ɪn'dɔːz]","[,ɪn'dɔrz]","adv.在户内",'adv.在户内','The child broke the window, but it was his parents\' fault for letting him play football indoors.','孩子把窗户打破了, 但是让他在屋里踢足球是他父母的过错.','Why you stay indoors on a beautiful day like this defeats me!','天气这样好你却呆在屋里, 真叫人莫名其妙!'}

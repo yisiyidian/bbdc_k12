@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pottery"]={"pottery","['pɒt(ə)rɪ]","['pɑtəri]","n.陶器",'n.陶器','The archaeologists found gold coins and pottery in the lowest level of the site.','考古学家在发掘地最下层找到一些金币和陶器.','A potter is making pottery by hand.','陶器匠正用手做陶器.'}

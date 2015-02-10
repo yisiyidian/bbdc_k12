@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jocund"]={"jocund","['dʒɒk(ə)nd; 'dʒəʊk-]","['dʒɑkənd]","adj.快乐的",'adj.快乐的,高兴的','I can not but be gay in such a jocund company.','我和如此快乐的同伴在一起岂能不乐。','Her jocund character made her the most popular girl in the county.','她快乐的个性使她成为这个郡最受欢迎的女孩。'}

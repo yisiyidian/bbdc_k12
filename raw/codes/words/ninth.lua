@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ninth"]={"ninth","['naɪnθ]","[naɪnθ]","adj.第九",'adj.第九,九分之一','What did the suspect do on July ninth?','嫌疑犯在七月九日做了什么事情？','The ||Ninth|| Symphony of Beethoven is a famous one.','贝多芬的第九交响乐非常有名.'}

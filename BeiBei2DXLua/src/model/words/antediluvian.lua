@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["antediluvian"]={"antediluvian","[,æntɪdɪ'luːvɪən]","[,æntɪdɪ'luvɪən]","adj.大洪水前的",'adj.大洪水前的,上古的,古风的|||n.大洪水以前的人,很老的人,老古董','His ideas are positively antediluvian!','他的思想是纯粹的老古董！','She was more than old-fashioned, she was antediluvian.','她何止是过时，简直就是老古董。'}

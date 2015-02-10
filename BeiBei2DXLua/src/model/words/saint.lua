@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["saint"]={"saint","[seɪnt]","[sent]","n.圣人",'n.圣人,圣徒|||vt.把...封为圣人','His silly chatter would vex a saint.','他说的话很无聊, 多有涵养的人也得气得发火.','Saint Christopher is the patron saint of travellers.','圣徒克里斯托弗是旅行者的守护神。'}

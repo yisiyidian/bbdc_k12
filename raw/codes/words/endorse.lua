@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["endorse"]={"endorse","[ɪn'dɔːs; en-]","[ɪn'dɔrs]","vt.支持",'vt.支持,赞同,背书于','Would you please endorse this check?','请在这张支票上签字好吗？','I am afraid I can\'t endorse your opinion.','很抱歉，我不赞成你的意见。'}

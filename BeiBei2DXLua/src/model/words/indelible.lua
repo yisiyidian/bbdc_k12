@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indelible"]={"indelible","[ɪn'delɪb(ə)l]","[ɪn'dɛləbl]","adj.不能擦除的",'adj.不能擦除的,不能磨灭的,难忘的','An indelible pen for labeling clothing.','一种为衣物作标签用的其笔迹很难去掉的笔','Act promptly to remove spots from these fabrics. The longer you delay, the more indelible will the mark become.','赶快动手把这些污点从这些织物上擦掉。拖延时间越长，就越难擦掉。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stump"]={"stump","[stʌmp]","[stʌmp]","n.残株",'n.残株,烟蒂,讲演台|||v.砍断,蹒跚而走','Everybody was stumped by the problem.','大家都被这个问题难住了。','I\'m stumped: I just don\'t know what to do.','我很为难，简直不知如何是好。'}

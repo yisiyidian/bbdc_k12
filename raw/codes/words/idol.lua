@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["idol"]={"idol","['aɪd(ə)l]","['aɪdl]","n.偶像",'n.偶像|||n.菩萨','The fans of the actress craned their necks to catch a glimpse of their idol.','那位女演员的崇拜者们伸长了脖子想看一看他们崇拜的偶像。','He is an only child, and the idol of his parents.','他是个独子，是他父母的宠儿。'}

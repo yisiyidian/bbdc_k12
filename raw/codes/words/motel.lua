@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["motel"]={"motel","[məʊ'tel]","[mo'tɛl]","n.汽车旅馆",'n.汽车旅馆','The travelers sat down in the motel near the beach.','旅游者在海滨附近的汽车旅店住了下来。','The motel is dead ahead about a mile from here.','那家汽车旅馆就在前方大约一英里的地方。'}

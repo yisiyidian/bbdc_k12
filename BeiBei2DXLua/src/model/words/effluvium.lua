@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["effluvium"]={"effluvium","[ɪ'fluːvɪəm]","[ i'flu:vjəm ]","n.臭气",'n.臭气,恶臭','They cannot stand the effluvium and then move out this town.','他们因为不能忍受臭气而离开了那个小镇。','Repulsive ||effluvia|| made us vomit.','这恶臭让我们作呕。'}

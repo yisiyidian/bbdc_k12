@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diet"]={"diet","['daɪət]","['daɪət]","n.日常饮食",'n.日常饮食，规定饮食|||vt.照规定饮食|||adj.低卡路里的','You should eat more high-protein diet.','你应该多吃些高蛋白食物。','I\'m on a diet.','我正在节食。'}

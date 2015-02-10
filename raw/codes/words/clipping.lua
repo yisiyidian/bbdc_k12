@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clipping"]={"clipping","['klɪpɪŋ]","['klɪpɪŋ]","n.剪断",'n.剪断,剪裁,剪取物|||adj.第一流的,头等的,极好的','The bus driver ||clipped|| our tickets to show we had used them.','公共汽车司机在我们的车票上打孔，标明使用过了。','A clipping, as from a newspaper.','剪辑剪下之物，如从报纸上'}

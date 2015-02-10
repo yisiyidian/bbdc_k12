@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indulgent"]={"indulgent","[ɪn'dʌldʒ(ə)nt]","[ɪn'dʌldʒənt]","adj.纵容的",'adj.纵容的,任性的,宽纵的','His character is indulgent.','他性格放纵。','His indulgent mother was willing to let him do anything he wanted.','他母亲很溺爱他，任由他想干什么就干什么。'}

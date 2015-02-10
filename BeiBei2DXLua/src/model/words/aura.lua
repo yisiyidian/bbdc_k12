@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aura"]={"aura","['ɔːrə]","['ɔrə]","n.光环",'n.气味,气氛;n.光环,光圈','She always seems to have an aura of happiness about her.','她好像总是喜气洋洋的.','An aura of defeat pervaded the candidate\'s headquarters.','失败的氛围笼罩着候选者总部'}

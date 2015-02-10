@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intervene"]={"intervene","[ɪntə'viːn]","[,ɪntɚ'vin]","vi.插入",'vi.插入,介入,干涉,调停|||[计算机]介入','I am powerless to intervene in the matter.','我对调停此事无能为力。','I will come if nothing intervenes.','假若没有别的事，我一定来。'}

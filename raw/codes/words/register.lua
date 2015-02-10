@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["register"]={"register","['redʒɪstə]","['rɛdʒɪstɚ]","v.登记",'v.记录,登记,注册,挂号|||n.暂存器,记录,登记簿|||n.(语)语域;通风调节设备','He slammed the door to register his disapproval.','他砰的一声把门关上以示不满。','Her face registered dismay.','她脸上流露出惊慌的神色'}

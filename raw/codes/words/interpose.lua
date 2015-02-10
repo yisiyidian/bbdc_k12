@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interpose"]={"interpose","[ɪntə'pəʊz]","['ɪntɚ'poz]","v.插入",'v.插入,介于...二者间,干涉','He interposed his considerable bulk (ie body) between me and the window, so that I could not see out.','他个头很大, 夹在我和窗户之间, 我看不见外边的东西了.','`But how do you know that?\' he interposed.','｀那麽你是怎麽知道那件事的呢?＇他插嘴问道.'}

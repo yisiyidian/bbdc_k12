@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["event"]={"event","[ɪ'vent]","[ɪ'vɛnt]","n.大事",'n.大事,事件,项目,活动','In any event, the worst that she can do is say no\'.','不管怎样, 她大不了就是说个｀不＇字.','This article discussed the events that led to her suicide.','这篇文章讨论了导致她自杀的一系列事件。'}

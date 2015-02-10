@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aquatic"]={"aquatic","[ə'kwætɪk; -'kwɒt-]","[ə'kwætɪk]","n.水生动物",'n.水生动物,水草|||adj.水生的,水中的,水上的','||Aquatic|| products prices continue to fall.','水产品价格继续下降。','The pond is small but can support many aquatic plants and fish.','这个池塘虽小，但是能养活许多水生植物和鱼。'}

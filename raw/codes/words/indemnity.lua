@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indemnity"]={"indemnity","[ɪn'demnɪtɪ]","[ɪn'dɛmnəti]","n.保证",'n.保证(赔偿,免罚)','The victorious nations are demanding huge ||indemnities|| from their former enemies.','战胜国要求战败国交付巨额赔款.','Political exiles had not been given indemnity from prosecution.','政治流亡者还没有被给予免于起诉的保证。'}

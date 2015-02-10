@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["government"]={"government","['gʌv(ə)n,m(ə)nt; 'gʌvəm(ə)nt]","['ɡʌvɚnmənt]","n.政府",'n.政府,政体,统治','The government will garrison the coastal towns.','政府将派军驻守沿海的城镇。','The two systems of government are polar opposites.','这两种政体正好相反。'}

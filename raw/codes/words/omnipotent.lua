@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["omnipotent"]={"omnipotent","[ɒm'nɪpət(ə)nt]","[ɑm'nɪpətənt]","adj.全能的",'adj.全能的,无所不能的|||Omnipotent：上帝','Money is not omnipotent, but we can\'t survive without money.','金钱不是万能的，但是没有金钱我们无法生存。','Doug lived in the shadow of his seemingly omnipotent father.','道格生活在他那看似权威至高无上的父亲的阴影里。'}

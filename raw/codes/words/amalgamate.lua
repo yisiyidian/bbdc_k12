@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amalgamate"]={"amalgamate","[ə'mælgəmeɪt]","[ə'mælɡəmet]","v.合并",'v.合并,混合|||vt.混合','The boys\' and girls\' schools have been amalgamated to form a new comprehensive.','男校和女校联合组成了一所新的综合中学。','Our local brewery has amalgamated with another firm.','我们本地的酿酒厂与另一个公司合并了。'}

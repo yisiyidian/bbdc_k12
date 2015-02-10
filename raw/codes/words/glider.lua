@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glider"]={"glider","['glaɪdə]","['ɡlaɪdɚ]","n.滑翔机",'n.滑翔机，助滑器，滑翔导弹','The glider was soon lost sight of in the clouds.','滑翔机很快消失在云层里.','He put the glider down in a field.','他把滑翔机降落在田地里了.'}

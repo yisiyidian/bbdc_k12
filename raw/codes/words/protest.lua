@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["protest"]={"protest","['prəʊtest]","['protɛst]","n.抗议",'n.抗议,反对,抗议书|||vi.反对,抗议,断言|||vt.坚持地表示,对...提出异议','She protested that she had never seen the accused man before.','她坚持说她以前从未见过这一被指控的男子。','His protests on human rights sound hollow.','他就人权问题提出的抗议听来很空洞。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reality"]={"reality","[rɪ'ælɪtɪ]","[rɪ'æləti]","n.现实",'n.现实,实际,真实','It seems as if he knew everything, but in reality, he is as stupid as can be.','他似乎是个万事通。其实他是再愚蠢不过了。','In reality, things always happen out of expectation.','现实中, 事情总是出乎意料地发生。'}

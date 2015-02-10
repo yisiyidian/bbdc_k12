@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["legitimacy"]={"legitimacy","[lɪ'dʒɪtɪməsɪ]","[lɪ'dʒɪtəməsi]","n.合法",'n.合法,适法,正当','Everyone begins to question the legitimacy of  his behaviour.','每个人都开始怀疑他的行为的合法性。','legitimacy','合法'}

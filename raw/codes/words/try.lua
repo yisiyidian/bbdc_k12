@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["try"]={"try","[traɪ]","[traɪ]","n.尝试",'n.尝试,试验|||vt.审理,尝试,试验|||vi.尝试','His courage was severely ||tried|| by his ordeal.','他的勇气在艰难困苦中经受了严峻的考验。','He was ||tried|| for murder.','他因谋杀罪而受审。'}

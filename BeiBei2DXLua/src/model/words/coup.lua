@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coup"]={"coup","[kuː]","[kʊ]","n.砰然的一击",'n.砰然的一击,妙计,出乎意料的行动','They were sentenced to death for their part in April\'s coup attempt.','他们因参与了4月份的政变而被判处死刑。','The oppressed were free after the coup.','被压迫的人民在政变之后获得了自由。'}

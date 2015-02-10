@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lunge"]={"lunge","[lʌn(d)ʒ]","[lʌndʒ]","v.突进",'n.刺,刺进,跃进|||v.突进,踢,刺出','||Lunge|| at the door','向门中冲去。','He lunged wildly at his opponent.','他疯狂地扑向对手.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["capacitor"]={"capacitor","[kə'pæsɪtə]","[kə'pæsɪtɚ]","n.电容器",'n.电容器','Some of the students are welding capacitors; the others resistors.','学生中的一些人在焊接电容，另一些人在焊接电阻。','Make sure the capacitor bank is voltage-free.','确信电容器组不带电压。'}

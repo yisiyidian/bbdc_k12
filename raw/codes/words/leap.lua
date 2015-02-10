@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["leap"]={"leap","[liːp]","[lip]","n.跳跃",'n.跳跃,剧增,急变|||v.跳跃,跃过,猛冲|||adj.闰年的','He crossed the garden in three leaps.','他跳三步就跨过了花园。','He got over the stream with a single leap.','他一跃就跳过了小溪。'}

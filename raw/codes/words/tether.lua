@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tether"]={"tether","['teðə]","['tɛðɚ]","n.极限",'n.系绳,界限,（能力、财力、忍耐等的）极限|||v.练栓,拘束','A succession of illnesses has brought Joy to the end of her tether.','一连害了好几场病，乔伊的身体已变得孱弱不堪，再也无法支撑下去了。','She was jealous, humiliated, and emotionally at the end of her tether.','她既忌妒又感到屈辱，感情上已经到了崩溃的边缘。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subway"]={"subway","['sʌbweɪ]","['sʌbwe]","n.地铁",'n.地铁','The gang jumped an old woman in the subway.','一伙歹徒在地下人行道突然袭击一老妇人。','An ordinary subway train, approaching the station, can be twice as loud as the loudest jet.','平常的地下火车接近车站时，发出的声音可能是最大声的喷射机的两倍。'}

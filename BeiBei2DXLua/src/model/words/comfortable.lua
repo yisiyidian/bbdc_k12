@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comfortable"]={"comfortable","['kʌmf(ə)təb(ə)l]","['kʌmftəbl]","adj.舒适的",'adj.舒适的,充裕的','Neither chair is comfortable.','两把椅子坐起来都不舒服。','A comfortable house may be an Eden.','一个舒适的家可以是一个乐园。'}

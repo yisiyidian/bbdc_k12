@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["copy"]={"copy","['kɒpɪ]","['kɑpi]","vt.&vi.复制",'n.复制品；一份；（报刊等的）稿件；准备排印的书面材料|||vt.&vi.复制；抄写；容许复制的|||vt.模仿；仿造…的样式或图案；抄写；复制','He asked his secretary to make a copy of the document.','他叫秘书把文件复制一份。','I ||copied|| out her notes into my notebook.','我把她的笔记抄在我的笔记本上。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["musty"]={"musty","['mʌstɪ]","['mʌsti]","adj.发霉的",'adj.发霉的,霉臭的,落伍的','He had spent several hours in the library poring over those musty documents.','他一连好几个小时呆在图书馆里，仔细翻阅那些发霉味的文献资料。','There are racks of musty clothing and piles of junk.','有几架子发霉的衣物和成堆的废旧杂物。'}

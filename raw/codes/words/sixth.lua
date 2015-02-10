@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sixth"]={"sixth","[sɪksθ]","[sɪksθ]","n.六分之一",'n.六分之一|||num.&adj.第六','It\'s on the sixth floor; let\'s take the lift.','在第六层——我们乘电梯吧.','...the sixth round of the World Cup.','…世界杯足球赛的第6轮比赛。'}

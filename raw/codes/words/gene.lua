@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gene"]={"gene","[dʒiːn]","[dʒin]","n.基因",'n.基因','The position that a given gene occupies on a chromosome.','基因座在一条染色体上某种给定基因所占的位置','In addition to gene, intelligence also depends on an adequate diet, a good education and a decent home environment.','除了遗传基因外，智力的高低还取决于良好的营养，良好的教育和良好的家庭环境。'}

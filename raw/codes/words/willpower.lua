@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["willpower"]={"willpower","['wɪlpaʊə]","['wɪl,paʊɚ]","n.意志力",'n.意志力','He hasn\'t the willpower to stop eating so much.','他缺乏意志力, 克制不住自己的贪吃。','He came in for help after his attempts to stop smoking by willpower alone failed.','他仅靠毅力戒烟失败后到这里来求助。'}

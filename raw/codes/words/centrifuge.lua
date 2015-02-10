@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["centrifuge"]={"centrifuge","['sentrɪfjuːdʒ]","['sɛntrɪfjudʒ]","n.离心分离机",'n.离心分离机','They are learning how to operate the centrifuge.','他们在学习怎么操作离心机。','The hydraulic pressure here is very low that we need to install a centrifuge pump.','我们这个地方的水压太低，需要安装一个离心泵了。'}

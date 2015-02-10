@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lamp"]={"lamp","[læmp]","[læmp]","n.灯",'n.灯,发光或反射光的天体,灵光','The lamp is full of gaseous nitrogen.','灯里充满了气体氮。','The lamp needs a 100-watt bulb.','那盏灯需要100瓦的灯泡。'}

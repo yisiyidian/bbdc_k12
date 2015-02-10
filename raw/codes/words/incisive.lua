@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["incisive"]={"incisive","[ɪn'saɪsɪv]","[ɪn'saɪsɪv]","adj.敏锐的",'adj.敏锐的,机敏的,激烈的','His presentation was clear and incisive.','他的报告清晰而深刻。','He is not the most incisive interviewer.','他不是最尖锐的采访者。'}

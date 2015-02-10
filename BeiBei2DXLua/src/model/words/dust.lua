@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dust"]={"dust","[dʌst]","[dʌst]","n.灰尘",'n.灰尘,无价值之物,屈辱状态|||vt.拂去灰尘,撒上粉状物体,大胜|||vi.擦拭灰尘','She moistened a tissue and gently wiped the dust off the necklace.','她沾湿了一块纸巾，轻轻擦去项链上的灰尘。','In the last 30 years many cherished values have bitten the dust.','过去30年里许多值得珍惜的价值观已经不复存在。'}

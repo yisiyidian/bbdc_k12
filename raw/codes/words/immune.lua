@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["immune"]={"immune","[ɪ'mjuːn]","[ɪ'mjʊn]","adj.免疫的",'adj.免除的,免疫的|||n.免疫者','The criminal was told he would be immune if he helped the police.','这个罪犯被告知，如果他协助警方就可以免于被起诉。','He seems to be immune to criticism.','他似乎不受批评的影响。'}

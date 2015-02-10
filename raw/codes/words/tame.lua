@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tame"]={"tame","[teɪm]","[teɪm]","adj.温顺的",'adj.驯服的,柔顺的,乏味的|||vt.驯养,使...驯服|||vi.变得驯服','Many kinds of squirrels are easy to tame.','很多种类的松鼠都很容易驯养。','She is too tame.','她太温顺了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oblique"]={"oblique","[ə'bliːk]","[ə'blik]","adj.间接的",'adj.间接的,斜的，拐弯抹角的，不光明正大的|||n.倾斜物|||[解]斜肌|||v.倾斜','He made oblique references to her lack of experience.','他拐弯抹角地说她缺乏经验。','It was an oblique reference to his mother.','这是对他母亲的隐射。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lavish"]={"lavish","['lævɪʃ]","['lævɪʃ]","adj.大方的",'adj.大方的,丰富的,浪费的|||vt.浪费,慷慨给予','The country girl was not used to their lavish mode of living.','这个乡下姑娘不习惯他们奢侈的生活方式。','My mother often lavishes us with attention.','我妈妈经常对我们关心得太多。'}

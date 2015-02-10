@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mope"]={"mope","[məʊp]","[mop]","vi.抑郁不乐",'vi.抑郁不乐,闲逛，没精打采|||n.闷闷不乐的人','Stop ||moping||!','别那麽垂头丧气的!','He\'s been ||moping|| around (the house) all day.','他整天都在（房子）周围瞎转悠.'}

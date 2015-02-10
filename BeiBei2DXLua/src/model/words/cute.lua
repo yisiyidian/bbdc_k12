@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cute"]={"cute","[kjuːt]","[kjʊt]","adj.可爱的",'adj.可爱的,聪明的,俐伶的|||n.智取敌方的策略/手段,灵巧','Isn\'t she a cute baby!','她是个多么逗人喜爱的孩子啊！','Don\'t be so cute!','别那么鬼！'}

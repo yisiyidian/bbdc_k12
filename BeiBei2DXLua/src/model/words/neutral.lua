@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["neutral"]={"neutral","['njuːtr(ə)l]","['nʊtrəl]","adj.中立的",'adj.中立的,中性的|||n.中立者,空挡的,素净色','A neutral tie can be worn with a shirt of any colour.','暗灰色的领带配什麽颜色的衬衣都行。','He has a rather neutral character.','他品性平平。'}

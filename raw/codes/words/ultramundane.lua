@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ultramundane"]={"ultramundane","[,ʌltrə'mʌndeɪn]","[,ʌltrə'mʌnden]","adj.超俗的",'adj.超俗的,世界之外的','ultramundane means Existing outside the known world, the solar system, or the universe','超出太阳系以外的，不可知的','Sun ultramundane man','阳光超人'}

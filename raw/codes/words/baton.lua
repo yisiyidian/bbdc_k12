@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["baton"]={"baton","[bə'tɑ:n]","[bə'tɑn]","n.指挥棒",'n.指挥棒,接力棒','The conductor waved his baton, and the band started up.','指挥挥动指挥棒，乐队开始演奏起来。','A conductor\'s baton.','指挥棒乐队指挥用的小棒'}

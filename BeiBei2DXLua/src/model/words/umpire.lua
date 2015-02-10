@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["umpire"]={"umpire","['ʌmpaɪə]","['ʌmpaɪɚ]","n.裁判员",'n.裁判员,仲裁人|||vt.为...裁决/仲裁|||vi.裁判，仲裁','The umpire gave the batsman out (leg before wicket).','裁判裁定击球员（用腿截球违例）出局.','The tennis umpire wore an eye-shade.','那网球裁判戴著遮光帽檐。'}

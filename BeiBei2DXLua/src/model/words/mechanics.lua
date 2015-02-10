@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mechanics"]={"mechanics","[mɪ'kænɪks]","[mə'kænɪks]","n.力学",'n.力学,机械学,(技术的,操作的)过程,手法','He failed in the examination of mechanics.','他没通过力学考试。','He has natural ability, but has yet to learn the mechanics of his chosen work.','他很有天分，但对选择的工作该怎样处理，他仍得好好学习。'}

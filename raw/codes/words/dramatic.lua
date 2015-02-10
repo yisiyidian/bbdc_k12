@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dramatic"]={"dramatic","[drə'mætɪk]","[drə'mætɪk]","adj.戏剧性的",'adj.戏剧性的,引人注目的,给人深刻印象的','The government is alarmed by the dramatic increase in violent crime.','政府对暴力犯罪案件的急剧增加感到恐慌。','After a dramatic pause, the lawyer finished her summation.','在戏剧性的沉默之后，这位律师作完了她的总述'}

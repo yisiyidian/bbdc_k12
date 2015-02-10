@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["visage"]={"visage","['vɪzɪdʒ]","[ˈvɪzɪdʒ]","n.脸",'n.脸,面貌,容貌','She is always wimpled that no man can see her visage.','她总是用包头巾围包著，没有任何人能看见她的容貌。','A joyfull heart makes a blooming visage.','人逢喜事精神爽。'}

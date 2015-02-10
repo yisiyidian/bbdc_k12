@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impious"]={"impious","['ɪmpɪəs; ɪm'paɪəs]","['ɪmpɪəs]","adj.不敬的",'adj.不敬的,不孝的','Will an impious Christian be punished by God?','不虔诚的基督徒会受上帝惩罚吗？','I can\'t do a man who is impious toward my parents.','我不能做一个对父母不孝的人。'}

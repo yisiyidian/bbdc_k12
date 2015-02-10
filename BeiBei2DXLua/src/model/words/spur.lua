@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spur"]={"spur","[spɜː]","[spɝ]","n.马刺",'n.马刺,刺激,鞭策,支脉,(公路或铁路的)支线,|||vt.以马刺策(马)前进,刺激,激励,给(马)装马刺','She went to London on the spur of the moment.','她一时兴起就到伦敦去了。','International competition was a spur to modernization.','国际竞争是实现现代化的动力。'}

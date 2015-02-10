@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["malediction"]={"malediction","[,mælɪ'dɪkʃ(ə)n]","[ ,mæli'dikʃən ]","n.诅咒",'n.诅咒，咒骂，诽谤','He was answered with a torrent of malediction.','他得到的回答是滔滔不绝的诅咒。','In ancient China, being attacked by thunder is quiet an evil malediction.','在中国古代，被雷劈是个相当恶毒的诅咒。'}

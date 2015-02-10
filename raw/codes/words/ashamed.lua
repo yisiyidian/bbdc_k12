@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ashamed"]={"ashamed","[ə'ʃeɪmd]","[ə'ʃemd]","adj.感到惭愧",'adj.感到惭愧,感到害臊,因为羞耻或勉强作某事','He is ashamed for his former dishonorable action.','他对他以前不光彩的行为感到羞愧。','As for you, you ought to be ashamed of yourself.','至於你, 你应该感到惭愧.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["joyful"]={"joyful","['dʒɒɪfʊl; -f(ə)l]","['dʒɔɪfl]","adj.欢喜的",'adj.欢喜的,高兴的,令人高兴的','The meeting between the two families was a joyful one.','这两家人的聚会十分愉快.','She was joyful of her good result of the scientific experiments.','她为自己的科学实验取得好成果而高兴.'}

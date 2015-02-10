@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pope"]={"pope","[pəʊp]","[pop]","n.罗马教皇",'n.罗马教皇','The Augustan age of English literature includes the writers Dryden, Swift and ||Pope||.','在英国文学的全盛时期 有德莱顿, 斯威夫特和蒲柏等文豪.','The ||Pope|| has no temporal power in modern society.','教皇在当代社会没有世俗方面的权利。'}

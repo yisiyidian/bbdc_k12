@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vigil"]={"vigil","['vɪdʒɪl]","['vɪdʒɪl]","n.值夜(监视)",'n.值夜(监视)','The detectives resumed their vigil at the house.','侦探们又开始在那楝房子警戒了。','One who keeps vigil, as at a sick person\'s bedside.','护理者如在病人身旁等看护的人'}

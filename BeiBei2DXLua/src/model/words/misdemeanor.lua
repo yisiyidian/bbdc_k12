@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["misdemeanor"]={"misdemeanor","[,mɪsdɪ'minɚ]","[ ,misdi'mi:nə ]","n.轻罪",'n.轻罪，不正当的行为','Under state law, it is a misdemeanor to possess a firearm on school premises.','根据该州法律，在校园里拥有枪械是一种轻罪。','Paul appeared before the faculty to account for his various misdemeanors.','保罗在全体教职员面前解释了他的种种不端行为。'}

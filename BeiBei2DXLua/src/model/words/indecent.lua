@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indecent"]={"indecent","[ɪn'diːs(ə)nt]","[ɪn'disnt]","adj.下流的",'adj.下流的,不妥当的','Something, such as a word, an act, or an expression, that is indecent or lewd.','猥亵的话不正经或淫猥的事物，如话语、行动或表情','It is indecent to say that.','说那样的话是很不礼貌的。'}

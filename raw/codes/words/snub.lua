@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["snub"]={"snub","[snʌb]","[snʌb]","v.冷落",'v.冷落,斥责，制止|||n.怠慢|||adj.(鼻子等)短平而上翘的','a snub nose.','短平的鼻子','The second snub settled his hash.','第二次碰壁使他不敢再找麻烦了。'}

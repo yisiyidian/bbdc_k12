@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["appreciation"]={"appreciation","[əpriːʃɪ'eɪʃ(ə)n; -sɪ-]","[ə,priʃɪ'eʃən]","n.赏识",'n.赏识,鉴识,感激','Mary was frustrated by the lack of appreciation shown of her work.','玛丽因工作得不到赏识而灰心丧气.','She shows little appreciation of good music.','她对于好音乐几乎没有欣赏能力。'}

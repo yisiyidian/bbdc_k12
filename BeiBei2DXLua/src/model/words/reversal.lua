@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reversal"]={"reversal","[rɪ'vɜːs(ə)l]","[rɪ'vɝsl]","n.翻转",'n.翻转,倒转,反转','A reversal, as in policy; an about-face.','向后转转向反面, 如在政策上; 大转变','A sharp reversal of direction, as of a ball carrier in football.','急转向相反方向急转, 如橄榄球比赛中的持球球员的反切动作'}

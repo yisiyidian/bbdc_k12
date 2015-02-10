@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["misconduct"]={"misconduct","[mɪs'kɒndʌkt]","[,mɪs'kɑndʌkt]","n.处理不当(胡作非为)",'n.处理不当(胡作非为)|||vt处理不当(胡作非为)','A mark made against one\'s record for a fault or for misconduct.','记过因某人的过失或行为不检点而在其档案中作的标记','||Misconduct|| that cheapened a high office.','身居要职却做出的有损威信的错误行为'}

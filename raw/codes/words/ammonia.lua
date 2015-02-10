@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ammonia"]={"ammonia","[ə'məʊnɪə]","[ə'monɪə]","n.氨水",'n.氨水,阿摩尼亚','German chemist. He won a1918 Nobel Prize for the synthetic production of ammonia.','哈伯，弗里兹1868－1934德国化学家，他因化学合成氨而获1918年诺贝尔奖','||Ammonia||, coal tar and coke are all by-products obtained in the manufacture of coal gas.','氨气、煤焦油、焦煤都是煤气生产过程中的副产品.'}

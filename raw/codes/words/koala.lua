@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["koala"]={"koala","[kəʊ'ɑːlə]","[ko'ɑlə]","n.考拉",'n.考拉，树袋熊','Any of various other animals, such as the koala, that resemble a true bear.','似熊的动物一种类似熊的其他熊类动物，如树袋熊','koala','n. 无尾熊,考拉'}

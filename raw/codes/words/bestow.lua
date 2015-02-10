@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bestow"]={"bestow","[bɪ'stəʊ]","[bɪ'sto]","vt.授予",'vt.授予,适用,利用','He did not bestow one thought on his dead father.','他想都没有想过他过世的父亲。','Time spent in study is well bestowed.','把时间用于学习是值得的。'}

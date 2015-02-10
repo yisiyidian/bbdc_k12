@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compulsion"]={"compulsion","[kəm'pʌlʃ(ə)n]","[kəm'pʌlʃən]","n.强迫",'n.强迫,强制，难以抗拒的冲动','The compulsion felt to meet such obligation.','一种想负起这种义务的感情','I will pay nothing under compulsion.','在强迫之下我分文也不愿付。'}

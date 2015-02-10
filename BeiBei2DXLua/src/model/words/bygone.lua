@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bygone"]={"bygone","['baɪgɒn]","['baɪɡɔn]","adj.过去的",'adj.过去的，过时的|||n.过去的事','His talk was evocative of the bygone days.','他的谈话令人回忆起往昔的时日。','The two boys agreed to let bygone be bygone and make friend again.','两个孩子决定捐弃前嫌，重新做朋友。'}

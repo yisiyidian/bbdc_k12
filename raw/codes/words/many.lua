@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["many"]={"many","['menɪ]","['mɛni]","n.许多",'n.许多人,许多|||adj.许多的|||pron.许多人或物','||Many|| languages have Latin as their base.','许多语言都以拉丁语为基础。','||Many|| people believe that prison isn\'t a cure for crime.','许多人都相信监禁解决不了犯罪问题。'}

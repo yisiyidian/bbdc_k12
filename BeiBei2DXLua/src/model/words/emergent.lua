@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emergent"]={"emergent","[ɪ'mɜːdʒ(ə)nt]","[ɪ'mɝdʒənt]","adj.出现的",'adj.出现的,紧急的，新兴的','emergent spring shoots; an emergent political leader.','春芽；一位新出现的政治领导者','emergent nations.','新兴的国家'}

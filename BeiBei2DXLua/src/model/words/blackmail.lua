@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blackmail"]={"blackmail","['blækmeɪl]","['blækmel]","n.勒索",'n.勒索|||vt.勒索，讹诈','It\'s a clear case of blackmail!','这显然是敲诈!','He can be ruthless in getting what he wants, but I believe he would stop short of blackmail.','他这个人为达到目的是心黑手辣的, 但我认为他还不至於使用敲诈手段.'}

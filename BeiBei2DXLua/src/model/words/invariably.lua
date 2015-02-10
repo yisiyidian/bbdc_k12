@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["invariably"]={"invariably","[ɪn'veərɪəblɪ]","[ɪn'vɛrɪəbli]","adv.不变化地",'adv.不变化地,一定不变地,常常地','||Invariably|| I take a nap after lunch.','午饭后，我总是睡个午觉。','A man who moralizes is usually a hypocrite, and a woman who moralizes is invariably plain.','说教的男人通常是个伪善者，而说教的女人则必定是丑女。'}

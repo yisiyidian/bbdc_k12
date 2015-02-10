@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mouthful"]={"mouthful","['maʊθfʊl; -f(ə)l]","['maʊθ'fʊl]","n.满口",'n.满口,一口','You said a mouthful!','你说得对','I\'m so full I couldn\'t eat another mouthful.','＂我吃得太饱了，一口也不能多吃了。＂'}

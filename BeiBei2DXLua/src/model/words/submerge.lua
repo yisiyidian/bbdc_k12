@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["submerge"]={"submerge","[səb'mɜːdʒ]","[səb'mɝdʒ]","vt.使浸没",'vt.使浸没,潜入水中,覆盖|||vi.浸没','Such feelings tend to remain submerge beneath a mask of social politeness.','在社交礼貌的掩盖下，这样的情感往往不会显露出来。','Her happiness at seeing him submerged her former worries.','她看到他非常高兴，顿时完全忘记了先前的烦恼。'}

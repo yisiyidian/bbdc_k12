@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["carve"]={"carve","[kɑːv]","[kɑrv]","vt.&vi.雕刻",'vt.&vi.雕刻,切割','The statue was carved out of marble.','这座雕像是用大理石雕刻的。','He carved me some very nice pieces of chicken.','他为我切了几块很好的鸡肉。'}

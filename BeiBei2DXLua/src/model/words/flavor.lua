@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flavor"]={"flavor","['fleɪvə]","['flevɚ]","n.滋味",'n.滋味,香料,风格|||vt.加味于','This bread has plenty of flavor.','这面包味道真好。','a flavor of smoke in bacon.','熏肉的烟味'}

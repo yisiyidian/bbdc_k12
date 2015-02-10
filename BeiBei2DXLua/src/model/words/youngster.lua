@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["youngster"]={"youngster","['jʌŋstə]","['jʌŋstɚ]","n.年青人",'n.年青人,少年，小伙子，儿童，幼小动物','Be youngster, we sit modestly at the back, never daring to speak.','我们是些年轻人，都谦恭地坐在後面，始终不敢发言。','It is hard for an old man to work as long as a youngster.','老年人要工作得和年轻伙子一样久是困难的。'}

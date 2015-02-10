@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ok"]={"ok","[o'ke]","[ 'əu'kei, ,əu'kei, 'əukei ]","adj.好",'adj.好,不错,可以|||adv.好,不错,可以','Cameras ready?|| OK||, shoot!','摄影机准备好了吗? 好, 开拍!','Listen to me just once,|| OK||?','就听我一次吧，好吗?'}

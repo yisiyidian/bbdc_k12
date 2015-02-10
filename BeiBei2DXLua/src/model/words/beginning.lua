@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["beginning"]={"beginning","[bɪ'gɪnɪŋ]","[bɪ'ɡɪnɪŋ]","n.开始",'n.开始,开端，起源，早期|||adj.刚开始的|||动词begin的现在分词','I\'ve read the book from beginning to end.','我把这本书从头到尾看完了。','the beginning of the war.','战争初期'}

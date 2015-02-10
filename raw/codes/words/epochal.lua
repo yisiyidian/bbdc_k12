@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["epochal"]={"epochal","['ɛpəkl]","[ 'epɔkəl ]","adj.新纪元的",'adj.新纪元的,划时代的','||Epochal|| decisions made by Roosevelt and Churchill.','罗斯福和邱吉尔做出的有重大意义的决定','epochal decisions made by Roosevelt and Churchill.','罗斯福和邱吉尔做出的有重大意义的决定'}

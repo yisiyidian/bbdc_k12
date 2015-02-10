@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["calibration"]={"calibration","[kælɪ'breɪʃ(ə)n]","[,kælɪ'breʃən]","n.刻度",'n.刻度,校准，','There is a calibration error in your experiment.','在你的实验里有一个校准误差。','Look at the calibration carefully.','认真看刻度。'}

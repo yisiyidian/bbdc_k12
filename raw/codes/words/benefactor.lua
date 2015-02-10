@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["benefactor"]={"benefactor","['benɪfæktə]","['bɛnɪfæktɚ]","n.恩人",'n.恩人,捐助者,赠送者','We showed high respect to benefactors.','我们对捐助者表达了崇高的敬意。','The chieftain of that country is disguised as a benefactor this time.','那个国家的首领这一次伪装出一副施恩者的姿态。'}

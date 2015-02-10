@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rent"]={"rent","[rent]","[rɛnt]","v.租",'n.租金|||v.租|||vi.出租|||vt.出租,租用','The lessor can evict the lessee for failure to pay rent.','出租人可驱逐不付租金的承租人。','They let the house to me at a rent of 100 dollars a month.','他们把房子租给我，每月租金一百美元。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["acquire"]={"acquire","[ə'kwaɪə]","[ə'kwaɪr]","vt.占有",'vt.占有,获得,取得,学到','How did he acquire his wealth?','他的财富是怎样得来的？','We admired his intellectual providence to acquire vast stores of dry information.','我们钦佩他收集大量原始资料的远见卓识。'}

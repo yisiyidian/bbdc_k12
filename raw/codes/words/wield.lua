@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wield"]={"wield","[wiːld]","[wild]","vt.行使",'vt.行使，运用，支配，挥舞，使用(武器等)','A man who wields an ax.','用斧人，伐木者使用斧子的人','Easily wielded or managed.','易使用的，易管理的'}

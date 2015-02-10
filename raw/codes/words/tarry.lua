@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tarry"]={"tarry","['tɑːrɪ]","['tæri]","vi.耽搁",'vi.耽搁,等候|||n.逗留，暂住|||adj.用柏油覆盖的','He ||tarried|| for a few days in my house.','他在我家里小住了几天。','He ||tarried|| for a few hours in the airport because of the bad weather.','因为天气原因，他在飞机场耽搁了很长时间。'}

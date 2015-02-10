@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["movement"]={"movement","['muːvm(ə)nt]","['muvmənt]","n.活动",'n.活动,运动,动作,移动','An electric current in metal is caused by the movement of electrons.','金属内电流是由电子运动引起的。','The vitality of the movement is threatened.','这个运动的生命力岌岌可危。'}

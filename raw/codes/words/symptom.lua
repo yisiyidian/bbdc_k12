@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["symptom"]={"symptom","['sɪm(p)təm]","['sɪmptəm]","n.症状",'n.症状,征兆','The abnormal, spasmodic swallowing of air, especially as a symptom of hysteria.','吞气症异常的痉挛性吞气，特指歇斯底里的症状','An additional condition or symptom in the course of a disease, not necessarily connected with the disease.','副现象在一种疾病中出现的附带条件或症状，与该病无必要关联'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prodigious"]={"prodigious","[prə'dɪdʒəs]","[prə'dɪdʒəs]","adj.巨大的",'adj.巨大的,奇异的|||n.奇迹','That boxer is a prodigious feed.','那个拳击家是个大肚汉。','We are all overwhelmed by his prodigious memory.','我们都被他那惊人的记忆力折服了。'}

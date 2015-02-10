@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nose"]={"nose","[nəʊz]","[noz]","n.鼻子",'n.鼻子,突出部分,嗅觉|||v.嗅，嗅到','The dog nosed out a rat.','那只狗闻到了老鼠的气味。','That man can nose out a news story anywhere.','那个人在任何地方都能搜寻出新闻。'}

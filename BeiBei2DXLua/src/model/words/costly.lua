@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["costly"]={"costly","['kɒs(t)lɪ]","['kɔstli]","adj.昂贵的",'adj.昂贵的，代价高的','The castle will undergo extensive and costly renovations.','那城堡要用钜资进行全面整修.','The long and costly strike proved to be the last nail in the company\'s coffin.','长期罢工损失巨大致使该公司一蹶不振.'}

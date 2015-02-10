@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tertiary"]={"tertiary","['tɜːʃ(ə)rɪ]","['tɝʃɪ'ɛri]","adj.第三的",'adj.第三的,第三位的,第三世纪的|||n.臂翼,第三重音,第三会员','||Tertiary|| conturies are friendly to China.','第三世界国家对中国很友好。','He must have come to know those philosophers through secondary or tertiary sources.','他一定是通过第二手或第三手资料了解那些哲学家的。'}

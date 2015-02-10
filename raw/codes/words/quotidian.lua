@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quotidian"]={"quotidian","[kwɒ'tɪdɪən; kwəʊ-]","[kwo'tɪdɪən]","adj.每日的",'adj.每日的,平凡的|||n.司空见惯的事，[医]日发疟','There\'s nothing quite like a real train conductor to add color to a quotidian commute.','没有什么能象一位现实中的火车售票员那样，为日常的上下班交通线增加些色彩。','She finds her joy in the quotidian events of married life.','她在婚姻生活的平凡小事中找到了快乐。'}

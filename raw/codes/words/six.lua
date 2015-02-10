@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["six"]={"six","[sɪks]","[sɪks]","n.六",'n.六；六个；六岁；六点num.六；六个','If you consider that she has only been studying English for six months, she speaks it very well.','你如果考虑到她学英语才不过六个月，那么她英语讲得的确不错了。','The tree is said to be six hundred years old.','这树约莫已有600年树龄了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["weekend"]={"weekend","[wiːk'end; 'wiː-]","['wikɛnd]","n.周末",'n.周末|||vi.过周末|||adj.周末的,兼职的','He invited us to his country estate for a weekend shoot.','他邀请我们到他乡下的庄园去过一次打猎的周末。','What are your plans for the weekend?','你周末计划做什么？'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["science"]={"science","['saɪəns]","['saɪəns]","n.科学",'n.科学','He started to study ecology and decided to devote his whole life to the science.','他开始研究生态学，并决心将他的一生献身于这门科学。','She dedicated her life to science.','她毕生致力于科学。'}

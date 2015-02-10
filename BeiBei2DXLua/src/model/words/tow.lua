@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tow"]={"tow","[təʊ]","[to]","n.拖",'n.拖,拖曳所用之绳,麻的粗纤维|||v.拖,曳','My car\'s broken down; will you give me a tow?','我的车抛锚了，能用你的车给我拖一拖吗？','We have to tow that car to the nearest garage.','我们不得不把汽车拖到最近的修车厂。'}

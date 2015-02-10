@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amenity"]={"amenity","[ə'miːnɪtɪ; -'men-]","[ə'mɛnəti]","n.适意",'n.适意,温和,礼仪,怡人,便利设施','He immediately noticed the amenity of his new surroundings.','他立刻觉察到了新环境的宜人之处.','A sauna in the hotel would be a useful amenity.','旅馆中的芬兰蒸汽浴室倒是个有益的好设施.'}

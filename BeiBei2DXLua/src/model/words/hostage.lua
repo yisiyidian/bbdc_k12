@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hostage"]={"hostage","['hɒstɪdʒ]","['hɑstɪdʒ]","n.人质",'n.人质','The terrorists are holding three men hostage.','恐怖分子把三个人扣为人质.','The hostage had a rifle levelled at his head.','一枝步枪瞄准著人质的头.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lengthy"]={"lengthy","['leŋθɪ; 'leŋkθɪ]","['lɛŋθi]","adj.冗长的",'adj.冗长的,漫长的','He was wont to give lengthy speeches.','他惯於做长篇大论的演说.','I was subjected to a lengthy inquisition into the state of my marriage and the size of my bank balance.','有关方面就我的婚姻状况以及银行存款余额对我进行了详细的调查.'}

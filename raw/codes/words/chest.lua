@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chest"]={"chest","[tʃest]","[tʃɛst]","n.胸",'n.胸,大箱子,金库,资金,一箱,密封室,衣橱','He dragged the heavy chest across the floor.','他在地板上拉著沉重的箱子。','The general pinned the medal on the soldier\'s chest.','将军把奖章别在这位士兵的胸前。'}

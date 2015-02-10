@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cocaine"]={"cocaine","[kə(ʊ)'keɪn]","[ko'ken]","n.可卡因",'n.可卡因','He was addicted to cocaine.','他吸可卡因上瘾','||Cocaine|| is a anaesthetic.','可卡因是一种麻醉药品。'}

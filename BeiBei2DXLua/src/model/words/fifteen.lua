@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fifteen"]={"fifteen","[fɪf'tiːn; 'fɪftiːn]","[,fɪf'tin]","num.十五",'num.十五|||pron.十五(个,只...)|||adj.十五的，十五个的','He has fifteen workers in his employ.','他雇佣的工人有十五名。','||Fifteen|| separate republics comprised the Soviet Union.','苏联由十五个加盟共和国组成。'}

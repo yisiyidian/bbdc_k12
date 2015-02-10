@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oath"]={"oath","[əʊθ]","[oθ]","n.誓言",'n.誓言,誓约,咒骂语','The judge reminded the witness that she was under oath.','法官提醒那个证人她已经宣过誓了。','Repeat the oath after me.','请跟着我宣誓。'}

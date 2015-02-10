@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eyewitness"]={"eyewitness","['aɪwɪtnɪs]","['aɪwɪtnəs]","n.目击者",'n.目击者,见证人','An authentic account by an eyewitness.','一份目击者的真实证言','Just one eyewitness\'s account has come down to us','只有一位目击者留下的叙述使我们得知当时的情景'}

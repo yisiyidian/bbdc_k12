@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["maelstrom"]={"maelstrom","['melstrɑm]","[ 'meilstrɔm, -strəum ]","n.大漩涡",'n.大漩涡,祸乱','The canoe was tossed about in the maelstrom.','独木舟在漩涡之中摇晃打转。','Inside, she was a maelstrom of churning emotions.','她心中的情感似波涛汹涌，起伏不定。'}

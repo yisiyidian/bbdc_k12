@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["smell"]={"smell","[smel]","[smɛl]","vt.闻",'n.味道,气味,嗅|||vt.闻,探出,发臭|||vi.闻,发臭','One smell of the rotten meat was enough!','这腐烂的肉闻一下就够受的了。','I ||smelt|| a rat when he started being so helpful!','他主动帮起忙来，我怀疑其中另有文章！'}

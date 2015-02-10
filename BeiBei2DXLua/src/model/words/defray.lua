@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["defray"]={"defray","[dɪ'freɪ]","[dɪ'fre]","v.支付",'v.支付,支出','After defraying all the expenses, they were able to lay aside fifteen yuan each month.','在支付所有的开支以后，他们每月能积蓄十五元。','The government has committed billions toward defraying the costs of the war.','政府已承诺拨款数十亿支付战争的开支。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["implacable"]={"implacable","[ɪm'plækəb(ə)l]","[ɪm'plækəbl]","adj.难宽恕的",'adj.难宽恕的,难和解的,执拗的','Sacrifice, patience, understanding and implacable purpose may be our lots for years to come.','接下来的几年，我们需要牺牲、耐心、理解和不达目的誓不罢休的决心。','There is implacable hatred between the two nations.','两国之间有无法消除的仇恨。'}

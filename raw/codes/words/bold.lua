@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bold"]={"bold","[bəʊld]","[bold]","adj.大胆的",'adj.大胆的,粗体的,醒目的，无礼的,陡峭的','You are so bold that you never do something on second thought.','你太鲁莽, 从来不知道深思熟虑后做事。','He is a bold thinker, with lots of original ideas.','他是个敢于思考的人，富有创新观点。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["machination"]={"machination","[,mæʃɪ'neɪʃn]","[ˌmækəˈneʃən, ˌmæʃ-]","n.阴谋",'n.阴谋，图谋','They are attempting to counter enemy\'s machination .','他们在试图反击敌人的阴谋。','to attempt to counter one\'s machination','企图对抗某人的阴谋'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bird"]={"bird","[bɜːd]","[bɝd]","n.鸟",'n.鸟,家禽,陶土飞靶,伙伴|||vi.观察或辨认鸟','The crow is a bird of ill omen.','乌鸦是不祥的预兆。','I woke up and was greeted by bird song.','我一觉醒来，鸟鸣之声不绝于耳。'}

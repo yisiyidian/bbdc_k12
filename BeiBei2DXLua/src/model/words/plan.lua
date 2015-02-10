@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plan"]={"plan","[plæn]","[plæn]","n.计划",'n.计划,策略,方法|||vt.计划,设计,打算|||vi.打算','As far as I am concerned, I\'m not against your plan.','就我而言，我并不反对你的计划。','What is your plan?','你的计划是什么？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ostentation"]={"ostentation","[,ɒsten'teɪʃ(ə)n]","['ɑstɛn'teʃən]","n.卖弄",'n.卖弄，夸耀，摆阔，讲排场','Exhibiting no pretensions, boastfulness, or ostentation; modest.','不装腔作势的不装腔作势的，不夸耀的；不铺张招摇的；谦逊','You\'d better not pursuit ostentation, be practical','你最好不要追求虚有其表了，实际些吧'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intermediate"]={"intermediate","[,ɪntə'miːdɪət]","[,ɪntɚ'midɪət]","adj.中级的",'adj.中级的,中间的|||n.中间体,媒介物,调解人|||vi.调解,干涉','American law has taken an intermediate position.','美国法律则介乎这两种体系之间.','Gray is intermediate between black and white.','灰色介于黑色和白色之间.'}

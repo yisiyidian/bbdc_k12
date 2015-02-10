@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sylvan"]={"sylvan","['sɪlv(ə)n]","['sɪlvən]","adj.多林木的",'adj.多林木的,森林的，居住在森林中的|||n.生活在森林里的人或物|||=silvan','The tourists are sitting on a sylvan glade.','游客们坐在森林中的一块空地上。','Venerable oaks forms a sylvan archway.','古老的栎树形成一条林荫拱道。'}

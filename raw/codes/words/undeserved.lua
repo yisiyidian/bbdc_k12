@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["undeserved"]={"undeserved","[ʌndɪ'zɜːvd]","[ ,ʌndi'zə:vd ]","adj.不值得的",'adj.不值得的,不相称的,不当的','Jim\'s treatment was harsh and undeserved.','吉姆受到了不应有的苛刻待遇。','My reputation as a healer is undeserved.','我能治百病的传闻是名不副实的.'}

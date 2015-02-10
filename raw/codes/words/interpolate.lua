@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interpolate"]={"interpolate","[ɪn'tɜːpəleɪt]","[ɪn'tɝpəlet]","vt.加入(额外的事)",'vt.加入(额外的事),窜改，插话','Close inspection showed that many lines had been interpolated into the manuscript at a later date.','经仔细检查，发现不少字句是后来被加入手稿的。','Williams interpolated much spurious matter.','威廉斯插入了许多伪造的素材。'}

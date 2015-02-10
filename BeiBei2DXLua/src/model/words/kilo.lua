@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kilo"]={"kilo","['kiːləʊ]","['kilo]","pref.表示“千”",'pref.表示“千”|||abbr.千克，公斤(=kilogram/kilogramme)','These apples are selling at 40 pence a kilo.','这些苹果售价每公斤40便士.','He\'d lost ten kilos in weight.','他的体重已经减了10公斤。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["halt"]={"halt","[hɔːlt]","[hɔlt]","adj.瘸的",'adj.瘸的|||n.停止|||vi.跛行,犹豫,畏缩,停止|||vt.使...停止','The car screeched to a halt with grinding brakes.','汽车停住时发出刺耳的刹车声。','The strike brought industry grinding to a halt.','由於罢工生产逐渐停顿下来。'}

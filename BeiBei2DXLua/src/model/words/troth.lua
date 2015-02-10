@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["troth"]={"troth","[trəʊθ; trɒθ]","[trɔθ]","n.诚实",'n.诚实，允诺，婚约|||vt.许配，同…订婚','They plighted their troth for the rest of their days.','他们俩盟誓结为终身伴侣。','She has no intention of plighting her troth at the moment.','目前她尚无意于婚嫁。'}

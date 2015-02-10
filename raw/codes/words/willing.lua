@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["willing"]={"willing","['wɪlɪŋ]","['wɪlɪŋ]","adj.愿意的",'adj.愿意的,心甘情愿的','I don\'t know whether he is willing to come.','我不知道他是否愿意来。','The spirit is willing but the flesh is weak.','心有余而力不足。'}

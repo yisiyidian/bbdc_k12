@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ascribe"]={"ascribe","[ə'skraɪb]","[ə'skraɪb]","v.归因于",'v.归因于,归咎于','He ascribed his failure to bad luck.','他把失败归于运气不佳。','He ascribes his success to good luck.','他把他的成功归功于幸运。'}

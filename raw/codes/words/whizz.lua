@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whizz"]={"whizz","[wɪz]","[ hwiz ]","vi.呼啸",'vi.发飕飕声，飕飕地飞驰，呼啸|||vt.使发飕飕声|||n.飕飕声，飕飕的飞驰，奇才|||=whiz','The car is whizzing along the motorway.','那车在高速公路上飞速行驶。','He heard whizz of a bullet near his ear.','他听到耳边有子弹的飕飕声。'}

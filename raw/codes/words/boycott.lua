@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["boycott"]={"boycott","['bɒɪkɒt]","['bɔɪkɑt]","vt.抵制（贸易）",'vt.抵制（贸易），拒绝参加','boycott foreign imports','抵制外国货物进口','They\'re boycotting the shop because the people there are on strike.','他们抵制那家商店, 因为那里的店员在罢工。'}

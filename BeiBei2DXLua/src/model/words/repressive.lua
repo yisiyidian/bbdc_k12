@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["repressive"]={"repressive","[rɪ'presɪv]","[rɪ'prɛsɪv]","adj.压抑的",'adj.压抑的,抑制的,镇压的','The people are held down by a vicious and repressive military regime.','人民受著凶恶而专制的军政权的压迫.','a repressive dictatorship.','强制性的独裁政府'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aberrant"]={"aberrant","[ə'ber(ə)nt]","[æ'bɛrənt]","adj.脱离正道的",'adj.脱离正道的,脱离常轨的,变体的，畸变的','Ian\'s rages and aberrant behaviour worsened.','伊恩的怒气越来越大，反常行为也愈发恶劣。','I saw that the insects and spiders were displaying the same kind of aberrant behavior.','我看到昆虫和蜘蛛正在表现出同样的反常行为。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["integrity"]={"integrity","[ɪn'tegrɪtɪ]","[ɪn'tɛɡrəti]","n.完整",'n.诚实,正直,完整,完善','Our integrity as a nation is threatened by these separatist forces.','我们国家的完整受到了这些分裂主义势力的威胁。','He is a man of complete integrity.','他是一个刚正不阿的人。'}

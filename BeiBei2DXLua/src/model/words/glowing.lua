@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glowing"]={"glowing","['ɡləʊɪŋ]","[ 'ɡləuiŋ ]","adj.白热的",'adj.白热的,灼热的,通红的','She was positively glowing with happiness.','她满脸幸福.','Their new musical opened to glowing reviews.','他们的新音乐剧受到热烈好评.'}

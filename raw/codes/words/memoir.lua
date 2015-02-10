@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["memoir"]={"memoir","['memwɑː]","['mɛmwɑr]","n.传记",'n.传记,实录|||(复数）memoirs:回忆录，自传，学术论文集','At the end of his career in politics, he retired and wrote his memoirs.','他的从政生涯一结束便隐退写起了自己的回忆录。','She wrote a memoir of her stay in France.','她写了一篇旅法记事录.'}

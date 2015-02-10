@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["company"]={"company","['kʌmp(ə)nɪ]","['kʌmpəni]","n.公司",'n.同伴,客人,一群,连队,公司|||vt.陪伴|||vi.联合','Why don\'t you stay here and keep Emma company?','你为什么不留在这儿陪埃玛做伴？','I hate going out alone: I take my daughter for company.','我不愿独自一人出门，带女儿作个伴。'}

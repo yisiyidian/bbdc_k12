@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["heterodox"]={"heterodox","['het(ə)rə(ʊ)dɒks]","['hɛtərə'dɑks]","adj.异端的",'adj.异端的,非正统的','His opinions have always been distinctly heterodox.','他的观点时常带有明显的异端色彩。','His opinions have always been distinctly heterodox.','他的观点时常带有明显的异端色彩。'}

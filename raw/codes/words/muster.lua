@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["muster"]={"muster","['mʌstə]","['mʌstɚ]","v.集合",'v.集合，收集，鼓起，激起|||n.集合，检阅，集合人员，点名册','I had to muster my courage up to ask him that question.','我必须鼓起勇气向他问那个问题。','He mustered out when the war ended.','战争结束时他退伍了。'}

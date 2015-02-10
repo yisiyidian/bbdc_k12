@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tadpole"]={"tadpole","['tædpəʊl]","['tæd'pol]","n.蝌蚪",'n.蝌蚪','||Tadpoles|| are the infancy form of frogs.','蝌蚪是青蛙的幼年形态。','A tadpole has a tail.','蝌蚪有尾巴。'}

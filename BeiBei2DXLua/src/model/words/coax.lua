@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coax"]={"coax","[kəʊks]","[koks]","v.哄",'v.哄,诱骗,灵巧慢慢地做','He coaxed her into letting him take her to the cinema.','他哄她同意带她去看电影。','She coaxed him out of his bad temper.','她循循善诱地劝他改掉坏脾气。'}

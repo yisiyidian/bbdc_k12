@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["banal"]={"banal","[bə'nɑːl; -'næl]","[bə'nɑl]","adj.陈腐的",'adj.陈腐的,平庸的','The text is banal.','这篇文章乏味得很。','Bland, banal music tinkled discreetly from hidden loudspeakers.','隐藏的喇叭里幽幽地传出平淡乏味的音乐。'}

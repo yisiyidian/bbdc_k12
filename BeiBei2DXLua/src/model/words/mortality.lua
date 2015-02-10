@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mortality"]={"mortality","[mɔː'tælɪtɪ]","[mɔr'tæləti]","n.必死的命运",'n.必死的命运,死亡数目,死亡率','The mortality wrought by an epidemic.','由一传染病引起的大批死亡','If this disease spreads, the doctors fear that there\'ll be a high mortality.','如果这种病传播开来，医生们担心死亡率将会很高。'}

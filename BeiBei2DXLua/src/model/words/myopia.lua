@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["myopia"]={"myopia","[maɪ'əʊpɪə]","[maɪ'opɪə]","n.近视",'n.近视,缺乏远见','marketing myopia','经营短视','For Lorca, New York is a symbol of spiritual myopia','“对洛卡来说，纽约是精神缺乏远见的象征”'}

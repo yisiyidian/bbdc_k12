@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["publicize"]={"publicize","['pʌblɪsaɪz]","[ 'pʌblisaiz ]","v.宣传",'v.宣传,公布,广告','We must publicize the meeting widely.','我们必须广泛地宣扬这次会议.','The author appeared on television to publicize her latest book.','那位作家上电视宣传她的新书。'}

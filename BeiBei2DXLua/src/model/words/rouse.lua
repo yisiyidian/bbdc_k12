@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rouse"]={"rouse","[raʊz]","[raʊz]","v.唤醒",'v.唤醒,鼓舞,激起|||n.觉醒,奋起','It was a marvelous night with a tempest to rouse the gods.','真是个美妙的夜晚，暴风雨惊天动地。','I was roused by the sound of the bell this morning.','今天早晨，我被铃声唤醒。'}

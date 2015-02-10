@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["portraiture"]={"portraiture","['pɔːtrɪtʃə]","['pɔrtrətʃɚ]","n.肖像画家",'n.肖像画家,肖像画,人物描写','The painting of beautiful women was another field of portraiture.','人物画中的另一个领域是仕女画.','His portraiture is very expressive.','他的肖像画颇能传神.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bitter"]={"bitter","['bɪtə]","['bɪtɚ]","adj.苦的",'adj.苦的,痛苦的,剧烈的,严寒的|||n.苦久,苦涩,苦的东西|||vt.使...变苦|||adv.激烈地,极其','False friends are worse than bitter enemies.','【谚】明枪易躲，暗箭难防。','I had to take the herb tea although it\'s bitter.','虽然汤药很苦，我还是不得不喝了。'}

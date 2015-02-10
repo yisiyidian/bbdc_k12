@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fertilize"]={"fertilize","['fɜːtɪlaɪz]","['fɝtəlaɪz]","v.施肥",'v.施肥,使丰饶','Flowers are often fertilized by bees as they gather nectar.','蜜蜂采蜜时常使花受粉.','The bees may fertilize flowers when they collect nectar.','蜜蜂采集花粉时会使花授粉。'}

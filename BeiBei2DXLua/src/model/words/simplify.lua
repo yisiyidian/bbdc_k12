@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["simplify"]={"simplify","['sɪmplɪfaɪ]","['sɪmplɪfaɪ]","v.简化",'v.简化,使单纯|||vt.简化','That will simplify my task.','那可简化我的工作.','That will simplify my task.','那可简化了我的工作。'}

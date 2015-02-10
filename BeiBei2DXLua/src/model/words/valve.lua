@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["valve"]={"valve","[vælv]","[vælv]","n.瓣膜",'n.瓣膜,阀门,电子管,真空管','Composed of a single valve or piece. Used of a shell.','单瓣的由单个瓣膜或部分组成的。用于壳','The pump sucks air out (of the vessel) through this valve.','这台泵通过这个阀门把（容器中的）空气抽出.'}

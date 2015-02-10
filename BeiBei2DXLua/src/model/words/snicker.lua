@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["snicker"]={"snicker","['snɪkə]","['snɪkɚ]","vi.窃笑",'vi.窃笑|||n.窃笑','What are you two snickering about?','你们两个在窃笑什么？','We all snickered at him.','我们都暗暗嘲笑他。'}

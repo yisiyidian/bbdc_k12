@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["solitude"]={"solitude","['sɒlɪtjuːd]","['sɑlətud]","n.孤独",'n.孤独|||独居,荒僻之地,幽静的地方','The scientist has spent six months in the solitudes of the Antarctic.','这位科学家已经在人迹罕至的南极待了六个月了。','I am not fond of solitude.','我不喜欢孤独。'}

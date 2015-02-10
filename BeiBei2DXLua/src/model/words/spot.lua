@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spot"]={"spot","[spɒt]","[spɑt]","n.地点",'n.污点,地点,斑点;职位|||adj.当场的,现实买卖的|||v.使沾上污点,认出,用灯光照射','Luckily there was a doctor on the spot.','幸运的是现场有一位医生。','Did you feel a few spots of rain?','下了几滴雨，你感觉到了吗？'}

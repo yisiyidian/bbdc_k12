@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frolicsome"]={"frolicsome","['frɒlɪks(ə)m]","['frɑlɪksəm]","adj.爱闹着玩的",'adj.爱闹着玩的,嬉戏的','It is just a frolicsome joke.','这个仅仅是闹着玩的。','||Frolicsome|| students celebrated their graduation with parties and practical jokes.','爱玩闹的学生们举行聚会，制造各种恶作剧来庆祝毕业。'}

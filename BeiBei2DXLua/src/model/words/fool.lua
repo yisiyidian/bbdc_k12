@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fool"]={"fool","[fuːl]","[ful]","n.愚人",'n.愚人,受骗者|||vt.愚弄,欺骗|||vi.干傻事,开玩笑|||adj.愚蠢的','I was meant to be working on Sunday, but I just fooled around all day.','星期日我本应工作的，但却闲混了一整天。','I was only fooling when I said I\'d lost your keys.','我说把你的钥匙丢了，只是逗你玩的。'}

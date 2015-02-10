@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overnight"]={"overnight","[əʊvə'naɪt]","['ovənaɪt]","n.前晚",'n.前晚|||adj.通宵的,晚上的,前夜的|||adv.在前一夜,整夜,昨晚一晚上','The actress won overnight fame with her first film.','这个女演员的第一部电影使她一举成名。','She won her overnight fame by her first novel.','她的第一部小说一问世，便使她一举成名。'}

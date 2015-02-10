@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disapproval"]={"disapproval","[dɪsə'pruːvl]","['dɪsə'prʊvl]","n.不赞成",'n.不赞成','He slammed the door to register his disapproval.','他砰的一声把门关上以示不满。','I noticed a slight frown of disapproval on his face.','我留意到他轻轻皱了一下眉, 露出不赞成的样子.'}

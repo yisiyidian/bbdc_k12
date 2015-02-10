@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["luster"]={"luster","['lʌstɚ]","[ 'lʌstə ]","n.光彩",'n.光彩,荣誉,光泽|||vt.使...发光辉|||vi.有光泽,发亮','His great books have added luster to the university where he teaches.','他的巨著给他任教的大学增了光。','The modern paint adds luster to the walls of your new home.','这种新型涂料能让您的新居四壁增辉。'}

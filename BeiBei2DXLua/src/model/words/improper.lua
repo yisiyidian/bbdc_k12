@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["improper"]={"improper","[ɪm'prɒpə]","[ɪm'prɑpɚ]","adj.不合适的",'adj.不合适的,错误的,不道德的','The machine tool went out of control because of improper use.','由于使用不当, 机床失去控制。','You will make a mistake by using the improper tool.','你用那种不恰当的工具会犯错误。'}

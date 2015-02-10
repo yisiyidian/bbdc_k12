@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plod"]={"plod","[plɒd]","[plɑd]","v.沉重地走",'v.沉重地走,辛勤工作,孜孜从事|||n.沉重的步伐,辛勤工作','They had to plod wearily on up the hill.','他们不得不迈著疲倦的步子登上山.','How\'s the book?\' Oh, I\'m plodding along. \'','｀那本书怎麽样?＇｀哦, 我正在磨蹭呢.＇'}

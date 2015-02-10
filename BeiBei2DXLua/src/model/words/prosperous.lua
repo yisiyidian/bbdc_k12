@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prosperous"]={"prosperous","['prɒsp(ə)rəs]","['prɑspərəs]","adj.繁荣的",'adj.繁荣的,兴旺的','At no time has the country been more prosperous than at present.','我国任何时候都没有现在这样繁荣。','The city at one time must have been prosperous, for It enjoyed a high level of civilization.','这座古城在一个时期准是很繁荣的，因为它曾享有高度文明。'}

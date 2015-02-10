@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intersect"]={"intersect","[ɪntə'sekt]","['ɪntɚ'sɛkt]","v.贯穿",'v.贯穿,(和...)相交,交叉','The line AB intersects the line CD at E.','直线AB与直线CD相交於E点.','The path intersects the park.','小路贯穿公园'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["entreat"]={"entreat","[ɪn'triːt; en-]","[ɪn'trit]","vt.恳求",'vt.恳求,乞求','She shouldn\'t entreat her elder like that.','她不应那样对待长辈。','He entreated her not to be angry.','他恳求她不要发怒。'}

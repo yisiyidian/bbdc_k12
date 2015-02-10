@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drag"]={"drag","[dræg]","[dræg]","v.拖拉",'n.用来拖拉的东西,拖,拖累|||vt.拖累,拖拉(动)|||vi.拖拉(动),缓慢地行走','Must you drag politics into everything?','你非得事事都把政治扯进来吗？','He dragged the heavy chest across the floor.','他在地板上拉著沉重的箱子。'}

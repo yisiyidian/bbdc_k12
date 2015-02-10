@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["benefit"]={"benefit","['benɪfɪt]","['bɛnɪfɪt]","n.利益",'n.利益,津贴;义卖,义演|||vt.有益于|||vi.得益','This project is of great benefit to everyone.','这项工程对每个人都大有好处。','I have benefited a lot from extensive reading.','广泛的阅读使我受益匪浅。'}

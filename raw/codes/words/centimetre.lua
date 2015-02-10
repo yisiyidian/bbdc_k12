@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["centimetre"]={"centimetre","['sentɪmiːtə]","['sɛntɪmitɚ]","n.厘米",'n.厘米|||=centimeter(美）','The boy is 150 centimetres tall.','这个男孩有150厘米高。','He is 5 centimetres taller than her.','他比她高5公分。'}

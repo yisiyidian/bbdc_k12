@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sneer"]={"sneer","[snɪə]","[snɪr]","n.冷笑",'n.冷笑,嘲笑|||v.嘲笑,冷笑','He\'s always sneering at my suggestions.','他总是对我提出的建议嗤之以鼻.','Don\'t sneer at their religion.','不要嘲笑他们的宗教。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cognizance"]={"cognizance","['kɒ(g)nɪz(ə)ns]","['kɑɡnɪzəns]","n.认知",'n.认知，[法]审理，注意，标记','Little cognizance is taken of these events.','这些事件没有引起什么注意。','The government failed to take cognizance of their protest.','政府没有察觉到他们的抗议。'}

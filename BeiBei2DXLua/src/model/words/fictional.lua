@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fictional"]={"fictional","['fɪkʃənl]","[ 'fikʃənl ]","adj.虚构的",'adj.虚构的,编造的,小说式的','He embellished his account with fictional details.','他以种种虚构的细节来渲染他的叙述。','The two authors represent the opposite poles of fictional genius.','这两位作者代表了天才小说家两个极端。'}

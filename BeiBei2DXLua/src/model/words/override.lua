@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["override"]={"override","[əʊvə'raɪd]","[,ovɚ'raɪd]","vt.弃绝",'vt.弃绝,渺视,凌驾,过度负重|||n.给代理人的佣金,滥用|||[计算机]废除','The appeal court override the decision of the lower court.','上诉法院推翻了下级法院的裁决。','The president vetoed the bill, but congress override his veto.','总统否决了议案，但国会将它推翻。'}

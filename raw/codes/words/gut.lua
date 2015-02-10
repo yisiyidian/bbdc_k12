@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gut"]={"gut","[gʌt]","[ɡʌt]","n.(复)胆量",'n.(复)胆量,魄力,肠,肠线|||vt.取出内脏,毁坏(建筑物,房间等)的内部|||adj.本能的,利害攸关的','Have the guts to say sth.','[美]有做[说]某事的勇气','After what he said to my wife, I was surprised that he had the guts to come round and apologize.','他对我妻子说了那些话以后，竟有勇气前来致歉，这使我很吃惊。'}

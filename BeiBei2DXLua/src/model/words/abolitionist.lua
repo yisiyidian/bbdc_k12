@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abolitionist"]={"abolitionist","[æbə'lɪʃ(ə)nɪst]","[,æbə'lɪʃənɪst]","n.废除主义者",'n.废除主义者,废奴主义者','Abraham Lincoln will be remembred by the world as a famous abolitionist.','亚伯拉罕林肯作为一个废奴主义者将被世界所铭记。','Abham Linken was the Fan of ||Abolitionist||.','林肯是个废奴主义者'}

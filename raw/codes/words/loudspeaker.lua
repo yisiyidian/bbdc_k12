@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["loudspeaker"]={"loudspeaker","[laʊd'spiːkə]","[,laʊd'spikɚ]","n.扬声器",'n.扬声器,喇叭','The loudspeaker announced each airplane as it landed at the airport.','每架飞机在机场一着陆,扩音器就发出通告.','The  loudspeaker \'s stopped working.','扩音器不响了.'}

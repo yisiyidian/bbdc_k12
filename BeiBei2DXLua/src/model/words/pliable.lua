@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pliable"]={"pliable","['plaɪəb(ə)l]","['plaɪəbl]","adj.易曲折的",'adj.易曲折的,柔软的,圆滑的','The finely twined baskets are made with young, pliable spruce roots.','这些编织精美的篮子是用柔韧的云杉嫩树根编成的。','As your baby grows bigger, his bones become less pliable.','随着宝宝的成长，其骨骼的柔韧性会降低。'}

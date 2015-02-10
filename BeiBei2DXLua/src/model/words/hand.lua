@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hand"]={"hand","[hænd]","[hænd]","n.手",'n.手,掌握,协助|||vt.帮助,给|||adv.手动地,人工地','Please hand on the magazine to your friends.','请把这本杂志传给你的朋友们看。','I am resigning as chairman and handing over to my deputy.','我现在辞去主席职位，交由我的副手接替。'}

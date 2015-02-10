@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["goal"]={"goal","[gəʊl]","[ɡol]","n.目标",'n.目标，目的；球门；终点；','That\'s the twentieth goal he\'s kicked this season.','这是他本赛季踢进的第二十个球.','That last goal was a beauty.','最後进去的那个球真漂亮。'}

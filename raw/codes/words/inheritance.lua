@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inheritance"]={"inheritance","[ɪn'herɪt(ə)ns]","[ɪn'hɛrɪtəns]","n.遗产",'n.遗传,遗产,继承,继承物','He entered on his inheritance when he was 21.','他21岁时继承了财产.','He was cheated (out) of his rightful inheritance.','他依法应得的遗产被人骗走了.'}

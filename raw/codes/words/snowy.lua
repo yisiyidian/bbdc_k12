@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["snowy"]={"snowy","['snəʊɪ]","['snoɪ]","adj.多雪的",'adj.多雪的,被雪所覆盖著的,下雪的','He looks kind with snowy hair.','雪白的头发使他看上去很和善。','I like to go for a walk in the snowy streets.','我喜欢去雪中的街道上散步。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["touched"]={"touched","[tʌtʃt]","[tʌtʃt]","adj.受感动的",'adj.精神失常的,稍为精神不正常的,受感动的','He was touched by the warmth of their welcome.','他受到他们热情欢迎，十分感动。','I am so touched','我真感动'}

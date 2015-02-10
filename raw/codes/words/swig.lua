@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["swig"]={"swig","[swɪg]","[swɪɡ]","n.大喝",'n.大喝,吞咽|||v.豪饮,大口地喝','Are they still swigging at that bottle? They\'ll soon be drunk.','他们还在拿着瓶子暴饮吗？他们马上就会醉的。','John kept swigging at the bottle of brandy.','约翰对着那瓶白兰地酒大口地喝个不停。'}

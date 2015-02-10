@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["absorption"]={"absorption","[əb'zɔːpʃ(ə)n; -'sɔːp-]","[əbˈsɔrpʃən, -ˈzɔrp-]","n.吸收",'n.吸收,全神贯注','A medicine or an agent that induces absorption.','吸收剂导致吸收的药品或药剂','I really appreciate his complete absorption in his work.','我很欣赏他对工作的极端专注。'}

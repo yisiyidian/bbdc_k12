@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["duplicate"]={"duplicate","[ˈdjuːplɪkeɪt]","['duplɪket]","n.副本",'n.副本,复制品|||adj.复制的,二重的|||vt.复制,重复|||vi.重复|||[计算机]复制','This research merely duplicates work already done elsewhere.','这项研究仅仅是重复别人已经做过的工作。','He gave me a duplicate key of his house.','他给了我另配了一套他房子的钥匙。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["precocious"]={"precocious","[prɪ'kəʊʃəs]","[prɪ'koʃəs]","adj.早熟的",'adj.早熟的','Childhood hardships matured in him a precocious sense of responsibility.','童年的艰苦生活让他变得早熟而有责任感。','Despite her precocious talent for music and art, she failed both subjects at school.','尽管她小的时候在音乐和艺术方面有不凡的天赋，上学的时候这两门功课却都不及格。'}

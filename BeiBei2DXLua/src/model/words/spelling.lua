@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spelling"]={"spelling","['spelɪŋ]","['spɛlɪŋ]","n.拼法",'n.拼法,拼写','Different words with the same spelling are distinguished in this dictionary by superscript numbers.','本词典在同形异义词的右上角标注数字以资区别.','The editors have normalized the author\'s rather unusual spelling.','编辑已将作者不太规范的拼写改正过来.'}

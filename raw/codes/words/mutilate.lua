@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mutilate"]={"mutilate","['mjuːtɪleɪt]","['mjʊtl'et]","vt.切断",'vt.切断,使残废,使不完整','A madman mutilated the painting by cutting holes in it.','有个疯子破坏了那幅画，在上面划了许多窟窿。','He was mutilated in a accident.','他在一场意外中残废了。'}

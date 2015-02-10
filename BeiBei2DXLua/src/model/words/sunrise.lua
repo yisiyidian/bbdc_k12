@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sunrise"]={"sunrise","['sʌnraɪz]","['sʌnraɪz]","n.日出",'n.日出','||Sunrise|| -- and the farm comes to life again.','太阳一升起, 农场就又活.','The town gardens are open to the public from sunrise to the sunset daily.','市立公园每天从早到晚对公众开放。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cessation"]={"cessation","[se'seɪʃ(ə)n]","[sɛ'seʃən]","n.中止",'n.中止，（短暂的）停止','He would not agree to a cessation of hostilities.','他不会同意结束敌对状态。','Mexico called for an immediate cessation of hostilities.','墨西哥要求立即停止敌对行动。'}

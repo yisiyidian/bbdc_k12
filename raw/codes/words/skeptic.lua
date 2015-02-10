@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["skeptic"]={"skeptic","['skɛptɪk]","[ 'skeptik ]","n.怀疑者",'n.怀疑者,怀疑论者,无神论者','She is a skeptic about the dangers of global warming.','她是全球变暖危险的怀疑论者。','He was a born skeptic.','他天生多疑。'}

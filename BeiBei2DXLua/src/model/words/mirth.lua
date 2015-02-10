@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mirth"]={"mirth","[mɜːθ]","[mɝθ]","n.欢乐",'n.欢乐,欢笑','When I told them what had happened to me, they all chortled with mirth.','我把我的事告诉他们以后，他们咯咯地笑起来了。','It was all he could do to stop tears of mirth falling down his cheeks.','他能做的只有不让快乐的泪水滑落脸庞。'}

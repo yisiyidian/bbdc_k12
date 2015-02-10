@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["festivity"]={"festivity","[fe'stɪvɪtɪ]","[fɛ'stɪvəti]","n.欢宴",'n.欢宴,欢庆','A riotous, boisterous, or drunken festivity; a revel.','闹酒狂欢狂欢的、喧闹的或酒醉的节日；狂欢','A salutation or toast given in drinking someone\'s health or as an expression of good will at a festivity.','祝酒辞节日时喝酒祝某人身体健康或表达良好愿望的敬辞或祝颂'}

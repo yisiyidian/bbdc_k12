@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vector"]={"vector","['vektə]","['vɛktɚ]","n.向量",'n.向量,矢量,带菌者|||vt.(无线电)导引|||adj.向量性的','An axial vector may itself enter into a vector product.','轴矢量自身可参与矢积.','The direction of the electric field vector is indicated in each picture.','每张照片上都标出了电场矢量的方向.'}

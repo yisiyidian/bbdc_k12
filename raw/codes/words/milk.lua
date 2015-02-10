@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["milk"]={"milk","[mɪlk]","[mɪlk]","n.奶",'n.奶,乳状物|||v.挤乳,产乳','It is no use crying over the spilt milk.','事已至此，徒悲无益。','The cat lapped up the milk.','猫舔食牛奶。'}

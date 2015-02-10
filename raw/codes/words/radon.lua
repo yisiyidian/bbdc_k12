@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["radon"]={"radon","['reɪdɒn]","['redɑn]","n.氡",'n.氡','Any of several radioactive gases that are isotopes of radon and are products of radioactive decay.','射气几种氡的同位素的放射性气体，是放射性物质衰变的产物','A radioactive, inert, gaseous isotope of radon, with a half-life of3.92 seconds.','锕射气氡的一种放射性的，惰性的和气态的同位素，其半衰期为3。92秒'}

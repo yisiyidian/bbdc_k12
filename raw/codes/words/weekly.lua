@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["weekly"]={"weekly","['wiːklɪ]","['wikli]","n.周刊",'n.周刊,周报|||adj.每周的,一周一次的,周刊的|||adv.每周,一周一次','I\'ll have to discontinue these weekly visits.','我每周一次的访问得停止了.','He moderated on a weekly panel show.','他主持每周的讨论节目。'}

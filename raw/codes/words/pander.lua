@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pander"]={"pander","['pændə]","['pændɚ]","v.迎合",'n.拉皮条者|||v.迎合|||vi.勾引','Since she was an only child, her parents pandered to her every whim.','由于她是独女，父母对她总是百依百顺。','He’s got to pander to the vulgar and stupid audiences.','他不得不去迎合那些庸俗愚昧的观众。'}

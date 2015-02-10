@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oracle"]={"oracle","['ɒrək(ə)l]","['ɔrəkl]","n.神谕",'n.神谕,神谕处,预言','In times of difficulty, she pray for an oracle to guide her','在困难的时候，她祈祷神谕来指引她。','The earth is the great parent of all, the stones are her bones; these we may cast behind us; this, I think, the oracle means.','大地是万物之母，石头就是她的尸骨。我们可以往身后扔石头，我想神谕说的就是这个意思。'}

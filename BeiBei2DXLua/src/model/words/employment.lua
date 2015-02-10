@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["employment"]={"employment","[ɪm'plɒɪm(ə)nt; em-]","[ɪm'plɔɪmənt]","n.雇用",'n.工作,职业,雇用,使用','The government made an investigation of the employment in the public and private sectors.','政府对国营和私营部门的就业情况作了一次调查。','She is looking for permanent employment.','她正在找固定的工作.'}

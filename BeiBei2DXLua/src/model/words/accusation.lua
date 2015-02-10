@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accusation"]={"accusation","[ækjʊ'zeɪʃ(ə)n]","[,ækju'zeʃən]","n.控告",'n.控告,指控,非难','The accuser brought an accusation against the accused.','原告起诉了被告。','On what grounds do you make that accusation?','你根据什麽提出那项控告?'}

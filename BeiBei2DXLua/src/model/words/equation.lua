@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["equation"]={"equation","[ɪ'kweɪʒ(ə)n]","[ɪ'kweʒn]","n.相等",'n.相等,方程(式),等式,均衡','I can\'t make this equation come out.','我不会解这个方程式.','Equality of mass and net electric charge of reacting species on each side of an equation.','化学平衡反应式两边在质量或起反应的纯净电荷方面的均等'}

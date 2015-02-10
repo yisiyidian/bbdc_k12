@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["biscuit"]={"biscuit","['bɪskɪt]","['bɪskɪt]","n.饼干",'n.饼干，姜黄褐色','I caught her with her fingers in the biscuit tin.','我看见她手指还在饼乾盒里呢.','Mr. Smith takes the biscuit as a story teller.','史密斯先生讲故事是无与伦比的.'}

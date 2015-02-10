@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["evasion"]={"evasion","[ɪ'veɪʒ(ə)n]","[ɪ'veʒn]","n.逃避",'n.逃避,藉口，偷漏(税)','She was fined for tax evasion.','她因逃税而被罚款。','Skill in evasion or deception; guile.','狡诈逃避或欺骗的技巧; 诡计'}

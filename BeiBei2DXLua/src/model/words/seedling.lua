@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seedling"]={"seedling","['siːdlɪŋ]","['sidlɪŋ]","n.幼苗",'n.幼苗','Two cotyledons have come out from the seedling.','小苗长出了两片子叶。','The seedling have shrivel up a bit in the hot sun.','在炎热的太阳光下，幼苗已有一点乾枯。'}

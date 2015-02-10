@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["preoccupation"]={"preoccupation","[prɪ,ɒkjʊ'peɪʃ(ə)n]","[prɪ,ɑkju'peʃən]","n.先取",'n.先取,先入成见,全神贯注的事,专心','An abnormally obsessive preoccupation or attachment; a fixation.','迷恋，迷信（物）不正常地萦绕于心头的事物或情感；固恋','A pension is not usually one of the preoccupations of an eighteen year-old!','一个十八岁的人通常是不会老惦著养老金的!'}

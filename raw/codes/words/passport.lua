@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["passport"]={"passport","['pɑːspɔːt]","['pæspɔrt]","n.护照",'n.护照','Show me your passport, please.','请出示护照。','My passport is due to expire in two months.','我的护照再过两个月就到期了。'}

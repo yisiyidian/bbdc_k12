@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wounded"]={"wounded","['wuːndɪd]","['wundɪd]","adj.受伤的",'adj.受伤的|||n.伤员','The wounded bird fluttered to the ground.','那受伤的鸟拍著翅膀落到地上.','He was wounded badly.','他伤得很厉害。'}

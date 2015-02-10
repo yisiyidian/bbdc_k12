@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["troll"]={"troll","[trəʊl; trɒl]","[trol]","v.&n.反复",'v.&n.反复,轮唱(歌曲)','[Criminals]  troll bus stations for young runaways','“$and$I{［罪犯们］} 在汽车站搜索年轻的逃跑者”','He trolled a song.','他很欢快地唱一支歌。'}

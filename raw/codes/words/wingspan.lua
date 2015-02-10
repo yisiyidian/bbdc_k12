@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wingspan"]={"wingspan","['wɪŋspæn]","['wɪŋ'spæn]","n.翼幅",'n.翼幅，翼展','Eagles have a wingspan longer than two meters .','鹰的翼展超过两米。','The bird has a 1 - metre wingspan.','这只鸟的翼幅为1米.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["punctual"]={"punctual","['pʌŋ(k)tʃʊəl; -tjʊəl]","['pʌtʃʊəl]","adj.严守时刻的",'adj.严守时刻的,准时的,正点的','Henceforth I expect you to be punctual for meetings.','我希望你今後准时到会.','He\'s very punctual always arrives on the dot.','他很守时--总是按时到.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["source"]={"source","[sɔːs]","[sɔrs]","n.来源",'n.来源','We shall take full advantage of our rich source of human beings.','我们应充分利用丰富的人力资源。','This account provides you with a ready source of income.','这个户头为你提供了一个现成的收入来源.'}

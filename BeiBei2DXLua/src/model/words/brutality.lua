@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brutality"]={"brutality","[brʊ'tælɪtɪ]","[brʊ'tæləti]","n.残忍",'n.残忍,无慈悲,野蛮的行为','I have seldom seen such brutality.','我很少见到这种暴行.','That is a startling disclosure of police brutality.','那是一个揭发警察暴行的惊人消息。'}

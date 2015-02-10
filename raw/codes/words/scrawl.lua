@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scrawl"]={"scrawl","[skrɔːl]","[skrɔl]","vt.乱涂",'vt.乱涂|||n.瞎画','Your beautiful handwriting puts my untidy scrawl to shame.','你漂亮的字体把我的潦草字迹比得见不得人.','Can you decipher her scrawl?','你能辩认出她乱写的是什么吗?'}

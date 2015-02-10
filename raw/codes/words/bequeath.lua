@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bequeath"]={"bequeath","[bɪ'kwiːð]","[bɪ'kwið]","vt.遗赠",'vt.遗赠,遗留','He bequeaths his successor an economy that is doing quite well.','他给继任者留下了发展势头非常不错的经济。','His father bequeathed him a fortune.','他父亲给他留下了一笔遗产。'}

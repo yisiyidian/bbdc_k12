@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["autograph"]={"autograph","['ɔːtəgrɑːf]","['ɔtəɡræf]","n.亲笔签名",'n.亲笔签名，手稿|||v.自署于,亲笔签名于,亲笔写','Autographs considered as a group.','签名册亲笔签名组成的册子','I\'ve got lots of famous footballers\' autographs.','我有许多著名足球运动员的亲笔签名.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seminar"]={"seminar","['semɪnɑː]","['sɛmɪnɑr]","n.(大学的)研究班",'n.(大学的)研究班,研讨会','He also told me that your attendances at his tutorial and seminar have been poor .','他还告诉我说你的辅导课和讨论课出勤率不高。','The seminar aims to provide an overview on new media publishing.','研讨会旨在综览新兴的媒体出版.'}

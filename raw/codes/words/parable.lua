@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["parable"]={"parable","['pærəb(ə)l]","['pærəbl]","n.寓言",'n.寓言,比喻,谜','This is an ancient parable.','这是一个古老的寓言。','I launched into the parable, embellishing the story with invented dialogue and extra details.','我开始讲那则寓言，并编造了些对话，加了些细节对其进行润色。'}

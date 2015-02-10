@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["honourable"]={"honourable","['ɒn(ə)rəb(ə)l]","[ 'ɔnərəbl ]","adj.荣誉的",'adj.荣誉的,可敬的,体面的|||=honorable(美)','I hope to find an honourable way of settling difficulties.','我希望设法找到一个体面的办法以摆脱困境.','I don\'t think I am worthy of such an honourable title.','这样的光荣称号,我可担当不起.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overhead"]={"overhead","[əʊvə'hed]","[,ovɚ'hɛd]","n.经常开支",'n.经常开支,普通用费|||adj.在头上的,高架的|||adv.在头顶上,在空中,在高处|||[计算机]总开销','An eagle circled high overhead.','一只鹰在高空盘旋.','The trolley bus picks up current from an overhead wire.','无轨电车的电能是通过架空线供给的。'}

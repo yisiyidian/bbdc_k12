@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["actually"]={"actually","['æktjʊəlɪ; -tʃʊ-]","['æktʃuəli]","adv.实际上",'adv.实际上，事实上|||adv.居然，竟然（表示惊讶）','He seems to be doing nothing, but actually he is just biding his time.','他看上去无所事事，其实却在等待良机。','This tree looks high and strong but actually its trunk is hollow.','这棵树看起来又高又壮，实际上树干是空的。'}

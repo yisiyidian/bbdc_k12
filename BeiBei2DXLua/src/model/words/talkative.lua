@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["talkative"]={"talkative","['tɔːkətɪv]","['tɔkətɪv]","adj.喜欢说话的",'adj.喜欢说话的,饶舌的,多嘴的','A talkative or boastful person.','夸夸其谈的人，吹牛的人','She became more and more talkative as the evening went on.','夜渐深, 她的话也渐渐多起来.'}

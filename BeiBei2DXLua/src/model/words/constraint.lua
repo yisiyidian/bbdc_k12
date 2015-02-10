@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["constraint"]={"constraint","[kən'streɪnt]","[kən'strent]","n.约束",'n.约束,强制,约束条件,对感情的压抑,虚情假意|||[计算机]限制','He felt constraint in her presence.','他在她面前显得局促不安。','Soon tired of the constraint of military life.','很快厌倦了军事生活的约束'}

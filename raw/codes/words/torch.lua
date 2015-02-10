@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["torch"]={"torch","[tɔːtʃ]","[tɔrtʃ]","n.火炬",'n.火炬,火把,手电筒,照明物,向导|||vt.使...迅速燃烧,点燃火炬','Light the torch I can\'t see the path.','打开电筒吧--我看不见道儿.','Shine your torch here.','请把手电筒往这儿照。'}

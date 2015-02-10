@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["upright"]={"upright","['ʌpraɪt]","['ʌpraɪt]","adj.正直的",'adj.正直的,诚实的,合乎正道的','The cross-piece is mortised into the upright post.','横梁和立柱是用榫眼接合一起的.','She jerked upright in surprise.','她惊讶得跳了起来.'}

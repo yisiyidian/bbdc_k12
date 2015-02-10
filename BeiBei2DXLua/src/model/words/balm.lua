@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["balm"]={"balm","[bɑːm]","[bɑm]","n.香油",'n.香油,药膏','Friendship is the finest balm in need.','友情是在困难时刻的最好安慰。','He smeared some balm on his hand to soothe the pain.','他在手上涂了些药膏来止痛。'}

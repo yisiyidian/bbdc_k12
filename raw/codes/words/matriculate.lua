@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["matriculate"]={"matriculate","[mə'trɪkjʊleɪt]","[mə'trɪkjulet]","v.准许入学",'v.准许入学,录取','He matriculated in the English Literature Department at the Tokyo Imperial University.','他被东京帝国大学英语文学系录取了。','matriculate card','入学证'}

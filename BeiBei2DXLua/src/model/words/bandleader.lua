@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bandleader"]={"bandleader","['bændliːdə]","['bændlidɚ]","n.乐队指挥",'n.乐队指挥','The bandleader plays a very impotant role in a band.','乐队指挥在一个乐队中起着十分重要的作用。','The bandleader is the man who holds a stick.','乐队指挥就只那个拿指挥棒的人。'}

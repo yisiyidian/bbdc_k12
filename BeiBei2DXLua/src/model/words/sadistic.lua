@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sadistic"]={"sadistic","[sə'dɪstɪk]","[sæ'dɪstɪk]","adj.虐待性变态症的",'adj.虐待性变态症的,残酷成性的','The prisoners rioted against mistreatment by sadistic guards.','囚犯因不堪忍受狱警施虐而发动了暴乱。','The guards were sadistic beasts and their leader was the devil incarnate.','那些警卫都是残暴的野兽，他们的首领是个魔鬼的化身。'}

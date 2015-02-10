@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["equality"]={"equality","[ɪ'kwɒlɪtɪ; iː-]","[ɪ'kwɑləti]","n.同等",'n.同等,平等','Then a floating-point equality test is performed.','然后执行浮点数相等测试','Genuine racial equality still seems light-years away.','真正的种族平等似乎仍遥遥无期.'}

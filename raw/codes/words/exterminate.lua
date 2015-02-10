@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exterminate"]={"exterminate","[ɪk'stɜːmɪneɪt; ek-]","[ɪk'stɝmə'net]","vt.扑灭",'vt.扑灭,消灭,根绝','The boss exterminate the fire.','老板扑灭了火','This spray will exterminate the termites.','这种喷剂能消灭白蚁。'}

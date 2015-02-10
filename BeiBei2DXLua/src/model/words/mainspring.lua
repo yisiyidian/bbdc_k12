@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mainspring"]={"mainspring","['meɪnsprɪŋ]","['mensprɪŋ]","n.(钟表等机械装置的)主发条",'n.(钟表等机械装置的)主发条，主弹簧','The mainspring makes the watch motion.','发条带动表走.','Her jealousy is the mainspring of the novel\'s plot.','这部小说情节中贯穿了她的忌妒之心.'}

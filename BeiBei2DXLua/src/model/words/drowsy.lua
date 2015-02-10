@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drowsy"]={"drowsy","['draʊzɪ]","['draʊzi]","adj.昏昏欲睡的",'adj.昏昏欲睡的|||adj.寂静的','These tablets will make you drowsy.','这些药片会使你昏昏欲睡。','The story took place on a drowsy summer afternoon.','这个故事发生在一个令人昏昏欲睡的夏日午后。'}

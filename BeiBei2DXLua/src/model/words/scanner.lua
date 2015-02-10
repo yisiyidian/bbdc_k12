@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scanner"]={"scanner","['skænə]","['skænɚ]","n.扫描机",'n.扫描机,扫描仪','heard about the robbery over the police officer\'s scanner.','从警察的扫描天线听闻有关抢劫的事','...brain scanners.','…大脑扫描仪。'}

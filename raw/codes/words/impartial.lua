@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impartial"]={"impartial","[ɪm'pɑːʃ(ə)l]","[ɪm'pɑrʃəl]","adj.公平的",'adj.公平的,不偏不倚的','He was not an impartial witness because of his affinity with the accused.','他不是公正的见证人, 因为他与被告有姻亲关系.','He is an impartial judge.','他是一位公正的法官。'}

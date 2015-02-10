@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["snipe"]={"snipe","[snaɪp]","[snaɪp]","n.沙锥",'n.沙锥（滨鸟,生活在沼泽区），卑鄙的人|||vi.伏击,狙击,抨击','Jack is seldom irritated when newspapermen snipe at him in their columns. It\'s a matter of patience born of long experience.','杰克很少因为新闻记者撰稿在报纸上攻击他而生气。这是他漫长的经历所培养出来的一种耐性。','The snipe has a very long thin beak.','鹬长着非常细长的鸟嘴。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["property"]={"property","['prɒpətɪ]","['prɑpɚti]","n.财产",'n.财产;性质;道具','||Property|| brings duties and responsibilities.','有了财产也就有了义务和责任。','A fence divides the two ||properties||.','有一道栅栏隔著这两处房地产。'}

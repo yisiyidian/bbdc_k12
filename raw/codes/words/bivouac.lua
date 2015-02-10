@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bivouac"]={"bivouac","['bɪvʊæk; 'bɪvwæk]","['bɪvuæk]","n.露营",'n.露营|||v.露营','We bivouac in the open plains.','我们在开阔的原野上露营。','While in bivouac, we spent the night in our sleeping bags under the stars.','在临时宿营地，我们就头顶星星，躺在睡袋里过夜。'}

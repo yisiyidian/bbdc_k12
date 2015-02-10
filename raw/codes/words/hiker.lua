@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hiker"]={"hiker","['haɪkə]","['haɪkɚ]","n.徙步旅行者",'n.徙步旅行者','Inferior equipment was precisely the reason some hikers refused to continue the climb.','正是设备的低劣才导致一些徒步旅行者不愿继续攀登','The hikers were exhausted and all but frozen when they were found.','当人们发现这些徒步旅行者的时候, 他们已经累坏了, 而且几乎冻僵了。'}

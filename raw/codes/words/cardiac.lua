@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cardiac"]={"cardiac","['kɑːdɪæk]","['kɑrdɪæk]","n.强心剂",'n.强心剂,强胃剂|||adj.心脏的,(胃的)喷门','The point or surface where two parts, such as the eyelids, lips, or cardiac valves, join or form a connection.','连合连合两部分例如眼睑、嘴唇或心脏瓣膜联合或形成连接的点或面','she is borned with some cardiac problems','她天生有心脏问题'}

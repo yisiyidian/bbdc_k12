@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["riveting"]={"riveting","['rɪvɪtɪŋ]","['rɪvɪtɪŋ]","adj.动听的",'adj.动听的，令人着迷的，非常精彩的|||动词rivet的现在分词形式','Only by riveting her attention on her work could she forget her worries.','只有全身心投入到工作上她才能忘记烦恼。','The last chapter was so riveting that I was reading past midnight.','最后一章是如此引人入胜，以至于午夜过后我还在津津有味地读着。'}

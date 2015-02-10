@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accommodating"]={"accommodating","[ə'kɒmədeɪtɪŋ]","[ə'kɑmədetɪŋ]","adj.乐于助人的",'adj.乐于助人的|||动词accommodate的现在分词形式','Ready to do favors for others; accommodating.','乐于施惠于人的；热心助人的','An inn built around a large court for accommodating caravans at night in the Near or Far East.','客店，旅舍近东或远东地区为旅行队提供夜间住宿场所的小旅店，常环绕大院修建'}

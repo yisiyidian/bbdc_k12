@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["venture"]={"venture","['ventʃə]","['vɛntʃɚ]","n.冒险",'n.冒险,风险,投机|||vt.敢尝试,谨慎地做，冒险一试|||vi.冒险做','||Venture|| a small fish to catch a great one.','【谚】欲钓大鱼，先舍小鱼。','These foreigners have put forward a proposal for a joint venture.','这些外国人提出了一个合资企业的建议。'}

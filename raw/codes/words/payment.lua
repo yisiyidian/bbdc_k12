@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["payment"]={"payment","['peɪm(ə)nt]","['pemənt]","n.支付",'n.支付,付款','They were involved in a long legal wrangle over payment.','他们在付款问题上陷入长期纠纷。','The payment of the goods is payable in instalments.','货款可以分期支付。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sapling"]={"sapling","['sæplɪŋ]","['sæplɪŋ]","n.树苗",'n.树苗,小树，年轻人','The bark of saplings galled by improper staking.','由于不正确地打桩，小树苗的树皮受到了损伤','She cut down the sapling with one chop.','她一斧子就把树苗砍倒了.'}

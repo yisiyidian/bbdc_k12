@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stance"]={"stance","[stɑːns; stæns]","[stæns]","n.准备击球姿势",'n.准备击球姿势,踏脚处,位置,姿势','A defensive position or stance, as in boxing or fencing.','防卫在拳击或击剑中所处的防守的位置或姿势','What is your stance on corporal punishment?','你对体罚持什麽态度?'}

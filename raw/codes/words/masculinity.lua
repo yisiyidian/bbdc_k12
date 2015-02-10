@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["masculinity"]={"masculinity","[,mæskjʊ'lɪnɪtɪ]","[,mæskju'lɪnəti]","n.男性",'n.男性；男子气；刚毅','...a project on the link between masculinity and violence.','…一项关于男性和暴力之间关系的研究项目。','The old ideas of masculinity do not work for most men.','过去对阳刚味的看法已不适用于大多数男人了。'}

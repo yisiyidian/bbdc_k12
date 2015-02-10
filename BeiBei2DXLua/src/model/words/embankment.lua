@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["embankment"]={"embankment","[ɪm'bæŋkm(ə)nt; em-]","[ɪm'bæŋkmənt]","n.堤防",'n.堤防,筑堤','A sewer or drain crossing under a road or embankment.','涵洞横在公路或堤岸下面的下水道或排水管','The van slipped (a few feet) down the embankment.','那客货车沿堤坝向下滑动了（几英尺）.'}

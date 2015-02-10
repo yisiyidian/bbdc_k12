@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["migraine"]={"migraine","['miːgreɪn; 'maɪ-]","['maɪɡren]","n.偏头疼",'n.偏头疼','I have a migraine.','我得了偏头痛。','Her mother suffered from migraines.','她母亲患了偏头痛。'}

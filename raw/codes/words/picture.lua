@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["picture"]={"picture","['pɪktʃə]","['pɪktʃɚ]","n.图画",'n.图画,照片,景色|||vt.画,描写,想像','I can\'t picture the village without the old church.','我无法设想村子里没有那座旧教堂像什麽样子','The book gives a good picture of everyday life in ancient rome.','那部书对古罗马人的日常生活描写得很生动。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["putty"]={"putty","['pʌtɪ]","[ 'pʌti ]","n.油灰",'n.油灰,玻璃,金属等的磨粉|||v.用油灰接合','A pure white grade of chalk that has been ground and washed for use in paints, ink, and putty.','白垩粉，白粉一种碾碎的并洗过的纯净白垩，用于油漆、墨水和油灰','She was a woman of such beauty and charm that men were putty in her hands.','她美艳绝伦, 男人在她手心任其摆布.'}

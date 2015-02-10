@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obvious"]={"obvious","['ɒbvɪəs]","['ɑbvɪəs]","adj.明显的",'adj.明显的,显而易见的','It is obvious that she is very clever.','很明显，她挺聪明。','The embassy is an obvious target for terrorist attacks.','大使馆是恐怖分子攻击的明显目标。'}

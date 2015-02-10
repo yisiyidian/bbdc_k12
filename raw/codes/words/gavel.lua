@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gavel"]={"gavel","['gæv(ə)l]","['gævl]","n.(法官所用的)槌",'n.(法官所用的)槌,小木槌|||n.(中世纪英国的）贡税|||vt.用木槌引起','The chairman rapped on the table twice with his gavel.','主席用他的小木在桌上重敲了两下。','The judge took up the gavel with solemnity.','法官严肃地拿起了小木槌。'}

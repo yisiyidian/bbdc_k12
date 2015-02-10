@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["granule"]={"granule","['grænjuːl]","['grænjʊl]","n.小粒",'n.小粒,微粒','She was spooning coffee granules into cups.','她正用勺子把咖啡微粒盛进杯子里。','fat granule','脂肪颗粒'}

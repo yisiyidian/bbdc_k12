@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["breast"]={"breast","[brest]","[brɛst]","n.胸脯",'n.胸脯,乳房|||vt.挺胸迎...而上','The baby was nursing/being nursed at its mother\'s breast.','那个孩子正在吃母亲的奶.','He made a clean breast of his crime to the police.','他向警方如实招供.'}

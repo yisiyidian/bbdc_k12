@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["convenience"]={"convenience","[kən'viːnɪəns]","[kən'vinɪəns]","n.适宜",'n.适宜，便利,便利设施，方便的时间，舒适','Please deliver the goods at your earliest convenience.','请尽早送货.','We trust to receive a cheque at your earliest convenience.','我们希望早日收到你的支票.'}

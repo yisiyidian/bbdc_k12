@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nest"]={"nest","[nest]","[nɛst]","n.巢",'n.巢,窝|||vt.嵌入|||vi.筑巢','It proved that everything was a mare\'s nest.','结果证明一切都是场骗局。','The blackbird sat on the nest waiting for the return of her mate.','黑鹂在巢中等候其雄鸟归来.'}

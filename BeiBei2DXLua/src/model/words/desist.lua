@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["desist"]={"desist","[dɪ'zɪst; dɪ'sɪst]","[dɪ'zɪst]","vi.停止",'vi.停止,中止，忍住，克制','Counsel to desist from a specified undesirable course of action.','告诫使结束某项特定的不受欢迎的行为的劝告','I wish he would desist from entertaining his friends.','我希望他别再招待他的朋友了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stipulate"]={"stipulate","['stɪpjʊleɪt]","['stɪpjulet]","vt.&vi.规定",'vt.&vi.规定,保证|||adj.有明文规定的','Each time we stipulate what temperature we have in mind.','我们每次约定谈什么样的温度便可。','The company fails to pay on the date stipulated in the contract.','该公司没有按合同中规定的日期付款。'}

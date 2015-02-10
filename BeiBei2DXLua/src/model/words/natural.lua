@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["natural"]={"natural","['nætʃ(ə)r(ə)l]","['nætʃrəl]","adj.自然的",'adj.自然的；物质的；天生的；不做作的|||n.自然的事情；（生来的）白痴；[乐]（风琴等的）白键','a natural pearl.','天然珍珠','It is natural that such a hardworking student should pass the exam.','这么用功的学生考试及格是很自然的事。'}

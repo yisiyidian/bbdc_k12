@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["uranium"]={"uranium","[jʊ'reɪnɪəm]","[jʊ'renɪəm]","n.铀",'n.铀','They went over nationwide in search of uranium mines.','他们为了探寻铀矿走遍了全国.','Radium and uranium are radioactive elements.','镭和铀是放射性元素.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sniffle"]={"sniffle","['snɪf(ə)l]","['snɪfl]","v.鼻子哼哼做声",'v.鼻子哼哼做声,抽鼻涕,哽咽|||n.鼻子哼哼做声,冷淡的对待','Life is made up of sob, sniffle, and smile, with sniffle predominate.','人生是以哭、泣、笑三者构成的, 尤以泣为最。','The lack of air in the room make everyone sniffle.','屋子里空气缺乏, 使得每个人都频频吸气。'}

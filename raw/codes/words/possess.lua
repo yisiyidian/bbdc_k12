@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["possess"]={"possess","[pə'zes]","[pə'zɛs]","v.持有",'v.持有,克制,为...着迷','possessed great tact.','具有非凡的智谋','The police asked me if I possessed a gun.','警察问我是否有枪。'}

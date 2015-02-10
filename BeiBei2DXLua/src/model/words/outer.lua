@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outer"]={"outer","['aʊtə]","['aʊtɚ]","adj.外部的",'adj.外部的,外面的','It looks as if she had just come back from outer space.','她看起来彷佛刚从外太空回来似的。','Maybe the earth has been visited by intelligent creatures from outer space.','也许太空的智慧生物已经访问过地球。'}

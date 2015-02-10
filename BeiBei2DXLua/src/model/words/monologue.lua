@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["monologue"]={"monologue","['mɒn(ə)lɒg]","['mɑnəlɔɡ]","n.独白",'n.独白，长篇大论，独角戏','He writes dialogue by cut monologue in two.','他把独白切成两截来写对白。','The audience lapped up his monologue','听众们倾听他的独白'}

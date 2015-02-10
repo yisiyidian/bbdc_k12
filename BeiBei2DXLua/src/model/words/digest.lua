@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["digest"]={"digest","[daɪ'dʒest; dɪ-]","[daɪ'dʒɛst]","vt.消化",'n.摘要|||vt.消化,理解|||vi.消化','Reader\'s ||Digest||','读者文摘','This rich food doesn\'t digest easily.','这种油腻的食物不易消化。'}

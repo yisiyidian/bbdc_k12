@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hemoglobin"]={"hemoglobin","[,hiːməʊ'ɡləʊbɪn]","[,hɛmo'ɡlobɪn]","n.血红蛋白",'n.血红蛋白','The destruction or dissolution of red blood cells, with subsequent release of hemoglobin.','溶血（现象），血细胞溶解红血细胞的破坏或溶解，随后释放血红蛋白','A red blood cell having no hemoglobin.','血影细胞失去血红蛋白的一种红血细胞'}

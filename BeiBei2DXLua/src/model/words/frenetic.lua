@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["frenetic"]={"frenetic","[frə'netɪk]","[frə'nɛtɪk]","adj.发狂的",'adj.发狂的,狂热的|||n.发狂者','The fans is frenetic to their idol.','粉丝们对他们的偶像是狂热的。','The conclusion of the book is somewhat frenetic.','本书的结论近于疯狂。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["luck"]={"luck","[lʌk]","[lʌk]","n.运气",'n.运气,幸运,吉祥之物|||v.侥幸成功','You never know your luck.','你也许会走运的。','He came to Beijing to try his luck.','他来到北京，想碰碰运气。'}

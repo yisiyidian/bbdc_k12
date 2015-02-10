@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["authorization"]={"authorization","[ɔːθəraɪ'zeɪʃ(ə)n]","[,ɔθərɪ'zeʃən]","n.授权(书)",'n.授权(书),认可','It\'s annoying to have to get authorization for spending such piddling amounts of money.','花这麽一点钱也要去请示, 真烦人.','One who makes use of or reproduces the work of another without authorization.','侵犯版权者未经授权而使用或复制他人作品的人'}

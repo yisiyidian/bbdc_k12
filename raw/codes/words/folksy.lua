@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["folksy"]={"folksy","['fəʊksɪ]","['foksi]","adj.朴素的",'adj.朴素的,亲切的,谦虚的','Folksy humor; a folksy style that masked a keen business mind.','低调的幽默; 以低调的形式掩盖着一种强烈的商业念头','a friendly, folksy town.','一个友好的城镇'}

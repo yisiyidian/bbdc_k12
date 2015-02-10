@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beacon"]={"beacon","['biːk(ə)n]","['bikən]","n.烟火",'n.烟火,灯塔','The plane homed in on the radio beacon.','飞机遵循导航台信号降落。','A beacon flamed out against the night sky.','灯塔在夜空衬托下闪亮。'}

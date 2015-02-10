@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irascible"]={"irascible","[ɪ'ræsɪb(ə)l]","[ɪ'ræsəbl]","adj.易怒的",'adj.易怒的,暴躁的','He is so irascible that he cannot go easily with others.','他脾气太暴躁了，以致于他很难和别人好好相处。','He had an irascible temper.','他脾气暴躁。'}

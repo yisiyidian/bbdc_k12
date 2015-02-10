@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["after"]={"after","['ɑːftə]","['æftɚ]","conj.在...以后",'adj.以后的|||adv.以后,后来|||conj.在...以后|||prep.在...之后','We shall arrive soon after.','我们将随后很快就到达。','Mr. Smith left for London after breakfast.','史密斯先生吃过早餐后就动身去伦敦了。'}

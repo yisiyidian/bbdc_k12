@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["depravity"]={"depravity","[dɪ'prævɪtɪ]","[dɪ'prævəti]","n.堕落",'n.堕落,腐败,邪恶','We responded to the worst kind of depravity with the best of our humanity.','我们用我们最美好的人性来回应那些最邪恶的暴行。','Experiencing life does not mean depravity and indulgence.','体验生活并不意味着堕落和放纵。'}

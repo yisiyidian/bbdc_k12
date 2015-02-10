@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flake"]={"flake","[fleɪk]","[flek]","n.薄片",'n.薄片,小片,火花','A flake of bone had lodged itself in his knee.','一块碎骨片留在他的膝盖里','||Flakes|| of rust are falling from the old iron pan.','一片片的锈从旧铁锅上落下。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hypercritical"]={"hypercritical","[haɪpə'krɪtɪk(ə)l]","['haɪpɚ'krɪtɪkl]","adj.苛求的",'adj.苛求的,吹毛求疵的','He is so hypercritical that he corrects every mistake his students made.','他很苛刻，对于学生的每个错误都要纠正。','He would be courageous calm and self assured, but neither pompous nor hypercritical.','他勇敢、冷静、自信，既不傲慢，也不虚为。'}

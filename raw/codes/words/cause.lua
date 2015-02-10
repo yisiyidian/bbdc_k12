@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cause"]={"cause","[kɔːz]","[kɔz]","vt.引起",'vt.引起,使发生|||n.原因','What caused his illness?','是什么使他生病？','Don\'t complain without good cause.','没有充分的理由就不要抱怨。'}

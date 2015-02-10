@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trench"]={"trench","[tren(t)ʃ]","[trɛntʃ]","n.沟",'n.沟,沟渠|||v.(挖)沟,(挖)战壕','Broken bricks were rammed down in the trench to make a base for the concrete.','沟内先倒了碎石，并加以夯实作为混凝土的基础。','I forgot to dig a trench around the tent.','我忘了在帐篷四周挖一条沟。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["genial"]={"genial","['dʒiːnɪəl]","['dʒinɪəl]","adj.和蔼的",'adj.和蔼的,亲切的,宜人的','Orlando is a genial man.','奥兰多是一位和蔼可亲的人.','Her genial smile made every guest feel at home.','她亲切的笑容使每个人都感觉宾至如归。'}

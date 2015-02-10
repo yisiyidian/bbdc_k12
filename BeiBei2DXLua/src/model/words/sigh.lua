@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sigh"]={"sigh","[saɪ]","[saɪ]","vt.叹息",'n.呼吸，叹息（带有情感）|||vi.发出叹息的声音，感叹|||vt.叹息','With a hopeless sigh, he turned away.','他发出一声绝望的叹息，转身走开了。','willows sighing in the wind','柳树在风中悲泣'}

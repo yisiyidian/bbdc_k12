@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amongst"]={"amongst","[ə'mʌŋst]","[ə'mʌŋst]","prep.在...之中",'prep.在...之中,在...之间(=among)','Pick over the lentils carefully in case there are any stones amongst them.','把这些豆子里的沙粒挑出去.','Politicians are always arguing amongst themselves.','政客们总是彼此争论不休.'}

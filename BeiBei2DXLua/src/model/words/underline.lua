@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["underline"]={"underline","[ʌndə'laɪn]","['ʌndəlaɪn]","v.在...下面划线",'v.在...下面划线','Those words are underlined in the English book.','那本英语书中有些单词下画着线进行强调。','Please underline the noun clauses in the passage.','请用线画出短文中的名词性从句.'}

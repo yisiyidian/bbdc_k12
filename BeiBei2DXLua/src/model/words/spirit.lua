@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spirit"]={"spirit","['spɪrɪt]","['spɪrɪt]","n.精神",'n.精神','We need a spirit of enterprise if we are to overcome our difficulties.','如果我们要克服困难，我们就要有进取精神。','The priest says that the human spirit never dies.','牧师说，人的灵魂永远不死。'}

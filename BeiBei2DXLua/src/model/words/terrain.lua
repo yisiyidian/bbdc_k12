@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["terrain"]={"terrain","[təˈreɪn]","[tə'ren]","n.地带",'n.地带,地域,地形','Eventually he spotted the airstrip spread out on a level terrain.','他终于找到了那个伸展在平地上的简易机场。','A jeep is ideal for driving over rough terrain.','吉普车很适合在高低不平的路面上行驶.'}

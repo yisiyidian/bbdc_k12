@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["franchise"]={"franchise","['fræn(t)ʃaɪz]","['fræntʃaɪz]","n.特权",'n.特权,公民权,特许经销权|||vt.赋予特权,赋予公民权','That fast food business have expanded through the sale of franchise.','该快餐店通过出售联营经销权而扩大了生意。','He has bought a hot dog franchise.','他购买了一家热狗特许经营店。'}

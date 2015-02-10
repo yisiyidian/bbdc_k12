@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lackadaisical"]={"lackadaisical","[,lækə'deɪzɪk(ə)l]","[,lækə'dezɪkl]","adj.无精打采的",'adj.无精打采的,无兴趣的','Dr. Jonsen seemed a little lackadaisical at times.','琼森医生有时候似乎有点懈怠。','She was annoyingly lackadaisical and impractical.','令人恼火的是，她既懒又不脚踏实地。'}

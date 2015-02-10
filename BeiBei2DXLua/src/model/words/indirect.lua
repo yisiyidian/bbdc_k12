@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indirect"]={"indirect","[ɪndɪ'rekt; ɪndaɪ-]","[,ɪndə'rɛkt]","adj.间接的",'adj.间接的,迂回的，次要的，不坦率的，欺骗的','His indirect way of telling me to leave annoyed me.','他那种不直截了当地让我离开的方式激怒了我。','indirect benefits.','间接的收益'}

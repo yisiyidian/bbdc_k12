@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enchant"]={"enchant","[ɪn'tʃɑːnt; en-]","[ɪn'tʃænt]","v.施魔法",'v.施魔法,使迷惑，使喜悦，使陶醉','The act of enchanting.','使用魔法迷惑的行为','She was enchanted with the flowers you sent her.','她非常喜欢你送的花。'}

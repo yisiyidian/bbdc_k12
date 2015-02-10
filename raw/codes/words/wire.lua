@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wire"]={"wire","[waɪə]","['waɪɚ]","n.电线",'n.电线,铁丝网,电报|||vt.给…装电线,用电报发,用导线连接|||vi.发电报','The fabric was displayed on a wired stand.','那种织物陈列在金属制的架子上。','As soon as the equipment is wired up, you can use it.','这个设备一接通电源你就能用了。'}

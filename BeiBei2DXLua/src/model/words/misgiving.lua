@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["misgiving"]={"misgiving","[mɪs'gɪvɪŋ]","[ ,mis'ɡiviŋ ]","n.疑虑",'n.疑虑，怀疑|||动词misgive的现在分词','All their misgivings were driven out by the arrival of the good news.','一听到这个好消息，他们一切疑虑都烟消云散了。','I have no misgiving in recommending Ms. Liu for the position you have in mind.','我毫不犹豫地推荐刘小姐去任您将为她提供的职位。'}

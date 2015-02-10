@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["toothpaste"]={"toothpaste","['tuːθpeɪst]","['tuθpest]","n.牙膏",'n.牙膏','I must buy a tube of toothpaste.','我必须买一支牙膏。','Which brand of toothpaste do you prefer?','你爱用什麽牌子的牙膏?'}

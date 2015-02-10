@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mythology"]={"mythology","[mɪ'θɒlədʒɪ]","[mɪ'θɑlədʒi]","n.神话",'n.神话,神话学，神话集','Diana is the goddess of hunting in Greek and Latin mythology.','戴安娜在希腊罗马神话中是狩猎女神。','A satyr is half man and half goat in Greek and Roman mythology.','在希腊和罗马神话中，森林之神是半人半羊的样子。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["electric"]={"electric","[ɪ'lektrɪk]","[ɪ'lɛktrɪk]","adj.电的",'adj.电的,令人激动的,鲜亮的|||n.供电','He bought an electric hair-dryer for Mary.','他给玛丽买了一个电吹风。','He bought an electric hair-drier for Mary.','他给玛丽买了一个电吹风。'}

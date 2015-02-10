@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["commensurate"]={"commensurate","[kə'menʃ(ə)rət; -sjə-]","[kəˈmɛnsərɪt, -ʃə-]","adj.同样大小的",'adj.同样大小的,相称的','Nothing he does is commensurate to our desire.','他做的事没一件使我们称心。','He was given a job commensurate with his abilities.','他得到一份与他能力相称的工作。'}

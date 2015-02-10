@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nugatory"]={"nugatory","['njuːgət(ə)rɪ; 'nuː-]","[ 'nju:ɡətəri ]","adj.无价值的",'adj.无价值的,无用的,无效的','This is a nugatory contract.','这是一份无效的合同。','He is good at focusing on information that appears nugatory and studying it carefully.','他擅长于关注那些看似琐碎无用的信息，并对这些信息仔细研究。'}

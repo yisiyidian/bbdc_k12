@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stardom"]={"stardom","['stɑːdəm]","['stɑrdəm]","n.演员的身份",'n.演员的身份,演员们','The actor coasted to stardom on his father\'s name.','那位男演员靠父亲的名誉一帆风顺地成了明星。','He rocketed to stardom (ie became famous) overnight.','他转瞬间成了明星.'}

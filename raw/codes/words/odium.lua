@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["odium"]={"odium","['əʊdɪəm]","['odɪəm]","n.憎恶",'n.憎恶,反感','Her manner acquired her universal odium.','她的举止遭到普遍的非议。','The complainant has been exposed to public odium, scandal and contempt.','原告遭到了公众的憎恨、非议与蔑视。'}

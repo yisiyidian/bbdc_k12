@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mince"]={"mince","[mɪns]","[mɪns]","v.切碎",'n.切碎物|||v.切碎,矫揉做作地说','I didn\'t mince matters: I said he was an idiot.','我不讳言, 我说过他是白痴.','She minced into the room wearing very high heels.','她穿著很高的高跟鞋, 扭扭捏捏地走进房间.'}

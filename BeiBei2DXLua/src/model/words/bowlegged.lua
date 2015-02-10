@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bowlegged"]={"bowlegged","['bəulegd]","[ 'bəulegd ]","adj.弯脚的",'adj.弯脚的','||Bowlegged|| people should seek a physician\'s help if they begin to have knee pain or swelling.','有弓形腿的人若开始感到膝盖疼痛或肿胀时应向医生求助。','bowlegged','弯角的'}

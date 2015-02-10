@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fairy"]={"fairy","['feərɪ]","['fɛri]","n.&adj.仙女",'n.&adj.仙女,小精灵','The child devours fairy tales.','这孩子专注地听着童话故事。','Now tell me the truth: I don\'t want any more of your fairy stories.','把真相告诉我, 我不想再听你胡诌了。'}

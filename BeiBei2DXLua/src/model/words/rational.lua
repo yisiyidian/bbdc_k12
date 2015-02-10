@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rational"]={"rational","['ræʃ(ə)n(ə)l]","['ræʃnəl]","adj.合理的",'adj.合理的,理性的,能推理的|||n.有理数','The quality or condition of being rational.','合理性合乎理性的性质或状态','No rational person would go to work in his pyjamas.','任何神智正常的人都不会穿着睡衣去上班。'}

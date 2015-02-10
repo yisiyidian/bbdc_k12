@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["weather"]={"weather","['weðə]","['wɛðɚ]","n.天气",'n.天气,气候,气象|||vt.(因受风吹,日晒,雨淋等,使)褪色,平安度过|||vi.变色,变形,经受住(困难)|||adj.天气预报的,上风的','What\'s the weather like?','天气怎么样？','The walls of the barn had weathered.','谷仓的墙壁已经褪色了。'}

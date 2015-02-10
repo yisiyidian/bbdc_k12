@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nylon"]={"nylon","['naɪlɒn]","['naɪlɑn]","n.尼龙",'n.尼龙|||（复数）nylons：女长袜','Cotton is more comfortable to wear than nylon.','棉布比尼龙穿着舒服。','She strung the beads with a fine nylon.','她用细尼龙线把珠子串了起来。'}

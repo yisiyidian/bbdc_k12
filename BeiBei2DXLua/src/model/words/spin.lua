@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spin"]={"spin","[spɪn]","[spɪn]","v.旋转",'n.旋转,疾驰|||v.纺织,旋转,拉长','The pitcher gave a spin to the ball.','投手使球旋转。','The collision sent the car spinning across the road.','汽车被撞得转著圈儿冲到路的另一边。'}

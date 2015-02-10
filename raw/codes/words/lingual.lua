@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lingual"]={"lingual","['lɪŋgw(ə)l]","['lɪŋɡwəl]","adj.舌的",'adj.舌的,舌音的,语言的|||n.舌音,舌音字','lingual diversity.','语言的多样性','Over here, they\'re not even lingual.','在这，他们甚至什么话都说不来.'}

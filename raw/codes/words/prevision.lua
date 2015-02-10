@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prevision"]={"prevision","[prɪ'vɪʒən]","[,privɪʒən]","n.先见",'n.先见,预感|||vt.预见','he accepted subject to one prevision.','他接受了这个任务','we have to do the prevision work before lessons','我们必须在上课前预习'}

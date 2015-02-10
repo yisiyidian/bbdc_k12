@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tummy"]={"tummy","['tʌmɪ]","['tʌmɪ]","n.肚子",'n.肚子,胃','Bud, stop carrying on about your tummy ache like that.','巴德, 别为肚子痛大呼小叫了。','Your baby\'s tummy should feel warm, but not hot.','你宝宝的肚子摸起来应该是温的，而不是热的。'}

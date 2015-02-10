@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perspicuous"]={"perspicuous","[pə'spɪkjʊəs]","[ pə'spikjuəs ]","adj.明晰的",'adj.明晰的，易懂的','Dr. Green’s perspicuous explanation of the situation made the situation clear to us.','格林博士浅显易懂的解说使我们明确了解了这一情况。','This program has perspicuous interface and extensive application.','该程序界面明了，适用范围广。'}

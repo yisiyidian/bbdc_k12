@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lurid"]={"lurid","['l(j)ʊərɪd]","['lʊrɪd]","adj.可怕的",'adj.可怕的，骇人听闻的，苍白的，耀眼的','The papers gave the lurid details of the murder.','报纸上描述了谋杀案的详情，令人毛骨悚然。','The sky was lurid with the flames of the eruptive volcano.','火山喷发的火焰把天空映得通红。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["touchstone"]={"touchstone","['tʌtʃstəʊn]","['tʌtʃ'ston]","n.试金石",'n.试金石，检验标准','Job security has become the touchstone of a good job for many employees.','工作稳定性已成为很多员工衡量一份工作好坏的标准。','Marriage is the touchstone of love.','婚姻是爱情的试金石。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recruit"]={"recruit","[rɪ'kruːt]","[rɪ'krut]","n.招聘",'n.招聘,新兵,新成员|||vt.&vi.恢复,补充,徵募','It\'s difficult to recruit teachers of quality.','要聘请到素质好的老师是很困难的。','This job presents many difficulties to the new recruit.','这件工作对新手来说困难重重.'}

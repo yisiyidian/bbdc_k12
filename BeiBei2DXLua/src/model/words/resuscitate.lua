@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resuscitate"]={"resuscitate","[rɪ'sʌsɪteɪt]","[rɪ'sʌsɪtet]","vt.使复活",'vt.使复活,使苏醒|||vi.恢复，苏醒','He has submitted a bid to resuscitate the struggling magazine.','他已经投标来拯救这个岌岌可危的周刊。','He had a heart attack and all attempts to resuscitate him failed.','他的心脏病发作，所有抢救他的努力都失败了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mendacious"]={"mendacious","[men'deɪʃəs]","[ men'deiʃəs ]","adj.不真的",'adj.不真的,撒谎的','She gave us a mendacious report.','她给了我们一份虚假的报告。','A child who is mendacious was eaten by the wolf.','爱撒谎的小孩被狼吃了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["finely"]={"finely","['faɪnlɪ]","['faɪnli]","adv.精美地",'adv.精美地,漂亮地,细碎地','He was preparing fodder, chopping finely and mixing thoroughly.','他在准备饲料, 把它切碎,拌好.','These instruments are very finely set.','这些仪器是经过精密调整的.'}

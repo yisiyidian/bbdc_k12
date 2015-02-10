@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["affinity"]={"affinity","[ə'fɪnɪtɪ]","[ə'fɪnəti]","n.姻亲",'n.姻亲,密切关系,吸引力','She feels a strong affinity to him.','她感到他对她有很强的吸引力。','There is an affinity between Chinese and Japanese character.','汉字与日文之间有密切关系。'}

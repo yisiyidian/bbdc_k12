@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["my"]={"my","[maɪ]","[maɪ]","adj.我的",'adj.我的|||interj.用于表示惊讶的感叹词','||My|| phone was out of order.','我的电话坏了。','Please accept my apology.','请接受我的道歉。'}

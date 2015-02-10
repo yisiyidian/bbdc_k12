@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["version"]={"version","['vɜːʃ(ə)n]","['vɝʒn]","n.版本",'n.版本,说法，翻译','The song has a syncopated rhythm in the jazz version.','这首歌曲改编为爵士乐後采用了切分音节奏.','Can we accept his account as the true version?','我们能够相信他说的是实情吗?'}

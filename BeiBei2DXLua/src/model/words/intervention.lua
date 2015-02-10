@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intervention"]={"intervention","[ɪntə'venʃ(ə)n]","[,ɪntɚ'vɛnʃən]","n.插入",'n.插入,介入,调停','The government\'s intervention in this dispute will not help.','政府对这场争论的干预不会起作用.','His intervention brought their quarrel to a climax.','他一干预使他们的口角达到最激烈程度.'}

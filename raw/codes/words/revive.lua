@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["revive"]={"revive","[rɪ'vaɪv]","[rɪ'vaɪv]","vt.使重生",'vt.使重生,恢复精神,重新记起,唤醒|||vi.复生','All attempts to revive the fishing industry were foredoomed to failure.','千方百计振兴渔业注定徒劳无功.','A dash of water in his face will revive him.','向他脸上泼水能使他苏醒。'}

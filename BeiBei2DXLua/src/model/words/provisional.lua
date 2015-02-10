@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["provisional"]={"provisional","[prə'vɪʒ(ə)n(ə)l]","[prə'vɪʒənl]","adj.暂时的",'adj.暂时的|||n.临时性,临时人员','A copy of the provisional agenda in enclosed for your information.','随信寄上一份暂定的议事日程安排供参考。','This is only a provisional regulation.','这只是一种临时规定。'}

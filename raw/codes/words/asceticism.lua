@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["asceticism"]={"asceticism","[ə'setɪsɪz(ə)m]","[ə'sɛtɪsɪzəm]","n.禁欲主义",'n.禁欲主义','Her opposed the asceticism of devotion to sciences, advocated the gay science.','他反对为科学献身的苦行主义，主张快乐的科学。','||Asceticism|| comes from the Greek word for exercise.','“禁欲主义”这个词来自希腊语中的“修练”一词。'}

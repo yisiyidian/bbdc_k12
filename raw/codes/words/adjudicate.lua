@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adjudicate"]={"adjudicate","[ə'dʒuːdɪkeɪt]","[ə'dʒudɪket]","vt.判决",'vt.判决，裁定|||vi.充当裁判','Magistrate may be paid expenses when adjudicate.','当作裁决时也许要支付治安法官的开支。','He is adjudicated bankrupt.','他被裁定为破产者。'}

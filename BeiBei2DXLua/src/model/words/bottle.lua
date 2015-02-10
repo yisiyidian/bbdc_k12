@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bottle"]={"bottle","['bɒt(ə)l]","['bɑtl]","n.瓶子",'n.瓶子|||vt.装瓶,抑制','Do you bottle your fruit or freeze it?','你是把水果装在罐里保存呢，还是冷冻起来保存？','Why don\'t we crack open a bottle of champagne to celebrate?','我们何不开瓶香槟酒庆祝一下呢？'}

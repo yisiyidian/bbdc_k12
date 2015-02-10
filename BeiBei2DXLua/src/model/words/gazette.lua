@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gazette"]={"gazette","[gə'zet]","[ ɡə'zet ]","n.报",'n.报,公报,报纸|||v.刊载于公报','His appointment was gazetted last week.','上周在公报上宣布了对他的任命。','All legislation is published in the government gazette.','所有的新法例都被刊登在政府宪报上。'}

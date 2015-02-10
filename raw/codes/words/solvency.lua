@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["solvency"]={"solvency","['sɒlvənsɪ]","['sɔlvənsi]","n.偿付能力",'n.偿付能力，溶解力','Fears about the solvency of the banks precipitated the great economic crash.','对银行偿付能力出现恐慌更加速了经济的崩溃。','...unsound investments that could threaten the company\'s solvency.','…可能威胁到公司偿债能力的不良投资。'}

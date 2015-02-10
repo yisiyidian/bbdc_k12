@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resident"]={"resident","['rezɪd(ə)nt]","['rɛzɪdənt]","adj.居住的",'adj.居住的|||n.居民,旅客','This is your resident DJ signing off for another week with our signature tune.','这是本台流行音乐唱片节目主持人, 现在播放信号曲来结束我们为您安排的这一星期的节目.','Immigrant workers were classed as resident aliens.','移民来的工人已归入外侨类.'}

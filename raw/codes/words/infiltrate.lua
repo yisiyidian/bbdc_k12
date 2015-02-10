@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infiltrate"]={"infiltrate","['ɪnfɪltreɪt]","[ɪn'fɪltret]","v.（使）渗透",'v.（使）渗透，（使）渗入','Part of a sniper\'s mission is to infiltrate enemy territory.','狙击手的任务之一就是渗透到敌人的领地。','The teacher tried to infiltrate her ideas into the children\'s minds.','老师设法把她的思想渗透到孩子们的心中。'}

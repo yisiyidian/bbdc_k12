@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["soda"]={"soda","['səʊdə]","['sodə]","n.汽水",'n.汽水,苏打','Some of my friends like soda crackers.','我的一些朋友喜欢苏打饼干。','We ordered 3 cases of soda for the party.','我们为晚会定购了三箱苏打水。'}

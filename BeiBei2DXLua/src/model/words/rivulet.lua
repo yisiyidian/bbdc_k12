@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rivulet"]={"rivulet","['rɪvjʊlɪt]","['rɪvjələt]","n.小河",'n.小河，小溪','The school is located near the rivulet.','学校坐落在小河附近。','a placid rivulet','一条安静的小河'}

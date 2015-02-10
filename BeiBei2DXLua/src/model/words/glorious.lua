@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glorious"]={"glorious","['glɔːrɪəs]","['ɡlɔriəs; 'ɡloriəs]","adj.光荣的",'adj.光荣的,辉煌的','Our Party is a great, glorious and correct Party.','我们的党是一个伟大、光荣、正确的党。','We enjoy seeing the glorious beams of the rising sun.','我们喜欢观赏初升太阳的灿烂光辉。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anecdotal"]={"anecdotal","[,ænɪk'dəʊtl]","[,ænɪk'dotl]","adj.逸话的",'adj.逸话的,多逸事趣闻的,轶事一样的','This is only anecdotal evidence of life on Mars.','火星上存在生命仅仅是谣言。','The news you brought is anecdotal to me.','你的消息对我而言是一则趣闻。'}

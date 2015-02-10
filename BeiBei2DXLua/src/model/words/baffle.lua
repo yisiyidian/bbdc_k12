@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["baffle"]={"baffle","['bæf(ə)l]","['bæfl]","v.困惑",'v.困惑,为难','The question baffled me completely and I could not answer.','这个问题把我彻底难倒了，我答不出来。','The beautiful scenery baffles description.','这景色美得难以形容。'}

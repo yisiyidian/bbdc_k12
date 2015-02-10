@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bunker"]={"bunker","['bʌŋkə]","['bʌŋkɚ]","n.煤仓",'n.煤仓,[高尔夫]沙坑|||v.击入沙坑,陷入穷境,将燃料装入（燃料仓）','He/His ball is bunkered.','他把球打进了沙坑.','watched the missile launch from a bunker.','看见导弹从一个掩体发射出来'}

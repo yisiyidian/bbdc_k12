@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oral"]={"oral","['ɔːr(ə)l]","['ɔrəl]","adj.口头的",'adj.口头的|||n.口试','My oral English is pretty rusty.','我的英语口语全荒废了。','The Cambridge Business Exams are part written, part oral.','＂商务剑桥英语考试一部分是笔试，一部分是口试。＂'}

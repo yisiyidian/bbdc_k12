@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outdated"]={"outdated","[aʊt'deɪtɪd]","['aʊt'detɪd]","adj.旧式的",'adj.旧式的,落伍的,过时的|||v.使时|||vbl.过时','The development of new machinery has outdated many plants.','新机器之发展于许多的工厂显的落伍。','The quality is all right, but the style is a bit outdated.','质量无问题，只是式样有点过时。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grope"]={"grope","[grəʊp]","[ɡrop]","v.(暗中)摸索",'v.(暗中)摸索,探索','I grope for the light switch in the dark room.','我在黑洞洞的屋里摸索著寻找电灯开关。','I groped for the door handle in the dark.','我在黑暗中摸索着门把手。'}

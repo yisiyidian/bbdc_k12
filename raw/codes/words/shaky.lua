@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shaky"]={"shaky","['ʃeɪkɪ]","['ʃeki]","adj.不稳固的",'adj.不稳固的,摇晃的','Their marriage got off to rather a shaky start.','他们的婚姻一开始就有些不稳固.','Having a feeble or unsteady gait; shaky.','不稳的, 虚弱的; 摇晃的'}

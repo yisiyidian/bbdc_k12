@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bide"]={"bide","[baɪd]","[ baid ]","vt.等候",'vt.等候,忍耐|||vi.等待，停留','I don\'t think you should let the house go for￡75, 000. If you\'re prepared to bide your time I\'m sure I could get you a higher offer.','我认为你不该把房子只卖七万五千英镑, 如果你有意等待, 我肯定能让你得到一个更高的价钱。','If we bide our time the chance will come.','只要我们等待时机, 总会有希望的。'}

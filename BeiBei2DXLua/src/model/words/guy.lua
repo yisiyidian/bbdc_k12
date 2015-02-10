@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["guy"]={"guy","[gaɪ]","[ ɡai ]","n.(男)人",'n.(男)人,家伙,拉索|||vt.嘲笑','What a downer that guy is!','那家伙多让人泄气呀!','He\'s a helluva (nice) guy.','他是个呱呱叫的（好）人.'}

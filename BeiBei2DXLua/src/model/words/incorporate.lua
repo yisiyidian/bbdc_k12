@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incorporate"]={"incorporate","[ɪn'kɔːpəreɪt]","[ in'kɔ:pəreit, in'kɔ:pərət ]","vi.合并",'vt.组成公司；包含；使混合；使具体化|||vi.包含；吸收；合并；混合','Many of your suggestions have been incorporated in the new plan.','你的很多建议已经被纳入新计划中。','We had to incorporate for a company for tax reasons.','出于税务原因，我们得合并公司。'}

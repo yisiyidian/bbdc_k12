@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fury"]={"fury","['fjʊərɪ]","['fjʊri]","n.愤怒",'n.愤怒,狂暴,狂怒的人|||n.复仇女神','He was white with fury.','他气得脸色发白。','In my fury, I dashed all the dishes to the floor.','气愤之下，我把所有的杯盘都摔到地上去了。'}

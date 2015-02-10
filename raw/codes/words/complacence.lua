@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["complacence"]={"complacence","[kəm'plesns]","[ kəm'pleisns ]","n.自满",'n.自满','Many people, even in high office, rest in the balmy complacence of assurance that science can solve everything.','许多人，甚至高级官员停留在沉醉于自信科学能解决任何问题。','||Complacence|| is harmful to one\'s growth.','自满对一个人的成长很不利。'}

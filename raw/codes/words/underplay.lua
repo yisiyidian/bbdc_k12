@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["underplay"]={"underplay","[ʌndə'pleɪ]","['ʌndɚ,kle]","v.轻描淡写",'v.轻描淡写,表演不充分','We often underplay the skills we have.','我们常对自己拥有的技能轻描淡写。','as in the recent debate, the both sides all underplayed the role of census','在最近的辩论中，双方都低估了普查的重要性'}

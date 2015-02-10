@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["furtive"]={"furtive","['fɜːtɪv]","[ 'fə:tiv ]","adj.偷偷的",'adj.偷偷的','That person was furtive and did not want to be noticed.','那人鬼鬼祟祟的并不想让人注意。','He cast a furtive glance at her.','他偷偷瞥了她一眼。'}

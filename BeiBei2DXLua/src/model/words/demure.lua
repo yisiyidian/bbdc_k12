@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["demure"]={"demure","[dɪ'mjʊə; dɪ'mjɔː]","[dɪ'mjʊr]","adj.严肃的",'adj.严肃的，端庄的，装成端庄或严肃的','She looks like a very demure young lady.','她看上去像一个矜持的少女。','She gave him a demure smile.','她对他娴静地笑了笑。'}

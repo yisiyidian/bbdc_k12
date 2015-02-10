@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pillow"]={"pillow","['pɪləʊ]","['pɪlo]","n.枕头",'n.枕头|||vt.枕,搁,垫','He fell asleep as soon as he touched the pillow.','他脑袋一碰枕头就睡着了.','He smothered the baby with a pillow.','他用枕头把婴儿闷死了.'}

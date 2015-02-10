@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["depute"]={"depute","[dɪ'pjuːt]","[dɪ'pjut]","v.派...为代表或代理",'v.派...为代表或代理','They were deputed to put our views to Parliament.','他们代表我们向议会表达我们的观点。','He deputed the running of the department to an assistant.','他把部门的管理工作委托给助手了。'}

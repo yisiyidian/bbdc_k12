@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pageant"]={"pageant","['pædʒ(ə)nt]","['pædʒənt]","n.盛会",'n.盛会,游行,虚饰','A public celebration or spectacular pageant.','盛典公共庆祝活动或热闹的游行','We are all invited to take part in the pageant.','我们全都被邀请参加这次盛典。'}

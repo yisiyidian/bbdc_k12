@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["malfunction"]={"malfunction","[mæl'fʌŋ(k)ʃ(ə)n]","[,mæl'fʌŋkʃən]","n.故障",'n.故障|||v.发生故障,不起作用','The date was lost due to a software malfunction.','由于软件故障,数据丢失.','You\'re saying that his left ventricle had been weakened by the lvad malfunction?','你声称他的左心室因起搏器故障而开始衰弱?'}

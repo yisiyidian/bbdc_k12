@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assuredly"]={"assuredly","[ə'ʃʊrədli]","[ ə'ʃuəridli ]","adv.确实地",'adv.确实地,确信地','||Assuredly|| he didn\'t mean that.','确实他并没有那个意思。','I will come tomorrow assuredly.','我明天一定会来。'}

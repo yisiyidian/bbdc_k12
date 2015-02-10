@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chatter"]={"chatter","['tʃætə]","['tʃætɚ]","n.饶舌",'n.饶舌,啁啾,喋喋不休地谈，(小溪的)潺潺流水声，(牙齿)打颤|||v.喋喋不休地谈,咔嗒作响','He turned a deaf ear to his mother\'s chatter.','他对母亲的唠唠叨叨听而不闻。','Listening to his continuous stream of empty chatter really tested my patience.','听他那没完没了的连篇空话对我的耐心真是一大考验。'}

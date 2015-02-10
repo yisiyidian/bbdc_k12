@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["introvert"]={"introvert","['ɪntrəvɜːt]","['ɪntrəvɝt]","n.个性内向者vt.使...内向",'n.个性内向者vt.使...内向','She has a calm and introverted disposition.','她性格文静内向。','Are you an introvert or an extrovert?','你是内向型还是外向型的人？'}

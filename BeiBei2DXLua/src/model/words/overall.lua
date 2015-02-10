@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overall"]={"overall","['əʊvərɔːl]","[,ovə'rɔl]","adj.全部的",'adj.全部的,全体的,一切在内的|||adv.总的来说,全部地|||n.防护服，罩衫','||Overall||, the tone of the book is satirical.','总的说来, 这本书是讽刺性的.','The overall composition of the picture is good but some of the detail is distracting.','这幅画的构图不错, 但有些细微处稍嫌喧宾夺主.'}

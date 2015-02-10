@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["retrieve"]={"retrieve","[rɪ'triːv]","[rɪ'triv]","vt.恢复",'vt.挽回,恢复,回忆,补偿|||vi.找回猎物|||n.取回,恢复','The company is fighting to retrieve its market share.','这个公司正在为恢复其市场份额而奋斗。','I should like to retrieve my umbrella which I left in the car.','我想取回我留在车上忘记带走的雨伞。'}

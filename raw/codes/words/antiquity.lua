@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["antiquity"]={"antiquity","[æn'tɪkwɪtɪ]","[æn'tɪkwəti]","n.古物",'n.高龄,古老,古物,古迹','There are many legends about the heroes of antiquity.','有许多关于古代英雄的传说。','inventions unknown to antiquity.','古人所不知的发明'}

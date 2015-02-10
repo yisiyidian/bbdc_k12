@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chateau"]={"chateau","['ʃætəʊ]","[ʃæ'to]","n.(法国的)城堡",'n.(法国的)城堡,别墅，庄园','Every girl dreams to live in a chateau.','每个女孩都梦想住在城堡里。','He inherits a chateau from his distant relative.','他从他远亲处继承了一幢别墅。'}

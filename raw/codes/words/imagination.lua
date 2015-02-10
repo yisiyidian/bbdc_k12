@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["imagination"]={"imagination","[ɪ,mædʒɪ'neɪʃ(ə)n]","[ɪ,mædʒɪ'neʃən]","n.想象",'n.想象,想象力,空想','I can\'t have seen a ghost it must have been imagination.','我看到的不可能是鬼－－一定是幻想的东西吧。','You didn\'t really see a ghost, it\'s only imagination.','你并没有真地看见鬼，这仅仅是幻象。'}

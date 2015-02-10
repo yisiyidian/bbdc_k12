@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["myself"]={"myself","[maɪ'self; mɪ'self]","[maɪ'sɛlf]","pron.我自己",'pron.我自己','Do I make myself clear?','我说清楚了吗?','I sympathize with you; I\'ve had a similar unhappy experience myself.','我很同情你，我自己也有过类似的不幸遭遇。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["friendship"]={"friendship","['fren(d)ʃɪp]","['frɛndʃɪp]","n.友谊",'n.友谊,友好','Take this ring as a pledge of our friendship.','请接受这个戒指作为我们友谊的信物。','He rebuffed all my offers of friendship.','他拒绝了我的一切友好表示。'}

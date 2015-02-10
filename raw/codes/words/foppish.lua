@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foppish"]={"foppish","['fɑpɪʃ]","[ 'fɔpiʃ ]","adj.浮华的",'adj.浮华的,艳冶的,矫饰的','He stood out because he wore a foppish hat, making him easy to find.','他很引人注目，因为他戴著一顶流里流气的帽子，很容易就能看到。','I think simple is beauty, not the foppish things.','我觉得简单就很美，而不是那些浮华的东西。'}

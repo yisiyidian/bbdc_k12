@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cabaret"]={"cabaret","['kæbəreɪ; ,kæbə'reɪ]","[,kæbə're]","n.[法](餐馆、夜总会等的)歌舞表演",'n.[法](餐馆、夜总会等的)歌舞表演，&lt;古&gt;酒馆','Have you done any cabaret?','你做过卡巴莱表演吗?','Helen made a successful career in cabaret.','海伦的卡巴莱歌舞表演生涯曾非常成功。'}

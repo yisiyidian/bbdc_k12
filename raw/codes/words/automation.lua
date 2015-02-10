@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["automation"]={"automation","[ɔːtə'meɪʃ(ə)n]","[,ɔtə'meʃən]","n.自动化",'n.自动化','||Automation|| by means of computers.','借助计算机而实现自动化。','||Automation|| has helped to increase production.','自动化促进了生产的发展.'}

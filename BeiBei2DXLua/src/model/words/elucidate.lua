@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["elucidate"]={"elucidate","[ɪ'l(j)uːsɪdeɪt]","[ɪ'lusɪdet]","v.阐明",'v.阐明,说明','There was no need for him to elucidate.','他没有解释的必要了。','Haig went on to elucidate his personal principle of war.','海格继续解释他个人的战争原则。'}

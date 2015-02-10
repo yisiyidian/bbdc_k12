@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flay"]={"flay","[fleɪ]","[fle]","v.剥皮",'v.剥皮,去皮,抢夺','To remain together was like volunteering to be flayed alive.','再要呆在一起就好像自愿被活活剥皮一样。','You cannot flay the same ox twice.','[谚]一头牛不能剥两次皮。'}

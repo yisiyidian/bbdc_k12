@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["retard"]={"retard","['rɪtɑːd]","['rɪtɑrd]","n.阻止",'n.阻止,迟延,减速|||vt.妨碍,迟延,拖住|||vi.受到延迟','Cold weather retards the growth of the crops.','寒冷的天气妨碍了庄稼生长。','Lack of sun retards plant growth.','光照不足则植物生长缓慢.'}

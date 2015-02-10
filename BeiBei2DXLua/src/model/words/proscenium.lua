@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["proscenium"]={"proscenium","[prə(ʊ)'siːnɪəm]","[prə'sinɪəm]","n.舞台前部(幕前部分)",'n.舞台前部(幕前部分)','The ideas of how to help their company get out of dilemma occupied the proscenium of his mind.','他首先想的是怎样帮助他们的公司走出困境。','In theaters, the loft is the area above and Behind the proscenium.','剧场里的阁楼是在台口上面和后面的区域。'}

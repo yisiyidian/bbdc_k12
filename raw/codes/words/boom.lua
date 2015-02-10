@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["boom"]={"boom","[buːm]","[bʊm]","n.繁荣",'n.繁荣,低沉声,帆杠,水栅|||vi.发出低沉声,急速增长|||vt.回响,急速增加,有力地击打','The boom swung over the deck.','帆杠在甲板上转动.','He made his pile during the property boom.','在房地产生意兴隆期间他发了大财.'}

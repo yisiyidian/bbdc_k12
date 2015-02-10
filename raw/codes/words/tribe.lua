@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tribe"]={"tribe","[traɪb]","[traɪb]","n.部落",'n.部落,种族,一伙人','A council of elders governs the tribe.','有个叫长老会的组织治理这个部落.','Our tribe is under a curse.','我们的部落正受诅咒。'}

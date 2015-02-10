@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vintage"]={"vintage","['vɪntɪdʒ]","['vɪntɪdʒ]","n.收获",'n.收获,年代(葡萄,葡萄酒);制造年代;一组具有共同特征的人或事情|||adj.佳酿的,古典的,优质的','He have some rare old vintage in his collection of wine.','在他的酒类收藏中有一些名贵的陈年葡萄酒。','What vintage is this wine?','这种酒是哪一年酿造的？'}

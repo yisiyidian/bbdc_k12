@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["demonstrative"]={"demonstrative","[dɪ'mɒnstrətɪv]","[dɪ'mɑnstrətɪv]","adj.易流露感情的",'adj.易流露感情的，喜怒形于色的|||adj.[语]指示的','He\'s very demonstrative; he kissed me on both cheeks.','他热情奔放，吻了我的双颊。','That is a demonstrative pronoun.','that是一个指示代词。'}

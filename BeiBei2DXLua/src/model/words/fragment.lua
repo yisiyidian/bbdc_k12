@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fragment"]={"fragment","['frægm(ə)nt]","['fræɡmənt]","n.碎片",'n.碎片|||vt.&vi.变成碎片|||[计算机]碎片','The chair fragmented under his weight.','在他重压下，椅子断了。','She dropped the vase on the floor and it broke into fragments.','她把花瓶掉在地上，摔成了碎片。'}

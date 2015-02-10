@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["boredom"]={"boredom","['bɔːdəm]","['bɔrdəm]","n.厌烦",'n.厌烦,厌倦,令人厌烦的事物','||Boredom|| is not a ground for divorce.','日久生厌不能成为离婚的理由.','They alleviated the boredom of waiting by singing songs.','他们以唱歌来减轻等候的厌烦.'}

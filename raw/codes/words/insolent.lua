@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insolent"]={"insolent","['ɪns(ə)l(ə)nt]","['ɪnsələnt]","adj.粗野的",'adj.粗野的,无礼的','You insolent young puppy!','你这个目中无人的小子!','An instance of insolent behavior, treatment, or speech.','傲慢无礼傲慢无礼的行为，处理方式或言辞'}

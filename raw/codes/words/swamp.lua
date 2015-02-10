@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["swamp"]={"swamp","[swɒmp]","[swɑmp]","n.沼泽",'n.沼泽,湿地|||v.淹没,陷于沼泽','In the swamp we were beset by mosquitoes.','我们在沼泽地受到蚊子的围攻。','The heavy rain has turned the small garden into a swamp.','大雨使这小花园变成了一块沼泽地。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["character"]={"character","['kærəktə]","['kærəktɚ]","n.个性",'n.个性,品质;字符;人物;名誉;地位','It is out of character to do that.','那样做不合适。','He is firm in character.','他性格坚强。'}

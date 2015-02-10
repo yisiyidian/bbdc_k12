@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fell"]={"fell","[fel]","[fɛl]","（过去式）下跌",'过去式|||n.兽皮|||vt.砍伐,击倒|||adj.凶残的,毁灭性的','A blow on the forehead felled him to the ground.','一拳打在额头上，将他击倒在地。','Badly infected trees should be felled and burned.','严重感染的树木应该被砍掉并焚烧。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swelling"]={"swelling","['swelɪŋ]","['swɛlɪŋ]","v.膨胀(泡胀)",'v.膨胀(泡胀)|||adj.膨胀的(增大的)','The swelling has gone down a little.','肿块已小了一些.','He probed the swelling anxiously with his finger.','他很担心地用手指触摸肿处。'}

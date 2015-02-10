@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insuperable"]={"insuperable","[ɪn'suːp(ə)rəb(ə)l; ɪn'sjuː]","[ɪn'supərəbl]","adj.（困难）难以克服的",'adj.（困难）难以克服的，不可逾越的','The difficulties that confront us seem insuperable.','我们面临的困难似乎是不可克服的。','The deep river is a insuperable barrier to those who could not swim.','对不会游泳的人来说，这条深河是无法超越的障碍。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["economic"]={"economic","[,iːkə'nɒmɪk; ek-]","[,ikə'nɑmɪk]","adj.经济学的",'adj.经济学的,经济的，有利可图的|||n.[-s]经济学(状况等)','They had led the country into economic disaster.','他们把国家带入了经济灾难中。','The threat of an economic depression hangs over the world.','经济衰退的威胁笼罩着世界。'}

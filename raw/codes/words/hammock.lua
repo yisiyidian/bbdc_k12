@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hammock"]={"hammock","['hæmək]","['hæmək]","n.吊床",'n.吊床','After lunch Father rested in the hammock.','午饭后, 父亲躺在吊床上休息。','She lay in a hammock to have a rest.','她躺在吊床上休息一会。'}

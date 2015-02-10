@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slavish"]={"slavish","['sleɪvɪʃ]","['slevɪʃ]","adj.无独创性的",'adj.无独创性的，盲从的。照搬的；奴隶的，奴隶性的','Their slavish devotion to the leader is unhealthy.','他们对领导的盲目崇拜是不健康的。','His style is a slavish imitation of his teacher\'s.','他一味模仿教师的风格，毫无创意。'}

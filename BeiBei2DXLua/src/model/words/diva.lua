@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diva"]={"diva","['diːvə]","['divə]","n.歌剧女主角",'n.歌剧女主角，著名女歌手','Does he like diva singers?','他是否喜欢天后歌手？','Let\'s give it up for pop diva Coco Lee!','让我们用热烈的掌声欢迎流行天后李玟'}

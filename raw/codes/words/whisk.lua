@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whisk"]={"whisk","[wɪsk]","[wɪsk]","n.拂",'n.拂,扫帚,毛掸子,搅拌器|||v.拂,迅速移动,搅拌','||Whisk|| the egg and then add the flour.','打好鸡蛋以後再加面粉.','The cow brushed away the flies with a whisk of its tail.','母牛用尾巴拂去苍蝇。'}

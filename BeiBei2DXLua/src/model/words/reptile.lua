@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reptile"]={"reptile","['reptaɪl]","['rɛptaɪl]","adj.爬虫类的",'adj.爬虫类的|||n.爬行动物','Snakes and crocodiles are reptiles.','蛇和鹗鱼都是爬行动物。','The feeble snake is reptile.','这个虚弱的蛇是爬行类动物。'}

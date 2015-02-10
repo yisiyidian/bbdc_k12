@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["freestanding"]={"freestanding","['fri'stændɪŋ]","[ 'fri:'stændiŋ ]","adj.独立式的",'adj.独立式的','A freestanding, roofed, usually open-sided structure providing a shady resting place.','凉亭，阳台一种不依靠支撑物的、有屋顶的、通常有一边敞开的构造，可提供一有阴凉的休息地','a freestanding bell tower; a freestanding maternity clinic.','一座独立式钟塔；独立产科诊所'}

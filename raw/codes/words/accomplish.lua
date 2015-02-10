@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["accomplish"]={"accomplish","[ə'kʌmplɪʃ; ə'kɒm-]","[ə'kɑmplɪʃ]","vt.完成",'vt.完成','It lies on us to accomplish the task.','完成这项任务是我们的责任。','We should not try to accomplish two tasks at once.','我们不能指望同时完成两件工作。'}

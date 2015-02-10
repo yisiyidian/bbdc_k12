@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sorrowful"]={"sorrowful","['sɒrə(ʊ)fʊl; -f(ə)l]","['sɑrofl]","adj.悲伤的",'adj.悲伤的，使人伤心的','She looked sorrowful and dejected.','她看上去又悲伤又沮丧.','A funeral is a sorrowful occasion.','葬礼是一种令人悲伤的场合.'}

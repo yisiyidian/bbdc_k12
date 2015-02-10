@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["figurative"]={"figurative","['fɪg(ə)rətɪv; -gjʊ-]","['fɪgərətɪv]","adj.比喻的",'adj.比喻的,形容多的,修饰丰富的','The word here is used in its figurative sense.','这个词在这儿取的是它的比喻意义。','His career spanned some 50 years and encompassed both abstract and figurative painting.','他的职业生涯延续了大约50年，作品既有抽象画也有写实画。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outpatient"]={"outpatient","['aʊtpeɪʃ(ə)nt]","['aʊt'peʃənt]","n.门诊病人",'n.门诊病人','Outpatient wards; outpatient facilities.','门诊病房；门诊所的设备','outpatient wards; outpatient facilities.','门诊病房；门诊所的设备'}

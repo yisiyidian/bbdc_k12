@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irritation"]={"irritation","[ɪrɪ'teɪʃn]","[,ɪrə'teʃən]","n.刺激",'n.刺激,烦恼,刺激物','Causing irritation or distress; vexatious.','烦人的令人发怒或苦恼的; 令人烦恼的','A source of irritation or annoyance.','令人生气的事或者引起烦恼之事'}

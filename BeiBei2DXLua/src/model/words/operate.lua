@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["operate"]={"operate","['ɒpəreɪt]","['ɑpə'ret]","vi.操作",'vi.操作,运转|||vt.起作用,动手术','The lift doesn\'t operate properly.','这台电梯运转不正常。','The new law operates to destroy our advantages.','这项新法律损害我们的利益。'}

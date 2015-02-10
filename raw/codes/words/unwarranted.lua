@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unwarranted"]={"unwarranted","[ʌn'wɒr(ə)ntɪd]","[ʌn'wɔrəntɪd]","adj.无根据的",'adj.无根据的，未经授权的，无保证的','Such strong criticism was completely unwarranted.','这样猛烈的批评完全没有必要。','I think it is a totally unwarranted waste of public money.','我认为这是毫无正当理由地浪费公款。'}

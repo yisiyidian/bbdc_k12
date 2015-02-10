@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["watercourse"]={"watercourse","['wɔːtəkɔːs]","['wɔtɚkɔrs]","n.水流(河床)",'n.水流(河床)','With plenty of rainfall all year round, it is also called the Golden ||Watercourse||.','因为全年降雨丰富，它也被称为黄金水道。','The waste repository was usually the nearest watercourse.','废物容纳地点一般是离城市最近的水域.'}

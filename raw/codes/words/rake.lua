@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rake"]={"rake","[reɪk]","[rek]","n.耙子",'n.耙子,集赌金工具,向船尾的倾斜|||v.向船尾,了望,用耙子','Don\'t always rake up the old stories.','别总是旧事重提了。','The field had been raked.','田地已经耙平了。'}

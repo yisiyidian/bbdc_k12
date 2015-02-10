@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pang"]={"pang","[pæŋ]","[pæŋ]","n.剧痛",'n.剧痛,悲痛,苦闷|||vt.使剧痛','As he thought of it pang of pain struck through him like a knife and made each delicate fiber of his nature quiver','想到这里，尖利的痛苦象刀子一样切割着他，使他天性中每一根柔弱的纤维都战栗着。','He felt the pangs of remorse at the thought of that.','一提起那事，他就感到良心的谴责。'}

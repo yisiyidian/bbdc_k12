@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gastronomy"]={"gastronomy","[gæ'strɒnəmɪ]","[ɡæ'strɑnəmi]","n.美食法",'n.美食法,美食学','The country is renowned for its gastronomy, history, culture and fashion.','这个国家以美食、 历史 、 文化和时尚闻名于世。','He studied gastronomy but cannot make a living as a cook.','他学习了烹饪但却无法靠厨艺过活。'}

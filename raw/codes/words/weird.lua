@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["weird"]={"weird","[wɪəd]","[wɪrd]","adj.怪异的",'adj.怪异的，离奇的|||n.命运；预言者','From his weird behaviour, he seems a bit of an oddity.','从他不寻常的行为看来, 他好像有点怪.','I heard weird shrieks in the darkness','我在黑暗中听到奇怪的尖叫声。'}

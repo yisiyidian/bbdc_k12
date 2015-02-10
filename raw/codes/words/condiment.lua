@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["condiment"]={"condiment","['kɒndɪm(ə)nt]","['kɑndɪmənt]","n.调味品",'n.调味品','This condiment will help to bring out the flavour.','这种调味品可以帮助提味。','Chinese pepper is an important condiment in Sichuang food.','花椒在川菜中是重要的（调味品）。'}

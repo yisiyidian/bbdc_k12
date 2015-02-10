@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["saturated"]={"saturated","['sætʃəreɪtɪd]","['sætʃəretɪd]","adj.饱和的",'adj.饱和的,渗透的,深颜色的','The blood had saturated his shirt.','血浸透了他的衬衫。','The Water has been saturated with a special chemical.','水已被一种特殊化合物质吸收了。'}

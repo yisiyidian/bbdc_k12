@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wangle"]={"wangle","['wæŋg(ə)l]","['wæŋgl]","v.（用计谋等）得到",'v.（用计谋等）得到,取得','She managed to wangle an invitation to the reception.','她设法弄到了招待会的请帖。','I\'m sure you can wangle the information out of him.','我完全相信你能设法从他口中套出消息。'}

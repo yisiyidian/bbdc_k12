@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["utter"]={"utter","['ʌtə]","['ʌtɚ]","adj.全然的",'adj.全然的,绝对,完全|||vt.&vi.发出,作声,发表','Don\'t talk such utter rot!','别说这种荒唐话了!','I\'ve never heard such utter twaddle!','我还从来没听过这麽愚蠢透顶的话!'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dither"]={"dither","['dɪðə]","['dɪðɚ]","n.抖",'n.抖,发抖,兴奋|||vi.发抖，犹豫不决','Stop dithering about which film you want to see or you\'ll miss them both!','到底看哪一部影片, 别再犹豫了, 不然的话, 两部影片你都要耽误了!','We have been living together for five years, and we\'re still dithering over whether to marry.','我们同居了5年，但还是犹豫是否该结婚。'}

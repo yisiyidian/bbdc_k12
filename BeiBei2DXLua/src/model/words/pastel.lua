@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pastel"]={"pastel","['pæst(ə)l]","[pæ'stɛl]","n.粉蜡笔",'n.粉蜡笔,粉蜡笔画,漫笔作画','||Pastel|| colours are restful to the eye.','清淡柔和的颜色可以养目。','She works in pastels.','她用彩色粉笔作画.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["centennial"]={"centennial","[sen'tenɪəl]","[sɛn'tɛnɪəl]","n.百年纪念",'n.百年纪念|||=centenary(美)|||adj.一百年的','1982 was the centennial of Charles Darwin’s death.','1982年是查尔斯·达尔文逝世100周年纪念。','Many statemen attended the centennial celebration of the founding of the republic.','许多政治家出席了该共和国成立百年的纪念庆典。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pig"]={"pig","[pɪg]","[pɪɡ]","n.猪",'n.猪','A pig is a domestic animal.','猪是一种家畜。','The farmer keeps hundreds of pigs on his farm.','那个农场主在他的农场里养了几百头猪。'}

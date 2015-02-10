@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["referendum"]={"referendum","[,refə'rendəm]","[,rɛfə'rɛndəm]","n.公民投票",'n.公民投票,普通投票,请示书','constitutional referendum','宪法全民公决','The question was decided by referendum.','这问题是由全民投票决定的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["yielding"]={"yielding","['jiːldɪŋ]","['jildɪŋ]","adj.屈从的",'adj.屈从的,柔顺的,生产的','A plot of land belonging or yielding profit to an English parish church or an ecclesiastical office.','教会属地属于英国教区教会或某一教职的土地，为其获利润的土地','Making additions or yielding supplies; contributory.','附属的，纳贡的附加的或进贡的，贡献的'}

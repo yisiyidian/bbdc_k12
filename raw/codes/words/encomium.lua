@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["encomium"]={"encomium","[en'kəʊmɪəm]","[ɛn'komɪəm]","n.赞颂",'n.赞颂,颂辞','We hear only encomiums to it.','我们只听到对它的溢美之词。','encomium-very high praise in speech or writing','极高的赞颂; 推崇; 赞词; 颂词.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coincident"]={"coincident","[kəʊ'ɪnsɪd(ə)nt]","[ko'ɪnsɪdənt]","adj.一致的",'adj.同时发生的，巧合的，一致的,符合的','The culture areas are essentially coincident with language areas.','文化区与语言区基本重合。','The result are coincident with my mind.','这个结果和我想的一样。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sale"]={"sale","[seɪl]","[sel]","n.销售(量)",'n.销售(量),削价出售','The local dress shop is having a sale.','附近的时装店正在大拍卖。','The latest model of this washer is now on sale in your shops.','这种最新型号的洗衣机目前正在你们的商店中出售。'}

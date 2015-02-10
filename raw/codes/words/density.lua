@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["density"]={"density","['densɪtɪ]","['dɛnsəti]","n.密集",'n.密集,密度,透明度','The density of water is 1.','水的密度是1。','The house has some high-density insulation materials in the roof.','房子的屋顶采用了高密度的绝缘材料。'}

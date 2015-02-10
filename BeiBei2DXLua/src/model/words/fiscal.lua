@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fiscal"]={"fiscal","['fɪsk(ə)l]","['fɪskl]","adj.财政的",'adj.财政的,国库的','The increase of taxation is an important fiscal policy.','增税是一项重要的财政政策.','They\'re ready to cut the federal budget deficit for the next fiscal year.','他们已准备好削减下一财年的联邦预算赤字。'}

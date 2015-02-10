@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overreach"]={"overreach","[əʊvə'riːtʃ]","[,ovɚ'ritʃ]","vt.做事过头",'vt.做事过头，（靠狡诈）取胜，（伸得过长而）超出|||vi.做的过头，伸得过远，夸大|||n.马后蹄踢前蹄','||Overreach|| a goal.','做得过头而没实现目标','Don\'t apply for that job: you\'re in danger of overreaching yourself.','不要申请那份工作, 以免有不自量力之嫌.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tycoon"]={"tycoon","[taɪ'kuːn]","[taɪ'kun]","n.企业界的大亨",'n.企业界的大亨，（日本幕府的）将军','The tycoon is on the verge of bankruptcy.','那名大亨濒临破产的边缘。','The high-salaried manager replaced the business tycoon.','高薪经理取代了企业巨头。'}

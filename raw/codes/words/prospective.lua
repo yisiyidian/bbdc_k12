@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prospective"]={"prospective","[prə'spektɪv]","[prə'spɛktɪv]","adj.未来的",'adj.未来的,预期的','I hope you can give this your immediate attention so that I can notify the prospective guests promptly.','我希望您能对此予以迅速考虑，以便我能及时通知期待的客人。','She is married to a prospective lawyer.','她嫁给了一个未来的律师。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["banish"]={"banish","['bænɪʃ]","['bænɪʃ]","vt.驱逐",'vt.驱逐，流放，消除','He is banished for ten year.','他被放逐了10年。','The spy was dishonourably banished from, the land.','那个间谍被不光彩地驱逐出境。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["product"]={"product","['prɒdʌkt]","['prɑdʌkt]","n.产品",'n.产品,成果,乘积','If our product is properly marketed, it should sell very well.','如果我们的产品适当加以推销，销路应该很好。','The gross national product had increased 5 percent last year.','去年的国民生产总值提高了百分之五。'}

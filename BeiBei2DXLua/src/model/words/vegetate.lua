@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vegetate"]={"vegetate","['vedʒɪteɪt]","['vɛdʒətet]","v.生长",'v.生长，无所事事，使像植物般生长','The vegetables in the garden vegetate vigorously.','园子里的植物在茁壮成长。','He spends all his free time at home ||vegetating|| in front of the TV.','他一有空闲时间就窝在家里看电视。'}

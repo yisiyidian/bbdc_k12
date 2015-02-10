@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["combustion"]={"combustion","[kəm'bʌstʃ(ə)n]","[kəm'bʌstʃən]","n.燃烧",'n.燃烧','The spontaneous combustion of the oil-soaked rags caused the barn to catch fire.','油布碎片的自燃使谷仓起火。','Before mixing with the products of combustion, the air is preheated.','空气在与燃烧生成物混合之前要进行预热。'}

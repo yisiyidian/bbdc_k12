@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["injury"]={"injury","['ɪn(d)ʒ(ə)rɪ]","['ɪndʒəri]","n.损害",'n.受伤处,损害,伤害','She still suffers considerable discomfort from her injury.','她因那次受伤至今仍感不适。','He had a spinal injury in that accident.','他在那次事故中脊柱受了伤。'}

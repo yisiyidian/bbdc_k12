@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["resplendent"]={"resplendent","[rɪ'splend(ə)nt]","[rɪ'splɛndənt]","adj.辉煌的",'adj.辉煌的,灿烂的','The princess arrived, resplendent in a new white dress.','公主光彩照人地穿着一身雪白的新礼服来了。','We are enjoying the resplendent colors of the New England woods in the autumn.','我们欣赏着秋天里新英格兰树林的瑰丽色彩。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gratification"]={"gratification","[ɡrætɪfɪ'keɪʃn]","[,ɡrætɪfɪ'keʃən]","n.满足",'n.满足,喜悦','Sensual gratification or indulgence.','（感官的）享乐感官的满足或沉溺','He got gratification when he knew his plans have been realized.','当得知他的计划已经实现后，他变得很满足。'}

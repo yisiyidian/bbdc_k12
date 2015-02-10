@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scatter"]={"scatter","['skætə]","['skætɚ]","n.散布",'n.散布,零星少量|||vt.驱散,散播|||vi.分散,消散','When the tree falls, the monkeys scatter.','树倒猢狲散。','The birds scattered at the sound of the gun.','鸟群一听到枪声就四处飞散了。'}

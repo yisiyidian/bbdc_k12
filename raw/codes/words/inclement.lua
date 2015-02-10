@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inclement"]={"inclement","[ɪn'klem(ə)nt]","[ɪn'klɛmənt]","adj.天气严酷(寒冷的",'adj.天气严酷(寒冷的,恶劣的,狂风暴雨)','The inclement weather won\'t stop us.','寒冷的天气阻止不了我们。','The General has an inclement reputation.','将军声名恶劣。'}

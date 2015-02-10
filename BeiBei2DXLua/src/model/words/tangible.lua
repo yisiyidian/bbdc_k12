@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tangible"]={"tangible","['tæn(d)ʒɪb(ə)l]","['tændʒəbl]","adj.有形的",'adj.有形的,可触摸的,确凿的,实际的','The prize is a tangible testimony that she has gotten a germ of write ability.','这个奖实实在在地说明了她具有创作才能。','There should be some tangible evidence that the economy is starting to recover.','应该有明显迹象表明经济开始复苏了。'}

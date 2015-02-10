@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glassware"]={"glassware","['glɑːsweə]","[ 'ɡlɑ:swεə, 'ɡlæs- ]","n.玻璃制品",'n.玻璃制品','They can be bought at any glassware shop','可在任何一家玻璃器皿店中买到','They hire out glassware for parties.','他们出租玻璃器皿供宴会用.'}

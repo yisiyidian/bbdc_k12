@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coincidence"]={"coincidence","[kəʊ'ɪnsɪd(ə)ns]","[ko'ɪnsɪdəns]","n.巧合",'adj.同时发生的|||n.巧合','Hello there, what a coincidence!','你好，真巧啊!','That was a really creepy coincidence.','那样的巧合实在太离奇了.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["honeymoon"]={"honeymoon","['hʌnɪmuːn]","['hʌnɪmun]","n.蜜月",'n.蜜月|||vi.度蜜月','The suite is for the honeymoon couple.','这套房是为新婚夫妇设的。','I suggest Paris as a good place for a honeymoon.','我提议去巴黎, 那是度蜜月的好去处.'}

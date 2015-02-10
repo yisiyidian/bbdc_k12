@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pretense"]={"pretense","['pritɛns]","[ pri'tens, 'pri:t- ]","n.借口",'n.借口,虚假,伪装','You can\'t keep up the pretense any longer.','你无法继续伪装下去了.','The act of inventing such a creation or pretense.','虚构，捏造虚构作品或捏造借口的行为'}

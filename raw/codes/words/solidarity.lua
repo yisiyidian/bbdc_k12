@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["solidarity"]={"solidarity","[,sɒlɪ'dærɪtɪ]","[,sɑlɪ'dærəti]","n.团结",'n.团结','Your union is based on solidarity forever.','你们的工会是建立在永远互相支援的基础上的.','I could not explain how much I valued my code of solidarity.','我解释不了我是多么看重团伙的规矩的.'}

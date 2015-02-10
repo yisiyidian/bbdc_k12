@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["calm"]={"calm","[kɑːm]","[kɑm]","adj.冷静的",'n.平稳,风平浪静|||adj.平静的,冷静的|||vt.&vi.平静下来,镇静','Her attempts to calm them down only made matters worse.','她设法使他们平静下来, 不想却适得其反.','You should keep calm even in face of danger.','即使面临危险，你也应当保持镇静。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recorder"]={"recorder","[rɪ'kɔːdə]","[rɪ'kɔrdɚ]","n.记录员",'n.记录员，记录器（录音机等）|||n.（英国某些市镇的）首席法官，市法院法官|||n.竖笛','The recorder wasn\'t plugged in.','录音机的插头没插上.','John fixed the tape recorder by himself.','约翰靠他自己修理录音机。'}

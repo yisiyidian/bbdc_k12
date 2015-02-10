@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["embassy"]={"embassy","['embəsɪ]","['ɛmbəsi]","n.大使馆",'n.大使馆,大使,外使团','The terrorists have occupied the embassy.','恐怖分子占领了大使馆.','A crowd had already collected outside the embassy gates.','使馆大门外已经聚集了一群人.'}

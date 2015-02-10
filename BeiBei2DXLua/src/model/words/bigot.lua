@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bigot"]={"bigot","['bɪgət]","['bɪɡət]","n.(宗教,政治等的)盲信者",'n.(宗教,政治等的)盲信者,顽固者','Much as he is opposed to lawbreaking, he is not bigoted about it.','他虽然非常反对犯法，但并不固执于此。','His words stamped him to be a bigot.','他讲的话表明他是个偏执的人.'}

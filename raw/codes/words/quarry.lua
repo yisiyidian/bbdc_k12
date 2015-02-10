@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quarry"]={"quarry","['kwɒrɪ]","['kwɔri]","n.采石场",'n.采石场,猎获物,出处，被追逐的目标|||v.挖出,苦心找出','The horseman aimed his lance at his quarry.','骑手把长矛对准了他的猎物。','It took the police several days to track down their quarry.','警方用了几天时间才追查到案中目标。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nationwide"]={"nationwide","['neɪʃ(ə)nwaɪd; -'waɪd]","[,neʃn'waɪd]","adj.全国性的",'adj.全国性的|||adv.在全国范围内','Before starting the new service, the company carry out nationwide opinion poll.','推出新的服务方式前，公司进行了全国范围的民意调查。','The new car is being launched with a nationwide sale campaign.','新型汽车以开展全国的销售活动投放市场。'}

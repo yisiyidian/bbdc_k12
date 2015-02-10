@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["encourage"]={"encourage","[ɪn'kʌrɪdʒ; en-]","[ɪn'kɝrɪdʒ]","v.鼓励",'v.鼓励,激励,支持|||vt.鼓励','Her success encouraged me to try the same thing.','她的成功鼓励我试做同样的事。','Peter, my English teacher, never fails to encourage us to study hard.','我的英文老师彼得总是鼓励我们要好好用功。'}

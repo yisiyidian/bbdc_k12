@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scintillate"]={"scintillate","['sɪntɪleɪt]","['sɪntl,et]","vt.闪烁(发火花)",'vt.闪烁(发火花)','His eyes scintillated excitation.','他的眼里闪烁着激动的光芒。','The stars scintillate.','星星闪烁发光。'}

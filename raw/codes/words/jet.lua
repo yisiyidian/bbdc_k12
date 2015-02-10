@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jet"]={"jet","[dʒet]","[dʒɛt]","n.喷气式飞机",'n.喷气式飞机，喷射,喷出,黑玉大理石|||vt.射出，喷射|||vi.气流中喷出|||adj.煤黑色的','This aircraft works by jet propulsion.','这架飞机是喷气推进的。','Developing the supersonic jet was quite an accomplishment.','开发超音速喷气机是一项了不起的成就。'}

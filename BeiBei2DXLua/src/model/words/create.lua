@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["create"]={"create","[kriː'eɪt]","[krɪ'et]","vt.创造",'vt.创造,造成','We\'ve tried to create the ambience of a French bistro.','我们想尽量创造出法国小餐馆的气氛.','This decision creates a dangerous precedent.','这个决定开创了一个危险的先例。'}

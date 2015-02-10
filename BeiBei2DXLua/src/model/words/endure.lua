@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["endure"]={"endure","[ɪn'djʊə; en-; -'djɔː]","[ɪn'dʊr]","vt.忍耐",'vt.忍耐,容忍|||vi.持久,持续','I could not endure the insolence of his behaviour.','我不能再忍受他那傲慢无礼的行为了。','I cannot endure listening to that any longer.','我再也不耐烦听那一套了。'}

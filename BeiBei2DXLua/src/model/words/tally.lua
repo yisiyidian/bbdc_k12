@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tally"]={"tally","['tælɪ]","['tæli]","n.计数器",'n.计数器,记分,一致,测量|||vt.计算,记录,使一致|||vi.计算,记分,一致','The two lists do not tally.','这两张单子不相符。','Don\'t forget to keep a careful tally of what you spend.','别忘了仔细记下你的开支帐目。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["documentary"]={"documentary","[dɒkjʊ'ment(ə)rɪ]","['dɑkjə'mɛntri]","adj.文献的",'adj.文献的|||n.纪录片','Her latest documentary is concerned with youth unemployment.','她最近的一部纪录片是关於青年人失业问题的.','Could you video the documentary for me?','帮我录一下这个纪录片好吗？'}

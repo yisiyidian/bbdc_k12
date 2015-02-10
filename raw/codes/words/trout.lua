@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trout"]={"trout","[traʊt]","[traʊt]","n.鳟鱼",'n.鳟鱼，鳟鱼肉','That brook is full of trout … "Says who. I never saw anybody catch trout there."','那条河里满是鳟鱼。--"胡说, 我从来没看到有人在那里钓到鳟鱼。"','The angler reeled the trout in slowly.','钓鱼的人慢慢地收绕钓丝钓起鳟鱼。'}

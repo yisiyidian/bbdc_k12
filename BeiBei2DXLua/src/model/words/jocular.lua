@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jocular"]={"jocular","['dʒɒkjʊlə]","['dʒɑkjəlɚ]","adj.诙谐的",'adj.好笑的，滑稽的，诙谐的','William\'s jocular personality makes him a very popular person.','威廉风趣的个性使他广受欢迎。','The song was written in a light-hearted jocular way.','这首歌的风格轻松愉快、诙谐风趣。'}

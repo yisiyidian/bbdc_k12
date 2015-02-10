@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["national"]={"national","['næʃ(ə)n(ə)l]","['næʃnəl]","adj.国家的",'adj.国家的,民族的|||n.国民','I got my hearing aid on the ||National|| Health (Service).','我的助听器是国民保健署资助的.','A lot has been done in the recovery of national economy in the past few years.','在过去的几年中我们为了国民经济的恢复做了大量的工作。'}

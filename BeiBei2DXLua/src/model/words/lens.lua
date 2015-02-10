@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lens"]={"lens","[lenz]","[lɛnz]","n.镜头",'n.镜头,透镜','In this operation the surgeons implant a new lens (in the eye).','医生在这次手术中给病人（眼球）植入了新的水晶体.','Don\'t smear the lens; I\'ve just polished it.','别把镜头弄脏了, 我刚刚擦过.'}

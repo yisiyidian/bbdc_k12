@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rebuke"]={"rebuke","[rɪ'bjuːk]","[rɪ'bjʊk]","v.斥责",'v.斥责,指责，阻止|||n.指责,谴责,非难','He meekly accepted the rebuke.','他顺从地接受了批评.','He chafes at rebuke.','他对于指责感到恼怒。'}

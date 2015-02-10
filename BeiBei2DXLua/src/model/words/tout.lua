@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tout"]={"tout","[taʊt]","[taʊt]","v.招来顾客",'v.招来顾客,死乞白赖地劝诱,刺探...情报','Street vendors were touting pedestrians.','商贩沿街叫卖招徕行人。','A ticket tout offered me a two pound ticket for ten pounds.','票贩子向我兜售门票，原价两英镑的票要价10英镑。'}

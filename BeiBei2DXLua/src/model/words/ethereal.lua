@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ethereal"]={"ethereal","[ɪ'θɪərɪəl]","[ɪ'θɪrɪəl]","adj.轻巧的",'adj.轻巧的，飘逸的，精致的，飘渺的|||adj.[化学]乙醚的','She has an ethereal beauty.','她有一种空灵的美。','The music has an ethereal quality.','这段乐曲给人一种飘渺的感觉。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ascetic"]={"ascetic","[ə'setɪk]","[ə'sɛtɪk]","adj.禁欲的",'adj.禁欲的|||n.苦行者','He left the luxuries of the court for the life of an ascetic.','他放弃了宫廷的奢华，过起了清贫的生活。','aesthetic and ascetic','苦行僧'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thrifty"]={"thrifty","['θrɪftɪ]","['θrɪfti]","adj.节俭的",'adj.节俭的,节约的，兴旺的，茁壮的','Mr. Thompson is so thrifty that he is able to save more than half of his weekly salary.','汤普生先生是如此节俭，能省下超过一半的周薪。','Only very thrifty children manage to fill up a money-box.','只有非常节俭的儿童才能存满一个储蓄罐。'}

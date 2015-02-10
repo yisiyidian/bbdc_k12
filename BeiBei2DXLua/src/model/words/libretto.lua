@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["libretto"]={"libretto","[lɪ'bretəʊ]","[lɪ'brɛto]","n.歌词集",'n.歌词集,歌剧剧本','The libretto of this opera is very verbose and difficult for even the most accomplished opera singer to master.','这场歌剧的剧本太过冗长，即使是熟练的演唱家也很难精通。','I can\'t understand an opera unless reading the libretto.','除非有歌词，否则我听不懂歌剧。'}

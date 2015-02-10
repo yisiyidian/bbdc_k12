@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thespian"]={"thespian","['θespɪən]","['θɛspɪən]","adj.悲剧的",'adj.悲剧的,戏剧的,(古希腊诗人)狄斯比斯的|||n.演员,悲剧演员','The movie director had thespian cooperation.','这个电影导演具有导演悲剧作品的天赋。','The actress demonstrated thespian talents at her first audition.','这位女演员第一次试镜就展现出戏剧天分。'}

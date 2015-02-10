@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["making"]={"making","['meɪkɪŋ]","['mekɪŋ]","n.制成",'n.制成|||动词make的现在分词','He tends to recoil from making difficult decisions.','他在难以作出决定时往往踌躇不前。','I don\'t like making speeches in public; it\'s so embarrassing.','我不喜欢在公开场合演说，太难为情了。'}

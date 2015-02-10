@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["menstrual"]={"menstrual","['menstrʊəl]","['mɛnstruəl]","adj.月经的",'adj.月经的','The first menstrual period, usually occurring during puberty.','月经初期第一次月经期, 通常发生于青春期','Abnormally heavy or extended menstrual flow.','月经过多异常多或长时间的月经来潮'}

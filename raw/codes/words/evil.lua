@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["evil"]={"evil","['iːv(ə)l; -vɪl]","['ivl]","adj.邪恶的",'adj.邪恶的,坏的|||n.邪恶,罪恶','The personification of evil as a devil is a feature of medieval painting.','用魔鬼象徵罪恶是中世纪绘画的特色.','No animal of the horoscope is considered dumb or ugly or evil.','天宫图上的动物没有一种被认为是愚笨的或丑陋的或邪恶的。'}

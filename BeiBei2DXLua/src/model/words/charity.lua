@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["charity"]={"charity","['tʃærɪtɪ]","['tʃærəti]","n.仁慈",'n.慈善机关(团体),仁慈,宽厚','They did so under the mask of charity.','他们是打着慈善的幌子这么做的。','The priest preached a sermon on the need of charity.','牧师在布道会上宣讲慈爱的必要。'}

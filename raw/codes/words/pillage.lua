@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pillage"]={"pillage","['pɪlɪdʒ]","['pɪlɪdʒ]","n.掠夺",'n.掠夺,抢劫,掠夺物|||v.掠夺,抢劫','Her handbag was pillaged on her way home.','在回家的路上，她的手提包被抢劫了。','The town was pillaged by the invading army.','入侵的军队将该城镇掠夺一空。'}

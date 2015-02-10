@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reputable"]={"reputable","['repjʊtəb(ə)l]","['rɛpjətəbl]","adj.受好评的",'adj.受好评的,有声望的,规范的','She is a reputable expert.','她是个有声望的专家。','It\'s a highly reputable firm.','这是一家有名气的公司。'}

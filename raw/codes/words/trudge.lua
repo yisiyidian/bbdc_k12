@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trudge"]={"trudge","[trʌdʒ]","[trʌdʒ]","n.沉重的步伐",'n.沉重的步伐|||v.沉重地走,蹒跚地走','It was a long trudge up the hill.','那段上山的路很难走。','He trudge three hour in the snow to get back home.','他在雪中跋涉三个钟点才回到家。'}

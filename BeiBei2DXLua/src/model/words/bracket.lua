@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bracket"]={"bracket","['brækɪt]","['brækɪt]","n.支架",'n.支架,括号,档次|||vt.支撑,放在括号内,归入一类,包含,支持','Millions of families have climbed a bracket or two.','数百万家庭的收入已提高了一两层.','The worker fixed a bracket on the wall.','工人在墙上固定了一个支架。'}

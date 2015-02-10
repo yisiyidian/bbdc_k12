@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["luminary"]={"luminary","['luːmɪn(ə)rɪ]","['lʊmə'nɛri]","n.杰出人物",'n.杰出人物,名人，发光体|||adj.杰出的','Jack chen is the luminary of the chinese kung-fu movie.','成龙是中国功夫电影的领军人物。','Most luminary people doesn\'t overbearing, but normal people do.','多数杰出的人物并不傲慢，但是许多普通人却如此。'}

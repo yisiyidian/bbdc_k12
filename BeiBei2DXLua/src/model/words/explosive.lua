@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["explosive"]={"explosive","[ɪk'spləʊsɪv; ek-]","[ɪk'splosɪv; ɪk'splozɪv]","adj.爆炸(性)的",'adj.爆炸(性)的|||n.炸药','Brimstone is a component part of explosive.','硫磺是炸药的一种组成成分。','Gunpowder is an explosive.','火药是一种爆炸物。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oven"]={"oven","['ʌv(ə)n]","['ʌvn]","n.烤炉",'n.烤炉,烤箱','The cook went to see after the cake left in the oven.','炊事员去照看炉子里的蛋糕了。','You put food inside an oven to cook it.','你把食物放进烤箱里热一下.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insensitive"]={"insensitive","[ɪn'sensɪtɪv]","[ɪn'sɛnsətɪv]","adj.不敏感的",'adj.不敏感的，麻木不仁的，感觉迟钝的','I was annoyed by his insensitive remarks.','我听了他那些没分寸的话, 心里很不痛快.','It bothers me that he can be so insensitive.','他这样麻木不仁, 我心里很不痛快。'}

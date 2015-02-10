@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sandy"]={"sandy","['sændɪ]","['sændi]","adj.沙的",'adj.沙的,沙地的,多沙的|||沙色的|||不稳固的','I prefer a sandy beach to a shingly one.','我喜欢沙滩, 不喜欢遍布小圆石的海滩.','The floor of the beach-hut was sandy.','那海滨小屋的地面上净是沙子。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["upshot"]={"upshot","['ʌpʃɒt]","['ʌpʃɑt]","n.结果",'n.结果,结局,结尾','So the upshot is we\'re going for lunch on Friday.','结果是我们周五一起去吃午餐。','The upshot of the disagreement is that they broke up the partnership.','分歧的结果是，他们解除了合作关系。'}

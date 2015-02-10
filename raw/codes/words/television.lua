@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["television"]={"television","['telɪvɪʒ(ə)n; telɪ'vɪʒ(ə)n]","['tɛlɪvɪʒn]","n.电视",'n.电视','The television is too loud; turn the volume down.','电视声音太响了，把音量调低点儿。','Radio and television are important means of communication.','无线电和电视是重要的通信手段。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["provision"]={"provision","[prə'vɪʒ(ə)n]","[prə'vɪʒn]","n.规定",'n.规定,条款;供应(品);预备|||n.(pl.)食物|||vt.向...供应食物','The present law makes no provision for this.','现行的法律对此未作任何规定。','They provisioned the ship for a long voyage.','他们为远航的船只准备了食品和必需品。'}

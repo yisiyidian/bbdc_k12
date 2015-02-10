@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["browbeat"]={"browbeat","['braʊbiːt]","['braʊ'bit]","v.(用神情、言词)威吓",'v.(用神情、言词)威吓,严词厉色地斥责|||vt.吓唬,威逼','I won\'t be browbeaten into accepting your proposals.','我是不会在威迫之下接受你的提议的。','The judge browbeat the witness.','那法官威吓证人。'}

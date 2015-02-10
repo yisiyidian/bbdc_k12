@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disperse"]={"disperse","[dɪ'spɜːs]","[dɪ'spɝs]","vt.分散",'vt.分散,传播,散开|||vi.分散','The crowd dispersed.','人群纷纷散开。','The wind dispersed the cloud from the sky.','风吹散了天上的云。'}

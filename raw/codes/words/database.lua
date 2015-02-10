@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["database"]={"database","['deɪtəbeɪs]","['detəbes]","n.数据库",'n.数据库','Can you set up a database?','你能建一个数据库吗?','I discovered some new information in the database.','我在资料库里发现了一些新信息.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dissemble"]={"dissemble","[dɪ'semb(ə)l]","[ di'sembl ]","v.掩饰",'v.掩饰,假装不知道','She was a very honest person who was incapable of ||dissembling||.','她是一个非常诚实的人，不会伪装。','Henry was not slow to dissemble when it served his purposes.','在需要时，亨利会毫不迟疑地伪装自己。'}

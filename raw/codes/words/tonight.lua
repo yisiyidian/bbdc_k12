@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tonight"]={"tonight","[tə'naɪt]","[tə'naɪt]","n.&adv.今晚",'n.&adv.今晚','You\'ll sure to have fun at the party tonight.','你在今晚的晚会上一定会玩得很开心。','Would you honor me by dining with me tonight?','今晚你能赏光与我共进晚餐吗？'}

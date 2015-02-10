@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lemon"]={"lemon","['lemən]","['lɛmən]","n.柠檬",'n.柠檬','There is nothing as refreshing as lemon tea.','什麽都不如柠檬茶那样提神.','Their new car turned out to be a lemon.','他们的新车竟是次品'}

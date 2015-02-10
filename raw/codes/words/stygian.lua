@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stygian"]={"stygian","['stɪdʒɪən]","[ 'stidʒiən ]","adj.地狱的",'adj.地狱的,阴暗的,幽暗的，冥河的','I\'ll explore a stygian cave.','我要去一个阴森森的山洞探险。','I still Saw Your eyes in the stygian house.','在阴暗的房间里我依然能看见你的眼睛。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["commune"]={"commune","['kɒmjuːn]","[ kə'mju:n, 'kɔmju:n ]","n.公社",'n.公社|||vi.交换思想、意见或感受,交流','The commune has embarked on a program of reshaping its hills and rivers.','这个公社已开始实施一项重新整治河山的规划。','She wrote a book on the Paris ||Commune||.','她写了一本关于巴黎公社的书。'}

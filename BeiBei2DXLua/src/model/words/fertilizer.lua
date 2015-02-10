@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fertilizer"]={"fertilizer","['fɜːtɪlaɪzə]","['fɝtəlaɪzɚ]","n.肥料",'n.肥料','The stalks will rot and make good fertilizer.','杆儿腐烂后会成为很好的肥料。','Get some more fertilizer for the garden.','给花园再多施些肥料.'}

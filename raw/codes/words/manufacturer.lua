@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["manufacturer"]={"manufacturer","[,mænjʊ'fæktʃ(ə)rə(r)]","[,mænju'fæktʃərɚ]","n.制造商",'n.制造商','They bought the machine directly from the manufacturer.','他们直接从厂商那里购买了这台机器。','Prices are laid down by the manufacturer.','价格是由厂商制定的.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brood"]={"brood","[bruːd]","[brud]","n.窝",'n.窝|||v.孵,沉思','It\'s no use brooding over one\'s past mistakes.','老是抱着过去的错误是没用的。','Some insects produce seven or eight broods a year.','有些昆虫一年产七八次卵。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foam"]={"foam","[fəʊm]","[fom]","n.泡沫",'n.泡沫,水沫|||vt.&vi.起泡沫,吐口沫,愤怒,沸腾','He bought a foam pillow.','他买了一个海绵枕头。','The sea was flecked with foam.','大海上涌起点点泡沫.'}

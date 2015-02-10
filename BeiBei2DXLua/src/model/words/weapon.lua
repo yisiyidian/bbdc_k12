@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["weapon"]={"weapon","['wep(ə)n]","['wɛpən]","n.武器",'n.武器,兵器','This weapon fires anti-aircraft missiles.','这种武器是发射防空导弹的.','The fisher used a spear as his weapon.','渔夫用矛作为武器。'}

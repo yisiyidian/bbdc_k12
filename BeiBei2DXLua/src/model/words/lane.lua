@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lane"]={"lane","[leɪn]","[len]","n.小路",'n.小路,小巷,行车道','After overtaking you should move back into the inside lane.','超车後应回到内车道行驶.','The lane was rutted with tyre tracks.','这小巷有车胎轧出的凹痕.'}

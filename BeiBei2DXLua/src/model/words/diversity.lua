@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diversity"]={"diversity","[daɪ'vɜːsɪtɪ; dɪ-]","[dɪˈvəsɪti]","n.多样化",'n.多样化，（人在种族、民族、宗教等方面的）多样性；差异；分歧|||vt.使不同,使多样化','A diversity lead to prosperity.','穷则变，变则通。','We should get a thorough understanding about the cultural diversity of the United States.','我们应该对美国文化的多样性有一个全面的了解。'}

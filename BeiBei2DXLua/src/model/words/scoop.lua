@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scoop"]={"scoop","[skuːp]","[skup]","n.铲子",'n.铲子,舀取,独家新闻,一勺,穴|||vt.汲取,舀取,抢先报道,挖空','||Scoop|| out the pulp and serve it with sugar.','把果肉挖出来和糖一起食用.','She scooped all the national newspapers to get the story.','她抢在全国各报之前发表了这一消息。'}

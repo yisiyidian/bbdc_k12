@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["punch"]={"punch","[pʌn(t)ʃ]","[ pʌntʃ ]","n.打洞器",'n.打洞器,钻孔机,殴打|||n.酒、水、糖等制成的鸡尾酒|||vt.以拳重击,开洞,剪票,按(键)','He laid his opponent low with a single punch.','他一拳就把对手打倒在地。','Those cocktails pack quite a punch!','那些鸡尾酒劲儿可真大!'}

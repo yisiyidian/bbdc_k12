@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["must"]={"must","[mʌst]","[mʌst]","aux.必须",'aux.必须；必然要；（做出逻辑推断）；（表示坚持）|||n.必须做的事，必不可少的事物；葡萄汁；霉臭；麝香|||vt.&vi.（表示必要或很重要）必须；（提出建议）应该；得；（表示很可能或符合逻辑）一定|||adj.不可或缺的；狂暴的','Something must be done about it.','必须得想个办法。','His new novel is a must for all lovers of crime fiction.','他的新小说是罪案小说爱好者必须一读的。'}

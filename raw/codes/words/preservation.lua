@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["preservation"]={"preservation","[prezə'veɪʃ(ə)n]","[,prɛzɚ'veʃən]","n.保存",'n.保存','The picture is in an excellent state of preservation.','这幅画保存得极为完好.','Plagiarists, at least, have the merit of preservation.','抄袭者，起码也有保存文物的功劳。'}

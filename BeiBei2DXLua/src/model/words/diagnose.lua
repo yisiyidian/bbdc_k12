@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diagnose"]={"diagnose","['daɪəgnəʊz; -'nəʊz]","[,daɪəɡ'nos]","v.诊断",'v.诊断|||vi.判断,诊断(疾病)|||vt.诊断(疾病)','The doctor diagnosed measles.','医生诊断出麻疹.','They use saliva to diagnose the disease.','他们利用唾液来检测是否得病。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intersection"]={"intersection","[ɪntə'sekʃ(ə)n]","[,ɪntɚ'sɛkʃən]","n.交集",'n.交集,十字路口,交叉点|||[计算机]交集','Breastworks were thrown up at major intersections.','在主要的十字路口都匆匆筑起了胸墙。','The policeman regulated traffic at the intersection.','警察在交叉路口指挥交通.'}

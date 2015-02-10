@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["repeal"]={"repeal","[rɪ'piːl]","[rɪ'pil]","n.废止",'n.废止,撤消|||v.废止,撤消','The bill seek to repeal the existing legislation.','该议案企图废除现存的相关立法。','Mps are pressing for the repeal of the immigration act.','下院议员正在施加压力使移民法得以废止。'}

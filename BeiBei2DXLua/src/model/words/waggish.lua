@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["waggish"]={"waggish","['wægɪʃ]","['wæɡɪʃ]","adj.诙谐的",'adj.诙谐的,滑稽的','The house had been facetiously named by some waggish officer.','这房子是由某个机智幽默的军官命名的。','During this melancholy pause, the turnkey read his newspaper with a waggish look.','在这个忧郁的停歇期间，看守滑稽地阅读着报纸。'}

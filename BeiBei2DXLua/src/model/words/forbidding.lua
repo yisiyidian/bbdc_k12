@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forbidding"]={"forbidding","[fə'bɪdɪŋ]","[fɚ'bɪdɪŋ]","adj.可怕的",'adj.可怕的,令人难亲近的|||动词forbid的现在分词形式','forbidding rapids.','可怕的急流','a forbidding scowl.','一脸讨厌的怒容'}

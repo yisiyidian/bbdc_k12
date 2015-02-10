@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["author"]={"author","['ɔːθə]","['ɔθɚ]","n.作者",'n.作者,创造者|||vt.创造,写作','The book was translated without the sanction of the author.','这本书未经作者许可就给翻译了。','The author boxed the compass of negation in his article.','该作者在文章中依次探讨了各种反面的意见.'}

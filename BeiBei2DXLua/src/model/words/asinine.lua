@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["asinine"]={"asinine","['æsɪnaɪn]","['æsɪnaɪn]","adj.驴的",'adj.驴的,像驴的,愚蠢的','It is an asinine discussion.','那是个愚蠢透顶的讨论。','I hope you win their appeal and throw this asinine verdict out.','我希望你可以赢得这场官司，把这个莫名其妙的判决推翻。'}

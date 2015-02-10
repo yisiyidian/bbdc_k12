@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stalwart"]={"stalwart","['stɔːlwət; 'stæl-]","['stɔlwɚt]","n.顽强的人",'n.顽强的人，健壮的人|||adj.高大结实的,顽强的','Let me introduce Bob, one of the club\'s stalwart.','让我来介绍鲍伯，俱乐部的忠实拥护者之一。','He had a stalwart figure and walked with an air.','他身材魁梧，走起路来很有气派。'}

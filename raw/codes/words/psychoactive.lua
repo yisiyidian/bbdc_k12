@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["psychoactive"]={"psychoactive","[saɪkəʊ'æktɪv]","[,saɪko'æktɪv]","adj.作用于精神的",'adj.作用于精神的,影响(或改变)心理状态的','some book, movie and music are psychoactive','一些书电影音乐是作用于精神的','Psychoactive substances are commonly grouped according to whether they are stimulants, depressants, or hallucinogens.','它们通常分为兴奋剂、镇静剂和幻觉剂。'}

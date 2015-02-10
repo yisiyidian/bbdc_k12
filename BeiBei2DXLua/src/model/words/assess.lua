@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["assess"]={"assess","[ə'ses]","[ə'sɛs]","v.估定",'v.估定,评定','She look at the house and assess its market value.','他看了看房子并估算了其市场价值。','They assess his house at 15000 yuan.','他们给他房子的估价为15000元。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spoil"]={"spoil","[spɒɪl]","[spɔɪl]","v.溺爱",'n.战利品,奖品|||v.宠坏,溺爱,破坏,腐坏','He\'s spoiling for trouble.','他憋足了劲儿要找麻烦。','A fond mother may spoil her child.','溺爱的母亲可能会宠坏她的孩子。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pragmatic"]={"pragmatic","[præg'mætɪk]","[præg'mætɪk]","adj.实际的",'adj.实际的,实用主义的','We need to adopt a more pragmatic approach.','我们需要采用一种更为实际的方法。','Robin took a pragmatic look at her situation.','罗宾实际地考虑了一下她的处境。'}

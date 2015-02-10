@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["who"]={"who","[huː; hʊ]","[hu]","pron.谁",'prep.…的,谁,他,她,他们|||pron.谁','People who cannot speak can talk by using signs.','不会说话的人可以用手势沟通。','||Who|| do you think you are?','你以为你是谁？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["toss"]={"toss","[tɒs]","[tɔs]","n.投掷",'n.投掷,震荡|||v.投掷,摇荡,辗转','I can toss off my article for the local newspaper in half an hour.','我给本地的报纸写文章只用半小时就可一挥而就。','The decision depended on the toss of a coin.','那项决定是靠掷硬币的方法做出的。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["explanation"]={"explanation","[eksplə'neɪʃ(ə)n]","[,ɛksplə'neʃən]","n.解释",'n.解释,说明','There could be some psychological explanation for his bad health.','他的健康不佳可能有心理上的原因。','I grant that your explanation is reasonable.','我承认你的解释是合理的。'}

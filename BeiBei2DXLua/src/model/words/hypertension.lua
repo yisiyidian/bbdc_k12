@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hypertension"]={"hypertension","[haɪpə'tenʃ(ə)n]","[,haɪpɚ'tɛnʃən]","n.高血压",'n.高血压,过度紧张','||Hypertension|| is very drangous!','高血压很危险！','',''}

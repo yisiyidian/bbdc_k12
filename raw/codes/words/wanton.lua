@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wanton"]={"wanton","['wɒntən]","['wɔntən]","n.荡妇",'n.荡妇,水性杨花的女人，贪图享乐的人|||adj.淫乱的,肆无忌惮的，无节制的|||v.放肆,挥霍','The abandoned garden was left to a wanton growth of weeds.','荒园里杂草丛生。','She is living in wanton luxury.','她生活极其奢侈。'}

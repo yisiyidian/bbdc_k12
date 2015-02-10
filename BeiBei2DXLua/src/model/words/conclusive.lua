@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conclusive"]={"conclusive","[kən'kluːsɪv]","[kən'klusɪv]","adj.决定性的",'adj.决定性的,确实的,最后的','We need somebody to give us a conclusive decision.','我们需要有人给我们一个最终的决定。','Investment is producing conclusive effect to industrial structural adjustment.','投资对产业结构调整有着决定性的影响。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["antigen"]={"antigen","['æntɪdʒ(ə)n]","['æntɪdʒən]","n.[医]抗原",'n.[医]抗原','The attraction between an antigen and an antibody.','化合力抗原和抗体之间的相互吸引','Relating to the correspondence between an antigen and the antibody produced in response to it.','同源的与抗原和对其反应产生的抗体同的对应现象有关的'}

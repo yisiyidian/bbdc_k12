@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["symmetry"]={"symmetry","['sɪmɪtrɪ]","['sɪmətri]","n.对称(性)",'n.对称(性),匀称,整齐','The butterfly is an example of symmetry.','蝴蝶是结构完全对称的一个例子。','The human body has a symmetry that is basic to our sense of beauty.','人体的对称性构成我们审美观的基础。'}

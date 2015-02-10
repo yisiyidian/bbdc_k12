@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coincidentally"]={"coincidentally","[kəu,insi'dentli]","[ kəu,insi'dentli ]","adv.巧合地",'adv.巧合地,同时发生地|||=coincidently','||Coincidentally||, I had once found myself in a similar situation.','碰巧的是，我有一次发现自己曾处于类似的境地。','I know the answer of your question ||coincidentally||.','碰巧知道问题的答案'}

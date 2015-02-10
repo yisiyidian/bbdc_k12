@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abandoned"]={"abandoned","[ə'bænd(ə)nd]","[ə'bændənd]","adj.被抛弃的",'adj.被抛弃的,无约束的','The match had to be abandoned because the pitch was waterlogged.','那场比赛因场地汪水只好取消.','They abandoned their lands to the invading forces.','他们丢下了土地 遭侵略军占领.'}

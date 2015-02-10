@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["molt"]={"molt","[məʊlt]","[molt]","n.换毛",'n.换毛,脱皮,换毛期|||v.换毛，脱毛|||=moult(美)','Like other penguins, it undergoes an annual molt, replacing all its feathers in a few weeks.','与其它企鹅一样，它每年蜕一次毛，在一周内换完全部的羽毛。','During this single day, they molt twice, mate, and lay eggs in water.','在这一天中它要蜕两次皮，交配，在水中产卵。'}

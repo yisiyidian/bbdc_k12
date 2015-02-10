@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["geographical"]={"geographical","[dʒɪə'græfɪk(ə)l]","[dʒɪə'græfɪkl]","adj.地理的",'adj.地理的,地理学的|||=geographic','They are getting to know the geographical house.','他们正在了解房屋的布局。','The current survey will have a wider geographical spread.','当前的调查将在更广泛的地域范围內进行.'}

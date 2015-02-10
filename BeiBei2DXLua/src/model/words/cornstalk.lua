@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cornstalk"]={"cornstalk","['kɔːn,stɔːk]","['kɔrn,stɔk]","n.玉米秆",'n.玉米秆','||Cornstalk|| is good memories of my childhood.','玉米杆是我小时候的美好记忆。','The most part of cornstalk is used as fuel, secondly as feedstuff, then as fertilizer.','燃料是玉米秸秆消耗量最大的一部分，其次是饲料，再次是肥料。'}

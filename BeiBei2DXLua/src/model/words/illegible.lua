@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["illegible"]={"illegible","[ɪ'ledʒɪb(ə)l]","[ɪ'lɛdʒəbl]","adj.难辨认的",'adj.难辨认的,(字迹)模糊的','It is impossible to deliver this letter because the address is illegible.','由于地址字迹不清,致使信件无法投递.','The lettering on the gravestone was badly worn and almost illegible.','墓碑上的文字已严重磨损难以辨认.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sanity"]={"sanity","['sænɪtɪ]","['sænəti]","n.神智健全",'n.神智健全,头脑清楚,健全','His strange remarks planted doubts in our minds about his sanity.','他那些怪话使我们心中生疑，不知他精神是否正常。','He and his wife finally had to move from their apartment just to preserve their sanity.','他和妻子最后不得不搬离其公寓，只是为了保持精神正常。'}

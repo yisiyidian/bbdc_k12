@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plasma"]={"plasma","['plæzmə]","['plæzmə]","n.等离子体(血浆",'n.等离子体(血浆,深绿玉髓)','The plasma is the liquid portion of blood that is free of cells .','血浆是血液的液体部分，不包含各种细胞。','The albumin fraction of plasma protein is of the greatest significance.','血浆蛋白的白蛋白部分意义最大.'}

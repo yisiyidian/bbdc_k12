@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obviously"]={"obviously","['ɒbvɪəslɪ]","['ɑbvɪəsli]","adv.显然地",'adv.显然地','Mr Johnson obviously know the street like the palm of his hand.','显然约翰逊先生非常熟悉这条街.','||Obviously|| they were putting him to a severe test.','显然他们是在给他以严峻的考验.'}

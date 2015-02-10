@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ashtray"]={"ashtray","['æʃtreɪ]","['æʃtre]","n.烟灰缸",'n.烟灰缸','Just as it was leaving, Mr Taylor rushed out and ran after it throwing ashtrays and vases, but it was impossible to stop the thieves.','就在汽车开走的时候，泰勒先生冲了出来，紧追贼车，一边投掷烟灰缸和花瓶，但要逮到这伙窃贼是不可能的了。','Let me get you an ashtray.','我给你找个烟灰缸。'}

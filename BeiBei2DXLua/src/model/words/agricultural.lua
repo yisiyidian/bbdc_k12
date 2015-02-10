@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["agricultural"]={"agricultural","[æɡrɪ'kʌltʃərəl]","[,ægrɪ'kʌltʃərəl]","adj.农业的",'adj.农业的','They persisted with the agricultural reforms, despite opposition from the farmers.','他们不顾农民反对, 仍继续进行农业改革.','The country is heavily dependent on its exports of agricultural commodities.','这个国家很大程度上依靠农产品的出口。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["layout"]={"layout","['leɪaʊt]","['leaʊt]","n.布局",'n.布局,安排,设计','Please fax me the layout for the new catalogue.','请用传真机把新目录的版面编排图样传送给我.','A layout of an image to be printed, such as a book cover.','杂凑而成的东西将要印刷的图案设计，如书的封面'}

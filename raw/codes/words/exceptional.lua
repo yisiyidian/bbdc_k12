@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exceptional"]={"exceptional","[ɪk'sepʃ(ə)n(ə)l; ek-]","[ɪk'sɛpʃənl]","adj.例外的",'adj.例外的,异常的,特别的','||Exceptional|| item is noted above the line in company account.','特殊项目记在公司帐目的横线之上。','Forestry has advanced with exceptional speed.','植树造林以罕见的速度得到了发展。'}

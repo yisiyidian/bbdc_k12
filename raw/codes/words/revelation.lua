@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["revelation"]={"revelation","[revə'leɪʃ(ə)n]","['rɛvə'leʃən]","n.揭露",'n.揭露,泄露,发觉','The President is at the center of a recent scandal over revelation about his financial interests.','总统因近来被揭露涉嫌金融权益问题而成为丑闻的主角。','Have you read the ex-minister\'s amazing revelations in the newspaper?','你看了前任部长在报上揭露的那些惊人的事实没有？'}

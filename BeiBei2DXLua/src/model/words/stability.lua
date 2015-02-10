@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stability"]={"stability","[stə'bɪlɪtɪ]","[stə'bɪləti]","n.稳定性",'n.稳定性,居于修道院','Something that gives stability, especially in character.','稳定因素表明稳定性的因素，尤指在性格方面','The stability of affairs is very serious.','事态非常严重.'}

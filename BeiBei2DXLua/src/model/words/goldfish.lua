@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["goldfish"]={"goldfish","['gəʊl(d)fɪʃ]","['ɡoldfɪʃ]","n.金鱼",'n.金鱼','He pasted picture postcard around goldfish bowl to make the goldfish think they were going place.','他在金鱼缸周围贴上了彩色风景明信片，好让金鱼们以为在游历四方。','She has been living in a goldfish bowl since she won the beauty contest.','自从她选美获胜後，她就像活在金鱼缸中，任人参观，毫无隐私。'}

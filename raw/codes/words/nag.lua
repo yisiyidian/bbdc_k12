@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nag"]={"nag","[næg]","[næɡ]","n.小马",'n.小马,驽马,竞赛马|||v.不断地唠叨恼人,说话唠叨','Some children complain that their parents nag at them.','一些孩子报怨他们父母老是数落他们。','Don\'t nag me!','别在我面前唠叨！'}

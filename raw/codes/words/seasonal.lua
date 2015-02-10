@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seasonal"]={"seasonal","['siːz(ə)n(ə)l]","['sizənl]","adj.季节的",'adj.季节的,依照季节的,周期性的','The occurrence of malodor has obvious seasonal.','恶臭的发生具有明显的季节性。','The town relies on the seasonal tourist industry for jobs.','这个城镇依靠季节性旅游业提供就业机会.'}

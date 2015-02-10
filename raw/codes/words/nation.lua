@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nation"]={"nation","['neɪʃ(ə)n]","['neʃən]","n.国家",'n.国家,民族','I think Japan is a warlike nation.','我认为日本是一个好战的国家。','My judgement was frequently faulty, but my loyalty to the nation could not be questioned.','我的判断经常出错，但是我对祖国的忠诚是无可置疑的。'}

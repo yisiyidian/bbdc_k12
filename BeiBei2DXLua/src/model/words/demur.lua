@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["demur"]={"demur","[dɪ'mɜː]","[dɪ'mɝ]","vi.提出异议",'vi.提出异议,反对,拖延|||n.异议,反对','He demurred to my statement.','他对我的陈述提出异议。','Workers demurred at working on Sundays.','工人们反对在星期天工作。'}

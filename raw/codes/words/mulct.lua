@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mulct"]={"mulct","[mʌlkt]","[mʌlkt]","n.罚金",'n.罚金|||vt.处以罚金,诈取','John was mulcted in￡500 by the court.','约翰被法庭罚款500英镑。','Hanks was mulcted yesterday for not working hard.','昨天汉克斯因工作不努力而被罚款了。'}

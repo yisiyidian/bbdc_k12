@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["demonstration"]={"demonstration","[demən'streɪʃ(ə)n]","[,dɛmən'streʃən]","n.表达",'n.示范,实证,表达,集会','This demonstration was a symptom of discontent among the students.','这次示威表明学生中有不满情绪.','The police were present at the demonstration in (full) force.','警方派出大队人马在示威游行的现场戒备.'}

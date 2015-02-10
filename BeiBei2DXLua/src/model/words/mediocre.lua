@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mediocre"]={"mediocre","[,miːdɪ'əʊkə]","[,midɪ'okɚ]","adj.平庸的",'adj.平庸的,平凡的','That new restaurant charge fancy prices for mediocre food and poor service.','那家新开的饭店饭菜一般，服务又是差，但价格却非常高。','His school record was mediocre.','他的学业成绩一般。'}

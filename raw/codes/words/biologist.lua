@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["biologist"]={"biologist","[baɪ'ɒlədʒɪst]","[baɪ'ɑlədʒɪst]","n.生物学家",'n.生物学家','I want to be a biologist','我想成为一个生物学家','The biologist stained the specimen before looking at it through the microscope.','那位生物学家先把标本染色, 然後再通过显微镜进行观察.'}

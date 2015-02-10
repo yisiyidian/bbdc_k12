@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["semblance"]={"semblance","['sembləns]","['sɛmbləns]","n.类似(外观",'n.类似(外观,假装)','Foolish men mistake transitory semblance for eternal fact.','愚蠢的人会误以为暂时的表象是永恒的事实。','He bears the semblance of  an angel and the heart of devil.','他貌似天使却心如恶魔。'}

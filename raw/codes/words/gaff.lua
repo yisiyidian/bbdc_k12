@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gaff"]={"gaff","[gæf]","[ ɡæf ]","n.大鱼钩",'n.大鱼钩,鱼叉','A stay for racing or cruising vessels used to steady the mast against the strain of the gaff.','稳定索, 分隔索赛艇或巡逻艇上的支索, 为防止斜桁的张力而用于稳定桅杆','A cord or canvas strap used to secure a furled sail to a yard boom or gaff.','束帆索一种绳子或帆布带, 用来把一个卷叠的帆置于一横木或斜桁上'}

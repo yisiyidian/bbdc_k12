@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["occupancy"]={"occupancy","['ɒkjəpənsɪ]","['ɑkjəpənsi]","n.占有",'n.占有,占用，居住期间','A building for commercial occupancy.','对进行商业使用的建筑','A large, unadorned building used for temporary occupancy.','临时工房用于暂时居住的简陋的大房子'}

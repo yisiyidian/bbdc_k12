@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["greedy"]={"greedy","['griːdɪ]","['gridi]","adj.贪婪的",'adj.贪婪的','He\'s a real greedy guts.','他真是贪吃的大肚汉.','The greedy boss stopped at nothing to gain profit.','贪婪的老板为了攫取利润无所不为.'}

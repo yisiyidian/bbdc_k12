@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stutter"]={"stutter","['stʌtə]","['stʌtɚ]","v.口吃",'v.口吃，结巴着说话|||n.口吃，说话结巴','He spoke with a pronounced stutter.','他说话带有明显的口吃。','I was trembling so hard, I thought I would stutter when I spoke.','我那时抖得很厉害，我觉得说话时都会结结巴巴。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anomalous"]={"anomalous","[ə'nɒm(ə)ləs]","[ə'nɑmələs]","adj.不规则的",'adj.不规则的,反常的','He is in an anomalous position as the only part-time worker in the firm.','他与众不同，是公司里唯一的兼职人员。','For years this anomalous behaviour has baffled scientists.','几年来这种反常行为让科学家们很困惑。'}

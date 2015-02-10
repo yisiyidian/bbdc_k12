@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["allude"]={"allude","[ə'l(j)uːd]","[ə'lʊd]","vi.暗示",'vi.暗示,暗指','I didn\'t allude to anything or anybody.','我并未影射任何人或任何事。','What were you ||alluding|| to just now?','你刚才指的是什么？'}

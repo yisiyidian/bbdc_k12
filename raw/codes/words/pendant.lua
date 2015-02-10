@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pendant"]={"pendant","['pend(ə)nt]","['pɛndənt]","n.垂饰",'n.垂饰','My necklace has a heart pendant, but I don\'t wear it everyday.','我的项链有一个心形的垂饰，但我并不是每天都戴着它。','The jade pendant she wears was given by her grandma.','她身上的这块佩玉是奶奶送给她的。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["few"]={"few","[fjuː]","[fju]","adj.很少的",'adj.很少的,不多的,少数的|||int.少数的|||adj.少数的','It took us only a few minutes to get through the Customs.','我们的海关检查只花了几分钟时间。','My time is precious; I can only give you a few minutes.','我的时间很宝贵，我只能见你几分钟。'}

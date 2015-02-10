@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tar"]={"tar","[tɑː]","[tɑr]","n.焦油",'n.焦油,柏油|||n.水手|||vt.涂以焦油','||Tar|| is much used in making modern roads.','修建现代公路多用焦油沥青。','Ammonia, coal tar and coke are all by-products obtained in the manufacture of coal gas.','氨气、煤焦油、焦煤都是煤气生产过程中的副产品.'}

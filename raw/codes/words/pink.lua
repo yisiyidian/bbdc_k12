@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pink"]={"pink","[pɪŋk]","[pɪŋk]","adj.粉红色的",'adj.粉红色的,激进的|||n.粉红色,石竹花,典范|||vt.刺','Write your name and address on this pink slip.','在这张粉红色纸条上写下你的姓名和地址。','She carried a spray of pink roses.','她拿著一簇粉红色的玫瑰花.'}

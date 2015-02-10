@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["modernization"]={"modernization","[,mɒdənaɪ'zeɪʃən]","[,mɑdɚnə'zeʃən]","n.现代化",'n.现代化','No matter who he may be, he can play his part in the modernization of our country.','不管他是谁，他都可以在我国现代化中发挥作用。','The modernization of the industry was phased over a 20-year period.','工业现代化分20年逐步实现.'}

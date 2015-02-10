@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ventriloquist"]={"ventriloquist","[ven'trɪləkwɪst]","[vɛn'trɪləkwɪst]","n.作腹语者",'n.作腹语者,口技表演者','He is a notable ventriloquist in this town.','他在这个镇子上是有名的口技表演者。','He looked like a ventriloquist\'s dummy.','他看上去像腹语术表演者用的人偶。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["price"]={"price","[praɪs]","[praɪs]","n.价格",'n.价格,代价,价值|||vt.定格,标价,比较价格','He knew it was dangerous to be seen; there was a price on his head.','他知道被人发现是很危险的——正在悬赏要他的脑袋呢。','I don\'t know enough about porcelain to be able to price these plates.','我不太懂得瓷器，估计不出这些盘子的价钱。'}

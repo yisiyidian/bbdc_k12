@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["migration"]={"migration","[maɪ'greɪʃ(ə)n]","[maɪ'ɡreʃən]","n.移民",'n.移民,移往,移动','Scientists have studied the migration of fish over long distances.','科学家研究过鱼类远距离回游的现象。','Swallows begin their migration south in autumn.','燕子在秋季开始向南方迁移.'}

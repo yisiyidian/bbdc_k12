@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["noisome"]={"noisome","['nɒɪs(ə)m]","['nɔɪsəm]","adj.恶臭的",'adj.恶臭的,令人不快的，有害的','His noisome reputation for corruption had already begun to spread.','他贪污的恶名已经四处传播开了。','There is a noisome smell in the room.','房间里有股难闻的味道。'}

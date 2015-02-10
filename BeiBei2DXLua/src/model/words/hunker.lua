@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hunker"]={"hunker","['hʌŋkə]","['hʌŋkɚ]","vi.蹲",'vi.蹲,蹲坐','hunkered down to avoid the icy wind.','蹲下来躲避寒风','As the White House hunkered down, G.O.P. congressional unity started crumbling','“由于白宫拒不让步，共和党国会同盟开始瓦解”'}

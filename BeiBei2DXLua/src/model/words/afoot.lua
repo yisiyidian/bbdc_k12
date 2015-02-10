@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["afoot"]={"afoot","[ə'fʊt]","[ə'fʊt]","adj.徒步的",'adj.徒步的,在准备中的,在进行中|||adv.徒步地,在准备中地,在进行中','If there is any mischief afoot, he is sure to be in at it.','要有什么调皮捣蛋的事, 肯定有他的份。','The work is well afoot.','工作在顺利进行中。'}

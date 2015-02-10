@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["throw"]={"throw","[θrəʊ]","[θro]","n.投",'n.投,掷,抛,头巾,行程|||vt.丢,掷,抛,猛动,抬起,挥动|||vi.投以','The trees ||threw|| long shadows across the lawn.','树在草坪上都投下长长的影子。','He ||threw|| the stone in the air.','他把石头抛向空中。'}

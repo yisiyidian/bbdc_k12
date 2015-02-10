@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acrimony"]={"acrimony","['ækrɪmənɪ]","[ækrɪmoni]","n.刻薄",'n.(语言，态度等)刻薄，辛辣','The dispute was settled without acrimony.','这场争论未剑拔弩张而获解决.','The council\'s first meeting ended in acrimony.','地方议会的首次会议以争执结束。'}

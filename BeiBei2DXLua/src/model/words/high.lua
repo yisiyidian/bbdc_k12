@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["high"]={"high","[haɪ]","[haɪ]","adj.高的",'adj.高的,轻微变质的,高尚的,严重的,强的|||adv.高,好|||n.高地,天堂,高气压,高度,兴奋','The mountain is 3500 meters high.','这座山有3500米高。','He likes swimming in high summer.','他喜欢在盛夏游泳。'}

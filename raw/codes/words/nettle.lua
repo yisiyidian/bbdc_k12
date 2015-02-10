@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nettle"]={"nettle","['net(ə)l]","['nɛtl]","n.荨麻",'n.荨麻|||v.以荨麻刺,激怒','||Nettle|| is a kind of common wild plant.','荨麻是一种普通的野生植物。','Falsehood like a nettle stings those who meddle with it.','谎言似荨麻，玩弄会刺手。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exterior"]={"exterior","[ɪk'stɪərɪə; ek-]","[ɪk'stɪrɪɚ]","n.外部",'n.外部,表面,外型|||adj.外部的,外在的,表面的|||[计算机]外部的','Don\'t be put off by his gruff exterior; he\'s really very kind underneath.','别介意他表现粗野, 其实他心地很善良.','Beneath his gruff exterior he\'s really very kind-hearted.','他外表粗鲁, 心地却十分善良.'}

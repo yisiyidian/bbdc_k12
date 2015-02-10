@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gorilla"]={"gorilla","[gə'rɪlə]","[ɡə'rɪlə]","n.大猩猩",'n.大猩猩','The gorilla had a massive forehead.','猩猩的前额很大.','The gorilla is something of a paradox in the African scene.','在非洲大舞台上大猩猩有点象似是而非的隽语。'}

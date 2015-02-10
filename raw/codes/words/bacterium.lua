@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bacterium"]={"bacterium","[bæk'tɪərɪəm]","[bæk'tɪrɪəm]","n.细菌",'n.细菌','An organism, such as a bacterium, requiring oxygen to live.','好氧菌需要氧气生存的有机体，例如细菌','A bacterium is identified as the cause for his duodenal ulcer.','一种细菌被断定为造成他十二指肠溃疡的根源。'}

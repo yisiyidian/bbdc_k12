@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["longing"]={"longing","['lɒŋɪŋ]","['lɔŋɪŋ]","n.渴望",'n.渴望,热望,憧憬|||adj.渴望的,热望的|||vbl.渴望,渴慕,热望','The children are longing for the holidays.','孩子们盼望放假.','Nothing could quench her longing to return home again.','她重返家园的念头怎麽也打消不掉.'}

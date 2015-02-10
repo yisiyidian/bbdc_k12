@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pyjamas"]={"pyjamas","[pə'dʒɑːməz]","[pə'dʒæməz]","n.睡衣",'n.睡衣=pajamas（美）','At bedtime, I take off my clothes and put on pyjamas.','在上床的时候，我脱掉衣服并穿上睡衣。','||Pyjamas|| made from flammable material have been removed from most shops.','大部分商店都不再出售用易燃材料做的睡衣了.'}

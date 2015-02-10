@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["resist"]={"resist","[rɪ'zɪst]","[rɪ'zɪst]","v.抵抗",'v.抵抗,耐得住,压制|||n.保护膜','They were powerless to resist.','他们无力反抗。','Many young people could not resist the spiritual pollution.','很多年轻人不能抵制精神污染。'}

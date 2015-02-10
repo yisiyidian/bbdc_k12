@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rubber"]={"rubber","['rʌbə]","['rʌbɚ]","adj.橡胶的",'adj.橡胶的|||n.合成橡胶,橡胶','||Rubber|| is elastic.','橡皮是有弹性的。','Oil and grease will rot the rubber of your tyres.','油污能腐蚀轮胎橡胶.'}

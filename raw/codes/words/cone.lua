@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cone"]={"cone","[kəʊn]","[kon]","n.圆锥体",'n.圆锥体,锥形物,球果|||vt.变成锥形,削尖','The boy gobbled up an ice-cream cone.','那个男孩大口大口地吃完了一个蛋卷冰淇淋。','This is important especially on the cone shaped parts.','这是很重要的，尤其是锥形的部分。'}

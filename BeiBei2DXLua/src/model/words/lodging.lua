@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lodging"]={"lodging","['lɒdʒɪŋ]","['lɑdʒɪŋ]","n.寄宿处",'n.寄宿处','Where are you lodging?','你在哪里寄宿?','I\'m lodging at Mrs Brown\'s (house)/with Mrs Brown.','我在布朗太太家寄宿.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["psychoanalysis"]={"psychoanalysis","[,saɪkəʊə'nælɪsɪs]","['saɪkoə'næləsɪs]","n.心理分析",'n.心理分析','Who has the psychoanalysis case of human relation obstacle?','谁有人际关系障碍的精神分析案例?','I found myself in the psychoanalysis racket.','我发觉自己适于做精神分析行当.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scuff"]={"scuff","[skʌf]","[skʌf]","vt.咬接(磨损)",'vt.咬接(磨损)|||n.拖着脚步(咬接)','I scuff the heel of my boot on the step.','我的靴子后跟在台阶上磨坏了。','I scuffed the heel of my boot on the step.','我的靴子後跟在台阶上磨坏了.'}

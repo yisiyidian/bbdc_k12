@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stagnate"]={"stagnate","[stæg'neɪt; 'stægneɪt]","[stæɡ'net]","v.停止",'v.停止，停滞不前，不景气','Industrial production is ||stagnating||.','工业生产停滞不前。','',''}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["importune"]={"importune","[,ɪmpɔː'tjuːn]","[,ɪmpɔr'tun]","v.强求",'v.强求,硬要,胡搅蛮缠|||adj.胡搅蛮缠的','Don\'t importune me with your complaints.','不要老是向我发牢骚。','He’s for ever ||importuning|| me for money.','他老是缠着我要钱。'}

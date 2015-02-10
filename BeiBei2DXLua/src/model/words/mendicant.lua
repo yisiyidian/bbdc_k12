@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mendicant"]={"mendicant","['mendɪk(ə)nt]","['mɛndɪkənt]","adj.行乞的",'adj.行乞的|||n.乞丐，托钵僧','The policeman noticed a young man who seemed not an ordinary mendicant.','警察注意到一个看起来不像寻常乞丐的年轻人。','The mendicant surprised me a big time that he was a professor at one of the famous uni in the state.','这个乞丐真是让我大吃一惊，他曾是一所著名州立大学的教授。'}

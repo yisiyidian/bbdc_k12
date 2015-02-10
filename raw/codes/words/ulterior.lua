@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ulterior"]={"ulterior","[ʌl'tɪərɪə]","[ʌl'tɪrɪɚ]","adj.在那一边的",'adj.在那一边的(以后的,进一步的,隐蔽的)','I suspect he may have had ulterior motives for being so generous.','我怀疑他如此慷慨大方也许是别有用心。','Sheila had an ulterior motive for trying to help Stan.','希拉想帮助斯坦是另有所图的。'}

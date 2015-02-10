@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quarter"]={"quarter","['kwɔːtə]","['kwɔrtɚ]","n.四分之一",'n.四分之一,一刻钟,季度,25美分|||vt.四等分|||vi.住宿,驻扎|||adj.四分之一的','The clock strikes the hours, the half-hours and the quarters.','这个钟在正点、半点和一刻钟都打点。','The rent is due at the end of each quarter.','缴纳租金以每季度末为期限。'}

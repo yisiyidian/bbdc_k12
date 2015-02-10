@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stalemate"]={"stalemate","['steɪlmeɪt]","['stelmet]","n.僵持状态",'n.僵持状态,陷于困境,胶著状况|||v.使无法动棋子,使停顿,使陷入困境','This is right the paper industry of stalemate at dawn of a gleam of.','这对正陷于困境的报纸行业而言，无异于一线曙光。','Negotiations have reached a stalemate.','谈判陷入了僵局。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oaf"]={"oaf","[əʊf]","[of]","n.蠢人",'n.蠢人,莽汉','Why give publicity to this self-indulgent, adolescent oaf?','为什么要宣传报道这个行为任性、青春期未满的白痴呢？','The oaf stumbled over the bucket, spilling all the water.','那个笨手笨脚的人绊到了木桶，把水全给撒了。'}

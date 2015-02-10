@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["uncouth"]={"uncouth","[ʌn'kuːθ]","[ʌn'kʊθ]","adj.粗俗的",'adj.粗俗的,怪异的','He is a selfish, uncouth fellow, who has no respect for anyone.','他是个自私、没教养的家伙，对人一点也不尊重。','his behavour is uncouth','他的行为很粗俗'}

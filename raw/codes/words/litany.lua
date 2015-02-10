@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["litany"]={"litany","['lɪt(ə)nɪ]","['lɪtəni]","n.连祷",'n.连祷|||冗长的陈述','She will then reel off a litany of bills and responsibilities.','她会滔滔不绝的反复诉说她的账单和责任。','He uttered a litany which makes everybody tired.','他冗长的陈述让所有人感到厌倦。'}

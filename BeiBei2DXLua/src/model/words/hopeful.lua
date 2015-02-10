@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hopeful"]={"hopeful","['həʊpfʊl; -f(ə)l]","['hopfl]","adj.有希望的",'adj.有希望的','This is a hopeful news.','这是个鼓舞人心的消息.','We are hopeful about the future.','我们对未来抱乐观态度.'}

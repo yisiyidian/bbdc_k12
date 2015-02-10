@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anonymity"]={"anonymity","[ænə'nɪmɪtɪ]","['ænə'nɪməti]","n.匿名",'n.匿名,笔者不明','Our company promises to preserve the anonymity of all its clients.','我们公司承诺不公开客户的姓名。','Both mother and daughter, who have requested anonymity, are doing fine.','这对不愿意透露姓名的母女俩目前情况良好。'}

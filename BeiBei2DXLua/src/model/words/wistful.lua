@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wistful"]={"wistful","['wɪs(t)fʊl; -f(ə)l]","['wɪstfl]","adj.渴望的",'adj.渴望的,忧思的','The poor mother has wistful reminiscences of her lost youth.','这个贫穷的母亲怅惘地回忆她已经逝去的青春。','She had a last wistful look at her family.','她惆怅地看了家人最后一眼。'}

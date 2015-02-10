@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adhere"]={"adhere","[əd'hɪə]","[əd'hɪr]","vi.坚守于",'vi.坚守于,对...忠贞,紧抓着,遵守vt.使附着,使粘牢','We adhere to the principle that everyone should be treated fairly.','我们必须坚持人人都应该被平等对待这一原则。','The new paint won\'t adhere to the walls so I\'ll have to strip it all off and start from scratch.','新涂的油漆粘不住墙壁，因此我得把它全部刮掉，重新刷过。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["industrial"]={"industrial","[ɪn'dʌstrɪəl]","[ɪn'dʌstrɪəl]","adj.工业的",'adj.工业的,产业的|||n.工业公司','The stockbroker has placed the money in industrial stock.','证券经纪人已用那笔钱购入了工业股票。','The industrial exposition will be held on September.','工业博览会将于九月召开。'}

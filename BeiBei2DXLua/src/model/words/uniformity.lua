@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["uniformity"]={"uniformity","[juːnɪ'fɔːmɪtɪ]","[,jʊnə'fɔrməti]","n.同样",'n.同样,一致(性)','The pressure towards uniformity constantly threatens to erode local traditions.','一体化的压力一直威胁着地方传统。','Government inspections ensure a high degree of uniformity in the standard of service.','政府检查确保了在服务标准方面的高度一致。'}

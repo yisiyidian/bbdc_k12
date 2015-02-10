@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deceit"]={"deceit","[dɪ'siːt]","[dɪ'sit]","n.欺骗",'n.欺骗，诡计，不诚实','He was enmeshed in a web of deceit and lies.','他陷入坑　拐骗的圈套.','Furious at his deceit, she let fly at him with a stream of abuse.','他欺骗人, 气得她把他大骂了一顿.'}

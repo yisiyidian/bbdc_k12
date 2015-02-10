@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mythic"]={"mythic","['miθik]","[ 'miθik ]","adj.(=mythical)神话",'adj.(=mythical)神话','...the mythic figure of King Arthur.','...亚瑟王这一神话人物。','...a team whose reputation has achieved mythic proportions.','...一个名声显赫的团队。'}

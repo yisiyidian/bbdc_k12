@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perfidious"]={"perfidious","[pə'fɪdɪəs]","[pɚ'fɪdɪəs]","adj.不忠的",'adj.不忠的,背信弃义的','Their feet will trample on the dead bodies of their perfidious aggressors.','他们将从背信弃义的侵略者的尸体上踏过。','the perfidious Judas','背信弃义的犹大'}

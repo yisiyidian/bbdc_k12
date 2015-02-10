@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["decollete"]={"decollete","[,dekɑlə'te]","[ ,dei'kɔltei ]","adj.(女装)低颈露肩的",'adj.(女装)低颈露肩的','She was daringly decollete.','她大胆地穿着袒胸露肩的衣服。','She always collected decollete clothing.','她经常收集低颈露肩的衣服。'}

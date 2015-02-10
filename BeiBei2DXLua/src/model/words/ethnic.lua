@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ethnic"]={"ethnic","['eθnɪk]","['ɛθnɪk]","adj.民族的",'adj.民族的，种族的，有民族特色的|||n.少数民族的一员','They studied genetic material from people of different ethnic groups.','他们从不同种族的人中提取基因物质进行研究。','There are still several million ethnic Germans in Russia.','俄罗斯境内仍有数百万德国人。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sip"]={"sip","[sɪp]","[sɪp]","v.啜饮",'n.啜饮|||v.啜饮,啜','He took one sip of the wine and spat it out.','他抿了一口酒, 又吐了出来.','He paused to take a sip of water, and then went on (with his story).','他停下来呷了一口水, 然後继续讲（他的事）.'}

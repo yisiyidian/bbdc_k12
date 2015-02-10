@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thirteen"]={"thirteen","[θɜː'tiːn; 'θɜːtiːn]","['θɝ'tin]","num.十三",'num.十三','The number thirteen is often considered unlucky.','十三这个数字常常认为是个不吉利的数字.','He ran away from home at the age of thirteen.','他十三岁那年就离家出走了。'}

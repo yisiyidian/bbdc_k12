@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frigidity"]={"frigidity","[frɪ'dʒɪdəti]","[ fri'dʒiditi ]","n.寒冷",'n.寒冷,冷淡,性冷淡','Doctor Simpson believes that Suzie\'s frigidity is due to some hang-up about men.','辛普森大夫认为苏西的性冷淡是由于她对男人有着异常的精神反应。','The frigidity of her manner melted away at once.','她对人冷漠的态度马上消失了。'}

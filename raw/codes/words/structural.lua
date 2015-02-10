@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["structural"]={"structural","['strʌktʃ(ə)r(ə)l]","['strʌktʃərəl]","adj.结构的",'adj.结构的,构造的，建筑的','There is a structural alteration to the building.','这座建筑物在这有一处结构上的改变。','structural simplicity','有条理的简洁'}

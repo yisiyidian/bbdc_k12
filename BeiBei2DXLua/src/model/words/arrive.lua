@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arrive"]={"arrive","[ə'raɪv]","[ə'raɪv]","vi.到达",'vi.到达,成功','Flight number BA 4793 will arrive in London at 16.50.','英国航空公司4793号班机於16时50分抵达伦敦.','We shall arrive soon after.','我们将随后很快就到达。'}

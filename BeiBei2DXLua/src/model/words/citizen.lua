@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["citizen"]={"citizen","['sɪtɪz(ə)n]","['sɪtɪzn]","n.公民",'n.公民,市民','He is a Dane inasmuch as he was born in Denmark, but he became a British citizen at the age of 30.','他按其出生在丹麦来说是丹麦人, 但他在30岁时成了英国公民.','This accusationof bribery is a vile smear on an honourable citizen.','这项有关贿赂的指控是对一个正直公民的无耻诽谤.'}

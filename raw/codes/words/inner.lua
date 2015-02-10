@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inner"]={"inner","[ɪnə]","['ɪnɚ]","adj.内部的",'adj.内部的,里面的,内心的|||n.里面,内部','an inner room; an inner layer of warm clothing.','内室；保暖服装衬里','I was allowed once into his inner sanctum.','我有一次获准进入他的内室.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["corduroy"]={"corduroy","['kɔːdərɒɪ; -djʊ-]","['kɔrdə'rɔi]","n.灯芯绒",'n.灯芯绒，条绒，木排路|||(复数）corduroys:灯芯绒裤|||vt.用木头铺排','||Corduroy|| dresses sizes8-16 in white, yellow, red, turquoise, black per100$1,845.','条绒上衣尺码8至16号为白, 黄, 红, 青绿及黑色, 每100件价格为1, 845美元。','a corduroy road.','木排路'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kiss"]={"kiss","[kɪs]","[kɪs]","vt.接吻",'vt.接吻；轻拂；轻微碰撞|||vi.接吻；轻触|||n.吻；轻触；小糖果；蛋白甜饼，球形饼干','They exchanged a final kiss before parting.','他们最後相互亲吻而分离.','He remembered her parting kiss in the following years.','在以后的岁月中，他一直记着她临别时的一吻。'}

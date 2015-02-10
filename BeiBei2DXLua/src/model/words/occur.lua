@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["occur"]={"occur","[ə'kɜː]","[ə'kɝ]","vi.发生",'vi.发生；出现；闪现','Heavy rains occur during a summer monsoon.','暴雨出现在一个夏季季风期','That plane crash occurred only minutes after take-off.','空难在起飞几分钟后就发生了。'}

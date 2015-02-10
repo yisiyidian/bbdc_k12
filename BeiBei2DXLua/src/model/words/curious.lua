@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["curious"]={"curious","['kjʊərɪəs]","['kjʊrɪəs]","adj.好奇的",'adj.好奇的,古怪的','The reporter is curious to know whether the official is involved in the case.','这个记者很想知道那位官员是否涉及此案。','The cat felt curious when she saw her own reflection in the mirror.','小猫看到自己在镜子中的倒影，感到很好奇。'}

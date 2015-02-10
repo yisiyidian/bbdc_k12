@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["piano"]={"piano","[pɪ'ænəʊ]","[pɪ'æno]","n.钢琴",'n.钢琴|||adj.&adv.轻柔的','He is a wizard at playing the piano.','他是个钢琴奇才。','Painting the room involved moving out the piano.','粉刷房间就要把钢琴搬出去。'}

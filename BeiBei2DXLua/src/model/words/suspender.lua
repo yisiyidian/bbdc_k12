@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["suspender"]={"suspender","[sə'spɛndɚ]","[ sə'spendə ]","n.吊袜带",'n.吊袜带，(裤子或裙子的)背带，悬挂物','Some boys wear suspenders to keep their trousers up.','有些孩子使用背带来吊住裤子。','The checkered pattern of that suspender recurred incessantly to his mind.','那根背带的棋盘格花纹不停地在他脑子里显现出来.'}

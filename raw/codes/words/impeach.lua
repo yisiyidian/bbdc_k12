@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impeach"]={"impeach","[ɪm'piːtʃ]","[ɪm'pitʃ]","vt.存疑",'vt.存疑,归咎,怀疑,弹劾','The Parliament decided to impeach the President.','国会决定弹劾总统。','Many people impeached the judge for taking bribes.','很多人控告法官受贿。'}

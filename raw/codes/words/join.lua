@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["join"]={"join","[dʒɒɪn]","[dʒɔɪn]","v.参加",'v.参加,结合,联合,加入','Can you see the join in the coat?','你能看到衣服上的接缝吗？','He joined us in the discussion yesterday.','他昨天参加了我们的讨论。'}

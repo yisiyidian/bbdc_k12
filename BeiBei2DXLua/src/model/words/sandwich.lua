@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sandwich"]={"sandwich","['sæn(d)wɪdʒ; -wɪtʃ]","['sænwɪtʃ]","n.三明治",'n.三明治|||vt.插入,夹在中间','As he was still hungry, he gobbled up a second sandwich.','因为还饿，他又狼吞虎咽地吃了第二块三明治。','He bought a canned cod and a sandwich as supper.','他买了一个鳕鱼罐头和一个三明治作晚饭。'}

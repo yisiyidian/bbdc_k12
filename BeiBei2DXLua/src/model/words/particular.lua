@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["particular"]={"particular","[pəˈtɪkjələ(r)]","[pɚ'tɪkjəlɚ]","n.个别项目",'n.个别项目,详细说明|||adj.特别的,独有的;挑剔的;详细的','He gave full particulars of the stolen property.','他详细列出全部被盗的财物。','This work should be done correctly in all particulars.','这项工作每一点都必须做到正确无误。'}

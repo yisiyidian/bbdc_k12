@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heiress"]={"heiress","['eərɪs; eə'res]","[ 'εəris ]","n.女继承人",'n.女继承人','The young heiress was a good match.','那个继承了大笔财产的年轻女子是理想的伴侣.','The robber abduct the heiress and hold her to ransom.','强盗劫持了女继承人并向她索取赎金。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["haze"]={"haze","[heɪz]","[hez]","n.薄雾",'n.薄雾|||vi.(over)变模糊','His eyes hazed when he thought of her.','他想起她来时，眼前一片模糊。','My mind was in a complete haze.','我完全糊涂了。'}

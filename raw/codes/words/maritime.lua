@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["maritime"]={"maritime","['mærɪtaɪm]","['mærɪtaɪm]","adj.海的",'adj.海的,海上的,海事的','He had sole jurisdiction in maritime and seafaring causes.','他对海商案件拥有专属管辖权。','Many maritime people are fishermen.','许多居于海滨的人都是渔夫。'}

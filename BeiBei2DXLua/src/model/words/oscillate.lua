@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oscillate"]={"oscillate","['ɒsɪleɪt]","['ɑsɪlet]","v.振动",'v.振动,彷徨,犹豫|||v.使振动,使动摇','He oscillates between political extremes.','他的政治观点在两个极端之间摇摆不定。','I checked to see if the needle indicating volume was ||oscillating||.','我查看了那根音量指针是否在摆动。'}

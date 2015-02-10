@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oblivious"]={"oblivious","[ə'blɪvɪəs]","[ə'blɪvɪəs]","adj.遗忘的",'adj.遗忘的；健忘的；不注意的；不知道的','Devoid of scruples; oblivious to or contemptuous of what is right or honorable.','毫无顾忌的全无顾忌的；忘了何为正确或光荣的或对正确的或光荣的事物轻蔑的','The speaker ground on, oblivious of his listeners\' boredom.','演说者唠唠叨叨, 没注意到听众的厌烦情绪.'}

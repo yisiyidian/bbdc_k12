@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["worst"]={"worst","[wə:st]","[wɝst]","adj.最坏的",'adj.最坏的,最差的|||adv.最坏,最差|||n.最坏,最差,最糟','It\'s the old and the poor who suffer worst when subsidies are cut.','补助津贴一削减，最吃苦头的就是那些老人和贫民。','That was the worst airline disaster in history.','那是历史上最严重的空难。'}

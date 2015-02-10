@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["translation"]={"translation","[træns'leɪʃ(ə)n; trɑːns-; -nz-]","[træns'leʃən]","n.翻译",'n.翻译,译文','Poetry always loses (something) in translation.','诗歌一经翻译总有所失.','The teacher laid emphasis on the precision of the translation from the outset.','老师从一开始就强调翻译准确性。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["greed"]={"greed","[griːd]","[ɡrid]","n.贪心",'n.贪心,贪婪','||Greed|| is a terrible vice.','贪得无厌是可鄙的行为.','He was actuated solely by greed.','他完全是受了贪欲的驱使.'}

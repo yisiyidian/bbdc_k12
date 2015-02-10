@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["progenitor"]={"progenitor","[prə(ʊ)'dʒenɪtə]","[pro'dʒɛnɪtɚ]","n.祖先",'n.祖先,先辈,原著','It is said that our progenitors are monkeys.','据说我们的祖先是猴子。','He was the progenitor of a family of distinguished actors.','他是一个著名演艺世家的先辈。'}

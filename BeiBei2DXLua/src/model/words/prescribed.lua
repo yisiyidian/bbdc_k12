@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prescribed"]={"prescribed","[prɪ'skraɪbd]","[ pri'skraibd ]","adj.规定的",'adj.规定的','She prescribed some pills to help me to sleep.','她让我吃些药片以利睡眠.','Books must be kept according to a prescribed form.','必须按照规定的形式记账.'}

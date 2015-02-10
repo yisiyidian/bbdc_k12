@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["murderer"]={"murderer","['mɜːd(ə)rə(r)]","['mɝdərɚ]","n.杀人犯",'n.杀人犯,凶手','And now the scene shifts to the warehouse, where the murderer is lying in wait.','现在场景转到仓库，行凶者正埋伏在那里伺机行动。','The murderer was sentenced to the gallows.','杀人犯被判处绞刑。'}

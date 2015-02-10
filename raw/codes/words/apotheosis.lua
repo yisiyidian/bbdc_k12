@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apotheosis"]={"apotheosis","[ə,pɒθɪ'əʊsɪs]","[ə,pɑθɪ'osɪs]","n.尊为神",'n.尊为神,封神,神化','The legend of king arthur represent the apotheosis of chivalry.','亚瑟王的传说代表骑士精神的顶峰。','Their leader was the apotheosis of courage.','他们的领导人是勇敢的典范。'}

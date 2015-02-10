@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cosset"]={"cosset","['kɒsɪt]","['kɑsɪt]","n.亲手饲养的小动物",'n.亲手饲养的小动物,宠儿|||v.宠爱,珍爱,溺爱','She had been cosseted by her parents all during her childhood.','她小时候一直为父母所溺爱。','My wife is very keen on raising chickens as cosset.','我妻子最喜欢养鸡作为小宠物'}

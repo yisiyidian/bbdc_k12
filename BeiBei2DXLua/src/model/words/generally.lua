@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["generally"]={"generally","['dʒen(ə)rəlɪ]","['dʒɛnrəli]","adv.一般地",'adv.一般地','||Generally|| speaking, women live longer than men.','一般而言，女性寿命较男性长。','It is generally accepted that smoking is harmful to our health.','吸烟有害健康，这是大家公认的。'}

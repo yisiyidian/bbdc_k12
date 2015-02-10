@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sap"]={"sap","[sæp]","[sæp]","n.树液",'n.树液；精力v.使虚弱；削弱；逐渐破坏','They are ventilating the sap of a coal mine.','他们正在给煤矿坑道通风。','The sap flowed out when he broke the stem of the flower.','他把花茎折断，汁液就流了出来。'}

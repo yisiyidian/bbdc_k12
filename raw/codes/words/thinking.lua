@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thinking"]={"thinking","[θɪŋkɪŋ]","['θɪŋkɪŋ]","n.思考",'n.思考,思想|||adj.思考的,有理性的|||现在分词','His brow corrugated with the effort of thinking.','他皱著眉头用心地思考.','His inscrutable face does not show what he is thinking.','他那神秘莫测的面孔看不出在想什么。'}

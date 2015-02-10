@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["zephyr"]={"zephyr","['zefə]","['zɛfɚ]","n.西风",'n.西风,和风,徐风','There was silence now except for the distant sea, a slight zephyr stirring the trees.','现在，除了遥远的海浪以外，一片寂静，一阵微风摇曳着树林。','I feel very refreshed in the zephyr from the sea.','从海上吹来的和风令我神清气爽。'}

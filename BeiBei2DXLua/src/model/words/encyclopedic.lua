@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["encyclopedic"]={"encyclopedic","[en,saɪklə(ʊ)'piːdɪk; ɪn-]","[ɪn'saɪklə'pidɪk]","adj.百科全书的",'adj.百科全书的,知识渊博的','an ignorance almost as encyclopedic as his erudition','“几乎象其广博的学识一样的无知”','He had an encyclopedic knowledge of drugs.','他有渊博的药品知识。'}

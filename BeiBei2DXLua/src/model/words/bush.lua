@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bush"]={"bush","[bʊʃ]","[ buʃ ]","n.灌木(丛)",'n.灌木(丛),荒野,狐狸尾巴|||vt.用灌木保护或支撑,加衬套于|||vi.成灌木形,丛生|||adj.长得低矮的，二流的','There is some ice in the bush.','树丛里有些冰。','One beats the bush, and another catches the birds.','【谚】人竭其力，汝享其成。'}

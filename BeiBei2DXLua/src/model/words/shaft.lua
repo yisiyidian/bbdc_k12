@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shaft"]={"shaft","[ʃɑːft]","[ʃæft]","n.轴",'n.轴,杆状物|||vt.装杆于,利用','In rotating, the shaft splashes oil up into the bearings.','当轴旋转的时候就把油溅入轴承。','The horse stood between the shafts of the carriage.','马站在大车车辕中间。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["garage"]={"garage","['gærɑː(d)ʒ; -ɪdʒ; gə'rɑːʒ]","[ɡə'rɑʒ]","n.车库",'n.车库,汽车修理厂|||vt.把...放入车库','There is a garage built onto the side of the house.','这所房子的一侧建有一个车库.','He nosed the car into the garage.','他把汽车慢慢地开入车房.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["treaty"]={"treaty","['triːtɪ]","['triti]","n.条约",'n.条约,协定','The treaty gave (a) fresh impetus to trade.','这条约使双方的贸易又推进了一步.','According to the treaty, China is to take back Hong Kong on July 1st, 1997.','根据条约, 中国将于1997年7月1日收回香港。'}

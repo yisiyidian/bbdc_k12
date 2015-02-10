@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gnome"]={"gnome","[nəʊm]","[ nəum ]","n.地精",'n.地精,土地神|||n.格言,金言','Giants like to have gnome as their meals.','巨人喜欢拿地精当食物。','The gnomes of Zurich refuse to cooperate with the investigating officials.','瑞士的银行家们拒绝与调查官员合作。'}

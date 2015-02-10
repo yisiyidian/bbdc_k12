@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ambience"]={"ambience","['æmbɪəns]","['æmbɪəns]","n.气氛",'n.气氛','The little restaurant has a pleasant ambience.','这家小饭馆的环境幽雅宜人。','We\'ve tried to create the ambience of a French bistro.','我们想尽量营造出法国小餐馆的氛围。'}

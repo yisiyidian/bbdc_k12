@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["itinerary"]={"itinerary","[aɪ'tɪn(ə)(rə)rɪ; ɪ-]","[aɪ'tɪnərɛri]","n.旅程",'n.旅程,旅行指南,游记|||adj.巡回的,游历的,旅程的','The member of the group is given a detailed tour itinerary by the courier.','旅游团成员从导游那里拿到详细的日程表。','The two sides have agreed on the itinerary of the visit.','双方商定了访问日程。'}

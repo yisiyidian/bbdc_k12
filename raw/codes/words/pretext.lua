@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pretext"]={"pretext","['priːtekst]","['pritɛkst]","n.借口",'n.借口','On the pretext of asking for my advice, he called and borrowed ￡10 from me.','他以向我讨教为借口，上门找我借了十英镑。','He came to see me on the pretext of asking my advice.','他以请我指教为借口来看我。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shyster"]={"shyster","['ʃaɪstə]","[ 'ʃaistə ]","n.奸诈的人",'n.奸诈的人,讼棍','It is almost impossible to find a lawyer that isn\'t a shyster.','要找一位诚实的律师几乎是不可能的。','shyster','奸诈的人'}

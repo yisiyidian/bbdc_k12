@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["yesterday"]={"yesterday","['jestədeɪ; -dɪ]","['jɛstɚde]","n.&adv.昨天",'n.&adv.昨天','The sound of fire-alarm was heard by us yesterday evening.','昨晚我们听见了火警声。','I bought several books yesterday.','我昨天买了好几本书。'}

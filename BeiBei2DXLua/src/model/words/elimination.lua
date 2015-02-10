@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["elimination"]={"elimination","[ɪ,lɪmɪ'neɪʃən]","[ɪ,lɪmə'neʃən]","n.除去",'n.除去,消除','Disease germs begin to die out slowly after elimination from the body.','病原体离开了躯体后便逐渐死亡。','Their elimination from the competition was a great surprise.','他们在比赛中遭到淘汰是个很大的意外。'}

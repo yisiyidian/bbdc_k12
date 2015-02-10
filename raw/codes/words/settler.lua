@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["settler"]={"settler","['setlə]","['sɛtlɚ]","n.移居者",'n.移居者；殖民者','The body of law established by the Danish invaders and settlers in northeast England in the ninth and tenth centuries.','丹麦法在9世纪和10世纪时，由丹麦入侵者和殖民者在英国东北部施行的法律体系','One of his forefathers was an early settler in America.','他的祖先之一是美洲的早期移民。'}

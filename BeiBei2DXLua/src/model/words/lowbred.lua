@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lowbred"]={"lowbred","['ləʊ'bred]","['lo'brɛd]","adj.粗野的",'adj.粗野的,鲁莽的','Having been brought up in a genteel family, she began to resent her fiance\'s lowbred ways.','在上流社会家庭里长大的她开始讨厌她未婚夫粗野的行为。','lowbred：(of persons) lacking in refinement or grace','缺乏礼貌的人'}

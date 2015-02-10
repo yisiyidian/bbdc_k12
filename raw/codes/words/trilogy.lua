@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trilogy"]={"trilogy","['trɪlədʒɪ]","['trɪlədʒi]","n.三部曲",'n.三部曲','The book is one of the trilogy .','这本书是三部曲之一。','He is best know for his trilogy on working life.','他以描写工人阶级生活的三部曲而著名。'}

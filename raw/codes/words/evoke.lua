@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["evoke"]={"evoke","[ɪ'vəʊk]","[ɪ'vok]","vt.唤起",'vt.唤起,引起','A scent or sound may evoke a distant episode from one\'s childhood.','一个情景或者声音都可能会唤起遥远的小时候的片段。','A joke does not necessarily evoke a hearty laugh.','一个笑话不一定能让人会心一笑。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amazing"]={"amazing","[ə'meɪzɪŋ]","[ə'mezɪŋ]","adj.令人惊异的",'adj.令人惊异的','How amazing!','真惊人!','Just look at it. Isn\'t it amazing!','你看看。真叫人惊叹!'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disturbance"]={"disturbance","[dɪ'stɜːb(ə)ns]","[dɪ'stɝbəns]","n.扰乱",'n.扰乱,骚动','Those men were charged by the police with causing a disturbance.','那些人因制造骚乱被警方控诉。','The police have been called in to quell a minor disturbance.','警察奉命出动以平息一场小规模的骚乱。'}

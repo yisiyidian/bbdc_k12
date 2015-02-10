@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exuberance"]={"exuberance","[ɪg'z(j)uːb(ə)r(ə)ns; eg-]","[ɪg'zjʊbərəns]","n.茂盛",'n.茂盛,充沛,丰富','A state of joyful exuberance or merriment; vivacity.','快乐、活泼快乐或愉快的状态；兴奋','The exuberance that marks her writings; marked the occasion with celebrations.','她的作品的特点在于丰富；以庆祝活动作为这种场合的特点'}

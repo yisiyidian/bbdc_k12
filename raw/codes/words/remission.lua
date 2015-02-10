@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["remission"]={"remission","[rɪ'mɪʃ(ə)n]","[rɪ'mɪʃən]","n.缓解",'n.缓解，减轻，弛张：疾病症状的减退，亦指发生这一减退的期间，即缓解期...|||饶恕;宽恕;(负债、处分等的)豁免,赦免...','He compounded with his creditors for a remission of what he owed.','他和他的债权人谈妥免除其债务。','With remission for good behaviour, she could be freed in a year.','她因为表现良好获得减刑，可能会在一年内重获自由。'}

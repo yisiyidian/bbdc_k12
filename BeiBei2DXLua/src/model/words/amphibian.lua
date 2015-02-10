@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amphibian"]={"amphibian","[æm'fɪbɪən]","[æm'fɪbɪən]","adj.两栖类的",'adj.两栖类的,水陆两用的|||n.两栖动物,水陆两用飞机,水陆两用车','Frogs and newts are amphibians.','青蛙和蝾螈都是两栖动物。','Turtles are amphibians.','龟龟是两栖动物。'}

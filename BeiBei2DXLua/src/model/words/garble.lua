@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["garble"]={"garble","['gɑːb(ə)l]","[ 'ɡɑ:bl ]","vt.断章取义",'vt.断章取义,曲解，混淆|||n.断章取义，混淆','She garbled all the historical facts.','她歪曲了所有历史事实','The injured man was still groggy and could only give a garbled account of the accident.','受伤的男子仍不很清醒, 只能含糊地说出事故的情形.'}

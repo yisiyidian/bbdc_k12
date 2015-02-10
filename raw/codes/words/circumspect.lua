@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["circumspect"]={"circumspect","['sɜːkəmspekt]","['sɝkəm'spɛkt]","adj.细心的",'adj.细心的,慎重的','She is very circumspect when dealing with strangers.','她与陌生人打交道时十分谨慎。','The banks should have been more circumspect in their dealings.','银行在交易时应更加谨慎。'}

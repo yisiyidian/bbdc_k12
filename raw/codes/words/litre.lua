@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["litre"]={"litre","['liːtə]","[ 'li:tə ]","n.公升（=liter）",'n.公升（=liter）','It costs £10.86 for one litre including carriage.','连运费在内，每升花费10.86英镑。','||Litre|| is a unit of capacity in the metric system.','升是公制测量中的一个单位.'}

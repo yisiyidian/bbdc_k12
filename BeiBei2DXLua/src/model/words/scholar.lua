@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scholar"]={"scholar","['skɒlə]","['skɑlɚ]","n.学者",'n.学者，获奖学金的学生','The greatest scholar cannot solve this difficult problem.','再伟大的学者也没有办法解答这个难题吧。','My tutor is an accomplished scholar.','我的导师是一位学识渊博的学者。'}

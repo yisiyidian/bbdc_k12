@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["herbaceous"]={"herbaceous","[hɜː'beɪʃəs]","[ɝ'beʃəs]","adj.草本植物的",'adj.草本植物的，叶状的','||Herbaceous|| plant growth, especially grass or similar vegetation used for pasturage.','草本植物群草本植物群，尤指牧草或类似的用于放牧的植被','a herbaceous plant','草本植物'}

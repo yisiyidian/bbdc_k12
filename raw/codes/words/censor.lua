@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["censor"]={"censor","['sensə]","['sɛnsɚ]","n.检查员",'n.检查员,潜意识的抑制,为Freud学派的术语|||v.检查','The censor insisted on excising the passage from the film.','电影审查员坚持剪去影片的这一段。','Two scenes were cut by the censor.','有两个镜头被审查员剪掉了。'}

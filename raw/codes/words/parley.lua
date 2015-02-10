@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["parley"]={"parley","['pɑːlɪ]","['pɑrli]","n.和谈",'n.和谈,会谈|||vi.会谈，谈判','The garrison that sounds a parley is not far from being surrendered.','如果守军向敌人鸣鼓要求谈判，则意味着快投降了。','The government is ready to hold a parley at any moment.','政府准备随时谈判。'}

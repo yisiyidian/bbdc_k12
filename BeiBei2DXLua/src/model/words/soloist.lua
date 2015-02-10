@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["soloist"]={"soloist","['səʊləʊɪst]","['soloɪst]","n.独奏者",'n.独奏者,独唱者','The soloist in the violin concerto was Menuhin.','这首小提琴协奏曲的独奏者是梅纽因.','The bass soloist was in excellent voice.','这个男低音独唱演员这次唱出了高水平.'}

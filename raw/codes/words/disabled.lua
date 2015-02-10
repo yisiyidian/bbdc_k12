@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disabled"]={"disabled","[dɪs'eɪbld]","[dɪs'ebld]","adj.残废的",'adj.残废的|||n.残疾人','Now that he was disabled, his house had become a prison to him.','因为他残废了, 他的房子就成了他的牢笼.','The soldier disabled by wounds in his leg is buried in sadness.','那个腿部受伤致残的士兵正沉浸在悲哀之中。'}

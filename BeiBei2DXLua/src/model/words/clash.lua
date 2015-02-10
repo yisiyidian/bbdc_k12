@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clash"]={"clash","[klæʃ]","[klæʃ]","n.冲突",'n.冲突,撞击声,抵触|||vt.冲突,抵触,使...发出撞击声|||vi.引起冲突','It\'s a pity the two concerts clash; I wanted to go to both of them.','真可惜两个音乐会时间上有冲突，我本来想两个都去。','The enemy armies clashed near the border.','敌军在边境附近发生冲突。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["purvey"]={"purvey","[pə'veɪ]","[ pə'vei ]","v.供给",'v.供给,供应','...one who would, for a hefty fee, purvey strategic advice to private corporations.','...一个会为了巨额佣金为私营企业透露战略咨询建议的人。','They have two restaurants that purvey dumplings and chicken noodle soup.','有两家供应饺子和鸡肉汤面的餐馆。'}

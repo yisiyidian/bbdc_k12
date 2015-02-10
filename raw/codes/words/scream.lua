@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scream"]={"scream","[skriːm]","[skrim]","v.尖叫",'n.尖叫声|||v.尖叫,大笑','I pressed the accelerator until the engine screamed.','我猛踩油门踏板，发动机发出了尖利的声音。','She screamed herself hoarse.','她把嗓子喊哑了。'}

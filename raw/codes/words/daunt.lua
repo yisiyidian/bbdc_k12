@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["daunt"]={"daunt","[dɔːnt]","[ dɔ:nt ]","vt.恐吓(使...胆怯)",'vt.恐吓(使...胆怯)','Danger didn\'t daunt the hero.','危险并没有吓住那英雄。','I\'m somewhat daunted by the size of the task.','我有点儿被这项任务的规模吓着了。'}

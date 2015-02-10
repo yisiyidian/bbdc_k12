@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brute"]={"brute","[bruːt]","[brut]","n.畜生",'n.畜生,残忍的人|||adj.残忍的,无理性的，粗暴的','His father was a drunken brute.','他的父亲是个酗酒成性、冷酷无情的人.','That dog looks a real brute.','那条狗真像一只野兽.'}

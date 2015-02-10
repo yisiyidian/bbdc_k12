@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["endear"]={"endear","[ɪn'dɪə; en-]","[ɪn'dɪr]","v.使受喜爱",'v.使受喜爱','He managed to endear himself to everyone.','他设法让大家都喜欢他。','Her kindness to my children greatly endeared her to me.','她对我的孩子很好，所以我很喜欢她。'}

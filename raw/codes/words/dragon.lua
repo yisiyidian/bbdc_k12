@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dragon"]={"dragon","['dræg(ə)n]","['dræɡən]","n.龙",'n.龙，严厉的人','The contour of that mountain looks like a dragon.','那座大山的轮廓看上去像一条龙。','This jade dragon is a genuine antique.','这件玉龙是真正的古玩。'}

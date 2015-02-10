@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["placate"]={"placate","[plə'keɪt; 'plækeɪt; 'pleɪ-]","['pleket]","v.抚慰",'v.抚慰,和解,怀柔','The concessions did little to placate the students.','让步根本未能平息学生的愤怒。','He smiled, and made a gesture intended to placate me.','他微笑了一下，做了一个意在安抚我的手势。'}

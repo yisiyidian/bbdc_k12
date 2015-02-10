@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sea"]={"sea","[siː]","[si]","n.海",'n.海,海洋','The moonlight shone on the calm sea.','月光映在平静的海面上。','Nautilus is a small sea animal.','鹦鹉螺是种小型海洋动物。'}

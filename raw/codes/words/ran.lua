@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ran"]={"ran","[ræn]","[ræn]","（过去式）v.跑",'（过去式）vt.跑,放牧,经营,走私,使运转,浇铸,使遭受|||vi.跑,竞赛,行驶,运转,遭遇,持续,熔化,褪色,流,蔓延,传播','The wind was so strong that we ran to the lee of the house.','风太大了, 所以我们跑到屋子的背风处。','The tears ran down her cheeks.','泪水沿着她的面颊流下。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inclusion"]={"inclusion","[ɪn'kluːʒ(ə)n]","[ɪn'kluʒn]","n.包含",'n.包含','||Inclusion|| in an insurance policy or protective plan.','保险项目某一保险单或担保方案所包含的内容','...a confident performance that justified his inclusion in the team.','…证明他入选该队是明智之举的自信表现。'}

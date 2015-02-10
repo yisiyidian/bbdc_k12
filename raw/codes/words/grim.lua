@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grim"]={"grim","[grɪm]","[ɡrɪm]","adj.冷酷的",'adj.冷酷的；糟糕的；残忍的','I\'ve seen her so-called paintings; they\'re fairly grim, I can tell you!','我看见过她那所谓的画；一点儿都不好，真的！','She stuck to her task like grim death.','她百折不挠地执行任务。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["softwood"]={"softwood","['sɒf(t)wʊd]","['sɔftwʊd]","n.软木材",'n.软木材,针叶树|||adj.软木材的','||Softwood|| trees have thin, needle-like leaves.','软材树的叶片纤细，呈针状。','||Softwood|| is not suitable for making furniture.','软木材不适合做家具'}

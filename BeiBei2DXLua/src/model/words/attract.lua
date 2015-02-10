@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["attract"]={"attract","[ə'trækt]","[ə'trækt]","v.吸引",'v.吸引,有吸引力','`We have to attract younger customers.\'','｀我们得设法吸引年轻顾客.＇','The government is trying to attract more investment into the shipbuilding industry.','政府正在试图吸引更多资金投资到造船业方面来。'}

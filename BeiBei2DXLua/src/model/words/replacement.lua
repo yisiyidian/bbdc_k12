@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["replacement"]={"replacement","[rɪ'pleɪsm(ə)nt]","[rɪ'plesmənt]","n.交换",'n.交换,更换,代替者','In addition, we supply small parts for replacement.','此外，我们还提供备用小零件。','My secretary leaves us next week, so we are advertising for a replacement.','我的秘书下星期要走，所以我们现在正登广告招聘一位替代者。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["photoelectric"]={"photoelectric","[,fəʊtəʊɪ'lektrɪk]","[,fotoɪ'lɛktrɪk]","adj.光电的",'adj.光电的','Early results on the photoelectric effect had not produced consistent results.','有关光电效应的早期实验,并未取得协调一致的结果.','This is obviously due to the Compton and photoelectric effects.','很明显,这是由于康普顿效应与光电效应作用的缘故.'}

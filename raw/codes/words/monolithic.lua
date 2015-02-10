@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["monolithic"]={"monolithic","[mɒnə'lɪθɪk]","[,mɑnə'lɪθɪk]","adj.整体的",'adj.独石的,完全统一的,整体的','This figure is made in one monolithic stone.','这个雕像是由一块完整的石头做成。','Don\'t think that Europe is monolithic and all countries in Europe must make the same decision.','不要以为欧洲是一块铁板，也不要以为所有欧洲国家都会做出相同的决定。'}

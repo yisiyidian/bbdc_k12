@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outlandish"]={"outlandish","[aʊt'lændɪʃ]","[aʊt'lændɪʃ]","adj.外国味的(奇异的)",'adj.外国味的(奇异的)','Her outlandish attire made her conspicuous in the crowd.','她异国风格的服饰使她在人群中很打眼。','You lay yourself open to ridicule by suggesting such an outlandish plan.','你提出那样一个希奇古怪的计划，难怪会受人讥笑。'}

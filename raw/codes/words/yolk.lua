@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["yolk"]={"yolk","[jəʊk]","[jok]","n.蛋黄",'n.蛋黄','The egg has a double yolk.','这只蛋双黄。','The yolk is the yellow part in an egg.','蛋黄是鸡蛋中的黄色部分.'}

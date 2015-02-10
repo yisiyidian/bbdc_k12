@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["meander"]={"meander","[mɪ'ændə]","[mɪ'ændɚ]","n.河流的曲折",'n.河流的曲折,漫步,迂回旅行|||v.漫谈,缓慢而弯曲地流动','The small river meandered in lazy curves down the centre.','小河缓缓地绕着中心地区迤逦流过。','His talk appears to meander but by the end focuses attention on the true state of affairs.','他的谈话看似不着边际，最终却集中到了事态的真相上来。'}

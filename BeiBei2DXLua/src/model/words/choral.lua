@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["choral"]={"choral","['kɔːr(ə)l]","['kɔrəl]","adj.合唱队的",'adj.合唱队的','A conductor, especially of an orchestra, a band, or a choral group.','指挥指挥，尤指交响乐团、乐队或合唱团的','A book containing the choral portions of the Mass.','弥撒升阶圣歌集包括弥撒音乐部分的祈书'}

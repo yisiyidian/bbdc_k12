@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["buoyant"]={"buoyant","['bɒɪənt]","['bujənt]","adj.有浮力的",'adj.有浮力的,心情愉快的，趋于上涨的','In a buoyant mood.','轻松的心情','The raft would be more buoyant if it was less heavy.','木筏若轻一点浮起的就更好了。'}

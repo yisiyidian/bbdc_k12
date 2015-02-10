@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["damp"]={"damp","[dæmp]","[dæmp]","n.毒气",'n.毒气,湿气,丧气|||adj.潮湿的|||vt.呛,抑制,使潮湿|||vi.衰减','||Damp|| wood doesn\'t burn well.','潮湿的木头不好烧.','The damp wood began to warp.','这块潮湿的木材有些翘棱了.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["preempt"]={"preempt","[prɪ'empt]","[,primpt]","vt.优先购买",'vt.优先购买，先占|||vi.(桥牌中)先发制人地叫牌','You can preempt pain by taking a painkiller at the first warning sign.','刚出现征兆时，就服用止痛片来预防疼痛。','The government preempted a threatened strike at the state-owned copper company.','政府先发制人，制止了国有铜矿公司可能发生的一次罢工。'}

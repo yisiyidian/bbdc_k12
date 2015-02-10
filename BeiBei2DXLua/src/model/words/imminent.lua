@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imminent"]={"imminent","['ɪmɪnənt]","['ɪmɪnənt]","adj.逼近的",'adj.逼近的,即将发生的','Every one feels that a disaster is imminent, as if a catastrophe is about to come.','谁都感到大事不好，似乎有什么极大的灾难即将来临。','No one has given out a warning of the imminent danger.','没有人对即将发生的危险发出警告。'}

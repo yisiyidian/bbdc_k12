@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hair"]={"hair","[heə]","[hɛr]","n.头发",'n.头发,毛发,毛织物,极少量,极短距离','I\'ll have my hair trimmed tomorrow.','明天我要修剪头发。','She was slender and had long dark hair.','她身材苗条，有一头长长的黑发。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["saline"]={"saline","['seɪlaɪn]","['selin]","adj.含盐的",'adj.含盐的,咸的|||n.生理盐溶液，盐湖','He is on a saline drip.','他正在输盐水。','The nurse diluted the drug with saline water.','护士用生理盐水把药加以稀释。'}

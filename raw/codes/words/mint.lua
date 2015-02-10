@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mint"]={"mint","[mɪnt]","[mɪnt]","n.薄荷",'n.薄荷,造币厂,巨额|||vt.铸造,铸币,伪造|||adj.薄荷的,造币厂的,无损坏的','Sage, mint and dill are all herbs.','鼠尾草、 薄荷、 莳萝均为药草.','The Royal ||Mint|| will strike a commemorative gold coin.','英国皇家造币厂将铸造一种纪念金币。'}

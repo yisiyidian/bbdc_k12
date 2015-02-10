@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["escape"]={"escape","[ɪ'skeɪp; e-]","[ɪˈskep]","vt.&vi.逃脱",'n.逃亡,避难设备|||vt.&vi.逃脱,避开|||adj.逃避的','The prisoner has escaped.','犯人逃走了。','The thief jumped into a car and made his escape.','小偷跳上汽车逃走了。'}

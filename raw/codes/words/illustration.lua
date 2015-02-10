@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["illustration"]={"illustration","[ɪlə'streɪʃ(ə)n]","[,ɪlə'streʃən]","n.插图",'n.插图,例证,说明,图解','This illustration shows a section through the timber.','本图所示为木材的纵剖面.','Find the year of your birth on the illustration.','在插图上找一找你出生的年分。'}

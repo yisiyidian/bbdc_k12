@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intractable"]={"intractable","[ɪn'træktəb(ə)l]","[ɪn'træktəbl]","adj.不听话的",'adj.不听话的,倔强的,棘手的','No easy fix for an intractable problem.','难题没有简单的解决办法。','What may be done to reduce the influence of intractable opponents?','能做些什么来减少那些难缠的反对者的影响呢？'}

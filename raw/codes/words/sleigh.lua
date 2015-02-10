@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sleigh"]={"sleigh","[sleɪ]","[sle]","n.雪橇",'n.雪橇|||vi.坐雪橇','A sleigh dashed down the mountainside.','雪撬沿山坡飞驰而下。','My feet were cold as a stone when I got out of the sleigh.','我从雪橇上下来时，两脚冻得像石头一样。'}

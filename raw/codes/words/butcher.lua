@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["butcher"]={"butcher","['bʊtʃə]","['bʊtʃɚ]","n.屠夫",'n.屠夫,刽子手,肉商,小贩|||vt.屠宰,滥杀,将某事弄得一团糟','The tailor has butchered this suit.','裁缝把这套衣服做坏了。','Hitler was as great a butcher as the world has seen.','希特勒是有史以来最大的杀人狂。'}

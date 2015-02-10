@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ascend"]={"ascend","[ə'send]","[ə'sɛnd]","v.上升",'v.上升,攀登','The airplane ascended higher and higher.','飞机渐渐升高。','The path started to ascend more steeply.','小径开始陡峭而上。'}

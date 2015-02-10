@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deck"]={"deck","[dek]","[dɛk]","n.甲板",'n.甲板,桥面,楼层|||vt.装饰','All hands on deck!','全体船员集合！','Some passengers are sitting on the deck of the large steamboat chatting.','有些旅客正坐在这只大轮船的甲板上聊天。'}

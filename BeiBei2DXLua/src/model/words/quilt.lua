@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quilt"]={"quilt","[kwɪlt]","[kwɪlt]","n.被子",'n.被子,被状物|||vt.缝被,缝制,用垫料填塞|||vi.制作被子,做缝制工作','Secret letters were quilted in his belt.','密信缝入他的腰带。','Mary saved up pieces of cloth to make a quilt.','玛丽存了几块布留作棉被用.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["emollient"]={"emollient","[ɪ'mɒlɪənt]","[ɪ'mɑlɪənt]","adj.使柔软的",'adj.使柔软的,润肤的，缓和的|||n.软化剂,缓和剂，润肤剂','You can use an emollient for dry skin.','干燥的皮肤可以使用润肤剂。','Almond oil is renowned for its soothing, emollient properties.','杏仁油因其舒缓、润肤的特性而出名。'}

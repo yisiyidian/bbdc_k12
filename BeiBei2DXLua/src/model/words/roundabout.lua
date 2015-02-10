@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["roundabout"]={"roundabout","['raʊndəbaʊt]","['raʊndəbaʊt]","adj.绕道的",'adj.绕道的，迂回的|||n.远路，环形交叉路口|||n.(英)旋转木马|||n.紧身短上衣','The car stalled at the roundabout.','那辆汽车在环形交叉处抛锚了.','Five roads radiate from this roundabout.','有五条道路以这个环状交叉路为中心向各方伸展开。'}

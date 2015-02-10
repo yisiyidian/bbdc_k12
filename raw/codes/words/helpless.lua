@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["helpless"]={"helpless","['helplɪs]","['hɛlpləs]","adj.无助的",'adj.无助的,无依靠的','The ship was helpless against the power of the storm.','那船抵挡不住风暴的力量.','A hideous monster attacked the helpless villagers.','有个丑恶的怪物袭击了手无寸铁的村民.'}

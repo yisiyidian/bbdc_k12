@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["escalator"]={"escalator","['eskəleɪtə]","['ɛskə'letɚ]","n.自动扶梯",'n.自动扶梯','Attention, please hold the escalator','请注意抓紧扶梯','Please take the escalator to the third floor of the store.','请搭电动扶梯到商店的三层去'}

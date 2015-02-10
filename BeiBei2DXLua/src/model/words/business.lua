@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["business"]={"business","[ˈbɪznəs]","[ˈbɪznɪs]","n.商业",'n.商业,生意,事务','The main business of this meeting is our wages claim.','这次会议的主要议题是我们在工资方面的要求。','||Business|| is always brisk before Christmas.','圣诞节前生意总是很兴隆。'}

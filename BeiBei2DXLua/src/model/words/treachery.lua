@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["treachery"]={"treachery","['tretʃ(ə)rɪ]","['trɛtʃəri]","n.叛逆",'n.叛逆,背叛,变节','Deliberate breach of faith; calculated violation of trust; treachery.','缺乏诚意故意的违背信义；故意的破坏信任；欺诈','Such treachery should be repaid in specie.','对这种奸诈应以同样的方式加以回报。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enjoy"]={"enjoy","[ɪn'dʒɒɪ; en-]","[ɪn'dʒɔɪ]","vt.&vi.享受",'vt.&vi.享受,喜欢','I enjoy singing, much more listening to music.','我喜欢唱歌，更不用说听音乐了。','Now that I am free, I can enjoy music for a while.','既然有空，我可以享受一下音乐。'}

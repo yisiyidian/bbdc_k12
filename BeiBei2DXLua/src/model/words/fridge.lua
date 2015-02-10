@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fridge"]={"fridge","[frɪdʒ]","[frɪdʒ]","n.电冰箱",'n.电冰箱','She can mend the fridge by herself.','她能自己修理冰箱.','Connect the fridge (up) to the electricity supply.','接通冰箱的电源.'}

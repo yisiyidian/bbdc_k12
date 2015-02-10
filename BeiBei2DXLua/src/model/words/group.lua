@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["group"]={"group","[gruːp]","[ɡrup]","n.组",'n.团体,组,团|||vt.&vi.聚合,成群|||[计算机]成组','That group harmonizes well.','那一组用和声演唱得很出色。','The company formerly belonged to an international banking group.','该公司以前隶属於一个国际银行集团.'}

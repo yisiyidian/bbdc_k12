@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pouch"]={"pouch","[paʊtʃ]","[paʊtʃ]","n.小袋",'n.小袋,小包,囊状袋|||vt.装...入袋中,用袋运输|||vi.用袋送信件','An organic sac or pouch, such as the udder of a cow.','（牛的）乳房有机体器官的液囊或袋，如牛的乳房','A temporary egg pouch in various fishes and crustaceans.','（鱼类和甲壳类动物的）临时卵袋'}

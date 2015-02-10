@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shack"]={"shack","[ʃæk]","[ʃæk]","n.棚房",'n.棚房，窝棚，(作某种用途的)小室','He was looking for a dame to shack up with when the police picked him up.','他正在找女人鬼混的时候，警察把他逮住了。','A crude or makeshift dwelling or shelter; a shack.','简陋小屋，茅屋粗糙的临时住房或隐蔽处；棚屋'}

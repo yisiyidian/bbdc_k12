@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["secluded"]={"secluded","[sɪ'kluːdɪd]","[sɪ'kludɪd]","adj.隐蔽的",'adj.隐退的,隐蔽的|||动词seclude的过去式和过去分词','kissing or caressing in a vehicle stopped in a secluded spot','停车亲热，把车停在僻静处并在车里亲吻或爱抚','A secluded mansion, islanded by shrubbery and fences.','用灌木丛和篱笆隔开的一座幽独的大宅'}

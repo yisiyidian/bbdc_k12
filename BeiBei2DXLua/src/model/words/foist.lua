@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["foist"]={"foist","[fɒɪst]","[fɔɪst]","vt.混入",'vt.混入,蒙骗|||vt.把...强塞给,骗卖给','He\'s religious but he doesn\'t try to foist his beliefs on everyone.','他是教徒，但他不想把自己的信仰强加于人。','They had extra work foisted on them because they couldn\'t say no to the boss.','因为他们不能反抗老板，所以被迫做许多额外的工作。'}

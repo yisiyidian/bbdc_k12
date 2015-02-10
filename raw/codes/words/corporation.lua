@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["corporation"]={"corporation","[kɔːpə'reɪʃ(ə)n]","[,kɔrpə'reʃən]","n.公司",'n.公司,法人,集团','Several new members have come into this corporation.','这个公司又有新人员加入。','This establishment opened under the sponsorship of a large corporation.','这一机构是在一家大企业倡导下开办的。'}

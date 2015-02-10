@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lysis"]={"lysis","['laɪsɪs]","['laɪsɪs]","n.[生化]溶解",'n.[生化]溶解，病势减退,消散','The lysis of the brain takes place only hours after death.','脑的细胞溶解,在死后的几小时就发生了.','The virions are released by lysis of the host cell.','通过裂解,可以使新的病毒体从宿主细胞中释放出来.'}

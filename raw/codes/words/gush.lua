@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gush"]={"gush","[gʌʃ]","[ɡʌʃ]","v.迸出",'v.迸出，滔滔不绝地说|||n.涌出','Her words gush forth when she meet her mother.','见到母亲时，她的话滔滔不绝。','His words gushed out.','他的话滔滔不绝。'}

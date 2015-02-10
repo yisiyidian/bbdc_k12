@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cupboard"]={"cupboard","['kʌbəd]","['kʌbɚd]","n.碗橱",'n.碗橱','All our glass and china is kept in the cupboard.','我们所有的玻璃和陶瓷器皿都放在柜橱里。','My stationery cupboard is full of paper.','我的文具柜塞满了纸。'}

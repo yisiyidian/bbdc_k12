@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drum"]={"drum","[drʌm]","[drʌm]","n.鼓",'n.鼓,鼓声,鼓状物,冰丘|||vi.击鼓,作鼓声,引起兴趣|||vt.召集入伍,逐出,(经过努力)推动...,连续击打','A drum roll preceded the most dangerous part of the performance.','演出快进行到最惊险的部分时响起了咚咚的鼓声.','Who\'s beating the drum?','谁在敲鼓?'}

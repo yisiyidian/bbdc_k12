@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aggrandize"]={"aggrandize","[ə'grændaɪz]","[əˈɡrænˌdaɪz, ˈæɡrən-]","vt.夸大",'vt.增加，夸大，提高|||=aggrandise(英)','The king sought to aggrandize himself.','国王企图增强自己的势力。','At the dinner table, my father would go on and on, showing off, ||aggrandizing|| himself.','吃饭时我父亲总是不停地夸耀和吹嘘自己。'}

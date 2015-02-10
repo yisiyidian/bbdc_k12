@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["canny"]={"canny","['kænɪ]","['kæni]","adj.精明的",'adj.精明的,谨慎的，节俭的|||adv.仔细地','He was far too canny to risk giving himself away.','他很精明，不会冒险暴露自己。','Johnson was plainly a canny individual.','约翰逊显然是个狡猾的人物。'}

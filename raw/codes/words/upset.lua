@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["upset"]={"upset","[ʌp'set]","[ʌp'sɛt]","adj.心烦的",'adj.心烦的|||vt.加厚,推翻,扰乱|||vi.推翻|||n.推翻,混乱','She had a major emotional upset.','她情绪上受到了沉重的打击。','Her refusal to help quite upset the applecart.','她不肯帮忙，计画也就落空了。'}

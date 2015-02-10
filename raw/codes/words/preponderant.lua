@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["preponderant"]={"preponderant","[prɪ'pɒnd(ə)r(ə)nt]","[prɪ'pɑndərənt]","adj.占优势的",'adj.占优势的,压倒性的','Melancholy is the preponderant mood of the poem.','忧郁的感情是该诗的基调.','Melancholy is the  preponderant   mood of the poem','忧郁的感情是该诗的基调.'}

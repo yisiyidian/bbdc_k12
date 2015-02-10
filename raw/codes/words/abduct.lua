@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abduct"]={"abduct","[əb'dʌkt]","[æb'dʌkt]","vt.诱拐",'vt.诱拐,绑走','Her mind reeled when she learned her son had been abducted.','得知儿子被人拐走，她只觉得一阵眩晕。','The robber abduct the heiress and hold her to ransom.','强盗劫持了女继承人并向她索取赎金。'}

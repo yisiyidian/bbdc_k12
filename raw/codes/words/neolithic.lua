@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["neolithic"]={"neolithic","['niə'lɪθɪk]","[ ,ni:əu'liθik ]","adj.新石器时代的",'adj.新石器时代的','A stone implement of the ||Neolithic|| Period.','新石器新石器时代的石头器具','...neolithic culture.','...新石器时代文化。'}

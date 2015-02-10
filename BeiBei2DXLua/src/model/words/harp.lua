@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["harp"]={"harp","[hɑːp]","[hɑrp]","n.竖琴",'n.竖琴','She swept her fingers over the strings of the harp.','她用手指划过竖琴的琴弦.','Don\'t take your harp to the party.','勿反复罗嗦。'}

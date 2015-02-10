@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fitness"]={"fitness","['fɪtnəs]","[ˈfɪtnɪs]","n.适合度（生物学术语）",'n.适合度（生物学术语）|||n.健康','Good muscles are one of the prerequisites of physical fitness.','肌肉发达是身体健康的一个必备条件.','Her fitness for the job cannot be questioned.','她能胜任这项工作，这是无庸置疑的。'}

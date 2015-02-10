@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["premonition"]={"premonition","[,premə'nɪʃ(ə)n; ,priː-]","[,prɛmə'nɪʃən]","n.预感",'n.预告,预感,征兆','The day before her accident, she had a premonition of danger.','在发生事故的前一天，她有一种会发生危险的预感。','He had an unshakable premonition that he would die.','他有一种强烈的预感：他就要死了。'}

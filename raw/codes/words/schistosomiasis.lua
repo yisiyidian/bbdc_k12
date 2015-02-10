@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["schistosomiasis"]={"schistosomiasis","[,ʃɪstə(ʊ)sə'maɪəsɪs]","[,skɪstəso'maɪəsɪs]","n.住血吸虫病",'n.住血吸虫病','Investigation on epidemic situation of schistosomiasis in hexian county after catastrophic flood.','和县沿江地区特大洪水后血吸虫病疫情调查。','The schistosomiasis killed a lot of people in the past times.','住血吸虫病在过去夺取了许多人的生命。'}

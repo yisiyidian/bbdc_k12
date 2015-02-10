@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invent"]={"invent","[ɪn'vent]","[ɪn'vɛnt]","v.发明",'v.发明|||vt.发明,创造','Can you tell me who invented the telephone?','你能告诉我是谁发明了电话？','We must invent an excuse for our absence.','我们必须为缺席编造一个藉口。'}

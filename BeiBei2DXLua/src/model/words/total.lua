@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["total"]={"total","['təʊt(ə)l]","['totl]","adj.总计的（金额等）",'adj.总计的（金额等）；全部的；完全的；绝对的|||n.总计，总数；全体数量|||vt.&vi.总计达，计算…的总数','I\'m afraid that the performance was not a total success.','在我看来，这次演出恐怕不能算是完全成功的。','We have debts totaling 5000 dollars.','我们的债务总计为五千美元。'}

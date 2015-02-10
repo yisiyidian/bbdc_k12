@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dabble"]={"dabble","['dæb(ə)l]","['dæbl]","v.喷洒",'v.喷洒，玩水,泼溅，涉猎','She dabbled her hands in the fountain.','她把手伸到喷泉中玩水。','He just dabbles in politics.','他仅仅是涉足政治而已。'}

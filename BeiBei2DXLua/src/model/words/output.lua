@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["output"]={"output","['aʊtpʊt]","['aʊtpʊt]","n.产量",'n.产量,输出,输出功率,输出端|||vt.输出(信息等)','||Output|| has slowed (up) a little.','生产已放慢了一点.','This country ranks last in industrial output.','这个国家的工业生产排名最後.'}

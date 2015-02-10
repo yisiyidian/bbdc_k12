@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["message"]={"message","['mesɪdʒ]","['mɛsɪdʒ]","n.消息",'n.消息,信息,要点|||vt.&vi.传递信息,通讯','The message in the newspaper is unabridged.','报纸上的那则消息是没有经过删节的。','Did you deliver my message to my father?','你把我的信息传给我父亲了吗?'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["injurious"]={"injurious","[ɪn'dʒʊərɪəs]","[ɪn'dʒʊrərɪəs]","adj.有害的",'adj.有害的，中伤的','Reading while riding in a car is injurious to one\'s eyes.','在汽车上看书容易损害眼睛。','Smoking is injurious to health.','吸烟有害健康。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hereditary"]={"hereditary","[hɪ'redɪt(ə)rɪ]","[hə'rɛdə'tɛri]","adj.世袭的",'adj.世袭的,遗传的','a hereditary prejudice.','祖传的偏见','The disease is hereditary.','这种病有遗传性。'}

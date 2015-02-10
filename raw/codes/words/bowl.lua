@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bowl"]={"bowl","[bəʊl]","[bol]","n.碗",'n.碗,物体的碗状部分,季后赛,圆形露天剧场|||vi.打保龄球,快速移动|||vt.投球,投球得分','He scraped the mixture out of the bowl with a plastic spatula.','他用塑料铲把盆里的混合料刮了出来.','I have a bowl of cereal every morning.','我每天早晨吃一碗麦片粥。'}

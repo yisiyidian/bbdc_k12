@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["custard"]={"custard","['kʌstəd]","['kʌstɚd]","n.乳蛋糕",'n.乳蛋糕','A dessert consisting of a mold of sponge cake or bread with a filling, as of fruits, whipped cream, or custard.','水果奶油布丁一种甜点心, 由松软蛋糕或面包加夹心做成, 如加水果、掼奶油或蛋奶沙司','The apple pie and custard are delicious.','苹果饼和软冻的味道好极了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fanfare"]={"fanfare","['fænfeə]","['fæn'fɛr]","n.喇叭或号角嘹亮的吹奏声",'n.喇叭或号角嘹亮的吹奏声|||n.虚张声势','A fanfare of trumpets heralded the arrival of the King.','嘹亮的小号声宣告了国王的到来。','The company was privatised with a fanfare of publicity.','公司的私有化搞得沸沸扬扬。'}

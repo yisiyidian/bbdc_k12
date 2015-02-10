@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["children"]={"children","['tʃɪldrən]","['tʃɪldrən]","n.孩子们(复数形式)",'n.孩子们(child的复数形式)','||Children|| shouldn\'t tell tales.','小孩子不应该说谎。','She always spoke kindly to the children.','她总是亲切地和孩子们说话。'}

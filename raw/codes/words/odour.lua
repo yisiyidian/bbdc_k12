@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["odour"]={"odour","['əʊdə]","[ 'əudə ]","n.气味",'n.气味|||=odor(美)','The odour summoned up memories of my childhood.','这气味使我回忆起孩提时代。','My room is filled with the odour of roses.','我的房间里充满了玫瑰花的香味。'}

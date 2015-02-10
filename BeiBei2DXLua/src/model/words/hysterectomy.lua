@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hysterectomy"]={"hysterectomy","[,hɪstə'rektəmɪ]","[,hɪstə'rɛktəmi]","n.子宫切除(术)",'n.子宫切除(术)','I had to have a hysterectomy.','我不得不做子宫切除手术。','hysterectomy','n. 子宫切除'}

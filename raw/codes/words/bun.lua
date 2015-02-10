@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bun"]={"bun","[bʌn]","[bʌn]","n.小面包",'n.小面包,(女子的)圆发髻','He stole a bun from the shop.','他从店里偷了一个圆面包.','There are some currants in this bun.','这个圆面包里有些葡萄干。'}

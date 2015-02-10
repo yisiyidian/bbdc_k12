@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["algae"]={"algae","[ˈældʒiː]","['ældʒi]","n.水藻",'n.水藻,海藻','An old shellfish or turtle with a growth of algae on its back.','绿毛龟一种背上有绿色水藻的老的水生贝壳类动物或海龟','||Algae|| grow in water.','水藻生长在水中。'}

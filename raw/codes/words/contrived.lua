@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contrived"]={"contrived","[kən'traɪvd]","[kən'traɪvd]","adj.人为的",'adj.人为的,做作的|||动词contrive的过去式和过去分词','There was nothing contrived about what he said.','他说的话一点不假。','The plot seems contrived.','情节看起来不真实。'}

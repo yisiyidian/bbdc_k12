@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["agriculture"]={"agriculture","['ægrɪkʌltʃə]","['æɡrɪkʌltʃɚ]","n.农业",'n.农业','||Agriculture|| in this country has developed greatly after liberation.','解放后这个国家的农业得到了巨大的发展。','Modern agriculture is spoiling our beautiful countryside.','现代农业正在破坏我们美丽的农村。'}

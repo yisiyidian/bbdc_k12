@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bungle"]={"bungle","['bʌŋg(ə)l]","['bʌŋɡl]","vi.拙劣地工作",'vi.拙劣地工作,粗率地做|||vt.搞坏，贻误|||n.粗制滥造','The gang spent a year planning the robbery and then bungled it.','这伙人蓄谋抢劫已有一年之久，然而到头来却失手了。','It looks as though you\'ve bungled again.','看来你好像又把事情搞糟了。'}

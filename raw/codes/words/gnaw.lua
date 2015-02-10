@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gnaw"]={"gnaw","[nɔː]","[nɔ]","v.咬",'v.咬,侵蚀','Rats gnawed off the lid of the box.','老鼠咬开了盒盖。','She was gnawing her nails nervously.','她正在神经质地咬指甲。'}

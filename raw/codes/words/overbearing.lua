@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overbearing"]={"overbearing","[əʊvə'beərɪŋ]","[,ovɚ'bɛrɪŋ]","adj.傲慢的",'adj.傲慢的,骄傲自大的,蛮横的','His manner with people is neither overbearing nor self-effacing.','他待人的态度一向不卑不亢。','My husband can be quite overbearing with our son.','我丈夫有时对儿子很专横。'}

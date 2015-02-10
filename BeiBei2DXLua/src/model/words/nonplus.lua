@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nonplus"]={"nonplus","[nɒn'plʌs]","[ ,nɔn'plʌs, 'nɔnplʌs ]","vt.使困惑",'vt.使困惑，使为难|||n.迷惑,困惑,僵局','The professor is never at a nonplus, and never perplexed by a problem.','那位教授从来不会感到困惑，也不会被任何问题所难倒。','Diane was nonplussed by such an odd question.','黛安被这样一个古怪的问题给难住了。'}

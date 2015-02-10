@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["allegation"]={"allegation","[ælɪ'geɪʃ(ə)n]","['ælə'geʃən]","n.断言",'n.断言,主张,辩解,暗指','Such an allegation is utterly without foundation.','这样的指控完全没有根据。','He demand the right of reply to the newspaper allegation.','他要求获得对报纸断言的答辩权。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["housework"]={"housework","['haʊswɜːk]","['haʊs'wɝk]","n.家务劳动",'n.家务劳动','They share the housework equally.','他们平等分担家务.','My weekend was dominated by housework.','我的周末全用在做家务上了.'}

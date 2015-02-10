@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["precision"]={"precision","[prɪ'sɪʒ(ə)n]","[prɪ'sɪʒn]","n.精确",'n.精确,精密度|||adj.以精准的执行而著称的,经得起极精细测量的','The job entails precision.','这件事需要精确性。','The teacher laid emphasis on the precision of the translation from the outset.','老师从一开始就强调翻译准确性。'}

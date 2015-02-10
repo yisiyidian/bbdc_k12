@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["embalm"]={"embalm","[ɪm'bɑːm; em-]","[ɪm'bɑm]","vt.铭记",'vt.铭记,使弥香气，使不朽','We will embalm him forever.','我们永远怀念他。','The Egyptians used to embalm the bodies of their dead kings.','埃及人以前用药物保存国王的尸体。'}

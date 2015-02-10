@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["solid"]={"solid","['sɒlɪd]","['sɑlɪd]","adj.固体的",'adj.固体的,结实的,可靠的,实心的|||n.固体,实心','Ice is water in solid state.','冰是水的固体状态。','The miners were solid on this issue.','矿工们在这件事上是一条心的。'}

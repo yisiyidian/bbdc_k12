@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["misleading"]={"misleading","[mɪs'liːdɪŋ]","[,mɪs'lidɪŋ]","adj.使入误解的",'adj.使入误解的','I have found it both inadequate and misleading.','我发现这些资料写的不是不够好，就是使人产生误解。','Some of the information was dangerously misleading.','有些信息有误导成分,会带来风险.'}

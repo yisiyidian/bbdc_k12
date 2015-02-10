@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paranoia"]={"paranoia","[,pærə'nɒɪə]","[,pærə'nɔɪə]","n.[心]妄想狂",'n.[心]妄想狂,偏执狂','Her passion for cleanliness borders on paranoia.','她洁癖到近乎偏执。','The mood is one of paranoia and expectation of war.','那是一种对战争既畏惧又期待的心理。'}

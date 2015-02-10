@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["urbanite"]={"urbanite","['ɜːb(ə)naɪt]","['ɝbənaɪt]","n.都市人",'n.都市人','The urbanite is always on sub-health state.','都市人常常出入亚健康状态','But in an earlier interview, he characterized the protesters as “ annoyed urbanites.”','但在早些时间的会谈中，他称这些抗议者是“烦闷的都市人”'}

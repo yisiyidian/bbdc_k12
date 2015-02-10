@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cursory"]={"cursory","['kɜːs(ə)rɪ]","[ 'kə:səri ]","adj.匆匆忙忙的",'adj.匆匆忙忙的,草率的,粗略的','He signed with only a cursory glance at the report.','他只草草看了一眼报告就签了名。','He cast a cursory glance at the menu, then flapped it shut.','他匆匆地瞥了一眼菜单，然后啪地合上了。'}

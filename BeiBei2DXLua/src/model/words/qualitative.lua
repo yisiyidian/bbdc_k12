@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["qualitative"]={"qualitative","['kwɒlɪtətɪv]","['kwɑlətetɪv]","adj.性质上的",'adj.性质上的,质的,定性的','Classification schemes can be either quantitative or qualitative.','进行分组,可以按数量标志,也可以按品质标志.','We can draw a few qualitative conclusions.','我们可以得出一些定性的结论.'}

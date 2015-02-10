@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["educable"]={"educable","['edʒʊkəb(ə)l]","['ɛdʒʊkəbl]","adj.可教育的",'adj.可教育的','Being so educable, individual birds have markedly different interests and inclinations, strategies and scams.','作为如此可教育的，独立的鸟儿有着显著的不同的利益和意愿，战略和骗术。','Everyone is educable even though he is bad at study.','任何人都是可教育的,即使他在学习方面很差.'}

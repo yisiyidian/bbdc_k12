@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["journey"]={"journey","['dʒɜːnɪ]","['dʒɝni]","n.旅程",'n.旅程,旅行,行程|||v.旅行','Their perilous journey across the ocean has attracted public attention.','他们的越洋冒险旅行引起了公众的注意。','It was a long journey, but we eventually arrived.','旅程很长，但我们最后还是到达了。'}

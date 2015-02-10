@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hop"]={"hop","[hɒp]","[hɑp]","v.单脚跳",'n.单脚跳,跳跃|||vi.单脚跳,跳跃,着手做某事|||vt.跳跃,跃过','When the burglar heard their car he hopped it out of the window.','那窃贼听到他们汽车的声音就从窗口逃走了.','Several frogs were hopping about on the lawn.','有几只青蛙在草地上跳来跳去.'}

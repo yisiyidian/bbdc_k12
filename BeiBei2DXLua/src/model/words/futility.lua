@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["futility"]={"futility","[fjʊ'tɪlɪtɪ; fjuː'tɪlɪtɪ]","[fjʊ'tɪləti]","n.无用",'n.无用,无益,无价值','A sense of futility stole over her.','她慢慢地产生了一种没用的感觉。','Accustom as I am to public speaking, I know the futility of it.','我虽然习惯公开演讲，但我却知道那是枉费心机的。'}

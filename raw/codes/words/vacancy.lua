@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vacancy"]={"vacancy","['veɪk(ə)nsɪ]","['vekənsi]","n.空白",'n.空白,空缺','I see a vacancy board outside for a kitchen helper. Is it still available?','我在外面招工牌上看到有个厨房帮手的空缺。这空位现在还有吗？','Fill a job vacancy.','填补工作的空缺'}

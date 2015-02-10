@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["raiment"]={"raiment","['reɪm(ə)nt]","['remənt]","n.衣服",'n.衣服','The girl always complains about lacking suitable raiment.','这个女孩总是抱怨没有合适的衣服。','A cut of sheep\'s hair touched with the genius of man becomes raiment for a king.','羊毛在天才的手中变成了袈裟。'}

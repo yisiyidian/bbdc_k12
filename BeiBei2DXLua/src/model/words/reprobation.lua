@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reprobation"]={"reprobation","[,reprəʊ'beɪʃən]","[ ,reprəu'beiʃən ]","n.反对",'n.反对,拒斥','The family\'s reprobation strengthened his belief of finishing the research.','家里人的反对反而让他坚定了完成这项研究的信念。','His action evinced  reprobation  to his father\'s autocracy.','他的行为显示出对他父亲专制的拒斥。'}

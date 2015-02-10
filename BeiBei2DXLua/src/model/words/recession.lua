@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["recession"]={"recession","[rɪ'seʃ(ə)n]","[rɪ'sɛʃən]","n.后退",'n.后退,凹入的地方,不景气','In the recession, our firm went through a bad time.','我们公司在经济衰退时期历尽艰辛。','There is no sign that the recession has bottomed out yet.','没有迹象表明萧条已走向了尾声。'}

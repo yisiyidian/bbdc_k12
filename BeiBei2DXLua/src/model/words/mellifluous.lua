@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mellifluous"]={"mellifluous","[me'lɪflʊəs]","[mɛ'lɪfluəs]","adj.如蜜般的",'adj.如蜜般的,流畅的|||=mellifluent','Her voice was distinctive, soft and mellifluous.','她的嗓音甜美，清脆而柔和。','The sweet witty soul of Ovid lives in mellifluous and honey -tongued Shakespeare.','奥维德的风雅机智的灵魂活在语言甜美流畅的莎士比亚身上。'}

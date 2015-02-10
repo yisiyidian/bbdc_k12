@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interrogative"]={"interrogative","[,ɪntə'rɒgətɪv]","[,ɪntə'rɑɡətɪv]","adj.疑问的",'adj.疑问的|||n.疑问词','an interrogative raising of the eyebrows.','质疑地抬起眉毛','an interrogative adverb; an interrogative particle.','疑问副词，疑问助词'}

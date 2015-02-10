@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["savor"]={"savor","['seɪvə]","['sevɚ]","v.品味",'n.滋味,气味,食欲,特定的味道或气味,一种有特色的性质|||vi.有...的滋味,有...气味|||vt.加调味品于,使有风味,品味,尽情享受','His humorous remarks added a savor to our conversation.','他幽默的话语给谈话增添了风趣。','Seize the day and savor life.','及时行乐，品味生活。'}

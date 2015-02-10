@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scanty"]={"scanty","['skæntɪ]","['skænti]","adj.缺乏的",'adj.缺乏的,仅有的,不够的','The beggar shivered in his scanty clothes.','乞丐穿着单薄，冻得发抖。','He is scanty with words.','他沉默寡言。'}

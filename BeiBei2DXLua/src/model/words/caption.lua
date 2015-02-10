@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["caption"]={"caption","['kæpʃ(ə)n]","['kæpʃən]","n.说明文字",'n.说明文字|||v.给（图片、照片等）加说明文字','There is a caption under the picture.','图片下边附有说明。','I didn\'t understand the drawing until I read the caption.','直到我看到这幅画的说明才弄懂它的意思。'}

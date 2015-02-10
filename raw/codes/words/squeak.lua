@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["squeak"]={"squeak","[skwiːk]","[skwik]","n.吱吱声",'n.吱吱声，逃脱|||v.（发出）吱吱叫，侥幸通过|||告密','These new shoes squeak.','穿上这双新鞋走起路来嘎吱嘎吱的.','Can you hear the mice squeaking?','你听到老鼠吱吱叫吗?'}

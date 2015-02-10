@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["circle"]={"circle","['sɜːk(ə)l]","['sɝkl]","n.圆周",'n.圆周,社交圈,循环|||vt.&vi.包围,盘旋,环绕','A square has four sides but a circle has no sides.','正方形有四条边，而圆形没有边。','I need experience to get a job, but without a job I can\'t get experience. It\'s a vicious circle.','我得有经验才能找到工作, 可是没有工作我就无法获得经验。这真是个恶性循环。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subsidize"]={"subsidize","[ˈsʌbsɪdaɪz]","['sʌbsə'daɪz]","v.给与补助金",'v.给与补助金,给与奖助金,贿赂','Many universities subsidize research and publications.','许多大学资助研究和出版。','The school subsidized her to continue her study.','学校资助她继续学业。'}

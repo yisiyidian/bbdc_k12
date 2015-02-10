@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["relevant"]={"relevant","['relɪv(ə)nt]","['rɛləvənt]","adj.相关的",'adj.相关的,切题的,中肯的','The essay isn\'t even remotely relevant to the topic.','这篇文章毫不切题。','These facts are relevant to the case.','这些事实和此案有关。'}

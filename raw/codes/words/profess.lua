@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["profess"]={"profess","[prə'fes]","[prə'fɛs]","v.声称",'v.声称,冒称，以...为业，正式接受入教，表明信仰','He professed to know nothing about the matter.','他声称对此事一无所知。','He professed himself to be a poet.','他自称是诗人。'}

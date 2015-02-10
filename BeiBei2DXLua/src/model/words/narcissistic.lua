@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["narcissistic"]={"narcissistic","[,nɑːsɪ'sɪstɪk]","[,nɑrsɪ'sɪstɪk]","adj.自我陶醉的",'adj.自我陶醉的,孤芳自赏的','some guys are narcissistic since they are pretentious.','自我陶醉的人因为他们很自负。','Is it a high-frequency whistle? No, it\'s more of a relentless, narcissistic drone.','是一种高频的口哨声吗？ 不，是一种时刻不停的，自以为是的唠叨。'}

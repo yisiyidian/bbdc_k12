@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["purpose"]={"purpose","['pɜːpəs]","['pɝpəs]","n.目的",'n.目的,意图;意志,决心;议题|||vt.打算,决意','He purposed to visit South America.','他计划去南美。','She seems to do these things on purpose.','她似乎是有意地做这些事。'}

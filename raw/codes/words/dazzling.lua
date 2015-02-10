@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dazzling"]={"dazzling","['dæzlɪŋ]","[ 'dæzliŋ ]","adj.眼花撩乱的",'adj.眼花撩乱的,耀眼的','They can be simple yet purely dazzling.','他们可以简单而纯粹是令人眼花缭乱。','He gave Alberg a dazzling smile.','他冲着阿尔伯格粲然一笑。'}

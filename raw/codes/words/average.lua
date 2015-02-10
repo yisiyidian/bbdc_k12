@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["average"]={"average","['æv(ə)rɪdʒ]","['ævərɪdʒ]","adj.平均的",'n.平均数,平均水平|||adj.一般的,通常的,平均的|||vt.&vi.取平均值，达到平均水平','The average of 4, 6 and 8 is 6.','4，6，8的平均数是6。','Tom\'s work at school is above the average.','汤姆的功课是中上。'}

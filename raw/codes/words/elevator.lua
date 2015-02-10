@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elevator"]={"elevator","['elɪveɪtə]","['ɛlɪvetɚ]","n.电梯",'n.电梯,飞机升降舵,斗式皮带输送机','I go up by the elevator.','我搭电梯上去。','Her job is to operate an elevator.','她的工作是开电梯。'}

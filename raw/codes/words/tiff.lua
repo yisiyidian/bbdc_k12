@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tiff"]={"tiff","[tɪf]","[tɪf]","n.一口",'n.一口,小争吵,小口角|||vi.小争吵,生气','A petty quarrel or argument; a tiff.','无谓的争吵不重要的争吵或争论；口角','They patched up their tiff.','他们平息了争执。'}

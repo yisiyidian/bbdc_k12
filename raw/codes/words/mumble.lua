@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mumble"]={"mumble","['mʌmb(ə)l]","['mʌmbl]","v.喃喃而语",'v.喃喃而语,咕哝|||n.喃喃而语,咕哝','She mumbled that she didn\'t want to get up yet.','她咕哝着说还不想起床。','He always mumbles when he\'s embarrassed.','他感到难为情时就说话不清楚了。'}

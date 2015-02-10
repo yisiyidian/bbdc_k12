@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["voice"]={"voice","[vɒɪs]","[vɔɪs]","n.声音",'n.声音,嗓音,呼声,歌唱才能|||vt.表达,调整声音,发音','A ghostly voice was whispering in his ears.','幽灵般的低语声在他耳边回响。','The little girl spoke in a high childish voice.','小女孩说话时声音尖尖的，带着童音。'}

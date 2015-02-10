@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trunk"]={"trunk","[trʌŋk]","[trʌŋk]","n.树干",'n.树干,躯干,干线,(汽车后部)行李箱,象鼻','The elephant\'s trunk is a unique form of appendage.','象的鼻子是一种独特的附肢.','The branch has separated from the trunk of the tree.','这个树枝已从树干上脱落了.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dialect"]={"dialect","['daɪəlekt]","['daɪə'lɛkt]","n.方言",'n.方言','Every now and then he would lapse into the local dialect.','他讲话中时而不自觉地冒出地方方言。','She speaks a dialect, not the Queen\'s English.','她说一口方言, 不是标准英语.'}

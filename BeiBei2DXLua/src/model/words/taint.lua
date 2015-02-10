@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["taint"]={"taint","[teɪnt]","[tent]","n.污点",'n.污点,耻辱,感染|||v.污染,中毒','Moral taint has spread among young people.','道德的败坏在年轻人之间蔓延。','His political reputation was tainted by his abuse of the power.','他因滥用职权而破坏了政治声誉。'}

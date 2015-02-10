@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pen"]={"pen","[pen]","[pɛn]","n.钢笔",'n.钢笔|||v.圈进','The pen slips out of my fingers.','钢笔从我指缝中滑下去了。','The duke wrote a letter with a quill pen.','公爵用一根羽毛笔写信。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bilk"]={"bilk","[bɪlk]","[ bilk ]","v.赖",'v.赖,白吃,白座|||n.赖帐,诈骗,骗子','He bilked us of all our money.','他把我们的钱都骗光了。','They are charged with bilking investors out of millions of dollars.','他们被控骗取投资者数百万美元。'}

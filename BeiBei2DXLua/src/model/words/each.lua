@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["each"]={"each","[iːtʃ]","[itʃ]","adj.每个",'adj.每个,每,每一|||adv.每个|||int.每个,个人,个自','He examined each piece of evidence in isolation.','他分别审查每一证据。','I asked all the children and each told a different story.','我问过所有的孩子，每个人的说法都不一样。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pulse"]={"pulse","[pʌls]","[pʌls]","n.脉搏",'n.脉冲,脉波,脉搏|||vt.&vi.跳动,脉跳','His pulse is not very regular.','他的脉搏不很规则。','The machine emits sound pulses.','这台机器可发出声脉冲信号。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subjective"]={"subjective","[səb'dʒektɪv]","[səb'dʒɛktɪv]","adj.主观的",'adj.主观的|||n.主格,主观事物','This is a subjective judgement of her abilities.','这是对她能力的一种主观判断。','Try to avoid being subjective and one-sided when looking at problems.','看问题要避免主观片面。'}

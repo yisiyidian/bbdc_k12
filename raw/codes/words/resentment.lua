@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["resentment"]={"resentment","[rɪ'zentm(ə)nt]","[rɪ'zɛntmənt]","n.怨恨",'n.怨恨,愤恨','Instead of discussing their problems, they bottle up all their anger and resentment.','他们不是把问题提出来讨论, 而是把怒气和怨愤憋在肚子里.','Therewas an undercurrent of resentment in their acceptance of the plan.','他们接受该计画时心怀不满.'}

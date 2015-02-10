@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oxygen"]={"oxygen","['ɒksɪdʒ(ə)n]","['ɑksɪdʒən]","n.氧",'n.氧,氧气','Water contains hydrogen and oxygen.','水含有氢和氧。','||Oxygen|| masks are used in aircraft only in emergencies.','飞机上的氧气面具只用於紧急情况.'}

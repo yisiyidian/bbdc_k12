@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fastidious"]={"fastidious","[fæ'stɪdɪəs]","[fæ'stɪdɪəs]","adj.难取悦的",'adj.难取悦的,挑剔的,苛求的|||=particular','She is excessively fastidious in dress, manners, and taste.','她对穿着、举止和品味太过挑剔了。','She is so fastidious about her food that I never invite her for dinner.','她对食物过于挑剔，因此我从不请她吃饭。'}

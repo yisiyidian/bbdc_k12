@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["norm"]={"norm","[nɔːm]","[nɔrm]","n.标准",'n.标准,规范','These events were aberrations from the norm.','这些事件不合常规。','Deviation from the norm is not tolerated.','不能容忍离经叛道行为。'}

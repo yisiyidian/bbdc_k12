@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["graphics"]={"graphics","['græfɪks]","['græfɪks]","n.制图法",'n.制图法,制图学,图表算法|||n.[计算机]图形学,DOS命令:允许使用Shift-PtrSc键打印屏幕图形','I couldn\'t get the graphics to print correctly.','我无法将图表正确地打印出来.','They are using state-of-the-art graphics in the film\'s special effects.','他们在电影的特技中使用最新的动画制图法'}

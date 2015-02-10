@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["canonical"]={"canonical","[kə'nɒnɪk(ə)l]","[kə'nɑnɪkl]","n.牧师礼服",'n.牧师礼服,法服|||adj.依教规的,被认为圣典的,权威的','...Ballard\'s status as a canonical writer.','...巴拉德的经典作家地位。','these are canonical works','这些是权威著作'}

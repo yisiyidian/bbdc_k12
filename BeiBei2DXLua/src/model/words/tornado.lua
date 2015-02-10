@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tornado"]={"tornado","[tɔː'neɪdəʊ]","[tɔr'nedo]","n.飓风",'n.飓风,旋风,龙卷风','The tornado cut a swath through the town.','龙卷风袭击该镇，留下破坏的痕迹。','The entire village was obliterated by the tornado.','整个村庄被龙卷风摧毁了.'}

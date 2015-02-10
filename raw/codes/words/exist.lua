@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exist"]={"exist","[ɪg'zɪst; eg-]","[ɪɡ'zɪst]","v.存在",'v.存在','That department has ceased to exist.','那部门已不复存在.','Man cannot exist without air.','没有空气人就不能生存。'}

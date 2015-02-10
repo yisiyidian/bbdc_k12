@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["goof"]={"goof","[guːf]","[ɡuf]","n.愚蠢的人",'n.愚蠢的人，犯错，大错|||vi.犯错误，做蠢事，闲混|||vt.把...弄得一团糟','I told him not to goof around.','我叫他不要游手好闲。','You will never be good students so long as you goof around.','如果你们成天游手好闲, 就永远也成不了好学生。'}

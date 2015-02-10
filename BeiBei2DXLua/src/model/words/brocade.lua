@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brocade"]={"brocade","[brə'keɪd]","[bro'ked]","n.织锦",'n.织锦','This kind of brocade looks very beautiful.','这种织锦看上去很漂亮。','Gold and green satin brocade drapes hung at the windows.','窗上挂着金碧辉煌的缎子窗帘。'}

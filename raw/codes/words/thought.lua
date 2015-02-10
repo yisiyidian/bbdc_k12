@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["thought"]={"thought","[θɔːt]","[θɔt]","n.思想",'n.思想；想法；关心；思索|||v.想(think的过去式和过去分词)；思索；以为；认为','What\'s the central thought of this article?','这篇文章的中心思想是什么？','The old man was lost in thought and did not hear us come in.','这个老人凝神沉思，没有听见我们进来。'}

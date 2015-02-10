@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bite"]={"bite","[baɪt]","[baɪt]","n.咬",'n.咬,一口,少量食物,咬伤的伤口|||vt.咬,刺穿(痛)|||vi.咬(饵),使剧痛,紧抓','Another of my great ideas bites the dust!','我的一个好主意又碰壁了。','He was taken to the hospital to be treated for snake bite.','他因遭蛇咬而被送到医院治疗。'}

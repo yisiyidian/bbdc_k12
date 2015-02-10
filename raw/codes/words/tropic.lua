@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tropic"]={"tropic","['trɒpɪk]","['trɑpɪk]","adj.热带的",'n.回归线,热带|||adj.热带的,向性的','Does cowslip grow in tropic countries?','西洋樱草生长于热带国家吗？','His hometown is located in the north to the tropic of cancer.','他的家乡在北回归线的北面。'}

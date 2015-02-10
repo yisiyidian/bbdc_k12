@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["omnivorous"]={"omnivorous","[ɒm'nɪv(ə)rəs]","[ɑm'nɪvərəs]","adj.杂食的",'adj.杂食的，涉猎广泛的','Human beings eat both plants and animals and are therefore considered omnivorous.','人类既吃植物也吃动物，因此被认为是杂食性动物。','She has always been an omnivorous reader.','她一向阅读兴趣广泛。'}

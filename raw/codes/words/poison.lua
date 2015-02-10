@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["poison"]={"poison","['pɒɪz(ə)n]","['pɔɪzn]","n.毒药",'n.毒药,败坏道德之事,毒害|||vt.毒害,摧毁,中毒|||adj.有毒的','Are our children being poisoned by lead in the atmosphere?','我们的儿童是否受著空气中铅的毒害？','Small quantities of poison were detected in the dead man\'s stomach.','在死者胃中找到了少量的毒药。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["advance"]={"advance","[əd'vɑːns]","[əd'væns]","n.前进",'n.前进,进步,预支|||vt.前进，增涨，预先|||vi.前进，提升|||adj.预先的，提前的','There have been great advances in medicine in the last ten years.','在过去十年里，医学取得了巨大的进步。','The date of the meeting has been advanced from Friday to Monday.','会议日期已经从星期五提前到星期一。'}

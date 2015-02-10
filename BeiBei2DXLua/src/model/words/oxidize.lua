@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oxidize"]={"oxidize","['ɒksɪdaɪz]","['ɑksə'daɪz]","v.氧化",'v.氧化,生锈|||vt.&adv.使氧化','The carbon14 atoms oxidize to carbon dioxide which gets blown about and mixed up with lower atmosphere.','碳14原子氧化生成二氧化碳，向四周散去并与低空的大气混合。','Iron is easily oxidized.','铁很容易氧化。'}

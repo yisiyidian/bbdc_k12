@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["profound"]={"profound","[prə'faʊnd]","[prə'faʊnd]","adj.极深的",'adj.极深的,深奥的,深厚的,严重的','Her simple style is deceptive: what she has to say is very profound.','别以为她的工作方法简单, 她说出话来是很有分量的.','Since losing his job, he has often experienced a profound sense of ennui.','他自从失业以来, 常觉百无聊赖.'}

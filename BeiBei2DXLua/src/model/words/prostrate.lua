@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prostrate"]={"prostrate","['prɒstreɪt]","['prɑstret]","adj.拜倒的",'adj.拜倒的,降伏的,伏地的|||vt.使拜倒,使屈服,俯伏','The illness left her prostrate for several weeks.','这场病把她拖倒了几个星期。','She was prostrate with grief.','她一度痛不欲生。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["operative"]={"operative","['ɒp(ə)rətɪv]","['ɑpərətɪv]","adj.手术的",'adj.有效的,至关重要的,操作的，手术的|||n.技工，侦探','This law becomes operative on 12 May.','此法令自5月12日起生效.','The oil rig is now fully operative.','石油钻塔现全面开工.'}

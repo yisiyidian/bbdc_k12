@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fusion"]={"fusion","['fjuːʒ(ə)n]","['fjʊʒən]","n.融合物",'n.融合物,结合,融合','Brass is formed by the fusion of copper and zinc.','黄铜是由铜和锌熔合制成的。','Americans are the fusion of many different races.','美国人是各种种族人的熔合体。'}

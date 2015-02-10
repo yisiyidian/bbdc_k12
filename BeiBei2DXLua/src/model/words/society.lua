@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["society"]={"society","[sə'saɪətɪ]","[sə'saɪəti]","n.社会",'n.社会,社团，阶层圈子','In old society, the gentry lived in luxury.','在旧社会，贵族们生活奢侈。','We subscribe to an animal protection society.','我们定期捐款给一个动物保护基金会。'}

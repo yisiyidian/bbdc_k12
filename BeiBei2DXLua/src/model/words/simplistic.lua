@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["simplistic"]={"simplistic","[sɪm'plɪstɪk]","[sɪm'plɪstɪk]","adj.过分简单化的",'adj.过分简单化的','In the past, our understanding of this issue was quite superficial and simplistic.','过去，我们对这个问题的认识比较肤浅、简单。','He has a simplistic view of the treatment of eczema.','他对湿疹治疗的看法过于简单化。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["such"]={"such","[sʌtʃ]","[sʌtʃ]","adj.如此的",'adj.如此的,这样的|||pron.这样的|||adv.如此地','||Such|| as remains after tax will be yours when I die.','我死以後全部财产除了交税以外都给你，','||Such|| poets as Keats and Shelley wrote Romantic poetry.','有些诗人，如济慈和雪莱，写的是浪漫主义的诗歌。'}

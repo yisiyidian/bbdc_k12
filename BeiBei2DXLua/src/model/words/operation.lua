@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["operation"]={"operation","[ɒpə'reɪʃ(ə)n]","[,ɑpə'reʃən]","n.手术",'n.手术,行动，活动,操作','The surgeon has performed the operation.','外科医生做了手术。','The gown a surgeon wears during an operation is usually green.','外科医生在做手术时穿的手术服通常是绿色的。'}

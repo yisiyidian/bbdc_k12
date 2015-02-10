@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["administrative"]={"administrative","[əd'mɪnɪstrətɪv]","[əd'mɪnɪstretɪv]","adj.行政的",'adj.行政的,管理的','He regarded all these administrative details as beneath his notice.','他认为行政管理上的这些琐事都不值一顾。','The project will have an administrative staff of 12.','项目将包括一个12人组成的管理小组。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stricture"]={"stricture","['strɪktʃə]","['strɪktʃɚ]","n.苛评",'n.苛评,非难，限制|||n.[医]狭窄','This satirical address was a thinly disguised stricture against the doctrine of the rights of man.','这一充满讽刺意味的演说几乎是对人权主义不加掩饰的指责。','Your goals are hindered by financial strictures.','你的目标受制于经济困难。'}

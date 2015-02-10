@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["originality"]={"originality","[ə,rɪdʒɪ'nælɪtɪ]","[ə'rɪdʒə'næləti]","n.独创性",'n.独创性，创造力，新颖','Einstein was distinguished for his originality.','爱因斯坦以其独创性称著。','She has a striking originality in her use of metaphor.','她在运用隐喻方面有独创性。'}

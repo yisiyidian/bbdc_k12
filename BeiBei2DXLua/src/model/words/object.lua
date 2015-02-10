@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["object"]={"object","['ɒbdʒɪkt; -dʒekt]","['ɑbdʒɛkt]","n.物体",'n.物体,目标,宾语|||v.反对，提出...作为反对的理由','He always travels first class. Expense is no object.','他出门总是用头等票－－费用不成问题。','Various objects were on the table.','桌子上摆着各种各样的物体。'}

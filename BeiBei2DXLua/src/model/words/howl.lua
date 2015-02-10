@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["howl"]={"howl","[haʊl]","[haʊl]","n.吠声",'n.吠声,嚎叫|||v.狂吠,咆哮,呼啸','The baby howled all night.','那婴儿哇哇地哭了一夜。','The dog howled over its master\'s body.','狗对着主人的尸体哀嚎。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hydraulic"]={"hydraulic","[haɪ'drɔːlɪk; haɪ'drɒlɪk]","[haɪ'drɔlɪk]","adj.水力的",'adj.水力的,水压的','The government invests heavily in hydraulic project.','政府在水利工程方面投以重资。','People came in flocks to see the new hydraulic power station beside the dam.','人们成群结队地来参观水坝旁边新建的水电站。'}

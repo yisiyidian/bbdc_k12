@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["noise"]={"noise","[nɒɪz]","[nɔɪz]","n.噪声",'n.声音,响声,喧哗声,噪声|||vt.谣传|||vi.大声说话,发出噪音','Her voice was scarcely audible above the noise of the wind.','在风中她的声音几乎听不见。','The least noise would startle the timid child.','最小的响声也会吓着这个胆小的孩子的。'}

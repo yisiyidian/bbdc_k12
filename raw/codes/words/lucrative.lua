@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lucrative"]={"lucrative","['luːkrətɪv]","['lukrətɪv]","adj.有利益的",'adj.有利益的,获利的,合算的','Her husband is reaching after a more lucrative situation.','她丈夫正在谋求一个待遇更好的职位。','It was quite a lucrative sideline.','这份兼职很赚钱。'}

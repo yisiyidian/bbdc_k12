@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["writ"]={"writ","[rɪt]","[rɪt]","n.令状",'n.令状,文书,文件','He issued a writ against one of his accusers.','他向其中一个指控他的人发了传票。','Her life was her personality writ large.','她的生活是她性格放大了的写照。'}

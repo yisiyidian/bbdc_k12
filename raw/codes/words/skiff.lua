@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["skiff"]={"skiff","[skɪf]","[skɪf]","n.轻舟",'n.轻舟,小船','A small bird came toward the skiff from the north.','一只小鸟从北方朝小船飞来。','Huck, I\'ll take you right to it in a skiff.','哈克，我马上带你划小船过去。'}

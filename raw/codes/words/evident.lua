@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["evident"]={"evident","['evɪd(ə)nt]","['ɛvɪdənt]","adj.明显的",'adj.明显的,明白的','The purpose may not be immediately evident.','这种目的不一定显而易见。','It was evident that the policy was a failure.','显然这项政策是失败的。'}

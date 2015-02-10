@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["efface"]={"efface","[ɪ'feɪs]","[ɪ'fes]","vt.擦掉",'vt.擦掉,抹去，冲淡（记忆），隐没','Time alone will efface those unpleasant memories.','只有时间才能使人淡忘那些不快的记忆。','The name of the ship had been effaced from the menus.','那艘船的名字已经从选择菜单中删除了。'}

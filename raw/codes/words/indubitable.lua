@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indubitable"]={"indubitable","[ɪn'djuːbɪtəb(ə)l]","[ in'dju:bitəbl ]","adj.不容置疑的",'adj.不容置疑的,明确无疑的','His brilliance renders this film an indubitable classic.','他的出色表现让这部电影成为了毋庸置疑的经典。','an indubitable truth','一个不容置疑的事实'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vanguard"]={"vanguard","['vængɑːd]","['vænɡɑrd]","n.前锋",'n.前锋,先锋,先驱','The company is proud to be in the vanguard of scientific progress.','这家公司以处于科学发展的领先地位而自豪。','Such thinking puts Kodak in the vanguard of a movement reshaping the computer industry.','这种想法使得柯达走在了改造计算机产业运动的最前沿。'}

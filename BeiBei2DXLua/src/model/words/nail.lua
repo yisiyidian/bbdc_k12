@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nail"]={"nail","[neɪl]","[nel]","n.钉子",'n.钉子,指甲|||vt.钉,使牢固,抓捕,敲定','She tore her skirt on the nail.','钉子勾破了她的裙子。','She says she\'ll come, but I can\'t nail her down to a specific time.','她说她来，我却无法让她说出确切的时间。'}

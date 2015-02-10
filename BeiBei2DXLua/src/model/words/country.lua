@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["country"]={"country","['kʌntrɪ]","['kʌntri]","n.国家",'adj.国家的,农村的|||n.国家，乡村，区域','China is a developing country.','中国是一个发展中国家。','She lived her whole life in the country.','她在农村度过一生.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ejaculate"]={"ejaculate","[ɪ'dʒækjʊleɪt]","[ɪ'dʒækjulet]","v.突然说出",'v.突然说出,射出,射精','...a tendency to ejaculate quickly.','...易早泄。','he ejaculated he love me','他突然说出他爱我'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["psychology"]={"psychology","[saɪ'kɒlədʒɪ]","[saɪ'kɑlədʒi]","n.心理学",'n.心理学','I can\'t understand that man\'s psychology.','我无法理解那个人的心理。','Mathematics, psychology, and political science- these are my favorite subjects.','数学、心理学和政治学——这些是我所学的课程。'}

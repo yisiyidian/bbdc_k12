@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nova"]={"nova","['nəʊvə]","['novə]","n.[天文]新星",'n.[天文]新星','searing light now also increases the damage of holy nova and penance','灼热之光现在可以增加神圣新星和赎罪的伤害。','dwarf nova','矮新星'}

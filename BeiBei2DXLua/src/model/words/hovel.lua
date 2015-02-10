@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hovel"]={"hovel","['hɒv(ə)l]","['hʌvl]","n.小屋",'n.小屋,杂物间,家畜小屋','He made a new hovel on the top of the mountain.','他在山顶上修建了一座新小屋。','I don\'t know how you can bear to live in this hovel.','我不明白你怎么能在这种肮脏的地方住得下来。'}

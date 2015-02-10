@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["raisin"]={"raisin","['reɪz(ə)n]","['rezn]","n.葡萄干",'n.葡萄干','Sour grapes are made into raisins or wine.','酸葡萄就做成葡萄干或葡萄酒。','I asked him to bring me some raisins when he returns from Xinjiang.','我请求他从新疆回来时给我带些葡萄干。'}

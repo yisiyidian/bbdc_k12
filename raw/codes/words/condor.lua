@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["condor"]={"condor","['kɒndɔː]","['kɑndɔr]","n.大兀鹰",'n.大兀鹰，秃鹰金币','I have never seen a condor.','我从未见过大秃鹰。','I have no enough time to take out my camera when I saw a condor flying in the valley.','当我看到一支秃鹰在山谷盘旋时，我来不及拿出我的相机。'}

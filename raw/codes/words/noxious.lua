@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["noxious"]={"noxious","['nɒkʃəs]","['nɑkʃəs]","adj.有害的",'adj.有害的,有毒的','Many household products give off noxious fumes.','很多家用产品散发有害气体。','Their behaviour was noxious.','他们的行为令人生厌。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["background"]={"background","['bækgraʊnd]","['bækɡraʊnd]","n.背景",'n.背景,幕后,配音|||vt.提供背景','It is wrong to differentiate between people according to their family background.','根据出身不同而区别待人是不对的.','She came from a privileged background.','她出身於特权阶层.'}

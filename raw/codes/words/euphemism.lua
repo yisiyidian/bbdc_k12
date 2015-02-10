@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["euphemism"]={"euphemism","['juːfəmɪz(ə)m]","['jufəmɪzəm]","n.婉言",'n.婉言,委婉的说法','He expressed his thought by a euphemism.','他委婉地表达了自己的想法。','I told him the story in euphemism, but he did not understand the meaning.','我委婉地告诉他事实的真相，但是他并没有理解。'}

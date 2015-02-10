@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["varicose"]={"varicose","['værɪkəʊs; -kəs; -z]","['værɪ,kos]","adj.[医]肿胀的",'adj.[医]肿胀的,曲张的','varicose veins.','静脉曲张的血管','Standing for a long time makes teachers often have varicose legs.','由于经常站着，很多老师都有静脉曲张的问题。'}

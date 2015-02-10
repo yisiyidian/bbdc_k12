@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lobbyist"]={"lobbyist","['lɒbɪɪst]","['lɑbɪɪst]","n.活动议案通过者",'n.活动议案通过者,说客','The lobbyist has pull with the senator.','游说者对参议员有影响力','the lobbyists for the insurance industry','保险产业的说客'}

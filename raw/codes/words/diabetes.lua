@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["diabetes"]={"diabetes","[,daɪə'biːtiːz]","[,daɪə'bitiz]","n.糖尿病",'n.糖尿病','In case of diabetes, physicians   advise  against the use of sugar.','对于糖尿病患者, 医生告诫他们不要吃糖.','||Diabetes|| is caused by a fault in the insulin production of the body.','糖尿病是由体內胰岛素分泌失调引起的.'}

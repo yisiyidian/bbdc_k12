@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["small"]={"small","[smɔːl]","[smɔl]","adj.小的",'adj.小的,少的|||adv.些许地|||n.狭小部分','Our house is smaller than yours but I think the garden is bigger.','我们的房子比你们的小，但花园比你们的大。','a small matter.','无关紧要的小事'}

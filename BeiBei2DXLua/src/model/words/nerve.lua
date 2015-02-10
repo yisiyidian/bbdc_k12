@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nerve"]={"nerve","[nɜːv]","[nɝv]","n.神经(生物)",'n.神经(生物)，精神,勇气,叶脉|||vt.鼓起勇气','She had the nerve to say I was cheating.','她竟敢说我作弊，太放肆了。','He\'s got a nerve, going to work dressed like that.','他真有胆量，穿着那身衣服去工作。'}

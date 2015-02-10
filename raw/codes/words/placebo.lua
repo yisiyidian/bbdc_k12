@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["placebo"]={"placebo","[plə'siːbəʊ]","[plə'sibo]","n.安慰剂",'n.安慰剂，安慰话','Doctors always use placebos to relieve patient\'s pain.','医生常用安慰剂来缓解病人的痛苦。','||Placebo||, often called sugar pill, are not always made of sugar.','安慰剂， 常被成为糖片，不一定都是用糖做的。'}

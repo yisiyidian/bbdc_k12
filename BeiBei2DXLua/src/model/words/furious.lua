@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["furious"]={"furious","['fjʊərɪəs]","['fjʊrɪəs]","adj.狂怒的",'adj.狂怒的,猛烈的','If this news ever reaches her ears, she\'ll be furious.','这个消息万一传到她的耳朵里，她一定得大发雷霆。','I was annoyed, indeed furious, over what happened.','出了这件事我很不痛快，实际上是愤怒已极。'}

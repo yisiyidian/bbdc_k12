@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nonverbal"]={"nonverbal","[nɒn'vɜːbəl]","[,nɑn'vɝbl]","adj.不用动词的",'adj.不用动词的,不用语言的','60% of all human communication is nonverbal.','人们百分之六十的相互交流不是通过语言.','Gestures are a nonverbal means of expression.','打手势是一种非言语的表达方式.'}

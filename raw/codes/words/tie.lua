@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tie"]={"tie","[taɪ]","[taɪ]","vt.系",'n.结,束缚,不分胜负,(领)带|||vt.系,约束,捆绑|||vi.打结,连结','The strike tied up production for a week.','这次罢工造成停产一周。','Does this sash tie in front or at the back?','这腰带是在前面打结还是在後面？'}

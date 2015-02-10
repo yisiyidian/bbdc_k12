@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["delegate"]={"delegate","['delɪgət]","['dɛlɪɡət]","n.代表",'n.代表|||vt.派…为代表；委派|||vi.委派','The new manager was delegated to reorganize the department.','派这位新经理重新组织该部门.','The job had to be delegated to an assistant.','这项工作得交给助手去做.'}

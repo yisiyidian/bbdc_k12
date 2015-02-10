@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dynamic"]={"dynamic","[daɪ'næmɪk]","[daɪ'næmɪk]","adj.动态的",'adj.动态的,(有)动力的,(有)力的;有活力的|||n.动力;力学','He seemed a dynamic and energetic leader.','他看来是个富有创新力与活力的领导。','South Asia continues to be the most dynamic economic region in the world.','南亚仍然是世界上最具活力的经济区。'}

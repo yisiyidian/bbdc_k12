@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hook"]={"hook","[hʊk]","[hʊk]","n.钩子",'n.钩子,钩拳|||vt.&vi.钩住','The bait hides the hook.','【谚】饵中必有诈。','He left the phone off the hook so that he wouldn\'t be disturbed.','他不把电话听筒挂上，以免受到打扰。'}

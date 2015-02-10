@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rebroadcast"]={"rebroadcast","[riː'brɔːdkɑːst]","[,ri'brɔdkæst]","v.转播",'v.转播,重播|||n.转播,重播','Many TV stations rebroadcast this big event.','许多电视台转播了这一事项。','The TV station will rebroadcast the exhibition match this afternoon.','今天下午电视台会转播这场表演赛。'}

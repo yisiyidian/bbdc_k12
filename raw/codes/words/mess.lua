@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mess"]={"mess","[mes]","[mɛs]","n.乱七八糟",'n.乱七八糟,一堆食物,集体用膳人员,大量|||vt.&vi.供给食物,把...弄乱','I was asked to organize the trip, but I messed it up.','大家要我组织这次旅游，可是我把事情搞糟了。','I love just messing about in the garden.','我就是喜欢在花园里瞎转。'}

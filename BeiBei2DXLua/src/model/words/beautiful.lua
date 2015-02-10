@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["beautiful"]={"beautiful","['bjuːtɪfʊl; -f(ə)l]","['bjʊtəfəl]","adj.美丽的",'adj.美丽的,漂亮的','She is, as it were, the most beautiful girl I\'ve ever seen.','她可说是我见过的最漂亮的姑娘。','Many beautiful fish are fast disappearing because of the severe pollution.','因为污染严重，许多美丽的鱼类正在面临绝种。'}

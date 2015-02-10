@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tire"]={"tire","[taɪə]","['taɪɚ]","n.轮胎.金属圈",'n.轮胎.金属圈|||vt.使疲倦,厌烦|||vi.疲劳','I never tire of reading Shakespeare.','我对莎士比亚的作品百读不厌。','My sister never tires of talking about her work.','我姐姐总是不厌其烦地谈论她的工作。'}

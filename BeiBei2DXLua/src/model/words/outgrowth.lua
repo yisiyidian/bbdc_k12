@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outgrowth"]={"outgrowth","['aʊtɡroθ]","[ 'autɡrəuθ ]","n.自然结果",'n.自然结果，副产品，长出，长出物','An outgrowth of new shoots on a branch.','枝条上分出的一个新枝.','Inflation is an outgrowth of war.','通货膨胀是战争带来的后果'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["appropriate"]={"appropriate","[ə'prəʊprɪət]","[əˈpropriɪt]","adj.适当的",'adj.适当的,相称的|||vt.拨出(款项);占用','The minister was found to have appropriated government money.','部长被查出挪用了公款。','Lee appropriated my unread newspaper and never returned it.','李擅自拿走我尚未阅读的报纸并从不归还。'}

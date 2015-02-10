@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adventure"]={"adventure","[əd'ventʃə]","[əd'vɛntʃɚ]","n.冒险",'n.冒险,奇遇|||vt.冒险,尝试|||vi.大胆进行,冒险','She got back safe from her adventure.','她已从冒险旅程中安全返回.','The element of risk gave (an) added zest to the adventure.','这种冒险成分更给探险活动平添几分乐趣.'}

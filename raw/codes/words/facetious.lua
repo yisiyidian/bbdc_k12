@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["facetious"]={"facetious","[fə'siːʃəs]","[fə'siʃəs]","adj.轻浮的",'adj.轻浮的,好开玩笑的','He is so facetious that he turns everything into a joke.','他很贫嘴，什么都能开玩笑。','He is a facetious man.','他是个轻浮的人。'}

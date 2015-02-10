@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tavern"]={"tavern","['tæv(ə)n]","['tævɚn]","n.酒馆",'n.酒馆,客栈','After singing all night in the tavern, I had a frog in the throat next morning.','在酒馆里唱了一整夜歌，第二天早晨我的嗓子有点嘶哑了。','There is a tavern at the corner of the street.','街道的拐角处有一家酒馆.'}

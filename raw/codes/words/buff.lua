@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["buff"]={"buff","[bʌf]","[bʌf]","n.浅黄色",'n.浅黄色(磨轮,抛光轮,软皮)|||vt有软皮摩擦(抛光,缓冲)','The doctor ordered him to strip and there he stood in nature\'s buff.','医生命令他脱掉衣服，于是他一丝不挂地站在哪儿。','The trouble with "buffer states" in an age of jet aircraft and atomic weapons is that they do not buff.','在这个喷气式飞机和原子武器时代，缓冲国不再起缓冲作用了。'}

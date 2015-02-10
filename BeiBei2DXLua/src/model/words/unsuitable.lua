@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unsuitable"]={"unsuitable","[ʌn'suːtəb(ə)l; -'sjuːt-]","[ʌn'sutəbl]","adj.不适宜的",'adj.不适宜的，不合适的','She had contracted a most unsuitable marriage.','她订下的婚约极不匹配.','Her parents will never acquiesce in such an unsuitable marriage.','她的父母决不会答应这门不相宜的婚事。'}

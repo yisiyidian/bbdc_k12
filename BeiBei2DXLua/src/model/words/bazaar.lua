@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bazaar"]={"bazaar","[bə'zɑː]","[bə'zɑr]","n.市集",'n.市集,商场,义卖的地方','A bazaar was held for the poor.','为贫民举行了义卖.','Now he was far down the bazaar, riding furiously.','此时他已经飞也似地骑到远远的集市区去了.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["defeat"]={"defeat","[dɪ'fiːt]","[dɪ'fit]","vt.击败",'n.败北,失败|||vt.击败','He was depressed by his defeat.','失败让他沮丧。','The hopes were defeated.','希望落空了。'}

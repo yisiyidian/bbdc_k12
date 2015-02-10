@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bounce"]={"bounce","[baʊns]","[baʊns]","n.跳",'n.跳,反跃,(活)弹力|||vt.弹跳,向...透露注意|||vi.弹起,重新恢复','I hope this cheque doesn\'t bounce.','我希望这张支票别遭退票','The ball hit the wall and bounced off it.','球打在墙上又反弹回来。'}

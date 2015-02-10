@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["smite"]={"smite","[smaɪt]","[smaɪt]","vt.重击",'vt.重击，彻底击败，责备，迷住|||vi.重击','He was ||smitten|| with Mary\'s attractions and laid siege to her heart.','他被玛丽的魅力迷惑, 对她苦缠不休。','The hero ||smote|| the giant with his sword.','英雄用剑猛劈巨人。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["node"]={"node","[nəʊd]","[nod]","n.节",'n.节,结节,瘤,(戏剧情节的)曲折或纠纷|||[计算机]节点','In a network, a route between any two nodes.','网络中任意两个网点之间的一段路由。','This part of the novel is the node of the whole plot.','这部分的小说是整部小说的转折点。'}

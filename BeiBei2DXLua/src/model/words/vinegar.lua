@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vinegar"]={"vinegar","['vɪnɪgə]","['vɪnɪɡɚ]","n.醋",'n.醋','||Vinegar|| has an acid taste.','醋有酸味.','His retort was delivered with a strong note of vinegar.','他的反驳带着强烈不满的口气。'}

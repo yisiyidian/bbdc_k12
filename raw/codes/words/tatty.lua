@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tatty"]={"tatty","['tætɪ]","['tæti]","adj.不整洁的",'adj.不整洁的,简陋的','...a very tatty old bathrobe.','...一件破旧的浴袍。','That is a tatty room.','那是一个简陋的房间。'}

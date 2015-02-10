@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reminisce"]={"reminisce","[,remɪ'nɪs]","[,rɛmɪ'nɪs]","v.追忆",'v.追忆,说...的回忆','Old friends like to reminisce about the "good old days" .','老朋友们总喜欢谈论那“美好的往昔”。','I don\'t like ||reminiscing|| because it makes me feel old.','我不喜欢回忆旧事，因为这让我觉得我老了。'}

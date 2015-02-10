@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sensational"]={"sensational","[sen'seɪʃ(ə)n(ə)l]","[sɛn'seʃənl]","adj.轰动的",'adj.使人感动的,非常好的,轰动的,耸人听闻的','The newspapers played up sensational social news.','各报大肆渲染耸人听闻的社会新闻。','What a sensational story! It has all the elements of a soap opera.','多麽耸人听闻的事! 具备连续剧的一切要素.'}

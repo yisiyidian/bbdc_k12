@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pole"]={"pole","[pəʊl]","[pol]","n.极(点)",'n.极(点),杆子|||vt.跳,支撑|||vi.用篙撑船','When Scott reached the South ||Pole|| he found Amundsen had anticipated him.','当斯科特抵达南极的时候, 发现阿蒙森比他到得更早.','||Pole|| vaulters need long run-ups.','撑竿跳需要长距离助跑.'}

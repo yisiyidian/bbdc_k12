@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diaphanous"]={"diaphanous","[daɪ'æf(ə)nəs]","[daɪ'æfənəs]","adj.透明的",'adj.透明的，柔软的，模糊的','The breeze rustled leaves in a dry and diaphanous distance.','远处，空气干燥而明净，微风吹拂着树叶发出沙沙的声音。','She was wearing a dress of diaphanous silk.','她穿着一件薄如蝉翼的绸服。'}

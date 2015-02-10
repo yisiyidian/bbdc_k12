@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["provocation"]={"provocation","[,prɒvə'keɪʃ(ə)n]","[,prɑvə'keʃən]","n.刺激",'n.激怒,刺激,挑拨，挑衅的事物，激怒的原因','He flares up at the slightest provocation.','稍一激他, 他就大发脾气.','She sometimes angers with little or no provocation.','她有时无缘无故就生气.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["immure"]={"immure","[ɪ'mjʊə; ɪ'mjɔː]","[ i'mjuə ]","vt.监禁",'vt.监禁,禁闭','She was immured in a dark room.','她被关在黑房里。','||Immured|| in the castle dungeon for years, the peasant was unable to take the mental strain and finally went mad.','被囚禁在城堡地牢多年，农夫无法承受心理的负担，终于发疯了。'}

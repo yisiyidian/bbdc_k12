@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["innovation"]={"innovation","[ɪnə'veɪʃ(ə)n]","[,ɪnə'veʃən]","n.创新",'n.创新,革新','A surge of innovation in techniques is on the horizon.','技术改进的浪潮即将出现。','Anesthesia was a great innovation in medicine.','麻醉是一项伟大的医学创新。'}

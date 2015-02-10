@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["doubtful"]={"doubtful","['daʊtfʊl; -f(ə)l]","['daʊtfəl]","adj.可疑的",'adj.可疑的,疑心的,不确定的','The ethics of his decision are doubtful.','他的这一决定是否合乎道德规范值得怀疑.','It is doubtful whether he can read my fortune or not.','他能否算出我的运气还是个疑问。'}

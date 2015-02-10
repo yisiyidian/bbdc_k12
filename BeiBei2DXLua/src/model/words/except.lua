@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["except"]={"except","[ɪk'sept; ek-]","[ɪk'sɛpt]","vt.除",'vt.除,除外|||prep.&conj.除了...之外,若不是,除非','They all went to sleep except me.','除我之外，他们都去睡觉了。','He hadn\'t eaten a thing except for one forkful of salad.','除了一口沙拉，他什么都没吃。'}

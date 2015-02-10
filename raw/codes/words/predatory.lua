@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["predatory"]={"predatory","['predət(ə)rɪ]","['prɛdətɔri]","adj.掠夺的",'adj.掠夺的,掠夺成性的,捕食生物的','The domesticated cat retains its predatory instincts.','猫依然保持着捕食动物的天性。','She was safe from predatory birds on the verandah.','在阳台上她不会遭到猛禽的袭击。'}

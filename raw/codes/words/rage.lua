@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rage"]={"rage","[reɪdʒ]","[redʒ]","n.愤怒",'n.愤怒,情绪激动,风行一时,热量|||vi.震怒,风行,席卷','Their barbarous treatment of prisoners aroused great rage.','他们对犯人的残酷虐待激起了极大的愤怒。','I was gnashing my teeth with rage.','我咬牙切齿愤怒已极。'}

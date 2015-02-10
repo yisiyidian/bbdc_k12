@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dissipate"]={"dissipate","['dɪsɪpeɪt]","['dɪsɪpet]","vt.使...消散(浪费)",'vt.使...消散(浪费)','The sun dissipated the mist.','太阳驱散了迷雾。','He soon dissipated his fortune.','他很快就把财产浪费光了。'}

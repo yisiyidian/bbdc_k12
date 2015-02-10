@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["soluble"]={"soluble","['sɒljʊb(ə)l]","['sɑljəbl]","adj.可溶解的",'adj.可溶解的，可解决的','The capsule is filled with small soluble cases.','胶囊里充满了可溶的小颗粒。','This substance is soluble in alcohol.','这种物质能够溶解在酒精中。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["almighty"]={"almighty","[ɔːl'maɪtɪ]","[ɔl'maɪti]","adj.万能的",'adj.万能的,全能的|||adv.极度地|||Almighty:上帝','I\'m not denying that women foolish; God ||Almighty|| made them to match the men.','我不是在否定女人愚蠢, 是全能的上帝把她们造成配合男人的。','I swear by ||Almighty|| God that I will tell the truth.','我对万能的上帝发誓我要说真话。'}

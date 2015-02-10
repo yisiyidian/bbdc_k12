@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["equipoise"]={"equipoise","['ekwɪpɒɪz; 'iːkwɪ-]","[ 'ekwipɔiz, 'i:- ]","n.平衡",'n.平衡，平衡力，均衡|||vt.使平衡','The japenese food pay attention to nourishment is equipoise.','日本食品讲究营养均衡。','The equipoise between the two countries is just temporary.','两国之间的平衡只不过是暂时的。'}

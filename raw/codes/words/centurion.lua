@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["centurion"]={"centurion","[sen'tjʊərɪən]","[sɛn'tʃʊrɪən]","n.百夫长（古罗马军团的百人队指挥官）",'n.百夫长（古罗马军团的百人队指挥官）','||Centurion|| is the captain in roman military forces range.','百夫长在罗马军阶中相当于上尉。','A centurion was in charge of 100 soldiers.','一个百夫长管理100个士兵。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["barefaced"]={"barefaced","[beə'feɪst]","['bɛrfest]","adj.公然的",'adj.公然的,无耻的,无面具的,无胡须的','The most furious anarchist become the most barefaced apostate.','最激烈的无政府主义者，居然成了最露骨的变节者。','For barefaced lying you are really it.','以无耻造谣而论，你真算得上天下第一。'}

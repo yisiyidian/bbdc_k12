@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["compunction"]={"compunction","[kəm'pʌŋkʃ(ə)n]","[kəm'pʌŋkʃən]","n.良心的责备",'n.良心的责备,后悔,悔恨','I have little compunction in doing it.','做这件事我没什么不安的。','She kept us waiting without the slightest compunction.','她让我久等却没有丝毫的歉意。'}

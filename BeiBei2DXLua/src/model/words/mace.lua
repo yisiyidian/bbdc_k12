@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mace"]={"mace","[meɪs]","[ meis ]","n.钉头槌",'n.钉头槌,狼牙棒|||n.权标,执权标者|||vt.向...喷射梅斯毒气','She put some mace into the meat.','她往肉里加了一些肉豆蔻干皮。','The sword and mace were favourite weapons for hand-to-hand fighting.','剑和狼牙棒是肉搏战的最佳武器。'}

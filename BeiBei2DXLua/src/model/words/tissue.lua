@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tissue"]={"tissue","['tɪʃuː; 'tɪsjuː]","['tɪʃu]","n.(动、植物的)组织",'n.(动、植物的)组织,薄的纱织品，餐巾纸,手巾纸','The Christmas presents were wrapped (up) in tissue paper.','圣诞礼物都用薄纸裹起来了.','She wiped off the sweat from her face with a piece of facial tissue.','她用一张面巾纸擦掉脸上的汗水。'}

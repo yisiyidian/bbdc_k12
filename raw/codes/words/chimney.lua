@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chimney"]={"chimney","['tʃɪmnɪ]","['tʃɪmni]","n.烟囱",'n.烟囱','Sparks from the fire were flying up the chimney.','火星沿著烟囱向上飘.','The explosion toppled the old chimney.','这次爆炸把那个旧烟囱给炸倒了.'}

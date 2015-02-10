@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jungle"]={"jungle","['dʒʌŋg(ə)l]","['dʒʌŋɡl]","n.丛林",'adj.丛林的,蛮荒的|||n.丛林,密林','Their daily trips through the jungle have made a path in the thick undergrowth.','他们每天往返穿过丛林，已在茂密的矮丛中踩出了一条小路。','The expedition through the jungle was fraught with difficulties and danger.','穿越森林的探险充满了艰辛和危险。'}

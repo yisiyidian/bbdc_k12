@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["artifact"]={"artifact","['ɑ:təˌfækt]","['ɑrtə,fækt]","n.人工制品(制造物",'n.人工制品(制造物,石器)','The very act of looking at a naked model was an artifact of male supremacy','观看裸体模特的行为本身是男权至上的典型产物','They also repair broken religious artifacts.','他们也修补破损的宗教手工艺品。'}

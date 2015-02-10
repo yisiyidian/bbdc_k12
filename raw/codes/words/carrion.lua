@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carrion"]={"carrion","['kærɪən]","['kærɪən]","n.腐肉",'n.腐肉|||adj.腐肉的，以腐肉为生的','Crows circled overhead, looking for carrion.','乌鸦在头顶盘旋，寻觅着腐肉。','carrion crow','乌鸦'}

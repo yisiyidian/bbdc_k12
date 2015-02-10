@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["faith"]={"faith","[feɪθ]","[feθ]","n.信任",'n.信任,信仰','Christians profess their faith when they say the Creed.','基督教徒在念信经时就表明了他们的宗教信仰.','Nothing could extinguish his faith in human nature.','没有什么能使他丧失对人性的信心。'}

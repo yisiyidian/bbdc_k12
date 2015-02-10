@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inquisitive"]={"inquisitive","[ɪn'kwɪzɪtɪv]","[ɪn'kwɪzətɪv]","adj.好奇的",'adj.好奇的，好追根究底的，求知欲强的','Bears are very inquisitive and must be kept mentally stimulated.','熊非常好奇，必须不断地给予其智力上的刺激。','Children are usually inquisitive.','小孩通常很好问。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chip"]={"chip","[tʃɪp]","[tʃɪp]","n.薄片",'n.薄片,碎屑，芯片|||vt.削,切,削成碎片|||vi.折断成碎片','If everyone chips in we\'ll be able to buy her a really nice leaving present.','若每个人都凑些钱, 就能真正给她买件好的送别礼物.','The paint has chipped off where the table touches the wall.','桌子接触墙壁的地方漆皮已剥落。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["out"]={"out","[aʊt]","[aʊt]","adj.外面的",'adj.外面的,向外的,落伍的,不做考虑的|||adv.向外,离岸,外出,出局,出去,用尽,完成,出现,结束|||vt.释放出,结露|||vi.揭发|||prep.向外,通过|||n.外面,在野者,下台者,出局的一击','The fire has gone out.','火已熄灭。','His book came out last month.','他的书上个月出版了。'}

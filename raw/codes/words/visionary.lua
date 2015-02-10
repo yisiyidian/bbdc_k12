@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["visionary"]={"visionary","['vɪʒ(ə)n(ə)rɪ]","['vɪʒənɛri]","adj.幻影的",'adj.幻影的,幻想的,有远见卓识的|||n.空想家,梦想者，预言家','A team will have a hard time succeeding if the leader isn\'t a visionary one.','如果一个团队的领导不是一个有远见的人，那么他们将很难成功。','Many are hailing her ideas as visionary.','许多人都称赞她的想法很有远见。'}

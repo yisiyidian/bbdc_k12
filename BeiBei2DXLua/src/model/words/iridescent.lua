@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["iridescent"]={"iridescent","[,ɪrɪ'des(ə)nt]","[,ɪrɪ'dɛsnt]","adj.虹彩色的",'adj.虹彩色的(现晕光的,闪光的)','Children enjoy blowing iridescent soap bubbles from pipes.','孩子们喜欢从管中吹出彩虹色的肥皂泡泡。','Light flashed from the iridescent feathers around its neck.','它颈上的虹彩色羽毛闪烁着光芒。'}

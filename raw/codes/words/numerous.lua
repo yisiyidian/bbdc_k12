@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["numerous"]={"numerous","['njuːm(ə)rəs]","['numərəs]","adj.为数众多的",'adj.为数众多的,许多','He appeared, surrounded by his numerous progeny.','他出现时，子女前呼后拥不计其数。','||Numerous|| interruptions have prevented me from finishing my work.','我屡遭搅扰以致工作未能完成。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["astronaut"]={"astronaut","['æstrənɔːt]","['æstrə'nɔt]","n.宇航员",'n.宇航员','The astronaut accepted danger was part of the job.','太空人承认他们的工作中包含著危险。','The rocket boosts the astronaut into space.','这火箭能把宇航员送入太空.'}

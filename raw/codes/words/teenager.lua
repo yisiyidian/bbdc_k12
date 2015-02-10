@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["teenager"]={"teenager","['tiːneɪdʒə]","['tinedʒɚ]","n.13岁到19岁的年轻人",'n.13岁到19岁的年轻人','That teenager singer is really dynamite!','那个少年歌手真是轰动一时！','He is a lanky teenager.','他是个瘦削的少年。'}

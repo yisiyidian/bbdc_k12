@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["peruse"]={"peruse","[pə'ruːz]","[pə'ruz]","vt.熟读",'vt.熟读,精读,阅读','After breakfast he perused the newspapers.','早饭后，他读了各种报纸。','Have you perused this article?','你细读了这篇文章了吗？'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["apartment"]={"apartment","[ə'pɑːtm(ə)nt]","[ə'pɑrtmənt]","n.一套公寓房间",'n.一套公寓房间','I have an apartment in downtown Manhattan.','我在曼哈顿中心区有一套住房。','We are fascinated by the delicate interior design of the apartment.','我们被这所公寓的精致的室内装潢设计吸引。'}

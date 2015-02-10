@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obsolete"]={"obsolete","['ɒbsəliːt]","[,ɑbsə'lit]","adj.已废弃的",'adj.已废弃的,过时的','The typewriter is obsolete.','这架打字机老掉牙了。','The army plans to phase out the equipment as it becomes obsolete.','军队计划淘汰这些设备，因为它们已经报废了。'}

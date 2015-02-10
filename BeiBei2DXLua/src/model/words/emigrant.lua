@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emigrant"]={"emigrant","['emɪgr(ə)nt]","['ɛmɪɡrənt]","n.移民",'n.移民,侨民|||adj.移民的,移居的','The repatriated those illegal emigrants back to Haiti.','他们将这批非法移民遣返海地。','A ship full of emigrants will soon leave for Canada.','一条载满移居外国者的船很快就要开往加拿大了。'}

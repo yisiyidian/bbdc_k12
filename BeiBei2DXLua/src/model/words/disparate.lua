@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disparate"]={"disparate","['dɪsp(ə)rət]","['dɪspərət]","adj.不同的",'adj.不同的,全异的,乖离的','The five experiments gave quite disparate results.','这五次试验所获得的结果迥然不同.','Scientists are trying to pull together disparate ideas in astronomy.','科学家们正试图将天文学中的各派观点整合在一起。'}

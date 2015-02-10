@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indignant"]={"indignant","[ɪn'dɪgnənt]","[ɪn'dɪɡnənt]","adj.愤慨的",'adj.愤慨的,愤愤不平的','People are indignant by their shooting of innocent civilians.','对于他们枪杀无辜平民，人们感到义愤填膺。','He is indignant at the false accusation.','他对被诬告愤愤不平。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bleed"]={"bleed","[bliːd]","[blid]","vi.流血",'vi.流血,(为事业,祖国)负伤或牺性,(花草﹑树木等)流出汁液,出大笔钱|||vt.放血,勒索钱财,大大削弱,使...流血|||n.印刷到纸边上去,漏出','My heart bleeds for the victims of the air crash.','我为飞机失事的受难者感到悲痛','The madras skirt ||bled|| when it was first washed.','薄棉裙在第一次清洗后就褪色了'}

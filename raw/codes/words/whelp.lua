@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["whelp"]={"whelp","[welp]","[wɛlp]","n.幼兽",'n.幼兽，小孩，可鄙的人，扣齿链|||v.下崽，产仔','The whelp is her only companion.','这条小狗便是她唯一的伴侣了。','The female dog bore five whelps.','母狗生了五只小狗。'}

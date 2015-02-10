@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["candor"]={"candor","['kændɚ]","[ 'kændə ]","n.坦白",'n.坦白,直率','The style is marked by simplicity, clarity, and candor.','这种风格的特点是简洁、清楚、直截了当。','He covered a wide range of topics with unusual candor.','他极其坦率地谈了许多问题。'}

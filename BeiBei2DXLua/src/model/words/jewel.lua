@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jewel"]={"jewel","['dʒuːəl]","['dʒuəl]","n.宝石",'n.宝石|||v.镶以宝石','Virtue is a jewel of great price.','【谚】美德是无价之宝。','He spent important money on a small jewel for his wife.','他花大笔钱购买小小的宝石给太太.'}

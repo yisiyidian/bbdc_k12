@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intermingle"]={"intermingle","[ɪntə'mɪŋg(ə)l]","[,ɪntɚ'mɪŋɡl]","v.混合",'v.混合,搀杂','Oil and water will not intermingle.','油和水不相融.','This book intermingled fact with fiction.','这本书事实和虚构情节交织。'}

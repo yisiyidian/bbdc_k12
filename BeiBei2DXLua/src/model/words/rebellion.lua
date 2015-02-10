@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rebellion"]={"rebellion","[rɪ'beljən]","[rɪ'bɛljən]","n.叛乱",'n.谋反,叛乱,反抗','The rebellion was quickly quashed.','叛乱被迅速平息.','The rebellion was soon stamped on by the army.','军队很快平息了叛乱.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assertion"]={"assertion","[ə'sɜːʃ(ə)n]","[ə'sɝʃən]","n.断言",'n.断言,主张','A formal assertion of validity.','确定，鉴定对效力的正式断言','Such a questionable assertion is sure to provoke criticism.','这种有问题的主张肯定会招致非议。'}

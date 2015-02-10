@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["petroleum"]={"petroleum","[pɪ'trəʊlɪəm]","[pə'trolɪəm]","n.石油",'n.石油','Any new source of energy will be welcome, as there is a shortage of petroleum.','由于石油短缺, 任何一种新能源都会受欢迎。','Indonesia is abundant in petroleum deposits.','印尼的石油蕴藏量丰富。'}

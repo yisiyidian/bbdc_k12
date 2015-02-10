@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["debility"]={"debility","[dɪ'bɪlɪtɪ]","[dɪ'bɪləti]","n.衰弱",'n.衰弱,虚弱','After her operation she suffered from general debility.','她在手术後感到全身虚弱.','...exhaustion or post-viral debility.','... 劳累或病毒感染后所致的体弱。'}

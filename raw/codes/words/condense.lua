@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["condense"]={"condense","[kən'dens]","[kən'dɛns]","v.浓缩",'v.浓缩,摘要,缩短','||Condense|| this paragraph into a few sentences.','把这段文字简缩成几个句子。','Steam condenses into water when cooling down.','蒸汽冷却时凝结成水。'}

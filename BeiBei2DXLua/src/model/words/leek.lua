@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["leek"]={"leek","[liːk]","[lik]","n.韭葱",'n.韭葱','Lovers live by love, as larks live by leeks.','情侣靠爱情生活, 正象云雀靠韭葱生活一样。','He is always confusing wheat with leek.','他对麦苗和韭菜总是辨别不清。'}

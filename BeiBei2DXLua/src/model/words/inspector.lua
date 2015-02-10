@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inspector"]={"inspector","[ɪn'spektə]","[ɪn'spɛktɚ]","n.检查员",'n.检查员,巡视员','A sergeant in the police force is below an inspector.','警察中巡佐的职位低於巡官.','The tax inspector agreed the figures.','税务稽查员核准了这些数字.'}

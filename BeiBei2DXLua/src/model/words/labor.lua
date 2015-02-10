@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["labor"]={"labor","['leɪbə(r)]","['lebɚ]","n.工作",'n.工作,劳动,劳力,劳方|||vt.苦干,劳动,分娩,阵痛,致力于|||vi.过分详尽阐述|||adj.劳工的,劳动的','The ||Labor|| Party came into power in 1945.','1945年工党上台执政。','The cardinal idea of the ||Labor|| Party\'s political thought is that all people should be equal.','工党政治思想的要点是人人平等。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lash"]={"lash","[læʃ]","[læʃ]","n.鞭子",'n.鞭子,鞭打,睫毛,讽刺|||vt.鞭打,摆动,扎捆,猛烈打击,抨击|||vi.迅速甩动,猛击,抽打,严厉谴责','He lashed out at the opposition\'s policies.','他猛烈抨击反对派的政策。','The waves are lashing against the rocks.','波浪冲击着岩石。'}

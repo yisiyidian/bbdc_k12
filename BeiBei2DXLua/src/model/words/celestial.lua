@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["celestial"]={"celestial","[sɪ'lestɪəl]","[sə'lɛstʃəl]","adj.天上的",'adj.天上的，非凡的|||n.天神|||Celestial|||adj.中国的,中国人的|||n.中国人','They had no hope of admission to the celestial kingdom.','他们无望进入天国。','Planets are celestial bodies.','行星是天体。'}

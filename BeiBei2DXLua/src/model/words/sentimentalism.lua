@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sentimentalism"]={"sentimentalism","[,sentɪ'mentəlɪzəm]","[,sɛntə'mɛntl,ɪzəm]","n.感情主义",'n.感情主义,沉于情感','||Sentimentalism|| make us conduct ourselves in society reason less.','沉于情感使我们处世不理智。','This is a novel reeking with sentimentalism','这是一本充满着感伤主义的小说。'}

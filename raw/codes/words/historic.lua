@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["historic"]={"historic","[hɪ'stɒrɪk]","[hɪ'stɔrɪk]","adj.有历史意义的",'adj.有历史意义的','The historic strike gave an enormous impetus to the whole American labor movement.','这次历史性的罢工对整个美国的劳工运动起了很大的推动作用。','The small symbols on this map denote historic places and museums.','这个地图上的小记号表示史迹兴博物馆。'}

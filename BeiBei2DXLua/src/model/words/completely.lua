@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["completely"]={"completely","[kəm'pliːtlɪ]","[kəm'plitli]","adv.完全地",'adv.完全地,十分地,全然','He is a contemporary of mine, but our experiences are completely different.','他和我是同龄人，但我们的经历截然不同。','The plan of the ground floor is completely symmetrical.','一楼的平面图是完全对称的。'}

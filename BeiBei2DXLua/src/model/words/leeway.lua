@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["leeway"]={"leeway","['liːweɪ]","['li'we]","n.余地",'n.余地，[航]偏航角，偏航，漂移','We\'d better preserve some leeway for our schedule in case any accident.','为了以防万一，我们最好给时间表留一些余地。','The government had several months\' leeway to introduce reforms.','政府有几个月的时间来推进改革。'}

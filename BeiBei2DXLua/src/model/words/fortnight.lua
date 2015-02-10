@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fortnight"]={"fortnight","['fɔːtnaɪt]","['fɔrtnaɪt]","n.两星期",'n.两星期，十四天','His birthday is Monday fortnight.','他的生日是两星期后的星期一。','The play folded within a fortnight.','那话剧演了两个星期就停演了.'}

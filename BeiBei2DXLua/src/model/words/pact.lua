@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pact"]={"pact","[pækt]","[pækt]","n.契约",'n.契约,协定,条约','The two minority parties sign an electoral pact not to oppose each other in certain constituency.','两个多数党签订了一个在某些选区互不反对的选举公约。','The two opposition parties made an electoral pact.','这两个反对党达成了一项关于选举的协议。'}

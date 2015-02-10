@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lottery"]={"lottery","['lɒt(ə)rɪ]","['lɑtəri]","n.彩票",'n.彩票','Dave, let\'s go to buy some lottery tickets.','戴维，我们去买彩票吧。','He scooped 1000 in the lottery.','他在抽彩中捷足先登赢得1000英镑.'}

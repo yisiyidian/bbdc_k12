@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crestfallen"]={"crestfallen","['krestfɔːl(ə)n]","['krɛstfɔlən]","adj.垂头丧气的",'adj.垂头丧气的,意气沮丧的,气馁的','The youth looked exceedingly crestfallen.','那青年看上去失望极了。','The individual to whom the manager had been talking went away quite crestfallen.','和经理谈话的那人垂头丧气地走了.'}

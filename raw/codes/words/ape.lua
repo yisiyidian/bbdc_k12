@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ape"]={"ape","[eɪp]","[ep]","n.猿",'n.猿','The ape swung from branch to branch.','那只猿猴从一根树枝荡到另一根树枝上。','Early man shows certain affinities with the ape.','早期的人类和猿有某些相似之处。'}

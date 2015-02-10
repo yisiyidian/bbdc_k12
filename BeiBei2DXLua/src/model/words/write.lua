@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["write"]={"write","[raɪt]","[raɪt]","v.写",'v.写','I wish he would write more often.','我希望他来信更勤些。','I\'ve been ||writing|| for three hours.','我已经写了三个小时了。'}

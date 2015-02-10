@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["organelle"]={"organelle","[,ɔːgə'nel]","[,ɔrgə'nɛl]","n.细胞器官",'n.细胞器官','The bacteria don\'t have real organelle.','细菌没有真正的细胞器','organelle','细胞器官'}

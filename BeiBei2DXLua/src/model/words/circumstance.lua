@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["circumstance"]={"circumstance","['sɜːkəmst(ə)ns]","['sɝkəmstæns]","n.环境",'n.环境,(复数)境况,事件,详情','He was forced by the circumstances to do this.','他做此事是为环境所迫。','Due to circumstances beyond our control， the lecture was cancelled.','由于无法控制的情况，讲座取消了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["leadership"]={"leadership","['liːdəʃɪp]","['lidɚʃɪp]","n.领导",'n.领导,领导才干','Several candidates had been manoeuvring for position long before the leadership became vacant.','领导职位尚未空缺, 几个竞争者早就在为向上爬而钩心斗角了.','She was making a big play for the leadership of the party.','她千方百计要当党的领导.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["release"]={"release","[rɪ'liːs]","[rɪ'lis]","n.释放",'n.释放,让渡,发行|||vt.释放,让与,准予发表,发射','The family paid a ransom of 50000 dollars for the child\'s release.','那家人为了赎回孩子付了5万美元。','He secured the release of the hostages.','他已经设法使人质获释。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["attache"]={"attache","[ə'tæʃeɪ]","[ə'tæʃe]","n.大使随员",'n.大使随员,大使馆馆员','a cultural attache; a military attache.','文化专员；军事专员','i need a attache','wo xuyao yige suiyuan'}

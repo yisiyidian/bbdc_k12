@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stationery"]={"stationery","['steɪʃ(ə)n(ə)rɪ]","['steʃənɛri]","n.文具",'n.文具,信笺','The letter is typed on his office stationery.','这件信打在他办公室专用信纸上。','He\'s been helping himself to my stationery.','他未经许可一直用我的文具。'}

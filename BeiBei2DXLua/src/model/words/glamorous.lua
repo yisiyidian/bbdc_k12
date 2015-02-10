@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glamorous"]={"glamorous","['glæmərəs]","['glæmərəs]","adj.富有魅力的",'adj.富有魅力的,迷人的','He is a glamorous man .','他是一个有魅力的男人','Our stylistic options as writers are neither numerous nor glamorous.','我们作者的文风既不能变来变去,也不能故作玄虚.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supervise"]={"supervise","['suːpəvaɪz; 'sjuː-]","['sʊpɚ'vaɪz]","vt.监督",'vt.监督,管理,指导','I supervised the workers loading the lorry.','我监督工人把货物装上卡车.','The chief clerk supervises the work of the department.','文书组长负责监督该部门的工作.'}

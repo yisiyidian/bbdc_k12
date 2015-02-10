@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unearthly"]={"unearthly","[ʌn'ɜːθlɪ]","[ʌn'ɝθli]","adj.怪异的",'adj.怪异的,异常的','For a few seconds we watched the unearthly lights on the water.','有那么几秒钟，我们注视着水面上那些奇异的光。','The silence was unearthly.','静得可怕。'}

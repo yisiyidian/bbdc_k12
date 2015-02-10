@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["innate"]={"innate","[ɪ'neɪt; 'ɪneɪt]","[ɪ'net]","adj.天生的",'adj.天生的,固有的','Correct ideas are not innate in the mind, but come from social practice.','正确的思想不是头脑中固有的，而是来源于社会实践。','Knowledge is acquired, not innate.','知识是后天习得的，不是先天就有的。'}

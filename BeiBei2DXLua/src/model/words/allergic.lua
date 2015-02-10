@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["allergic"]={"allergic","[ə'lɜːdʒɪk]","[ə'lɝdʒɪk]","adj.过敏的",'adj.过敏的,反感的','Ben is allergic to pollen.','班对花粉过敏。','Allergic children; highly allergic to penicillin.','过敏的儿童；对青霉素高度过敏'}

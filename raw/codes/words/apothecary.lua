@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apothecary"]={"apothecary","[ə'pɒθɪk(ə)rɪ]","[ə'pɑθə'kɛri]","n.药剂师",'n.药剂师,药师','I am an apothecary of that hospital.','我是那家医院的一名药剂师。','Peter is a famous apothecary of this town.','彼得是这个镇上有名的药剂师。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kettle"]={"kettle","['ket(ə)l]","['kɛtl]","n.水壶",'n.水壶,坑穴','She accused us of being extravagant talk about the pot calling the kettle black!','她指责我们铺张浪费--老鸹别嫌猪黑!','The water in the kettle had all boiled away.','壶里的水完全烧乾了.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["skeleton"]={"skeleton","['skelɪt(ə)n]","['skɛlɪtn]","n.骨架",'n.骨架,纲要,骨骼,骨瘦如柴的人或动物,家丑|||adj.骨骼的','Death is often shown in pictures as a human skeleton.','死神常被画成骷髅.','He is reduced almost to a skeleton.','他瘦得几乎变成了一个骨头架子。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["courtyard"]={"courtyard","['kɔːtjɑːd]","['kɔrtjɑrd]","n.庭院",'n.庭院,院子','Rise at dawn and sweep the courtyard.','黎明即起，洒扫庭除。','This passage leads into the courtyard.','这条路通向院子.'}

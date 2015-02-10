@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dentition"]={"dentition","[den'tɪʃ(ə)n]","[dɛn'tɪʃən]","n.生齿",'n.生齿,齿系,齿列','dentition','. 生齿,齿系,齿列','Narrower age bands could be assigned to children , especially those that had dentitions surviving','窄年龄乐队只能分配给孩子们,特别是那些有乳牙的。'}

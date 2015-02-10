@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spongy"]={"spongy","['spʌn(d)ʒɪ]","['spʌndʒi]","adj.像海绵的",'adj.像海绵的,不坚实的','The grass is spongy after the rain.','雨后的草地柔软湿润。','Drank the fresh air; spongy earth that drank up the rain.','呼吸新鲜空气；饱浸雨水的绵软泥土'}

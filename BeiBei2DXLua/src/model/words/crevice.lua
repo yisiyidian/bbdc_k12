@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crevice"]={"crevice","['krevɪs]","['krɛvɪs]","n.(岩石、墙等)裂缝",'n.(岩石、墙等)裂缝','Every crevice in these walls has been filled with putty .','这几堵墙的每个裂缝都用油灰补塞上了。','The earth heaved and surged, and instantly a large crevice split open.','地面一阵晃动，瞬即裂开一条大缝。'}

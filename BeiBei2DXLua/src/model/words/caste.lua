@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["caste"]={"caste","[kɑːst]","[kæst]","n.印度的世袭阶级",'n.印度的世袭阶级,(排他的)社会团体','||Caste|| is defined primarily by social honour attained through personal lifestyle.','社会等级制度主要是通过个人生活方式赢得的社会荣誉来确定。','Most of the upper castes worship the goddess Kali.','印度上层种姓多数崇拜女神时母。'}

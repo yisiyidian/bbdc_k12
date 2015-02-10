@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pair"]={"pair","[peə]","[pɛr]","n.双",'n.双,对,副|||vt.&vi.使...成对,配对','This pair of shoes is durable.','这双鞋很耐磨。','I find a couple of socks in the bedroom, but they don\'t make a pair.','我在卧室里发现两只袜子, 但不成对。'}

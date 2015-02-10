@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["uncanny"]={"uncanny","[ʌn'kænɪ]","[ʌn'kæni]","adj.神秘的",'adj.神秘的,不可思议的','I had an uncanny feeling of being watched.','我有种被人监视的奇怪感觉。','The silence was uncanny.','静得出奇。'}

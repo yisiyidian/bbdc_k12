@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alternate"]={"alternate","['ɔːltəneɪt; 'ɒl-]","['ɔltɚnət]","adj.交替的",'adj.交替的,轮流的,间隔的|||vt.&vi.交替,轮流','She gets Saturdays off in her new job as against working alternate weekends in her last one.','她新找的这份工作星期六放假，而原来的那份工作周末是隔周放假。','We alternate in doing the housework.','我们轮流做家务。'}

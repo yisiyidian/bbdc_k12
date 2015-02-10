@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["certificate"]={"certificate","[sə'tɪfɪkət]","[sɚ'tɪfɪkət]","n.证(明)书",'n.证(明)书,执照|||vt.批准，认可，发证书给...','June is as proud as a peacock after winning her first swimming certificate.','琼自从获得了第一游泳证书后非常骄傲，瞧不起人。','She\'s going in for the Cambridge First ||Certificate||.','她将参加剑桥初级证书考试.'}

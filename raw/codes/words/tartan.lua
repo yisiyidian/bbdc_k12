@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tartan"]={"tartan","['tɑːt(ə)n]","['tɑrtn]","n.(苏格兰)格子呢绒",'n.(苏格兰)格子呢绒，格子图案','...traditional tartan kilts.','…传统的格子呢褶裙。','tartan','(苏格兰)格子呢绒'}

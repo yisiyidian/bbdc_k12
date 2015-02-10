@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["default"]={"default","[dɪ'fɔːlt; 'diːfɔːlt]","[dɪ'fɔlt]","n.假设值",'n.假设值,默认(值),不履行责任,缺席|||v.默认,不履行义务,缺席,拖欠|||[计算机]缺省','In the default of one player we have to take the little boy as our team member.','因为缺一名运动员，我们只好叫这个小男孩做我们的队员。','The committee will not meet in default of a chairman.','没有主席委员会就不开会。'}

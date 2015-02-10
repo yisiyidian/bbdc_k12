@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inured"]={"inured","[i'njuəd]","[ i'njuəd ]","adj.习惯的",'adj.习惯的|||动词inure的过去式及过去分词形式','He had become inured to ridicule.','他已受惯了他人的讥笑。','Doctors become inured to death.','医生们已经能坦然面对死亡。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["instructor"]={"instructor","[ɪn'strʌktə]","[ɪn'strʌktɚ]","n.讲师",'n.教师,讲师,指导书','The training course qualifies you to be/as a driving instructor.','参加了训练课程就有资格成为[当]驾驶教练.','The driving instructor told me to pull up at the post office.','驾驶教练让我在邮局停车。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["effervesce"]={"effervesce","[,efə'ves]","[ ,efə'ves ]","vi.冒泡",'vi.冒泡,沸腾,兴奋','That hot spring was ||effervescing|| with bubbles.','温泉正冒着泡泡。','effervesce over the news of victory','因胜利的消息而兴奋'}

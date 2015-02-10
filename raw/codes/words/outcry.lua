@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outcry"]={"outcry","['aʊtkraɪ]","['aʊtkraɪ]","n.强烈抗议",'n.大声喊叫,强烈抗议，拍卖','If they try to close the railway, there\'ll be a great outcry.','如果他们试图关闭那条铁路，一定会遭到强烈的反对。','The government hushed the affair up to avoid a public outcry.','当局对此事秘而不宣, 以免引起公众抗议.'}

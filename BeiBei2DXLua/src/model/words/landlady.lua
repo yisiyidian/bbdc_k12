@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["landlady"]={"landlady","['læn(d)leɪdɪ]","['lændledi]","n.女房东",'n.女房东','I feel at home living here. The landlady is very kind to me.','我觉得住在这里象在家里一样。房东太太对我很好。','Easy does it, said the landlady when we moved the sofa upstairs.','当我们把沙发往楼上搬时，女房东说："慢慢来，小心点。"'}

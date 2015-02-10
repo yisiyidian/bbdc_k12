@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["idyllic"]={"idyllic","[ɪ'dɪlɪk]","[aɪ'dɪlɪk]","adj.田园诗的",'adj.田园诗的','To an outsider this looks like an idyllic life.','在局外人看来这好像是一种田园式的生活。','It was an idyllic conception.','这是一种牧歌式的构想。'}

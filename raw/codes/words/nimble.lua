@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nimble"]={"nimble","['nɪmb(ə)l]","['nɪmbl]","adj.敏捷的",'adj.敏捷的，伶俐的，精明的','Characterized by quickness, lightness, and ease of movement; nimble.','敏捷的，灵活的具有迅速、轻巧和易动特点的；灵活的','She knitted a pair of mittens for me with her nimble fingers.','她用灵巧的双手为我织了一副手套。'}

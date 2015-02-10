@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["umbrella"]={"umbrella","[ʌm'brelə]","[ʌm'brɛlə]","n.伞",'n.伞,保护伞|||vt.用伞遮住','She was holding up an umbrella.','她打着雨伞。','An umbrella will protect you from the rain.','雨伞可以保护你不致雨淋。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clatter"]={"clatter","['klætə]","['klætɚ]","n.卡搭声",'n.卡搭声,哗啦声,嘈杂的谈笑声|||vi.发出哗啦声,咔嗒咔嗒响,喧闹地谈笑|||vt.使发出咔嗒声','Don\'t clatter your knives and forks.','不要让你的刀叉碰击出声。','The metal basin clattered down the stone stairs.','金属盆子沿着石阶滚了下去，发出咣啷声。'}

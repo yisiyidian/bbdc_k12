@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hibernate"]={"hibernate","['haɪbəneɪt]","['haɪbɚnet]","vi.冬眠",'vi.过冬,冬眠,避寒','Bears wake for spring, summer, and fall and hibernate for the winter.','熊在春天、夏天和秋天保持清醒，在冬季冬眠。','Bears often hibernate in caves.','熊常在山洞里冬眠.'}

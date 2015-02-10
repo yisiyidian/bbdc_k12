@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["utility"]={"utility","[juːˈtɪləti]","[ju'tɪləti]","n.效用",'n.公共设施,效用,公用程序,实用品,实用|||adj.多效用的，多功能的','A utility infielder.','能攻善守的内场手','I have always doubted the utility of these conferences on disarmament','“我一直怀疑这些裁军会议的效用”'}

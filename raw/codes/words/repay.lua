@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["repay"]={"repay","[riː'peɪ; rɪ-]","[ri'pɛi]","v.偿还",'v.偿还,报答，还钱给','I lent him 5 on the understanding that he would repay me today.','我借给他5英镑, 条件是他今天得还给我.','Despite repeated assurances he failed to repay the money he had borrowed.','他尽管再三保证, 但是借去的钱却始终没还.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["presumptuous"]={"presumptuous","[prɪ'zʌm(p)tʃʊəs]","[prɪ'zʌmptʃuəs]","adj.放肆的",'adj.放肆的,冒昧的,冒失的','Having or showing excessive and arrogant self-confidence; presumptuous.','冒昧的，放肆的拥有或显示过分的或傲慢的自信的；自行其事的','I dislike that presumptuous young man.','我不喜欢那个自以为是的年轻人。'}

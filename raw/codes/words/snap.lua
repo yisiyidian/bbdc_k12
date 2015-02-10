@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["snap"]={"snap","[snæp]","[snæp]","v.猛咬",'v.猛咬,谩骂,砰然关上,拍摄,崩塌，劈啪作响|||n.啪嗒声,快镜头，突然释放|||adj.匆忙的，突然的|||adv.劈啪作响地','I\'m sorry I snapped at you just now.','对不起，我刚才不该对你嚷嚷。','I snapped you sunbathing on the beach.','我给你拍了一张海滩日光浴的照片。'}

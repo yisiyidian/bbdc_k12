@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["retriever"]={"retriever","[rɪ'triːvə]","[rɪ'trivɚ]","n.取回的人",'n.取回的人,能把猎物找回来的猎狗的一种','As a retriever, Mutt proved he understood his role.','马特用自己的行动充分证明了他是一只称职的猎犬.','Oh, yes, I have a dog now, a golden retriever.','对了, 我现在有一条狗, 一条金色的猎狗.'}

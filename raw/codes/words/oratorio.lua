@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oratorio"]={"oratorio","[,ɒrə'tɔːrɪəʊ]","[,ɔrə'tɔrɪo]","n.(通常以《圣经》内容为主题的)清唱剧",'n.(通常以《圣经》内容为主题的)清唱剧,神剧','I like oratorio.','我喜欢清唱剧。','It\'s the world\'s most popular oratorio.','这是世界上最流行的清唱剧。'}

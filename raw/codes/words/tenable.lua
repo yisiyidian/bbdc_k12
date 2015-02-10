@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tenable"]={"tenable","['tenəb(ə)l]","[ 'tenəbl ]","adj.站得住脚的",'adj.站得住脚的,无懈可击的','How long is the post tenable for?','这个职位任期多长？','The lectureship is tenable for a period of three years.','讲师这一职位任期三年.'}

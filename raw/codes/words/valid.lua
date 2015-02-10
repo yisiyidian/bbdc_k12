@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["valid"]={"valid","['vælɪd]","['vælɪd]","adj.有效的",'adj.有确实根据的;有效的;正当的,合法的','The cheque is not valid if it were not signed by the finance director.','如果没有主管财务的董事签字支票就无效。','The marriage was held to be valid.','这一婚姻关系是有效的。'}

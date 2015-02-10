@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["solitary"]={"solitary","['sɒlɪt(ə)rɪ]","['sɑlətɛri]","adj.孤独的",'adj.孤独的,独立的,荒凉的|||n.隐士,','He lived in a solitary woodland.','他住在一个人迹罕至的林区里。','A solitary candle lightened the darkness of the room.','一支孤烛使黑暗的房间亮了起来。'}

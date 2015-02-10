@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coed"]={"coed","['kəʊed; kəʊ'ed]","['ko'ɛd]","n.男女同校的女生",'n.男女同校的女生|||adj.男女同校的','A coed dorm; a coed pool.','男女合住的宿舍；男女联营','Is your school coed?','你们学校是男女合校吗?'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outcome"]={"outcome","['aʊtkʌm]","['aʊt'kʌm]","n.结果",'n.结果','Don\'t conjecture about the outcome.','不要对结果妄加猜测.','The outcome of the election is a foregone conclusion.','选举结果已在预料之中.'}

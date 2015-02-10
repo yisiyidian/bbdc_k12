@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nutrient"]={"nutrient","['njuːtrɪənt]","['nutrɪənt]","adj.营养的",'adj.营养的,滋养的|||n.营养物,营养品','Magnesium is the nutrient element in plant growth.','镁是植物生长的营养要素。','The nutrient in the soil acts as a stimulus to growth.','土壤中的养分能促进植物生长。'}

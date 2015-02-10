@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tardy"]={"tardy","['tɑːdɪ]","['tɑrdi]","adj.缓慢的",'adj.缓慢的,迟缓的','Steven was tardy this morning and alleges that his bus was late.','史提芬今天早上迟到的说词是公车误点了。','His boss was dissatisfied with his tardy progress.','老板对他缓慢的进度不满意。'}

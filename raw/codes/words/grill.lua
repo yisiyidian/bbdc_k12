@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grill"]={"grill","[grɪl]","[ɡrɪl]","n.烤架",'n.烤架,铁格子,烤肉|||vt.烧,烤,严加盘问','The police grilled the prisoner until he confessed.','警察对犯人严厉盘问，直到他认罪为止。','Place the omelette under a gentle grill until the top is set.','将煎蛋饼放在烤架下用文火烘烤，直到表面凝固。'}

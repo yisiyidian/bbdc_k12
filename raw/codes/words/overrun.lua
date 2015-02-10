@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overrun"]={"overrun","[əʊvə'rʌn]","['ovərʌn]","v.蔓延",'v.蔓延,泛滥，侵占，流行，超越|||n.超出量，风行，泛滥，侵占','This destroyer can overrun any submarine.','这艘驱逐舰的速度比任何潜水艇都快。','The countryside was overrun by marauding bands.','郊野到处都有散兵游勇, 四出打劫.'}

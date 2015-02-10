@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["official"]={"official","[ə'fɪʃ(ə)l]","[o'fɪʃəl]","adj.官方的",'adj.官方的,正式的,有权威的|||n.官员','The protesters showed their defiance of the official ban on demonstrations.','抗议者藐视官方的示威禁令.','He is a pompous official.','他是个自命不凡的官员。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fanaticism"]={"fanaticism","[fə'nætɪsɪz(ə)m]","[fə'nætɪsɪzəm]","n.狂热",'n.狂热,盲信','Zeal without knowledge is fanaticism','无知的热情就是盲目的狂热。','Doubt and fanaticism are two sides of the same development.','怀疑与狂热是同一新生事物的两面。'}

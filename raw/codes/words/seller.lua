@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["seller"]={"seller","['selə]","['sɛlɚ]","n.售货者",'n.售货者，畅销品','I can\'t call my book a best seller as such but it\'s very popular.','我不敢说我的书是畅销书, 但可以说很受欢迎.','The seller has ensured us of shipment in due course.','卖方已经向我们保证适时装运。'}

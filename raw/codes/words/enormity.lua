@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enormity"]={"enormity","[ɪ'nɔːmɪtɪ]","[ɪ'nɔrməti]","n.暴行",'n.暴行,极恶','It makes no sense to belittle the enormity of the disaster which has occurred.','对于已经发生的灾难，其严重性不该小视。','Such ||enormities|| would not be tolerated today.','这种严重罪行是今日不能容忍的。'}

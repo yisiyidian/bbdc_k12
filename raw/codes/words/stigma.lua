@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stigma"]={"stigma","['stɪgmə]","['stɪɡmə]","n.耻辱",'n.耻辱,污名|||n.柱头','There\'s no stigma attached any more.','这再也不是什么丢脸的事了。','There is very little stigma attached to crime and criminals.','人们几乎都不把犯罪和罪犯视为一种耻辱。'}

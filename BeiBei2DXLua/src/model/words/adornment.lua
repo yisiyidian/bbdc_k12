@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adornment"]={"adornment","[ə'dɔːnm(ə)nt]","[ ə'dɔ:nmənt ]","n.装饰",'n.装饰,装饰品','An adornment or a cover.','装饰物或覆盖物','Elaborate adornment, especially fine clothing and accessories.','华丽的服饰奢华的装饰，尤指浮华衣着和小件衣饰'}

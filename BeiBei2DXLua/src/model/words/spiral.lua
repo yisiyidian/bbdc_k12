@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spiral"]={"spiral","['spaɪr(ə)l]","['spaɪrəl]","n.旋涡",'n.旋涡,螺旋形之物|||adj.螺旋形的,盘旋的|||v.成螺旋状下降或上升,成螺旋状旋转','Prices are still spiralling.','价格仍然在急剧上涨。','The smoke spiraled upwards.','那股烟袅袅上升。'}

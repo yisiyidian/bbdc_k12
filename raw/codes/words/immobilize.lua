@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["immobilize"]={"immobilize","[ɪ'məʊbɪlaɪz]","[ɪ'mobə'laɪz]","v.使不能动",'v.使不能动|||vt.使不动,使固定','This alarm immobilizes the car.','这种警报一发出, 汽车就停止不动了.','A whole tank regiment was completely immobilized by enemy air attacks.','敌军的空袭将整个坦克团完全钳制住了.'}

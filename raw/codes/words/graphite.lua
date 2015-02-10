@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["graphite"]={"graphite","['græfaɪt]","['græfaɪt]","n.黑铅",'n.黑铅,石墨，铅笔粉','||Graphite|| is chemically allied to diamond.','石墨和金刚石在化学组成上有联系.','||Graphite|| is used in making lead pencils.','石墨常被用来做成铅笔。'}

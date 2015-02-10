@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["invest"]={"invest","[ɪn'vest]","[ɪn'vɛst]","vt.&vi.投资",'vt.&vi.投资；花费|||vt.授予，使就职；给…穿衣，装饰；使充满；覆盖','The crimes committed there invested the place with an air of mystery and gloom.','在那里发生罪案後，该地笼罩上一种阴森诡秘的气氛。','I\'m thinking of investing in a new car.','我打算花一笔钱买辆新汽车。'}

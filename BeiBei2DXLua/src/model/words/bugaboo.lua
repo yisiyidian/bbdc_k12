@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bugaboo"]={"bugaboo","['bʌgəbuː]","['bʌɡəbu]","n.鬼怪",'n.鬼怪,令人困扰的事','People made noise in ancient times to drive away the bugaboo from the home.','在古代，人们制造噪声以便把鬼怪驱逐出家门。','The old bugaboo of inflation still bothers them.','通货膨胀的老大难问题仍然困扰着他们。'}

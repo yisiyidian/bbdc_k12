@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mastermind"]={"mastermind","['mɑːstəmaɪnd]","['mæstəmaɪnd]","n.聪明人",'n.聪明人,智多星|||vt.(巧妙地)策划','School has made him into a mastermind.','学校使他变成了一个足智多谋的人。','The mastermind behind the scheme is executed after a brief trial.','阴谋的幕后策划者经过简短审讯便被处决了。'}

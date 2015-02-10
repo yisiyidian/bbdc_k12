@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acquiesce"]={"acquiesce","[,ækwɪ'es]","[ ,ækwi'es ]","vi.默许",'vi.默许,勉强同意','Her parents will never acquiesce in such an unsuitable marriage.','她的父母决不会答应这门不相宜的婚事。','She finally acquiesced to her parents\' wishes.','她最终还是遵从了她父母的意愿。'}

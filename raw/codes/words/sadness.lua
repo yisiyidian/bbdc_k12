@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sadness"]={"sadness","['sædnəs]","['sædnəs]","n.悲哀",'n.悲哀','His stories are shot through with a gentle sadness.','他的小说充满了淡淡的忧伤。','||Sadness|| prevailed in our mind.','我们的心中充满悲痛，'}

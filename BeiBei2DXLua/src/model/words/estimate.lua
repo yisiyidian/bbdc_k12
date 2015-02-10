@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["estimate"]={"estimate","['estɪmeɪt]","['ɛstə,met]","n.估计",'n.估计,估价|||v.估计,估价,评价','They estimated the number of visitors at 10 million.','他们估计参观者人数为1000万。','He is highly estimated among his colleagues.','他在同事中受到的评价很高。'}

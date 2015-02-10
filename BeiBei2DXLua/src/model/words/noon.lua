@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["noon"]={"noon","[nuːn]","[nun]","n.正午",'n.正午,中午，全盛期，顶点','It\'s my habit to take a nap at noon.','我有个睡午觉的习惯。','He reasoned that if we started at dawn, we would be there by noon.','他推断, 我们要是黎明出发, 中午就能到.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consequential"]={"consequential","[kɒnsɪ'kwenʃ(ə)l]","['kɑnsə'kwɛnʃəl]","adj.作为结果(引出重要结果的",'adj.作为结果的(引出重要结果的,自高自大的)','She was injured and suffered a consequential loss of earnings.','她受了伤，收入也随之减少。','From a medical standpoint a week is usually not a consequential delay.','从医学的角度来看，耽误一个星期通常并无大碍。'}

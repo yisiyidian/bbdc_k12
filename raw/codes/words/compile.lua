@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["compile"]={"compile","[kəm'paɪl]","[kəm'paɪl]","v.编译",'v.编译,编辑,编纂|||[计算机]编译','She play a notable role in compile the book.','在编写这本书的过程中，她起了显著的作用。','It takes years of hard work to compile a good dictionary.','编一部好词典需要多年的艰苦工作。'}

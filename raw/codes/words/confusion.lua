@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["confusion"]={"confusion","[kən'fjuːʒ(ə)n]","[kən'fjʊʒən]","n.混乱",'n.混乱,混淆,不确定状态','The room was in confusion after the birthday party.','生日晚会之后, 房间里一片混乱。','This misprint led to great confusion.','这个印刷错误造成很大的混淆。'}

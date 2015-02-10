@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["petrifaction"]={"petrifaction","[,petrɪ'fækʃən]","[,pɛtrə'fækʃən]","n.石化",'n.石化,目瞪口呆','It will be okay effect extending in petroleum and petrifaction areas.','在石油石化领域推广可收到较好的效果.','This petrifaction may be existed over two million years.','这块化石可能存在超过二百万年了。'}

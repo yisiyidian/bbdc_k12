@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reverent"]={"reverent","['rev(ə)r(ə)nt]","['rɛvərənt]","adj.恭敬的",'adj.恭敬的,虔诚的','Ellen looks almost reverent.','埃伦看起来近乎虔诚。','They all maintained a reverent silence.','他们都保持肃静。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["parch"]={"parch","[pɑːtʃ]","[pɑrtʃ]","v.炒",'v.炒,烤干,焦干','Give me a drink I\'m parched.','给我点喝的--我渴死了.','The fierce sun parched the bare earth.','灼热的阳光炙烤着光秃秃的大地。'}

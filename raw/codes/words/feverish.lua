@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["feverish"]={"feverish","['fiːv(ə)rɪʃ]","['fivərɪʃ]","adj.发烧的",'adj.发烧的，兴奋的','I feel feverish.','我觉得有点发烧。','During her illness she had feverish dreams.','她生病期间因发烧而做梦。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shackle"]={"shackle","['ʃæk(ə)l]","['ʃækl]","n.桎梏",'n.桎梏,束缚物|||v.加桎梏,加枷锁,束缚','He\'s too young to shackle himself with the responsibilities of a family.','他还太年轻，不能用家庭责任来束缚自己。','Nowadays, people have shaken off the shackles of some conventions.','今天，人们已经摆脱了一些习俗的束缚。'}

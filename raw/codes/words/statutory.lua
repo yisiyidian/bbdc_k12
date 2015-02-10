@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["statutory"]={"statutory","['stætjʊt(ə)rɪ; -tʃʊ-]","[stætjʊt(ə)rɪ]","adj.法令的",'adj.法令的,法定的,触犯法令的','We will try to reply your email within 48 hours except statutory holiday.','我们会尽量在48小时内答复你的来函，节假日除外。','Retailers have a statutory duty to provide goods suitable for their purpose.','零售商有为他们提供符合要求的货品的法定义务。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nirvana"]={"nirvana","[nɪə'vɑːnə]","[nɪr'vɑnə]","n.涅盘",'n.涅盘，极乐世界','Many businessmen think that a world where relative prices never varied would be nirvana.','很多商人认为，一个相对价格从不变化的地方会是极乐世界。','Entering the realm of ||Nirvana|| is only possible for those who have become pure.','心无杂念，方可入灭。'}

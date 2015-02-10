@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["facet"]={"facet","['fæsɪt; -et]","['fæsɪt]","n.小平面",'n.小平面,方面,刻面','We should think about another facet of this knotty problem.','对于这个棘手的问题我们应该考虑其另一个方面。','The caste system shapes nearly every facet of Indian life.','种姓制度决定了印度生活的几乎每一个方面。'}

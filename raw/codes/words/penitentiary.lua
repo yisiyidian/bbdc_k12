@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["penitentiary"]={"penitentiary","[,penɪ'tenʃ(ə)rɪ]","[,pɛnɪ'tɛnʃəri]","n.听悔僧",'n.听悔僧,教诲师,赎免局|||adj.改过的,感化的,惩罚的','A place where persons convicted or accused of crimes are confined; a penitentiary or a jail.','监狱，拘留所监禁被指控或认定有罪的人的地方；拘留所或监狱','a penitentiary offense.','受感化教养惩处的犯罪'}

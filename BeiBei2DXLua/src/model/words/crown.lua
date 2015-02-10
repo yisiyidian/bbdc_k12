@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crown"]={"crown","[kraʊn]","[kraʊn]","n.王冠",'n.王冠,王权,顶点,花冠|||vt.使...成王,加冕,居...之顶,为牙齿镶上假齿冠|||vi.火迅速烧到树的顶端','A major has a crown on the shoulder of his uniform.','一名少校在制服的肩部有个王冠形的纹章。','It was cold, raining, and, to crown it all, we had to walk home.','天气寒冷，又下著雨，而最倒霉的是，我们得走著回家。'}

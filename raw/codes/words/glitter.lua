@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glitter"]={"glitter","['glɪtə]","['ɡlɪtɚ]","n.灿烂",'n.灿烂,闪烁,辉耀|||v.灿烂,闪烁,辉耀','I\'ll try go get home before the roads glitter over.','我想尽量在道路结冰前赶回家。','He stared at me with a cruel glitter in his eyes.','他眼露凶光地瞪着我。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["remarkably"]={"remarkably","[rɪ'mɑːkəblɪ]","[rɪ'mɑkəblɪ]","adv.显著地",'adv.显著地,引人注目地,非常地','The boat was remarkably quick in stays.','这条船抢风调向特别快。','She sang remarkably well.','她唱得非常好。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["succeed"]={"succeed","[sək'siːd]","[sək'sid]","vt.成功",'vt.成功,继承,继续|||vi.接替,有作为','I won the essay prize, then was offered a scholarship: nothing succeeds like success!','我的作文得了奖，接著就获得了奖学金，真是一顺百顺！','Our plan succeeded, and soon we were in complete control.','我们的计划顺利完成了，于是我们很快就控制了局面。'}

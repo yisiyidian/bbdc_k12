@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abbreviation"]={"abbreviation","[əbriːvɪ'eɪʃ(ə)n]","[ə'brivɪ'eʃən]","n.缩写",'n.缩写','All abbreviations are to be written out.','所有的缩写都要完整地写出来','Scratch the subject of defence and acronym, abbreviation, and buzzwords fly out.','话题触及国防，缩合字，缩写字和行话就满天飞。'}

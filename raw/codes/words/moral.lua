@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["moral"]={"moral","['mɒr(ə)l]","['mɔrəl]","adj.道德(上)的",'adj.道德(上)的,有道德的|||n.品行,寓意,道德','She regards his moral faults with charity.','她宽恕他的品行不端。','We differ about moral standards.','我们对道德标准看法不一致。'}

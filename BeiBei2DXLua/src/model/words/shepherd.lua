@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shepherd"]={"shepherd","['ʃepəd]","['ʃɛpɚd]","n.牧羊者",'n.牧羊者,牧师,指导者|||v.看守,领导,指导','The shepherd set out to look for the sheep that had wandered (away).','牧羊人出发去找走失的羊.','The farmer has a shepherd dog.','农夫有一条牧羊犬。'}

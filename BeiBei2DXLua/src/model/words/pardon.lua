@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pardon"]={"pardon","['pɑːd(ə)n]","['pɑrdn]","n.原谅",'n.原谅,赦免|||vt.宽恕,原谅','She supplicated for pardon.','她恳求原谅。','I beg your pardon?','请您再说一遍(我没有听清)。'}

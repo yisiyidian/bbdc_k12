@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["class"]={"class","[klɑːs]","[klæs]","n.班级",'n.班级,(等)阶级,种类|||vt.分类','In some countries, people who disagree with the government are classed as criminals.','在某些国家，凡是同政府持有不同意见的人都被视为罪犯。','We were both in the same class.','那时我们在同一个班。'}

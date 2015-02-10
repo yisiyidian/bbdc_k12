@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["explicate"]={"explicate","['eksplɪkeɪt]","['ɛksplɪket]","vt.详细解说",'vt.详细解说，阐述','The guide explicated carefully to the tourists.','导游细心地向游人解说。','I remembered every word that he explicates to me','我记得他给我讲过的每一个单词。'}

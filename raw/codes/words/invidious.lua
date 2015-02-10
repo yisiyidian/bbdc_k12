@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["invidious"]={"invidious","[ɪn'vɪdɪəs]","[ɪn'vɪdɪəs]","adj.惹人反感的",'adj.惹人反感的,招人嫉妒的','It is invidious to make a selection.','不相上下，很难选择。','The local authority could find itself in the invidious position of having to refuse.','当局可能会发现自己处于必须要拒绝但又会因此而不得人心的境地。'}

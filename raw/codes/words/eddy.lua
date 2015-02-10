@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["eddy"]={"eddy","['edɪ]","['ɛdi]","n.逆流",'n.逆流,漩涡|||v.起漩涡','The little paper boat was caught in an eddy and spun round and round in the water.','小纸船卷进了漩涡中，在水中直打转。','The mist ||eddied|| round the old castle.','薄雾在那座古老的城堡的周围打转转。'}

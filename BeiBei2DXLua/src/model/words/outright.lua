@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outright"]={"outright","[aʊt'raɪt]","['aʊtraɪt]","adj.率直的",'adj.率直的,完全的,总共的|||adv.率直地,立刻地,一直向前','She was the outright winner.','毫无疑问她是优胜者。','I bought a house outright.','我以一次付款方式买了一栋房子。'}

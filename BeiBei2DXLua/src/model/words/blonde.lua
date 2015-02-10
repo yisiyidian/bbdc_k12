@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blonde"]={"blonde","[blɒnd]","[blɑnd]","adj.金黄色或淡色的（指人头发）",'adj.金黄色或淡色的（指人头发）|||n.金发女郎','The girl had her long blonde hair tied back in a neat bun.','那个女孩把她长长的金发换成一个髻。','She disguised herself with a blonde wig and dark glasses.','她乔装打扮戴著金色假发和墨镜.'}

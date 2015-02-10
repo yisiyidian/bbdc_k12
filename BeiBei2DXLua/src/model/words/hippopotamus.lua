@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hippopotamus"]={"hippopotamus","[,hɪpə'pɒtəməs]","[ ,hipə'pɔtəməs ]","n.河马",'n.河马','The children enjoyed watching the hippopotamus wallowing in the mud.','孩子们喜欢看河马在泥中打滚。','The DNA suggests that whales are descendants of the hippopotamus.','---- TPO10 Lecture 1'}

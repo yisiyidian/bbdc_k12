@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cage"]={"cage","[keɪdʒ]","[kedʒ]","n.笼子",'n.笼子|||v.关入笼中|||vt.把...关入笼内','The lion paced the floor of his cage restlessly.','狮子烦躁地在兽笼里走来走去。','The canary was trilling away in its cage.','那只金丝雀在笼中鸣啾。'}

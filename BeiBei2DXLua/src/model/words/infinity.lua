@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infinity"]={"infinity","[ɪn'fɪnɪtɪ]","[ɪn'fɪnəti]","n.无限",'n.(时间,空间等)无限,无穷，[数]无穷大','Can you represent infinity to yourself?','你能在心想像无限吗？','Multiply y by infinity.','以无穷数乘y.'}

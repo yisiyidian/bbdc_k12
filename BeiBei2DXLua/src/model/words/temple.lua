@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["temple"]={"temple","['temp(ə)l]","['tɛmpl]","n.庙宇",'n.庙宇,寺院|||n.太阳穴','The temple has been considered an example of classic design.','人们认为这座神庙是古典式设计的范例。','We reached the temple through an unfrequented mountain track.','我们沿着一条人迹罕至的小径到达了寺庙。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["saloon"]={"saloon","[sə'luːn]","[sə'lun]","n.大厅",'n.大厅,展览场,酒吧','I leave the gay saloon of New York for the green glade of the country.','我离开了纽约欢乐的酒店, 来到乡村绿色的林间空地。','The launch of their new saloon received much media coverage.','他们投产的新轿车广获传媒报道.'}

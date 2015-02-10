@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outlay"]={"outlay","['aʊtleɪ]","['aʊtle]","n.费用",'n.费用,经费,支出|||v.花费','The act or process of expending; outlay.','支出支付的行为或过程；花费','Make love to every woman you meet. If you get five percent on your outlay, it\'s a good investment.','见了女人就追吧，纵使你的收获仅及支出的百分之五也好，也是一则可观的投资嘛。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hieroglyphic"]={"hieroglyphic","[haɪrə'glɪfɪk]","[,haɪərə'glɪfɪk]","adj.符号的",'adj.符号的,象形文字的，字迹模糊的|||n.象形文字，难辨别的书写','The Maya developed astronomy, calendrical systems and hieroglyphic writing.','玛雅人发展了天文学、历法和象形文字。','His writing is so bad it just looks like hieroglyphic to me .','他写的糟透了,对我来说就像天书一样。'}

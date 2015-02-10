@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["read"]={"read","[riːd]","[rid]","vt.&vi.阅读",'vt.&vi.阅读，朗读；显示；研究；看得懂|||vt.显示；阅读；读懂，理解|||n.阅读；读物；读书；里德（人名）|||adj.被朗读的；博识的；博览的；有学问的','Silence must not always be read as consent.','沉默不能总理解为同意。','The teacher read the poem to the class.','老师给全班同学朗诵这首诗歌。'}

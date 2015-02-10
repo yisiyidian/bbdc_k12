@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["saturation"]={"saturation","[sætʃə'reɪʃ(ə)n]","['sætʃə'reʃən]","n.饱和",'n.饱和(浸透,磁性饱和,色度学章度)','The measure of hue and saturation of a colour, undiluted with white, black or grey.','未用白色、黑色或灰色冲淡的颜色的色调和色饱和度的度量。','The company\'s sales are now close to saturation in many western countries.','这家公司的产品销售量在许多西方国家已接近饱和.'}

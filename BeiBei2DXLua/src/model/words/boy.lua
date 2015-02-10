@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["boy"]={"boy","[bɒɪ]","[bɔɪ]","n.男孩",'n.男孩,儿子','The stone just missed the boy.','那块石头差点儿砸到男孩。','Don\'t cry, you are a big boy now.','别哭，你现在已经是大男孩了。'}

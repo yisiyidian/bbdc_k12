@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hornbill"]={"hornbill","['hɔːnbɪl]","[ 'hɔ:nbil ]","n.犀鸟",'n.犀鸟','||Hornbill|| is a kind of bird in the tropical Africa and Asia, ralated to kingfisher.','犀鸟是一种生活在热带的非洲、亚洲的一种鸟，类似翠鸟。','The bird species of greatest concern, such as the Great ||Hornbill||, are found in or near forests.','在森林附近或者森林里面发现了备受关注的鸟类，如大犀鸟'}

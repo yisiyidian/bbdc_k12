@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["overturn"]={"overturn","[əʊvə'tɜːn]","['ovətɝn]","v.推翻",'v.推翻,颠覆|||n.倾覆,打翻,革命','The boat overturned but didn\'t sank.','小船翻了，但没有沉。','The revolutionist planned to overturn this puppet regime.','革命者计划推翻傀儡政府。'}

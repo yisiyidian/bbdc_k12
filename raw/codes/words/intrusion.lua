@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intrusion"]={"intrusion","[ɪn'truːʒ(ə)n]","[ɪn'truʒn]","n.闯入",'n.闯入,侵扰','Their intrusion into our private lives is unwarrantable.','他们侵扰我们的私生活是毫无道理的.','I was annoyed at his intrusion.','我对他的闯入感到生气。'}

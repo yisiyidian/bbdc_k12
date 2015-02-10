@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["securely"]={"securely","[sɪ'kjʊəlɪ]","[sɪ'kjʊrli]","adv.安心地",'adv.安心地,安全地','Any of various devices used to fasten something securely.','紧握之物用来紧紧扣住东西使其安全的装置','The lorry\'s load had been securely strapped down.','卡车上的货物已牢固地绑好。'}

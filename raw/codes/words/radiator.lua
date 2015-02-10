@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["radiator"]={"radiator","['reɪdɪeɪtə]","['redɪ'etɚ]","n.暖气片",'n.暖气片,散热器，辐射体','Tom was cold so he huddled up against the radiator.','汤姆感到冷, 所以他挨著散热器把身子缩成一团.','The radiator is giving out a lot of heat.','散热器释放出很多热量.'}

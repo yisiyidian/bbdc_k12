@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["watchful"]={"watchful","['wɒtʃfʊl; -f(ə)l]","['wɑtʃfl]","adj.注意的",'adj.注意的,警惕的|||adj.','Be sure to be watchful or alert.','必须留神，千万要提防。','We should be watchful of computer viruses.','我们应该警惕计算机病毒。'}

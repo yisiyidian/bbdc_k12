@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paltry"]={"paltry","['pɔːltrɪ; 'pɒl-]","['pɔltri]","adj.微不足道的",'adj.微不足道的，琐碎的，无价值的','His influence on this matter is paltry.','他对这件事的影响是微不足道的。','My girlfriend always concerns on some paltry things.','我女朋友总是在一些无关紧要的事情上纠结不已。'}

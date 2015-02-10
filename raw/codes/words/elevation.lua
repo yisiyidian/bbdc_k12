@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elevation"]={"elevation","[,elɪ'veɪʃ(ə)n]","[,ɛlɪ'veʃən]","n.海拔",'n.提拔，海拔,提高|||[计算机]标高','This drawing shows what the front elevation of the house will look like when it is built.','这张图显示这幢房子建成后正面的外观。','We climbed to the top of the small elevation, from which we could look at the town.','我们爬上小丘的顶端，由此可以俯瞰城市。'}

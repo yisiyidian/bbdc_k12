@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["superiority"]={"superiority","[suː,pɪərɪ'ɒrɪtɪ; sjuː-]","[su,pɪrɪ'ɔrəti]","n.优越性",'n.优越性,优势','A struggle for superiority or victory between rivals.','竞争竞争者之间为取得优势或胜利而进行的争夺','The plan is merely designed to maintain their nuclear superiority.','制定这个计划只是为了保持他们的核优势。'}

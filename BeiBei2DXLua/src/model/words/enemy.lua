@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enemy"]={"enemy","['enəmɪ]","['ɛnəmi]","n.敌人",'n.敌人,有害物,敌对势力','After several reverses the enemy was forced to retreat.','几经失败之后，敌军被迫后撤。','The ship was sunk by an enemy torpedo.','这艘船被敌人的鱼雷击沉了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flu"]={"flu","[fluː]","[flu]","n.流行性感冒",'n.流行性感冒','I got flu and was out of commission for a week.','我得了流感，一星期没工作。','I\'ve been laid up with flu for a week.','我患流感已在家休息一个星期了。'}

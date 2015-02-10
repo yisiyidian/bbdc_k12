@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["summon"]={"summon","['sʌmən]","['sʌmən]","vt.召唤",'vt.召唤,召集,振奋','The shareholders were summoned to a general meeting.','那些股东被召集去叁加股东大会。','He summoned his soldiers to fight.','他号召部下战斗。'}

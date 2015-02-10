@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bellows"]={"bellows","['beləʊz]","['bɛloz]","n.风箱",'n.风箱|||名词bellow的复数形式|||Bellows:贝洛斯（人名）','The bull bellows angrily.','公牛怒吼起来.','Yawning helps keep the brain cool, and the sinuses play a role in that process by acting as bellows, a new report suggests.','一份新的报道显示，哈欠能够帮助大脑保持凉爽，鼻窦在这个过程中所起的作用就像是风箱。'}

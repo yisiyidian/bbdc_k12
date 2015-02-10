@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["migratory"]={"migratory","['maɪgrət(ə)rɪ; maɪ'greɪt(ə)rɪ]","['maɪɡrətɔri]","adj.迁移的",'adj.迁移的,流浪的','Many migratory birds visit this lake annually.','许多候鸟每年到这个湖上作短期逗留。','There are lots of birds in this national forest park, both resident and migratory.','这个国家森林公园里有很多鸟，包括了当地的鸟也有候鸟。'}

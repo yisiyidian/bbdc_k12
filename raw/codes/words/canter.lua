@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["canter"]={"canter","['kæntə]","['kæntɚ]","n.慢跑",'n.慢跑|||v.慢跑,使...慢跑','Carnac set off at a canter.','卡纳克小跑着出发了。','The competitors cantered into the arena to conclude the closing ceremony.','选手们慢跑进入竞技场，为闭幕式画上了句号。'}

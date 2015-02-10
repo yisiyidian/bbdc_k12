@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fatalism"]={"fatalism","['feɪt(ə)lɪz(ə)m]","['fetəlɪzəm]","n.宿命论",'n.宿命论','Japanese culture includes a rich strand of fatalism.','日本文化包含着不少宿命论思想。','There\'s a certain mood of fatalism now among the radicals.','现在激进分子中间无疑弥漫着一种宿命情绪。'}

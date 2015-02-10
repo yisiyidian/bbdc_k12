@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["directory"]={"directory","[dɪ'rekt(ə)rɪ; daɪ-]","[daɪ'rɛktəri]","n.目录",'n.目录,工商名录,指南|||[计算机]目录|||adj.给予指导的','He thumbed through the directory to look for her number.','他翻阅电话号码簿找寻她的号码。','Steven could rattle off a page of the telephone directory if you asked him.','如果你叫史蒂芬背电话号码，他可以一口气背出一页。'}

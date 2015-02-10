@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["douse"]={"douse","[daʊs]","[daʊs]","v.(使)浸入水中",'v.(使)浸入水中，(使)熄灭','Men came with buckets of water and began to douse the flames.','人们提来一桶桶水灭火。','The pumps were started and the crew began to douse the fire with water.','水泵开动了，消防队员们开始用水灭火。'}

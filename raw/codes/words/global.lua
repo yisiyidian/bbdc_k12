@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["global"]={"global","['gləʊb(ə)l]","['ɡlobl]","adj.全球性的",'adj.全球性的,全局的','||Global|| strategic balance and stability.','全球战略平衡和稳定。','The report takes a global view of the company\'s problems.','这份报告对公司的问题作了综合性的论述.'}

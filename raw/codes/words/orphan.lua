@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["orphan"]={"orphan","['ɔːf(ə)n]","['ɔrfn]","n.孤儿",'n.孤儿|||adj.无双亲的,孤儿的|||vt.成孤儿','Having no children of their own they decided to adopt an orphan.','他们因没有亲生儿女, 所以决定领养一个孤儿.','Although Tony is an orphan, he is always in good spirits.','虽然托尼是个孤儿, 他总是很快乐。'}

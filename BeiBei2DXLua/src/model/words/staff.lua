@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["staff"]={"staff","[stɑːf]","[stæf]","n.全体职员",'n.参谋；全体职员；管理人员；权杖|||adj.行政工作的；参谋的；职员的；作为正式工作人员的|||v.在…工作；为…配备职员；任职于','I have arranged that one of my staff will meet you at the airport.','我已经安排好派一个职员到飞机场接你。','There are a lot of staff in the company.','这家公司有许多员工。'}

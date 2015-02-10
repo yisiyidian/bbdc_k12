@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eccentricity"]={"eccentricity","[,eksen'trɪsɪtɪ]","[,ɛksɛn'trɪsəti]","n.古怪",'n.古怪,古怪的行为,怪癖','His eccentricity had become legendary long before he died.','在他去世之前，他的古怪脾气就早已远近闻名了。','One of his ||eccentricities|| is sleeping under the bed instead of on it.','他的怪僻之一是睡觉睡在床底下而不睡在床上.'}

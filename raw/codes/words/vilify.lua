@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vilify"]={"vilify","['vɪlɪfaɪ]","['vɪlɪfaɪ]","v.诽谤",'v.诽谤,中伤','Why is he always trying to vilify my reputation?','为什么他总是想方设法毁坏我的名誉?','He was ||vilified||, hounded, and forced into exile by the FBI.','他遭到了联邦调查局的诬蔑和追捕，被迫流亡国外。'}

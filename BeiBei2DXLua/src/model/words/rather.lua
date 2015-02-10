@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rather"]={"rather","['rɑːðə]","['ræðɚ]","adv.宁可",'adv.宁可,宁愿,有些,相当,反而','Poultry is rather cheap now.','现在的禽肉相当便宜。','I would rather fail than cheat in the examination.','我宁愿考不及格，也不愿意考试作弊。'}

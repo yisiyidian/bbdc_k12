@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ferrous"]={"ferrous","['ferəs]","['fɛrəs]","adj.含铁的",'adj.含铁的','The ferrous food is good for your blood.','含鐵食物可以補血','The water was reacting with the ferrous iron in the tank.','水与水箱中的铁质产生化学反应.'}

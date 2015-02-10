@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tolerance"]={"tolerance","['tɒl(ə)r(ə)ns]","['tɑlərəns]","n.忍耐力",'n.忍耐力,宽容,容忍,公差','Lacking tolerance, breadth of view, or sympathy; petty.','才智有限的缺乏忍耐力、认识深度或同情心的；气量小的','It\'s better to err on the side of tolerance (ie be too tolerant rather than too severe) when dealing with young offenders.','对待失足的青少年宁可失之过宽（宁过宽而勿过严）.'}

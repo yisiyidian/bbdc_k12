@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["officer"]={"officer","['ɒfɪsə]","['ɔfɪsɚ]","n.官员",'n.官员,军官|||vt.提供官员,指挥','That officer must be removed.','那位官员必须免职。','Such an act of cowardice by an officer shames his whole regiment.','一个军官作出如此胆怯的行为使整个团都蒙受羞辱。'}

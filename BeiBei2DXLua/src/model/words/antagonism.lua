@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["antagonism"]={"antagonism","[æn'tæg(ə)nɪz(ə)m]","[æn'tæɡənɪzəm]","n.对抗",'n.对抗，对立，敌对状态（行为）','The antagonism he felt towards his old enemy was still very strong.','他对旧冤家的敌对情绪仍然很大.','You could sense the antagonism between them.','你能觉察出他们之间有对立情绪.'}

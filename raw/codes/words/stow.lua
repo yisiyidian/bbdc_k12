@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stow"]={"stow","[stəʊ]","[sto]","vt.装载",'vt.装载,装填,储藏','The bags beside the road are stowed with sand and salt for putting on icy roads to make them safer.','路旁的袋子里装满了沙和盐, 以便用来撒在结冰的路面上使之较为安全。','Have you seen the amount of foods those lads can stow away at one meal?','你可曾见过那些小伙子一餐的食量有多大？'}

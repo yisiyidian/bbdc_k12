@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["complementary"]={"complementary","[kɒmplɪ'ment(ə)rɪ]","['kɑmplə'mɛntri]","adj.补充的",'adj.补充的,互补的','His personality is complementary to hers.','他的个性与她的相反相成，','His personality is complementary to hers','他的个性与她的相反相成，'}

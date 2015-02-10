@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extrovert"]={"extrovert","['ekstrəvɜːt]","[,ɛkstrə'vɝt]","n.性格外向的人",'n.性格外向的人|||=extravert','He was a showman, an extrovert who revelled in controversy.','他是个爱出风头、性格外向而且喜欢争论的人。','His footballing skills and extrovert personality won the hearts of the public.','他的足球技巧和外向的个性赢得了公众的心。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["liberal"]={"liberal","['lɪb(ə)r(ə)l]","['lɪbərəl]","adj.自由的",'n.自由主义者,宽容大度的人,(Liberal)自由党人|||adj.无偏见的,慷慨的,不拘泥的,开明的,自由的','His views lack consistency: one day he\'s a conservative, the next he\'s a liberal.','他的观点缺乏一贯性: 时而保守, 时而开明.','Her liberal views were soon revealed as mere posturing.','她那些开明的观点很快地就暴露出只不过是做做样子而已.'}

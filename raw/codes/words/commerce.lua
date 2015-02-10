@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["commerce"]={"commerce","['kɒmɜːs]","['kɑmɝs]","n.贸易",'n.商业,贸易','He majored in international commerce in college.','他大学时的专业是国际贸易。','Nowadays, international commerce is becoming more and more ordinary.','现在，国际贸易变得越来越普遍了。'}

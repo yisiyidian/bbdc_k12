@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irrelevant"]={"irrelevant","[ɪ'relɪv(ə)nt]","[ɪ'rɛləvənt]","adj.不相干的",'adj.不恰当的,无关系的,不相干的','Our discussions got bogged down in irrelevant detail.','我们的讨论纠缠在无关紧要的细节上。','That is a separate issue and irrelevant to our discussion.','这是另一个问题，和我们的讨论无关。'}

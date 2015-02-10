@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["narrate"]={"narrate","[nə'reɪt]","[nə'ret]","v.叙述",'v.叙述|||vt.叙述(故事),描述','Shall I narrate a strange experience of mine?','我把我的一次奇遇叙述一下好吗？','Richard is going to narrate in the new radio play.','理查将在这个新的广播剧中担任旁白.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["terrestrial"]={"terrestrial","[tə'restrɪəl]","[tə'rɛstrɪəl]","adj.陆地的",'adj.地球的；陆地的，[生物]陆生的；人间的|||n.陆地生物；地球上的人','Although they can swim, the polar bears are terrestrial animals.','北极熊虽然会游泳，但也是陆栖动物。','The gills of fishes are analogous to the lungs in terrestrial animals.','鱼类的鳃与陆上动物的肺类似。'}

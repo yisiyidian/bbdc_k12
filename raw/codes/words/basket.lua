@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["basket"]={"basket","['bɑːskɪt]","['bæskɪt]","n.篮",'n.篮,篓,筐，篮球筐,得分','My basket is so full that I can\'t carry it.','我的篮子装得太满,我拿不动它','Do not keep all the eggs in one basket.','【谚】不要孤注一掷。'}

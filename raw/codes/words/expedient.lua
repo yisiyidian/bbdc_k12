@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expedient"]={"expedient","[ɪk'spiːdɪənt; ek-]","[ɪk'spidɪənt]","n.权宜之计",'n.权宜之计,临时手段|||adj.权宜的,方便的,有用的','He thought it expedient not to tell his wife where he had been.','他认为，不告诉妻子他去了哪儿只是权宜之计。','He was merciful only when mercy was expedient.','他只有在对自己有利时才表现得很仁慈。'}

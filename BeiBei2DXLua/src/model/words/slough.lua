@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slough"]={"slough","[slaʊ]","[slʌf]","n.泥坑",'n.泥坑，沼泽|||n.(蛇等)蜕皮,蜕壳|||vi.蜕皮|||vt.使皮蜕去|||=sluff','He was not able to slough off the memories of the past.','他无法忘记过去。','Our bodies slough off dead cells.','我们身体上死去的细胞会脱落。'}

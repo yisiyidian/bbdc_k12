@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aggressor"]={"aggressor","[ə'gresə]","[ə'ɡrɛsɚ]","n.侵略者",'n.侵略者','Our tanks cut in ahead of the escaping aggressors.','我们的坦克抢到前面去拦住那些溃逃的侵略者。','It organized an insurrection against the aggressors.','它组织了一个反对侵略者的起义。'}

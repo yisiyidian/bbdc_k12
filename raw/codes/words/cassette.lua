@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cassette"]={"cassette","[kə'set]","[kə'sɛt]","n.匣子",'n.匣子,录音带,盒式录音机','I rewound the cassette and played her voice back to her.','我把录音带转回去, 把她的声音放给她听.','There is a little window in the cassette case so that you can see the tape.','盒式音像带上有个小窗, 能看见里面的磁带.'}

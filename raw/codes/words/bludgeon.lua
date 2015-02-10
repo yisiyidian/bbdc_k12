@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bludgeon"]={"bludgeon","['blʌdʒ(ə)n]","['blʌdʒən]","n.棍棒",'n.棍棒|||vt.棒击，胁迫','He had been bludgeoned to death.','他死于重物连续猛击。','Their approach simply bludgeons you into submission.','他们的方法就是迫使你屈服。'}

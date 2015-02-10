@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cashier"]={"cashier","[kæ'ʃɪə; kə-]","[kæ'ʃɪr]","n.出纳员",'n.出纳员,收银员|||vt.解职,丢弃','A cashier ran away with the day\'s takings.','出纳员偷走了当天的进款.','The cashier checked out and bagged my order.','收款员计价收款并给我包装了商品'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nicotine"]={"nicotine","['nɪkətiːn]","['nɪkətɪn]","n.尼古丁",'n.尼古丁','Smokers who inhale are likely to become addicted to nicotine.','吸烟的人容易对尼古丁上瘾.','Fish smoke them and become nicotine dependent.','鱼儿会吸这些烟，然后尼古丁上瘾。'}

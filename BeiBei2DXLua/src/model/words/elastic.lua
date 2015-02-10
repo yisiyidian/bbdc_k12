@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["elastic"]={"elastic","[ɪ'læstɪk]","[ɪ'læstɪk]","adj.有弹性的",'adj.有弹性的,灵活的,可变的|||n.橡皮圈,有松紧的东西','He has an elastic temperament.','他有开朗的性情。','Rubber is elastic.','橡皮是有弹性的。'}

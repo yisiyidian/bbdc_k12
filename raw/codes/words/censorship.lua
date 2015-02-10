@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["censorship"]={"censorship","['sensəʃɪp]","['sɛnsɚ'ʃɪp]","n.检查制度",'n.检查制度','The newspapers were effectively muzzled by strict censorship laws.','严厉的新闻审查法有效地使那些报纸沉默了下来.','The new censorship laws are an attempt to gag the press.','新的新闻审查法目的在於剥夺新闻界的言论自由。'}

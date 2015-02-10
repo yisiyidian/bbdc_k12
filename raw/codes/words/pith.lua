@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pith"]={"pith","[pɪθ]","[pɪθ]","n.精髓",'n.精髓,要点，（木）髓|||vt.去髓，破坏脊髓','That was the pith of his argument.','那就是他论据的要点。','The pith of that theory is serving for people.','那个理论的精髓是为人民服务。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["propulsion"]={"propulsion","[prə'pʌlʃ(ə)n]","[prə'pʌlʃən]","n.推进",'n.推进,推进力','The liquids employed for rocket propulsion are called propergols.','用于火箭发动机的液体称为液体火箭推进剂.','Interest in jet propulsion was now growing at the Air Ministry.','航空部对喷气推进的兴趣正在增加。'}

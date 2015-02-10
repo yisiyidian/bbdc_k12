@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crustacean"]={"crustacean","[krʌ'steɪʃn]","[krʌ'steʃən]","n.甲壳类动物",'n.甲壳类动物|||adj.甲壳纲的','I don\'t like crustacean','我不喜欢甲壳类动物','A crab is a kind of crustacean.','螃蟹是甲壳类动物。'}

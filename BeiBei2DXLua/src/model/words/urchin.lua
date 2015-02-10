@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["urchin"]={"urchin","['ɜːtʃɪn]","[ 'ə:tʃin ]","n.顽童",'n.顽童；淘气鬼；[主英][动]猬；[动]海胆','Those grubby urchins ran to me and asked for candy.','那群邋遢的小淘气们向我跑过来要糖果。','We were in the bazaar with all the little urchins watching us.','我们在集市里，周围一大帮衣衫褴褛的小孩盯着我们看。'}

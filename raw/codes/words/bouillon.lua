@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bouillon"]={"bouillon","['bujɑn]","[ 'bu:jɔŋ ]","n.牛肉汤",'n.牛肉汤,肉汤','Dishes of bouillon were brought in hot and hot.','一道道热气腾腾的肉汤被端上来。','He treated himself to a cup of bouillon from a restaurant nearby.','他在附近的一家餐馆里喝了一杯牛肉清汤'}

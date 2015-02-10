@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prank"]={"prank","[præŋk]","[præŋk]","n.开玩笑",'n.开玩笑,恶作剧,戏谑|||v.盛装,装饰,打扮','A playful or amusing act; a prank.','诙谐开玩笑或滑稽的动作；开玩笑','A wicked prank; a critic\'s wicked wit.','一个戏谑的玩笑；批评家善于戏谑人的才思'}

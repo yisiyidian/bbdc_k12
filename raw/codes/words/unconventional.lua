@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unconventional"]={"unconventional","[ʌnkən'venʃ(ə)n(ə)l]","[,ʌnkən'vɛnʃənl]","adj.非传统的",'adj.非传统的','His effortless calligraphy has an unconventional  grace of its own.','他的书法,信笔写来,十分超脱.','The vaccine had been produced by an unconventional technique.','该疫苗是用非传统工艺生产的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wicker"]={"wicker","['wɪkə]","['wɪkɚ]","adj.枝条",'adj.枝条,柳条，柳条制品','a wicker chair; a wicker birdcage.','柳条椅子；柳条鸟笼','a hand-weaved wicker basket','手编柳条框 西班牙馆'}

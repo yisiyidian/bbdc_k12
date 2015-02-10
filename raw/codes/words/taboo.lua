@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["taboo"]={"taboo","[tə'buː]","[tə'bu]","n.禁忌",'n.禁忌,禁止接近,禁止使用|||adj.禁忌的|||vt.禁忌,禁制,禁止','Questions and problems that were once taboo are now discussed openly.','一度视为犯忌的许多问题现在可以公开谈论了.','There\'s a taboo on smoking in this office.','在这个办公室里一向是都不吸烟的.'}

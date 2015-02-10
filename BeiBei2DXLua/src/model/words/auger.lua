@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["auger"]={"auger","['ɔːgə]","['ɔgɚ]","n.螺丝钻",'n.螺丝钻,钻孔机','If I hit you with an auger,you must be anger.','如果我用钻孔机打你一下你一定会生气。auger→anger','Neither of us knew how unstable and heavy that auger bit was.','我们两个都不知道钻孔机的钻头会那么不结实，又那么重。'}

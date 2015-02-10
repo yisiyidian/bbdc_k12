@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spade"]={"spade","[speɪd]","[sped]","n.铲子",'n.铲子,铁锹,在扑克牌中指黑桃|||v.铲|||vt.(用铲子)铲','Why did you buy a spade?','你买铁锹干什么？','Just give him a bucket and spade and he\'s in seventh heaven!','只要给他一个桶子和一把铲子, 他就高兴极了!'}

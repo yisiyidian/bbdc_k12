@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pedantry"]={"pedantry","['ped(ə)ntrɪ]","['pɛdntri]","n.迂腐",'n.迂腐，拘泥于形式，卖弄学问','we all like TOM but his pedantry.','假装学者，卖弄学问，炫学','his attitude savors of pedantry','他的态度有卖弄学问的味道'}

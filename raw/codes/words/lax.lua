@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lax"]={"lax","[læks]","[læks]","adj.松的",'adj.松的,松懈的,不严的|||[语]松弛元音的','Most of white collar workers take a lax attitude to the health.','大多数白领对健康持无所谓的态度。','One of the problem areas is lax security for airport personnel.','问题之一是对机场员工的安检措施马虎松懈。'}

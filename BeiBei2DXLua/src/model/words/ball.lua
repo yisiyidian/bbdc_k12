@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ball"]={"ball","[bɔːl]","[bɔl]","n.球",'n.球,舞会|||v.(把...捏)成球状','The cat made little rushes to and fro after the ball.','猫追着球跑过来跑过去。','I cut up the meat for cooking meat ball.','我把肉剁碎后做肉丸子。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["decoration"]={"decoration","[dekə'reɪʃ(ə)n]","[,dɛkə'reʃən]","n.装饰",'n.装饰,装饰品','She\'d put these whatnots in her hair as decoration.','她把那些也不知道是什麽的东西弄到头发上当饰物。','Such decoration was a typical feature of the baroque period.','这种装饰是巴罗克时期的特徵.'}

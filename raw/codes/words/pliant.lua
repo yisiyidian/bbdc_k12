@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pliant"]={"pliant","['plaɪənt]","['plaɪənt]","adj.易受影响的",'adj.易受影响的,易弯的','She is so pliant that you can control her mind easily.','她是一个容易受影响的人，因此你很容易控制她的思想。','He has a pliant nature.','他本性温顺。'}

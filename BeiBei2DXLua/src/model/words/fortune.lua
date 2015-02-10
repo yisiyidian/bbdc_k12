@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fortune"]={"fortune","['fɔːtʃuːn; -tʃ(ə)n]","['fɔrtʃən]","n.运气",'n.财产,命运,运气','Everyone is the architect of his own fortune.','每个人都是自己命运的创造者。','He dreamed of making a fortune.','他梦想发大财。'}

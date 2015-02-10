@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ensnare"]={"ensnare","[ɪn'sneə; en-]","[ in'snεə ]","vt.诱入陷阱",'vt.诱入陷阱,使进入罗网','He was concerned the campaign could ensnare innocent people.','他担心这场运动可能会陷害无辜的人。','They were ensnared in a legal nightmare.','他们陷入了一个恼人的法律是非。'}

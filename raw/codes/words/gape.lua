@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gape"]={"gape","[geɪp]","[ ɡeip ]","n.裂口",'n.裂口,张嘴，打哈欠|||vi.目瞪口呆地凝视，打哈欠，张开，裂开','She gaped at the tall man, not believing that he was her younger brother.','她张嘴呆看着那个高个子，不相信他就是她的弟弟。','You don\'t just have to sit in the stands and gape at the exploits of others.','你大可不必坐在看台上，目瞪口呆地盯着别人的战绩。'}

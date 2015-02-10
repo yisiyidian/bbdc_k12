@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tattle"]={"tattle","['tæt(ə)l]","['tætl]","n.闲谈",'n.闲谈|||v.闲谈,泄密','Who\'s been ||tattling||?','谁在说闲话呢？','...instruct our children not to tattle on one another.','...教导我们的孩子不要互相打对方的小报告。'}

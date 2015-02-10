@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hide"]={"hide","[haɪd]","[haɪd]","vt.隐藏",'vt.隐藏；躲避，隐匿，躲藏；遮蔽，覆盖|||vi.隐瞒；遮住；遮挡；掩盖|||n.兽皮；[口]生命；[口]人的皮肤；（观看野生动物的）隐蔽处','She tried to hide her feelings.','她设法不表露自己的感情。','I ||hid|| the broken plate behind the table.','我把打碎的盘子藏在餐桌后面了。'}

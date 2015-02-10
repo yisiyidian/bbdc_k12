@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drip"]={"drip","[drɪp]","[drɪp]","n.滴",'n.滴,点滴,乏味的人,水滴|||v.滴下,漏水','Water is dripping from the pipe.','水从管中滴落.','The patient is on a drip.','病人正在输液。'}

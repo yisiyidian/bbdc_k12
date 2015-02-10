@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wrinkle"]={"wrinkle","['rɪŋk(ə)l]","['rɪŋkl]","n.皱纹",'n.皱纹|||v.(使)起皱纹|||vi.(使)起皱纹,皱眉|||vt.使起皱纹','He wrinkled up his forehead in perplexity.','他困惑地皱起了眉头。','She\'s beginning to get wrinkles round her eyes.','她的眼角开始有皱纹了。'}

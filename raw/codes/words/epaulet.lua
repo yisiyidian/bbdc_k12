@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["epaulet"]={"epaulet","['epəlet]","[ 'epəlet, ,epə'let ]","n.肩章",'n.肩章,肩饰','The major\'s epaulet is different to the captain\'s.','少校的肩章与上校的不一样。','He is honored with his epaulets.','他以他的肩章为荣。'}

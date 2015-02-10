@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["evaluation"]={"evaluation","[ɪˌvæljuˈeɪʃn]","[ɪ,væljʊ'eʃən]","n.估价",'n.估价,评价','The evaluation is unfair.','这种评估是不公平的。','The opinion derived from such an evaluation.','诊断结果由这种评价取得的结论'}

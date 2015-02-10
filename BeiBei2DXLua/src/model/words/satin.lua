@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["satin"]={"satin","['sætɪn]","['sætn]","adj.缎子做(的)",'adj.缎子做(的)|||n.缎子','The satin feels smooth.','这缎子摸起来很滑溜。','Amber satin and white lace are exactly what she desires.','琥珀色的缎子和白色的饰带正是她所想要的。'}

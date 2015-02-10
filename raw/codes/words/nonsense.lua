@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nonsense"]={"nonsense","['nɒns(ə)ns]","['nɑnsɛns]","n.无意义的事",'n.无意义的事,荒谬的言行,荒唐','||Nonsense||!','鬼话！','It was sheer nonsense to trust them.','相信他们纯粹是胡闹。'}

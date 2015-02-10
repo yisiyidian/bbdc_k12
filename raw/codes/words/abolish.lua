@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abolish"]={"abolish","[ə'bɒlɪʃ]","[ə'bɑlɪʃ]","vt.废止",'vt.废止,革除','Thatcher has said she will abolish the rating system. Watch this space, she won\'t. No one will. No ever.','撒切尔说过她将废除评估财产的课税现值体制。注意：她不会这么做的。没有有人会这么做。从来没有哪位做过。','There are many bad customs and laws that ought to be abolished.','有许多不良的习俗和法规应予以废除。'}

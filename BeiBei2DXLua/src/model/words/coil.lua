@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coil"]={"coil","[kɒɪl]","[kɔɪl]","n.卷",'n.卷,骚动,【电】线圈,绕组|||vt.&vi.盘绕,卷','The snake coiled itself around the tree.','蛇盘绕在树上。','She coiled her hair at the back of her head.','她把头发盘在脑后。'}

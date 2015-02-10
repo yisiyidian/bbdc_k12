@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parasitic"]={"parasitic","[pærə'sɪtɪk]","[,pærə'sɪtɪk]","adj.寄生的",'adj.寄生的,靠他人为生的|||=parasitical','Parasitic and nonparasitic cysts rarely occur in the spleen.','寄生虫性和非寄生虫性囊肿在脾脏很少发生.','Will global warming mean the spread of tropical parasitic diseases?','全球变暖是否意味着热带寄生虫病会蔓延呢？'}

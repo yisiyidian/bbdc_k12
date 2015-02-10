@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tyrant"]={"tyrant","['taɪr(ə)nt]","['taɪrənt]","n.暴君",'n.暴君，专制的君主，残暴的人','This ruler is a pitiless tyrant.','这个统治者是一个冷酷的暴君。','Mr Smith was a high-handed tyrant in his office.','史密斯先生在他办公室里是个专横跋扈的独裁者。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["condemn"]={"condemn","[kən'dem]","[kən'dɛm]","vt.判刑",'vt.判刑,谴责,官方宣称（某事物）有缺陷或不宜使用','The captured ship and her cargo were condemned.','这艘被俘获的船及其货物均被没收。','We condemned him for his bad conduct.','我们责备他行为不检点。'}

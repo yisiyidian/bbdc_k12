@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trump"]={"trump","[trʌmp]","[trʌmp]","n.王牌",'n.王牌,法宝v.打败；出王牌赢','Hearts are trumps.','红桃是王牌。','He took my ace with a low trump.','他用一张小的王牌吃了我的A牌。'}

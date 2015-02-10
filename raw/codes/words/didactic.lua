@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["didactic"]={"didactic","[dɪ'dæktɪk; daɪ-]","[daɪ'dæktɪk]","adj.教诲的",'adj.教诲的,说教的','I don\'t like her didactic way of explaining everything.','我不喜欢她那种像教小孩子一样解释一切的方法。','In totalitarian societies, art exists for didactic purposes.','在极权社会里，艺术只为教化的目的而存在。'}

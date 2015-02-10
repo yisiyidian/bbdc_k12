@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disband"]={"disband","[dɪs'bænd]","[dɪs'bænd]","v.解散",'v.解散,使退伍|||v.解散','The army was disbanded when the war came to an end.','战争结束时，军队即被解散。','The school was disbanded at noon.','学校在中午被解散了。'}

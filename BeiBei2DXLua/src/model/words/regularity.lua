@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["regularity"]={"regularity","[reɡjʊ'lærətɪ]","[,rɛɡju'lærəti]","n.规律性",'n.规律性,规则性,匀整,定期','They meet with great regularity.','他们定期会面。','The idea is to maintain the regularity of the heartbeat.','问题就是要维持心跳的规律性.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scrumptious"]={"scrumptious","['skrʌm(p)ʃəs]","['skrʌmpʃəs]","adj.(食物)很可口的",'adj.(食物)很可口的,漂亮的','What a scrumptious meal!','多香的饭菜!','Normandy . . . where the bosky landscape is enchanting[and the pen]  inadequate to describe the scrumptious food and wine','“诺曼底…一个树木茂盛的令人陶醉的地方$and$I{［和］} 无法用笔触来形容那甘甜味美的食品和酒水”'}

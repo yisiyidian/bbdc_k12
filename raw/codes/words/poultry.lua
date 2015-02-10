@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["poultry"]={"poultry","['pəʊltrɪ]","['poltri]","n.家禽",'n.家禽','The poultry are being fed.','家禽正在吃饲料。','||Poultry|| is rather cheap now.','现在的禽肉相当便宜。'}

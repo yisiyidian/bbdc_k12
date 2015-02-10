@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["midget"]={"midget","['mɪdʒɪt]","['mɪdʒɪt]","n.侏儒",'n.侏儒,极小者|||adj.极小的','a midget automobile.','小型汽车','From 1942 onward I worked on the first anti-midget-submarine detection systems.','从1942年往后,我研究了头一批反小型潜艇的探测系统。'}

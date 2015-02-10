@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["socket"]={"socket","['sɒkɪt]","['sɑkɪt]","n.插座",'n.插座,插口,穴孔|||vt.装上或插入插座','She fear her eyes may actually pop out of their socket.','她害怕她的眼睛会真的从眼窝里瞪出来。','This type of bulb screws into the socket.','这种灯是拧到灯座上的.'}

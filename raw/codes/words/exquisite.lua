@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exquisite"]={"exquisite","['ekskwɪzɪt; ɪk'skwɪzɪt; ek-]","[ɪk'skwɪzɪt]","adj.精挑细选的",'adj.精挑细选的，精致的,细腻的,强烈的|||n.过分在意外表着装的人','an exquisite chalice.','精致的酒杯','The girl came up with a set of exquisite stamps.','那姑娘拿出一套精美的邮票。'}

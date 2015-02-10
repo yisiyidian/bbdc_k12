@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foresee"]={"foresee","[fɔː'siː]","[fɔr'si]","v.预见",'v.预见,预知','Do you foresee any problems with the new system?','对于这种新体制，你看会有什么问题吗？','He ||foresaw|| that his journey would be delayed by bad weather.','他预知自己的旅程会被恶劣天气耽搁。'}

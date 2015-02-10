@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["smear"]={"smear","[smɪə]","[smɪr]","v.涂",'v.涂,擦上,抹擦使变模糊|||n.油迹，污点；诋毁，诽谤；（医）涂片标本','He smeared some balm on his hand to soothe the pain.','他在手上涂了些药膏来止痛。','The window was all smeared after the rain.','下过雨后窗户都脏了。'}

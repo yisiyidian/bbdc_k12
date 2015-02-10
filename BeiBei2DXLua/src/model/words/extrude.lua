@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extrude"]={"extrude","[ɪk'struːd; ek-]","[ɪk'strʊd]","v.挤出",'v.挤出,压出,逐出|||[计算机]拉伸','Land masses extrude into the sea.','大片陆地延伸到海里。','I must extrude time to learn english.','我必须挤出时间学习英语。'}

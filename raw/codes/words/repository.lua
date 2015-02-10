@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["repository"]={"repository","[rɪ'pɒzɪt(ə)rɪ]","[rɪ'pɑzə'tɔri]","n.贮藏室",'n.贮藏室(博物馆,资源丰富地区),智囊','My father is a repository of interesting facts.','我父亲有说不完的趣事。','This book is a repository of useful information .','这本书里蕴含着许多有用的知识。'}

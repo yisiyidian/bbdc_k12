@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["moody"]={"moody","['muːdɪ]","['mudi]","adj.易怒的",'adj.易怒的，喜怒无常的,情绪化的|||Moody|||n.穆迪(人名)','It is difficult to predict his reaction because he is so moody.','他如此喜怒无常，所以很难预知其反应如何。','He is moody and unpredictable.','他喜怒无常而又捉摸不定。'}

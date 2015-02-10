@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["celibate"]={"celibate","['selɪbət]","['sɛlɪbət]","adj.独身的",'adj.独身的,独身主义的|||n.独身者,独身主义者','He had defended the institution of a celibate priesthood.','他捍卫了独身牧师制度。','The Pope bluntly told the world\'s priests yesterday to stay celibate.','教皇昨天直言全世界的神父都应该禁欲。'}

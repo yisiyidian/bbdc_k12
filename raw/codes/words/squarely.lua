@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["squarely"]={"squarely","['skweəlɪ]","['skwɛrli]","adv.成方形地",'adv.成方形地,正直地|||adv.直接了当的、不含糊的、诚实的','I accept that the responsibility for this lies squarely at my door.','我承认这事的责任完全由我承担.','This recent tragedy has put the manufacturers of the drug squarely in the dock.','新近发生的这一悲惨事件使药品厂商受到指控.'}

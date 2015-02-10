@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["satiny"]={"satiny","['sætni]","[ 'sætini ]","adj.光滑的",'adj.光滑的,柔细的','She has satiny skin like a baby.','她的皮肤像婴儿一样光滑细嫩。','With satiny creamy face , silk lustre and third dimention, it\'s the fine material for making bedding clothes.','布面细腻，有丝绸光泽，立体感强，是制作床上用品的优良面料。'}

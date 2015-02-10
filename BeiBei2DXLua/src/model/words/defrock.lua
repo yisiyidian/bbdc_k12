@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["defrock"]={"defrock","[diː'frɒk]","[,di'frɑk]","v.剥去法衣",'v.剥去法衣,解除僧职','Mellors was preaching heresy and had to be immediately defrocked.','梅勒斯宣扬异端邪说，不得不立即免去其圣职。','Vatican declined to defrock US Priest.','d'}

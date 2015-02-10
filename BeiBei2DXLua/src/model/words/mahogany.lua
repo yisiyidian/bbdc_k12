@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mahogany"]={"mahogany","[mə'hɒgənɪ]","[mə'hɑgəni]","n.红木",'n.红木,桃花心木','Any of several trees having wood resembling true mahogany.','与桃花心木相似的木材任一种与桃花心木相似的树木的木材','This set of mahogany furniture must be very expensive.','这套红木家具一定非常昂贵。'}

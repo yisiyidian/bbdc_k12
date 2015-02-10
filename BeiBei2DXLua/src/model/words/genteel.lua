@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["genteel"]={"genteel","[dʒen'tiːl]","[dʒɛn'til]","adj.文雅的",'adj.文雅的,有教养的','Her genteel accent irritated me.','她那矫揉造作的腔调使我感到难受。','She is too genteel for words.','她说话太咬文嚼字了。'}

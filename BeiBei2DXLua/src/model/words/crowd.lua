@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crowd"]={"crowd","[kraʊd]","[kraʊd]","n.人群",'n.人群；群众；一群|||vi.拥挤，聚集|||vt.挤满；将…塞进；催逼','All the old crowd have come out for this occasion.','所有老朋友都前来参加了这次活动。','Many newspapers appeal to the crowd.','许多报纸受到人民的欢迎。'}

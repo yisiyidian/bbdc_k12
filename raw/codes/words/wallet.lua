@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wallet"]={"wallet","['wɒlɪt]","['wɑlɪt]","n.皮夹",'n.皮夹,钱包','The wallet was just under his nose, but he didn\'t see it.','钱包就在他眼前, 可他没看见。','He pocketed his wallet and car keys.','他把钱包和汽车钥匙放进了衣袋里。'}

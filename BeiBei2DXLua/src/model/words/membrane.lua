@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["membrane"]={"membrane","['membreɪn]","['mɛmbren]","n.薄膜",'n.薄膜,膜皮,羊皮纸','The mixture is subsequently passed through a flat membrane filter.','接着让混合物通过一个平板膜滤器.','The apical membrane of the epithelial cells is apparently essential.','上皮细胞的顶膜显然是必要的.'}

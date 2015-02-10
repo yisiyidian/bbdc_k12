@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cartographer"]={"cartographer","[kɑː'tɒɡrəfə]","[kɑr'tɑɡrəfɚ]","n.地图制作者",'n.地图制作者,制图师','A cartographer is a person whose job is drawing maps.','绘制地图者的工作是画地图。','Joe is a cartographer.','A mapper'}

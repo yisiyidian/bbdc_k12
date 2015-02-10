@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["its"]={"its","[ɪts]","[ɪts]","pron.（it的所有格)它的",'pron.（it的所有格)它的','When the horse had finished the race, its sides were wet with foam.','这匹马结束比赛时，它的脊背被汗水湿透了。','The 50p coin has a crowned lion on its reverse.','50便士硬币反面的图案是个戴皇冠的狮子.'}

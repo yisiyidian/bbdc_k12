@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anatomy"]={"anatomy","[ə'nætəmɪ]","[ə'nætəmi]","n.解剖学",'n.解剖学,解剖学专著，分解，解剖，骨骸','This was a troubling essay on the anatomy of nationhood.','这是一篇剖析民族主义的让人不安的文章。','He had worked extensively on the anatomy of living animals.','他在活体解剖方面经验丰富。'}

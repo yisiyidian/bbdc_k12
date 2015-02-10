@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rail"]={"rail","[reɪl]","[rel]","n.栏杆",'n.栏杆,铁轨,扶手|||vt.以横木围栏,铺铁轨|||vi.责骂,抱怨','If you are under 26 you can buy cheap rail tickets.','未满26岁者可购买便宜火车票。','The goods have been consigned to you by rail.','货物已交由铁路发运给贵方。'}

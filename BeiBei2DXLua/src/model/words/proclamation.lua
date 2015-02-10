@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["proclamation"]={"proclamation","[prɒklə'meɪʃn]","[,prɑklə'meʃən]","n.宣言",'n.宣言,公布,文告','A public announcement; a proclamation.','公告公开的通告；公告','The Emancipation ||Proclamation|| abolished slavery in the United States.','《解放黑人奴隶宣言》废除了美国的奴隶制。'}

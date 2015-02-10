@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obstacle"]={"obstacle","['ɒbstək(ə)l]","['ɑbstəkl]","n.障碍",'n.障碍,绊脚石','An obstacle or a span to be jumped.','需跳越的障碍或跨度','Verification (eg Checking that weapons have been removed) could be an obstacle to an arms agreement.','裁减军备协议难以达成, 症结在於如何证实（如检查武器确已销毁）.'}

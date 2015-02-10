@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["apocryphal"]={"apocryphal","[ə'pɒkrɪf(ə)l]","[ ə'pɔkrifəl ]","adj.伪的",'adj.伪的,不足凭信的|||Apocryphal:[圣经]次经的','Most of the story about his private life was probably apocryphal.','有关他私生活的事可能大部分都是虚构的。','This may well be an apocryphal story.','这很可能是个杜撰的故事。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["defamation"]={"defamation","[,defə'meɪʃ(ə)n]","[,dɛfə'meʃən]","n.诽谤",'n.诽谤,中伤','She sued the magazine for defamation of her character.','她控告该杂志诽谤她的人格。','This is pure slander and I\'ll sue him for defamation if he doesn\'t apologize','这纯属污蔑，如果他不向我道歉，我就控告他诽谤。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lousy"]={"lousy","['laʊzɪ]","['laʊzi]","adj.多虱的",'adj.多虱的,可鄙的,差劲的','A lazy youth, a lousy age.','【谚】少壮不努力, 老大徒悲伤。','You lousy bum!','你简直是个没用的懒蛋!'}

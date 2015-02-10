@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["magnetize"]={"magnetize","['mægnɪtaɪz]","['mægnə'taɪz]","vt.使磁化",'vt.使磁化,吸引，诱惑','This screwdriver has been magnetized.','这把改锥已经磁化了.','She can magnetize a theatre audience.','她能像磁石般吸引剧院观众。'}

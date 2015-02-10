@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brokerage"]={"brokerage","['brəʊk(ə)rɪdʒ]","['brokərɪdʒ]","n.经纪人(或中间人)业务",'n.经纪人(或中间人)业务,佣金,回扣','Money deposited for checking, savings, or brokerage use.','存款为支付，节省，或经纪业而存起来的钱','An inactive brokerage account.','不常用的佣金帐户'}

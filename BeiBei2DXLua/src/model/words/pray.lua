@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pray"]={"pray","[preɪ]","[pre]","vt.&vi.祈祷",'vt.&vi.祈祷,恳求','I pray God\'s forgiveness.','我祈求上帝的宽恕。','They prayed that their enemies might be defeated.','他们祈求上苍让敌人失败。'}

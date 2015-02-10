@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["urbane"]={"urbane","[ɜː'beɪn]","[ɝ'ben]","adj.温文尔雅的",'adj.温文尔雅的,懂礼的','He tried hard to be urbane.','他极力作出彬彬有礼的神态。','Despite the crisis, the chairman\'s voice was urbane as usual.','尽管处于危机之中，董事长的声音还象往常一样温文尔雅。'}

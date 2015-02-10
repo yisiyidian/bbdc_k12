@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lampshade"]={"lampshade","['læmpʃeɪd]","['læmpʃed]","n.灯罩",'n.灯罩','It can also change the shape of lampshade automatically.','它也能自动地改变灯罩形状.','The lampshade will soften the light.','这个灯罩能使光线柔和一些.'}

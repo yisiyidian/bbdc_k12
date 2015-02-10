@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["browse"]={"browse","[braʊz]","[braʊz]","vt.&vi.浏览",'vt.&vi.浏览,随意观看,吃草|||n.浏览,嫩叶','Camels browse on trees as well as on ground cover.','骆驼既吃地被植物也吃树的枝叶。','I have a browse on the book on her shelf.','我浏览了一下她书架上的书。'}

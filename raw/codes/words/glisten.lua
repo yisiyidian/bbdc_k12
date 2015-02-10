@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glisten"]={"glisten","['glɪs(ə)n]","['ɡlɪsn]","v.闪亮",'v.闪亮,使...辉耀','Her eyes glistened with tears.','她眼中的泪水在闪烁。','The street glistened in the rain.','街道在雨水中闪光。'}

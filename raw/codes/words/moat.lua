@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["moat"]={"moat","[məʊt]","[mot]","n.护城河",'n.壕沟,护城河|||vt.将...围以壕沟','The medieval town is fortified with a high wall and a deep moat.','这座中世纪的城市用高墙深沟来加强防御。','The medieval town was fortified with a high wall and a deep moat.','这座中世纪的城市周围建有城墙和护城河。'}

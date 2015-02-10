@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["malignant"]={"malignant","[mə'lɪgnənt]","[mə'lɪgnənt]","adj.有恶意的",'adj.有恶意的,恶性的,有害的|||n.怀恶意的人,保王党员','It\'s a malignant slander to me.','这对我是恶意的诽谤。','The tumour is not malignant.','这个瘤不是恶性的。'}

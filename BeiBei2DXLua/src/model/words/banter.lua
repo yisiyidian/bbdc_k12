@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["banter"]={"banter","['bæntə]","['bæntɚ]","n.戏谑",'n.戏谑,嘲弄|||v.戏弄,开玩笑','Good-natured teasing or ridicule; banter.','打趣，取笑善意的取笑或逗弄；打趣','Light, playful banter.','戏谑轻松逗弄的玩笑'}

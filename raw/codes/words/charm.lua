@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["charm"]={"charm","[tʃɑːm]","[tʃɑrm]","n.魅力",'n.魔力,魅力,护身符,小饰物|||vt.吸引,使...迷醉,对...施以魔法','The witch charmed the prince.','女巫对王子施了魔法。','I shall be charmed to see you tomorrow.','我真希望明天能见到你。'}

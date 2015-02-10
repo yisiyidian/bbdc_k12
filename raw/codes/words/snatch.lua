@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["snatch"]={"snatch","[snætʃ]","[snætʃ]","n.抢夺",'n.抢夺,碎片,一阵,一瞬间,一点点|||vt.&vi.夺取,抢劫,抓住','He snatched up his gun and fired.','他突然拿起枪来射击。','The hawk snatched the chicken and flew away.','老鹰抓住小鸡飞走了。'}

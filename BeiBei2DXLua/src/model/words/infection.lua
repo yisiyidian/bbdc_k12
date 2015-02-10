@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infection"]={"infection","[ɪn'fekʃ(ə)n]","[ɪn'fɛkʃən]","n.传染",'n.传染,影响,传染病','The high risk of infection puts a premium on the use of sterile needles.','由於受感染的风险很大，无菌注射针的使用受到了重视。','The vaccine was used to protect the whole population against infection.','这种疫苗用以为全体居民预防传染病.'}

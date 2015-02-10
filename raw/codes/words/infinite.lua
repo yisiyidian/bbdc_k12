@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infinite"]={"infinite","['ɪnfɪnət]","['ɪnfɪnət]","adj.无限的",'adj.无限的,无穷的|||n.无限','Being without boundaries or limits; infinite.','无限制的没有限制或界线的；无限的','It is difficult to grasp the concept of infinite space.','掌握无限空间的概念是很难的。'}

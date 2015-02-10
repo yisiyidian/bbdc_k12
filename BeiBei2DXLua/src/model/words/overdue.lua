@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overdue"]={"overdue","[əʊvə'djuː]","['ovɚ'dʊ]","adj.过期的",'adj.过期的,未兑的,迟到的','Now they are overdue and I shall have to pay a fine.','现在他们过期了，我不得不付罚款。','The library called in all overdue books.','图书馆要求把所有逾期未还的书收回。'}

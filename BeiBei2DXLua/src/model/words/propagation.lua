@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["propagation"]={"propagation","[,prɒpə'ɡeɪʃən]","[,prɑpə'geʃən]","n.增殖",'n.增殖,繁殖,广传','Time deviation due to propagation delay can be tolerated.','允许存在传输延迟所引起的时间漂移.','Rose propagation has a long and rich history.','玫瑰繁殖有着悠久的历史。'}

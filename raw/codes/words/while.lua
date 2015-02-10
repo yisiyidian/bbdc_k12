@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["while"]={"while","[waɪl]","[waɪl]","conj.当...的时候",'conj.当...的时候,然而|||n.&adj.一会儿|||vt.消磨','I lived in a hostel while I was a student.','我求学期间住在青年招待所里。','She worked in a bank for a while before studying law.','她学法律之前在银行工作过一段时间。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["doll"]={"doll","[dɒl]","[dɑl]","n.玩具娃娃",'n.玩具娃娃|||v.把...打扮得花技招展','The doll pivots at the waist and neck.','那洋娃娃的腰和颈可以转动.','She wants the doll badly.','她非常想要这个洋娃娃。'}

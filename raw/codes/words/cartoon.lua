@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cartoon"]={"cartoon","[kɑː'tuːn]","[kɑr'tun]","n.动画片",'n.动画片|||vt.为...画漫画','A newspaper cartoon is an amusing drawing, usually about some event in the news.','报纸上的漫画是一种风趣的图画，通常是针对某一件时事的。','The kids glued their eyes to the TV set, watching a cartoon.','孩子们目不转睛地盯着电视机看卡通片。'}

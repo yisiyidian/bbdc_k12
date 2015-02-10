@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pituitary"]={"pituitary","[pɪ'tjuːɪt(ə)rɪ]","[pɪ'tuətɛri]","n.垂体(脑)",'n.垂体(脑),脑下腺','pituitary gland','【解】脑下垂体','pituitary is important','垂体很重要'}

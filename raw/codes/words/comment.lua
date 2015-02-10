@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["comment"]={"comment","['kɒment]","['kɑmɛnt]","n.评论",'n.注释,评论;闲话|||v.注释,评论','The minister refused to comment on the rumors of his resignation.','部长拒绝就他辞职一事的传闻发表评论。','The Prime Minister was not available for comment.','首相无暇作出评论。'}

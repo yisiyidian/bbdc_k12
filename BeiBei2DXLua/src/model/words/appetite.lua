@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["appetite"]={"appetite","['æpɪtaɪt]","['æpɪtaɪt]","n.胃口",'n.爱好,嗜好,食欲,胃口,欲望','Why don\'t you go for a walk? It\'ll give you an appetite for your lunch.','你怎麽不出去散散步? 散散步午饭时就有食欲了.','The long walk gave him a good appetite.','长时间的走路使他食欲旺盛。'}

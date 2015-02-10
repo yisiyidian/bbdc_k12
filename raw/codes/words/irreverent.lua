@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["irreverent"]={"irreverent","[ɪ'rev(ə)r(ə)nt]","[ɪ'rɛvərənt]","adj.不敬的",'adj.不敬的,不逊的,无礼的','It is irreverent to chew gum in the church.','在教堂中嚼口香糖是不恭敬的。','Don\'t be irreverent to your teacher.','不要对你的老师如此不敬。'}

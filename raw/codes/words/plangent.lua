@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plangent"]={"plangent","['plæn(d)ʒ(ə)nt]","['plændʒənt]","adj.轰鸣的",'adj.轰鸣的,悲哀的','plangent bells.','轰鸣的钟','From a doorway came the plangent sounds of a guitar','“从门口传来吉它的悲哀的旋律”'}

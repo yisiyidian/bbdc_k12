@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abeyance"]={"abeyance","[ə'beɪəns]","[ə'beəns]","n.中止",'n.中止,暂搁,停止','The decision is in abeyance until he returns from holiday.','那项决议在他度假回来之前一直搁置着。','The sanctions against the country fell into abeyance yesterday.','对那个国家的制裁昨天中止。'}

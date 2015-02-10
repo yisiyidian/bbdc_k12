@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tutorial"]={"tutorial","[tjuː'tɔːrɪəl]","[tu'tɔrɪəl]","n.个别指导",'n.个别指导|||adj.个别指导的','What\'s their tutorial system like? "','他们的导师制(Tutorialsystem)是怎么一会事? ”','He also tells me that your attendance at his tutorial and seminar have been poor.','他还告诉我说你的辅导课和讨论课出勤率不高。'}

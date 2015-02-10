@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insulting"]={"insulting","[ɪn'sʌltɪŋ]","[ɪn'sʌltɪŋ]","adj.侮辱的",'adj.侮辱的|||动词insult的现在分词形式','After receiving the insulting letter, he became furious.','他收到辱骂信后怒不可遏。','He had the grace to apologize to me for the insulting remark.','由于说话失礼,他通情达理地向我道了歉.'}

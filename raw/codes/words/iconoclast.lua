@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["iconoclast"]={"iconoclast","[aɪ'kɒnəklæst]","[aɪ'kɑnəklæst]","n.毁坏宗教神像的人",'n.毁坏宗教神像的人,提倡打破旧习的人','The beliefs, practices, or doctrine of an iconoclast.','反对传统、毁坏偶像的思想、行为或主义','Luxun is an iconoclast.','鲁迅是一个提倡打破旧习的人。'}

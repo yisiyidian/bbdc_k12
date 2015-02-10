@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["precaution"]={"precaution","[prɪ'kɔːʃ(ə)n]","[prɪ'kɔʃən]","n.预防",'n.预防,留心,警戒','The report is scathing about the lack of safety precaution.','该报道对缺乏安全预防措施一事严加指责。','All this wake the local government to the need for safety precaution.','所有这些使当地政府认识到必须采取安全预防措施。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whim"]={"whim","[wɪm]","[wɪm]","n.突然的念头",'n.一时的兴致,突然的念头；奇想,幻想','He dotes on his grandchildren and indulges their every whim.','他溺爱自己的孙辈，并且满足他们的任何想法”','She indulges his every whim.','她对他的怪念头有求必应。'}

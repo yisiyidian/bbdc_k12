@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mutual"]={"mutual","['mjuːtʃʊəl; -tjʊəl]","['mjutʃuəl]","adj.共同的",'adj.共同的,相互的','Negotiations between unions and management are made more difficult by mutual distrust.','工会和资方之间的谈判由于互不信任而愈加困难。','Other organizations have joined the confederation for mutual benefit.','其他组织为了共同的利益也加入了这个联盟。'}

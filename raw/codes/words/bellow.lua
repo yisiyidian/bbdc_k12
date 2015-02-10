@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bellow"]={"bellow","['beləʊ]","['bɛlo]","vi.吼叫",'vi.吼叫|||vt.大声喝道|||n.吼叫声','The bull bellowed angrily.','公牛怒吼起来.','The sergeant bellowed orders at the platoon.','士官向全排士兵大声地发出命令.'}

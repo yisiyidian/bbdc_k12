@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stultify"]={"stultify","['stʌltɪfaɪ]","['stʌltɪfaɪɪŋ]","vt.使...显得荒谬可笑(使...无价值",'vt.使...显得荒谬可笑(使...无价值,使...无效)','This attitude ||stultifies|| scientific progress.','这种态度会扼杀科学的进步。','The regular use of calculators could stultify a child\'s capacity to do basic mental operations.','经常使用计算器会使儿童的头脑基本运算能力变得迟钝。'}

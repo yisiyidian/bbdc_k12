@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["preeminence"]={"preeminence","[pri'ɛmɪnəns]","[ ,pri:'eminəns, pri- ]","n.杰出",'n.杰出,卓越','No one doubted his preeminence in financial matters.','没有人怀疑他在金融事务中的卓越成就。','no one doubted his preeminence in financial matters','杰出，卓越'}

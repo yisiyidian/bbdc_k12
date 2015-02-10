@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rationing"]={"rationing","['ræʃənɪŋ]","['ræʃənɪŋ]","n.定量供应",'n.定量供应','The Government may have to introduce petrol rationing.','政府可能不得不实行汽油限量供应。','Building society is warning of mortgage rationing.','住宅互助协会警告说要限额分配抵押借款。'}

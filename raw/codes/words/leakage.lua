@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["leakage"]={"leakage","['liːkɪdʒ]","['likɪdʒ]","n.泄漏",'n.泄漏','It should be possible to reduce leakage from pipes.','应该可以减少管道的渗漏量。','The washer for preventing leakage is broken.','那个防漏的垫圈坏了。'}

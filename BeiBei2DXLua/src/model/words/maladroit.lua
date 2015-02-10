@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["maladroit"]={"maladroit","[,mælə'drɒɪt]","[,mælə'drɔɪt]","adj.笨拙的",'adj.笨拙的','His handling of the negotiations was maladroit.','他的谈判技巧十分拙劣。','Some of his first interviews with the press were rather maladroit.','他最早接受媒体采访时有几次显得很生涩。'}

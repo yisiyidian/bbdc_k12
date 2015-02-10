@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["perquisite"]={"perquisite","['pɜːkwɪzɪt]","['pɝkwəzɪt]","n.额外补贴",'n.额外补贴,临时津贴','Politics in Britain used to be the perquisite of the property-owning classes.','英国的政治以往是有产阶级的特权。','She was eager to take a job with such generous perquisites.','她渴望获得额外补贴如此丰厚的工作。'}

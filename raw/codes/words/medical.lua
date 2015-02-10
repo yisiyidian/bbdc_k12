@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["medical"]={"medical","['medɪk(ə)l]","['mɛdɪkl]","adj.医疗的",'adj.医疗的,医学的,药物的,需治疗的','||Medical|| tests showed that he was sterile.','医学检查表明他没有生育能力。','The frontiers of medical knowledge are being pushed forwards as time goes on.','医学知识的新领域正随着时间向前推进。'}

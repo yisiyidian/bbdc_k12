@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["theater"]={"theater","['θɪətə]","['θiətɚ]","n.剧场",'n.剧场；戏剧界；戏剧效果；[军]战区','David\'s house is quite close to the Global|| Theater||.','大卫的家离环球剧院很近。','I ran to the theater all along and was out of breath.','我一路跑到剧院上气不接下气。'}

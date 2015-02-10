@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insignia"]={"insignia","[ɪn'sɪgnɪə]","[ɪn'sɪɡnɪə]","n.徽章",'n.徽章,袖章，标记','The costume or insignia worn by the retainers of a feudal lord.','装束封建主的随从所穿的服装或所戴标志','A device or emblem worn as an insignia of rank, office, or membership in an organization.','徽章一种作为军衔、官衔或某一组织中会员的标志而佩带的图案或符号'}

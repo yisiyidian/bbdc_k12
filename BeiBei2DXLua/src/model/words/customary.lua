@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["customary"]={"customary","['kʌstəm(ə)rɪ]","['kʌstə'mɛri]","adj.习惯的",'adj.习惯的,惯例的','For once, she lost/dropped her customary reserve and became quite lively.','这次, 她一反平素的沉默寡言, 表现得很活跃.','It\'s customary to give people gifts on their birthdays.','给人送生日礼物是惯常的事。'}

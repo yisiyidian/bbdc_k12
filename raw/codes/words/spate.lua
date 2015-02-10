@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spate"]={"spate","[speɪt]","[spet]","n.泛滥",'n.泛滥,洪水,突然的一阵','A spate of English reading materials began to pour off the presses.','大量英语读物开始泛滥发行。','The incident caused another spate of protests.','这次事件引起一片抗议。'}

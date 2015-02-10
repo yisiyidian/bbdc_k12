@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["commence"]={"commence","[kə'mens]","[kə'mɛns]","vt.&vi.开始",'vt.&vi.开始','I commence from this point.','我从此点开始。','The second term commences in March.','第二学期自三月开始。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["breach"]={"breach","[briːtʃ]","[britʃ]","n.裂口",'n.裂口,违背,冲击,决裂|||vt.违反,在...上打开缺口,突破|||vi.跃出水面','Union officials denounced the action as a breach of the agreement.','工会负责人谴责这一行动破坏了协议。','You are in breach of your contract.','你违反了你签的合同。'}

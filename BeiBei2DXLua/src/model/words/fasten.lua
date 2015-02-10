@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fasten"]={"fasten","['fɑːs(ə)n]","['fæsən]","vt.拴紧",'vt.拴紧,使固定,系,强加于|||vi.固定,系紧,抓紧','We shall be landing (at Gatwick airport) shortly please fasten your seat-belts.','我们马上就要（在盖特威克机场）著陆--请大家系好座位上的安全带.','She fastened the notice to the board.','她把通知贴到布告板上。'}

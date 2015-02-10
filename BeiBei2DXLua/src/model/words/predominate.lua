@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["predominate"]={"predominate","[prɪ'dɒmɪneɪt]","[prɪ'dɑmə'net]","v.掌握",'v.掌握,控制,成为主流','Sunny days predominate over rainy days in desert regions.','在沙漠地带，绝大多数时间都是大晴天，下雨天极少。','Red and white predominate in these flowers.','这些花中大部分是红色和白色的。'}

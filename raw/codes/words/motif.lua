@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["motif"]={"motif","[məʊ'tiːf]","[mo'tif]","n.主题",'n.主题,意念,动机','The jacket has a rose motif on the collar.','这件夹克衫领子上有一朵玫瑰花的图案。','Alienation is a central motif in her novels.','疏离感是她小说的一个重要的主题。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["amass"]={"amass","[ə'mæs]","[ə'mæs]","v.收集",'v.收集,积聚','He is planning to amass a fortune for a rainy day.','他正打算积蓄财富以备不时之需。','People tend to amass possessions, sometimes without being aware of doing so.','人们倾向于积攒东西，有时是下意识这么做的。'}

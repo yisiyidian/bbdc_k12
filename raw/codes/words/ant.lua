@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ant"]={"ant","[ænt]","[ænt]","n.蚂蚁",'n.蚂蚁','A worker ant or bee that feeds and cares for the colony\'s young.','工蚁，工蜂喂养和照料共生蚁群或共生蜂群幼虫的工蚁或工蜂','The proverb tells us to emulate the industry of the ant.','这格言告诉我们要效法蚂蚁的勤勉。'}

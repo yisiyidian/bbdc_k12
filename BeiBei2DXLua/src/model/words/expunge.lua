@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["expunge"]={"expunge","[ɪk'spʌn(d)ʒ; ek-]","[ɪk'spʌndʒ]","v.擦掉",'v.擦掉,删掉,除去','Her name was expunged from the list.','她的名字被从名册中删去了。','I can never expunge him from my mind.','我永远不能忘记他。'}

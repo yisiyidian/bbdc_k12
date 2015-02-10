@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["restoration"]={"restoration","[restə'reɪʃ(ə)n]","['rɛstə'reʃən]","n.恢复",'n.恢复,归还,复位','They demanded the restoration of all their lost lands.','他们要求归还所有失去的土地.','This castle is a mere restoration.','这只不过是(按原样)重建的城堡.'}

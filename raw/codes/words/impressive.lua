@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impressive"]={"impressive","[ɪm'presɪv]","[ɪm'prɛsɪv]","adj.给人深刻印象的",'adj.给人深刻印象的','The report looks impressive but it\'s really nothing but waffle.','这篇报告貌似冠冕堂皇, 实际上空洞无物.','This aircraft\'s safety record is an impressive testament to its designers\' skill.','这种飞机的飞行安全记录令人印象深刻，证明了该机种设计师本领非凡。'}

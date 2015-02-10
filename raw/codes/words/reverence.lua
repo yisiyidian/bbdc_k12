@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reverence"]={"reverence","['rev(ə)r(ə)ns]","['rɛvərəns]","n.敬畏",'n.敬畏,尊敬,尊严|||v.尊敬，敬畏，崇敬|||Reverence:对某些基督教神职人员的尊称','Feeling reverence, dread, or awe.','敬畏的感到尊敬，害怕或崇拜的','These students have reverence for their teacher.','这些学生很尊敬他们的老师。'}

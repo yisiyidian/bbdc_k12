@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["boreal"]={"boreal","['bɔːrɪəl]","['borɪəl]","adj.北的",'adj.北的，北方的','Greenhouse gas emissions of tar sands crude are 40% higher than conventional oil, and the open-pit mining has devastated alberta\'s boreal forest.','焦油砂的温室气体排放量比普通石油高40%，露天采矿已经极大地破坏了阿尔伯塔的北方气候带森林。','',''}

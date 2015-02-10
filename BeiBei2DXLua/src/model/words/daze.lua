@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["daze"]={"daze","[deɪz]","[dez]","vt.使...茫然",'vt.使...茫然，使...眩目|||n.恍惚，晕眩','I was dazed by her sudden offer.','她突然提出此事，我感到惊奇而不知所措。','The blow on the head dazed him for a moment.','头上受了一击后，他昏过去了一会儿。'}

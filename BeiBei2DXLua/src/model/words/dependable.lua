@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dependable"]={"dependable","[dɪ'pendəb(ə)l]","[dɪ'pɛndəbl]","adj.可信任的",'adj.可信任的,可靠的,可信赖的','He wants a mature, dependable person, and he doesn\'t require a knowledge of any specialized vocabularies!','他需要一个成熟，可信赖的人，而且并不要求你懂得任何专门词汇！','Who\'s the most dependable news agent?','谁是最可靠的报刊代理人。'}

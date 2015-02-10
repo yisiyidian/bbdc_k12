@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["buzz"]={"buzz","[bʌz]","[bʌz]","n.嗡嗡声",'n.嗡嗡声|||vi.发出嗡嗡声,充满,匆忙|||vt.飞进,使嗡嗡叫','The room buzzed with excitement.','房间里发出一片兴奋的嚷嚷声。','My brain is buzzing.','我的脑袋嗡嗡响。'}

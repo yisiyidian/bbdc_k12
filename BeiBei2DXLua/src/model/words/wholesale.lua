@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wholesale"]={"wholesale","['həʊlseɪl]","['holsel]","n.批发",'n.批发|||adj.批发的,大规模的,草率的|||adv.大规模,照批发,草率地','Do you buy wholesale or retail?','你是整批买还是零买?','The resort offers recreation by wholesale.','这个浏览区大规模地为人们提供消遣娱乐。'}

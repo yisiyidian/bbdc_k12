@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["breath"]={"breath","[breθ]","[brɛθ]","n.呼吸",'n.呼吸,气息,微风,迹象,精神,一种说话的声音','The audience held its/their breath as the acrobat walked along the tightrope.','杂技演员在钢丝绳上表演时，观众们屏息观看。','Her smile is a breath of fresh air in this gloomy office.','她的微笑给沉闷的办公室带来生气。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["common"]={"common","['kɒmən]","['kɑmən]","adj.共同的",'adj.共同的,平常的,普通的|||n.平民,普通,公地,公园','He\'s not an officer, but a common soldier.','他不是军官而是普通士兵。','Every Saturday Jean went riding on the village common.','每周六琴在村里的公用草地上骑马。'}

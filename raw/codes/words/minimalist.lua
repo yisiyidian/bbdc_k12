@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["minimalist"]={"minimalist","['mɪnɪm(ə)lɪst]","['mɪnɪmlɪst]","n.最低限要求者",'n.最低限要求者','Do young people like this kind of minimalist design?','年轻人喜欢这种简约的设计吗？','This principle of naming isn\'t in conflict with the minimalist approach.','这个命名原则与最低限要求者的方法并不冲突。'}

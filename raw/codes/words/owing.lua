@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["owing"]={"owing","['əʊɪŋ]","['oɪŋ]","adj.欠着的",'adj.欠着的,未付的|||动词owe的现在分词','||Owing|| to a strange mental aberration he forgot his own name.','由於一种莫名的精神错乱, 他把自己的名字忘了.','||Owing|| to their intransigent attitude we were unable to reach an agreement.','由於他们态度僵硬, 我们无法达成协议.'}

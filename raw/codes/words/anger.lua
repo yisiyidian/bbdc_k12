@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["anger"]={"anger","['æŋgə]","['æŋɡɚ]","n.忿怒",'n.忿怒|||vt.&vi.激怒,发怒','Try to contain your anger!','设法抑制你的怒火！','He was inflamed with anger.','他满腔怒火。'}

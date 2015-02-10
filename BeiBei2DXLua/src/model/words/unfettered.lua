@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unfettered"]={"unfettered","[ʌn'fetəd]","[ʌn'fɛtɚd]","adj.被除去脚镣的",'adj.被除去脚镣的,无拘无束的|||动词unfetter的过去式和过去分词','||Unfettered|| by the bounds of reality, my imagination flourished.','跳出现实的束缚，我的想象力天马行空。','In the US, the ideology of the unfettered market is more deep-seated.','在美国，自由市场的思想更加根深蒂固。'}

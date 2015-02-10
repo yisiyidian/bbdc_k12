@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pulmonary"]={"pulmonary","['pʌlmən(ə)rɪ]","['pʌlmənɛri]","adj.肺的",'adj.肺的，肺部的，肺状的','Smoker has a higher risk to get respiratory and pulmonary disease.','烟民更可能得呼吸系统和肺部疾病。','The lungs should be examined for possible pulmonary edema.','应检查肺部，视其是否有肺水肿。'}

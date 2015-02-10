@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["landlord"]={"landlord","['læn(d)lɔːd]","['lændlɔrd]","n.房东",'n.地主,房东','The landlord gave us a drink on the house.','店主免费请我们喝酒.','I had to pay a 500 deposit to the landlord before I could move into the house.','我得付给房东500英镑押金才能搬进房里去.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["approval"]={"approval","[ə'pruːv(ə)l]","[əˈpruvl]","n.批准",'n.批准,认可,同意,赞同','She smiled her approval.','她以微笑表示同意.','He gave a grunt of approval.','他咕噜了一声表示同意。'}

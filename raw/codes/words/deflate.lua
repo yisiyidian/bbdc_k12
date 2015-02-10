@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deflate"]={"deflate","[dɪ'fleɪt]","[dɪ'flet]","v.放气",'v.放气，抽出空气|||v.打击，使....失去信心，使某人觉得不再重要','I felt quite deflated by your nasty remark.','你那些难听的话使我觉得无地自容.','The Government decided to deflate.','政府决定紧缩通货.'}

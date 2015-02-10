@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mock"]={"mock","[mɒk]","[mɑk]","n.嘲笑",'n.嘲笑,戏弄,模仿|||adj.假的,伪造的|||vt.嘲弄,模仿,轻视|||vi.嘲弄','She opened her eyes wide in mock disbelief.','她睁大眼睛假装不相信。','The army training exercises ended with a mock battle.','军事训练演习以一场模拟战结束。'}

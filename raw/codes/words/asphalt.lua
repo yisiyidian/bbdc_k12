@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["asphalt"]={"asphalt","['æsfælt; -əlt]","['æsfɔlt]","n.沥青",'n.沥青|||v.用沥青铺路','He covered over the hole in the roof with a piece of asphalt felt.','他用一块沥青油毡盖住了房顶的漏洞。','Mixed asphalt and crushed stone gravel or sand, used for paving or roofing.','沥青混泥土碎石或沙子与沥青的混合物，用于铺路或封层顶'}

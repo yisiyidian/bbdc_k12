@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adulate"]={"adulate","['ædjʊleɪt]","[ 'ædjuleit ]","v.谄媚",'v.谄媚,奉承|||vt.过分称赞','What is there to adulate in her.','她有什么值得吹捧的','One can hardly understand why young people so adulate film stars.','年轻人为什么如此过分赞赏影星,真让人费解.'}

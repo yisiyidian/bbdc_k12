@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["feeder"]={"feeder","['fiːdə]","['fidɚ]","n.饲养者",'n.饲养者,进食者，供给者|||n.输电线，分支，支流','a feeder road to the motorway/freeway','汇入高速公路的支路','the river is one of the feeders of Changjiang.','这条河是长江的一条支流'}

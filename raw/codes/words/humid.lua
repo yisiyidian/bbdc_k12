@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["humid"]={"humid","['hjuːmɪd]","['hjumɪd]","adj.潮湿的",'adj.潮湿的','A humid wind blew from the south.','湿润的风从南方吹来。','The humid climate didn\'t agree with him.','那潮湿的气候对他不适宜。'}

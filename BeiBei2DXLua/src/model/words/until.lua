@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["until"]={"until","[ən'tɪl]","[ən'tɪl]","prep.直到...为止",'prep.直到...为止|||conj.直到...时才...','She was a bank clerk until the war, when she trained as a nurse.','她战前是个银行职员，战时受训当了护士。','He lived in California until he was twenty.','他在加里弗尼亚一直住到20岁.'}

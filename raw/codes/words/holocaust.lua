@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["holocaust"]={"holocaust","['hɒləkɔːst]","['hɑləkɔst]","n.大屠杀",'n.大屠杀,浩劫','More than a million people were killed in the holocaust.','在这场大屠杀中，有超过一百万人被害。','He was a descendent of ||Holocaust|| survivors.','他是大屠杀幸存者的后代。'}

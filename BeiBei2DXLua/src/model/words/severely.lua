@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["severely"]={"severely","[sɪ'vɪəlɪ]","[sə'vɪrli]","adv.严重地",'adv.严重地(艰难地,紧凑地,纯朴地)','A soldier who deserts (his post) in time of war is punished severely.','战争期间开小差的士兵要受到严惩.','The film was severely cut up by many reviewers.','这部电影受到许多评论者的严厉批评.'}

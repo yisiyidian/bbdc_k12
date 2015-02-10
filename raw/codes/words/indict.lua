@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indict"]={"indict","[ɪn'daɪt]","[ɪn'daɪt]","v.起诉",'v.起诉,控告,指控','The police said he\'d been formally indicted on Saturday.','警方称他星期六已被正式起诉。','Several company employees were indicted on charges of illegally selling company stocks.','好几名公司员工被控非法贩卖公司股票。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tirade"]={"tirade","[taɪ'reɪd; tɪ-]","['taɪred]","n.长篇的攻击性演说",'n.长篇的攻击性演说','He launches into an inarticulate tirade against conventional people.','他词不达意地发表了一通激烈言论，攻击因循守旧的人们。','She launched into a tirade against the policies that ruined her business.','她就造成自己企业破产的政策发表了激愤的长篇演说。'}

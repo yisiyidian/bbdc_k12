@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pesticide"]={"pesticide","['pestɪsaɪd]","['pɛstɪsaɪd]","n.杀虫剂",'n.杀虫剂','The seeds and the pesticide are both ready.','种子跟农药都准备好了。','The pesticide was spread over the vegetable plot.','菜田里撒上了农药.'}

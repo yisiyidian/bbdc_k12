@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dark"]={"dark","[dɑːk]","[dɑrk]","adj.黑暗的",'adj.黑暗的；乌黑的；忧郁的；神秘的|||n.黑暗；暗色；暗处','I\'m getting married again, but keep it dark, will you?','我要再婚了，可要保密呀，行吗？','It\'s a dark and moonless night.','这是一个黑暗无月的夜晚。'}

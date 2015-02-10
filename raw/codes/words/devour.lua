@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["devour"]={"devour","[dɪ'vaʊə]","[dɪ'vaʊɚ]","vt.吞食",'vt.吞食,耗尽,吞没,贪婪的享用','The child devours fairy tales.','这孩子专注地听着童话故事。','The flames devoured the entire building.','火焰吞没了整栋大楼。'}

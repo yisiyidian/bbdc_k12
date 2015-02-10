@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scrutiny"]={"scrutiny","['skruːtɪnɪ]","['skrutəni]","n.研究(推敲)",'n.研究(推敲)','By this time she was scarcely conscious of their scrutiny.','这时她已经不觉得人家在打量她了.','His work looks all right, but it will not bear scrutiny.','他的工作似乎很好, 但是经不起仔细检查.'}

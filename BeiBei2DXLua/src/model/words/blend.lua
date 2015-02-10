@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blend"]={"blend","[blend]","[blɛnd]","vt.&vi.混合",'vt.&vi.混合|||n.混合物','Their voices blend (together) well.','他们的声音很和谐.','Which blend of coffee would you like?','你要哪一种混合咖啡?'}

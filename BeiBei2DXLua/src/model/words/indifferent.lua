@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indifferent"]={"indifferent","[ɪn'dɪf(ə)r(ə)nt]","[ɪn'dɪfrənt]","adj.漠不关心的",'adj.漠不关心的,无重要性的,中立的','She seems indifferent, but deep down she\'s very pleased.','她貌似无动於衷，其实心里非常高兴。','He is indifferent to the result of the exam.','他对考试结果漠不关心。'}

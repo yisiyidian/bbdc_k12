@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sailor"]={"sailor","['seɪlə]","['selɚ]","n.海员",'n.海员,水手，扁平的硬边草帽','My father was a sailor and I\'m going to be one, too.','我父亲（以前）是水手，我也打算当水手。','I\'m no sailor and I couldn\'t wait to reach dry land.','我晕船, 恨不得立刻上岸.'}

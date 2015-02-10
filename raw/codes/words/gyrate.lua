@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gyrate"]={"gyrate","[dʒaɪ'rəɪt]","['dʒaɪret]","adj.旋转的",'adj.旋转的|||vi.旋转','The woman began to gyrate to the music.','这个女子开始随着音乐旋转。','...a room stuffed full of gasping, ||gyrating|| bodies.','...一间挤满了呼呼直喘，不停旋转的人的房间。'}

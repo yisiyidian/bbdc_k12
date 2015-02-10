@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["component"]={"component","[kəm'pəʊnənt]","[kəm'ponənt]","n.元件",'n.元件,组件,成份|||adj.组成的,构成的','Each component is carefully checked before assembly.','每个零件在装配前都经过仔细检查。','Brimstone is a component part of explosive.','硫磺是炸药的一种组成成分。'}

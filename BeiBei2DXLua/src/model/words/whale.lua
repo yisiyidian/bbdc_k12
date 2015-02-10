@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whale"]={"whale","[weɪl]","[wel]","n.鲸",'n.鲸,大量|||vi.捕鲸|||vt.鞭打,打击,打败','We may live to see the extinction of the whale.','人类或许能亲眼见到鲸的灭绝.','The whale thrashed the water with its tail.','那条鲸鱼不住地用尾巴击水.'}

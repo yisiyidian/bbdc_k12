@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["electronics"]={"electronics","[ɪlek'trɒnɪks; el-]","[ɪ,lɛk'trɑnɪks]","n.电子学",'n.电子学，电子器件','The company has achieved a premier position in the electronics field.','该公司执电子行业之牛耳.','The prognosis for the future of the electronics industry is encouraging.','预测电子工业的前途一片大好.'}

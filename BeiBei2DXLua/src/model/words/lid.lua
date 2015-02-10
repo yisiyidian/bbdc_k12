@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lid"]={"lid","[lɪd]","[lɪd]","n.盖",'n.盖','I can\'t get the lid on/off.','我盖不上[取不下]盖子.','She used a chisel to prise off the lid.','她用錾子来把盖子凿开.'}

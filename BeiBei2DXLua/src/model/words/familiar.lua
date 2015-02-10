@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["familiar"]={"familiar","[fə'mɪlɪə]","[fə'mɪljɚ]","adj.熟悉的",'adj.熟悉的,熟知的,不拘礼节的|||n.熟人,熟悉某种事物的人','Are you familiar with the laws relating to trespass?','你熟悉关于侵入私人领地的法律吗？','This nursery rhyme is very familiar to me.','我对这首摇篮曲很熟悉。'}

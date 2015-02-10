@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intensive"]={"intensive","[ɪn'tensɪv]","[ɪn'tɛnsɪv]","adj.强烈的",'adj.强烈的,密集的,精细的,强调的|||n.(语法)强调成份','Last night she was critically ill in intensive care.','昨晚她病危,处于重病特别护理中.','The accident victims are in/have been taken into intensive care.','事故受害者在特别护理中[已送进特别护理病房].'}

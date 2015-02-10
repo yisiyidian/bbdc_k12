@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wardrobe"]={"wardrobe","['wɔːdrəʊb]","['wɔr'drob]","n.衣柜",'n.衣柜，衣橱|||n.全部服装','The wardrobe takes up too much space/room.','这衣橱太占地方了.','We heaved the wardrobe up the stairs.','我们用力把衣柜搬上楼了.'}

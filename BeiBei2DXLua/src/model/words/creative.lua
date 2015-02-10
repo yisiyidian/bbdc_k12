@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["creative"]={"creative","[kriː'eɪtɪv]","[krɪ'etɪv]","adj.创造性的",'adj.创造性的','The school encourages free expression in art, drama and creative writing.','学校鼓励师生在艺术、 戏剧和文学创作上自由发挥.','He combines creative imagination and true scholarship.','他同时具有创造性想象力和真正的治学谨严学风。'}

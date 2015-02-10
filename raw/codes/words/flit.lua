@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flit"]={"flit","[flɪt]","[flɪt]","vi.掠过",'vi.掠过,迅速飞过，迁移|||n.掠过，飞来飞去','Sweet fancies flitted through his mind.','甜蜜的幻想掠过他的脑际。','An expression of pain flitted across her face.','她脸上闪过一种痛苦的表情。'}

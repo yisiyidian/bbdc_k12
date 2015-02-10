@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["genetic"]={"genetic","[dʒɪ'netɪk]","[dʒə'nɛtɪk]","adj.基因的",'adj.基因的,遗传的,起源的','It\'s very difficult to treat genetic diseases.','遗传性疾病治疗起来很困难.','A genetic map.','基因图谱'}

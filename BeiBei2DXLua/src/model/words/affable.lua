@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["affable"]={"affable","['æfəb(ə)l]","['æfəbl]","adj.和蔼可亲的",'adj.和蔼可亲的,友善的,殷勤的','He found her parents very affable.','他觉得她父母很好说话。','He is an affable man, always willing to stop and talk.','他是一个和蔼的人，总很乐意停下来与人交谈。'}

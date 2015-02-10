@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stand"]={"stand","[stænd]","[stænd]","n.站立",'n.站立,停顿,楼台,货摊|||vi.站立,位于，停滞|||vt.忍受,使站立','She took a firm stand on nuclear disarmament.','她在核裁军的问题上态度很坚决。','He kicked the ball to the stand.','他把球踢到看台上了。'}

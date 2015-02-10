@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bladder"]={"bladder","['blædə]","['blædɚ]","n.膀胱",'n.膀胱，囊，囊状物','An instrument for examining visually the interior of a bodily canal or a hollow organ such as the colon, bladder, or stomach.','内窥镜, 内视镜一种目测检查身体通道或中空器官, 如结肠、膀胱或胃的内部的仪器','Inflammation of the urinary bladder.','膀胱炎泌尿膀胱的发炎'}

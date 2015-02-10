@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["yearly"]={"yearly","['jɪəlɪ; 'jɜː-]","['jɪrli]","adj.每年的",'adj.每年的|||adv.每年地,一年一次地','Many Greek cities had to send yearly tribute to Athens.','许多希腊城市不得不每年向雅典进贡。','The yearly conference will be held next month.','年会下个月举行。'}

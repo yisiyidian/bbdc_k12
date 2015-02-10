@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cognitive"]={"cognitive","['kɒɡnɪtɪv]","['kɑɡnətɪv]","adj.认知的",'adj.认知的,认识的,有认识力的','This is known as cognitive narrowing or cognitive tunnel vision.','这称为认知的狭隘。','Infant aslo have cognitive ability when they are born.','婴儿出生时也有认知能力。'}

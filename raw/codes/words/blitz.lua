@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["blitz"]={"blitz","[blɪts]","[blɪts]","n.闪击战",'n.闪击战|||vt.以闪击战攻击','I had a blitz on the kitchen today, and now it\'s really clean.','我今天在厨房里做了一阵扫除, 现在确实乾净了.','Many towns were badly blitzed during the war.','战争中许多城镇毁於空袭.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["technical"]={"technical","['teknɪk(ə)l]","['tɛknɪkl]","adj.技术的",'adj.工艺的,技术的','The launch was delayed by a technical hitch.','由於技术上出现临时故障而发射延期.','On technical matters, I defer to the experts.','在技术问题上, 我遵从专家的意见.'}

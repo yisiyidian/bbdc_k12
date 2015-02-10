@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cheese"]={"cheese","[tʃiːz]","[tʃiz]","n.奶酪",'n.奶酪；[俚]微笑|||vt.[俚]停止','I had a frugal meal of bread and cheese last night.','我昨晚吃了只有面包和奶酪的便餐。','||Cheese|| often upsets her/her stomach.','吃乳酪後常常感到肠胃不适。'}

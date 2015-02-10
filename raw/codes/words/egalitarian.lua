@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["egalitarian"]={"egalitarian","[ɪ,gælɪ'teərɪən]","[ɪ'gælə'tɛrɪən]","adj.平等主义的",'adj.平等主义的|||n.平等主义者','Australia has chosen a more egalitarian policy set.','澳大利亚选择了一套更为平均主义的政策。','I still believe in the notion of an egalitarian society.','我仍然相信平等主义社会的理念。'}

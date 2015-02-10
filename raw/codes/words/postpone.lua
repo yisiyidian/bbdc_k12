@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["postpone"]={"postpone","[pəʊs(t)'pəʊn; pə'spəʊn]","[po'spon]","v.延期",'v.延期|||vt.推迟,延期','The commander decided to postpone the big push until the spring.','指挥官决定把大规模的进攻推迟到春天进行.','We agree to postpone the shipping date, considering (that) there is no steamer recently.','由于（考虑到）最近无船，我们同意推迟装期。'}

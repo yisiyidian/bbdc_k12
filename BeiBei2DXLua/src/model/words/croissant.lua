@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["croissant"]={"croissant","[krwɑːsɒŋ]","[krəˈsɑnt]","n.牛角包",'n.牛角包','||Croissant|| tasts rather good.','羊角面包吃起来相当不错','...coffee and croissants.','…咖啡和牛角面包。'}

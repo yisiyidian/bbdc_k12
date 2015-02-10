@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["attest"]={"attest","[ə'test]","[ə'tɛst]","v.证明",'v.证明,作证,为...作证','Several witnesses can attest to her good character.','好几位证人证实她品行端正。','The child\'s good health attests to his mother\'s care.','孩子的健康证明他母亲进行了悉心的照料。'}

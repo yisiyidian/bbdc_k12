@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sneaker"]={"sneaker","['sniːkə]","['snikɚ]","n.鬼鬼祟祟做事的人",'n.鬼鬼祟祟做事的人,卑鄙者,运动鞋','...a new pair of sneakers.','…一双新的运动鞋。','designed sneaker','名牌运动鞋'}

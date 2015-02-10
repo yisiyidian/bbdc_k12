@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["temblor"]={"temblor","[tem'blɔː]","['tɛmblɚ]","n.地震",'n.地震','Chile requires buildings to be able to withstand temblors','智利需要能够承受地震的建筑。','Minutes after the western temblor, a second, smaller quake struck hundreds of miles away, in an outer district of Beijing.','数分钟后，西部的地震，第二，规模较小的地震数百英里以外，在一区外的北京。'}

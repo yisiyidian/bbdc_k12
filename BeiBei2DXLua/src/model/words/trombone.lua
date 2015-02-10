@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trombone"]={"trombone","[trɒm'bəʊn]","[trɑm'bon]","n.长号",'n.长号，伸缩喇叭','A brass wind instrument, such as a trombone or tuba.','喇叭铜制管乐器, 例如长号或大号','Her husband had played the trombone in the band for a decade.','她丈夫已在这支乐队吹了十年的长号。'}

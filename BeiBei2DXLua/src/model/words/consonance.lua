@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consonance"]={"consonance","['kɒns(ə)nəns]","['kɑnsənəns]","n.一致",'n.一致,调和,和音','His actions were not in consonance with his words.','他的行为与他的言论不一致。','We will discuss the consonance in the meeting.','我们将在会上讨论出一致。'}

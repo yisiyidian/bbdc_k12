@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["relic"]={"relic","['relɪk]","['rɛlɪk]","n.神圣的遗物",'n.神圣的遗物,遗迹,纪念物','The relic, when exposed to air, turned to dust.','接触到空气后，这件文物变成了灰烬。','This ruined bridge is a relic of the Civil War.','这座毁坏的桥是南北战争时的遗迹。'}

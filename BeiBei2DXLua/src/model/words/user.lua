@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["user"]={"user","['juːzə]","['juzɚ]","n.用户",'n.用户,使用者','An instruction issued directly to a monitor from a user.','一种用户直接发送给监控程序的指令。','a user of public transportation.','公共交通的使用者'}

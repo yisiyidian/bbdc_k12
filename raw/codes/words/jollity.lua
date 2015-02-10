@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jollity"]={"jollity","['dʒɒlɪtɪ]","[ 'dʒɔləti ]","n.快乐",'n.快乐,欢乐','That kind of jollity was not for him; it never had been and never would be.','这种欢乐他是享受不到的，今后也不会享受到。','There had been jollity and peace and goodness.','那是充满欢乐、宁静和美好的时光。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interloper"]={"interloper","['ɪntələʊpə]","['ɪntɚlopɚ]","n.闯入者",'n.闯入者,(为图私利)干涉他人事务者,无执照营业者','Security guards were stationed at the door to deal with any interlopers.','门口已设警卫，以防止外人闯入。','He was an athiest who felt like an interloper in this religious gathering.','他是个无神论者，在这个宗教聚会中感到像是个闯入者。'}

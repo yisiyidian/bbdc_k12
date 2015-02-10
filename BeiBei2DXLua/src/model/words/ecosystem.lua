@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ecosystem"]={"ecosystem","['iːkəʊsɪstəm]","['ɛko,sɪstəm]","n.生态系统",'n.生态系统','Too much industrial pollution will influence the ecosystem','太多的工业污染会影响生态系统。','We all have an interest in maintaining the integrity of the ecosystem.','维持生态系统的完整是我们共同的利益。'}

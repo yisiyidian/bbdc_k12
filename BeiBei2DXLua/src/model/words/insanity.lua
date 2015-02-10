@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insanity"]={"insanity","[ɪn'sænətɪ]","[ɪn'sænəti]","n.疯狂",'n.疯狂,愚顽,精神错乱，荒唐','Genius is but one remove from insanity.','天才与疯狂之间只有毫厘之差。','There was a streak of insanity in the family.','这个家族有精神错乱的倾向.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["defile"]={"defile","[dɪ'faɪl]","[dɪ'faɪl]","vt.弄脏",'vt.弄脏,污损，败坏，玷污|||vi.以纵队前进|||n.(山间)小道,狭谷','They climbed up the mountain through a defile.','他们通过一条小路爬到山上。','He had defiled the sacred name of the Holy Prophet.','他亵渎了这位神圣先知的圣名。'}

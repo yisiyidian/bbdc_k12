@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ensue"]={"ensue","[ɪn'sjuː; en-]","[ɪn'su]","v.跟着发生",'v.跟着发生，继起，因而产生','The evils ensue from lack of a stable government.','这些弊病是由于缺乏一个稳定的政府而引起的。','Let him seek peace and ensue it!','让他去追求和平并为和平而奔波吧。'}

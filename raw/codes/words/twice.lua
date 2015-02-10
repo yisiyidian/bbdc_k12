@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["twice"]={"twice","[twaɪs]","[twaɪs]","adv.两次",'adv.两倍,两次','I am more than twice as old as he.','我的年龄是他的两倍还不止。','I\'ve seen this film twice.','这部影片我已经看过两次了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bumper"]={"bumper","['bʌmpə]","['bʌmpɚ]","n.缓冲挡",'n.缓冲挡,满杯,丰收','Part of the car\'s bumper had come adrift.','汽车的保险杠有一处松动了.','The benign weather brought North America a bumper crop.','温和的气候给北美带来大丰收。'}

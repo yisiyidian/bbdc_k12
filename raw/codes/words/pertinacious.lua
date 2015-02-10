@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pertinacious"]={"pertinacious","[,pɜːtɪ'neɪʃəs]","[,pɝtn'eʃəs]","adj.执拗的",'adj.执拗的,顽固的,坚持的','I can affirm that he is tenacious and pertinacious as are few.','我可以肯定，像他那样不屈不挠、百折不回的人是十分罕见的。','Our father is so pertinacious that he can\'t receive any of our advices.','我们的父亲非常顽固，听不进我们的任何意见。'}

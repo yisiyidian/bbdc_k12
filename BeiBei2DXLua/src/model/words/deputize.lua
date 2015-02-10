@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deputize"]={"deputize","['depjʊtaɪz]","['dɛpjutaɪz]","v.指定代理",'v.指定代理|||v.代理','Dr Mitchell\'s ill so I\'m ||deputizing|| for her.','米切尔博士病了, 所以我代理她的工作.','The president said he could deputize the Florida National Guard to help with security.','该总统说他可能委托佛罗里达国民警卫队为代表去帮助提供安全保障。'}

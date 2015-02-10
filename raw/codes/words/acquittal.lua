@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acquittal"]={"acquittal","[ə'kwɪtəl]","[ə'kwɪtl]","n.履行",'n.履行,开释,释放','There were three convictions and two acquittals in court today.','今日法庭宣判三人有罪，两人无罪。','Lack of evidence resulted in their acquittal.','因证据不足而宣判他们无罪。'}

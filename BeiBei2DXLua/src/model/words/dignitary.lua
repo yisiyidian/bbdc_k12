@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dignitary"]={"dignitary","['dɪgnɪt(ə)rɪ]","['dɪɡnɪtɛri]","n.高贵的人",'n.高贵的人,高官|||adj.地位尊贵的','Many of the local ||dignitaries|| attended his grandfather\'s funeral.','当地许多达官贵人都参加了他外祖父的葬礼。','...an office fund used to entertain visiting ||dignitaries||.','…一笔用于招待来访要员的办公资金。'}

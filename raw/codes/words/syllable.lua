@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["syllable"]={"syllable","['sɪləb(ə)l]","['sɪləbl]","n.音节",'n.音节|||vt.分音节','John explained the job to me in words of one syllable so that I would be sure to understand.','约翰把这件工作向我解释得简单明白，使我能确实了解情况。','Which syllable does the stress of this word fall on?','这个字的重音是在哪个音节上?'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["regent"]={"regent","['riːdʒ(ə)nt]","['ridʒənt]","n.摄政者",'n.摄政者,摄政,(大学等的）评议员|||adj.摄政的','His address be248 regent street, right?','他的住址是摄政街284号，对吗？','The regent carried out an advanced system in his country.','摄政者在他的国家推行了一套先进的制度。'}

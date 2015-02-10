@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wreckage"]={"wreckage","['rekɪdʒ]","['rɛkɪdʒ]","n.失事",'n.失事,破坏,破减,残骸','She was pinned under the wreckage of the car.','撞毁的汽车把她压在下面动弹不得.','Investigators are searching the wreckage of the plane to try and find the cause of the tragedy.','调查人员在飞机残骸中搜索, 希望找出造成这一悲惨事件的原因.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grievance"]={"grievance","['griːv(ə)ns]","['grivəns]","n.委屈",'n.委屈,冤情,苦况','He used the occasion to express all his old grievance against the chairman.','他利用那机会表达了对主席积压已久的怨气。','I smiled, but I am certain my smile looked like a grievance.','我笑了，可是我相信只是一声苦笑而已。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["deliberately"]={"deliberately","[dɪ'lɪbərətli]","[ di'libərətli ]","adv.慎重地",'adv.慎重地,故意地','You have deliberately acted against my wishes.','你故意和我的想法对著干.','He\'s being deliberately obtuse.','他装糊涂.'}

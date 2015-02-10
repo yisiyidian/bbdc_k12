@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ditch"]={"ditch","[dɪtʃ]","[dɪtʃ]","n.沟渠",'n.沟渠|||vt.坠入沟中，摆脱，飞机（在海上）迫降|||vi.挖一条沟渠，飞机紧急降落','The invaders cut off their prisoners\' arms and legs and threw their mutilated bodies into the ditch.','侵略者把俘虏的四肢砍掉, 然後把残缺不全的躯体扔进沟里.','The car ran off the road into a ditch.','汽车驶离道路跌进沟中。'}

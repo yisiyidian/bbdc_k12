@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["respiration"]={"respiration","[respɪ'reɪʃ(ə)n]","[,rɛspə'reʃən]","n.呼吸",'n.呼吸；呼吸作用','They made frequent checks on his respiration, pulse and blood.','他们经常检查他的呼吸 、 脉搏和血液。','They tried artificial respiration but it was of no avail.','他们试做人工呼吸，但没有用。'}

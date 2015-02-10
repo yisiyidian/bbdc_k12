@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rococo"]={"rococo","[rə'kəʊkəʊ]","[rə'koko]","n.洛可可艺术",'n.洛可可艺术|||adj.洛可可式的,过分精巧繁杂的','||Rococo|| has been born from the Baroque era during the age of Enlightenment.','在启蒙运动时期，洛可可从巴洛克的艺术风格中脱胎而生。','The rococo style\'s architecture draw a lot attention.','那座洛可可风格的建筑吸引了许多目光。'}

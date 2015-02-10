@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chronicle"]={"chronicle","['krɒnɪk(ə)l]","['krɑnɪkl]","n.年代记",'n.年代记,记录,编年史','The chronicle breaks down into four parts','这部编年史分成四部分。','Columbus kept a careful and detailed chronicle of his voyages.','哥伦布按顺序仔细而详尽地记载了他的各次航程。'}

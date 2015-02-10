@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acid"]={"acid","['æsɪd]","['æsɪd]","adj.酸的",'adj.酸的|||n.酸,酸味物质','I am doing an experiment of neutralizing acid.','我在做一个中和酸的实验。','||Acids|| react with bases to form salts.','酸与碱反应生成盐。'}

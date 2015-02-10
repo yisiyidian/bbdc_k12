@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["novelty"]={"novelty","['nɒv(ə)ltɪ]","['nɑvlti]","n.新奇",'n.新奇,新奇的事物,小装饰','Showoffs never miss an opportunity to draw attention to themselves by some outrageous novelty.','爱显摆的人遇事总喜欢标新立异。','The author seems to strain after novelty.','作者似乎在力图标新立异。'}

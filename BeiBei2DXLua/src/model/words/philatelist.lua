@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["philatelist"]={"philatelist","[fɪ'lætəlɪst]","[ fi'lætəlist ]","n.集邮家",'n.集邮家','A philatelist is keen on collecting all kinds of stamps.','集邮家热衷收集各种邮票。','',''}

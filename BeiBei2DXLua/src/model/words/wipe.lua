@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wipe"]={"wipe","[waɪp]","[waɪp]","n.擦拭",'n.擦拭,用力打|||vt.&vi.擦,消除,拭去','Please give the table mats a quick wipe.','请把桌上的盘碗垫擦一下。','The entire population was wiped out by the terrible disease.','所有的居民都被可怕的疾病夺去了生命。'}

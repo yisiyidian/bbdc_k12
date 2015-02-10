@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["curator"]={"curator","[kjʊ(ə)'reɪtə]","[kjʊ'retɚ]","n.管理者(馆长)",'n.管理者(馆长)','||Curator|| conducted the visitors round the museum.','馆长领着游客们在博物馆中参观。','He got a promotion as curator.','他升职为馆长了。'}

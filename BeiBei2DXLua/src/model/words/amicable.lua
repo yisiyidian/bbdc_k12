@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amicable"]={"amicable","['æmɪkəb(ə)l]","['æmɪkəbl]","adj.友好的",'adj.友好的,和睦的','This is an amicable mood conversation.','这是一次亲切友好的交谈。','She has an amicable character.','她性格温柔。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prevalent"]={"prevalent","['prev(ə)l(ə)nt]","['prɛvələnt]","adj.流行的",'adj.流行的,普遍的','Is malaria still prevalent among the populationhere?','疟疾是否仍为此地居民的多发病?','The prevalent opinion is in favour of reform.','一般舆论都支持改革。'}

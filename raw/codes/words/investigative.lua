@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["investigative"]={"investigative","[ɪn'vestɪgətɪv; -geɪtɪv]","[ɪn'vɛstɪɡetɪv]","adj.调查的",'adj.调查的,调查性质的','investigative methods.','调查方法','investigative journalism.','调查新闻业'}

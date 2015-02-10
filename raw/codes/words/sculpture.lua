@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sculpture"]={"sculpture","['skʌlptʃə]","['skʌlptʃɚ]","n.雕塑",'n.雕塑|||vt.雕刻,雕塑|||vi.当雕刻师','The sculptor is working on a sculpture of Venus.','那个雕刻家正在雕一个维纳斯雕像。','The smooth contour of the sculpture is wonderful.','雕塑物平滑的轮廓线简直太美了。'}

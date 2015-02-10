@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hoist"]={"hoist","[hɒɪst]","[hɔɪst]","n.升高",'n.升高,起重机,推动|||v.升起,升高,举起','He hoisted the package over his shoulder.','他把包裹扛上了肩。','The sailors hoisted the flags in the morning.','水手们早晨把旗子升起来。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["welcome"]={"welcome","['welkəm]","['wɛlkəm]","vt.欢迎",'vt.欢迎；乐于接受|||adj.受欢迎的；令人愉悦的；表示感谢的|||n.欢迎，迎接','Her suggestion received a rather unenthusiastic welcome.','她的建议受到冷遇。','I don\'t welcome intrusions into my privacy.','我不希望有人干扰我的私生活。'}

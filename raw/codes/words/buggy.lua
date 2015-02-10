@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["buggy"]={"buggy","['bʌgɪ]","['bʌɡi]","adj.多虫的",'adj.多虫的|||n.双轮单座的轻马车,四轮单座的马车','Mr and Mrs Tang went the whole journey in a small buggy, with their child riding bodkin.','唐先生和唐太太一路上乘坐一辆轻型马车，让孩子挤坐在他俩中间。','She put her little daughter in the buggy.','她把小女儿放在婴儿车里。'}

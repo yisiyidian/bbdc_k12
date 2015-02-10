@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mentally"]={"mentally","['ment(ə)lɪ]","['mɛntli]","adv.心理上",'adv.心理上,精神上,用脑筋','Do you think in English or translate mentally from your own language?','你是用英语思考呢, 还是在头脑中把自己的语言翻译过来呢?','Woman is physically but not mentally weaker than man.','女子在体力上而不是智力上比男子弱。'}

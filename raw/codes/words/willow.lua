@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["willow"]={"willow","['wɪləʊ]","['wɪlo]","n.柳树",'n.柳树，柳木制品','||Willow|| trees breaking out into buds foretell the coming of spring.','柳枝绽青报春来.','A year after her husband died her father suggested to her that she had worn the willow for long enough.','丈夫死去一年后，她的父亲劝她守节已够久，不要再悲伤了。'}

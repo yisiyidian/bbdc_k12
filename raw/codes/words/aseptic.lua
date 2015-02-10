@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aseptic"]={"aseptic","[eɪ'septɪk]","[,e'sɛptɪk]","adj.无菌的",'adj.无菌的,洁净的，冷漠的','An aseptic smile.','漠然的微笑','aseptic surgical instruments.','无菌外科仪器'}

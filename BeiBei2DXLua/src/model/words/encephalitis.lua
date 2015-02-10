@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["encephalitis"]={"encephalitis","[en,sefə'laɪtɪs; -,kefə-]","[ɛn,sɛfə'laɪtəs]","n.脑炎",'n.脑炎','encephalitis','脑炎','Some develop encephalitis, a brain disease that can lead to headaches, coma or seizures.','有些会发展成一种称为脑炎的脑部疾病，将会导致头痛、昏迷或者癫痫。'}

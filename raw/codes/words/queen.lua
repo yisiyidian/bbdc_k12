@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["queen"]={"queen","[kwiːn]","[kwin]","n.女王",'n.女王,王后,最重要的女子或事物,女冠军,女王蜂|||vi.立...为女王,当女王|||vt.成为女王或王后,以女王的身份统治|||vt.使卒子达底线变为王后取得纵,横,斜自由行走的资格','The Pope was present at the coronation of ||Queen|| Elizabeth II.','教皇参加了伊丽莎白二世的加冕礼。','They saluted the ||Queen|| by firing ten guns.','他们鸣礼炮十响向女王致敬。'}

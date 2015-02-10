@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["armada"]={"armada","[ɑ:'mɑ:də]","[ ɑ:'mɑ:də ]","n.舰队",'n.舰队，机群，（车辆）编队','Spain used to be famous for its strong armada.','西班牙曾以其强大的舰队而著称。','An armada of U.S. Navy ships participated in the invasion.','美国海军舰队参加了入侵行动。'}

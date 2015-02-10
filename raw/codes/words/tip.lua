@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tip"]={"tip","[tɪp]","[tɪp]","n.小费",'n.顶,尖端,小费，指点|||v.提出建议或意见,倾斜,给小费,轻触','My neighbour has been tipping dead leaves over the wall into my garden.','我的邻居把落叶从墙头上倒进我的花园里了。','Her greater experience tipped the balance in her favour and she got the job.','她经验更丰富，这是她得到那份工作的决定性因素。'}

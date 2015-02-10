@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lubricant"]={"lubricant","['luːbrɪk(ə)nt]","['lubrɪkənt]","adj.润滑的",'adj.润滑的|||n.润滑物,润滑油,润滑剂','The sort of lubricant which we use depends largely on the running speed of the bearing.','我们使用哪种润滑剂，主要取决于轴承的转速如何。','A thick oil or viscous substance, especially when used as a lubricant.','润滑油，滑油粘稠的油或粘性物质，尤指用作润滑油的'}

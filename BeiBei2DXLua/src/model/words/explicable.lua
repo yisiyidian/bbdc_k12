@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["explicable"]={"explicable","[ɪk'splɪkəb(ə)l; ek-; 'eksplɪ,kəb(ə)l]","[ɪk'splɪkəbl]","adj.可解释的",'adj.可解释的','His conduct is not explicable.','他的行为无法解释。','Explicable phenomena; explicable behavior.','可解释的现象；可解释的行为'}

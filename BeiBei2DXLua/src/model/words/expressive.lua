@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["expressive"]={"expressive","[ɪk'spresɪv; ek-]","[ɪk'sprɛsɪv]","adj.表达的",'adj.表达的,用作表达的,富于表情的','The songs, sometimes accompanied with dance movements, were expressive and delightful.','这些有时带有舞蹈动作的表演唱很有表现力，很生动。','It\'s an expressive piece of music.','这是一首抒情乐曲。'}

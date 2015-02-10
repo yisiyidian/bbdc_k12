@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["still"]={"still","[stɪl]","[stɪl]","adj.静止的",'adj.静止的,不动的,静寂的|||adv.仍然,更,静止地|||conj.然而,但是|||vi.变沉默|||vt.使冷静,抓住,使停止,使放松|||n.沉默,定格照,酒厂','Although she felt ill, she still went to work.','她虽然觉得身体不舒服，但仍然去上班了。','The fish is still alive.','这条鱼仍活着。'}

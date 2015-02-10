@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tryst"]={"tryst","[traɪst]","[trɪst]","n.约会",'n.约会，约会处|||vi.约会','I came out alone on my way to my tryst.','我独自去赴幽会。','It has been said that art is a tryst, for in the joy of it maker and beholder meet.','有人说艺术是一种幽会，因为艺术家和欣赏者可在幽会的乐趣中相遇在一起。'}

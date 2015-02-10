@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alkaline"]={"alkaline","['ælkəlaɪn]","['ælkə'laɪn]","adj.碱的",'adj.碱的,碱性的','Becoming alkaline; slightly alkaline.','碱化的变成碱的；弱碱性的','What shall we grow in this alkaline soil?','我们应该在碱性土壤里种什么？'}

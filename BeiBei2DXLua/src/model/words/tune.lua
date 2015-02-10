@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tune"]={"tune","[tjuːn]","[tun]","n.旋律",'n.旋律,音准,数量|||vt.调音(频),调节,使和谐|||vi.和谐,调频','Stay tuned to us for the latest sports results.','请继续收听我们播放的最新比赛结果。','The orchestra tuned their instruments.','乐队在给乐器调音。'}

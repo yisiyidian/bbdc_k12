@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prey"]={"prey","[preɪ]","[pre]","n.被掠食者",'n.被掠食者,牺牲者|||vi.捕食,掠夺,使...苦恼','Strong animals prey upon weaker ones.','弱肉强食。','The thought that he was responsible for her death preyed on his mind.','他一想到自己对她的死负有责任就感到心神不宁。'}

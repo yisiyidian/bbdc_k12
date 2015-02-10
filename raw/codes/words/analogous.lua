@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["analogous"]={"analogous","[ə'næləgəs]","[ə'næləɡəs]","adj.类似的",'adj.类似的','Marine construction technology like this is very complex, somewhat analogous to trying to build a bridge under water.','像这样的海底建造技术很复杂，与尝试在水下建桥有些相似。','analogous to','类似于……'}

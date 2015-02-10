@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unpredictable"]={"unpredictable","[ʌnprɪ'dɪktəb(ə)l]","[,ʌnprɪ'dɪktəbl]","adj.不可预知的",'adj.不可预知的','In advanced years a man\'s mind might go back on him at some unpredictable moment.','上了年纪的人，脑子有时候会一下子不听使唤。','Irregular in course or behavior; unpredictable.','不规律的在过程上或行为上无规律的；不可预测的'}

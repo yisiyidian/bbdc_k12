@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["colossus"]={"colossus","[kə'lɒsəs]","[kə'lɑsəs]","n.巨大",'n.巨大,巨型雕像','Mozart is a colossus among composers.','莫札特是作曲家中的巨匠。','The colossus would soar higher into the sky.','这庞然大物高耸入云。'}

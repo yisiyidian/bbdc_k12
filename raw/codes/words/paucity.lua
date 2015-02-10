@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paucity"]={"paucity","['pɔːsɪtɪ]","[ 'pɔ:siti ]","n.少数",'n.少数,少量,缺乏','However, there is a paucity of research on the issue with Chinese subjects.','然而，鲜有研究使用中文的受试者来探讨这一问题。','The results are often unsatisfactory because of the paucity of cells.','因细胞稀少，结果常令人不满意。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["situated"]={"situated","['sɪtjʊeɪtɪd]","['sɪtʃuetɪd]","adj.位于",'adj.位于,处于...立场的|||动词situate的过去式和过去分词','The village is situated in a valley.','那个村子在山谷里.','Where will the school be situated?','学校要建在哪儿?'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["protege"]={"protege","['prəuteʒei]","[ 'prəuteʒei ]","n.门生",'n.门生，被保护者','a protege of the great violinist Yehudi Menuhin','伟大的小提琴家耶胡迪·梅纽因的门生','As the protege of the most powerful man in the country, his success is guarantee.','他有该国最有势力的人作靠山，准能成功。'}

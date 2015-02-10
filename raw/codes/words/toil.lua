@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["toil"]={"toil","[tɒɪl]","[tɔɪl]","n.辛苦",'n.辛苦,苦工,网,罗网,圈套|||v.苦干,跋涉,费力地做','The slaves toiled up the hill pulling the heavy blocks.','那些奴隶艰难地把沉重的石块拖上山。','The wealth comes from the toil of the masses.','财富来自大众的辛勤劳动。'}

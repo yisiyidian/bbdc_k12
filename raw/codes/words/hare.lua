@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hare"]={"hare","[heə]","[hɛr]","n.野兔",'n.野兔','He invited me to eat some jugged hare with him together.','他邀请我和他一块吃些罐焖野兔。','The hunter watched for the hare to come out of the burrow.','猎人守候着兔子从洞里出来。'}

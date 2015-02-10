@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["commotion"]={"commotion","[kə'məʊʃ(ə)n]","[kə'moʃən]","n.骚动",'n.骚动,暴乱，喧闹','The discovery caused a tremendous commotion in the scientific world.','那项发现在科学界引起极大的震动。','You are making a great commotion about nothing.','你简直是在无理取闹。'}

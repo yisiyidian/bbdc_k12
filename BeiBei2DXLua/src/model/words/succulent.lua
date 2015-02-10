@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["succulent"]={"succulent","['sʌkjʊl(ə)nt]","['sʌkjələnt]","adj.多汁的",'adj.多汁的,肉质的，有趣味的|||n.肉质植物','These are wonderfully succulent peaches.','这些桃子汁水很多。','Succulents or succulent plants are types of plants which have thick, fleshy leaves.','多肉植物是指那种有肥厚叶子的植物。'}

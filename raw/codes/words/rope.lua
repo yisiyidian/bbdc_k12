@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rope"]={"rope","[rəʊp]","[rop]","n.绳",'n.绳，绳索|||vt.捆，绑|||vi.拧成绳状','The rope was not strong enough, so we used wire.','这根绳子不够结实，所以我们用金属线。','Please slacken the tent rope before it rains.','下雨前，请将帐篷的绳索放松。'}

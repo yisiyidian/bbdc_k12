@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["memorable"]={"memorable","['mem(ə)rəb(ə)l]","['mɛmərəbl]","adj.值得纪念的",'n.值得纪念的事物|||adj.值得纪念的','It was a truly memorable experience.','这真是一次值得纪念的经历。','This was indeed the most memorable day of my life.','这的确是我一生中最值得怀念的日子.'}

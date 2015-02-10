@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["taxonomist"]={"taxonomist","[tæk'sɑnəmɪst]","[ tæk'sɔnəmist ]","n.分类学者",'n.分类学者','The classification of this species stumped many taxonomists.','对这个物种的分类难住了许多分类学家。','She wants to be a taxonomist of plants.','她想成为一位植物分类学者。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disgusted"]={"disgusted","[dɪs'ɡʌstɪd]","[dɪs'ɡʌstɪd]","adj.厌恶的",'adj.厌恶的，讨厌的|||动词disgust的过去式和过去分词','I\'m disgusted with her affectation.','我讨厌她的装腔作势。','The very idea of taking drugs disgusted her.','吸毒这种想法让她非常厌恶。'}

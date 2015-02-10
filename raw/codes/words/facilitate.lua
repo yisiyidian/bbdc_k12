@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["facilitate"]={"facilitate","[fə'sɪlɪteɪt]","[fə'sɪlə'tet]","vt.促进",'vt.帮助,使...容易,促进','It would not facilitate matters if you were uncooperative.','如果你不合作，事情就不好办了。','You could facilitate the process by sharing your knowledge.','你可以通过知识共享来促进这一过程。'}

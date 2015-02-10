@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unfair"]={"unfair","[ʌn'feə]","['ʌn'fɛr]","adj.不公平的",'adj.不公平的,(商业上)不正当的','I really admire the way she is able to shrug off unfair criticism.','我很佩服她能对错误的批评意见不予理会。','Some people objected that the new tax law was unfair.','一些人反对说，新税法不公平。'}

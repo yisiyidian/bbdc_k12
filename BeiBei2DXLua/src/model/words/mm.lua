@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mm"]={"mm","[əm]","[ əm ]","abbr.毫米",'abbr.毫米(=millimeter)','5(mm) milimeter','5毫米','The silicon chips are less than a mm (millimeter) thick.','這些矽片厚度不足一毫米。'}

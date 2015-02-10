@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bed"]={"bed","[bed]","[bɛd]","n.床",'n.床，河床，底层，基座|||vt.铺床，去睡觉，安置，发生性关系|||vi.铺床，去睡觉，铺层，躺平','The soldiers bedded down in a barn.','士兵们在谷仓里打铺过夜。','Life isn\'t a bed of roses.','人生并非事事称心如意。'}

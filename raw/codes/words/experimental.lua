@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["experimental"]={"experimental","[ɪk,sperɪ'ment(ə)l; ek-]","[ɛk'spɛrɪ'mɛntəl]","adj.实验(性)的",'adj.实验(性)的,试验(性)的','In experimental plots the yield has been doubled.','在试验田里，产量已（被）提高了一倍。','The experimental results bear out our supposition.','实验结果证实了我们的假设。'}

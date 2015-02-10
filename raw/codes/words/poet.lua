@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["poet"]={"poet","['pəʊɪt]","['poət]","n.诗人",'n.诗人','He was awarded the poet laureate by the queen.','他被女王封为桂冠诗人。','The poet addressed many poems to his mistress, praising her beauty.','这位诗人为他心爱的女子写了许多诗，歌颂她的美丽。'}

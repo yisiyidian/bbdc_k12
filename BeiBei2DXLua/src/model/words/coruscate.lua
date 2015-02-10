@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coruscate"]={"coruscate","['kɒrəskeɪt]","['kɔrəsket]","vi.闪亮",'vi.闪亮,闪光','diamonds ||coruscating|| in the candlelight.','烛光下闪光的宝石','a flutist whose music coruscated throughout the concert hall.','笛声荡漾于整个音乐厅的吹笛手'}

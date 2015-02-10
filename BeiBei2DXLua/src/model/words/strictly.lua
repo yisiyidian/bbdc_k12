@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["strictly"]={"strictly","['strɪk(t)lɪ]","['strɪktli]","adv.严格地",'adv.严格地','The fishing in this stretch of the river is strictly preserved.','此段河流严禁外人捕鱼.','The student accommodationis strictly utilitarian.','为学生提供的住宿极其实惠.'}

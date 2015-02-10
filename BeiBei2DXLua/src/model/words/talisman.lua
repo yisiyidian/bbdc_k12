@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["talisman"]={"talisman","['tælɪzmən]","['tælɪsmən]","n.避邪物",'n.避邪物,护身符','This talisman can block off disasters and evil things.','这个护身符可以用来消灾免难。','The talisman to be a winner is confidence.','自信是胜者的法宝。'}

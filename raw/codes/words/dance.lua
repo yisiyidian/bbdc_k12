@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dance"]={"dance","[dɑːns]","[dæns]","vi.跳舞",'n.跳舞,舞蹈,舞会,舞步|||vi.跳舞,雀跃|||vt.使跳跃,使某人以跳舞的方式进入','Her whole life has been given to the study of dance.','她一生献身于研究舞蹈。','The waves danced in the sunlight.','波浪在阳光下跳舞。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["notebook"]={"notebook","['nəʊtbʊk]","['notbʊk]","n.笔记本",'n.笔记本，笔记本电脑','Stop doodling on my notebook!','别在我的笔记本上乱画!','I recorded the score in a notebook.','我在笔记本上记下了分数。'}

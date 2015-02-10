@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dubious"]={"dubious","['djuːbɪəs]","['dubɪəs]","adj.可疑的",'adj.怀疑的,可疑的','I remain dubious about her motives.','我对她的动机仍存疑念。','He shares the same rotten tastes with some dubious characters.','他和一些不三不四的人臭味相投。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["casualty"]={"casualty","['kæʒjʊəltɪ; -zj-]","['kæʒuəlti]","n.变故",'n.变故,伤亡者,伤亡人数','The surgeon on casualty duty was so busy that he just had time to bolt down a sandwich.','那位值急诊班的外科医生非常忙碌，他仅有时间狼吞虎咽地吃了一份三明治。','The cottage was a casualty of the forest fire.','那小屋被森林大火烧毁。'}

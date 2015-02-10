@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stormy"]={"stormy","['stɔːmɪ]","['stɔrmi]","adj.暴风雨的",'adj.暴风雨的,激烈的，粗暴的','The boat was tossed about in the stormy sea.','小船在风急雨骤的大海中颠簸。','The scouts started off on their mission on a stormy night.','侦察兵们在一个雷雨之夜出发去执行任务。'}

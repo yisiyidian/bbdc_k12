@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tenet"]={"tenet","['tenɪt; 'tiːnet]","['tɛnɪt]","n.教义",'n.教义,信条;原则,宗旨.','I hold to the tenet that theory should be united with practice.','我坚持理论和实践必须相结合的原则。','Non-violence and patience are the central tenets of their faith.','非暴力和忍耐是他们的信仰的核心原则。'}

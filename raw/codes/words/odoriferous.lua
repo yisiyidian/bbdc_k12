@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["odoriferous"]={"odoriferous","[,əʊdə'rɪf(ə)rəs]","[,odə'rɪfərəs]","adj.有香味的",'adj.有香味的,芳香的，臭的，令人反感的','Some things to remember odoriferous memory is better than the voice and image.','部分人记忆有气味的东西要胜于记忆声音和图像。','The odoriferous spices stimulated her jaded appetite.','香料的芬芳刺激她疲惫的胃口。'}

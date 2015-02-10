@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trichotomy"]={"trichotomy","[traɪ'kɒtəmɪ; trɪ-]","[traɪ'kɑtəmi]","n.三分法",'n.三分法,三断法,三相法','We need to take a trichotomy approach to sovle this complicated political issue.','针对这一复杂的政治问题，我们需要采用三分法来解决。','We need to take a trichotomy approach to sovle this complicated political issue.','针对这一复杂的政治问题，我们需要采用三分法来解决。'}

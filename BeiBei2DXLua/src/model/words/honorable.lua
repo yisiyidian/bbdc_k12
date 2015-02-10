@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["honorable"]={"honorable","['ɑnərəbəl]","[ 'ɔnərəbl ]","adj.光荣的",'adj.光荣的,可敬的,尊敬的|||=honourable(英)','This accusation of bribery is a vile smear on an honorable citizen.','这项有关贿赂的指控是对一个正直公民的无耻诽谤。','His conduct speaks him honorable.','他的行为表明他是可敬的。'}

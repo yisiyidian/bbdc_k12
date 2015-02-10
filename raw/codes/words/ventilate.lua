@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ventilate"]={"ventilate","['ventɪleɪt]","['vɛntɪlet]","vt.使...空气流通",'vt.使...空气流通，通风','My office is well ventilated.','我的办公室通风良好。','They are ||ventilating|| the sap of a coal mine.','他们正在使煤矿坑道通风。'}

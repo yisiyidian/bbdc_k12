@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shore"]={"shore","[ʃɔː]","[ʃɔr]","n.岸",'n.岸,滨,国家,陆地,斜撑柱|||vt.(up)支撑,支持','The breakers came tumbling onto the shore.','浪涛滚滚而来拍打著岸边。','After swimming for an hour, he finally gained the shore.','他游了一小时以後，终於到达岸边。'}

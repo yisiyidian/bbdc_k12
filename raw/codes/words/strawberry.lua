@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["strawberry"]={"strawberry","['strɔːb(ə)rɪ]","['strɔbɛri]","n.草莓",'n.草莓','This strawberry jam is still runny: I can\'t get it to jell.','这草莓酱还是太稀, 凝结不起来.','He spread some strawberry jam on his toast.','他把草莓酱涂在烤面包片上.'}

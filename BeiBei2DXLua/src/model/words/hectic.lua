@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hectic"]={"hectic","['hektɪk]","['hɛktɪk]","adj.兴奋的",'adj.兴奋的,持续发热的,发红的','The journalist lead a hectic life.','新闻记者过着紧张兴奋的生活。','There was nothing feverish or hectic about his vigor','“他精力充沛但却毫不忙乱或狂热”'}

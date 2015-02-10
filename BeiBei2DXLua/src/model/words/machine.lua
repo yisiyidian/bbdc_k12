@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["machine"]={"machine","[mə'ʃiːn]","[mə'ʃin]","n.机器",'n.机器；机械般的人；核心|||vt.用机器制造，用机器加工|||vi.被机器切削','This machine has been specially adapted for underwater use.','这机器是为水下使用而特别改装的。','The edge must be machined to 0.02 millimeters.','这边缘必须切割到0.02毫米的精密度。'}

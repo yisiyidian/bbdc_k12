@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["predator"]={"predator","['predətə]","['prɛdətɚ]","n.食肉动物",'n.食肉动物,掠夺者','Young birds are very vulnerable to predators.','幼小的鸟易受食肉动物伤害.','The terror bird was the top predator in its ancestral home.','恐鸟是其远古家园中的顶级捕食者.'}

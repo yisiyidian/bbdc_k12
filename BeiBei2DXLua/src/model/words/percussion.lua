@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["percussion"]={"percussion","[pə'kʌʃ(ə)n]","[pɚ'kʌʃən]","n.打击乐器",'n.打击乐器，撞击，碰撞,振动,引爆[医]叩诊','They had a bass and a piano and a sax and percussion.','他们有一把低音吉他、一架钢琴、一管萨克斯和打击乐器。','This is a large orchestra, with a vast percussion section.','这是一支拥有很大的打击乐器组的大型管弦乐队。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["temperature"]={"temperature","['temp(ə)rətʃə]","['tɛmprətʃɚ]","n.温度",'n.温度,发烧','The temperature has stayed hot this week.','本周气温一直都很热。','Water freezes at the temperature of 0 degrees Celsius.','水在摄氏零度结冰。'}

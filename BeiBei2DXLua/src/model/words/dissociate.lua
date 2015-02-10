@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dissociate"]={"dissociate","[dɪ'səʊʃɪeɪt; -sɪ-]","[dɪ'soʃɪet]","vt.分离",'vt.分离,游离,分裂','I want to dissociate myself from my companions.','我想要与我的同伴断绝关系。','I wish to dissociate myself from those views.','我想表明我本人是不赞成那些观点的.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wide"]={"wide","[waɪd]","[waɪd]","adj.广泛的",'adj.广泛的,宽阔的|||adv.广大地,全部地','She stared at him with eyes wide.','她睁大了眼睛注视著他。','He was wide awake.','他完全清醒了。'}

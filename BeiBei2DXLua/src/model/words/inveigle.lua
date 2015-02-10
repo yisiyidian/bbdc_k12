@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inveigle"]={"inveigle","[ɪn'viːg(ə)l; ɪn'veɪg(ə)l]","[ɪn'viɡl]","vt.诱骗",'vt.诱骗,诱使','She inveigle him into the house and rob him while he sleep.','她把他骗进房子，趁他睡着时偷走了他的东西。','He inveigled them into buying a new car, even though they didn\'t really want one.','他诱惑他们买了一辆新汽车，但其实他们并不需要。'}

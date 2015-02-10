@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["illiterate"]={"illiterate","[ɪ'lɪt(ə)rət]","[ɪ'lɪtərət]","adj.文盲的",'adj.文盲的,无知的|||n.文盲','You must be an illiterate if you\'ve never heard of Marx.','要是连马克思也没听说过，那你一定是个文盲。','There are still many illiterate people in our country.','在我国还有许多文盲.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reprisal"]={"reprisal","[rɪ'praɪz(ə)l]","[rɪ'praɪzl]","n.报复",'n.报复,报仇,报复性劫掠','In those days, objections would only invite reprisals.','在那时候，提出反对意见只会引起报复。','They shot hostages in reprisal for the assassination of their leader.','他们的首领遭到暗杀，他们为了报复，枪杀了十名人质。'}

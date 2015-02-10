@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["radiate"]={"radiate","['reɪdɪeɪt]","['redɪet]","v.放射",'v.放射,散发,辐射','Most of Britain\'s motorways radiate from London.','英国大多数的公路从伦敦向各个方向发展。','Four avenues radiate from the square.','四条林荫大道从那广场向四方延伸。'}

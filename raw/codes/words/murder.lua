@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["murder"]={"murder","['mɜːdə]","['mɝdɚ]","vt.谋杀",'n.谋杀,危险物|||vt.谋杀,折磨,损坏|||vi.谋杀','His parents and sister were all murdered by the terrorists.','他的父母和姐姐都是被恐怖分子杀害的。','That famous politician was murdered last year.','那位著名的政治家去年被谋杀了。'}

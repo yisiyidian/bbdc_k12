@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contort"]={"contort","[kən'tɔːt]","[kən'tɔrt]","v.(使)扭曲",'v.(使)扭曲|||vt.扭曲','Her face contorted/was contorted with pain.','她的脸因疼痛而走了样.','pain that contorted their faces.','痛苦使他们脸孔扭曲'}

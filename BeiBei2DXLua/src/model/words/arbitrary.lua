@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arbitrary"]={"arbitrary","['ɑːbɪt(rə)rɪ]","['ɑrbətrɛri]","adj.任意的",'adj.任意的,专制的,武断的,霸道的','The diet imposes overall calorie limits, but daily menus are arbitrary.','食谱规定了总的卡路里限制，但每天的菜单可据爱好自定','I have no idea of what is in fashion so my choice is quite arbitrary.','我不知道什么时兴，因此我的选择是非常随意的。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["skate"]={"skate","[skeɪt]","[sket]","v.滑冰",'n.冰鞋|||v.滑冰|||vi.溜冰,滑冰','I used to be able to skate quite well, but I\'ve lost the knack.','我从前滑水滑得很不错, 可现在没有这本事了.','I can move very fast across the ice on skates.','我穿着冰鞋在冰上滑得很快。'}

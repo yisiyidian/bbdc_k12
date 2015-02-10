@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gargantuan"]={"gargantuan","[gɑː'gæntjʊən]","[ɡɑr'ɡæntʃuən]","adj.巨大的",'adj.巨大的,庞大的','My gargantuan, pristine machine was good for writing papers and playing solitaire , and that was all.','我那庞大的、原始的计算机只适合写文章和玩纸牌游戏，就这些。','Right away, I realized this was a mistake of gargantuan proportions.','我立刻意识到这是一个巨大的错误。'}

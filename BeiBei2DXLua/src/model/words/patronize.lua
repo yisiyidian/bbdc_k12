@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["patronize"]={"patronize","[ˈpætrəˌnaɪz]","[ˈpeɪtrəˌnaɪz;ˈpætrənˌaɪz]","vt.资助",'vt.资助,屈尊俯就地对待…,经常光顾','Some television programmes tend to patronize children.','有些电视节目往往以大人的观点对待儿童。','We patronize our neighbourhood stores.','我们通常到邻近的商店采买。'}

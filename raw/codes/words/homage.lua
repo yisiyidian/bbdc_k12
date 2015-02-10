@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["homage"]={"homage","['hɒmɪdʒ]","['hɑmɪdʒ]","n.敬意",'n.敬意，效忠','Many came to do the dead man homage.','很多人前来向死者致哀。','We pay homage to the genius of Shakespeare.','我们对莎士比亚的天才表示敬仰。'}

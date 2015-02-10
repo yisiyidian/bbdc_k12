@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["limbo"]={"limbo","['lɪmbəʊ]","['lɪmbo]","n.丢弃废物的地方",'n.丢弃废物的地方，中间过渡状态,拘禁|||Limbo:林波舞（西印度群岛的一种舞蹈）','I didn\'t know whether my family was alive or dead. I felt as if I was in limbo.','我不知道家人是生是死，感觉自己茫然无措。','The negotiations have been in limbo since mid-December.','从12月中旬开始谈判就一直处于停滞状态。'}

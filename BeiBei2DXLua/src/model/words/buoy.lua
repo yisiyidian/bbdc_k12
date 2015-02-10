@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["buoy"]={"buoy","[bɒɪ]","['bʊi]","n.浮标",'n.浮标,浮筒,救生圈|||v.使...浮,支撑','We felt buoyed up by the good news.','我们觉得这个好消息很令人鼓舞。','Share prices were buoyed up by hopes of an end to the recession.','因经济衰退状况终止有望，股票价格得以保持高位。'}

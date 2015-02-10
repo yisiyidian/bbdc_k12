@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["circadian"]={"circadian","[sɜː'keɪdɪən]","[sɝ'kedɪən]","adj.[生]昼夜节律的",'adj.[生]昼夜节律的,生理节奏的','Sleeping late on weekends can also disrupt your circadian rhythm.','周末太晚休息同样会打乱你的生理节奏。','Aminals have their circadian clocks','动物有他们自己的生物钟'}

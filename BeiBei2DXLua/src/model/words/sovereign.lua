@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sovereign"]={"sovereign","['sɒvrɪn]","['sɑvrən]","n.元首",'n.元首,金镑|||adj.具有主权的,至高无上的,极好的,完全的','No earthly sovereign can do what he pleases.','没有一个世间君王可以为所欲为。','Sultan is sovereign ruler of certain Muslim countries.','苏丹是某些穆斯林国家的最高统治者。'}

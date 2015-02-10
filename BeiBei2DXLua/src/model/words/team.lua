@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["team"]={"team","[tiːm]","[tim]","n.队",'n.队,组|||vt.协同工作|||vi.结成一队|||adj.团队的','A team of nurses assisted the doctor in performing the operation.','一组护士协助医生施行手术。','A cricket team is comprised of eleven players.','一个板球队由11名队员组成。'}

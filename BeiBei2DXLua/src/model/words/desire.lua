@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["desire"]={"desire","[dɪ'zaɪə]","[dɪ'zaɪɚ]","n.渴望",'n.愿望,欲望,情欲|||v.向往,要求,请求|||vt.渴望','I desire happiness.','我渴望幸福。','I am filled with desire to go back home.','我心中充满了回家的渴望。'}

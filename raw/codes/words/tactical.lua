@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tactical"]={"tactical","['tæktɪk(ə)l]","['tæktɪkl]","adj.战术上的",'adj.战术上的,战术性的,足智多谋的','A change in the location of troops, ships, or aircraft for tactical or strategic purposes.','调遣为了战略目的而对军队、船只或飞机部署的变化','A large-scale tactical exercise carried out under simulated conditions of war.','对抗演习在模拟战争状态下所进行大型战术训练'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["articulate"]={"articulate","[ɑ:'tɪkjʊleɪt]","[ɑr'tɪkjulet]","adj.有关节的",'adj.有关节的,发音清晰的|||vt.&vi.以关节连接,接合,明白地说','The more articulate, the less say.','寡言者善辩。','I\'m a little deaf, please articulate your words carefully.','我有些耳聋，请把话仔细地说清楚。'}

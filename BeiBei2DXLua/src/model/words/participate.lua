@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["participate"]={"participate","[pɑː'tɪsɪpeɪt]","[pɑr'tɪsə'pet]","vi.参加某事",'vi.参加某事；分享某事|||vt.得到或接受某部分东西','I don\'t want to participate in the English party.','我不想参加英语晚会。','The people are demanding a chance to participate more in government.','人民要求更多的参与政事的机会.'}

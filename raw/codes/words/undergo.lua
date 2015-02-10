@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["undergo"]={"undergo","[ʌndə'gəʊ]","[,ʌndɚ'ɡo]","vt.遭受",'vt.遭受,经历,忍受','The castle will undergo extensive and costly renovations.','那城堡要用钜资进行全面整修.','This city ||underwent|| great changes.','这座城市经历了巨大的变化。'}

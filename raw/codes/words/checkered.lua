@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["checkered"]={"checkered","['tʃekəd]","['tʃɛkəd]","adj.方格式的",'adj.方格式的，有波折的|||动词checker的过去式和过去分词','She wore a checkered jumper and had ribbons in her hair.','她穿着格子连衣裙，头上系着丝带。','The ground under the trees was checkered with sunlight and shade.','林地光影交错。'}

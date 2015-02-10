@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["positive"]={"positive","['pɒzɪtɪv]","['pɑzətɪv]","adj.积极的",'adj.肯定的,积极的,绝对的|||adj.正面的,正数的,阳性的','Her behaviour was a positive outrage.','她的行为残暴到了极点。','He was positive that he had seen it in the newspaper.','他肯定他已在报纸上看见过。'}

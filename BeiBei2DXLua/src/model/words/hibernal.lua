@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hibernal"]={"hibernal","[haɪ'bɜːnəl]","[haɪ'bɝnl]","adj.冬日的",'adj.冬日的,寒冷的','This is Tanghulu, a traditional hibernal appetizer in northern China.','这是糖葫芦，中国北方的传统冬季开胃食品。','Today is hibernal.','今天天气真冷。'}

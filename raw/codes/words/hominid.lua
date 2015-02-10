@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hominid"]={"hominid","['hɒmɪnɪd]","['hɑmɪnɪd]","n.原始人类",'n.原始人类|||adj.灵长类的','In 1927, at Chou-k\'ou-tien, near Beijing, a hominid lower molar of unusual pattern was discovered.','1927年,在北京附近的周口店发现一颗形状异常的人类下臼齿。','We morden human have bigger mass of brian than hominid\'s.','我们现代人类有比（原始人类）更大的脑。'}

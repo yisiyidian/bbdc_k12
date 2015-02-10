@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["morbid"]={"morbid","['mɔːbɪd]","['mɔrbɪd]","adj.病态的",'adj.病态的,不正常的','Don\'t be so morbid!','别尽往坏处想！','She always has a morbid imagination.','她总有些病态的想像。'}

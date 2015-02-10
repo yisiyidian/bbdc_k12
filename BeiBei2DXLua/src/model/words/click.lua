@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["click"]={"click","[klɪk]","[klɪk]","n.点击",'n.点击,滴答声,拍答声|||vt.点击,作滴答声,使...作拍答声|||vi.击打,完全符合,成功,以点击的方式选择','I puzzled over it for hours before it finally clicked.','我对这一问题茫然不解，几小时後终於顿开茅塞。','He saluted with a click of his heels.','他立正敬礼，鞋后跟发出咔嗒一声。'}

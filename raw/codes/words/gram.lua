@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gram"]={"gram","[ɡræm]","[ɡræm]","n.克",'n.克|||abbr.语法（=grammar）|||suf.写出或画出的东西','In developing countries, the household average is 30 gram.','在发展中国家, 每家人平均拥有30克黄金.','||Gram|| laughed at the judge. That counted against him.','克拉姆嘲笑法官, 那是对他不利的.'}

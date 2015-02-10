@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["church"]={"church","[tʃɜːtʃ]","[tʃɝtʃ]","n.教堂",'n.教堂,礼拜仪式,基督教徒|||adj.教堂的|||vt.把...带到教堂接受某种宗教仪式','The parson has devoted his whole life to the church.','这位牧师把他的一生都献给了教会。','Christians go to church on Sundays.','基督教徒每个星期日到教堂去做礼拜。'}

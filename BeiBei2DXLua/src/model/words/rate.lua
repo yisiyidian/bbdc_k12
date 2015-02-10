@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rate"]={"rate","[reɪt]","[ret]","n.比率",'n.比率,等级,价格|||vt.估价,认为,定等级;责骂|||vi.受欢迎,受推崇;责骂','That\'s one part of the job done at any rate.','不管怎么说，这个工作已经做了一部分了','What\'s the going rate of computer programmers?','计算机程序设计人员的一般工资是多少？'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plenitude"]={"plenitude","['plenɪtjuːd]","['plɛnɪtud]","n.完全",'n.完全,大量，丰富','I can feel the plenitude and joy during my work every day.','在工作的日子里，我感觉每天都很充实、快乐。','The music brought him a feeling of plenitude and freedom.','这音乐带给他一种完满和自由的感觉。'}

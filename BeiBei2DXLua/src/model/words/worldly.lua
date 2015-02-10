@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["worldly"]={"worldly","['wɜːldlɪ]","['wɝldli]","adj.世间的",'adj.世间的,世俗的,世上的','She had a mind for worldly honor.','她希望得到人世间的荣誉。','His all worldly possessions amounted to little more than the clothes he stood up in.','他在人世间的全部财产，除了身上所穿的，别无他物。'}

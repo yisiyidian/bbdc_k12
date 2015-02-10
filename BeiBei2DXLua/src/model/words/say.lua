@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["say"]={"say","[seɪ]","[se]","vt.说",'vt.说,讲,表达,假设,,指示|||vi.说|||n.发言权|||adv.大约','She ||said|| nothing to me about it.','关于这一点，她什么也没有对我讲。','||Say|| what\'s on your mind.','说说你在想什么'}

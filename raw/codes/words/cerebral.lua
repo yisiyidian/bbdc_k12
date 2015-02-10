@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cerebral"]={"cerebral","['serɪbr(ə)l; sə'riːbr(ə)l]","[sə'ribrəl]","adj.脑的",'adj.脑的','The patient died from acute cerebral haemorrhage.','患者死于急性脑溢血。','His poetry is very cerebral.','他的诗非常理性。'}

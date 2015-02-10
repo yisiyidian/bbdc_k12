@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disinclination"]={"disinclination","[,dɪsɪnklɪ'neɪʃ(ə)n]","[,dɪs,ɪnklɪ'neʃən]","n.不起劲",'n.不起劲,不感兴趣,厌恶','He has a disinclination for work.','他讨厌工作。','They are showing a marked disinclination to pursue these opportunities.','他们对争取这些机会明显表现出不乐意。'}

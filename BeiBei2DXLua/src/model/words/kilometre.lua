@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kilometre"]={"kilometre","['kɪlə,miːtə; kɪ'lɒmɪtə]","[kɪ'lɔmɪtɚ]","n.公里",'n.公里,千米','The roads merge a kilometre ahead.','这两条道路在前面一公处汇合成一条大道。','The column, four abreast, stretched out over one kilometre.','队伍4个人一行，长达1公里以上。'}

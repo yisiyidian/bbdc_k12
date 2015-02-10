@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["endeavor"]={"endeavor","[ɪn'dɛvɚ]","[ in'devə ]","n.努力",'n.努力,尽力,进取心|||vt.努力,尽力|||vi.企图,谋求','How can we endeavor to prolong the brevity of human life?','我们怎样才能延长短促的人生？','He promised that he would endeavor to correct his behavior.','他保证他会尽力纠正自己的行为'}

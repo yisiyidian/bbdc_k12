@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["straightforward"]={"straightforward","[streɪt'fɔːwəd]","[,stret'fɔrwɚd]","adj.笔直的",'adj.笔直的,率直的','His straightforward, modest manner took into camp everybody he knew.','他爽直而谦虚的态度使所有认识他的人都上了当。','A straightforward talk is better than a flowery speech.','巧言不如直说.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["albeit"]={"albeit","[ɔːl'biːɪt]","[,ɔl'biɪt]","conj.虽然(即使)",'conj.虽然(即使)','I tried, albeit unsuccessfully, to contact him.','尽管未与他联系上，可是我已尽力而为了。','I hate him albeit he helped me.','尽管他帮助过我，可是我还是恨他。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["verse"]={"verse","[vɜːs]","[vɝs]","n.诗",'n.诗,韵文,诗节|||vi.作诗|||vt.诗化,在诗中表现,对...熟悉','I can\'t quote chapter and verse but I can give you the main points the author was making.','我无法引用确切的原文, 但是我可以告诉你作者所述的要点.','The last verse will be sung in unison.','歌词的最后部分要齐唱。'}

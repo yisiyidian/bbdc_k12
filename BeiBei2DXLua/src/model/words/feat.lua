@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["feat"]={"feat","[fiːt]","[fit]","n.功绩",'n.壮举,功绩,技艺表演','I was amazed to see his dangerous feat.','他的危险技艺让我感到惊讶。','It was quite a feat to move that piano by yourself.','你真有能耐，一个人挪动那架钢琴。'}

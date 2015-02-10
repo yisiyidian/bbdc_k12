@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conservatory"]={"conservatory","[kən'sɜːvət(ə)rɪ]","[kən'sɝvətɔri]","adj.保存性的",'adj.保存性的,有保存力的|||n.温室,音乐学院','The original conservatory has been rebuilt in replica.','温室已按原样重建。','A conservatory offers the perfect excuse to let your imagination run riot.','音乐学院让你有充分的理由任想象力自由驰骋。'}

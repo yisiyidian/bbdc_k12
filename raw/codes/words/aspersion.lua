@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aspersion"]={"aspersion","[ə'spɜːʃ(ə)n]","[ə'spɝʒən]","n.洒(尤指洒圣水)",'n.洒(尤指洒圣水)，诽谤,中伤','How dare you cast aspersions on my wife\'s character!','你竟敢诽谤我妻子的人格！','Don\'t cast aspersions on my honesty.','不要对我的诚实诽谤中伤。'}

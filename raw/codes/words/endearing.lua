@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["endearing"]={"endearing","[ɪn'dɪərɪŋ; en-]","[ɪn'dɪrɪŋ]","adj.惹人喜爱的",'adj.惹人喜爱的，可爱的|||动词endear的现在分词形式','the endearing charm of a little child.','小孩子惹人爱怜的特性','it is very endearing.','它很可爱。'}

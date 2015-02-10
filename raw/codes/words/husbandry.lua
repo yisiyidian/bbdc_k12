@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["husbandry"]={"husbandry","['hʌzbəndrɪ]","['hʌzbəndri]","n.农事",'n.农事,耕作，农牧业，节约（资源）|||n.','The animal husbandry in this area has developed greatly after liberation.','解放后这个地区的畜牧业得到了巨大的发展。','farmers\' work is husbandry','农民的工作就是耕作'}

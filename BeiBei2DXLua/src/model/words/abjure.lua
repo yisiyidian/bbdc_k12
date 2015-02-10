@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abjure"]={"abjure","[əb'dʒʊə; əb'dʒɔː]","[əb'dʒʊr]","v.发誓放弃",'v.发誓放弃','The conqueror tried to make the natives abjure their religion.','征服者试著让当地人宣誓放弃他们的宗教。','They were compelled to abjure their faith.','他们被迫发誓放弃自己的信仰。'}

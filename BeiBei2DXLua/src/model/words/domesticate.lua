@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["domesticate"]={"domesticate","[də'mestɪkeɪt]","[də'mɛstɪket]","vt.驯养",'vt.驯养,使专注于家务,教化|||n.家禽，(家养)植物','Many thousand years ago,people learned how to domesticate animals','数千年以前人们就学会了饲养动物。','In spite of her efforts, Hunt had not quite domesticated.','虽然她想尽了办法,亨特仍不常在家住。'}

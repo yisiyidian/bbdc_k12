@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["defame"]={"defame","[dɪ'feɪm]","[ di'feim ]","v.诽谤",'v.诽谤,中伤|||vt.诽谤','The article is an attempt to defame an honest man.','这篇文章旨在诋毁一个正直的人.','Sgt. Norwood complained that the article defamed him.','诺维德中士抱怨这篇文章诽谤他。'}

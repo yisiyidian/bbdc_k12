@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inter"]={"inter","[ɪn'tɜː]","[ɪn'tə]","vt.埋葬",'vt.埋葬','They interred their dear comrade in the arms.','他们埋葬了亲爱的战友。','The man who was died in that accident has been interred.','在那次事故中死的那个人已经被埋葬了。'}

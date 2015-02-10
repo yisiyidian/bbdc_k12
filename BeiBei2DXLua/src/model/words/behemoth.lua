@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["behemoth"]={"behemoth","[bɪ'hiːmɒθ; 'biːhɪ,məʊθ]","[bɪ'himɔθ]","n.巨兽",'n.巨兽，庞然大物，异常巨大的东西','The city is a sprawling behemoth with no heart.','这座城市无计划地向外扩展着，成为一个中心缺失的庞然大物。','break up the behemoth','拆散这个庞然大物'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["desert"]={"desert","['dezət; dɪ'zɜːt]","['dɛzɚt]","n.沙漠",'n.沙漠,荒地,应得(的惩罚或奖励)adj.沙漠的,荒凉的vt.遗弃vi.擅离职守','The writer decided to live in the Sahara ||Desert|| for some time.','那位作家决定去撒哈拉沙漠住一段日子。','The guard deserted his post.','卫兵擅自离开了他的岗位。'}

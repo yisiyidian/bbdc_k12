@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lately"]={"lately","['leɪtlɪ]","['letli]","adv.最近",'adv.最近,不久前','That kind of bird has become more numerous around here lately.','近来在附近一带那种鸟越来越多了。','I haven\'t had enough sleep lately.','最近我睡眠不够。'}

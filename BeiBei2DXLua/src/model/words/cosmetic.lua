@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cosmetic"]={"cosmetic","[kɒz'metɪk]","[kɑz'mɛtɪk]","n.化妆品",'n.化妆品|||adj.化妆用的','A cosmetic, such as rouge, that is used to give color to the face; makeup.','化妆品一种用来给皮肤上色的化妆品，如胭脂；化妆品','A cosmetic or medicinal liquid, such as a mouthwash.','洗药，液体化妆品化妆用的或药用的液体，如漱口剂'}

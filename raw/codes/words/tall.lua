@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tall"]={"tall","[tɔːl]","[tɔl]","adj.高的",'adj.高的','Growing along the river are tall palm trees.','沿着这条河生长的是高大的棕 树。','The boy is 150 centimeters tall.','这个男孩有150厘米高。'}

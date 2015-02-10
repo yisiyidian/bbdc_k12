@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["foggy"]={"foggy","['fɒgɪ]","['fɔɡi]","adj.有雾的",'adj.有雾的','We cannot guarantee the punctual arrival of trains in foggy weather.','我们不能保证火车在雾天正点到达.','It\'s a foggy morning.','今天早晨有雾。'}

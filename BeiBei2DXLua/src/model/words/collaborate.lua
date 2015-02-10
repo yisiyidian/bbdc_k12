@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["collaborate"]={"collaborate","[kə'læbəreɪt]","[kə'læbəret]","vi.合作",'vi.合作,通敌','She collaborated with her sister on a biography of their father.','她和姐姐合作写父亲的传记。','He was suspected of ||collaborating|| with the enemy.','他被怀疑勾结敌人。'}

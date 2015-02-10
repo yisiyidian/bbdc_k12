@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mushy"]={"mushy","['mʌʃɪ]","['mʌʃi]","adj.糊状的",'adj.糊状的，含糊不清的,感伤的','When the fruit is mushy and cooked, remove from the heat.','当水果变软煮好后，就从火上端下来。','Don\'t go getting all mushy and sentimental.','不要这么多愁善感。'}

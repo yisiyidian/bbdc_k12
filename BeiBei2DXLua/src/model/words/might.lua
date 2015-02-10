@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["might"]={"might","[maɪt]","[maɪt]","aux.可能",'aux.可能,也许|||n.力量,威力|||v.或许,可以','You might do me a favor?','你或许能帮我—个忙吧?','That might be in your favor.','那可能对你有利。'}

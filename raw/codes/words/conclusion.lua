@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conclusion"]={"conclusion","[kən'kluːʒ(ə)n]","[kən'kluʒn]","n.结论",'n.结论','The result of your report is an erroneous conclusion.','你的报告结果是错误的结论。','Your information is inaccurate and your conclusion is therefore wrong.','你的信息不准确，所以你的结论是错误的。'}

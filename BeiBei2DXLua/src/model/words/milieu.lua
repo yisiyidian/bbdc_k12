@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["milieu"]={"milieu","['miːljɜː; mɪ'ljɜː]","[mi'ljɜː]","n.周围",'n.周围，背景','His natural milieu is that of the arts.','他生于艺术之家。','Foods usually provide a good milieu for the persistence of viruses.','食品通常为病毒存续提供了一个良好的栖身所。'}

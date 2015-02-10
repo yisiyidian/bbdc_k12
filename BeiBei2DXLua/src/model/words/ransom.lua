@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ransom"]={"ransom","['ræns(ə)m]","['rænsəm]","n.赎金",'n.赎金,赎身,赎回','That painting must be worth a king\'s ransom.','那幅画一定价值连城.','The dam held the floodwaters. Thieves held the stolen painting for ransom.','水库控制着洪水。小偷用偷来的画索取赎金'}

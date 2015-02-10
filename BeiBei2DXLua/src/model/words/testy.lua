@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["testy"]={"testy","['testɪ]","['tɛsti]","adj.易怒的",'adj.易怒的,暴躁的','Susan was very unlucky as she was surrounded by a testy husband and his unlimited debts.','苏珊非常不幸，被易怒的丈夫和他所欠的无休止的赌债包围着。','Ben\'s getting a little testy in his old age.','上了年纪后本变得有点性急了。'}

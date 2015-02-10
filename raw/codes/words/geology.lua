@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["geology"]={"geology","[dʒɪ'ɒlədʒɪ]","[dʒɪ'ɑlədʒi]","n.地质学",'n.地质学，（某地区的）地质情况，地质学的著作','His son specializes in geology.','他的儿子攻读地质学.','||Geology|| here passes over the continuation of the history of man to Archeology.','地质学在此把人类历史的延续移交给考古学。'}

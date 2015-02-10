@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spout"]={"spout","[spaʊt]","[spaʊt]","n.喷口",'n.喷口，水管，（鲸等的）喷水口|||v.喷出,滔滔不绝地说|||n.','Children dislike being spouted at by pompous teachers.','学生不喜欢听自命不凡的教师对他们夸夸其谈。','He is always spouting Shakespeare.','他老是喋喋不休地谈莎士比亚。'}

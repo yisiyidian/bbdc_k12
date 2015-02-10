@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["climatologist"]={"climatologist","[,klaɪmə'tɑlədʒɪst]","[ ,klaimə'tɔlədʒist ]","n.气象学家",'n.气象学家','climatologist climatology','the scientific study of climate','The climatologist is greatly concerned with the time constants of the energy reservoirs of the world.','气候学家最关心的是世界上能量贮藏器的时间常数'}

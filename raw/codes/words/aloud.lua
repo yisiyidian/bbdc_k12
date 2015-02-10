@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["aloud"]={"aloud","[ə'laʊd]","[ə'laʊd]","adv.出声地",'adv.出声地,大声地','Read (the letter) aloud, please.','请大声念（这封信）.','She couldn\'t hold back her tears any longer and wept aloud.','她再也忍不住了,大声哭泣起来.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["purely"]={"purely","['pjʊəlɪ]","['pjʊrli]","adv.纯粹地",'adv.纯粹地|||adv.清洁地,贞淑地','The doctrine that the human being is purely animal with no spiritual nature.','人即兽理论主张人是纯粹的野兽，没有精神活动的理论','Attendance is purely voluntary.','这次出席纯粹是自愿的.'}

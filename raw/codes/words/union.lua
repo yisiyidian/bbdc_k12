@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["union"]={"union","['juːnjən; -ɪən]","['junɪən]","n.联盟",'n.联盟,结合,政党,工会|||adj.联邦政府的,工会的','The Trade ||Union|| Movement works to obtain higher wages and better conditions.','工会运动旨在争取更高的工资和更好的工作条件。','Fifteen separate republics comprised the Soviet ||Union||.','苏联由十五个加盟共和国组成。'}

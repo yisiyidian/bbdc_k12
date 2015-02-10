@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plateau"]={"plateau","['plætəʊ]","[plæ'to]","n.高原;平稳;稳定状态",'n.高原;平稳;稳定状态|||vi.到达平稳阶段','Mortgage rates declined, then reached a plateau.','抵押价格下跌，然后达到稳定水平','After a period of rapid inflation, price have now reach a plateau.','经急剧通货膨胀之後物价现已趋於平稳。'}

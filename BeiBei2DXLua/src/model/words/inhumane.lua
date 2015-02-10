@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inhumane"]={"inhumane","[ɪnhjʊ'meɪn]","['ɪnhjʊ'men]","adj.无人情味的",'adj.无人情味的,薄情的,残忍的','He was kept under inhumane conditions.','他被置于惨无人道的环境里。','They suffer under inhumane working conditions as instruments for making money.','他们是工具,在不人道的环境中挣钱'}

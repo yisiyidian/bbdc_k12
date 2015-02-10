@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insider"]={"insider","[ɪn'saɪdə]","[ɪn'saɪdɚ]","n.内部的人",'n.内部的人,会员,知道内情的人','An insider said, "Katharine has told friends it is time to end her career."','一名知情者说，“凯瑟琳告诉朋友们她该结束自己的职业生涯了。”','insider','内部人员'}

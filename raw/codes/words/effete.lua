@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["effete"]={"effete","[ɪ'fiːt]","[ɪ'fit]","adj.贫瘠的",'adj.贫瘠的，失去活力的,疲惫的,衰弱的','They are an effete group of self-professed intellectuals.','他们是一群自鸣颓废的知识分子。','People said the aristocracy was effete.','人们说贵族阶级已是日薄西山了。'}

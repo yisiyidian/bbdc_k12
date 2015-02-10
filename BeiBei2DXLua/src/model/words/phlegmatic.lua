@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["phlegmatic"]={"phlegmatic","[fleg'mætɪk]","[flɛɡ'mætɪk]","adj.冷静的",'adj.冷静的,冷淡的','Commuting in the rush-hour requires a phlegmatic temperament.','在上下班交通高峰期间乘坐通勤车要有安之若素的心境。','A phlegmatic mind in an emergency is more important.','在紧急情况下有颗冷静的头脑是至关重要的。'}

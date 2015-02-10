@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["derision"]={"derision","[dɪ'rɪʒ(ə)n]","[dɪ'rɪʒn]","n.嘲笑",'n.嘲笑，笑柄','The proposal was held in derision by members of the board.','这项决议受到了委员会成员们的嘲笑。','Americans speak with derision of those who are lazy.','美国人总是带着嘲笑的口气谈论那些懒惰的人。'}

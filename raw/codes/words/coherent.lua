@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coherent"]={"coherent","[kə(ʊ)'hɪər(ə)nt]","[ko'hɪrənt]","adj.连贯的",'adj.互相耦合的,清晰的，明了的，凝聚性的,连贯的','The views of party leaders coalesced to form a coherent policy.','党的领导人的各种观点已统一为一致的政策.','a coherent writing','文理通顺'}

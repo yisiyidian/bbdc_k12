@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unthinkable"]={"unthinkable","[ʌn'θɪŋkəb(ə)l]","[ʌn'θɪŋkəbl]","adj.不能想的",'adj.不能想的,想像不到的,过份的','Raising taxes was politically unthinkable.','增加税收在政治上来讲是不能考虑的','It is unthinkable that we shall allow a nuclear holocaust to occur.','我们若竟让核武器大屠杀的惨剧发生，简直是匪夷所思。'}

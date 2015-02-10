@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disprove"]={"disprove","[dɪs'pruːv]","[,dɪs'pruv]","vt.证明...是不对的",'vt.证明...是不对的,提出...的反证','The two parties disprove the theory of the other, but unite in persecute the dissenter.','尽管这两党各自不同意它党的理论，在迫害持异议者这一点上却是一致的。','In his latest book, he writes that the theory has been disproved.','他在最近写的书里说那种理论已证明不确.'}

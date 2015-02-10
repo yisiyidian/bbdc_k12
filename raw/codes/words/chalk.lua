@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chalk"]={"chalk","[tʃɔːk]","[tʃɔk]","n.粉笔",'n.粉笔|||v.用粉笔写,记录','We\'re not beaten yet, (not) by a long chalk.','我们还没有败, 远远没败.','Dust yourself down you\'re covered in chalk.','把你自己身上掸掸--上面都是粉笔末.'}

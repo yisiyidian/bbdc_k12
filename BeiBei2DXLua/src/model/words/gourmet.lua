@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gourmet"]={"gourmet","['gʊəmeɪ; 'gɔː-]","['ɡʊrme]","n.美食家",'n.美食家,美食馆','A gourmet like him always eats in expensive restaurants.','像他这样的美食家总是到豪华的餐馆用餐。','Flavored coffee is sold at gourmet food stores and coffee shops.','调味咖啡在美食店和咖啡馆出售。'}

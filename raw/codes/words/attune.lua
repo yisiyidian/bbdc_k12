@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["attune"]={"attune","[ə'tjuːn]","[ə'tʊn; ə'tjʊn]","vt.调",'vt.调,使...合调,使...相合','His ear is still attune to the sound of the London suburb.','他的耳朵对伦敦郊区的语音仍然一听就能辨别。','We are becoming attuned to the noise of the new factory nearby.','我们逐渐适应了附近新工厂的噪声.'}

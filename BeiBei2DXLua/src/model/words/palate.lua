@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["palate"]={"palate","['pælət]","['pælət]","n.上颚",'n.上颚,味觉,趣味','A discriminating collector of rare books; a dish for the discriminating palate.','一位有鉴赏力的稀有书籍收集者；为美味鉴赏者而备的一道菜','I have a good palate for fine wine.','我善于品尝好酒。'}

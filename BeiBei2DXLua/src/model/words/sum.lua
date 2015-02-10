@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sum"]={"sum","[sʌm]","[sʌm]","n.总数(计)",'n.总数(计),金额,顶点,概略,一笔钱|||vt.总计,概括|||vi.总计','Is that the sum of what you\'ve done in the last two years?','这就是你最近两年中完成的全部数量吗？','The last section sums up all the arguments on either side.','最后一部分总结了双方的全部论点。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indignation"]={"indignation","[ɪndɪg'neɪʃ(ə)n]","[,ɪndɪɡ'neʃən]","n.愤怒",'n.愤怒,愤慨,义愤','He could scarcely keep in his indignation.','他愤怒得难以自持。','The news roused great indignation.','这条消息引起了极大的愤慨。'}

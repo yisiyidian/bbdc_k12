@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["annuity"]={"annuity","[ə'njuːɪtɪ]","[ə'nuəti]","n.年金",'n.年金,养老金','Alexander receives a small annuity.','亚历山大获得了一份数额不大的年金。','Investors should consider putting some money into an annuity.','投资者们应当考虑存一些年金。'}

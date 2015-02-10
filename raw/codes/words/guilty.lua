@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["guilty"]={"guilty","['gɪltɪ]","['ɡɪlti]","adj.有罪的",'adj.有罪的,内疚的','He passed judgement on the guilty man.','他对那个罪犯做出了裁决。','The court found him guilty.','法官判他有罪。'}

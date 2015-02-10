@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perplexing"]={"perplexing","[pə'pleksɪŋ]","[ pə'pleksiŋ ]","adj.令人费解的",'adj.令人费解的,使人困惑的','The whole affair is very perplexing.','整件事令人感到莫名其妙.','This might seem very perplexing to those who know nothing about it.','这对那些对它一无所知的人来说可能显得很难理解.'}

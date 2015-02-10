@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["composure"]={"composure","[kəm'pəʊʒə]","[ kəm'pəuʒə ]","n.镇静",'n.镇静,沉著','For a minute he looked uncertain, and then recovered his composure.','有一小会儿他看上去有些迟疑不定，之后又恢复了镇定。','She recovered her composure and smiled.','她恢复了镇静，笑了笑。'}

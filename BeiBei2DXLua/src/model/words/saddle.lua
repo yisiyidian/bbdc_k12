@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["saddle"]={"saddle","['sæd(ə)l]","['sædl]","n.鞍",'n.鞍,车座,山脊,拖具|||vt.装以马鞍,使负担|||vi.装马鞍','The saddle galled the horse\'s back.','马鞍擦伤了马背。','Better lose the saddle than the horse.','【谚】宁可丢鞍，不可失马。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crisp"]={"crisp","[krɪsp]","[krɪsp]","adj.脆的",'adj.脆的,易碎的|||n.薯片,松脆物|||vt.&vi.使发脆','A confection made of nut kernels, especially almonds or pecans, stirred in boiling sugar syrup until crisp and brown.','干果糖用干果仁，尤指杏仁或山核桃仁在沸腾的糖浆里搅拌直至发焦变脆而制成的蜜饯','A small crisp piece of toasted or fried bread.','烤面包片，煎面包片一种烤的或油煎的脆面包片'}

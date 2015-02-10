@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["endow"]={"endow","[ɪn'daʊ; en-]","[ɪn'daʊ]","vt.赋予",'vt.捐助,赋予,使具有某种品质','He is endowed with literary talent.','他有文学天分。','She both built and endowed the hospital.','她不仅建了医院还给医院捐赠资金。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["monotone"]={"monotone","['mɒnətəʊn]","['mɑnəton]","adj.单调的",'adj.单调的|||n.(说话或唱歌)单调,单调音','A monotone recitation of names.','名字的单调的朗诵','a monotone recitation of names.','名字的单调的朗诵'}

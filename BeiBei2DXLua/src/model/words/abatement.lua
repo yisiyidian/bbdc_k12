@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abatement"]={"abatement","[ə'beɪtm(ə)nt]","[ə'betmənt]","n.减少",'n.减少,减轻,缓和，减少额，（尤指）减税额','A noise abatement notice is served on the club.','向俱乐部发停止大声喧哗的通知。','The abatement of tax makes suppliers happy.','减税令供应商很高兴。'}

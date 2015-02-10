@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["symphony"]={"symphony","['sɪmf(ə)nɪ]","['sɪmfəni]","n.交响乐",'n.交响乐','The strings are muted throughout the closing bars of the symphony.','该交响曲结束部分各节中的弦乐全为弱化音.','The first movement of the symphony is beautiful.','这部交响乐的第一乐章是很优美的。'}

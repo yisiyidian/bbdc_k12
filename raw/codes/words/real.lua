@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["real"]={"real","[riːl]","['riəl]","adj.实际的",'adj.实际的,现实的,真的,真实的|||adv.非常|||n.真实的事,真实','What was the real reason for your absence?','你缺席的真正原因是什么？','a real friend.','一个真正的朋友'}

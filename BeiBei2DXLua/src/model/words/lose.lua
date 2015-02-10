@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lose"]={"lose","[luːz]","[luz]","vt.遗失",'vt.遗失,损失,失败,摆脱|||vi.丢失,失败|||[计算机]失去','Such behaviour will lose you everyone\'s sympathy.','你这种表现大家就不会同情你了。','He ||lost|| his life in the war.','他在战争中丧生。'}

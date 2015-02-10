@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["consulate"]={"consulate","['kɒnsjʊlət]","['kɑnsələt]","n.领事",'n.领事,领事馆','The consulate is closed on Sunday.','领事馆周日不办公。','The document shall be legalized at the nearest consulate.','这些文件应在就近领事馆得到认可。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["manufacture"]={"manufacture","[mænjʊ'fæktʃə]","['mænjə'fæktʃɚ]","vt.制造",'n.产品,制造,制造业|||vt.制造,加工|||vi.参与制造','Ammonia, coal tar and coke are all by-products obtained in the manufacture of coal gas.','氨气、煤焦油、焦煤都是煤气生产过程中的副产品.','The manufacture of these small components is expensive.','制造这些小部件是非常昂贵的。'}

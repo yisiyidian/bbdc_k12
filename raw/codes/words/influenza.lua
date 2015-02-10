@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["influenza"]={"influenza","[ɪnflʊ'enzə]","[,ɪnflu'ɛnzə]","n.流行性感冒",'n.流行性感冒','A few cases of influenza cropped out every now and then.','不时出现一些流行性感冒的病例。','She was taken down with influenza.','她患了流行性感冒。'}

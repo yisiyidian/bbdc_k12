@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imprudent"]={"imprudent","[ɪm'pruːd(ə)nt]","[ɪm'prudnt]","adj.轻率的",'adj.轻率的，不谨慎的','The government consider it imprudent to abolish the death penalty.','政府认为废除死刑是轻率之举。','It would be imprudent of you to make enemies of those who can help you.','与能帮助你的人为敌将是不明智的。'}

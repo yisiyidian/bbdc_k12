@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fireplace"]={"fireplace","['faɪəpleɪs]","['faɪɚples]","n.壁炉",'n.壁炉','His portrait (was) hung above the fireplace.','他的肖像挂在壁炉的上方.','She was standing too close to the fireplace and her dress caught fire.','她站得离壁炉太近了, 衣服烧著了.'}

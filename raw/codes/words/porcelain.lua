@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["porcelain"]={"porcelain","['pɔːs(ə)lɪn]","['pɔsəlen]","n.瓷器",'n.瓷器,瓷|||adj.瓷制的,精美的,脆的','porcelain teacups; a doll with a porcelain face.','瓷茶杯；瓷脸娃娃','I don\'t know enough about porcelain to be able to price these plates.','我不太懂得瓷器，估计不出这些盘子的价钱。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["predispose"]={"predispose","[,priːdɪ'spəʊz]","['pridɪ'spoz]","v.(使)易罹患",'v.(使)易罹患,(使)预先偏向于','The inhabitants are predisposed to rheumatism by the damp climate.','因气候潮湿, 居民易患风湿症.','His early training predisposed him to a life of adventure.','他早年所受的教养使他热衷於冒险活动.'}

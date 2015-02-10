@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chemist"]={"chemist","['kemɪst]","['kɛmɪst]","n.化学家",'n.化学家,药剂师','Do you want anything from the chemist?','你想向化学家要些什么吗？','The chemist made a mistake when making up the prescription.','药剂师配错了药.'}

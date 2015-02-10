@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mysterious"]={"mysterious","[mɪ'stɪərɪəs]","[mɪ'stɪrɪəs]","adj.神秘的",'adj.神秘的,不可思议的','The enchanter is very mysterious.','魔法师非常神秘。','There are many mysterious stories about the Egyptian pyramids.','关于埃及金字塔有许多神秘的故事。'}

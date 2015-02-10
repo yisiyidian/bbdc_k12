@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dictator"]={"dictator","[dɪk'teɪtə]","['dɪktetɚ]","n.独裁者",'n.独裁者','These initials are those of the dictator of the letter.','这些姓名开头字母是这封信的口授者的姓名开头字母','The dictator represses all opposition as illegal.','这个独裁者把所有反对他的活动均视为非法加以镇压.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nauseate"]={"nauseate","['nɔːsɪeɪt; -z-]","['nɔzɪet]","v.作呕",'v.作呕,产生恶感,厌恶','The smell of meat nauseated me.','我一闻到肉味儿就恶心。','Finally, all those delicacies from mountain and sea began to nauseate me.','那些山珍海味吃到最后，简直令人反胃。'}

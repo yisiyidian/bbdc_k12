@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["judge"]={"judge","[dʒʌdʒ]","[dʒʌdʒ]","vt.&vi.评判",'vt.&vi.审判，评判；断定|||vt.估计；评价；（尤指）批评；想，认为|||n.法官；裁判员；评判员；鉴定人','The judge made recommendations to the court.','法官向审判人员提出建议。','I judge him to be about 40.','我断定他有40来岁。'}

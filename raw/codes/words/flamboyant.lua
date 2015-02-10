@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flamboyant"]={"flamboyant","[flæm'bɒɪənt]","[flæm'bɔɪənt]","adj.艳丽的",'adj.艳丽的,炫耀的，火焰式的|||n.凤凰木','His style of choreography is flamboyant.','他的舞蹈设计风格是复杂夸张的。','His clothes were rather flamboyant for such a serious occasion.','他的衣着在这种严肃场合太浮夸了。'}

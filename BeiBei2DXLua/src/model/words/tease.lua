@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tease"]={"tease","[tiːz]","[tiz]","v.欺负",'n.揶揄者,戏弄|||v.欺负,嘲弄','She teased out the knots in her hair.','她耐心地用手指把缠结的头发理顺。','Don\'t take it seriously - he\'s only ||teasing||.','别把它当真，他只不过是在开玩笑。'}

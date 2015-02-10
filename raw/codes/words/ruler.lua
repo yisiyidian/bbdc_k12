@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ruler"]={"ruler","['ruːlə]","['rulɚ]","n.尺子",'n.尺子|||n.统治者','The chairman is only the nominal ruler of the country.','主席只是那个国家名义上的统治者。','The colonists revolted against their British ruler.','殖民地人民反抗他们的英国统治者。'}

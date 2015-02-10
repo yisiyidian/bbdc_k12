@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conifer"]={"conifer","['kɒnɪfə; 'kəʊn-]","['kɑnəfɚ]","n.针叶树",'n.针叶树','In conifer orchards new stumps should be removed.','在针叶树的种子园，新的伐桩应该挪走。','This land was covered by conifers.','这片陆地被针叶树覆盖。'}

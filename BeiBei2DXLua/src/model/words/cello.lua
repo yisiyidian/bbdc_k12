@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cello"]={"cello","['tʃeləʊ]","['tʃɛlo]","n.大提琴",'n.大提琴','She plays a melodious cello.','她拉着一手悦耳的大提琴。','I am enjoying a cello performance.','我正聆听大提琴的表演'}

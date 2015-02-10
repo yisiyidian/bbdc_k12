@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sector"]={"sector","['sektə]","['sɛktɚ]","n.扇形",'n.扇形,扇区,部门,区域|||vt.分区','Price in most sector is steady to slightly easier today.','今天多数部门的价格从坚稳渐趋疲软。','All sector of the economy suffer from the fall in the exchange rate.','所有经济部门都遭受到这次汇率下跌带来的损失。'}

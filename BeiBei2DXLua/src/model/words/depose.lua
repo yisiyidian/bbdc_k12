@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["depose"]={"depose","[dɪ'pəʊz]","[dɪ'poz]","v.免职",'v.免职,废,作证|||v.作证,供证','The witness is going to depose.','证人即将宣誓做证。','The head of state was deposed by the army.','国家元首被军队废黜了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diagnosis"]={"diagnosis","[,daɪəg'nəʊsɪs]","[,daɪəɡ'nosɪs]","n.诊断",'n.诊断','The engineer made a complete diagnosis of the bridge\'s collapse.','工程师对桥的倒塌做一次彻底的调查分析。','A positive diagnosis can be made only after ruling out gastric and duodenal ulcer.','只有排除了胃溃疡和十二指肠溃疡的可能性之后，才能作出明确诊断。'}

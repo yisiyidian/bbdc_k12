@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["distasteful"]={"distasteful","[dɪs'teɪstf(ʊ)l]","[dɪs'testfl]","adj.味道差的",'adj.味道差的,令人反感的,讨厌的','Smoking is distasteful to my family.','我一家都不喜欢抽烟。','Shot me a distasteful glance.','厌恶地瞪了我一眼'}

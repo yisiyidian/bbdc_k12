@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["but"]={"but","[bʌt; bət]","[bʌt]","conj.但是",'adv.仅仅,只|||conj.但是|||prep.除...以外|||pron.只有','||But|| for the safety-belt I wouldn\'t be alive today.','若没有安全带，我就不能活到今天。','I came home sadder but wiser.','回到家后，我比以前伤感，但也更懂事了。'}

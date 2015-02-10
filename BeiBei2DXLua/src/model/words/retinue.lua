@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["retinue"]={"retinue","['retɪnjuː]","['rɛtənu]","n.侍从",'n.侍从,随员','The Queen was flanked by a retinue of bodyguards and policemen.','女王左右有保镖和警察护卫着。','He strode past with his retinue of aides.','他与他的随从们大步走了过去。'}

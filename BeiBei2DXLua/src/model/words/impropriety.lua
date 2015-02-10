@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impropriety"]={"impropriety","[,ɪmprə'praɪətɪ]","[,ɪmprə'praɪəti]","n.不适当(不正确",'n.不适当(不正确,用词错误)','He resigned amid allegations of financial impropriety.','他在财务作假的质疑声中辞职了。','There is no suggestion of impropriety by the minister.','没有任何迹象表明部长行为不端。'}

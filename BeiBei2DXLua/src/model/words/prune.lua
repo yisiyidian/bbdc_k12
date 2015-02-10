@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prune"]={"prune","[pruːn]","[prun]","n.李子干",'n.李子干|||vt.修剪,砍掉,削减|||vi.删除','Next year\'s budget will have to be drastically pruned.','下一年度的预算将大幅度削减。','The gardener pruned the dead branches.','园丁剪去枯枝。'}

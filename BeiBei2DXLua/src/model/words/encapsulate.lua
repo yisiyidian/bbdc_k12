@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["encapsulate"]={"encapsulate","[ɪn'kæpsjʊleɪt; en-]","[ɪn'kæpsjə'let]","v.装入胶囊",'v.装入胶囊,封进内部,压缩','The chairman\'s short statement encapsulates the views of the committee.','主席的简短陈辞概括了委员会的观点.','This story encapsulates scenes from his childhood.','这个故事讲的是他童年的事.'}

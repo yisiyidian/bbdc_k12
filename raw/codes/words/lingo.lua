@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lingo"]={"lingo","['lɪŋgəʊ]","['lɪŋgo]","n.奇怪难懂的语言",'n.奇怪难懂的语言,术语，行话，隐语','Spoke to me in the lingo of fundamentalism.','用原教旨主义的行话与我交谈','Don\'t use all that technical lingo try and explain in plain English.','别尽用那种专门术语--用普通的词语解释吧.'}

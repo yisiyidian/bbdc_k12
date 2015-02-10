@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contribute"]={"contribute","[kən'trɪbjuːt; 'kɒntrɪbjuːt]","[kən'trɪbjut]","vi.贡献",'vt.捐助,投稿|||vi.投稿,贡献,是原因之一','It was generous of her to contribute such a large sum.','她很大方，捐助了这么大笔钱。','Would it be presumptuous of me to ask you to contribute?','可否冒昧请求你出一份力?'}

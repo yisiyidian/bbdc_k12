@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fragrant"]={"fragrant","['freɪgr(ə)nt]","['fregrənt]","adj.芬香的",'adj.芬香的,馥郁的,愉快的','The flowers gave off a fragrant odor.','花发出一阵幽香。','It is as fragrant as you','花儿和你一样芬芳'}

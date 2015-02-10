@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alongside"]={"alongside","[əlɒŋ'saɪd]","[ə'lɔŋ'saɪd]","adv.在旁边",'adv.在旁边|||prep.在...旁边','The rain ran in shallow runnels alongside the path.','雨水流进路边的小河沟里.','We tied (the boat) up alongside the quay.','我们把船停泊在码头处.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["detrimental"]={"detrimental","[,detrɪ'ment(ə)l]","[,dɛtrɪ'mɛntl]","adj.有害的",'adj.有害的|||n.有害的人或事','Lack of sleep is detrimental to one\'s health.','缺乏睡眠有害健康。','Smoking cigarettes is detrimental to your health.','吸烟有害健康。'}

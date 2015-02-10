@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["district"]={"district","['dɪstrɪkt]","['dɪstrɪkt]","n.区",'n.区,地区,行政区|||vt.划分区域,划分地区','Common preconceptions about life in this district are increasingly being challenged.','原先普遍存在著对那一地区生活的成见越来越站不住脚了.','That kind archbishop is responsible for our church district.','那个好心的大教主负责我们这个教区。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["singe"]={"singe","[sɪn(d)ʒ]","[sɪndʒ]","v.(轻微地)烧焦",'v.(轻微地)烧焦,烫焦|||vt.烤焦','The last time we agree to help that company out of its difficulty, we singe our wing quite badly.','上次我们答应帮助那家公司摆脱困境时我们自己遭受了很大的损失。','The rug singed because it was too near the fire.','地毯太靠近壁炉已烤焦了.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discrepancy"]={"discrepancy","[dɪs'krep(ə)nsɪ]","[dɪs'krɛpənsi]","n.相差",'n.相差,差异,差别','There was a discrepancy in the two reports of the accident.','关于那次事故的两则报道有不一致之处。','The discrepancy in their ages seemed not to matter.','他们之间年龄的差异似乎没有多大关系。'}

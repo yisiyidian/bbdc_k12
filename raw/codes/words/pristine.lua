@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pristine"]={"pristine","['prɪstiːn; -staɪn]","['prɪstin]","adj.远古的",'adj.远古的,原始状态的,未受损的,新鲜而纯净的','He wiped his fingers on his pristine handkerchief.','他用他那块洁净的手帕擦了擦手指。','He wasn\'t about to blemish that pristine record.','他本不想去玷污那清白的过去。'}

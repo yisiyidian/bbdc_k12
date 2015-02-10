@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["precede"]={"precede","[prɪ'siːd]","[prɪ'sid]","vt.&vi.在...之前",'vt.&vi.在...之前,优于,较...优先','He preceded his speech with a few words of welcome the special guests.','他在演讲之前先说了几句对特邀来宾表示欢迎的话。','He came in, preceded by his wife.','他和他的妻子一前一后地走了进来。'}

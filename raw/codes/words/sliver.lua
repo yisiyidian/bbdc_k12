@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sliver"]={"sliver","['slɪvə; 'slaɪ-]","['slɪvɚ]","n.裂片",'n.裂片,细片,梳毛|||v.纵切,切成长片,剖开','A sliver of citrus peel twisted over or dropped into a beverage for flavoring.','橘子皮放入或加入饮料中调味的一小块橘子皮','The glass slivered when it fell.','玻璃杯掉在地上摔碎了.'}

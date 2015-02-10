@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sled"]={"sled","[slɛd]","[ sled ]","n.雪撬",'n.雪撬,小雪撬|||v.用撬搬运,座撬前往,乘撬','||Sled|| pulled by dog is in common use in the Arctic.','狗拉的雪橇在北极地区很常用。','A logging sled.','滑板中耕机'}

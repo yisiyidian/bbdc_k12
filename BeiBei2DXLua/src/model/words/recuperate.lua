@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["recuperate"]={"recuperate","[rɪ'kuːpəreɪt]","[rɪ'kupəret]","v.恢复",'v.恢复,使恢复健康,使恢复精神','He is still ||recuperating|| from his operation.','他动手术后仍在恢复中。','Maintaining an optimistic attitude will help you recuperate from illness.','保持乐观的心态可以帮助你恢复健康。'}

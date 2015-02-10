@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reshuffle"]={"reshuffle","[riː'ʃʌf(ə)l]","[,ri'ʃʌfl]","vt.再洗牌",'vt.再洗牌,改组|||n.改组','Who let out the details of the reshuffle in the department?','是谁泄漏了部门重组的细节?','It\'s amusing to watch members jockeying for the Prime Minister\'s attention prior to Cabinet reshuffle.','看到政府官员在内阁改组之前耍弄花招以讨得首相欢心是很有趣的。'}

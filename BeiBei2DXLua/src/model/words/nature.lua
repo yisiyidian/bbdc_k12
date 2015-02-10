@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nature"]={"nature","['neɪtʃə]","['netʃɚ]","n.自然",'n.自然,自然界,自然状态;本性,天性;本质','After a while, driving becomes second nature to you.','过不多久，开车的动作就像本能的反应一样了。','||Nature|| is at its best in spring.','春天里万物欣欣向荣。'}

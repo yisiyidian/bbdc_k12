@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gadfly"]={"gadfly","['gædflaɪ]","[ 'ɡædflai ]","n.虻",'n.虻,牛虻,惹人讨厌的人','She sent a gadfly to bother the poor cow.','她派了一只牛蝇去打扰这只可怜的牛。','It still remains to be seen whether Bill will be just a gadfly or a real threat to the president.','比尔只是故意搅局还是对总统构成真正的威胁，这还有待观察。'}

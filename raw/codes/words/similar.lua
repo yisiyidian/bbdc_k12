@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["similar"]={"similar","['sɪmɪlə]","['sɪməlɚ]","adj.相似的",'adj.相似的,类似的,相同,一样','The two buildings are similar on the whole.','从整体来看, 这两幢楼是相似的。','He talked about it in a similar way.','他对此事有相似的说法。'}

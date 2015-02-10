@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["descry"]={"descry","[dɪ'skraɪ]","[dɪ'skraɪ]","v.远远看到",'v.远远看到,发现,察看','I descry a sail on the horizon.','我看见在天水交接处的轮船。','Our host ||descried|| a gentleman of unusual appearance standing at the far end of the hall.','我们的男主人远远看到有个外表不俗的绅士站在大厅的尽头。'}

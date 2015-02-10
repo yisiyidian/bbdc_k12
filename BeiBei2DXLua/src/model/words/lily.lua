@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lily"]={"lily","['lɪlɪ]","['lɪli]","n.百合花",'adj.纯白的|||n.百合花','Comment upon this would be to paint the lily.','对此发表评论无异于画蛇添足。','She is as fair as lily.','她像百合花一样美.'}

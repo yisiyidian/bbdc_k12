@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["humanist"]={"humanist","['hjuːmənɪst]","['hjʊmənɪst]","n.人类学者",'n.人类学者,人道主义者,人文学者','It is better to say Einstein is a great humanist rather than he is silly lovely.','与其说爱翁呆得可爱,不如说他是一位伟大的人道主义者.','He is a practical humanist, who believes in the dignity of mankind.','他是个真正的人道主义者，信奉人类的尊严'}

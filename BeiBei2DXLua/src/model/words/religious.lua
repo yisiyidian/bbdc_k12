@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["religious"]={"religious","[rɪ'lɪdʒəs]","[rɪ'lɪdʒəs]","adj.宗教的",'adj.宗教的,虔诚的,细心的|||n.修道院成员,僧侣','The religious affairs have been reestablished.','宗教事务已经恢复。','People think she\'s a freak just because she\'s religious.','就因为她信教，人们就把她当成怪物。'}

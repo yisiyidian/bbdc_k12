@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forgetful"]={"forgetful","[fə'getfʊl; -f(ə)l]","[fɚ'gɛtfəl]","adj.健忘的",'adj.健忘的，疏忽的','She is forgetful of her object.','她忘却了自己的目标。','Children are forgetful and must be told time and again how to behave.','孩子们没记性，必须反复告诉他们怎样表现自己的举止。'}

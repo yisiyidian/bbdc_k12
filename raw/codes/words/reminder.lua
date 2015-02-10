@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reminder"]={"reminder","[rɪ'maɪndə]","[rɪ'maɪndɚ]","n.提醒的人",'n.提醒的人,催函','The letter was an uncomfortable reminder of my debts.','那封信是催促还债的通知, 让我很不痛快.','This has been a timely reminder of the need for constant care.','这件事适时地提醒我们要注意时时谨慎。'}

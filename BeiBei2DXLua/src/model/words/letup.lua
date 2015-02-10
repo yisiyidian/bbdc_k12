@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["letup"]={"letup","['letʌp]","[ 'letʌp ]","n.停止",'n.停止，中止，弛缓，松懈','Please letup.','请停下。','The surgeons have been working for twenty hous without letup.','那些外科医师一连工作了二十小时没有停止。'}

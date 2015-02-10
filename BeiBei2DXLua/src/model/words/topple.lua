@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["topple"]={"topple","['tɒp(ə)l]","['tɑpl]","vt.使倒塌",'vt.使倒塌|||vi.倒塌','The explosion toppled the old chimney.','这次爆炸把那个旧烟囱给炸倒了.','The pile of books toppled over onto the floor.','那一摞书倒在地上了。'}

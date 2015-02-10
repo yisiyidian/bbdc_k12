@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["continuous"]={"continuous","[kən'tɪnjʊəs]","[kən'tɪnjʊəs]","adj.连续的",'adj.连续的,继续的,连绵不断的','The patient is seriously ill and is being kept under continuous observation.','病人病情严重, 现接受持续观察.','We had twelve hours of sunshine yesterday, as against a forecast of continuous rain.','昨日有十二小时的晴天, 预报却说仍有雨.'}

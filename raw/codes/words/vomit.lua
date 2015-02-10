@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vomit"]={"vomit","['vɒmɪt]","['vɑmɪt]","vt.&vi.吐出",'vt.&vi.吐出,呕吐|||n.呕吐物','One of the best temporary cures for pride and affectation is seasickness: a man who wants to vomit never put on airs.','对自尊自大与装模作样的最佳应急疗法是晕船：要呕吐的人是决不摆架子的。','The mixture of drinks made me vomit.','我喝了混合饮料后吐了起来。'}

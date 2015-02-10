@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dedicate"]={"dedicate","['dedɪkeɪt]","['dɛdɪket]","vt.献出",'vt.献出,提献辞,致力于','The ancient Greek dedicated many shrines to Aphrodite.','古希腊人为爱神阿弗罗狄特造了许多神庙。','She dedicated her life to science.','她毕生致力于科学。'}

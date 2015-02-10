@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bog"]={"bog","[bɒg]","[bɑɡ]","n.沼泽",'n.沼泽|||v.使...陷于泥沼,陷于困境','Our discussions have bogged down.','我们的讨论陷入了僵局。','We worried that the heavy rain across the prairie would soon bog our car.','我们担心平原上的大雨将很快使我们的汽车陷入淤泥。'}

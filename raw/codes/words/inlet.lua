@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inlet"]={"inlet","['ɪnlet]","['ɪnlɪt]","n.水湾",'n.水湾，入口|||vt.引进，插入','There is an inlet to a parking lot.','那儿有一个停车场的入口.','They went to a fishing village on a small inlet of the sea.','他们去了小海湾边的一个渔村.'}

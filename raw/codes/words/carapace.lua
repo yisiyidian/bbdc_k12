@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carapace"]={"carapace","['kærəpeɪs]","['kærəpes]","n.(蟹或龟等的)甲壳",'n.(蟹或龟等的)甲壳','He used to worry that Sarah would age the same way, develop the same brittle carapace','他过去常担忧莎拉也同样会苍老，外表变得同样冷漠。','We always bear a carapace in the big city.','在大城市里生活常常感觉像背了个沉重的甲壳。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["censure"]={"censure","['senʃə]","['sɛnʃɚ]","n.责难",'n.责难,非难|||v.非难,责备，公开谴责','The senate was censured for income tax evasion.','这名参议员因逃避缴纳所得税而受到指责。','They were censured as traitors.','他们被指责为叛徒。'}

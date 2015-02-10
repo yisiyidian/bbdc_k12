@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comet"]={"comet","['kɒmɪt]","['kɑmət]","n.彗星",'n.彗星','Their memory wasn\'t very good when it came to recalling other things, but they remembered the comet.','一谈到别的事情时，他们的记性并不是很好，但他们却记得彗星。','If I had binoculars, I could see that comet clearly.','如果我有望远镜，我就可以清楚地看见那颗彗星。'}

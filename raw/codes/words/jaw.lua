@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jaw"]={"jaw","[dʒɔː]","[dʒɔ]","n.颚",'n.颚,颌,说教,流言蜚语|||vt.&vi.喋喋不休,教训','Sock him on the jaw!','揍他的下巴!','Give him a sock on the jaw!','给他下巴上来一拳!'}

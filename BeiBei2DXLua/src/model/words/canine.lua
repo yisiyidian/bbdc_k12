@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["canine"]={"canine","['keɪnaɪn; 'kæ-]","['kenaɪn]","adj.犬的",'adj.犬的,似犬的,犬科的|||n.犬，犬齿，犬科动物','The fox is a canine animal.','狐狸是犬科动物。','||Canine|| teeth are for piercing and killing prey, and tearing flesh.','犬齿用来咬穿、咬死猎物，还可以撕肉。'}

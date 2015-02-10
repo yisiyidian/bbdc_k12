@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["millennium"]={"millennium","[mɪ'lɛnɪrm]","[məˈlɛniəm]","n.一千年",'n.一千年,太平盛世','One who believes the millennium will occur.','千禧年信奉者相信千禧年会复活的人','The whole world was counting down to the new millennium.','全世界都在倒计时迎接千禧年。'}

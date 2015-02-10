@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sensuality"]={"sensuality","[sensjʊ'ælɪtɪ; senʃʊ-]","[,sɛnʃʊ'ælɪti]","n.淫荡",'n.淫荡,纵欲','A city or place of great luxury, sensuality, and often vice and corruption.','巴比伦式的城市指奢华糜烂的城市或地区，经常是罪恶和腐败的','The Geisha are on display wrapped in all their silk finery, women who are emblems of both history and sensuality.','奢糜'}

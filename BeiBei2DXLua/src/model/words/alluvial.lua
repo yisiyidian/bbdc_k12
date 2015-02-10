@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alluvial"]={"alluvial","[ə'l(j)uːvɪəl]","[ə'lʊvɪəl]","adj.[地质]冲积的",'adj.[地质]冲积的,淤积的|||n.冲积土，淤积土','Bangkok is surrounded by a vast, damp, alluvial plain, crisscrossed by a network of klong.','曼谷为一个广阔潮湿的冲积平原所环绕，有纵横交错的运河网。','Yangtze River delta is a alluvial plain.','长江三角洲是一片冲积平原。'}

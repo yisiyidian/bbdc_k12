@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["practical"]={"practical","['præktɪk(ə)l]","['præktɪkl]","adj.实际的",'adj.实际的,实用的,明智的|||n.实践考试','The whole scheme began to take on a more practical aspect.','整个计划开始更切合实际。','He has a practical partner who organizes everything for him.','他有个很能干的伙伴，替他把一切弄得井井有条。'}

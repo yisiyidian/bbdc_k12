@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["torrential"]={"torrential","[tə'renʃ(ə)l]","[tə'rɛnʃl]","adj.奔流的",'adj.奔流的,如急流的,（感情、言辞等）猛烈的','||Torrential|| rain washed out most of the weekend\'s events.','这场雨很大, 周末比赛项目多数无法进行了.','torrential erosion.','强烈的侵蚀'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rarely"]={"rarely","['reəlɪ]","['rɛrli]","adv.很少",'adv.很少,难得','I rarely have short drinks.','我很少喝烈性酒.','The country\'s car industry is so strongly protected that foreign cars are rarely seen there.','该国对汽车工业严加保护, 外国汽车甚为罕见.'}

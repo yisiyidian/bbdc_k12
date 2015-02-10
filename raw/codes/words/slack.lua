@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slack"]={"slack","[slæk]","[slæk]","n.松弛的部分",'n.松弛的部分,松散,淡季,中止|||adj.松弛的,不流畅的|||vt.使缓慢,疏忽|||vi.变松弛,逃避工作','Winter is the slack season at most hotels.','冬天是大多数旅馆的淡季。','Business is slack just now.','目前生意萧条不振。'}

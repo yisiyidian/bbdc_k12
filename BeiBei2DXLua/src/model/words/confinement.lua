@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["confinement"]={"confinement","[kən'faɪnmənt]","[kən'faɪnmənt]","n.密封",'n.密封(限制,吸持)','He has been put in solitary confinement for attacking another prisoner.','他因伤害另一囚犯而被隔离监禁.','The animals are kept in close confinement.','动物给严密地关了起来。'}

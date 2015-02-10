@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coy"]={"coy","[kɒɪ]","[kɔɪ]","adj.腼腆的",'adj.腼腆的；忸怩作态的；怕羞的|||vi.忸怩作态|||vt.爱抚','Please don\'t be so coy.','请不要那么腼腆。','She gave a coy smile when he paid her a compliment.','他恭维她时，她忸怩作态地笑了笑。'}

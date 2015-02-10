@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fishy"]={"fishy","['fɪʃɪ]","['fɪʃi]","adj.（味道或气味）象鱼的",'adj.（味道或气味）象鱼的，可疑的','Slight as the evidence is against him, it certainly looks fishy for him.','对他不利的证据虽然轻微，但对他毕竟是不祥之兆。','His story sounds fishy.','他的话有点可疑。'}

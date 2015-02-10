@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conference"]={"conference","['kɒnf(ə)r(ə)ns]","['kɑnfərəns]","n.会议",'n.会议','The conference will be held in the Capitol in Washington.','会议将在华盛顿的国会大厦举行。','He is in conference.','他正在开会。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["geography"]={"geography","[dʒɪ'ɒgrəfɪ]","[dʒɪ'ɑɡrəfi]","n.地理",'n.地理','How\'s the new geography teacher?','新来的地理老师怎么样？','The geography paper was difficult.','地理试题很难。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cinema"]={"cinema","['sɪnɪmə; -mɑː]","['sɪnəmə]","n.电影院",'n.电影院,电影','Shall we go to the cinema, ma?','我们去看电影吗，妈妈？','They streamed out of the cinema.','他们涌出电影院。'}

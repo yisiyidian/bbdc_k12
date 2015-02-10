@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["symptomatic"]={"symptomatic","[sɪm(p)tə'mætɪk]","['sɪmptə'mætɪk]","adj.具有征候的",'adj.具有征候的,征候的,根据征候的','Fever is symptomatic of illness.','发烧是疾病的徵候。','Chest pains may be symptomatic of heart disease.','胸痛可能是心脏病的症状。'}

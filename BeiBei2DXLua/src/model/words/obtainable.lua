@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obtainable"]={"obtainable","[əb'teinəbl, ɔb-]","[ əb'teinəbl, ɔb- ]","adj.能获得的",'adj.能获得的(可得到的,能达到的)','The timetable is obtainable post-free from the airline office.','航班时刻表可以向航空公司免费索取。','The periodical is obtainable on the very first day of every month.','这本杂志每月一号出版。'}

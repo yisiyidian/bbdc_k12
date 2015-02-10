@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["convert"]={"convert","[kən'vɜːt]","[kən'vɝt]","v.使转变",'v.使转变,使...改变信仰,倒置|||n.皈依者,改宗者','My mother has converted to Catholicism.','我母亲已转而信仰天主教。','The old barn we bought to convert into flats was practically tumbling down.','我们买下那个旧仓库想改建成住房，但实际上它已经快塌了。'}

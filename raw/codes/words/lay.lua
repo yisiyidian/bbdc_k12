@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lay"]={"lay","[leɪ]","[le]","vt.放置",'lie的过去式和过去分词|||vt.击,放置,产卵,使平静,打赌,压平,罚款,设计|||vi.生蛋,打赌,全力以赴|||n.隐蔽处,计划,价格,生蛋,叙事诗,诗歌,|||adj.世俗的,外行的','I lay down not so much to sleep as to think.','我躺下来与其说是要睡觉，倒不如说是要思考。','She ||laid|| about him, calling him a liar and a cheat.','她攻击他，说他说谎、是个骗子。'}

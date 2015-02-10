@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mortal"]={"mortal","['mɔːt(ə)l]","['mɔrtl]","adj.致命的",'adj.人世间的,致命的,终有一死的,极度恐怖的|||n.一个人','We were in mortal terror of being found out.','我们非常害怕被发现.','mortal throes.','死亡的痛苦'}

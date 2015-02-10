@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dissatisfaction"]={"dissatisfaction","[dɪssætɪs'fækʃn]","[dɪs'sætɪs'fækʃən]","n.不满",'n.不满','He hinted his dissatisfaction with her work.','他暗示了对她工作的不满.','She expressed her dissatisfaction with him.','她对他表示不满.'}

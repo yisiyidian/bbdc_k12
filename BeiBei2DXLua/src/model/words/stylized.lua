@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stylized"]={"stylized","['stailaizd]","[ 'stailaizd ]","adj.程式化的",'v.仿效(因袭)|||adj.程式化的','The gestures are highly stylized and symbolic.','各种姿势都是高度程式化的,并且具有高度象征意义.','This new dress is the stylized design of the 18th century.','这套新款服装因袭了18世纪的款式。'}

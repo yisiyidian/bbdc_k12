@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["truce"]={"truce","[truːs]","[ tru:s ]","n.休战",'n.休战,(争执,烦恼等的)缓和|||v.以停战结束','The two sides call a truce to avoid further bloodshed.','双方宣布停战以避免再有伤亡。','He was in favour of the declaration of a truce.','他赞成宣布停战.'}

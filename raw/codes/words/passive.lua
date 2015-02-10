@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["passive"]={"passive","['pæsɪv]","['pæsɪv]","adj.被动的",'adj.被动的,消极的|||n.被动性','In spite of my efforts the boy remained passive.','尽管我很努力，那男孩还是不起劲。','We should translate this sentence in passive voice.','我们应该用被动语态翻译这个句子。'}

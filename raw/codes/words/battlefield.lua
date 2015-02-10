@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["battlefield"]={"battlefield","['bæt(ə)lfiːld]","['bætlfild]","n.战场",'n.战场，争论点','We carried the dead and (the) wounded off the battlefield.','我们把伤亡者抬出了战场.','Our nation\'s manhood died on the battlefield.','我国的男儿已战死疆场.'}

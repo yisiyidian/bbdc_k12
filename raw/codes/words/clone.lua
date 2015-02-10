@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["clone"]={"clone","[kləʊn]","[klon]","v.克隆",'n.克隆，无性繁殖，复制品|||v.克隆，复制','filled with business-school clones in gray and blue suits','“到处都充斥着身穿灰色、蓝色西装的商业人士”','clone a frog; clone a plant variety.','无性生殖的青蛙；无性生殖的植物品种'}

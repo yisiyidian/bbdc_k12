@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flee"]={"flee","[fliː]","[fli]","vi.逃跑",'vi.逃跑,逃走,消失|||vt.避免,回避','The fleeing rebels found a sanctuary in the nearby church.','叛乱後逃跑的人躲入附近教堂寻求庇护.','The mists was fleeing before the rising sun.','太阳慢慢升起，薄雾渐渐消失。'}

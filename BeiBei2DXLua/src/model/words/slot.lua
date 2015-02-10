@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slot"]={"slot","[slɒt]","[slɑt]","n.插槽",'n.水沟,细长的孔,狭缝,职位,插槽,(鹿的)踪迹|||vt.留细长的孔,插入,放置|||vi.适用于','It\'s not easy to slot all the young school-leavers in to suitable jobs.','给所有年轻的学校毕业生安排合适的工作并不是件容易的事情。','Pick up the receiver and deposit a coin in the slot.','拿起听筒之后，放一个硬币在这个小口子里。'}

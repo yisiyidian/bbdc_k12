@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["beware"]={"beware","[bɪ'weə]","[bɪ'wɛr]","v.小心",'v.小心,谨防','||Beware|| your hat, lest it should be blown away.','当心你的帽子别被吹走。','I was told to beware lest I injure him.','有人关照我，要我小心别伤害他。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["protrude"]={"protrude","[prə'truːd]","[pro'trud]","v.使突出",'v.使突出，伸出,突出','He managed to hang on to a piece of rock ||protruding|| from the cliff.','他设法抓住了悬崖上向外伸出的岩石。','He ate so much that his stomach protruded.','他吃了那么多，胃都突起来了。'}

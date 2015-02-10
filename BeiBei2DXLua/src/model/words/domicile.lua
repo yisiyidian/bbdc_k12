@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["domicile"]={"domicile","['dɒmɪsaɪl; -sɪl]","['dɑmɪsaɪl]","n.住所",'n.住所,住宅','It is  hard  to find a satisfied domicile  in a big city.','在大城市找个满意的住所实在太难了。','You will need to report your change of domicile to your insurance company.','你应该把你住处更换的消息告诉你的保险公司。'}

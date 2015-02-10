@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["malicious"]={"malicious","[mə'lɪʃəs]","[mə'lɪʃəs]","adj.怀恶意的",'adj.怀恶意的,恶毒的','Don\'t use malicious words to hurt others.','不要恶语中伤别人。','She described the charges as malicious.','她说这些指控用意恶毒。'}

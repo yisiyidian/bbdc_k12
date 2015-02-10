@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["notice"]={"notice","['nəʊtɪs]","['notɪs]","n.注意",'n.注意,布告,通知|||vt.注意,通知,留心','It was Susan who brought the problem to our notice.','是苏珊提醒我们注意那个问题的。','Did you notice anything peculiar?','你注意到有什么异常的事吗？'}

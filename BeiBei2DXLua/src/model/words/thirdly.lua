@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thirdly"]={"thirdly","['θɜːdlɪ]","[ 'θə:dli ]","adv.第三",'adv.第三','The main events were as follows: first, the president\'s speech, secondly the secretary\'s reply and thirdly, the chairman\'s summing-up.','主要活动如下: 第一项, 总裁讲话; 第二项, 秘书做解答; 第三项, 主席做总结.','||Thirdly||, I trust myself.','第三点是我相信我自己。'}

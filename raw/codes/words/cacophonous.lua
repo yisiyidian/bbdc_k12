@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cacophonous"]={"cacophonous","[kə'kɒfənəs]","[ kæ'kɔfənəs ]","adj.发音不和谐的",'adj.发音不和谐的,粗腔横调的','They produced the most cacophonous beat of pop music.','他们制造了流行音乐最不协调的节拍。','If you describe a mixture of sounds as cacophonous, you mean that they are loud and unpleasant.','发音不和谐的，嘈杂的'}

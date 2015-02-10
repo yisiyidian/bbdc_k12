@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["agrarian"]={"agrarian","[ə'greərɪən]","[ə'ɡrɛrɪən]","adj.土地的",'adj.土地的,耕地的|||n.平均地权论者','People are leaving an agrarian way of life to go to the city.','人们正在放弃农业生活方式而转向城市。','The centre of the U.S. economy shifted from the agrarian areas to the industrial centres in the north.','美国的经济重心由农村转到北方的工业中心。'}

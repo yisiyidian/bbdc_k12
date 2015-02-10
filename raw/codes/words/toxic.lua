@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["toxic"]={"toxic","['tɒksɪk]","['tɑksɪk]","adj.有毒的",'adj.有毒的|||n.有毒物质','The factory had accidentally released a quantity of toxic waste into the sea.','这家工厂意外将大量有毒废物泄漏到了海中。','When spilled into the sea, oil can be toxic to marine plants and animals.','石油溢入海洋可能危害海洋生物。'}

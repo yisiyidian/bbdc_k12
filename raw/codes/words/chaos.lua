@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chaos"]={"chaos","['keɪɒs]","['keɑs]","n.混乱",'n.混乱','He sees that human stupidity and greed are about to plunge Europe into chaos.','他看到人间的愚蠢和贪婪即将使欧洲陷入一片混乱。','I\'m very comfortable with chaos.','我对混乱很不在意。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["yawn"]={"yawn","[jɔːn]","[jɔn]","n.呵欠",'n.呵欠|||v.打呵欠','His long boring story made me yawn.','他的冗长的故事听得我直打呵欠。','I gave a loud yawn, but he just kept on talking.','我大声打了个呵欠，可他还是不停地讲下去。'}

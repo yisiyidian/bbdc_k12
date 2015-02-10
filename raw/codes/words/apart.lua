@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apart"]={"apart","[ə'pɑːt]","[ə'pɑrt]","adv.分别地",'adv.分别地,分开地，有区别地|||adj.分开的，分离的','He took my essay apart but I found his criticism helpful.','他把我的文章狠狠地批评了一顿，但我认为他的批评有好处','The two villages are three miles apart.','这两个村子相距三英里。'}

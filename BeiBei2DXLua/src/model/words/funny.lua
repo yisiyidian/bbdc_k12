@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["funny"]={"funny","['fʌnɪ]","['fʌni]","adj.滑稽的",'adj.滑稽的,有趣的,莫名其妙的|||n.笑话,(thefunny)滑稽戏','He closed his speech with a funny joke.','他用一则有趣的笑话结束了演讲。','The story was very funny.','这个故事非常可笑。'}

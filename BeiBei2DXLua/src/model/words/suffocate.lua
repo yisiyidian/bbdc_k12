@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["suffocate"]={"suffocate","['sʌfəkeɪt]","['sʌfəket]","vt.使窒息",'vt.使窒息，使缺氧，阻碍|||vi.窒息，窒息而亡，阻碍发展','Passengers suffocated in the burning aircraft.','乘客在燃烧的飞机中窒息死亡.','The fireman was suffocated by the fumes.','那个消防队员让浓烟憋死了.'}

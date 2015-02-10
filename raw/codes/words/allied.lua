@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["allied"]={"allied","['ælaɪd; ə'laɪd]","[əˈlaɪd,ˈælˌaɪd]","adj.联合的",'adj.联合的,同盟的|||动词ally的过去式和过去分词','Britain has allied itself with other western powers for trade and defence.','英国与其他西方强国结成了贸易及防御联盟.','The allied warplanes bombed the country by the hundred.','盟军数以百计的飞机轰炸了那个国家。'}

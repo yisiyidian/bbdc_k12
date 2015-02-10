@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["indented"]={"indented","[ɪn'dentɪd]","[ɪn'dɛntɪd]","adj.锯齿状的",'adj.锯齿状的,犬牙交错的|||动词indent的过去式和过去分词形式','There are long indented coastlines in the South Sea.','在南海有犬牙交错的海岸线.','Paragraphs in the modified block format are always indented.','改良块格式的段落分布总是上下交错的.'}

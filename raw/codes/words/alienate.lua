@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alienate"]={"alienate","['eɪlɪəneɪt]","[ 'eiljəneit ]","v.使...疏远",'v.使...疏远,离间,让与','The numbing labor tended to alienate workers.','枯燥的工作会使工人变得麻木。','The Prime Minister\'s policy alienated many of her followers.','首相的政策使很多拥护她的人疏远了她。'}

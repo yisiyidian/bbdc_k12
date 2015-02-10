@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["niece"]={"niece","[niːs]","[nis]","n.侄女",'n.侄女,外甥女,教士的私生女','My niece is a little devil.','我的侄女是个调皮鬼.','The girl standing in the front row is my niece.','站在前排的少女是我的侄女。'}

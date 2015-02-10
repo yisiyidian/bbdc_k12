@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fencing"]={"fencing","['fensɪŋ]","['fɛnsɪŋ]","n.围墙",'n.围墙,剑术，栅栏|||动词fence的现在分词','I use a heavy saber in fencing.','我在击剑时用的是把重剑。','Workers put up fencing around the house in one day.','工人一天内就在房子外面建好了围栏。'}

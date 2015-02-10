@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["petulance"]={"petulance","['petjuləns]","[ 'petjuləns ]","n.发脾气",'n.发脾气,生气,易怒,暴躁,性急','His petulance made her impatient.','他的任性让她无法忍受。','I do not appreciate your petulance and eagerness to argue.','我不赞赏你辩论时的急躁和求胜心切。'}

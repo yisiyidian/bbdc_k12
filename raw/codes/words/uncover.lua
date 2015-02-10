@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["uncover"]={"uncover","[ʌn'kʌvə]","[ʌn'kʌvɚ]","vt.揭开",'vt.揭开,揭露','It was two young reporters who uncovered the whole plot.','是两名年轻记者揭露了全部阴谋。','Everyone uncovered when the signal sounded.','信号响时，人人脱帽致敬。'}

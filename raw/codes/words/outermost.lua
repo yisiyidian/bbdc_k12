@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outermost"]={"outermost","['aʊtəməʊst]","['aʊtɚ'most]","adj.最外方的",'adj.最外方的(最远的,最高头的)','He fired and hit the outermost ring of the target.','他开枪射中了靶子的最外一环。','The outermost electron is shielded from the nucleus.','原子核对最外层电子的作用受到屏蔽.'}

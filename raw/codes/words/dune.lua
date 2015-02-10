@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dune"]={"dune","[djuːn]","[dʊn]","n.沙丘",'n.沙丘','During their journey they came upon many sand dunes piled up by the winds.','他们在路上看到许多被风吹积而成的沙丘。','The little dune is formed with loose dry sand by wind.','这个小沙丘是由风吹来的干沙子形成的。'}

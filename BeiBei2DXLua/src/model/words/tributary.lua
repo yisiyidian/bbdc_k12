@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tributary"]={"tributary","['trɪbjʊt(ə)rɪ]","['trɪbjə'tɛri]","adj.纳贡的",'adj.纳贡的,从属的,补助的|||n.纳贡者,属国,支流','a tributary colony.','进贡的殖民地','There was one street apart from a tributary road near the end of the village.','除了村子尽头的岔道外，还有一条大路。'}

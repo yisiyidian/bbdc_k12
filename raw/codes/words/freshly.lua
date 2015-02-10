@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["freshly"]={"freshly","['freʃlɪ]","[ 'freʃli ]","adv.新",'adv.新,新近,精神饱满','Twilight was sweet with the smell of lilac and freshly turned earth.','薄暮充满紫丁香和新翻耕的泥土的香味。','This is a freshly painted room.','这是间新漆的房间。'}

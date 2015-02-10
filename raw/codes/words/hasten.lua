@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hasten"]={"hasten","['heɪs(ə)n]","['hesn]","v.催促",'v.催促,赶快,急忙','Do not hasten to bid me adieu.','不要告别得那样匆忙。','I hasten to add that I knew nothing of the fraud at the time.','我忙不迭地补充说,我当时对那个骗局一无所知.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stethoscope"]={"stethoscope","['steθəskəʊp]","['stɛθəskop]","n.听诊器",'n.听诊器','The stethoscope is a medical instrument.','听诊器是一种医疗器械。','I take it you know what a stethoscope is.','我想你知道听诊器是个什么东西。'}

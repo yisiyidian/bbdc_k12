@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["credence"]={"credence","['kriːd(ə)ns]","['kridns]","n.相信",'n.相信,祭器台,供桌','I attach little credence to what she says.','我对她的话姑妄听之。','I need a credence to pray.','我需要一个祭台来祈祷。'}

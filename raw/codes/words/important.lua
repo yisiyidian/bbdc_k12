@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["important"]={"important","[ɪm'pɔːt(ə)nt]","[ɪm'pɔrtnt]","adj.重要的",'adj.重要的,影响很大的','It was one of the most important discoveries ever made.','这是所做出的最重大的发现之一。','He has made an important contribution to the company\'s success.','他对公司的成功作出了重要的贡献。'}

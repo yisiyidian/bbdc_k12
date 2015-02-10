@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["suddenly"]={"suddenly","['sʌd(ə)nlɪ]","['sʌdənli]","adv.突然地",'adv.突然地','All sorts of problems assailed us suddenly.','我们突然遇到各种各样的难题。','The car stopped suddenly and he plunged forward.','汽车突然停下，他的身子朝前一冲。'}

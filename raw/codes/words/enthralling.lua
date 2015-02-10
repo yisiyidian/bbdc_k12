@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enthralling"]={"enthralling","[in'θrɔ:liŋ]","[ in'θrɔ:liŋ ]","adj.迷人的",'adj.迷人的','On the other hand, it wasn\'t enthralling or illuminating, just a bit of fun.','另一方面，它即不让人着迷，也不给人启迪，只是有点意思而已。','enthralling','adj. 迷人的'}

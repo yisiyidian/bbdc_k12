@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["staccato"]={"staccato","[stə'kɑːtəʊ]","[stə'kɑto]","adj.断音的",'adj.断音的，不连贯的|||adv.断音地，不连贯地|||n.不连贯的态度或声音','The staccato outbursts of machine guns sounded incessantly.','机关枪嗒嗒嗒的射击声听起来越来越大。','He spoke in Arabic, a short staccato burst.','他突然用阿拉伯语叽里呱啦说了一串话。'}

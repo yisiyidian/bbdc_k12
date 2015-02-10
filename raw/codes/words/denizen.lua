@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["denizen"]={"denizen","['denɪz(ə)n]","[ 'denizən ]","n.居民",'n.居民，栖息者，外籍居民，外来动植物，老主顾','In this country children of denizen go to school free.','在这个国家外籍居民的孩子上学免费。','Fish are denizen of the sea.','鱼生活在海里。'}

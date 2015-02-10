@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fumble"]={"fumble","['fʌmb(ə)l]","['fʌmbl]","vi.摸索",'vi.摸索,笨手笨脚地做|||vt.笨拙地做，弄乱，失球|||n.摸索，失球，漏接球','||Fumble|| for a key.','摸索着找钥匙','He fumbled the ball and then dropped it.','他笨手笨脚的漏接了球。'}

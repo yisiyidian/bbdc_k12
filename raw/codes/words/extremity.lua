@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extremity"]={"extremity","[ɪk'stremɪtɪ; ek-]","[ɪk'strɛməti]","n.极端",'n.极端,末端，极点,困境，非常手段，四肢，手足','He was driven crazy by the extremity of pain.','极度的痛苦使他发狂。','the extremity of despair','极度失望'}

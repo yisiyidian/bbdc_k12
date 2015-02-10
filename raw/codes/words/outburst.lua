@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outburst"]={"outburst","['aʊtbɜːst]","['aʊtbɝst]","n.爆发",'n.爆发,突发,(感情)迸发','What lay behind this strange outburst?','这莫名其妙的发作究竟是为什麽?','His rash outburst incurred the displeasure of the judge.','他勃然大怒使法官不悦.'}

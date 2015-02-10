@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["refusal"]={"refusal","[rɪ'fjuːz(ə)l]","[rɪ'fjuzl]","n.拒绝",'n.拒绝,回绝','Their refusal to sign the contract has put us in a bit of a bind.','他们拒绝签约，从而使我们的处境有些困难。','Her refusal to help complicates matters.','她不肯帮忙，事情就更难办了。'}

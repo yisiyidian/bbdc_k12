@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lure"]={"lure","[l(j)ʊə]","[lʊr]","n.饵",'n.饵,诱惑vt.引诱,诱惑','The enticement of the big city lure her away from her home.','大城市的种种诱惑吸引了她离家出走。','The travel brochure lured me into taking a Caribbean vacation.','这本旅游小册子诱使我去加勒比地区度假。'}

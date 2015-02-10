@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["duster"]={"duster","['dʌstə]","['dʌstɚ]","n.抹布",'n.抹布，除尘器，宽松服，尘暴','The maid did down the walls with a duster.','女佣用掸帚由上而下地刷除四壁上的尘垢。','The girl went over the room quickly with a duster.','女孩用掸帚很快地把房间清理了一下。'}

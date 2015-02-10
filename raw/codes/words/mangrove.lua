@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mangrove"]={"mangrove","['mæŋgrəʊv]","['mæŋɡrov]","n.红树",'n.红树,红树林','Where does the mangrove grow?','红树林在哪里生长','||Mangroves|| are unusual looking trees.','红树林的前景不容乐观'}

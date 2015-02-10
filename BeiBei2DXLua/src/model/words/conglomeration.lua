@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conglomeration"]={"conglomeration","[kəŋ,glɒmə'reɪʃ(ə)n]","[kən'glɑmə'reʃən]","n.聚集",'n.聚集,凝聚','Now the affair becomes a conglomeration in the whole society.','现在这件事成了全社会的焦点。','The key  of success  in a  company  is  whether  it  have enough   conglomeration.','一个公司成功与否的关键是是否具有足够的凝聚力。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sleet"]={"sleet","[sliːt]","[slit]","n.雨雪",'n.雨雪|||v.下雨雪,下冰雹','||Sleet|| lashing the roof.','雨夹雪击打着屋顶','The quantity of water, expressed in inches, precipitated as rain, snow, hail, or sleet in a specified area and time interval.','降雨量雨的数量以英寸表示, 为某一地区在特定时间段内雨、雪、冰雹或霰的积累量'}

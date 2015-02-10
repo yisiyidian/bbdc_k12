@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prolong"]={"prolong","[prə'lɒŋ]","[prəˈlɑːŋ]","vt.延长",'vt.延长,拖延','How can we endeavor to prolong the brevity of human life?','我们怎样才能延长短促的人生？','All my life he drives me to this point and now he wants to prolong the agony.','我这一辈子被他逼到了这个地步，现在他还想继续折磨我。'}

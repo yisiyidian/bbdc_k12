@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suspect"]={"suspect","[sə'spekt]","['sʌspɛkt]","vt.怀疑",'vt.猜疑（是）；怀疑，不信任；怀疑…有罪|||n.嫌疑犯|||vi.怀疑','They suspected an ambush.','他们怀疑有埋伏。','He\'s a prime suspect in the murder case.','他是这次谋杀案的主要怀疑对象'}

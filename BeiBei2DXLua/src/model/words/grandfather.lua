@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grandfather"]={"grandfather","['græn(d)fɑːðə]","['græn'fɑðɚ]","n.(外)祖父",'n.(外)祖父','When their grandfather died a great sadness filled their lives.','当他们的祖父去世时，巨大的悲伤笼罩了他们的生活。','His grandfather is nearly seventy.','他爷爷快七十岁了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slant"]={"slant","[slɑːnt]","[slænt]","n.倾斜",'n.倾斜,斜面,个人的观点或见解,倾向性,偏见|||vt.使倾斜,歪曲|||vi.倾斜','I need your slant on the situation.','我想请你说说对这种情况的意见。','We slanted across the river.','我们斜渡过河。'}

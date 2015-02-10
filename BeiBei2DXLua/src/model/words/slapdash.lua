@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slapdash"]={"slapdash","['slæpdæʃ]","['slæpdæʃ]","adj.草率的",'adj.草率的,马虎的|||adv.鲁莽地，仓促地','She has a very slapdash approach to keeping accounts.','她记账十分潦草马虎。','His work methods appear amazingly slapdash.','他的工作方法显得极其粗枝大叶。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lagoon"]={"lagoon","[lə'guːn]","[lə'gʊn]","n.泻湖(污泥贮留池",'n.泻湖(污泥贮留池,沼)','The lagoon is strictly out of bounds to all members.','这个池塘严禁任何人入内。','A girdle of islands enclosed the lagoon.','一环小岛围绕着礁湖。'}

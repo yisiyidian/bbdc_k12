@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["motto"]={"motto","['mɒtəʊ]","['mɑto]","n.座右铭",'n.座右铭,箴言','I often win money at cards but never save a penny `easy come, easy go\' is my motto.','我玩纸牌经常赢, 可一分钱也存不住--我的俗话是｀来得容易, 去得快＇.','Think before you act is my motto.','“三思而后行”是我的座右铭。'}

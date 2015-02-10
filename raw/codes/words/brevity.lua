@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brevity"]={"brevity","['brevɪtɪ]","['brɛvəti]","n.短暂",'n.短暂,简短，简洁','||Brevity|| is the soul of wit.','简洁是智慧的精华。','How can we endeavor to prolong the brevity of human life?','我们怎样才能延长短促的人生？'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["boundless"]={"boundless","['baʊndləs]","['baʊndləs]","adj.无限的(无穷的",'adj.无限的(无穷的,无边无际的)','The setting sun has boundless beauty; Just because the yellow dusk is so near.','夕阳无限好，只是近黄昏。','The masses have boundless creative power.','人民群众有无限的创造力。'}

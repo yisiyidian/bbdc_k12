@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["negate"]={"negate","[nɪ'geɪt]","['nɛɡet]","v.否定",'v.否定,否认,打消','Our actions often negate our principles.','我们的行为时常与我们所信奉的原则背道而弛。','How can you negate God?','你怎麽能否定上帝的存在?'}

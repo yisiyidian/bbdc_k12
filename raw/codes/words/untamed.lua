@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["untamed"]={"untamed","[ʌn'teɪmd]","[,ʌn'temd]","adj.不能抑制的",'adj.不能抑制的,难控驭的','Eventually they went to Massachusetts, which was covered in untamed forest.','最后他们来到被原始森林覆盖着的马萨诸塞州.','He remains untamed.','他屡教不改。'}

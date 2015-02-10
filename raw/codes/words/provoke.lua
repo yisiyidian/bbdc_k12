@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["provoke"]={"provoke","[prə'vəʊk]","[prə'vok]","vt.激怒",'vt.激怒,惹起,驱使','Such tendentious statements are likely to provoke strong opposition.','这种有倾向性的说法可能招致强烈的反对。','Such a questionable assertion is sure to provoke criticism.','这种有问题的主张肯定会招致非议。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vestige"]={"vestige","['vestɪdʒ]","['vɛstɪdʒ]","n.遗迹",'n.遗迹,退化的器官','There is not a vestige of truth in the report.','该报告毫无真实性。','There had not a vestige of the abbey remains.','修道院的遗迹已荡然无存。'}

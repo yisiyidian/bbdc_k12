@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["facilitation"]={"facilitation","[fəsɪlɪ'teɪʃn]","[fə,sɪlə'teʃən]","n.容易",'n.容易，便利，简化；【心理学、生理学】助长，促进','It also includes return facilitation centers, mostly in Baghdad.','这些措施里还包括主要在巴格达设立促进返乡中心','Social facilitation is an adaptive condition.','社会促进是一种适应性状态。'}

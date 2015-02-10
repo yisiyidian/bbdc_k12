@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["berry"]={"berry","['berɪ]","['bɛri]","n.浆果",'n.浆果','He told us whick kinds of ||berries|| were posonous.','他告诉了我们哪些种浆果是有毒的。','Birds feed on nuts and ||berries|| in the winter.','鸟类靠坚果和浆果过冬。'}

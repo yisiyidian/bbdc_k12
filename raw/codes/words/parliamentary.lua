@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["parliamentary"]={"parliamentary","[,pɑːlə'ment(ə)rɪ]","[,pɑrlə'mɛntri]","adj.国会的",'adj.国会的,议会的,议会制度的','That party lost 15 seats in the parliamentary election.','该党在议会选举中失去了15席.','The obstructive members blocked all parliamentary business by talking against time.','那些故意捣蛋的议员以拖延发言时间来阻挠议会全部工作的进展。'}

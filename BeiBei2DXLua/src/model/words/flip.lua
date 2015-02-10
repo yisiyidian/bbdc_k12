@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flip"]={"flip","[flɪp]","[flɪp]","vi.翻转",'vt.掷,弹,轻击|||vi.翻转|||n.空翻，浏览|||adj.无礼的,冒失的,轻率的','I had a quick flip through the book and it looked very interesting.','我很快翻阅了一下那本书，看来似乎很有趣。','A flip answer to a serious question.','对严肃问题的轻率回答'}

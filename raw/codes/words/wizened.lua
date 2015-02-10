@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wizened"]={"wizened","['wɪz(ə)nd]","['wizənd]","adj.皱缩的",'adj.皱缩的,枯萎的,消瘦的|||动词wizen的过去式和过去分词形式','A wizened little man wriggled through the line of soldiers standing guard.','有个一身干瘪的小个子男人，拐弯抹角混过了执行警戒的士兵队列。','That wizened and grotesque little old man is a notorious miser.','那个干瘪难看的小老头是个臭名远扬的吝啬鬼。'}

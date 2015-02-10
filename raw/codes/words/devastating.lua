@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["devastating"]={"devastating","['devəsteitiŋ]","[ 'devəsteitiŋ ]","adj.毁灭性的",'adj.毁灭性的,令人震惊的,强有力的','The area is subject to devastating seasonal winds.','这个地区常遭破坏性季风的袭击。','China suffered a devastating earthquake measuring 8.0 magnitude in 2008.','2008年中国遭受了一场毁灭性的八级地震'}

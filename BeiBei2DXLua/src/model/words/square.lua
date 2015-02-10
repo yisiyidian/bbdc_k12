@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["square"]={"square","[skweə]","[skwɛr]","n.正方形",'n.正方形,街区,平方，广场|||adj.正方形的,正直的,公正的,结实的|||vt.使...成方形,调整，一致|||vi.符合|||adv.成直角,直接的,正方形地','||Square|| the page off with your ruler.','用尺在这页纸上打上方格。','Let\'s call it all square, shall we?','咱们谁也不欠谁的了，对吧？'}

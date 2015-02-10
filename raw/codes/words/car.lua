@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["car"]={"car","[kɑː]","[kɑr]","n.小汽车",'n.小汽车,车厢,吊舱','The car drew up alongside the kerb.','小汽车在路边停下来.','The car in front of me stopped suddenly and I had to brake.','我前面那辆小汽车突然停住，我只好刹车。'}

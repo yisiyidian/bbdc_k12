@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unlock"]={"unlock","[ʌn'lɒk]","['ʌn'lɑk]","vt.开启",'vt.开启,显露,放开','She fail to unlock the safe in spite of all her exertion.','她虽然费尽力气，仍未能将那保险箱的锁打开。','Scientists have unlocked the secret of the atom.','科学家已经揭开了原子的秘密。'}

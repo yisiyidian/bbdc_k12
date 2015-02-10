@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adjunct"]={"adjunct","['ædʒʌŋ(k)t]","['ædʒʌŋkt]","n.附属物",'n.附属物,附件,修饰语','He is an adjunct professor of history.','他是一名兼职历史教授。','This is an adjunct clause.','这是一个附属从句。'}

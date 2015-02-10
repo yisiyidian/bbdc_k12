@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["proliferation"]={"proliferation","[prə,lɪfə'reʃən]","[ prəu-,lifə'reiʃən ]","n.增殖",'n.增殖,分芽繁殖','Cellular cleavage and proliferation was markedly inhibited.','细胞的分裂、增殖受到明显抑制。','Both countries are signatories to the Nuclear Non-||Proliferation|| Treaty.','两个国家都是《核不扩散条约》的签约国。'}

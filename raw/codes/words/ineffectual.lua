@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ineffectual"]={"ineffectual","[ɪnɪ'fektʃʊəl; -tjʊəl]","[,ɪnɪ'fɛktʃuəl]","adj.（东西）无效的",'adj.（东西）无效的,无益的,白费的，（人）无能的','She had felt at the same time that he was helpless and ineffectual.','同时她也看到了他的孤弱无能，无所作为。','The mayor had become ineffectual in the struggle to clamp down on drugs.','市长打击毒品的努力未见成效。'}

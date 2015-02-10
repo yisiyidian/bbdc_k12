@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mime"]={"mime","[maɪm]","[maɪm]","n.哑剧",'n.哑剧,哑剧演员，滑稽演员，模仿|||vt.出演滑稽戏，做哑剧表演，模仿，模拟|||vi.演出哑剧角色','I couldn\'t speak Chinese, but I showed in mime that I wanted a drink.','我不会讲汉语，但我作摹拟动作表示要一杯饮料。','Pupils presented a mime and puppet show.','学生们奉献了一台哑剧形式的木偶戏。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["greatly"]={"greatly","['greɪtlɪ]","['ɡretli]","adv.很",'adv.很,非常','We want to cooperate with you greatly.','我们非常愿意与你们合作。','Her kindness to my children greatly endeared her to me.','她对我的孩子很好，所以我很喜欢她。'}

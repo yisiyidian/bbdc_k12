@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["keen"]={"keen","[kiːn]","[kin]","adj.敏锐的",'adj.锋利的,敏锐的,强烈的,精明的,热衷于','The blind have a keen sense of touch.','盲人有敏锐的触觉。','Mrs Hill is keen on Tom\'s marrying Susan.','希尔太太很希望汤姆能和苏珊结婚。'}

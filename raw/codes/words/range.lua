@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["range"]={"range","[reɪn(d)ʒ]","[rendʒ]","n.范围",'n.范围；射程；类别；（山脉，房屋等的）排列|||vi.搜索；变化；延伸；漫游|||vt.排列；（按一定位置或顺序）排序；把…分类；徘徊|||adj.牧场的，放牧区的','Our conversation ranged over many topics.','我们的谈话涉及很多话题。','The children\'s ages range from 8 to 15.','这些孩子们的年龄在8岁到15岁之间。'}

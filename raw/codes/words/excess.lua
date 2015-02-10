@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["excess"]={"excess","[ɪk'ses; ek-; 'ekses]","['ɛk'sɛs]","adj.过量的",'adj.过量的,附加的|||n.超过,超越,过度,过量','Usury is interest in excess of a legal rate.','高利贷是指超过法定利率取息。','The fat boy went on a diet to get rid of his excess weight.','这个胖男孩节制饮食以减轻过量的体重。'}

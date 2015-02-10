@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rubbery"]={"rubbery","['rʌbərɪ]","['rʌbəri]","adj.像橡胶的",'adj.像橡胶的，（形容腿或膝盖等）感到弱而无法负重','He felt the rubbery solidity as the club came down.','棍子落下去,他觉得好像打在坚韧的橡胶上.','She had the most rubbery face.','她表情极为丰富。'}

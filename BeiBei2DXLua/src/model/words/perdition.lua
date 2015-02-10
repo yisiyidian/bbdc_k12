@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perdition"]={"perdition","[pə'dɪʃ(ə)n]","[ pə:'diʃən ]","n.地狱",'n.地狱,灭亡','She used her last banknote to buy herself a square meal before perdition.','她在彻底完蛋之前，用最后一张钞票吃了一顿美餐。','Cocaine and heroin are fast routes to perdition.','可卡因和海洛因是通往地狱的快车道。'}

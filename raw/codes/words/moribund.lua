@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["moribund"]={"moribund","['mɒrɪbʌnd]","['mɔrɪbʌnd]","adj.垂死的",'adj.垂死的，即将结束的','In the moribund patient deepening coma are the usual preludes to death.','病人弥留之际，深度昏睡通常是死的前兆。','The moribund company is going bankrupt.','那个经营不善的公司快破产了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pillar"]={"pillar","['pɪlə]","['pɪlɚ]","n.柱子",'n.柱子,支柱,核心(人物)|||vt.用柱支持','He has been a pillar of the Church all his life.','他一生都是教会的热心支持者。','The enemy was hurried from pillar to post.','敌人被赶得东逃西窜走投无路。'}

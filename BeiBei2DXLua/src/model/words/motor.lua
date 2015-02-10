@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["motor"]={"motor","['məʊtə]","['motɚ]","n.马达",'adj.机动的,有引擎的，汽车的|||n.发动机,马达，汽车|||vt.&vi.（用引擎）驱动','All this year\'s new models are displayed at the motor show.','汽车展览会上展出了今年所有的新型号。','That young man is a motor mechanic.','那个年轻人是一个汽车修理工。'}

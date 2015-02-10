@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wane"]={"wane","[weɪn]","[wen]","n.衰微",'n.衰微,亏缺,变弱|||v.变小,亏缺,呈下弦','The empire was on the wane after its period of prosperity.','帝国经过全盛后逐渐开始衰落。','The moon waxes and wanes every month.','月亮每个月都有盈亏。'}

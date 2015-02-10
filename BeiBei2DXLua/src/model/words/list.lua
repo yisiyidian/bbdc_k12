@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["list"]={"list","[lɪst]","[lɪst]","n.清单",'n.清单，目录；倾斜；布边，布头；狭条|||vt.列出，列入；把…编列成表；记入名单内|||vi.列于表上','Please include me in the list.','请把我列入名单中。','Make a list of the various options.','列出可供选择的项目。'}

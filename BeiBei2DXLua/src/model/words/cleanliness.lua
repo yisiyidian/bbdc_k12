@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cleanliness"]={"cleanliness","['klenlɪnəs]","['klɛnlɪnəs]","n.清洁",'n.清洁','||Cleanliness|| is next to godliness.','【谚】整洁近于美德。','Personal cleanliness is important to health as well as to appearance.','个人清洁对于健康和仪表同样重要。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overwrought"]={"overwrought","[əʊvə'rɔːt]","[,ovɚ'rɔt]","adj.过分劳累的",'adj.过分劳累的，过度兴奋的，过分装饰的','She was in a very overwrought state after the accident.','事故发生后她精神十分紧张。','One overwrought member had to be restrained by friends.','一位成员过于激动，朋友们不得不进行拦阻。'}

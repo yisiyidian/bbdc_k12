@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["suspense"]={"suspense","[sə'spens]","[sə'spɛns]","n.悬念",'n.悬疑,焦虑,悬念','Don\'t keep us in suspense any longer -- what happens at the end of the story?','别再让我们蒙在鼓里了, 结局究竟怎麽样?','His suspense became so great that he couldn\'t bear to look out the window.','他的疑虑变得这样大，所以他忍受不了往窗外看。'}

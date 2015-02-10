@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["breathing"]={"breathing","['briːðɪŋ]","['briðɪŋ]","n.呼吸",'n.呼吸','I can\'t concentrate with you breathing down my neck.','你这样紧紧盯著我, 使我精神无法集中.','No one can live without breathing.','没有一个人可以不呼吸而生存。'}

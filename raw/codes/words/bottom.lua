@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bottom"]={"bottom","['bɒtəm]","['bɑtəm]","n.底部",'n.底部;臀部;船身;水底;服装下面的部分;低洼地;底色;尽头|||adj.底部的|||vt.给...装底,建立基础,到达底部|||vi.到达底部,垫底，降到最低点','He was always bottom of the class in maths.','他的数学成绩在班上总是垫底。','She started at the bottom and worked her way up to become manager of the company.','她从最低的位置干起，通过努力终於当上了公司的经理。'}

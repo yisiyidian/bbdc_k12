@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coalition"]={"coalition","[,kəʊə'lɪʃ(ə)n]","[,koə'lɪʃən]","n.结合",'n.结合,合并,联合','The party may realign (itself) with Labour in a new coalition.','该党可能与工党重新组成新的联盟.','The two parties have united to form a coalition.','这两个党已结成联盟.'}

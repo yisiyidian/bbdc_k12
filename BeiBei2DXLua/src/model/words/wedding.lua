@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wedding"]={"wedding","['wedɪŋ]","['wɛdɪŋ]","n.婚礼",'n.婚礼','We decided to delay our wedding until next year.','我们决定把婚礼推迟到明年。','She reproached her husband for having forgotten their wedding anniversary.','她责怪丈夫忘了他们的结婚周年纪念日。'}

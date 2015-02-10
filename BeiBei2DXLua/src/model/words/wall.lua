@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wall"]={"wall","[wɔːl]","[wɔl]","n.墙壁",'n.墙壁,垣,绝境|||vt.堵塞,分割,用墙围住,演戏般地转动(眼睛)|||vi.演戏般地转动(眼睛)','Stone castles could have very thick walls as this photo shows.','像照片显示的那样，石头城堡的墙会很厚。','I\'ll go up the wall if it doesn\'t stop soon.','要是不赶快停下来就要把我气死了。'}

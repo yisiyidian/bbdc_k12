@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["neutralize"]={"neutralize","['nʊtrə'laɪz]","[ 'nju:trəlaiz ]","v.中和",'v.使中立,使成中立地带,中和','Nothing could neutralize its good effects.','没有什么能抵消它所产生的好影响.','Acids neutralize alkalis and vice versa.','酸能使碱中和,碱亦能使酸中和.'}

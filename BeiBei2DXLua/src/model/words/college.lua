@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["college"]={"college","['kɒlɪdʒ]","['kɑlɪdʒ]","n.学院",'n.学院,学校，社团，枢机主教团','He had passed the entrance examination of the college.','他已经通过了大学的入学考试。','The teacher helped him through high school, but he couldn\'t cut the buck in college.','老师帮助他上完了中学，但他无法完成大学的学业。'}

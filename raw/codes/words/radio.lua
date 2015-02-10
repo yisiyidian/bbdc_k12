@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["radio"]={"radio","['reɪdɪəʊ]","['redɪo]","n.收音机",'n.收音机,无线电|||vt.&vi.用无线电通讯','I\'m afraid this old radio is beyond repair.','恐怕这台旧收音机不能修了。','I must get the radio fixed.','我必须找人把收音机修理好。'}

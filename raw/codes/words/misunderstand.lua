@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["misunderstand"]={"misunderstand","[,mɪsʌndə'stænd]","[,mɪsʌndɚ'stænd]","v.误解",'v.误解,误会','His remarks show that he misunderstand my position on the question.','他的话说明他误解了我在这一问题上的立场。','He wrote her a letter for fear she misunderstand him.','他给她写了封信，免得她误会。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["certify"]={"certify","['sɜːtɪfaɪ]","['sɝtə'fai]","vt.证明",'vt.证明,保证,证实,颁发证书','I certify that this is a true copy.','我证明这是真副本。','I can certify to her honesty.','我可以证明她是诚实的。'}

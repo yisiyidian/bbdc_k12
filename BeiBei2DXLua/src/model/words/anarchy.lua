@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anarchy"]={"anarchy","['ænəkɪ]","['ænɚki]","n.无政府状态",'n.无政府状态,混乱','If law and order break down, anarchy will result.','法治一垮，就会出现无政府状态。','It is said that the country is in anarchy.','据说那个国家正处于无政府状态。'}

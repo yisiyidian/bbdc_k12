@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pressure"]={"pressure","['preʃə]","['prɛʃɚ]","n.压力",'n.压力,压强,压迫','The birth of twins put pressure on them to find a bigger flat.','他们生了双胞胎，不得不寻找一套较大的住房。','The water pressure may need adjusting.','水压可能需要调整。'}

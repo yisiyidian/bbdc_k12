@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["toward"]={"toward","[tə'wɔːd; twɔːd; tɔːd]","[tɔrdz]","prep.朝",'prep.对于,关于,接近,将近,向,朝|||adj.有希望的,有利的,逼近的','The ground cools off toward evening.','傍晚时地面变凉。','I would like to take a trip around the world toward the end of this year.','我想在今年底环游世界。'}

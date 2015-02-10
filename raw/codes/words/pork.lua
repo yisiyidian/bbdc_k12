@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pork"]={"pork","[pɔːk]","[pɔrk]","n.猪肉",'n.猪肉|||联邦或州政府用以笼络人心的工程或款项','The little girl only eats lean pork.','这个小女孩只吃瘦肉。','A small sausage of highly seasoned fresh pork, usually served fried.','德国熟香肠一种味道很浓的新鲜猪肉制小香肠，通常炸食'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["widen"]={"widen","['waɪd(ə)n]","['waɪdn]","vt.弄宽",'vt.弄宽','The road is being widened.','这条路正在拓宽。','He wants to widen his knowledge of the industry.','他想扩充自己在这一行业的知识。'}

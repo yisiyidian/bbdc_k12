@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mushroom"]={"mushroom","['mʌʃruːm; -rʊm]","['mʌʃrʊm]","n.蘑菇",'n.蘑菇,菌菇状物,暴发户|||vi.扩张,迅速增加,采蘑菇','Edible roots; an edible mushroom.','可食根；一种可食用蘑菇','New blocks of flats and offices have mushroomed all over the city.','在全市各处如雨后春笋般出现了许多新公寓和办公楼。'}

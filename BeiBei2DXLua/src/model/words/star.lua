@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["star"]={"star","[stɑː]","[stɑr]","n.星",'n.星,明星|||v.以星状物装饰,变成演员','The star of the film is a previously unknown actor.','这部电影里的明星以前是个默默无闻的演员.','My favourite film stars Marilyn Monroe.','我最喜欢的电影是玛丽莲·梦露主演的。'}

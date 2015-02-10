@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["neologism"]={"neologism","[nɪ'ɒlədʒɪz(ə)m]","[nɪ'ɑlədʒɪzəm]","n.新字",'n.新字,新语，新语症','He caught up a popular neologism from the newspapers.','他采用了报刊上流行的一种新词语。','The newspaper used the neologism \'dinks\', Double Income No Kids.','报纸使用了新词“丁克族”，即“双收入无子女”。'}

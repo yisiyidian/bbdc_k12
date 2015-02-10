@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unkind"]={"unkind","[ʌn'kaɪnd]","[,ʌn'kaɪnd]","adj.不和善的",'adj.不和善的，无情的,不厚道的','I did not expect such unkind treatment at your hands.','我没想到你如此刻薄.','unkind winters.','严冬'}

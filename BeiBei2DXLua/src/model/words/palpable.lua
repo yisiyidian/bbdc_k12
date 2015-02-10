@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["palpable"]={"palpable","['pælpəb(ə)l]","['pælpəbl]","adj.明显的",'adj.明显的,易觉察的','There is an almost palpable feeling of hopelessness.','几乎明显有种无望的感觉。','There is a palpable difference in their ages.','他们的年龄有着明显的差别。'}

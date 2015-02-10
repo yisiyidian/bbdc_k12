@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disciple"]={"disciple","[dɪ'saɪp(ə)l]","[dɪ'saɪpl]","n.弟子",'n.弟子,门徒','He is a devout disciple of the Episcopal Church.','他是英国圣公会的一名虔诚的信徒。','We are disciples of the artistic leader.','我们是那位艺术领袖的追随者。'}

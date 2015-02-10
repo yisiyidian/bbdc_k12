@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["regurgitate"]={"regurgitate","[rɪ'gɜːdʒɪteɪt]","[rɪ'ɡɝdʒɪtet]","v.（使）涌回",'v.（使）涌回,（使）喷回,（使）流回','He\'s simply ||regurgitating|| stuff remembered from lectures.','他只不过是照背讲义而已.','You can get sick to death of a friend ||regurgitating|| her partner\'s opinions.','对于一个只会机械地重复其搭档观点的朋友，你可能会腻烦得要死。'}

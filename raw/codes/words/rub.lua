@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rub"]={"rub","[rʌb]","[rʌb]","vt.擦",'n.摩擦,困难,障碍|||vt.擦,搓,涂抹上,使不愉快|||vi.摩擦','In his job he\'s rubbing shoulders with film stars all the time.','他在工作中一直与电影明星有来往。','Please give the table a good rub with this cloth.','请用这块布好好擦擦桌子。'}

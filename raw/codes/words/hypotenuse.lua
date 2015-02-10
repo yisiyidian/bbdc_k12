@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hypotenuse"]={"hypotenuse","[haɪ'pɒtənjuːz; -s]","[haɪ'pɑtənus]","n.(直角三角形的)斜边",'n.(直角三角形的)斜边','Either side of a right triangle that is not the hypotenuse.','直角边直角三角形除斜边之外的两条边的任意一条','There  is  a 5-cm -long  hypotenuse','这是一条五厘米长的斜边'}

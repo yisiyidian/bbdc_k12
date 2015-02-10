@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["falconer"]={"falconer","['fɔː(l)k(ə)nə; 'fɒlk(ə)nə]","[ 'fælkənə ]","n.以鹰狩猎者",'n.以鹰狩猎者,放鹰者,养鹰者','The falcon cannot hear the falconer.','猎鹰再也听不见主人的呼唤','An alternative is to pay a falconer from the country of export to do it for you.','一种可替代的方法是付钱给某一个来自出输出国的鹰猎者，让他替你完成。'}

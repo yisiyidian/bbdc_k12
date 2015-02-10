@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cramp"]={"cramp","[kræmp]","[kræmp]","n.抽筋",'n.抽筋,腹部绞痛,铁箍|||adj.狭窄的,难解的|||v.使...抽筋,以铁箍扣紧,束缚','All these difficulties cramped his progress.','所有这些困难阻碍了他的进步。','The swimmer got cramp in his legs and had to be helped out of the water.','游泳者两腿抽筋，不得不由他人救助出水。'}

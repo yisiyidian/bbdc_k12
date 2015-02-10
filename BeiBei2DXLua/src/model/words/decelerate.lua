@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decelerate"]={"decelerate","[diː'seləreɪt]","[,di'sɛləret]","v.(使)减速",'v.(使)减速','Inflation has decelerated remarkably over the past two years.','过去的两年里通货膨胀已经明显放缓。','Even after taxpayer bailouts restored bankers’ profits and pay, the great Wall Street money machine is ||decelerating||.','1'}

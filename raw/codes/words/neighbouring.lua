@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["neighbouring"]={"neighbouring","['neɪb(ə)rɪŋ]","[ 'neibəriŋ ]","adj.邻近的",'adj.接壤的,邻近的|||动词neighbour的现在分词形式|||=neighboring(美)','Some villagers have never been further afield than the neighbouring town.','有些村民从未远离过附近的市镇.','We must promote commerce with neighbouring countries.','我们必须促进与邻国的贸易.'}

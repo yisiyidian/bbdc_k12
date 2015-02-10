@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["midfield"]={"midfield","[mɪd'fiːld; 'mɪdfiːld]","['mɪd'fild]","n.中场(指足球场中的中间地带)",'n.中场(指足球场中的中间地带)，中场队员','A striker was substituted for a midfield player in the last half-hour of play.','在比赛的最后30分钟里, 一个中场运动员被一个强攻手替换了下去。','America lacks punch in midfield.','美国队中场拼劲不足'}

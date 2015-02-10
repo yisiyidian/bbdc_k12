@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quandary"]={"quandary","['kwɒnd(ə)rɪ]","['kwɑndəri]","n.困惑",'n.困惑,迷惑,为难','It put me in a quandary when I realized that I had missed my train.','当我意识到我已赶不上火车时，我不知如何是好。','I was in a quandary about whether to go.','我当时正犹豫到底去不去。'}

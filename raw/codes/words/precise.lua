@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["precise"]={"precise","[prɪ'saɪs]","[prɪ'saɪs]","adj.精确的",'adj.精确的,准确的,认真的','I am not clear about the precise bearing of the word in this passage.','我不太清楚这个字在这篇文章中的确切含义。','The victim was able to give a precise description of the suspect.','受害者能够清晰地描绘嫌疑犯。'}

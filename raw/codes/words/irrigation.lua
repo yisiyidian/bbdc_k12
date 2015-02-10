@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["irrigation"]={"irrigation","[ˌɪrɪˈɡeʃn]","[ ,iri'ɡeiʃən ]","n.灌溉",'n.灌溉','There the irrigation canal links up with the reservoir.','这条灌溉渠在那里与水库连接起来.','Water is channelled through a series of irrigation canals.','把水引入一系列灌溉渠中.'}

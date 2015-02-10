@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["retort"]={"retort","[rɪ'tɔːt]","[rɪ'tɔrt]","v.反驳",'v.反驳,回嘴,反击|||n.反驳,顶嘴|||n.蒸馏器','He retorted, "it\'s entirely your fault."','他反驳说：“这完全是你的错。”','He retorted that it was my fault as much as his.','他反驳说我的错误并不比他的小。'}

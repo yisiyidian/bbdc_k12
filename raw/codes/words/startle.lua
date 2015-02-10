@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["startle"]={"startle","['stɑːt(ə)l]","['stɑrtl]","n.惊愕",'n.惊愕,惊恐|||v.吃惊,使...惊愕','The least noise would startle the timid child.','最小的响声也会吓着这个胆小的孩子的。','He was startled by the news.','这消息使他大吃一惊。'}

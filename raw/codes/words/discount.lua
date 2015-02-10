@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["discount"]={"discount","['dɪskaʊnt]","[dɪs'kaʊnt]","n.折扣",'n.折扣,贴现率|||vt.打折扣,贴现,不重视，不全信|||vi.贴现,减息贷款','These goods will be sold at a discount.','这些货物将降价出售。','On production of your membership card, you will receive a discount on purchases.','持会员证购物可享受折扣优待。'}

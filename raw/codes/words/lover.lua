@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lover"]={"lover","['lʌvə]","['lʌvɚ]","n.爱好者",'n.爱好者,情人','She acted out the role of wronged lover to make him feel guilty.','她扮作受了冤枉的情人, 好让他感到内疚.','His hapless lover was knocked down by a car.','他那不幸的恋人被汽车撞倒了。'}

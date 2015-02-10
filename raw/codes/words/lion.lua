@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lion"]={"lion","['laɪən]","['laɪən]","n.狮子",'n.狮子','The lion attacked its victim with great ferocity.','狮子凶猛地扑向猎物。','The lion lay asleep in its den.','狮子躺在洞里睡觉。'}

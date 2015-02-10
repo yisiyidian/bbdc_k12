@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["assured"]={"assured","[ə'ʃʊəd]","[ə'ʃʊrd]","adj.保障的",'adj.确实的，保障的，有自信的|||动词assure的过去式和过去分词','What is the sum assured?','人寿保险额是多少?','Our business is at the crossroads: if this deal succeeds, our future is assured; if not, we shall be bankrupt.','我们的商号正处在紧要关头: 倘若此番交易成功, 前途自无问题, 否则就要破产.'}

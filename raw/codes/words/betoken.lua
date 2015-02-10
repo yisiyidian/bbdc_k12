@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["betoken"]={"betoken","[bɪ'təʊk(ə)n]","[bɪ'tokən]","v.预示",'v.预示,是...的预兆','Dark clouds betoken a storm.','乌云予示着暴风雨的来临。','He gave her a gift to betoken his gratitude.','他送她一件礼物表示感谢.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["being"]={"being","['biːɪŋ]","['biɪŋ]","n.存在",'n.人,生物,存在|||vi.存在,处于,举行,去或来,是|||adj.现在的,目前的','I don\'t like being pent up in the house all the time.','我不喜欢整天给关在屋子里。','It is fun eating by stealth without being found.','偷吃而不被人发现很有趣。'}

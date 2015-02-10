@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["integrated"]={"integrated","['ɪntɪgreɪtɪd]","['ɪntɪɡretɪd]","adj.整合的",'adj.整合的,综合的|||vt.&vi.使整合(integrate的过去式及过去分词)','This computer program can be integrated with existing programs.','这套计算机程序可以与现有的程序整合在一起.','I integrated your suggestions into my plans and this has improved them.','我把你的建议采纳到我的计划中，由此改进了我的计划。'}

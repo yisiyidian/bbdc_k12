@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pastiche"]={"pastiche","[pæ'stiːʃ]","[ pæs'ti:ʃ, pɑ: ]","n.混成曲",'n.混成曲,模仿作品','Peter\'s bathroom is a brilliant pastiche of expensive interior design.','彼得的浴室是高档室内设计的集大成之作。','He often draw some pastiche but never tries to created his own style.','他常常模仿他人作品，但从不创造自己的风格。'}

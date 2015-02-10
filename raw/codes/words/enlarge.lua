@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enlarge"]={"enlarge","[ɪn'lɑːdʒ; en-]","[ɪn'lɑrdʒ]","v.扩大",'v.扩大,增大','I planned to enlarge this photograph.','我计划放大这张照片。','I need not enlarge on this matter; you all know my views.','关于此事我不必详述, 你们都知道我的意见.'}

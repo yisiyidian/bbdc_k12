@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["headquarters"]={"headquarters","[hed'kwɔːtəz]","['hɛdkwɔrtɚz]","n.司令部",'n.司令部,指挥部,总部','The party representative had been well primed with the facts by party headquarters.','党代表已经掌握了总部提供的事实.','They made contact with headquarters by radio.','他们用无线电跟总部联络上 了.'}

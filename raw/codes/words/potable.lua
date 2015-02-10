@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["potable"]={"potable","['pəʊtəb(ə)l]","['potəbl]","adj.适于饮用的",'adj.适于饮用的','Sea water can be used for a supply of potable water if it can be seperated from the salt dissolved in it.','如果能把海水中的盐分离出来，就可以把海水用作饮用水。','I want some ice juice which is potable.','我想要些适于饮用的冰果汁。'}

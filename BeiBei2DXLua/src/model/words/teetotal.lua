@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["teetotal"]={"teetotal","[tiː'təʊt(ə)l]","[ ti:təutəl ]","adj.绝对禁酒的",'adj.绝对禁酒的，滴酒不沾的，完全的','He is teetotal.','他滴酒不沾。','Do you enjoy drinking alcohol or are you teetotal?','滴酒不沾的'}

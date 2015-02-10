@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dig"]={"dig","[dɪg]","[dɪɡ]","v.挖",'v.挖,翻土','The food\'s ready, so dig in!','吃的弄好了，放量吃罢。','He was buried by an avalanche and had to be ||dug|| out.','他遇雪崩被埋住了，得把他挖出来。'}

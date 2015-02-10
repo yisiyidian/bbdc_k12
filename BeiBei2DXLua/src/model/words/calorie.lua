@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["calorie"]={"calorie","['kælərɪ]","['kæləri]","n.卡路里(热量单位)",'n.卡，卡路里(热量单位)|||=calory','Her diet restricts her to 1500 calories a day.','她的规定饮食限制她每天摄入1500卡的热量。','How many calories can an ounce of sugar supply?','一盎司糖可以供给多少卡热量？'}

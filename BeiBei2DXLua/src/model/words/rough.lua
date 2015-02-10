@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rough"]={"rough","[rʌf]","[rʌf]","adj.粗糙的",'adj.粗糙的,粗略的,粗暴的，艰难的，讨厌的，不适的|||adv.粗鲁地，粗略地|||n.高低不平且杂草丛生的地区，草图，暴徒|||vt.殴打,草拟|||adv.粗暴地','I feel a bit rough I\'m going to bed.','我有点儿不舒服－－想去睡觉了。','They complained rough handling by the police.','他们抱怨受到警察粗野的对待。'}

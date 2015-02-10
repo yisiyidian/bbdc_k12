@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quintessence"]={"quintessence","[kwɪn'tes(ə)ns]","[kwɪn'tɛsns]","n.精粹",'n.精粹,(物体)最纯粹的形体,典型','Her book captures the quintessence of Renaissance humanism.','她的书抓住了文艺复兴时期人文主义的精髓。','It was the quintessence of an English manor house.','那是典型的英式庄园宅第。'}

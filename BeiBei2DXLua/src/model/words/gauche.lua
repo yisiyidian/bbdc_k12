@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gauche"]={"gauche","[gəʊʃ]","[ɡoʃ]","adj.笨拙的",'adj.笨拙的,粗鲁的，不善交际的','I find him terribly gauche.','我认为他太不善交际了。','We\'re all a bit gauche when we\'re young.','年轻的时候我们都有点放不开。'}

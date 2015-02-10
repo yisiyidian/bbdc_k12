@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["external"]={"external","[ɪk'stɜːn(ə)l; ek-]","[ɪk'stɝnl]","n.外部",'n.外部|||adj.外部的,外用的,客观的,表面的','All his injuries are external.','他受的伤都是外伤。','This news program only covers external events.','这一新闻节目只报道国外消息。'}

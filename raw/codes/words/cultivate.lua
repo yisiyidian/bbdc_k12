@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cultivate"]={"cultivate","['kʌltɪveɪt]","['kʌltɪvet]","vt.培养",'vt.培养,耕作,栽培,结交(朋友),促进增长,教养','The farmer still must cut down trees, clear a lot of land and cultivate the soil.','农民们还必须砍倒树木，清理大片土地进行耕耘。','We must cultivate our own garden and find the joy of doing it in our own heart.','我们都要做好自己工作，并且要在工作中找到精神上的乐趣。'}

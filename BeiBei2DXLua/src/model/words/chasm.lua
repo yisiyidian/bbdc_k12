@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chasm"]={"chasm","['kæz(ə)m]","['kæzəm]","n.深坑",'n.深坑,裂口，分歧','A huge chasm gaped before them.','他们面前有道巨大的深坑。','The chasm between you and he can not be solved by us.','你和他之间的裂痕不是我们能解决的。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arose"]={"arose","[ə'rəʊz]","[ ə'rəuz ]","arise的过去式",'arise的过去式','The speaker failed to put his ideas over clearly enough so that some misunderstanding arose.','＂发言者没有把自己的观点解释得十分清楚, 因而引起了一些误解。＂','A storm arose during the night.','夜间起风暴了.'}

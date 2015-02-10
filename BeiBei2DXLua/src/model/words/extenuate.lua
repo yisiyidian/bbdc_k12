@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extenuate"]={"extenuate","[ɪk'stenjʊeɪt; ek-]","[ɪk'stɛnjʊet]","v.企图减轻(罪行等);为...找借口",'v.企图减轻(罪行等);为...找借口','Because of ||extenuating|| circumstances, the court acquitted him of the crime.','因考虑到情有可原，法庭判他无罪。','It is in vain, sir, to extenuate the matter.','先生，想缓和事态是没有用的。'}

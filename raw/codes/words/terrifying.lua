@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["terrifying"]={"terrifying","[ˈterɪfaɪɪŋ]","[ˈtɛrəˌfaɪɪŋ]","adj.可怕的",'adj.可怕的|||动词terrify的现在分词','The tidal wave formed a terrifying wall of water.','海啸形成一堵骇人的水墙.','The most terrifying aspect of nuclear bombing is radiation.','核轰炸最可怕的方面是核辐射.'}

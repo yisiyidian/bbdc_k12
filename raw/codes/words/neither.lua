@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["neither"]={"neither","['naɪðə; 'niː-]","['niðɚ]","adj.皆不",'adj.皆不,两者都不|||int.两者都不|||conj.既非,既不','We are going to play neither basketball nor volleyball.','我们既不将打篮球也不将打排球。','It is neither hot nor cold in winter here.','这里冬天既不热也不冷。'}

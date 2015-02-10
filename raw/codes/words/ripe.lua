@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ripe"]={"ripe","[raɪp]","[raɪp]","adj.成熟的",'adj.成熟的,上年纪的,合适的','The branches were weighed down with ripe apples.','苹果成熟了把树枝都压弯了.','Most tomatoes are red when ripe, but some kinds are yellow.','大多数西红柿成熟时是红色的，但有些品种是黄色的。'}

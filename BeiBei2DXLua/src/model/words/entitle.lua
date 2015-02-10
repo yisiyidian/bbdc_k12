@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["entitle"]={"entitle","[ɪn'taɪt(ə)l; en-]","[ɪn'taɪtl]","v.取名为",'v.取名为,给与名称,叫做,使有权利','She read a poem entitled The Apple Tree\'.','她读了一首题为《苹果树》的诗.','He entitled the book Savage Love\'.','他给这本书取名为《野性的爱》.'}

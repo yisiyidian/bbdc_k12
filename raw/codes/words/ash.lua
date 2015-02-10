@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ash"]={"ash","[æʃ]","[æʃ]","n.灰",'n.灰,灰烬','I wish he would refrain from scattering his ash all over the carpet.','我希望他不要将烟灰往地毯上乱弹。','Water flows from the condenser to the ash room.','水从冷凝器流出，流入灰浆室。'}

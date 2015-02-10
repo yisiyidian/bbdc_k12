@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adversity"]={"adversity","[əd'vɜːsɪtɪ]","[əd'vɝsəti]","n.不幸",'n.不幸,灾难','||Adversity|| makes a man wise, not rich.','逆境不能使人富有，但能使人明智。','The fire is the test of gold; adversity of strong men.','【谚】烈火炼真金，逆境炼壮士。'}

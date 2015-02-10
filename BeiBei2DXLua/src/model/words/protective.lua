@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["protective"]={"protective","[prə'tektɪv]","[prə'tɛktɪv]","adj.保护的",'adj.保护的,防卫的','The armadillo has a protective shell of bony plates.','犰狳有角质鳞片的护甲.','He put his arm round her in a protective gesture.','他用一只手臂围住她做出保护的姿势。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fractional"]={"fractional","['frækʃ(ə)n(ə)l]","['frækʃənl]","adj.微不足道的",'adj.微不足道的,断片的,分数的','Speech is fractional; silence is integral.','讲话是分数；沉默是整数。','a minor candidate\'s fractional share of the vote.','一个次要的候选人的少得可怜的选票'}

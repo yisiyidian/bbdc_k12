@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["brunt"]={"brunt","[brʌnt]","[brʌnt]","n.正面的冲击",'n.正面的冲击,主要的压力','The brunt of her argument was directed at the trade union leader.','她把抨击的矛头对准了工会的领导人.','I had to bear the brunt of his anger.','他发脾气时,我是首当其冲.'}

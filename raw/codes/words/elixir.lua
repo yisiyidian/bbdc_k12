@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["elixir"]={"elixir","[ɪ'lɪksə; -sɪə]","[ɪ'lɪksɚ]","n.长生不老药",'n.长生不老药,仙丹妙药','There is no elixir of life in the world.','世界上没有长生不老药。','Keeping your mind awake and active is the only youth elixir.','保持头脑清醒和灵活便是保持年轻的唯一灵丹妙药。'}

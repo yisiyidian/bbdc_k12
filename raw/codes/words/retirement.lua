@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["retirement"]={"retirement","[rɪ'taɪəm(ə)nt]","[rɪ'taɪɚmənt]","n.退休",'n.退休，隐匿处|||adj.退休的','She found it difficult to establish a new routine after retirement.','她发觉退休后很难建立起新的生活规律。','The couple had the foresight to plan their retirement wisely.','他们夫妇很有远见，精心安排了退休后的生活。'}

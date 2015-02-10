@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pronounce"]={"pronounce","[prə'naʊns]","[prə'naʊns]","vt.&vi.发音",'vt.&vi.发音,宣告,断言,发表意见','The dinner was pronounced excellent by all the guests.','所有的客人都说这顿饭好极了。','The court pronounced against my claim to the land.','法庭宣判不承认我对这片土地的权益。'}

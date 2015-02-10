@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["honk"]={"honk","['hɒŋk]","[hɑŋk]","n.汽车喇叭声",'n.汽车喇叭声，雁叫声，|||v.（使）雁叫，鸣(汽车喇叭)','I drove up in front of the house and honked.','我将车开到屋子前面然后按喇叭。','The honking of horns flustered the boy.','汽车喇叭的叫声使男孩感到慌乱。'}

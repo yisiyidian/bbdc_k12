@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["envy"]={"envy","['envɪ]","['ɛnvi]","vt.&vi.嫉妒",'vt.&vi.嫉妒,羡慕|||n.妒忌,羡慕','He\'s the envy of the whole street.','整条街的人都很羡慕他。','They envy him his good fortune.','他们羡慕他的好运气。'}

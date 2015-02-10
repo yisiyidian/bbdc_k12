@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["digress"]={"digress","[daɪ'gres]","[daɪ'ɡrɛs]","v.走向岔道",'v.走向岔道,离开本题,扯到枝节上','I\'ll tell you a funny story, if I may digress for a moment.','如果我可以暂时离开一下话题，我将讲一个有趣的故事给你听。','Don\'t digress (from the subject) when lecturing.','讲课时不要岔开（主题）.'}

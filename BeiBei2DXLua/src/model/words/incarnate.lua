@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incarnate"]={"incarnate","[ɪn'kɑːnət]","[ɪn'kɑrnət]","vt.体现(使...具体化)",'vt.体现(使...具体化)|||adj.化身的(人体化的)','The guards are sadistic beasts and their leader is the devil incarnate.','那些警卫都是残暴的野兽，他们的首领是个魔鬼的化身。','He incarnates all the qualities of a successful manager.','他表现出了事业有成的经理人员所具有的一切品质。'}

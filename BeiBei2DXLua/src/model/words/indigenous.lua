@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indigenous"]={"indigenous","[ɪn'dɪdʒɪnəs]","[ɪn'dɪdʒənəs]","adj.该土地所固有的",'adj.该土地所固有的,土著的,国产的','Indians were the indigenous inhabitants of America.','印第安人是美洲的土著居民。','Many tourists are drawn to these regions by their natural landscape beauty and the unique culture of their indigenous people.','这里的自然美景和当地人民独特的文化吸引了许多游客。'}

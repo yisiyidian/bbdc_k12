@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prose"]={"prose","[prəʊz]","[proz]","adj.散文的",'adj.散文的|||n.散文','Her prose is far too mannered and self-conscious.','她的散文过於矫揉造作.','Most of the scene is written in verse, but some is in prose.','这场戏大部分内容是用韵文写成的, 但也有一些是散文形式的.'}

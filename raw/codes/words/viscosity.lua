@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["viscosity"]={"viscosity","[vɪ'skɒsɪtɪ]","[vɪs'kɑsəti]","n.粘度",'n.粘度,粘性','Some liquids, however, do increase in viscosity when heated.','然而有些液体受热时粘度确实增大了。','The viscosity shows a rather pronounced variation with temperature.','温度对粘度的影响十分明显.'}

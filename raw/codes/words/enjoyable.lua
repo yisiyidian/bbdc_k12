@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enjoyable"]={"enjoyable","[ɪn'dʒɒɪəb(ə)l; en-]","[ɪn'dʒɔɪəbl]","adj.有趣的",'adj.有趣的,愉快的','The hotel staff spares no pain to ensure that our stay is as enjoyable as possible.','旅馆工作人员对我们照顾得无微不至, 尽量让我们住得舒适。','How are you getting along these days? ie Is your life enjoyable, successful, etc at the moment?','近来生活如何?'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["botany"]={"botany","['bɒt(ə)nɪ]","['bɑtəni]","n.植物学",'n.植物学，植物','We have studied botany in our middle school.','我们在中学的时候就学过植物学。','The coverage of the subject in his botany text is inadequate.','他的植物学教科书中对那题目的叙述不充分。'}

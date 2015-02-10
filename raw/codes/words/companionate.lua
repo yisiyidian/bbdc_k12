@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["companionate"]={"companionate","[kəm'pænjənət]","[kəm'pænjənɪt]","adj.伙伴的",'adj.伙伴的,友爱的','companionate','伙伴的,友爱的','This is what Sternberg calls "companionate love','这种情况，斯腾伯格称之为伴侣式爱情'}

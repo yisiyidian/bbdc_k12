@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clairvoyant"]={"clairvoyant","[kleə'vɒɪənt]","[klɛr'vɔɪənt]","adj.透视的",'adj.透视的,有洞察力的|||n.透视者,有预见的人','It is said the love is blind but friendship is clairvoyant.','据说爱情令人盲目，而友谊却能让人醍醐灌顶。','You did not have to be a clairvoyant to see that the war would go on.','就算没有未卜先知的能力也能料到战争会持续下去。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["copyright"]={"copyright","['kɒpɪraɪt]","['kɑpɪraɪt]","adj.版权(的)",'adj.版权(的)|||n.版权,著作权','He decided to resign his claim to the copyright.','他决定放弃对版权的要求。','||Copyright|| expires 50 years after the death of the author.','版权在作者死後50年即行终止.'}

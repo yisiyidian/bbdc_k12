@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suitable"]={"suitable","['suːtəb(ə)l]","['sutəbl]","adj.合适的",'adj.合适的,适宜的','The director is looking for a suitable locale for his new film.','导演在为新片物色合适的拍摄场地。','These films are suitable for adults only.','这些电影只适宜成人观看。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["specious"]={"specious","['spiːʃəs]","['spiʃəs]","adj.似是而非的",'adj.似是而非的,华而不实的','It is unlikely that the Duke was convinced by such specious arguments.','公爵不太可能相信这种似是而非的论点。','Such talk, however plausible, is actually specious and groundless.','这些话讲起来好像有道理，实际上是毫无根据 、似是而非的空谈。'}

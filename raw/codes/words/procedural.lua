@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["procedural"]={"procedural","[prə'siːdʒərəl]","[pro'sidʒərəl]","adj.程序的",'adj.程序的|||n.警察疑案作品','A police procedural.','警方程序上的','The business of the committee was delayed by procedural difficulties.','委员会的事务因程序上有困难而耽搁了.'}

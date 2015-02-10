@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["regicide"]={"regicide","['redʒɪsaɪd]","['rɛdʒɪsaɪd]","n.弑君",'n.弑君,大逆,大逆者','Some of the regicides were sentenced to death.','一些弑君者被判处死刑。','He had become czar through regicide.','他通过弑君登上了沙皇宝座。'}

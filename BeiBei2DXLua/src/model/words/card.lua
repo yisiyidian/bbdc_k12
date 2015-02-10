@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["card"]={"card","[kɑːd]","[kɑrd]","n.卡片",'n.卡片,纸牌,名片,打牌,节目单|||vt.附上或提供卡片,印卡,在卡片上列出,检查资格','What\'s this card good for?','这卡片有什么用?','He lost his credit card.','他丢了信用卡。'}

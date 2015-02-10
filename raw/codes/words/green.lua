@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["green"]={"green","[griːn]","[ɡrin]","adj.绿色的",'adj.绿色的；未熟的，青春的；未成熟的；主张保护环境的|||n.绿色蔬菜；绿色的衣服；植物|||vi.绿化，使重视环境保护问题','The paper turned green as if by magic.','这纸魔术般地变成了绿色。','She never wears green.','她从不穿绿色的衣服。'}

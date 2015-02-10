@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glacial"]={"glacial","['gleɪsɪəl; -ʃ(ə)l]","['ɡleʃl]","adj.冰的",'adj.冰的,冰川(期)的','Work proceeded at a glacial pace.','工作以极缓慢的速度进行着。','Her expression was glacial.','她表情冷淡。'}

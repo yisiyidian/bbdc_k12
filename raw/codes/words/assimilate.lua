@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assimilate"]={"assimilate","[ə'sɪmɪleɪt]","[ə'sɪməlet]","v.使同化",'v.使同化，吸收|||n.被同化的事物','Some foods are assimilated more easily than others.','有些食物比另一些食物容易吸收。','The USA has assimilated people from many different countries.','美国已经同化了许多来自不同国家的人。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["odor"]={"odor","['odɚ]","[ 'əudə ]","n.气味",'n.气味,名声,气息','The flowers gave off a fragrant odor.','花发出一阵幽香。','The penetrating odor of garlic soon filled the entire apartment.','大蒜刺鼻的气味很快就弥散了整个屋子'}

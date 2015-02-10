@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trio"]={"trio","['triːəʊ]","['trio]","n.三个一组",'n.三个一组，三重唱（奏）','Found his groove playing bass in a trio.','发现他在三重唱中最适合唱低音','...classy American songs from a Texas trio.','…来自德克萨斯州三重唱小组的时髦的美国歌曲。'}

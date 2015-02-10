@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["subsidy"]={"subsidy","['sʌbsɪdɪ]","['sʌbsədi]","n.补助金",'n.补助金,津贴','It\'s the old and the poor who suffer worst when ||subsidies|| are cut.','补助津贴一削减，最吃苦头的就是那些老人和贫民。','Food subsidy programs have other costs.','粮食补贴方案还要付出其他代价。'}

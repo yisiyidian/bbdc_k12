@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["minnow"]={"minnow","['mɪnəʊ]","['mɪno]","n.鲦鱼",'n.鲦鱼,小淡水鱼','These criminals arrested by the police are only minnows, their leader has escaped.','这些被警察抓住的犯罪分子只是些小鱼，他们的头子却跑掉了。','Throw out a minnow to catch a whale.','弃小引大。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conservatism"]={"conservatism","[kən'sɜːvə,tɪzəm]","[kən'sɝvətɪzəm]","n.保守主义",'n.保守主义,守旧性','There is a deep-seated conservatism running through our society.','我们社会中普遍存在著根深蒂固的保守思想.','A wave of conservatism.','保守主义风潮'}

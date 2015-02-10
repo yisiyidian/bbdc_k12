@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["situate"]={"situate","['sɪtʃʊeɪt; -tjʊ-]","['sɪtʃʊet]","vt.位于",'vt.位于,坐落在|||adj.位于...的，坐落在...的','The council is trying to decide where to situate the new hospital.','委员会正试图决定将新医院建在何处。','Where will the school be situated?','学校要建在哪儿?'}

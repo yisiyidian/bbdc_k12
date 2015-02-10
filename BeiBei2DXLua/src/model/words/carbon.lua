@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["carbon"]={"carbon","['kɑːb(ə)n]","['kɑrbən]","n.碳",'n.碳,灯芯,复写纸','||Carbon|| has 4 valencies.','碳的化合价是四价.','She\'s a carbon copy of her sister.','她跟她姐姐一模一样.'}

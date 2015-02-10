@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["precedence"]={"precedence","['presɪd(ə)ns; prɪ'siːd(ə)ns]","[prɪ'sidəns]","n.优先",'n.优先,居先','An authoritative rating that establishes such precedence.','建立这种居先地位的有权威的分级','The elder son has precedence over the younger one.','长子较之非长子享有优先权.'}

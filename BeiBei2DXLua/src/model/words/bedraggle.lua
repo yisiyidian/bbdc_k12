@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bedraggle"]={"bedraggle","[bɪ'dræɡl]","[bɪ'drægl]","v.湿透",'v.湿透,拖脏|||vt.拖湿','The children ran into the house, dirty and bedraggle from playing in the garden.','孩子们跑进屋子，他们在花园里玩得满身是汗，脏兮兮的。','A few bedraggled passengers stood in the rain, waiting for the train.','几名浑身湿透的乘客站在雨中等候列车。'}

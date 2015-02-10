@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["throat"]={"throat","[θrəʊt]","[θrot]","n.喉咙",'n.喉咙,嗓音|||vt.低语,压着嗓子说(唱)','the throat of a horn.','号角颈部','It sticks in my throat to have to accept charity from them.','我不得不接受他们的施舍，此事教我耿耿於怀。'}

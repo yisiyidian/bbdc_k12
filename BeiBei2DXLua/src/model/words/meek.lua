@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["meek"]={"meek","[miːk]","[mik]","adj.温顺的",'adj.温顺的,谦恭的','He expected his daughters to be meek and submissive.','他期望女儿都温顺听话。','She is as meek as a lamb.','她像小羊一样的温顺。'}

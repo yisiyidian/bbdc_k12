@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["respectively"]={"respectively","[rɪ'spektɪvlɪ]","[rɪ'spɛktɪvli]","adv.各自地",'adv.各自地,分别地','German and Italian courses are held in munich and rome respectively.','德语和意大利语课程分别设於慕尼黑和罗马。','My husband and I got pay rises of 8% and 10% respectively.','我丈夫和我分别加薪8%和10%。'}

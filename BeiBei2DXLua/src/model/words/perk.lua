@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perk"]={"perk","[pɜːk]","[pɝk]","vi.振作",'vi.振作,昂首|||vt.使神气活现,无理强迫|||n.特权,利益','He looked depressed but perked up when his friends arrived.','他看上去无精打彩的, 但朋友一来就精神起来了.','The horse perked up its head when I shouted.','我吆喝时那马扬起了头.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["farming"]={"farming","['fɑːmɪŋ]","['fɑrmɪŋ]","n.耕作",'n.耕作|||动词farm的现在分词','He is farming in Africa.','他在非洲务农.','It\'s difficult to make sheep farming pay here.','养羊业在这里难有收益.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["smoothly"]={"smoothly","['smuːðlɪ]","['smʊðli]","adv.平滑地",'adv.平滑地,流畅地,流利地','The plane answered smoothly to the controls.','这架飞机操纵自如.','The bolt slotted smoothly into place.','插销很容易就插上了.'}

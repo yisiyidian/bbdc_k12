@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["austere"]={"austere","[ɒ'stɪə; ɔː-]","[ɔ'stɪr]","adj.严峻的",'adj.严峻的,严格的，简朴的，禁欲的，苦行的','The room was furnished in austere style.','这间屋子陈设得简单朴素。','The life of the troops was still comparatively austere.','军队的生活还是相对清苦的。'}

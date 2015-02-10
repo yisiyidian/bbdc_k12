@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["complacent"]={"complacent","[kəm'pleɪs(ə)nt]","[kəm'plesnt]","adj.满足的",'adj.满足的,自满的,得意的','We cannot afford to be complacent about our health.','对于健康我们决不能掉以轻心。','He shows a complacent smile.','他得意地笑了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["annex"]={"annex","[ə'neks]","[ə'nɛks]","n.附属物",'n.附属物,附属建筑物|||vt.并吞,附加,盖','In the years immediately preceding the outbreak of war in1939, Hitler succeeded in annexing various parts of Europe to Germany without firing a shot.','在1939年大战爆发的前几年，希特勒没开一抢而成功地把欧洲许多地区并吞为德国领土。','Japan annexed Korea in 1910.','日本在1910年吞并了朝鲜。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jewellery"]={"jewellery","['dʒuːəlrɪ]","[ 'dʒu:əlri ]","n.[总称]珠宝",'n.(=jewelry)[总称]珠宝,镶嵌有宝石之饰物','She wore so much jewellery that she seemed to be covered in gold.','她戴了那么多首饰，看上去象是包在金子里似的。','She has bequeathed me her jewellery.','她把珠宝遗赠给我了.'}

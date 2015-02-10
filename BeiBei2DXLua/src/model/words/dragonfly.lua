@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dragonfly"]={"dragonfly","['dræg(ə)nflaɪ]","['dræɡənflaɪ]","n.蜻蜓",'n.蜻蜓','I love ||dragonflies||.','我喜欢蜻蜓。','||Dragonflies||, unlike butterflies, do not create a chrysalis or undergo complete metamorphosis.','蜻蜓不像蝴蝶，它不生产蝶踊或经历全蜕变'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["binding"]={"binding","['baɪndɪŋ]","['baɪndɪŋ]","n.（书籍的）封皮",'n.（书籍的）封皮,镶边,（滑雪板的）皮靴固定装置|||adj.必须遵守的；有法律约束力的','The art, trade, or profession of binding books.','装订术, 业装订书本的技艺、行业或职业','Something used for securing or binding.','绳, 绳索固定或捆绑用的东西'}

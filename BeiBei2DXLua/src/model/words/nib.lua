@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nib"]={"nib","[nɪb]","[nɪb]","n.嘴",'n.嘴,鹅管笔的尖端,笔尖|||v.装尖头,削尖,插入','The nib is blunted.','钢笔尖儿戳了。','The nib is broken; it can\'t be used.','这笔尖坏了，不能用了。'}

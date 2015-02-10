@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coffee"]={"coffee","['kɒfɪ]","['kɔfi]","n.咖啡",'n.咖啡','Neither of my sisters drinks coffee.','我的两个姐妹都不喝咖啡。','He put some sugar into his coffee.','他往咖啡里加了些糖。'}

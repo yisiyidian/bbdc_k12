@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fire"]={"fire","['faɪə]","[faɪr]","n.火",'n.火,火灾,射击|||v.点燃,解职,开枪','The engine is only ||firing|| on three cylinders.','这发动机只有三个汽缸工作。','The house is on fire!','房子着火了！'}

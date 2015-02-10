@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["relapse"]={"relapse","[rɪ'læps]","[rɪ'læps]","n.复旧",'n.复旧,故态复萌,再发|||v.故态复萌,再陷邪道,再度堕落','He can\'t return to work because he\'s had a relapse.','由于旧病复发，他无法重新开始工作。','In 90 percent of cases the patient will relapse within six months.','90%的病人在6个月内会再次发病。'}

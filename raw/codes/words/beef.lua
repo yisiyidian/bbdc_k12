@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["beef"]={"beef","[biːf]","[bif]","n.牛肉",'n.牛肉|||v.抱怨,诉苦','Do you like stewed beef?','你喜欢吃炖牛肉吗？','Africa is exporting beef to Europe.','非洲向欧洲出口牛肉。'}

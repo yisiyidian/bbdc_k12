@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pleased"]={"pleased","[pliːzd]","[plizd]","adj.高兴的",'adj.高兴的','He doesn\'t mind. In fact, he is even pleased.','他不介意, 事实上, 他甚至很高兴。','He was pleased with their warm welcome.','他们的热烈欢迎使他很高兴。'}

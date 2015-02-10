@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nightmare"]={"nightmare","['naɪtmeə]","['naɪt'mɛr]","n.恶梦",'n.恶梦,使人极其痛苦的事情或经历,梦魇','The nightmare gave her the creeps.','那场恶梦使她不寒而栗。','I had a nightmare and cried out in horror.','我做了一个恶梦, 惊恐地大叫。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["poultice"]={"poultice","['pəʊltɪs]","['poltɪs]","n.泥罨剂",'n.泥罨剂，泥敷剂|||vt.敷泥罨剂于','He poulticed the wound.','他用药膏敷伤口。','I can give you a poultice, but I suggest that you go to the doctor to get an X-ray.','我先给您一块膏药，但还是建议您去医院拍一张X光片。'}

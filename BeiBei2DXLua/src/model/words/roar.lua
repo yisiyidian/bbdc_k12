@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["roar"]={"roar","[rɔː]","[rɔr]","n.吼",'n.吼,咆哮,轰鸣,喧闹|||vi.吼叫,大声说出,喧闹|||vt.呼喊,使轰鸣,','The roar of the train reverberated in the tunnel.','火车的轰隆声在隧道里回荡.','The murmur swelled into a roar.','窃窃私语的声音变大形成一片喧哗。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lasting"]={"lasting","['lɑːstɪŋ]","['læstɪŋ]","adj.永久的",'adj.永久的,永恒的|||动词last的现在分词','First impressions are most lasting.','【谚】最初的印象最深刻。','The treaty will be the threshold of lasting peace.','这个条约将成为持久和平的开端。'}

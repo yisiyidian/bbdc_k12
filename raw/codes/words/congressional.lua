@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["congressional"]={"congressional","[kən'ɡreʃənəl]","[kən'ɡrɛʃənl]","adj.议会的",'adj.议会的,国会的,会议的','The congressional opponents zeroed in on the bill.','国会中的反对派把矛头集中指向那项议案。','Kill a congressional bill.','否决一项国会议案'}

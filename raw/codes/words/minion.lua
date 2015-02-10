@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["minion"]={"minion","['mɪnjən]","['mɪnɪən]","n.下属",'n.下属，奴才,宠臣','Can you send one of your minions to collect this file?','你能不能派个助手来取这份档案？','Satan\'s minion\'s at work again.','命运又开始捉弄人了。'}

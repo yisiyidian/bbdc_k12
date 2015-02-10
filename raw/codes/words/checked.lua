@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["checked"]={"checked","[tʃekt]","[tʃɛkt]","adj.格子花纹的",'adj.格子花纹的,棋盘花纹的|||动词check的过去式和过去分词','I checked in at the hotel.','我登记住进了旅馆。','All these items have been checked up.','所有项目都已核对过了。'}

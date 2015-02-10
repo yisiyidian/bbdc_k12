@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paralysis"]={"paralysis","[pə'rælɪsɪs]","[pə'ræləsɪs]","n.瘫痪",'n.瘫痪','The disease results in creeping paralysis.','这种病可发展成脊髓痨.','Complete paralysis of the lower half of the body including both legs, usually caused by damage to the spinal cord.','截瘫，下身麻痹通常由于脊髓受伤引起的包括双腿在内的下部身体完全的瘫痪'}

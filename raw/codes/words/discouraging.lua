@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["discouraging"]={"discouraging","[dɪ'skʌrɪdʒɪŋ]","[ dis'kʌridʒiŋ ]","adj.令人气馁的",'adj.令人气馁的|||vbl.使...气馁','They are absolutely discouraging me from such a dangerous step.','他们完全反对我迈出这危险的一步。','We ought to focus on discouraging kids from smoking.','我们应把重点放在劝阻孩子们吸烟上。'}

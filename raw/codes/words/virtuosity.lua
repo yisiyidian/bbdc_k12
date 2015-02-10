@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["virtuosity"]={"virtuosity","[,vɜːtʃʊ'ɒsɪtɪ]","[,vɝtʃu'ɑsəti]","n.精湛技巧",'n.精湛技巧,高超，对艺术品的欣赏或爱好','A brilliant display, as of rhetoric or wit, or of virtuosity in the performing arts.','口才或机智的炫耀辉煌灿烂，天花乱坠，尤指在口才或才智，以及艺术表演中的艺术表现能力','A piece or passage that emphasizes a performer\'s virtuosity.','精彩片段突出演员精湛演技的一段或一节'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lasso"]={"lasso","[lə'suː; 'læsəʊ]","['læso]","vt.用套索套捉",'vt.用套索套捉|||n.套索(捕捉牛、马用)','Cowboys drove covered wagons and rode horses, lassoing cattle.','牛仔们有的赶着大篷车，有的骑着马，抛套索捕牛。','Use your ||Lasso|| to draw a rough selection around your image.','使用套索在你的图像周围画一个粗略的选区。'}

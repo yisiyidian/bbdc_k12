@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["recycle"]={"recycle","[riː'saɪk(ə)l]","[,ri'saɪkl]","vt.使再循环",'vt.使再循环,再利用,再制|||vi.循环|||n.再循环','Older students help recycle waste from the cafeteria','高年级学生帮助回收废物的自助餐厅','We should recycle the paper we had used.','我们应该回收我们用过的纸。'}

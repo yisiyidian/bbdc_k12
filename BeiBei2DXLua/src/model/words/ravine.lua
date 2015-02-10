@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ravine"]={"ravine","[rə'viːn]","[rə'vin]","n.峡谷",'n.峡谷,山峡,溪谷','His enemy was close behind him, and the bridge over the ravine was rotten and swaying.','敌人就在背后，而前面横跨在深谷之上的桥已经腐朽不堪，摇摇晃晃。','A deep ravine is on the left of the road.','有一道深沟在马路左边。'}

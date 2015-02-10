@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["scholarly"]={"scholarly","['skɒləlɪ]","['skɑlɚli]","adj.学究气的",'adj.学究气的，学者派头的|||名词scholar的形容词','Tom looks scholarly,but he knows nothing about study.','汤姆看起来很学究气，但他根本不懂学习的事情。','He has gained a distinction in various fields of scholarly studies.','他在多种科学的学术研究中享有盛名.'}

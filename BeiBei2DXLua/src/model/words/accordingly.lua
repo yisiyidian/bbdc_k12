@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accordingly"]={"accordingly","[ə'kɔːdɪŋlɪ]","[ə'kɔrdɪŋli]","adv.因此",'adv.因此,于是,如前所说照着相应地','Please inform us of your decision and we will act accordingly.','请把你们的决定通知我们,我们会照着去办的.','He was asked to leave the city and accordingly he went.','有人叫他离开该城市，所以他就走了。'}

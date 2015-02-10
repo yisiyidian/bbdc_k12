@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jean"]={"jean","[dʒiːn]","[dʒɪn]","n.斜纹布",'n.斜纹布|||（复数）jeans:牛仔裤|||Jean：琴(女子名),杰(男子名)','She was wearing a pair of tight blue jeans.','她穿著蓝色紧身牛仔裤.','||Jean|| is campaigning for equal rights for women.','琼在参加争取妇女平等权利的运动.'}

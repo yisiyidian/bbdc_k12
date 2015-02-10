@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["withdrawal"]={"withdrawal","[wɪð'drɔː(ə)l]","[wɪð'drɔəl]","n.撤退",'n.撤退,退回,取消','He advocated the withdrawal of the American presence in Lebanon.','他主张美国人应该从黎巴嫩撤走。','We made a strategic withdrawal, so that we could build up our forces for a renewed attack.','我们作了一次战略性退却，以便我们能积蓄力量再次进攻。'}

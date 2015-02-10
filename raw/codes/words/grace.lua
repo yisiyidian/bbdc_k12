@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grace"]={"grace","[greɪs]","[ɡres]","n.优雅",'n.优雅,魅力,恩惠,慈悲|||vt.使荣耀,装饰','I\'m not in her good graces at the moment.','我此刻尚未讨得她的欢心。','He might have had the grace to say he was sorry!','他本可以出於礼貌说声抱歉的嘛。'}

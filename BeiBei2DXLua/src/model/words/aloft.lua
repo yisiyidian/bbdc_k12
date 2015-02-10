@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aloft"]={"aloft","[ə'lɒft]","[ə'lɔft]","adv.在高处",'adv.在高处,在空中，在桅杆上|||prep.在...上','Currents of warm air keep the hang-gliders aloft.','悬挂式滑翔机藉著暖气流在高空飞行。','As it was getting late, the children were quickly sent aloft to bed.','时间已晚，孩子们很快就被打发上楼睡觉。'}

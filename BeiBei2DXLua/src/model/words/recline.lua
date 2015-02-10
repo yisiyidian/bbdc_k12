@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["recline"]={"recline","[rɪ'klaɪn]","[rɪ'klaɪn]","v.靠在",'v.靠在,斜倚,倚靠','||Recline|| one\'s head on [upon]...','将头斜靠于...上','She reclined her head against my shoulder.','她把头倚在我的肩上。'}

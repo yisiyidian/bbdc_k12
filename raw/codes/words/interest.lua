@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["interest"]={"interest","['ɪnt(ə)rɪst]","['ɪntrəst]","n.兴趣",'n.兴趣,嗜好,利息;股份|||vt.使...感兴趣','The subject may be full of interest to you, but it holds no interest for me.','这个问题即使你兴味盎然，我也是兴味索然。','The lawyer invited the interested parties to discuss the problem.','律师邀请有关的当事人一起商讨问题。'}

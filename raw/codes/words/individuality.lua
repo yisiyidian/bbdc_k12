@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["individuality"]={"individuality","[,ɪndɪvɪdjʊ'ælɪtɪ]","[,ɪndɪ,vɪdʒu'æləti]","n.个性",'n.个性,人格,特征','The distinct personality of an individual regarded as a persisting entity; individuality.','个性, 特性个人具有的长期以实体形式存在的独特性格; 个性','We should respect individuality.','我们应该尊重个性。'}

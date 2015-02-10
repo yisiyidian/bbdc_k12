@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["twig"]={"twig","[twɪg]","[twɪɡ]","n.小枝",'n.小枝,嫩枝|||v.理解，领悟','I kept dropping hints but he still didn\'t twig.','我一直不停地暗示他，但他还是不懂。','She heard a twig snap.','她听到一根细树枝的断裂声。'}

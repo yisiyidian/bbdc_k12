@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["exceedingly"]={"exceedingly","[ɪk'siːdɪŋlɪ; ek-]","[ɪk'sidɪŋli]","adv.非常(极其",'adv.非常(极其,极度地,很)','The imposition of heavy emergency custom duties have rendered our position exceedingly difficult.','由于海关征收繁重的紧急关税，使得我们处于极其困难的境地。','He is an exceedingly tedious fellow.','他是一个非常令人生厌的家伙。'}

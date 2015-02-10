@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cluster"]={"cluster","['klʌstə]","['klʌstɚ]","n.串",'n.串,丛,群|||v.聚合,成串,丛生,使...聚集','Crowded or massed into a dense cluster.','丛生的，聚生的聚集成密丛的','The men clustered together round the fire and sang songs.','人们聚集在篝火周围唱歌。'}

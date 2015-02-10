@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glamor"]={"glamor","['ɡlæmə]","['glæmɚ]","n.魅力",'n.魅力，吸引力|||=glamour(英)','What makes television distinctive is its glamor and its reach.','使电视具有特色的东西是它那迷人的魅力以及传播范围之广.','The glamor of the East was brought to international prominence by the Russion national school.','俄罗斯民族乐派使东方的魅力产生了国际性的影响.'}

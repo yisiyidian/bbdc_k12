@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["guess"]={"guess","[ges]","[ɡɛs]","n.猜测",'n.猜测,推测,猜想|||vt.&vi.猜测,推测','I guess her age as 35.','我猜她有35岁。','Make a guess at the answer.','猜一下答案。'}

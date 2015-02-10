@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sturdy"]={"sturdy","['stɜːdɪ]","['stɝdi]","adj.强健的",'adj.强健的,健全的','Impressively large, sturdy, and enduring.','巨大的、坚硬的和不朽的','||Sturdy|| steeds gallop on the grasslands.','骏马在草原上奔驰.'}

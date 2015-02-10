@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impudent"]={"impudent","['ɪmpjʊd(ə)nt]","['ɪmpjədənt]","adj.鲁莽的",'adj.鲁莽的,卑鄙的','A saucy or impudent girl.','野丫头轻率、鲁莽的女孩','Rude and disrespectful; impudent.','鲁莽的粗鲁的且不敬的；放肆的'}

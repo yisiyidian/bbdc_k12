@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transparent"]={"transparent","[træn'spær(ə)nt; trɑːn-; -'speə-]","[træns'pærənt]","adj.透明的",'adj.透明的,明显的,清晰的','Chiffon is a kind of thin, almost transparent fabric.','雪纺绸是一种几乎透明的丝质薄织物。','The meaning of this passage seems quite transparent.','这一段的意思看来是相当清楚的。'}

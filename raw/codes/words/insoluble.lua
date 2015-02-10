@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insoluble"]={"insoluble","[ɪn'sɒljʊb(ə)l]","[ɪn'sɑljəbl]","adj.[化]不能溶解的",'adj.[化]不能溶解的,不能解决的','Philosophy: unintelligible answers to insoluble problems.','哲学：是对难以解释的问题作出的难以理解的答案。','Oil is insoluble in water under common conditions.','油在常规条件下是不能溶解于水的。'}

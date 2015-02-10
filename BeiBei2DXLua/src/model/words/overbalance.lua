@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overbalance"]={"overbalance","[əʊvə'bæl(ə)ns]","[,ovɚ'bæləns]","vt.使失去平衡",'vt.使失去平衡，重于|||n.超重，失去平衡','He overbalanced and fell into the water.','他失去平衡跌入水中.','If you stand up you\'ll overbalance the canoe.','要是站起来, 能把独木舟弄翻.'}

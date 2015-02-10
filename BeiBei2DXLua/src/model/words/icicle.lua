@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["icicle"]={"icicle","['aɪsɪk(ə)l]","['aɪsɪkl]","n.冰柱",'n.冰柱,冰垂','She walked in, as chill as an icicle, and as high as a princess','她走进来了，跟个冰柱似的，冷冰冰的，又象个公主似的高不可攀。','The drops fell very slowly, as they fall from an icicle after the sun has gone.','血滴得很慢很慢, 仿佛是太阳落山后的冰柱滴下的水珠.'}

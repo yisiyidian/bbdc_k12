@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["penicillin"]={"penicillin","[penɪ'sɪlɪn]","[,pɛnɪ'sɪlɪn]","n.青霉素",'n.青霉素','I should have asked him for a shot of penicillin.','我应当让他给我打一针青霉素。','She injected the patient with penicillin.','她给病人注射了青霉素.'}

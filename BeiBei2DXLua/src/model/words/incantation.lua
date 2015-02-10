@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incantation"]={"incantation","[ɪnkæn'teɪʃ(ə)n]","[,ɪnkæn'teʃən]","n.诀语",'n.诀语,咒语','Hovering over the sick child, the witch doctor muttered mysterious incantation.','巫医在生病的小孩子身边走来走去，嘴里念着神秘的咒语。','She would go into a trance and wail her incantations to the spirits.','她会神志恍惚, 哀声向幽灵念咒语。'}

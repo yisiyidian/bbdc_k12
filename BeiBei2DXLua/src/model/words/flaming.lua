@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flaming"]={"flaming","['fleɪmɪŋ]","['flemɪŋ]","adj.火红的",'adj.火红的,火焰般的，激烈的|||动词flame的现在分词','The flaming fire warns me off by its own glow.','燃着的火，以它熊熊的光焰警告我不要走近它。','You flaming idiot!','你这个大笨蛋!'}

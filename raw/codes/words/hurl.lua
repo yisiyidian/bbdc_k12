@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hurl"]={"hurl","[hɜːl]","[hɝl]","v.用力投掷",'n.用力的投掷|||v.用力投掷,愤慨地说出,丢下','The best way to forget your sadness is to hurl yourself into your work.','忘掉悲伤的最好方法是将自己投入到工作中去。','If you hurl yourself at that boy, he\'s likely to run away.','若你拼命讨好那个男孩，他很可能被吓跑的。'}

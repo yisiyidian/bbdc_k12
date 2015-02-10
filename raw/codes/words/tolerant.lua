@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tolerant"]={"tolerant","['tɒl(ə)r(ə)nt]","['tɑlərənt]","adj.宽容的",'adj.宽容的,容忍的','She\'s tolerant toward those impudent colleagues.','她对那些无礼的同事采取容忍的态度.','Rye is tolerant of poor, acid soils.','黑麦耐贫瘠的酸性的土壤.'}

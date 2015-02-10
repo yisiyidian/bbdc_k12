@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slime"]={"slime","[slaɪm]","[slaɪm]","n.烂泥",'n.烂泥|||v.涂上泥','There was a coating of slime on the unwashed sink.','未刷洗的水槽上有一层污垢.','He got mud and slime all over his trouser legs when walking along the wet path.','他走过那条泥泞的小路，弄得裤脚满是泥浆。'}

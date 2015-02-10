@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lush"]={"lush","[lʌʃ]","[lʌʃ]","adj.苍翠繁茂的",'adj.苍翠繁茂的,多青草的,丰富的','Sure, his dad is a lush, but he\'s always the life of the party.','没错，他父亲是个酒鬼，但他永远是宴会的灵魂人物。','The hilly areas make good sheep pasture; sheep will batten on the lush grass.','这一带山区是很好的牧羊场，羊吃了茂盛的青草会长得肥肥的。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["apparatus"]={"apparatus","[ˌæpəˈreɪtəs]","[ˌæpəˈrætəs]","n.装置",'n.装置,器具,机构,组织','There are some electrical apparatus in the room.','房间里有些电器。','The demonstrators set up apparatus for the experiment.','示范助教安排好了实验装置.'}

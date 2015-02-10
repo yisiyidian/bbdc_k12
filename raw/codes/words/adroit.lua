@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["adroit"]={"adroit","[ə'drɒɪt]","[ə'drɔɪt]","adj.熟练的",'adj.熟练的,灵巧的，机敏的','Jamie was adroit at flattering others.','杰米很会拍马屁。','She is a remarkably adroit and determined politician.','她是一位异常精明果断的政治家。'}

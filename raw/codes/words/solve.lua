@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["solve"]={"solve","[sɒlv]","[sɔlv]","v.解答(难题)",'v.解答(难题),解决|||vt.解答,解决','It was clever of you to solve the problem.','你能解答那个问题真是聪明。','I think I can solve the problem.','我想我能解决这问题。'}

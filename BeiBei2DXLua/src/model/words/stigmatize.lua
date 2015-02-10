@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stigmatize"]={"stigmatize","['stɪɡmətaɪz]","[ 'stiɡmətaiz ]","vt.污蔑",'vt.污蔑，使蒙上污名|||vt.打上烙印','Children in single-parent families must not be stigmatized.','单亲家庭的孩子不应该受到侮辱。','stigmatize','v. 非难,使蒙上污名'}

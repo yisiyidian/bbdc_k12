@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["locution"]={"locution","[lə'kjuːʃ(ə)n]","[lo'kjʊʃən]","n.说话的方式或语气",'n.说话的方式或语气,惯用语','the most distinctive regional locution','-','See, there he goes,  Tully said in his earnest Midwestern locution . "He\'s walking around it… Now he\'s climbing on top of it.','塔里以美国中西部的认真口吻说道：「牠正绕著它走……牠爬到它上头去了。'}

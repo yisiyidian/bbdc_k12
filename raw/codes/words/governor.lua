@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["governor"]={"governor","['gʌv(ə)nə]","['ɡʌvɚnɚ]","n.统治者",'n.统治者,管理者,理事','He established himself as governor of the province.','他当上了省长.','The governor decreed a day of mourning.','地方长官发布哀悼一日的命令.'}

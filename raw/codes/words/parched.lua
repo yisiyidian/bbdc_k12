@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["parched"]={"parched","[pɑːtʃt]","[pɑrtʃt]","adj.焦干的",'adj.焦干的,饥渴的|||动词parch的过去式和过去分词形式','The land in this region is dry and parched.','这个地区的土地很干燥。','The clouds gathered and showers poured down upon the parched earth.','乌云聚涌，倾盆大雨落在焦干的大地上。'}

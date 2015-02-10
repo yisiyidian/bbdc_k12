@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hydrocarbon"]={"hydrocarbon","[,haɪdrə(ʊ)'kɑːb(ə)n]","[,haɪdrə'kɑrbən]","n.碳氢化合物",'n.碳氢化合物','Any of various hydrocarbon pesticides, such as DDT, that contain chlorine.','有机氯一种含氯的碳氢化合物杀虫农药，如滴滴涕杀虫剂','During incomplete combustion some of the hydrocarbon fuel is cracked.','在不完全的燃烧中,一些烃燃料裂解.'}

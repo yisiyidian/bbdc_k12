@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["prevaricate"]={"prevaricate","[prɪ'værɪkeɪt]","[prɪ'værə'ket]","v.支吾其辞",'v.支吾其辞,搪塞,推诿','Instead of admitting his guilt, he prevaricate.','他不但不承认，反而躲躲闪闪。','She saw no reason to prevaricate.','她认为没有必要闪烁其词。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quaint"]={"quaint","[kweɪnt]","[kwent]","adj.古雅的",'adj.古雅的,离奇有趣的,奇怪的','That\'s how concepts like general welfare start to sound quaint in this age.','就这样，民众福利这一类概念在这个时代开始变得陈旧起来。','What a quaint little building!','多么古雅的一座小房子啊！'}

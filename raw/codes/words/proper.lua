@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["proper"]={"proper","['prɒpə]","['prɑpɚ]","adj.适当的",'adj.适当的,正确的,合适的,正当的,规矩的','She hadn\'t had a proper holiday for years.','多年来她都没有过真正的假期。','His mother has trained him to be a very proper young man.','他的母亲已经把他训练成循规蹈矩的人。'}

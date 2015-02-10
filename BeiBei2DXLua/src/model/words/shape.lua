@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shape"]={"shape","[ʃeɪp]","[ʃep]","n.形状",'n.形状,形式,定形,身材|||vt.定形,使...成形,塑造','I\'m having trouble giving shape to my ideas in this essay.','我在这篇文章中表达不清自己的想法。','A huge shape loomed up out of the fog.','在雾中隐约出现一个巨大的影像。'}

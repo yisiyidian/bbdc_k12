@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["divisor"]={"divisor","[dɪ'vaɪzə]","[dɪ'vaɪzɚ]","n.除数",'n.除数','divisor means one of two or more integers that can be exactly divided into another integer.','除数就是能够被其他整数除尽的整数。','greatest common divisor','最大公约数'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["garbage"]={"garbage","['gɑːbɪdʒ]","['ɡɑrbɪdʒ]","n.垃圾",'n.垃圾,食物残渣,废物','I\'ve never heard such a load of garbage!','这麽胡说八道我还从来没听说过。','I\'ve had enough of your garbage.','我听腻了你的废话。'}

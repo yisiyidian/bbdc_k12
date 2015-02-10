@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["memorize"]={"memorize","['meməraɪz]","['mɛmə'raɪz]","v.记住",'v.记住,记录,记下','If you memorize a poem, you can say it without looking at a book.','你若记住一首诗，不看书就能脱口而出。','She can memorize facts very quickly.','她能很快记住许多资料.'}

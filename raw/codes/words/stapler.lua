@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["stapler"]={"stapler","['steɪplə(r)]","['steplɚ]","n.钉书机",'n.钉书机','Jane: I\'m going to get a tape, some glue or paste, a stapler and a pair of scissors.','珍妮：我要买一卷录音带，一些粘胶和浆糊，一个订书机和一把剪刀。','He wants a stapler, but she have not get one.','他想要一个订书机，但她没有。'}

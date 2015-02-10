@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["turbot"]={"turbot","['tɜːbət]","['tɝbət]","n.比目鱼之类",'n.比目鱼之类','Low sales for turbot during the past months have led to a price drop.','前几个月比目鱼的交易量偏低，导致价格下降。','turbot','turbot n. 比目鱼之类'}

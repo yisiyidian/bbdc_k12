@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["embody"]={"embody","[ɪm'bɒdɪ; em-]","[ɪm'bɑdi]","vt.代表",'vt.代表,使具体化,包含,使(精神)肉体化','She ||embodies|| her principles in her behavior.','她把自己的原则体现在行动中。','The country\'s constitution ||embodies|| the ideals of freedom and equality.','这个国家的宪法体现了自由和平等的理想。'}

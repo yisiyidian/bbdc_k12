@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["predict"]={"predict","[prɪ'dɪkt]","[prɪ'dɪkt]","v.预知",'v.预知,预言,预报','I can predict something with great accuracy.','我能很准确地预测某事。','The zodiac is used in astrology to predict the future.','十二宫图用于占星术中预测未来。'}

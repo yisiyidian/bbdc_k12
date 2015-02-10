@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["frowzy"]={"frowzy","['fraʊzɪ]","[ 'frauzi ]","adv.霉臭的(凌乱的)",'adv.霉臭的(凌乱的)','Frowzy clothes; a frowzy professor.','脏衣服；邋遢的教授','At London I am pent up in frowzy lodgings, where there is not room enough to swing a cat.','在伦敦，我守在肮脏的住所里面，那地方狭窄得无法转身。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["visa"]={"visa","['viːzə]","['vizə]","n.签证",'n.签证|||vt.办理签证','We\'ve had to cut a few corners to get your visa ready in time.','我们得简化手续才能将你的签证及时办妥.','Have you the requisite visa to enter Canada?','你有进入加拿大必备的签证吗?'}

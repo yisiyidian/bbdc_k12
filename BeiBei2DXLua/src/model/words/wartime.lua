@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wartime"]={"wartime","['wɔːtaɪm]","['wɔrtaɪm]","n.战时",'n.战时','Many atrocities are committed on innocent people in wartime.','战争期间无辜百姓横遭蹂躏.','Industry must be geared to wartime needs.','工业必须调整以适应战时需要.'}

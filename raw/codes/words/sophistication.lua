@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sophistication"]={"sophistication","[sə,fɪstɪ'keɪʃn]","[sə,fɪstɪ'keʃən]","n.老练",'n.老练，精明，复杂，精密，有教养，诡辩,强词夺理','The decor has a cool sophistication.','这种装潢设计很是复杂精细。','Despite her scruffy clothes, there was an air of sophistication about her.','尽管她衣衫褴褛，但神态老练世故。'}

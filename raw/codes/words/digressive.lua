@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["digressive"]={"digressive","[daɪ'gresɪv]","[daɪ'ɡrɛsɪv; dɪ'ɡrɛsɪv]","adj.离题的",'adj.离题的，题外的','The professor criticized the student’s remarks on the topic as too digressive and not relevant to the discussion.','教授批评那位学生对于这项主题的评论太过离题，与讨论的内容无关。','The conversation with him always ends digressive.','和他的对话最后总是离题万里。'}

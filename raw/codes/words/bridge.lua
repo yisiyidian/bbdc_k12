@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bridge"]={"bridge","[brɪdʒ]","[brɪdʒ]","n.桥",'n.桥,鼻梁,桥牌|||vt.渡过,架桥','The bridge is not strong enough to allow the passage of vehicles.','这座桥不够牢固，车辆不能通行。','There\'s no bridge; we\'ll have to wade across (the stream).','没有桥, 我们得渡过（小河）去.'}

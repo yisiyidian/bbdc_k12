@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reign"]={"reign","[reɪn]","[ren]","n.执政",'n.执政,君主统治时期,王朝|||vi.当政,统治,占优势,支配,盛行','He has a tyrannical reign on his empire.','他是个残暴的皇帝。','People will remember the tyrannies of his reign.','人们不会忘记他统治时期的暴行。'}

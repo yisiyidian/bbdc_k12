@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irrevocable"]={"irrevocable","[ɪ'revəkəb(ə)l]","[ɪ'rɛvəkəbl]","adj.不能唤回的",'adj.不能唤回的,不能取消的,不能变更的','The doom which I have passed upon her is irrevocable.','我对她下的判决是不能挽回的。','He said the decision was irrevocable.','他说这项决定是不可改变的。'}

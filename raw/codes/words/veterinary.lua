@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["veterinary"]={"veterinary","['vet(ə)rɪn(ə)rɪ; 'vet(ə)nrɪ]","['vɛtərənɛri]","adj.兽医的",'adj.兽医的|||n.adj.兽医(的)','A person who practices veterinary medicine.','兽医从事兽医医学实践的人','It was decided that our veterinary screening of horses at events should be continued.','已经决定，我们对参赛马匹的疾病检查将继续进行。'}

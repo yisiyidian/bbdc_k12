@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["housewife"]={"housewife","['haʊswaɪf]","['haʊs'waɪf]","n.家庭主妇",'n.家庭主妇|||n.针线盒','Her mother is a thrifty housewife.','她妈妈是一个节俭的主妇。','My mother is a housewife.','我妈妈是个家庭妇女。'}

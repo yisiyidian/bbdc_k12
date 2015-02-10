@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["house"]={"house","[haʊs]","[haʊs]","n.房子",'n.房子,住宅,全家人,议院|||vt.提供住,安置,收容|||vi.居住,躲避','He built an extension onto his house.','他给自己的住宅扩建了一部分。','I found your coat after you had left the house.','你离开房子之后，我发现了你的外衣。'}

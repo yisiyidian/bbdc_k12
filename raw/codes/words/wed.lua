@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wed"]={"wed","[wed]","[wɛd]","v.与...结婚",'v.与...结婚,结婚|||Wed|||abbr.星期三(=Wednesday)','He is wed to his own opinion and nothing can change him.','他固执己见，什么也不能使他改变。','Better be half hanged than ill wed.','与其成怨偶，不如守单身。'}

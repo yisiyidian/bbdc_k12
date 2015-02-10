@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["magnificent"]={"magnificent","[mæg'nɪfɪs(ə)nt]","[mæg'nɪfəsnt]","adj.壮丽的",'adj.壮丽的,宏伟的,极好的','The magnificent goal spurred the team on to victory.','他们那一球进得漂亮, 鼓舞了全队的士气夺取胜利.','The Hungarian view is magnificent from the summit of the mountains.','从群山之颠看到的匈牙利景色非常壮丽。'}

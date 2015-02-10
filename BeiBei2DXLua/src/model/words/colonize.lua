@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["colonize"]={"colonize","['kɑlənaɪz]","[ 'kɔlənaiz ]","v.殖民",'v.开拓殖民地,殖民,移植','Britain was colonized by the Romans.','不列颠曾沦为罗马人的殖民地.','Britain colonized many parts of Africa.','英国在非洲开拓了许多殖民地.'}

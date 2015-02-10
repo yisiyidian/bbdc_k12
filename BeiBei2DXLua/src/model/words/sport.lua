@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sport"]={"sport","[spɔːt]","[spɔrt]","n.运动",'n.运动,游戏,娱乐,玩笑,大度的人|||adj.运动的,休闲的|||vt.&vi.游戏,戏弄,炫耀','Baseball is more popular than any other sport in Japan.','在日本，棒球比其他任何运动都受人欢迎。','Wrestling is in a twilight zone between sport and entertainment.','摔交是介於运动和娱乐两者之间的活动.'}

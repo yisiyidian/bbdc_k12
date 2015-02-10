@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["refined"]={"refined","[rɪ'faɪnd]","[rɪ'faɪnd]","adj.精炼的",'adj.精炼的,优雅的,精细的|||v.精炼,净化,使...优雅|||vbl.精炼,净化,使...优雅','He is a man of subtle and refined sensibility.','他是个感情细腻的男子。','He has a refined palate.','他精于品味。'}

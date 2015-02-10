@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["addiction"]={"addiction","[ə'dɪkʃ(ə)n]","[ə'dɪkʃən]","n.耽溺",'n.耽溺,上瘾','Drug addiction is a dangerous canker in society.','吸毒成瘾是腐蚀社会的一大祸害。','His addiction to drugs propelled him towards a life of crime.','他吸毒成瘾使他走上了犯罪的道路。'}

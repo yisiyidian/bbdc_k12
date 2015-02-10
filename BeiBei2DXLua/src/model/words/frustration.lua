@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["frustration"]={"frustration","[frʌ'streɪʃn]","[frʌ'streʃən]","n.打破",'n.打破,挫折,顿挫|||[计算机]失败','He vented his frustration on his wife.','他受到挫折却把气发泄到妻子身上.','She gave me an expression of frustration','她给了我一个沮丧的表情'}

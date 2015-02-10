@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dam"]={"dam","[dæm]","[dæm]","n.水坝",'n.水坝|||vt.筑坝,抑制(情感）等','The dam eventually yielded and collapsed under the weight of water.','水坝在水的压力下终於决口.','The water deepened after the dam was built.','堤坝建成後水已加深.'}

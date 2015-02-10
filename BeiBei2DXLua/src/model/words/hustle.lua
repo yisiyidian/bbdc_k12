@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hustle"]={"hustle","['hʌs(ə)l]","['hʌsl]","n.急遽活动",'n.急遽活动,拥挤喧嚷|||v.乱挤活动,慌张','It seems that he enjoys the hustle and bustle of life in the big city.','看起来他似乎很喜欢大城市的热闹繁忙的生活。','The mother hustled the children off to school and started working.','母亲打发孩子们赶快去上学，然后就开始干起活来。'}

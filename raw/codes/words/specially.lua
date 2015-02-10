@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["specially"]={"specially","['speʃəlɪ]","['spɛʃəli]","adv.特别地",'adv.特别地,专门地','These goats are specially bred for their wool.','这些山羊是专为剪取羊毛而饲养的.','This machine has been specially adapted for use underwater.','这机器是为水下使用而特别改装的.'}

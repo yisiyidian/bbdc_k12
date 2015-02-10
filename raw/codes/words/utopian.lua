@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["utopian"]={"utopian","[ju'topɪən]","[ ju:'təupiən ]","adj.乌托邦式的",'adj.乌托邦式的,梦想的|||n.空想家','A utopian scheme for equalizing wealth.','关于平分财富的不切实际的方案','a ||Utopian|| island; Utopian novels.','乌托邦式的岛屿；乌托邦小说'}

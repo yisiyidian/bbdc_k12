@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["again"]={"again","[ə'gen; ə'geɪn]","[ə'ɡɛn]","adv.又",'adv.又,再,另一方面','Try again.','再试试。','Will we ever see the like of Mozart again?','我们还会再见到莫扎特那样的天才 吗 ?'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["install"]={"install","[ɪn'stɔl]","[ in'stɔ:l ]","v.安装",'v.安装,安置,使...就职|||n.[计算机]安装,DOS命令:装入结束且驻留软件','To minimize the risk of burglary, install a good alarm system.','安装可靠的报警设备以减低被盗的风险.','She installed her air-conditioner without help.','没请别人帮助，她自己安装了空调。'}

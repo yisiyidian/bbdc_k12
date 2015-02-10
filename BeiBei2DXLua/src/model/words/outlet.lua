@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outlet"]={"outlet","['aʊtlet]","['aʊtlɛt]","n.出口",'n.出口,出路,通风口,批发商店','This cosmetics firm has 34 outlets in Britain.','这家化妆品公司在英国有34个经销店.','He needs an outlet for all that pent-up anger.','他那积愤需要有机会倾吐.'}

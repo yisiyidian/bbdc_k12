@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prominent"]={"prominent","['prɒmɪnənt]","['prɑmɪnənt]","adj.突出的",'adj.杰出的,显著的,突出的','The house is in a prominent position on the village green.','这间屋子在村子的中心草地上，处于引人注目的位置。','Here the window plays a prominent part in the design.','这里窗户在设计中起着非常重要的作用。'}

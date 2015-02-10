@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tough"]={"tough","[tʌf]","[tʌf]","adj.强硬的",'adj.强硬的,艰苦的,棘手的,严厉的|||adv.以强硬的态度|||n.暴徒;恶棍','a tough all-weather fabric.','一种坚韧的全天候织物','The company faces tough competition.','这家公司面临着艰难的竞争。'}

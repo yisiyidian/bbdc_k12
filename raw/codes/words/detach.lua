@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["detach"]={"detach","[dɪ'tætʃ]","[dɪ'tætʃ]","vt.使分离",'vt.使分离,拆卸|||[计算机]脱离','A number of soldiers were detached to guard the building.','许多士兵被派去保护这座建筑物。','He detached a link from a chain.','他从链子上拆下一个链环。'}

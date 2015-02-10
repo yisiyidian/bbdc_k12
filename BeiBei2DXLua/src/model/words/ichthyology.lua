@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ichthyology"]={"ichthyology","[,ɪkθɪ'ɒlədʒɪ]","[,ɪkθɪ'ɑlədʒi]","n.鱼类学",'n.鱼类学,鱼类学者作','He is a ichthyology, and tell people some knowledge about fish.','他是一名鱼类学作者，告诉人们一些有关鱼类的知识。','||Ichthyology|| is outside the confine of my live.','鱼类学和我的生活没交集'}

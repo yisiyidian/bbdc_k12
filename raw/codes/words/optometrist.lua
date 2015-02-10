@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["optometrist"]={"optometrist","[ɒp'tɒmɪtrɪst]","[ɑp'tɑmətrɪst]","n.验光师",'n.验光师,视力测定者，配镜师','Some may need specialist treatment at the optometrist\'s.','我们去到一间眼镜公司并且试戴了一些太阳眼镜.','The optometrist will work out a pair of new spectacles to your satisfaction.','配镜师会给您配制出一副让您满意的新眼镜。'}

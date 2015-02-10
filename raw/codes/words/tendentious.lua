@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tendentious"]={"tendentious","[ten'denʃəs]","[tɛn'dɛnʃəs]","adj.有目的的",'adj.有目的的，有倾向的，有偏见的|||=tendencious','Such tendentious statements are likely to provoke strong opposition.','这种有倾向性的说法可能招致强烈的反对。','He made some extremely tendentious remarks.','他有些评论颇具偏向性。'}

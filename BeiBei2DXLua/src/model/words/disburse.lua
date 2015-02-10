@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disburse"]={"disburse","[dɪs'bɜːs]","[ dis'bə:s ]","vt.支付",'vt.支付，支出，分配','The aid will not be disbursed until next year.','援助款到明年才会下拨。','The bank has disbursed over $350m for the project.','银行已经为这个项目支付了超过 3.5亿美元。'}

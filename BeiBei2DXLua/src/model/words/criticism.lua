@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["criticism"]={"criticism","['krɪtɪsɪz(ə)m]","['krɪtə'sɪzəm]","n.批评",'n.批评,评论','His partial attitude called forth a lot of criticism.','他的偏袒态度招致了不少批评。','Such a questionable assertion is sure to provoke criticism.','这种有问题的主张肯定会招致非议。'}

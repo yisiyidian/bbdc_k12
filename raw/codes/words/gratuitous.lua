@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gratuitous"]={"gratuitous","[grə'tjuːɪtəs]","[ɡrə'tuɪtəs]","adj.免费的",'adj.免费的,无缘无故的','||Gratuitous|| violence repels most people.','无端使用暴力则激起民愤。','There\'s too much crime and gratuitous violence on TV.','电视上充斥着过多的犯罪与无端的暴力。'}

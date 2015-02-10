@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obverse"]={"obverse","['ɒbvɜːs]","['ɑbvɝs]","n.正面",'n.正面，较明显的一面|||adj.正面的','Inference of the obverse of a proposition.','换质法推导一个命题的方法','The obverse of love is hate.','与爱相对的是恨.'}

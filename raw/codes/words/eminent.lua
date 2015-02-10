@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["eminent"]={"eminent","['emɪnənt]","['ɛmɪnənt]","adj.卓越的",'adj.著名的,卓越的','The order was created in 1902 as a special distinction for eminent men and women.','该勋位设立于1902年，作为一项殊荣授予杰出的男性和女性。','He is an eminent citizen of China.','他是一个杰出的中国公民。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stingy"]={"stingy","['stɪn(d)ʒɪ]","['stɪndʒi]","adj.吝啬的",'adj.吝啬的,小气的','It is strange that such a rich man should be so stingy.','说来真怪，这么有钱的人居然那么小气。','A stingy person; a miser.','吝啬吝啬小气的人；守财奴'}

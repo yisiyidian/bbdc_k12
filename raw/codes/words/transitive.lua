@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["transitive"]={"transitive","['trænsɪtɪv; 'trɑːns-; -nz-]","['trænsətɪv]","adj.传递的",'adj.传递的，过渡的，[语]及物的','This tower is just transitive, base station is the place process the mobile signaling.','这个发射塔只是起（传递的）作用，基站才是处理手机信号的地方。','transitive','adj. 传递的 n. 传递'}

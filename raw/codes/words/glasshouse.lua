@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glasshouse"]={"glasshouse","['glɑːshaʊs]","['ɡlæshaʊs]","n.暖房",'n.暖房,温室','You must grow these tropical flowers in a glasshouse.','你必须把这些热带花卉种在温室里。','in the glasshouse','在暖房里'}

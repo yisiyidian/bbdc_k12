@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["moratorium"]={"moratorium","[,mɒrə'tɔːrɪəm]","[,mɔrə'tɔrɪəm]","n.延期偿付",'n.延期偿付,延期偿付期间','The government has called for a moratorium on weapons testing.','政府已要求暂停武器试验。','The company asked for a moratorium of the debt to the local bank.','那家公司向当地银行申请债务延付。'}

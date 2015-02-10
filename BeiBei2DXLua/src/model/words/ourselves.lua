@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ourselves"]={"ourselves","[aʊə'selvz]","[ɑr'sɛlvz]","pron.我们自己",'pron.我们自己','We found ourselves in opposition to our friends on this question.','我们发现在这个问题上我们与我们的朋友立场相反。','We shouted ourselves hoarse at the football match.','足球比赛时我们把嗓子都喊哑了。'}

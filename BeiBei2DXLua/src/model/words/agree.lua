@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["agree"]={"agree","[ə'griː]","[ə'ɡri]","vt.同意",'vt.同意,赞成,承认|||vi.同意,一致,符合','Do you agree with me about the need for more schools?','关於多建一些学校一事，你同意我的意见吗？','The witnesses\' statements just don\'t agree with each other.','几个证人的陈述并不一致。'}

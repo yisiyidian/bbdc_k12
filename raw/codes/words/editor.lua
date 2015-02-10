@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["editor"]={"editor","['edɪtə]","['ɛdɪtɚ]","n.编辑",'n.编辑,编者','Our review of this week\'s papers is presented by the editor of The Times\'.','我们的本周报纸要闻回顾由《时代》周刊编辑主持.','The editor deleted the last paragraph (from the article).','编辑删除了（文章的）最後一段.'}

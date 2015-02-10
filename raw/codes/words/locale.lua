@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["locale"]={"locale","[ləʊ'kɑːl]","[lo'kæl]","n.现场",'n.现场,场所','The director is looking for a suitable locale for his new film.','导演在为新片物色合适的拍摄场地。','the locale of a crime.','犯罪现场'}

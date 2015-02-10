@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anything"]={"anything","['enɪθɪŋ]","['ɛnɪ'θɪŋ]","pron.任何事",'pron.任何事','If you want to call a meeting or anything, put up a notice.','要想召集会议什么的，就要出个通知。','The hotel was anything but satisfactory.','这家旅馆太不让人满意了。'}

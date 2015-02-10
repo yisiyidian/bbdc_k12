@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["measured"]={"measured","['meʒəd]","['mɛʒɚd]","adj.量过的",'adj.量过的,慎重的,基于标准的|||动词measure的过去式和过去分词','She washed her hair every night and measured how much it grew in a week.','她每晚洗头发，而且量量看一星期长多少。','He measured the length of the room.','他量了房间的长度。'}

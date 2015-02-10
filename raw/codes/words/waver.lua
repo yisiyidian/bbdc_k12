@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["waver"]={"waver","['weɪvə]","['wevɚ]","n.动摇",'n.动摇,踌躇，挥动者，烫发器|||v.摆动,摇曳,犹豫，颤抖，蹒跚','They did not waver in their support for him.','他们毫不动摇地支持他.','His courage never wavered.','他的勇气从未减弱.'}

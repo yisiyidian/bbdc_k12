@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["free"]={"free","[friː]","[fri]","adj.自由的",'adj.自由的,大方的,免费的|||vt.释放,解放|||adv.自由地,免费地','Children under five usually travel free on trains.','五岁以下的儿童乘火车通常免费。','Friday afternoons are left free for revision.','留出星期五下午的时间做复习。'}

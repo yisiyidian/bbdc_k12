@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["victim"]={"victim","['vɪktɪm]","['vɪktɪm]","n.受害者",'n.受害者,牺牲','The police retraced the movements of the murder victim.','警方追溯了被谋杀者当时的动作。','The lion attacked its victim with great ferocity.','狮子凶猛地扑向猎物。'}

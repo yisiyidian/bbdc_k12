@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["generic"]={"generic","[dʒɪ'nerɪk]","[dʒə'nɛrɪk]","adj.一般的",'adj.一般的,普通的,共有的，没有商标的|||n.无商标的药品','Parmesan is a generic term used to describe a family of hard Italian cheeses.','帕尔玛干酪是意大利硬奶酪的通称。','Doctors sometimes prescribe cheaper generic drugs instead of more expensive brand names.','医生有时开比较便宜的非注册商标的药品，而不开比较昂贵的品牌药。'}

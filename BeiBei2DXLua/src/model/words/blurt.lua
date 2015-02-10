@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blurt"]={"blurt","[blɜːt]","[blɝt]","v.冲口说出",'v.冲口说出,突然说出','He blurted out the bad news before I can stop him.','我还没来得及阻止他，他已冲口说出了这个坏消息。','Folks that blurt out just what they think wouldn\'t be so bad if they thought.','一想到什么就马上脱口而出的人们，倘使经过思量之后再讲的话，就可能没那么差劲了。'}

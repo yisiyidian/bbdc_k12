@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wind"]={"wind","[wɪnd]","[wɪnd]","n.风",'n.风,管乐器,动向,潮流,空想,卷绕|||vt.上发条,缠绕,蜿蜒,使...喘气,使...通风,吹奏|||vi.卷曲,吹响号角,迂回','Before I wind up, there are two more things to be said.','在我结束讲话之前，还有两件事要说。','I always said he would wind up in jail.','我常说他到头来非进监狱不可。'}

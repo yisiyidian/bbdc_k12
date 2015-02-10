@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jelly"]={"jelly","['dʒelɪ]","['dʒɛli]","n.果冻",'n.果冻,冻状物,纠结|||vi.结冻,做果冻|||vt.使像果冻一样','The jelly plopped into the dish.','果冻噗的一声落到碟里.','You won\'t get a good set if you put too much water in the jelly.','果冻搀水太多就凝固不好了.'}

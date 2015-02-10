@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pedal"]={"pedal","['ped(ə)l]","['pɛdl]","n.踏板",'n.踏板|||adj.脚的,踏脚的|||v.用脚踏动,踩踏板','A pedal bicycle that has an attached motor.','机动自行车附有推动引擎的脚踏自行车','A pedal or lever operated by the foot for circular drive, as in a potter\'s wheel or sewing machine.','踏板一种由脚操纵带动圆周运动的踏板或杠杆，如制陶者的陶车或缝纫机的踏板'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["germinate"]={"germinate","['dʒɜːmɪneɪt]","['dʒɝmɪnet]","v.发芽",'v.发芽,萌芽,开始发育|||v.使发芽,使发达','Warmth is needed for the seeds to germinate.','种子发芽需要适当的温度。','The idea germinated and slowly grew into an obsession.','这念头形成后慢慢变成了一桩挥之不去的心事。'}

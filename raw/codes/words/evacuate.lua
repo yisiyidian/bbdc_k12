@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["evacuate"]={"evacuate","[ɪ'vækjʊeɪt]","[ɪ'vækjuet]","vt.&vi.疏散",'vt.&vi.疏散,撤出,排泄','The children were evacuated to the country when the city was being bombed.','城市遭到轰炸时, 儿童都疏散到乡下去了.','The soldiers evacuated the area as the enemy advanced.','敌军推进时, 士兵都撤出了那地区.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flirt"]={"flirt","[flɜːt]","[flɝt]","n.卖弄风骚的人",'n.卖弄风骚的人,调情的人|||vi.掠过,轻率对待,经历|||vt.忽然弹出,摇动','I\'m flirting with the idea of getting a job in China.','我胡思乱想著要到中国去工作.','He enjoys flirting (with the girls in the office).','他爱（与办公室的女职员）调情.'}

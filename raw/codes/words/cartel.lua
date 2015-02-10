@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cartel"]={"cartel","[kɑː'tel]","[kɑr'tɛl]","n.卡特尔",'n.卡特尔,联合企业','...a drug cartel.','…药业联盟。','A cartel is an association of similar companies or businesses that have grouped together in order to prevent competition and to control prices','定义'}

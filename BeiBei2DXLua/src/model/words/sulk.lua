@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sulk"]={"sulk","[sʌlk]","[sʌlk]","vi.生气",'vi.生气；愠怒|||n.生气；愠怒；生气的人','She is in the sulks.','她在发脾气；她在生气。','He\'s been sulking for days about being left out of the team.','他嗔怪队里没要他, 连日生著闷气.'}

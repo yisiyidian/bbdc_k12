@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emission"]={"emission","[ɪ'mɪʃ(ə)n]","[ɪ'mɪʃən]","n.发射",'n.发射,射出,发行','The emission of smoke and ashes is from that factory.','烟尘是从那个工厂排放出来的。','Take off emission plug.','取下排放塞'}

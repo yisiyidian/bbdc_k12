@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["skip"]={"skip","[skɪp]","[skɪp]","n.跳跃",'n.跳跃,跳读|||vt.&vi.跳越,蹦跳,略过,跳过','Lambs skipped in the field.','小羊在田野里跳跃。','Children are fond of skipping.','孩子们喜欢跳绳。'}

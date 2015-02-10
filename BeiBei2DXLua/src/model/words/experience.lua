@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["experience"]={"experience","[ɪk'spɪərɪəns; ek-]","[ɪk'spɪrɪəns]","n.经验",'n.经历,经验|||vt.经历,体验','It was the most educational experience I had ever had.','这是我有过的教育意义最大的一次经历。','We learn from the past, experience the present and hope for success in the future.','我们从过去中学习，体验现在，展望未来的成功。'}

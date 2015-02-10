@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["veto"]={"veto","['viːtəʊ]","['vito]","n.否决权",'n.否决权|||v.否决|||vi.否决,禁止|||vt.使用否决权','The president last week vetoed the tax cut.','总统上个星期否决了减税法案。','Japan exercised her veto to block the resolution.','日本使用了否决权反对该项决议。'}

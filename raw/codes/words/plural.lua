@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["plural"]={"plural","['plʊər(ə)l]","['plʊrəl]","adj.复数的",'adj.复数的|||n.复数','The plural form of "child" is "children" .','child的复数形式是children。','Most plural nouns in English end in "s" .','英语的复数名词多以“s”结尾。'}

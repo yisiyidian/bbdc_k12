@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nomenclature"]={"nomenclature","[nə(ʊ)'meŋklətʃə; 'nəʊmən,kleɪtʃə]","[ˈnomənˌkletʃɚ]","n.命名法",'n.命名法,专门语,术语','It developed variations in nomenclature and in substance.','在名称和实质上，它都发生了变化。','The nomenclature of a particular set of things is the system of naming those things.','命名法是指对特定的一系列事物命名的规则。'}

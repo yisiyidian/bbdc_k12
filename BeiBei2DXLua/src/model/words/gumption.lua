@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gumption"]={"gumption","['gʌm(p)ʃ(ə)n]","['ɡʌmpʃən]","n.颜色调和法(本领",'n.颜色调和法(本领,精力)','It takes gumption to quit a good paying job.','要辞去一个待遇很好的工作需要勇气。','He\'s a nice enough lad, but he doesn\'t seem to have much gumption.','他是个不错的小伙子, 但好像没有什麽进取心.'}

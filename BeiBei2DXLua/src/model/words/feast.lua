@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["feast"]={"feast","[fiːst]","[fist]","n.宴会",'n.宴会,酒席,节会|||vt.&vi.款宴,享乐,请客','Enough is as good as a feast.','知足常乐。','Preparing for the Christmas Eve feast makes me at my wit\'s end.','筹办圣诞宴会简直使我智穷才竭。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ruminate"]={"ruminate","['ruːmɪneɪt]","['rumɪnet]","v.深思",'v.深思,沉思，反刍','The cow began to ruminate after eating up grass.','牛吃完草后开始反刍。','He is ||ruminating|| on recent events.','他正在思考最近发生的事。'}

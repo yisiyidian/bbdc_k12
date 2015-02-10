@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["monopolize"]={"monopolize","[mə'nɑpə'laɪz]","[ mə'nɔpəlaiz ]","vt.独占",'vt.独占,垄断','This company monopolized the textile industry.','这家公司垄断了纺织业。','She tended to monopolize the conversation.','她说个没完,使别人插不上嘴.'}

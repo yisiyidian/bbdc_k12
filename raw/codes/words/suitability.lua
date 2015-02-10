@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["suitability"]={"suitability","[,su:tə'bɪlətɪ]","[sʊtə'bɪləti]","n.适合",'n.适合,适当,适合与否','His suitability for the post is open to question.','对这一职位他是否适宜很成问题.','There\'s some doubt about his suitability for the job.','他是否适合该工作有些疑问.'}

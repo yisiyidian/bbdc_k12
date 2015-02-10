@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["serpentine"]={"serpentine","['sɜːp(ə)ntaɪn]","['sɝpəntin]","adj.蛇的",'adj.蛇的,层层卷绕的,阴险的|||n.蛇纹石,古时候大炮的一种,S字曲线|||vi.像蛇般行进，缓慢地流','From each island proceeded a serpentine trail.','每一个绿岛旁边，都伸出一道蜿蜒曲折的踪迹。','A narrow, serpentine path wound down through woods of cedar and pine.','雪松和松树林中有条迂回、曲折的小路。'}

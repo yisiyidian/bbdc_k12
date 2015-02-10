@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["therapeutic"]={"therapeutic","[,θerə'pjuːtɪk]","[,θɛrə'pjutɪk]","adj.治疗的",'adj.治疗的','When I was sad, music had a therapeutic effect.','伤心的时候，音乐能治愈我。','Having a garden is therapeutic.','有个花园能让人放松心情。'}

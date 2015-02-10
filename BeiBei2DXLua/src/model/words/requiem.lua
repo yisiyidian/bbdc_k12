@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["requiem"]={"requiem","['rɛkwɪəm]","[ 'rekwiəm, 'rei-, 'ri:- ]","n.安魂曲",'n.安魂曲,安灵曲','||Requiem|| doesn\'t only console the soul of dead but also relieve the sorrow of living.','安魂曲不仅抚慰了亡者的灵魂也减轻了生者的悲痛。','He designed the epic as a requiem for his wife.','他构思了这部史诗，作为对妻子的追思。'}

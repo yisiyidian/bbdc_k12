@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["playwright"]={"playwright","['pleɪraɪt]","['pleraɪt]","n.剧作家",'n.剧作家','The playwright was slaughtered by the press.','这位剧作家受到新闻界的无情批判.','Entombed as her is, the playwright can count on room service to sustain the slender thread life.','尽管那位剧作家已是半截入土的人了，但他仍可依靠旅馆送茶饭到住房的服务维持他那微弱的生命。'}

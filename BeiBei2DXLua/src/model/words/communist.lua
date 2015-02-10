@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["communist"]={"communist","['kɒmjʊnɪst]","['kɑmjənɪst]","adj.共产主义的",'adj.共产主义的|||n.共产主义者','In the following year he joined the ||Communist|| Party.','第二年他入了党.','The People\'s Daily is the organ of the Chinese ||Communist|| Party.','《人民日报》是中国共产党的党报.'}

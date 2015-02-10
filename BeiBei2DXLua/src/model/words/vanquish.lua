@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vanquish"]={"vanquish","['væŋkwɪʃ]","['væŋkwɪʃ]","v.征服",'v.征服,克服,击败','Our army has vanquished the enemy.','我们的军队已经彻底击败了敌人。','Success vanquished their fears.','成功克服了他们的恐惧'}

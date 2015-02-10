@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["defecate"]={"defecate","['defɪkeɪt; 'diːf-]","['dɛfəket]","v.除去污物（排便）",'v.除去污物（排便）,澄清,净清|||v.澄清,排便','In adults, the decision whether or not to defecate is under voluntary control.','成年人中，是否大便是受自己控制的。','What the hell is going on?Can you defecate this?','发生什么事了，你能澄清下嘛？'}

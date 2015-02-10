@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sympathy"]={"sympathy","['sɪmpəθɪ]","['sɪmpəθi]","n.同情",'n.同情,忠诚,感应','The story stirred her sympathy.','这故事激起了她的同情心。','I felt much sympathy for the blind.','我对盲人深感同情。'}

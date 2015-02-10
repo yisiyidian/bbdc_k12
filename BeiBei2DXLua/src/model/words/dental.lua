@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dental"]={"dental","['dent(ə)l]","['dɛntl]","adj.牙齿的",'adj.牙齿的,牙科的','The branch of dentistry that deals with diseases of the tooth root, dental pulp, and surrounding tissue.','牙髓病学研究牙根、牙髓及其周围组织疾病的牙医学的一个分支','dental caps.','牙套'}

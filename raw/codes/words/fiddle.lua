@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fiddle"]={"fiddle","['fɪd(ə)l]","['fɪdl]","n.小提琴",'n.小提琴|||v.虚度时光,拉小提琴','She fiddled with her watch so much that it broke.','她总胡乱摆弄手表, 结果把它弄坏了。','Can you play the fiddle?','你会拉小提琴吗？'}

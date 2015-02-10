@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spectacular"]={"spectacular","[spek'tækjʊlə]","[spɛk'tækjəlɚ]","adj.壮观的",'adj.壮观的,令人惊叹的|||n.惊人之举,壮观的表演或影视作品','A public celebration or spectacular pageant.','盛典公共庆祝活动或热闹的游行','It was foreordained that the company would suffer a spectacular collapse.','这个公司注定要彻底垮台.'}

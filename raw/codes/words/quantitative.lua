@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quantitative"]={"quantitative","['kwɒntɪ,tətɪv; -,teɪtɪv]","['kwɑntətetɪv]","adj.数量的",'adj.数量的,定量的','A metrical unit of quantitative verse consisting of two or more cola.','定量测量单位包括两个或两个以上音行的定量韵律的度量单位','Having no fixed quantitative value.','变量的没有固定数量值的'}

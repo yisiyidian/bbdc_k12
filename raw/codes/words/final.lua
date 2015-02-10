@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["final"]={"final","['faɪn(ə)l]","['faɪnl]","adj.最后的",'adj.最后的,决定了的|||n.决赛,期末考试','The World Cup final is being transmitted live to over fifty countries.','世界杯决赛现在正向五十多个国家现场转播。','Football fever gripped the town when the local team reached the cup final.','在当地的足球队打进了优胜杯的决赛圈后，全市掀起一阵足球热。'}

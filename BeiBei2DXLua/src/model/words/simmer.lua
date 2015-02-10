@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["simmer"]={"simmer","['sɪmə]","['sɪmɚ]","v.煨",'v.煨，炖，慢慢地煮沸,即将发作，内心充满|||n.即将沸腾的状态,即将发作','Let the soup simmer (for) a few minutes.','让汤再煮几分钟.','Keep the potatoes on the simmer for ten minutes.','把马铃薯炖十分钟.'}

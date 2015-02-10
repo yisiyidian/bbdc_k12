@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["somersault"]={"somersault","['sʌməsɒlt; -sɔːlt]","['sʌmɚsɔlt]","n.跟斗",'n.跟斗|||vi.翻筋斗','He turned a somersault.','他翻了个筋头。','The child somersaulted across the gymnasium.','那孩子翻著跟头从体育馆这头翻到那头.'}

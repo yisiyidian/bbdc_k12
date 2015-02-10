@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bereft"]={"bereft","[bɪ'reft]","[bɪ'rɛft]","adj.被剥夺的",'adj.被剥夺的,丧失的,失去亲人的|||动词bereave的过去式和过去分词','He was bereft of all hope.','他失去了所有的希望。','Anger bereft him of words.','愤怒使他说不出话来。'}

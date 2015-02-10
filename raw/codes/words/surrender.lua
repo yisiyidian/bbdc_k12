@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["surrender"]={"surrender","[sə'rendə]","[sə'rɛndɚ]","vt.&vi.投降",'vt.&vi.投降,让与,屈服|||n.投降,屈服,放弃','It was shameful of them to surrender.','他们投降是可耻的。','We would rather die than surrender.','我们宁死而不投降。'}

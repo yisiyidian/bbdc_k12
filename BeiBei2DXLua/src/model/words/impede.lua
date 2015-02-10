@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impede"]={"impede","[ɪm'piːd]","[ɪm'pid]","v.妨碍",'v.妨碍,阻碍,阻止','One shouldn\'t impede other\'s progress.','一个人不应该妨碍他人进步。','He impedes me to do the job well.','他妨碍我，不让我把工作做好。'}

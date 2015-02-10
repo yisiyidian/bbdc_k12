@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diplomatic"]={"diplomatic","[dɪplə'mætɪk]","[,dɪplə'mætɪk]","adj.外交的",'adj.外交的,古字体的,老练的','The exercise of patience is essential in diplomatic negotiations.','在外交谈判中, 重要的是要有耐性.','The two countries were on the point of war due to the diplomatic disputes.','这两个国家因为外交争端即将开战。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wash"]={"wash","[wɒʃ]","[wɑʃ]","v.洗",'v.洗,洗涤,洗清|||n.洗,洗濯','The sea washes the base of the cliffs.','海水拍打著悬崖的底部。','If a garment won\'t wash, it must be dry-cleaned.','用水洗就退色或缩水的衣服得乾洗。'}

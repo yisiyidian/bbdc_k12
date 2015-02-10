@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bankruptcy"]={"bankruptcy","['bæŋkrʌptsɪ]","['bæŋkrʌptsi]","n.破产",'n.破产','Had it not been for your timely help, our company would have been on the verge of bankruptcy.','若非你及时伸出援助之手，本公司将会濒临破产的边缘。','The bankruptcy of several small firms was the prelude to general economic collapse.','几家小商行倒闭了, 随之而来的是经济大萧条.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["run"]={"run","[rʌn]","[rʌn]","vi.跑",'n.奔跑,路程,趋向|||vt.跑,放牧,经营,走私,使运转,浇铸,使遭受|||vi.跑,竞赛,行驶,运转,遭遇,持续,熔化,褪色,流,蔓延,传播|||adj.熔化的,浇铸的,洄游的','She ||ran|| her fingers nervously through her hair.','她紧张地用手指拢著头发。','He started off at a run but soon tired and slowed to a walk.','他跑步出发，但很快就累得慢下来成了步行。'}

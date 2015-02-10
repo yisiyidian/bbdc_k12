@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["relative"]={"relative","['relətɪv]","['rɛlətɪv]","adj.相对的",'adj.相对的,比较的,涉及到的|||n.亲属,同类事物,相关物','He showed such concern that people took him to be a relative.','他很关心别人, 因而大家都把他当作亲人.','The relative items in this report will be submitted to the committee for discussion.','把这份报告中的有关事项提交委员会讨论。'}

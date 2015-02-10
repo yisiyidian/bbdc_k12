@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vague"]={"vague","[veɪg]","[veɡ]","adj.模糊的",'adj.模糊的,不明确的,说话含糊不清的,茫然的','I have a vague idea that he will be late.','我感觉他要迟到.','If you wanted me to go why didn\'t you say so in plain English instead of making vague hints?','你想叫我走, 为什麽拐弯抹角而不直说?'}

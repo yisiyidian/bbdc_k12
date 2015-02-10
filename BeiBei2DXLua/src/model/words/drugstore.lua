@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drugstore"]={"drugstore","['drʌgstɔː]","['drʌɡstɔr]","n.药房",'n.药房,杂货店','Many a man that can not direct you to a corner drugstore will get a respectful hearing when age have further impair his mind.','许多不能给别人指路找到街角上的药行的人, 到了年纪使他更加糊涂之后, 却也会找到人必恭必敬地聆听他的申诉。','',''}

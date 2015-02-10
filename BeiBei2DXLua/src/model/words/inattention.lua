@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inattention"]={"inattention","[ɪnə'tenʃ(ə)n]","[,ɪnə'tɛnʃən]","n.不注意",'n.不注意,粗心,疏忽','The accident was the result of a moment\'s inattention.','这次事故是一时不小心造成的。','don\'t inattention','不要粗心'}

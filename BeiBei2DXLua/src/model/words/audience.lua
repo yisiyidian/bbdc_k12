@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["audience"]={"audience","['ɔːdɪəns]","['ɔdɪəns]","n.听众",'n.听众,观众,读者,拥护者,倾听,正式会见','He delighted the audience with his performance.','他用他的表演使观众喜悦。','The audience was no less than five thousand.','听众有五千人之多。'}

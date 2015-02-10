@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stripe"]={"stripe","[straɪp]","[straɪp]","n.条纹",'n.条纹|||vt.使...带有条纹的','Which do you want for your new dress, a stripe or a check?','你要哪种料子来做新连衣裙, 条子的还是方格的?','I need one without stripe, please.','我需要没有条纹的。'}

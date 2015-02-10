@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lascivious"]={"lascivious","[lə'sɪvɪəs]","[lə'sɪvɪəs]","adj.好色的",'adj.好色的,淫荡的,挑动情欲的','That man used to be a lascivious person.','那个男人曾是个好色之徒。','The man was lascivious, sexually perverted and insatiable.','这个人是一个欲壑难填的变态色情狂。'}

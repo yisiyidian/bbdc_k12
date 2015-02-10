@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["engaged"]={"engaged","[ɪn'geɪdʒd; en-]","[ɪn'gedʒd]","adj.忙碌的",'adj.忙碌的,使用中的|||v.预订,约定,参与|||vbl.预订,约定,参与','They are engaged in interior trade.','他们从事国内贸易。','The professor is engaged in advanced studies.','该教授正进行高深的学术研究。'}

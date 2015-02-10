@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dweller"]={"dweller","['dwɛlɚ]","[ 'dwelə ]","n.居民",'n.居民','The noise of traffic is a constant irritant to city dwellers.','车辆的噪音对城市居民是永无止境的骚扰.','The traffic noise is a constant irritation to city dwellers.','车辆的噪音对城市居民是永无止境的骚扰。'}

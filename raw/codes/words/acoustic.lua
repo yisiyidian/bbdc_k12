@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["acoustic"]={"acoustic","[ə'kuːstɪk]","[ə'kʊstɪk]","adj.美声的",'adj.美声的，听觉的,音感教育,音响学的','An acoustic instrument.','非电传音乐器','Opened the show with an acoustic set.','不用电子乐器开始演出'}

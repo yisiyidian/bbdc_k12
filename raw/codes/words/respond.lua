@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["respond"]={"respond","[rɪ'spɒnd]","[rɪ'spɑnd]","vi.&vt.回复",'vi.&vt.回复,反应，响应|||n.拱柱','I invited her to dinner but she did not respond.','我请她吃晚饭，但她未作回答。','He failed to respond to the medicine.','他服了这药未见起色。'}

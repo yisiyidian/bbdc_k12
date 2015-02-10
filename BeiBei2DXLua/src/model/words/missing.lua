@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["missing"]={"missing","['mɪsɪŋ]","['mɪsɪŋ]","adj.缺掉的",'adj.缺掉的,失踪的','Police are combing the woods for the missing children.','警察搜遍树林以寻找失踪的孩子.','The hammer is missing from my toolbox.','我的工具箱里少了一把锤子。'}

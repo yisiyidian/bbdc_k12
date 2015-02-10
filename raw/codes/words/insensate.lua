@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insensate"]={"insensate","[ɪn'senseɪt; -sət]","[ɪn'sɛnsɪt]","adj.无感觉的",'adj.无感觉的,无情的','She is a insensate women who discard her child.','她是个抛弃自己孩子的无情的女人。','The people who are emotional are always hurt by who are insensate.','多情总被无情伤。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["theme"]={"theme","[θiːm]","[θim]","n.主题",'n.题目,主题','A slow theme introduces the first movement.','第一乐章以缓慢的主旋律开始.','Peace was the dominant theme of the conference.','和平是大会的首要议题。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["instrumental"]={"instrumental","[ɪnstrʊ'ment(ə)l]","[,ɪnstrə'mɛntl]","adj.仪器的",'adj.仪器的,器具的,可做为手段的','I like instrumental music better than vocal music.','我喜欢器乐胜于声乐。','Our artistic director was instrumental in persuading the orchestra to come.','我们的艺术指导帮助请来管弦乐队。'}

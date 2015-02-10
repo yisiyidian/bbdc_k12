@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sterling"]={"sterling","['stɜːlɪŋ]","['stɝlɪŋ]","adj.英币的(纯粹的",'adj.英币的(纯粹的,货真价实的)|||n.英国货币(英镑)','The banks were panicked into selling sterling.','银行因恐慌而抛售英国货币.','Whither the pound sterling?','英镑的前途可能会怎样？'}

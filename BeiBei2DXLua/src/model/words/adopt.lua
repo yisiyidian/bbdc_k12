@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adopt"]={"adopt","[ə'dɒpt]","[ə'dɑpt]","v.采用",'v.采用,收养,接受','We should adopt the consumers\' suggestion.','我们应该接受用户的建议。','Most countries adopt metric system.','大多数国家采用米制。'}

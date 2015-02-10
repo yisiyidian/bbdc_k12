@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sectarian"]={"sectarian","[sek'teərɪən]","[sɛk'tɛrɪən]","adj.宗派的",'adj.宗派的,党派心强的,偏狭的|||n.属于宗派的人,宗派心强的人','He was the fifth person to be killed in sectarian violence last week.','他是宗派暴力中的第 5 个罹难者。','The police said the murder was sectarian.','警方称这起谋杀是由宗派纷争引起的。'}

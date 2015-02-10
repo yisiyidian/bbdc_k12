@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flotsam"]={"flotsam","['flɒts(ə)m]","['flɑtsəm]","n.(遇难船的)漂流货物",'n.(遇难船的)漂流货物，不值钱的零碎物，无业游民','He was another of the city\'s flotsam.','他是这个城市里又一个流浪者。','After the storm, the sea was covered with flotsam and jetsam.','暴风雨后，海上漂浮着遇难船只的残骸和货物。'}

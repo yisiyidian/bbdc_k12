@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["eventful"]={"eventful","[ɪ'ventfʊl; -f(ə)l]","[ɪ'vɛntfl]","adj.变故多的",'adj.变故多的,多事的,重要的','It is an eventful year.','这是一个有很多大事的一年。','He has had an eventful life.','他一生有很多大事。'}

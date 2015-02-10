@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fancied"]={"fancied","['fænsɪd]","[ 'fænsid ]","adj.空想的",'adj.空想的,虚构的','What in her mind is all fancied.','她脑中满是幻想。','It\'s just a fancied story.','这只是一个虚构的故事。'}

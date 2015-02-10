@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lightly"]={"lightly","['laɪtlɪ]","['laɪtli]","adv.轻轻地",'adv.轻轻地，轻快地，轻蔑地，轻率地，轻微地','The band swung lightly down the street.','那伙人踏著轻快的步伐沿街走去.','She trod lightly so as not to wake the baby.','她步子很轻, 以免惊醒孩子.'}

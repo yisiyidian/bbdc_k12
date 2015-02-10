@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ravish"]={"ravish","['rævɪʃ]","['rævɪʃ]","v.抢夺",'v.抢夺，使…狂喜，强奸','I was ravished by her beauty.','我被她的美貌迷住了.','He was ravished by her beauty.','她的美貌使他倾倒。'}

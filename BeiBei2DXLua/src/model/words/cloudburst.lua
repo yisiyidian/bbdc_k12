@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cloudburst"]={"cloudburst","['klaʊdbɜːst]","['klaʊdbɝst]","n.倾盆大雨",'n.倾盆大雨,豪雨','The bus was delayed by a cloudburst','由于大暴雨，公共汽车来迟了。','All of a sudden a storm broke – a regular cloudburst.','突然暴风雨来临了—一场常见的大暴雨。'}

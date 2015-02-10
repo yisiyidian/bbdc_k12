@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insurance"]={"insurance","[ɪn'ʃʊər(ə)ns]","[ɪn'ʃʊrəns]","n.保险",'n.保险','I am an insurance broker.','我是一名保险经纪人。','The accident prompted her to renew her insurance.','这一事故促使她为投保续期.'}

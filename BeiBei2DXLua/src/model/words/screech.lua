@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["screech"]={"screech","[skriːtʃ]","[skritʃ]","n.尖声喊叫",'n.尖声喊叫,尖叫声,急煞车时车子的煞车声|||v.尖著声音讲,发出尖锐的声音','The brakes screeched as the car stopped.','汽车停时，发出尖锐刺耳的刹车声。','The child screeched insults at us.','那孩子尖着嗓子骂我们。'}

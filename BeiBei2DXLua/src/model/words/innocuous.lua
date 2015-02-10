@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["innocuous"]={"innocuous","[ɪ'nɒkjʊəs]","[ɪ'nɑkjuəs]","adj.无害的",'adj.无害的,无毒的，无关痛痒的','Even seemingly innocuous words are offensive in certain contexts.','甚至看似毫无恶意的言辞在某些语境下都会引起冒犯。','People always like the stuff that are innocuous to public','人们通常喜欢不公害的东西'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insouciance"]={"insouciance","[ɪn'susɪəns]","[ in'su:sjəns ]","n.漫不经心",'n.无忧无虑,逍遥自在,漫不经心','Everything wounds him – my laughter, my hunger, my persistence, my insouciance, everything.','每一件事情都使他难受—我的笑声、我的饥饿，我的固执、我的漫不经心，一切的一切。','He replied with characteristic insouciance: \'So what?\'','他以一贯的漫不经心回答道：“那又怎样？”'}

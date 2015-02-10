@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["namely"]={"namely","['neɪmlɪ]","['nemli]","adv.即",'adv.即,也就是','Only one person can do the job, namely you.','只有一个人能做这项工作，那就是你。','The railroad connects two cities, namely, New York and Chicago.','这条铁路连接两个城市, 即纽约与芝加哥.'}

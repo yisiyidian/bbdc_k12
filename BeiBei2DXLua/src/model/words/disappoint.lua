@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disappoint"]={"disappoint","[dɪsə'pɒɪnt]","['dɪsə'pɔɪnt]","vt.&vi.使...失望",'vt.&vi.使...失望','I\'m sorry to disappoint your plans.','我很抱歉妨碍了你的计划。','The result disappointed him.','结果使他失望。'}

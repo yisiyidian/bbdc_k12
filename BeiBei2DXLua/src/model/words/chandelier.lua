@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chandelier"]={"chandelier","[,ʃændə'lɪə]","[,ʃændə'lɪr]","n.枝形吊灯(烛台)",'n.枝形吊灯(烛台)','The chandelier blared.','吊灯射出耀眼的光亮。','A decorative object, such as a chandelier, that gives off light.','枝形吊灯装饰性的能发光的东西，如枝形吊灯'}

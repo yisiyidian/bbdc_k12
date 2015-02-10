@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["grovel"]={"grovel","['ɡrɑvl]","[ 'ɡrɔvəl ]","vi.趴",'vi.趴,匍匐,卑躬屈膝,五体投地的','He said he would never grovel before a conqueror.','他说他永远不会在征服者脚下摇尾乞怜。','We grovelled around the club on our knees.','我们趴在俱乐部的地上四处找。'}

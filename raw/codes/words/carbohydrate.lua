@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carbohydrate"]={"carbohydrate","[kɑːbə'haɪdreɪt]","[,kɑrbo'haɪdret]","n.碳水化合物",'n.碳水化合物,醣','||Carbohydrates|| provide our bodies with heat and energy.','碳水化合物给我们的身体提供热量和能量。','Athletes usually eat a high carbohydrate diet','运动员通常吃高碳水化合物的食物'}

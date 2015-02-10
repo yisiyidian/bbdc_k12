@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["enigma"]={"enigma","[ɪ'nɪgmə]","[ɪ'nɪgmə]","n.费解的事情",'n.费解的事情，谜，谜一般的人','It is an enigma to me.','它对我来说是个迷。','He is an enigma to all of us.','对我们而言，他是个神秘莫测的人物。'}

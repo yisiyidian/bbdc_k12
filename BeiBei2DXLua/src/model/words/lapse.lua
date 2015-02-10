@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lapse"]={"lapse","[læps]","[læps]","n.过失",'n.过失,流逝,失效,抛弃信仰,间隔|||vi.堕落,停止,失效,流逝|||vt.使失效','I started to eat the peas with my hands, but I don\'t think anyone noticed my little lapse.','我开始用手吃豌豆，但我想没有人注意到我的小错误。','After a lapse of several years he came back to see us.','数年不见之后，他又回来看我们了。'}

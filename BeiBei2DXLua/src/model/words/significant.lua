@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["significant"]={"significant","[sɪg'nɪfɪk(ə)nt]","[sɪɡ'nɪfɪkənt]","adj.有意义的",'adj.有意义的,意味深长的;相当数量的;重要的,重大的|||n.(复)有意义的事物;标志','Share prices showed significant advances today.','今日股票价格大幅上涨.','Her appointment was a significant, though temporary success.','她受聘虽说是临时性的, 但却是一大成功.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dormer"]={"dormer","['dɔːmə]","[ 'dɔ:mə ]","n.屋顶采光窗(天窗)",'n.屋顶采光窗(天窗)','We want to buy a two-floored house with a dormer.','我们想买一栋两层楼带天窗的房子。','an oval or round dormer window.','一种椭圆形或是圆形的凸肚窗'}

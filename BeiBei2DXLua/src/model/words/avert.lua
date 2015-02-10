@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["avert"]={"avert","[ə'vɜːt]","[ə'vɝt]","vt.转开",'vt.转开,避免,防止','He managed to avert suspicion.','他设法避嫌。','She averted her eyes from the terrible sight.','她转移目光不看那可怕的情景。'}

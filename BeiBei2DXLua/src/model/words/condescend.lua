@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["condescend"]={"condescend","[kɒndɪ'send]","[,kɑndɪ'sɛnd]","vi.屈尊",'vi.屈尊，俯就，怀着优越感对待','When he condescended to speak, he contradicted himself three or four times in the space of half an hour.','他赏脸开腔后，半个小时内就有三四次说话自相矛盾。','Don\'t condescend to me.','别在我面前摆架子。'}

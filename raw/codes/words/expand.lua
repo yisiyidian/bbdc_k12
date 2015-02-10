@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expand"]={"expand","[ɪk'spænd; ek-]","[ɪk'spænd]","vt.增加",'vt.增加,详述,扩展,使...膨胀|||vi.扩展,增加,详述','Metals expand when they are heated.','金属遇热则膨胀。','Our foreign trade has expanded during recent years.','近年来我们的对外贸易有所扩大。'}

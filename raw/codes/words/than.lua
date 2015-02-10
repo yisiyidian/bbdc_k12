@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["than"]={"than","[ðæn; ð(ə)n]","[ðæn]","conj.比（用于比较级）",'conj.比（用于比较级）；宁愿…而不愿；除…以外；一…就|||prep.超过；比','That hotel probably costs no less than 20 dollars a night.','那间旅馆的住宿费大约要20元一晚呢。','Mary is more beautiful than anyone else in her company.','玛丽在公司里比其他人都漂亮。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oculist"]={"oculist","['ɒkjʊlɪst]","['ɑkjəlɪst]","n.眼科医生",'n.眼科医生，配镜师','I wonder if the oculist can fit me in next Friday.','不知眼科医生能否在下星期五给我安排一个时间。','The oculist removed a foreign object from his eye.','眼科医生从他眼中除去一个异物。'}

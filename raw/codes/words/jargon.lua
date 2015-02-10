@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jargon"]={"jargon","['dʒɑːg(ə)n]","['dʒɑrɡən]","n.行话",'n.行话|||vi.说行话','Expert often confuse laymen with their jargon.','专家们常常用行话把外行弄得稀里糊涂。','She skipped the jargon when she read the popular science magazine.','在读那本通俗科学杂志时，她会跳过其中的术语不读。'}

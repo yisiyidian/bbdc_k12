@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["boiler"]={"boiler","['bɒɪlə]","['bɔɪlɚ]","n.锅炉",'n.锅炉','Pipes convey hot water from the boiler to the radiators.','通过管道把热水从锅炉输送到散热器里.','A pump in the boiler sends hot water round the central heating system.','热水器中的水泵将热水输送给集中供热设备.'}

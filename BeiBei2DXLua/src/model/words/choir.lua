@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["choir"]={"choir","['kwaɪə]","['kwaɪɚ]","n.唱诗班",'n.唱诗班,唱诗班的席位','The choir gave a ragged performance.','合唱队演唱得很不和谐。','The choir was singing distinctly out of tune in places.','合唱团有些地方明显唱走调了.'}

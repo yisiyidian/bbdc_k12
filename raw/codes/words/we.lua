@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["we"]={"we","[wiː]","[wi]","pron.我们",'pron.我们','||We|| are planning a trip to Arizona this winter.','我们正在计划今年冬天到亚利桑那的旅行','||We|| are fully aware of the gravity of the situation.','我们十分清楚形势的严峻性。'}

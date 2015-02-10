@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["latter"]={"latter","['lætə]","['lætɚ]","adj.后面的",'adj.后面的,后者的|||pron.&n.后者','Many support the former alternative, but personally I favour the latter (one).','很多人都赞成前一种办法, 但我个人喜欢後一种.','One can travel there by ship or plane. Most people choose the latter.','乘船或乘飞机去均可, 人们多取後者.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["collaborative"]={"collaborative","[kə'læbəretɪv]","[ kə'læbərətiv ]","adj.协作的",'adj.协作的,合作的','...a collaborative research project.','…一个合作研究项目。','theatre art requests collaborative works','戏剧艺术要求合作性的工作'}

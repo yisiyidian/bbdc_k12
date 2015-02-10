@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["alacrity"]={"alacrity","[ə'lækrɪtɪ]","[ə'lækrəti]","n.敏捷",'n.敏捷,活泼,乐意','He accepted her offer with alacrity.','他欣然接受了她的建议。','Although the man was very old, he still moved with alacrity.','他虽然上了年纪，动作仍很敏捷。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bonnet"]={"bonnet","['bɒnɪt]","['bɑnət]","n.软帽",'n.软帽,无边的帽子,汽车喇叭,(烟囱,壁炉)罩子,辅助帆|||vt.给…戴帽子，给…装罩子','The poke of her black bonnet hide her face from him.','她那黑色帽子的前沿遮住了她的脸，使他看不见。','Our teacher has a bee in his bonnet about punctuation.','我们的老师没完没了地琢磨著标点符号.'}

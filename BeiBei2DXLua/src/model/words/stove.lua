@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stove"]={"stove","[stəʊv]","[stov]","n.炉子",'n.炉子,火炉窑;烘房；【主英】温室|||v.stave的过去式和过去分词','There\'s a saucepan boiling away on the stove.','炉子上锅里的水一直开著.','I have to buy a more economical stove.','我得买一个更节省燃料的火炉。'}

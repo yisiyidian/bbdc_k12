@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["skirt"]={"skirt","[skɜːt]","[skɝt]","n.裙子",'n.裙子,边缘|||vt.位于...边缘,装边于,回避,绕开|||vi.形成边缘,绕...走,避开','The seam of her skirt ripped.','她的裙子的接缝裂开了。','She tore her skirt on the nail.','钉子勾破了她的裙子。'}

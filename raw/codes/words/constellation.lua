@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["constellation"]={"constellation","[,kɒnstə'leɪʃ(ə)n]","[,kɑnstə'leʃən]","n.星座",'n.星座,星群','A cluster of stars smaller than a constellation.','星群，星座比星座小的一簇星星','My constellation is Great Bear.','我的星座是大熊星座。'}

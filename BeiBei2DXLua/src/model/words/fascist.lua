@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fascist"]={"fascist","['fæʃɪst]","['fæʃɪst]","n.法西斯党员",'n.法西斯党员,法西斯主义者|||adj.法西斯主义的,法西斯主义者的','I suspect he\'s a closet fascist.','我怀疑他是地下法西斯分子.','The fascist soldier thrust his bayonet into the man\'s body.','那个法西斯士兵把刺刀刺入那人的身体。'}

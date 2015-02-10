@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nurse"]={"nurse","[nɜːs]","[nɝs]","n.护士",'n.护士,保姆,奶妈|||vi.看护,照顾,栽培,当看护|||vt.哺乳,看护','A nurse came to put on a clean dressing for him.','一位护士来给他包上干净的绷带。','She spends her spare time ||nursing|| her old mother.','她的业余时间都花在照顾她年老的母亲上。'}

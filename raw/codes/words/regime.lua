@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["regime"]={"regime","[reɪ'ʒiːm]","[re'ʒim]","n.政权",'n.政权，政体；社会制度；管理体制','The people are held down by a vicious and repressive military regime.','人民受著凶恶而专制的军政权的压迫。','The overthrow of the regime was followed by a period of anarchy.','该政权被推翻以后，有一段时期是无政府状态。'}

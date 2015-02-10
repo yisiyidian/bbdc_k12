@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scathing"]={"scathing","['skeɪðɪŋ]","['skeðɪŋ]","adj.严厉的",'adj.严厉的,尖刻的|||动词scathe的现在分词形式','The scathing editorial simply boils down to an exercise in partisan politics.','措词强烈的社论可以简单地归结为政党政治的纲领','The report is scathing about the lack of safety precaution.','该报道对缺乏安全预防措施一事严加指责。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coal"]={"coal","[kəʊl]","[kol]","n.煤",'n.煤,木炭,运煤工|||vt.烧成炭,供应煤|||vi.装煤,加煤','||Coal|| is a mineral.','煤是一种矿物。','He put a shovel of coal on to the fire.','他往火炉里加了一铲煤。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rectangle"]={"rectangle","['rektæŋg(ə)l]","['rɛktæŋɡl]","n.长方形",'n.长方形,矩形','Having the shape of a rectangle.','矩形的具有矩形形状的','A gem cut in the form of a narrow rectangle.','狭长形宝石被切成细条形的宝石'}

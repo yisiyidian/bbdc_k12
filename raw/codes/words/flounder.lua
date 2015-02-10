@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["flounder"]={"flounder","['flaʊndə]","['flaʊndɚ]","v.挣扎",'v.挣扎,踌躇，笨拙而错乱地说或做|||n.挣扎，错乱的行动|||n.比目鱼，鲽','The little dog was floundering around in the snow, so I picked it up.','那条小狗在雪中挣扎，我把它抱了起来。','The child floundered in the water till someone jumped in to save him.','孩子在水中拚命挣扎，直到有人跳入水中把他救起。'}

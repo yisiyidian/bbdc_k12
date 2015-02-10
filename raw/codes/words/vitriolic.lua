@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vitriolic"]={"vitriolic","[,vɪtrɪ'ɒlɪk]","[,vɪtrɪ'ɑlɪk]","adj.硫酸的",'adj.硫酸的,像硫酸的,刻薄的','The newspaper launched a vitriolic attack on the president.','这家报纸对总统发起了一场恶意的攻击。','There was a vicious and vitriolic attack on him in one of the Sunday newspapers two weeks ago.','两周前的一份周日报纸上刊登了一篇对他进行尖酸刻薄攻击的文章。'}

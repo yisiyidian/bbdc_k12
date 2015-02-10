@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perpetuate"]={"perpetuate","[pə'petʃʊeɪt; -tjʊ-]","[pɚ'pɛtʃuet]","vt.使永存",'vt.使永存,使不朽','These measures will perpetuate the hostility between the two groups.','采取这些措施势必使那两集团永远对立。','They decided to perpetuate the memory of their leader by erecting a statue.','他们为永远纪念那位领袖决定建一座雕像。'}

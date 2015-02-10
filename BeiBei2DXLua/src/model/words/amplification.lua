@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amplification"]={"amplification","[,æmplɪfɪ'keɪʃən]","[,æmpləfə'keʃən]","n.扩大",'n.扩大,扩充，膨胀|||n.详述,引伸，推广|||n.增幅,放大(率),放大倍数[系数]','The PCR is used for amplification of DNA','PCR用于DNA的扩增','a semiconductor device capable of amplification','能够扩大的半导体装置'}

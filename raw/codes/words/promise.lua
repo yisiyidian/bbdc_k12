@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["promise"]={"promise","['prɒmɪs]","['prɑmɪs]","v.允诺",'n.诺言,约定,(有)希望，预示|||v.允诺,约定,预示,有可能','The new sales policy promises well.','新的销售办法可望取得良好效果。','I don\'t trust his promise to come for a visit.','我不相信他会如约前来访问。'}

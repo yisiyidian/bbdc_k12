@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["visit"]={"visit","['vɪzɪt]","['vɪzɪt]","n.访问",'n.拜访,访问|||vt.拜访,访问,参观|||vi.参观,巡视,逗留','It was his first visit to his wife\'s parents.','那是他第一次去看望岳父和岳母。','I\'m going to visit my aunt for a few days.','我打算去姑妈家住几天。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["let"]={"let","[let]","[lɛt]","vt.让",'vt.让,容许,释放|||vi.出租,承包|||n.障碍,擦网球','I don\'t agree with all you say, but I\'ll let it go at that.','我并不完全同意你说的话，但我不再多说了。','||Let|| me see where did I leave my hat?','让我想想看－－我把帽子落在哪儿了？'}

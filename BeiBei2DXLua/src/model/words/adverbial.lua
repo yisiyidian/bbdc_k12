@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adverbial"]={"adverbial","[əd'vɜːbɪəl]","[æd'vɝbɪəl]","adj.副词的",'adj.副词的','`Very quickly indeed\' is an adverbial phrase.','very quickly indeed 是状语短语.','Clauses can have an adverbial, also called an adjunct.','句子还可用状语， 或称修饰语。'}

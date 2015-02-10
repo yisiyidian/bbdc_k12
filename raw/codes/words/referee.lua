@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["referee"]={"referee","[refə'riː]","[,rɛfə'ri]","n.裁判员",'n.仲裁人,调解人,裁判员|||vt.&vi.仲裁,裁判','The referee counted him out in the first round.','裁判判定他在第一回合被击败。','He was booked by the referee for foul play.','他因为动作犯规而被裁判记下姓名。'}

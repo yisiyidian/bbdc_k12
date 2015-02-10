@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["portrait"]={"portrait","['pɔːtrɪt]","['pɔrtrət]","n.肖像",'n.肖像,画像|||adj.(文件页面)竖的','The portrait was his proudest possession.','那肖像是他最为珍贵的东西.','The portrait of her mother was her most prized possession.','她母亲的这张肖像是她最珍爱的物品。'}

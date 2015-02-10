@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["compatible"]={"compatible","[kəm'pætɪb(ə)l]","[kəm'pætəbl]","adj.能共处的",'adj.能共处的,可并立的,适合的,兼容的|||n.兼容','Health and hard work are compatible.','健康与努力工作是可共存的。','I don\'t know if we\'re compatible or not.','我不知道我们俩适不适合。'}

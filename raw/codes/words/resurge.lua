@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["resurge"]={"resurge","[ri'sɝdʒ]","[ ri'sə:dʒ, ri:- ]","v.再起",'v.再起,复活,复生','I hope god will let my brother resurge','我希望上帝让我哥复活','Is you lets in my heart reignite fire of the hope, is you lets my heart resurge, was you saves my to dial coolly dials the cool heart!','是你让我的心里重新燃起希望之火，是你让我的心死灰复燃，是你拯救了我一颗拨凉拨凉的心！'}

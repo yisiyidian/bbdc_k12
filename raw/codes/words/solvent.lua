@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["solvent"]={"solvent","['sɒlv(ə)nt]","['sɑlvənt]","n.溶剂",'n.溶剂,解决者|||adj.有偿付能力的,有溶解力的','We must cut back on expenditure in order to remain solvent.','我们应减少开支，以备急用。','They\'re going to have to show that the company is now solvent.','他们必须要证明公司目前具备偿还能力。'}

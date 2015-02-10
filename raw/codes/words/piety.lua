@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["piety"]={"piety","['paɪətɪ]","['paɪəti]","n.虔诚",'n.虔诚','They were drawn to the church not by piety but by curiosity.','他们去教堂不是出于虔诚而是出于好奇。','The old man has great piety towards God.','这位老人对上帝非常虔诚。'}

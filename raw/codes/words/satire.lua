@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["satire"]={"satire","['sætaɪə]","['sætaɪɚ]","n.讽刺文",'n.讽刺文,讽刺','The party in power soon learns what it\'s like to be on the receiving end of political satire.','执政党很快就尝到了遭受政治讽刺的滋味。','Politicians are legitimate targets for satire.','政治家理所当然是讽刺的靶子。'}

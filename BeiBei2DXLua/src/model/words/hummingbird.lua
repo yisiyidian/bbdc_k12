@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hummingbird"]={"hummingbird","['hʌmɪŋbɜːd]","['hʌmɪŋbɝd]","n.蜂鸟",'n.蜂鸟','Then a tiny hummingbird flew by.','然后有一只小蜂雀飞过。','The hummingbird perches on a twig of the hawthorn.','小蜂鸟栖在山楂树枝上.'}

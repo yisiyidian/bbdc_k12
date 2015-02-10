@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["injection"]={"injection","[ɪn'dʒekʃ(ə)n]","[ɪn'dʒɛkʃən]","n.注射",'n.注射,注射物,数学函数','It took three nurses to hold him down while they gave him the injection.','给他打针时, 用了三个护士才把他按住.','Did you have gas or an injection?','你是用的麻醉气还是打的麻醉针?'}

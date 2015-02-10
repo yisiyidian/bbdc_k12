@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["outwit"]={"outwit","[aʊt'wɪt]","[,aʊt'wɪt]","vt.瞒骗",'vt.瞒骗,以智取胜','Don\'t try to outwit or outguess the interviewer.','不要试图欺瞒面试官或者和面试官斗智斗勇。','Like humans, ants can try to outwit foes with cheats and lies.','如人类一样，蚂蚁同样会用假象和欺骗来智取敌人。'}

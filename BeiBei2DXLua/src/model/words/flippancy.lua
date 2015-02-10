@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flippancy"]={"flippancy","['flɪp(ə)nsɪ]","['flɪpənsi]","n.轻率",'n.轻率；无礼；言语尖刻','His flippancy makes it difficult to have a decent conversation with him.','他玩世不恭，很难正经地和他交谈。','She must have thought that there was some flippancy in his tone.','她一定是觉得他的口气有点轻浮。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unlikely"]={"unlikely","[ʌn'laɪklɪ]","[ʌn'laɪkli]","adj.不大可能发生的",'adj.不大可能发生的,未必的,多半不可能的','Frost is possible, although unlikely, at this time of year.','在一年中的这个时候，下霜也是可能的，虽然可能性并不大。','He is very ill and unlikely to recover.','他病得非常厉害，不大可能恢复健康了。'}

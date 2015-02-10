@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["assist"]={"assist","[ə'sɪst]","[ə'sɪst]","vt.协助",'n.帮助,协助,协助的器械|||vt.帮助,协助|||vi.帮助,协助,出席','Relating to, assisting, or intended to assist the memory.','帮助记忆的有关，帮助，或试图帮助记忆的','He asked us to assist him in carrying through his plan.','他请求我们帮他完成他的计划。'}

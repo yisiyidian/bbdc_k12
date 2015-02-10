@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["be"]={"be","[biː]","[bi]","prep.是",'prep.是,有,在','She has been in her room for hours.','她在自己的房间里待了几个小时。','The concert will be in the school hall.','音乐会将在学校的礼堂内举行。'}

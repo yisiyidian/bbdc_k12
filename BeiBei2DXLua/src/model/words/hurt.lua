@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hurt"]={"hurt","[hɜːt]","[hɝt]","vt.伤害",'vt.伤害,(使)疼痛,损害|||vi.受疼痛，破坏|||n.打击，创伤','The experience left me with a feeling of deep hurt.','这段经历给我心灵上留下了严重的创伤。','It was a severe hurt to her pride.','这严重地伤害了她的自尊心。'}

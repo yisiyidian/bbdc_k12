@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["melon"]={"melon","['melən]","['mɛlən]","n.甜瓜",'n.甜瓜','If it were him, he would cut the melon with a word.','换了他，一句话就可以把事情定下来。','He picked a melon from the field.','他从地里摘了一个甜瓜。'}

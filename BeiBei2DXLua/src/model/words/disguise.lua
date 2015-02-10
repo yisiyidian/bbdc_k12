@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disguise"]={"disguise","[dɪs'gaɪz]","[dɪs'ɡaɪz]","vt.假装",'n.假面目,伪装物,假装|||vt.假装,假扮,掩饰','She could not disguise her amusement at his mistake.','她对他的错误忍俊不禁.','The supposed beggar was really a police officer in disguise.','那个众人眼中的乞丐，其实是化了装的警察。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inverse"]={"inverse","['ɪnvɜːs; ɪn'vɜːs]","[,ɪn'vɝs]","adj.相反的",'adj.相反的,倒转的|||n.相反的事物,(数学)逆反函数,倒数,负数','This is the inverse of his earlier proposition.','这和他早些时候提的建议截然相反。','Evil is the inverse of good.','恶是善的反面。'}

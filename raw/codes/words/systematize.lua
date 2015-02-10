@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["systematize"]={"systematize","['sɪstəmə,taɪz]","['sɪstəmətaɪz]","vt.组织起来",'vt.组织起来,使...体系化|||=systematise','We must try to systematize the way we do the accounts.','我们必须力求把记帐方法制度化.','The aim of science is surely to amass and systematize knowledge.','“科学的目的当然是为了积累科学并使之系统化”'}

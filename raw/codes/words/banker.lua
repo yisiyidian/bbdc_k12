@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["banker"]={"banker","['bæŋkə]","['bæŋkɚ]","n.银行家",'n.银行家','The hard-fisted banker refused to lend Mr Jackson more money for his business.','那位小气的银行家拒绝为杰克逊先生的生意贷更多地款。','The banker\'s lip was sewn by terrorist','这个银行家的嘴被恐怖分子缝上了'}

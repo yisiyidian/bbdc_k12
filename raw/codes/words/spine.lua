@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spine"]={"spine","[spaɪn]","[spaɪn]","n.背骨",'n.背骨,脊柱,尖刺','A shiver ran down her spine.','她浑身哆嗦了一下.','He got an injury to his spine when he fell off his horse.','他从马上摔下来，伤了脊梁骨。'}

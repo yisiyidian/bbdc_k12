@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accuse"]={"accuse","[ə'kjuːz]","[ə'kjuz]","vt.控告",'vt.责备,控告','He was accused of incompetence.','他被指责为不称职。','Her assistant was accused of theft and fraud by the police.','她的助手被警方指控偷窃和诈骗。'}

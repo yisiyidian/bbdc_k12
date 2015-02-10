@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lorry"]={"lorry","['lɒrɪ]","['lɔri]","n.卡车",'n.卡车','The lorry skidded on a stretch of black ice.','货车在薄冰路面上打滑.','The whole house vibrates whenever a heavy lorry passes.','重型卡车一经过，整所房子都震动起来。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["corrupt"]={"corrupt","[kə'rʌpt]","[kə'rʌpt]","adj.腐败的",'adj.腐败的,堕落的|||vt.使...恶化,贿赂,使...腐烂|||vi.腐烂,堕落','Bad habits corrupt good manners.','坏习惯败坏好风俗。','a corrupt mayor.','受贿的市长'}

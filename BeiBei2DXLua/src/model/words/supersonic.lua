@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supersonic"]={"supersonic","[suːpə'sɒnɪk; sjuː-]","[,supɚ'sɑnɪk]","adj.超声波的",'adj.超声波的，超音速的|||n.超声波，超音速（飞机）','The physics of supersonic flight.','超音速飞行的物理性质','Have you taken supersonic aircraft?','你坐过超音速飞机吗?'}

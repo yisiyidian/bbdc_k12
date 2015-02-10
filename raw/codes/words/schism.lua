@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["schism"]={"schism","['sɪz(ə)m; 'skɪz(ə)m]","['skɪzəm]","n.分歧",'n.分歧，分裂，分派（教会）','||Schism|| is the most reason for their break up.','分歧是他们分手最大的原因。','A schism appeared in this political party.','该政党内部出现分歧。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abominate"]={"abominate","[ə'bɒmɪneɪt]","[ə'bɑmɪnet]","vt.痛恨",'vt.痛恨,憎恶','I abominate fascism.','我憎恨法西斯主义。','All the teachers abominate cheating in examinations.','所有教师都痛恨考试作弊。'}

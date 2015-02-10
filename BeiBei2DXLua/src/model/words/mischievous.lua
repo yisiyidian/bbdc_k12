@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mischievous"]={"mischievous","['mɪstʃɪvəs]","['mɪstʃɪvəs]","adj.调皮的",'adj.调皮的，恶作剧的，有害的，伤人的','Small and sprightly; mischievous.','小巧的小而有生气的；恶作剧的','She yelled (out) at her mischievous child.','她对她淘气的孩子大喊大叫.'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oligarch"]={"oligarch","['ɒlɪgɑːk]","['ɑlə'gɑrk]","n.寡头政治执政者(支持者）",'n.寡头政治执政者(支持者）','fawning before media oligarch','fawning before media oligarchs','Mikhail D. Prokhorov, the billionaire oligarch who placed third in Sunday’s election.','Mikhail D. Prokhorov, 一名亿万富翁及寡头政治支持者，在星期天的选举中获得第三名。'}

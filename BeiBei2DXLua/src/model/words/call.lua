@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["call"]={"call","[kɔːl]","[kɔl]","v.打电话",'v.呼唤，喊叫；召唤，召集；下令，命令；打电话给|||n.喊叫，大声喊；电话联络；必要，理由；要求','I\'ll call again later.','待会儿我再打电话给你。','The President made a call for national unity.','总统号召全国人民团结起来。'}

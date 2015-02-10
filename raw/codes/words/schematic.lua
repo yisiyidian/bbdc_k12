@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["schematic"]={"schematic","[skiː'mætɪk; skɪ-]","[ski'mætɪk]","adj.扼要的",'adj.扼要的,图解的','The play has a very schematic plot.','这出戏的剧情非常严谨。','We reproduced a same working schematic diagram.','我们复制了一份同样的施工简图。'}

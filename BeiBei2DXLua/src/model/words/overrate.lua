@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overrate"]={"overrate","[əʊvə'reɪt]","[,ovɚ'ret]","vt.评价过高",'vt.评价过高,高估,估价过高','He overrated his abilities as a salesman.','他对自己当推销员的能力评价过高.','I think I overrated him; he can\'t handle a senior job.','我看我对他估计过高了, 他胜任不了高职位的工作.'}

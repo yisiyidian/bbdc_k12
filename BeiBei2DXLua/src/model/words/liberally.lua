@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["liberally"]={"liberally","['lɪbərəli]","[ 'libərəli ]","adv.大方地",'adv.开明地；大方地；（个人）自由主义地','He embellished his stories liberally.','他随意改编他的故事。','He gave his money liberally to the charity.','他很大方地把自己的财产捐给了慈善机构。'}

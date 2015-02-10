@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seemly"]={"seemly","['siːmlɪ]","[ 'si:mli ]","adj.合适的",'adj.合适的，恰当的|||adv.合适地，恰当地','Young people should address their elders in a seemly manner.','年轻人对长辈说话应合乎礼仪。','I dare say it would have been more seemly to decline this proposal.','我知道更合体的做法是拒绝他的邀请。'}

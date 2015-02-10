@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["immunity"]={"immunity","[ɪ'mjuːnɪtɪ]","[ɪ'mjʊnəti]","n.免疫",'n.免疫,免疫性,免除','They can\'t be prosecuted for this offence - they have diplomatic immunity.','他们不会因这次违法行为而受到检控 - 他们享有外交豁免权。','A strong immunity to reinfection develops after one year.','一年后能对再度感染产生强大免疫力.'}

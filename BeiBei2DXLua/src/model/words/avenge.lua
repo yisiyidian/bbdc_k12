@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["avenge"]={"avenge","[ə'ven(d)ʒ]","[ə'vɛndʒ]","vt.为...报复",'vt.为...报复,报仇','It was a point of honor with him to avenge any insult to his family.','要对他家所蒙受的耻辱进行报复，这对他来说是关系名誉的要事。','He wanted to avenge himself for his sufferings.','他要为自己所受的折磨进行报复。'}

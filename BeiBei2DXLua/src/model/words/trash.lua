@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trash"]={"trash","[træʃ]","[træʃ]","n.废物",'n.废物,垃圾|||vt.废弃,擦去,捣毁|||vi.捣毁','Put out the trash.','把垃圾拿出去.','My neighbor took out the burnable trash.','我的邻居把可燃垃圾拿到外面去了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["waist"]={"waist","[weɪst]","[west]","n.腰",'n.腰,腰部','Her hair nearly reached down to her waist.','她的头发几乎垂到了腰部.','If the skirt is too big, we can take in the waist.','要是裙子太大了，我们可以把腰部收紧一些。'}

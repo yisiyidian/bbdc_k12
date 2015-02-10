@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abandon"]={"abandon","[ə'bænd(ə)n]","[ə'bændən]","vt.遗弃",'n.放纵|||vt.放弃,遗弃,沉溺','Those who abandon themselves to despair can not succeed.','那些自暴自弃的人无法成功。','The next-best solution is to abandon the project altogether.','仅次于最佳的解决方法是放弃全部计划。'}

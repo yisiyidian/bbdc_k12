@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pretty"]={"pretty","['prɪtɪ]","['prɪti]","adj.漂亮的",'adj.漂亮的；机灵的，聪明的|||adv.相当，颇|||n.漂亮的人（或东西）','His good looks won him the election but he has still to prove that he\'s not just a pretty face.','他由于仪表堂堂而当选，但他尚须证明决非徒有其表。','What a pretty little garden!','多么漂亮的小花园！'}

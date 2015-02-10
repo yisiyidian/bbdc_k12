@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["advantage"]={"advantage","[əd'vɑːntɪdʒ]","[əd'væntɪdʒ]","n.优势",'n.优势,有利条件|||vt.有利于','He took advantage of her good nature.','他利用了她脾气好这个特点。','Her rich experience gave her an advantage over other applicants for the job.','她丰富的经验使她比其他求职者具有有利条件。'}

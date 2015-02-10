@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extant"]={"extant","[ɪk'stænt; ek-; 'ekst(ə)nt]","[ɛk'stænt]","adj.现存的",'adj.现存的','This law is ancient but still extant.','这一法律古老但仍然有效。','Some of Washington\'s letter are extant.','华盛顿的有些信件仍然被保留着。'}

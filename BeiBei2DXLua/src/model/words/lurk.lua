@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lurk"]={"lurk","[lɜːk]","[lɝk]","n.潜伏",'n.潜伏,潜行|||v.潜藏,潜伏,埋伏','The thief lurked in the shadows.','小偷在阴暗处躲着。','Danger lurks around every bend.','危险隐藏于各个角落。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gist"]={"gist","[dʒɪst]","[dʒɪst]","n.要点",'n.要点,要旨','I can\'t get the gist of your meaning.','我不能抓住你说话的重点。','He related the gist of his conversation to Sam.','他将他谈话的要点告诉了萨姆。'}

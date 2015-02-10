@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enrapture"]={"enrapture","[ɪn'ræptʃə; en-]","[ɪn'ræptʃɚ]","vt.使狂喜",'vt.使狂喜，使出神','We were enraptured by the view of the mountains.','我们看到山峦景色，心花怒放。','He was enraptured that she had smiled at him.','她对他的微笑使他心荡神驰。'}

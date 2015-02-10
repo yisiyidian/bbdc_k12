@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["conscript"]={"conscript","[kən'skrɪpt]","[kən'skrɪpt]","v.征兵",'v.征兵,征召|||vt.征召','Peter was conscripted like every other young man.','和所有其他年轻人一样，彼得应征入伍。','Your body accords with conscript requirement completely.','你的身体条件完全符合征兵要求。'}

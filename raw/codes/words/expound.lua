@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["expound"]={"expound","[ɪk'spaʊnd; ek-]","[ɪk'spaʊnd]","v.阐述",'v.详细说明，阐述，解释','Our teacher expounded his views on education to me at great length.','我们的老师向我详细讲述了他的教育观点。','He expounded the reasons why he did it.','他阐述了他做这件事的理由。'}

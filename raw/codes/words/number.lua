@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["number"]={"number","['nʌmbə]","['nʌmbɚ]","n.数字",'n.号码,数字|||v.编号,加号码,总计|||vi.总计|||vt.编号','She pretends to be friendly but I\'ve got her number; she just likes to know everything.','她装得挺亲热，可我了解她的底；她就是什麽事都爱打听。','The number of your finger is ten.','你双手手指的总数是10。'}

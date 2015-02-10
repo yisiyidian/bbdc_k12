@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stadium"]={"stadium","['steɪdɪəm]","['stedɪəm]","n.露天体育场",'n.露天体育场,竞技场','Supporters crowded through the gates into the stadium.','来捧场的人挤过大门, 涌入运动场.','The crowds drifted away from the stadium.','人群慢慢从体育场散去.'}

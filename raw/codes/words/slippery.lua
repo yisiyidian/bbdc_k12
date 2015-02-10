@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["slippery"]={"slippery","['slɪp(ə)rɪ]","['slɪpəri]","adj.滑的",'adj.滑的','Wheels won\'t bite on a slippery surface.','车轮打滑.','A wet road is usually slippery.','潮湿的路往往是滑的。'}

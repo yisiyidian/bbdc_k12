@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gossip"]={"gossip","['gɒsɪp]","['ɡɑsɪp]","n.闲聊",'n.闲聊,随笔|||vi.散播流言蜚语','He\'s a terrible gossip.','他专爱说人闲话.','She loves to gossip to her neighbors.','她喜欢议论邻居们的是非长短。'}

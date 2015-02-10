@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["rampage"]={"rampage","[ræm'peɪdʒ]","['ræmpedʒ]","v.狂暴地乱冲",'v.狂暴地乱冲|||n.暴怒，狂暴行为','The mob rampaged through the village.','这夥暴徒在村中横冲直撞.','Hundreds of youths rampaged through the town, smashing store windows and overturning cars.','数百名年轻人在镇上横冲直撞，捣毁商店的橱窗，掀翻汽车。'}

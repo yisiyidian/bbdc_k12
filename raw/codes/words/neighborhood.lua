@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["neighborhood"]={"neighborhood","['neɪbə,hʊd]","['nebɚ,hʊd]","n.附近",'n.附近,邻近,邻居','He lives somewhere in the neighborhood.','他住在附近某处。','He had committed several robberies in the neighborhood.','他已在附近犯下了好几起抢劫案。'}

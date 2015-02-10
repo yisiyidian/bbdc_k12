@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["restraint"]={"restraint","[rɪ'streɪnt]","[rɪ'strent]","n.抑制",'n.抑制,克制,束缚','He is a man always speaking with restraint.','他是个说话拘谨的人。','His rage was beyond restraint.','他怒不可遏。'}

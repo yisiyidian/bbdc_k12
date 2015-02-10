@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ultrasonic"]={"ultrasonic","[ʌltrə'sɒnɪk]","[,ʌltrə'sɑnɪk]","adj.超声波的",'adj.超声波的','Set up ultrasonic wire bonding laboratory.','成立超声波电子焊接实验室。','The doctors gave him an ultrasonic brain scan.','医生给他做了脑部超声波扫描检查。'}

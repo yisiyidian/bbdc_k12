@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eruption"]={"eruption","[ɪ'rʌpʃ(ə)n]","[ɪ'rʌpʃən]","n.爆发",'n.爆发,喷发，出疹，长牙','The place was recently visited by a serious volcanic eruption.','这地方最近发生了一次严重的火山爆发。','The hostilities will be on eruption.','战事即将爆发。'}

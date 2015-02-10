@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["surveillance"]={"surveillance","[sə'veɪl(ə)ns; -'veɪəns]","[sɝ'veləns]","n.监视",'n.监视,监督','Detectives kept the quarry under surveillance for weeks.','侦探们监测那个目标已有好几个星期了。','It is necessary to maintain surveillance on these meters.','必须对这些仪表保持经常性的监测。'}

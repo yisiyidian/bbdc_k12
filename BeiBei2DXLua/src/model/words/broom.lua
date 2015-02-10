@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["broom"]={"broom","[bruːm]","[brum]","n.扫帚",'n.扫帚；金雀花|||vt.扫','She is sweeping with a broom.','她在用扫帚扫地.','A new broom sweeps clean.','新官上任三把火.'}

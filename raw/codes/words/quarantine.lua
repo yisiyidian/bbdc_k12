@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["quarantine"]={"quarantine","['kwɒrəntiːn]","['kwɔrən'tin]","n.四十天",'n.四十天,隔离,封锁交通,检疫期间|||vt.检疫,停止交涉|||vi.检疫','||Quarantine|| restriction have been lifted on import animal from that country.','对来自那个国家的进口动物的检疫限制已被解除。','I will be out of quarantine after five days.','我五天后解除检疫隔离。'}

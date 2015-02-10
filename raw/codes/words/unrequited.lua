@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unrequited"]={"unrequited","[ʌnrɪ'kwaɪtɪd]","[,ʌnrɪ'kwaɪtɪd]","adj.无报答的",'adj.无报答的,不受报酬影响','At any rate, my love for Rachel remained unrequited.','总之，我一直都只是暗恋雷切尔。','She fell in an unrequited love with the artist.','她单恋那位艺术家。'}

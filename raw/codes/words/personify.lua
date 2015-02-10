@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["personify"]={"personify","[pə'sɒnɪfaɪ]","[pɚ'sɑnɪfaɪ]","v.拟人化",'v.拟人化|||vt.拟人,是...的典型,表现','He is kindness ||personified||.','他是善良的化身.','Justice is often ||personified|| as a blindfolded woman holding a pair of scales.','常把蒙著眼睛手持天平的女人当作正义的象徵.'}

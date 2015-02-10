@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["advertisement"]={"advertisement","[əd'vɜːtɪzm(ə)nt; -tɪs-]","[,ædvɚ'taɪzmənt]","n.&adv.广告",'n.&adv.广告','His  saw)an advertisement in the magazine.','他看到杂志上的一则广告上.','This advertisement is calculated to appeal to children.','这个广告是针对儿童设计的.'}

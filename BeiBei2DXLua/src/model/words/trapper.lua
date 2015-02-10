@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trapper"]={"trapper","['træpə]","['træpɚ]","n.设陷阱捕兽者",'n.设陷阱捕兽者；捕捉器；[矿业]矿井风门开关管理员','The trapper exchanged furs for flour, coffee, and gunpowder.','捕兽的人用毛皮换取面粉、咖啡和火药。','The trapper leads a solitary life in the mountains.','那个设陷阱捕猎的人孤独地生活在山里。'}

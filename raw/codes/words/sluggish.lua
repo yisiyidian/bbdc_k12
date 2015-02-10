@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sluggish"]={"sluggish","['slʌgɪʃ]","['slʌɡɪʃ]","adj.懒惰的",'adj.懒惰的,迟钝的,无精打采的','He would try to awake their dormant and sluggish faculties.','这位教授应该试图唤醒他们沉睡和懒散的天赋。','These tablets make me feel rather sluggish.','这些药片让我感到困倦无力。'}

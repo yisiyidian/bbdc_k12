@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["glower"]={"glower","['glaʊə]","['ɡlaʊɚ]","vi.怒目而视",'vi.怒目而视|||n.怒视','He glowered and glared, but she steadfastly refused to look his way.','他怒目而视，但是她铁了心不肯朝他这边看。','He glowered at me but said nothing.','他怒视着我，却一言不发。'}

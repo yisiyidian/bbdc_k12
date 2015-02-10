@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["piss"]={"piss","[pɪs]","[pɪs]","n.尿",'n.尿,小便|||vt.&vi.撒尿','You piss me off.','你气死我了。','Everybody is pissed off (with all the changes of plan).','大家(对计划的诸多变动)均感厌烦.'}

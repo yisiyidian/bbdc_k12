@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["panel"]={"panel","['pæn(ə)l]","['pænl]","n.镶板",'n.镶板；面；（门、墙等上面的）嵌板；控制板|||vt.选定（陪审团）；把…分格；在…上置鞍垫；把…镶入框架内','He moderated on a weekly panel show.','他主持每周的讨论节目。','A panel under the windshield of a vehicle, containing indicator dials, compartments, and sometimes control instruments.','仪表板车辆挡风玻璃下的板，包含指示转盘、分隔间，有时也含控制装置'}

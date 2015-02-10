@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["paperback"]={"paperback","['peɪpəbæk]","['pepɚbæk]","n.纸封面本",'n.纸封面本,普及本,平装书','The novel sold 200,000 copies in hardcover and 2 million in paperback.','那本小说的精装本卖了二十万册, 平装本卖了两百万册。','Peter hopes that this textbook will be issued as a paperback, as this will increase the sales.','彼得希望这本教科学书以平装书出版, 因为这样可以增加销售量。'}

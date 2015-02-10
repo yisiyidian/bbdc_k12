@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["odorous"]={"odorous","['əʊd(ə)rəs]","['odərəs]","adj.芳香的",'adj.芳香的,有气味的,有臭气的,臭的','||Odorous|| pollutants can cause minor annoyance.','臭气污染物会引起轻微的不快。','All the paints are odorous, but we will try our best to reduce the odor.','油漆都是有气味的，但我们会尽可能的降低油漆的气味。'}

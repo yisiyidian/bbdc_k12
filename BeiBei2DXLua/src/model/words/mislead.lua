@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mislead"]={"mislead","[mɪs'liːd]","['mɪs'lid]","vt.误导",'vt.误导，使产生错误印象，欺骗，使误入歧途','We were ||misled|| by the guide.','向导给我们引错了路。','He ||misled|| me into thinking he was rich.','他使我误以为他很有钱。'}

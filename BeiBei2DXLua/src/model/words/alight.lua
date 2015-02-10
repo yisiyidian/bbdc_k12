@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alight"]={"alight","[ə'laɪt]","[ə'laɪt]","vi.落下",'vi.落下，走下，偶然发现|||adj.燃烧的，点亮的','He alighted on a rare medical herb.','他偶然找到了一种稀有的草药。','An airplane alighted on the airdrome.','一架飞机在机场着陆。'}

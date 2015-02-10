@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fact"]={"fact","[fækt]","[fækt]","n.实际",'n.实际,事实','For eight years she was in fact spying for the enemy.','八年来她实际上一直为敌人做间谍工作。','Before we make detailed plans, we need some more facts and figures.','我们还需要更多的精确资料才能制定出详细计画。'}

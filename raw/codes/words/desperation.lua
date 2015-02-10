@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["desperation"]={"desperation","[despə'reɪʃn]","[,dɛspə'reʃən]","n.绝望",'n.绝望(不顾一切的冒险,拚命)','Her suicide was motivated by desperation.','她自杀的诱因是自暴自弃。','The prisoner clawed at the cell door in desperation.','囚犯绝望地乱抓牢房的门.'}

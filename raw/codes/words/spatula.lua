@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["spatula"]={"spatula","['spætjʊlə]","['spætʃələ]","n.铲（尤指烹饪用铲）",'n.铲（尤指烹饪用铲），压舌片，抹刀','She levelled the surface of the cake mixture with a metal spatula.','她用金属铲抹平了蛋糕配料。','Doctor uses a wood spatula to observe inside of the boy\'s mouth','医生用一个木制压舌片观察男孩的口腔。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extensive"]={"extensive","[ɪk'stensɪv; ek-]","[ɪk'stɛnsɪv]","adj.广泛的",'adj.广泛的,广阔的','The castle will undergo extensive and costly renovations.','那城堡要用钜资进行全面整修.','The teacher had both extensive knowledge and profound scholarship.','先生的学问博大精深。'}

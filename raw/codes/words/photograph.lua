@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["photograph"]={"photograph","['fəʊtəgrɑːf]","['fotəɡræf]","n.相片",'n.相片|||vi.照相,摄影|||vt.给...照相','The photograph of the painting reproduces the colors of the original extremely well.','这幅画的照片绝妙地再现了原作的色彩。','I planned to enlarge this photograph.','我计划放大这张照片。'}

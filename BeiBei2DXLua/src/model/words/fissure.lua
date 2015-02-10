@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fissure"]={"fissure","['fɪʃə]","['fɪʃɚ]","n.裂缝",'n.裂缝,裂沟|||v.裂开,分裂,裂成缝','Just ahead of us there was a huge fissure.','前面不远处出现了一条巨大的地裂。','There are many fissures in the wall after the earthquake.','地震过后，墙上有许多裂缝。'}

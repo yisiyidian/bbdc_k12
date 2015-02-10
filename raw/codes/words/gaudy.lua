@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gaudy"]={"gaudy","['gɔːdɪ]","['gɔdi]","adj.俗丽的",'adj.俗丽的|||n.（英）盛大宴会（尤指大学年会）','He dislikes gaudy decorations.','他不喜欢俗丽的装饰。','She was tricked out in gaudy dress.','她穿得华丽而俗气。'}

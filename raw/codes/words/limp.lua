@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["limp"]={"limp","[lɪmp]","[lɪmp]","n.跛行",'n.跛行|||adj.柔软的,无力的,软弱的|||vi.跛行,蹒跚','The injury left him with a permanent limp.','他受伤後就一直瘸了.','His limp is the result of an accident.','他腿瘸是事故所致.'}

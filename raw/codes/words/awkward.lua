@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["awkward"]={"awkward","['ɔːkwəd]","['ɔkwɚd]","adj.笨拙的",'adj.笨拙的|||adj.尴尬的','The heavy axe was awkward to use.','这把重斧头不好用。','Your refusal puts me in an awkward predicament.','你的拒绝让我感到十分为难。'}

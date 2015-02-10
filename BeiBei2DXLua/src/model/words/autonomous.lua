@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["autonomous"]={"autonomous","[ɔː'tɒnəməs]","[ɔ'tɑnəməs]","adj.自治的",'adj.自治的','China has five autonomous regions.','中国有5个自治区。','Each of the U.S. states has an autonomous government.','美国的每个州都有一个自治政府。'}

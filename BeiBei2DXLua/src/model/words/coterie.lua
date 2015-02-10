@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coterie"]={"coterie","['kəʊt(ə)rɪ]","['kotəri]","n.小圈子",'n.小圈子，小集团，志同道合的一伙','The name is known to only a small coterie of collectors.','这个名字只有收藏家的小圈子才知道。','The songs he recorded were written by a small coterie of dedicated writers.','他录制的这些歌是由几名酷爱音乐的作曲家谱写的。'}

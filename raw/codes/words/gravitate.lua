@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gravitate"]={"gravitate","['grævɪteɪt]","['ɡrævɪtet]","vi.受吸引",'vi.受吸引，下沉，重力吸引','The conversation gravitated to sport.','谈话的内容转到了运动方面.','When this beautiful girl arrived, all the men in the room gravitated towards her.','这美貌的姑娘一到, 全屋的男人都让她吸引住了.'}

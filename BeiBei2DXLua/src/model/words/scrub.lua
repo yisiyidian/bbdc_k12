@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scrub"]={"scrub","[skrʌb]","[skrʌb]","n.用力擦洗",'n.用力擦洗,矮树,渺小之物|||vt.&vi.用力擦洗','Give that floor a good hard scrub.','使劲擦洗一下那地板。','Although she scrubbed the old pot thoroughly, she could not make it look completely clean.','虽然她彻底地用力擦洗那只旧壶，但她无法把它完全洗干净。'}

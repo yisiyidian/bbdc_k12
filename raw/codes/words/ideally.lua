@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ideally"]={"ideally","[aɪ'dɪəl(l)ɪ; aɪ'diːəl(l)ɪ]","[aɪ'diəli]","adv.理想地",'adv.理想地,完美地，观念上地','The hotel is ideally placed for restaurants, bars and clubs.','这家宾馆地处的位置适宜经营餐厅 、 酒吧和俱乐部.','||Ideally||, everyone would is given equal opportunities.','最理想的是, 人人都能有平等的机会.'}

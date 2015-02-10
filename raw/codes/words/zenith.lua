@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["zenith"]={"zenith","['zenɪθ]","['zɛnɪθ]","n.顶点",'n.顶点，天顶，全盛','Rome\'s power reached its zenith under the emperor Trajan.','在图雷真皇帝的统治下，罗马帝国的势力达到了顶峰。','Opera reached its zenith at the turn of the century.','歌剧在世纪之交达到了顶峰。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["claimant"]={"claimant","['kleɪm(ə)nt]","['klemənt]","n.申请者",'n.申请者,要求者,索偿人','One of the problems is the bureaucracy the claimant has to face.','问题之一是申请人不得不面对的官僚主义。','Reversion of property to the state in the absence of legal heirs or claimants.','无继承人的土地充公在缺少继承人或申请者时转给国家的财产'}

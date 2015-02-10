@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["contrite"]={"contrite","[kən'traɪt; 'kɒntraɪt]","[kən'traɪt]","adj.悔悟了的",'adj.悔悟了的,后悔的,痛悔的','She was contrite the whole morning after her angry outburst.','发了一通脾气之后，她整个早上都追悔莫及。','He made a contrite apology.','他懊悔不已地致歉。'}

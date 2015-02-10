@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["miscellaneous"]={"miscellaneous","[,mɪsə'leɪnɪəs]","['mɪsə'lenɪəs]","adj.各种的",'adj.各种的,多方面的,性质混杂的|||[计算机]杂的|||n.杂货，杂项|||[合同法律用语]其他约定','||Miscellaneous|| items or written works collected together.','杂集各种各样不同的项目或作品被收集在一起','The miscellaneous expenses of import are so much!','进口货物的杂费太多了！'}

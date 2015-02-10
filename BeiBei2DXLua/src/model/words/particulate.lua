@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["particulate"]={"particulate","[pɑː'tɪkjʊlət; -eɪt; pə-]","[pɚ'tɪkjə,let]","n.微粒子",'n.微粒子，微粒状物质|||adj.微粒的','These particulate creatures are hardly visible to the naked eyes.','这些微小的生物肉眼几乎看不见。','Lungs retain relatively insoluble particulate material.','肺脏内留有不溶解的颗粒物质.'}

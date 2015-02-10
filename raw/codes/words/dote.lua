@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dote"]={"dote","[dəʊt]","[dot]","v.溺爱",'v.溺爱,昏愦|||vi.昏愦,溺爱','He dotes on his nine-year-old son.','他对自己9岁的儿子十分溺爱。','He doted on his sisters','他宠爱妹妹们'}

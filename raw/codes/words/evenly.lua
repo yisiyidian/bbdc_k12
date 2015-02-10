@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["evenly"]={"evenly","['i:vənlɪ]","['ivnli]","adv.平衡地",'adv.平衡地,平坦地,平等地','He divided his time evenly between work and play.','他把时间一半花在工作上，一半用於娱乐。','Baggage loaded onto an aircraft must be evenly distributed.','飞机载运的行李应均匀放置在各个部位.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["devolve"]={"devolve","[dɪ'vɒlv]","[dɪ'vɑlv]","v.委任",'v.委任,移交','When the President is ill, his duties devolve upon the Vice-President.','总统生病时, 其职务交由副总统代理。','More power is to be devolved to regional government.','要将更多的权力分散并下放给地方政府。'}

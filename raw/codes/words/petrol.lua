@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["petrol"]={"petrol","['petr(ə)l]","['pɛtrəl]","n.汽油",'n.汽油','They had to ration petrol during the war.','战时他们不得不限量供给汽油。','The police faced a mob throwing bricks and petrol bombs.','警察面对一群投掷砖块和汽油弹的暴徒。'}

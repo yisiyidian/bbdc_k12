@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["duly"]={"duly","['djuːlɪ]","['dʊli]","adv.的确",'adv.的确,当然地,适当地','A group of men were charged conspiring against the duly elected government.','一伙人被指控阴谋推翻选举产生的合法政府。','The carriage that he had ordered duly arrived, and we drove off.','他叫的马车按时到，我们就坐上去走了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dry"]={"dry","[draɪ]","[draɪ]","adj.干的",'adj.干的，干燥的,干旱的，不行于色的，枯燥无味的，无酒的，口渴的|||vt.把...弄干|||vi.（使）变干','If foreign aid ||dries|| up, the situation will be desperate.','倘若外援枯竭，形势将极为严重。','The well had gone dry.','井干涸了。'}

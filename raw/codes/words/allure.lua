@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["allure"]={"allure","[əˈlʊə(r)]","[əˈlʊr]","v.引诱",'v.引诱,吸引|||n.诱惑力，吸引力','He can\'t resist the allure of the pretty waitress.','他无法抵抗漂亮的女招待的引诱。','Promises of quick profits allure the unwary investor.','能很快收得到利润的承诺吸引了心存侥幸的投资者。'}

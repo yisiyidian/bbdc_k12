@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["occupation"]={"occupation","[ɒkjʊ'peɪʃ(ə)n]","[,ɑkju'peʃən]","n.职业",'n.职业','What\'s your occupation?\' I\'m a dancer.\'','｀你的职业是什麽?＇｀我是跳舞的.＇','I haven\'t entered your name and occupation yet.','我尚未记下你的名字和职业.'}

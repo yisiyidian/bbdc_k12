@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["abdomen"]={"abdomen","['æbdəmən; æb'dəʊmən]","['æbdəmən]","n.腹部",'n.腹部','The diaphragm is between the chest and the abdomen.','横隔膜位于胸腔与腹部之间。','He always feels pain in his abdomen.','他的腹部经常疼痛。'}

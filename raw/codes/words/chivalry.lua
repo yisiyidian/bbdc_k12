@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chivalry"]={"chivalry","['ʃɪv(ə)lrɪ]","['ʃɪvəlri]","n.骑士精神",'n.骑士精神,骑士制度','The Order of the Garter is an ancient order of chivalry.','嘉德勋位是古老的骑士勋位.','The legends of King Arthur represent the apotheosis of chivalry.','亚瑟王的传说代表骑士精神的顶峰.'}

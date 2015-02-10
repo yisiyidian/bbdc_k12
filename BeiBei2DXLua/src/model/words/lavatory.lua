@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lavatory"]={"lavatory","['lævət(ə)rɪ]","['lævətɔri]","n.盥洗室",'n.盥洗室,厕所','Is the lavatory vacant?','厕所里没有人吧?','Is there any lavatory in this building?','这座楼里有厕所 吗 ?'}

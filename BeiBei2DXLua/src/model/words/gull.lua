@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gull"]={"gull","[gʌl]","[ɡʌl]","n.鸥",'n.鸥|||n.易受骗之人|||vt.诈欺,骗','It\'s wrong to gull a child.','欺骗孩子是不对的。','||Gull|| flies over the sea.','海鸥在大海上飞翔。'}

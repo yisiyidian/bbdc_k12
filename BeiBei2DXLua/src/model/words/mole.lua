@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mole"]={"mole","[məʊl]","[mol]","n.痣",'n.痣,鼹鼠','The mole bored (its way) underground.','鼹鼠在地下挖掘（路）.','||Mole|| or artificial spot on a woman\'s face, once thought to add to her beauty.','美人斑（妇女面部天生的或人为的、曾被视为一种美的痣或斑）。'}

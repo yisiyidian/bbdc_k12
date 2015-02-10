@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["egocentric"]={"egocentric","[,egə(ʊ)'sentrɪk; iː-]","[,iɡo'sɛntrɪk]","adj.自我中心的",'adj.自我中心的,利己的','He was egocentric, a man of impulse who expected those around him to serve him.','他自我中心，易冲动，希望周围的人为他服务。','egocentric idea','自我中心的,利己的'}

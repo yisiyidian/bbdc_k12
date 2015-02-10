@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gratis"]={"gratis","['grætɪs; 'grɑː-; 'greɪ-]","[ 'ɡreitis ]","adj.免费的",'adj.免费的|||adv.免费','I knew his help wouldn\'t be given gratis.','我知道他的帮助不会是无偿的。','Wine is gratis.','酒水免费。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["weight"]={"weight","[weɪt]","[wet]","n.重量",'n.重量,体重,重担|||vt.使...负重,使倾斜','The pillars have to support the weight of the roof.','这些柱子须承受屋顶的重量。','The full weight of decision-making falls on her.','决策的重任全落在她的肩上了。'}

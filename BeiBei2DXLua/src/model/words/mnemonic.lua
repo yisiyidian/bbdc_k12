@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mnemonic"]={"mnemonic","[nɪ'mɒnɪk]","[nɪ'mɑnɪk]","adj.助记的",'adj.助记的,记忆的|||n.记忆方法,助记符号','Shanbay  is  really a nice mnemonic website to recite words and learn English.','扇贝真是个非常好的帮助记忆单词和学英语的好网站。','The mnemonic rhymes can help children to learn math easier.','助记的口诀可以帮助孩子们更轻松地学习数学。'}

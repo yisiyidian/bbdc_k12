@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["knit"]={"knit","[nɪt]","[nɪt]","vt.编织",'vt.编织,结合,皱眉|||vi.编织,变得紧凑,愈合|||n.编织','I gave her a knitted shawl as a Christmas gift.','我送给她一条编织的披肩作圣诞礼物。','She often knits while watching TV.','她常常一边看电视一边织毛衣。'}

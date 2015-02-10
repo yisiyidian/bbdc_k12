@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["salute"]={"salute","[sə'l(j)uːt]","[sə'lut]","v.行礼",'v.行礼,致意,问候','They saluted the Queen by firing ten guns.','他们鸣礼炮十响向女王致敬。','They saluted each other by raising their hats.','他们举起帽子互相致意。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nostalgic"]={"nostalgic","[nɒ'stældʒɪk]","[nə'stældʒɪk]","adj.乡愁的",'adj.乡愁的,怀旧的','Perhaps it is our human nature to be nostalgic.','也许是人类天生有一种思古之幽情。','The film provided an evening of nostalgic viewing.','晚上看了一部怀旧的影片.'}

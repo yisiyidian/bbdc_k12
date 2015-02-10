@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["antibiotic"]={"antibiotic","[,æntɪbaɪ'ɒtɪk]","[,æntɪbaɪ'ɑtɪk; ˌæntaɪ-]","adj.抗菌的",'adj.抗菌的|||n.抗生素','||Antibiotic|| can be used against infection.','抗菌素可以用来防止感染。','Your doctor may prescribe antibiotics.','你的大夫可能会开抗生素。'}

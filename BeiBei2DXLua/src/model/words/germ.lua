@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["germ"]={"germ","[dʒɜːm]","[dʒɝm]","n.微生物",'n.微生物,细菌','||Germs|| may invade the organism.','细菌会侵入有机体。','||Germs|| are invisible to the naked eye.','细菌用肉眼看不见。'}

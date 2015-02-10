@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eleventh"]={"eleventh","[ɪ'lev(ə)nθ]","[ɪ'lɛvnθ]","n.第十一",'n.第十一|||adj.第十一的，十一分之一的','He was about to be led to the scaffold when at the eleventh hour a messenger arrived bringing a royal pardon.','最后一刻，就在他要被带上断头台时，一名使者带来了女王的赦免令。','The president\'s visit was called off at the eleventh hour.','总裁的这次访问到时取消了.'}

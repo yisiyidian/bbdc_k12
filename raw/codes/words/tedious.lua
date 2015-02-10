@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tedious"]={"tedious","['tiːdɪəs]","['tidɪəs]","adj.沉闷的",'adj.沉闷的,单调乏味的','He is an exceedingly tedious fellow.','他是一个非常令人生厌的家伙。','He told me a tedious story.','他给我讲了一个冗长乏味的故事。'}

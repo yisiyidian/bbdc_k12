@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["innermost"]={"innermost","['ɪnəməʊst]","['ɪnɚmost]","adj.内心的",'adj.内心的,最深处的|||n.最深处','An electron in the innermost orbit has the least energy.','最里面的轨道上的电子能量最低.','He reveals his innermost feelings only to his best friend.','他把最隐秘的想法只告诉最好的朋友.'}

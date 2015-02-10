@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["greet"]={"greet","[griːt]","[ɡrit]","vt.问候",'vt.问候,致敬,欢迎,映入眼帘','I greet you in the name of the President.','我代表总统前来迎接您。','He made his way through the crowd to greet us.','他穿过人群向我们打招呼。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["like"]={"like","[laɪk]","[laɪk]","vt.&vi.喜欢",'adj.相似的,同样的|||vt.&vi.喜欢,愿意,想|||prep.像,如同|||n.爱好,类似的人（或物）|||adv.大概,和…一样|||conj.如同','I like the look of your new assistant—she should do very well.','我看你的新助手不错——她看样子很能干。','If you like, we could go out this evening.','你要是愿意的话，咱们今天晚上出去。'}

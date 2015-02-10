@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["placid"]={"placid","['plæsɪd]","['plæsɪd]","adj.安静的",'adj.安静的,平和的','His normally placid dog turned on him and bit him in the leg.','他那条狗平日很温顺，这次突然发作咬了他的腿。','The child had a placid disposition.','这个孩子性情温和。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["identical"]={"identical","[aɪ'dentɪk(ə)l]","[aɪ'dɛntɪkl]","adj.相同的",'adj.相同的,同一的','The two systems are, in effect, identical.','这两种制度实际上一模一样。','This is the identical hotel we stayed at last year.','这就是我们去年住过的旅馆。'}

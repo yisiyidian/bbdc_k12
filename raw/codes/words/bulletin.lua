@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bulletin"]={"bulletin","['bʊlɪtɪn]","['bʊlətɪn]","n.公示",'n.公示,公报,新闻快报,期刊|||vt.发表,用公告通知','In the November2, 19- issue of the Japan trade bulletin, you advertise fountain pen, pencil, etc.','从19—年11月2日《日本贸易公报》看到贵公司有关钢笔和铅笔等广告。','By virtue of this act, decree, bulletin, or document','以此，特此依据这条法令、政令、公告或文件'}

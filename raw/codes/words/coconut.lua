@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["coconut"]={"coconut","['kəʊkənʌt]","['kokənʌt]","n.椰子",'n.椰子','A chewy cookie made with sugar, egg whites, and almond paste or coconut.','蛋白杏仁甜饼干一种不易咬碎的饼干, 用糖、蛋白、杏仁糊或椰子粉做成','The falling coconut give him a terrific bang on the head.','那只掉下的椰子砰地击中他的脑袋。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["simile"]={"simile","['sɪmɪlɪ]","['sɪməli]","n.直喻",'n.直喻,明喻','It is not easy to make a simile go on all fours.','一个比喻要完全贴切是不容易的。','As white as snow is a simile.','洁白如雪是明喻。'}

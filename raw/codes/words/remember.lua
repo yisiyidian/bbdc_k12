@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["remember"]={"remember","[rɪ'membə]","[rɪ'mɛmbɚ]","vt.&vi.记得",'vt.&vi.记得,记忆','I remember seeing him once.','我记得见过他一次。','I\'m sorry, I can\'t remember your name.','对不起，我想不起你的名字了。'}

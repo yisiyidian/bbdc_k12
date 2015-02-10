@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["torture"]={"torture","['tɔːtʃə]","['tɔrtʃɚ]","n.拷问",'n.拷问,痛苦|||vt.拷问,使痛苦,曲解','Torture always dehumanizes both the torturer and his victim.','严刑拷打往往使施刑者和受刑者都丧失人性.','The use of torture must disgust any civilized person.','施用酷刑必为文明社会的人所不齿.'}

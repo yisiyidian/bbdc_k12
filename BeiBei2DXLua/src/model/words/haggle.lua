@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["haggle"]={"haggle","['hæg(ə)l]","['hæɡl]","vi.争论",'vi.争论，讨价还价|||vt.乱砍|||n.杀价,争论','It\'s not worth ||haggling|| over a few pence.','为几便士争论不休实在不值得。','He preferred to be overcharged than to haggle.','他宁愿挨宰也懒得讨价还价。'}

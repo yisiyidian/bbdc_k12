@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["libertine"]={"libertine","['lɪbətiːn; -tɪn; -taɪn]","['lɪbɚtin]","n.性行为放纵者",'n.性行为放纵者，浪荡子，持自由思想者|||adj.放荡的，不务正业的','The transition from libertine to prig was so complete.','一个酒徒色鬼竟然摇身一变就成了道学先生。','I believe John is not a libertine any more.','我相信约翰不再是个浪子了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crescendo"]={"crescendo","[krɪ'ʃendəʊ]","[krə'ʃɛndo]","n.声音渐增",'n.声音渐增','The applause rose to a crescendo and cameras clicked.','掌声雷动，照相机咔嚓咔嚓响个不停。','The advertising campaign reached a crescendo at Christmas.','在圣诞节期间，广告战已达到高潮。'}

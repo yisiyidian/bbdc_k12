@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["commercial"]={"commercial","[kə'mɜːʃ(ə)l]","[kə'mɝʃəl]","adj.商业的",'adj.商业的|||n.商业广告','Interrupting an opera on television for a pet-food commercial is going from the sublime to the ridiculous.','在电视播演歌剧时插播宠物食品广告真是煞风景.','||Commercial|| television is an effective medium for advertising.','商业电视是有效的广告宣传工具.'}

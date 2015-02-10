@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["depress"]={"depress","[dɪ'pres]","[dɪ'prɛs]","vt.使...沮丧",'vt.使...沮丧,按,降低|||[计算机]降低','I feel depressed.','我感到沮丧。','He was depressed by his defeat.','失败让他沮丧。'}

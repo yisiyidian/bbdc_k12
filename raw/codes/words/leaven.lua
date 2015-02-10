@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["leaven"]={"leaven","['lev(ə)n]","['lɛvən]","n.酵素",'n.酵素,酵母，要素|||vt.使...发酵,影响','We often use leaven when baking breads.','烤面包时，我们经常使用发酵剂。','A few jokes add leaven to a boring speech.','几句笑话可给枯燥无味的演讲增添活跃的气氛。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deepen"]={"deepen","['diːp(ə)n]","['dipən]","vt.使...加深",'vt.使...加深,使...强烈|||vi.加深，变浓','The feeling deepened with the passing of the years.','这种感觉一年一年地加深了。','His smile deepened, but he made no attempt to answer.','他的微笑加深了，但他没有打算要回答。'}

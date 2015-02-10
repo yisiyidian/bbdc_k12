@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stagecoach"]={"stagecoach","['steɪdʒkəʊtʃ]","['stedʒkotʃ]","n.驿马车",'n.驿马车,公共马车','The journey took two days by stagecoach.','那次旅行坐驿站马车走了两天','He would go to visit his parents by stagecoach tomorrow.','他明天会坐公共马车去探望他父母.'}

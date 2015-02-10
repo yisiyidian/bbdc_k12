@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["doff"]={"doff","[dɒf]","[dɑf]","vt.脱",'vt.脱,丢弃,废除','The peasants doff their hats.','农夫们脱去他们的帽子。','||Doff|| your stupid habits and live.','抛弃你的坏习惯好好生活吧。'}

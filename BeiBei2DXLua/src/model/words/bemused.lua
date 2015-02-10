@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bemused"]={"bemused","[bɪ'mjuːzd]","[bɪ'mjuzd]","adj.困惑的",'adj.困惑的,发呆的','He is totally bemused by the traffic system in the city.','这城市里的交通制度把他完全弄糊涂了。','They all stare, bemused.','他们都困惑的盯着（她）。'}

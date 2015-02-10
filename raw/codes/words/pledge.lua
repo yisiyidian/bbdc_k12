@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pledge"]={"pledge","[pledʒ]","[plɛdʒ]","n.保证",'n.保证,誓言,抵押,抵押品|||vt.保证,誓言,举杯祝...健康','They pledged never to tell the secret.','他们发誓决不泄密。','She pledged her support to us.','她保证支持我们。'}

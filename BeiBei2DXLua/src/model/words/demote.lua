@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["demote"]={"demote","[diː'məʊt]","[,di'mot]","v.降级",'v.降级,降职,降等','He was demoted from sergeant to corporal.','他由中士降到下士.','was demoted from captain to lieutenant;','统领降为副手；'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lethargy"]={"lethargy","['leθədʒɪ]","['lɛθɚdʒi]","n.昏睡",'n.昏睡,瞌睡,无力气','She suffers from bouts of lethargy and depression.','她一阵阵无精打彩、情绪低落.','After the meal, I could feel lethargy overtaking me.','饭后我昏昏欲睡.'}

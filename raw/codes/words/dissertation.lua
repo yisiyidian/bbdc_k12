@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dissertation"]={"dissertation","[,dɪsə'teɪʃ(ə)n]","['dɪsɚ'teʃən]","n.论文",'n.论文','I\'m working my notes up into a dissertation.','我正在把我的笔记修改成论文。','Each student has a supervisor to advise on the writing of the dissertation.','每个学生都有导师指导他们写论文。'}

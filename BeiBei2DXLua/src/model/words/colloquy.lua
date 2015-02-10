@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["colloquy"]={"colloquy","['kɒləkwɪ]","['kɑləkwi]","n.谈话",'n.谈话,会话,自由讨论','The colloquy between them was brief.','他们之间的对话很简洁。','now let\'s begin our colloquy','现在开始自由讨论'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pungent"]={"pungent","['pʌn(d)ʒ(ə)nt]","['pʌndʒənt]","adj.苦痛的",'adj.苦痛的,刺激性的,严厉的','Sharp or pungent to the smell.','浓烈的气味辛辣或浓烈的','A pungent leaf.','尖形的叶子'}

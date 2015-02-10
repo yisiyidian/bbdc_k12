@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["feminist"]={"feminist","['femənɪst]","['fɛmənɪst]","n.男女平等主义者",'n.男女平等主义者,女权扩张论者|||adj.男女平等主义的,女权扩张论的','She is professedly a feminist.','她自称是女权运动者.','Does feminist writing come within the scope of your book?','你这本书是否涉及到女权主义内容?'}

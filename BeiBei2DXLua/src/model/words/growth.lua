@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["growth"]={"growth","[grəʊθ]","[ɡroθ]","n.生长",'n.生长,增长,生长物','It\'s the company\'s policy to sacrifice short-term profits for the sake of long-term growth.','为长期发展而牺牲短期利润是公司的方针。','The abandoned garden was left to a wanton growth of weeds.','荒园里杂草丛生。'}

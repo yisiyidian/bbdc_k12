@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["refrigerant"]={"refrigerant","[rɪ'frɪdʒ(ə)r(ə)nt]","[ri'frɪdʒərənt]","adj.冷冻的",'adj.冷冻的,冷却的,清凉的|||n.清凉剂,冷却剂,冷冻剂','The refrigerant in a household refrigerator also undergoes a cyclic process.','家用冰箱的致冷剂,也经历循环过程.','The refrigerant in a household refrigerator also undergoes a cyclic process.','家用冰箱的致冷剂,也经历循环过程.'}

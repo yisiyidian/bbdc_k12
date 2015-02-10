@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["drummer"]={"drummer","['drʌmə]","['drʌmɚ]","n.鼓手",'n.鼓手|||n.旅行推销员','The drummer doubles in brass as a violinist.','这鼓手还是一个小提琴手。','The drummer was worried because his mallet was missing one minute before the concert.','鼓手很著急, 因为他的小音槌在音乐会开始前一分钟不见了。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nevertheless"]={"nevertheless","[nevəðə'les]","[,nɛvɚðə'lɛs]","conj.然而",'adv.仍然,不过|||conj.然而,不过','The experiment failed. It was, nevertheless, worth making.','试验没有成功，尽管如此，还是值得做的。','The news may be unexpected; nevertheless, it\'s true.','这消息也许是出乎预料，但它是真的。'}

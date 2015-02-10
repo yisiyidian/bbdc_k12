@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["polish"]={"polish","['pɒlɪʃ]","['pɑlɪʃ]","n.磨光",'n.磨光，擦亮；擦亮剂；优雅，精良|||vi.擦亮，变光滑|||vt.磨光，使发亮；使完美;改进|||v.磨光；修改；润色|||adj.波兰的','This car polish is an effective shield against rust.','这种汽车上光蜡很有防锈作用.','With this polish you can give a good high gloss to the wood.','使用这种上光蜡可使木器表面极为光亮平滑。'}

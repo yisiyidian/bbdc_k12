@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["celebration"]={"celebration","[selɪ'breɪʃ(ə)n]","[,sɛlɪ'breʃən]","n.典礼",'n.典礼,宗教仪式,庆祝','`I\'ve been promoted.\' `This calls for a celebration!\'','｀我已经升职了.＇｀这可得庆祝一下喽!＇','A wedding is an occasion for celebration.','婚礼是欢庆的时刻.'}

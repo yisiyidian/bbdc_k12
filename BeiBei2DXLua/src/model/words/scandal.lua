@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scandal"]={"scandal","['skænd(ə)l]","['skændl]","n.丑闻",'n.丑闻,中伤,反感,耻辱','As new facts became known, the Government was forced to climb down over its handling of the spy scandal.','新的事实已众所周知, 政府被迫承认处理间谍丑事失当.','The scandal caused tempests in the newspaper.','那件丑闻在报纸上引起阵阵风波。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["auspices"]={"auspices","['ɔːspɪsɪz]","['ɔspə,siz]","n.资助",'n.资助,赞助','The association is under the auspices of Word Bank.','这个组织是在世界银行的赞助下办的。','The committee began its work under unfavourable auspices.','委员会工作伊始即十分不利.'}

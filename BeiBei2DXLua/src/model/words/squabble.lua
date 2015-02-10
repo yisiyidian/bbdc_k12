@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["squabble"]={"squabble","['skwɒb(ə)l]","['skwɑbl]","v.（为琐事）争论",'v.（为琐事）争论，口角|||n.争论，口角','No man will squabble over a nickel.','没有人会为了五分钱而吵架。','I hate to squabble with my wife about money.','我讨厌为了钱的事情和我太太争吵。'}

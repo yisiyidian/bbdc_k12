@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["congenital"]={"congenital","[kən'dʒenɪt(ə)l]","[kən'dʒɛnɪtl]","adj.天生的",'adj.天生的,先天的','Alice’s son was born with a serious congenital heart defect and will have to undergo surgery.','爱丽丝的儿子出生就患有严重的先天性心脏缺陷，必须接受手术。','She is so beautiful and bright, which is congenital.','她是如此的美丽动人，聪明伶俐，这些都是天生的。'}

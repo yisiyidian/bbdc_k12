@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nominal"]={"nominal","['nɒmɪn(ə)l]","['nɑmɪnl]","adj.名义上的",'adj.名义上的,有名无实的,名词性的|||n.名词词组','She charged only a nominal fee for her work.','她为她所做的工作象征性地收取了一点费用。','The managing director has the nominal power but he is a paper tiger and it is his assistant who actually runs the company.','总经理名义上有权，可却是一只纸老虎，实际管理着公司的是他的助手。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["cotton"]={"cotton","['kɒt(ə)n]","['kɑtn]","n.棉花",'n.棉花,棉|||vi.向…讨好，明白，领悟','Their main exports are textiles, especially silk and cotton.','他们的主要出口货物是纺织品，特别是丝绸和棉布。','India exports tea and cotton to many different countries.','印度向许多国家出口茶叶和棉花.'}

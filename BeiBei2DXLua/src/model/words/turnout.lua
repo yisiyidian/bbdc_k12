@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["turnout"]={"turnout","['tɜːnaʊt]","['tɝnaʊt]","n.出席",'n.出席,到场人数,岔道,清理,清除','Firemen is ready at all times for a sudden turnout.','消防队员时刻准备著紧急出动','The peace march attracted a large turnout.','和平游行吸引了大量的参加者'}

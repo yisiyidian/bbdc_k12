@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dalliance"]={"dalliance","['dælɪəns]","['dælɪəns]","n.戏弄",'n.戏弄,闲混','to spend time in idle dalliance','浪荡地消磨时间.','...my brief dalliance with higher education.','...我短暂的高等教育经历。'}

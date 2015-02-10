@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mystify"]={"mystify","['mɪstɪfaɪ]","['mɪstə'fai]","v.神秘化",'v.神秘化,使难解,迷惑','I\'m completely ||mystified|| about what happened in the hotel the other day.','我对这家酒店在那天所发生的事压根儿迷惑不解。','The act or an instance of mystifying.','神秘化神秘化的行为或事例'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["destination"]={"destination","[,destɪ'neɪʃ(ə)n]","[,dɛstɪ'neʃən]","n.目的地",'n.目的地,终点,景点','The coach followed a rather devious course to its destination.','长途汽车要绕很多弯路才到达目的地.','The destination is in view.','终点已经在望。'}

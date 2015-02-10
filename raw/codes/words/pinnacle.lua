@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pinnacle"]={"pinnacle","['pɪnək(ə)l]","['pɪnəkl]","n.小尖塔",'n.小尖塔,尖峰,高峰|||vt.造小尖塔,放置高处','I can see the small pinnacle from here.','我能从这儿看到那个小尖塔。','The mountaineers were climbing towards the pinnacle.','登山队员向峰顶攀登。'}

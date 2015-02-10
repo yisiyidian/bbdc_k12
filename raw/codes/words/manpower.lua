@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["manpower"]={"manpower","['mænpaʊə]","['mænpaʊɚ]","n.人力",'n.人力|||Manpower|||n.公司(财富500强公司之一,总部所在地美国,主要经营临时帮助)','I doubt whether they really have sufficient manpower.','我怀疑他们是否真有足够的人力。','The system puts the firm at a disadvantage because of its overmuch manpower.','由于过剩的人力, 这一体制使公司处境不利。'}

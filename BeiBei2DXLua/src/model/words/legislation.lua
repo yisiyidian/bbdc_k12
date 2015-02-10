@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["legislation"]={"legislation","[ledʒɪs'leɪʃ(ə)n]","[,lɛdʒɪs'leʃən]","n.立法",'n.立法,法律','The committee proposed that new legislation should be drafted.','委员会建议著手起草新法规.','The minister was asked to pronounce on the proposed new legislation.','要求部长对提出的新法案表态.'}

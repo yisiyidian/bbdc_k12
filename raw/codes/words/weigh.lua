@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["weigh"]={"weigh","[weɪ]","[we]","vt.秤重量",'vt.秤重量,衡量,重压,下锚|||vi.有重量,有影响,重压,下锚|||n.道路','He weighed in at several pounds below the limit.','他赛前量体重比规定限度少几磅。','It\'s been weighing on my mind for days whether to tell her or not.','我这几天心烦意乱，不知道应该不应告诉她。'}

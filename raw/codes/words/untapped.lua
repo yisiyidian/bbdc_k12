@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["untapped"]={"untapped","[ʌn'tæpt]","[,ʌn'tæpt]","adj.未使用的",'adj.塞子未开的,未使用的','untapped resources','未被利用的资源','We must make use of our untapped reservoirs of talent.','我们必须利用我们尚未利用的人才.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["digital"]={"digital","['dɪdʒɪt(ə)l]","['dɪdʒɪtl]","adj.数字的",'adj.手指的,数字的,数码的,电子的','There\'s a digital watch on the table.','桌子上有一块数字式手表.','The digital reading is right.','数字显示的读数是正确的.'}

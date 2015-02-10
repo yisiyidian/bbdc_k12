@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["surrogate"]={"surrogate","['sʌrəgət]","['sʌrəɡɪt]","n.代理人",'n.代理人,代用品,替身,继母','For some people, reading travel books is a surrogate for actual travel.','对某些人来说，读游记可代替真正的旅行。','The cat acted as a surrogate mum to the chicks.','这只猫当起了小鸡的妈妈。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["suckle"]={"suckle","['sʌk(ə)l]","['sʌkl]","vt.哺乳",'vt.哺乳|||vi.吮吸，吸取','She suckles her baby hardly.','她艰难地哺育孩子。','a pagan suckled in a creed outworn','“在陈腐的教条中吸取营养的异教徒”'}

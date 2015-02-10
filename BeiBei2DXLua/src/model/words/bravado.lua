@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bravado"]={"bravado","[brə'vɑːdəʊ]","[brə'vɑdo]","n.作威",'n.作威,虚张的勇气','Their behaviour was just sheer bravado.','他们的行为完全是虚张声势。','You won\'t get away with this, he said with unexpected bravado.','“这事你休想就这么过去，”他以出人意料的强横语气说道。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sententious"]={"sententious","[sen'tenʃəs]","[sɛn'tɛnʃəs]","adj.简洁的",'adj.简洁的,警句的,富于格言的','Generally his ideas were expressed in brief sententious phrase, spoken in low voice.','他发表意见总是用柔和的声音，简短的句子。','That message, often delivered in sententious, near messianic tones, had little appeal.','这些信息通常以警世名言，接近救世主的语气发出，却鲜有吸引力。'}

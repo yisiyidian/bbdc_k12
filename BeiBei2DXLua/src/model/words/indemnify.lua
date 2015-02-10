@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indemnify"]={"indemnify","[ɪn'demnɪfaɪ]","[ɪn'dɛmnɪfaɪ]","v.赔偿",'v.赔偿,补偿，保护，保障','It doesn\'t have the money to indemnify everybody.','它没有钱去补偿所有人。','The printers were ||indemnified|| against legal action.','印刷商获得保证，一旦受到起诉将会得到赔偿。'}

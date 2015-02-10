@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["barge"]={"barge","[bɑːdʒ]","[bɑrdʒ]","n.驳船",'n.驳船|||vi.猛撞,冲,闯','He kept on ||barging|| about until I told him to stop.','他总是到处乱闯，直到我叫他停才停了下来。','How rude of you to barge into the conversation!','你打断人家的谈话，多没礼貌啊！'}

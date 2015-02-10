@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pestle"]={"pestle","['pes(ə)l]","['pɛstl]","n.杵",'n.杵,乳钵槌','She crushed the rice with a pestle.','她用杵碾碎米。','He ground the spices himself with a mortar and pestle.','他自己动手用研钵和杵把香料研成粉。'}

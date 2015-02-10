@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["redolent"]={"redolent","['redəl(ə)nt]","['rɛdələnt]","adj.有...香味的",'adj.有...香味的,令人想起...的','She\'s so pure and naive that to me she\'s redolent of angel.','她是如此单纯天真，对于我来说她简直就是天使。','The kitchen was redolent of onions.','厨房里满是洋葱味。'}

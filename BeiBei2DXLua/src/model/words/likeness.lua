@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["likeness"]={"likeness","['laɪknɪs]","['laɪknəs]","n.相像",'n.相像,相似物,样子','There was an uncommon likeness between the two boys.','这两个男孩长得像极了。','There are much likeness between the two cousins.','这两个表姐妹非常相像。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["key"]={"key","[kiː]","[ ki: ]","n.钥匙",'adj.主要的,关键的|||n.钥匙,关键,答案,按键,音调|||vt.上锁,调节,提供解答,键入|||vi.使用钥匙','She keyed in all the new data.','她键入了所有的新数据。','He put the key in the lock and turned it.','他把钥匙插入锁里转动。'}

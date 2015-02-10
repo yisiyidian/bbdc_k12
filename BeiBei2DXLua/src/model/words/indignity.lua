@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indignity"]={"indignity","[ɪn'dɪgnɪtɪ]","[ɪn'dɪɡnəti]","n.侮辱",'n.侮辱，轻蔑','She was subjected to indignity and humiliation.','她受到了侮辱和羞辱。','What sort of ||indignities|| would he be forced to endure?','他会被迫忍受什么样的侮辱呢？'}

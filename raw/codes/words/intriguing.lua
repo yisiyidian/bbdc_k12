@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["intriguing"]={"intriguing","['ɪntriːgɪŋ; ɪn'triːgɪŋ]","[ɪn'triɡɪŋ]","adj.吸引人的",'adj.吸引人的,有趣的|||vbl.密谋,私通','She was intriguing with her sister against her mother.','她和妹妹串通捣鬼和母亲作对。','Some of the members had been intriguing to get the secretary dismissed.','有些人一直密谋想让老板把秘书解雇。'}

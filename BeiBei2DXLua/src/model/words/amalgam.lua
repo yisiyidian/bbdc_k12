@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amalgam"]={"amalgam","[ə'mælgəm]","[ə'mælɡəm]","n.汞合金",'n.汞合金，混合物','The dentist used amalgam to fill my teeth.','牙医用汞合金给我补牙.','In other words, American literature is to our eyes a curious amalgam of familiar and strange.','换句话说,我们认为, 美国文学把我们所熟悉的和陌生的东西奇妙地结合起来了.'}

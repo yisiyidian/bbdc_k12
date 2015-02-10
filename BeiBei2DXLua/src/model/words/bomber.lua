@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bomber"]={"bomber","['bɒmə]","['bɑmɚ]","n.轰炸机",'n.轰炸机，投弹手','The World WarⅡ bomber found a last home in the Hendon aircraft museum.','亨顿飞机博物馆, 已成为那架第二次世界大战时的轰炸机永久性的收藏地。','The air commodore brief the bomber crew on their dangerous mission.','空军准将向轰炸机机组下达执行危险任务的各项指示。'}

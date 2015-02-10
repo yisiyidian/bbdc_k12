@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["guest"]={"guest","[gest]","[ɡɛst]","n.客人",'n.客人,客串演员,特邀来宾|||vt.款待|||vi.作客','These Indian guest are familiar with this book.','这些印度客人对这本书很熟悉。','The scientists are visiting this country as guests of the government.','这些科学家获该国政府特别邀请正在进行访问。'}

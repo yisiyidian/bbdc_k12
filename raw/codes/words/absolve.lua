@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["absolve"]={"absolve","[əb'zɒlv]","[əb'zɑlv]","vt.宣告...无罪",'vt.宣告...无罪,赦免','I absolve you, on the ground of invincible ignorance.','鉴于你不可救药的无知，我原谅你。','The captain is absolved from all blame and responsibility for the shipwreck.','那位船长被免除了因船只失事而遭致的非难和罪责。'}

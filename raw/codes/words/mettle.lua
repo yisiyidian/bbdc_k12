@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["mettle"]={"mettle","['met(ə)l]","['mɛtl]","n.勇气",'n.勇气，气质,性格','You\'ll be on your mettle during the training course.','你在训练期间要尽最大努力。','The mettle of a company\'s managers is only truly tested during a crisis.','一个公司管理层的勇气只有在危机时才能得到真正检验。'}

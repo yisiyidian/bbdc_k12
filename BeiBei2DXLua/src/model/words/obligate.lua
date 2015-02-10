@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obligate"]={"obligate","['ɒblɪgeɪt]","['ɑblɪ,ɡeɪt]","v.使负义务",'v.使负义务,强制,预留','He felt obligated to help.','他觉得有责任予以帮助.','We were obligated to attend the opening ceremony.','我们有必要参加开幕式.'}

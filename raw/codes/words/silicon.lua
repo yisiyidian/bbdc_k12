@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["silicon"]={"silicon","['sɪlɪk(ə)n]","['sɪlɪkən]","n.硅",'n.硅','The entire content of a book will be located on a single silicon chip.','整本书的内容只用一片硅芯片就可以装下。','This company pioneered the use of silicon chip.','这家公司开创了使用硅片的方法.'}

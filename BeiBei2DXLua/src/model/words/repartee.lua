@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["repartee"]={"repartee","[,repɑː'tiː]","[,rɛpə'ti]","n.机灵的回答",'n.机灵的回答，妙语如珠的对话','His repartee in the TV show impressed the audiences.','他在访谈中的对答如流，妙语如珠让观众印象深刻','This diplomat possessed an excellent gift of repartee.','这位外交官具有卓越的应对能力。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vigorous"]={"vigorous","['vɪg(ə)rəs]","['vɪɡərəs]","adj.精力充沛的",'adj.精力充沛的,元气旺盛的,有力的','She gave the floor a vigorous sponge all over.','她用海绵把地板 使劲儿擦了一遍.','He uttered several vigorous expletives when he dropped the iron on his foot.','他的熨斗掉下砸在脚上, 他随口骂了几声.'}

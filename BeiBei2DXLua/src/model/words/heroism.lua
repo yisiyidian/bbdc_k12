@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heroism"]={"heroism","['herəʊɪz(ə)m]","['hɛroɪzəm]","n.英勇",'n.英勇,勇敢的事迹,豪侠的行为','He pictured her heroism in glowing language.','他生动地描述了她的英雄事迹','Self-trust is the essence of heroism.','自信为英雄品质之本。'}

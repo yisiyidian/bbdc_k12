@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ladybug"]={"ladybug","['leɪdɪbʌg]","['ledɪ,bʌg]","n.瓢虫",'n.瓢虫','There is a ladybug on the ground.','地上有一只瓢虫。','A ladybird is a small round beetle that is red with black spots. (BRIT; in AM, use ladybug)','.'}

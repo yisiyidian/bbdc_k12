@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ignominy"]={"ignominy","['ɪgnəmɪnɪ]","['ɪɡnəmɪni]","n.(尤指公开的)羞耻",'n.(尤指公开的)羞耻,屈辱','...the ignominy of being fired.','...被开除的羞辱。','By bringing me hither, to die this death of triumphant ignominy before the people!','他把我带到这里，让我在众人面前，死在胜利的耻辱之中！'}

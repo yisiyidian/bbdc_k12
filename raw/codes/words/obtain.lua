@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["obtain"]={"obtain","[əb'teɪn]","[əb'ten]","vt.获得",'vt.获得,得到|||vi.通用,流行,存在','The leech hangs about other people hoping to obtain money.','那个吸血鬼依附于他人希望获得钱财。','I haven\'t been able to obtain that book anywhere.','我到处都没买到那本书。'}

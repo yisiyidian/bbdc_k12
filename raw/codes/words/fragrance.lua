@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fragrance"]={"fragrance","['freɪgr(ə)ns]","['fregrəns]","n.香味",'n.香味','It gives forth a pleasant fragrance.','它散发出一种令人愉快的香味。','The rose sends out strong fragrance.','玫瑰散发出浓郁的香味。'}

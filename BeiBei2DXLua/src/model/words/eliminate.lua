@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eliminate"]={"eliminate","[ɪ'lɪmɪneɪt]","[ɪ'lɪmɪnet]","v.除去",'v.除去,排除,剔除|||[计算机]消除','Let us eliminate all uncertain on thought.','让我们从思想上消除一切疑惑。','This new process has eliminated the need for checking the products by hand.','采用这种新方法无须再用手工检验产品。'}

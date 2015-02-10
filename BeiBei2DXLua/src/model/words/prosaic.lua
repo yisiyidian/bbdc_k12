@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prosaic"]={"prosaic","[prə(ʊ)'zeɪɪk]","[prə'zeɪk]","adj.散文的",'adj.散文的，单调的,无趣的','The facts are more prosaic than the legend.','事实远没有传说的那样神乎其神。','Those stereotype ways of writting make this novel dull and prosaic.','那些老套的写法让这篇小说显得枯燥无味。'}

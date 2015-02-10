@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coalesce"]={"coalesce","[,kəʊə'les]","[,koə'lɛs]","v.合并",'v.合并,联合,接合','The views of party leaders coalesced to form a coherent policy.','党的领导人的各种观点已统一为一致的政策。','The rebel units coalesced into one army to fight the invaders.','反叛军汇集成一支武装迎战入侵者。'}

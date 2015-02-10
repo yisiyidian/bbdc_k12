@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["debtor"]={"debtor","['detə]","['dɛtɚ]","n.借方",'n.借方,债务人','What will you do with the defaulting debtor?','对不履行责任的债务人，你将怎么做？','I am your debtor.','我是你的债务人'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vengeance"]={"vengeance","['ven(d)ʒ(ə)ns]","['vɛndʒəns]","n.报复",'n.报复,报仇,复仇','Hot love, hasty vengeance.','爱情过热难持久。','Heaven\'s vengeance is slow but sure.','天网恢恢疏而不漏.'}

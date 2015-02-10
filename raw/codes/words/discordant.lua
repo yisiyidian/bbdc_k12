@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["discordant"]={"discordant","[dɪ'skɔːd(ə)nt]","[dɪs'kɔrdənt]","adj.不一致的(不和谐的)",'adj.不一致的(不和谐的)','The views between us are discordant.','我们之间的观点不一致。','It seems that the two of them have discordant opinions on almost everything.','他们两个似乎在所有事情上意见都不一致。'}

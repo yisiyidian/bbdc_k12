@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["downhill"]={"downhill","[daʊn'hɪl]","[,daʊn'hɪl]","adj.向坡下(的)",'adj.向坡下(的),走下坡路的(地)|||adv.下坡,向下','Luckily, the car was facing downhill when it broke down, and we were able so shove it home.','幸运的是，车抛锚的时候是面向下山方向的，我们能将它推回家。','Business is going downhill.','生意正走下坡。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["index"]={"index","['ɪndeks]","['ɪndɛks]","n.索引",'n.索引；[数]指数；指示；标志|||vt.给…编索引；把…编入索引；[经济学]按生活指数调整（工资、价格等）|||vi.[机械学]转位','The book is not well indexed.','这部书索引做得不好。','The index is arranged in alphabetical order.','这索引是按字母顺序排列的。'}

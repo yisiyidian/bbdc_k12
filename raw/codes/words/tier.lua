@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["tier"]={"tier","[tɪə]","[tɪr]","n.列",'n.列,行,等级|||vt.使...排成行或列|||vi.等级上升','a stadium with four tiers of seats.','一个有四层座位的体育馆','An oval or a round structure having tiers of seats rising gradually outward from an open space or arena at the center.','圆形露天剧场蛋形或圆形建筑，在露天的中央场地周围有逐渐向外斜上升的阶梯式座位'}

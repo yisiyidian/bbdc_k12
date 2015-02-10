@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incompetent"]={"incompetent","[ɪn'kɒmpɪt(ə)nt]","[ɪn'kɑmpɪtənt]","adj.无能力的",'adj.无能力的,无力的,不适当的|||n.无能力者','He\'s incompetent and not worth keeping on.','他庸碌无能, 不值得留用.','She was put off maths by a bullying and incompetent teacher.','她对数学失去了兴趣, 因为老师仗势欺人又没教学能力.'}

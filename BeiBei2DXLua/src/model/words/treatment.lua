@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["treatment"]={"treatment","['triːtm(ə)nt]","['tritmənt]","n.治疗",'n.治疗,疗法,处理','His treatment of her was beyond endurance.','他这样对待她是无法忍受的。','You should follow your treatment with plenty of rest in bed.','你应该在治疗之後好好卧床休息.'}

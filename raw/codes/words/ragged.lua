@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ragged"]={"ragged","['rægɪd]","['ræɡɪd]","adj.衣衫褴褛的",'adj.衣衫褴褛的,粗糙的,刺耳的','||Ragged|| colts may make fine horses.','【谚】别看小狗现在丑，长大可能成骏马。','The poor boy was ashamed of his ragged cloths.','这个穷孩子为自己的破衣服感到难为情。'}

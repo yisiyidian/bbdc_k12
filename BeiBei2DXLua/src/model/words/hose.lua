@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hose"]={"hose","[həʊz]","[hoz]","n.水管",'n.水管,橡皮软管,(复数)长统袜,男士紧身裤|||vt.用水管冲洗','Unreel the hose fully before use.','把水龙完全展开再使用.','On Sundays, he washes his car down with the garden hose.','每逢星期天，他就用花园里的水管把汽车冲洗干净。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nice"]={"nice","[naɪs]","[naɪs]","adj.美好的",'adj.美好的,令人愉快的,漂亮的,善意的','It\'s a nice day today.','今天天气很好。','Did you have a nice holiday?','你假期过得愉快吗？'}

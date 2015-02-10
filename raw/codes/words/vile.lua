@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vile"]={"vile","[vaɪl]","[vaɪl]","adj.恶劣的",'adj.恶劣的,简陋的,低廉的','Do you expect me to drink this vile concoction?','你难道想让我喝这种乌七八糟的东西?','This accusationof bribery is a vile smear on an honourable citizen.','这项有关贿赂的指控是对一个正直公民的无耻诽谤.'}

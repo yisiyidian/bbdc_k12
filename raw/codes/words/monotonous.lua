@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["monotonous"]={"monotonous","[mə'nɒt(ə)nəs]","[mə'nɑtənəs]","adj.单调的",'adj.单调的','I do not like my monotonous work.','我不喜欢我那单调乏味的工作。','The explorer live on a monotonous diet of bean and rice.','探险者靠吃豆子和米饭这些单调的食物为生。'}

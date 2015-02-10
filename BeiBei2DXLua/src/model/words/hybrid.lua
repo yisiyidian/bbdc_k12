@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hybrid"]={"hybrid","['haɪbrɪd]","['haɪbrɪd]","n.混血儿",'n.混血儿,杂种,混合物|||adj.混合的,杂种的,混合语的','A mule is a hybrid of a donkey and a horse.','骡子是公驴和母马交配而生的杂种动物。','He\'s a hybrid of Chinese and Italian.','他是中意混血儿。'}

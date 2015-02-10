@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dictionary"]={"dictionary","['dɪkʃ(ə)n(ə)rɪ]","['dɪkʃə'nɛri]","n.词典",'n.词典,字典,辞典','||Dictionary|| writers must be skilled in the art of definition.','词书编纂者必须精於给词语下定义的技巧.','That is not, properly speaking, a dictionary but a grammar book.','严格地说，那不是一本字典，而是一本语法书。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["decent"]={"decent","['diːs(ə)nt]","['disnt]","adj.有分寸的",'adj.有分寸的,得体的,相当好的','The lack of decent public transport is a great disadvantage.','没有适当的公共交通工具是很不方便的.','His first novel was a flash in the pan, and he hasn\'t written anything decent since.','他的第一部小说如昙花一现，此後他再没写出像样的东西。'}

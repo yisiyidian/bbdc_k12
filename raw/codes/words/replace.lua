@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["replace"]={"replace","[rɪ'pleɪs]","[rɪ'ples]","vt.取代",'vt.取代,更换','“A conspiracy was carefully engineered to replace the Directory by three Consuls” (H.G. Wells).','“细心策划密谋以三个执政官取代督政府” (H.G,威尔斯）。','We\'ve replaced the old adding machine with a computer.','我们用电脑取代了老式的加法计算器。'}

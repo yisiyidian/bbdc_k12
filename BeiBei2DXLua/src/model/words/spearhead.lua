@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spearhead"]={"spearhead","['spɪəhed]","['spɪr'hɛd]","n.矛尖",'n.矛尖,突击队的先遣队,攻击的最前线|||v.做先锋,在前面带头做先锋','The tanks spearheaded the offensive.','坦克在那次进攻中打头阵.','The new managing director will act as spearhead of the campaign.','新上任的常务董事将在这场运动中挂帅。'}

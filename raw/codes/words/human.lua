@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["human"]={"human","['hjuːmən]","['hjumən]","n.人",'n.人，人类|||adj.人的；有人性的；显示人类特有弱点的；人本性的','The accident was caused by human error.','这宗事故是人为过失造成的。','There are many humorous allusions to human foibles in the drama.','剧中多处幽默地提到人类的弱点。'}

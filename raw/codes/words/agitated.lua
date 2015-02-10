@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["agitated"]={"agitated","['ædʒɪteɪtɪd]","['ædʒɪtetɪd]","adj.激动不安的",'adj.激动不安的,焦虑的|||动词agitate的过去式和过去分词','She was agitated by his sudden appearance at the party.','他在聚会中突然出现, 使她心烦意乱.','He was agitated about his wife\'s health.','他为他妻子的健康感到不安。'}

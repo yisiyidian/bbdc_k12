@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bawl"]={"bawl","[bɔːl]","[bɔl]","v.大叫",'v.大叫，大哭|||n.叫骂声，放声痛哭','The sergeant bawled out a command to his men.','那个中士向士兵大声发令。','He bawls at me across the street.','他在街道的另一边冲我大声喊。'}

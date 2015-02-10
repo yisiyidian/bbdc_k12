@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["claw"]={"claw","[klɔː]","[klɔ]","n.爪",'n.爪,钳,螯,爪状物|||vt.&vi.抓,撕','The editor got his claws into the opposition in a vicious editorial.','那个编辑在一篇社论中恶毒地攻击了反对派。','They clawed each other in Parliament.','他们在议会中互相拆台。'}

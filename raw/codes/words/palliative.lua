@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["palliative"]={"palliative","['pælɪətɪv]","['pælɪ'etɪv]","adj.减轻的",'adj.减轻的,缓和的,治标的|||n.缓和剂','Aspirin is a palliative (drug).','阿斯匹林是一种缓解剂.','Security checks are only a palliative (measure) in the fight against terrorism.','安全检查仅是反恐怖主义的一种消极措施.'}

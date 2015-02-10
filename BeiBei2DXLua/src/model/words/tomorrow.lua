@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tomorrow"]={"tomorrow","[tə'mɒrəʊ]","[tə'mɔro]","adv.明天",'adv.明天|||n.明天,将来','||Tomorrow|| I will be very busy.','明天我将很忙。','Never put off till tomorrow what you can do today.','今日事今日毕。'}

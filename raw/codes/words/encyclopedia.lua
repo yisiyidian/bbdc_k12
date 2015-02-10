@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["encyclopedia"]={"encyclopedia","[ɪnˌsaɪkləˈpiːdiə]","[ɪnˌsaɪkləˈpidiɚ]","n.百科全书",'n.百科全书','The new encyclopedia runs to several thousand pages.','这部新的百料全书总共有数千页。','This encyclopedia is truly a compendium of knowledge.','这部百科全书真正是知识宝库.'}

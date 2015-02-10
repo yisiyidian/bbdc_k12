@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["crease"]={"crease","[kriːs]","[kris]","n.折痕",'n.折痕|||vt使...起折痕','The flaps of his jacket pocket were sewn down so that they did not crease or wrinkle.','他的夹克口袋上的口袋盖给缝上了，这样就不会打皱。','Be careful not to crease up my book.','小心别把我的书弄皱了。'}

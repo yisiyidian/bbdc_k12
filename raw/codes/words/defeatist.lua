@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["defeatist"]={"defeatist","[dɪ'fiːtɪst]","[dɪ'fitɪst]","adj.失败主义者的",'adj.失败主义者的','I don\'t approve of your defeatist attitude.','我不赞成你这种失败主义的态度。','There is no point going out there with a defeatist attitude.','怀着一种失败主义的态度上阵根本没有任何意义。'}

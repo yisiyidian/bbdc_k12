@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["superficial"]={"superficial","[,suːpə'fɪʃ(ə)l; ,sjuː-]","[,supɚ'fɪʃl]","adj.表面的",'adj.表面的,肤浅的','||Superficial|| scratches can be easily removed.','表面的划痕很容易擦掉。','He is too superficial to appreciate great literature like this.','他太肤浅，无法欣赏这类文学巨著。'}

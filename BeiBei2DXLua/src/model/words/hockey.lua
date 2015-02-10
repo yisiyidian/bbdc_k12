@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hockey"]={"hockey","['hɒkɪ]","['hɑki]","n.曲棍球",'n.曲棍球','Take any sport basketball, ice hockey, swimming or whatever.','要参加体育活动--篮球、 冰球、 游泳之类的活动.','A player in certain games, such as basketball, soccer, or hockey, who is part of the forward line of the offense.','前锋在一些运动中（如篮球，足球或曲棍球）在前线进攻线上的运动员'}

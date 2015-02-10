@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["promontory"]={"promontory","['prɒm(ə)nt(ə)rɪ]","['prɑməntɔri]","n.海角",'n.海角,岬','The mansion was on a promontory, high over the Pacific.','该宅邸高高地坐落于太平洋的一个海角上。','The Cape of Good Hope is a famous promontory in africa.','好望角是非洲一个知名的海角。'}

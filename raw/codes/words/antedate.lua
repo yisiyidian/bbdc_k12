@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["antedate"]={"antedate","[æntɪ'deɪt; 'æntɪdeɪt]","[,æntɪ'det]","vt.使...提前发生",'vt.使...提前发生,先于,预料|||=predate|||n.比实际早的日期','This event antedates the discovery of America by several centuries.','这件事比发现美洲早几个世纪.','antedate a contract; antedate a check.','把合同的日期提前；把支票日期提前'}

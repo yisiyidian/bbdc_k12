@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["skeptical"]={"skeptical","['skɛptɪkl]","[ 'skeptikəl ]","adj.怀疑的",'adj.怀疑的','A skeptical expression came over my mouth.','我嘴边流露出一丝怀疑。','a skeptical attitude; skeptical of political promises.','怀疑的观点；对政治上的许诺产生怀疑'}

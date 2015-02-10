@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["maternity"]={"maternity","[mə'tɜːnɪtɪ]","[mə'tɝnəti]","n.母性",'n.母性,母道,妇产科病房|||adj.孕妇的,母性的','a maternity dress; maternity leave.','孕妇装；产假','Your job will be kept open for your return after maternity leave.','你的工作会一直保留到你休完产假回来。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["effectual"]={"effectual","[ɪ'fektʃʊəl; -tjʊəl]","[ɪ'fɛktʃʊəl]","adj.有效果的",'adj.有效果的,会应验的,有实效的','The government hasn\'t worked out the effectual measures to combat unemployment.','政府还没有找出对付失业的有效措施。','This is the only effectual way to secure our present and future happiness.','这是确保我们现在及以后都会幸福的唯一有效途径。'}

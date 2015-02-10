@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["corrugate"]={"corrugate","['kɒrʊgeɪt]","['kɔrə,get]","v.(使)起波浪形",'v.(使)起波浪形,起皱纹','His brow corrugated with the effort of thinking.','他皱著眉头用心地思考.','Now the immense ocean . . . sensed the change. Its surface rippled and corrugated where sweeping cloud shadows touched it','“现在这巨大的海洋…感觉到了这种变化。它的水面溅起水花，流云的影子所笼罩的地方起了皱褶”'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["oblivion"]={"oblivion","[ə'blɪvɪən]","[ ə'bliviən, ɔ- ]","n.遗忘",'n.遗忘,忘却','His work sank into oblivion after his death.','他死后，他的作品渐渐被淡忘了。','They drank themselves into oblivion.','他们用酒把自己灌得不省人事。'}

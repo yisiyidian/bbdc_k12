@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["disillusion"]={"disillusion","[,dɪsɪ'l(j)uːʒ(ə)n]","[,dɪsɪ'luʒn]","n.觉醒",'n.觉醒，幻灭|||vt.醒悟，使幻想破灭','||Disillusion|| voter want an alternative to the two main parties.','失望的选民需要一个党派以取代这两个大党。','She still believes in Santa Claus and it would be cruel to disillusion her.','她仍然相信有圣诞老人, 要是使她这一幻想破灭就於心不忍了.'}

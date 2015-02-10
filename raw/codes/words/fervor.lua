@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fervor"]={"fervor","['fɜːvə]","[ 'fə:və ]","n.热诚",'n.热诚,热心|||=fervour(英)','Her fervor moved all of us.','她的热心感动了我们全体。','She does everything with great fervor.','她做每件事都热情洋溢。'}

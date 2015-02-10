@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["match"]={"match","[mætʃ]","[mætʃ]","n.比赛",'n.比赛,火柴,对手,般配的人,配偶|||v.使...相配,与...竞争,相配','I\'m ready to match my strength against yours.','我已经准备好与你较量力气。','He thought he could beat anyone at tennis, but he\'s met his match in her.','他以为他打网球所向无敌，但遇到她却是旗鼓相当。'}

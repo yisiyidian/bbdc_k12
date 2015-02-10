@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["lung"]={"lung","[lʌŋ]","[lʌŋ]","n.肺",'n.肺,呼吸器官','Does smoking contribute to lung cancer?','吸烟会导致肺癌吗?','Is there a connection between smoking and lung cancer?','吸烟跟肺癌是否有关?'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["smallpox"]={"smallpox","['smɔːlpɒks]","['smɔl'pɑks]","n.[医]天花",'n.[医]天花','||Smallpox|| has finally been conquered.','天花终於遏制住了.','I\'m immune to smallpox as a result of vaccination.','我种过牛痘了, 所以对天花有免疫力.'}

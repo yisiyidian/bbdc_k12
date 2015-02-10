@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["born"]={"born","[bɔːn]","[bɔrn]","vt.bear的过去分词",'vt.bear的过去分词；支撑，支持；亲自携带，运输|||vi.结果，生产；和…有关|||adj.出生的，出身于…的；天生的，天赋的','Her socialist beliefs were born of a hatred of injustice.','她的社会主义信念来自她对社会上不公平现象的痛恨。','I\'ve never heard such nonsense in all my born days!','我一生中从未听到过这种胡言乱语。'}

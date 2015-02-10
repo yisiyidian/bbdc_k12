@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["operational"]={"operational","[ɒpə'reɪʃ(ə)n(ə)l]","['ɑpə'reʃənl]","adj.操作的",'adj.操作的,运作的','Is the machine operational yet?','这台机器可投入运转了吗？','an operational aircraft.','可用的飞机'}

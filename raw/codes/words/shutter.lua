@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["shutter"]={"shutter","['ʃʌtə]","['ʃʌtɚ]","n.快门",'n.百叶窗,遮门,快门|||v.装以遮门,以百叶窗遮闭','The house was empty and shuttered.','这所房子是空的, 窗板都关上了.','After managing the shop for thirty years she decided it was time to put up the shutters.','她经营这个商店已三十年了, 认为应该停业了.'}

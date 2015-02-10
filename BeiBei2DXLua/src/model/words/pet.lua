@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pet"]={"pet","[pet]","[pɛt]","n.宠物",'adj.宠爱的,珍爱的|||n.宠物,生气|||vt.宠爱,抚摸,溺爱|||vi.拥抱','The little girl cuddled her pet cat.','这个小女孩搂抱着她的宠物猫。','My daughter keeps a rabbit as pet.','我的女儿养了一只兔子当做宠物。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["predilection"]={"predilection","[,prɛdl'ɛkʃən]","[ ,pri:di'lekʃən ]","n.偏好",'n.偏好','I have a predilection for pink.','我偏爱粉色。','Charles has always had a predilection for red-haired women.','查尔斯一直偏爱红头发的女人。'}

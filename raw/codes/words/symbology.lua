@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["symbology"]={"symbology","[sɪm'bɒlədʒɪ]","[sɪm'bɑlədʒi]","n.象征学",'n.象征学,象征的使用','The study of symbology has been widely applied to many fields.','象征学研究在国外已经广泛应用到各个学科。','We have a symbology denoting Boolean variables, and their complements.','我们利用象征学来表示布尔变量以及它们的补充.'}

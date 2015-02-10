@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["squeamish"]={"squeamish","['skwiːmɪʃ]","['skwimɪʃ]","adj.恶心的",'adj.恶心的，吹毛求疵的','I\'m terribly squeamish. I can\'t bear gory films.','我很神经质。我不能忍受血腥恐怖片。','He is a squeamish guy who always denies others\' idea.','他很吹毛求疵，经常否定别人的想法。'}

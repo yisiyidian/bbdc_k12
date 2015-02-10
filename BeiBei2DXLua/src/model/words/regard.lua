@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["regard"]={"regard","[rɪ'gɑːd]","[rɪ'ɡɑrd]","vt.认为",'vt.认为；注视；涉及；尊敬|||vi.凝视；留意|||n.凝视；留意；尊敬；问候','I hold her in high regard.','我很尊敬她。','You have no regard of my feelings!','你不考虑我的感情。'}

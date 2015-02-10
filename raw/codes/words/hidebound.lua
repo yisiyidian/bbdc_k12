@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["hidebound"]={"hidebound","['haɪdbaʊnd]","[ 'haidbaund ]","adj.墨守成规的",'adj.墨守成规的,（动物）皮包骨的，(树木)紧皮的','The men are hidebound and reactionary.','那些人既顽固又反动。','The economy was hidebound by public spending and private monopolies.','该经济体由于公共开支和私有垄断而变得僵化。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["likely"]={"likely","['laɪklɪ]","['laɪkli]","adj.可能的",'adj.可能的,合适的,可信的,有前途的,有吸引力的|||adv.很可能','I\'ve heard whispers that the firm is likely to go bankrupt.','我听到传闻说公司很可能要破产.','The proposed tax changes are likely to prove a banana skin for the Government.','建议中的税务变动很可能给政府带来无穷後患。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["manacle"]={"manacle","['mænək(ə)l]","[ 'mænəkl ]","n.手铐(束缚)",'n.手铐(束缚)|||vt上手铐(束缚)','his hands were manacled behind his back.','他的双手被铐在了身后。','The rules you set now manacle you in turn.','你作茧自缚。'}

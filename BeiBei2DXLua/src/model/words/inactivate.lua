@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inactivate"]={"inactivate","[ɪn'æktɪveɪt]","[ɪn'æktə,vet]","vt.使不活动",'vt.使不活动，使不活跃','Household bleach does not inactivate the virus.','家用漂白剂并不消除病毒的活性。','They quickly inactivate vegetative forms, but their sporicidal action is slow','它能迅速灭活繁殖体，但其杀孢子能力低。'}

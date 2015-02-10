@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["raucous"]={"raucous","['rɔːkəs]","['rɔkəs]","adj.沙声的",'adj.沙声的,粗声的,刺耳的','The sound of that little girl is raucous.','那小女孩的声音很刺耳。','I heard sounds of raucous laughter upstairs.','我听见楼上传来沙哑的笑声。'}

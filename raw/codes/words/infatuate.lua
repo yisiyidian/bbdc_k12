@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["infatuate"]={"infatuate","[ɪn'fætʃʊeɪt; -tjʊ-]","[ɪn'fætjʊɪt]","v.vt.使...冲昏头脑",'v.vt.使...冲昏头脑,使...糊涂;adj.被冲昏头脑的','She is infatuated with video games','be inspired with an intense passion or admiration for sth./ sb','He\'s infatuated with his own importance.','他自以为了不起而飘飘然。'}

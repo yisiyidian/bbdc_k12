@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trek"]={"trek","[trek]","[trɛk]","vt.艰苦跋涉(行军)",'vt.艰苦跋涉(行军)|||n.艰苦跋涉','It took the climber a month to trek to the foot of the mountain before they even started their climb.','登山者还未开始爬山，光是艰苦地跋涉到山脚下就花了1个月时间。','He is on a trek through the South Gobi desert.','他正徒步穿越南戈壁沙漠。'}

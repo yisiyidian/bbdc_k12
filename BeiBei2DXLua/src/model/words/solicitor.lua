@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["solicitor"]={"solicitor","[sə'lɪsɪtə]","[sə'lɪsɪtɚ]","n.律师",'n.律师','Have you been onto the solicitor yet?','你跟律师谈过了吗?','She practised as a solicitor for many years.','她当了许多年事务律师.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["displace"]={"displace","[dɪs'pleɪs]","[dɪs'ples]","v.移置",'v.移置,替换','Weeds tend to displace other plants.','杂草越来越多，有取代其他植物之势。','Moderates have displaced the extremists on the committee.','在委员会中，稳健派人士取代了激进派人士。'}

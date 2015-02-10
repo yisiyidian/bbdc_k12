@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["ah"]={"ah","[ɑː]","[ɑ]","int.啊",'int.啊,哈|||=aah','||Ah|| Q looks idiotic before Master Zhao.','阿Q在赵太爷面前显得呆头呆脑。','||Ah||! This is where I put away this shirt.','啊, 原来这衬衫是收在这地方。'}

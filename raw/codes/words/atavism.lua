@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["atavism"]={"atavism","['ætəvɪzəm]","['ætə,vɪzəm]","n.隔代遗传",'n.隔代遗传，返租现象，返祖体','They are explainable as a species of mental atavism.','这些都可以解释为一种精神的返祖现象。','have even read in a book of criminology that the tramp is an atavism, a throw-back to the nomadic stage of humanity.','我甚至在一本关于犯罪学的书上读到过流浪是种隔代遗传现象，是向人类之游牧阶段的回归。'}

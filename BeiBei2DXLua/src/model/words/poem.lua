@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["poem"]={"poem","['pəʊɪm]","['poəm]","n.诗",'n.诗','He wrote a poem praising her loveliness.','他写了一首诗赞扬她的美丽。','There are four verses in each poem.','每首诗有四个诗节。'}

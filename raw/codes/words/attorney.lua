@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["attorney"]={"attorney","[ə'tɜːnɪ]","[ə'tɝni]","n.(辩护)律师",'n.(辩护)律师','The attorney got her client off with a slap on the wrist.','这位律师使她的委托人仅受到轻罚就获释了。','The defense attorney phrased his summation at last.','最后，辩护律师作了辩论总结。'}

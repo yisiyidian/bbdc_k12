@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["remonstrance"]={"remonstrance","[rɪ'mɒnstr(ə)ns]","[rɪ'mɑnstrəns]","n.抗议",'n.抗议,抱怨','Sometimes she essayed a remonstrance in advance, but never at the time, nor afterwards.','她有时会试着事先劝劝，但从不会在事情发生的时候或者事后多话。','To her amazement, he spoke not a word of remonstrance.','让她吃惊的是，汉克一句抱怨都没有。'}

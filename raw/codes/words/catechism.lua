@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["catechism"]={"catechism","['kætɪkɪz(ə)m]","['kætəkɪzəm]","n.问答形式的教授法",'n.问答形式的教授法，教义问答手册，严格盘问','The catechism is used for religious instruction.','教义问答法常用于宗教教学。','The duty of a godmother is to make you learn your catechism.','教母的职责是帮助你学好教义问答。'}

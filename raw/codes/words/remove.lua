@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["remove"]={"remove","[rɪ'muːv]","[rɪ'muv]","vt.除去",'n.间距,移动|||vt.除去,开除,移动,取下,拿走|||vi.迁徙,离开,搬迁','When the meat is boiling, remove the scum.','当肉煮沸时，把浮在上面的浮渣撇掉。','How can we remove the husk of the grains?','我们怎样去掉谷物的外皮？'}

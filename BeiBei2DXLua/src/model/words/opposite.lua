@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["opposite"]={"opposite","['ɒpəzɪt; -sɪt]","['ɑpəzət]","adj.相对的",'adj.相对的,相反的,对面的|||n.对立物，对立者，对手|||adv.在对面地，处于相反位置地|||prep.在...对面','I sat opposite to him during the meal.','吃饭的时候我坐在他的对面。','Put the wardrobe in the corner opposite the door.','把衣柜放在对著门的那个角落里。'}

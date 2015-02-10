@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hindrance"]={"hindrance","['hɪndr(ə)ns]","['hɪndrəns]","n.妨害",'n.妨害,障碍,阻碍物','Please allow the bearer of this passport to pass freely without let or hindrance.','请予护照持有人顺利通行.','The servants were more of a hindrance than a help.','这些佣人帮不上忙，反而很累赘。'}

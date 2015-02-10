@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["one"]={"one","[wʌn]","[wʌn]","n.一",'n.一,第一个,一美元纸币|||adj.单一的,某一个,同一种类的,同意的,唯一的|||pron.某人,任何人','||One|| should do his best for the cause of world peace.','一个人应该为世界和平事业尽最大努力。','If only problems would come one at a time!','要是问题一次只发生一个该多好！'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["regale"]={"regale","[rɪ'geɪl]","[rɪ'ɡel]","vt.盛情招待",'vt.盛情招待|||n.款待','He was constantly regaled with tales of woe.','别人老是给他讲些倒霉事儿来逗他开心。','She regaled the guests with the best dishes she could offer.','她以她最拿手的菜款待客人。'}

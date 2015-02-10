@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["episode"]={"episode","['epɪsəʊd]","['ɛpɪsod]","n.插曲",'n.插曲,插话,(作品的一段)情节,有趣的事件','The first episode goes out next Friday evening at 8.00 pm.','下星期五晚上8时播出第一集.','Relating to or resembling an episode.','插曲似的关于或类似插曲的'}

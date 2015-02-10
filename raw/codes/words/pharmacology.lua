@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pharmacology"]={"pharmacology","[,fɑːmə'kɒlədʒɪ]","[,fɑrmə'kɑlədʒədʒi]","n.药理学",'n.药理学,药物学','The branch of pharmacology that deals with drugs in their crude or natural state.','生药学药理学的一个分支，研究处于天然或原始状态的药物','pharmacology is hard to the most students','药理学对大多数学生来说很难'}

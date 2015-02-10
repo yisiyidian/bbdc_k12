@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["pass"]={"pass","[pɑːs]","[pæs]","vt.&vi.通过",'vt.&vi.走过；通过；批准；度过|||vt.传球；及格；发生；不要|||n.通道；通行证；关口；越过','The procession passed slowly down the hill.','队伍从山上慢慢向山下移动。','||Pass| the salt, please.','请递给我盐瓶。'}

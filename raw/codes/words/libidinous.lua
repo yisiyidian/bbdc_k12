@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["libidinous"]={"libidinous","[lɪ'bɪdɪnəs]","[lɪ'bɪdɪnəs]","adj.好色的",'adj.好色的,淫荡的,性欲的','A libidinous man can do nothing.','好色的男人一事无成。','Powell let his libidinous imagination run away with him.','鲍威尔淫心顿起，浮想联翩。'}

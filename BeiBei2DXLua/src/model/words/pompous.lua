@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pompous"]={"pompous","['pɒmpəs]","['pɑmpəs]","adj.傲慢的",'adj.傲慢的,自大的,浮华的','He\'s a real gentleman, if a little pompous at times.','他可是个正人君子, 虽然有时略显得傲慢了些.','He spoke with pompous exactitude.','他以自视绝对正确的口吻说话.'}

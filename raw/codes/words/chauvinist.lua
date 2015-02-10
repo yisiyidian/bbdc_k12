@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["chauvinist"]={"chauvinist","['ʃəʊv(ɪ)nɪst]","[ 'ʃəuvinist ]","n.沙文主义者",'n.沙文主义者，盲目的爱国者','The male chauvinist attitude of some people in the company could get you down.','公司里一些人的大男子主义作风会让人不快。','She accused him of being an unreconstructed male chauvinist.','她指责他是一个顽固不化的大男子主义者。'}

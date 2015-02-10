@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["online"]={"online","[ɒn'laɪn]","['ɑn'laɪn]","n.在线",'n.联机,在线','It is controversial whether sow false news on the net on april fool\'s day be an online prank.','在愚人节时用网路散布不实消息是否算是网路恶作剧引起了争论。','Refer to netmeeting online help for using other netmeeting functionality.','使用NetMeeting其它功能, 请参阅NetMeeting联机帮助。'}

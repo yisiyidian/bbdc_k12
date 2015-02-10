@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["profit"]={"profit","['prɒfɪt]","['prɑfɪt]","n.利润",'n.利润,盈利比率，利益|||vi.利用，获利|||vt.有益于','It will profit you nothing to do that.','你做那件事没有什么好处。','You can profit by my mistakes and avoid them yourself.','你可以从我的错误中得到教训，避免犯同样错误。'}

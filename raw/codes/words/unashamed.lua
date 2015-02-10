@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["unashamed"]={"unashamed","[ʌnə'ʃeɪmd]","[,ʌnə'ʃemd]","adj.不羞耻的",'adj.不羞耻的,不知耻的,厚脸无耻的','They kissed each other with unashamed delight.','他们愉快地相吻, 并不觉得难为情.','lived in unashamed luxury.','毫不顾忌地过着奢华的生活'}

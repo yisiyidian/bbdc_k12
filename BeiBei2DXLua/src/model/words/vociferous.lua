@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vociferous"]={"vociferous","[və(ʊ)'sɪf(ə)rəs]","[vo'sɪfərəs]","adj.大声疾呼的",'adj.大声疾呼的；喧嚣的；大叫大嚷的','Being vociferous in the library is a rude behavior.','在图书馆里大声喧哗是十分粗鲁的行为。','The bill had to be withdrawn in response to vociferous and widespread objection.','在一片鼎沸的反对声中，这个法案只得收了回去。'}

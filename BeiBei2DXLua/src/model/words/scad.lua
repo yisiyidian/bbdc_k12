@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scad"]={"scad","[skæd]","[skæd]","n.[鱼]竹荚鱼",'n.[鱼]竹荚鱼,&lt;美口&gt;许多','They buy a lot of frozen round scad.','他们买了很多冷冻的圆形竹荚鱼。','Look ,scad  in the stadition','瞧 车站里好多人'}

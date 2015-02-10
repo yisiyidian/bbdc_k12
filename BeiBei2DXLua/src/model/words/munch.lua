@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["munch"]={"munch","[mʌn(t)ʃ]","[mʌntʃ]","v.大声咀嚼",'v.大声咀嚼|||vt.大声嚼','||Munching|| the apple as he was, he had an eye for all her movements.','他虽然啃着苹果，但却很留神地监视着她的每一个动作。','She is munching at an apple.','她正用力咀嚼苹果。'}

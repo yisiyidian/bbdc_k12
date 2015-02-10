@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["frank"]={"frank","[fræŋk]","[fræŋk]","adj.坦白的",'adj.坦白的,直率的,无误的|||vt.免费邮寄,使自由出入|||n.免费邮寄','A frank discussion can help to clear the air.','坦率的谈论有助於消除疑虑.','People at the party were embarrassed when ||Frank|| got drunk and made an exhibition of himself.','弗兰克喝醉了，出尽洋相，使参加聚会的人很难为情。'}

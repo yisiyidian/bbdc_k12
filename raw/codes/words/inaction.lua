@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inaction"]={"inaction","[ɪn'ækʃ(ə)n]","[ɪn'ækʃən]","n.不活动",'n.不活动,无为,怠惰','A pretext for inaction; an excuse.','搪塞怠工的借口; 借口','The opposition speaker made a lively speech, lacing into the government for its recent inaction.','反对党的演讲者作了一次生动的演讲, 抨击了政府最近的无所作为。'}

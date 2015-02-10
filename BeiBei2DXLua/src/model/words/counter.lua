@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["counter"]={"counter","['kaʊntə]","['kaʊntɚ]","n.计算器",'n.计算器,计算者,柜台|||[计算机]计数器|||adj.相反的|||adv.与…相反地|||vt.反对,反击|||vi.反对,反击','Shoppers got into a scrum round the bargain counter.','顾客在廉价品柜台周围你争我夺.','He placed the money on the counter.','他把钱放在柜台上.'}

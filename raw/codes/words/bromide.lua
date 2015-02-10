@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["bromide"]={"bromide","['brəʊmaɪd]","['bromaɪd]","n.[化]溴化物",'n.[化]溴化物|||n.陈词滥调|||n.令人讨厌的人，平庸的人','The meeting produced the usual bromides about macroeconomic policy, third-world debt and the environment.','会议上提出的还是那些老掉了牙的话题：宏观经济政策、第三世界债务和环境问题。','...a dose of bromide.','...一服溴化物镇静剂。'}

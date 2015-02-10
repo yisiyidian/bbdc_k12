@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cohesion"]={"cohesion","[kə(ʊ)'hiːʒ(ə)n]","[ko'hiʒən]","n.凝聚力",'n.凝聚力,团结','The most important thing is more cohesion within the party to win the next general election.','要想赢得下届大选的胜利，最重要的是我们党内要更加团结。','||Cohesion|| can not be ignored!','凝聚力不可忽视。'}

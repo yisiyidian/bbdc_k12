@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["inward"]={"inward","['ɪnwəd]","['ɪnwɚd]","adj.内心的",'adj.内心的,里面的向内的，亲密的|||adv.向内|||n.内部，内在','an inward flow.','向内的水流','The coordinated turning of the eyes inward to focus on an object at close range.','会聚眼睛向内的协调转动，从而聚焦在近处的某物体上'}

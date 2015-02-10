@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["greeting"]={"greeting","['griːtɪŋ]","['ɡritɪŋ]","n.问候",'n.问候,打招呼','He gave us a cheery greeting.','他愉快地跟我们打招呼。','How are you? is a conventional greeting.','“你好”是一个习惯问候语。'}

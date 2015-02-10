@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dissonance"]={"dissonance","['dɪs(ə)nəns]","['dɪsənəns]","n.不一致",'n.不一致,不和谐|||[音]不协和音','||Dissonance|| among the three partners doomed the project.','三个股东间的不调和注定了计划会失败。','Modern compositions use dissonance to create a mood of anticipation or anxiousness.','现代的乐曲利用不和谐音，来创造期待或渴望的情境。'}

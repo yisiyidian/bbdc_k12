@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crux"]={"crux","[krʌks]","[krʌks]","n.十字形",'n.十字形(坩埚,关键)','Therein lies the crux of the matter.','问题的关键就在那里。','Now we come to the crux of the problem.','现在我们来谈问题的症结所在。'}

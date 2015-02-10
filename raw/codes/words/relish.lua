@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["relish"]={"relish","['relɪʃ]","['rɛlɪʃ]","vi.有滋味",'n.滋味,享受,爱好,调味品|||vt.加调味料,享受,品味|||vi.有滋味','I tasted the fish my mother cooked with relish.','我细细品味了我妈妈做的鱼。','He didn\'t relish the prospect of having to explain his behavior.','他不喜欢对他自己的所作所为作出解释。'}

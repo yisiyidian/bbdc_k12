@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["magician"]={"magician","[mə'dʒɪʃ(ə)n]","[mə'dʒɪʃən]","n.魔术师",'n.魔术师，变戏法的人，术士','The magician is waving a magic wand.','魔术师在挥舞魔杖。','The magician thrilled his audience with his feats of magic.','魔术师用他的魔术技艺使观众们激动。'}

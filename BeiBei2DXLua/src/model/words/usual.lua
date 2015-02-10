@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["usual"]={"usual","['juːʒʊəl]","['juʒuəl]","adj.通常的",'adj.通常的','The vintage was later than usual.','那次葡萄采收期比平常年份晚。','It\'s an usual rivalry between brother and sister.','那是兄妹之间常见的钩心斗角。'}

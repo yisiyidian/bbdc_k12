@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["surcharge"]={"surcharge","['sɜːtʃɑːdʒ]","['sɝtʃɑrdʒ]","n.装载过多",'n.装载过多,额外费','The government introduced a 15% surcharge on imports...','政府对进口产品加收 15 %的附加费。','The prices of overseas holidays are subject to surcharges.','海外度假游的价格受各种附加费的影响。'}

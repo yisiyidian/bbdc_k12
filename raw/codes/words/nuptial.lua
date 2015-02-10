@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["nuptial"]={"nuptial","['nʌpʃ(ə)l]","['nʌpʃl]","n.婚礼",'n.婚礼|||adj.婚姻的,婚礼的，交配季节的','Their nuptial day hasn\'t been determined.','他们的结婚日还没有定。','Their nuptials were performed by the local priest.','他们的婚礼由当地牧师主持。'}

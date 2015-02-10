@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["reward"]={"reward","[rɪ'wɔːd]","[rɪ'wɔrd]","vt.奖赏",'n.报酬,报答,赏金|||vt.给...报酬,奖赏','They promised to make it worth her while (ie pay or reward her) if she would take part.','他们许诺说她要是参加就一定给她报酬.','By rights, half the reward should be mine.','按理说, 有一半奖赏应该是我的.'}

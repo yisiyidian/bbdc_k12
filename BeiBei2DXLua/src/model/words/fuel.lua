@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fuel"]={"fuel","[fjʊəl]","['fjuəl]","n.燃料",'n.燃料,木炭|||vt.供以燃料|||vi.加燃料','A defect in the fuel lines prevented the missile from blasting off.','燃料管路上的一个缺陷妨碍了导弹的发射。','One of the main disadvantages of this system is that it uses very large amounts of fuel.','该系统的主要弱点之一是消耗大量燃料。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["entertain"]={"entertain","[entə'teɪn]","[,ɛntɚ'ten]","vt.&vi.娱乐",'vt.&vi.娱乐,招待,怀抱','He cut off a bunch of grapes to entertain us.','他剪下一串葡萄招待我们。','The child entertained himself with his building blocks.','孩子在搭积木玩。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["assert"]={"assert","[ə'sɜːt]","[ə'sɝt]","vt.主张",'vt.主张,声明,断言','We encouraged him to assert his view of the matter.','我们鼓励他坚持自己对此事的看法。','I have endeavored to assert nothing but what I had good authority for.','除了我确有把握的事情外，我不会断然地讲任何事情。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["button"]={"button","['bʌt(ə)n]","['bʌtn]","n.钮扣",'n.钮扣,徽章,像纽扣的东西,未成熟的蘑菇,按钮|||vt.用纽扣装饰,钉纽扣,闭嘴|||vi.扣上','Will you stitch a button on this shirt?','请你在这件衬衫上钉一颗钮扣好吗？','You may push this button to call the elevator.','你可以按这个按钮叫电梯。'}

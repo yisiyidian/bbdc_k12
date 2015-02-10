@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cowhand"]={"cowhand","['koʊ,hænd]","['kaʊhænd]","n.[美](牧场的)牧牛工",'n.[美](牧场的)牧牛工','Do you know the legend of the ||Cowhand|| and Weaver Maid?','你知道牛郎和织女的传说吗？','One billowy river appeared in front of the ||Cowhand||.','一条惊涛骇浪的河在牧牛工前面出现。'}

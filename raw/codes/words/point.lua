@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["point"]={"point","[pɒɪnt]","[pɔɪnt]","n.点",'n.点,要点,尖端，细节，目标|||vt.&vi.指出,瞄准','At one point I thought she was going to refuse, but in the end she agreed.','当时我以为她要拒绝，但最後她却同意了。','I don\'t see the point of her last remark.','我不明白她最后那句话的意思。'}

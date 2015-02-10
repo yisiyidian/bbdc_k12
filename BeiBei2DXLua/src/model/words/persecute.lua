@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["persecute"]={"persecute","['pɜːsɪkjuːt]","['pɝsɪkjut]","vt.迫害",'vt.迫害','The two parties disprove the theory of the other, but unite in persecute the dissenter.','尽管这两党各自不同意它党的理论，在迫害持异议者这一点上却是一致的。','They came to America after being persecuted for their religious beliefs.','他们是在他们因宗教信仰而受到迫害之后来到美洲的。'}

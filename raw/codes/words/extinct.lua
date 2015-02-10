@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["extinct"]={"extinct","[ɪk'stɪŋkt; ek-]","[ɪk'stɪŋkt]","adj.灭绝的",'adj.灭绝的,熄灭的|||n.消灭,熄灭','A genus of extinct, large, flightless birds native to Madagascar.','象鸟，隆鸟一种不会飞的巨鸟，产于马达加斯加岛，现已绝种','an extinct volcano','一座死火山'}

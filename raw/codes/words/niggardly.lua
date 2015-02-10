@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["niggardly"]={"niggardly","['nɪgədlɪ]","['nɪɡɚdli]","adj.吝啬的",'adj.吝啬的,小气的|||adv.吝啬地，小气地','their share is a niggardly 2.7 per cent.','他们的股份只有区区2.7％。','It\'s deadly mistake for you to behave niggardly when hanging out with a girl.','跟女孩约会时表现吝啬是你的致命错误。'}

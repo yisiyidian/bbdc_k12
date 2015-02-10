@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["jerk"]={"jerk","[dʒɜːk]","[dʒɝk]","n.性情古怪的人",'n.(口语)笨蛋,性情古怪的人,急拉,肌肉抽搐|||vt.&vi.痉挛,急拉,急推,急动','He jerked the string and the puppet jumped.','他猛地一拉绳子，木偶就跳了起来。','The bus jerked to a stop.','公共汽车猛然刹车停住了。'}

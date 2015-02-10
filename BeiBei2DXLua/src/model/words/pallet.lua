@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pallet"]={"pallet","['pælɪt]","['pælət]","n.简陋的小床",'n.简陋的小床|||n.托盘','The snow white was sleeping  in the pallet.','白雪公主在小床上睡觉。','It chanced that an old man sleeping in a hovel on a pallet of straw was, awakened by these cries.','恰好有位老人正在一个窝棚里的茅草床上睡觉，他被这些喊声惊醒了。'}

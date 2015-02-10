@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["behest"]={"behest","[bɪ'hest]","[bɪ'hɛst]","n.命令",'n.命令，紧急要求','I called the office at the behest of my secretary.','在秘书的催促下，我给办公室打了电话','I  called the office at the behest of my secretary.','在秘书的催促下，我给办公室打了电话。'}

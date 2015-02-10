@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dwelling"]={"dwelling","['dwelɪŋ]","['dwɛlɪŋ]","n.住处",'n.住处；寓所|||v.居住（dwell的现在分词）','Her dwelling place is far from the city proper.','她的住处离市内很远。','It\'s a new dwelling area.','这是新住宅区'}

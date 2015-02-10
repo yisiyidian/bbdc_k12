@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["kelp"]={"kelp","[kelp]","[kɛlp]","n.一种大海草",'n.一种大海草,海草灰','kelp is kind of seaweed。','海草灰是一种海带。','Have more kelp, it will keep you healthy.','多吃点海藻吧，海藻能使你保持健康。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["heading"]={"heading","['hedɪŋ]","['hɛdɪŋ]","n.标题",'n.标题，题目，航向|||动词head的现在分词','The boat was heading for some rocks.','那船正驶向礁石.','We are heading home.','我们正向家的方向走去。'}

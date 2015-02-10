@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["dross"]={"dross","[drɒs]","[drɔs]","n.浮渣",'n.浮渣,糟粕,渣滓','He was wide-awake and his mind worked clearly, purged of all dross.','他毫无睡意，脑子思维清楚，没有任何杂念。','I go through phases where everything I write is just dross.','有几段时间我写什么都是垃圾。'}

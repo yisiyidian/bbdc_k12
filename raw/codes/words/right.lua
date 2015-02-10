@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["right"]={"right","[raɪt]","[raɪt]","adj.正确的",'adj.正确的,正直的,合适的,垂直的,右面的，正常的,正面的|||n.权利,右，正义，实况|||adv.正好,恰当,径直地,正确地,立即,非常,向右边|||vt.纠正,扶直,公正对待,伸冤|||vi.复正','It took me ages to put things to rights after the workmen had finished.','工人干完活儿後，我用了很长时间才收拾好。','the right answer.','正确的回答'}

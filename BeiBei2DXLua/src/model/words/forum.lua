@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forum"]={"forum","['fɔːrəm]","['fɔrəm]","n.论坛",'n.论坛,讨论会','One who presides over a meeting, forum, or debate.','主持人主持会议，论坛或讨论会的人','The letters page of this newspaper is a forum for public argument.','这份报纸的读者来信栏是公众意见的论坛。'}

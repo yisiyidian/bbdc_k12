@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infamous"]={"infamous","['ɪnfəməs]","['ɪnfəməs]","adj.声名狼藉的",'adj.无耻的,不名誉的,声名狼藉的','Nobody likes him because he is an infamous liar.','没有人喜欢他，因为他是个声名狼藉的骗子。','I was shocked by her infamous behaviour.','她的无耻行径令我震惊。'}

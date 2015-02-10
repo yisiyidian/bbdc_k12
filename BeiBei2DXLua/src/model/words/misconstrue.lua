@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["misconstrue"]={"misconstrue","[mɪskən'struː]","[,mɪskən'stru]","vt.误解",'vt.误解,曲解','You have completely misconstrued my words.','你完全误解了我的话。','He misconstrued her hint then missed a potential love.','他误解了她的暗示，错过了一段可能的姻缘。'}

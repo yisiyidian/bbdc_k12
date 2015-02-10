@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["logical"]={"logical","['lɒdʒɪk(ə)l]","['lɑdʒɪkl]","adj.符合逻辑的",'adj.符合逻辑的,逻辑上的,有推理能力的','It is logical that the book is expensive.','书贵是很自然的事.','My argument follows the rules of logical induction.','我是遵循逻辑归纳的法则进行论证的.'}

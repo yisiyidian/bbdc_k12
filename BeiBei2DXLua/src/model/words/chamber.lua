@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chamber"]={"chamber","['tʃeɪmbə]","[ˈtʃeɪmbər]","n.房间",'n.房间,会所,室|||vt.装入室中(枪膛)|||adj.室内演奏的','The heart has four chambers.','心脏有两房两室。','The president will speech in the chamber','总统将会在这个大厅讲话'}

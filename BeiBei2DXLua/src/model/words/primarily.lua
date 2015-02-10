@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["primarily"]={"primarily","['praɪm(ə)rɪlɪ; praɪ'mer-]","[praɪ'mɛrəli]","adv.首先",'adv.首先,主要地','Most linguists would say they were concerned primarily with the structure of languages.','大多数语言学家都会说，他们主要研究各种语言的结构。','This building was primarily intended to be a dinning hall.','这座建筑原来是打算用作餐厅的。'}

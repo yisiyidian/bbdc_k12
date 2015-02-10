@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dour"]={"dour","['dʊə; 'daʊə]","['daʊr]","adj.不爱讲话的",'adj.不爱讲话的,沉沉的,严厉的','No wonder he looked so dour.','难怪他看上去如此严厉。','The city, drab and dour by day, is transformed at night.','这座城市白天死气沉沉、单调乏味，晚上就完全变了样。'}

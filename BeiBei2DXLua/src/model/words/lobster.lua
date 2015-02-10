@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lobster"]={"lobster","['lɒbstə]","['lɑbstɚ]","n.龙虾",'n.龙虾','The lobster is a shellfish.','龙虾是水生贝壳动物。','I like lobster but it doesn\'t like me.','我喜欢吃龙虾, 但吃了身体不适.'}

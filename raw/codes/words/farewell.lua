@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["farewell"]={"farewell","[feə'wel]","[,fɛr'wɛl]","n.告别",'adj.告别的|||int.再会,别了|||n.告别','I bade farewell to my parents.','我告别了双亲。','She had a fervent farewell speech.','她发表了热情的告别演说。'}

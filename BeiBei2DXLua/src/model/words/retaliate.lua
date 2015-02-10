@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["retaliate"]={"retaliate","[rɪ'tælɪeɪt]","[rɪ'tælɪ'et]","v.报复",'v.报复,报仇,回敬','The militia responded by saying it would retaliate against any attacks.','民兵组织回复说他们会对任何进攻予以反击。','If you are rude to me, I will retaliate with equal rudeness.','如果你对我无礼，那我会用同样的方式回敬你。'}

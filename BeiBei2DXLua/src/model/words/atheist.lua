@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["atheist"]={"atheist","['eɪθɪɪst]","['eθɪɪst]","n.无神论者",'n.无神论者','He\'s a declared atheist.','他自称是无神论者.','I believe that there is no God, so I am an atheist.','我不信仰上帝，所以我是一个无神论者。'}

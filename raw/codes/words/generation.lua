@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["generation"]={"generation","[dʒenə'reɪʃ(ə)n]","['dʒɛnə'reʃən]","n.代",'n.代,一代','One generation blows bubbles, and the next breaks them.','前一代人制造出来的空洞理论，下一代人把它们打破。','Their visionary ideas are often misunderstood by their own generation.','他们的理想往往招致同时代人的误解。'}

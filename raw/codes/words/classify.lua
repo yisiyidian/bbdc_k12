@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["classify"]={"classify","['klæsɪfaɪ]","['klæsɪfaɪ]","v.分类",'v.分类,归类,分等','Would you classify her novels as serious literature or other?','你认为她的小说属于文学类，还是其它类?','The books in the library are ||classified|| by subject.','图书馆的书是按科目分类的。'}

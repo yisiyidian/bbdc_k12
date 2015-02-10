@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["gaiety"]={"gaiety","['geɪətɪ]","[ 'ɡeiəti ]","n.愉快",'n.愉快,快活,华丽','Her artificial gaiety disguised an inner sadness.','她以矫揉造作的快乐掩饰著内心的悲痛.','She shows a spontaneous gaiety of manner.','她露出天真愉快的神态。'}

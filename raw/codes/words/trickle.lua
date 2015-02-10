@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["trickle"]={"trickle","['trɪk(ə)l]","['trɪkl]","vi.滴流",'vi.滴流,慢慢移动|||n.细流，徐徐地流','The stream had thinned down to a mere trickle.','小河越来越窄，最后变成了涓涓细流。','Blood trickled from the wound.','血从伤口一滴一滴流出来。'}

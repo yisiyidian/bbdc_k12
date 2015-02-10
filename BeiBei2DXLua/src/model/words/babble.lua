@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["babble"]={"babble","['bæb(ə)l]","['bæbl]","vi.呀呀学语",'vi.呀呀学语,喋喋不休|||vi.潺潺作声|||n.含糊不清的声音','No one could understand the little baby\'s babble.','没人能听懂这个小婴孩的话。','The baby babbled for hours.','那婴孩呀呀学语了好几个小时。'}

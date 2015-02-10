@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["fence"]={"fence","[fens]","[fɛns]","n.围墙",'n.围墙,剑术|||v.用篱笆围住,练习剑术,防护|||[计算机]栅栏','One end of the garden was fenced off for chickens.','花园的一端已用篱笆隔开来养鸡。','She felt fenced in by domestic routine.','她觉得自己完全被家务事束缚住了。'}

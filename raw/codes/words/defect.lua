@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["defect"]={"defect","['diːfekt; dɪ'fekt]","[‘dɪfɛkt]","n.缺点",'n.缺点|||vi.背叛','The new car had to be withdrawn from the market because of a mechanical defect.','那种新汽车因有机械缺陷只好撤出市场.','They detected no defect in the product.','他们没发现产品有任何问题。'}

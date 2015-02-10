@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abash"]={"abash","[ə'bæʃ]","[ə'bæʃ]","v.使...羞愧",'v.使...羞愧,使困窘','His boss\'s criticism left him feeling rather abashed.','老板批评了他，他感到有些难为情。','Nothing can abash him.','没有什么事能让他脸红。'}

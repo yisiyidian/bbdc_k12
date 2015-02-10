@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enthrall"]={"enthrall","[ɪn'θrɔːl]","[ in'θrɔ:l ]","v.迷住",'v.迷住，迷惑,奴役','The children listened enthralled as the storyteller unfolded her tale.','讲故事的人一步步展开故事情节，孩子们都听得入迷了。','She kept her audience enthralled throughout her twenty-minute performance.','她的20 分钟演出使观众目不转睛。'}

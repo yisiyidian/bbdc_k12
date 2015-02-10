@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["description"]={"description","[dɪ'skrɪpʃ(ə)n]","[dɪ'skrɪpʃən]","n.描写",'n.描写,描述,说明书,作图|||n.类型','The West Lake was beautiful beyond description.','西湖美得难以描述。','The newspaper article gave a graphic description of the earthquake.','报纸文章生动地描述了地震的情况。'}

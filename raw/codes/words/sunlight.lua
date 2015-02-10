@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sunlight"]={"sunlight","['sʌnlaɪt]","['sʌnlaɪt]","n.日光",'n.日光,阳光','We can see the dust particles floating in the sunlight clearly.','我们可以很清楚地看到阳光下的灰尘颗粒。','The ground under the trees is chequered with sunlight and shade.','林中地上光影交错。'}

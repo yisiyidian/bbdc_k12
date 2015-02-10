@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reconstruction"]={"reconstruction","[riːkən'strʌkʃn]","[,rikən'strʌkʃən]","n.复兴",'n.复兴,改造,再建','After a few years of active reconstruction, many famous cities rose from the ashes of war.','几年的积极重建后，许多著名城市在战争废墟上重新矗立起来。','I have a plan for the reconstruction of the city centre.','我有一个重建城市中心的计划。'}

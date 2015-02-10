@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["echelon"]={"echelon","['eʃəlɒn; 'eɪʃ-]","['ɛʃəlɑn]","n.梯形",'n.梯形,梯阵,梯次编队|||v.排成梯形','a command echelon.','司令部','a job in the lower echelon of the corporation.','一份公司底层工作'}

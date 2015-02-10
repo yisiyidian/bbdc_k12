@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["masterpiece"]={"masterpiece","['mɑːstəpiːs]","['mæstəpis]","n.杰作",'n.杰作','The artistic zealot devoted his life to the completion of a great masterpiece.','这位艺术热心者奉献他一生来完成一幅伟大的作品。','The film was built up to be a masterpiece, but I found it very disappointing.','这部影片被吹捧为杰作, 可是我觉得令人失望.'}

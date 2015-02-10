@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["analytic"]={"analytic","[ænə'lɪtɪk]","[,ænə'lɪtɪk]","adj.分析的",'adj.分析的,分解的','She has a clear analytic mind.','她头脑清醒，善于分析。','New analytic methods can help to decrease this risk.','新的分析方法能帮助减少这种风险。'}

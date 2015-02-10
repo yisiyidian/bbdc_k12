@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["especially"]={"especially","[ɪ'speʃ(ə)lɪ; e-]","[ɪ'spɛʃəli]","adv.特别",'adv.特别,尤其','Travel is an edifying experience, especially for young people.','旅游可以使人增长见闻，尤其对年轻人。','The rising sun is especially beautiful to look at from this angle.','旭日从这个角度看起来特别美。'}

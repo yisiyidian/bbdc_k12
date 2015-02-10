@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carousal"]={"carousal","[kə'raʊzəl]","[kə'raʊzl]","n.喧闹的酒宴",'n.喧闹的酒宴','The carousal last for two hours.','喧闹的酒会持续了两个小时。','the children\'s carousal','孩子们的游乐场'}

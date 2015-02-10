@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["vast"]={"vast","[vɑːst]","[væst]","adj.广阔的",'adj.广阔的,巨大的|||n.浩瀚的太空','A vast crowd turned out to watch the match.','大群的观众到场观看比赛。','The vast champaign was covered with thick snow.','广袤的平原被厚厚的雪覆盖着。'}

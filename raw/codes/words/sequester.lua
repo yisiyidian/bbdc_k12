@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["sequester"]={"sequester","[sɪ'kwestə]","[sɪ'kwɛstɚ]","vt.使...隔绝",'vt.使...隔绝，隐退|||vt.扣押','The retired film star sequestered herself from the world.','这位退休的影星过着隐居的生活。','He was sequestered in his room.','他被隔离在他的房间里。'}

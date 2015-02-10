@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["projection"]={"projection","[prə'dʒekʃ(ə)n]","[prə'dʒɛkʃən]","n.发射",'n.发射，计划，突出部分','We make use of a mapping known as stereographic projection.','我们作一个称为球极平面射影的映射.','The simplest form of projection is a perspective projection.','最简单的投影形式是透视投影.'}

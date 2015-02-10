@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["insular"]={"insular","['ɪnsjʊlə]","['ɪnsəlɚ]","adj.岛的",'adj.岛的,岛民的,岛特有的','He is an exceedingly insular man, so deeply private as to seem inaccessible to the scrutiny of a novelist','“他是一个很孤僻的人，他如此孤僻，连小说家都似乎不能仔细地观察他”','They were an insular family.','他们一家人与世隔绝。'}

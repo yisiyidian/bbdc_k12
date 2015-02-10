@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ungainly"]={"ungainly","[ʌn'geɪnlɪ]","[ʌn'ɡenli]","adj.笨拙的",'adj.笨拙的,不雅的，难用的','I thought him terribly ungainly when he danced.','我觉得他跳舞时显得极其笨拙。','Paul swam in his ungainly way to the side of the pool.','保罗笨拙地游到池子边。'}

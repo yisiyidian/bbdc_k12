@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["specialize"]={"specialize","['spɛʃəlaɪz]","[ 'speʃəlaiz ]","vi.专门从事",'vi.专门从事；专攻；详细说明；特化|||vt.使专门化；使适应特殊情况；详细说明；列举','In collage I specialize in organic chemistry.','在学院里我主修有机化学。','I specialize in the sale of cotton piece goods. May I act as your agent?','我专营棉布买卖，我可作为你们的代理吗？'}

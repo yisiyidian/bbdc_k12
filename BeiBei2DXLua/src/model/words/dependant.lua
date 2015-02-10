@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dependant"]={"dependant","[dɪ'pend(ə)nt]","[ di'pendənt ]","n.受抚养者",'n.受抚养者，侍从，眷属|||=dependent','Please state your name, age, and the number of dependants you have.','请登记你的姓名、年龄以及供养的亲属的人数。','A sick dog is as much a dependant as a sick child.','“狗儿生病就像孩子生病一样需要人照顾. ”'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["culvert"]={"culvert","['kʌlvət]","['kʌlvɚt]","n.暗渠",'n.暗渠,阴沟,电线用地下电管路','They ran for the culvert and ducked in.','他们跑到涵洞跟前，钻了过去。','the man of this movie lived in culvert','住在下水道'}

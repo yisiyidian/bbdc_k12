@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["woollen"]={"woollen","['wʊlən]","['wʊlən]","adj.羊毛制的",'n.毛织品|||adj.羊毛制的','China\'s woollen textile industry is forging ahead to meet the needs of the country.','中国的毛纺工业正迅速发展以适应国家的需要。','The woollen cloth prickles (my skin).','穿毛料衣服（使我的皮肤）有被扎的感觉.'}

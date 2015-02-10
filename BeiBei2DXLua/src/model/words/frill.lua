@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["frill"]={"frill","[frɪl]","[frɪl]","n.衣饰上的绉边",'n.衣饰上的绉边,褶皱|||（复数）frills:虚饰，装腔作势|||vt.加褶边于','She puts on too many frills.','她太装腔作势了。','A piece of linen or frill of lace formerly worn by women around the neck and shoulders.','领布以前的妇女围在脖子或肩上的一块亚麻或加褶的花边'}

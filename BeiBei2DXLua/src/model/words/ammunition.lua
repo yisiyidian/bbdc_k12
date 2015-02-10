@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ammunition"]={"ammunition","[æmjʊ'nɪʃ(ə)n]","[,æmju'nɪʃən]","n.军火",'n.军火,弹药1)|||弹药|||(2)|||军火,军需品|||(3)|||[喻]攻击[防御]手段|||(4)|||投掷[射击]物','They went on firing until they had spent all their ammunition.','他们不停地射击, 耗尽了所有的弹药.','The soldiers were well equipped with weapons and ammunition.','士兵们装备好了武器和弹药.'}

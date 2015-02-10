@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["initiate"]={"initiate","[ɪ'nɪʃɪeɪt]","[ɪ'nɪʃɪet]","vt.开始",'n.创始人|||adj.新加入的|||vt.开始,创始,启蒙,介绍加入','I always dream ||initiating|| a new style life.','我一直梦想着开始一种新的生活方式。','They wanted to initiate a discussion on economics.','他们想启动一次经济学讨论。'}

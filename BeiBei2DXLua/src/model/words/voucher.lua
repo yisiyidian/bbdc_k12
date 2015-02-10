@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["voucher"]={"voucher","['vaʊtʃə]","['vaʊtʃɚ]","n.证人",'n.证人,保证人,代金券|||vt.证明,为...准备凭据,发给...凭证','A company that vouchers employees when the payroll cannot be met.','公司在发不出工资时给职员一定的凭证','properly vouchering each transaction.','妥善地为每一笔交易担保'}

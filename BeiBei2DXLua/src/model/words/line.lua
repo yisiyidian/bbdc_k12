@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["line"]={"line","[laɪn]","[laɪn]","n.行",'n.行,线,航线,场界,皱纹,家族|||vt.&vi.用做衬里,排成一行,顺...排列|||vi.排成一行,顺...排列,划线于','He\'s lined up a live band for the party.','他为晚会安排了一支充满活力的乐队。','She always takes a Marxist line.','她一贯奉行马克思主义路线。'}

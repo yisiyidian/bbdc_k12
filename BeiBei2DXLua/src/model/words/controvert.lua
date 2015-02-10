@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["controvert"]={"controvert","['kɒntrəvɜːt; ,kɒntrə'vɜːt]","[ 'kɔntrə,və:t ]","v.议论",'v.议论,辩驳,驳击','The statement of the last witness controvert the evidence of the first two.','最后一个证人的陈述反驳了前两人的证词。','I controvert his contention.','我反驳了他的论点。'}

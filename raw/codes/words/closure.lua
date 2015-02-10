@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["closure"]={"closure","['kləʊʒə]","['kloʒɚ]","n.闭合",'n.闭合(闭包,结束,截流,罩子,围墙)|||vt结束','The closure of the car factory had a knock-on effect on the tyre manufacturers.','汽车厂关闭後, 轮胎制造商受到间接的影响.','Police reported the closure of the road/that the road was closed.','警方宣布那条道路禁止通行.'}

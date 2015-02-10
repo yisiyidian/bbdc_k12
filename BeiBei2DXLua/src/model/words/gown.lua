@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gown"]={"gown","[gaʊn]","[ɡaʊn]","n.长袍",'n.长袍,长外衣','The girl is all the more beautiful in her wedding gown.','那个女孩穿着婚纱格外美丽动人。','She put on her silken gown before going to bed.','睡觉前，她穿上丝质的睡衣。'}

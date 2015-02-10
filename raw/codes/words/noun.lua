@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["noun"]={"noun","[naʊn]","[naʊn]","n.名词",'n.名词','Is this noun in the nominative?','这个名词是主格形式的吗?','In `the black cat\' the adjective `black\' modifies the noun `cat\'.','在｀黑猫＇这一词组中, 形容词｀黑＇修饰名词｀猫＇.'}

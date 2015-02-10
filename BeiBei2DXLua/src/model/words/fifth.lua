@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fifth"]={"fifth","[fɪfθ]","[fɪfθ]","num.第五",'num.第五|||n.五分之一','The team has chalked up its fifth win in a row.','这队一连五次取得胜利.','It was a real marvel that the baby was unhurt when he fell from the fifth floor.','那婴儿从五楼摔下来竟没受伤真是一个奇迹。'}

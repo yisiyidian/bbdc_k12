@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["terminal"]={"terminal","['tɜːmɪn(ə)l]","['tɝmɪnl]","n.终点",'n.终端机,终点,末端|||adj.终点的,按期的,致死的','That terminal is live.','那个接头有电.','A record message is played when the airport bus approaches the terminal.','当机场班车接近终点时，播放了注意事项录音。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["delta"]={"delta","['deltə]","['dɛltə]","n.(河流的)三角洲",'n.(河流的)三角洲','A river\'s delta usually has rich soil.','河流的三角洲通常有肥沃的土壤。','There are fertile fields in the Nile ||Delta||.','尼罗河三角洲土地肥沃。'}

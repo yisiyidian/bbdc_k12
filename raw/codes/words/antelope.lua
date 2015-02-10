@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["antelope"]={"antelope","['æntɪləʊp]","['æntɪlop]","n.羚羊",'n.羚羊，羚羊皮革','The adult male of some animals, such as the deer, antelope, or rabbit.','雄性动物成年的雄性动物，如雄鹿、公羊、猎兔等','He aimed, fired and brought down the antelope.','他瞄准羚羊射击, 把它打倒了.'}

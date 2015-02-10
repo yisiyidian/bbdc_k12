@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["frontier"]={"frontier","['frʌntɪə; frʌn'tɪə]","[frʌn'tɪr]","n.边界",'n.边界,边境，尖端，边缘','The frontier ranges from the northern hills to the southern coast.','边界从北部山地一直延伸到南部海岸.','Sweden has frontiers with Norway and Finland.','瑞典与挪威和芬兰接壤。'}

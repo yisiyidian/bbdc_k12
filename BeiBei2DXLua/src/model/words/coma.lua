@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coma"]={"coma","['kəʊmə]","['komə]","n.昏迷",'n.昏迷','After a long coma the sick man slowly came back.','昏睡了好久以后，那个病人慢慢地恢复了活力。','The girl went into a coma after the car accident three months ago, and has not woken up yet.','3个月前，汽车出事故以后，这个姑娘就昏迷过去了，至今还没有苏醒过来。'}

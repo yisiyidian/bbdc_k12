@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["eloquent"]={"eloquent","['eləkwənt]","['ɛləkwənt]","adj.雄辩的",'adj.雄辩的,有口才的,动人的','An eloquent speaker; an eloquent sermon.','一个雄辩的演讲家；雄辩的说教','He is eloquent and humorous as well. What he says never fails to please us.','他口才好又幽默，他所说的一定能使我们高兴。'}

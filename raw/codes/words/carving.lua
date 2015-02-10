@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["carving"]={"carving","['kɑːvɪŋ]","['kɑrvɪŋ]","n.雕刻品",'n.雕刻品,雕刻,雕刻术|||动词carve的现在分词','She\'s an ace at carving.','她是个雕刻能手。','She is good at carving.','她擅长雕刻。'}

@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["circlet"]={"circlet","['sɜːklɪt]","['sɝklət]","n.戒指",'n.戒指,小圈','Many girls love a circlet of pearls.','许多女孩喜欢镶嵌珍珠的贵重金属冠环。','She wears a circlet given by her grandmother.','她戴着祖母给的戒指。'}

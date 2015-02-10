@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hot"]={"hot","[hɒt]","[hɑt]","adj.热的",'adj.热的,辣的,性感的|||adv.激动地,快速地|||n.最高温度,滚烫的东西','This dish is a bit hot.','这道菜有些辣。','Strike the iron while it is hot.','趁热打铁。'}

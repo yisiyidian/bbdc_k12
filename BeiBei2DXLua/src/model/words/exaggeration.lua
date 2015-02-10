@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exaggeration"]={"exaggeration","[ɪg,zædʒə'reɪʃ(ə)n]","[ɪɡ,zædʒə'reʃən]","n.夸张",'n.夸张，夸大','I can say without exaggeration that she is an angel.','我可以毫不夸张地说她是个天使。','Don\'t express your opinion with exaggeration.','不要夸张地陈述你的观点。'}

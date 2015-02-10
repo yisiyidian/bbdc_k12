@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["burrow"]={"burrow","['bʌrəʊ]","['bɝro]","n.(兔子等)所掘的地洞",'n.(兔子等)所掘的地洞|||v.挖洞|||vi.翻寻,挖洞|||vt.挖掘(洞穴),钻进','The child burrowed under the bedclothes.','那孩子在被窝里钻来钻去。','The rabbit burrowed under the fence.','兔子在篱笆下打洞。'}

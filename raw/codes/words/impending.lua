@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["impending"]={"impending","[ɪm'pendɪŋ]","[ɪm'pɛndɪŋ]","adj.逼迫的",'adj.逼迫的,迫切的,即将发生的|||动词impend的现在分词','Hurricane is impending.','台风就要来了。','A sense of impending doom came upon all of us.','我们所有人都有一种大难临头的感觉。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ohm"]={"ohm","[əʊm]","[om]","n.欧姆(电阻单位)",'n.欧姆(电阻单位)|||n.欧姆(德国物理学家)','The electric resistance is measured in ohm.','电阻的测量单位是欧姆。','Hence comes the name of ||Ohm||\'s Law.','欧姆定律就是由此命名的.'}

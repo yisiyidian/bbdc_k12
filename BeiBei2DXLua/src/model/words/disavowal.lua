@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disavowal"]={"disavowal","[,dɪsə'vaʊəl]","[ ,disə'vauəl ]","n.否认",'n.否认','He made a disavowal to the actions of his subordinates.','他不承认下属的行动。','This is a public disavowal of his beliefs.','这是对他信仰的公开否认。'}

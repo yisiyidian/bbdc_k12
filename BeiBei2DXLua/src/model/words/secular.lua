@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["secular"]={"secular","['sekjʊlə]","['sɛkjəlɚ]","n.牧师",'n.牧师,凡人|||adj.世俗的,现世的,不朽的','Not everyone can be a secular person.','不是每个人都能成为救世主。','||Secular|| music refers to music which is not religious.','世俗音乐是指非宗教的音乐。'}

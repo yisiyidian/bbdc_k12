@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["physicist"]={"physicist","['fɪzɪsɪst]","['fɪzɪsɪst]","n.物理学家",'n.物理学家，自然科学家','He can not be a physicist.','他不可能是个物理学家。','I think he\'s a physicist or something of that nature.','我想他大概是物理学家或那一类的人.'}

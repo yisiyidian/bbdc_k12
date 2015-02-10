@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hangar"]={"hangar","['hæŋə]","['hæŋɚ]","n.飞机库",'n.飞机库','The plane nosed into the hangar.','飞机缓缓地进入机库.','The plane stopped in that big hangar.','飞机停在那个大机库里。'}

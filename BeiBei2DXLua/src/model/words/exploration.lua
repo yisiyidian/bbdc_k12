@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exploration"]={"exploration","[eksplə'reɪʃ(ə)n]","[,ɛksplə'reʃən]","n.探险",'n.探险,踏勘,探测','The Elizabethan age was a time of exploration and discovery.','英国女王伊丽莎白一世时代是探索和发现的时代.','I looked forward to the exploration of their theories.','我期待着研究他们的理论'}

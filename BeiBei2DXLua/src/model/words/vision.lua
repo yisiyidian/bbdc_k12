@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vision"]={"vision","['vɪʒ(ə)n]","['vɪʒən]","n.视觉",'n.视觉,先见之明,光景,视力,眼力,幻想，影像|||vt.幻想','It came within my range of vision.','该物体进入了我的视野.','How do you cope with the problem of poor vision?','怎样解决视力不好这一难题呢?'}

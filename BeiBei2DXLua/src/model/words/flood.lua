@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flood"]={"flood","[flʌd]","[flʌd]","n.洪水",'n.洪水,水灾|||v.淹没,溢出|||vi.大量涌到,泛滥|||vt.灌溉,淹没','Japanese cars have flooded the American market.','日本汽车已充斥美国市场。','The office was flooded with complaints.','办事处收到如洪水般涌至的投诉信件。'}

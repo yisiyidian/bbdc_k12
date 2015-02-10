@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hence"]={"hence","[hens]","[hɛns]","adv.因此",'adv.今后,从此,因此,所以','handmade and hence expensive.','手工制造，因此很贵','Handmade and hence expensive.','手工制造，因此很贵'}

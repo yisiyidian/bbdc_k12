@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lost"]={"lost","[lɒst]","[lɔst]","adj.失去的",'adj.失去的,遗失的,迷惑的|||v.遗失,损失,失败','He is hunting for his lost book.','他正在寻找一本遗失的书。','It is a pity (that) he lost so much money.','他损失这么多钱，真是遗憾。'}

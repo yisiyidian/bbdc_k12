@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["wily"]={"wily","['waɪlɪ]","['waɪli]","adj.使用计谋的",'adj.使用计谋的,有诡计的,狡猾的','The old cop is very experienced and wily.','那个年长的警官经验丰富而且机警。','He was outwitted by his wily opponent.','他斗不过诡计多端的对手。'}

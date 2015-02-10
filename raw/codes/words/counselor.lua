@@ -1,0 +1,1 @@
+local Manager = s_WordDictionaryDatabase; Manager.allwords["counselor"]={"counselor","['kaʊnslɚ]","[ 'kaunsələ ]","n.顾问",'n.顾问,参事,法律顾问','The counselor bilked his clients out of $2 million.','那位顾问从他的顾客那里骗取了200万美元。','A hero celebrated as an elderly and wise counselor to the Greeks at Troy.','涅斯托尔特洛伊的一位英雄，对希腊人来说是位著名的年高足智的顾问'}

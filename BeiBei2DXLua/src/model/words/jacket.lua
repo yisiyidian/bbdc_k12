@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jacket"]={"jacket","['dʒækɪt]","['dʒækɪt]","n.短上衣",'n.短上衣,茄克衫','A good shirt is no less expensive than a jacket.','一件好衬衫的昂贵程度并不比一件夹克衫差。','This sport jacket will match those pants nicely.','这件运动衫和那条短裤很相配。'}

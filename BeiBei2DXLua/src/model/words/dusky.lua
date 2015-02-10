@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dusky"]={"dusky","['dʌskɪ]","['dʌski]","adj昏暗的",'adj.微黑的，带黑的，昏暗的','They couldn\'t see the path clearly in the dusky light of the forest.','在森林幽暗的光线下，他们看不清道路。','dusky skin.','黑黝黝的肌肤'}
