@@ -127,6 +127,10 @@ function ChapterLayer0:loadResource()
     tree2:addAnimation(0, 'animation', true)
     tree2:setPosition(100,2530)
     self:addChild(tree2, 140)
+    local tree3 = sp.SkeletonAnimation:create('spine/chapterlevel/3xuanxiaoguanyizishu.json', 'spine/chapterlevel/3xuanxiaoguanyizishu.atlas',1)
+    tree3:addAnimation(0, 'animation', true)
+    tree3:setPosition(80,2530)
+    self:addChild(tree3, 140)
     
     -- wave action
     self:addWaveAnimation(cc.p(400, 200))
