@@ -1,11 +1,5 @@
 {
-"skeleton": {
-	"hash": "JQl9CivgNTjoaLn4b07GaJN8w5I",
-	"spine": "2.1.07",
-	"width": 337.02,
-	"height": 310.94,
-	"images": "/Users/yehanjie/Desktop/spine/xinxuanxiaoguan"
-},
+"skeleton": { "hash": "m1601hNufROEw7/zmZRBKgvIjXE", "spine": "2.1.09", "width": 185.99, "height": 259.42, "images": "./xinxuanxiaoguan/" },
 "bones": [
 	{ "name": "root" },
 	{ "name": "bone", "parent": "root", "length": 31.4, "x": 65.9, "y": 0.21, "rotation": 92.25 },
@@ -13,7 +7,6 @@
 	{ "name": "bone2", "parent": "bone", "length": 45.53, "x": 214.18, "y": 53.74, "rotation": -180 }
 ],
 "slots": [
-	{ "name": "yisiyingzi", "bone": "bone3", "attachment": "yisiyingzi" },
 	{ "name": "yezishuye", "bone": "bone2", "attachment": "yezishuye" },
 	{ "name": "xuanxiaoguanyizishuzhi", "bone": "bone", "attachment": "xuanxiaoguanyizishuzhi" },
 	{ "name": "yezishu", "bone": "bone2", "attachment": "yezishu" },
@@ -33,9 +26,6 @@
 		},
 		"yezishuye": {
 			"yezishuye": { "x": 33.33, "y": 11.46, "rotation": 87.74, "width": 186, "height": 165 }
-		},
-		"yisiyingzi": {
-			"yisiyingzi": { "x": 80.27, "y": -9.83, "rotation": 174.57, "width": 211, "height": 108 }
 		},
 		"yizi1": {
 			"yizi1": { "x": 51.35, "y": 21.65, "rotation": 88.56, "width": 25, "height": 27 }

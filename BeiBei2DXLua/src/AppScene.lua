@@ -153,6 +153,8 @@ function AppScene:replaceGameLayer(newLayer)
     self.gameLayer:removeAllChildren()
     self.gameLayer:addChild(newLayer)
 
+    updateCurrentEverydayInfo()
+
     if newLayer.class ~= nil and newLayer.class.__cname ~= nil then 
         self.currentGameLayerName = newLayer.class.__cname
         if IS_DEVELOPMENT_MODE and newLayer.class.__cname == 'HomeLayer' then
