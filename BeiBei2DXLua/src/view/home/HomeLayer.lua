@@ -29,18 +29,18 @@ function HomeLayer.create(share)
     local todayTotalTaskNum     = s_LocalDatabaseManager:getTodayTotalTaskNum()
     local todayRemainTaskNum    = s_LocalDatabaseManager:getTodayRemainTaskNum()
 
-    print("todayTotalBossNum : "..todayTotalBossNum)
-    print("todayRemainBossNum : "..todayRemainBossNum)
-    print("todayTotalTaskNum : "..todayTotalTaskNum)
-    print("todayRemainTaskNum : "..todayRemainTaskNum)
+    -- print("todayTotalBossNum : "..todayTotalBossNum)
+    -- print("todayRemainBossNum : "..todayRemainBossNum)
+    -- print("todayTotalTaskNum : "..todayTotalTaskNum)
+    -- print("todayRemainTaskNum : "..todayRemainTaskNum)
 
     local totalStudyWordNum     = s_LocalDatabaseManager.getStudyWordsNum(os.date('%x',os.time()))
     local totalGraspWordNum     = s_LocalDatabaseManager.getGraspWordsNum(os.date('%x',os.time()))
     local totalStudyDayNum      = s_LocalDatabaseManager.getStudyDayNum()
 
-    print("totalStudyWordNum : "..totalStudyWordNum)
-    print("totalGraspWordNum : "..totalGraspWordNum)
-    print("totalStudyDayNum : "..totalStudyDayNum)
+    -- print("totalStudyWordNum : "..totalStudyWordNum)
+    -- print("totalGraspWordNum : "..totalGraspWordNum)
+    -- print("totalStudyDayNum : "..totalStudyDayNum)
 
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
@@ -493,9 +493,9 @@ function HomeLayer.create(share)
 
             s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser( 
                 function (api, result)
-                    print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+                    --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
                     s_CURRENT_USER:getFriendsInfo()
-                    print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+                    --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
 
                     if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
                         local redHint = cc.Sprite:create('image/friend/fri_infor.png')
@@ -639,14 +639,9 @@ function HomeLayer.create(share)
     end
 
     local onTouchEnded = function(touch,event)
-        print('touchend')
+
         local location = layer:convertToNodeSpace(touch:getLocation())
-        print('location y'..location.y..' '..start_y)
-        print('location x'..location.x..' '..start_x)
-        print('s_DESIGN_HEIGHT'..s_DESIGN_HEIGHT)
-        print('viewIndex'..viewIndex)
         if not isDataShow then
-            print('isnotShow')
             if math.abs(location.y - start_y) > 10 or math.abs(location.x - start_x) > 10 then
                 return
             elseif viewIndex == 1 and location.y < 0.1 * s_DESIGN_HEIGHT then
@@ -675,7 +670,7 @@ function HomeLayer.create(share)
             end
 
         elseif location.y >  s_DESIGN_HEIGHT-280 and (math.abs(location.y - start_y) < 10 and math.abs(location.x - start_x) < 10) and viewIndex == 1 then
-            print('isDataShow')
+            --print('isDataShow')
             isDataShow = false
             layer:setButtonEnabled(true)
             local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))

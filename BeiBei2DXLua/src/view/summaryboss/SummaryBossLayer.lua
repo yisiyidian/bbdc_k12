@@ -21,8 +21,6 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     AnalyticsSummaryBoss()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()
-    
-    print_lua_table(wordList)
     math.randomseed(os.time())
     --add coconut
     --layer.levelConfig = levelConfig

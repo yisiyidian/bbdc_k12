@@ -432,7 +432,7 @@ function PersonalInfo:PLVI()
             for j = 1,7 do
                 local str = getDayStringForDailyStudyInfo(time)
                 countArray[1] = countArray[1] + s_LocalDatabaseManager.getStudyWordsNum(str)
-                print(str,countArray[1])
+                --print(str,countArray[1])
                 time = time - 24 * 3600
             end
         end
@@ -605,10 +605,10 @@ function PersonalInfo:login()
     local loginData = s_CURRENT_USER.logInDatas
     --local loginData_array = {{0,1,1,0,1,1,1},{2,2,1,0,1,0,0}}
     local loginData_array = {}
-    print('loginData_array = '..#loginData)
+    --print('loginData_array = '..#loginData)
     for i = 1,#loginData do
         loginData_array[i] = loginData[i]:getDays()
-        print_lua_table(loginData_array[i])
+        --print_lua_table(loginData_array[i])
     end
     local calendar = {}
     local weekDay = {'SUN','MON','TUE','WED','THU','FRI','SAT'}
@@ -674,9 +674,9 @@ function PersonalInfo:login()
                 
                 if loginData_array[weekIndex][dayIndex] >= 1 and sDate <= nowDate then
                     --label:setColor(cc.c3b(255,255,255))
-                    print('selectDate',os.date('%x',selectDate))
+                    --print('selectDate',os.date('%x',selectDate))
                     if s_CURRENT_USER.logInDatas[weekIndex]:isCheckIn(selectDate,s_CURRENT_USER.bookKey) then
-                        print('selectDate is checkIn',os.date('%x',selectDate))
+                        --print('selectDate is checkIn',os.date('%x',selectDate))
                         table.insert(checkInList,label)
                     end
                     if dayIndex < 7 then
