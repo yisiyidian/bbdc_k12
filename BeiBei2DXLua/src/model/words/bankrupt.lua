@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bankrupt"]={"bankrupt","['bæŋkrʌpt]","['bæŋkrʌpt]","adj.破产的",'adj.破产的,贫穷的,道德败坏的,枯竭的|||n.破产者,无知的人|||vt.使破产','If your liabilities exceed your assets, you may go bankrupt.','如果你所负的债超过你的资产，你就会破产。','The purport of the statement is that the firm is bankrupt.','该项声明大意是说该商行已经破产。'}

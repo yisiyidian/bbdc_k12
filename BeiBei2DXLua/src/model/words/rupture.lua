@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rupture"]={"rupture","['rʌptʃə]","['rʌptʃɚ]","v.使破裂",'n.破裂,断裂|||v.使破裂','He\'ll rupture a muscle if he goes on dancing like that!','他要是继续那样跳舞，会跳得皮开肉裂！','He ruptured himself lifting a bookcase.','他抬书柜时出现了疝.'}

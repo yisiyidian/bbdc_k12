@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["instinctive"]={"instinctive","[ɪn'stɪŋ(k)tɪv]","[ɪn'stɪŋktɪv]","adj.本能的",'adj.本能的,天性的，直觉的','He tried to conceal his instinctive revulsion at the idea.','他试图饰盖自己对这一想法本能的厌恶.','Running away is our instinctive reaction when we meet danger.','遇到危险时，我们的本能反应就是跑开。'}

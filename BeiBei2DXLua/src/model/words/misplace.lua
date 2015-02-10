@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["misplace"]={"misplace","[mɪs'pleɪs]","[,mɪs'ples]","vt.错放",'vt.错放，误给','If you think deafness is funny, you\'ve got a very misplaced sense of humour.','假若认为耳聋有趣, 这种幽默感十分不当.','I\'ve misplaced my glasses they\'re not in my bag.','我把眼镜放错地方了--没在我的包里.'}

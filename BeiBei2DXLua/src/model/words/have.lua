@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["have"]={"have","[hæv]","[hæv]","v.有",'aux.已经,曾经|||n.吃,从事,得到,雇用,享有,有,允许|||v.有','I cannot have such behaviour in my house.','我不能容忍家中有这种行为。','Do you have any idea where he lives?','你知道他住在哪里吗？'}

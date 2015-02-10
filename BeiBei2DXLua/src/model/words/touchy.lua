@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["touchy"]={"touchy","['tʌtʃɪ]","['tʌtʃi]","adj.易怒的",'adj.易怒的,难以取悦的,过敏的','She is very touchy about her past.','她对自己的过去非常敏感。','But both leaders raised touchy economic issues','但是双方领导者都提出了敏感的经济问题'}

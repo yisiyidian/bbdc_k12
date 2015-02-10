@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slog"]={"slog","[slɒg]","[slɑɡ]","vt.艰难行进",'vt.艰难行进，重击|||vi.艰难行进，苦干|||n.苦工，长途跋涉','||Slog|| away at your studies.','不断地努力学习。','School is a hard slog.','念书是共事。'}

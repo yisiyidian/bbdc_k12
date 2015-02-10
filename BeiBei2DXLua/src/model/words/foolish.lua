@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["foolish"]={"foolish","['fuːlɪʃ]","['fulɪʃ]","adj.愚蠢的",'adj.愚蠢的，荒谬的，可笑的','He was angry with himself for having made such a foolish mistake.','他为犯如此愚蠢的错误而对自己气恼不已。','Can you persuade her out of her foolish plans?','你能劝她放弃她那些愚蠢的计划吗？'}

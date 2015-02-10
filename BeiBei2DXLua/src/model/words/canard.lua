@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["canard"]={"canard","[kə'nɑːd; 'kænɑːd]","[kə'nɑrd]","n.谣言",'n.谣言,误传|||n.鸭式飞机','That canard was proved to be true later.','那谣言后来被证明是真的。','The charge that Harding was a political stooge may be a canard.','关于哈丁是个政治走狗的指控可能是个谣传。'}

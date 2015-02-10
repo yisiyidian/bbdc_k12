@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["meaning"]={"meaning","['miːnɪŋ]","['minɪŋ]","n.意义",'n.意义,意思,含义|||adj.意味深长的','These words are empty of meaning.','这些话毫无意义。','I can\'t apprehend your meaning.','我不明白你的意思。'}

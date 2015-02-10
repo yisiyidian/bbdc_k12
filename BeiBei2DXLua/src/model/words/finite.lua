@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["finite"]={"finite","['faɪnaɪt]","['faɪnaɪt]","adj.有限的",'adj.有限的','These are the finite forms of a verb.','这些是动词的限定形式。','Human understanding is finite.','人的理解力是有限的。'}

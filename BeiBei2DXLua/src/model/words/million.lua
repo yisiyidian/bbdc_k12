@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["million"]={"million","['mɪljən]","['mɪljən]","n.百万",'n.百万,(themillions)群众|||adj.百万的,无数的','It is estimated that the damage was over one million dollars.','据估计，损失超过了一百万元。','They estimated the number of visitors at 10 million.','他们估计参观者人数为1000万。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impair"]={"impair","[ɪm'peə]","[ɪm'pɛr]","vt.损害",'vt.损害,削弱|||[计算机]损伤','Tiredness can seriously impair your ability to drive.','疲劳会大大影响你的驾驶能力。','His illness has impaired his efficiency.','生病降低了他的效率。'}

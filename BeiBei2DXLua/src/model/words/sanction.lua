@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sanction"]={"sanction","['sæŋ(k)ʃ(ə)n]","['sæŋkʃən]","n.核准",'n.核准,处罚,约束力|||v.制定制裁规则,认许,核准','Western nations imposed tough sanctions on the country.','西方各国对这个国家实行了严厉制裁。','The book was translated without the sanction of the author.','这本书未经作者许可就给翻译了。'}

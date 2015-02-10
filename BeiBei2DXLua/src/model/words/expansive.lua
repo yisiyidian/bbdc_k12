@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["expansive"]={"expansive","[ɪk'spænsɪv; ek-]","[ɪk'spænsɪv]","adj.易膨胀的",'adj.易膨胀的,易扩张的','After he\'d had a few drinks, Charles became very expansive.','查尔斯喝了几杯酒，话就滔滔不绝了。','He greeted us with an expansive gesture (eg he stretched his arms wide) and a wide smile.','他手舞足蹈笑逐颜开地迎接我们.'}

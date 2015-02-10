@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["strident"]={"strident","['straɪd(ə)nt]","['straɪdnt]","adj.刺耳的",'adj.刺耳的,吱吱尖叫的,尖锐的','Demands for his resignation have become more and more strident.','要求他辞职的呼声越来越强烈。','His strident voice rang through the house.','他那刺耳的嗓音响彻整个房子。'}

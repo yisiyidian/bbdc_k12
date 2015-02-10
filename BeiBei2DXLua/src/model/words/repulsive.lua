@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["repulsive"]={"repulsive","[rɪ'pʌlsɪv]","[rɪ'pʌlsɪv]","adj.逐退的",'adj.逐退的,辞退的,冷淡的,恶心的','You repulsive little toad!','你这个讨厌的癞蛤蟆!','a repulsive force.','斥力'}

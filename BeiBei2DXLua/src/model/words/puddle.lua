@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["puddle"]={"puddle","['pʌd(ə)l]","['pʌdl]","n.水坑",'n.水坑,地上积水,胶泥，|||v.搅浊,在泥污中打滚,排尿','She tripped over and landed in puddle.','她绊了一下跌在水潭里。','He stepped lightly over the puddle.','他敏捷地跨过泥水坑。'}

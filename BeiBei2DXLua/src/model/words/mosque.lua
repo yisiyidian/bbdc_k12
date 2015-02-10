@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mosque"]={"mosque","[mɒsk]","[mɑsk]","n.清真寺",'n.清真寺','The devout were all hurrying to the mosque.','信徒们都赶往清真寺。','They went to the mosque to pray.','他们去清真寺做祷告。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["triumphant"]={"triumphant","[traɪ'ʌmf(ə)nt]","[traɪ'ʌmfənt]","adj.得胜的",'adj.得胜的,得意扬扬的','The victorious general made a triumphant return.','这位打了胜仗的将军凯旋而归。','We cheered the triumphant team.','我们向获胜的队伍喝彩.'}

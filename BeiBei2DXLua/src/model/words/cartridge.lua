@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cartridge"]={"cartridge","['kɑːtrɪdʒ]","['kɑrtrɪdʒ]","n.弹药筒",'n.弹药筒,弹药,一卷软片|||墨水筒，笔芯','Such a projectile in a metal casing; a cartridge.','弹药（筒）装在金属盒中的射弹。弹药','This rifle only holds one cartridge.','这支来复枪只能装一发子弹.'}

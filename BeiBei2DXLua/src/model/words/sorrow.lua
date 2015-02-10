@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sorrow"]={"sorrow","['sɒrəʊ]","['sɔro]","n.悲伤",'n.悲伤,伤心事|||vi.悲伤,惋惜,悔恨','He evinced great sorrow for what he had done.','他对自己的所作所为深表歉疚。','Religion was her crutch in times of sorrow.','宗教是她忧伤时依赖的支柱。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unconscionable"]={"unconscionable","[ʌn'kɒnʃ(ə)nəb(ə)l]","[ʌn'kɑnʃənəbl]","adj.不合理的",'adj.不合理的,没有条理的,过度的','You take an unconscionable time getting dressed!','你穿衣服用的时间未免也太长了！','I can\'t stand your unconscionable behavior.','我受不了你肆无忌惮的行为。'}

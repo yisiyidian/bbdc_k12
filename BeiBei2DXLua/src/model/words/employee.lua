@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["employee"]={"employee","[emplɒɪ'iː; em'plɒɪiː; ɪm-]","[ɪm'plɔɪi]","n.雇员",'n.雇员','Their situations are now reversed as employee has become employer.','他们双方的地位转换了, 雇员成了雇主.','He found it very demeaning to have to work for his former employee.','他觉得要为他以前的雇员工作很失身分.'}

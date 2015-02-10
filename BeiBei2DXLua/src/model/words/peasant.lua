@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peasant"]={"peasant","['pez(ə)nt]","['pɛznt]","n.农民",'n.农民|||n.民工','He sprang from peasant stock.','他是农民出身.','The failure of their crops spelt disaster for the peasant farmers.','作物歉收农民就要受灾.'}

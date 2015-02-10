@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["audition"]={"audition","[ɔː'dɪʃ(ə)n]","[ɔ'dɪʃən]","n.听",'n.听,听力,试听vi.试演，试唱，试音vt.对（某人）面试；让（某人）试演（或试唱、试音）','Which part are you auditioning for?','你扮什么角色试音?','None of the actresses we\'ve auditioned is suitable.','我们试听的这些女演员都不合适.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["essential"]={"essential","[ɪ'senʃ(ə)l]","[ɪ'sɛnʃl]","adj.必要的",'adj.基本的；必要的；本质的；精华的|||n.必需品；基本要素；必不可少的东西','In considering this problem, you should grasp its essentials.','在考虑这一问题时，你应当抓住实质。','Her most essential quality is kindness.','她最主要的品质是善良。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hone"]={"hone","[həʊn]","[hon]","v.磨刀",'n.细磨刀石|||v.磨刀','My pen friend from Paris is coming to stay so I had better hone up on my French.','我巴黎的笔友要来小住一段时间，因此我最好赶紧温习一下法语。','Leading companies spend time and money on ||honing|| the skills of senior managers.','龙头公司会在磨砺高层管理人员的技能上付出时间和金钱。'}

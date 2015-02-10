@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grotto"]={"grotto","['grɒtəʊ]","['ɡrɑto]","n.洞穴",'n.洞穴,岩穴,做成岩穴的洞室','We reach a beautiful grotto, whose entrance is almost hide by the vine.','我们到达了一个美丽的洞穴，洞的入口几乎被藤蔓遮掩著。','Water trickles through an underground grotto.','水沿着地下岩洞流淌。'}

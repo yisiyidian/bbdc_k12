@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["naturalist"]={"naturalist","['nætʃ(ə)rəlɪst]","['nætʃrəlɪst]","n.自然主义者",'n.自然主义者,博物学者','He was a printer by trade and naturalist by avocation.','他从事印刷业，同时是个博物学爱好者。','The naturalist told us many stories about birds.','博物学家给我们讲述了许多有关鸟儿的故事。'}

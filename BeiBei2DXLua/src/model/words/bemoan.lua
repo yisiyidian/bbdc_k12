@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bemoan"]={"bemoan","[bɪ'məʊn]","[bɪ'mon]","vt.悲叹",'vt.悲叹，为…惋惜,认为遗憾','He often bemoaned his sad fate.','他总哀叹他的命苦。','He always bemoans the shortage of funds for research.','他总是叹息研究经费不足。'}

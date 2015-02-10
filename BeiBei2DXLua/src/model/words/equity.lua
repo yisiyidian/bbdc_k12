@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["equity"]={"equity","['ekwɪtɪ]","['ɛkwəti]","n.权益",'n.权益，产权，(无固定利息的)股票|||n.公平,公正','They shared the work of the house with perfect equity.','他们公平地分担家务。','Who owns the equity of the house ?','谁拥有这所房子的产权？'}

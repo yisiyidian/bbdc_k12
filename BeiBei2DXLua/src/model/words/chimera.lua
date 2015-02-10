@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chimera"]={"chimera","[kaɪ'mɪrə]","[ kai'miərə ]","n.神话怪物",'n.神话怪物，妄想|||n.嵌合体|||Chimera:[希神]奇美拉（喷火女怪）','Religious unity remained as much a chimera as ever.','宗教统一仍旧是一通幻想。','there are lots of chimeras in fairy tales','童话故事中有许多神话怪物'}

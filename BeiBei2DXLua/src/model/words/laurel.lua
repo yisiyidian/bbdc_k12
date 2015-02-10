@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["laurel"]={"laurel","['lɒr(ə)l]","['lɔrəl]","n.月桂树",'n.月桂树,荣誉|||vt.戴桂冠,授予荣誉','||Laurel|| was a perfect girl in every way.','从各方面讲, 罗拉都是一个完美的女孩。','He had to pose wearing a laurel wreath.','他得摆好戴著月桂花冠的姿势.'}

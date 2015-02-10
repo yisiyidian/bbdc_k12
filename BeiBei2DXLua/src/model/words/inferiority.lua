@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inferiority"]={"inferiority","[ɪn,fɪərɪ'ɒrɪtɪ]","[ɪn,fɪrɪ'ɔrəti]","n.自卑",'n.自卑,低劣','Most people enjoy the inferiority of their best friend.','大多数人都以他们最好的朋友的自卑感为乐。','Some of them developed a great inferiority complex.','他们有些人养成了严重的自卑感。'}

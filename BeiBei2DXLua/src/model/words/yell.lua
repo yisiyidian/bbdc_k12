@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["yell"]={"yell","[jel]","[jɛl]","vt.&vi.大叫",'vt.&vi.大叫|||n.大喊','You don\'t have to yell; I can hear you.','你用不著喊, 我听得见.','She let out a yell and ran home.','她尖叫了一声跑回了家。'}

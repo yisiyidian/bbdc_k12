@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["immature"]={"immature","[,ɪmə'tjʊə; ,ɪmə'tjɔː]","[,ɪmə'tʃʊr]","adj.不成熟的",'adj.不成熟的','He pretends he\'s been around but he\'s really very immature.','他装作老於世故, 而实际上却很不成熟.','not ripe or matured; immature','不成熟的未熟或成熟的; 不成熟的'}

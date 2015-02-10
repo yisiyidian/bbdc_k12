@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["destine"]={"destine","['destɪn]","['dɛstɪn]","v.注定",'v.注定','I\'m destined to be your love, no matter what will happen in the future.','不管将来会发生什么，我注定是你的爱人。','Everything likes  to be destined somewhere','每件事就像冥冥之中已经注定了似的'}

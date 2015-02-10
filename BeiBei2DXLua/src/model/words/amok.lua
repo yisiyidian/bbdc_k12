@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amok"]={"amok","[ə'mɒk]","[ə'mɑk]","adv.（尤指在公共场所）发狂",'adv.（尤指在公共场所）发狂，狂暴，疯狂','The tiger escaped from the zoo and ran amok for hours.','老虎逃出了动物园，张牙舞爪乱窜了几小时。','A soldier was arrested after running amok with a vehicle through Berlin.','一名士兵在疯狂飙车穿越柏林后被逮捕。'}

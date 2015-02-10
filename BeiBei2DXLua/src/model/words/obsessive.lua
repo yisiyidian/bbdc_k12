@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obsessive"]={"obsessive","[əb'sesɪv]","[ əb'sesiv, ɔb- ]","adj.着迷的",'adj.着迷的，强迫性的,分神的','an obsessive need to win.','急迫的想赢的欲望','His son had an obsessive drive to gain his father\'s approval.','他儿子非常渴望得到父亲的嘉许。'}

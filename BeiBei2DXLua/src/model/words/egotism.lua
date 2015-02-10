@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["egotism"]={"egotism","['egətɪz(ə)m; 'iː-]","['ɛɡətɪzəm]","n.自大",'n.自大,自负','His egotism alienated all his friends.','他的自以为是让所有的朋友都疏离了他。','egotism makes you dull','啊'}

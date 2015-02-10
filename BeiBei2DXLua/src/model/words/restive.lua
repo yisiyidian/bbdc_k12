@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["restive"]={"restive","['restɪv]","['rɛstɪv]","adj.不愿向前走的",'adj.不愿向前走的,倔强的,难驾御的','The government has done nothing to ease export restrictions, and domestic manufacturers are growing restive.','政府未采取任何措施放松出口限制，因此国内制造商变得焦虑不安。','His face was quite stolid, but he looked at her with restive eyes.','他脸上没有表情，眼睛却很不满地看着她。'}

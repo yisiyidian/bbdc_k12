@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anneal"]={"anneal","[ə'niːl]","[ə'nil]","vt.韧化",'vt.韧化(使...退火,锻烧)|||n.热处理(逐渐冷却)','What do you mean by anneal?','你说的退火是什么意思?','We produce steel by annealing the iron','我们通过铁淬火制造钢'}

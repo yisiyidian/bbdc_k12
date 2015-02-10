@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["penance"]={"penance","['penəns]","['pɛnəns]","n.自我惩罚",'n.自我惩罚，(赎罪的)苦行','He had done penance for his sins; we should forgive him.','他已经为赎罪自我惩罚了，我们应该原谅他。','She knelt at her mother’s feet in penance.','她忏悔地跪在母亲脚下。'}

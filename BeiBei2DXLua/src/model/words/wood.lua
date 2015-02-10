@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wood"]={"wood","[wʊd]","[wʊd]","n.木材",'n.木材；树林；木制品|||vi.收集木材|||vt.在…植树造林；给…添加木柴|||adj.木制的；失去理智的','After dinner Alice slipped away for a walk in the woods with Artie.','晚饭后，艾丽斯悄悄溜到树林里与阿迪散步。','I got it all taken care of, knock on wood.','我把它各个方面都照顾到了，但愿好运仍在。'}

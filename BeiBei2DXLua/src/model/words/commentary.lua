@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["commentary"]={"commentary","['kɒmənt(ə)rɪ]","['kɑməntɛri]","n.实况报道",'n.实况报道，现场解说,评论,注释，批评','The tour guide gave a running commentary from the front of the coach.','导游在旅游车的前部向游客作连续的现场解说.','From the passenger seat, he kept up a running commentary on her driving.','他坐在乘客座位上评论她的驾驶技术.'}

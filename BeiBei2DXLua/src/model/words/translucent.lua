@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["translucent"]={"translucent","[træns'luːs(ə)nt; trɑːns-; -nz-]","[træns'lusnt]","adj.半透明的",'adj.半透明的','The lavatory windows are made of translucent glass.','厕所窗户是用半透明玻璃做的。','Frosted glass is translucent.','毛玻璃是半透明的。'}

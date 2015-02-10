@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hermit"]={"hermit","['hɜːmɪt]","['hɝmɪt]","n.隐居者",'n.隐居者,遁世者|||n.小甜饼','The old hermit was very cagey about her past life.','老隐士对自己过去的生活守口如瓶。','The condition or way of life of a hermit.','隐士生活隐士状态或隐士生活方式'}

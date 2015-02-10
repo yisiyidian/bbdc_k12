@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["avarice"]={"avarice","['æv(ə)rɪs]","['ævərɪs]","n.贪财",'n.贪财,贪婪','||Avarice|| drove him into theft.','贪婪驱使他盗窃。','Their avarice knows no bounds; you can never satisfy them.','他们贪得无厌，你永远无法满足他们。'}

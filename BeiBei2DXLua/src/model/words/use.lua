@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["use"]={"use","[juːz]","[juz]","n.运用",'n.运用,用法,使用权,适用|||vt.使用,利用,对待|||vi.吸毒','The present phone boxes will go out of use next year.','现有的公共电话亭明年就不再使用了。','The car used a gallon of petrol for the journey.','汽车在路上消耗了一加仑汽油。'}

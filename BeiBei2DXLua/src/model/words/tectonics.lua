@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tectonics"]={"tectonics","[tek'tɒnɪks]","[tɛk'tɑnɪks]","n.筑造学",'n.筑造学,构造学,构造地质学','Many scientists are studying of the tectonics.','许多科学家在研究构造地质学。','What does the theory of plate tectonics maintain?','这板块构造学说的理论讲些什么?'}

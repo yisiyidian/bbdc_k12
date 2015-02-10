@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comedian"]={"comedian","[kə'miːdɪən]","[kə'midɪən]","n.喜剧演员",'n.喜剧演员|||n.','The comedian soon had them rolling in the aisles.','那滑稽演员很快就逗得他们捧腹大笑.','The comedian had the audience folding up.','那个喜剧演员逗得观众笑得前仰後合。'}

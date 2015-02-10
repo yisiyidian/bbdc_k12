@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stamina"]={"stamina","['stæmɪnə]","['stæmɪnə]","n.精力",'n.精力,活力','The husky is unequalled for stamina and endurance.','爱斯基摩狗的体力和耐性是无双的。','Marathon runners need plenty of stamina.','参加马拉松长跑要有耐力。'}

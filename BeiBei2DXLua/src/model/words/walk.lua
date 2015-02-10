@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["walk"]={"walk","[wɔːk]","[wɔk]","vi.走路",'n.散步,步行,生活|||vt.走过,走路,遛(狗),巡视|||vi.走路','She walked away with two first prizes.','她轻而易举地赢了两项头等奖。','Somebody has walked off with my pen.','有人把我的钢笔偷走了。'}

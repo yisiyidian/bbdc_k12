@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alder"]={"alder","['ɔːldə]","['ɔldɚ]","n.[植]桤木",'n.[植]桤木','||Alder|| trees belong to the birch family.','赤杨属于桦木科。','The meanders of a prattling brook, were shaded with straggling willows and alder trees.','一条小河蜿蜒掩映在稀疏的柳树和桤树的树荫间，淙淙作响。'}

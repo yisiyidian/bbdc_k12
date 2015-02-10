@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["paralyze"]={"paralyze","['pærə,laɪz]","[ 'pærəlaiz ]","vt.使...瘫痪",'vt.使...瘫痪,使目瞪口呆','The snake uses its venom to stun or paralyze its victims.','蛇用其毒液使受害者失去知觉或瘫痪.','She is paralyzed in both arms.','她的两只胳膊麻痹。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flutter"]={"flutter","['flʌtə]","['flʌtɚ]","n.摆动",'n.摆动,鼓翼,烦扰|||v.摆动,鼓翼,烦扰','His heart fluttered with fear.','他害怕得心怦怦乱跳。','She fluttered her handkerchief from the train window as a good-bye.','她从火车窗口里伸出手挥动手帕道别。'}

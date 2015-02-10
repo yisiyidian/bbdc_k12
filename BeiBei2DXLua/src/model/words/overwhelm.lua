@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overwhelm"]={"overwhelm","[əʊvə'welm]","[,ovɚ'wɛlm]","v.淹没",'v.淹没,受打击,压倒','If I cannot overwhelm with my quality, I will overwhelm with my quantity.','如果我不能以质量压倒，我就一定要以数量压倒。','The village was overwhelmed when the floods came.','这个村庄在洪水泛滥时被淹没了。'}

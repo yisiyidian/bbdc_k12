@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reliant"]={"reliant","[rɪ'laɪənt]","[rɪ'laɪənt]","adj.依赖的",'adj.依赖的,信赖的,可靠的','He\'s heavily reliant on bank loans.','他离不开银行贷款.','reliant on medication.','依赖于药物治疗的'}

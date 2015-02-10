@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gate"]={"gate","[geɪt]","[ɡet]","n.大门",'n.大门','I reached the gate that opened onto the lake.','我走到临湖而开的那扇门前。','There are soldiers on guard at the gate.','大门口有士兵在守卫。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["preference"]={"preference","['pref(ə)r(ə)ns]","['prɛfrəns]","n.偏爱",'n.偏爱,优先,喜爱物','I don\'t know your preferences, so please help yourself.','我不知道你喜欢吃什么，请你自便吧。','We\'ve granted that country special trade preferences.','我们给了那个国家特殊的贸易优惠。'}

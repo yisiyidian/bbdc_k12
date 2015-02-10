@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["veranda"]={"veranda","[və'rændə]","[və'rændə]","n.阳台",'n.阳台，游廊','A veranda or roofed patio.','门廊走廊或有顶棚的天井','They had their coffee and tea on the veranda.','他们在阳台上享用了自己的咖啡和茶。'}

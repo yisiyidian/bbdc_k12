@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["congruous"]={"congruous","['kɒŋgrʊəs]","[ 'kɔŋɡruəs ]","adj.一致的",'adj.一致的，适合的','His actions are congruous with his principles.','他的行动和他的主义侣一致。','The quality or fact of being congruous.','适合性一致的性质或事实'}

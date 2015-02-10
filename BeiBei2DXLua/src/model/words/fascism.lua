@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fascism"]={"fascism","['fæʃɪz(ə)m; -sɪz(ə)m]","['fæ'ʃɪzəm]","n.法西斯主义",'n.法西斯主义，独裁统治','It awakened millions to recognition of the dangers of fascism.','它使千百万群众认识了法西斯的危险性。','A one-party state can be the start of the slippery slope towards fascism.','一党专政有可能是滑向法西斯主义的起点.'}

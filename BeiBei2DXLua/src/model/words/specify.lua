@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["specify"]={"specify","['spesɪfaɪ]","['spɛsɪfaɪ]","vt.明确说明",'vt.明确说明,叙述,指定,详细说明','A unit of length equal to one hundred-millionth(10-8) of a centimeter, used especially to specify radiation wavelengths.','埃长度单位，等于一厘米的百万分之一（10－8），用来记录辐射波长','Please specify when you will be at home tomorrow.','请确切说明你明天何时会在家。'}

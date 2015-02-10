@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grudging"]={"grudging","['grʌdʒɪŋ]","['ɡrʌdʒɪŋ]","adj.吝惜的",'adj.吝惜的','There seems to be a grudging acceptance of the situation.','这一局面看来已经被勉强接受。','He even earned his opponents\' grudging respect.','他甚至令对手也不得不尊重他。'}

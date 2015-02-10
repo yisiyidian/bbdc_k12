@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inequity"]={"inequity","[ɪn'ekwɪtɪ]","[ɪn'ɛkwəti]","n.不公平",'n.不公平,不公正','Fairness can have incentive effect, while inequity can have negative effect.','公平能起到激励的作用，而不公平则会起消极的作用。','He was hired that is inequity because his to be late.','因为迟到就被解雇是不公平的。'}

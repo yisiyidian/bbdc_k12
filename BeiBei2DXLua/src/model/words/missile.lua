@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["missile"]={"missile","['mɪsaɪl]","['mɪsl]","n.导弹",'n.导弹,投射物','The missile deflected from its trajectory.','导弹偏离了轨道。','The smallest deflection of the missile could bring disaster.','导弹有极微小的偏斜也可能酿成大祸。'}

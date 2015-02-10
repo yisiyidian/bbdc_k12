@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cling"]={"cling","[klɪŋ]","[klɪŋ]","n.紧抓",'n.紧抓,紧贴|||vi.粘紧,附着,紧贴','The wet clothes ||clung|| to his body.','湿衣服紧贴在他身上。','He ||clung|| to my arm.','他紧抓着我的胳膊。'}

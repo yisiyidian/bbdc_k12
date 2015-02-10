@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peculiar"]={"peculiar","[pɪ'kjuːlɪə]","[pɪ'kjulɪɚ]","adj.奇怪的",'adj.奇怪的,古怪的,特殊的,独特的|||n.特权','There was this peculiar man sitting opposite me in the train.','在火车上有个挺特别的男人坐在我对面.','The Mid-Autumn Festival is peculiar to China.','中秋节是中国所独有的。'}

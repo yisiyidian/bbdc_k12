@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sudden"]={"sudden","['sʌd(ə)n]","['sʌdn]","n.突然",'n.突然,忽然|||adj.突然的,快速的','Their sudden attack made us more aware of the danger around us.','他们突然的攻击使我们更加注意我们周围的危险。','He gave me a fright by bursting into a sudden laughter.','他突然大笑起来，吓了我一跳。'}

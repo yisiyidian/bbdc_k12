@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["economical"]={"economical","[iːkə'nɒmɪk(ə)l; ek-]","[,ɛkə'nɑmɪkl]","adj.节俭的",'adj.节俭的,经济的,合算的','When we had done the costings on the project, it was clear it would not be economical to go ahead with it.','我们计算了成本, 清楚表明这项工程不合算.','A monthly is more economical than 4 weeklies.','一张月票比四张周票上算.'}

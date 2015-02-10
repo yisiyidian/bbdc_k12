@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heir"]={"heir","[eə]","[ɛr]","n.继承人",'n.继承人','The King\'s eldest son is the heir to the throne.','国王的长子是王位的继承人.','He is the eldest son and thus heir to the title.','他是长子，因此是头衔的继承人。'}

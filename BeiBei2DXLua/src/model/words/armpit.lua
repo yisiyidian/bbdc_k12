@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["armpit"]={"armpit","['ɑːmpɪt]","['ɑrm'pɪt]","n.腋窝",'n.腋窝，最恶心的地区','The coat needs to be eased under the armpits.','这件上衣的　肯需放一放.','A body part analogous to the armpit, such as the hollow under a bird\'s wing.','腋部类似于腋窝的身体部位, 比如鸟翅下面的空隙'}

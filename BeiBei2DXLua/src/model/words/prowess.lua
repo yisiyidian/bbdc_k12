@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prowess"]={"prowess","['praʊɪs]","['praʊəs]","n.英勇",'n.英勇,勇敢,超凡技术','Simon\'s always talking big about his prowess on the golf course.','西蒙总是吹嘘自己在高尔夫球场上的杰出才能。','Like the Eight Immortals crossing the sea, each one shows his or her special prowess.','八仙过海，各显神通。'}

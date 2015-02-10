@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["excursion"]={"excursion","[ɪk'skɜːʃ(ə)n; ek-]","[ɪk'skɝʒn]","n.远足",'n.远足,短途旅行','I was roped in for this excursion before I knew it.','我不知不觉被拉来参加了这次远足旅行。','The excursion was the high spot of our holiday.','我们那个假日的最大乐趣是远足。'}

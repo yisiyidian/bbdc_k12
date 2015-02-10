@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["penchant"]={"penchant","[ˈpenʃɒŋ]","['pentʃənt]","n.喜好(倾向)",'n.喜好(倾向)','She has a penchant for Indian food.','她爱吃印度食物。','He had a penchant for playing jokes on people.','他喜欢拿人开玩笑。'}

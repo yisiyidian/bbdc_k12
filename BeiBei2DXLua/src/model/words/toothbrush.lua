@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["toothbrush"]={"toothbrush","['tuːθbrʌʃ]","['tuθbrʌʃ]","n.牙刷",'n.牙刷','I am aggrieved to find that someone has used my toothbrush.','我发现有人用过我的牙刷, 我很不高兴。','Don\'t forget to pack your toothbrush!','别忘了把牙刷放到箱子里去!'}

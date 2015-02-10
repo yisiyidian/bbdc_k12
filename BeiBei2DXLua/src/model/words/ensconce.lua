@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ensconce"]={"ensconce","[ɪn'skɒns; en-]","[ in'skɔns ]","v.安顿下来",'v.安顿下来,安置,隐藏','We have  ensconced   ourselves in the most beautiful villa in the south of france.','我们在法国南部最美丽的别墅里安顿下来。','She ensconced herself in an armchair.','她舒适地安坐在一张扶手椅里。'}

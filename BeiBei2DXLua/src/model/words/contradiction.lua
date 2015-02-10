@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["contradiction"]={"contradiction","[kɒntrə'dɪkʃ(ə)n]","[,kɑntrə'dɪkʃən]","n.反驳",'n.反驳,矛盾,不一致,否认','That\'s a flat contradiction of what you said before.','这可和你以前说的恰恰相反。','He will permit no contradiction.','他决不允许有异议。'}

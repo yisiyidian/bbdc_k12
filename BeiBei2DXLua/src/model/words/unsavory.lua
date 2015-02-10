@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unsavory"]={"unsavory","[,ʌn'seivəri]","[ ,ʌn'seivəri ]","adj.没味的",'adj.没味的,不香的,难吃的,难闻的，令人不快的','This food is unsavory.','这食物不好吃。','Police officers meet more unsavory characters in a week than most of us do in a lifetime.','警察在一个星期内遇到的令人厌恶的人比我们大多数人一生中遇见的还多。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["winsome"]={"winsome","['wɪns(ə)m]","['wɪnsəm]","adj.引人注目的",'adj.引人注目的,迷人的,可爱的','She gave him her best winsome smile.','她给了他一个她最为迷人的微笑。','This littele girl is very winsome.','这个小女孩非常可爱。'}

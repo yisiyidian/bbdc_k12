@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["preclude"]={"preclude","[prɪ'kluːd]","[prɪ'klud]","vt.排除",'vt.排除；妨碍；阻止','My present finances preclude the possibility of buying a car.','按我目前的财务状况我是不可能买车的。','That will preclude him from escaping.','那将使他无法逃走。'}

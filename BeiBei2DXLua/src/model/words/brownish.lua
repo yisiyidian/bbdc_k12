@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brownish"]={"brownish","['braʊnɪʃ]","[ 'brauniʃ ]","adj.带褐色的",'adj.带褐色的，呈褐色的','The cloth fades and the water become brownish','这块布褪色，水都变褐色了','brownish yellow','黄灰色'}

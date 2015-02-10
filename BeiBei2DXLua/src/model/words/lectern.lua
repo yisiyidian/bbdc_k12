@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lectern"]={"lectern","['lekt(ə)n; -tɜːn]","[ 'lektə:n ]","n.诵经台",'n.诵经台，讲台','He thumped the lectern as he spoke.','他边讲边用手捶打诵经台。','Put your lecture notes on the lectern please.','请把你的讲稿放在讲台上。'}

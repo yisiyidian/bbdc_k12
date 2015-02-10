@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["iota"]={"iota","[aɪ'əʊtə]","[aɪ'otə]","n.些微",'n.些微','There is not an iota of truth in his story.','他的故事没有一点是真的。','If you make the same mistake again, despite all my warnings, I will not have one iota of sympathy for you.','如果你不顾我的警告，再犯同样的错误，我一点都不会同情你。'}

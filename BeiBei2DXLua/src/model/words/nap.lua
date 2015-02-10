@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nap"]={"nap","[næp]","[næp]","n.小睡",'n.小睡,绒毛表面|||vi.小睡,疏忽|||vt.使起毛','He was aroused from his nap by the doorbell.','他午睡时被门铃吵醒.','It\'s my habit to take a nap at noon.','我有个睡午觉的习惯。'}

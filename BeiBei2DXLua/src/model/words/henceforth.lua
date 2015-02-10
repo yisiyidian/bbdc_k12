@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["henceforth"]={"henceforth","[hens'fɔːθ; 'hensfɔːθ]","[,hɛns'fɔrθ]","adv.今后",'adv.今后','||Henceforth|| it will be more difficult to avoid customs examination.','从此以后，避免海关检查将会更加困难。','The man said that he would work hard henceforth.','那人说从今以后他要努力工作了。'}

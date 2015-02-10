@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["protagonist"]={"protagonist","[prə'tæg(ə)nɪst]","[prə'tæɡənɪst]","n.主演",'n.主演,主角,主唱者','She was obsessed by the protagonist of the movie.','她被电影里的主角深深迷恋住了。','You are the protagonist of your own life','你是自己生命的主宰'}

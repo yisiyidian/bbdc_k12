@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ragamuffin"]={"ragamuffin","['rægəmʌfɪn]","['rægə'mʌfɪn]","n.衣衫褴褛的人（尤指衣衫褴褛的孩子）",'n.衣衫褴褛的人（尤指衣衫褴褛的孩子）','We should to respect everyone even if he was ragamuffin.','我们应该尊重每一个人，即使他是个衣衫褴褛的孩子。','The kids took one look at the male pup, a ragamuffin ball of string.','孩子们朝那只小公狗瞧了一眼，它像是一只五颜六色又脏又乱的线团。'}

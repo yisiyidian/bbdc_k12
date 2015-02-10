@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prophesy"]={"prophesy","['prɒfɪsaɪ]","['prɑfəsaɪ]","v.预言",'v.预言,预报','He ||prophesied|| of strange things to come.','他预言将有怪事发生。','He ||prophesied|| that war would break out.','他预言说战争将要爆发。'}

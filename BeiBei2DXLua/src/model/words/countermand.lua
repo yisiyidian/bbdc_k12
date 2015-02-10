@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["countermand"]={"countermand","[,kaʊntə'mɑːnd]","['kaʊntɚmænd]","v.撤回",'v.撤回,取消|||vt.下相反的命令取消','I can\'t countermand an order Winger\'s given.','我无法撤销温格下达的命令。','The general countermand the orders issued in his absence.','将军撤销了他不在时所发布的命令。'}

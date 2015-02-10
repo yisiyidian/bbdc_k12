@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["den"]={"den","[den]","[dɛn]","n.兽穴",'n.兽穴,洞穴|||v.穴居','The bears den up together during the winter.','冬天熊一起在洞穴里冬眠。','The police tracked the thieves to their den.','警察跟踪小偷, 直到他们的老窝。'}

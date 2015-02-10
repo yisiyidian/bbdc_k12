@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["virtuoso"]={"virtuoso","[,vɜːtjʊ'əʊzəʊ; -səʊ]","[,vɝtʃu'oso]","n.艺术能手",'n.艺术能手，演艺精湛的人','He was gaining a reputation as a remarkable virtuoso.','作为一位技艺非凡的大师，他声誉日隆。','He is one of the nation\'s leading violin virtuosos.','他是该国最杰出的小提琴大师之一。'}

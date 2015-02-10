@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["renovate"]={"renovate","['renəveɪt]","['rɛnəvet]","vt.更新",'vt.更新,革新,刷新','They are going to renovate the old furniture.','他们准备将旧家具整修一番。','The couple spent thousands ||renovating|| the house.','这对夫妻花了几千元来整修房子。'}

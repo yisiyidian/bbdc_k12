@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pulsate"]={"pulsate","[pʌl'seɪt; 'pʌlseɪt]","['pʌlset]","v.搏动",'v.搏动,悸动,有规律的鼓动','The air seemed to pulsate with the bright light.','空气似乎随着亮光而颤动。','Building facades pulsate with millions of lights and glowing neon display.','在千万灯光和霓虹灯的照耀下，建筑物的外墙规律地闪动着。'}

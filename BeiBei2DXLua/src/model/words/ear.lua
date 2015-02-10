@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ear"]={"ear","[ɪə]","[ɪr]","n.耳朵",'n.耳朵,听觉,倾听,麦穗|||vi.长出麦穗','If this news ever reaches her ears, she\'ll be furious.','这个消息万一传到她的耳朵里，她一定得大发雷霆。','The corn will soon ear.','玉米不久就要结穗了。'}

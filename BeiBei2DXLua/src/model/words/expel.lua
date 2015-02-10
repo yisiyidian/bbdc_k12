@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["expel"]={"expel","[ɪk'spel; ek-]","[ɪk'spɛl]","vt.驱逐",'vt.驱逐,逐出,开除','expelled a sigh of relief.','显出减缓的征兆','The headmaster decided to make an example of the pupil and expel him from the school.','校长决定开除该生以儆效尤.'}

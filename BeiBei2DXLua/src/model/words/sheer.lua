@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sheer"]={"sheer","[ʃɪə]","[ʃɪr]","adj.绝对的",'adj.绝对的,全然的,峻峭的|||vt.&vi.急转,躲避|||adv.完全,全然,峻峭|||n.转向,(甲板的)脊弧,透明薄织物','She played a trick on him out of sheer devilment.','她捉弄他完全是为了寻开心.','He\'s so impatient that waiting in queues is sheer purgatory for him.','他毫无耐性，对他来说排队等候完全是活受罪。'}

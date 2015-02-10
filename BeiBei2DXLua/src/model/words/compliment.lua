@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compliment"]={"compliment","['kɒmplɪm(ə)nt]","['kɑmpləmənt]","n.称赞",'n.称赞,恭维,(复数)致意|||vt.称赞,恭维','She gave a coy smile when he paid her a compliment.','他恭维她时，她忸怩作态地笑了笑。','He complimented her on her new dress without even looking at it.','他连看都没看一眼，就称颂她的新衣服。'}

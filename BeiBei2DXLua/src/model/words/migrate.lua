@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["migrate"]={"migrate","[maɪ'greɪt; 'maɪgreɪt]","['maɪɡret]","v.迁移",'v.移动,移往,随季节而移居|||[计算机]迁移','To all appearance, Mr. Li is going to migrate.','李先生显然是要移民了。','in winter many of our birds migrate from here to warmer countries','我们有许多鸟儿冬天从这里迁移到比较温暖的国家去。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["virtual"]={"virtual","['vɜːtjʊəl]","['vɝtʃuəl]","adj.虚拟的",'adj.虚拟的；有效的；实质上的，事实上的','Our deputy manager is the virtual head of the business.','我们的副经理是公司的实际负责人。','This reply is a virtual acceptance of our offer.','这一回答实质上是接受了我们的建议。'}

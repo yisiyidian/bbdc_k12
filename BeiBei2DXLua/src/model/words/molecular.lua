@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["molecular"]={"molecular","[mə'lekjʊlə]","[mə'lɛkjəlɚ]","adj.分子的",'adj.分子的','It is this molecular motion that we call heat.','就是这种分子运动我们称之为热。','The faster protein has a molecular weight of 16.695.','快行的蛋白质分子量为16.695.'}

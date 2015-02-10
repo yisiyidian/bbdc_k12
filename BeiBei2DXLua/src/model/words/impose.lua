@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impose"]={"impose","[ɪm'pəʊz]","[ɪm'poz]","vt.强加",'vi.利用；欺骗；施加影响|||vt.强加；征税；以…欺骗','They are threatening to impose a blockade on the country.','他们威胁说要对该国实行封锁。','He imposed his presence on us for the weekend.','他硬要跟我们一起过周末。'}

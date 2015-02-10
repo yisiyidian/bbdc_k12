@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clear"]={"clear","[klɪə]","[klɪr]","adj.清楚的",'adj.清楚的,明确的,澄清的,头脑清醒的|||vt.澄清,清除障碍,使明亮,明确|||vi.变清晰,消失,放晴|||adv.清楚地,一直|||n.间隙,空地,开旷的地方','He cleared out before the police arrived.','警察尚未来到，他就急忙溜掉了。','I made it clear to him that I rejected his proposal.','我清楚地告诉他，我拒绝了他的建议。'}

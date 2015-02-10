@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["buck"]={"buck","[bʌk]","[ bʌk ]","n.钱",'n.钱,鹿皮,(鹿皮等)制物,小伙子|||vt.&vi.猛然震荡,抵制','Don\'t pass the buck to me.','别把责任推给我。','||Buck|| up! Things aren\'t as bad as you think.','振作起来，事情并非像你想的那麽糟。'}

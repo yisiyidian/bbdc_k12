@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["warfare"]={"warfare","['wɔːfeə]","['wɔrfɛr]","n.战争",'n.战争,冲突','Biological warfare is terrible.','生物战很可怕。','Acts of war; overt warfare.','战争行为；公开战争'}

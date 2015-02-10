@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["commonplace"]={"commonplace","['kɒmənpleɪs]","['kɑmən'ples]","adj.平凡的",'adj.平凡的,陈腐的|||n.常事,老生常谈,普通的东西','Soon it will be commonplace for people to travel to the moon.','不用多久，人们到月球旅行会变成常见的事了。','Many movies deal with commonplace themes.','许多电影的主题很平庸。'}

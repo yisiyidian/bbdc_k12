@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["attention"]={"attention","[ə'tenʃ(ə)n]","[ə'tɛnʃən]","n.注意(力)",'n.注意(力),关心,立正','He waved his hand to catch my attention.','他挥手以吸引我的注意力。','You should focus your attention on your work.','你应该把注意力放到工作上。'}

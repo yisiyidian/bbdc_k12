@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clay"]={"clay","[kleɪ]","[kle]","n.粘土",'n.粘土,泥土','Wet the clay a bit more before you start to mould it.','把泥再弄湿点再动手塑造.','||Clay|| is a plastic substance.','黏土是可塑物质.'}

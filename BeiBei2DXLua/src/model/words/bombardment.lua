@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bombardment"]={"bombardment","[bɒm'bɑːdm(ə)nt]","[bɑm'bɑrdmənt]","n.炮击",'n.炮击，轰炸','The attacks jumped off without the usual preliminary bombardment.','没有通常的预先轰击，进攻就开始了。','The bombardment continued without cessation.','轰炸持续不断地进行著.'}

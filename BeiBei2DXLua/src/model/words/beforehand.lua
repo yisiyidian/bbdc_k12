@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["beforehand"]={"beforehand","[bɪ'fɔːhænd]","[bɪ'fɔrhænd]","adv.预先",'adv.预先,事先','It had been arranged beforehand.','那事已提前安排好了。','He arrived at the meeting place beforehand.','他提前到达会面地点。'}

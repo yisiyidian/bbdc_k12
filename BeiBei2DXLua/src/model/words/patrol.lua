@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["patrol"]={"patrol","[pə'trəʊl]","[pə'trol]","n.巡逻",'n.巡逻,巡查|||vt.&vi.巡逻,巡查','We\'ll have to chance meeting an enemy patrol.','我们不得不冒著可能遇上敌人巡逻兵的危险.','The patrol was waylaid by bandits.','巡逻队遭到土匪伏击.'}

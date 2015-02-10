@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intoxication"]={"intoxication","[ɪn,tɒksɪ'keɪʃn]","[ɪn,tɑksə'keʃən]","n.喝醉",'n.喝醉,陶醉,中毒','This is a very rare case of acute and lethal cyanide intoxication.','这是一极为罕见致死性氰化物中毒的急症.','The young are permanently in a state of resembling intoxication.','年轻人永远处在一种陶醉的状态中'}

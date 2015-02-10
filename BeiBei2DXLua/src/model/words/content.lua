@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["content"]={"content","[kən'tent]","['kɑntɛnt]","n.内容",'n.内容,目录,含量|||adj.满足的,满意的|||vt.使...满足,使...安心','We can\'t go abroad this year, so we\'ll have to content ourselves with a holiday in Shanghai.','今年我们不能出国，所以只能去上海度假了。','He is quite content with his present fortune.','他对自己目前的境遇颇为得意。'}

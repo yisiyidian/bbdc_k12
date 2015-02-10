@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jot"]={"jot","[dʒɒt]","[dʒɑt]","n.少量",'n.少量|||v.匆匆记下|||vi.草草记下|||vt.匆匆写下','A small amount; a jot.','少量，少许，一点点','I\'d better jot it down.','我最好把它记下来。'}

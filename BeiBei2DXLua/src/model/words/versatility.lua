@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["versatility"]={"versatility","[,vɜːsə'tɪləti:]","[,vɝsə'tɪləti]","n.多才多艺",'n.多才多艺,多样性，多功能','versatility','多种变化，多才多艺，变通','this is a versatility knife','这是一个万能刀'}

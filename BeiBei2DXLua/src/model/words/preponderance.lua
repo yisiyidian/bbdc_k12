@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["preponderance"]={"preponderance","[prɪ'pɒnd(ə)r(ə)ns]","[prɪ'pɑndərəns]","n.优势",'n.优势,多数','There is not sufficient preponderance over enemy in the front line.','在前线，我们相对敌人并没有显著的优势。','There is a preponderance of hot days inand August.','八月份以炎热的天气为主。'}

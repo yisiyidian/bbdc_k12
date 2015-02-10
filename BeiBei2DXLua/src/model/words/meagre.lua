@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["meagre"]={"meagre","['miːgə]","[ 'mi:gə ]","adj.微薄的",'adj.瘦的,不足的,微薄的|||=meager(美)','He was so weak from hunger he could hardly raise his meagre arms.','他饿得虚弱无力，连骨瘦如柴的胳膊都举不起来。','He had to support his family with his meagre income.','他只能靠微薄的收入来养家。'}

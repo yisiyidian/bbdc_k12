@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["distortion"]={"distortion","[dɪ'stɔːʃ(ə)n]","[dɪs'tɔrʃən]","n.扭曲",'n.扭曲,变形,曲解','||Distortion|| happens after heating the plastic bottle.','塑料瓶加热以后会发生变形。','Don\'t believe in distortion.','不要相信曲解。'}

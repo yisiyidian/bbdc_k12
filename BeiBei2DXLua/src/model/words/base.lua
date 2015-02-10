@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["base"]={"base","[beɪs]","[bes]","n.基底",'n.基底,（支持、收入、力量等的）基础|||vt.以...作基础|||adj.卑鄙的；不道德的','Her reply caught him off base.','她的答覆使他不知所措。','His base conduct was condemned by everyone.','他的无耻行为受到所有人的谴责。'}

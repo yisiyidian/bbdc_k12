@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conciliatory"]={"conciliatory","[kən'sɪlɪətərɪ]","[kən'sɪlɪətɔri]","adj.调和的",'adj.调和的，安抚的','His letter was couched in conciliatory terms.','他那封信里使用了表示和解的言辞。','The president\'s speech was seen as a conciliatory gesture towards former enemies.','总统的讲话被看作是与昔日的敌人修好的表示。'}

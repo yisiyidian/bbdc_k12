@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sizzle"]={"sizzle","['sɪz(ə)l]","['sɪzl]","vi.(油煎食物时)发出咝咝声",'vi.(油煎食物时)发出咝咝声|||vt.使...咝咝作响|||n.咝咝的声音','a summer day that sizzled.','炎热的夏日','The sausages and burgers sizzled on the barbecue.','香肠和肉饼在烤架上咝咝作响。'}

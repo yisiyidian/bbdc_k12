@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["university"]={"university","[juːnɪ'vɜːsɪtɪ]","[,junɪ'vɝsəti]","n.大学",'n.大学','John is one of his alumni in the university.','约翰是他大学时的校友之一。','He is a member of the Association of ||University|| Teachers.','他是大学教师联合会的一名成员。'}

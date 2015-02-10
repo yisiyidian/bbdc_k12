@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inevitable"]={"inevitable","[ɪn'evɪtəb(ə)l]","[ɪn'ɛvɪtəbl]","adj.不可避免的",'adj.不可避免的,必然(发生)的','Minor errors are inevitable , but we should try to avoid major ones.','小错误是难免的，但是我们要避免犯大错误。','It is gradually borne in on us that defeat be inevitable.','我们渐渐地认识到失败是不可避免的。'}

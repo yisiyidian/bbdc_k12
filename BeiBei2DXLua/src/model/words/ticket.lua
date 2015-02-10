@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ticket"]={"ticket","['tɪkɪt]","['tɪkɪt]","n.票",'n.票,券,标签|||vt.加标签于,售票','A ticket inspector got on the train.','查票员上了火车。','The policeman ticketed the parked car.','警察给这辆停着的车发出违章处罚通知单。'}

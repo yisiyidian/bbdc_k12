@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["strength"]={"strength","[streŋθ; streŋkθ]","[strɛŋθ]","n.力量",'n.力量,力气,长处,强度','Union is strength.','【谚】团结就是力量。','I have hardly enough strength left to move my feet.','我连移动双脚的力气都几乎没有了。'}

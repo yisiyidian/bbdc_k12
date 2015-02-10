@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heave"]={"heave","[hiːv]","[hiv]","n.举",'n.举,抛,起伏|||v.用力举起,抛出,凸起','heaved a groan of despair.','发出绝望的呻吟','He ||hove|| a chair through the window.','他把椅子从窗户中抛出。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bone"]={"bone","[bəʊn]","[bon]","n.骨",'n.骨,骨骼,核心|||vt.除去骨头,往衣服里加撑条,磨光表面|||vi.努力学习|||adv.非常地,极其地','Some scenes in the play are rather near the bone.','这个剧里有些情节相当猥亵。','Our budget has been pared to the bone.','我们的预算已削减到最低限度。'}

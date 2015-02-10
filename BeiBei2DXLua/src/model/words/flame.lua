@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flame"]={"flame","[fleɪm]","[flem]","n.火焰",'n.火焰,火舌,鲜红色,光辉,恋人,怀念,辱骂信息|||vi.焚烧,爆发,面红,发辱骂信息|||vt.用烟火发信号,用火对待,发辱骂信息','Billows of flame swept through the forest.','熊熊烈火席卷森林。','The evening sky flamed with red and orange.','傍晚天空的颜色是一片火红和橘黄相间。'}

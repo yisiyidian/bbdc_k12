@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["viola"]={"viola","[vaɪ'əʊlə]","[vaɪ'olɚ]","n.中提琴",'n.中提琴|||n.[植]堇菜','The viola is a stringed instrument.','中提琴是一种弦乐器.','She also played the viola in some amateur orchestras.','她也曾在一些业余管弦乐队拉过中提琴。'}

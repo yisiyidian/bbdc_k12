@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rabbi"]={"rabbi","['ræbaɪ]","['ræbai]","n.拉比",'n.拉比，犹太的法学博士,法师','The office or function of a rabbi.','犹太法学博士的身份或职位','The rabbi makes pastoral visits every Tuesday.','犹太教教士每星期二对教友进行访问。'}

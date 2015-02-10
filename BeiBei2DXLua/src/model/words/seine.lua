@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seine"]={"seine","[seɪn]","[sen]","塞纳河(法国北部河流",'塞纳河(法国北部河流,流经巴黎)','||Seine|| is a one of the most famous river in the world.','塞纳河是世界上最著名的河流之一。','Sydney Carton crossed the ||Seine|| again for the lighter streets.','他再度行过了塞纳河，踏入了灯光较为明亮的市街。'}

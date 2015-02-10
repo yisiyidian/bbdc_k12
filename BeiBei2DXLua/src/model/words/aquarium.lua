@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aquarium"]={"aquarium","[ə'kweərɪəm]","[ə'kwɛrɪəm]","n.水族馆",'n.水族馆,养鱼池,玻璃缸','A large aquarium for the study or display of marine life.','海洋水族馆研究或陈列海洋生物的巨大水族馆','Michelle and her friends are at the aquarium in Brooklyn.','Michelle和她的朋友们在参观Brooklyn的水族馆。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sneaking"]={"sneaking","['sniːkɪŋ]","['snikɪŋ]","adj.秘密的",'adj.秘密的,不公开的|||动词sneak的现在分词','Darkness was sneaking up on the explorers. They decided to stop for a night.','夜幕悄悄地笼罩控险者，他们决定停下来过夜。','James love sneaking up on his sister to frighten her.','詹姆斯喜欢溜到妹妹身后吓她一大跳。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nudge"]={"nudge","[nʌdʒ]","[ nʌdʒ ]","vt.轻推",'vt.轻推,引起注意,接近|||vi.轻推','She nudged him with her elbow.','她用肘轻触了他一下.','I nudged her and pointed to the man across the street.','我用肘碰了她一下并指了指街对面的那个男的.'}

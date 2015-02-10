@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["opportune"]={"opportune","['ɒpətjuːn; ,ɒpə'tjuːn]","[ˌɔpə'tun]","adj.合适的",'adj.合适的,适当的','He arrived at the most opportune moment.','他在最适当的时候到达。','I believe that I have arrived at a very opportune moment.','我想我到得正是时候。'}

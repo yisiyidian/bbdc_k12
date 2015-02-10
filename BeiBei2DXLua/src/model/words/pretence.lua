@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pretence"]={"pretence","[prɪ'tens]","[ pri'tens, 'pri:t- ]","n.假装",'n.假装，自命,无事实根据的要求|||=pretense（英）','The boy didn\'t take the exam under the pretence of sickness.','那个男孩藉口生病没有参加考试。','Don\'t listen to his pretences; he is lying.','别听他的种种藉口，他在撒谎。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bid"]={"bid","[bɪd]","[bɪd]","n.出价",'n.出价,邀请竞标|||vt.命令,吩咐,投标,出价|||vi.出价','Several firms have bid for the contract to build the new concert hall.','有几家公司投标，争取建造新音乐厅的合同。','Several companies are bidding for the contract to build the bridge.','有几家公司在投标争取承包建桥工程。'}

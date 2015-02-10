@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["assail"]={"assail","[ə'seɪl]","[ə'sel]","vt.猛烈攻击",'vt.猛烈攻击，言语抨击','All sorts of problems assailed us suddenly.','我们突然遇到各种各样的难题。','He was assailed by his political opponent.','他遭到政敌的攻击。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["widow"]={"widow","['wɪdəʊ]","['wɪdo]","n.寡妇",'n.寡妇,遗孀|||vt.使丧偶','He leaves a widow and two children.','他身後留下一个寡妇和两个孩子.','We had compassion for the poor widow.','我们同情这个可怜的寡妇。'}

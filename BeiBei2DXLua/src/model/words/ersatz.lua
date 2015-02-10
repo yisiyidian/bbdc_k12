@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ersatz"]={"ersatz","['ɜːsæts; 'eə-]","['ɛrsɑts]","adj.代用的",'adj.代用的,假的|||n.代用品','ersatz coffee made mostly of chicory.','主要是用菊苣做成的代用咖啡','...the ersatz Gothic architecture of Yale.','...耶鲁大学的仿哥特式建筑。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inclination"]={"inclination","[ɪnklɪ'neɪʃ(ə)n]","['ɪnklə'neʃən]","n.倾向",'n.倾向,意愿,倾斜度','I have little inclination to listen to you all evening.','我可不愿意一晚上都听你说话.','He has an inclination to stoutness/to be fat.','他有发福[发胖]的趋势.'}

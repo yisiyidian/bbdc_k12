@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tactile"]={"tactile","['tæktaɪl]","['tæktl]","adj.触觉的",'adj.触觉的,有触觉的,能触知的','Her paintings have a very tactile quality.','她的画很有触感。','The thick brushstrokes give the painting a tactile quality.','粘稠的笔触给了这幅画一种厚实的感觉。'}

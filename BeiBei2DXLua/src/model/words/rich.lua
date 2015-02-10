@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rich"]={"rich","[rɪtʃ]","[rɪtʃ]","adj.富有的",'adj.富有的,浓厚的,贵重的,富饶的','He has gained rich experience in these years.','这些年来，他取得了丰富的经验。','The rich man left his son nothing in the will.','那位富翁在遗嘱中什么都没给他儿子留下。'}

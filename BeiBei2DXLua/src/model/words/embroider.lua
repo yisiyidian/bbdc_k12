@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["embroider"]={"embroider","[ɪm'brɒɪdə; em-]","[ɪm'brɔɪdɚ]","v.刺绣",'v.刺绣,镶边,装饰','How do they embroider these pieces so well?','怎么就能绣得这么好啊？','She embroidered flowers on the cushion (in gold thread).','她（用金线）在垫子上绣花.'}

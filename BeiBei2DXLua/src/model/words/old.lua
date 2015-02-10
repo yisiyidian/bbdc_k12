@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["old"]={"old","[əʊld]","[old]","adj.老的",'adj.老的,过时的,某年龄的,以前的,陈旧的,熟悉的,成熟的|||n.古时,某年龄','How old are you?','你多大了？','Don\'t play old tricks!','别玩老一套的把戏了！'}

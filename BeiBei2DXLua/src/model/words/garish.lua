@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["garish"]={"garish","['geərɪʃ]","['ɡɛrɪʃ]","adj.炫耀的",'adj.炫耀的,过分装饰的，耀眼的','This colour is bright but not garish.','这颜色艳而不俗。','They climbed the garish, purple-carpeted stairs.','他们登上铺着俗艳的紫色地毯的楼梯。'}

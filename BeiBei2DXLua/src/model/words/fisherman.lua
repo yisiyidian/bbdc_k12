@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fisherman"]={"fisherman","['fɪʃəmən]","['fɪʃɚmən]","n.渔夫",'n.渔夫，渔船','The fisherman had caught a whopper.','那个打鱼的捕到一条特大的鱼.','The old fisherman is still living.','那位老渔夫还活着。'}

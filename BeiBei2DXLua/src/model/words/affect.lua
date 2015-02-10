@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["affect"]={"affect","[ə'fekt]","[ə'fɛkt]","vt.影响",'vt.影响,作用,感动','He was much affected by the sad news.','这个悲惨的消息使他非常难过。','I had to make important decisions that would affect me for the rest of my life.','我不得不作出将影响我后半生的重大决定。'}

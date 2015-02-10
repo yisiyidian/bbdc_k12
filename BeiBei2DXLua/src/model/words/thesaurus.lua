@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thesaurus"]={"thesaurus","[θɪ'sɔːrəs]","[θɪ'sɔrəs]","n.辞典",'n.同类词汇编，辞典,（知识）宝库','A thesaurus is something like a dictionary.','类语词典与普通词典相仿.','Use a thesaurus when you write to find the word that fits best.','当你找到词语的确切含义的时候，你应当记在一个辞典里。'}

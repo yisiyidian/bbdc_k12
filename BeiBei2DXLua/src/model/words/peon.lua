@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peon"]={"peon","['piːən]","['piən]","n.被强制劳役以还债的工人",'n.被强制劳役以还债的工人,工人','“Those rich politicians don\'t care about peons like us,” she complained.','她抱怨道：“那些富裕的政治家不会体恤我们这样的苦工。”','there are many peon.','这里有很多被强制劳役以还债的工人。'}

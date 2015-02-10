@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["retribution"]={"retribution","[retrɪ'bjuːʃ(ə)n]","[,rɛtrɪ'bjuʃən]","n.报应",'n.报应,惩罚,报复，报偿','People are seeking retribution for the latest terrorist outrages.','人们在设法对恐怖分子最近的暴行进行严惩。','Evil actions will bring retribution.','恶行会有恶报。'}

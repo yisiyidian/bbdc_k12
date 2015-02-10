@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["virtually"]={"virtually","['vɜːtjʊəlɪ]","['vɝtʃʊəli]","adv.几乎",'adv.几乎,实际上','Two independent investigators have reached virtually the same conclusions.','两个调查人员各自做出的结论简直完全一致.','She is so solicitous and persistent that she virtually kills you with kindness.','她非常关心而固执，以致她的善意实际上反而使人感到尴尬。'}

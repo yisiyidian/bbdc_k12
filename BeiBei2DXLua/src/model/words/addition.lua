@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["addition"]={"addition","[ə'dɪʃ(ə)n]","[ə'dɪʃən]","n.增加",'n.增加,附加物,加,加法','In addition to a diet, she pursues various exercises on TV.','节食以外她还随电视做体操。','In addition to an album, I gave him a pen and a pencil.','除了一本照相簿外, 我还给了他一支钢笔和一支铅笔。'}

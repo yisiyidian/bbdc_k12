@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["center"]={"center","['sɛntɚ]","[ 'sentə ]","n.中心",'n.中心,中间,主角,中锋,重点|||vi.居中,聚焦于...|||vt.使集中,放在中央','The President is at the center of a recent scandal over revelation about his financial interests.','总统因近来被揭露涉嫌金融权益问题而成为丑闻的主角。','We decided to skirt round the town center.','我们决心绕过市中心。'}

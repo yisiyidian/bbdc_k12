@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["surmount"]={"surmount","[sə'maʊnt]","[sɚ'maʊnt]","vt.克服",'vt.克服,越过，登上...最高点','I think most of these obstacles can be surmounted.','我认为这些障碍大多数都是可以克服的。','The church steeple surmounts the square.','教堂的尖塔高耸在广场之上。'}

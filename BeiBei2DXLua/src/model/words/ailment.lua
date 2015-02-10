@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ailment"]={"ailment","['eɪlm(ə)nt]","['elmənt]","n.小病",'n.小病,疾病','Cancer is a kind of persistent ailment.','癌症是一种顽症。','He got timely treatment for his ailment.','他的病得到了及时治疗。'}

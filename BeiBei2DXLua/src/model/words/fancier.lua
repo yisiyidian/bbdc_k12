@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fancier"]={"fancier","['fænsɪə]","[ 'fænsiə ]","n.饲养或贩卖动物之人",'n.饲养或贩卖动物之人，有特别爱好的人|||形容词fancy的比较级','He\'s a very keen pigeon fancier.','他非常喜欢鸽子。','I am a fancier of Japaneses.','我是一个日语爱好者。'}

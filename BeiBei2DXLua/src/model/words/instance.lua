@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["instance"]={"instance","['ɪnst(ə)ns]","['ɪnstəns]","n.例子",'n.例子,阶段,情况,诉讼程序|||vt.举例说明','There\'s not a solitary instance of this having happened before.','这样的事以前一次也没有发生过.','The proposal was accepted at the instance of the majority.','这一建议经大多数的请求得到采纳。'}

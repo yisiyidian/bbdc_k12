@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["profane"]={"profane","[prə'feɪn]","[prə'fen]","vt.亵渎",'adj.亵渎的，不敬神的，世俗的|||vt.亵渎,玷污','His action profaned the honour of his country.','他的行为玷污了国家的荣誉。','The soldiers profaned the church.','士兵们玷污了教堂。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["syllabus"]={"syllabus","['sɪləbəs]","['sɪləbəs]","n.摘要",'n.摘要,课程表','`Hamlet\' is on this year\'s English literature syllabus.','《哈姆雷特》是本学年英国文学教学大纲中规定的作品.','The course syllabus consisted mainly of novels by African-American authors, male and female.','该课程的教学大纲主要包括了非裔美国男女作家的小说。'}

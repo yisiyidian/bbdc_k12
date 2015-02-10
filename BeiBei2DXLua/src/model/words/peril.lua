@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peril"]={"peril","['perɪl; -r(ə)l]","['pɛrəl]","n.危险",'n.危险,冒险|||vt.置...于险境,冒险','The ship was in imminent peril of being wrecked.','那条船马上就有失事的危险。','You had better not invest so much money at your peril.','你最好不要冒险投资这么多。'}

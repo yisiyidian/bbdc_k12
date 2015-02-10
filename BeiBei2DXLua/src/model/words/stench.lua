@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stench"]={"stench","[sten(t)ʃ]","[stɛntʃ]","n.臭气",'n.臭气,恶臭','From a steaming stench below, the banks were coated with a slimy mould that stuck to them like glue, disgusting to behold and worse to smell','堤岸上铺着一层从下面来的臭气所凝结成的霉东西，使得眼睛和鼻子都感到憎恶。','Held my nose against the stench.','掩住鼻子使不闻恶臭'}

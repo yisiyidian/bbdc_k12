@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dead"]={"dead","[ded]","[dɛd]","adj.死的",'adj.死的,萧条的,精疲力竭的,用完的,无趣的|||adv.完全地,突然地,直接地|||n.死者,死','Many people say that detente is now a dead letter.','很多人说缓和国际紧张局势的论调已是明日黄花。','It fell with a dead thud.','它砰的一声倒了下来。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["leave"]={"leave","[liːv]","[liv]","v.离开",'v.离开,告假,遗留,听任','The accident ||left|| a scar on her leg.','那次事故後她的腿上留下了伤疤。','I like to leave the best bits till last.','我喜欢把最好的留到最後。'}

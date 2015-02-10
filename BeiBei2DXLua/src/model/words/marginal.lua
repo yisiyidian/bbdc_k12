@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["marginal"]={"marginal","['mɑːdʒɪn(ə)l]","['mɑrdʒɪnl]","adj.边际的",'adj.边际的,末端的,仅以微弱多数获胜的,微小的','marginal notes.','旁注','He won the most marginal seat by only two votes.','他只以两票的微弱优势当选.'}

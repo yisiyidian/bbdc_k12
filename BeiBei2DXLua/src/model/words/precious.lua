@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["precious"]={"precious","['preʃəs]","['prɛʃəs]","adj.宝贵的",'adj.宝贵的,珍贵的,矫揉造作的|||adv.极其地','Pandas are precious creatures.','熊猫是珍贵的动物。','You should make good use of every precious minute to study.','你应很好利用宝贵的每一分钟去学习。'}

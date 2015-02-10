@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sentimentalize"]={"sentimentalize","[sentɪ'mentəlaɪz]","[,sɛntɪ'mɛntəlaɪz]","v.流于感伤",'v.流于感伤,变成多情善感','This book sentimentalizes the suffering of the disabled.','这本书以柔懦的笔调渲染了残疾人的痛苦。','Don\'t sentimentalize when you talk about animals.','谈论动物不必忧形於色.'}

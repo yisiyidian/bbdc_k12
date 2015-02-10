@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nostrum"]={"nostrum","['nɒstrəm]","['nɑstrəm]","n.万能药",'n.万能药,成药,所谓妙方','There is no nostrum in the world.','世上没有万灵药。','She offered her grandmother\'s cold nostrum.','她献出了她祖母治感冒的秘方。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spoken"]={"spoken","['spəʊk(ə)n]","['spokən]","adj.口头的",'adj.口头的,口语的|||动词speak的过去分词形式','You learn a language better if you visit the country where it\'s spoken.','若到说某种语言的国家去, 就能把该种语言学得好些.','You should have spoken up in the meeting.','会谈时你实在应该发言(然而你却没有)。'}

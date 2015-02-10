@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["soliloquy"]={"soliloquy","[sə'lɪləkwɪ]","[sə'lɪləkwi]","n.自言自语",'n.自言自语，（戏剧中）独白','||Soliloquy|| could help release the press from a psychology view.','从心理学角度看，自言自语有助于释放压力。','Mrs Hall had very reluctantly to leave the rest of his soliloquy.','霍尔太太只得怏怏地离开了他，让他一个人去自言自语。'}

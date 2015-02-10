@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gathering"]={"gathering","['gæð(ə)rɪŋ]","['ɡæðərɪŋ]","n.集会",'n.集会,聚集','The movement to change the union\'s constitution is slowly gathering momentum.','修改工会宪章的运动正慢慢加强.','The darkness is gathering.','夜色渐浓.'}

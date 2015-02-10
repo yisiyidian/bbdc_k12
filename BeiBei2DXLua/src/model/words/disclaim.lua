@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disclaim"]={"disclaim","[dɪs'kleɪm]","[dɪs'klem]","v.放弃",'v.放弃,弃权,拒绝','The manufacturer disclaim all responsibility for damage cause by misuse.','厂家拒绝为因为使用不当而导致的损坏负责。','She disclaims any knowledge of her husband\'s business.','她否认对她丈夫的事知情。'}

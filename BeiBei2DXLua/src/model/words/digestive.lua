@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["digestive"]={"digestive","[daɪ'dʒestɪv; dɪ-]","[daɪ'dʒɛstɪv]","adj.消化的",'adj.消化的，有助消化的|||n.消化药','Although he is thin, he has good digestive power.','尽管他很瘦，他的消化能力挺好。','She suffered from digestive trouble.','她患有消化系统疾病。'}

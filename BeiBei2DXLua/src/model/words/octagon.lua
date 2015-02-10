@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["octagon"]={"octagon","['ɒktəg(ə)n]","['ɑktəɡɑn]","n.八边形",'n.八边形,八角形,八角堂','An octagon has eight sides','八边形有八条边','The table is not a regular octagon.','这桌子是不规则八边形的。'}

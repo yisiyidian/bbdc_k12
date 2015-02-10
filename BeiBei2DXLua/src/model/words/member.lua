@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["member"]={"member","['membə]","['mɛmbɚ]","n.成员",'n.成员,会员,部位','That Indian man is a member of the neighbouring tribe.','那个印第安人是临近部落的成员。','She is a member of the Royal College of Nursing.','她是皇家护士协会的会员。'}

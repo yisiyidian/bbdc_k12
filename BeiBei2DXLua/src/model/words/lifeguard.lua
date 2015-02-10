@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lifeguard"]={"lifeguard","['laɪfgɑːd]","['laɪfɡɑrd]","n.救生员",'n.救生员','The lifeguard dived into the sea to save the drowning woman.','救生员跳入海中, 拯救溺水的妇女。','Jack is licking his chops about the lifeguard job he will have at the beach next summer.','杰克想到明年夏天将在海滩作救生员工作, 心里十分高兴。'}

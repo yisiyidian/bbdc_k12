@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vogue"]={"vogue","[vəʊg]","[voɡ]","n.时尚",'n.时尚,流行','Short hair came back into vogue.','短发又开始流行起来了。','His novels were in vogue ten years ago.','他的小说十年前风靡一时。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["waggon"]={"waggon","['wæɡən]","['wægən]","n.（铁路）货车车厢",'n.同wagon1.（铁路）货车车厢，车皮2.四轮载重马车（或牛车）','The enemy attacked our waggon train.','敌人袭击了我们的运货马车队。','The enemy attacked our waggon train.','敌人袭击了我们的运货马车队。'}

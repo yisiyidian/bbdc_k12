@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rot"]={"rot","[rɒt]","[rɑt]","n.腐烂",'n.腐烂,腐蚀,败坏|||v.腐烂,使...枯朽,衰弱','They\'re bound to win.\' ||Rot||! They haven\'t a chance!\'','｀他们一定赢.＇｀胡说! 他们毫无希望!＇','The meat will rot if it isn\'t kept cool.','肉如果不冷藏就会腐败。'}

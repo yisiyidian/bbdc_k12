@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["refine"]={"refine","[rɪ'faɪn]","[rɪ'faɪn]","vt.精炼",'vt.精炼,净化,使优雅|||vi.被提纯,改进','The author is planning to refine on his work of five years ago.','作者打算把他5年前的著作修改得更完美些。','After 30 years, the mature author was able to refine on the work of his youth.','过去30年，这位作家已经成熟，他可以将年轻时候写的作品修改得更完美了。'}

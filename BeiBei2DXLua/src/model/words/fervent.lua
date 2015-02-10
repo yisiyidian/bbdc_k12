@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fervent"]={"fervent","['fɜːv(ə)nt]","['fɝvənt]","adj.热的",'adj.热的,炎热的,热心的','He\'s a fervent believer in free speech.','他是言论自由的狂热信徒。','She has a fervent desire to win.','她有着强烈的获胜欲。'}

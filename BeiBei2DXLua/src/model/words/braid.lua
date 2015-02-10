@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["braid"]={"braid","[breɪd]","[bred]","n.辫子",'n.辫子,穗带|||vt.编织,编造，混合','The general\'s uniform was trimmed with gold braid.','将官的制服饰有金色的穗带.','She braided the neckline, hem and cuffs of the dress.','她用穗带装饰连衣裙的领口、摺边和袖口.'}

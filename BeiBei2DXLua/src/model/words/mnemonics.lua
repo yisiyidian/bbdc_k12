@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mnemonics"]={"mnemonics","[nɪ'mɒnɪks; niː-]","[ni'mɑnɪks]","n.记忆术",'n.记忆术','A COBOL ||mnemonic|| name associated with the console typewriter.','和控制台打字机有关的一种COBOL助记忆名。','||Mnemonics|| is important in learning English.','记忆术对学英语很重要。'}

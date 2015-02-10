@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["some"]={"some","[sʌm; s(ə)m]","[sʌm]","adj.一些",'adj.一些,少许,某一|||adv.大约,在某种程度上|||pron.一些,一部份,若干','If you save some money each week, we can go on holiday.','要是你每星期能存点儿钱，咱们就可以外出度假了。','We took some of the books to the auction.','我们把一部分书拿去拍卖了'}

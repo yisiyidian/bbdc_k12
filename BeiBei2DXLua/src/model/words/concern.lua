@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["concern"]={"concern","[kən'sɜːn]","[kən'sɝn]","vt.关心",'vt.涉及,影响,关心|||n.关心,忧虑,关心的事;公司,企业','How much money I earn is none of your concern.','我挣多少钱与你无关。','This restaurant is a family concern.','这家饭店是由一家人经营的。'}

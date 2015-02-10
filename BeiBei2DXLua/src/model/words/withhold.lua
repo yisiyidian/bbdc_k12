@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["withhold"]={"withhold","[wɪð'həʊld]","[wɪð'hold]","vt.&vi.扣留",'vt.&vi.扣留,保留,抑制','The dam is too weak to withhold the pressure of the rising water.','水坝不够牢固，抵挡不住水上涨的压力。','How shall I withhold from tears when we part?','我们离别时我如何忍得住眼泪呢？'}

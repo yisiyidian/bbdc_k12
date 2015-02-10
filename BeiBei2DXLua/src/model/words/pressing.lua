@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pressing"]={"pressing","['presɪŋ]","['prɛsɪŋ]","adj.紧迫的",'adj.紧迫的,紧急的,切实的|||vbl.压迫','She is still pressing her claim for compensation.','她仍然坚持要求赔偿.','The crowds were pressing against the barriers.','人群向著栅栏推挤.'}

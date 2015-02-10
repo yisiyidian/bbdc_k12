@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["welter"]={"welter","['weltə]","['wɛltɚ]","vi.翻滚",'vi.翻滚；沉溺；起伏|||n.混乱；翻滚；起伏|||adj.重量级骑手的','Mother told her son not to welter in pleasure and idleness.','妈妈对他的儿子说不要沉溺于享乐和闲逸之中。','Out of the welter of dust, the truck came into the village.','卡车在飞扬的尘土中驶进村子。'}

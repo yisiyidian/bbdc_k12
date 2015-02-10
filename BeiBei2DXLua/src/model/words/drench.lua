@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drench"]={"drench","[dren(t)ʃ]","[drɛntʃ]","n.浸湿",'n.浸湿，有毒药剂|||vt.灌药，湿透，过分沉溺','A heavy shower drench the campers.','一阵骤雨把露营者都淋湿了。','We were caught in the storm and got drenched.','我们遇上大雨全都被浇透了。'}

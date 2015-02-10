@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reproof"]={"reproof","[rɪ'pruːf]","[rɪ'pruf]","n.斥责",'n.斥责,责备','Mild, kind, yet earnest reproof.','告诫，劝谏温和的，和善的，但诚挚的谴责','Impatient of reproof, he left his parents and went away.','忍受不了责难，他离开父母出走了。'}

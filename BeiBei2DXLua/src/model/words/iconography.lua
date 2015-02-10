@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["iconography"]={"iconography","[,aɪkə'nɒgrəfɪ]","['aɪkə'nɑgrəfi]","n.图解",'n.图解,图解书,图标研究，肖像学','iconography','图解,图解书,肖像研究','An accessory is merely a piece of iconography used to express individual identity.','这些配件不过是装饰用途,用来表明个性的。'}

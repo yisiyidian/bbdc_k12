@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["automaton"]={"automaton","[ɔː'tɒmət(ə)n]","[ɔ'tɑmətən]","n.自动机器",'n.自动机器,机器人','He handled it with the preciseness of an automaton.','他一丝不苟地处理了这件事。','I get sick of being thought of as a political automaton.','我讨厌被看作政治机器。'}

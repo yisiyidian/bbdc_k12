@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subvert"]={"subvert","[səb'vɜːt]","[sʌb'vɝt]","vt.推翻",'vt.推翻,颠覆,毁减，使道德败坏或不忠','A plot or scheme intended to subvert another plot.','反计策意在破坏另一计谋的计策或计划','schemes to subvert the liberties of a great community','“一个意欲摧毁大共同体的自由的阴谋”'}

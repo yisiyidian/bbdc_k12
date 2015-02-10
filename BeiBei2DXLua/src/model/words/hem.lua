@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hem"]={"hem","[hem]","[hɛm]","n.边缘",'n.边缘|||v.缝边,包围,关闭','This town is not worthy to kiss the hem of your garment.','这个镇子上的其他人不如你的一个小手指头.','The hem on her skirt needs sewing.','她裙子上的褶边需要缝一缝.'}

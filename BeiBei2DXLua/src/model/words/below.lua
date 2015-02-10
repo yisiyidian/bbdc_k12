@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["below"]={"below","[bɪ'ləʊ]","[bɪ'lo]","adv.在下面",'adv.在下面，到下面|||prep.（表示位置）在…下面；（表示状态）在…掩饰之下；（表示比较）不及；低于','The information below was compiled by our correspondent.','以下资料是我们的记者收集整理的。','We looked down from the mountain to the valley below.','我们从山上俯瞰下面的山谷。'}

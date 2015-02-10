@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["yummy"]={"yummy","['jʌmɪ]","['jʌmi]","adj.美味的",'adj.舒适的,愉快的,美味的','Chocolate cake for tea? How yummy!','有巧克力蛋糕当茶点? 多好吃啊!','I\'ll bet they have yummy ice cream.','我打赌他们有好吃的冰激淋。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["furbish"]={"furbish","['fɜːbɪʃ]","['fɝbɪʃ]","vt.磨光",'vt.磨光,刷新','I wish to furbish up the Russian I learnt at college.','我要重温一下我在大学里学过的俄语。','You need to furbish up you French before you go to France.','去法国前，你必须把法语温习一下。'}

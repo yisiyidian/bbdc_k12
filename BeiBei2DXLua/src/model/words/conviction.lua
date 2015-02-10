@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conviction"]={"conviction","[kən'vɪkʃ(ə)n]","[kən'vɪkʃən]","n.定罪",'n.定罪,信服,坚信','I speak in the full conviction that I will win.','我深信我会赢。','They have no previous convictions.','他们没有前科。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spontaneous"]={"spontaneous","[spɒn'teɪnɪəs]","[spɑn'tenɪəs]","adj.自发的",'adj.自发的,自然产生的','||Spontaneous|| fellowship and sympathy among a number of people.','本能的友情一群人自然产生的友谊和同情','The spontaneous combustion of the oil-soaked rags caused the barn to catch fire.','油布碎片的自燃使谷仓起火。'}

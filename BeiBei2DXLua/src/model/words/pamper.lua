@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pamper"]={"pamper","['pæmpə]","['pæmpɚ]","v.放纵",'v.放纵,使吃饱,使过量','Don\'t pamper your little daughter.','别把你的小女儿娇惯坏了。','The pampered cat refused to eat food without meat.','这只被娇惯的猫拒绝吃没有肉的饭。'}

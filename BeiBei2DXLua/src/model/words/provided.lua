@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["provided"]={"provided","[prə'vaɪdɪd]","[prə'vaɪdɪd]","conj.假如",'conj.假如,若是|||adj.预备好的,由...供给的','Many social services are still provided by voluntary societies in our city.','在我们的城市，许多社会服务仍然是有志愿团体提供的。','The newspaper article provided him with fuel for his speech.','报纸上的这篇文章为他的演讲提供了启发。'}

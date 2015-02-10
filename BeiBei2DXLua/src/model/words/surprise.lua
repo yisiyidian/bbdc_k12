@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["surprise"]={"surprise","[sə'praɪz]","[sɚ'praɪz]","vt.&vi.使惊奇",'n.惊奇,使惊讶的人或事物|||vt.&vi.使惊奇,突击,逮捕','By firing a few shots we can surprise them into revealing their positions.','我们冷不防打几枪就能让他们暴露他们的位置。','What a surprise!','真是出人意外的事!'}

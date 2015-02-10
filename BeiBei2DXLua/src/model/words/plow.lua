@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plow"]={"plow","[plaʊ]","[ plau ]","n.犁",'n.犁,耕地|||vt.耕犁,|||vi.用犁,费力前进,辛苦进行','The ground was plowed and planted with corn.','地翻耕后种上了玉米。','The farmer is at the plow.','那个农民在种田。'}

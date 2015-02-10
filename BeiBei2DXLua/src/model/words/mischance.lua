@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mischance"]={"mischance","[mɪs'tʃɑːns]","[,mɪs'tʃæns]","n.不幸",'n.不幸,灾难','A series of mischance happened.','一连串不幸的事发生了。','I lost your file by pure mischance.','我把你的文件丢了，纯粹是碰上倒霉事了。'}

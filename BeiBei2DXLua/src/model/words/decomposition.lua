@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decomposition"]={"decomposition","[,diːkɒmpə'zɪʃn]","[,dikɑmpə'zɪʃən]","n.分解",'n.分解,腐败,变质','The body has begun to decomposition','尸体已开始腐烂。','||Decomposition|| is a common scenery.','腐败是正常现象。'}

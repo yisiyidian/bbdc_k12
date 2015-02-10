@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["relay"]={"relay","['riːleɪ]","[rɪ'lɛi]","vt.中继",'vt.中继,用继电器控制,接替,传递|||n.替班人,接力赛,继电器,传递','The anchor man in a relay team runs last.','接力队中的主力跑最後一棒。','Messengers will relay your letters.','邮递员将接转你的信件.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["servitude"]={"servitude","['sɜːvɪtjuːd]","['sɝvətud]","n.苦役",'n.苦役,奴役|||n.[法]役劝','Such ill-paid farm work is a form of servitude.','这种农活儿工资低得可怜，简直是苦役。','The criminal was sentenced to five years\' servitude.','这犯人被判处五年劳役。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["complex"]={"complex","['kɒmpleks]","[kəm'plɛks; 'kɑm,plɛks]","adj.复杂的",'adj.复杂的|||n.复合体','a complex carbohydrate.','碳水化合物','The army is an extremely complex organism.','军队是极其复杂的组织。'}

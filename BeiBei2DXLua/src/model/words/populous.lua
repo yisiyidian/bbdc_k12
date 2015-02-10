@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["populous"]={"populous","['pɒpjʊləs]","['pɑpjələs]","adj.人口多的",'adj.人口多的,人口稠密的','We live in a populous area near the coast.','我们生活在沿海人口稠密的地区。','London is the most populous area of Britain.','伦敦是英国人口最稠密的地区'}

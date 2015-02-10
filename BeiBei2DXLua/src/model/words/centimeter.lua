@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["centimeter"]={"centimeter","[ˈsentɪmiːtə(r)]","['sɛntə,mitɚ]","n.厘米",'n.厘米，公分','The boy is 150 centimeters tall.','这个男孩有150厘米高。','Human brains have more than 100 million cells per cubic centimeter.','人脑每立方厘米有一亿多个细胞.'}

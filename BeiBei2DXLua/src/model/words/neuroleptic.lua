@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["neuroleptic"]={"neuroleptic","[,njʊərə(ʊ)'leptɪk]","[,nʊrə'lɛptɪk; ,njʊrə'lɛptɪk]","n.精神抑制药",'n.精神抑制药,安定药','neuroleptic drug ','精神病药物','When we used this technique with different neuroleptic drugs, we were able to compare the relative effectiveness of the various compounds.','当我们把这一方法用于不同的神经松驰剂时，我们便能够比较各种化合物的相对效力。'}

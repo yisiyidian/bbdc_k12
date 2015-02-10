@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["genie"]={"genie","['dʒiːnɪ]","[ 'dʒini ]","n.妖怪",'n.妖怪,鬼','||Genie|| is believed by Muslims.','穆斯林相信（这世上有）妖怪。','do you believe i saw a genie','你信我看到鬼了吗'}

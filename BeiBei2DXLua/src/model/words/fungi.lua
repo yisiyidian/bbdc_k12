@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fungi"]={"fungi","['fʌndʒaɪ]","['fʌndʒaɪ]","n.菌类",'n.菌类,蘑菇','The lawn was covered with fungi.','草地上到处都是蘑菇。','We should eat more fungi because they are nutritious.','我们应该多吃蘑菇，因为它们很有营养。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["professional"]={"professional","[prə'feʃ(ə)n(ə)l]","[prə'fɛʃənl]","adj.职业(上)的",'adj.职业(上)的,专业的|||n.专业人员','Don\'t wear those clothes to work; try to look more professional!','别穿这些衣服去工作，要穿得象个专业人员的样子。','That doctor has been accused of professional misconduct.','那位医生被指控违反医德。'}

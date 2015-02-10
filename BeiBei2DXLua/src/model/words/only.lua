@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["only"]={"only","['əʊnlɪ]","['onli]","adv.仅仅",'adj.最好的,唯一的,出众的|||adv.仅仅,只有,专门地,唯一地,刚才|||conj.除非,但是,然而,毕竟','I shall be only too pleased to get home.','我要回到家里就非常高兴。','The book is likely to be useful, only it\'s rather expensive.','这本书可能有用，只是相当贵。'}

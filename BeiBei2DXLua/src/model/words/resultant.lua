@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resultant"]={"resultant","[rɪ'zʌlt(ə)nt]","[rɪ'zʌltənt]","adj.作为结果的",'adj.作为结果的，合成的|||n.结果,产物，[数学]合矢量，结式','The resultant material was to be pored over by experts in psychology.','这样的一份材料要由心理学专家精心研究.','The viscous drags is equal to the resultant force.','粘阻力等于合力.'}

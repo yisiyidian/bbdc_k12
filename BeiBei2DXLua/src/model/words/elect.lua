@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["elect"]={"elect","[ɪ'lekt]","[ɪ'lɛkt]","v.选举",'n.当选人,被选的人,上帝的选民|||adj.被选的,选出的|||v.选举,选择','Voters always elect the candidate most tuned in to their needs.','选民总是选那些最能体察其疾苦的候选人.','They elected him chairman.','他们选他做主席。'}

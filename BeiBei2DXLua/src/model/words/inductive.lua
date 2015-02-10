@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inductive"]={"inductive","[ɪn'dʌktɪv]","[ɪn'dʌktɪv]","adj.归纳的",'adj.归纳的,动人的|||adj.[电]感应的','The myth of scientific method is that it is inductive.','科学方法的神秘就在于它的归纳性。','inductive','归纳的，动人的，感应的'}

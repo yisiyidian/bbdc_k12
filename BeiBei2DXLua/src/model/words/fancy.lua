@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fancy"]={"fancy","['fænsɪ]","['fænsi]","n.想像力",'n.想像力,幻想,喜好,爱|||adj.想像的,时髦的,华丽装饰的,奢侈的,技巧的|||vt.想象,自认为,喜好','I don\'t fancy going all that way in such bad weather.','我不喜欢在这样的坏天气里一直这么走着。','The painting took his fancy, so he bought it.','这幅画被他看中了，所以他就把他买了下来。'}

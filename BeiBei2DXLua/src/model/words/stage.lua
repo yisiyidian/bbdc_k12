@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stage"]={"stage","[steɪdʒ]","[stedʒ]","n.阶段",'n.阶段,舞台,驿站|||v.上演,表演,乘驿车旅行','The disease is still in its primary stage.','这疾病仍然在初发阶段。','Negotiations were at a crucial stage.','谈判正处于一个关键的阶段。'}

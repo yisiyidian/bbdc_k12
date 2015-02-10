@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["football"]={"football","['fʊtbɔːl]","['fʊtbɔl]","n.足球",'n.足球|||n.橄榄球','Our team has won the football match.','我们队赢得了足球赛。','The issue of tax reform became a political football.','税制改革这一问题成为备受人们争论的话题'}

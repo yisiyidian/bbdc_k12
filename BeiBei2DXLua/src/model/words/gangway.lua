@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gangway"]={"gangway","['gæŋweɪ]","['ɡæŋwe]","n.(上下船的)跳板",'n.(上下船的)跳板，（剧场﹑音乐厅等的）座间甬道,过道','Seeing him out of the plane and down the gangway gave me a lump in my throat.','看着他从飞机中出来，走下舷梯，我激动得哽咽起来。','Please clear the gangway, thanks for your cooperation.','请别堵住通道，谢谢各位合作。'}

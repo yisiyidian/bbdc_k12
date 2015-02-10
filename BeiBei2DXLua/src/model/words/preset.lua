@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["preset"]={"preset","[priː'set]","[,pri'sɛt]","vt.预先装置",'vt.预先装置，事先调整','Bake the cake in a preset oven.','在预先设置好的烤箱中烤蛋糕。','||Preset|| a microwave oven.','预先调节好微波炉'}

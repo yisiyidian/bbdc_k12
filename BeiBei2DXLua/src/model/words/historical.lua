@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["historical"]={"historical","[hɪ'stɒrɪk(ə)l]","[hɪ'stɔrɪkl]","adj.与历史有关的",'adj.与历史有关的','People wore historical costumes for the parade.','人们穿著古装参加游行.','The historical aspect formed the main theme of her essay.','她的论文的主题是由历史观点贯穿起来的.'}

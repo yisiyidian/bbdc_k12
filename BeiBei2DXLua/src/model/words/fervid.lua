@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fervid"]={"fervid","['fɜːvɪd]","['fɝvɪd]","adj.炽热的",'adj.炽热的，热情的','He was a ready scholar as you are but more fervid and impatient.','他是一个聪明的学者，跟你一样，不过更加热情而缺乏耐心。','He is a handsome and fervid young man!','他是一个俊朗而热情的年轻人！'}

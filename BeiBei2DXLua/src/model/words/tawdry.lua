@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tawdry"]={"tawdry","['tɔːdrɪ]","['tɔdri]","adj.廉价而俗丽的",'adj.廉价而俗丽的,非常华丽的|||n.廉价而俗丽之物','She wore a tawdry gown and appeared in the public.','她穿着俗艳的的长袍出现在公共场合。','The main street has assumed its tawdry prosperity with discomfort.','繁华的大街透着一股不安的气氛。'}

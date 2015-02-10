@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["saving"]={"saving","['seɪvɪŋ]","['sevɪŋ]","n.节约",'n.节约，挽救|||（复数)savings:储蓄金，存款|||prep.除...之外|||conj.除了，除去|||save的现在分词','||Saving|| is getting.','节约等于增加收入.','He ran the risk of losing his own life in saving the boy from drowning.','他冒着生命危险把孩子从水里救了出来。'}

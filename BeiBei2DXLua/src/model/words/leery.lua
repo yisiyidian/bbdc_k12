@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["leery"]={"leery","['lɪərɪ]","[ 'liəri ]","adj.机敏的",'adj.机敏的,细心的','You\'d better go through all terms in the contract in leery before you sign it.','在签署合同之前，你最好细心地把每一项条款过一遍。','They are always leery of foreigners.','他们对外国人总是不放心。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["generator"]={"generator","['dʒenəreɪtə]","['dʒɛnəretɚ]","n.发电机",'n.发电机,发生器','The generator shuts off automatically.','这台发动机能自动停止运转。','None of us had ever set eyes on a generator before.','我们过去谁也没看见过发电机。'}

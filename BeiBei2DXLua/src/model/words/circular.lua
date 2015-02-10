@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["circular"]={"circular","['sɜːkjʊlə]","['sɝkjəlɚ]","adj.循环的",'adj.循环的,圆形的|||n.传单,通报','We can compute the circular area with radius.','我们能用半径计算出圆的面积。','A device for protection from the weather consisting of a collapsible, usually circular canopy mounted on a central rod.','雨伞用来防风雨装置，由某在一根中心柱上的可折收的，经常是圆形的罩蓬构成'}

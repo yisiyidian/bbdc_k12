@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["maths"]={"maths","[mæθs]","[mæθs]","n.数学",'n.数学|||=mathematics（英）','She majored in maths and physics at university.','她在大学主修数学和物理.','All the girls are swooning over the new maths teacher.','所有的女同学都迷上了那位新来的数学教师。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["porridge"]={"porridge","['pɒrɪdʒ]","['pɔrɪdʒ]","n.粥",'n.粥,麦片粥','The child has eaten three platefuls of porridge!','这孩子已经喝了三盘粥了!','Is/Are porridge oats on the breakfast menu?','早餐的食谱上有燕麦粥吗?'}

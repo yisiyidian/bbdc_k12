@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["city"]={"city","['sɪtɪ]","['sɪti]","n.城市",'n.城市','The parks of this city are famous for their ornate fountains.','这个城市的公园以其华丽的喷泉而著名。','The city is held by the enemy.','这座城市已被敌人占领。'}

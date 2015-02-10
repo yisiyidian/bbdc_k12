@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["invoice"]={"invoice","['ɪnvɒɪs]","['ɪnvɔɪs]","n.发票",'n.发票,发货单,货物|||vt.开票,寄发票,开清单','The goods or services itemized in an invoice.','清单项目清单上逐条列出的货物或服务','The invoice was for 35 cif.','发票为到岸价35英镑.'}

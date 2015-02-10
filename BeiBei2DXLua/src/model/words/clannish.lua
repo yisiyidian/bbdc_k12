@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clannish"]={"clannish","['klænɪʃ]","['klænɪʃ]","adj.排他的",'adj.排他的,门户之见的','They were a clannish lot, not given to welcoming strangers.','他们是一伙喜好扎堆的人，不太欢迎陌生人。','She is a clannish guy.','她是一个胳膊者王里拐的家伙。'}

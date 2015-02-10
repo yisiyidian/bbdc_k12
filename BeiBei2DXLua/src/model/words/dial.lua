@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dial"]={"dial","['daɪəl]","[ 'daiəl, dail ]","vi.拨号",'n.刻度盘,针面,转盘|||vt.用仪表测量，操作仪表|||vi.拨号，用仪表测量|||[计算机]拨号','The dial records very slight variations in pressure.','刻度盘显示出压力有微小变化.','What does the scale, dial, gauge, etc read?','刻度尺、 刻度盘、 量规等显示的读数是多少?'}

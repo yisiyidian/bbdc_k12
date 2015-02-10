@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indomitable"]={"indomitable","[ɪn'dɒmɪtəb(ə)l]","[ɪn'dɑmɪtəbl]","adj.不屈不挠的",'adj.不屈不挠的','He has indomitable will.','他意志坚强。','I really admire her indomitable optimism and can-do spirit.','我实在佩服她不屈不挠的乐观态度和苦干的精神。'}

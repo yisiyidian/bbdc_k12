@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["benzene"]={"benzene","['benziːn]","['bɛnzin]","n.[化]苯",'n.[化]苯','Having a ring composed exclusively of carbon atoms, as benzene.','碳环的有一个仅由碳原子组成的环的，如苯','||Benzene|| ring','苯环'}

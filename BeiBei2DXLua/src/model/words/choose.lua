@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["choose"]={"choose","[tʃuːz]","[tʃuz]","vt.&vi.选择",'vt.&vi.选择','Free will makes us able to choose our way of life.','自由的意志使我们可以选择自己的生活方式。','He ||chose|| not to go home until later.','他决定晚一点才回家。'}

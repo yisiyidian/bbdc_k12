@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ozone"]={"ozone","['əʊzəʊn]","['ozon]","n.臭氧",'n.臭氧,新鲜空气','Just breathe in that ozone!','吸吸那种新鲜空气吧!','The pollution had destroyed ozone layer and caused many changes in weather.','污染破坏了臭氧层，并引起了许多天气变化。'}

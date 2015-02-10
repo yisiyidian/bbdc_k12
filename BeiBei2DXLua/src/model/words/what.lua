@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["what"]={"what","[wɒt]","[wɑt]","pron.什么",'pron.什么,...的事情,无论什么|||adv.什么,怎么|||adj.什么,任何','||What|| color is your dress?','你的衣服是什么颜色？','She certainly knows what\'s what.','她可知道都是怎么回事。'}

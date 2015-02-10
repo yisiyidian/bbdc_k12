@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["junction"]={"junction","['dʒʌŋ(k)ʃ(ə)n]","['dʒʌŋkʃən]","n.联接",'n.联接,会合处,交叉点','The map is in error regarding the junction.','这张地图在这个交点上是绘制错了。','Slack off/up as youapproach the junction.','接近交叉口时要减速.'}

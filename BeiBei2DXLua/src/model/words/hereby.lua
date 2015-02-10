@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hereby"]={"hereby","[hɪə'baɪ]","[,hɪr'baɪ]","adv.因此",'adv.因此,据此','I hereby declare her elected.','我特此宣布她已经当选。','I hereby consent for my son/daughter to take this personality test.','我在此同意我儿子/女儿接受此个性测验。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cultural"]={"cultural","['kʌltʃ(ə)r(ə)l]","['kʌltʃərəl]","adj.文化的",'adj.文化的,和养动植物有关的','By definition the capital is the political and cultural center of a country.','根据定义,首都是一个国家的政治文化中心。','Many unearthed cultural relics were exhibited at the museum.','博物馆展出了许多出土文物。'}

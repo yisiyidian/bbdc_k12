@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eminence"]={"eminence","['emɪnəns]","['ɛmɪnəns]","n.显赫",'n.显赫,崇高,高处','But, your eminence, what he said was a lie.','但主教大人，他在说谎。','He finally won the eminence as a scientist.','他最终成为卓越的科学家。'}

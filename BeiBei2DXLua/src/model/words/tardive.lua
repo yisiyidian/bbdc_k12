@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tardive"]={"tardive","['tɑ:div]","[ 'tɑ:div ]","adj.迟缓的",'adj.迟缓的','a patient with schizophrenia with tardive dyskinesia (TD)','精神分裂症伴迟发性运动障碍患者的病人','We developed an experimental animal model of tardive dyskinesia simply by treating rats with neuroleptics.','我们仅仅通过对大鼠施用神经松驰剂，就搞出了一个迟发性运动障碍的实验动物模型。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reincarnate"]={"reincarnate","[,riːɪn'kɑːneɪt]","[,riɪn'kɑrnet]","vt.使化身",'vt.使化身,转生','...their belief that human souls were reincarnated in the bodies of turtles.','...他们认为人的灵魂转世投胎到海龟身体里的信仰。','reincarnated spirit','转世灵魂'}

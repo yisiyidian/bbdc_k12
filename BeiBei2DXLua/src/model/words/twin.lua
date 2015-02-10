@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["twin"]={"twin","[twɪn]","[twɪn]","n.孪生儿之一",'n.孪生儿之一，双胞胎之一；两个相像的人或物之一；孪晶；双人床|||vt.尤用于英国)使结成姊妹城市；使（两人或两事物）紧密结合；使偶合；使相连|||adj.成对的；成双的；双重的；双联的','I always confounded him with his twin brother.','我总分不清他和他的孪生兄弟。','They are motivated by the twin goads of punishment and reward.','他们受赏与罚的双重因素所激励。'}

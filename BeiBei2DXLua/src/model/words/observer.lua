@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["observer"]={"observer","[əb'zɜːvə]","[əb'zɝvɚ]","n.观察者",'n.观察者','He is an acute observer.','他是个敏锐的观察家.','A casual observer would have taken them to be three men out for an evening stroll.','一位不经意的目击者会认为他们是晚上出来闲逛的3个男人。'}

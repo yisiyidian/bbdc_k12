@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["secondary"]={"secondary","['sek(ə)nd(ə)rɪ]","['sɛkəndɛri]","adj.中级的",'adj.中级的,中等的,次要的|||n.次要位置,副手','He works in a secondary school.','他在一所中学工作。','All other considerations are secondary to his safety.','现在首先要考虑的是他的安全，其他事都是次要的。'}

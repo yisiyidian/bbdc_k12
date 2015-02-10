@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spook"]={"spook","[spuːk]","[ spu:k ]","n.幽灵",'n.幽灵','Something in the bushes spooked her horse.','矮树林里有东西惊了她的马.','Are you afraid of spooks?','你怕不怕鬼?'}

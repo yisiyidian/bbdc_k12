@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["triangular"]={"triangular","[traɪ'æŋgjʊlə]","[traɪ'æŋgjəlɚ]","adj.三角形的",'adj.三角形的,以三角形为底的,三方的,(感情上)三角关系的','a triangular pyramid.','三角形底面的金字塔','This island is triangular in shape.','这个岛的外形呈三角形。'}

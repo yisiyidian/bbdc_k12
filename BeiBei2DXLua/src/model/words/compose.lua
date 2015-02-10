@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compose"]={"compose","[kəm'pəʊz]","[kəm'poz]","vt.组成",'vt.组成,写作,作曲,使镇静|||vi.创作','He was ||composing|| at the piano at the age of seven.','他7岁时就会钢琴作曲。','Water is composed of hydrogen and oxygen.','水由氢和氧组成。'}

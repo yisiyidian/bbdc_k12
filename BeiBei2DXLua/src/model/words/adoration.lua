@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adoration"]={"adoration","[ædə'reɪʃ(ə)n]","[,ædə'reʃən]","n.崇拜",'n.崇拜,爱慕','I filled with adoration.','我充满了敬意。','They knelt in adoration of their gods.','他们跪拜诸神。'}

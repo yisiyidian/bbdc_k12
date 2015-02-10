@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flattery"]={"flattery","['flæt(ə)rɪ]","['flætəri]","n.谄媚",'n.谄媚,阿谀,巴结','I find his flattery odious.','我觉得他的谀词十分讨厌.','Cut out the soft soap; flattery will get you nowhere!','别花言巧语了, 吹捧是不会使你捞到好处的。'}

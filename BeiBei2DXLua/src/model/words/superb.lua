@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["superb"]={"superb","[suː'pɜːb; sjuː-]","[su'pɝb]","adj.极好的",'adj.极好的','The goalkeeper brought off a superb save.','守门员漂亮地救出了险球.','Thompson turned in a superb performance to win the decathlon.','汤普森在十项全能比赛中表现十分出色.'}

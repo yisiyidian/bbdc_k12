@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["surplus"]={"surplus","['sɜːpləs]","['sɝpləs]","adj.多余的",'adj.多余的,过剩的|||n.过剩,剩余物,盈余,顺差','Mexico has a large surplus of oil.','墨西哥有大量过剩的石油。','Brazil has a big surplus of coffee.','巴西有很多剩余咖啡。'}

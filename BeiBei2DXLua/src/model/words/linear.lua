@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["linear"]={"linear","['lɪnɪə]","['lɪnɪɚ]","adj.直线的",'adj.直线的，线性的，长度的','The number of units of useful information contained within a linear dimension.','信息密度在一个线性维度内有用的信息单元的个数','a linear leaf.','长叶片'}

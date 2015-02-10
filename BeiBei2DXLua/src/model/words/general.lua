@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["general"]={"general","['dʒen(ə)r(ə)l]","['dʒɛnrəl]","adj.一般的",'n.一般,将军,大体|||adj.一般的,普遍的|||v.指挥,作...将军','The general practice in such cases is to apply for a court order.','处理这类案件的常规做法是请求法院发出指令。','Napoleon was a great general.','拿破仑是一位伟大的将领。'}

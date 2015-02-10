@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["toilet"]={"toilet","['tɒɪlɪt]","['tɔɪlət]","n.厕所",'n.厕所,卫生间|||n.梳洗打扮,礼服,创口洗涤|||vi.打扮,使用厕所|||vt.穿衣服,帮助孩子或病人使用厕所','He washed his hands with a toilet soap.','他用香皂洗手。','I must buy some toilet requisites.','我必须买些卫生间必需品。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["altruism"]={"altruism","['æltrʊɪz(ə)m]","['æltruɪzəm]","n.利他主义",'n.利他主义,利他','Fortunately, volunteers are not motivated by self-interest, but by altruism.','幸运的是，志愿者们不是被自身利益而是被利他主义推动。','altruism','利他主义'}

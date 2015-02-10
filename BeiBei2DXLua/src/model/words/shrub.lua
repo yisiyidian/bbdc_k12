@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shrub"]={"shrub","[ʃrʌb]","[ʃrʌb]","n.灌木",'n.灌木|||n.果汁甜酒','There is a small evergreen shrub on the hillside.','山腰上有一小块常绿灌木丛.','In fact the shrub had barely been cut back at all.','实际上,灌木丛几乎根本就没修剪过.'}

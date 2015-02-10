@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fabric"]={"fabric","['fæbrɪk]","['fæbrɪk]","n.织物",'n.织物,布,结构','The fabric was folded widthways.','这块织物是沿宽边摺起的.','This fabric has a tear in it.','这织物上有个破洞.'}

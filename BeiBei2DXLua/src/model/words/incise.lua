@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incise"]={"incise","[ɪn'saɪz]","[ɪn'saɪz]","vt.切入",'vt.切入，切割，雕刻','a set of chairs incised with Grecian scrolls.','一套雕有古希腊涡卷形装饰花纹的椅子','His name was incised on the stone.','他的名字刻在了石头上。'}

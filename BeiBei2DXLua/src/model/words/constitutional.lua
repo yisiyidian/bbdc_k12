@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["constitutional"]={"constitutional","[kɒnstɪ'tjuːʃ(ə)n(ə)l]","[,kɑnstə'tuʃənl]","adj.组织的",'adj.组织的,立宪的,体质的','Britain is a constitutional monarchy.','英国是君主立宪制国家。','a constitutional amendment.','宪法修正案'}

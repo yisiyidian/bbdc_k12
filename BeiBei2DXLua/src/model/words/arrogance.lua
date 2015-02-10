@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arrogance"]={"arrogance","['ærəg(ə)ns]","['ærəgəns]","n.傲慢",'n.傲慢,自大','At times the arrogance of those in power is quite blatant.','有时那些当权者颇为傲慢嚣张。','Her arrogance has disenchanted many of her former admirers.','她为人高傲，许多追求过她的人都已不再迷恋她了。'}

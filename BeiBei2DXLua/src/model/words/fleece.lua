@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fleece"]={"fleece","[fliːs]","[flis]","n.羊毛",'n.羊毛,羊毛状之物','Some local shops are really ||fleecing|| the holiday-makers.','本地的一些商店简直是在敲诈来度假的人。','I have a carpet made of fleece.','我有一张羊毛毯。'}

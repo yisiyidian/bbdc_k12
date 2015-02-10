@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sponsor"]={"sponsor","['spɒnsə]","['spɑnsɚ]","n.赞助者",'n.保证人,赞助者|||v.发起,赞助','It is a pity that he doesn\'t have enough money to sponsor the project.','遗憾的是他没有足够的钱来支持这项计划。','My attempts to interest a sponsor missed fire several times, but I succeeded eventually.','我几次试图引起一个赞助人的兴趣，都没有达到目的，但最后还是成功了。'}

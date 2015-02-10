@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rehabilitate"]={"rehabilitate","[riːhə'bɪlɪteɪt]","[,riə'bɪlɪtet]","vt.使恢复",'vt.改造,使康复,使恢复（名誉等）','Considerable efforts have been made to rehabilitate patients who have suffered in this way.','为帮助遭受这种病痛折磨的病人康复付出了巨大努力。','He used exercise programmes to rehabilitate the patients.','他采用体育锻炼疗法使患者恢复健康。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["microwave"]={"microwave","['maɪkrə(ʊ)weɪv]","['maɪkrə'wev]","n.微波",'n.微波,微波炉|||vt.用微波炉加热','Preset a microwave oven.','预先调节好微波炉','These variations caused minute differences in the temperature of the early universe, which we can see in the cosmic microwave background.','这些变化导致早期宇宙的温度瞬间不同，这些我们能在宇宙的微波背景上看出来。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wile"]={"wile","[waɪl]","[ wail ]","n.诡计",'n.诡计，阴谋,欺骗|||vt.欺骗,诱惑,消遣','The fox\'s wiles will never enter the lion\'s head.','狐狸的诡计永远进不了狮子的头脑。','All her wiles were not enough to persuade them to sell the villa.','她花言巧语也未能打动他们卖掉别墅。'}

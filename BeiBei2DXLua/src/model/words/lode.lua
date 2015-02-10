@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lode"]={"lode","[ləʊd]","[lod]","n.水道",'n.水道，矿脉,丰富的来源或供给','They are searching the lode of gold for several years.','他们花了几年的时间找寻金矿。','Her own experiences have provided her with a mother lode of material for her songs.','她自身的经历为她的歌曲提供了取之不尽的素材。'}

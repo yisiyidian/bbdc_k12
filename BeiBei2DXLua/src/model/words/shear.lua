@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shear"]={"shear","[ʃɪə]","[ʃɪr]","n.修剪",'n.修剪,剪下的东西,羊的一岁|||vt.剪掉,割,剥夺|||vi.修剪,切割,剥夺,穿越','With a few quick snips of the shears he pruned the bush.','他用大剪刀几下子就把灌木给修剪好了.','I start shearing the sheep at the beginning of July.','我一般在7月初开始剪羊毛。'}

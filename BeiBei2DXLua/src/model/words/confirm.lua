@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["confirm"]={"confirm","[kən'fɜːm]","[kən'fɝm]","v.确定",'v.确定,批准,证实','She was baptized when she was a month old and confirmed when she was thirteen.','她出生一个月时受洗礼，十三岁时行坚信礼。','He looked around to confirm that he was alone.','他四处张望，要确定周围没人。'}

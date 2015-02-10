@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["equinox"]={"equinox","['iːkwɪnɒks; 'ekwɪ-]","['ikwɪnɑks]","n.昼夜平分点",'n.昼夜平分点,春分或秋分','The Spring ||Equinox|| is one of the Twenty-four solar terms.','春分是24节气之一。','During a tropical year the sun moves from Vernal ||Equinox|| to Vernal Equinox.','在一个回归年内，太阳从春分点转回到春分点。'}

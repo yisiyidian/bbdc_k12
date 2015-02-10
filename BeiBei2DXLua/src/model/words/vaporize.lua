@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vaporize"]={"vaporize","['veɪpəraɪz]","['vepə'raɪz]","v.(使)蒸发",'v.(使)蒸发|||=vaporise(英)','The earth will in time vaporize  with its material and disperse.','到那时,地球将与它上面的物体一起汽化而弥散.','The heat from the water is used to vaporize a low - boiling liquid.','从水中得到的热用来使一种 低沸点 的液体蒸发.'}

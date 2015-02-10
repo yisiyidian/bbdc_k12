@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["necklace"]={"necklace","['neklɪs]","['nɛkləs]","n.项链",'n.项链','My necklace has a heart pendant, but I don\'t wear it everyday.','我的项链有一个心形的垂饰，但我并非每天都戴他。','He gave me a necklace as a token of his affection..','他给了我一根项链作为爱情的象征。'}

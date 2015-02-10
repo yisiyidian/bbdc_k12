@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["explain"]={"explain","[ɪk'spleɪn; ek-]","[ɪk'splen]","vt.&vi.解释",'vt.&vi.解释,说明','That explains his absence.','他缺席就是这个原因。','I don\'t understand your argument. Could you explain yourself a bit more?','我不明白你的论点，你能把意思再说清楚些吗？'}

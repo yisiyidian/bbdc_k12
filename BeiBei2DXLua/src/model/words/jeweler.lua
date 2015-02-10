@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jeweler"]={"jeweler","['dʒuələ]","[ 'dʒuələ ]","n.珠宝商",'n.珠宝商，宝石匠|||=jeweller','I told the jeweler to inscribe the ring with my name.','我叫珠宝商把我的名字刻在那只戒指上。','The jeweler charges lots of money to set diamonds in a bracelet.','珠宝匠要很多钱才肯把钻石镶在手镯上.'}

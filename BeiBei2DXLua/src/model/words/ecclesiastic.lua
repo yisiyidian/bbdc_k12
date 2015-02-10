@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ecclesiastic"]={"ecclesiastic","[ɪ,kliːzɪ'æstɪk]","[ɪ,klizɪ'æstɪk]","n.神职者",'n.神职者,牧师,教会|||adj.神职者的,牧师的,教会的','The ecclesiastic meeting always appear in church.','教会总是在教堂里聚会。','Copernicus (1473-1543) was a Polish ecclesiastic, of unimpeachable orthodoxy','哥白尼（1473-1543），波兰教会之教士，笃信正教'}

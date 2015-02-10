@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["civilization"]={"civilization","[ˌsɪvɪlaɪˈzeɪʃən]","[,sɪvələ'zeʃən]","n.文明",'n.文明,文化','In some ways, civilization does not seem to have progressed much in the last century.','在某些方面, 上个世纪文明似乎进展不大.','The ancient Egyptians had advanced civilization.','古埃及人曾经拥有高度文明。'}

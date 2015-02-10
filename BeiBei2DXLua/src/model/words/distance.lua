@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["distance"]={"distance","['dɪst(ə)ns]","['dɪstəns]","n.距离",'n.距离,远方,路程|||vt.与...保持距离,把(对手)甩在后面|||adj.远程(教育)的','Is his distance a result of snobbery or shyness?','他态度冷淡是因为他势利眼呢，还是因为他腼腆？','We can see a windmill in the distance.','我们可以望见远处有架风车。'}

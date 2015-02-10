@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["win"]={"win","[wɪn]","[wɪn]","vi.胜利",'n.胜利|||vi.胜利,成功|||vt.赢得,战胜','Her performance ||won|| her much critical acclaim.','她的表演大获评论界赞颂。','He soon ||won|| a reputation for himself.','他很快就成名了。'}

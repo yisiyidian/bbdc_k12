@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["telephone"]={"telephone","['telɪfəʊn]","['tɛlə'fon]","n.电话",'n.电话；电话机；（电话机的）话筒；受话器|||vt.&vi.以电话传送（消息），给（某人）打电话；用电话与（某人）交谈','I telephoned to thank her.','我打电话向她道谢。','I have to make a telephone call.','我必须打个电话。'}

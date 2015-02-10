@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tacky"]={"tacky","['tækɪ]","['tæki]","adj.发粘的",'adj.发粘的|||adj.俗气的，破烂的','Apply solution to the tube and allow to become tacky.','在内胎上涂抹胶水并让它发粘。','a tacky old cabin in the woods.','树林里一间又老又破的小棚屋'}

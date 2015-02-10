@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lengthen"]={"lengthen","['leŋθ(ə)n; -ŋkθ-]","['lɛŋθən]","v.延长",'v.加长,延长,使...长','Could you lengthen your speech out by adding some examples?','你不可以增加些例子，把发言拉长一些吗？','The days started to lengthen in March.','白昼在三月里开始变长。'}

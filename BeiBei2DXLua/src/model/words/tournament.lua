@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tournament"]={"tournament","['tʊənəm(ə)nt]","['tɔnəmənt]","n.比赛",'n.比赛,锦标赛,(中世纪的)骑士比武','The tournament is open to amateurs as well as professionals.','这次比赛不仅职业运动员可以参加，而且业余运动员也可以参加。','Have you been following the basketball tournament?','你一直都在看篮球锦标赛吗?'}

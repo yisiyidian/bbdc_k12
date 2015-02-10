@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peaceful"]={"peaceful","['piːsfʊl; -f(ə)l]","['pisfəl]","adj.安宁的",'adj.安宁的,和平的','We hope there will be a peaceful transition to the new system.','我们希望能够和平过渡到新的制度。','His ending was peaceful.','他很安详地去世。'}

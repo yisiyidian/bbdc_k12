@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slink"]={"slink","[slɪŋk]","[slɪŋk]","v.偷偷走动",'v.偷偷走动','Don\'t slink away without apologizing.','不要不道歉就偷偷溜走。','The dog ||slunk|| out when I shouted at him.','我向那条狗一喊, 它就溜出去了.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kidnap"]={"kidnap","['kɪdnæp]","['kɪdnæp]","v.绑架",'v.绑架,诱拐,拐骗','A pair of robbers were trying to kidnap his wife.','两个强盗正试图绑架他的妻子.','Those who kidnap the child should be sentenced to death.','那些绑架小孩的人应该被处以死刑.'}

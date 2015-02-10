@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heterogeneous"]={"heterogeneous","[,het(ə)rə(ʊ)'dʒiːnɪəs; -'dʒen-]","['hɛtərə'dʒinɪəs]","adj.异种的",'adj.异种的,异质的,由不同成份形成的|||[计算机]非均匀的','There is a heterogeneous mass of papers in the teacher\'s office.','老师的办公室里堆满了大批不同的论文。','America has a very heterogeneous population.','美国人口是由不同种族组成的。'}

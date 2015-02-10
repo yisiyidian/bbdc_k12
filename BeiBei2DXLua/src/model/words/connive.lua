@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["connive"]={"connive","[kə'naɪv]","[kə'naɪv]","v.默许",'v.假装不见,默许,共谋','God cannot alter the past; that is why he is obliged to connive at the existence of historian.','神不能改变过去；惟其如是，他就不能不对历史家的存在一只眼开一只眼闭了。','The dealers connived with customs officials to bring in narcotics.','商人勾结海关人走私毒品'}

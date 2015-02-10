@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slanderous"]={"slanderous","['slɑːnd(ə)rəs; 'slænd(ə)rəs]","['slændərəs]","adj.诽谤的",'adj.诽谤的,中伤的','Containing or implying calumny; slanderous or defamatory.','栽赃的含有或隐含有明知故犯嫌疑的；诽谤或中伤的','A plaintiff\'s interpretation in a libel suit of allegedly libelous or slanderous material.','对被告诽谤言辞的解释在诽谤案件中，原告对所称的诽谤的或谣言的材料的解释'}

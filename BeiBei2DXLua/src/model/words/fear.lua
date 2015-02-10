@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fear"]={"fear","[fɪə]","[fɪr]","vt.害怕",'n.敬畏,害怕,担心,不安的原因|||vt.害怕,敬畏','Hang-gliding holds no fears for her.','她一点也不害怕悬挂式滑翔。','Do not fear; I will support you.','别担心，我会支持你的。'}

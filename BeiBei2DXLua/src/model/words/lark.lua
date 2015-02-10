@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lark"]={"lark","[lɑːk]","[lɑrk]","n.云雀",'n.云雀,百灵鸟|||n.嬉戏，玩笑|||vi.嬉戏','She rose with the lark.','她一大早就起床了。','He only said it for a lark.','他只是说着玩而已。'}

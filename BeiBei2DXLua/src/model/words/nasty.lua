@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nasty"]={"nasty","['nɑːstɪ]","['næsti]","adj.污秽的",'adj.污秽的,下流的,险恶的,(气味等)另人作呕的,脾气不好的,恶意的,','The dog gave me a nasty nip on the leg.','那狗在我腿上狠咬了一口。','I was frightened when I saw the nasty gash in her arm.','她胳膊上又深又长的大伤口吓坏了我。'}

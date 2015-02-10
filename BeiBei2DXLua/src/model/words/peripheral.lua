@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peripheral"]={"peripheral","[pə'rɪf(ə)r(ə)l]","[pə'rɪfərəl]","adj.不重要的",'adj.不重要的,外围的|||n.外围设备','Companies are increasingly keen to contract out peripheral activities like training.','公司越来越倾向于把像培训这样的非核心业务外包出去。','The men are somewhat peripheral to this society.','相对于这个社会来说，人似乎无足轻重。'}

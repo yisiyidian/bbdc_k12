@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["apologist"]={"apologist","[ə'pɒlədʒɪst]","[ ə'pɔlədʒist ]","n.辩护士(尤指卫护基督教教义的辩护者)",'n.辩护士(尤指卫护基督教教义的辩护者)','He has been cast in the role of chief apologist for the government.','他被说成是政府的主要辩护者.','apologist','辩护士(尤指卫护基督教教义的辩护者)'}

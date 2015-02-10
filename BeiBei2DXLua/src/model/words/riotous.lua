@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["riotous"]={"riotous","['raɪətəs]","['raɪətəs]","adj.引起骚扰的",'adj.引起骚扰的,暴动的,放荡的','A riotous, boisterous, or drunken festivity; a revel.','闹酒狂欢狂欢的、喧闹的或酒醉的节日；狂欢','A drunken or riotous celebration.','狂欢的宴会酒醉的或狂欢的庆祝会'}

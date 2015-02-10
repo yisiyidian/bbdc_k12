@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spaceship"]={"spaceship","['speɪsʃɪp]","['spesʃɪp]","n.宇宙飞船",'n.宇宙飞船','The spaceship is already being counted down.','宇宙飞船已在进行倒计时。','Yet another spaceship has been sent up recently.','最近又发射了一艘宇宙飞船.'}

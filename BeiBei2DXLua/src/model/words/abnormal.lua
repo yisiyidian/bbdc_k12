@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abnormal"]={"abnormal","[æb'nɔːml]","[æb'nɔrml]","adj.反常的",'adj.反常的,不正常的,不规则的|||n.不正常的人','At one time, she is fine, but at another, she is abnormal.','有时候，她表现得很好，有时候又失常。','He is mentally abnormal.','他精神失常。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["moose"]={"moose","[muːs]","[mus]","n.麋",'n.麋,驼鹿(单复同)','The male of certain other large animals, such as the alligator, elephant, or moose.','大的雄性动物一些其它形体巨大的雄性动物, 如鳄鱼、大象或麋鹿','The mature female of other large animals, such as whales, elephants, or moose.','大型雌性动物其他的大型动物(如鲸鱼、大象或麋鹿等)的母兽'}

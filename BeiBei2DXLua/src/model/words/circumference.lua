@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["circumference"]={"circumference","[sə'kʌmf(ə)r(ə)ns]","[sɚ'kʌmfərəns]","n.圆周",'n.圆周,周围,胸围','The curve traced by a point on the circumference of a circle that rolls on a straight line.','圆滚线，摆线圆周上任一点在一条直线上滚动时所形成的曲线','The circumference of the earth is almost 25,000 miles.','地球的圆周长约为两万五千英里。'}

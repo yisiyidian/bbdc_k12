@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["puffery"]={"puffery","['pʌf(ə)rɪ]","[ 'pʌfəri ]","n.极力吹捧",'n.极力吹捧,夸大宣传','Yet the Post itself responded to the Kentucky scandal with puffery, not investigation.','.','The puffery of this movie makes me feel uncomfortable.','对这部电影的夸大宣传让我觉得不舒服。'}

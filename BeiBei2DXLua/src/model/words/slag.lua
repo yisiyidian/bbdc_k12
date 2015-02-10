@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slag"]={"slag","[slæg]","[slæɡ]","n.熔渣",'n.熔渣,矿渣|||vt.(英）严厉批评|||n.荡妇','This material is variously termed ash, clinker, cinders or slag.','这种材料有不同的名称，如灰、炉渣、煤渣或矿渣。','Some come off in the form of gases, while others collect as slag.','有的化成气体跑掉了，有的结成了熔渣。'}

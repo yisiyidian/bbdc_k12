@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["serve"]={"serve","[sɜːv]","[sɝv]","v.服务",'v.可作...用,服务,对待,发球|||n.发球','He served some sweets to the children.','他为孩子们拿来他们要买的糖果。','We are well served with gas in this town.','这个城镇煤气供应得很好。'}

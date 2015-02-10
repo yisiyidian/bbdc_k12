@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["descend"]={"descend","[dɪ'send]","[dɪ'sɛnd]","vt.&vi.降",'vt.&vi.降,传,降临','I didn\'t expect him to descend to personal abuse.','我没料到他会堕落到对我进行人身攻击的地步。','My sister\'s family is descending on us this weekend.','想不到我姐姐一家本周末要到我们这里来'}

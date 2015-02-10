@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["weary"]={"weary","['wɪərɪ]","['wɪri]","adj.疲倦的",'adj.疲倦的,厌烦的|||vt.&vi.疲倦,厌烦,生厌','She was ||wearied|| by the constant noise.','她很厌烦那些没完没了的噪杂声。','He began to weary of the work.','他开始对工作感到厌倦。'}

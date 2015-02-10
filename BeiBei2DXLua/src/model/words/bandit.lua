@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bandit"]={"bandit","['bændɪt]","['bændɪt]","n.强盗",'n.强盗','These bandits were arrested several days ago.','几天前，这些歹徒被逮捕了。','People hate bandits greatly.','人们非常痛恨盗匪。'}

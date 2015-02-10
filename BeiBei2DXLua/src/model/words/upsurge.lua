@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["upsurge"]={"upsurge","['ʌpsɜːdʒ]","['ʌpsɝdʒ]","v.起浪",'v.起浪,涌起|||n.涌起,高潮','An upsurge in violent crime.','严重犯罪的急剧上升','A new upsurge in construction is in the making.','一个建设的新高潮正在兴起。'}

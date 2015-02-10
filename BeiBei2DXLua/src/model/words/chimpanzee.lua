@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chimpanzee"]={"chimpanzee","[tʃɪmpæn'ziː]","[,tʃɪmpæn'zi]","n.黑猩猩",'n.黑猩猩','Some folks seem to have descend from the chimpanzee much later than others.','有些人，看来像是比其他人晚了好久才从黑猩猩分支而传下来的后裔。','Human and chimpanzee have the same stirps。','人类和黑猩猩祖先相同'}

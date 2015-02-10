@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sloppy"]={"sloppy","['slɒpɪ]","[ 'slɔpi ]","adj.被泼水弄湿的",'adj.被泼水弄湿的,泥泞的,多阴雨的，邋遢的，零乱的','It\'s sloppy job you\'re doing.','你这活干得太稀松了。','a sloppy room.','邋遢的房间'}

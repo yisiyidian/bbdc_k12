@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vendetta"]={"vendetta","[ven'detə]","[vɛn'dɛtə]","n.仇杀",'n.仇杀,相互复仇','He has accused the British media of pursuing a vendetta against him.','他指责媒体长期跟他过不去。','For years he pursued a vendetta against the Morris family.','多年来他一直在寻求向莫里斯家族报世仇。'}

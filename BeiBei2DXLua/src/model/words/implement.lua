@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["implement"]={"implement","['ɪmplɪm(ə)nt]","['ɪmplɪmɛnt]","n.工具",'n.工具,器具;当工具的物品|||vt.实施,执行;向...提供工具(或手段)','It is not the proper way to implement a policy by force.','强迫推行一项政策不是办法。','He said his plan had the virtue of being the easiest to implement.','他说他的计划的优点是最简单易行。'}

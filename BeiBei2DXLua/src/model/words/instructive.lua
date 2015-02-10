@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["instructive"]={"instructive","[ɪn'strʌktɪv]","[ɪn'strʌktɪv]","adj.教育性的",'adj.教育性的，有启发的，有益的','The novel is so instructive that I can hardly tear myself away from it.','这部小说很有意义,简直使我爱不释手.','The minister\'s visit to the prison was not instructive.','牧师这次探监没有意义。'}

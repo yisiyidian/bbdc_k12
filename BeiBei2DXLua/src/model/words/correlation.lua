@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["correlation"]={"correlation","[,kɒrə'leɪʃ(ə)n; -rɪ-]","[,kɔrə'leʃən]","n.相互关系",'n.相互关系,相关,关连','The second group of measurements had a high correlation with the first.','第二组测量数据与第一组高度相关。','Are you familiar with their correlation?','你了解他们的相互关系吗？'}

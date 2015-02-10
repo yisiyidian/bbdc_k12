@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dilution"]={"dilution","[daɪ'luːʃn]","[dɪ'ljʊʃən]","n.稀释",'n.稀释,冲淡，股票跌价','The antibody was applied at a dilution of 1:50.','这种抗体按照1：50的比例稀释后使用。','I am not sure whether the ocean water can be drank after dilution.','我不确定海水在稀释后可否饮用。'}

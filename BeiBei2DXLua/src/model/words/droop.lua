@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["droop"]={"droop","[druːp]","[drup]","v.(使）下垂",'v.(使）下垂,消沉|||n.下垂','Her head drooped sadly.','她悲哀地垂着头。','His mouth drooped sadly, pulled down, no doubt, by the plump weight of his jowls','他的嘴悲哀地耷拉着，无疑是被他下巴上的沉重垂肉拉下来的'}

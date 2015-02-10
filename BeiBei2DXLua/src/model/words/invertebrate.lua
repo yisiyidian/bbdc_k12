@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["invertebrate"]={"invertebrate","[ɪn'vɜːtɪbrət]","[ɪn'vɝtɪbret]","n.&adj.无脊椎的(动物)",'n.&adj.无脊椎的(动物)','Molluscs, insects and worms are all invertebrates.','软体动物、 昆虫、 蠕虫都是无脊椎动物.','Ant is a kind of invertebrate.','蚂蚁是一种（无脊椎动物）。'}

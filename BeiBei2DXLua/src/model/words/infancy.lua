@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infancy"]={"infancy","['ɪnf(ə)nsɪ]","['ɪnfənsi]","n.婴儿期",'n.婴儿期，幼年,初期|||[法律]未成年','Growth is rapid in infancy.','幼儿期的成长相当快。','Tadpoles are the infancy form of frogs.','蝌蚪是青蛙的幼年形态。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["approbation"]={"approbation","[,æprə'beɪʃ(ə)n]","['æprə'beʃən]","n.认可",'n.认可,嘉许','The goods are not allowed to be exported without approbation of the customs.','没有海关的许可，这些货物是不允许出口的。','He tasted the wine of audience approbation.','他尝到了听众赞许的滋味，像酒般令人陶醉。'}

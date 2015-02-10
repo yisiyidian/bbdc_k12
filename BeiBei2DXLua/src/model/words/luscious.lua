@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["luscious"]={"luscious","['lʌʃəs]","['lʌʃəs]","adj.甘美的",'adj.甘美的,浓厚的,官能的','I like the luscious taste of ripe peaches.','我喜欢熟桃的香甜味。','She is a luscious blonde.','她是个迷人的金发女郎。'}

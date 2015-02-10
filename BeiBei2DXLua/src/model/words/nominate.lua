@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nominate"]={"nominate","['nɒmɪneɪt]","['nɑmɪnet]","vt.提名",'vt.提名,指派,登记赛马参加比赛','Fred intended to nominate Mike for president, but Bill got up first and stole Fred\'s thunder.','费雷德想提名迈克当主席，但比尔抢先站起说出了弗雷德的意思。','The board nominated him as the new director.','董事会指定他为新董事。'}

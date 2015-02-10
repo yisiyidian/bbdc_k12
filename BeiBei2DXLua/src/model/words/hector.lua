@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hector"]={"hector","['hektə]","['hɛktɚ]","vt.&vi.吓唬",'vt.&vi.吓唬，欺凌|||n.暴徒，威吓者，作威作福的人','Helena accused ||Hector|| of prying into everything.','海伦娜责怪赫克托样样要问。','The rascal hectored the boy into taking out all of his money.','那个流氓吓唬小男孩，让他掏出了所有的钱。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["learned"]={"learned","['lɜːnd]","['lɝnd]","adj.有学问的",'adj.有学问的,博学的|||learn的过去式和过去分词','His dedication should be learned by all of us.','他的奉献精神值得我们学习。','We\'ve learned algebra in middle school.','我在中学就学过代数学。'}

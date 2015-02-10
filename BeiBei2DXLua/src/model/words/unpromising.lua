@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unpromising"]={"unpromising","[ʌn'prɒmɪsɪŋ]","[ʌn'prɑmɪsɪŋ]","adj.没有希望的(结果未必良好的)",'adj.没有希望的(结果未必良好的)','In fact, his business career had distinctly unpromising beginnings.','事实上，他的经商生涯从初期就明显前景暗淡。','Only a congenial outsider would remain with so unpromising a figure.','只有志同道合的圈外人才会同这样一个没有前途的人呆在一起.'}

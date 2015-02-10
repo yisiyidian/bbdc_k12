@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["relief"]={"relief","[rɪ'liːf]","[rɪ'lif]","n.宽慰",'n.宽慰，安心；免除，减轻；救援物资；代班人','It is a great relief to have rain after a long time of drought.','长期的乾旱之后有雨是一大慰藉。','What a relief!','真叫人宽慰!'}

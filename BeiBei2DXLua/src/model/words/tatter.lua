@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tatter"]={"tatter","['tætə]","[ 'tætə ]","v.使破烂",'v.使破烂，变得破烂|||n.破布,碎纸','She replies to my point so convincingly that my argument is soon in tatter.','她反驳我提出的各点都很有说服力，很快就将我的论点驳倒。','The beggar\'s shirt was in tatters.','这乞丐的衣服已成了碎片。'}

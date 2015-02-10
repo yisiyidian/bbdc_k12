@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["concord"]={"concord","['kɒŋkɔːd]","['kɑŋkɔrd]","n.和睦",'n.和睦,公约','These neighboring states had lived in concord for centuries.','这些相互毗邻的国家几个世纪以来一直和睦相处。','They expressed the hope that he would pursue a neutral and balanced policy for the sake of national concord.','他们希望，为了国家的和谐，他会奉行中立、不偏不倚的政策。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["receptacle"]={"receptacle","[rɪ'septək(ə)l]","[rɪ'sɛptəkl]","n.容器",'n.容器','Please find me a receptacle for sugar.','请给我找一个放糖的容器。','Please put your cigarette ends into the receptacle provided.','请将烟蒂放入提供的盛器里.'}

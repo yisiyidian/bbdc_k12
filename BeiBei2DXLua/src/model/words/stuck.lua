@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stuck"]={"stuck","[stʌk]","[stʌk]","adj.被卡住的",'stick的过去式(分词)|||adj.不能动的,被卡住的','Here\'s your food. Now get stuck in (ie start eating it)!','这是给你吃的. 快吃吧!','Why am I always stuck with the washing-up?','干吗总是要我洗餐具?'}

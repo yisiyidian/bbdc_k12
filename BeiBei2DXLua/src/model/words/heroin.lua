@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heroin"]={"heroin","['herəʊɪn]","['hɛroɪn]","n.海洛因",'n.海洛因','She was arrested for pushing heroin.','她因贩卖海洛英而被捕.','The Customs have found heroin hidden in freight.','海关查出了隐藏在货物中的海洛因.'}

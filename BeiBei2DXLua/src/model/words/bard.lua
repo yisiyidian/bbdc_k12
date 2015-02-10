@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bard"]={"bard","[bɑːd]","[bɑrd]","n.吟游诗人",'n.吟游诗人，流浪诗人|||n.护马铠甲|||vt.给战马披铠甲','I\'ll use my bard song to help you concentrate!','我会用我的吟游诗人歌曲帮你集中精神！','Oh, I\'m a bard','哦，我是个吟游诗人'}

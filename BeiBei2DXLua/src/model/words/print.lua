@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["print"]={"print","[prɪnt]","[prɪnt]","vt.&vi.打印",'n.版,印刷物,印迹|||vt.&vi.印刷,出版,打印|||adj.印刷的','Is that volume still in print?','那册书还能买到吗？','The print is too small for me to read without glasses.','印刷字体太小，我不带眼镜就看不清。'}

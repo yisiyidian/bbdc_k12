@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fascination"]={"fascination","[,fæsɪ'neɪʃ(ə)n]","[,fæsɪ'neʃən]","n.魅力",'n.魅力；魔力；入迷','listened in fascination.','听得神魂颠倒','He seems to have a fascination to her.','他似乎对她有一种魔力。'}

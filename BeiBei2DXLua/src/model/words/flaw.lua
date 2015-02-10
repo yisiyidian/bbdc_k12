@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flaw"]={"flaw","[flɔː]","[flɔ]","n.缺点",'n.缺点,裂纹,瑕疵,突然的狂风天气|||vi.变得有缺陷|||vt.使破裂','Can you spot the flaw in their argument?','你能指出他们论点中的谬误吗?','I can\'t quite put my finger on the flaw in her argument.','我看不出她的论点有何不妥.'}

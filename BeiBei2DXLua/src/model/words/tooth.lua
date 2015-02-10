@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tooth"]={"tooth","[tuːθ]","[tuθ]","n.牙齿",'n.牙齿','This tooth is sensitive to cold.','这颗牙对冷过敏。','He bellowed with pain when the tooth was pulled out.','牙被拔掉时，他疼得大叫。'}

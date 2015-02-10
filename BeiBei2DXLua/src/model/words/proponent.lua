@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["proponent"]={"proponent","[prə'pəʊnənt]","[prə'ponənt]","n.建议者",'n.建议者,支持者','What answer can be made to a proponent of this view?','什么样的答案才能支持这个观点?','The most important proponent of the former group was Mrs. Radcliffe.','前者最重要的代表人物是德克利夫太太。'}

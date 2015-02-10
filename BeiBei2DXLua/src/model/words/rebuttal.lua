@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rebuttal"]={"rebuttal","[rɪ'bʌtl]","[rɪ'bʌtl]","n.反驳",'n.反驳,反证','They made a clause-by-clause rebuttal of the letter.','他们对这封信逐句作了反驳。','In order to hold the advantage, I must show them some strong rebuttal to support my idea.','为了占据有利地位，我必须给出有力的反驳来支持自己的观点。'}

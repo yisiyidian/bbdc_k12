@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bile"]={"bile","[baɪl]","[baɪl]","n.愤怒",'n.胆汁,坏脾气,愤怒','It rouses my bile to see him.','我一看见他就会生气。','It\'s difficult talking to him these days; he seems full of bile since his wife left him.','最后同他说话很难，自从他妻众离他而去之后，他似乎总是怒气冲天。'}

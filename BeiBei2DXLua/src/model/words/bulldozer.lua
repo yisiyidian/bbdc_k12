@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bulldozer"]={"bulldozer","['bʊldəʊzə]","['bʊl'dozɚ]","n.推土机",'n.推土机|||n.欺凌者','A machine, such as a bulldozer or backhoe, that is used for digging or pushing earth.','推土机一种可用来挖掘或推动泥土机器, 如推土机或挖土机','The bulldozer can be handled easily.','这种推土机操纵方便。'}

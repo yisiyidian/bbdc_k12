@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peddle"]={"peddle","['ped(ə)l]","['pɛdl]","v.挑卖",'v.挑卖,沿街叫卖,散播','A small boat used to peddle provisions to ships anchored offshore.','小卖艇向在岸边抛锚的船只兜售货物的小船','Go peddle your papers. I\'m certainly not going to pay for the damage that wasn\'t my fault.','你走开吧！损失不是由于我的过错造成的，我一分钱也不会付给你。'}

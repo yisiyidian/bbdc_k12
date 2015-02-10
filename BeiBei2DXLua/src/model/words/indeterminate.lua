@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indeterminate"]={"indeterminate","[,ɪndɪ'tɜːmɪnət]","['ɪndɪ'tɝmənət]","adj.不确的",'adj.不确的,不确定的,含混的','This is a sort of indeterminate color.','这是一种说不清的颜色。','She was a tall woman of indeterminate age.','她是个看不出年龄的高大女子。'}

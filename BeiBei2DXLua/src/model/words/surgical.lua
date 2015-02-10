@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["surgical"]={"surgical","['sɜːdʒɪk(ə)l]","['sɝdʒɪkl]","adj.外科的",'adj.外科的,外科医生的,手术上的','Happening or done after a surgical operation.','手术后的外科手术后发生的或手术后完成的','The hospital has a medical ward and a surgical ward.','这医院有内科病房和外科病房.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deliverance"]={"deliverance","[dɪ'lɪv(ə)r(ə)ns]","[dɪ'lɪvərəns]","n.救出",'n.救出,救助,释放|||n.正式意见，判决','The oppressed long for deliverance and liberation.','被压迫人民盼望着翻身得解放。','His deliverance from the prison puzzled us.','他被从监狱释放使我们困惑不已。'}

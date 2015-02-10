@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stratum"]={"stratum","['strɑːtəm; 'streɪtəm]","['stretəm]","n.地层",'n.地层,阶层','Such inequalities are found in every stratum.','这类不公平的现象存在于社会的每一个阶层。','They represent each society stratum.','他们代表各个社会阶层。'}

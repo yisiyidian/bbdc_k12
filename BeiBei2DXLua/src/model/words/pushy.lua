@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pushy"]={"pushy","['pʊʃɪ]","['pʊʃi]","adj.有进取心的",'adj.强求的，有进取心的','He made himself unpopular by being so pushy.','他特别喜欢出风头, 所以人缘不好.','She was a confident and pushy young woman.','她是个自信、有进取心的年轻女性。'}

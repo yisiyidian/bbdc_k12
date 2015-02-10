@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["confuse"]={"confuse","[kən'fjuːz]","[kən'fjʊz]","vt.困惑",'vt.混乱,狼狈,困惑','They asked so many questions that they confused me.','他们问了许许多多问题，把我弄糊涂了。','Please don\'t confuse Australia with Austria.','别把澳大利亚和奥地利混淆了。'}

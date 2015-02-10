@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rooster"]={"rooster","['ruːstə]","['rustɚ]","n.公鸡",'n.公鸡','The ||Rooster|| crows every morning.','公鸡每天早上鸣叫。','He gets up at the crow of the rooster every day.','他每天鸡鸣即起。'}

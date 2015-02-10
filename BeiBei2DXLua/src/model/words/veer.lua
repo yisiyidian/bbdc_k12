@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["veer"]={"veer","[vɪə]","[vɪr]","vt.转向(顺时针转",'vt.转向(顺时针转,改变)|||n.方向的改变','Her image veers towards the untidily romantic.','她的形象变得风流多情，不修边幅。','The car suddenly veered across the road.','汽车突然转向横穿过马路。'}

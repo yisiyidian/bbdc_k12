@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intent"]={"intent","[ɪn'tent]","[ɪn'tɛnt]","n.意图",'n.意图,目的,意向,含义|||adj.专心的,决心的,热心的','He\'s intent on moneymaking.','他一心一意地赚钱。','She is intent on getting the job done quickly.','她决心尽快把这件事情做好。'}

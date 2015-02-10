@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["utilitarian"]={"utilitarian","[jʊ,tɪlɪ'teərɪən]","[,jutɪlɪ'tɛrɪən]","adj.功利的",'adj.功利的,实用的','The student accommodationis strictly utilitarian.','为学生提供的住宿极其实惠.','This is a very utilitarian commercial speculation.','这其实是一种十分功利的商业炒作。'}

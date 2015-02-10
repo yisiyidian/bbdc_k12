@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["baroque"]={"baroque","[bə'rok]","[ bə'rɔk ]","adj.巴洛克式的",'adj.巴洛克式的|||n.巴洛克式，巴洛克风格','The baroque style is rich in ornament.','巴罗克风格极具装饰性。','Such decoration was a typical feature of the baroque period.','这种装饰是巴罗克时期的特征。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prominence"]={"prominence","['prɒmɪnəns]","['prɑmɪnəns]","n.突出",'n.突出；显著；突出物；卓越','He came to prominence during the World Cup in Italy.','他在意大利的世界杯赛中声名鹊起。','An item of prominence on the conference agenda was infant health care.','会议议程上的一项重要议题是婴儿保健.'}

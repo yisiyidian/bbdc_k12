@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coercion"]={"coercion","[kəʊ'ɜːʃ(ə)n]","[ko'ɝʒən]","n.强迫",'n.强迫,威压,高压政治','The superpowers got what they wanted by coercion.','超级大国靠强迫手段得到了他们想要的东西。','It was vital that the elections should be free of coercion or intimidation.','选举中不应有强迫或恐吓行为，这一点至关重要。'}

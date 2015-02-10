@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eligible"]={"eligible","['elɪdʒɪb(ə)l]","['ɛlɪdʒəbl]","adj.有资格的",'adj.可以选的,有资格的,合格的|||n.有资格者,合格者,适任者','Mary is not eligible for an award.','玛丽没有申请助学金的资格.','Men and women of eighteen and above are eligible to vote.','年龄在十八岁以上的男女有投票表决权。'}

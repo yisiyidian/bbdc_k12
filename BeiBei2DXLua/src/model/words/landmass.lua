@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["landmass"]={"landmass","['lændmæs]","[ 'lændmæs ]","n.大陆",'n.大陆','Asia and Europe form a huge landmass.','亚洲和欧洲连成一片大陆.','Oceania is a separate landmass, but it is separated from Asia by very shallow water.','大洋洲是一块单独的陆地，但它与亚洲之间只隔着很浅的水域。'}

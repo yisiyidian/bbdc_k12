@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["elephant"]={"elephant","['elɪf(ə)nt]","['ɛlɪfənt]","n.大象",'n.大象,庞大笨拙难处理的事物','The elephant smashed through the trees.','大象在树林中横冲直撞。','How many tons does this elephant weigh?','这头大象重多少吨？'}

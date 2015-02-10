@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["salutary"]={"salutary","['sæljʊt(ə)rɪ]","['sæljə'tɛri]","adj.有益的",'adj.有益的,有用的,有益健康的','The letter had a very salutary effect.','这封信好似一剂苦口良药。','It was a salutary experience to be in the minority.','敌众我寡时倒是可以磨炼人。'}

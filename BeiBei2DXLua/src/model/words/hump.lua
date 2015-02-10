@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hump"]={"hump","[hʌmp]","[hʌmp]","n.驼背",'n.驼背,圆形隆起物,土墩,肿块,碰撞|||vt.使隆起,扛或背...,驼背|||vi.碰撞,敲击成圆丘形,弓起','I have got the hump over what he say to me.','我为他对我说的话而感到恼火。','That gives me the hump.','那使我心烦。'}

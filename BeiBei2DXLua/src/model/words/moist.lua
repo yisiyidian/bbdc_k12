@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["moist"]={"moist","[mɒɪst]","[mɔɪst]","adj.潮湿的",'adj.潮湿的,湿润的|||(果物)多汁的|||[医]有分泌物的,湿性的|||n.潮湿','Lean meat can be larded to keep it moist in the oven.','瘦肉上可加咸肉片烤制以保持水分。','He bastes juices to keep it moist during cooking.','他倒了些汁液以防烤干。'}

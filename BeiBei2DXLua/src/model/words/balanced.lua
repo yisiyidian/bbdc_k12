@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["balanced"]={"balanced","['bælənst]","['bælənst]","adj.均衡的",'adj.均衡的,平衡的','He balanced precariously on the narrow window-ledge.','他在狭窄的窗台上很难把握平衡。','she assembled a balanced team','她聚集了一支实力平衡的队伍。'}

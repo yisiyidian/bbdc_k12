@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["badinage"]={"badinage","['bædɪnɑːʒ]","[,bædən'ɑʒ]","n.打趣",'n.打趣,嘲弄','They bellowed pleasedly at the badinage.','他们还以为思嘉在开玩笑，都乐得大叫起来。','For all the forced badinage, it was an awkward meal.','大家尽管勉强地说说笑笑，这顿饭依旧吃得很别扭。'}

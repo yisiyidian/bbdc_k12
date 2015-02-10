@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comrade"]={"comrade","['kɒmreɪd]","['kɑmræd]","n.同志",'n.同志','They interred their dear comrade in the arms.','他们埋葬了他们亲爱的战友。','They were comrades in arms.','他们是战友。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prevail"]={"prevail","[prɪ'veɪl]","[pri'vel]","vi.获胜",'vi.获胜,盛行,主导','Sadness prevailed in our mind.','我们的心中充满悲痛。','Misty weather prevails in this part of the country.','该国的这一地区天气多雾。'}

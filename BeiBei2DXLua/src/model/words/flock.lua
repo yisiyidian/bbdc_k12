@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flock"]={"flock","[flɒk]","[flɑk]","n.一群",'n.一群,信众,软填料,短绒,棉絮,毛屑|||vt.塞填充料|||vi.成群而行,聚集','In the summer, tourists flock to the museums and art galleries.','夏季游人成群结队到博物馆和艺术馆参观。','There are many flocks of tourists in the palace.','宫殿里有好几群游客。'}

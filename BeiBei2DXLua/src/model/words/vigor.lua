@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vigor"]={"vigor","['vɪgɚ]","[ 'viɡə ]","n.活力",'n.活力,精力','He flung himself into his work with renewed vigor.','他又精神抖擞地投入自己的工作。','The choir sang the words out with great vigor.','合唱团以极大的热情唱出了歌词。'}

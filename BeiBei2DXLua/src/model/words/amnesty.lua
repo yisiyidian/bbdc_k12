@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amnesty"]={"amnesty","['æmnɪstɪ]","['æmnəsti]","n.大赦",'n.大赦,特赦','The rebels returned home under a general amnesty.','造反的人经大赦释放回家。','Most political prisoners were freed under the terms of the amnesty.','大多数政治犯按大赦条例被释放了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chafe"]={"chafe","[tʃeɪf]","[tʃef]","n.擦伤",'n.擦伤,气恼|||v.摩擦,擦痛,激怒','The loud noise chafed him.','吵闹声使他烦躁。','Her shoes chafed the skin on her feet.','鞋子擦破了她脚上的皮肤。'}

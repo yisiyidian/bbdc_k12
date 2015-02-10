@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accidental"]={"accidental","[æksɪ'dent(ə)l]","[,æksɪ'dɛntl]","adj.意外的",'adj.意外的,偶然的,附属的|||n.偶然,不重要的东西,变调的临时符号','Our meeting was quite accidental.','我们的相遇是很偶然的。','The discovery of how bronze is made was probably accidental, but it turned out to be an important event.','发现如何制造青铜可能是偶然的，但结果证明这是一项很重要的事情。'}

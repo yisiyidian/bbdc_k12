@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["choreography"]={"choreography","[,kɒrɪ'ɒgrəfɪ]","[,kɔrɪ'ɑɡrəfi]","n.舞蹈",'n.舞蹈,舞蹈编排','His style of choreography is flamboyant.','他的舞蹈设计风格是复杂夸张的。','There are times when the choreography of frustration and violence seems rather too rich.','有些时候上苍安排的失败和伤害似乎太多了一些。'}

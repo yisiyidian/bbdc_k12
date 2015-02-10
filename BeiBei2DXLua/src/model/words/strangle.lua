@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["strangle"]={"strangle","['stræŋg(ə)l]","['stræŋɡl]","v.勒死",'v.勒死,使窒息，限制','She strangled before she was taken to hospital.','她在被送往医院之前便窒息而死。','The hooligan strangled her with a piece of string.','那流氓用一根绳子把她勒死了。'}

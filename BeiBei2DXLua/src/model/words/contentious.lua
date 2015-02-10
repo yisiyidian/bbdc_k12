@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["contentious"]={"contentious","[kən'tenʃəs]","[kən'tɛnʃəs]","adj.有争议的",'adj.好争吵的,爱争论的,有异议的','There is a contentious clause in the treaty.','这条约中有一条有争议的条款。','He was a cheerful, elegant and gregarious if rather contentious man.','他尽管非常喜欢与人争辩，却是个阳光、优雅、合群的人。'}

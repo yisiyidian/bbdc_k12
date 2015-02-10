@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["footstep"]={"footstep","['fʊtstep]","['fʊtstɛp]","n.脚步",'n.脚步，脚步声,足迹','If you walked lightly, your footsteps will not be heard.','如果你轻轻地走，别人就听不见你的脚步声了。','I heard his footsteps in the hall.','我听见大厅里有他的脚步声。'}

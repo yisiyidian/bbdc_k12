@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lymphatic"]={"lymphatic","[lɪm'fætɪk]","[lɪm'fætɪk]","adj.淋巴的",'adj.淋巴的,输送淋巴的,淋巴性的|||n.淋巴腺,淋巴管','lymphatic','淋巴的','lymphatic system','淋巴系统'}

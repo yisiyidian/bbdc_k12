@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["genus"]={"genus","['dʒiːnəs; 'dʒenəs]","['dʒinəs]","n.种",'n.种,类，属','This genus of plants differentiate into many species.','这种植物可区分为许多种类.','A genus is superior to a species.','(生物学上的)属比种范围广.'}

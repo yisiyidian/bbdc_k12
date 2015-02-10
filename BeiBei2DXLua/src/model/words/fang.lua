@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fang"]={"fang","[fæŋ]","[fæŋ]","n.尖牙",'n.尖牙','Some snakes have poisonous fangs.','有些蛇长有毒牙。','The cobra sank its venomous fangs into his hand.','眼镜蛇将毒牙咬进他的手。'}

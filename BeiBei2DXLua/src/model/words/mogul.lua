@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mogul"]={"mogul","['moɡl]","[ 'məuɡəl, ,məu'ɡʌl ]","n.显要人物",'n.显要人物,权势之人|||n.小雪坡','He seems as a mogul but play a role as a puppet in fact.','他看起来是个显要人物，但其实只是个傀儡。','The football captain was the mogul of the school.','那足球队长是该校的大人物。'}

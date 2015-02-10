@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seldom"]={"seldom","['seldəm]","['sɛldəm]","adv.很少",'adv.很少|||adj.很少的','Barking dogs seldom bite.','【谚】吠犬不咬人。','The apple tree is seldom fruitful.','这棵苹果树很少结果。'}

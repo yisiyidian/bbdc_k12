@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gave"]={"gave","[ɡeɪv]","[ɡev]","（过去式）v.给予",'（give的过去式）vt.&vi.给予；赠送；作出|||vt.供给；产生；举办；（为购买某物或做某事而）支付|||vi.（物体）塌下；让步','I gave the alarm as soon as I saw the smoke.','我一看见冒烟, 就发出了警报。','The maths teacher was furious and gave me 50 lines.','数学老师气坏了, 罚我抄书50行.'}

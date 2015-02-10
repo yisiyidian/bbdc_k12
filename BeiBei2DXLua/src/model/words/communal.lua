@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["communal"]={"communal","['kɒmjʊn(ə)l; kə'mjuː-]","[kəˈmjunəl]","adj.公有的",'adj.公有的','This car is communal.','这部小车是公用的。','Theatre is a kind of communal medium.','戏剧是一种公共媒介。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unconscious"]={"unconscious","[ʌn'kɒnʃəs]","[ʌn'kɑnʃəs]","adj.失去知觉的",'adj.失去知觉的','They beat the prisoner unconscious.','他们把那囚犯打得不省人事.','His eyes glazed over and he fell back unconscious.','他的双眼变得呆滞无神，接着身体往后倒下便不省人事了。'}

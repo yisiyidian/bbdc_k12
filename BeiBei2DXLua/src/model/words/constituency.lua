@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["constituency"]={"constituency","[kən'stɪtjʊənsɪ]","[kən'stʃuənsi]","n.选区",'n.选区','The Conservative Party is losing ground in that constituency.','保守党在该选区正逐渐失去支持者。','The magazine changed its format to appeal to a broader constituency.','这本杂志为了迎合更广泛读者的口味而改变版式'}

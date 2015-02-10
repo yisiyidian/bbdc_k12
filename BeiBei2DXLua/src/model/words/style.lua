@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["style"]={"style","[staɪl]","[staɪl]","n.风格",'n.风格,时尚,字体|||vt.称呼,设计','She performs the songs with style and flair.','她演唱歌曲既有风度又有才华。','The piano gives the room a touch of style.','这架钢琴把房间衬托得很有气派。'}

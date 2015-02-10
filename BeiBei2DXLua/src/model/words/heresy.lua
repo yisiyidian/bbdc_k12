@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heresy"]={"heresy","['herɪsɪ]","['hɛrəsi]","n.异端",'n.异端,异教','The book has a tincture of heresy.','这本书稍有异端意味。','He was sentenced to be guilty of heresy.','他被判犯有异端罪。'}

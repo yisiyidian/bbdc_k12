@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rapt"]={"rapt","[ræpt]","[ræpt]","adj.全神贯注的",'adj.全神贯注的,入迷的,出神的','We listened to her amazing story with rapt attention.','我们全神贯注地倾听她讲的惊人故事。','listened to the speaker with rapt admiration.','带着着迷的敬意聆听讲演者'}

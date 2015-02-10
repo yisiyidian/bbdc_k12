@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glazed"]={"glazed","[ɡleɪzd]","[glezd]","adj.光滑的",'adj.光滑的,像玻璃的','His eyes glazed over with boredom.','他的眼神因厌倦而变呆滞。','After six glasses of vodka his eyes glazed over and he remembered nothing more.','他喝了六杯伏特加之後, 眼神发呆, 什麽都再也记不住了.'}

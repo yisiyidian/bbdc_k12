@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vocal"]={"vocal","['vəʊk(ə)l]","['vokl]","adj.声音的",'adj.声音的,口述的,歌唱的|||n.元音,声乐作品','I like instrumental music better than vocal music.','我喜欢器乐胜于声乐。','The tongue is one of the vocals.','舌头是发声器官之一。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["menu"]={"menu","['menjuː]","['mɛnju]","n.菜单",'n.菜单','We only have an a la carte menu.','我们只有分类菜单.','I haven\'t decided on the menu yet, let alone bought the food.','我还没决定吃什么菜呢, 更不必说买好了.'}

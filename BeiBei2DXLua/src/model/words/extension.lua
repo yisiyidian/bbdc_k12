@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extension"]={"extension","[ɪk'stenʃ(ə)n; ek-]","[ɪk'stɛnʃən]","n.延长",'n.延长,扩充,范围,分机号码','There are telephone extensions in every office.','每间办公室都有电话分机。','She has an extension in the kitchen and in the bedroom.','她的厨房和卧室都有电话分机。'}

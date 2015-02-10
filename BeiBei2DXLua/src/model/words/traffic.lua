@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["traffic"]={"traffic","['træfɪk]","['træfɪk]","n.交通",'n.交通，运输量；（非法的）交易；通信量；交际|||vt.用…作交换；在…通行|||vi.交易；买卖','||Traffic|| was badly snarled up near the accident.','车祸现场附近交通极为混乱。','Big city traffic bewilders me.','大城市的交通使我晕头转向。'}

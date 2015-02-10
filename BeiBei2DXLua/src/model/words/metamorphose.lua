@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["metamorphose"]={"metamorphose","[,metə'mɔːfəʊz]","[,mɛtə'mɔrfoz]","v.改变形状",'v.改变形状,使变成','The magician metamorphosed the frog into a prince.','魔术师把青蛙变成了王子.','A larva metamorphoses into a chrysalis and then into a butterfly.','幼虫变为蛹, 然後再变成蝴蝶.'}

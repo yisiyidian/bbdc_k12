@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["platitude"]={"platitude","['plætɪtjuːd]","['plætɪtud]","n.陈词滥调",'n.陈词滥调，陈腐','It\'s no more than a platitude.','无非是老生常谈。','His speech is full of platitude.','他的讲话充满了陈词滥调。'}

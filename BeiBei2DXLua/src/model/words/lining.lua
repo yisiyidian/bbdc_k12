@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lining"]={"lining","['laɪnɪŋ]","['laɪnɪŋ]","n.衬里",'n.衬里,内层','Acid irritates the stomach lining.','酸能刺激胃黏膜.','The coat has a detachable lining inside.','这件大衣有活里儿.'}

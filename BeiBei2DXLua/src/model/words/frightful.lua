@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["frightful"]={"frightful","['fraɪtfʊl; -f(ə)l]","['fraɪtfl]","adj.可怕的",'adj.可怕的，吓人的','They had the most frightful set-to.','他们大打出手, 从来没有这麽厉害.','The situation is frightful, but it\'s just piling on the agony to keep discussing it.','情况很可怕，可是还一个劲儿地议论让人觉得更可怕。'}

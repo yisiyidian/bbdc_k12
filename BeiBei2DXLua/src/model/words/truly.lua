@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["truly"]={"truly","['truːlɪ]","[ˈtruːli]","adv.真实地",'adv.真实地,不假','This encyclopedia is truly a compendium of knowledge.','这部百科全书真正是知识宝库.','We are truly sorry for the inconvenience.','我们真心为不便感到抱歉'}

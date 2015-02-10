@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["superannuated"]={"superannuated","[suːpə'rænjʊeɪtɪd; 'sjuː-]","[ ,sju:pər'ænjueitid ]","adj.老朽的",'adj.老朽的,退休的，陈旧过时的|||动词superannuate的过去式和过去分词形式','Are you still riding that superannuated old bike?','你还骑那辆老掉牙的自行车吗？','Nothing is more tiresome than a superannuated pedagogue.','老朽无能的学究最令人讨厌不过。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dad"]={"dad","[dæd]","[dæd]","n.爸爸",'n.爸爸','If I walk in with muddy boots, ||Dad|| always scolds (me).','我的靴子上要是有泥, 一进屋爸爸就骂（我）.','Mom and dad never see eye to eye on anything.','妈和爸从来没有对任何一件事有一致的看法。'}

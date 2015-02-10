@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incidental"]={"incidental","[ɪnsɪ'dent(ə)l]","['ɪnsə'dɛntl]","adj.附带的",'adj.附带的,偶然的,容易发生的','Fatigue is incidental to a journey in a strange land.','在陌生的地方旅行，容易疲劳。','The incidental expenses of cars in this city are expensive.','这个城市汽车的附加费用很昂贵。'}

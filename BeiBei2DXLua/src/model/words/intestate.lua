@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intestate"]={"intestate","[ɪn'testeɪt]","[ɪn'tɛstet]","adj.未留遗嘱的",'adj.未留遗嘱的|||n.无遗嘱的死亡者','The gathering together of properties to ensure an equal division of the total for distribution, as among the heirs of an intestate parent.','财产合并把财产集中起来，以便平均分配全部财产，如对无遗嘱被继承人的遗产的处理','an intestate parent.','无遗嘱的父母'}

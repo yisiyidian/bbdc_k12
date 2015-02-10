@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["home"]={"home","[həʊm]","[hom]","n.家",'adj.家(乡)的|||adv.回家,在家,正确的方向|||n.家,住所,国内的,养老院|||vt.提供住处|||vi.回家,移向','She lives a long way from home.','她远远地离开故乡在外地生活。','The arrow struck home.','箭直射中目标'}

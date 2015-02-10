@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pretend"]={"pretend","[prɪ'tend]","[prɪ'tɛnd]","vt.&vi.假装",'vt.&vi.假装,伪称|||adj.假装的,赝品的,模拟的','I don\'t pretend to know as much as he does about it.','我不敢说我对此事的了解有他那样多。','Surely he doesn\'t pretend to any understanding of music!','谅他不会自以为懂得什麽音乐吧！'}

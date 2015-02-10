@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ribald"]={"ribald","['rɪb(ə)ld; 'raɪbɔːld]","['rɪbld]","adj.说话猥亵的",'adj.说话猥亵的,下流的|||n.说话猥亵的人','Many high social class people also have some ribald thoughts.','一些上流社会的人同样有着一些下流的思想。','The answer was lost in a shout of ribald laughter.','回答被一阵下流的狂笑声掩盖了。'}

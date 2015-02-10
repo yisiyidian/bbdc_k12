@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mangle"]={"mangle","['mæŋg(ə)l]","['mæŋɡl]","vt.碾压",'vt.碾压(损坏,乱切)|||n.碾压机','There are many badly mangled bodies of those killed by the explosion.','那有许多在爆炸中被炸得残缺不全的尸体。','The symphony was dreadfully mangled.','那首交响乐曲给糟蹋得不成样子。'}

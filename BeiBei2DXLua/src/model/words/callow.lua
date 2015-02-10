@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["callow"]={"callow","['kæləʊ]","['kælo]","adj.年轻而无经验的",'adj.年轻而无经验的,(鸟)未生羽毛的','He was a callow youth when he joined the newspaper.','他进报社时还是个乳臭未干的小子。','He is a callow youth.','他是一个羽翼未丰的年轻人。'}

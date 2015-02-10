@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deem"]={"deem","[diːm]","[dim]","v.认为",'v.认为,相信','I deem it proper to refuse.','我看还是拒绝为好。','He deems it his duty to help his needy friends.','他认为帮助穷朋友是他的义务。'}

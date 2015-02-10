@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["literate"]={"literate","['lɪt(ə)rət]","['lɪtərət]","n.学者",'n.学者|||adj.精通文学的,受过教育的','He is the most literate of the whole family.','他是全家最有文化的一个.','Though nearly twenty he was barely literate.','他都快二十了, 还是睁眼瞎子.'}

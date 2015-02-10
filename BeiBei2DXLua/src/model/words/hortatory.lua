@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hortatory"]={"hortatory","['hɔːtət(ə)rɪ]","['hɔrtə,tori]","adj.激励的",'adj.激励的','He gave a hortatory speech.','他做了一场激励人心的演讲。','He is as aware of this irony as anyone, and his acceptance speech was grateful, hortatory, and, finally, pessimistic.','对一些人来说，这是一个讽刺，戈尔在他的获奖感言中表示感谢，提出了劝告，最后表达了悲观的看法。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sand"]={"sand","[sænd]","[sænd]","n.砂",'n.砂,沙滩|||v.撒沙,以沙掩盖','Dry sand absorbs water.','干沙吸收水份。','Gently sand the plastic to provide a key for the paint.','用砂纸在塑料上轻轻打磨出粗糙面以便涂颜料。'}

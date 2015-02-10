@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["steroid"]={"steroid","['stɪərɒɪd; 'sterɒɪd]","['stɛrɔɪd]","n.类固醇",'n.类固醇','He\'s being treated with steroids for leukaemia.','他因患白血病正在接受类固醇治疗.','The second part is an injection of short-term fiscal steroids','a'}

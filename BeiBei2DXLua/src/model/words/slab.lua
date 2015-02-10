@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slab"]={"slab","[slæb]","[slæb]","n.平板",'n.平板,厚的切片|||v.切成厚板,以平板盖上','This heavy slab of oak now stood between the bomb and Hitler.','这时笨重的橡木厚板就横在炸弹和希特勒之间了.','Ruz saw a large, flat stone slab on floor of the temple.','鲁茨看到有一块又大又平的石板在神殿的地板上.'}

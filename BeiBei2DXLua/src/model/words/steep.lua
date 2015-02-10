@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["steep"]={"steep","[stiːp]","[stip]","adj.险峻的",'adj.险峻的,陡峭的,(价格)过高的|||vt.&vi.浸泡,浸透,使精通|||n.陡坡,险峻的境地','The bus toiled up the steep hill.','公共汽车艰难地爬上陡峭的山岗。','The last part of the ascent is very steep.','最后一段上坡路很陡。'}

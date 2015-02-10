@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nubile"]={"nubile","['njuːbaɪl]","['njʊbɪl]","adj.适婚的",'adj.适婚的,性感的','She\'s in a nubile age.','她已经到了适婚的年龄。','Mind you, nearly more then 50% of my friends who are far beyond their nubile age are still unmarried.','事实上，我半数以上的女性朋友都已经早就过了适婚年龄却还未婚。'}

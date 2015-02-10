@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accessible"]={"accessible","[ək'sesɪb(ə)l]","[ək'sɛsəbl]","adj.易接近的",'adj.可得到的,易接近的,可进入的','This database is only accessible by the authorized manager.','只有授权的管理员才可以访问此数据库。','The information ought to be made more accessible.','资料应该更明白易懂些。'}

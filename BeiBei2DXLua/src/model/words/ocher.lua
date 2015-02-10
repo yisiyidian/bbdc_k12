@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ocher"]={"ocher","['əʊkə]","['okɚ]","n.赭石",'n.赭石，赭色|||=ochre','Deep ruby colour with a hint of ocher.','深宝石红色，略带赭色。','Deep ruby colour with a hint of ocher.  深宝石红色，略带赭色','深宝石红色，略带赭色'}

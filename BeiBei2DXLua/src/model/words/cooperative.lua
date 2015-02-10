@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cooperative"]={"cooperative","[kəʊ'ɒpərətɪv]","[ko'ɑpərətɪv]","adj.合作的",'adj.合作的,共同的|||n.合作社','They decided to set up a cooperative.','他们决定开办一家合作社。','The management would like to thank the staff for being so cooperative.','资方要感谢全体员工的通力合作。'}

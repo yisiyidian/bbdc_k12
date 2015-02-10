@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["zinc"]={"zinc","[zɪŋk]","[zɪŋk]","n.锌",'n.锌|||vt.在…上镀锌','His body is in short of zinc.','他身体缺锌.','Brass is formed by the fusion of copper and zinc.','黄铜是由铜和锌熔合制成的。'}

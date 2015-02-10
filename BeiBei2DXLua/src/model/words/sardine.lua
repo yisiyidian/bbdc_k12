@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sardine"]={"sardine","[sɑː'diːn]","[,sɑr'din]","n.沙丁鱼",'n.沙丁鱼','The ten of us were squashed together like sardines in the tin.','我们十几个人像沙丁鱼罐头一样挤成一团。','The ten of us were squashed together like sardines in the lift.','我们十个人在电梯里拥成一团.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deed"]={"deed","[diːd]","[did]","n.事迹",'n.事迹,行为，（尤指房产）契约，证书|||vt.通过行为转化','We should be true in word and resolute in deed.','我们应该言必信，行必果。','The money was given to us by deed of covenant.','这笔钱是根据契约书付给我们的。'}

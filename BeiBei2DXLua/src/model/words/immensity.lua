@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["immensity"]={"immensity","[ɪ'mensətɪ]","[ɪ'mɛnsəti]","n.无限",'n.无限(巨大,无限的空间,巨大之物)','the empty immensity of earth, sky, and water','“大地、天空和水的空旷无垠”','The immensity of the Pyramids is breath-taking as they rise from the Plateau of Giza, a short distance southwest of Cairo.','巨大的金字塔升起在开罗西南不远处的吉扎高原，令人惊叹不已。'}

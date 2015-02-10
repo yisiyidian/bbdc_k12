@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["skirmish"]={"skirmish","['skɜːmɪʃ]","['skɝmɪʃ]","n.小冲突",'n.前哨战,小争斗,小冲突|||vi.参与小争斗','This area is peaceful except for a few skirmishes in the distance.','除了远处的零星的小冲突之外，这个地区是和平的。','A long series of skirmishes started the war.','一连串小摩擦导致了战争。'}

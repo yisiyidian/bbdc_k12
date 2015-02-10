@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["princess"]={"princess","[ˌprɪnˈses]","[,prɪn'sɛs]","n.公主",'n.公主,妃,贵妇|||adj.(礼服)合身而好看的,有贵族气息的','The kind dwarf asked the little princess to have dinner with him.','善良的小矮人邀请小公主和他一起吃晚饭。','a princess dress.','紧身连衣长裙'}

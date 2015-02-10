@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["FALSE"]={"FALSE","[fɔːls; fɒls]","[fɔls]","adj.假的",'adj.不真实的,错误的,人造的,假的,虚伪的|||adv.不真诚地,虚伪地','After several ||false|| starts, she became a successful journalist.','她开始时遇到几次挫折，後来才成为能干的记者','The impostor traveled on a ||false|| passport.','那个伪装者用一本假护照旅行。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["remand"]={"remand","[rɪ'mɑːnd]","[rɪ'mænd]","n.送还",'n.送还,还押|||v.送回,归还,命令归还','The judge has the power to remand young offenders to the special home until their case be heard.','法官有权把青少年犯关押在青少年拘留所直到听证会开始。','He is remanded on his own recognizance of$4, 000.','在保证付款4, 000美元后他被还押(以后再出庭)。'}

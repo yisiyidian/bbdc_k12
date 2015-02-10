@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["meningitis"]={"meningitis","[,menɪn'dʒaɪtɪs]","['mɛnɪn'dʒaɪtɪs]","n.髓膜炎",'n.髓膜炎','||Meningitis|| is communicated by mosquitoes.','脑膜炎是经由蚊子传染的。','||Meningitis|| is dangerous.','脑膜炎很危险'}

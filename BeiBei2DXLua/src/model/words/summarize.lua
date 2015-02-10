@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["summarize"]={"summarize","['sʌməraɪz]","[ 'sʌməraiz ]","vt.&vi.概述",'vt.&vi.概述,摘要而言','I will summarize what I have done.','我将概述我所做的事情。','We may summarize the situation then as follows.','于是我们可将上述情况归结如下.'}

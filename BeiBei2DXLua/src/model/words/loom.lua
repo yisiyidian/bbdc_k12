@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["loom"]={"loom","[luːm]","[lum]","n.织布机",'n.织布机,若隐若现的现象|||vi.朦胧地出现,隐约可见,可怖地出现','I don\'t know how to use a hand loom.','我不知道怎样使用手工织布机。','The mountainous island loomed on the horizon.','那座巨大的岛屿隐隐约约浮现在地平线上。'}

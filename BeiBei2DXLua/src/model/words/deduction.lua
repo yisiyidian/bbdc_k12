@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deduction"]={"deduction","[dɪ'dʌkʃ(ə)n]","[dɪ'dʌkʃən]","n.减除(额)",'n.减除(额),推论','A conclusion drawn; a deduction.','推断得出的结论; 归纳的结果','Her deduction that he was now dead was correct.','她作出的他此时已经死亡的推论是正确的。'}

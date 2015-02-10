@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["genre"]={"genre","[ˈʒɒnrə]","['ʒɑnrə]","n.类型",'n.类型,流派','My favorite music genre is blues.','我最喜欢的音乐种类是布鲁斯。','A compact sitting room of the same genre was outside.','外面是间具有同样格调的小小的起居室.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deciduous"]={"deciduous","[dɪ'sɪdjʊəs]","[dɪ'sɪdʒuəs]","adj.每年落叶的",'adj.每年落叶的,非永久性的','Very few plants in my garden are deciduous.','我的花园里很少有落叶植物。','||Deciduous|| trees shed their leaves in autumn.','落叶树木在秋天落叶。'}

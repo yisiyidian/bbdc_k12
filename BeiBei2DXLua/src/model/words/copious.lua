@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["copious"]={"copious","['kəʊpɪəs]","['kopɪəs]","adj.丰富的",'adj.丰富的,大量的，(指作家)多产的','She was a copious writer.','她是一位多产作家。','He attended his lectures and took copious notes.','他去听他的课，做了大量的笔记。'}

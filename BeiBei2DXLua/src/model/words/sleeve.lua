@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sleeve"]={"sleeve","[sliːv]","[sliv]","n.袖子",'n.袖子,套管','I felt a pull at my sleeve and turned round.','我觉得有人扯我的袖子, 便转过身来.','A stranger plucked at my sleeve as I was leaving.','我刚要离去, 一个陌生人拽我的袖子.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["haystack"]={"haystack","['heɪstæk]","['hestæk]","n.大干草堆",'n.大干草堆|||=hayrick','He\'d been sleeping rough for a week, in ditches and haystacks.','他在沟里和草堆里露宿了一个星期。','Searching for one man in this big city is like looking for a needle in a haystack.','在这座大城市里寻找一个人犹如大海捞针.'}

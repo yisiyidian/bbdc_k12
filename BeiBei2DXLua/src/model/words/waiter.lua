@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["waiter"]={"waiter","['weɪtə]","['wetɚ]","n.侍者",'n.侍者,(男)服务员|||n.托盘','Don\'t forget to tip the waiter.','别忘了给服务员小费.','He asked the waiter to bring him a cask of sherry.','他叫侍者给他拿一桶雪利酒。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["assistant"]={"assistant","[ə'sɪst(ə)nt]","[ə'sɪstənt]","n.助手助理",'adj.助理的；辅助的。|||n.助手助理；助教，店员','May I present my new assistant (to you).','请允许我（向你）介绍我的新助手.','The shop assistant was not in the least afraid of the trouble.','那店员一点也不怕麻烦。'}

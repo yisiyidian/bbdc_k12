@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["harangue"]={"harangue","[hə'ræŋ]","[hə'ræŋ]","n.长篇演说",'n.长篇演说|||vt.向...夸夸其谈地演讲|||vi.做长篇演说','The harangue is very serious.','那篇长篇演说很郑重其事。','He harangued the troops before a battle.','他在战前向士兵作了慷慨激昂的讲话。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["contest"]={"contest","['kɒntest]","[kən'tɛst]","n.竞赛",'n.竞赛,比赛|||vt.竞赛,争取|||vi.奋斗','He got the best of it in the contest.','他在比赛中得胜了。','Tom carried off the first prize in the contest.','汤姆在比赛中获头奖。'}

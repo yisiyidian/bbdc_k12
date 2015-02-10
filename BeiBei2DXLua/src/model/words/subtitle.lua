@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subtitle"]={"subtitle","['sʌbtaɪt(ə)l]","['sʌb'taɪtl]","n.副题(书本中的)",'n.副题(书本中的),说明或对白的字幕|||vt.给...加副标题，给...加字幕','A subtitle in a motion picture.','字幕电影里的对话译文','A written piece of translated dialogue superimposed at the bottom of the frame during a film; a subtitle.','字幕电映放映时叠映在画面底部的翻译过来的对话的书面形式；字幕'}

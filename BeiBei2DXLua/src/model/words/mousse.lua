@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mousse"]={"mousse","[muːs]","[mus]","n.冻奶油甜点",'n.冻奶油甜点，摩丝|||vt.（对头发）上摩丝','chocolate mousse.','巧克力奶油慕思','...a rich chocolate mousse.','…味道十足的巧克力慕斯。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["illusory"]={"illusory","[ɪ'l(j)uːs(ə)rɪ]","[ɪ'lusəri]","adj.虚幻的",'adj.虚幻的，幻觉的','His freedom is illusory.','他的自由是虚幻的。','He likes playing net games and always descend into a illusory world','他喜欢玩网络游戏，经常沉迷于虚幻的世界。'}

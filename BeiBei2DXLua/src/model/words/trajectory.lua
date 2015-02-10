@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trajectory"]={"trajectory","[trə'dʒekt(ə)rɪ; 'trædʒɪkt(ə)rɪ]","[trə'dʒɛktəri]","n.轨道",'n.轨道,弹道,轨线','The missile deflected from its trajectory.','导弹已偏离轨道。','It is not difficult to sketch the subsequent trajectory.','很容易描绘出它们最终的轨迹。'}

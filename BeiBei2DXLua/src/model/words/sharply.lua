@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sharply"]={"sharply","['ʃɑ:plɪ]","['ʃɑrpli]","adv.锐利地",'adv.锐利地,严厉地,厉害地','She took me up sharply when I suggested that the job was only suitable for a man.','我提出那工作只适合男人做, 她不容我说完就把我斥责一番.','The City reacted sharply to the fall in oil prices.','伦敦商业区对油价下跌反应强烈。'}

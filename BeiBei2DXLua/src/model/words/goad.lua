@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["goad"]={"goad","[gəʊd]","[ɡod]","n.刺棒",'n.刺棒,激励物,刺激物|||v.用刺棒驱赶,激励,刺激','Although the innkeeper was warm, we guessed that his real goad was to get more money.','尽管客栈老板很热情，但我们猜想他的真正目的是为了得到更多的钱。','Stop goading the poor beast!','别再驱赶那可怜的动物了！'}

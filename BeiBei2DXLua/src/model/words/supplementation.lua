@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supplementation"]={"supplementation","[,sʌpləmən'teʃən]","[ ,sʌplimen'teiʃən ]","n.增补",'n.增补,补充,追加','The product provided inadequate vitamin and mineral supplementation.','这种产品不能充分补充维生素和矿物质。','Nutrition and osteoporosis,when is supplementation with calcium and vitamin D3 useful?','营养与骨质疏松症。当补充钙和维生素D3有用吗？'}

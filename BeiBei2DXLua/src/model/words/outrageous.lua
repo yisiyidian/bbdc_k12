@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outrageous"]={"outrageous","[aʊt'reɪdʒəs]","[aʊt'redʒəs]","adj.暴虐的",'adj.暴虐的,极无礼的,可恶的|||惊人的,肆无忌惮的,毫无节制的','I am not prepared to stay and listen to these outrageous insults.','我可不愿意在这儿受这种奇耻大辱.','Her outrageous remarks were/went beyond all reason.','她那些无礼的话全无道理.'}

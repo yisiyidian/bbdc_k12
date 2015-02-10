@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compromise"]={"compromise","['kɒmprəmaɪz]","['kɑmprəmaɪz]","n.妥协",'n.妥协,折衷,折衷案|||vt.妥协处理,危害|||vi.妥协,让步','Progress has been made towards a political compromise between the two nations.','两国之间的政治和解已经取得进展。','The incongruous design is a compromise between high tech and early American.','这个不协调的设计是高科技与早期美式建筑折衷的产物'}

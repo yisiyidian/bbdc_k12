@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bodyguard"]={"bodyguard","['bɒdɪgɑːd]","['bɑdɪɡɑrd]","n.警卫员",'n.警卫员，保卫人员，保镖','A strong man hired as a bodyguard or thug.','雇来作为保镖或者打手的强壮的人','The Premier\'s bodyguard was waiting there.','首相的护卫人员在那儿等着。'}

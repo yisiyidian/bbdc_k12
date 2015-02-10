@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anthropology"]={"anthropology","[,ænθrə'pɒlədʒɪ]","['ænθrə'pɑlədʒi]","n.人类学",'n.人类学','Social anthropology is centrally concerned with the diversity of culture.','社会人类学主要关于文化多样性。','She also became an anthropology professor at what is now California State University, Northridge.','x'}

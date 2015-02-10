@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eschew"]={"eschew","[ɪs'tʃuː; es-]","[ɪsˈtʃuː]","v.避开",'v.避开,戒绝|||vt.避开','A civilised leader must eschew violence.','文明领导人必须避免使用暴力。','A wise person eschews bad company.','聪明人远避恶友。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["engulf"]={"engulf","[ɪn'gʌlf; en-]","[ɛnˈɡʌlf]","v.吞没",'v.吞没','The racial strifle engulfed the city','种族争端席卷了整个城市','The spring tide engulfed the beach houses.','春潮吞没了海滩上的房子'}

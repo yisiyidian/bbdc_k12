@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["napkin"]={"napkin","['næpkɪn]","['næpkɪn]","n.餐巾",'n.餐巾,一小块布或毛巾,卫生巾','He has much learning, but he hides it in a napkin.','他学识渊博，可是并没有把它发挥出来。','This is a disposable napkin.','这是一次性尿布.'}

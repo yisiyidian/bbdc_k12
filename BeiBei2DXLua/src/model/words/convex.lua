@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["convex"]={"convex","['kɒnveks]","['kɑnvɛks]","adj.中凸的",'adj.中凸的,凸圆的,凸面的|||n.凸状,凸面体,凸透镜','Light can be collected with the convex.','凸透镜具有聚集光线的作用。','I wouldn\'t say your stomach was big - it’s just slightly convex.','我不会说你的肚子大——它只是有点凸出。'}

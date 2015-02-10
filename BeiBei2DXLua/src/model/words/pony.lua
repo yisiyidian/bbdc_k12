@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pony"]={"pony","['pəʊnɪ]","['poni]","adj.小型的",'adj.小型的|||n.小马','Where do you stable your pony?','你那匹矮种马养在哪儿?','If you won\'t drive me, I\'ll have to get there on Shanks\'s pony.','要是你不开车送我去, 那我就只好走著去了.'}

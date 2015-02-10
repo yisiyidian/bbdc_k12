@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interested"]={"interested","['ɪnt(ə)rɪstɪd]","['ɪntrəstɪd]","adj.感兴趣的",'adj.感兴趣的','He is not interested in politics.','他不喜欢政治。','I am very interested in Greek and Roman mythology.','我对希腊罗马神话非常感兴趣。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scenario"]={"scenario","[sɪ'nɑːrɪəʊ]","[sə'nærɪo]","n.情节梗概",'n.情节梗概,剧本','It looked ominously like we were about to repeat the earlier scenario.','看上去情况不妙，好像我们又得重复上次那一幕了。','This is an adaptation of a novel for the scenario.','这是由小说改编的电影剧本。'}

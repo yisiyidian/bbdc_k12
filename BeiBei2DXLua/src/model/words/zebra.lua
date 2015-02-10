@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["zebra"]={"zebra","['zebrə; 'ziːbrə]","['zɛbrə; 'zi-]","n.斑马",'n.斑马,斑马线','There are several species of zebra.','斑马有好几种.','It seem that everybody like the zebra.','似乎每个人都喜欢斑马。'}

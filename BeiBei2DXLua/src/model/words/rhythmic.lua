@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rhythmic"]={"rhythmic","['rɪðmɪk]","[ 'riðmik, 'riθ- ]","adj.有节奏的",'adj.有节奏的，有韵律的','Except for the rhythmic splash of the rudder oar, all was still.','水面静静的,只有那有规律的荡桨声打破了静夜的沉寂.','Good breathing is slow, rhythmic and deep.','健康的呼吸方式缓慢深沉而有节奏。'}

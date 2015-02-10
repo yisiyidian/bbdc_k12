@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irksome"]={"irksome","['ɜːks(ə)m]","['ɝksəm]","adj.讨厌的",'adj.厌恶的,讨厌的,令人厌烦的','I had a very irksome encounter myself today.','我今天也碰到了倒霉的事情。','It is irksome to listen to his constant complaints.','听他无休无止地抱怨真使人心烦。'}

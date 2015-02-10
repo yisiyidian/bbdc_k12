@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vibrant"]={"vibrant","['vaɪbrənt]","['vaɪbrənt]","adj.震颤的",'adj.震颤的,响亮的,充满活力的,精力充沛的,(色彩)鲜明的','His vibrant voice commove the air.','他响亮的声音振动了空气。','He always uses vibrant colours in his paintings.','他在画中总是使用鲜明的色彩.'}

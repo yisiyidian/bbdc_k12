@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["receptive"]={"receptive","[rɪ'septɪv]","[rɪ'sɛptɪv]","adj.接收能力强的",'adj.接收能力强的，愿意接受的，感官的','He is not very receptive to my suggestions.','他不太接受我的建议。','He grew eloquent under her receptive gaze.','她那乐于接受的目光让他变得口若悬河起来。'}

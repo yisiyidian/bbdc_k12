@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emotional"]={"emotional","[ɪ'məʊʃ(ə)n(ə)l]","[ɪ'moʃənl]","adj.感情的",'adj.感情的,情绪的','She had a major emotional upset.','她情绪上受到了沉重的打击。','Her emotional appeal left him completely cold.','她虽动情，他却无动於衷。'}

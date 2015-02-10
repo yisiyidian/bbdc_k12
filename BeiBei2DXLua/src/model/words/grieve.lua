@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grieve"]={"grieve","[griːv]","[griv]","v.使...悲伤",'v.使...悲伤','grieved over her father\'s sudden death;','为她父亲的突然故去而悲痛；','It\'s no use ||grieving|| about past errors.','为过去的错误懊悔不已是无济于事的。'}

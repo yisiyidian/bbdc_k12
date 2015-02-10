@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parlor"]={"parlor","['pɑrlɚ]","[ 'pɑ:lə ]","n.客厅",'n.客厅,接待室，(旅馆中的)休息室，小店|||adj.用于接待室（客厅，休息室，小店）的','I felt obliged to invite him into the parlor.','我只得把他让进客厅。','The house has an ample parlor.','这座房子有宽敞的客厅。'}

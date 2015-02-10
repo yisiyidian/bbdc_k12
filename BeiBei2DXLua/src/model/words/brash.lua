@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brash"]={"brash","[bræʃ]","[bræʃ]","adj.性急的",'adj.性急的,仓促的,无礼的|||n.胃灼热,骤雨,碎片','His brash answers annoyed the interviewers.','面试官对他无礼的回答感到不满。','He was wearing a rather brash tie.','他系著一条颇为显眼的领带.'}

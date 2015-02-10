@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["paycheck"]={"paycheck","['peɪtʃek]","['pe,tʃɛk]","n.薪水支票",'n.薪水支票，工资','I save at least 10 % of each paycheck.','我至少将每次薪水的10%用于储蓄.','The new appropriations bill could mean a larger paycheck for state employees.','新的岁出预算案对国家雇员来说是一张更大的支票'}

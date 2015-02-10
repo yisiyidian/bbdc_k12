@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sunset"]={"sunset","['sʌnset]","['sʌnsɛt]","n.日落",'n.日落，衰落时期（尤指人的晚年）','We reached (the) harbour at sunset.','日落时我们抵达了港口.','The sunset has tinted the sky with pink.','落日把天空染成了粉红色。'}

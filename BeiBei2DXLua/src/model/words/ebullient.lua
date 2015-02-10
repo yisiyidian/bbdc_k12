@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ebullient"]={"ebullient","[ɪ'bʌljənt; -'bʊl-]","[ɪ'bʌlɪənt]","adj.沸腾的",'adj.沸腾的,热情洋溢的','He was ebullient over the reception of his novel.','他因小说获好评而兴高采烈。','She wrote the ebullient letter when she got back to her flat.','她一回到自己的寓所，就写了那封热情洋溢的信。'}

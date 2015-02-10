@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quiz"]={"quiz","[kwɪz]","[kwɪz]","n.随堂测验",'n.随堂测验,恶作剧,古怪的人|||vt.恶作剧,提问','The Cambridge team were too much for the Oxford team in the quiz.','在智力竞赛中, 剑桥队远胜牛津队.','Match your skill against the experts in this quiz.','在这一测验中你与专家较量一下技巧吧。'}

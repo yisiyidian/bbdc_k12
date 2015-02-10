@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["corporeal"]={"corporeal","[kɔː'pɔːrɪəl]","[kɔr'pɔrɪəl]","adj.肉体的",'adj.肉体的,有形的,物质的','The capital here includes corporeal capital and manpower capital.','这里的资本包括物质资本和人力资本。','||Corporeal|| means involving or relating to the physical world rather than the spiritual world.','身体的，物质的'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["confer"]={"confer","[kən'fɜː]","[kən'fɝ]","vi.商讨",'vi.商讨|||vt.赠予,授予','The Queen conferred knighthood on several distinguished men.','女王将爵士头衔授予几位杰出人士。','We need to confer with government about the price of houses.','我们需要和政府商量房价的事情。'}

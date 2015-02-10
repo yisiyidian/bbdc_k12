@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["viewer"]={"viewer","['vjuːə]","['vjuɚ]","n.观看者",'n.观看者，电视观众,观察器','Letters from viewers express their dissatisfaction with current programmes.','电视观众来信表示对当前节目不满.','For every viewer who "mustn\'t miss him tonight" there is another for whom he is the man one most loves to hate.','每逢有观众觉得“今晚节目决不可错过此人”，也会有另外的观众极为讨厌此人。'}

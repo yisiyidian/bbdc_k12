@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heal"]={"heal","[hiːl]","[hil]","vt.痊愈",'vt.痊愈,恢复,和解|||vi.痊愈','The cut is no longer weeping and is starting to heal.','伤口已不流脓, 渐渐愈合了.','The holy man healed them of their sickness.','那位神职人员治好了他们的疾病。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["place"]={"place","[pleɪs]","[ples]","n.地方",'n.地方,职位,获奖的名次|||vt.放置,任命,安排|||vi.获得名次','She has a foreign accent that I can\'t quite place.','她有外国口音，但我听不出是哪儿的口音。','Australia is a big place.','澳大利亚这个地方很大。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nineteen"]={"nineteen","[naɪn'tiːn; 'naɪntiːn]","[,naɪn'tin]","num.十九",'num.十九','They were chatting away nineteen to the dozen.','他们聊个没完.','He was born in the nineties of the nineteen century.','他生于十九世纪九十年代。'}

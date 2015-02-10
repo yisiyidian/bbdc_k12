@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["priority"]={"priority","[praɪ'ɒrɪtɪ]","[praɪ'ɔrəti]","n.优先权",'n.优先权,优先顺序,优先','Vehicles coming from the right have priority.','从右边驶来的车辆享有优先通行权.','The search for a new vaccine took priority over all other medical research.','在各种医药研究中, 应首先解决寻找新疫苗的问题.'}

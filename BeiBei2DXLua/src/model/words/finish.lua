@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["finish"]={"finish","['fɪnɪʃ]","['fɪnɪʃ]","vi.完成",'n.完成,最后加工,结局,完美|||vt.结束,获...第几名|||vi.终结,完成','She should finish with him; he treats her badly.','她应该和他断绝关系－－他对她不好。','I\'ve finished with gambling; it\'s a waste of money.','我已经戒赌了－－赌博完全是浪费钱财。'}

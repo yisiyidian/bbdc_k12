@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["convoluted"]={"convoluted","[,kɒnvə'l(j)uːtɪd]","['kɑnvəlutɪd]","adj.旋绕的",'adj.旋绕的,费解的|||动词convolute的过去式和过去分词','This is a convoluted case.','这是一个令人费解的案子。','His words are so convoluted that I barely understand what he means.','他的话太深奥，我根本听不懂。'}

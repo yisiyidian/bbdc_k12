@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enlightenment"]={"enlightenment","[ɪn'laɪt(ə)nm(ə)nt; en-]","[ɪn'laɪtnmənt]","n.启蒙",'n.启蒙|||n.【佛教】开悟','In an age of enlightenment such cruelty is unforgivable.','在文明时代，这麽残忍是不能宽恕的。','The teacher\'s attempts at enlightenment failed; I remained as confused as before.','老师虽尽力开导却劳而无功，我仍像以前一样糊涂。'}

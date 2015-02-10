@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["surface"]={"surface","['sɜːfɪs]","['sɝfɪs]","n.表面",'n.表面,平面,外表|||adj.表面的,肤浅的|||vt.在某物上加表层,使...成平面|||vi.浮到水面,披露出来,在表面工作','The scheme seems on the surface to be quite practical.','这方案表面上看来似乎很实际。','Beneath her self-confident surface, she\'s quite unsure of herself.','她看上去信心十足，实际上很缺乏信心。'}

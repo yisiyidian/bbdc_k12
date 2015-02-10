@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["destruction"]={"destruction","[dɪ'strʌkʃ(ə)n]","[dɪ'strʌkʃən]","n.破坏",'n.破坏,毁灭,破坏者','We all mourn the destruction of a well-loved building.','我们都为毁掉心爱的建筑物而痛惜.','The destruction of these big forests could have serious ecological consequences.','这些大森林的毁坏会带来生态上的严重后果。'}

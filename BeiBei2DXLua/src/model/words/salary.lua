@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["salary"]={"salary","['sælərɪ]","['sæləri]","n.薪水",'n.薪水|||vt.给...薪水','His money comes mainly from salary.','他的钱主要来自工资。','I want to speak to her in the matter of my salary.','我想跟她谈谈我的薪水问题。'}

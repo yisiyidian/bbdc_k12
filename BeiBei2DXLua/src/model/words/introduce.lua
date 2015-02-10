@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["introduce"]={"introduce","[ɪntrə'djuːs]","[ˌɪntrə'dus]","vt.介绍",'vt.介绍,引进,采用,提出,提倡,放入','The company is ||introducing|| a new family saloon this year.','公司准备今年推出一种新型家庭轿车。','The next programme is introduced by Mary Davidson.','下一个节目由玛丽·戴维森主持。'}

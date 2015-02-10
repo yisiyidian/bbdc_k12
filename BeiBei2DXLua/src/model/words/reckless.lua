@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reckless"]={"reckless","['reklɪs]","['rɛkləs]","adj.不计后果的",'adj.不计后果的,大意的,鲁莽的','He\'s a reckless driver.','他是个鲁莽的司机。','He\'s quite reckless of his own safety.','他完全不顾及自己的安全。'}

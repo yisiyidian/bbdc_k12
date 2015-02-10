@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jeer"]={"jeer","[dʒɪə]","[dʒɪr]","vi.嘲弄",'vi.嘲弄,揶揄|||vt.奚落|||n.嘲笑,讥评','They all jeer at the foolish speaker.','他们都嘲笑那个愚蠢的演说者。','He jeered at a defeated opponent.','他嘲弄被击败的对手.'}

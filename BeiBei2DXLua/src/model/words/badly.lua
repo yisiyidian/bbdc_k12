@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["badly"]={"badly","['bædlɪ]","['bædli]","adv.严重地",'adv.严重地,恶劣地,极度地','He cut his wrist so badly that jets of blood spurted out.','他的手腕割伤得很厉害，血阵阵涌出。','Traffic was badly snarled up near the accident.','车祸现场附近交通极为混乱。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bookkeeper"]={"bookkeeper","['bʊkkipɚ]","[ 'buk,ki:pə ]","n.簿记员;记帐员",'n.簿记员;记帐员','The bookkeeper was entering up the sales for the past month.','会计正把上个月的销售帐目登入帐簿。','Eric earned his bread and butter as a bookkeeper, but added a little jam by working with a dance band on weekends.','埃里克以当簿记员来维持生计，且利用周末当舞会伴奏赚些外快。'}

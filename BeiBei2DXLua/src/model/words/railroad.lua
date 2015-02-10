@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["railroad"]={"railroad","['reɪlrəʊd]","['relrod]","n.铁路",'n.铁路|||=railway（英）|||vt.由铁道运输，使（议案等）草草通过|||vi.在铁路公司工作','We walked as far as the railroad station.','我们走到火车站那样远的地方。','||Railroad|| trains and buses are public conveyances.','火车和公共汽车是公共交通工具。'}

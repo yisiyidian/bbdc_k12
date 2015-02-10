@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["satisfactory"]={"satisfactory","[sætɪs'fækt(ə)rɪ]","[,sætɪs'fæktəri]","adj.令人满意的",'adj.令人满意的','We sampled the stuff and found it satisfactory.','我们抽验了这批材料，认为满意。','The efficacy of the medicine is satisfactory.','这药的药效令人满意。'}

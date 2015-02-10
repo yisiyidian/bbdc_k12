@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lighthouse"]={"lighthouse","['laɪthaʊs]","['laɪthaʊs]","n.灯塔",'n.灯塔','A lighthouse was flashing in the distance.','灯塔在远处发出闪烁的光.','The lighthouse was abeam of the ship.','灯塔在船的正横方向.'}

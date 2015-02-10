@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cynosure"]={"cynosure","['sɪnəzjʊə; 'saɪn-; -sjʊə]","['sɪnəʃʊr]","n.注意的焦点",'n.注意的焦点，指引物|||Cynosure|||n.北极星','Let faith be your cynosure to walk by.','让信仰成为你生活中的灯塔。','She was the cynosure of all eyes, ie Everyone looked at her.','她是众目所瞩的人.'}

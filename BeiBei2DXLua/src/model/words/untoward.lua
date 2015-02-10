@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["untoward"]={"untoward","[ʌntə'wɔːd; ʌn'təʊəd]","[ʌn'tɔrd]","adj.麻烦的",'adj.麻烦的,不利的，不适当的，失控的|||adj.[古]笨拙的，难堪的','The surveyor\'s report didn\'t highlight anything untoward.','勘测员的报告没有指明有任何麻烦问题。','Neither system is currently showing anything untoward.','两个系统目前都没有显示任何异常情况。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sodden"]={"sodden","['sɒd(ə)n]","['sɑdn]","adj.浑身湿透的",'adj.浑身湿透的,不成样子的,浸过酒的|||v.拿水浸,变柔软,腐败','His grey jersey and trousers were sodden with the rain.','他的灰色运动衫和裤子都被雨水浸透了。','His sodden trousers were clinging to his shins and his shoes squelched.','他湿透的裤子紧贴小腿，鞋子吧唧作响。'}

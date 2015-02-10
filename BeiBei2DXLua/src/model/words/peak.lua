@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peak"]={"peak","[piːk]","[pik]","n.山顶",'n.山顶,顶点,帽舌|||vi.到达高点,消瘦|||vt.使到达顶峰,竖起|||adj.处于顶峰状态的','Property prices have peaked.','房地产价格已达到最高点。','The mountain peaks are covered with snow all year.','山顶上终年积雪。'}

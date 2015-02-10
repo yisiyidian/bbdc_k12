@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["offensive"]={"offensive","[ə'fensɪv]","[ə'fɛnsɪv]","n.进攻",'adj.令人不快的,侮辱的,攻击用的|||n.进攻','You will find it difficult to explain away your use of such offensive language.','你将发现你很难为说过的这种无礼的话辩解。','His remarks were deeply offensive.','他的话非常无礼。'}

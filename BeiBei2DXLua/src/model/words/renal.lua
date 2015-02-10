@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["renal"]={"renal","['riːn(ə)l]","['rinl]","adj.肾脏的",'adj.肾脏的','People with renal diseases have to eat salt-free foods.','患有肾脏疾病的人只能吃不含盐的食物。','He collapsed from acute renal failure.','他的身体因严重的肾衰竭而垮掉了。'}

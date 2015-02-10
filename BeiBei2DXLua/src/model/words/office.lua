@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["office"]={"office","['ɒfɪs]","['ɔfɪs]","n.办公室",'n.办公室，职务，事务','The corridor opens into his office.','这走廊通到他的办公室。','She went to the telegraph office in a hurry.','她匆匆忙忙向电报局去了。'}

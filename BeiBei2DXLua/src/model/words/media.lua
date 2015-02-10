@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["media"]={"media","['miːdɪə]","[ 'mi:diə ]","n.(复数)媒体",'n.(复数)媒体,新闻媒介,传播媒介','Tim appeared unabashed by all the media attention.','蒂姆成了传播媒介的焦点, 却也满不在乎.','The actress revels in all the attention she gets from the media.','这位女演员陶醉于传媒对她的吹捧。'}

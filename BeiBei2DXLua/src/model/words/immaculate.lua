@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["immaculate"]={"immaculate","[ɪ'mækjʊlət]","[ɪ'mækjələt]","adj.洁白的(无缺点的）",'adj.洁白的(无缺点的,无瑕疵的)','No matter how many guests were present, the great house was always immaculate.','不论有多少宾客，这幢大房子总是一尘不染。','It\'s an immaculate performance.','那是一场完美的演出。'}

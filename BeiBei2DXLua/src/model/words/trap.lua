@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trap"]={"trap","[træp]","[træp]","n.圈套",'n.圈套,陷阱,困境,双轮轻便马车|||vt.&vi.设圈套,设陷阱','Some miners were trapped underground after the collapse.','塌方后，有些矿工被困在地下。','By clever questioning they trapped him into making a confession.','他们用巧妙的提问诱使他招认了。'}

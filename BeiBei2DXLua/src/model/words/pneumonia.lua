@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pneumonia"]={"pneumonia","[njuː'məʊnɪə]","[nʊ'monɪə]","n.肺炎",'n.肺炎','Set up by a severe cold in October, Mary could not throw off her pneumonia.','玛丽十月间得过一场重感冒，抵抗力大为减弱，因而肺炎难以痊愈。','The patient caught pneumonia and went out shortly before midnight.','那个病人感染了肺炎，在午夜前不久死了。'}

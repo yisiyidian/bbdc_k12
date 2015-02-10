@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outlast"]={"outlast","[aʊt'lɑːst]","[,aʊt'læst]","vt.较...耐久",'vt.较...耐久','He will outlast me.','他将比我长寿。','The political system will outlast most of us.','我们大多数人将看不到这一政治制度的消亡.'}

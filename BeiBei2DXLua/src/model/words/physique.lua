@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["physique"]={"physique","[fɪ'ziːk]","[fɪ'zik]","n.体格",'n.体格，体形','A person having such a physique.','瘦长的人有着如此身材的人','Practicing gongfu strengthens the physique.','武术可以锻炼筋骨。'}

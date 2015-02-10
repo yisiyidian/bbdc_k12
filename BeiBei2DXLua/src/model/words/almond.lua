@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["almond"]={"almond","['ɑːmənd]","['ɑmənd]","n.杏仁",'n.杏仁','A chewy cookie made with sugar, egg whites, and almond paste or coconut.','蛋白杏仁甜饼干一种不易咬碎的饼干，用糖、蛋白、杏仁糊或椰子粉做成','A sweet flavoring of orange and almond used in cocktails and food.','杏仁橘花香茶一种用于鸡尾酒和食物中的、含有桔子与杏仁的甜作料'}

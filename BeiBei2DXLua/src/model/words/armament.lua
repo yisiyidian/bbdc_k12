@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["armament"]={"armament","['ɑːməm(ə)nt]","['ɑrməmənt]","n.军备",'n.军备,武器,备战','The armament of any of the great power can destroy civilization.','任何大国的军事力量都能摧毁文明世界。','Some observers think that this country\'s offer to reduce spending on armaments is just a hollow promise.','一些观察家认为，这个国家减少军备开支的提议仅仅是一个空口许诺。'}

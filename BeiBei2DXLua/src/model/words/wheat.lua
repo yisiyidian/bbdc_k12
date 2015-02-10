@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wheat"]={"wheat","[wiːt]","[wit]","n.小麦",'n.小麦,小麦色','We have to sift through the application forms very carefully to separate the wheat from the chaff.','我们得把申请书仔细筛选一下以甄别优劣.','This old man is a leading authority on wheat diseases.','这位老人是小麦病虫害方面的权威。'}

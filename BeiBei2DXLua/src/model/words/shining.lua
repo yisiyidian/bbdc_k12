@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shining"]={"shining","['ʃaɪnɪŋ]","['ʃaɪnɪŋ]","adj.光亮的",'adj.光亮的,华丽的|||vbl.闪烁,发亮','The stars were shining bright.','星光灿烂.','The moon is shining (through the window).','月光（通过窗户）照了进来.'}

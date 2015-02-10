@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["silly"]={"silly","['sɪlɪ]","['sɪli]","adj.愚蠢的",'adj.愚蠢的,淳朴的,晕的','That silly child never does anything; he just fools about all day long.','那个傻孩子从来不做事，只是整天游手好闲。','She torments everyone with silly questions.','她用无聊的问题来烦扰大家。'}

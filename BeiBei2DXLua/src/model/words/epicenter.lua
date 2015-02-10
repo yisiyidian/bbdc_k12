@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["epicenter"]={"epicenter","['ɛpɪ,sɛntɚ]","[ 'episentə ]","n.震中",'n.震中，中心','stood at the epicenter of the international crisis.','处于国际危机的中心','the city nearest to the epicenter.','距离震中最近的城市。'}

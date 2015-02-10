@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hymn"]={"hymn","[hɪm]","[hɪm]","n.赞美诗",'n.赞美诗,圣歌|||v.唱赞美歌','A Protestant hymn melody.','赞美诗曲调新教赞美诗的曲调','The choir has sung only two verses of the last hymn.','合唱团只唱了最后一首赞美诗的两个段落。'}

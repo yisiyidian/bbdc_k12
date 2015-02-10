@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enjoin"]={"enjoin","[ɪn'dʒɒɪn; en-]","[ɪn'dʒɔɪn]","vt.命令",'vt.命令，嘱咐，禁止','He enjoined obedience on the soldiers.','他命令士兵服从。','The judge enjoined him from selling alcohol.','法官禁止他卖酒。'}

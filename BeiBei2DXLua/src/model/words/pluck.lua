@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pluck"]={"pluck","[plʌk]","[plʌk]","n.勇气",'n.勇气,猛拉,动物内脏|||v.摘,猛拉,拔','He showed a lot of pluck to leave a safe job and set up his own business.','他放弃了一份安定的工作而自己创业，表现出了极大的勇气。','He couldn\'t pluck up enough courage to ask her to go out with him.','他没法鼓起足够的勇气请她一起外出。'}

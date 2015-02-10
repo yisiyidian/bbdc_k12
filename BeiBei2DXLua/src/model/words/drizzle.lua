@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drizzle"]={"drizzle","['drɪz(ə)l]","['drɪzl]","n.细雨",'n.细雨|||v.下毛毛雨','||Drizzle|| from a leaden sky.','从铅灰色的天空中飘落的雨丝','It\'s going to snow(rain, drizzle, shower) tomorrow.','明天要下雪（雨、毛毛雨、阵雨）。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abnormality"]={"abnormality","[æbnɔː'mælɪtɪ; -nə'mælɪtɪ]","[,æbnɔr'mæləti]","n.变态",'n.变态,反常,异常,畸形','A disease or an abnormality of a joint.','关节病病变或或畸形的关节','A disease or an abnormality of the nervous system.','神经病神经系统的疾病或异常状态下的神经系统'}

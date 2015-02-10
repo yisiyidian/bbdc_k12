@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["procedure"]={"procedure","[prə'siːdʒə]","[prə'sidʒɚ]","n.程序",'n.程序,手续,步骤;常规的做法','When the rules for police procedure were laid down, a lot of grey areas remained.','警方的程序规章定立後, 遗留下许多难以处理的灰色区域.','The law warrants this procedure.','这一程序是法律批准的。'}

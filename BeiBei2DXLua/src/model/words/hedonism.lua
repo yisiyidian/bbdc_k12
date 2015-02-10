@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hedonism"]={"hedonism","['hiːd(ə)nɪz(ə)m; 'he-]","['hidənɪzəm]","n.快乐论",'n.快乐论,快乐主义','The age of hedonism is being ushered out by a new era of temperance.','享乐主义时代正让位于一个注重节制的时代。','We should work hard and do not indulge in hedonism.','我们应当坚持艰苦奋斗，反对享乐主义。'}

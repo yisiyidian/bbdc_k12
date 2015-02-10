@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thresh"]={"thresh","[θreʃ]","[θrɛʃ]","v.打(庄稼)",'v.打(庄稼)|||vt.打谷','If we put our heads together we can probably thresh out a workable scheme.','如果我们集思广益，也许能琢磨出一个切实可行的方案。','They are separating the grains from wheat with a threshing machine.','他们正在用打谷机给小麦脱粒。'}

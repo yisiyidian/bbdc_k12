@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["apogee"]={"apogee","['æpədʒiː]","['æpədʒi]","n.最高点",'n.最高点,顶点,远地点','The golden age of American sail reached its apogee in the Gold Rush years','美国航海的黄金时代在淘金热的年代里达到了顶峰。','The Alliance for Progress reached its apogee during the first half of the decade.','这十年中的前五年是进步联盟迈向顶峰的时期。'}

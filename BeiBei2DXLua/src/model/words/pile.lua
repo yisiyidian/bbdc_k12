@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pile"]={"pile","[paɪl]","[paɪl]","n.堆",'n.堆,桩,大量,核反应堆|||vi.形成堆,拥挤进入|||vt.堆积,装载','The situation is frightful, but it\'s just ||piling|| on the agony to keep discussing it.','情况很可怕，可是还一个劲儿地议论让人觉得更可怕。','The little boy is ||piling|| up his building blocks.','小男孩正在搭积木。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cholera"]={"cholera","['kɒlərə]","['kɑlərə]","n.[医]霍乱",'n.[医]霍乱','The area was struck by an outbreak of cholera.','该地区突然发生了霍乱.','||Cholera|| was rampant in the district.','这个区里霍乱蔓延十分严重.'}

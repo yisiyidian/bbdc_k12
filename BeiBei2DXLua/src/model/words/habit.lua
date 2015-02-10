@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["habit"]={"habit","['hæbɪt]","['hæbɪt]","n.习惯",'n.习惯，习性；嗜好|||vt.使穿衣','He is in the habit of rising early.','他有早起的习惯。','My colleague has broken off the habit of smoking.','我的同事已经戒掉了吸烟的习惯。'}

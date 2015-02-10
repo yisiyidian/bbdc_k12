@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["introspective"]={"introspective","[ɪntrə'spektɪv]","['ɪntrə'spɛktɪv]","adj.反省的",'adj.反省的，内省的','||Introspective|| is very important to human beings.','自省对人们来说很重要。','This matter forces me to become introspective.','这件事迫使我变得自省。'}

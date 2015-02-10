@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slacken"]={"slacken","['slæk(ə)n]","['slækən]","v.使松弛",'v.使松弛，使缓慢，变弱','The train slackened speed as we approached the station.','当我们快到车站时，火车减慢了速度。','Better have no war for a thousand days than slacken your vigilance for one day.','宁可千日不战，不可一日不备。'}

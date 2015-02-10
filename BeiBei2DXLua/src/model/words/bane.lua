@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bane"]={"bane","[beɪn]","[ben]","n.毒药",'n.毒药,减亡的原因','This craving is, of course, the bane of many ex-alcoholics\' existence.','这种渴望当然是许多老酒徒生活的烦恼之源。','Rain is the bane of holiday-makers.','雨天令度假者头疼。'}

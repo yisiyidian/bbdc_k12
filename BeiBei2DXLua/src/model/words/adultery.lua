@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adultery"]={"adultery","[ə'dʌlt(ə)rɪ]","[ə'dʌltəri]","n.通奸",'n.通奸','One who commits adultery.','通奸者犯有通奸罪的人','I was surprised to hear that Johnson had been divorced by his wife on the grounds of adultery. I thought he always kept to the straight and narrow.','听到约翰逊因通奸而被其妻子离弃, 我大吃一惊。我原以为他一向过着来淡而正派的生活呢。'}

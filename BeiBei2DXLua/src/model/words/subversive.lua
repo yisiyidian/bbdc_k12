@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subversive"]={"subversive","[səb'vɜːsɪv]","[sʌb'vɝsɪv]","adj.颠覆性的",'adj.颠覆性的,破坏性的n.破坏份子,危险份子','The new party has subversive ideas.','新政党有颠覆的意图。','He was a known political subversive.','他是一个有名的政治颠覆分子。'}

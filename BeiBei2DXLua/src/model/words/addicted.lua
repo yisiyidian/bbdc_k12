@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["addicted"]={"addicted","[ə'dɪktɪd]","[ə'dɪktɪd]","adj.沉溺于的",'adj.沉溺于的,有毒瘾的','He\'s finally off (ie is no longer addicted to) drugs.','他终於戒了毒了.','He\'s hooked on (ie addicted to) speed.','他使用安非他明已成瘾.'}

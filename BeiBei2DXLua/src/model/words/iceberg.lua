@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["iceberg"]={"iceberg","['aɪsbɜːg]","['aɪs'bɝg]","n.冰山",'n.冰山,冷若冰山的人','Most of the iceberg is under the water.','冰山的大部分在水面以下.','Four days after the Titanic set out, a very big iceberg floated towards her.','泰坦尼克号出发四天以后，一座巨大的冰山向它漂来。'}

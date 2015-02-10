@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impromptu"]={"impromptu","[ɪm'prɒm(p)tjuː]","[ɪm'prɑmptu]","adj.即席的",'adj.即席的,即兴的|||adv.即兴的(地),无准备的(地)','He will sing a song impromptu.','他将即兴演唱一首歌。','I had an impromptu speech at the starter of the meeting.','会议开始时，我做了个即兴演讲。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exception"]={"exception","[ɪk'sepʃ(ə)n; ek-]","[ɪk'sɛpʃən]","n.例外",'n.除外,例外','All students without exception must take the English examination.','所有的学生毫无例外，都必须参加英语考试。','There is always an exception to any rule.','任何规律总有例外。'}

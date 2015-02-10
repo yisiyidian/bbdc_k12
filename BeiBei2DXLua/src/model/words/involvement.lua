@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["involvement"]={"involvement","[ɪn'vɒlvm(ə)nt]","[ɪn'vɔlvmənt]","n.包含",'n.包含,缠绕,混乱,复杂的情况','The government are trying to play down their involvement in the affair.','政府极力淡化与该事的瓜葛.','His involvement in the scandal was a blot on his reputation.','他因卷入丑闻, 在名誉上留下污点.'}

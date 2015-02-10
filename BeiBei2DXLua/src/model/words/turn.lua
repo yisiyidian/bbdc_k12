@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["turn"]={"turn","[tɜːn]","[tɝn]","vt.&vi.使转动",'vt.&vi.使转动；旋转；使改变方向；使不适|||vt.使变酸；使变换；使变为|||n.翻转；（路线或方向的）改变；机会','She\'s always shown an academic turn of mind.','她总是表现出学究式的思想方法。','The river turns north at this point.','这条河从这里转向北方。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["equal"]={"equal","['i:kwəl]","['ikwəl]","adj.相等的",'adj.相等的,平等的,胜任的|||n.对手,匹敌,同辈|||vt.等于,比得上','Now that she has been promoted she is on equal terms with her ex-boss.','她既然已升级，就和原先的上司平起平坐了。','She feels equal to the task.','她认为能胜任该项工作。'}

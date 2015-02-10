@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["expressly"]={"expressly","[ɪk'spreslɪ; ek-]","[ɪk'sprɛsli]","adv.明白地",'adv.明白地,清楚地,特别地|||adv.特意地，专程地','I told you expressly to lock the door, but you didn\'t follow me.','＂我明白地对你说过要锁上门，但你没有听我的话。＂','You were expressly told not to touch my papers.','已经明确地告诉过你不要动我的文件.'}

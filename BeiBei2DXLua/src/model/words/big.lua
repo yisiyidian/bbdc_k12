@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["big"]={"big","[bɪg]","[bɪɡ]","adj.大的",'adj.大的,重要的|||adv.以郑重的方式,大数量|||n.杰出的组织和个人','New York is a big commercial city.','纽约是一座大的商业城市。','His business yields big profits.','他的生意带来巨大的利润。'}

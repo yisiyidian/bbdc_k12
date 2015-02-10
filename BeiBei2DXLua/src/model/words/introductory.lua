@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["introductory"]={"introductory","[ɪntrə'dʌkt(ə)rɪ]","[,ɪntrə'dʌktəri]","adj.介绍的",'adj.介绍的,引导的,开端的','An introductory list of highlights from the program or text that follows, as in a broadcast or magazine.','插播节目或文章之前的一段介绍性目录的要点, 如在广播或杂志中','An introductory occurrence or fact; a preliminary.','开端预兆性事件或事实; 开端'}

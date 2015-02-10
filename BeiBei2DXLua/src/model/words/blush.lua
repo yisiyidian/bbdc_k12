@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blush"]={"blush","[blʌʃ]","[blʌʃ]","n.脸红",'n.脸红,外观|||vi.泛红,羞愧','A blush suffused his cheeks.','他瞬间满脸通红.','The student murmured the answer with a blush.','那个学生红着脸小声说出了答案。'}

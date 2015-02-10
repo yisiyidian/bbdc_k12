@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["individual"]={"individual","[ɪndɪ'vɪdjʊ(ə)l]","[,ɪndɪ'vɪdʒuəl]","adj.个人的",'adj.个别的;独有的|||n.个人,个体','These styles can be adapted to suit individual tastes.','这些式样均可改动以适应个人不同的爱好.','She is acting as a private individual in this matter.','她在这个问题上只代表她个人意见.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["type"]={"type","[taɪp]","[taɪp]","n.类型",'n.类型；铅字；（印刷或打印的）文字；于…类型的|||vt.&vi.打字|||vt.[医学]测定（血型）；按类型把…归类；成为…的典型；[印刷]浇铸（铅字等）','A mammoth is a large hairy type of elephant in ancient times.','猛犸是古代一种身体庞大、长着长毛的大象。','Blue jay is a type of noisy European bird with brightly colored feathers.','樫鸟是一种爱叫的欧洲鸟，有鲜艳的羽毛。'}

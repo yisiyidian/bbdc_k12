@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ragtime"]={"ragtime","['rægtaɪm]","['ræɡtaɪm]","n.拉格泰姆音乐(期间在美国流行的一种音乐)",'n.拉格泰姆音乐(期间在美国流行的一种音乐)','The most popular music back then was called ragtime.','那时最流行的音乐叫拉格泰姆音乐.','||Ragtime|| is a kind of music played by a solo pianist.','散拍音乐是一种钢琴独奏的音乐形式。'}

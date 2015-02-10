@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wont"]={"wont","[wəʊnt]","[wɔnt]","n.习惯",'n.习惯','Both have committed their indiscretions, as human beings are wont to do.','两人都有失慎重，此乃人之常情。','Paul woke early, as was his wont.','保罗醒得很早，历来如此。'}

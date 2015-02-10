@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discontented"]={"discontented","[dɪskən'tentɪd]","[,dɪskən'tɛntɪd]","adj.不满意的",'adj.不满意的|||动词discontent的过去式和过去分词','He was discontented with his salary.','他对自己的薪水感到不满。','I became increasingly discontented with married life.','我对婚姻生活越来越不满了。'}

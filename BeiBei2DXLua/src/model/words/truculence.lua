@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["truculence"]={"truculence","['trʊkjʊləns]","[ 'trʌkjuləns, 'tru:- ]","n.凶猛",'n.凶猛,粗暴','\'Your secretary said you\'d be wanting a cleaner,\' she announced with her usual truculence.','“你的秘书说你想要个清洁工，”她用惯常的挑衅口吻说道。','Sandy\'s brief moment of truculence had vanished.','桑迪狂怒不已,但很快就好了。'}

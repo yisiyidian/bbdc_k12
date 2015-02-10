@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["propitiate"]={"propitiate","[prə'pɪʃɪeɪt]","[prə'pɪʃɪet]","vt.慰抚",'vt.慰抚,安抚,和解','They offered sacrifices to propitiate the gods.','他们供奉祭品以求神息怒。','I\'ve never gone out of my way to propitiate people.','我从未刻意取悦别人。'}

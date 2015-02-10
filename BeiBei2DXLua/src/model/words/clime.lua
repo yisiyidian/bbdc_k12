@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clime"]={"clime","[klaɪm]","[klaɪm]","n.[诗]地方",'n.[诗]地方,风土','He left Seattle for the sunnier climes of Mexico.','他离开西雅图，去了阳光更为明媚的墨西哥。','Plants from a cold clime travel best in winter.','来自寒冷气候的植物最能够适应冬季。'}

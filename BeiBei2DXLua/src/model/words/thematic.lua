@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thematic"]={"thematic","[θɪ'mætɪk]","[θɪ'mætɪk]","adj.主题的",'adj.主题的，[语]词干的，[音]主旋律的','The volume may be approached from several thematic directions.','研究本书可以从几个主题着手。','He has a series of thematic commemorative stamps.','他有一系列专题纪念邮票。'}

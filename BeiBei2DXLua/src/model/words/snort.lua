@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["snort"]={"snort","[snɔːt]","[snɔrt]","v.喷着气弄响鼻子",'v.喷着气弄响鼻子,哼着鼻子,嘶嘶响着排气|||n.鼻息,满杯','He snorted out a reply.','他气呼呼地回答。','The horse snorted and stamped its hoof impatiently.','这匹马呼哧呼哧地喘着气，不耐烦地跺着蹄子。'}

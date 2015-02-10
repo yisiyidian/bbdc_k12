@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sunshine"]={"sunshine","['sʌnʃaɪn]","['sʌnʃaɪn]","n.阳光",'n.阳光','I saw her basking in the sunshine.','我看到她在阳光下晒太阳。','We had twelve hours of sunshine yesterday, as against a forecast of continuous rain.','昨日有十二小时的晴天, 预报却说仍有雨.'}

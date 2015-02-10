@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["difference"]={"difference","['dɪf(ə)r(ə)ns]","['dɪfrəns]","n.差异",'n.差异,分歧|||vt.引起区别','It won\'t make much difference whether you go today or tomorrow.','你今天或明天去没有多大关系。','Flowers make no difference to this room.','这房间有没有花没什么区别。'}

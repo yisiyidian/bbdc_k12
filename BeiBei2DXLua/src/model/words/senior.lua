@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["senior"]={"senior","['siːnɪə; 'siːnjə]","['sinɪɚ]","adj.高级的",'n.年长者,上司,毕业班学生|||adj.年长的,高级的,资深的','She was unfit for such a senior position.','她不能胜任这样的高级职位。','Lying north of the church is a girls\' senior high school.','位于这座教堂以北的是一所女子高中。'}

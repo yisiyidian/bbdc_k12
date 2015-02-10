@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whiskey"]={"whiskey","['hwɪski]","[ 'hwiski ]","n.威士忌酒",'n.威士忌酒|||=whisky','He\'s been drinking whiskey on the sly for thirty years.','他暗中偷喝威士忌酒已有三十年了。','A fifth of whiskey, please.','请给我五分之一加仑的威士忌酒。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["valiant"]={"valiant","['vælɪənt]","['væljənt]","adj.勇敢的",'adj.勇敢的，英勇的|||n.勇士，勇敢的人','Every dog is valiant at his own door.','站在家门口，狗也雄纠纠。','It was a valiant attempt.','那是很有价值的尝试。'}

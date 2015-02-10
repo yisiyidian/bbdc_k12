@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["effulgent"]={"effulgent","[ɛ'fʌldʒənt]","[ i'fʌldʒənt ]","adj.光辉的",'adj.光辉的,灿烂的','the effulgent daffodils','灿烂的水仙花','Chairman Mao\'s business is effulgent.','毛主席的成就是光辉的。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bison"]={"bison","['baɪs(ə)n]","['baɪsn]","n.野牛",'n.野牛','||Bison|| used to roam through the American great plains, but most of them are slaughter by hunter.','从前野牛在美国大平原上漫游，但是大多数都被猎人屠杀了。','American bison are very large.','美洲野牛非常巨大。'}

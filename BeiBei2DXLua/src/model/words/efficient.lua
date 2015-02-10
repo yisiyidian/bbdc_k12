@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["efficient"]={"efficient","[ɪ'fɪʃ(ə)nt]","[ɪ'fɪʃnt]","adj.效率高的",'adj.效率高的,有能力的','It is arguable that we would be just as efficient with fewer staff.','我们的职员少一些也能发挥同样效率, 这是言之成理的.','Perhaps the market is not efficient after all.','或许市场终究并不是有效的。'}

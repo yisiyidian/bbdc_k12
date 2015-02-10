@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exhausted"]={"exhausted","[ɪɡ'zɔːstɪd]","[ɪɡ'zɔstɪd]","adj.用完的",'v.取尽(排出,详细讨论,包括)|||adj.用完的','The exhausted mother smiled at the wail of her newborn baby.','听到新生儿的哭叫声，倦极了的母亲笑了。','The anxieties of the past week had left her exhausted.','上星期把她愁得没精打采。'}

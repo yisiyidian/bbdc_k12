@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["runaway"]={"runaway","['rʌnəweɪ]","['rʌnəwe]","adj.逃亡的",'n.逃走的人,逃亡,亡命者|||adj.逃亡的,逃走的','His runaway with the money stolen from the bank gave his family a rough time.','他携带从银行偷来的钱外逃, 使他的家人吃尽了苦头。','Controlled inflation is a different breed of cat from runaway inflation.','有控制的通货膨胀与抢劫控制的通货膨胀是两回事。'}

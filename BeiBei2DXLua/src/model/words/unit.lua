@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unit"]={"unit","['juːnɪt]","['junɪt]","n.单位",'n.单位,单元','There\'s a rumour floating around of a new job in the unit.','这个部门盛传有个新工作要聘人.','Cubit is an ancient unit of length.','腕尺是古代的一种长度单位。'}

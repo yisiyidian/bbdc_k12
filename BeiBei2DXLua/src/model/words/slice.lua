@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slice"]={"slice","[slaɪs]","[slaɪs]","n.薄的切片",'n.薄的切片,一部份,锅铲|||vt.切成薄片,大幅降低','As workers in a profit-making industry, miners are demanding a larger slice of the cake.','矿工们身处赚钱的企业, 要求多分一杯羹.','The shark\'s fin sliced the water.','鲨鱼的背鳍像刀样迅速划破水面。'}

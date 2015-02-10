@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dominate"]={"dominate","['dɒmɪneɪt]","['dɑmɪnet]","v.支配",'v.支配,占优势，俯视','Mountains dominate the city\'s landmark.','重峦叠嶂构成这个城市的风景点。','She dominated the meeting by sheer force of character.','她单凭个人气势就镇住了会场。'}

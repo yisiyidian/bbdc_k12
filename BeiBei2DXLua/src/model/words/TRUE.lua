@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["TRUE"]={"TRUE","[truː]","[tru]","adj.真实的",'adj.确切的,可靠的,真实的,正确的,正式的|||adv.笔直地,事实地|||n.真相,精确|||vt.使...平衡','The arrow flew straight and ||true|| to its mark.','那箭不偏不斜地直朝目标飞去。','She gave the ||true|| account of what had happened.','她如实地讲述了发生的事情。'}

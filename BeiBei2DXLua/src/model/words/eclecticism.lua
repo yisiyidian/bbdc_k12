@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eclecticism"]={"eclecticism","[ɪˈklektɪsɪzəm]","[ e'klektisizəm ]","n.折衷主义",'n.折衷主义','I don\'t like the so-called eclecticism.','我不喜歡那所謂的折衷主義。','he is a scholar of eclecticism','他是个折中主义学者'}

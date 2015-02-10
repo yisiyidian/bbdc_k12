@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ingenuity"]={"ingenuity","[,ɪndʒɪ'njuːɪtɪ]","[,ɪndʒə'nuəti]","n.智巧",'n.智巧,创造力,精巧的设计','Executed with or exhibiting ingenuity.','精巧的巧妙制成的或精巧的','I realized sadly that I had been completely defeated by their ingenuity.','我懊丧地意识到我已被他们的足智多谋所彻底挫败。'}

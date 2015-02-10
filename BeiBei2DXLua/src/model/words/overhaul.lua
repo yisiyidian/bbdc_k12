@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overhaul"]={"overhaul","[əʊvə'hɔːl]","['ovɚhɔl]","v.分解检查",'v.分解检查,翻修,精细检查；超车、赶上','I\'ve taken my typewriter in for an overhaul.','我已把打字机拿去彻底检修了。','The fast cruiser soon overhauled the old cargo boat.','快速巡逻艇随即赶上那艘旧货船。'}

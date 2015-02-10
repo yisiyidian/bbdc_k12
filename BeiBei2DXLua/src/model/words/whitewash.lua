@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whitewash"]={"whitewash","['waɪtwɒʃ]","['waɪtwɑʃ]","n.白色涂料",'n.白色涂料,粉饰|||vt.用白色涂料粉刷，掩盖或粉饰','I\'ll have my little house whitewashed tomorrow.','明天我找人用石灰水粉刷一下小屋。','The opposition dismissed the report as a whitewash.','反对党认为这份报告过于修饰而不予理会。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infest"]={"infest","[ɪn'fest]","[ɪn'fɛst]","v.骚扰",'v.骚扰,群居于,大批出没','There is a warehouse infested by rats.','那有一个大批老鼠出没的仓库。','It\'s a garden infested with weeds.','这是杂草丛生的花园。'}

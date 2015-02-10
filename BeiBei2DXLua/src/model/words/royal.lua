@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["royal"]={"royal","['rɒɪəl]","['rɔɪəl]","adj.王室的",'adj.王室的,盛大的,极度的|||n.贵族,顶帆','A diadem was worn as a sign of royal power.','戴着的皇冠是王权的象征。','The royal wedding was an occasion of great festivity.','皇室婚礼是喜庆的盛事。'}

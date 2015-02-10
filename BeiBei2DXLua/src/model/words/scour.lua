@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scour"]={"scour","['skaʊə]","['skaʊɚ]","vt.擦洗",'vt.擦洗(疏浚,腐蚀,搜索,飞快地跑过)|||n.摩擦(冲洗)','He scoured off the dirt from the floor.','他擦去地板上的污垢。','The police scoured the area looking for the lost child.','警方搜遍这个地区寻找这个走失的孩子。'}

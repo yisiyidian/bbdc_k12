@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["motivate"]={"motivate","['məʊtɪveɪt]","['motə'vet]","v.刺激",'v.给与动机,刺激,提高...的学习欲望','They are motivated by a need to achieve.','他们被成功的需要激励着。','How do you motivate people to work hard and efficiently?','你是如何激励人们努力而高效地工作的？'}

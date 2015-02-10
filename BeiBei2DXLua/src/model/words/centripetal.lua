@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["centripetal"]={"centripetal","[,sentrɪ'piːt(ə)l; sen'trɪpɪt(ə)l]","[sɛn'trɪpɪtl]","adj.向心的",'adj.向心的','The earth have centripetal force.','地球具有向心力。','This is called the centripetal acceleration.','这就是向心加速度。'}

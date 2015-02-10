@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["needy"]={"needy","['niːdɪ]","['nidi]","adj.贫穷的",'adj.贫穷的,贫困的,生活艰苦的','The government has worked out a plan of succoring the needy.','政府已经制定出了救济贫民的计划。','He deems it his duty to help his needy friends.','他认为帮助穷朋友是他的义务。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vacant"]={"vacant","['veɪk(ə)nt]","['vekənt]","adj.空的",'adj.空的,空虚的,木然的','There are some vacant offices on the third floor.','四楼有几间空著的办公室.','The lavatory is vacant.','厕所现在无人使用.'}

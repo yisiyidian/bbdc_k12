@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["press"]={"press","[pres]","[prɛs]","vt.压",'vt.压，按；逼迫；紧抱|||vi.压；逼迫；重压|||n.强迫征兵；新闻报道，出版物；压榨；印刷机（厂）','My boot is pressing against a blister on my toe.','我的靴子挤压了我脚趾上的水泡。','He took a copy of the newspaper as it came off the press.','报纸在印刷机上印出来後他拿了一份。'}

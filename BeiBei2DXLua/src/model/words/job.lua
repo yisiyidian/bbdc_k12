@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["job"]={"job","[dʒɒb]","[ dʒɔb ]","n.工作",'n.工作,职责,任务|||vt.投机买卖,营私舞弊,不公正地判罚,分包任务|||vi.工作,假公济私,做分销商或批发商|||adj.与工作有关的','It\'s the job of the church to help people lead better lives.','帮助人们生活得好些是教会的责任。','Raising money is your job.','筹集资金是你的任务。'}

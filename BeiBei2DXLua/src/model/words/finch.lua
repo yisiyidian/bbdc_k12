@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["finch"]={"finch","[fɪn(t)ʃ]","[fɪntʃ]","n.雀类",'n.雀类','This bird is a kind of finch.','这只鸟是一种雀类。','If you want to know how song changes the shape of a finch\'s brain, science can help.','如果你想知道歌曲如何改变鸟雀的大脑形状的话，科学研究可以帮助你。'}

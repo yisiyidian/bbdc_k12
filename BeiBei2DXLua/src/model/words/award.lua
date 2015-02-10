@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["award"]={"award","[ə'wɔːd]","[ə'wɔrd]","vt.授予",'vt.授予，奖给，判给；判归，判定|||n.奖品；（仲裁人、公断人的）裁定；（法院、法官的）判决；裁定书','The award for this year\'s best actress went to Meryl Streep.','本年度最佳女演员的得奖者是梅里尔·斯特里普。','She has been awarded a scholarship to study at Harvard.','她获得了去哈佛大学读书的奖学金。'}

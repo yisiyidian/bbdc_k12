@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["southwards"]={"southwards","['saʊθwədz]","['saʊθwɚdz]","adv.向南(向南方)",'adv.向南(向南方)','These birds migrate northwards in spring and southwards in fall.','这些鸟春天向北迁徙,秋天向南迁徙.','Tens of thousands of men, year after year, have travelled southwards to find work.','每年有数万人到南方去找工作.'}

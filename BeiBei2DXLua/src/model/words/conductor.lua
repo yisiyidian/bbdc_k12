@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conductor"]={"conductor","[kən'dʌktə]","[kən'dʌktɚ]","n.售票员",'n.售票员，导体，指挥','The young soprano was taken up by a famous conductor.','那年轻的女高音歌手受到一著名指挥家的提携.','The conductor blew his whistle, and the tram stopped.','售票员吹哨子, 电车停了下来.'}

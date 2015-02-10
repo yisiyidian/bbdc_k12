@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["burial"]={"burial","['berɪəl]","['bɛrɪəl]","n.埋葬",'n.埋葬，葬礼,坟墓','The body was placed in bier before burial.','在举行葬礼以前尸体被放在棺材里。','His body was brought back to England for burial.','他的遗体已运回英国埋葬.'}

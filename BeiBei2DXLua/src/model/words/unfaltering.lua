@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unfaltering"]={"unfaltering","[ʌn'fɔːlt(ə)rɪŋ; -'fɒl-]","[ʌn'fɔltərɪŋ]","adj.坚决的",'adj.坚决的,稳定的','My convictions are unfaltering.','我的信仰不会动摇。','Try to achieve your goal by unfaltering steps.','坚定的'}

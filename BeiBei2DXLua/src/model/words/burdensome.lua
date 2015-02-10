@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["burdensome"]={"burdensome","['bɜːdns(ə)m]","['bɝdnsəm]","adj.负担的",'adj.负担的,恼人的,艰难的','An unpleasant or burdensome task.','令人讨厌的或繁重的工作','Obviously, that would be quite burdensome for the user.','显然，那对使用者来说是很繁重的。'}

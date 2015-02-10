@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arrangement"]={"arrangement","[ə'reɪn(d)ʒm(ə)nt]","[ə'rendʒmənt]","n.安排",'n.安排,商议,整理','I have an arrangement with your bank to cash cheques here.','我已和贵方银行商妥，支票可以在此兑现。','There was an arrangement of books in the window.','窗口摆了一些书。'}

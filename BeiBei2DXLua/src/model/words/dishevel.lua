@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dishevel"]={"dishevel","[dɪ'ʃevl]","[ di'ʃevəl ]","v.使蓬乱",'v.使蓬乱,使头发凌乱','her hair is dishevelled and her face is bruised','她头发凌乱并且脸上也有伤痕','Rob is labelled by his dishevelled hairstyle.','头发凌乱'}

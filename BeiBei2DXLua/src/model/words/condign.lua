@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["condign"]={"condign","[kən'daɪn]","[kən'daɪn]","adj.适宜的",'adj.相当的,适宜的','I have deserved my condign pubishment.','我已经受到了我应得的惩罚。','The public approved the condign punishment for the crime.','公众一致称赞这个罪判得很恰当。'}

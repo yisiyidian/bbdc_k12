@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["watery"]={"watery","['wɔːt(ə)rɪ]","['wɑtəri]","adj.水的",'adj.水的,潮湿的,淡的','A thin, watery drink.','淡而无味的饮料','Relating to, similar to, containing, or dissolved in water; watery.','水的与水有关的，似水的，含水的或溶于水的；水的'}

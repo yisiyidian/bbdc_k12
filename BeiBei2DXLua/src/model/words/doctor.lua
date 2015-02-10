@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["doctor"]={"doctor","['dɒktə]","['dɑktɚ]","n.医生",'n.医生,博士|||vt.医治,篡改,对...做手脚|||vi.用药','Do not discontinue the treatment without consulting your doctor.','不要不征求医生的意见就中断治疗。','He is a doctor of philosophy.','他是一位哲学博士。'}

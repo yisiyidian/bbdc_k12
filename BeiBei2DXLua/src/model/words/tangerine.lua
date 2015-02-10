@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tangerine"]={"tangerine","[tæn(d)ʒə'riːn]","['tændʒə'rin]","n.橘子",'n.橘子,橘子树','Hand me of a the ripest tangerine please.','请递给我一个最熟的橘子。','tangerine or orange?','.'}

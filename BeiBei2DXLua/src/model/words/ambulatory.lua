@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ambulatory"]={"ambulatory","['æmbjʊlət(ə)rɪ]","['æmbjələtɔri]","adj.可走动的",'adj.可走动的,行走的|||adj.[法律]可变更的，可撤销的|||n.回廊，步道','What are the causes of unexpected hospitalization following ambulatory surgery?','门诊手术后意外住院的病人怎么处理?','an ambulatory robot!','可行走的机器人！'}

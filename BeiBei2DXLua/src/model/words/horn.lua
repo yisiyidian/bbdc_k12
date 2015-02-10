@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["horn"]={"horn","[hɔːn]","[hɔrn]","n.喇叭",'n.喇叭|||n.(牛、羊等的)角,喇叭,触角|||v.装角','The driver tooted his horn as he approached the bend.','开车的人在快要转弯时按响了喇叭.','The rhinoceros has one horn on its nose.','犀牛鼻子上有一个角。'}

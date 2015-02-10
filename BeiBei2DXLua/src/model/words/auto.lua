@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["auto"]={"auto","['ɔːtəʊ]","['ɔto]","pref.自动的",'n.autos=automobile自动汽车|||pref.自动的,自己的','That auto company is coming out with several new models.','那家汽车公司将把好几种新型号产品投入市场。','The Detroit auto workers went out for higher pay.','底特律的汽车工人为争取提高工资而罢工。'}

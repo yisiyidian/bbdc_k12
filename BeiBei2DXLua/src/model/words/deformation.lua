@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deformation"]={"deformation","[,diːfɔː'meɪʃ(ə)n]","['difɔr'meʃən]","n.变形",'n.变形，畸形','Spring can return to a previous sharp after deformation.','弹簧变形后能恢复原状。','It\'s difficult to detect such a small deformation.','如此微小的变形是很难察觉到。'}

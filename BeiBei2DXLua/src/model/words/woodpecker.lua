@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["woodpecker"]={"woodpecker","['wʊdpekə]","['wʊdpɛkɚ]","n.啄木鸟",'n.啄木鸟','All the woodpeckers have scansorial feet.','所有的啄木鸟都有适於攀爬的脚。','||Woodpeckers|| have long beaks.','啄木鸟长着长嘴。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["palm"]={"palm","[pɑːm]","[pɑm]","n.手掌",'n.手掌,棕榈树|||vt.把...藏于手中,用手掌击(球)','He rubbed his palm across his forehead.','他用手掌揉了揉前额.','Growing along the river are tall palm trees.','沿着这条河生长的是高大的棕 树。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hypersensitive"]={"hypersensitive","[haɪpə'sensɪtɪv]","[,haɪpɚ'sɛnsətɪv]","adj.过份敏感的",'adj.过份敏感的','I\'m not the least bit hypersensitive.','我一点儿不神经过敏.','He is hypersensitive to any kind of criticism.','他对任何一种批评都过敏。'}

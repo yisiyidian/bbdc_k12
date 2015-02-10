@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grateful"]={"grateful","['greɪtfʊl; -f(ə)l]","['ɡretfl]","adj.感激的",'adj.感激的,感谢的','These refugees are very grateful to the government\'s succor.','这些难民非常感激政府的救援。','We are grateful to you for your bounteous gifts.','对您给予的丰厚礼物，我们不胜感激。'}

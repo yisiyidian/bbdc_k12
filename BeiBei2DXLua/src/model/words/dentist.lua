@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dentist"]={"dentist","['dentɪst]","['dɛntɪst]","n.牙科医生",'n.牙科医生','`Open your mouth a little wider,\' said the dentist.','｀把嘴张大点,＇牙科医生说.','The dentist told the boy not to eat too many sweets.','牙医告诫这男孩不要吃太多糖果。'}

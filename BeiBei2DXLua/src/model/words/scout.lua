@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scout"]={"scout","[skaʊt]","[skaʊt]","n.童子军",'n.童子军,侦察员,守卫|||vt.侦察,物色人才|||vi.寻找,物色','I\'ve been scouting around town for a better house.','我跑遍了全城想找个好一点的房子。','They scouted around for some antiques to furnish their new apartment.','他们到处搜罗一些古董来装饰新居。'}

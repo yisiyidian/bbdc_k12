@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discord"]={"discord","['dɪskɔːd]","['dɪskɔrd]","n.不调和",'n.不调和，分歧，意见不一|||vi.不一致，不协调','Various discords have arisen over this question.','人们在这个问题上发生了不少争执。','What has brought discord into the family?','什么事使得这个家庭不和？'}

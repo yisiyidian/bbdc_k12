@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["canteen"]={"canteen","[kæn'tiːn]","[kænˈtiːn]","n.食堂",'n.小卖部；食堂，小饭馆；水罐；餐具盒，炊具箱','He always bring a canteen with him on a hike.','他作徒步旅行时总是带著水壶。','After work they made a hearty meal in the worker\'s canteen.','工作完了,他们在工人食堂饱餐了一顿.'}

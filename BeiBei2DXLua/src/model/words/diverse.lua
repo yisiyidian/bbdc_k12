@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diverse"]={"diverse","[daɪ'vɜːs; 'daɪvɜːs]","[daɪ'vɝs]","adj.多种多样的",'adj.不同的,相异的,多种多样的','They are the people from diverse cultures.','他们有着不同的文化背景。','Exports have increased and become more diverse.','出口额增加，并日趋多样化。'}

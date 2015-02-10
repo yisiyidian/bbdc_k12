@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outmost"]={"outmost","['aʊtməʊst]","[ 'autməust ]","adj.最外方的",'adj.最外方的(最远的,最高头的)','our school is at the outmost of the city','我们学校在城市的最外面','Second, we must do our outmost in publicity, including movies, books, TVs, radios and new religion spreading.','第二，一定要尽一切可能做好宣传工作，包括电影、书籍、电视、无线电波和新式的宗教传布。'}

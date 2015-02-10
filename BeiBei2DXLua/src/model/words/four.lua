@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["four"]={"four","[fɔː]","[fɔr]","num.四",'num.四|||pron.&adj.四(个,只...)','This street is four times shorter than that one.','这条街道比那条短四倍。','There are four wheels in a car.','一辆汽车有四只轮子。'}

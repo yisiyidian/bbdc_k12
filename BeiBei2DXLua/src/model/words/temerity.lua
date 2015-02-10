@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["temerity"]={"temerity","[tə'merəti]","[tə'mɛrəti]","n.卤莽",'n.卤莽,蛮勇','He had the temerity to ask for higher wages after only a day\'s work.','只工作了一天，他就蛮不讲理地要求增加工资。','He has even had the temerity to invoke the names of Martin Luther King Jrin defence of his actions.','他竟然敢搬出马丁·路德·金的名字来为自己的行为辩解。'}

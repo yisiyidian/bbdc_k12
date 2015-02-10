@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["merchandise"]={"merchandise","['mɜːtʃ(ə)ndaɪs; -z]","['mɝtʃəndaɪs]","n.商品",'n.商品,货物|||vt.&vi.经营,推销,销售,经商','Do you know the trade name of this box of merchandise?','你知道这箱商品的商标吗?','Among all the merchandise, I was interested in the cotton piece in particular.','在所有商品中, 我对棉布特别感兴趣。'}

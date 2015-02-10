@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["postman"]={"postman","['pəʊs(t)mən]","['postmən]","n.邮递员",'n.邮递员|||=mailman','`Has the postman been yet?\' `I\'ll just look and see.\'','｀邮递员来过了吗?＇｀我这就去看看.＇','The postman rang the bell because he had a parcel/package to deliver.','邮递员按门铃叫门投递包裹.'}

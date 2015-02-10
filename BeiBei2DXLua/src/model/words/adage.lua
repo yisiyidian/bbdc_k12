@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adage"]={"adage","['ædɪdʒ]","['ædɪdʒ]","n.古话",'n.古话,格言,谚语','It probably answered an adage, "The day fails the person wishes".','或许正应了一句老话: 天不遂人愿。','The old adage, "Every baby brings its own love" usually turns out to be true.','“每个婴儿生来就带着爱”，这句古老的谚语通常说的都是对的。'}

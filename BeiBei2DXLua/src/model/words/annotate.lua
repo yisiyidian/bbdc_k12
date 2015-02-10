@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["annotate"]={"annotate","['ænəteɪt]","['ænə'tet]","v.注解",'v.注解','Historians annotate, check and interpret the diary selections.','历史学家对日记选篇进行加注、核查以及阐释。','Some people annotate as they read.','有的人一面读书一面做注解。'}

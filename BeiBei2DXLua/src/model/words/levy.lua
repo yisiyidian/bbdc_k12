@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["levy"]={"levy","['levɪ]","['lɛvi]","n.征税",'n.征税,召集|||vt.征收,发动(战争|||vi.强收','The court may have to levy on your estate to pay your debts.','法庭可能不得不扣押你的房地产，用来偿付你的债务。','The government ||levies|| a fine against the factories for polluting the air with smoke.','政府向以烟尘污染空气的工厂征收罚金。'}

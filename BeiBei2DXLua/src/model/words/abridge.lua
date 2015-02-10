@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abridge"]={"abridge","[ə'brɪdʒ]","[ə'brɪdʒ]","vt.删节",'vt.删节,缩短','This is an abridged edition of "war and peace" .','这是“战争与和平”的节略版。','He decide to abridge his stay here after he receive a letter from home.','他接到家信後决定缩短在这里的逗留时间。'}

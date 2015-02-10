@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["graduation"]={"graduation","[grædʒʊ'eɪʃ(ə)n; -djʊ-]","[,ɡrædʒu'eʃən]","n.毕业",'n.毕业','After graduation, he lives on his own.','毕业后他就独立生活了。','I saw little or nothing of him after graduation.','毕业后我几乎没有看见过他。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["counteract"]={"counteract","[kaʊntər'ækt]","[,kaʊntɚ'ækt]","vt.抵消",'vt.抵消，中和，消解，抵制','We must try to counteract the present current of anti-government feeling.','我们应该努力消除目前的这股反政府情绪.','Our bodies produce antibodies to counteract disease.','我们的身体能产生抗体以抵抗疾病.'}

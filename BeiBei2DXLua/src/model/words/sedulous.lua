@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sedulous"]={"sedulous","['sedjʊləs]","['sɛdʒələs]","adj.勤勉的",'adj.勤勉的,勤苦工作的,聚精凝神的','She is as gifted as sedulous.','她不仅有天赋，而且很勤奋。','She wondered what sort of herbs they were, which the old man was so sedulous to gather.','她不晓得那老人如此勤快地采集的是哪种药草。'}

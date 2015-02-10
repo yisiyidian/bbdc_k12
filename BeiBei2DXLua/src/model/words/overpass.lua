@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overpass"]={"overpass","['əʊvəpɑːs]","['ovɚpæs]","n.天桥",'n.天桥,立交桥|||vt.超越,胜过,忽略','Is that why they\'re constructing so many underpasses, overpasses and highways?','那就是他们建这么多天桥、地下通道和公路的原因吗？','I walked through an overpass over the road.','我步行穿过那条公路上面的立交桥.'}

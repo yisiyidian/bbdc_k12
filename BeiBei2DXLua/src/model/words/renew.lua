@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["renew"]={"renew","[rɪ'njuː]","[rɪ'nʊ]","vt.使更新",'vt.使更新,复始,使恢复,补充|||vi.更新,重新开始','The accident prompted her to renew her insurance.','这一事故促使她为投保续期.','The pilot renewed contact with the control tower.','飞行员同指挥塔恢复了联系。'}

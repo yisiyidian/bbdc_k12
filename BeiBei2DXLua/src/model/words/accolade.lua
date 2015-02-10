@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accolade"]={"accolade","['ækəleɪd; ,ækə'leɪd]","['ækəled]","n.赞美",'n.赞美,表扬,推崇,武士爵位的授与','To be chosen to represent their country is the highest accolade for most athletes.','能被选拔出来代表国家参赛，是多数运动员的最高荣誉。','Hart recently received the accolade of being represented in the Museum of Modern Art.','哈特的作品最近有幸获选在现代艺术馆展出。'}

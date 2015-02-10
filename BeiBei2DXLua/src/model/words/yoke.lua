@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["yoke"]={"yoke","[jəʊk]","[jok]","n.轭",'n.轭,轭状物,套,束缚,支配，奴役|||vt.把...套上轭,使结合,使连接|||vi.紧密联结','Every farmer knows how to yoke the oxen together.','每个农民都知道怎样把牛拴在一起。','People are still suffering under the yoke of slavery in some parts of the world.','在世界上的某些地区，人们仍然遭受着奴役之苦。'}

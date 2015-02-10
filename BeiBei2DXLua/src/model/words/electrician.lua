@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["electrician"]={"electrician","[,ɪlek'trɪʃ(ə)n; ,el-; ,iːl-]","[ɪ'lɛk'trɪʃən]","n.电工",'n.电工，电气技师，灯光师','He\'s neither an electrician nor a mechanic.','他既不是电工也不是技工。','Don\'t meddle with the electrical wiring: you\'re not an electrician.','别瞎动电线线路, 你又不是电工.'}

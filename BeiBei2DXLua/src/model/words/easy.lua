@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["easy"]={"easy","['iːzɪ]","['izi]","adj.容易的",'adj.容易的,安逸的,不费力的|||adv.慢慢地,当心地','She has not had an easy life.','她不曾有过舒适的生活。','Go easy on him.','对他温和点儿。'}

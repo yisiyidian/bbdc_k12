@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["upgrade"]={"upgrade","[ʌp'greɪd]","[,ʌp'ɡred]","vt.提高",'vt.提高(上升,浓集,加强)|||n.提高(上升,浓集,加强)','She was upgraded to (the post of) sales director.','她已提升为销售部主任.','Soon the truck come into sight around a bend and on an upgrade.','不一会卡车就出现在一个拐弯和上坡处。'}

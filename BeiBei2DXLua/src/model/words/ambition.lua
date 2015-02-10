@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ambition"]={"ambition","[æm'bɪʃ(ə)n]","[æm'bɪʃən]","n.雄心",'n.雄心,野心,抱负,精力|||vt.有...野心,追求','His ambition was to meet his favourite pop star face to face.','他心向往之的是要面对面地见见他心目中的流行曲歌星。','The realization of his ambition makes him very happy.','他很高兴他的理想实现了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["normally"]={"normally","['nɔːm(ə)lɪ]","['nɔrmli]","adv.正常地",'adv.正常地,通常地','His normally placid dog turned on him and bit him in the leg.','他那条狗平日很温顺, 这次突然发作咬了他的腿.','I normally travel by public transport.','我出门通常乘坐公共交通工具.'}

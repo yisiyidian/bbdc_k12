@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["field"]={"field","[fiːld]","[fild]","n.场地",'adj.田间的,野外的|||n.田地,原野,牧场,场地,领域|||vi.担任场外队员|||vt.把(谷物等)暴晒于场上,使上场','The minister easily fielded all the journalist\'s awkward questions.','部长轻而易举地一一回答了记者提出的棘手问题。','The field includes three world record holders.','参赛者中包括三名世界记录保持者。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glum"]={"glum","[glʌm]","[ɡlʌm]","adj.怒容的",'adj.怒容的,闷闷不乐的，阴沉的','Don\'t look so glum!','别那样闷闷不乐。','He was a charming mixture of glum and glee','“他是一个很有魅力的人，时而忧伤时而欢笑”'}

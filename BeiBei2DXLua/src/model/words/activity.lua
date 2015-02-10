@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["activity"]={"activity","[æk'tɪvɪtɪ]","[æk'tɪviti]","n.活动",'n.活动；行动；活跃','Most disappearances are the result of the terrorist activity.','大多数的失踪案都是恐怖分子造成的.','The manager\'s arrival galvanized the workers into activity.','经理一来, 工人闻风而动.'}

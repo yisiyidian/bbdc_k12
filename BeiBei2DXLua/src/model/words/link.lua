@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["link"]={"link","[lɪŋk]","[lɪŋk]","vt.&vi.连接",'n.环节,联系,(链的)环,圈|||vt.&vi.连接,联系','We must question the value of our link with the university.','我们要斟酌一下与这所大学联系有何价值.','All kinds of human experience testify to the close link between love and fear.','人类的种种经验都证明了爱与怕之间的紧密联系。'}

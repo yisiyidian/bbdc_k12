@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["another"]={"another","[ə'nʌðə]","[ə'nʌðɚ]","adj.另一",'adj.另一,再一|||pron.&prep.另一个','This boy is very smart; he may be another Edison.','这男孩很聪明，他可能成为另一个爱迪生。','That\'s quite another matter.','那完全是另一回事。'}

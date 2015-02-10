@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wharf"]={"wharf","[wɔːf]","[wɔrf]","n.码头",'n.码头','Fisherman\'s ||Wharf||, a place all foreigners want to see, is at the end of the ride.','国外游客都想访问一下缆车的终点站——渔民之埠。','A landing platform attached to a wharf and floating on the water.','浮台固定在码头且浮在水面上的着陆平台'}

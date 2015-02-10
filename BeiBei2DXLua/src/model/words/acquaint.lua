@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["acquaint"]={"acquaint","[ə'kweɪnt]","[ə'kwent]","vt.使...熟知",'vt.使...熟知','Please acquaint him with my arrival.','请通知他我到了。','You must acquaint yourself with your new duties.','你必须熟悉自己的新职务。'}

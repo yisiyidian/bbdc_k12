@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["welt"]={"welt","[welt]","[wɛlt]","n.鞭痕",'n.鞭痕,贴边','He had a reddening welt on his temple and his nose was bleeding.','他太阳穴处有块红肿，鼻子也在流血。','You can see the red welt left across his chest by the strap.','你能看到他胸口受鞭打后留下的红印。'}

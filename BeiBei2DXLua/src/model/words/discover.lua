@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discover"]={"discover","[dɪ'skʌvə]","[dɪ'skʌvɚ]","vt.&vi.发现",'vt.&vi.发现','He was later discovered to have been a spy.','後来发现他原来是间谍。','Columbus is said to have discovered America in 1492.','据说哥伦布于1492年发现了美洲。'}

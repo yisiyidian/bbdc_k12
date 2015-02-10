@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grain"]={"grain","[greɪn]","[ɡren]","n.谷物",'n.谷物,谷类,颗粒,细粒,纹理|||vt.用谷物喂养,形成颗粒','We ship grain to Africa.','我们把谷物运往非洲.','Their speculative buying of grain is illegal.','他们投机购买谷物是不合法的。'}

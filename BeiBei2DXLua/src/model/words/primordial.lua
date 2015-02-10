@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["primordial"]={"primordial","[praɪ'mɔːdɪəl]","[praɪ'mɔrdɪəl]","adj.原始的",'adj.原始的,自原始时代的,最初的','Life\'s primordial reality is spirit.','生命的根本真实性是精神。','It is the primordial force that propels us forward.','它是推动我们前进的原始动力。'}

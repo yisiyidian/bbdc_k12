@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["move"]={"move","[muːv]","[muv]","vt.&vi.移动",'vt.&vi.移动，搬动|||vi.搬家；行动；进展；（机器等）开动|||vt.提议；使感动；摇动；变化|||n.改变；迁移','The government\'s announcement is seen as a move towards settling the strike.','政府的通告已视为迈向解决罢工问题的一步。','Public opinion was ||moving|| strongly in favor of disarmament.','公众舆论正在强烈支持裁军。'}

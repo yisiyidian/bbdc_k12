@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crater"]={"crater","['kreɪtə]","['kretɚ]","n.弹坑",'n.弹坑,火山口','Lava boiled up from the crater of the volcano.','熔岩从火山口沸腾着升起来。','Flames blazed out from the crater of the volcano.','火焰从火山口猛烈地喷出来。'}

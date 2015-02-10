@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["snowbound"]={"snowbound","['snəʊbaʊnd]","['snobaʊnd]","adj.被雪封住的(被雪围住的",'adj.被雪封住的(被雪围住的,被雪困住的)','the house is snowbound after a blizzard.','经过一场大风雪，被雪封住了屋子。','He was snowbound in the nearby mountains.','他被大雪困在附近的大山里。'}

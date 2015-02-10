@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["private"]={"private","['praɪvət]","['praɪvət]","adj.私人的",'adj.私人的，隐蔽的|||n.士兵，列兵','The public is fascinated by the private lives of public figures.','公众对社会名流的私生活具有浓厚的兴趣。','Let\'s go upstairs where we can be a bit more private.','咱们上楼吧，那里没什麽外人。'}

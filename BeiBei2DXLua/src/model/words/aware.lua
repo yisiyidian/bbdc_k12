@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aware"]={"aware","[ə'weə]","[ə'wɛr]","adj.意识到的",'adj.知道的,意识到的','Their sudden attack made us more aware of the danger around us.','他们突然的攻击使我们更加注意我们周围的危险。','He made believe not to be aware of my presence.','他假装不知道我在那里。'}

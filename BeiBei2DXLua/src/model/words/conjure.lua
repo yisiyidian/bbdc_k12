@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conjure"]={"conjure","['kʌndʒə]","['kʌndʒɚ]","v.以咒文召唤",'v.以咒文召唤,变戏法,向...许愿','She can conjure a rabbit out of a hat.','她能从帽子里变出兔子来。','This place conjures up vivid memories.','这个地方使人回忆起许多生动的往事。'}

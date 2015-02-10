@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diameter"]={"diameter","[daɪ'æmɪtə]","[daɪ'æmɪtɚ]","n.直径",'n.直径','The axis of a circle is its diameter.','圆的轴线是其直径.','We must gauge the diameter of wire first.','我们必须先测量电线的直径。'}

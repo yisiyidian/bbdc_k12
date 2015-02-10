@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irritable"]={"irritable","['ɪrɪtəb(ə)l]","['ɪrɪtəbl]","adj.易怒的",'adj.易怒的,急躁的|||adj.【医】过敏的，易感受刺激的,','She was irritable when she was unhappy.','她不高兴时,容易发脾气.','He gets irritable when he\'s got toothache.','他牙一疼就很容易发脾气.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trolley"]={"trolley","['trɒlɪ]","['trɑli]","n.手推车",'n.手推车','Oil the trolley, and then it will turn more freely.','给手推车加点油，这样它就能自由运转了。','The trolley bus picks up current from an overhead wire.','无轨电车的电能是通过架空线供给的。'}

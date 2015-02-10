@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outline"]={"outline","['aʊtlaɪn]","['aʊtlaɪn]","n.大纲",'n.大纲,轮廓,概要,略图,素描|||vt.描画轮廓,描述要点','She drew the outline with a sure hand.','她笔力雄健地画出了轮廓.','Draw an outline before you fill in the details.','先画轮廓，再画细部。'}

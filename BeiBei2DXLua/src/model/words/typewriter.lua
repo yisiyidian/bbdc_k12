@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["typewriter"]={"typewriter","['taɪpraɪtə]","['taɪpraɪtɚ]","n.打字机",'n.打字机，打字员','Many of my friends are using word processors but I still swear by my old typewriter.','我有许多朋友都使用文字处理机，可我还是爱用我的老式打字机。','The typewriter is at your service.','这台打字机随便你使用。'}

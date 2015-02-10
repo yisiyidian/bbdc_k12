@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["askew"]={"askew","[ə'skjuː]","[ə'skju]","adj.歪斜的",'adj.歪斜的|||adv.斜地|||v.歪斜,弯曲','The furniture in the room was placed askew.','屋子里的家俱摆得歪歪斜斜。','The picture is hanging askew.','这张画挂歪了。'}

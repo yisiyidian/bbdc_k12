@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mostly"]={"mostly","['məʊs(t)lɪ]","['mostli]","adv.大概",'adv.大概,大部份,主要','He occasionally reads books, but mostly just magazines.','他偶尔也看书, 但大多只看杂志.','Nowadays, houses are mostly lit by electricity.','现在房屋大多用电照明.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["agile"]={"agile","['ædʒaɪl]","['ædʒl]","adj.（动作）敏捷的",'adj.（动作）敏捷的,灵活的,（头脑）机灵的','One need an agile mind to solve puzzles.','解迷必须有机灵的头脑。','Thanks to agile footwork he always managed to escape his pursuers.','他善於随机应变, 总能摆脱追踪他的人.'}

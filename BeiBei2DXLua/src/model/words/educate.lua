@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["educate"]={"educate","['edjʊkeɪt]","['ɛdʒuket]","v.教育",'v.教育,培养|||vt.教育','It is not the way to educate a child by making him do things against his will.','勉强他做事不是教育孩子的办法。','It is not easy to educate teenagers.','教育青少年不是件容易的事。'}

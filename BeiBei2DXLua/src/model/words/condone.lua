@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["condone"]={"condone","[kən'dəʊn]","[kən'don]","vt.宽恕",'vt.宽恕；赦免','I don\'t condone violence in any shape or form.','我不能容忍任何形式的暴力。','I have never encouraged nor condoned violence.','我从来没有鼓励或纵容过暴力行为。'}

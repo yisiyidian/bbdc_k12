@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["briefing"]={"briefing","['briːfɪŋ]","['brifɪŋ]","n.简要情况",'n.简要情况，简介|||动词brief的现在分词形式','Do what the briefing calls for.','按简令的要求去做。','He had a lot to explain, and no time for more than a short meeting. Thus a lengthy briefing had to be telescoped into half an hour.','他有许多要说明的, 但又没时间开长会, 所以只好把一份长汇报削短成半小时的简介。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["howler"]={"howler","['haʊlə]","['haʊlɚ]","n.嚎叫的人或动物",'n.嚎叫的人或动物,滑稽可笑的错误','He was not good at business and it soon came a howler.','他不擅长做生意，不久就失败了。','a dog that turned out to be a persistent howler.','一只终日不停号叫的狗'}

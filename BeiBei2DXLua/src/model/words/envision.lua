@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["envision"]={"envision","[en'vɪʒ(ə)n]","[ɪn'vɪʒn]","n.预想",'n.预想|||v.想象,预想|||vt.想象','But the competition of man against man is not the simple process envisioned in biology.','但是人反对人的竞争不是象生物学中所想象的那种简单过程。','Some girls often envision that they will be pop stars.','有些女生经常想象着将要成为明星。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["as"]={"as","[æz; əz]","[æz,əz]","adv.像",'adv.同样地,像|||prep.当做|||conj.当...之时,像...一样,因为','Cyprus, as you know, is an island in the Mediterranean.','如你所知，塞浦路斯是地中海的岛国。','||As|| she\'s been ill perhaps she\'ll need some help.','她由於生病可能需要些帮助。'}

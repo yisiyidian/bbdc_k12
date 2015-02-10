@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["viscous"]={"viscous","['vɪskəs]","['vɪskəs]","adj.粘的",'adj.粘的,有粘性的,粘性的','The mud is too viscous, you must have all the agitators run.','泥浆太稠，你们得让所有的搅拌机都开着。','Liquids may not be too viscous or be susceptible to crystallization.','液体不能太粘稠，也不能易结晶。'}

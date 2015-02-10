@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bate"]={"bate","[beɪt]","[bet]","v.压制",'v.压制，减少|||vi.(鹰等）扑腾翅膀','Until it was time to open the presents, the children had to bate their curiosity.','孩子们只好抑制住他们的好奇心，等待着打开礼物的时刻的到来。','The salesman won\'t bate a penny of it.','售货员一分钱也不肯减少。'}

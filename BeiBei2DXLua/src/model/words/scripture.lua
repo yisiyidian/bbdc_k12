@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scripture"]={"scripture","['skrɪptʃə]","['skrɪptʃɚ]","n.经文",'n.经文，圣书，手稿|||Scripture:(常用复数)《圣经》，《圣经》中的一段','This is the canon of ||Scripture||.','这是圣经的真经。','He reads the Holy ||Scripture|| everyday.','他每天都读《圣经》。'}

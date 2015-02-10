@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["look"]={"look","[lʊk]","[lʊk]","n.看",'n.看,神色,样子,脸色|||vi.看,注意,朝着,好象,显得|||vt.打量,注视,用眼神或脸色表示,期待','Just look at this beautiful present.','快来看看这件漂亮的礼物吧。','Can\'t you look where you\'re going? You nearly knocked me over!','看，你这是往哪里走？差点儿把我撞倒了'}

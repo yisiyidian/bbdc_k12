@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["naive"]={"naive","[naɪ'iːv; nɑː'iːv]","[naɪ'iv]","adj.天真的",'adj.天真的,幼稚的','He is so naive as to believe such a lie.','他竟然幼稚得连这种谎言都相信。','Lacking sophistication or worldly experience; naive.','幼稚的，天真的不世故的，天真的'}

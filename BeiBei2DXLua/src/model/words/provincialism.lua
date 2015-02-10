@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["provincialism"]={"provincialism","[prə'vɪnʃ(ə)lɪz(ə)m]","[prə'vɪnʃə'lɪzəm]","n.乡下习气",'n.乡下习气,地方风格,土腔','But provincialism in educational research is, alas, nothing new.','只不过教育研究中的地方主义也实在是屡见不鲜了吧!','He wanted to escape from the provincialism of the small university where he taught.','他所执教是一所规模很小的大学, 他想摆脱存在於其中的地方主义桎梏.'}

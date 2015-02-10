@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["something"]={"something","['sʌmθɪŋ]","['sʌmθɪŋ]","pron.某事(物)",'pron.某事(物),某东西','She rescued three children from a fire or something.','她从一起火灾之类的事故中救出了三个孩子。','He hit a tree or something.','他撞上了一棵树或其他什麽东西。'}

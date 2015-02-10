@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["confirmation"]={"confirmation","[kɒnfə'meɪʃ(ə)n]","[,kɑnfɚ'meʃən]","n.确认",'n.确认,证实,基督教的坚信礼','Quantity and price stated in the Invoice are subject to our final confirmation.','发票所列数量和价格以我公司最后确认为有效。','The price is subject to our confirmation.','所有价格经我们确认后有效。'}

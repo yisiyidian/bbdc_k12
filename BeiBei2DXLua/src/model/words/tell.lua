@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tell"]={"tell","[tel]","[ tel ]","vt.告诉",'vt.告诉,说,知道,认出,计数|||vi.讲述,告发,作证,产生效果','It\'s difficult to tell Jean from Joan; they look so alike.','琴和琼很难分得出来，她们长得太像了。','I always tell my daughter a story before she goes to sleep.','女儿睡觉之前，我总讲故事给她听。'}

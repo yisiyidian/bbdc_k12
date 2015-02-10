@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["behind"]={"behind","[bɪ'haɪnd]","[bɪ'haɪnd]","adv.在后面",'adv.在后面,落后,迟地|||adj.后面的,落后的,迟的,慢的|||prep.在...之后,落后于,掩盖,基于,支持|||n.屁股','The others are a long way behind.','其他人落在后面很远。','He is behind the plan.','他是幕后策划人。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inure"]={"inure","[ɪ'njʊə; ɪ'njɔː]","[ i'njuə ]","v.使...习惯",'v.使...习惯','After living here for years I\'ve become inured to the cold climate.','我在此地居住多年, 已习惯寒冷的气候.','One cannot inure oneself altogether to such malicious criticism.','谁也不能总是忍受这种恶意批评.'}

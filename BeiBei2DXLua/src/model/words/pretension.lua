@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pretension"]={"pretension","[prɪ'tenʃ(ə)n]","[prɪ'tɛnʃən]","n.借口",'n.借口,要求,主张,自负,骄傲,权力,资格,预紧,预伸,预拉','I make no pretension to skill as an artist, but I enjoy painting.','我并不自命有画家的技巧，但我喜欢绘画。','His social pretensions make him appear ridiculous.','他冒充上流社会人士而出尽洋相。'}

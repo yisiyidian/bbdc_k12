@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["earnest"]={"earnest","['ɜːnɪst]","[ 'ə:nist ]","adj.认真的",'n.真诚,重要的东西,定金,保证|||adj.真诚的,重要的,认真的','On their wedding, I sent my present in earnest.','在他们的婚礼上, 我真诚地送上了一份礼物。','He is an earnest Christian.','他是一个虔诚的基督教徒。'}

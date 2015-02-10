@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["camel"]={"camel","['kæm(ə)l]","['kæml]","n.骆驼",'n.骆驼,浮船箱,浅黄棕色','The camel is a herbivorous animal.','骆驼是一种食草动物。','A group of camels are going through the desert.','一群骆驼正行走在沙漠中。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grandson"]={"grandson","['græn(d)sʌn]","['ɡrænsʌn]","n.孙子",'n.孙子,外孙','There is a strange empathy between the old lady and her grandson.','老妇人和她孙子间有种莫名其妙的心灵相通的感觉.','The old man wanted to see nobody other than his grandson.','除了他的孙子之外, 这个老人谁也不想见。'}

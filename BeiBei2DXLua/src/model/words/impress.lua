@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impress"]={"impress","[ɪm'pres]","[ɪm'prɛs]","vt.使...有印象",'n.印象,特徵,印记|||vt.使...有印象,影响,印刻,传送|||vi.给人印象','I had a chance to impress her with my efficiency and I muffed it up.','我本来有机会使她了解我的办事效率，但是我错过了这个机会。','My father impressed me with the importance of hard work.','我父亲使我明白了努力工作的重要性。'}

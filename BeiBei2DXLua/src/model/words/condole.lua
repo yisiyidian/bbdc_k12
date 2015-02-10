@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["condole"]={"condole","[kən'dəʊl]","[ kən'dəul ]","v.同情",'v.同情,慰问|||vi.慰问','Peter wrote to condole with his friend on the death of his mother.','彼得写信给他的朋友，对其母亲的去世表示哀悼。','I condoled with him in his loss.','我对他的损失表示同情。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discourse"]={"discourse","['dɪskɔːs; -'kɔːs]","['dɪskɔrs]","n.谈话",'n.谈话,演讲|||vi.谈话,讲述|||vt.叙述,讨论','He discoursed impressively on Newton\'s theory of gravity.','他讲述了牛顿的引力定律，给人以深刻的印象。','They listened to his discourse on human relations.','他们听他作关于人际关系的演讲。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whenever"]={"whenever","[wen'evə]","[wɛn'ɛvɚ]","adv.无论何时",'adv.无论何时|||conj.每当,无论何时,随时','I mind my p\'s and q\'s whenever I see him.','每当我见到他我都谨慎行事。','I\'d like to see you whenever it\'s convenient.','在你方便的时候我想来看看你。'}

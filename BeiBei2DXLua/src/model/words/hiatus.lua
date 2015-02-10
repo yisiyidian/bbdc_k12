@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hiatus"]={"hiatus","[haɪ'eɪtəs]","[haɪ'etəs]","n.空隙",'n.空隙,裂缝，间断，停顿','We renewed our friendship after a hiatus of 10 years.','十年后，我们重新开始了一段友情。','After a five-month hiatus, the talks resumed.','谈判在中断了五个月之后又开始了。'}

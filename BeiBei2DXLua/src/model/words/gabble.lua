@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gabble"]={"gabble","['gæb(ə)l]","['gæbl]","v.七嘴八嘴地说",'v.七嘴八嘴地说,急促而不清楚地说|||n.急促讲出而叫人听不清说的话','Don\'t gabble, Lucy, I can\'t understand when you run your words together.','不要说得那么急，露西，你说话象连珠炮似的，我听不懂。','The little boy gabble his prayers and jump into bed.','那小男孩匆匆念过祷文就跳上了床。'}

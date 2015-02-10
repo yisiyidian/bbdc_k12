@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extirpate"]={"extirpate","['ekstɜːpeɪt]","[ 'ekstə:peit ]","vt.根除",'vt.根除，除尽,灭绝','The police arrested dealers in an attempt to extirpate drug aBuse.','在禁毒运动中警察逮捕了很多毒品交易者。','extirpate social evils','根除社会弊端'}

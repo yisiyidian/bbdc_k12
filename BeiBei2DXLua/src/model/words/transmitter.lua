@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["transmitter"]={"transmitter","[trænz'mɪtə; trɑːnz-; -ns-]","[træns'mɪtɚ]","n.传达人",'n.传达人,发射机，发射台','They tested the range of this transmitter.','他们测试了这台发射机的发射范围.','The transmitter is wired for up - scale thermocouple burn - out protection.','变送器上壳连有热电偶烧毁保护接线.'}

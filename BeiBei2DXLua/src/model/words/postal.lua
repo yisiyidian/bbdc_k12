@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["postal"]={"postal","['pəʊst(ə)l]","['postl]","adj.邮政的",'adj.邮政的|||n.[美]明信片','We have two postal deliveries each day.','我们每天收到两次信.','The postal service here is very unreliable.','这里的邮政服务很不可靠。'}

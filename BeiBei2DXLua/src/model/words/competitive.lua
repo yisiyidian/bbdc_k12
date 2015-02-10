@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["competitive"]={"competitive","[kəm'petɪtɪv]","[kəm'pɛtətɪv]","adj.竞争的",'adj.竞争的,比赛的','The banks are lending money at a competitive rate of interest.','银行竞相以低利率贷款.','It\'s getting very competitive in the car industry.','汽车工业方面的竞争日益加剧.'}

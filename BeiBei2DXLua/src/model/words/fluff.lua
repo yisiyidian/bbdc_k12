@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fluff"]={"fluff","[flʌf]","[flʌf]","n.软毛",'n.软毛,柔毛,绒毛','Covered with fluff.','被茸毛覆盖的','Courtship will include display in which the male fluff up his feather.','鸟儿求偶的表现包括雄鸟抖松羽毛的炫耀行为。'}

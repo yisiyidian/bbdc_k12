@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["festival"]={"festival","['festɪv(ə)l]","[ˈfɛstəvəl]","n.节日",'adj.节日的,喜庆的,快乐的|||n.节日,庆祝及祭祀,欢宴','We all immersed in the gaiety of the Spring ||Festival||.','我们都沉浸在春节的欢乐之中。','She directed the planning of the festival.','她统管节日活动的筹划。'}

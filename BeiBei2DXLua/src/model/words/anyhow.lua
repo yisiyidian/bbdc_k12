@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anyhow"]={"anyhow","['enɪhaʊ]","['ɛnɪ'haʊ]","adv.无论如何",'adv.无论如何,不管怎样','I was in such a hurry that I put my clothes on anyhow.','我很匆忙, 所以随便地把衣服穿上了。','||Anyhow|| I must tell the truth.','无论如何，我必须说出真相。'}

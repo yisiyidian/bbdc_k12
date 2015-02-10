@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["badger"]={"badger","['bædʒə]","['bædʒɚ]","n.獾;vt.纠缠不休",'n.獾;vt.纠缠不休,烦扰,吵着要','||Badgers|| had undermined the foundations of the church.','獾在这座教堂的地基处打了洞。','They kept phoning and writing, badgering me to go back.','他们不停地给我打电话、写信，软磨硬泡要我回去。'}

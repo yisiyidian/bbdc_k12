@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brooch"]={"brooch","[brəʊtʃ]","[brotʃ]","n.胸针",'n.胸针,领针','My aunt give me one of her brooch as a keepsake.','我的姑母把她的一只胸针送给我作纪念。','The clasp of my brooch is broken.','我胸针的钩子断了。'}

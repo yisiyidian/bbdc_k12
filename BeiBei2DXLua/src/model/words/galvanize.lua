@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["galvanize"]={"galvanize","['ɡælvənaɪz]","[ 'ɡælvənaiz ]","v.通电",'v.通电,镀锌，刺激','A blast in his ear galvanized him into full consciousness.','耳边一声轰响使他完全清醒过来。','The possibility of defeat finally galvanize us into action.','失败的可能性最终促使我们采取行动。'}

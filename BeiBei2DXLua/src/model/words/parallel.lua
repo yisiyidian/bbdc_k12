@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parallel"]={"parallel","['pærəlel]","['pærəlɛl]","adj.平行的",'adj.平行的,相同的,类似的,并联的|||adv.平行地|||n.平行线(面),相似物,对比|||vt.相比,相应,与...平行','The gymnast swung on the parallel bars.','体操运动员在双杠上摆动身子.','The painting is without parallel of the greatest artistic level.','这幅图画有无与伦比的艺术价值。'}

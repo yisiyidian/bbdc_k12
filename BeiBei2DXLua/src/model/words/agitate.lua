@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["agitate"]={"agitate","['ædʒɪteɪt]","['ædʒə'tet]","vt.搅动",'vt.搅动，摇动；使不安；激烈讨论|||vi.鼓动，煽动','He was agitated about his wife\'s health.','他为他妻子的健康感到不安。','He became quite agitated when he was asked about his criminal past.','当问到他过去的犯罪历史时，他变得十分焦虑不安。'}

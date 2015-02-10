@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["catalyze"]={"catalyze","['kætəlaɪz]","['kætə,laɪz]","v.催化",'v.催化','Since the experiment was so slow, the chemist add a chemical to catalyze and speed the process.','因为化学反应太慢了，化学家在反应中加入了一种物质催化并加快反应进程','The technology bred of science has catalyzed stupendous economic growth','“来源于科学的技术已经引起了巨大的经济增长”'}

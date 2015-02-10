@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resentful"]={"resentful","[rɪ'zentfʊl; -f(ə)l]","[rɪ'zɛntfl]","adj.不满(对...产生反感)",'adj.不满(对...产生反感)','She was resentful of the way of his speaking.','她对他的讲话方式不满.','She felt resentful at the way she had been treated.','她对所受到的对待恼怒不已.'}

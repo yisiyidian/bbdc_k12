@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["commitment"]={"commitment","[kə'mɪtm(ə)nt]","[kə'mɪtmənt]","n.承诺",'n.委托,实行,承诺,保证(律）拘禁令，奉献，献身','He made a commitment to pay the rent on time','他保证按时付房租。','Her commitment to a great cause degenerated from a crusade into an obsession.','她致力於一伟大事业, 但其崇高的奋斗精神已变质成为偏执的狂热.'}

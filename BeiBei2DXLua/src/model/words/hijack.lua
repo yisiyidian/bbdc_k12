@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hijack"]={"hijack","['haɪdʒæk]","['haɪdʒæk]","vt.抢劫",'vt.抢劫,劫持,劫机','The plane is hijacked by six armed terrorists.','该飞机被6个武装的恐怖主义者所劫持。','There is no sign of a let-up in the hijack crisis.','绑架危机毫无缓和迹象.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["smudge"]={"smudge","[smʌdʒ]","[smʌdʒ]","n.污点",'n.污点,渍痕，浓烟|||v.（使）变脏，（使）模糊','A smear or blot; a smudge.','污迹，脏污；污点','Wash your hands or you\'ll make smudges on the writing paper.','把手洗乾净, 别把写字的纸弄脏了.'}

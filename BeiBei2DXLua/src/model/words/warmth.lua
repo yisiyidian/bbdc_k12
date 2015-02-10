@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["warmth"]={"warmth","[wɔːmθ]","[wɔrmθ]","n.暖和",'n.暖和,温暖,热烈,热情,热心','The sun gives (us) warmth and light.','太阳供给我们光和热.','She sheds warmth and happiness around her.','她给周围的人带来温暖兴幸福。'}

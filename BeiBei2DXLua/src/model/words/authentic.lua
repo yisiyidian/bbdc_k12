@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["authentic"]={"authentic","[ɔː'θentɪk]","[ɔ'θɛntɪk]","adj.可靠的",'adj.可靠的,可信的,真的,真正的','The details of the costume were totally authentic.','这件古装的每个小地方都完全真实.','An authentic medieval sword.','一把真正的中世纪剑'}

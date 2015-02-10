@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anemia"]={"anemia","[ə'nimɪə]","[ ə'ni:miə ]","n.贫血",'n.贫血,贫血症','The doctors analyzed the blood sample for anemia.','医生化验血样看是否贫血。','Symptoms of anemia include weakness, fatigue and iron deficiency.','贫血的症状包括虚弱、疲劳和缺铁。'}

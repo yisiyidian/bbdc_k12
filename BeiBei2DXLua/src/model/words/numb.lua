@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["numb"]={"numb","[nʌm]","[nʌm]","adj.麻木的",'adj.麻木的,失去知觉的,无动于衷的|||vt.使...麻木,使...昏迷,使...失去知觉','His leg was numbed by the intense pain.','他的腿因剧痛而麻木。','The shock left me numb.','我惊呆了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amid"]={"amid","[ə'mɪd]","[ə'mɪd]","prep.在其间",'prep.在其间,在其中','He was celebrated amid his contemporaries.','他在他的同代人中名声显赫。','They could provide a ray of hope amid the general business and economic gloom.','在普遍的商业和经济低潮中，他们能带来一线希望。'}

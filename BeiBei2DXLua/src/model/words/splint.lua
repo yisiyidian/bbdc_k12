@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["splint"]={"splint","[splɪnt]","[splɪnt]","n.薄木片",'n.薄木片,托板,夹板','The doctor put my broken leg in splints.','医生用夹板夹住我的断腿。','She wore a metal splint on one leg.','她的一条腿上上了金属夹板。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rekindle"]={"rekindle","[riː'kɪnd(ə)l]","[,ri'kɪndl]","v.重新点燃",'v.重新点燃','Nothing could rekindle her extinct passion.','她激情已逝, 无从心回意转.','He rekindled her life.','他重新燃起了她对生活的希望。'}

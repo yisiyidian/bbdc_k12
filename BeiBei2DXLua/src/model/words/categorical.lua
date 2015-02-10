@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["categorical"]={"categorical","[kætɪ'gɒrɪk(ə)l]","[,kætə'ɡɔrɪkl]","adj.无条件的",'adj.无条件的,绝对的','He is quite categorical that the UN should only help the innocent civilian population.','他非常坚定地认为，联合国应该只援助无辜的平民。','his categorical denial of the charges of sexual harassment','他断然否认了性骚扰的指控。'}

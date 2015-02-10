@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["redistribute"]={"redistribute","[,riːdɪ'strɪbjuːt; riː'dɪs-]","[,ridɪ'strɪbjut]","vt.重新分配",'vt.重新分配,再区分','The government aimed to redistribute wealth by tax the rich and give grant to the poor.','政府通过向有钱人征税来补助穷人的办法达到重新分配财富的目的。','Our company redistribute wokers.','我们公司重新分配了工人。'}

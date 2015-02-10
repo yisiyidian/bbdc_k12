@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["verdigris"]={"verdigris","['vɜːdɪgriː; -griːs]","['vɝdɪɡri]","n.铜绿",'n.铜绿,铜锈','Copper will be covered by verdigris in the presence of oxygen.','铜暴露在氧气下会被铜绿所覆盖。','||Verdigris|| has spread all over that abandoned copper pot.','那把已经废弃的铜壶上长满了铜锈。'}

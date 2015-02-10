@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["regulate"]={"regulate","['regjʊleɪt]","['rɛɡjulet]","v.有系统的管理",'v.有系统的管理,规定,调节','They regulate the flow of water by the sluice gate.','他们用水闸门控制水的流量.','This system can regulate the temperature of the room.','这种系统能调节室内温度.'}

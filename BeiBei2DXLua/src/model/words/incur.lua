@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incur"]={"incur","[ɪn'kɜː]","[ɪn'kɝ]","v.招致",'v.招致,蒙受,遭遇','An enterprise has to incur certain costs and expenses in order to stay in business.','一个企业为了继续经营，不得不支出一定的费用和开销。','Any expenses you may incur will be chargeable to the company.','你的所有开销均由本公司支付。'}

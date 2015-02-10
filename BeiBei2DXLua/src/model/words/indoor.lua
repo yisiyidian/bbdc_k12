@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indoor"]={"indoor","['ɪndɔː]","['ɪndɔr]","adj.户内的",'adj.户内的,室内的','I never saw an athletic girl that thought she was strong enough to do indoor work.','我从未见过一个自己认为强健到足以做家务的女运动家。','A room or building equipped for indoor sports.','健身房一个用来进行室内运动的房间或建筑'}

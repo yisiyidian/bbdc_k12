@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rend"]={"rend","[rend]","[rɛnd]","v.分裂",'v.撕破，分裂,劈开,强夺','Children were ||rent|| from their mothers\' arms by the brutal soldiers.','凶残的士兵把孩子们从母亲的怀抱中夺走了。','The stillness was ||rent|| by thunderous applause.','雷鸣般的掌声打破了寂静。'}

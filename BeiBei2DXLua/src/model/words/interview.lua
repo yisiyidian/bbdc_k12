@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interview"]={"interview","['ɪntəvjuː]","['ɪntɚvju]","vi.采访",'n.面谈,访问,接见|||vt.接见,对...进行面谈(试)|||vi.面试,采访','In the prosecution of his duties, he had to interview people of all classes.','在履行职责的时候，他得会见各个阶级的人。','I think I fared quite well in the interview.','我觉得我这次面试考得不错。'}

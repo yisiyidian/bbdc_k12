@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["antic"]={"antic","['æntɪk]","[ 'æntik ]","adj.滑稽的",'n.古怪、滑稽的动作和行为|||n.小丑|||adj.古怪的,滑稽的','We are laughing at the clown\'s silly antics.','我们因小丑笨拙的动作而发笑。','I call him an antic old man.','我称他是个古怪的老头。'}

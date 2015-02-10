@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["burgeon"]={"burgeon","['bɜːdʒ(ə)n]","['bɝdʒən]","n.芽",'n.芽,嫩枝|||v.萌芽,发芽','Our company\'s business is burgeoning now.','我们公司的业务现在发展很迅速。','When spring is coming all trees began to burgeon','春天到来的时候，所有的树木开始发芽。'}

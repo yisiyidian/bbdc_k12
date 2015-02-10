@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["almshouse"]={"almshouse","['ɑːmzhaʊs]","['ɑmzhaʊs]","n.私立济贫院或养老院",'n.私立济贫院或养老院,公立救济院','The setting sun reflects on the windows of almshouse as brightly as on the rich man\'s abode.','落日的光辉同样反射在救济院和富人的窗户上。','The building is the Walton ||Almshouse||.','那栋建筑是沃顿救济院。'}

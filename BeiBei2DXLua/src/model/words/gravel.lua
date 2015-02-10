@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gravel"]={"gravel","['græv(ə)l]","['ɡrævl]","n.碎石",'n.碎石|||v.铺碎石,使困惑','The workers mixed the asphalt with sand and gravel together.','工人们把沥青和沙子、石块混合在一起。','We bumped up and down along the gravel path.','我们沿砾石小路颠簸而行。'}

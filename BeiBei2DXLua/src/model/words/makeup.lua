@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["makeup"]={"makeup","[meɪkʌp]","['mek,ʌp]","n.组成",'n.组成(接通,补给,修理),化妆品','I never expected he should have a stout makeup.','我真没想到,他竟然有这么强壮的体格.','||Makeup|| accents her good looks.','化妆使她显得更加美丽.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discern"]={"discern","[dɪ'sɜːn]","[dɪ'sɝn]","vt.&vi.辨别",'vt.&vi.辨别,看清楚','He was just able to discern the road from the dark.','他在黑暗中只能勉强辨认出道路。','I soon discerned that the man was lying.','我马上察觉出那人在撒谎。'}

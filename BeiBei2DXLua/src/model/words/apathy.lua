@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["apathy"]={"apathy","['æpəθɪ]","['æpəθi]","n.缺乏感情或兴趣",'n.缺乏感情或兴趣,冷漠','After a short burst of enthusiasm, she relapsed into her usual apathy.','一阵热情爆发之后，他又回复到往常一样的冷漠了。','We should not show apathy towards the poor children.','我们不应该对贫穷的孩子漠然不顾。'}

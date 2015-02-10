@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["serrated"]={"serrated","[sə'retɪd]","[ 'seritid, səreitid ]","adj.锯齿状的",'adj.锯齿状的,有锯齿的|||动词serrate的过去式和过去分词形式','Bread knives should have a serrated edge.','面包刀的刀刃应该有波浪齿。','The cells have an irregular shape with a slightly serrated border.','细胞的形状不规则，边缘呈锯齿状。'}

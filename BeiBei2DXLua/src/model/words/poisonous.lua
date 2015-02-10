@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["poisonous"]={"poisonous","['pɒɪzənəs]","['pɔɪzənəs]","adj.有毒的",'adj.有毒的','Some snakes have poisonous fangs.','有些蛇长有毒牙。','Some mushrooms are poisonous.','有些蘑菇有毒。'}

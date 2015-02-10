@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reciprocal"]={"reciprocal","[rɪ'sɪprək(ə)l]","[rɪ'sɪprəkl]","adj.相互的",'adj.相互的,互惠的,互补的|||n.相互,互惠|||[数］倒数','They have a reciprocal agreement to combat terrorism.','他们有相互配合的协定，共同与恐怖主义作斗争。','Our relationship is based on reciprocal respect.','我们的关系是以互相尊重为基础的。'}

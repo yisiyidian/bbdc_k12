@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gory"]={"gory","['gɔːrɪ]","['ɡɔri]","adj.血淋淋的",'adj.血淋淋的,满是血的,血污的','The newspaper account of the accident gave all the gory details.','报纸上报道了这次事故中所有骇人听闻的细节。','Somebody got the forture he wanted with his gory hands.','某些人用沾满鲜血的双手得到了他想要的财富。'}

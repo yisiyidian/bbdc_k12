@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aerodynamics"]={"aerodynamics","[,eərə(ʊ)daɪ'næmɪks]","['ɛrodaɪ'næmɪks]","n.空气动力学",'n.空气动力学,气体力学','||Aerodynamics|| is the study of the way in which objects move through the air.','空气动力学是对的方式物体在空气中移动的研究。','||Aerodynamics|| is a part of physics.','空气动力学是物理学的一部分。'}

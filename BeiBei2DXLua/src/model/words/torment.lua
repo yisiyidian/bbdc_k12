@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["torment"]={"torment","['tɔːment]","['tɔrmɛnt]","n.苦痛",'n.苦痛,拷问|||v.使苦恼,拷问','He suffered a hideous torment when the enemy caught him.','敌人抓到他后，他受到可怕的折磨。','What a little torment that child is!','这孩子真烦人!'}

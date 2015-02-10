@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unspoiled"]={"unspoiled","['ʌn'spɔɪld]","[ ,ʌn'spɔild ]","adj.未损坏的",'adj.未损坏的,未宠坏的','It \'s the largest,totally unspoiled area in Europe.','它是欧洲最大的完全未遭破坏的陆地。','This city is flanked on all sides by unspoiled country.','城市四面是乡村的天然风光.'}

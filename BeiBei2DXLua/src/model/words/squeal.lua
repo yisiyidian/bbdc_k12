@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["squeal"]={"squeal","[skwiːl]","[skwil]","n.长而尖的叫声vi.发出长声尖叫;告密",'n.长而尖的叫声vi.发出长声尖叫;告密，告发','He squealed the words out.','他吼叫著说出那些话.','He squealed on his friends.','他把朋友给告了.'}

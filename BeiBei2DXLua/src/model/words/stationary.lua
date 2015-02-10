@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stationary"]={"stationary","['steɪʃ(ə)n(ə)rɪ]","['steʃənɛri]","adj.不动的(稳定的)",'adj.不动的(稳定的)|||n.固定物(驻军)','The 1970 Act also addressed new stationary sources.','1970年的法案也涉及到了新固定污染源的问题.','The French population was stationary, while the German grew.','法国的人口没有变动, 而德国的人口却在增长.'}

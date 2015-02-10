@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["facility"]={"facility","[fə'sɪləti]","[fə'sɪləti]","n.设备",'n.设备；容易；能力；灵巧','The facility of this piece of music makes it a pleasure to play.','这首曲子容易弹奏，所以人们都乐于弹奏它。','The computerized phone has a callback facility.','计算机化的电话有回叫装置。'}

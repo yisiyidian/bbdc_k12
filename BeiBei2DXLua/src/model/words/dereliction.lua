@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dereliction"]={"dereliction","[derə'lɪkʃ(ə)n]","[,dɛrə'lɪkʃən]","n.废弃",'n.废弃，放弃，玩忽职守|||n.海水退后露出的新陆地','The previous owners had rescued the building from dereliction.','这座建筑之前的业主将其从破败不堪的状况中挽救了出来。','The previous owners had rescued the building from dereliction.','以前的主人把这座建筑物从废墟中挽救了出来。'}

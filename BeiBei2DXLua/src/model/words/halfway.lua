@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["halfway"]={"halfway","[hɑːf'weɪ; 'hɑːfweɪ]","[,hæf'we]","adj.中途的",'adj.中途的,不彻底的|||adv.半路地,在中途','||Halfway|| through the race the horse went lame.','那匹马赛跑中途跛了腿.','The key turned halfway and then jammed.','钥匙转了一半就卡住了。'}

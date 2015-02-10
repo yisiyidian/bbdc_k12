@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["replenish"]={"replenish","[rɪ'plenɪʃ]","[rɪ'plɛnɪʃ]","vt.补充",'vt.补充,再装满|||vi.补充','The music will replenish my weary soul.','音乐使我疲惫的精神充满活力。','We need to replenish our stocks of coal.','我们需要再次补充煤的库存。'}

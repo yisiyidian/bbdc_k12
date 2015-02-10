@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["depressed"]={"depressed","[dɪ'prest]","[dɪ'prɛst]","adj.沮丧的",'adj.沮丧的,降低的vt.压低,使沮丧,削弱(depress的过去式及过去分词)','She got depressed and began to let things slide.','她情绪低落, 一切都听之任之.','He gets cheerful and depressed by turns.','他的情绪高一阵低一阵。'}

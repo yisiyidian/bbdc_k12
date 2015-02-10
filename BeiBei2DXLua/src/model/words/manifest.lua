@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["manifest"]={"manifest","['mænɪfest]","['mænɪfɛst]","vt.显示",'n.载货单,运货单,旅客名单|||adj.显然的,明白的|||vt.显示,证实,出示','It manifested itself to all of us.','那对我们大家来说是显而易见的。','His generosity manifests itself in times of need.','他的慷慨在困境中得到了体现。'}

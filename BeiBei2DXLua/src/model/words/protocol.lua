@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["protocol"]={"protocol","['prəʊtəkɒl]","['protə'kɔl]","n.草案",'n.草案,协议,礼仪|||vt拟定议定书','We must observe the correct protocol.','我们必须遵守正确的礼仪。','He has become something of a stickler for the finer observances of royal protocol.','他已经变得非常刻板，哪怕是最细微的皇室礼仪也会遵循。'}

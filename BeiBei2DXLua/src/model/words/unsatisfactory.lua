@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unsatisfactory"]={"unsatisfactory","[,ʌnsætɪs'fækt(ə)rɪ]","[,ʌn,sætɪs'fæktəri]","adj.不能令人满意的",'adj.不能令人满意的','It\'s most unsatisfactory.','这叫人很不满意。','His intention was good, but his execution of the plan was unsatisfactory.','他的用意很好，但他做起来却不令人满意。'}

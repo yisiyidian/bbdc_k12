@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nervous"]={"nervous","['nɜːvəs]","['nɝvəs]","adj.紧张的",'adj.紧张的,焦虑的,神经质的','The merest little thing makes him nervous.','最微不足道的小事也会使他紧张。','The doctors shall operate on his central nervous system.','医生们将要对他的中枢神经系统动手术。'}

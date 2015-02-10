@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crow"]={"crow","[krəʊ]","[kro]","n.啼叫",'n.啼叫,乌鸦,欢叫|||vi.啼叫,报晓,欢叫|||vt.洋洋夸口,自鸣得意','The crow is a bird of ill omen.','乌鸦是不祥的预兆。','It was dawn, and I could hear a cock crowing somewhere.','天亮了，我听到从某处传来雄鸡的啼叫声。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jovial"]={"jovial","['dʒəʊvɪəl; -vj(ə)l]","['dʒovɪəl]","adj.快活的",'adj.快活的,高兴的,愉快的','Grandma was plump and jovial.','祖母身材圆胖，整天乐呵呵的。','I was in a jovial mood yesterday.','我昨天心情很愉快。'}

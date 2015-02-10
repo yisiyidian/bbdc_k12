@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chill"]={"chill","[tʃɪl]","[tʃɪl]","n.寒冷",'n.寒冷,失意,恐惧|||adj.寒冷的,冷漠的，感冒的,扫兴的|||vt.使...寒心,冷冻,使...惊恐,使泄气|||vi.发抖,凝固,感到寒冷','The night air chilled his bones.','夜间的寒气使他感到冰冷彻骨。','Come by the fire you must be chilled to the marrow!','到火旁边来吧－－你一定冻坏了。'}

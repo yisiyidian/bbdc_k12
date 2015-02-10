@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subsist"]={"subsist","[səb'sɪst]","[səb'sɪst]","vi.供给食物",'vi.供给食物,维持生活,生存|||vt.供养','The living thing on the earth can not subsist on mars.','地球上的生物不可能在火星上生存。','How do they manage to subsist on such a low wage?','他们这点工资怎么糊口？'}

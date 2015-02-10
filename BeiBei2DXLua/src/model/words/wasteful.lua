@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wasteful"]={"wasteful","['weɪstfʊl; -f(ə)l]","['westfl]","adj.浪费的",'adj.浪费的,不经济的','The energy shortage of the world results partly from wasteful use by the industrialized countries.','世界能源的短缺，部分是由于工业化国家挥霍能源而引起的。','We must avoid wasteful duplication of effort.','我们必须避免无谓的重复劳动.'}

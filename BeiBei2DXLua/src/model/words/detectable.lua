@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["detectable"]={"detectable","[dɪ'tɛktəbl]","[ di'tektəbl ]","adj.可发现的",'adj.可发现的(可察觉的,可探测出的,可检波的)','The thief escaped leaving no detectable clue.','小偷逃跑了，几乎没有留下线索','Otherwise it has no detectable effect on the program output.','除此之外，在程序的输出上没有可察觉的影响。'}

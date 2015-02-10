@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["viable"]={"viable","['vaɪəbl]","[ 'vaiəbl ]","adj.能生存的",'adj.能生存的,可行的,能居住的的','The scheme is economically viable.','这个计划从经济效益来看是可行的。','The economy of the country is not viable.','这个国家经济很难维持下去。'}

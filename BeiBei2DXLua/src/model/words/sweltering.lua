@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sweltering"]={"sweltering","['swelt(ə)rɪŋ]","['swɛltərɪŋ]","adj.酷热的",'adj.酷热的','The economy in China is sweltering at the moment.','现在中国经济很热','I don\'t like sweltering weather.','我不喜欢酷热的天气.'}

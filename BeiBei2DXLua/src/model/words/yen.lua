@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["yen"]={"yen","[jen]","[jɛn]","n.日元",'n.日元|||n.上瘾|||vi.对...上瘾','She\'s got a part-time job for which she earns 2,000 yen a month.','她有一份月收入2,000日元的兼职工作。','I\'ve always had a yen to travel around the world.','我总是渴望周游世界。'}

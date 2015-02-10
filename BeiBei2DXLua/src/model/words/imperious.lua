@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imperious"]={"imperious","[ɪm'pɪərɪəs]","[ɪm'pɪrɪəs]","adj.傲慢的",'adj.傲慢的,专横的','His imperious look makes us angry.','他那飞扬跋扈的样子令我们生气。','We all dislike her for her imperious gesture.','因她那傲慢的样子，我们都不喜欢她。'}

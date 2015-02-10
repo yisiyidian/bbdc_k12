@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fit"]={"fit","[fɪt]","[fɪt]","v.适合",'adj.适宜的,对的,准备好的|||v.适合,安装|||n.适宜,发作,一阵','I felt as fit as a fiddle after my walking holiday.','我经过假期徒步旅行，身体极好。','He\'s been ill and isn\'t fit for work yet.','他一直在生病，尚不能工作。'}

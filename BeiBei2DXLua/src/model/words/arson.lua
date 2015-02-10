@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arson"]={"arson","['ɑːs(ə)n]","['ɑrsn]","n.纵火",'n.纵火,纵火罪','In the first trial of the man accused of arson, who was found guilty, his counsel filed a bill of exceptions.','这个被指控犯有纵火罪的男人在初审时被判罪名成立，他的律师当庭提出异议。','The jury convicted the accused man of theft and arson.','陪审团判决被告犯有偷窃和纵火罪。'}

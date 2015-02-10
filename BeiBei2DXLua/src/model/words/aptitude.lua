@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aptitude"]={"aptitude","['æptɪtjuːd]","[ˈæptɪˌtud, -ˌtjud]","n.才能",'n.才能,资质','Edison had a remarkable aptitude for inventing new things.','爱迪生具有发明创造的非凡才能。','He has an aptitude for languages.','他具有学习语言的才能。'}

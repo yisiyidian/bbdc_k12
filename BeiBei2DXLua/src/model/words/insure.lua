@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insure"]={"insure","[ɪn'ʃɔː; ɪn'ʃʊə]","[ɪn'ʃʊr]","vt.保险",'vt.保险,确保|||vi.买保险','`Did you insure the jewels before they were stolen?\' `No, more\'s the pity!\'','｀你那些被窃的珠宝买保险了吗?＇｀没有, 真倒霉!＇','His talent and dedication will insure his success.','他的才气和执着将确保他成功。'}

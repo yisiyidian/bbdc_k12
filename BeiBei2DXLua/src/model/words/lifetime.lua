@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lifetime"]={"lifetime","['laɪftaɪm]","['laɪftaɪm]","n.一生",'n.一生,终身，寿命，使用期限','Could you reconcile yourself to a lifetime of unemployment?','你能甘心一辈子失业吗?','The government is unlikely to get the bill through within the lifetime of this Parliament.','政府不大可能在本届国会（会期）内通过该项法案.'}

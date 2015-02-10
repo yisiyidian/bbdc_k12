@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dysfunction"]={"dysfunction","[dɪs'fʌŋ(k)ʃ(ə)n]","[dɪs'fʌŋkʃən]","n.功能不良",'n.功能不良,机能障碍','A surgical procedure for remedying an injury, an ailment, a defect, or a dysfunction.','外科手术为修补伤口、缺陷或畸形等治疗疾病的外科手术','His ear suffer a  dysfunction.','他的耳朵有功能障碍'}

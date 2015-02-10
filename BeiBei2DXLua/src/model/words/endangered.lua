@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["endangered"]={"endangered","[ɪn'deɪndʒəd]","[ɪn'dendʒɚd]","adj.（生命等）有危险的",'adj.（生命等）有危险的,有灭绝危险的,将要绝种的','The oil spill endangered thousands of birds.','石油的溢泄危及成千上万的鸟儿。','The boy\'s life was endangered.','男孩的生命受到危害'}

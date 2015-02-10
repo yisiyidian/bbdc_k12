@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["foible"]={"foible","['fɒɪb(ə)l]","[ 'fɔibl ]","n.小缺点",'n.小缺点,小毛病|||n.剑刃','My grandfather always carries his watch in his pocket, and it\'s a foible of his.','我的祖父总是把手表放在口袋里，这是他的一个小怪癖。','Everybbody may have some foibles','每个人有些小缺点。'}

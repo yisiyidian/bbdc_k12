@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["suit"]={"suit","[suːt]","[sut]","v.适合",'n.套装,诉讼,请求|||v.适合,取悦,满足','I\'ve found a job that suits me down to the ground.','我找到了一份工作，对我再合适不过了。','He is wearing a black suit.','他穿着一套黑西装。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tear"]={"tear","[tɪə]","[tɛr]","n.眼泪",'n.眼泪,撕破的(洞或裂缝),撕扯|||vt.撕掉,扯下,扰乱|||vi.流泪,撕破','Don\'t pull the pages so hard or they will tear.','别那麽使劲扯书页，那会撕破的。','Do tear yourself away from the television and come out for a walk.','你别舍不得离开电视了，出去散散步吧。'}

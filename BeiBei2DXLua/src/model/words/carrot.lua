@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["carrot"]={"carrot","['kærət]","['kærət]","n.胡萝卜",'n.胡萝卜,报酬,好处','The myth that eating carrot improved your eyesight was exploded years ago.','认为吃胡萝卜可以改善视力的海外奇谈，多年前已祛除殆尽。','You should eat such vegetables as carrot, celery and spinach.','你应该吃胡萝卜、芹菜和菠菜这类的蔬菜。'}

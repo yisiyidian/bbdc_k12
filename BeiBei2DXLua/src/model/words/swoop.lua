@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swoop"]={"swoop","[swuːp]","[swup]","n.俯冲",'n.俯冲,攫取|||v.抓取,突然袭击','The eagle poised in mid-air ready to swoop on its prey.','那鹰在半空中盘旋准备扑向猎物.','The owl swooped down on the mouse.','那只猫头鹰向著老鼠猛扑下来.'}

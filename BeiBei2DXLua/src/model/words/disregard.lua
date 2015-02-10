@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disregard"]={"disregard","[dɪsrɪ'gɑːd]","[,dɪsrɪ'ɡɑrd]","vt.忽视",'n.不理会,漠视|||vt.忽视,不顾','He shows ruthless disregard for other people\'s feelings.','他对别人的感情漠不关心。','The official has shown a total disregard for the needs of the poor.','这个官员对穷人的需求表现出完全漠视的态度。'}

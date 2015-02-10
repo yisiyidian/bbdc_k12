@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["verve"]={"verve","[vɜːv]","[vɝv]","n.特殊才能",'n.特殊才能，气魄,神韵','He looked for the dramatic, like the sunset in this painting, and painted it with great verve.','他追求画面的恢宏壮观——就像这幅画里的落日——而且创作时充满激情。','It was a performance of verve and vitality.','这是一场充满激情与活力的演出。'}

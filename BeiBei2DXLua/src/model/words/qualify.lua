@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["qualify"]={"qualify","['kwɒlɪfaɪ]","[ˈkwɑləˌfaɪ]","vt.取得资格",'vt.取得资格,有资格,限定,描述|||vi.取得资格,有资格','Residence in the area ||qualifies|| you for membership.','只要在本区居住就可入会.','Our team has ||qualified|| for the semi-final.','我队已有资格进入半决赛.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["astronomical"]={"astronomical","[æstrə'nɒmɪk(ə)l]","[,æstrə'nɑmɪkl]","adj.天文学的",'adj.天文学的，巨大的','The price of this gem is expensive - as much so as astronomical figures.','这个宝石的价格十分昂贵－－简直是个天文数字。','His wife was astonished at the astronomical sum of money he had spent.','他的妻子被他花的天文数字的钱款惊呆了。'}

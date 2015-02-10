@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bent"]={"bent","[bent]","[bɛnt]","bend的过去式和过去分词",'bend的过去式和过去分词|||adj.下定决心的,弯曲的|||n.荒草地,嗜好,排架','The branch bent but didn\'t break when the boy climbed along it.','那男孩爬上树枝时，树枝弯曲了，但是没有折断。','She is bent on becoming a film star when she grows up.','她一心想长大后当一名影星。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subjugate"]={"subjugate","['sʌbdʒʊgeɪt]","['sʌbdʒuɡet]","vt.征服",'vt.征服,使服从,抑制','Their costly and futile attempt to subjugate the Afghans lasted just 10 years.','他们大动干戈想要控制阿富汗地区，但只持续了10年就无果而终了。','They are willing to subjugate their own feelings for the good of the group.','为了团体的利益，他们愿意克制自己的个人情感。'}

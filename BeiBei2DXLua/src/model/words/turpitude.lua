@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["turpitude"]={"turpitude","['tɜːpɪtjuːd]","['tɝpətud]","n.奸恶",'n.奸恶,卑鄙,背德','He was considered unfit to hold office because of moral turpitude.','因为道德上的可耻行为，他被认为不适担任公务员。','The one sent by the turpitude always hurt the innocent.','卑鄙的人总是伤害无辜的人。'}

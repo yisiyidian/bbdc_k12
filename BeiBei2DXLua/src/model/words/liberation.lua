@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["liberation"]={"liberation","[lɪbə'reɪʃ(ə)n]","[,lɪbə'reʃən]","n.解放",'n.解放，解放运动（为获得平等权利和地位的行为）','The family lived in a thatched cottage before liberation.','解放前，他们一家住在茅屋里。','The animal husbandry in this area has developed greatly after liberation.','解放后这个地区的畜牧业得到了巨大的发展。'}

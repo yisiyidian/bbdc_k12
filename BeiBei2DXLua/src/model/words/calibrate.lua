@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["calibrate"]={"calibrate","['kælɪbreɪt]","['kælɪbret]","v.测定口径",'v.测定口径,查看刻度,划刻度校正','calibrate a thermometer.','校准一支温度计','He is responsible for ||calibrating||  instruments, ensuring them regular.','他负责测定仪器，以确保他们都符合规格。'}

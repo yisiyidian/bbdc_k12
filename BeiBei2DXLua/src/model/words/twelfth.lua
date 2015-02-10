@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["twelfth"]={"twelfth","[twelfθ]","[twɛlfθ]","adj.第十二的",'adj.第十二的,十二分之一的|||n.第十二,十二日,第十二音','The former champion went down to a hammer-blow in the twelfth round.','这位前冠军在第十二回合中受到一拳重击而败北了。','He received a twelfth of the money.','他得到了这笔钱中的十二分之一。'}

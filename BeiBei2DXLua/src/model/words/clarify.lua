@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clarify"]={"clarify","['klærɪfaɪ]","['klærəfaɪ]","vt.澄清",'vt.澄清,阐明,使...明晰','A restatement of a text or passage in another form or other words, often to clarify meaning.','释义，意义用其它形式或词语来重述一篇课文或文章的语句，通常用以阐释意义','Material used to clarify or explain.','例证被用来说明或解释的材料'}

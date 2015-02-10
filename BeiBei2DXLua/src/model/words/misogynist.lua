@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["misogynist"]={"misogynist","[mɪ'sɑdʒɪnɪst]","[ mi'sɔdʒinist, mai- ]","n.厌恶女人的人",'n.厌恶女人的人','He is still, in the eyes of some, an irredeemable misogynist.','在某些人的眼里，他仍然是个无可救药的厌恶女性者。','We are opposed to all forms of misogynist behavior and sexist attitudes.','我们反对一切形式的歧视女性的行为和有性别歧视的观点。'}

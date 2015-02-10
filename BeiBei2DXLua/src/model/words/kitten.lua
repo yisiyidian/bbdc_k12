@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kitten"]={"kitten","['kɪt(ə)n]","['kɪtn]","n.小猫",'n.小猫|||vi.生育小猫','The cat picked up the kitten by the scruff of its neck.','大猫叼著小猫的颈背.','She is as playful as a kitten.','她像小猫一样顽皮。'}

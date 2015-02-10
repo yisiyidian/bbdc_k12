@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["simple"]={"simple","['sɪmp(ə)l]","['sɪmpl]","adj.简单的",'adj.简单的,无辜的,天真的,基本的,纯粹的|||n.平民,精神病人,草药','My father was a simple farm-worker.','我父亲是个普通的农民。','a simple task.','一项简单的任务'}

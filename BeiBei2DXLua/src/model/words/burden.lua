@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["burden"]={"burden","['bɜːd(ə)n]","['bɝdn]","n.负担",'n.负担,重载|||v.使负重,装载,烦扰','The burden of economic sacrifice rests on the workers of the plant.','经济上做出牺牲的负担落到工厂的工人们身上','I don\'t want to burden you with my problem.','我不想让我的问题给你添麻烦。'}

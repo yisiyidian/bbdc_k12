@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["smolder"]={"smolder","['smoldɚ]","[ 'sməuldə ]","vi.无火焰地闷烧",'vi.无火焰地闷烧,压抑','The wreckage was still smoldering several hours after the crash.','残骸在坠机数小时后还在冒烟。','His darkly smoldering eyes never left her face.','他那双性感迷人的黑眼睛一直盯着她的面庞。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["veil"]={"veil","[veɪl]","[vel]","n.面纱",'n.面纱,掩饰物,修女|||vt.给...戴面纱或面罩|||vi.带面纱或面罩','Rochester assures her it is only a bad dream, but in the morning Jane finds the ripped fragments of the veil.','罗切斯特安慰她说这只是一个恶梦，但清晨简却发现了被撕破的婚纱碎片。','Most Moslem women wear veils in public places.','大多数穆斯林妇女在公共场所都戴着面纱。'}

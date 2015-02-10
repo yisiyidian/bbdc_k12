@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["appoint"]={"appoint","[ə'pɒɪnt]","[ə'pɔɪnt]","vt.任命",'vt.任命,指定,预约,装饰|||vi.行使任命权','As a top manager, he should appoint none but people on their merit.','作为一位总经理，他应该任人为贤。','The company decided to appoint a new treasurer.','公司决定任命一位新司库。'}

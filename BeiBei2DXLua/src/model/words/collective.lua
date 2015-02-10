@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["collective"]={"collective","[kə'lektɪv]","[kə'lɛktɪv]","adj.集体的",'adj.集体的,共同的|||n.集体','Only with organization can the wisdom of the collective be given full play.','＂只有组织起来，才能充分地发挥集体的智慧。＂','I also learned the strength of the collective.','我还认识到了集体的力量。'}

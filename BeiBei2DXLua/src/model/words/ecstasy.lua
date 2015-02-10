@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ecstasy"]={"ecstasy","['ekstəsɪ]","['ɛkstəsi]","n.狂喜",'n.狂喜','My father was in ecstasy when I won my scholarship.','我获得奖学金时父亲欣喜若狂。','He listened to the music with ecstasy.','他听音乐听得入神。'}

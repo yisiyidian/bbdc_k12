@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["voluminous"]={"voluminous","[və'ljuːmɪnəs]","[və'lʊmənəs]","adj.卷数多的",'adj.卷数多的,大量的,著书多的','The importance of the subject is suggested by a voluminous literature.','很多文献提到了这个问题的重要性。','The professor published voluminous books.','教授出版了许多书籍。'}

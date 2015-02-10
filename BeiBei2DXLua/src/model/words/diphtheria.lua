@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diphtheria"]={"diphtheria","[dɪf'θɪərɪə; dɪp-]","[dɪp'θɪərɪr]","n.白喉",'n.白喉','German physiologist. He won a1901 Nobel Prize for work on serum immunization against diphtheria and tetanus.','贝林，埃米尔·冯1854－1917德国生理学家，因其在抗白喉与破伤风血清免疫方面的工作获1901年诺贝尔奖','||Diphtheria|| is a serious infectious disease.','白喉是一种严重的传染病。'}

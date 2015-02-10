@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impassable"]={"impassable","[ɪm'pɑːsəb(ə)l]","[ɪm'pæsəbl]","adj.不能通行的",'adj.不能通行的,无路可通的','The forest was almost impassable.','森林几乎不可逾越。','The soldiers moving through the area had to struggle against the bad weather, which could render the primitive roads impassable.','士兵们在穿越那一地带时，必须与恶劣气候抗争，因为恶劣气候可能使得那些原始的道路让人无法通行。'}

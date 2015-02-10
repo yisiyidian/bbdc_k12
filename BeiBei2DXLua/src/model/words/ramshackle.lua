@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ramshackle"]={"ramshackle","['ræmʃæk(ə)l]","[ 'ræm,ʃækl ]","adj.倒塌似的",'adj.倒塌似的，摇摇欲坠的','He lived in a ramshackle cabin with his grandma.','他和奶奶一起住在一间年久失修的小屋里。','They joined with a ramshackle alliance of other rebels.','他们和一个由其他反叛者草草拼凑成的同盟联起手来。'}

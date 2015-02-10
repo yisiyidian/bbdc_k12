@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["earthy"]={"earthy","['ɜːθɪ]","['ɝθi]","adj.泥土的",'adj.泥土的，粗俗的，朴实的，世俗的','I\'m attracted to warm, earthy colours.','我喜欢那种泥土般色调的暖色。','The rooms had the clean earthy smell of wet clay.','这些房间有湿黏土散发出来的清新泥土气息。'}

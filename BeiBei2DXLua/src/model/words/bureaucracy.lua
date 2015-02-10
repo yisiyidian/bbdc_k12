@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bureaucracy"]={"bureaucracy","[,bjʊ(ə)'rɒkrəsɪ]","[bjʊ'rɑkrəsi]","n.官僚制度",'n.官僚制度,官僚主义','The bureaucracy has become ossified.','官僚制度已变得僵化了。','||Bureaucracy|| may be said as a disease in our very vitals.','官僚主义可说是我们的心腹之患。'}

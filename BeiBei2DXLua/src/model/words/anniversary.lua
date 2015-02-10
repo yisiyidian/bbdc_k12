@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anniversary"]={"anniversary","[ænɪ'vɜːs(ə)rɪ]","[,ænɪ'vɝsəri]","n.周年纪念(日)",'n.周年纪念(日)','She reproached him for forgetting their anniversary.','她责备他竟把他们的结婚周年纪念日忘了.','a wedding anniversary; the anniversary of the founding of Rome.','结婚纪念日；罗马建立的纪念日'}

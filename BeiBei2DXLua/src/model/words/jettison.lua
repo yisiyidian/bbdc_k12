@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jettison"]={"jettison","['dʒetɪs(ə)n; -z(ə)n]","['dʒɛtɪsn]","n.投弃",'n.投弃,投弃货物','We jettisoned an unworkable plan.','我们放弃了难实行的计划。','The governor seems to have jettisoned the plan.','州长似乎已经放弃了这个计划。'}

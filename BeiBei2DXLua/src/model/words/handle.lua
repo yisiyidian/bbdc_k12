@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["handle"]={"handle","['hænd(ə)l]","['hændl]","vt.处理",'n.柄,把手|||vt.买卖,处理,操作|||vi.驾驭','The speaker was roughly handled by the mob.','演说者受到暴民的粗暴对待。','I was impressed by her ||handling|| of the affair.','我觉得她对此事的处理很了不起。'}

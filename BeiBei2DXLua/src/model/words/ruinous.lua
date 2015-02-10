@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ruinous"]={"ruinous","['ruːɪnəs]","['ruɪnəs]","adj.破坏性的",'adj.破坏性的,招致毁减的,零落的','Fate, especially a tragic or ruinous one.','命运命运，尤指厄运或劫数','Mutually destructive; ruinous or fatal to both sides.','自相残杀的共同破坏的；对双方都有害或致命的'}

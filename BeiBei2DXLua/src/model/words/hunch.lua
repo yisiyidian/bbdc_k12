@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hunch"]={"hunch","[hʌn(t)ʃ]","[hʌntʃ]","n.肉峰",'n.肉峰,预感,块|||v.弯腰驼背,弓起背部,耸肩','He had a hunch that she was lying.','他凭直觉认为她说的是谎话。','He always follows his hunch.','他总是凭直觉行事。'}

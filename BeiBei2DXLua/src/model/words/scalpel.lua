@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scalpel"]={"scalpel","['skælp(ə)l]","[skæl'pɛl]","n.外科手术刀",'n.外科手术刀,解剖刀','The doctor finished the operation, but his success depended on the backroom boys who had invented the new laser scalpel.','医生做完了手术，但他的成功有赖于那些发明了新型激光手术刀的研究人员。','The scalpel can kill or save a life.','手术刀可以杀人也可以救人'}

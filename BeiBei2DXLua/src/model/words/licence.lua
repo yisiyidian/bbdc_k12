@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["licence"]={"licence","['laɪsəns]","['laɪsəns]","n.执照",'n.执照,许可,特许,自由,放纵|||vt.同意,许可','Always keep your driving licence in a safe place.','驾驶执照一定要妥善保管.','When does your driving licence expire?','你的驾驶执照何时到期?'}

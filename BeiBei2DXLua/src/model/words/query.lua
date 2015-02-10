@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["query"]={"query","['kwɪərɪ]","['kwɪri]","n.疑问",'n.疑问,疑问号,质问|||vt.询问,表示怀疑','The letter was referred back (to us) with a query.','该函已退给（我方）要求对某问题加以解释.','Your interesting report raises several important ||queries||.','你的精彩报告引出了几个重要问题。'}

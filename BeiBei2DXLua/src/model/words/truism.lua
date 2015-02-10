@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["truism"]={"truism","['truːɪz(ə)m]","[ 'tru:izəm ]","n.自明之理",'n.自明之理,老套的,众所周知','Beyond pointing out these general truisms, I shall confine my discussion to the general areas of Asia.','除了指出这些大家已明白的问题外，我将把讨论集中在亚洲地区。','Don\'t use your old truism to teach me.','别用你那老一套来教育我。'}

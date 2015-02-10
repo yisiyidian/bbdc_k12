@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incite"]={"incite","[ɪn'saɪt]","[ɪn'saɪt]","v.煽动",'v.煽动，刺激,激励','Just a few words will incite him into action.','他只需几句话一激将就会采取行动。','They incited the workers to violence.','他们煽动工人暴动。'}

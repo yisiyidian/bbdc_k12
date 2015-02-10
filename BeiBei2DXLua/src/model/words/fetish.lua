@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fetish"]={"fetish","['fetɪʃ]","['fɛtɪʃ]","n.(出自迷信的)神物",'n.(出自迷信的)神物，护身符，被盲目崇拜的东西，[心理]恋物癖','Mary makes a fetish of her home; she\'s always cleaning it.','玛丽太看重她的房子了，她老是不停地打扫。','Some young people like to make a fetish of style.','有些年轻人喜欢盲目地赶时髦。'}

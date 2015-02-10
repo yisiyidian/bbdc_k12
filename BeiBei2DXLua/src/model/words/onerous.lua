@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["onerous"]={"onerous","['əʊn(ə)rəs; 'ɒn-]","['ɑnərəs]","adj.繁重的",'adj.繁重的,麻烦的','I\'ve always led an onerous timetable but I like it.','我的日程表总是排得紧紧的，但我喜欢这样。','This is the most onerous task I have ever undertaken.','这是我承担过的最艰巨的任务。'}

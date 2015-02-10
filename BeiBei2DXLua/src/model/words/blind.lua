@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blind"]={"blind","[blaɪnd]","[blaɪnd]","adj.瞎的",'adj.盲目的,瞎的,未察觉的|||n.百叶窗,幌子|||vt.使失明,隐藏|||adv.盲目地','He is blind to the probable results of his behavior.','他无法了解他的行为可能带来什么后果。','The soldier was blinded in battle.','那个士兵在战斗中双目失明。'}

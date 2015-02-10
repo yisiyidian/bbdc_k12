@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crossbones"]={"crossbones","['krɒsbəʊnz]","['krɔsbonz]","n.交叉腿骨的图形",'n.交叉腿骨的图形','They stamped a skull and crossbones on the label of poisonous drug.','他们在毒药标签上打上骷髅图。','skull and crossbones','（象征海盗或死亡的）骷髅画；骷髅旗'}

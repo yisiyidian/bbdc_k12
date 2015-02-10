@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dangerous"]={"dangerous","['deɪn(d)ʒ(ə)rəs]","['dendʒərəs]","adj.危险的",'adj.危险的,引起危险的','This decision creates a dangerous precedent.','这个决定开创了一个危险的先例。','Icy roads are dangerous.','覆盖着冰的道路很危险。'}

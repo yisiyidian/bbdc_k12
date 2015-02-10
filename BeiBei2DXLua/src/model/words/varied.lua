@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["varied"]={"varied","['veərɪd]","['vɛrɪd]","adj.各种各样的",'adj.各种各样的|||动词vary的过去式和过去分词','The holiday was nothing if not varied.','假日活动极其丰富多彩.','Her mood varied from optimism to extreme depression.','她的情绪由乐观一变而为极度消沉.'}

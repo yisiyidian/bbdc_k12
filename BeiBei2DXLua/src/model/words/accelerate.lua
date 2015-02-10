@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accelerate"]={"accelerate","[ək'seləreɪt]","[ək'sɛləret]","vt.加速",'vt.加速,提前,跳级|||vi.加速','The leader is losing ground as the rest of the runners accelerate.','领先者在其余赛跑者加速时就逐渐失去了优势。','The car accelerated as it overtook me.','那辆汽车一加速就超越了我.'}

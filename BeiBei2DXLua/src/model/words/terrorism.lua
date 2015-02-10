@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["terrorism"]={"terrorism","['terərɪzəm]","['tɛrərɪzəm]","n.恐怖统治",'n.恐怖统治,恐怖行动','The two states made a compact to co-operate against terrorism.','两国签订了反恐怖主义合作协议.','Security checks are only a palliative (measure) in the fight against terrorism.','安全检查仅是反恐怖主义的一种消极措施.'}

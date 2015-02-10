@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["absurd"]={"absurd","[əb'sɜːd]","[əbˈsɚd, -ˈzɚd]","adj.荒唐的",'adj.荒唐的|||n.荒唐','He looked absurd in that get-up.','他穿着那套衣服看上去怪模怪样的。','We have no intention of lying down under these absurd allegations.','对这些荒谬的指控我们是不甘受辱的。'}

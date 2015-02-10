@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flatten"]={"flatten","['flæt(ə)n]","['flætn]","v.变单调",'v.变单调,变平,打倒','||Flatten|| the dough with a press of the hand.','用手把生面团压平.','The graph flattens out gradually after a steep fall.','图表上的曲线突降之後逐渐趋於平稳.'}

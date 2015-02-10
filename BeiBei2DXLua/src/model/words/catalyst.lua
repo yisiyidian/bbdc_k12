@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["catalyst"]={"catalyst","['kæt(ə)lɪst]","['kætəlɪst]","n.催化剂",'n.催化剂,刺激因素','The offer of a new job provided just the catalyst she needed.','这份新工作正是她所需要的转变契机。','His words are the catalyst of the fighting.','他的话是打斗的催化剂。'}

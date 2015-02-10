@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slight"]={"slight","[slaɪt]","[slaɪt]","adj.轻微的",'n.轻蔑|||adj.轻微的,纤细的,脆弱的|||vt.轻视,忽略','He was born with a slight deformity of the feet which made him limp.','他的脚稍有先天畸形，走起路来一瘸一拐。','It was a slight overlook on my part.','这是我的小疏忽。'}

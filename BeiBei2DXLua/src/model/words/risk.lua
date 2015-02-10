@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["risk"]={"risk","[rɪsk]","[rɪsk]","n.危险",'n.危险，冒险；保险额；被保险人或物|||vt.冒…的危险；使…冒风险（或面临危险）','At the risk of sounding ungrateful, I must refuse your offer.','我甘受拂逆盛情之嫌，也必须谢绝你的提议。','All the people who know this secret represent a security risk.','凡是知道这个秘密的人都对安全造成危险。'}

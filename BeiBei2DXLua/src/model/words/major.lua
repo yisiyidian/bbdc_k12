@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["major"]={"major","['meɪdʒə]","['medʒɚ]","adj.主要的",'n.主修,成年人,陆军少校;巨头|||adj.主要的,较多的,大部份的|||vi.主修','This quartet represents a major new trend in modern music.','这首四重奏的曲子反映了现代音乐中一种主要的新趋向.','Her major is French.','她的主修科目是法语。'}

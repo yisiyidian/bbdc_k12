@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ballyhoo"]={"ballyhoo","[bælɪ'huː]","['bælɪhu]","n.大肆宣传",'n.大肆宣传|||vt.大吹大擂','They announced, amid much ballyhoo, that they had made a breakthrough.','他们在一片喧嚣中宣布，他们取得突破性的进展。','The power of red wine to counteract high cholesterol has been ballyhooed in the press.','红酒中和高胆固醇的功效在媒体上被夸大了。'}

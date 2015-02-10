@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pest"]={"pest","[pest]","[pɛst]","n.害虫",'n.害虫','That child is an absolute pest!','那孩子讨厌极了！','Stores of grain are frequently attacked by pests.','储存的谷物经常受到害虫的破坏。'}

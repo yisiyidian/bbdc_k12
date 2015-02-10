@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rebuild"]={"rebuild","[riː'bɪld]","[,ri'bɪld]","v.重建",'v.重建，改建，使复原','Jones used to be a thief, but now he\'s seen the error of his ways and is trying to rebuild his life.','琼斯过去是小偷, 但是现已知过能改重新做人.','Plans have been put forward to pull down and rebuild the area.','已提出计划，要把这个地区的房屋推掉重建。'}

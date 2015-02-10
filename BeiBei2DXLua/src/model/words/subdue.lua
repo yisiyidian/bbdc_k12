@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subdue"]={"subdue","[səb'djuː]","[səb'du]","v.使服从",'v.使服从,压制,减弱','She tried to subdue her anger.','她尽力压制自己的怒火。','His soothing words subdued her fears.','他的安慰话减轻了她的恐惧。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["citadel"]={"citadel","['sɪtəd(ə)l; -del]","[ˈsɪtədəl]","n.城堡",'n.城堡,要塞','This citadel is built on high ground for protecting the city.','这座城堡建于高处是为保护城市。','Here was a citadel in the Second World War.','在二战中，这儿是一处避难所。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dictate"]={"dictate","[dɪk'teɪt]","['dɪktet]","vi.听写",'vi.听写|||vt.口述,口授|||n.命令,指挥,指令','Her skills were in such demand that she could dictate her own salary.','她因其技术奇货可居，故可以主宰自己的薪金待遇。','The teacher dictated a passage to the class.','老师给全班同学听写一段文章。'}

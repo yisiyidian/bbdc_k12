@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["herself"]={"herself","[hɜː'self]","[hɝ'sɛlf]","pron.她自己",'pron.她自己','She kept on muttering to herself.','她老是一个人嘀嘀咕咕。','After her swim she dried herself with a towel.','游泳后，她用毛巾擦干身子。'}

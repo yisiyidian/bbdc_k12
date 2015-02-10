@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["locus"]={"locus","['ləʊkəs]","['lokəs]","n.轨迹",'n.场所,所在地,轨迹','The taxpayer do not have locus stand in this court.','该纳税人没有在法庭上的陈述权。','A plane curve formed by the locus of points equidistant from a fixed line and a fixed point not on the line.','抛物线到一固定直线和不在直线上某一固定点等距的点的轨迹所形成的平面曲线'}

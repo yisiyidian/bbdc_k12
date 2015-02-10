@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mollify"]={"mollify","['mɒlɪfaɪ]","['mɑlɪfaɪ]","v.安慰",'v.安慰,安抚|||vt.使平息','She managed to mollify the angry customer.','她设法安抚这位愤怒的客户。','He tried to mollify his father\'s anger by apologizing.','他试图用认错来减缓他父亲的怒气。'}

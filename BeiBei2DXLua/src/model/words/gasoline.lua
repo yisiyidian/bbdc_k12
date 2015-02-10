@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gasoline"]={"gasoline","['gæsəliːn]","['gæsəlin]","n.汽油",'n.汽油','The car is short of gasoline.','汽车的汽油不够了。','Is there a gasoline station nearby?','这附近有汽油站吗？'}

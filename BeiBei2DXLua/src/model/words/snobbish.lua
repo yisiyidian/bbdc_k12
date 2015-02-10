@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["snobbish"]={"snobbish","['snɒbɪʃ]","['snɑbɪʃ]","adj.势利的",'adj.势利的','It is strange that he should fall in love with such a snobbish girl.','说来真怪，他居然与那位勢利的女孩子坠入情网。','I hate snobbish people.','我讨厌势利的人'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irk"]={"irk","[ɜːk]","[ɝk]","vt.使厌倦",'vt.使厌倦,使苦恼|||n.厌倦，苦恼','It irks me to see money being wasted.','我看著浪费金钱就讨厌.','It irked him that she had thought of it first.','她竟先想到那件事, 为此他很不痛快.'}

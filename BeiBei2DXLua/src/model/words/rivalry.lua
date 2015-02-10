@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rivalry"]={"rivalry","['raɪv(ə)lrɪ]","['raɪvlri]","n.敌对",'n.敌对,竞争,对抗','Their old rivalry soon surfaced when they met again.','他们重逢时, 昔日之明争暗斗旋即死灰复燃.','The quarrel originated in rivalry between the two families.','这次争吵是两家不和引起的。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shift"]={"shift","[ʃɪft]","[ʃɪft]","n.交换",'n.交换,变化,移动,接班者|||vt.更替,移转,变声|||vi.改变,定责,更衣','The tools shift around in the car boot every time we turn a corner.','我们每次转弯，汽车行李箱里的工具就来回动。','The Left is shifting its ground.','左派正在改变立场。'}

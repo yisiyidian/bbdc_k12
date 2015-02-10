@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cripple"]={"cripple","['krɪp(ə)l]","['krɪpl]","n.跛者",'n.跛者,残废|||v.使...跛,使...成残废,削弱','The traffic was entirely crippled for the day.','这一天交通完全瘫痪。','She has gone from being a healthy, fit, and sporty young woman to being a cripple.','她从一个健康、强壮、爱好体育运动的年轻姑娘变成了一个残疾人。'}

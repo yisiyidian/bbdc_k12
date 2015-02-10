@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["correction"]={"correction","[kə'rekʃ(ə)n]","[kə'rɛkʃən]","n.订正",'n.订正,改正,改正的地方','The teacher wrote the proposed correction at foot.','老师将修改意见写在页底空白处。','I believe these figures are the most recent available but I am open to correction.','我认为这些数据是最近才得到的，但我乐于接受改正。'}

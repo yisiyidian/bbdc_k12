@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["apron"]={"apron","['eɪpr(ə)n]","['eprən]","n.围裙",'n.围裙','A protective pier or dock apron used as a buffer against floating ice.','桥墩护槛保护桥椁免受浮冰碰撞的护栏或码头围栏','Could you tie this apron round me?','你受累把围裙给我系上行吗?'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prove"]={"prove","[pruːv]","[pruv]","v.证明",'v.证明,查验,显示','The old methods proved best after all.','采用老方法结果反而是某事物最好。','He has proved his courage in the battle.','他已在这场战斗中证明了自己的勇气。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hobble"]={"hobble","['hɒb(ə)l]","['hɑbl]","v.蹒跚",'v.蹒跚,跛行|||vi.跛行','A hobble or limp.','跛行或蹒跚','The old man hobbled along (the road) with the aid of his stick.','那老汉拄著拐杖一瘸一拐地走著.'}

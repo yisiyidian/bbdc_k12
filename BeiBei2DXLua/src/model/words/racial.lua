@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["racial"]={"racial","['reɪʃ(ə)l]","['reʃl]","adj.种族的",'adj.种族的,人种的','||Racial|| prejudice is (an) anathema to me.','我对种族偏见深恶痛绝.','Genuine racial equality still seems light-years away.','真正的种族平等似乎仍遥遥无期.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blandishment"]={"blandishment","['blændɪʃm(ə)nt]","[ 'blændiʃmənt ]","n.奉承",'n.奉承','She resisted his blandishments.','她把他的甜言蜜语顶了回去。','He remained impervious to all Nell\'s sulks and blandishments.','对尼尔的愠怒和甜言蜜语，他都无动于衷。'}

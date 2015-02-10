@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inconsolable"]={"inconsolable","[ɪnkən'səʊləb(ə)l]","['ɪnkən'soləbl]","adj.极为伤心的",'adj.无法安慰的,极为伤心的','He was inconsolable after his pet died.','宠物死了之后，他万分沮丧','When my mother died I was inconsolable.','母亲去世的时候，我伤心欲绝。'}

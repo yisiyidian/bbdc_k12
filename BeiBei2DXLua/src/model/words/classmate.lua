@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["classmate"]={"classmate","['klɑːsmeɪt]","['klæsmet]","n.同班同学",'n.同班同学','Even though I hadn\'t seen my classmate for many years, I recognized him immediately.','即使多年没有看见我的同学，我也马上认出了他。','His brother is my classmate.','他哥哥是我的同学。'}

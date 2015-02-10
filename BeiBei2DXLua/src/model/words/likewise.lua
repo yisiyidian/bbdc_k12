@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["likewise"]={"likewise","['laɪkwaɪz]","['laɪkwaɪz]","adv.同样地",'adv.同样地,此外,（表示感觉相同）我也是','She sprinkled her with the juices of aconite, and immediately her hair came off, and her nose and ears likewise.','她用附子汁向阿拉喀涅洒去，她的头发马上就脱光了，她的鼻子和耳朵也掉了。','Watch him and do likewise.','注意看着他然后照样做。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["twist"]={"twist","[twɪst]","[twɪst]","n.卷曲物",'n.卷曲物,旋转,扭曲,曲解,转折(体)|||vt.拧,缠绕,扭(曲)|||vi.蛇行,变形,转','I twisted round in my seat to speak to her.','我坐在位子上转过身来跟她说话。','The metal frame tends to twist under pressure.','这种金属框受压後容易变形。'}

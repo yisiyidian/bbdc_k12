@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brush"]={"brush","[brʌʃ]","[brʌʃ]","n.刷子",'n.刷子,画笔,轻擦,小冲突,灌木丛|||vt.用刷子清洗,画,拭去,打发|||vi.轻擦,拂拭','He\'s very keen on her but she\'s always brushing him off.','他非常喜爱她, 但她总是不理睬他.','The enemy brushed aside our defences.','敌人冲破了我们的防御工事。'}

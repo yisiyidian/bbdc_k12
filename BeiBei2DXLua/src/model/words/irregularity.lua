@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irregularity"]={"irregularity","[ɪ,regjʊ'lærɪtɪ]","[ɪ'rɛgjə'lærəti]","n.不规则性",'n.不规则性，不规则的事物|||n.便秘','Investigators found no evidence of financial irregularity.','调查人员没有发现违反财务规定的证据.','Judges cannot permit irregularity in carrying out justice.','法官执法时不允许有不正当的行为.'}

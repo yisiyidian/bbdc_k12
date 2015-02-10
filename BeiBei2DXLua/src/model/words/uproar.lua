@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["uproar"]={"uproar","['ʌprɔː]","['ʌprɔr]","n.喧嚣",'n.喧嚣,骚动','The debate ended in uproar.','那场争辩以大吵大闹收场。','His motion threw the meeting into an uproar.','他的建议在会上引起了一片吵嚷。'}

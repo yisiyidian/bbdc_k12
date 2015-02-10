@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drivel"]={"drivel","['drɪv(ə)l]","['drɪvl]","vi.说傻话",'vi.淌口水,说傻话|||n.废话，口水','The poor man kept driveling before his death.','这可怜人在弥留之际不停的说胡话。','What absolute drivel!','一派胡言！'}

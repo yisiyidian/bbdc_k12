@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arbitrate"]={"arbitrate","['ɑːbɪtreɪt]","['ɑrbɪtret]","v.仲裁",'v.仲裁','He was asked to arbitrate between management and the unions.','他被邀请在资方与工会之间作出仲裁。','Management and labor agreed to arbitrate their remaining differences.','资方与劳工同意仲裁调停他们尚存的分歧。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["assiduous"]={"assiduous","[ə'sɪdjʊəs]","[ ə'sidjuəs ]","adj.勤勉的",'adj.勤勉的,刻苦的','Podulski had been assiduous in learning his adopted language.','波多斯基一直很努力地学习外语。','The solider was assiduous in his duty.','士兵认真执行任务。'}

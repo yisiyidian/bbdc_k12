@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["connect"]={"connect","[kə'nekt]","[kə'nɛkt]","vt.连接",'vt.连接,联通,使有联系|||vi.连接,接通','I was surprised to hear them mentioned together: I\'ve never connected them before.','听到有人把他们俩扯在一起，我感到很惊奇，我以前从未想到过他们之间有什麽关系。','The plumber connected up all the pipes and turned on the tap.','管子工连接上所有管子，然后打开了水龙头。'}

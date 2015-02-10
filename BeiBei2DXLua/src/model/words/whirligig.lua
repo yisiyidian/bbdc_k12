@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whirligig"]={"whirligig","['wɜːlɪgɪg]","['wɝlɪɡɪɡ]","n.旋转玩具",'n.旋转玩具,旋转木马,旋转运动','Our feelings of happiness and sorrow are soon lost in the whirligig of time.','我们感情上的悲欢会随着时间的流逝很快消失。','whirligig','旋转玩具旋转木马'}

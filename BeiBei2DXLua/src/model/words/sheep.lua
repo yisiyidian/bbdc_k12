@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sheep"]={"sheep","[ʃiːp]","[ʃip]","n.羊",'n.羊,绵羊','My brother is the black sheep of the family.','我弟弟是我们家的害群之马.','We are grazing the sheep in the next field.','我们在旁边的地里放羊。'}

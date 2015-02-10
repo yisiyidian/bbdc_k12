@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emblematic"]={"emblematic","[,emblə'mætɪk]","[,ɛmblə'mætɪk]","adj.作为象征的",'adj.作为象征的','Dogs are emblematic of faithfulness.','狗象征着忠诚。','The killing in Pensacola is emblematic of a lot of the violence that is happening around the world.','发生在彭萨科拉的凶杀案是世界各地发生的大量暴力事件的典型代表。'}

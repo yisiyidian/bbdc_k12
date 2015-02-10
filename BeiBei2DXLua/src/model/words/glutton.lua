@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glutton"]={"glutton","['glʌt(ə)n]","['ɡlʌtn]","n.贪吃者",'n.贪吃者','She\'s a glutton for work.','她是个工作狂。','A glutton derives sensual pleasures from eating.','暴食者可从吃中得到感官上的愉悦。'}

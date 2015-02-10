@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["canvas"]={"canvas","['kænvəs]","['kænvəs]","n.帆布",'n.帆布，（帆布）画布，油画','Blobs of paint were dotted around the canvas.','油画布上满是涂抹的颜料.','The painter stretched the canvas on a frame.','画家把油画布紧绷在画框上。'}

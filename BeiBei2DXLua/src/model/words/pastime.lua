@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pastime"]={"pastime","['pɑːstaɪm]","['pæstaɪm]","n.消遣",'n.消遣,娱乐','Gardening is a very rewarding pastime.','园艺劳动是非常有益的消遣。','Writing is a solitary pastime.','写作是独自一人的消遣.'}

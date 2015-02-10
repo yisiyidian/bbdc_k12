@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fruitless"]={"fruitless","['fruːtlɪs]","['frutləs]","adj.不成功的",'adj.不成功的,无结果的','All my efforts were fruitless.','我所有的努力都白费了。','So far the search for the missing boy has been fruitless.','到目前为止，还没有找到那失踪的男孩。'}

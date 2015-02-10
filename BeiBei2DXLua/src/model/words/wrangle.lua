@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wrangle"]={"wrangle","['ræŋg(ə)l]","['ræŋɡl]","v.争论",'v.争论,激辩,吵架|||n.争吵','They were involved in a long legal wrangle over payment.','他们在付款问题上陷入长期纠纷。','The two sides have spent most of their time ||wrangling|| over procedural problems.','双方大部分时间都在围绕程序问题争论不休。'}

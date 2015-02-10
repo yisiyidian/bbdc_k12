@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bracelet"]={"bracelet","[ˈbreɪslət]","[ˈbreslɪt]","n.手镯",'n.手镯','I\'d like you to take this bracelet as a gift.','我希望你把这手镯礼物收下.','Her bracelet was set with emeralds.','她的手镯上镶著绿宝石.'}

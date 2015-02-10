@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["area"]={"area","['eərɪə]","['ɛrɪə]","n.地区",'n.地区,区域,面积,方面','This area has not been covered by the communication net.','这个地区还不在通讯网的覆盖之内。','The police scoured the area looking for the lost child.','警方搜遍这个地区寻找这个走失的孩子。'}

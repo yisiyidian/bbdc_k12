@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resent"]={"resent","[rɪ'zent]","[rɪ'zɛnt]","v.愤恨",'v.愤恨,憎恶,怨恨','I resent the encroachment on my time.','我讨厌别人侵占我的时间.','I bitterly resent his attempts to interfere in my work.','我非常讨厌他企图干涉我的工作。'}

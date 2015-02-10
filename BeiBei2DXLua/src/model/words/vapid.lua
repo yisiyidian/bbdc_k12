@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vapid"]={"vapid","['væpɪd]","['væpɪd]","adj.索然无味的",'adj.索然无味的','He did the same thing year by year and found life vapid.','他每年做着同样的事，觉得生活索然无味。','The theory is vapid, while the life is colorful.','理论是灰色的，唯生命之树常青。'}

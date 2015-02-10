@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mallet"]={"mallet","['mælɪt]","['mælɪt]","n.木槌",'n.木槌,球棍,棒','The drummer was worried because his mallet was missing one minute before the concert.','鼓手很著急，因为他的小音槌在音乐会开始前一分钟不见了。','He hit the peg mightily on the top with a mallet.','他用木槌猛敲木栓顶。'}

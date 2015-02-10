@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comfort"]={"comfort","['kʌmfət]","['kʌmfɚt]","n.舒适",'n.舒适,安慰,安慰者|||vt.安慰','The dress is carefully styled for maximum comfort.','这服装精心设计，力求达到最大限度的舒适。','They are now living in relative comfort.','他们现在过着比较舒适的生活。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["realism"]={"realism","['rɪəlɪz(ə)m]","['riəlɪzəm]","n.写实主义",'n.写实主义,现实主义','I shall never gird at realism.','我是不会嘲弄现实的。','Don\'t copy Jackson\'s ideas, the realism he uses has been worked to death many times and is no longer interesting.','别抄杰克逊的观点了, 他那一套现实主义已经用够了, 再也没有什么意思。'}

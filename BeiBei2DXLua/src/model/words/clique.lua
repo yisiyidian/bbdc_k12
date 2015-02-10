@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clique"]={"clique","[kliːk]","[klik]","n.私党",'n.私党,派系,阀|||v.结党','I\'ve had nothing to do with him since he got in with that rather disreputable clique.','自从他和那个声名狼藉的集团鬼混在一起之后，我就同他断绝了往来。','The reactionary ruling clique was torn by internal strife.','反动统治集团内部勾心斗角，四分五裂。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ken"]={"ken","[ken]","[kɛn]","n.视野",'n.1.视野,眼界2.知识范围;理解范围3.人的理解能力之外','His ideas are quite beyond my ken.','我很不理解他的想法。','The working of the stock exchange is beyond most people\'s ken.','证券交易所的运作情况大多数人都不了解。'}

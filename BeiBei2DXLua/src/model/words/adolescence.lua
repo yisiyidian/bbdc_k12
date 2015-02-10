@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adolescence"]={"adolescence","[ædə'les(ə)ns]","[,ædə'lɛsns]","n.青春期",'n.青春期','The period of adolescence is very important in forming one\'s character.','青春期对人的性格形成是非常重要的。','the adolescence of a nation.','国家的青春期'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["squat"]={"squat","[skwɒt]","[skwɑt]","n.蹲",'n.蹲|||adj.蹲著的,矮胖胖的|||v.蹲下,坐','The old man squatted down by the fire.','老人蹲在炉火旁。','Can you find somewhere to squat?','你找个地方坐下好吗?'}

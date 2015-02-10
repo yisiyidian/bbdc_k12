@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conducive"]={"conducive","[kən'djuːsɪv]","[kən'dusɪv]","adj.有助于...的",'adj.有助于...的','Regularity ought to be observed, as regularity is very conducive to health.','生活应遵守规律，因为规律对健康有益。','Fresh air is conducive to health.','新鲜空气有助于健康。'}

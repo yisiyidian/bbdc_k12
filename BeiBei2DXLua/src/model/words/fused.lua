@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fused"]={"fused","[fjʊzd]","[ fju:zd ]","v.熔化",'v.熔化|||adj.熔化的(发火的,装备引信的)','The lights have all fused.','保险丝断了, 灯都灭了.','The lights fused because the system was overloaded with electrical appliances.','电灯灭了, 因线路上用电器超负荷把保险丝烧断了.'}

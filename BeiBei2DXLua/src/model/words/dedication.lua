@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dedication"]={"dedication","[dedɪ'keɪʃ(ə)n]","[,dɛdɪ'keʃən]","n.奉献",'n.奉献,献词,献堂礼','His talent and dedication will insure his success.','他的才气和执着将确保他成功。','His dedication should be learned by all of us.','他的奉献精神值得我们学习。'}

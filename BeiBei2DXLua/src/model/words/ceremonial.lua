@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ceremonial"]={"ceremonial","[serɪ'məʊnɪəl]","[,sɛrɪ'monɪəl]","n.仪式",'n.仪式|||adj.正式的','The ceremonial opening of Parliament was a fine spectacle.','该议会的开幕式场面隆重.','He looked rather out of place when he turned up in full ceremonial rig.','当他穿着全套大礼服露面的时候，显得和整个场合很不协调。'}

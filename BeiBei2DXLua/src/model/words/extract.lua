@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extract"]={"extract","[ˈekstrækt]","['ɛkstrækt]","n.榨出物",'n.榨出物,精华,摘录|||vt.拔出,榨出,摘录,提取,选取|||[计算机]提取','She extracted a small notebook from her handbag.','她从手提包里取出了一个小笔记本。','I had extracted a detailed account from him.','我从他那里打听出了详情。'}

@@ -12,7 +12,8 @@ Manager.allwords = nil
 
 function Manager.init()
     Manager.allwords = {}
-    -- require('model.bbdxw')
+    if IS_DEVELOPMENT_MODE then require('model.words.bbdxw') end
+
     -- local databasePath = cc.FileUtils:getInstance():fullPathForFilename('cfg/bbdxw.sqlite')
     -- print('databasePath:', databasePath)
     -- Manager.database = sqlite3.open(databasePath)

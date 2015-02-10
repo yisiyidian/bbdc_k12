@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chary"]={"chary","['tʃeərɪ]","['tʃɛri]","adj.珍视的",'adj.珍视的，谨慎的，节俭的','He is chary of giving praise.','他不轻易夸奖人。','She is chary of strangers.','她见到陌生人会害羞。'}

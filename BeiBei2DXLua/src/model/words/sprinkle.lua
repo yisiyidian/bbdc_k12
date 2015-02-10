@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sprinkle"]={"sprinkle","['sprɪŋk(ə)l]","['sprɪŋkl]","v.洒",'v.洒,散置,微雨','||Sprinkle|| a little salt on the rice.','在米饭上撒点盐.','We covered the cakes with chocolate sprinkles.','我们给蛋糕洒上巧克力末。'}

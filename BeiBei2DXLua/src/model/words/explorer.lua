@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["explorer"]={"explorer","[ek'splɔːrə(r)]","[ɪk'splɔrɚ]","n.探测者",'n.探测者','The explorer told the boys about his adventures in the Arctic.','那位探险家把他在北极的冒险活动讲给男孩子 们听。','Christopher Columbus was one of the great explorers.','克里斯托弗·哥伦布是伟大的探险家。'}

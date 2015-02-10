@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abort"]={"abort","[ə'bɔːt]","[ə'bɔrt]","v.流产",'v.流产,打胎,堕胎','An aborted organism.','流产的生物体','abort plans for a corporate takeover.','停止公司的接收计划'}

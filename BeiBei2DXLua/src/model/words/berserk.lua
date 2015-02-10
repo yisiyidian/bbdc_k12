@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["berserk"]={"berserk","[bə'zɜːk; -s-]","[ bə'sə:k ]","adj.狂暴的",'adj.狂暴的','When I saw him I went berserk.','我一看见他就冒火。','Her frequent quarrel with me sends me berserk','那辆车在噪音简直使我发疯。'}

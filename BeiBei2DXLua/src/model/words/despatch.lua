@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["despatch"]={"despatch","[dɪ'spætʃ]","[ di'spætʃ ]","vt.派遣",'vt.派遣|||n.派遣,处决,急件|||=dispatch(美）','In conformity with your instructions by wire last night, we have today despatch the goods as mention below.','按昨夜贵方电报要求，我们已于今日将下列货物赶紧发出，恳请确认为荷。','She did the job with great despatch.','她以高效率完成了那件工作。'}

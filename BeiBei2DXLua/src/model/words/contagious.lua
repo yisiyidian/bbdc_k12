@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["contagious"]={"contagious","[kən'teɪdʒəs]","[kən'tedʒəs]","adj.传染性的",'adj.传染性的,会蔓延的,会传播的','Scarlet fever is highly contagious.','猩红热传染性很强。','HINI is a contagious disease','H1N1是一种接触性传染病'}

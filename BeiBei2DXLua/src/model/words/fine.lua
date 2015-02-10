@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fine"]={"fine","[faɪn]","[faɪn]","adj.美好的",'n.罚款,罚金,结尾|||vt.罚款|||vi.净化，细化|||adj.美好的,优质的,精致的，晴朗的,健康的，纤细的，恭维的，辞藻华丽的|||adv.恰好地，合适地','It poured all morning, but turned fine later.','下了一上午的瓢泼大雨，後来才转晴。','That suits me fine.','这对我很合适。'}

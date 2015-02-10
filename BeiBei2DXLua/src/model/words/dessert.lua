@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dessert"]={"dessert","[dɪ'zɜːt]","[dɪ'zɝt]","n.甜食",'n.甜食','He served us brownies as dessert.','他给我们吃核桃仁巧克力饼作为甜点。','A dessert of sliced fruit, ice cream, and toppings.','盛有冰淇淋、奶油、水果的甜食'}

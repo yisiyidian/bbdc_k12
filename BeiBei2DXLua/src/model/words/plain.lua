@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plain"]={"plain","[pleɪn]","[plen]","n.平原",'n.平原,草原|||adj.简单的,平坦的,平常的,家常的|||adj.纯的，不掺杂的','The wind whipped across the plain.','大风扫过平原。','It\'s plain that he is the criminal.','很明显，他是罪犯。'}

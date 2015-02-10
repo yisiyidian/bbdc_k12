@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["revolutionary"]={"revolutionary","[revə'luːʃ(ə)n(ə)rɪ]","['rɛvə'lʊʃə'nɛri]","adj.革命的",'adj.革命的|||n.革命者','We shall carry forward the revolutionary tradition.','我们应该发扬革命传统。','At no point in his life should a revolutionary lie back and take life easy.','一个革命者在一生中的任何时刻，都不应该停止战斗去过安逸的生活。'}

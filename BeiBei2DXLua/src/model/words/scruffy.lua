@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scruffy"]={"scruffy","['skrʌfɪ]","['skrʌfi]","adj.不整齐的",'adj.不整齐的,肮脏的,破旧的','You can\'t go to a job interview looking so scruffy!','你求职去面试不能这邋里邋遢的!','...a young man, pale, scruffy and unshaven.','…一个面色苍白、邋里邋遢、胡子拉碴的年轻男子。'}

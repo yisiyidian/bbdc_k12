@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["negligible"]={"negligible","['neglɪdʒɪb(ə)l]","['nɛɡlɪdʒəbl]","adj.可以忽略的",'adj.可以忽略的,微不足道的','The risks were represented as negligible.','把这么冒险的事说得微不足道。','The damage to my car is negligible.','我的车只受到了很小的损伤。'}

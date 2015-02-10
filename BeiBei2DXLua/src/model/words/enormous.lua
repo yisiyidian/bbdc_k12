@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enormous"]={"enormous","[ɪ'nɔːməs]","[ɪ'nɔrməs]","adj.巨大的",'adj.巨大的,庞大的','He is a man of enormous girth.','他是个腰围粗大的男子。','They overlooked the enormous risks involved.','他们忽略了暗含的巨大危险。'}

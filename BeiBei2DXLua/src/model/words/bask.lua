@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bask"]={"bask","[bɑːsk]","[bæsk]","vi.取暖",'vi.取暖，舒适地晒太阳，沐浴于','Now we can bask in the rainbow of the memories that we\'ll nurture in the years ahead.','在未来岁月里，让我们在记忆的长虹里永远珍藏对他的怀念。','I saw her basking in the sunshine.','我看到她在阳光下晒太阳。'}

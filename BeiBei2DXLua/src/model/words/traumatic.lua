@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["traumatic"]={"traumatic","[trɔː'mætɪk; traʊ-]","[traʊ'mætɪk]","n.外伤药",'n.外伤药|||adj.外伤的,创伤的','For a child the death of a pet can be traumatic.','对孩子来说，一只宠物的死亡可能会造成心理创伤。','Divorce can be traumatic for everyone involved.','离婚对所有相关的人都会造成痛苦。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cognate"]={"cognate","['kɒgneɪt]","['kɑɡnet]","adj.同源的(互有关系的)",'adj.同源的(互有关系的)|||n.同源物(钝齿)','Physics and astronomy are cognate sciences.','物理学和天文学是相关联的科学。','English, Dutch and German are cognate languages.','英语 、 荷兰语、德语是同语族的语言。'}

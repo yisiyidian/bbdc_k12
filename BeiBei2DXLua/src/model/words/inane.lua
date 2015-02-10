@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inane"]={"inane","[ɪ'neɪn]","[ɪ'nen]","adj.空虚的",'adj.空虚的,无意义的，愚蠢的','Living without dream or pursuance is a inane and meaningless thing.','没有梦想和追求的生活是空虚而且没有意义的。','An ambitious man wil never feel inane.','雄心壮志的人从不感觉空虚。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abode"]={"abode","[ə'bəʊd]","[ə'bod]","n.住处",'n.住处,住所，逗留|||等待|||动词abide的过去式与过去分词','The child abode with his grandparents for two years.','那个孩子和祖父母一起居住了两年.','Lovejoy, of no fixed abode, was charged with murder.','洛夫乔伊, 居无定所, 被控谋杀.'}

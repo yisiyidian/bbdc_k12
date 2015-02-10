@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lineal"]={"lineal","['lɪnɪəl]","['lɪnɪəl]","adj.直系的",'adj.直系的,嫡系的，直线的','First, relatively stable family types represented by those consisting of lineal family members of three generations.','.....','He claims that he is a lineal descendant of a famous military hero.','...'}

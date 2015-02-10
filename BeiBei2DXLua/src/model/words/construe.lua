@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["construe"]={"construe","[kən'struː]","[kən'stru]","v.解释",'v.解释,翻译|||vt.解释','He may construe the approach as a hostile act.','他也许会将这种做法理解为敌视行为。','What may seem helpful behavior to you can be construed as interference by others.','在你看来似乎是施助的行为在别人眼中可能就会被解读成一种干涉。'}

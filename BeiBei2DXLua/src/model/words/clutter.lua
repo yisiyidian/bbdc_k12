@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clutter"]={"clutter","['klʌtə]","['klʌtɚ]","vt.弄乱",'vt.弄乱,混乱|||n.杂乱','clutter in the attic.','顶楼一片混乱','His room is in a clutter so I have to tidy it up.','他的房间乱七八糟的，我不得不整理一下。'}

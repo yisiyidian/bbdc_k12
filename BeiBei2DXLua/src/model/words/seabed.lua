@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seabed"]={"seabed","['sibɛd]","[ 'si:bed ]","n.海底",'n.海底,海床','Earth movements in the past elevated great area of the seabed.','地球过去的运动使海底大片地区隆起。','There\'s a lot of creature on the seabed.','海床有许多生物。'}

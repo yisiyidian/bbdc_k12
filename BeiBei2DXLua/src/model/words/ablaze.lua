@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ablaze"]={"ablaze","[ə'bleɪz]","[ə'blez]","adj.着火的",'adj.着火的；闪耀的；激昂的|||adv.着火；闪耀','His face was ablaze with anger.','他满面怒容.','The palace was ablaze with lights.','那座宫殿灯火辉煌.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dyspeptic"]={"dyspeptic","[dɪs'peptɪk]","[ dis'peptik,-kəl ]","adj.消化不良的",'adj.消化不良的,胃弱的,患胃病的','If you\'re a dyspeptic person, you can\'t eat more pungent food.','如果你有胃病，那就尽量少吃辛辣的食物。','see the pictures read the pictures until you get dyspeptic','看图、读图，直到看得你消化不良'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["artist"]={"artist","['ɑːtɪst]","['ɑrtɪst]","n.艺术家",'n.艺术家,美术家,艺人','The vital spark in him makes him an artist.','他的生气勃勃的活力使他成为一个艺术家。','The artist showed me his canvases.','画家给我看了他的油画。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["upward"]={"upward","['ʌpwəd]","['ʌpwɚd]","adj.向上的",'adj.向上的,上升的|||adv.向上,上升','||Upward|| pressure from underlying magma domes the surface.','地下岩浆的向上推力使地面成圆顶形。','The production of their factory goes steadily upward.','他们工厂的生产稳步上升。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jaundice"]={"jaundice","['dʒɔːndɪs]","['dʒɔndɪs]","n.黄疸",'n.黄疸|||n.偏见,乖僻','Inflammation of the liver, caused by infectious or toxic agents and characterized by jaundice, fever, liver enlargement, and abdominal pain.','肝炎肝部发炎，由传染性或有毒性因素引起。症状为黄疸、发烧、肝部肿大和腹疼','Relating to or affected with jaundice.','与黄疸有关的或患有黄疸的'}

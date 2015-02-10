@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overtax"]={"overtax","[əʊvə'tæks]","['ovɚ'tæks]","v.课税过重",'v.课税过重,负担过度,使工作过度','Don\'t overtax yourself to learn syntax.','不要为了学习句法而让自己过于劳累。','A good coach has to make sure not overtax his star players.','一名优秀的教练要知道如何保证不让自己的明星球员体能负荷过重.'}

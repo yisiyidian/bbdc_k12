@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["beckon"]={"beckon","['bek(ə)n]","['bɛkən]","v.召唤",'v.召唤，(以点头或打手势）向……示意，吩咐，引诱，吸引','He beckoned to me from across the street.','他在马路对面向我招手致意。','She beckoned me to follow her.','她招手要我跟过去。'}

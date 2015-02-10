@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["projectile"]={"projectile","[prə(ʊ)'dʒektaɪl; -tɪl]","[prə'dʒɛktl]","n.发射体",'n.发射体,抛射物|||adj.发射的,投射的','It cut the water like a gigantic and keen projectile.','它象颗巨大锐利的子弹飞快地在水中穿行。','They tried to shield Johnson from the projectiles that were being thrown.','他们试图保护约翰逊免受投射物的袭击。'}

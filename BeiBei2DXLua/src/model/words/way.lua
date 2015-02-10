@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["way"]={"way","[weɪ]","[we]","n.道路",'n.方法,道路,方向,作风,(某)方面,程度,状态|||adv.非常,很多,很远|||adj.与路线的中间点相关的,路线的中间点','If the tree falls that way, it will destroy the house.','这棵树向那边倒下就会把那所房子压坏。','She showed them the way to do it.','她向他们示范做这件事的方法。'}

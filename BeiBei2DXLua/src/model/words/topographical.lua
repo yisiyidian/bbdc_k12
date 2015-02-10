@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["topographical"]={"topographical","[,tɑpə'græfɪkl]","[ ,tɔpə'ɡræfikəl ]","adj.地形学的",'adj.地形学的，地质的','||Topographical|| detail visible in daylight is printed in subdued colours.','白昼可见的地形起伏部采用色调柔和的颜色印刷.','What is the topographical feature in the area of Guilin?','桂林的地形是什么样的?'}

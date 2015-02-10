@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sinuous"]={"sinuous","['sɪnjʊəs]","['sɪnjʊəs]","adj.弯弯曲曲的",'adj.弯弯曲曲的,迂回的,乖僻的','Self-formed river channels tend to be sinuous.','自然形成的河道一般都是弯弯曲曲的。','The river wound its sinuous way across the plain.','这条河蜿蜒曲折地流过平原。'}

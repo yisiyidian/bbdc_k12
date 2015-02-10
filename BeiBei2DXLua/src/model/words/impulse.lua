@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impulse"]={"impulse","['ɪmpʌls]","['ɪmpʌls]","n.冲动",'n.冲动,驱动力,倾向,心血来潮|||vt.推动','On impulse, I picked up the phone and rang my sister in Australia.','我一时心血来潮，拿起话筒就给在澳大利亚的妹妹打了个电话。','We were seized by a sudden impulse to run.','我们身不由己突然想跑.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accuracy"]={"accuracy","['ækjʊrəsɪ]","['ækjərəsi]","n.准确(性)",'n.准确(性),精确度','He\'s a man of accuracy and strict method.','他是个精细而严谨的人。','||Accuracy|| is more important than speed in his new job.','对他的新工作，准确比速度更重要。'}

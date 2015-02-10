@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stout"]={"stout","[staʊt]","[staʊt]","n.烈啤酒",'n.烈啤酒|||adj.强壮的,稳重的,肥胖的','She\'s growing rather stout.','她有点发胖。','He became stout as he grew older.','随着年龄的增长，他发胖了。'}

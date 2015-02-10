@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["climate"]={"climate","['klaɪmət]","['klaɪmət]","n.气候",'n.气候,风气,气氛','The small city has the climate that is changeable in the extreme.','这个小城有极端变化莫测的天气。','I hope you will recover soon under this healthful climate.','我希望在这种有益健康的气候下，你会很快地康复起来。'}

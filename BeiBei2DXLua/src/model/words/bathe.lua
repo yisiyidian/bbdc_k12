@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bathe"]={"bathe","[beɪð]","[beð]","v.沐浴",'v.沐浴,用水洗，沉浸','You must not bathe here in the buff.','你不能光着身子在这里游泳。','You may bathe after supper.','你可以晚饭后洗澡。'}

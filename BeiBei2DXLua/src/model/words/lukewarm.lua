@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lukewarm"]={"lukewarm","['luːkwɔːm; luːk'wɔːm; lj-]","[,lʊk'wɔm]","adj.微温的",'adj.微温的,不热的','Indifferent or lukewarm especially in matters of religion.','淡漠的漠不关心或不热情的，尤指对宗教事务','Gave only lukewarm support to the incumbent candidate.','给在位的候选人不冷不热的支持'}

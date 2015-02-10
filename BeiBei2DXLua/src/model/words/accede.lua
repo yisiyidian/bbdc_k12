@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accede"]={"accede","[ək'siːd]","[ək'sid]","vi.同意",'vi.同意，就职，加入','Queen Victoria acceded to the throne in 1837.','维多利亚女王于1837年即位。','Will you accede to her request?','你会答应她的请求吗？'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mortgage"]={"mortgage","['mɔːgɪdʒ]","['mɔrɡɪdʒ]","n.&v.抵押",'n.&v.抵押','We\'re paying out 300 a month on our mortgage.','我们每 月要付300英镑抵押贷款.','We\'re having difficulty keeping up our mortgage payments.','我们难以继续支付分期偿还的抵押贷款.'}

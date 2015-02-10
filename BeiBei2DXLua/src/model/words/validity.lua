@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["validity"]={"validity","[və'lɪdɪtɪ]","[və'lɪdəti]","n.有效性",'n.有效性,正确性,正当','The belief that all religions are of equal validity.','冷淡主义认为所有宗教具有相同的正确性','The tests have been shown to be of dubious validity.','这些试验的有效性已显得令人怀疑.'}

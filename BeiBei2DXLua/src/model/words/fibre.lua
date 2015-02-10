@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fibre"]={"fibre","['faɪbə]","[ 'faibə ]","n.纤维",'n.纤维,纤维组织,织地','Scientists are recommending that people eat more fibre.','科学家建议人们多吃些纤维素。','I love my country with every fibre of my being.','我深爱我的祖国。'}

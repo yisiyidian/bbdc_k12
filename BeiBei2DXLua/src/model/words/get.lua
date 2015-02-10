@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["get"]={"get","[get]","[ɡɛt]","vt.获得",'vt.使得；获得；受到；变成|||n.生殖；幼兽|||vi.成为；变得；到达','I can\'t get over that shirt he was wearing.','我觉得他穿的那件衬衣真可笑。','One day we\'ll both get to see New York.','总有一天我俩都有机会看看纽约。'}

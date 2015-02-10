@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["voluble"]={"voluble","['vɒljʊb(ə)l]","['vɑljəbl]","adj.健谈的",'adj.健谈的，流畅的，易旋转的','He became very voluble and told her everything.','他变得滔滔不绝，把一切都告诉了她。','Bert is a voluble, gregarious man.','伯特是个能说会道、善于交际的人。'}

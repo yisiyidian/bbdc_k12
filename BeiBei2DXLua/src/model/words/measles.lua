@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["measles"]={"measles","['miːz(ə)lz]","['mizəlz]","n.麻疹",'n.麻疹','Several children have measles, and the others are bound to succumb (to it).','有几个孩子患了麻疹, 其他孩子也必然传染上.','The doctor diagnosed measles.','医生诊断出麻疹.'}

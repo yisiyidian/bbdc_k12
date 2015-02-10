@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["topography"]={"topography","[tə'pɒgrəfɪ]","[tə'pɑgrəfi]","n.地势",'n.地志,地形学,地势','The topography of the river\'s basin has changed significantly since the floods.','该河流域的地形自洪水以来发生了显著变化。','Anomalies due to polarization can be so much larger than those resulting from topography.','极化产生的异常会远远大于地形引起的异常。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coeval"]={"coeval","[kəʊ'iːv(ə)l]","[ko'ivl]","adj.同时代",'adj.同时代|||n.同时代的人','We are coeval, but we have a big gap.','我们是同龄人，但是我们之间的差距却很大。','Analysis has proved that this document is coeval with that one.','这份文件经分析证明与那一份是同一个时代的。'}

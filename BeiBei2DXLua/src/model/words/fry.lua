@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fry"]={"fry","[fraɪ]","[fraɪ]","vt.油炸",'n.(美)法式炸薯条|||vt.油煎,油炸，炸焦|||vi.油炸，烧焦','He can\'t spend too much time arguing with you about the matter. He had other fish to fry.','他不能用太的时间和你辩论这件事，他还有别的事要做。','The eggs are frying in the pan.','鸡蛋正在平底锅里煎着。'}

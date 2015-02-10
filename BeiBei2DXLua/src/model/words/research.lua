@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["research"]={"research","[rɪ'sɜːtʃ; 'riːsɜːtʃ]","['risɝtʃ]","n.调查",'n.调查,研究|||vt.&vi.调查,研究','The mission of a university is teaching and research.','大学的任务是教学和科研。','The book was the result of ten years of assiduous research.','那本书是十年苦心钻研的成果。'}

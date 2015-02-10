@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inquiry"]={"inquiry","[ɪn'kwaɪrɪ]","[ɪn'kwaɪri; 'ɪn,kwaɪri; 'ɪnkwəri; 'ɪŋkwaɪri]","n.打听",'n.打听,询问,调查,查问|||=enquiry(英)','We made an application to the court for an inquiry.','我们曾请求法院调查。','In response to your inquiry...','兹答覆您的询问...'}

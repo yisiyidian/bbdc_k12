@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["millimetre"]={"millimetre","['mili,mi:tə]","[ 'mili,mi:tə ]","n.毫米",'n.毫米|||=millimeter(美)','The silicon chips are less than a millimetre thick.','这些硅片厚度不足一毫米。','One second of arc movement is one thirtieth of a millimetre.','一弧秒的移动是一毫米的三十分之一.'}

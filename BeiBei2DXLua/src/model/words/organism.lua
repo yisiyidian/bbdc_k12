@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["organism"]={"organism","['ɔːg(ə)nɪz(ə)m]","['ɔrɡənɪzəm]","n.生物体",'n.生物体,有机体','An aborted organism.','流产的生物体','The army is an extremely complex organism.','军队是极其复杂的组织。'}

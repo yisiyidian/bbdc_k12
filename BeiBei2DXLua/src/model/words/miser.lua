@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["miser"]={"miser","['maɪzə]","['maɪzɚ]","n.守财奴",'n.守财奴,吝啬鬼','Bless her from marrying a miser.','上天保佑她不要和一个吝啬鬼结婚。','He has grown into an old miser.','他已经变成老守财奴了.'}

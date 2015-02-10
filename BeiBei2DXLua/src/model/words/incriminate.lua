@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incriminate"]={"incriminate","[ɪn'krɪmɪneɪt]","[ɪn'krɪmɪnet]","v.连累",'v.连累,牵连|||vt.牵连,控告','he refused to answer questions in order not to incriminate himself.','他们害怕受牵连，一句话也不肯多说。','He had been forced to incriminate himself in cross-examinations.','他在盘问中被迫承认涉案。'}

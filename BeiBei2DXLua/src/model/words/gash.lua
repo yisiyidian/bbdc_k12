@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gash"]={"gash","[gæʃ]","[ɡæʃ]","n.砍得很深的伤口",'n.砍得很深的伤口,很深的裂缝|||v.使其负深伤,砍入很深','Sap flowed from the gash in the tree.','树液从树的切口处涌出','There was a gash of blood from the wound reopening.','伤口再次裂开时血流如注。'}

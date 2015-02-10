@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eat"]={"eat","[iːt]","[it]","vt.吃",'vt.吃,消耗|||vi.吃,侵蚀|||n.食物','The children would eat themselves sick on chocolate if I let them.','我要是让孩子由著性儿吃巧克力，他们会吃出病来。','Paying for that new carpet has eaten into my savings.','付新地毯的款用去了我的一部分储蓄。'}

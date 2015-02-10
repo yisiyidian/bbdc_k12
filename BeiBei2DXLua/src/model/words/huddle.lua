@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["huddle"]={"huddle","['hʌd(ə)l]","['hʌdl]","n.杂乱一团",'n.杂乱一团,混乱,拥挤|||v.推挤,乱堆,草率了事','He huddled the children into the automobile.','他急急忙忙地把孩子们推进汽车。','The boys huddled together in the cave to keep warm.','男孩子们在山洞里挤成一团取暖。'}

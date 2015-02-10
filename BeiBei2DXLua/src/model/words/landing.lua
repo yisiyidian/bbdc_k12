@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["landing"]={"landing","['lændɪŋ]","['lændɪŋ]","n.着陆",'n.着陆，登陆,楼梯平台|||动词land的现在分词','The plane did a few stunts before landing.','飞机着陆前做了一些特技.','When are we landing?','我们什么时候着陆?'}

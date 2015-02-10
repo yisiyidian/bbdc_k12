@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["warrant"]={"warrant","['wɒr(ə)nt]","['wɔrənt]","vt.保证",'n.正当理由,根据,委任状,准许|||vt.保证,辩解,担保,授权','He almost gives his failings as a warrant for his greatness.','他几乎把他的失败当成他伟大的根据。','Nothing can warrant such severe punishment.','这样严厉的惩罚毫无根据。'}

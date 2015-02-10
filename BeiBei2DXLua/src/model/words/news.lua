@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["news"]={"news","[njuːz]","[nuz]","n.新闻",'n.新闻,消息','Have you read the news about the election?','你看了关于选举的新闻了吗？','I haven\'t heard any news from my son lately.','我最近没听到我儿子的任何音讯。'}

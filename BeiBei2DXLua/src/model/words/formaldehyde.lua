@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["formaldehyde"]={"formaldehyde","[fɔː'mældɪhaɪd]","[fɔr'mældɪhaɪd]","n.甲醛",'n.甲醛，福尔马林','Once a specimen is collected in the field, the whole body is fixed in formalin, a mixture of formaldehyde and water.','这一领域的标本一旦被收集，它整个身体都要浸泡在福尔马林溶液（甲醛和水的混合物）中。','The hospital smelled of formaldehyde and ether .','医院里充满甲醛和乙醚的味道。'}

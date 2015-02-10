@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hypothetical"]={"hypothetical","[,haɪpə'θetɪk(ə)l]","[,haɪpə'θɛtɪkl]","adj.假设的",'adj.假设的,假定的,爱猜想的','Well, at present we won\'t speculate on hypotheticals.','嗯，目前我们不想去推测那些假想的东西。','This is a purely hypothetical situation.','这纯粹是一种假设的情景。'}

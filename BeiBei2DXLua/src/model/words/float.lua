@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["float"]={"float","[fləʊt]","[flot]","n.漂流物",'n.漂流物,装有轮子的展台或平板车,企业的日常零钱|||vt.使漂浮,提出,开办新公司,洽谈|||vi.漂浮,游荡,飘','The logs floated down the river.','木头在河上放流。','Pay attention to your float!','注意你的浮子！'}

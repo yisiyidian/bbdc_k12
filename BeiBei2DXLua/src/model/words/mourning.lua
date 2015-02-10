@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mourning"]={"mourning","['mɔːnɪŋ]","['mɔrnɪŋ]","n.悲痛",'n.悲痛，孝服，服丧期','The bereaved is/are still in mourning.','丧亲者仍在带孝.','The governor decreed a day of mourning.','地方长官发布哀悼一日的命令.'}

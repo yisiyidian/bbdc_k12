@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["none"]={"none","[nʌn]","[nʌn]","pron.没有人",'pron.没有人，没有一人；没有一个；没有一部分，没有一点|||adv.根本不；无法，绝不','I wanted some string but there was none in the house.','我需要一些绳子，但家里一根也没有。','The choir sang sweetly, and none more so than the Welsh boy.','唱诗班唱得很悦耳，尤其是没人比得上那个威尔士男孩儿。'}

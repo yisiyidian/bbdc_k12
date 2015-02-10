@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gruesome"]={"gruesome","['gruːs(ə)m]","[ 'ɡru:səm ]","adj.可怕的",'adj.可怕的,令人毛骨悚然的,阴森的','The folktale he told to me is gruesome one.','他给我讲了个令人毛骨悚然的民间故事。','The gruesome story I told makes him unable to sleep alone.','我讲的那个毛骨悚然的故事让他不敢一个人睡。'}

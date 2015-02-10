@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["through"]={"through","[θruː]","[θru]","prep.穿过",'adv.穿越,完全|||prep.经过,穿过,凭借|||adj.完成的,完结的;贯穿的,直通的','Ask to be put through to me personally.','你告诉接电话的人，要求和我本人通电话','Don\'t tell me how it ends--I haven\'t read all the way through yet.','先别告诉我书的结尾－－我还没看完呢。'}

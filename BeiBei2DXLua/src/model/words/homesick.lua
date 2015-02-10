@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["homesick"]={"homesick","['həʊmsɪk]","['homsɪk]","adj.想家的",'adj.想家的','He left his job largely because he was homesick.','他辞职不干主要是因为他想家。','Now I know where to go when I feel homesick.','现在我知道想家的时候该去哪儿了。'}

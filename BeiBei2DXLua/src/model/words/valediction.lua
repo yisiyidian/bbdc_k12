@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["valediction"]={"valediction","[,vælɪ'dɪkʃən]","[,vælɪ'dɪkʃən]","n.告别",'n.告别，告别演说,告别词','it\'s my valediction in my collage','这是我的大学毕业演说','This is the valediction speech of Bakeham.','告别'}

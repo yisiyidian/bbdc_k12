@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hilarity"]={"hilarity","[hɪ'lærɪtɪ]","[hɪ'lærəti]","n.欢闹的心情",'n.欢闹的心情,欢喜,高兴','The company doubled up with hilarity','大伙儿乐得弯下腰来。','The announcement was greeted with much hilarity and mirth.','这一项宣布引起了热烈的欢呼声。'}

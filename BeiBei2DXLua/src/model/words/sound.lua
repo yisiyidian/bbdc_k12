@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sound"]={"sound","[saʊnd]","[saʊnd]","n.声音渐增",'vt.听（诊）；测量，测…深；使发声；试探；宣告|||n.声音，语音；噪音；海峡；吵闹；听力范围；[医]探条|||adj.健全的，健康的；合理的；可靠的；有效彻底的|||adv.彻底地，充分地|||vi.听起来；发出声音；回响；测深','He\'s always sounding off about how he would manage the firm.','他总是大言不惭地说他能把公司经营好。','I caught a curious sound in the neighboring room.','我听到隔壁房间里有奇怪的响声。'}

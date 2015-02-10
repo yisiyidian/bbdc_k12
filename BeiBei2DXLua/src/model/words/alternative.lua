@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alternative"]={"alternative","[ɔːl'tɜːnətɪv; ɒl-]","[ɔl'tɝnətɪv]","adj.两者择一的",'adj.两者择一的;供选择的;非主流的|||n.替换物,取舍','Disillusioned voters want an alternative to the two main parties.','失望的选民需要一个党派以取代这两个大党.','There appears to be no alternative.','似乎没有别的选择。'}

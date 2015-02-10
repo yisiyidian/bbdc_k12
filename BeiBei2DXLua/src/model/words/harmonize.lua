@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["harmonize"]={"harmonize","['hɑːmənaɪz]","['hɑrmənaɪz]","v.协调",'v.协调，使和谐，用和声唱','Do these colours  harmonize with each other?','这些颜色配在一起协调吗?','That group harmonizes well.','那一组用和声演唱得很出色。'}

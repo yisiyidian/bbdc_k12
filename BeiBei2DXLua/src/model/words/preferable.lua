@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["preferable"]={"preferable","['pref(ə)rəb(ə)l]","['prɛfrəbl]","adj.更好的",'adj.更好的,更合意的','He finds country life preferable to that of living in the city.','他感到在乡村生活比在城市更好。','He finds country life preferable to living in the city.','他感到在乡村生活比在城市生活要好些。'}

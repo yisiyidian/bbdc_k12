@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sherbet"]={"sherbet","['ʃɜːbət]","['ʃɝbət]","n.冰果子露",'n.冰果子露，果汁牛奶冻|||=sherbert','Would you like to have some sherbet for desert?','你想不想要点果汁牛奶冻当甜点？','||Sherbet|| is made with fruits and ice.','冰冻果子露是用水果和冰做的。'}

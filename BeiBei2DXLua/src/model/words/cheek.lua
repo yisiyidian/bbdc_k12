@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cheek"]={"cheek","[tʃiːk]","[tʃik]","n.脸颊",'n.脸颊，脸蛋；无礼而放肆的行为，厚颜；半边屁股；两侧相对的物体|||vt.对…无礼地说话','A bullet grazed his cheek.','子弹擦伤了他的面颊.','A tear rolled down his cheek.','一滴泪珠沿著他的面颊流下来.'}

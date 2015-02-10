@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scholarship"]={"scholarship","['skɒləʃɪp]","['skɑlɚʃɪp]","n.奖学金",'n.奖学金,学问,学识','She\'s aiming at a scholarship.','她争取获得奖学金.','He combines creative imagination and true scholarship.','他同时具有创造性想象力和真正的治学谨严学风。'}

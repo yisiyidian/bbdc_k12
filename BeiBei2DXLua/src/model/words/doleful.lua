@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["doleful"]={"doleful","['dəʊlfʊl; -f(ə)l]","['dolfl]","adj.悲哀的",'adj.悲哀的,寂寞的,阴沉的','He always shows a doleful expression.','他总是露出忧郁的表情。','I saw her doleful face.','我看到她愁眉苦脸。'}

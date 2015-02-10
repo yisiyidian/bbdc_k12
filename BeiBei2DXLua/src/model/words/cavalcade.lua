@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cavalcade"]={"cavalcade","[,kæv(ə)l'keɪd; 'kæv(ə)lkeɪd]","['kævl'ked]","n.行列",'n.行列,骑马行列','A cavalcade processed through the town.','马车队列队从城里经过。','The cavalcade drew together in silence.','马队在静默中靠拢在一起。'}

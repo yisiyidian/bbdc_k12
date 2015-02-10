@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["board"]={"board","[bɔːd]","[bɔrd]","n.木板",'n.木板,甲板,董事会|||n.伙食;舞台,演员的职业;船舷|||vt.登(飞机、车、船等);有偿提供食宿;用木板覆盖|||vi.搭伙','Mary is a workers\' representative on the ||Board||.','玛丽是理事会的工人代表。','I\'m boarding with a friend.','我在一友人处寄膳宿。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["susceptible"]={"susceptible","[sə'septɪb(ə)l]","[sə'sɛptəbl]","n.易受影响者",'n.易受影响者,易受感染者|||adj.易受影响的,易感动的,容许','The plant is not susceptible to disease.','这种植物不容易受病害侵袭。','I am a sensitive and susceptible man.','我是个敏感而且易受感动的男人。'}

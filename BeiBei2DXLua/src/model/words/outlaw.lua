@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outlaw"]={"outlaw","['aʊtlɔː]","['aʊtlɔ]","n.被剥夺法律保护的人",'n.被剥夺法律保护的人,罪犯|||v.使...失去法律保护,将...逐出社会,宣告非法','He acted a noble outlaw in the play.','在这部戏里他扮演一个高尚逃犯。','He was accused of giving shelter to a hunted outlaw.','他被指控窝藏逃犯。'}

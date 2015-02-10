@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["degrade"]={"degrade","[dɪ'greɪd]","[dɪ'ɡred]","v.降格",'v.降格','It was very ||degrading|| to be punished in front of the whole class.','在全班同学面前受罚是非常丢脸的。','You should not degrade yourself by telling such a lie.','你不该说这样的谎话降低自己的人格。'}

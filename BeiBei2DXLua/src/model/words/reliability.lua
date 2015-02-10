@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reliability"]={"reliability","[rɪ,laɪə'bɪlətɪ]","[rɪ,laɪə'bɪləti]","n.可靠性",'n.可靠性','His failure to appear raises serious doubts as to his reliability.','他未露面实在使人怀疑他是否可靠.','We mustn\'t presume too much upon the reliability of such sources.','我们不应过分指望这类消息来源的可靠性.'}

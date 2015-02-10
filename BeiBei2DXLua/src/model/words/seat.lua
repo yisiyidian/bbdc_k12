@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seat"]={"seat","[siːt]","[sit]","n.位子",'n.位子,所在地,中心|||vi.坐|||vt.使坐下,可容纳','I twisted round in my seat to speak to her.','我坐在位子上转过身来跟她说话。','In the US, Washington is the seat of government and New York City is the chief seat of commerce.','在美国，华盛顿是政府所在地，纽约是主要的商业中心。'}

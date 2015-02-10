@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tepid"]={"tepid","['tepɪd]","['tɛpɪd]","adj.微温的",'adj.微温的，不热心的','He was a tepid sort of fish.','他是个不冷不热的家伙。','The play was greeted with tepid applause.','这台戏只得到了零落的掌声。'}

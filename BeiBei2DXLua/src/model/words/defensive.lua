@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["defensive"]={"defensive","[dɪ'fensɪv]","[dɪ'fɛnsɪv]","adj.防卫的",'adj.防卫的,防备用的,辩护的|||n.守势,防卫姿势,防卫物','Our troops took up defensive positions on high ground overlooking the river.','我部队在临河高地上占据了防御阵地.','When asked to explain her behavior, she gave a very defensive answer.','当问她为什么要这样做时，她极力为自己辩护。'}

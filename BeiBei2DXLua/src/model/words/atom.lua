@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["atom"]={"atom","['ætəm]","['ætəm]","n.原子",'n.原子','An atom bomb would destroy a city.','一颗原子弹可以摧毁一座城市。','Scientists have unlocked the secret of the atom.','科学家已经揭开了原子的秘密。'}

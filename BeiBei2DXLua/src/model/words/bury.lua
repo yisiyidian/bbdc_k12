@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bury"]={"bury","['berɪ]","['bɛri]","vt.埋葬",'vt.埋葬，葬；为…举行葬礼；隐藏，埋藏，遮盖，掩蔽；专心致志于，埋头于，沉溺于','He walked slowly, his hands ||buried|| in his pockets.','他走得很慢，两手插在衣袋里。','He was sitting with his head ||buried|| in a book.','他坐着埋头看书。'}

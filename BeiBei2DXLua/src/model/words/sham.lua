@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sham"]={"sham","[ʃæm]","[ʃæm]","n.假",'n.假,膺品,骗子|||adj.假的,伪造的|||v.假装,学样子','She claims to know all about computers but really she\'s a sham.','她自称精通计算机，其实她是假充内行。','He\'s only shamming.','他只是假装而已。'}

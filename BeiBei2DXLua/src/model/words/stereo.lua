@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stereo"]={"stereo","['sterɪəʊ; 'stɪərɪəʊ]","['stɛrɪo]","adj.有立体视觉的",'adj.有立体视觉的,立体声的|||n.固定形象,立体声','We\'re being deafened by next door\'s stereo.','隔壁的立体声音响要把我们耳朵震聋.','I\'d like a new stereo, but I haven\'t got the wherewithal (to buy it).','我倒是想要一套新的立体声音响器材, 可是没这笔钱（买）.'}

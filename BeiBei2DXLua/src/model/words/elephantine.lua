@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["elephantine"]={"elephantine","[elɪ'fæntaɪn]","[ ,eli'fæntain, -tin ]","adj.象的",'adj.象的,巨大的,粗笨的','Their daughter is quite plump but their son is positively elephantine.','他们的女儿很胖; 可是儿子呢, 简直像大象.','...elephantine clumsiness.','...庞大笨拙感。'}

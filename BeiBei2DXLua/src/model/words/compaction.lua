@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compaction"]={"compaction","[kəm'pækʃən]","[kəm'pækʃən]","n.压缩",'n.压缩','Dynamic compaction is one of important methods for ground treatment.','强夯法是地基处理的重要方法之一。。','||Compaction|| makes data more simply to pass.','压缩让数据更容易传送。'}

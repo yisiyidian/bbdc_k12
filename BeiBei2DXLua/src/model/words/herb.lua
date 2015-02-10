@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["herb"]={"herb","[hɜːb]","[ɝb]","n.药草",'n.药草,香草','He alighted on a rare medical herb.','他偶然找到了一种稀有的草药。','The essence drawn out from this medicinal herb is good for high blood pressure.','从这种药草提炼出来的精华对治疗高血压有效。'}

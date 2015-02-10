@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extemporize"]={"extemporize","[ɪk'stempəraɪz; ek-]","[ɪk'stɛmpəraɪz]","v.即席演说",'v.即席演说,即兴演奏,当场作成|||=extemporise（英）','He had to extemporize because he had forgotten to bring his notes.','他因为忘了带讲稿, 只好即席发言.','extemporized an acceptance speech.','即兴致贺辞'}

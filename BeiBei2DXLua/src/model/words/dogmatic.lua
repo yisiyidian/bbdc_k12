@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dogmatic"]={"dogmatic","[dɒg'mætɪk]","[dɔɡ'mætɪk]","adj.教条的",'adj.教条的,武断的','Many writers at this time held rigidly dogmatic views.','这时期有很多作家固执己见。','The regime is dogmatic, and no one dares to express personal opinions.','该政权很专制，没有人敢表达个人意见。'}

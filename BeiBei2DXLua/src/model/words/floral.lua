@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["floral"]={"floral","['flɔːr(ə)l; 'flɒ-]","['flɔrəl]","adj.花似的",'adj.花似的,花的,植物的|||n.以花占主要的图片或设计','The actress received numerous floral tributes.','那位女演员接受了许多献花。','He choose a nice material with a floral pattern for the curtain.','他选了块很好的带有花卉图案的料子做窗帘。'}

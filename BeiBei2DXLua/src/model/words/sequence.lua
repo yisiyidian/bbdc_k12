@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sequence"]={"sequence","['siːkw(ə)ns]","['sikwəns]","n.序列",'n.序列,一系列,顺序,一组镜头|||vt.安排顺序','Could we run that sequence through again?','咱们再把那一段重放一遍好吗?','Put the mixed historical facts in sequence.','将混淆的历史事件按顺序排列。'}

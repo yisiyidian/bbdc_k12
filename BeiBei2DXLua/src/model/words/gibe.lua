@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gibe"]={"gibe","[dʒaib]","[ dʒaib ]","v.&n.嘲笑",'v.&n.嘲笑,讥笑|||vi.嘲笑','I felt sure he was seeking for some gibe.','我敢说他正在想些什么挖苦的话。','It’s impolite to gibe at a foreign student’s Chinese.','嘲笑外国学生的中文是不礼貌的。'}

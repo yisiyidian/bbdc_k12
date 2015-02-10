@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adventurer"]={"adventurer","[əd'ventʃ(ə)rə]","[əd'vɛntʃərɚ]","n.冒险家",'n.冒险家,投机者','an adventurer who engages in a private military action in a foreign country','军事冒险家在国外从事秘密军事行动的冒险者','a ruthless speculator or adventurer','冷酷的投机者或冒险家'}

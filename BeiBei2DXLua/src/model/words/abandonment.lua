@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abandonment"]={"abandonment","[ə'bændənm(ə)nt]","[ə'bændənmənt]","n.放弃",'n.放弃,自暴自弃,放纵','Her abandonment of the idea upsets him.','她放弃了这一意见，他很不高兴。','In its most general sense, corruption means the perversion or abandonment','就其最一般的意义上说，舞弊就是堕落，就是背离准则'}

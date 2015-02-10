@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["taciturn"]={"taciturn","['tæsɪtɜːn]","['tæsɪtɝn]","adj.沉默寡言的",'adj.沉默寡言的','He reverted to his old taciturn ways.','他又恢复了他的静默寡言。','The ant is the most industrious animal; however, it is the most taciturn one.','没有任何动物比蚂蚁更勤奋，然而它却最沉默寡言。'}

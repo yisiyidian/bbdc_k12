@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stroll"]={"stroll","[strəʊl]","[strol]","vt.&vi.漫步",'n.闲逛,漫步|||vt.&vi.闲逛,漫步','A stroll round the garden hardly qualifies as exercise!','在花园转转算不上锻炼!','My father sometimes goes out for a stroll with a stick in his hand.','父亲有时候带着手杖出去散步。'}

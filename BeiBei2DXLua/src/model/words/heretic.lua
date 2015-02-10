@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heretic"]={"heretic","['herɪtɪk]","['hɛrətɪk]","n.异教徒",'n.异教徒|||adj.异端的，异教的（=heretical)','They were denounced as heretics and burned at the stake.','他们被公开谴责为异教徒并被处以火刑。','The heretic in the hands of the Holy Office is safe from violence, is assured of a fair trial.','只有交到神圣宗教法庭的异端分子才能不受暴力的袭击，才能得到公正的审判。'}

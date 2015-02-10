@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stunt"]={"stunt","[stʌnt]","[stʌnt]","n.特技",'n.特技,阻碍成长|||vt.阻碍成长,表演特技','Lack of food may stunt the growth.','缺乏食物可能妨碍发育。','A stunt man needs to have a good guardian angel.','当特技替身演员的得有个守护天使来保佑。'}

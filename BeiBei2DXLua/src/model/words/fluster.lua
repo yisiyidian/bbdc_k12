@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fluster"]={"fluster","['flʌstə]","['flʌstɚ]","n.慌乱",'n.慌乱,狼狈,混乱|||v.使酩醉,慌张,混乱','I got in an awful fluster at some traffic lights, so I failed my driving test.','我给一些交通信号弄得忙乱紧张，因此未能通过驾驶考试。','The honking of horns flustered the boy.','汽车喇叭的叫声使男孩感到慌乱。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fruition"]={"fruition","[frʊ'ɪʃ(ə)n]","[fru'ɪʃən]","n.结果",'n.结果,成就,实现','At last his efforts were coming to fruition.','他的努力终于逐渐取得了成效。','Dreams come to fruition.','梦想成真。'}

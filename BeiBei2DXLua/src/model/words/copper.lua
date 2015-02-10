@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["copper"]={"copper","['kɒpə]","['kɑpɚ]","adj.(紫)铜色的",'adj.(紫)铜色的,铜(制)的|||n.铜,铜币,铜制品','||Copper|| conducts electricity better than iron does.','铜的导电性比铁强。','||Copper|| and gold are both metals.','铜和金都是金属。'}

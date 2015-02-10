@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unquestioning"]={"unquestioning","[ʌn'kwestʃ(ə)nɪŋ]","[ʌn'kwɛstʃənɪŋ]","adj.无异议的(不提出疑问的",'adj.无异议的(不提出疑问的,不犹豫的)','The commanding officer expected unquestioning obedience from his men.','指挥官要下属绝对服从.','Soldiers are expected to follow their leader with unquestioning loyalty.','人们期待士兵以毫不犹豫的忠诚跟随其将领。'}

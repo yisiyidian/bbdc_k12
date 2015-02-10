@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prevailing"]={"prevailing","[prɪ'veɪlɪŋ]","[pri'velɪŋ]","adj.盛行很广的",'adj.盛行很广的,一般的,最普通的|||vbl.获胜,盛行,流行','She wears a fashionable hair style prevailing in the city.','她的发型是这个城市流行的款式.','Product buy- back is a prevailing payment term at present.','产品回购是目前流行的一种付款方式。'}

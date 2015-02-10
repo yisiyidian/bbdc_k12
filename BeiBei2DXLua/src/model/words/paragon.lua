@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["paragon"]={"paragon","['pærəg(ə)n]","['pærəɡɑn]","n.模范",'n.模范,典型|||vt.与...比较，比得上','She is an absolute paragon of virtue.','她是美德的最佳典范。','Her uncle is a labor paragon.','她的叔叔是一名劳动模范。'}

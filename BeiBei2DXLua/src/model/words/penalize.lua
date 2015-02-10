@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["penalize"]={"penalize","['pi:nəlaɪz]","['pinəlaɪz]","v.处罚",'v.处刑,宣告有罪,处罚，使不利','People who drive when they are drunk should be heavily penalized.','对酒醉开车者应予重罚.','The new law penalizes the poorest members of society.','新法规对社会中最贫困者不 利.'}

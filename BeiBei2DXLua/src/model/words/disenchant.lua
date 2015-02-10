@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disenchant"]={"disenchant","[dɪsɪn'tʃɑːnt; dɪsen-]","[,dɪsɪn'tʃænt]","vt.唤醒",'vt.唤醒，使不再着迷,使不抱幻想','Her arrogance has disenchanted many of her former admirers.','她为人高傲, 追求过她的许多人都已不再迷恋她了.','The fact finally disenchant him from a daydream of getting rich.','最终的现实将他从发财梦中（唤醒，使不抱幻想）。'}

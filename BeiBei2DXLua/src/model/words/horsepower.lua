@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["horsepower"]={"horsepower","['hɔːspaʊə]","['hɔrs'paʊɚ]","n.马力(功率单位)",'n.马力(功率单位)','The worshiper thinks that the worst is the insufficient horsepower.','崇拜者认为最坏的事是马力不足.','The engine puts out thirty horsepower.','这台发动机可产生30马力.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["murky"]={"murky","['mɜːkɪ]","['mɝki]","adj.黑暗的",'adj.黑暗的,朦胧的，烟雾弥漫的，含糊的，隐晦的','She threw it into the river\'s murky depths.','她把它扔进了混浊的河水深处.','She had a decidedly murky past.','她的历史背景令人捉摸不透.'}

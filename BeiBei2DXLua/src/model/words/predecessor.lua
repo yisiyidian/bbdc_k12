@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["predecessor"]={"predecessor","['priːdɪsesə]","['prɛdəsɛsɚ]","n.前辈",'n.前辈,前任,原有事物','He undid most of the good work of his predecessor.','他毁掉了前任大部分的业绩。','Our new doctor is much younger than his predecessor.','我们新来的医生比他的前任年轻许多。'}

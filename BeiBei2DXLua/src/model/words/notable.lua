@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["notable"]={"notable","['nəʊtəb(ə)l]","['notəbl]","adj.显著的",'adj.显著的,著名的|||n.名人','He was a notable lawyer.','他是一名著名的律师。','His achievement is very notable.','他的成就是非常显著的.'}

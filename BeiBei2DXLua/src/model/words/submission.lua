@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["submission"]={"submission","[səb'mɪʃ(ə)n]","[səb'mɪʃən]","n.服从",'n.服从,柔和,提交','They tried to starve him into submission.','他们试图用饥饿来使他就范。','In my submission, the witness is lying.','本人认为证人所言不实'}

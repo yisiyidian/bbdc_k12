@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["idealize"]={"idealize","[aɪ'diə'laɪz]","[ ai'diəlaiz ]","v.(使)理想化",'v.(使)理想化','He tends to idealize his life in the army.','他总想使自己在军队里的生活理想化。','People idealize the past.','人们总是把过去理想化。'}

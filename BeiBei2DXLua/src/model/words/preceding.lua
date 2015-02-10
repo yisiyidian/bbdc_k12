@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["preceding"]={"preceding","[prɪ'siːdɪŋ]","['prisidɪŋ]","adj.在前的",'adj.在前的,在先的','Each generation surpasses the preceding one.','一代更比一代强.','His testimony contradicted that of the preceding witness.','他的证词和前一位的互相矛盾.'}

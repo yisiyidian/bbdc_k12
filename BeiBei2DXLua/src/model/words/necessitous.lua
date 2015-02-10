@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["necessitous"]={"necessitous","[nɪ'sesɪtəs]","[nə'sɛsɪtəs]","adj.贫困的",'adj.贫困的,急需的','The bishop planned to visit necessitous areas of the city.','主教打算走访城市里的贫困地区.','Food and clothes are necessitous for people live in poverty.','食物和衣物对贫困的人是急需的。'}

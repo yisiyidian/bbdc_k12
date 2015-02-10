@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scholastic"]={"scholastic","[skə'læstɪk]","[skə'læstɪk]","adj.学术的",'adj.学术的,学习的|||n.经院哲学家','English scholastic philosopher who rejected the reality of universal concepts.','奥卡姆, 威廉1285？－1349？英国经院派哲学家, 反对宇宙概念的真实性','He is unfitted for scholastic life.','他不适於学者生涯。'}

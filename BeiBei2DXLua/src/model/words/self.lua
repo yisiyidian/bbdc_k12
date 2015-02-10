@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["self"]={"self","[self]","[sɛlf]","n.自我",'n.自我,自己,本身','Self do, self have.','【谚】自作自受。','She used to be a great player, but now she\'s only a shadow of her former self.','她以前是个健将, 现在已不及当年了.'}

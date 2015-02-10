@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["firewood"]={"firewood","['faɪəwʊd]","['faɪɚwʊd]","n.火柴(薪)",'n.火柴(薪)','They eked out their coal by collecting firewood.','他们拣拾木柴以补充煤的不足.','The firewood was cut and bundled (together).','木柴已劈好并捆在一起了.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hubris"]={"hubris","['hjuːbrɪs]","[ 'hju:bris ]","n.傲慢",'n.傲慢,骄傲','History warns against such hubris.','历史告诉他们不能盲目乐观。','Among bankers I meet there is a lot more hubris than humility.','在我所遇到的银行家中，自大者比谦逊者多得多。'}

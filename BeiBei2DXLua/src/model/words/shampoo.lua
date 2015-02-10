@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shampoo"]={"shampoo","[ʃæm'puː]","[ʃæm'pu]","n.洗发剂",'n.洗发剂，洗涤剂，洗头|||vt.洗（头发，地毯等）','A shampoo, please.','请给我洗一洗头。','This shampoo will cure your dandruff.','这种洗发水可除掉头皮屑.'}

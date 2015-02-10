@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["culminate"]={"culminate","['kʌlmɪneɪt]","['kʌlmɪnet]","v.达到顶点或高潮",'v.达到顶点或高潮,以...告终|||vi.达到顶点|||vt.使达高潮,使结束','Everyone feared that the boundary dispute between these two countries would culminate in a war.','人人都担心，这两国间的边境争端将以一场战争告终。','Her career culminated in her appointment as director.','她一生事业的顶峰是当上董事。'}

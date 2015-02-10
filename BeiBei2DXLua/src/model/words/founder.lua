@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["founder"]={"founder","['faʊndə(r)]","['faʊndɚ]","n.创立者",'n.创立者,建立者|||v.摔倒,失败，沉没，弄跛','Jesus was the founder of the Christian religion.','耶稣是基督教的创始人。','Who is the founder of the scientific socialism?','谁是科学社会主义的奠基人？'}

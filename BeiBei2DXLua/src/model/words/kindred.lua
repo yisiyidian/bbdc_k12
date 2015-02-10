@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kindred"]={"kindred","['kɪndrɪd]","['kɪndrəd]","n.家族",'n.家族,相似,亲戚关系|||adj.同族的,同类的,血缘的','English and Dutch are kindred languages.','英语和荷兰语是同源的语言。','His kindred all live together in a town.','他的亲戚都在一个小镇里一起生活。'}

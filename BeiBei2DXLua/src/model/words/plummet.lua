@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plummet"]={"plummet","['plʌmɪt]","['plʌmɪt]","vi.垂直落下",'n.铅锤,铅垂线|||vi.垂直落下,暴跌','The jet burst into flames and plummeted to the ground.','这架喷气式飞机突然着火，急速坠地。','The news of plummeting stock prices dismayed speculators.','股票价格骤然下跌的消息使股民大为失望。'}

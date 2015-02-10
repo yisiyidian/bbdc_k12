@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hollow"]={"hollow","['hɒləʊ]","['hɑlo]","n.洞",'n.洞,窟窿,山谷|||adj.空的,虚伪的,空腹的|||vt.形成空洞,挖空|||vi.形成空洞|||adv.有闷哑声,完全地','His protests on human rights sound hollow.','他就人权问题提出的抗议听来很空洞。','This tree looks high and strong but actually its trunk is hollow.','这棵树看起来又高又壮，实际上树干是空的。'}

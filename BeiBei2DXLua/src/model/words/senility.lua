@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["senility"]={"senility","[sɪ'nɪlɪtɪ]","[sɛ'nɪləti]","n.高龄",'n.高龄,老迈','The old man was showing unmistakable signs of senility.','老人已老态毕现。','he devoutly believed that the spring can resist senility and keep eteranl life.','他虔诚地相信这泉水能够阻止衰老并且永葆年轻。'}

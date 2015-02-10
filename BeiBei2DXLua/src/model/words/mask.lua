@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mask"]={"mask","[mɑːsk]","[mæsk]","n.假面具",'n.口罩,假面具,掩饰,面膜|||vt.&vi.戴面具,掩饰,化装|||[计算机]掩码','Her smile masked true feelings.','她的微笑掩饰了她的感情。','The mask fitted tightly over his face.','他用面具把脸蒙得严严的.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["awful"]={"awful","['ɔːfʊl]","['ɔfl]","adj.可怕的",'adj.可怕的,畏惧的,充满敬畏的,艰难的|||adv.极其','He is an awful person','他是一个很糟糕的人','It would be awful if he found out the truth.','如果他发现了真相，那就糟了。'}

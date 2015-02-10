@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ferment"]={"ferment","[fə'ment]","[fɚ'mɛnt]","n.酵素",'n.酵素,发酵,动乱|||v.使...发酵,发酵,动乱','Fruit juices ferment if they are kept a long time.','果汁若是放置很久，就会发酵。','The news fermented trouble among the factory workers.','那则消息在工人中引起骚动。'}

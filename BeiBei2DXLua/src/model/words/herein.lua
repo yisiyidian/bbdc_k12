@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["herein"]={"herein","[hɪər'ɪn]","[,hɪr'ɪn]","adv.在此处",'adv.在此处,如此,鉴于','In structured analysis, the study of shapes and forms, herein with respect to the structure of modular hierarchies and organizations.','在结构分析中, 研究形状和格式的科学。此处指对模块层次和组织的结构的研究。','||Herein|| lies the keys to the questions.','里面包含着问题的答案。'}

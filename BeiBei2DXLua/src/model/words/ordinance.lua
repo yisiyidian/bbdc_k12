@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ordinance"]={"ordinance","['ɔːdɪnəns]","['ɔrdnəns]","n.法令",'n.法令,条例','The city passed an ordinance restricting the size of advertising signs.','该市通过了一项限制广告牌规格的法令。','Everyone should obey the government ordinance.','每个人都必须遵守这条政府法令。'}

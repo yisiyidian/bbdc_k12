@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["embryo"]={"embryo","['embrɪəʊ]","['ɛmbrɪo]","n.胚胎",'n.胚胎,萌芽','To its founding fathers, the European[Economic]  Community was the embryo of the United States of Europe','“对于它的创立者，欧洲$and$I{［经济］} 共同体就是欧洲联邦的雏形”','The plans are still in embryo.','计划仍在酝酿中。'}

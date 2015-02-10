@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["retreat"]={"retreat","[rɪ'triːt]","[rɪ'trit]","n.休息寓所",'n.休息寓所,撤退,隐居|||vt.&vi.撤退,向后倾','After several reverses the enemy was forced to retreat.','几经失败之后，敌军被迫后撤。','The enemy was forced to retreat.','敌人被迫撤退。'}

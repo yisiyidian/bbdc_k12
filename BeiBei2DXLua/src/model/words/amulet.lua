@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amulet"]={"amulet","['æmjʊlɪt]","['æmjʊlət]","n.护身符",'n.护身符','We\'re down here investigating a stolen amulet.','我们来到这里调查一个失窃的护身符。','This ring is my amulet.','这只戒指是我的护身符。'}

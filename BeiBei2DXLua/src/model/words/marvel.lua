@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["marvel"]={"marvel","['mɑːv(ə)l]","['mɑrvl]","n.奇异的事物",'n.奇异的事物,罕见的例子|||v.惊异于,惊异','They marvelled that she would make such a decision.','他们对她做出如此决定感到惊奇。','It was a real marvel that the baby was unhurt when he fell from the fifth floor.','那婴儿从五楼摔下来竟没受伤真是一个奇迹。'}

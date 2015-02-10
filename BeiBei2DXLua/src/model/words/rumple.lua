@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rumple"]={"rumple","['rʌmp(ə)l]","['rʌmpl]","n.皱纹",'n.皱纹,皱褶|||v.弄皱,弄乱','I leaned forward to rumple his hair, but he jerked out of the way.','我倚身过去抚弄他的头发，但他立即躲开了。','We can see from the rumple sheet that the bed have be sleeped in.','我们从被弄绉的床单可以看出有人在这床上睡过了。'}

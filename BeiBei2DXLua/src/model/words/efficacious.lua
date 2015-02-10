@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["efficacious"]={"efficacious","[,efɪ'keɪʃəs]","[ ,efi'keiʃəs ]","adj.有效的",'adj.有效的,灵验的','The nasal spray was new on the market and highly efficacious.','这种鼻腔喷雾剂是市场新品，非常有效。','It occurs to me that example is always  more efficacious than precept.','我想到身教重于言教。'}

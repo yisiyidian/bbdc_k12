@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discrete"]={"discrete","[dɪ'skriːt]","[dɪ'skrit]","adj.不连续的离散的",'adj.不连续的离散的|||[计算机]分离离散','The library \'s open-day is discrete.','图书馆的开放日是不连续的。','The organisms can be divided into discrete categories.','有机体可分为许多互不相联的种类。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["invert"]={"invert","[ɪn'vɜːt]","['ɪnvɝt]","v.使反向;使倒置",'v.使反向;使倒置','The chairs were inverted on the table.','椅子被倒置过来放在了桌子上。','||Invert|| the cake onto a serving plate.','把蛋糕倒扣过来放到一个盘子上。'}

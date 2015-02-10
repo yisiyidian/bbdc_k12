@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["acceptable"]={"acceptable","[ək'septəb(ə)l]","[ək'sɛptəbl]","adj.合意的",'adj.合意的,受欢迎的,可接受的','The terms of the contract are acceptable to us.','我们认为这个合同的条件可以接受.','I pity you if you think this is an acceptable way to behave.','你要是认为这种行为可以原谅, 那你就太可鄙了.'}

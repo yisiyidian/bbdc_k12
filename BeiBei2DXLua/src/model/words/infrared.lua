@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infrared"]={"infrared","[ɪnfrə'red]","[,ɪnfrə'rɛd]","adj.红外线的",'adj.红外线的|||n.红外线(的)','||Infrared|| is widely used in industry and medical science.','红外线广泛应用于工业和医学科学.','It is relative insensitivity to other than red and infrared lights.','它对红光,红外线的光以外的其它光相对来说是不敏感的.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tea"]={"tea","[tiː]","[ti]","n.茶",'n.茶.茶叶.茶树.茶点|||vt.给.....沏茶|||vi.喝茶.进茶点','He drinks this medical tea for medicinal purposes.','他为了治病而喝这种冲剂。','I wouldn\'t marry him for all the tea in China.','有天大好处我也不嫁给他。'}

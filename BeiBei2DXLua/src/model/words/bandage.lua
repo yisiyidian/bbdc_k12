@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bandage"]={"bandage","['bændɪdʒ]","['bændɪdʒ]","n.绷带",'n.绷带','I twisted the bandage round her knee.','我用绷带缠住了她的膝盖.','The nurse eased away the bandage from the wound.','护士小心翼翼地解开伤口处的绷带。'}

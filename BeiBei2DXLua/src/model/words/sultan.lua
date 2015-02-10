@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sultan"]={"sultan","['sʌlt(ə)n]","['sʌltən]","n.苏丹（伊斯兰国家的最高统治者）",'n.苏丹（伊斯兰国家的最高统治者）','||Sultan|| is sovereign ruler of certain Muslim countries.','苏丹是某些穆斯林国家的最高统治者。','a sultan of vice and corruption.','罪恶和腐败的强人'}

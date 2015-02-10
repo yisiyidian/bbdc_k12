@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tenth"]={"tenth","[tenθ]","[tɛnθ]","n.第十",'n.第十，十分之一','Although she came second; their times were only a tenth of a second apart.','她虽然得第二名，但与第一名仅差十分之一秒。','The leading car crashed midway through the tenth lap.','领先的那辆赛车在第十圈的中途撞毁了。'}

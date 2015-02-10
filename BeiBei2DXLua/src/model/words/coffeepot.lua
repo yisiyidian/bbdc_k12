@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coffeepot"]={"coffeepot","['kɒfɪpɒt]","['kɔfɪ,pɑt]","n.咖啡壶",'n.咖啡壶','I like this coffeepot very much.','我非常喜欢这个咖啡壶。','I bought this coffeepot in England.','我在英格兰买了这个咖啡壶。'}

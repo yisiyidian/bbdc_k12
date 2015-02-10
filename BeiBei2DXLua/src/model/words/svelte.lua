@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["svelte"]={"svelte","[svelt]","[sfɛlt]","adj.苗条的",'adj.苗条的,体态娇美的','Kim Cattrall plays his svelte personal assistant.','1','Kim plays his svelte personal assistant.','Kim扮演他体态较美的私人助理。'}

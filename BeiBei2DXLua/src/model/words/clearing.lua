@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clearing"]={"clearing","['klɪərɪŋ]","['klɪrɪŋ]","n.清除",'n.清除,结算，(森林中的)空地|||动词clear的现在分词','He\'s a slacker, he actually skipped off and left us to do the clearing away.','他是个懒鬼，他居然悄悄地溜走而把清除工作留给我们来做。','Let me ||clear|| up the broken glass before someone walks on it.','在有人踩上碎玻璃之前让我把它清扫一下。'}

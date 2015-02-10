@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mitten"]={"mitten","['mɪt(ə)n]","['mɪtn]","n.连指手套",'n.连指手套,露指手套','I have a pair of leather mittens.','我有一副皮连指手套。','The part of a glove or mitten that covers the palm of the hand.','（手套的）掌份覆盖手掌的物体或手套的一部分'}

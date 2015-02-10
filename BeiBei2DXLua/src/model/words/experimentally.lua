@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["experimentally"]={"experimentally","[ɪk,spɛrə'mɛntli]","[ iks,peri'mentəli ]","adv.实验上",'adv.实验上,实验性地','The machine is being experimentally used.','这些机器正在被实验地使用着。','This phenomenon has been observed experimentally.','这一现象进行过实验性观察.'}

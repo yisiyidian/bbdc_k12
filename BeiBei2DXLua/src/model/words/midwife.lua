@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["midwife"]={"midwife","['mɪdwaɪf]","['mɪd'waɪf]","n.助产士",'n.助产士,接生婆','The bus conductor became the man of the moment when he acted as midwife to a woman who gave birth to a baby on his bus.','当这个公共汽车售票员为一个在车上生产的妇女接生时，他曾名噪一时。','The midwife delivered the baby.','助产士接生下这个婴儿'}

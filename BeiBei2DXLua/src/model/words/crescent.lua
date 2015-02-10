@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crescent"]={"crescent","['kresənt]","['krɛsnt]","n.新月",'n.新月,新月形之物|||adj.新月形的,逐渐增加的','A disk, globe, or crescent resembling the natural satellite of Earth.','月状物, 新月状物类似地球自然卫星的碟、球体或新月状物','||Crescent|| is a sign of the Muslim religion.','新月形是伊斯兰教的象征。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overcast"]={"overcast","['əʊvəkɑːst]","[,ovɚ'kæst]","adj.阴天的",'adj.阴天的,阴暗的,愁闷的|||v.遮盖，（使）变暗，包边缝|||n.覆盖，阴天','The overcast and rainy weather found out his arthritis.','阴雨天使他的关节炎发作了.','The sky was overcast, the lightning leaped from cloud to cloud.','天空乌云密布, 电光在云块间闪动.'}

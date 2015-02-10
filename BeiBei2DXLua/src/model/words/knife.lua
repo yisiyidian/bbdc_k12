@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["knife"]={"knife","[naɪf]","[naɪf]","n.刀",'n.刀|||v.用刀切割,如刀割般','He cleaved an apple with a knife.','他用一把刀子将苹果切开。','He whetted his knife on the stone.','他在石头上磨刀。'}

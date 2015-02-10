@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["holster"]={"holster","['həʊlstə; 'hɒl-]","['holstɚ]","n.手枪皮套",'n.手枪皮套','He grabs her gun from her holster.','他从她枪套里抓住手枪。','The officer undid the flap of his holster and drew his gun.','军官打开枪套盖拔出了手枪。'}

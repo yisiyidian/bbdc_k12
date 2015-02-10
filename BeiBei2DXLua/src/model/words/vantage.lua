@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vantage"]={"vantage","['vɑːntɪdʒ]","['væntɪdʒ]","n.优势",'n.优势,有利情况','The cafe was a good vantage point for watching the world go by.','从这家小餐馆能清楚地看到世事的变迁。','From a concealed vantage point, he saw a car arrive.','他从一个隐蔽的有利位置望出去，看见一辆车开了过来。'}

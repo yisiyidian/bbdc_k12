@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["capital"]={"capital","['kæpɪt(ə)l]","['kæpɪtl]","n.首都",'n.首都,资本,大写字母|||adj.大写的,资本的，首要的','London is spelt with a capital L\'.','London一字中L是大写的.','The criminal was sentenced to capital punishment.','罪犯被判处死刑。'}

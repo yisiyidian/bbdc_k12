@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prognosticate"]={"prognosticate","[prɒg'nɒstɪkeɪt]","[ prəɡ'nɔstikeit ]","vt.预知",'vt.预知,预言,预测','We note trends, we track trends, and we employ trends in an effort to prognosticate what will happen next.','我们记录趋势，我们跟踪趋势，并且我们应用这些趋势来预测接下来会发生什么。','No one can prognosticate the future.','没人可以预知未来'}

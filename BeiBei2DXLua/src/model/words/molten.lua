@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["molten"]={"molten","['məʊlt(ə)n]","['moltən]","adj.熔化的",'adj.熔化的,炽热的,铸造的|||vbl.融化,溶解,变软','The volcano was spurting out rivers of molten lava.','火山喷涌着熔岩。','||Molten|| metal ran out on to the flagstones.','熔化的金属溢流到外面的板石上。'}

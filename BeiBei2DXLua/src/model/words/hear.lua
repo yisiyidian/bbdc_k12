@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hear"]={"hear","[hɪə]","[hɪr]","vt.&vi.听到",'vt.&vi.听到,得知,倾听,听证','He wouldn\'t hear of my walking home alone.','他不许我单独一人走回家。','Can you hear the signal?','你能听到这信号吗?'}

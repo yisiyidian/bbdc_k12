@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jog"]={"jog","[dʒɒg]","[dʒɑɡ]","n.轻推",'n.轻推,轻撞,漫步|||vt.&vi.轻推,蹒跚行进,慢跑','For years the business just kept jogging along.','多年来生意仅仅是平平而已。','He goes jogging every night.','他每晚慢跑。'}

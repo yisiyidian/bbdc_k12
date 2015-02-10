@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rote"]={"rote","[rəʊt]","[rot]","n.死记硬背",'n.死记硬背,机械的做法,生搬硬套|||n.浪涛拍打海岸的声音|||n.罗塔琴|||adj.死记硬背的，机械的','He has conned the poems by rote.','他已经把这诗歌背下来了。','He can say the whole of the English Bible by rote.','他能把整本英文《圣经》硬背出来。'}

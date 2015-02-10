@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["career"]={"career","[kə'rɪə]","[kə'rɪr]","n.事业",'n.生涯,职业,事业|||vi.猛冲,飞跑|||vt.在...中急行','She experienced a loss of identity after giving up her career to get married.','她放弃职业结婚以后有一种失落感。','He has serious aspirations to a career in politics.','他有从政的雄心壮志。'}

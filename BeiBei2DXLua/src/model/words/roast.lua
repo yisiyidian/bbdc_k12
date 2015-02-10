@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["roast"]={"roast","[rəʊst]","[rost]","n.烤肉",'n.烤肉,烘烤|||adj.烘烤的,烤过的|||v.烤,烘焙','We supped on cold roast beef.','我们晚饭吃的是凉的烤牛肉.','We had fish for the first course, followed by roast fowl and fresh vegetables.','我们吃的第一道菜是鱼, 接著上的菜是烤禽肉和新鲜蔬菜.'}

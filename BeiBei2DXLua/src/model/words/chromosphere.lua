@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chromosphere"]={"chromosphere","['krəʊməsfɪə]","['kromə,sfɪr]","n.色球层",'n.色球层','chromosphere eruption','(太阳的)色球层爆发','It is difficult to photograph the actual chromosphere.','拍摄实际的色球层很困难。'}

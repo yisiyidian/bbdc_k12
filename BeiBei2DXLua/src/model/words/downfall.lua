@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["downfall"]={"downfall","['daʊnfɔːl]","['daʊnfɔl]","n.垮台",'n.垮台,暴雨，衰落的原因','The organization he had built up eventually became the instrument of his downfall.','他创建起来的组织到头来却成为促使他倒台的根本原因了。','He is not a snob and therein lay his downfall.','他不是个势利小人，而他失败的原因正在于此。'}

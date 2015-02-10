@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overweight"]={"overweight","[əʊvə'weɪt]","['ovə'wet]","adj.超重的",'adj.超重的，过胖的|||n.超重|||vt.使超重，过于重视','Be my luggage overweight?','我的行李超重了吗？','The baggage is two kilos overweight.','那件行李超重两公斤。'}

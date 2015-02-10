@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chemical"]={"chemical","['kemɪk(ə)l]","['kɛmɪkl]","adj.化学的",'adj.化学的|||n.化学制品','The government has banned the use of chemical weapons.','政府已经禁止使用化学武器。','A reactor is a container for chemical reaction.','反应器是进行化学反应的容器。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sheriff"]={"sheriff","['ʃerɪf]","['ʃɛrɪf]","n.郡治安官",'n.郡治安官,郡长','He was appointed ||Sheriff|| of New York.','他被任命为纽约司法长官.','Nobody should expect Brazil to act as America \'s sheriff .','没有人指望巴西充当美国（在拉美地区的）郡督。'}

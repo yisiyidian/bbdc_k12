@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resonant"]={"resonant","['rez(ə)nənt]","['rɛznənt]","adj.共鸣的",'adj.共鸣的,反响的','He responded with a resonant laugh.','他报以洪亮的笑声。','She has a resonant voice.','她的嗓子真亮。'}

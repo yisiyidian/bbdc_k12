@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decrepit"]={"decrepit","[dɪ'krepɪt]","[dɪ'krɛpɪt]","adj.破旧的",'adj.破旧的,衰老的','He nodded at her and sat, looking around with distaste at the decrepit bar.','他朝她点点头，坐下，厌恶地环顾了破旧的酒吧。','The film had been shot in a decrepit old police station.','这部电影拍摄地点在一个破旧的老警察站。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glory"]={"glory","['glɔːrɪ]","['ɡlɔri]","n.光荣",'n.光荣,荣誉,壮丽,赞颂|||vi.为...而骄傲自豪|||interj.用于表示惊叹','She lives in blissful wedding glory.','她过着幸福的婚姻生活。','The morning glory climbs the trunk with its tendril.','牵牛花用卷须攀着树干。'}

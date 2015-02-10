@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["truth"]={"truth","[truːθ]","[trʊθ]","n.事实",'n.事实,确实,真理,现实','They were waiting with assurance for me to discover the truth for myself.','他们自信地等待我自己发现事实真相。','Why on earth didn\'t you tell me the truth?','你到底为什么不跟我说实话？'}

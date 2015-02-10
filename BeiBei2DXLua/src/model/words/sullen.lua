@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sullen"]={"sullen","['sʌlən]","['sʌlən]","adj.愠怒的",'adj.愠怒的,闷闷不乐的,阴沉的','A young woman, of sullen aspect, was sitting alone on the bench.','一个面色忧郁的年轻女人独自坐在长凳上。','Susan is sullen in the morning because she had not sleep well.','苏珊今天早上郁闷不乐，因为昨晚没睡好。'}

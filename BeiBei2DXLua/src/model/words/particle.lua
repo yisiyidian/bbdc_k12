@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["particle"]={"particle","['pɑːtɪk(ə)l]","['pɑrtɪkl]","n.微粒",'n.微粒,质点,极小量','There\'s not a particle of truth in her story.','她讲的没有一句实话.','There wasn\'t a particle of truth in what he said.','他说的没有一点真话。'}

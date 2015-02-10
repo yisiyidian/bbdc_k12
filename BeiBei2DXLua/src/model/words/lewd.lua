@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lewd"]={"lewd","[l(j)uːd]","[lud]","adj.淫荡的",'adj.淫荡的','He gave her a lewd wink.','他淫荡地对她眨了一下眼。','He kept eyeing up the women and making lewd comments.','他不停地盯着女人看，说些下流话。'}

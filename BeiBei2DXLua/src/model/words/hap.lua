@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hap"]={"hap","[hæp]","[ hæp ]","n.幸运",'n.幸运，机会|||vi.偶然发生|||vt.[口]穿上，盖上|||n.[口]被','Good heed has good hap.','凡事多留心，机会无穷。','Some have the hap; some stick in the gap.','有的人走运，有的人倒霉。'}

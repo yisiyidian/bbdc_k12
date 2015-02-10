@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["admire"]={"admire","[əd'maɪə]","[əd'maɪɚ]","vt.钦佩",'vt.钦佩,羡慕,赞美','We admire him for his righteousness.','我们钦佩他的正直。','They admire her alabaster complexion.','他们羡慕她那白润光滑的肌肤。'}

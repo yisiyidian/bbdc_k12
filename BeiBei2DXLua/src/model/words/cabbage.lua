@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cabbage"]={"cabbage","[ˈkæbɪdʒ]","[ˈkæbɪdʒ]","n.卷心菜",'n.卷心菜,洋白菜','The cabbage germinated within a week.','白菜一星期内就发芽了。','He is busy pricking out some cabbage seedlings.','他正忙于移植一些卷心菜秧。'}

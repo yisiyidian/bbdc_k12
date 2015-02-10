@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ignition"]={"ignition","[ɪg'nɪʃ(ə)n]","[ɪɡ'nɪʃən]","n.点火",'n.点火,点火器|||n.【化】灼热|||n.【机】发火装置','The ignition system is adopted in auto','汽车上普遍采用了点火系统','She got into the car and switched on the ignition.','她上车后点火发动汽车。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["armchair"]={"armchair","[ɑːm'tʃeə; 'ɑːm-]","['ɑrmtʃɛr]","n.扶手椅",'n.扶手椅，单人沙发，安乐椅|||adj.不切实际的','He got up slowly from the armchair.','他慢慢从单人沙发上站起身来.','When I got home from the airport, I flaked out in the nearest armchair.','我从机场回到家, 便一下瘫倒在离我最近的沙发上了.'}

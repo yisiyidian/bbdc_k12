@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plus"]={"plus","[plʌs]","[plʌs]","prep.（表示运算）加",'prep.（表示运算）加；（表示包容）外加；[口语]和；（表示数目）在零（度）以上|||n.加号；[数学]正量；好处；附加物|||adj.加的；正的；附加的；比所示数量多的','We paid 1000 dollars for the shop, plus 200 dollars for goodwill.','我们花了一千美元买下这家商店，另加二百美元买它的商誉。','He seems to have mistaken a plus for a minus.','他似乎把正号误作负号了。'}

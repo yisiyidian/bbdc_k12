@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dolt"]={"dolt","[dəʊlt]","[ dəult ]","n.呆子",'n.呆子,笨蛋,傻瓜','He\'s a first-class dolt who insists on doing things his way.','他一意孤行，真是蠢透了。','You dolt! You can\'t beat me! Not even by a fluke of fate!','你傻啊！你根本无法打败我！即使你有侥幸的运气。'}

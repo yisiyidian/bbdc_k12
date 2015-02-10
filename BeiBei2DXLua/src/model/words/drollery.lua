@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drollery"]={"drollery","['drəʊlərɪ]","[ 'drəuləri ]","n.滑稽",'n.滑稽','The Diamond Age, particularly early in the book, is told with abundant wit and drollery.','《钻石年代》的字里行间就充满机智与诙谐，特别是此书刚开始的时候。','We all enjoyed his drollery.','我们都欣赏他的幽默。'}

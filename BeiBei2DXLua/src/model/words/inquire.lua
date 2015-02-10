@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inquire"]={"inquire","[ɪn'kwaɪə]","[ɪn'kwaɪr]","vt.询问",'vt.询问,查究|||vi.询问,查究','He asked me to inquire after you.','他要我问候你。','The police will inquire into the cause of his death.','警方将调查他的死因。'}

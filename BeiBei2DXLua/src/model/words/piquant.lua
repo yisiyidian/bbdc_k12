@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["piquant"]={"piquant","['piːk(ə)nt; -kɒnt]","['pikənt]","adj.辛辣的",'adj.辛辣的,开胃的,刺激的，令人兴奋的','Bland vegetables are often served with a piquant sauce.','清淡的蔬菜常以辛辣的沙司调味。','There may well have been a piquant novelty about her books when they came out.','她的书问世时可能确有引人入胜的新颖之处。'}

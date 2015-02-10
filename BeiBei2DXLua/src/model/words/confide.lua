@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["confide"]={"confide","[kən'faɪd]","[kən'faɪd]","v.吐露",'v.吐露,信托,信赖','Don\'t confide in him.','不要信赖他。','He confided his troubles to his friend.','他向朋友倾诉烦恼事。'}

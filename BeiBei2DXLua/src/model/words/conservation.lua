@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conservation"]={"conservation","[kɒnsə'veɪʃ(ə)n]","[,kɑnsɚ'veʃən]","n.保存",'n.保存,防止流失,守恒,保护自然资源','If I may refer back to the problem we discussed, I think we shall stress on the conservation of our natural resource.','请允许我重提我们刚才讨论过的问题，我想我们应该强调保存我们的自然资源。','Who discovered the conservation of energy?','谁发现了能量守恒？'}

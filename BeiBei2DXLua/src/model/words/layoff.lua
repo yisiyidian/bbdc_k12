@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["layoff"]={"layoff","['leɪɒf]","['le,ɔf]","n.临时解雇",'n.临时解雇,操作停止,活动停止期间','Stock prices broke when the firm suddenly announced layoffs.','当公司突然宣布裁员时，股票价格便大跌.','Textile companies announced 2000 fresh layoffs last week.','各纺织公司上周宣布再次裁员两千人。'}

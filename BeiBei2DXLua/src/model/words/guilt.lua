@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["guilt"]={"guilt","[gɪlt]","[ɡɪlt]","n.罪行",'n.罪行,内疚','We now have the absolute proof of his guilt.','我们现在有他犯罪的确凿证据。','The king was infamous for his guilt of many infamies.','那个国王因罪恶多端而臭名昭著。'}

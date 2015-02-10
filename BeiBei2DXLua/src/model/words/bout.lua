@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bout"]={"bout","[baʊt]","[baʊt]","n.来回(一次)",'n.来回(一次)','He suffers from frequent bouts of depression.','他患多发性抑郁症。','She\'s still recovering from a bout of flu.','她这次患流行性感冒还没有完全恢复。'}

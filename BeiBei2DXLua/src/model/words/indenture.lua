@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indenture"]={"indenture","[ɪn'dentʃə]","[ɪn'dɛntʃɚ]","n.契约",'n.契约,合同,锯齿状的边缘,凹的部分|||（复数）indentures:师徒契约，定期服务合同|||vt.以契约束缚','He is indentured to a builder.','他与一建筑工人签订了师徒合同。','His son was indentured to the local blacksmith.','他的儿子拜当地的铁匠为师，签订了师徒合同。'}

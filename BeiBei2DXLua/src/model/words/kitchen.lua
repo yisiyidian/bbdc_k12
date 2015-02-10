@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kitchen"]={"kitchen","['kɪtʃɪn; -tʃ(ə)n]","['kɪtʃɪn]","n.厨房",'n.厨房','She stabbed him in the leg with a kitchen knife.','她拿菜刀捅伤了他的腿.','I have to mop the kitchen floor at least once a day.','我每天至少要把厨房地板擦洗一次。'}

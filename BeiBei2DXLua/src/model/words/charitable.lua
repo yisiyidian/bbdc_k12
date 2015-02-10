@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["charitable"]={"charitable","['tʃærɪtəb(ə)l]","['tʃærətəbl]","adj.仁慈的",'adj.仁慈的,(为)慈善事业的,宽恕的','She made many charitable benefactions.','她作过很多慈善捐赠.','The project is financed by a charitable trust.','这项工程是由慈善基金机构赞助的。'}

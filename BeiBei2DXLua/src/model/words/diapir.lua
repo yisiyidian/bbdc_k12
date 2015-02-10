@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diapir"]={"diapir","['daɪə,pɪr]","[ 'daiəpiə ]","n.挤入",'n.挤入','The relationships between diapir structure and gas hydrate mineralization.','底辟构造与天然气水合物的成矿关系','immature diapir','不完全底辟构造'}

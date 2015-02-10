@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["patience"]={"patience","['peɪʃ(ə)ns]","['peʃns]","n.耐心",'n.耐心,毅力','Her endless patience made her the best nurse in the hospital.','无限的耐心使她成为这个医院最好的护士。','Learning to walk again after his accident required great patience.','他出事后重新学习走路要有极大的毅力。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flagrant"]={"flagrant","['fleɪgr(ə)nt]","['fleɡrənt]","adj.非常的",'adj.非常的,不能容忍的,恶名昭著的','It isn\'t flagrant for this basic mistaken.','不能容忍这种低级错误。','This is flagrant disrespect to the law.','这是公然蔑视法律。'}

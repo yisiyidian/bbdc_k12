@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["orientation"]={"orientation","[,ɔːrɪən'teɪʃ(ə)n; ,ɒr-]","[orɪɛn'teʃən]","n.信仰",'n.信仰,趋向,定位,适应,情况介绍|||[计算机]定向','The orientation of a spacecraft relative to its direction of motion.','宇宙飞船的飞行姿态取决于其飞行方向。','To a society which has lost its orientation, he has much to offer.','对一个迷失了方向的社会，他要做的有很多。'}

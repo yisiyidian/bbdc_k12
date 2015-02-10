@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["appear"]={"appear","[ə'pɪə]","[ə'pɪr]","vi.出现",'vi.出现,显得,出版,抵达','I saw the car\'s nose appear round the corner','我看到汽车头出现在拐角处.','A truck appeared over the hill.','一辆卡车在山丘上出现。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["transcendental"]={"transcendental","[,trænsen'dent(ə)l; ,trɑːn-]","['trænsɛn'dɛntl]","adj.超越经验的",'adj.超越经验的,形而上学的，先验的','The quality or state of being transcendental.','超越、先验、杰出的性质或状态','Gazing at that majestic painting is for me an almost transcendental experience.','我凝视著那幅气势磅？Z的画，一种堪称超凡的感受油然而生。'}

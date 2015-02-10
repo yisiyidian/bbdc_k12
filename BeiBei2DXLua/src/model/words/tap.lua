@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tap"]={"tap","[tæp]","[tæp]","n.轻打",'n.轻打,水龙头,电话窃听|||vt.从...放出液体,自...某人处获取,在...上装窃听器,轻拍|||vi.轻拍','That girl tapped her fingers on the desk impatiently.','那个女孩不耐烦地用手指轻扣桌面。','He cleaned his hands in the cold water from the tap.','他用自来水龙头流出的凉水把手洗干净。'}

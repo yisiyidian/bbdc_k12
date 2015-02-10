@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["labile"]={"labile","['leɪbɪl; -aɪl]","['lebɪl]","adj.易变的",'adj.易变的,不稳定的','I am a emotionally labile person.','我是个情绪善变的人。','an emotionally labile person.','感情容易变化的人'}

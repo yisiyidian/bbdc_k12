@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stab"]={"stab","[stæb]","[stæb]","n.刺",'n.刺,戳,刺伤的伤口,剧痛,尝试|||vt.刺伤,中伤|||vi.刺,扎','He stabbed at the earth with his stick.','他拿手杖戳著地.','She stabbed at the air with her finger to emphasize what she was saying.','她手指一戳一戳的, 强调她说的话.'}

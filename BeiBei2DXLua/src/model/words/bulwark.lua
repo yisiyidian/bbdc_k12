@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bulwark"]={"bulwark","['bʊlwək]","['bʊlwɝk]","n.壁垒",'n.壁垒,保障，防波堤|||(复)bulwarks:（船的）舷墙|||vt.用堡垒防护','Our people\'s support is a bulwark against the enemy.','人民的支持是御敌的强大力量。','That country is a bulwark of freedom.','那个国家是自由的堡垒。'}

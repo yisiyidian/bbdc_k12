@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bastard"]={"bastard","['bɑːstəd; 'bæst-]","['bæstɚd]","adj.私生的",'adj.私生的,错误的,混蛋的|||n.私生子,混蛋','That boy\'s parents are unmarried, therefore he is a bastard!','那个男孩的父母未结婚，所以他是私生子。','He was never concerned about being born a bastard.','他从不介意自己是私生子.'}

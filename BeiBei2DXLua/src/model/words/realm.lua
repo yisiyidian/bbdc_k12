@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["realm"]={"realm","[relm]","[rɛlm]","n.王国",'n.王国,领域','He was banished from the realm.','他被驱逐出境。','Defense of the realm is crucial.','王国的国防至关重要。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tableware"]={"tableware","['teɪb(ə)lweə]","['teblwɛr]","n.餐具",'n.餐具','I see that two toothbrushes are on the tableware frame.','我看见了两把牙刷在餐具架上。','Shall I wrap it together with the tableware or wrap them separately?','要跟茶具一起包装还是分开包装 呢 ?'}

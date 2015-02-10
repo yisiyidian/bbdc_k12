@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["atrocity"]={"atrocity","[ə'trɒsɪtɪ]","[ə'trɑsəti]","n.暴行",'n.暴行','Many ||atrocities|| are committed to innocent people in wartime.','战争期间无辜百姓横遭蹂躏。','I am shocked by the atrocity of this man\'s crimes.','这个人行凶手段残忍狠毒使我震惊。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["confiscate"]={"confiscate","['kɒnfɪskeɪt]","['kɑnfɪsket]","v.没收",'v.没收,充公,查抄','If you are caught smuggling goods into the country, they will probably be confiscated.','假如查出你向该国走私货物，你的货物可能会被没收。','The headmaster confiscated her radio.','校长没收了她的收音机。'}

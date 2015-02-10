@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["physiology"]={"physiology","[,fɪzɪ'ɒlədʒɪ]","['fɪzɪ'ɑlədʒi]","n.生理学",'n.生理学','He was awarded the Nobel Prize for achievements in physiology.','他因生理学方面的建树而被授予诺贝尔奖.','We had studied physiology in middle school.','我在中学就已经学过生理学。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kid"]={"kid","[kɪd]","[kɪd]","n.小孩",'n.小孩,小山羊,小山羊皮制品|||vi.(山羊,羚羊)生幼崽,玩恶作剧|||vt.开玩笑,哄骗,嘲弄|||adj.相对年幼的','Don\'t try to kid me.','你不要骗我。','The kids dug a tunnel in the sand.','小孩们在沙堆里挖了一个地道。'}

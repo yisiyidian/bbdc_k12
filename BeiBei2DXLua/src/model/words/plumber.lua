@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plumber"]={"plumber","['plʌmə]","['plʌmɚ]","n.水管工人",'n.水管工人','The plumber splayed the end of the pipe before fitting it over the next section.','铅管工把管口撑大後套在另一截管子上.','We had to call a plumber to unblock the drains.','我们得叫管工来通一通下水道.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["surreptitious"]={"surreptitious","[,sʌrəp'tɪʃəs]","[,sɝrəp'tɪʃəs]","adj.鬼鬼祟祟的",'adj.鬼鬼祟祟的,保密的','His surreptitious behaviour naturally aroused suspicion.','他那鬼鬼祟祟的行为自然引起了旁人的怀疑。','She carried out a surreptitious search of his belongings.','她暗地里搜查他的东西。'}

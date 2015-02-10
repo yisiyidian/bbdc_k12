@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stable"]={"stable","['steɪb(ə)l]","['stebl]","adj.稳定的",'adj.稳定的,安定的,可靠的|||n.马厩,马棚,一批人|||vt.使（马）入厩|||vi.入厩','Who opened the stable door?','谁打开了马房的门？','He is a bit neurotic, but his wife is a very stable person.','他有点神经质，但他的妻子是一个非常稳重的人。'}

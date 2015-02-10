@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nomad"]={"nomad","['nəʊmæd]","['nomæd]","n.游牧民族",'n.游牧民族,流浪者|||adj.游牧的,流浪的','The nomads have no habitation.','游牧者没有定居处。','Most of the nomads live in grassland and have no fixed home.','游牧部落的大多人都生活在草原上并且居无定所。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chuckle"]={"chuckle","['tʃʌk(ə)l]","['tʃʌkl]","v.轻声笑",'v.轻声笑,咯咯笑,暗自笑|||n.轻声笑,咯咯笑','What are you ||chuckling|| about?','你独自笑什麽?','She gave a chuckle of delight.','她高兴得笑出声来.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["allowance"]={"allowance","[ə'laʊəns]","[ə'laʊəns]","n.津贴",'n.限额，定量|||n.津贴,零用钱','They show great anxiety concerning their retirement allowance.','他们对自己的养老金问题显得十分焦虑。','It\'s time you jacked up my allowance.','您该给我增加点儿零用钱了.'}

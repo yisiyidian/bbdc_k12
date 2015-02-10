@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hyperactive"]={"hyperactive","[haɪpər'æktɪv]","[,haɪpɚ'æktɪv]","adj.极度活跃的",'adj.极度活跃的','The hyperactive toddler is a real handful.','这个还在学走路的却极其活跃的小孩真是难以控制','a hyperactive new drug; a hyperactive thyroid gland.','一种活动性极强的新药；分泌过多的甲状腺'}

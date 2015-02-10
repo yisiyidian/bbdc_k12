@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plague"]={"plague","[pleɪg]","[pleɡ]","n.瘟疫",'n.瘟疫,麻烦,灾祸|||vt.折磨,烦扰,造成麻烦','He\'s been avoiding me like the plague since our quarrel.','我们吵架以後, 他一直如避蛇蝎似的躲著我.','Plenty is no plague.','【谚】多多益善。'}

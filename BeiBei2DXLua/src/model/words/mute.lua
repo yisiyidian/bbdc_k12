@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mute"]={"mute","[mjuːt]","[mjut]","n.哑子",'n.哑子,默音字母,弱音器|||adj.哑的,无声的,沉默的|||vt.减音,减弱|||vi.(鸟)排泄','He\'s a deaf mute and cannot tell anyone secret.','他是个聋哑人，不会把他们的秘密告诉任何人。','He\'s mute on the subject of social system.','他对社会制度的问题保持沉默。'}

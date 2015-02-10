@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["percolate"]={"percolate","['pɜːkəleɪt]","['pɝkəlet]","v.(使)过滤",'v.(使)过滤，(使)渗透|||n.渗出液','Water percolated the sand.','水渗过砂','I\'ll percolate some coffee for you.','我给你滤煮一些咖啡。'}

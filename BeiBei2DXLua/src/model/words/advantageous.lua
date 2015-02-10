@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["advantageous"]={"advantageous","[ædvən'teɪdʒəs]","['ædvən'tedʒəs]","adj.有利的",'adj.有利的，有助的，有益的','It is highly advantageous to us.','这对我们极为有利。','It will be advantageous if steps are taken to resume our business relationship on the basis of mutual benefit.','如果我们采取措施在互利的基础上恢复业务关系，对我们都是有利的。'}

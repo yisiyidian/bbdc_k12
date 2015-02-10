@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stratagem"]={"stratagem","['strætədʒəm]","['strætədʒəm]","n.战略",'n.战略,计谋','A stratagem for catching or tricking an unwary person.','圈套迷住或欺骗一个不警觉的人的计谋','A maneuver, stratagem, or ploy, especially one used at an initial stage.','策略尤指人在开始阶段所采用的计谋、策略、手法'}

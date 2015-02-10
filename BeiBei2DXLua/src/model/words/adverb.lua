@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adverb"]={"adverb","['ædvɜːb]","['ædvɝb]","n.副词",'adj.副词的|||n.副词','an intensive adverb','加强语意的副词','||Adverb|| is used to modify verb','副词用来修饰动词'}

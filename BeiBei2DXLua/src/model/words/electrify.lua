@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["electrify"]={"electrify","[ɪ'lektrɪfaɪ]","[ɪ'lɛktrə'fai]","v.通电",'v.通电,上电,使感电','They are electrifying the battery.','他们正给电池充电。','The athlete has an electrifying burst of speed.','这个运动员具有惊人的爆发速度。'}

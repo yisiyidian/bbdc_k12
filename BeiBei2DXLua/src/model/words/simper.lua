@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["simper"]={"simper","['sɪmpə]","['sɪmpɚ]","v.傻笑",'v.傻笑,假笑|||n.傻笑,假笑','\'Thank you doctor,\' said the nurse with a simper.','“谢谢你，医生，”护士傻笑着说。','The maid lowered her chin and simpered.','侍女低头痴笑着。'}

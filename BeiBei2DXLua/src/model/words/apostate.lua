@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["apostate"]={"apostate","['æpəsteɪt]","[ ə'pɔsteit ]","n.背教者",'n.背教者,变节者,脱党者|||adj.背教的,变节的,脱党的','The most furious anarchist become the most barefaced apostate.','最激烈的无政府主义者，居然成了最露骨的变节者。','Sorry Kim. I just can\'t trust an apostate for the second time.','抱歉，我真的是無法重新相信一個反骨仔。'}

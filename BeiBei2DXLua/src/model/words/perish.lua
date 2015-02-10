@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perish"]={"perish","['perɪʃ]","['pɛrɪʃ]","vt.毁减",'vt.毁减,死亡|||vi.毁灭','The lumbermen were perished with cold.','伐木工人冻僵了。','Almost a hundred people perished in the hotel fire last night.','近百人在昨夜旅馆的大火中丧生。'}

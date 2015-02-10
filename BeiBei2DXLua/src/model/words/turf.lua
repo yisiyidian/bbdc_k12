@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["turf"]={"turf","[tɜːf]","[tɝf]","n.草皮",'n.草皮,泥炭,跑马场|||v.铺草皮|||n.地盘,势力范围','He is more interested in the turf than in working.','他对赛马比对工作更有兴趣。','She was turfed out of her flat.','她被赶出了公寓。'}

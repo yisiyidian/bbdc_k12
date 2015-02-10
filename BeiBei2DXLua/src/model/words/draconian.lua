@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["draconian"]={"draconian","[drə'konɪən]","[ drə'kəunjən ]","adj.严峻的",'adj.严峻的,苛刻的','There would be no draconian measures to lower U.S. health care costs.','不会有严厉的措施来降低美国的医疗成本。','...indications that there would be no draconian measures to lower U.S. health care costs.','…迹象表明将不会有严厉的措施来降低美国的医疗成本。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perfunctory"]={"perfunctory","[pə'fʌŋ(k)t(ə)rɪ]","[pɚ'fʌŋktəri]","adj.草率的",'adj.草率的,敷衍的','She nodded a perfunctory acknowledgement as her glass was filled.','杯子被倒满时她敷衍性地点头示意。','He brushed by with a perfunctory wave to the crowd.','他擦身而过，朝人群敷衍地挥了挥手。'}

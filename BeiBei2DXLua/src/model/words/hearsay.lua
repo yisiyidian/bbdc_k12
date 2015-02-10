@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hearsay"]={"hearsay","['hɪəseɪ]","['hɪrse]","n.风闻",'n.风闻','Judgment should be based on facts, not on hearsay.','判断应该以事实为依据，而不应该依靠道听途说。','I don\'t believe it; it\'s merely hearsay.','我不相信，那仅是谣传罢了。'}

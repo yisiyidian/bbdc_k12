@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fruitful"]={"fruitful","['fruːtfʊl; -f(ə)l]","['frutfl]","adj.多产的",'adj.多产的,富有成效的','The work will be more fruitful under this plan.','按照这一方案，做这工作将更有成效。','fruitful soil.','丰产土壤'}

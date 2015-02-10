@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irrepressible"]={"irrepressible","[ɪrɪ'presɪb(ə)l]","[,ɪrɪ'prɛsəbl]","adj.抑制不住的",'adj.抑制不住的，难以征服的','An amusement park is the perfect locale for a bunch of irrepressible youngsters to have all sorts of adventures.','游乐场是一帮精力过剩的年轻人寻求各种惊险刺激的绝佳场所。','He registered irrepressible joy.','他流露出压抑不住的喜悦。'}

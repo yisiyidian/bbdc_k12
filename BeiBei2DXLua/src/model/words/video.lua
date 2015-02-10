@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["video"]={"video","['vɪdɪəʊ]","['vɪdɪo]","n.录像(机)",'adj.录像的|||n.录像(机)|||vt.制作...的录像','I don\'t see any point of playing video games all day.','我看不出整天打电动玩具有什么意义。','The old lady gets in(to) a muddle trying to work the video.','那老太太想开录像机, 但是越搞越糊涂.'}

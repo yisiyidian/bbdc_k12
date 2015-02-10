@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["besmirch"]={"besmirch","[bɪ'smɜːtʃ]","[ bi'smə:tʃ ]","vt.弄污",'vt.弄污,污渍','The scandalous remarks in the newspaper besmirch the reputations of every member of the society.','报刊上那些恶意中伤的报道败坏了该社团全体成员的名声。','He had besmirched the good name of his family.','他玷污了家族的好名声。'}

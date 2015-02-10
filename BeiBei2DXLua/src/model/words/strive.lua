@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["strive"]={"strive","[straɪv]","[straɪv]","v.努力",'v.努力,奋斗,力争','The scientists strive for a breakthrough in cancer research.','科学家们力争在癌症研究方面有个突破。','||Strive|| to build China into a powerful socialist country!','为把中国建成社会主义强国而奋斗！'}

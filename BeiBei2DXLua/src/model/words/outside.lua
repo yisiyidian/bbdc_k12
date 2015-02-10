@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outside"]={"outside","[aʊt'saɪd; 'aʊtsaɪd]","[,aʊt'saɪd]","adv.在外面",'adv.在外面|||n.&adj.外部|||prep.在...外|||pron.在...外边','The house is painted green outside.','那房子外面漆的绿色。','It\'s warmer outside than in this room.','外面比这间屋子里暖和。'}

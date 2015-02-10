@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tariff"]={"tariff","['tærɪf]","['tærɪf]","n.关税",'n.关税,价目表|||vt.交关税','The government decided to impose a protective tariff on foreign cars.','政府决定对进口汽车征收保护税。','There is a very high tariff on jewelry.','宝石的税率很高。'}

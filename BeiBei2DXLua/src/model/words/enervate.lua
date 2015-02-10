@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enervate"]={"enervate","['enəveɪt]","['ɛnɚvet]","adj.无力的",'adj.无力的，衰弱的|||vt.使无力，使衰弱','Idleness enervates the will to succeed.','懒惰削弱了成功的决心。','Idleness enervates the will to succeed.','懒惰削弱了成功的决心。'}

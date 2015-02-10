@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alliteration"]={"alliteration","[əlɪtə'reɪʃ(ə)n]","[ə,lɪtə'reʃən]","n.头韵",'n.头韵','Sally sells seashells by the seashore. is an example of alliteration.','“Sally sells seashells by the seashore.”这句话是个押头韵的例子。','The prosody of Beowulf is based on alliteration,not end rhymes','《贝奥武甫》的诗体采用头韵而不用尾韵。'}

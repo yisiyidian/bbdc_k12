@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rare"]={"rare","[reə]","[rɛr]","adj.稀罕的",'adj.稀罕的,罕见的,珍贵的','It is rare to find such a genius nowadays.','这样的天才现在很少见。','A collector of rare insects will show us some of his latest discoveries.','一位稀有昆虫采集家将给我们看一些他的最新发现。'}

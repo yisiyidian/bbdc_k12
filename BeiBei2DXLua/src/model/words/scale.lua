@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scale"]={"scale","[skeɪl]","[skel]","n.鳞",'n.鳞,刻度,衡量,数值范围|||v.依比例决定,攀登','The force of the wind is measured on a standard scale of 0-12.','风力是按0-12级标准等级测量的。','The company has begun to scale down its operations in Asia.','这家公司已开始减少在亚洲的业务。'}

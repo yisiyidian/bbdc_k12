@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["momentous"]={"momentous","[mə(ʊ)'mentəs]","[mo'mɛntəs]","adj.重要的",'adj.重要的,重大的','History bears evidence that each momentous political change is usually followed by an economic revival.','历史证明，在每次重大的政治变革之后随之而来的往往是经济上的复兴。','In that year, two momentous discoveries were made.','那一年，有两个重大发现。'}

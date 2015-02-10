@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eyelid"]={"eyelid","['aɪlɪd]","['aɪ,lɪd]","n.眼皮",'n.眼皮,眼睑','The condemned man listened to his sentence without batting an eyelid.','那被定罪的人木无表情地听著对他的宣判.','Tears are secreted by an organ under the upper eyelid.','眼泪由上眼睑下面的器官分泌。'}

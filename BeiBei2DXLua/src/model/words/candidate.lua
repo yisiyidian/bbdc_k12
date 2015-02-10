@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["candidate"]={"candidate","['kændɪdeɪt; -dət]","[ˈkændɪˌdet, -dɪt]","n.候选人",'n.候选人,求职者','In my estimation, he is a more suitable candidate.','我认为他是更合适的人选。','The defeated candidate demanded a recount.','落选的候选人要求重新计算选票。'}

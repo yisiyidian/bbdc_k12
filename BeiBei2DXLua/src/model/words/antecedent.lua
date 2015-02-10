@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["antecedent"]={"antecedent","[,æntɪ'siːd(ə)nt]","['æntə'sidnt]","n.前情",'n.前情,先行词|||adj.在...之前的,居先的','Can you tell me the antecedent of the TV series?','你能告诉我这部电视剧的前情提要吗？','We shall first look briefly at the historical antecedents of this theory.','我们首先简要地回顾一下该理论历史上的先例。'}

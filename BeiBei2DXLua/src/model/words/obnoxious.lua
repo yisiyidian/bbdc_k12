@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obnoxious"]={"obnoxious","[əb'nɒkʃəs]","[əb'nɑkʃəs]","adj.可憎的",'adj.可憎的,不愉快的,讨厌的','His disgusting table manners made him obnoxious to me.','他那令人厌恶的吃相使我反感。','The people at my table were so obnoxious I had to change my seat.','我那桌的人非常讨厌，我只好换了座位。'}

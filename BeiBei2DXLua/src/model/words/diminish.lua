@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diminish"]={"diminish","[dɪ'mɪnɪʃ]","[dɪ'mɪnɪʃ]","vt.减少",'vt.减少,变小,减损|||vi.变少,逐渐变细','His illness diminished his health.','疾病侵蚀了他的健康。','As he turned the knob, the sound diminished.','他一转旋钮，声音就变小了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["taut"]={"taut","[tɔːt]","[tɔt]","adj.拉紧的",'adj.拉紧的,整洁的,紧张的','The clothes line is pulled taut and secured.','晾衣绳被拉紧并系牢。','That summer she had shed the weight gained during pregnancy, her body was trim and taut.','那年夏天，她减去了怀孕期间增加的体重，身材又变得修长而健美。'}

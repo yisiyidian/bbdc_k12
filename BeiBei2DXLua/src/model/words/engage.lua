@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["engage"]={"engage","[ɪn'geɪdʒ; en-]","[ɪn'ɡedʒ]","v.从事",'v.答应,预定,使忙碌,雇佣,订婚,从事','I engaged the clutch and the car moved forwards.','我踩下离合器，汽车便朝前开了。','Jack and Anne are engaged.','杰克和安妮订婚了。'}

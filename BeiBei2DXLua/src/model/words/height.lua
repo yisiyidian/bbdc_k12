@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["height"]={"height","[haɪt]","[haɪt]","n.高度",'n.高度,高处,身高,最高峰,极点','They looked down from a giddy height.','他们从令人眩晕的高度往下看。','His height makes him stand out in the crowd.','他身材高大，因此在人群中很突出。'}

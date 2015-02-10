@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subconscious"]={"subconscious","[sʌb'kɒnʃəs]","[,sʌb'kɑnʃəs]","adj.潜意识的",'adj.潜意识的，下意识的|||n.潜意识','One\'s conscious motives are often different from one\'s subconscious ones.','一个人有明显动机的举动跟下意识的举动往往截然不同.','subconscious perceptions','朦胧的察觉'}

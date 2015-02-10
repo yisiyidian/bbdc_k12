@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["continue"]={"continue","[kən'tɪnjuː]","[kən'tɪnju]","vt.&vi.继续",'vt.&vi.继续,连续,维持','They continued down until they came to some pockets of natural gas.','他们继续往下钻, 终於找到了一些天然气的气阱.','In spite of my efforts to pacify it the baby continued to cry/continued crying.','尽管我已尽力哄这婴儿, 可是他还是哭个不停.'}

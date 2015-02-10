@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parsimonious"]={"parsimonious","[,pɑːsɪ'məʊnɪəs]","[,pɑrsə'monɪəs]","adj.太节省的",'adj.太节省的,小气的','His parsimonious nature did not permit him to enjoy any luxuries.','他那吝啬的本性不容许他享受任何奢侈品。','I think that politicians are often rather parsimonious with the truth.','我觉得政客们总是不讲真话。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["neutron"]={"neutron","['njuːtrɒn]","['nʊtrɑn]","n.中子",'n.中子','Does a neutron star represent the ultimate in compression?','中子星是压缩的最终产物 吗 ?','This is accomplished by means of neutron absorbers or moderators.','这可使用中子吸收剂或慢化剂来达到.'}

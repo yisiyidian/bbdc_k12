@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mast"]={"mast","[mɑːst]","[mæst]","n.船桅",'n.船桅,旗杆,天线杆|||abbr.磁性环形激波管(风洞研究用)(=MagneticAnnularShockTube)','The tall man always wore his trousers at half mast.','那高个子老是穿着一条长不及踝的裤子。','My nephew worked his passage to Sydney before the mast.','我的侄儿乘船去悉尼时在船上充当普通水手，打工以抵偿旅费。'}

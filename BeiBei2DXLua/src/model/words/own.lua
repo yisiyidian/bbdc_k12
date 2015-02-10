@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["own"]={"own","[əʊn]","[on]","adj.自己的",'adj.自己的,嫡亲的|||pron.自己的|||vi.承认|||vt.拥有,承认','He can be left to work on his own.','工作可交给他一个人去做。','Nobody owned up to the theft.','这件偷窃事没有人承认是自己干的。'}

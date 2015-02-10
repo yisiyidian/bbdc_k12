@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coinage"]={"coinage","['kɒɪnɪdʒ]","['kɔɪnɪdʒ]","n.造币",'n.造币，货币制度，硬币|||n.创造新词','I hadn\'t heard that expression before。Is it a recent coinage?','我以前从未听到过这个词语，是最近新造的吗？','Count Gengler was of common coinage, but in coming to America he took on a royal name','“吉勒伯爵出身平凡，但到美洲大陆后就冠上了皇家的名字”'}

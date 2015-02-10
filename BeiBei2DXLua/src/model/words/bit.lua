@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bit"]={"bit","[bɪt]","[bɪt]","n.一点儿",'n.一点儿,少量|||n.钻头,马嚼子,辅币|||n.位,比特(二进位制信息单位)|||v.控制','The noise from that party is getting a bit much.','从聚会上传来的喧闹声越发过分了。','He assembled the model aircraft bit by bit.','他一块一块地装配飞机模型。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["angular"]={"angular","['æŋgjʊlə]","['æŋɡjəlɚ]","adj.有角的",'adj.有角的,消瘦的,有尖角的','A radio receiver and directional antenna used as a system to determine the angular direction of incoming radio signals.','无线方向探测器一种无线电接收和指向天线系统，用来确定收到的无线电信号的角方向','She has an angular face.','她的脸庞很瘦削。'}

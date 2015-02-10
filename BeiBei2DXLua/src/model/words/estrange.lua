@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["estrange"]={"estrange","[ɪ'streɪn(d)ʒ; e-]","[ i'streindʒ ]","vt.使疏远",'vt.使疏远','His behaviour estrange him from his brother.','他的行为使他与哥哥疏远了。','They are estranged.','他们疏远了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aspirant"]={"aspirant","[ə'spaɪər(ə)nt; 'æsp(ɪ)r-]","[ə'spaɪərənt]","n.怀抱大志者",'n.怀抱大志者,野心家|||adj.有抱负的，有野心的','Any aspirant to the presidency here must be seriously rich.','要想当这儿的主席一定要家财万贯。','He is among the few aspirants with administrative experience.','他是为数不多的几个志向远大而且有管理经验的人之一。'}

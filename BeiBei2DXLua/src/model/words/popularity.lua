@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["popularity"]={"popularity","[pɒpjʊ'lærətɪ]","[,pɑpju'lærəti]","n.流行",'n.普及,流行','Golf have gained popularity among the wealthy in my country.','高尔夫球已在我国富有的人中流行起来。','This policy led to an upswing in the party\'s popularity.','这一政策使该党深得人心.'}

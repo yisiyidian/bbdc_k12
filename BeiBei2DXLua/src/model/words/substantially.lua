@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["substantially"]={"substantially","[səb'stænʃ(ə)lɪ]","[səb'stænʃəli]","adv.实质上",'adv.实质上,本质上,大体上','His criticism is substantially correct.','他的批评大体上是正确的。','It changes substantially the way people work in an office.','这极大地改变了人们在办公室里的工作方式。'}

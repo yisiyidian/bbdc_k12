@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["westwards"]={"westwards","['westwədz]","['wɛstwɚdz]","adj.向西的",'adj.向西的|||adv.向西','A section of the Meuse River flowing ||westward|| through the southern Netherlands to a joint delta with the Rhine River.','马斯河默兹河的一部分，向西流经荷兰南郊与莱茵河相汇而形成一片冲积三角洲','He pushed his control westwards.','他把他的统治向西推进.'}

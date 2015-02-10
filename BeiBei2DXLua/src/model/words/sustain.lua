@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sustain"]={"sustain","[sə'steɪn]","[sə'sten]","vt.承受",'vt.承受,支持,经受,维持','The court sustained his claim that the contract was illegal.','法庭确认他的要求正当，宣布该合同不合法。','Hope alone sustained him in his struggle.','在奋斗中，只有希望支持着他。'}

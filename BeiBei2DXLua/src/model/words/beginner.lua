@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["beginner"]={"beginner","[bɪ'gɪnə]","[bɪ'gɪnɚ]","n.初学者",'n.初学者，新手','Naturally, as a beginner I\'m not a very good driver yet.','我初学开车, 当然开不好了.','He\'s not bad for a beginner.','就新手而论, 他已经很不错了.'}

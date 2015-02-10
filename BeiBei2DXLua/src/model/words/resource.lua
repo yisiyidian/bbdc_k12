@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resource"]={"resource","[rɪ'sɔːs; rɪ'zɔːs]","['risɔrs]","n.资源",'n.资源,谋略,消遣','He has no inner resources and hates being alone.','他没有内在的精神寄托，因而害怕孤独。','||Resources|| management is an important business skill.','资源管理是一项重要的经营技能。'}

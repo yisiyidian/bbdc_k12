@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["so"]={"so","[səʊ]","[so]","conj.所以",'adv.如此,如是,同样|||conj.所以,因此|||adj.真的|||pron.这样','He is divorced and so am I.','他离了婚，我也离了婚。','She was so weary that she fell.','她是如此的疲劳以致于倒下了'}

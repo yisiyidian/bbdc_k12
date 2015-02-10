@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mischief"]={"mischief","['mɪstʃɪf]","['mɪstʃɪf]","n.损害",'n.损害,伤害，灾祸,恶作剧','Don\'t let her make mischief between you she\'s only jealous.','别让她在你们之间挑拨－－她就是太忌妒了。','I try to keep the boy out of mischief.','我尽量不让这个男孩胡闹。'}

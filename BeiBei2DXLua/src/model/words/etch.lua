@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["etch"]={"etch","[etʃ]","[ɛtʃ]","n.腐蚀剂",'n.腐蚀剂|||v.蚀刻,铭刻','etch a design on glass.','在玻璃上蚀刻一幅图案','Hanging on the wall was a fine etching of the church.','挂在墙上的是一幅精致的教堂蚀刻板画.'}

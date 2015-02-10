@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["foothold"]={"foothold","['fʊthəʊld]","['fʊt'hold]","n.立足处",'n.立足处,据点,根据地','The idea has gained foothold.','这种思想已经扎了根。','It is not easy to get a foothold as an anchorman.','一个电视节目主持人要站住脚可不容易。'}

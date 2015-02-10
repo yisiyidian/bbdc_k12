@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vibrate"]={"vibrate","[vaɪ'breɪt]","['vaɪbret]","vt.(使)振动",'vt.(使)振动,(使)摇摆|||vi.回响，颤动','The rough road made the car vibrate.','崎岖不平的道路使车颠簸得很厉害。','The whole house vibrates whenever a heavy lorry passes.','重型卡车一经过，整所房子都震动起来。'}

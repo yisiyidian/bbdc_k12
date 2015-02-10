@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jogging"]={"jogging","['dʒɒgɪŋ]","['dʒɑgɪŋ]","n.慢跑",'n.慢跑','||Jogging|| is a healthy form of exercise.','慢跑是有益健康的锻炼方式.','I\'ve been jogging a lot to get myself into shape.','我长期慢跑锻炼身体.'}

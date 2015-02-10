@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clap"]={"clap","[klæp]","[klæp]","vt.鼓掌",'n.拍手,拍手声，一阵强风|||vt.鼓掌,击掌，轻敲，急速放置|||vi.砰的一声，突然离开','She clapped her hands in delight.','她高兴地拍手。','He gave me a clap on the back and invited me for a drink.','他在我背上拍了一下，请我去喝酒。'}

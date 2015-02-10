@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["metal"]={"metal","['met(ə)l]","['mɛtl]","n.金属",'n.金属,质料|||adj.金属制的|||v.以金属覆盖','An electric current in metal is caused by the movement of electrons.','金属内电流是由电子运动引起的。','The metal basin clattered down the stone stairs.','金属盆子沿着石阶滚了下去，发出咣啷声。'}

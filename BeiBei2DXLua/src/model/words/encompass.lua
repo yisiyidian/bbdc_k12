@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["encompass"]={"encompass","[ɪn'kʌmpəs; en-]","[ in'kʌmpəs ]","vt.围绕",'vt.围绕(包围,拥有,完成)','The general arts course at the university encompasses a wide range of subjects.','大学文科包括的科目非常广泛。','They built a moat to encompass the castle.','他们在城堡周围修了一条护城河。'}

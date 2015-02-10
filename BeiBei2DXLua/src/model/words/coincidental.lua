@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coincidental"]={"coincidental","[kəʊɪnsɪ'dent(ə)l]","[ko,ɪnsɪ'dɛntl]","adj.巧合的",'adj.巧合的','The similarity between these two essay is too great to be coincidental.','这两篇文章雷同的地方很多，并非巧合所致。','Any resemblance to actual persons, places, or events is purely coincidental.','如与实际的人、地、事有所雷同，纯属巧合。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reap"]={"reap","[riːp]","[rip]","vt.收割",'vt.收割,收获,获得|||vi.收割','If you study hard and pass all your exams you will reap a rich harvest later in life.','如果你努力学习并且通过所有的考试，你会在今后的生活中大有好处。','Our firm is likely to reap a big profit this year.','今年我们公司很可能获得巨额利润。'}

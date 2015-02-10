@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["feather"]={"feather","['feðə]","['fɛðɚ]","n.羽毛",'n.羽毛,心情,种类,服饰|||vt.用羽毛装饰|||vi.长出羽毛','Feather is very light, so that we say "as light as a feather" .','羽毛很轻，因此我们说“轻如鸿毛”。','My daughter asked me to buy her a pillow stuffed with feathers.','我女儿请求我给她买一个羽绒枕头。'}

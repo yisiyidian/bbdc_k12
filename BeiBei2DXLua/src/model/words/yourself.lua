@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["yourself"]={"yourself","[jɔː'self; jʊə-; jə-]","[jɔr'sɛlf]","pron.你(们)自己",'pron.你(们)自己,你(们)亲自','Forget yourself and think of someone else for a change.','别光想著你自己，你也为别人想一次。','Please make yourself at home.','请别客气。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brewery"]={"brewery","['brʊərɪ]","['bruəri]","n.啤酒厂",'n.啤酒厂','Few of them managed to make a good living out of their art alone, without running a sideline such as a brewery or an insurance office.','要不是办像酿酒厂或保险公司这样的副业，他们没有多少人只靠艺术就能过的舒舒服服。','He has an interest in a brewery.','他在一酿造厂有股份。'}

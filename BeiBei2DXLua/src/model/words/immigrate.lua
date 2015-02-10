@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["immigrate"]={"immigrate","['ɪmɪgreɪt]","['ɪmɪɡret]","v.移居入境",'v.移居入境','People from many countries immigrated to the United States and Canada.','许多国家的人移居到美国和加拿大。','Britain immigrated many colonists to the New World.','英国把大量殖民者移居到了新大陆'}

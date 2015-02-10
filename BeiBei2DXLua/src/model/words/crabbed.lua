@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crabbed"]={"crabbed","['kræbɪd; kræbd]","['kræbɪd]","adj.暴躁的",'adj.暴躁的','Look at that crabbed, unhappy middle age.','看看那个暴躁不幸的中年人。','He is a crabbed man.','他是一个脾气暴躁的人。'}

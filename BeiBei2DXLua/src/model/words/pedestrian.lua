@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pedestrian"]={"pedestrian","[pəˈdestriən]","[pə'dɛstrɪən]","n.行人",'adj.徒步的,缺乏想像的|||n.行人','The driver was slanging a pedestrian who had got in his way.','那司机对挡他的路的行人破口大骂。','Being a good pedestrian is just as important as being a good driver.','做一个好的行人就像做一个好的司机一样重要。'}

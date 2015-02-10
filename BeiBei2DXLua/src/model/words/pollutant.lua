@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pollutant"]={"pollutant","[pə'l(j)uːt(ə)nt]","[pə'lutənt]","n.污染物质",'n.污染物质','Discharge pipe take pollutant away from the coastal area into the sea.','排泄管道将污染性物质由沿海岸区排入大海。','||Pollutants|| are constantly being released into the atmosphere.','污染物质正在不断地被排放到大气中去。'}

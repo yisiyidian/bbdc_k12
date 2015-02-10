@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["contemptuous"]={"contemptuous","[kən'tem(p)tjʊəs]","[kən'tɛmptʃuəs]","adj.轻视的",'adj.轻视的','You should not be contemptuous of underprivileged people.','你不应该看不起无权无势的人。','He gave a contemptuous laugh.','他轻蔑地笑了笑。'}

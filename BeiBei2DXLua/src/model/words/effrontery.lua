@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["effrontery"]={"effrontery","[ɪ'frʌnt(ə)rɪ]","[ɪ'frʌntrɪ]","n.厚颜无耻",'n.厚颜无耻','He had the effrontery to say I was lying.','他竟敢说我撒谎。','One could only gasp at the sheer effrontery of the man.','那人十足的厚颜无耻让人们吃惊得无话可说。'}

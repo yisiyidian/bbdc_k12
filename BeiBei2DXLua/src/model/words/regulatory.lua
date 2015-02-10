@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["regulatory"]={"regulatory","['rɛɡjələtɔri]","[ 'reɡjulətəri ]","adj.管理的",'adj.管理的,控制的,调整的','Complaint is referred to several regulatory body.','投诉提交给好几个管理机构。','Usually,the board is the regulatory agency of a company.','通常来讲，董事会是公司的管理机构。'}

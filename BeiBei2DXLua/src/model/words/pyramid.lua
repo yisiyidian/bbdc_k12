@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pyramid"]={"pyramid","['pɪrəmɪd]","['pɪrəmɪd]","n.金字塔",'n.金字塔|||vi.急速增加|||vt.以金字塔的模型构建','The ||Pyramid|| is among the seven wonders of the world.','古埃及大金字塔是世界七大奇观之一。','A pyramid of stones marked the spot.','那地点用一堆堆成金字塔形状的石头作了标记。'}

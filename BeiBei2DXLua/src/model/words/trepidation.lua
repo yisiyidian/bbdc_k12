@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trepidation"]={"trepidation","[,trepɪ'deɪʃ(ə)n]","[ ,trepideiʃən ]","n.恐惧",'n.恐惧,惊惶,忧虑','The threat of an epidemic caused great alarm and trepidation.','流行病猖獗使得人心惶惶。','There\'s always some amount of trepidation when you\'re starting a new job.','刚开始一份新工作时总会有些忧虑。'}

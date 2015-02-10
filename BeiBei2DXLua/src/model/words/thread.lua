@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thread"]={"thread","[θred]","[θrɛd]","n.线",'n.线,纤维,思路,线索,螺纹|||vt.穿线于,穿过,成线,遍布|||vi.小心地通过,蜿蜒前进,滴下成丝状','How many spools of thread did you use?','你用了几轴线?','The thread seems to match the cloth.','这线和这布似乎很相称。'}

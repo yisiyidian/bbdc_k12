@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tight"]={"tight","[taɪt]","[taɪt]","adj.紧的",'adj.紧的,严厉的,密集的,紧身的,拮据的|||adv.紧紧地,牢固地,迅速地','That fat woman looked ridiculous in her tight golden dress.','那位胖妇人穿着金色的紧身礼服，显得滑稽可笑。','This pair of trousers is too tight for me.','这条裤子我穿太紧了。'}

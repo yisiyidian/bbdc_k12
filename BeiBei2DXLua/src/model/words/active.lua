@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["active"]={"active","['æktɪv]","['æktɪv]","adj.积极的",'adj.积极的,主动的','The college students are active to crusade against the nuclear weapons.','大学生们积极投入开展反对核武器的运 动。','We should take active part in extracurricular activities.','我们应该积极参加课外活动。'}

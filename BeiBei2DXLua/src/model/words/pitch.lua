@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pitch"]={"pitch","[pɪtʃ]","[pɪtʃ]","n.音高",'n.程度,投掷,音高|||v.投,向前倾跌,扎牢,定调,用沥青覆盖','Let\'s pitch out the troublemakers.','把这些捣乱分子赶出去。','The ship pitched in the storm.','船在风暴中颠簸。'}

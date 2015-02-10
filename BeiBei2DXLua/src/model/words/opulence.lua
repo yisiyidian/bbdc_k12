@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["opulence"]={"opulence","['ɒpjʊl(ə)ns; 'ɒpjʊləns]","['ɑpjələns]","n.富裕(丰富)",'n.富裕(丰富)','He owes his opulence to work hard.','他的财富乃辛勤工作得来。','The room was decorated with stagy opulence.','那房间装饰得富丽堂皇，像戏台似的。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["snake"]={"snake","[sneɪk]","[snek]","n.蛇",'n.蛇|||vt.&vi.蜿蜒,扭曲','This snake is harmless.','这条蛇是无毒的。','The girl screamed at the sight of the snake.','那女孩看到蛇就尖叫起来。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decorum"]={"decorum","[dɪ'kɔːrəm]","[dɪ'kɔrəm]","n.礼仪",'n.端正,礼貌合宜,礼仪','I hope you will behave with decorum at the funeral.','我希望你在葬礼上能做到得体有礼。','She behaves with decorum.','她举止端庄有礼。'}

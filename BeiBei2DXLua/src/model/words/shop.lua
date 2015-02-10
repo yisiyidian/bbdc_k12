@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shop"]={"shop","[ʃɒp]","[ʃɑp]","n.商店",'n.商店|||vi.购物,寻找|||vt.购物,逛商店','I want this shop to run as smoothly as possible.','我想让这个机构办得尽可能顺利。','I usually go shopping on Sundays.','我通常星期天购物。'}

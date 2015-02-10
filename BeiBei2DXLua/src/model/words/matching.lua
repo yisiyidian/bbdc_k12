@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["matching"]={"matching","['mætʃɪŋ]","['mætʃɪŋ]","adj.匹配的",'adj.匹配的,相称的|||动词match的现在分词','She was wearing blue linen slacks and a matching silk shirt.','她穿着一条蓝色的亚麻布便裤,配着一件绸衬衫.','A set of independent edges in a graph is called a matching.','一个图中的独立边的一个集合称为一个匹配.'}

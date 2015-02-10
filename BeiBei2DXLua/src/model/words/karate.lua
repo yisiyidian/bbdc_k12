@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["karate"]={"karate","[kə'rɑti]","[ kə'rɑ:te ]","n.空手道(日本的一种徒手武术)",'n.空手道(日本的一种徒手武术)','Any of12 levels of proficiency at the grade of black belt in martial arts such as judo and karate.','段在东方武术中，黑腰带的级别精通达12级中的任一级，如柔道和空手道','A karate black belt chopped my knee when I sparred with him.','我和一个空手道黑带对打时，他砍了我膝盖。'}

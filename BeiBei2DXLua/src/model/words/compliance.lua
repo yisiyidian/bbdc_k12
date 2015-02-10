@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compliance"]={"compliance","[kəm'plaɪəns]","[kəm'plaɪəns]","n.承诺",'n.承诺,顺从,遵从','He was terrified into compliance.','他被吓唬得屈服了。','I was surprised by his compliance with these terms.','他竟然依从了这些条件，这让我感到很吃惊。'}

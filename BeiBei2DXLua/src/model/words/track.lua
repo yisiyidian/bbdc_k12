@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["track"]={"track","[træk]","[træk]","n.小路",'n.小路,跑道,轨道,踪迹;惯例,常规|||v.跟踪,追踪','We reached the temple through an unfrequented mountain track.','我们沿着一条人迹罕至的小径到达了寺庙。','The dog followed the fox\'s tracks into the woods.','那只狗沿着狐狸的足迹跑进了树林。'}

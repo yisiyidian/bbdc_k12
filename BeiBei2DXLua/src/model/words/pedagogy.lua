@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pedagogy"]={"pedagogy","['pedəgɒdʒɪ; -gɒgɪ]","['pɛdə'godʒi]","n.教育学",'n.教育学,教授法,教育','Mr. Brown is a master of pedagogy.','布朗先生是教育学的硕士。','We just don\'t have the money to reinvent the model of pedagogy.','我们没有钱重新建造教学模型。'}

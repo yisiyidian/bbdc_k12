@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["toneless"]={"toneless","['təʊnlɪs]","['tonləs]","adj.单调的",'adj.单调的,沉闷的','I tried to be open--minded about the rock concert, but the music was at best loud and at worst toneless.','对这场摇滚音乐会我要尽量思想开放些，但是其乐声充其量响度很高，更糟糕的是很不悦耳。','toneless','tonelessadj. 单调的,沉闷的'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unity"]={"unity","[ˈjuːnəti]","['junəti]","n.团结",'n.个体,一致,结合,团结','The meeting is seen as the first step towards greater unity between the parties.','这一会议可视为两党走向进一步联合的第一步.','The President made a call for national unity.','总统号召全国人民团结起来。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stub"]={"stub","[stʌb]","[stʌb]","n.断株",'n.断株,烟蒂|||v.挖除断株,连根拔除','||Stub|| out your cigarette in the ash tray.','把你俩的香烟在烟灰缸里捻熄。','I\'ve stubbed my toe on a rock.','我的脚趾碰到石头上了.'}

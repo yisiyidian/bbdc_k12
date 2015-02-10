@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quadruped"]={"quadruped","['kwɒdrʊped]","['kwɑdrupɛd]","n.四足兽",'n.四足兽|||adj.四足的','A person\'s arms homologize with a quadruped\'s forelimbs.','人的胳膊与四肢动物的前肢相应。','The African elephant is the largest quadruped on the planet.','非洲象是地球上最大的四足动物。'}

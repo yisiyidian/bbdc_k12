@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["explode"]={"explode","[ɪk'spləʊd; ek-]","[ɪk'splod]","vt.爆炸",'vt.爆炸,驳倒|||vi.爆炸,爆发(感情)，激增|||[计算机]爆炸','I\'m about to explode!','我肺都快要气炸了！','The bomb was timed to explode during the rush-hour.','炸弹选在人最多时爆炸.'}

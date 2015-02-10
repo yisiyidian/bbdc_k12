@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grove"]={"grove","[grəʊv]","[ɡrov]","n.小树林",'n.小树林，果树园','A small grove; a thicket.','小树丛；灌木丛','The farmer has an orange grove on the hillside.','那位农民在山坡上拥有一片桔子园。'}

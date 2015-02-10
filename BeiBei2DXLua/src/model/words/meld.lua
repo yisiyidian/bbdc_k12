@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["meld"]={"meld","[meld]","[ meld ]","v.合并",'v.合并|||n.摊牌|||n.混合，混合物','After meld mother pulls the tablecloth over the table.','饭后，妈妈把桌布蒙在桌子上。','a professional position that seemed to meld all his training','“需要结合运用其所学之职位”'}

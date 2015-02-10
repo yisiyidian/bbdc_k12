@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stranger"]={"stranger","['streɪn(d)ʒə]","['strendʒɚ]","n.陌生人",'n.陌生人','His habitual place at the table was occupied by a stranger.','他惯常坐在桌旁的位置被一个陌生人占据了。','She was accosted by a complete stranger.','有一个她完全不认识的人过来和她搭讪。'}

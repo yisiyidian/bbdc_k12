@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["regal"]={"regal","['riːg(ə)l]","[ 'ri:ɡəl ]","adj.帝王的",'adj.帝王的,适于帝王的','The Forbidden City is the place where the regal class lived.','故宫过去是皇族居住的地方。','The regal lady is her mother.','那位雍容华贵的女士是她妈妈。'}

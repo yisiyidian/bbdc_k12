@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dilettante"]={"dilettante","[,dɪlɪ'tænteɪ; -tɪ]","[,dɪlə'tænti]","n.浅薄涉猎者",'n.浅薄涉猎者,业余爱好者，艺术爱好者|||adj.浅薄的，业余的','He is a master of that area even if he is a dilettante.','虽然他只是个业余爱好者，但却是一流的高手。','He\'s a musical dilettante.','他只是粗通音乐。'}

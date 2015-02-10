@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flicker"]={"flicker","['flɪkə]","['flɪkɚ]","n.闪烁",'n.闪烁,闪光,颤动|||v.闪动,闪烁,摇动','All the lights flickered for a moment.','所有的灯都闪了一会儿。','A slender smile still flickered across her face.','她脸上闪过一丝微笑。'}

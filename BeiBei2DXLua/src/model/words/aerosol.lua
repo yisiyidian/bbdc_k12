@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aerosol"]={"aerosol","['eərəsɒl]","['ɛrəsɔl]","n.喷雾剂",'n.浮质，喷雾剂','an aerosol bomb','喷雾剂的小容器','Deodorants are available as aerosols or roll-ons.','除臭剂有喷雾装或滚抹装.'}

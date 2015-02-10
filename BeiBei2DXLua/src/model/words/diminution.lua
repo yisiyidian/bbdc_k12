@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diminution"]={"diminution","[,dɪmɪ'njuːʃ(ə)n]","['dɪmə'nʊʃən]","n.减少",'n.减少,缩小,减低','Age brought a gradual diminution of his strength and energy.','年龄使他的体力和精力逐渐减退。','They are hoping for a small diminution in taxes.','他们希望捐税能稍有减少。'}

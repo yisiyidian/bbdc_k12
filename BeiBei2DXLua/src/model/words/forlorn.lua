@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forlorn"]={"forlorn","[fə'lɔːn]","[fɚ'lɔrn]","adj.孤独的",'adj.孤独的,悲惨的,凄凉的','A forlorn and shipwrecked brother.','不幸沉船遇难，看见这足印。','She looked wretched and forlorn, despairing of the arrival of a friend who had promised to meet her.','她看上去又可怜又孤独，对于答应来看她的朋友的到来已不抱希望。'}

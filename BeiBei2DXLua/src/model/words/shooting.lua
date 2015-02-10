@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shooting"]={"shooting","['ʃuːtɪŋ]","['ʃutɪŋ]","n.发射",'n.发射,猎场','Do you wish when you see a shooting star?','你看见流星时提出愿望吗？','The plants are shooting up after the rain.','雨后草木长起来了。'}

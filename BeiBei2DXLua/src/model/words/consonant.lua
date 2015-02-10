@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consonant"]={"consonant","['kɒns(ə)nənt]","['kɑnsənənt]","n.辅音",'n.辅音|||adj.一致的,调和的,辅音的','English has 24 consonant phonemes.','英语有24个辅音音素.','This consonant often occurs','这个辅音字母总是出现'}

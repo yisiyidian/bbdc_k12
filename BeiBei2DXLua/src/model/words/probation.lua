@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["probation"]={"probation","[prə'beɪʃ(ə)n]","[pro'beʃən]","n.鉴定",'n.鉴定,试用,缓刑','The probation officer reported on the progress of the two young criminal.','监督缓刑官员对两个青少年犯的进步作了汇报。','The status of a person on probation.','察看在服缓刑（或在受察看）的状况'}

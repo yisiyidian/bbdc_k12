@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tribunal"]={"tribunal","[traɪ'bjuːn(ə)l; trɪ-]","[traɪ'bjunl]","n.法官席",'n.法官席,法院,法庭','The tribunal will convene tomorrow.','法庭将于明日开庭。','He was brought before the tribunal for trial.','他被送到法庭受审。'}

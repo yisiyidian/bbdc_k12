@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["delirious"]={"delirious","[dɪ'lɪrɪəs]","[dɪ'lɪrɪəs]","adj.神志昏迷的",'adj.神志昏迷的,不省人事的,发狂的','During the fever he become delirious and say some strange thing.','发高烧时他神志昏迷，说了些稀奇古怪的事。','She\'s delirious, but has lucid intervals.','她神志昏乱，但时而清醒。'}

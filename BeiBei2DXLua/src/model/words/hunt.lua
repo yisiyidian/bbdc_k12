@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hunt"]={"hunt","[hʌnt]","[hʌnt]","v.狩猎",'n.狩猎,追捕,搜寻|||v.狩猎,打猎,搜索','Wolves hunt in packs.','狼总是成群猎食.','The huntsman and I hunt the animals out of the garden.','猎人和我把动物赶出花园。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["acre"]={"acre","['eɪkə]","['ekɚ]","n.英亩",'n.英亩','The shepherd has penned up the sheep in the four acre field.','牧羊人把羊群围在那块四英亩的土地上。','The house has half an acre of lawn.','这座房子有半英亩草坪.'}

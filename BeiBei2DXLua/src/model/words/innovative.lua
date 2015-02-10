@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["innovative"]={"innovative","['ɪnəvətɪv]","['ɪnəvetɪv]","adj.革新的",'adj.革新的,创新的','An innovative leader in a field; a pioneer.','创始人某一领域内的革新领袖；先驱','I worked in a very innovative company.','我在一家非常富有创新精神的公司工作。'}

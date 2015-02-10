@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crudity"]={"crudity","['kruːdɪtɪ]","['krʊdəti]","n.粗糙",'n.粗糙,粗野','I\'d never met such crudity before.','我从未见过这样粗鲁的行径。','Fractured zone has a crudity surface with a pitch.','断裂带表面粗糙，并带有斜度。'}

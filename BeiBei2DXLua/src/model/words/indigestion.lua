@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indigestion"]={"indigestion","[ɪndɪ'dʒestʃ(ə)n; -daɪ-]","[,ɪndɪ'dʒɛstʃən]","n.消化不良",'n.消化不良','I overate at the party last night and got violent indigestion.','昨日晚宴我吃多了, 严重消化不良.','Don\'t bolt your food you\'ll get indigestion!','别这麽狼吞虎咽--你会消化不良的!'}

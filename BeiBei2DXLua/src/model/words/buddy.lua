@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["buddy"]={"buddy","['bʌdɪ]","['bʌdi]","n.伙伴",'n.伙伴，好朋友，兄弟|||vi.与...交朋友，合作|||adj.描述密友的，以密友为特征的','He and I were ||buddies|| at school.','他和我在学校是好朋友。','Watch it, buddy.','兄弟，当心'}

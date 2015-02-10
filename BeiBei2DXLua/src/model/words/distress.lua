@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["distress"]={"distress","[dɪ'stres]","[dɪ'strɛs]","n.苦恼",'n.苦恼,贫困,忧郁,恶化,扣押财物|||vt.使...苦恼,仿造|||adj.亏本出售的','His wild behavior was a great distress to his mother.','他的放荡的行为使他的母亲极为苦恼。','They sent a distress rocket.','他们发出了一枚呼救信号火箭。'}

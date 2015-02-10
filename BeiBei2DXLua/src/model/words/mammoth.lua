@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mammoth"]={"mammoth","['mæməθ]","['mæməθ]","n.长毛象",'n.长毛象|||adj.长毛象似的,巨大的','The mammoth fell into an ice crevasse.','那头猛犸掉进冰河裂缝里了。','A mammoth is a large hairy type of elephant in ancient times.','猛犸是古代一种身体庞大、长着长毛的大象。'}

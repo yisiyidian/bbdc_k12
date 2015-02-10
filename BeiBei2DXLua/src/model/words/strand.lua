@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["strand"]={"strand","[strænd]","[strænd]","n.（绳子的）股",'n.（绳子的）股，绞；海滨，河岸；（思想等的）一个组成部分|||vt.使滞留，使搁浅；使陷于困境|||vi.搁浅；陷入困境','The ||Strand|| is one of London\'s busiest thoroughfares.','斯特兰德大街是伦敦最热闹的要道之一。','She twirled a strand of hair round her finger.','她把一绺头发卷绕在手指上.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abrasion"]={"abrasion","[ə'breɪʒ(ə)n]","[ə'breʒən]","n.磨减",'n.磨减,磨损,磨损之处','A hole or worn spot made by abrasion or erosion.','侵蚀处由于侵蚀或磨擦形成的洞或破处','Poorly crystallized diamonds used for industrial cutting and abrasion.','结晶差的金刚石用作工业切割和研磨。'}

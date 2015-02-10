@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cheer"]={"cheer","[tʃɪə]","[tʃɪr]","n.欢呼",'n.愉快,激励,欢呼|||vt.加油,鼓舞,快活起来|||vi.使振奋,欢呼','They cheered loudly for their football team.','他们大声地为自己的足球队喊加油。','He cheered up at the thought of seeing her again.','想到再次见到她，他就高兴起来。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["entrepreneur"]={"entrepreneur","[,ɒntrəprə'nɜː]","[,ɑntrəprə'nɝ]","n.企业家",'n.企业家','He\'s a successful entrepreneur in the newly developed industry.','他是新兴行业中一个成功的企业家。','The true entrepreneur is a doer, not a dreamer.','真正的创业者是实干家，而不是梦想家。'}

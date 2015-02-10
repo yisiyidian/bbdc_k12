@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["morning"]={"morning","['mɔːnɪŋ]","['mɔrnɪŋ]","n.早晨",'n.早晨,上午,开端','Did you really feel ill this morning?','今天早晨你真的感到身体不适吗？','I\'ll ring her up in the morning.','我明天上午给她打电话。'}

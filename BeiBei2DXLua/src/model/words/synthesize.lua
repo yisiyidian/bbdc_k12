@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["synthesize"]={"synthesize","['sɪnθəsaɪz]","['sɪnθəsaɪz]","v.合成",'v.合成','The two elements are synthesized by a chemical process.','这两种元素已经化学合成.','His works synthesize photography, painting and linguistic devices','“他的作品综合了摄影、绘画及语言学的技巧”'}

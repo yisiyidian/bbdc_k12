@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["casting"]={"casting","['kɑːstɪŋ]","['kæstɪŋ]","n.投掷",'n.投掷','The company is casting its net wide in its search for a new sales director.','公司撒开大网到处物色新的销售主任.','We\'re casting (the play) next week.','我们下星期挑选（话剧）演员.'}

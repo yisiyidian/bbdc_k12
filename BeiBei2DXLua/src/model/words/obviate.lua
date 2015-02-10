@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obviate"]={"obviate","['ɒbvɪeɪt]","['ɑbvɪet]","v.除去",'v.除去,排除,回避','||Obviating|| any kind of interfernce makes one succeed.','排除一切干扰才能成功。','We could never obviate death.','人必有一死。'}

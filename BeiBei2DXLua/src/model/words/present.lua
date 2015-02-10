@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["present"]={"present","['prez(ə)nt]","['prɛznt]","n.礼物",'n.礼物,现在|||adj.当面的,出席的,现在的|||v.赠送,提出,呈现','Falling interest rates present the firm with a new problem.','利息一下降给公司带来了一个新的问题。','the present leader; present trends.','现任领导，目前的潮流'}

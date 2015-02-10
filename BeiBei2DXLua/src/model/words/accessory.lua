@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accessory"]={"accessory","[ək'ses(ə)rɪ]","[ək'sɛsəri]","adj.附属的",'adj.附属的(副的,辅助的)|||n.附件，同谋','Every item shall include a standard complement of ||accessories|| and special tools to ensure the normal operation.','为保证设备的正常运转，每个品目都应包括一套标准定额的附件和专用工具。','He is Tom\'s accessory.','他是汤姆的帮凶。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["melody"]={"melody","['melədɪ]","['mɛlədi]","n.旋律",'n.旋律,曲子,美的音乐,曲调','The beautiful melody is lingering in my mind.','美妙的音乐在我心中回荡。','The song has plaintive melody.','这首歌曲的曲调悲伤。'}

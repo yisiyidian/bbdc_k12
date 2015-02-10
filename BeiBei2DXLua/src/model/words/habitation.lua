@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["habitation"]={"habitation","[hæbɪ'teɪʃ(ə)n]","[,hæbɪ'teʃən]","n.居住",'n.居住,住所','There is no sign of human inhabitation ten miles around this place.','此处方圆十英里杳无人烟。','This house is unfit for human habitation.','这所房子不适合人居住。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sagacious"]={"sagacious","[sə'geɪʃəs]","[sə'ɡeʃəs]","adj.聪明的",'adj.聪明的,睿智的','He is a sagacious person.','他是个精明的人。','The leader made a sagacious decision.','领导做了英明的决定。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hereafter"]={"hereafter","[hɪər'ɑːftə]","['hɪr'æftɚ]","n.将来",'n.将来,来世|||adv.此后,将来,来世','Hope to win salvation hereafter.','希望将来得到灵魂拯救','Do you believe in the hereafter?','你相信来世吗？'}

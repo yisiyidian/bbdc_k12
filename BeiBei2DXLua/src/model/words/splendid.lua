@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["splendid"]={"splendid","['splendɪd]","['splɛndɪd]","adj.极好的",'adj.极好的','I was absolutely green (with envy) when I saw his splendid new car.','我看到他那辆漂亮的新汽车就非常眼红.','The royal couple appeared in splendid array.','王室伉俪身穿盛装出现.'}

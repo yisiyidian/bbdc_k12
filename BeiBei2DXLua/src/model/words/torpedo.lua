@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["torpedo"]={"torpedo","[tɔː'piːdəʊ]","[tɔr'pido]","n.水雷",'n.水雷,地雷|||v.用鱼雷破坏','The torpedo homed in on its target.','鱼雷射向目标.','The ship was sunk by an enemy torpedo.','这艘船被敌人的鱼雷击沉了。'}

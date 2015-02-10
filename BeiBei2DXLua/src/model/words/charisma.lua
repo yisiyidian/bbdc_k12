@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["charisma"]={"charisma","[kə'rɪzmə]","[kə'rɪzmə]","n.非凡的领导力",'n.非凡的领导力,教祖般的指导力,神授的能力','He was elected to power on the strength of his charisma.','他凭借其个人魅力而当选掌权。','He has neither the policies nor the personal charisma to inspire people.','他既无谋略又无个人魅力来鼓舞人。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["snowflake"]={"snowflake","['snəʊfleɪk]","['snoflek]","n.雪花",'n.雪花,雪片','||Snowflakes|| are melting as they reached the ground.','雪花触地便融化了。','||Snowflakes|| were melting in her hair.','雪花在她的头发里融化。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impel"]={"impel","[ɪm'pel]","[ɪm'pɛl]","v.驱使",'v.驱使,逼迫','The President\'s speech impelled the nation to greater efforts.','总统的讲话激励国民更加努力.','||Impelled|| by feelings of guilt, John wrote to apologize.','约翰有感愧疚, 於是写信道歉.'}

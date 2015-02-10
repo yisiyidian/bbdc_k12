@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["feminine"]={"feminine","['femɪnɪn]","['fɛmənɪn]","adj.女性的",'adj.女性的','Neither masculine nor feminine in gender.','中性的既非阳性也非阴性的','That\'s a feminine reaction.','这是女性特有的反应。'}

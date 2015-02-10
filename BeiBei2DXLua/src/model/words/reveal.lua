@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reveal"]={"reveal","[rɪ'viːl]","[rɪ'vil]","vt.显示",'vt.显示,透露|||n.(外墙与门或窗之间的)窗侧,门侧|||n.(汽车的)窗框','Government employees swear an oath not to reveal official secrets.','政府雇员宣誓不泄露官方机密.','An intensive search failed to reveal any clues.','经过彻底搜查未发现任何线索.'}

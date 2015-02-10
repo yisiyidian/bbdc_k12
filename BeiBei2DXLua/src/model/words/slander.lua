@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slander"]={"slander","['slɑːndə]","['slændɚ]","n.中伤",'n.中伤,毁谤|||v.中伤,毁谤','It\'s a malignant slander to me.','这对我是恶意的诽谤。','He claims he was slandered at the meeting.','他声称在会上受人诋毁。'}

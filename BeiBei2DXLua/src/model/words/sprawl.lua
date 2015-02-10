@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sprawl"]={"sprawl","[sprɔːl]","[sprɔl]","vi.躺卧(蔓延)",'vi.1.躺卧(蔓延)|||2.(植物)蔓生,蔓延|||n.躺卧(蔓延)','They were sprawled out in front of the fire.','他们摊开手脚烤火。','He was sprawling in the sofa in front of the TV.','他伸开手脚坐在电视机前的沙发上。'}

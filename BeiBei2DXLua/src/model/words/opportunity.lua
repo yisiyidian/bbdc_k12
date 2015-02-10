@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["opportunity"]={"opportunity","[ɒpə'tjuːnɪtɪ]","[ˌɑpɚˈtunɪti, -ˈtju-]","n.机会",'n.机会,时机','Showoffs never miss an opportunity to draw attention to themselves by some outrageous novelty.','爱显示自己的人遇事总喜欢标新立异。','You must grasp this opportunity.','你必须抓住机会。'}

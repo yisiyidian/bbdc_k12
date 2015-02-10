@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["offend"]={"offend","[ə'fend]","[ə'fɛnd]","vt.犯罪",'vt.犯罪,冒犯|||vi.令人不适,违反','A politic man tries not to offend people.','精明的人尽量不得罪人。','No one dare to offend the fiery person.','没人敢惹这个脾气急躁的人。'}

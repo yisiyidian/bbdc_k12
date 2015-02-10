@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["locomotive"]={"locomotive","[ləʊkə'məʊtɪv]","[,lokə'motɪv]","n.火车头",'n.火车头,机关车|||adj.运转的,火车头的,移动的','The locomotive has broken down.','火车头坏了.','How many coaches can that locomotive pull?','那个火车头能拉多少节车厢?'}

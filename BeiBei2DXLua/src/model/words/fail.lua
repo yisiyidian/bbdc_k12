@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fail"]={"fail","[feɪl]","[fel]","vi.失败",'vi.衰退,失败,不及格|||vt.辜负,缺少,未能做|||n.不及格','Several banks failed during the depression.','有几家银行在不景气时期倒闭了。','He never fails to write to his mother every week.','他从来没有忘记每周给母亲写信。'}

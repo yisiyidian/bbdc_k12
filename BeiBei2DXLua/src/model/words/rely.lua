@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rely"]={"rely","[rɪ'laɪ]","[rɪ'laɪ]","v.倚赖",'v.信赖,倚赖,信任','They have to rely on the river for their water.','他们用水只好依靠这条河。','I think I can come, but don\'t rely on it.','我想我能来，但还说不定。'}

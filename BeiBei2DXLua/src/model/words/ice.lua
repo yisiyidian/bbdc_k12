@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ice"]={"ice","[aɪs]","[aɪs]","n.冰",'n.冰,矜持|||v.冰冻,结冰','Two choc-ices, please.','请来两份巧克力冰激凌.','In winter the lake is covered with ice.','冬天时湖面上覆盖着冰。'}

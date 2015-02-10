@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["foreman"]={"foreman","['fɔːmən]","['fɔrmən]","n.领班",'n.领班,工头,陪审团团长','Jones said that his train had been delayed; the foreman gave him the benefit of the doubt and did not reduce his pay for being late.','琼斯说他的火车误点了, 领班在没有相反证据之前给予肯定的判断, 并且没有因为迟到而减少他的薪金。','The foreman is always swearing at the workers.','那工头总是对工人骂骂咧咧.'}

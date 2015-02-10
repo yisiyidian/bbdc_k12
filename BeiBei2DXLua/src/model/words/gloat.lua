@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gloat"]={"gloat","[gləʊt]","[ɡlot]","v.满足地看",'v.满足地看，沾沾自喜，幸灾乐祸','You shouldn\'t gloat over the other\'s failure.','不要对别人的失败幸灾乐祸。','Don\'t gloat over minor achievements.','别因为小成就沾沾自喜。'}

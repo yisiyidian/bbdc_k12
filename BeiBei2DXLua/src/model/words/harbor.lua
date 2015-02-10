@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["harbor"]={"harbor","['hɑ:bə]","['hɑrbɚ]","n.海港",'n.海港,避难所|||vt.庇护,心怀,窝藏|||vi.进入避祸所,生存','The bombers made a sudden strike on the harbor.','轰炸机对这港口进行了一次突然袭击。','The disabled ship coasted the island, looking for a harbor.','那艘损坏的船只在海岛沿岸航行以寻找港口。'}

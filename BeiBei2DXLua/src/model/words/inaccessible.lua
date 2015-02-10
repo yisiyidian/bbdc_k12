@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inaccessible"]={"inaccessible","[ɪnək'sesɪb(ə)l]","[,ɪnæk'sɛsəbl]","adj.难接近的",'adj.难接近的,难达到的,难达成的','The cave is inaccessible, high up the top of a cliff which no one can climb.','那个洞穴在没人能爬的高耸的悬崖顶上，无法进入。','His busy schedule made him completely inaccessible to his students.','他的时间排得很满，学生根本无法和他接触。'}

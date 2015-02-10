@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["connotation"]={"connotation","[kɒnə'teɪʃ(ə)n]","[,kɑnə'teʃən]","n.隐含意义",'n.隐含意义，某事的重要性','Hollywood holds connotations of romance and glittering success.','好莱坞一词包含了浪漫与耀眼的成就的含意。','It\'s just one of those words that\'s got so many negative connotations.','这只是那种有太多负面含义的词之一。'}

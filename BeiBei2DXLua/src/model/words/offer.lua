@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["offer"]={"offer","['ɒfə]","['ɔfɚ]","n.提供",'n.出价,提议|||vt.提供,出价;贡献,奉献|||vi.提议;出现;求婚','He came towards me, smiled and offered his hand.','他向我走来，微笑著伸出手来和我握手。','Ask her about it when a suitable moment offers itself.','这个问题你在适当的时候问问她吧。'}

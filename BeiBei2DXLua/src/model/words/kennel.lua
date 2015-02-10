@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kennel"]={"kennel","['ken(ə)l]","['kɛnl]","n.狗舍",'n.狗舍,狗窝|||n.沟渠|||v.置于狗舍,宿于狗舍','Their dog Rover lives in a kennel in the back garden.','他们的小狗罗佛的窝在后花园。','We put the dog into a kennel when we go on holiday.','我们去度假时把狗送到养狗场寄养。'}

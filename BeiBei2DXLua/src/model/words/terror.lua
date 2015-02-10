@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["terror"]={"terror","['terə]","['tɛrɚ]","n.恐怖",'n.恐怖，惊骇，令人惧怕或讨厌的人或事物','Her face worked as she stared at him in terror.','她惊恐地注视著他, 脸也吓得抽动起来.','The horse bolted in terror at the sound of the gun.','枪声把马吓惊了.'}

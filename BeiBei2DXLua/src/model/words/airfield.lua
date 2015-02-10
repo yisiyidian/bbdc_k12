@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["airfield"]={"airfield","['eəfiːld]","['ɛrfild]","n.飞机场",'n.飞机场','The perimeter of the airfield is protected by guard-dogs.','机场外的环形防卫圈由警犬保卫着。','Guards patrolled the perimeter of the airfield.','卫兵沿机场四周巡逻.'}

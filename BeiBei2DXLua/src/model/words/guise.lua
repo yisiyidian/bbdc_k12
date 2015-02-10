@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["guise"]={"guise","[gaɪz]","[ɡaɪz]","n.装束",'n.装束，外观，伪装，借口','I see myself at different moments of history, in various guises and occupations.','我想象自己生活在不同的历史时期，以不同的模样出现，从事着不同的工作。','They got into the school in the guise of inspectors.','他们假装成视察员进了学校。'}

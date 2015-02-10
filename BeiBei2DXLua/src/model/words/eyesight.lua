@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eyesight"]={"eyesight","['aɪsaɪt]","['aɪsaɪt]","n.视力",'n.视力','His eyesight is failing.','他的视力渐渐衰退了.','His bad eyesight exempted him from military service.','他因视力不好而免服兵役.'}

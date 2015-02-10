@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["debar"]={"debar","[dɪ'bɑː]","[dɪ'bɑr]","v.排出",'v.排出,防止,禁止','the decision to debar particular immigrants','禁止特殊移民的决定','...the decision to debar particular immigrants.','... 禁止特殊移民的决定。'}

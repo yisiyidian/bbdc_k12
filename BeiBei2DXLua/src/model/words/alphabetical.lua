@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alphabetical"]={"alphabetical","[ælfə'betɪk(ə)l]","[,ælfə'bɛtɪkl]","adj.按字母表顺序的",'adj.按字母表顺序的','You must arrange these books in alphabetical order.','你要把这些书按字母顺序排好.','The words in the dictionary are arranged in alphabetical order.','词典中的词是按字母顺序排列的.'}

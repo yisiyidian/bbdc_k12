@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["virile"]={"virile","['vɪraɪl]","['vɪrəl]","adj.男性的",'adj.男性的,男的,有男子气概的,精力充沛的','She loved the virile young swimmer.','她爱上了那个有男子气概的年轻游泳运动员。','His style of singing is very virile.','他演唱的风格浑厚有力。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inventor"]={"inventor","[ɪn'ventə]","[ɪn'vɛntɚ]","n.发明家",'n.发明家，创造者','The machine takes its name from its inventor.','这机器的名字来自其发明者。','Edison won his spurs as an inventor while rather young.','爱迪生很年轻的时候就获得了发明家的声誉.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["guard"]={"guard","[gɑːd]","[ɡɑrd]","vt.&vi.保卫",'n.守卫者,警戒,护卫队,保护|||vt.&vi.保卫,看守,警惕','He bribed his way past the guard and escaped.','他买通看守而逃之夭夭了。','Be on guard when somebody flatters you.','有人奉承你时, 一定要当心。'}

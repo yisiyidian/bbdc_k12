@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ingenuous"]={"ingenuous","[ɪn'dʒenjʊəs]","[ɪn'dʒɛnjuəs]","adj.坦白的",'adj.坦白的,正直的,天真的','She is too ingenuous in believing what others say.','她太天真，轻易相信别人的话。','She gave ingenuous answers to the stranger\'s entire question.','对于这个陌生人提出的问题，她作出了坦率的回答。'}

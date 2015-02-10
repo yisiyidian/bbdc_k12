@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["odometer"]={"odometer","[əʊ'dɒmɪtə]","[o'dɑmətɚ]","n.里程表",'n.里程表','All eyes, except the driver’s, were fastened on the odometer as it moved from 9,999.9 to 10,000 miles.','当车上的里程表从九千九百九十九点九哩移动至一万里时，除了驾驶员，所有的眼睛都盯着它看。','That\'s probably because my odometer is broken,I mean,malfunctioning','看上去是我的里程表坏了'}

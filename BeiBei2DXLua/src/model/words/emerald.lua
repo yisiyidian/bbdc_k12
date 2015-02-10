@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emerald"]={"emerald","['em(ə)r(ə)ld]","['ɛmərəld]","n.翡翠",'n.翡翠,绿宝石,翠绿色|||adj.翡翠的,翠绿色的','An emerald of that size, unflawed, would be worth a king\'s ransom.','一块那么大、而又无瑕疵的绿宝石会是价值连城的。','The pendant was set with pearls surrounding an emerald.','这耳坠中间是一块翡翠，四周镶着珍珠。'}

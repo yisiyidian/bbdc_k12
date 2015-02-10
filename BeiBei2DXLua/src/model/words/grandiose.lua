@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grandiose"]={"grandiose","['grændɪəʊs]","['ɡrændɪos]","adj.宏伟的",'adj.宏伟的,堂皇的,浮夸的','We must do away with the grandiose style of work.','我们必须摈弃浮夸的工作作风。','His grandiose manner impressed those who met him for the first time.','他那种夸大的举止给第一次遇见他的人留下了深刻的印象。'}

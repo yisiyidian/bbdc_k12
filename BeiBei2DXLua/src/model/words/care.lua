@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["care"]={"care","[keə]","[kɛr]","n.小心",'n.小心,照料,忧虑，慎思，焦虑因素|||vi.关心,照顾,喜爱|||vt.介意,希望|||abbr.=CooperativeforAmericanRemittancestoEurope汇款到欧洲合作社','Her secretary took care of all her appointments.','她的秘书处理她的一切约会。','Mr Smith takes care of marketing and publicity.','史密斯先生负责产品的销售与推广。'}

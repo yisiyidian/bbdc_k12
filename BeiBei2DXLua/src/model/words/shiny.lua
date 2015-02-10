@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shiny"]={"shiny","['ʃaɪnɪ]","['ʃaɪni]","adj.有光泽的",'adj.有光泽的,发光的,辉煌的','He saw a shiny green beetle on a leaf.','我看见树叶上有一只闪闪发光的绿色甲虫.','She gazed proudly at the shiny buckles on her shoes.','她骄傲地注视着鞋上闪亮的扣环.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["optimal"]={"optimal","['ɒptɪm(ə)l]","['ɑptəml]","adj.最佳的",'adj.最佳的,最理想的','The ergonomics of the new office were felt to be optimal.','新办公室工效设计因素感觉十分理想','You are the optimal person of the position.','你是这个职位的最佳人选。'}

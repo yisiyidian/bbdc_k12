@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["survey"]={"survey","[sə'veɪ]","['sɝve]","n.调查",'n.调查;纵览,视察,测量|||vt.审视,视察,通盘考虑,调查;勘测|||vi.测量,勘测','Only children under five are excepted from this survey.','这次调查仅仅不包括五岁以下的儿童.','This survey is the work of a real professional.','这份调查是真正内行人做的.'}

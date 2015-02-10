@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["masculine"]={"masculine","['mæskjʊlɪn]","['mæskjəlɪn]","n.阳性",'n.阳性,男性|||adj.男性的,阳性的,有丈夫气的','There are three genders in German: masculine, feminine and neuter.','德语中有三性: 阳性、 阴性和中性.','a masculine cadence.','一个阳性终止的曲调'}

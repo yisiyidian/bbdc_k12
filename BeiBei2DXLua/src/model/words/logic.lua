@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["logic"]={"logic","['lɒdʒɪk]","['lɑdʒɪk]","n.逻辑(学)",'n.逻辑(学),逻辑性,合理的推理','His thinking goes against all logic.','他的思维完全不合逻辑.','Loosely, a mathematical or logic operator.','不严格地说，一种数学或逻辑运算符。'}

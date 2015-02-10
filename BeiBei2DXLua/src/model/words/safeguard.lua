@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["safeguard"]={"safeguard","['seɪfgɑːd]","['sefɡɑrd]","n.保卫",'n.保卫,保护措施或条款|||v.保卫,保护','The Bill of Rights safeguards our individual liberties.','权力法案保护我们的个人自由。','We make copies of our computer disks as a safeguard against accidents.','我们复制了计算机磁盘以防意外。'}

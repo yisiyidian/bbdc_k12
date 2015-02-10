@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["barber"]={"barber","['bɑːbə]","['bɑrbɚ]","n.理发师",'n.理发师','He is a man of parts; he is either a repairman, or a carpenter, either a barber or a good tailor.','他是一个多面手，既是修理工，也是木匠，既是一个理发师，也是一个好裁缝。','I hope I remember to ask the barber not to cut my hair too short.','我希望我记得要要求理发师不要把我的头发理得太短。'}

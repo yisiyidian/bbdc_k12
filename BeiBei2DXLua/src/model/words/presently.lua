@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["presently"]={"presently","['prez(ə)ntlɪ]","['prɛzntli]","adv.目前",'adv.不久,一会儿,现在,目前','||Presently|| the tumult died down.','一会儿工夫骚动平息了下来。','The doctor will be here presently.','医生一会儿就到。'}

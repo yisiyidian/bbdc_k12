@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["violet"]={"violet","['vaɪələt]","['vaɪələt]","n.紫罗兰",'n.紫罗兰,紫色|||adj.紫色的','Red and violet are at opposite ends of the spectrum.','红色和紫色位于光谱相对的两端。','A moderate, light, or brilliant violet to moderate or deep reddish purple.','淡紫红色轻淡、适度或明亮的紫罗兰色，适度或深红紫色'}

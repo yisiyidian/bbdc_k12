@@ -82,7 +82,7 @@ function BookLayer.create()
             
                 playSound(s_sound_buttonEffect)   
 
-                s_WordDictionaryDatabase.nextframe = WDD_NEXTFRAME_STATE__RM_LOAD
+                if IS_DEVELOPMENT_MODE then s_WordDictionaryDatabase.nextframe = WDD_NEXTFRAME_STATE__RM_LOAD end
             end
         end
         table.insert(func_array, click)

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["afflict"]={"afflict","[ə'flɪkt]","[ə'flɪkt]","vt.使苦恼",'vt.使苦恼,折磨','She was afflicted with conscience.','她受良心责备。','She usually doesn\'t have breakfast in the morning, and that\'s why she is always afflicted with stomachache.','她早上经常不吃饭，所以常常受胃痛的折磨。'}

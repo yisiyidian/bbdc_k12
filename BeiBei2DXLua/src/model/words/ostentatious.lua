@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ostentatious"]={"ostentatious","[,ɒsten'teɪʃəs]","[,ɑstɛn'teʃəs]","adj.装饰表面的",'adj.装饰表面的,浮夸的,华美的','Obviously he had plenty of money and was generous in its use without being ostentatious.','显而易见，他有很多钱，花钱虽大方却不摆阔。','He gave an ostentatious yawn.','他夸张地打了个哈欠。'}

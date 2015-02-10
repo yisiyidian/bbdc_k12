@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hegemony"]={"hegemony","[hɪ'dʒemənɪ; -'ge-]","[hɪ'dʒɛmoni]","n.霸权",'n.霸权,领导权','We stand together in opposing expansionism and hegemony.','我们两国都反对扩张主义和霸权主义。','China will never seek hegemony and never go in for expansion.','中国永不称霸，也不会对外扩张。'}

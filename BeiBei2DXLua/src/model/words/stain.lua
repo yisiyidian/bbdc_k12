@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stain"]={"stain","[steɪn]","[sten]","n.污染",'n.污染,污点,著色|||v.沾染,染污,著色','How much stain should I buy for the table?','给这张桌子上色，我得买多少颜料？','I can\'t get these coffee stains out of the carpet.','我弄不掉地毯上的咖啡污迹。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outstanding"]={"outstanding","[aʊt'stændɪŋ]","['aʊt'stændɪŋ]","adj.突出的",'adj.突出的,显著的,未支付的','He has many outstanding gifts.','他多才多艺.','Several clubs have already staked a/their claim to this outstanding young footballer.','有几个足球俱乐部均表示这个年轻的足球健将是他们的人.'}

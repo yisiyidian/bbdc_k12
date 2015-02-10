@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["proxy"]={"proxy","['prɒksɪ]","['prɑksi]","n.代理",'n.代理,代理人,取代物|||adj.代理的','Those not attending the meeting may vote by proxy.','没有到会的人可由别人代为投票。','You can vote either in person or by proxy.','你可以亲自投票或者代理'}

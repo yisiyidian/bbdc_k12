@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prude"]={"prude","[pruːd]","[prud]","n.装成规矩的女人",'n.装成规矩的女人,过份正经,谦虚的女人','She was such a prude that she was even embarrassed by the sight of naked children.','她太过正经，甚至见了赤身裸体的孩子也难为情。','Her sister is a such prude that nobody would like to communicate with her.','她妹妹太拘谨了，没人愿意和她交谈。'}

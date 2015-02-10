@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sabotage"]={"sabotage","['sæbətɑːʒ]","[,sæbə'tɑʒ]","n.怠工",'n.怠工,破坏活动,破坏|||vt.从事破坏活动,妨害,破坏','Several acts of sabotage are committed against radio station.','发生好几起对电台财产的蓄意破坏。','Owing to sabotage, a train jumped the rails.','由于受到破坏，一列火车出轨了。'}

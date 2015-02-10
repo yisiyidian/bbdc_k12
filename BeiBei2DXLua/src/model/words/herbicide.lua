@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["herbicide"]={"herbicide","['hɜːbɪsaɪd]","['ɝbɪsaɪd]","n.除草剂",'n.除草剂','This herbicide degrades in moist soil.','这种除草剂在潮湿的土壤中分解。','However, some experts say that herbicide-resistant weeds could cause serious problems.','但是一些专家指出，对除草剂产生抗体的杂草会导致很严重的问题。'}

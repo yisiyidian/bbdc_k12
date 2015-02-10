@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dexterous"]={"dexterous","['dekst(ə)rəs]","['dɛkstrəs]","adj.灵巧的",'adj.灵巧的，机灵的|||=dextrous','I was secretly afraid of him when I saw him so dexterous.','看了他那股灵活劲儿，我心里倒是暗暗有几分怕他。','The manager was dexterous in handling his staff.','那位经理善於运用他属下的职员。'}

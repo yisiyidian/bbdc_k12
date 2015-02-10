@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["horizon"]={"horizon","[hə'raɪz(ə)n]","[hə'raɪzn]","n.地平线",'n.地平线；视野；眼界','The mountainous island loomed on the horizon.','那座巨大的岛屿隐隐约约浮现在地平线上。','A surge of innovation in techniques is on the horizon.','技术改进的浪潮即将出现。'}

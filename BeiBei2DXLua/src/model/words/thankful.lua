@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thankful"]={"thankful","['θæŋkfʊl; -f(ə)l]","['θæŋkfl]","adj.感谢的",'adj.感谢的，感激的','It may be cold but it\'s not raining -- let\'s be thankful for small mercies.','尽管天气很冷, 但没有下雨--应该知足了.','We were thankful for his help.','我们感谢他的帮助。'}

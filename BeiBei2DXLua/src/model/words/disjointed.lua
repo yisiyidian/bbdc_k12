@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disjointed"]={"disjointed","[dɪs'dʒɒɪntɪd]","[dɪs'dʒɔɪntɪd]","adj.脱节的",'adj.脱节的,杂乱的|||动词disjoint的过去式和过去分词形式','The film was so disjointed that I couldn\'t tell you what the story was about.','那部电影的情节支离破碎，我简直说不出个所以然来。','Sally was used to his disjointed, drunken ramblings.','萨莉习惯了他醉酒后毫无逻辑的胡言乱语。'}

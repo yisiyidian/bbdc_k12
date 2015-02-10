@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scooter"]={"scooter","['skuːtə]","['skutɚ]","n.踏板车",'n.踏板车,小型摩托车','For sale: small motor scooter. Enquire within.','待售：小型摩托车, 请进内询问。','When scootering down the streets of Asian cities, you cannot help but breathe in noxious car fumes.','在亚洲的城市骑机车上街时，常会吸进汽车排放的有毒废气。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["estranged"]={"estranged","[ɪ'streɪndʒd]","[ɪ'strendʒd]","adj.疏远的",'adj.疏远的,隔离的|||动词estrange的过去式和过去分词形式','I didn\'t realize that Arthur was estranged from his wife.','我没意识到阿瑟和他妻子已经分居了。','The affair has estranged him from his family.','这件事已经让他和家人变得疏远了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vegetarian"]={"vegetarian","[vedʒɪ'teərɪən]","['vɛdʒə'tɛrɪən]","n.素食者",'n.素食者|||adj.素食的','Not a few of my friends are vegetarian.','我朋友中不少人吃素.','Pulses are a good source of protein for vegetarians.','对於素食者来说, 豆类食物是蛋白质的理想来源.'}

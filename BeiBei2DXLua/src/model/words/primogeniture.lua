@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["primogeniture"]={"primogeniture","[,praɪmə(ʊ)'dʒenɪtʃə]","[,praɪmo'dʒɛnɪtʃɚ]","n.长子之身分",'n.长子之身分，[法]长嗣继承权','He inherited his father by right of his primogeniture.','他凭着长子继承权，继承了他父亲的财产。','He can own the house just becuse his primogeniture.','他之所以能拥有那栋房子，是因为他有长子继承权。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reproduction"]={"reproduction","[riːprə'dʌkʃ(ə)n]","[,riprə'dʌkʃən]","n.再现",'n.再现,复制,生殖，幼树','Her description of the meeting is an exact reproduction of the reunion.','她对会面的描述是这次团聚的真实再现。','Is that painting an original or a reproduction?','那幅画是原作还是复制品？'}

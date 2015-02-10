@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["doctrinaire"]={"doctrinaire","[,dɒktrɪ'neə]","[,dɑktrə'nɛr]","n.教条主义者",'n.教条主义者，空论家,纯理论家|||adj.教条主义的，空论的,纯理派的','He is firm but not doctrinaire.','他很坚定但并不教条。','doctrinaire','教条主义的'}

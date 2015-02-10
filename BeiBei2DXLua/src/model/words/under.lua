@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["under"]={"under","['ʌndə]","['ʌndɚ]","prep.在...下",'prep.在...下,在...内,在...控制下,低于|||adv.在...下,在昏迷中,淹没地|||adj.下面的,从属的,少于的','He\'s very much under the influence of the older boys.','那些比他大的男孩对他影响很大。','She pushed all her hair under a headscarf.','她把头发都让头巾罩住。'}

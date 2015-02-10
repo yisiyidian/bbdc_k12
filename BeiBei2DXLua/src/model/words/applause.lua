@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["applause"]={"applause","[ə'plɔːz]","[ə'plɔz]","n.鼓掌",'n.鼓掌,喝彩,赞许|||v.鼓掌','As the President\'s car arrived, the crowd broke into loud applause.','总统的汽车到达时，群众中爆发出热烈的掌声。','The stillness was rent by thunderous applause.','雷鸣般的掌声打破了寂静。'}

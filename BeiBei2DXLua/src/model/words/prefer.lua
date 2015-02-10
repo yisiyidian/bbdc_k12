@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prefer"]={"prefer","[prɪ'fɜː]","[prɪ'fɝ]","vt.更喜欢",'vt.更喜欢；提升，提拔；给予（债权人）优先权；提出（控告）|||vi.更喜欢，宁愿','I prefer tea to coffee.','我更喜欢茶，而不是咖啡。','I prefer fish to meat.','我较喜欢吃鱼。'}

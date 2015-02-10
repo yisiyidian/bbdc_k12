@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unrestricted"]={"unrestricted","[ʌnrɪ'strɪktɪd]","[,ʌnrɪ'strɪktɪd]","adj.无限制的",'adj.无限制的','We mustn\'t attempt unrestricted expansion regardless if it is within our capacity.','我们不能不顾自己的能力企图无限制地发展.','Freedom to pursue extracurricular activities is totally unrestricted.','参加课外活动的自由完全不受限制。'}

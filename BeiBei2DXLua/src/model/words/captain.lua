@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["captain"]={"captain","['kæptɪn]","['kæptɪn]","n.船长",'n.船长,队长,首领|||vt.率领,指挥','The captain of the sinking ship used flares to attract the attention of the coastguard.','轮船正在下沉，船长向海岸巡逻队发出闪光信号求救。','The sailors are asked to take their positions by their captain.','船长要求水手们各就各位。'}

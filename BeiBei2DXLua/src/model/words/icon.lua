@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["icon"]={"icon","['aɪkɒn; -k(ə)n]","['aɪkɑn]","n.图标",'n.肖像,偶像,象征,图符|||[计算机]图标,图符','They found an icon in the monastery.','他们在修道院中发现了一个圣像。','Double click on the icon to open the file.','双击图标打开文件。'}

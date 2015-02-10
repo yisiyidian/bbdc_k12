@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["berate"]={"berate","[bɪ'reɪt]","[bɪ'ret]","vt.严责",'vt.严责','She began to berate the police for paying scant attention to the theft from her car.','她开始痛斥警方对她车内被窃一案不够关注。','Marion berated Joe for the noise he made.','玛丽昂严厉斥责乔吵吵闹闹。'}

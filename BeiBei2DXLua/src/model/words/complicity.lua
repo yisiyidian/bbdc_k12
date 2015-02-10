@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["complicity"]={"complicity","[kəm'plɪsɪtɪ]","[kəm'plɪsəti]","n.串通",'n.串通,共谋','The jury acquitted him of all complicity in that murder.','陪审团宣告他与这件谋杀案毫无牵连。','He was suspected of complicity in her murder.','他涉嫌合谋将她杀害。'}

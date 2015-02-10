@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dinghy"]={"dinghy","['dɪŋgɪ; 'dɪŋɪ]","[dɪŋi]","n.小船",'n.小船，救生艇','Our little dinghy was dwarfed by the big yacht.','我们的小船跟大游艇一比显得很小。','She rowed ashore in the dinghy.','她向岸边划着小舢板。'}

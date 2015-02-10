@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["homogeneous"]={"homogeneous","[,hɒmə(ʊ)'dʒiːnɪəs; -'dʒen-]","[,homə'dʒinɪəs]","adj.同种的",'adj.同种的,同质的,均质的','They are homogeneous people.','他们是同一类人。','The unemployed are not a homogeneous group.','失业者不能一概而论。'}

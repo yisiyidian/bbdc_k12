@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eleven"]={"eleven","[ɪ'lev(ə)n]","[ɪ'lɛvn]","num.十一",'num.十一|||pron.&adj.十一(个,只...)','There are eleven players in the game.','这场比赛中有11名选手。','The meeting broke up at eleven o\'clock.','会议在十一点钟散会.'}

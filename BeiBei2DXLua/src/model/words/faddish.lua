@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["faddish"]={"faddish","['fædɪʃ]","['fædɪʃ]","adj.流行一时的",'adj.流行一时的,时尚的','...faddish footwear.','...一时流行的鞋袜。','This is the domestic outfit with faddish nowadays " malposition is designed " .','这就是时下风行的家装“错位设计”。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fee"]={"fee","[fiː]","[fi]","n.费用",'n.费用,封地','Tickets are issued only against payment of the full fee.','只有付讫全费才可将票发出.','Unwaged members pay a lower entrance fee.','无固定收入的人入场费从优.'}

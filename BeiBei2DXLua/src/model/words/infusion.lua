@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infusion"]={"infusion","[ɪn'fjuːʒ(ə)n]","[ɪn'fjuʒn]","n.注入",'n.注入,灌输,激励,泡制','Careful observation of the infusion site is necessary.','必须仔细观察输液部位.','Old families need an infusion of new blood from time to time.','古老的家族需要不时地注入新鲜血液.'}

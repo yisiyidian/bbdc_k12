@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["moreover"]={"moreover","[mɔːr'əʊvə]","[mɔr'ovɚ]","adv.再者",'adv.再者；此外；而且；同时','The price is too high, and moreover, the house isn\'t in a suitable position.','＂房价太高，而且房屋的地点也不太合适。＂','I don\'t like skating, moreover, the ice is too thin.','我不喜欢滑冰，而且冰又太薄。'}

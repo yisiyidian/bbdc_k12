@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["marshy"]={"marshy","['mɑːʃɪ]","[ 'mɑ:ʃi ]","adj.沼泽般的",'adj.沼泽般的,湿软的','The site was marshy from about 3.3 million to 3.1 million years ago.','这里在大约330万年到310万年前是一个沼泽.','The surrounding land is low and marshy.','周围的地低洼而多沼泽.'}

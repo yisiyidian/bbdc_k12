@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reputed"]={"reputed","[rɪ'pjuːtɪd]","[rɪ'pjutɪd]","adj.名誉好的",'adj.名誉好的,被称为...的,有...名气的','She is reputed to be rich.','据说她很有钱。','He is reputed as the best surgeon in Paris.','他被认为是巴黎最好的外科医生。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["garment"]={"garment","['gɑːm(ə)nt]","['gɑrmənt]","n.衣服",'n.衣服|||vt.给...披上衣服,覆上...','She disguised her true sex under a man\'s garment.','她身穿男装来掩饰自己的真实性别。','If a garment won\'t wash, it must be dry-cleaned.','用水洗就退色或缩水的衣服得乾洗。'}

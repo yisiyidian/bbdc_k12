@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flaccid"]={"flaccid","['flæsɪd; 'flæksɪd]","['flæsɪd]","adj.软弱的",'adj.软弱的,没气力的,无活力的','||Flaccid|| leadership fail the plan.','领导不力导致计划失败。','I picked up a flaccid bird on my way to home.','在回家的路上我救了一只脆弱的小鸟。'}

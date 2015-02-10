@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compendium"]={"compendium","[kəm'pendɪəm]","[kəm'pɛndɪəm]","n.简要",'n.简要,概略，提纲','Instructions for using the tool can be found in the compendium.','在手册中可以找到这个工具的使用说明。','The book is a compendium of their poetry, religion and philosophy.','这本书是他们诗歌、宗教和哲学的概略。'}

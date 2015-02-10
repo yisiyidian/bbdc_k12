@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grudge"]={"grudge","[grʌdʒ]","[ɡrʌdʒ]","n.怨恨",'n.怨恨,恶意|||vt.怀恨,嫉妒,吝惜','He grudges you your reward.','他很吝啬，不愿给你报酬。','He grudged me my success.','他嫉妒我成功。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mass"]={"mass","[mæs]","[mæs]","n.块",'n.块,大量,众多|||adj.群众的,大规模的|||v.集中|||n.pl.群众，民众','A liter of gas has less mass than a liter of water.','一公升气体的质量少于一公升水的质量。','Crowds massed along the road where the king would pass.','群众聚集在国王要经过的街道旁。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subordinate"]={"subordinate","[sə'bɔːdɪnət]","[sə'bɔdɪnet]","n.属下",'n.属下,附属物|||adj.下级的,次要的,附属的|||vt.使居下位,使服从,把...放在次要','All the other issues are subordinate to this one.','所有问题都要从属于这一问题。','He was always friendly to his subordinates.','他对下级一向和蔼可亲。'}

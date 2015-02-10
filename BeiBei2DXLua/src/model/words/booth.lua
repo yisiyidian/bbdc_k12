@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["booth"]={"booth","[buːð; buːθ]","[bʊθ]","n.电话亭",'n.电话亭,货摊,小间','Would you please watch over my booth?','请您照料一下我的摊位好吗?','I\'ll give him a call from the phone booth on the corner.','我到街角的电话亭给他打个电话。'}

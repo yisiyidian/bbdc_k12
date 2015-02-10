@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quagmire"]={"quagmire","['kwægmaɪə; 'kwɒg-]","[ 'kwæɡmaiə, 'kwɔ- ]","n.沼泽(绝境)",'n.沼泽(绝境)','||Quagmire|| means dilemma.','沼泽意味着困境。','We have no intention of being drawn into a political quagmire.','我们无意卷入一场政治困境。'}

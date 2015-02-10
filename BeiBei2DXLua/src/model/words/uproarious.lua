@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["uproarious"]={"uproarious","[ʌp'rɔːrɪəs]","[ʌp'rɔrɪəs]","adj.喧嚣的",'adj.喧嚣的，滑稽的','The noise of talk and laughter was uproarious.','说笑声很吵人。','This utterance of his was greeted with bursts of uproarious laughter.','他的讲话引起阵阵哄然大笑。'}

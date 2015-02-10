@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bubble"]={"bubble","['bʌb(ə)l]","['bʌbl]","n.泡沫",'n.泡沫,气泡,幻想,骗局,欢乐|||vi.起泡,出现,洋溢|||vt.使冒泡','The latest trade figures will surely prick the bubble of government complacency about the economic situation.','最新的贸易统计数字无疑要惊扰了政府经济情势大好的美梦.','A bubble will burst at the slightest touch.','气泡稍微一碰就破.'}

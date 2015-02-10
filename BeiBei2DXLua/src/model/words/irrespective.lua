@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irrespective"]={"irrespective","[ɪrɪ'spektɪv]","[,ɪrɪ'spɛktɪv]","adj.不顾的",'adj.不顾的,无关的,没关系的','He is going to buy it, irrespective of what you say.','不管你说什么，他是买定了。','The law applies to everyone irrespective of race, religion or color.','这项法律适用于任何人，不管其种族、宗教或肤色。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mount"]={"mount","[maʊnt]","[maʊnt]","n.山峰",'n.山峰,乘用马,框,衬纸|||vi.增长,骑上(马)|||vt.提升,爬上,装备','He mounted the horse and rode off.','他骑上马走了。','Mount Jolmo Lungma is the highest mountain in the world.','珠穆朗玛峰是世界上最高的山峰。'}

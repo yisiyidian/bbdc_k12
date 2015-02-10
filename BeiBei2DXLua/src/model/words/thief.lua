@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thief"]={"thief","[θiːf]","[θif]","n.贼",'n.贼,小偷','The thief slid into the room.','小偷溜进房间。','The police set a trap to catch the thief.','警察设下了捉拿窃贼的圈套。'}

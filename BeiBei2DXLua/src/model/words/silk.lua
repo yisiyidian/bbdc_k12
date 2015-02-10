@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["silk"]={"silk","[sɪlk]","[sɪlk]","adj.丝的",'adj.丝的|||n.丝,绸','Their main exports are textiles, especially silk and cotton.','他们的主要出口货物是纺织品，特别是丝绸和棉布。','She wears a translucent silk gown.','她穿着半透明丝质长袍。'}

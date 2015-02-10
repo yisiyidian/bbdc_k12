@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["makeshift"]={"makeshift","['meɪkʃɪft]","['mek'ʃɪft]","n.临时措施",'n.临时措施|||adj.临时的','Gathered branches and grasses for a makeshift camp; had a fishing camp in Vermont.','收集树枝和草做一个临时小棚；在佛蒙特州有一个钓鱼的营房','A crude or makeshift bed.','简易床简陋的或权作使用的床'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["equine"]={"equine","['iːkwaɪn; 'e-]","['ikwaɪn]","adj.马的",'adj.马的,似马的|||n.马，马科','The men began to cultivate the land and to domesticate a wild equine species native to the Islands.','男人们开始耕地，驯养岛上特有的野马。','He has a long equine face.','他的脸像马脸那么长。'}

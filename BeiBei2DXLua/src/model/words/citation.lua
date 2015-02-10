@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["citation"]={"citation","[saɪ'teɪʃ(ə)n]","[saɪ'teʃən]","n.引用",'n.引用,引证,引用文','Some dictionary writer use citation to show what word mean.','有些辞典的编纂者用引文作例证以解释词义。','Something, especially an official award or citation, that commends.','奖品, 奖状称赞的某事, 特别是官方的奖品或奖状'}

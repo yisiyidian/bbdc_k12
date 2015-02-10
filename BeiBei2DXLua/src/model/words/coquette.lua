@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coquette"]={"coquette","[kɒ'ket]","[ko'kɛt]","n.卖弄风情之女子",'n.卖弄风情之女子','The moment she met a man she would play the coquette.','她一见到男人就卖弄风骚。','She\'s a bit of coquette.','她有点儿轻佻。'}

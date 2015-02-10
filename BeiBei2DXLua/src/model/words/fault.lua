@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fault"]={"fault","[fɔːlt; fɒlt]","[fɔlt]","n.故障",'n.故障,过失,缺点|||vt.&vi.挑剔,指责，发现错误,断裂','He has many faults, but vanity is not one of them.','他有很多缺点, 但并没有虚荣心.','It was not our fault that we were late.','这次迟到不是我们的错。'}

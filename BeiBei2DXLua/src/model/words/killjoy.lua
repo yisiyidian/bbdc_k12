@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["killjoy"]={"killjoy","['kɪldʒɔɪ]","[ 'kildʒɔi ]","n.扫兴的人",'n.扫兴的人,煞风景','I don\'t want to sound like a killjoy, but shouldn\'t we study tonight?','我不想扫兴，但是今晚我们不是应该学习么？','Don\'t be such a killjoy!','别那么扫兴！'}

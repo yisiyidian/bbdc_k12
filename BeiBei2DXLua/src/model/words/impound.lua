@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impound"]={"impound","[ɪm'pəʊnd]","[ɪm'paʊnd]","v.扣押",'v.扣押,保管|||vt.扣押,没收,充公','Capture and impound stray dogs.','把迷路的狗抓住并且关在圈中','The custom impound the whole cargo.','海关扣押了全部的船货。'}

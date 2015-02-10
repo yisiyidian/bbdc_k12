@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interdict"]={"interdict","['ɪntədɪkt]","['ɪntɚdɪkt]","vt.禁止",'vt.禁止,停止,阻断|||n.[法]禁令','It is interdicted by law.','这是法律禁止的。','Though not interdicted by law, such an action is morally wrong.','尽管这种行为不被法律所禁止，但是道德上来说是不对的。'}

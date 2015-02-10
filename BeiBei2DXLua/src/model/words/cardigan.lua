@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cardigan"]={"cardigan","['kɑːdɪg(ə)n]","['kɑrdɪɡən]","n.开襟羊毛衫",'n.开襟羊毛衫','She will buy him a cardigan if her son asks her to.','如果她儿子要求的话，她就给他买一件羊毛衫。','I am looking for a size39 woolen cardigan.','我想买一件尺码39的羊毛开衫。'}

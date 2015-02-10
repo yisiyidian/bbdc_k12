@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cog"]={"cog","[kɒg]","[kɑɡ]","n.齿",'n.齿(雄榫,坯)|||vt装齿轮(打榫,开坯,初轧)','Jim was only a very small cog in a very large criminal wheel.','吉姆只不过是一个大犯罪团体里的小人物。','Mr. Lake was an important cog in the republican campaign machine.','莱克先生是共和党竞选机器中一枚重要的螺丝钉。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["synchronous"]={"synchronous","['sɪŋkrənəs]","['sɪŋkrənəs]","adj.同步的",'adj.同时的,同步的','This method of communication has two problems: it is synchronous and unreliable.','这种通信方法有两个问题：它是同步的并且是不可靠的。','the progress of both sides are synchronous.','两边的进度是一样的。'}

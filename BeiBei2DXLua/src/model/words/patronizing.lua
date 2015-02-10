@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["patronizing"]={"patronizing","['pætrənaɪzɪŋ]","['petrənaɪzɪŋ]","adj.俨然以恩人态度的",'adj.俨然以恩人态度的,要人领情的','I don\'t like his patronizing attitude.','我不喜欢他傲慢的态度.','I began patronizing secondhand bookstore.','我开始逛旧书店.'}

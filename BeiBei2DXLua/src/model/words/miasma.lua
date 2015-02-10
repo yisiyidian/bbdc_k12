@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["miasma"]={"miasma","[mɪ'æzmə; maɪ-]","[maɪ'æzmɚ]","n.瘴气",'n.瘴气，烟雾弥漫的空气，不良气氛','A miasma rose from the marsh.','沼泽地里冒出了瘴气。','A miasma of stale alcohol hung around him.','他身上老有股难闻的酒精味。'}

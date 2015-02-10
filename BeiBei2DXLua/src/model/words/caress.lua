@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["caress"]={"caress","[kə'res]","[kə'rɛs]","n.爱抚",'n.爱抚,拥抱|||v.爱抚,抱,怜爱','My heart, with its lapping waves of son, longs to caress this green world of the sunny day.','我的心，同着它的歌的拍拍舐岸的波浪，渴望着要抚爱这个阳光熙和的绿色世界。','He caressed his wife lovingly.','他爱怜地抚摸着他的妻子。'}

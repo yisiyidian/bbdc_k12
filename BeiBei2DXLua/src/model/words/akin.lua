@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["akin"]={"akin","[ə'kɪn]","[ə'kɪn]","adj.血族的",'adj.血族的,同族的,同种的','Pity is often akin to love.','怜悯常近乎于爱。','Spanish is akin to Latin.','西班牙语与拉丁语近似。'}

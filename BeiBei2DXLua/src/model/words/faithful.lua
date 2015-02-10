@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["faithful"]={"faithful","['feɪθfʊl; -f(ə)l]","['feθfəl]","adj.如实的",'adj.如实的,忠诚的,忠实的','Dogs are more faithful animals than cats; these attach themselves to places, and those to persons.','狗比猫忠心，后者依恋地方，前者依恋人。','Mary is faithful to her husband.','玛丽忠实于她的丈夫。'}

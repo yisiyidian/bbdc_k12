@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dagger"]={"dagger","['dægə]","['dæɡɚ]","n.短剑",'n.短剑,匕首|||[印]剑号','Put the dagger back in its sheath.','把短剑插回鞘内.','He fell a victim to the dagger of the assassin.','他死于刺客的匕首之下。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irritate"]={"irritate","['ɪrɪteɪt]","['ɪrɪtet]","vt.&vi.激怒",'vt.&vi.激怒,使...发怒,使疼痛或发炎','Wool irritates my skin.','毛织物会使我的皮肤过敏。','His letter irritated me a little.','他的信使我有点恼怒。'}

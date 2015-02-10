@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["litigation"]={"litigation","[lɪtɪ'geɪʃ(ə)n]","['lɪtə'geʃən]","n.诉讼",'n.诉讼,起诉','The local court accepted this litigation.','当地法院受理了该诉讼。','The wife take the litigation for divorcing.','妻子提出了离婚诉讼。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irreconcilable"]={"irreconcilable","[ɪ,rek(ə)n'saɪləb(ə)l; ɪ'rek(ə)nsaɪləb(ə)l]","[ɪ'rɛkənsaɪləbl]","adj.不能和解的",'adj.不能和解的,不能协调的,矛盾的','We can never agree our views are irreconcilable.','我们永远不能一致--彼此的看法无法调和.','irreconcilable differences.','无法调和的差异'}

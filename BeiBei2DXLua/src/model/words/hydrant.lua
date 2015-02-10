@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hydrant"]={"hydrant","['haɪdr(ə)nt]","['haɪdrənt]","n.给水栓",'n.给水栓,水龙头,消火栓','The driver was ticketed for parking in front of a fire hydrant.','那个司机因把车停在消防栓前而接到交通违规罚单。','A fountain of water gushed from the broken fire hydrant.','从损坏的消防栓里喷出水来.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["escalate"]={"escalate","['eskəleɪt]","['ɛskəlet]","vt.扩大",'vt.扩大,升高,增强|||vi.逐步升级','Even a limited confrontation can escalate into a major war.','即使是局部的对抗也可能扩大成一场大战。','After the war,the birth rate had begun to escalate','战争结束后 出生率开始上升'}

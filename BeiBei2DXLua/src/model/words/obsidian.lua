@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obsidian"]={"obsidian","[əb'sɪdɪən]","[əb'sɪdɪən]","n.黑曜石",'n.黑曜石','His face was covered with a mask with obsidian eyes.','他脸上戴着一副镶着黑曜石眼睛的面具。','One mighty hero is entitled ||Obsidian|| Destroyer in the Defense of the Ancients.','DOTA里有个强力英雄叫作黑曜毁灭者。'}

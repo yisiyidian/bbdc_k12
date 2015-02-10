@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["give"]={"give","[gɪv]","[ɡɪv]","vt.&vi.给予",'vt.&vi.给予；赠送；作出|||vt.供给；产生；举办；（为购买某物或做某事而）支付|||vi.（物体）塌下；让步|||n.伸展性，弹性','The bride was given away by her father.','由父亲把新娘交与新郎。','The boss will really give it to you if you miss the deadline for the job.','要是到期完不成工作，老板就要给你点厉害。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["recourse"]={"recourse","[rɪ'kɔːs]","['rikɔrs]","n.依赖",'n.依赖,求助,追索权','You\'d better have recourse to her.','你最好向她求助。','The public believes its only recourse is to take to the streets.','公众认为唯一的办法就是上街游行。'}

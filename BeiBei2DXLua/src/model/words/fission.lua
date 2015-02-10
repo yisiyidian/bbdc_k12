@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fission"]={"fission","['fɪʃ(ə)n]","['fɪʃən]","n.裂开",'n.裂开,分裂,分体','The fission of the cell could be inhibited with certain chemicals.','细胞的裂变可以通过某些化学药品加以抑制.','Nuclear fission releases tremendous amounts of energy.','核裂变释放出巨大的能量.'}

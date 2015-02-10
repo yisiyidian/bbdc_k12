@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["collaboration"]={"collaboration","[kəlæbə'reɪʃn]","[kə,læbə'reʃən]","n.合作",'n.合作,通敌','Our collaboration is over','我们的合作结束了。','He was shot for collaboration with the enemy.','他因通敌而被枪毙了。'}

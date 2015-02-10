@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interrupt"]={"interrupt","[ɪntə'rʌpt]","['ɪntə'rʌpt]","vt.打断",'n.中断|||vt.打断,妨碍|||vi.插嘴|||[计算机]中断','Don\'t interrupt me, children.','孩子们，别打断我的话。','Traffic was interrupted by a dense fog.','交通因浓雾而受阻。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pamphlet"]={"pamphlet","[ˈpæmflɪt]","[ 'pæmflit ]","n.小册子",'n.小册子','Over a thousand copies of the pamphlet have now been given out.','现在已分发了一千多本小册子.','The pamphlet is in great demand.','这种小册子销量很大。'}

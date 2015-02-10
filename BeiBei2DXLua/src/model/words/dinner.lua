@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dinner"]={"dinner","['dɪnə]","['dɪnɚ]","n.主餐",'n.主餐,晚餐,晚宴','Is there anything in particular you\'d like for dinner?','正餐你有什麽特别喜欢的菜吗?','Because my husband has gone to a stag dinner, I have to stay at home alone.','因为我丈夫去参加一个只许男人参加的宴会，我只好独自待在家里。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["doggerel"]={"doggerel","['dɒg(ə)r(ə)l]","['dɔɡərəl]","n.打油诗",'n.打油诗|||adj.(诗)拙劣的,不含诗律的','A few lines of rhyming doggerel don\'t count as poetry.','几行押韵的蹩脚诗算不上是诗。','He styled his poem doggerel.','他把他的这首诗歌叫做打油诗。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["excruciate"]={"excruciate","[ɪk'skruːʃɪeɪt; ek-]","[ ik'skru:ʃieit ]","v.施酷刑",'v.施酷刑,拷问,使苦恼,折磨','The testimony under excruciated is not effective in law.','对嫌疑人（酷刑拷问）得到的证词没有法律效用。','They had ||excruciating|| sufferings.','他们承受着严酷的折磨。'}

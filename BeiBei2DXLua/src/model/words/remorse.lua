@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["remorse"]={"remorse","[rɪ'mɔːs]","[rɪ'mɔrs]","n.懊悔",'n.懊悔,悔恨|||n.','He has shown no remorse for his actions.','他对自己的行为没有任何悔恨之意。','He felt the pangs of remorse at the thought of that.','一提起那事，他就感到良心的谴责。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["found"]={"found","[faʊnd]","[faʊnd]","vt.创办",'vt.创办，成立，建立|||v.发现(find的过去式)；找到；到达；发觉|||n.不另外收费的供应品[服务等]，（工资以外）另行供给的膳食[住宿等]|||adj.（文艺作品等）找到的，拾得的，拣到的，自然形态的','Have they found the wreck of the ship?','他们找到那艘船的残骸了吗？','He postulated that a cure for the disease will have been found by the year 2000.','他推断到2000年能研究出治愈该病的方法.'}

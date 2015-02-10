@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["queue"]={"queue","[kjuː]","[kju]","n.行列",'n.行列,长队|||v.排队|||vi.排长队','There\'s a long queue of people waiting for new houses.','很多人在等着买新房。','People are ||queuing|| to buy tickets.','人们正排队买票。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pepper"]={"pepper","['pepə]","['pɛpɚ]","n.胡椒粉",'n.胡椒粉|||vt.加胡椒粉于','The pepper in the food caused me to/made me sneeze.','这食物中的胡椒味儿呛得我直打喷嚏.','Ginger, nutmeg, cinnamon, pepper and cloves are common spices.','姜、 肉豆蔻、 肉桂、 胡椒、 丁香都是常用的香料.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fulfill"]={"fulfill","[ful'fil]","[ ful'fil ]","vt.履行",'vt.履行,完成','The company has to fulfill the terms of its obligation.','这个公司必须履行合同条款。','You must fulfill your promise.','你必须履行诺言。'}

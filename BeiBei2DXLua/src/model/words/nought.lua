@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nought"]={"nought","[nɔːt]","[nɔt]","n.没有",'n.没有,零,无','Nought lie down, nought take up.','有所失，必有所得。','The Greeks did nought, but play the fools and lie.','希腊人一事无成，仅仅在愚弄和欺骗。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["revokable"]={"revokable","['revəkəbl]","[rɪ'vokəbl]","adj.可取消的",'adj.可取消的','revokable - revocable','可取消的','It was a privilege revokable at any time on whim of the authorities','这种恩赐只要当权者心血来潮随时可以取消。'}

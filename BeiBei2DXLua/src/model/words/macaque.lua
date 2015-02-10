@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["macaque"]={"macaque","[mə'kɑːk; -'kæk]","[mə'kɑk]","n.短尾猿",'n.短尾猿，猕猴','The macaque looks very healthy.','这只短尾猿看起来很健康。','Small macaque is clever and outstanding, like maths again.','小猕猴聪明过人，又喜欢数学。'}

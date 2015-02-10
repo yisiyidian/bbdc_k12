@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["think"]={"think","[θɪŋk]","[θɪŋk]","vt.想",'vt.想；思索；以为；看待|||vi.思辩；考虑；构想；回忆|||adj.深思的；供思考的|||n.想；想法','I can\'t think what you mean.','我想像不出你是什麽意思。','If you want to make money you\'ve got to think money.','你要是想赚钱，脑子里就得想著钱。'}

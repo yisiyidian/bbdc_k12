@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["radiant"]={"radiant","['reɪdɪənt]","['redɪənt]","adj.发光的",'adj.发光的,明亮的,辐射的','The sun is a radiant body.','太阳是一个发光体。','He gave a radiant smile when he heard the news.','他听到这个消息后露出欣喜的微笑.'}

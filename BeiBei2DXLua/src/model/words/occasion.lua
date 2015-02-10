@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["occasion"]={"occasion","[ə'keɪʒ(ə)n]","[ə'keʒn]","n.场合",'n.场合,机会,理由|||vt.致使,惹起,引起','I\'ve met her on several occasions recently.','我最近见到过她好几次。','You should go there if occasion arises.','如果有机会，你应当到那里去。'}

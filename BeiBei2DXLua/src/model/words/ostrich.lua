@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ostrich"]={"ostrich","['ɒstrɪtʃ]","['ɔstrɪtʃ]","n.鸵鸟",'n.鸵鸟；鸵鸟般的人','His imagination resemble the wing of an ostrich. it enabled him to run, though not to soar.','他的想象力有类于鸵鸟的翅膀—虽未可以飞翔，犹可使他奔驰。','The short-distance runner wish he can run as fast as the ostrich.','这位短跑运动员真希望自己能跑得像驼鸟一样快。'}

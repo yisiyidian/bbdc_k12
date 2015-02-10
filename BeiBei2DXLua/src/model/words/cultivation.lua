@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cultivation"]={"cultivation","[kʌltɪ'veɪʃn]","['kʌltə'veʃən]","n.教化",'n.教化,培养,耕作','An area under cultivation.','种植场耕作的土地','The cultivation of a hobby and new forms of interest is therefore a policy of first importance to a public man.','因此，对一个从事社会活动的人来讲，培养一种嗜好和新的情趣方式，乃是至关重要的对策。'}

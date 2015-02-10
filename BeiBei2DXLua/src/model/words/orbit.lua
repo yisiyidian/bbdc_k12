@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["orbit"]={"orbit","['ɔːbɪt]","['ɔrbɪt]","n.轨迹",'n.势力范围,眼眶,轨迹|||vt.绕轨道而行,进入轨道|||vi.盘旋','The two spacecraft will link up (with each other) in orbit.','两艘宇宙飞船将於轨道上（互相）连接.','In recent years a number of communications satellites have been put into orbit.','近些年来, 很多通讯卫星被送上轨道。'}

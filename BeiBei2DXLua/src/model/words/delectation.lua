@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["delectation"]={"delectation","[,diːlek'teɪʃ(ə)n]","[,dilɛk'teʃən]","n.享受",'n.享受,愉快','And now for your further delectation, we present a selection of popular melodies.','为使你们更加愉快, 我们奉献给你们一组精选的流行歌曲.','She makes cakes for the delectation of visitors.','她做了蛋糕以飨访客。'}

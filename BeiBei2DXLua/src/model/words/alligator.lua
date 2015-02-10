@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alligator"]={"alligator","['ælɪgeɪtə]","['ælɪɡetɚ]","n.产于美洲的鳄鱼",'n.产于美洲的鳄鱼|||adj.鳄鱼皮的|||v.龟裂成鳄鱼皮状','The male of certain other large animals, such as the alligator, elephant, or moose.','大的雄性动物一些其它形体巨大的雄性动物，如鳄鱼、大象或麋鹿','||Alligators|| usually live in hot wet parts of America and China.','短吻鳄通常生活在美国和中国的湿热地带。'}

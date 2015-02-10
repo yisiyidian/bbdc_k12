@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forge"]={"forge","[fɔːdʒ]","[fɔrdʒ]","n.熔炉",'n.熔炉,铁工厂|||vt.锻造,想出,伪造,构建|||vi.稳步(高速)前进,制假','forge a treaty; forge a close relationship.','缔结条约；结成亲密的关系','The ship forged ahead under a favorable wind.','船乘风快速前进。'}

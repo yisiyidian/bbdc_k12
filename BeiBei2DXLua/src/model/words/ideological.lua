@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ideological"]={"ideological","[,aɪdɪəʊ'lɒdʒɪkəl]","[,aɪdɪə'lɑdʒɪkl]","adj.意识形态的",'adj.意识形态的，思想上的','He helped me enormously with advice on how to do ideological work.','他告诉我怎样做思想工作，对我有很大帮助。','He always tries to link his study with his ideological problems.','他总是把学习和自己的思想问题联系起来.'}

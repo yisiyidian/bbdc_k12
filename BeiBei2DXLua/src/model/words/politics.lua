@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["politics"]={"politics","['pɒlɪtɪks]","['pɑlətɪks]","n.政治",'n.政治,政策,政治活动,政见','||Politics|| has always interested me.','我一直对政治学有兴趣。','He has serious aspirations to a career in politics.','他有从政的雄心壮志。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exposition"]={"exposition","[ekspə'zɪʃ(ə)n]","[,ɛkspə'zɪʃən]","n.博览会",'n.博览会,展览会,说明','He made an exposition of the advantages of nuclear power.','他对核动力的优越性做了阐述。','I will visit the exposition this afternoon.','下午我要去参观展览会。'}

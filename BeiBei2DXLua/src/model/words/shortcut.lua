@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shortcut"]={"shortcut","['ʃɔːtkʌt]","['ʃɔrt,kʌt]","n.捷径",'n.捷径|||v.抄近路,走捷径','I tried to take a shortcut and got lost.','我本来想抄近路，结果却迷路了。','Let\'s take the shortcut across the sports field.','咱们从操场穿过去吧.'}

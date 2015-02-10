@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["uneasy"]={"uneasy","[ʌn'iːzɪ]","[ʌn'izi]","adj.不自在的",'adj.不自在的,心神不安的,不稳定的,不舒服的','I feel uneasy to make you be injured.','我为了使你受伤感到不安。','Don\'t be uneasy about the consequenc','不必为后果忧虑不安。'}

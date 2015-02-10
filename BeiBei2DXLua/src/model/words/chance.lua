@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chance"]={"chance","[tʃɑːns]","[tʃæns]","n.机会",'n.机会,意外,运气,风险|||vi.偶然发生|||vt.偶然发生,冒险','It was the chance she had been waiting for.','这就是她一直等待的机会。','She\'s keen and I\'m sure she\'ll succeed given half a chance.','她聪明机智，只要有点儿机会我肯定她会成功。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["console"]={"console","[kən'səʊl]","['kɑnsol]","vt.安慰",'vt.安慰,慰藉|||n.仪表盘,操控台,(游戏)平台','I tried to console her, but in vain.','我试着去安慰她，但是没用。','He consoled himself with the thought that it might have been worse.','他聊以自慰的是幸亏事情没有更糟。'}

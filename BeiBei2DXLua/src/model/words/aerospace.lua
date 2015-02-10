@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aerospace"]={"aerospace","['eərəspeɪs]","['ɛrospes]","n.宇宙空间",'n.宇宙空间，航空航天学,航空航天工业|||adj.航天的，太空的','We are struggling, but our country`s aerospace technology is not strong enough.','我们努力着,但是我国的航天技术仍然不够强.','The aerospace industry in our country has developed greatly after liberation.','解放后，我国的宇航事业取得了巨大的发展。'}

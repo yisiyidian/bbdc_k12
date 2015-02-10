@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hyena"]={"hyena","[haɪ'iːnə]","[haɪ'inə]","n.土狼",'n.土狼,鬣狗','hyena','土狼,鬣狗','There are many hyenas in the national zoo of Eritrea.','厄立特里亚动物园里有很多土狼。'}

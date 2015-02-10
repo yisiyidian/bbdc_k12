@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resemble"]={"resemble","[rɪ'zemb(ə)l]","[rɪ'zɛmbl]","v.像",'v.相似,类似,像','The pattern so obtained will not resemble any of the others.','所得到的这个图样将不同于其他各种特征图样.','Did it resemble the earth when this was destitute of an atmosphere?','它同地球上还没有大气的时候一样 吗 ?'}

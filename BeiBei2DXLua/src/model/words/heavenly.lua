@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heavenly"]={"heavenly","['hev(ə)nlɪ]","['hɛvnli]","adj.天上的",'adj.天上的,神圣的,天国似的','The sun, moon and stars are heavenly bodies.','太阳、月亮和星星都是天体。','We spent a heavenly day at the beach.','我们在海滨痛痛快快地玩了一天。'}

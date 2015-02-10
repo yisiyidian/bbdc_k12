@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["donkey"]={"donkey","['dɒŋkɪ]","['dɔŋki]","n.驴子",'n.驴子；傻瓜；顽固的人','He gave the poor donkey a terrible lashing.','他狠命地抽打那头可怜的驴.','He belaboured the donkey mercilessly.','他恶狠狠地猛抽那头驴.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["giggle"]={"giggle","['gɪg(ə)l]","['ɡɪɡl]","v.吃吃地笑",'v.吃吃地笑,格格地笑','I only did it for a giggle.','我做那事只是为了取乐.','Today\'s lesson was a bit of a giggle.','今天的课真有趣.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["evolution"]={"evolution","[,iːvə'luːʃ(ə)n; 'ev-]","[,ivə'luʃən]","n.进化",'n.进化,发展,进展','Our watchword is: Evolution, not revolution\'.','我们的口号是: ｀要循序渐进, 不要剧烈变革.＇','Our political institutions are in continuous evolution.','我们的政治制度正在不断发展中.'}

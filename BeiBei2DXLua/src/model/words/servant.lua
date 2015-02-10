@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["servant"]={"servant","['sɜːv(ə)nt]","['sɝvənt]","n.仆人",'n.仆人','Satan is still a servant of God.','撒旦仍是上帝的奴仆。','The young servant is waiting upon his master to have dinner.','青年仆人正服侍他的主人进晚餐。'}

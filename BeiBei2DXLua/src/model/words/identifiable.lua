@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["identifiable"]={"identifiable","[aɪdentɪ'fæɪəb(ə)l]","[aɪ,dɛntɪ'faɪəbl]","adj.可辨认的",'adj.可辨认的','Any identifiable reference to him would have been mortally dangerous.','提到他会有丧命的危险.','The house is easily identifiable by the large tree outside.','这房子很容易从外面的这棵大树辨认出来'}

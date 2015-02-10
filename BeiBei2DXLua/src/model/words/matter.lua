@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["matter"]={"matter","['mætə]","['mætɚ]","n.事件",'n.事件,物质,原因|||vi.有关系','Is anything the matter?','有什么问题吗？','It may be a matter of months before it\'s ready.','要准备好可能得数月时间。'}

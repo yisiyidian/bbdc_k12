@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nozzle"]={"nozzle","['nɒz(ə)l]","['nɑzl]","n.喷嘴",'n.喷嘴','Prior to entering the nozzle, the steam is at high pressure.','在进入喷嘴之前，蒸汽处于高压状态。','A perforated nozzle for spraying water from a hose or sprinkling can.','莲蓬式喷嘴一种使水从管子或喷水壶里喷洒出来的有孔的喷嘴'}

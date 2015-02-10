@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["erode"]={"erode","[ɪ'rəʊd]","[ɪ'rod]","vt.腐蚀",'vt.腐蚀,侵蚀|||vi.受到侵蚀','Metals are eroded by acids.','金属易为酸所腐蚀。','The cliffs have eroded over the centuries.','几百年来悬崖已经被侵蚀了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["competitor"]={"competitor","[kəm'petɪtə]","[kəm'pɛtɪtɚ]","n.竞争者",'n.竞争者,对手','The Japanese can outsell any competitor in the market.','日本人比谁都会搞市场推销.','He girded up his loin to face his competitor.','他做好准备来迎战他的对手。'}

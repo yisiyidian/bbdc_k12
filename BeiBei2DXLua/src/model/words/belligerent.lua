@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["belligerent"]={"belligerent","[bə'lɪdʒ(ə)r(ə)nt]","[ bi'lidʒərənt ]","adj.好战的",'adj.好战的,交战的,交战国的|||n.交战者','A belligerent reporter badgered the President for the facts.','一名好寻衅的记者就一些事实纠缠总统。','The belligerents were due, once again, to try to settle their differences.','预计交战双方要再一次试图解决彼此的分歧了。'}

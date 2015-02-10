@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["steady"]={"steady","['stedɪ]","['stɛdi]","adj.稳定的",'adj.稳定的,稳固的,沉稳的|||adv.平稳地,稳固地|||n.固定的事物|||vi.&vt.(使)稳固,(使)稳定','Are Tony and Jane going steady?','托尼跟简是正在谈恋爱吗？','I know she is steady in her purpose.','我知道她意志坚定。'}

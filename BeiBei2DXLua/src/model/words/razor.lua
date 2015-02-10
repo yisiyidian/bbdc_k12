@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["razor"]={"razor","['reɪzə]","['rezɚ]","n.剃刀",'n.剃刀','The razor slipped and cut my cheek.','剃刀一滑把我脸给割破了.','A sharp razor gives a close shave.','剃刀锋利刮得就乾净.'}

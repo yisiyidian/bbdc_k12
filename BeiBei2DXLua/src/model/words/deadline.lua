@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deadline"]={"deadline","['dedlaɪn]","['dɛdlaɪn]","n.最后期限",'n.(鉴于边上的)警戒线,最后期限,截止时间','The boss will really give it to you if you miss the deadline for the job.','要是到期完不成工作，老板就要给你点厉害。','What\'s the deadline?','截止到什么时候？'}

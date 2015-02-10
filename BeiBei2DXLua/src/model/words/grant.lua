@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grant"]={"grant","[grɑːnt]","[ɡrænt]","vt.承认",'vt.承认；同意；准许；授予|||n.拨款；补助金；授给物（如财产、授地、专有权、补助、拨款等）|||vi.同意','The government has rescued the firm from bankruptcy by giving them a grant.','政府拨款给这家公司使其免于破产。','I take it for granted you have read this book.','我认为你一定读过这本书。'}

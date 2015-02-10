@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vowel"]={"vowel","['vaʊəl]","['vaʊəl]","n.母音",'n.母音,元音','A single vowel articulated without change in quality throughout the course of a syllable, as the vowel of English bed.','单元音在一个音节的发音过程中不改变音质的单元音，如英文单词bed中的元音','A vowel sound changed in this manner.','变元音由这种方式改变的元音发音'}

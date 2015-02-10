@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["premiere"]={"premiere","['premɪeə]","[prɪ'mɪr]","v.初次公演",'v.初次公演,初演主角','A galaxy of film stars attended the premiere.','一群影星参加了首次公演。','We went to the premiere of their new presentation.','我们去观看了他们的新剧目的首场演出。'}

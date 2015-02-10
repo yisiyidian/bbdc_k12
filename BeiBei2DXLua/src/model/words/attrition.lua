@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["attrition"]={"attrition","[ə'trɪʃ(ə)n]","[ə'trɪʃən]","n.消耗",'n.摩擦,消耗,人员耗损|||n.【神学】不彻底的忏悔','The long war of attrition exhausted the strength of both countries.','这场长期的消耗战耗尽了两国的力量。','They\'re trying to stop the attrition of their rights.','他们正竭力制止他们的权利的削减。'}

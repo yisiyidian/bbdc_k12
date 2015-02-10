@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adobe"]={"adobe","[ə'dəʊbɪ; ə'dəʊb]","['ədobɪ]","n.泥砖",'n.泥砖,土坯|||美国Adobe公司','an adobe house; adobe walls.','土砖房屋；土砖墙','Too much water can make adobe weak.','太多水分会使土坯比较软.'}

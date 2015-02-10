@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pervade"]={"pervade","[pə'veɪd]","[pɚ'ved]","v.弥漫",'v.弥漫,遍及,漫延','We are all pervaded with a sense of disaster.','我们普遍有大祸降临的感觉。','The smell of baked apple pies pervaded the house.','房子里弥漫着烤苹果馅饼的香味。'}

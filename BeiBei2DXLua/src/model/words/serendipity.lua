@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["serendipity"]={"serendipity","[,ser(ə)n'dɪpɪtɪ]","[,sɛrən'dɪpəti]","n.善于发掘新奇事物的天赋",'n.善于发掘新奇事物的天赋','He has an gift of serendipity.','他有发现新事物的天赋。','Some of the best effects in my garden have been the result of serendipity.','我花园里最珍贵的几件物品是机缘巧合之下意外所得。'}

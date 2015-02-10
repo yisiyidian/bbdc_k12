@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["marsh"]={"marsh","[mɑːʃ]","[mɑrʃ]","n.沼泽",'n.沼泽,湿地|||Marsh：马什（人名）','Resembling a marsh; soggy.','沼泽地的象沼泽地的；湿润的','A miasma rose from the marsh.','沼泽地里冒出了瘴气.'}

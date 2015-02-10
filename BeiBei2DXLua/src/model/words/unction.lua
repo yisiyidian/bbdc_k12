@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unction"]={"unction","['ʌŋ(k)ʃ(ə)n]","['ʌŋkʃən]","n.n.[宗]涂油礼",'n.n.[宗]涂油礼,油膏,虚情假意,津津有味','After receiving absolution and the last unction, he quietly died.','领过圣餐、行过涂敷圣油仪式后，他平静地死去了。','extreme unction','(天主教)临终涂油礼'}

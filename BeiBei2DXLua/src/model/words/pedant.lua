@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pedant"]={"pedant","['ped(ə)nt]","['pɛdnt]","n.炫学者",'n.炫学者,自夸学者的人,空谈家','He\'s a bit of a pedant.','这人有点迂。','A man of talent is one thing, and a pedant another.','有才能的人和卖弄学问的人是不一样的。'}

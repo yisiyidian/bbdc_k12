@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clot"]={"clot","[klɒt]","[klɑt]","n.凝块",'n.凝块，血块，一推，一群|||n.笨蛋，傻瓜|||v.凝结,使...凝结，阻塞','You silly clot!','你这个大笨蛋!','The patient\'s blood refused to clot.','病人的血液无法凝结。'}

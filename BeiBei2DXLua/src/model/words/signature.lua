@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["signature"]={"signature","['sɪgnətʃə]","['sɪgnətʃɚ]","n.签署",'n.签署,书帖,有特征的符号','This is your resident DJ signing off for another week with our signature tune.','这是本台流行音乐唱片节目主持人, 现在播放信号曲来结束我们为您安排的这一星期的节目.','He added his signature (to the petition).','他（在请愿书上）签上了自己的名字.'}

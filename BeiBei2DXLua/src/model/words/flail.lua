@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flail"]={"flail","[fleɪl]","[flel]","n.连迦",'n.连迦|||vt.用连迦打，敲打|||vi.挥动','No fence against flail.','飞来横祸不胜防。','He gave a choked cry, flailed his arms wildly for a moment, and then went over the edge.','他闷哼了一声，手臂乱挥了几下，就从边上摔了下去。'}

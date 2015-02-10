@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["claim"]={"claim","[kleɪm]","[klem]","vt.要求",'n.要求,要求权;主张,断言,声称;要求物|||vt.要求,请求；主张,声称,断言','The matter claimed our serious attention.','这件事需要我们认真注意。','Did you claim on the insurance after your car accident?','出了车祸后，你向保险公司要求赔偿了吗？'}

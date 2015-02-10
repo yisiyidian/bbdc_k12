@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["organizer"]={"organizer","['ɔrgə,naɪzɚ]","[ 'ɔ:ɡənaizə ]","n.组织者",'n.组织者','I open up my appointment organizer.','我打开约会预定手册。','Address any quire about the venue to the conference organizer.','向会议组织者提出任何有关集会地点的询问。'}

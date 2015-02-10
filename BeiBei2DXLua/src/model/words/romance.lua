@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["romance"]={"romance","[rə(ʊ)'mæns; 'rəʊmæns]","[ro'mæns]","n.浪漫史",'n.冒险故事,浪漫史,传奇文学','French is a ||Romance|| language.','法语是罗曼语.','He told us a romance about a prince who married a poor girl.','他给我们讲了一位王子娶了一个穷人家女孩的传奇故事。'}

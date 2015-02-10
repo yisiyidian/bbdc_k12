@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slender"]={"slender","['slendə]","['slɛndɚ]","adj.细长的",'adj.细长的,苗条的,微薄的,少量的','A slender hope still flickered within him.','他心中仍闪出一线希望.','A slender smile still flickered across her face.','她脸上闪过一丝微笑。'}

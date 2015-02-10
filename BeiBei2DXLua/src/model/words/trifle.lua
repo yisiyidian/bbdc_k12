@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trifle"]={"trifle","['traɪf(ə)l]","['traɪfl]","n.琐事",'n.琐事,少量|||v.浪费,玩忽','we trifled too long at the fair','我们在集市上耽搁得太久了。','He\'s just ||trifling|| with her affections.','他只是在玩弄她的感情。'}

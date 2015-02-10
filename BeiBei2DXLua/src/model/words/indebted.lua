@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indebted"]={"indebted","[ɪn'detɪd]","[ɪn'dɛtɪd]","adj.负债的(受惠的)",'adj.负债的(受惠的)','He is indebted to his memory for his jest and to his imagination for his fact.','他的诙谐有赖于记忆力，而其事实则有来于想象力。','Owing something, such as gratitude, to another; indebted.','受惠的欠别人东西，如人情；感激的'}

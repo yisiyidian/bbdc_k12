@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["busy"]={"busy","['bɪzɪ]","['bɪzi]","adj.忙的",'adj.忙的,杂乱的|||vt.使忙于|||vi.忙','The line is busy.','占线。','He is busy with some important work.','他正忙于处理一些重要的事情。'}

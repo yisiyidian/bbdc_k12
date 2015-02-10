@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cheap"]={"cheap","[tʃiːp]","[tʃip]","adj.便宜的",'adj.便宜的,品质低的,虚伪的|||adv.便宜地','Rooms in cheap hotels are often dingy.','在低级旅馆中全是又黑又脏的房间。','You\'re surely not asking 40 for this book? Yes it\'s cheap at the price!','这本书你绝不会要价40英镑吧？是40英镑，物有所值啊！'}

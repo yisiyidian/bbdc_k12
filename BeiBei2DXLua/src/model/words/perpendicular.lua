@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perpendicular"]={"perpendicular","[,pɜːp(ə)n'dɪkjʊlə]","['pɝpən'dɪkjəlɚ]","n.垂直线",'n.垂直线,垂直的位置|||adj.垂直的,直立的','The wall is a little out of the perpendicular.','那墙有点斜。','There are many perpendicular marble columns in Greek temples.','希腊庙宇有很多垂直的大理石柱。'}

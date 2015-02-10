@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ogle"]={"ogle","['əʊg(ə)l]","['oɡl]","n.眉目传情",'n.眉目传情|||v.注视','She ogled me when handed me a glass of wine.','她在把酒杯递到我手上时对我做了个媚眼。','Don\'t ogle at other girls in front of your girlfriend.','在你女朋友的面前最好不要跟别的女人眉来眼去。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["narrative"]={"narrative","['nærətɪv]","['nærətɪv]","n.叙述",'n.叙述,故事|||adj.叙述的,叙事的,故事体的','The lines form a prelude to his long narrative poem.','这几行诗是他那长篇叙事诗的序诗。','She took up the narrative where John had left off.','她接著讲约翰未讲完的故事。'}

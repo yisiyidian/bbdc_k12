@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vacillate"]={"vacillate","['væsɪleɪt]","[ 'væsileit ]","vi.游移不定",'vi.游移不定,踌躇,犹豫','She vacillated between hope and fear.','她时而抱有希望，时而心存恐惧。','She vacillates between men twice her age and men younger than she.','她犹豫不决，不知道是该选择年龄比她大一倍的男人还是比她小的男人。'}

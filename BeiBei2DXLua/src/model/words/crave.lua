@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crave"]={"crave","[kreɪv]","[krev]","v.渴望",'v.渴望,热望,恳求','By this time the inner man began to crave nourishment.','到这个时候，肚子开始咕咕叫着要吃东西了。','There may be certain times of day when smokers crave their cigarette.','一天中可能有那么几次吸烟者特别想叼上烟。'}

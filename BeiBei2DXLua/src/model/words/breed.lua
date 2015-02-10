@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["breed"]={"breed","[briːd]","[brid]","vt.繁殖",'n.品种,族类|||vt.养育,繁殖,引起|||vi.繁殖','Spaniel is a breed of dog with large ears.','西班牙猎狗是一种长着大耳朵的猎狗。','I breed some chicks for pets.','我养了一些小鸡当宠物。'}

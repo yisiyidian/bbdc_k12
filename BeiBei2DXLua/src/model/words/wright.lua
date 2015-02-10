@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wright"]={"wright","[raɪt]","[raɪt]","n.工匠",'n.赖特(姓氏)|||n.工匠，制造者','He does not look like an empire wright.','他看上去并不像是一个帝国建造者。','Frank  Lloyd  ||Wright|| did not call himself an artist.','弗朗克.洛德. 莱特不把他自己看成是一个艺术家.'}

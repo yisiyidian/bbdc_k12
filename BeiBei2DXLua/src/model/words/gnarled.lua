@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gnarled"]={"gnarled","[nɑːld]","[ nɑ:ld ]","adj.树木多瘤节的",'adj.树木多瘤节的，粗糙的|||动词gnarl的过去式和过去分词形式','The wind has gnarled this old tree','大风扭坏了这棵老树。','His hands were gnarled with arthritis.','他的双手因患关节炎而扭曲变形。'}

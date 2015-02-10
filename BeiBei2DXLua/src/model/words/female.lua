@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["female"]={"female","['fiːmeɪl]","['fimel]","n.女子",'adj.雌的,女(性)的|||n.雌性的动植物,女子','I doubt if there will be a female president in this country in my lifetime.','我怀疑在我有生之年这个国家会不会出现一位女总统。','The male\'s orange beak differentiates it from the female.','那种鸟雄鸟的喙呈橙色, 与雌鸟不同.'}

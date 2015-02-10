@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hulk"]={"hulk","[hʌlk]","[hʌlk]","n.废船",'n.废船,笨重的人或物|||vi.赫然显现，笨拙地挪动','The truck hulked up suddenly over the crest of the hill.','卡车在小山顶上突然像个庞然大物似地出现了。','I saw a rotting hulk on the beach.','我在海滩上看见了一艘腐烂的废船。'}

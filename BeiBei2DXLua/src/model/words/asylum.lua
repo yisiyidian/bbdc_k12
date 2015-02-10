@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["asylum"]={"asylum","[ə'saɪləm]","[ə'saɪləm]","n.收容所",'n.收容所，避难所，庇护,精神病院','He was soon committed to an insane asylum.','不久他就被送进了疯人院。','A church, school, hospital, asylum, or prison is an institution.','教堂，学校，医院，收容所或监狱皆属公共机构。'}

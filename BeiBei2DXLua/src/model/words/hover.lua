@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hover"]={"hover","['hɒvə]","['hʌvɚ]","vi.盘旋",'vi.盘旋,翱翔,徘徊|||n.盘旋,翱翔,徘徊','The hawk is hovering overhead.','鹰在头顶上盘旋。','The mercury hovered around 35 Celsius degree.','水银温度计停留在摄氏35度左右。'}

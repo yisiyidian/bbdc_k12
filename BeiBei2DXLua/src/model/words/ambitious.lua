@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ambitious"]={"ambitious","[æm'bɪʃəs]","[æm'bɪʃəs]","adj.有雄心的",'adj.热望的,有雄心的,有抱负的','He is an ambitious young man full of enthusiasm and vitality.','他是个充满热情与活力的有远大抱负的青年。','One may be poor but never ceases to be ambitious.','人穷志不穷。'}

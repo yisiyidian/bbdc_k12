@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gather"]={"gather","['gæðə]","['ɡæðɚ]","vt.收集",'vt.收集；聚集，搜集；收紧，收缩；采集|||vi.逐渐增加，积聚|||n.聚集；衣褶','I gather she\'s ill, and that\'s why she hasn\'t come.','我想她是病了，所以没有来。','A crowd gathered to see what had happened.','一群人聚拢起来看发生了什么事。'}

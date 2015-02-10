@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["belie"]={"belie","[bɪ'laɪ]","[bɪ'laɪ]","vt.掩饰",'vt.掩饰,与...不符,使...失望','Practical experience belies this theory.','实际经验证明这个理论是错误的。','His cheerful manner belied his real feelings.','他那快活的样子掩饰了他真实的感情。'}

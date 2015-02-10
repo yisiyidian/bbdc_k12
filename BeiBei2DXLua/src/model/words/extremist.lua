@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extremist"]={"extremist","[ɪk'striːmɪst; ek-]","[ɪk'strimɪst]","n.过激分子",'n.极端主义者,过激分子','He was blacklisted because of his extremist views.','他因观点偏激而被列入黑名单.','It is unlikely that such an extremist organization will remain quiescent for long.','这种过激的组织是不太可能长期沉默的.'}

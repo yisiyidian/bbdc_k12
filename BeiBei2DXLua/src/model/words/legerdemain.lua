@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["legerdemain"]={"legerdemain","[,ledʒədɪ'meɪn]","['lɛdʒɚdəmen]","n.手法",'n.手法，戏法,诈术','You can not cheat me by such a legerdemain.','你这种小把戏是骗不了我的。','By a feat of legerdemain, the magician produced a rabbit from his hat.','魔术师一变戏法，就从他帽子里捞出一只兔子。'}

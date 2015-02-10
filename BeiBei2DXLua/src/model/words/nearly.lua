@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nearly"]={"nearly","['nɪəlɪ]","['nɪrli]","adv.几乎",'adv.几乎,差不多','He nearly poked me in the eye with his stick.','他的竿子几乎扎着我的眼睛。','The descent down the mountain took nearly two hours.','下山差不多花了两个小时。'}

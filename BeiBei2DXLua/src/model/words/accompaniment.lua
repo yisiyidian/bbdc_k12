@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accompaniment"]={"accompaniment","[ə'kʌmp(ə)nɪm(ə)nt]","[ə'kʌmpənɪmənt]","n.伴随物",'n.伴唱（奏），伴随物,补充物，伴随情况','Destruction is an accompaniment of war.','破坏会随着战争而来，有战争就有破坏。','He sang to a piano accompaniment.','他演唱由钢琴伴奏.'}

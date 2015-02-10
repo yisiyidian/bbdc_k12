@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["environment"]={"environment","[ɪn'vaɪrənm(ə)nt; en-]","[ɪn'vaɪrənmənt]","n.环境",'n.环境,外界','She is not used to the new environment.','她对新环境不习惯。','We are required by environment protecting department to use anthracite.','环保部门要求我们使用无烟煤。'}

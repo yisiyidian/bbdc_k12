@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emergency"]={"emergency","[ɪ'mɜːdʒ(ə)nsɪ]","[ɪ'mɝdʒənsi]","n.紧急情况",'adj.紧急的|||n.紧急情况,突发事件','There are four emergency exits in the department store.','这家百货公司有四个紧急出口。','It is important to keep/stay calm in an emergency.','在紧急情况下保持镇静是很重要的.'}

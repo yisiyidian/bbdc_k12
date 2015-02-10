@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sewer"]={"sewer","['suːə; 'sjuːə]","['suɚ]","n.下水道",'n.下水道,阴沟,裁缝师','The sewer is choked up with rubbish.','下水道被垃圾堵住了。','The sewer in the kitchen clogs easily.','厨房的下水道很容易堵。'}

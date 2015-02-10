@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["platoon"]={"platoon","[plə'tuːn]","[plə'tun]","n.排",'n.排,一组,团|||v.交替，在同一位置使用交替','The platoon is sent to reconnoitre the village before the attack.','在发动进攻前, 这个排奉命侦察该村。','The platoon was sent to reconnoitre the village before the attack.','在发动进攻前, 这个排奉命侦察该村.'}

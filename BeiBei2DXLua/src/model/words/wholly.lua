@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wholly"]={"wholly","['həʊllɪ; 'həʊlɪ]","['holli]","adv.完全地",'adv.完全地，一概','I wholly stand for you.','我完全支持你。','He doesn\'t wholly agree to the plan.','他并不完全同意这项计划。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["surpass"]={"surpass","[sə'pɑːs]","[sə'pæs]","vt.超越",'vt.超越,凌驾,胜过','Men surpass women in strength.','男人比女人力气大。','He was determined to surpass the achievements of his older brothers.','他决心超越几个哥哥的成就。'}

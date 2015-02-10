@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["restrictive"]={"restrictive","[rɪ'strɪktɪv]","[rɪ'strɪktɪv]","adj.限制的",'adj.限制的,拘束的,限定的|||n.限定辞','He argued that the law was unduly restrictive.','他辩称法律的约束性有些过分了.','The race of plants and the race of animals shrink under this great restrictive law.','植物的族类和动物的族类都僵缩在这个大禁律之下.'}

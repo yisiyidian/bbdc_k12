@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compatriot"]={"compatriot","[kəm'pætrɪət; -'peɪt-]","[kəm'petɪət]","n.同国人",'n.同国人|||adj.同国的,同胞的','A woman from one\'s own country; a compatriot.','女同胞从自己国家来的女人; 女同胞','He believes that he and his compatriot student are the future leader.','他相信他和他同国的学生是未来的领袖。'}

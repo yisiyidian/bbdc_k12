@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["light"]={"light","[laɪt]","[laɪt]","n.光",'n.光,光线,灯,启发,众所周知的,通光口,眼光|||adj.轻的,不重要的,容易的,明亮的,淡色的|||vi.点燃,着火,变亮,下马,落下,碰巧发生|||vt.点燃,照亮|||adv.轻地,轻便的','Since her accident she can only do light work.','她出事以後只能做轻活儿了。','It\'s beginning to get light.','天渐渐亮了。'}

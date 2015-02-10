@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["camaraderie"]={"camaraderie","[,kæmə'rɑːd(ə)rɪ; -riː]","[,kɑmə'rɑdəri]","n.同志之爱",'n.同志之爱,友情','The camaraderie among fellow employees made the tedious work just bearable.','同事之间的情谊使枯燥乏味的工作变得还能忍受。','Honest is the most important for camaraderie.','真诚是友情之中最重要的东西。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["definition"]={"definition","[defɪ'nɪʃ(ə)n]","[,dɛfɪ'nɪʃən]","n.定义",'n.定义,阐释，清晰度','The book attempts a definition of his role in world politics.','该书要阐明的是他在世界政局中的作用。','To give a definition of a word is more difficult than to give an illustration of its use.','给一个词下定义要比举例说明它的用法困难。'}

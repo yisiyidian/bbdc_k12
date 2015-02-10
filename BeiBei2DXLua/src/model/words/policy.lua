@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["policy"]={"policy","['pɒləsɪ]","['pɑləsi]","n.政策",'n.政策,方针,保险单','The annual premium on my policy is 3000 yuan.','我的保险单每年的保险费是三千元。','They expressed their dissent from official policy.','他们对官方的政策表示出异议。'}

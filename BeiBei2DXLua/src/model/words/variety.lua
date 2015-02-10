@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["variety"]={"variety","[və'raɪətɪ]","[və'raɪəti]","n.多样",'n.多样,种类,杂耍','The hotel offers its guests a wide variety of amusements.','这个旅馆为住客提供了各种各样的娱乐活动。','||Variety|| is the spice of life.','变化是生活的调味品。'}

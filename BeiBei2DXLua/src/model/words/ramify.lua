@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ramify"]={"ramify","['ræmɪfaɪ]","['ræmə,fai]","v.(使)分枝",'v.(使)分枝,(使)分叉,(使)成网状','These plants ramify early and get to be very large.','这些植物很早就分枝，因而可以长得非常大。','Railways are ||ramified|| over the country.','铁路线分布全国。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["harrow"]={"harrow","['hærəʊ]","[ 'hærəu ]","n.耙",'n.耙|||v.耙掘,伤害,使...苦恼','The farmer\'s harrow was broken during his working.','农夫正在劳动的时候，耙子断了。','The villagers were gaunt and sickly, harrowed by years of disease and starvation.','村民们枯瘦如柴，体弱多病，都是被多年的疾病和饥饿折磨的。'}

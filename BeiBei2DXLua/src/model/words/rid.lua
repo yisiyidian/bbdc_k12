@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rid"]={"rid","[rɪd]","[rɪd]","vt.免除",'vt.免除,清除,使...获自由','Let\'s get rid of this moldy old furniture.','咱们把这件老掉牙的旧家具扔掉吧。','We have an extractor fan in the kitchen to get rid of the smell of cooking.','我们的厨房里有台排气扇，用来消除油烟。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deviation"]={"deviation","[diːvɪ'eɪʃ(ə)n]","['divɪ'eʃən]","n.偏差数",'n.偏差数,偏离，出轨，背盟','A systematic deviation of a value from a reference value.','某数值偏离参考值的一种系统偏差。','A deviation from a vertical or horizontal line, plane, position, or direction.','倾角来自垂直或水平线、面、位置或方向的偏差'}

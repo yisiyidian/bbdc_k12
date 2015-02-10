@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gibberellin"]={"gibberellin","[,dʒɪbə'relɪn]","[,dʒɪbə'rɛlən]","n.[生化]赤霉素",'n.[生化]赤霉素','gibberellin','赤霉素','||Gibberellins|| (GAs) are plant hormones that regulate growth and influence various developmental processes.','赤霉素是调节生长和影响各生长进程的植物激素。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["traitor"]={"traitor","['treɪtə]","['tretɚ]","n.叛徒",'n.叛徒,卖国贼，出卖朋友者','The traitor was shot to death.','这个卖国贼被处决了。','He beat the traitor to the draw and shot him dead.','他抢先拔出手枪，将叛徒击毙。'}

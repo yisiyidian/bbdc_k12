@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["equip"]={"equip","[ɪ'kwɪp]","[ɪ'kwɪp]","v.装备",'v.装备,设,穿～','Please equip yourself with a sharp pencil and a rubber for the exam.','请准备一枝尖的铅笔和一块橡皮参加考试。','They were not equipped to deal with the situation.','他们没有准备好应付这种局面。'}

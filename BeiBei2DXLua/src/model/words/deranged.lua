@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deranged"]={"deranged","[dɪ'reɪn(d)ʒd]","[dɪ'rendʒd]","adj.疯狂的",'adj.疯狂的','The poor woman\'s mind has been deranged for many years.','那个可怜的妇人已经精神失常好多年了。','My plans were completely deranged by his sudden arrival.','他的突然来到把我所有的计划全部搞乱了。'}

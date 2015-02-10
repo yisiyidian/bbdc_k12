@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["martinet"]={"martinet","[,mɑːtɪ'net]","[,mɑrtn'ɛt]","n.要求严格服从纪律的人",'n.要求严格服从纪律的人','They discover that the new teacher is a martinet.','他们发现新来的老师非常严格。','They discover that the new teacher is a martinet.','他们发现新来的老师非常严格。'}

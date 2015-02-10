@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["preamble"]={"preamble","[priː'æmb(ə)l; 'priː-]","['priæmbl]","n.前文",'n.前文,序文,前言','He launched into his statement without any preamble.','他开门见山地发表言论.','Truth needs not many words; but a false tales a long preamble.','真理不须多言，谎言累牍连篇。'}

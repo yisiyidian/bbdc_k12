@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["boon"]={"boon","[buːn]","[bʊn]","adj.愉快的",'adj.愉快的|||n.恩惠','Parks are a great boon to people in big cities.','公园对大城市的居民是大有裨益的设施。','These machines have proved a real boon to disabled people.','事实证明这些机器让残疾人受益匪浅。'}

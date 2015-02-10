@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["salvation"]={"salvation","[sæl'veɪʃ(ə)n]","[sæl'veʃən]","n.得救",'n.得救,拯救,赎罪','One selected by divine will for salvation.','被上帝选中灵魂得救的人','One that is or is regarded as a source of salvation in a crisis.','救星是或被认为是在危机中拯救别人的人'}

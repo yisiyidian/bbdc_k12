@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["punish"]={"punish","['pʌnɪʃ]","['pʌnɪʃ]","v.惩罚",'v.惩罚,处罚','The teacher warned them that she would punish anyone who stepped out of line.','老师警告他们说谁要不守规矩就罚谁.','The great thieves punish the little ones.','【谚】大贼罚小贼；大鱼吃小鱼。'}

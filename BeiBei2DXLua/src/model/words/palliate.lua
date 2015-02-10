@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["palliate"]={"palliate","['pælɪeɪt]","['pælɪet]","vt.减轻",'vt.减轻,缓和,辩解','I shall never attempt to palliate my own foibles by exposing the error of another.','我不应暴露别人的错误来掩饰自己的缺点。','palliate','掩饰，粉饰，为……找借口'}

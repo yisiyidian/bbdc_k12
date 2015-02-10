@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aggregation"]={"aggregation","[,æɡrɪ'ɡeɪʃən]","[,ægrɪ'geʃən]","n.集合",'n.集合,聚合,集合体','A small mass of tissue or aggregation of cells.','结组织的小结块或细胞的聚集','The aggregation of immense farms under white ownership was a trend at that time.','大规模的农场聚集在白人的所有权之下，这在当时是一股潮流。'}

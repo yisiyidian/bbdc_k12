@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consume"]={"consume","[kən'sjuːm]","[kən'sʊm]","vt.消耗",'vt.消耗，毁灭，吃，喝,挥霍|||vi.耗尽生命,被烧毁','Consuming or eager to consume great amounts of food; ravenous.','贪吃的吃掉或想吃大量的食物；狼吞虎咽的','Each year Americans consume a high percentage of the world\'s energy.','每年美国人都消耗掉世界能源的很大比例'}

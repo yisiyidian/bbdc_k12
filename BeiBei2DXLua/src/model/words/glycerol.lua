@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glycerol"]={"glycerol","['glɪs(ə)rɒl]","['glɪsə,rol]","n.[化]甘油",'n.[化]甘油','Glycerol or a preparation of glycerol.','甘油，丙三醇甘油或丙三醇配制品','A natural or synthetic ester of glycerol and fatty acids.','甘油酯以甘油和脂肪酸天然存在的或合成的酯'}

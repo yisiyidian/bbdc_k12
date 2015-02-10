@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["correspondence"]={"correspondence","[kɒrɪ'spɒnd(ə)ns]","[,kɔrə'spɑndəns]","n.通信",'n.通信；一致；相当','Where\'s the file of our recent correspondence?','我们近期的信件卷宗在哪里?','I\'ve fallen behind with my correspondence.','我积压了许多信没回.'}

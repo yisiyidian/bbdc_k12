@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["osprey"]={"osprey","['ɒsprɪ; -preɪ]","['ɑspre]","n.鹗(一种食鱼的大鹰)",'n.鹗(一种食鱼的大鹰)，（女帽的）装饰羽毛','Bald eagles snatch fish at the water surface, rob osprey of fish, and eat carrion.','白头海雕常掠过水面捕鱼，并抢夺鹗抓到的鱼，也吃腐肉。','An osprey is flying over the water.','一个鱼鹰在水面上飞翔。'}

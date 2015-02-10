@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wildlife"]={"wildlife","['waɪl(d)laɪf]","['waɪldlaɪf]","n.野生动物",'n.野生动物','Hunters are barred from wildlife sanctuaries.','野生动物保护区内禁止狩猎。','Our community is a leader in the conservation of wildlife.','我们社区在野生动物保护方面走在前头。'}

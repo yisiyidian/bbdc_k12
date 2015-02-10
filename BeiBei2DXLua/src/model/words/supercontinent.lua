@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supercontinent"]={"supercontinent","['suːpəkɒntɪnənt; 'sjuː-]","['supɚkɑntɪnənt]","n.[地]超大陆",'n.[地]超大陆','The formation of a supercontinent can dramatically affect the environment.','一个超大陆的形成可以显著地影响环境。','The supercontinent of Gondwana had just formed and was located near the South Pole.','超大陆冈瓦那开始在南极附近形成。'}

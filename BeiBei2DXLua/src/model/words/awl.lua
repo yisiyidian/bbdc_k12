@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["awl"]={"awl","[ɔːl]","[ɔl]","n.锥子",'n.锥子,尖钻','The man used an awl killing his wife.','那个男人用锥子杀害了他妻子。','||Awl|| is a small pointed tool used for piercing holes.','锥子是一个用来穿孔的小型的尖状的工具。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unconvincing"]={"unconvincing","[ʌnkən'vɪnsɪŋ]","[ ,ʌnkən'vinsiŋ ]","adj.不足以令人相信的",'adj.不足以令人相信的','gave an unconvincing excuse.','给出一牵强的借口','On the face of it, this story seems unconvincing.','表面上看来, 这个故事似乎令人难以置信.'}

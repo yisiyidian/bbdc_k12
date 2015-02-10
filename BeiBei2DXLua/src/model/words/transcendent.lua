@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["transcendent"]={"transcendent","[træn'send(ə)nt; trɑːn-]","[træn'sɛndənt]","adj.卓越的",'adj.卓越的|||n.卓越的人','fails to achieve a transcendent significance in suffering and squalor','“无法从痛苦和卑劣之中获得一种超然的意义”','...the idea of a transcendent God who stood apart from mankind.','...超越于人类之上的上帝的观点。'}

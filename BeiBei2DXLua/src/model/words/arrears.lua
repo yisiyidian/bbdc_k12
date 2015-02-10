@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arrears"]={"arrears","[ə'rɪəz]","[ə'rɪrz]","n.到期未付之债",'n.到期未付之债,拖欠的款项,待做的工作','I have to clear off arrears of work and correspondence.','我必须处理积压的工作和信件。','I have fallen into arrears with my rent.','我已经拖欠租金了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["telex"]={"telex","['teleks]","['tɛlɛks]","n.电传",'n.电传|||vt.发电传','It is a telex rather than a letter.','与其说它是一封信，不如说它是一封电传。','Several telexes arrived this morning.','今天上午收到了几份电传。'}

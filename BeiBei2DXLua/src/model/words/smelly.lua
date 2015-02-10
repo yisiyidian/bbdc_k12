@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["smelly"]={"smelly","['smelɪ]","['smɛli]","adj.有使人难受的气味的",'adj.有使人难受的气味的,臭的','||Smelly|| feet are definitely a turn-off as far as I\'m concerned.','脚要是有味可真恶心人, 这是我的看法.','He had extremely smelly feet.','他的脚臭气熏天。'}

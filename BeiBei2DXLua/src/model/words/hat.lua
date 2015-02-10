@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hat"]={"hat","[hæt]","[hæt]","n.帽子",'n.帽子,职位|||vt.给...戴帽子|||vi.提供帽子','He took off the hat and revealed his bald head.','他脱下帽子，露出秃头。','Keep this information under your hat.','对这条消息加以保密'}

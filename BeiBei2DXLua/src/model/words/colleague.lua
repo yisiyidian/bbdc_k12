@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["colleague"]={"colleague","['kɒliːg]","['kɑliɡ]","n.同事",'n.同事','It was more in sorrow than in anger that he criticized his former colleague.','他批评以前的同事, 并非出於气愤而是为他惋惜.','I headed him off quarreling with his colleague.','我阻止他和他的同事发生争吵。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brave"]={"brave","[breɪv]","[brev]","adj.勇敢的",'adj.勇敢的,缤纷的,绚丽的|||vt.勇敢地面对(危险等),抵抗|||n.勇敢的人','The soldier is as brave as a lion.','这个战士象狮子一样勇猛。','I think you are very brave.','我认为你非常勇敢。'}

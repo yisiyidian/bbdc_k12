@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interjection"]={"interjection","[ɪntə'dʒekʃ(ə)n]","[,ɪntɚ'dʒɛkʃən]","n.感叹词",'n.感叹词','In grammar, an interjection is a word or a phrase used to express a strong feeling.','文法中，感叹语是用来表达一种强烈感情的一个字或片语。','...the moronic and insensitive interjections of the disc jockey.','...该音乐主持人愚蠢而迟钝的插话。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unreasonable"]={"unreasonable","[ʌn'riːz(ə)nəb(ə)l]","[ʌn'riznəbl]","adj.不合理的",'adj.不合理的,过度的,不切实际的','You know as well as I do that you\'re being unreasonable.','你很清楚你不讲理.','The unreasonable rules were revoked.','不合理的规则被废除了。'}

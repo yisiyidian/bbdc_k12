@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rollicking"]={"rollicking","['rɑlɪkɪŋ]","[ 'rɔlikiŋ ]","adj.欢乐的",'adj.欢乐的','a rollicking celebration.','欢闹的庆祝会','the rapid and rollicking short lines ( a sort of inspired doggerel)','节奏欢快的短诗行（一种来自灵感的打油诗）'}

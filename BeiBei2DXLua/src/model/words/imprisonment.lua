@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imprisonment"]={"imprisonment","[ɪm'prɪz(ə)nm(ə)nt]","[ɪm'prɪznmənt]","n.监禁",'n.监禁,关押，拘禁','For an offence of this gravity, imprisonment is the usual punishment.','对这种重大罪行通常处以监禁.','He appealed for (a) commutation of the death sentence to life imprisonment.','他已上诉请求将死刑减为无期徒刑.'}

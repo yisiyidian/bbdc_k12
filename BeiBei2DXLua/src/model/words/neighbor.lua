@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["neighbor"]={"neighbor","['neɪbə]","['nebɚ]","n.邻居",'n.邻居|||v.邻接,毗邻而居,友好','My neighbor is a man of highest virtue.','我的邻居是一个具有高尚品德的人。','The country\'s subjection of its neighbor has been finished.','该国对邻国的征服已经完成。'}

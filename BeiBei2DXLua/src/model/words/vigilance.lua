@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vigilance"]={"vigilance","['vɪdʒɪl(ə)ns]","['vɪdʒələns]","n.警戒",'n.警戒,警觉心,守夜','The price of liberty is eternal vigilance.','自由的代价是长期保持警惕。','You cannot afford to relax your vigilance for a moment.','千万不要放松警惕，一秒也不行。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comb"]={"comb","[kəʊm]","[kom]","n.梳子",'n.梳子,梳状物,鸡冠,蜂巢|||vt.梳理,清理,搜查,用梳子|||vi.搜寻','He combed through the files searching for evidence of fraud.','他详查档案，寻找欺诈行为的证据。','Let me fix my hair (ie brush and comb it) and I\'ll be ready.','我梳梳头, 马上就好.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["destitution"]={"destitution","[,destɪ'tʃuːʃn; ,destɪ'tjuːʃn]","[ ,desti'tju:ʃən ]","n.穷困",'n.穷困,贫穷,缺乏','The few packages of food seemed a mockery in the face of such enormous destitution.','对于众多赤贫的人们, 这几袋食物简直是杯水车薪','Extreme want or poverty; destitution.','拮据极度缺乏或贫穷; 贫困'}

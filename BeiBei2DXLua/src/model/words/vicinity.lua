@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vicinity"]={"vicinity","[vɪ'sɪnɪtɪ]","[və'sɪnəti]","n.邻近",'n.邻近,周边地区','A brandy distilled from white wine and produced in the vicinity of Cognac.','法国白兰地酒由白葡萄酒蒸馏获得的一种白兰地酒，产于科涅克附近','In this general vicinity; around here.','在这一带在这里附近；在这周围'}

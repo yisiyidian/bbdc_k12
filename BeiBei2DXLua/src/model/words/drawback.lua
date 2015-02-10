@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drawback"]={"drawback","['drɔːbæk]","['drɔbæk]","n.不利点",'n.不利点,退税','The great drawback to living near a main road is noise.','住在大街旁最大的缺点是噪音。','Lack of fund can be a drawback if you wanted to invest in a sure thing.','如果你要对确有把握的事投资，资金短缺会是个障碍。'}

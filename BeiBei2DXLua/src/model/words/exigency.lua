@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exigency"]={"exigency","['eksɪdʒ(ə)nsɪ; 'egzɪ-; ɪg'zɪ-; eg'zɪ-]","['ɛksədʒənsi]","n.紧急",'n.紧急,迫切需要','The people had to accept the ||exigencies|| of wartime economy.','人们不得不接受战时经济的紧急情况。','The exigency of the case admitted of no alternatives.','情况紧急，别无他法。'}

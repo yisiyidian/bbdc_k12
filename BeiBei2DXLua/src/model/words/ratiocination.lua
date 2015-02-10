@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ratiocination"]={"ratiocination","[,rætiɔsi'neiʃən, -ræʃi-]","[ ,rætiɔsi'neiʃən, -ræʃi- ]","n.推理",'n.推理,推论','Conan is a cartoon character who is good at ratiocination.','柯南是一个擅长推理的漫画人物。','There\'s no difference of Win or lose, or good or bad in ratiocination.','推理是没有胜负、好坏之分的。'}

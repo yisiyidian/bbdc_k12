@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ligneous"]={"ligneous","['lɪgnɪəs]","['lɪgnɪəs]","adj.木质的",'adj.木质的,木头的','This table is ligneous.','这张桌子是木质的。','All these ligneous plants are imported from Russia.','这些木本植物都是从俄国进口而来。'}

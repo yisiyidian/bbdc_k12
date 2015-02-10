@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["leprosy"]={"leprosy","['leprəsɪ]","['lɛprəsi]","n.[医]麻疯病",'n.[医]麻疯病,寒生氏病|||n.腐败','||Leprosy|| is a kind of disease affecting the skin and nerves.','麻疯病是一种影响皮肤和神经的疾病。','There were many people with leprosy around the age of thirty.','在三十年代有很多麻疯病人。'}

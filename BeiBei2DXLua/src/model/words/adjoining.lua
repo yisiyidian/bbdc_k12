@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adjoining"]={"adjoining","[ə'dʒɒɪnɪŋ]","[ə'dʒɔɪnɪŋ]","adj.毗邻的",'adj.毗邻的|||动词adjoin的现在分词','Flames burned out two adjoining houses.','大火把附近两栋房子烧掉了。','Yes, there is a private bathroom adjoining.','有的，它带有一间专用浴室.'}

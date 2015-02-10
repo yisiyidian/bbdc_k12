@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deport"]={"deport","[dɪ'pɔːt]","[dɪ'pɔrt]","vt.驱逐出境",'vt.驱逐出境，举止','She is declared an undesirable alien and deport.','她被宣布是不受欢迎的外国人并被驱逐出境。','We deport aliens who slip across our borders.','我们把偷渡入境的外国人驱逐出境.'}

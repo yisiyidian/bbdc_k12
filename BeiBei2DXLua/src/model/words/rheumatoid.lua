@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rheumatoid"]={"rheumatoid","['ruːmətɒɪd]","['rʊmətɔɪd]","adj.患风湿病的",'adj.患风湿病的','The treatment of certain diseases, especially rheumatoid arthritis, with gold compounds.','金疗法用金的化合物治疗某些疾病，如风湿性关节炎','I am rheumatoid','我患了风湿'}

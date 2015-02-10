@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conserve"]={"conserve","[kən'sɜːv]","[kən'sɝv]","n.蜜饯",'n.蜜饯,果酱|||vt.保存,与糖放在一起,保持','Designed to conserve human energy in performing work or to decrease the amount of human labor needed.','节省劳力的设计用来在工作时保持人体能量或减轻劳动强度的','It is important to conserve energy.','节省能源十分重要.'}

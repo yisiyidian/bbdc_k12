@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["splice"]={"splice","[splaɪs]","[splaɪs]","v.&n.接合",'v.&n.接合,衔接|||vt.拼接','An old friend of mine, newly spliced, recently invited me to dinner in his new marital home.','我的一位刚结婚不久的老朋友最近邀请我到他的婚房去吃晚饭。','He spliced together the broken ends of ropes quickly.','他快速地把断了的绳子头接起来。'}

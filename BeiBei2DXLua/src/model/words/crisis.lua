@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crisis"]={"crisis","['kraɪsɪs]","['kraɪsɪs]","n.危机",'n.危急关头,危机','In this crisis, all the prejudices fell away.','值此危急时期, 各种偏见均已消失。','I was on the sidelines during the political crisis.','在这一政治危机时期我是目睹一切的局外人。'}

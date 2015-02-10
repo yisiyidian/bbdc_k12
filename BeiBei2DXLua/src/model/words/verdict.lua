@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["verdict"]={"verdict","['vɜːdɪkt]","['vɝdɪkt]","n.裁定",'n.裁定,定论','The jury returned a verdict of (ie reached a decision that the accused was) not guilty.','陪审团做出被告无罪的裁决.','The jury brought in a verdict of guilty.','陪审团作出有罪的裁决。'}

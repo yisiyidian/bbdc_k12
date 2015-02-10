@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dissect"]={"dissect","[daɪ'sekt; dɪ-]","[dɪˈsɛkt, daɪ-, ˈdaɪˌsɛkt]","v.解剖",'v.解剖,切细，仔细研究','Something that has been dissected, such as a tissue specimen under study.','解剖体，解剖标本已被解剖的东西，如被研究的组织标本','The film has been minutely dissected by the critics.','影评家对这部电影做了详细的分析。'}

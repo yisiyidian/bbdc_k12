@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irradiate"]={"irradiate","[ɪ'reɪdɪeɪt]","[ɪ'redɪɪt]","v.照耀",'v.照耀,辐射，(使)灿烂,(使)明亮','We irradiate the desert with slow neutrons.','我们用低速中子照射整个沙漠.','irradiate goodness.','散发出善良'}

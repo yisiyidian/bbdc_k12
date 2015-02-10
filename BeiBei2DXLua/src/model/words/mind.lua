@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mind"]={"mind","[maɪnd]","[maɪnd]","n.思想",'n.思想,主意,心意,记忆,|||vt.留心,注意,介意,照顾|||vi.留心,关心','I\'d a good mind to smack him for being so rude!','他这样粗野，我真想揍他。','She minded very much that he had not come.','他没有来，她为此十分不悦。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clearance"]={"clearance","['klɪər(ə)ns]","['klɪrəns]","n.清除",'n.清除,解除,森林开拓','Let me tell you some details about clearance.','让我告诉你一些通关的细节。','an underpass with a 13-foot clearance.','有13英尺净空的高架桥下通道'}

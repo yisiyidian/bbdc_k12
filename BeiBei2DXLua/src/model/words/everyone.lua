@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["everyone"]={"everyone","['evrɪwʌn]","['ɛvrɪwʌn]","pron.每人",'pron.每人,人人','||Everyone|| should obey the government ordinance.','每个人都必须遵守这条政府法令。','We adhere to the principle that everyone should be treated fairly.','我们必须坚持人人都应该被平等对待这一原则。'}

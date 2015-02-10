@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lonely"]={"lonely","['ləʊnlɪ]","['lonli]","adj.孤独的",'adj.孤独的,寂寞的,荒凉的','I feel very lonely without my dog.','我的狗不在旁边我就很寂寞。','He has so few friends that his life is lonely.','他的朋友很少，因此他的生活非常孤单。'}

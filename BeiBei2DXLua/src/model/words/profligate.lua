@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["profligate"]={"profligate","['prɒflɪgət]","[prɔflɪɡət]","adj.放荡的",'adj.放荡的,不检点的,浪费的|||n.放荡者,享乐者','One who wastes, especially one who wastes money; a profligate.','浪费者浪费之人，尤指浪费钱财的人；败家子','...the most profligate consumer of energy in the world.','...世界上能源浪费最严重的消费者。'}

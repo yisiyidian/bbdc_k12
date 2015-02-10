@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["repulse"]={"repulse","[rɪ'pʌls]","[rɪ'pʌls]","v.击退",'n.击退,拒绝|||vt.逐退,击退,拒绝','Her request for a donation met with a rude repulse.','她要求赞助却遭到粗暴拒绝。','She repulsed his proposal.','她拒绝了他的求婚。'}

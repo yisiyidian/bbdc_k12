@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rubble"]={"rubble","['rʌb(ə)l]","['rʌbl]","n.粗石",'n.粗石,破碎的砖,粗石堆','Many people were entombed in the rubble of the bombed buildings.','很多人被埋在炸毁的建筑物的瓦砾里。','The ceiling collapsed and rubble poured into the room.','天花板坍塌了, 碎砖破瓦掉落到了屋里。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unbidden"]={"unbidden","[ʌn'bɪd(ə)n]","[ʌn'bɪdn]","adj.未经请求的",'adj.未经请求的,未经邀请的','||Unbidden|| guests are often welcomest when they are gone.','不速之客往往是在告辞时最受欢迎.','The words flowed unbidden from my pen.','这些字句从我的笔端滚滚流出.'}

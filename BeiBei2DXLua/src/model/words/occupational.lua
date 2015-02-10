@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["occupational"]={"occupational","[ɒkjʊ'peɪʃ(ə)n(ə)l]","[,ɑkju'peʃənl]","adj.职业的",'adj.职业的','For professional footballers, injuries are an occupational hazard.','对于职业足球运动员来说，受伤是职业本身带来的危险。','Explosions, though infrequent, are an occupational hazard for coal-miners.','矿井爆炸虽然不常发生, 但却是煤矿工人职业中的危险.'}
