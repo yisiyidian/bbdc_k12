@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shown"]={"shown","[ʃəʊn]","[ 'ʃəun ]","show的过去分词",'show的过去分词','The license shown by the troops when they entered enemy territory disgusted everyone.','那些部队进入敌人领土所表现出来的放肆令人厌恶。','Prices have not shown much variation this year.','今年物价没显出多大变化。'}

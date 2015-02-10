@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["second"]={"second","['sek(ə)nd]","['sɛkənd]","n.第二",'n.第二,秒|||adj.第二的,次等的,另一个的|||vt.支持','Her beautiful roses won second prize at the flower show.','她那些美丽的玫瑰在花展上得了二等奖。','He is second only to my own son in my affections.','我除了爱我的儿子，最爱他。'}

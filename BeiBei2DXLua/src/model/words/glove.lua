@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glove"]={"glove","[glʌv]","[ɡlʌv]","n.手套",'n.手套|||vt.给...戴手套','`Cautious\' is a description that certainly fits the new president like a glove.','用｀谨小慎微＇来形容新会长很恰当.','My dress fits (me) like a glove.','我的连衣裙非常合身.'}

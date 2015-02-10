@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shirk"]={"shirk","[ʃɜːk]","[ ʃə:k ]","vi.逃避",'vi.逃避,规避|||vt.逃避，躲避','I do not shirk any responsibility in this matter.','在这件事上，我没有逃避任何责任。','As a big consumer country of one-time-use products, we should not shirk our responsiblity.','作为一次性用品的消费大国，我们责无旁贷。'}

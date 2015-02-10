@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["neuron"]={"neuron","['njʊərɒn]","['nʊrɑn]","n.神经元",'n.神经元,神经细胞','As a neuron grows, it sends out a "growth cone" which pulls the growing axon behind it.','当一个神经元生长时，它会发出一个“生长锥”来引导轴突生长。','A neuron has only one axon.','一个神经元只有一个轴突。'}

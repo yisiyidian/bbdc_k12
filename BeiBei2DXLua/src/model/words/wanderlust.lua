@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wanderlust"]={"wanderlust","['wɒndəlʌst]","['wɑndɚlʌst]","n.漫游癖",'n.漫游癖,旅游热','His wanderlust would not allow him to stay long in one spot.','他酷爱旅游，无法在一个地方久留。','wanderlust','漫游癖'}

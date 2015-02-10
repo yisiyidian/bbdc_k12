@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peccadillo"]={"peccadillo","[,pekə'dɪləʊ]","[ ,pekə'diləu ]","n.轻罪",'n.轻罪,小过,小暇疵','People are prepared to be tolerant of extra-marital peccadilloes by public figures.','人们可以容忍公众人物婚外的不检点行为。','Don\'t take much concern on peccadillo.','不要过于关注小瑕疵。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chairman"]={"chairman","['tʃeəmən]","['tʃɛrmən]","n.主席",'n.主席,会长','The chairman exhorted the party workers to take action.','主席敦促党的工作人员采取行动。','After my lecture, the chairman compared notes with the president in a low voice.','我发言后, 董事长和总经理低声交换意见。'}

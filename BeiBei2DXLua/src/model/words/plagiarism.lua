@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plagiarism"]={"plagiarism","['pleɪdʒərɪz(ə)m]","['pledʒə'rɪzəm]","n.剽窃",'n.剽窃,剽窃物','He\'s accused of plagiarism.','他被指控剽窃。','||Plagiarism|| is a form of intellectual dishonesty.','抄袭是智力欺诈的一种形式。'}

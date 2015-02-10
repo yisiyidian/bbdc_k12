@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["offhand"]={"offhand","[ɒf'hænd; 'ɒfhænd]","[,ɔf'hænd]","adj.即时的",'adj.即时的,即席的,无准备的|||adv.即时地,即席地,随便地','He gave an offhand lecture but won the whole hue.','他做了一个即时演讲，但是却赢得满堂喝彩。','he made an offhand about my dead son','他触犯了我死去的儿子'}

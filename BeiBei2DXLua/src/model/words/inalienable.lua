@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inalienable"]={"inalienable","[ɪn'eɪlɪənəb(ə)l]","[ɪn'elɪənəbl]","adj.不可剥夺的",'adj.不可剥夺的','Life, liberty, and the pursuit of happiness have been called the inalienable rights of man.','生命、自由和追求幸福被称为人类不可剥夺的权利。','Taiwan is an inalienable part of the Chinese territory.','台湾是中国领土不可分割的一部分。'}

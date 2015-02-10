@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["even"]={"even","['iːv(ə)n]","['ivən]","adv.甚至",'adj.平坦的,偶数的,相等的|||adv.甚至,恰好,正当|||v.使平坦,相等','||Even|| if I have to walk all the way I\'ll get there.','即使一路走着去，我也得赶到那里。','I like her even though she can be annoying.','尽管她有时很恼人，但我还是喜欢她。'}

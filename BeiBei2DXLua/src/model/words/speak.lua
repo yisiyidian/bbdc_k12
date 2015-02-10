@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["speak"]={"speak","[spiːk]","[spik]","vt.说",'vt.说,声明,表现|||vi.说话,交谈,表达,发出声音','I\'m quite capable of speaking for myself, thank you!','我还是有能力把话说清楚的，谢谢你吧。','Does anyone speak English here?','这儿有人会说英语吗？'}

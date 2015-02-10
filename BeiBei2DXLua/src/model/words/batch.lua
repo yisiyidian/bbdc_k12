@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["batch"]={"batch","[bætʃ]","[bætʃ]","n.一次所烘的面包",'n.一次所烘的面包,一次所制之量,一组,批,分批|||vi.分批处理','The second batch of sugar is better than the first.','第二批制成的糖比第一批好。','A batch of mail dispatched at one time by a sender.','由邮递员同时分送的一批邮件'}

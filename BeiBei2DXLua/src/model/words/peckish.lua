@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peckish"]={"peckish","['pekɪʃ]","['pɛkɪʃ]","adj.饿的",'adj.饿的,易怒的','I am feeling a bit peckish.','饿的','Gelid light and air were in the kitchen but out of doors gentle summer morning everywhere.Made him feel a bit peckish.','厨房里,光和空气是冰冷的,然而户外却洋溢着夏晨的温煦,使他觉得肚子有点饿了'}

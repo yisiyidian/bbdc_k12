@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cart"]={"cart","[kɑːt]","[kɑrt]","n.（二轮或四轮）运货马车",'n.（二轮或四轮）运货马车，手推车|||vt.用马车装载，用手提（笨重物品），强行带走','Don\'t put the cart before the horse.','【谚】勿本末倒置。','The little boy lied on the bullock cart sleeping.','这个小男孩躺在牛车上睡着了。'}

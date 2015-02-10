@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["growl"]={"growl","[graʊl]","[ɡraʊl]","n.吠声",'n.吠声,不平,咆哮声|||v.怒吠,咆哮,吼','I kicked the dog, which responded by growling/with a growl.','我踢了那条狗, 它便狂吠起来.','We heard the thunder growling in the distance.','我们听见远处隆隆的雷声。'}

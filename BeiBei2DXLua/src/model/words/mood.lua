@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mood"]={"mood","[muːd]","[mud]","n.心情",'n.心情,情绪,语气','His mood suddenly changed and he became calm.','他的情绪突然一变, 冷静了下来.','He\'s always in a bad mood (ie irritable and angry) on Mondays.','他每星期一情绪都很坏.'}

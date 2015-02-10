@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["contempt"]={"contempt","[kən'tem(p)t]","[kən'tɛmpt]","n.轻视",'n.轻视,轻蔑','Such behaviour is beneath contempt.','这种行为令人不齿。','He was cited for contempt of court.','他因蔑视法庭而被传讯。'}

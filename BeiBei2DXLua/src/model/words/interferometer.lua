@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interferometer"]={"interferometer","[,ɪntəfə'rɒmɪtə]","[,ɪntɚfɪ'rɑmətɚ]","n.干涉计",'n.干涉计','We cannot, of course, stop the world but we can rotate the interferometer.','我们当然不能使地球停止运动，但是我们可旋转干涉仪。','laser interferometer','激光干涉仪'}

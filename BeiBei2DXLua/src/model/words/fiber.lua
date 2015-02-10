@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fiber"]={"fiber","['faɪbɚ]","[ 'faibə ]","n.纤维(物质)",'n.纤维(物质),力量','It was not until 1884 that the first artificial fiber was made.','直到一八八四年，第一个人造纤维才制造出来。','Rayon rank second only to cotton as the most widely used fiber.','人造丝是仅次于棉花的使用得最广泛的织物'}

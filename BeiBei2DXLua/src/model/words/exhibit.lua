@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exhibit"]={"exhibit","[ɪg'zɪbɪt; eg-]","[ɪɡ'zɪbɪt]","vt.展览",'n.展览品,展览,物证|||vt.展览，展现，显出(感情或品质),提出证据|||vi.展览','Many unearthed cultural relics were exhibited at the museum.','博物馆展出了许多出土文物。','She exhibited great powers of endurance during the climb.','她在攀登过程中表现出极大的耐力。'}

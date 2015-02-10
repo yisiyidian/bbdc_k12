@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disinter"]={"disinter","[,dɪsɪn'tɜː]","[,dɪsɪn'tɝ]","v.挖出",'v.挖出,掘土','The bones were disinterred and moved to a burial site.','尸骨被刨出，移到了墓地。','He has disinterred and translated an important collection of writings.','他发现并翻译了一部重要的作品集。'}

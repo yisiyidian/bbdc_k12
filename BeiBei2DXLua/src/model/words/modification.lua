@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["modification"]={"modification","[,mɒdɪfɪ'keɪʃ(ə)n]","[,mɑdɪfɪ'keʃən]","n.修正",'n.修正,修饰,修改','Automatic modification of the index register.','自动修改变址寄存器内容。','Persistent modification of behavior resulting from an animal\'s experience.','行为的修正由动物过去的经历导致的保持终生的行为修正'}

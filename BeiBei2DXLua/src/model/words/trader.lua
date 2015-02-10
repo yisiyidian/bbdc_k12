@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trader"]={"trader","['treɪdə]","['tredɚ]","n.商人",'n.商人，商船','The company is an international trader in grain.','这家公司是国际粮食贸易公司.','The trader had been known to tear up a contract before the ink was dry where it had been sighed.','早就听说，这个商人常常是签字的墨迹未干就撕毁合同。'}

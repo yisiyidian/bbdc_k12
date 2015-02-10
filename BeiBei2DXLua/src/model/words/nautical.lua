@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nautical"]={"nautical","['nɔːtɪk(ə)l]","['nɔtɪkl]","adj.海上的",'adj.海上的,航海的,船员的','I need a nautical map.','我需要一张航海地图。','Captain Gulliver was a middle class, nautical man','格列佛船长是一个中产阶级的海员。'}

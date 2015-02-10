@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discuss"]={"discuss","[dɪ'skʌs]","[dɪ'skʌs]","vt.讨论",'vt.讨论','We will discuss the proposal at the meeting.','我们将在会议上讨论这项提议。','What does the book discuss?','这本书讲了什么？'}

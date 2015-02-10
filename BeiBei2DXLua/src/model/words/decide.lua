@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decide"]={"decide","[dɪ'saɪd]","[dɪ'saɪd]","vt.&vi.决定",'vt.&vi.决定,作出抉择','It\'s difficult to decide between the two.','对这两者，不易做出抉择。','That decided me to leave my job.','那件事使我决定离职。'}

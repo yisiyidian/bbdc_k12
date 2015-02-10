@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["magnetosphere"]={"magnetosphere","[mæg'niːtəsfɪə]","[mæg'nitə,sfɪr]","n.磁气圈",'n.磁气圈','The magnetosphere is a bubble of magnetism that surrounds earth and protects us from solar wind.','磁气圈是一个包裹着地球的磁性泡泡，保护着我们免受太阳风的吹袭.','The earth\'s magnetosphere is at once protective and dangerous.','地球的磁层既具有保护的功能，却又极其危险。'}

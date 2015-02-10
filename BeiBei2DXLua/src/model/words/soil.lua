@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["soil"]={"soil","[sɒɪl]","[sɔɪl]","n.土地",'n.土地,土壤|||v.弄脏,(使)变脏|||vi.变脏|||vt.弄脏','He transplanted the seedlings into peaty soil.','他把幼苗移栽到含泥炭的土壤里。','Fertile soil yields good crops.','肥沃的土地能种出好庄稼。'}

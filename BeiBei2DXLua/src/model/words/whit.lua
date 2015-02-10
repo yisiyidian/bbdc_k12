@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whit"]={"whit","[wɪt]","[ hwit ]","n.些微",'n.些微,一点点','Linda told her father every whit, and hid nothing from him.','琳达全都告诉了父亲，对他没有一点隐瞒。','He cares not a whit for public opinion.','他对舆论毫不关心。'}

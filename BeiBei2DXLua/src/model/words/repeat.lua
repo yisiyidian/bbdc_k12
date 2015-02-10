@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["repeat"]={"repeat","[rɪ'piːt]","[rɪ'pit]","n.重复",'n.重复,反复|||vt.重复,复述|||vi.重复|||adj.重复的,反复的','He repeated her statement word for word.','他一字不差地重复她的话。','I wish we could see more new programmes on television, not repeats all the time.','我真希望我们能够看到更多新的电视节目，而不是翻来覆去的那几个老节目。'}

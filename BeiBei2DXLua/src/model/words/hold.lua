@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hold"]={"hold","[həʊld]","[hold]","vt.拿住",'vt.拿住；保存；拘押；容纳|||vi.拿住；同意；保持不变；有效|||n.握住；保留；控制','My new car holds the road well.','我的新汽车贴路性能很好。','I don\'t think the car will hold you all.','我看这辆汽车坐不下你们这些人。'}

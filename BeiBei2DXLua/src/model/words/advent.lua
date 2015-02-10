@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["advent"]={"advent","['ædvɛnt]","[ 'ædvənt ]","n.出现",'n.出现,到来','The advent of the computer changed people\'s life greatly.','计算机的出现极大地改变了人们的生活。','Since the advent of atomic power, there have been great changes in industry.','自从原子动力问世以后，工业发生了巨大的变化。'}

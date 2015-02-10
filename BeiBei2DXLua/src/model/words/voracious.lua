@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["voracious"]={"voracious","[və'reɪʃəs]","[və'reʃəs]","adj.狼吞虎咽的",'adj.狼吞虎咽的,贪婪的','He is a voracious worker.','他是个贪婪的工人。','Joseph Smith was a voracious book collector.','约瑟夫·史密斯是个如饥似渴的藏书家。'}

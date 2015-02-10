@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["affluent"]={"affluent","['æflʊənt]","['æfluənt]","adj.富裕的",'adj.富裕的|||n.支流；富人','||Affluent|| he may be, But he is by no means sure what to tip the doorman or the chambermaid.','尽管他可能是富裕的，但他一点不知道该付多少小费给看门人和清理卧室的女服务员。','Cigarette smoking used to be more common among affluent people.','吸烟过去在富人中更为普遍。'}

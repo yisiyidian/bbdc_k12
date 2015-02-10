@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stealth"]={"stealth","[stelθ]","[stɛlθ]","n.秘密行动",'n.秘密行动,秘密,鬼祟','She prefers to do good by stealth.','她宁愿悄悄地做好事。','||Stealth|| aircraft is the outstanding accomplishment of modern science and technology.','隐形机是现代科学技术的杰出成果。'}

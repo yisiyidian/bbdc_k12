@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coterminous"]={"coterminous","[kəʊ'tɜːmɪnəs]","[ko'tɝmɪnəs]","adj.毗连的",'adj.毗连的,有共同边界的|||=conterminous','China and Thailand is coterminous.','中国和泰国是毗连的。','coterminous','事物或看法完全一致的'}

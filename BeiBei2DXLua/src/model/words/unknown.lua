@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unknown"]={"unknown","[ʌn'nəʊn]","[,ʌn'non]","adj.未知的",'adj.未知的，不出名的','The new sales director is still a bit of an unknown quantity.','新来的销售部主任大家还不大了解。','He was an unknown painter one year ago.','一年前，他还是一个不为人知的画家。'}

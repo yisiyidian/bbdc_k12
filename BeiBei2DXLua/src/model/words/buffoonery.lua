@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["buffoonery"]={"buffoonery","[bʌ'fʊnəri]","[ bə'fu:nəri ]","n.滑稽可笑的举动",'n.滑稽可笑的举动','Jimmy\'s buffoonery was hilarious.','吉米的滑稽表演令人捧腹。','It can take innumerable forms, from buffoonery to the pursuit of posthumous fame.','“看我”有各种不同的形式，从插科打诨到追求芳名不胜枚举。'}

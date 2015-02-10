@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overextend"]={"overextend","[əʊv(ə)rɪk'stend; -rek-]","[,ovɚrɪk'stɛnd]","v.使...承担过多的义务",'v.使...承担过多的义务','Any users of credit may overextend themselves.','每个贷款使用者都有可能作出不自量力的事。','overextended their defenses.','过分扩展防御工事'}

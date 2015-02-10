@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sumptuous"]={"sumptuous","['sʌm(p)tjʊəs]","['sʌmptʃuəs]","adj.华丽的",'adj.华丽的,奢侈的','The poor girl was astonished by the sumptuous furnishings of the mansion.','这个贫穷的女孩被大厦里的豪华的陈设惊呆了。','The guests turned up dressed in sumptuous evening gowns.','客人们身着华丽的夜礼服出现了。'}

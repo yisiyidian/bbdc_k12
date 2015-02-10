@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vitiate"]={"vitiate","['vɪʃɪeɪt]","['vɪʃɪet]","vt.使败坏",'vt.使败坏,损害,使失效','Her argument is too perfect to be vitiated.','她的观点无懈可击。','But this does not vitiate his scholarship.','但这不会威胁到他的奖学金。'}

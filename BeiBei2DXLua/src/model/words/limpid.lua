@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["limpid"]={"limpid","['lɪmpɪd]","['lɪmpɪd]","adj.清澈的",'adj.清澈的，清晰的','The stream is very limpid.','溪流十分清澈。','I compared my life to a limpid stream.','我把我的生命比喻成一条清澈的河流。'}

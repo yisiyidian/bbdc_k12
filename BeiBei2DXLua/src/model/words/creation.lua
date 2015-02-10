@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["creation"]={"creation","[kriː'eɪʃ(ə)n]","[krɪ'eʃən]","n.创造",'n.创造,创作','A creation, an object, or an experience having beauty suggestive of poetry.','诗一般美的事物有诗一般美的创作、物体或经历','||Creation|| supposes a creator.','有了创造者，才能有创造。'}

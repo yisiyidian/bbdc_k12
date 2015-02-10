@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["joint"]={"joint","[dʒɒɪnt]","[dʒɔɪnt]","adj.联合的",'adj.联合的,共同的|||n.关节,接合处|||v.连接,贴合','The joint isn\'t quite done yet.','这一大块肉煮得不太熟.','The two parts of the pipe have separated at the joint.','这个管子从接口处分成两截了.'}

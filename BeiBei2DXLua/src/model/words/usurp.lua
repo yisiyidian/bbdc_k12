@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["usurp"]={"usurp","[jʊ'zɜːp; jʊ'sɜːp]","[ju'zɝp]","vt.篡夺",'vt.篡夺,霸占vi.篡位','You must not allow it to usurp a disproportionate share of your interest.','你不应让它过多地占据你的兴趣。','The Congress wants to reverse the reforms and usurp the power of the presidency.','议会企图颠覆改革，夺取总统权力。'}

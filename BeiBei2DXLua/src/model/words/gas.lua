@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gas"]={"gas","[gæs]","[ɡæs]","n.气体",'n.煤气,气体,汽油,空话,能量|||vt.使吸入毒气,死,给...加汽油|||vi.空谈,加汽油','His long speech was nothing but gas and hot air.','他的长篇大论只是吹牛和空话。','He was badly gassed in the war.','他在战争中深受毒气伤害。'}

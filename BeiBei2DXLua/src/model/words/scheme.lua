@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scheme"]={"scheme","[skiːm]","[skim]","n.方案",'n.方案,计划,阴谋|||v.计画,设计,体系,结构,图谋','The scheme seems on the surface to be quite practical.','这方案表面上看来似乎很实际。','The scheme involves computers.','这一设计离不开计算机.'}

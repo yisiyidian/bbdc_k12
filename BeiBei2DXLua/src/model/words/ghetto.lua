@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ghetto"]={"ghetto","['getəʊ]","['ɡɛto]","n.少数民族聚居区",'n.少数民族聚居区，贫民区，犹太人区','Draws moving scenes of ghetto life.','生动地描写了贫民窟生活的片断','A section of a medieval city inhabited by Jews; a ghetto.','犹太人居住区犹太人在中世纪居住的城市的一部分; (城市中的)犹太人区'}

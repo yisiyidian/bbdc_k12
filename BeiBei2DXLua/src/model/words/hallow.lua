@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hallow"]={"hallow","['hæləʊ]","[ 'hæləu ]","vt.使...神圣",'vt.使...神圣,视为神圣','This area was hallowed by sacred memories.','这个地区由于宗教上的纪念意义而被视为圣地。','In ancient Greece,sports games were held on hallowed ground near Mount Olympus every four years.','古希腊人每四年就要在奥林匹克山附近的圣地举行运动会。'}

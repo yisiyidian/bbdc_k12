@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exasperation"]={"exasperation","[ɪg,zɑːspə'reɪʃ(ə)n; eg-]","[ iɡ,zæspə'reiʃən, -,zɑ:s- ]","n.恼怒",'n.恼怒，激怒','`Stop that noise,\' he cried out in exasperation.','｀不要发出那种噪音,＇他愤怒地大喊.','in exasperation','愤怒地'}

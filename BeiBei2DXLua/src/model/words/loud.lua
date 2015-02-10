@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["loud"]={"loud","[laʊd]","[laʊd]","adj.大声的",'adj.大声的,吵闹的,难闻的|||adv.响亮地,大声地','The television is too loud; turn the volume down.','电视声音太响了，把音量调低点儿。','He gave a loud whistle of gladness.','他吹了一声响亮的口号表示高兴。'}

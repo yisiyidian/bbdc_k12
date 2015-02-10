@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alter"]={"alter","['ɔːltə; 'ɒl-]","['ɔltɚ]","v.改变",'v.改变','I\'ll have to alter the diagram. I\'ve made a mistake.','我得修改图表. 我出了点儿错.','He\'s my alter ego, we go everywhere together.','他是我的知己--彼此形影不离.'}

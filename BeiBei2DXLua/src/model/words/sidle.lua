@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sidle"]={"sidle","['saɪd(ə)l]","['saɪdl]","v.(偷偷地)侧身而行",'v.(偷偷地)侧身而行，侧身挨近|||n.侧身移动，侧身行进','sidled through the narrow doorway.','侧身穿过狭窄的门道','swindlers who sidle up to tourists.','偷偷走向旅客的骗子'}

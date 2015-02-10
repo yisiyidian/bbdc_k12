@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thou"]={"thou","[ðaʊ]","[ðaʊ]","pron.[古]你",'pron.[古]你|||n.=thousand','Poets wild as thou were born.','曾有诗人与你同样狂野。','But wilt thou accept not the worship the heart lifts above.','难道你竟然会摈弃我呈上的虔诚崇拜。'}

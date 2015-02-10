@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["animate"]={"animate","['ænɪmeɪt]","['ænɪmet]","v.使...有生气",'v.使...有生气,赋予生命,促使|||adj.有生命的；有活力的','A smile animated her face.','一丝笑容使她脸上平添了生气.','The dog lay so still it scarcely seemed animate.','那条狗卧著一动也不动, 简直不像活的.'}

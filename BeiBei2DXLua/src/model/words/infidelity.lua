@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infidelity"]={"infidelity","[ɪnfɪ'delɪtɪ]","[,ɪnfɪ'dɛləti]","n.不信神",'n.不信神,无信仰,背信','She closed her eyes to her husband\'s ||infidelities||.','她丈夫有不忠行为，她却视而不见。','His wife has winked at his infidelity for years.','他多年来对妻子不忠, 妻子也只装作不知情.'}

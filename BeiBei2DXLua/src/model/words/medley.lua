@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["medley"]={"medley","['medlɪ]","['mɛdli]","n.混杂",'n.混杂，[音]混成曲|||adj.混杂的','China won the Men\'s 200 metres Individual ||Medley||.','中国赢得了男子200米个人混合泳比赛。','We communicated in a medley of foreign words and universal gestures.','我们边说着外语，边打着通用的手势进行交流。'}

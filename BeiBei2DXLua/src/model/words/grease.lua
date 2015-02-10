@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grease"]={"grease","[griːs]","[gris]","n.兽脂",'n.兽脂,油脂|||vt.用油脂涂,上油,促进','Those grease stains won\'t wash off.','这些油迹洗不掉.','His hair is thick with grease.','他的头发油腻腻的。'}

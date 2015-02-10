@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bilingual"]={"bilingual","[baɪ'lɪŋgw(ə)l]","['baɪ'lɪŋgwəl]","adj.双语的",'adj.双语的,用两种语言表达或书写的','bilingual training; bilingual education.','双语训练；双语教育','He is bilingual (in French and Spanish).','他操（法语和西班牙语）两种语言.'}

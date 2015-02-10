@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trail"]={"trail","[treɪl]","[trel]","n.踪迹",'n.踪迹,小径,尾|||vi.拖,尾随,追踪,落后于|||vt.拖拽,追踪','The dogs found the trail of the rabbit.','猎狗发现了兔子的踪迹。','The tired children trailed along behind their parents.','孩子们累了，没精打采地跟在父母後面。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["barrier"]={"barrier","['bærɪə]","['bærɪɚ]","n.界线",'n.界线,屏障,障碍物|||v.以屏障隔开','The lorry shaved the barrier, scraping its side.','那辆卡车掠过路障，刮坏了车身。','The ice skater rammed into the barrier.','溜冰者撞到护栏上了.'}

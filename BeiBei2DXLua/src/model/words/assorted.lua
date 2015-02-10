@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["assorted"]={"assorted","[ə'sɔːtɪd]","[ə'sɔrtəd]","adj.配合的",'adj.配合的,组合的,各色俱备的，适合的|||动词assort的过去式和过去分词','He has always assorted with men of his age.','他总是与和他年令相仿的人交往。','Demonstrators attacked the police, using sticks and assorted missiles.','示威者用棍棒和各种投掷物攻击警察。'}

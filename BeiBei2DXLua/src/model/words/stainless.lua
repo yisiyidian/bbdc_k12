@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stainless"]={"stainless","['steɪnlɪs]","['stenlɪs]","adj.无瑕疵的",'adj.无瑕疵的,不锈的','If I had a bicycle made of stainless steel, it will never get rust.','要是我有一辆不锈钢制造的自行车，它就再也不会生锈了。','We installed a stainless steel towel rail on the wall.','我们在墙上装了一个不锈钢的挂毛巾的横杆。'}

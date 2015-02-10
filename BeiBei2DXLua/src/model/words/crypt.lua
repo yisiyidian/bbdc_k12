@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crypt"]={"crypt","[krɪpt]","[krɪpt]","n.土窖",'n.土窖,地穴,(教堂的)地下室|||n.[解剖学]小囊，腺窝|||pref.隐藏的，秘密的（=crypto)','The stair to crypt is quite slip.','通往地窖的楼梯相当滑。','They took shelter from a tornado at a crypt.','他们在地下室躲避龙卷风。'}

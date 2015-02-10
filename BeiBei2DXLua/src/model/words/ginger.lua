@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ginger"]={"ginger","['dʒɪndʒə]","['dʒɪndʒɚ]","n.姜",'n.姜,姜根,精力,深棕色|||vt.用姜调味,使...活泼,使...有生气','||Ginger||, nutmeg, cinnamon, pepper and cloves are common spices.','姜、 肉豆蔻、 肉桂、 胡椒、 丁香都是常用的香料.','The Prime Minister appointed some new ministers to ginger up her administration.','首相任命一些新大臣以增强她现届政府的活力。'}

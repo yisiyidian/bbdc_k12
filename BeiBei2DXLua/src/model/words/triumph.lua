@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["triumph"]={"triumph","['traɪʌmf]","['traɪʌmf]","n.凯旋",'n.凯旋,欢欣|||vi.得胜,成功,庆功','Justice will triumph over injustice.','正义必将战胜非正义。','Advancing culture is bound to triumph over declining culture.','先进的文化必然战胜没落的文化。'}

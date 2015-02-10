@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["salve"]={"salve","[sælv]","[sælv]","n.药膏",'n.药膏|||vt.涂油膏，缓和|||vt.救助','The salve will heal slight burns.','这种药膏能治疗轻微烧伤。','This kind of salve is used on wounds.','这种药膏是用在伤口处。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infirmity"]={"infirmity","[ɪn'fɜːmətɪ]","[ɪn'fɝməti]","n.虚弱",'n.虚弱,病身,疾病，弱点','Old age and infirmity had begun to catch up with him.','他开始显出年老体衰的样子了。','Having a bad temper is his worst infirmity.','坏脾气是他最大的弱点。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mien"]={"mien","[miːn]","[min]","n.风采",'n.风采,态度，外表','He is a man of proud mien.','他是个态度傲慢的人。','The young girl in the picture has a thoughtful and solemn mien.','画中的年轻女孩带着一副沉思而又严肃的神态。'}

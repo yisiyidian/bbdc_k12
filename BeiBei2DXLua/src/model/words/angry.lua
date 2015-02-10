@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["angry"]={"angry","['æŋgrɪ]","['æŋɡri]","adj.生气的",'adj.生气的,伤口红肿的','His imperious look makes us angry.','他那飞扬跋扈的样子令我们生气。','Don\'t be angry over such trivial matters.','别为这些琐事生气。'}

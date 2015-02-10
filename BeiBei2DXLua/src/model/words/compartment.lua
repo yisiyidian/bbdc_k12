@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compartment"]={"compartment","[kəm'pɑːtm(ə)nt]","[kəm'pɑrtmənt]","n.间隔",'n.间隔,个别室,卧车包房|||vt.把...分隔成几个包间','Since there was no one else in the compartment I was able to spread myself.','车厢间隔里没有别人, 我正好能伸胳膊伸腿舒坦一下.','This is a case with separate compartments for shoes, jewelry, etc.','这是一个分格存放鞋、珠宝等的箱子。'}

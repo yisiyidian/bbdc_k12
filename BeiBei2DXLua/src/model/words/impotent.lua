@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impotent"]={"impotent","['ɪmpət(ə)nt]","['ɪmpətənt]","adj.无力的",'adj.无力的,无权能的，性无能的','The aggression of a bully leaves people feeling hurt, angry and impotent.','暴徒的侵犯令人们感到痛心、愤怒却又无能为力。','In impotent rage he got up and stalked up and down the flat.','他怒气冲冲地站起来，却又无计可施，只能在公寓里走来走去。'}

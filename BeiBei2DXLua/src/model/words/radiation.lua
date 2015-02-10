@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["radiation"]={"radiation","[reɪdɪ'eɪʃ(ə)n]","[,redɪ'eʃən]","n.辐射",'n.辐射,放射线','The body cannot tolerate such large amounts of radiation.','身体经不住那麽大剂量的放射线。','The mutations in plants caused by radiation have been found in experiments.','放射线引起植物变异已在实验中被证实。'}

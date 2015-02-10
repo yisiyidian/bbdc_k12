@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pestilential"]={"pestilential","[,pestɪ'lenʃ(ə)l]","[,pɛstɪ'lɛnʃl]","adj.引起瘟疫的",'adj.引起瘟疫的，有害的','Many people were dependent for their water supply on this pestilential stream.','许多人靠这条水质受污、可致疫病的河流来取水。','A few huts were the only habitations to be seen in these pestilential regions.','这倒霉地方唯一可看到的住人的地方就是那几间小屋。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eulogize"]={"eulogize","['juːlədʒaɪz]","['jʊlə'dʒaɪz]","v.称赞",'v.称赞,颂扬','I eulogize the tall and straight trunk of the white poplar.','我赞美白杨树那挺拔的株干。','Leaders from around the world eulogized the Egyptian president.','全世界的领导人都致悼词颂赞了那位埃及总统。'}

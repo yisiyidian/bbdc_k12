@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["languor"]={"languor","['læŋgə]","[ 'læŋɡə ]","n.怠惰",'n.怠惰,疲倦,无气力','It was hot, yet with a sweet languor about it.','天气炎热，然而却有一种惬意的懒洋洋的感觉。','He enjoyed the languor brought on by a hot summer afternoon.','他很享受夏日午后的慵懒。'}

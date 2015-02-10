@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vixen"]={"vixen","['vɪks(ə)n]","['vɪksn]","n.雌狐",'n.雌狐,泼妇','She is shouting at her neighbor like a vixen.','她像一个泼妇一样向她的邻居大声吼叫。','One morning when a vixen was taking her babies out of the lair, she saw a lioness and her cub.','一天清早，雌狐狸带着她的孩子走出巢穴，看见了母狮子和她的孩子。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["recollect"]={"recollect","[,rekə'lekt]","['rɛkə'lɛkt]","v.回忆",'v.回忆,回想,忆起','I don\'t recollect how to sail a boat.','我想不起怎样驾船了。','I am wondering whether perhaps you can recollect where you get it?','不知您是否回忆得起，您是哪儿弄到它的？'}

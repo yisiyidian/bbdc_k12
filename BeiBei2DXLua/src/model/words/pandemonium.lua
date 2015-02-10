@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pandemonium"]={"pandemonium","[,pændə'monɪəm]","[ ,pændi'məunjəm ]","n.混战场",'n.混战场,喧哗吵闹','||Pandemonium|| broke out as they ran into the street shouting.','他们叫嚷着冲到大街上，大街上顿时乱作一团。','There was pandemonium in court as the judge gave his verdict.','法官的结案陈词在法庭上引起一片混乱。'}

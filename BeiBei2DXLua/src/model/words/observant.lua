@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["observant"]={"observant","[əb'zɜːv(ə)nt]","[əb'zɝvənt]","adj.观察力敏锐的",'adj.观察力敏锐的，守纪的','An observant shop assistant had remembered exactly what the man was wearing.','有个机警的店员准确记得那个男子的穿著.','An observant shop assistant had remembered exactly what the man was worn.','有个机警的店员准确记得那个男子的穿著。'}

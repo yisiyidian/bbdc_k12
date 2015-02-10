@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stagnant"]={"stagnant","['stægnənt]","['stægnənt]","adj.不流动的",'adj.不流动的,不景气的','Business was stagnant last month.','上个月生意萧条。','Due to low investment, our industrial output has remained stagnant.','由于投资少，我们的工业生产一直停滞不前。'}

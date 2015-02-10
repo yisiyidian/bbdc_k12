@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["evergreen"]={"evergreen","['evəgriːn]","['ɛvɚɡrin]","adj.常绿的",'adj.常绿的|||n.常绿树,常绿植物|||(复数）evergreens:常绿树枝条','The juniper is a type of evergreen bush with purple berries.','杜松子是一种生有紫红色浆果的常绿灌木。','Heather is an evergreen plant.','石南花是种常绿植物。'}

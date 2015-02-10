@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rating"]={"rating","['reɪtɪŋ]","['retɪŋ]","n.等级",'n.等级,评定,收视率','The rating system is undergoing some/a complete restructuring.','房地产税制正在进行某些[全面的]调整.','Having an acceptable credit rating.','信用好的有令人满意的信用等级的'}

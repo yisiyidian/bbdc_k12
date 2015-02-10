@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["innards"]={"innards","['ɪnədz]","['ɪnɚdz]","n.内部结构",'n.内部结构','To mend this engine I\'ll have to have its innards out.','要修理这部发动机, 我得拆下里面的部件.','turkey innards','火鸡内脏'}

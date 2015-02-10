@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["liability"]={"liability","[laɪə'bɪlɪtɪ]","['laɪə'bɪləti]","n.责任",'n.责任,可能性，债务,不利因素','If your ||liabilities|| exceed your assets, you may go bankrupt.','如果你所负的债超过你的资产，你就会破产。','Taking extra vitamins may reduce your liability to colds.','多吃一些维生素会减少你得感冒的可能性。'}

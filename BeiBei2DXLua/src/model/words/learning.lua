@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["learning"]={"learning","['lɜːnɪŋ]","['lɝnɪŋ]","n.学问",'n.学问,学识,学习|||动词learn的现在分词','In learning botany, I understand much about nature.','学习植物学使我对大自然了解了许多。','He set up for a man of learning.','他自认为是个有学问的人。'}

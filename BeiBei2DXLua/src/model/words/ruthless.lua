@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ruthless"]={"ruthless","['ruːθlɪs]","['rʊθləs]","adj.残忍的",'adj.残忍的,无情的','He can be ruthless in getting what he wants, but I believe he would stop short of blackmail.','他这个人为达目的心黑手辣，但我认为他还不至于敲诈。','His business rivals knew they could expect no quarter from such a ruthless adversary.','他的业务对手都知道不可指望他这样无情的人会手软。'}

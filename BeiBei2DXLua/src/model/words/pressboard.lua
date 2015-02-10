@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pressboard"]={"pressboard","['presbɔːd]","['prɛs,bord]","n.纸板",'n.纸板','pressboard','n. 纸板','pressboard insulatio （insulate 绝缘，使。。。隔绝）','压制板绝缘'}

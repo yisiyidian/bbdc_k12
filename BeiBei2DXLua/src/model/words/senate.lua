@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["senate"]={"senate","['senɪt]","['sɛnət]","n.参议院",'n.参议院,上议院','The senate was censured for income tax evasion.','这名参议员因逃避缴纳所得税而受到指责。','The senate  had a session today with closed doors.','参议院今天召开一次秘密会议.'}

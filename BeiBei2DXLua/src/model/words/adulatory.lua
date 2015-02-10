@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adulatory"]={"adulatory","['ædʒələ,tori]","[ 'ædjuleitəri ]","adj.谄媚的",'adj.谄媚的,奉承的,阿谀的','...adulatory reviews.','…奉承的评论。','He maintained an adulatory attitude to his boss.','他对他的老板保持着奉承的态度。'}

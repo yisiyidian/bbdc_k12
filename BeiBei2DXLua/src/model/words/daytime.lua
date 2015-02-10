@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["daytime"]={"daytime","['deɪtaɪm]","['detaɪm]","n.白天",'n.白天,日间','I cannot sleep in the daytime.','白日我睡不着。','Some animals are inactive during the daytime.','有些动物白天不活动.'}

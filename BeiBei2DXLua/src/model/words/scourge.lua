@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scourge"]={"scourge","[skɜːdʒ]","[skɝdʒ]","n.灾难",'n.惩罚，灾难,祸患|||vt鞭笞，使...痛苦,严惩','After the scourge of war came the scourge of disease.','战乱之后瘟疫又接踵而来。','Drugs are a scourge that is devastating our society.','毒品是破坏我们社会的一大祸害。'}

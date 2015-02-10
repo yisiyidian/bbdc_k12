@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vegetation"]={"vegetation","[vedʒɪ'teɪʃ(ə)n]","['vɛdʒə'teʃən]","n.植物",'n.植物,草木,(植物)生长','There is luxuriant tropical vegetation in our country.','我们国家有很多繁茂的热带植物。','The path leads to a hill bare of vegetation.','这条小道通向一座没有草木的小山。'}

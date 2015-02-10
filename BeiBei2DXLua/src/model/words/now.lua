@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["now"]={"now","[naʊ]","[naʊ]","n.现在",'n.现在,此刻|||adj.现存的,目前的|||adv.现在,立刻|||conj.既然|||abbr.=NationalOrganizationofWomen全国妇女组织','It is now possible to put a man on the moon.','目前已能将人送到月球上。','He is writing a letter now.','他现在正在写信。'}

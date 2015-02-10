@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["villainy"]={"villainy","['vɪlənɪ]","['vɪləni]","n.坏事",'n.坏事,恶行,罪恶','We all know their ||villainies||.','我们都知道他们的恶行。','He is capable of great ||villainies||.','他能干出极坏的事情。'}

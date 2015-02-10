@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["girth"]={"girth","[gɜːθ]","[ɡɝθ]","n.周围长度",'n.周围长度，带尺,尺寸|||n.（马等的）肚带,腰带|||vt.量周长，包围，给…缚上肚带','I must put myself on a diet, for my girth becomes big and big!','我必须节食了，腰身越来越大！','This tree is 3 meters in girth.','这棵树周长有三公尺。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chant"]={"chant","[tʃɑːnt]","[tʃænt]","n.圣歌",'n.圣歌,赞美诗,旋律,喊叫|||vt.吟唱,诵扬,叫喊|||vi.吟唱,单调地说','||Chant|| a prayer.','唱赞美诗','A Gregorian chant.','格列高利圣歌'}

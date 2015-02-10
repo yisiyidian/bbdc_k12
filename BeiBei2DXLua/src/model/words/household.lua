@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["household"]={"household","['haʊshəʊld]","['haʊshold]","adj.家庭的",'adj.家庭的,家喻户晓的|||n.家庭,户','Dustbins are used for household waste.','垃圾箱是盛扔掉的破烂东西的.','There are many household appliances in this shop.','这个商店有许多家用用具。'}

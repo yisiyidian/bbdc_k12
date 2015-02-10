@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adumbrate"]={"adumbrate","['ædʌmbreɪt]","['ædəmbret]","n.预示",'n.预示,勾画|||v.(对将来事件)预示|||vt.画轮廓,预示','This book shows us the adumbrate of the future.','这本书向我们展示了对未来的勾画。','The recent development adumbrate a world-wide revolution in computer technology.','最新事态的发展预示着一场全球性的计算机技术革命'}

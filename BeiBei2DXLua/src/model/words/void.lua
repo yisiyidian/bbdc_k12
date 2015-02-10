@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["void"]={"void","[vɒɪd]","[vɔɪd]","n.空虚",'n.空虚,空白,真空|||adj.空的,缺乏的,无效的|||vt.清空,释放,取消,离开|||vi.排泄','This contract is null and void.','此合同无效.','Celestials live in the great void.','仙人生活在太虚之中。'}

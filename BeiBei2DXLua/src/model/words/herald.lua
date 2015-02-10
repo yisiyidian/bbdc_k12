@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["herald"]={"herald","['her(ə)ld]","['hɛrəld]","n.使者",'n.使者,传令官,前锋,预兆|||vt.预报,宣布,传达','Dawn is the herald of day.','曙光是白昼的先驱.','The cuckoo is the herald of the spring.','杜鹃报春。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tranquility"]={"tranquility","[træn'kwɪləti]","[ træŋ'kwiləti, træn- ]","n.宁静",'n.宁静，平静，稳定','We all like the tranquility of the country life.','我们都喜欢乡村生活的宁静。','The city was finally restored to tranquility.','这座城市最后恢复了平静.'}

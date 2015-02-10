@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lamentable"]={"lamentable","['læməntəb(ə)l]","['læməntəbl]","adj.可悲的",'adj.可悲的,哀伤的,可怜的','The decision they made is a lamentable lack of foresight.','他们做的决定实在缺乏远见。','His death is a lamentable loss of our work.','他的死对我们的工作来说是令人悲痛的损失。'}

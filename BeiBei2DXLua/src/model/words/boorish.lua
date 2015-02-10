@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["boorish"]={"boorish","['bɔːrɪʃ; 'bʊərɪʃ]","['bʊrɪʃ]","adj.粗野的",'adj.粗野的','His manner seemed rather boorish.','他的举止看上去很无礼。','His boorish rudeness soon drove her friends away.','他的粗鲁无礼很快使得她的朋友们想走了。'}

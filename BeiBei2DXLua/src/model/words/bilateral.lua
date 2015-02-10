@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bilateral"]={"bilateral","[baɪ'læt(ə)r(ə)l]","[,baɪ'lætərəl]","adj.双边的",'adj.双边的','Having or marked by bilateral symmetry.','左右对称的以或表现为左右对称的','The two countries worked out a bilateral agreement.','两国达成了双边协议。'}

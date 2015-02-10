@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cock"]={"cock","[kɒk]","[kɔk]","n.公鸡",'n.公鸡，雄禽，（男子间友好的互称用语）老兄，阴茎|||vt.立起，竖起|||vi.昂首阔步地走','The travel agent completely cocked up the arrangements for our holiday.','旅行社把我们假日的安排搞得一塌糊涂。','The dog cocked its ears at the sound of footsteps.','狗听到脚步声竖起了耳朵。'}

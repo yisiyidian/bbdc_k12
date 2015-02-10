@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ablution"]={"ablution","[ə'bluːʃ(ə)n]","[əb'lʊʃən]","n.洗身",'n.洗身,洗礼,斋戒沐浴','Or because ablution washes away the past?','或者是不是因为沐浴能洗掉过去?','ablution','洗身,洗礼,斋戒沐浴'}

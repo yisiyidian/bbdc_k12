@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thirst"]={"thirst","[θɜːst]","[θɝst]","v.渴望",'v.渴望,渴求|||vi.(for)渴望,渴求|||vt.&n.渴,渴望','On these dry days, you soon thirst for a cool drink.','在那些干旱的日子里，你不久就会渴望喝点清凉的东西。','Many boys have a thirst for adventure.','许多男孩都渴望冒险。'}

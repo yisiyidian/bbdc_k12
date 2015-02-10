@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indigo"]={"indigo","['ɪndɪgəʊ]","['ɪndɪɡo]","n.靛青",'n.靛青,紫蓝色|||adj.紫蓝色的','The indigo plant or the blue dye obtained from it.','假蓝靛靛蓝植物或从这种植物中提取的蓝色染料','He slipped into an indigo tank.','他滑落到蓝靛桶中。'}

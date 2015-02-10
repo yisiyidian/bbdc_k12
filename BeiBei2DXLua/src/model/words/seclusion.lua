@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seclusion"]={"seclusion","[sɪ'kluːʒ(ə)n]","[sɪ'klʊʒən]","n.隔离(隔绝)",'n.隔离(隔绝)','The famous actor now lives in seclusion.','那位著名的演员现在过着隐居生活。','She lives in seclusion apart from her friend.','她远离朋友，过着隐居的生活。'}

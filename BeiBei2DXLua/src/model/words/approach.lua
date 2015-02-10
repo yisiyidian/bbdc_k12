@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["approach"]={"approach","[ə'prəʊtʃ]","[ə'protʃ]","v.接近",'n.接近;途径,方法|||v.靠近,接近,动手处理','All the approaches to the palace were guarded by troops.','通往宫殿的所有道路都有部队把守。','That\'s the nearest approach to a smile he ever makes.','那已算是他能做出的最近乎微笑的表示了。'}

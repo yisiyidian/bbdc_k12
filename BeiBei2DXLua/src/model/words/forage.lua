@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forage"]={"forage","['fɒrɪdʒ]","['fɔrɪdʒ]","n.粮草",'n.粮草,饲料,搜寻粮草|||v.喂,掠夺','Cows and sheep depends forage to feed.','牛和羊依靠草料喂养。','She foraged about in her handbag, but couldn\'t find her keys.','她翻遍了手提包，就是找不到钥匙。'}

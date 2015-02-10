@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["suitor"]={"suitor","['suːtə]","['sʊtɚ]","n.起诉者",'n.起诉者,请愿者,求婚者','A Victorian suitor would be expected to satisfy a girl\'s father that he could support her in the manner to which she was accustomed.','维多利亚时期总是希望求婚者向女方的父亲保证他能供养其女，让她过上和她以往一样的舒适讲究的生活。','She refused her suitor.','她拒绝了求婚者。'}

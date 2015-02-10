@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emasculate"]={"emasculate","[ɪ'mæskjʊleɪt]","[ɪ'mæskjʊlɪt]","vt.阉割",'vt.阉割,使柔弱|||adj.柔弱的','The company tried to emasculate the unions.','公司试图削弱工会的力量。','Left-wing dissidents have been emasculated and marginalized.','左翼持不同政见者已遭削弱并被边缘化。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["booze"]={"booze","[buːz]","[ bu:z ]","v.豪饮",'v.豪饮','He likes to go out ||boozing|| with his mates.','他喜欢和朋友到外面喝酒.','Her husband\'s been on the booze again.','她丈夫又不停地喝起酒来.'}

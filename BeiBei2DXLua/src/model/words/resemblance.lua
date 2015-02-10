@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resemblance"]={"resemblance","[rɪ'zembl(ə)ns]","[rɪ'zɛmbləns]","n.相像",'n.相像，相似','There is only a formal resemblance between the two systems.','这两种体系只是在表面上有某种相似之处。','She bears little resemblance to her mother.','她不象她母亲。'}

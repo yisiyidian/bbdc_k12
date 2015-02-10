@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["engineer"]={"engineer","[endʒɪ'nɪə]","[,ɛndʒɪ'nɪr]","n.工程师",'n.工程师|||v.设计,制造|||vt.操纵,设计,建造','He is a locomotive engineer.','他是一名火车司机。','They send a service engineer to fix the disk drive.','他们派一位维修师来修理磁盘驱动器。'}

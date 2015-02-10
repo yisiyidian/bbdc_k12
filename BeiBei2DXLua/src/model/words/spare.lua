@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spare"]={"spare","[speə]","[spɛr]","adj.备用的",'adj.多余的,闲置的,备用的,简陋的|||v.抽出，饶恕，赦免，节约|||n.剩余,备用品','I can\'t spare him today we need everybody here.','我今天需要他－－我们需要人人都到齐。','The hotel staff spared no pains to ensure that our stay was as enjoyable as possible.','旅馆工作人员对我们照顾得无微不至，尽量让我们住得舒适，'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["simian"]={"simian","['sɪmɪən]","['sɪmɪən]","adj.猿的",'adj.猿的,类人猿的,猴子一般的|||n.猴子,类人猿','||Simian|| and human beings have the same ancestor.','类人猿与人类有共同的祖先。','Ada had a wrinkled, simian face.','埃达有一张布满皱纹、长得像猿猴的脸。'}

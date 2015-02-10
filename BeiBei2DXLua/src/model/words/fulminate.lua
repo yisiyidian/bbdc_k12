@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fulminate"]={"fulminate","['fʊlmɪneɪt; 'fʌl-]","['fʊlmɪnet]","v.大声呵斥",'v.大声呵斥，强烈谴责，使爆发|||n.雷酸盐,雷粉','He paced up and down, and fulminated against Thomas.','他一边来回踱步，一边大声怒斥托马斯。','They all fulminated against the new curriculum.','他们都对新课表表示强烈不满。'}

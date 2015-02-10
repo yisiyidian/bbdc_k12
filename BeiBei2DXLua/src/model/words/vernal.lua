@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vernal"]={"vernal","['vɜːn(ə)l]","['vɝnl]","adj.春天的",'adj.春天的，春天般清新的','The linnet chirps her vernal song.','红雀吱喳鸣叫着她春天的歌。','He described the vernal migration of birds in detail.','他详细地描述了鸟的春季迁徙。'}

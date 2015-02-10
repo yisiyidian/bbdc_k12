@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["phase"]={"phase","[feɪz]","[fez]","n.相",'n.相,相位,时期,局面,阶段|||v.逐步执行,实行,按计划进行','The two sets of traffic lights were out of phase.','那两组交通灯不同步。','The child is going through a difficult phase.','那孩子正经历困难的阶段。'}

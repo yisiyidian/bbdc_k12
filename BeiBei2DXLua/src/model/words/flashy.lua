@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flashy"]={"flashy","['flæʃɪ]","[ 'flæʃi ]","adj.闪光的",'adj.闪光的,一瞬间的,浮华的','That new car is Graham down to the ground-all bright and flashy.','那辆新车对格雷厄姆最适合了——光彩夺目。','But the color seems a bit too flashy','但是颜色太鲜艳了。'}

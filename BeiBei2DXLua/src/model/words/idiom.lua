@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["idiom"]={"idiom","['ɪdɪəm]","['ɪdɪəm]","n.成语",'n.成语,惯用语','I like the idiom of modern popular music.','我喜欢现代流行音乐的风格。','It was an old building in the local idiom.','这是一座具有当地特色的古建筑。'}

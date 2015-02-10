@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sieve"]={"sieve","[sɪv]","[sɪv]","n.筛子",'n.筛子,粗篮,说话轻率不能保密的人|||v.筛,滤','A complex branched carbohydrate commonly associated with sieve areas of sieve elements.','胼胝质一种枝条繁杂的碳水化合物，与筛网原素的筛网区域相配合','She drained the water out through a sieve.','她用漏杓把水控出去.'}

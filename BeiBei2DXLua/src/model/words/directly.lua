@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["directly"]={"directly","[dɪ'rektlɪ; daɪ-]","[dɪˈrɛktli, daɪ-]","adv.直接地",'adv.直接地(立即,完全)','Can you see where the grammar books are? The dictionaries are on the shelf directly opposite.','你看见语法书在哪儿呢吗? 词典都在正对著的书架上.','I\'ll be there directly.','我立刻到那。'}

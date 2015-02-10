@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fun"]={"fun","[fʌn]","[fʌn]","n.乐趣",'n.乐趣,玩笑,有趣的人或事物|||vi.开玩笑|||adj.充满乐趣的,令人愉悦的','I\'m learning to cook, just for the fun of it.','我正在学做饭，做著玩儿而已。','Swimming in the sea is great fun.','在海里游泳很好玩。'}

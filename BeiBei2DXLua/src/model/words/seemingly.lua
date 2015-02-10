@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seemingly"]={"seemingly","['siːmɪŋlɪ]","['simɪŋli]","adv.表面上(看上去)",'adv.表面上(看上去)','She plays with seemingly effortless skill.','她演奏得似乎毫不费力.','They were seemingly unaware of the decision.','他们似乎并不了解这个决定.'}

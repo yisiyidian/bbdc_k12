@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coiffure"]={"coiffure","[kwɑː'fjʊə; kwɒ-]","[kwɑ'fjʊr]","n.发型",'n.发型','I really like your new coiffure!','我真的很喜欢你的新发型！','Over the coming months, CACT commence preparation for the Mondiale ||Coiffure|| (OMC) Hairworld Championships to be held in Paris, France next year.','在今后几个月中，CACT将开始准备参加于明年在法国巴黎举行的OMC世界发型大赛。'}

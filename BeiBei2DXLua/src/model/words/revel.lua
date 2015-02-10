@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["revel"]={"revel","['rev(ə)l]","['rɛvl]","vi.狂欢作乐",'vi.狂欢作乐,陶醉|||n.作乐,狂欢','People who revel in gossip','好讲闲话的人。','A riotous, boisterous, or drunken festivity; a revel.','闹酒狂欢狂欢的、喧闹的或酒醉的节日; 狂欢'}

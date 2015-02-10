@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["recurrent"]={"recurrent","[rɪ'kʌr(ə)nt]","[rɪ'kɝənt]","adj.再发生的",'adj.再发生的,定期重覆的,循环的','A dentist may decide to extract the tooth to prevent recurrent trouble.','牙医可能会决定拔掉那颗牙，以免反复发作。','I have a recurrent dream that I\'ve turned into an elephant.','我屡次梦见自己变成了大象。'}

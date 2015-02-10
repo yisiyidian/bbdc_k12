@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["usage"]={"usage","['juːsɪdʒ]","['jusɪdʒ]","n.用法",'n.惯用法,使用,用法','Not in correct usage.','不合规则的用法错误的','Languages develop continually through usage.','语言在使用中不断发展。'}

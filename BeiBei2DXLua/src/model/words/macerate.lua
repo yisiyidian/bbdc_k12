@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["macerate"]={"macerate","['mæsəreɪt]","[ 'mæsəreit ]","vt.把…浸软",'vt.把…浸软；使…消瘦|||vi.浸软；消瘦','He was macerated with cares.','他因烦恼而消瘦。','I like to macerate the food in wine for a few minutes before serving.','我想把食物在酒里泡几分钟后再享用。'}

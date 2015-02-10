@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inscrutable"]={"inscrutable","[ɪn'skruːtəb(ə)l]","[ɪn'skrʊtəbl]","adj.难以了解的",'adj.难以了解的,不能预测的','His inscrutable face does not show what he is thinking.','他一副莫测高深的表情，看不出在想什么。','It is inscrutable that so many earthquacks happened recently.','很难理解为什么近期地震如此频繁。'}

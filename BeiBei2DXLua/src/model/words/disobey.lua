@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disobey"]={"disobey","[dɪsə'beɪ]","['dɪsə'be]","vi.违反",'vi.违反|||vt.不服从','Her pupil often get the rough edge of her tongue when they disobey her.','学生不听她的话时，常遭到她粗暴的申斥。','Those who disobey must be punished by law.','违法分子必须受到法律惩罚。'}

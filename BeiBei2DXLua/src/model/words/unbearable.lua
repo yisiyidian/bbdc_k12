@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unbearable"]={"unbearable","[ʌn'beərəb(ə)l]","[ʌn'bɛrəbl]","adj.无法忍受的",'adj.无法忍受的','Loneliness in a gloomy raining day may be unbearable to him.','对他来说，阴郁的雨天的寂寞是难以忍受的。','The politician found the piteous cries of the starving children unbearable.','这个政治家发现饥饿的孩子们可怜的哭声让人不忍心听下去。'}

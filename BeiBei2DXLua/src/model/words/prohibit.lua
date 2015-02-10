@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prohibit"]={"prohibit","[prə(ʊ)'hɪbɪt]","[prə'hɪbɪt]","v.禁止",'v.禁止,阻止|||vt.禁止','I fear that a prior engagement will prohibit me from joining you in dinner.','有约在先，我恐怕不能与你共进晚餐。','Smoking is prohibited here.','这里禁止吸烟。'}

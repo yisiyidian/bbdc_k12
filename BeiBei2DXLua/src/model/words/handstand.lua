@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["handstand"]={"handstand","['hæn(d)stænd]","['hændstænd]","n.倒立",'n.倒立','The iron cross and the handstand both require great strength.','十字支撑和手倒立都需要极大的力量。','do a handstand','倒立'}

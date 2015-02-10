@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["luminosity"]={"luminosity","[luːmɪ'nɒsətɪ]","[,lʊmə'nɑsəti]","n.光明",'n.光明,光辉,光度|||[计算机]光度','This room\'s luminosity is not enough.','这个房间的光度不够。','There is only one step from luminosity to the dark','从光明走向黑暗只有一步之遥。'}

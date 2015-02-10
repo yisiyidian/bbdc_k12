@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["association"]={"association","[əsəʊsɪ'eɪʃ(ə)n; -ʃɪ-]","[ə,soʃɪ'eʃən]","n.联合",'n.联合,结合,交往,协会,社团,联想','I benefited a lot from my association with him.','我与他交往获益良多。','He is a member of the ||Association|| of University Teachers.','他是大学教师联合会的一名成员。'}

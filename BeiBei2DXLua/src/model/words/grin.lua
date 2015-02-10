@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grin"]={"grin","[grɪn]","[ɡrɪn]","n.露齿笑",'n.露齿笑,裂口笑|||v.露齿而笑','I grinned my approval.','我咧嘴一笑表示赞许','They grinned with pleasure when I gave them the sweets.','当我给他们糖果时，他们高兴地咧开嘴笑了。'}

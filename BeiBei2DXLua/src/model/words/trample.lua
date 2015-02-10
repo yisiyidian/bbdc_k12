@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trample"]={"trample","['træmp(ə)l]","['træmpl]","n.踩踏",'n.踩踏|||v.践踏,轻视','We will not allow ourselves to be trampled upon.','我们决不容许自己被人轻视。','I don\'t want all those people ||trampling|| about all over my flower beds.','我可不能让那些人都在我的花坛里到处乱踩。'}

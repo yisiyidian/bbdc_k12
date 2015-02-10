@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dynamite"]={"dynamite","['daɪnəmaɪt]","['daɪnə'maɪt]","n.炸药",'n.炸药，（用）炸药（爆破），|||引起轰动的人（或物）|||vt.(用）炸药（爆破），炸毁|||adj.顶呱呱的，极好的','||Dynamite|| is an explosive.','炸药是爆炸物.','Abortion issues are political dynamite.','堕胎问题在政治上是个爆炸性问题。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["embark"]={"embark","[ɪm'bɑːk; em-]","[ɪm'bɑrk]","vt.&vi.乘船",'vt.&vi.乘船,着手,从事','We embarked for Calais at midday.','我们中午乘船去加来。','The ship embarked passengers and cargo at an Italian port.','这艘船在意大利一个港口载客装货。'}

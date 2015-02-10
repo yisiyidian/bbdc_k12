@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ignore"]={"ignore","[ɪg'nɔː]","[ɪɡ'nɔr]","vt.忽视",'vt.不顾,不理,忽视','The wisest course would be to ignore it.','上上策是不予理睬.','He\'s his own man, but he doesn\'t ignore advice.','他虽然自有主张，但并不轻视别人的意见。'}

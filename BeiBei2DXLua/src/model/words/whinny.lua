@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whinny"]={"whinny","['wɪnɪ]","['wɪni]","n.马嘶声",'n.马嘶声,嘶声|||v.嘶,以嘶声表示','With a terrified whinny the horse shied.','那匹马惊了，发出一声可怕的嘶叫。','The pony ||whinnied|| and tossed his head happily.','小马嘶叫着，欢快地甩动着头。'}

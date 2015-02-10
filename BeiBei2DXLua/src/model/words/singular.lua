@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["singular"]={"singular","['sɪŋgjʊlə]","['sɪŋɡjəlɚ]","adj.非凡的",'adj.个人的,单数的,独一的,唯一的,非凡的|||n.单数','The young man has a singular ear for music.','这个年轻人对音乐有非凡的欣赏力。','The noun is in the singular.','这个名词是单数形式.'}

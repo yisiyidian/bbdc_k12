@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flora"]={"flora","['flɔrə]","[ 'flɔrə ]","n.植物",'n.植物,群落|||（大写）Flora：[罗神]花神弗洛拉，弗洛拉（女名）','The subtropical island has a remarkably rich native flora.','这个亚热带岛屿有相当丰富的原生植物种类。','All flora need water and light.','一切草木都需要水和阳光。'}

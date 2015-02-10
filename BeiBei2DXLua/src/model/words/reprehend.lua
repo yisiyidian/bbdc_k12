@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reprehend"]={"reprehend","[,reprɪ'hend]","[ ,repri'hend ]","v.谴责",'v.谴责,责难|||vt.指责','the government should be reprehend for the fault.','政府应该为这个错误受到指责。','Without exception, book reviewers reprehended the novel\'s trite plot','毫无例外的，小说缺乏新意的故事情节受到了评论家们的责难'}

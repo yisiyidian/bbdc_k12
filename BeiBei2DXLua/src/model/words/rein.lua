@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rein"]={"rein","[reɪn]","[ren]","n.缰绳",'n.缰绳,统驭,支配,机会|||vt.以缰绳控制,统制|||vi.驾驭','The horse answers to the slightest pull on the rein.','缰绳轻轻一动，这匹马就有反应。','The horse responds to the slightest pull on the rein.','只要缰绳稍稍一拉，这匹马就有反应。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conception"]={"conception","[kən'sepʃ(ə)n]","[kən'sɛpʃən]","n.概念",'n.概念,观念,构想,怀孕','I have no conception of what you mean.','我想不出你的意思是什么。','You have no conception of what it was like to be there.','你完全不知道在那里是什么滋味。'}

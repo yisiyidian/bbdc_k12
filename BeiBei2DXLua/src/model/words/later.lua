@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["later"]={"later","['leɪtə]","['letɚ]","adj.后面的",'adj.更迟的,后面的|||adv.稍后,后来,迟到地','She had her baby weaned a year later.','她在一年后才把孩子的奶断掉。','I can\'t pay now, please bill me later.','我现在不能付款，请以后开帐单给我。'}

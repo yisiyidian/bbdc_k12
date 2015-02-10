@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mannered"]={"mannered","['mænəd]","['mænɚd]","adj.装模作样的",'adj.装模作样的,矫揉造作的,墨守成规的','They are always perfectly polite and beautifully mannered.','他们总是很懂礼貌，彬彬有礼。','If you arrange your picture too systematically the results can look very mannered and artificial.','如果你把图画安排得太有条理，就会看上去非常假，不够自然。'}

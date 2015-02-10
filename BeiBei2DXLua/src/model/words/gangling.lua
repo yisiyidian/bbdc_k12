@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gangling"]={"gangling","['gæŋglɪŋ]","['ɡæŋɡlɪŋ]","adj.瘦长得难看的",'adj.瘦长得难看的','His gangling, awkward gait has earned him the name Spiderman.','他因其笨拙且奇怪的步态而得名“蜘蛛侠”。','His gangling, awkward gait has earned him the name Spiderman.','他因其笨拙且奇怪的步态而得名“蜘蛛侠”。'}

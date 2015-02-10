@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obtrude"]={"obtrude","[əb'truːd]","[ əb'tru:d, ɔb- ]","v.逼使",'v.逼使,强迫,冲出|||v.多管闲事','He persists in obtrude himself despite our effort to get rid of him.','尽管我们设法避开他，他还是硬要插进来。','I\'m sorry to obtrude on you at such a time.','我很抱歉在这个时候打扰你。'}

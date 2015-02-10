@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["waitress"]={"waitress","['weɪtrɪs]","['wetrəs]","n.女侍者",'n.女侍者,女服务员','The waitress goes out of her way to serve the guests.','女招待特别努力地为客人服务。','He can\'t resist the allure of the pretty waitress.','他无法抵抗漂亮的女招待的引诱。'}

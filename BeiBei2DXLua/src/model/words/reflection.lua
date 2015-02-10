@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reflection"]={"reflection","[rɪ'flekʃ(ə)n]","[rɪ'flɛkʃən]","n.反映",'n.反映,映像,折射,沉思,影响','On further reflection, I saw that she might be right, after all.','我再一考虑，反倒觉得可能还是她对。','The cat felt curious when she saw her own reflection in the mirror.','小猫看到自己在镜子中的倒影，感到很好奇。'}

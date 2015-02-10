@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["then"]={"then","[ðen]","[ðɛn]","adv.然后",'adv.那么,当时，然后，于是|||adj.当时的','He\'ll be looking for a new secretary then?','那麽，他就要找个新秘书了？','He took his hat and then left.','他拿起帽子，随即离开了。'}

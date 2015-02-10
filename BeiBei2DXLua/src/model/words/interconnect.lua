@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interconnect"]={"interconnect","[ɪntəkə'nekt]","[,ɪntɚkə'nɛkt]","vt.使互相连接",'vt.使互相连接|||vi.连接','It\'s strange how people\'s lives interconnect.','人们的生活是如何互相联系在一起的, 真是不可思议.','The two buildings interconnect.','相连的两座建筑物'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["defiance"]={"defiance","[dɪ'faɪəns]","[dɪ'faɪəns]","n.蔑视",'n.蔑视，挑战，挑衅','He gave false proof, which set the court at defiance.','他出示假证据，这就是蔑视法庭。','Her eyes flashed anger and defiance (at everyone).','她（看著大家,）眼中闪现著愤怒与轻蔑的神情.'}

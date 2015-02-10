@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pain"]={"pain","[peɪn]","[pen]","n.痛苦",'n.痛苦,疼痛,辛苦|||vt.&vi.使...痛苦,痛苦,疼','She\'s been complaining again she\'s a real pain!','她又发牢骚了－－真烦人！','It pains me to have to tell you that...','我以沉痛的心情告诉你。。。'}

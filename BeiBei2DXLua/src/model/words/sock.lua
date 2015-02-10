@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sock"]={"sock","[sɒk]","[sɑk]","n.短袜",'n.短袜,喜剧,猛击|||vt.&vi.重击,痛打','There is a hole in my sock.','我的袜子上有个洞。','||Sock|| him on the jaw!','揍他的下巴!'}

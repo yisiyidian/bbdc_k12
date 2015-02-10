@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quickly"]={"quickly","['kwɪklɪ]","['kwɪkli]","adv.快",'adv.快,迅速','Relief was quickly sent to the sufferers from the great fire.','救济品很快被送到遭受火灾的灾民手中。','The hearers increased quickly as time went on.','随着时间的推移，听众越来越多了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ending"]={"ending","['endɪŋ]","['ɛndɪŋ]","n.结尾",'n.结尾,结局','I quite enjoyed the book but found the ending rather tame.','我很爱看那本书, 只是结尾颇觉逊色.','He was so miserable that he seriously thought about ending it all.','他难受得甚至认真考虑过要自杀.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["survival"]={"survival","[sə'vaɪv(ə)l]","[sɚ'vaɪvl]","n.生存",'n.生存,幸存者','Does our only hope of survival lie in disarmament?','我们求生的唯一希望就在於裁军吗?','Let\'s hope for his survival.','希望他能活下来。'}

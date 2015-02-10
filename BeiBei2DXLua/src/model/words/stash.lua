@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stash"]={"stash","[stæʃ]","[ stæʃ ]","vt.隐藏",'vt.隐藏,储藏|||n.隐藏地点，隐藏物','He\'s got his life savings stashed (away) in an old suitcase.','他把一辈子的积蓄保藏在一口旧箱子里.','They stashed the guns away under the ground.','他们把那批枪埋藏在地下了。'}

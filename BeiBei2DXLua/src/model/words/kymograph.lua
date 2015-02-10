@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kymograph"]={"kymograph","['kaɪmə(ʊ)grɑːf]","['kaɪmoɡræf]","n.波动曲线记录器",'n.波动曲线记录器','||Kymograph|| is broadly used in hospitals.','医院里广泛使用波动曲线记录仪。','blood pressure kymograph','血压记波器'}

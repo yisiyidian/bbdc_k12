@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ibuprofen"]={"ibuprofen","[,aɪbjuː'prəʊf(ə)n]","[,aɪbju'profɛn]","n.[药]异丁苯丙酸",'n.[药]异丁苯丙酸,布洛芬(抗炎、镇痛药)','Some pain relievers, like aspirin and ibuprofen,','一些止痛药如阿司匹林，布洛芬，','the most popular brand of ibuprofen is Fenbid.','请提供译文。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["durable"]={"durable","['djʊərəb(ə)l]","['dʊrəbl]","adj.耐用持久的",'adj.耐用持久的|||n.(复)耐用品','It\'s very durable.','这很耐久。','a durable fabric.','耐穿织物'}

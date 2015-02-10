@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["taunt"]={"taunt","[tɔːnt]","[tɔnt]","n.辱骂",'n.辱骂,嘲弄|||v.嘲弄','I ignored the taunts of the opposition.','我没有理睬对方的嘲笑。','We shouldn\'t taunt others.','我们不该嘲笑他人。'}

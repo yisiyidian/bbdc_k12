@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mete"]={"mete","[miːt]","[mit]","vt.量",'vt.量,测量,分配|||n.边界,界石','God mete out justice in his own good time.','羞恶自有报，只争迟与早。','The judge meted out severe penalties.','法官对犯人予以严惩。'}

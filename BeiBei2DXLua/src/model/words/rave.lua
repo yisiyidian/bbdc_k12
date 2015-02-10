@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rave"]={"rave","[reɪv]","[rev]","n.狂吼",'n.狂吼,狂暴|||v.愤怒地说,叫嚷,咆哮','You can rant and rave at the fine, but you\'ll still have to pay it.','你闹也好，骂也好，罚金还是得交。','When he was accused of stealing, he raved wildly against me.','当他被控犯偷窃罪时，他气呼呼地把我臭骂一顿。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["better"]={"better","['betə]","['bɛtɚ]","adj.较好的",'adj.较好的,更好的|||adv.更好地|||vt.&vi.使...更好,超越|||n.更好的事物','You would write better if you had a good pen.','要是有枝好笔, 就能写得更好.','It\'s been done, and, for better or worse, we can\'t change it now.','事已至此, 无论是好是坏, 已无法改变.'}

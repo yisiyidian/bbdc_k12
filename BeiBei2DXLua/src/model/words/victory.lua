@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["victory"]={"victory","['vɪkt(ə)rɪ]","['vɪktəri]","n.胜利",'n.胜利','We win the emphatic victory.','我们赢得了那场有目共睹的胜利。','The soldiers sang a song of victory, describing their prowess in battle.','战士们唱起了歌颂他们英勇战斗的凯歌。'}

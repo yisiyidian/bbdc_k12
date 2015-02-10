@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["virus"]={"virus","['vaɪrəs]","['vaɪrəs]","n.病毒",'n.病毒,毒素,有害的事物','Scientists have isolated the virus causing the epidemic.','科学家们已分离出引起这种流行病的病毒。','The identification of rabies virus has saved many lives.','狂犬病病毒的确认挽救了许多人的性命。'}

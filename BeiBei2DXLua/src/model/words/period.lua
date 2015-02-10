@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["period"]={"period","['pɪərɪəd]","['pɪrɪəd]","n.时期",'n.学时,课时;一段时间,时期,周期;句号','Last year was a prolific period in the composer\'s life.','去年是作曲家一生中创作丰收的时期。','He was on his feet again after such a long period in hospital.','住院很长一段时间他复原了。'}

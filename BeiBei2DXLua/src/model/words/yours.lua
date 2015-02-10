@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["yours"]={"yours","[jɔːz; jʊəz]","[jʊəz]","pron.你的",'pron.你的,你们的','His account of the accident tallies with yours.','他对该故事的说法和你一样。','This book is his, not yours.','这本书是他的，不是你的。'}

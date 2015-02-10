@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shard"]={"shard","[ʃɑːd]","[ʃɑrd]","n.碎片(薄硬壳)",'n.碎片(薄硬壳)','Eyewitnesses spoke of rocks and shards of glass flying in the air.','目击者称空中石块和玻璃碎片四溅。','||Shards|| are pieces of broken glass, pottery, or metal.','N-COUNT (玻璃、陶器、金属的)碎片'}

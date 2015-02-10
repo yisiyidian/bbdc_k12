@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["managerial"]={"managerial","[mænə'dʒiːrɪəl]","[,mænə'dʒɪrɪəl]","adj.管理的",'adj.管理的','A person or group having administrative or managerial authority in an organization.','执行者在某一组织内具有管理或经理权力的人或集团','The clerk was elevated to a managerial position.','那个职员被提拔起来当经理。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["figment"]={"figment","['fɪgm(ə)nt]","['fɪɡmənt]","n.虚构的东西",'n.虚构的东西','Is happyness just a figment of my imagination?','难道幸福只是一个假象？','The figure vanished as silently as if it had simply been a figment of her imagination.','那个人影无声无息地消失了，仿佛一切只是她的凭空想像。'}

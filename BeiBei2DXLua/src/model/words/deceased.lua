@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deceased"]={"deceased","[dɪ'siːst]","[dɪ'sist]","adj.已故的",'adj.已故的|||v.死亡|||vbl.死亡','He conceive it his duty to help his deceased friend\'s family.','他认为帮助亡友的家属是他的责任。','A panel bearing the coat of arms of a deceased person.','丧徽其上有死人的衣服袖子的板'}

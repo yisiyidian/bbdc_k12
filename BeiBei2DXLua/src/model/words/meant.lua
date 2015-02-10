@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["meant"]={"meant","[ment]","[mɛnt]","动词mean的过去式和过去分词形式",'动词mean的过去式和过去分词形式','I believe he is meant to be a soldier.','我相信他天生是要当军人的。','So it looks as if she meant to return.','所以看样子她要回来。'}

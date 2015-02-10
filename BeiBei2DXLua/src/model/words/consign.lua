@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consign"]={"consign","[kən'saɪn]","[kən'saɪn]","v.交付",'v.交付,分配,委托','The captured criminals were consigned to the dungeons.','抓到的罪犯被送进了地牢。','The goods were consigned to you by railway.','货物已由铁路托运到你处。'}

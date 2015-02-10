@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["caries"]={"caries","['keəriːz]","[ˈkɛriz]","n.龋齿",'n.龋齿，骨溃疡','Know: diagnostic criteria of early caries; Laser fluorescence methods.','了解：早期龋诊断标准；.激光荧光诊断','The prevalence of poor eyesight was the highest in the three common diseases and followed by caries and trachoma.','三种常见病中，视力低下的患病率最高，其次是龋齿，沙眼患病率较低。'}

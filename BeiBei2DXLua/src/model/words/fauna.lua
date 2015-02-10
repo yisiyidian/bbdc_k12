@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fauna"]={"fauna","['fɔːnə]","['fɔnə]","n.（某地区或某时期的）所有动物",'n.（某地区或某时期的）所有动物','This National Park is an area with unique fauna and flora.','该国家公园区域内具有独特的动物种群和植物种群。','Wild fauna and flora are important integrants of ecosystem.','野生动植物是生态系统的重要组成部分。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whatever"]={"whatever","[wɒt'evə]","[wət'ɛvɚ]","pron.&conj.无论什么",'pron.&conj.无论什么|||adj.不管怎样的|||det.不管什么,无论何事','Keep calm, whatever happens.','无论发生什么事都要保持冷静。','||Whatever|| I say, he always disagrees.','不管我说什么，他总是不同意。'}

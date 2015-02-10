@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emphatic"]={"emphatic","[ɪm'fætɪk; em-]","[ɪm'fætɪk]","adj.语调强的",'adj.语调强的,用力的,强调了的','an emphatic declaration','声明一个语气强调的宣告','Most certainly. Used as an emphatic affirmative reply.','当然最肯定地。做为对肯定性回答的加强语气'}

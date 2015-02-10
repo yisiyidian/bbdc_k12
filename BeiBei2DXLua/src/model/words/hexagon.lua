@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hexagon"]={"hexagon","['heksəg(ə)n]","['hɛksəɡɑn]","n.六角形",'n.六角形,六边形','this is a hexagon','这是个六边形','you must live in a hexagon house','你必须住在六边形的房子里'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["axle"]={"axle","['æks(ə)l]","['æksl]","n.轮轴",'n.轮轴,车轴','The back axle of the bus was broken.','公共汽车的后轴断了。','The rear axle carries the greatest weight.','后轴负荷最重的分量.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ruffle"]={"ruffle","['rʌf(ə)l]","['rʌfl]","n.绉褶",'n.绉褶,生气,褶裥饰边，涟漪|||vt.弄绉,给...打褶皱,扰乱|||vi.变皱，发脾气','A breeze ruffled the surface of the lake.','一阵微风吹皱了湖面。','Anne is easily ruffled by awkward questions.','安娜容易被一些难以回答的问题弄得心烦意乱。'}

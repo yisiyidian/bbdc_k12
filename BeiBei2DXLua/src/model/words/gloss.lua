@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gloss"]={"gloss","[glɒs]","[ɡlɑs]","n.光彩",'n.光彩,注释|||v.使光彩,注释','Many flight attendants said that their occupation is just the gloss outside.','很多空姐说她们的职业不过是外表光鲜。','With this polish you can give a good high gloss to the wood.','使用这种上光蜡可使木器表面极为光亮平滑。'}

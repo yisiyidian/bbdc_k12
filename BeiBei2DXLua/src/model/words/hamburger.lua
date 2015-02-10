@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hamburger"]={"hamburger","['hæmbɜːgə]","['hæmbɝɡɚ]","n.汉堡包",'n.汉堡包','He go there to drink a soda and eat a hamburger.','他到那里喝一瓶汽水和吃一块汉堡面包。','A greasy hamburger.','油腻的汉堡包'}

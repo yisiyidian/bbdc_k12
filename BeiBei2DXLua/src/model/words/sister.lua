@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sister"]={"sister","['sɪstə]","['sɪstɚ]","n.姐妹",'n.姐妹，护士长','My sister goes to a beauty parlour once a week.','我妹妹每周去一次美容院。','My sister is around your age.','我妹妹和你年龄相仿。'}

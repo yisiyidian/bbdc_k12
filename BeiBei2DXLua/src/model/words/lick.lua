@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lick"]={"lick","[lɪk]","[lɪk]","n.舔",'n.舔,少许,打|||vt.舔,连续击打,击败|||vi.用舌头舔,拍打','The disappointed losers crawled home to lick their wounds.','输者废然而返以重整旗鼓.','The cat licked up its milk.','猫把奶舔乾净了.'}

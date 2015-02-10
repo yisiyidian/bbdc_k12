@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["installation"]={"installation","[ɪnstə'leɪʃ(ə)n]","['ɪnstə'leʃən]","n.安装",'n.安装,装置,军事驻地','Flexible tubing can assist in installation in tight space.','柔性管道便于在紧凑的空间安装.','All large ships now have a wireless installation.','所有的大型船舶现在都有无线电装置.'}

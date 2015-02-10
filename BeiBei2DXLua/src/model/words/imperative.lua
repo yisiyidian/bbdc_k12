@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imperative"]={"imperative","[ɪm'perətɪv]","[ɪm'pɛrətɪv]","n.命令",'n.命令,诫命,需要|||adj.命令式的,急需的','It\'s imperative that you apologize to him immediately.','你必须立即向他道歉。','Job creation has become an imperative for the government.','创造就业机会是政府必须做的事。'}

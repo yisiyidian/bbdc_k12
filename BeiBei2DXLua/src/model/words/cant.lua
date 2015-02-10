@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cant"]={"cant","[kænt]","[kænt]","n.倾斜",'n.倾斜，斜面，斜角|||n.伪善之言,黑话|||v.(使)倾斜|||vi.伪善地说，说术语|||adj.倾斜的','Politicians hold forth with their usual hypocritical cant.','政客们滔滔不绝地说着那些老套的虚伪空话。','There has been a great deal of politician\'s cant.','说了一大堆政客惯用的言不由衷的话。'}

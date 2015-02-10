@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["waffle"]={"waffle","['wɒf(ə)l]","['wɑfl]","n.蛋奶烙饼",'n.蛋奶烙饼，华夫饼v.闲聊','The report looks impressive but it\'s really nothing but waffle.','这篇报告貌似冠冕堂皇，实际上空洞无物。','He waffled on for hours but no one was listening.','他絮叨了半天，谁也没听进去。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["strain"]={"strain","[streɪn]","[stren]","n.张力",'n.张力；拉紧；负担；扭伤；血缘|||vi.拉紧；尽力|||vt.拉紧；滥用；滤去；竭力','He was breaking up under the strain.','他劳累过度，身体逐渐衰弱。','The rope broke under the strain.','绳索在张力之下断了。'}

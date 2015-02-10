@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blaze"]={"blaze","[bleɪz]","[blez]","vi.发光",'n.火焰,烈火|||vi.燃烧,发光|||vt.燃烧,宣布,在树皮上刻痕,领导,开拓','He blazed up without warning.','他突如其来地勃然大怒。','Lights were ||blazing|| in every room.','每个房间都灯火通明。'}

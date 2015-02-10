@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overseas"]={"overseas","[əʊvə'siːz]","[,ovɚ'siz]","adj.海外的",'adj.海外的|||adv.在海外','Her man\'s been sent overseas by his employers.','她的丈夫已被雇主派到海外.','The firm is working on a new product in combination with several overseas partners.','公司正在联合几家海外合伙人制造新产品.'}

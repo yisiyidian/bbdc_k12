@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["graft"]={"graft","[grɑːft]","[ɡræft]","n.接枝",'n.接枝,贪污|||v.接枝,使结合','New skin had to be grafted on.','需要移植新皮肤。','A healthy shoot should form a strong graft.','健康的嫩枝可以长成强壮的接穗。'}

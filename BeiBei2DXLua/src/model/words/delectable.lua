@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["delectable"]={"delectable","[dɪ'lektəb(ə)l]","[dɪ'lɛktəbl]","adj.快乐的",'adj.快乐的,可喜的,愉快的，美味的','I\'m delectable.','我是快乐的。','The atmosphere is delectable.','气氛很愉快。'}

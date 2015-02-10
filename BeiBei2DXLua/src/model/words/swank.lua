@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swank"]={"swank","[swæŋk]","[swæŋk]","vi.夸耀",'vi.夸耀,炫耀|||adj.有活力的|||adj.炫耀的，华美的|||=swanky','She\'s swanking just because they said her essay was the best.','皆因人称她的文章最好, 她就忘乎所以了.','Don\'t be such a swank!','别那麽招摇!'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["duke"]={"duke","[djuːk]","[dʊk]","n.公爵",'n.公爵；君主；[俚]（pl.）拳头；[植]公爵樱桃vi.战斗','When the duke dies, his eldest son will succeed to the title.','公爵去世之后，他的长子将继承他的爵位。','Duke and Duchess of Gloucester live in their own dukedom.','格洛思特公爵及公爵夫人住在他们自己的公国里。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brutal"]={"brutal","['bruːt(ə)l]","['brutl]","adj.野蛮的",'adj.野蛮的,残暴的','The local population is kept under by a brutal army of mercenaries.','当地居民备受野蛮雇佣军的欺压.','The people have been kept down for years by a brutal regime.','人民多年遭受野蛮制度压迫.'}

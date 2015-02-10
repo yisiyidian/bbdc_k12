@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["publicity"]={"publicity","[pʌb'lɪsɪtɪ]","[pʌb'lɪsəti]","n.公众的注意",'n.公众的注意,宣传,宣扬,宣传品,广告','The new publicity manager is really on the ball.','新的宣传部主任确实很内行.','Voters have been distanced from the party by adverse publicity.','选民受到反面宣传的影响, 对这个政党冷淡了.'}

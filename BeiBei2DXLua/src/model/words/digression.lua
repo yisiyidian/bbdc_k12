@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["digression"]={"digression","[daɪ'greʃ(ə)n]","[daɪ'grɛʃən]","n.离题",'n.离题,扯到枝节上,脱轨','After this digression we return now to our original problem.','在这一段题外话以后，现在回到原来的问题。','At this moment, thoughts of Celia were a digression.','此时此刻关于西莉亚的念头让人走神。'}

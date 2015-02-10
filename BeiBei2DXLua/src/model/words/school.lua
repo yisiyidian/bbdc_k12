@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["school"]={"school","[skuːl]","[skul]","n.学校",'n.学校，学院；学业；学派；学科|||vt.训练，锻炼；教育，教导；约束；给…上学','He was schooled by life itself.','他受了生活本身的熏陶。','Soon, the whole school knew about her win.','不久，全校师生都知道她获胜了。'}

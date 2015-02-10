@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aurora"]={"aurora","[ɔ'rɔrə]","[ ɔ:'rɔ:rə ]","n.曙光",'n.曙光,北极光|||Aurora：[罗神]黎明的女神','The ||Aurora|| attacks were followed by systematic penetrations of one industry after another.','继“极光”之后有计划的网络攻击侵袭了一个又一个行业。','The light creates the aurora that we see.','这些光亮造就了我们所看到的极光。'}

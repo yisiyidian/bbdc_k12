@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plebeian"]={"plebeian","[plɪ'biːən]","[plə'biən]","n.平民",'n.平民,庶民,大众|||adj.平民的,一般的,普通的','To my mother, any meal where you served less than three wines was disgracefully plebeian.','对我母亲来说，任何一次午餐上的酒要是少于三种那就太不体面了。','He is a man who rose to greatness but never forgot his plebeian past.','他是一个仕途通达，但从未忘却自己平民出身的人。'}

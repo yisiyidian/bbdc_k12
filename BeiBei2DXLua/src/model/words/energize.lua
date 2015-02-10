@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["energize"]={"energize","['enədʒaɪz]","['ɛnɚdʒaɪz]","vt.使活跃",'vt.使活跃,赋予能量|||vi.产生能量','The thermonuclear reactions of the sun energize the human body.','太阳的热核反应给人类以能量。','To worry is often to energize needlessly.','忧虑往往是浪费精力。'}

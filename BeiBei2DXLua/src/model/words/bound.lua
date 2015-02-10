@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bound"]={"bound","[baʊnd]","[baʊnd]","n.界限",'n.跳跃,界限,范围|||adj.必定的，受约束的,装订的,有义务的|||vt.跳跃前进，形成界限','I don\'t like being desk-bound all day.','我不喜欢整天拴在办公桌旁（如在办公室里）.','With one bound, he was over the wall.','他纵身一跃就跳过了墙。'}

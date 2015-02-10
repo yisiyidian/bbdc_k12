@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spectrum"]={"spectrum","['spektrəm]","['spɛktrəm]","n.光谱",'n.光谱,（比喻）范围,系列','In the spectrum, distinct colours shade into each other.','在光谱中，截然不同的颜色相互融合起来。','Red and violet are at opposite ends of the spectrum.','红色和紫色位于光谱的两端。'}

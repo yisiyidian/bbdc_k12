@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cloud"]={"cloud","[klaʊd]","[klaʊd]","n.云",'n.云,云状的烟，阴影|||vt.使…模糊，以云遮敝,笼罩，使…混淆,毁坏|||vi.脸色显得阴沉','The thick mist clouded the mountain-top.','浓雾笼罩着山顶。','Perhaps anger had clouded his vision, perhaps his judgment had been faulty.','也许怒火蒙蔽了他的眼睛，也许他的判断有误。'}

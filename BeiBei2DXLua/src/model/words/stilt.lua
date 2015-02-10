@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stilt"]={"stilt","[stɪlt]","[stɪlt]","n.高跷",'n.高跷,支柱,脚柱','Thatch hut is raised high above the paddy field on stilt.','茅草屋用柱高高地建在稻田之上。','They built a house on stilts.','他们建了一栋用桩子支撑的房子。'}

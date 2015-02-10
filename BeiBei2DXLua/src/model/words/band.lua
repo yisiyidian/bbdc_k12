@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["band"]={"band","[bænd]","[bænd]","n.带;箍",'n.带;箍,队,乐队|||vt.&vi.联合,结合','The town band led off by playing the national anthem.','市乐队以国歌开始他们的演奏。','The band played a final gig in this theatre before splitting up.','乐队解散之前，在这家剧院作了最后一次演出。'}

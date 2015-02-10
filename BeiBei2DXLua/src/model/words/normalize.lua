@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["normalize"]={"normalize","['nɔ:məlaɪz]","['nɔrməlaɪz]","v.使常态化",'v.使常态化,使合标准,使合规格','Relations were slow to normalize after the war.','战后国际正常关系恢复缓慢。','Relations between our two countries have normalized.','我们两国的关系已恢复正常.'}

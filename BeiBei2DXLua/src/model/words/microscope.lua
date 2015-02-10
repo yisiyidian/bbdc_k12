@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["microscope"]={"microscope","['maɪkrəskəʊp]","['maɪkrəskop]","n.显微镜",'n.显微镜','A ||Microscope|| will reveal much that cannot be seen with the naked eye.','显微镜可以看到许多肉眼看不见的东西。','The biologist stained the specimen before looking at it through the microscope.','那位生物学家先把标本染色, 然後再通过显微镜进行观察.'}

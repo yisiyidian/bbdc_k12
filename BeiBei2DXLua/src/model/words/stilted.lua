@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stilted"]={"stilted","['stɪltɪd]","['stɪltɪd]","adj.踩高跷的",'adj.踩高跷的,虚饰的，生硬的|||动词stilt的过去式和过去分词形式','He was too stilted, too self-opinionated','这个男人他太做作，太固执己见了。','Perhaps for this reason, his language was somewhat stilted.','也许正是由于这个缘故，他说的语言有一点矫揉造作。'}

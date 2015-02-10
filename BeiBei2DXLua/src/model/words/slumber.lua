@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slumber"]={"slumber","['slʌmbə]","['slʌmbɚ]","n.睡眠",'n.睡眠，微睡，休止状态|||v.睡觉,打盹,静止，休眠','The baby slumbered in his cradle.','婴儿安睡在摇篮里。','He awoke from his slumber.','他睡醒了。'}

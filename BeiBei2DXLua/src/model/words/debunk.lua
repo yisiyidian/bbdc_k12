@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["debunk"]={"debunk","[diː'bʌŋk]","['di'bʌŋk]","vt.揭穿真相",'vt.揭穿真相,暴露','A lot of people used to believe that, but now it\'s been completely debunked.','过去很多人相信那种想法，但现已真相大白。','Historian Michael Beschloss debunks a few myths.','历史学家迈克尔·贝施洛斯破除了几个不实传言。'}

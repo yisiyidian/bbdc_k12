@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lampoon"]={"lampoon","[læm'puːn]","[læm'pun]","n.讽刺文章",'n.讽刺文章|||v.讽刺|||vt.嘲讽','His cartoons mercilessly lampooned the leading politicians of the day.','他的讽刺漫画无情地挖苦了当今的政界要人。','He was lampooned for his short stature and political views.','他的矮小身材和政治观点使他成了受奚落的对象。'}

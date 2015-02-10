@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["feigned"]={"feigned","[feɪnd]","[ feind ]","adj.假装的",'adj.假装的,不真诚的|||动词feign的过去式和过去分词形式','||Feign|| authorship of a novel.','冒充小说的著作人','Her efforts to ||feign|| cheerfulness weren\'t convincing.','她的强颜欢笑并不使人信服。'}

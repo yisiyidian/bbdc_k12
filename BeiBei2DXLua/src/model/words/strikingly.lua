@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["strikingly"]={"strikingly","['straɪkɪŋli]","[ 'straikiŋli ]","adv.惊人地",'adv.显著地，突出地,惊人地,引人注目地','The quagga was a strikingly beautiful variant of the zebra.','斑驴是一种极美丽的斑马变种。','My English has been strikingly improved.','我的英语有明显的提高。'}

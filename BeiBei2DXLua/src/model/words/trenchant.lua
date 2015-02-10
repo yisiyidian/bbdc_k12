@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trenchant"]={"trenchant","['tren(t)ʃ(ə)nt]","['trɛntʃənt]","adj.锐利的",'adj.锐利的,尖刻的,苛刻的，清晰的','He was shattered and bewildered by this trenchant criticism.','他因这番尖锐的批评而万念俱灰，茫然不知所措。','His comment was trenchant and perceptive.','他的评论既一针见血又鞭辟入里。'}

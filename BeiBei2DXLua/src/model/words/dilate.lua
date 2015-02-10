@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dilate"]={"dilate","[daɪ'leɪt; dɪ-]","[daɪˈlet]","vt.使扩大",'vt.使扩大,使膨胀|||vi.扩大，膨胀，详述','If there are time, I can dilate on the subject.','要是有时间，我可以详细谈谈这个问题的。','The horse dilated its nostrils.','那匹马张大它的鼻孔。'}

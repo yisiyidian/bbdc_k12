@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obstruct"]={"obstruct","[əb'strʌkt]","[əb'strʌkt]","v.阻隔",'v.阻隔,妨碍,阻塞','No difficulty can ever obstruct the advance of the Chinese people.','任何困难都阻挡不住中国人民的前进.','He was charged obstructing the highway.','他因阻碍公路交通而受控告。'}

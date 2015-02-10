@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pea"]={"pea","[piː]","[pi]","n.豌豆",'n.豌豆','||Pea|| pods burst open when overripe.','豌豆过熟就会爆裂。','This kind of pea has a long pod.','这种豌豆长着长豆荚。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impostor"]={"impostor","[ɪm'pɒstə]","[ɪm'pɑstɚ]","n.冒充者",'n.冒充者,骗子','The impostor traveled on a false passport.','那个伪装者用一本假护照旅行。','The impostor has been shown up.','那个骗子被揭露出来了。'}

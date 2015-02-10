@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ecological"]={"ecological","[iːkə'lɒdʒɪk(ə)l; ek-]","['ikə'lɑdʒɪkl]","adj.生态的",'adj.生态的,生态学的','we should protect our ecological enivirnment','我们应该保护我们的生态环境','The earthquake has caused an ecological disaster.','地震带来了（生态的，生态学的）灾难。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disrepute"]={"disrepute","[,dɪsrɪ'pjuːt]","[,dɪsrɪ'pjut]","n.声誉坏",'n.声誉坏,坏批评,不名誉','The inefficiency of one department can bring a whole industry into disrepute.','只要有一个部门的效率不高，就会使整个行业的名声受到影响。','His association with the gang brought him into disrepute.','他同这个帮派的联系使他名誉扫地。'}

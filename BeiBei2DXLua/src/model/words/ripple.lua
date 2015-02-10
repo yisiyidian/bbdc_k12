@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ripple"]={"ripple","['rɪp(ə)l]","['rɪpl]","n.涟波",'n.涟波,涟漪,波纹,粗钢梳|||vt.使...起涟漪,使起波纹|||vi.呈波浪状,起伏前进','The breeze rippled the quiet water.','微风吹皱了平静的水面。','The wheat rippled in the breeze.','小麦在微风中起伏波动。'}

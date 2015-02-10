@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["buzzer"]={"buzzer","['bʌzə]","['bʌzɚ]","n.蜂音器",'n.蜂音器,翁翁作声的东西，信号手','Come in when you hear the buzzer.','你听到蜂音电铃声就进来。','Oh, there\'s the buzzer.','哦，开演前的预备铃响了。'}

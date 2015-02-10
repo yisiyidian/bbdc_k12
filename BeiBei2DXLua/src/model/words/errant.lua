@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["errant"]={"errant","['er(ə)nt]","['ɛrənt]","adj.错误的",'adj.错误的，脱离正途的，漫游的','Usually his cases involved errant husbands and wandering wives.','通常他接的案子都涉及出轨的丈夫和离家出走的妻子。','She went to Paris to bring back her errant son.','她到巴黎去把误入歧途的儿子领回来。'}

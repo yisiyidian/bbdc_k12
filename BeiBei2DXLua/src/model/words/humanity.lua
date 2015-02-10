@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["humanity"]={"humanity","[hjʊ'mænɪtɪ]","[hjʊ'mænəti]","n.人类人性",'n.人类人性;人道;慈爱','In Christendom, people show the qualities of kindness and humanity.','在基督教界，人们表现得善良而慈悲。','There is great humanity in all the writings of Tolstoy.','托尔斯泰所有的作品都充满了伟大的仁爱.'}

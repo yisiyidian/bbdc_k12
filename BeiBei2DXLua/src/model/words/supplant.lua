@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supplant"]={"supplant","[sə'plɑːnt]","[sə'plænt]","v.排挤",'v.排挤,取代|||vt.(用策略等)替换','The party leader has been supplanted by his rival.','那位政党领导已被他的对手取而代之了。','Oil has supplanted coffee as our main export.','原油已经取代咖啡成为我们的主要出口货物。'}

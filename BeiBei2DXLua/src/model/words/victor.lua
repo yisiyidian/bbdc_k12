@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["victor"]={"victor","['vɪktə]","['vɪktɚ]","n.胜利者",'n.胜利者|||Victor:维克托(男子名)','It remains to be seen who will be the victor in the contest.','谁将在这场比赛中获胜还得等著瞧。','Shall we turn our coats, and join the victors?','我们要不要改变立场，加入胜利者的行列呢？'}

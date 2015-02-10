@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["belated"]={"belated","[bɪ'leɪtɪd]","[bɪ'letɪd]","adj.迟来的",'adj.迟来的','His policies are now quite belated.','他推行的政策现已过时。','They made a belated attempt to save her life.','他们力图挽救她的生命，可是已经太迟了。'}

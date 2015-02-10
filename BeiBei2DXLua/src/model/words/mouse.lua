@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mouse"]={"mouse","[maʊs]","[maʊs]","n.老鼠",'n.老鼠,鼠标，胆小如鼠的人，乌青色的肿块|||vi.捕鼠，蹑手蹑脚行动|||vt.仔细寻找','The mouse scurried into its hole when the cat appeared.','猫一露面，老鼠急忙钻进自己的洞里。','A mouse ran out from the dark orifice of the cave.','一只老鼠从黑暗的洞口跑出。'}

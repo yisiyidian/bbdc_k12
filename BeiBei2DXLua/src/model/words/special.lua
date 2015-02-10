@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["special"]={"special","['speʃ(ə)l]","['spɛʃl]","adj.特别的",'n.专辑,专车,特色菜,特价,特刊|||adj.特别的,专门的','This is a special case, deserving special treatment.','这是个特殊的案件，应该获得特殊处理。','Take special care tonight because the road is icy.','路面结冰了，今晚要格外小心。'}

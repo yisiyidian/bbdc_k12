@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wrong"]={"wrong","[rɒŋ]","[rɔŋ]","adj.错误的",'adj.错误的,不正当的,失常的|||adv.错误地|||n.错误,不公正|||vt.伤害,亏待,欺骗,中伤','There is something wrong with the car.','这车有点毛病。','They treated me all wrong.','他们待我太不公平。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forest"]={"forest","['fɒrɪst]","['fɔrɪst]","n.森林",'n.森林,园林,林火|||vt.用树林覆盖,植树','The deer escaped to the deep forest.','那鹿逃入了丛林深处。','He went to the forest on horseback.','他骑马去森林了。'}

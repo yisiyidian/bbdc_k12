@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["queer"]={"queer","[kwɪə]","[kwɪr]","n.同性恋者",'n.同性恋者|||adj.奇怪的,不舒服的,可疑的','There is something queer about him.','他有些古怪。','Her queer way of dressing attracted the attention of the passerby.','她古怪的着装方式引起了过路人的注意。'}

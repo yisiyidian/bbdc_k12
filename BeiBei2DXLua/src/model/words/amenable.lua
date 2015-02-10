@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amenable"]={"amenable","[ə'miːnəb(ə)l]","[ə'minəbl]","adj.应服从的",'adj.应服从的,会接纳的,肯服从的；经得起检验的','This case is not amenable to the normal rules.','这件事经不起常规的检验。','She\'ll be amenable to any sensible suggestions.','只要建议是合理的，她就会接受。'}

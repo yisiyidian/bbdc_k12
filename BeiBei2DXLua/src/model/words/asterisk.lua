@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["asterisk"]={"asterisk","['æstərɪsk]","['æstərɪsk]","n.星号(*)",'n.星号(*)','Five  asterisks flag','五星旗','The asterisked questions may be omitted.','带星号的问题可以略去.'}

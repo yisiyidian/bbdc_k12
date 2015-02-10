@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mercurial"]={"mercurial","[mɜː'kjʊərɪəl]","[mɝ'kjʊrɪəl]","n.水银剂",'adj.Mercury神的,水星的,敏捷的|||n.水银剂,汞剂','Emily\'s mercurial temperament made her difficult to live with.','埃米莉脾气反复无常，很难与她相处。','She has a mercurial turn of conversation.','她谈话善转话锋。'}

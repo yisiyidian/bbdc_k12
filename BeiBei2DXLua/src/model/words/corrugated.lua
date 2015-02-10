@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["corrugated"]={"corrugated","['kɒrəɡeɪtɪd]","['kɔrə'getɪd]","adj.缩成皱纹的",'adj.缩成皱纹的,使起波状的','His brow corrugated with the effort of thinking.','他皱着眉头用心地思考。','the corrugated iron need to stretch into flat','褶皱的铁皮需要拉扯才能平整'}

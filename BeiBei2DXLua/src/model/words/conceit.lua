@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conceit"]={"conceit","[kən'siːt]","[kən'sit]","n.自负",'n.自负,自大，个人观点，幻想，巧妙的构思|||v.幻想','This young man is full of conceit.','这个年轻人非常自负。','He is wise about his own conceit.','他自认为聪明。'}

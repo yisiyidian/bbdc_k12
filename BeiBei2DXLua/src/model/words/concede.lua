@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["concede"]={"concede","[kən'siːd]","[kən'sid]","vt.承认",'vt.承认,给予|||vi.让步','You must concede that I have tried my best.','你必须承认我已经尽力了。','I concede that you are right.','我承认你是对的。'}

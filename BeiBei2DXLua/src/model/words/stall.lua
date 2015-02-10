@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stall"]={"stall","[stɔːl]","[stɔl]","n.货摊",'n.货摊,托辞,(教堂内）唱诗班和牧师的座位,熄火|||vt.使...陷于泥中,使停止|||vi.陷入泥中,发生障碍','The car has an inclination to stall on cold mornings.','这辆汽车天冷时早晨常常熄火.','If you try to start off in top gear you\'ll stall.','要是刚一发动就用最高挡, 那就会熄火.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["along"]={"along","[ə'lɒŋ]","[ə'lɔŋ]","prep.沿着",'adv.向前,(与某人)一道|||prep.沿着','Growing along the river are tall palm trees.','沿着这条河生长的是高大的棕 树。','We bicycled along, singing loudly.','我们骑着脚踏车前进，大声歌唱着。'}

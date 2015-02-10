@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pride"]={"pride","[praɪd]","[praɪd]","n.自豪",'n.高傲,自豪,自尊,一群狮子|||vt.以...自豪','He prides himself on remaining calm in an emergency.','他在紧急关头十分镇静为此感到骄傲。','She takes great pride in her children\'s success.','她为自己的孩子取得的成绩感到无比骄傲。'}

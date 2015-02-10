@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["end"]={"end","[end]","[ɛnd]","vt.&vi.结束",'n.结束,终点,目标,末端|||vt.&vi.结束,终结|||adj.最终的','The debate ended in uproar.','那场争辩以大吵大闹收场。','The battle finally brought the war to an end.','这一仗使这场战争终告结束。'}

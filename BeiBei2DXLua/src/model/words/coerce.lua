@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coerce"]={"coerce","[kəʊ'ɜːs]","[ko'ɝs]","vt.强制",'vt.强制，迫使，威胁','Criminals coerced the girl into killing her brother.','罪犯强迫这个女孩杀死自己的哥哥。','Power or ability to coerce.','强制的权力或能力'}

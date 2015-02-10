@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["probate"]={"probate","['prəʊbeɪt]","['probet]","n.遗嘱查验",'n.遗嘱查验,遗嘱查讫证|||v.查验,受查验,付诸监护','Issuable matters of probate.','可提出抗辩的遗嘱认证事项','How will you preserve your assets from estate taxes and probate fees?','怎样保护你的财产不受税和遗产公证的影响？'}

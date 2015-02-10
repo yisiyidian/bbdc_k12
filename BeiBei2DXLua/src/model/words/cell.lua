@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cell"]={"cell","[sel]","[sɛl]","n.细胞",'n.细胞,电池,小组,小房间,单人牢房,(蜂房的)巢室,手机','She was found prostrate on the floor of the cell.','有人发现她趴在小屋的地板上.','The stage was designed to imitate a prison cell.','舞台设计成牢房的样子.'}

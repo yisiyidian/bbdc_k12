@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fingertip"]={"fingertip","['fɪŋgətɪp]","[ 'fiŋɡətip ]","n.指尖",'n.指尖','Seated in the cockpit, the pilot of a plane has a lot of controls at his fingertips.','在飞机驾驶舱中，驾驶员一伸手就可触及许多操纵装置。','She\'s an artist to her fingertips.','她是真正的艺术家.'}

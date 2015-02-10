@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["salt"]={"salt","[sɔːlt; sɒlt]","[sɔlt]","n.盐",'n.盐；风趣；机智，讽刺；药用盐，泻盐|||vt.撒盐；用盐渍；加盐以调味；为…增加趣味|||adj.含盐的；有咸味的；盐渍的','||Salt|| water is more buoyant than fresh water.','盐水比淡水浮力大。','An acid can react with a base to form a salt.','酸可以和碱起反应而生成盐。'}

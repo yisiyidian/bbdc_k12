@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["differ"]={"differ","['dɪfə]","['dɪfɚ]","vi.不一致",'vi.不一致,不同(意见)','They differ widely in their opinions.','他们的意见分歧很大。','Our ideologies differ.','我们的思想不同.'}

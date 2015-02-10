@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clue"]={"clue","[kluː]","[klʊ]","n.线索",'n.线索|||vt.提示','Haven\'t a clue.','一点儿也不知道。','There is no clue to the identity of the thief.','没有确定窃贼身分的线索.'}

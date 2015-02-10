@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infect"]={"infect","[ɪn'fekt]","[ɪn'fɛkt]","vt.传染",'vt.传染,感染','Her cheerful spirits and bubble laughter infect the whole class.','她那快乐的情绪和爽朗的笑声感染了全班。','My right eardrum have become infect.','我的右耳鼓已经感染了。'}

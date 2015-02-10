@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["separatist"]={"separatist","['sep(ə)rətɪst]","['sɛprətɪst]","n.分离主义者",'n.分离主义者,独立派','One of the English ||Separatists|| who founded the colony of Plymouth in New England in1620.','清教徒前辈移民1620年，在新英格兰建立普利茅斯殖民地的英国主张脱离国教者','The separatist is demanding full autonomy for their state.','分裂主义者在要求他们的州完全自治。'}

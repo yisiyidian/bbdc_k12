@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aspirin"]={"aspirin","['æsp(ə)rɪn]","['æsprɪn]","n.阿斯匹林",'n.阿斯匹林','||Aspirin|| has efficacy in relieving headaches.','阿司匹林有解除头痛的效能。','I took an aspirin and the pain gradually subsided.','我服用了阿斯匹林, 疼痛逐渐减轻.'}

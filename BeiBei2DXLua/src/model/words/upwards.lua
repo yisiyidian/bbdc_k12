@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["upwards"]={"upwards","['ʌpwɚdz]","[ 'ʌpwədz ]","adv.往上",'adv.往上,向上地','The smoke curled upwards.','烟气袅袅上升.','The smoke curled upwards.','烟气袅袅上升。'}

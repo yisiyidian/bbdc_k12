@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["museum"]={"museum","[mjuː'zɪəm]","[mju'ziəm]","n.博物馆",'n.博物馆','The museum has many immemorial cultural relics.','该博物馆收藏了很多极其古老的文物。','The girl went to the museum by a surrey.','那个女孩坐着一辆四轮双座轻便马车去博物馆了。'}

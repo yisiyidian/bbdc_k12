@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impression"]={"impression","[ɪm'preʃ(ə)n]","[ɪm'prɛʃən]","n.印象",'n.印象,效果','Punishment seemed to make no impression on the child.','惩罚对这孩子似乎没什么效果。','Her gentleness has given me a deep impression.','她的亲切给我留下了很深的印象。'}

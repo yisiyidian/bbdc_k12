@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heredity"]={"heredity","[hɪ'redɪtɪ]","[hə'rɛdəti]","n.遗传",'n.遗传,传统,遗传特征','Do heredity and environment determine one\'s character?','遗传与环境可以决定一个人的性格吗?','Her daughter\'s bonny eyes are parts of her heredity.','她女儿的漂亮眼睛是来自她的部分遗传特征。'}

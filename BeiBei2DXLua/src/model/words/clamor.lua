@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clamor"]={"clamor","['klæmə]","[ 'klæmə ]","n.喧闹",'n.喧闹,叫嚷,大声的要求|||v.喧嚷,大声的要求','They made a clamor for reform.','他们强烈要求改革。','The representatives clamored their disapproval.','代表们吵嚷着不赞同。'}

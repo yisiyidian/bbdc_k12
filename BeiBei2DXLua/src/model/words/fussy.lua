@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fussy"]={"fussy","['fʌsɪ]","['fʌsi]","adj.挑剔的",'adj.易烦恼的,过分装饰的,谨慎的,挑剔的','Are you fussy about what you wear?','你介意自己的穿着吗？','Some girls like fussy dresses.','有些女孩喜欢讲究的衣服。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pot"]={"pot","[pɒt]","[pɑt]","n.罐",'n.罐,壶,一大笔(钱)|||vt.把...装罐,(台球)入袋','The firm is going to pot under the new management.','公司在新人管理下就要垮台了。','I potted up a flower in the newly bought flowerpot.','我把一棵花种到了新买的花盆里。'}

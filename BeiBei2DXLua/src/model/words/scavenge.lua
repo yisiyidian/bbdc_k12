@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scavenge"]={"scavenge","['skævɪn(d)ʒ]","['skævɪndʒ]","vt.打扫",'vt.打扫,排除废气|||vi.到处觅食，(在废物中)寻觅（有用之物）','You can often scavenge nice bits of old furniture from skips.','从废物堆里往往能捡到一些挺好的旧家具。','The air in bedroom must be scavenged everyday.','卧室必须每天换气。'}

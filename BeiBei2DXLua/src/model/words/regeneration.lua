@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["regeneration"]={"regeneration","[rɪdʒenə'reɪʃn]","[ridʒɛnə'reʃən]","n.再生",'n.再生,重建','I affirm that I can get a chance of regeneration in life.','我坚信我还有机会重生。','regeneration','恢复; 革新; 新生; 复兴'}

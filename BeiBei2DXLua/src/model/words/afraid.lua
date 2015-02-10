@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["afraid"]={"afraid","[ə'freɪd]","[ə'fred]","adj.害怕的",'adj.害怕的,担心的','`Have we missed the train?\' `I\'m afraid so.\'','‘我们误了火车了吗?’‘很遗憾, 是误了.’','I was afraid to approach them about this matter.','我怕与他们商谈这个问题.'}

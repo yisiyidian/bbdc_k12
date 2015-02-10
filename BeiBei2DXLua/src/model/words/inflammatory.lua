@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inflammatory"]={"inflammatory","[ɪn'flæmət(ə)rɪ]","[ɪn'flæmə'tɔri]","adj.煽动性的",'adj.煽动性的,使激怒的,炎症的,发炎的','...nationalist policies that are too drastic and inflammatory.','…过于激烈、煽动性强的民族主义政策。','...the inflammatory reactions that occur in asthma.','…出现于哮喘的炎症反应。'}

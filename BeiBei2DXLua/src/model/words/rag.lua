@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rag"]={"rag","[ræg]","[ræɡ]","n.破布",'n.破布；碎布；破旧衣服；碎片；（格调低下的）报纸，小报|||vt.嘲笑，捉弄；糟蹋，欺负；指责，欺负人','I don\'t like the local rag.','我不喜欢本地报纸.','He wrapped a clean rag around his ankle.','他把一小块乾净的布缠住脚腕.'}

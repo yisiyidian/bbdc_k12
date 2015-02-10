@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["patriotic"]={"patriotic","[ˌpeɪtri'ɒtɪk]","[[ˌpeɪtri'ɒtɪk]]","adj.爱国的",'adj.爱国的','His patriotic action raised our admiration.','他的爱国行为激起了我们的敬佩。','The ||Patriotic|| Front took power after a three-month civil war.','经过3个月内战，爱国阵线夺取了政权。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["considerably"]={"considerably","[kən'sɪd(ə)rəblɪ]","[kən'sɪdərəbli]","adv.非常地",'adv.非常地,很,颇','Life in the camp had hardened him considerably.','军营生活使他变得坚强多了。','The wind, temperature, water level, etc has dropped considerably.','风势已减弱了、 温度已下降了、 水平面已降低了很多.'}

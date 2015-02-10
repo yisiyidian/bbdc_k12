@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["means"]={"means","[miːnz]","[minz]","n.方法",'n.方法,手段，折中点，物质财富','Radio and television are important means of communication.','无线电和电视是重要的通信手段。','Please find alternative means of transport.','请另外找一个运输方法。'}

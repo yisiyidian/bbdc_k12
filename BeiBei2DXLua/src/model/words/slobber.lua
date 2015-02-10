@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slobber"]={"slobber","['slɒbə]","['slɑbɚ]","v.流口水",'v.流口水,粗俗地表示|||n.口水，语无伦次的表达','Baby has slobbered his bib.','婴儿已经把围兜弄湿了。','...slobbering on his eternal cigarette end.','...他嘴上一直叼着香烟头、流着口水。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adulterate"]={"adulterate","[ə'dʌltəreɪt]","[ə'dʌltəret]","v.搀...使品质变劣",'v.搀...使品质变劣','The food had been adulterated to increase its weight.','食物被掺了杂质以增加分量。','There is a regulation against adulterated cosmetics.','规定禁止出售假冒化妆品。'}

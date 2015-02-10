@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["provenance"]={"provenance","['prɒv(ə)nəns]","['prɑvənəns]","n.出处",'n.出处,起源','All the furniture is of English provenance.','所有这些家具都是英国货。','With no empirical way to establish a tea\'s provenance, many buyers are easily duped.','由于没有实用的方法来确定茶叶的产地，许多买家很容易上当受骗。'}

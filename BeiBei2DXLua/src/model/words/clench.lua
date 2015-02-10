@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clench"]={"clench","[klen(t)ʃ]","[klɛntʃ]","v.紧握",'v.紧握,紧咬，牢牢地抓住,确定|||n.牢牢抓住,钉紧','The shape of the coin was imprinted on his tightly clenched hand.','一枚硬币的形状印在他那紧握的手上。','He clenched his fists.','他紧握拳头.'}

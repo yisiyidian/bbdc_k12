@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["paradox"]={"paradox","['pærədɒks]","['pærədɑks]","n.自相矛盾的话",'n.似非而是的隽语,自相矛盾的话','||Paradox|| and irony are characteristics of her style.','她善于运用似非而是的隽语和反语。','The paradox is that the region\'s most dynamic economies have the most primitive financial systems.','矛盾之处在于这个地区最有活力的经济体却有着最落后的金融体系。'}

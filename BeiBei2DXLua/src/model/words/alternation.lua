@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alternation"]={"alternation","[,ɔːltə'neɪʃən]","[,ɔltɚ'neʃən]","n.轮流",'n.交互,轮流,隔一个','The rapid alternation of two tones either a whole or a half tone apart.','颤音两个相距一个音或半个音的音的迅速交替','we have an alternation system of duty','我们有一个值班轮流机制'}

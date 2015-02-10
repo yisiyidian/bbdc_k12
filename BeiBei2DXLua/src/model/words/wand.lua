@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wand"]={"wand","[wɒnd]","[wɑnd]","n.棍",'n.棒,棍,杖,魔杖','Shaped like a wand or rod; straight, long, and slender.','棒状的帚状的或秆状的; 直的、长的和细的','A rod, wand, or staff carried as an emblem of authority or office.','权杖作为权力或职位的象征而携带的手杖、棒或短杖'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["porcupine"]={"porcupine","['pɔːkjʊpaɪn]","['pɔrkjə'paɪn]","n.豪猪",'n.豪猪,箭猪','The hunter seized a porcupine.','猎人捕获了一只豪猪。','Have you seen a porcupine?','你见过豪猪吗？'}

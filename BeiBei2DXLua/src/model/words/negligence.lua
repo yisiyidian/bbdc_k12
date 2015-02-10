@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["negligence"]={"negligence","['neglɪdʒ(ə)ns]","['nɛɡlɪdʒəns]","n.疏忽",'n.疏忽,粗心大意','She rebuked him strongly for his negligence.','她严厉斥责他的疏忽。','The accident was caused by negligence on the part of the driver.','事故是由于司机的过失造成的。'}

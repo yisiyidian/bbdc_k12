@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["miserly"]={"miserly","['maɪzəlɪ]","[ 'maizəli ]","adj.吝啬的",'adj.吝啬的','Now, my uncle seemed so miserly that I was struck dumb by this sudden generosity.','原来似乎是非常小气的伯伯竟突然间慷慨起来，这倒一下子把我弄得目瞪口呆。','He is miserly with both his time and his money.','他对时间和金钱都非常吝啬。'}

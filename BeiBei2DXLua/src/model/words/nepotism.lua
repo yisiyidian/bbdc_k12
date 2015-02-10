@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nepotism"]={"nepotism","['nepətɪz(ə)m]","['nɛpə'tɪzəm]","n.裙带关系",'n.裙带关系','Corruption and nepotism are pervasive.','贪污腐败及任人唯亲之风盛行。','Many will regard his appointment as the kind of nepotism the banking industry ought to avoid.','很多人都把对他的任命看作银行业应当避免的裙带关系式操作。'}

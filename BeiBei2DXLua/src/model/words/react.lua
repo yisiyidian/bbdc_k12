@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["react"]={"react","[rɪ'ækt]","[ri'ækt]","vt.作出反应",'vt.作出反应|||vi.起反应,起作用,反攻','Iron reacts with water and air to produce rust.','铁与水和空气起化学反应而生锈。','She reacted to the insult by turning her back on him.','她受辱之后就不再理睬他了。'}

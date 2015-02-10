@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tidal"]={"tidal","['taɪd(ə)l]","['taɪdl]","adj.潮的",'adj.潮的,有关潮水的','A similar deposit at the mouth of a tidal inlet, caused by tidal currents.','三角洲海湾入口处三角形沉淀区域, 由潮汐形成','A channel in which a tidal current runs.','潮汐水道潮汐流在其中流动的水道'}

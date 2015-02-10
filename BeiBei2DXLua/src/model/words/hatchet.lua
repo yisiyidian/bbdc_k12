@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hatchet"]={"hatchet","['hætʃɪt]","['hætʃɪt]","n.短柄小斧",'n.短柄小斧|||v.扼杀','You will need a hatchet to do the job.','做这件事你得需要一把斧子','Will the time never come when we may honourably bury the hatchet?','难道我们永远不可能有个体面地休战的时候 吗 ?'}

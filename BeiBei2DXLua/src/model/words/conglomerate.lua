@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conglomerate"]={"conglomerate","[kən'glɒm(ə)rət]","[kən'ɡlɑːmərət]","adj.密集而固结的",'adj.密集而固结的,成簇的|||n.联合企业,密集体,城郊混合区|||vt.凝聚成一团,使结成,结合','The firm has been taken over by an American conglomerate.','该公司已被美国一企业集团接管。','An American conglomerate holds a major share in the company.','一家美国的大联合企业持有该公司的大部分股份。'}

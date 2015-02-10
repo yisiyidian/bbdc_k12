@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["upstairs"]={"upstairs","[ʌp'steəz]","[,ʌp'stɛrz]","adj.楼上的",'adj.楼上的|||adv.在楼上,往楼上，高水平地，上层地，头脑上地|||n.楼上','They tiptoed upstairs so as not to wake the baby.','他们踮著脚上楼, 生怕把孩子吵醒.','The boss wants you--you\'d better get upstairs at the double.','老板叫你－－你最好赶紧上楼去，'}

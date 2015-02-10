@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["instil"]={"instil","[in'stil]","[ in'stil ]","v.逐渐灌输",'v.逐渐灌输|||vt.灌输','I instilled the need for kindness into my children.','我不断向孩子们灌输仁慈的必要。','It\'s necessary to instil the minds of the youth with lofty ideals.','把崇高理想灌输到年青人的思想中去是很必要的。'}

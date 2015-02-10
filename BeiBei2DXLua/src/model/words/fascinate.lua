@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fascinate"]={"fascinate","['fæsɪneɪt]","['fæsə'net]","vt.使...入迷",'vt.使...入迷,吸引住|||vi.有吸引力','I believed devoutly in her power to fascinate him, in her dazzling loveliness.','我由衷地相信她有使他神魂颠倒的力量, 相信她有令人眼花缭乱的姿色.','These things never get old, and always manage to fascinate.','这些东西从来不会过时, 并且一直创新着.'}

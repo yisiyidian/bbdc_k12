@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["winner"]={"winner","['wɪnə]","['wɪnɚ]","n.获胜者",'n.获胜者','The trophy was bestowed upon the winner.','奖品授给了优胜者。','The winner beamed with satisfaction.','获胜者满意地笑了.'}

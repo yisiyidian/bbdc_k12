@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["evacuation"]={"evacuation","[ɪ,vækjʊ'eɪʃ(ə)n]","[ɪ,vækjʊ'eʃən]","n.撤离",'n.撤离，疏散|||n.排泄，排泄物','Causing evacuation, especially of the bowels; purgative.','排泄的，排除的引起腹泻，尤指肠泻的；净肠的','Air transport of persons to a place where they can receive medical or surgical care; medical evacuation.','臣务救助和撤退用飞机运送伤员去一个他们能受到内科或外科治疗的地方；医务救助'}

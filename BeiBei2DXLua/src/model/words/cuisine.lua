@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cuisine"]={"cuisine","[kwɪ'ziːn]","[kwɪ'zin]","n.烹饪",'n.烹饪,佳肴','The dining room has lakeside views and offers excellent cuisine.','在那家饭店用餐能欣赏到湖边景色，而且那里饭菜也是美味佳肴。','Chinese cuisine is very different from European.','中国烹饪与欧洲烹饪有很大区别。'}

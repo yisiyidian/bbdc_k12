@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gradual"]={"gradual","['grædʒʊəl]","['ɡrædʒuəl]","adj.逐渐的",'adj.逐渐的,逐步的','Here there is a gradual descent to the sea.','这里有个通向海的缓坡.','I advocate a policy of gradual reform.','我拥护逐步改革的政策.'}

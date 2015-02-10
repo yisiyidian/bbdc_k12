@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["independence"]={"independence","[ɪndɪ'pend(ə)ns]","[,ɪndɪ'pɛndəns]","n.独立",'n.独立,自主,自立','The government adopted an uncompromising posture on the issue of independence.','政府在独立的问题上采取了毫不妥协的态度。','The Forth of July is the National ||Independence|| Day of the USA.','七月四日是美国国庆日。'}

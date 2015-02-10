@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lucre"]={"lucre","['luːkə]","['lukɚ]","n.收益",'n.收益,钱财(尤指不义之财）','He was blinded by the lust of lucre .','利欲使他不辨是非。','She married a foreigner for mere lucre.','她仅仅为钱财而嫁给了一个外国人。'}

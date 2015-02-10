@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["begin"]={"begin","[bɪ'gɪn]","[bɪ'ɡɪn]","vt.&vi.开始",'vt.&vi.开始；着手；创始；创办|||vi.（从…）开始；起始；起初是；开始讲话','She\'s ||begun|| on (ie started writing or reading) a new novel.','她已开始写（或阅读）一本新小说.','Building ||began|| last year.','建筑工程去年已经开始.'}

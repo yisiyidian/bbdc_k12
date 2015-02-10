@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sunder"]={"sunder","['sʌndə]","['sʌndɚ]","v.分开",'v.分开,分离','These two points are related and cannot be sundered.','这两点互相联系，是不能分割的。','Lightning tore the tree in sunder.','闪电把树劈成两半。'}

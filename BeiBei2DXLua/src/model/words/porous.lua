@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["porous"]={"porous","['pɔːrəs]","['pɔrəs]","adj.可渗透的",'adj.可渗透的,多孔的','The local limestone is very porous.','当地石灰岩渗透性很强。','The soil is porous.','土质疏松。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["silent"]={"silent","['saɪlənt]","['saɪlənt]","adj.安静的",'adj.安静的,不吵闹的,沉默的,无言的|||n.(复数)默剧','Would you be good enough to keep silent?','请你保持安静好吗？','He was silent for a moment, then began his answer.','他沉默了一会儿，然后开始回答。'}

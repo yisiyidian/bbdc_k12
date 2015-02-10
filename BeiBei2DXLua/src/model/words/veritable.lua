@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["veritable"]={"veritable","['verɪtəb(ə)l]","['vɛrɪtəbl]","adj.真实的",'adj.真实的,确实的,真正的','A book that is a veritable feast for the mind.','一本给心灵带来真正快乐的书','The show is a veritable reservoir of new talent.','这个演出真是新秀集萃。'}

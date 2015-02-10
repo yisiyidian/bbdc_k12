@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["syllogism"]={"syllogism","['sɪlə,dʒɪz(ə)m]","['sɪlədʒɪzəm]","n.三段论法",'n.三段论法,演绎推理，诡辩','The enthymeme must consist of few propositions, fewer often than those which make up the normal syllogism.','推理论证必须由尽可能少得命题组成，比组成正常三段论的命题还要少。','By the syllogism, we can infer the conclusion.','推论法'}

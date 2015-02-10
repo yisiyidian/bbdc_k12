@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dine"]={"dine","[daɪn]","[daɪn]","v.用正餐",'v.用正餐,进餐','Every weekend, we dine at a nice little restaurant in the neighbourhood.','每个周末，我们在附近一家别致的小餐馆进餐。','My friend invited me to dine out.','我的朋友邀请我出去吃饭。'}

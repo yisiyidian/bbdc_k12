@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["realtor"]={"realtor","['riəltɚ]","[ 'riəltə, -tɔ: ]","n.房地产经纪人",'n.房地产经纪人，房屋中介','None of the realtors who worked on the deal would comment','“在这场交易中的房地产经纪人都不愿作评论”','When the ||Realtor|| showed us this house, we knew we wanted it right away.','当房地产经纪人带我们看这所房子时，我们就知道要立刻买下它。'}

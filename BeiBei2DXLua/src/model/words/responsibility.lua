@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["responsibility"]={"responsibility","[rɪ,spɒnsɪ'bɪlɪtɪ]","[rɪˌspɑːnsəˈbɪləti]","n.责任",'n.责任,可信度，责任心','The captain is absolved from all blame and responsibility for the shipwreck.','那位船长被免除了因船只失事而遭致的非难和罪责。','You can\'t retreat from the responsibility in this affair.','你不能回避在这一事件中的责任。'}

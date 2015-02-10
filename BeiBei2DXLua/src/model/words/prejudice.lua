@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prejudice"]={"prejudice","['predʒʊdɪs]","['prɛdʒədɪs]","n.偏见",'n.偏见,成见,伤害|||v.使...存偏见,使...有成见,伤害','Lack of self-discipline prejudiced her chances of success.','她缺乏自制力对她获得成功有所影响。','She has a prejudice against modern music.','她对现代音乐怀有偏见。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nominally"]={"nominally","['nɒmɪnəlɪ]","['nɑmənli]","adv.有名无实地",'adv.有名无实地,名义上地,名称上','The company could not indicate aperson even nominally responsible for staff training.','该公司甚至找不出一个可以名义上负责员工培训的人。','Although nominally, a monarchy, the Netherlands is in effect a republic.','尽管荷兰名义上是君主制度，但它实际上是共和政体'}

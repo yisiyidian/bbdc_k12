@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cabal"]={"cabal","[kə'bæl]","[kə'bæl]","n.徒党",'n.徒党,秘密结社,(尤指政治上的)阴谋|||vi.共谋','All members of the cabal will be prosecuted for treason.','所有阴谋集团的成员都将被判叛国罪。','He had been chosen by a secret government cabal.','他已被一个秘密的政府阴谋集团选中。'}

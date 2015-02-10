@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["village"]={"village","['vɪlɪdʒ]","['vɪlɪdʒ]","n.村庄",'n.村庄','This village is as beautiful as the fairyland.','这个小村庄美如仙境。','There are two main nationalities in our village.','我们村子有两大民族。'}

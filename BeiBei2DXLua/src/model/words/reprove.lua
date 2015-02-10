@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reprove"]={"reprove","[rɪ'pruːv]","[rɪ'pruv]","v.责备",'v.责备,责骂,非难','Women were reproved if they did not wear hats in court.','女性如果在法庭不戴帽子，就会受到谴责。','I have to reprove you for repeating the same mistakes over and over again.','你屡屡重犯同样的错误，我不得不严厉地批评你。'}

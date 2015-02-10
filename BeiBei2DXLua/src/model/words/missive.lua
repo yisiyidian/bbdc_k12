@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["missive"]={"missive","['mɪsɪv]","['mɪsɪv]","n.公文",'n.公文,书信|||adj.送出的','An anonymous missive had been pushed under her door.','一封匿名信放在她的门口。','She sent a ten-page missive to the council, detailing her objections.','她向议会寄了一份十页的书信，详述了她的异议。'}

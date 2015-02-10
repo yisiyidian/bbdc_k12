@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["telling"]={"telling","['telɪŋ]","['tɛlɪŋ]","adj.显著的",'adj.有效的,显著的|||动词tell的现在分词形式','Enjoying delicious food is telling to perfect my mood.','吃好吃的东西能明显改善我的心情状况。','In a telling sign of public dissatisfaction with politics, about half the electorate supports neither party.','民众对政治明显不满，约一半的选民表示不支持其中任何一个党派。'}

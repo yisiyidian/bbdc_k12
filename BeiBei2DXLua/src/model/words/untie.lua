@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["untie"]={"untie","[ʌn'taɪ]","[ʌn'taɪ]","v.解开",'v.解开','My dead fingers could not untie the knot.','我的手指麻木了, 解不开结.','Don\'t cut the string, untie the knots.','别剪断绳子，把结解开。'}

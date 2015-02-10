@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["meal"]={"meal","[miːl]","[mil]","n.膳食",'n.膳食,一餐,谷物粗粉|||vi.进餐','I slaved away all day over a hot stove to produce this meal, and now they\'ve hardly eaten any of it.','我一整天围着火热的炉子辛辛苦苦地做出这顿饭，可是他们现在几乎一点儿也没有吃。','I had a frugal meal of bread and cheese last night.','我昨晚吃了只有面包和奶酪的便餐。'}

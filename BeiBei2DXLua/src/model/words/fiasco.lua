@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fiasco"]={"fiasco","[fɪ'æskəʊ]","[fɪ'æsko]","n.惨败",'n.惨败|||n.酒瓶子','It was a bit of a fiasco.','这败得有点惨。','His plans turned into a fiasco.','他的计划一败涂地。'}

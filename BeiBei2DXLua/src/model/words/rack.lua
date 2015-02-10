@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rack"]={"rack","[ræk]","[ræk]","n.(行李)架",'n.(行李)架,拷问台,齿轨|||vt.折磨,使痛苦,拷问|||vi.顶风飞行','He put his bag on the luggage rack.','他把包放在行李架上。','He put his shoes on the rack.','他把鞋放在架子上。'}

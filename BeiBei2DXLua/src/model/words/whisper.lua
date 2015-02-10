@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whisper"]={"whisper","['wɪspə]","['wɪspɚ]","vt.低声说",'vt.低声说；私语；密谈，密谋坏事；私下说|||vi.沙沙地响；耳语；密谈|||n.低语，耳语；飒飒声；[医]嗫音；传闻','She said it in a whisper, so I didn\'t hear.','她是悄声说的，所以我没有听见。','The wind was whispering in the roof.','屋顶上风声飒飒。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["origin"]={"origin","['ɒrɪdʒɪn]","['ɔrɪdʒɪn]","n.起源",'n.起源,出身,开端','The disorder in military policy had its origins in Truman\'s first term.','军事政策的混乱可追溯到杜鲁门的第一届任期。','The social unrest has its origins in economic problems.','社会动荡是经济问题引起的。'}

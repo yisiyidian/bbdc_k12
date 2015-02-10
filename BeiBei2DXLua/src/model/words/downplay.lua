@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["downplay"]={"downplay","[daʊn'pleɪ]","[,daʊn'ple]","vt.不予重视",'vt.不予重视，对...低估','downplayed the bad news.','对这则坏消息轻描淡写','Police sources yesterday downplayed the significance of the security breach.','警方昨天的消息对这次安全缺口的重要性轻描淡写。'}

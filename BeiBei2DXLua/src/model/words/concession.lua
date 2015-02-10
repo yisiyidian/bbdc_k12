@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["concession"]={"concession","[kən'seʃ(ə)n]","[kən'sɛʃən]","n.让步",'n.让步,妥协,特许权','I hope you can make some concession.','我希望你能做些让步。','We will make some concession in price.','我们将在价格上做些让步。'}

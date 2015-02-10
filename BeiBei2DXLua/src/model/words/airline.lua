@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["airline"]={"airline","['eəlaɪn]","['ɛrlaɪn]","n.(飞机的)航线",'n.(飞机的)航线,航空公司','However short the journey is, you always get something to eat on this airline.','不管航程多麽短, 这一班机上都有些吃的.','The timetable is obtainable post-free from the airline office.','航班时刻表可以向航空公司免费索取。'}

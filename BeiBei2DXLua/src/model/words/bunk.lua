@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bunk"]={"bunk","[bʌŋk]","[bʌŋk]","n.铺位",'n.铺位|||n.胡言乱语|||v.为...提供卧铺，睡觉','The train stopped abruptly, nearly tipping me out of my bunk.','火车突然停住, 我差点儿从　位上摔下来.','He lay in his bunk under a mound of blankets.','他躺在铺上，身上盖了一大堆毯子。'}

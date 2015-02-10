@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sensual"]={"sensual","['sensjʊəl; -ʃʊəl]","['sɛnʃuəl]","adj.肉欲的",'adj.肉欲的,色情的,世俗的,感觉的,感觉论的','He led a sensual life.','他整天沉迷于酒色。','It was an opera, very glamorous and very sensual.','这场歌剧美轮美奂，声色俱佳,给感官以极大享受。'}

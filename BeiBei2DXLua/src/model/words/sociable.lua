@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sociable"]={"sociable","['səʊʃəb(ə)l]","['soʃəbl]","adj.好交际的",'adj.好交际的,社交的','The Smiths are a sociable family.','史密斯一家人很好交际.','Roger is a very sociable person.','罗杰是个非常好交际的人.'}

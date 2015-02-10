@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["remark"]={"remark","[rɪ'mɑːk]","[rɪ'mɑrk]","n.备注",'n.备注,评论,注意|||vt.评论,注意,述及','That remark was intended as a joke.','那句话本来只是个玩笑。','The editor remarked that article was well written.','编者评论说那篇文章写得很好。'}

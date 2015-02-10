@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subservient"]={"subservient","[səb'sɜːvɪənt]","[ səb:sə:viənt ]","adj.卑屈的",'adj.卑屈的,奉承的，次要的,从属的','People shall not be regarded as subservient to the economic system.','不应把人看作经济体制的附庸。','The press was accused of being subservient to the government.','有人指责新闻界一味迎合政府的旨意。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["recompense"]={"recompense","['rekəmpens]","['rɛkəm'pɛns]","vt.报偿",'vt.报偿,赔偿,报酬|||n.报偿,回礼,赔偿','The insurance company will recompense his loss.','保险公司将赔偿他的损失。','recompensed the victims of the accident.','给事故的受害者以赔偿'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anesthesia"]={"anesthesia","[,ænɪs'θiːzɪə]","[,ænəs'θiʒə]","n.麻醉",'n.麻醉,麻木','||Anesthesia|| was a great innovation in medicine.','麻醉是一项伟大的医学创新。','His lecture is intended to bear down on the application of acupuncture anesthesia in brain surgery.','他的学术报告打算重点谈针刺麻醉在脑外科方面的应用。'}

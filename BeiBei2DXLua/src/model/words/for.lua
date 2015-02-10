@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["for"]={"for","[fɔː; fə]","[fɚ]","prep.为",'conj.因为|||prep.给,为，关于,代表,支持,因为,往','We have studied English for years.','我们学英语已有好几年了。','They jumped for joy.','他们高兴地跳了起来。'}

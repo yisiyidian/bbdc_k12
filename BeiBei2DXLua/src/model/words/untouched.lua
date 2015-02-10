@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["untouched"]={"untouched","[ʌn'tʌtʃt]","[ʌn'tʌtʃt]","adj.未触及的",'adj.未触及的,未受影响的，未开发的','The subject remains untouched upon.','这个题目仍然没有触及。','The miser was untouched by the poor man\'s story.','那个吝啬鬼对那穷人的叙述无动于衷.'}

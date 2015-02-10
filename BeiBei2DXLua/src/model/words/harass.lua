@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["harass"]={"harass","['hærəs; hə'ræs]","[ˈhærəs, həˈræs]","v.使...困扰",'v.使...困扰,使...烦恼,反复袭击','Political dissidents complained that they are harassed by the police.','持有不同政见者申斥他们受到警方的骚扰。','The landlord harassed tenants who were behind in their rent.','房东不断地骚扰那些拖欠房租的房客。'}

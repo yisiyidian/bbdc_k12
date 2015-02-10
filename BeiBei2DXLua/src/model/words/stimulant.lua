@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stimulant"]={"stimulant","['stɪmjʊl(ə)nt]","['stɪmjələnt]","n.兴奋剂",'n.兴奋剂,刺激物，酒精性饮料|||adj.使兴奋的,激励的,鼓舞的','Coffee and tea are mild stimulants.','咖啡和茶都是温和的兴奋剂。','It is hoped that the tax cuts will act as a stimulant to further economic growth.','希望降低税率这一措施能刺激经济进一步增长。'}

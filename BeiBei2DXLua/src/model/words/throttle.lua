@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["throttle"]={"throttle","['θrɒt(ə)l]","['θrɑtl]","n.节流阀",'n.节流阀,节气阀,喉咙|||v.扼喉咙,使窒息,压','He lived his life at full throttle.','他过着激情四射的生活。','The attacker then tried to throttle her with wire.','然后袭击者企图用电线勒死她。'}

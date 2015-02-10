@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brigade"]={"brigade","[brɪ'geɪd]","[brɪ'ged]","n.旅",'n.旅,队,组|||vt.组队，编组','Our brigade will be committed at dawn.','我们旅黎明就要投入战斗。','The fire had burnt (itself) out before the fire brigade arrived.','在消防队赶到以前, 火已(自行)熄灭.'}

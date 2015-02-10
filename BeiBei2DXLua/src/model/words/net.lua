@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["net"]={"net","[net]","[nɛt]","n.网",'n.网,净利,实价|||adj.净余的,纯粹的|||vt.用网捕,撒网,净赚','If you don\'t net your peas the birds will eat them.','若不用网把豌豆罩上，鸟就要来吃了。','This area has not been covered by the communication net.','这个地区还不在通讯网的覆盖之内。'}

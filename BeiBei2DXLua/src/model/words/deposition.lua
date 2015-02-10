@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deposition"]={"deposition","[,depə'zɪʃ(ə)n; diː-]","[,dɛpə'zɪʃən]","n.沉积作用(沉积物",'n.沉积作用(沉积物,矿床)；[律](在法庭上的)宣誓作证;证词,证言','He made a deposition that he had witnessed the accident.','他宣誓声明自己目击了那起事故。','The accused has made a deposition.','被告已宣誓作证。'}

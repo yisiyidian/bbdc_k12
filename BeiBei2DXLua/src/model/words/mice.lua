@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mice"]={"mice","[maɪs]","[maɪs]","n.老鼠(复数)",'n.老鼠(复数)','When the cat is away, the mice will play.','[谚]猫儿不在, 鼠儿成精。','Can you hear the mice squeaking?','你听到老鼠吱吱叫吗?'}

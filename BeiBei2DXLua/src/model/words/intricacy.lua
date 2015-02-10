@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intricacy"]={"intricacy","['ɪntrɪkəsɪ]","['ɪntrɪkəsi]","n.纷乱",'n.纷乱,复杂,错综','He was lost in the ||intricacies|| of a new electric motor.','他全神贯注于一种新式电马达的复杂结构。','The price depends on the intricacy of the work.','价格取决于工艺的精细程度。'}

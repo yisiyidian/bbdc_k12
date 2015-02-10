@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drift"]={"drift","[drɪft]","[drɪft]","n.漂移",'n.漂移,漂流物,观望,漂流,吹积物,趋势|||vi.漂移,漂流,吹积|||vt.使漂流,把...吹积','The road was edged with snow drifts.','路边上有一个个雪堆。','She finally drifted in two hours after everyone else.','在大家到齐之後两小时，她终於姗姗来到。'}

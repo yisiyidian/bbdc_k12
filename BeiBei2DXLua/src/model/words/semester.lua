@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["semester"]={"semester","[sɪ'mestə]","[səˈmɛstɚ]","n.学期",'n.学期','This last semester, if it has done nothing else, has given me confidence in myself.','最后这个学期，即使没有给我其他的任何东西，也给了我自信。','His writing has improved greatly in this semester.','这学期他的写作有了很大进步。'}

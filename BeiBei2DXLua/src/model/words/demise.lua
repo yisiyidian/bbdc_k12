@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["demise"]={"demise","[dɪ'maɪz]","[dɪ'maɪz]","n.死亡",'n.死亡,转让房产,让位|||vt.让渡,遗赠,转让|||vi.遗赠,死亡','Smoking, rather than genetics, was the cause of his early demise.','导致他英年早逝的原因是吸烟而非遗传。','This loss led to the demise of the business.','这一损失导致公司倒闭了。'}

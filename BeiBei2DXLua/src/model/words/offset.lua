@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["offset"]={"offset","['ɒfset]","[,ɔf'sɛt]","n.抵销",'n.抵销,支派,平版印刷,弯管|||vt.弥补,抵销,用平版印刷|||vi.形成分支','Hedge can help them offset inventory loss when commodity price fall.','在商品价格下跌时，对冲能够帮助他们抵补存货价跌的损失。','He raised his prices to offset the increased cost of materials.','他提高售价以补偿材料增加的成本。'}

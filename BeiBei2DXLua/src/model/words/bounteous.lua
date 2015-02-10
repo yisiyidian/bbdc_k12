@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bounteous"]={"bounteous","['baʊntɪəs]","['baʊntɪəs]","adj.慷慨的",'adj.慷慨的,宽大的,宽裕的','God\'s bounteous blessings.','上帝的慷慨赐福.','We are grateful to you for your bounteous gifts.','对您给予的丰厚礼物，我们不胜感激。'}

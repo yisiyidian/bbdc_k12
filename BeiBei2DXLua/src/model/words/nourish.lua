@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nourish"]={"nourish","['nʌrɪʃ]","['nɜrɪʃ]","v.滋养",'v.滋养,使...健壮,怀有','She have nourish the dream of becoming a movie star.','她曾怀有成为电影明星的梦想。','Milk is all we need to nourish a small baby.','我们供给婴儿营养只需喂奶就够了。'}

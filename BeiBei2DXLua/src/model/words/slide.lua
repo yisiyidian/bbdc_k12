@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slide"]={"slide","[slaɪd]","[slaɪd]","n.滑",'n.滑,幻灯片,雪崩,山崩,滑坡,滑梯|||vt.使滑|||vi.滑,跌落','House values may begin to slide.','房价可能开始逐渐下降了。','The children were taking turns on the slides in the playground.','孩子们在操场上轮流滑滑梯。'}

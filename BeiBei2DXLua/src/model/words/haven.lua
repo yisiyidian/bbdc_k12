@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["haven"]={"haven","['heɪv(ə)n]","['hevn]","n.港口",'n.港口,避难所,安息所|||v.安置...于港中,庇护','They have made their home a haven for the homeless orphans.','他们把自己的家变成了无家可归的孤儿们的避难所。','||Haven|| should realize intensive to change development.','港口应实现集约化发展'}

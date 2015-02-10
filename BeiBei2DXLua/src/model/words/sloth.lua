@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sloth"]={"sloth","[sləʊθ]","[sloθ]","n.怠惰",'n.怠惰,懒惰，树獭','He has kept sloth out.','他已经克服了懒惰。','||Sloths|| live in trees and move very slowly.','树獭生活在树上而且行动缓慢。'}

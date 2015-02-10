@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bee"]={"bee","[biː]","[bi]","n.蜜蜂",'n.蜜蜂','||Bee|| and wasp both sting, but they have other similarity, too.','蜜蜂和黄蜂都螫人，但它们还有其他相似之处。','That bee gave me a nasty sting.','那只蜜蜂狠狠地蜇了我一下.'}

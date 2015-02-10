@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abound"]={"abound","[ə'baʊnd]","[ə'baʊnd]","v.富于",'v.富于,充满','He abounds in courage.','他很有胆量。','Tropical plants abound in the jungle.','丛林中有大量的热带植物。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["debutante"]={"debutante","['debjʊtɑːnt; 'deɪ-]","['dɛbjutɑnt]","n.初次参加社交活动的",'n.初次参加社交活动的','She dazzled London society as the most beautiful debutante of her generation.','她首次出现在伦敦社交界便艳惊四座，被视为同龄人里最美丽的年轻女子。','The debutante\'s photograph was at the head of the society page.','那位初进社交界少女的照片被登在社会版的最上头。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["either"]={"either","['aɪðə; 'iː-]","['iðɚ]","pron.任一的",'pron.任一的|||conj.或,也|||adj.任一,两方的|||adv.也','I will go on business either this week or next week.','我将在这星期或下星期出差。','It\'s not as heavy, either.','这也不那么重。'}

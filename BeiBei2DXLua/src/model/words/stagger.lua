@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stagger"]={"stagger","['stægə]","['stægɚ]","n.蹒跚",'n.蹒跚,踌躇,摇摆不定|||vi.蹒跚,犹豫,动摇|||vt.使摇晃,使吃惊,使犹豫|||vt.使交错,错开时间','The drunk man staggered across the room.','那个醉汉摇摇晃晃地穿过房间。','The unexpected blow did not stagger his resolution.','这个意外的打击并没有动摇他的决心。'}

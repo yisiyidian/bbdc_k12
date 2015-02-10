@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["floe"]={"floe","[fləʊ]","[flo]","n.海面上所结的浮冰",'n.海面上所结的浮冰','Two penguins are standing on an ice floe.','两只企鹅站在一块浮冰上。','Ice ||Floes||','浮冰，冰霜第二层天赋'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["execrate"]={"execrate","['eksɪkreɪt]","['ɛksɪˌkret]","vt.憎恶",'vt.憎恶,咒骂，厌恶','She execrated all who opposed her.','她咒骂所有反对她的人。','It is not polite to execrate others in the public.','在公共场合对他人咒骂很不礼貌。'}

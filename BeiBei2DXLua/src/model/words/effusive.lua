@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["effusive"]={"effusive","[ɪ'fjuːsɪv]","[ɪ'fjusɪv]","adj.感情奔放的",'adj.流出的,感情奔放的','Her effusive thanks embarrassed everybody.','她道谢时非常激动，弄得大家不好意思。','Every visitor noticed that her effusive welcome was not sincere.','所有的客人都看出来她那过分热情的欢迎并不真诚。'}

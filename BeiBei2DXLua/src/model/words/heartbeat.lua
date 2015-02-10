@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heartbeat"]={"heartbeat","['hɑːtbiːt]","['hɑrtbit]","n.心跳",'n.心跳，重要的力量，推动力','Although there was still a faint heartbeat, he was to all intents and purposes dead.','他虽然仍有隐隐心搏, 但从身体各方面看已经死亡.','An irregularity in the force or rhythm of the heartbeat.','心律失常不规则的心跳强度或节奏'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["almost"]={"almost","['ɔːlməʊst]","['ɔlmost]","adv.几乎",'adv.几乎,差不多|||adj.几乎','He slipped and almost fell.','他脚下一滑, 险些跌倒.','Dinner\'s almost ready.','饭差不多准备好了.'}

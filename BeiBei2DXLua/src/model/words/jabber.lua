@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jabber"]={"jabber","['dʒæbə]","['dʒæbɚ]","v.快而不清楚地说话",'v.快而不清楚地说话|||n.含糊不清的话','Listen to the jabber of those monkeys.','听那些猴子在吱吱喳喳地叫。','Noisy, stupid talk; jabber.','喧闹愚蠢的谈话；唧唧喳喳'}

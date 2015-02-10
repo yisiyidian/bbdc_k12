@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blowhard"]={"blowhard","['bləʊhɑːd]","['blohɑrd]","n.自吹自擂者",'n.自吹自擂者','He doesn\'t like to be a blowhard about what he\'s developed.','他不喜欢吹嘘他研制的东西。','blowhard    bo zhu wa zi  中产阶级 资产阶级','布尔乔亚'}

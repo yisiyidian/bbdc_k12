@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["carcass"]={"carcass","['kɑrkəs]","[ 'kɑ:kəs ]","n.尸体",'n.尸体，（人的）身躯，残核，骨架','The ravenous lions tore at the carcass.','这些饥饿的狮子撕碎了那动物的尸体.','Vultures are picking at a lion\'s carcass.','秃鹫正在啄食狮子的尸体。'}

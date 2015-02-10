@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eerie"]={"eerie","['ɪərɪ]","[ 'iəri ]","adj.怪诞的",'adj.怪诞的,可怕的,奇异的，害怕的','It\'s eerie to walk through a dark wood at night.','夜晚在漆黑的森林中行走很是恐怖。','I walked down the eerie dark path.','我走在那条漆黑恐怖的小路上。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bushy"]={"bushy","['bʊʃɪ]","[bʊʃi]","adj.灌木一样的",'adj.灌木一样的,灌木茂密的,多毛的','A bushy clump, as of ivy.','簇灌林丛, 如常青藤','a bushy head of hair.','浓密的头发'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mayor"]={"mayor","[meə]","['meɚ]","n.市长",'n.市长','The mayor must make policies in accordance with the bill passed in the Congress.','市长要根据议会的议案来制定政策。','The rabbles met on the square to oppose their new mayor.','平民们在广场上集会反对他们的新市长。'}

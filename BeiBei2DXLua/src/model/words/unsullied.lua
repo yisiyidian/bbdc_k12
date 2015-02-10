@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unsullied"]={"unsullied","[ʌn'sʌlɪd]","[ʌn'sʌlɪd]","adj.清白的",'adj.没弄脏的，清白的','She had the combined talents of toughness, intellect, experience and unsullied reputation.','她刚强果敢、才智超群、经验丰富，而且名声没有任何污点。','He smiled, unsullied by doubt.','他虽疑惑但还是笑了笑。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["misogamy"]={"misogamy","[mɪ'sɒgəmɪ; maɪ-]","[ mi'sɔɡəmi, mai- ]","n.厌恶结婚",'n.厌恶结婚','I may have misogamy.','也许我有恐婚症。','I really love him, but it is a pity that I am a misogamy.','我真的很爱他，但是不幸的是，我有恐婚症。'}

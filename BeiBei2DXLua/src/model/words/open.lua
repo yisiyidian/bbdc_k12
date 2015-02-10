@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["open"]={"open","['əʊp(ə)n]","['opən]","vt.打开",'n.公开,户外,空旷|||adj.开着的,开放的,公开的|||vt.打开,公开,开放,开始|||vi.开,通行,大叫','Another supermarket opened last week.','上星期又有一家超级市场开张了。','Don\'t lay yourself open to attack.','不要让自己轻易受人攻击。'}

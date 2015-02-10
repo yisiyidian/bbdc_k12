@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["over"]={"over","['əʊvə]","['ovɚ]","prep.（表示方向）越过",'prep.（表示方向）越过；（部份或全部覆盖）在…上面；由于；（表示论及）关于|||adv.结束；再；（倒）下；从一边至另一边|||adj.过去的；外面的；在上的；上级的|||n.额外；剩余；剩余（或多余）的量；剩余物','He sprinkled sugar over his cereal.','他在麦片粥里撒上了糖。','By the time we arrived the meeting was over.','我们到达时，会议已结束了。'}

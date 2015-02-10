@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["defunct"]={"defunct","[dɪ'fʌŋ(k)t]","[dɪ'fʌŋkt]","adj.死的",'adj.死的,非现存的|||[计算机]无效','They bought all their equipment from a defunct brewery.','他们那些设备都是从一家已经关闭的啤酒厂购买的。','The scheme for building an airport seems to be completely defunct now.','建造新机场的计划看来整个完蛋了。'}

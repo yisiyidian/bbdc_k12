@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["archer"]={"archer","['ɑːtʃə]","['ɑrtʃɚ]","n.射手",'n.射手,弓箭手|||Archer:射手座','The archer who won the game is very young.','获得冠军的那个弓箭手很年轻。','I am the best archer in our college.','我是我们学校最好的射手。'}

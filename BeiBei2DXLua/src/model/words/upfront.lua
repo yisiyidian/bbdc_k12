@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["upfront"]={"upfront","[ʌp'frʌnt; 'ʌp-]","[,ʌp'frʌnt]","adj.在前面的",'adj.在前面的,预付的,直率的|||adv在前面,在最前面','I like her, she is really an upfront lady.','我喜欢她,她实在是一位坦率的女士。','My initial thought is to be upfront with Mary and tell her','我最初的想法是先斩后奏'}

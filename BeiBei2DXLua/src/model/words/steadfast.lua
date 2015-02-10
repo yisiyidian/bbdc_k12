@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["steadfast"]={"steadfast","['stedfɑːst; -fəst]","['stɛdfæst]","adj.坚定的",'adj.坚定的，毫不动摇的','He remained steadfast in his belief that he had done the right thing.','他一直坚信自己做得对。','Her steadfast belief never left her for one moment.','她坚定的信仰从未动摇过。'}

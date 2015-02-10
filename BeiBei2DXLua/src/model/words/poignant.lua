@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["poignant"]={"poignant","['pɒɪnjənt]","['pɔɪnjənt]","adj.悲伤的",'adj.悲伤的,痛切的，严厉的,尖锐的,剧烈的，浓烈的','A poignant memory.','一段悲伤的记忆。','Keen, poignant agonies seemed to shoot from his neck downward','“强烈而痛苦的疼痛似乎从他的脖子直往下蔓延”'}

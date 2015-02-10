@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fossilize"]={"fossilize","['fɒs(ə)laɪz; 'fɒsɪlaɪz]","[ 'fɔsilaiz ]","vt.使成化石",'vt.使成化石，使陈腐|||vi.变成化石，变陈腐，固定化','The survival of the proteins depends on the way in which bones are fossilized.','蛋白质是否存留取决于骨头被石化的方式','fossilized ways','陈腐的方式'}

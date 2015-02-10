@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["convince"]={"convince","[kən'vɪns]","[kən'vɪns]","vt.说服",'vt.说服,使...相信','We utterly failed to convince them.','我们根本说服不了他们。','I try to convince him of the reality of the danger.','我试图使他相信危险的确存在。'}

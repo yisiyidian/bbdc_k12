@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extraneous"]={"extraneous","[ɪk'streɪnɪəs; ek-]","[ɪk'strenɪəs]","adj.外来的",'adj.外来的,无关的','We shall ignore factors extraneous to the problem.','我们应该撇开与此问题无直接联系的因素。','I can choose to ignore these extraneous thoughts or certainly choose not to act on them.','我可以选择无视这些无关的想法，当然也可以选择不按这些想法行事。'}

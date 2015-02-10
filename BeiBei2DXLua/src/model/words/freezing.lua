@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["freezing"]={"freezing","['friːzɪŋ]","['frizɪŋ]","adj.冰冻的",'adj.冰冻的,严寒的，冷冻用的|||n.冰冻|||动词freeze的现在分词','The temperature remained below freezing all day.','温度整天都在冰点以下.','Tonight the temperature will fall to 3 degrees below freezing.','今夜的温度将降至冰点下3度.'}

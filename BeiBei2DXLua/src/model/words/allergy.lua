@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["allergy"]={"allergy","['ælədʒɪ]","['ælɚdʒi]","n.敏感症",'n.敏感症,反感,厌恶','She have an allergy to household dust.','她对房间里的灰尘过敏。','Constantly blowing his nose in allergy season.','在过敏的季节不断地擤他的鼻子'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inhale"]={"inhale","[ɪn'heɪl]","[ɪn'hel]","v.吸入",'v.吸入,吞咽','Do you inhale when you smoke?','你抽烟时是否把烟吸入肺里？','Follow me please, inhale! exhale!','跟我做，吸气!呼气!'}

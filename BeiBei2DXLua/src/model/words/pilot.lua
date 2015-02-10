@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pilot"]={"pilot","['paɪlət]","['paɪlət]","n.飞行员",'n.飞行员,领航员,引航员|||vt.领航,驾驶,向导|||adj.引导的,示范的','The pilot landed the plane safely.','驾驶员使飞机安全降落。','A pilot must be awake to the changes in the weather.','飞行员必须警觉天气的变化。'}

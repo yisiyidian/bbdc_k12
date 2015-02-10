@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overtime"]={"overtime","['əʊvətaɪm]","[,ovə'taɪm]","n.加班时间(加班加点费)",'n.加班时间(加班加点费)|||adv.在规定时间之外(超出时间地)','As an earnest of my good intentions I will work overtime this week.','我愿本周加班工作以示诚意.','They are working overtime to finish the work.','为了完成任务他们正在加班加点地工作.'}

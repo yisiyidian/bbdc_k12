@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["favorable"]={"favorable","['feɪvərəbl]","['fevərəbl]","adj.有利的",'adj.有利的,赞许的,良好的,顺利的,偏袒的','The ship forged ahead under a favorable wind.','船乘风快速前进。','The book met with a favorable reception.','此书受到好评。'}

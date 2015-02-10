@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dreadfully"]={"dreadfully","['dredfəlɪ]","['drɛdfəli]","adv.可怕地",'adv.可怕地,糟透地，非常','I\'m dreadfully sorry for you.','我非常为你惋惜。','The symphony was dreadfully mangled.','那首交响乐曲给糟蹋得不成样子。'}

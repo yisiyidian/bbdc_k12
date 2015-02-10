@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brawl"]={"brawl","[brɔːl]","[brɔl]","n.争吵",'n.争吵，大声的吵闹|||vi.争吵，发出大声吵闹','He shall not get so angry. What we have gotten here is more like a brawl than a debate.','他不应该那么生气的。这里的样子不像在讨论而像是在吵架。','He is a timid boy; it\'s impossible for him to brawl with anyone.','他是一个胆小的男孩，他不可能和任何人吵架。'}

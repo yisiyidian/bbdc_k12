@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["smile"]={"smile","[smaɪl]","[smaɪl]","n.微笑",'n.微笑,喜色|||vt.微笑,微笑地表示,以微笑完成|||vi.微笑,赞许,一笑而过','A smile often denotes pleasure and friendship.','微笑常常表示高兴和友善。','The woman in this painting has a pensive smile.','这幅画上的女人脸上露出忧郁的微笑。'}

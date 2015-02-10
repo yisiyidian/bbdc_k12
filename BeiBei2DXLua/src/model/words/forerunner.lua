@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forerunner"]={"forerunner","['fɔːrʌnə]","['fɔr'rʌnɚ]","n.先驱",'n.先驱，祖先，预兆，[体育]赛前试滑滑道的人','Anglo-Saxon is the forerunner of modern English.','盎格鲁撒克逊语是现代英语的先驱。','Penicillin was the forerunner of modern antibiotics.','“青霉素”是现代抗生素的先导。'}

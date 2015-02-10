@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["surf"]={"surf","[sɜːf]","[sɝf]","n.海浪拍岸",'n.海浪拍岸,冲浪|||vi.冲浪,浏览|||vt.浏览','In wintertime he will don a wet suit and go right on surfing.','到冬季，他就穿上橡皮紧身衣去冲浪。','The surf broke on the rocks.','迎头浪冲上岩石四下迸溅。'}

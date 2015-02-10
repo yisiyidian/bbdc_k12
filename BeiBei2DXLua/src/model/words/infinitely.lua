@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infinitely"]={"infinitely","['ɪnfɪnɪtlɪ]","['ɪnfɪnətli]","adv.无限地",'adv.无限地,无穷地','That was infinitely better than his last film.','这比他上一部电影不知胜过多少倍。','The particles in an atom are infinitely small.','原子里的粒子极小.'}

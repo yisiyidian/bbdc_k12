@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spread"]={"spread","[spred]","[sprɛd]","v.传布",'n.传布,伸展|||adj.扩延的|||v.传布,推广,伸出','The rapid spread of the disease is alarming the medical authorities.','这种疾病的迅速蔓延使医疗当局感到忧虑不安。','A wide stretch of land spread in front of us.','展现在我们面前的是一片广阔的土地。'}

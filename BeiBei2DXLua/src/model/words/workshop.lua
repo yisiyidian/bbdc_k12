@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["workshop"]={"workshop","['wɜːkʃɒp]","['wɝkʃɑp]","n.车间",'n.车间,工场,研讨会,讲习班','The workshop has shut down and the workers are unemployed.','工厂关闭後工人失业了.','She is studying in a theatre workshop.','她正在戏剧研讨班学习。'}

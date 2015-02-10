@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["frieze"]={"frieze","[friːz]","[ fri:z ]","n.横饰带",'n.横饰带,带状雕刻,一种厚粗绒|||v.使起绒毛','The friezes round the top of the wall are delicate.','墙顶的横条很精致。','The annual London ||Frieze|| Art Fair kicked off this week at an odd time for the art market.','一年一度的伦敦Frieze艺术博览会在刚刚过去的周末举行，对艺术品市场来说这是一个怪异的时刻。'}

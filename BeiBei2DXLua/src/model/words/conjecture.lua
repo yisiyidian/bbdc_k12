@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conjecture"]={"conjecture","[kən'dʒektʃə]","[kən'dʒɛktʃɚ]","v.&n.推测",'v.&n.推测,臆测','The general conjectures that the enemy will launch an attack against us this night.','将军推测说敌人将于今天晚上突袭我们。','The commentators made various conjectures about the outcome of the next election.','时事评论家对下一次选举结果做了许多猜测。'}

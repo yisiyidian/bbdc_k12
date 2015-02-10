@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["knight"]={"knight","[naɪt]","[naɪt]","n.骑士",'n.骑士,爵士,武士|||vt.授以爵位','Chess includes rook, knight, bishop, queen, king and pawn.','国际象棋有车、马、象、后、王和卒。','That knight ran his sword through his opponent.','那个骑士用刀刺穿他的对手。'}

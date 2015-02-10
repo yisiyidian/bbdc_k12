@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hospice"]={"hospice","['hɒspɪs]","['hɑspɪs]","n.旅客住宿处",'n.旅客住宿处,收容所','A hospice for travelers or pilgrims.','旅客招待所供旅行者或朝圣者住宿的地方','...a hospice for cancer patients.','…一个癌症病人的临终关怀医院。'}

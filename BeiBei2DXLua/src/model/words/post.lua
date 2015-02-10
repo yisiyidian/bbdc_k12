@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["post"]={"post","[pəʊst]","[post]","n.邮件",'n.邮件,标竿,职位|||vt.邮递,发布,布置','He asked them to keep him posted about the sales of his book.','他要求他们把他著作的销售情况随时告诉他。','The names of the members of the team will be posted up today.','队员名单将于今天公布。'}

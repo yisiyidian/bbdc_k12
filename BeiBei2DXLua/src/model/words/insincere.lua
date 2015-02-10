@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insincere"]={"insincere","[ɪnsɪn'sɪə]","[,ɪnsɪn'sɪr]","adj.不真诚的",'adj.不真诚的','Don\'t speak like that. It sounds insincere to me.','别这样讲话, 这样我听起来感到不诚恳。','Excessive or insincere praise.','甜言蜜语过分的或不真诚的赞扬'}

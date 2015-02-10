@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arithmetic"]={"arithmetic","[ə'rɪθmətɪk]","[ə'rɪθmətɪk]","n.算术",'n.算术','I\'m good at history but not so hot at arithmetic.','我的历史成绩不错，但算术不太好。','The waiter got his arithmetic wrong.','服务员算错了账。'}

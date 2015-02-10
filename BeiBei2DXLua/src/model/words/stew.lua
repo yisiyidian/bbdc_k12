@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stew"]={"stew","[stjuː]","[stu, stju]","n.炖汤",'n.炖汤,焖,烦恼|||v.炖汤,焖,忧虑','Simmer the stew for an hour.','用文火把菜炖一小时.','Can you taste the garlic in this stew?','你尝得出炖肉里有大蒜味儿吗?'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["verbal"]={"verbal","['vɜːb(ə)l]","['vɝbl]","adj.动词的",'adj.动词的,口头的,用言辞的,用文字的|||n.动名词','The teacher teaches us the verbal skills.','老师告诉我们使用言辞的技巧。','He launched into a verbal assault on tabloid journalism.','他口头对小报新闻进行了抨击.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dizzying"]={"dizzying","['dɪziːɪŋ]","['dɪzɪɪŋ]","adj.令人昏乱的",'adj.令人昏乱的；极快的；灿烂的','After a pretty girl kissed me, i felt dizzying .','一个漂亮的女孩把我吻得头晕目眩。','This complicated game make me feel dizzying.','这个复杂的游戏使我感到晕眩.'}

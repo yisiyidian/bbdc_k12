@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resurrect"]={"resurrect","[rezə'rekt]","[ ,rezə'rekt ]","vt.复活",'vt.复活(复露,使...再现,使...再受注意)','That noise is enough to resurrect the dead!','那噪音都能把死人吵活!','Attempts to resurrect the ceasefire have already failed once.','为恢复停战所作的努力已经失败过一次了。'}

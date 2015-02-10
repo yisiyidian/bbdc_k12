@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["elective"]={"elective","[ɪ'lektɪv]","[ɪ'lɛktɪv]","adj.选举的",'adj.选举的，随意选择的|||n.选修科目','She is taking French as an elective next year.','她明年选修法语.','elective office.','由选举产生的职位'}

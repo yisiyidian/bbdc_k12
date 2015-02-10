@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cellar"]={"cellar","['selə]","['sɛlɚ]","n.地窖",'n.地窖,地下室|||vt.把...藏入地窑(或酒窑)','This wine cellar stays at an even temperature all year round.','这个酒窖常年保持恒温.','Isn\'t there some (more) wine in the cellar?','酒窖里（还）有酒吗?'}

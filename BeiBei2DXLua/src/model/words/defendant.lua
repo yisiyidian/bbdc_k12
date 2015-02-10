@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["defendant"]={"defendant","[dɪ'fend(ə)nt]","[dɪ'fɛndənt]","n.被告",'n.被告','It is a scandal that the defendant was declared innocent.','宣判被告无罪, 这真是可耻的事.','The courtroom buzzed as the defendant was led in.','被告被带进来时, 审判室里发出一阵嘈杂声.'}

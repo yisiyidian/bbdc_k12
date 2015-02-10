@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kneel"]={"kneel","[niːl]","[nil]","v.跪",'v.跪','She ||knelt|| down to pray.','她跪下祈祷。','The surest way to hit woman\'s heart is to take aim kneel.','要射中女人的心，最有把握的方法就是跪下来瞄个正准。'}

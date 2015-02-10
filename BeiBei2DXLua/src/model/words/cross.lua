@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cross"]={"cross","[krɒs]","[krɔs]","v.交叉",'n.十字架,十字架形物件,交叉,交叉路|||adj.生气的,交叉的|||vt.划叉剔除，画横线于|||vi.穿越|||prep.穿过','I hope I never cross her path again.','但愿我永远不再遇见她。','She doesn\'t like to be crossed.','她不喜欢有人跟她作对。'}

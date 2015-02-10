@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["debrief"]={"debrief","[diː'briːf]","[di'brif]","vt.向...询问情况",'vt.向...询问情况,汇报情况','The men have been debriefed by British and Saudi officials.','这些人已经被英国和沙特阿拉伯的官员们查问过了。','He went to Rio after the CIA had debriefed him.','被美国中央情报局盘问之后，他去了巴西里约。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arc"]={"arc","[ɑːk]","[ɑrk]","n.弧",'n.弧,弧形物|||vi.形成电弧,按弧形轨迹行进','Joan of ||Arc|| was burnt (alive) at the stake.','圣女贞德在火刑柱上被（活活）烧死.','The stick of carbon is often used in an electric arc lamp.','碳精棒常用于电弧灯。'}

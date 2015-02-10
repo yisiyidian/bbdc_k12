@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["complaint"]={"complaint","[kəm'pleɪnt]","[kəm'plent]","n.抱怨",'n.抱怨','You have no real grounds for complaint.','你没有真正的理由发牢骚。','I have a complaint.','我要投诉。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["runic"]={"runic","['ruːnɪk]","['rʊnɪk]","adj.古代北欧文字的",'adj.古代北欧文字的','The meaning of some runic forms is not always well understood today.','并不是所有北欧古代文字形式的意义如今都能理解清楚。','a runic letter','...'}

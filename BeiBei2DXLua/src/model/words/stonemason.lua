@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stonemason"]={"stonemason","['stəʊnmeɪs(ə)n]","['stonmesn]","n.石工",'n.石工,石匠','The old stonemason gouged out a hole on the rock','这位老石匠在岩石上凿了个洞。','Lucius got apprenticed to a stonemason.','卢修斯成了石匠的学徒。'}

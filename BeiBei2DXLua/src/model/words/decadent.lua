@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decadent"]={"decadent","['dekəd(ə)nt]","['dɛkədənt]","adj.堕落的",'adj.堕落的，颓废的，衰落的|||n.堕落者，颓废派艺术家','The decadent puppet regime was falling apart.','那个腐朽的傀儡政权正在土崩瓦解。','The self-style decadent insists on lying down in the belief that he is hopelessly paralyzed.','那自称为颓废派者，由于深信自己已毫无希望地全身麻痹而坚持要躺下来。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["snack"]={"snack","[snæk]","[snæk]","n.小吃",'n.小吃,点心|||v.吃零食,吃点心','He converted his truck into a mobile snack bar.','他把货车改成流动小吃店.','You will have time for a hasty snack before the train leaves.','火车离站前你还能抓紧时间吃一顿快餐.'}

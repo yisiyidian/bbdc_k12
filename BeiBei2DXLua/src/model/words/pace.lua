@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pace"]={"pace","[peɪs]","[pes]","n.速度",'n.速度,步调,步法|||vt.踱步,调整节奏|||vi.缓慢地走','She works so fast that I can\'t keep pace with her.','她工作得很快，我跟不上她的速度。','The lion paced the floor of his cage restlessly.','狮子烦躁地在兽笼里走来走去。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bitch"]={"bitch","[bɪtʃ]","[bɪtʃ]","n.母狗",'n.母狗,(贬)泼妇|||vt.&vi.埋怨,搞砸,挖苦','I\'ll kill that son of a bitch when I get my hands on him!','等我抓到那狗东西就把他给宰了!','You\'re such a bitch!','你这个婊子!'}

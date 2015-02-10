@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clinical"]={"clinical","['klɪnɪk(ə)l]","['klɪnɪkl]","adj.临床的",'adj.临床的','He seemed to have a rather clinical view of the breakup of his marriage.','他似乎是相当冷静地看待自己的婚姻破裂。','a clinical diagnosis.','临床诊断'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["divergence"]={"divergence","[daɪ'vɜːdʒ(ə)ns]","[dɪ'vɝdʒəns]","n.分歧",'n.分歧|||n.散度（数学用语）','The divergence between the incomes of the rich and the poor countries seems to be increasing.','富人和穷人的收入差距似乎又增大了。','This battle wiil be a divergence of this war.','这场战斗将会成会整场战争的转折点。'}

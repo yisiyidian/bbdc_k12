@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oil"]={"oil","[ɒɪl]","[ɔɪl]","n.油",'n.油,油画颜料,奉承话|||vt.&vi.涂油,溶化,加油','That is an oil painting of a landscape in spring.','那是一幅描绘春天景色的油画。','Mexico has a large surplus of oil.','墨西哥有大量过剩的石油。'}

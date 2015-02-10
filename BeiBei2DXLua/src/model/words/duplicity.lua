@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["duplicity"]={"duplicity","[djuː'plɪsɪtɪ; djʊ-]","[du'plɪsəti]","n.口是心非",'n.口是心非,不诚实,表里不一','He was guilty of duplicity in his private dealings.','他在为其私底下行为的奸诈内疚着。','Malcolm believed he was guilty of duplicity in his private dealings.','马尔科姆相信他在为其私底下行为的奸诈内疚着。'}

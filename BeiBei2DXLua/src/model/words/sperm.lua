@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sperm"]={"sperm","[spɜːm]","[spɝm]","n.精液",'n.精液,精子|||n.与抹香鲸有关的物质(如鲸脑油)|||pref.表示“精液，精子，种子”（=spermo-,sperma-，spermi-）','The male sperm fertilizes the female egg.','雄性的精子使雌性的卵子受精.','He has a low sperm count.','他的精液中精子含量少。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["know"]={"know","[nəʊ]","[no]","vt.&vi.知道",'vt.&vi.知道,了解,认识','I know Paris better than Rome.','我对巴黎比对罗马熟悉。','He\'s sometimes been known to sit there all day.','有时能见到他整天坐在那里。'}

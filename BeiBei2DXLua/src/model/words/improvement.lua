@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["improvement"]={"improvement","[ɪm'pruːvm(ə)nt]","[ɪm'prʊvmənt]","n.改进",'n.改进,改善','The humanitarian scientist called on the improvement of the poor\'s living condition.','这位人道主义科学家呼吁改善穷人的生活条件。','I see little prospect of an improvement in his condition.','我看他的情况没有什麽改进的希望。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["omission"]={"omission","[ə(ʊ)'mɪʃ(ə)n]","[ə'mɪʃən]","n.省略",'n.省略,遗漏,疏忽','The mark X denotes an omission.','增补号（X）表示有脱漏.','She complained about the omission of her name from the list.','她抱怨名单上遗漏了她的名字。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lusty"]={"lusty","['lʌstɪ]","['lʌsti]","adj.健壮的",'adj.健壮的,精力充沛的，贪欲的，欢乐地','A lusty cry.','强有力的吼叫','He has a strong and lusty son.','他有一个体格健壮精力充沛的儿子。'}

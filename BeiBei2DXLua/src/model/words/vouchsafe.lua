@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vouchsafe"]={"vouchsafe","[vaʊtʃ'seɪf]","[ vautʃ'seif ]","v.惠予",'v.惠予,准许|||vt.允诺','He thinks himself so important that he won\'t vouchsafe to visit us any more.','他以为自己很了不起，所以不会屈尊再来看我们了吧。','Elinor would not vouchsafe any answer.','埃莉诺不想给予任何回答。'}

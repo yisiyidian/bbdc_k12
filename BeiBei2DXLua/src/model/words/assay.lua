@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["assay"]={"assay","[ə'seɪ; 'æseɪ]","[ə'se]","n.化验",'n.化验,分析|||v.化验,分析','After chemical assay, we have known the composition of the ore.','经过化学分析，我们知道了矿石的构成。','We will make an assay of the ore that he brought.','我们将对他带来的矿石做实验鉴定。'}

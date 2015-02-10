@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peerless"]={"peerless","['pɪələs]","['pɪrləs]","adj.无比的",'adj.无比的,出类的,无双的','His Chinese kung fu is peerless.','他的中国功夫是无敌的。','To be a peerless man is very difficult.','做一个出类拔萃的人是很不容易的。'}

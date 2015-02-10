@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["merger"]={"merger","['mɜːdʒə]","['mɝdʒɚ]","n.(企业等的)合并",'n.(企业等的)合并','As you are well aware that a merger is a major turning point.','你很清楚合并是一个重要的转折点。','The board turn down all approach on the subject of merger.','董事长拒绝了有关合并事宜的任何协商。'}

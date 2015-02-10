@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sensitivity"]={"sensitivity","[sensɪ'tɪvɪtɪ]","['sɛnsə'tɪvəti]","n.敏感",'n.敏感,多愁善感,感受性','His remarks convicted him of a lack of sensitivity.','他的言辞显示了他缺乏敏感性','As we all know,she is a girl with great sensitivity.','我们都知道，他是个很敏感的女孩'}

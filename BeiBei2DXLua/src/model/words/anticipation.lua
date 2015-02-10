@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anticipation"]={"anticipation","[æntɪsɪ'peɪʃ(ə)n]","[æn,tɪsɪ'peʃən]","n.预期",'n.预期,预料','I can not deny my keen anticipation of her visit.','我不能否认我热切期待她的来访。','There\'s been an atmosphere of anticipation around here for a few days now.','一种期待的氛围在这儿已存在几天了。'}

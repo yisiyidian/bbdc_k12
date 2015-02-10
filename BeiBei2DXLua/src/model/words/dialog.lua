@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dialog"]={"dialog","['daɪəlɒɡ]","['daɪə,lɑg]","n.对话",'n.对话,对白|||（美）=dialogue','At last there can be a reasonable dialog between our two governments.','我们两国最后终于能理智地进行对话了。','Their dialog is very funny.','他们对话非常有趣。'}

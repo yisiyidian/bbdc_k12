@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["authenticate"]={"authenticate","[ɔː'θentɪkeɪt]","[ɔ'θɛntɪket]","v.证明(某物)为真",'v.证明(某物)为真','The art dealer authenticated the painting as an original.','画商证实这幅画是真品。','It also explained how to use it to authenticate for different types of communication.','本文还说明了如何使用它为不同类型的通信进行身份验证。'}

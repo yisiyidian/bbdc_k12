@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tug"]={"tug","[tʌg]","[tʌɡ]","n.用力拉",'n.用力拉,拖船|||v.用力拉','I felt a tug at my sleeve.','我觉得有人拽了一下我的袖子。','She tried to tug my hand away.','她试图把我的手拉开。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["available"]={"available","[ə'veɪləb(ə)l]","[ə'veləbl]","adj.可用的",'adj.可用的,可得到的,有用的，有效的','a bedspread available in three colors.','现在有的三种颜色的床罩','Do you have a room available?','你们有空房间吗？'}

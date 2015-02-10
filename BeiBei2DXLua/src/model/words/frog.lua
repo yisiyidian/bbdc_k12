@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["frog"]={"frog","[frɒg]","[frɔɡ]","n.蛙",'n.蛙,马的蹄叉,刀剑的挂环','The boy poked the frog with a stick to make it jump.','男孩儿用棍子戳青蛙让它跳动。','The witch changed the prince into a frog.','巫婆把王子变成了青蛙.'}

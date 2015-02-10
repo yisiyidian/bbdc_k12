@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lunatic"]={"lunatic","['luːnətɪk]","['lʊnə'tɪk]","adj.疯狂的",'adj.疯狂的，极蠢的|||n.疯子','I really don\'t know what kind of man he really is; on one occasion, he is normal, and on another, he acts like a lunatic.','我真不了解他到底是怎样的人；一会儿正常，一会儿又像个疯子。','You\'re driving on the wrong side of the road, you lunatic!','你现在是逆行开车，你这个蠢材！'}

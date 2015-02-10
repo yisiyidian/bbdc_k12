@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prudish"]={"prudish","['pruːdɪʃ]","['prudɪʃ]","adj.装淑女样子的",'adj.装淑女样子的,装规矩的,过份规矩的','The state or quality of being prudish.','过分拘谨过分拘谨的状态或品质','An instance of prudish behavior or talk.','假正经过分拘谨的行为或言谈的一个事例'}

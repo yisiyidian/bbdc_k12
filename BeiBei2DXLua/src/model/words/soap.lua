@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["soap"]={"soap","[səʊp]","[sop]","n.肥皂",'n.肥皂|||vt.用肥皂洗,阿谀奉承','I\'m tired of his soft soap!','他老是说好话想打动我, 我都听腻了!','Cut out the soft soap; flattery will get you nowhere!','别花言巧语了，吹捧是不会使你捞到好处的。'}

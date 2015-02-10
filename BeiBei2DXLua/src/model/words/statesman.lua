@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["statesman"]={"statesman","['steɪtsmən]","['stetsmən]","n.政治家",'n.政治家,国务活动家','He will go down in history as a great statesman.','他将作为伟大的政治家而载入史册。','He is known both as a painter and as a statesman.','他是知名的画家及政治家。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["philology"]={"philology","[fɪ'lɒlədʒɪ]","[fɪ'lɑlədʒi]","n.语言学",'n.语言学,文献学','My friend Bob is extremely interested in ||Philology||.','我的朋友鲍勃对语言学兴趣浓厚。','Professor Smith is recognized to be one of the great scholars in English philology.','史密斯教授被公认为是了不起的英语语言学学者之一。'}

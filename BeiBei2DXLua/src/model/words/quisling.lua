@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quisling"]={"quisling","['kwɪzlɪŋ]","['kwɪzlɪŋ]","n.卖国贼",'n.卖国贼,内奸','||Quisling|| means the person who helps the enemy  that has taken control of his or her country.','卖国贼是指那种协助敌人侵略自己国家的人。','You know, there\'s a new biography of ||Quisling||. I think you might like it.','最近有本关于卖国贼的新书.你会喜欢的.'}

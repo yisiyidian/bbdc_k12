@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["substrate"]={"substrate","['sʌbstreɪt]","['sʌbstret]","n.基片",'n.基片(基层,真晶格,基质)|||n.衬底','Any of certain other wetland areas, such as a fen, having a peat substrate.','沼泽地区任一种其它的湿地，有泥炭底面，如沼泽','Aquatic animals that live in the substrate of a body of water, especially in a soft sea bottom.','底内动物生活在水体底部的水生动物，尤指栖于松软海底的水生动物'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exaggerate"]={"exaggerate","[ɪg'zædʒəreɪt; eg-]","[ɪɡ'zædʒəret]","vt.&vi.夸大",'vt.&vi.夸大,夸张','Don\'t exaggerate the parallelism between the two cases.','不要夸大那两件事的相似性.','He has an exaggerated idea of his own importance.','他自视过高。'}

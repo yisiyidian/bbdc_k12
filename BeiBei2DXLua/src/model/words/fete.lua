@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fete"]={"fete","[feɪt]","[feɪt]","n.庆祝",'n.庆祝,节日，游园会|||vt.宴请,招待','The headmaster sanctioned our plan to hold a fete to raise money.','校长批准了我们举办义卖筹集资金的计划。','Seeing that it\'s raining hard, the fete will probably be cancelled.','因为雨下得很大，游园会很可能被取消。'}

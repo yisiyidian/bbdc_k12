@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intangible"]={"intangible","[ɪn'tæn(d)ʒɪb(ə)l]","[ɪn'tændʒəbl]","adj.难以明了的",'adj.难以明了的,无形的|||n.无形的东西','The old building has an intangible air of sadness about it.','那座古老建筑物周围笼罩着说不出的凄凉气氛。','Sound and light are intangible.','声和光是无形的。'}

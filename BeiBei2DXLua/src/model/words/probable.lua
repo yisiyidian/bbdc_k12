@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["probable"]={"probable","['prɒbəb(ə)l]","['prɑbəbl]","adj.很可能的",'adj.很可能的|||n.很可能的事','Certainly they must know the probable result of such speeches.','无疑，他们一定知道这样讲话可能产生的后果。','The probable outcome of the talk is a compromise.','会谈的结果很可能是妥协。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slouch"]={"slouch","[slaʊtʃ]","[slaʊtʃ]","n.没精打采的样子",'n.没精打采的样子,耷拉,笨人|||v.没精打采地站,坐','Don\'t slouch! Stand up straight!','别没精打采的! 起来站直了!','Ever since Mike lost his job, he\'s done nothing but slouch unhappily around(the house).','自从迈克失业以来, 他除了在（房子）周围无精打采地闲逛以外, 什么事也没干。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["estuary"]={"estuary","['estjʊ(ə)rɪ]","['ɛstʃʊ'ɛri]","n.河口",'n.河口,江口','The river opens out suddenly into a broad estuary.','江面忽然开阔起来，形成一个宽广的河。','A stretch of water in a river, an estuary, or a tidal channel made rough by waves meeting an opposing current.','巨澜在河流、港湾或潮汐海峡中，由波浪和它对立的水流相撞而成的一条绵延水域'}

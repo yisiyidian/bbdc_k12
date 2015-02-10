@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overture"]={"overture","['əʊvətj(ʊ)ə]","['ovətʃʊr]","n.提议",'n.提议,提案,初步交涉,序曲|||v.提议，建议','The audience must be in their seats before the overture.','观众必须于序曲演奏前入座。','...Wagner\'s Mastersingers ||Overture||.','…瓦格纳的《名歌手序曲》。'}

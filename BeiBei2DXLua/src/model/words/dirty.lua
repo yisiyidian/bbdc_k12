@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dirty"]={"dirty","['dɜːtɪ]","['dɝti]","adj.肮脏的",'adj.肮脏的,色情的,卑鄙的|||adv.卑鄙地|||vt.使...变脏|||vi.弄脏','Repairing cars is a dirty work.','修汽车是一个脏活。','They sat drinking and telling dirty stories.','他们坐在那里，边喝酒边讲下流故事。'}

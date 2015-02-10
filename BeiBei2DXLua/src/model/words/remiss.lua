@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["remiss"]={"remiss","[rɪ'mɪs]","[rɪ'mɪs]","adj.怠慢的",'adj.怠慢的,不小心的,迟缓的','It is remiss of her to forget to pay the bill.','她忘了付帐，真粗心大意。','No policeman ought to be remiss in his duties.','警员不应该玩忽职守。'}

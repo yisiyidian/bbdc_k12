@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diverge"]={"diverge","[daɪ'vɜːdʒ; dɪ-]","[daɪ'vɝdʒ]","v.分歧",'v.分歧','The stream diverges here.','小溪在这儿分岔。','His interests increasingly diverged from those of his colleagues.','他和同事们的兴趣越来越不同。'}

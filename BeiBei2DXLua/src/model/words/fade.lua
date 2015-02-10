@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fade"]={"fade","[feɪd]","[fed]","vi.褪色",'vi.褪色,消失,凋谢|||vt.使褪色|||n.淡入,淡出|||adj.平凡的,乏味的','As evening came the coastline faded into darkness.','夜晚来临，海岸线融入茫茫夜色中。','Hopes of a peaceful settlement are now ||fading||.','和平解决的希望正在消失。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["formality"]={"formality","[fɔː'mælɪtɪ]","[fɔr'mæləti]","n.礼节",'n.礼节,程序,拘谨','At board meetings you have to get used to the formality of the language.','参加董事会议必须习惯那些古板的语言。','I found the formality of the occasion irritating.','我觉得这种场合的繁文缛节十分讨厌。'}

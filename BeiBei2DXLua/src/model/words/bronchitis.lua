@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bronchitis"]={"bronchitis","[brɒŋ'kaɪtɪs]","[brɑŋ'kaɪtɪs]","n.支气管炎",'n.支气管炎','It\'s nothing serious, just a bit of bronchitis.','没什么，只是有点支气管发炎。','It sound like bronchitis.','听起来像支气管炎。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exemption"]={"exemption","[ɪɡ'zempʃn]","[ɪg'zɛmpʃən]","n.免除(税)",'n.免除(税)','There is a tax exemption on money donated to Red Cross.','给红十字的捐款免税。','The document containing this exemption.','特许状包含这种特许的文件'}

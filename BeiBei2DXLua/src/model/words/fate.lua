@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fate"]={"fate","[feɪt]","[fet]","n.命运",'n.命运,天意|||vt.注定','Are we the puppets of fate?','我们是听任命运摆布的傀儡吗？','They met with a terrible fate.','他们的结局十分悲惨。'}

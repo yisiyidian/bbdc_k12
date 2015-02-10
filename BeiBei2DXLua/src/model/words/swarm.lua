@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swarm"]={"swarm","[swɔːm]","[swɔrm]","n.蜂窝",'n.蜂窝|||v.云集、充满','The locust swarm has destroyed all the crops and vegetables.','蝗虫群毁坏了所有的庄稼和蔬菜。','The crowd swarmed out of the cinema after the film ended.','电影结束后，人们从电影院蜂拥而出。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["taxicab"]={"taxicab","['tæksɪkæb]","[ 'tæksikæb ]","n.出租汽车",'n.出租汽车','The taxicab swung out into traffic.','那部计程车转向驶入车流之中。','Her taxicab has a thick perspex partition between the passengers\' seats and the driver.','她的出租车里乘客座位和驾驶员之间装着厚厚的有机玻璃隔板。'}

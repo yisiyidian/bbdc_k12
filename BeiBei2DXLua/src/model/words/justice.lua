@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["justice"]={"justice","['dʒʌstɪs]","['dʒʌstɪs]","n.正义",'n.正义；公正；法律制裁；审判员，法官','||Justice|| triumphs in the end.','正义终将得胜。','Marriage is, first of all, a contract which must be governed by justice.','婚姻首先是一种契约，它必须以公正为制约。'}

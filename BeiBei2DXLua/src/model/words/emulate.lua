@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emulate"]={"emulate","['emjʊleɪt]","['ɛmjulet]","vt.效法",'vt.效法,尽力赶上,仿真|||[计算机]仿真','I wish he\'d stop holding the elder brother as an example to emulate.','我希望他不再把哥哥作为自己的学习榜样。','The proverb tells us to emulate the industry of the ant.','这格言告诉我们要效法蚂蚁的勤勉。'}

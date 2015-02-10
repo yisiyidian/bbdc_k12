@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["differentiate"]={"differentiate","[,dɪfə'renʃɪeɪt]","[,dɪfə'rɛnʃɪet]","vt.识别",'vt.识别,使差异,求导数,区分,区别对待|||vi.区别,变异','One character is not clearly differentiated from another.','人物之间的区别没有明显刻划出来.','The male\'s orange beak differentiates it from the female.','那种鸟雄鸟的喙呈橙色, 与雌鸟不同.'}

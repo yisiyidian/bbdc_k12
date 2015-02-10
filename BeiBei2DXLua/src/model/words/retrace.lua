@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["retrace"]={"retrace","[rɪ'treɪs]","[rɪ'tres]","vt.重描",'vt.重描,折回,绕回，追溯','I dropped my keys and had to retrace my steps for nearly a mile before I found them.','我把钥匙丢失了，结果只得顺原路折回，走了差不多一英里才找到。','The police retraced the movements of the murder victim.','警方追溯了被谋杀者当时的动作。'}

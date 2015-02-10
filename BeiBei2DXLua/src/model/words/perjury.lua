@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perjury"]={"perjury","['pɜːdʒ(ə)rɪ]","['pɝdʒəri]","n.伪誓",'n.伪誓,伪证','This witness has committed perjury and no reliance can be placed on her evidence.','这名证人作了伪证，她的证词不可信。','Two key witnesses at her trial committed perjury.','在对她的庭审中有两名主要证人犯了伪证罪。'}

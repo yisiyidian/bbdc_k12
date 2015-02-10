@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gardening"]={"gardening","['gɑːd(ə)nɪŋ]","['gɑrdnɪŋ]","n.园艺（学）",'n.园艺（学）|||动词garden的现在分词','I got in an hour\'s gardening between the showers.','阵雨间歇时我抽空整理了一小时花园.','He spent his spare time gardening, to the exclusion of all other interests.','他把空余时间都用在园艺上了, 没有任何其他爱好.'}

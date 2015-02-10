@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["notion"]={"notion","['nəʊʃ(ə)n]","['noʃən]","n.观念",'n.观念,想法,主张','Statecontrol is a very un-American notion.','实行国家控制是根本违背美国观念的.','Do you have the slightest notion of what this means?','你能明白一点儿这是什麽意思吗？'}

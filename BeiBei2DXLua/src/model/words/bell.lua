@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bell"]={"bell","[bel]","[bɛl]","n.铃",'n.钟,铃,花冠,吼叫声|||vt.敲钟,使象钟状地张开|||vi.使呈钟状,张开','Hearing the bell, we raced to the class.','听到铃声，我们赶快跑去上课。','The church bell tolled the hour.','教堂的鸣钟报时。'}

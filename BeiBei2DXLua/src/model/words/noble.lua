@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["noble"]={"noble","['nəʊb(ə)l]","['nobl]","adj.高尚的",'adj.高尚的,宏伟的,贵族的,高贵的|||n.贵族','The more noble the more humble.','结实愈丰者，其穗愈低。','These few words fully revealed her noble quality.','这寥寥数语充分显示了她的高贵品质。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inroad"]={"inroad","['ɪnrəʊd]","[ 'inrəud ]","n.侵袭",'n.侵袭,消减','Hospital bills had made deep inroads into her savings.','住院的花销用去她一大笔积蓄.','Already the children had made considerable inroads on the food.','孩子们早已吃掉不少食物.'}

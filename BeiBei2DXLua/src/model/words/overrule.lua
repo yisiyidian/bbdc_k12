@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overrule"]={"overrule","[əʊvə'ruːl]","[,ovɚ'rul]","v.(高位的人)不准",'v.(高位的人)不准,否决(低位的人或事)','||Overrule|| a policy decision.','否决了一政策决议','We were overruled by the majority.','我们的意见被多数人否决了。'}

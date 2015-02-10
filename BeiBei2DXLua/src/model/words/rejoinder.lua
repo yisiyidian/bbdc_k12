@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rejoinder"]={"rejoinder","[rɪ'dʒɒɪndə]","[rɪ'dʒɔɪndɚ]","n.回答",'n.回答','It brought a sharp rejoinder from the teacher.','这引起了老师尖锐的反驳。','She always has a witty rejoinder to any question.','她总能机智地回答任何问题。'}

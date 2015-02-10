@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seminary"]={"seminary","['semɪn(ə)rɪ]","['sɛmə'nɛri]","n.神学院",'n.神学院,学院，发源地','I vacillated for a long time between medicine and seminary.','在学医和进神学院之间我犹豫了很久。','This seminary is located in the middle of the city.','这个神学院坐落在市中心。'}

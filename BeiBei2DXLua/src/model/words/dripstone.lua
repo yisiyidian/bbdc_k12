@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dripstone"]={"dripstone","['drɪpstəʊn]","[ 'dripstəun ]","n.滴水石",'n.滴水石','||Dripstone|| is a general term for calcite or other mineral deposit formed in caves by dripping water.','德赖普斯是方解石或洞穴滴水形成的其它矿物沉淀的总称。','dripstone cave','[地质] 滴水石洞穴'}

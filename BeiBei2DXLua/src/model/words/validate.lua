@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["validate"]={"validate","['vælɪdeɪt]","['vælɪdet]","vt.使...有效",'vt.使...有效,确认','You need an official signature to validate the order.','你要有正式的签字，这张汇票才能生效。','In order to validate the agreement, both parties sign it.','为使协议有效，双方在上面签了字。'}

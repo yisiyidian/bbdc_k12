@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spangle"]={"spangle","['spæŋg(ə)l]","['spæŋgl]","n.镶金属小片",'n.镶金属小片|||v.(使)闪烁发光','Lights spangled the night skyline.','灯光点亮了夜空。','His blue eyes were spangled at once.','他那双蓝眼睛一下子亮了起来。'}

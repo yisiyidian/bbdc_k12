@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quintessential"]={"quintessential","[,kwɪntɪ'senʃ(ə)l]","[,kwɪntɪ'sɛnʃəl]","adj.精粹的",'adj.精粹的,精髓的,典型的','Liszt was the quintessential romantic','“李斯特是最典型的浪漫主义音乐家”','quintessential urban tree','典型的城市树木'}

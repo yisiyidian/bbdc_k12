@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anticipate"]={"anticipate","[æn'tɪsɪpeɪt]","[æn'tɪsə'pet]","vt.预期",'vt.预期，期望；占先，抢先；提前使用','In business, you\'ve got to anticipate how your competitors will act.','在生意上，你必须事先估计到你的竞争对手会如何行动。','We anticipate that we will meet a certain amount of resistance to our plan.','我们预料我们的计划会遇到一些人的反对。'}

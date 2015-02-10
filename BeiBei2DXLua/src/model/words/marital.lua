@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["marital"]={"marital","['mærɪt(ə)l]","['mærɪtl]","adj.婚姻的",'adj.婚姻的','They have marital relations.','他们有婚姻关系.','Her son had no marital problems.','她的儿子没有婚姻问题。'}

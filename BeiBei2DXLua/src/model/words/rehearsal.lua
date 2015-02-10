@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rehearsal"]={"rehearsal","[rɪ'hɜːs(ə)l]","[rɪ'hɝsl]","n.排练",'n.排练,彩排|||v.(使)排练,背诵','a long rehearsal of his woes.','关于他的痛苦的详细叙述','The dress rehearsal didn\'t go too well.','彩排进行得并不太好。'}

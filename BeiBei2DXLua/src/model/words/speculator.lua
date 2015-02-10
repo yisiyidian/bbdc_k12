@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["speculator"]={"speculator","['spekjʊleɪtə]","['spɛkjuletɚ]","n.投机者",'n.投机者,投机商人,思索家','||Speculators|| are thick on the ground. They buy up land, sit on it for a month or two and resell for twice what they paid.','投机者多得很, 他们买下土地, 搁置一两个月后又以双倍的价格卖出去。','A ruthless speculator or adventurer.','冷酷的投机者或冒险家'}

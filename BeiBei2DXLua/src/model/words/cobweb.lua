@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cobweb"]={"cobweb","['kɒbweb]","['kɑb'wɛb]","n.蜘蛛网",'n.蜘蛛网,蛛丝,混乱','Let\'s go for a walk and blow the cobweb away.','咱们去散散步，清醒一下头脑。','The spider can catch insects by cobweb.','蜘蛛能用蜘蛛网抓住昆虫。'}

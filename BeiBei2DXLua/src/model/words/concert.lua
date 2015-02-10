@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["concert"]={"concert","['kɒnsət]","['kɑnsɚt]","n.音乐会",'n.音乐会,一致,和谐|||vt.制定计划,通过协商达成一致|||vi.合作','It is good to go to a concert for a change.','到音乐会去换换环境比较好。','Hordes of fans had thronged on the concert hall.','大群的歌迷一窝蜂地涌向音乐厅。'}

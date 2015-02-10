@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wheeze"]={"wheeze","[wiːz]","[wiz]","n.喘息声",'n.喘息声|||v.喘息，呼哧呼哧地响','He has a slight wheeze in his chest.','他呼吸时胸部发出轻微的响声.','I\'ve got a sore throat,\' he wheezed.','｀我嗓子疼, ＇他吃力地说.'}

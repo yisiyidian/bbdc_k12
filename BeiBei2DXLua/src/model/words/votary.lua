@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["votary"]={"votary","['vəʊt(ə)rɪ]","['votəri]","n.信徒",'n.崇拜者,热心支持者，信徒','the ||votaries|| of Aphrodite.','阿佛洛狄忒的信徒','“the cultured votary of science”  (Francis Marion Crawford).','“有修养的科学信徒” （弗朗西丝·玛利昂·克劳弗德）'}

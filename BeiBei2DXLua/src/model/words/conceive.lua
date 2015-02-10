@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conceive"]={"conceive","[kən'siːv]","[kən'siv]","vt.&vi.构思",'vt.&vi.构思,以为,怀孕','She was told she couldn\'t conceive.','她得知自己不能怀孕.','The child was conceived on the night of their wedding.','那孩子是在他们新婚之夜怀上的.'}

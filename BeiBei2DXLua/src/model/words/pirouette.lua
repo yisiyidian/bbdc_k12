@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pirouette"]={"pirouette","[,pɪrʊ'et]","[,pɪru'ɛt]","n.(舞蹈)脚尖立地的旋转",'n.(舞蹈)脚尖立地的旋转|||vi.用脚尖旋转','She pirouetted in front of the glass.','她在镜子前立脚尖旋转。','The ballet-dancer pirouetted continuously.','芭蕾舞演员连续用脚尖旋转。'}

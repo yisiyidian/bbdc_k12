@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cycle"]={"cycle","['saɪk(ə)l]","['saɪkl]","n.循环",'n.循环,周期,长期,圈,套曲,自行车,|||vt.环行,骑自行车|||vi.使环行','Her latest stunt is riding a motor cycle through a ring of flames.','她的最新特技表演是骑摩托车钻火圈。','The pedals of a cycle are attached to the crank.','自行车的踏板与曲柄相连。'}

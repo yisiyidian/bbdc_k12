@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fast"]={"fast","[fɑːst]","[fæst]","adj.快的",'adj.快的；走得快；感光快的；紧的|||adv.（比准确的时间或宣布的时间）快；迅速地；紧紧地；彻底地|||vi.禁食，（尤指）斋戒|||n.禁食期，斋戒期；断食，节食','They run faster and faster.','他们跑得越来越快。','I like fast music.','我喜欢节奏快的音乐。'}

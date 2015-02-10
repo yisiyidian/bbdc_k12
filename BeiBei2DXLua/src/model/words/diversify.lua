@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diversify"]={"diversify","[daɪ'vɜːsɪfaɪ; dɪ-]","[daɪ'vɝsɪfaɪ]","v.使成形形色色",'v.使成形形色色,使多样化,使变化','A factory must try to diversify for further development.','一个工厂要获得进一步发展就要努力使产品多样化。','Hill and woods diversify the landscape.','山陵和树林点缀景色。'}

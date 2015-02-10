@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abnegation"]={"abnegation","[æbnɪ'geɪʃ(ə)n]","[,æbnɪ'ɡeʃən]","n.克己",'n.克己，自制，放弃','They discussed the abnegation of God.','他们讨论否认上帝。','abnegation','n. 拒绝,放弃'}

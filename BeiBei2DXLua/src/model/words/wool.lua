@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wool"]={"wool","[wʊl]","[wʊl]","n.毛线",'n.毛线,毛织品,羊毛','She spins goat\'s hair into wool/spins wool from goat\'s hair.','她把山羊毛纺成毛线.','From animals we get such materials as wool, silk, leather and furs.','从动物我们得到像羊毛、丝、皮革、与毛皮这样的材料。'}

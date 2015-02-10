@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grass"]={"grass","[grɑːs]","[ɡræs]","n.草",'n.草|||vt.以牧草喂养,覆盖着草','Eve was cutting the grass, meanwhile Adam was planting roses.','夏娃在剪草，亚当种玫瑰。','That snake in the grass reported me to the boss.','那个口蜜腹剑的家伙到老板那里告了我一状.'}

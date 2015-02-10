@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unconditional"]={"unconditional","[ʌnkən'dɪʃ(ə)n(ə)l]","[,ʌnkən'dɪʃənl]","adj.无条件的",'adj.无条件的,无限制的,绝对的','On the plaintiff\'s application for summary judgment the master give the defendant unconditional leave to defend.','原告一提出即判决申请后，法院书记官无条件允许被告进行辩护。','demanded unconditional surrender.','要求无条件投降'}

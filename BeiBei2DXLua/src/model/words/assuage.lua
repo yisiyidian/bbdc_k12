@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["assuage"]={"assuage","[ə'sweɪdʒ]","[ə'swedʒ]","vt.缓和",'vt.缓和,减轻,镇定','The meat they\'d managed to procure assuaged their hunger.','他们把搞到手的肉拿来充饥。','Nothing can assuage the widow\'s grief.','什么也不能缓和这寡妇的哀伤。'}

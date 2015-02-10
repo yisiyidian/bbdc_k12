@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["smoke"]={"smoke","[sməʊk]","[smok]","v.吸烟",'n.烟,无常的事物,抽烟|||v.吸烟,以烟熏,冒烟','Do you smoke?','你抽烟吗？','The smoke of the burning house could be seen many blocks away.','着火的房子的冒出的烟在几个街区外都能看到。'}

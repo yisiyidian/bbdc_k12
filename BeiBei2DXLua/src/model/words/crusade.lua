@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crusade"]={"crusade","[kruː'seɪd]","[kru'sed]","n.改革运动",'n.改革运动|||Crusade|||n.十字军东征|||vi.从事改革','The crusade for sexual morality is turning into a witch-hunt.','捍卫性道德的运动正在转化成对持异议人士的迫害.','Her commitment to a great cause degenerated from a crusade into an obsession.','她致力於一伟大事业, 但其崇高的奋斗精神已变质成为偏执的狂热.'}

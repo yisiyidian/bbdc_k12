@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["multistory"]={"multistory","['mʌlti,stɔ:ri]","[ 'mʌlti,stɔ:ri ]","adj.多层的",'adj.多层的','a multistory hotel.','多层旅馆','This is a multistory cake.','这是个多层蛋糕'}

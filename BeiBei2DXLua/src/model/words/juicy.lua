@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["juicy"]={"juicy","['dʒuːsɪ]","['dʒusi]","adj.多汁的",'adj.多汁的,利润丰厚的,有趣的,生动的','He ordered a juicy rump steak.','他要了一份多汁的后腿肉牛排。','Tell me all the juicy details.','把有趣的细节都讲给我听。'}

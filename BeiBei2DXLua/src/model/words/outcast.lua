@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outcast"]={"outcast","['aʊtkɑːst]","['aʊtkæst]","adj.被逐出的",'adj.被逐出的,被遗弃的,无家可归的|||n.被驱逐的人,流浪人,无赖','The outcast boy was brought up by the government.','这个被遗弃的孩子是由政府抚养大的。','He was treated as an outcast.','他遭到被人赶出似的对待。'}

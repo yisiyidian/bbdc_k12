@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arrival"]={"arrival","[ə'raɪv(ə)l]","[ə'raɪvəl]","n.到达",'n.到达,达到,到达者','I am impatient for his arrival.','我渴盼着他的到来。','With the arrival of John\'s friends, the party became really enjoyable.','随着约翰朋友的到来, 聚会变得真正好玩起来.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["envelop"]={"envelop","[ɪn'veləp; en-]","[ɪn'vɛləp]","v.包封",'v.包封,遮盖,包围','The building was soon enveloped in flames.','那幢建筑物很快就陷入了火海之中。','The papers are falling out of the envelop, push them back.','论文从封袋里掉出来了，把它们放回原处。'}

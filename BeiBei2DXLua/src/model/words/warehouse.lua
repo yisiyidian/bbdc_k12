@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["warehouse"]={"warehouse","['weəhaʊs]","['wɛrhaʊs]","n.仓库",'n.仓库|||vt.存入仓库','They operate three factories and a huge warehouse.','他们管著三家工厂和一个大仓库.','He has transferred from the warehouse to the accounts office.','他已由仓库调到会计室任职.'}

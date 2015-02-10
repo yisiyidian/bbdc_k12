@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["miscarriage"]={"miscarriage","[mɪs'kærɪdʒ; 'mɪskærɪdʒ]","['mɪskærɪdʒ]","n.错误",'n.错误(流产,失败)','Sending an innocent man to prison is a clear miscarriage of justice.','把无辜的人投入监狱显然是审判不公.','By a miscarriage of justice the wrong man was condemned.','由于法庭的错误判决，一个无辜的人被定了罪。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["folklore"]={"folklore","['fəʊklɔː]","['foklɔr]","n.民俗学",'n.民俗学,民间风俗,民间传说','I am interested in anything pertaining to folklore.','属于民间文学的任何东西我都感兴趣。','He did his best to supply America with its own folklore','他尽其所能给美国提供本国的民俗。'}

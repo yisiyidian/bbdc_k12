@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insipid"]={"insipid","[ɪn'sɪpɪd]","[ɪn'sɪpɪd]","adj.乏味的",'adj.乏味的,枯燥的','The food was rather insipid, and needed gingering up.','这食物味道太淡了，需要加点作料。','Make insipid life to shine!','让枯燥的生活发光！'}

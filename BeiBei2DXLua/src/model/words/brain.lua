@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brain"]={"brain","[breɪn]","[bren]","n.脑",'n.脑；智慧；聪明的人；（群体中）最聪明的人|||vt.打破…的脑袋；打…的头部','He is one of the leading brains in the country.','他是国家的知识分子精英。','I\'ve had this tune on the brain all day but I can\'t remember what it\'s called.','我脑海里整天回荡著这个曲调，但我想不起来叫什麽了。'}

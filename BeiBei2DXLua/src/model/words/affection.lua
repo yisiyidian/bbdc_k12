@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["affection"]={"affection","[ə'fekʃ(ə)n]","[ə'fɛkʃən]","n.慈爱",'n.慈爱,爱,感情,作用,影响','He gave me a necklace as a token of his affection..','他给了我一根项链作为爱情的象征。','Don\'t squander your affection on him. He\'ll never love you.','不要把感情浪费在他身上，他是永远不会爱你的。'}

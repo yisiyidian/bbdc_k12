@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intend"]={"intend","[ɪn'tend]","[ɪn'tɛnd]","v.打算",'v.打算|||vt.想要,打算,计划','The chair was intended for you, but she took it away.','那把椅子原本是为你准备的，但是被她拿走了。','That remark was intended as a joke.','那句话本来只是个玩笑。'}

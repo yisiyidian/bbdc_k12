@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["skulduggery"]={"skulduggery","[skʌl'dʌɡəri]","[ skʌl'dʌɡəri, 'skʌld- ]","n.舞弊",'n.舞弊,作假','Finding evidence of his skulduggery may be difficult, and proving it even more so.','找到他作假的证据已经很难，那要证明它就更难了。','His success was gotten by skulduggery','他的成功是通过作弊得来的'}

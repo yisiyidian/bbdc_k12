@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["faraway"]={"faraway","['fɑːrəweɪ; fɑːrə'weɪ]","['fɑrəwe]","adj.遥远的",'adj.遥远的，远方的|||adj.(神情)恍惚的,出神的','a faraway look.','心神恍惚的表情','They have just returned from faraway places with wonderful stories to tell.','他们刚从一些遥远的地方回来，有很多精彩的故事要讲。'}

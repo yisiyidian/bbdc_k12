@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["weld"]={"weld","[weld]","[wɛld]","n.焊接",'n.焊接,焊缝|||v.焊接','If often takes trouble from outside to weld a family together and cause them to forget their quarrels.','要使一家人紧密地团结，忘记他们之间的争吵，从外部入手常常很麻烦。','Before applying heat for a weld, the plates should be clamped together.','在用热进行焊接之前，必须把金属板紧紧地夹在一起。'}

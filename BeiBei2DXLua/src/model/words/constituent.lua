@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["constituent"]={"constituent","[kən'stɪtjʊənt]","[kən'stɪtʃuənt]","n.成份",'n.成份,选民,构成物|||adj.构成的,组织的,有提名权的','Analyze the sentence into its constituent parts.','把这条句子的各个成份加以分析。','Do you know the constituents of the mixture?','你知道这种混合物的成份吗？'}

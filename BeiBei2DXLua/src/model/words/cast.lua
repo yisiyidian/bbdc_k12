@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cast"]={"cast","[kɑːst]","[kæst]","v.投",'n.演员阵容,投掷|||v.投,掷,抛','She\'s cast off three boy-friends in a month.','她一个月里就甩了三个男朋友。','I can\'t bear young people casting away their youth.','我无法忍受年轻人虚掷青春。'}

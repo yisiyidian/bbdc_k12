@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["matrix"]={"matrix","['meɪtrɪks]","['metrɪks]","n.矩阵",'n.母体,子宫|||细胞|||脉石,字母|||n.矩阵','A matrix used in constructing a symbol or character image on a display screen.','用来在显示屏幕上构造出一个符号或字符图象的一种点阵。','A term sometimes applied to a stylus in a thermal matrix printer.','有时用来指热敏点阵打印机的触针的一个术语。'}

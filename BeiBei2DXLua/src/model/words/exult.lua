@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exult"]={"exult","[ɪg'zʌlt; eg-]","[ɪɡ'zʌlt]","vi.欢欣鼓舞",'vi.欢欣鼓舞,狂喜','The soldiers exulted at their victory.','战士们为取得胜利而欢呼雀跃。','He was exulting in a win at the show earlier that day.','他正在为当天早些时候在节目中胜出而欢欣鼓舞。'}

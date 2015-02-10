@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["doldrums"]={"doldrums","['dɒldrəmz]","['doldrəmz]","n.忧郁",'n.忧郁|||Doldrums：赤道维赤道无风带|||名词doldrum的复数形式','My brother has been in the doldrums since he failed to get on the swimming team.','自打没能进入游泳队以来，我兄弟一直精神萎靡不振。','Despite these measures, the economy remains in the doldrums.','尽管采取了这些措施，经济状况仍然毫无起色。'}

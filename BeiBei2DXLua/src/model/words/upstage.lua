@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["upstage"]={"upstage","[ʌp'steɪdʒ]","[,ʌp'stedʒ]","adv.在或向舞台后部地",'adv.在或向舞台后部地|||adj.高傲的,势利的，在后台部的|||vt.抢镜头，势利地对待|||n.舞台后部','He upstaged the other speakers by illustrating his talk with slides.','他演讲中配上幻灯片, 比其他演讲人更吸引听众.','They\'re much too upstage for us these days.','他们近来对我们太势利了.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hysterical"]={"hysterical","[hɪ'sterɪk(ə)l]","[hɪ'stɛrɪkl]","adj.歇斯底里的",'adj.歇斯底里的,异常兴奋的','The story made us hysterical.','故事令我们笑的歇斯底里。','Police and bodyguards had to form a human shield around him as the almost hysterical crowds struggled to approach him.','当近乎歇斯底里的人群奋力接近他时，警察和保镖们不得不在他周围形成一堵人墙。'}

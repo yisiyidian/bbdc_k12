@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dandy"]={"dandy","['dændɪ]","['dændi]","adj.(口)极好的",'adj.(口)极好的|||n.花花公子,好打扮的人','Everything was to be fine and dandy once Peter started his new job.','一旦彼得有了新工作，一切都会好的。','The gay package is only for dandy.','这种鲜艳的包装只是为了美观。'}

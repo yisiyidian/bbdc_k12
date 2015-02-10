@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["methodology"]={"methodology","[meθə'dɒlədʒɪ]","[,mɛθə'dɑlədʒi]","n.一套方法",'n.一套方法,方法学','Such distortion may be traced onto his " translation methodology ".','这种歪曲,可以说是从 “ 翻译的方法 ” 上来的.','The latter\'s methodology was more fluid and more convenient for application.','后者的方法更富于成果,更便于应用.'}

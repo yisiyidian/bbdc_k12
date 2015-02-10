@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fluted"]={"fluted","['fluːtɪd]","['flutɪd]","adj.有凹槽的",'adj.有凹槽的|||动词flute的过去式和过去分词形式','The window is fluted.','窗户有凹槽。','The mansion has six fluted columns across the porch.','这幢别墅的走廊有许多六槽的圆柱。'}

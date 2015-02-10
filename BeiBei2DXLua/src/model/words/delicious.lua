@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["delicious"]={"delicious","[dɪ'lɪʃəs]","[dɪ'lɪʃəs]","adj.可口的",'adj.可口的,美味的','The taste of eel is delicious.','鳝鱼的味道很好。','The apple pie and custard are delicious.','苹果饼和软冻的味道好极了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["columnist"]={"columnist","['kɒləm(n)ɪst]","['kɑləmnɪst]","n.专栏作家",'n.专栏作家','That newspaper columnist likes to take potshots at potshots at political and social celebrities.','那位报纸专栏作家喜欢对政治和社会的显要人物进行随意批评。','The newspaper have a very popular columnist comment on current affairs.','这家报纸有一位深受欢迎的专栏作家评论时事。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gender"]={"gender","['dʒendə]","['dʒɛndɚ]","n.性别",'n.性,性别|||vt.&vi.产生,发生','The male and female genders are equal.','男性和女性是平等的。','German has three genders.','德语中有三性。'}

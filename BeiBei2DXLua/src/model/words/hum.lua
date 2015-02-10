@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hum"]={"hum","[hʌm]","[hʌm]","v.哼",'n.嗡嗡声,哼声,杂声|||v.发低哼声,闭口哼歌,嗡嗡叫|||int.哼,嗯','His strong voice cut through the hum of conversation like a knife through butter.','他那宏亮有力的声音一下子压倒了嗡嗡的谈话声。','||Hum|| the opening bars of your favourite tune.','哼一哼你喜爱的曲子的开头几个小节.'}

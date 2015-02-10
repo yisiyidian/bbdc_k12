@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hello"]={"hello","[hə'ləʊ; he-]","[hɛˈlo, hə-]","int.（见面打招呼或打电话用语）喂",'int.（见面打招呼或打电话用语）喂,哈罗','She actually condescended to say hello to me in the street today.','她今天在街上竟能屈尊跟我打招呼！','I said hello to her, but she ignored me completely!','我向她打招呼, 可她根本不理我!'}

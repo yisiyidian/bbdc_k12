@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["erotic"]={"erotic","[ɪ'rɒtɪk]","[ɪ'rɑtɪk]","adj.性爱的",'adj.性爱的,性欲的,色情的|||n.好色之徒,恋爱诗','In the play, talk is the sublimation of erotic attraction.','该剧以谈话这种方式不露痕迹地来展现情色诱惑。','||Erotic|| paintings also became a fine art.','色情画也变成了一种艺术。'}

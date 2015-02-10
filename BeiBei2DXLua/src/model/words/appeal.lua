@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["appeal"]={"appeal","[ə'piːl]","[ə'pil]","v.呼吁",'n.恳求,上诉,吸引力|||n.诉诸裁决|||v.求助,诉请,呼吁;有吸引力','Her eyes held a look of silent appeal.','她眼中流露著无声的求助神情。','The new fashion soon lost its appeal.','那种新式样不久就失去了吸引力。'}

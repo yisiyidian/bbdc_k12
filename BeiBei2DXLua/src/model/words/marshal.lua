@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["marshal"]={"marshal","['mɑːʃ(ə)l]","['mɑrʃəl]","n.陆空军高级将官",'n.陆空军高级将官,典礼官,职行官|||v.整顿,配置,汇集','He was an Air ||Marshal|| before retirement.','他退休前是空军中将。','The marshal rode at the head of the parade.','典礼官在检阅队伍的前面骑马行进。'}

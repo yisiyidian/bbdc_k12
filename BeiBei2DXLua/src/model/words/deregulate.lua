@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deregulate"]={"deregulate","[diː'regjʊleɪt]","[,di'rɛɡjulet]","vt.撤销对...的管制规定",'vt.撤销对...的管制规定','||Deregulate|| the airline industry.','对民航工业解除管制','deregulate the airline industry.','对民航工业解除管制'}

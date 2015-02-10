@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wince"]={"wince","[wɪns]","[wɪns]","n.畏缩",'n.畏缩,退避，（因痛苦，苦恼等)面部肌肉抽动|||v.畏缩,退缩,退避','He winced mentally at the terrible news.','听到这个噩耗，他不由地战栗了一下。','Every time he put any weight on his left leg he winced in pain.','只要左腿一受力，他就会疼得龇牙咧嘴。'}

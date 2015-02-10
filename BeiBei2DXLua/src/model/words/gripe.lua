@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gripe"]={"gripe","[graɪp]","[ɡraɪp]","n.抱怨",'n.抱怨，抓牢|||n.肠绞痛|||vt.抓住，使...痛苦,掌握','Take medicine when you get gripes.','肚子痛时吃些药。','This kind of medicine is special for gripes.','这种药专治肚子痛。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["detection"]={"detection","[dɪ'tekʃ(ə)n]","[dɪ'tɛkʃən]","n.察觉",'n.察觉,发觉,侦查,探测','the early detection of breast cancer','乳腺癌的早期发现','They are cheating but are sophisticated enough to avoid detection.','他们在作弊，但因为手法老练没有被发现。'}

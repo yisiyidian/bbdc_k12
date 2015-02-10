@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["locate"]={"locate","[lə(ʊ)'keɪt]","[lo'ket]","vt.位于",'vt.找出,设于,位于,建立|||vi.建立','The head company decided to locate in Qingdao.','总公司决定设在青岛.','The company wished to locate its new factory beside the river.','这家公司希望把新工厂设在河边。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["penny"]={"penny","['penɪ]","['pɛni]","n.便士",'n.便士,小钱,少量','He arrived in this country six years ago without a penny.','六年前, 他来到这个国家时一文不名。','He grudges every penny he has to spend.','他每花一便士都非常吝惜.'}

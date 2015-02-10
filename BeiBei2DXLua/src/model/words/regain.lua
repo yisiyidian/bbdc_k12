@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["regain"]={"regain","[rɪ'geɪn]","[rɪ'ɡen]","v.恢复",'v.恢复,重回,复得','God waits for man to regain his childhood in wisdom.','神等待着人在智慧中重新获得童年。','I tried to regain my balance but I fell off the jetty and into the drink.','我试图恢复平衡, 但我却从栈桥上跌了下来, 掉进了水里。'}

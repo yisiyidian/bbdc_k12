@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["submissive"]={"submissive","[səb'mɪsɪv]","[səb'mɪsɪv]","adj.服从的",'adj.服从的,顺从的,柔顺的','He is a humble and submissive servant.','他是个恭顺的仆人。','Most doctors want their patients to be submissive.','大部分医生希望病人能听从医嘱。'}

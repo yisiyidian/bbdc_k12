@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["waterfall"]={"waterfall","['wɔːtəfɔːl]","['wɔtɚfɔl]","n.瀑布",'n.瀑布','A large or high waterfall.','大瀑布或高瀑布','The waterfall is wearing away the rocks.','瀑布不断地冲蚀着岩石。'}

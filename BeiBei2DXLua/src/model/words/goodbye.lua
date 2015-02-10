@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["goodbye"]={"goodbye","[gʊd'baɪ]","[ ,ɡud'bai ]","int.再见",'int.再见|||n.说再见','Amid all the rush and confusion she forgot to say goodbye.','她在忙乱中忘记了告辞。','I\'d like to say goodbye to you all.','我想向你们大家告别了。'}

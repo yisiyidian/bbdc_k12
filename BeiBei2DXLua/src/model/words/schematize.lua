@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["schematize"]={"schematize","['skiːmətaɪz]","['skimətaɪz]","v.扼要表示",'v.扼要表示','a diagram that schematizes the creation and consumption of wealth.','把财富的创造和消费图式化的图解','Please schematize  today\'s news','请简单表示一下今天的新闻'}

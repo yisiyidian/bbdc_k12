@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forgo"]={"forgo","[fɔː'gəʊ; fə-]","[fɔr'ɡo]","v.没有...就算了",'v.没有...就算了,作罢停止,放弃','No one was prepared to forgo their lunch hour to attend the meeting.','谁都不愿意放弃午餐时间出席会议。','Due to a shortage of funds he would have to forgo the project.','由于资金短缺，他不得不放弃该项目。'}

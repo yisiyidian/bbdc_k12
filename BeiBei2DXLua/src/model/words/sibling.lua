@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sibling"]={"sibling","['sɪblɪŋ]","['sɪblɪŋ]","n.兄弟姐妹",'n.兄弟姐妹','||Sibling|| rivalry often causes parents anxieties.','手足之争常让父母忧心忡忡。','His siblings are mostly in their early twenties.','他的兄弟姐妹大多二十出头。'}

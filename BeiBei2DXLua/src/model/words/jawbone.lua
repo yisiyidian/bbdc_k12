@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jawbone"]={"jawbone","['dʒɔːbəʊn]","['dʒɔbon]","n.颚骨",'n.颚骨,下颚骨|||v.游说','Having teeth attached to the edge of the jawbone without sockets.','边齿的，端生齿的长有颌缘牙的，端生的，颌缘的','The outer point on either side of the lower jaw at which the jawbone angles upward.','下颌角点下颚两侧的突出点，在这此下颚骨向上弯曲'}

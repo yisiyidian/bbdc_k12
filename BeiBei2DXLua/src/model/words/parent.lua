@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parent"]={"parent","['peər(ə)nt]","['pɛrənt]","n.父母",'n.父母,根源|||vt.&vi.抚养,产生','Being a parent can be hard work.','当父母可是件辛苦的事。','My parents have gone to Hangzhou for holiday.','我父母已经去杭州度假了。'}

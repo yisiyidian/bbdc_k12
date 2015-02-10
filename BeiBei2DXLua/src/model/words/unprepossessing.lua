@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unprepossessing"]={"unprepossessing","[,ʌnpriːpə'zesɪŋ]","[ ʌnpri:pə'zesiŋ ]","adj.不吸引人的",'adj.不吸引人的','Thought unprepossessing to look at, he is a man of immense erudition.','他虽然相貌平平，但却很有才气。','We found the tastiest tapas in the most unprepossessing bars.','我们在最不起眼的酒吧和咖啡馆找到了最可口、最具创意的肉菜饭和餐前小吃。'}

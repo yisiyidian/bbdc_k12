@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["somewhat"]={"somewhat","['sʌmwɒt]","['sʌmwʌt]","adv.稍微",'adv.稍微；有点；达到某种程度|||n.少量；某些数量；某种程度','The cake we made was somewhat of a failure.','我们做的蛋糕不大成功。','He seemed somewhat loath to depart.','他似乎不愿离去。'}

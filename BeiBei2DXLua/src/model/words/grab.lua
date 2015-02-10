@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grab"]={"grab","[græb]","[ɡræb]","vt.&vi.抓取",'vt.&vi.抓取,抢去，吸引注意|||n.抓,接应,掠夺|||n.不法所得；被抓住的人；抓取装置','Let\'s grab a sandwich and go to see the film.','让我们赶快吃个三明治就去看电影吧。','||Grab|| a seat and make yourself at home.','随便找个地方坐，别客气。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["denounce"]={"denounce","[dɪ'naʊns]","[dɪ'naʊns]","v.公然抨击",'v.告发,公然抨击','They denounced him to the police as a criminal.','他们向警方告发了他是罪犯。','The minister\'s action was denounced in the newspaper.','部长的行为受到报界的指责。'}

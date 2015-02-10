@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["retch"]={"retch","[retʃ]","[ritʃ]","v.作呕",'v.作呕,反胃|||n.反胃,要吐的声音','The smell made me retch.','这味道让我恶心。','The eight man  retched  all over again','retch'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inhalation"]={"inhalation","[ɪnhə'leɪʃ(ə)n]","[,ɪnhə'leʃən]","n.吸入",'n.吸入,吸入药剂','A chronic, progressive lung disease caused by prolonged inhalation of asbestos particles.','石棉沉着病由长期吸收石棉微粒而引起的慢性，日趋严重的肺病','One that vaporizes, especially a device used to vaporize medicine for inhalation.','蒸发器蒸发的器具，尤其是用于蒸发吸入药剂的装置'}

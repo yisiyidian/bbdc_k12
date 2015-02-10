@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["climactic"]={"climactic","[klaɪ'mæktɪk]","[klaɪ'mæktɪk]","adj.高潮的",'adj.高潮的，顶点的','The show reached a climactic point.','表演到达一个高潮。','It is the final, supposedly climactic day of the conference.','今天是峰会的最后一天，也是据称将迎来会议高潮的一天。'}

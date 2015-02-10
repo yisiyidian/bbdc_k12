@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cancer"]={"cancer","['kænsə]","['kænsɚ]","n.癌",'n.癌,巨蟹座','He was afflicted with cancer.','他患了癌症。','The old man died from colon cancer.','这位老人死于结肠癌。'}

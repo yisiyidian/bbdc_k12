@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pollute"]={"pollute","[pə'luːt]","[pə'lut]","v.弄脏",'v.弄脏,污染|||vt.污染','Every day the chimneys of factories pour a large volume of smoke to the air to pollute it.','工厂的烟囱每天把大量的烟雾排放到空气中去，造成空气污染。','I feel it is our duty not to pollute our environment.','我感觉我们有责任不污染我们的环境。'}

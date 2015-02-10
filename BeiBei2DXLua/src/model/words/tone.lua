@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tone"]={"tone","[təʊn]","[ton]","n.音调",'n.音调,语气,品质,调子,色调|||vt.使更健壮,装腔作势地说,定调,调色|||vi.调和(颜色),呈现悦目色调','Exercise tones up the muscles.','运动使肌肉强化。','In his public statement the minister toned down his criticisms he had made in private.','部长在公开发表言论时比他在私下批评时的调子要缓和一点儿。'}

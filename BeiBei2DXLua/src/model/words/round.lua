@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["round"]={"round","[raʊnd]","[raʊnd]","n.圆",'n.圆,(某种圆形)交谊舞,常规活动,一局(轮)|||adj.圆的,微胖的,完整的,坦率的,圆满完成的|||adv.环形地|||vt.弄圆,绕行,使...完全,使成为整数|||vi.变圆(胖),弯曲|||prp.围绕,遍及','Let\'s have a good round of applause for the next performer.','咱们为下一个表演者热烈鼓掌吧。','The earth moves round the sun.','地球绕着太阳运转。'}

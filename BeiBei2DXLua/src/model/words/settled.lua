@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["settled"]={"settled","['setld]","['sɛtld]","adj.固定的",'adj.固定的,稳定的，定居的|||settle的过去式和过去分词','He came to miss his homeland when he settled down abroad.','当他在国外安定下来时, 他开始想念祖国了。','The Saxon once settled in England in early times.','撒克逊人早期曾定居英格兰。'}

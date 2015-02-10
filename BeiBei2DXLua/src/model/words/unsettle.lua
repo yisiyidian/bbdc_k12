@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unsettle"]={"unsettle","[ʌn'set(ə)l]","[,ʌn'sɛtl]","v.使不安",'v.使不安|||vt.打扰,使(某人)不安或担忧','Nothing can unsettle his resolution.','什么也动摇不了他的决心。','Seafood unsettles my stomach.','我一吃海鲜胃就不舒服.'}

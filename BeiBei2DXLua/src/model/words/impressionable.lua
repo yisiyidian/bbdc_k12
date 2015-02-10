@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impressionable"]={"impressionable","[ɪm'preʃ(ə)nəb(ə)l]","[ɪm'prɛʃənəbl]","adj.易受影响的",'adj.易受影响的','The child is at an impressionable age.','这孩子正处于易受影响的年龄。','The law is intended to protect young and impressionable viewers.','该法律旨在保护年轻人和易受影响的观众。'}

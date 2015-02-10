@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irremediable"]={"irremediable","[,ɪrɪ'miːdɪəb(ə)l]","[,ɪrɪ'midɪəbl]","adj.不能补救的",'adj.不能补救的,不能医治的','The evil is now irremediable, and it has been entirely your own doing.','如今过失已无可挽回，事情是你一手促成的。','Is our defeat final and irremediable?','我们是不是已经一败涂地、无可挽回了？'}

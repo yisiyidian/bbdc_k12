@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["juggle"]={"juggle","['dʒʌg(ə)l]","['dʒʌɡl]","vt.变戏法",'vt.变戏法(巧妙处理,歪曲,捏造)|||n.魔术(欺骗)','The juggler is juggling with plates and balls.','耍把戏的人正用碟子和球耍把戏。','Don\'t juggle with your accounts.','不要在你的帐目上搞鬼。'}

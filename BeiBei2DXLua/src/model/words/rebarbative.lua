@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rebarbative"]={"rebarbative","[rɪ'bɑːbətɪv]","[ ri'bɑ:bətiv ]","adj.厌烦的",'adj.厌烦的,令人讨厌的,难看的','He became rebarbative, prickly, spiteful','“他变得令人讨厌；敏感且充满怨恨”','My parents want me to stay here, this rebarbative city.','我的父母希望我留在这个令人讨厌的城市里。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["admission"]={"admission","[əd'mɪʃ(ə)n]","[əd'mɪʃən]","n.许可",'n.许可,入会费,承认','||Admission|| (to the club) is restricted to members only.','只准会员进入（俱乐部）.','How does one gain admission to the Buckingham Palace?','怎样才能获准进入白金汉宫?'}

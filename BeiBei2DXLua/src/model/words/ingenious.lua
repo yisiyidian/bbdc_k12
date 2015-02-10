@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ingenious"]={"ingenious","[ɪn'dʒiːnɪəs]","[ɪn'dʒinɪəs]","adj.机灵的",'adj.机灵的,精制的,有独创性的','I have an ingenious contrivance to get her to sign the document without reading it.','我有一条不经她过目就签署文件的妙计。','This book shows that he is an ingenious author.','这本书表明他是一个有创造力的作家。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["item"]={"item","['aɪtəm]","['aɪtəm]","n.项目",'n.项目,条款，一件商品（或物品）|||adv.也','Do you know if they like this new item?','你知道他们是否喜欢这个新品种？','Gone forever are the days when this item sold well.','这一品种畅销的日子一去不复返了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["civilian"]={"civilian","[sɪ'vɪlj(ə)n]","[sə'vɪlɪən]","n.平民",'adj.平民的|||n.罗马法专家,平民','He resigned his commission to take up a civilian job.','他辞去军职而从事平民工作.','Army personnel are often forbidden to fraternize with the civilian population.','军职人员常被禁止与平民百姓友好往来.'}

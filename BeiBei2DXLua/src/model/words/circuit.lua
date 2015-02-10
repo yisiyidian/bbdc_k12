@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["circuit"]={"circuit","['sɜːkɪt]","['sɝkɪt]","n.电路",'n.电路,一圈,巡回|||vt.&vi.巡回','The switches close the contacts and complete the circuit.','这些开关可使接触器接通电流形成回路。','There are two breakers in this circuit.','这个电路里面使用了两个断路器。'}

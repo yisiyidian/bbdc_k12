@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bereaved"]={"bereaved","[bɪ'rivd]","[ bi'ri:vd ]","adj.丧失",'adj.丧失|||n.丧失亲人的人','The accident bereaved her of her son and husband.','那次事故夺去了她的儿子和丈夫。','We did not know how to soothe the bereaved mother.','我们不知如何安慰那位丧子的母亲.'}

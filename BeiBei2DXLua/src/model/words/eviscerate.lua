@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eviscerate"]={"eviscerate","[ɪ'vɪsəreɪt]","[ɪ'vɪsəret]","v.取出内脏",'v.取出内脏,除去主要部份,除去精华','Usually we eviscerate the fish before cooking it.','通常，我们会在烹鱼前把鱼内脏去掉','We are going to eviscerate you','我们将掏空你的一切（财产）'}

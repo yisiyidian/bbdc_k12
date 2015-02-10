@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["into"]={"into","['ɪntʊ; 'ɪntə]","[ˈɪntu]","prep.到...里",'prep.到...里','She developed into a beautiful woman.','她长成了一位漂亮的女人。','They broke into his store.','他们闯入他的店里。'}

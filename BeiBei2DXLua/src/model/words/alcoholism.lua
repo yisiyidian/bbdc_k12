@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alcoholism"]={"alcoholism","['ælkəhɒlɪz(ə)m]","['ælkəhɔlɪzəm]","n.酒精中毒",'n.酒精中毒,酗酒','A person who drinks alcoholic substances habitually and to excess or who suffers from alcoholism.','酗酒者习惯性和过量饮用含有酒精物质的人或者由于酗酒或酒精中毒而遭受痛苦的人','...a physician who specialized in the problems of alcoholism.','…一位专攻酗酒问题的医生。'}

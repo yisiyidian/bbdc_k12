@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aspiration"]={"aspiration","[æspə'reɪʃ(ə)n]","['æspə'reʃən]","n.热望",'n.热望,渴望|||（医）抽吸，吸引术，吸气','The generalship was his aspiration.','将官之职位是他梦寐以求的目标。','He has serious aspirations to a career in politics.','他有从政的雄心壮志。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["endowment"]={"endowment","[ɪn'daʊm(ə)nt; en-]","[ɪn'daʊmənt]","n.捐助(奖金)",'n.捐助(奖金),天赋','Not everyone is born with such endowments as you.','并非所有的人生来都像你这样有天赋。','The Oxford has received numerous endowments.','牛津获得了许多捐款。'}

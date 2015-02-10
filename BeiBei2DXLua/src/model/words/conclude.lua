@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conclude"]={"conclude","[kən'kluːd]","[kən'klud]","vt.得出结论",'vt.使结束,缔结,断定,得出结论|||vi.结束,作出决定','Once the price had been agreed, a deal was quickly concluded.','价格一经商定，交易很快就达成了。','The concert concluded with the National Anthem.','音乐会最后以演奏国歌结束。'}

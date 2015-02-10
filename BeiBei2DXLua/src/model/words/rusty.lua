@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rusty"]={"rusty","['rʌstɪ]","['rʌsti]","adj.生锈的",'adj.生锈的','You\'re letting yourself in for trouble by buying that rusty old car.','你买那辆生了　的旧汽车是自找麻烦.','The lock was rusty, so we had to smash the door open.','锁锈住了，我们得把门砸开。'}

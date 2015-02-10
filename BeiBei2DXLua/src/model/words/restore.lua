@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["restore"]={"restore","[rɪ'stɔː]","[rɪ'stɔr]","vt.恢复",'vt.恢复,归还,翻新','The military government promised to restore democracy within one year.','军人政府答应在一年内重新建立民主体制。','Drastic measures will have to be taken to restore order.','为恢复秩序必须采取严厉措施.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["binge"]={"binge","[bɪn(d)ʒ]","[bɪndʒ]","n.狂欢作乐",'n.狂欢作乐，无节制的行为|||vi.狂欢作乐','an eating binge.','暴食','He went on/had a three-day binge.','他大吃大喝了三天.'}

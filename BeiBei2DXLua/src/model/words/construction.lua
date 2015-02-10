@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["construction"]={"construction","[kən'strʌkʃ(ə)n]","[kən'strʌkʃən]","n.建设",'n.建设，建造，结构，构造','There was a great outcry about the construction of the new airport.','公众强烈反对修建该机场。','A consortium of construction companies will build the power-station.','由建筑公司组成的集团将建造该发电站.'}

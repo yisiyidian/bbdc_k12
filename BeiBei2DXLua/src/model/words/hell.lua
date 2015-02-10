@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hell"]={"hell","[hel]","[hɛl]","n.地狱",'n.地狱','The priest said they would go to hell for their sins.','牧师说，他们将因罪恶而下地狱。','War is hell','“战争是地狱”'}

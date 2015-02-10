@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["opponent"]={"opponent","[ə'pəʊnənt]","[ə'ponənt]","n.对手",'n.对手,敌手,反对者|||adj.敌对的,反对的','He was assailed by his political opponent.','他遭到政敌的攻击。','I tried to comfort him after he was defeated by his opponent.','他被对手击败后，我尽力安慰他。'}

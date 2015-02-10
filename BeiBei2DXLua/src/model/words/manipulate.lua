@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["manipulate"]={"manipulate","[mə'nɪpjʊleɪt]","[mə'nɪpjulet]","v.操纵",'v.操纵,利用,假造|||[计算机]操作','A clever politician know how to manipulate public opinion.','聪明的政客知道如何操纵公众舆论。','She manipulated the lights to get just the effect she wanted.','她熟练地操作着灯光，以达到她想要的效果。'}

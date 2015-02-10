@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eager"]={"eager","['iːgə]","['igɚ]","adj.渴望的",'adj.渴望的,热切的','He was eager to get out of the (common) ruck and distinguish himself in some way.','他渴望出人头地, 在某方面与众不同.','He is eager for success.','他渴望成功。'}

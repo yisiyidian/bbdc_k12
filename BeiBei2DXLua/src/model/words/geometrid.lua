@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["geometrid"]={"geometrid","[dʒɪ'ɒmɪtrɪd]","[ dʒi'ɔmitrid ]","n.尺获科",'n.尺获科,尺获蛾','||Geometrid|| is an insect.','尺蠖蛾是一种昆虫。','||Geometrid|| is an insect.','尺蠖蛾是一种昆虫。'}

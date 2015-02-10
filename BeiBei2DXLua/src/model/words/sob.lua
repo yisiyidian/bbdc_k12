@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sob"]={"sob","[sɒb]","[sɑb]","n.&v.呜咽",'n.&v.呜咽,哭泣','She sobbed out the story of her son\'s violent death.','她哭著诉说儿子横死的经过.','We could hear the child sobbing in the other room.','我们听到那间屋子里的小孩在抽抽搭搭地哭著.'}

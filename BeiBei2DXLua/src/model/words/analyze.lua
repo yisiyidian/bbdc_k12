@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["analyze"]={"analyze","['ænə,laɪz]","['ænə,laɪz]","v.分析",'v.分析,分解|||vt.分析','Can you analyze the structure of the sentence for me?','你能给我分析一下这个句子的结构吗？','||Analyze|| the sentence into its constituent parts.','把这条句子的各个成份加以分析。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["folly"]={"folly","['fɒlɪ]","['fɑli]","n.愚蠢",'n.愚蠢,荒唐事|||(复)follies:轻松歌舞剧','Beauty and folly are often companions.','【谚】美貌和愚蠢常结伴。','He bitterly repented his folly.','他对自己干的蠢事後悔已极.'}

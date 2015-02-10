@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whose"]={"whose","[huːz]","[huz]","pron.谁的",'pron.谁的','There are still many people whose living conditions are miserable.','仍有许多人的生活条件是很艰苦的。','The couple was quarreling furiously about whose turn it was to cook the dinner.','这对夫妇对该轮到谁做晚饭而激烈争吵着。'}

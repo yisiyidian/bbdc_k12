@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["odds"]={"odds","[ɒdz]","[ɑdz]","n.让步",'n.让步,机率,可能性,比率,胜败优劣之别','The odds are five to one on that horse.','那匹马的赔率是五比一。','The firm pays over the odds for working in unpopular areas.','在条件差的地区工作，公司多给酬金。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scant"]={"scant","[skænt]","[skænt]","adj.不充分的",'adj.不充分的,不足的|||v.减缩,限制，忽略','The movers gave me a scant hour\'s notice of their arrival.','搬家的人只通知给我们短短的一小时，他们就来了。','He paid scant attention to what was said.','他没怎么听讲。'}

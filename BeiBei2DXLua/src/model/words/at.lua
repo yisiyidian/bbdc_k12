@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["at"]={"at","[æt; ət]","[æt; ət]","prep.在",'prep.在，向，达|||n.基普(老挝货币基本单位)(=att)|||abbr.密封的(=airtight)|||abbr.气温（=airtemperature）|||n.[化]砹(极不稳定放射性元素)','I\'m good at it.','我做这个很在行。','I watch TV till ten at night.','我晚上看电视看到10点。'}

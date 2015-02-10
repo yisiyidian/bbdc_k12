@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dangle"]={"dangle","['dæŋg(ə)l]","['dæŋɡl]","v.摇晃地悬挂着",'v.摇晃地悬挂着','He dangled the bone in front of the puppy.','他晃动着骨头逗小狗。','Huge earrings dangled from her ears.','她的耳朵上吊着巨大的耳环。'}

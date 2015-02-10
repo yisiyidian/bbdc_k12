@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["notch"]={"notch","[nɒtʃ]","[nɑtʃ]","n.刻痕",'n.刻痕,等级,峡谷|||vt.刻凹痕,用刻痕计算,计分','The monitor is really a notch above us.','班长确实比我们略胜一筹。','With this performance, she has notched up her third championship title.','她因这一成绩而获得第三个冠军称号。'}

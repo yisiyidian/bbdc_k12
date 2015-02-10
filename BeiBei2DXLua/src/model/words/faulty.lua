@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["faulty"]={"faulty","['fɔːltɪ; 'fɒltɪ]","['fɔlti]","adj.有错误的",'adj.有错误的,有缺点的','Send these faulty goods back to the manufacturer.','把这些次货退还给厂家.','He\'s not playing his shots well his timing is faulty.','他没打好--时间掌握不当.'}

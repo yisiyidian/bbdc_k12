@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["embarrass"]={"embarrass","[ɪm'bærəs; em-]","[ɪm'bærəs]","vt.使...困窘",'vt.使...困窘,阻碍|||vi.变得困窘','You didn\'t embarrass me in the slightest.','你一点也没让我为难.','She dragged up that incident just to embarrass me.','她又扯起那件事故意想使我难堪。'}

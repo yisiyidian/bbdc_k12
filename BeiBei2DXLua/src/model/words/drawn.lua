@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drawn"]={"drawn","[drɔːn]","[drɔn]","adj.憔悴的",'adj.憔悴的|||动词draw的过去分词形式','The man was so genial, so I was drawn to him at once.','这人这么和蔼, 我立刻为他着迷。','We were drawn up for the inspection.','我们排好队接受检阅。'}

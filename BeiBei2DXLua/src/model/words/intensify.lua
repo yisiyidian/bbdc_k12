@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intensify"]={"intensify","[ɪn'tensɪfaɪ]","[ɪn'tɛnsɪfaɪ]","vt.增强",'vt.增强(强化,加剧,加厚,增高银影密度)','My first failure only intensify my desire to succeed.','我的初次失败只更加强了我成功的信念。','Her anger ||intensified||.','她更加生气了.'}

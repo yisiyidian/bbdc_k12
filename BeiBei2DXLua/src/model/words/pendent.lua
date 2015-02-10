@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pendent"]={"pendent","['pend(ə)nt]","['pɛndənt]","adj.下垂的",'adj.下垂的,悬而未决的|||=pendant','When will the pendent problem be solved?','这个悬而未决的问题什么时候能解决呢？','The pendent vines blocked their path, forcing them to take an alternate route.','悬垂的藤蔓阻塞了道路，迫使他们走另一条路。'}

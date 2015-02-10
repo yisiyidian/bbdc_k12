@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mesmerize"]={"mesmerize","['mɛzməraɪz]","[ 'mezməraiz, 'mes- ]","v.迷住",'v.施以催眠术，迷住，迷惑','He could mesmerize an audience by the sheer force of his presence.','他只要一出场，观众就为之倾倒。','They were mesmerized by her performance.','他们被她的表演迷住了。'}

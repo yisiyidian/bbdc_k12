@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resolution"]={"resolution","[rezə'luːʃ(ə)n]","[,rɛzə'luʃən]","n.决心",'n.决心；解决；坚决；分辨率','He made a resolution to read something profitable for one hour every day.','他下决心每天要读一小时有益读物。','Japan exercised her veto to block the resolution.','日本使用了否决权反对该项决议。'}

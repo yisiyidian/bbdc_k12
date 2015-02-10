@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aural"]={"aural","['ɔːr(ə)l]","['ɔrəl]","adj.耳的",'adj.耳的,听觉的','You can use these tapes as aural material.','你可以把这些磁带当作听力材料。','give me some aural material','给我一些听力材料'}

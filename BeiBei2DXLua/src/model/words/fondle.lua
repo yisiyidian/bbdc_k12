@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fondle"]={"fondle","['fɒnd(ə)l]","['fɑndl]","v.爱",'v.爱,爱抚,溺爱','He tried to kiss her and fondle her.','他试图亲吻并爱抚她。','did you just fondle me? I am going to sue your ass','你敢吃我豆腐？我要告你！'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["multiplication"]={"multiplication","[,mʌltɪplɪ'keɪʃ(ə)n]","['mʌltəplə'keʃən]","n.乘法",'n.乘法,增加,乘法表|||[计算机]乘法','The multiplication of numbers have make our club building too small.','会员的增加使得我们的俱乐部拥挤不堪。','Our teacher used to drum our multiplication tables into us.','我们老师过去老是让我们反覆背诵乘法表.'}

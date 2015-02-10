@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["recovery"]={"recovery","[rɪ'kʌv(ə)rɪ]","[rɪ'kʌvəri]","n.恢复",'n.恢复,复原,痊愈','His prescription for economic recovery was not well received.','他为经济复苏提出的对策反应不佳。','The doctors had given her up but she made a remarkable recovery.','医生们已放弃了治愈她的希望, 而她却恢复得很好.'}

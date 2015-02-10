@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["halve"]={"halve","[hɑːv]","[hæv]","v.对分",'v.对分,减半|||vt.分成两半,平分,减少到一半','The twins halve everything.','这对双胞胎把任何东西都对半分享','The latest planes have halve the time needed for cross the atlantic.','最新型号的飞机把飞越大西洋所需的时间减少了一半。'}

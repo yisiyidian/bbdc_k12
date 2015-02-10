@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trend"]={"trend","[trend]","[trɛnd]","n.趋势",'n.趋势,倾向,方位|||vi.倾向,转向','The trend of prices is still upwards.','物价仍有上涨趋势。','This quartet represents a major new trend in modern music.','这首四重奏的曲子反映了现代音乐中一种主要的新趋向.'}

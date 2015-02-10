@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extinguish"]={"extinguish","[ɪk'stɪŋgwɪʃ; ek-]","[ɪk'stɪŋɡwɪʃ]","v.熄减",'v.熄减,消减,偿清','We have to extinguish the memory of the defeat.','我们必须抹去对那次失败的记忆。','Nothing could extinguish his faith in human nature.','没有什么能使他丧失对人性的信心。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["skillful"]={"skillful","['skɪlfəl]","[ 'skilful ]","adj.熟练的",'adj.熟练的，灵巧的','That actress is both skillful and beautiful.','那位女演员演技精湛又长得漂亮。','Soon they became very skillful in answering such questions.','很快他们就会很熟练地回答这种问题了.'}

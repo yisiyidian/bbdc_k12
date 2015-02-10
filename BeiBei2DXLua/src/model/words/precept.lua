@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["precept"]={"precept","['priːsept]","['prisɛpt]","n.教训",'n.教训,告诫,训诫','The precept of our company is to take the customers as our gods.','本公司的信条——顾客是我们的上帝。','Action precept is better than saying.','身教甚于言传。'}

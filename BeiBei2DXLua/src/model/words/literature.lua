@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["literature"]={"literature","['lɪt(ə)rətʃə]","['lɪtrətʃɚ]","n.文学",'n.文学,文献','This book is titled An Introduction to American ||Literature||.','这本书名为《美国文学指南》。','The lecturer is lecturing on Russian literature.','讲师正在讲俄罗斯文学。'}

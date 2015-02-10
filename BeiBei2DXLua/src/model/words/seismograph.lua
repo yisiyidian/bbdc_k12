@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seismograph"]={"seismograph","['saɪzmə(ʊ)grɑːf]","['saɪzməɡræf]","n.地震计",'n.地震计','||Seismograph|| has its own disadvantages.','地震仪有自身的缺点','The seismograph showed a sharp spike in response to the trembler .','地震仪显示，震动器的反应突然大增。'}

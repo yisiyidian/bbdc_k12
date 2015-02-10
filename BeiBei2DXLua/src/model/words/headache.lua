@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["headache"]={"headache","['hedeɪk]","['hɛd'ek]","n.头痛",'n.头痛','He had a headache yesterday.','昨天他感到头痛。','The aspirins eased my headache.','阿司匹林使我头疼减轻.'}

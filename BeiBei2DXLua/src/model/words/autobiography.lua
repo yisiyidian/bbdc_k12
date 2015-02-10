@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["autobiography"]={"autobiography","[ɔːtəbaɪ'ɒgrəfɪ]","[,ɔtəbaɪ'ɑɡrəfi]","n.自传",'n.自传','Lacocca\'s autobiography is a best- seller.','艾科卡的自传是一本畅销书。','Have you read his autobiography?','你读过他的自传吗？'}

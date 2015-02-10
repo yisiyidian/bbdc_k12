@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reinstate"]={"reinstate","[riːɪn'steɪt]","[,riɪn'stet]","v.恢复(原职)",'v.恢复(原职)|||vt.使恢复原有的职位','His supporters failed in their attempt to reinstate the President in the White House.','他的支持者试图使总统重新入主白宫的努力失败了。','The governor is said to have agreed to reinstate five senior workers who were dismissed.','据说州长已经同意让被解雇的5位高级工人复职。'}

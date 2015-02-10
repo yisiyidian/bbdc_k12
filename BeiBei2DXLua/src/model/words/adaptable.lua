@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adaptable"]={"adaptable","[ə'dæptəb(ə)l]","[ə'dæptəbl]","adj.能适应的",'adj.能适应的，适应性强的，可改编的','Living creatures must be adaptable to environmental change.','生物必须能适应环境的变化。','By making the workforce more adaptable and skilled, he hopes to attract foreign investment.','通过使劳动力更具适应力并且更具技能，他希望吸引到外资。'}

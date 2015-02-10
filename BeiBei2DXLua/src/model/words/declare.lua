@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["declare"]={"declare","[dɪ'kleə]","[dɪ'klɛr]","vt.&vi.宣布",'vt.&vi.宣布,声明,申报','I\'m not coming with you and that\'s final!\' declared Mary.','｀我不跟你去--这是最後决定!＇玛丽郑重地说.','He declared that he was innocent.','他声称自己是无罪的。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ewe"]={"ewe","[juː]","[ju]","n.母羊",'n.母羊','Her daughter Nancy is an ewe lamb to her.','她女儿南希是她的心肝宝贝。','The farmer has 20 ewes on his farm.','这个农场主的农场里有20只母羊。'}

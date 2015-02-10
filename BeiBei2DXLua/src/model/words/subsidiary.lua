@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subsidiary"]={"subsidiary","[səb'sɪdɪərɪ]","[səb'sɪdɪɛri]","adj.辅助的",'adj.辅助的,附属的|||n.子公司,附属机构','A lack of corporate interest has made the subsidiary an orphan.','因缺乏共同利益，使得这家子公司无人照管。','Most of the group profit is contributed by the subsidiary in the far east.','集团的大部分利润来自远东的子公司。'}

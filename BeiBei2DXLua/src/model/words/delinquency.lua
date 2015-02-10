@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["delinquency"]={"delinquency","[dɪ'lɪŋkw(ə)nsɪ]","[dɪ'lɪŋkwənsi]","n.（少年）犯罪",'n.（少年）犯罪，失职，过失|||n.逾期债款','Now she returned to the subject of juvenile delinquency in that country.','现在她又回过来讲那个国家少年犯罪的问题。','The rise in delinquency is an indictment of our society and its values.','为非作歹现象有增无已, 这是对我们的社会及其价值观的控诉.'}

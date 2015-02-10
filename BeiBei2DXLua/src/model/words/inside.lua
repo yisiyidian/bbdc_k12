@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inside"]={"inside","[ɪn'saɪd]","['ɪn'saɪd]","prep.在...里面",'adj.里面的|||adv.在里面|||n.内部|||prep.在...里面','She shook it to make certain there was nothing inside.','她把它摇了摇，想知道里面确实没有东西。','The driver behind me tried to overtake on the inside.','我後面的驾驶员想从内车道超过我。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dimension"]={"dimension","[dɪ'menʃ(ə)n; daɪ-]","[dɪ'mɛnʃ(ə)n; daɪ-]","n.尺寸",'n.尺寸,次元,容积,维度|||n.范围;方面|||vt.标尺寸;形成...尺寸','a problem of alarming dimensions.','警报范围的问题','There is another dimension to this problem which you haven\'t considered.','这个问题还有你尚未考虑到的另一个方面。'}

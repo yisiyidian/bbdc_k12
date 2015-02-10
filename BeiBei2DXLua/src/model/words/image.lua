@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["image"]={"image","['ɪmɪdʒ]","['ɪmɪdʒ]","n.图像",'n.图像,影像,肖像,想像,形象|||vt.想像,描绘,反映','This company is concerned about its corporate image.','这家公司关心它自身的法人形象。','She is the express image of her mother.','她和她母亲长得一模一样。'}

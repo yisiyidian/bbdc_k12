@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obelisk"]={"obelisk","['ɒb(ə)lɪsk]","['ɑbə'lɪsk]","n.方尖石塔",'n.方尖石塔,短剑号,疑问记号','Make a obelisk on where you have questions.','在有问题的地方做上疑问号。','An obelisk is a tall, four-sided, narrow tapering monument.','方尖碑是一种高大的四角锥形纪念碑。'}

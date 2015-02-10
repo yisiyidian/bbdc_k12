@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["repose"]={"repose","[rɪ'pəʊz]","[rɪ'poz]","n.休息",'n.休息,睡眠,安静|||v.（使）休息,（使）依靠','The owl hunts while you repose in bed.','你躺在床上安然入睡时，猫头鹰却要去觅食。','Don\'t repose too much confidence in that man.','不要对那人过于相信。'}

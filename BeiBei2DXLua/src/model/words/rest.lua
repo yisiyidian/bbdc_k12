@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rest"]={"rest","[rest]","[rɛst]","vt.&vi.（使）休息",'n.休息；剩余部分；支持物；宁静，安宁|||vt.&vi.（使）休息；（使）倚靠[支撑]|||vi.休息；静止；停止；安心|||vt.使休息；使轻松；使长眠；使依赖','||Rest|| the ladder against the wall.','把梯子靠在墙上吧。','We\'ll eat some of the bread and keep the rest for breakfast.','我们将吃一点面包，剩下的留到早饭时吃。'}

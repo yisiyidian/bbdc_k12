@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["innocence"]={"innocence","['ɪnəsəns]","['ɪnəsns]","n.无罪",'n.无罪,无知,天真无邪','He died protesting his innocence to the last.','他至死都坚称自己无罪.','He was granted a pardon after new evidence had proved his innocence.','有新证据证明他无辜, 因而他获得赦免.'}

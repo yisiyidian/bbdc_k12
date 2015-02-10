@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["proficiency"]={"proficiency","[prə'fɪʃ(ə)nsɪ]","[prə'fɪʃənsi]","n.熟练",'n.熟练,精通','His proficiency as a surgeon is well known.','他作为一名外科医生的水平是有名的.','He made little proficiency in literary accomplishments.','他在文学方面成就不多.'}

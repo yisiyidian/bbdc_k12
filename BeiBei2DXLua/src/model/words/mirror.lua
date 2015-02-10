@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mirror"]={"mirror","['mɪrə]","['mɪrɚ]","n.镜子",'n.镜子|||vt.反映,反射','Steam has fogged the bathroom mirror.','水蒸气把浴室里的镜子遮住了。','A glance in the mirror reassured him that his tie wasn\'t crooked.','他照了一下镜子，领带确实没有戴歪。'}

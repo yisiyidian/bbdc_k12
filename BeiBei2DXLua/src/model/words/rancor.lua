@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rancor"]={"rancor","['ræŋkə]","[ 'ræŋkə ]","n.敌意",'n.敌意,恨意','I have no rancor against him.','我对他无怨无仇。','She learned to accept criticism without rancor.','她学会了坦然接受批评而不怀恨在心。'}

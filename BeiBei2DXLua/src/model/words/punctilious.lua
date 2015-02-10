@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["punctilious"]={"punctilious","[pʌŋ(k)'tɪlɪəs]","[pʌŋk'tɪlɪəs]","adj.一丝不苟的",'adj.精密细心的,一丝不苟的，谨小慎微的','He was punctilious about being ready and waiting in the entrance hall exactly on time.','他一丝不苟地作好准备并准时地在门厅等候。','Billy is punctilious in the performance of his duties.','毕利执行任务总是一丝不苟的。'}

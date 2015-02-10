@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quizzical"]={"quizzical","['kwɪzɪk(ə)l]","['kwɪzɪkl]","adj.戏弄的",'adj.戏弄的，嘲弄的,好奇的，古怪的','He gave Robin a mildly quizzical glance.','他有些惊讶地瞥了罗宾一眼。','He looked up with a quizzical look on his face.','他脸上带着困惑的神情抬头往上看。'}

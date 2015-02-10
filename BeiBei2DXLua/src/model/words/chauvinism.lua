@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chauvinism"]={"chauvinism","['ʃəʊv(ɪ)nɪz(ə)m]","['ʃovɪ'nɪzəm]","n.沙文主义",'n.沙文主义，盲目的爱国心，偏见','The key to this question lies in overcoming Han chauvinism.','解决这个问题的关键是克服大汉族主义。','the chauvinism . . . of making extraterrestrial life in our own image','“用我们自己的形象去假想地球以外的生命的…沙文主义”'}

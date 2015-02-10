@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kernel"]={"kernel","['kɜːn(ə)l]","['kɝnl]","n.核心",'n.核心,中心,精髓|||[计算机]核心','For all I know, there may be a kernel of truth in what he says.','据我所知，他的话可能有一点儿道理。','The kernel of his problem is lack of money.','他的问题的核心是缺钱.'}

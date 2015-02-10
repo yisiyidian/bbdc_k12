@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["implication"]={"implication","[ɪmplɪ'keɪʃ(ə)n]","['ɪmplɪ'keʃən]","n.暗示",'n.暗示,含意','The new report has far-reaching implications for the future of broadcasting.','这一新报告对广播业的前途有些意味深长的暗示。','I can\'t understand the implication of his speech.','我不明白他的演讲的含义。'}

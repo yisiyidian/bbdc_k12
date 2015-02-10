@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fortunately"]={"fortunately","[ˈfɔːtʃənətli]","['fɔrtʃənətli]","adv.幸运地",'adv.幸运地,幸亏','I thought his mother had died, but fortunately I met her in the hospital before I sent off my letter of sympathy.','我以为他母亲已去世，幸亏在我寄出吊唁信之前，我碰到了她母亲使我避免了这场误会。','||Fortunately||, we did not listen to him.','幸亏我们没有听他的话。'}

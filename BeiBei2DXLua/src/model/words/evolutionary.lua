@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["evolutionary"]={"evolutionary","[,iːvə'luːʃənərɪ]","[,ivə'luʃənɛri]","adj.发展的",'adj.发展的(展开的,调优的)','in an evolutionary manner','用一种进化的方式','We live in a evolutionary society.','我们生活在一个不断发展的社会。'}

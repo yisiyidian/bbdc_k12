@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["soul"]={"soul","[səʊl]","[sol]","n.灵魂",'n.灵魂,精神,美国黑人(或黑人音乐)|||adj.美国黑人文化特性的','My soul doth magnify the Lord.','我的心赞美上主的伟大.','Brevity is the soul of wit.','简洁是智慧的精华。'}

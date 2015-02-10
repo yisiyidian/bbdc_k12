@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["credulity"]={"credulity","[krɪ'djuːlɪtɪ]","[krɪ'duləti]","n.轻信",'n.轻信,易信','He has practised on my credulity.','他利用了我的轻信。','The rascal lives on the credulity of the people.','那个流氓靠行骗为生。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lack"]={"lack","[læk]","[læk]","vt.缺乏",'vt.缺乏，缺少；需要的东西|||n.缺乏，不足，没有；缺少的东西','The accused got off/escaped scot-free because of lack of evidence.','由於证据不足, 被告未受惩罚.','Fixed wages and lack of promotion act as a disincentive to employees.','工资固定又无晋升机会遏制了雇员的积极性.'}

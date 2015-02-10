@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["opium"]={"opium","['əʊpɪəm]","['opɪəm]","n.鸦片",'n.鸦片,麻醉剂','Any of various sedative narcotics containing opium or one or more of its natural or synthetic derivatives.','鸦片制剂一种含有镇静性的麻醉剂，含有鸦片或一种或多种自然或人工合成的衍生物','||Opium|| is a narcotic drug.','鸦片是麻醉剂。'}

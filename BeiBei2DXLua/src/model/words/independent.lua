@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["independent"]={"independent","[,ɪndɪ'pendənt]","['ɪndɪ'pɛndənt]","adj.独立的",'adj.独立的,自主的，私立的，无偏见的|||n.独立派人士,无党派者','You should learn to be independent of your parents.','你应该学习不要依赖父母。','The police are seeking independent confirmation of certain details of the story.','警方正在寻找案件某些细节的独立证据.'}

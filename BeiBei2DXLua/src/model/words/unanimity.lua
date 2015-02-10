@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unanimity"]={"unanimity","[juːnə'nɪmɪtɪ]","[ˌjuːnəˈnɪməti]","n.无异议",'n.无异议,同意,全体一致','Our discussions led to complete unanimity.','我们的讨论取得了完全一致的意见。','Nothing marred the unanimity of the proceedings.','议事未受任何阻碍获得一致通过。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["printing"]={"printing","['prɪntɪŋ]","['prɪntɪŋ]","n.印刷",'n.印刷,印刷术|||动词print的现在分词','The firm specializes in printing advertisements.','这家公司专印广告.','Don\'t worry about the printing; that\'s my parish.','别担心打印的事，那是我的工作范围。'}

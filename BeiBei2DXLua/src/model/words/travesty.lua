@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["travesty"]={"travesty","['trævɪstɪ]","['trævəsti]","n.滑稽模仿",'n.滑稽模仿,歪曲，漫画|||vt.使...滑稽化，曲解','Her research suggests that Smith\'s reputation today is a travesty of what he really stood for.','她的研究表明史密斯今天的名声是对他过去真正主张的一种嘲弄。','The trial was a travesty of justice .','这一审判是对正义的嘲弄。'}

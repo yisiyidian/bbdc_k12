@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anybody"]={"anybody","['enɪbɒdɪ]","['ɛnɪbɑdi]","pron.任何人",'n.重要人物|||pron.任何人','She wasn\'t anybody before she got that job.','她得到那份工作以前并非重要人物.','||Anybody|| will tell you where the bus stop is.','谁都能告诉你公共汽车站在哪 .'}

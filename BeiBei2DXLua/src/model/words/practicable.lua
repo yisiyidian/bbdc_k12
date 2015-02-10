@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["practicable"]={"practicable","['præktɪkəb(ə)l]","['præktɪkəbl]","adj.可实行的",'adj.可实行的,可做的,可用的','His plan seemed to be too difficult, but before long it proved to be practicable.','他的计划看起来太困难，但是没多久就被证明很实用。','The mountain route is practicable only in summer.','只有在夏季那条山路才可以通行。'}

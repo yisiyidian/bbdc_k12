@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["regimentation"]={"regimentation","[,redʒimen'teiʃən]","[ ,redʒimen'teiʃən ]","n.严格控制",'n.严格控制,纪律','Discipline without regimentation was Miss Bulstrode\'s motto.','既注意纪律,又不造成一律化,这就是布尔斯特罗德小姐的座右铭.','They don\'t want equality and regimentation.','他们不要一律平等和严密的组织.'}

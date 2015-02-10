@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["postcard"]={"postcard","['pəʊs(t)kɑːd]","['post'kɑrd]","n.明信片",'n.明信片|||adj.如画的','Did you get my postcard?','你收到我的明信片了吗?','She scrawled a few words on a postcard.','她在明信片上草草地写了几个字.'}

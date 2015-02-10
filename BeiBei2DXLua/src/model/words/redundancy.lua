@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["redundancy"]={"redundancy","[rɪ'dʌnd(ə)nsɪ]","[rɪ'dʌndənsi]","n.冗余",'n.冗余,备份,多余信息','He put all his redundancy money into a shop.','他把所有剩余资金都投入了一家商店。','The takeover cause250 redundancy.','接管移交造成250人的裁员。'}

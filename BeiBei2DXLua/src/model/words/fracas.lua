@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fracas"]={"fracas","['frækɑː]","['frekəs]","n.吵闹",'n.喧噪,吵闹,纷扰','The police were called in to stop the fracas.','警察奉命去制止骚乱。','Five others were hurt in the fracas.','骚乱中另有五人受伤。'}

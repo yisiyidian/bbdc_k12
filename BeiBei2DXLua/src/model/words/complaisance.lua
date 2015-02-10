@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["complaisance"]={"complaisance","[kəm'pleɪzəns]","[kəm'plezns]","n.彬彬有礼",'n.彬彬有礼,殷勤,奉承','We cannot wonder at his complaisance.','我们不要怀疑他的礼貌。','we cannot wonder at this complaisance; for who would object to such a partner?','我们不要怀疑他的礼貌,谁会拒绝这样的舞伴呢？'}

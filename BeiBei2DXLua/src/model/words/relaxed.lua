@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["relaxed"]={"relaxed","[rɪ'lækst]","[rɪ'lækst]","adj.放松的",'adj.放松的，松懈的，随意的|||relax的过去式（分词）','She\'s a bit too knowing for me to feel relaxed with her.','她很有点世故, 和她相处我觉得不自在.','Her features suddenly relaxed.','她的表情一下子变得轻松了.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shrug"]={"shrug","[ʃrʌg]","[ʃrʌɡ]","n.耸肩",'n.耸肩|||v.耸肩','She gave a shrug of her shoulders.','她耸了耸肩膀.','I asked where Sam was, but she just shrugged.','我问她萨姆在哪儿，她只耸了耸肩。'}

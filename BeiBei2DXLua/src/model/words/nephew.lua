@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nephew"]={"nephew","['nefjuː; 'nevjuː]","['nɛfju]","n.侄子",'n.侄子,外甥','My nephew in puppy love went out with his date arm in arm.','我侄子初恋时和他的小女友手挽臂而行。','To my surprise, I found my nephew dressed in a girl\'s skirt.','令我惊奇的是, 我侄子穿着女孩的裙子。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["retroactive"]={"retroactive","[retrəʊ'æktɪv]","[,rɛtro'æktɪv]","adj.反动的",'adj.反动的,追溯的,有追溯力的','Sharp political article always inclined to be retroactive.','尖锐的政治文章总是倾向于反动。','What we are talking about is retroactive to several months ago.','我们现在讨论的事情要追溯到好几个月前了。'}

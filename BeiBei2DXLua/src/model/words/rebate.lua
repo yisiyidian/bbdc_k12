@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rebate"]={"rebate","['riːbeɪt]","['ribet]","n.回扣",'n.回扣|||vt.减少,变钝|||vi.减少','He got a tax rebate at the end of the year.','他在年底收到了一笔退回的税款。','Buyers are offered a cash rebate.','购买者享受现金回扣。'}

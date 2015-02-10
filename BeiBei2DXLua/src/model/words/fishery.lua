@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fishery"]={"fishery","['fɪʃ(ə)rɪ]","['fɪʃəri]","n.渔场(渔业)",'n.渔场(渔业)','The ship is engaged in pelagic fishery.','这艘船从事远洋渔业。','Most of the people on the island are fishery folk.','那个岛上的居民大部分是渔民.'}

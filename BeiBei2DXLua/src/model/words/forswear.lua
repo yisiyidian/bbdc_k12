@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forswear"]={"forswear","[fɔː'sweə; fə-]","[fɔr'swɛr]","vt.发誓放弃",'vt.发誓放弃，发誓否认|||vi.作伪证','Wells was not likely to forswear the faith of a lifetime.','威尔斯绝不会背弃他毕生的信仰。','She promised to forswear drinking alcohol.','她许诺戒酒。'}

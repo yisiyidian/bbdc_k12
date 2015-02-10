@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cabinetmaker"]={"cabinetmaker","['kæbɪnɪt,meɪkə]","['kæbɪnətmekɚ]","n.家具师",'n.家具师,细工木匠','A year after my trip, I needed a cabinetmaker in my small town in Massachusetts.','旅行结束一年后，我需要在我所住的马萨诸塞州小镇上找一个做橱柜的木匠。','One of my friends is cabinetmaker.','我的一个朋友是家具师。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scallop"]={"scallop","['skɒləp; 'skæləp]","['skæləp]","n.扇贝壳",'n.扇贝壳，扇形饰边|||v.拾扇贝，使成扇形|||=scollop','She wears a dress with scallops around the neck.','她穿着一件领口有扇形皱褶的衣裙。　','Some people like to eat scallop.','有些人喜欢吃干贝。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insulation"]={"insulation","[ɪnsjʊ'leɪʃ(ə)n]","[,ɪnsə'leʃən]","n.隔离",'n.隔离,孤立,绝缘','Foam rubber provides good insulation.','泡沫橡胶隔绝性能良好.','Plastic is insulation.','塑料是绝缘的。'}

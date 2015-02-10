@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["furrow"]={"furrow","['fʌrəʊ]","['fɝo]","n.犁沟",'n.犁沟,皱纹|||v.犁，耕，（使）起皱纹','A deep furrow or ditch.','深沟一条深的沟或犁沟','A furrow or groove formed by running water.','犁沟由流水形成的槽或小沟'}

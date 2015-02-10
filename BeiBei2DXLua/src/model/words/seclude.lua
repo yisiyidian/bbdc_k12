@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seclude"]={"seclude","[sɪ'kluːd]","[sɪ'klud]","vt.隔离(隔绝)",'vt.隔离(隔绝)','You can\'t seclude yourself from the world.','人不能与世隔绝.','She secludes herself in her study to work.','她把自己关在书房里埋头研究.'}

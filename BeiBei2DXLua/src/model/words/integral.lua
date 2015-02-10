@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["integral"]={"integral","['ɪntɪgr(ə)l; ɪn'tegr(ə)l]","['ɪntɪɡrəl]","adj.完整的",'adj.构成整体所必需的,完整的|||n.[数学]积分,完整,部分','The kitchen is an integral part of a house.','厨房是房子不可缺的部分。','Rituals, celebrations, and festivals form an integral part of every human society.','仪式、庆典和节日是每个人类社会不可缺少的组成部分。'}

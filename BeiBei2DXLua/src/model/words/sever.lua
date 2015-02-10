@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sever"]={"sever","['sevə]","['sɛvɚ]","vt.&vi.切断",'vt.&vi.切断,脱离,分开','His arm was severed from his body in the accident.','在那次意外中，他的手臂被切断了。','The two countries have severed their relations.','这两个国家已经断绝关系。'}

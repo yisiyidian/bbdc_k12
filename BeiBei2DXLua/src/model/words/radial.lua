@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["radial"]={"radial","['reɪdɪəl]","['redɪəl]","adj.光线的",'adj.光线的,光线状的,放射状的|||n.放射状部分,桡骨神经(或动脉)|||n.子午线轮胎','The radial displacement must be accompanied by a circumferential force.','径向位移必须伴有圆周力.','This car is fitted with radial tyres.','这辆车配有子午线轮胎.'}

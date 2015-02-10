@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["illustrious"]={"illustrious","[ɪ'lʌstrɪəs]","[ɪ'lʌstrɪəs]","adj.著名的",'adj.著名的,杰出的','His illustrious accomplishments made him one of the greatest men in this century.','他的杰出成就使他成为本世纪最伟大的人物之一。','...the most illustrious scientists of the century.','…本世纪最著名的科学家们。'}

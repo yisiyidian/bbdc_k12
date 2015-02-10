@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["molecule"]={"molecule","['mɒlɪkjuːl]","['mɑlɪkjul]","n.分子",'n.分子','The chemical structure of this particular molecule is very unusual.','这个特殊分子的化学结构很不寻常。','We can see many molecules flying in the air when a sunbeam penetrated the dark room.','当一束光线穿进暗淡的房间时，我们可以看到空气中有许多小颗粒在飞舞。'}

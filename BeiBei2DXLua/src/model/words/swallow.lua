@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swallow"]={"swallow","['swɒləʊ]","['swɑlo]","n.燕子",'n.燕子,吞咽,一次吞咽的量|||vt.吞下,咽下,忍受,不流露感情,收回|||vi.咽口水,忍气吞声','She swallowed her anger and carried on.','她忍气吞声地继续进行下去。','There are many swallows flying in the sky.','天空中有许多燕子。'}

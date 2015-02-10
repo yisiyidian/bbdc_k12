@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imaginary"]={"imaginary","[ɪ'mædʒɪn(ə)rɪ]","[ɪ'mædʒɪnɛri]","adj.想象的",'adj.想象的,虚构的','My little daughter has an imaginary friend.','我的小女儿有个想像中的朋友.','People still have a general fear for the imaginary infernal powers.','人们对于虚构的地狱中的鬼神仍具有一种普遍的恐惧。'}

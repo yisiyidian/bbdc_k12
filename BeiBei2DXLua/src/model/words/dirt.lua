@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dirt"]={"dirt","[dɜːt]","[dɝt]","n.污垢",'n.污垢,泥土,污秽的言行,卑鄙的人,堕落,矿渣','She cleaned the dirt from her fingernails.','她从指甲里剔掉污垢.','He scoured off the dirt from the floor.','他擦去地板上的污垢。'}

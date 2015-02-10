@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["remit"]={"remit","[rɪ'mɪt]","['rimɪt]","vt.免除",'vt.免除,汇出,缓和,延迟|||vi.缓和,减轻,汇款|||n.影响范围','||Remit|| the interest to her new address.','将利息寄到她的新地址','The taxes have been remitted.','税已豁免。'}

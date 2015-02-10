@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["font"]={"font","[fɒnt]","[fɑnt]","n.字体",'n.字体；字形；圣洗池（设于教堂中，常为石造）','She was a font of wisdom and good sense.','她是智慧与仁爱的源泉','...the immense variety of fonts available in Microsoft Word and Publisher.','…微软的文字处理软件和排版软件中提供的种类繁多的字体。'}

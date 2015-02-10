@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["morose"]={"morose","[mə'rəʊs]","[mə'ros]","adj.郁闷的",'adj.郁闷的,乖僻的','This novel mirrors his morose style.','这部小说秉承了他一贯的沉抑风格。','Dorset, of late, had grown more than usually morose and incalculable.','最近多森变得越加乖僻，越加难以相处了。'}

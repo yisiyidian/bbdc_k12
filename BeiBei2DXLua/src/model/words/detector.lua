@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["detector"]={"detector","[dɪ'tektə]","[dɪ'tɛktɚ]","n.探测器",'n.探测器','We are forced to use a multiplicity of separate detector arrays.','我们要尽力用多个分离的检测器组成.','The detector is housed in a streamlined cylindrical container.','探测器安装在流线型圆柱形容器内.'}

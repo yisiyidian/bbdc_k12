@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["businessman"]={"businessman","['bɪznɪsmən]","['bɪznəsmæn]","n.商人",'n.商人','He is a prudent businessman.','他是个精明的商人。','This businessman is rather diligent than clever.','与其说这位业务员聪明, 不如说他勤勉。'}

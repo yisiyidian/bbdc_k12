@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["monarch"]={"monarch","['mɒnək]","['mɑnɚk]","n.帝王",'n.帝王,统治者,元首/nn.君王斑点蝶','A monarch has the prerogative of pardoning criminals.','君主享有对罪犯的赦免权.','The monarch as head of state.','国王作为国家元首的君主'}

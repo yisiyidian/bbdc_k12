@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["idolatry"]={"idolatry","[aɪ'dɒlətrɪ]","[aɪ'dɑlətri]","n.偶像崇拜",'n.偶像崇拜,邪神崇拜,盲目的崇拜','Their affection for her soon increased almost to idolatry.','他们对她的喜爱不久就发展到了盲目崇拜的地步。','youngers always have the problem of idolatry','年轻人通常都有偶像崇拜的毛病'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["variable"]={"variable","['veərɪəb(ə)l]","['vɛrɪəbl]","n.变量",'adj.可变的,易变的|||n.变量,易变的东西','The temperature was a variable in the experiment.','在该实验中温度是个变量。','Winds are mainly light and variable.','风力较弱，风向多变。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bicker"]={"bicker","['bɪkə]","['bɪkɚ]","vi.斗嘴",'vi.斗嘴,闪烁，发出潺潺声|||n.口角，争吵，潺潺流水声','The children are always bickering with each other over their toys.','孩子们常常为玩具争吵。','The two children used to bicker about who should do the washing-up.','这两个小孩子以前经常为该由谁洗餐具一事而争吵。'}

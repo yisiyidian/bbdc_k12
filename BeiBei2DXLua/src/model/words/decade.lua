@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decade"]={"decade","['dekeɪd; dɪ'keɪd]","['dɛked]","n.十年",'n.十年','I believed that this struggle is going to go on and it might well be decided in the next decade.','我相信这一对抗还将会持续下去，并可能在下一个十年中得出结果。','Several decades have elapsed since I graduated from the college.','我大学毕业已数十年了。'}

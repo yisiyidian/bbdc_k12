@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crust"]={"crust","[krʌst]","[krʌst]","n.外壳",'n.外壳,坚硬的外壳,面包皮|||vt.盖以硬皮|||vi.结硬皮','The earth\'s crust is layered..','地球的外壳是分层的。','The crust on the snow was thick enough for us to walk on it.','外层的雪已经冻硬，可以在上面行走。'}

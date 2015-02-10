@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["demand"]={"demand","[dɪ'mɑːnd]","[dɪ'mænd]","v.需要",'n.要求;需求|||v.要求,查问;需要','Good secretaries are always in demand.','好的秘书总是很多人都需要的。','Do you think the President will give in to the terrorists\' demand?','你认为总统会对恐怖分子的要求让步吗？'}

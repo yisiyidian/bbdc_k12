@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["function"]={"function","['fʌŋ(k)ʃ(ə)n]","['fʌŋkʃən]","n.功能",'n.功能,函数,重大聚会|||vi.运行,起作用','Some English adverbs function as adjectives.','英语中有些副词可作形容词用。','His brain seems to be functioning normally.','他的大脑看来功能正常。'}

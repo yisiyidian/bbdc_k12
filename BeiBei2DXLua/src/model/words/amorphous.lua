@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amorphous"]={"amorphous","[ə'mɔːfəs]","[ə'mɔrfəs]","adj.无定形的",'adj.无定形的,无组织的，非结晶的','A dark, strangely amorphous shadow filled the room.','一团形状怪异的黑影笼罩了整个房间。','I really can\'t understand his amorphous ideas.','我真的弄不懂他那些乱七八糟的想法。'}

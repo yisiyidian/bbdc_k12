@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scud"]={"scud","[skʌd]","[skʌd]","n.黄铁矿",'n.黄铁矿(疾飞,飞云)|||vt飞跑(刮面)','The yacht was scudding along before the wind.','那只帆船正乘风笔直疾驶.','dark clouds scudding by.','黑黑的乌云滚滚而来'}

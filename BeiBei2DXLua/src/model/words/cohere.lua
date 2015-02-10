@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cohere"]={"cohere","[kə(ʊ)'hɪə]","[ko'hɪr]","v.附着",'v.附着,粘合,凝聚','The various elements of the novel fail to cohere.','这部小说的各部分之间缺乏连贯性。','This view does not cohere with their other beliefs.','这个观点与他们的其他看法不一致。'}

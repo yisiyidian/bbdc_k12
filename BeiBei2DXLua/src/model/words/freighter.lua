@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["freighter"]={"freighter","['freɪtə]","['fretɚ]","n.货船(租船人)",'n.货船(租船人)','The freighter sailed into the port.','货船驶进了港口。','A new-type ocean-going freighter is being laid down at that shipyard.','一艘新型的远洋货轮正在那家船厂建造。'}

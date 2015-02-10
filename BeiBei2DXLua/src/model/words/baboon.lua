@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["baboon"]={"baboon","[bə'buːn]","[bæ'buːn]","n.狒狒",'n.狒狒','The baboon has a dog-like face.','狒狒有一张像狗一样的脸。','The baboon is very ugly.','狒狒非常丑陋。'}

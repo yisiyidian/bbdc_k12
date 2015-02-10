@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reed"]={"reed","[riːd]","[rid]","n.芦苇",'n.芦苇,芦笛,簧片|||Reed：里德（姓氏）','Where there\'s reed, there\'s heat.','有烟必有火, 有果必有因.','Mr. ||Reed|| has been selected to represent us on the committee.','里德先生代表我们已被选入委员会.'}

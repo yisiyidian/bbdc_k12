@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cavil"]={"cavil","['kæv(ə)l]","['kævl]","v.吹毛求疵",'v.挑毛病,吹毛求疵|||n.挑毛病','A carper will cavil at anything.','爱挑剔的人对什么都挑剔。','Let us not cavil too much.','我们不要太吹毛求疵。'}

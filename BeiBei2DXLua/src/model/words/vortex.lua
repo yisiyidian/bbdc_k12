@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vortex"]={"vortex","['vɔːteks]","['vɔrtɛks]","n.漩涡",'n.漩涡,旋风','When marriages break down children are swept into the vortex of their parents\' embittered emotions.','当婚姻破裂时，孩子们也被卷进父母感情日益恶化的漩涡中。','The principal objective in designing cyclones is to create a vortex.','设计旋风除尘器的主要目的在于造成涡旋运动。'}

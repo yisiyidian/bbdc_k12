@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accrete"]={"accrete","[ə'kriːt]","[ə'krit]","v.共生",'v.共生,附着,增加','Some animals accrete with each other.','某些动物是共生的。','However, if a black hole passes through a cloud of interstellar matter, or is close to another “normal” star, the black hole can accrete matter into itself.','然而，当一个黑洞穿过一片星云，或者靠近另一个正常恒星时，黑洞将会使它自身的物质增加。'}

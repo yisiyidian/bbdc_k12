@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["zany"]={"zany","['zeɪnɪ]","['zeni]","adj.滑稽的",'n.小丑,笨人,丑角的配角|||adj.滑稽的,愚蠢的','She made us all laugh with her zany tricks.','她那些滑稽的恶作剧逗得我们都大笑起来。','zany humour','古怪的幽默'}

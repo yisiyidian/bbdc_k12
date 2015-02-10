@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["honor"]={"honor","['ɒnə(r)]","[ˈɑnər]","n.荣誉",'n.荣誉,荣幸,贞洁,正直,信用|||vt.尊敬,授予荣誉,实践,兑现','They purchased life at the expenses of honor.','他们以牺牲名誉为代价换得了生命。','I consider it a great honor to be invited to dinner.','我认为能被邀请参加晚宴是很大的荣幸。'}

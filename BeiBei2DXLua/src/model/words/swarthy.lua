@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swarthy"]={"swarthy","['swɔːðɪ]","['swɔrði]","adj.黑黝黝的",'adj.黑黝黝的,黑色的','She has a swarthy complexion.','她的肤色黝黑。','He had a broad swarthy face.','他有一张黝黑的大脸。'}

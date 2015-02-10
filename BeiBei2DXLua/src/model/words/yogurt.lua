@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["yogurt"]={"yogurt","['jɒgət; 'jəʊ-]","['joɡət]","n.酸奶酪",'n.(=yoghurt)酸奶酪,酵母乳','Do you have any low- fat yogurt?','你要不要低脂的酸奶？','I like drink yogurt.','我喜欢喝酸奶。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["illiberal"]={"illiberal","[ɪ'lɪb(ə)r(ə)l]","[ɪ'lɪbərəl]","adj.狭碍的",'adj.狭碍的,偏执的,吝啬的,缺乏文化素养的,粗鄙的','...illiberal legislation.','...僵化的立法。','illiberal man','狭隘的人'}

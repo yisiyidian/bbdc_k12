@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["massive"]={"massive","['mæsɪv]","['mæsɪv]","adj.巨大的",'adj.巨大的,大规模的,大量的,大范围的','The wedding got massive media coverage.','婚礼得到大众传播媒介的广泛报道。','The temple is supported by massive columns.','此庙由粗大的柱子支撑.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mirage"]={"mirage","['mɪrɑːʒ; mɪ'rɑːʒ]","[mə'rɑʒ]","n.海市蜃楼",'n.海市蜃楼,幻想','The heat reflected from the white sand formed a mirage.','热气经白色的沙面反射形成了蜃景。','A mirage is an optical illusion.','海市蜃楼是一种视错觉。'}

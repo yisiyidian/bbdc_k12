@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rhapsodize"]={"rhapsodize","['ræpsədaɪz]","['ræpsədaɪz]","v.过份赞美",'v.过份赞美','He rhapsodized over her new hat.','他对她的新帽子大加赞扬。','\'Orchards would take the place of the jungle,\' he rhapsodized.','“要让这片丛林成为果园，”他无比兴奋地说。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["recommendation"]={"recommendation","[,rekəmen'deɪʃ(ə)n]","[,rɛkəmɛn'deʃən]","n.推荐",'n.推荐,介绍','I got the job on the strength of your recommendation.','承蒙足下推荐, 我已获得这份工作.','The child was taken away from its parents on the recommendation of social workers.','根据社会工作者的建议把那孩子与其父母隔离了.'}

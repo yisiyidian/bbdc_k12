@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gear"]={"gear","[gɪə]","[ɡɪr]","n.齿轮",'n.齿轮,传动装置,设备,工具|||vt.&vi.使适应于,以齿轮连起,配搭活动,调整','The party organization is moving into top gear as the election approaches.','随着选举临近，党组织的活动也如火如荼。','Most cars have four forward gears.','大多数汽车有四个前进挡。'}

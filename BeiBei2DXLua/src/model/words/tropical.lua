@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tropical"]={"tropical","['trɒpɪk(ə)l]","['trɑpɪkl]","adj.热带的",'adj.热带的,炎热的,热带植物的','Have you seen the brightly-coloured plumage of tropical birds?','你见过热带鸟类色彩斑斓的羽毛吗？','He has won wide recognition in the field of tropical medicine.','他在热带医学这一领域里广获赞扬。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["craft"]={"craft","[krɑːft]","[kræft]","n.工艺",'n.工艺,手艺,狡诈，航空器,行会成员|||vt.手工制作','By crafts the gambler tricked them out of all their money.','那个赌徒用诡计赢去了他们所有的钱。','The workers are trying to apply modern techniques to this traditional craft.','工人们试图将现代技术用于这项传统工业。'}

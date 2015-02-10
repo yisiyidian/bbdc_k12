@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["manic"]={"manic","['mænɪk]","['mænɪk]","adj.狂躁的",'adj.狂躁的|||n.狂躁者','||Manic|| depressives oscillate between depression and elation.','躁狂抑郁症患者抑郁与躁狂交替发作.','He was really manic.','他真的很狂热。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gentle"]={"gentle","['dʒent(ə)l]","['dʒɛntl]","adj.温和的",'adj.显赫的,温和的,文雅的,有教养的|||n.贵族|||vt.使显赫,使温顺,抚摸,使缓和|||vi.变温顺','Joanna had a gentle retiring disposition.','乔安娜性格温柔而腼腆。','The dog is so gentle that I am not afraid of it.','这只狗如此温驯，因此我不感到害怕。'}

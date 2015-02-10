@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glib"]={"glib","[glɪb]","[ ɡlib ]","adj.能说善道的",'adj.能说善道的','A glib salesman sell her a set of dish that she do not want.','一位言词伶俐的推销员卖给她一套本来她不要的碟子。','She has a glib tongue.','她口齿伶俐。'}

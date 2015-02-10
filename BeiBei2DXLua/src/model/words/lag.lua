@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lag"]={"lag","[læg]","[læɡ]","n.落后",'n.落后,滞后,落后的人,(两事件之间的)时间间隔,耽搁,桶盖|||vt.落后,投掷,盖上桶盖,耽搁|||vi.走得慢,落后|||adj.最后的','There was a long lag in forwarding mail to us.','转寄给我们的邮件晚了很久才拿到。','I felt completely disorientated with the jet lag.','我乘长途飞机後因生理节奏失调而感到昏昏沉沉的.'}

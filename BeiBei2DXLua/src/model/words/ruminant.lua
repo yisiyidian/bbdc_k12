@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ruminant"]={"ruminant","['ruːmɪnənt]","[ 'ru:minənt ]","n.反刍动物",'n.反刍动物|||adj.反刍的，沉思的','Leather made from the hide of the African and Asian ruminant.','羚皮革非洲、亚洲的羚羊皮做的皮革','ruminant animals','反刍动物'}

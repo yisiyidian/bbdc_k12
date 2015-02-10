@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["first"]={"first","[fɜːst]","[fɝst]","adv.首先",'adv.首先,第一,优先|||adj.第一的,最早的,一流的|||n.(序数词)第一,第一个人或事物,(大学学位的)最优等,(汽车,自行车等的)最低挡','||First|| of all she just smiled, then she started to laugh.','最初她只是微笑，後来才放声大笑。','||First|| off, let\'s see how much it\'ll cost.','首先，让我们看看要花多少钱。'}

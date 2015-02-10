@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gingerly"]={"gingerly","['dʒɪndʒəlɪ]","['dʒɪndʒɚli]","adv.极度小心谨慎地",'adv.极度小心谨慎地','He tasted the coffee gingerly before drinking it.','喝咖啡前，他先小心地尝了一尝。','She sat down in a gingerly manner.','她轻轻地坐下。'}

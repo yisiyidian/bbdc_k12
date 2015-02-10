@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fare"]={"fare","[feə]","[fɛr]","n.费用",'n.费用,食物|||v.进展,进步,经营','I reminded her how much the fare was.','我提醒她车票的价钱.','Let me go shares with you in the taxi fare.','我和你分摊计程车费吧。'}

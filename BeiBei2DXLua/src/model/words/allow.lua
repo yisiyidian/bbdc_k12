@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["allow"]={"allow","[ə'laʊ]","[ə'laʊ]","vt.允许",'vi.(for)考虑到,使可能|||vt.给予,承认,允许,断定','She won\'t allow the children in  until they\'ve wiped their shoes.','孩子们不把鞋擦乾净, 她就不让他们进','This diet allows you one glass of wine a day.','这种规定饮食可让你每天喝一杯酒.'}

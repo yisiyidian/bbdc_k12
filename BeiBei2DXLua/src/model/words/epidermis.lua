@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["epidermis"]={"epidermis","[,epɪ'dɜːmɪs]","[,ɛpɪ'dɝmɪs]","n.表皮",'n.表皮,上皮','That part of the epidermis on his hand is damaged.','他手上那块表皮受到损伤。','The epidermis is the outermost layer of skin.','表皮是最外面一层皮肤。'}

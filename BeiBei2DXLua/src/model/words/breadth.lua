@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["breadth"]={"breadth","[bredθ; -t-]","[brɛdθ]","n.宽度",'n.宽度','We escaped by a hair\'s breadth.','我们九死一生，逃离困境。','The area can easily be worked out if you know the length and the breadth.','如果你知道长度和宽度的话，计算面积就很容易了。'}

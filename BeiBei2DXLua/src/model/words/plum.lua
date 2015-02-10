@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plum"]={"plum","[plʌm]","[plʌm]","n.李子",'n.李子,梅子','He\'s lied his way into a really plum job.','他靠撒谎骗得一份好工作.','He ate the plum, and threw the core away.','他吃掉了李子, 并扔掉了果核。'}

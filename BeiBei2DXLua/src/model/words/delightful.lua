@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["delightful"]={"delightful","[dɪ'laɪtfʊl; -f(ə)l]","[dɪ'laɪtfl]","adj.令人愉快的",'adj.令人愉快的,可喜的','He played a delightful melody on his flute.','他用笛子吹奏了欢快的曲调。','The songs, sometimes accompanied with dance movements, were expressive and delightful.','这些有时带有舞蹈动作的表演唱很有表现力, 很生动。'}

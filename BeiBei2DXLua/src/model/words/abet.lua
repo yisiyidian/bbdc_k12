@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abet"]={"abet","[ə'bet]","[ə'bɛt]","v.教唆",'v.煽动,教唆,教唆某人犯罪','He was abetted in these illegal activities by his wife.','他受妻子怂恿进行这些非法活动.','He abetted these kids to lie.','他怂恿那些孩子撒谎。'}

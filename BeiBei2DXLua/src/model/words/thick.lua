@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thick"]={"thick","[θɪk]","[θɪk]","adj.厚的",'adj.厚的,浓密(重)的,笨的|||adv.厚,浓,密|||n.密集处,最厚处','Offers of help are coming in thick and fast.','四面八方立即伸出援助之手。','He remained loyal to me through thick and thin.','他历尽艰辛始终都忠实於我。'}

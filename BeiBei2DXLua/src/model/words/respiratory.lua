@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["respiratory"]={"respiratory","[rɪ'spɪrət(ə)rɪ; 'resp(ə)rət(ə)rɪ; rɪ'spaɪ-]","['rɛspərətɔri]","adj.呼吸的",'adj.呼吸的','He\'s suffering from an acute infection of the lower respiratory tract.','他患有急性下呼吸道感染.','The old man suffers from respiratory diseases.','那位老人患呼吸道疾病.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["configuration"]={"configuration","[kən,fɪgə'reɪʃ(ə)n; -gjʊ-]","[kən,fɪɡjə'reʃən]","n.结构",'n.结构,布局,形态,格式塔心理完形|||[计算机]配置','Simple configuration is easy to use and maintain.','结构简单，易掌握及维修。','I like the configuration of the room very much.','我喜欢这个房间的布局。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shred"]={"shred","[ʃred]","[ʃrɛd]","vt.&vi.撕成碎片",'vt.&vi.撕成碎片,变成碎片|||n.碎布条,细片,些少','A hanging end or shred.','挂着的末梢，挂着的布条','The jacket was torn to shreds by the barbed wire.','那件夹克让铁丝网给戳破了。'}

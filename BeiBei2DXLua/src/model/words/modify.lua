@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["modify"]={"modify","['mɒdɪfaɪ]","['mɑdɪfaɪ]","vt.修改",'vt.修改,调正,缓和|||vi.修改','He\'ll have to modify his views if he wants to be elected.','他要想当选就得把观点改得缓和些.','The policy was agreed by the committee, but only in a ||modified|| form.','那项政策经修改后才获得委员会同意。'}

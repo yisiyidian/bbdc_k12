@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quicken"]={"quicken","['kwɪk(ə)n]","['kwɪkən]","vt.使加快",'vt.使加快,使...有生气,鼓舞，使（曲线）更弯，使（斜坡）更陡|||vi.变快,苏醒，(孕妇)进入胎动期，变明亮，变活跃','We quickened our pace.','我们加快了步速。','Your heart beat will quicken when you run up the stairs.','跑上楼梯时，心跳会加速。'}

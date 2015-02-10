@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["magic"]={"magic","['mædʒɪk]","['mædʒɪk]","n.魔术",'adj.有魔力的,神奇的|||n.魔法,魔术|||vt.使用魔(变出等)','The paper turned green as if by magic.','这纸魔术般地变成了绿色。','The magician thrilled his audience with his feats of magic.','魔术师用他的魔术技艺使观众们激动。'}

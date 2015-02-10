@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shorthand"]={"shorthand","['ʃɔːthænd]","['ʃɔrthænd]","n.速记",'n.速记,缩写','He took down the minute in shorthand.','他将会议记录速记下来。','A system of shorthand based on phonetic transcription.','表音速记法基于语音表述的速记方法'}

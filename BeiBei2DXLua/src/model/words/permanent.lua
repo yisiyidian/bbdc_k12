@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["permanent"]={"permanent","['pɜːm(ə)nənt]","['pɝmənənt]","adj.永久的",'adj.永久的,持久的|||n.(口)烫发','He\'s been temping for over a year now and wants a permanent job.','他做临时工作已一年多了, 想找个固定的工作.','The arrangement was put on a permanent footing earlier this year.','今年年初就确定了这一安排是长期性的.'}

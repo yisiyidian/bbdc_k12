@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["receipt"]={"receipt","[rɪ'siːt]","[rɪ'sit]","n.收据",'n.收据','You receive the top copy of the receipt, and we keep the carbon.','你把这收据上面的原件收下, 我们保留下面的复写件.','A signed invoice presumes receipt of the shipment.','经过签字的发票表示货物已经收到。'}

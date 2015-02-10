@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["water"]={"water","['wɔːtə]","['wɔtɚ]","n.水",'n.水,雨水,海水，潮汐，海域|||vt.浇水,给水喝，给…供水,给（饮料等）掺水|||vi.形成水，喝水','watered the garden.','浇花园','The smoke made my eyes water.','烟使我的眼睛流泪。'}

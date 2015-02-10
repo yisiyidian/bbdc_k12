@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gnawing"]={"gnawing","['nɔː(r)ɪŋ]","['nɔɪŋ]","adj.痛苦的",'adj.痛苦的,折磨人的|||动词gnaw的现在分词形式','The dog was gnawing a bone.','那条狗在啃骨头。','The dog was gnawing at a bone.','狗在啃一根骨头。'}

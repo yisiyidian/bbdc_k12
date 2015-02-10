@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compound"]={"compound","['kɒmpaʊnd]","['kɑmpaʊnd]","n.混合物",'n.混合物,复合词|||adj.复(混)合的,合成的|||vt.混合,调合,妥协|||vi.混合,妥协','Air is a mixture, not a compound of gases.','空气是气体的混合物，不是化合物。','He compounded with his creditors for a remission of what he owed.','他和他的债权人谈妥免除其债务。'}

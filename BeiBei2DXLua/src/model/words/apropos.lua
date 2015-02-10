@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["apropos"]={"apropos","[,æprə'pəʊ; 'æprəpəʊ]","[,æprə'po]","adv.适当地",'adv.适当地,恰好地，顺便地|||adj.恰当的，适宜的|||pref.关于','||Apropos||, I have something to tell you.','顺便，我有点事跟你说。','I thought he spoke very apropos.','我认为他说得很中肯。'}

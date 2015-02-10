@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["produce"]={"produce","[prə'djuːs]","[prə'dus]","vt.生产",'n.产品,农作物|||vt.生产,提出,引起,分娩,制片|||vi.生产,制造','His announcement produced gasps of amazement.','他宣布的消息引起了一片惊叹声。','He hopes to find the money to produce a film about Japan.','他希望筹集到资金以便拍一部关於日本的影片。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adjective"]={"adjective","['ædʒɪktɪv]","['ædʒɪktɪv]","n.形容词",'n.形容词|||adj.形容词的,似形容词的','In `the black cat\' the adjective `black\' modifies the noun `cat\'.','在｀黑猫＇这一词组中, 形容词｀黑＇修饰名词｀猫＇.','\'My\'is a possessive adjective.','my 是个所有格形容词.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irreversible"]={"irreversible","[ɪrɪ'vɜːsɪb(ə)l]","[,ɪrɪ'vɝsəbl]","adj.不可逆转的",'adj.不可逆转的','The decision is irreversible.','这一决定不能取消.','He suffered irreversible brain damage in the crash.','他在事故中大脑受伤无法治愈.'}

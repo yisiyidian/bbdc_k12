@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["depend"]={"depend","[dɪ'pend]","[dɪ'pɛnd]","vi.依靠",'vi.依靠,相信,指望','A lot will depend on how she responds to the challenge.','在很大程度上将取决於她对这一难题的反应。','We are depending on you to finish the paper by Friday.','我们相信你在星期五之前可以完成这篇论文。'}

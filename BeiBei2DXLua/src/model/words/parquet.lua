@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parquet"]={"parquet","['pɑːkɪ; 'pɑːkeɪ]","[pɑr'ke]","n.镶木地板",'n.镶木地板，剧院正厅部分|||vt.用镶花地板装修','The parquet floors shone like mirrors.','镶木地板亮得象镜子。','don\'t spoil the water on the parquet。','别把水洒在镶木地板上。'}

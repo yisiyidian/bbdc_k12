@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aboriginal"]={"aboriginal","[æbə'rɪdʒɪn(ə)l]","[,æbə'rɪdʒənl]","adj.原始的",'adj.原始的,土著的','The lndians are the aboriginal Americans.','印第安人是美国的土著人.','They managed to wipe out the entire aboriginal population.','他们终于把那些土著人全部消灭了.'}

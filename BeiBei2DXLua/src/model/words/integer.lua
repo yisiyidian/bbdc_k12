@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["integer"]={"integer","['ɪntɪdʒə]","['ɪntɪdʒɚ]","n.完整的事物",'n.完整的事物,整体,整数|||[计算机]整数','Designating an integer not divisible by two, such as1, 3, and5.','奇数的不能被2整除的整数，如1，3和5','The number"1"is not an integer.','1不是整数。'}

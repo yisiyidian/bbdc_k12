@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supposedly"]={"supposedly","[sə'pəʊzɪdlɪ]","[sə'pozɪdli]","adv.想来",'adv.想来(恐怕,按照推测)','||Supposedly||, she\'s a rich woman.','看上去她是一个有钱的女人。','This picture is supposedly worth more than a million pounds.','这幅画大概值一百万镑以上.'}

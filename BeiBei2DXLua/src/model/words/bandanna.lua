@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bandanna"]={"bandanna","[bæn'dænə]","[ bæn'dænə ]","n.印度班丹纳花绸巾",'n.印度班丹纳花绸巾|||=bandana','She could be identified by the gaudy bandanna she wore as a head covering.','只要看到有一块绚丽的印花大手帕扎在头上的，那就是她。','It\'s stupid to take a bandanna as a dish cloth.','拿一块印度班丹纳花绸巾当做抹布来用是愚蠢的。'}

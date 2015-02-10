@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["naturalistic"]={"naturalistic","[nætʃ(ə)rə'lɪstɪk]","[,nætʃrə'lɪstɪk]","adj.自然的",'adj.自然的,自然主义的,博物学的','Sister Carrie was a naturalistic book that it had the usual denominators.','《嘉莉妹妹》是一部自然主义小说,因为有常见的自然主义特色.','These drawings are among his most naturalistic.','这几幅画是最能体现他自然主义手法的作品。'}

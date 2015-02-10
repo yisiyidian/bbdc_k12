@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unearth"]={"unearth","[ʌn'ɜːθ]","[ʌn'ɝθ]","vt.发掘",'vt.发掘,掘出，发现并披露','Many unearthed cultural relics were exhibited at the museum.','博物馆展出了许多出土文物。','I unearthed the portrait from the attic.','我从阁楼上搜出这幅画像。'}

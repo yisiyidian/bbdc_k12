@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hiss"]={"hiss","[hɪs]","[hɪs]","n.嘘声",'n.嘘声,嘶嘶声|||v.发出嘘声,发嘶嘶声|||[计算机]嘘声','Hearing the hiss of gas, he rushed in and turned it off.','听到煤气的嘶嘶声，他冲进来把它关掉。','The iron hissed as it pressed the wet cloth.','熨斗压在湿布上时发出嘶嘶声。'}

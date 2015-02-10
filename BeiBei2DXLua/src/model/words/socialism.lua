@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["socialism"]={"socialism","['səʊʃəlɪz(ə)m]","['soʃəlɪzəm]","n.社会主义",'n.社会主义','From then on we proceeded to build socialism.','从这时起，我们开始建设社会主义。','William Morris was one of the early prophets of socialism.','威廉·莫里斯是社会主义的早期鼓吹者之一.'}

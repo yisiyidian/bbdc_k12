@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coastline"]={"coastline","['kəʊs(t)laɪn]","['kostlaɪn]","n.海岸线",'n.海岸线','The erosion of the coastline by the sea was ignored by people.','海水对海岸的冲刷被人们忽视了。','The ship clung to the coastline.','船紧靠著海岸线.'}

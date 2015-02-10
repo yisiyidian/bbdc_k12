@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["demagogue"]={"demagogue","['deməgɒg]","[ˈdɛməɡɑɡ]","n.煽动者",'n.煽动者,群众煽动者|||v.(以煽动性的方式)对待，煽动','The demagogue has won people\'s support.','那个煽动者赢得了人们的支持。','While his enemies called him a demagogue, his followers considered him a voice of the people.','他的敌人说他是群众煽动家，而他的拥护者则认为他是人民的代言人。'}

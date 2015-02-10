@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["villa"]={"villa","['vɪlə]","['vɪlə]","n.别墅",'n.别墅','The villa is in the mayor\'s possession.','那幢别墅属镇长所有。','He has a big house and an expensive car, not to mention a villa in France.','他有一所大房子和一辆昂贵汽车，且不说在法国还有一座别墅了。'}

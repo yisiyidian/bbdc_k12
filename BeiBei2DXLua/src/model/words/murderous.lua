@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["murderous"]={"murderous","['mɜːd(ə)rəs]","['mɝdərəs]","adj.势不可挡的",'adj.势不可挡的,行凶的','A group of murderous thugs.','一群残忍的罪犯','I couldn\'t withstand a murderous-looking knife.','我无法忍受凶光闪闪的刀。'}

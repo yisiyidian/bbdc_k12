@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mangy"]={"mangy","['meɪn(d)ʒɪ]","['mendʒi]","adj.污秽的",'adj.(兽)疥癣的,污秽的','We need to get rid of that mangy old carpet in the bedroom.','我们得扔掉卧房里的那条又旧又破的地毯。','a mangy dog','患疥廯的狗'}

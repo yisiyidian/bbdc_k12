@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["colander"]={"colander","['kʌləndə; 'kɒl-]","['kɑləndɚ]","n.滤器",'n.滤器,漏勺','When you’ve boiled the cabbage, strain off the water through a colander.','你把卷心菜煮开后，用滤锅把水滤掉。','A colander is a container in the shape of a bowl with holes in it which you wash or drain food in.','滤器，滤过'}

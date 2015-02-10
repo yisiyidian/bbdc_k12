@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["neighbourhood"]={"neighbourhood","['neɪbəhʊd]","[ 'neibəhud ]","n.邻近",'n.邻近，邻里关系','There\'s no post office in the immediate neighbourhood.','附近没有邮局.','Our neighbourhood police are very friendly.','我们邻近的警察非常友善。'}

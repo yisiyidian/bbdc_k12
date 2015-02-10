@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dais"]={"dais","['deɪɪs; deɪs]","[ 'deiis ]","n.讲台",'n.讲台','The dais are the stage of the teachers.','讲台是老师们的舞台。','The teacher leaves the dais to direct the student to make the experiment.','教师离开讲台去指导学生做实验。'}

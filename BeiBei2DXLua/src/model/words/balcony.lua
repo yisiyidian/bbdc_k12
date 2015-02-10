@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["balcony"]={"balcony","['bælkənɪ]","['bælkəni]","n.阳台",'n.阳台','She drew me onto the balcony.','她把我拉到阳台.','The balcony juts out over the street.','那个阳台伸出於街道上方.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["neighbour"]={"neighbour","['neɪbə]","[ ['neɪbə] ]","n.邻居",'n.邻居(邻近的东西,邻近值)|||vt邻接(相邻,接近)','Her parents tried to pair her off with a rich neighbour.','她的父母想让她和一个有钱的邻居结婚。','My neighbour has been tipping dead leaves over the wall into my garden.','我的邻居把落叶从墙头上倒进我的花园里了。'}

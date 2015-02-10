@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pedlar"]={"pedlar","['pɛdlɚ]","[ 'pedlə ]","n.小贩",'n.小贩','I bought to that book from flowing pedlar there.','我从流动小贩那里买到了那本书。','My grandmother dickered with the pedlar over the price of apples.','我祖母为苹果的价格与小贩讨价还价。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clever"]={"clever","['klevə]","['klɛvɚ]","adj.聪明的",'adj.聪明的,机灵的','By clever questioning they trapped him into making a confession.','他们用巧妙的提问诱使他招认了。','It\'s a clever speech, but there was no real meat in it.','这演说很动听，可是没什么内容。'}

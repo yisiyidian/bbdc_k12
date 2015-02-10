@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spectator"]={"spectator","[spek'teɪtə]","['spɛktetɚ]","n.观众",'n.观众,旁观者','A spectator in the cheap standing-room section of an Elizabethan theater.','后座站票观众坐在伊丽莎白式剧场的廉价座位上的观众','Football is our most popular spectator sport.','足球是最受我们欢迎、最能吸引观众的一项运动。'}

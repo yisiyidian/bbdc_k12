@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vanilla"]={"vanilla","[və'nɪlə]","[və'nɪlə]","n.香草",'n.香草|||adj.香草的','Any of various other plants or their seeds or fruits, especially those suggestive of beans, such as the coffee bean or the vanilla bean.','豆形果实植物一种其它豆类植物或其种子或果实，尤指像豆子的那些，如咖啡豆或香子兰豆','Actually they even have vanilla powder.','实际上还可以加香草粉。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["category"]={"category","['kætɪg(ə)rɪ]","['kætəɡɔri]","n.种类",'n.种类,类别','Dealing with a more restricted category.','小（项）的；小前提的与一个更严格的类别有关的','These form an independent category.','这些形成了一个独立的种类。'}

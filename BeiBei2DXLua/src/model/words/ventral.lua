@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ventral"]={"ventral","['ventr(ə)l]","['vɛntrəl]","adj.腹部的",'adj.腹部的','It is vital to exercise ventral muscle.','锻炼好腹部肌肉很重要。','||Ventral|| fins of a fish can tell a lot of details about its life.','鱼的腹鳍可以告诉我们很多它所经历过的事情。'}

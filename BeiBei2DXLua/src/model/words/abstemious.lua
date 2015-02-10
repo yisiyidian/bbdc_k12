@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abstemious"]={"abstemious","[əb'stiːmɪəs]","[əb'stimɪəs]","adj.节制的",'adj.节制的','He is abstemious in life.','他过简朴的生活.','To be abstemious in eating and drinking.','在饮食上节制。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anvil"]={"anvil","['ænvɪl]","['ænvɪl]","n.铁砧",'n.铁砧','The scheme is still on the anvil.','这计划尚在筹划中。','The man put the iron block on the anvil.','那人把铁块放在铁砧上。'}

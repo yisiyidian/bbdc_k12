@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["virulent"]={"virulent","['vɪrʊl(ə)nt; 'vɪrjʊ-]","['vɪrələnt]","adj.有毒的",'adj.有毒的,有恶意的,充满敌意的','A very virulent form of the disease appeared in Belgium.','比利时出现了这种疾病的一种极其危险的变体。','Now he faces virulent attacks from the Italian media.','现在他面临着意大利媒体的恶毒攻击。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gorge"]={"gorge","[gɔːdʒ]","[ɡɔrdʒ]","n.峡谷",'n.峡谷,狭窄入口,饱食,咽喉,大量的食物|||vt.暴食,贪婪地吞咽|||vi.狼吞虎咽,大量地做...','A deep gorge separates the two halves of the city.','一道深谷把这座城市分成两部分。','I could spend each day ||gorging|| on chocolate.','我可以每天只吃巧克力就够了。'}

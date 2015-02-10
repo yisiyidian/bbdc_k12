@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["temptation"]={"temptation","[tem(p)'teɪʃ(ə)n]","[tɛmp'teʃən]","n.诱惑",'n.诱惑,引诱|||v.引,诱','She yielded to temptation and had another chocolate.','她禁不住诱惑, 又吃了一块巧克力.','I can\'t resist the temptation.','我不能抵挡诱惑。'}

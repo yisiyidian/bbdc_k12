@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["frequency"]={"frequency","['friːkw(ə)nsɪ]","['frikwənsi]","n.&adj.频繁",'n.&adj.频繁,频率','We can often correlate age with frequency of illness.','年龄的大小往往与发病率有关.','He varied the transmission frequency.','他变换了无线电传送的频率。'}

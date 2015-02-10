@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impregnate"]={"impregnate","['ɪmpregneɪt]","[ɪm'prɛɡnet]","vt.注入",'vt.注入(灌注,浸渍,充满,饱和,包含)|||adj.浸透的(饱和的)','The drawing is impregnated with the artist\'s personality.','这幅画充分体现了作者的个性.','a cotton wad that was impregnated with ether.','浸透了醚的棉花团'}

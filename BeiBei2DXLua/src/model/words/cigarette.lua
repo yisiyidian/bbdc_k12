@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cigarette"]={"cigarette","[sɪgə'ret]","[ˌsɪɡəˈrɛt, ˈsɪɡəˌrɛt]","n.香烟",'n.香烟','He asked me if I had a cigarette lighter with me.','他问我身上是否带着打火机。','A cigarette set the dry grass alight.','香烟把乾草点著了.'}

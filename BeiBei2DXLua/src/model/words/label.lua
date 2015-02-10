@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["label"]={"label","['leɪb(ə)l]","['lebl]","n.标签",'n.标签；称标记，符号；[建]门或窗户上面的线脚|||vt.贴标签于；把…称为；把…列为；[化]用放射性元素使（元素或原子等）示踪','He attached a label to his baggage.','他往行李上贴了一个标签。','Stick a label on your suitcase.','把标签粘贴在你的手提箱上。'}

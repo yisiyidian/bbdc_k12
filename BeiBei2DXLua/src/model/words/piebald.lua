@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["piebald"]={"piebald","['paɪbɔːld]","['paɪbɔld]","adj.花斑的",'adj.花斑的|||n.花马','It is a piebald pony.','这是一匹黑白斑小型马。','Why is the skin  chairman piebald?','皮肤为什么会长花斑？'}

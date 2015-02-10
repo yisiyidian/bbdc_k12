@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["observe"]={"observe","[əb'zɜːv]","[əb'zɝv]","v.观察",'v.观察,遵守,注意到','We should observe the proprieties.','我们应该遵守礼节。','The police have been ||observing|| his movements.','警方一直监视着他的一举一动。'}

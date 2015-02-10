@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["leaf"]={"leaf","[liːf]","[lif]","n.树叶",'n.树叶,页,活动桌板,花瓣|||vt.翻页|||vi.长叶子,翻页浏览','I\'m shaking like a leaf.','我混身都在发抖。','The falling leaf spiralled to the ground.','落叶盘旋著飘到了地上.'}

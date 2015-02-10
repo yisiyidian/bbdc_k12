@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["portend"]={"portend","[pɔː'tend]","[pɔr'tɛnd]","v.成为...的前兆",'v.成为...的前兆,预知,给与...的警告','Black clouds portend a storm.','乌云是暴风雨的前兆。','His silence portends trouble.','他沉默不语不是好兆头。'}

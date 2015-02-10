@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lord"]={"lord","[lɔːd]","[lɔrd]","int.主",'int.主,天啊|||n.上帝,主','My soul doth magnify the ||Lord||.','我的心赞美上主的伟大.','The blessing of the ||Lord|| be upon you all.','愿主赐福于你们大家。'}

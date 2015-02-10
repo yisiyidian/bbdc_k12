@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obedience"]={"obedience","[ə'biːdɪəns]","[ə'bidjəns]","n.服从",'n.服从,顺从','He enjoined obedience on his followers.','他强迫随从服从.','He demands unquestioning obedience from his followers.','他要求追随者对他绝对服从.'}

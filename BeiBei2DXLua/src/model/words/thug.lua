@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thug"]={"thug","[θʌg]","[θʌɡ]","n.暴徒",'n.暴徒,凶残的罪犯，刺客','The thug grappled him around the neck.','那个歹徒抓住了他的脖子。','The poor man received a savage beating from the thug.','那可怜的人被暴徒们毒打了一顿。'}

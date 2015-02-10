@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wretched"]={"wretched","['retʃɪd]","['rɛtʃɪd]","adj.可怜的",'adj.可怜的,不幸的,卑鄙的，质量差的，恶劣的','Please excuse this wretched apology for a meal.','请包涵这顿不像样的饭菜.','She looked wretched and forlorn, despairing of the arrival of a friend who had promised to meet her.','她看上去又可怜又孤独，对于答应来看她的朋友的到来已不抱希望。'}

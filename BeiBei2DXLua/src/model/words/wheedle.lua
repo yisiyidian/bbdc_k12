@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wheedle"]={"wheedle","['wiːd(ə)l]","['widl]","v.以甜言蜜语诱惑",'v.以甜言蜜语诱惑,用甜言蜜语骗,用甜言骗走','He managed to wheedle his way into the offices.','他连哄带骗地设法进了办公楼。','I knew he was trying to wheedle me into being at his beck and call.','我知道这是他拉拢我，好让我俯首贴耳地为他效劳。'}

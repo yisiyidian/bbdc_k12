@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overhear"]={"overhear","[əʊvə'hɪə]","[,ovɚ'hɪr]","v.无意中听到",'v.无意中听到,偷听','I overheard them saying they were unhappy.','我偶然听到他们说，他们很不快乐。','I overheard some cruel remarks about him.','我无意中听到了一些议论他的粗鲁的话。'}

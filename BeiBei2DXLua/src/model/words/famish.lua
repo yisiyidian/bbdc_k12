@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["famish"]={"famish","['fæmɪʃ]","['fæmɪʃ]","v.（使）挨饿",'v.（使）挨饿,（使）饥饿','When\'s lunch? I\'m famished!','什麽时候吃午饭? 我都快饿死了!','The long drought famished many people.','久旱使很多人陷入饥饿。'}

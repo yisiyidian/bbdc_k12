@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["remaining"]={"remaining","[rɪ'meɪnɪŋ]","[rɪ'menɪŋ]","adj.剩余的",'adj.剩余的','You have the alternative of marrying or remaining a bachelor.','你可以结婚也可以仍做单身汉, 任你选择.','He prides himself on remaining calm in an emergency.','他在紧急关头十分镇静为此感到骄傲。'}

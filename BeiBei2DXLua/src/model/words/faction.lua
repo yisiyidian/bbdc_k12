@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["faction"]={"faction","['fækʃ(ə)n]","['fækʃən]","n.小派系",'n.小派系,内讧','Arguments break out between different faction at the party conference.','在该党的会议上，不同派别之间发生了争论。','There are various factions within the party.','该党内部有各种不同的派别。'}

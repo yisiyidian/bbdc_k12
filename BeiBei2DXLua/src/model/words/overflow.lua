@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overflow"]={"overflow","[əʊvə'fləʊ]","[,ovɚ'flo]","n.溢值",'n.溢值,超值,泛滥|||v.泛滥,溢出,充溢|||[计算机]溢出','The river overflowed its banks.','河水漫过了两岸。','The crowd overflowed the auditorium.','人群挤得礼堂无法容纳。'}

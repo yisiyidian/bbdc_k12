@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pal"]={"pal","[pæl]","[pæl]","n.可程序化行列逻辑",'n.可程序化行列逻辑|||n.朋友,伙伴,同志|||v.结为友','He thinks to come a trick over his old pal.','他想跟他的老朋友开个玩笑。','Stick the boot in, pal!','朋友, 用靴子踢!'}

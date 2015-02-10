@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lesion"]={"lesion","['liːʒ(ə)n]","['liːʒ(ə)n]","n.损害",'n.损害,损伤精神的伤害,障碍','Characterized by the presence of small skin lesions that have the size and appearance of millet seeds.','粟粒状的，粟粒性的以皮肤上出现粟粒大小和外形的小泡为特征的','Loss of the ability to read, usually caused by brain lesions.','读字不能，失读症通常由脑损伤引起的对阅读能力的丧失'}

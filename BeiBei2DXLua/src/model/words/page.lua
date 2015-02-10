@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["page"]={"page","[peɪdʒ]","[ peidʒ ]","n.页",'n.页|||v.(给...)当听差|||vt.(通过扩音器、传呼机等)呼叫','Open your German readers at page 28.','把德语课本翻到第28页。','My teacher asked me to shorten the report to one page.','老师让我把报告缩短为一页。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rhinoceros"]={"rhinoceros","[raɪ'nɒs(ə)rəs]","[raɪ'nɑsərəs]","n.犀牛",'n.犀牛|||n.(对受攻击、批评、侮辱等）麻木不仁','The game wardens tranquillized the rhinoceros with a drugged dart.','猎物保护区管理员用麻醉射器让犀牛静了下来.','The game warden tranquillize the rhinoceros with a drug dart.','猎物保护区管理员用麻醉射器让犀牛静了下来。'}

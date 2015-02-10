@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["side"]={"side","[saɪd]","[saɪd]","n.旁边",'n.旁边,侧,方面|||adj.旁的,侧的|||vt.支持,同意|||vi.支持','A square has four sides but a circle has no sides.','正方形有四条边，而圆形没有边。','She argued her side of the case well.','她有理有据地陈述了自己的意见。'}

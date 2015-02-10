@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disaster"]={"disaster","[dɪ'zɑːstə]","[dɪ'zæstɚ]","n.灾难",'n.灾难','After the disaster there were many who wanted food and shelter.','这场灾难过後，许多人既没有食物又没有住处。','The disaster caused him to waver in his faith.','这件灾难使他对信仰发生了动摇。'}

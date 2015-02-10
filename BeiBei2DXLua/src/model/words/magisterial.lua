@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["magisterial"]={"magisterial","[,mædʒɪ'stɪərɪəl]","[,mædʒɪ'stɪrɪəl]","adj.有权威的",'adj.有权威的；专横的；官吏的','This magazine is quite magisterial in this field.','在这个行业内，这本杂志是很有权威的。','My grandpa is the most magisterial elder of the family.','我的爷爷是家族中最德高望重的长者。'}

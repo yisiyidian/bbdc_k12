@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["castigate"]={"castigate","['kæstɪgeɪt]","[ 'kæstiɡeit ]","v.惩罚",'v.惩罚,苛评,惩治,严厉批评;谴责','Marx never lost an opportunity to castigate colonialism.','马克思从不放过任何谴责殖民主义的机会。','castigate','v. 惩罚,苛评, 惩治, 严厉批评; 谴责'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gladiator"]={"gladiator","['glædɪeɪtə]","['ɡlædɪetɚ]","n.角斗士",'n.角斗士,与野兽搏斗者','This is an arena for gladiators only, for the Titans of the track.','这是个仅为勇士而且是仅为此行里的大力士勇士所设的竞技场。','flat gladiator sandals','-'}

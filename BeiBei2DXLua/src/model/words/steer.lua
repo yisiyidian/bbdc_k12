@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["steer"]={"steer","[stɪə]","[stɪr]","v.引导",'v.引导,驾驶,航行,掌舵|||n.(肉用的)小公牛,暗示','Father tried to steer Jim into becoming a musician.','父亲想说服吉姆将来当音乐家.','He steered me to a table and sat me down in a chair.','他把我领到一张桌子前，让我在椅子上坐下。'}

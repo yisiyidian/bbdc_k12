@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shun"]={"shun","[ʃʌn]","[ʃʌn]","v.避开",'v.避开,规避,避免','This extremist organization has shunned conventional politics.','这个极端主义组织有意避开了传统政治。','He has always shunned publicity.','他一直有意避开媒体的关注。'}

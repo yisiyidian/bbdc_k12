@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stink"]={"stink","[stɪŋk]","[stɪŋk]","n.臭味",'n.臭味,臭气|||v.发臭味,使...发臭|||坏透,招人讨厌','That place ||stank|| of decayed fish.','那地方有烂鱼的臭味。','He ||stank|| the whole house out with his tobacco smoke.','他吸烟把整所房子弄得难闻极了。'}

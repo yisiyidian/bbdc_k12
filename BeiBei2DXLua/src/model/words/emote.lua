@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emote"]={"emote","[ɪ'məʊt]","[ɪ'mot]","vi.激动地表达感情",'vi.激动地表达感情','The more she emotes, the less he listens, and the less he listens, the more strident and emotive she becomes','“她过分地表达感情，而他听得越少，她变得越难受越是要情感用事”','矫饰，矫揉造作，装模作样，装腔作势:例句: to emote over the beauties of nature','装腔作势地赞叹自然之美'}

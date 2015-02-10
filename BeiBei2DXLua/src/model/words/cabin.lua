@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cabin"]={"cabin","['kæbɪn]","['kæbɪn]","n.船舱",'n.船舱,机舱,小木屋|||vt.抑制|||vi.住在小屋','My cabin is on E deck.','我的舱位在E层甲板.','The cabin has a flat stone for a threshold.','这间小屋用一条扁平的石头做门槛。'}

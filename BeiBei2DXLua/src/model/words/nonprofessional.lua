@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nonprofessional"]={"nonprofessional","['nɑnprə'fɛʃənl]","[ ,nɔnprə'feʃənəl ]","adj.无职业的",'adj.无职业的,无专长的','My uncle is a nonprofessional archaeologist.','我叔叔是个业余考古学家。','She is a nonprofessional secretary.','她是个不职业的秘书'}

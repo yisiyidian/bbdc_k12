@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["refraction"]={"refraction","[rɪ'frækʃ(ə)n]","[rɪ'frækʃən]","n.折光",'n.折光,折射','The bending of the light rays is caused by refraction.','光线的弯曲是由折射造成的。','||Refraction|| has been dealt with on page 156.','折射在前面的第156页已经谈过了。'}

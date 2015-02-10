@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peremptory"]={"peremptory","[pə'rem(p)t(ə)rɪ; 'perɪm-]","[pə'rɛmptəri]","adj.专横的",'adj.专横的,不容反抗的，断然中止的','He made a peremptory order.','他下达了一个不容许辩驳的命令。','With a brief, almost peremptory gesture he pointed to a chair.','他做了一个简单的手势，近乎霸道地指着椅子。'}

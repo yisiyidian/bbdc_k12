@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stunning"]={"stunning","['stʌnɪŋ]","['stʌnɪŋ]","adj.足以使人晕倒的",'adj.足以使人晕倒的,极好的','His plays are distinguished only by their stunning mediocrity.','他的戏剧与众不同之处就是平凡得出奇.','He wears a stunning tie.','他系着一条很棒的领带。'}

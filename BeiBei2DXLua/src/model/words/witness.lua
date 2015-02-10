@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["witness"]={"witness","['wɪtnɪs]","['wɪtnəs]","n.目击者",'n.目击者,证人|||vt.目击,见证,出席,观察,经历|||vi.为(宗教信仰)做见证,证明','Let the witness be sworn in.','让证人宣誓作证.','He was not an impartial witness because of his affinity with the accused.','他不是公正的见证人, 因为他与被告有姻亲关系.'}

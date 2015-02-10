@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["addict"]={"addict","['ædɪkt]","['ædɪkt]","vt.使...耽溺",'vt.使...耽溺,使...上瘾|||n.耽溺者,上瘾者','She was addicted to rock music.','她热衷于摇滚乐。','He was addicted to cocaine.','他吸可卡因上瘾。'}

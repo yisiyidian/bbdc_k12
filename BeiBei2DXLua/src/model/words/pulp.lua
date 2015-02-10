@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pulp"]={"pulp","[pʌlp]","[pʌlp]","n.果肉",'n.果肉,纸浆|||v.化成纸浆,除去...果肉,制成纸浆','The victim\'s face was battered to a pulp.','受害者的脸打得血肉模糊.','These vegetables have been boiling too long; they\'re cooked to a pulp.','这些蔬菜煮的时间太长了，都煮成糊了。'}

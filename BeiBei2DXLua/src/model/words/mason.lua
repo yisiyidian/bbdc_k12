@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mason"]={"mason","['meɪs(ə)n]","['mesn]","n.泥瓦匠",'n.泥瓦匠,共济会会员|||v.用砖瓦砌成','It is very difficult to find a good mason now.','现在很难找到好的泥瓦匠了。','He carved marble faster than any mason.','他雕刻大理石的速度比任何石匠都快。'}

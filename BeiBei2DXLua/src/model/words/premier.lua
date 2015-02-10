@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["premier"]={"premier","['premɪə; 'priː-]","[prɪ'mɪr]","n.总理",'n.总理,首相|||adj.第一的,首位的,最初的','||Premier|| Zhou is a distinguished politician.','周总理是一位卓越的政治家。','The premiers of the two countries met in Geneva yesterday.','两国首相昨天在日内瓦会晤。'}

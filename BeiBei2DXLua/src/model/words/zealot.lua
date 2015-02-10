@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["zealot"]={"zealot","['zelət]","['zɛlət]","n.热心者",'n.热心者,狂热者|||Zealot:犹太教的狂热信徒','In short, he was a religious zealot.','简而言之，他是一个宗教狂热分子。','The artistic zealot devoted his life to the completion of a great masterpiece.','这位艺术热心者奉献他一生来完成一幅伟大的作品。'}

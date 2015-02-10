@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rattle"]={"rattle","['ræt(ə)l]","['rætl]","vi.嘎嘎作响",'vi.嘎嘎作响,喋喋不休|||vt.使激动,使作响,急促地谈讲|||n.嘎嘎声,急促的谈话','He rattled on about his job, not noticing how bored she was.','他只顾喋喋不休地说自己工作上的事，没注意到她有多麽腻烦。','The boy put some stones in a tin box and made them rattle.','男孩把一些石子放在铁盒子里，然后摇得哗啦哗啦地响。'}

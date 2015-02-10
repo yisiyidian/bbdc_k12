@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["integrate"]={"integrate","['ɪntɪgreɪt]","['ɪntɪɡret]","v.v.整合",'v.v.整合,使...成整体','He didn\'t integrate successfully into the Italian way of life.','他没有成功融入到意大利的生活方式中去。','||Integrating|| the kids with the community is essential.','使孩子们融入社区是非常必要的。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["salacious"]={"salacious","[sə'leɪʃəs]","[sə'leʃəs]","adj.好色的",'adj.好色的,淫荡的','The teacher find some salacious pictures in his magazine.','老师在他的杂志里发现了一些色情图片。','Her sensuous grace roused his salacious nature.','她的美丽优雅勾起了他好色的本性。'}

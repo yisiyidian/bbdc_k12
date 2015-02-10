@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emerging"]={"emerging","[ɪ'mɝdʒɪŋ]","[ i'mə:dʒiŋ ]","adj.新兴的",'adj.新兴的；出现的；形成的','The emerging technology at the time was web services.','当时的新兴技术是web服务。','The emerging conventional wisdom about world farming is gloomy.','新兴的世界农业传统观念前景堪忧。'}

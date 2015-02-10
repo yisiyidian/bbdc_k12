@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ketchup"]={"ketchup","['ketʃəp; -ʌp]","['kɛtʃəp]","n.蕃茄酱",'n.蕃茄酱|||=catchup','The ketchup is delicious.','番茄酱太好吃了。','Mustard and ketchup are condiments.','芥末和番茄酱都是调味品。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nostalgia"]={"nostalgia","[nɒ'stældʒə]","[nə'stældʒə]","n.乡愁",'n.乡愁,向往过去,怀旧之情','The sight inspired him with nostalgia.','这景象激起了他的怀旧之情。','Her work is pervaded by nostalgia for a past age.','她的作品充满了怀旧之情。'}

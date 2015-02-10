@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rescue"]={"rescue","['reskjuː]","['rɛskju]","n.援救",'n.援救,解救,营救队|||vt.援救,救出,营救','Going to their rescue in a rowing-boat is a bit of a forlorn hope.','乘划艇去救他们, 希望不大.','He dived from the bridge to rescue the drowning child.','他从桥上跳入水中去抢救那溺水儿童.'}

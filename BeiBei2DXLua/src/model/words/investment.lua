@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["investment"]={"investment","[ɪn'ves(t)m(ə)nt]","[ɪn'vɛstmənt]","n.投资",'n.投资,投入,投资额','The firm has made a huge investment in new plant.','该公司投入巨资购置新设备.','Our investment accounts return a high rate of interest.','我们的投资项目利润回报很高。'}

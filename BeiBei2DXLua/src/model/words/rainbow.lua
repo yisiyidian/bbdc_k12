@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rainbow"]={"rainbow","['reɪnbəʊ]","['renbo]","n.彩虹",'n.彩虹|||adj.五彩缤纷的','Now we can bask in the rainbow of the memories that we\'ll nurture in the years ahead.','在未来岁月里，让我们在记忆的长虹里永远珍藏对他的怀念。','Do you see rainbow?','你看到彩虹了吗？'}

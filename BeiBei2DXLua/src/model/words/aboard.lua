@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aboard"]={"aboard","[ə'bɔːd]","[ə'bɔrd]","adv.在船上",'adv.在船上,在火车上,在飞机上|||prep.上船，上飞机，上车','We travelled aboard the same flight.','我们搭乘同一班机.','All aboard!','请上船'}

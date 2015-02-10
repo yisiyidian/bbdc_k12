@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rap"]={"rap","[ræp]","[ræp]","n.轻敲",'n.轻敲,拍击,责骂,厉声说出,说唱音乐,谈话,最少量|||vi.轻敲,敲门,表演说唱音乐,畅谈|||vt.抓,抢,拍击','There is a light rap at the door.','有轻轻的敲门声。','The chairman rapped on the table for order.','主席敲击桌子以维持秩序。'}

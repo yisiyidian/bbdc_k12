@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cloying"]={"cloying","['klɔɪɪŋ]","[ 'klɔiiŋ ]","adj.因过量而厌烦的",'adj.因过量而厌烦的,甜得发腻的,过于感性的|||动词cloy的现在分词形式','The pleasures of idleness soon ||cloy||.','无所事事的享乐很快就使人厌烦了。','She has ||cloyed|| with rich food.','她已经吃腻了美食。'}

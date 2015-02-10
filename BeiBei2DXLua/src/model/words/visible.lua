@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["visible"]={"visible","[ˈvɪzəbl]","['vɪzəbl]","adj.可见的",'adj.可见的,看得见的','Police regulations prescribe that an officer\'s number must be clearly visible.','警员条例要求执行职务者的号码标志必须清楚易见.','The body was visible below the surface of the lake.','尸体在湖水下清晰可见.'}

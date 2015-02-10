@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["beatific"]={"beatific","[biːə'tɪfɪk]","[,biə'tɪfɪk]","adj.祝福的",'adj.祝福的,幸福的,快乐的，慈祥的','She has a beatific smile.','她有着天使般的微笑。','All parents wish their children could have a safe and beatific life.','父母都渴望他们的孩子们平安快乐。'}

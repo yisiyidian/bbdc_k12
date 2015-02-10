@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["formulate"]={"formulate","['fɔːmjʊleɪt]","['fɔrmjə'let]","vt.规划",'vt.规划；用公式表示；明确地表达','The compost is specially formulated for pot plants.','此混合肥料专门用于盆栽植物。','He formulated his thought clearly.','他清楚确切地表达了自己的思想。'}

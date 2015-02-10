@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["con"]={"con","[kɒn]","[kɑn]","n.反对论点",'vt.精读,学习,默记,掌舵,欺骗|||adv.反对地|||adj.欺诈的|||n.反对论点，反对者,欺骗,操舵台,掌舵','The resolution was carried nem con.','决议案获一致通过.','She conned me out of ￡100.','她骗走我100英镑.'}

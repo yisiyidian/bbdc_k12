@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["canoe"]={"canoe","[kə'nuː]","[kə'nu]","n.独木舟",'n.独木舟,轻舟|||v.乘独木舟','The canoe was sucked (down) into the whirlpool.','那独木舟卷进漩涡里了.','If you stand up you\'ll overbalance the canoe.','要是站起来, 能把独木舟弄翻.'}

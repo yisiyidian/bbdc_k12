@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aunt"]={"aunt","[ɑːnt]","[ænt]","n.姨",'n.伯母,姑,婶,姨','The girl is in the custody of her aunt after her parents\' death.','自从她的父母去世后, 那个女孩受她的姨母保护。','My aunt gave me one of her brooches as a keepsake.','我姑母把她的一支胸针送给我作记念。'}

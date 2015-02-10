@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glee"]={"glee","[gliː]","[ɡli]","n.欢乐",'n.欢乐,高兴','My children cried out with glee when I said I would take them to the zoo.','当我说带孩子们去动物园时，他们高兴地喊叫起来。','My children shouted with glee when they saw their father.','我的孩子们看到他们的父亲时非常高兴地叫起来。'}

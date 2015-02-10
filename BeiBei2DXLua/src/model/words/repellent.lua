@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["repellent"]={"repellent","[rɪ'pel(ə)nt]","[rɪ'pɛlənt]","adj.排斥的",'adj.排斥的(防水的,弹回的)|||n.排斥力(防水布,防护剂)','They sprayed aerosol insect repellent into the faces of police.','他们将喷雾驱虫剂喷在了警察的脸上。','She still found the place repellent.','她还是觉得这个地方令人厌恶。'}

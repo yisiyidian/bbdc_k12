@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["map"]={"map","[mæp]","[mæp]","n.地图",'n.地图|||v.映射,绘制...之地图,计划|||[计算机]存储区分配图','The red lines on the map represent railways.','这张地图上的红线代表铁路。','On the wall of his office was a large map.','在他办公室的墙上是一幅大地图。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discussion"]={"discussion","[dɪ'skʌʃ(ə)n]","[dɪ'skʌʃən]","n.讨论",'n.讨论|||v.讨论,商议','The whole discussion pivots on this one point.','整个讨论内容均以此为中心。','In their discussion, I was in favor of Mr. Li.','在他们的争论中, 我支持李先生。'}

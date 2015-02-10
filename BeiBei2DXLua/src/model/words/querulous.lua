@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["querulous"]={"querulous","['kwerʊləs; 'kwerjʊləs]","['kwɛrələs]","adj.鸣不平的",'adj.鸣不平的,发牢骚的,易怒的','He was not one who was inclined to be querulous.','他并不是爱吹毛求疵的人。','He complained in a querulous voice about having been woken up.','他用不耐烦的声音埋怨别人吵醒了他。'}

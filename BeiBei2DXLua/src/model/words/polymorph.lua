@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["polymorph"]={"polymorph","['pɒlɪmɔːf]","['pɑli,mɔrf]","n.[生]多形体",'n.[生]多形体,[化]多晶型物','Improved ||Polymorph||','强化变形术，奥术第四层天赋','||Polymorph|| powers change a target\'s physical form in some way.','变形威能用某些方法改变目标的物理形态。'}

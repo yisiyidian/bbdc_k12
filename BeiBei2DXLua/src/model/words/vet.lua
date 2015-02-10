@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vet"]={"vet","[vet]","[vɛt]","n.兽医",'n.兽医，老兵|||vt.诊疗，审查|||vi.作兽医','Injecting animals is all in a day\'s work for a vet.','给动物注射是兽医的日常工作.','A vet dispatched the injured horse.','兽医把那匹受伤的马杀死了.'}

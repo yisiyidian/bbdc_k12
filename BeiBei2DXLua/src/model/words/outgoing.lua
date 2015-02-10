@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outgoing"]={"outgoing","['aʊtgəʊɪŋ]","['aʊt'goɪŋ]","adj.对人友好的",'adj.对人友好的，开朗的；出发的，外出的；即将离职的；乐于助人的|||n.外出；流出；开支|||v.超过；优于（outgo的ing形式）','He is an outgoing and lively person.','他是个性格开朗而又活泼的人.','She is frank and outgoing.','她很爽朗.'}

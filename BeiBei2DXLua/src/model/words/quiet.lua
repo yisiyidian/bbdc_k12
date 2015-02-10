@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quiet"]={"quiet","['kwaɪət]","['kwaɪət]","adj.安静的",'n.安静,闲适,平静|||adj.安静的,静止的,宁静的|||adv.安静地|||vt.&vi.使...平静,使...安心','Ask him to keep quiet.','让他保持安静。','a quiet place for studying.','安静的学习场所'}

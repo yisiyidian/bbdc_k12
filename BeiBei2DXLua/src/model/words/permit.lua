@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["permit"]={"permit","[pə'mɪt]","[pɚ'mɪt]","n.许可证",'n.许可证,执照|||vt.&vi.允许,许可','You can\'t work here without a work permit.','你没有许可证就不能在这里工作。','I\'ll come after the meeting if time permits.','如果时间许可的话，我开完会就来。'}

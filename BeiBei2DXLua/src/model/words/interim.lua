@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interim"]={"interim","['ɪnt(ə)rɪm]","['ɪntərɪm]","adj.中间的",'adj.中间的,暂时的,临时的|||n.中间时期,过渡时期,暂定','The full report isn\'t ready yet, but you can see the interim report.','正式报告尚未写好，但你可以先看看这份临时报告。','They submitted an interim report.','他们递交了一份临时报告。'}

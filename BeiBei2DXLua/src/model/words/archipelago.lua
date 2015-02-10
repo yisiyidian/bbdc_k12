@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["archipelago"]={"archipelago","[,ɑːkɪ'peləgəʊ]","['ɑrkə'pɛlə'go]","n.群岛",'n.群岛,多岛海','And he spent his senility on an archipelago, far away from here.','当他年老的时候他住在了一个群岛上，远离这里。','In the game Age of Empire,archipelago is one of the most though terrain.','帝国时代中，群岛是最麻烦的地形之一'}

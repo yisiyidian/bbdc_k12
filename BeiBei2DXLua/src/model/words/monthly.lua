@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["monthly"]={"monthly","['mʌnθlɪ]","['mʌnθli]","adj.每月的",'adj.每月的，持续一个月的，每月发生的|||adv.每月,按月|||n.月刊|||n.(复数）monthlies:月经','We will pay for houses by monthly instalments.','我们将按月分期付款买房。','The library gets the usual monthly publications.','这家图书馆订的是那些常见的月刊。'}

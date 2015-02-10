@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irrigate"]={"irrigate","['ɪrɪgeɪt]","['ɪrəget]","vi.进行灌溉",'vi.进行灌溉|||vt.灌溉','We have irrigated the desert area to make it fertile.','我们已经灌溉了荒芜地区使它肥沃。','They are ||irrigating|| with water.','他们正用水灌溉土地。'}

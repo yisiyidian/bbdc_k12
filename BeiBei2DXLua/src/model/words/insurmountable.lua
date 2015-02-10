@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insurmountable"]={"insurmountable","[,ɪnsə'maʊntəb(ə)l]","[,ɪnsɚ'maʊntəbl]","adj.不能克服的",'adj.不能克服的,难以对付的','The problems are not insurmountable.','问题不是无法解决的.','Lack of money has proved an almost insurmountable obstacle.','资金不足已成为一个几乎无法逾越的障碍.'}

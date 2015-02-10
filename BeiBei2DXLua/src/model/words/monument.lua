@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["monument"]={"monument","['mɒnjʊm(ə)nt]","['mɑnjumənt]","n.纪念碑",'n.纪念碑,历史遗迹','The monument was fronted with stone.','纪念碑的正面是石料做的.','Nelson\'s Column is a famous monument in London.','纳尔逊纪念碑是伦敦著名的纪念碑.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outshine"]={"outshine","[aʊt'ʃaɪn]","['aʊt'ʃaɪn]","vt.优于",'vt.优于,使相形见拙，光亮强过|||vi.发光','Jesse has begun to outshine me in sports.','杰西开始在体育上使我相形见绌。','China\'s top 500 outshine worldwide competitors','世界五百强中的中国企业比起国外的竞争对手更优秀'}

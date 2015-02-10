@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sentimental"]={"sentimental","[sentɪ'ment(ə)l]","['sɛntə'mɛntl]","adj.感伤性的",'adj.感伤性的,感情脆弱的','The novel is sentimental twaddle.','这部小说纯粹是无病呻吟.','She\'s too sentimental about her cat.','她对她的猫未免太牵肠挂肚了。'}

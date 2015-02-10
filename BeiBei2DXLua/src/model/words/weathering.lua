@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["weathering"]={"weathering","['weðərɪŋ]","['wɛðərɪŋ]","n.风化",'n.风化|||动词weather的现在分词形式','The effects of weathering can be simulated in the laboratory.','在实验室里可以模拟各种天气产生的影响.','The movement of water is also an important weathering force.','水的运动也是一种重要的风化作用力.'}

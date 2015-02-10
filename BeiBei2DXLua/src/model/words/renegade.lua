@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["renegade"]={"renegade","['renɪgeɪd]","['rɛnɪɡed]","n.背教者",'n.背教者,变节者,脱党者|||adj.背弃的,脱离的,叛徒的|||v.背叛,背弃,脱离','Three men were shot dead by a renegade policeman.','3名男子被一个变节警察开枪打死。','Sir, I refuse to listen to any renegade talk!','先生，我不想再听任何反逆的言论！'}

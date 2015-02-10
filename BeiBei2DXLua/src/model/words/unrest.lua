@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unrest"]={"unrest","[ʌn'rest]","[ʌn'rɛst]","n.不安的状态",'n.不安的状态,动荡的局面','Unemployment breeds social unrest.','失业能造成社会不安定.','There\'s (a feeling of) unrest in the air.','四处充满了不安（的感觉）.'}

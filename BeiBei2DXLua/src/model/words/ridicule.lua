@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ridicule"]={"ridicule","['rɪdɪkjuːl]","['rɪdɪ'kjʊl]","n.嘲笑",'n.嘲笑,愚弄,笑柄|||v.嘲笑,嘲弄,愚弄','The fear of ridicule is a very effective sanction.','人们不做违法乱纪的事, 其中一个重要因素就是怕人耻笑.','Scornfully contemptuous ridicule; derision.','嘲讽责备地鄙视可笑之事；嘲笑'}

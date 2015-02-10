@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gust"]={"gust","[gʌst]","[ɡʌst]","n.突然一阵",'n.突然一阵|||n.风味|||vi.猛吹','A gust of chilly autumn wind is blowing from the north.','一阵冷飕飕的秋风从北方吹来。','A gust of wind blew my hat off.','一阵大风吹走了我的帽子。'}

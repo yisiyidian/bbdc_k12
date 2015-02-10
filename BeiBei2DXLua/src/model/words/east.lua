@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["east"]={"east","[iːst]","[ist]","n.东",'adj.东方的|||adv.向东方|||n.东,东方','I was born in the east of the country.','我出生于这个国家的东部。','Take the east road; it\'s the shortest way.','走东边这条路吧，这是最近的路。'}

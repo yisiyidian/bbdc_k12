@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["previously"]={"previously","['priviəsli]","[ 'pri:vju:sli ]","adv.以前(预先)",'adv.以前(预先)','Our previously opposed views are beginning to converge.','我们原来相互对立的观点开始趋於一致.','The land previously cultivated returned to forest.','以前开垦过的那片土地现在又成了森林了。'}

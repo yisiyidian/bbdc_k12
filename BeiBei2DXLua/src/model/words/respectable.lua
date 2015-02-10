@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["respectable"]={"respectable","[rɪ'spektəb(ə)l]","[rɪ'spɛktəbl]","n.品格高尚的人",'n.品格高尚的人|||adj.值得尊重的,人格高尚的,不少的','She is a respectable married woman.','她是个受人尊敬的已婚妇女。','It\'s not respectable to be drunk on the street.','在大街上醉倒是不体面的。'}

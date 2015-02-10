@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scurrilous"]={"scurrilous","['skʌrɪləs]","['skɝələs]","adj.说话粗鄙恶劣的",'adj.说话粗鄙恶劣的，嘴损的，下流的，恶言诽谤的','||Scurrilous|| and untrue stories were being invented.','有人正在捏造虚假诽谤的故事。','It is sad that scurrilous rumour made the newspapers and has been presented as fact.','令人感到悲哀的是，这样一则粗俗无礼的传闻居然被报纸大肆，并且被写成了所谓的事实。'}

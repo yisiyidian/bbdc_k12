@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kit"]={"kit","[kɪt]","[ kit ]","n.装备",'n.装备,工具箱|||vt.装备','Always keep a first-aid kit handy.','手边要经常有个急救箱.','The soldiers shouldered their kit and moved on.','士兵们背起行装，继续前进。'}

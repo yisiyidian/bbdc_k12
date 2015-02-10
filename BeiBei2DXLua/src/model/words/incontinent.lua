@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incontinent"]={"incontinent","[ɪn'kɒntɪnənt]","[ in'kɔntinənt ]","adj.不能自制的",'adj.不能自制的(不能容纳的,不能保持的)|||adv.立即(即刻,仓促地)','You will become incontinent if you fall in love with her!','如果你爱上她，会变得无法自制！','His diseased bladder left him incontinent.','病变的膀胱使他小便失禁。'}

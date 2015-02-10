@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["married"]={"married","['mærɪd]","['mærɪd]","adj.已婚的",'adj.已婚的','They married after a brief courtship.','他们恋爱不久就结婚了。','He hadn\'t been married for long when he realized he had caught a tartar.','他结婚不久，就察觉到娶了一个泼妇。'}

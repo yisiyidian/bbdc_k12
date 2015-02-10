@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tablecloth"]={"tablecloth","['teɪb(ə)lklɒθ]","['teblklɔθ]","n.桌布",'n.桌布,台布','I\'ll dust the table before putting the tablecloth on.','我要在铺台布以前先把桌上的灰掸干净。','The wind blew everything off the table, tablecloth and all.','风把桌子上的所有东西连桌布都吹掉了.'}

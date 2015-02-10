@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["militant"]={"militant","['mɪlɪt(ə)nt]","['mɪlɪtənt]","adj.好战的",'adj.好战的,积极从事或支持使用武力的','The speaker is shouted down by militant union members.','演讲者被富有战斗精神的工会会员声音所压倒。','Some militant leaders want to merge with white radicals.','一些好斗的领导人想和白人中的激进派联合。'}

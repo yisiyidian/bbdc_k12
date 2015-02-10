@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fortunate"]={"fortunate","['fɔːtʃ(ə)nət]","['fɔrtʃənət]","adj.幸运的",'adj.幸运的,侥幸的','A fortunate encounter brought the two friends together after a long separation.','两位老朋友长期分离这次才有幸相遇.','He is the fortunate possessor of a fine singing voice.','他很幸运,有一副好嗓子.'}

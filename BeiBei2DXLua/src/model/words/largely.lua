@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["largely"]={"largely","['lɑːdʒlɪ]","['lɑrdʒli]","adv.大部分",'adv.大部分,主要地','The team\'s success was largely due to her efforts.','该队的成功在很大程度上是由於她的努力。','Cheques have largely replaced money as a means of exchange.','作为交易方式, 支票已经很大程度地取代了现金。'}

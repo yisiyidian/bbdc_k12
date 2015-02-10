@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bald"]={"bald","[bɔːld]","[bɔld]","adj.秃头的",'adj.秃头的,单调的|||vt.&vi.使变秃头','Have you heard the one about the bald policeman?','你听说过那个秃头警察的笑话吗?','He has a theory that wearing hats makes men go bald.','他有个看法是男人戴帽子就会秃顶.'}

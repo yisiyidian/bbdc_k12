@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["untenable"]={"untenable","[ʌn'tenəb(ə)l]","[ʌn'tɛnəbl]","adj.不能防守的",'adj.不能防守的,不能维持的,支持不住的','He claimed the charges against him were untenable.','他声称对他的那些指控不值一驳。','This argument is untenable from an intellectual, moral and practical standpoint.','从知识、道德和现实的角度来看，这种论点是站不住脚的。'}

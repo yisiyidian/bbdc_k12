@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supernatural"]={"supernatural","[,suːpə'nætʃ(ə)r(ə)l; ,sjuː-]","[,supɚ'nætʃrəl]","adj.超自然的",'adj.超自然的,神奇的','I don\'t believe in the supernatural.','我不相信超自然现象.','Ghosts and evil spirits are supernatural.','幽灵和恶鬼都是超自然的.'}

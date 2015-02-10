@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["felt"]={"felt","[felt]","[fɛlt]","n.毛毯",'n.毛毯,毡|||vt.制毡,使粘结|||vbl.感到(feel的过去式及过去分词)','I felt comfortable sailing on the smoothness of the sea.','在平静的海面上航行我感到很舒服。','I felt humiliation at her remarks.','听到她的话我感到受辱。'}

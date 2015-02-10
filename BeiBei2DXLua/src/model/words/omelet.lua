@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["omelet"]={"omelet","['ɔmlit]","[ 'ɔmlit ]","n.煎蛋卷",'n.煎蛋卷,鸡蛋卷','She cooks omelets in butter as they do in France.','她用奶油做法国式的蛋卷。','Her preference in foods is omelets.','她喜爱的食物是煎蛋卷。'}

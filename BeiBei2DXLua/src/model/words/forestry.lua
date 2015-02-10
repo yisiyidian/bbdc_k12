@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forestry"]={"forestry","['fɒrɪstrɪ]","['fɔrɪstri]","n.林产",'n.林产,森林地','||Forestry|| appertains to geography.','森林学和地理学有关。','||Forestry|| has advanced with exceptional speed.','植树造林以罕见的速度得到了发展。'}

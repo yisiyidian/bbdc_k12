@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scintilla"]={"scintilla","[sɪn'tɪlə]","[sɪn'tɪlə]","n.一点点",'n.一点点，微量，火花,火星','There is not a scintilla of truth in what she says.','她的话没有半句可信。','He says there is "not a scintilla of evidence" to link him to any controversy.','他说“没有丝毫证据”能将他跟任何争议联系在一起。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["regiment"]={"regiment","['redʒɪm(ə)nt]","['rɛdʒɪmənt]","n.（军队）团",'n.（军队）团,大量（人或物）|||v.组编成团，组织，严格管制','A whole tank regiment was completely immobilized by enemy air attacks.','敌军的空袭将整个坦克团完全钳制住了.','Such an act of cowardice by an officer shames his whole regiment.','一个军官作出如此胆怯的行为使整个团都蒙受羞辱。'}

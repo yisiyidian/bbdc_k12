@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scrape"]={"scrape","[skreɪp]","[skrep]","n.刮掉",'n.刮掉,擦掉,刮擦声|||vt.&vi.刮掉,擦掉','I must have scraped some of the paint off when I was parking the car.','我准是停放汽车的时候刮掉了一些油漆。','||Scrape|| your shoes on the door mat before you come in.','进屋前先在门口擦鞋垫上擦一擦鞋子。'}

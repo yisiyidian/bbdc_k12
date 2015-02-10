@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["workman"]={"workman","['wɜːkmən]","['wɝkmən]","n.工人",'n.工人,工匠,技工','He is only an occasional workman.','他只是个临时雇工。','The workman is still busy concreting the road.','工人还在忙着用混凝土铺路。'}

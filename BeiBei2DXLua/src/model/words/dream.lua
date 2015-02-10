@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dream"]={"dream","[driːm]","[drim]","n.梦",'n.梦,理想|||vt.&vi.做梦,想象','So you want a rise? ||Dream|| on!','那麽说你想加薪？做梦去吧！','He dreams of one day becoming a famous violinist.','他梦想有朝一日成为著名的小提琴家。'}

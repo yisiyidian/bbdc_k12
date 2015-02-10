@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swift"]={"swift","[swɪft]","[swɪft]","adj.快的",'adj.快的,迅速的|||adv.快速地|||n.雨燕,线轴','With the failure of the peace talks all hopes of a swift end to the war have flown out of the window.','和谈失败後, 迅速结束战争的希望都已化为乌有.','a swift retort.','立即的反驳'}

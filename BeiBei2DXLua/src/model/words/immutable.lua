@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["immutable"]={"immutable","[ɪ'mjuːtəb(ə)l]","[ɪ'mjutəbl]","adj.不可变的",'adj.不可变的,不变的,不能变的','Nothing is immutable.','没有东西是一成不变的。','Alter what is changeable, and accept what is immutable.','改变能改变的，接受不能改变的。'}

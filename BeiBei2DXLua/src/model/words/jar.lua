@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jar"]={"jar","[dʒɑː]","[dʒɑr]","n.广口瓶",'n.不和谐,刺耳声,震动,震惊,广口瓶|||vi.发刺耳声,不协调,震动|||vt.扰乱,使不稳定','She opened up a glass jar of plums.','她打开了装满梅子的玻璃罐。','Sometimes a light remark jarred on her father.','有时候一句玩笑就会令她父亲不快。'}

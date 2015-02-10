@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ineffable"]={"ineffable","[ɪn'efəb(ə)l]","[ɪn'ɛfəbl]","adj.无法形容的",'adj.无法形容的,说不出的,不应说出的','The beauty of a sunset is ineffable.','日落的美是很难以形容的。','They threw this eager vitality of theirs into a vehement striving after the ineffable.','他们把他们的这种热烈的精力都投入了对一种无法表达的事物的强烈追求。'}

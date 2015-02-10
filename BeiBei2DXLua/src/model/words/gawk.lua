@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gawk"]={"gawk","[gɔːk]","[ɡɔk]","n.呆子",'n.呆子,腼腆的人|||vi.呆呆地看着','My boyfriend is a gawk guy.','我男朋友是个腼腆的人。','The youth continued to gawk at her and did not answer.','那个年轻人依然傻傻地望着她，没有答话。'}

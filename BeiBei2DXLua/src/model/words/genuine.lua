@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["genuine"]={"genuine","['dʒenjʊɪn]","['dʒɛnjʊɪn]","adj.真正的",'adj.真正的,真实的,诚恳的','It appears to be genuine, but I have my suspicions (about it).','这看来好像是真的, 不过我（对此）有怀疑.','Viewed from the outside, the company seemed genuine.','从外表上看, 这家公司倒像是真的.'}

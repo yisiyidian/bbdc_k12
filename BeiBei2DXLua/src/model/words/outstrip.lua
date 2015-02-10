@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outstrip"]={"outstrip","[aʊt'strɪp]","[,aʊt'strɪp]","v.超过",'v.超过,跑过|||vt.胜过,超过','It is a case of the student outstripping the teacher.','这是一个学生超过老师的例子。','We soon outstripped the slower runners.','我们很快就超过那些跑得慢的人.'}

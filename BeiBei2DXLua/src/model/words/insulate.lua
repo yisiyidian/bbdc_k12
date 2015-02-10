@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insulate"]={"insulate","['ɪnsjʊleɪt]","['ɪnsəlet]","v.使...绝缘",'v.使...绝缘,隔离|||[计算机]绝缘','It is important to insulate the furnace from any neighbouring woodwork with brick and asbestos.','用砖和石棉把炉子与周围所有的木制品隔开，这很重要。','Asbestos can be used to insulate a cooking stove.','石棉能用来使烹调用的炉灶绝热.'}

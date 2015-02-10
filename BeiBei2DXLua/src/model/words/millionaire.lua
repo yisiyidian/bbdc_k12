@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["millionaire"]={"millionaire","[mɪljə'neə]","[,mɪljə'nɛr]","n.百万富翁",'n.百万富翁|||v.沉淀,存款,定金','Now a millionaire, he typifies the self-made man.','他成了百万富翁, 可以说是白手起家的典型.','He spends as if he were a millionaire.','他用起钱来像个百万富翁似的.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["combustible"]={"combustible","[kəm'bʌstɪb(ə)l]","[kəm'bʌstəbl]","adj.易燃的",'adj.易燃的,燃烧性的，易激动的|||n.燃质物,可燃物','This strong oxidizer in the match head is highly combustible.','火柴头中的这种强力氧化剂极其易燃。','Petrol is highly combustible.','汽油极其易燃。'}

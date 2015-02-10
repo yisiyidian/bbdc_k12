@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sort"]={"sort","[sɔːt]","[sɔrt]","n.种类",'n.种类,样子,态度|||v.分类,整理,排序|||n.[计算机]DOS命令:在字符型文件中进行数据排序,或者将DOS命令的输出进行排序','She\'s been out of sorts since the birth of her baby.','她生了孩子以後身体一直不好。','I\'ll leave you to sort this problem out.','我把这个问题交给你来处理。'}

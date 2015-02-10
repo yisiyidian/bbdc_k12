@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vial"]={"vial","['vaɪəl]","['vaɪəl]","n.小瓶(药水瓶)",'n.小瓶(药水瓶)|||vt把...放入小瓶中','A vial or round long-necked vessel for laboratory use.','烧瓶实验用的一种小瓶或长颈容器','The salt is in the vial.','盐在那个小瓶里。'}

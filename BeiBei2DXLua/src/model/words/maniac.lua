@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["maniac"]={"maniac","['meɪnɪæk]","['menɪæk]","n.疯子",'n.疯子，热衷者|||adj.疯狂的|||=maniacal','A maniac had gouged several holes in the priceless painting.','有个狂徒在那幅价值连城的画上乱凿了几个洞.','He drives like a maniac.','他象疯子似地开车。'}

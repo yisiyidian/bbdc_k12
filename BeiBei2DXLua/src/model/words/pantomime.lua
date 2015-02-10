@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pantomime"]={"pantomime","['pæntəmaɪm]","['pæntəmaɪm]","n.哑剧",'n.哑剧，哑剧演员，手势|||v.打手势,演哑剧','The audience roared at the pantomime.','观众被这场哑剧逗得大笑。','Chaplin feared that the art of pantomime was under threat.','卓别林担心哑剧艺术面临威胁。'}

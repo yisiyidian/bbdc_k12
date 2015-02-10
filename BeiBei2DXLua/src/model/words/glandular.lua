@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glandular"]={"glandular","['glændjʊlə; 'glæn(d)ʒʊlə]","['glændʒəlɚ]","adj.腺(状)的",'adj.腺(状)的,起腺体功能的,有腺的','Terry has been laid low with glandular fever for nearly a month now.','特里由于功能性高烧已卧床近一个月了。','The effect of glandular trichomes may depend on the nature of the exudate.','具腺毛状体的影响依赖于分泌物的性质.'}

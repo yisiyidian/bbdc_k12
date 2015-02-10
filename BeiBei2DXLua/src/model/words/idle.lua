@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["idle"]={"idle","['aɪd(ə)l]","['aɪdl]","adj.闲散的",'adj.无目的的,无聊的;懒惰的,闲散的;无根据的|||vt.虚度;使空闲|||vi.不作事,闲逛;(机器)空转','The cowboy lives an idle life.','牛仔过着悠闲的生活。','His words were just idle threats: he can\'t hurt us.','他的话只不过是无聊的吓唬人罢了，他是伤害不了我们的。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ambivalence"]={"ambivalence","[æm'bɪv(ə)l(ə)ns; æm'bɪvəl(ə)ns; æm'bɪvələns]","[æm'bɪvələns]","n.矛盾情绪",'n.矛盾情绪，矛盾心理','She felt a certain ambivalence towards him.','她对他的态度有些矛盾。','It is an ambivalence to say sorry.','想说对不起却又不大愿意.'}

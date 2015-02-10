@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["writhe"]={"writhe","[raɪð]","[ raið ]","vi.翻腾",'vt.挣扎,痛苦地扭曲|||vi.扭曲，翻腾，受苦|||n.翻腾,苦恼','Her remarks made him writhe with shame.','她的话让他难堪得坐立不安。','The patient was ||writhing|| on the bed in agony.','病人疼得在床上直打滚。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["affirm"]={"affirm","[ə'fɜːm]","[ə'fɝm]","vt.证实",'vt.证实,断言,肯定|||vi.断言,申明','I am not in a position either to contradict or affirm this statement.','我既不能否定这一说法，又不能肯定这一说法。','I affirm that what he said is true.','我断言他所说的是实情。'}

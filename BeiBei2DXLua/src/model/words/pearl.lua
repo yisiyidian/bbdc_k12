@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pearl"]={"pearl","[pɜːl]","[pɝl]","n.珍珠",'n.珍珠|||vt.用珍珠装饰,像珍珠般洒落,形成珍珠状|||vi.形成珍珠状,寻找珍珠|||adj.像珍珠般的','The pearl sparkled in the moonlight.','那颗珍珠在月光下闪闪发光。','Next to good judgment, diamond and pearl are the rarest things in the world.','次于真知灼见者，为钻石与珍珠为世上最罕有之物耳。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pneumatic"]={"pneumatic","[njuː'mætɪk]","[numætɪk]","adj.气动的(有空气的",'adj.气动的(有空气的,气体学的)|||n.气胎','a pneumatic drill.','风钻','a pneumatic tire.','充气轮胎'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["layering"]={"layering","['leɪərɪŋ]","['leərɪŋ]","n.压条法",'n.压条法','The plant has taken root as a result of layering.','这棵植物已经靠压条法生根了。','||Layering|| is a method of propagating a plant by producing layers','压条法就是一种用不断增加层数繁衍植物的方法'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["score"]={"score","[skɔː]","[skɔ]","n.得分",'n.得分；分数；总谱；20个|||v.得分；记分；评分；获得胜利','I recorded the score in a notebook.','我在笔记本上记下了分数。','He dribbled (the ball) past the goalie to score.','他带球越过守门员射门得分.'}

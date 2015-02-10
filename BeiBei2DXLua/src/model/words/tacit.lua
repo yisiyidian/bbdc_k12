@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tacit"]={"tacit","['tæsɪt]","['tæsɪt]","adj.心照不宣的",'adj.心照不宣的','Management has given its tacit approval to the plan.','管理部门已暗中对该计划给予了支持。','The question was a tacit admission that a mistake had indeed been made.','问这个问题实际上等于默认确实出了差错。'}

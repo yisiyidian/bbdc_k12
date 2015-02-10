@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["piston"]={"piston","['pɪst(ə)n]","['pɪstən]","n.活塞",'n.活塞','All the apprentices rushed to help fit the piston.','徒工们都跑过来帮助装活塞。','The piston seems ok. Maybe something else is wrong.','活塞似乎没问题。可能别的什么东西坏了。'}

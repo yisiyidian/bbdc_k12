@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bibliography"]={"bibliography","[,bɪblɪ'ɒgrəfɪ]","[,bɪblɪ'ɑɡrəfi]","n.(有关某一专题的)书目",'n.(有关某一专题的)书目,参考书目','The book ought to include a bibliography of the subject.','这本书应包括一份关于这一学科的参考书目。','||Bibliography|| usually appears at the end of a book.','参考书目通常在书后列出。'}

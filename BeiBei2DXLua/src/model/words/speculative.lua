@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["speculative"]={"speculative","['spekjʊlətɪv]","['spɛkjələtɪv]","adj.思索性的",'adj.思索性的,暝想性的,推理的','His conclusions are purely speculative.','他的结论完全是推测而来的。','raised a speculative eyebrow.','疑惑地耸起了眉毛'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bead"]={"bead","[biːd]","[bid]","n.珠子",'n.珠子,滴|||vt.用珍珠布置或覆盖，象珍珠一样串成线|||vi.形成珍珠','His back was beaded with sweat.','他的背上布满了汗珠。','He took a bead on the hare and then fired.','他瞄准了野兔，然后开枪。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["knoll"]={"knoll","[nəʊl]","[nol]","n.小山",'n.小山,圆丘','He crawled up a small knoll and surveyed the prospect.','他慢腾腾地登上一个小丘，看了看周围的地形。','Silver had terrible hard work getting up the knoll.','对于希尔弗来说，爬上那小山丘真不是件容易事。'}

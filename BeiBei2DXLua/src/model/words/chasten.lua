@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chasten"]={"chasten","['tʃeɪs(ə)n]","['tʃesn]","vt.改正",'vt.(通过惩罚而使坏习惯等)改正、磨炼','He was chastened by his failure.','他因失败而得到了教训。','He has clearly not been chastened by his thirteen days in detention.','显然，13天拘留并没能让他悔过自新。'}

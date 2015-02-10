@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grow"]={"grow","[grəʊ]","[ɡro]","vt.&vi.生长",'vt.&vi.种植,生长,变成,逐渐开始','She is a good actress, but still needs time to grow into the part she is playing.','她是个好演员，但仍需要时间去熟悉她要扮演的角色。','The coat is too big for him now, but he will grow into it.','这上衣他现在穿还太大，等他长大些再穿就合适了。'}

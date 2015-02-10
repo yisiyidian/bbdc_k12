@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["upon"]={"upon","[ə'pɒn]","[ə'pɑn]","prep.在...上",'prep.在...上','Once upon a time, there was an old man living in a small village.','从前, 在一个小村庄里住着一位老人。','The results reflect the greatest credit upon all concerned.','这些成绩成为所有有关人员最大的荣誉。'}

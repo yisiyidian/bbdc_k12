@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["can"]={"can","[kæn]","[kæn]","aux.能",'aux.能,可以|||n.罐头|||vt.罐装|||vt.炒某人鱿鱼','||Can|| you give me some feedback?','你能给我一些建议吗？','Don\'t shout into my ears like that, I can hear you perfectly well.','别那样对我大声嚷嚷，我能听清楚。'}

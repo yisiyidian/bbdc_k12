@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["worth"]={"worth","[wɜːθ]","[wɝθ]","adj.值得的",'adj.值得的；有…的价值；等值的；有…的财产|||n.财富，财产；价','Whatever is worth doing at all is worth doing well.','任何值得做的事就值得做好。','The thief ran off down the road, so I chased him for all I was worth.','那个贼顺着马路逃跑，我就拼命紧追不舍。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["orange"]={"orange","['ɒrɪn(d)ʒ]","['ɔrɪndʒ]","adj.橙色的",'adj.橙色的|||n.橘子,橙黄色','The waiter brought us a dish of orange segments.','服务员给我们端来一盘掰开的橘子瓣。','He gave me an apple in exchange of an orange.','他给我一个苹果，交换一个橙子。'}

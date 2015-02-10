@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["snowdrift"]={"snowdrift","['snəʊdrɪft]","['snodrɪft]","n.雪堆",'n.雪堆','In the severe winter of1947, farmers had to dig their livestock out of huge snowdrifts.','在1947年严峻的冬天，农民们不得不挖开大雪堆把他们的家畜救出来。','The dad-blamed car got stuck in a snowdrift.','该死的汽车陷在雪堆里了。'}

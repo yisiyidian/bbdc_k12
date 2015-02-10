@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["proviso"]={"proviso","[prə'vaɪzəʊ]","[prə'vaɪzo]","n.附文",'n.附文,条件','The negotiation finally broke down because one of them refused to accept one of the proviso .','由于其中一方不同意附加条件，谈判最后破裂了','You can borrow this book, with the proviso that you return it to me within aweek.','你可以借这本书，条件是你要在一周内还我书。'}

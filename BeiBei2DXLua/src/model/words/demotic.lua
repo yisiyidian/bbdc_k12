@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["demotic"]={"demotic","[dɪ'mɒtɪk]","[dɪ'mɑtɪk]","adj.平民的",'adj.平民的,民众的,通俗的','It is television\'s demotic style of language.','这是电视通俗的语言风格。','Television, that most demotic of the arts.','电视,那种最为通俗的艺术。'}

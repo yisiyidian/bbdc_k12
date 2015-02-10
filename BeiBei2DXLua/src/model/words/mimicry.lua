@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mimicry"]={"mimicry","['mɪmɪkrɪ]","['mɪmɪkri]","n.模仿",'n.模仿,(动物等)拟态伪装','The child delighted his parents with ||mimicries||.','这孩子学这学那，逗他父母开心','She is a talent of mimicry.','她是一个模仿天才。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vibration"]={"vibration","[vaɪ'breɪʃ(ə)n]","[vaɪ'breʃən]","n.震动",'n.震动,颤动','Even at full speed the ship\'s engines cause very little vibration.','这条船即使全速前进，发动机的震动也很小。','He told me that middle C is equivalent to 256 vibrations per second.','他告诉我说中央C音相当于每秒振动256次。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rue"]={"rue","[ruː]","[ru]","n.懊悔",'n.懊悔,芸香,后悔|||v.后悔,悲伤,懊悔','I rue never having been to university.','我后悔从未上过大学。','He\'ll rue the day he married her.','他将会因为和她结婚而抱恨终身。'}

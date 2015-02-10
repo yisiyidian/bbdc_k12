@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cogent"]={"cogent","['kəʊdʒ(ə)nt]","['kodʒənt]","adj.有说服力的",'adj.有说服力的','The lawyer\'s cogent arguments convince the jury.','这位律师强有力的辩论说服了陪审团。','Every decision has to be backed up with rational and cogent arguments.','每项决定都应该有合理且令人信服的论据做支持。'}

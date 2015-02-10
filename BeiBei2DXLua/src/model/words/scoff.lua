@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scoff"]={"scoff","[skɒf]","[skɔf]","n.嘲笑",'n.嘲笑,笑柄,愚弄|||v.嘲笑,嘲弄,愚弄，狼吞虎咽','Who has scoffed all the pastries down?','谁把点心全吃完了？','I can\'t find the scoff.','我找不到食品！'}

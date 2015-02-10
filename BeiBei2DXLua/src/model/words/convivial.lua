@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["convivial"]={"convivial","[kən'vɪvɪəl]","[kən'vɪvɪəl]","adj.欢乐的",'adj.欢乐的；欢宴的；酒宴的','Everyone likes to have dinner with her because she is such a convivial person.','每个人都喜欢和她共进晚餐，因为她是个相当友善的人。','The wedding banquet was a convivial occasion enjoyed by everyone in attendance.','结婚喜宴是一个欢乐的场合，每个参加的人都很喜欢。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sentinel"]={"sentinel","['sentɪn(ə)l]","['sɛntɪnl]","n.哨兵",'n.哨兵(标记,传送)|||vt放哨(守卫)','The press is a sentinel of our liberty.','新闻界是捍卫我们自由的卫兵。','Against their depredations, a small black sentinel was stationed on the front porch.','为了防止掠夺，门廊前有一个黑人小哨兵站岗。'}

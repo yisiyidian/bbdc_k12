@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jumbo"]={"jumbo","['dʒʌmbəʊ]","['dʒʌmbo]","n.喷气式飞机",'n.喷气式飞机，渣口冷却器,隧道盾构,钻车|||adj.巨大的','Jumbo shrimp; a jumbo jet.','大虾；巨型喷气式飞机','jumbo shrimp; a jumbo jet.','大虾；巨型喷气式飞机'}

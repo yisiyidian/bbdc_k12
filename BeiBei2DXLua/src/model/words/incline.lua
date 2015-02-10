@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incline"]={"incline","[ɪn'klaɪn]","[ɪn'klaɪn]","v.倾斜",'n.倾斜,斜坡,斜面|||v.使...倾向,爱好,易于','I\'m inclined to tiredness in winter.','我在冬天易于疲劳。','She inclined her head in acquiescence.','她点头表示默许。'}

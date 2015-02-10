@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thorough"]={"thorough","['θʌrə]","['θɜro]","adj.彻底的",'adj.彻底的,完全的,精心的','We are trying to get a thorough understanding of the government\'s fiscal policy.','我们正努力对政府的财政政策进行全面的了解。','His thorough knowledge and competence were recognized.','他的渊博的学识和工作能力得到了承认。'}

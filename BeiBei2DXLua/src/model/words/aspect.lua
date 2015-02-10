@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aspect"]={"aspect","['æspekt]","['æspɛkt]","n.方面",'n.方面,外貌,外观;方位,方向','The historical aspect formed the main theme of her essay.','她的论文的主题是由历史观点贯穿起来的.','On the course she received a thorough training in every aspect of the job.','在训练班上，她接受了有关这个工作各方面的全面训练。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["zip"]={"zip","[zɪp]","[zɪp]","n.拉链",'n.拉链,活力,飞射声,零,邮政编码|||vi.活跃地或迅速地沿某方向运动,飞射,拉拉链|||vt.拉拉链,注入活力,快速推进','These new trains really zip along.','这些新列车行驶得可真快.','This dress fastens (up) (ie has buttons, a zip, etc) at the back.','这件连衣裙是在背後系扣的.'}

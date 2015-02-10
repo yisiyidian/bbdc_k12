@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["downgrade"]={"downgrade","['daʊngreɪd; daʊn'greɪd]","[,daʊn'ɡred]","vt.使降低",'vt.使降低,使降级','She\'s been downgraded (from principal) to deputy.','她已(从校长)降为副校长.','a neighborhood on the downgrade.','每况愈下的邻居'}

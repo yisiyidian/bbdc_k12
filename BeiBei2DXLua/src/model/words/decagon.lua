@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decagon"]={"decagon","['dekəg(ə)n]","['dɛkəɡɑn]","n.十边形",'n.十边形,十角形','decagon','十边形,十角形','A polygon with ten sides is a decagon.','十条边的形状叫十边形。'}

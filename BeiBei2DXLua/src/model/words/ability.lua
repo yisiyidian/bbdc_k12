@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ability"]={"ability","[ə'bɪlɪtɪ]","[ə'bɪləti]","n.才能",'n.才能,能力','This is a task well within your ability.','这完全是你力所能及的工作。','It\'s hard to measure his ability when we haven\'t seen his work.','没有见过他的作品, 很难估计他的能力.'}

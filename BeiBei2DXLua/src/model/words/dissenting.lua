@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dissenting"]={"dissenting","[dɪ'sɛntɪŋ]","[ di'sentiŋ ]","adj.不同意的",'adj.(=dissentient)不同意的','I ||dissent|| from what you said.','我不同意你所说的。','Adherence to such dissenting opinion or doctrine.','信奉邪教坚持这种有异议的观点或学说'}

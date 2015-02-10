@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incorruptible"]={"incorruptible","[ɪnkə'rʌptɪb(ə)l]","[,ɪnkə'rʌptəbl]","adj.不易腐蚀败坏的",'adj.不易腐蚀败坏的,(道德上)不可收买的,廉洁的','An incorruptible official who could not be had.','一位不为贿赂所动的廉洁官员','Judges should be incorruptible.','法官应当廉洁.'}

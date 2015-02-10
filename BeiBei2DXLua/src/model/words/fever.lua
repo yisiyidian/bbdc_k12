@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fever"]={"fever","['fiːvə]","['fivɚ]","n.发烧",'n.发烧,狂热|||vt.激怒|||vi.发烧','That fever nearly finished him off.','那场热病几乎送了他的命。','Her fever passed its crisis.','她发烧已经过了危险期。'}

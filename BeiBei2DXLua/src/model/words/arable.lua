@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arable"]={"arable","['ærəb(ə)l]","['ærəbl]","adj.可耕的",'adj.可耕的,适合种植的','Thousands of hectares have been reclaimed from the sea and turned over to arable land and pasture.','人们拦海造田，已经开垦了成千上万公顷的土地，并将它们变成可耕地和牧场。','These fields now are not arable because of the drought.','这些地因为干旱而不适合种植。'}

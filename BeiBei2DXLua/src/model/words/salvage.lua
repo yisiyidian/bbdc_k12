@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["salvage"]={"salvage","['sælvɪdʒ]","['sælvɪdʒ]","n.救捞",'n.救捞(抢修,废物利用,废弃品,救难费)|||vt救捞(抢修,废物利用)','||Salvage|| of the wreck is made difficult by bad weather.','因天气恶劣，对遇难船只的救援工作十分难以展开。','The government tried to salvage several business companies from bankruptcy.','政府试图让这几家商业公司免于破产。'}

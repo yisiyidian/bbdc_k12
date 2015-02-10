@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bolt"]={"bolt","[bəʊlt]","[bolt]","n.门闩",'n.门闩,突发,螺钉,剑弩,闪电|||vt.闩住,,用螺栓固定在一起,狼吞虎咽|||vi.冲出去,急逃|||adv.背部挺直地坐或站','The gate bolts on the inside.','这大门是从里面闩上的。','We need an eye bolt to fit this valve.','我们需要一个有眼螺栓来固定这个阀门。'}

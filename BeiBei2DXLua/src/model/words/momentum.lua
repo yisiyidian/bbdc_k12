@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["momentum"]={"momentum","[mə'mentəm]","[mo'mɛntəm]","n.动力",'n.动力,要素,势头,（物理）动量','The struggle for independence is gaining momentum every day.','为独立而斗争的势头日益增长。','As the rock rolled down the mountainside, it gathered momentum.','石头滚下山时，它的动量增加。'}

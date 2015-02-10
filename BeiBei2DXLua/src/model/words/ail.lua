@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ail"]={"ail","[eɪl]","[el]","vt.使...苦恼",'vt.使...苦恼|||vi.苦恼,生病|||n.小病','The ailing old woman says noise always puts her out.','那位年老多病的妇女说，噪声总使她心神不宁。','What ails him?','他哪里不舒服？'}

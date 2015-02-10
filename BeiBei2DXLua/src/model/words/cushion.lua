@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cushion"]={"cushion","['kʊʃ(ə)n]","['kʊʃən]","n.垫子",'n.垫子,橡皮软垫,缓冲|||vt.加垫褥,放在垫子上,保护,减缓,为...装垫子','He covered the cushion with new material.','他给靠垫蒙上了新的料子.','The cushion was stuck full of pins.','针插上插满了针.'}

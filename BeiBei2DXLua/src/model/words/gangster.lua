@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gangster"]={"gangster","['gæŋstə]","['ɡæŋstɚ]","n.匪徒",'n.匪徒,歹徒','The gangster run into the bar and start shooting it up.','歹徒们冲进酒吧胡乱扫射一通。','A notorious gangster; a district notorious for vice.','臭名昭著的匪徒；因恶行而闻名的地区'}

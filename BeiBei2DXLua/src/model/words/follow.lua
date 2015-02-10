@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["follow"]={"follow","['fɒləʊ]","['fɑlo]","vt.跟随",'vt.跟随,沿行,遵循,听得懂|||vi.跟着做,之后是|||n.跟随','The President\'s wife follows his every word.','总统夫人总是注意听他说的话。','Not wanting to make my controversial views known yet, I preferred to follow the crowd for a while.','我还不想公开我那些会引起争论的观点，宁可暂且随大溜。'}

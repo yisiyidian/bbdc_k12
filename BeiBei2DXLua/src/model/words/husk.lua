@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["husk"]={"husk","[hʌsk]","[hʌsk]","n.外壳",'n.外壳,皮,无用之物|||n.支架|||vt.剥壳,削皮','How can we remove the husk of the grains?','我们怎样去掉谷物的外皮？','Inside this husk there is a baffled man aged thirty.','在这个臭皮囊里仍然活着一位不可思议的三十岁的男子.'}

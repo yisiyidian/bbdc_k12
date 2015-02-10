@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consideration"]={"consideration","[kənsɪdə'reɪʃ(ə)n]","[kən,sɪdə'reʃən]","n.考虑",'n.考虑,体贴,考虑因素,敬重,意见','After careful consideration, we\'ve decided to accept their offer.','经过慎重的考虑，我们决定接受他们的提议。','Several considerations have influenced my decision.','有好几个因素影响了我的决定.'}

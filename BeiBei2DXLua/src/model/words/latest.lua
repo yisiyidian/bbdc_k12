@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["latest"]={"latest","['leɪtɪst]","['letɪst]","adj.最新的",'形容词late的最高级形式|||adj.最近的,最新的|||n.最迟的时间,最新的潮流','Her latest documentary is concerned with youth unemployment.','她最近的一部纪录片是关於青年人失业问题的.','A collector of rare insects will show us some of his latest discoveries.','一位稀有昆虫采集家将给我们看一些他的最新发现。'}

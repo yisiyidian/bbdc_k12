@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vodka"]={"vodka","['vɒdkə]","['vɑdkə]","n.伏特加酒",'n.伏特加酒','After six glasses of vodka his eyes glazed over and he remembered nothing more.','他喝了六杯伏特加之後, 眼神发呆, 什麽都再也记不住了.','It was vodka, and it packed quite a punch.','这是伏特加酒, 它有强烈的刺激作用。'}

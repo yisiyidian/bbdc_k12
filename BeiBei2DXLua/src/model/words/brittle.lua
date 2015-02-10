@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brittle"]={"brittle","['brɪt(ə)l]","['brɪtl]","adj.易碎的",'adj.易碎的','He has a brittle temper.','他脾气急。','These books are turning yellow and brittle.','这些书逐渐变黄，变脆。'}

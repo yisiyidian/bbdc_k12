@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ravenous"]={"ravenous","['ræv(ə)nəs]","['rævənəs]","adj.贪婪的(渴望的)",'adj.贪婪的(渴望的)','The ravenous children ate everything on the table.','饿极了的孩子把桌上所有东西吃掉了。','The ravenous lion tore the quarry.','饥饿的狮子撕碎了猎物。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dulcet"]={"dulcet","['dʌlsɪt]","['dʌlsɪt]","adj.优美的",'adj.优美的,美妙的,美味的','You hear his dulcet tones on the Radio 1 trailers in the morning.','你在早晨广播一台的新片预告节目中就能听到他悦耳的声音。','Quickly, in her dulcet voice, Tina told him what had happened.','蒂娜用她美妙悦耳的声音快速向他讲述了所发生的一切。'}

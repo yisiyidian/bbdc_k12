@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cleanse"]={"cleanse","[klenz]","[klɛnz]","vt.使...清洁",'vt.使...清洁,净化,使...纯洁','Tending to cleanse or purge.','愿意净化或洗涤的','May God cleanse my wickedness.','愿上帝洗净我的邪恶。'}

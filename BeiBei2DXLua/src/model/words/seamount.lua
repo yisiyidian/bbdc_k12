@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seamount"]={"seamount","['siːmʌʊnt]","['si,maʊnt]","n.海底山",'n.海底山','||Seamount|| is a mystical place.','海底山是个神秘的地方。','Volcanic activity formed seamount and sea bill.','火山作用形成海山、海丘。'}

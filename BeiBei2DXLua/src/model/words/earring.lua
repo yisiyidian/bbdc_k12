@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["earring"]={"earring","['ɪərɪŋ]","['ɪrɪŋ]","n.耳环",'n.耳环,耳饰','A vibrating membrane in the ||ear|| helps to convey sounds to the brain.','耳膜的振动帮助声音传送到大脑。','Sailors wearing earrings now look very strange to us.','现在水手戴耳环，在我们看来很不顺眼。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["handwriting"]={"handwriting","['hændraɪtɪŋ]","['hænd'raɪtɪŋ]","n.笔迹",'n.笔迹,书法','Please excuse my bad handwriting.','请原谅我的字写得不好。','His handwriting is not bad, but it\'s hardly comparable with yours.','他的书法不错，但是很难和你的相比。'}

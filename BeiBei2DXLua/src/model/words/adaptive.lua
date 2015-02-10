@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adaptive"]={"adaptive","[ə'dæptɪv]","[ə'dæptɪv]","adj.适合的",'adj.适合的,适应的,能适应的','Created adaptive clothing for children and young adults with special needs.','为有特殊要求的儿童或年轻人创造适应的布匹','He will be adaptive to the terrible environnement over there','他会适应那边恶劣的环境的'}

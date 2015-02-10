@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["classification"]={"classification","[,klæsɪfɪ'keɪʃ(ə)n]","[,klæsɪfɪ'keʃən]","n.分类",'n.分类,分级','But some people decided that every page should carry classification.','但是有人认为每一个页面都应该被分类。','It is helpful to begin with a rough and ready classification.','首先进行粗略的分类是很有帮助的。'}

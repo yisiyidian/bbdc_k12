@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cue"]={"cue","[kjuː]","[kju]","n.线索",'n.字母Q,信号,线索,球杆|||vt.暗示,用球杆打球|||vi.使用球杆','Actors have to learn their cues as well as their own lines.','演员不仅要记住台词, 还要记住其他演员的暗示.','When I nod my head, that\'s your cue to interrupt the meeting.','我一点头, 就是暗示你把会议中断.'}

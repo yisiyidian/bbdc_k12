@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outfield"]={"outfield","['aʊtfiːld]","['aʊtfild]","n.郊外",'n.郊外(边境,未知的世界)','Lofted the ball into the outfield.','将球高击到外野','Anna may have sent the angels to the outfield, but, sooner or later, They\'re gonna be back. We got to get ourselves safe now.','安娜也许把天使送到很远，但迟早，他们会回来的。 我们要找个安全的地方。'}

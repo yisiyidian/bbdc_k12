@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["form"]={"form","[fɔːm]","[fɔrm]","n.形式",'n.形式,形状,表格|||v.形成,组成,建立','The team were on excellent form throughout the whole competition.','这个队在整个比赛过程中一直处於极好的竞技状态。','After six months training, the whole team is in superb form.','全队经过六个月的训练竞技状态极佳。'}

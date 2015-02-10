@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["develop"]={"develop","[dɪ'veləp]","[dɪ'vɛləp]","vt.发展",'vt.发展,开发,冲洗照片|||vi.进步','He developed into a strong leader.','他成长为一名坚强的领导人。','Modern music was first developed in Italy.','现代音乐最初是在意大利发展起来的。'}

@@ -15,15 +15,17 @@ except ImportError:
 BUILD_TYPE_DEBUG        = '0'
 BUILD_TYPE_RELEASE      = '1'
 BUILD_TYPE_RELEASE_TEST = '2'
+BUILD_TYPE_DEVELOPMENT  = '3'
 
 # ---------------------------------------------------------------------------------
 
 class BuildTarget(object):
-    def __init__(self, buildType, description, isProduction):
+    def __init__(self, buildType, description, isProduction, loadAllWords):
         super(BuildTarget, self).__init__()
         self.buildType = buildType
         self.description = description
         self.isProduction = isProduction
+        self.loadAllWords = loadAllWords
 
 class Server(object):
     def __init__(self, AppName, AppID, AppKey):
@@ -190,9 +192,39 @@ def createLuaCodes(gitVer, testServer, buildTarget, channelAndroid, channeliOS, 
     channeliOS.server.AppName, channeliOS.server.AppName, channeliOS.server.AppID, channeliOS.server.AppKey)
     # ---------------------------------------------------------------------------------
 
+    luaSrcPath = savePath[0:savePath.rfind('/')] + '/'
+    allwordsFullPath = luaSrcPath + '../../raw/codes/bbdxw.lua'
+    wordPath = luaSrcPath + '../../raw/codes/words/'
+    targetPath = luaSrcPath + '/model/words/'
+    if os.path.exists(targetPath):
+        shutil.rmtree(targetPath)
+    os.makedirs(targetPath)
+
+    IS_DEVELOPMENT_MODE = 'false'
+    if buildTarget.loadAllWords:
+        IS_DEVELOPMENT_MODE = 'true'
+        shutil.copy(allwordsFullPath, targetPath)
+    else:
+        f = open(allwordsFullPath,'r')  
+
+        for line in f.readlines():  
+            if line.find('M.allwords["') >= 0:
+                word = line[len('M.allwords["'):line.index('"]={"')]
+                w = open(targetPath + word + '.lua', 'w')
+                w.write('return {' + line[line.index('"]={"') + 5 + len(word) + 2:len(line)])
+                w.close()
+
+        f.close() 
+        # for parent, dirnames, filenames in os.walk(wordPath):
+        #     for filename in filenames:
+        #         fullPath = os.path.join(parent, filename)
+        #         shutil.copy(fullPath, targetPath)
+
     lua = '''%s
 
 function initBuildTarget()
+
+    IS_DEVELOPMENT_MODE = %s
     
     if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
         %s
@@ -226,7 +258,8 @@ function getAppVersionDebugInfo()
     return str
 end
 
-''' % (buildInfo, snsAndroid, serverAndroid, snsiOS, serveriOS, \
+''' % (buildInfo, IS_DEVELOPMENT_MODE,\
+    snsAndroid, serverAndroid, snsiOS, serveriOS, \
     BUILD_TYPE_DEBUG, BUILD_TYPE_RELEASE, BUILD_TYPE_RELEASE_TEST, \
     buildTarget.buildType, gitVer, buildTarget.description)
     
@@ -375,9 +408,10 @@ def setupAndroidProject(channelAndroid, manifestSrc, manifestDst, androidProjSrc
 # BUILD_TYPE_RELEASE      = '1'
 # BUILD_TYPE_RELEASE_TEST = '2'
 
-BUILD_TARGET_DEBUG        = BuildTarget(BUILD_TYPE_DEBUG,        'BUILD_TARGET_DEBUG',        False)
-BUILD_TARGET_RELEASE      = BuildTarget(BUILD_TYPE_RELEASE,      'BUILD_TARGET_RELEASE',      True)
-BUILD_TARGET_RELEASE_TEST = BuildTarget(BUILD_TYPE_RELEASE_TEST, 'BUILD_TARGET_RELEASE_TEST', False)
+BUILD_TARGET_DEBUG        = BuildTarget(BUILD_TYPE_DEBUG,        'BUILD_TARGET_DEBUG',        False, False)
+BUILD_TARGET_RELEASE      = BuildTarget(BUILD_TYPE_RELEASE,      'BUILD_TARGET_RELEASE',      True,  False)
+BUILD_TARGET_RELEASE_TEST = BuildTarget(BUILD_TYPE_RELEASE_TEST, 'BUILD_TARGET_RELEASE_TEST', False, False)
+BUILD_TARGET_DEVELOPMENT  = BuildTarget(BUILD_TYPE_DEBUG,        'BUILD_TARGET_DEVELOPMENT',  False, True)
 TEST_SERVER = Server('贝贝单词X测试', 'gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn', 'x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3')
 
 # createLuaCodes('gitVer', TEST_SERVER, BUILD_TARGET_DEBUG, channelAndroid, channeliOS, '/Users/bmo/Dev/YiSiYiDian/BeiBeiDanCiX/BeiBei2DXLua/src/AppVersionInfo.lua')
@@ -412,6 +446,8 @@ if __name__ == "__main__":
         buildTarget = BUILD_TARGET_RELEASE
     elif _appType == BUILD_TYPE_RELEASE_TEST:
         buildTarget = BUILD_TARGET_RELEASE_TEST
+    elif _appType == BUILD_TYPE_DEVELOPMENT:
+        buildTarget = BUILD_TARGET_DEVELOPMENT
 
     channeliOS = readChannelConfigurations(_channelXml, 'iOS')
     channelAndroid = readChannelConfigurations(_channelXml, _channelName)

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bail"]={"bail","[beɪl]","[bel]","n.保释",'n.杓,保释,保证金,担保人,把手|||vt.往外舀水,保释,使摆脱困境|||vi.舀空','||Bail|| was refused on the presupposition of his guilt.','已料到他罪名成立而不准保释.','He repudiated the court\'s decision to offer bail.','他不接受法庭的保释裁决.'}

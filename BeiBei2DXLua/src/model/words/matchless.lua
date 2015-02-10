@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["matchless"]={"matchless","['mætʃlɪs]","['mætʃləs]","adj.无比的",'adj.无敌的,无比的','Her matchless beauty is beyond description.','她那旷世无双的美貌无法形容。','',''}

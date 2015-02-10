@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["balmy"]={"balmy","['bɑːmɪ]","['bɑmi]","adj.(指空气)暖和的",'adj.(指空气)暖和的;温暖的;芳香的;能止痛的;如香酯的','It often happens that a balmy morning passes into a chilly afternoon.','一个温和的上午常常转为一个寒冷的下午。','The air was warm and balmy.','天气温暖宜人。'}

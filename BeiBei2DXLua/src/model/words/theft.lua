@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["theft"]={"theft","[θeft]","[θɛft]","n.偷窃",'n.偷窃','The prosecutor brought an accusation of theft against him.','检察官指控他偷窃。','Are you fully covered against/for fire and theft?','你是否保了足够的火险和盗窃险?'}

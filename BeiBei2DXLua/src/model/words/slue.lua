@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slue"]={"slue","[slʊ]","[ slu: ]","v.(使)旋转",'v.(使)旋转|||n.旋转','slued the swivel chair around; sluing the boom of a crane.','旋转转椅；转动一台起重机的吊杆','braked and slued the car around.','把车猛地转过来并刹住'}

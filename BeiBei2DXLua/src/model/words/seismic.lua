@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seismic"]={"seismic","['saɪzmɪk]","['saɪzmɪk]","adj.地震的",'adj.地震的','The area is ofthen seismic.','这个区域是地震多发区。','Earthquakes produce two types of seismic waves.','地震产生两种地震波。'}

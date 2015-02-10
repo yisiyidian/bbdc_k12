@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rule"]={"rule","[ruːl]","[rul]","n.规则",'n.惯例,规则,统治|||v.裁定,统治,支配|||vi.裁决,统治|||vt.统治','The rule is that someone must be on duty at all times.','按照规定，任何时候均需有人值班。','As a rule, I\'m home by six.','我通常六点在／到家。'}

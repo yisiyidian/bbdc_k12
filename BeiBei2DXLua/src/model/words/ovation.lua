@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ovation"]={"ovation","[ə(ʊ)'veɪʃ(ə)n]","[o'veʃən]","n.热烈欢迎",'n.热烈欢迎,大喝采,大受欢迎','The ovation was unlike anything I have ever seen.','我从未见过那么热烈的欢呼。','The singer got a ten-minute standing ovation.','观众起立向那位歌手鼓掌达十分钟。'}

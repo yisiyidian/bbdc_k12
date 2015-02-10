@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jaded"]={"jaded","['dʒeɪdɪd]","['dʒedɪd]","adj.疲倦不堪的",'adj.疲倦不堪的,厌倦的','We had both become jaded, disinterested, and disillusioned.','我们两个都已经觉得疲惫不堪，毫无兴趣，失望透顶。','He looks jaded.','他看来疲惫不堪。'}

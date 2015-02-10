@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nonetheless"]={"nonetheless","[nʌnðə'les]","['nʌnðə'lɛs]","adv.尽管如此(仍然)",'adv.尽管如此(仍然)|||conj.尽管如此(仍然)','||Nonetheless||, we should work hard to finish the job.','尽管如此，我们也必须完成工作。','Though he\'s fool, I like him nonetheless.','虽然他很笨, 我仍然喜欢他.'}

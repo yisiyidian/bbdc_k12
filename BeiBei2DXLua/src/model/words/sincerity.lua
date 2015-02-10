@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sincerity"]={"sincerity","[sɪn'serətɪ]","[sɪn'sɪərəti]","n.诚实",'n.诚实,真实,诚心诚意','Her sincerity has never been questioned.','她的诚意从未受到怀疑.','I\'m certain about his sincerity.','我肯定他是真诚的。'}

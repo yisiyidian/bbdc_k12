@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slam"]={"slam","[slæm]","[slæm]","n.砰然声",'n.砰然声,猛然,猛烈的抨击|||vt.猛然关上,砰地关上,猛烈抨击|||vi.砰地关上,猛攻,猛烈抨击','Please don\'t slam the door.','请不要使劲关门。','He closed the door with a slam.','他砰的一声关上门。'}

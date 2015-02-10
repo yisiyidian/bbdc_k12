@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["semiliterate"]={"semiliterate","[,semɪ'lɪtərət]","[,sɛmaɪ'lɪtərət]","n.半文盲",'n.半文盲,有初等文化者','In the past, West China most people were the illiterate person, the semiliterate','过去，华西大多数人是文盲、半文盲。','The study pointed out that over 23 million adult Americans are semiliterate.','该项研究指出，越过2300万的美国成年人是半文盲。'}

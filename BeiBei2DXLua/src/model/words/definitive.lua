@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["definitive"]={"definitive","[dɪ'fɪnɪtɪv]","[dɪ'fɪnətɪv]","adj.决定性的",'adj.决定性的，权威性的，确定的，限定的|||n.限定词','She\'s written the definitive history of Vienna.','她写下了权威性的维也纳历史。','She is the definitive person in their company.','她是这个公司的关键人物。'}

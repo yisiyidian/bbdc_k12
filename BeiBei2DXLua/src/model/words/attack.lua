@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["attack"]={"attack","[ə'tæk]","[ə'tæk]","vt.&vi.攻击",'vt.&vi.攻击，进攻，抨击|||n.攻击；抨击；（队员等的）进攻；（疾病）侵袭|||vt.抨击；非难；侵袭；损害','The police are launching a major attack on drug dealers.','警方对毒品贩子发动了大规模的攻击。','It is reported that this disease attacks the central nervous system.','据报道说这种疾病破坏中枢神经系统。'}

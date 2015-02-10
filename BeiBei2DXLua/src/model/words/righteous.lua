@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["righteous"]={"righteous","['raɪtʃəs]","['raɪtʃəs]","adj.公正的",'adj.公正的,公义的,当然的','The abode of righteous souls after death; heaven.','善人灵魂安息的乐园正直的灵魂死后所住的地方；天堂','Noah was a righteous man, the one blameless man of his time; he walked with God.','诺亚是一个正直的人，在当时是一个完人。他追随上帝行事。'}

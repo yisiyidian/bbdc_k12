@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["residue"]={"residue","['rezɪdjuː]","['rɛzɪdu]","n.残渣",'n.残渣,剩余,余数','The residue of estate belongs to his son.','剩余财产属于他的儿子。','The residue of food is a big waste problem.','食物残渣是一个巨大的浪费问题。'}

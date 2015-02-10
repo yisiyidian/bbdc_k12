@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["capture"]={"capture","['kæptʃə]","['kæptʃɚ]","n.抓取",'n.抓取,战利品,捕获之物|||vt.抓取,获得,迷住','The revolutionist eluded capture for weeks by hiding underground.','那位革命者为避免被捕在地下躲藏了几个星期。','The easiest way to capture a fortress is from within.','堡垒最容易从内部攻破。'}

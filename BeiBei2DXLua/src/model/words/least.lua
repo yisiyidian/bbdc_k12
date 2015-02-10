@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["least"]={"least","[liːst]","[list]","adj.最少的",'adj.最少的,最小的|||n.&adv.最少,最小','||Least|| of all would I lie to you.','我最犯不上对你撒谎了。','Mr. Brown talks least.','布朗先生极少说话。'}

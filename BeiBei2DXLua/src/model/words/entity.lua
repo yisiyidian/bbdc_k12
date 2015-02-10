@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["entity"]={"entity","['entɪtɪ]","['ɛntəti]","n.存在",'n.存在,实体','As a separate legal entity, the corporation must pay taxes.','作为一个独立的法律实体，公司必须纳税。','The country is no longer one political entity.','这个国家不再是一个统一的政治实体了。'}

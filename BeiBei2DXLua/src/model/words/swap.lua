@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swap"]={"swap","[swɑp]","[ swɔp, swɔ:p ]","n.交换",'n.交换|||vt.&vi.交换,用...作交易','I\'ll swap (you) my Michael Jackson tape for your Bruce Springsteen album.','我想用迈克尔·杰克逊的录音带交换你的布鲁斯·斯普林斯廷唱片集.','She swapped our chairs (round), so I had hers and she had mine.','她把我们俩的椅子对调了, 因此我坐的是她的, 她坐的是我的.'}

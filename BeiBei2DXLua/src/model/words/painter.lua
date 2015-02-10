@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["painter"]={"painter","['peɪntə]","['pentɚ]","n.画家",'n.画家','He is a painter of street scenes.','他是一个画街景的画家。','The painter stretched the canvas on a frame.','画家把油画布紧绷在画框上。'}

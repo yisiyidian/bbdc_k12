@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plywood"]={"plywood","['plaɪwʊd]","['plaɪwʊd]","n.夹板",'n.夹板,合板','Any of the thin layers glued together to make plywood.','薄木片粘在一起制成胶合板的任何一层薄木板','Much modern furniture is not solid but using a sandwich of wood veneer on plywood.','许多现代家俱用的并非实心木料，而是在胶合板上镶上一层木板饰面而已。'}

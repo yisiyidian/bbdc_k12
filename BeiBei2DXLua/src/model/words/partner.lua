@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["partner"]={"partner","['pɑːtnə]","['pɑrtnɚ]","n.搭档",'n.合作者,搭档,配偶|||vt.&vi.同...合作,做...的搭档,合作','It\'s your call, partner.','伙伴, 该你叫牌了.','He has a practical partner who organizes everything for him.','他有个很能干的伙伴，替他把一切弄得井井有条。'}

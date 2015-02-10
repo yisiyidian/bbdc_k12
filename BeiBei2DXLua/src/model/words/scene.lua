@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scene"]={"scene","[siːn]","[sin]","n.现场",'n.场,景,情景','Reporters were soon on the scene after the accident.','那事故发生後不久记者就都赶到了现场。','His arrival set the scene for another argument.','他一来就要另有一场争论了。'}

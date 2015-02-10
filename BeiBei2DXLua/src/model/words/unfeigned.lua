@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unfeigned"]={"unfeigned","[ʌn'feɪnd]","[ʌn'fend]","adj.真实的",'adj.真实的，真诚的','He showed unfeigned satisfaction at his friend\'s success.','他对朋友的成功表示由衷的满足。','Their hosts received them with unfeigned pleasure.','主人带着由衷的喜悦接待了他们。'}

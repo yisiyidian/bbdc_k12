@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lawyer"]={"lawyer","['lɔːjə; 'lɒɪə]","['lɔjɚ]","n.律师",'n.律师','Nothing can weaken his resolve to become a lawyer.','什么也动摇不了他要当律师的决心。','His lawyer decided to take an appeal to a higher court.','他的律师决定向高一级法院上诉。'}

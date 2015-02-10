@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unfledged"]={"unfledged","[ʌn'fledʒd]","[ʌn'flɛdʒd]","adj.羽毛未丰的",'adj.羽毛未丰的,未充份发达的,未成熟的','You unfledged boy!','你这个毛头小子！','A small unfledged sparrow on the window sill.','窗台上有一只羽毛未丰的小麻雀。'}

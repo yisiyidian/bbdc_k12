@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["proceed"]={"proceed","[prə'siːd]","[pro'sid]","vi.继续进行",'vi.继续进行;开始,着手','Shall we proceed with the planned investment?','我们著手进行有计画的投资好吗？','He was allowed to proceed to an MA.','他获准攻读文学硕士学位。'}

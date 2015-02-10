@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ocean"]={"ocean","['əʊʃ(ə)n]","['oʃən]","n.海洋",'n.海洋,大量','These creatures live in the depth of the Pacific ||Ocean||.','这些生物生活在太平洋的海底。','This river flowed southwest to the Atlantic ||Ocean||.','这条河流向西南，汇入大西洋。'}

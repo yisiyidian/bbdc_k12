@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["centigrade"]={"centigrade","['sentɪgreɪd]","['sɛntɪɡred]","adj.摄氏的",'adj.分为百度的,摄氏的','The animal\'s temperature drops to just over zero centigrade, and its heart beats very slowly.','动物的体温降到刚好在零摄氏度以上，心脏跳动非常缓慢。','The highest temperature during the day will be two degrees centigrade.','白天最高气温将只有零上二度。'}

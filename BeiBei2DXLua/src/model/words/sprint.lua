@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sprint"]={"sprint","[sprɪnt]","[sprɪnt]","vi.全力奔跑",'vi.全力奔跑,冲刺|||n.短距离赛跑，冲刺|||n.斯普林特(财富500强公司之一,总部所在地美国,主要经营电讯)','You\'ll have to sprint if you want to catch the train.','你要想赶上火车, 就得快跑几步.','She sprinted off/away into the distance.','她飞快地跑了.'}

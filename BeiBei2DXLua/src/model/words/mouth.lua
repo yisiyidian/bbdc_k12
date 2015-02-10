@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mouth"]={"mouth","[maʊθ]","[maʊθ]","n.嘴",'n.嘴,开口，需要供养的人，夸张说话的趋势，（河流等）入口，容器的开口|||vt.装腔作势说话,送进嘴里，喃喃自语，用唇语说|||vi.傲慢地说，嘟嘴扮鬼脸','Her mouth is her best feature.','她的嘴是她容貌上最好看的部分。','The news spread from mouth to mouth.','这消息广为流传。'}

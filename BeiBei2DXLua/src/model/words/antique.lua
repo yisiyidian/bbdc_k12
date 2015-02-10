@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["antique"]={"antique","[æn'tiːk]","[æn'tik]","adj.古代的",'adj.古代的|||n.古物,古董','I saw the vase in the window of an antique shop.','我在一家古玩店的橱窗里看见了那个花瓶。','She\'s an antique, a used-car, etc dealer.','她是经营古董、 旧车等的商人.'}

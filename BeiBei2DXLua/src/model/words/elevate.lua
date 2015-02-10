@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["elevate"]={"elevate","['elɪveɪt]","['ɛlɪvet]","vt.举起",'vt.举起,提拔,素养提升，鼓舞|||vi.变高','Either iron or gold will elevate the position of the country in the family of nations.','强权或经济实力都可以提高一个国家在国际间的地位。','The attempt to elevate Anderson to the presidency.','企图把安德逊抬上总统宝座。'}

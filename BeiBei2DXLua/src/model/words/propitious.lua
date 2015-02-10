@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["propitious"]={"propitious","[prə'pɪʃəs]","[prə'pɪʃəs]","adj.顺利的",'adj.顺利的,适合的,吉祥的','The circumstances were not propitious for further expansion of the company.','这些情况不利于公司的进一步发展。','It was not a propitious time to start a new business.','这个时候开张不吉利。'}

@@ -128,7 +128,7 @@ local function update(dt)
         -- end
     -- end 
 
-    if s_WordDictionaryDatabase and not s_WordDictionaryDatabase.allwords and s_SCENE.currentGameLayerName == 'HomeLayer' then
+    if IS_DEVELOPMENT_MODE and s_WordDictionaryDatabase and not s_WordDictionaryDatabase.allwords and s_SCENE.currentGameLayerName == 'HomeLayer' then
         print(s_WordDictionaryDatabase.nextframe, 's_WordDictionaryDatabase.nextframe')
         if s_WordDictionaryDatabase.nextframe == WDD_NEXTFRAME_STATE__RM_LOAD then
             showProgressHUD('', true)
@@ -155,7 +155,7 @@ function AppScene:replaceGameLayer(newLayer)
 
     if newLayer.class ~= nil and newLayer.class.__cname ~= nil then 
         self.currentGameLayerName = newLayer.class.__cname
-        if newLayer.class.__cname == 'HomeLayer' then
+        if IS_DEVELOPMENT_MODE and newLayer.class.__cname == 'HomeLayer' then
             s_WordDictionaryDatabase.nextframe = WDD_NEXTFRAME_STATE__INIT
             print(s_WordDictionaryDatabase.nextframe, 's_WordDictionaryDatabase.nextframe = WDD_NEXTFRAME_STATE__INIT')
         end
@@ -183,7 +183,7 @@ function AppScene:removeLoadingView()
             self.loadingLayer.unlockTouch()
             self.loadingLayer:removeAllChildren()
 
-            if self.currentGameLayerName == 'HomeLayer' then
+            if IS_DEVELOPMENT_MODE and self.currentGameLayerName == 'HomeLayer' then
                 s_WordDictionaryDatabase.nextframe = WDD_NEXTFRAME_STATE__RM_LOAD
                 print(s_WordDictionaryDatabase.nextframe, 's_WordDictionaryDatabase.nextframe = WDD_NEXTFRAME_STATE__RM_LOAD')
             end

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["upstream"]={"upstream","['ʌpstriːm]","[,ʌp'strim]","adj.逆流而上的",'adj.逆流而上的|||adv.向上游,逆流地','We paddled (the canoe) slowly upstream.','我们慢慢地划著(独木舟)逆流而上.','The falls upstream are full of salmon.','该瀑布上流有许多大麻哈鱼.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["naturally"]={"naturally","['nætʃ(ə)rəlɪ]","['nætʃrəli]","adv.自然地",'adv.自然地,天生地','It is better to sleep naturally than taking medicine.','最好是不服用药物自然入睡。','||Naturally||, as a beginner I\'m not a very good driver yet.','我初学开车, 当然开不好了.'}

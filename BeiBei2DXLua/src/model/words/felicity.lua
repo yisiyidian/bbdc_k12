@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["felicity"]={"felicity","[fɪ'lɪsɪtɪ]","[fə'lɪsəti]","n.快乐",'n.快乐,幸福,幸运','He is a writer of fluency and felicity, of graciousness and gentleness.','他文笔流畅，措辞得体，是一位文雅而温和的作家。','The knowledge of future evils mortified the present ||felicities||.','对未来苦难的了解压抑了目前的喜悦。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["behead"]={"behead","[bɪ'hed]","[bɪ'hɛd]","vt.砍...的头",'vt.砍...的头','Anne Boleyn was beheaded in 1536.','安妮·博林於1536年被斩首.','He was beheaded for high treason.','他因叛国罪被斩首。'}

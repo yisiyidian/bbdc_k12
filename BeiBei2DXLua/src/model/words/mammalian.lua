@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mammalian"]={"mammalian","[mæ'meɪlɪən]","[mæ'meljən]","n.哺乳动物",'n.哺乳动物|||adj.哺乳动物的','The report is on mammalian thermoregulation.','那份报告是有关哺乳动物的体温调节。','Persons are mammalian.','人们是哺乳动物。'}

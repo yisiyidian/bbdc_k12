@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["acronym"]={"acronym","['ækrənɪm]","['ækrənɪm]","n.缩写字",'n.缩写字,字头语','VIP is an acronym for Very Important Person.','VIP是Very Important Person的缩写语','Scratch the subject of defence and acronym, abbreviation, and buzzwords fly out.','话题触及国防，缩合字，缩写字和行话就满天飞。'}

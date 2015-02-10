@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hale"]={"hale","[heɪl]","[ heil ]","adj.强壮的",'adj.强壮的,健壮的|||vt.猛拉,拖揭发拽','Grandfather will be 80 years old, but he is hale and hearty.','祖父就要80高龄了，但仍精神矍铄。','The pickpocket was haled into the police station.','扒手被硬拖进警察分局。'}

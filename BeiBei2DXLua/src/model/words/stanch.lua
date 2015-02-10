@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stanch"]={"stanch","[stɔːn(t)ʃ; stɑːn(t)ʃ]","[stɔntʃ]","vt.止住",'vt.止住,止血|||vt.减轻|||adj.坚固的|||=staunch','In order to stanch the anxiety, many youngsters will drown themselves in liquor.','为消除焦虑，很多年轻人选择借酒消愁。','Sophia stanched the blood with a cloth.','索菲亚用一布块止住了血。'}

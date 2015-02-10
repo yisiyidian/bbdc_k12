@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["good"]={"good","[gʊd]","[ɡʊd]","adj.好的",'n.善行,好处|||adj.好的,优良的,上等的|||[pl.]商品','My one good suit is at the cleaner\'s.','我那套讲究的衣服还在洗衣店里呢。','He was very good to me when I was ill.','我生病时他帮了我的大忙。'}

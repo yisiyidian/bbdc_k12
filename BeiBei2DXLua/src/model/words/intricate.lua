@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intricate"]={"intricate","['ɪntrɪkət]","['ɪntrɪkət]","adj.复杂的",'adj.复杂的,错综的,缠结的,难懂的','The building has intricate geometrical designs on several of the walls.','建筑物的几面墙上有复杂的几何图案.','This is a novel with an intricate plot.','这是一本情节错综复杂的小说。'}

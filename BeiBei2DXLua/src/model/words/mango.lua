@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mango"]={"mango","['mæŋgəʊ]","['mæŋɡo]","n.芒果",'n.芒果','Peel, stone, and dice the mango.','把芒果削皮、去核、切成丁。','...orchards of lime and mango trees.','…有酸橙树和芒果树的果园。'}

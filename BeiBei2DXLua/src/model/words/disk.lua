@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disk"]={"disk","[dɪsk]","[dɪsk]","n.圆盘",'n.圆盘,唱片,花盘,盘形物,光盘|||vt.用圆盘耙耙地|||[计算机]磁盘','I have no disk that may interest you.','我没有一张唱片能引起你的兴趣。','The computer disk is sent in a sealed container.','计算机软盘装在密封的盒里寄出。'}

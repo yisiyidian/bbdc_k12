@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sketchy"]={"sketchy","['sketʃɪ]","[ 'sketʃi ]","adj.概略的",'adj.概略的,不完全的，略图的，不确定的','We managed to piece together the truth from several sketchy accounts.','我们从几方面粗略的说法中设法弄清了真相.','I have only a sketchy knowledge of geography.','我对地理只是一知半解.'}

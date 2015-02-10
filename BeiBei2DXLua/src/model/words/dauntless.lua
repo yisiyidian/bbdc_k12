@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dauntless"]={"dauntless","['dɔːntlɪs]","['dɔntləs]","adj.不屈不挠的",'adj.不屈不挠的,大胆的','They are all dauntless soliders.','他们都是勇敢的士兵。','||Dauntless|| in spirit, they became steeled through hardship.','他们不屈不挠，在艰苦的生活中锻炼得更加坚强了。'}

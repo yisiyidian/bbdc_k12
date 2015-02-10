@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abrasive"]={"abrasive","[ə'breɪsɪv]","[ə'bresɪv]","adj.粗糙的",'adj.粗糙的；有研磨作用的；伤人感情的|||n.研磨料','Jeff is usually an abrasive character, but he can be as sweet as honey when he wants something.','杰弗通常是一个生硬粗暴的人，但他想得到某物时，他会象蜜一样甜。','I can not stand her abrasive manner.','我无法忍受她粗鲁的态度。'}

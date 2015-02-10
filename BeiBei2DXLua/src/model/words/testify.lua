@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["testify"]={"testify","['testɪfaɪ]","['tɛstɪfaɪ]","vt.&vi.证明",'vt.&vi.证明,作证,声明','One who is called on to testify before a court.','证人被传到法庭上作证的人','He ||testified|| that he had not seen the accident.','他作证说他没有看见那次事故。'}

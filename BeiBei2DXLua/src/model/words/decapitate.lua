@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decapitate"]={"decapitate","[dɪ'kæpɪteɪt]","[dɪ'kæpɪtet]","v.斩首",'v.斩首,杀头,开革','He recently decapitated a tramp on the London Underground.','他最近在伦敦地铁里将一个流浪汉的头砍了下来。','A worker was decapitated when a lift plummeted down the shaft on top of him.','电梯沿着电梯井垂直坠落，把一名工人砸得身首异处。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["revulsion"]={"revulsion","[rɪ'vʌlʃ(ə)n]","[rɪ'vʌlʃən]","n.剧变",'n.剧变,非常的厌恶,剧烈的反应','Should we only fall silent in revulsion, shame, and guilt?','我们应当仅仅在厌恶，羞耻和罪恶中保持沉默吗？','His voice was filled with horror and revulsion.','他的声音里充满了恐惧和反感。'}

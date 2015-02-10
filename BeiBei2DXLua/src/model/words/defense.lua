@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["defense"]={"defense","[dɪ'fens]","[dɪ'fɛns]","n.防卫",'n.防卫,防卫物,辩护|||vt.防守','The magazine\'s disclosure of defense secrets caused great attention.','该杂志对防务内幕的透露引起了极大的关注。','Whether a gun is a weapon of offence or a weapon of defense depends on which end of it you are at.','枪是攻击武器还是防御武器，要看你的目的而定。'}

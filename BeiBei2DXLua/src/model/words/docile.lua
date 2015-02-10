@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["docile"]={"docile","['dəʊsaɪl]","[ 'dəusail, 'dɔsəl ]","adj.容易教的",'adj.容易教的,温顺的','They wanted a low-cost, docile workforce.','他们想要廉价的、听话的劳动力。','Circus monkeys are trained to be very docile and obedient.','马戏团的猴子被训练得服服贴贴的。'}

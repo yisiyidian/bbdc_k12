@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["counterfeit"]={"counterfeit","['kaʊntəfɪt; -fiːt]","['kaʊntɚ'fɪt]","n.膺品",'n.膺品,伪造品|||adj.假冒的,假装的|||v.仿造,伪装,假装','This note is counterfeit, but that one\'s good.','这张钞票是假的, 那张是真的.','She counterfeited alarm when he confessed his love.','当他向她示爱时她假装惊讶的样子。'}

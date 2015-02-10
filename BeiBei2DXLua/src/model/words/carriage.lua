@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["carriage"]={"carriage","['kærɪdʒ]","['kærɪdʒ]","n.四轮马车",'n.四轮马车,车厢','The horse stood between the shafts of the carriage.','马站在大车车辕中间。','The carriage that he had ordered duly arrived, and we drove off.','他叫的马车按时到，我们就坐上去走了。'}

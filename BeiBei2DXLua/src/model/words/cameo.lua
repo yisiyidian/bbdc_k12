@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cameo"]={"cameo","['kæmɪəʊ]","['kæmɪo]","n.刻有浮雕的宝石或贝壳",'n.刻有浮雕的宝石或贝壳|||n.（文艺或戏剧）小品，小品文','He played a cameo role, that of a young Aids patient in hospital.','他扮演一个非常出彩的小角色：一名住院的年轻艾滋病患者。','That little girl is wearing a cameo brooch.','那小女孩戴着一枚浮雕宝石胸针。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["new"]={"new","[njuː]","[nu]","adj.新的",'adj.新的,附加的|||adv.新的','They sell new and used furniture.','他们出售新旧家具。','She is new to this country.','她对这个国家还不熟悉。'}

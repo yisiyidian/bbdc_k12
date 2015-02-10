@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lightning"]={"lightning","['laɪtnɪŋ]","['laɪtnɪŋ]","n.闪电",'n.闪电|||adj.闪电般的,快速的|||vi.打闪','The tree was struck by lightning.','那棵树被雷电击中了.','||Lightning|| usually accompanies thunder.','闪电通常伴有雷声。'}

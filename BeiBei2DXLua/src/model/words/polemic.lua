@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["polemic"]={"polemic","[pə'lemɪk]","[pə'lɛmɪk]","n.争论",'n.争论,论战，辩论者|||adj.争论的','This is a polemic question.','这是一个有争论的问题。','Her speech was memorable for its polemic rather than its substance.','她的演说之所以令人难忘，不是因其内容而是因其辩论方法。'}

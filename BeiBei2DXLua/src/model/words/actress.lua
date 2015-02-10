@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["actress"]={"actress","['æktrɪs]","['æktrɪs]","n.女演员",'n.女演员','Her success as an actress was now assured.','她当演员很成功，已毋庸置疑了。','The young actress made her debut in the new comedy.','这位年轻的女演员在新上演的喜剧里首次登台演出。'}

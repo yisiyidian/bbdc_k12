@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spark"]={"spark","[spɑːk]","[spɑrk]","n.火花",'n.火花,朝气,情人,俗丽的年轻人|||vi.闪烁,冒火花,热情回应|||vt.激发,引起,追求','There was a wild spark in his eyes.','他的两眼炯炯发光。','The exhaust pipe shot sparks.','排气管中射出了火星。'}

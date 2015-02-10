@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["goodwill"]={"goodwill","[gʊd'wɪl]","['gʊd'wɪl]","n.善意",'n.善意,亲切,友好;商誉,信誉.','His constant requests for help taxed our goodwill.','他不断要求我们帮助他, 过分利用了我们对他的好意。','An earnest gesture of goodwill.','一个表示友好的诚恳的手势'}

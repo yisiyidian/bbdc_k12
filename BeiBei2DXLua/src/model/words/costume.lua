@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["costume"]={"costume","['kɒstjuːm]","['kɑstum]","n.服装",'n.服装,剧装|||vt.提供服装,为...设计服装|||adj.服装打扮的','Dressed up as a gigantic chicken, she won the prize for the best costume.','化妆成一个巨大的鸡，她因此获得最佳服装奖','The details of the costume were totally authentic.','这件古装的每个小地方都完全真实.'}

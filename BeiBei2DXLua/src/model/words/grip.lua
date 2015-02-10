@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grip"]={"grip","[grɪp]","[ɡrɪp]","n.紧握",'n.紧握,了解,手柄,手提包|||vt.紧抓,吸引','The eagle seized its prey in a tenacious grip.','鹰将捕获物紧紧抓住.','He tightened his grip on her arm.','他紧抓她的手臂。'}

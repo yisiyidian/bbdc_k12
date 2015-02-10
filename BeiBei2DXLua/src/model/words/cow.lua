@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cow"]={"cow","[kaʊ]","[kaʊ]","n.母牛",'n.母牛,母兽|||vt.恐吓','In India the cow is a sacred animal.','在印度，牛是神圣的动物。','The cow has produced a calf.','这母牛生了一头小牛。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["distil"]={"distil","[dis'til]","[ dis'til ]","v.蒸馏",'v.蒸馏,提取....的精华|||=distill','Rum is an alcoholic drink distilled from sugar-cane juice.','郎姆酒是用甘蔗汁蒸馏制成的。','You can purify the water by distilling.','你可以通过蒸馏来净化水。'}

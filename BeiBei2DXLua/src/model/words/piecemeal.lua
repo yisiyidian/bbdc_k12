@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["piecemeal"]={"piecemeal","['piːsmiːl]","['pismil]","adv.一件一件",'adv.一件一件,一片一片|||adj.一片一片的,逐渐的|||n.断片','The building was assembled piecemeal.','那座建筑物是一块一块地组装起来的。','I\'ve only had a piecemeal account of what happened.','我对发生的事情只有支离破碎的了解.'}

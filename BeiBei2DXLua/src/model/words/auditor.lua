@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["auditor"]={"auditor","['ɔːdɪtə]","['ɔdɪtɚ]","n.听者",'n.听者,收听者,稽核员','The auditor have agree the account.','审计人员批准（通过）了所有项目。','The auditor began the examination of accounts.','稽核员开始审察帐务。'}

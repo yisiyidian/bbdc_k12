@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incognito"]={"incognito","[,ɪnkɒg'niːtəʊ; ɪn'kɒgnɪtəʊ]","[,ɪnkɑɡ'nito]","adv.微行",'adv.微行,用假名的|||n.微行者,匿名者|||adj.微行的,改名的,匿名的','He preferred to remain incognito.','他更喜欢继续隐姓埋名下去。','He didn\'t want to be recognized so he travelled incognito.','他不想被人认出，所以出行时隐瞒身分。'}

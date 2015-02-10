@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clangor"]={"clangor","['klæŋɡə]","['klæŋɚ]","n.(尤指连续的)铿锵声",'n.(尤指连续的)铿锵声,叮当声|||vi.发出叮当声','He has a large bell in his hand and this he swings mechanically, awakening a deafening clangor.','他手中拿着一个大铃，呆板地摇动着，发出了一阵震耳欲聋的铃声。','That clangor deafened me.','那叮叮当当的声音吵死我了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["photographic"]={"photographic","[,fəʊtə'græfɪk]","['fotə'græfɪk]","adj.摄影的",'adj.摄影的，逼真的','The equipment of the photographic studio was expensive.','装备摄影室的开支很大.','||Photographic|| paper is highly sensitive to light.','感光纸对光十分敏感.'}

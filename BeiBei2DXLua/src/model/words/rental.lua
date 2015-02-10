@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rental"]={"rental","['rent(ə)l]","['rɛntl]","n.地租的",'n.地租的,总额,地租收入|||adj.租借的,地租的','I\'m going to have a video rental shop and make a bomb!','我要开一个出租录像带的店，赚大钱！','The rental is too high in this place.','这里地租太高了'}

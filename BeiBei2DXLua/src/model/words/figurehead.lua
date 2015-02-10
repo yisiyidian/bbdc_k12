@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["figurehead"]={"figurehead","['fɪgəhed]","['fɪgjɚ'hɛd]","n.装饰船头的人像",'n.装饰船头的人像,破浪神,傀儡领袖','The emperor is a figurehead.','那皇帝是有名无实的首脑。','The queen of that country is only a figurehead.','那个国家的女王只是个有名无实的首脑。'}

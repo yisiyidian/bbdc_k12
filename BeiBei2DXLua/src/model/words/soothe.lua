@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["soothe"]={"soothe","[suːð]","[sʊð]","v.缓和",'v.缓和,使...安静,安慰','He tried to soothe the crying child.','他试着去哄那个在哭的孩子。','He smeared some balm on his hand to soothe the pain.','他在手上涂了些药膏来止痛。'}

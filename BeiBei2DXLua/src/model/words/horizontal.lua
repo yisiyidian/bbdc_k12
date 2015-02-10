@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["horizontal"]={"horizontal","[hɒrɪ'zɒnt(ə)l]","['hɔrə'zɑntl]","adj.水平的",'adj.水平的,横的|||n.水平线,水平面','The sun rises from the horizontal line.','太阳从地平线上升起。','The vertical line meets the horizontal one here.','垂直线与水平线在此相交.'}

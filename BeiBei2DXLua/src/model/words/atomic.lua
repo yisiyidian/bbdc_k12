@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["atomic"]={"atomic","[ə'tɒmɪk]","[ə'tɑmɪk]","adj.原子的",'adj.原子的,原子能的','Like many discoveries, atomic power can be used for good or evil.','正如人类发现的许多事物一样, 原子能既可用来为善, 也可用以作恶.','Since the advent of atomic power, there have been great changes in industry.','自从原子动力问世以后，工业发生了巨大的变化。'}

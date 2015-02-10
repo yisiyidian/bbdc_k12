@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ignoble"]={"ignoble","[ɪg'nəʊb(ə)l]","[ɪɡ'nobl]","adj.平民的",'adj.平民的，卑贱的,卑鄙的,不光彩的','There\'s something cowardly and ignoble about such an attitude.','这种态度有点怯懦可鄙。','To betray a friend is ignoble.','背弃朋友是为人所不齿的。'}

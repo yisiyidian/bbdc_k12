@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dispose"]={"dispose","[dɪ'spəʊz]","[dɪ'spoz]","vt.倾向于",'vt.倾向于,处置|||vi.销毁','I must dispose of the trouble.','我必须摆脱麻烦。','His job is not only to dispose of problems but (also) to meet unexpected challenges.','他的工作不仅要处理难题而且也要应付突来的挑战。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["various"]={"various","['veərɪəs]","['vɛrɪəs]","adj.各种各样的",'adj.各种各样的','Bricks and dishes are made from various kinds of clay.','砖和盘子由各种粘土制成。','||Various|| discords have arisen over this question.','人们在这个问题上发生了不少争执。'}

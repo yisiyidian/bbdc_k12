@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vanity"]={"vanity","[ˈvænəti]","['vænəti]","n.虚荣心",'n.虚荣心,浮华,无价值的东西|||adj.虚荣心的','His vanity was his downfall.','他因虚荣心太重而垮台.','||Vanity|| is his Achilles\' heel.','虚荣自负是他的致命伤.'}

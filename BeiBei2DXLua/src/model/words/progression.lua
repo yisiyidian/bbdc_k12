@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["progression"]={"progression","[prə'greʃ(ə)n]","[prə'ɡrɛʃən]","n.前进",'n.前进','Population is increasing in that country in a geometrical progression.','那个国家的人口正以几何级数增长.','He received a mixed collection without progression or pairs.','他拿到了一副杂牌,既没有顺子,也没有对子.'}

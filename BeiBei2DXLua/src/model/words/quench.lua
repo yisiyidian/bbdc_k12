@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quench"]={"quench","[kwen(t)ʃ]","[kwɛntʃ]","v.熄减",'v.熄减,结束,冷浸,解渴','Water will quench a fire.','水可以灭火。','Hot steel is quenched to harden it.','烧热的钢淬火使它坚硬。'}

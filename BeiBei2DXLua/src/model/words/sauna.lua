@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sauna"]={"sauna","['sɔːnə]","['sɔnə]","n.桑拿浴",'n.桑拿浴,蒸汽浴','The new sports centre has saunas and solariums.','新建的运动中心设有蒸汽浴室及日光浴床.','A sauna in the hotel would be a useful amenity.','旅馆中的芬兰蒸汽浴室倒是个有益的好设施.'}

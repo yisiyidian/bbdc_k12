@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["demographic"]={"demographic","[,demə'græfɪk]","[,dɛmə'ɡræfɪk]","adj.人口统计学的",'adj.人口统计学的|||adj.人口的,人口统计的','The station has won more listeners in the 25-39 demographic.','这个电台吸引了更多25-39岁年龄段的听众。','These demographic changes help to create a virtuous circle of growth.','人口结构的变化有助于创造一个良性的增长循环。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["asthma"]={"asthma","['æsmə]","['æzmə]","n.哮喘",'n.哮喘','An antibody found in the blood of individuals having a genetic predisposition to allergies such as asthma and hay fever.','反应素个体血液中的一种抗体，可以对诸如气喘病和光粉热这些变态反应产生预先的基因处理','An asthma attack.','气喘病发作'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pinpoint"]={"pinpoint","['pɪnpɒɪnt]","['pɪnpɔɪnt]","n.极小之物",'n.极小之物|||v.精确地找到,准确地轰炸','a pinpoint of light.','一丝光','pinpoint a target.','瞄准目标'}

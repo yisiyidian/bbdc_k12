@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["precisely"]={"precisely","[prɪ'saɪslɪ]","[prɪ'saɪsli]","adv.精确地",'adv.精确地','My own view precisely.','我正是这样看的。','That answers precisely to our need.','那恰好符合我们的需要。'}

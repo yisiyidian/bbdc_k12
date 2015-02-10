@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["custodian"]={"custodian","[kʌ'stəʊdɪən]","[kʌ'stodɪən]","n.管理人",'n.管理人,保管人,监督人','He is the custodian of the minor child\'s estate.','他是年幼孩子财产的监护人','He had been a custodian so many years.','他做看门人已经好多年了。'}

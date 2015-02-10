@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["strengthen"]={"strengthen","['streŋθ(ə)n; -ŋkθ(ə)n]","['strɛŋθn]","vt.&vi.加强",'vt.&vi.加强,变坚固','He has been brought in to strengthen the defence.','已请他来加强後卫力量.','The current strengthened as we moved down the river.','我们顺流而下时, 水流更急了.'}

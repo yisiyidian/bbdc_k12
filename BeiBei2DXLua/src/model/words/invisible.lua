@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["invisible"]={"invisible","[ɪn'vɪzɪb(ə)l]","[ɪn'vɪzəbl]","adj.看不见的",'adj.看不见的,无形的|||n.隐形人(或物品)','The mends were almost invisible.','修补过的地方几乎看不出来。','Some stars are invisible to the naked eye.','有些星体肉眼是看不见的。'}

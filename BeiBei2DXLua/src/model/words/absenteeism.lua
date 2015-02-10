@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["absenteeism"]={"absenteeism","[æbs(ə)n'tiːɪz(ə)m]","[,æbsən'tiɪzəm]","n.旷课",'n.旷课,旷工','His absenteeism brought matters to the acompanies.','他的缺席给同事带来不便。','He was fired because of the frequent absenteeism.','因为经常旷工，他被解雇了'}

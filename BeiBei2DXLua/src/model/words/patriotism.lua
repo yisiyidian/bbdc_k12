@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["patriotism"]={"patriotism","['peɪtrɪətɪz(ə)m]","['petrɪətɪzəm]","n.爱国心",'n.爱国心,爱国精神','When it comes to talking about patriotism, he\'s an extremist.','一谈到爱国主义, 他就很偏激.','Excessive patriotism can lead to xenophobia.','爱国主义过了头即可导致仇视一切外国人.'}

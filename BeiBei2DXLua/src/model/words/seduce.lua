@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seduce"]={"seduce","[sɪ'djuːs]","[sɪ'dʊs]","vt.怂恿",'vt.怂恿,瞒骗,引诱','Are you trying to seduce me?','你想要勾引我吗?','The warm weather seduced me away from my studies.','暖和的天气诱使我放下了学习。'}

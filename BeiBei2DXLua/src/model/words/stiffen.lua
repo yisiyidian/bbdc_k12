@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stiffen"]={"stiffen","['stɪf(ə)n]","['stɪfn]","v.使...坚硬",'v.使...坚硬,变为浓粘,变为猛烈','He stiffened at the insult.','他听到这些侮辱的话，态度强硬起来。','He stiffened at her rude remarks.','她的粗话使他板起了面孔。'}

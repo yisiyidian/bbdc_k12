@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coyote"]={"coyote","[kaɪ'əʊtɪ]","[kaɪˈoti, ˈkaɪˌot]","n.[动]小狼",'n.[动]小狼,丛林狼','Now and again the hunter can hear a long-draw dolorous whine of some unseen coyote.','猎人不时能听见某只看不见的小林狼发出的拖长的哀嚎。','The hybrid offspring of a coyote and a feral dog.','科伊狗丛林狼和野狗的杂交后代'}

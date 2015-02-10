@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["colossal"]={"colossal","[kə'lɒs(ə)l]","[kə'lɑsl]","adj.巨大的",'adj.巨大的,异常的','It requires government spending on a colossal scale.','这要求政府付出巨额开支。','The dam is so colossal that it costs the government 3 billion dollars.','这个大坝是如此巨大，以至于花了政府30亿美元。'}

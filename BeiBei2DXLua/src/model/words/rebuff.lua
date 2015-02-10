@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rebuff"]={"rebuff","[rɪ'bʌf]","[rɪ'bʌf]","n.断然拒绝",'n.断然拒绝,严厉拒绝,漠不关心|||v.严厉拒绝','Facts are the most powerful rebuff to rumormongers.','事实是对造谣者最有力的回答。','Her offer of help was met with a sharp rebuff.','她主动帮忙，却遭到断然拒绝。'}

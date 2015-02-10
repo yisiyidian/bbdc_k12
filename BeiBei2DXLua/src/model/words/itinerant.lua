@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["itinerant"]={"itinerant","[ɪ'tɪn(ə)r(ə)nt; aɪ-]","[aɪ'tɪnərənt]","adj.巡回的",'adj.巡回的，流动的|||n.巡回者','They lead an itinerant life.','他们过着漂泊的生活。','He is starting itinerant performance all over the world.','他正在世界各地巡回演出。'}

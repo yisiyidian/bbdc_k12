@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["commemorative"]={"commemorative","[kə'mem(ə)rətɪv]","[kəˈmeməreɪtɪv]","adj.纪念的",'adj.纪念的','The Royal Mint will strike a commemorative gold coin.','英国皇家造币厂将铸造一种纪念金币。','A commemorative stamp will be issued October 15.','一枚纪念邮票将于10月15日发行。'}

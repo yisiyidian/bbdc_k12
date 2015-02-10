@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["moisture"]={"moisture","['mɒɪstʃə]","['mɔɪstʃɚ]","n.潮湿",'n.潮湿,湿气','The plants drink in moisture from the atmosphere.','植物从大气中吸取水分。','If you air your quilt on such a wet day, it\'ll soak up the moisture.','如果在这么潮湿的天晒被子，被子就会把湿气都吸去。'}

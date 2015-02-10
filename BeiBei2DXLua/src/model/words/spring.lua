@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spring"]={"spring","[sprɪŋ]","[sprɪŋ]","n.春天",'n.春天,弹簧,弹跳,泉水,投射|||vt.弹起,使喷涌,越过,弹出,释放,发生,跳,裂开|||vi.射出,涌入(出),发芽,长高','||Spring|| is here.','春天来了。','A suspicion ||sprang|| up in his mind.','他的脑中突然产生了一些疑问。'}

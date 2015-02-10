@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["smash"]={"smash","[smæʃ]","[smæʃ]","v.粉碎",'n.破碎,大败,冲突|||adj.非常的,了不起的|||v.粉碎,溃裂,使破产|||[羽]扣球','I\'ll smash you in the eye!','当心我给你眼睛一拳！','The elephant smashed through the trees.','大象在树林中横冲直撞。'}

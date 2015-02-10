@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["muzzy"]={"muzzy","['mʌzɪ]","['mʌzi]","adj.模糊不清的",'adj.模糊不清的,昏迷的','After a couple of whiskies my head felt all muzzy.','我喝了两杯威士忌, 就昏头昏脑的了.','He stopped drinking when his head started getting muzzy.','...'}

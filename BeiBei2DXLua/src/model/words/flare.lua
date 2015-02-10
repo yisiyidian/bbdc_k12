@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flare"]={"flare","[fleə]","[flɛr]","n.闪光",'n.闪光,闪耀,[天]耀斑|||v.闪光,闪耀','The skirt flares out at the hem.','这条裙子的下摆张的很大。','Her nostrils flared angrily.','她气得鼻孔都鼓了起来。'}

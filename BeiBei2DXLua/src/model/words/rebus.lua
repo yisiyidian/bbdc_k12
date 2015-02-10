@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rebus"]={"rebus","['riːbəs]","['ribəs]","n.谜",'n.谜,谜绘','Kids will love this charming story with colorful rebus icons on every page.','孩子们会喜欢上这个每一页都有着趣味画谜的引人入胜的故事。','Most people know a sort of puzzle called rebus.','大多数人都知道有一种称为画谜的猜谜。'}

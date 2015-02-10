@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dedicated"]={"dedicated","['dedɪkeɪtɪd]","['dɛdə'ketɪd]","adj.专注的",'adj.专注的,献身的|||adj.专用的','He dedicated his life to science.','他毕生致力于科学事业。','He dedicated his first book to his mother.','他把他的第一本书题献给了他的母亲。'}

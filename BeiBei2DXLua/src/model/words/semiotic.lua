@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["semiotic"]={"semiotic","[,semɪ'ɒtɪk]","[,sɛmɪ'ɑtɪks]","adj.符号学的",'adj.符号学的|||adj.[医]症状学的','semiotic semiotic semiotic','semiotic semiotic semiotic','Patient lung shadow and semiotic body are asked for but abhorrent.','病人肺部阴影与症状体征可不一致。'}

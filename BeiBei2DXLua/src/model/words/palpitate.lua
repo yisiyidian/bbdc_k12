@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["palpitate"]={"palpitate","['pælpɪteɪt]","['pælpə'tet]","vi.悸动",'vi.悸动,心跳,发抖','I felt my heart palpitate','我感到心在砰砰跳。','His words palpitated me.','他的话令我心动。'}

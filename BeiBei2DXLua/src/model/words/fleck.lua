@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fleck"]={"fleck","[flek]","[flɛk]","n.斑点",'n.斑点,微粒|||v.使...起斑点|||vt.使有斑点,使成斑驳','His face was flecked and creased with age.','随着年事增长，他的脸上有了雀斑和皱纹。','Every fleck of light reminds me how much I\'ve yet to see','每一点光芒都提醒我世界万千，没看到的还很多。'}

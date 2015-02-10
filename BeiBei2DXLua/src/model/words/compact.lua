@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compact"]={"compact","[kəm'pækt]","['kɑmpækt]","adj.紧凑的",'adj.紧凑的,紧密的,简洁的|||v.使装满,使简洁|||[计算机]紧凑的|||n.合约，条约','He received a compact package.','他收到一个扎得很紧的包裹。','The Commonwealth agreed to make a compact with this country.','英联邦同意和这个国家订约。'}

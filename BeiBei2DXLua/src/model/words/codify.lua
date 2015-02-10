@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["codify"]={"codify","['kəʊdɪfaɪ]","[ 'kɔdifai ]","v.编码",'v.编码，整理，编纂','Not all lawyers can codify laws.','不是所有律师都可以编撰法律。','The Japanese have a tendency to codify experience.','日本人有一种把体验记录成文的倾向。'}

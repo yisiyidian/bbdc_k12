@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["privilege"]={"privilege","['prɪvɪlɪdʒ]","['prɪvlɪdʒ]","n.特权",'n.特权,特别恩典,基本人权,荣幸|||vt.给特权,免除','She had led a life of luxury and privilege.','她过著养尊处优的生活。','It was a privilege to work with him.','和他在一起工作是一项殊荣。'}

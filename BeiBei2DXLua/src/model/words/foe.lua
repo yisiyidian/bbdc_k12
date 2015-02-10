@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["foe"]={"foe","[fəʊ]","[fo]","n.敌人",'n.敌人,仇敌,反对物,有害物','He is a deadly foe to us.','他是我们的死敌。','He knew that Karl could be an implacable foe.','他明白卡尔可能会成为他的死敌.'}

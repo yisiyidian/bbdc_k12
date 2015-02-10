@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["weatherman"]={"weatherman","['weðəmæn]","['wɛðɚmæn]","n.气象工作者",'n.气象工作者，天气预报员','Next time you are caught in a sudden rain,don\'t blame weatherman,blame bacteria.','下次你被突如其来的雨淋湿了，别怪气象工作者了，怪细菌吧。','Next time you are caught in a sudden rain,don\'t blame weatherman ,blame bacteria.','下次你被突如其来的雨淋湿了，别怪气象工作者了，怪细菌吧。'}

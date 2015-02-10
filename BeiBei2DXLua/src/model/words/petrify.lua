@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["petrify"]={"petrify","['petrɪfaɪ]","['pɛtrɪfaɪ]","vt.硬化(使...石质化",'vt.硬化(使...石质化,使...发呆)','The poor child was ||petrified|| with fear.','这可怜的孩子被吓呆了。','Redundant slogans are apt to petrify a man\'s thinking','口号过多容易使人思想僵化。'}

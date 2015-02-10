@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chew"]={"chew","[tʃuː]","[tʃʊ]","vt.咀嚼",'vt.咀嚼,嚼碎,损坏|||vi.咀嚼|||n.咀嚼,咀嚼物','Babies like to chew something when they\'re teething.','幼儿长牙时爱咬东西.','Many people like to chew mint gum in the summer.','许多人喜欢在夏天嚼薄荷口香糖。'}

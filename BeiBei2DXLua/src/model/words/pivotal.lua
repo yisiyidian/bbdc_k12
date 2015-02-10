@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pivotal"]={"pivotal","['pɪvətl]","['pɪvətl]","adj.枢轴的",'adj.枢轴的,中枢的,关键的','Standards are pivotal to the success of digital wallets.','标准化是数字钱包能否成功的关键。','He played a pivotal role in the semi-final.','他在半决赛中起到了关键作用。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["devise"]={"devise","[dɪ'vaɪz]","[dɪ'vaɪz]","vt.设计",'vt.设计,遗赠|||n.遗赠(的财产)','He devises a new type of transistor.','他发明了一种新的晶体管。','He is good at ||devising||.','他擅长设计'}

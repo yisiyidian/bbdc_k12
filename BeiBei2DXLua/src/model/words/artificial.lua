@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["artificial"]={"artificial","[ɑːtɪ'fɪʃ(ə)l]","[,ɑrtɪ'fɪʃl]","adj.人造的",'adj.人造的,虚伪的,武断的','||Artificial|| heating hastens the growth of plants.','人工供暖能促进植物生长.','This orange drink contains no artificial flavourings.','这种橙汁饮品不含人工调味料.'}

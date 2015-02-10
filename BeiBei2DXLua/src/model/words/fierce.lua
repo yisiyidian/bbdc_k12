@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fierce"]={"fierce","[fɪəs]","[fɪrs]","adj.猛烈的",'adj.猛烈的,凶猛的,残暴的,强烈的','The fierce sun parched the bare earth.','灼热的阳光炙烤着光秃秃的大地。','The postman was bitten by a fierce dog.','那个邮递员被一只恶狗咬了。'}

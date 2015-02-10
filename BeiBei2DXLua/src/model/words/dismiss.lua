@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dismiss"]={"dismiss","[dɪs'mɪs]","[dɪs'mɪs]","vt.开除",'vt.解散,开除，逃避，（法律）驳回','The boss threatened to dismiss him from his job, but it\'s all a bluff.','老板威胁说要解雇他，但这不过是恐吓而已。','At first she threatened to dismiss us all, but later she relented.','起初她威胁要解雇我们所有的人，但是后来她态度软化了。'}

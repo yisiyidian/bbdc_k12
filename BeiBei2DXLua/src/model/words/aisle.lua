@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aisle"]={"aisle","[aɪl]","[aɪl]","n.(席位间的)通道",'n.(席位间的)通道,侧廊','The organ play as the bride come down the aisle.','当新娘沿著通道走过来时，风琴演奏了起来。','The girl ushered me along the aisle to my seat.','引座小姐带领我沿著通道到我的座位上去.'}

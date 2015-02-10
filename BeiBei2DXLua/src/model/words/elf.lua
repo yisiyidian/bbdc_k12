@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["elf"]={"elf","[elf]","[ɛlf]","elf:小精灵",'elf:小精灵，淘气鬼，恶作剧的人，恶人|||abbr.极低频（=extremelylowfrequency）|||abbr.电子定位器(=ElectronicLocationFinder)|||abbr.一种为Linux系统所采用的通用文件格式,支持动态链接(=excutivelinkedfile)','Relating to or suggestive of an elf.','小精灵的小精灵的或暗指小精灵的','My little daughter is as lovely as an elf.','我的小女儿像个小精灵一样可爱。'}

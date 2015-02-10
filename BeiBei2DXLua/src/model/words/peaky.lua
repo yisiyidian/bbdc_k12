@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peaky"]={"peaky","['piːkɪ]","['piki]","adj.憔悴的",'adj.憔悴的','She looks a bit peaky today.','她今天看起来有点憔悴。','Her mother announced that she still looked peaky, and felt her forehead for a fever.','她老娘说她看上去还是有点萎，摸摸额头像是发烧了'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["topsoil"]={"topsoil","['tɒpsɒɪl]","['tɑp'sɔɪl]","n.表层土",'n.表层土|||vt.去掉表土','The topsoil has been almost completely washed away.','表层土壤已差不多完全给冲走了.','Under flood conditions, great amounts of topsoil are washed to receiving streams.','在洪水泛滥时, 大量表层土壤被冲刷到承受的水流中.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["canker"]={"canker","['kæŋkə]","['kæŋkɚ]","n.溃疡",'n.溃疡,(树的)癌肿病,毒害，弊害|||v.患溃疡,腐蚀,溃烂','Drug addiction is a dangerous canker in society.','吸毒成瘾是腐蚀社会的一大祸害。','In gardens, cankers are most prominent on apples and pear trees.','花园里，苹果树和梨树患枯枝病最明显。'}

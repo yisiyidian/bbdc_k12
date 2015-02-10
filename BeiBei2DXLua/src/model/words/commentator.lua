@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["commentator"]={"commentator","['kɒmənteɪtə]","['kɑmən'tetɚ]","n.注释者",'n.注释者(注释者,解说员,新闻广播员)','Babu is a commentator on African affairs.','巴布是一位非洲事务评论员。','He works as a soccer commentator in CCTV.','他在CCTV当足球解说员。'}

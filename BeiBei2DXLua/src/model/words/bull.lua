@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bull"]={"bull","[bʊl]","[ bul ]","adj.大型的",'adj.大型的,公牛的,雄性的|||n.公牛,买空着,像牛的东西,斗牛犬,教宗训谕,法令|||vi.猛冲|||vt.暴力,强制','His bull will come to serve our cows tomorrow.','明天我们用他的公牛与我们的母牛配种.','The bull bellowed angrily.','公牛怒吼起来.'}

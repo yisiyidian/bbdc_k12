@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["earn"]={"earn","[ɜːn]","[ɝn]","vt.赚得",'vt.赚得,赢得,生利','Well-known sportsmen can earn large sums of money from manufacturers by endorsing clothes and equipment.','著名运动员在广告中替厂家宣传运动服装和器械, 可获得巨额报酬.','How does she earn her living?','她靠什么谋生？'}

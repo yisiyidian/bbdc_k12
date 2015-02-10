@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hornet"]={"hornet","['hɔːnɪt]","['hɔrnɪt]","n.大黄蜂类",'n.大黄蜂类,难缠的人物','His letter to the newspaper about racialism in schools has stirred up a real hornet\'s nest.','他给报纸写的关於学校中存在种族歧视现象的信件引起了很大的麻烦.','A hornet stung me on the cheek.','一只大黄蜂叮了我的脸颊.'}

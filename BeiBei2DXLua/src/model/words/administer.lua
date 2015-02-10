@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["administer"]={"administer","[əd'mɪnɪstə]","[əd'mɪnɪstɚ]","vt.执行",'vt.管理,执行,给与|||vi.执行管理人职责,给与帮助','The duty of a judge is to administer justice, but his practice is delay it.','法官的本分是执行法律（主持正义），惟其所行者，却是在拖延（其执行）。','He administers a large pension fund.','他管理一大笔养老金。'}

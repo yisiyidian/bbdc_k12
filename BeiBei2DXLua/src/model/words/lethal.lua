@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lethal"]={"lethal","['liːθ(ə)l]","['liθl]","adj.致命的",'adj.致命的,毁灭性的,有效的|||n.基因异常,致死基因','In situations like this she wished she had a gun or some lethal weapon.','在这种情况下，她真希望自己有一把枪或什么致命武器。','Frost and wet are the lethal combination for plants.','霜雨天气对植物危害极大。'}

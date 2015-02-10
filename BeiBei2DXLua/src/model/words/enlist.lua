@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enlist"]={"enlist","[ɪn'lɪst; en-]","[ɪn'lɪst]","v.徵募",'v.徵募,参与,支持','Sarah has been enlisted to organize the party.','萨拉已应邀组织这一聚会。','He enlisted when he was 18.','他18岁时入伍。'}

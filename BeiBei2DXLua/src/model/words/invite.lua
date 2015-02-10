@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["invite"]={"invite","[ɪn'vaɪt]","[ɪn'vaɪt]","vt.邀请",'vt.邀请,要求|||n.邀请','I\'ve invited the Smiths round for drinks next Friday.','我已邀请史密斯一家下周五来家中小酌。','Leaving your car unlocked is just ||inviting|| trouble!','汽车不锁上纯粹是自找麻烦！'}

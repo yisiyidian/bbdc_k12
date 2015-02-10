@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ambush"]={"ambush","['æmbʊʃ]","['æmbʊʃ]","n.埋伏",'n.埋伏,伏兵|||v.埋伏，突袭','He suspected an ambush.','他感到有埋伏.','They laid an ambush for the enemy patrol.','他们埋伏起来准备伏击巡逻的敌人。'}

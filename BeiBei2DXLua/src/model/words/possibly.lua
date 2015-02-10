@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["possibly"]={"possibly","['pɒsɪblɪ]","['pɑsəbli]","adv.可能地",'adv.可能地,也许','I can\'t possibly lend you so much money.','我没有可能借给你这麽多钱。','She was possibly the greatest writer of her generation.','她也许是她那时代最伟大的作家。'}

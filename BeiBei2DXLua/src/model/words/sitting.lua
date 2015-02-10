@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sitting"]={"sitting","['sɪtɪŋ]","['sɪtɪŋ]","v.（现在分词）坐",'n.(...的)一段时间,(分批开饭的)一批|||n.法庭的开庭|||adj.孵卵的，坐着的，易击中的，现任的|||动词sit的现在分词','Are you aware that you are sitting on my hat?','你知道你坐在我的帽子上了吗？','I\'ll be sitting in the 3rd carriage from the front of the train.','我将坐在第三节车厢。'}

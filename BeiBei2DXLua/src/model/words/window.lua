@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["window"]={"window","['wɪndəʊ]","['wɪndo]","n.窗户",'n.窗户','I saw the vase in the window of an antique shop.','我在一家古玩店的橱窗里看见了那个花瓶。','He looked out of the window.','他向窗外看去。'}

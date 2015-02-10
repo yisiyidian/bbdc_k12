@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["assign"]={"assign","[ə'saɪn]","[ə'saɪn]","v.分配",'v.分配,指派|||n.[计算机]DOS命令将驱动器符重指向第二个驱动器符','It is impossible to assign an exact date to this building.','确定这座建筑物的确切年代是不可能的。','They assigned his odd behavior to his ill health.','他们把他的古怪行为归因于健康不佳。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["golden"]={"golden","['gəʊld(ə)n]","['ɡoldən]","adj.金(黄)色的",'adj.金(黄)色的','The golden rule in playing tennis is to watch the ball closely.','打网球最重要的一点就是紧盯著球.','Speech is silver; silence is golden.','【谚】雄辩是银，沉默是金。'}

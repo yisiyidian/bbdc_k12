@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["loan"]={"loan","[ləʊn]","[lon]","n.贷款",'n.贷款,借出,债权人|||v.借,供应货款,借给','A loan of money would help me out of my predicament.','只需一笔贷款就能帮我摆脱困境。','How much interest do they charge on loans?','他们贷款收多少利息？'}

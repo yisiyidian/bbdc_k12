@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fair"]={"fair","[feə]","[fɛr]","adj.公平的",'adj.公平的,晴朗的,美丽的;相当的|||adj.(皮肤,毛发等）浅色的;白皙的|||n.展览会,市集|||adv.公平地;直接地','It\'s not fair to kick another player in football.','足球比赛中不允许踢另一位球员。','His knowledge of the language is fair.','他对这种语言的了解相当不错。'}

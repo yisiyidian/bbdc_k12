@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["defy"]={"defy","[dɪ'faɪ]","['difaɪ]","vt.反抗",'vt.反抗,藐视,挑衅','I defy you to prove I have cheated.','我谅你无法证实我欺骗了人。','The pine trees defy severe cold.','松树不畏严寒。'}

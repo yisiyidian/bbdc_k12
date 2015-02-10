@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enunciate"]={"enunciate","[ɪ'nʌnsɪeɪt]","[ɪ'nʌnsɪet]","v.发音",'v.发音,(清楚地)表达','That actor enunciates very well.','那演员发音很清晰。','He was ever ready to enunciate his views to all who would listen.','他总是乐意向所有愿意倾听的人阐明他的观点。'}

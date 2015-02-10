@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["belt"]={"belt","[belt]","[bɛlt]","n.带(状物)",'n.带(状物),腰带|||vi.飞奔,大声唱|||vt.系上腰带,环绕,击打,大声唱','He gave the boy a real belting.','他用皮带把那个孩子着实打了一顿。','A belt of trees grew between the two fields.','两块田之间有一条树木带。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["determinate"]={"determinate","[dɪ'tɜːmɪnət]","[dɪ'tɝmɪnət]","adj.确定的",'adj.确定的,决定的,限定的','The determinate factor of our economy is to control inflation.','我们经济的决定性因素是控制通货膨胀。','Our manager has made a determinate mind.','经理下了决心。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["illicit"]={"illicit","[ɪ'lɪsɪt]","[ɪ'lɪsɪt]","adj.非法的",'adj.非法的,禁止的,不正当的','Even the shrewdest criminals leave some trace of their illicit activities.','即便是最狡猾的罪犯也会留下一些做案的痕迹。','He clearly condemns illicit love.','他旗帜鲜明地谴责不正当恋情。'}

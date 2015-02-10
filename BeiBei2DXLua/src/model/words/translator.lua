@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["translator"]={"translator","[træns'leɪtə; trɑːns-; -nz-]","[træns'letɚ]","n.翻译者",'n.翻译者','His love of language inclined him towards a career as a translator.','他对语言的热爱促使他从事翻译工作。','This text presents many pitfalls for the translator.','这篇文字有很多潜在的难点, 译者稍一不慎就要出错.'}

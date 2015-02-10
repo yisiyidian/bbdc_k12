@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consumer"]={"consumer","[kən'sjuːmə]","[kən'sumɚ]","n.消费者",'n.消费者,用户,消费品','We need more feedback from the consumer in order to improve our goods.','我们需要从消费者那里多得到些反馈信息以提高产品质量.','The price increases were passed on by the firm to the consumers.','那个公司把上涨的费用都转嫁到了消费者身上。'}

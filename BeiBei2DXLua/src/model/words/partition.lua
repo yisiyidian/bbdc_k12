@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["partition"]={"partition","[pɑː'tɪʃ(ə)n]","[pɑr'tɪʃən]","n.分割",'n.分割,隔离物,隔墙|||v.区分,隔开,分割','I could hear what he was saying on the phone through the partition.','我能隔着墙听见他在电话里说了些什么。','We partitioned off the alcove to make another bedroom.','我们把凹室分隔开作另一间卧室'}

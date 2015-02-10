@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swindle"]={"swindle","['swɪnd(ə)l]","[ 'swindl ]","vt.诈取",'vt.诈取(骗取,骗局)|||n.诈取(骗取,骗局)','An instance of cheating; a swindle.','诈骗一个欺诈的例子；诈取','He\'s just the kind that would stoop to swindle children out of a few pence.','他就是这种货色，会不顾廉耻去从孩子手中骗取几个零钱。'}

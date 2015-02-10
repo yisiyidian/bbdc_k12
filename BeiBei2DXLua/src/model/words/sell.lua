@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sell"]={"sell","[sel]","[sɛl]","vi.卖",'vi.卖,促销|||vt.出让,背叛,出卖,出售|||n.欺骗','Her name will help to sell the film.','有她的名字，这部影片就卖座。','It is not price but quality that sells our shoes.','我们的鞋好卖不是因为价钱低而是因为质量好。'}

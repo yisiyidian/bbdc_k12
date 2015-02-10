@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["turning"]={"turning","['tɜːnɪŋ]","['tɝnɪŋ]","n.旋转",'n.旋转,回转,转向','Don\'t forget to indicate before turning.','拐弯之前别忘记指示车行方向。','Everything was turning out most satisfactory.','一切都非常趁心如意。'}

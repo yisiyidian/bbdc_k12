@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slightly"]={"slightly","['slaɪtlɪ]","['slaɪtli]","adv.些微地",'adv.些微地,苗条地','Each of the houses is slightly different.','每所房子都稍有区别.','You are only slightly underweight for (ie in relation to) your height.','按你的身高来说, 你体重仅稍轻一点儿.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["artistic"]={"artistic","[ɑː'tɪstɪk]","[ɑr'tɪstɪk]","adj.艺术的",'adj.艺术的','We are disciples of the artistic leader.','我们是那位艺术领袖的追随者。','She has artistic tendencies.','她有艺术气质。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ailing"]={"ailing","['eɪlɪŋ]","['elɪŋ]","adj.生病的",'adj.生病的,境况不佳的|||动词ail的现在分词','The ailing old man kept puffing out a "Thank you" as I supported him home.','当我扶着那个有病的老人回家时, 他不断气吁吁地说“谢谢你”。','That child is ailing.','小孩生病了。'}

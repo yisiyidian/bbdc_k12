@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["soy"]={"soy","[sɒɪ]","[sɔɪ]","n.大豆(酱油)",'n.大豆(酱油)','I\'d like some shrimp-roe soy sauce with it.','我希望用些虾子酱蘸着吃。','Much of the corn and soy is fed to animals .','大部分的玉米及大豆被用来喂养动物。'}

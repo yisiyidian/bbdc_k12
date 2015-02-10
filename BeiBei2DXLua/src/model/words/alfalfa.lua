@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alfalfa"]={"alfalfa","[æl'fælfə]","[æl'fælfə]","n.[植]苜蓿",'n.[植]苜蓿','||Alfalfa|| can be used as animal food.','紫花苜蓿可以用作动物饲料。','alfalfa','n. [植]苜蓿'}

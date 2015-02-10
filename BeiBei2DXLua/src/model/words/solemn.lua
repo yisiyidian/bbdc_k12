@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["solemn"]={"solemn","['sɒləm]","['sɑləm]","adj.庄严的",'adj.庄严的,严肃的,隆重的','We entered into a solemn bond.','我们缔结了一项正式协定.','The judges had solemn discourse together.','法官们在一起严肃地交谈。'}

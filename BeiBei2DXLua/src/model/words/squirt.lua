@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["squirt"]={"squirt","[skwɜːt]","[skwɝt]","v.喷出",'v.喷出,溅迸,注射|||n.水枪,注射器,喷出','The little girl squirted us with water from her water-pistol.','那小姑娘用水枪向我们射水.','Water squirted (from the tap) all over me.','（龙头里的）水喷了我一身.'}

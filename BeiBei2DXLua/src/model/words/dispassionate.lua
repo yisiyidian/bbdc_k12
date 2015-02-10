@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dispassionate"]={"dispassionate","[dɪs'pæʃ(ə)nət]","[dɪs'pæʃənət]","adj.冷静的",'adj.冷静的,不带感情的，平心静气的','A journalist should be a dispassionate reporter of fact.','记者应当是对事实作冷静报导的人。','We, as prosecutors, try to be dispassionate about the cases we bring.','作为检察官，我们对经手的案件会尽力做到不偏不倚。'}

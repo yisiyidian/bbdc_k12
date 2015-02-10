@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["laconic"]={"laconic","[lə'kɒnɪk]","[ lə'kɔnik ]","adj.简洁的",'adj.简洁的，言简意赅的','His laconic reply suggested a lack of interest in the topic.','他简短的回答表明他对这个话题没有兴趣。','Please give me a laconic reply.','请给我一个简短的回答。'}

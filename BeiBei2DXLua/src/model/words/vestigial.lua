@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vestigial"]={"vestigial","[ve'stɪdʒɪəl; -dʒ(ə)l]","[vɛ'stɪdʒɪəl]","adj.痕迹的",'adj.痕迹的,遗迹的,退化的','A small vestigial blind pouch of the prostate gland.','前列腺囊前列腺的一个小的发育不全的囊','...vestigial pagan practices and symbols inside Christian churches.','...基督教教堂内残留下来的异教习俗和象征。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pacific"]={"pacific","[pə'sɪfɪk]","[pə'sɪfɪk]","adj.太平洋的",'adj.太平洋的,(pacific)热爱和平的,求和的,和解的|||n.太平洋','The spacecraft splashed down in the ||Pacific||.','那艘宇宙飞船溅落在太平洋中.','They must think you are a madman if you tell them you want to cross the ||Pacific|| on a raft.','如果你告诉他们你要乘木筏横渡太平洋，他们一定会认为你是个疯子。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["secession"]={"secession","[sɪ'seʃ(ə)n]","[sɪ'sɛʃən]","n.脱离",'n.脱离,分离|||Secession：(美国南部十一州在南北战争开始时)脱离联邦','The question I would ask is about the Anti-||Secession|| Law.','我想问一个关于《反分裂国家法》的问题。','The secession of some southern states from the U.S.A. in the 1860s led to a civil war.','十九世纪六十年代，美国南部一些州退出联邦，引发了内战。'}

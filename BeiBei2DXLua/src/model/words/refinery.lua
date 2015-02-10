@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["refinery"]={"refinery","[rɪ'faɪn(ə)rɪ]","[rɪ'faɪnəri]","n.精练厂",'n.精练厂','She works in a sugar refinery.','她在一家制糖厂工作。','The oil is carried to the oil refinery by pipelines.','石油通过输油管输送到炼油厂。'}

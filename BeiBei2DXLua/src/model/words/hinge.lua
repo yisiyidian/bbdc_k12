@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hinge"]={"hinge","[hɪn(d)ʒ]","[hɪndʒ]","n.铰链",'n.铰链,关键,枢纽|||v.装铰链,靠铰链移动,依...而移','A casement is a window that opened by means of hinge at the side.','竖铰链窗是一种用边上的铰链开启的窗户。','The door opens easily because the hinges were oiled.','这门开起来很容易，因为合页上了油。'}

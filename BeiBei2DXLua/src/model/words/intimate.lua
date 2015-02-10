@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intimate"]={"intimate","['ɪntɪmət]","[ˈɪntəmɪt]","adj.亲密的",'adj.亲密的,私人的,秘密的|||n.密友|||vt.透露,暗示','He should listen to his intimate feelings.','人应当倾听自己的内心感觉。','They intimated us that an agreement would be worked out soon.','他们通知我们说，很快就会达成协议。'}

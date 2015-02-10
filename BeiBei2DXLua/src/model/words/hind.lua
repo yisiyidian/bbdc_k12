@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hind"]={"hind","[haɪnd]","[haɪnd]","n.雌鹿",'n.雌鹿，石斑鱼|||adj.后部的,在后的','The dog was sitting on his hind legs.','那只狗用它的後腿端坐着。','The hind leg of this horse was broken.','这匹马的后腿断了。'}

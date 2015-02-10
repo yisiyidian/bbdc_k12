@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lady"]={"lady","['leɪdɪ]","['ledi]","n.女士",'n.夫人,女士','The lady appeared with a luxurious fur coat.','那位夫人穿着华贵的毛皮外套来了。','She behaved like a lady.','她举止端庄象一个淑女。'}

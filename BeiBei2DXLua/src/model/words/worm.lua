@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["worm"]={"worm","[wɜːm]","[wɝm]","n.虫",'n.虫,蠕虫|||vt.蠕动,驱虫,慢慢探听出|||vi.蠕动','The dog has worms.','这狗长虫子。','They wormed their way out through the crack in the wall.','他们好不容易才从墙上的裂缝处爬了出来。'}

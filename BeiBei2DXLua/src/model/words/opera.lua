@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["opera"]={"opera","['ɒp(ə)rə]","['ɑprə]","n.歌剧",'n.歌剧|||n.挪威Opera软件公司的浏览器软件','Have you heard the opera sung in French?','你听过用法语唱的这场歌剧吗？','||Opera|| houses were packed out whenever she was singing.','她一演唱剧院就满座.'}

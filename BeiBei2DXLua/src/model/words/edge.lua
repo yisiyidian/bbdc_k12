@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["edge"]={"edge","[edʒ]","[ɛdʒ]","n.边",'n.边,边缘,刀口|||vt.给...加上边,缓慢横过,使逐渐丧失|||vi.徐徐前进','I need a sandwich to take the edge off my appetite.','我需要一份三明治以解腹中之饥。','Her pupils often got the rough edge of her tongue when they disobeyed her.','学生不听她的话时，常遭到她粗暴的申斥。'}

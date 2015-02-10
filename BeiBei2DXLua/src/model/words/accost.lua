@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accost"]={"accost","[ə'kɒst]","[ə'kɔst]","v.招呼",'v.招呼,搭讪','She was so famous that people would accost her on the street and ask for an autograph.','她太出名了，人们会在街上找她搭话，索要签名。','A man had accosted me in the street.','一个男的在街上和我搭讪。'}

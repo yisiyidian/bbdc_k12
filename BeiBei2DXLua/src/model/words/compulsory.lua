@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compulsory"]={"compulsory","[kəm'pʌls(ə)rɪ]","[kəm'pʌlsəri]","adj.被强制的",'adj.被强制的,强迫的,义务的','Attendance at evening prayers is not compulsory.','参加晚祷并非硬性规定.','I think it is compulsory.','我认为这是非做不可的。'}

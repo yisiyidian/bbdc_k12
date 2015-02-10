@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fatal"]={"fatal","['feɪt(ə)l]","['fetl]","adj.致命的",'adj.致命的,毁灭性的,决定性的','||Fatal|| accidents have decreased in frequency over recent years.','近年来死亡事故发生的频率已经下降.','The flight paths of the aeroplanes crossed, with fatal results.','飞机的航线互相交错铸成人命惨祸.'}

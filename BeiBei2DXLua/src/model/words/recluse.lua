@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["recluse"]={"recluse","[rɪ'kluːs]","['rɛklus]","adj.隐居的",'adj.隐居的|||n.隐士','Sometimes, I hope to be a recluse living in a quiet mountain or aside a river.','有时，我希望能隐居在寂静的山中或小河边。','The monk spent three years of his life as a recluse, praying and meditating.','那位僧侣隐居了三年，整日祈祷和冥想。'}

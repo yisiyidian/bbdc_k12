@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sail"]={"sail","[seɪl]","[seɪl]","vt.乘船航行",'n.帆,乘船航行|||vt.乘船航行,浮游,启航|||vi驾船航行','He never actually tells lies, but he often sails pretty close to the wind.','他实际上从不撒谎，但说的话常几近撒谎。','She sailed through her finals.','她顺利通过期末考试'}

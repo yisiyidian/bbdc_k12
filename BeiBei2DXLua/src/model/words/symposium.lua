@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["symposium"]={"symposium","[sɪm'pəʊzɪəm]","[sɪm'pozɪəm]","n.讨论会",'n.讨论会(论文集,酒会)','The symposium on AIDS research lasted two days.','艾滋病研究的报告会持续了两天.','What have you learned from the symposium?','你参加了这次科学讨论会,有什么体会?'}

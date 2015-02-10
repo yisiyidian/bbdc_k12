@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clement"]={"clement","['klem(ə)nt]","['klɛmənt]","adj.仁慈的",'adj.仁慈的,温和的','clement weather.','温暖天气','A clement judge reduce his sentence.','一个仁慈的法官为他减了刑。'}

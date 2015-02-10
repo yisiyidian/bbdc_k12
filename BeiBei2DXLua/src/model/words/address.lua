@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["address"]={"address","[ə'dres]","[ə'drɛs]","n.地址",'n.地址；通信处；演说；称呼|||v.写姓名地址；演说；向…说话；称呼','There isn\'t enough space for my address.','我写地址的地方不够.','If I knew his address, I could write to him.','如果我知道他的住址，我会写信给他。'}

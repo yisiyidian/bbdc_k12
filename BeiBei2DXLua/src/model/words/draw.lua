@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["draw"]={"draw","[drɔː]","[drɔ]","v.画",'v.(drew,drawn)拉,拖,挨近,提取,画,绘制|||n.平局;抽签;拉,拽吸引人的事物','She ||drew|| a cover over the typewriter.','她拿过罩子将打字机套上。','The flue should draw better once it\'s been swept.','烟道一经清扫，通风情况应好些。'}

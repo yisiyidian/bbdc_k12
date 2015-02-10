@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scald"]={"scald","[skɔːld]","[skɔld]","n.烫",'n.烫(烫伤,用沸水烫,用蒸汽烫)|||vt.烫(烫伤,用沸水烫,用蒸汽烫)','This is an ointment for burns and scalds.','这是治疗烧伤和烫伤的药膏。','She was scalded when the boiler exploded.','锅炉爆炸时她被烫伤了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dismember"]={"dismember","[dɪs'membə]","[dɪs'mɛmbɚ]","vt.割断手足",'vt.割断手足,支解,分割','The victim\'s dismembered body was found in a trunk.','在一只大箱子里发现了受害者被肢解的躯体。','The woman is dismembered by the notorious murder.','这个女人被臭名昭著的杀人犯肢解了。'}

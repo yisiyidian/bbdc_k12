@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eastern"]={"eastern","['iːst(ə)n]","['istɚn]","adj.东方的",'adj.东部的,东方的','eastern breezes','东风','The mountain was sharply defined against the eastern sky.','那座山在东方天空的衬托下显得轮廓分明.'}

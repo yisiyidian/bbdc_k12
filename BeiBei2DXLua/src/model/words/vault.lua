@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vault"]={"vault","[vɔːlt]","[vɔlt]","n.窖",'n.窖,地下室,撑竿跳|||vt.做成圆拱形,撑竿跳跃|||vi.跳跃','Her third vault in horse-vaulting score9.8.','她在跳马项目中的第三次试跳得了9。8分。','Our school won first place for the pole vault.','我们学校赢得了撑杆跳第一名。'}

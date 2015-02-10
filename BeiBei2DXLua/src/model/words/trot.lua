@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trot"]={"trot","[trɒt]","[trɑt]","n.疾走",'n.疾走，慢跑|||n.老太婆|||n.现成译本|||(复数）trots:腹泻（与the连用）|||v.小跑，快步走,赶紧','He cracked his whip and the horses began to trot.','他噼噼啪啪地挥鞭策马狂跑。','Her new job certainly keeps her on the trot.','她的新工作把她忙得不可开交。'}

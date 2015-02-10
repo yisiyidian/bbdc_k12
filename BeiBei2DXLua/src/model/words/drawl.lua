@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drawl"]={"drawl","[drɔːl]","[drɔl]","v.懒洋洋地说",'v.懒洋洋地说,做作而慢慢地说|||n.懒洋洋的说话态度','He speaks with a languid drawl.','他慢吞吞拉着长调说话。','“We-e-ell,” the clerk drawled.','“这个嘛…”，职员拉长了调子说'}

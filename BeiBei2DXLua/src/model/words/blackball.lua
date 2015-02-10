@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blackball"]={"blackball","['blækbɔːl]","['blækbɔl]","n.反对票",'n.反对票v.投票反对,排斥','Members can blackball candidates in secret ballots.','成员可以通过无记名投票反对候选人加入。','Members can blackball candidates in secret ballots.','会员可通过无记名投票方式反对候选人加入。'}

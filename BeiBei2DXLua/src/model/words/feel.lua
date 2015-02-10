@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["feel"]={"feel","[fiːl]","[fil]","vt.感觉",'vt.感觉；认为；触摸；试探|||vt.&vi.感觉，觉得；认为，以为；触摸|||n.感觉；触摸；感受；触觉|||vi.觉得；摸索','Can you feel the tension in this room?','你能觉察出这房间里的紧张气氛吗？','I ||felt|| it advisable to do nothing.','我认为最好什麽也别做。'}

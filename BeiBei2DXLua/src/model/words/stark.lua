@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stark"]={"stark","[stɑːk]","[stɑrk]","adj.变硬了的",'adj.变硬了的,完全的|||adv.实在,简直,全然','You\'re stark raving bonkers!','你完全疯了!','You must be stark raving mad!','你简直疯了!'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["magnify"]={"magnify","['mægnɪfaɪ]","['mæɡnɪfaɪ]","v.放大",'v.放大，夸大|||v.','Telescopes and microscopes magnify.','望远镜和显微镜能放大。','This lens can magnify 20 diameter.','这个透镜能放大20倍。'}

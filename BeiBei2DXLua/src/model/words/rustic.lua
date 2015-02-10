@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rustic"]={"rustic","['rʌstɪk]","['rʌstɪk]","n.乡下人",'n.乡下人,村夫,农民|||adj.乡村的,纯朴的,手工粗糙的','His rustic speech and ways made him uncomfortable in the city school.','他土里土气的语言和生活方式使他在城里的中学感到不舒服。','His rage was soon calmed down by the rustic peace.','乡村的宁静很快就使他的怒气平静下来。'}

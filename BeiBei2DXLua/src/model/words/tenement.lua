@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tenement"]={"tenement","['tenəm(ə)nt]","['tɛnəmənt]","n.房屋",'n.房屋,住户,租户','He lives in a tenement block.','他住在一家廉价公寓楼里。','They finally got a tenement from the government.','他们终于从政府手里搞了一套廉价公寓。'}

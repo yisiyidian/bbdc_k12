@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fortress"]={"fortress","['fɔːtrɪs]","['fɔrtrəs]","n.堡垒",'n.堡垒,要塞,防御工事','The fortress was the nucleus of the ancient city.','这城堡是这座古城的中心.','The easiest way to capture a fortress is from within.','堡垒最容易从内部攻破。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["renewal"]={"renewal","[rɪ'njuːəl]","[rɪ'nuəl]","n.更新",'n.更新,革新,复兴,复活','Other people seek the mountains for renewal of their inner lives.','另一些人到深山中去,寻求新的精神生活.','We are all delighted at the renewal of negotiation.','我们都对谈判能重新开始感到高兴。'}

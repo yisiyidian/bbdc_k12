@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["xenophobia"]={"xenophobia","[zenə'fəʊbɪə]","[,zɛnə'fobɪə]","n.仇外",'n.仇外,排外','||Xenophobia|| hindered the country\'s development.','排外阻碍了这个国家的发展。','They are nationalist to the point of xenophobia.','他们的民族主义情绪达到了恐外症的程度。'}

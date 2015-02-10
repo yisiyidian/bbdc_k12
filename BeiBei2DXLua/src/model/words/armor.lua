@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["armor"]={"armor","['ɑrmɚ]","[ 'ɑ:mə ]","n.盔甲",'n.盔甲,装甲','A piece of armor protecting the throat.','护喉甲用来保护咽喉的盔甲','You need to know how to use your armor to protect yourself.','你应该学会用盔甲保护自己'}

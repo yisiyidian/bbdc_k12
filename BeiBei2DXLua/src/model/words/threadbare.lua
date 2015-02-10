@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["threadbare"]={"threadbare","['θredbeə]","['θrɛdbɛr]","adj.磨破的",'adj.磨破的,陈腐的','Pride may lurk under a threadbare cloak.','骄傲可能会潜藏在穿旧的斗篷下。','threadbare rugs.','衣衫褴褛'}

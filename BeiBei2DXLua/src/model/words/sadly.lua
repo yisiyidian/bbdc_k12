@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sadly"]={"sadly","['sædlɪ]","['sædli]","adv.悲痛地",'adv.悲痛地,悲惨地,悲伤地','Her head drooped sadly.','她悲哀地垂着头。','The old man smiled sadly when he remembered the follies of his youth.','这老人想起年轻时的荒唐事，不禁苦笑。'}

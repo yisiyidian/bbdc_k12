@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shock"]={"shock","[ʃɒk]","[ʃɑk]","vt.&vi.震动",'n.震动,冲突,震惊,休克|||vt.&vi.震动,冲突,使...受电击','It gave me quite a shock to be told I was seriously ill.','听说我的病很严重，我吃了一惊。','The violence and bad language in the program shocked many of the viewers.','节目中的暴力场面和难听的粗话使许多观众感到震惊。'}

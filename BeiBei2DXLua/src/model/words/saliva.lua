@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["saliva"]={"saliva","[sə'laɪvə]","[sə'laɪvə]","n.唾液",'n.唾液','A sudden chill of horror sweep over her as she feel the drip of saliva upon her hand.','当她感觉到滴到她双手上的唾液时，恐怖的寒栗突然遍布了她全身。','||Saliva|| is secreted by glands in the mouth.','唾液是由口腔的唾液腺分泌出来的.'}

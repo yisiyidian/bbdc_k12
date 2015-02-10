@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hubbub"]={"hubbub","['hʌbʌb]","['hʌbʌb]","n.嘈杂",'n.嘈杂,喧哗','I suddenly feel that I wanna run away from such hubbub.','我突然想从这片喧哗中逃离。','It was difficult to hear what he was saying over the hubbub.','声音太嘈杂，难以听清楚他讲的话。'}

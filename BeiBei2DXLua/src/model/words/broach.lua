@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["broach"]={"broach","[brəʊtʃ]","[brotʃ]","n.烧叉肉",'n.烧叉肉,叉子,凿子，拉刀|||n.胸针（=brooch）|||vt.钻孔开启，凿大，初次提起，开始商讨|||vi.（船）突然横转','I will broach your idea to the committee.','我要把你的想法提交委员会考虑。','Let\'s broach another bottle of wine.','我们再开一瓶酒吧。'}

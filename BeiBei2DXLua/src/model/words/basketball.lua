@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["basketball"]={"basketball","['bɑːskɪtbɔːl]","['bæskɪtbɔl]","n.篮球",'n.篮球，篮球运动','Have you been following the basketball tournament?','你一直都在看篮球锦标赛吗?','I was hot on playing basketball when I was in college.','我上大学时热衷于打篮球.'}

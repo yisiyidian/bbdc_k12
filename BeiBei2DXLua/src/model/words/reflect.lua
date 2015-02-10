@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reflect"]={"reflect","[rɪ'flekt]","[rɪ'flɛkt]","v.反映",'v.反映,反射,归咎','Increased sales were reflected in higher profits.','销售量的增加带来了更大的利润。','Her sad looks reflected the thought passing through her mind.','她忧戚的面容反映出她内心的思想。'}

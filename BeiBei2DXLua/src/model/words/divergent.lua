@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["divergent"]={"divergent","[daɪ'vɜːdʒ(ə)nt; dɪ-]","[daɪ'vɝdʒənt]","adj.分歧的",'adj.分歧的','The two countries followed very divergent pricing policies.','这两个国家奉行了非常不同的价格政策。','I have a divergent attitude with him.','我和他抱有不同的态度。'}

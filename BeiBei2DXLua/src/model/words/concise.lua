@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["concise"]={"concise","[kən'saɪs]","[kən'saɪs]","adj.简明的",'adj.简明的,简要的','I gave a concise answer about this.','我对于此事给了一个简要的答复。','Teaching content should be concise.','教学内容要少而精。'}

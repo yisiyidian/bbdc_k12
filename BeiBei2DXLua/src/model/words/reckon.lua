@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reckon"]={"reckon","['rek(ə)n]","['rɛkən]","vt.计算",'vt.计算,估计,认为|||vi.计(算),判断,依靠','I reckon that he is rather too old to marry again.','我认为他的年龄太大,不太适于再婚.','They reckon the book as one of his best works.','他们认为这本书是他的优秀作品之一。'}

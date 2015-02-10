@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["refer"]={"refer","[rɪ'fɜː]","[rɪ'fɝ]","vi.参考",'vt.把…提交;把...归因,归类为|||vi.谈及,咨询,参考','The matter was referred to the United Nations.','此事被提交给联合国。','For further particulars, please refer to Chapter Ten.','详情请看第10章。'}

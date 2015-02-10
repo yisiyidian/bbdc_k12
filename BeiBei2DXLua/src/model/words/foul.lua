@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["foul"]={"foul","[faʊl]","[faʊl]","adj.污秽的",'adj.恶臭的,污秽的,下流的|||vt.弄脏,妨碍,污蔑|||vi.腐败,犯规|||adv.不正当地|||n.缠绕,犯规','Go away! I\'ve had a foul day at work.\'','｀走开! 我干了一天活儿够受的了.＇','Everything was just fine until Fred came along and fouled things up.','本来一切都井井有条，弗雷德一来就给搞得乱七八糟。'}

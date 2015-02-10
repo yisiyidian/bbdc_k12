@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flow"]={"flow","[fləʊ]","[flo]","vi.流",'vi.流；垂；流出；（谈话、文体等）流畅|||n.流动；滔滔不绝；涨潮；连贯|||vt.使泛滥；淹没；排出','Offers of help flowed into the office.','人们接连不断地向办事处表示愿意提供帮助','The tide began to flow and our footprints were covered.','开始涨潮了，潮水遮住了我们的脚印。'}

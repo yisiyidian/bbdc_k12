@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prerogative"]={"prerogative","[prɪ'rɒgətɪv]","[ pri'rɔɡətiv ]","adj.(有)特权的",'adj.(有)特权的|||n.特权','None of us has prerogative in the front of the law.','法律面前人人平等。','In many countries education is still the prerogative of the rich.','在许多国家接受教育仍然是富人的特权。'}

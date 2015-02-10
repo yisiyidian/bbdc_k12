@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mature"]={"mature","[mə'tʃʊə]","[mə'tʃʊr]","adj.成熟的",'adj.成熟的,到期的,充分发育的,考虑周到的|||vt.使...成熟,长成|||vi.长成,成熟;到期','I thought you had matured enough not to be giggly and silly about serious art.','我觉得你已经长大成人，不应该再冲着严肃的艺术作品傻笑。','You and I are mature, freethinking adults.','你我都是明白事理、思想自由的成年人。'}

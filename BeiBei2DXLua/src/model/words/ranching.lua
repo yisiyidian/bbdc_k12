@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ranching"]={"ranching","['ræntʃɪŋ]","[ 'rɑ:ntʃiŋ, 'ræntʃ- ]","n.牧场经营",'n.牧场经营；农场经营','Her husband is ranching in Arizona.','她丈夫在亚利桑那州经营牧场.','Itinerant ranching reached its peak in the 1880 s.','1880年代,巡回大牧场达到了顶峰.'}

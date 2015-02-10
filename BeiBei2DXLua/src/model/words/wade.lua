@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wade"]={"wade","[weɪd]","[wed]","v.跋涉",'v.跋涉，涉水|||n.跋涉','We had to wade through the river to the opposite bank.','我们只好涉水过河到对岸.','She waded straight into her critics with her opening remarks.','她在开场白里单刀直入抨击了批评她的人.'}

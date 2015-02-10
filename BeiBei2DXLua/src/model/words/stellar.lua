@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stellar"]={"stellar","['stelə]","['stɛlɚ]","adj.星(状的)",'adj.星(状的)，和电影明星有关的，主要的，一流的','Look! The suit is made into a lovely stellar shape.','看，这件衣服被做成了可爱的星状。','He is the stellar role in this movie.','他是电影中的主角。'}

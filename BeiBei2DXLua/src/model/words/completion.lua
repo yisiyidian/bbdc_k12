@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["completion"]={"completion","[kəm'pliːʃn]","[kəm'pliʃən]","n.完成",'n.完成,完满','The job is at last nearing completion.','这项工作终於快要完成了。','You may move into the house on completion.','办完手续后，你就可以搬进去。'}

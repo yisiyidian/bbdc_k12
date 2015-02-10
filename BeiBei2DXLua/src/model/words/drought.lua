@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drought"]={"drought","[draʊt]","[draʊt]","n.干旱",'n.干旱','Famine is often the sequel to war or drought.','饥荒往往是战争或干旱造成的。','It is a great relief to have rain after a long time of drought.','长期的干旱之后有雨是一大慰藉。'}

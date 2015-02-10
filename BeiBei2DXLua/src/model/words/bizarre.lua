@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bizarre"]={"bizarre","[bɪ'zɑː]","[bɪ'zɑr]","adj.奇异的",'adj.奇异的,怪诞的|||n.奇异花','The story has a certain bizarre interest.','这个故事听起来别有风趣。','They saw a bizarre animal in the lake.','他们看见湖中有个奇怪的动物。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aperture"]={"aperture","['æpətʃə; -tj(ʊ)ə]","['æpətʃɚ]","n.孔",'n.孔,穴,缝隙','What aperture are you using?','你使用多大的光圈？','Into this aperture a droplet of mercury was poured.','一小滴水银滴进了这个小孔。'}

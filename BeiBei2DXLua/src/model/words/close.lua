@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["close"]={"close","[kləʊs]","[kloz]","vt.关",'n.完结,结论|||adj.靠近的,亲近的，几乎，密切的,势均力敌的|||vt.关,结束,靠近|||vi.关，停业,搏斗|||adv.紧挨着,紧紧地','Nuclear physics is a closed book to most of us.','我们大多数人对原子核物理学一窍不通。','He soon brought the meeting to a close.','他很快就结束了会见。'}

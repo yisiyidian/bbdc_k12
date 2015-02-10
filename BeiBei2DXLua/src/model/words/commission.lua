@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["commission"]={"commission","[kə'mɪʃ(ə)n]","[kə'mɪʃən]","n.委任(状)",'n.委任(状),任官令;委员会|||n.佣金;犯罪行为|||vt.委任,委托;使服役','I got flu and was out of commission for a week.','我得了流感，一星期没工作。','He commissioned a statue of his wife.','他请人制作他妻子的雕像。'}

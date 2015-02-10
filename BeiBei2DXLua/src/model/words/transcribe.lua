@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["transcribe"]={"transcribe","[træn'skraɪb; trɑːn-]","[træn'skraɪb]","v.抄写",'v.抄写,誉写，改编(乐曲)，转录','She jotted down a few notes, and later transcribed them into an exercise book.','她草草做了些笔记，然后誊写在练习本上。','He gave up trying to write for the guitar and decided to transcribe the work for piano.','他放弃了为吉他谱曲，决定把作品改编成钢琴曲。'}

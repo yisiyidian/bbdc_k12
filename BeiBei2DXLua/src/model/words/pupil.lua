@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pupil"]={"pupil","['pjuːpɪl; -p(ə)l]","[ˈpjuːpl]","n.小学生",'n.瞳孔,学生,小学生','A teacher can\'t give individual attention to each pupil if his class is large.','如果班上的人数多，老师就不能给予个别辅导了。','The headmaster has made a decision of suspension of a pupil from school.','校长已经做出对一名学生停学处分的决定。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["academic"]={"academic","[ækə'demɪk]","[,ækə'dɛmɪk]","adj.学术性的",'n.教学人员,学术人员|||adj.学院的,理论的,学术性的','Computer science is now a fully-fledged academic subject.','计算机科学目前已是一门成熟的学科。','She already has good academic qualifications under her belt.','她已获得良好学历.'}

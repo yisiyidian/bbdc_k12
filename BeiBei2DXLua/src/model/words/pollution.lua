@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pollution"]={"pollution","[pə'luːʃ(ə)n]","[pə'luʃən]","n.污染",'n.污染,污染物','The pollution had destroyed ozone layer and caused many changes in weather.','污染破坏了臭氧层，并引起了许多天气变化。','||Pollution|| of the water supply reached a level pernicious to the health of the population.','水源污染已经达到危及居民健康的程度。'}

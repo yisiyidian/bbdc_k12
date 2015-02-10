@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sight"]={"sight","[saɪt]","[saɪt]","n.景观",'n.景观,视力,眼界|||vt.看见,观看|||vi.瞄准','All men are equal in the sight of God.','上帝对所有的人都一视同仁。','A suffering animal is a distressing sight.','看到动物受痛苦是很难受的。'}

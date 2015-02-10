@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["distinction"]={"distinction","[dɪ'stɪŋ(k)ʃ(ə)n]","[dɪ'stɪŋkʃən]","n.区别;卓越;殊荣",'n.区别;卓越;殊荣','We should make a distinction between right and wrong.','我们应该分清是非。','He passed the examination with distinction.','他以优异成绩通过考试。'}

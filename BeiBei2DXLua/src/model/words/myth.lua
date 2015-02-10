@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["myth"]={"myth","[mɪθ]","[mɪθ]","n.神话",'n.神话','the realm of myth.','神话王国','The myth that eating carrot improved your eyesight was exploded years ago.','认为吃胡萝卜可以改善视力的海外奇谈，多年前已祛除殆尽。'}

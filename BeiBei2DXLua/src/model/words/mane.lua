@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mane"]={"mane","[meɪn]","[men]","n.(马等的)鬃毛",'n.(马等的)鬃毛','He had a mane of thick white hair.','他有一头长而厚密的白发。','Angry animals erect the mane.','动物发怒时鬃毛会竖起。'}

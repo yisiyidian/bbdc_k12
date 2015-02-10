@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arraign"]={"arraign","[ə'reɪn]","[ ə'rein ]","v.提讯",'v.提讯,传问,责难','She was arraigned today on charges of assault and kidnapping.','她今天因被控人身侵犯和绑架而受到提审。','He was arraigned for criminally abetting a traitor.','他因怂恿他人叛国而受到传讯。'}

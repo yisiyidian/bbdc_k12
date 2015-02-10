@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["beach"]={"beach","[biːtʃ]","[bitʃ]","n.海滩",'n.海滩|||v.拖(船)上岸|||vt.使船冲上滩','I prefer a sandy beach to a shingle one.','我喜欢沙滩，不喜欢遍布小石子的海滩.','We are basking on the beach.','我们在海滩上晒太阳。'}

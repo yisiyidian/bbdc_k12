@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incompatible"]={"incompatible","[ɪnkəm'pætɪb(ə)l]","[,ɪnkəm'pætəbl]","adj.不相容的",'adj.不相容的,不能并存的,矛盾的','Those two blood groups are incompatible.','两种血型是不相容的。','That is not incompatible with humility.','而这与谦卑是不矛盾的。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["excavation"]={"excavation","[ekskə'veɪʃ(ə)n]","[,ɛkskə'veʃən]","n.挖掘",'n.挖掘,发掘,挖掘的洞，发掘物，遗迹','The excavation of the bur city take a long time.','发掘埋在地下的城市花了很长时间。','||Excavation|| of the site will begin tomorrow.','明天开始挖掘工作。'}

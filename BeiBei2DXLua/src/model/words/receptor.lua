@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["receptor"]={"receptor","[rɪ'septə]","[rɪ'sɛptɚ]","n.受容器",'n.受容器,感觉器官,摄取体','They are in key receptor areas of the brain.','它们位于大脑关键的接收区域。','The human body has many receptors.','人体有许多受体。'}

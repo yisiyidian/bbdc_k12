@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["confess"]={"confess","[kən'fes]","[kən'fɛs]","v.承认",'v.承认,告白,忏悔','He confessed that he had never seen her before.','他承认以前从未见过她。','The priest confessed the young man.','神父听取那个青年的忏悔。'}

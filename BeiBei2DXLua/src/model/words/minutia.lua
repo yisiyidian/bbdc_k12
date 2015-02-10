@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["minutia"]={"minutia","[mɪ'njuːʃɪə]","[maɪ'njʊʃɪr]","n.微枝末节",'n.微枝末节,细节','Never ignore the minutia of articles while reading those papers','在阅读文献的时候不要忽略细节','They are take great pains for the every minutia.','他们为每个细节煞费苦心.'}

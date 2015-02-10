@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["early"]={"early","['ɜːlɪ]","['ɝli]","adv.&adj.早",'adv.&adj.早','I\'m not sure if our book will be a success it\'s early days yet.','我们这本书是否受欢迎，我没有把握－－现在言之过早。','We shall find out the truth early or late.','我们迟早会查明事实真相。'}

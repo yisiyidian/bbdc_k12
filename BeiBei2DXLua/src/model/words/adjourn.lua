@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adjourn"]={"adjourn","[ə'dʒɜːn]","[ə'dʒɝn]","v.延期",'v.延期,休会,换地方','The meeting adjourned till five o\'clock.','会议延至五点召开。','The meeting adjourned for a week.','会议延期一周召开。'}

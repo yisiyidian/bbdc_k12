@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bluff"]={"bluff","[blʌf]","[blʌf]","n.断崖",'n.断崖,绝壁adj.直率的vi.吹牛vt.以虚张声势达成','He is kind and friendly despite his rather bluff manner.','他为人厚道，待人亲切，虽然态度有些粗鲁。','The boss threatened to dismiss him from his job, but it\'s all a bluff.','老板威胁说要解雇他，但这不过是恐吓而已。'}

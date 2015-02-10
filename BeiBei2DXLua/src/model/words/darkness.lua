@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["darkness"]={"darkness","['dɑrknəs]","[ 'dɑ:knis ]","n.黑暗",'n.黑暗','The stars came out as soon as darkness fell.','天一黑,星星就出来了。','The whole jail was shrouded in darkness.','整座监狱笼罩在黑暗之中。'}

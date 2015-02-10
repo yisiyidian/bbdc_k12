@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heroic"]={"heroic","[hɪ'rəʊɪk]","[hə'roɪk]","adj.英雄的",'adj.英雄的,英勇的|||(措施等)冒险的;(药物)剂量大的,猛烈的','Odysseus\'s heroic exploits are celebrated in The Odyssey\'.','《奥德赛》史诗中歌颂了奥德修斯的丰功伟绩.','The newspapers glorified their heroic deeds.','报纸称颂了他们的英雄事迹。'}

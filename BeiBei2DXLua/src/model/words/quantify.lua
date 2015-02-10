@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quantify"]={"quantify","['kwɒntɪfaɪ]","['kwɑntɪfaɪ]","v.定量",'v.定量,表示份量,称量,量化','We can quantify these contributions with reference to Fig . 5.','我们可以用图5中的参数来定量地表示这些因素的影响.','The cost of the flood damage is impossible to quantify.','这次水灾的损失是无可估量的.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spinach"]={"spinach","['spɪnɪdʒ; -ɪtʃ]","['spɪnɪtʃ]","n.菠菜",'n.菠菜','I do not like spinach even though I know it\'s good for me.','尽管我知道菠菜对我有益，我还是不喜欢它、','I don\'t like spinach even though I know it\'s good for me.','我不喜欢吃菠菜，虽然我知道它对我有好处。'}

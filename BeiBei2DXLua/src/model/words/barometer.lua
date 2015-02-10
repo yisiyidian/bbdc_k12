@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["barometer"]={"barometer","[bə'rɒmɪtə]","[bə'rɑmɪtɚ]","n.气压计",'n.气压计,晴雨表','Such instrument as thermometer and barometer can be found in any physics laboratory.','象温度计和气压计这样的仪器在任何物理实验室中都可以找到。','A recording barometer.','自动记录的气压计'}

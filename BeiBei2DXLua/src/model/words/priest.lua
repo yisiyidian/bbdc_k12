@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["priest"]={"priest","[priːst]","[prist]","n.教士",'n.教士,神父','The priest makes pastoral visits every Tuesday.','牧师每星期二作履行神职的访问。','A priest exorcized the ghost from the house.','教士将鬼从房屋中驱走.'}

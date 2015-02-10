@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cumbersome"]={"cumbersome","['kʌmbəs(ə)m]","[ 'kʌmbəsəm ]","adj.笨重的",'adj.笨重的','We need a crane to move these cumbersome machines.','我们要用起重机来移动这些笨重的机器。','Although it\'s an easy case, it has to go through the cumbersome legal procedures.','这个案件虽然小，但仍要通过繁琐的法律程序。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fraternal"]={"fraternal","[frə'tɜːn(ə)l]","[frə'tɝnl]","adj.兄弟的",'adj.兄弟的，兄弟般的，友善的，[生]异卵双生的','A close fraternal tie.','亲密的兄弟情谊','An organization of people united by a common fraternal bond or social aim.','兄弟会由共同的兄弟情谊或社会目的而结合起来的民间组织'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fist"]={"fist","[fɪst]","[fɪst]","n.拳头",'n.拳头,抓住|||vt.紧握,用拳头打','He struck the table a heavy blow with his fist.','他用拳头猛击了一下桌子.','He knocked him down with one blow of his fist.','他挥拳一击把他打倒在地。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["facelift"]={"facelift","['feslɪft]","[ 'feislift ]","n.整容",'n.整容','Nothing gives a room a faster facelift than a coat of paint.','重新粉刷一下是使房子焕然一新的最快方法','Thea: Well, she\'s just gone into hospital for a facelift.','西亚: 嗯, 她刚刚去了医院,做整容手术.'}

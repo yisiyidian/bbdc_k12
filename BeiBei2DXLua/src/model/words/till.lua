@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["till"]={"till","[tɪl]","[tɪl]","conj.直到(...为止)",'conj.直到(...为止)|||n.(账台中)放钱的抽屉|||prep.直到|||pron.直到...为止,直到|||vt.耕种','The meeting adjourned till five o\'clock.','会议延至五点召开。','Gee, I can hardly wait till it\'s dark.','哎呀，我简直等不到天黑了。'}

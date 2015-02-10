@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rife"]={"rife","[raɪf]","[raɪf]","adj.流行的",'adj.流行的,盛传的,非常多的','The thesis is rife with errors.','这篇论文错误百出。','Bribery and corruption were rife in the industry.','在这个行业中，贿赂和腐败现象猖獗。'}

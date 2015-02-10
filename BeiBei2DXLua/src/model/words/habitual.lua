@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["habitual"]={"habitual","[hə'bɪtʃʊəl; -tjʊəl]","[hə'bɪtʃuəl]","adj.惯常的",'adj.惯常的,习惯的','My girlfriend and I are habitual cinema-goers.','我和女友是电影院的常客。','a habitual liar.','积习已深的撒谎者'}

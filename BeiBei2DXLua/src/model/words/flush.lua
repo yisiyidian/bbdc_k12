@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flush"]={"flush","[flʌʃ]","[flʌʃ]","n.流溢",'n.流溢,面红,旺盛,冲水(尤指冲马桶),突然萌发,(纸牌)同花顺,清一色|||[计算机]冲洗|||vi.脸发红,冲刷,旺盛成长|||vt.用水冲洗,惊起(一群鸟),抄...老窝,使兴奋|||adj.丰足的,齐平的,满盈的|||adv.正直地,羞涩地','Mary flushed crimson with embarrassment.','玛丽羞得脸红了。','She shows a flush of joy at his coming.','对他的到来她表现出一阵兴奋。'}

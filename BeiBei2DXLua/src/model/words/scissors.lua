@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scissors"]={"scissors","['sɪzəz]","['sɪzɚz]","n.剪刀",'n.剪刀','Make a nick in the cloth with the scissors.','用剪子在布料上剪个缺口.','He cut off the flowers at the stalk with a pair of scissors.','他用剪子连花带茎都剪下来。'}

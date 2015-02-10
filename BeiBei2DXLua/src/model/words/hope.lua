@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hope"]={"hope","[həʊp]","[hop]","n.希望",'n.希望，期望；希望的东西；被寄予希望的人或事物、情况；抱有希望的理由|||vt.&vi.希望，期望|||vt.[俚语]相信，认为|||vi.希望，盼望，期待','I hope you\'re ready.','我希望你已经准备好了。','The doctors held out no hope of recovery.','医生们对痊愈不抱希望。'}

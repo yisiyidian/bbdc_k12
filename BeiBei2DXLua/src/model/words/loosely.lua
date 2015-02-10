@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["loosely"]={"loosely","['lu:slɪ]","['lusli]","adv.松弛地",'adv.松弛地,宽松地,不紧','A coarse, loosely woven cotton gauze, originally used for wrapping cheese.','干酪包布原来用以包干酪的一种织得粗而松的薄纱棉布','His principles sit loosely on him.','他的原则对他没有多大约束力。'}

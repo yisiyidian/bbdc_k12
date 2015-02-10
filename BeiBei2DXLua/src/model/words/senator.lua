@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["senator"]={"senator","['senətə]","['sɛnətɚ]","n.参议员",'n.参议员','||Senator|| Smith worked on the other committee members to vote for the bill.','史密斯参议员说服其他委员投票赞成该法案。','We are very privileged to have ||Senator|| Dobbs with us this evening.','今晚有多布斯参议员光临, 我们感到十分荣幸.'}

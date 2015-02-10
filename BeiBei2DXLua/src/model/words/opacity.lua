@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["opacity"]={"opacity","[ə(ʊ)'pæsɪtɪ]","[o'pæsəti]","n.不透明",'n.不透明，晦涩难懂，迟钝，暧昧','||Opacity|| of the eye lens can be induced by deficiency of certain vitamins.','眼球晶状体的混浊可由缺乏某些维生素引起。','...a stupefying verbal opacity.','... 让人惊讶的晦涩难懂的语言。'}

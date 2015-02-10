@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mansion"]={"mansion","['mænʃ(ə)n]","['mænʃən]","n.大厦",'n.大厦,豪宅,楼宇','The family owns a lordly mansion.','那个家族拥有一座气派的大厦。','The broad steps in front of the mansion made it look very dignified.','宽阔的台阶使大厦的正面显得有气派。'}

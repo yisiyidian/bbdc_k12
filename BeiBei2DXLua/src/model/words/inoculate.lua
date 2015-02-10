@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inoculate"]={"inoculate","[ɪ'nɒkjʊleɪt]","[ɪ'nɑkjə'let]","vt.给...接种",'vt.给...接种(给...作预防注射,灌输)','...a programme to inoculate every child in the country.','...一个给全国每个孩子接种疫苗的计划。','His dogs were inoculated against rabies.','他的狗都注射过狂犬疫苗。'}

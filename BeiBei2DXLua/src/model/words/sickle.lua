@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sickle"]={"sickle","['sɪk(ə)l]","['sɪkl]","n.镰刀",'n.镰刀','There is a picture of the sickle on the flag.','旗帜上有镰刀的图案。','The deform cells become sticky and harden into a shape of the letter C, like a sickle.','有缺陷的细胞会变得粘而且硬，形状像字母C，像个镰刀'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["achieve"]={"achieve","[ə'tʃiːv]","[ə'tʃiv]","vt.达到",'vt.完成,达到,实现|||vi.达到目的','It had been an uphill struggle to achieve what she had wanted.','她历尽坎坷才达到目的。','His laziness makes it impossible for him to achieve success.','他的懒惰使他不可能成功。'}

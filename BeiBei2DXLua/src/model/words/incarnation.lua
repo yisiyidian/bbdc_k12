@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incarnation"]={"incarnation","[ɪnkɑː'neɪʃ(ə)n]","[,ɪnkɑr'neʃən]","n.赋与肉体",'n.赋与肉体,具人形,化身','She\'s the very incarnation of goodness.','她是美德的化身。','She began recalling a series of previous incarnations.','她开始回忆起前世的种种情形。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["segment"]={"segment","['segm(ə)nt]","['sɛɡmənt]","n.部分",'n.部分|||v.部分,段,分割|||vt.分割','The waiter brought us a dish of orange segments.','服务员给我们端来一盘掰开的橘子瓣。','The company dominates this segment of the market.','这家公司控制了这一部分市场。'}

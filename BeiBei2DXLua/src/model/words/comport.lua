@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comport"]={"comport","[kəm'pɔːt]","[ kəm'pɔ:t ]","vt.举止",'vt.举止,行为|||vi.相称,适合|||n.高脚盘','||Comport|| yourself with dignity.','举止要庄重。','His behavior did not comport with his office.','他的行为与他的职务很不相称。'}

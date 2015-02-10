@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comprehensible"]={"comprehensible","[kɒmprɪ'hensɪb(ə)l]","['kɑmprɪ'hɛnsəbl]","adj.可理解的",'adj.可理解的','I think the action is comprehensible','我觉得那个行为是可以理解的','His French is barely comprehensible.','他的法语很难懂.'}

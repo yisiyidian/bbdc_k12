@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quadrilateral"]={"quadrilateral","[,kwɒdrɪ'læt(ə)r(ə)l]","[,kwɑdrɪ'lætərəl]","n.四边形",'n.四边形|||adj.四边形的','A trapezoid is a quadrilateral with two parallel sides.','梯形是具有两平行边的四边形.','The shear changed the quadrilateral into a parallelogram.','四边形被剪成了平行四边形.'}

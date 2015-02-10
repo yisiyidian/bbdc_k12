@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["petitioner"]={"petitioner","[pə'tɪʃənɚ]","[ pə'tiʃənə(r) ]","n.请愿人",'n.请愿人','The petitioner ask for a variation in her maintenance order.','上诉人要求对她生活费的命令的条件进行变更。','The judge awarded the costs of the case to the petitioners.','那位法官把案子的费用判给了起诉方。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["creator"]={"creator","[kriː'eɪtə]","[krɪ'etɚ]","n.创造者",'n.创造者，[计]创建者|||Creator|||n.上帝','The creator of a new television series; a born creator of trouble.','新的电视系列片的创造者; 一个天生多麻烦的人','A self-made man? Yes, and worship his creator.','是自己奋斗成功的人士吗？是啊, 正在礼拜他的造物主呢。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pinch"]={"pinch","[pɪn(t)ʃ]","[pɪntʃ]","n.捏",'n.捏,撮,困苦,偷窃|||vt.掐,使...困苦,偷窃','He was still carrying the stolen goods when he was pinched.','抓住他的时候他身上还带著赃物。','He\'s been pinching money from the cashbox.','他一直在偷钱箱里的钱。'}

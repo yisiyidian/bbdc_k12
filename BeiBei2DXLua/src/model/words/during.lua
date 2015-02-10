@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["during"]={"during","['djʊərɪŋ]","['dʊrɪŋ]","prep.在...期间",'prep.在...期间','The thief broke into the house during the night.','小偷在夜间破门进入住宅。','He swims every day during the summer.','他夏天每天游泳。'}

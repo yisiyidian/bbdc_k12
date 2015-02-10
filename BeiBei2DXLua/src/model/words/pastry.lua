@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pastry"]={"pastry","['peɪstrɪ]","['pestri]","n.面粉糕饼",'n.面粉糕饼,馅饼皮','Cut the pastry into small rounds, one for each pie.','把油酥面团切成小圆片, 每个馅饼用一片.','This pastry is too dry add some water.','做点心的面太乾--加点儿水吧.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["justify"]={"justify","['dʒʌstɪfaɪ]","['dʒʌstə'fai]","vt.替...辩护",'vt.替...辩护,证明...正当|||n.对齐|||[计算机]调整','Such action can be ||justified|| on the grounds of greater efficiency.','以提高功效为依据可以证明采取这种措施是正确的。','Nothing can justify your cheating on an exam.','任何事情都不能成为你考试作弊的理由。'}

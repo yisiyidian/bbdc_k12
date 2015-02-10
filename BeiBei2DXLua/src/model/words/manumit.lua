@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["manumit"]={"manumit","[,mænjʊ'mɪt]","[ ,mænju'mit ]","vt.解放(奴隶)",'vt.解放(奴隶)','The government ordered all slave owners to manumit any slaves within their holding.','政府命令所有奴隶主解放他们所拥有的奴隶。','manumit enslave','解放奴役'}

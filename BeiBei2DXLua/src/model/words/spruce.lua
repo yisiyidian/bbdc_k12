@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spruce"]={"spruce","[spruːs]","[sprʊs]","n.赤松",'n.赤松，云杉，虎尾枞属的植物|||adj.干净的,外表俏丽的|||vi.打扮|||vt.打扮自己','The pine, cedar and spruce are evergreens.','松树、雪松、云杉都是常青树。','He looks very spruce in his new suit.','他穿着新西装，看上去很帅。'}

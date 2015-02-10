@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["administrator"]={"administrator","[əd'mɪnɪstreɪtə]","[əd'mɪnɪstretɚ]","n.管理人",'n.管理人,行政官','This whole city is a monument to his skill as a planner and administrator.','这整座城市经他亲自设计并管理, 正是对他的才能的纪念.','He\'s a local government administrator, that is to say a Civil Servant.','他是地方行政官员, 也就是说是公务员.'}

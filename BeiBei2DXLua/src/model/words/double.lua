@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["double"]={"double","['dʌb(ə)l]","['dʌbl]","n.两倍",'n.两倍,复制品,替身,双重角色的演员,反转,双人房|||adj.两倍的,双重的,骗人的,加量的|||adv.两倍地,双人地,翻来覆去地,对折地|||vt.使加倍,对折,握紧,做替身|||vi.加倍,转身,兼任,替代演出','The boss wants you you\'d better get upstairs at the double.','老板叫你－－你最好赶紧上楼去，','A couch performs a double service.','躺椅可以（坐卧）两用。'}

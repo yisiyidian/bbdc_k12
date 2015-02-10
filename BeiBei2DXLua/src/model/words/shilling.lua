@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shilling"]={"shilling","['ʃɪlɪŋ]","['ʃɪlɪŋ]","n.先令",'n.先令','Have they pay you five shilling?','他们付给你五先令了吗？','He handed each of them a shilling.','他给了每人一个先令.'}

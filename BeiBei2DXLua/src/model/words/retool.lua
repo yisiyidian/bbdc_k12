@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["retool"]={"retool","[riː'tuːl]","[,ri'tul]","vt.重组(给以新装备)",'vt.重组(给以新装备)','The company will be retooled after the incorporation.','合并之后的公司要进行重组。','We must retool the town\'s economy.','我们必须对乡镇经济进行重组.'}

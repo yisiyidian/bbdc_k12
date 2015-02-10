@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["snappy"]={"snappy","['snæpɪ]","['snæpi]","adj.干脆的",'adj.干脆的，精力充沛的，敏捷的|||adj.严寒的|||adj.时髦的','Pack your bags and make it snappy; we leave in five minutes.','赶快把东西装进你们的包里，5分钟后我们就走。','She was wearing a snappy little red number.','她身著一款时髦的红色连衣裙.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crutch"]={"crutch","[krʌtʃ]","[krʌtʃ]","n.拐杖",'n.拐杖,支柱,帮助|||v.支撑','What does your inside leg (ie from the crutch to the inner side of the foot) measure?','你的腿从内侧量有多长?','He is lame in one leg and walks with the help of a crutch.','他的一条腿跛了，走路借助于拐杖。'}

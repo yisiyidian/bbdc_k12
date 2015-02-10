@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["immaterial"]={"immaterial","[ɪmə'tɪərɪəl]","[,ɪmə'tɪrɪəl]","adj.非物质的",'adj.非物质的,无形的,精神的，不重要的','The doctrine that the material world is an immaterial product of the senses.','物质世界幻觉说认为物质世界是感觉的精神上产物的信仰','The body is material but the soul is immaterial.','躯体是有形的，而灵魂是无形的。'}

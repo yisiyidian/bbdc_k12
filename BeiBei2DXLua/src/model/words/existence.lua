@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["existence"]={"existence","[ɪg'zɪst(ə)ns; eg-]","[ɪɡ'zɪstəns]","n.存在",'n.存在,生存','Pollution poses a threat to the continued existence of this species.','污染对这一物种的继续生存造成了威胁。','The family lived a precarious existence.','这家人过着朝不保夕的生活。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prefigure"]={"prefigure","[priː'fɪgə]","[pri'fɪɡjʊr]","v.预示",'v.预示,预表,预想','The paintings of Paul Cézanne prefigured the rise of cubism in the early 20th century.','保罗·塞尚的绘画预示了20世纪初叶立体主义的兴起','The wall through Berlin was finally ruptured, ||prefiguring|| the reunification of Germany.','柏林墙终于倒塌了，预示着德国的重新统一。'}

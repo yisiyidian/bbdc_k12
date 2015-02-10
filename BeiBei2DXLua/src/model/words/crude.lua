@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crude"]={"crude","[kruːd]","[krud]","adj.粗鲁的",'adj.粗鲁的,简陋的,天然的,未加工的|||n.原油','China is a country rich in crude oil.','中国是一个原油丰富的国家。','You must face the crude truth.','你必须面对真相'}

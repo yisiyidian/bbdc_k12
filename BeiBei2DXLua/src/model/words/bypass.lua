@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bypass"]={"bypass","['baɪpɑːs]","['baɪpæs]","vt.绕开",'vt.绕开,忽视|||n.支路，旁道','The villagers are unanimous in their opposition to the building of a bypass.','村民一致反对修建旁道.','He bypassed his colleagues on the board and went ahead with the deal.','他未徵求董事会中同事的意见就做了这笔交易.'}

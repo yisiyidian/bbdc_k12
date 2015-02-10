@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overboard"]={"overboard","['əʊvəbɔːd]","['ovɚbɔrd]","adv.自船上落下",'adv.自船上落下,在船外','The girl fell overboard and drowned.','那个女孩从船上掉入水中淹死了。','He seems to have thrown all his principles overboard.','他似乎放弃了所有的原则.'}

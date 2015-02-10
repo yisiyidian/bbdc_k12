@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["president"]={"president","['prezɪd(ə)nt]","['prɛzɪdənt]","n.(国家)总统",'n.(国家)总统,(公司)总裁,总经理,社长(日本)','The president of their company never makes a promise without intending to keep it.','他们公司的董事长每次许诺必然会遵守诺言。','The president promised swift and effective retribution against the terrorists.','总统答应会迅速有效地惩罚恐怖分子。'}

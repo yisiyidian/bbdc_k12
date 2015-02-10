@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["guardian"]={"guardian","['gɑːdɪən]","['ɡɑrdɪən]","n.保护人",'n.保护人,监护人','A movie rating that allows admission only to persons of a certain age, usually17, unless accompanied by a parent or guardian.','R级，电影的限制级一种电影分级，允许一定年龄以下（通常为17岁）的人在家长或保护人陪同下才能观看','A guardian; a protector.','监护人，保护人'}

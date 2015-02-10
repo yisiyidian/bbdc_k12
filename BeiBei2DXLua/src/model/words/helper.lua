@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["helper"]={"helper","['helpə(r)]","['hɛlpɚ]","n.帮忙者",'n.帮忙者,助手','He is always a willing helper.','他是一个乐于帮忙的人。','The cook is in charge of the kitchen helper.','这位厨师负责管理厨工.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inert"]={"inert","[ɪ'nɜːt]","[ɪ'nɝt]","adj.惰性的",'adj.惰性的,迟钝的','||Inert|| gas studies are providing valuable information about other planets, too.','对惰性气体的研究, 也提供了有关其它行星的有价值的资料.','There is an inert management team in our company.','我们公司的管理阶层死气沉沉。'}

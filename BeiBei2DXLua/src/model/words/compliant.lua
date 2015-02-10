@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compliant"]={"compliant","[kəm'plaɪənt]","[kəm'plaɪənt]","adj.服从的",'adj.服从的,顺从的','A compliant person gives in easily to other people\'s views.','一个性格温顺的人很容易顺从别人的意见。','She was much naughtier than her compliant brother.','她哥哥很听话，她却调皮得多。'}

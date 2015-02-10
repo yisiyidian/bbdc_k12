@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["luxurious"]={"luxurious","[lʌg'ʒʊərɪəs; lʌg'zjʊə-; lʌk'sjʊə-]","[lʌɡ'ʒʊrɪəs]","adj.奢侈的",'adj.奢侈的,豪华的','The interior of the building is magnificent and luxurious','大楼内部装饰得富丽堂皇。','The guests partook of a luxurious repast in the banqueting hall.','贵宾们在大餐厅参加一个宴会。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["squalor"]={"squalor","['skwɒlə]","['skwɔlɚ]","n.肮脏",'n.肮脏,脏污,不干净','There is indescribable squalor in those books.','那些书简直污秽不堪。','He was out of work and living in squalor.','他失业了，生活在脏乱不堪的环境中。'}

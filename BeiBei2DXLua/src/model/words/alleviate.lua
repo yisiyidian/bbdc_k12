@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alleviate"]={"alleviate","[ə'liːvɪeɪt]","[ə'livɪ'et]","vt.减轻",'vt.减轻,使...缓和','They alleviated the boredom of waiting by singing songs.','他们唱歌以缓解等待所带来的厌烦。','The doctor gave her an injection to alleviate the pain.','医生给她注射以减轻疼痛。'}

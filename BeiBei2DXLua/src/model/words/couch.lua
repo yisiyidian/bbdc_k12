@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["couch"]={"couch","[kaʊtʃ]","[kaʊtʃ]","n.长椅",'n.长椅,睡椅,卧榻,兽血|||vt.躺下,暗示|||vi.躺下,埋伏','Dad is sleeping on the couch.','爸爸在长椅上睡觉。','A couch performs a double service.','躺椅可以（坐卧）两用。'}

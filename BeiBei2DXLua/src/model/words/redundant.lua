@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["redundant"]={"redundant","[rɪ'dʌnd(ə)nt]","[rɪ'dʌndənt]","adj.多余的",'adj.多余的,失业的','Skill has been made redundant by machine.','由于机器的使用，手艺已变得多余。','I regret having to make so many staff redundant.','我很遗憾不得不裁减这么多职员。'}

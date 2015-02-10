@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["market"]={"market","['mɑːkɪt]","['mɑrkɪt]","n.市场",'n.市场,交易,推销地区|||vt.在市场上交易,使...上市|||vi.在市场上买卖','If our product is properly marketed, it should sell very well.','如果我们的产品适当加以推销，销路应该很好。','The market is rather depressed at the moment.','目前的市场相当萧条。'}

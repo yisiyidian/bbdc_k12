@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["timid"]={"timid","['tɪmɪd]","['tɪmɪd]","adj.胆怯的",'adj.胆怯的,害羞的','She is a timid cat.','她是个腼腆的女人。','She was too timid to talk with other travelers.','她很害羞，不敢和其他旅行者交谈。'}

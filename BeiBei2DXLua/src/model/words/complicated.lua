@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["complicated"]={"complicated","['kɒmplɪkeɪtɪd]","['kɑmplɪketɪd]","adj.复杂的",'adj.复杂的,难懂的','Why does he have to wrap it all up in such complicated language?','他为什麽非得用这麽艰深的语言说话呢?','The novel is too complicated for your age.','这小说就你的年龄来说太复杂了。'}

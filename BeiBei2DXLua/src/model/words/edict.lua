@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["edict"]={"edict","['iːdɪkt]","['idɪkt]","n.法令",'n.法令，布告','A series of  economic edicts were issued by the government after The Depression','大萧条后，政府颁布了一系列的经济法令','The emperor issued an edict forbidding doing trade with foreigners.','皇帝颁布了一项不得和外国人做生意的敕令.'}

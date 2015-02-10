@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slang"]={"slang","[slæŋ]","[slæŋ]","n.俚语",'n.俚语,行话|||vt.使用俚语,辱骂|||vi.辱骂','||Slang|| insinuates itself into the language.','俚语慢慢地渗入语言中。','Skint and "broke" are slang words for "having no money" .','skint和"broke"是"没有钱"的俚语。'}

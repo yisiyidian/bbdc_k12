@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shabby"]={"shabby","['ʃæbɪ]","[ˈʃæbi]","adj.破旧的(低劣的)",'adj.破旧的(低劣的)','Her shabby appearance drew sniggers from the guests.','她样子寒酸, 客人不禁暗自发笑.','His shabby appearance creates a bad impression.','他那寒酸的样子给人留下不好的印象.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["declivity"]={"declivity","[dɪ'klɪvɪtɪ]","[dɪ'klɪvəti]","n.倾斜面",'n.倾斜面，斜坡','I looked frontage straightly, going declivity one by one.','我两眼直视前方，一路下坡又下坡。','I didn\'t notice there\'s a declivity while I was driving.','在驾驶时我没有注意到那有个下坡。'}

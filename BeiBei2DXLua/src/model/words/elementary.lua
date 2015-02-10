@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["elementary"]={"elementary","[elɪ'ment(ə)rɪ]","[,ɛlɪ'mɛntri]","adj.基本的",'adj.基本的,初级的,元素的','This elementary school is affiliated to a university.','这所小学附属于一所大学。','My son is studying at an elementary school.','我儿子在一家小学上学。'}

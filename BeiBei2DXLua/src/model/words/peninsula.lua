@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peninsula"]={"peninsula","[pɪ'nɪnsjʊlə]","[pə'nɪnsələ]","n.半岛",'n.半岛','The Arab live on the Arabian ||Peninsula||.','阿拉伯人居住在阿拉伯半岛上.','Dalian is in the south of the Liaodong ||Peninsula||.','大连位于辽东半岛南部.'}

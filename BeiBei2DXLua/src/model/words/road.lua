@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["road"]={"road","[rəʊd]","[rod]","n.路",'n.路','The road was blocked by a huge rock.','道路被一块大石头堵住了。','It\'s very important to teach the children about road safety.','把交通安全常识教给孩子们是非常重要的。'}

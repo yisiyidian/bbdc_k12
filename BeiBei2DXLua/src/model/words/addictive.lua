@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["addictive"]={"addictive","[ə'dɪktɪv]","[ə'dɪktɪv]","adj.使人上瘾的",'adj.使人上瘾的','One who uses addictive drugs.','吸毒成瘾者服用上瘾药物的人','A narcotic, especially an addictive narcotic.','麻药一种麻醉剂，尤指易成瘾的麻醉剂'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seaweed"]={"seaweed","['siːwiːd]","['si'wid]","n.海草",'n.海草,海藻','The tide ebbed away, leaving behind seaweed and debris.','潮退了，剩下的都是海草和瓦砾。','The swimmer was entangled in seaweed.','游泳者被海草缠住了。'}

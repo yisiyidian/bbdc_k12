@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cost"]={"cost","[kɒst]","[kɔst]","vi.花费",'n.价钱，代价；花费，费用；牺牲；[用复数][法律]诉讼费|||vi.价钱为，花费；估计成本|||vt.付出代价；估价；使丧失；使付出努力','Dangerous driving could cost you your life.','开车不注意安全有生命危险。','Her irresponsible behaviour cost her father many sleepless nights.','她那不负责任的行为使她父亲许多夜不得安眠。'}

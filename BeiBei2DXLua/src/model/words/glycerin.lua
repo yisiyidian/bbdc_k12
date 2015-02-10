@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glycerin"]={"glycerin","['ɡlɪsərɪn]","['glɪsərɪn]","n.甘油",'n.甘油','||Glycerin|| is a thick sweet colorless liquid.','甘油是一种很甜且无色的浓稠液体。','||Glycerin|| can make  up of the medicine','甘油可以制药'}

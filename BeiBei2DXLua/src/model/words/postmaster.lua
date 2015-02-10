@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["postmaster"]={"postmaster","['pəʊs(t)mɑːstə]","['postmæstɚ]","n.邮政局(所)长",'n.邮政局(所)长','He is a devoted postmaster.','他是一个很尽职尽责的邮政局长。','Her grandfather was a village postmaster.','她祖父曾是一位乡村邮政局长。'}

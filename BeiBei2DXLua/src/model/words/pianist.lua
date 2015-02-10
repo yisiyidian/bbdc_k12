@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pianist"]={"pianist","['pɪənɪst]","['pɪənɪst]","n.钢琴家",'n.钢琴家','The pianist gave a long and varied recital, with a couple of encores for good measure.','那钢琴家的独奏演出会时间长、节目多，还加奏了两支曲子。','In his youth he had the ambition of being a pianist.','他在青年时代曾经有过想当钢琴家的雄心。'}

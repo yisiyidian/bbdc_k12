@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["condition"]={"condition","[kən'dɪʃ(ə)n]","[kən'dɪʃən]","n.情况",'n.情况,条件|||v.以...为条件,决定,支配,训练','Find out what the conditions of the contract are.','弄清楚合同的条件是什么。','My expenditure is conditioned by my income.','我的支出受我的收入限制。'}

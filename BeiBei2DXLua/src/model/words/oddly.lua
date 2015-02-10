@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oddly"]={"oddly","['ɒdlɪ]","['ɑdli]","adv.奇妙地",'adv.奇妙地,奇怪地,单数地','The sentence reads oddly.','这句子读起来很怪。','||Oddly|| enough, we were just talking about the same thing.','说也奇怪，我们刚谈的正是这件事。'}

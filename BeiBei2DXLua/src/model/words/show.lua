@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["show"]={"show","[ʃəʊ]","[ʃo]","v.展现",'n.显示,表现,表演,事情|||vt.&vi.表示,显现,展现,指示','All the new products were on show at the exhibition.','展览会上陈列著所有的新产品。','Her laziness showed in her exam results.','她平时懒惰从她的考试成绩可以看得出来。'}

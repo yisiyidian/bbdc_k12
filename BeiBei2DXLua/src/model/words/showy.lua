@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["showy"]={"showy","['ʃəʊɪ]","['ʃoi]","adj.鲜艳的",'adj.鲜艳的,显眼的，卖弄的','A cheap, showy trinket.','一种廉价艳丽的饰物','A showy manner or display.','炫耀炫耀的态度或展示'}

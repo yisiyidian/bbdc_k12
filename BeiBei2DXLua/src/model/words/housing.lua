@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["housing"]={"housing","[haʊzɪŋ]","['haʊzɪŋ]","n.房屋",'n.房屋(外壳,外套,外罩,住宅,卡箍,遮盖物)','There are hundreds who need new housing.','有许许多多人需要新的住房.','Old buses were pressed into service as emergency housing for the refugees.','用旧公共汽车应急来安置难民.'}

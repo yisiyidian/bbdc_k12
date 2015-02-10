@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["autopsy"]={"autopsy","['ɔːtɒpsɪ; ɔː'tɒpsɪ]","['ɔtɑpsi]","n.验尸",'n.验尸','An autopsy was being done to establish the cause of death.','正在进行尸检以确定死亡原因。','The autopsy report gave the cause of death as poisoning.','验尸报告上显示死因为中毒。'}

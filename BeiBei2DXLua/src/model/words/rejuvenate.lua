@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rejuvenate"]={"rejuvenate","[rɪ'dʒuːvəneɪt]","[rɪ'dʒuvənet]","v.使...年轻",'v.使...年轻,使...恢复精神，变年轻','His new job seemed to rejuvenate him.','他的新工作好像使他焕发了青春。','He tried to rejuvenate himself by performing physical exercises each day.','他试图每天进行体育锻炼以使自己恢复活力。'}

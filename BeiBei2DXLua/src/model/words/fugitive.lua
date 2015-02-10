@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fugitive"]={"fugitive","['fjuːdʒɪtɪv]","['fjudʒətɪv]","adj.逃亡的",'adj.逃亡的,易变的,无常的|||n.逃亡者,亡命者,难捕捉之物','The fugitive doubled back to confound the pursuers.','逃亡者用曲折迂回的办法来迷惑追踪者。','He is a fugitive from justice trying to avoid being caught by the police.','他是逃犯，正试图逃避警方的追捕。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cancellation"]={"cancellation","[,kænsə'leɪʃ(ə)n]","[,kænsə'leʃən]","n.取消",'n.取消','Can you tell me the cancellation number?','能不能告诉我取消号码？','Her cancellation of her trip to paris upset our plan.','她取消了巴黎之行打乱了我们的计划。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["afternoon"]={"afternoon","[ɑːftə'nuːn]","[,æftɚ'nun]","n.下午",'n.下午|||int.下午好','She put her clothes in the dryer, so she could wear them this afternoon.','她把衣服放在干衣机里，这样她下午就能穿这些衣服了。','There will be a meeting for the English faculty this afternoon.','今天下午英语系的教职员工要开个会。'}

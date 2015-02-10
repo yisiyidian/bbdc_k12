@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["multiform"]={"multiform","['mʌltɪfɔːm]","[ 'mʌltifɔ:m ]","adj.多种的",'adj.多种的','It supports multiform convert formats.','它支持多种格式转换。','The dance troupe’s multiform choreographic styles impressed the audience.','舞蹈团各式各样的舞蹈风格让观众印象深刻。'}

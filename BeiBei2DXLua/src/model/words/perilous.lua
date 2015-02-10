@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perilous"]={"perilous","['perɪləs]","['pɛrələs]","adj.危险的",'adj.危险的，冒险的','It is true during their explorations they often faced difficulties and dangers of the most perilous nature.','确实在探险中，他们经常面临着各种最有危险性的艰难和险阻。','Their perilous journey across the ocean has attracted public attention.','他们的越洋冒险旅行引起了公众的注意。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comic"]={"comic","['kɒmɪk]","['kɑmɪk]","n.连环图画",'n.连环图画,喜剧演员,喜剧元素|||adj.滑稽的,有趣的,喜剧的','The comic scenes in the play were overdone.','这剧的滑稽场面太夸张了.','His jokes provided some comic relief in what was really a dull speech.','他说的笑话给极沉闷的讲话增加几分轻松气氛.'}

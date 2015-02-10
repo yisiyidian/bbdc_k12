@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["telescope"]={"telescope","['telɪskəʊp]","['tɛlɪskop]","n.望远镜",'n.望远镜|||v.缩短,压缩','She swivelled the telescope (round).','她用望远镜向四周看.','He saw a hungry wolf on the prowl with his telescope.','他通过望远镜看到了一头四处觅食的饿狼。'}

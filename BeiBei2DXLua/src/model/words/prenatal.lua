@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prenatal"]={"prenatal","[priː'neɪt(ə)l]","[,pri'netl]","adj.产前的",'adj.产前的,出生前的','||Prenatal|| medical care.','出生前的医学护理','prenatal medical care.','出生前的医学护理'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["charming"]={"charming","['tʃɑːmɪŋ]","['tʃɑrmɪŋ]","adj.迷人的",'adj.迷人的','I do think that\'s charming.','我的确认为这很迷人。','We didn\'t trust him at first, but his charming manner completely disarmed us.','我们开始时并不信任他，但他令人愉快的举止完全消除了我们的疑虑。'}

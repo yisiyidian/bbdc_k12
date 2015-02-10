@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["liner"]={"liner","['laɪnə]","['laɪnɚ]","n.班机",'n.班机,班轮','The liner is reported to have been in collision with an oil tanker.','据报道，这艘客轮与一艘油轮相撞。','The liner is in dock for a refit.','班轮正在船坞修理.'}

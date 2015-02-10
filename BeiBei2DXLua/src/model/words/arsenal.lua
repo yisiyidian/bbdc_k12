@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arsenal"]={"arsenal","['ɑrsənl]","[ 'ɑ:sənəl ]","n.兵工厂",'n.兵工厂,军械库，储藏|||Arsenal|||n.阿森那(英格兰一足球队名)','He signed for ||Arsenal|| yesterday.','他昨天跟阿塞纳尔队签了约.','||Arsenal|| have just signed a new striker.','阿塞纳尔队刚雇用了一名新前锋。'}

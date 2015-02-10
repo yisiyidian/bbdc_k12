@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exorbitant"]={"exorbitant","[ɪg'zɔːbɪt(ə)nt]","[ɪɡ'zɔrbɪtənt]","adj.(价格等)过高的",'adj.(价格等)过高的，不合法的','We now live in a world that typophile is no longer exorbitant.','我们生活在一个印刷品不再昂贵的时代。','The hotel charges quite exorbitant prices.','这个旅馆收费相当高。'}

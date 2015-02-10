@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["darken"]={"darken","['dɑːk(ə)n]","['dɑrkən]","vi.弄暗",'vi.弄暗,暗下来|||vt.使变暗，使阴郁，败坏，使模糊','We darkened the room to show the film.','我们把房间弄暗以放影片.','The sky darkened as the storm approached.','风雨欲来, 天色黑暗.'}

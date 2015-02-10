@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["neck"]={"neck","[nek]","[nɛk]","n.脖子",'n.脖子,颈','The two of them were necking on a park bench.','他们俩在公园的长凳上拥抱亲吻。','The fans of the actress craned their necks to catch a glimpse of their idol.','那位女演员的崇拜者们伸长了脖子想看一看他们崇拜的偶像。'}

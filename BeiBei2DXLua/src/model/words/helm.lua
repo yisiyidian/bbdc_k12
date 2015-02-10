@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["helm"]={"helm","[helm]","[hɛlm]","n.舵",'n.舵,驾驶盘|||n.头盔（=helmet）|||vt.掌舵，控制','A case that supports and protects a ship\'s compass, located near the helm.','罗经柜位于舵附近用于放置和保护船上罗盘的柜子','Down helm!','转舵背风！'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intimacy"]={"intimacy","['ɪntɪməsɪ]","['ɪntɪməsi]","n.亲密",'n.亲昵的言行,熟悉,亲密,密切关系','He refused to tell it to me except in the intimacy of his room.','除非避开众人耳目在他房间里谈，否则他不肯把这件事告诉我','The intimacy of the room was enhanced by its warm colours.','房间温暖的色泽更增加它的舒适感。'}

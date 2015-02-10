@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coffer"]={"coffer","['kɒfə]","['kɔfɚ]","n.保险箱",'n.保险箱,镶板|||（复数）coffers:资产|||vt.放入保险箱，用平顶镶板装饰,','There are many jewels in the coffer.','保险箱里有许多宝石。','He put the money in coffer secretly.','他悄悄地把钱放在保险箱里。'}

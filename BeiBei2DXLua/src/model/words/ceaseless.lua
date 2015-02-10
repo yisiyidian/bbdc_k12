@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ceaseless"]={"ceaseless","['siːslɪs]","[ 'si:slis ]","adj.不绝的",'adj.不绝的,不停的','His ceaseless chatter began to annoy me.','他不停的唠叨使我厌烦起来。','Spray slaps the coast ceaselessly.','海浪不停地拍打着海岸。'}

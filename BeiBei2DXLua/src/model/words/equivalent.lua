@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["equivalent"]={"equivalent","[ɪ'kwɪv(ə)l(ə)nt]","[ɪ'kwɪvələnt]","adj.等价的",'adj.等价的,相等的|||n.相等物','A dime is equivalent to ten pennies.','一角等于十分。','Two methods are used to calculate the equivalent radius.','等效半径采用两种计算方法'}

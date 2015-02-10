@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["burn"]={"burn","[bɜːn]","[bɝn]","vt.&vi.燃烧",'n.烧伤,灼伤|||vt.&vi.燃烧,烧着,烧毁,灼伤','Half the candle had burnt away.','蜡烛已烧去一半。','He died of the burns he received in the fire.','他因在火灾中受烧伤而死。'}

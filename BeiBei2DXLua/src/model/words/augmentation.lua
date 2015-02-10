@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["augmentation"]={"augmentation","[ɔːgmen'teɪʃ(ə)n]","[,ɔgmɛn'teʃən]","n.增加",'n.增加','augmentation means increase','意味着增加','augmentation means increase','意味着增加'}

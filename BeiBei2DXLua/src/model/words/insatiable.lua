@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insatiable"]={"insatiable","[ɪn'seɪʃəb(ə)l]","[ɪn'seʃəbl]","adj.不知足的",'adj.不知足的,贪求无厌的','The public has an insatiable appetite for stories about the famous.','公众对名人有着难以满足的好奇心。','Our insatiable demand for illegal drugs fuels the drug trade.','永不知足的非法毒品需求滋润了毒品交易。'}

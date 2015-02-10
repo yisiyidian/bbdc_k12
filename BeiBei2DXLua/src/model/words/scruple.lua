@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scruple"]={"scruple","['skruːp(ə)l]","['skrupl]","n.顾忌",'n.顾忌,迟疑|||n.微量|||vi.顾虑','He wouldn\'t scruple to charge you double its value if he thought you\'d pay.','如果他认为你买得起的话，就会向你索取两倍于原价的钱。','She tells lies without scruple.','她肆无忌惮的说谎。'}

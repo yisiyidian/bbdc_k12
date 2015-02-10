@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sacred"]={"sacred","['seɪkrɪd]","['sekrɪd]","adj.神圣的",'adj.神圣的,受尊重的','In India the cow is a sacred animal.','在印度，牛是神圣的动物。','This area was hallowed by sacred memories.','这个地区由于宗教上的纪念意义而被视为圣地。'}

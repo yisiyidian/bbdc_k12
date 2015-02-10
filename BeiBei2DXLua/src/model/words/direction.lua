@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["direction"]={"direction","[dəˈrekʃn]","[də'rɛkʃn]","n.方向",'n.方向,指导,用法说明,趋势','Stones were flying about in every direction.','石块朝四面八方乱飞。','The investigation was carried out under the direction of a senior police officer.','调查是在一位高级警官的指导下进行的。'}

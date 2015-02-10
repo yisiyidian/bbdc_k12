@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["afloat"]={"afloat","[ə'fləʊt]","[ə'flot]","adv.飘浮地",'adv.飘浮地|||adj.漂浮的，在海上的，无欠债的','Which do you prefer, life on land or life afloat?','你喜欢哪一种生活, 陆上生活还是水上生活？','A ship is afloat.','一条船漂在水上。'}

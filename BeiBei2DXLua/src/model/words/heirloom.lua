@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heirloom"]={"heirloom","['eəluːm]","['ɛrlum]","n.传家宝",'n.传家宝，[法律]动产继承物','It was an ordinary vase, but to save appearances, she said it was a family heirloom.','它本来是一个普通花瓶, 为了装门面, 她却说它是一件传家宝。','That clock is a family heirloom.','那个座钟是祖传下来的.'}

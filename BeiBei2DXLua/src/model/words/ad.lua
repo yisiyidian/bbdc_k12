@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ad"]={"ad","[æd]","['e 'di]","abbr.(advertisement的缩写)广告",'abbr.(advertisement的缩写)广告|||n.(缩)广告','Problems were solved on an ad hoc basis.','做了一些变通问题便解决了.','The actress often forgot her lines but was very good at ad libbing.','那个女演员常忘台词, 却极擅长临时拼凑.'}

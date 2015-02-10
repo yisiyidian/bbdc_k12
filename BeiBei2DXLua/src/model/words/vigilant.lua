@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vigilant"]={"vigilant","['vɪdʒɪl(ə)nt]","['vɪdʒələnt]","adj.警醒的",'adj.警醒的,警戒著的,警惕的','One must be ever vigilant.','每个人必须随时提高警觉。','The dog kept a vigilant guard over the house.','这只狗警醒地守护着这所房屋。'}

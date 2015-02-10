@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["larva"]={"larva","['lɑːvə]","['lɑrvə]","n.幼虫",'n.幼虫，幼体','A larva metamorphoses into a chrysalis and then into a butterfly.','幼虫变为蛹, 然後再变成蝴蝶.','It shows the metamorphosis of a larva into a butterfly.','它展示了从幼虫变成蝴蝶的过程。'}

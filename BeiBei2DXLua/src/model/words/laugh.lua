@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["laugh"]={"laugh","[lɑːf]","[læf]","vt.&vi.笑",'n.笑(声),笑料,(复数)娱乐|||vt.&vi.笑','An actor has to learn to laugh off bad reviews.','演员须学会能对贬斥性评论一笑置之的本事。','She knew the truth all along and was laughing up her sleeve at us.','她早就知道真相，却一直在暗中笑话我们。'}

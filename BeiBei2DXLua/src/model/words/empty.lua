@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["empty"]={"empty","['em(p)tɪ]","[ˈɛmptɪ]","adj.空的",'adj.空的,空虚的,空腹的|||n.空物|||vt.使...空|||vi.变空,流入','This river ||empties|| into the South Sea.','这条河流入南海。','I feel so empty, my life just doesn\'t seem worth living any more.','我感到非常消沉，我的生活简直好像不值得再过下去了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["from"]={"from","[frɒm; frəm]","[frəm]","prep.从",'prep.从,从...起','He saved his daughter from the fire but at the cost of his own life.','他牺牲了生命，把女儿从大火中救出来。','The dog roused a deer from the bushes.','狗惊起了丛林中的一只鹿。'}

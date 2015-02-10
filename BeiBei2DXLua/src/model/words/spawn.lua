@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spawn"]={"spawn","[spɔːn]","[spɔn]","n.卵",'n.卵,产物,后代,结果|||vt.产卵,种菌丝于,产生,造成|||vi.产卵,大量生产','I found a mass of spawn in the fish before cooking.','烧鱼前，我发现鱼里有很多鱼籽。','The computer industry has spawned a lot of new companies.','计算机行业催生了大量的新公司。'}

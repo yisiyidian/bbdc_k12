@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incubus"]={"incubus","['ɪŋkjʊbəs]","['ɪŋkjʊbəs]","n.恶梦",'n.恶梦,负担|||n.梦淫妖(据说会趁女人熟睡而与其交配的恶鬼)','Hovering above us like an incubus there is the current global economic and financial crisis.','现在的经济和金融危机，像噩梦般回旋在我们头顶。','The incubus haunted her for three sleepless nights.','这场噩梦使他三个晚上都无法入睡。'}

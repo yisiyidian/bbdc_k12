@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pleasing"]={"pleasing","['pliːzɪŋ]","['plizɪŋ]","adj.愉快的",'adj.令人喜爱的,愉快的,舒适的|||vbl.取悦,期望,请','This painting has a pleasing balance of shapes and colours.','这幅画在构图和色彩方面都十分谐调.','The arrangement of the furniture formed a pleasing ensemble.','这些家具摆放得悦目而和谐.'}

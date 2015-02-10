@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ferry"]={"ferry","['ferɪ]","['fɛri]","n.渡船",'n.渡船,渡口|||vt.摆渡,运输|||vi.摆渡','The sway of the ferry made him feel sick.','渡船摇摇晃晃, 他感到恶心.','The old ferry is scarcely seaworthy.','这艘船已几乎不适于航海了'}

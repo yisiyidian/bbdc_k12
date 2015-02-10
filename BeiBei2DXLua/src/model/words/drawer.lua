@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drawer"]={"drawer","[drɔː]","[drɔr]","n.抽屉",'n.抽屉','There is a pair of scissors in the bottom drawer.','最底下的抽屉里有把剪刀。','He found the money secreted in a drawer.','他找到了藏在抽屉里的钱。'}

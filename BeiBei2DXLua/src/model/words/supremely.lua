@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supremely"]={"supremely","[su'primli]","[ su:'pri:mli ]","adv.无上地",'adv.无上地,崇高地','it\'s supremely honorable to be intervewed by the People magazine','被人民日报采访是无上的荣耀','I had the most supremely awful day.','我过了最无比糟糕的一天。'}

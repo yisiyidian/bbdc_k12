@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["transport"]={"transport","[træn'spɔːt; trɑːn-]","['trænspɔrt]","n.运输、运输工具",'n.运输、运输工具；(常用复数）强烈的情绪、狂喜或狂怒|||vt.运输；流放；为强烈的情绪所激动','The goods have been cased up for transport.','货物已装箱待运。','London ||Transport|| run extra trains during the rush-hour.','伦敦运输公司会在交通高峰时间增开班车。'}

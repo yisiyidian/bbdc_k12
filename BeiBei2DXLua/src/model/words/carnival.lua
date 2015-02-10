@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["carnival"]={"carnival","['kɑːnɪv(ə)l]","['kɑrnɪvl]","n.嘉年华会",'n.嘉年华会,狂欢节,饮晏狂欢','Loneliness is the carnival of a single soul.','孤独是一个人的狂欢','Our street puts on a carnival every year.','我们这条街的居民每年举行一次狂欢会.'}

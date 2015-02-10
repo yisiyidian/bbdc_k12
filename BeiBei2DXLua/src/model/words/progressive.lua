@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["progressive"]={"progressive","[prə'gresɪv]","[prə'ɡrɛsɪv]","adj.前进的",'adj.前进的,渐进的|||n.进步人士','She is the most progressive writer of those times.','她是那个时代最进步的作家。','She is the most progressive writer of the time.','她是那个时代最进步的作家。'}

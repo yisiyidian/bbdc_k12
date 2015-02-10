@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["waste"]={"waste","[weɪst]","[west]","vt.浪费",'vt.浪费,使瘦弱,逐渐消耗|||vi.挥霍,规模缩小,大伤元气|||adj.荒芜的,未开垦的,废的|||n.浪费,废料,垃圾,荒漠,凄凉的景象','All his efforts were wasted.','他的所有努力都白费了。','It\'s only a waste of time to speak to her.','和她说话纯粹是浪费时间。'}

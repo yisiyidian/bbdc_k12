@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crooked"]={"crooked","['krʊkɪd]","['krʊkɪd]","adj.弯曲的",'adj.弯曲的,歪的,不老实的，不正直的|||crook的过去式和过去分词','He crooked his finger to himself.','他向内勾起手指。','Don\'t take to crooked ways.','别走邪门歪道。'}

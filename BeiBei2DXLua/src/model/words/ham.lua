@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ham"]={"ham","[hæm]","[hæm]","n.火腿",'n.火腿,后腿,股部和臀部,拙劣的表演者,业余无线电台的操作者|||vt.&vi.表演过火,做戏','This ham has too much fat on it.','这火腿肥肉太多.','He tucked into the ham hungrily.','他狼吞虎咽地大吃火腿。'}

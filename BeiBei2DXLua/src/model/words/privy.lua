@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["privy"]={"privy","['prɪvɪ]","['prɪvi]","adj.个人的",'adj.个人的，私密的|||n.有利害关系的人|||n.厕所','I was made privy to it.','我心里明白那件事。','The privy took proceedings against the company.','当事人对这家公司提起诉讼。'}

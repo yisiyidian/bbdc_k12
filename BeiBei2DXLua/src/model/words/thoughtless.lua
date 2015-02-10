@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thoughtless"]={"thoughtless","['θɔːtlɪs]","['θɔtləs]","adj.没有考虑的",'adj.没有考虑的,无深虑的,轻率的','It was very thoughtless of you to keep her waiting so long.','你让她等那麽久也太不体谅人了。','It was thoughtless if well-meaning.','用意虽好, 考虑欠周.'}

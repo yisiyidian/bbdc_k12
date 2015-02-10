@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whereas"]={"whereas","[weər'æz]","['wɛr'æz]","conj.&adv.然而",'conj.&adv.然而,却,反之','Wise men love truth, whereas fools shun it.','【谚】智者热爱真理，愚者回避真理。','They want a house, whereas we would rather live in a flat.','他们想要一座房子, 而我们宁愿住在一套房间里.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["entertainer"]={"entertainer","[entə'teɪnə]","['ɛntɚ'tenɚ]","n.表演娱乐节目的人",'n.表演娱乐节目的人,演艺人员','A man never does justice to himself as an entertainer when his wife is around.','有太太在旁的时候，男人总不能充分发挥其作为款待者（主人）的能力。','Every saturday they have a different entertainer on the guest spot.','每星期六他们在嘉宾节目中邀请一个不同的表演者'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["planet"]={"planet","['plænɪt]","['plænɪt]","n.行星",'n.行星','Mars is the fourth planet in order from the sun.','火星是太阳系的第四颗行星。','The planets of our solar system are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.','我们太阳系的行星有水星、金星、地球、火星、木星、土星、天王星、海王星。'}

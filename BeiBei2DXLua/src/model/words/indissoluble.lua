@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indissoluble"]={"indissoluble","[,ɪndɪ'sɒljʊb(ə)l]","[,ɪndɪ'sɑljəbl]","adj.不能溶解的",'adj.不能溶解的,不能分解的,坚固的','Oil is indissoluble in water.','油不溶于水。','There is a indissoluble friendship between us.','我们之间有着坚不可摧的友谊。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shuttle"]={"shuttle","['ʃʌt(ə)l]","['ʃʌtl]","n.航天飞机",'n.航天飞机；穿梭；梭子；穿梭班机、公共汽车等|||vt.使穿梭般来回移动；短程穿梭般运送|||vi.穿梭往返','The U.S. made the first space shuttle in the world.','美国制造了世界上第一架航天飞机。','There is a shuttle service between the city center and the air station.','在市中心和飞机场之间有往返的穿梭运行班车。'}

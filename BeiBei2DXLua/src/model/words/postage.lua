@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["postage"]={"postage","['pəʊstɪdʒ]","['postɪdʒ]","n.邮费",'n.邮费,邮资已付邮戳','The bill was USD10, plus USD1 for postage.','帐款是10美元，再加上一美元邮费。','The price includes postage charges.','价格包括邮资在内。'}

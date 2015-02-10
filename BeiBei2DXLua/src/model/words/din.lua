@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["din"]={"din","[dɪn]","[dɪn]","n.喧嚣",'n.喧嚣|||v.絮聒不休地说,暄闹|||abbr.德国工业标准（=GermanIndustrialStandards）','The children were making an awful din.','孩子们吵得厉害。','The shouts of the boys dinned his ear.','孩子们的吵闹声把他的耳朵都快吵聋了。'}

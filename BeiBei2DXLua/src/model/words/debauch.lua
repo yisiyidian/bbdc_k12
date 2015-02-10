@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["debauch"]={"debauch","[dɪ'bɔːtʃ]","[ di'bɔ:tʃ ]","vt.使堕落",'vt.使堕落|||vi.放荡|||n.放荡','The young man\'s honesty was debauched by the prospect of easy money.','由于指望不花力气就能赚到钱，这个年轻人变得不那么诚实了。','The young man\'s honesty was debauched by the prospect of easy money.','由于指望不花力气就能赚到钱，这个年轻人变得不那么诚实了。'}

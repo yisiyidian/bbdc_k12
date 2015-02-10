@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mildew"]={"mildew","['mɪldjuː]","['mɪldu]","n.霉病",'n.霉病,发霉|||v.(使）发霉,（使）生霉','||Mildew|| and mushrooms are fungi.','霉和蘑菇都是真菌。','Cog liable to mildew damage effect ins acidly.','货物可能会发霉，请予以投保。'}

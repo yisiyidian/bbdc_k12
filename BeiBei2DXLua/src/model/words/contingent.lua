@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["contingent"]={"contingent","[kən'tɪndʒ(ə)nt]","[kən'tɪndʒənt]","adj.或许会或不会发生的",'adj.或许会或不会发生的,附随的,暂时的|||n.偶然的事情,份儿,分遣队','Our plans are contingent on the weather.','我们的计划取决于天气情况。','Our success is contingent upon your continued help.','我们的成功全靠你的不断帮助。'}

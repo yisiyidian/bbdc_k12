@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imputation"]={"imputation","[,ɪmpjuː'teɪʃən]","[,ɪmpjʊ'teʃən]","n.归罪",'n.归罪,负责,责难','Hector’s imputation of the government’s illegal detention of refugees was completely ignored.','赫克托指责政府非法居留难民，但完全被忽略。','it is important to choose a good imputation','选择合适的插补方法是很重要的'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["volley"]={"volley","['vɒlɪ]","['vɑli]","n.齐发",'n.齐发|||vt齐射','He let out a volley of oaths.','他像发连珠炮似地破口大骂。','Police fired a volley over the heads of the crowd.','警察朝人群上方射出一排子弹。'}

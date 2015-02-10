@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["activate"]={"activate","['æktɪveɪt]","['æktə'vet]","v.刺激",'v.刺激,使...活动,创设','I think if you flip the blue switch near the bottom it will activate the air conditioner.','我想，如果你把下方的蓝色开关轻轻地推上，冷气就会出来了。','The service is only available after its being activated','服务只有在激活后才能使用。'}

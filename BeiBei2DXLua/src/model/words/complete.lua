@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["complete"]={"complete","[kəm'pliːt]","[kəm'plit]","vt.完成",'adj.彻底的,完整的,已完成的|||vt.完成;使圆满,使完美','He is a complete scholar.','他是个无懈可击的学者。','When will the work be complete?','这项工作什么时候完成？'}

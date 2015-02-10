@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["halting"]={"halting","['hɔːltɪŋ]","['hɔltɪŋ]","adj.跛的",'adj.跛的，踌躇的|||动词halt的现在分词形式','Russia\'s efforts to attract investment have been halting and confused.','俄罗斯在吸引投资上一直踌躇不前，混乱不清。','I heard a halting voice, “maybe I can try it.”','我听到一个迟疑的声音说："也许我可以试一试。"'}

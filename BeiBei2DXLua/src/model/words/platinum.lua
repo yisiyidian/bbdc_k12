@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["platinum"]={"platinum","['plætɪnəm]","['plætnəm]","n.白金",'n.白金|||adj.白金的','Originally Edison used platinum alloys for the filament, in the belief that carbon was impracticable.','爱迪生不相信碳可作灯丝用, 所以一开始就用铂合金作灯丝。','||Platinum||, especially as found naturally in impure form.','天然铂铂, 尤指自然界中发现的以不纯的形式存在的铂'}

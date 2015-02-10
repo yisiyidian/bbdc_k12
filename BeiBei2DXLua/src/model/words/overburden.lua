@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overburden"]={"overburden","[əʊvə'bɜːd(ə)n]","[ ,əuvə'bə:dən, 'əuvə,bə:dən ]","n.地层表土",'n.地层表土|||vt.使负担过重','Do not overburden yourself .','不要给自己太大压力','They were overburdened with luggage.','过多的行李使他们不堪重负。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["astral"]={"astral","['æstr(ə)l]","['æstrəl]","adj.星的",'adj.星的,多星的,星界的，超于世界的','The sky is astral.','天空布满星星。','The astral sky in the night means a sunny day in the next day.','晚上繁星点缀的天空预示着第二天是个晴天。'}

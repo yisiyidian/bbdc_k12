@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["patriot"]={"patriot","['pætrɪət; 'peɪt-]","['petrɪət]","n.爱国者",'n.爱国者','He was represented as a true patriot.','他被描绘成真正的爱国主义者.','A patriot recognizes his duty to defend his country.','一位爱国主义者知道他的保卫自己的国家的责任.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hunter"]={"hunter","['hʌntə]","['hʌntɚ]","n.猎人",'n.猎人，猎犬，猎马，搜寻者|||Hunter:亨特（姓氏）','The hunter entertained us with venison which was very delicious.','猎人拿出了非常美味的鹿肉招待我们。','The hunter put the lion\'s head on the wall as a trophy.','猎人把狮子的头挂在墙上当纪念品。'}

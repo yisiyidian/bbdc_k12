@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["urbanize"]={"urbanize","['ɜːb(ə)naɪz]","[ 'ə:bənaiz ]","v.使都市化",'v.使都市化','The government is trying to urbanize this area.','政府正在设法把这一地区城市化。','For China to modernize its economy, it must further industrialize, and urbanize','为了使经济现代化，中国必须扩大工业化和城市化'}

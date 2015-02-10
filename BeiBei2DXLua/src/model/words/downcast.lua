@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["downcast"]={"downcast","['daʊnkɑːst]","['daʊnkæst]","adj.气馁的",'adj.气馁的,悲哀的，垂下的','Eyes downcast, she continued eating.','她低垂双眼，不停地吃。','He seemed very downcast at the news.','那消息似乎使他非常难过。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sedentary"]={"sedentary","['sed(ə)nt(ə)rɪ]","['sɛdntɛri]","adj.久坐的",'adj.久坐的,固定不动的','The scribe is a sedentary worker.','作家工作时需要久坐。','He hates sedentary lifestyles.','他讨厌坐着不动弹的生活。'}

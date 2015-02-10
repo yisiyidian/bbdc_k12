@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nutritious"]={"nutritious","[njʊ'trɪʃəs]","[nʊ'trɪʃəs]","adj.营养的",'adj.有营养成份的,营养的','Broccoli is a kind of nutritious vegetables.','西兰花是一种很有营养的蔬菜','Milk is thought to be nutritious.','牛奶被认为是有营养的。'}

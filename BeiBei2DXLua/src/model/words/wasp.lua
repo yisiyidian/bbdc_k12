@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wasp"]={"wasp","[wɒsp]","[wɑsp]","n.黄蜂",'n.黄蜂,胡蜂','Her face was covered in wasp stings.','她脸上满是黄蜂蜇过的伤痕.','Bee and wasp both sting, but they have other similarity, too.','蜜蜂和黄蜂都螫人，但它们还有其他相似之处。'}

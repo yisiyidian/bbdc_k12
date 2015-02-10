@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perceive"]={"perceive","[pə'siːv]","[pɚ'siv]","v.察觉",'v.察觉,感觉,认知,理解','I perceived his comment as a challenge.','我认为他的批评是对我的激励.','The patient was perceived to have difficulty in standing and walking.','据观察所见, 病人站立和行走都有困难.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clown"]={"clown","[klaʊn]","[klaʊn]","n.小丑",'n.小丑,粗鲁愚蠢的人|||vi.扮小丑,胡闹','I just curled up when I saw her dressed as a clown.','我见她打扮得像个小丑，把我笑得直不起腰来。','It\'s a picture depicting him as a clown.','这是一幅把他画成小丑的画。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["viper"]={"viper","['vaɪpə]","['vaɪpɚ]","n.毒蛇",'n.毒蛇,毒蛇一样的家伙,阴险人|||毒品','That treacherous villain, as vicious as a viper, stopped at no evils.','那个阴险的恶棍心如蛇蝎，无恶不作。','He unwarily treads upon a viper asleep just before his feet.','他不小心踩到正睡在他脚前的蛇上。'}

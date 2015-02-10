@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cursive"]={"cursive","['kɜːsɪv]","['kɝsɪv]","adj.草书的",'adj.草书的,草书体的|||n.草书,草书原稿','The manuscript was written in cursive characters.','这份手稿是用草书写的。','Chinese cursive writing is very difficult to read.','中文的草书体很难读。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["receptionist"]={"receptionist","[rɪ'sepʃ(ə)nɪst]","[rɪ'sɛpʃənɪst]","n.接待员",'n.接待员','I will leave a message with the receptionist.','我会给前台小姐留个口信。','She is a receptionist in a doctor\'s office.','她在一位医生的诊所中担任接待员。'}

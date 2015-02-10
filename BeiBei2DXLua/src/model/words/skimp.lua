@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["skimp"]={"skimp","[skɪmp]","[skɪmp]","vt.少给",'vt.少给(淘汰选矿,马马虎虎的做)|||adj.少的(不足的)','They have to skimp on fuel in winter.','冬天他们得节省燃料。','||Skimping|| means losing.','马马虎虎就会失败。'}

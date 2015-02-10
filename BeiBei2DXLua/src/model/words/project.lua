@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["project"]={"project","['prɒdʒekt]","[ˈprɔdʒɛkt]","n.工程",'n.工程,项目,计划,事业|||v.计划,设计,表达|||v.投射,放映,凸出','The project became so expensive that we had to pull out.','这个计画耗资太大，我们只好退出。','The class are doing a project on the Roman occupation of Britain.','这个班在进行一项关於古罗马人占领不列颠的研究。'}

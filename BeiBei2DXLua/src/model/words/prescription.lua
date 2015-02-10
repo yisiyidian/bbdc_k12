@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prescription"]={"prescription","[prɪ'skrɪpʃ(ə)n]","[prɪ'skrɪpʃən]","n.药方",'n.药方,对策,开处方','The doctor dispensed a prescription to his patient.','医生给病人开了处方。','His prescription for economic recovery was not well received.','他为经济复苏提出的对策反应不佳。'}

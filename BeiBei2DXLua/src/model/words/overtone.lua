@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overtone"]={"overtone","['əʊvətəʊn]","['ovɚ'ton]","n.暗示",'n.暗示,弦外音,寓意','An overtone of anger barely masked; praise with overtones of envy.','几乎不加掩饰生气的表露；带着微露出的妒忌或表扬','an overtone of anger barely masked; praise with overtones of envy.','几乎不加掩饰生气的表露；带着微露出的妒忌或表扬'}

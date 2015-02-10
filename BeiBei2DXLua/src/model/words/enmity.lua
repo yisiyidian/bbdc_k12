@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enmity"]={"enmity","['enmɪtɪ]","[ 'enməti ]","n.敌意",'n.敌意,憎恨，不和','He felt great enmity towards his brother.','他对他弟弟满怀敌意。','They are at enmity with each other.','他们彼此不和。'}

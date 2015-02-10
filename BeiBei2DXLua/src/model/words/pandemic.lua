@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pandemic"]={"pandemic","[pæn'demɪk]","[pæn'dɛmɪk]","adj.全国流行的",'adj.全国流行的|||n.(全国或全世界范围流行的)疾病','What can we do to keep this still incurable disease from becoming pandemic?','我们怎样才能防止这种目前尚不能治愈的疾病大肆蔓延呢？','A virus that passes from animals to humans can cause a pandemic.','从动物身上传播到人类的病毒能导致大范围的流行病。'}

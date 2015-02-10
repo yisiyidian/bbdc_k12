@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deliberation"]={"deliberation","[dɪ,lɪbə'reɪʃ(ə)n]","[dɪ,lɪbə'reʃən]","n.熟虑",'n.熟虑,审议','After long deliberation, they decided not to buy the house.','他们商量了很长时间后决定不买这栋房子了。','What was the result of your deliberation?','你仔细考虑后结果如何？'}

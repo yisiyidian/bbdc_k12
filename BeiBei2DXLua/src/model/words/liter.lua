@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["liter"]={"liter","['litər]","[ 'li:tə ]","n.升",'n.升,公升(容量单位)|||=litre(英)','A metric unit of volume equal to one-tenth(10-1) of a liter.','分升容量的公制单位之一，等于1／10（10－1）升','The bottle holds a liter of beer.','这个瓶子装一升啤酒.'}

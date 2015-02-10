@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["expensive"]={"expensive","[ɪk'spensɪv; ek-]","[ɪk'spɛnsɪv]","adj.使文明",'adj.昂贵的,豪华的','The transport of goods by air is very expensive.','空运货物费用十分昂贵。','I think international calls are very expensive.','我认为国际电话费用很高。'}

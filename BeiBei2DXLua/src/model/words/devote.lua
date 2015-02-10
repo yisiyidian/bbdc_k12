@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["devote"]={"devote","[dɪ'vəʊt]","[dɪ'vot]","vt.投入于",'vt.投入于,献身','He started to study ecology and decided to devote his whole life to the science.','他开始研究生态学，并决心将他的一生献身于这门科学。','Please devote more time to your work.','请把更多的时间用于工作。'}

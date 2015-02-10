@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["course"]={"course","[kɔːs]","[kɔrs]","n.课程",'n.课程,讲座,过程,路线,一道(菜)','The blood coursed through the arteries.','血液在动脉血管中循环。','Events took their natural course.','事态依自然进程发展。'}

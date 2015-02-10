@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["preservative"]={"preservative","[prɪ'zɜːvətɪv]","[prɪ'zɝvətɪv]","n.防腐剂",'adj.保存的,有保存力的,防腐的|||n.防腐剂,预防法,预防药','Salt is a common food preservative.','盐是一种常用的食物防腐剂。','The wood is treated with preservative to prevent decay.','这块木头用防腐剂处理过以防止腐烂.'}

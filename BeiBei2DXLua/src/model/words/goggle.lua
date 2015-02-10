@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["goggle"]={"goggle","['gɒg(ə)l]","['ɡɑɡl]","n.眼睛睁视",'n.眼睛睁视,护目镜|||vi.瞪视,瞪大眼睛看|||adj.瞪大眼睛的，凝视的','He goggled at her in surprise.','他惊奇地睁大眼睛看著她.','She goggled at me.','她瞪着我看。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stick"]={"stick","[stɪk]","[stɪk]","vt.&vi.粘贴",'vt.&vi.粘贴；张贴；插入；刺入|||vt.容忍；产生作用；（尤指迅速或随手）放置；阻延或推迟|||n.棍棒，棍枝；枝条；操纵杆；球棍','It sticks in my throat to have to accept charity from them.','我不得不接受他们的施舍，此事教我耿耿於怀。','I wanted to tell her, but the words ||stuck|| in my throat.','我想要告诉她，只是有口难言。'}

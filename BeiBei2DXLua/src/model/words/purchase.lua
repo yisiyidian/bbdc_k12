@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["purchase"]={"purchase","['pɜ:tʃəs]","['pɝtʃəs]","n.购买",'n.购买,购买的物品|||n.支点;紧握,抓紧|||vt.购买,赢得;(用设备)举起,移动','You can rely on your solicitor\'s professionalism in dealing with the house purchase.','你尽可依靠律师处理购房事宜。','The purchase price is less if you pay by cash.','付现金的话，价钱便宜些。'}

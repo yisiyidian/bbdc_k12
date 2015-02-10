@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["toothache"]={"toothache","['tuːθeɪk]","['tuθek]","n.牙痛",'n.牙痛','I have a toothache because there is a cavity in one of my teeth.','我牙疼，因为我的一颗牙齿上有个洞。','Poor girl, I feel for you, toothache is painful.','可怜的姑娘，我都替你难受，牙痛真够呛。'}

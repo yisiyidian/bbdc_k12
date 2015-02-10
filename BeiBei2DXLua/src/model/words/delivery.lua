@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["delivery"]={"delivery","[dɪ'lɪv(ə)rɪ]","[dɪ'lɪvəri]","n.递送",'n.递送,交付,分娩','The next postal delivery is at 4 o\'clock.','下一次邮递时间是四点钟。','The mother had an easy delivery.','那位母亲生产顺利。'}

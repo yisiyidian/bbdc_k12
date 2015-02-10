@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["top"]={"top","[tɒp]","[tɑp]","n.顶端",'n.顶端,极点,盖子,(女式)上衣,最高地位,陀螺|||adj.最高的,顶上的,最一流的|||vt.高耸,加以顶盖,超越,上升到顶端|||vi.得出结论,到达顶峰','The green book is at the bottom of the pile and the red one is on top.','绿皮书在那一堆书的底下，红皮书在上边。','I need a top to go with these slacks.','我需要一件上衣来配这条宽松裤。'}

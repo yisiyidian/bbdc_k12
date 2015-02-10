@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["literacy"]={"literacy","['lɪt(ə)rəsɪ]","['lɪtərəsi]","n.读写能力",'n.读写能力，识字','||Literacy|| now includes elementary computer skills.','有文化现在包括基本的计算机技能。','I can\'t believe that he failed the literacy test.','我无法相信他识字测试不及格。'}

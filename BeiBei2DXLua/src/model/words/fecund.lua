@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fecund"]={"fecund","['fek(ə)nd; 'fiːk-]","['fikənd]","adj.多产的",'adj.多产的,丰饶的,肥沃的','The pampas are still among the most fecund lands in the world.','这片南美无树大草原仍然是世界上最为肥沃的地方。','It has now become clear how extraordinarily fecund a decade was the 1890s.','十九世纪九十年代被当今视为创造力旺盛的十年。'}

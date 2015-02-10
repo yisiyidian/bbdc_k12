@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["verisimilar"]={"verisimilar","[,verɪ'sɪmɪlə]","[,vɛrə'sɪməlɚ]","adj.似真的(可能的)",'adj.似真的(可能的)','This is a verisimilar tale.','好像是真的','This is verisimilar.','这很像真的。'}

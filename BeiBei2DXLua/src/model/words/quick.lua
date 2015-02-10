@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quick"]={"quick","[kwɪk]","[kwɪk]","adj.快的",'adj.快的，急速的；聪明的，凌厉的；灵活的；短时间做成的|||adv.迅速地，快速地|||n.（指甲下的）活肉；感情的中枢，感觉最敏锐的地方；要害，核心','Everyone is trying to get rich quick nowadays.','现在每个人都想要尽快发财致富。','He gave a quick answer to the teacher\'s question.','他对老师的提问作出了迅速的回答。'}

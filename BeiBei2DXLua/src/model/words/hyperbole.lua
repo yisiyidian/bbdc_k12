@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hyperbole"]={"hyperbole","[haɪ'pɜːbəlɪ]","[haɪ'pɝbəli]","n.夸张法",'n.夸张法','American humor is founded largely on hyperbole.','美国式的幽默主要以夸张为基础。','Flora used hyperboles to impress the importance of what she was saying on the children.','弗洛拉用夸张的方法，让孩子们明白她说的话的重要性。'}

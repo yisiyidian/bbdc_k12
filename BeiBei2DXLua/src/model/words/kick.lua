@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kick"]={"kick","[kɪk]","[kɪk]","vt.踢",'n.踢,冲刺,反冲,钱包,反对,极大兴趣|||vt.踢,对自己生气,戒除|||vi.踢,反抗,充满活力的运作,反冲,冲刺','My shirt is kicking around on the floor somewhere.','我的衬衫在地板上的什麽地方。','That horse kicked me.','那匹马踢了我。'}

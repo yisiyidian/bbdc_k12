@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["strap"]={"strap","[stræp]","[stræp]","n.绳",'n.绳,皮带,镣铐,皮鞭|||vt.用绳索捆扎,系住,鞭笞,磨快','All the luggage has been strapped up.','所有行李都已捆扎好。','Her camera strap has broken.','她的照相机吊带断了。'}

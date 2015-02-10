@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["proprietor"]={"proprietor","[prə'praɪətə]","[prə'praɪətɚ]","n.所有人",'n.所有人,业主,经营者','It was the editor and proprietor of the SAGAMORE.','来人是《萨加摩尔周报》的编辑兼老板.',' What a fish it was,  the proprietor said.','“ 多大的鱼呀, " 饭店老板说.'}

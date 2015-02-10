@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["isolated"]={"isolated","['aɪsəleɪtɪd]","['aɪsəletɪd]","adj.分离的",'adj.分离的,孤立的','There is a strong spirit of fraternity among these isolated people.','这些与世隔绝的人之间有强烈的兄弟般的情谊.','Scientists have isolated the virus causing the epidemic.','科学家们已分离出引起这种流行病的病毒。'}

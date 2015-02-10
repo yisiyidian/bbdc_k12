@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blanch"]={"blanch","[blɑːn(t)ʃ]","[blæntʃ]","v.漂白",'v.漂白,变白,使...变白','Skin the peaches by blanching them.','把桃子焯一下去皮。','He blanched with fear at the sight of the snake.','他看见蛇吓得脸色煞白。'}

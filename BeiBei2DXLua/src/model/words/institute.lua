@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["institute"]={"institute","['ɪnstɪtjuːt]","['ɪnstɪtut]","n.研究所",'n.学会,学院,协会|||vt.创立,开始,制定','New methods of teaching foreign languages are adopted in this institute.','该学院采用新的外语教学法。','There is a middle school attached to the institute.','这个学院附设一所中学.'}

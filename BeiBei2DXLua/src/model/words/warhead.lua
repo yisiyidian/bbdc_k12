@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["warhead"]={"warhead","['wɔːhed]","['wɔrhɛd]","n.弹头",'n.弹头','The explosive charge carried in the warhead of a missile.','导弹有效载荷导弹弹头所带的炸药当量','The country\'s amassment of atomic warhead make its neighbors nervous.','该国积聚了大量的核弹头, 使其邻国紧张不安。'}

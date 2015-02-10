@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["holiday"]={"holiday","['hɒlɪdeɪ; -dɪ]","['hɑləde]","n.假期",'n.假期,假日|||vi.度假','Our holiday plans are still at an indeterminate stage.','我们的假日计划还没有确定。','Did you have a nice holiday?','你假期过得愉快吗？'}

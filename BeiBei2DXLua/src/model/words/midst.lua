@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["midst"]={"midst","[mɪdst]","[mɪdst]","n.中间",'n.中间,当中|||prep.(=amidst)在...当中','The girls had got on well together until the apple of discord in the person of a handsome young man arrived in their midst.','姑娘们一直相处很好，后来一个英俊的小伙子来到她们中间，引起了她们之间的不和。','Jupiter, with august gravity, sitting in the midst.','朱庇特威风凛凛地坐在当中。'}

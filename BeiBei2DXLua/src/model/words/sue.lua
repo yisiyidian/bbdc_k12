@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sue"]={"sue","[s(j)uː]","[su]","vt.控告",'vt.控告,起诉|||vi.请求,追求,起诉|||n.(Sue)人名；(日)末(名)；(法)休；(英)休(女子教名Susan、Susanna的昵称)','He was sued for breach of contract.','他因不履行合同而被起诉。','What is your name? My name is ||Sue||.','你叫什么名字？我的名字叫苏。'}

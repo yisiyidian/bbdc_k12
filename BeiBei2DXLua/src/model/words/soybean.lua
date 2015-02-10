@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["soybean"]={"soybean","['sɒɪbiːn]","['sɔɪ,bin]","n.大豆",'n.大豆,黄豆','Please pound up the soybeans.','请把黄豆捣成粉。','The field was laid up in twenty-nine-inch rows for soybeans.','这块地被犁成二十九英寸宽的垄条，准备种大豆。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["congested"]={"congested","[kən'dʒestɪd]","[kən'dʒɛstɪd]","adj.拥挤的",'adj.拥挤的|||动词congest的过去式和过去分词','The street was congested with traffic.','街道因往来车辆而阻塞。','The street was congested with parades.','这个街道因游行变得拥挤。'}

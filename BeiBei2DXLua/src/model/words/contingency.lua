@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["contingency"]={"contingency","[kən'tɪndʒ(ə)nsɪ]","[kən'tɪndʒənsi]","n.偶然",'n.偶然,可能性,意外事故,可能发生的附带事件','Not equipped to meet a contingency.','未应急的没有为应付紧急情况作好准备的','It\'s impossible to legislate for every contingency.','为每一偶发事件都立法是不可能的.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outspoken"]={"outspoken","[aʊt'spəʊk(ə)n]","[aʊt'spokən]","adj.直言无讳的",'adj.直言无讳的,坦率的|||动词outspeak的过去分词','Hans got in bad with some of his friends because of his outspoken opposition to the war.','汉斯因为坦率地反对这场战争，使得他的一些朋友不再喜欢他了。','He was an outspoken critic of apartheid.','他公开抨击种族隔离制度。'}

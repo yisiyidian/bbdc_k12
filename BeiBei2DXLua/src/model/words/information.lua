@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["information"]={"information","[ɪnfə'meɪʃ(ə)n]","['ɪnfɚ'meʃən]","n.信息",'n.信息,情报,新闻,资料,询问','He succeeded in eliciting the information he needed from her.','他从她那里问出了他所需要的信息。','A good encyclopaedia is a mine of information.','一部好的百科全书是一座知识宝库。'}

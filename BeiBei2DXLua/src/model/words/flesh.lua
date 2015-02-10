@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flesh"]={"flesh","[fleʃ]","[flɛʃ]","n.肉(体)",'n.肉(体),人性|||vt.用肉喂,赋予血肉,使长肉|||vi.变胖','I\'ll have to go to my aunt\'s funeral she was my own flesh and blood after all.','我得参加我姑姑的葬礼－－她是我的亲人哪。','The spirit is willing but the flesh is weak.','心有余而力不足。'}

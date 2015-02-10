@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["immigration"]={"immigration","[ɪmɪ'ɡreɪʃn]","[,ɪmɪ'ɡreʃən]","n.移居",'n.移居,移民','Mps are pressing for the repeal of the immigration act.','下院议员正在施加压力使移民法得以废止。','||Immigration|| officials will ask to see your papers.','移民局的官员将要求你出示证件.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nectar"]={"nectar","['nektə]","['nɛktɚ]","n.花蜜",'n.花蜜,甜美的饮料，众神饮用的酒','Any of several small, often brilliantly colored Australasian parrots that feed primarily on soft fruits or the nectar and pollen of flowers and blooming trees.','短尾鹦鹉一种澳大拉西亚的体小、通常色彩鲜艳的鹦鹉，主要食软果或水果原汁花与开花树木和花的蜜','Bee is feed with the nectar','蜜蜂以花蜜为生'}

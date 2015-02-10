@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dismay"]={"dismay","[dɪs'meɪ]","[dɪs'me]","n.沮丧",'n.沮丧,绝望|||vt.使...灰心,使...惊愕','Her face registered dismay.','她脸上流露出惊慌的神色','This appointment was greeted with relief, dismay, etc.','这一委任使人欣慰、 怅惘等.'}

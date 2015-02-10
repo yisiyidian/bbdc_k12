@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intercede"]={"intercede","[,ɪntə'siːd]","[,ɪntɚ'sid]","v.仲裁",'v.仲裁,说项','They asked my father to intercede with the king on their behalf.','他们请我父亲代他们向国王求情。','It has also asked Britain and the United States to intercede.','它也请了英国和美国出面调停。'}

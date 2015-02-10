@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pauper"]={"pauper","['pɔːpə]","['pɔpɚ]","n.贫民",'n.贫民,被救济者,穷人','He had lost caste and station before the very paupers.','他在贫民前面丢了体面和地位。','Each one of you will be given a title - ||Pauper||.','你们每人可以得到一个头衔——穷鬼。'}

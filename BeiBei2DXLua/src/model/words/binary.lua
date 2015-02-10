@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["binary"]={"binary","['baɪnərɪ]","['baɪnəri]","adj.二元的",'adj.二进位的,二元的|||n.二进制,二元','A binary compound of chlorine.','氯化物一种氯的二元化合物','In computing and communications, a group of eight binary digits treated as an entity.','在计算技术和通信技术中，作为一个整体来处理的一组8个二进制数字。见octal。'}

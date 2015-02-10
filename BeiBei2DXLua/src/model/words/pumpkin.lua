@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pumpkin"]={"pumpkin","['pʌm(p)kɪn]","['pʌmpkɪn]","n.南瓜",'n.南瓜','||Pumpkin|| pie is a traditional American dish served on Thanksgiving.','南瓜馅饼是美国传统的感恩节食物.','His wife made some pumpkin pies for supper.','他妻子做了一些南瓜馅饼作晚餐。'}

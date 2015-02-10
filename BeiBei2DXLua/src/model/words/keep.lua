@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["keep"]={"keep","[kiːp]","[kip]","vt.保持",'vt.保持；保留；遵守；阻止|||vi.（食品）保持新；保持健康|||n.保持，保养；供养，抚养；生活，生计；饲料；牧草','||Keep|| straight on until you get to the church.','一直朝前走就走到教堂了。','Please keep me a place in the queue.','排队时请给我占个位置。'}

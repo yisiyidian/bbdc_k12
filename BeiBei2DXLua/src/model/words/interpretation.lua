@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interpretation"]={"interpretation","[ɪntɜːprɪ'teɪʃ(ə)n]","[ɪn'tɝprɪ'teʃən]","n.解释",'n.解释,演出,翻译,互動','His interpretation of the music was rather too literal.','那音乐他演奏得未免太乏味了.','The meaning of the poem doesn\'t really come out in his interpretation.','他并没有把这首诗的意义真正揭示出来.'}

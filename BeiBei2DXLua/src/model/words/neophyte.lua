@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["neophyte"]={"neophyte","['niːə(ʊ)faɪt]","['niəfaɪt]","n.初学者",'n.初学者,新手','As a neophyte at drive, she is always with jealous care.','她刚开始学开车，总是小心翼翼的。','As a neophyte, you should always have the thinking of learning in your heart.','作为一个新人，你应该时刻怀有一颗学习的心。'}

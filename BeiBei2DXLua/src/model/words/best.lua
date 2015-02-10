@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["best"]={"best","[best]","[bɛst]","adj.最好的",'adj.最好的|||adv.最,最好地|||n.最好的人(或物)|||vt.胜于','He\'s difficult at the best of times usually he\'s impossible.','他即使在情绪最好的时候，都很难相处－－平常就更令人受不了了。','the best performer; the best grade of ore.','最优秀的表演者；最优等级矿石'}

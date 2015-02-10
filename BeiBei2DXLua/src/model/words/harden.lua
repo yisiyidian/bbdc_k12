@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["harden"]={"harden","['hɑːd(ə)n]","['hɑrdn]","v.变硬",'v.变硬,使...坚强,涨价','Hot steel is quenched to harden it.','烧热的钢淬火使它坚硬。','His face hardened at the word.','他听到这话，脸沉了下来。'}

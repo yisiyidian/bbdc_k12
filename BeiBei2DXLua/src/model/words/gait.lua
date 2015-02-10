@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gait"]={"gait","[geɪt]","[ɡet]","n.步态",'n.步态','He is awkward in his gait.','他的步态不雅观。','His easy gait shows self-confidence.','他从容的步态显示出自信。'}

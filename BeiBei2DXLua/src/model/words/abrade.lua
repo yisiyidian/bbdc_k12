@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abrade"]={"abrade","[ə'breɪd]","[ə'bred]","v.擦伤",'v.擦伤,磨损','My skin was abraded and very tender.','我的皮肤被擦伤了，非常敏感。','Floats in satin and sateen fabrics tent to snag and abrade easily.','缎文织物中的浮长线容易磨损、起毛或纤维被勾出。'}

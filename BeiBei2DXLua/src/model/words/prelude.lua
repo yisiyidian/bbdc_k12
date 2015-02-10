@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prelude"]={"prelude","['preljuːd]","['prɛljud]","n.序幕",'n.序幕,前奏，预兆|||vi.成为...的前奏（开头）','Heavy dark cloud is the prelude of a storm.','浓重的乌云是暴风雨的前奏。','He preluded with some banal remarks.','他讲了一些老套话作为开场白。'}

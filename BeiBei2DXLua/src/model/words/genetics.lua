@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["genetics"]={"genetics","[dʒɪ'netɪks]","[dʒə'nɛtɪks]","n.遗传学",'n.遗传学','He gave me a piece of advice on how to learn genetics.','他就如何学好遗传学给我提出了一条建议.','Population genetics owes its origin to Francis Galton.','体遗传学的创立应归功于弗朗西斯·高尔顿.'}

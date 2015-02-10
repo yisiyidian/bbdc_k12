@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consequence"]={"consequence","['kɒnsɪkw(ə)ns]","['kɑnsəkwɛns]","n.结果",'n.结果,后果','It rained yesterday and in consequence the match was canceled.','昨天下雨了, 结果比赛被取消。','It terrified me to contemplate the consequence of your action.','想到你行动的后果，我就感到害怕。'}

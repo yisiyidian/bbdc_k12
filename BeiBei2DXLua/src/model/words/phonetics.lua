@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["phonetics"]={"phonetics","[fə'netɪks]","[fə'nɛtɪks]","n.语音学",'n.语音学,发音学','||Phonetics|| deals with speech sounds.','语音学是研究语言声音的.','He was popularly regarded as a great authority on phonetics.','他被普遍认为是语音学方面的大权威。'}

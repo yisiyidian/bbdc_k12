@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bosom"]={"bosom","['bʊz(ə)m]","['bʊzəm]","n.胸",'n.胸；胸怀；中间；胸襟；内心；乳房；内部|||vt.怀抱；把…藏在心中|||adj.知心的；亲密的','He exchanged intimacies with his bosom friend at the party.','在晚会上，他和他的密友亲密交谈。','She clasped the baby to her bosom.','她把孩子紧紧抱在怀里。'}

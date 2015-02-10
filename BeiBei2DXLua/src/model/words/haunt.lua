@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["haunt"]={"haunt","[hɔːnt]","[hɔnt]","n.常到的地方",'n.常到的地方|||vt.常到,缠住,出没(像鬼魂一样)|||vi.徘徊,出没(像鬼魂一样)','The ghost has been laid and will not return to haunt you again.','那鬼魂已经祛除，不会再回来缠著你了。','The ghost of Lady Margaret is supposed to haunt this chapel.','据说玛格丽特女士的鬼魂常在这个礼拜堂出没.'}

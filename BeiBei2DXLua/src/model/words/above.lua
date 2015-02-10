@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["above"]={"above","[ə'bʌv]","[ə'bʌv]","adj.上面的",'adj.上面的|||adv.在上面,超过|||n.上面的东西|||prep.在...上面,超过','the ranks of major and above.','少校官阶或比其更高的官阶','His conduct has always been above suspicion.','他的行为一直无可质疑。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["computer"]={"computer","[kəm'pjuːtə]","[kəm'pjutɚ]","n.计算机",'n.计算机','In addition to giving a general introduction to computer, the course also provides practical experience.','课程除了一般介绍电脑知识外，还提供实际操作的机会。','We make copies of our computer disks as a safeguard against accidents.','我们复制了计算机磁盘以防意外。'}

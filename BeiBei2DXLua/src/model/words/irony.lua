@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irony"]={"irony","['aɪrənɪ]","['aɪrəni]","n.反讽",'n.反讽,讽剌,讽剌之事','The great irony is that despite all his explanation nobody believed him.','最具讽刺意味的是：尽管他竭力解释，可没一个人相信他。','Paradox and irony are characteristics of her style.','她善於运用似非而是的隽语和反语。'}

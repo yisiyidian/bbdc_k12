@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alas"]={"alas","[ə'læs; ə'lɑːs]","[ə'læs]","int.唉",'int.唉，哎呀','The Good, the True, the Beautiful! ||Alas||, the Good is so often untrue, the True so often unbeautiful, the Beautiful so often not good.','真、善、美！天啊，善之常常如是不真，真之常常如是不美，美之常常如不是善！','||Alas|| the day! We have lost such a good chance.','哎呀！我们失去了这么好的一次机会。'}

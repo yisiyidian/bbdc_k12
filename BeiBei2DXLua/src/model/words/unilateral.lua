@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unilateral"]={"unilateral","[juːnɪ'læt(ə)r(ə)l]","['jʊnɪ'lætərəl]","adj.单方面的",'adj.单方面的,单边的,片面的,单系的','In the first two cases the reaction is unilateral.','在前两个例证中，这种反应是单边的。','The candidates had to state their position on unilateral disarmament.','候选人不得不表明他们对单方面裁军所持的立场。'}

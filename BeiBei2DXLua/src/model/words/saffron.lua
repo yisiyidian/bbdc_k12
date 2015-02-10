@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["saffron"]={"saffron","['sæfr(ə)n]","['sæfrən]","n.[植]藏红花",'n.[植]藏红花，橘黄色','||Saffron|| is very bright yellow.','金黄色是很亮的黄色。','saffron yellow','橘黄'}

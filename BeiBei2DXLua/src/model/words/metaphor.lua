@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["metaphor"]={"metaphor","['metəfə; -fɔː]","['mɛtəfɚ]","n.隐喻",'n.隐喻,暗喻','In poetry, the rose is often a metaphor for love.','玫瑰在诗中通常作为爱的象征。','She has a striking originality in her use of metaphor.','她在运用隐喻方面有独创性。'}

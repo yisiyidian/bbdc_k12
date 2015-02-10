@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deterrent"]={"deterrent","[dɪ'ter(ə)nt]","[dɪ'tɝənt]","adj.制止",'adj.制止,防止,挽留|||n.挽留的事物,妨碍物','Hopefully his punishment will act as a deterrent to others.','对他的惩罚但愿能起到杀一儆百的作用。','Only a strong deterrent will work.','只有强硬的制止才能有效。'}

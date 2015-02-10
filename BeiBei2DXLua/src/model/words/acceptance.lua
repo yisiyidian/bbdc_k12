@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["acceptance"]={"acceptance","[ək'sept(ə)ns]","[ək'sɛptəns]","n.接受（礼物、邀请、建议等）",'n.接受（礼物、邀请、建议等），同意，认可','Therewas an undercurrent of resentment in their acceptance of the plan.','他们接受该计画时心怀不满.','The proposal found general acceptance.','这项建议被普遍接受.'}

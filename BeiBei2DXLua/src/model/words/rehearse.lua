@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rehearse"]={"rehearse","[rɪ'hɜːs]","[rɪ'hɝs]","vt.排演",'vt.预演,排演,预先演习|||vi.参加彩排','The actors were ||rehearsing|| the play.','演员们一直在排练这出戏。','rehearsed the orchestra.','指挥交响乐团的排练'}

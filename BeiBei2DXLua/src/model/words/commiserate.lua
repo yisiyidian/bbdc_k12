@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["commiserate"]={"commiserate","[kə'mɪzəreɪt]","[kə'mɪzəret]","v.怜悯",'v.怜悯,同情','I commiserate with you on the loss of your mother.','你母亲逝世，我特向你慰问。','I commiserated with her on the loss of her job.','她失去了工作，我很同情她。'}

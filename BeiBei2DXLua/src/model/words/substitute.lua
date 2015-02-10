@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["substitute"]={"substitute","['sʌbstɪtjuːt]","['sʌbstɪtut]","n.代替者",'n.代替者,代用品|||v.代替|||vi.(for)代替|||vt.用...代替,代以','The coach substituted Smith for Jones.','教练让史密斯上场，换下了琼斯。','Water is not a proper substitute for wine.','水不是酒的适当代用品。'}

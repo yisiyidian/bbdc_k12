@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spotless"]={"spotless","['spɒtlɪs]","['spɑtləs]","adj.无脏污的",'adj.无脏污的,无缺点的,无可挑剔的','She keeps a spotless reputation.','她保持着清白的名声。','He keeps his house spotless.','他把家收拾得很整洁。'}

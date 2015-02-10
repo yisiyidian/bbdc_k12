@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outwards"]={"outwards","['aʊtwədz]","['aʊtwɚdz]","adv.向外",'adv.向外，在外，外表上|||=outward','His foot struck against a piece of stone and he fell outwards from the roof.','他脚碰在一块石头上，从楼顶跌到外面去了。','Does the window open inwards or outwards?','这窗户是朝里开的还是朝外开的?'}

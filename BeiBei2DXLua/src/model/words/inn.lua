@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inn"]={"inn","[ɪn]","[ɪn]","n.客栈",'n.客栈,小旅店','Tarry a while at this charming country inn.','在这个可爱的乡村小酒馆里呆一会儿吧.','An inn built around a large court for accommodating caravans at night in the Near or Far East.','客店，旅舍近东或远东地区为旅行队提供夜间住宿场所的小旅店，常环绕大院修建'}

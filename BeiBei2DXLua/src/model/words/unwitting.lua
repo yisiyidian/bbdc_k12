@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unwitting"]={"unwitting","[ʌn'wɪtɪŋ]","[ʌn'wɪtɪŋ]","adj.不知情的",'adj.不知情的,无意识的,不知不觉的','We\'re unwitting victims of the system.','我们都是该系统的不知情的受害者。','She was the unwitting tool of the swindlers.','她不知不觉地被这些诈骗犯所利用，成了他们的工具。'}

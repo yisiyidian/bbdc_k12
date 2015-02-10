@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["permutation"]={"permutation","[pɜːmjʊ'teɪʃ(ə)n]","['pɝmjʊ'teʃən]","n.交换",'n.交换,排列','permutation and combination','排列组合','The key is a permutation of the alphabet.','密钥是字母表的排列'}

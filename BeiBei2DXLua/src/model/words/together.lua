@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["together"]={"together","[tə'geðə]","[tə'ɡɛðɚ]","adv.一起",'adv.一起，共同，相结合，同时地，协调地|||adj.头脑清楚的，镇定的','We gather together.','我们聚在一起','All my troubles seem to come together.','我的各种问题似乎同时出现了'}

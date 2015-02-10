@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["distribute"]={"distribute","[dɪ'strɪbjuːt; 'dɪstrɪbjuːt]","[dɪ'strɪbjut]","vt.&vi.分布",'vt.&vi.分配,散布,分布','Some types of plants are widely distributed.','有些植物分布得很广。','The books in the library were distributed according to subjects.','图书馆里的藏书按科目分类。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["powder"]={"powder","['paʊdə]","['paʊdɚ]","n.粉",'n.粉,粉末,细雪,火药|||vt.洒粉于,使变成粉,重击|||vi.变成粉,涂粉','Agitate the mixture to dissolve the powder.','搅动混合物而使粉末溶化.','How well do you think this washing powder stacks up against your usual brand?','这种洗衣粉跟你常用的那种比怎麽样?'}

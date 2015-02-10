@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sanitize"]={"sanitize","['sænɪtaɪz]","[ 'sænitaiz ]","vt.采取卫生措施使其安全",'vt.采取卫生措施使其安全,消毒,使无害','sanitized the language in adapting the novel for television.','把小说改编成电视时语言的净化','They\'ve sanitized my report on army atrocities.','他们删除了我那篇报道中记述军队暴行的内容.'}

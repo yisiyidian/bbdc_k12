@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["creature"]={"creature","['kriːtʃə]","['kritʃɚ]","n.生物",'n.生物,动物,人','Man is the only creature that is gifted with speech.','人类是唯一被赋予语言能力的动物。','This creature lives in the depth of the ocean.','这种生物生活在海洋深处。'}

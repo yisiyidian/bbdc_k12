@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["theory"]={"theory","['θɪərɪ]","['θiəri]","n.理论",'n.理论,原则,看法,推测','Not everyone can understand Einstein\'s ||Theory|| of Relativity.','不是每个人都能读懂爱因斯坦的相对论的。','In this way they can better apply theory to practice.','这样他们就能更好地把理论运用到实践中去。'}

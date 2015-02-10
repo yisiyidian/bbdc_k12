@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sharpen"]={"sharpen","['ʃɑːp(ə)n]","['ʃɑrpən]","v.使...尖锐",'v.使...尖锐,变为锐利,加剧（苦痛等)','My pencil is blunt, could you lend me a knife to sharpen it?','我的铅笔钝了，你能借我把刀子削一削吗？','The soldiers sharpened up their knives.','战士们把刀磨得锋利。'}

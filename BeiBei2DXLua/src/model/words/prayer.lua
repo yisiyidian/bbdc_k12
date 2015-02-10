@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prayer"]={"prayer","[preə]","[prɛr]","n.祈祷",'n.祈祷,祷告,祷文','She had a wakeful night spent in prayer.','她整夜祈祷。','The congregation bowed their heads in prayer.','会众在一起低头祷告.'}

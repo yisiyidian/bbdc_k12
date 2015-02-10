@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bride"]={"bride","[braɪd]","[braɪd]","n.新娘",'n.新娘','Let\'s drink (a toast) to the bride and bridegroom!','让我们举杯向新娘和新郎祝贺!','Good wishes showered (down) on the bride and bridegroom.','大家纷纷向新娘新郎祝福.'}

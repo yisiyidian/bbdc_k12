@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["throughout"]={"throughout","[θruː'aʊt]","[θrʊ'aʊt]","adv.到处",'adv.到处,自始至终|||prep.遍及,贯穿','It snowed throughout the night.','雪整整下了一夜。','The disease spread throughout the country.','这种疾病蔓延全国。'}

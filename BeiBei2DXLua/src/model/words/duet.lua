@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["duet"]={"duet","[djuː'et]","[dʊ'ɛt]","n.二重奏",'n.二重奏，二重唱|||vi.演奏二重奏或二重唱','The principal part in a duet or ensemble composition.','第一声部合（重）奏或合（重）唱中最主要的部分','I sing with someone in duet.','我和某人唱二重唱。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["magical"]={"magical","['mædʒɪk(ə)l]","['mædʒɪkl]","adj.神奇的",'adj.魔术的，有魔力的，神奇的','Giving up smoking had a magical effect on his stamina.','戒烟神奇地增强了他的体力.','I used to believe my mother had magical powers.','我以前一直相信我母亲有奇妙的魔力.'}

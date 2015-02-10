@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["handout"]={"handout","['hændaʊt]","['hænd'aʊt]","n.散发材料(免费发给的新闻通报)",'n.散发材料(免费发给的新闻通报)','Please read the handout carefully.','请仔细读这份讲义.','The phrase means to beg, to ask for a handout.','这个说法的意思是乞求或请求别人施舍.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["medal"]={"medal","['med(ə)l]","['mɛdl]","n.奖章",'n.奖章,勋章,纪念章|||vi.获得奖章','I have a monumental brass medal.','我有一枚有纪念意义的铜牌。','He got a medal for bravery.','他因勇敢而获得一枚奖章.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["medium"]={"medium","['miːdɪəm]","['midɪəm]","n.媒体",'n.媒体,方法,媒介|||adj.适中的,中等的','He prefers a happy medium in life.','他在生活中甘居中游。','My gloves are size medium.','我的手套尺寸是中号。'}

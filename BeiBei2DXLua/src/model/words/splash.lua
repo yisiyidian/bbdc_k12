@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["splash"]={"splash","[splæʃ]","[splæʃ]","n.飞溅的水",'n.飞溅的水,污点,卖弄|||v.溅湿,溅开','The story was splashed across the front page of the newspaper.','这篇报道刊登在报纸头版显著位置。','She splashed out on a new pair of shoes.','她心血来潮买了一双新鞋。'}

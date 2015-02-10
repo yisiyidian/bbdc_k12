@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["formative"]={"formative","['fɔːmətɪv]","['fɔrmətɪv]","adj.形成的",'adj.形成的,造形的，影响发展的|||n.造字要素','There are some experiences in one\'s formative years that are unforgettable.','每个人的成长岁月中都有难忘的事。','Parents have the greatest formative effect on their children’s behaviour.','父母对孩子的行为有最深远的影响。'}

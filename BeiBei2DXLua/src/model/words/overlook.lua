@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overlook"]={"overlook","[əʊvə'lʊk]","[,ovɚ'lʊk]","v.俯看",'v.俯看,远眺,没注意到','It was a slight overlook on my part.','这是我的小疏忽。','My room overlooked the garden.','我的房间俯瞰花园。'}

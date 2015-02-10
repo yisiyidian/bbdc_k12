@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["substitution"]={"substitution","[sʌbstɪ'tjuːʃn]","[,sʌbstə'tjʊʃən]","n.代理",'n.代理,替换,交换','Two substitutions (ie of players) were made during the match.','在比赛中换了两次人.','a simple substitution cipher with random key','一个有随机密钥的简单代换密码'}

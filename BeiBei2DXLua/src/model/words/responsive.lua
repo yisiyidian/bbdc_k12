@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["responsive"]={"responsive","[rɪ'spɒnsɪv]","[rɪ'spɑnsɪv]","adj.回答的",'adj.回答的,应答的,易感应的','The company is highly responsive to changes in demand.','该公司对需求的变化反应特别迅速.','The audience weren\'t very responsive and the jokes fell a bit flat.','观众反应平平,那些笑话没有太大效果.'}

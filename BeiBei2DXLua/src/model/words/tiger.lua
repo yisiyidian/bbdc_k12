@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tiger"]={"tiger","['taɪgə]","['taɪɡɚ]","n.老虎",'n.老虎','She fought like a tiger to get what she wanted.','她竭力争取自己想要的东西。','We saw the tiger pouncing on the goat.','我们看见老虎向那只山羊扑过去。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["multifarious"]={"multifarious","[,mʌltɪ'feərɪəs]","[,mʌltɪ'fɛrɪəs]","adj.多种的",'adj.多种的,各式各样的','They can ill afford the multifarious expenses.','他们无力承担这些五花八门的开支。','Spain is a composite of multifarious traditions and people.','西班牙是多种传统和多个民族的合成体。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deaf"]={"deaf","[def]","[dɛf]","adj.聋的",'adj.聋的','He\'s a deaf mute and cannot tell anyone secret.','他是个聋哑人，不会把他们的秘密告诉任何人。','I\'m a little deaf, please articulate your words carefully.','我有些耳聋，请把话仔细地说清楚。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imposture"]={"imposture","[ɪm'pɒstʃə]","[ɪm'pɑstʃɚ]","n.冒名顶替",'n.冒名顶替,欺骗','He was accused of imposture.','他被控冒名顶替。','Soiled by her imposture she remains silent.','她背着冒名顶替者的黑锅却一直沉默。'}

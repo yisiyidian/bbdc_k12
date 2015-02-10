@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irreverence"]={"irreverence","[ɪ'rev(ə)r(ə)ns]","[ɪ'rɛvərəns]","n.不敬",'n.不敬,非礼,不敬的行为','This versatile attitude mixes fun and irreverence with edgy style.','这种多变的风格包含了乐趣和桀骜的前卫风格.','||Irreverence||, for example, used at the right time can lighten a mood.','例如, 在合适的时候表现出叛逆行为可以缓和情绪的波动.'}

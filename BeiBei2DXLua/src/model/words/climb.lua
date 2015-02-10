@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["climb"]={"climb","[klaɪm]","[klaɪm]","vt.&vi.攀登",'vt.&vi.攀登,上升,爬|||n.攀登(处)','The road climbs steeply for several miles.','这条路有几英里向上倾斜得很陡。','We go to climb mountains every Sunday.','每个星期天我们都去爬山。'}

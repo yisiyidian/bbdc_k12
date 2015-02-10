@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["acclimate"]={"acclimate","['æklɪmeɪt; ə'klaɪmət]","['ækləmet]","v.使习惯于新环境",'v.使习惯于新环境','How much time does she need to acclimate?','她需要多久才能适应？','I help them acclimate to living in the U.S.','我帮助他们适应在美国的生活。'}

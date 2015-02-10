@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incapacitate"]={"incapacitate","[,ɪnkə'pæsɪteɪt]","[,ɪnkə'pæsɪtet]","v.使不能",'v.使不能,使不适于|||vt.使不能','Poor eyesight will incapacitate you for a job in the library.','视力不佳者无法在图书馆工作。','By this time my father was totally incapacitated by his illness.','那时候我父亲已经病得完全不能自理了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pocketbook"]={"pocketbook","['pɒkɪtbʊk]","[ 'pɔkitbuk ]","n.钱包",'n.钱包；笔记本；经济来源；皮夹','Poor service affected the waiters\'pocketbook.','差劲的服务影响了侍者的收入.','She had several large bills in her pocketbook.','她钱袋里有几张大面额钞票.'}

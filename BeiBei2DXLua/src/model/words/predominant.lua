@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["predominant"]={"predominant","[prɪ'dɒmɪnənt]","[prɪ'dɑmənənt]","adj.优越的",'adj.优越的,占主导地位的','Which country is the predominant member of the alliance?','哪个国家在联盟中居于支配地位？','Her predominant characteristic is honesty.','她最为突出的特点是诚实。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vicissitude"]={"vicissitude","[vɪ'sɪsɪtjuːd; vaɪ-]","[vɪ'sɪsɪtud]","n.变化",'n.变化;变迁;兴败;盛衰;[古][诗]代谢;交替,沉浮','So great a vicissitude in his life could not at once be received as real.','他的生活中发生了如此巨大的变迁，他一时还无法相信是真的。','It reflects the vicissitude of society.','它反映了社会的变迁兴衰。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["charade"]={"charade","[ʃə'rɑːd]","[ʃə'red]","n.看手势猜字谜游戏",'n.看手势猜字谜游戏，易识破的伪装','went through the charade of a public apology.','做虚伪的公开道歉','I wondered why he had gone through the elaborate charade.','我想知道为什么他做出了那么夸张的假样子。'}

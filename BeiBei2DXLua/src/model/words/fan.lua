@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fan"]={"fan","[fæn]","[fæn]","n.风扇",'n.风扇,扇形物,狂热者|||vt.风选,煽,吹,煽动,向扇子一样展开|||vi.像扇子一样行动,鱼贯而出','The troops fanned out as they advanced.','部队向前推进时呈扇形散开','The soldiers fanned out across the hillside in their search for the man.','士兵们在山腰上成扇形散开，搜索那个男人。'}

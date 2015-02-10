@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insufficient"]={"insufficient","[ɪnsə'fɪʃ(ə)nt]","[,ɪnsə'fɪʃnt]","adj.不足的",'adj.不足的','Our wood supply proved insufficient.','我们的木材供应证明是不够的。','His children were dwarfed by insufficient food.','他的儿女因营养不良而发育不全。'}

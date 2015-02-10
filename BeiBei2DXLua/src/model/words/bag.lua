@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bag"]={"bag","[bæg]","[bæɡ]","n.包",'n.包,猎获物|||vt.鼓起,把...装入袋中,猎杀,占有|||vi.鼓起,宽松地下垂或悬吊','The cat had not been fed for weeks and was just a bag of bones.','那只猫已有几个星期没喂食了，简直成了皮包骨。','Her re-election is in the bag.','她在改选中已稳操胜券。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["salmon"]={"salmon","['sæmən]","['sæmən]","adj.橙红色的",'adj.橙红色的|||n.鲑,大马哈鱼','Poachers have been netting salmon to supply the black market.','盗猎者一直在捕捞大麻哈鱼到黑市上去卖。','Fresh salmon is a bargain at the supermarket this week.','这周超市的新鲜鲑鱼特价销售。'}

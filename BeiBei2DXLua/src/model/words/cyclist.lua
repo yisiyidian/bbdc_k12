@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cyclist"]={"cyclist","['saɪklɪst]","['saɪklɪst]","n.骑自行车的人",'n.骑自行车的人','Pot-holes can be lethal for the unwary cyclist.','路上的坑坑洼洼骑车的人一不小心就有致命危险.','Two pedestrians and a cyclist were injured when the car skidded.','汽车打滑时伤了两个行人和一个骑自行车的.'}

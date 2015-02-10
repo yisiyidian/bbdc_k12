@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overcome"]={"overcome","[əʊvə'kʌm]","[,ovɚ'kʌm]","vt.客服",'vt.战胜,克服,(感情等)压倒,使受不了|||vi.获胜,赢','There will be no difficulty in the world that they cannot overcome.','世界上任何困难他们都可以克服。','After she\'d overcome her initial shyness, she became very friendly.','她克服了开始时的羞涩之后，就变得非常友善。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perseverance"]={"perseverance","[pɜːsɪ'vɪər(ə)ns]","[,pɝsə'vɪrəns]","n.毅力",'n.毅力,忍耐,不屈不挠','You need perseverance to win in politics and I doubt if he can go the distance.','在政治上, 需要矢志不移才能取胜, 我怀疑他能否坚持到底.','He became a champion at last in virtue of his perseverance.','凭着坚韧不拔的精神, 他终于成为冠军。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inappropriate"]={"inappropriate","[ɪnə'prəʊprɪət]","['ɪnə'proprɪət]","adj.不适当的",'adj.不适当的,不相称的','It is inappropriate to draw such a parallel.','这种比拟是不恰当的.','This treatment was singularly inappropriate in her case.','就她的情况来说这种治疗方法极不适合.'}

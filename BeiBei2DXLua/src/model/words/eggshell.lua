@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eggshell"]={"eggshell","['egʃel]","['ɛɡʃɛl]","n.蛋壳",'n.蛋壳','The eggshells cracked, and the turkey babies fluttered and cheeped and snuggled against me.','蛋壳裂开了，初生的火鸡拍动着翅膀，唧唧的叫着，依偎着我。','Ghosts crowd the child\'s fragile eggshell mind.','鬼魂们挤进小孩蛋壳般易碎的心灵之中。'}

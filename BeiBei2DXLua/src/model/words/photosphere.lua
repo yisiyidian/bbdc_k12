@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["photosphere"]={"photosphere","['fəʊtəsfɪə]","['fotə,sfɪr]","n.光球",'n.光球','The photosphere has a granular structure.','光球还有颗粒结构。','These particles came from the sun\'s visible surface, called the photosphere.','这些粒子来自于太阳可见的表面──「光球层」'}

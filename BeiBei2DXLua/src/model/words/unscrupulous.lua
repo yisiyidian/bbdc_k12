@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unscrupulous"]={"unscrupulous","[ʌn'skruːpjʊləs]","[ʌn'skrupjələs]","adj.肆无忌惮的",'adj.肆无忌惮的,无天理的','Any system of taxation lends itself to manipulation by clever or unscrupulous men.','任何税收制度都有可能被那些狡猾诡诈的人或无耻之徒钻空子。','He once did me such an unscrupulous shot in the eye.','他曾经如此肆无忌惮地恶意中伤过我。'}

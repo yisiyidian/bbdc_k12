@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["freshen"]={"freshen","['freʃ(ə)n]","['frɛʃən]","v.（使）变新鲜",'v.（使）变新鲜，（使）减少咸味,(风)变强','I have to buy some white emulsion paint to freshen the walls.','我不得不买些白色的乳状漆来粉刷墙壁。','I\'ll just go and freshen (myself) up before the interview.','我这就去梳洗打扮一番再去会面.'}

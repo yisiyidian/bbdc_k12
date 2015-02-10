@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gaffe"]={"gaffe","[gæf]","[ ɡæf ]","n.过失",'n.过失,失态,出丑','He made an embarrassing gaffe at the convention last weekend.','他在上周末的会议上出了洋相，狼狈不堪。','He would have to make amends for his monumental gaffe of earlier today.','他一定得对今天早上极端失礼的行为进行补救。'}

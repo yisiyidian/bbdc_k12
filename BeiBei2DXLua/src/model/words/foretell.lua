@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["foretell"]={"foretell","[fɔː'tel]","[fɔr'tɛl]","vt.预言",'vt.预言,预告,预示','She claims to be psychic and to be able to foretell the future.','她自称有特异功能, 能预知未来.','Since I cannot foretell things like a prophet, I cannot help taking a small loss.','我又不能料事如神，总不免要吃点小亏。'}

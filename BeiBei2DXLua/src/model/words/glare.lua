@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glare"]={"glare","[gleə]","[ɡlɛr]","n.闪耀光",'n.闪耀光,刺眼|||v.发眩光,瞪视','The rabbit sat without moving, fascinated by the glare of our headlights.','我们的车的前灯把兔子照得蹲在那里一动也不动.','The windows were tinted to reduce the glare.','窗户上涂上了浅色以减少强光。'}

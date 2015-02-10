@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inject"]={"inject","[ɪn'dʒekt]","[ɪn'dʒɛkt]","v.注射",'v.注射','The mosquito will suck our blood. What\'s even worse, it will inject poison into our bodies.','蚊子会吸我们的血。更糟的是，它会把毒注入我们的体内。','||Injecting|| animals is all in a day\'s work for a vet.','给动物注射是兽医的日常工作.'}

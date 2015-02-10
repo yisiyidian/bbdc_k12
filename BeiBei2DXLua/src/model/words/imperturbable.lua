@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imperturbable"]={"imperturbable","[,ɪmpə'tɜːbəb(ə)l]","[ ,impə'tə:bəbl ]","adj.沉着的",'adj.沉着的,泰然自若的,镇静的','His steady, imperturbable nature reassured me.','他沉着镇定的性格让我很放心。','Edward was a model of good temper and his equanimity imperturbable.','爱德华是个典型的好性子，他总是沉着镇定。'}

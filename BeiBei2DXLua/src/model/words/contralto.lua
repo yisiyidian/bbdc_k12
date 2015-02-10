@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["contralto"]={"contralto","[kən'træltəʊ]","[kən'trælto]","n.最低的女低音",'n.最低的女低音','She sings contralto.','她唱女低音.','A gifted young contralto.','有天赋的年轻女低音歌手.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["refurbish"]={"refurbish","[riː'fɜːbɪʃ]","[,ri'fɝbɪʃ]","vt.再磨光",'vt.再磨光,刷新,擦亮','The flat will be refurbished for the new tenants.','这套房间将重新粉刷以接纳新房客。','Smith refurbished the blade after forging.','铁匠在锻造后将刀刃重新抛光。'}

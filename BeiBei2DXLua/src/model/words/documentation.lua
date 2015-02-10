@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["documentation"]={"documentation","[,dɒkjʊmen'teɪʃ(ə)n]","['dɑkjəmɛn'teʃən]","n.文件",'n.文件','Concentrate your order with us save you money on postage, cable, freight, documentation, etc.','如集中向我公司采购，能节省您在邮递、电报、运输以及提供单证等方面的各项费用。','The shipment arrived without any documentation.','运抵的货物无任何凭证。'}

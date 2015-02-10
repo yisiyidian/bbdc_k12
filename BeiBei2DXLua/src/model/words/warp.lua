@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["warp"]={"warp","[wɔːp]","[wɔrp]","n.弯",'n.弯,歪曲,乖僻|||vt.弄歪,翘曲','Histories are often warped by biases.','历史常为偏见所曲解。','There is a warp in the board.','这块木板有点弯曲。'}

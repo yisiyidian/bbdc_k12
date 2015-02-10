@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["roof"]={"roof","[ruːf]","[ruf]","n.屋顶",'n.屋顶,顶盖|||vt.给...覆以屋顶,覆盖','The roof of the tunnel was supported by wooden props.','坑道顶用木柱支撑。','The wind was whispering in the roof.','屋顶上风声飒飒。'}

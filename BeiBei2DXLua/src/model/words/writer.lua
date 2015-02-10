@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["writer"]={"writer","['raɪtə]","['raɪtɚ]","n.作者",'n.作者,作家','He cannot compare with (ie is not nearly as great as) Shakespeare as a writer of tragedies.','在悲剧写作方面他根本不能与莎士比亚相比.','Do you know who is the foremost writer in the English language?','你知道谁是最重要的英语作家吗？'}

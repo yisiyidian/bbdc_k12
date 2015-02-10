@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["caveat"]={"caveat","['kævɪæt; 'keɪ-]","['kævɪæt; 'ke-]","n.防止误解的说明",'n.防止误解的说明,警告','The spokesperson caveated the statement with a reminder that certain facts were still unknown.','发言人对陈述做了限定，提醒大家某些事实尚未知晓','I recommend the deal, but with certain caveats.','我介绍这笔交易, 但有几项要提请注意.'}

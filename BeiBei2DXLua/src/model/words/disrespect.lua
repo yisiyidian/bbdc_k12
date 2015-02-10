@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disrespect"]={"disrespect","[dɪsrɪ'spekt]","[,dɪsrɪ'spɛkt]","n.不敬",'n.不敬,无礼|||vt.不尊敬','No disrespect (to you), but I think you are wrong.','我（对你）没有别的意思, 只不过认为你错了.','disrespected her elders; disrespected the law.','她不尊敬长者；蔑视法律'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lactic"]={"lactic","['læktɪk]","['læktɪk]","adj.乳的",'adj.乳的,乳汁的,由乳汁取得的','Yogurt contains a higher percentage of lactic acid than other fermented milks.','酸奶中的乳酸含量高于其他类的发酵奶。','||Lactic|| is of or relating to or obtained from milk( especially sour milk or whey)','adj. 乳的,乳汁的,由乳汁取得的'}

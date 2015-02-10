@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impurity"]={"impurity","[ɪm'pjʊərɪtɪ]","[ɪm'pjʊrəti]","n.不纯",'n.不纯,杂质','The oxygen react vigorously with the impurity in the iron.','氧气与铁中的杂质发生剧烈的化学反应。','Workers are removing ||impurities|| from silver.','工人们正去除银中的杂质。'}

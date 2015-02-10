@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["typology"]={"typology","[taɪ'pɒlədʒɪ]","[taɪ'pɑlədʒi]","n.类型学",'n.类型学,预示论,标示说','typology of innovation','“创新”的分类','What is typology？','什么是类型学？'}

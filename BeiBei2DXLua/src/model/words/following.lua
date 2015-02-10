@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["following"]={"following","['fɒləʊɪŋ]","['fɑloɪŋ]","adj.下列的",'n.下列各项,部下,党羽|||adj.下列的,其次的|||prep.在（某事）以后','The ship was due to sail the following morning.','这艘船定于第二天启航。','Her books aren\'t bestsellers, but they have a certain cult following.','她的书算不上畅销书，但有一定的崇拜者。'}

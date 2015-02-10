@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imbibe"]={"imbibe","[ɪm'baɪb]","[ɪm'baɪb]","v.饮",'v.饮,吸取,吸入','I always imbibe fresh air in the woods.','我经常在树林里呼吸新鲜空气。','Plants imbibe nourishment usually through their leaves and roots.','植物通常经过叶和根吸收养分。'}

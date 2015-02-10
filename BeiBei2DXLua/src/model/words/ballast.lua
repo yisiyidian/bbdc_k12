@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ballast"]={"ballast","['bæləst]","['bæləst]","n.压载物",'n.压载物,压舱物，（铺铁路路基时所用的）石块，镇流器，稳定力量|||vt.给...装压舱物（压载物），使稳定','He has got no ballast whatever.','他这个人一点也不沉着。','We can trust that company; the partners are in ballast all right.','我们可以信任那家公司，其合伙人都非常可靠。'}

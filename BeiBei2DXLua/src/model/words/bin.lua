@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bin"]={"bin","[bɪn]","[bɪn]","n.箱柜",'n.箱柜|||vt.放入箱内|||[计算机]DOS文件名:二进制目标文件','Please put your litter in the bin provided.','请你把废物扔到预备好的垃圾箱里.','Please put all your sweet wrappers in the bin.','请把你们的糖纸都放进垃圾箱里去.'}

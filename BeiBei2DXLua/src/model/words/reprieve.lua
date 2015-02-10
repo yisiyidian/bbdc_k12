@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reprieve"]={"reprieve","[rɪ'priːv]","[rɪ'priv]","n.缓刑",'n.缓刑,缓刑令,暂减|||v.暂缓处刑,暂时得救','It looked as though the college would have to shut, but this week it was given a reprieve.','这所大学看起来要关闭了，但这周情况暂时有所缓解。','He was saved from the gallows by a lastminute reprieve.','最后一刻的缓刑令把他从绞架上解救了下来。'}

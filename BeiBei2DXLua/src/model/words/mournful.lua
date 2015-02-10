@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mournful"]={"mournful","['mɔːnfʊl; -f(ə)l]","['mɔrnfl]","adj.悲恸的",'adj.悲恸的,悲哀的,令人惋惜的','She sighed and looked mournful.','她叹了口气,显得很伤心.','He took a mournful view on human affairs.','他对人世持悲观的态度。'}

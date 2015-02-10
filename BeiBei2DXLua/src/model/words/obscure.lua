@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obscure"]={"obscure","[əb'skjʊə]","[əb'skjʊr]","adj.微暗的",'adj.微暗的,难解的,不著名的,[语音学]轻音的|||vt.使...阴暗,隐藏,使...含糊,成为含糊的元音|||n.暗淡,模糊','Her poetry is full of obscure literary allusions.','他的诗里用了很多晦涩的文学典故.','The reasons why he did it are obscure.','他做那事的理由还不清楚。'}

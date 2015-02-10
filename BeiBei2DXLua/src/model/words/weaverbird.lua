@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["weaverbird"]={"weaverbird","['wiːvəbɜːd]","['wivɚ,bɚd]","n.织巢鸟",'n.织巢鸟','The female knot-tying weaverbird will refuse to mate with a male who has built a shoddy nest.','会打结的雌织巢鸟不肯同造窝马马虎虎的雄鸟交配。','small Australian weaverbird with markings like a zebra\'s.','有类似斑马的条纹的澳大利亚小织巢鸟。'}

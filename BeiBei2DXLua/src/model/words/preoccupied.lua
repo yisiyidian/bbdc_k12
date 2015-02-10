@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["preoccupied"]={"preoccupied","[priː'ɒkjʊpaɪd]","[pri'ɑkjə'paɪd]","adj.全神贯注的",'adj.全神贯注的，出神的，先占的|||动词preoccupy的过去式和过去分词','Health worries preoccupied him for the whole holiday.','整个假期里他一直为健康状况而担忧.','Deep in thought and heedless of present circumstances or activities; preoccupied.','心不在焉的，茫然的陷入沉思且未注意到周围的情况或活动的；出神的'}

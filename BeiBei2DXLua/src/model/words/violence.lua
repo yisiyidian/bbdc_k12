@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["violence"]={"violence","['vaɪəl(ə)ns]","['vaɪələns]","n.暴力",'n.暴力,狂热','Quakers strongly oppose violence and war.','教友派信徒们强烈反对暴力和战争。','They incited the workers to violence.','他们煽动工人暴动。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slap"]={"slap","[slæp]","[slæp]","n.掴",'n.掴,侮辱,拍击声|||vt.拍击,侮辱,惩罚,申斥|||adv.正面地,直接地,突然地','He gave me a playful slap on the hand.','他闹着玩地打了一下我的手。','She tried to object, but the chairman slapped her down.','她想表示反对意见，但主席喝止住了她。'}

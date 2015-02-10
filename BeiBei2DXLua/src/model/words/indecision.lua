@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indecision"]={"indecision","[ɪndɪ'sɪʒ(ə)n]","['ɪndɪ'sɪʒən]","adj.犹豫",'adj.犹豫|||n.下不了决心,拿不定主意','to be resolute is to show neither fear nor indecision','要坚决果断就不能表露出害怕或者犹豫。','She was in an agony of indecision.','她陷於犹豫不决的痛苦之中.'}

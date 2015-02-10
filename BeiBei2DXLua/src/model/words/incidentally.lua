@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incidentally"]={"incidentally","[ɪnsɪ'dent(ə)lɪ]","[,ɪnsɪ'dɛntli]","adv.偶然地",'adv.附带地,偶然地,顺便地','||Incidentally||, John\'s coming home next week.','附带说一下，约翰下星期要回家。','||Incidentally||, if you want that book, I\'ll bring it next time.','顺便说一句，如果你要那本书，我下次带给你。'}

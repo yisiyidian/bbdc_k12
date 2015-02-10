@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indicate"]={"indicate","['ɪndɪkeɪt]","['ɪndɪket]","v.表明",'v.指明,表明,显示,象征,指示','Research indicates that men find it easier to give up smoking than women.','研究表明，男人比女人更容易戒烟。','He indicated his willingness with a nod of his head.','他点头表示愿意。'}

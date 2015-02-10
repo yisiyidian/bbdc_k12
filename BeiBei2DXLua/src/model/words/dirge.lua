@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dirge"]={"dirge","[dɜːdʒ]","[dɝdʒ]","n.挽歌",'n.挽歌,哀乐，庄重悲哀的乐曲','The stranger, after listening for a moment, joined in the mournful dirge.','听了一会儿后这个陌生人也跟着唱起了悲哀的挽歌。','His songs are full of dirge.','他的歌充满了忧伤。'}

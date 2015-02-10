@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["efficiency"]={"efficiency","[ɪ'fɪʃ(ə)nsɪ]","[ɪ'fɪʃənsi]","n.效率",'n.效率；效能；功效','Such action can be justified on the grounds of greater efficiency.','以提高功效为依据可以证明采取这种措施是正确的。','We were most impressed by your efficiency.','你的工作效率很高, 我们极为钦佩.'}

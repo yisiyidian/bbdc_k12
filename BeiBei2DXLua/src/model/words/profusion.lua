@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["profusion"]={"profusion","[prə'fjuːʒ(ə)n]","[prə'fjuʒn]","n.丰多",'n.丰多,大量，浪费','The weeds grew in wanton profusion.','遍地野草丛生。','Hundreds of flowers are blooming in profusion.','百花怒放。'}

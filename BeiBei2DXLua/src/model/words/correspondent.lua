@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["correspondent"]={"correspondent","[kɒrɪ'spɒnd(ə)nt]","[,kɔrə'spɑndənt]","n.通讯记者",'n.通讯记者,通信者|||adj.与...一致的,相应的','I\'m handing you over now to our home affairs correspondent.','现在请听本台记者报道的国内新闻。','Your correspondent had only touched upon the fringe of the matter.','你的报导只谈到了问题的边缘。'}

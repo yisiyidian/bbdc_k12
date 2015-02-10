@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["closely"]={"closely","['kləʊslɪ]","['klosli]","adv.紧密地",'adv.紧密地，接近地，严密地','Taste and smell are closely connected.','味觉与嗅觉是密切相关的.','She regarded him closely, intently, curiously, etc.','她紧紧地、 目不转睛地、 好奇地...注视著他.'}

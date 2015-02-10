@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["constitute"]={"constitute","['kɒnstɪtjuːt]","['kɑnstətut]","vt.构成",'vt.构成,建立,任命','The defeat constitutes a major set-back for our diplomacy.','这次失败是我们外交上的重大挫折。','Laws are constituted to protect individual rights and properties.','法律是为保卫人民的权利和财产而制定的。'}

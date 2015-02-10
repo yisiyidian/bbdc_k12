@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prior"]={"prior","['praɪə]","['praɪɚ]","adj.在先的",'adj.更重要的,较早的,在先的|||adv.居先|||n.小修道院院长;大修道院副院长','I appreciate that you may have prior commitments.','我体谅你可能事先已另有承诺.','It happened prior to my arrival.','这发生在我到达之前。'}

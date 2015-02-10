@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["careless"]={"careless","['keələs]","['kɛrləs]","adj.粗心的",'adj.粗心的,疏忽的|||n.不关心的,粗心的[反]attentive','||Careless|| driving kills!','开车大意危及生命!','The security of the whole operation has been jeopardized by one careless person.','整个作业的安全让一个粗心大意的人给破坏了.'}
