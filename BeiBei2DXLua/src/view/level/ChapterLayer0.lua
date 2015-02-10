@@ -14,6 +14,8 @@ local Chapter0ResTable = {
     back3_1 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940)},
     back3_2 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940)},
     rest = {'res/image/chapter/chapter0/rest.png',cc.p(0,1),cc.p(200,2630)},
+    leftIsland = {'image/chapter/leftIsland.png',cc.p(0,1),cc.p(200,2630)},
+    rightIsland = {'image/chapter/rightIsland.png',cc.p(0,1),cc.p(500,2330)},
     island0Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(527, 2662),"island","level0"}
     ,island1Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(533, 2344),"island","level1"}
     ,island2Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(333, 2071),"island","level2"}
@@ -82,7 +84,8 @@ function ChapterLayer0:loadResource()
     end
     
     self:createObjectForResource(Chapter0ResTable['rest'])
-    
+--    self:createObjectForResource(Chapter0ResTable['leftIsland'])
+--    self:createObjectForResource(Chapter0ResTable['rightIsland'])
     -- plot boat
     local boat1 = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
     boat1:addAnimation(0, 'animation', true)
@@ -129,7 +132,7 @@ function ChapterLayer0:loadResource()
     self:addChild(tree2, 141)
     local tree3 = sp.SkeletonAnimation:create('spine/chapterlevel/3xuanxiaoguanyizishu.json', 'spine/chapterlevel/3xuanxiaoguanyizishu.atlas',1)
     tree3:addAnimation(0, 'animation', true)
-    tree3:setPosition(80,2530)
+    tree3:setPosition(70,2580)
     self:addChild(tree3, 140)
     
     -- wave action
