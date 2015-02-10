@@ -111,12 +111,16 @@ function PersonalInfo:ctor()
                 title:setString(titleArray[5 - i])
                 if curPage == 3 then
                     self:PLVM()
+                    AnalyticsDataCenterPage('PLVM')
                 elseif curPage == 2 then
                     self:PLVI()
+                    AnalyticsDataCenterPage('PLVI')
                 elseif curPage == 1 then
                     self:login()
+                    AnalyticsDataCenterPage('LOGIN')
                 elseif curPage == 0 then
                     self:XXTJ()
+                    AnalyticsDataCenterPage('XXTJ')
                 end
             end
             
@@ -174,6 +178,7 @@ function PersonalInfo:ctor()
                 addTop()
             end
             if eventType == ccui.TouchEventType.ended then
+                AnalyticsButtonToShare()
                 local ShareDataInfo = require('view.share.ShareDataInfo')
                 local shareDataInfo = ShareDataInfo.create(target[i],i)
                 self:addChild(shareDataInfo,20)
