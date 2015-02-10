@@ -65,7 +65,15 @@ function ChapterLayerBase:createObjectForResource(t)
 --            object:setTag(islandTag)
 --            islandTag=islandTag + 1
 --        end
-        self:addChild(object,50)
+        if t[4] ~= nil then
+            if t[4] == "back" then
+                self:addChild(object,40)
+            elseif t[4] == "add" then
+                self:addChild(object,45)
+            end
+        else
+            self:addChild(object,50)
+        end
     end
     return object
 end
@@ -151,7 +159,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     -- TODO add review boss position
     -- TODO check level state
 --    local levelState = math.random(0, 3)
---    levelState = 2
+--    levelState = 5
     if levelState == 0 then
         local deco = cc.Sprite:create('image/chapter/elements/tubiao_daizi_tanchu_xiaoguan.png')
         deco:setPosition(levelPosition.x,levelPosition.y+20)
@@ -239,7 +247,7 @@ function ChapterLayerBase:addPopup(levelIndex)
             local active = info[3] + 0
             local currentTaskID = info[4] + 1
             local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
-            print('#####sendr:name:'..sender:getName()..':'..currentProgress)
+--            print('#####sendr:name:'..sender:getName()..':'..currentProgress)
             s_SCENE:removeAllPopups()
 --            print('######## state'..state..',active'..active)
             if state >= 4 and bossID ~= currentTaskID then
