@@ -558,7 +558,7 @@ function ChapterLayer:addBackToHome()
 
 
     -- return to homepage button
-    local homeButton = ccui.Button:create("image/chapter/chapter0/backHome.png","image/chapter_level/button_home_book.png","")
+    local homeButton = ccui.Button:create("image/chapter/chapter0/backHome.png","image/chapter/chapter0/backHome.png","")
     homeButton:addTouchEventListener(click_home)
     homeButton:ignoreAnchorPointForPosition(false)
     homeButton:setAnchorPoint(0,1)
