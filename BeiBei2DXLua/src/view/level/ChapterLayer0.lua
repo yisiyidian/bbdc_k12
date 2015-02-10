@@ -13,9 +13,9 @@ local Chapter0ResTable = {
     back2 = {'res/image/chapter/chapter0/2.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-970),"back"},
     back3_1 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940),"back"},
     back3_2 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940),"back"},
-    rest = {'res/image/chapter/chapter0/rest.png',cc.p(0,1),cc.p(200,2630),"add"},
+    rest = {'res/image/chapter/chapter0/rest.png',cc.p(0,1),cc.p(200,2630)},
     leftIsland = {'image/chapter/leftIsland.png',cc.p(0,1),cc.p(0,2900),"add"},
-    rightIsland = {'image/chapter/rightIsland.png',cc.p(1,1),cc.p(s_chapter_layer_width,2130)},
+    rightIsland = {'image/chapter/rightIsland.png',cc.p(1,1),cc.p(s_DESIGN_WIDTH,2030),"add"},
     island0Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(527, 2662),"island","level0"}
     ,island1Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(533, 2344),"island","level1"}
     ,island2Table  = {"image/levelLayer/island.png",cc.p(0,1),cc.p(333, 2071),"island","level2"}
@@ -84,7 +84,7 @@ function ChapterLayer0:loadResource()
     end
     
     self:createObjectForResource(Chapter0ResTable['rest'])
---    self:createObjectForResource(Chapter0ResTable['leftIsland'])
+    self:createObjectForResource(Chapter0ResTable['leftIsland'])
 --    self:createObjectForResource(Chapter0ResTable['rightIsland'])
     -- plot boat
     local boat1 = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
