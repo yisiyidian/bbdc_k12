@@ -21,8 +21,6 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     AnalyticsSummaryBoss()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()
-    
-    
     math.randomseed(os.time())
     --add coconut
     --layer.levelConfig = levelConfig
@@ -37,7 +35,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     layer.isPaused = false
     layer.isHinting = false
     layer.wordStack = {}
-    layer.wordList = wordList
+    --layer.wordList = wordList
     -- slide coco
     local slideCoco = {}
     slideCoco[1] = s_sound_slideCoconut
@@ -182,7 +180,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         local win = cc.CallFunc:create(function()
                             
                             --layer.boss:removeFromParent()
-                            layer:win(chapter,entrance)
+                            layer:win(chapter,entrance,wordList)
                         end,{})
                         layer.boss:runAction(cc.Sequence:create(cc.DelayTime:create(delaytime),fly,win))
                         
@@ -491,7 +489,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             
         elseif loadingState == 4 then
             loadingState = 5
-            layer:initBossLayer_boss(chapter,entrance)
+            layer:initBossLayer_boss(chapter,entrance,wordList)
         elseif loadingState == 6 then
             loadingState = 7
             
@@ -672,7 +670,7 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
     
 end
 
-function SummaryBossLayer:initBossLayer_boss(chapter,entrance)
+function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
     
     local blinkBack = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     blinkBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
@@ -730,7 +728,7 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance)
     bossAction[#bossAction + 1] = cc.CallFunc:create(function() 
         if self.currentBlood > 0 then
             self.isLose = true
-            self:lose(chapter,entrance)
+            self:lose(chapter,entrance,wordList)
         end
     end,{})
     bossNode:runAction(cc.Sequence:create(bossAction))
@@ -1183,7 +1181,7 @@ function SummaryBossLayer:crabBig(chapter,index)
     end
 end
 
-function SummaryBossLayer:win(chapter,entrance)
+function SummaryBossLayer:win(chapter,entrance,wordList)
     self.globalLock = true
     self.girl:setAnimation(0,'girl_win',true)
     local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,chapter,entrance,wordList)
@@ -1196,7 +1194,7 @@ function SummaryBossLayer:win(chapter,entrance)
     AnalyticsSummaryBossResult('win')
 end
 
-function SummaryBossLayer:lose(chapter,entrance)
+function SummaryBossLayer:lose(chapter,entrance,wordList)
     self.globalLock = true
     self.girl:setAnimation(0,'girl-fail',true)
     local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,chapter,entrance,wordList)

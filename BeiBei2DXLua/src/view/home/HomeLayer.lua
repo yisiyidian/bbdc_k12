@@ -29,18 +29,18 @@ function HomeLayer.create(share)
     local todayTotalTaskNum     = s_LocalDatabaseManager:getTodayTotalTaskNum()
     local todayRemainTaskNum    = s_LocalDatabaseManager:getTodayRemainTaskNum()
 
-    print("todayTotalBossNum : "..todayTotalBossNum)
-    print("todayRemainBossNum : "..todayRemainBossNum)
-    print("todayTotalTaskNum : "..todayTotalTaskNum)
-    print("todayRemainTaskNum : "..todayRemainTaskNum)
+    -- print("todayTotalBossNum : "..todayTotalBossNum)
+    -- print("todayRemainBossNum : "..todayRemainBossNum)
+    -- print("todayTotalTaskNum : "..todayTotalTaskNum)
+    -- print("todayRemainTaskNum : "..todayRemainTaskNum)
 
     local totalStudyWordNum     = s_LocalDatabaseManager.getStudyWordsNum(os.date('%x',os.time()))
     local totalGraspWordNum     = s_LocalDatabaseManager.getGraspWordsNum(os.date('%x',os.time()))
     local totalStudyDayNum      = s_LocalDatabaseManager.getStudyDayNum()
 
-    print("totalStudyWordNum : "..totalStudyWordNum)
-    print("totalGraspWordNum : "..totalGraspWordNum)
-    print("totalStudyDayNum : "..totalStudyDayNum)
+    -- print("totalStudyWordNum : "..totalStudyWordNum)
+    -- print("totalGraspWordNum : "..totalGraspWordNum)
+    -- print("totalStudyDayNum : "..totalStudyDayNum)
 
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
@@ -463,11 +463,40 @@ function HomeLayer.create(share)
 
             layer.button_friend = button_friend
 
+            local function updateFriendButton(delta)
+                if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST and FRIEND_LOCKED == 0 then
+                    -- local unlocked_button_friend = cc.Sprite:create("image/homescene/home_page_function_bg2.png")
+                    -- unlocked_button_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
+                    -- local unlocked_icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
+                    -- unlocked_icon_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
+                    
+                    -- button_friend:addChild(unlocked_button_friend)
+                    -- button_friend:addChild(unlocked_icon_friend)
+                    -- button_friend:setPosition(bigWidth / 2 - 0.5, 200)
+                    -- button_friend:unscheduleUpdate()
+                    button_friend:removeFromParent()
+                    button_friend = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
+                    button_friend:setPosition(bigWidth / 2 - 1, 200)
+                    icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
+                    button_friend:setScale9Enabled(true)
+                    button_friend:setAnchorPoint(1,0.5)
+                    --button_friend:setPosition(bigWidth / 2 - 1, 200)
+                    button_friend:addTouchEventListener(button_right_clicked)
+                    backColor:addChild(button_friend)   
+
+                    icon_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
+                    button_friend:addChild(icon_friend)
+                    layer.button_friend = button_friend
+                    button_friend:unscheduleUpdate()
+                end
+            end
+            button_friend:scheduleUpdateWithPriorityLua(updateFriendButton,0)
+
             s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser( 
                 function (api, result)
-                    print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+                    --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
                     s_CURRENT_USER:getFriendsInfo()
-                    print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+                    --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
 
                     if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
                         local redHint = cc.Sprite:create('image/friend/fri_infor.png')
@@ -596,7 +625,7 @@ function HomeLayer.create(share)
         if now_x + moveLength < start_x and not isDataShow then
             if viewIndex == 2 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
+                mission_progress.stopListener = false
                 viewIndex = 1
 
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
@@ -611,14 +640,9 @@ function HomeLayer.create(share)
     end
 
     local onTouchEnded = function(touch,event)
-        print('touchend')
+
         local location = layer:convertToNodeSpace(touch:getLocation())
-        print('location y'..location.y..' '..start_y)
-        print('location x'..location.x..' '..start_x)
-        print('s_DESIGN_HEIGHT'..s_DESIGN_HEIGHT)
-        print('viewIndex'..viewIndex)
         if not isDataShow then
-            print('isnotShow')
             if math.abs(location.y - start_y) > 10 or math.abs(location.x - start_x) > 10 then
                 return
             elseif viewIndex == 1 and location.y < 0.1 * s_DESIGN_HEIGHT then
@@ -647,7 +671,7 @@ function HomeLayer.create(share)
             end
 
         elseif location.y >  s_DESIGN_HEIGHT-280 and (math.abs(location.y - start_y) < 10 and math.abs(location.x - start_x) < 10) and viewIndex == 1 then
-            print('isDataShow')
+            --print('isDataShow')
             isDataShow = false
             layer:setButtonEnabled(true)
             local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))

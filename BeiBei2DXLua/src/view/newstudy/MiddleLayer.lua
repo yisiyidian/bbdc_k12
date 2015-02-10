@@ -140,7 +140,7 @@ local function createNextButton(getBean)
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
             s_HUD_LAYER:removeChildByName('missionCompleteCircle')
-            s_CURRENT_USER.beanReward = 3
+            s_CURRENT_USER.beanRewardForIron = 3
             s_CorePlayManager.leaveStudyOverModel()
         end
     end
@@ -203,7 +203,8 @@ function MiddleLayer:ctor()
     beibeiAnimation:setPosition(bigWidth * 0.25, 300)
     backColor:addChild(beibeiAnimation)
     
-    self.getBean = s_CURRENT_USER.beanReward
+    self.getBean = s_CURRENT_USER.beanRewardForCollect
+    s_CURRENT_USER.beanRewardForCollect = 3
     self.nextButton = createNextButton(self.getBean)
     backColor:addChild(self.nextButton)
     

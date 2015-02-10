@@ -89,12 +89,14 @@ function SuccessLayer:ctor(number)
     hammerSprite:setAnchorPoint(0.5,0.5)
     waveSprite:addChild(hammerSprite)
 
-    self.getBean = s_CURRENT_USER.beanReward
+    self.getBean = 3
     if number ~= nil then
     self.getBean = number
     end
     self.nextButton = createNextButton(self.getBean)
     backColor:addChild(self.nextButton)
+    s_CURRENT_USER.beanRewardForCollect             = 3
+    s_CURRENT_USER.beanRewardForIron                = 3
 
 end
 
