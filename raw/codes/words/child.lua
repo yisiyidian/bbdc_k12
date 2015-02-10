@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["child"]={"child","[tʃaɪld]","[tʃaɪld]","n.小孩",'n.小孩，孩子；幼稚的人；产物；弟子','He\'s still but a child.','他还是个小孩子。','It\'s not a difficult climb it should be child\'s play for an experienced mountaineer.','这次攀登并不难－－对於有经验的登山运动员应是轻而易举的事。'}

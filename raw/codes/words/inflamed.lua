@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inflamed"]={"inflamed","[ɪn'flemd]","[ in'fleimd ]","adj.发炎的",'adj.发炎的,红肿的|||动词inflame的过去式和过去分词','The act of inflaming or the state of being inflamed.','点火，燃烧点火的动作或被点燃的状态','His eloquence inflamed the strikers.','他的雄辩于罢工者极为激动。'}

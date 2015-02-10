@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["phrase"]={"phrase","[freɪz]","[frez]","n.短语",'n.短语,习语,个人风格,乐句|||vt.措词表达,将(乐曲)分成乐句(来演奏)','She has an apt turn of phrase for summing up a situation.','她很善於总结情况.','Many hands make light work, to coin a phrase.','常言说，人多好干活。'}

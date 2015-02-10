@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shopkeeper"]={"shopkeeper","['ʃɒpkiːpə]","['ʃɑp'kipɚ]","n.店主",'n.店主，零售商人','The shopkeeper knocked 10% off the bill.','主人从帐单中减去10％。','That shopkeeper is a scoundrel in the town.','那家商店的老板是这个镇上的地头蛇.'}

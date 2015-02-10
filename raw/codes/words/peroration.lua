@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peroration"]={"peroration","[perə'reɪʃ(ə)n]","[,pɛrə'reʃən]","n.结语",'n.结语,结论,作结','He summarized his main points in his peroration.','结束语中他总结了他的主要观点。','he summarized his main points in his peroration.','结束语中他总结了他的主要观点。'}

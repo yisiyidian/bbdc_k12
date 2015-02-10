@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ten"]={"ten","[ten]","[tɛn]","num.十",'num.十,十个','It is ten times louder than another.','它比另外一个的声音大十倍。','It\'s a quarter past ten.','现在是十点一刻。'}

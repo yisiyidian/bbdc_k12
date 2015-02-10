@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["undisturbed"]={"undisturbed","[ʌndɪ'stɜːbd]","[,ʌndɪ'stɝbd]","adj.未受干扰的",'adj.未受干扰的，安静的,镇定的','She immured herself in her study to work undisturbed.','她将自己关在书房内读书以免受干扰。','The dust has lain undisturbed for years.','尘土积在那儿很多年了。'}

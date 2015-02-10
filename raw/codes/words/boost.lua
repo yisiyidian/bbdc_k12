@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["boost"]={"boost","[buːst]","[bʊst]","n.推进",'n.推进,支援,增加|||vt.推进,提高','The publication of this boost my confidence.','这本书的出版增强了我的信心。','Edward is not very cheerful, he needs a holiday to boost him up.','爱德华精神欠佳，他需要度假以振作起来。'}

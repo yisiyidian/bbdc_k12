@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forensic"]={"forensic","[fə'rensɪk]","[fə'rɛnsɪk]","adj.法院的",'adj.法院的,关于法庭的,适合于辩论的','A specialist in forensic medicine was called as a witness in the murder trial.','在那桩谋杀案的审理中，一名法医专家被召来作证。','||Forensic|| tests showed that the man had been poisoned.','法医检验表明那个人曾经中毒。'}

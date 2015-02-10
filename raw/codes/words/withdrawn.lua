@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["withdrawn"]={"withdrawn","[wɪð'drɔːn]","[wɪð'drɔn]","adj.偏僻的",'adj.偏僻的，离群的，孤独的|||withdraw的过去分词','Although he seems outgoing in public, he is a shy and withdrawn man.','尽管他在公共场合显得很开朗，但他确实一个羞涩内向的人。','Her husband had become withdrawn and moody.','她丈夫变得沉默寡言、喜怒无常。'}

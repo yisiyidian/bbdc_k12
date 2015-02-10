@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["violin"]={"violin","[vaɪə'lɪn; 'vaɪəlɪn]","[,vaɪə'lɪn]","n.小提琴",'n.小提琴','The violin is not quite in tune with the piano.','这小提琴跟钢琴的调子不太和谐.','He plays the violin for the fun of it.','她拉小提琴只是为了好玩。'}

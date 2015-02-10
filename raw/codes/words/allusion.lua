@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["allusion"]={"allusion","[ə'luːʒ(ə)n; -'ljuː-]","[ə'lʊʒən]","n.提及",'n.提及,暗示','His writings are full of classical allusions.','他的著作里用了很多典故。','Without naming names, the candidate criticized the national leaders by allusion.','候选人没有指名道姓，而是间接批评了国家领导人们。'}

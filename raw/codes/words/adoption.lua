@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adoption"]={"adoption","[ə'dɒpʃ(ə)n]","[ə'dɑpʃən]","n.采用",'n.采用,采纳,收养','The adoption of this policy would relieve the unions of a tremendous burden.','采纳这一政策将会减轻工会的沉重负担。','Connection by blood, marriage, or adoption; family relationship.','亲属关系由血缘，婚姻，或收养形成的亲戚关系；家庭的亲属关系'}

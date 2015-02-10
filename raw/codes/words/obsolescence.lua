@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obsolescence"]={"obsolescence","[,ɒbsəʊ'lesəns]","['ɑbsə'lɛsns]","n.荒废",'n.荒废,退化','obsolescence','n荒废，退化','Printed books require no mediating device to read and thus are immune to technological obsolescence.','印刷书籍不需要中介设备就可以直接阅读，因此不会遭遇技术过时的问题。'}

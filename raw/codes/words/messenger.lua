@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["messenger"]={"messenger","['mesɪn(d)ʒə]","['mɛsndʒɚ]","n.报信者",'n.报信者,先驱','A messenger was dispatched to take the news to the soldiers at the front.','一名通讯员被派去给前线士兵送消息。','A messenger was despatched to take the news to the soldiers at the front.','一名通讯员被派去给前线士兵送消息。'}

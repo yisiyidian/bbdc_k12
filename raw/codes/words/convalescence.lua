@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["convalescence"]={"convalescence","[,kɒnvə'lesns]","[,kɑnvə'lɛsns]","n.渐愈",'n.渐愈,恢复期,快愈期','I enjoy convalescence; it is the part that makes the illness worth while.','我很欣赏复原期，那是使人觉得生病还是合算的一段时间。','He kept to the house during his convalescence.','在养病期间，他呆在家里不出门。'}

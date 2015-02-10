@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["math"]={"math","[mæθ]","[mæθ]","n.数学",'n.数学','He is not interested in math in the least.','他对数学一点都不感兴趣。','I am better at math than English.','和英语相比我更擅长数学'}

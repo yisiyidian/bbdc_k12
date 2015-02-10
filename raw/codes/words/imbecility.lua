@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imbecility"]={"imbecility","[,ɪmbɪ'sɪlətɪ]","[,ɪmbə'sɪləti]","n.低能",'n.低能,愚钝,愚蠢的言行','The father is quite disappointed about his son\'s imbecility.','父亲对他儿子的愚蠢言行极其失望。','Such situation proves that the government is of imbecility.','这种状况只能说明政府无能。'}

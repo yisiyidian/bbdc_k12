@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["select"]={"select","[sɪ'lekt]","[sə'lɛkt]","adj.精选的",'adj.精选的|||n.被挑选出来的人或物|||v.选择|||vi.选择,挑选,选拔|||vt.选择,挑选','Our shops select only the very best quality produce.','我们商店都是精选的质量最高的产品.','She selected a diamond ring from the collection.','她从收藏品中挑选了一枚钻石戒指。'}

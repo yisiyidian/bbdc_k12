@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["folder"]={"folder","['fəʊldə]","['foldɚ]","n.文件夹",'n.文件夹,折叠者,折叠式印刷品','The folder was sandwiched in between the two bulging files in the drawer.','这硬纸卡被挤在抽屉里的两个鼓鼓的档案夹里了。','God, we look like sheep- we are all carrying the same folder.','天啊！我们都带着同样的文件夹, 看起来一模一样。'}

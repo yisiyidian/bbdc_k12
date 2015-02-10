@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["constant"]={"constant","['kɒnst(ə)nt]","['kɑnstənt]","adj.不变的",'adj.经常的,不变的|||n.常数,恒量','This has been a timely reminder of the need for constant care.','这件事适时地提醒我们要注意时时谨慎。','The children\'s constant chatter was irritating.','那些孩子们喋喋不休的说话声使人心烦。'}

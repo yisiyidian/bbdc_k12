@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prescience"]={"prescience","['presɪəns]","['prɛʃɪəns]","n.预知",'n.预知,先见','Some animals have an instinctive prescience of earthquakes.','有些动物有预知地震的本能。','prescience','先知'}

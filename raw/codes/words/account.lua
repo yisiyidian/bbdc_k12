@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["account"]={"account","[ə'kaʊnt]","[ə'kaʊnt]","n.账",'n.账，账目；存款；记述，报告；理由|||vi.解释；导致；报账|||vt.认为；把…视作','In English law a man is accounted innocent until he is proved guilty.','根据英国法律，一个人未经证实有罪仍视为无罪。','His illness accounts for his absence.','他因为生病，所以才缺席。'}

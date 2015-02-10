@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["atrophy"]={"atrophy","['ætrəfɪ]","['ætrəfi]","n.萎缩",'n.萎缩,萎缩症|||v.(使）萎缩','Ambition ||atrophies|| as persons get older.','随着年龄的增长，野心会逐渐萎缩。','Some areas of the brain, if not stimulated, will atrophy and die.','大脑的某些区域如果没有受到促进就会萎缩更甚死亡。'}

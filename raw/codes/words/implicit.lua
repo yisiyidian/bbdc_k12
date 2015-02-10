@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["implicit"]={"implicit","[ɪm'plɪsɪt]","[ɪm'plɪsɪt]","adj.暗示的",'adj.暗示的,盲从的|||[计算机]隐式','Her attitude was implicit in the answer she gave us.','她给我们的答复暗示了她的态度。','Generally speaking, oriental people look for a more implicit beauty.','东方人普遍追求一种含蓄的美。'}

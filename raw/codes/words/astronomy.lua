@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["astronomy"]={"astronomy","[ə'strɒnəmɪ]","[ə'strɑnəmi]","n.天文学",'n.天文学','Physics and astronomy are cognate sciences.','物理学和天文学是相关联的科学.','I have no interest in astronomy.','我对天文学不感兴趣。'}

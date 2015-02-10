@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["limn"]={"limn","[lɪm]","[ lim ]","v.描写",'v.描写,描绘','The artist limned a good likeness of his wife','这位画家给他妻子画了一幅很好的肖像。','The report limned a desperate situation.','那报道描述出一个严重的情况。'}

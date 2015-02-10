@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["provide"]={"provide","[prə'vaɪd]","[prə'vaɪd]","vi.提供",'vi.供给,提供|||vt.提供;规定;准备','The government has to provide against a possible oil shortage in the coming months.','政府须为未来几个月中可能出现的油荒作好准备。','These books will provide us with all the information we need.','这本书将为我们提供所需要的全部信息。'}

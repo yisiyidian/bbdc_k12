@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["garner"]={"garner","['gɑːnə]","['ɡɑrnɚ]","v.贮藏",'v.贮藏,积累,得到|||n.谷仓|||Garner:加纳(姓氏)|||Garner:加纳，约翰·南希（1868-1967），美国政治家，于1933-1941年任美国副总统','He garnered a lot of money for his new house.','他为买新房子攒了很大一笔钱。','The study of language rests with garnering constantly at ordinary times.','学习语言在于平时不断地积累。'}

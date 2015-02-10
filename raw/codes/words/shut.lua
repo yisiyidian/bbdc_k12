@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shut"]={"shut","[ʃʌt]","[ʃʌt]","adj.关闭的",'adj.关闭的,合拢的,围绕的|||vt.关上，防止进入，禁闭，合上，停止或中止|||vi.关闭，停止或中止|||n.关闭','Her mouth opened and shut, but no sound came out.','她的嘴张开又闭上了，没有发出声音。','He shut his eyes to her faults.','他对她的缺点视而不见。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subtraction"]={"subtraction","[səb'trækʃn]","[səb'trækʃən]","n.减法",'n.减法,减去','Two from five is a simple subtraction.','五减二是简单的减法.','Addition , subtraction , multiplication and division are basic arithmetic.','加法，减法，乘法和除法是基础的算术。'}

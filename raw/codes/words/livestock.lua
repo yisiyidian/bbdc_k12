@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["livestock"]={"livestock","['laɪvstɒk]","['laɪvstɑk]","n.家畜",'n.家畜,牲畜','A mixture of ground grain and nutrients fed to livestock and fowl.','麦麸由谷糠和营养物质调成的混合物，用以饲养牲畜和家禽','A firm that slaughters, processes, and packs livestock into meat and meat products.','牲畜屠宰加工厂把家畜屠宰、加工并包装成肉和肉制品的工厂'}

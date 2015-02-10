@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quash"]={"quash","[kwɒʃ]","[kwɔʃ]","v.压碎",'v.压碎,镇定,镇压','The appeal court quash the care order made by the juvenile court.','上诉法院宣布少年法院发出的照看命令无效。','The applicant seek judicial review to quash the bind-over order.','申请人请求司法检查以便废除责令某人守法的命令。'}

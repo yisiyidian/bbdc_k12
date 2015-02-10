@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["termite"]={"termite","['tɜːmaɪt]","['tɝmaɪt]","n.白蚁",'n.白蚁','||Termite|| often destroys wood.','白蚁经常破坏树木。','The first was too worm - like, looking like a bloated queen termite.','第一个太像虫子, 看起来像肥胖的白蚁蚁后.'}

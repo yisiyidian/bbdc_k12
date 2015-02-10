@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chaotic"]={"chaotic","[keɪ'ɒtɪk]","[ke'ɑtɪk]","adj.混乱的",'adj.混乱的','With no one to keep order the situation in the classroom was chaotic.','因无人维持秩序，教室里一片混乱。','The office is chaotic because the supervisor is on a business trip.','主管出差了，办公室里一片混乱。'}

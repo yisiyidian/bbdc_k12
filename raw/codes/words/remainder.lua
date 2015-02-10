@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["remainder"]={"remainder","[rɪ'meɪndə]","[rɪ'mendɚ]","n.剩余物",'n.剩余物,其他的人,残余vt.廉价出售adj.剩余的','Nine people came in and the remainder stayed outside.','9个人进来，余下的人留在外面。','He spent the remainder of his life in the country.','他在乡村度过余生。'}

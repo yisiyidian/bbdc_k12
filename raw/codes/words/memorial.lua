@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["memorial"]={"memorial","[mə'mɔːrɪəl]","[mə'morɪəl]","n.纪念碑(堂)",'adj.纪念的,追悼的|||n.纪念碑(堂),纪念仪式','His memorial was engraved on the stone.','纪念他的碑文刻在石碑上。','The Dr. Sun Yat-sen Memorial, as the name suggests, is a memorial built in memory of Dr. Sun Yat-sen.','国父纪念馆，顾名思义，是建来纪念国父的纪念馆。'}

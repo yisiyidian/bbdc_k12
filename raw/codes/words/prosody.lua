@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prosody"]={"prosody","['prɒsədɪ]","['prɑsədi]","n.诗体论",'n.诗体论,韵律学,作诗法','This pitch-and-rhythm variation, known as prosody, conveys emotion.','这种我们称做声调的节奏与音调变化常常传达着情感。','The prosody of Beowulf is based on alliteration, not end rhymes.','《贝奥武甫》的诗体采用头韵而不用尾韵。'}

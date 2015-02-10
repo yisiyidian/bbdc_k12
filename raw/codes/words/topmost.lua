@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["topmost"]={"topmost","['tɒpməʊst]","['tɑpmost]","adj.最高的",'adj.最高的,顶端的','He lifted out the topmost two letters, and though he knew what he would see, he read them over again.','他拿起最上面的2封信，虽然他已经知道里面写的是什么，但还是从头到尾又读了一遍。','The bird settled on the topmost bough.','这只鸟儿在最高的权枝上停了下来。'}

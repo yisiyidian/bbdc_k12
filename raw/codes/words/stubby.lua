@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stubby"]={"stubby","['stʌbɪ]","['stʌbi]","adj.断株一般的",'adj.断株一般的,粗而短的,短而粗硬的','stubby fingers and toes.','短而粗的手指和脚趾','a stubby pencil.','短铅笔头'}

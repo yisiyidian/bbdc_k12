@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["handbook"]={"handbook","['hæn(d)bʊk]","['hændbʊk]","n.手册",'n.手册,指南','Her handbooks are incomplete.','她的手册不完整。','We bought a tourist handbook before going travelling.','出去旅游前，我们先买了一本旅游手册。'}

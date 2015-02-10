@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aristocracy"]={"aristocracy","[,ærɪ'stɒkrəsɪ]","[,ærɪ'stɑkrəsi]","n.贵族",'n.贵族,贵族社会,高级知识份子','He married into the French aristocracy.','他因婚姻关系跻身于法国贵族。','In time of aristocracy, people\'s fates are not in the hands of themselves.','在贵族统治时代，人们的命运并不掌握在自己手中。'}

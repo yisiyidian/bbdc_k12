@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spite"]={"spite","[spaɪt]","[spaɪt]","n.恶意",'n.恶意,怨恨|||vt.刁难,伤害','I\'m sure he took my parking space just to spite me.','我认为他侵占我的停车位肯定是有意和我作对。','He failed to lift the rock in spite of all his exertions.','他虽竭尽全力，但仍然未能将那石头搬起来。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sheet"]={"sheet","[ʃiːt]","[ʃit]","n.片",'n.床单,张,片|||vt.盖上被单,遍布,使成片状|||vi.成片落下或流动|||adj.片状的','She went as white as a sheet when she heard the news.','她听到这个消息顿时脸色苍白。','They cut holes on the sheet of metal with a punch press.','他们用冲床在金属板上打孔。'}

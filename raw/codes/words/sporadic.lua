@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sporadic"]={"sporadic","[spə'rædɪk]","[spə'rædɪk]","adj.不定时发生的",'adj.不定时发生的,零星的','Despite the sporadic disturbances the dictator was still riding high.','虽不时有骚动事件，该独裁者仍能控制局势。','The sound of sporadic shooting could still be heard.','仍能听见零星的枪声。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["transaction"]={"transaction","[træn'zækʃ(ə)n; trɑːn-; -'sæk-]","[træn'zækʃən]","n.交易",'n.交易,处理,办理','Had you not helped us, we should have canceled this transaction.','假如没有你的帮助，这笔生意早就告吹了。','His failure in this transaction was due to nothing else than his own carelessness.','他在这笔交易中的失利完全是由于他自己的粗心大意。'}

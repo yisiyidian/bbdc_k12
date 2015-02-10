@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ray"]={"ray","[reɪ]","[re]","n.光线",'n.光线,射线,雷(男子名)','He focused the sun\'s ray on a piece of paper with a burning-glass.','他用一面凸透镜把阳光在纸上聚成焦点。','||Ray|| take a gulp of coffee and rushed out of the room.','雷喝了一大口咖啡，接着便冲出了房间。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["law"]={"law","[lɔː]","[lɔ]","n.法规",'n.法规,规律,起诉,法则|||vi.起诉','My car\'s a law unto itself I can\'t rely on it.','我的汽车自行其是－－靠不住了。','Ignorance of the law is no excuse.','不懂法律不是藉口。'}

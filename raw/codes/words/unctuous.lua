@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unctuous"]={"unctuous","['ʌŋ(k)tjʊəs]","['ʌŋktʃuəs]","adj.油腔滑调的",'adj.油腔滑调的，油的','He speaks in unctuous tones.','他说话油腔滑调。','He made an unctuous assurance.','他做了个虚情假意的承诺。'}

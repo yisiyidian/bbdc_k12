@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unbroken"]={"unbroken","[ʌn'brəʊk(ə)n]","[ʌn'brokən]","adj.不间断的",'adj.不间断的,未破的，未驯服的，未被打扰的','He had ten hours of unbroken sleep.','他连续睡了十个小时。','There is unbroken silence in the woods.','林中一直静寂无声。'}

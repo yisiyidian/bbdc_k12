@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["highly"]={"highly","['haɪlɪ]","['haɪli]","adv.高度地",'adj.十分敬仰的|||adv.高度地,很,非常','I esteem his work highly.','我非常尊重他的工作.','The flu is highly infectious.','流感的传染性很强.'}

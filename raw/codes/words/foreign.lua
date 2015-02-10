@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["foreign"]={"foreign","['fɒrɪn]","['fɔrən]","adj.外国的",'adj.外国的,外交的,不相关的','In the USA foreign policy is decided by the federal government and federal laws are made by Congress.','美国外交政策取决于联邦政府，联邦法律由国会制定。','Can you explain the meaning of these foreign words?','你能解释这些外文词的意思吗？'}

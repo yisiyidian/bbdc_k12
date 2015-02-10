@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vegetable"]={"vegetable","['vedʒtəb(ə)l; 'vedʒɪtə-]","['vɛdʒtəbl]","adj.蔬菜的",'adj.蔬菜的,植物的|||n.蔬菜','He dunged his vegetable garden regularly.','他经常给他的菜园施肥。','Is a tomato a fruit or a vegetable?','蕃茄是水果还是蔬菜?'}

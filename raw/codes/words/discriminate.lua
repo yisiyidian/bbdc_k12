@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discriminate"]={"discriminate","[dɪ'skrɪmɪneɪt]","[dɪ'skrɪmɪnet]","vt.区分",'vt.区分，区别对待|||vi.辨别，差别对待','Death does not discriminate; it comes to everyone.','死亡对每个人都一视同仁，它会降临到每个人的身上。','Can you discriminate good books from bad?','你能区别好书与坏书吗？'}

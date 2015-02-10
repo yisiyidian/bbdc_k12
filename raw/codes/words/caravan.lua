@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["caravan"]={"caravan","['kærəvæn; kærə'væn]","['kærəvæn]","n.（穿越沙漠的）旅行队",'n.（穿越沙漠的）旅行队,商队，大篷车','Our caravan sleeps six in comfort.','我们居住的拖车可舒舒服服地睡六个人.','The caravan stopped for the night at an oasis.','旅行队在沙漠中的绿洲停下来过夜。'}

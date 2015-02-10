@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sensible"]={"sensible","['sensɪb(ə)l]","['sɛnsəbl]","adj.可察觉的",'adj.可察觉的,意识到的,实用的|||n.可感知物','You must try to be more sensible.','你得懂点儿好歹.','That sounds very sensible to me.','我觉得这很合理。'}

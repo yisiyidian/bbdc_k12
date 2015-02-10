@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sew"]={"sew","[səʊ]","[so]","vt.缝纫",'vt.缝纫,缝合|||vi.缝纫','The skirt is finished I\'m now going to sew a pocket on.','裙子做好了--我现在再缝上个口袋.','I\'ll just sew up that tear, and the coat will be as good as new.','我把大衣的破处缝好，就会完好如新了。'}

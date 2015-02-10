@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["soften"]={"soften","['sɒf(ə)n]","['sɔfn]","v.使...变柔软",'v.使...变柔软,变柔和,减轻','The more you soften a request, the more polite it becomes.','你愈使请求柔婉，请求就愈变为客气。','She needed to soften her request to make it as polite and courteous as she could.','她需要使请求语气柔婉，以便尽可能把它变成有礼貌与客气。'}

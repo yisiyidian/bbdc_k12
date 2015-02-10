@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["natation"]={"natation","[nə'teɪʃ(ə)n]","[ne'teʃən]","n.游泳",'n.游泳，游泳技术','||Natation|| is the best way to tone up your body.','游泳是强身健体的最佳途径。','This swimmer is famous for his excellent natation.','这个游泳运动员以他卓越的游泳水平著称。'}

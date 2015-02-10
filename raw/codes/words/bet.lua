@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bet"]={"bet","[bet]","[bɛt]","n.打赌",'n.打赌,赌注,最大的可能|||vi.下注|||vt.打赌','My bet is they\'ve got held up in the traffic.','我想他们一定是在路上因交通拥挤而受阻了。','I bet it will rain tomorrow.','我相信明天一定会下雨。'}

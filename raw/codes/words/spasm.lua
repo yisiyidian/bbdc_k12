@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spasm"]={"spasm","['spæz(ə)m]","['spæzəm]","n.抽筋",'n.抽筋,痉挛，（动作，感情等的）一阵发作','A sudden sharp spasm of pain.','阵痛突发的尖锐的痉挛痛','A spasm or fit; a convulsion.','阵发痉挛或短暂发作；抽搐'}

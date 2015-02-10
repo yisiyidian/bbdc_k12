@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tantrum"]={"tantrum","['tæntrəm]","['tæntrəm]","n.发脾气",'n.发脾气,发怒','This was no spontaneous tantrum.','这并非一时之怒。','He has a bad temper and tends to throw a tantrum for no reason.','他脾气不好，很容易无缘无故就乱发脾气。'}

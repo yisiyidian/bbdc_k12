@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tamp"]={"tamp","[tæmp]","[tæmp]","v.夯实",'v.捣实,砸实|||vt.夯实','He tamped down the tobacco in his pipe.','他把烟丝紧紧摁实在烟斗里。','Then I tamp down the soil with the back of a rake.','然后我用耙背将土壤拍实。'}

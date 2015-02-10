@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shadowy"]={"shadowy","['ʃædəʊɪ]","['ʃædoi]","adj.有阴影的",'adj.有阴影的,朦胧的，虚幻的','A shadowy figure went past in the darkness.','一个模糊的身影从黑暗中闪过。','Her face was dark in the shadowy place.','在这阴暗的地方她脸色黝黑。'}

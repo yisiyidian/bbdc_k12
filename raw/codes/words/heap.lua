@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heap"]={"heap","[hiːp]","[hip]","n.堆",'n.堆,许多,累积|||vt.使成堆,装满|||[计算机]堆','He fell down the stairs, landing in a heap at the bottom.','他从楼梯上摔下来, 直跌到楼梯底部滚成一团.','There is a disorderly heap of clothes in his room.','他屋里有一堆乱七八糟的衣服。'}

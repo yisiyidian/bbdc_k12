@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parturition"]={"parturition","[,pɑːtjʊ'rɪʃ(ə)n]","[,pɑrtjʊ'rɪʃən]","n.生产",'n.生产,分娩','parturition can sometimes proceed more quickly than anticipated','...','Did the parturition go well yesterday evening?','昨天晚上分娩顺利吗?'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["biology"]={"biology","[baɪ'ɒlədʒɪ]","[baɪ'ɑlədʒi]","n.生物学",'n.生物学','Her school report shows that she is weak at/in arithmetic and biology.','从她的学习成绩单可看出她算术和生物成绩差.','The biology paper (ie in an examination) was a real stinker.','生物试卷真难答.'}

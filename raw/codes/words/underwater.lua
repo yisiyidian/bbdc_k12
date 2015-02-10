@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["underwater"]={"underwater","[ʌndə'wɔːtə]","[,ʌndɚ'wɔtɚ]","adj.水下的",'adj.在水中生长的，水下的|||adv.水下面地','This machine has been specially adapted for use underwater.','这机器是为水下使用而特别改装的.','The ship was underwater when they reached her.','他们赶到那艘船时,船已沉到水里了.'}

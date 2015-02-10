@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["butler"]={"butler","['bʌtlə]","['bʌtlɚ]","n.仆役长",'n.仆役长','A steward or butler.','服务员或侍者','The butler gave the maid a dressing down for not cleaning the silver properly.','男管家因女仆没有把银皿擦洗干净而狠狠训斥了她一顿。'}

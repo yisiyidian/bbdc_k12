@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pester"]={"pester","['pestə]","[ 'pestə ]","v.使烦恼",'v.使烦恼,使苦恼','He told her not to pester him with trifles.','他告诉她别拿些琐事来烦他。','He told the photographers to stop pestering him.','他告诉照相的人别再缠著他.'}

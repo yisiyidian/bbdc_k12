@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swelter"]={"swelter","['sweltə]","[ 'sweltə ]","vi.汗流浃背",'vi.汗流浃背，中暑，热得难受|||vt.使热得难受|||n.中暑|||vt.[古]分泌（毒液）','It\'s sweltering today.','今天热得叫人发昏。','He often work in a swelter .','他经常在酷热下工作。'}

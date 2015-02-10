@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deprecate"]={"deprecate","['deprɪkeɪt]","['dɛprəket]","v.声明不赞成",'v.声明不赞成,抨击,反对','She extremely deprecates bank\'s credit to the enterprises.','她极力反对银行贷款给那些企业。','Such waste of money should be deprecated at a time like this.','在这种时候应大力反对如此浪费金钱。'}

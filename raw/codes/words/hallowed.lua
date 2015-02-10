@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hallowed"]={"hallowed","['hæləʊd]","['hælod]","adj.神圣的",'adj.神圣的，崇高的|||动词hallow的过去式和过去分词形式','This area was hallowed by sacred memories.','这个地区由于宗教上的纪念意义而被视为圣地。','Church is a hallowed place for people who believe in God','教堂对的人来说是一个神圣的地方。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tapeworm"]={"tapeworm","['teɪpwɜːm]","['tepwɝm]","n.[基医]绦虫",'n.[基医]绦虫','Undercooked pork may contain living "bladder worms" of the pig tapeworm.','未煮熟的猪肉也许含有猪绦虫活的“囊尾幼虫”。','The tapeworm is an inhabitant of the intestine.','绦虫是栖居肠内的寄生虫。'}

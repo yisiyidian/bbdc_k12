@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["considerate"]={"considerate","[kən'sɪd(ə)rət]","[kənˈsɪdərɪt]","adj.考虑周到的",'adj.考虑周到的,体谅的','You might be a thought more considerate of other people.','你该多想著点儿别人.','He is no more considerate of others than his brother is.','他不体谅别人，就跟他弟弟一样。'}

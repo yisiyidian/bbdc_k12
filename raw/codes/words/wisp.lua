@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wisp"]={"wisp","[wɪsp]","[wɪsp]","n.小捆",'n.小捆,小束，一缕，一丝|||vt.卷成小捆，扎成束|||vi.一缕缕地飘动','She cut a wisp of hair off.','她剪掉了一束头发。','She is a wisp of a girl.','她是个纤弱的小姑娘。'}

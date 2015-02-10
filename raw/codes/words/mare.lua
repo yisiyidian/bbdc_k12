@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mare"]={"mare","[meə]","[mɛr]","n.母马",'n.母马,母驴|||n.(月球等）表面阴暗处','An unbred mare.','未交配过的母马','A mule is a cross between a mare and a donkey.','骡子是母马和公驴的杂交后代。'}

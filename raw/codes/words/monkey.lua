@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["monkey"]={"monkey","['mʌŋkɪ]","['mʌŋki]","n.猴子",'n.猴子|||v.胡闹,乱弄','She keeps an unused stamp of monkey.','她保存着一枚未曾用过的猴邮票。','He\'s as mischievous as a monkey!','他像猴子那麽顽皮!'}

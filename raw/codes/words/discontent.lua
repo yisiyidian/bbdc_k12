@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discontent"]={"discontent","[dɪskən'tent]","[,dɪskən'tɛnt]","n.不满",'n.不满|||adj.不满的|||v.令(人)不满','||Discontent|| in the party will lead to further defections.','党内的不满情绪将导致更多的党员脱党.','There were murmurs of discontent from the work-force.','工人不满, 颇有微词.'}

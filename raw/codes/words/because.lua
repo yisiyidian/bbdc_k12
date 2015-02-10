@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["because"]={"because","[bɪ'kɒz]","[bɪ'kɔz]","conj.因为",'conj.因为','He was caught by the police because of the graft and corruption.','他因贿赂贪污被警察抓了起来。','Many beautiful fish are fast disappearing because of the severe pollution.','因为污染严重，许多美丽的鱼类正在面临绝种。'}

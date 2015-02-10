@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drenched"]={"drenched","[drentʃd]","[ drentʃd ]","adj.湿透的",'adj.湿透的|||动词drench的过去式和过去分词形式','Proctor(exceedingly angry): "So you confess that this unfortunate freshman was carried to this frog pond and drenched?"','学监（非常生气）：“现在你承认这可怜的新生被扔进这蛙池里浑身湿透？”','He was every inch drenched.','他浑身湿透。'}

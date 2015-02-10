@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["body"]={"body","['bɒdɪ]","['bɑdi]","n.身体",'n.身体,人,尸体,主体,正文|||vt.赋予形体,体现','Exercise is to the body what thinking is to the brain.','运动和身体的关系，如同思考和头脑的关系。','The sun, moon and stars are heavenly ||bodies||.','太阳、月亮和星星都是天体。'}

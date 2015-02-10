@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trivial"]={"trivial","['trɪvɪəl]","['trɪvɪəl]","adj.琐碎的",'adj.琐碎的,不重要的','It\'s a trivial matter and not worth fighting about.','区区小事不值得争吵.','He could remember every trivial incident in great detail.','他能把每件小事的细节都记得很清楚.'}

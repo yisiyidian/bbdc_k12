@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["suck"]={"suck","[sʌk]","[sʌk]","v.吸",'v.啜,吸,吸入,吮吸|||&lt;俚&gt;糟糕,太烂了','I don\'t want to get sucked into the row about school reform.','我不愿意牵扯到这场学制改革的争论之中。','a cleaning device that sucks up dirt.','吸污物的清洁装置'}

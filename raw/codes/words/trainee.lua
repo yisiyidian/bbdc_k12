@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trainee"]={"trainee","[treɪ'niː]","[,tre'ni]","n.练习生",'n.练习生,新兵,训练中的动物','||Trainee|| commandos are put through an exhausting assault course.','受训的突击队员要参加令人筋疲力尽的突击课程.','The trainee pilot flew his first solo today.','那个受训的飞行员今天首次单独飞行.'}

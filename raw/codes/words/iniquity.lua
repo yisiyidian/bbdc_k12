@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["iniquity"]={"iniquity","[ɪ'nɪkwɪtɪ]","[ɪ'nɪkwəti]","n.邪恶",'n.邪恶,不公正，罪行','He thinks of new york as a den of iniquity.','他认为纽约是个藏污纳垢之处。','He thought of New York as a den of iniquity.','他认为纽约是个藏污纳垢之处.'}

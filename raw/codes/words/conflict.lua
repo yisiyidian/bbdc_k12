@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conflict"]={"conflict","['kɒnflɪkt]","['kɑnflɪkt]","n.冲突",'n.冲突；战斗；相互干扰；矛盾|||vi.抵触；争斗；战斗；冲突','Something is bound to happen one way or another to end the conflict or solve the problem.','事情一定以某种方式发生以结束冲突或解决难题。','There has always been some conflict between the sexes.','两性之间从来就有矛盾.'}

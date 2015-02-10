@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decadence"]={"decadence","['dekəd(ə)ns]","['dɛkədəns]","n.衰落",'n.衰落,颓废','The empire had for years been falling into decadence.','这个帝国走向腐朽堕落已经经年。','A member of the ||Decadence|| movement.','颓废派艺术家颓废派运动的一员'}

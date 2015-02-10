@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["doubt"]={"doubt","[daʊt]","[daʊt]","n.怀疑",'n.怀疑,疑惑,不信任|||vt.怀疑,不信任|||vi.不确定','She was beyond all doubt the finest ballerina of her day.','她无疑是她那个时代最优秀的芭蕾舞演员。','No doubt he means to help, but in fact he just gets in the way.','他确实是想帮忙，然而事实上却只是帮倒忙。'}

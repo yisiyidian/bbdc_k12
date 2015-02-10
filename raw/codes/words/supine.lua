@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supine"]={"supine","['s(j)uːpaɪn]","['supaɪn]","adj.仰卧的",'adj.仰卧的,(手)掌心向上的,懒散的','I lay supine on the poolside grass.','我仰面躺在游泳池边的草地上。','He is a willing and supine executive.','他是个为人和气、得过且过的主管。'}

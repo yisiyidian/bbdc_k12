@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chromosome"]={"chromosome","['krəʊməsəʊm]","['kroməsom]","n.染色体",'n.染色体','The position that a given gene occupies on a chromosome.','基因座在一条染色体上某种给定基因所占的位置','Genes are organized along chromosomes.','基因是沿着染色体排列的'}

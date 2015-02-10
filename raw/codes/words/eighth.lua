@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eighth"]={"eighth","[eɪtθ]","[etθ]","n.八分之一",'n.八分之一|||num.第八','The eighth day after a feast day, counting the feast day as one.','第八天教会节日后从该日算起的第八天','He put in a spurt at the beginning of the eighth lap.','他进入第八圈时便开始冲刺.'}

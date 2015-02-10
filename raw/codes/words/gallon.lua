@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gallon"]={"gallon","['gælən]","['ɡælən]","n.加仑(容量单位)",'n.加仑(容量单位)','I\'ve heard that ten pence a gallon is coming off the price of petrol.','我听说汽油价格每加仑要减十便士.','The imperial gallon is not the same as the US gallon.','英制的加仑和与美制的容量不同。'}

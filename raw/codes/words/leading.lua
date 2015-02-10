@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["leading"]={"leading","['liːdɪŋ]","['lidɪŋ]","adj.领导的",'n.领导,疏导,铅板|||adj.领导的,主要的,在前的|||vbl.领导,引领,以铅接合|||[计算机]行间空白','This old man is a leading authority on wheat diseases.','这位老人是小麦病虫害方面的权威。','The director cast her in a leading part when she was a young unknown of 16.','当她还是一个十六岁的无名少女时，导演选中她演主角。'}

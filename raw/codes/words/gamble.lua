@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gamble"]={"gamble","['gæmb(ə)l]","['ɡæmbl]","v.赌博",'n.冒险|||v.赌博,孤注一掷','The gamble paid off.','赌赢了.','He spends all his time ||gambling|| in the casino.','他把时间都消磨在赌场的赌博上。'}

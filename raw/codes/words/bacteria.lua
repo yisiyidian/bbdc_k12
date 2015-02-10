@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bacteria"]={"bacteria","[bæk'tɪərɪə]","[bæk'tɪrɪə]","n.(复数)细菌",'n.(复数)细菌','Such a growth or colony, as of bacteria.','培养菌该种生长物或群落，如培养菌','It is possible to multiply bacteria and other living organisms in the laboratory.','在实验室能够繁殖细菌和其他生物.'}

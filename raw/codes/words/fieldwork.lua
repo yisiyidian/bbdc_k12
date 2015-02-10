@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fieldwork"]={"fieldwork","['fiːldwɜːk]","['fild'wɝk]","n.现场工作",'n.现场工作(野外测量,实地测量,外业)','In those days they could not spare the children from fieldwork.','那时候, 孩子不到地里干活是不行的。','A series of acquisitions might represent a decade\'s fieldwork.','一系列的收获可能需要十年的实地调查。'}

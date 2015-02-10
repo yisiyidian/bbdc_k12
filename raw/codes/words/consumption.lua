@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consumption"]={"consumption","[kən'sʌm(p)ʃ(ə)n]","[kən'sʌmpʃən]","n.消费",'n.消费','The meat was condemned as unfit for human consumption.','这种肉已宣布不适宜人们食用.','I always take fuel consumption into consideration when buying a car.','我买汽车时总要把燃油消耗量考虑在内.'}

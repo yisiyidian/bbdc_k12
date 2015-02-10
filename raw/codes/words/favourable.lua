@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["favourable"]={"favourable","['feɪv(ə)rəb(ə)l]","[ 'feivərəbl ]","adj.有用的",'adj.有用的,良好的,赞成的','The play got a favourable reception from the critics.','该剧获评论界好评.','It is hard to view his conduct in a favourable light.','他的行为实难恭维.'}

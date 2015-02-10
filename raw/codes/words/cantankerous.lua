@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cantankerous"]={"cantankerous","[kæn'tæŋk(ə)rəs]","[kæn'tæŋkərəs]","adj.脾气坏的",'adj.脾气坏的,好争吵的,难以处理的','He met a crabbed, cantankerous director.','他碰上了一位坏脾气、爱争吵的主管。','He is a cantankerous old man.','他是个爱找碴的老人。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deadlock"]={"deadlock","['dedlɒk]","['dɛdlɑk]","n.僵局",'n.僵局,停顿，(比赛等的)分数不分上下|||v.停顿,相持不下','We can only make minor concessions, but it might break the deadlock.','我们只能做些较小的让步，但这就可能打破僵局。','The negotiations have reached a deadlock.','谈判陷入僵局。'}

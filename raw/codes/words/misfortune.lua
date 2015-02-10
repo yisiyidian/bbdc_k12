@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["misfortune"]={"misfortune","[mɪs'fɔːtʃuːn; -tʃ(ə)n]","['mɪs'fɔrtʃən]","n.不幸",'n.不幸,灾祸','A great misfortune befell him.','一场大难降临到他的头上.','I expressed my commiserations on his misfortune.','我对他的不幸表示同情.'}

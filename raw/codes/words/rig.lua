@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rig"]={"rig","[rɪg]","[rɪɡ]","n.装备",'n.装备,帆具,服装;阴谋诡计|||v.装配,装扮,垄断;用不正当手段操纵','They had not found any evidence of a systematic attempt to rig the ballot.','他们没有发现任何证据证明有人企图全面操纵投票。','The severe conditions hampered attempts to pull the vessel free of the rig.','恶劣的天气情况使得把那艘船拉离钻塔的努力很难奏效。'}

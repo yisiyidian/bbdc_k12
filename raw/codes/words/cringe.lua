@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cringe"]={"cringe","[krɪn(d)ʒ]","[krɪndʒ]","v.畏缩",'v.畏缩,谄媚,奉承|||vi.奉承,卑躬屈膝,畏缩,退缩','Chris had cringed at the thought of using her own family for publicity.','一想到要拿自己的家庭作宣传，克丽丝就感到厌烦。','Molly had cringed when Ann started picking up the guitar.','安开始弹吉他时，莫莉感到有些难堪。'}

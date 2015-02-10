@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comedy"]={"comedy","['kɒmɪdɪ]","['kɑmədi]","n.喜剧",'n.喜剧,滑稽,幽默事件','No one can touch him (ie He is the best) as a comedian/in comedy.','他这个喜剧演员[演喜剧]没人能比得上.','The film is a rich brew of adventure, sex and comedy.','这部电影是惊险、性爱及幽默的大杂烩.'}

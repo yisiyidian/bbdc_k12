@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["electrical"]={"electrical","[ɪ'lektrɪk(ə)l]","[ɪ'lɛktrɪkl]","adj.电的",'adj.电的,电气科学的','There is a fault in the electrical system.','电路系统出了故障.','The lights fused because the system was overloaded with electrical appliances.','电灯灭了, 因线路上用电器超负荷把保险丝烧断了.'}

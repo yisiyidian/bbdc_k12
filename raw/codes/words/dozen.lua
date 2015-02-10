@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dozen"]={"dozen","['dʌz(ə)n]","['dʌzn]","n.(一)打",'n.(一)打,十二个|||adj.一打的,十二个的','I had bred a dozen of chickens.','我饲养了12只小鸡。','My mother bought a dozen eggs.','我妈妈买了一打鸡蛋。'}

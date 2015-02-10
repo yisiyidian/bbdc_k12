@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crepuscular"]={"crepuscular","[krɪ'pʌskjʊlə; kre-]","[krɪ'pʌskjəlɚ]","adj.微光的",'adj.微光的,黄昏的,拂晓的','Bats are crepuscular creatures.','蝙蝠是在黎明或黄昏时分活动的动物.','the period\'s crepuscular charm and a waning of the intense francophilia that used to shape the art market','“这一时期的朦胧魅力和以前强烈影响艺术市场氛围的亲法思想的衰退”'}

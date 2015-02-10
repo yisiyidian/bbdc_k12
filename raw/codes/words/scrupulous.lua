@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scrupulous"]={"scrupulous","['skruːpjʊləs]","['skrupjələs]","adj.小心谨慎的",'adj.小心谨慎的,细心的，严谨的','You must take the most scrupulous care to keep the wound free from the dirt.','你必须非常小心地护理，以免伤口沾上污物。','You\'re being very scrupulous, but to what end?','你确实刚正不阿，但图了什么呢？'}

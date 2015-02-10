@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blacksmith"]={"blacksmith","['blæksmɪθ]","['blæksmɪθ]","n.铁匠",'n.铁匠','In1937 he was compelled to bind out his twelve- year-old son to a blacksmith.','一九三七年他不得不订合同让他十二岁的儿子给铁匠当学徒。','Joe had to work as blacksmith in place of his lazy father.','乔只得代替他懒惰的父亲去当铁匠。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["linger"]={"linger","['lɪŋgə]","['lɪŋɡɚ]","vt.消磨",'vt.消磨,无所事事|||vi.逗留,消磨,徘徊,漫步','His last words still linger in our ears.','他的临终嘱咐仍萦绕在我们耳际。','The beautiful melody is lingering in my mind.','美妙的音乐在我心中回荡。'}

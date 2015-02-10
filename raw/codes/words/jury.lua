@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jury"]={"jury","['dʒʊərɪ]","['dʒʊri]","n.[法]陪审团",'n.[法]陪审团；评判委员会|||adj.应急的','The members of the jury were discharged from their duties.','陪审员们被解除了职务.','The jury brought in a verdict of guilty.','陪审团作出有罪的裁决。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["defoliate"]={"defoliate","[diː'fəʊlɪeɪt]","[,di'folɪet]","v.v.(使)落叶",'v.v.(使)落叶','The area was defoliated.','该地区被施放过落叶剂。','Workers defoliate those trees by special chemicals.','工人们使用特殊的药剂使得树木落叶。'}

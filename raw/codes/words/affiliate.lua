@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["affiliate"]={"affiliate","[ə'fɪlɪeɪt]","[ə'fɪlɪet]","n.联号",'n.联号(联播台,同伙),附属机构,分公司|||vt.&vi.合并(使...加入,追源)','The International Development Association (IDA) is an affiliate of the World Bank.','国际开发协会（IDA）是世界银行的附属机构。','The two unions voted to affiliate.','两家工会投票决定联合。'}

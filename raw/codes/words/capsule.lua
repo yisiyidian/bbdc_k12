@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["capsule"]={"capsule","['kæpsjuːl; -sjʊl]","[ˈkæpsul]","n.荚膜",'n.荚膜,胶囊,简缩,太空舱|||vt.装入胶囊,简缩,概括|||adj.精简的,小巧的','a capsule description.','简洁的描写','A small, sometimes microscopic capsule designed to release its contents when broken by pressure, dissolved, or melted.','微胶囊，微囊体小团胶囊，在压力、溶解或熔化时破裂释放出所含物质'}

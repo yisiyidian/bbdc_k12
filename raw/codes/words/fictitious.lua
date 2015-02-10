@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fictitious"]={"fictitious","[fɪk'tɪʃəs]","[fɪk'tɪʃəs]","adj.编造的",'adj.假想的,编造的,虚伪的','They bought the materials under fictitious names.','他们用假名买下了那些材料。','His story is wholly fictitious.','他的故事全是编造的。'}

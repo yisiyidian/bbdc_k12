@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conservative"]={"conservative","[kən'sɜːvətɪv]","[kən'sɝvətɪv]","adj.保守的",'adj.保守的,守旧的|||n.保守派(党),保守的人','His views lack consistency: one day he\'s a conservative, the next he\'s a liberal.','他的观点缺乏一贯性: 时而保守, 时而开明.','The ||Conservative|| Party won 230 seats in Parliament.','保守党在议会获得了230 个席位。'}

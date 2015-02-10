@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vituperative"]={"vituperative","[vɪ'tjʊpə,retɪv]","[ vi'tju:pərətiv ]","adj.辱骂的",'adj.辱骂的,责骂的','Many bloggers engage anonymously in vituperative online commentary.','许多博客作者以匿名方式在网上发表辱骂性的评论。','He is often the victim of vituperative remarks concerning his wealth.','他经常因为富有而受到辱骂。'}

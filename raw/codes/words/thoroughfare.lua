@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thoroughfare"]={"thoroughfare","['θʌrəfeə]","['θɝofɛr]","n.通路",'n.通路,大道','No thoroughfare!','此路不通！','The Strand is one of London\'s busiest thoroughfares.','斯特兰德大街是伦敦最热闹的要道之一。'}

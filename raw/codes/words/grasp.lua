@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grasp"]={"grasp","[grɑːsp]","[ɡræsp]","n.把握",'n.把握,抓紧,领会|||vt.抓住,紧握,领会','She has a good grasp of the English language.','她精通英语。','You must grasp this opportunity.','你必须抓住机会。'}

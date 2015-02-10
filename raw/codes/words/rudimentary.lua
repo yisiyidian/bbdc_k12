@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rudimentary"]={"rudimentary","[,ruːdɪ'ment(ə)rɪ]","[,rudɪ'mɛntri]","adj.基本的(初步的",'adj.基本的(初步的,起码的,根本的)','I have only a rudimentary grasp of physics.','我对物理学只是略知皮毛。','The earth surface of the courtyard extended into a kind of rudimentary kitchen.','院子的泥土地面延伸进一间类似简易厨房的地方。'}

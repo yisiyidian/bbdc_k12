@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diadem"]={"diadem","['daɪədem]","['daɪədɛm]","n.王冠",'n.王冠,带状头饰,王权','Miss America\'s diadem was auctioned off for charity.','美国小姐的王冠被慈善拍卖。','A diadem was worn as sign of royal power.','戴着的皇冠是王权的象征。'}

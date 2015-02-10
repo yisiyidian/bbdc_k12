@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["beatitude"]={"beatitude","[bɪ'ætɪtjuːd]","[bɪ'ætɪtud]","n.至福",'n.至福,祝福，（耶稣所说的）八种祝福','Her favorite ||Beatitude|| is "Blessed are the meek for they shall inherit the earth".','她最喜欢的至福是：“保佑温顺的人，他们将继承土地”。','||Beatitude|| is a state of supreme happiness.','祝福语是一种最美好的陈述。'}

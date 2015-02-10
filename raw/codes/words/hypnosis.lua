@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hypnosis"]={"hypnosis","[hɪp'nəʊsɪs]","[hɪp'nosɪs]","n.催眠状态",'n.催眠状态','The theory or practice of inducing hypnosis.','催眠术引导睡眠的理论及实践','Bevin is now an adult and has re-lived her birth experience under hypnosis.','贝文现在已是成年人，在催眠状态下，她再次经历了出生过程。'}

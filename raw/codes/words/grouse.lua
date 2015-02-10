@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grouse"]={"grouse","[graʊs]","[ɡraʊs]","n.松鸡",'n.松鸡|||n.牢骚|||vi.埋怨，发牢骚','When they groused about the parking regulations, they did it with good humor.','他们总是非常幽默地表达对泊车规定的不满。','If you don\'t agree with me, please forget my grouse.','如果你的看法不同，请不必介意我的牢骚之言。'}

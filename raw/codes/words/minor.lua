@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["minor"]={"minor","['maɪnə]","['maɪnɚ]","adj.次要的",'adj.次要的,较小的,二流的,未成年的|||n.未成年人,辅修科目,[音乐]小调|||vi.辅修','You should be thankful to have escaped/that you have escaped with only minor injuries.','你仅受轻伤而脱险, 应感到欣慰.','The plan was approved, with some minor modifications.','那计画已批准, 仅作了些许更动.'}

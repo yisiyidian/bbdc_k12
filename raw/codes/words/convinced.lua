@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["convinced"]={"convinced","[kən'vɪnst]","[kən'vɪnst]","adj.信服的",'adj.信服的','I\'m not convinced your idea will work, but I\'ll keep an open mind for the moment.','我还没想通是否你的意见可行，不过我先考虑一下。','I am convinced of his honesty.','我对他的诚实深信不疑。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oak"]={"oak","[əʊk]","[ok]","n.橡树",'n.橡树,橡木|||adj.橡木制的','||Oak|| is a good type of wood for making furniture.','橡木是制作家具的好材料.','We planned to floor our room with oak.','我们计划用橡木材料给房间铺地板。'}

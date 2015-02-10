@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conspiracy"]={"conspiracy","[kən'spɪrəsɪ]","[kən'spɪrəsi]","n.阴谋",'n.阴谋','That conspirator was accused of conspiracy to murder.','那个同谋者被控参与谋杀。','He is a party to the conspiracy.','他参与了那次阴谋。'}

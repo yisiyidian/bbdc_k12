@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conscientious"]={"conscientious","[,kɒnʃɪ'enʃəs]","['kɑnʃɪ'ɛnʃəs]","adj.审慎正直的",'adj.审慎正直的,认真的,本着良心的','He\'s changed into a conscientious worker.','他已成为一个工作认真的人了。','The janitor is very conscientious.','那个管理员很认真。'}

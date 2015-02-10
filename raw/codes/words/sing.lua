@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sing"]={"sing","[sɪŋ]","[sɪŋ]","vt.唱",'vt.唱,鸣唱,用诗赞美,叫,响|||vi.唱歌|||n.合唱','She\'ll sing if we put the pressure on.','我们给她些压力她就会讲出来。','She was singing a lullaby to her child.','她正在给孩子唱摇篮曲。'}

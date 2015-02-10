@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["denigrate"]={"denigrate","['denɪgreɪt]","['dɛnɪɡret]","vt.诋毁",'vt.诋毁；使变黑；玷污','The critics have denigrated our efforts.','评论家贬低了我们的努力。','I didn\'t intend to denigrate her achievements.','我不是想贬低她的成绩。'}

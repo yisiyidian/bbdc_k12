@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["squalid"]={"squalid","['skwɒlɪd]","['skɔlɪd]","adj.肮脏的(悲惨的)",'adj.肮脏的(悲惨的)','He followed her up a rickety staircase to a squalid bedsit.','他跟着她上了一段摇摇晃晃的楼梯，来到了一间邋遢的卧室起居室两用房间。','The migrants have been living in squalid conditions.','移民们的生活条件一直非常差。'}

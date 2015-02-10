@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sinner"]={"sinner","['sɪnə]","['sɪnɚ]","n.罪人",'n.罪人|||n.流氓','The church is always willing to welcome repentant sinners back to the fold.','教会总是乐意欢迎忏悔的罪人回到信徒的行列中来。','||Sinner|| down, Kelly, no point of argue with him.','冷静些凯利, 没有必要同他争论。'}

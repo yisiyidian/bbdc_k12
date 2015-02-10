@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["agenda"]={"agenda","[ə'dʒendə]","[ə'dʒɛndə]","n.议事日程",'n.议事日程','This agenda will form the basis of our next meeting.','本议程将成为下次会议的中心议题。','If there is no objection, the agenda is adopted.','如果没有意见，议程就通过了。'}

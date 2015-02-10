@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["archaeologist"]={"archaeologist","[,ɑːkɪ'ɒlədʒɪst]","[,ɑrkɪ'ɑlədʒɪst]","n.考古学家",'n.考古学家','The archaeologist find some trace of an ancient civilization in that area.','考古学家们在那个地区发现了一些古代文明的遗迹。','The archaeologist has to get special permission to open up the grave.','这位考古学家要得到特别许可才能打开坟墓。'}

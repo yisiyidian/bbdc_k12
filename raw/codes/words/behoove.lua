@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["behoove"]={"behoove","[bɪ'huːv]","[ bi'hu:v ]","v.理应",'v.理应,有必要','It behooves you at least to try.','你至少应该试一试。','It behooves us to reflect on the matter.','我们有必要好好想想这件事。'}

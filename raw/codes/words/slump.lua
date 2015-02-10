@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slump"]={"slump","[slʌmp]","[slʌmp]","n.暴跌",'n.暴跌,意气消沉,(土地)下沉|||vi.猛然掉落,坍塌,大幅度下跌','The slump hit his business hard.','物价暴跌使他的生意大受打击。','The slump on Wall Street set up a chain reaction in stock markets around the world.','华尔街金融滑坡引起世界股票市场的连锁反应。'}

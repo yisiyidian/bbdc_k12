@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["maxim"]={"maxim","['mæksɪm]","['mæksɪm]","n.格言",'n.格言,箴言，普遍真理|||Maxim:马克西姆(姓氏)','Please lay the maxim to your heart.','请把此格言记在心里。','I believe in the maxim "if it ain\'t broke, don\'t fix it."','我相信这样一条箴言：“不破不修”。'}

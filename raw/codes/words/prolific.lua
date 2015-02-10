@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prolific"]={"prolific","[prə'lɪfɪk]","[prə'lɪfɪk]","adj.多产的",'adj.多产的,作品丰富的','Last year was a prolific period in the composer\'s life.','去年该作曲家一生中最多产的时期。','She is a prolific writer of novels and short stories.','她是一位多产的作家，写了很多小说和短篇故事。'}

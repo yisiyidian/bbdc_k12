@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["minuet"]={"minuet","[mɪnjʊ'et]","[,mɪnju'ɛt]","n.小步舞",'n.小步舞，小步舞曲','The music for or in the rhythm of the minuet.','米奴哀舞曲为米奴哀舞而写的舞曲或米奴哀舞节奏的舞蹈','A French peasant dance resembling the minuet.','加伏特舞一种法国农民的舞蹈，类似于小步舞'}

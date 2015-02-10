@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accomplishment"]={"accomplishment","[ə'kʌmplɪʃm(ə)nt; ə'kɒm-]","[ə'kɑmplɪʃmənt]","n.成就",'n.成就,完成','The series of paintings is quite an accomplishment.','这一系列的绘画真是了不起的成就。','The Apollo program was not so much a scientific achievement as a technical accomplishment.','阿波罗计划与其说是一项科学成果，不如说是一项技术成就。'}

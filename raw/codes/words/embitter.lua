@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["embitter"]={"embitter","[ɪm'bɪtə; em-]","[ɪm'bɪtɚ]","vt.使受苦",'vt.使受苦,使难受,加苦味于','The loss of all his money embittered the old man.','失去全部的钱，使这位老人甚为痛苦。','I was embittered by repeated failures.','我因屡次失败而苦恼。'}

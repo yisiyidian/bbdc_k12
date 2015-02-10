@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hateful"]={"hateful","['heɪtfʊl; -f(ə)l]","['hetfəl]","adj.憎恨的",'adj.憎恨的,可恨的,可恶的','Ironing shirts is a hateful job.','熨衬衫是件讨厌的工作。','The sight of food was hateful to the seasick girl.','那个晕船的女孩看到食物就感到厌恶。'}

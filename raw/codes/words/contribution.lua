@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["contribution"]={"contribution","[kɒntrɪ'bjuːʃ(ə)n]","[,kɑntrɪ'bjuʃən]","n.贡献",'n.贡献,捐款(赠)','Don\'t undervalue Jim\'s contribution to the research.','不要低估了吉姆在研究工作中的贡献.','There was no mention of her contribution.','没提到她的贡献.'}

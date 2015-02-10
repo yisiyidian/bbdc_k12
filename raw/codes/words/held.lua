@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["held"]={"held","[held]","[hɛld]","vt.(过去式和过去分词)拿住",'vt.(过去式和过去分词)拿住；保存；拘押；容纳|||vi.拿住；同意；保持不变；有效|||n.握住；保留；控制','Who previously held the record?','这个纪录原先由谁保持？','He was held with his arms pinioned together behind his back.','他被捉住反绑着双臂。'}

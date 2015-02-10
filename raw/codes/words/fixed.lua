@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fixed"]={"fixed","[fɪkst]","[fɪkst]","adj.固定的",'adj.固定的,不变的,准备好的|||v.修理,使...固定,决定|||vbl.修理,使...固定,决定|||[计算机]固定的','He received the fixed dole every month.','他每个月都能领到固定的救济金。','The hours of the meetings will be fixed at the monitor\'s discretion.','开会时间将由班长自行决定。'}

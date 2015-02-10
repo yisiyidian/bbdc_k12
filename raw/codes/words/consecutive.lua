@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consecutive"]={"consecutive","[kən'sekjʊtɪv]","[kən'sɛkjətɪv]","adj.连续的",'adj.连续的,连贯的','The policy of our Party is consecutive.','我党的政策始终如一。','It rained four consecutive days.','连续下了四天雨。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adaptation"]={"adaptation","[ædəp'teɪʃ(ə)n]","[,ædæp'teʃən]","n.适应",'n.改编,适应,改编成的作品','The play is an adaptation of a short novel.','这部戏剧是一部短篇小说的改编本','Branagh won two awards for his screen adaptation of Shakespeare\'s Henry the Fifth.','布拉纳因他对莎士比亚的《亨利五世》的荧幕改编而获了两次奖。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["yeast"]={"yeast","[jiːst]","[jist]","n.酵母",'n.酵母','Bread is raised with yeast.','面包使用酵母就会膨起。','||Yeast|| must be used in producing wine.','制酒时必须使用酵母菌。'}

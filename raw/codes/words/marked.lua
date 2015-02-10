@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["marked"]={"marked","[mɑːkt]","[mɑrkt]","adj.有记号的",'adj.有记号的,显著的,醒目的|||v.作记号,打分数,表示|||vbl.作记号,打分数,表示','The divisions between the various classes of society are not so sharply marked as they used to be.','现在社会上各阶级的区分不象过去那样明显了。','The check was marked void.','这张支票已经盖章无效了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["congressman"]={"congressman","['kɑŋgrəsmən]","[ 'kɔŋɡresmən ]","n.国会议员",'n.国会议员','According to the newspaper, the congressman is murdered.','根据报纸所述，议员是被谋杀的。','That congressman did not endorse unfair play, injustice and indecency, and thus joined the issue.','该国会议员反对（政治活动）卑鄙、奸诈、不正当的行径，就此确定了辩论的基础。'}

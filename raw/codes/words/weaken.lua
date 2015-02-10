@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["weaken"]={"weaken","['wiːk(ə)n]","['wikən]","v.使...弱",'v.使...弱,变弱,弄淡','Hunger and disease had weakened his constitution.','他饥饿与疾病交加，体质已削弱。','She weakened as the illness grew worse.','随着病情加重，她的身体日渐衰弱。'}

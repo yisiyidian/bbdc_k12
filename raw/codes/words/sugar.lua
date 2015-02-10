@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sugar"]={"sugar","['ʃʊgə]","['ʃʊgɚ]","n.糖",'n.糖|||vt.使甜,使具有吸引力|||vi.形成糖状,变成颗粒状,造枫糖浆','I bought him a packet of sugar.','我给他买了一袋糖果。','She put the sugar into the coffee and mixed them up with a spoon.','她把糖放进咖啡里，用勺子把它们混合起来。'}

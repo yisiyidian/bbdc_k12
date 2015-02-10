@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["threat"]={"threat","[θret]","[θrɛt]","n.威胁",'n.威胁,凶兆','Pollution poses a threat to the continued existence of this species.','污染对这一物种的继续生存造成了威胁。','The threat of war has depressed business activity.','战争的威胁使经济萧条。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["possession"]={"possession","[pə'zeʃ(ə)n]","[pə'zɛʃən]","n.所有",'n.财产,所有,拥有','The people had to gather up their few possessions and escaped abroad.','人们不得不收拾起仅有的一点财物逃到国外去。','He was found in possession of dangerous drugs.','他被发现藏有危险物品。'}

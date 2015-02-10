@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unsure"]={"unsure","[ʌn'ʃʊə]","[,ʌn'ʃʊr]","adj.不肯定的",'adj.不肯定的,不确定的,没有自信的','Beneath her self-confident surface, she\'s quite unsure of herself.','她看上去信心十足, 实际上很缺乏信心。','As if unsure of where she was, she hesitated and looked round.','她彷佛茫然不知身在何处, 犹犹豫豫向四周打量。'}

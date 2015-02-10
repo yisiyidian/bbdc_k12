@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conversion"]={"conversion","[kən'vɜːʃ(ə)n]","[kən'vɝʒn]","n.转变",'n.转变,改变信仰,换位','When he saw how the theory increased unemployment, he underwent quite a conversion.','当他看到这个理论加重了失业后，他彻底改变了看法。','Finally we made a conversion of raw materials into finished products.','最后我们把原材料转变成了成品'}

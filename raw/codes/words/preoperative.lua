@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["preoperative"]={"preoperative","[priː'ɒp(ə)rətɪv]","[ pri:'ɔpərətiv, -rei- ]","adj.操作前的(外科手术前的)",'adj.操作前的(外科手术前的)','preoperative preparations.','手术前准备工作','to return to preoperative levels','恢复到手术前水平'}

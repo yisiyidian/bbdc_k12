@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nonchalance"]={"nonchalance","['nɒnʃ(ə)l(ə)ns; 'nɒnʃəl(ə)ns]","[ 'nɔnʃələns, ,nɔnʃə'lɑ:ns ]","n.不关心",'n.不关心,无动于衷，冷淡','He conceals his worries behind a mask of nonchalance.','他装作若无其事，借以掩饰内心的不安。','Affecting nonchalance, I handed her two hundred dollar bills.','我装作一副无动于衷的样子，递给她200美元钞票。'}

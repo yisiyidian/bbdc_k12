@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clip"]={"clip","[klɪp]","[klɪp]","n.夹子",'n.夹子,别针,回形针,修剪,剪下来的东西|||vt.&vi.修剪,剪报,痛打,紧紧围住','She wore a diamond clip on her new dress.','她在新衣服上戴了一枚钻石别针。','We clipped our visit by a week.','我们将访问缩短了一周。'}

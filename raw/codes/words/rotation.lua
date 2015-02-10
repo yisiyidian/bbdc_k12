@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rotation"]={"rotation","[rə(ʊ)'teɪʃ(ə)n]","[ro'teʃən]","n.旋转",'n.旋转,循环','The seasons follow each other in rotation.','四季循环交替。','The chairmanship of the committee changes in rotation.','委员会主席一职是轮流担任的。'}

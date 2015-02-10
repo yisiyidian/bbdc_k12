@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["psychopathic"]={"psychopathic","[,saɪkə'pæθɪk]","[,saɪkə'pæθɪk]","adj.精神病的",'adj.精神病的，心理变态的|||n.精神变态者','A psychopathic murderer was terrorizing the city, stalking unsuspecting victims with an electric drill.','一个患有精神病的凶手带着电钻跟踪毫无戒心的被害人，使全市陷入恐慌。','He\'s psychopathic.','他有精神病。'}

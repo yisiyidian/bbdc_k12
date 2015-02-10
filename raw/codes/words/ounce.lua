@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ounce"]={"ounce","[aʊns]","[aʊns]","n.盎司",'n.盎司','Mischiefs come by the pound, and go away by the ounce.','【谚】灾来如山倒，灾去如抽丝。','An ounce of sugar has about 100 calories.','一盎司的糖含约100大卡的热量.'}

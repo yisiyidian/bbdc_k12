@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vandal"]={"vandal","['vændl]","[ 'vændəl ]","n.破坏他人或公共财产者",'n.破坏他人或公共财产者','All the seat-covers on the train had been torn by vandals.','列车上所有的椅套都被蓄意破坏者撕破了。','The damage to the painting was the work of vandal.','毁坏这幅画的事是恣意破坏公物的人干的。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["graphic"]={"graphic","['græfɪk]","['græfɪk]","adj.生动的",'adj.生动的,图表的|||n.图表','The book gave a graphic description of the war.','这本书生动地描述了战况。','When you send an e-mail you can also send a sound or graphic file as an attachment.','在发送电子邮件时，你也可以附上一份声音或图片文件。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fore"]={"fore","[fɔː]","[fɔr]","adj.在前的",'adj.在前的,以前的|||adv.在前面,在船头|||prep.在前|||n.前头，船头|||pref.前，预先','Most modern yachts have a fore and aft rig, but the old galleons were squared-rigged.','大多数现代化游艇配备的都是前后帆，而老式大帆船装的却是横帆。','The captain ordered two flags to be placed fore and aft.','船长吩咐在船头和船尾各挂一面旗子。'}

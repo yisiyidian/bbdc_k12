@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["secretary"]={"secretary","['sekrɪt(ə)rɪ]","['sɛkrətɛrɪ]","n.秘书",'n.秘书,部长,大臣,书记','That cheeky new secretary just pranced up to me and asked if I worked here!','那个冒失的新秘书兴冲冲地蹦跳到我跟前，问我是否在这里工作。','My secretary is an absolute gem.','我的秘书真是个难能可贵的人。'}

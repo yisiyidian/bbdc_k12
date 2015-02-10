@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["similarly"]={"similarly","['sɪməlɚli]","[ 'similəli ]","adv.相似地",'adv.相似地,类似地','We are similarly dressed.','我们的穿着差不多。','The brothers dress similarly.','兄弟俩穿得差不多.'}

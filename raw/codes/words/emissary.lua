@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emissary"]={"emissary","['emɪs(ə)rɪ]","['ɛmɪsɛri]","n.密使",'n.密使,特使','He had been engaged in emissary activity before he was discovered.','在被发现以前他一直从事间谍活动。','Mr. Miller was sent as an emissary for the peace talks.','米勒先生被作为特使派遣去参加和平谈判。'}

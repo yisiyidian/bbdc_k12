@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sphere"]={"sphere","[sfɪə]","[sfɪr]","adj.球体的",'adj.球体的|||n.范围,领域,球,球体','The earth is an oblate sphere.','地球是一扁圆球体.','The earth, sun and moon are spheres.','地球、太阳和月亮都是天体。'}

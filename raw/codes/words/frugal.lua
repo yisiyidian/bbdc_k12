@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["frugal"]={"frugal","['fruːg(ə)l]","['fruɡl]","adj.节俭的",'adj.节俭的','As far as oil energy is concerned, we cannot be too frugal.','就石油能源而言，我们愈节省愈好。','Not frugal; generous.','不节俭的；慷慨大方的'}

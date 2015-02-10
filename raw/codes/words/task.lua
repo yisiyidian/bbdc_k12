@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["task"]={"task","[tɑːsk]","[tæsk]","n.任务",'n.工作,任务|||vt.交给某人（任务)','It is an irksome task.','那是件令人厌烦的工作。','It\'s an arduous task.','这是一项艰巨的任务。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dejected"]={"dejected","[dɪ'dʒektɪd]","[dɪ'dʒɛktɪd]","adj.沮丧的",'adj.沮丧的,灰心的|||动词deject的过去式和过去分词形式','A person given to gloomy or dejected moods.','忧郁的人或情绪低落的人','Feeling or expressing despondency; dejected.','沮丧的，悲观的感觉或表现出失望的；沮丧的'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["superstructure"]={"superstructure","['suːpəstrʌktʃə; 'sjuː-]","['supɚstrʌktʃɚ]","n.上层建筑",'n.上层建筑|||n.上层结构，上部构造','A superstructure at the stern of a ship.','船楼，艉位于船尾部的上层结构','The frame or body of a ship, exclusive of masts, engines, or superstructure.','船壳，船体船的框架或主体，不包括桅杆、发动机和上层建筑'}

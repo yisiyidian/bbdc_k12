@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["homeland"]={"homeland","['həʊmlænd]","['homlænd]","n.祖国",'n.祖国','They were pining for their homeland in Asia.','他们思念着在亚洲的故乡。','The overseas are very glad to set foot on their homeland.','华侨们非常高兴地踏上祖国的土地。'}

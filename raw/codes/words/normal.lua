@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["normal"]={"normal","['nɔːm(ə)l]","['nɔrml]","adj.正常的",'adj.正常的,正规的|||n.常态,标准','He received four years of normal education at college.','他在大学受了四年正规教育.','It was several days before the floodwater sank and life returned to normal.','过了几天，洪水才退，生活恢复了正常。'}

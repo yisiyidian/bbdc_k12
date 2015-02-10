@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ubiquitous"]={"ubiquitous","[juː'bɪkwɪtəs]","[ju'bɪkwɪtəs]","adj.到处存在的",'adj.到处存在的,遍在的','We were plagued by the ubiquitous mosquito.','我们被无处不在的蚊子所困扰。','Is there no escape from the ubiquitous cigarette smoke in restaurants?','餐厅里就没有地方没有香烟的烟雾吗？'}

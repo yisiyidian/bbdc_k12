@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["serenade"]={"serenade","[serə'neɪd]","[,sɛrə'ned]","n.夜曲",'n.夜曲,小夜曲|||vt.为...弹奏或歌唱小夜曲|||vi.演奏小夜曲','In the interval a blond boy dressed in white serenaded the company on the flute.','幕间休息时,一位白衣金发的男孩用长笛为来宾演奏了一支小夜曲。','Placido Domingo sang his serenade of love.','普拉西多·多明戈演唱他的爱情小夜曲。'}

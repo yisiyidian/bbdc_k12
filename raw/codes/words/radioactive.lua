@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["radioactive"]={"radioactive","[,reɪdɪəʊ'æktɪv]","['redɪo'æktɪv]","adj.放射性的",'adj.放射性的','The radioactive material is stored in a special radiation-proof container.','放射性材料贮存在防辐射的特殊容器内.','There is a danger of serious contamination from radioactive waste.','放射性废弃物有严重污染的危险.'}

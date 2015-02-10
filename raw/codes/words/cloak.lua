@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cloak"]={"cloak","[kləʊk]","[klok]","n.斗蓬",'n.斗蓬,宽大外衣,掩护|||v.遮掩,隐匿','Dracula appeared, draped in a huge cloak.','吸血鬼披著一件大斗篷走了出来.','He was muffled in a cloak.','他裹在大衣里。'}

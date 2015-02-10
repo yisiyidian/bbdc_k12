@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["probability"]={"probability","[prɒbə'bɪlɪtɪ]","['prɑbə'bɪləti]","n.可能性",'n.可能性,或然率,机率','Having disappeared for long, he has been kidnapped in all probability.','他失踪了这么久十之八九是被绑架了。','In all probability he\'s already left.','他很可能已经离开了。'}

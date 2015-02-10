@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["burglar"]={"burglar","['bɜːglə]","['bɝɡlɚ]","n.窃贼",'n.窃贼','When the burglar heard their car he hopped it out of the window.','那窃贼听到他们汽车的声音就从窗口逃走了.','The guard loosed the dogs when the burglar alarm went off.','防盗警报器一响，警卫就放出了警犬。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flop"]={"flop","[flɒp]","[flɑp]","n.砰然落下",'n.砰然落下,失败|||v.笨重的摔,猛落,笨拙地抛下|||adv.噗通的摔','Despite all the publicity, her latest novel was a complete flop.','她的最新小说尽管广为宣传, 结果还是彻底失败.','I\'m ready to flop.','我要累倒了.'}

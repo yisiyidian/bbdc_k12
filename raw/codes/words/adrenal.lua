@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adrenal"]={"adrenal","[ə'driːn(ə)l]","[æd'rinl]","adj.肾上腺的",'adj.肾上腺的|||n.肾上腺','The outer layer of an internal organ or body structure, as of the kidney or adrenal gland.','皮层内部器官或身体结构的外层，如肾或肾上腺皮层','The surgical excision of one or both of the adrenal glands.','肾上腺切除术一个或一对肾上腺的外科切除手术'}

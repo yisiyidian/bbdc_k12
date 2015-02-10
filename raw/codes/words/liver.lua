@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["liver"]={"liver","['lɪvə]","['lɪvɚ]","n.肝脏",'n.肝脏','He\'s got a cancer in his liver.','他得了肝癌。','The poor man has a serious disease of the liver.','这个可怜的人患有严重的肝病。'}

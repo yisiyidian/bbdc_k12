@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tyre"]={"tyre","['taɪə]","['taɪɚ]","n.轮胎",'n.轮胎|||=tire（美）|||Tyre：提尔(古代腓尼基的有名港口，现属黎巴嫩)','I found a nail sticking in the tyre.','我发现轮胎上扎著一根钉子.','The closure of the car factory had a knock-on effect on the tyre manufacturers.','汽车厂关闭後, 轮胎制造商受到间接的影响.'}

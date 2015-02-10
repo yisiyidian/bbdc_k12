@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["valley"]={"valley","['vælɪ]","['væli]","n.山谷",'n.山谷；流域；溪谷','The river twines through the valley.','这条河流蜿蜒穿过山谷。','They traversed the valley on foot.','他们徒步走过这座山谷。'}

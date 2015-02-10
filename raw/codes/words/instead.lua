@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["instead"]={"instead","[ɪn'sted]","[ɪn'stɛd]","adv.代替",'adv.代替,反而','If you can\'t sign your name, make a cross instead.','你如果不会签名，画一个十字也可以。','In other words, you\'ll come instead. Right?','换句话说，你将代替他来，对吗？'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eight"]={"eight","[eɪt]","[et]","num.八",'num.八|||pron.八(个,只...)','I\'m hardly functional if I don\'t get eight hours\' sleep!','我要是不睡上八个小时就无法工作。','You are restricted to eight liters of duty-free wine.','携带的免税酒不得超过八升。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diploma"]={"diploma","[dɪ'pləʊmə]","[dɪ'plomə]","n.文凭",'n.文凭','Some people go back for their education to acquire another degree or diploma to impress the society.','有些人回到学校去接受教育，是想再取得一个学位或一张文凭，以增强自己在社会上的地位。','The college was nothing more than a diploma mill.','这个学院只不过是个文凭制造厂'}

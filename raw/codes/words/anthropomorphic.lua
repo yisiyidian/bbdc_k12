@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anthropomorphic"]={"anthropomorphic","[ænθrəpə'mɔːfɪk]","[,ænθrəpə'mɔrfɪk]","adj.神人同形的",'adj.神人同形的，拟人化的','The rabbits in his stories are anthropomorphic.','他故事里的兔子都是拟人化的。','The world of the gods is anthropomorphic, an imitative projection of ours.','神界是拟人化的，是模仿我们人类世界的一个投影。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brand"]={"brand","[brænd]","[brænd]","n.牌子",'n.燃烧的木条,剑,商标,牌子,烙印,类型|||vt.打烙印,污蔑,铭记','How well do you think this washing powder stacks up against your usual brand?','这种洗衣粉跟你常用的那种比怎麽样?','She\'s gone over to a milder brand of cigarettes.','她已改吸另一牌子味道较淡的香烟。'}

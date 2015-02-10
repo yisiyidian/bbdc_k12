@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grenade"]={"grenade","[grə'neɪd]","[ɡrə'ned]","n.手榴弹",'n.手榴弹，榴弹','A hand grenade exploded by accident and I got lost in the ensuing confusion.','＂一枚手榴弹意外地发生了爆炸, 接着是一片混乱, 使我不知所措。＂','A hand grenade was thrown at an army patrol.','一颗手榴弹被扔向陆军巡逻队。'}

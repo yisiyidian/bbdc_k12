@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vindicate"]={"vindicate","['vɪndɪkeɪt]","['vɪndɪket]","vt.维护",'vt.维护；证明…无辜；证明…正确','Her claim to the title was vindicated by historians.','她说她有权得到这一头衔，历史学家证明此事属实。','I consider that I\'ve been completely vindicated.','我认为已经证实了我完全无辜。'}

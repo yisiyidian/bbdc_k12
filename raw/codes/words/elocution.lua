@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["elocution"]={"elocution","[,elə'kjuːʃ(ə)n]","[,ɛlə'kjuʃən]","n.演讲艺术",'n.演讲艺术，演讲风格','When I was 11 my mother sent me to elocution lessons.','在我11岁的时候，妈妈把我送去学习演说技巧课程。','||Elocution|| is the study of formal speaking in pronunciation, grammar, style, and tone.','演讲艺术是研究正式演讲场合下发音,语法,演讲风格和语调的一门学问.'}

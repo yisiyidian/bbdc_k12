@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aristocratic"]={"aristocratic","[,ærɪstə'krætɪk]","[ə,rɪstə'krætɪk]","adj.贵族的",'adj.贵族的,贵族政治的','His aristocratic manners seemed ridiculous in this poor area.','在这个贫穷的地区, 他的贵族气派显得很可笑。','...a wealthy, aristocratic family.','…一个富有的贵族家庭。'}

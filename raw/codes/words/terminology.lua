@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["terminology"]={"terminology","[,tɜːmɪ'nɒlədʒɪ]","[,tɝmə'nɑlədʒi]","n.术语",'n.术语,术语学','In biological terminology life is divided into two groups: plants and animals.','在生物学术语中，生物分为两大类：植物和动物。','He particularly criticized the terminology in the document.','他特别批评了文件中使用的术语。'}

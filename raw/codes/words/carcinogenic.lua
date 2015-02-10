@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["carcinogenic"]={"carcinogenic","[,kɑːs(ɪ)nə'dʒenɪk]","[,kɑrsɪnə'dʒɛnɪk]","adj.致癌的",'adj.致癌的','Some industrial chemicals can be very toxic or carcinogenic.','一些工业用化学品具有高度毒性或是致癌物质。','carcinogenic','致癌的'}

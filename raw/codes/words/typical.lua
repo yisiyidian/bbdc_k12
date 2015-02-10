@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["typical"]={"typical","['tɪpɪk(ə)l]","['tɪpɪkl]","adj.典型的",'adj.典型的,有代表性的','This chair is typical of Anthony\'s way of designing furniture.','这把椅子是安东尼式家具设计的代表。','The play contains a number of typical Stoppard set pieces.','这出戏里有若干典型的斯托帕特式的场景.'}

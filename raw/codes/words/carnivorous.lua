@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["carnivorous"]={"carnivorous","[kɑː'nɪv(ə)rəs]","[kɑrˈnɪvərəs]","adj.食肉的",'adj.食肉的，（植物）食虫的','Lion is a kind of carnivorous animal.','狮子是一种肉食动物。','Snakes are carnivorous.','蛇都是食肉动物。'}

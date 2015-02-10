@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cafeteria"]={"cafeteria","[kæfɪ'tɪərɪə]","[,kæfə'tɪrɪə]","n.自助餐厅",'n.自助餐厅|||adj.有多种选择的','A lunchroom or cafeteria, especially one in a film or television studio.','内部餐厅速简餐厅或咖啡馆，尤指电影或电视工作室里','The cafeteria is short handed so we\'ll have to wait in line.','咖啡馆人手不够, 所以我们不得不排队等候。'}

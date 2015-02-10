@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["delirium"]={"delirium","[dɪ'lɪrɪəm]","[dɪ'lɪrɪəm]","n.精神错乱",'n.精神错乱,说谵语状态,热狂','The delirium fans call them goddess\'s name again and again.','狂热的粉丝们一遍又一遍地喊着他们女神的名字。','He was in delirium when he knew that his girl friend had left him.','得知女朋友离开他后，他精神错乱了。'}

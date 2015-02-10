@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wispy"]={"wispy","['wɪspi]","[ 'wispi ]","adj.小束状的",'adj.小束状的,稀的,稀','The half moon is hidden behind some wispy clouds.','半轮月亮躲在淡淡的云彩之后。','||Wispy|| willows stand along the road.','稀疏的杨柳沿路站立。'}

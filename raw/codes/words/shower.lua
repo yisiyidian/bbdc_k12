@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shower"]={"shower","['ʃaʊə]","['ʃaʊɚ]","vi.淋浴",'n.阵雨,淋浴|||vi.倾盆而下,淋浴|||vt.淋湿,下骤雨,使(大量东西)落在某人身上','Jack\'s shoes were caked with mud in a country road after a shower.','阵雨过后走在乡村小路上，杰克的鞋子上沾了些泥块。','The dancer was showered with praise.','那个跳舞的人备受称赞。'}

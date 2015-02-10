@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tussle"]={"tussle","['tʌs(ə)l]","['tʌsl]","n.扭打",'n.扭打,斗争,论争|||vi.扭打,打斗','I have a tussle to get the knife off him.','我与他扭打一阵才把刀子夺下。','I had a tussle to get the knife off him.','我与他扭打一阵才把刀子夺下.'}

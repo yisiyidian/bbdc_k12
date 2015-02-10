@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hitch"]={"hitch","[hɪtʃ]","[hɪtʃ]","n.猛拉",'n.猛拉,急促猛推,跛行,妨碍,免费搭车|||vt.拴住,连住,急拉,拉紧,免费搭车|||vi.蹒跚,被缠结,免费乘车','Can I hitch a ride with you?','我可以顺路搭乘你的车吗?','She hitched up her skirt so as not to get it wet.','她把裙子往上提起，免得弄湿了。'}

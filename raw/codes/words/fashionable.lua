@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fashionable"]={"fashionable","['fæʃ(ə)nəb(ə)l]","['fæʃnəbl]","adj.流行的",'adj.流行的,时髦的','Turn-ups are becoming fashionable again.','裤脚留卷边又时兴起来了.','Both items are not fashionable.','两个品种并不都很时髦。'}

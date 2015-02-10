@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["treasury"]={"treasury","['treʒ(ə)rɪ]","['trɛʒəri]","n.国库",'n.国库,宝库|||(大写)财政部,国债','The authorities believe there is a mole at the ||Treasury||.','当局认为财政部里有内奸.','A treasury, as of a nation or an organization.','国库，金库一个国家或一个组织的金库'}

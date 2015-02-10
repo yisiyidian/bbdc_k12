@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pithy"]={"pithy","['pɪθɪ]","['pɪθi]","adj.有髓的",'adj.有髓的,有力的,简练的','The critic gave the film a pithy review.','影评家给该电影作了精炼的评价。','Many of them made a point of praising the film\'s pithy dialogue.','他们中很多人特别赞扬了影片精炼的对白。'}

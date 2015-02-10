@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clergyman"]={"clergyman","['klɜːdʒɪmən]","['klɝdʒɪmən]","n.牧师",'n.牧师','He became a clergyman and remained so.','他成为牧师并且一直担任这样的工作。','The town clergyman took a strong stand against gambling.','镇上这位牧师表示坚决反对赌博行为。'}

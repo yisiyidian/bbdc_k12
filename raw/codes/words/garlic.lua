@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["garlic"]={"garlic","['gɑːlɪk]","['ɡɑrlɪk]","n.大蒜",'n.大蒜','His breath smelt of garlic.','他呼出的气中有蒜味.','Her breath stank of garlic.','她呼吸中有大蒜味.'}

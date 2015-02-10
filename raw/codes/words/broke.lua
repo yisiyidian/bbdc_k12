@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["broke"]={"broke","[brəʊk]","[brok]","adj.一文不名的",'adj.一文不名的|||vt.&vi.break的过去式,打破,断掉','A surge of demonstrators broke through the fence.','汹涌而来的示威者冲破了围栏。','The boys broke into shrill, excited cheering.','男孩子们突然迸发出刺耳的兴奋的欢呼声。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["equivocal"]={"equivocal","[ɪ'kwɪvək(ə)l]","[ɪ'kwɪvəkl]","adj.意义不明确的",'adj.意义不明确的,模棱两可的','Many were equivocal about the idea.','很多人对此观点都含糊其辞。','His equivocal response has done nothing to dampen the speculation.','他模棱两可的回应丝毫没有减弱人们的猜测。'}

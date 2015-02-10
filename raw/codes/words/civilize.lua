@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["civilize"]={"civilize","['sɪvəlaɪz]","[ 'sivilaiz ]","vt.使开化",'vt.使开化，使文明','His wife has had a ||civilizing|| influence on him.','他妻子对改进他言谈举止有潜移默化的影响.','Many a rough man has been civilized by his wife.','许多粗野的男人在妻子的开导下变得文雅了。'}

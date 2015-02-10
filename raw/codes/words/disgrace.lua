@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disgrace"]={"disgrace","[dɪs'greɪs]","[dɪs'ɡres]","n.耻辱",'n.耻辱,不名誉|||v.耻辱,使...失体面','He quit in disgrace over the bribe.','他因受贿而不光彩地辞职了。','He fell into disgrace with his companions.','他的朋友都看不起他。'}

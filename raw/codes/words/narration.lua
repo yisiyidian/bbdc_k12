@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["narration"]={"narration","[nə'reɪʃ(ə)n]","[nə'reʃən]","n.叙述",'n.叙述','The richness of his novel comes from his narration of it.','他小说的丰富多采得益于他的叙述.','The bare narration of the fact took two hours.','单是这事实的叙述就花了两小时.'}

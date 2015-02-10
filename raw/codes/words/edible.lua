@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["edible"]={"edible","['edɪb(ə)l]","['ɛdəbl]","n.食品",'n.食品,食物|||adj.可食用的','Is linseed oil edible?','亚麻籽油可以食用吗？','Some of the algae are edible.','有些藻类是可以吃的。'}

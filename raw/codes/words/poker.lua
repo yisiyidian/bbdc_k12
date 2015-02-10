@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["poker"]={"poker","['pəʊkə]","['pokɚ]","n.扑克",'n.扑克|||n.戳(或捅)的人,拨火棍','She dealt him a tremendous blow with the poker.','她用拨火棒重重地打了他一下.','He is poking the fire with a poker.','他正用通条捅火。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mainly"]={"mainly","['meɪnlɪ]","['menli]","adv.主要地",'adv.主要地','Oats mainly grow in cool climate.','燕麦主要生长在气候凉爽的地区。','Weasel lives mainly on rats and rabbits.','黄鼠狼主要以老鼠和兔子为食。'}

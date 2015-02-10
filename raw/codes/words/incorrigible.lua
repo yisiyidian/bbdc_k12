@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incorrigible"]={"incorrigible","[ɪn'kɒrɪdʒɪb(ə)l]","[ɪn'kɔrɪdʒəbl]","adj.无药可救的",'adj.无药可救的,积习难改的,固执的|||n.不可救药的人','Her husband is an incorrigible flirt.','她的丈夫是个积习难改的调情老手。','Gamblers are incorrigible optimists.','嗜赌的人是死不悔改的乐天派。'}

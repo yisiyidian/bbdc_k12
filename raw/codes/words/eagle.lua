@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eagle"]={"eagle","['iːg(ə)l]","['igl]","n.鹰",'n.鹰|||vt.(高尔夫）鹰击','The eagle seized its prey in a tenacious grip.','鹰将捕获物紧紧抓住.','The eagle poised in mid-air ready to swoop on its prey.','那鹰在半空中盘旋准备扑向猎物.'}

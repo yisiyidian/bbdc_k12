@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["haunch"]={"haunch","[hɔːn(t)ʃ]","[hɔntʃ]","n.腰",'n.腰,臀部,腰部，[建]梁腋','The dog was sitting on its haunches.','那狗蹲着。','The haunch of venison is delicious.','鹿的腰腿肉很好吃。'}

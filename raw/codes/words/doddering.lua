@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["doddering"]={"doddering","['dɒdərɪŋ]","['dɑdərɪŋ]","adj.震颤的",'adj.震颤的,蹒跚的','He reeled and swayed, doddering like a drunken man to keep from falling.','他像酒醉一样地晃荡着，好让自己不致跌倒。','He is doddering like a drunken man to keep from falling.','他像酒醉一样地晃荡着，好让自己不致跌倒。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["valedictory"]={"valedictory","[,vælɪ'dɪkt(ə)rɪ]","[,vælɪ'dɪktəri]","adj.告别的",'adj.告别的|||n.告别词，告别演说','He made a valedictory address after two years as chairman.','在担任了两年主席之后他发表了告别演说。','He listened to Howard give the valedictory address at high school graduation.','他听了霍华德在中学毕业典礼上作的告别演讲。'}

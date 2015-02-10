@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["angel"]={"angel","['eɪndʒ(ə)l]","['endʒl]","n.天使",'n.天使,天使般的人','She is lovely -- as much so as an angel.','她可爱得像个天使。','My little daughter is as lovely as an angel.','我的小女儿像天使一样可爱。'}

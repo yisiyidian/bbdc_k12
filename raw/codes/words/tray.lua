@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tray"]={"tray","[treɪ]","[tre]","n.盘",'n.盘,托盘,碟','Put the tray over there.','把托盘放到那边去.','I tripped over, dropping the tray I was carrying.','我绊了一下, 手中的托盘掉在地上了.'}

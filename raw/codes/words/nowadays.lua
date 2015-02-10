@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nowadays"]={"nowadays","['naʊədeɪz]","['naʊədez]","adv.现今",'adv.现今,现在|||n.现今,当今','||Nowadays|| we rely increasingly on computers for help/to help us.','现今人们越来越依赖计算机协助工作.','Lasers can be used to perform operations nowadays.','现在激光可以用来做手术。'}

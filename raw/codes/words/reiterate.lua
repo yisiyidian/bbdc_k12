@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reiterate"]={"reiterate","[riː'ɪtəreɪt]","[rɪ'ɪtəret]","vt.反覆地说",'vt.反覆地说,反覆地做','The teacher reiterates that rule.','老师重申了那条规则。','The captain reiterated the command to us.','上尉对我们重申了那项命令。'}

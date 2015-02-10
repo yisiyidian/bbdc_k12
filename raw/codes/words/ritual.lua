@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ritual"]={"ritual","['rɪtʃʊəl]","['rɪtʃuəl]","n.仪式",'n.仪式,典礼,宗教仪式,固定程序|||adj.仪式的,依仪式而行的，老规矩的，惯常的','Putting on a hat can be a ceremonious act, an elegant gesture in the ritual of dressing.','戴帽子被看作一种礼节性的举动, 是着装仪式上一个优雅的举动.','They were there to take part in a ritual act of concord.','他们在此参加这个友好的仪式.'}

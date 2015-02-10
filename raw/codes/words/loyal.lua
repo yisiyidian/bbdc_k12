@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["loyal"]={"loyal","['lɒɪəl]","['lɔɪəl]","adj.忠诚的",'adj.忠诚的,忠心的|||adv.忠诚地,忠实地|||n.忠贞,忠诚,忠实','We are loyal to our motherland.','我们忠于祖国。','He remained loyal to me through thick and thin.','他历尽艰辛始终都忠实於我。'}

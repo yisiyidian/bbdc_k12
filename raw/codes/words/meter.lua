@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["meter"]={"meter","['mitɚ]","['mitɚr]","n.公尺",'n.公尺,韵律,计量器|||vt.用表测量[计量,记录]','The gas meter is housed in the cupboard under the stairs.','煤气表安装在楼梯底下的柜橱里.','The boy is one meter tall in his stocking feet.','这个小男孩不穿鞋的身高是一米。'}

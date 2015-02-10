@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["birthday"]={"birthday","['bɜːθdeɪ]","['bɝθde]","n.生日",'n.生日','I received a set of gardening tools on my birthday.','生日那天，我收到一套园艺工具。','He gave her an expensive fur for her birthday.','他送给她一件昂贵的毛皮衣服作生 日礼物.'}

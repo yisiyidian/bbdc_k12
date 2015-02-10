@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["strut"]={"strut","[strʌt]","[strʌt]","n.高视阔步",'n.高视阔步,支柱,抗压材|||v.趾高气扬地走,用支柱支撑','He strutted in front of me like a peacock.','他像一只骄傲的孔雀一样在我前面趾高气扬地走着。','He got up to strut his stuff on the dance-floor.','他起身到舞池里炫耀自己的舞技。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shoal"]={"shoal","[ʃəʊl]","[ʃol]","adj.浅的",'adj.浅的|||n.浅水处，沙洲|||n.鱼群，一大群|||v.（使)变浅|||vi.群聚','Emigration have carry to its shore shoal of men and women.','移民使成群结队的男男女女来到了它的海岸。','The boat struck a shoal and fetched up all standing.','那艘船撞上浅滩突然停了下来。'}

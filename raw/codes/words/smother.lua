@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["smother"]={"smother","['smʌðə]","['smʌðɚ]","v.使...喘不过气",'v.使...喘不过气,使...窒息，掩饰，扼杀，厚厚地覆盖，焖，炖，煨|||n.窒息，浓烟（雾、尘等），混乱','He smothered the baby with a pillow.','他用枕头把婴儿闷死了.','||Smother|| the flames from the burning pan with a wet towel.','用湿毛巾把锅里的火扑灭.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plastic"]={"plastic","['plæstɪk]","['plæstɪk]","adj.塑料的",'adj.塑料的,可塑的,体态好的|||n.塑料,(外科)整形的,信用卡','A kind of plastic stuff is used to make the plates.','这些盘子是用一种塑料制造的.','Gently sand the plastic to provide a key for the paint.','用砂纸在塑料上轻轻打磨出粗糙面以便涂颜料。'}

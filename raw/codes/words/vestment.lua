@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vestment"]={"vestment","['ves(t)m(ə)nt]","['vɛstmənt]","n.(作礼拜时教士的)法衣",'n.(作礼拜时教士的)法衣,官服','a close-sleeved linen liturgical vestment worn by priests.','牧师穿的一种紧袖礼拜法衣。','she has a vestment','他有一件官服'}

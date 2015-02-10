@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["architecture"]={"architecture","['ɑːkɪtektʃə]","['ɑrkə'tɛktʃɚ]","n.建筑学",'n.建筑学,建筑业,建筑物,结构|||[总称]建筑物,建筑风格','The style of architecture originated from the ancient Greeks.','这种建筑风格起源于古希腊。','The new house he bought was colonial architecture.','他新买的房子是美国初期的建筑。'}

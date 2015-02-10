@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mistress"]={"mistress","['mɪstrɪs]","['mɪstrəs]","n.主妇",'n.主妇,女主人,情妇','If there were no husband, who will look after our mistress?','要是人间没了丈夫，试问谁会照顾我们这些主妇？','The poet addressed many poems to his mistress, praising her beauty.','这位诗人为他心爱的女子写了许多诗，歌颂她的美丽。'}

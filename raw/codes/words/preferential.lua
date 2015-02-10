@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["preferential"]={"preferential","[,prefə'renʃ(ə)l]","[,prɛfə'rɛnʃl]","adj.先取的",'adj.先取的,优先的,选择的','China\'s investment policy provide preferential treatment to foreign investor.','中国的投资政策为外国投资者提供了优惠待遇。','Nobody gets preferential treatment in this office!','本办事处无论对谁均一视同仁!'}

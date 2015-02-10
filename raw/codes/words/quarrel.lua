@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quarrel"]={"quarrel","['kwɒr(ə)l]","['kwɔrəl]","n.吵架",'n.吵架,争论,怨言|||vi.吵架,争论,挑剔','I would rather be laughed at than quarrel with him.','我宁愿被嘲笑，也不愿和他吵架。','The couple was quarreling furiously about whose turn it was to cook the dinner.','这对夫妇对该轮到谁做晚饭而激烈争吵着。'}

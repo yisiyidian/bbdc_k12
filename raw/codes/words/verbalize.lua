@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["verbalize"]={"verbalize","['vɜːb(ə)laɪz]","['vɝbəlaɪz]","vt.使变成动词",'vt.使变成动词(用词语描述,累赘)','I find it difficult to verbalize.','我感到很难用言语表达。','It is difficult to verbalize his lifetime of frustrations.','他坎坷的一生很难用言语来表达。'}

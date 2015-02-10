@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lecture"]={"lecture","['lektʃə]","['lɛktʃɚ]","n.演讲",'vt.&vi.讲课,教导|||n.演讲,教训,斥责','They could not follow the lecture.','他们听不懂这次演讲。','She ran over her notes before giving the lecture.','她讲课前把讲稿匆匆看了一遍.'}

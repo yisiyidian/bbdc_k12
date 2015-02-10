@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hunger"]={"hunger","['hʌŋgə]","['hʌŋɡɚ]","n.饥饿",'n.饥饿,渴望,饥馑|||v.饿,使...饥饿,渴望','||Hunger|| and disease had weakened his constitution.','他饥饿与疾病交加，体质已削弱。','||Hunger|| begets crime.','饥饿引起犯罪。'}

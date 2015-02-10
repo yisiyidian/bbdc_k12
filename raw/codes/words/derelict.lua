@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["derelict"]={"derelict","['derəlɪkt]","['dɛrəlɪkt]","adj.被抛弃了的",'adj.被抛弃了的,无主的,玩忽职守的|||n.遗弃物,被遗弃的人,玩忽职守者','The ship is derelict long.','这只船废弃已久。','I had never seen so many derelicts in one place.','我从未在一个地方见到过这么多无家可归的人。'}

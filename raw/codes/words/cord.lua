@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cord"]={"cord","[kɔːd]","[kɔrd]","n.绳索",'n.绳索,束缚|||vt.用绳索绑','A leather loop that slides to change the tension on the cord of a drum.','滑动皮环通过滑动以改变鼓弦张力的皮环','The dancer could kick over a cord four feet from the ground.','这位舞蹈家能把脚举到离地4英尺的绳索上面。'}

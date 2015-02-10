@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["palatable"]={"palatable","['pælətəb(ə)l]","['pælətəbl]","adj.愉快的",'adj.美味的,愉快的','The truth is not always very palatable.','事实真相并非尽如人意。','Mother provides palatable food for us everyday.','妈妈每天为我们提供可口的食物。'}

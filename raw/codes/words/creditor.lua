@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["creditor"]={"creditor","['kredɪtə]","['krɛdɪtɚ]","n.债权人",'n.债权人，债主','A homestead cannot be the subject of a sale by court order to satisfy creditor.','宅地不能成为法院命令的满足债权人所要求的销售对象。','The poor man ran away from his creditors.','这个穷人躲避他的债主。'}

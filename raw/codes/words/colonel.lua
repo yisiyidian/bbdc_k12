@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["colonel"]={"colonel","['kɜːn(ə)l]","['kɝnl]","n.上校",'n.上校','The colonel paraded his troops.','上校检阅自己的部队.','||Colonel|| Jones outranks everyone here.','琼斯上校比这里所有人的级别都高.'}

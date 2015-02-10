@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["evening"]={"evening","['iːv(ə)nɪŋ]","['ivnɪŋ]","n.晚上",'n.傍晚,晚上','The evening sky flamed with red and orange.','傍晚天空的颜色是一片火红和橘黄相间。','Could you come back home early this evening?','今天晚上你能早回家吗？'}

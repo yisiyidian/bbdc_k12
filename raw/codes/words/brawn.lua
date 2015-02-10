@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brawn"]={"brawn","[brɔːn]","[brɔn]","n.(尤指强壮的)肌肉",'n.(尤指强壮的)肌肉','He\'s got more brawn than brains.','他肌肉发达，头脑简单。','In this job you need both brains and brawn.','做这份工作既劳神又费力。'}

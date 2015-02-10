@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reconnaissance"]={"reconnaissance","[rɪ'kɒnɪs(ə)ns]","[rɪ'kɑnɪsns]","n.侦察",'n.侦察,搜察,勘察队','We set up reconnaissance of enemy movements.','我们加强了对敌军活动的侦察。','The aircraft will be used for reconnaissance rather than combat.','这架飞机将用于执行侦察任务而不是战斗任务。'}

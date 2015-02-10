@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["absorb"]={"absorb","[əb'zɔːb; -'sɔːb]","[əb'zɔb]","v.吸收",'v.吸收,吸引...的注意,使全神贯注','Plants can absorb carbon dioxide and release oxygen.','植物可以吸收二氧化碳释放氧气。','Plants absorb minerals and other nutrients from the soil.','植物从泥土中吸收矿物质和其他养料。'}

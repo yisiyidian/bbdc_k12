@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["barbecue"]={"barbecue","['bɑːbɪkjuː]","['bɑrbɪkju]","n.烤肉",'n.烤肉|||v.烤肉','If you\'re not busy Sunday, we\'d love to have you both over for a barbecue.','如果你周日有空，我们想请你们俩来吃烧烤。','We can\'t calculate on good weather for the barbecue.','我们不能指望著好天气才去烧烤.'}

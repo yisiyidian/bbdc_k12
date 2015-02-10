@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["palace"]={"palace","['pælɪs]","['pæləs]","n.宫殿",'n.宫殿|||adj.宫殿的,殿堂级的','There are many flocks of tourists in the palace.','宫殿里有好几群游客。','The carriage passed through the palace gate.','马车进入了宫殿的大门。'}

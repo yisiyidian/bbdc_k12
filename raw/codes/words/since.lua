@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["since"]={"since","[sɪns]","[sɪns]","conj.自从",'adv.后来|||conj.既然,因为,自从|||prep.自从','She moved to London last May and has since got a job on a newspaper.','她去年五月到伦敦，此後一直在报社工作。','How long is it since we visited your mother?','自从我们看望你母亲以来到现在有多长时间了？'}

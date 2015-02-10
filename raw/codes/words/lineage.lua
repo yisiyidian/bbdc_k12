@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lineage"]={"lineage","['lɪnɪɪdʒ]","['lɪnɪɪdʒ]","n.家系",'n.家系,血统','In the past, lineage was very important to a family.','以前，血统对于一个家庭来说是很重要的。','This is due to their direct lineage from primitive sorcery dance.','这是由于它直接来自原始巫舞之故。'}

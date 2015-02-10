@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seal"]={"seal","[siːl]","[sil]","n.印章",'n.印章,封条,海豹|||v.盖印,封闭,猎海豹','The seal on this bottle is broken.','这个瓶上的密封纸破开了。','The envelope was firmly sealed.','这个信封封得很严实。'}

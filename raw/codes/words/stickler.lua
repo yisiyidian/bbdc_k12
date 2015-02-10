@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stickler"]={"stickler","['stɪklə]","[ 'stiklə ]","n.坚持细节之人",'n.坚持细节之人,难题','Though my sister is a doctor, I don\'t think she is a stickler for neatness.','尽管我姐姐是一个医生，但我想她并没有洁癖。','She is a stickler about trifles.','她是个拘泥小节的人。'}

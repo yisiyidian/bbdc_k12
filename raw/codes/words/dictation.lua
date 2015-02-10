@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dictation"]={"dictation","[dɪk'teɪʃ(ə)n]","[dɪk'teʃən]","n.听写",'n.听写','I hated it if I ever had to take dictation from him.','如果我总是不得不作他的口授记录员，我会感到讨厌的。','We have a dictation every English class.','每次上英语课我们都进行听写测验.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["phenomenally"]={"phenomenally","[fə'nɑmənli]","[ fi'nɔminəli ]","adv.现象上地",'adv.现象上地,明白地','Interest in the subject has increased phenomenally.','人们对此事的兴趣激增.','The group have been phenomenally successful in Europe.','这个集团在欧洲非常地成功。'}

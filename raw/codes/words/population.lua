@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["population"]={"population","[pɒpjʊ'leɪʃ(ə)n]","[,pɑpju'leʃən]","n.人口",'n.人口','We have a growing population and therefore we need more food.','我们的人口在增长，因此我们需要更多的食物。','The entire population was wiped out by the terrible disease.','所有的居民都被可怕的疾病夺去了生命。'}

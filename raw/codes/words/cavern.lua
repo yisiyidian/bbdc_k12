@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cavern"]={"cavern","['kæv(ə)n]","['kævɚn]","n.大洞穴",'n.大洞穴|||vt.置于洞穴中，挖空','We shone our torches around the cavern.','我们用手电筒照着山洞。','A cavern was found by a traveler under the mountain.','一名游客在山下发现了一个大洞穴。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ethnographic"]={"ethnographic","[,eθnə'ɡræfɪk]","[ ,eθnə'ɡræfik ]","adj.民族志学的",'adj.民族志学的，人种志学的|||=ethnographical','Is Anonymity an Artifact in|| Ethnographic|| Research?','在人种学研究中，匿名信是伪造的吗？','I use ethnographic methodology to my study.','我使用民族志学的方法到我的研究中去。'}

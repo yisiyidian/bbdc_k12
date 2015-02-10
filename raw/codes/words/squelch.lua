@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["squelch"]={"squelch","[skweltʃ]","[skwɛltʃ]","vi.压扁(发出格喳格喳声)",'vi.压扁(发出格喳格喳声)|||n.格喳格喳声(静噪电路)','She squelched along the muddy path.','她沿着泥泞小径格吱格吱地走。','The army get bogged down in the thick squelch mud.','军队都陷入泥沼中，行进时烂泥扑哧作声。'}

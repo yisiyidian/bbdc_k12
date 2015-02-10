@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outweigh"]={"outweigh","[aʊt'weɪ]","['aʊt'we]","v.比...为重",'v.比...为重,比...重要,比...有价值','On balance, his accomplishments outweigh his faults.','权衡起来，他的成就要大于他的过失。','This outweighs all other considerations.','这一点是首要考虑的。'}

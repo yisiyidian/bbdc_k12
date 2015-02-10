@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ban"]={"ban","[bæn]","[bæn]","v.禁止",'n.禁令|||v.禁止|||vt.禁止,取缔','A ban on the importation of drugs had been issued recently.','最近已经发布了禁止进口毒品的法令。','The protesters showed their defiance of the official ban on demonstrations.','抗议者藐视官方的示威禁令.'}

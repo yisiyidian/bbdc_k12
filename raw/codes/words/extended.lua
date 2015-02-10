@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extended"]={"extended","[ɪk'stendɪd; ek-]","[ɪk'stɛndɪd]","adj.广大的",'adj.广大的,扩大范围的,长期的|||v.延长,扩充|||vbl.延长,扩充','He extended his hand to the new employee.','他主动与新雇员握手.','The horse was fully extended by the long ride up the mountain.','那匹马长途爬山已用尽力气了.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fabricate"]={"fabricate","['fæbrɪkeɪt]","['fæbrɪket]","vt.制造",'vt.制造；伪造；装配','They plan to fabricate a cinema next year.','他们计划明年建造一座电影院.','Tito had never had an occasion to fabricate an ingenious lie before.','蒂托从前还没有机会捏造一个货真价值的谎话。'}

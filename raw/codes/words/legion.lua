@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["legion"]={"legion","['liːdʒ(ə)n]","[ 'li:dʒən ]","n.军团",'n.军团,众多的人|||adj.很多的','I know you want adventure and, be that as it may, the Foreign ||Legion|| is not as glamorous as it appears in the films.','我知道你喜欢冒险，不过得想一想，“外国军团”并不像电影中出现的那样具有魅力。','The filmstar has a legion of admires.','那个影星有一大群崇拜者。'}

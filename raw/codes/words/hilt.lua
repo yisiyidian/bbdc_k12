@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hilt"]={"hilt","[hɪlt]","[hɪlt]","n.柄",'n.柄,刀把，剑柄','He had studded the sword hilt with jewels.','他在剑柄上镶嵌了宝石。','He hurts her with the hilt.','他用剑柄碰伤她了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["newly"]={"newly","['njuːlɪ]","['nuli]","adv.崭新",'adv.崭新,新改,以新方法','She laid the bouquet on the newly turfed grave.','她把这束花放置在新铺上草皮的坟墓上。','I potted up a flower in the newly bought flowerpot.','我把一棵花种到了新买的花盆里。'}

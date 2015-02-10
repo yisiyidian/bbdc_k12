@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vacuum"]={"vacuum","['vækjʊəm]","['vækjʊəm]","n.真空",'n.真空,空间,真空吸尘器|||adj.真空的,产生(利用)真空的|||vt.&vi.用吸尘器打扫','An empty space; a vacuum.','真空空间；真空','His wife\'s death left him a vacuum in his life.','他妻子的去世使他的生活变得空虚。'}

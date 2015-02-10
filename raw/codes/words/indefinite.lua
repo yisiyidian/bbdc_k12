@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indefinite"]={"indefinite","[ɪn'defɪnɪt]","[ɪn'dɛfɪnət]","adj.模糊的",'adj.模糊的,不确定的,无限的','A brief, indefinite interval of time.','瞬间一个短暂的、不确定的时间间隔','He gave me an indefinite answer.','他给我的答复模棱两可。'}

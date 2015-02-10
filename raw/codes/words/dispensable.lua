@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dispensable"]={"dispensable","[dɪs'pensəbl]","[dɪ'spɛnsəbl]","adj.不是必要的",'adj.不是必要的,可有可无的','Not necessary or important; dispensable.','非必要的或非重要的；非必需的','||Dispensable|| items of personal property.','个人财产中不必要的项目'}

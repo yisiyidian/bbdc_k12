@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shatter"]={"shatter","['ʃætə]","['ʃætɚ]","n.碎片",'n.碎片,乱七八糟的状态|||vt.打碎,破掉,散开|||vi.打破,脱落','The broken vase lay in shatters.','那只打碎了的花瓶的碎片撒了一地。','The glass shattered.','这杯子碎了。'}

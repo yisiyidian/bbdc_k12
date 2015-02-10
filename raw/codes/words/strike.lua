@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["strike"]={"strike","[straɪk]","[straɪk]","v.打",'n.罢工,打击,殴打|||v.打,撞,罢工','How does the idea strike you?','这想法你觉得怎样？','Enemy troops ||struck|| just before dawn.','敌军在拂晓前发起了进攻。'}

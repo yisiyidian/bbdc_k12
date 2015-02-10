@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["luxury"]={"luxury","['lʌkʃ(ə)rɪ]","['lʌɡʒəri]","n.奢侈",'n.奢侈,豪华,奢侈品','The increasing sale of luxury goods is an index of the country\'s prosperity.','奢侈商品销售量日增是该国繁荣的标志.','The government has imposed strict controls over the import of luxury goods.','政府对奢侈品的进口采取了严格的管制。'}

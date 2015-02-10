@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["illness"]={"illness","[ˈɪlnəs]","['ɪlnəs]","n.病",'n.病,疾病','He will pull through his illness soon.','他很快就会恢复健康的。','Worry and illness had made him prematurely old.','他心事重重、 疾病缠身, 落得个未老先衰.'}

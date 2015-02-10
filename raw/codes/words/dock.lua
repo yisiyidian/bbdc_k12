@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dock"]={"dock","[dɒk]","[dɑk]","n.码头",'n.码头,船坞,(造)修船厂,尾巴的骨肉部分,被告席|||vt.进港,(减)剪短,对接|||vi.进港,对接','The liner is in dock for a refit.','班轮正在船坞修理.','The ship\'s hull scraped along the side of the dock.','船行时船身擦著码头的边.'}

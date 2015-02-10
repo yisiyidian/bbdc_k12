@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["monopoly"]={"monopoly","[mə'nɒp(ə)lɪ]","[mə'nɑpəli]","n.垄断",'n.垄断,专利,独占，控制','arrogantly claims to have a monopoly on the truth.','傲慢地宣称唯有其知晓真理','The telecommunication service is a government monopoly.','电信为政府专营。'}

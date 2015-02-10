@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thinker"]={"thinker","['θɪŋkɚ]","[ 'θiŋkə ]","n.思想者",'n.思想者','That famous progressive thinker was asked to deliver a speech at the meeting.','那位著名的进步思想家被邀请在会议上发表演讲。','a careful thinker.','一个认真的思想家'}

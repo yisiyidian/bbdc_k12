@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["retell"]={"retell","[riː'tel]","[,ri'tɛl]","v.复述",'v.复述|||vt.复述,再讲','The teacher asked the students to retell the story they just read.','老师要求学生们复述他们刚读的故事。','The students had to retell the story in their own words.','学生必须用自己的话复述这个故事.'}

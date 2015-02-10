@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coda"]={"coda","['kəʊdə]","['kodə]","n.[音]乐章结尾部",'n.[音]乐章结尾部,完结部|||n.(小说、戏剧等的）结局部分','The coda of this symphony excited the audience in the theater.','交响乐的完结篇振奋了在场的观众。','I extremely love the coda of this music.','我最喜欢这首音乐的结尾部分。'}

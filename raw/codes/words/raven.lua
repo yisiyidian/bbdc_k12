@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["raven"]={"raven","['reɪv(ə)n]","['revən]","n.大乌鸦",'n.大乌鸦|||adj.乌黑的|||v.掠夺','The lion was ravening the prey.','那只狮子在贪婪地吞食着捕获的猎物。','Her charming face was framed with raven hair.','她迷人的脸上垂落着乌亮的黑发。'}

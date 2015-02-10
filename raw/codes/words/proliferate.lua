@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["proliferate"]={"proliferate","[prə'lɪfəreɪt]","[prə'lɪfə'ret]","v.增殖",'v.增殖，增生,使...激增,使...扩散,迅速扩大','Rabbits proliferate when they have plenty of food.','兔子有充足的食物就会繁衍得很快。','There is a natural tendency for services to proliferate.','各种服务大量产生是一种自然趋势。'}

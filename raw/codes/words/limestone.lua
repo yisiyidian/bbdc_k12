@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["limestone"]={"limestone","['laɪmstəʊn]","['laɪmston]","n.石灰石",'n.石灰石','First, ore is mixed with coke and limestone.','先把铁矿石和焦碳、石灰石混合在一起。','The local limestone is very porous.','当地石灰岩渗透性很强。'}

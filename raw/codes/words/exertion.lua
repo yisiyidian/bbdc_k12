@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exertion"]={"exertion","[ɪɡ'zɜːʃn]","[ɪɡ'zɝʃən]","n.努力",'n.努力,发挥,运用','She was hot and breathless from the exertion of cycling uphill.','她骑车上山累得全身发热，喘不过气来。','He failed to lift the rock in spite of all his exertions.','他虽竭尽全力，但仍然未能将那石头搬起来。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indisputable"]={"indisputable","[ɪndɪ'spjuːtəb(ə)l; ɪn'dɪspjʊtəb(ə)l]","[ ,indis'pju:təbl ]","adj.无可争辩的",'adj.无可争辩的(无可置疑的,明白的)','The facts added together to build up an indisputable theory.','这些事实综合起来，构成了一个无可争辩的理论。','The indisputable fact is that computers carry out logical operations.','不容置疑的事实是，电脑执行逻辑操作指令。'}

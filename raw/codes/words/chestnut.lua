@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chestnut"]={"chestnut","['tʃesnʌt]","['tʃɛsnʌt]","n.栗子",'n.栗子，栗树，栗色，栗色马，七叶树，马的胼胝，陈词滥调|||adj.栗色的','The old man set spurs to his noble chestnut horse.','老人用刺马钉驱赶着他那栗色骏马。','Grab yourself a roast chestnut.','你自己拿一只烤栗子吧。'}

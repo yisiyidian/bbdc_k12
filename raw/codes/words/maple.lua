@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["maple"]={"maple","['meɪp(ə)l]","['mepl]","n.枫树",'n.枫树','The maple leaves are tinge with autumn red.','枫叶染上了秋天的红色。','The garden is flanked to the north with large maple trees.','花园的北侧是一些高大的枫树.'}

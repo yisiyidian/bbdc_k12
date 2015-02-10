@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sycophant"]={"sycophant","['sɪkəfænt]","['sɪkəfænt]","n.马屁精",'n.马屁精','He is a sycophant!','他是个马屁精！','Bestowing favor on a dubious sycophant often lead to the downfall of dynasties.','宠用奸佞是历代王朝亡国的重要原因。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["purported"]={"purported","[pɚ'pɔrtɪd]","[ pə:'pɔ:tid, 'pə:p-, 'pə:pə- ]","adj.传说的",'adj.传说的,谣传的','The ||purport|| of the statement is that the firm is bankrupt.','该项声明大意是说该商行已经破产。','The purported author of the story.','这个故事传说中的作者'}

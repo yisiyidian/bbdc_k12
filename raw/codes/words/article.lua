@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["article"]={"article","['ɑːtɪk(ə)l]","['ɑrtɪkl]","n.文章",'n.文章,物品,条款,冠词|||vt.定契约','I made minor alterations to the article.','我对这篇文章作了小规模的修改。','She asked him to contribute a biweekly article on European affairs.','她约他每两周写一篇有关欧洲情况的文稿。'}

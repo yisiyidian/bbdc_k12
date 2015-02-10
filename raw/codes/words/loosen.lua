@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["loosen"]={"loosen","['luːs(ə)n]","['lusn]","vt.放松",'vt.放松,松开,解除（便秘等），放宽|||vi.变松，松弛','They want to loosen their ties with Britain.','他们想要削弱同英国的关系。','The government\'s control over the newspapers has loosened in recent years.','近年来政府已放松了对报纸的控制。'}

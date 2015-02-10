@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abstruse"]={"abstruse","[əb'struːs]","[əb'strus]","adj.深奥的",'adj.深奥的','Einstein\'s theory of relativity is very abstruse.','爱因斯坦的相对论非常难懂.','some abstruse problem','深奥的问题'}

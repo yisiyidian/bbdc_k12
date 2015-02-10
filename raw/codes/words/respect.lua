@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["respect"]={"respect","[rɪ'spekt]","[rɪ'spɛkt]","vt.尊重",'n.尊敬,敬重;关系,方面|||vt.尊敬,尊重;关于,涉及','He commands the respect of all who know him well.','所有了解他的人都对他非常尊敬。','I deeply respect her courage.','我深深敬佩她的勇气。'}

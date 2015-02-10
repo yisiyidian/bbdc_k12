@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["maintenance"]={"maintenance","['meɪnt(ə)nəns; -tɪn-]","['mentənəns]","n.维护",'n.维护,保持,维修,生活费用|||n.供给,抚养;主张','||Maintenance|| of PC is in my element.','我对电脑的维修保养很在行。','A maintenance manual gives diagrams and instructions for repairing your car.','维修手册向您提供修理汽车所需的图表和说明。'}

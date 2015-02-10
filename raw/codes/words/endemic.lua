@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["endemic"]={"endemic","[en'demɪk]","[ɛn'dɛmɪk]","adj.风土的",'adj.风土的,地方的|||n.地方病,风土病','Malaria is endemic in many hot countries.','疟疾是许多热带国家的通病。','He said that racism is endemic in this country.','他说种族主义在该国很普遍。'}

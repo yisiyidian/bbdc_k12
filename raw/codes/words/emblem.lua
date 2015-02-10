@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emblem"]={"emblem","['embləm]","['ɛmbləm]","n.象徵",'n.象徵,徽章','The bell tower is the emblem of this city.','这座钟楼是这个城市的象征。','Being the owner of those corporations, she is regarded as an emblem of mammon.','作为那些公司的拥有者，她被视为财富的象征。'}

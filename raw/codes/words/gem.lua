@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gem"]={"gem","[dʒem]","[dʒɛm]","n.宝石",'n.宝石,珍品,受到宠爱或评价很高的人,松糕|||vt.用宝石装饰','The price of this gem is expensive -- as much as astronomical figures.','这个宝石的价格十分昂贵－－简直是个天文数字。','My secretary is an absolute gem.','我的秘书真是个难能可贵的人。'}

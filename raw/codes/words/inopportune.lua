@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inopportune"]={"inopportune","[ɪn'ɒpətjuːn; ,ɪnɒpə'tjuːn]","[ɪn,ɑpɚ'tun]","adj.失去时机的",'adj.失去时机的,不合时机的,不适当的','He called at an inopportune moment,when we were about to go out.','他来得真不是时候，我们正准备外出。','a storm blew up at an inopportune moment.','来的不是时候的暴风雨。'}

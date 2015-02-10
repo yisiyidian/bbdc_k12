@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bevy"]={"bevy","['bevɪ]","[ 'bevi ]","n.群",'n.群','Look, there comes a bevy of bright young officers.','看，来了一群充满活力的年轻军官。','A bevy men are together at the middle city square.','市中心的广场上聚集了一群人。'}

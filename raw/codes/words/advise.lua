@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["advise"]={"advise","[əd'vaɪz]","[əd'vaɪz]","vt.劝告",'vt.劝告,警告,通知|||vi.劝告,与...商量','She advises the Government on economic affairs.','她向政府提出经济方面的建议.','We advised that they should start early.','我们建议他们应该及早开始.'}

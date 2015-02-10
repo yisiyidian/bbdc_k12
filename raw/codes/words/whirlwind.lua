@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whirlwind"]={"whirlwind","['wɜːlwɪnd]","['wɝlwɪnd]","n.旋风",'n.旋风|||adj.旋风般的','She was swept off her feet by a whirlwind courtship.','狂热的求爱使她控制不住自己的感情。','A whirlwind destroyed the town.','旋风摧毁了这座城镇。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["superfluous"]={"superfluous","[suː'pɜːflʊəs; sjuː-]","[sʊ'pɝflʊəs]","adj.多余的",'adj.多余的，过剩的','He has already been told, so our comments are superfluous.','早就有人同他说过，所以我们的意见是多余的。','It would be superfluous to dwell on the matter any more.','不待赘言。'}

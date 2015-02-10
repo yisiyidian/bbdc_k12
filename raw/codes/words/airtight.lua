@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["airtight"]={"airtight","['eətaɪt]","['ɛrtaɪt]","adj.密封的",'adj.密封的,不透气的,无懈可击的','The goods are to be sent in airtight package.','这批货物应密封包装运送。','An airtight excuse.','无懈可击的借口'}

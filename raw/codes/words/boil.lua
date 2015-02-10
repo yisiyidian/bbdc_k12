@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["boil"]={"boil","[bɒɪl]","[bɔɪl]","v.沸腾",'v.沸腾,煮沸|||vi.沸腾|||vt.煮沸','The kettle is boiling.','壶里的水开了。','Bring the mixture to the boil, then let it simmer for ten minutes.','把混合物煮至沸腾，然後再用文火煮十分钟。'}

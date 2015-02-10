@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eon"]={"eon","['iːən]","['iən]","n.千万年",'n.千万年,永久|||=aeon','For eons, the pounding waves ate away at the shoreline.','亿万年来，海浪拍打和侵蚀着海岸。','My love for you will last for eons.','我对你的爱永恒不变。'}

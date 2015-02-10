@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["appreciative"]={"appreciative","[ə'priːʃətɪv]","[ə'priʃətɪv]","adj.有鉴识力的",'adj.有鉴识力的,感激的','He becomes more appreciative of the meaning of life and its permanent spiritual values.','他们对生活的意义和它永恒的精神价值变得更具欣赏力了。','Darkness would make him more appreciative of sight.','黑暗会使他更加珍惜视力。'}

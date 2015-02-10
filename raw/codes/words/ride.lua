@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ride"]={"ride","[raɪd]","[raɪd]","vt.&vi.骑",'n.乘坐,乘车,搭便车|||vt.&vi.骑,乘坐,经受住','It\'s only a 5-minute bus-ride to the park.','坐公共汽车去公园仅需5分钟.','She hasn\'t been out ||riding|| since the accident.','她自从出了事故以後，一直没有骑马外出过。'}

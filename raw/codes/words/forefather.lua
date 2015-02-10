@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forefather"]={"forefather","['fɔːfɑːðə]","['fɔr'fɑðɚ]","n.祖先",'n.祖先，先辈','One of his forefathers was an early settler in America.','他的祖先之一是美洲的早期移民。','He went to visit the graves of his forefathers.','他去拜谒他祖先的墓地。'}

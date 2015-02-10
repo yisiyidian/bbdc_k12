@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["low"]={"low","[ləʊ]","[ ləu ]","adj.低的",'n.低,低点(价),深度,牛叫声|||adj.低的,消沉的,低等的,粗俗的,衰弱的|||vi.牛叫','He laid his opponent low with a single punch.','他一拳就把对手打倒在地。','A man\'s voice is usually lower than a woman\'s.','男子的嗓音通常比女子的低。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["despicable"]={"despicable","[dɪ'spɪkəb(ə)l; 'despɪk-]","[dɪ'spɪkəbl]","adj.可鄙的",'adj.可鄙的,卑劣的','The Minister said the bombing was a despicable crime.','部长说这次爆炸是一起卑劣的罪行。','Ingratitude is a despicable vice.','忘恩负义是可鄙的不道德行为。'}

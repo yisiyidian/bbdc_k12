@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["freight"]={"freight","[freɪt]","[fret]","n.船货",'n.船货,运费,货运|||vt.装货,运送,使充满（某种心情或口气）','You can freight your belongings by air or sea.','你可把东西经空运或海运运去.','The Customs have found heroin hidden in freight.','海关查出了隐藏在货物中的海洛因.'}

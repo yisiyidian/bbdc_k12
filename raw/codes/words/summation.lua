@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["summation"]={"summation","[sʌ'meɪʃ(ə)n]","[sʌ'meʃən]","n.总和",'n.总和,和,合计','Her introduction is a model of fairness, a lively summation of Irish history.','她的导论是客观公正的典范，是对爱尔兰历史的生动概括。','This movie seems to be a summation of his career as a director.','这部电影被看做是他导演生涯的一个总结。'}

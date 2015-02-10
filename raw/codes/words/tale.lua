@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tale"]={"tale","[teɪl]","[tel]","n.叙述",'n.叙述,传说,故事','Dickens\' A ||Tale|| of Two Cities is a literary classic.','狄更斯的《双城记》是文学名著。','We laugh over this tale, but it\'s becoming almost as true of people.','我们笑着谈论此则故事, 但对人类来说, 情形也差不多一样。'}

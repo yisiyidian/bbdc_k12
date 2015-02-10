@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bereave"]={"bereave","[bɪ'riːv]","[bɪ'riv]","v.剥夺",'v.剥夺','The accident bereaved him of his wife and child.','车祸夺去了他的妻子和儿子的生命。','Indignation ||bereft|| him of speech.','他气愤得说不出话来。'}

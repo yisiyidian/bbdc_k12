@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reason"]={"reason","['riːz(ə)n]","[ˈrizən]","n.理由",'n.理由,原因,理智,理性|||vt.说服,总结|||vi.规劝,下判断','It stands to reason that nobody will work without pay.','做工作不能白做，这是明摆著的事。','He was excused by reason of his age.','他因为年龄的关系而得到宽恕。'}

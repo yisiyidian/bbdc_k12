@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nobility"]={"nobility","[nə(ʊ)'bɪlɪtɪ]","[no'bɪləti]","n.贵族",'n.贵族,高尚,贵族阶级','The English gentry is next below the nobility.','英国绅士的地位仅次于贵族。','The nobility usually resist social changes.','贵族通常反对社会变革。'}

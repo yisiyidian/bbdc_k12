@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["battery"]={"battery","['bæt(ə)rɪ]","['bætri]","n.电池",'n.电池,一系列,排炮','A captain commands a company or battery.','一个上尉指挥一个连队或炮兵连。','This battery is a dud.','这电池是废的.'}

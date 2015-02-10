@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gruff"]={"gruff","[grʌf]","[ɡrʌf]","adj.粗鲁的",'adj.粗鲁的，生硬的，粗糙的，粗哑的','His gruff manner made me angry.','他粗暴的态度让我生气。','His gruff exterior concealed one of the kindest hearts.','他粗暴的外表下藏着一颗非常善良的心。'}

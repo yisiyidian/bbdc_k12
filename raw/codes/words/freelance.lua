@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["freelance"]={"freelance","['friːlɑːns]","['frilæns]","n.自由作家;自由记者",'n.自由作家;自由记者','She work freelance so she do not have a regular income.','她是自由职业者, 所以她没有固定收入。','The going rate for freelance work is 5 an hour.','自由职业者的现行酬金是每小时5英镑.'}

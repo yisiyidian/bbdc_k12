@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pronunciation"]={"pronunciation","[prə,nʌnsɪ'eɪʃ(ə)n]","[prə'nʌnsɪ'eʃən]","n.发音",'n.发音','Your faults of pronunciation can be remedied.','你的发音毛病是可以纠正的。','You should look up the right pronunciation of this word in the dictionary.','你应该查字典找出这个单词的正确读音。'}

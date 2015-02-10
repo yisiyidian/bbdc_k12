@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["marine"]={"marine","[mə'riːn]","[mə'rin]","n.(海军)士兵或军官",'n.(海军)士兵或军官,海景画|||adj.海的,海事的,船舶的,航海的','Are there any other clauses in marine policies?','海运险还包括其它条款吗？','The risk of breakage is covered by marine insurance, isn\'t it?','破碎险是包括在海洋运输货物险之内的，对吗？'}

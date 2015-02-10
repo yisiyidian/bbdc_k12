@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hectare"]={"hectare","['hekteə; -ɑː]","['hɛktɛr]","n.公顷",'n.公顷','A hectare equals to 10,000 square metres.','一公顷等于10,000平方米。','The lands were to be sold at $ 2.50 per hectare.','土地的售价为每公顷2. 50美元.'}

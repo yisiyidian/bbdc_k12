@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pity"]={"pity","['pɪtɪ]","['pɪti]","n.同情",'n.遗憾的事,同情,可惜|||vt.&vi.同情,怜悯','He lay helpless in the street under the pitying gaze of the bystanders.','他零零地躺在路边，旁观的人都投以怜悯的目光。','We took pity on the homeless girl and took her into our house.','我们同情这个无家可归的女孩，让她住进了我们的屋子里。'}

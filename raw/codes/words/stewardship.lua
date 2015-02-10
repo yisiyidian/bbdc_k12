@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stewardship"]={"stewardship","['stjuːədʃɪp]","['stuɚdʃɪp]","n.管理工作",'n.管理工作；管事人的职位及职责','economic stewardship','经济管理权','The farm was quite a different place under Mom\'s stewardship.','这个农场在妈妈的管理下变得与众不同。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tractor"]={"tractor","['træktə]","['træktɚ]","n.拖拉机",'n.拖拉机,牵引车|||n.螺旋桨飞机','The tractor took up the slack and pulled the trailer out of the mud.','拖拉机拉紧拖缆把拖车从泥中拉了出来.','The tractor had been damaged by rough usage.','这辆拖拉机因使用不经心而损坏了。'}

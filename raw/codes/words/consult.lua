@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consult"]={"consult","[kən'sʌlt]","[kən'sʌlt]","v.向...请教",'v.商讨,向...请教,查阅','You had better consult a doctor soon.','你最好快点去看医生。','He paused to consult his notes, and then proceeded with his questions.','他停下来看了看笔记，然后继续提问。'}

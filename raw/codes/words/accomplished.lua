@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accomplished"]={"accomplished","[ə'kʌmplɪʃt; ə'kɒm-]","[ə'kɑmplɪʃt]","adj.娴熟的",'adj.娴熟的,有造诣的,完成的,有成就的,毫无疑问的|||动词accomplish的过去式和过去分词','The prediction was literally accomplished.','这个预言确实实现了。','Apparently impossible feats are now accomplished by science.','许多看起来不可能的伟大业绩现在已经由科学实现了。'}

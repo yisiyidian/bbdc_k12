@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["miracle"]={"miracle","['mɪrək(ə)l]","['mɪrəkl]","n.奇迹",'n.奇迹','It was nothing less than a miracle.','那完全是个奇迹。','This transaction is nothing less than a miracle.','这笔交易完全是一个奇迹。'}

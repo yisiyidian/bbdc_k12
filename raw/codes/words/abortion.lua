@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abortion"]={"abortion","[ə'bɔːʃ(ə)n]","[ə'bɔrʃən]","n.流产",'n.流产,堕胎','There has been much dispute over the question of legalized abortion.','堕胎合法化问题引起了许多争论.','The abortion issue is political dynamite.','堕胎问题在政治上是个爆炸性的问题.'}

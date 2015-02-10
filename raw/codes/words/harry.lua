@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["harry"]={"harry","['hærɪ]","['hæri]","vt.掠夺",'vt.掠夺,使...苦恼,侵掠','He is increasingly active in harrying the government in late-night debates.','他越来越活跃，在深夜辩论中不断攻击政府。','Today,people feel more hurried and ||harried||.','今天，人们感到更加忙碌和苦恼。'}

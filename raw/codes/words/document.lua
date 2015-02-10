@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["document"]={"document","['dɒkjʊm(ə)nt]","[ 'dɔkjumənt, 'dɔkjument ]","n.文件",'n.文件,公文|||vt.记载,用文件等证明|||[计算机]文档','This document carries the royal seal.','这份文件上盖有王室印章。','He persuaded her to sign the document by guile.','他设计说服她在文件上签字。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bequest"]={"bequest","[bɪ'kwest]","[ bi'kwest ]","n.遗赠物",'n.遗赠物,遗产,遗赠','He makes several bequest to his staff.','他在遗嘱中向他的工作人员作了好几次动产遗赠','He left bequest of money to all his servants.','他对所有的仆人都遗赠了一些金钱。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sniper"]={"sniper","['snaɪpə]","['snaɪpɚ]","n.狙击兵",'n.狙击兵，狙击手','||Snipers|| and irregulars fell on the hapless patrol.','狙击兵和非正规军袭击了巡逻队','The sniper snapped off six rapid shots.','狙击手迅速地连放了六枪。'}

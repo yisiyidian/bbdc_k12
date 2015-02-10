@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inaugural"]={"inaugural","[ɪ'nɔːgjʊr(ə)l]","[ɪ'nɔɡjərəl]","adj.就职典礼的",'adj.就职典礼的,创始的|||n.就职演说,就职典礼','The inaugural session closed at17:10 local.','开幕式在当地时间下午5点10分结束。','the inaugural issue of a magazine.','一本杂志的创刊号'}

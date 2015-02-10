@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["poetry"]={"poetry","['pəʊɪtrɪ]","['poətri]","n.诗歌",'n.诗歌','The sun and the moon are often personified in poetry.','诗歌中常把日、 月拟人化.','Anglo-Saxon poetry is formulaic.','盎格鲁-撒克逊诗歌很公式化。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["offender"]={"offender","[ə'fendə(r)]","[ə'fɛndɚ]","n.罪犯",'n.罪犯,冒犯者','The compassionate judge give the young offender a light sentence.','慈悲的法官从轻判处了那个年轻罪犯。','Pass judgment; pass sentence on an offender.','审布判决; 宣布对罪犯审判'}

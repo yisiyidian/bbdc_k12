@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["footnote"]={"footnote","['fʊtnəʊt]","['fʊt'not]","n.脚注",'n.脚注,补充说明|||vt.给...作脚注','That biography is an illuminate footnote to the history of our times.','那篇传记对我们这个时代是一个很有启发性的说明。','The asterisk refers the reader to a footnote.','星号是让读者参看脚注.'}

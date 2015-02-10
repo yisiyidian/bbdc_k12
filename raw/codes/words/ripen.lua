@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ripen"]={"ripen","['raɪp(ə)n]","['raɪpən]","v.(使)成熟",'v.(使)成熟','The corn ripens in the sun.','农作物在阳光下成熟。','The sun ripens the corn.','阳光使农作物成熟。'}

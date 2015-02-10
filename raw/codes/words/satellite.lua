@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["satellite"]={"satellite","['sætəlaɪt]","['sætəlaɪt]","n.卫星",'n.卫星,卫星城,随从','The bbc is hooked up with Australian television by satellite.','英国广播公司通过卫星与澳大利亚电视实行联播。','Troop movements can be observed from space by a satellite.','借助卫星可观察到部队的调动。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["woman"]={"woman","['wʊmən]","['wʊmən]","n.女人",'n.妇女,女人','The woman in this painting has a pensive smile.','这幅画上的女人脸上露出忧郁的微笑。','||Woman|| feels the invidious distinctions of sex exactly as the black man does those of color','女人所感受到的歧视待遇，与黑人所受的种族歧视并无差异'}

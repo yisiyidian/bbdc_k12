@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["covert"]={"covert","['kʌvət; 'kəʊvɜːt]","['kovɝt]","adj.隐蔽的",'adj.隐蔽的,偷偷摸摸的,隐密的n.藉口,树丛,蔽覆羽翮基部的羽毛','They have been supplying covert military aid to the rebels.','他们一直在暗地里向叛乱者提供军事支援。','The deer fled to a covert.','鹿逃入丛林中。'}

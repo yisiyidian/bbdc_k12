@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["all"]={"all","[ɔːl]","[ɔl]","adj.所有的",'adj.所有的,全部的|||adv.全部,非常,全然,所有|||pron.全部,所有|||n.全部','I realized I had had it in my pocket all along.','我发觉原来这一直就在我口袋里。','The party was all but over when we arrived.','我们到的时候，晚会几乎要结束了。'}

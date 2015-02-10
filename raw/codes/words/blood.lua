@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blood"]={"blood","[blʌd]","[blʌd]","n.血",'n.血,血统,仇恨|||vt.流血','The dog\'s fur was matted with blood.','那只狗的毛皮上沾有血迹。','After being insulted like that, my blood is really up!','受到这样的侮辱，我不禁怒火中烧！'}

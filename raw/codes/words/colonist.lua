@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["colonist"]={"colonist","['kɒlənɪst]","['kɑlənɪst]","n.殖民地居民",'n.殖民地居民,殖民者','Opposition by colonists to unfair taxation by the British was a precursor of the Revolution.','殖民地居民对英国不公正税收的反抗预示着革命的到来','The colonists took up weapons to rebel against the British ruler.','殖民地的人们拿起武器反抗英国统治者。'}

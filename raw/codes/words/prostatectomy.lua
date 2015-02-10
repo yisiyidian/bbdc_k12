@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prostatectomy"]={"prostatectomy","[,prɒstə'tektəmɪ]","[,prɑstə'tɛktəmi]","n.[医]前列腺切除术",'n.[医]前列腺切除术','prostatectomy prostate+anatomy','前列腺切除术','Check: In recent rat studies, the cells improved kidney function. Incontinence after prostatectomy?','相关研究：在最近的老鼠实验中，脂肪细胞改善了肾脏功能；前列腺切除术之后尿失禁？'}

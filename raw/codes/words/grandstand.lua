@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grandstand"]={"grandstand","['græn(d)stænd]","['ɡrænstænd]","n.正面看台",'n.正面看台,哗众取宠的表演|||adj.大看台|||v.哗众取宠的表演','He swiped the ball into the grandstand.','他把球打到看台上去了.','He smote the ball into the grandstand.','他把球打到看台上去了.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["corner"]={"corner","['kɔːnə]","['kɔrnɚ]","n.角落",'n.角落，角；拐角；困境；[商]囤积|||vi.驾车转弯；聚于角落|||vt.垄断；逼入困境|||adj.位于角落的','She\'ll need luck to get out of a tight corner like that.','她要靠运气才能摆脱那样的困境。','By defeating their main competitor this firm has cornered the wheat market.','这家公司击败了主要的竞争对手而垄断了整个小麦市场。'}

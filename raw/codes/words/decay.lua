@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decay"]={"decay","[dɪ'keɪ]","[dɪ'ke]","n.衰退",'n.衰退,腐败|||v.衰退,腐败','Dentists advise their patients to brush and floss regularly to prevent their teeth from decaying.','牙医建议他们的病人定期刷牙并用洁牙线剔牙，防止蛀牙。','The dentist could detect no decay in her teeth.','牙医检查了她的牙, 未见有龋齿.'}

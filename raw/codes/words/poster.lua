@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["poster"]={"poster","['pəʊstə]","['postɚ]","n.海报",'n.海报,招贴,脚夫|||v.贴海报于','The poster had been ripped to pieces.','那张广告画已被撕得粉碎。','The lettering on the poster is very eye-catching.','海报上的字体非常醒目.'}

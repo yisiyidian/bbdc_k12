@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["statue"]={"statue","['stætjuː; -tʃuː]","['stætʃu]","n.塑像",'n.塑像,雕像','The statue is twice life-size.','该雕像大小为实体的两倍。','The statue was carved (out of stone).','这座像是（用石头）雕刻的.'}

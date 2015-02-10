@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["radium"]={"radium","['reɪdɪəm]","['redɪəm]","n.[化]镭",'n.[化]镭','Tell me when radium was found.','告诉我镭是什么时候被发现的。','||Radium|| and uranium are radioactive elements.','镭和铀是放射性元素.'}

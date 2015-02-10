@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["synonym"]={"synonym","['sɪnənɪm]","['sɪnənɪm]","n.同义词",'n.同义词,换喻词','Don\'t mix up this pair of synonyms.','别把这两个同义词混淆了。','Sad and "unhappy" are synonyms.','sad和"unhappy"是同义字。'}

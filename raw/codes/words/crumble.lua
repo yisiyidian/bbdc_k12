@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crumble"]={"crumble","['krʌmb(ə)l]","['krʌmbl]","v.崩溃",'v.崩溃,弄碎,减亡','The earthquake made the wall sink and start to crumble.','这次地震把这堵墙震得下陷并开始崩塌.','He crumbled the bread in his fingers.','他用手指把面包捏碎了。'}

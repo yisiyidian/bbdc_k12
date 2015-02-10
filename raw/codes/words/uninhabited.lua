@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["uninhabited"]={"uninhabited","[ʌnɪn'hæbɪtɪd]","[,ʌnɪn'hæbɪtɪd]","adj.无人居住的(杳无人迹)",'adj.无人居住的(杳无人迹)','He was banished to an uninhabited island for a year.','他被放逐到一个无人居住的荒岛一年.','The region is uninhabited except for a few scattered mountain villages.','除了几个零星的小山村之外,这个地区杳无人烟.'}

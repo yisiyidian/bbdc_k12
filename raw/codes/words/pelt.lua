@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pelt"]={"pelt","[pelt]","[pɛlt]","n.皮毛",'n.皮毛，投掷,疾行|||vt.剥去皮毛，（连续）投掷|||vi.猛击，大步走','My hat is made of beaver pelts.','我的帽子是用海狸皮做的。','The crowds pelted bad eggs at the speaker.','群众纷纷向演讲人扔臭鸡蛋。'}

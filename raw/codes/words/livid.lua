@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["livid"]={"livid","['lɪvɪd]","['lɪvɪd]","adj.铅色的",'adj.铅色的','The scarred side of his face was a livid red.','他结了伤疤的那侧脸青紫发红。','His face was livid with anger.','他气得脸色发青。'}

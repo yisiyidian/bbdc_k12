@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["instability"]={"instability","[ɪnstə'bɪlɪtɪ]","[,ɪnstə'bɪləti]","n.不稳定",'n.不安定,不稳定,基础薄弱','The riot can be considered a symptom of political instability.','这次暴动可看作是政治上不稳定的征兆。','||Instability|| may arise at times of change.','变革时期可能会出现动乱.'}

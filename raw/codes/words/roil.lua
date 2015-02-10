@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["roil"]={"roil","[rɒɪl]","[ rɔil ]","vt.搅浑",'vt.搅浑,激怒|||vi.动荡','The water roiled to his left as he climbed carefully at the edge of the waterfall.','当他在瀑布边缘小心攀爬时，水就在他左边奔腾。','Financial markets have been roiled by the banking crisis.','银行业的危机搅乱了金融市场的秩序。'}

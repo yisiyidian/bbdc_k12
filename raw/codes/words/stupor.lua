@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stupor"]={"stupor","['stjuːpə]","['stupɚ]","n.昏迷",'n.昏迷,麻木,不省人事','He was in an alcoholic stupor.','他醉得不省人事。','He fell back onto the sofa in a drunken stupor.','他烂醉如泥，瘫倒在沙发上。'}

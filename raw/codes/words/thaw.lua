@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thaw"]={"thaw","[θɔː]","[θɔ]","n.融雪",'n.融雪|||v.使融解,暖和','The sudden thaw means that spring is here.','一朝解冻, 便是春天来到.','The ground has thawed out.','地上的冰雪已经融化了。'}

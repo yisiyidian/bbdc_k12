@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unable"]={"unable","[ʌn'eɪb(ə)l]","[ʌn'ebl]","adj.不能的",'adj.不能的,不会的|||v.不能,不会','The interruption of electricity made us unable to do anything.','电力的中断让我们什么也不能做。','unable to get to town without a car.','没有汽车无法到达城里'}

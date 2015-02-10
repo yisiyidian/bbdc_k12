@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sunburn"]={"sunburn","['sʌnbɜːn]","['sʌn'bɝn]","n.日灼",'n.日灼,晒伤|||v.晒黑，晒伤','Can you give me something for sunburn?','能否给我治太阳炙伤的药？','She applied calamine lotion to her sunburn.','他在晒斑上涂了一些炉甘石搽液.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exposure"]={"exposure","[ɪk'spəʊʒə; ek-]","[ɪk'spoʒɚ]","n.面临（困难）",'n.面临（困难），显露，暴露,揭露,曝光','||Exposure|| of the body to strong sunlight can be harmful.','身体受烈日暴晒会造成伤害。','The house has a southern exposure.','这房子向阳。'}

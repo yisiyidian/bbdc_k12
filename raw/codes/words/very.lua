@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["very"]={"very","['verɪ]","['vɛri]","adv.非常",'adj.真正的,完全的,自己的,仅仅的,同一个,特别的|||adv.真的,非常','She likes Beethoven very much.','她很喜欢贝多芬的作品。','You are the very man I\'m looking for.','你正是我要找的人。'}

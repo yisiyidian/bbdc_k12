@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["catching"]={"catching","['kætʃɪŋ]","['kætʃɪŋ]","adj.易传染的",'adj.易传染的,有魅力的,迷人的|||n.捕捉|||动词catch的现在分词形式','If we only allow five minutes for catching our train, we\'ll be cutting it too fine.','假如我们只留五分钟的时间赶火车, 那麽我们卡的时间就太紧了.','You are in danger of catching a cold if you don\'t take any medicine.','如果你不吃药的话, 就有感冒的危险。'}

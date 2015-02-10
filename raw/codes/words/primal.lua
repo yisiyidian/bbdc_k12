@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["primal"]={"primal","['praɪm(ə)l]","['praɪml]","adj.最初的",'adj.最初的,原始的，最主要的，根本的','He was the primal traitor, the earliest defiler of the Party\'s purity.','他是头号大叛徒, 第一个玷污了党的纯洁.','Money was a primal necessity to them.','对于他们,钱是主要的需要.'}

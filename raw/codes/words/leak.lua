@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["leak"]={"leak","[liːk]","[lik]","v.漏",'n.漏洞|||v.漏,泄漏|||vi.漏,渗','The details were supposed to be secret but somehow leaked out.','这些细节原属秘密，可是不知怎么给泄露出去了。','You must shut the gas supply off if there\'s a leak.','煤气泄漏时, 必须把截门关上.'}

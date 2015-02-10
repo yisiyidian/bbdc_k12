@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["woolen"]={"woolen","['wʊlɪn]","[ 'wulən ]","adj.羊毛的",'n.毛制品|||adj.羊毛的,羊毛制的,毛织的','It\'s getting cool and I have to take out my woolen gloves.','天气变冷了，我不得不把毛线手套拿出来了。','She wore a woolen scarf around her neck.','她脖子上戴了一条羊毛围巾。'}

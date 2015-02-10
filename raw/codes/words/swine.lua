@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swine"]={"swine","[swaɪn]","[swaɪn]","n.猪",'n.猪','With this customer, he felt himself, as it were, casting pearls before swine.','面对这个客商，他感到好像是在对牛弹琴。','A swine over fat is the cause of his own bane.','猪死都因身过肥；象以齿焚。'}

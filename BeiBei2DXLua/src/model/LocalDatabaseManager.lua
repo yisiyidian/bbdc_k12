@@ -97,19 +97,18 @@ function Manager.getWordInfoFromWordName(word)
     if s_WordDictionaryDatabase.allwords ~= nil then
         local raw = s_WordDictionaryDatabase.allwords[word]
         if not IS_DEVELOPMENT_MODE and raw == nil then
-            local w = require('model.words.' .. word)
+            s_WordDictionaryDatabase.allwords[word] = require('model.words.' .. word)
             raw = s_WordDictionaryDatabase.allwords[word]
         end
         if raw ~= nil then
-            ret.wordName           =   raw[1]
-            ret.wordSoundMarkEn    =   raw[2]
-            ret.wordSoundMarkAm    =   raw[3]
-            ret.wordMeaningSmall   =   raw[4]
-            ret.wordMeaning        =   raw[5]
-            ret.sentenceEn         =   raw[6]
-            ret.sentenceCn         =   raw[7]
-            ret.sentenceEn2        =   raw[8]
-            ret.sentenceCn2        =   raw[9]
+            ret.wordSoundMarkEn    =   raw[1]
+            ret.wordSoundMarkAm    =   raw[2]
+            ret.wordMeaningSmall   =   raw[3]
+            ret.wordMeaning        =   raw[4]
+            ret.sentenceEn         =   raw[5]
+            ret.sentenceCn         =   raw[6]
+            ret.sentenceEn2        =   raw[7]
+            ret.sentenceCn2        =   raw[8]
         end
     end
 

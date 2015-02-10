@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["biodegradable"]={"biodegradable","[,baɪə(ʊ)dɪ'greɪdəb(ə)l]","[,baɪodɪ'ɡredəbl]","adj.生物所能分解的",'adj.生物所能分解的','a biodegradable detergent.','生物可降解清洁剂','Scientists invented a new biodegradable material','科学家们发明了一种新的可生物降解的材料'}

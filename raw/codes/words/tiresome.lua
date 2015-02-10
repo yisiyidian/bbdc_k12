@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tiresome"]={"tiresome","['taɪəs(ə)m]","['taɪɚsəm]","adj.令人厌倦的",'adj.令人厌倦的,讨厌的','Causing physical or mental fatigue; tedious or tiresome.','乏味的使体力或智力疲倦的；乏味的或令人厌倦的','His speech is really tiresome.','他的演讲实在令人厌倦。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shipwright"]={"shipwright","['ʃɪpraɪt]","['ʃɪp,raɪt]","n.造船者",'n.造船者','His dream is to be a shipwright.','他的梦想是成为一名造船者。','Who is the shipwright?','谁是造船者？'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["volleyball"]={"volleyball","['vɒlɪbɔːl]","['vɑlɪbɔl]","n.排球",'n.排球','||Volleyball|| is a sport of which I am very fond.','排球是我很喜欢的运动。','I had made on the coach a good impression when I went out for volleyball.','我申请加入排球队时给教练留下了良好的印象。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mollycoddle"]={"mollycoddle","['mɒlɪkɒd(ə)l]","['mɑlɪkɑdl]","n.女性化的男人",'n.女性化的男人,娇生惯养的男人,没骨气|||v.溺爱,娇养','Christopher accused me of ||mollycoddling|| Andrew.','克里斯托弗指责我太宠着安德鲁。','You shouldn\'t mollycoddle your kids.','你不应该溺爱你的孩子。'}

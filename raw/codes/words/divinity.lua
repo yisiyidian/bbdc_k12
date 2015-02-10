@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["divinity"]={"divinity","[dɪ'vɪnɪtɪ]","[dɪ'vɪnəti]","n.神学",'n.神学，神性|||Divinity:神，上帝|||n.奶油蛋白软糖','A divinity presiding over forests and trees; a wood nymph.','德律阿得斯森林与树之神; 林中女仙','He made some pictures of the ||divinities|| of Hinduism.','他画了几幅印度教中的神像。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inconclusive"]={"inconclusive","[ɪnkən'kluːsɪv]","[,ɪnkən'klusɪv]","adj.非决定性",'adj.非决定性,不确定的,不得要领的','The jury found the evidence against the prisoner inconclusive and acquitted him.','陪审团发现控告囚犯的罪证不确凿，所以释放了他。','I find the evidence inconclusive.','我发现证据无说服力'}

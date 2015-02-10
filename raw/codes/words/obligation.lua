@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obligation"]={"obligation","[ɒblɪ'geɪʃ(ə)n]","[,ɑblɪ'ɡeʃən]","n.义务",'n.义务,责任','I have an obligation not to.','我有义务不这样。','Damaging the goods puts you under an obligation to buy them.','你损坏了这些商品，你就得都买下来。'}

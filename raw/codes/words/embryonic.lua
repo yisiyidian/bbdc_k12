@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["embryonic"]={"embryonic","[,embrɪ'ɒnɪk]","[,ɛmbrɪ'ɑnɪk]","adj.胚胎的",'adj.胚胎的,萌芽期的','The plan, as yet, only exists in embryonic form.','这个计划迄今为止还只是在酝酿之中。','Many person hold opposite attitude to experiment about embryonic cells.','许多人反对包括关于胚胎细胞的实验。'}

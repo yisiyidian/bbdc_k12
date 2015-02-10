@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incense"]={"incense","['ɪnsens]","['ɪnsɛns]","n.香",'n.香,香味,阿谀,恭维|||vt.对…敬香,熏香,使…激动,激怒','The monk burned a stick of incense in the incense burner.','和尚在香炉里焚上一柱香。','I was incensed at his rudeness.','我对他的粗鲁感到愤怒。'}

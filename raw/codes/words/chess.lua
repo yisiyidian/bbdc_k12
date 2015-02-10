@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chess"]={"chess","[tʃes]","[tʃɛs]","n.国际象棋",'n.国际象棋','My win at chess raised my spirits a little.','我赢了这盘国际象棋才打起了一点精神.','I\'m not very fond of playing chess.','我不太喜欢下棋。'}

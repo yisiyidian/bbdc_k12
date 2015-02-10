@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dehydrate"]={"dehydrate","[diːhaɪ'dreɪt; diː'haɪdreɪt]","[di'haɪdret]","v.（使）脱水",'v.（使）脱水,（使）干燥','Her body had dehydrated dangerously with the heat.','她因受酷热身体脱水，情况危殆。','Drinking lots of water can prevent from ||dehydrating||.','喝大量的水能防止脱水。'}

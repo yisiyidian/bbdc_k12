@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plight"]={"plight","[plaɪt]","[plaɪt]","n.困境",'n.困境,境况,誓约,艰难|||vt.宣誓,保证,约定','The television pictures brought home to us all the plight of the refugees.','我们从电视上知道了难民所处的一切困境.','The plight of the famine victims commands everyone\'s sympathy.','饥民的苦境值得大家同情.'}

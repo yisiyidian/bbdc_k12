@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pervert"]={"pervert","[pə'vɜːt]","[pɚ'vɝt]","vt.误用",'vt.误用(歪曲,曲解,败坏,使...反常)|||n.变态,色狼','That pervert again? He give me the creep.','那个色狼又出现了？他让我浑身起鸡皮疙瘩。','Reading such silly stories will pervert your taste for good books.','读这种愚昧的故事会败坏你对好书的嗜好。'}

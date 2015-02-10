@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brilliant"]={"brilliant","['brɪlj(ə)nt]","['brɪljənt]","adj.杰出的",'adj.灿烂的,有才气的,杰出的','She is brilliant but her work lacks organization.','她很有才华,但工作缺乏条理.','He has got brilliant achievements in the field of physics.','他在物理学方面已经取得了巨大成就。'}

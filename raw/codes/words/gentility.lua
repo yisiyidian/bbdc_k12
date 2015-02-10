@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gentility"]={"gentility","[dʒen'tɪlɪtɪ]","[dʒɛn'tɪləti]","n.有教养",'n.有教养,文雅，出身高贵','His gentility is purely made up.','他的文雅都是装出来的。','The hotel has an air of faded gentility.','这家酒店有一种没落的贵族氛围。'}

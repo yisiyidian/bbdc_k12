@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["countryside"]={"countryside","['kʌntrɪsaɪd]","['kʌntrɪsaɪd]","n.乡下",'n.乡下,农村','They have a summer residence in the countryside.','他们在乡间有夏季住宅。','We stood on the top of the mountain and surveyed the countryside.','我们站在山顶上，眺望乡村。'}

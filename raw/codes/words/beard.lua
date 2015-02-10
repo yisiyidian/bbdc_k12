@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["beard"]={"beard","[bɪəd]","[bɪrd]","n.胡须",'n.胡须|||vt.抓住胡须,公开反对','To my great amusement his false beard fell off.','使我感到极其好笑的是他的假胡子掉下来了.','Why don\'t you shave your beard off?','你怎麽不把胡子刮掉?'}

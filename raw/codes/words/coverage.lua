@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coverage"]={"coverage","['kʌv(ə)rɪdʒ]","['kʌvərɪdʒ]","n.涉及范围(如保险范围或储备金额)",'n.涉及范围(如保险范围或储备金额)，涂层，新闻覆盖率','The launch of their new saloon received much media coverage.','他们投产的新轿车广获传媒报道.','The television coverage of the event was rather sparse.','电视上对这件事报道很少。'}

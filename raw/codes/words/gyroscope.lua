@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gyroscope"]={"gyroscope","['dʒaɪrəskəʊp]","['dʒaɪrəskop]","n.陀螺仪",'n.陀螺仪,回转仪','The gyroscope in tank is used to stabilize the aim system of the gun.','坦克中的陀螺仪用于稳定火炮的瞄准系统。','a gyroscope for space station','一个用于空间站的回转仪'}

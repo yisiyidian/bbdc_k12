@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["immediate"]={"immediate","[ɪ'miːdɪət]","[ɪ'midɪət]","adj.立即的",'adj.立即的,即刻的,直接的,最接近的','Her arrest produced an immediate reaction from the press.','她被捕的事立刻在新闻界引起反应。','This work demands your immediate attention.','这件工作急需你立即处理。'}

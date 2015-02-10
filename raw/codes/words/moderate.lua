@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["moderate"]={"moderate","['mɒd(ə)rət]","['mɑdərət]","adj.适度的",'adj.适度的,稳健的,温和的,中等的|||v.节制,使...稳定,使...缓和|||n.稳健的人','His views are very moderate.','他的观点其实很温和.','The moderates have plenty to be anxious about.','温和派有许多问题要担忧。'}

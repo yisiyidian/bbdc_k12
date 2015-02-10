@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rigid"]={"rigid","['rɪdʒɪd]","['rɪdʒɪd]","adj.僵硬的",'adj.僵硬的,刻板的,严格的','The caste refers to social system based on rigid distinctions of birth, rank, wealth, etc.','社会等级是指按照血统，阶级，财富等严格区分的社会制度。','It\'s an exercise which adds a touch of the comic opera to his rigid training routines.','这一练习给他那刻板的训练程序平添了一份滑稽的色彩。'}

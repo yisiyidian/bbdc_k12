@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["revile"]={"revile","[rɪ'vaɪl]","[rɪ'vaɪl]","v.辱骂",'v.辱骂,斥责','He was just as feared and reviled as his tyrannical parents.','他和他专横残暴的父母一样为人惧怕和憎恨。','Use no reproachful language against any one; neither curse nor revile.','不要对任何人出言不逊，切忌诅咒、辱骂他人。'}

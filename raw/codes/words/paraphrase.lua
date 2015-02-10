@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["paraphrase"]={"paraphrase","['pærəfreɪz]","['pærəfrez]","n.释义",'n.释义,解述,改写|||v.改写,解述','||Paraphrase|| the following passage into two paragraphs.','把下面的段落改写成两段。','She gave us a paraphrase of that film.','她向我们复述了那部电影。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deficit"]={"deficit","['defɪsɪt; 'diː-]","['dɛfəsɪt]","n.赤字",'n.赤字,不足，缺乏','The current trade deficit indicates a serious imbalance between our import and export trade.','当前的贸易赤字表明我们的进出口贸易严重失调.','We have a great deficit this year.','我们今年有很大亏损。'}

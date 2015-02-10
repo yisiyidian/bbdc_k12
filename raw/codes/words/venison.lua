@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["venison"]={"venison","['venɪs(ə)n; 'venɪz(ə)n]","['vɛnəsn]","n.鹿肉",'n.鹿肉，野味','Some of the commercially produced venison resembles beef in flavour.','有些商业化养殖的鹿肉味道和牛肉很相似。','They had a wonderful lunch of salmon salad and roast venison.','他们吃了一顿很棒的午餐，有鲑鱼沙拉和烤鹿肉。'}

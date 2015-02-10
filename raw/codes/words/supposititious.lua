@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supposititious"]={"supposititious","[sə,pɒzɪ'tɪʃəs]","[sə,pɑzə'tɪʃəs]","adj.假想的",'adj.假想的','Argue  from  facts instead of supposititious hypotheses.','辩论要从事实出发，不要从假说出发。','supposititious hypotheses','假说'}

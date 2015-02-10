@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["condolence"]={"condolence","[kən'dəʊl(ə)ns]","[kən'doləns]","n.引",'n.引,哀悼,引辞','Shocked to learn of your mother death I express heartfelt condolence in your affliction.','惊悉你母亲去世，谨此表示深切的慰问。','Neil sent him a letter of condolence.','尼尔给他发了一封吊唁信。'}

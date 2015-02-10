@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["testimony"]={"testimony","['testɪmənɪ]","['tɛstə'moni]","n.证言",'n.证言,证据','I have reliance in the testimony of the witness.','我相信证人的证词。','Nothing could refute her testimony that the driver was drunk.','她关于那个司机已经喝醉的证词无可辩驳。'}

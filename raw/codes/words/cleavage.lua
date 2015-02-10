@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cleavage"]={"cleavage","['kliːvɪdʒ]","['klivɪdʒ]","n.分裂",'n.分裂,劈开,乳沟，卵裂','That new gown shows a large amount of (her) cleavage!','那件新的女长服袒露出（她）大部分乳沟!','her cleavage','乳沟'}

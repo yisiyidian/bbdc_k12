@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cookie"]={"cookie","['kʊkɪ]","['kʊki]","n.饼干",'n.饼干','A flat, brittle cookie spiced with ginger and sweetened with molasses.','姜饼一种薄而脆的饼干, 用姜汁调味并加糖蜜使之甜','A chewy cookie made with sugar, egg whites, and almond paste or coconut.','蛋白杏仁甜饼干一种不易咬碎的饼干, 用糖、蛋白、杏仁糊或椰子粉做成'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["substantial"]={"substantial","[səb'stænʃ(ə)l]","[səb'stænʃl]","adj.实质上的",'n.重要部份,本质|||adj.大量的,实质上的,有内容的','By careful strategy she negotiated a substantial pay rise.','她精心策画後, 谈妥了大幅增加工资的事.','I care more about the spiritual life than the substantial life.','和物质生活相比，我更注重精神生活。'}

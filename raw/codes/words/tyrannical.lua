@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tyrannical"]={"tyrannical","[tɪ'rænɪk(ə)l; taɪ-]","[tɪ'rænɪkl]","adj.暴虐的",'adj.暴虐的,压制的,残暴的','He has a tyrannical reign on his empire.','他是个残暴的皇帝。','She works for a tyrannical new boss.','她在一个专横的新上司手下工作。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imaginative"]={"imaginative","[ɪ'mædʒɪnətɪv]","[ɪ'mædʒɪnətɪv]","adj.富于想象力的",'adj.富于想象力的','Scott was an imaginative writer.','司格特是位富于想象力的作家。','The plan is very imaginative in conception.','这个计划在构思上很有想象力。'}

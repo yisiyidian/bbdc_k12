@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["complication"]={"complication","[kɒmplɪ'keɪʃ(ə)n]","[,kɑmplɪ'keʃən]","n.并发症",'n.并发症；复杂；复杂化；混乱','I have enough complication in my life.','我生活里的麻烦已经够多了。','A further complication was his refusal to travel by air.','更麻烦的是他不肯坐飞机旅行。'}

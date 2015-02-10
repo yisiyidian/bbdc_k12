@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prompt"]={"prompt","[prɒm(p)t]","[prɑmpt]","adj.迅速的",'adj.迅速的,敏捷的,立刻的|||vt.激起,促进,推动;提示|||vi.提示|||n.提示;提示的内容|||n.[商]付款期限','She\'s always prompt to criticize other people\'s ideas.','她总是迫不及待地批评别人的想法。','He is always prompt in answering letters.','他回信总是很快。'}

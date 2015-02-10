@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["test"]={"test","[test]","[tɛst]","n.测试",'n.测试,试验|||vt.测试,试验,接受测验,测得...|||adj.测试的','I got B minus in the test.','我在考试中得了个B-。','How did you do on your test?','　你这次考试的结果如何？'}

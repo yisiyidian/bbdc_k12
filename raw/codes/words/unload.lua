@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unload"]={"unload","[ʌn'ləʊd]","['ʌn'lod]","vt.卸下",'vt.卸下,卸货,摆脱...之负担,(大量)倾销|||vi.卸下货物，摆脱负担，退出（弹药，胶片等）','The ship was allowed to unload cargo on the wharf.','那艘船被允许在码头上卸货。','Lorries may only park here when loading or unloading.','卡车非装卸货物时不得在此停车。'}

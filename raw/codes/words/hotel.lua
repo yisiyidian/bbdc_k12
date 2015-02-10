@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hotel"]={"hotel","[həʊ'tel; əʊ-]","[ho'tɛl]","n.旅馆",'n.旅馆，宾馆，酒店，饭店','A free bus to the airport is a facility offered only by this hotel.','只有这家旅店提供免费乘车去机场的服务。','This is the identical hotel we stayed at last year.','这就是我们去年住过的旅馆。'}

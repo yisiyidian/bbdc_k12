@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["utopia"]={"utopia","[ju:'təupiə]","[ ju:'təupiə ]","n.理想国",'n.理想国,乌托邦','We weren\'t out to design a contemporary utopia.','我们并不是要设计一个现代乌托邦。','||Utopia|| can never exist in the human consciousness and text.','乌托邦永远只能存在于人类的意识和文字中。'}

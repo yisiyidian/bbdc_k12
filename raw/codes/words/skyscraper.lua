@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["skyscraper"]={"skyscraper","['skaɪskreɪpə]","['skaɪ'skrepɚ]","n.摩天大楼",'n.摩天大楼','A skyscraper built on a base of solid rock.','建筑在坚实岩石基础上的摩天高楼','A new skyscraper has been put up downtown.','市中心又建起了一座摩天大厦。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["currency"]={"currency","['kʌr(ə)nsɪ]","['kɝənsi]","n.货币",'n.货币;流通','There are currency restrictions on the sums allowed for foreign travel.','到国外旅行允许携带的款额有所限制。','The president proclaimed that a new currency would be issued.','总统宣布将发行新货币。'}

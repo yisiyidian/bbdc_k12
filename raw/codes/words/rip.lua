@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rip"]={"rip","[rɪp]","[rɪp]","n.拉裂",'n.拉裂,破绽,激流,浪荡子|||vt.撕裂,激昂地说,贬损|||vi.裂开,仓促地冲过...','ripped out a vicious oath.','恶毒的诅咒','The poster had been ripped to pieces.','那张广告画已被撕得粉碎。'}

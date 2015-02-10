@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["firecracker"]={"firecracker","['faɪəkrækə]","['faɪɚkrækɚ]","n.爆竹",'n.爆竹,鞭炮','The firecracker went off and scared Jack\'s dog.','爆竹响了, 吓了杰克的狗一跳。','Chinese children like to buy many firecrackers before the Spring Festival.','中国孩子会在春节前买很多鞭炮。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["regress"]={"regress","[rɪ'gres]","[rɪ'ɡrɛs]","v.倒退",'v.倒退，回归，退化|||n.退回回归，逆向思维','Many prisoners, on being freed, regress to a life of crime.','许多囚犯, 一旦获释, 仍去犯罪。','Many men, when very angry, regress to their childhood and show their bad temper by shouting and stamping their feet.','很多人, 盛怒之下又退回到孩提时代, 边大喊大叫边跺脚地发脾气。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ominous"]={"ominous","['ɒmɪnəs]","['ɑmɪnəs]","adj.预兆的",'adj.预兆的,不祥的','It was an ominous incident which foreshadowed worse things to come.','这是一场不吉利的事件，它预示着还要有更糟糕的事情发生。','Those black clouds look a bit ominous.','乌云压顶，来势不妙。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exam"]={"exam","[ɪg'zæm; eg-]","[ɪg'zæm]","n.考试",'n.=examination考试','He fails to pass the exam.','他考试不及格。','I don\'t want to take any more exams.','我不想再参加任何考试。'}

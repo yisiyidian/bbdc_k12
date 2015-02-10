@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decimal"]={"decimal","['desɪm(ə)l]","['dɛsɪml]","adj.十进位的",'adj.十进位的,小数的|||n.小数','The first twofigures after the decimal point indicate tenths and hundredthsrespectively.','小数点後的头两位数分别表示十分位和百分位.','Britain converted to a decimal currency system in 1971.','英国於1971年改行十进制货币体系.'}

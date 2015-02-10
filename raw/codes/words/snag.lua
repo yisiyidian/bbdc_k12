@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["snag"]={"snag","[snæg]","[snæɡ]","n.(隐伏的)障碍",'n.(隐伏的)障碍,残桩,划破处，抽丝处|||v.划破,碰到（暗礁或枯树上）,清除（暗礁等），迅速抓到','The negotiations struck a snag when the union leaders asked for paid holidays in addition to the usual wage increase.','当工会领袖们要求在通常的工资增加之外还应有带薪假日时，商谈遇到了阻碍。','I have a snag in my best black tights.','我最好的一条黑裤袜给划破了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["temporary"]={"temporary","['temp(ə)rərɪ]","['tɛmpə'rɛri]","adj.暂时的",'adj.暂时的,临时的|||n.临时工','They just reached a temporary agreement.','他们只达成了一个临时协议。','Her going on maternity  leave will create a temporary vacancy.','她休产假时将会有一个临时空缺.'}

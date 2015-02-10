@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["family"]={"family","['fæmɪlɪ; -m(ə)l-]","['fæməli]","n.家庭主妇",'adj.家庭的|||n.家庭','There are five people in my family.','我家里有五口人。','Some ||families|| have farmed in this area for hundreds of years.','有些家族在该地区务农已达数百年。'}

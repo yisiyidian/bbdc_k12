@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["suggestion"]={"suggestion","[sə'dʒestʃ(ə)n]","[sə'dʒɛstʃən]","n.建议",'n.建议,意见,迹象,暗示,联想','What a ridiculous suggestion!','多么荒唐的建议！','I put the computer over there at your suggestion.','根据你的建议，我把计算机放在那边了。'}

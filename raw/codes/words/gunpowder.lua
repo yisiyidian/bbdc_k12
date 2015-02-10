@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gunpowder"]={"gunpowder","['gʌnpaʊdə]","['ɡʌnpaʊdɚ]","n.火药",'n.火药','||Gunpowder|| is an explosive.','火药是一种爆炸物。','Sulphur can be used to make gunpowder.','硫磺可以用来制造火药。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["printer"]={"printer","['prɪntə]","['prɪntɚ]","n.打印机",'n.打印机，印刷工','This printer is compatible with most microcomputers.','这台打印机是与大多数微型电子计算机兼容的.','He moved to Leeds and set up as a printer.','他搬到利兹干起了印刷业.'}

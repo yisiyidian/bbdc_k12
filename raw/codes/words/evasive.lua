@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["evasive"]={"evasive","[ɪ'veɪsɪv]","[ɪ'vesɪv]","adj.逃避的",'adj.逃避的,回避的,托辞的','If the enemy attacks, take evasive action.','如果敌人进攻，就避其锋芒。','At least four high-flying warplanes had to take evasive action.','至少有4架高空飞行战斗机不得不采取避让行动。'}

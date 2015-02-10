@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["acidic"]={"acidic","[ə'sɪdɪk]","[ə'sɪdɪk]","adj.酸的",'adj.酸的,酸性的','The soil becomes more and more acidic as pollution mounts up.','随着污染的加剧，土壤的酸化越来越严重。','Dissolved carbon dioxide makes the water more acidic.','溶解的二氧化碳使水更具酸性。'}

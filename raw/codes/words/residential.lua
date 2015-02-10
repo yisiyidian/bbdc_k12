@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["residential"]={"residential","[rezɪ'denʃ(ə)l]","[,rɛzɪ'dɛnʃl]","adj.住宅的",'adj.住宅的,与居住有关的','The town is a residential suburb.','这个小镇是市郊住宅区.','Gradually the surrounding farmland turned residential.','周围的农田渐渐变成了住宅区。'}

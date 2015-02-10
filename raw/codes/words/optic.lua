@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["optic"]={"optic","['ɒptɪk]","['ɑptɪk]","adj.光的(视觉的)",'n.镜片|||adj.光的(视觉的)','His optic nerve was hurt in an accident.','他的视神经在一次事故中受到损伤。','The optic nerve is a part of the brain.','视觉神经是大脑的一部分。'}

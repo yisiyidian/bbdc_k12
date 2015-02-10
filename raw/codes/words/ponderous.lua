@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ponderous"]={"ponderous","['pɒnd(ə)rəs]","['pɑndərəs]","adj.笨重的",'adj.笨重的,笨拙的，乏味的','The elephant lowered its ponderous body into the water.','大象把它那笨重的身躯浸入水里。','her footsteps were heavy and ponderous.','她的脚步沉重而缓慢。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["behave"]={"behave","[bɪ'heɪv]","[bɪ'hev]","vt.&vi.举止",'vt.&vi.举止,行为,举止端正','It\'s hard to train children to behave well at the table.','培养儿童用餐时举止得体是很困难的。','||Behave|| yourself; don\'t make a fool of yourself.','注意你的举止, 别闹出笑话来。'}

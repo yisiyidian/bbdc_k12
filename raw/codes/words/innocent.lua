@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["innocent"]={"innocent","['ɪnəs(ə)nt]","['ɪnəsnt]","adj.无罪的",'adj.无罪的,不懂事的,无知的,无辜的','A man is accounted innocent until he is proven guilty.','一个人未被证明有罪前，被视为是清白的。','He declared that he was innocent.','他声称自己是无罪的。'}

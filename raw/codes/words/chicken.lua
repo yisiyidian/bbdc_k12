@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chicken"]={"chicken","['tʃɪkɪn]","['tʃɪkɪn]","n.鸡",'n.鸡,鸡肉,胆小,懦夫|||adj.懦弱的,胆小的','||Chicken|| pox used to be one of the classic childhood diseases.','水痘以前是一种典型的儿童期疾病。','The chicken was garnished with coriander and red chilli.','这道鸡配上了芫荽和红辣椒。'}

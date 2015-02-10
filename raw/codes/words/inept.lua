@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inept"]={"inept","[ɪ'nept]","[ i'nept ]","adj.不适当的",'adj.不适当的,无能的,笨拙的','He was criticized for his inept handling of the problem.','在处理问题上的无能表现令他饱受批评。','She is inept at dealing with people.','她不善与人打交道。'}

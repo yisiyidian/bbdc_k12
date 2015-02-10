@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disposition"]={"disposition","[dɪspə'zɪʃ(ə)n]","['dɪspə'zɪʃən]","n.性情",'n.性情,倾向,安排,处置,控制|||[计算机]配置情况','Joanna had a gentle retiring disposition.','乔安娜性格温柔而腼腆。','Is a sweet disposition a recommendation in a wife?','温和的性情是做妻子的可取之处吗？'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lullaby"]={"lullaby","['lʌləbaɪ]","['lʌlə'bai]","n.摇篮曲",'n.摇篮曲,催眠曲,任何轻柔的音乐|||v.唱摇篮曲使安眠，使安静','She was singing a lullaby to her child.','她正在给孩子唱摇篮曲。','All mothers like to sing ||lullabies|| to their babies.','所有的母亲都喜欢给她们的孩子唱摇篮曲。'}

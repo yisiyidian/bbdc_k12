@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sphinx"]={"sphinx","[sfɪŋks]","[sfɪŋks]","n.狮身人面像",'n.狮身人面像,谜一样的人','We set off to see the Pyramids and ||Sphinx||.','我们出发去看金字塔和狮身人面像。','It suited him to play the sphinx.','让他演神秘莫测的人很合适。'}

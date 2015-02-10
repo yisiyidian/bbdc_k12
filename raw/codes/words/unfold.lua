@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unfold"]={"unfold","[ʌn'fəʊld]","[ʌn'fold]","v.展开",'v.展开,开放,显露','The story unfolds as the film goes on.','随着影片的放映，故事情节展开了。','She gradually unfolded her plan to him.','她渐渐向他透露了自己的计划。'}

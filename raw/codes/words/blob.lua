@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blob"]={"blob","[blɒb]","[blɑb]","n.小圆块",'n.小圆块,小斑点,一滴|||vt.弄脏','||Blobs|| of paint were dotted around the canvas.','油画布上满是涂抹的颜料.','...a blob of chocolate mousse.','…一团巧克力奶油冻。'}

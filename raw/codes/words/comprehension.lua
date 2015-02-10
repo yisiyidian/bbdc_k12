@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comprehension"]={"comprehension","[kɒmprɪ'henʃ(ə)n]","[,kɑmprɪ'hɛnʃən]","n.理解(力)",'n.理解(力),领悟','The problem is above my comprehension.','这个问题超出我的理解力。“','It is above comprehension.','那是难于理解的。'}

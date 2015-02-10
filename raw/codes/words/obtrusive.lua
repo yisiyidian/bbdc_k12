@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obtrusive"]={"obtrusive","[əb'truːsɪv]","[əb'trusɪv]","adj.强迫人的",'adj.强迫人的,冒失的,莽撞的|||adj.突出的，引人注意的','These heaters are less obtrusive and are easy to store away in the summer.','这些加热器没那么碍眼，夏天收起来也很方便。','I find the music in the bar very obtrusive.','我觉得酒吧里的音乐太吵人了。'}

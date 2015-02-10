@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["staple"]={"staple","['steɪp(ə)l]","['stepl]","n.主要产物(要素)",'n.主要产物(要素),原料(地),U形(订书)钉|||adj.主要的,重要的|||vt.用订书机装订','He came out with his staple excuse that he was too busy.','他又拿出惯用的借口，说他太忙了。','Don\'t forget staples like sugar and salt when you go to the shops.','你去商店时，不要忘记买盐和糖之类的必备食品。'}

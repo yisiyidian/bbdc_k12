@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parcel"]={"parcel","['pɑːs(ə)l]","['pɑrsl]","n.包裹",'n.包裹,一块地|||vt.打包,分配|||adj.兼职的,部分的','He snipped the string and untied the parcel.','他剪断绳子，解开包裹。','He tied the parcel with twine.','他用细绳来捆扎包裹。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["viral"]={"viral","['vaɪr(ə)l]","['vaɪrəl]","adj.滤过性毒菌的",'adj.滤过性毒菌的,滤过性毒菌引起的','He is suffering from viral meningitis.','他患病毒性脑膜炎.','A variety of viral agents cause aseptic meningitis or meningoencephalitis.','各种病毒性因子可引起无菌性脑膜炎或脑膜脑炎.'}

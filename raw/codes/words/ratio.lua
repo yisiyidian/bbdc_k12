@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ratio"]={"ratio","['reɪʃɪəʊ]","['reʃɪo]","n.比",'n.比,比率','Men outnumber women here in the ratio of three to one.','此地男子数量以三比一超过女子。','The interval between any two frequencies having a ratio of 2 to1.','倍频程频率比率为2比1的两个频率的间隔'}

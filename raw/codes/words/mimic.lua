@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mimic"]={"mimic","['mɪmɪk]","['mɪmɪk]","adj.模仿的",'adj.模仿的,假的|||[计算机]模拟的|||vt.模仿','He mimicked his uncle\'s voice and gestures perfectly.','他把叔叔的声音和姿态模仿得惟妙惟肖。','This parrot is an amazing mimic.','这只鹦鹉很会学舌。'}

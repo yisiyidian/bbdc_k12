@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["verbose"]={"verbose","[vɜː'bəʊs]","[vɝ'bos]","adj.用字多的",'adj.用字多的,冗长,冗赘的','His writing is difficult and often verbose.','他的文章晦涩难懂，而且往往篇幅冗长。','verbose',',冗长'}

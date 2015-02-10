@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anathema"]={"anathema","[ə'næθəmə]","[ə'næθəmə]","n.咒逐",'n.咒逐,革出教门,被咒逐的人(物)|||n.令人极其讨厌的事','Violence was anathema to them.','他们对暴力深恶痛绝。','They launched a fresh anathema against him.','他们又发起了把他赶出教门的运动。'}

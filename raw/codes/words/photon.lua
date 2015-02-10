@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["photon"]={"photon","['fəʊtɒn]","['fotɑn]","n.光子",'n.光子，光量子','Those who know everything about photon will know everything in the world.','谁知道光子的一切，就能知晓世间的一切。','photon is a an abstract words','光子是一个非常抽象的单词'}

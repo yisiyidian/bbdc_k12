@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exert"]={"exert","[ɪg'zɜːt; eg-]","[ɪɡ'zɝt]","vt.运用",'vt.运用,施加（压力，影响等）','He exerted all his influence to make them accept his plan.','他用尽一切影响力使他们接受他的计划。','He likes to exert his authority.','他喜欢行使自己的权力'}

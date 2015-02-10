@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["continual"]={"continual","[kən'tɪnjʊəl]","[kən'tɪnjuəl]","adj.不断的",'adj.不断的,频繁的','Our photocopier is in continual need of running repairs.','我们的复印机经常需要检修.','I\'ve had enough of her continual chatter.','我已厌烦了她喋喋不休的闲谈。'}

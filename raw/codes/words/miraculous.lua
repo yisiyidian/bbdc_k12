@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["miraculous"]={"miraculous","[mɪ'rækjʊləs]","[mɪ'rækjələs]","adj.奇迹的",'adj.奇迹的,不可思议的','||Miraculous|| powers are credited to the relics.','人们认为这些早期遗物具有神奇的力量.','The relics are credited with miraculous powers.','这些早期遗物被认为具有神奇的力量.'}

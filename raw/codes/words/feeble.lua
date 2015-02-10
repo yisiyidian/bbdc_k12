@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["feeble"]={"feeble","['fiːb(ə)l]","['fibl]","adj.虚弱的",'adj.虚弱的,无力的','His feeble excuses soon tailed off (into silence).','他的藉口站不住脚, 很快就没词儿了（不作声了）.','This was his fatal defect; he was of feeble will.','这是他致命的弱点，他意志薄弱。'}

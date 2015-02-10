@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lattice"]={"lattice","['lætɪs]","['lætɪs]","n.格子",'n.格子,组合格子,格子状的东西|||v.制做格子,使成格子状','A crystal defect caused by the absence of an atom, an ion, or a molecule in a crystal lattice.','晶格空位在晶格里由于缺少一个原子、一个离子或一个分子造成晶格空位','We were crawling along the narrow steel lattice of the bridge.','我们沿着桥上狭窄的钢制格架往前爬。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swill"]={"swill","[swɪl]","[swɪl]","v.冲洗",'v.冲洗,痛饮|||n.冲洗，猪饲料','Make sure the garage is well swilled out.','请务必将车库里里外外都冲洗干净。','Having finished his coffee, he swilled out the mug and left it on the draining board.','喝完咖啡后，他涮了涮杯子然后把它放在滴水板上。'}

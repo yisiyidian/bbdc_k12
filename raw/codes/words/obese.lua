@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["obese"]={"obese","[ə(ʊ)'biːs]","[o'bis]","adj.极肥胖的",'adj.极肥胖的','The tendency to become obese is at least in part hereditary.','发胖至少有一部分是源于遗传。','||Obese|| people tend to have higher blood pressure than lean people.','肥胖的人往往比瘦人血压高。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["count"]={"count","[kaʊnt]","[kaʊnt]","v.计算",'v.计算,视为,依赖|||n.计数','He is young and inexperienced, but please do not count that against him.','他年轻又无经验，但请不要因此而小看他。','The referee counted him out in the first round.','裁判判定他在第一回合被击败。'}

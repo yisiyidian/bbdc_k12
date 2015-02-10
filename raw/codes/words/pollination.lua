@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pollination"]={"pollination","['pɑləneʃən]","[ pɔli'neiʃn ]","n.授粉",'n.授粉','The flowers get pollination by insects.','这些花通过昆虫授粉。','Without sufficient pollination, the growth of the corn is stunted.','没有充分的授粉，庄家的成长会抑制的。'}

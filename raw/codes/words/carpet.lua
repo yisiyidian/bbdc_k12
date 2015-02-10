@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["carpet"]={"carpet","['kɑːpɪt]","['kɑrpɪt]","n.地毯",'n.地毯,毛毯|||vt.铺以地毯,铺盖','He picked the watch up from the carpet.','他从地毯上把表捡起来。','This carpet is of Russian style.','这块地毯是俄国风格的。'}

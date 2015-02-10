@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parlous"]={"parlous","['pɑːləs]","[ 'pɑ:ləs ]","adj.危险的",'adj.危险的,不易对付的,麻烦的|||adv.非常地,极度地','A parlous journey on stormy seas.','在风暴海洋上的一次危险的旅行','I then said I had never known the Services reduced to such a parlous condition. This fairly put the cat among the canaries.','接着我说，我从来就不知道英国三军的力量削弱到如此危险的程度，我这话引起了轩然大波。'}

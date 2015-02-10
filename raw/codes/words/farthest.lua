@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["farthest"]={"farthest","['fɑːðɪst]","['fɑrðɪst]","adj.最远的",'adj.最远的,最久的|||adv.最远地','It\'s ten miles away, at the farthest.','最远不超过十英里.','Go to the farthest house in the village and I\'ll meet you there.','到村上最远的那座房子那儿去, 我在那里与你会面.'}

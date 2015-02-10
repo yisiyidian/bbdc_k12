@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reassure"]={"reassure","[riːə'ʃʊə]","[,riə'ʃʊr]","v.使...安心",'v.使...安心,再保证','The manager tried to reassure her that she will not lose her job.','经理试图使她解除疑虑，她是不会失去工作。','A glance in the mirror reassured him that his tie wasn\'t crooked.','他照了一下镜子，领带确实没有戴歪。'}

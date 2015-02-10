@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dome"]={"dome","[dəʊm]","[dom]","n.圆屋顶",'n.圆屋顶','Upward pressure from underlying magma domes the surface.','地下岩浆的向上推力使地面成圆顶形。','A band of grey hair encircled his bald dome.','他的秃头四周长着一圈灰白的头发.'}

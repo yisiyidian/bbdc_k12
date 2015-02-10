@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["symbiosis"]={"symbiosis","[,sɪmbɪ'əʊsɪs; -baɪ-]","[,sɪmbaɪ'osɪs]","n.共生",'n.共生,共栖','There is no other team with the privilege to have such a deep symbiosis with a football genius.','从没有任何一个球队与一个足球天才保持着如此深的特殊依附关系。','They live in a symbiosis with governments that they are financing.','他们与他们服务的政府互利共存。'}

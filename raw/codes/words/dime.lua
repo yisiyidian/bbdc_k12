@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dime"]={"dime","[daɪm]","[daɪm]","n.10美分(1角硬币)",'n.10美分(1角硬币),少量零钱','A dime is equivalent to ten pennies.','一角等于十分。','Can you give me a dime for two nickels?','你能不能用两个五分镍币给我换一个一毛的镍币？'}

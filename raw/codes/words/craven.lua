@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["craven"]={"craven","['kreɪv(ə)n]","['krevn]","adj.懦弱的",'adj.懦弱的,畏缩的|||n.懦夫','No man wants to be thought a craven person.','没有人愿意被认为是懦弱的人。','He is a craven deserter.','他是个胆小的逃兵。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["superior"]={"superior","[suː'pɪərɪə; sjuː-]","[su'pɪrɪɚ]","adj.优越的",'n.上级,高手,上标|||adj.上层的,上好的,出众的,高傲的','I\'ll report you to your superior officer!','我要把你的情况报告给你的上司！','He always does what his superiors tell him.','他惟上级之命是从。'}

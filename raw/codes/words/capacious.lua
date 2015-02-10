@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["capacious"]={"capacious","[kə'peɪʃəs]","[kə'peʃəs]","adj.容量大的",'adj.容量大的,广阔的,宽敞的','He has a capacious memory.','他记性非常好。','She carried a capacious bag.','她带着一个大包。'}

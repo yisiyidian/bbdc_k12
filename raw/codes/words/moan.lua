@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["moan"]={"moan","[məʊn]","[mon]","n.呻吟声",'n.呻吟声,悲叹声,抱怨声|||v.抱怨,呻吟|||vi.呻吟','Where\'s the doctor?\' he moaned.','｀医生在哪儿啊?＇他呻吟著问.','the eerie moan of the night wind.','夜风的可怕哀鸣'}

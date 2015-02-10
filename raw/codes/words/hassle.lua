@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hassle"]={"hassle","['hæs(ə)l]","['hæsl]","n.激战",'n.激战,争吵|||vi.争论|||vt.与...争辩,不断骚扰','It\'s a real hassle to get this child to eat.','使这孩子吃东西，真要费九牛二虎之力。','Changing trains with all that luggage was a real hassle.','带著那麽多行李换乘火车真是件麻烦事.'}

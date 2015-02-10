@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dowdy"]={"dowdy","['daʊdɪ]","['daʊdi]","adj.寒酸的",'adj.寒酸的,懒散的|||n.懒散的女人,邋里邋遢的女人','She makes me feel dowdy and ugly.','她让我自惭形秽。','Her clothes were clean but dowdy.','她衣着整洁但有点土气。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oscillation"]={"oscillation","[,ɒsɪ'leɪʃn]","[,ɑsɪ'leʃən]","n.振动",'n.振动,动摇,彷徨，振幅，单一的振动循环','Her oscillations in mood are maddening.','她喜怒无常能把人气疯。','the short-term oscillation of the share index','股票的短期振动'}

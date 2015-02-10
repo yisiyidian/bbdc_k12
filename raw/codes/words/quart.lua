@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quart"]={"quart","[kwɔːt]","[kwɔrt]","n.夸脱（容量单位）",'n.夸脱（容量单位）','It\'s just a little below the full nark. It\'ll take about a quart.','刚好略低于注满标记。需要再加大约1夸脱。','He still takes his quarts.','他现在还是照常喝大满杯的啤酒。'}

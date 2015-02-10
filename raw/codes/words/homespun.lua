@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["homespun"]={"homespun","['həʊmspʌn]","['homspʌn]","adj.家里(织)的",'adj.家里(织)的|||n.手织品','This is a homespun hat.','这是一顶手织的帽子。','The book is simple homespun philosophy.','这本书阐述的是简单朴实的哲学。'}

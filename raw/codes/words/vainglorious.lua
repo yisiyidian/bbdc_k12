@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vainglorious"]={"vainglorious","[,veɪn'ɡlɔːrɪəs]","[ ,vein'ɡlɔ:riəs ]","adj.自以为了不起的",'adj.自以为了不起的,非常自负的,虚荣心强的','He was silent for a minute, casting about for the least vainglorious way in which to express himself.','他沉默了一会儿，想找到个谦虚点的方式表达自己的意思。','She is a vainglorious woman.','她是个爱虚荣的女性。'}

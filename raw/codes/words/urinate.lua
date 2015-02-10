@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["urinate"]={"urinate","['jʊərɪneɪt]","['jʊrənet]","v.小便",'v.小便','May I use your lavatory I\'m bursting! ie I need to urinate urgently.','我可以用用你们的厕所吗--我实在憋不住了.','You can also urinate on burning people while delivering witticisms like "Now the flowers will grow."','你可以一边向燃烧的人小便，一边说着俏皮话：“花儿正在长大”。'}

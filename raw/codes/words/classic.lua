@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["classic"]={"classic","['klæsɪk]","['klæsɪk]","adj.古典的",'n.古典作品,杰作,第一流艺术家|||adj.第一流的,最优秀的,古典的','This church is a classic example of medieval architecture.','这座教堂是中世纪建筑风格的典型实例。','It is a classic sanctuary in which the rationalist fancy may take refuge.','这是一所古雅的圣殿，理性主义者可以躲在其中。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prison"]={"prison","['prɪz(ə)n]","['prɪzn]","n.监狱",'n.监狱|||vt.囚禁,关入监狱','Strikes by prison officers underline the need for reform in our gaols.','监狱工作人员罢工一事，突出地表明我们的监狱制度需要改革。','Those prodigals were put into prison.','那些挥霍者被关进监狱。'}

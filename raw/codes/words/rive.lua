@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rive"]={"rive","[raɪv]","[ raiv ]","v.撕开",'v.撕开|||v.使沮丧','Prior to 1949, China was a deeply riven and unequal society.','1949年以前，中国是一个极为分裂和不公的社会。','The province was riven by rebellion in the 1990s and 180 NGOs were operating there at one point.','这个省于２０世纪９０年代被反叛组织瓜分，曾有１８０个非政府组织在同一时间内活动。'}

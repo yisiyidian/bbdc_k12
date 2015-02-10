@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["push"]={"push","[pʊʃ]","[pʊʃ]","n.推",'n.推,奋力,决心|||vt.&vi.推,挤,逼迫','You may stop the machine by pushing this button.','你按下这个按钮就可以关机。','He pushed his way to the front of the crowd.','他挤到了人群的前面。'}

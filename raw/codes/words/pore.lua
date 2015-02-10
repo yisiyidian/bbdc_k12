@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pore"]={"pore","[pɔː]","[pɔr]","n.毛孔",'n.毛孔,小孔|||v.熟读,熟视,细想','Sweat exudes through the pores.','汗从毛孔中渗出。','He had spent several hours in the library ||poring|| over those musty documents.','他一连好几个小时呆在图书馆里，仔细翻阅那些发霉味的文献资料。'}

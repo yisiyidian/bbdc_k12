@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["effect"]={"effect","[ɪ'fekt]","[ɪ'fɛkt]","n.效果",'n.结果,影响,效果;要旨|||vt.招致,引起;实现,达到','Some ancient laws are still in effect.','有些古时的法律现在仍然有效。','The room shows off her paintings to good effect.','这个房间把她绘画的优点充分显示出来。'}

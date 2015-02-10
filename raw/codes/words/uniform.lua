@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["uniform"]={"uniform","['juːnɪfɔːm]","['junɪfɔrm]","n.制服",'adj.一致的,统一的|||n.制服|||vt.穿制服','Soldiers wear mufti on leave, not uniform.','士兵度假时穿便服, 不穿制服.','A major has a crown on the shoulder of his uniform.','一名少校在制服的肩部有个王冠形的纹章。'}

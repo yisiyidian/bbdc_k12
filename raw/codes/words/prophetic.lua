@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prophetic"]={"prophetic","[prə'fetɪk]","[prə'fɛtɪk]","adj.预言的",'adj.预言的,先知的,预示的','Her early achievements were prophetic of her future greatness.','她早期的成就预示了她日后卓尔不群。','Thunder is often prophetic of showers.','雷声往往是阵雨的征兆。'}

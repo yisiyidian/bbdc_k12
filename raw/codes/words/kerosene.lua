@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["kerosene"]={"kerosene","['kerəsiːn]","['kɛrəsin]","n.煤油",'n.煤油','It is like putting out a fire with kerosene.','这就像用煤油灭火.','There was a kerosene lamp on the table.','桌子上有一盏煤油灯。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["delighted"]={"delighted","[dɪ'laɪtɪd]","[dɪ'laɪtɪd]","adj.高兴的",'adj.高兴的,快乐的|||v.快乐,喜悦','I shall be delighted to show you around the place.','我很高兴领你到处转转。','Th woman was delighted at the recovery of her stolen jewels.','那位妇人对找回被盗的珠宝感到非常高兴。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["buckle"]={"buckle","['bʌk(ə)l]","[ 'bʌkl ]","n.皮带扣",'n.皮带扣|||vt.&vi.扣住,弯曲,专心做事,屈服|||adj.带扣的,弯曲的','The children had to buckle to while their mother was in hospital.','孩子们因母亲住院只好事事更加努力。','He unfastened the buckles and took off the coat.','他解开扣子，把上衣脱掉。'}

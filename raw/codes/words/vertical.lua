@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vertical"]={"vertical","['vɜːtɪk(ə)l]","['vɝtɪkl]","adj.垂直的",'adj.垂直的,顶点的,纵向的|||n.垂直物,垂直的位置','The vertical line meets the horizontal one here.','垂直线与水平线在此相交.','This illustration shows a vertical section through the locust.','本图所示为蝗虫的纵剖面.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intertwine"]={"intertwine","[ɪntə'twaɪn]","[,ɪntɚ'twaɪn]","v.纠缠",'v.纠缠,缠绕,编结','Their fingers intertwined.','他们的手指在一起勾著.','They intertwined their fingers.','他们把手指勾在一起.'}

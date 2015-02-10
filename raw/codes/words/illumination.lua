@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["illumination"]={"illumination","[ɪ,ljuːmɪ'neɪʃən]","[ɪ'lʊmə'neʃən]","n.照明",'n.照明,阐释,启发','A vessel containing oil or alcohol burned through a wick for illumination.','酒精灯一种装有油或酒精并通过灯芯燃烧来照明的容器','The skylight will provide good illumination from above.','顶上有天窗,光线会很充足.'}

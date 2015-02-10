@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["night"]={"night","[naɪt]","[naɪt]","n.夜晚",'n.夜晚','We can see the stars at night.','夜晚我们可以看见星群。','You\'ve been having too many late nights recently.','你近来晚睡的次数太多了.'}

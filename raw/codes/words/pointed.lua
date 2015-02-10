@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pointed"]={"pointed","['pɒɪntɪd]","['pɔɪntɪd]","adj.尖的",'adj.尖的,锐利的,率直的，显而易见的|||动词point的过去式和过去分词','I nudged her and pointed to the man across the street.','我用肘碰了她一下并指了指街对面的那个男的.','He pointed vaguelyin my direction.','他粗略地朝我的方向指了指.'}

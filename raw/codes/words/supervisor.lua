@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supervisor"]={"supervisor","['suːpəvaɪzə; 'sjuː]","['supɚvaɪzɚ]","n.管理人",'n.监督人,管理人,检查员,主管人,导师','The supervisor always start his new employee on the lobster shift.','领导总是让刚开始工作的新职员值夜班。','Their supervisor is a young woman.','他们的主管是个年轻的女士。'}

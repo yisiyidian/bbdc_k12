@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["braise"]={"braise","[breɪz]","[brez]","vt.蒸",'vt.蒸|||n.煤粉','I braised some beans to accompany a shoulder of lamb.','我炖了些豆子，作为羊肩肉的配菜。','...braised cabbage.','...炖卷心菜。'}

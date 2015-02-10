@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decoy"]={"decoy","['diːkɒɪ; dɪ'kɒɪ]","['dikɔɪ]","n.引诱(假目标)vt引诱",'n.引诱(假目标)vt引诱','He was decoyed by a false message into enemy territory.','他被假情报诱骗进入敌区。','The boy always decoyed his friends.','那个男孩经常欺骗他的朋友。'}

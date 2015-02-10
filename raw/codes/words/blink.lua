@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blink"]={"blink","[blɪŋk]","[blɪŋk]","vi.眨眼",'vi.眨眼,闪烁,屈服,视若无睹|||vt.使眨眼,尽力用眨眼来遮掩（尤指眼泪),拒绝承认或面对,用闪光灯传送信号|||n.眨眼,闪光,一瞬间','The lights were blinking on the horizon.','灯光在地平线上闪烁着。','How long can you stare without blinking your eyes?','你能瞪着看多长时间不眨眼?'}

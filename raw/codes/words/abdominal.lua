@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abdominal"]={"abdominal","[æb'dɒmɪn(ə)l]","[æb'dɑmənl]","adj.腹部的",'adj.腹部的','The abdominal segment of an insect.','腹面昆虫的腹部体节','Relating to or situated on or close to the abdomen; abdominal.','腹的; 腹部的; 腹面的关于或位于或邻近腹部的; 腹部的'}

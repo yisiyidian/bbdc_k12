@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["portly"]={"portly","['pɔːtlɪ]","['pɔrtli]","adj.肥胖的",'adj.肥胖的,庄严的','He wore a belted raincoat that accentuated his portly middle.','他穿着一件系腰带的雨衣，使他发福的腰身更加显眼。','The new manager is a portly middle-aged man.','新来的经理是个胖胖的中年男人。'}

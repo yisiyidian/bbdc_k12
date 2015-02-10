@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["coast"]={"coast","[kəʊst]","[kost]","n.海岸",'n.海岸,海滨,滑坡|||vt.沿海岸而行|||vi.下滑','He is going to live by the coast for the sake of his health.','他为了自己的健康，打算到海滨地区去居住。','Spray slaps the coast ceaselessly.','海浪不停地拍打着海岸。'}

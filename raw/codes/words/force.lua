@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["force"]={"force","[fɔːs]","[fɔrs]","n.力量",'n.力量,武力,暴力,影响力|||vt.施暴,强迫,强夺,加压力|||[计算机]强制','The rider forced his horse on through the storm.','骑士迫使他的马在暴风雨中前进。','The force of his fall was broken by the straw mats.','草垫的缓冲作用减弱了他下跌的力量。'}

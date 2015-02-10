@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["attenuate"]={"attenuate","[ə'tenjʊeɪt]","[ə'tɛnjuet]","v.变细",'v.变细，变薄，稀释，变弱，衰减|||adj.细的，薄的，减少的','Theirs had been an increasingly attenuated relationship.','他们的关系日益冷淡。','You could never eliminate risk, but preparation and training could attenuate it.','风险不可能完全消除，但可以通过防范和培训来降低。'}

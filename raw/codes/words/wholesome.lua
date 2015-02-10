@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wholesome"]={"wholesome","['həʊls(ə)m]","['holsəm]","adj.有益健康的",'adj.有益健康的,合乎卫生的,健全的','Pleasing and wholesome in appearance; attractive.','秀丽的，漂亮的可爱的和有生气的外貌；有吸引力的','In order to maintain physical well being, a person should eat wholesome food and get sufficient exercise.','为了维持身体健康，一个人应该吃有益健康的食品，并经常锻炼身体。'}

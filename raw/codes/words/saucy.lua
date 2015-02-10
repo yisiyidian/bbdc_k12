@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["saucy"]={"saucy","['sɔːsɪ]","['sɔsi]","adj.无礼的",'adj.无礼的,莽撞的,活泼的','She\'s a saucy little miss!','她是个黄毛丫头!','You saucy little thing!','你这个鲁莽的小东西!'}

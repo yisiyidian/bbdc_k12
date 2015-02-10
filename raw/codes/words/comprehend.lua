@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comprehend"]={"comprehend","[kɒmprɪ'hend]","[,kɑmprɪ'hɛnd]","vt.充分理解",'vt.充分理解(综合,包含)','I cannot comprehend this phrase.','我无法理解这个片语。','Difficult to comprehend or see; illegible.','难以理解的难以理解或看清的；难认的'}

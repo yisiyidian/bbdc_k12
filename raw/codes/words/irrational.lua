@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irrational"]={"irrational","[ɪ'ræʃ(ə)n(ə)l]","[ɪ'ræʃənl]","adj.不合理的",'n.无理数|||adj.无理性的,不合理的','The state or quality of being irrational.','不理智不理智的状态或性质','She traced her irrational fear of birds back to something which had happened to her as a child.','她从她童年的经历中找到了她对鸟类莫名恐惧感的原由。'}

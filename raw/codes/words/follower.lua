@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["follower"]={"follower","['fɒləʊə]","['fɑloɚ]","n.追随者",'n.追随者,属下,模仿者，信徒，[机]随动件','He\'s a follower, not a leader.','他是追随者，不是领导者。','a follower of Gandhi.','甘地的追随者'}

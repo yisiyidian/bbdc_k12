@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mundane"]={"mundane","['mʌndeɪn; mʌn'deɪn]","[mʌn'den]","adj.世俗的",'adj.世俗的，平凡的；世界的，宇宙的','Life without aspiration, dream, fantasy is like mundane existence with only skeleton.','生活若剥去理想、梦想、幻想，那生命便只是一堆空架子。','It\'s not a simple or mundane thing.','那不是一件简单或平凡的事情。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insalubrious"]={"insalubrious","[,ɪnsə'luːbrɪəs]","[,ɪnsə'lubrɪəs]","adj.对身体有害的",'adj.对身体有害的,不健康的','The restaurant kitchen had a most insalubrious appearance.','餐馆的厨房看上去非常不卫生。','Smoking is insalubrious to health.','吸烟有害健康。'}

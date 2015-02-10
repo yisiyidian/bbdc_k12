@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seek"]={"seek","[siːk]","[sik]","n.找寻",'n.找寻|||v.寻求,寻找,搜索','You must seek redress in the law courts for the damage to your car.','你的车子受到了损坏，你应当通过法律途径要求赔偿。','Older people may seek their own friends rather than become too emotionally dependent on their children.','老年人可以找自己的朋友而不会在情感上太依赖他们的子女。'}

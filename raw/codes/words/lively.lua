@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lively"]={"lively","['laɪvlɪ]","['laɪvli]","adj.活泼的",'adj.活泼的,活跃的,栩栩如生的,真实的','The style is lucid and lively.','笔调很明快。','The band played a lively tune.','乐队演奏了一支轻快的乐曲。'}

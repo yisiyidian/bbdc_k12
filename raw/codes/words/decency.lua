@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decency"]={"decency","['diːs(ə)nsɪ]","['disnsi]","n.得体",'n.得体,礼貌，体面|||（复数）decencies:礼仪，行为规范','His essential decency makes it impossible to dislike him.','他十分正派, 使人不能不喜欢他.','All people with a sense of decency will look down upon such conduct as that.','注重尊严的人都会轻视那种行为。'}

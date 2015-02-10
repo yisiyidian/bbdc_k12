@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ethos"]={"ethos","['iːθɒs]","['iθɑs]","n.民族精神",'n.民族精神，道德风貌，思潮信仰','We must develop an ethos of cost consciousness.','我们必须树立成本意识。','Their ethos is the most important thing they value.','他们的思潮才是他们最珍惜的东西。'}

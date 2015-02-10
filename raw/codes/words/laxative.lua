@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["laxative"]={"laxative","['læksətɪv]","['læksətɪv]","n.泻药",'adj.通便的,不简洁的|||n.泻药,缓泻药','Curry is a natural laxative.','咖喱本身有通便功效。','Foods that ferment quickly in the stomach are excellent natural laxatives.','能在肠胃里迅速发酵的食物是绝佳的天然通便剂。'}

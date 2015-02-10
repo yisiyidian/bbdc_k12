@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rattlesnake"]={"rattlesnake","['ræt(ə)lsneɪk]","['rætlsnek]","n.响尾蛇",'n.响尾蛇','We saw a real live rattlesnake!','我们看到一条真的响尾蛇!','A rattlesnake is a really mean creature.','响尾蛇是很凶的动物.'}

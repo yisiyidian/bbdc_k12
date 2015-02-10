@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["portent"]={"portent","['pɔːtent; -t(ə)nt]","['pɔrtɛnt]","n.前兆",'n.前兆,预示,异常之物','Some people believe the raven is a portent of death.','一些人相信乌鸦是死亡的征兆。','As for her engagement with Adam, I would say the portents are gloomy.','至于她和亚当的婚约，我看兆头不妙。'}

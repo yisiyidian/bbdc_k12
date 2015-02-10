@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prosperity"]={"prosperity","[prɒ'sperɪtɪ]","[prɑ'spɛrəti]","n.繁荣",'n.繁荣,兴旺','The empire was on the wane after its period of prosperity.','帝国经过全盛以后逐渐衰落。','The increasing sale of luxury goods is an index of the country\'s prosperity.','奢侈商品销售量日增是该国繁荣的标志。'}

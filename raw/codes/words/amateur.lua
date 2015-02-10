@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amateur"]={"amateur","['æmətə; -tʃə; -tjʊə; ,æmə'tɜː]","[ˈæmətər]","adj.业余(爱好者)的",'adj.业余(爱好者)的|||n.业余爱好者,外行','The competition is open to both amateur and professional photographers.','业余的和职业的摄影者均可参赛。','The tournament is open to amateurs as well as professionals.','这次比赛不仅职业运动员可以参加，而且业余运动员也可以参加。'}

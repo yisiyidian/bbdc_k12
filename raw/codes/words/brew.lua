@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brew"]={"brew","[bruː]","[brʊ]","n.酿造酒",'n.酿造酒,蕴酿|||v.酿造,蕴酿','A storm is brewing.','暴风雨正在酝酿中。','I like a stronger brew of tea.','我喜欢浓一点的茶。'}

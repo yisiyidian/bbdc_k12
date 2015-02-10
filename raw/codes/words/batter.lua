@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["batter"]={"batter","['bætə]","['bætɚ]","n.面糊",'n.面糊,打击手|||vt.打坏,猛击,从下而上向后倾斜|||vi.猛击','These pancakes are made from batter.','这些薄煎饼是用面糊做的。','The ship was battered against the rocks.','船被岩石撞坏了。'}

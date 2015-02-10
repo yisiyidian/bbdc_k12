@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lead"]={"lead","[liːd]","[lid]","v.带领",'n.铅,领引,榜样|||v.引导,带领,以铅接合;过...(的生活)','This misprint ||led|| to great confusion.','这个印刷错误造成很大的混淆。','The police are investigating an important new lead.','警方正在调查一条重要的新线索。'}

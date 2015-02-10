@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unravel"]={"unravel","[ʌn'rævl]","[ ,ʌn'rævəl ]","v.阐明",'v.阐明,解释,解开','My knitting has unravelled.','我编织的东西散开了。','There is still a good deal to unravel.','还有不少问题要澄清。'}

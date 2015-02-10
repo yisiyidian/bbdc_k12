@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sectional"]={"sectional","['sekʃ(ə)n(ə)l]","['sɛkʃənl]","adj.各部分组成的",'adj.各部分组成的,各阶层或不同部分的','He criticized the selfish attitude of certain sectional interests.','他批评了某些利益团体自私自利的态度。','The resistance is halved if the cross - sectional area is doubled.','如果截面积增加一倍,则电阻减少一半.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abhorrent"]={"abhorrent","[əb'hɒr(ə)nt]","[əb'hɔrənt]","adj.令人憎恨的",'adj.令人憎恨的,可恶的，背离的','It\'s abhorrent to my idea.','这是和我的意见相反的。','Arousing loathing; abhorrent.','可恶的引起恶感的；可恶的'}

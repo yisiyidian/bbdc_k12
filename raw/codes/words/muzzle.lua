@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["muzzle"]={"muzzle","['mʌz(ə)l]","['mʌzl]","n.动物之鼻口",'n.动物之鼻口,口络,枪口|||vt.戴口络于,使缄默','A small metal knob on the muzzle of a firearm, such as a rifle, used for sighting.','准星枪炮口上，瞄准用的小圆金属突起，如来福枪上的准星','He caught hold of the dog by its muzzle.','他抓住狗的口鼻，把它逮住了。'}

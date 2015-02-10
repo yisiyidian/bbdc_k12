@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["climax"]={"climax","['klaɪmæks]","['klaɪmæks]","n.高潮",'n.高潮,极点,层进法','The music approached a climax.','乐曲接近高潮。','The climax of the celebration was a firework display.','庆祝会的高潮是燃放烟火。'}

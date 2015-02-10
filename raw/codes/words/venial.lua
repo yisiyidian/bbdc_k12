@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["venial"]={"venial","['viːnɪəl]","['vinɪəl]","adj.可原谅的",'adj.可原谅的，(错误等)轻微的','He inclined to consider it a venial offence.','他倾向于认为这是可以原谅的。','Her poverty had been a venial fault for two gallant gentlemen.','她的贫穷对那两位殷勤的绅士而言，只是一个微不足道的缺点。'}

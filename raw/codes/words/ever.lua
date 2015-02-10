@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ever"]={"ever","['evə]","['ɛvɚ]","adv.曾经",'adv.曾经,永远,究竟','He hated her more than ever, when he got that letter.','他接到那封信后，比以往任何时候都更加憎恨她。','That was a fine meal if ever there was one!','那确实是一顿丰盛的饭。'}

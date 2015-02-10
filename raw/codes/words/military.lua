@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["military"]={"military","['mɪlɪt(ə)rɪ]","['mɪlətɛri]","adj.军事的",'adj.军事的|||n.军队','The generals tried to cow opposition to their military rule by imprisoning their leaders.','这些将军通过监禁领导人来威吓反对军事统治的人。','They are making further efforts to decrease military spending.','他们正在做进一步的努力来减少军费开支。'}

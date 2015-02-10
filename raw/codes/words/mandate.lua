@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mandate"]={"mandate","['mændeɪt]","['mændet]","n.命令",'n.命令,指令,要求，托管地|||vt.把(某一地区)置于委任管理下','The government gave the police a mandate to reduce crime.','政府命令警方进一步打击犯罪活动。','We have a mandate from the union membership to proceed with strike action.','我们获得工会会员同意，继续罢工。'}

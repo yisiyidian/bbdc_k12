@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["backpack"]={"backpack","['bækpæk]","['bæk'pæk]","n.双肩背包",'n.双肩背包','She\'s carrying a backpack.','她背着一个背包。','I backpacked through Europe with my girlfriend at the time.','我和我女朋友在那个时候游遍了整个欧洲。'}

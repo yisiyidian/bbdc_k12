@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["astrology"]={"astrology","[ə'strɒlədʒɪ]","[ə'strɑlədʒi]","n.占星术",'n.占星术,占星学','Astronomy, as distinct from astrology, is an exact science.','天文学是一门严谨的科学, 与占星术完全不同.','We\'re at cross-purposes: I\'m talking about astronomy, you\'re talking about astrology.','我们彼此误解了: 我谈的是天文学, 你谈的是占星术.'}

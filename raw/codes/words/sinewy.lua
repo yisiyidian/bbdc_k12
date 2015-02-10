@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sinewy"]={"sinewy","['sɪnjuːɪ]","['sɪnjui]","adj.多肌腱的",'adj.多肌腱的,强壮有力的','His hard hands and sinewy sunburnt limbs told of labor and endurance.','他粗糙的双手，被太阳哂得黝黑的健壮四肢，均表明他十分辛勤，非常耐劳。','His hard sinewy body advertised his ruthlessness of purpose.','他健硕的身体使他显得意志尤为坚强。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["transmit"]={"transmit","[trænz'mɪt; trɑːnz-; -ns-]","[træns'mɪt]","vt.传输",'vt.传输,传送,代代相传,传达|||vi.(以无线电或有线电的方式)发送信号','The World Cup final is being transmitted live to over fifty countries.','世界杯决赛现在正向五十多个国家现场转播。','The tension soon transmitted itself to all the members of the crowd.','这种紧张情绪很快感染了人群中所有的人。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sweet"]={"sweet","[swiːt]","[swit]","adj.甜(蜜)的",'adj.甜(蜜)的,新鲜的,可爱的,悦耳的|||n.糖,甜(点),令人高兴的东西|||adv.甜蜜地','Do you like sweet or dry sherry?','你喜欢甜的还是不甜的雪利酒?','It\'s no good telling him leave him to find out in his own sweet time.','跟他说也没用——他愿意怎么找就怎么找吧。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plethora"]={"plethora","['pleθ(ə)rə]","['plɛθərə]","n.过量",'n.过量,多血症','Students have a plethora of textbooks to choose from in their quest to improve their English.','学生在寻求提高自身英语时，会有大量的教科书可供选择。','A plethora of new operators will be allowed to enter the market.','大批新的运营商将获准进入该市场。'}

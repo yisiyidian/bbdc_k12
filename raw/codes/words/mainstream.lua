@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mainstream"]={"mainstream","['meɪnstriːm]","['menstrim]","n.主流",'n.主流','You need not accept the nominee\'s ideology, only be able to locate it in the American mainstream','“你不需要接受被提名者的意识形态，就能将其思想置于美国的思潮主流中”','mainstream morality.','主要的道德观'}

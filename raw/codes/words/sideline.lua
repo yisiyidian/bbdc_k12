@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sideline"]={"sideline","['saɪdlaɪn]","['saɪdlaɪn]","n.(球场)边线",'n.(球场)边线','Actually I\'m a teacher, my writing is just a sideline.','我其实是个教师, 写作只是我的兼职。','I was on the sidelines during the political crisis.','在这一政治危机时期我是目睹一切的局外人。'}

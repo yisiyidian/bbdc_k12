@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["valance"]={"valance","['væl(ə)ns]","['væləns]","n.短帷幕",'n.短帷幕','valance: a decorative framework to conceal curtain fixtures at the top of a window casing','短帷幕','All seems to be covered by the invisible valance of night hide their track.','一切的一切，仿佛都被无形的夜的帷幔包裹起来， 隐藏了踪迹'}

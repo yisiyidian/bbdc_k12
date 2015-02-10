@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arise"]={"arise","[ə'raɪz]","[ə'raɪz]","vi.上升",'vi.上升,引起,出现','The problem may not arise, but there\'s no harm in keeping our powder dry.','问题不一定会发生, 但有备无患并无害处.','An opportunity has arisen.','机会来了。'}

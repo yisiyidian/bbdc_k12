@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["policeman"]={"policeman","[pə'liːsmən]","[pə'lismən]","n.警察",'n.警察','The policeman said to him, "You\'d better come with me and tell me all about the accident."','警察对他说：“你最好跟我来，并告诉我这次事故的经过。＂','He punched the policeman on the nose and was arrested.','他猛击那个警察的鼻子, 结果被逮捕了。'}

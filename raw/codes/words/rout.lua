@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rout"]={"rout","[raʊt]","[raʊt]","n.彻底溃败",'n.彻底溃败,凑热闹的人,大败|||v.使...溃败,使...败逃','Zidane completed the rout with a low shot from the edge of the penalty area.','齐达内在罚球区边缘的一记低射将对手彻底击败。','The enemy troops were thoroughly routed.','敌军彻底惨败。'}

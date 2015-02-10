@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["transcend"]={"transcend","[træn'send; trɑːn-]","[træn'sɛnd]","v.超越",'v.超越','One never can see the thing in itself, because the mind does not transcend phenomena.','一个人永远不可能认识事物自身的本质，因为思想无法超越现象。','She far transcends the others in beauty and intelligence.','她才貌出众。'}

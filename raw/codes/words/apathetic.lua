@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["apathetic"]={"apathetic","[æpə'θetɪk]","[,æpə'θɛtɪk]","adj.缺乏感情的",'adj.缺乏感情的,缺乏兴趣的,无动于衷的，冷淡的','The new secretary is apathetic to her job.','这个新秘书一点都不热衷于她的工作。','I realised I was becoming increasingly depressed and apathetic.','我意识到自己越来越消沉、越来越冷漠了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["puzzle"]={"puzzle","['pʌz(ə)l]","['pʌzl]","n.难题",'n.难题,迷惑|||vt.使困惑,解决|||vi.迷惑,苦思','She listened with a puzzled expression on her face.','她脸上带著困惑的表情在倾听著。','Her reply puzzled me.','她的回答把我弄糊涂了。'}

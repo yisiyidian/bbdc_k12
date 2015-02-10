@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["persuade"]={"persuade","[pə'sweɪd]","[pɚ'swed]","vt.劝说",'v.说服vt.劝说,说服','How can I persuade you of my sincerity?','我如何能够让你相信我的诚意？','Can you persuade her out of her foolish plans?','你能劝她放弃她那些愚蠢的计划吗？'}

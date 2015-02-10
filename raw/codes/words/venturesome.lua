@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["venturesome"]={"venturesome","['ventʃəs(ə)m]","['vɛntʃɚsəm]","adj.冒险的",'adj.冒险的,冒危险的,不顾一切的','A trip to the moon is a venturesome journey.','前往月球旅行是冒险的。','He is talented, and venturesome, and resolute.','他有才能，有闯劲，有决心。'}

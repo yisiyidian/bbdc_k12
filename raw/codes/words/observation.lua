@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["observation"]={"observation","[ɒbzə'veɪʃ(ə)n]","[,ɑbzɚ'veʃən]","n.观察",'n.观察,观察力,评论|||adj.被设计用来观察的','The fault escaped observation (ie was not spotted) for months.','这故障数月来未引起注意.','Are political suspects kept under police observation in your country?','你们国家的政治嫌疑犯受警察监视吗？'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vacate"]={"vacate","[veɪ'keɪt; və'keɪt]","[və'ket]","v.空出",'v.空出,让出','vacate a death sentence.','撤消死刑','We have to vacate these offices by December 31st.','我们必须在12月31日前辞职.'}

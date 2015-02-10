@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dispense"]={"dispense","[dɪ'spens]","[dɪ'spɛns]","v.分发",'v.分发，提供,摒弃，停用','We\'ll have to dispense with a car.','我们只好放弃汽车。','The doctor dispensed a prescription to his patient.','医生开处方给病人配药。'}

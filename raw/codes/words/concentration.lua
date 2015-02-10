@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["concentration"]={"concentration","[kɒns(ə)n'treɪʃ(ə)n]","['kɑnsn'treʃən]","n.集中",'n.集中,专心,浓度','The tennis players need total concentration during play.','网球运动员在比赛中需要全神贯注.','The drug affects one\'s power(s) of concentration.','这种药影响人精神不能集中.'}

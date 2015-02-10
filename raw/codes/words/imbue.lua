@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imbue"]={"imbue","[ɪm'bjuː]","[ɪm'bjʊ]","v.灌输",'v.灌输，使感染,使充满','He managed to imbue his employees with team spirit.','他成功激发起雇员的团队精神。','These cultivated individuals have been imbued with a sense of social purpose.','这些有教养的人满怀着社会责任感。'}

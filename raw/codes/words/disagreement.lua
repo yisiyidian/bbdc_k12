@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disagreement"]={"disagreement","[dɪsə'ɡriːmənt]","[,dɪsə'ɡrimənt]","n.不合",'n.不合,争论,不一致','You would expect that there would be/there to be strong disagreement about this.','可以料到此事会有严重分歧.','There\'s a lot of disagreement among politicians on this issue.','对这一问题，政治家们有很大分歧。'}

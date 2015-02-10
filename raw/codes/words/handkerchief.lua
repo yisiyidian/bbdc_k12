@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["handkerchief"]={"handkerchief","['hæŋkətʃɪf]","['hæŋkɚtʃɪf]","n.手帕",'n.手帕，方头巾、围巾','She bound up her hair in a large handkerchief.','她用一块大手帕把头发包起来。','I folded the handkerchief and put it in my pocket.','我折好手绢，放进口袋里。'}

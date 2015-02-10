@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["greengrocer"]={"greengrocer","['griːngrəʊsə]","['ɡrinɡrosɚ]","n.蔬菜水果商",'n.蔬菜水果商,菜贩','he is a greengrocer.','他是菜贩','I offer see the greengrocer on the cross','我经常在拐角处看见那个水果商'}

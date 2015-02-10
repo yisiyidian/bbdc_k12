@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bare"]={"bare","[beə]","[bɛr]","adj.赤裸的",'adj.赤裸的,显露的,极少的,仅仅的|||vt.使赤裸,露出','A coat of primer should be made over the bare surface before the main painting.','在喷涂主漆前，应在物品的表面刷一层底漆。','The strongest man (that) you can think of cannot tear the log apart with bare hands.','就连你所能想到的最壮的人也不能光用手就将木头撕裂。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["congestion"]={"congestion","[kən'dʒestʃ(ə)n]","[kən'dʒɛstʃən]","n.混杂",'n.混杂,拥挤,过剩|||[计算机]拥挤','I don\'t like driving through London because there\'s too much congestion.','我不喜欢驱车穿越伦敦，因为交通太拥挤。','The route was designed to relieve traffic congestion.','这条路是为缓解交通拥挤而开辟的。'}

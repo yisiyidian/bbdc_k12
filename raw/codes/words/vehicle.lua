@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vehicle"]={"vehicle","[ˈviːəkl]","[ˈviːhɪkl]","n.车辆",'n.传播媒介,工具,手段,交通工具,车辆;','She disclaimed ownership of the vehicle.','她放弃了这辆车的所有权.','The first-stage vehicle is used to launch the rocket and is then jettisoned in the upper atmosphere.','第一级运载火箭是用来发射火箭的, 进入高层大气後即抛掉.'}

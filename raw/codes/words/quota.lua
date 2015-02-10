@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quota"]={"quota","['kwəʊtə]","['kwotə]","n.配额",'n.配额,限额,最低票数','We are still a little shy of our quota.','我们离完成定额还差一点点。','The committee reversed its decision on import quota.','委员会取消了对进口货物的配额的决定。'}

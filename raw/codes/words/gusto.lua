@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gusto"]={"gusto","['gʌstəʊ]","['ɡʌsto]","n.爱好",'n.爱好,嗜好,由衷的高兴','They attacked their meal with gusto.','他们大吃大喝。','Rex gave himself to the preparations with gusto.','雷克斯兴高采烈地着手进行各种准备工作。'}

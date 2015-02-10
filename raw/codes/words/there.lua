@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["there"]={"there","[ðeə; ðə]","[ðɛr]","adv.在那里",'adv.在那里；那里；在那一点上|||pron.表示某物或某人的存在或某事的发生（常用作be,seem或appear的主语）|||int.（表示满足、烦恼）你瞧，好啦，得啦','Here and there in the garden little flowers had grown up.','花园里各处开着小黄花。','||There|| are numerous items to choose from.','有许许多多可选择的项目。'}

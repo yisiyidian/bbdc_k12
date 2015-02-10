@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["underscore"]={"underscore","[ʌndə'skɔː]","[,ʌndɚ'skɔr]","vt.划线于",'vt.划线于,强调,提供伴奏乐|||n.下划线,影片伴奏乐','These results underscore the value of rescue medications in averting psychotic relapse.','这些结果显示了救护性治疗对避免精神病复发的价值。','Field names can contain only letters, numbers, or the underscore character.','字段名称只能包含字母、数字或下划线。'}

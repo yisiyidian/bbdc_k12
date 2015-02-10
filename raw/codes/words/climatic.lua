@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["climatic"]={"climatic","[klaɪ'mætɪk]","[klaɪ'mætɪk]","adj.气候上的",'adj.气候上的','Bangladesh sits in a perfect storm of climatic conditions.','孟加拉国坐落在最具有形成完美风暴的气候条件下。','||Climatic|| issues','气候问题'}

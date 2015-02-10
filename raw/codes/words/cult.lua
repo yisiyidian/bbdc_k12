@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cult"]={"cult","[kʌlt]","[kʌlt]","n.宗教膜拜仪式",'n.宗教膜拜仪式,异教,狂热崇拜,个人崇拜','A cult, especially a religious one.','宗教崇拜崇拜，尤指宗教上的崇拜','One who prepares candidates for initiation into a mystery cult.','引人入秘教者为加入神秘教会的教徒准备候选人的人'}

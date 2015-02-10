@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["responsible"]={"responsible","[rɪ'spɒnsɪb(ə)l]","[rɪ'spɑnsəbl]","adj.负责的",'adj.有责任的,负责的,责任重大的','Our teacher is a very responsible person.','我们的老师是一个非常可靠的人。','She holds a very responsible position in the firm.','她在公司里身居要职。'}

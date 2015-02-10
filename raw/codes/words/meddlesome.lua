@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["meddlesome"]={"meddlesome","['med(ə)ls(ə)m]","['mɛdlsəm]","adj.爱管闲事的",'adj.爱管闲事的','By this means the meddlesome woman cast in a bone between the wife and the husband.','这爱管闲事的女人就用这种手段挑起他们夫妻之间的不和。','Get rid of that meddlesome fool!','让那个爱管闲事的家伙走开！'}

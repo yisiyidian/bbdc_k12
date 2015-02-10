@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["require"]={"require","[rɪ'kwaɪə]","[rɪ'kwaɪr]","v.需要",'v.需要,要求','Is that all that you require, sir?','先生，您还要别的吗？','All passengers are required to show their tickets.','所有乘客都必须出示车票。'}

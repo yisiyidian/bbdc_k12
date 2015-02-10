@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tentacle"]={"tentacle","['tentək(ə)l]","['tɛntəkl]","n.(动物)触角",'n.(动物)触角,触须','an espionage network with far-reaching tentacles.','触角伸得很远的谍报网络','Many molluscs have tentacles.','很多软体动物有触角。'}

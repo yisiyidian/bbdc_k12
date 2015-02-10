@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["electromagnetic"]={"electromagnetic","[ɪ,lektrə(ʊ)mæg'netɪk]","[ɪ,lɛktromæɡ'nɛtɪk]","adj.电磁的",'adj.电磁的','These electromagnetic connections can be changed.','这些电磁连接可以改变。','What do you know about electromagnetic weapons?','你们对电磁武器了解多少？'}

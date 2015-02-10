@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["electorate"]={"electorate","[ɪ'lekt(ə)rət]","[ɪ'lɛktərət]","n.选民",'n.选民,有选举权者,选区','A successful politician is one who keeps his finger on the pulse of the electorate.','一位成功的政治家是一个对选民有深刻了解的人。','The electorate put the Tories in with an increased majority in 1983.','1983年选民选举保守党执政, 其票数超过了上届的多数票.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["engender"]={"engender","[ɪn'dʒendə; en-]","[ɪn'dʒɛndɚ]","v.产生",'v.产生,引起','Mr Bowles could engender delight in students and musicians alike.','鲍尔斯先生能够让学生和音乐家都感到快乐。','Crime is sometimes engendered by poverty.','犯罪有时是由贫困引起的。'}

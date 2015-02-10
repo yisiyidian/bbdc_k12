@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mitigate"]={"mitigate","['mɪtɪgeɪt]","['mɪtɪɡet]","v.镇静",'v.镇静,缓和,减轻|||v.缓和','Governments should endeavour to mitigate distress.','政府应努力缓解贫困问题。','Her words mitigated my suffering.','她的话减轻了我的痛苦。'}

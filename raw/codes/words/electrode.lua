@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["electrode"]={"electrode","[ɪ'lektrəʊd]","[ɪ'lɛktrod]","n.电极",'n.电极，电焊条','The electrode attached to this region.','晶体管内的电子附着在晶体管这个区域的电子','The  calomel  electrode has a small pinhole opening or wick.','甘汞电板上有一个针孔或砂芯.'}

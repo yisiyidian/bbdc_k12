@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["signal"]={"signal","['sɪgn(ə)l]","['sɪgnl]","n.信号",'n.信号,导火线,动机|||vt.发信号,标志|||vi.发信号|||adj.显著的','I corrected my watch by the time signal.','我按报时信号校正我的表。','Her speech yesterday was a signal that her views have changed.','她昨天的讲话标志著她的观点已经转变。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["divest"]={"divest","[daɪ'vest; dɪ-]","[daɪ'vɛst]","v.剥除",'v.剥除,脱去,剥夺，摆脱','He cannot divest himself of this idea.','他不能抛弃他的这个想法。','She managed to divest herself of the unwanted property.','她设法处理掉了那件不需要的东西。'}

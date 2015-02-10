@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dilatory"]={"dilatory","['dɪlət(ə)rɪ]","['dɪlətɔri]","adj.缓慢的",'adj.缓慢的，拖拉的，拖延的','It is dilatory of you not to answer to me.','你真会拖，都没回我的信。','The boss sacked a dilatory worker.','老板开除了一个凡事都爱拖延的人。'}

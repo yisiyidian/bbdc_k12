@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["regatta"]={"regatta","[rɪ'gætə]","[rɪ'ɡætə]","n.赛舟会",'n.赛舟会','I met her when I came to Edgartown for the regatta.','我到埃德加城参加赛艇比赛的时候遇见了她。','We\'ll take part in a regatta next month.','下个月我们将参加一场划船比赛。'}

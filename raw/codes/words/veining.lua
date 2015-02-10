@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["veining"]={"veining","['veɪnɪŋ]","['venɪŋ]","n.饰以脉纹",'n.饰以脉纹,脉纹的排列','Shell cracking is the source of veining defects.','毛刺的出现与制壳过程中面层型壳的开裂有关.','It is also helpful to reduce the veining defects using enhanced colloidal silica.','使用快干增强硅溶胶也有助于降低毛刺缺陷.'}

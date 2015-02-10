@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["condescending"]={"condescending","[kɒndɪ'sendɪŋ]","[,kɑndɪ'sɛndɪŋ]","adj.盛气凌人的",'adj.盛气凌人的；居高临下的','Penny\'s condescending manner really gets under my skin.','彭尼那种以恩赐态度对待别人的样子真的把激怒了。','I don\'t like Mrs Smith; she\'s condescending.','我不喜欢史密斯夫人，她总是自以为高人一等。'}

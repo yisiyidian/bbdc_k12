@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["snore"]={"snore","[snɔː]","[snɔr]","n.鼾声",'n.鼾声|||v.打鼾','Mary accused her husband of snore too loudly.','玛丽指责她丈夫打呼噜太响。','Her husband snores loudly.','她丈夫睡觉时打鼾很响。'}

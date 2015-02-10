@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supercilious"]={"supercilious","[suːpə'sɪlɪəs; sjuː-]","[,supɚ'sɪlɪəs]","adj.目中无人的",'adj.目中无人的,高傲的','The shop assistant was very supercilious towards me when I asked for some help.','我要买东西招呼售货员时，那个售货员对我不屑一顾。','Her eyebrows were arched in supercilious surprise.','大吃一惊的她高傲地扬起了眉毛。'}

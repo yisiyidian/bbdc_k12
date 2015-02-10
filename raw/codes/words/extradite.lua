@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extradite"]={"extradite","['ekstrədaɪt]","[ 'ekstrədait ]","v.引渡回国",'v.引渡回国,拿获归案|||vt.引渡','The Spanish police have refused to extradite a man wanted for a bank robbery in France.','西班牙警方拒绝引渡一个在法国抢劫银行而被通缉的人.','Rio or Uruguay or wherever it is that they do not extradite for murder','“里奥或乌鲁加伊或其它任何不会因杀人而引渡他们的地方”'}

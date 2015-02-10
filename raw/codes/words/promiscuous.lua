@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["promiscuous"]={"promiscuous","[prə'mɪskjʊəs]","[prə'mɪskjuəs]","adj.杂乱的",'adj.杂乱的,混杂的,混淆的|||adv.偶然地,胡乱地','She is perceived as vain, spoilt and promiscuous.','她被认为是个被人惯坏了的、既虚荣又淫乱的女人。','Americans are free to pick and choose from a promiscuous array of values and behaviour.','美国人可以随意选择形形色色的价值观和行为方式。'}

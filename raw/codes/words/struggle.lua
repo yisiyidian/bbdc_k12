@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["struggle"]={"struggle","['strʌg(ə)l]","['strʌɡl]","v.奋斗",'n.竞争,努力,奋斗|||v.努力,奋斗,挣扎','He struggled to control his temper.','他努力控制住自己的脾气。','Several people were hurt in the struggle.','在打斗中，有几个人受伤。'}

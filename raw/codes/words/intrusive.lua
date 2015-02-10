@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intrusive"]={"intrusive","[ɪn'truːsɪv]","[ɪn'trusɪv]","adj.打搅的",'adj.打搅的,侵扰的','||Intrusive|| viruses are hard to write and very difficult to remove without damaging the host file.','入侵型病毒难以编写, 在去除它们时常常会破坏主文件。','The cameras were not an intrusive presence.','这些摄像机的存在不会造成干扰。'}

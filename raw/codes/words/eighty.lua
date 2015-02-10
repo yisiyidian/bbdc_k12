@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eighty"]={"eighty","['eɪtɪ]","[ 'eiti ]","num.&adj.八十",'num.&adj.八十|||pron.八十(个,只...)','He must be getting on for eighty!','他一定快八十了!','He is over eighty, but he still dodders along.','他年过八十，但仍蹒跚而行。'}

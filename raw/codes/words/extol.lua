@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extol"]={"extol","[ɪk'stəʊl; ek-]","[ɪk'stol]","vt.颂扬",'vt.颂扬,称赞','The general was extolled as the man who had led the country to victory.','这位将军被誉为领导全国赢得胜利的人。','He keeps extolling her goodness.','他对她的善良赞不绝口。'}

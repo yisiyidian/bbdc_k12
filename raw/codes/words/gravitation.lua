@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gravitation"]={"gravitation","[grævɪ'teɪʃ(ə)n]","[,ɡrævɪ'teʃən]","n.[物]万有引力",'n.[物]万有引力','Students are gravitation towards practical subjects which help then to get a job.','学生们都被吸引到实用型的课程上去，因为这些课程将来能帮助他们找到工作。','By gravitation the sun and planets act and react upon one another.','太阳与行星通过引力发挥作用并相互影响.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rigidity"]={"rigidity","[rɪ'dʒɪdətɪ]","[rɪ'dʒɪdəti]","n.硬",'n.硬,硬度，刻板','He deplored the rigidity of her views.','他痛感她的观点僵化.','The rigidity of the metal caused it to crack.','这金属因刚度强而产生裂纹.'}

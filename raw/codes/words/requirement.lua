@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["requirement"]={"requirement","[rɪ'kwaɪəm(ə)nt]","[rɪ'kwaɪɚmənt]","n.要求",'n.要求,必要条件','They cannot (choose) but admit that our requirement is reasonable.','他们不得不承认我们的要求是合理的。','Our immediate requirement is extra staff.','我们亟需增加工作人员。'}

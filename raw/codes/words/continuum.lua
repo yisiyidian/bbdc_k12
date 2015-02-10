@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["continuum"]={"continuum","[kən'tɪnjʊəm]","[kən'tɪnjuəm]","n.连续",'n.连续,连续统,闭连集','We are on a continuum of development.','每个人都是持续发展的。','You cannot separate one part of history from the continuum.','不能割断历史。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prefabricate"]={"prefabricate","[priː'fæbrɪkeɪt]","[pri'fæbrə,ket]","vt.预先建造组合",'vt.预先建造组合','We need to prefabricate.','我们需要预先建造。','a prefabricated project','预先编制的计划'}

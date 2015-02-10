@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ashore"]={"ashore","[ə'ʃɔː]","[ə'ʃɔr]","adv.在岸上",'adv.在岸上,上岸','They have been ashore for two hours.','他们上岸已经两个小时了。','He managed to swim ashore.','他设法向岸边游过去。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["expedite"]={"expedite","['ekspɪdaɪt]","['ɛkspədaɪt]","vt.加快",'vt.加快,促进','You should expedite to finish this work.','你应该尽快完成这项工作。','The builders promised to expedite the repairs.','建筑商答应加速修理。'}

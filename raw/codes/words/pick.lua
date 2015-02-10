@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pick"]={"pick","[pɪk]","[pɪk]","vt.挑选",'n.采摘,精选,鹤嘴锄,精品,收获量|||vt.摘,挑选,挑惕,剔除,戳,撬|||vi.慎选,凿,吹毛求疵,采收','The child has picked a hole in his new jumper.','孩子的新毛衣上勾了一个洞。','It was easy to pick holes in his argument.','在他的论据里不难找到漏洞。'}

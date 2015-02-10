@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spoonful"]={"spoonful","['spuːnfʊl]","['spʊn'fʊl]","n.一匙",'n.一匙','Raymond: Yes, you\'ve got to put in a spoonful of liquor, some vinegar and olive oil-but that comes ten minutes later.','雷蒙：是的, 你必须放进一汤匙的酒, 一些醋和橄榄油, 但那是十分钟之后的事。','A small spoonful, if you like.','如果你乐意, 我就来一小调羹吧。'}

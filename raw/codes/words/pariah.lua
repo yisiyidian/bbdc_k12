@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pariah"]={"pariah","[pə'raɪə]","[pə'raɪə]","n.南印度的最下级民",'n.南印度的最下级民,贱民，被社会遗弃者','Shortly Tom came upon the juvenile pariah of the village.','不一会儿，汤姆碰上了村里的少年弃儿。','His landlady had treated him like a dangerous criminal, a pariah.','房东太太对待他就像对待危险的罪犯、对待社会弃儿一样。'}

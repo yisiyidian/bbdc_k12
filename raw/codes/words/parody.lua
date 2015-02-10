@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parody"]={"parody","['pærədɪ]","['pærədi]","n.打油诗文",'n.打油诗文,诙谐的改编诗文,拙劣的模仿|||v.拙劣模仿,作模仿诗文','The trial was a parody of justice.','第一次审判是对正义的愚弄。','It was like a parody of the balcony scene from Romeo and Juliet.','它就像《罗密欧与朱丽叶》阳台上那一幕的模仿作。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dump"]={"dump","[dʌmp]","[dʌmp]","n.丢弃",'n.垃圾场,堆放处|||vt.丢弃,抛售,导出|||vi.骤降,扔垃圾','You\'ve got to deal with this don\'t try and dump it in my lap.','这事你得去处理--别想往我身上推.','There is a refuse dump out of the town.','镇外有个垃圾场。'}

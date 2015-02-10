@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vow"]={"vow","[vaʊ]","[vaʊ]","n.誓约",'n.誓约|||vt.&vi.发誓','Once he took the vow his loyalty never wavered.','他一旦宣了誓，他就一直忠贞不渝。','Catholic priests take a vow of celibacy.','天主教神父发誓不结婚.'}

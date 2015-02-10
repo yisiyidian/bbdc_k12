@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blame"]={"blame","[bleɪm]","[blem]","vt.责备",'n.过失,责备|||vt.把...归咎于,责备','The bank manager was really to blame, though he tried to pin it on a clerk.','真正受责备的应该是银行经理，可是他却想把责任推到一个职员身上。','Either he or I am to blame.','不是他就是我该受责备。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["propagate"]={"propagate","['prɒpəgeɪt]","['prɑpə'get]","vt.&vi.繁殖",'vt.&vi.繁殖,扩增,传播,传送','Most plants propagate by seed.','大多数植物靠种子繁殖。','They started a newspaper to propagate their ideas.','他们办了一份报纸来宣传他们的主张。'}

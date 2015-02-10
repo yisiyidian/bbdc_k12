@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stack"]={"stack","[stæk]","[stæk]","n.堆叠",'n.堆叠,堆|||vt.堆积,成叠放在|||vi.堆成一堆','The floor was stacked up with books.','地板上堆满了书。','Traffic was stacked up for miles because of the accident.','车祸引起了交通堵塞，车辆排起的长龙有好几里长。'}

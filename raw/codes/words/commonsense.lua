@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["commonsense"]={"commonsense","['kɑmən'sɛns]","[ 'kɔmən'sens ]","n.常识",'adj.有常识的，明白事理的，|||n.常识','He has no commonsense he always does silly things.','他毫无常识，总是做些傻事。','The genius often breaks commonsenses','这个天才总是打破常识'}

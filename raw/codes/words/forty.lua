@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forty"]={"forty","['fɔːtɪ]","['fɔrti]","num.&adj.四十",'num.&adj.四十|||pron.四十(个,只...)','They managed to squash forty people into the bus.','那辆公共汽车好不容易塞进了四十个人.','This piece of furniture is really inexpensive with a price of less than forty dollars.','这件家具还不到四十美元，实在不贵。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["construct"]={"construct","[kən'strʌkt]","[kən'strʌkt]","vt.构造",'vt.构造,绘制,建造,想出|||n.构想,建造物','a theoretical construct of the atom.','原子的理论模型','He has constructed a perfect plan.','他构造出来了一个完美的方案。'}

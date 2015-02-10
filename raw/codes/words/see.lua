@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["see"]={"see","[siː]","[si]","vt.看见",'vt.看见,经历,明白,确保,视为,拜访,陪同|||vi.注意,想象,了解,调查|||n.主教教区,主角权限','If you shut your eyes you can\'t see.','要是把眼睛闭上就什麽也看不见了。','They could still see their hometown as it once was.','他们依然记得他家乡从前的情形'}

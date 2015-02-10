@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tasty"]={"tasty","['teɪstɪ]","['testi]","adj.好吃的",'adj.好吃的','He larded the duck with pig fat to make it tasty.','他给鸭肉加了点猪油使它美味可口。','What a tasty pie!','多好吃的派 啊 !'}

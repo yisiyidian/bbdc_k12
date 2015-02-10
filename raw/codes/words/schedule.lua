@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["schedule"]={"schedule","['ʃedjuːl; 'sked-]","['skɛdʒul]","n.时间表",'n.时间表,一览表,计划|||vt.安排,计划,预定,编制目录','He was bidden to finish the work on schedule.','我要他按时完成工作。','We\'ve already finished the work anterior to the schedule.','我们已经提前完成了工作。'}

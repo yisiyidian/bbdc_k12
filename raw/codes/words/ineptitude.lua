@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ineptitude"]={"ineptitude","[ɪ'neptɪtjuːd]","[ɪ'nɛptə'tʊd]","n.不适当",'n.不适当,愚笨,愚昧的言行','The Prime Minister kept on top of the Opposition more by their ineptitude than by his own skill.','是反对党的无能，而非他个人的领导艺术，使该首相处于优势地位。','...the tactical ineptitude of the allied commander.','...盟军指挥官战术上的无能。'}

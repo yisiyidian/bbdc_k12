@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["toy"]={"toy","[tɒɪ]","[tɔɪ]","n.玩具",'n.玩具,小玩意儿|||adj.供玩耍的,体型小的|||vi.漫不经心地做,戏弄','He was appointed to superintend the toy department.','他获任玩具部的负责人。','She bought a diminutive toy for her daughter.','她给女儿买了个小巧可爱的玩具。'}

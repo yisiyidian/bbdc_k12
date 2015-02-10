@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["asunder"]={"asunder","[ə'sʌndə]","[ ə'sʌndə ]","adj.分开地",'adj.分开地,零散地|||adv.分离,化为碎片','Law and equity are two things which God hath joined, but which man has put asunder.','法律与平等，是上帝给结合在一起的东西，人却把它们拆开来了。','The debate is tearing Wall Street asunder.','这场争论令华尔街分崩离析。'}

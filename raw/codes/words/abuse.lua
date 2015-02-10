@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abuse"]={"abuse","[ə'bjuːz]","[ə'bjus]","v.滥用",'n.滥用；恶习；侮辱；恶言|||vt.滥用；虐待；辱骂','She attacked him with a torrent of abuse.','她用连珠炮似的谩骂来攻击他。','I didn\'t expect him to descend to personal abuse.','我没料到他会堕落到对我进行人身攻击的地步。'}

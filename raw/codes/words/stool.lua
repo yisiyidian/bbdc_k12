@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stool"]={"stool","[stuːl]","[stʊl]","n.凳子",'n.凳子,搁脚凳,便桶,根株|||vi.引诱','You can have the piano for 60, and I\'ll throw in the stool as well.','这架钢琴可以卖给你 60 英镑, 琴凳我奉送.','I stood the child on a stool so that she could reach the shelf.','我把孩子抱到凳子上, 她就能够到那架子了.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cumber"]={"cumber","['kʌmbə]","['kʌmbɚ]","vt.拖累",'vt.拖累,妨碍|||n.妨碍，累赘','His heavy boots cumbered him in walking.','他的笨重的靴子使他行走不便。','He cumbered himself with an overcoat on a warm day.','大热天穿着件大衣简直使他活受罪。'}

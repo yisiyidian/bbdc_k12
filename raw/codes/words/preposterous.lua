@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["preposterous"]={"preposterous","[prɪ'pɒst(ə)rəs]","[prɪ'pɑstərəs]","adj.荒谬的",'adj.荒谬的,可笑的','That\'s a preposterous accusation!','那样的指责简直荒谬可笑！','They are asking a preposterous price for the work.','他们为该作品漫天要价。'}

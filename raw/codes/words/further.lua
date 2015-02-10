@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["further"]={"further","['fɜːðə]","['fɝðɚ]","adj.更远的",'adj.更远的|||adv.此外,进一步地|||v.促进,推动|||vt.促进','||Further||, it has come to my attention...','此外，我已注意到。。。','The society was dedicated to furthering the cause of world peace.','该协会致力于推动世界和平事业。'}

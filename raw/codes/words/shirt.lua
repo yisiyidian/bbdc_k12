@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shirt"]={"shirt","[ʃɜːt]","[ʃɝt]","n.衬衫",'n.衬衫','She shortened the shirt by an inch.','她把衬衫截短了一英寸。','What size of collar is this shirt?','这衬衣领子的尺寸是多少？'}

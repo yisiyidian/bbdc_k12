@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bicycle"]={"bicycle","['baɪsɪkl]","['baɪsɪkl]","n.自行车",'n.自行车|||v.骑自行车','She is too little to ride a bicycle.','她太小了，不能骑脚踏车。','He beguiled me into lending him my bicycle.','他骗我把自行车借给了他。'}

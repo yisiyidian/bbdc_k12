@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cruel"]={"cruel","[krʊəl]","['kruəl]","adj.残酷的",'adj.残酷的,残忍的,引起痛苦的','His cruel remarks cut me deeply.','他那无情的话太伤我的心了。','In fairy stories, the ogre is cruel and eats people.','在神话故事中，魔鬼很残忍而且吃人。'}

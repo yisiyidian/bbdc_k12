@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["actor"]={"actor","['æktə]","['æktɚ]","n.男演员",'n.男演员','The film director put the new actor through his paces.','电影导演测试了一下那位新演员的演技。','The young actor pretended to be Hamlet.','那个年轻演员扮演哈姆雷特。'}

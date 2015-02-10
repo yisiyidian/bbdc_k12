@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rib"]={"rib","[rɪb]","[rɪb]","n.肋骨",'n.肋骨,嘲笑|||vt.嘲笑','A protruding rim, edge, rib, or collar, as on a wheel or a pipe shaft, used to strengthen an object, hold it in place, or attach it to another object.','凸缘车轮或管道上突出的边、缘、肋条或环圈，用来增加物体强度、固定物体或使某一物体附着在另一物体上','How many ribs does a man have?','一个人有几条肋骨？'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prestigious"]={"prestigious","[pre'stɪdʒəs]","[prɛ'stɪdʒəs]","adj.享有声望的",'adj.享有声望的,声望很高的','He is a prestigious doctor.','他是一个享有很高声望的医生。','The young man graduated from a prestigious university.','这个年轻人毕业于一所名牌大学。'}

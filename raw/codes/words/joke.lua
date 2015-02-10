@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["joke"]={"joke","[dʒəʊk]","[dʒok]","n.笑话",'n.笑话,玩笑|||vt.&vi.开玩笑','I\'m sorry but I can\'t see the joke.','很抱歉，我看不出来有什麽可笑的。','Can\'t you take a joke?','跟你开个玩笑你都受不了吗？'}

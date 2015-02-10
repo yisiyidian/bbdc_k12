@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["demolish"]={"demolish","[dɪ'mɒlɪʃ]","[dɪ'mɑlɪʃ]","v.毁",'v.毁,破坏,粉碎','Her article brilliantly demolishes his argument.','她的文章精辟地批驳了他的论点。','They have demolished the slum district.','贫民区已被拆除。'}

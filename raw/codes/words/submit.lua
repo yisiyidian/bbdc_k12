@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["submit"]={"submit","[səb'mɪt]","[səb'mɪt]","vt.呈送",'vt.呈送,递交,主张|||vt.使服从,屈服|||vi.屈从;忍受','Please submit your application form in quadruplicate.','请交申请表一式四份.','Let\'s not submit our disputes for arbitration.','我们还是别把争执提交仲裁。'}

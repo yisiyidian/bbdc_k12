@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["frantic"]={"frantic","['fræntɪk]","['fræntɪk]","adj.疯狂的",'adj.疯狂的,狂乱的','That noise is driving me frantic.','那种噪音真要把我弄疯了。','The child\'s parents were frantic when she did not return home on time.','那孩子没有按时回家，她父母都要急疯了。'}

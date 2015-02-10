@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["courageous"]={"courageous","[kə'reɪdʒəs]","[kə'redʒəs]","adj.勇敢的",'adj.勇敢的','He is such a courageous man that he does not fear death at all.','他是一个非常勇敢的人，所以一点也不怕死。','It was courageous of him to oppose his chief.','他敢反对他的上司，真是勇敢。'}

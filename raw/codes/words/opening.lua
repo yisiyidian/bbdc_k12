@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["opening"]={"opening","['əʊp(ə)nɪŋ]","['opənɪŋ]","n.开始",'n.开始,口,揭幕,空缺的职务|||vbl.打开,开放,开始','It\'s an artful little gadget for opening tins.','那是个小巧玲珑的开罐头工具。','They celebrated his success by opening a bottle of wine.','他们开了一瓶酒来庆祝他的成功。'}

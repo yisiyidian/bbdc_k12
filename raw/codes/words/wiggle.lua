@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wiggle"]={"wiggle","['wɪg(ə)l]","['wɪɡl]","v.扭动",'v.扭动，摆动，踌躇|||n.扭动，蠕动，踌躇|||n.奶油青豆烧鱼','Stop ||wiggling|| and sit still!','不要摇摇晃晃的, 坐著别动!','The baby was ||wiggling|| its toes.','那幼儿扭动著脚趾.'}

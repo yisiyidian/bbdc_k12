@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["meanwhile"]={"meanwhile","['miːnwaɪl]","['minwaɪl]","adv.同时",'adv.同时|||n.其时,其间','||Meanwhile|| the minutes kept ticking away.','其时，时间一分一分地过去。','Eve was cutting the grass, and meanwhile Adam was planting roses.','夏娃在剪草，亚当种玫瑰。'}

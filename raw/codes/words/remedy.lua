@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["remedy"]={"remedy","['remɪdɪ]","['rɛmədi]","n.补救",'n.药物,治疗法,补救|||vt.治疗,补救,矫正','Matter turning worse advise what remedy.','情况不妙，请电告补救方案。','Something that cures; a remedy.','药物治疗疾病的东西；治疗法'}

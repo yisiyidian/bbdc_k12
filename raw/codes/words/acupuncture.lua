@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["acupuncture"]={"acupuncture","['ækjʊ,pʌŋ(k)tʃə]","['ækjupʌŋktʃɚ]","n.针灸",'n.针灸,针治|||v.施以针灸','||Acupuncture|| often brings a fainting person back to consciousness.','针刺疗法经常可使昏迷中的人苏醒过来。','His lecture is intended to bear down on the application of acupuncture anesthesia in brain surgery.','他的学术报告打算重点谈针刺麻醉在脑外科方面的应用。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["used"]={"used","[juːzd]","[just]","adj.使用过的",'adj.使用过的,二手的,习惯的|||v.用,以前曾经|||vbl.用,习惯','Asphalt is used for making road surfaces.','沥青常用于铺路。','The winter was much colder than they were used to and many people died.','那年冬天比他们所习惯的更为寒冷，因而很多人死亡。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insurgent"]={"insurgent","[ɪn'sɜːdʒ(ə)nt]","[ɪn'sɝdʒənt]","adj.叛乱的",'adj.叛乱的,起事的|||n.叛乱分子，反对派','After a prolonged siege, the town was rendered up to the insurgents.','经过长时间包围之后，这个小镇已被起义军攻克。','By early yesterday, the insurgents had taken control of the country\'s main military air base.','到昨天清晨为止，叛乱者已经控制了该国的主要空军基地。'}

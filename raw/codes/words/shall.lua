@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shall"]={"shall","[ʃæl; ʃ(ə)l]","[ʃəl]","vt.将要",'vt.应该,将要,一定','||Shall|| we take our swim-suits?','我们带著游泳衣好不好？','That was a moment that I shall never forget.','那个时刻我永远不会忘记。'}

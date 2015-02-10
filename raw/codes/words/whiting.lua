@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whiting"]={"whiting","['waɪtɪŋ]","['waɪtɪŋ]","n.白粉",'n.白粉,白垩','Extremes meet, as the whiting said with its tail in its mouth.','两极是相通的嘛——当牙鳕把自己的尾巴放进口里时说。','He ordered stuffed whiting.','他点了一道夹馅牙鳕。'}

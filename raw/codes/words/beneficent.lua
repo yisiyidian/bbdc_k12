@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["beneficent"]={"beneficent","[bɪ'nefɪs(ə)nt]","[bɪ'nɛfɪsnt]","adj.行善的",'adj.行善的,慈善的，有益的','She had now a life filled with a beneficent activity.','慈善活动占满了她现在的生活。','He was beneficent to the poor.','他对穷人很慈善。'}

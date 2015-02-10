@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vex"]={"vex","[veks]","[vɛks]","vt.恼怒",'vt.恼怒，使恼火','I didn\'t think to vex you by such a trifle.','我根本没想用这种小事折磨你。','His silly chatter would vex a saint.','他说的话很蠢，再有涵养的人也得气得发火。'}

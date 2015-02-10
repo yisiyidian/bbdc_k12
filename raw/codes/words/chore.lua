@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chore"]={"chore","[tʃɔː]","[tʃɔr]","n.琐事",'n.零工,琐事','I performed my chores.','我做好了家务','All this was done to relieve women of household chores.','这一切都是为了把妇女从家务劳动中解放出来。'}

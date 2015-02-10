@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unless"]={"unless","[ʌn'les]","[ən'lɛs]","conj.除非",'conj.除非|||prep.除...外','I sleep with the window open unless its really cold.','我总是开著窗户睡觉, 除非天气非常冷才关上窗户.','I won\'t go to the party unless I\'m invited.','除非我被邀请，否则我不会去参加晚会的。'}

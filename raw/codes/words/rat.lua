@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rat"]={"rat","[ræt]","[ræt]","n.鼠",'n.鼠,卑鄙的人,变节者|||vi.背叛,捕鼠|||vt.弄蓬松,告发','The rat gnawed a hole through the wall.','耗子在墙上啃了一个洞。','The dog was worrying a rat.','那条狗撕咬著一只老鼠.'}

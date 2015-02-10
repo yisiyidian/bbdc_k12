@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["polarity"]={"polarity","[pə(ʊ)'lærɪtɪ]","[pə'lærəti]","n.极性",'n.有两极,磁性引力,极性|||n.两极分化,极端性','magnetic polarity; ionic polarity.','磁极性，离子极性','an electric terminal with positive polarity.','带正极性的一个电极'}

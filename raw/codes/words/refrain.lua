@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["refrain"]={"refrain","[rɪ'freɪn]","[rɪ'fren]","n.重复",'n.重复,叠句,副歌|||v.节制,避免,克制','I wish he would refrain from scattering his ash all over the carpet.','我希望他不要将烟灰往地毯上乱弹。','I carefully refrained from looking at him.','我小心地忍着不朝他那儿看。'}

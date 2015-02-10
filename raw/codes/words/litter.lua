@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["litter"]={"litter","['lɪtə]","['lɪtɚ]","n.垃圾",'n.垃圾,杂乱，一窝(幼仔)，褥草，轿子|||v.乱丢垃圾,弄乱，产(幼仔)，用草等给动物铺窝','There were piles of litter in the streets.','街道上垃圾成堆。','He was fined for littering on the sidewalks.','他因在人行横道上乱扔杂物而被罚款。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gently"]={"gently","['dʒentlɪ]","['dʒɛntli]","adv.轻轻地",'adv.轻轻地,温柔地','She sang to the music with her hand waving gently.','她跟着音乐唱歌，手斯文地挥动着。','The light wind gently brushed her cheek.','微风轻拂着她的脸颊。'}

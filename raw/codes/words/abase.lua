@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abase"]={"abase","[ə'beɪs]","[ə'bes]","vt.贬低",'vt.降低...的地位,降低...的品格,贬低','He would not abase himself by showing fear.','他不愿露出惧色而有失身份。','A man who don\'t respect others abases himself.','对别人不尊敬，只会自贬人格。'}

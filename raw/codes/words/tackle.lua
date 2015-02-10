@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tackle"]={"tackle","['tæk(ə)l]","['tækl]","n.工具",'n.工具,复滑车,扭倒|||vt.&vi.处理,抓住','Some people tackle the difficult jobs first.','有的人爱先做难做的工作。','Can you suggest how we might tackle the problem?','我们怎样处理这问题, 你能给出个主意吗?'}

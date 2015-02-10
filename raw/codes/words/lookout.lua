@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lookout"]={"lookout","['lʊkaʊt]","['lʊk'aʊt]","n.注意",'n.注意,前途,瞭望台','That\'s his own lookout.','那是他自己的事。','If you want to waste your money, that\'s your own lookout.','你要乱花钱，那是你自己的事。'}

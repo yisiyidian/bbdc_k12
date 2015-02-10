@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["productivity"]={"productivity","[prɒdʌk'tɪvɪtɪ]","[,prodʌk'tɪvəti]","n.生产率",'n.生产率,生产能力','Improved productivity justifies an increase in wages.','提高了生产力理应增加工资.','The new system has had a disastrous effect on productivity.','新制度已对生产力造成了灾难性的影响。'}

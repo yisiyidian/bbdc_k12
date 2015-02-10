@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stint"]={"stint","[stɪnt]","[stɪnt]","v.节省",'v.节省,限制,停止|||n.舍不得化,节约,限制|||n.连续不断的一段时间从事某件事','He did a two-year stint in the army when he left school.','他离开学校后服了两年兵役。','He is returning to this country after a five-year stint in Hong Kong.','他在香港工作了5 年后即将回国。'}

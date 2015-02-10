@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["proletarian"]={"proletarian","[,prəʊlɪ'teərɪən]","[,prolə'tɛrɪən]","adj.普罗阶级的",'adj.普罗阶级的,无产阶级的|||n.普罗,无产者','||Proletarian|| revolutionaries always cleave to Marxist-Leninist principles.','无产阶级革命者永远忠于马列主义的原则。','Our friend ship is built on proletarian, internationalism.','我们的友谊是建立在无产阶级国际主义之上的。'}

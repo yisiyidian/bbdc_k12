@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dot"]={"dot","[dɒt]","[dɑt]","n.小圆点",'n.小圆点,少量,小东西|||vt.作小点记号,点缀|||vi.作小点记号|||[计算机]点','Campfires, like red, peculiar blossoms, dotted the night','“营火象红色的、别致的花朵点缀着黑夜”','He watched the train away until it was only a dot in the distance.','他目送着列车驶去，直到它成了远方的一个小黑点。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pterodactyl"]={"pterodactyl","[,terə'dæktɪl]","[ ,pterəu'dæktil ]","n.翼手龙",'n.翼手龙','||Pterodactyl|| is one kind of  pterosaurs during  Late Jurassic.','翼手龙是一种侏罗纪晚期的翼龙类。','On this lush world, great beasts roam the jungles and pterodactyl-like creatures soar through the sky.','在这个世界，草木葱郁，巨型怪兽出没于丛林，类似翼手龙的动物在天上翱翔。'}

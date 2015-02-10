@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["steam"]={"steam","[stiːm]","[stim]","n.蒸气",'n.蒸气,能源|||vt.蒸|||vi.蒸发,使弥漫','There was a puff of steam from the engine before it stopped.','机车喷出一股蒸气後就停了下来.','||Steam|| has fogged the bathroom mirror.','水蒸气把浴室里的镜子遮住了。'}

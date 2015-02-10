@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exit"]={"exit","['eksɪt; 'egzɪt]","['ɛɡzɪt]","n.出口",'n.出口,退场,离去|||vi.退出,死亡|||vt.离开','I was eventually granted an exit visa.','我终于获得了出境签证。','She made a dart for the exit.','她冲向出口.'}

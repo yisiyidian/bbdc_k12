@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["teller"]={"teller","['telə]","['tɛlɚ]","n.出纳员",'n.出纳员，叙述者，计票人|||Teller：特勒（姓氏）','An inventor or teller of falsehoods; a liar.','撒谎者谎言捏造者或讲述者; 说谎的人','Mr Jones takes the cake as a story teller.','琼斯先生讲故事是无与伦比的。'}

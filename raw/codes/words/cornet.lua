@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cornet"]={"cornet","['kɔːnɪt]","['kɔrnɪt]","n.短号",'n.短号，（盛冰淇淋的）圆锥形蛋卷','He played the cornet in the school band.','他在学校乐队吹奏短号。','I saw a small boy licking an ice-cream cornet.','我看到一个小孩在吃冰淇淋蛋卷。'}

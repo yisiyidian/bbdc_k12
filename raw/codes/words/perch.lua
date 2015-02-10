@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perch"]={"perch","[pɜːtʃ]","[pɝtʃ]","n.栖木",'n.栖木,高位,杆|||v.栖息,就位,位于','The small village perched on a hill.','这个小村庄位于山上。','The bird perched on the electric wires.','鸟栖息在电线上。'}

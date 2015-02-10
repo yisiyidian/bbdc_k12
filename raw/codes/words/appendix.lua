@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["appendix"]={"appendix","[ə'pendɪks]","[ə'pɛndɪks]","n.附录",'n.附录,阑尾','He had his appendix taken out.','他的阑尾割去了。','The details are clearly set out in an appendix.','详细情况在一个附录里清楚列出。'}

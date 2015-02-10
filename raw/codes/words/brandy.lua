@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brandy"]={"brandy","['brændɪ]","['brændi]","n.白兰地酒",'n.白兰地酒|||vt.以白兰地酒调制','She fainted but the brandy soon revived her.','她昏迷了, 但喂她些白兰地酒就很快醒过来了.','I drank a miniature bottle of brandy last night.','我昨晚喝了一小瓶白兰地。'}

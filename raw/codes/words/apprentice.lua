@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["apprentice"]={"apprentice","[ə'prentɪs]","[ə'prɛntɪs]","n.学徒",'n.学徒|||v.使当学徒','He began his career as an apprentice.','他以当学徒开始他的职业生涯。','The shop is taking on two new apprentices.','这个商店新收了两个学徒。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["distaste"]={"distaste","[dɪs'teɪst]","[dɪs'test]","n.不喜欢",'n.不喜欢,厌恶','She looked at the vendor who cheated her the other day with distaste.','她厌恶地望着那个前几天曾经欺骗过她的小贩。','I hadn\'t made a secret of my distaste for Forks.','我从未掩饰过我对福克斯的厌恶。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["myopic"]={"myopic","[maɪ'ɒpɪk]","[maɪ'ɑpɪk]","adj.近视的",'adj.近视的，缺乏远见的','Don\'t be a myopic man!','别作无远见的人！','I wear myopic glasses.','我戴着近视眼镜。'}

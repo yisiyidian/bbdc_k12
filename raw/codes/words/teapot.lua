@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["teapot"]={"teapot","['tiːpɒt]","['ti'pɑt]","n.茶壶",'n.茶壶','He rinsed the teapot out under the tap, to get rid of the tea-leaves.','他在水龙头下面冲洗茶壶, 以便把茶叶冲掉.','`Where does this teapot go?\' `In that cupboard.\'','｀这把茶壶放在什麽地方?＇｀放到那个柜橱里.＇'}

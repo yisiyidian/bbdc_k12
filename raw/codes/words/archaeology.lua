@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["archaeology"]={"archaeology","[,ɑːkɪ'ɒlədʒɪ]","[,ɑrkɪ'ɑlədʒi]","n.考古学",'n.考古学，古迹，文物','She teaches archaeology at the university.','她在大学里教考古学。','||Archaeology|| is a source of history, not just a bumble auxiliary discipline.','考古学是历史学的一个来源，而不是地位卑微的辅助学科。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amazon"]={"amazon","['æməzən]","[ 'æməzɔn ]","n.亚马逊河",'n.亚马逊河,亚马逊(女战士)','Some scientists hope to chart out that particular area of the ||Amazon||.','有些科学家希望对亚马逊河的那一特定区域进行勘察。','They were exploring the ||Amazon|| jungle.','他们正对亚马逊丛林进行勘察。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["giddy"]={"giddy","['gɪdɪ]","['ɡɪdi]","adj.头晕的",'adj.眼花的,头晕的|||v.使眼花,眼花','They looked down from a giddy height.','他们从令人眩晕的高度往下看。','He\'s clearly giddy at the news that his ailing grandfather will be fine .','听到他祖父的病将无大碍，他的喜悦之情溢于言表。'}

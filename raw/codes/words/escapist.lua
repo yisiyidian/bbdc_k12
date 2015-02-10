@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["escapist"]={"escapist","[ɪ'skeɪpɪst]","[əs'kepɪst]","n.逍遥者",'n.逍遥者|||adj.逃避现实的，适于逃避现实的；适于逃避现实者的','He is a escapist','他是个逍遥者','There can\'t be any real escapist since one cannot escape indefinitely.','没有任何能真正逃避现实的人，因为逃也只能避一时。'}

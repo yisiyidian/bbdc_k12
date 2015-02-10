@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sear"]={"sear","[sɪə]","[sɪr]","adj.枯萎的",'adj.枯萎的,烤焦的|||n.烤焦的痕迹|||vt.使…干枯,烤焦|||vi.变得干枯','I distinctly felt the heat start to sear my throat.','我分明感觉到嗓子开始烧得难受。','Grass fires have seared the land near the farming village.','草地野火烧焦了农庄附近的土地。'}

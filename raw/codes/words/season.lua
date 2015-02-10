@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["season"]={"season","['siːz(ə)n]","['sizn]","n.季节",'n.季节,时期,旺季，上演期|||vt.加调味料调味,使...适用于|||vi.使…被调味，','The ball was the highlight of the London season.','那次舞会是伦敦社交活动时期的高潮。','Grouse will soon be in season again.','允许捕猎松鸡的时期又快到了。'}

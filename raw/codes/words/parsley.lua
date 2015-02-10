@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parsley"]={"parsley","['pɑːslɪ]","['pɑrsli]","n.欧芹",'n.欧芹，荷兰芹','The turkey was served with a garnish of parsley.','做好的火鸡上面配上芫荽菜做点缀。','He decorated the chicken with sprigs of parsley.','他用欧芹的嫩枝点缀在鸡上。'}

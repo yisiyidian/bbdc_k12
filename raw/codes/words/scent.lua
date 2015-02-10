@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scent"]={"scent","[sent]","[sɛnt]","n.气味",'n.气味,香味,痕迹|||vt.闻出,发觉,使充满味道,得到...的暗示|||vi.嗅闻,循着遗臭追踪,散发气味','They walked through the forest breathing the scent of pines.','他们步行穿过森林，呼吸着松树的芳香。','The scent of the flowers was wafted along by the breeze.','微风送来了花香.'}

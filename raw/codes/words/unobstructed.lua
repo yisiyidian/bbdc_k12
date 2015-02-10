@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unobstructed"]={"unobstructed","[ʌnəb'strʌktɪd]","[,ʌnəb'strʌktɪd]","adj.无阻碍的",'adj.无阻碍的(没有阴挡的,自由的)','an unobstructed view.','一览无遗的景色','Pressure and flow pulses may be used to keep the tubes unobstructed.','可用压力和流动脉冲使管子畅通.'}

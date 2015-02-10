@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shelve"]={"shelve","[ʃelv]","[ʃɛlv]","vt.搁置",'vt.放在架子上，搁置|||vi.倾斜','They had to shelve their holiday plans because their son was ill.','他们不得不把度假计划搁置，因为他们的儿子病了。','Those rare books are shelved in the East Library.','那些珍贵的书籍都放在图书馆东馆的架子上。'}

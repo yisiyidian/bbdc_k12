@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ultimatum"]={"ultimatum","[ʌltɪ'meɪtəm]","[,ʌltɪ'metəm]","n.最后通牒",'n.最后通牒','The ultimatum expires at noon tomorrow.','最后通牒规定的期限到明天中午截止。','They delivered an ultimatum to that country.','他们给那个国家发出了最后通牒。'}

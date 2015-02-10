@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prig"]={"prig","[prɪg]","[prɪɡ]","n.道学先生",'n.道学先生，自命不凡者，纨绔子弟|||n.小偷|||vt.偷，盗取','Charles thinks he\'s better than the rest of us, the self-righteous prig!','查尔斯认为他比我们大家都强，真是个自以为是的家伙！','',''}

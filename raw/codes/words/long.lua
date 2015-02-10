@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["long"]={"long","[lɒŋ]","[lɔŋ]","adj.长的",'adj.长的,很久的,冗长的|||vi.渴望,热望,极想|||adv.长期地,远地|||n.长时间,长音节','He no longer lives here.','他不再住在这里了。','That girl will go a long way, I\'m sure.','我相信那姑娘很有前途。'}

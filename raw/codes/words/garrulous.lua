@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["garrulous"]={"garrulous","['gær(j)ʊləs]","['ɡærələs]","adj.饶舌的",'adj.饶舌的,多嘴的,啁啾不休的','When she was brought up, her mother became garrulous.','当她被抚养成人的时候，她的妈妈变成絮叨的老妇人。','He is really too garrulous.','他的嘴真贫。'}

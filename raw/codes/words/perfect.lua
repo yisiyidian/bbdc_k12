@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perfect"]={"perfect","['pɜːfɪkt]","['pɝfɪkt]","adj.完美的",'adj.完美的,全然的,理想的,熟练的,正确的|||n.完成式','No one expects you to be perfect, but we do expect you to do your best always.','没人指望你完美无缺，但是我们盼望你永远尽最大的努力。','He flattered himself that he spoke French with a perfect accent.','他自以为他说法语的腔调很完美。'}

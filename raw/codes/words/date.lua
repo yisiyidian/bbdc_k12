@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["date"]={"date","[deɪt]","[det]","n.日期",'n.日期,约会,枣椰子|||vt.约会,定日期|||vi.追溯到|||n.[计算机]DOS命令:显示或设置系统日期','They made a date to meet soon.','他们约定不久见面。','This Greek dish is of a very early date.','这个希腊盘子是很早时期的制品。'}

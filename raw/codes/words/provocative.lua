@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["provocative"]={"provocative","[prə'vɒkətɪv]","[prə'vɑkətɪv]","adj.气人的",'adj.气人的,挑拨的,刺激的|||n.刺激物,挑拨物,兴奋剂','His provocative words only fueled the argument further.','他的挑衅性讲话只能使争论进一步激化.','She got a provocative message from Giovanni.','她从Giovanni那收到一条挑拨性的信息。'}

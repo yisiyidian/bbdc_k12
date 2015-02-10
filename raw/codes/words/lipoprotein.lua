@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lipoprotein"]={"lipoprotein","['lɪpə(ʊ),prəʊtiːn; 'laɪ-]","['lɪpəprotin]","n.脂蛋白",'n.脂蛋白','lipoprotein','n. 脂蛋白','The medical name for good cholesterol is high density lipoprotein.','好的胆固醇的医学名字叫做高密度脂蛋白。'}

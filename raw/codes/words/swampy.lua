@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["swampy"]={"swampy","['swɒmpɪ]","['swɔmpi]","adj.沼泽的",'adj.沼泽的,沼泽多的,湿地的','They could not move their heavy mortars over the swampy ground.','他们无法把重型迫击炮移过那片沼泽地.','Malaria is still rampant in some swampy regions.','疟疾在一些沼泽地区仍很猖獗.'}

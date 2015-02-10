@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["piggyback"]={"piggyback","['pɪgɪbæk]","['pɪɡɪbæk]","adv.&adj.在肩(背)上",'adv.&adj.在肩(背)上,骑在肩(背)上地','The act of transporting piggyback.','背负式运输，驮运联运','a tariff provision that came piggyback with the tax bill; a piggyback provision to a new piece of legislation.','与税法随之而来的关税规定；与一条新法律的颁布相关的规定'}

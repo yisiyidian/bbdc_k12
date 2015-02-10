@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accustomed"]={"accustomed","[ə'kʌstəmd]","[ə'kʌstəmd]","adj.习惯了的",'adj.习惯了的,通常的','I am accustomed to hard work.','我已经习惯努力工作了。','He was accustomed to commanding, not to entreating.','他习惯于发号施令，而不是恳求他人。'}

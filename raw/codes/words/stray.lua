@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stray"]={"stray","[streɪ]","[stre]","n.走失的家畜",'n.走失的家畜,浪子|||adj.迷途的,偶然的|||vi.迷路,彷徨','We were befriended by a stray dog.','有一只失散的狗和我们很好。','He constantly strayed from the main point of his talk.','他不断偏离他的话题。'}

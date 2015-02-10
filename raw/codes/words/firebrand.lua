@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["firebrand"]={"firebrand","['faɪəbrænd]","['faɪɚbrænd]","n.火把",'n.火把,在燃烧的木柴,煽动者','We kindled a firebrand in the cave.','我们在山洞里点燃火把。','He is represented by the media as a dangerous firebrand.','新闻报导，他是个危险的政治煽动者。'}

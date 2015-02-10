@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intelligent"]={"intelligent","[ɪn'telɪdʒ(ə)nt]","[ɪn'tɛlɪdʒənt]","adj.聪明的",'adj.聪明的,智能的','Though very intelligent, she is nevertheless rather modest.','她很聪明, 倒也很谦虚.','Maybe the earth has been visited by intelligent creatures from outer space.','也许太空的智慧生物已经访问过地球。'}

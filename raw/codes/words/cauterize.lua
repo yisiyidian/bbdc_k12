@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cauterize"]={"cauterize","['kɔːtəraɪz]","[ 'kɔ:təraiz ]","vt.烧灼",'vt.烧灼，腐蚀|||=cauterise(英）','He cauterized the wound with a piece of red-hot iron.','他用一块烧红的烙铁烧灼伤口。','If a doctor cauterizes a wound, he or she burns it with heat or with a chemical in order to close it up and prevent it from becoming infected.','.'}

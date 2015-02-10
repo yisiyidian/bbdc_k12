@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ancillary"]={"ancillary","[æn'sɪlərɪ]","['ænsəlɛri]","adj.辅助的",'adj.辅助的|||n.助手','For Degas, sculpture was never more than ancillary to his painting.','对于德加来说，雕刻是从属于绘画的。','The transport corps is ancillary to the infantry.','运输队是步兵的辅助部队。'}

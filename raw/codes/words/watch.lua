@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["watch"]={"watch","[wɒtʃ]","[wɑtʃ]","n.手表",'n.手表,注视|||vt.观察,监视,注视,照顾,等待|||vi.留意,观察','He felt that God was watching over him.','他感觉到上帝保佑著他。','The police put a watch on the suspect\'s house.','警方派人监视那个可疑人的住宅。'}

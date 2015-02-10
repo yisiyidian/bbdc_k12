@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intelligence"]={"intelligence","[ɪn'telɪdʒ(ə)ns]","[ɪn'tɛlɪdʒəns]","n.智力",'n.理解力,智力,情报,情报工作,情报机关','She has more intelligence than we suspected her to possess.','她的智慧比我们猜想的要高。','We must pass an intelligence test before being hired by the boss.','我们必须通过智力测验才能被老板雇用。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accident"]={"accident","['æksɪdənt]","['æksədənt]","n.事故",'n.事故,意外的事','Luckily, the accident was prevented.','很幸运，事故得以避免了。','He was all but killed by the traffic accident.','他几乎死于车祸。'}

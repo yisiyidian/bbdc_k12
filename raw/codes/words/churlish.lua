@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["churlish"]={"churlish","['tʃɜːlɪʃ]","[ 'tʃə:liʃ ]","adj.粗野的",'adj.粗野的，举止粗俗的，难对付的','It seems churlish to refuse such a generous offer.','拒绝这样慷慨的建议未免有些失礼。','The room was so lovely it seemed churlish to argue.','房间太漂亮了，要是再争辩的话就会显得很无礼。'}

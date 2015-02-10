@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inexpiable"]={"inexpiable","[ɪn'ekspɪəb(ə)l]","[ɪn'ɛkspɪəbl]","adj.不能补偿的",'adj.不能补偿的','inexpiable crimes.','不可抵赎的罪行','Death still leaves a margin of inexpiable guilt.','形容罪大恶极，即使处死刑也抵偿不了他的罪恶。'}

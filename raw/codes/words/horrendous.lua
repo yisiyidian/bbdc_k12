@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["horrendous"]={"horrendous","[hɒ'rendəs]","[ hɔ'rendəs ]","adj.可怕的",'adj.可怕的,令人惊惧的','||Horrendous|| explosions shook the whole city','“可怕的爆炸震撼了整座城市”','He described it as the most horrendous experience of his life.','他把那件事形容为他生活中最恐怖的经历。'}

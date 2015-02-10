@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lope"]={"lope","[ləʊp]","[lop]","v.(使)大步慢跑",'v.(使)大步慢跑|||n.大步慢跑','The deer went off at an easy lope.','那鹿轻松地跳跃着跑过去了。','The hares and rabbits lope away.','野兔和家兔都跳跃而去。'}

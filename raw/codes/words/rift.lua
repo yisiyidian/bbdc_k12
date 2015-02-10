@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rift"]={"rift","[rɪft]","[rɪft]","n.裂口",'n.裂口,隙缝,切口|||v.裂开,割开，渗入','The sun appeared through a rift in the clouds.','太阳从云层间隙中冒出来。','He was anxious to mend the rift between the two men.','他急于弥合这两个人之间的裂痕。'}

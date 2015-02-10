@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["faint"]={"faint","[feɪnt]","[fent]","n.昏厥",'n.昏厥,昏倒|||adj.微弱的,无力的,模糊的|||v.昏倒','A young student fainted in the hot sun.','有个年幼的学生在炎炎烈日下晕倒了。','I heard a faint sound in the distance.','我听到远处有个微弱的声音。'}

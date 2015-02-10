@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["huffy"]={"huffy","['hʌfɪ]","['hʌfi]","adj.愤怒的",'adj.愤怒的，傲慢的，易被冒犯的','I became embarrassed and huffy and told her to take the money back.','我既尴尬又气愤，告诉她把钱拿回去。','Now, don\'t get huffy -- I was only teasing.','现在，不要生气——我只是在开玩笑。'}

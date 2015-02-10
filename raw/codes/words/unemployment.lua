@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unemployment"]={"unemployment","[ʌnɪm'plɒɪm(ə)nt; -em-]","[,ʌnɪm'plɔɪmənt]","n.失业",'n.失业,失业人数','Because there is so much unemployment, the competition for jobs is fierce.','因为失业严重，求职的竞争十分激烈。','The specter of unemployment hunted the country.','失业的幽灵在这个国家作祟。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["option"]={"option","['ɒpʃ(ə)n]","['ɑpʃən]","n.选项",'n.选择（的自由）；选项；选择权；选择能力|||vt.得到或获准进行选择；调动球员','He had no option but to agree.','他除了同意外别无选择。','The former option favours the married man.','前一种选择对已婚男子有利.'}

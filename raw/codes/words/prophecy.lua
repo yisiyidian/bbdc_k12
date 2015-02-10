@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prophecy"]={"prophecy","['prɒfɪsɪ]","['prɑfəsi]","n.预言",'n.预言,先兆,预言能力|||=prophesy','The god of prophecy, music, medicine, and poetry, sometimes identified with the sun.','阿波罗司预言、音乐、医药、诗歌之神，有时等同于太阳神','His prophecy was fulfilled.','他的预言应验了。'}

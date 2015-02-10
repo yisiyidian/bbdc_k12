@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["feral"]={"feral","['fer(ə)l; 'fɪə-]","[ 'fiərəl ]","adj.野生的",'adj.野生的,凶猛的','AIDS is a feral disease.','爱滋病是致死的疾病。','The hybrid offspring of a coyote and a feral dog.','科伊狗丛林狼和野狗的杂交后代'}

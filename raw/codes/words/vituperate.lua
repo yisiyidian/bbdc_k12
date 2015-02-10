@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vituperate"]={"vituperate","[vɪ'tjuːpəreɪt; vaɪ-]","[ vi'tju:pəreit ]","v.痛斥",'v.痛斥,辱骂','The prince vituperated against the developers for ruining London\'s skyline.','王子斥责土地开发商破坏了伦敦市建筑物映在空中的轮廓线之美.','Mrs. Bennet vituperated Kitty for her coughing.','斥责'}

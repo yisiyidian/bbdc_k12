@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spokesman"]={"spokesman","['spəʊksmən]","['spoksmən]","n.发言人",'n.发言人','We\'ll have Jones as our spokesman.','我们让琼斯做我们的代言人.','A spokesman voiced the workers\'dissatisfaction.','发言人表示了工人的不满情绪.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oust"]={"oust","[aʊst]","[aʊst]","v.逐出",'v.逐出,夺取','Fox was ousted from office but he had nothing to say for himself.','福克斯被赶下台，但是他没有什么可特别为自己辨护的。','The umpire ousted the arguing player from the game.','裁判员将那位不服判决的运动员罚下场。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["yelp"]={"yelp","[jelp]","[jɛlp]","n.叫吠",'n.叫吠,叫喊声|||v.叫吠,叫喊','She let out a yelp of pain.','她痛得叫了一声。','The dog gave a yelp when I trod on its paw.','我踩了那狗的爪子，它嚎叫了一声。'}

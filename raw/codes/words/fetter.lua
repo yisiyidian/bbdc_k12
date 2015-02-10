@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fetter"]={"fetter","['fetə]","['fɛtɚ]","v.加脚镣",'v.加脚镣,束缚|||vt.&n.脚镣,束缚','The prisoner was put into the jail with fetters.','这个犯人被戴上脚镣投进了监狱。','He was fettered by his family and could not travel any longer.','他被家庭束缚，不能再到处去旅游了。'}

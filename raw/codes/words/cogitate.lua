@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cogitate"]={"cogitate","['kɒdʒɪteɪt]","[ 'kɔdʒiteit ]","v.思考",'v.思考,考虑,思惟','We cogitated on the meaning of life.','我们认真思考生命的意义。','He sat silently ||cogitating||.','他静静地坐着沉思。'}

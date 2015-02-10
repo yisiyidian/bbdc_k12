@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scare"]={"scare","[skeə]","[skɛr]","vt.惊",'vt.惊吓(惊恐,惊慌)|||vi.受惊吓|||n.惊吓(惊恐,惊慌)','The dog scared the thief away.','狗把小偷吓走了。','You did give me a scare.','你真吓了我一跳。'}

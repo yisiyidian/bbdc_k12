@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["troublesome"]={"troublesome","['trʌb(ə)ls(ə)m]","['trʌblsəm]","adj.令人烦恼的",'adj.令人烦恼的,讨厌的，困难的，棘手的','A troublesome situation has grown up.','出现了使人感到棘手的局面。','Causing bother; troublesome.','引起烦扰的；麻烦的'}

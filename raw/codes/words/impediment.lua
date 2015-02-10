@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impediment"]={"impediment","[ɪm'pedɪm(ə)nt]","[ɪm'pɛdɪmənt]","n.障碍",'n.障碍(障碍物,行李,辎重)','Some small impediment slowed his conversation.','轻微的口吃使他讲话很慢。','The level of inflation is a serious impediment to economic recovery.','通货膨胀是影响经济复苏的严重障碍。'}

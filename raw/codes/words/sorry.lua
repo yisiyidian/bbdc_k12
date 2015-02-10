@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sorry"]={"sorry","['sɒrɪ]","['sɔri]","adj.对不起的",'adj.对不起的；无价值的，低等的；遗憾的；感到伤心的','He was sorry for her and tried to cheer her up.','他为她感到难过，并试图使她振作起来。','I was sorry to hear that your cat had died.','听说你的猫死了，我觉得很难过。'}

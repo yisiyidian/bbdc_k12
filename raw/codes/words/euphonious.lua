@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["euphonious"]={"euphonious","[juː'fəʊnɪəs]","[ju'fonɪəs]","adj.悦耳的",'adj.悦耳的','By accident, some sweet and euphonious proverbs made her obsessed with language learning.','一个偶然的机会，一些美妙悦耳的谚语使她迷恋上了语言学习。','As we passed by the concert hall, we could hear euphonious melodies coming from within.','当我们经过音乐厅时，可以听到从里面传出来悦耳的旋律。'}

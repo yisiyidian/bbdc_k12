@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interpersonal"]={"interpersonal","[ɪntə'pɜːs(ə)n(ə)l]","['ɪntɚ'pɝsnl]","adj.人与人之间的",'adj.人与人之间的,人际关系的','Training in interpersonal skills is essential.','人际交往技巧的培训非常必要','The complexities of interpersonal relations bothered her.','人际关系的复杂情况使她困惑不已.'}

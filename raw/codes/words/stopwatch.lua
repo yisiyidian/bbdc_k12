@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stopwatch"]={"stopwatch","['stɒpwɒtʃ]","['stɑpwɑtʃ]","n.记秒表",'n.记秒表,跑表|||vt.用秒表测定时间','Note the time with ||Stopwatch||.','请注意时间，秒表','||Stopwatch|| is used for race.','秒表用于赛跑比赛。'}

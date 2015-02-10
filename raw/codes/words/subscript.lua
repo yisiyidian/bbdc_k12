@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subscript"]={"subscript","['sʌbskrɪpt]","['sʌbskrɪpt]","n.下标",'n.下标|||adj.写在下方的','Octal  numbers are identified by a trailing 8 subscript.','八进制数由一个附加的下标8来识别.','The atomic number appears as a subscript.','把原子系数标在左下角.'}

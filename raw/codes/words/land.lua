@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["land"]={"land","[lænd]","[lænd]","n.陆地",'n.陆地,国土,土地|||v.登陆,登岸,卸货','I found myself landed with three extra guests for dinner.','我到时候才知道我得多招待三个客人吃饭。','He left his office job to try to make a living on the land.','他辞去了办公室的工作，改以务农为生。'}

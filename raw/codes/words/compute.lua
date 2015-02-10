@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compute"]={"compute","[kəm'pjuːt]","[kəm'pjʊt]","vt.计算",'vt.计算','We can compute the circular area with radius.','我们能用半径计算出圆的面积。','Scientists have computed the probable course of the rocket.','科学家利用计算机计算了火箭可能运行的轨道。'}

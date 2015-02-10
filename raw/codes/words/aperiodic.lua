@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aperiodic"]={"aperiodic","[,eɪpɪərɪ'ɒdɪk]","[,epɪrɪ'ɑdɪk]","adj.非周期性的(直指的)",'adj.非周期性的(直指的)','aperiodic','adj. 非周期性的(直指的)','the characteristics of periodic and aperiodic tasks','周期性任务和非周期性任务'}

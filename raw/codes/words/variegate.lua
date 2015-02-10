@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["variegate"]={"variegate","['veərɪəɡeɪt]","['vɛrɪ,get]","vt.使...多样化(弄成杂色)",'vt.使...多样化(弄成杂色)','Music variegates my life.','音乐让我的生活变得丰富。','Music variegates my life.','音乐让我的生活变得丰富。'}

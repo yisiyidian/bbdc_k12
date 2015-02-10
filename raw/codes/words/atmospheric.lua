@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["atmospheric"]={"atmospheric","[ætməs'ferɪk]","[,ætməs'fɛrɪk]","adj.大气的",'adj.大气的，大气层的，制造气氛的','The glass (ie atmospheric pressure) is falling.','气压在下降.','An atmospheric movement; a breeze or wind.','微风大气的流动；一阵微风或风'}

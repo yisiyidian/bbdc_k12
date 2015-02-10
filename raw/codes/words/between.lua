@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["between"]={"between","[bɪ'twiːn]","[bɪ'twin]","adv.在中间",'adv.在中间|||prep.在...之间','Children must attend school between 5 and 16.','5至16岁的孩子必须上学.','One town ends where the next begins and there\'s a road that runs between.','一个城镇连接著另一个城镇，两者之间有一条路。'}

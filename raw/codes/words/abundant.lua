@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abundant"]={"abundant","[ə'bʌnd(ə)nt]","[ə'bʌndənt]","adj.丰富的",'adj.丰富的,充裕的','Birds concentrate (in places) where food is abundant.','鸟聚集在食物丰盛的地方.','Indonesia is abundant in petroleum deposits.','印尼的石油蕴藏量丰富。'}

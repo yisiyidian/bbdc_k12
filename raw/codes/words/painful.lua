@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["painful"]={"painful","['peɪnfʊl; -f(ə)l]","['penfl]","adj.痛苦的",'adj.痛苦的','The sting of a jellyfish is very painful.','让水母刺著是很痛的.','Teaching him Greek was a painful (ie slow and difficult) process.','教他希腊文是很吃力的事.'}

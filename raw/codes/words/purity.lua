@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["purity"]={"purity","['pjʊərɪtɪ]","['pjʊrəti]","n.纯净",'n.纯净,纯正,纯粹','Lenin fought stubbornly for the purity of Marxist theory.','列宁顽强地为维护马克思主义学说的纯洁性而战斗。','Chinese people regard lotus as an emblem of purity.','中国人把莲花看作是纯洁的象征。'}

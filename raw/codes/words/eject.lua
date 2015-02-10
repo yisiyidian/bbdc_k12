@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eject"]={"eject","[ɪ'dʒekt]","[ɪ'dʒɛkt]","vt.喷出",'vt.喷出；驱逐；强制离开|||vi.弹射出','As the plane fall rapidly towards the grind, the pilot have to eject.','在飞机迅速落向地面时，驾驶员只得弹射出来。','Cartridges are ejected from the gun after firing.','开枪后子弹从枪膛里弹出去。'}

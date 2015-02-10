@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abyss"]={"abyss","[ə'bɪs]","[ə'bɪs]","n.深渊",'n.深渊,无底洞','All my life, as down an abyss without a bottom, I have been pouring vanloads of information into that vacancy of oblivion I call my mind.','我一生，就像沉在一个无底的深渊，一直在把一车车的见闻，倒进那个我称之为精神的遗忘之空虚里去。','lost in the vast abyss of space and time','迷失在空间和时间的无边深渊中'}

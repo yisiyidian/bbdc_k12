@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tradesman"]={"tradesman","['treɪdzmən]","['tredzmən]","n.零售商",'n.零售商,工匠','This is a job for a skilled tradesman.','这是娴熟的工匠才能干的活儿.','Many of the tourists on board had begun bargaining with the tradesman.','船上的很多旅客开始与商人讨价还价了。'}

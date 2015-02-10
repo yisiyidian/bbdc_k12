@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["motionless"]={"motionless","['məʊʃnləs]","['moʃnləs]","adj.不动的",'adj.不动的,静止的','He stands motionless and silent, looking neither to the right nor to the left.','他一动也不动地站着，默不作声，既不右盼，也不左顾。','He moved no more, unless to feed the furnace, but remained motionless as a statue.','除了给炉子加煤，他一动也不动，好像雕像似的静止在那里。'}

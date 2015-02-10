@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parameter"]={"parameter","[pə'ræmɪtə]","[pə'ræmɪtɚ]","n.参数",'n.参数,参量,决定因素','One parameter which always comes into play is the national economy.','国民经济是一个经常起作用的参量。','We have to work within the parameters of time and budget.','我们的工作受时间和财力所限。'}

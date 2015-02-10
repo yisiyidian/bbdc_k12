@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["combatant"]={"combatant","['kɒmbət(ə)nt; 'kʌm-]","[kəmˈbætənt]","n.战士",'n.战士；争斗者','In modern wars, both combatants and non-combatants are killed.','现代战争中, 战斗人员与非战斗人员都可能死亡。','The combatants were exhausted after a month\'s fight.','战士们经过一个月的战斗已筋疲力尽。'}

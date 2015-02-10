@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["encroachment"]={"encroachment","[eŋ'krəʊtʃm(ə)nt]","[ɪn'krotʃmənt]","n.侵蚀",'n.侵蚀,侵犯','I resent the encroachment on my time.','我讨厌别人侵占我的时间。','It\'s a sign of the encroachment of commercialism in medicine.','这是医药界被逐渐商业化的一个的征兆。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["financial"]={"financial","[faɪ'nænʃ(ə)l; fɪ-]","[faɪ'nænʃl]","adj.金融的",'adj.金融的,财政的','The committee decided to make a withdrawal of financial support for his scheme.','委员会决定取消对他那项计划的资助。','I hear you are in poor financial straits.','我听说你处于经济困难之中。'}

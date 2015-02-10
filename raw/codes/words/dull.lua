@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dull"]={"dull","[dʌl]","[dʌl]","adj.呆滞的",'adj.呆滞的,迟钝的,无趣的,钝的,暗的|||vt.使变钝|||vi.变钝','He felt a dull ache in his shoulder.','他感到肩膀隐隐作痛。','This student is very dull.','这个学生非常愚钝。'}

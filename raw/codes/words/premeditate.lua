@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["premeditate"]={"premeditate","[priː'medɪteɪt]","[pri'mɛdɪtet]","vt.预谋",'vt.预谋,预先计划','He carefully premeditated each step of his plan.','他仔细考虑他的每一步计划。','We needed to know whether the crime had been premeditated.','我们需要知道的是这起犯罪是否蓄谋已久。'}

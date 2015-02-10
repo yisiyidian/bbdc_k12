@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tattoo"]={"tattoo","[tæ'tuː]","[tæ'tu]","n.&vt.(在皮肤上)刺图案",'n.&vt.(在皮肤上)刺图案,纹身','He have tattoo the name "marlene" on his upper arm.','他将＂玛琳＂这个名字刺在臂的上方。','Distinctive tribal tattoos.','一部落与他部落相区别的纹身'}

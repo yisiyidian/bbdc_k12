@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brake"]={"brake","[breɪk]","[brek]","vi.刹车",'vi.刹车|||n.闸，刹车；阻碍|||vt.刹车','The car in front of me stopped suddenly and I had to brake.','我前面那辆小汽车突然停住，我只好刹车。','There\'s too much travel on the brake, it needs tightening.','制动器太松了, 需要调紧.'}

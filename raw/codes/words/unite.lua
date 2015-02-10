@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unite"]={"unite","[juː'naɪt]","[ju'naɪt]","v.联合",'v.联合,合并,混合','The more of the masses we unite with, the better.','我们联合起来的群众越多，就越有利。','She unites common sense with vision.','她将想象力与常识联系起来'}

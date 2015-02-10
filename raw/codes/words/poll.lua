@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["poll"]={"poll","[pəʊl]","[pol]","n.投票",'n.投票,民意测验,民意,票数|||vt.做民意测验,获得...票,剪树枝|||vi.投票','The poll reported Labour to be leading.','民意测验显示工党领先。','Mr. Hill polled over 3000 votes.','希尔先生获得3000 多票。'}

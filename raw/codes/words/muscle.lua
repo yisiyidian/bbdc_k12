@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["muscle"]={"muscle","['mʌs(ə)l]","['mʌsl]","n.肌肉",'n.肌肉|||vt.用力挤|||vi.用力进行','The contraction of muscle is a reaction of the body.','肌肉的收缩是人体的一种反应。','Some of my friends develop their arm muscles by playing tennis.','我的一些朋友通过打网球锻炼他们胳膊的肌肉。'}

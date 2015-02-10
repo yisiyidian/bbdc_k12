@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["could"]={"could","[kəd; kʊd]","[kʊd]","aux.“can”的过去式",'aux.“can”的过去式；能够，打算；用于假设语气的条件句；用于虚拟语气的结论句','I had to pay a 500 deposit to the landlord before I could move into the house.','我得付给房东500英镑押金才能搬进房里去.','He had no money, nor did he know anyone he could borrow from, either.','他没有钱，也不知道能够向谁借钱。'}

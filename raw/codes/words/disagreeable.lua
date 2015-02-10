@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disagreeable"]={"disagreeable","[dɪsə'griːəb(ə)l]","[,dɪsə'ɡriəbl]","adj.不愉快的",'adj.不愉快的,厌恶的,不为人喜的','My wife was disagreeable to me this morning.','今天早上我太太对我发脾气。','Some fruits are disagreeable to the taste.','有几种果子味道不好。'}

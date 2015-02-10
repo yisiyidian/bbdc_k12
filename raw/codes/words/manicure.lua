@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["manicure"]={"manicure","['mænɪkjʊə]","['mænɪkjʊr]","n.修指甲",'n.修指甲，修指甲的人|||vt.修指甲，修剪','||Manicure|| a hedge.','修剪一道篱笆','I am not going to manicure my nails. Just save it as it is.','我不打算修指甲。就让它这样吧。'}

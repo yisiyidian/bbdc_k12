@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consummate"]={"consummate","['kɒnsjʊmeɪt; -sə-]","['kɑnsəmət]","adj.完全",'v.成就,作成,使达到极点|||adj.无上的,至上的,完全','This award consummates my life\'s work.','这个奖是我一生努力的圆满结果。','She is a consummate artist.','她是个技艺高超的艺术家。'}

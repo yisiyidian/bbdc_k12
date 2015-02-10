@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["racket"]={"racket","['rækɪt]","['rækɪt]","n.球拍",'n.球拍,喧闹纷乱','The ball just tipped the edge of his racket.','球仅仅碰到他球拍的边儿.','What\'s your racket?','你是干哪一行的?'}

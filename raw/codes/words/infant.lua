@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infant"]={"infant","['ɪnf(ə)nt]","['ɪnfənt]","n.婴儿",'adj.婴儿的,幼稚的,初期的|||n.婴儿,幼儿','||Infant|| mortality (ie The rate at which babies die) was 20 deaths per thousand live births in 1986.','1986年的婴儿死亡率为生育成活率的千分之二十.','||Infant|| mortality is still very high in some developing countries.','某些发展中国家的婴儿死亡率仍然很高。'}

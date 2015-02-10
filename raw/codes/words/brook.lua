@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brook"]={"brook","[brʊk]","[brʊk]","n.小河",'n.小河,溪|||v.容忍,忍受|||vt.[常用于否定句或疑问句]容忍','Can we wade the brook?','我们能渡过这条小河吗?','A brook bubbling along its course.','一条汩汩流动的溪水。'}

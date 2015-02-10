@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aggregate"]={"aggregate","['ægrɪgət]","['æɡrɪɡət]","n.合计",'n.合计,总计,集合体|||adj.合计的,集合的,聚合的|||v.聚集,集合,合计','The tax increases will, in the aggregate, cause much hardship.','总的来说，增加税收将造成很多困难。','Our team scored the most goals on aggregate.','我们队以最高分胜出。'}

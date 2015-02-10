@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infantile"]={"infantile","['ɪnf(ə)ntaɪl]","['ɪnfəntaɪl]","adj.婴儿的",'adj.婴儿的,幼稚的,初期的','Her unconscious looks wander to her husband with infantile dependency.','带着婴儿般的依赖，她不由自主地把目光投向了她的丈夫。','An opening family education will benefit the development of Children\'s infantile psychology.','家庭教育开放化有利于儿童心理的健康发展。'}

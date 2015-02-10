@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thereof"]={"thereof","[ðeər'ɒv]","[,ðɛr'ʌv]","adv.关于...",'adv.关于...,将它,它的','Take therefore no thought for the morrow. Sufficient unto the day is the evil thereof.','所以，不要为明天忧虑；因为明天自有明天的忧虑；一天的难处一天当就够了。','All citizens of the United States are ruled by the laws thereof.','美国的所有公民均须受国家法律之约束.'}

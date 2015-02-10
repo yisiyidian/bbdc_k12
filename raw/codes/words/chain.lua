@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chain"]={"chain","[tʃeɪn]","[tʃen]","n.链",'n.链,连锁,束缚|||vt.用铁练锁住,束缚,囚禁','He detached a link from a chain.','他从链子上拆下一个链环。','The slump on Wall Street set up a chain reaction in stock markets around the world.','华尔街金融滑坡引起世界股票市场的连锁反应。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inimical"]={"inimical","[ɪ'nɪmɪk(ə)l]","[ɪ'nɪmɪkl]","adj.为敌的",'adj.为敌的,不友善的','Many have said that government support is inimical to artistic development .','许多人说政府的支助对艺术发展有一种负面的作用。','Lack of ambition is inimical to success.','没有抱负，则难以成功。'}

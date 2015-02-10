@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ambrosia"]={"ambrosia","[æm'brəʊzɪə]","[æm'brozɪə]","n.神的食物",'n.神的食物,特别美味的食物','She is at present gone to look for the best nectar and ambrosia to regale me this evening.','为了今晚款待我，她现在又去准备美酒佳肴去了。','i was making ambrosia.','我在做些美味的食物。'}

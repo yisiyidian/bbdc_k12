@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incommensurate"]={"incommensurate","[,ɪnkə'menʃ(ə)rət; -sjə-]","[,ɪnkə'mɛnʃərət]","adj.不成比例的",'adj.不成比例的,不相称的','His abilities are incommensurate to the task.','他的能力和他担负的任务不相称.','a reward incommensurate with their efforts.','与他们的努力不相称的奖励'}

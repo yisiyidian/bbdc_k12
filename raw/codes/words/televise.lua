@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["televise"]={"televise","['telɪvaɪz]","['tɛlɪvaɪz]","v.用电视播放",'v.用电视播放,用电视放映|||vt.用电视播放','The Olympic Games are always televised.','奥林匹克运动会一向经电视播放.','The BBC plans to televise all Shakespeare\'s plays.','英国广播公司计画播放莎士比亚的全部戏剧。'}

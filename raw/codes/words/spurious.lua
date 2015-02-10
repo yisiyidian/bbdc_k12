@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spurious"]={"spurious","['spjʊərɪəs]","['spjʊrɪəs]","adj.假的",'adj.假的,伪造的','Quite a lot of allegations of injustice are spurious.','有关不公正的指控有不少是虚假的。','The justification of this chart is entirely spurious.','这张图表的依据完全站不住脚。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insane"]={"insane","[ɪn'seɪn]","[ɪn'sen]","adj.疯狂的",'adj.疯狂的,精神错乱的,荒唐的','They believed him to be insane.','他们认为他疯了.','Are you insane?','你疯了吗？'}

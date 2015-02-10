@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["leg"]={"leg","[leg]","[lɛɡ]","n.腿",'n.腿,支柱,裤脚管|||vi.用脚走路','The soldier disabled by wounds in his leg is buried in sadness.','那个腿部受伤致残的士兵正沉浸在悲哀之中。','The breaking of his right leg made him walk on crutches only.','他右脚的折断使他只有靠拐杖走路。'}

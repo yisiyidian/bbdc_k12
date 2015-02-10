@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disconsolate"]={"disconsolate","[dɪs'kɒns(ə)lət]","[dɪs'kɑnsələt]","adj.孤独的",'adj.孤独的,郁郁不乐的','Why is she always disconsolate?','她为什么总是郁郁不乐的？','He was disconsolate after his bicycle was stolen.','他的自行车被偷后，他郁郁不欢。'}

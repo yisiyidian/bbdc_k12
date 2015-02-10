@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gospel"]={"gospel","['gɒsp(ə)l]","['ɡɑspl]","n.新约圣经四福书之一",'n.新约圣经四福书之一，福音，真理','Today\'s lesson is taken from the St Mark\'s ||Gospel||.','今日的经文选自《马可福音》.','The first lesson is taken from St John\'s ||Gospel||.','第一段圣经选自《约翰福音》。'}

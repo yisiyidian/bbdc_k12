@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chalice"]={"chalice","['tʃælɪs]","[ 'tʃælis ]","n.杯",'n.杯,圣餐杯','He inherited a poisoned chalice when he took over the job as union leader.','他接手工会领导职务，看似风光，实则会给他带来很多麻烦。','our destiny offers not the cup of despair but the chalice of oppotunity.','我们的命运绝望与机遇共存。'}

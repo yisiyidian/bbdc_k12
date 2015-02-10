@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eclectic"]={"eclectic","[ɪ'klektɪk]","[ɪ'klɛktɪk]","n.折衷主义者",'n.折衷主义者,折衷派的人|||adj.选择的,折衷的','He has an eclectic taste in music.','他爱好各种音乐。','She has very eclectic tastes in literature.','她在文学方面的兴趣非常广泛。'}

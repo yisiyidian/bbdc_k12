@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unscathed"]={"unscathed","[ʌn'skeɪðd]","[ʌn'skeðd]","adj.没有受伤的",'adj.没有受伤的,未受伤的,未受伤的','I just hope that they all come back unscathed.','我只希望他们能安然无恙地回来。','Fortunately, we are all unscathed after the hurricane.','飓风过后，我们都安然无恙，真是幸运。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["beet"]={"beet","[biːt]","[bit]","n.甜菜",'n.甜菜','A plant cultivated for an edible part, such as the root of the beet, the leaf of spinach, or the flower buds of broccoli or cauliflower.','蔬菜因其可食部分而种植的植物，如甜菜根、菠菜叶或者椰菜、花椰菜的花蕾等','A beet soup served hot or cold, usually with sour cream.','甜菜汤热食或冷食的甜菜汤，通常添加酸奶油'}

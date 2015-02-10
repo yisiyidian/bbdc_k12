@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["skill"]={"skill","[skɪl]","[skɪl]","n.技能",'n.技能,技巧','She dealt with the problem with consummate skill.','她以巧妙的手腕处理了这个问题。','The crisis put his courage and skill to the test.','这次危难是对他的勇气和技能的考验。'}

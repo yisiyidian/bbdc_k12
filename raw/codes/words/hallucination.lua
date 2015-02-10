@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hallucination"]={"hallucination","[hə,luːsɪ'neɪʃ(ə)n]","[hə,lusɪ'neʃən]","n.幻觉",'n.幻觉,幻想','For a moment I thought I was having hallucinations.','一时间我以为我产生了幻觉。','The drug induces hallucinations at high doses.','大剂量地服用该药会致幻。'}

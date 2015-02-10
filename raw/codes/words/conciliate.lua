@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conciliate"]={"conciliate","[kən'sɪlɪeɪt]","[kən'sɪlɪet]","vt.安抚",'vt.安抚,调和|||vi.取悦于','His duty was to conciliate the people, not to provoke them.','他的任务是安抚这些人，而不是激怒他们。','The president has a strong political urge to conciliate.','总统有进行安抚的强烈政治需求。'}

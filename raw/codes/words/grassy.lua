@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grassy"]={"grassy","['grɑːsɪ]","['ɡræsi]","adj.绿色的像草的",'adj.绿色的像草的','Rabbits had burrowed holes in the grassy bank.','兔子在河岸的草地上掘了些洞.','We slid down the grassy slope.','我们顺著草坡滑下去.'}

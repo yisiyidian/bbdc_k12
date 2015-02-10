@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plate"]={"plate","[pleɪt]","[plet]","n.盘",'n.碟,盘,金属板,板块|||vt.镀金,电镀,为...制印版,,给...装钢板,用金属板固定','He put the apples on a round plate.','他把苹果放在一个圆盘子里。','The hot plate may spoil the varnish on the table.','这只热盘子会损坏桌面的光泽。'}

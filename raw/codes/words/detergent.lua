@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["detergent"]={"detergent","[dɪ'tɜːdʒ(ə)nt]","[dɪ'tɝdʒənt]","n.清洁剂",'n.清洁剂|||adj.用于清洗的','I\'ve tried this new detergent with excellent results.','我试用了这种新型洗涤剂, 效果很好.','Be careful to rinse the detergent from these dishes.','注意务必冲洗掉这些盘子上的清洁剂。'}

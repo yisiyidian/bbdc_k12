@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nonviolence"]={"nonviolence","[,nɒn'vaɪələns]","['nɑn'vaɪələns]","n.非暴力事件",'n.非暴力事件,非暴力','In an era of violence, she has consistently supported nonviolence.','在一个暴力的时代, 她始终拥护非暴力.','Today\'s protesters are committed to nonviolence.','今天的游行者都采取非暴力反抗。'}

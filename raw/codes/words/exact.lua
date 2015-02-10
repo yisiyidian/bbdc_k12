@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exact"]={"exact","[ɪg'zækt; eg-]","[ɪɡ'zækt]","adj.精确的",'adj.精确的|||vt.强求,要求,索取','Tell me the exact time when the next train will arrive.','告诉我下一班火车抵达的正确时刻。','I don\'t know the exact date.','我不知道确切的日子。'}

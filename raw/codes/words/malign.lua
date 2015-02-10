@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["malign"]={"malign","[mə'laɪn]","[mə'laɪn]","adj.有害的",'adj.有害的,恶性的,有恶意的|||vt.诽谤,说坏话','She likes to malign innocent persons.','她爱诋毁那些清白的人。','A malign tumour was found in his stomach.','在他的胃部发现了一个恶性肿瘤。　'}

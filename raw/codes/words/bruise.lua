@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bruise"]={"bruise","[bruːz]","[bruz]","n.瘀青",'n.瘀青,擦伤,挫伤|||vi.受伤,擦伤|||vt.使挫伤','She had a dilly of a bruise on her arm.','她手臂上有一块显眼的伤痕.','She fell and bruised her knee.','她摔倒在地，膝盖上起了紫血块。'}

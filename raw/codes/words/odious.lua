@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["odious"]={"odious","['əʊdɪəs]","['odɪəs]","adj.可憎的",'adj.可憎的,讨厌的','The judge described the crime as odious.','法官称这一罪行令人发指。','What an odious man!','真是个讨厌透顶的家伙！'}

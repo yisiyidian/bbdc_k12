@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inelastic"]={"inelastic","[,ɪnɪ'læstɪk]","[ɪnɪ'læstɪk]","adj.无弹性的",'adj.无弹性的,无弹力的,无适应性的','It would make no difference if the bar deformations were totally inelastic.','如果杆的变形完全是非弹性变形时这也就没有什么区别了.','The socks I bought yesterday are inelastic.','我昨天买的袜子没弹性。'}

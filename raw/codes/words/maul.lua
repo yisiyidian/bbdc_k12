@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["maul"]={"maul","[mɔːl]","[mɔl]","n.大槌",'n.大槌|||vt.打伤,虐打,粗暴对待','The cable-TV and health-care industries are both being mauled by government.','有线电视和保健业正在遭受政府的严厉批评。','He had been mauled by a bear.','他被一只熊抓伤过。'}

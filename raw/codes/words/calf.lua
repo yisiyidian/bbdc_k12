@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["calf"]={"calf","[kɑːf]","[kæf]","n.小牛",'n.小牛,幼崽,愚蠢的年轻人,小牛皮,小腿肚','A calf was offered up as a sacrifice to the goddess.','向女神祭献了一头牺牲小牛.','The cow has produced a calf.','这母牛生了一头小牛.'}

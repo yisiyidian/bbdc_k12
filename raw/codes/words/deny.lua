@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deny"]={"deny","[dɪ'naɪ]","[dɪ'nai]","vt.否认",'vt.否认,拒绝,反对,克制','No one can deny the fact that fire burns.','无人能否认火能燃烧的事实.','I can\'t in all honesty (ie if I must be honest) deny it.','我确实不能否认这一点.'}

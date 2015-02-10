@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stickpin"]={"stickpin","['stɪkpɪn]","[ 'stikpin ]","n.领带夹",'n.领带夹','My stickpin is disappeared.','我的领带夹不见了。','He wore a pearl stickpin and a white carnation in his buttonhole.','他在领带上别了根珍珠别针,上装纽孔里插了枝白色康乃馨。'}

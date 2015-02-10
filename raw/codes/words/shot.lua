@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shot"]={"shot","[ʃɒt]","[ʃɑt]","n.射击",'n.射手，击球；开枪，发射；企图；注射|||adj.闪色的，颜色会变化的；交织的；渗透的；（俚语）坏透了的，筋疲力尽的|||vt.射中，射击；给…装弹；注射；抛出|||vi.发射，射击；突然出现|||v.拍摄(shoot的过去式和过去分词)；射杀；开（枪或其他武器）；打猎','If I had the chance to go, I\'d take it like a shot.','我要是有机会去，我就不犹豫','His stories are shot through with a gentle sadness.','他的小说充满了淡淡的忧伤。'}

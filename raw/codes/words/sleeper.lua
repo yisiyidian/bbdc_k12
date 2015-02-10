@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sleeper"]={"sleeper","['sliːpə]","['slipɚ]","n.睡眠者",'n.睡眠者，枕木，卧铺，爆冷门','I booked a first-class sleeper.','我订了头等卧铺车票。','Poor sleepers take longer to fall asleep than good sleepers.','与睡眠好的人相比，睡眠不好的人要花更长的时间才能入睡。'}

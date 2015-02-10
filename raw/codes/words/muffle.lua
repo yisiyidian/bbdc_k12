@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["muffle"]={"muffle","['mʌf(ə)l]","['mʌfl]","n.低沉的声音",'n.低沉的声音,消音器,上唇|||v.围裹,抑制,发低沉的声音','We muffled the oars to stop them splashing noisily.','我们裹住船浆以减小溅水声。','||Muffle|| cat catch no mice.','蒙眼猫难捕鼠。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["proof"]={"proof","[pruːf]","[pruf]","n.证明",'adj.防...的,耐...的,能防护|||n.校样,证据,证明|||vt.检验,给...做防护措施','I was clothed in Armor of proof','“我披着刀枪不入之甲”','Have you got any proof that you own this bike?','你有什么证据证明这辆自行车是你的？'}

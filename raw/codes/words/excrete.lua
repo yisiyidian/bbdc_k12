@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["excrete"]={"excrete","[ɪk'skriːt; ek-]","[ɪk'skrit]","vt.排泄",'vt.排泄,分泌','Dogs are not permitted to foul (ie excrete on) the pavement.','禁止狗在人行道上便溺.','Your open pores excrete sweat and dirt.','你张开的毛孔排出汗液与污垢。'}

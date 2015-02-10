@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["melodic"]={"melodic","[mɪ'lɒdɪk]","[mə'lɑdɪk]","adj.旋律优美的",'adj.旋律优美的','Then another melodic line is added to the texture.','作品构架中又加进了一个旋律.','He spoke with a soft husky voice in a melodic accent.','他微微沙哑的声音带着一种悠扬的口音.'}

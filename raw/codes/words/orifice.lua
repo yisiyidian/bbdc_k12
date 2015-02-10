@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["orifice"]={"orifice","['ɒrɪfɪs]","['ɔrɪfɪs]","n.孔口",'n.孔口','Every person has two nasal orifices.','一个人有两个鼻孔。','A mouse ran out from the dark orifice of the cave.','一只老鼠从黑暗的洞口跑出。'}

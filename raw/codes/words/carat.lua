@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["carat"]={"carat","['kærət]","['kærət]","n.克拉",'n.克拉,开(以纯金为24开表示金含量的单位)|||=karat','She wants a 10 carats diamond for her proposal.','她想要一个10克拉的求婚戒指。','The diamond weighs 60 carats','这颗钻石净重60克拉。'}

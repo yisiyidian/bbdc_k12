@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["thrive"]={"thrive","[θraɪv]","[θraɪv]","vi.兴旺",'vi.兴旺,繁荣','He that will thrive must rise at five.','五点起床，百事兴旺。','A business cannot thrive without good management.','没有良好的经营管理，事业就不会兴旺发达。'}

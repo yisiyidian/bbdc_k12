@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reprehensible"]={"reprehensible","[,reprɪ'hensɪb(ə)l]","[,rɛprɪ'hɛnsəbl]","adj.应斥责的",'adj.应斥责的,应该谴责的','Lying is not seen as being morally reprehensible any strong way.','人们并不把撒谎当作一件应该大加谴责的事。','His evasion of his clear duty was reprehensible.','他逃避其明确职责的行为应当受到谴责。'}

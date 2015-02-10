@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spacecraft"]={"spacecraft","['speɪskrɑːft]","['speskræft]","n.宇宙飞船",'n.宇宙飞船','The spacecraft is in orbit round the moon.','该航天器在绕月球轨道上飞行.','Bad weather has frustrated plans to launch the spacecraft today.','今日发射宇宙飞船的计画, 因天气恶劣而落空.'}

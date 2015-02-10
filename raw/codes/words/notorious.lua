@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["notorious"]={"notorious","[nə(ʊ)'tɔːrɪəs]","[no'tɔrɪəs]","adj.臭名昭著的",'adj.臭名昭著的','He is notorious for his goings-on.','他因行为不检点而声名狼藉。','The notorious thief will be put up for trial next week.','那个臭名昭著的偷窃犯将于下周出庭受审。'}

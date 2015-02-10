@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enzyme"]={"enzyme","['enzaɪm]","['ɛnzaɪm]","n.酶",'n.酶','These enzyme aggregates provide a mechanism.','这些酶的聚集物提供了一种机制','The liquid jelled after we added the enzyme.','我们加入酶后，那液体凝结了'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["monsoon"]={"monsoon","[mɒn'suːn]","[,mɑn'sun]","n.季节风",'n.季节风,吹季节风的季节,雨季','Heavy rains occur during a summer monsoon.','暴雨出现在一个夏季季风期','The ship beat back against a monsoon.','船逆着季风艰难地行驶。'}

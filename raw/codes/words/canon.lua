@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["canon"]={"canon","['kænən]","[ 'kænən ]","n.教会法规;标准、准则;正典;正式名单;教堂里的教士",'n.教会法规;标准、准则;正典;正式名单;教堂里的教士|||佳能(财富500强公司之一,总部所在地日本,主要经营办公设备)','An administrative act applying or interpreting articles of canon law.','教令实施或解释教会法律条文的管理法案','This is the canon of Scripture.','这是圣经的真经。'}

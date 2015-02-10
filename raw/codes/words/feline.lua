@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["feline"]={"feline","['fiːlaɪn]","['filaɪn]","adj.猫科的",'adj.猫科的|||n.猫,猫科动物','She moves with feline grace.','她走路时有如猫一般的优雅。','The 16-pound feline is so fat she can hardly walk.','这只16磅重的猫因太胖而几乎无法走路。'}

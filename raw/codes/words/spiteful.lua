@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spiteful"]={"spiteful","['spaɪtfʊl; -f(ə)l]","['spaɪtfl]","adj.恶意的",'adj.恶意的,怀恨的','It was spiteful of you to tell him that.','你告诉他那件事是怀有恶意的。','It was spiteful of her to do that.','她那样做是怀有恶意的。'}

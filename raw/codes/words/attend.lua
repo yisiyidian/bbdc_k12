@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["attend"]={"attend","[ə'tend]","[ə'tɛnd]","vt.参加",'vt.参加,注意,照料|||vi.专心,留意,待命','attended class.','上课','I shall be attending the meeting.','我会参加会议。'}

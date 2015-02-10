@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ennui"]={"ennui","[ɒn'wiː]","[ɑn'wi]","n.怠倦",'n.怠倦,无聊','Grandpa took up chess as a hobby to relieve the ennui of retirement.','爷爷养成了下象棋的爱好，以打发退休后无聊的时间。','The servants relieved their ennui with gambling and gossip about their masters','佣人们赌博和八卦他们的主人，以打发他们无聊的时间。'}

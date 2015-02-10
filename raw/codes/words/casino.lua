@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["casino"]={"casino","[kə'siːnəʊ]","[kə'sino]","n.娱乐场",'n.娱乐场,(供表演跳舞赌博的地点),一种牌戏','Afraid the casino will draw undesirable elements to the town.','担心赌场会把不良分子吸引到镇上来','He spends all his time gambling in the casino.','他把时间都消磨在赌场的赌博上。'}

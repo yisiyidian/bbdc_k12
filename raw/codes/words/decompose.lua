@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decompose"]={"decompose","[diːkəm'pəʊz]","[,dikəm'poz]","vi.&vt.分解",'vi.&vt.分解|||vt.腐烂','The meat begin to decompose after some time in the sun.','肉在太阳下放了一些时候後开始腐败。','The eggs began to decompose after a day in the sun.','鸡蛋在太阳下放了一天后开始变坏。'}

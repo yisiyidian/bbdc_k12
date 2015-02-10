@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["surname"]={"surname","['sɜːneɪm]","['sɝ'nem]","n.姓",'n.姓|||vt.冠姓','Jones is a common surname.','琼斯是个很普通的姓。','Just call me by my surname, cut out the Mr.','就叫我的姓吧，去掉先生二字。'}

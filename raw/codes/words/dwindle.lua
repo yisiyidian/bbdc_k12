@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dwindle"]={"dwindle","['dwɪnd(ə)l]","['dwɪndl]","v.减少",'v.减少,缩小','Exports are ||dwindling|| and the trade deficit is swelling.','出口在缩减，贸易赤字在增长。','The number of people going to the cinema seems to dwindle steadily.','看电影的人数似乎在逐渐下降。'}

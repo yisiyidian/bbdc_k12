@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["person"]={"person","['pɜːs(ə)n]","['pɝsn]","n.人",'n.人','Help arrived in the person of his father.','前来帮忙的是他的父亲。','The firm has an important asset in the person of the director of research.','公司有一巨大财富，就是研究部主任这个人。'}

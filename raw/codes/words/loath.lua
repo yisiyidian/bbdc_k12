@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["loath"]={"loath","[ləʊθ]","[loθ]","adj.不愿意的",'adj.不愿意的,勉强的','He is loath to get out of bed on cold morning.','在寒冷的早晨他讨厌起床。','I was loath to go with him.','我不愿和他一起去。'}

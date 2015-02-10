@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["she"]={"she","[ʃiː]","[ʃi]","pron.她",'pron.她','||She|| weighs 50 kilograms.','她的体重有50公斤。','||She|| can speak Japanese as well as English.','她会说日语和英语。'}

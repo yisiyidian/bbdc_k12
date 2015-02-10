@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["screw"]={"screw","[skruː]","[skru]","n.螺丝钉",'n.螺丝钉,吝啬鬼,压迫,转动,螺旋状物,监狱看守|||vt.扭紧,压榨,欺骗,强迫|||vi.旋转','I screwed up the note and threw it on the fire.','我把便条揉成团扔进火里了。','Don\'t ask them to organize the trip, they\'ll only screw everything up.','别让他们组织此行，他们准得把一切都搞糟了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["caucus"]={"caucus","['kɔːkəs]","['kɔkəs]","n.干部会议",'n.干部会议，政党高层会议|||vi.开干部会议','An important aspect of team negotiations is the caucus.','谈判团队的一项重要任务是开内部会议。','caucus is a kind of meeting','干部会议是一种会议'}

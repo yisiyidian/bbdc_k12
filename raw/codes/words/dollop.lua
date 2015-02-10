@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dollop"]={"dollop","['dɒləp]","['dɑləp]","n.（食物的）一块",'n.（食物的）一块，一团，一些|||vt.分发（一块）食物','a dollop of ice cream.','一块冰淇淋','a dollop of whiskey.','一点威士忌'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["madden"]={"madden","['mæd(ə)n]","['mædn]","v.使发狂",'v.使发狂,激怒,发怒','Her laziness maddens me.','她的懒惰让我气愤。','It maddens me that she was chosen instead of me.','选中她而未选中我，真把我气死了。'}

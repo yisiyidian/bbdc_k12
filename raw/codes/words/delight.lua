@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["delight"]={"delight","[dɪ'laɪt]","[dɪ'laɪt]","n.快乐",'n.快乐,高兴|||vi.给与乐趣,使高兴|||vt.使高兴','He takes great delight in painting.','他爱好绘画。','She clapped her hands in delight.','她高兴地拍手。'}

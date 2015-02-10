@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prototype"]={"prototype","['prəʊtətaɪp]","['protə'taɪp]","n.原型",'n.原型,雏形','No matter how many prototypes we make, we just can not get it right.','不管做多少次样品，我们都没法做出满意的。','He is the prototype of the role in that film.','他就是那部电影里人物的原型。'}

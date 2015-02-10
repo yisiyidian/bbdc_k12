@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["circumlocution"]={"circumlocution","[,sɜːkəmlə'kjuːʃ(ə)n]","[,sɝkəmlə'kjuʃən]","n.迂回累赘的陈述",'n.迂回累赘的陈述，遁词','Usually bosses are not circumlocution to their workers.','一般老板对员工有话都会直说。','He is a master at circumlocution.','他讲话很会兜圈子。'}

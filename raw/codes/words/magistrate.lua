@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["magistrate"]={"magistrate","['mædʒɪstrət; -streɪt]","['mædʒɪs'tret]","n.地方法官",'n.地方法官，地方行政官','The magistrate granted/refused him bail.','地方法官准许/不准他保释.','The magistrate remanded him in custody for two weeks.','法官命令把他拘留两星期.'}

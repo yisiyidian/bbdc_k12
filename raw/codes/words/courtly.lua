@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["courtly"]={"courtly","['kɔːtlɪ]","['kɔrtli]","adj.尊严而有礼貌的显贵的;优雅的;奉承的;有礼貌的",'adj.尊严而有礼貌的显贵的;优雅的;奉承的;有礼貌的','He wore a black soutane which gave him something of a courtly air.','他穿着一身黑色的祭司法衣，显得优雅高贵。','She slipped into a more courtly role as if to the manner born.','她逐渐进入一种更典雅的身份，似乎这是她与生俱来的。'}

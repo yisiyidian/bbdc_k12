@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["daughter"]={"daughter","['dɔːtə]","['dɔtɚ]","n.女儿",'n.女儿|||adj.与女儿有关的,女性直系后代的','The death of their daughter was a cruel blow.','女儿的死对他们是一个残酷的打击。','Jill is my eldest daughter.','吉尔是我的长女.'}

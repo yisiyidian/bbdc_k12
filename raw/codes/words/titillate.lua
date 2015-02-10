@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["titillate"]={"titillate","['tɪtɪleɪt]","['tɪtə'let]","v.搔痒",'v.搔痒,（使）愉快','In review a novel, you shall try to titillate rather than satiate the reader\'s interest.','评论一本小说的时候，你应想办法刺激而不是满足读者的兴趣。','Monkeys often titillate each other.','猴子们经常互相挠痒痒。'}

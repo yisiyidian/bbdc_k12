@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["album"]={"album","['ælbəm]","['ælbəm]","n.专辑",'n.集邮本,照相簿,唱片簿','Tara is currently working on a solo album.','塔拉眼下正忙着制作个人专辑.','Their new album is sheer dynamite.','他们这套新唱片一下子轰动起来.'}

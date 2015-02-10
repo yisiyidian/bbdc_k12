@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["animated"]={"animated","['ænɪmeɪtɪd]","['ænə'metɪd]","adj.生气勃勃的",'adj.生气勃勃的,栩栩如生的，动画片的','An animated, amusing person who is the center of attention at a social gathering.','活跃、有趣的人是社交场合中人们注意的焦点。','she is animated','她很活泼'}

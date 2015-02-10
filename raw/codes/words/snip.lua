@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["snip"]={"snip","[snɪp]","[snɪp]","v.剪",'n.货真价实之物;物美价廉的物品|||v.剪;剪下;剪断','He snipped the string and untied the parcel.','他剪断绳子，解开包裹。','He snipped off the corner of the milk carton.','他剪掉牛奶袋的边角。'}

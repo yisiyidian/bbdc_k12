@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lexical"]={"lexical","['leksɪk(ə)l]","['lɛksɪkl]","adj.字典的",'adj.字典的,语句的','We chose a few of the commonest lexical items in the languages.','我们选取了各语言中最常见的几个词汇。','lexical items/units(= words and phrases)','词项（即单词和短语）'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bummer"]={"bummer","['bʌmə]","['bʌmɚ]","n.失败",'n.失败，不愉快的经历|||n.无赖,游民','Now, the bad news: the book is a bummer','“现在宣布坏消息：这本书失败了”','bummer','n. 无赖,游民,游荡者,不愉快的局面'}

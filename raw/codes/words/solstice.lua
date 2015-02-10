@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["solstice"]={"solstice","['sɒlstɪs]","['sɑlstəs]","n.至",'n.至,至点,至日','Midsummer or summer solstice is celebrated in many cultures as the longest day of the year.','在许多国家，人们会庆祝夏至日的到来，这是一年中最长的一天。','The days begin to draw out after the winter solstice.','冬至以后，白天渐渐变长。'}

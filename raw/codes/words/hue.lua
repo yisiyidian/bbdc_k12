@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hue"]={"hue","[hjuː]","[ hju: ]","n.色",'n.色,色彩,叫声|||[计算机]色调','The water and the sky are of one hue.','水天一色。','The diamond shone with every hue under the sun.','金刚石在阳光下放出五颜六色的光芒。'}

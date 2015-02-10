@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prodigal"]={"prodigal","['prɒdɪg(ə)l]","['prɑdɪɡl]","adj.挥霍的",'adj.挥霍的，(物产等)丰富的，慷慨的|||n.挥霍者','The old man cast off his prodigal son and disinherited him.','老人断绝了与他的不肖儿子的关系，并剥夺了他的继承权。','They are prodigal in their expenditures.','他们挥霍无度。'}

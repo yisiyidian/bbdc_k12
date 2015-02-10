@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["regret"]={"regret","[rɪ'gret]","[rɪ'ɡrɛt]","n.遗憾",'n.遗憾,后悔,抱歉|||v.为...感到遗憾,后悔,惋惜','We regret that we are unable to reconsider your case.','我们很遗憾无法再考虑你的情况。','She immediately regretted her decision.','她做出决定后立即感到后悔。'}

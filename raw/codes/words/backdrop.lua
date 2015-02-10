@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["backdrop"]={"backdrop","['bækdrɒp]","['bæk'drɑp]","n.背景",'n.背景幕,背景','The Palace Museum has provided an expansive backdrop for the greatest collection of Chinese art in the world.','故宫博物院为在世中华艺术中的瑰宝提供了宽敞宏大的场所。','This story\'s backdrop was happend in medieval','这个故事的背景发生在中世纪'}

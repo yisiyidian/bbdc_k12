@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["next"]={"next","[nekst]","[nɛkst]","adj.紧接在后的",'adj.紧接在后的；次于的；贴近的；紧邻的|||adv.接下去；然后；居后地；依次的|||n.下一位；下一个|||prep.靠近；居于…之后；在…的隔壁','I can enjoy a joke as well as the next man, but this is going too far.','我跟别人一样喜欢开玩笑，但这个玩笑太离谱了。','May I bring my chair next to yours?','我可以把我的椅子移到你的旁边吗？'}

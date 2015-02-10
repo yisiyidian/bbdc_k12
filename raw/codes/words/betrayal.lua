@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["betrayal"]={"betrayal","[bɪ'treɪəl]","[bɪ'treəl]","n.背叛",'n.背叛,暴露','She felt that what she had done was a betrayal of Patrick.','她觉得自己的所作所为是对帕特里克的背叛。','bree longed to share the truth abt her husband\'s paintful betrayal.','bree想有人分享她被他的丈夫背叛的痛苦。'}

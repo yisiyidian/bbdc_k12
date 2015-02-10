@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cape"]={"cape","[keɪp]","[kep]","n.岬",'n.岬,海角,披肩','I long for a trip to the ||Cape|| of Good Hope.','我渴望到好望角去旅行.','She was wearing a cape over her dress.','她在外套上披着一件披肩.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wrench"]={"wrench","[ren(t)ʃ]","[rɛntʃ]","n.扳钳",'n.扳钳,猛扭,痛苦|||vt.猛扭,扭伤|||vi.猛扭,扭伤,曲解','Separation from her children was a terrible wrench.','同孩子们分别对她而言非常痛苦。','He closed the door so hard that he wrenched the handle off.','他关门用力过猛，连门把手都拧了下来。'}

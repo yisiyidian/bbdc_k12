@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["believe"]={"believe","[bɪ'liːv]","[bɪ'liv]","vi.&vt.相信",'vi.&vt.认为,相信','I believe it to have been a mistake.','我认为这一直就是错的。','We believe in his ability.','我们相信他的才干。'}

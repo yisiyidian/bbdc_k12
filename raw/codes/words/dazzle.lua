@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dazzle"]={"dazzle","['dæz(ə)l]","['dæzl]","v.使眼花",'v.使眼花，使惊奇，目眩，耀眼|||n.耀眼的光，令人惊叹的事物','His eyes dazzled before the strong light.','他面对强光头晕目眩。','She was dazzled by her sudden success.','突然的成功使她感到迷惘。'}

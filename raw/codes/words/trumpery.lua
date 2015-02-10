@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["trumpery"]={"trumpery","['trʌmp(ə)rɪ]","['trʌmpəri]","adj.中看不中用的",'adj.中看不中用的,无价值的|||n.无价值的杂物','This lace is trumpery and usefuless.','华而不实的','As usual, a great proportion was trumpery which had begun to accumulate in his father\'s day.','照常，大部分的东西是华而不实的，还是他父亲手里就开始积藏了。'}

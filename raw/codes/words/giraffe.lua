@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["giraffe"]={"giraffe","[dʒə'rɑ:f]","[dʒə'ræf]","n.长颈鹿",'n.长颈鹿','The giraffe must get up at six in the morning if it wants to have its breakfast in its stomach by nine.','长颈鹿得要在早上六点起来，如果它想早饭在九点钟之前到达胃里的话。','The giraffe eats tender leaf from the tree highly.','长颈鹿从高高的树上吃掉嫩树叶子。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brace"]={"brace","[breɪs]","[bres]","n.支柱",'n.支柱,曲柄,大括号|||vt.绷紧,顶住,（为困难或坏事）做准备,使更为坚固|||vi.振作精神,做好准备','My daughter has to wear a brace on her teeth.','我的女儿得戴牙箍以矫正牙齿.','He braced his foot against the wall and jumped.','他一只脚抵著墙跳.'}

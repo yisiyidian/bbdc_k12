@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deception"]={"deception","[dɪ'sepʃ(ə)n]","[dɪ'sɛpʃən]","n.骗局",'n.骗局,诡计,欺骗,欺诈','His pretended friendship was part of the deception.','他所谓的友谊是一种骗局.','It was an innocent deception, meant as a joke.','那是个无伤大雅的骗术，开个玩笑而已。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["promulgate"]={"promulgate","['prɒm(ə)lgeɪt]","['prɑmlɡet]","vt.发布",'vt.发布,公布,发表','The king promulgate a decree.','国王颁布了一项法令。','The government promulgated the new regulation.','政府公布了新条例。'}

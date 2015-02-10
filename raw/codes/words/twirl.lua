@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["twirl"]={"twirl","[twɜːl]","[twɝl]","vt.快速转动(扭转)",'vt.快速转动(扭转)|||n.扭转(复制的钥匙,旋转的东西)','He walked along briskly, twirling his cane in the air.','他一边轻快地走著, 一边用手杖在空中旋转.','She twirled a strand of hair round her finger.','她把一绺头发卷绕在手指上.'}

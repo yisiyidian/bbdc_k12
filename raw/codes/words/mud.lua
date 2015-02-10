@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mud"]={"mud","[mʌd]","[mʌd]","n.泥",'n.泥,泥浆,恶意诽谤和攻击|||vt.弄脏,污蔑','As the bus passed, it spattered mud on my clothes.','公共汽车开过时溅了我一身泥。','My car\'s stuck in the mud, and it won\'t budge.','我的车陷入泥中，一动也不动。'}

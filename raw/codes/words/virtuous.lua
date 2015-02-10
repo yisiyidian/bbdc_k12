@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["virtuous"]={"virtuous","['vɜːtjʊəs; -tʃʊəs]","['vɝtʃuəs]","adj.有品德的",'adj.有品德的,善良的,贞洁的','A virtuous woman.','贞洁的女子','A woman regarded as proper and virtuous.','贤淑的女性被认为是正统的和有德行的女性'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gradient"]={"gradient","['greɪdɪənt]","['ɡredɪənt]","n.倾斜度",'n.倾斜度,坡度,升降率|||adj.倾斜的,步行的,步行态的','The car slid down the steep gradient into the river.','汽车滑下陡峭的斜坡掉入河中.','4 gradient arrays marked A, B, C and D were set up.','布置了编号为A, B, C,D的四个梯度排列.'}

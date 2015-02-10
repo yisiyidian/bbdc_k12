@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impervious"]={"impervious","[ɪm'pɜːvɪəs]","[ɪm'pɝvɪəs]","adj.不能渗透的",'adj.不能渗透的,不为所动的','I buy a coat impervious to rain.','我买了一件防水大衣。','As a determined people , he is impervious to everything.','作为一位意志坚定的人，他不受任何事情的影响。'}

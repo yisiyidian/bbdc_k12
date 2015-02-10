@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["simplicity"]={"simplicity","[sɪm'plɪsɪtɪ]","[sɪm'plɪsəti]","n.单纯",'n.单纯,简朴','The monastic community generally lives a life of simplicity.','僧侣界通常过着简朴生活。','The beauty of the plan consists in its simplicity.','该计划的妙处在于简洁明了。'}

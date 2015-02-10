@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["malnutrition"]={"malnutrition","[mælnjʊ'trɪʃ(ə)n]","['mælnʊ'trɪʃən]","n.营养不良",'n.营养不良','It is a classic case of malnutrition.','这是营养不良的典型病例.','We should treat malnutrition in women both before and doing pregnancy.','我们必须治疗妇女在怀孕前和怀孕过程中的营养不良'}

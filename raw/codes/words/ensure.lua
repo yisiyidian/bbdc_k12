@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ensure"]={"ensure","[ɪn'ʃɔː; -'ʃʊə; en-]","[ɪn'ʃʊr]","vt.保证",'vt.确定,保证,担保','The doctors were zealous in their efforts to ensure the survival of premature babies.','医生们在努力保证早产婴儿成活方面热情很高。','We must ensure the purity of drinking water.','我们必须确保饮用水的纯净。'}

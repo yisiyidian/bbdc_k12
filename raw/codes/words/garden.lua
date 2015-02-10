@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["garden"]={"garden","['gɑːd(ə)n]","['ɡɑrdn]","n.花园",'n.花园,果园,菜园,草地|||vi.栽培花木,从事园艺工作|||vt.造园,以花园装饰|||adj.花园的,园艺的,绿化的,平凡的','Mary talked with me across the garden fence.','玛丽和我隔着花园篱笆交谈。','He dunged his vegetable garden regularly.','他经常给他的菜园施肥。'}

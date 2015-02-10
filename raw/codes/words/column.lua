@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["column"]={"column","['kɒləm]","['kɑləm]","n.列",'n.纵队，列；圆柱；专栏','His column is syndicated throughout the world.','他的专栏文章通过报业辛迪加在世界许多报刊上发表.','He used to write a column for this newspaper.','他过去曾为这家报纸写专栏文章。'}

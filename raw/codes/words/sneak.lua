@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sneak"]={"sneak","[sniːk]","[snik]","vt.偷偷摸摸做",'vt.偷偷摸摸做|||vi.偷偷地走,偷偷地做|||n.鬼鬼祟祟的人,潜行,溜|||adj.暗中进行的,出其不意的','James loves sneaking up on his sister to frighten her.','詹姆斯喜欢溜到妹妹身後吓她一大跳。','The cat ate the food and sneaked off.','猫吃完食物就偷偷跑了。'}

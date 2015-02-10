@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["problematic"]={"problematic","[prɒblə'mætɪk]","['prɑblə'mætɪk]","adj.问题的",'adj.问题的,有疑问的','Some places are more problematic than others for women traveling alone.','对那些独自旅行的女性来说，在有些地方遇到的问题会比其他地方更多。','Providing the necessary care for elderly people can be problematic.','给老年人必要的照顾可能是很麻烦的事。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sick"]={"sick","[sɪk]","[sɪk]","adj.恶心的",'adj.恶心的,有病的,腻烦的,晕的|||n.病人,呕吐物|||vt.追逐,攻击;唆使','She left her home reluctantly and sick at heart.','她依依不舍地离开了家，心情很沉重。','It makes me sick to see her being treated so badly.','我看到她受到这样虐待非常愤怒。'}

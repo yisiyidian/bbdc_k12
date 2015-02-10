@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["temporarily"]={"temporarily","['temp(ə)r(ər)ɪlɪ]","[,tɛmpə'rɛəli]","adj.临时的",'adj.临时的|||adv.暂时地,临时地','With several of their planes temporarily out of commission, the airline is losing money.','航空公司因有几架飞机暂时不能使用而正在赔钱.','When things get a bit too much, she simply tunes  out temporarily.','碰到事情太棘手时, 她干脆暂时撒手不管.'}

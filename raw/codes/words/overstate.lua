@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overstate"]={"overstate","[əʊvə'steɪt]","[,ovɚ'stet]","v.夸大的叙述",'v.夸大的叙述,夸张','The problems have been greatly overstated.','问题过於夸大了.','Don\'t overstate your case or no one will believe you.','不要夸大自己的情况, 要不没人相信你的话.'}

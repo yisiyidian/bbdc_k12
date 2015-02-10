@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unrestrained"]={"unrestrained","[ʌnrɪ'streɪnd]","['ʌnrɪ'strend]","adj.没有抑制的",'adj.没有抑制的,无限制的,放纵的','an unrestrained laugh.','毫不拘谨的大笑','He is vigorous and unrestrained in behaviour.','他这个人做事豪放不羁.'}

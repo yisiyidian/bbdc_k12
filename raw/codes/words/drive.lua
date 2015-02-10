@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["drive"]={"drive","[draɪv]","[draɪv]","v.开车",'v.开车,驱使,驾进力|||n.驾车,快车道,推进力,驱使,路,街','John will be best remembered for his drive and enthusiasm.','约翰将因其干劲和热情被人们牢记。','He drives the team relentlessly.','他无情地鞭策全队苦练。'}

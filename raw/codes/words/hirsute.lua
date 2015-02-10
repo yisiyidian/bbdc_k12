@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hirsute"]={"hirsute","['hɜːsjuːt]","[ 'hə:sju:t ]","adj.多毛的",'adj.多毛的','You\'re looking very hirsute, Richard.','理查德，瞧你一脸的胡子！','He was wearing shorts which showed his long, muscular, hirsute legs.','他穿着短裤，露出自己强壮多毛的长腿。'}

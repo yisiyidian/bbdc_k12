@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["proton"]={"proton","['prəʊtɒn]","['protɑn]","n.质子",'n.质子','An electron has a negative charge, a proton has a positive charge.','电子带负电荷, 质子带正电荷.','Neutron is neutral and slightly heavier than the proton.','中子是中性的,比质子略重.'}

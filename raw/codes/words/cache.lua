@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cache"]={"cache","[kæʃ]","[kæʃ]","n.电脑高速缓冲存储器",'n.电脑高速缓冲存储器；贮存物；隐藏处|||vt.隐藏；窖藏|||vi.躲藏','Police discovered a cache of weapons in the room.','警方在房间里发现了一批私藏的武器。','A huge arms cache was discovered by police.','警方发现了大批私藏的军火。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["really"]={"really","['rɪəlɪ]","[ˈriəˌli, ˈrili]","adv.真正地",'adv.真正地,实在，事实上','I\'m not really sure.','我不太清楚。','After the shock of their electoral defeat, the party really began to pull together.','该党在受到选举失败的打击之後，才真正地团结起来。'}

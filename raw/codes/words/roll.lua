@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["roll"]={"roll","[rəʊl]","[rol]","vi.翻滚",'vt.辗；使（眼球等）左右转动；（使）原地转圈；滚动|||vi.左右摇晃；翻滚；开始移动，启动|||n.名册；滚翻','She rolled in for work twenty minutes late.','她懒懒散散地来上班，迟到了二十分钟。','The ship was rolling heavily to and fro.','那船晃来晃去很不平稳。'}

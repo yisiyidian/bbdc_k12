@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sulfur"]={"sulfur","['sʌlfɚ]","[ 'sʌlfə ]","n.硫",'n.硫|||vt.用硫处理液化','||Sulfur|| can be used to make gunpowder.','硫磺可以用来制造火药。','||Sulfur|| emissions from steel mills become acid rain.','炼钢厂排放出的硫形成了酸雨。'}

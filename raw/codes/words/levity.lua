@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["levity"]={"levity","['levɪtɪ]","['lɛvəti]","n.轻浮",'n.轻浮,轻率','Miss Moore was a woman of steady deportment, without the least levity of conversation or carriage.','穆尔小姐是个态度稳重的女人，谈吐举止绝无半点轻浮之处。','Your levity is unseemly at this time.','在这种场合，你的轻率举动是不得体的。'}

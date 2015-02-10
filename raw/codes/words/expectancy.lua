@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["expectancy"]={"expectancy","[ɪk'spekt(ə)nsɪ; ek-]","[ɪk'spɛktənsi]","n.期待(公算)",'n.期待(公算)','A quiver of expectancy ran through the audience.','全场引颈以待, 群情鼎沸.','Women have a higher life expectancy than men.','女人比男人的预期寿命长.'}

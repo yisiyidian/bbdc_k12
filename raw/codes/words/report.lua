@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["report"]={"report","[rɪ'pɔːt]","[rɪ'pɔrt]","vt.报告",'n.传闻,报告,成绩单,爆炸声|||vt.报告,报导,记录|||vi.叙述,报告','The poll reported Labour to be leading.','民意测验显示工党领先。','You should have reported them to the police.','你应当向警方控告他们的。'}

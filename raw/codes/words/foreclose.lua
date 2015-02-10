@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["foreclose"]={"foreclose","[fɔː'kləʊz]","[fɔr'kloz]","v.排除",'v.排除,取消抵押品的赎回权','The building society will be forced to foreclose on this mortgage because regular payments have not been made.','住宅互助协会被迫取消这项抵押的赎取权，因为没有交纳定期的付款。','The bank foreclosed (on the mortgage).','该银行已取消（对该抵押品的）赎取权.'}

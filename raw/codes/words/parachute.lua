@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parachute"]={"parachute","['pærəʃuːt]","['pærə'ʃʊt]","n.降落伞",'n.降落伞,翼膜,缓降物|||vi.&vt.跳伞','Our first parachute jump was an exhilarating experience.','第一次跳伞是个非常激动人心的经历','When his parachute failed he thought he was a goner.','他的降落伞打不开了, 他想他算完了.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cannon"]={"cannon","['kænən]","['kænən]","n.大炮",'n.大炮|||vi.开炮','The police used a water cannon on the rioters and soon brought them to heel.','警察对暴徒使用了高压水炮，促使他们很快就范。','The cannon shot the town to pieces.','大炮的射击毁了这座城市。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disconnect"]={"disconnect","[dɪskə'nekt]","[,dɪskə'nɛkt]","vi.断开",'vt.使分离|||vi.断开，拆开','If you don\'t pay your bills they\'ll disconnect your electricity/gas.','若不付费用, 就要停止供应电力[煤气].','My phone\'s been disconnected because I didn\'t pay the bill.','我因为没付电话费而被切断了电话线路。'}

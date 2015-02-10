@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parry"]={"parry","['pærɪ]","['pæri]","vi.挡开武器或打击",'vi.挡开武器或打击|||vt.挡开，回避|||n.挡开，回避','In an awkward press conference, Mr King ||parried|| questions on the allegations.','在一场尴尬的新闻发布会上，金先生回避了有关指控的问题。','I did not want to wound him, but to restrict myself to defence, to parry his attacks.','我不想伤害他，只是想自我防卫，挡开他的攻击。'}

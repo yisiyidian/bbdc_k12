@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["courage"]={"courage","['kʌrɪdʒ]","[ 'kɝrɪdʒ]","n.勇气",'n.勇气','A soldier\'s courage is put to the proof in battle.','士兵的勇气在战斗中得到考验。','He won honor for his courage.','他以勇气赢得大家的尊敬。'}

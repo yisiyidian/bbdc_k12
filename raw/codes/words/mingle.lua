@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mingle"]={"mingle","['mɪŋg(ə)l]","['mɪŋɡl]","vt.混合",'vt.混合|||vi.联合,交际','Security men mingled with the crowd.','保安人员混杂在人群中。','He mingled in the crowd and lost in sight.','他混入人群，看不见了。'}

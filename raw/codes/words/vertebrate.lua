@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vertebrate"]={"vertebrate","['vɜːtɪbrət]","['vɝtɪbrət]","adj.脊椎的",'adj.脊椎的，脊椎动物的|||n.脊椎动物','Fish, birds and human beings are all vertebrates.','鱼、鸟和人类都是脊椎动物。','A dog is a vertebrate animal.','狗是脊椎动物。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["attempt"]={"attempt","[ə'tem(p)t]","[ə'tɛmpt]","vt.尝试",'vt.试图；尝试|||n.进攻；尝试，冲击','He didn\'t pass the exam, but it was a good attempt.','他虽然没有通过考试，但他做了很大的努力。','My first attempt at a chocolate cake tasted horrible.','我首次试做的巧克力蛋糕难吃极了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scared"]={"scared","[skeəd]","[ skεəd ]","adj.害怕的",'adj.害怕的','They scared him into handing over the keys.','他们把他吓得交出了钥匙.','He\'s scared stiff of women.','他一见女的就发慌.'}

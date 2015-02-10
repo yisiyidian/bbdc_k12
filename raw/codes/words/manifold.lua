@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["manifold"]={"manifold","['mænɪfəʊld]","['mænɪfold]","adj.多种的",'n.复印本,多种|||adj.多种的,有许多部份的,多方面的|||v.复写,繁殖,增多','His interests are manifold.','他的兴趣广泛。','The uses of this machine are manifold.','这台机器有多种用途。'}

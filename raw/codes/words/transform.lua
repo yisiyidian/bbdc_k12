@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["transform"]={"transform","[træns'fɔːm; trɑːns-; -nz-]","[træns'fɔrm]","vt.转换",'vt.转换,变形|||vi.改变|||n.变形','His plans were transformed overnight into reality.','他的计划迅速变为现实。','The magician transformed the frog into a princess.','魔术师把青蛙变成了公主。'}

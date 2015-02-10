@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supplicate"]={"supplicate","['sʌplɪkeɪt]","[ 'sʌplikeit ]","v.恳求",'v.恳求,乞求','She supplicated for pardon.','她恳求原谅。','He supplicates me to help.','他向我求助。'}

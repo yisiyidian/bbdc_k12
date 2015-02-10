@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["instigate"]={"instigate","['ɪnstɪgeɪt]","['ɪnstə'get]","v.教唆",'v.教唆,煽动,唆使,策动,主使,激励','The manager instigated him to steal the information from that company.','这位经理煽动他去窃取那间公司的信息。','Don\'t instigate me to bad things.','不要教唆我做坏事。'}

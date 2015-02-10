@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parrot"]={"parrot","['pærət]","['pærət]","n.鹦鹉",'n.鹦鹉,盲目重复或模仿他人行为的人|||vt.学舌,盲目重复或模仿','The parrot squawked loudly.','那鹦鹉嘎嘎大叫.','The parrot gave me a sharp peck on the finger.','鹦鹉把我的手指掐得得很疼。'}

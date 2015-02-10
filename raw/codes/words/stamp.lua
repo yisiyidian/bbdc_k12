@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stamp"]={"stamp","[stæmp]","[stæmp]","n.邮票",'n.印,邮票,打印器|||vt.捺印,顿足,贴上邮票','His face bears the stamp of suffering.','他的脸上有饱经苦难的烙印。','She stamped on the insect and killed it.','她踩死了一只虫子。'}

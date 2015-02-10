@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["challenge"]={"challenge","['tʃælɪn(d)ʒ]","['tʃælɪndʒ]","n.挑战",'n.挑战|||v.向...挑战','The time was ripe for a challenge to the power of the government.','时机已经成熟，可以向政府权力提出挑战了。','They had challenged and beaten the best team in the world.','他们曾向世界上最强的球队挑战并将他们打败。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interesting"]={"interesting","['ɪnt(ə)rɪstɪŋ]","['ɪntrəstɪŋ]","adj.有趣的",'adj.有趣的','There is an interesting program on television tonight.','今天晚上的电视有一个有趣的节目。','Your interesting report raises several important queries.','你的精彩报告引出了几个重要问题。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["refreshing"]={"refreshing","[rɪ'freʃɪŋ]","[ri'frɛʃɪŋ]","adj.使清爽的",'adj.使清爽的,有精神的|||动词refresh的现在分词形式','The holiday was a refreshing change for us.','这次假日别开生面，我们都感到新奇。','An invigorating, refreshing, or restorative agent or influence.','增强物增加活力、精神或帮助恢复的物品或影响'}

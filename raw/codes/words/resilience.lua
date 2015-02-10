@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resilience"]={"resilience","[rɪ'zɪlɪəns]","[rɪˈzɪliəns]","n.跳回",'n.跳回(回弹,弹力,弹性变形,冲击值)','Rubber has more resilience than wood.','橡胶有比木头更大的弹性。','Her natural resilience helped her overcome the crisis.','她生性乐观有助於她渡过难关。'}

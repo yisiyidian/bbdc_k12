@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["communion"]={"communion","[kə'mjuːnjən]","[kə'mjʊnjən]","n.共享",'n.共享，圣餐，融洽关系','A person who receives or is entitled to receive ||Communion||.','受圣餐的人接受或赋予权力接受圣餐的人','We had only limited communion with the natives.','我们与本地人的交往有限。'}

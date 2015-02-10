@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["helpful"]={"helpful","['helpfʊl; -f(ə)l]","['hɛlpfl]","adj.有帮助的",'adj.有帮助的,有益的','You ale very helpful.','您真帮了我的大忙。','The experience in army is helpful to him.','他从军的经历对他很有用。'}

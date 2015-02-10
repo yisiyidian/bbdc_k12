@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fishing"]={"fishing","['fɪʃɪŋ]","['fɪʃɪŋ]","n.钓鱼",'n.钓鱼，渔场，渔业','There are some fishing vessels in the harbor.','港湾里有许多渔船。','The holiday-makers chartered a boat to go fishing.','渡假者租了一艘船去钓鱼。'}

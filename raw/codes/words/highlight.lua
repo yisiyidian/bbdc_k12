@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["highlight"]={"highlight","['haɪlaɪt]","['haɪlaɪt]","n.加亮区",'n.加亮区,精彩部分,最重要的细节或事件,闪光点|||vt.加亮,强调,使...显得重要,照亮|||[计算机]醒目','Press the setup button to display the setup menu, and move the highlight down to audio.','按Setup键显示Setup菜单，然后移动亮条到Audio选项上。','It is one of the highlight of the match.','这是比赛中最精彩的项目之一。'}

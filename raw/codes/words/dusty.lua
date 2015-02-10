@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dusty"]={"dusty","['dʌstɪ]","['dʌsti]","adj.满是灰尘的",'adj.满是灰尘的','the dusty precepts of a bygone era.','过去时代的枯燥戒律','My eye alighted on a dusty old book at the back of the shelf.','我偶然发现在书架後面有一本满是灰尘的旧书.'}

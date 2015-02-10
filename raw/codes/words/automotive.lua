@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["automotive"]={"automotive","[,ɔːtə'məʊtɪv]","[,ɔtə'motɪv]","adj.汽车的",'adj.汽车的,机动的,自驱推进的','About 80% of lead is used in automotive and industrial batteries.','大约80%的铅产量是用于汽车和工业电池领域。','He works for a automotive company','他在汽车工厂工作'}

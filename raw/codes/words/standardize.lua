@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["standardize"]={"standardize","['stændədaɪz]","['stændɚdaɪz]","v.标准化",'v.标准化,使合于标准','We must standardize the standard of cathedral.','我们必须标准化教堂的标准。','You must standardize your language.','你必须标准化你的语言。'}

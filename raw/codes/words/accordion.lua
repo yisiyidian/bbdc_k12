@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accordion"]={"accordion","[ə'kɔːdɪən]","[ə'kɔrdɪən]","n.手风琴",'n.手风琴','The accordion was in full blast in the hall.','在大厅里手风琴拉得非常响亮。','||Accordion|| is a popular instrument','手风琴很流行'}

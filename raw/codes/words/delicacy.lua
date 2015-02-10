@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["delicacy"]={"delicacy","['delɪkəsɪ]","['dɛləkəsi]","n.柔软",'n.柔软,精致,佳肴','The Chinese palace lanterns are famous for their delicacy.','中国的宫灯以精巧闻名。','The local people regard these crabs as a great delicacy.','当地人认为这些螃蟹是珍馐美味。'}

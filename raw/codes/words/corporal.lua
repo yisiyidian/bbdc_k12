@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["corporal"]={"corporal","['kɔːp(ə)r(ə)l]","['kɔrpərəl]","adj.肉体的",'adj.肉体的,身体的|||n.(陆军或空军)下士','What is your stance on corporal punishment?','你对体罚持什麽态度?','He was demoted from sergeant to corporal.','他由中士降到下士.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["convention"]={"convention","[kən'venʃ(ə)n]","[kən'vɛnʃən]","n.会议",'n.会议；全体与会者；国际公约；惯例，习俗，规矩','We are scornful of the forces of convention.','我们藐视习惯势力。','She redeemed her reputation with a powerful speech to the party convention.','她向党代表大会做了有力的演说，挽回了自己的声誉。'}

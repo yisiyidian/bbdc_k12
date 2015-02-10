@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tart"]={"tart","[tɑːt]","[tɑrt]","adj.酸的",'adj.酸的,锋利的|||n.水果蛋糕,果馅饼','Pleasantly pungent or tart in taste; spicy.','辣味的，开胃的尝起来辛辣但美味的；佐料多的','He ate some tart in the morning before going out.','早上出门前，他吃了一些果酱点心。'}

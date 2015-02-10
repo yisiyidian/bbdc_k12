@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pipeline"]={"pipeline","['paɪplaɪn]","['paɪplaɪn]","n.管道",'n.管道,管线','In the pipeline now are lower prices for public baths on Saturdays.','正在考虑降低公共澡堂周六票价的事情。','Recently they have laid an underground pipeline.','最近他们铺设了一条地下管道。'}

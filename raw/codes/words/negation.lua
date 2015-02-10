@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["negation"]={"negation","[nɪ'geɪʃ(ə)n]","[nɪ'ɡeʃən]","n.否定",'n.否定,否认','The author boxed the compass of negation in his article.','该作者在文章中依次探讨了各种反面的意见。','Shaking the head is a sign of negation.','摇头表示否认。'}

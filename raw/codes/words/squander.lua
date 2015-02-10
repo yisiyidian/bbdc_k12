@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["squander"]={"squander","['skwɒndə]","['skwɑndɚ]","v.浪费",'v.浪费,使...散开','You are in fact squander away your love ability if you pay out your love blindly.','盲目的爱实际上是在挥霍自己爱的能力。','He had squandered his chances to win.','他白白浪费了获胜的机会。'}

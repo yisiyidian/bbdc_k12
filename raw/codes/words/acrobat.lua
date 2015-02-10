@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["acrobat"]={"acrobat","['ækrəbæt]","['ækrəbæt]","n.杂技演员",'n.杂技演员，见风使舵的人','The watchers held their breath as the acrobat crossed the tightrope.','当卖艺者走过绷索时, 观众都屏住了呼吸。','The acrobat balanced a long pole on his left shoulder.','杂技演员让一根长杆在他的左肩上保持平衡.'}

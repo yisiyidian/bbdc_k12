@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["repulsion"]={"repulsion","[rɪ'pʌlʃ(ə)n]","[rɪ'pʌlʃən]","n.厌恶",'n.厌恶','His treachery pushed their marriage into a repulsion.','他的背叛让婚姻变成怨恨。','I have a repulsion for snakes.','我很讨厌蛇。'}

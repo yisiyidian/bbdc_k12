@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extradition"]={"extradition","[ekstrə'dɪʃ(ə)n]","[,ɛkstrə'dɪʃən]","n.引渡逃犯",'n.引渡逃犯,将亡命者送还本国','There were no plans to reopen extradition proceedings against him.','没有计划要对他重启引渡程序。','extradition','引渡逃犯'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["library"]={"library","['laɪbrərɪ; -brɪ]","['laɪbrɛri]","n.图书馆",'n.图书馆,藏书','In the library, the books on history are all kept in one bay.','在图书馆里，历史方面的书都放在同一隔间里。','You must present your library ticket every time youborrow books.','你每次借书都必须出示借书证.'}

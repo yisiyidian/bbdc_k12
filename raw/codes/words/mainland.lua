@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mainland"]={"mainland","['meɪnlənd; -lænd]","['menlænd]","n.大陆",'n.大陆,本土','The programs will be beamed to ||Mainland|| China.','这些节目将对中国大陆播放。','Father finally got in touch with his brother in mainland China.','父亲终于与大陆上的弟弟联络上了。'}

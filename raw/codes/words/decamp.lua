@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decamp"]={"decamp","[dɪ'kæmp]","[ di'kæmp ]","vi.(士兵)离营",'vi.(士兵)离营,匆忙秘密地离开','She has decamped with all our money.','她携带我们所有的钱潜逃了.','The soldiers decamped at dawn.','士兵在黎明时撤离了营地.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vacation"]={"vacation","[və'keɪʃ(ə)n; veɪ-]","[və'keʃ(ə)n; ve-]","n.假期",'n.假期,休假，腾出|||vi.度假','You need a vacation.','你需要休假。','I was on vacation last week and didn\'t receive your fax.','上星期我正在度假, 没收到你们的传真。'}

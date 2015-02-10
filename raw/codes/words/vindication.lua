@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vindication"]={"vindication","[,vɪndɪ'keɪʃən]","[,vɪndə'keʃən]","n.辩护",'n.辩护，洗冤,证实','The result was a vindication of all our efforts.','这一结果表明我们的一切努力是必要的.','Our efforts give us a vindication.','我们的努力给我洗冤。'}

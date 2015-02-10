@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pejorative"]={"pejorative","[pɪ'dʒɒrətɪv]","[pɪ'dʒɔrətɪv]","n.轻蔑语",'n.轻蔑语|||adj.贬低的,轻蔑的','You must work hard to prove yourself to those who are pejorative or look down on you.','你必须通过努力工作来向那些蔑视你的人证明自己。','I agree I am ambitious, and I don\'t see that as a pejorative term.','我承认我有抱负，但我不认为这是个贬义词。'}

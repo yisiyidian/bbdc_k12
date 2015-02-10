@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["depreciate"]={"depreciate","[dɪ'priːʃɪeɪt; -sɪ-]","[dɪ'priʃɪet]","v.贬低",'v.贬低,贬值|||vi.(货币)贬值,降价|||vt.贬低','Countries may also find their currency is ||depreciating|| in foreign markets.','一些国家也可能会发现自己的货币正在国外市场上贬值。','Don\'t depreciate what I have done.','不要轻视我做出的努力。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dank"]={"dank","[dæŋk]","[dæŋk]","adj.阴湿的",'adj.阴湿的','The dark, dank cave gave me the willies.','这阴暗潮湿的山洞使我感到心惊肉跳。','The kitchen was dank and cheerless.','厨房里阴冷潮湿，没有一点生气。'}

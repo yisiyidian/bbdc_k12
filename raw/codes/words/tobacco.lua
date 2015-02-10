@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tobacco"]={"tobacco","[tə'bækəʊ]","[tə'bæko]","n.烟草",'n.烟草','His breath reeked of tobacco.','他口中带有烟草的臭味.','||Tobacco|| and alcoholic drinks are taxed heavily in their country.','烟酒在他们的国家都被课以重税。'}

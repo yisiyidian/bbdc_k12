@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resourceful"]={"resourceful","[rɪ'sɔːsfl]","[rɪ'sɔrsfl]","adj.资源(人力、物力)丰富的",'adj.资源(人力、物力)丰富的;有机智的;多策略的,足智多谋的','He was amazingly inventive and resourceful, and played a major role in my career.','他极具创造力又足智多谋，在我的职业生涯中起了重要的作用。','He\'s really a resourceful man.','他实在是一个足智多谋的人。'}

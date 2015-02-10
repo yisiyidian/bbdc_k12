@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["silicate"]={"silicate","['sɪlɪkeɪt; -kət]","['sɪlɪket]","n.硅酸盐",'n.硅酸盐','Part of the water is used to rinse the silicate from the graduate','一部分水要用来冲洗量杯中的硅酸钠','The technology in question contains very tiny silicate particles suspended in a fluid','这一饱受质疑的技术所运用的是许多悬浮在液体中、极其微小的硅酸盐颗粒。'}

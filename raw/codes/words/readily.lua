@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["readily"]={"readily","['redɪlɪ]","['rɛdɪli]","adv.不迟疑地",'adv.不迟疑地,迅速地,轻易地','She made the proposal, and I readily consented (to it).','她提出了这个建议, 我欣然同意.','These problems are not readily soluble.','这些问题不容易解决。'}

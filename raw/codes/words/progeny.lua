@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["progeny"]={"progeny","['prɒdʒənɪ]","['prɑdʒəni]","n.子孙",'n.子孙(结果,次级粒子)','Davis was never loquacious on the subject of his progeny.','戴维斯说到他的子女时总是寡言少语。','Their work is the progeny of many earlier studies.','他们的成果是许多早期研究的产物。'}

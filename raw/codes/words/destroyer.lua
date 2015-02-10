@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["destroyer"]={"destroyer","[dɪ'strɒɪə]","[dɪ'strɔɪɚ]","n.驱逐舰",'n.驱逐舰,阻止者','A fast, lightly armed warship, smaller than a destroyer, often armed for antisubmarine operations.','护卫舰一种轻型武装的迅速战斗舰, 比驱逐舰小, 常为反潜水军事行动而配有武器','This destroyer can overrun any submarine.','这艘驱逐舰的速度比任何潜水艇都快。'}

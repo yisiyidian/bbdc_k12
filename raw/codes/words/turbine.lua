@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["turbine"]={"turbine","['tɜːbaɪn; -ɪn]","['tɝbaɪn]","n.涡轮",'n.涡轮','The gas turbine feeds on the fuel it pumps.','燃气轮机以它所抽入的燃料为能源。','A disadvantage of the turbine is that it is not reversible.','涡轮机的一个缺点就是它不可以反转。'}

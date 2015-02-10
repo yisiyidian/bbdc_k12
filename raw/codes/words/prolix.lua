@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prolix"]={"prolix","['prəʊlɪks; prə'lɪks]","['prolɪks]","adj.罗嗦的",'adj.罗嗦的,冗长的','Her lesson is a prolix lecturer telling you more than you want to know.','她的授课总是很啰嗦，告诉你许多你不想知道的东西。','As a result of the scattered structure, the drama is so prolix that the motif is weakened.','结构松散，导致全剧篇幅过长，冲淡了戏剧的主题。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reuse"]={"reuse","[riː'juːz]","[,ri'jʊs]","v.再使用",'v.再使用|||vt.重新使用','we can reuse this big machine after repaired.','这台大机器修理之后，我们可以重新使用。','i never reuse the desk lamp','我没有再用过这台灯'}

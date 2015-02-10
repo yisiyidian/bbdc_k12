@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cremate"]={"cremate","[krɪ'meɪt]","['krimet]","v.烧成灰",'v.烧成灰,火葬','He wants to be cremated, not buried.','他要火葬, 不要土葬.','She wants Chris to be cremated.','她想要克里斯被火化。'}

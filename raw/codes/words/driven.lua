@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["driven"]={"driven","['drɪvn]","['drɪvn]","adj.受到驱策的",'adj.受到驱策的|||vbl.驱使,驾车','The machines are driven by electric motors.','这些机器都是由电动机驱动的。','Parents and children were driven asunder by the war.','父母和子女因战争而分离。'}

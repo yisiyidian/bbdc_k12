@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hardware"]={"hardware","['hɑːdweə]","['hɑrdwɛr]","n.(计算机)硬件",'n.五金器具|||n.(计算机)硬件','We deal in hardware but not software.','我们只经营硬件而不经营软件.','A computer system is composed of software and hardware in the light of its working mode.','从计算机的工作过程看，计算机系统是由软件和硬件组成的。'}

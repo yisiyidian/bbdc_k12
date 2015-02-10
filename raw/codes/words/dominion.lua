@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dominion"]={"dominion","[də'mɪnjən]","[də'mɪnɪən]","n.领土",'n.领土,主权，统治|||(复）dominions：天使阶级|||Domimion：|||n.英联邦的自治领','European powers no longer rule over great overseas dominions.','欧洲列强不再统治大块海外领土了。','||Dominion|| or rule, especially the British rule over India(1757-1947).','主权, 统治管辖或统治, 尤指英国对印度的统治(1757－1947年)'}

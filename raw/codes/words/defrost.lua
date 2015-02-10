@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["defrost"]={"defrost","[diː'frɒst]","[,di'frɔst]","v.除霜",'v.除霜','I know! Let\'s defrost the fridge first.','我知道了！我们先给冰箱脱霜吧。','A frozen chicken should be allowed to defrost completely before cooking.','冻鸡应彻底解冻後再烹调.'}

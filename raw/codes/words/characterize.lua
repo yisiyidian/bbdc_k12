@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["characterize"]={"characterize","['kærəktə'raɪz]","[ 'kærəktəraiz ]","vt.表示...的典型",'vt.表示...的典型,赋予...特色','The novelist characterizes his heroine as capricious and passionate.','这位小说家把女主人公刻画成反覆无常而又多情的人.','Plant life and sunlight characterize the ocean\'s upper zone.','植物和阳光构成了海洋上层区域的特征。'}

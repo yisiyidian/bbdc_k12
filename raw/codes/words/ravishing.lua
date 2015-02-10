@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ravishing"]={"ravishing","['rævɪʃɪŋ]","['rævɪʃɪŋ]","adj.令人陶醉的",'adj.令人陶醉的|||动词ravish的现在分词形式','I was ||ravished|| by her beauty.','我被她的美貌迷住了.','He was ||ravished|| by her beauty.','她的美貌使他倾倒。'}

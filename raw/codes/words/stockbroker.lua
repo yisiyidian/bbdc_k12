@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stockbroker"]={"stockbroker","['stɒkbrəʊkə]","['stɑkbrokɚ]","n.股票经纪人",'n.股票经纪人','My stockbroker manages my portfolio for me.','我的证券经纪人替我管理投资组合.','The stockbroker has placed the money in industrial stock.','证券经纪人已用那笔钱购入了工业股票。'}

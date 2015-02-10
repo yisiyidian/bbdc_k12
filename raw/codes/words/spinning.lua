@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spinning"]={"spinning","['spɪnɪŋ]","['spɪnɪŋ]","adj.纺织品的",'adj.纺织品的|||n.纺织','The car was spinning merrily along (the road).','汽车（沿路）轻快地奔驰著.','The collision sent the car spinning across the road.','汽车被撞得转著圈儿冲到路的另一边。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grammatical"]={"grammatical","[grə'mætɪk(ə)l]","[grə'mætɪkl]","adj.语法的",'adj.语法的,合乎文法的','You\'ve made several grammatical mistakes in the composition.','你的作文中犯了几处语法错误。','a grammatical sentence.','语法正确的句子'}

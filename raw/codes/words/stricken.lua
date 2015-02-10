@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stricken"]={"stricken","['strɪk(ə)n]","['strɪkən]","adj.被打中的",'adj.被打中的,被击伤的,受灾的,受侵袭的','The two heroic little sisters quickly headed off the panic- stricken sheep.','两个英雄小姐妹赶忙上前拦住受惊的羊群。','The stricken tanker began to break up on the rocks.','受伤的油轮向礁石撞到, 毁了。'}

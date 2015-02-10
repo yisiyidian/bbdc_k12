@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["harm"]={"harm","[hɑːm]","[hɑrm]","n.伤害",'n.伤害|||vt.伤害','If we interfere, it may do more harm than good.','倘若我们进行干预，那可能弊多利少。','There was a traffic accident in this street, but no one was harmed.','这街上发生了交通事故，但没有人受伤。'}

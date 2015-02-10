@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["syringe"]={"syringe","[sɪ'rɪn(d)ʒ; 'sɪ-]","[sɪ'rɪndʒ]","n.注射器",'n.注射器|||vt.注射','The child started to wail when the nurse come over with a syringe.','当护士拿著针筒走过来时，孩子便嚎啕大哭起来。','An article, such as a paper diaper or hypodermic syringe, that can be disposed of after one use.','用后即丢弃的物品，一次性物品用后即可丢弃的物品，如纸制尿布或皮下注射器'}

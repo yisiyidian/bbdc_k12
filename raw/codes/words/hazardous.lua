@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hazardous"]={"hazardous","['hæzədəs]","['hæzɚdəs]","adj.危险的",'adj.危险的,冒险的,碰运气的','Investment is a hazardous business; even those who are in the swim sometimes come a cropper.','投资是一项风险事业，就算是那些懂行的人有时也会栽跟头。','These conditions are very hazardous for shipping.','这些情况对航海非常不利。'}

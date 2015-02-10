@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arcade"]={"arcade","[ɑː'keɪd]","[ɑr'ked]","n.拱廊",'n.拱廊,有拱廊的街道','The expensive shops in a famous arcade near Piccadilly were just opening.','皮卡迪利大街附近的一著名的拱廊街道上，几家高档商店刚刚开门。','At this time of the morning, the arcade was almost empty.','在早晨的这个时候，拱廊街上几乎空无一人。'}

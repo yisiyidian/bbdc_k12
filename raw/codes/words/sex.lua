@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sex"]={"sex","[seks]","[sɛks]","n.性",'n.性,性别,性欲|||vt.区别...性别,引起...性欲','There\'s lots of straight sex in the film, but nothing kinky.','那部影片里有不少性行为镜头, 但是没有变态的.','She\'s too inhibited to laugh at jokes about sex.','她很拘谨, 听到性爱笑话也不笑.'}

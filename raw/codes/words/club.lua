@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["club"]={"club","[klʌb]","[klʌb]","n.俱乐部",'n.击棍,扑克牌中的梅花,俱乐部|||vt.用棍棒打,集合|||vi.集合,分担花费,泡夜总会','He was clubbed to death with a butt of a gun.','他是被人用枪托殴打致死的。','We clubbed together to buy our teacher a present.','我们凑钱给老师买了件礼物。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scuttle"]={"scuttle","['skʌt(ə)l]","['skʌtl]","n.煤斗(天窗)",'n.煤斗(天窗)|||vt凿沉(奔跑)','Such threats could scuttle the peace conference.','这种威胁会阻挠和平会议。','The beetle scuttled away when I lifted the stone.','我把石头搬起来时，那只甲虫跑了。'}

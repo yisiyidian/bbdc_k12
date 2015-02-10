@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reticent"]={"reticent","['retɪs(ə)nt]","['rɛtɪsnt]","adj.无言的",'adj.无言的,沉默的,谨慎的','He was reticent about his opinion.','他持保留意见。','He is reticent to what he says.','他说话很谨慎。'}

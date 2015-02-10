@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["week"]={"week","[wiːk]","[wik]","n.星期",'n.星期,周','Sunday is the first day of the week.','星期日是一周的第一天。','He is very busy this week.','这星期他会很忙。'}

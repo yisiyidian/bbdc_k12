@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inland"]={"inland","['ɪnlənd; -lænd]","[,ɪn'lænd]","adj.内陆的",'adj.内陆的,国内的|||adv.内陆地|||n.内陆','Settlers soon spread inland.','移居到发展中地区的人不久就迁徙到内地了.','The ||Inland|| Revenue is responsible for collecting income tax.','税务局负责徵收所得税.'}

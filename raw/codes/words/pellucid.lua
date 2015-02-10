@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pellucid"]={"pellucid","[pɪ'luːsɪd; pe-; -'ljuːsɪd]","[ pe'lju:sid ]","adj.透明的",'adj.透明的,澄清的,明了的','The pellucid direction is important to this plan.','清晰的指导对于这个计划很重要。','She has a pair of pellucid blue eyes.','她有一双清澈的蓝眼睛。'}

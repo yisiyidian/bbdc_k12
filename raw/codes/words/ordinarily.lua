@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ordinarily"]={"ordinarily","['ɔːd(ə),n(ə)rɪlɪ; ,ɔːdɪ'nerɪlɪ]","[,ɔrdn'ɛrəli]","adv.通常",'adv.通常,普通,大概','||Ordinarily|| he goes to work by bus.','他通常是坐公共汽车上班去的。','ordinarily dressed pedestrians on the street.','街上衣着平常的行人'}

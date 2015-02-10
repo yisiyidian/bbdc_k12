@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sojourn"]={"sojourn","['sɒdʒɜːn]","['sʌdʒɝn]","vt.旅居(逗留)",'vt.旅居(逗留)|||n.旅居(逗留)','I am already feeling better for my sojourn here.','我在此逗留期间，觉得体力日渐恢复。','Thus ended one man\'s sojourn in this world.','一个人羁留尘世的生涯结束了。'}

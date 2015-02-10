@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rejection"]={"rejection","[rɪ'dʒekʃ(ə)n]","[rɪ'dʒɛkʃən]","n.拒绝",'n.拒绝,被弃,被抛弃的实例','Her rejection dashed him.','她的拒绝使他狼狈[难堪]。','Her rejection of him seems to have made him go back into his shell.','他遭她拒绝後就更不爱吭声了.'}

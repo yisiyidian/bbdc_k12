@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["injustice"]={"injustice","[ɪn'dʒʌstɪs]","[ɪn'dʒʌstɪs]","n.不公正",'n.不公正，不公正的行为','Her socialist beliefs were born of a hatred of injustice.','她的社会主义信念来自她对社会上不公平现象的痛恨。','They complained bitterly about the injustice of the system.','他们愤恨地抱怨制度不公平。'}

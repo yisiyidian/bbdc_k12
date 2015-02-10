@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["backward"]={"backward","['bækwəd]","['bækwɚd]","adj.向后的",'adj.向后的|||adv.向后','This part of the country is still backward.','这个国家的这个地区仍很落后。','Although he is clever, he is backward in giving his views.','他虽然很聪明，却不善发表他的意见。'}

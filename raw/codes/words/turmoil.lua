@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["turmoil"]={"turmoil","['tɜːmɒɪl]","['tɝmɔɪl]","n.骚动",'n.骚动,混乱','My mind was in a complete turmoil.','我的脑子里一片混乱。','In the turmoil resulting from the collision, the arrested man broke loose and ran off.','车祸引起了一片混乱，那个被捕的人趁乱挣脱逃走了。'}

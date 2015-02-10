@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gesticulate"]={"gesticulate","[dʒe'stɪkjʊleɪt]","[dʒɛ'stɪkjulet]","v.用姿势(动作)示意",'v.用姿势(动作)示意,打手势','He was ||gesticulating|| wildly at me, but I could not understand what he was trying to tell me.','他使劲向我做手势, 可是我不明白他的意思.','A man with a paper hat upon his head was ||gesticulating|| wildly.','一个戴纸帽的男子在拼命地打手势。'}

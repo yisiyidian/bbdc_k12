@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["curiosity"]={"curiosity","[kjʊərɪ'ɒsɪtɪ]","[,kjʊrɪ'ɑsəti]","n.好奇",'n.好奇,好奇心','Will you indulge my curiosity and tell me how much it cost?','你能不能满足我的好奇心, 告诉我那值多少钱?','The child showed a healthy curiosity.','那孩子有好奇心, 这是好现象.'}

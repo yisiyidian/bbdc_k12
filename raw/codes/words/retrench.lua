@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["retrench"]={"retrench","[rɪ'tren(t)ʃ]","[ri'trɛntʃ]","vt.减少(删除)",'vt.减少(删除)','They must retrench the expenditure for the purpose of making up the deficit.','为了弥补赤字，他们不得不减少开支。','Shortly afterwards, cuts in defense spending forced the aerospace industry to retrench.','不久之后，国防开支的削减迫使航空航天业紧缩开支。'}

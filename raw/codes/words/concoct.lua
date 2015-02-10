@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["concoct"]={"concoct","[kən'kɒkt]","[kən'kɑkt]","vt.混合而制",'vt.混合而制,调合,捏造','They first concoct the disorder, then the drug.','他们先编造病因，然后是药物。','You shouldn\'t concoct pretext for your mistake.','你不应该为你的错误捏造借口。'}

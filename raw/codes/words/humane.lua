@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["humane"]={"humane","[hjʊ'meɪn]","[hju'men]","adj.仁慈的",'adj.仁慈的，人道的','A humane man will feel for others in their suffering.','一个有人性的人会同情他人的痛苦。','Their aim is for a more just and humane society.','他们的目标是建立一个更加公正、博爱的社会。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["yet"]={"yet","[jet]","[jɛt]","adv.还",'adv.还,仍然，即刻|||conj.尽管，然而','She is vain and foolish, and yet people like her.','她自负而愚蠢，然而人们喜欢她。','He hasn\'t done much yet.','他做的还不很多。'}

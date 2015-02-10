@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["semiconductor"]={"semiconductor","[,semɪkən'dʌktə]","[,sɛmɪkən'dʌktɚ]","n.半导体",'n.半导体','||Semiconductor|| devices  can perform a variety of control functions in electronic equipment.','半导体器件在电子设备中能起各式各样的控制作用.','This is a semiconductor integrated circuit.','这是一个半导体集成电路.'}

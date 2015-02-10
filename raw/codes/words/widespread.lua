@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["widespread"]={"widespread","['waɪdspred; -'spred]","['waɪdsprɛd]","adj.分布(或散布)广的",'adj.分布(或散布)广的,普遍的','The high cost prohibits the widespread use of the drug.','该药昂贵而影响广泛应用.','||Widespread|| flooding is affecting large areas of Devon.','洪水泛滥, 淹没了德文郡的广大地区.'}

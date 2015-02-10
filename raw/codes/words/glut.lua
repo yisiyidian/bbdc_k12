@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["glut"]={"glut","[glʌt]","[ɡlʌt]","n.供过于求",'n.供过于求，过量|||v.使充满,过量供应|||n.狼吞虎咽|||v.','The glut of apples sent the prices down.','苹果大量上市，使价钱低了下来。','Children at any party will glut themselves with cake and ice cream, and not touch healthier foods.','孩子们在任何聚会上都会撑饱糕饼和冰淇淋，而不沾有营养的食物。'}

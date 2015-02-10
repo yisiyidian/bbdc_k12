@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blue"]={"blue","[bluː]","[blʊ]","adj.蓝色的",'adj.蓝色的,沮丧的,忧郁的,(女人)有学问的|||n.蓝色|||vt.使...变蓝|||vi.变蓝','He can write me letters till he\'s blue in the face, I\'m not going to reply.','任他没完没了地给我写信，我就是不回信。','The room was painted in various shades of blue.','房间是用深浅不一的蓝色粉刷的。'}

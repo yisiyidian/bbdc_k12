@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["equate"]={"equate","[ɪ'kweɪt]","[ɪ'kwet]","v.等同",'v.同等看待,使相等|||vt.等同,使相等','Nowadays, many people equate passing examinations with being educated.','当今很多人把考试及格与受过教育等同起来。','You can\'t equate the education system of Britain to that of Germany.','不能把英国教育制度与德国教育制度等同起来.'}

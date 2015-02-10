@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["patio"]={"patio","['pætɪəʊ]","['pætɪo]","n.天井(庭院)",'n.天井(庭院)','Sometimes we go to the beach and at other times we sunbathe on the patio.','我们有时去海滩，有时在院子里做日光浴。','That\'s why I\'m reading my paper and having my coffee on the patio this morning.','这就是今天早上为什么我看报纸喝咖啡 要在院子里。'}

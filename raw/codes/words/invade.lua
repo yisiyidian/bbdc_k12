@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["invade"]={"invade","[ɪn'veɪd]","[ɪn'ved]","vt.侵略",'vt.侵略,侵害,拥入','Germs may invade the organism.','细菌会侵入有机体。','I object to our privacy being invaded.','我反对我们的隐私权受到侵害。'}

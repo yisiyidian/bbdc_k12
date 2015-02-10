@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insignificant"]={"insignificant","[ɪnsɪg'nɪfɪk(ə)nt]","[,ɪnsɪɡ'nɪfɪkənt]","adj.无关紧要的",'adj.无关紧要的,可忽略的，微不足道的，无用的','The rate has fallen by an insignificant amount.','比率虽有下降,但微不足道.','It is a waste of time to listen to his insignificant talk.','听他那些废话纯属浪费时间。'}

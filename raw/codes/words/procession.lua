@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["procession"]={"procession","[prə'seʃ(ə)n]","[prə'sɛʃən]","n.队伍",'n.队伍,行列|||v.列队行进','People came in flocks to see the royal procession.','人们蜂拥而至瞻望皇室人员外出时的仪仗队.','The procession passed right by my front door.','队伍就在我家门前经过.'}

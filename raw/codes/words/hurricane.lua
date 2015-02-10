@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hurricane"]={"hurricane","['hʌrɪk(ə)n; -keɪn]","['hɝrəkən]","n.飓风",'n.飓风,飓风般猛烈的东西|||adj.有防风罩的','The hurricane screamed outside.','外面飓风呼啸著.','The hurricane has a speed of 73 miles per hour.','飓风每小时73英里。'}

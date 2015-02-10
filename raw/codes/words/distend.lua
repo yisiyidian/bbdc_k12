@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["distend"]={"distend","[dɪ'stend]","[dɪ'stɛnd]","v.扩大",'v.扩大,扩张,吹大','Habitual overeating had distended the boy\'s stomach.','习惯性的暴食使这男孩的胃扩张了。','The stomachs of starving people often distend.','饥民的肚子常鼓得胀胀的。'}

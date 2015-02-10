@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dichotomy"]={"dichotomy","[daɪ'kɒtəmɪ; dɪ-]","[daɪ'kɑtəmi]","n.两分",'n.两分,分裂,二分法','There is a dichotomy between the academic world and the industrial world.','学术界和工业界间有天壤之别。','Such a dichotomy cannot simply be attributed to coincidence.','这样一种分歧不能简单归之于巧合。'}

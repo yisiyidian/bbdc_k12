@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interstellar"]={"interstellar","[,ɪntə'stelə]","[,ɪntɚ'stɛlɚ]","adj.星际的",'adj.星际的','We will be interested in the heat capacity of interstellar gases.','我们感兴趣的是星际气体的热容量.','Which kind of signal is most promising for interstellar contact?','在星际通讯中,选用哪种信号最有效 呢 ?'}

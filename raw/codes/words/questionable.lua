@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["questionable"]={"questionable","['kwestʃ(ə)nəb(ə)l]","['kwɛstʃənəbl]","adj.可疑的",'adj.可疑的,可置疑的','His theory is bottomed on questionable assumptions.','他的理论是以不可靠的假定为根据的。','The desire for wealth lured them into questionable dealings.','他们受了发财欲的引诱而被卷入可疑的交易。'}

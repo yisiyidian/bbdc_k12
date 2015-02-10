@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rampart"]={"rampart","['ræmpɑrt]","[ 'ræmpɑ:t ]","n.垒",'n.垒,壁垒,城墙|||vt.用壁垒围绕,防卫,守卫','A mole can undermine the strongest rampart.','一只田鼠能毁坏最坚固的堡垒。','The rampart of this old city is a history heritage.','这座老城的城墙是历史遗产。'}

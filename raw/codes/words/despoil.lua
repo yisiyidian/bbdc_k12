@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["despoil"]={"despoil","[dɪ'spɒɪl]","[dɪ'spɔɪl]","vt.夺取",'vt.夺取,掠夺','Museums have despoiled India of many priceless treasures.','博物馆里有许多从印度掠夺来的无价之宝。','The victorious army despoil the city of all its treasure.','得胜的军队把城里的财宝劫掠一空。'}

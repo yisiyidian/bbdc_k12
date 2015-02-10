@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["feudal"]={"feudal","['fjuːd(ə)l]","['fjudl]","adj.封建的",'adj.封建的,封地的','He lost faith in feudal traditions.','他不再相信封建的老一套了。','She lost faith in feudal traditions.','她不再相信封建的老一套了。'}

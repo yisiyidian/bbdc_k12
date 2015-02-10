@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inculcate"]={"inculcate","['ɪnkʌlkeɪt]","[ɪn'kʌlket]","v.教授",'v.教授,谆谆教诲,教育','We failed to inculcate our children with the knowledge of love.','我们没有成功地施以孩子们爱的教育。','||inculcating|| sound principles.','反复灌输正确的原则'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["induction"]={"induction","[ɪn'dʌkʃ(ə)n]","[ɪn'dʌkʃən]","n.就职",'n.就职,感应,归纳法,序言','induction of sleep.','引发睡眠','His induction as a teacher was a turning point in his life.','他就任教师工作是他一生的转折点.'}

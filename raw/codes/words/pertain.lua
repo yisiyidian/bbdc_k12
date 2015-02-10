@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pertain"]={"pertain","[pə'teɪn]","[pɝ'ten]","vi.从属",'vi.从属,关于','Learning the specific set of vocabulary words that pertain to one\'s business becomes a simple task.','学习和自己行业有关的这组特殊字汇成为一件简单的工作。','It does not pertain to the young to instruct their elders.','年轻人不应该对老年人发号施令。'}

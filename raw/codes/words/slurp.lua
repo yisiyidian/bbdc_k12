@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slurp"]={"slurp","[slɜːp]","[slɝp]","v.啜食",'v.啜食,饮食出声|||n.啜食','Stop slurping!','吃喝时别发出这麽大的声音!','He was slurping (down) his soup.','他喝汤时嘴唇发出啧啧的声音.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ameliorate"]={"ameliorate","[ə'miːlɪəreɪt]","[ə'milɪə'ret]","vt.使…改善",'vt.使…改善,改良|||vi.改善,变好','In every human being there is a wish to ameliorate his own condition.','改变自己的境况的思想人皆有之。','I cannot ameliorate the environment by my own','我不能一手改善整个环境'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overcharge"]={"overcharge","[əʊvə'tʃɑːdʒ]","[,ovɚ'tʃɑrdʒ]","vt.讨价过高",'vt.讨价过高,装药过多,夸张|||vi.过度充电|||n.超载,装药过多,过度充电','You can\'t possibly overcharge me.','你不能对我要价太高啊。','They overcharged me (by) 1 for the shopping.','我买东西他们多要了我1英镑.'}

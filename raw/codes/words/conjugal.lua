@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conjugal"]={"conjugal","['kɒndʒʊg(ə)l]","['kɑndʒəɡl]","adj.结婚的",'adj.结婚的,配偶的','Her husband has very conventional ideas about conjugal relationships.','她丈夫对夫妻间关系的看法很传统。','Since the prison doesn\'t allow conjugal visits, this is kind of our wedding night.','监狱不批准配偶探视，所以今晚就算是我们的新婚之夜吧。'}

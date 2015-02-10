@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intruder"]={"intruder","[ɪn'truːdə]","[ɪn'trudɚ]","n.侵入者",'n.侵入者,干扰者,妨碍者','The intruder whipped out a knife (from his pocket).','闯进来的人突然（从他的衣袋里）掏出一把刀来.','The dog growled at the intruder.','狗向闯入者狺狺狂吠.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perishable"]={"perishable","['perɪʃəb(ə)l]","['pɛrɪʃəbl]","adj.易腐烂的",'adj.易腐烂的,会枯萎的,会死的|||（复数）perishables:易腐烂的东西（尤指食物）','Keep perishable foods under refrigeration.','把容易变质的食物冷藏起来.','||Perishable|| food should be stored in a refrigerator.','易腐的食物应储存在冰箱里.'}

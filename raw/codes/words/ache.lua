@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ache"]={"ache","[eɪk]","[ek]","n.痛",'n.痛|||vi.痛,渴望','You\'ll make your back ache if you carry those heavy buckets.','如果你背那些沉重的桶，你的背会痛的。','He felt a dull ache in his shoulder.','他感到肩膀隐隐作痛。'}

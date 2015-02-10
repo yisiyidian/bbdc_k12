@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["speech"]={"speech","[spiːtʃ]","[spitʃ]","n.演讲",'n.演讲,对话,话语,语言','Do you know the part of speech of this word?','你知道这个单词的词性吗？','I had to give a speech to the press club.','我得向记者俱乐部发表演说。'}

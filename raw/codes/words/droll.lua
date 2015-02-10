@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["droll"]={"droll","[drəʊl]","[drol]","adj.好笑的",'adj.好笑的,滑稽的,逗趣的|||n.离奇古怪，滑稽|||adv.离奇古怪地，滑稽地|||vi.开玩笑','The band have a droll sense of humour.','这个乐队有一种滑稽古怪的幽默感。','A droll person is same as a humorous person .','A droll person and a humorous person are the same meaning.'}

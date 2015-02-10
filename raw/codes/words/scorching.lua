@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scorching"]={"scorching","['skɔːtʃɪŋ]","['skɔrtʃɪŋ]","adj.极热的",'adj.极热的，烧焦似的；苛刻的；尖酸刻薄的|||v.烧焦，烤焦(scorch的现在分词)；严厉批评；切割；过早硫化','It\'s scorching hot.','天气热得火烧似的。','He drew back from the scorching heat.','他从灼人的热气中退了回来。'}

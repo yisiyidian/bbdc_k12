@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["correspond"]={"correspond","[kɒrɪ'spɒnd]","[,kɔrə'spɑnd]","vi.符合",'vi.符合,通信,相当','We\'ve corresponded for years but I\'ve never actually met him.','我们已通信多年了, 可是我从未见过他本人.','Your account of events corresponds with hers.','你说的情况跟她说的相符.'}

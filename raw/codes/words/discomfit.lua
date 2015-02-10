@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discomfit"]={"discomfit","[dɪs'kʌmfɪt]","[dɪs'kʌmfɪt]","vt.使懊恼",'vt.使懊恼，挫败，征服|||n.挫败','He was discomfited by the unexpected questions.','意料不到的问题使得他十分尴尬。','He will be particularly discomfited by the governor\'s dismissal of his plan.','部长对他计划的不理会将使他特别尴尬。'}

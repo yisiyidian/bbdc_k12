@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["budge"]={"budge","[bʌdʒ]","[bʌdʒ]","v.移动",'v.移动,妥协|||n.羔皮|||adj.浮夸的，庄严的','We argued for an hour but he wouldn\'t budge (ie change his attitude or ideas) an inch.','我们争论了一个钟头, 但他毫无回旋余地.','This coat is made of budge.','这件大衣是羊羔皮做的。'}

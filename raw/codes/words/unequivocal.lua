@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unequivocal"]={"unequivocal","[ʌnɪ'kwɪvək(ə)l]","[,ʌnɪ'kwɪvəkl]","adj.不含糊的",'adj.不含糊的,明白的,毫无疑问的，确实的','On the whole, their tone was unequivocal.','他们的调子基本上是明确的。','The statement was so unequivocal that it excluded all possible arguments','这话说得十分明确，丝毫没有争辩的余地。'}

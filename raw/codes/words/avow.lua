@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["avow"]={"avow","[ə'vaʊ]","[ə'vaʊ]","v.承认",'v.承认,公开宣称|||vt.声明','He avowed that he would never return.','他声明他决不回来了。','He avowed openly that he was divorced.','他坦白承认自己离了婚。'}

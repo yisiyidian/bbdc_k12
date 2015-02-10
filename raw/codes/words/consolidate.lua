@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consolidate"]={"consolidate","[kən'sɒlɪdeɪt]","[kən'sɑlɪdet]","v.巩固",'v.巩固,联合,统一|||[计算机]使固定','The two companies consolidated last year.','这两个公司去年合并了。','He bribes his leader to consolidate his position.','他贿赂他的领导来巩固他的地位。'}

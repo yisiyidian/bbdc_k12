@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enrol"]={"enrol","[ɪn'rəʊl; en-]","[ in'rəul ]","vt.登记",'vt.登记(入会,卷)','He enrolled our names.','他把我们的名字登记下来了。','I enrolled at the University of Vienna.','我报名就读于维也纳大学。'}

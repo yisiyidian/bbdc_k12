@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["convertible"]={"convertible","[kən'vɜːtɪb(ə)l]","[kən'vɝtəbl]","adj.可改变的",'adj.可改变的,可交换,同意义的|||n.有活动摺篷的汽车','Not convertible into coin.','不能兑成硬币的','An automobile with a folding top; a convertible coupe.','篷式汽车带有可折叠篷顶的汽车；敞篷小轿车'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unbelievable"]={"unbelievable","[ʌnbɪ'liːvəb(ə)l]","[,ʌnbɪ'livəbl]","adj.难以置信的",'adj.难以置信的','Well, was there ever? said she, "It\'s unbelievable!"','嗬, 有这种怪事？她说, "真令人难以置信！"','It is unbelievable how stupid he is.','他真是笨得令人难以置信。'}

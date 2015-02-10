@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ultrasound"]={"ultrasound","['ʌltrəsaʊnd]","['ʌltrəsaʊnd]","n.超声(波)",'n.超声(波)','Diagnostic imaging in which ultrasound is used to visualize an internal body structure or a developing fetus.','超声波扫描术利用超声波来显示耳体结构或胚胎发育情况的诊断用的成像法','ultrasound pictures; ultrasound waves; an ultrasound test.','超声波图象；超声波；超声波测试'}

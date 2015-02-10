@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mediate"]={"mediate","['miːdɪeɪt]","['midɪet]","adj.居间的",'adj.居间的,间接的|||vt.&vi.斡旋,调停','||Mediate|| between two countries which were at war was not successful.','在两个交战国之间的调解失败了。','They may be able to mediate between parties with different interests.','他们也许能在不同利益政党之间进行斡旋。'}

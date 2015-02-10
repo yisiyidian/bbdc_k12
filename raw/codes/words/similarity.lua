@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["similarity"]={"similarity","[sɪmə'lærətɪ]","[,sɪmə'lærəti]","n.相似",'n.相似,类似','a similarity of writing styles.','写作风格的相似之处','There were points of similarity between them.','他们之间有某些相似之处.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sample"]={"sample","['sɑːmp(ə)l]","['sæmpl]","n.样品",'n.样品,标本|||vt.采样,品尝|||adj.样例的','Thousands of people have written in to us for a free sample.','现已有数千人给我们来信索要免费样品.','Write now to this address and we will send you a free sample by return.','按此地址函索即免费寄奉样品.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["squid"]={"squid","[skwɪd]","[skwɪd]","n.鱿鱼",'n.鱿鱼','||Squid|| prepared as food.','食用乌贼用作食物的乌贼','I\'ve never eaten squid before, but I\'ll give it a whirl.','我以前从没吃过鱿鱼，不过我想尝一尝。'}

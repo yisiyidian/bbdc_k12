@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["communism"]={"communism","['kɒmjʊnɪz(ə)m]","['kɑmjʊ'nɪzəm]","n.共产主义",'n.共产主义,共产主义学说，共产主义制度','He was a politically conscious fighter for communism.','在政治上,他是个自觉的共产主义战士.','Our ultimate aim is to realize communism.','我们的最终目的是实现共产主义.'}

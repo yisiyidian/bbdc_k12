@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["embroil"]={"embroil","[ɪm'brɒɪl; em-]","[ɪm'brɔɪl]","vt.使卷入",'vt.使卷入,使陷入，牵连','John and Peter were quarreling, but Mary refused to get embroiled in it.','约翰和彼特在争吵，但玛丽不愿卷入他们的纠纷中。','Avoid any step that may embroil us with Great Britain.','避免任何可能使我们卷入与英国敌对状态的行动。'}

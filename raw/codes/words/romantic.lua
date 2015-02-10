@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["romantic"]={"romantic","[rə(ʊ)'mæntɪk]","[ro'mæntɪk]","adj.浪漫的",'adj.浪漫的|||n.浪漫的人','I was told that Spain is a romantic nation.','有人告诉我说，西班牙是个浪漫的国家。','It is said that Frenchmen are among the most romantic people in the world.','据说法国人是世界上最浪漫的民族之一。'}

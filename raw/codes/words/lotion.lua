@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lotion"]={"lotion","['ləʊʃ(ə)n]","['loʃən]","n.洗涤剂",'n.洗涤剂(洗液,洗净),乳液','Wipe the lotion onto your face.','你在脸上搽些护肤液.','Rub the lotion on(to the skin).','(在皮肤上)搽上涂剂.'}

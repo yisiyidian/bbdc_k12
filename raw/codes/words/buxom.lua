@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["buxom"]={"buxom","['bʌks(ə)m]","['bʌksəm]","adj.(妇女)丰满的",'adj.(妇女)丰满的,有健康美的，屈服的，愉快的','Jane is a buxom blond.','简是一个性感的金发女郎。','A generation ago, fat babies were considered healthy and buxom actresses were popular.','在上一代，肥胖婴儿被认为是健康的，丰满的女演员很受欢迎。'}

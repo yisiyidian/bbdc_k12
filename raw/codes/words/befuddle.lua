@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["befuddle"]={"befuddle","[bɪ'fʌd(ə)l]","[bɪ'fʌdl]","使昏乱",'使昏乱','This is clearly designed to befuddle the public.','这显然是为了蒙蔽舆论。','Don\'t befuddle me with all those masses of detail.','不要拿一大堆琐事把我搞迷糊。'}

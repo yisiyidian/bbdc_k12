@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stocking"]={"stocking","['stɒkɪŋ]","['stɑkɪŋ]","n.长袜",'n.长袜','The thief masked his face with a stocking.','那贼套上长筒袜遮住脸.','I ripped my stocking on a nail.','一个钉子挂破了我的袜子。'}

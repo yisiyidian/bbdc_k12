@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["keeper"]={"keeper","['kiːpə]","['kipɚ]","n.保管人",'n.看守人，饲养员，保管人','A keeper is only a poacher turned outside in, and a poacher a keeper turned inside out.','看守人只不过是把表面翻进去的偷猎者，而偷猎者也不过是把里面翻出来的看守人罢了。','The keeper of a royal forest or park.','皇家园林卫队保护皇家森林和公园的看守者'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bureaucrat"]={"bureaucrat","['bjʊərəkræt]","['bjʊrəkræt]","n.官僚作风的人",'n.官僚作风的人,官僚,官僚政治论者','A four-to-seven-year-old does as much paperwork as any bureaucrat.','一个四至七岁的孩子所做的书面作业和任何一个官僚所做的一样多。','I suppose my application have been lost by some incompetent bureaucrat.','我估计我的申请书不知道让哪个无能的官僚给弄丢了。'}

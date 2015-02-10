@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seize"]={"seize","[siːz]","[siz]","vt.抓住",'vt.抓住,攻占,理解,侵袭|||vi.抓住,卡住,终止','We should seize the opportunity to counterattack.','现在，我们应乘机反攻。','||Seize|| the chance, otherwise you\'ll regret it.','抓住这个机会，否则你会后悔的。'}

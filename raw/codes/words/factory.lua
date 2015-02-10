@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["factory"]={"factory","['fækt(ə)rɪ]","['fæktri]","n.工厂",'n.工厂,制造场所','I got a job in a textile factory.','我在一家纺织厂找到一份工作。','The company wished to locate its new factory beside the river.','这家公司希望把新工厂设在河边。'}

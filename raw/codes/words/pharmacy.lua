@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pharmacy"]={"pharmacy","['fɑːməsɪ]","['fɑrməsi]","n.药房",'n.药房,配药学','Readily available in ||pharmacies||; not requiring special preparation.','药房常备的不需特殊准备的；药房常预备的','Please tell me the way to a nearby pharmacy.','到最近的药店怎么走。'}

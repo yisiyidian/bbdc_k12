@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["infernal"]={"infernal","[ɪn'fɜːn(ə)l]","[ in'fə:nəl ]","adj.地狱的",'adj.地狱的(恶魔似的,极度的)','People still have a general fear for the imaginary infernal powers.','人们对于虚构的地狱中的鬼神仍具有一种普遍的恐惧。','What an infernal racket!','吵死人了!'}

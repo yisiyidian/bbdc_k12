@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["livelihood"]={"livelihood","['laɪvlɪhʊd]","['laɪvlɪhʊd]","n.生计",'n.生计,营生,生活','My father gained a bare livelihood of family by his own hands.','父亲靠自己的双手勉强维持家计.','It affords a livelihood to a great number of people.','这给许多人提供了生计.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sully"]={"sully","['sʌlɪ]","[ 'sʌli ]","v.沾污",'v.沾污,弄脏,弄成无用|||n.污点,脏污','You ||sullied|| the honour of your family.','你的举止玷污了你们家族的荣誉。','She claimed they were sullying her good name.','她声称他们在败坏她的名誉。'}

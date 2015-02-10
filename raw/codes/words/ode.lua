@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ode"]={"ode","[əʊd]","[od]","n.颂诗",'n.颂诗,赋','I am reading \'||Ode|| to Autumn\' written by Keats.','我在读济慈的“秋颂”。','...Keats\' "||Ode|| to a Nightingale."','...济慈的《夜莺颂》。'}

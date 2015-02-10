@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["contender"]={"contender","[kən'tɛndɚ]","[ kən'tendə ]","n.竞争者",'n.竞争者','He has recently become a serious contender.','他最近已经成为一个强劲的竞争者。','he is always friendly to his contender.','他总是对他的竞争者很友好。'}

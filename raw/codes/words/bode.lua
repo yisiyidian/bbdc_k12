@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bode"]={"bode","[bəʊd]","[ bəud ]","v.预示",'v.预示','It bodes well for our success.','它预示着我们要成功。','The bad trading figures do not bode well.','交易数额欠佳，显示出公司的前景不妙。'}

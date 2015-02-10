@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["careworn"]={"careworn","['keəwɔːn]","['kɛrwɔrn]","adj.疲倦的",'adj.疲倦的,饱经忧患的','The old woman have a careworn look on her face..','老妇脸上露出忧心忡忡的神色。','the parent\'s careworn face.','家长愁云密布的脸'}

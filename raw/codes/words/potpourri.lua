@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["potpourri"]={"potpourri","[pəʊ'pʊərɪ; -'riː; pɒt'pʊərɪ]","[,popʊ'ri]","n.混合香料(混合物",'n.混合香料(混合物,杂录)','It\'s a potpourri of architectural styles from all over the world.','它是世界各地建筑风格的荟萃。','The robust fragrance of potpourri filled the room.','浓郁的花香充满了整间屋子。'}

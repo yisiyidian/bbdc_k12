@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["headstrong"]={"headstrong","['hedstrɒŋ]","['hɛdstrɔŋ]","adj.顽固的",'adj.顽固的,刚愎的,任性的','The trouble with her is that she is too headstrong.','她的毛病是太固执。','He\'s young, very headstrong, but he\'s a good man underneath.','他年轻、任性，但骨子里是个好人。'}

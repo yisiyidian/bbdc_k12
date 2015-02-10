@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["party"]={"party","['pɑːtɪ]","['pɑrti]","n.社交聚会",'n.社交聚会；党，党派；当事人；同类，伙伴|||v.为…举行社交聚会；为…请客；参加社交聚会|||adj.政党的，党派的；社交的，聚会的；共有的，共同的','It\'s a pity that you can\'t come to the party.','你不能来参加这次聚会，真可惜。','The Labour party went out in 1980.','工党於1980年下野.'}

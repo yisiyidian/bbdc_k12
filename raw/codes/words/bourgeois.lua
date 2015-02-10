@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bourgeois"]={"bourgeois","['bʊəʒwɑː]","[,bʊr'ʒwɑ]","n.中产阶级的人",'n.中产阶级的人，资产阶级的人，追求物质享受的人|||adj.中产阶级的，追求名利的，资产阶级的','The bourgeois papers cried up the book for reasons of their own.','资产阶级报纸对那本书大加赞扬，有他们自己的用意。','The princess was ostracised for marrying a rich bourgeois.','公主因与一位富有的商人结婚而被逐出皇族。'}

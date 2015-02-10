@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aloof"]={"aloof","[ə'luːf]","[ə'luf]","adj.疏远的",'adj.疏远的,冷淡的|||adv.远离,离开','The United States should, he argues, attempt to remain aloof.','他认为，美国应保持置身事外的态度。','The house stands aloof from the streets.','那所房子远离街道。'}

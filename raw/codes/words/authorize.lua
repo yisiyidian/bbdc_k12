@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["authorize"]={"authorize","['ɔθəraɪz]","[ 'ɔ:θəraiz ]","v.授权与",'v.授权与,批准,委托代替','I\'ve been authorized by the court to repossess this property.','我得到法庭认可重新拥有这笔财产。','He confidentially authorized me to act for him while he was abroad.','他信任地委托我在他出国期间代行他的职务。'}

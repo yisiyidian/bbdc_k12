@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["twilight"]={"twilight","['twaɪlaɪt]","['twaɪlaɪt]","n.黄昏",'n.黄昏,微光,略知|||v.使微明','||Twilight|| merged into total darkness.','暮色四合, 渐而一片漆黑.','Wrestling is in a twilight zone between sport and entertainment.','摔跤是介於运动和娱乐两者之间的活动.'}

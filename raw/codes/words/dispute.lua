@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dispute"]={"dispute","[dɪ'spjuːt; 'dɪspjuːt]","['dɪs'pjʊt]","n.争论;争吵",'n.争论;争吵|||vi.争论,争执|||vt.争论;质疑;争夺;抵抗','His honesty is beyond dispute.','他的诚实是无可争议的。','They are ||disputing|| about the rights and wrongs of the case.','他们正在激烈争论这个事件的是非曲直。'}

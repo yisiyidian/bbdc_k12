@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pregnant"]={"pregnant","['pregnənt]","['prɛɡnənt]","adj.怀孕的",'adj.怀孕的，意味深长的,含蓄的，富于想象力的','She is expecting (ie is pregnant with) her first child.','她不久要生头胎.','Women who do not ovulate regularly have difficulty in becoming pregnant.','妇女排卵期不正常就不易受孕.'}

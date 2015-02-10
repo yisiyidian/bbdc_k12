@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["endless"]={"endless","['endlɪs]","['ɛndləs]","adj.无止境的",'adj.无止境的,没完没了的','This will lead to endless trouble.','这将产生没完没了的麻烦','The night sky brings you endless imaginations.','夜空带给你无尽的遐想'}

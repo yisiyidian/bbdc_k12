@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["load"]={"load","[ləʊd]","[lod]","n.负荷",'n.负荷,重担,装载量|||v.装载,装填,担负,给(枪)装子弹|||[计算机]装入','Be careful, that gun\'s loaded.','小心，那枪是上了膛的。','I\'ve never heard such a load of garbage!','这麽胡说八道我还从来没听说过。'}

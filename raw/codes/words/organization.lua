@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["organization"]={"organization","[ˌɔːɡənaɪ'zeɪʃn]","[,ɔrɡənə'zeʃən]","n.组织",'n.机构,组织|||adj.有组织的','||Organization|| of the company was then in a state of flux.','当时公司的编制正处於不稳定状态.','This organization espouses the socialist philosophy.','这个组织支持社会主义哲学。'}

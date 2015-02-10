@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["emanate"]={"emanate","['eməneɪt]","[ 'eməneit ]","v.散发",'v.散发,发出','The idea originally emanated from his brother.','这个主意最初是他哥哥出的。','Delicious smells were ||emanating|| from the kitchen.','香味从厨房飘了出来。'}

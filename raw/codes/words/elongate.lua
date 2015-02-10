@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["elongate"]={"elongate","['iːlɒŋgeɪt]","[ɪ'lɔŋɡet]","v.延长",'v.延长,伸长|||vt.伸长','This picture that you’ve sketched isn’t like her. The face is too elongated.','你的这张写生画不象她,脸画得太长了。','These giant penguins have quite elongate, prominent beaks.','这些大企鹅有着长长的突出的喙'}

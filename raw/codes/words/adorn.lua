@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adorn"]={"adorn","[ə'dɔːn]","[ə'dɔrn]","v.装饰",'v.装饰,佩戴','The building is tastefully adorned.','这座建筑装饰得颇为雅致。','His house is lavishly adorned.','他的家装饰得非常华丽。'}

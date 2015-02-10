@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cat"]={"cat","[kæt]","[kæt]","n.猫",'n.猫,猫科动物,邪恶的女人,吊锚机,单帆小船|||vt.吊锚|||vi.寻找性交伴侣|||(CAT)电子计算机横断层扫描','The cat lapped up the milk.','猫舔食牛奶。','The cat is playing with a live mouse.','猫在戏弄那只活老鼠。'}

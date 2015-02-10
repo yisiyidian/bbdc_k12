@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["suffer"]={"suffer","['sʌfə]","['sʌfɚ]","vt.遭受",'vt.遭受,忍受,允许|||vi.忍受,经历','They suffered huge losses in the financial crisis.','他们在经济危机时遭受了巨大的损失。','How can you suffer such insolence?','你怎么能容忍这种蛮横的态度？'}

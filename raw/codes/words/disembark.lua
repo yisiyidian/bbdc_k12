@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disembark"]={"disembark","[dɪsɪm'bɑːk; dɪsem-]","['dɪsɪm'bɑrk]","v.（使）上岸",'v.（使）上岸,（使）登陆,下车下飞机','Please take your belongings and to disembark.','请拿好随身物品预备下飞机。','Seven second-class passengers prepared to disembark.','7名普通舱的旅客准备下船。'}

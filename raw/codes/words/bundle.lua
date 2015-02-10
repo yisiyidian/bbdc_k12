@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bundle"]={"bundle","['bʌnd(ə)l]","['bʌndl]","n.捆",'n.捆,束,一批,一大笔钱|||vt.捆,匆匆送走,附赠|||vi.匆忙','She had a bundle of fun at the dance.','她在舞会上玩得很开心','She bundled her son off to school.','她匆匆忙忙把儿子打发到学校去了。'}

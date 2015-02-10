@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["castle"]={"castle","['kɑːs(ə)l]","['kæsl]","n.城堡",'n.城堡|||vt.置于城堡中,(棋)移动王车易位|||vi.(棋)移动王车易位','The earl lives in a castle.','伯爵住在一座古堡里。','Visitors to the castle are asked not to take photographs.','来城堡参观者不得拍照。'}

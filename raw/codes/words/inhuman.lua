@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inhuman"]={"inhuman","[ɪn'hjuːmən]","[ɪn'hjʊmən]","adj.残忍的",'adj.残忍的,无人性的,非人类的','Success was due to his inhuman efforts.','成功归功於他超人的努力。','an inhuman environment.','非人的环境'}

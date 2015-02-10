@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hearing"]={"hearing","['hɪərɪŋ]","['hɪrɪŋ]","n.听力",'n.听力，听觉，说话或申辩的机会，审讯，听证会|||动词hear的现在分词','||Hearing|| the hiss of gas, he rushed in and turned it off.','听到煤气的嘶嘶声，他冲进来把它关掉。','On hearing the news, his jaw dropped.','听到这个消息，他惊讶得张口结舌。'}

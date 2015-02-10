@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deserve"]={"deserve","[dɪ'zɜːv]","[dɪ'zɝv]","vt.值得",'vi.应该得到|||vt.应受,值得','You deserve it.','这是你应得的。','He deserved to be punished.','他应当受到惩罚。'}

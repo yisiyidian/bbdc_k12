@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fitting"]={"fitting","['fɪtɪŋ]","['fɪtɪŋ]","adj.适合的",'adj.适合的,恰当的|||n.试衣','The plumber splayed the end of the pipe before fitting it over the next section.','铅管工把管口撑大後套在另一截管子上.','News of the robberies frightened many people into fitting new locks to their doors.','发生抢劫的消息把许多人吓得装上新门锁.'}

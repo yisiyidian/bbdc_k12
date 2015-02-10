@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["isotope"]={"isotope","['aɪsətəʊp]","['aɪsə'top]","n.同位素",'n.同位素','This indium isotope was created at the same time as the earth.','这种铟同位素与地球产生在同一时代。','Changes of nuclear mass and nuclear size cause isotope shifts.','原子核质量和大小的不同引起同位素移动。'}

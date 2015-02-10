@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hole"]={"hole","[həʊl]","[hol]","n.洞",'n.孔,洞,穴|||vt.&vi.挖洞,掘坑,进洞','There is a hole in my sock.','我的袜子上有个洞。','Having lost my money puts me in rather a hole.','丢了钱使我陷于困境。'}

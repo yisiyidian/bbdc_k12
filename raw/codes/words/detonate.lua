@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["detonate"]={"detonate","['detəneɪt]","['dɛtənet]","vt.使爆炸",'vt.使爆炸,使爆裂|||vi.爆炸,发爆炸声','A cap or tube containing a small amount of explosive used to detonate the main explosive charge of a firearm or mine.','雷管，底火，导火线装有少量爆炸物的帽或管，用来引爆枪炮或地雷、水雷等','The bomb failed to detonate.','炸弹没爆炸.'}

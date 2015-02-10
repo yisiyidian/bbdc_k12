@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conversant"]={"conversant","[kən'vɜːs(ə)nt]","[kən'vɝsnt]","adj.熟悉的",'adj.熟悉的,亲近的,有交情的','Our manager is conversant with account system.','我们的经理精通会计制度。','I am thoroughly conversant with all the rules.','我对所有的规则了如指掌。'}

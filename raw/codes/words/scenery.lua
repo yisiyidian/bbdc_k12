@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["scenery"]={"scenery","['siːn(ə)rɪ]","['sinəri]","n.风景",'n.布景,风景,背景','The scenery was beautiful beyond description.','那风景美丽得难以形容.','We admired the splendor of the mountain scenery.','我们赞赏着壮丽的山景。'}

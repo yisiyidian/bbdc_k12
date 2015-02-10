@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vinyl"]={"vinyl","['vaɪnl]","[ 'vainil ]","n.乙烯基",'n.乙烯基','This type of vinyl is a poor substitute for leather.','这种乙烯基材料代替皮革十分勉强.','...a modern vinyl floor covering.','…一种现代乙烯基塑料地板。'}

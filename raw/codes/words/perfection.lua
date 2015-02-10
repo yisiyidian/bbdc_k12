@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perfection"]={"perfection","[pə'fekʃ(ə)n]","[pɚ'fɛkʃən]","n.完美",'n.完美,完善','She takes off the Prime Minister to perfection.','她模仿首相的样子维妙维肖.','I\'m still only a learner, so don\'t expect perfection!','我还在学习, 别指望我十全十美!'}

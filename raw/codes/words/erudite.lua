@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["erudite"]={"erudite","['erʊdaɪt]","['ɛrudaɪt]","adj.博学的",'adj.博学的','He was never dull, always erudite and well informed.','他从来就不愚笨，而是一直博学多才、见多识广。','She wrote in an original and highly erudite style.','她的写作风格具有独创性且十分博学。'}

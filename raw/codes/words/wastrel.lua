@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wastrel"]={"wastrel","['weɪstr(ə)l]","['westrəl]","n.挥霍无度的人",'n.挥霍无度的人，败家子，流浪汉，浪荡子','His neighbours denounce him as a wastrel who had dissipated his inheritance.','他的邻居谴责他是个败家子，把遗产都挥霍光了。','',''}

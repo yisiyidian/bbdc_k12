@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["set"]={"set","[set]","[sɛt]","v.设定",'n.组合,集合,设定|||n.一套,一副,一局比赛|||v.放置,设定|||v.(太阳)落下去','I rely on you to set a good example.','我全靠你来树立个好榜样','She admired the firm set of his shoulders.','她喜欢他的肩膀很结实。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["zeal"]={"zeal","[ziːl]","[zil]","n.热情",'n.热情,热忱','He shows zeal for knowledge.','他渴望知识。','||Zeal|| without knowledge is fire without light.','热情而无知，犹如无光之火。'}

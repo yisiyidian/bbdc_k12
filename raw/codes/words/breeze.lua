@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["breeze"]={"breeze","[briːz]","[briz]","n.微风",'n.微风,轻而易举的事|||vi.飘然而行,轻松地得胜或进步','The wheat rippled in the breeze.','小麦在微风中起伏波动。','He breezed through the task.','他轻松地做完了这项工作。'}

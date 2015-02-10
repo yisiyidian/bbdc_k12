@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["descriptive"]={"descriptive","[dɪ'skrɪptɪv]","[dɪ'skrɪptɪv]","adj.描述的",'adj.描述的,叙述的|||[计算机]描述性的','The report was so descriptive that I understood exactly.','这报道写得非常生动, 我完全了解了。','a descriptive science.','分类科学'}

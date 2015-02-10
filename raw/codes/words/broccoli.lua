@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["broccoli"]={"broccoli","['brɒkəlɪ]","['brɑkəli]","n.绿菜花",'n.绿菜花,花椰菜','A plant cultivated for an edible part, such as the root of the beet, the leaf of spinach, or the flower buds of broccoli or cauliflower.','蔬菜因其可食部分而种植的植物，如甜菜根、菠菜叶或者椰菜、花椰菜的花蕾等','how much broccoli do I need for seven people?','给七个人做饭需要多少花椰菜'}

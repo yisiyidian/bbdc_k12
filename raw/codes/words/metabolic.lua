@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["metabolic"]={"metabolic","[,metə'bɒlɪk]","[,mɛtə'bɑlɪk]","adj.新陈代谢的",'adj.新陈代谢的','A number of intoxicants are associated with metabolic acidosis.','许多毒性物质可引起代谢性酸中毒.','Chemical carcinogens generally require metabolic conversion to some form of " ultimate " carcinogen.','化学致癌物一般需要通过代谢来转换成某种形式的 “ 最终 ” 致癌物.'}

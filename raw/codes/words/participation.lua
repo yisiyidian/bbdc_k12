@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["participation"]={"participation","[pɑː,tɪsɪ'peɪʃn]","[pɑr,tɪsɪ'peʃən]","n.参加",'n.参加,参与','By the way, must we guarantee in any way our participation in the tender?','顺便问一下, 我们应为参加投标做一点保证吗？','We win the game because of his participation.','由于他的参与, 我们赢了比赛。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stationer"]={"stationer","['steɪʃ(ə)nə]","['steʃənɚ]","n.文具商",'n.文具商,文具店，出版商，书商','Is there a good stationer\'s (shop) near here?','附近有没有好的文具店?','Is there a good stationer \'s (shop) near here?','附近有没有好的文具店?'}

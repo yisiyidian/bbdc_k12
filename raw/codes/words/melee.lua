@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["melee"]={"melee","['meleɪ]","['mele]","n.互殴",'n.互殴,乱斗,混战','There was a scuffle and I lost my hat in the melee.','因发生一场斗殴，我的帽子也在混乱中丢失了。','What resulted in the melee was a silly dispute.','一次无聊的争吵导致了那场乱斗。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["penalty"]={"penalty","['pen(ə)ltɪ]","['pɛnəlti]","n.处罚",'n.处罚,惩罚','The penalty clause was hidden in the small print.','惩罚条款印在不起眼的小号字体部分。','He kicked a penalty goal in the football match.','在这场足球赛中，他主罚，踢进了一个球。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clapper"]={"clapper","['klæpə]","['klæpɚ]","n.铃舌",'n.铃舌,响板，鼓掌者','We had to drive like the clappers to get there on time.','为了按时到达，我们开得飞快。','If not damaged gently close the clapper.','如果没有损坏，则轻轻地关闭阀瓣。'}

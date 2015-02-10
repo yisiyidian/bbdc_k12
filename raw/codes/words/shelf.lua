@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shelf"]={"shelf","[ʃelf]","[ʃɛlf]","n.架子",'n.架子,搁板(状物),岩棚','He is hurt by a shelf protruding from the wall.','他被一个从墙上伸出的架子伤着了。','Please dust all the books on the bottom shelf.','请把底层书架上的书都掸一掸。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fourteen"]={"fourteen","[fɔː'tiːn; 'fɔːtiːn]","[,fɔr'tin]","num.十四",'num.十四','At the age of fourteen, Tom ran away and went to sea.','汤姆十四岁那年离家出走，去当海员。','I\'m fourteen years old.','我14岁。'}

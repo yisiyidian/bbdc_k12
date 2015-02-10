@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["terrible"]={"terrible","['terɪb(ə)l]","['tɛrəbl]","adj.糟糕的",'adj.可怕的,糟糕的,极其的','The earthquake was a terrible catastrophe.','这次地震是个可怕的灾难。','Unlike my sister, I am a terrible cook.','和我妹妹不同，我是一个糟糕的厨师。'}

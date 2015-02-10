@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dress"]={"dress","[dres]","[drɛs]","n.连衣裙",'n.女装,服装,连衣裙|||vt.&vi.穿著|||adj.正式的(衣服)','Don\'t bother to dress up come as you are.','用不著穿讲究衣服－－就穿平常的衣服来吧。','The princess is dressed up by a famous dressmaker.','公主的衣服是由著名的女装师缝制的。'}

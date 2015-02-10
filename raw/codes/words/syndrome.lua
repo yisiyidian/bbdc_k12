@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["syndrome"]={"syndrome","['sɪndrəʊm]","['sɪndrəm]","n.综合征",'n.综合征，综合症状；（不良情况的）典型表现，典型行为','Skipping breakfast and buying a cup of coffee on the way to work became a syndrome as the months wore on.','随着时间推移，不吃早饭，在上班的路上买一杯咖啡已成为一项有特色的行为','Irritable bowel syndrome seems to affect more women than men.','女性比男性更易患肠易激综合征。'}

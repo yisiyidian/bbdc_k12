@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["humorous"]={"humorous","['hjuːm(ə)rəs]","['hjumərəs]","adj.幽默的",'adj.幽默的,诙谐的','The film is at once humorous and moving.','这部电影既幽默又动人。','Indeed he has a solemn face, but he is very humorous at heart.','他的确有一副严肃的脸孔，但内心却是很富幽默感。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["imprecation"]={"imprecation","[ɪmprɪ'keɪʃ(ə)n]","[,ɪmprɪ'keʃən]","n.咒语",'n.咒语,诅咒','He muttered imprecations under his breath.','他低声咒骂着。','The old woman walked along the street muttering imprecations.','那个老太太在街上边走边小声咒骂。'}

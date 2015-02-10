@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enduring"]={"enduring","[ɪn'dʒɔːrɪŋ; en-]","[ɪn'dʊrɪŋ]","adj.持久的",'adj.持久的,忍耐的','A firm\'s history contributes to its enduring value system.','一个公司的历史有助于形成它经久不衰的价值准则系统。','Perhaps the only enduring and selfless love was that of a mother for her child.','或许唯一持久无私的爱就是母爱。'}

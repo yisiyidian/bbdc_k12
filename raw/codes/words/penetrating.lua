@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["penetrating"]={"penetrating","['penɪtreɪtɪŋ]","['pɛnɪtretɪŋ]","adj.敏锐的",'adj.敏锐的,尖锐的','The penetrating odor of garlic soon filled the entire apartment.','大蒜刺鼻的气味很快就弥散了整个屋子','He had an extraordinarily penetrating gaze.','他的目光有股异乎寻常的洞察力.'}

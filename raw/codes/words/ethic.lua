@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ethic"]={"ethic","['eθɪk]","['ɛθɪk]","n.道德规范",'n.道德规范,伦理','Our professional ethic enjoins us to stay uncommitted and report the facts.','我们的职业道德要求我们要保持中立, 报道事实真相。','Medical ethics forbid a doctor to have a love affair with a patient.','行医道德有规定, 禁止医生与病人谈恋爱.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["steal"]={"steal","[stiːl]","[stil]","vt.偷",'vt.偷；悄悄地做，悄悄地走；潜行；不正当的获得|||vi.偷；偷偷地行动：秘密、不显明地行动、发生或消失；[棒球]偷垒|||n.偷窃；便宜货；便宜货','He ||stol||e a glance at the pretty girl across the table.','他偷偷地看了一眼桌子对面那个漂亮的女孩。','Ladies and gentlemen, it\'s a steal at only $50.\'','｀女士们、 先生们, 这个只卖50美元, 太便宜啦.＇'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["greenhorn"]={"greenhorn","['griːnhɔːn]","['grin,hɔrn]","n.初学者",'n.初学者,新手，没经验的人','greenhorn','新人','i am a greenhorn in this field.','在这行，我是个生手。'}

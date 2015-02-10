@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["verify"]={"verify","['verɪfaɪ]","['vɛrɪfaɪ]","v.核实",'v.查证,核实|||n.[计算机]DOS命令:打开关闭在DOS操作期间的写文件校验开关','I have been hunting through all sorts of books to verify this.','我查了好多书来核实这一点.','The truth ||verified|| the allegations.','事实证明了这些说法。'}

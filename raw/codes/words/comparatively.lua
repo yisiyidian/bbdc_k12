@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comparatively"]={"comparatively","[kəm'pærətɪvlɪ]","[kəm'pærətɪvli]","adv.比较地",'adv.比较地,相当地,多少','The Norwegians live in a comparatively cold zone.','挪威人生活在比较寒冷的地区。','Sports Studies as a discipline is still comparatively new.','体育研究作为一门学科还是相当新的。'}

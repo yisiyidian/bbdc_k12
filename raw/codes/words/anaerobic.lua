@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anaerobic"]={"anaerobic","[,æneə'rəʊbɪk]","[,ænɛ'robɪk]","adj.厌氧的",'adj.厌氧的','Most of enteric bacteria is anaerobic','多数的肠道细菌是厌氧的','||Anaerobic|| bacteria do not need oxygen.','厌氧细胞不需要氧气。'}

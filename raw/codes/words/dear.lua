@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dear"]={"dear","[dɪə]","[dɪr]","adj.亲爱的",'adj.严重的,珍贵的,亲爱的,昂贵的,衷心的|||adv.高价地,热爱地|||n.亲爱的人,可爱的人|||int.啊,哎呀','The accident cost him dear.','这次事故使他损失惨重。','He holds life dear.','他珍视生命。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cyclical"]={"cyclical","['sɪklɪk(ə)l]","[ˈsɪklɪkəl]","adj.循环的",'adj.循环的,周期的','Interest rate generally fluctuates in a cyclical manner.','利率常以周期方式浮动。','...the cyclical nature of the airline business.','…航空业的周期性。'}

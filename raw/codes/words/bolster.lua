@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bolster"]={"bolster","['bəʊlstə]","['bolstɚ]","n.长枕",'n.长枕,靠垫|||vt.支持,鼓励','All attempts to bolster up colonialism are bound to fail.','一切想维护殖民主义的企图都是注定要失败的。','There is a bolster across the head of the bed.','床头上有一个长枕垫。'}

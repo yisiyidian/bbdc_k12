@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["truculent"]={"truculent","['trʌkjʊl(ə)nt]","['trʊkjʊlənt]","adj.野蛮的",'adj.野蛮的,粗野的,残酷的','a truculent speech against the new government.','激烈反对政府的言论','After Wickham was drunk, he became very truculent.','威科姆喝醉后变得非常粗暴。'}

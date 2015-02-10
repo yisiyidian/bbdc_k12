@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["violation"]={"violation","[vaɪə'leɪʃn]","[,vaɪə'leʃən]","n.违反",'n.违反,违背,妨碍','The drunken driver was brought to the police station for violation of traffic regulations.','这个喝醉了的司机因违反交通规则而被带进了警察局。','The attack on civilians is a flagrant violation of the peace agreement.','袭击平民的举动公然违背了和平协定.'}

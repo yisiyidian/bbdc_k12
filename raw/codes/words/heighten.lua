@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heighten"]={"heighten","['haɪt(ə)n]","['haɪtn]","v.增高",'v.增高,提高,加强','It\'s the music to heighten the dramatic effect.','那是用于提高戏剧效果的配乐。','When she heard the news she was heightening tension.','当她听到那则消息后，她变得越来越紧张。'}

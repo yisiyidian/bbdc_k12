@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["carp"]={"carp","[kɑːp]","[kɑrp]","n.鲤鱼",'n.鲤鱼|||vi.吹毛求疵','Other experiments in crossing bighead and silver carp have produced a new variety of fish.','使大头鲤鱼和银色鲤鱼杂交的其他试验获得了一个新品种。','I like the white carp most.','我最喜欢白色的鲤鱼。'}

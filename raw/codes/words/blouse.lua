@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blouse"]={"blouse","['blaʊz]","[blaʊs]","n.女衬衫",'n.女衬衫','A blouse worn under a jumper.','穿在运动衫内的短衫','She was wearing a woolen coat, with a cotton blouse underneath.','她外面穿了一件毛外套，里面穿一件棉布衬衫。'}

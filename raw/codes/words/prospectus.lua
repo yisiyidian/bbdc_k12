@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prospectus"]={"prospectus","[prə'spektəs]","[prə'spɛktəs]","n.创立计划书",'n.创立计划书,内容说明书,样张','The company was bogus, the prospectus was all got up.','那公司全属子虚乌有，所谓的创办计划是胡编乱造出来的。','She rewrote the prospectus of her dissertation three times before it was approved.','她三次重写她的学位论文的提纲才被通过'}

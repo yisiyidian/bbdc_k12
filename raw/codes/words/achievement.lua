@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["achievement"]={"achievement","[ə'tʃiːvm(ə)nt]","[ə'tʃivmənt]","n.成就",'n.成就,成绩,完成,达到','Effort and achievement are always in full accord.','努力和成就总是相辅相承的。','The Apollo program was not so much a scientific achievement as a technical accomplishment.','阿波罗计划与其说是一项科学成果，不如说是一项技术成就。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brighten"]={"brighten","['braɪt(ə)n]","['braɪtn]","vt.使变亮",'vt.使变亮,使生辉|||vi.发光，发亮','Flowers brighten (up) a room.','房间里有了花显得满室生辉.','He brightened (up) when he heard the good news.','他听到这个好消息时喜形於色.'}

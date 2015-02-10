@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["xenophobic"]={"xenophobic","[,zino'fobɪk]","[ ,zenəu'fəubik, ,zi:- ]","adj.恐惧外国人的",'adj.恐惧外国人的','Service in the armed forces gave many Americans a less xenophobic view of the world.','在武装部队的服役使得许多美国人有了较不排外的世界观。','People in the tribe was xenophobic.','这个部落的人们是恐惧外国人的。'}

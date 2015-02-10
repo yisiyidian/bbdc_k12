@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["boomerang"]={"boomerang","['buːməræŋ]","['buməræŋ]","n.自食其果的行为",'n.自食其果的行为，回飞镖|||vi.自食其果','His attempt to discredit his opponent boomeranged (on him) when he was charged with libel.','他企图败坏对手名声反而自食其果, 被控以诽谤罪.','boomerang','飞镖'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sergeant"]={"sergeant","['sɑːdʒ(ə)nt]","['sɑrdʒənt]","n.中士",'n.中士，巡佐，军士|||&lt;古&gt;（法庭或议会等地的）警卫官','A sergeant in the police force is below an inspector.','警察中巡佐的职位低於巡官.','The sergeant barked (out) an order.','那个士官大声发出命令.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["barely"]={"barely","['beəlɪ]","['bɛrli]","adv.勉强",'adv.少量地,几乎不地,勉强','She was barely recognizable as the girl I had known at school.','我几乎认不出她就是我上学时认识的那个女孩儿.','Our accommodation is barely adequate.','我们的住房不太够用。'}

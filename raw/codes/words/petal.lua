@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["petal"]={"petal","['pet(ə)l]","['pɛtl]","n.花瓣",'n.花瓣','The expanded area of a leaf or petal; a blade.','叶片叶子或瓣的延展部分；叶子','A petal fluttered to the ground.','一片花瓣飘落到地上。'}

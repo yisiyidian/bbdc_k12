@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["disinterested"]={"disinterested","[dɪs'ɪnt(ə)rɪstɪd]","[dɪs'ɪntərɪsɪd]","adj.不感兴趣的",'adj.不感兴趣的，无私欲的,公平的|||动词disinterest的过去式和过去分词形式','In financial matter it is important to get disinterested advice.','在财务方面，要徵询与之无利益关系者的意见，这是十分重要的。','He is a disinterested person.','他是一个没有私心的人。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shadow"]={"shadow","['ʃædəʊ]","['ʃædo]","n.阴影",'n.阴影,阴暗,预兆,跟踪盯梢的人|||vt.跟踪,笼罩|||vi.投阴影于...,使...忧沉,预示|||adj.影子内阁的,阴暗的','The dog is his master\'s shadow.','这条狗和主人形影不离。','The tree cast its shadow on the wall.','树影映在墙上。'}

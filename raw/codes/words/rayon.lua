@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rayon"]={"rayon","['reɪɒn]","['reɑn]","n.人造丝",'n.人造丝，人造纤维','Copper is also employed in the alkaline Bemberg rayon process.','铜也用在碱性本姆伯人造丝生产中.','Wool has more body than rayon.','羊毛比人造丝厚实.'}

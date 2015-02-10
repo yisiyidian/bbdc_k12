@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["already"]={"already","[ɔːl'redɪ]","[ɔl'rɛdi]","adv.已经",'adv.已经','The teacher was already in the room when I arrived.','我到的时候，老师已经在屋里了。','You had already gone when I arrived there.','当我到达时，你已经走了。'}

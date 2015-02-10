@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crumb"]={"crumb","[krʌm]","[krʌm]","n.碎屑",'n.碎屑,面包心,少许，无价值的人|||v.捏碎,弄碎，裹面包屑，抹去碎屑','A solid cake that won\'t crumb.','不会碎裂的坚硬蛋糕','She swept up the crumbs.','她打扫了碎屑。'}

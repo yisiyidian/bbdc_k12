@@ -205,10 +205,20 @@ def createLuaCodes(gitVer, testServer, buildTarget, channelAndroid, channeliOS, 
         IS_DEVELOPMENT_MODE = 'true'
         shutil.copy(allwordsFullPath, targetPath)
     else:
-        for parent, dirnames, filenames in os.walk(wordPath):
-            for filename in filenames:
-                fullPath = os.path.join(parent, filename)
-                shutil.copy(fullPath, targetPath)
+        f = open(allwordsFullPath,'r')  
+
+        for line in f.readlines():  
+            if line.find('M.allwords["') >= 0:
+                word = line[len('M.allwords["'):line.index('"]={"')]
+                w = open(targetPath + word + '.lua', 'w')
+                w.write('return {' + line[line.index('"]={"') + 5 + len(word) + 2:len(line)])
+                w.close()
+
+        f.close() 
+        # for parent, dirnames, filenames in os.walk(wordPath):
+        #     for filename in filenames:
+        #         fullPath = os.path.join(parent, filename)
+        #         shutil.copy(fullPath, targetPath)
 
     lua = '''%s
 

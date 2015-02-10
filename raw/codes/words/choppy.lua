@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["choppy"]={"choppy","['tʃɒpɪ]","['tʃɑpi]","adj.波涛汹涌的",'adj.波涛汹涌的，突变的，有裂痕的','choppy seas.','波浪滔滔的海洋','It was a bit choppy on the cruise but I was all right once I found my sea legs.','在航游中有点风浪，但一旦我习惯于坐船旅行我就没什么问题了。'}

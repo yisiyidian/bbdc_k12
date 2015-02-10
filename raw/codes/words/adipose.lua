@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adipose"]={"adipose","['ædɪpəʊs; -z]","['ædə'pos; 'ædə'poz]","adj.脂肪的",'adj.脂肪的|||n.脂肪','Too much adipose is bad for health.','过量脂肪对健康不利。','Fat people have more adipose in their body.','胖的人体内有更多的脂肪。'}

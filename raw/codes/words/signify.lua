@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["signify"]={"signify","['sɪgnɪfaɪ]","['sɪɡnɪfaɪ]","v.象徵",'v.象徵,预示','She ||signifies|| her disagreement.','她表示她不同意。','What do these marks signify?','这些符号表示什麽意思?'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shorts"]={"shorts","[ʃɔːts]","[ʃɔrts]","n.短裤",'n.短裤','Briefs or shorts worn as underwear.','衬裤作为内衣裤穿的贴身内裤或短裤','This pair of pant was converted into shorts.','这条裤子被改成了短裤。'}

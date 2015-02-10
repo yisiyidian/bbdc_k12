@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["paralyse"]={"paralyse","['pærəlaɪz]","[ 'pærəlaiz ]","vt.使瘫痪",'vt.使瘫痪，使麻痹，使无力|||=paralyze（英）','The accident left her paralysed in both legs.','事故后她的腰部以下瘫痪了。','She is paralysed in both arms.','她的两只胳膊麻痹。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["factor"]={"factor","['fæktə]","['fæktɚ]","n.因素",'n.因素,因子|||vt.把…因素包括进去|||vi.作为因素','Surprise is the greatest factor in war','“战争中出其不意是主要战术”','Time is the limiting factor.','时间是限制性的因素.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rusticate"]={"rusticate","['rʌstɪkeɪt]","['rʌstɪ,ket]","vt.粗琢(下乡)",'vt.粗琢(下乡)','They rusticated in villages off the beaten track for nearly fifteen years .','他们在偏僻的乡村生活了近十五年。','Many New Yorkers rusticate in the country during the summer months.','许多纽约市民选择夏天时在乡下度假几个月。'}

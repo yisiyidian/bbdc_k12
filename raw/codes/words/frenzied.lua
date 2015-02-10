@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["frenzied"]={"frenzied","['frenzɪd]","['frɛnzɪd]","adj.疯狂的",'adj.疯狂的,激怒的|||动词frenzy的过去式和过去分词形式','The dog jumped at the intruder with frenzied barks.','那狗狂吠着跳起来扑向闯入者。','The man was stabbed to death in a frenzied attack.','这名男子在一次疯狂的袭击中被刺死。'}

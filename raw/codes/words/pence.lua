@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pence"]={"pence","[pens]","[pɛns]","n.便士",'n.便士|||名词penny的复数形式','The old lady counted out thirty pence and gave it to the shop assistant.','老太婆一个个地数出三十便士给了售货员.','The Government has clapped an extra ten pence on a packet of cigarettes.','政府对每包香烟额外提价十便士.'}

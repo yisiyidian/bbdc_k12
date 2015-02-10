@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lock"]={"lock","[lɒk]","[lɑk]","n.锁",'n.锁；水闸，船闸；（机器部件等的）锁定；一把，一撮|||vt.锁上；锁好，关好；使固定；隐藏|||vi.卡住，不动；纠结；僵硬不动','The brakes locked, causing the car to skid.','汽车因车轮刹住而打滑。','All their capital is locked up in land.','他们把全部资金都搁死在地产投资上了。'}

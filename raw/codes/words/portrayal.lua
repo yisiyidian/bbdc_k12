@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["portrayal"]={"portrayal","[pɔː'treɪəl]","[pɔr'treəl]","n.描绘",'n.描绘，肖像，画像','The portrayal of the characters in the novel is lifelike.','该书中的人物写得有血有肉.','It is distinguished by an unsentimental portrayal of crime, violence and sex','这类小说以对犯罪、力和性的客观描写为特征'}

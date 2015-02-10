@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["take"]={"take","[teɪk]","[tek]","vt.拿",'vt.拿，取；采取；接受（礼物等）；耗费（时间等）|||vi.拿；获得|||n.镜头；看法；收入额；场景','The machine takes its name from its inventor.','这机器的名字来自其发明者。','I passed him the rope and he ||took|| it.','我递给他绳子，他接住了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["potentiality"]={"potentiality","[pəʊtenʃɪ'ælɪtɪ]","[pə,tɛnʃɪ'æləti]","n.潜在力",'n.可能力,潜在力,可能性','All of these are quite useful breeds whose potentiality has not been realised.','所有这些都是十分有用的品种，其潜力还没有被完全发挥。','It is a new invention with a big sales potentiality.','它是一个有畅销潜力的新发明。'}

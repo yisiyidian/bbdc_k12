@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["purveyor"]={"purveyor","[pə'veɪə(r); pɜː'veɪə(r)]","[ pə'veiə ]","n.供应粮食者",'n.供应粮食者，承办者，散播者','Mozart was, after all, not a mere purveyor of music but one of the supreme dramatic geniuses of all time.','毕竟，莫扎特不仅是作曲家，而且是有史以来最具戏剧天赋的人之一。','He is nothing but a purveyor of lies.','他就是一个谎言的传播者。'}

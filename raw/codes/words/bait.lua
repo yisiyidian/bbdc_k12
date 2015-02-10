@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bait"]={"bait","[beɪt]","[bet]","n.饵",'n.饵,引诱|||vt.嘲笑,纵犬攻击,以饵引诱,放饵','The fish snapped at the bait.','那鱼一下子咬住了鱼饵。','As soon as I mentioned money he rose to the bait, and became really interested.','我一提钱他便怦然心动，上了我的钩。'}

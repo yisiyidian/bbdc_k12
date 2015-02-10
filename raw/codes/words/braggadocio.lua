@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["braggadocio"]={"braggadocio","[,brægə'dəʊtʃɪəʊ]","[ ,bræɡə'dəutʃiəu ]","n.自夸",'n.自夸,吹牛大王','He was disliked because his manner was always full of braggadocio.','人们讨厌他，因为他老是吹牛。','He is a braggadocio','他是一个吹牛大王'}

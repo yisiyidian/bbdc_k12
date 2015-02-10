@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grotesque"]={"grotesque","[grə(ʊ)'tesk]","[gro'tɛsk]","n.怪异图案",'n.怪异图案|||adj.奇怪的,可笑的','His grotesque garment got the interviewer greatly impressed.','他怪诞的服装给面试官留下了很深的印象。','They tried to avoid looking at his grotesque face and his crippled body.','他们尽量不去看他那丑陋的面庞和残疾的身躯。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resigned"]={"resigned","[rɪ'zaɪnd]","[rɪ'zaɪnd]","adj.认命的",'adj.认命的,顺从的,听任的|||动词resign的过去式和过去分词','Mary was already resigned to losing her home.','玛丽已经无奈地接受了失去家园的事实。','He is resigned to the noise and mess.','他勉强接受了这里的喧嚣和脏乱。'}

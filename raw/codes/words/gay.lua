@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gay"]={"gay","[geɪ]","[ɡe]","n.同性恋",'adj.欢快的,色彩鲜艳的,同性恋的|||n.同性恋','The street look gay with bright flag and coloured light.','街上旗帜鲜艳、彩灯缤纷，显出一派欢乐景象。','He looked happy, even gay.','他看起来很高兴，甚至可以说欢欣雀跃。'}

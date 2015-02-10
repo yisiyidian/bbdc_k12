@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["omit"]={"omit","[ə(ʊ)'mɪt]","[ə'mɪt]","vt.省略",'vt.省略,疏忽,遗漏','Don\'t omit locking the door.','别忘了锁门。','He omitted to state his reasons.','他未叙述自己的理由。'}

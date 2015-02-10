@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["headmaster"]={"headmaster","[hed'mɑːstə]","[,hɛd'mæstɚ]","n.(中小学的)校长",'n.(中小学的)校长','The headmaster gave the boys a scolding.','校长训斥了那些男生.','The headmaster praised the boys for their neat turn-out.','校长表扬男同学服装整齐.'}

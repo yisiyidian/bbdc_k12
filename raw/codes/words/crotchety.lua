@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crotchety"]={"crotchety","['krɒtʃɪtɪ]","['krɑtʃəti]","adj.思想奇怪的",'adj.思想奇怪的','He is a crotchety old man.','他是个脾气暴躁的老头。','His crotchety, even cruel behavior must be mischaracterized too.','他反复无常、甚至是残酷的行为一定也是由于复杂的性格原因。'}

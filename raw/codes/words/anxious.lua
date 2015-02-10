@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anxious"]={"anxious","['æŋ(k)ʃəs]","['æŋkʃəs]","adj.焦急的",'adj.焦急的,忧虑的','She was anxious to enlighten me about the events that led up to the dispute.','她急着要使我明白引起这场争执的那些事情。','The moderates have plenty to be anxious about.','温和派有许多问题要担忧。'}

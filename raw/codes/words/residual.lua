@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["residual"]={"residual","[rɪ'zɪdjʊəl]","[rɪ'zɪdʒuəl]","adj.残余的",'adj.残余的,剩余的|||n.剩余部分,(复)追加酬金','There are still a few residual problems with the computer program.','电脑程序还有一些残留问题。','The debate over the residual powers of the States has been long drawn out.','有关美国剩余的权力的争论已是旷日持久的了。'}

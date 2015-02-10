@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["footprint"]={"footprint","['fʊtprɪnt]","['fʊtprɪnt]","n.脚印",'n.脚印','The footprint of a microcomputer; the footprint of a communications satellite.','微型电子计算机的覆盖区; 通信卫星的覆盖区','A visible mark, such as a footprint, made or left by the passage of a person, an animal, or a thing.','痕迹因人、动物或物体通过造成或留下的一可见记号, 如脚印'}

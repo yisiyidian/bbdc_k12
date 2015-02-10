@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["young"]={"young","[jʌŋ]","[jʌŋ]","adj.年轻的",'adj.年轻的,没有经验的,初期的|||n.青年人,幼崽','The young look is in fashion this year.','今年时兴扮年轻人的样子.','The hen may not be able to feed its young.','这只母鸡也许不能喂它的幼雏。'}

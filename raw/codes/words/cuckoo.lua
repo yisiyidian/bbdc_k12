@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cuckoo"]={"cuckoo","['kʊkuː]","['kʊku]","n.杜鹃",'n.杜鹃,布谷鸟，咕咕声|||n.傻子，疯子|||vt.发出咕咕声|||adj.愚蠢的,疯狂的','The cuckoo lays its eggs in other birds\' nests.','杜鹃在别的鸟巢中产卵.','In England the cuckoo is the herald of spring.','在英国杜鹃鸟是报春的使者。'}

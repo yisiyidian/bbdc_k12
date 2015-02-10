@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cash"]={"cash","[kæʃ]","[kæʃ]","n.现金",'n.现金|||vt.兑现,付现款|||adj.现金的','How much cash has been allotted?','拨给多少现款?','We give 10 percent discount for cash.','现金付款，我们九折优惠。'}

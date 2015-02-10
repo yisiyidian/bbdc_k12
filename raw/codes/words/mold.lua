@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mold"]={"mold","[məʊld]","[mold]","n.模子",'n.模子,模型,类型,模式,雏型,真菌,软土|||vt.形成,形成,制模,发霉|||vi.符合形状,发霉','Melted metal is poured into a mold to harden into shape.','熔化之金属倒入模子中以冷却成形.','If the mold spray is sticky, reduce the silicate.','如果脱模剂发粘, 则减少硅酸盐.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ardent"]={"ardent","['ɑːd(ə)nt]","['ɑrdnt]","adj.热心的",'adj.热心的,激烈的,热情的','||Ardent|| expectations were held by his parents for his college career.','他父母对他的大学学习抱着殷切的期望。','I believed her young, ardent, reckless.','我相信她年青，热情，不顾一切。'}

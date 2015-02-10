@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mesh"]={"mesh","[meʃ]","[mɛʃ]","n.网孔",'n.网孔,网丝,陷阱|||vt.以网捕捉，啮合，匹配|||vi.适合|||[计算机]网络','Our future plans must mesh with existing practices.','我们未来的计画必须与当前的实践相合。','The fish tangled in the mesh of the net has died.','那条卡在网眼上的鱼已经死了。'}

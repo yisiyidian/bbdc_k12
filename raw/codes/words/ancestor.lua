@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ancestor"]={"ancestor","['ænsestə]","['ænsɛstɚ]","n.祖先",'n.祖宗,祖先,原种','He is sprung from noble ancestors.','他出身名门。','The direct ancestor of the modern cat was the Kaffir cat of ancient Egypt.','现代猫的直系物种原型是古代埃及的卡菲尔猫。'}

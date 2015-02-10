@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["embellishment"]={"embellishment","[ɪm'belɪʃmənt]","[ɪm'bɛlɪʃmənt]","n.装饰",'n.装饰,润色,修饰','It does not require layers upon layers of embellishment.','并不需要有那层层的修饰。','||Embellishment|| and fluff are not necessary','华丽的润色是完全没有必要的'}

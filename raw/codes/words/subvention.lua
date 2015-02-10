@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subvention"]={"subvention","[səb'venʃ(ə)n]","[səb'vɛnʃən]","n.补助金",'n.补助金,津贴','The committee receives an annual subvention from  the foundation to run the museum.','委员会从基金会那里拿到一笔年度补助，用于运营博物馆','a $26 billion annual subvention to the farmers','给农民的260亿美元津贴'}

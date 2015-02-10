@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aphorism"]={"aphorism","['æfərɪz(ə)m]","['æfərɪzəm]","n.格言",'n.格言,警语','An aphorism is a short witty sentence which expresses a general truth or comment.','警言是指传达一般真理或某种言论的短小句子。','Probably the aphorism that there is no easy answer to what is very complex is true.','常言道,复杂的问题无简易的答案,这话大概是真的。'}

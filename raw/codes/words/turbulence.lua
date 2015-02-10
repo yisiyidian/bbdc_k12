@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["turbulence"]={"turbulence","['tɜːbjʊl(ə)ns]","['tɝbjələns]","n.动荡",'n.动荡|||n.喧嚣,狂暴,骚乱,湍流','The turbulence in his life has come from accidents and illness.','他一生中的动荡来自意外事故和疾病。','The world situation is characterized by turbulence and intranquility.','世界局势动荡不安。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spoke"]={"spoke","[spəʊk]","[spok]","v.说",'v.说,说话,演说','He spoke with disapproval of your proposal.','他对你的建议很不以为然。','He spoke scarcely a word of English.','他几乎连一个英文单词都不会说。'}

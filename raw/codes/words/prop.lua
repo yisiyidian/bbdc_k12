@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prop"]={"prop","[prɒp]","[prɑp]","n.支柱",'n.支柱,支持者,倚靠人|||v.支撑,维持','The roof of the tunnel was supported by wooden props.','坑道顶用木柱支撑。','He propped his bicycle up against the fence.','他把脚踏车靠在篱笆上。'}

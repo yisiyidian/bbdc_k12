@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["homily"]={"homily","['hɒmɪlɪ]","[ 'hɔmili ]","n.说教",'n.说教,训诫','He launched into a homily on family relationships.','他开始就家庭关系进行说教。','She delivered a homily on the virtues of family life.','她进行了一场家庭生活美德方面的说教。'}

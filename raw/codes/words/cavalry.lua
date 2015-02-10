@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cavalry"]={"cavalry","['kæv(ə)lrɪ]","['kævlri]","n.骑兵",'n.骑兵','The cavalry commander predicted that many Sioux would bite the dust if they attacked the fort.','骑兵指挥官预言，如果苏人要进攻要塞，他们中很多人会被打死。','His son is a soldier in a cavalry regiment.','他的儿子是骑兵团的一名战士。'}

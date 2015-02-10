@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["waft"]={"waft","[wɒft; wɑːft]","[wɑft]","v.飘浮",'v.飘浮,飘荡|||vi.飘送|||vt.使飘荡,使漂浮','The music from the party wafts out to the terrace.','晚会的音乐飘到了外面的露台上。','A sudden gust of wind wafted the papers off her desk.','一阵突然刮来的风把她桌上的文件吹落到地上。'}

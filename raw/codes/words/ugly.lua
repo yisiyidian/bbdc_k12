@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ugly"]={"ugly","['ʌglɪ]","['ʌɡli]","adj.丑陋的",'adj.丑陋的,难看的','an ugly little hat','一顶丑陋的小帽子','Public opinion in both nations could take an ugly turn','两个国家的公众意见都有可能会转而造成麻烦'}

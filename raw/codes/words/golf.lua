@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["golf"]={"golf","[gɒlf]","[gɔlf]","n.高尔夫球",'n.高尔夫球|||v.打高尔夫球|||vi.(打)高尔夫球','The golf course is behind our house.','高尔夫球场在我们房屋的後面.','I have a special liking for golf.','我特别喜欢高尔夫球运动。'}

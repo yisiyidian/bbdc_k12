@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["squash"]={"squash","[skwɒʃ]","[skwɔʃ]","n.壁球",'n.壁球,摺皱不堪,拥挤嘈杂的人群,浓缩果汁,美国南瓜|||vt.压扁,压制|||vi.变扁,压榨','It\'ll be a bit of a squash, but I think I can get you all in the car.','挤是挤一点，但我看可以把你们全弄上汽车。','The cat got run over by the lorry and squashed.','那只猫被卡车碾死了。'}

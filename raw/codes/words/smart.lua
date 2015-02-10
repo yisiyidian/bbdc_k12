@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["smart"]={"smart","[smɑːt]","[smɑrt]","adj.聪明的",'adj.聪明的,时髦的,漂亮的,敏捷的,轻快的,整洁的vi.刺痛,难过,烦恼n.刺痛,苦恼adv.轻快地,,机灵地,整齐地,漂亮地;v.感到剧烈刺痛，（因批评、失败等）难过，烦恼','This boy is very smart; he may be another Edison.','这男孩很聪明，他可能成为另一个爱迪生。','The smart of his wound kept him awake.','伤痛使他无法入睡。'}

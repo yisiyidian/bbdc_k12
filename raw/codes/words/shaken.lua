@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shaken"]={"shaken","['ʃeɪkən]","['ʃekən]","shake的过去分词",'shake的过去分词','Such a block would have shaken the wall of a fortress, but it made no impression on the monster.','这一击也许能震撼城堡的围墙, 但落到那蛇身上, 却没有什么作用。','The market is shaken by the company\'s result.','该公司的获胜震惊了市场。'}

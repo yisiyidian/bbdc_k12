@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["locust"]={"locust","['ləʊkəst]","['lokəst]","n.蝗虫",'n.蝗虫|||n.洋槐，刺槐','||Locust|| had stripped the leaves off the trees.','蝗虫把树上的叶子都吃光了。','A locust is a kind of destructive insect.','蝗虫是一种害虫。'}

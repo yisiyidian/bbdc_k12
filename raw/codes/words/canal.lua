@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["canal"]={"canal","[kə'næl]","[kə'næl]","n.运河",'n.运河,沟渠,气管,食管|||vt.建运河,疏导','They dragged the canal for the missing child.','他们用拖网沿运河打捞失踪孩子的尸体.','The canal is now open to shipping.','该运河现已通航.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["windmill"]={"windmill","['wɪn(d)mɪl]","['wɪnd'mɪl]","n.风车",'n.风车|||v.(使）像风车一样旋转','We can see a windmill in the distance.','我们可以望见远处有架风车。','The sails of the windmill were wheeling round.','风车的叶轮正在旋转。'}

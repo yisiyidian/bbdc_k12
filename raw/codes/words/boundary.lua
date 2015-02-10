@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["boundary"]={"boundary","['baʊnd(ə)rɪ]","['baʊndri]","n.边界",'n.分界线,边界','The lane is the boundary of our land.','那条小路就是我们这片地的界线.','The ball rolled to the boundary.','球向著边线滚去.'}

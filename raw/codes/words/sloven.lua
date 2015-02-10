@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sloven"]={"sloven","['slʌv(ə)n]","['slʌvn]","n.不修边幅者",'n.不修边幅者|||adj.疏忽的,不整洁的','really cannot bear the sight of that sloven woman.','我连看也不想看那个邋遢的女人。','||Sloven|| is a coarse obnoxious person','不修边幅者是一个粗俗、讨厌的人'}

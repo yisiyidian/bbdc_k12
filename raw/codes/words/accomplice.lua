@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["accomplice"]={"accomplice","[ə'kʌmplɪs; ə'kɒm-]","[ə'kɑmplɪs]","n.共犯",'n.共犯,同谋，帮凶','An accomplice or a lackey who aids in the commission of base or disreputable acts.','同谋，同伙共犯或帮凶，其帮助实施无耻或下流的行为','The police arrested him and his two accomplices.','警察逮捕了他和他的两个同谋。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["owl"]={"owl","[aʊl]","[aʊl]","n.猫头鹰",'n.猫头鹰','Don\'t be such a silly owl.','别做那样的傻事。','The hooting of an owl broke the silence now and again, giving Linda the creeps.','猫头鹰的叫声不时打破寂静，使琳达心惊肉跳。'}

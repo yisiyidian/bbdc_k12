@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["modesty"]={"modesty","['mɒdɪstɪ]","['mɑdəsti]","n.谦逊",'n.谦逊，虚心，端庄，朴实，中肯','||Modesty|| is not his long suit.','谦虚可不是他的长处.','Her modesty is all put on.','她的谦虚全是假装的。'}

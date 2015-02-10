@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cactus"]={"cactus","['kæktəs]","['kæktəs]","n.仙人掌",'n.仙人掌','a cactus that radiates spines','长满尖刺的仙人掌','||Cacti|| live in dry regions.','仙人掌生长在干旱地区。'}

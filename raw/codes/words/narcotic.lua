@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["narcotic"]={"narcotic","[nɑː'kɒtɪk]","[nɑr'kɑtɪk]","n.麻醉药",'n.麻醉药,镇静剂|||adj.麻醉的,催眠的','stupor induced by a narcotic','麻醉性昏睡麻醉药引起的昏迷状态','I felt comfortable on narcotic effect.','在麻醉剂的作用下我感到舒服些。'}

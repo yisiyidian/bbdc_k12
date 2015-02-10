@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flunk"]={"flunk","[flʌŋk]","[flʌŋk]","n.失败",'n.失败,不及格|||v.（使）失败,（使）考试不及格','Several students have been flunked out.','有几名学生因考试不及格而被迫退学。','No less than ten students flunked the exam.','整整有十位学生在这次考试中不及格。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fake"]={"fake","[feɪk]","[fek]","vt.伪造",'n.假货,欺骗,骗子|||adj.假的|||vt.伪造,伪装|||vi.假造','On closer examination the painting was proved to be a fake.','再经仔细观察，证实那幅画是膺品。','He faked his father\'s signature.','他伪造父亲的签字.'}

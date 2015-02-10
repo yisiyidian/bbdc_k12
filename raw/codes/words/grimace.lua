@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["grimace"]={"grimace","['grɪməs; grɪ'meɪs]","[ɡrɪ'mes]","n.面部的歪扭",'n.面部的歪扭,鬼脸,痛苦的表情|||vi.扮鬼脸,作苦相','She started to sit up, grimaced, and sank back weakly against the pillow.','她坐了起来，露出痛苦的表情，又有气无力地倒在枕头上。','The clown grimace at the children.','小丑向孩子们做鬼脸。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["apology"]={"apology","[ə'pɒlədʒɪ]","[ə'pɑlədʒi]","n.道歉",'n.道歉；勉强的替代物','I demand an apology.','我要求道歉。','He made a contrite apology.','他深表懊悔地致歉。'}

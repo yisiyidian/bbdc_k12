@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["extort"]={"extort","[ɪk'stɔːt; ek-]","[ɪk'stɔrt]","vt.勒索",'vt.勒索,敲诈,强要','Corrupt government officials were extorting money from him.','腐败的政府官员向他敲诈钱财。','The kidnappers were able to extort three million dollars from the company president.','绑匪向公司董事长勒索了三百万元。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ignite"]={"ignite","[ɪg'naɪt]","[ɪɡ'naɪt]","vi.着火",'vi.着火,发光|||vt.点燃,使...燃烧,引发','A lighted cigarette can ignite a big forest fire.','一根点燃的香烟就可以引起森林大火。','The bombs ignited a fire which destroyed some 60 houses.','炸弹引起了一场火灾，烧毁了大约六十间房屋。'}

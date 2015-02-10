@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["secretion"]={"secretion","[sɪ'kriːʃ(ə)n]","[sɪ'kriʃən]","n.分泌",'n.分泌,分泌物、|||n.藏匿','Saliva is secretion of the salivary glands.','唾液是唾液腺的分泌物。','The secretion of bile is useful for our bodies.','胆汁的分泌对我们的身体很有用处。'}

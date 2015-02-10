@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exchange"]={"exchange","[ɪks'tʃeɪndʒ; eks-]","[ɪks'tʃendʒ]","vt.&vi.交换",'n.交换,交换物,汇兑,交易所|||vt.&vi.交换,交易,兑换','We exchanged our opinions about the event at the meeting.','在会上，我们就此事交换了意见。','He gave me an apple in exchange of an orange.','他给我一个苹果，交换一个橙子。'}

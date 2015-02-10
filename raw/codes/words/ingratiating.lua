@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ingratiating"]={"ingratiating","[ɪn'ɡreʃɪetɪŋ]","[ in'ɡreiʃieitiŋ ]","adj.逢迎的",'adj.逢迎的,迷人的','Artfully contrived to gain favor or confidence; ingratiating.','谄媚的巧妙地设法取得好感或信任的；讨好的','Reading requires an effort. Print is not as ingratiating as television','“阅读是要费劲的。印刷品终究不如电视那么讨人喜欢。”'}

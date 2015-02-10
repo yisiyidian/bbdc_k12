@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gentleman"]={"gentleman","['dʒent(ə)lmən]","['dʒɛntlmən]","n.绅士",'n.绅士,先生，有教养的人','As a rule, it\'s the gentleman that holds out his hand to invite a lady to dance.','通常, 是男士伸出手来邀请女士跳舞。','Politeness is an attribute of a gentleman.','彬彬有礼是绅士的本色。'}

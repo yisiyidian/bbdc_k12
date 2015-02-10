@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shudder"]={"shudder","['ʃʌdə]","['ʃʌdɚ]","vi.战悚",'vi.战悚,发抖|||n.战栗,震颤','He shuddered with cold.','他冷得发抖。','She shuddered at the sight of the dead body.','她一看到死尸就战栗起来。'}

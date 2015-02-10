@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sage"]={"sage","[seɪdʒ]","[sedʒ]","n.圣人",'n.圣人,哲人|||adj.贤明的,明智的','||Sage||, mint and dill are all herbs.','鼠尾草、 薄荷、 莳萝均为药草。','I was grateful for the old man\'s sage advice.','我很感激那位老人贤明的忠告。'}

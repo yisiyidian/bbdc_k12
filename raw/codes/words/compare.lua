@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["compare"]={"compare","[kəm'peə]","[kəm'pɛr]","vt.&vi.比较",'vt.&vi.比较,比喻,对照|||n.比较，对照','Life is poetically compared to the morning dew.','在诗歌中，人生被比喻为朝露。','She is lovely beyond compare.','她真是可爱得无与伦比。'}

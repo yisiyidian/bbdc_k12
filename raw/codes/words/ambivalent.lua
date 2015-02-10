@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ambivalent"]={"ambivalent","[æm'bɪv(ə)l(ə)nt]","[æm'bɪvələnt]","adj.(对同一人或物)有矛盾看法的",'adj.(对同一人或物)有矛盾看法的,或矛盾感情的,矛盾心理的，矛盾情绪的','she felt ambivalent about his proposal; an ambivalent position on rent control','她对他的建议感觉很矛盾；对出租管制的矛盾立场','She remained ambivalent about her marriage.','她对她的婚姻保持暧昧的态度。'}

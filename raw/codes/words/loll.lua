@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["loll"]={"loll","[lɒl]","[lɑl]","v.懒洋洋地呆着、坐着或站着（常指倚着某物）",'v.懒洋洋地呆着、坐着或站着（常指倚着某物），松散地悬挂，允许松散地悬挂或垂','Tongue lolling, the dog came lolloping back from the forest.','那只狗伸着舌头从树林里蹒跚地跑回来。','He lolled back in his comfortable chair.','他懒洋洋地靠在舒适的椅子上。'}

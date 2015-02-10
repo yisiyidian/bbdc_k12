@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lithograph"]={"lithograph","['lɪθəgrɑːf; 'laɪ-]","['lɪθəɡræf]","n.石版画",'n.石版画','Cole printed 1,000 of the cards on a lithograph stone before having them hand - colored.','科尔随即用石版印刷了1000张,之后又让人给这些卡手工着色.','||Lithograph|| was introduced from China to Europe.','印刷术是从中国传入欧洲的。'}

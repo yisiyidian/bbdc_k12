@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enclosure"]={"enclosure","[ɪn'kləʊʒə; en-]","[ɪn'kloʒɚ]","n.附件",'n.附件,围墙,围绕','There are several enclosures in the envelope.','信封内装有几份附件。','They are opposed to the enclosure of common land.','他们反对把公地圈为私有。'}

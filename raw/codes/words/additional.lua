@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["additional"]={"additional","[ə'dɪʃ(ə)n(ə)l]","[ə'dɪʃənl]","adj.附加的",'adj.附加的,另外的','The scenery does not fill the space properly, we should set ton an additional piece here.','这个布景没有很好地占据空间，我们应在这儿增设一个。','||Additional|| material is overprinted in red.','附加材料是用红色加印上的.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["phone"]={"phone","[fəʊn]","[fon]","n.电话",'n.音位,电话,耳机|||vt.&vi.打电话','He phoned to say he couldn\'t come.','他打电话来说，他不能来了。','What\'s your phone number?','你的电话号码是多少？'}

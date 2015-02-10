@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["industrialize"]={"industrialize","[ɪn'dʌstrɪəlaɪz]","[ in'dʌtriəlaiz ]","v.(使)工业化",'v.(使)工业化|||=industrialise(英)','Many townships in the coastal area have begin to industrialize.','沿海地区的许多乡镇已开始工业化。','They wanted to industrialize their nation.','他们想使国家工业化。'}

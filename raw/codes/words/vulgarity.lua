@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vulgarity"]={"vulgarity","[vʌl'gærɪtɪ]","[vʌl'ɡærəti]","n.粗俗",'n.粗俗,粗鄙,卑俗性','Fashion is gentility running away from vulgarity, and afraid of being overtake.','时髦，是逃亡自庸俗而又惟恐被？上的假斯文。','Culture or civilization in a degraded state of sentimentality and vulgarity.','庸俗文化处于感伤和粗俗的退化状态的文化或文明'}

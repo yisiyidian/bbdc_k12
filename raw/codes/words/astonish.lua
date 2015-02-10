@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["astonish"]={"astonish","[ə'stɒnɪʃ]","[ə'stɑnɪʃ]","v.使...惊讶",'v.使...惊讶','She astonished me with her beautiful handwriting.','她以其秀丽的书法而使我惊异。','I was astonished at the news of his escape.','听到他逃之夭夭的消息，我感到惊讶。'}

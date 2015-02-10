@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["horticultural"]={"horticultural","[,hɔːtɪ'kʌltʃərəl]","[,hɔrtɪ'kʌltʃərəl]","adj.园艺的",'adj.园艺的','The scientists suggest that horticultural science could improve the crops.','科学家认为，园艺学可能改善这些作物。','horticultural soil','园艺土壤'}

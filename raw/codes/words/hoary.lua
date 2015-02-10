@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hoary"]={"hoary","['hɔːrɪ]","['hɔri]","adj.灰白的(古老的)",'adj.灰白的(古老的)','The old man has hoary hair.','那位老人头发花白。','They discussed the hoary old problem.','他们讨论老问题。'}

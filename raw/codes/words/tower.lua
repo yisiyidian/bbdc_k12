@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tower"]={"tower","['taʊə]","['taʊɚ]","n.塔",'n.塔,高楼,堡垒|||vi.屹立,超越','The TV tower is by far the largest construction of our country.','电视塔明显地是我国最大的建筑。','The tower was blown to atoms by the force of the explosion.','爆炸的力量把塔炸得粉碎。'}

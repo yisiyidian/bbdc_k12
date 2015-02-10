@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rabid"]={"rabid","['ræbɪd; 'reɪ-]","[ 'ræbid ]","adj.猛烈的",'adj.猛烈的,热烈的,急进的|||adj.患狂犬病的','A rabid dog bit him.','他被一只疯狗咬了。','He is a rabid football fan.','他是一个狂热的足球迷。'}

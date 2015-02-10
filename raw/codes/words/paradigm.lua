@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["paradigm"]={"paradigm","['pærədaɪm]","['pærə'daɪm]","n.例子",'n.例子,模范,词形变化表','He had become the paradigm of the successful man.','他已经成为成功人士的典范。','This episode may serve as a paradigm.','这一插曲可以当作典范。'}

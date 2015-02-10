@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["athlete"]={"athlete","['æθliːt]","['æθlit]","n.运动员",'n.运动员','This athlete has a powerful frame.','这位运动员有着魁梧的体格。','We are undoubted her talent as an athlete.','我们从不置疑她作为一个运动员的天赋。'}

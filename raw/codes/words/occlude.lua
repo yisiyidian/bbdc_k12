@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["occlude"]={"occlude","[ə'kluːd]","[ə'klud]","v.使闭塞",'v.使闭塞,封闭,(牙齿)咬合','The police occluded all the passages in case the suspects may escape.','警察封住了所有通道，以防止犯罪嫌疑人逃跑。','The tourniquet should occlude venous and lymphatic return.','止血带应阻断静脉及淋巴回流。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fluorescent"]={"fluorescent","[flʊə'res(ə)nt; flɔː-]","[,flɔ'rɛsnt]","n.日光灯",'n.日光灯|||adj.萤光的','You\'re the one who wears the fluorescent orge watch cap when you run, correct?','你跑步的时候戴着桔色荧光帽对不对?','This shop sells fluorescent paint.','这家商店出售荧光漆.'}

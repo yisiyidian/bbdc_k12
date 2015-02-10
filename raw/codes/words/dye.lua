@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dye"]={"dye","[daɪ]","[daɪ]","n.染料",'n.染料,染色|||vt.染|||vi.染色','They used only natural pigments to dye the wool.','他们只用天然颜料染毛织品。','The dye works its way in.','染料渗透进去了。'}

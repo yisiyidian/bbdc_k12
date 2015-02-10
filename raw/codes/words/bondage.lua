@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bondage"]={"bondage","['bɒndɪdʒ]","['bɑndɪdʒ]","n.奴役",'n.奴役,束缚','He is in bondage to passion.','他成为情欲的奴隶。','Held in bondage; enslaved.','被束缚的受奴役的；被征服的'}

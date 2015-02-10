@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["felon"]={"felon","['felən]","['fɛlən]","n.重罪人",'n.重罪人,蛇头仃,标疽','That felon tried to escape from the prison.','那名重罪犯试图从监狱中逃跑。','He was convicted to be a felon.','他是个已定罪的重犯。'}

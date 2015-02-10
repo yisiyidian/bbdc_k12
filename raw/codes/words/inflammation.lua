@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inflammation"]={"inflammation","[ɪnflə'meɪʃ(ə)n]","['ɪnflə'meʃən]","n.发炎",'n.发炎,红肿,炎症','The discharge that is characteristic of this inflammation.','粘膜液体排出物具有这种炎症特征的排出物','I\'ve got an inflammation of lymph.','我的淋巴发炎了。'}

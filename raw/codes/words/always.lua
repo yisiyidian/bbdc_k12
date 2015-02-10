@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["always"]={"always","['ɔːlweɪz; -ɪz]","['ɔlwez]","adv.总是",'adv.总是','I\'m always at home in the evenings.','晚上我总是在家里。','We should always help each other.','我们应始终互相帮助。'}

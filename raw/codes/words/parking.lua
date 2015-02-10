@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["parking"]={"parking","['pɑːkɪŋ]","['pɑrkɪŋ]","n.停车",'n.停车|||adj.停车的|||vbl.停车','We encouraged the Smiths before leaving the parking lot.','在离开停车场之前, 我们鼓励了史密斯一家。','I must have scraped some of the paint off when I was parking the car.','我准是停放汽车的时候刮掉了一些油漆。'}

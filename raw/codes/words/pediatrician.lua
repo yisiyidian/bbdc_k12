@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pediatrician"]={"pediatrician","[,pidɪə'trɪʃən]","[ ,pi:diə'triʃən ]","n.小儿科医师",'n.小儿科医师,','The best course of action is to speak with your child\'s pediatrician.','最好是和您孩子的儿科医生沟通一下。','When the baby developed a fever, mother telephoned the pediatrician.','当婴儿发烧时，母亲会打电话给儿科医生。'}

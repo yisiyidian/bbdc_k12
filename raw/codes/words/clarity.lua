@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clarity"]={"clarity","['klærɪtɪ]","['klærəti]","n.清楚",'n.清楚,透明','the clarity of the mountain air.','山区空气的明净','Something that suggests such a representation, as in clarity of representation.','类似地图的事物能显示这种图示的东西，如在图像明晰程度等方面能显示'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["voluptuous"]={"voluptuous","[və'lʌptʃʊəs]","[və'lʌptʃuəs]","adj.激起性欲的",'adj.激起性欲的,沉溺酒色的，撩人的','She was a voluptuous creature with blonde hair.','她是个性感十足的金发尤物。','The nobility led voluptuous lives.','贵族阶层过着骄奢淫逸的生活。'}

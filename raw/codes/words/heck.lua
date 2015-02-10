@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heck"]={"heck","[hek]","[hɛk]","int.[口]（委婉语）见鬼",'int.[口]（hell的委婉语）见鬼|||n.[俚]用以加强语气','My Black raise heck when he saw the dented fender. He endlessly blamed the other drivers.','布莱克先生看见那被撞坏的挡泥板吟就大吵大闹起来, 没完没了地责备其他司机。','How in the heck did you do that?','你究竟是怎么做的？'}

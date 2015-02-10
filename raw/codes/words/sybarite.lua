@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sybarite"]={"sybarite","['sɪbə,raɪt]","[ 'sibərait ]","(C)(文语)沉于奢侈逸乐者",'(C)(文语)沉于奢侈逸乐者,爱奢侈享乐的人','Not all the rich people are sybarites.','不是所有的富人都是奢靡之徒。','Not all the rich people are sybarites.','爱享乐的人'}

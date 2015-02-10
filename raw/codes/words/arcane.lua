@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arcane"]={"arcane","[ɑː'keɪn]","[ɑr'ken]","adj.神秘的",'adj.神秘的,秘密的','The technique at one time was arcane in the minds of most chemists.','这种技术在大多数化学家心目中一度是神秘的。','Until a few months ago few people outside the arcane world of contemporary music had heard of Gorecki.','直至几个月前，在现代音乐神秘殿堂之外很少有人听说了戈莱斯基。'}

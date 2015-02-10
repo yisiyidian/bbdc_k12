@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dingo"]={"dingo","['dɪŋgəʊ]","['dɪŋɡo]","n.澳洲的一种野狗",'n.澳洲的一种野狗','His mother senses a nearby predator, but it\'s not the dingo.','它的妈妈感觉到附近有捕食者，但不是野狗。','Neither one sees the dingo approaching through the brush.','它们都没有看到野狗穿过灌木正在接近。'}

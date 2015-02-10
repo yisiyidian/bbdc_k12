@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["amaze"]={"amaze","[ə'meɪz]","[ə'mez]","v.使吃惊",'v.使吃惊','This campaign strikes amaze into men.','这一次战役使人震骇。','He amazed me by his audacity.','他的无理让我惊骇。'}

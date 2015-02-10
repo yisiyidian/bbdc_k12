@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shopping"]={"shopping","['ʃɒpɪŋ]","['ʃɑpɪŋ]","n.购物",'n.购物，买东西|||动词shop的现在分词形式','I was just about to go shopping when the telephone rang.','电话铃响时我正要去买东西。','I was worn out after a day of shopping.','逛了一天商店, 我都累坏了。'}

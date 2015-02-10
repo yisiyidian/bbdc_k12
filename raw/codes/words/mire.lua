@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mire"]={"mire","[maɪə]","['maɪɚ]","n.泥沼",'n.泥沼,泥泞|||v.使...陷于泥泞,使...陷入困境','He found he was stuck fast in the mire of debts.','他发现自己债台高筑。','I don\'t want my son\'s good name dragged through the mire.','我不想使我儿子的名誉扫地。'}

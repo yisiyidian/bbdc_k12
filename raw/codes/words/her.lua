@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["her"]={"her","[hɜː]","[hɚ]","pron.她的",'pron.她的|||adj.她的|||abbr.=heraldry','They gave her a round of applause.','他们给她一阵掌声','That\'s her book.','那是她的书。'}

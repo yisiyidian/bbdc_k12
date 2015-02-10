@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quadruple"]={"quadruple","['kwɒdrʊp(ə)l; kwɒ'druːp(ə)l]","[kwɑ'drupl]","v.(使)成四倍",'adv.&adj.四倍的(地)|||n.(使)乘四倍|||v.(使)成四倍','Their profits have quadrupled/They have quadrupled their profits in ten years.','他们的利润十年中增长至四倍[他们使利润在十年中增长至四倍].','quadrupled the order; quadrupled in size.','定单的四倍；原尺寸的四倍'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pale"]={"pale","[peɪl]","[pel]","adj.苍白的",'n.尖木桩,栅栏,界限|||adj.苍白的,暗淡的,弱的,浅色的|||vi.变得苍白,变得暗淡|||vt.使苍白','All other anxieties paled into insignificance besides the possibility of war.','和可能打仗相比，所有其他忧虑都变得微不足道了。','She paled with shock at the news.','她听到那消息大惊失色。'}

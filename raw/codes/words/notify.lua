@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["notify"]={"notify","['nəʊtɪfaɪ]","['notə'fai]","v.通知",'v.通知,通告,报告','Please notify us of any change of address.','地址如有变动，请通知我们。','She ||notified|| us of the meeting.','她通知我们开会。'}

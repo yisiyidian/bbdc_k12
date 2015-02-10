@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sarcastic"]={"sarcastic","[sɑː'kæstɪk]","[sɑr'kæstɪk]","adj.讽刺的",'adj.讽刺的','I\'m sick of your sarcastic remarks just chuck it (ie stop making them), will you?','我已经听腻了你的冷嘲热讽--别说了, 行吗?','I could see from her expression that his sarcastic comments had hit home.','从她的表情中我可以看出他那些挖苦人的话已经触及她的痛处.'}

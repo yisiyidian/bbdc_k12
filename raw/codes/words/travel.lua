@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["travel"]={"travel","['træv(ə)l]","['trævl]","n.旅行",'n.旅行,移动|||vi.旅行,传播,移动|||vt.横贯','He met many interesting people in his travels.','在旅行中他遇到了许多饶有风趣的人。','He has traveled widely.','他到过很多地方。'}

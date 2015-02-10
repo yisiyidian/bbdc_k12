@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["irresistible"]={"irresistible","[ɪrɪ'zɪstɪb(ə)l]","[,ɪrɪ'zɪstəbl]","adj.不可抵抗的",'adj.不可抵抗的,无法抗拒的','He felt an irresistible impulse to jump.','他突然有个无法抗拒的冲动, 想跳下去.','The toys in the shop\'s windows are irresistible to children.','商店橱窗里的玩具对孩子有不可抵抗的诱惑力。'}

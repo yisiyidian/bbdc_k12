@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["permission"]={"permission","[pə'mɪʃ(ə)n]","[pɚ'mɪʃən]","n.同意",'n.同意,许可,允许','You were wrong to take the car without permission.','你未得许可就把汽车开走是不应该的.','I resent having to get his permission for everything I do.','我讨厌做每件事都要得到他的许可。'}

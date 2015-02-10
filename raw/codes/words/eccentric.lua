@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eccentric"]={"eccentric","[ɪk'sentrɪk; ek-]","[ɪk'sɛntrɪk]","n.怪人",'n.怪人|||adj.古怪的,反常的','She is an eccentric old lady.','她是个古怪的老太太。','He is an eccentric character who likes wearing a beret and dark glasses.','他是个怪人，喜欢戴贝雷帽和墨镜。'}

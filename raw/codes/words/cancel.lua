@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cancel"]={"cancel","['kæns(ə)l]","['kænsl]","vt.取消",'n.取消,撤消|||vt.取消,删去,约分|||vi.抵消','If the worst comes to the worst, we\'ll have to cancel our holiday plans.','要是情况不妙, 我们就只好取消度假计划了.','The heavy workload forced me to cancel the camping trip.','繁重的工作量迫使我取消去露营。'}

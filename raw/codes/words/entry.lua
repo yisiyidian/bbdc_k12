@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["entry"]={"entry","['entrɪ]","['ɛntri]","n.进入",'n.进入,入口,登记,项目','This dictionary has over 30000 ||entries||.','这本字典有3 万多词条。','How many ||entries|| are there for the high jump?','报名参加跳高比赛的有多少人？'}

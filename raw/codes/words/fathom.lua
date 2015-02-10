@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fathom"]={"fathom","['fæð(ə)m]","['fæðəm]","n.测量深度",'n.测量深度,看穿,了解，英寻（=6英尺)|||vi.测量深度|||vt.彻底了解，测深','He dipped the stick into the water to fathom its depth.','他把棍子浸入水中，试探水的深度。','The ship sank in four fathoms.','该船沉在水下四英寻处。'}

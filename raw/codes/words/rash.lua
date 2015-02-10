@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rash"]={"rash","[ræʃ]","[ræʃ]","adj.轻率的",'adj.轻率的；鲁莽的；不顾后果的|||n.[皮肤]皮疹；突然大量出现的事物|||n.(Rash)人名；(英、以、阿拉伯)拉什','The heat brought him out in a rash.','因气温很高, 他浑身长了皮疹.','Scratching exacerbates a skin rash.','皮疹搔後会恶化.'}

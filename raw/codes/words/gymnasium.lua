@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gymnasium"]={"gymnasium","[dʒɪm'neɪzɪəm]","[dʒɪm'nezɪəm]","n.体育馆",'n.体育馆,健身房|||n.（德国等培养学生升入大学的）大学预科，高级中学|||(复数）gymnasia或gymnasiums','The game will be staged in the gymnasium.','竞赛将在体育馆举行.','The child somersaulted across the gymnasium.','那孩子翻著跟头从体育馆这头翻到那头.'}

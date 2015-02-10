@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oleaginous"]={"oleaginous","[,əʊlɪ'ædʒɪnəs]","[,olɪ'ædʒɪnəs]","adj.含油的",'adj.含油的,油腻的','oleaginous flattery.','谄媚的恭维','The office manager greeted the corporate bigwigs with an oleaginous welcome that should have embarrassed him.','老大向公司高层领导谄媚的打招呼，他节操早就全掉了'}

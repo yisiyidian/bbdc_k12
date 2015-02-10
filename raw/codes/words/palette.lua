@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["palette"]={"palette","['pælɪt]","['pælət]","n.调色板",'n.调色板,颜料','He picked his brushes and palette.','他拿起画笔和调色板。','Keep the color palette narrow and conservative.','不要用太多的颜色，并且用色要保守。'}

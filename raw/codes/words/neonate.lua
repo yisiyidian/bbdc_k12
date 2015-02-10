@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["neonate"]={"neonate","['niːə(ʊ)neɪt]","['nionet]","n.初生婴儿",'n.初生婴儿','neonate is a baby that has recently been born, especially within the last four weeks','（尤指出生时间在四周之内的）新生儿','neonate is a baby that has recently been born, especially within the last four weeks','（尤指出生时间在四周之内的）新生儿'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["refute"]={"refute","[rɪ'fjuːt]","[ri'fjʊt]","vt.驳斥",'vt.驳斥,反驳,证明','Nothing could refute her testimony that the driver was drunk.','她关于那个司机已经喝醉的证词无可辩驳。','As for the Flat Earth theory, I believe I could refute it.','至于地平学说，我相信我能驳斥它。'}

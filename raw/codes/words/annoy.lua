@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["annoy"]={"annoy","[ə'nɒɪ]","[ə'nɔɪ]","vt.&vi.使...苦恼",'vt.&vi.使...苦恼,骚扰,使生气','We can annoy the enemy by raids.','我们可用袭击骚扰敌人。','A fly kept annoying me.','一只苍蝇老在打搅我。'}

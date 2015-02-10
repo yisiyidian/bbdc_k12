@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["share"]={"share","[ʃeə]","[ʃɛr]","vt.分享",'n.部份,股份,分担,犁头|||vt.分享,共有,分配|||vi.分享','If you want a share of the pay, you\'ll have to do your fair share of the work.','要是你想得到一份报酬，你就必须做好你该分担的那一份工作。','Let me go shares with you in the taxi fare.','我和你分摊计程车费吧。'}

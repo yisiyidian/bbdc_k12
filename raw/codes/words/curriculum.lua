@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["curriculum"]={"curriculum","[kə'rɪkjʊləm]","[kə'rɪkjələm]","n.课程",'n.课程，全部课程','Our curriculum comprises Politics, Chinese, English and History.','我们的课程共有四门：政治、汉语、英语、历史。','Structure a curriculum; structure one\'s day.','安排课程；对一天进行安排'}

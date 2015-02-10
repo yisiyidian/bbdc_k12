@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["leeward"]={"leeward","['liːwəd; 'luːəd]","['liwɚd]","adj.背风的",'adj.背风的，下风的|||n.背风处','The drift of a ship or an aircraft to leeward of the course being steered.','偏航，漂移船只或航空器航行过程中向背风面而作的漂移','At, on, or to the leeward side.','下风处在下风处或向下风向地'}

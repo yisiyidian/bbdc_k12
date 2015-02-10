@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["savant"]={"savant","['sævənt]","[sæ'vɑnt]","n.学者",'n.学者，专家','You need a savant to solve this kind of problem.','你需要个专家来解决问题。','||Savant|| is becoming more or less a sardonic word in China.','专家这个词的意思在中国多少有点讽刺意味。'}

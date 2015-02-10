@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eyebrow"]={"eyebrow","['aɪbraʊ]","['aɪbraʊ]","n.眉毛",'n.眉毛，[建]窗头线饰','I can not go to the movie--I am up to my eyebrow.','我不能去看电影，我很忙很忙。','Her eyebrow is well penciled.','她的眉毛画得很好.'}

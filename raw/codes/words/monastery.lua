@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["monastery"]={"monastery","['mɒnəst(ə)rɪ]","['mɑnəstɛri]","n.修道院",'n.修道院,寺院','A monastery of friars.','男修道院（修士兄弟会）','The head of a monastery or a group of monasteries.','修道院名誉院长修道院或一组修道院的院长'}

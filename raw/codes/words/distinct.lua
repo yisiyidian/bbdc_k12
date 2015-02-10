@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["distinct"]={"distinct","[dɪ'stɪŋ(k)t]","[dɪ'stɪŋkt]","adj.(from)独特的",'adj.(from)独特的,不同的,明显的,清楚的','Those two ideas are quite distinct from each other.','这两种观点截然不同。','There is a distinct posibility that she\'ll be your teacher next term.','她下学期当你们的老师的可能性非常大。'}

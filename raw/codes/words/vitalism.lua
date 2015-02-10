@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vitalism"]={"vitalism","['vaɪt(ə)lɪz(ə)m]","['vaɪtlɪzəm]","n.活力论",'n.活力论,生机说','||Vitalism||, like every wrong idea, contains a useful sliver of truth.','活力论，正如历史上每一个错误的观念，也包含了有价值的真相','They are still a lot of people believe in vitalism.','仍有许多人信奉活机论。'}

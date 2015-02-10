@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vandalize"]={"vandalize","['vændəlaɪz]","[ 'vændəlaiz ]","vt.肆意破坏",'vt.肆意破坏','vandalize a car by scratching the sides with a key.','用钥匙锁刮擦车的侧面从而破坏车。','The walls had been horribly vandalized with spray paint.','这些墙壁已被人用喷漆破坏得一塌糊涂。'}

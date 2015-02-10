@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incongruous"]={"incongruous","[ɪn'kɒŋgrʊəs]","[ɪn'kɑŋɡruəs]","adj.不协调的",'adj.不协调的,不一致的,前后不一的','I found the scene somewhat incongruous.','我发觉布景有点不协调.','A fur coat is incongruous with a bathing suit.','皮大衣和游泳衣是不相称的.'}

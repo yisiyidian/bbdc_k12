@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chap"]={"chap","[tʃæp]","[tʃæp]","n.皲裂",'n.皲裂|||n.颌，颊|||n.小伙子，家伙|||v.皲裂，（皮肤)变粗糙|||abbr.章（=chapter）','The poor chap was a bundle of nerves at the interview.','这小子在面试时紧张极了.','Despite what others say, I think he\'s a very nice chap.','不管别人怎麽说, 我仍认为他这个人很好.'}

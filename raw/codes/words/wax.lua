@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wax"]={"wax","[wæks]","[wæks]","n.蜡",'n.蜡,蜡状物,震怒|||vi.变大,增大,月亮满|||vt.用蜡涂','He lit up a wax candle.','他点燃了一支蜡烛。','||Waxing|| and waning are the two situation of moon.','阴晴圆缺是月亮的两种状态。'}

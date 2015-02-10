@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["misnomer"]={"misnomer","[mɪs'nəʊmə]","[,mɪs'nomɚ]","n.误称",'n.误称','To call it a hotel is a misnomer, as it was more like a prison!','称它为旅馆是用词不当，因为它更像一座监狱！','Herbal "tea" is something of a misnomer because these drinks contain no tea at all.','花草“茶”是个误称，因为这类饮料里根本不含茶。'}

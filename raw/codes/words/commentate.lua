@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["commentate"]={"commentate","['kɒmənteɪt]","['kɑməntet]","vi.作实况报道",'vi.作实况报道,评述','He commentates on basketball matches for television.','他在电视上给篮球比赛作实况解说员。','It takes a great deal of hard work to commentate on a sport match','对一场体育比赛进行实况解说需要做许多艰苦的工作。'}

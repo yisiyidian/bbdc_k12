@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ribosome"]={"ribosome","['raɪbə(ʊ)səʊm]","['raɪbəsom]","n.核糖核蛋白体",'n.核糖核蛋白体,核糖体','a single ribosome','单核糖体','A single ribosome, especially one that is combined with a molecule of messenger RNA.','单核糖体单核糖体，尤指与信使核糖核酸的一个分子相结合的单核糖体'}

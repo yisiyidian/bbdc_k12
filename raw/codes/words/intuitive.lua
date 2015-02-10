@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intuitive"]={"intuitive","[ɪn'tjuːɪtɪv]","[ɪn'tuɪtɪv]","[计算机]直觉的",'[计算机]直觉的','Are women more intuitive than men?','女子比男子的直觉力更强吗?','A positive pregnancy test soon confirmed her intuitive feelings.','阳性的孕检结果很快证实了她的直觉。'}

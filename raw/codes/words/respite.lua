@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["respite"]={"respite","['respaɪt; -spɪt]","['rɛspɪt]","n.暂缓",'n.暂缓,缓期执行,缓刑,停付,延缓,延期|||vt展延,暂时休息','The director gave the cast a short respite before the next scene.','导演让全体演员在下一场开始之前稍事休息。','The noise went on all night without a moment\'s respite.','噪音一刻不停地持续了一整夜。'}

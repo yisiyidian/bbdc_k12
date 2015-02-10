@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inadequate"]={"inadequate","[ɪn'ædɪkwət]","[ɪn'ædɪkwət]","adj.不充分的",'adj.不充分的,不适当的','Considering the losses in the disaster area, our support was an utterly inadequate measure.','比起灾区的损失, 我们的支援不过杯水车薪。','The plan, brilliant in its conception, failed because of inadequate preparation.','那计划的构想倒是十分宏伟, 但终因准备不足而告吹.'}

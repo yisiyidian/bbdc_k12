@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perpetual"]={"perpetual","[pə'petʃʊəl; -tjʊəl]","[pɚ'pɛtʃuəl]","adj.永恒的",'adj.永恒的,永久的,一再往复的','A contented mind is a perpetual feast.','知足长乐。','Double agents live in a perpetual state of fear.','两面派永远过着提心吊胆的生活。'}

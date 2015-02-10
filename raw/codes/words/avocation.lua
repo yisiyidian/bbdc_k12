@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["avocation"]={"avocation","[,ævə'keɪʃ(ə)n]","['ævo'keʃən]","n.娱乐",'n.娱乐，消遣，副业,嗜好','Learning foreign languages is just an avocation with me.','学习外语只不过是我的一项业余爱好。','He is a doctor by profession and a novelist by avocation.','他的职业是医生，副业是作家。'}

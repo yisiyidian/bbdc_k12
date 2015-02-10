@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["commit"]={"commit","[kə'mɪt]","[kə'mɪt]","v.委托(托付)",'v.委托(托付),犯罪,作...事,承诺|||[计算机]委托','One cannot commit crimes with impunity.','一个人不能犯了罪不受惩罚。','They tried to persuade her to commit perjury.','他们竭力说服她出庭作伪证.'}

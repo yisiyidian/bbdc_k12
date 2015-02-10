@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["appraise"]={"appraise","[ə'preɪz]","[ə'prez]","vt.评价",'vt.评价,估价,鉴定','It would be unwise to buy the house before having it appraised.','买房子不事先估价是不明智的。','The teacher is ||appraising|| the students\' work.','老师正在在批改学生的作业。'}

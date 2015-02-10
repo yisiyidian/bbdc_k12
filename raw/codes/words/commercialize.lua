@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["commercialize"]={"commercialize","[kə'mɝʃlaɪz]","[ kə'mə:ʃəlaiz ]","v.商业化",'v.商业化','It\'s far less commercialize part of majorca.','在马略卡岛就数那儿没有那么浓厚的商业气息。','Sport has become much more commercialized in recent years.','体育运动近几年更加商业化了.'}

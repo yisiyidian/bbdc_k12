@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oriental"]={"oriental","[ɔːrɪ'ent(ə)l; ɒr-]","[,orɪ'ɛntəl]","adj.东方(人)的",'adj.东方(人)的,贵重的','She has studied the cultures of ||Oriental|| countries.','她研究过东方各国的文化.','He specializes in oriental history.','他专门研究东方史。'}

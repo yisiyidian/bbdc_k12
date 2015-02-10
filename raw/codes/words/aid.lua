@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aid"]={"aid","[eɪd]","[ed]","n.帮助",'n.帮助,救护,辅助物|||vt.&vi.援助,帮助,救护|||abbr.=AgencyforInternationalDevelopment国际开发署[美]','The regime had been propped up by foreign aid.','该政权是靠外国援助维持著的.','||Aid|| to the Third World is at present little more than a drop in the ocean.','目前对第三世界的援助不过是杯水车薪.'}

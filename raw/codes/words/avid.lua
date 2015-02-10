@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["avid"]={"avid","['ævɪd]","[ ,ævid ]","adj.热心的",'adj.渴望的,贪婪的,热心的','She took an avid interest in the project.','她热衷于这个项目。','He is always an avid helper.','他总是热心助人。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["result"]={"result","[rɪ'zʌlt]","[rɪ'zʌlt]","n.结果",'n.结果,成绩,答案|||v.产生,起于,致使','These problems are the result of years of bad management.','这些问题是由于多年管理不善而造成的。','If this football team doesn\'t get a result tonight, they will be put down into a lower division.','如果今晚这支足球队不能赢球，他们将会被降级。'}

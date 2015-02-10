@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["revitalize"]={"revitalize","[,ri'vaɪtəlaɪz]","[ ,ri:'vaitəlaiz ]","v.使复活",'v.使复活,使重新充满活力|||vt.使复兴,使苏醒,使复活,使恢复','I think we have to revitalize our society.','我觉得我们的社会需要新生。','plans to revitalize inner-city neighborhoods; tried to revitalize a flagging economy.','计划给内城邻里关系以新气象；试图给正在衰退的经济以新生'}

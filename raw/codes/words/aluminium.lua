@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["aluminium"]={"aluminium","[æl(j)ʊ'mɪnɪəm]","[,æljə'mɪnɪəm]","n.铝",'n.铝','I hardly ever know that aluminium alloy could be as strong as steel.','我几乎从来不知道铝合金竟会和钢强度一样大。','||Aluminium|| was slowly wedging its way in the metal market.','当时铝正在慢慢地挤入金属市场。'}

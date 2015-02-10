@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["enthusiastic"]={"enthusiastic","[ɪn,θjuːzɪ'æstɪk; en-]","[ɪn,θuzɪ'æstɪk]","adj.热情的",'adj.热情的,热心的','She received an enthusiastic ovation from the audience.','她获得观众热烈的欢迎.','The audience was/were enthusiastic on the opening night of the play.','那出戏首次公演之夜观众非常热情.'}

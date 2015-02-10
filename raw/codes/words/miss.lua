@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["miss"]={"miss","[mɪs]","[mɪs]","v.思念",'n.（用于姓名或姓之前，对未婚女子的称呼）小姐；女士；失误|||v.漏掉；错过（机会）；思念；没遇到','Jill will find out your secret; she never misses a trick!','吉尔会发现你的秘密的－－她很警觉！','He missed the point of my joke.','他没有听懂我讲的笑话。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["increment"]={"increment","['ɪŋkrɪm(ə)nt]","['ɪŋkrəmənt]","n.增加",'n.增加(增加物,增量,余差)','Your salary will be 12000 a year, with annual increments of 500.','你的年薪为12000英镑，每年增加500英镑。','Many teachers qualify for an annual increment.','许多老师都有资格获得每年的加薪。'}

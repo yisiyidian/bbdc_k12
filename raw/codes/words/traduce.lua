@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["traduce"]={"traduce","[trə'djuːs]","[trə'dus]","vt.诽谤",'vt.诽谤,中伤','He traduced his friend\'s character.','他诋毁他朋友的人格。','We have been traduced in the press as xenophobic bigots.','我们被新闻界诋毁为仇外的偏狭之徒。'}

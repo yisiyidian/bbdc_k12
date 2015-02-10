@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["malaise"]={"malaise","[mæ'leɪz]","[mə'lez]","n.不舒服",'n.不舒服','Unification has brought soaring unemployment and social malaise.','统一导致失业率猛增和社会动荡不安。','Stock prices have fallen considerably during the current economic malaise.','股票价格因为当前的金融危机已大幅度下跌。'}

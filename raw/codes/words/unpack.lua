@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unpack"]={"unpack","[ʌn'pæk]","[,ʌn'pæk]","vt.打开取出",'vt.打开取出,卸下','Let\'s unpack before we go to bed.','咱们打开行李再睡觉吧.','I will leave you now so that you can unpack.','我这就走,好让你打开行李.'}

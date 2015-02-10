@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["credo"]={"credo","['kriːdəʊ; 'kreɪ-]","['krido]","n.信条",'n.信条','Harry\'s personal credo is doing the best he can.','哈利的个人信条是尽自己所能。','To be the first to bear hardship and the last to enjoy comfort is our credo.','吃苦在前，享受在后，这就是我们的信条。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nausea"]={"nausea","[ˈnɔ:ziə]","['nɔzɪə]","n.反胃",'n.反胃,晕船,极度的不快','Inducing nausea or vomiting.','引起恶心或呕吐的','||Nausea||, vomiting, or dizziness induced by the motion that occurs during air flight.','晕机病由飞行中的飞机运动引起的恶心，呕吐和晕眩'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wonderful"]={"wonderful","['wʌndəfʊl; -f(ə)l]","['wʌndɚfl]","adj.极好的",'adj.极好的,精彩的','The vase made by the artisan is wonderful.','那个手艺人做的花瓶棒极了。','The smooth contour of the sculpture is wonderful.','雕塑物平滑的轮廓线简直太美了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wavy"]={"wavy","['weɪvɪ]","['wevi]","adj.波浪形的",'adj.波浪形的,起伏的','She drew a wavy line under the word.','她在这个词的下面画了一条波纹线.','The boxes were decorated with a wavy gold line.','这些盒子上饰有波浪形的金边。'}

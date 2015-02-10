@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ironic"]={"ironic","[aɪ'rɒnɪk]","[aɪ'rɑnɪk]","adj.讽刺的",'adj.说反话的,讽刺的','The film is more of an ironic fantasy than a horror story.','这部影片与其说是恐怖片，不如说是带有讽刺意味的奇幻片。','That is a summary and ironic end.','那是一个具有概括性和讽刺意味的结局。'}

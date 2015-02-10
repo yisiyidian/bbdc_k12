@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["clothing"]={"clothing","['kləʊðɪŋ]","['kloðɪŋ]","n.(总称)衣服",'n.(总称)衣服','Several thin layers of clothing will keep you warmer than one thick one.','穿几层薄的衣服总比穿一层厚的衣服暖.','Children depend on their parents for food and clothing.','小孩依赖他们的父母供给衣食。'}

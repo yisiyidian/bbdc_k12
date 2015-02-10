@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shine"]={"shine","[ʃaɪn]","[ʃaɪn]","vi.发光",'n.光泽,阳光,光辉,喜欢|||vt.使发光,照射在...上,擦亮|||vi.发光,表现出众,闪耀着','I think that dog has taken a shine to me: it follows me everywhere.','我想这狗已经喜欢上我了，我走到哪儿它跟到哪儿。','||Shine|| your torch into the drawer.','你用手电筒照一下这抽屉里面。'}

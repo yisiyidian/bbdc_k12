@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wobble"]={"wobble","['wɒb(ə)l]","['wɑbl]","n.摆动",'n.摆动,动摇,不稳定|||vi.摇晃,动摇,游移不定|||vt.使摇晃，使动摇','A vocal wobble.','不确定的语调','A wobble or roll.','摇晃或摇摆'}

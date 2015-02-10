@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["about"]={"about","[ə'baʊt]","[ə'baʊt]","prep.关于",'adj.准备|||adv.大约|||prep.关于','I dropped the key somewhere about here.','我把钥匙掉在这儿附近了。','Tell me all about it.','告诉我关于这件事的一切。'}

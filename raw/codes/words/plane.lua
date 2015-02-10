@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plane"]={"plane","[pleɪn]","[plen]","n.飞机",'n.水平；平面；飞机；木工刨|||adj.平的，平坦的|||vt.用刨刨平；小船等擦着水面疾驶|||vi.鸟滑翔','The plane flew high above.','飞机高高地在上空飞。','The plane circled the airport before landing.','飞机在着陆之前在机场上空盘旋。'}

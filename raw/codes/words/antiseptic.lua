@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["antiseptic"]={"antiseptic","[æntɪ'septɪk]","[,æntɪ'sɛptɪk]","n.杀菌剂",'n.杀菌剂,防腐剂|||adj.杀菌的,防腐的，极为干净整洁的，冷漠的','She gargle with an antiseptic mouthwash.','她用具有消毒灭菌作用的漱口剂来清洁口腔。','Carbolic acid can be used to make antiseptic.','石炭酸可用来做防腐剂。'}

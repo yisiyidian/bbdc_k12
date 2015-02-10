@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["buffoon"]={"buffoon","[bə'fuːn]","[bə'fun]","n.丑角",'n.丑角,缺乏教养之人','They pictured their manager as a buffoon.','他们把经理描绘成一个小丑 。','If you call someone a buffoon, you mean that they often do foolish things.','小丑，滑稽可笑的人'}

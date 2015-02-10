@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["milky"]={"milky","['mɪlkɪ]","['mɪlki]","adj.乳状的",'adj.乳状的,乳白色的,柔和的','There may be millions of worlds in the ||Milky|| Way Galaxy.','银河系中也许有几百万个世界。','I like my coffee milky.','我喜欢喝有牛奶的咖啡。'}

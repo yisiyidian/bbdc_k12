@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["adept"]={"adept","[ə'dept; 'ædept]","[ə'dɛpt]","adj.熟练的",'adj.熟练的,老练的|||n.名手,专家','Helen is adept in music and her husband is adept in drawing.','海伦精通音乐，而她的丈夫擅长绘画。','My teacher is adept in designing robots.','我的老师对设计机器人是个内行。'}

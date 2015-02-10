@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lofty"]={"lofty","['lɒftɪ]","['lɔfti]","adj.高的",'adj.高的,高超的,傲慢的','He has lent his name to the lofty cause.','他以自己的名义支持这一崇高的事业。','She hate his lofty manner.','她很讨厌他那傲慢的举止。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mobile"]={"mobile","['məʊbaɪl]","['mobaɪl]","adj.可移动的",'adj.可移动的,易变的,迁徙的,流动的n.(可随风飘动的)悬挂装置,可动雕塑','The old lady sits on a mobile chair every morning.','那位老妇人每天上午都坐在一把活动椅上。','She is much more mobile now that she has a car.','有了一辆车后，她现在出去方便多了。'}

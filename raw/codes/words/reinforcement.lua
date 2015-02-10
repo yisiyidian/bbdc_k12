@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reinforcement"]={"reinforcement","[riːɪn'fɔːsm(ə)nt]","[,riɪn'fɔrsmənt]","n.加固",'n.加固；增援；援军；加强','An athletic supporter having a protective reinforcement of rigid plastic or metal.','运动员护身一种运动员用的护身弹性织物, 有用保护性的坚硬塑料或金属制成的加强层','The soldiers held the fort desperately till reinforcement arrived.','战士们拼死坚守阵地, 直到援军到来。'}

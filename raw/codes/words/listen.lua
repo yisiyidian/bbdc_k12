@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["listen"]={"listen","['lɪs(ə)n]","['lɪsn]","v.听",'v.听，倾听|||n.听，倾听','She is listening to the radio.','她在听收音机。','I listened to their conversation.','我倾听他们的谈话。'}

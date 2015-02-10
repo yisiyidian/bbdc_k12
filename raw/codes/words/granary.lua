@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["granary"]={"granary","['græn(ə)rɪ]","['grænəri]","n.谷仓",'n.谷仓,谷物仓,谷产丰富的地区','That remote barren land has blossomed into rich ||granaries||.','过去的穷乡僻壤变成了富饶的谷仓。','The Midwest is often called the granary of the US.','美国中西部地区常被喻为美国的粮仓。'}

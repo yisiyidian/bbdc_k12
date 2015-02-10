@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interpret"]={"interpret","[ɪn'tɜːprɪt]","[ɪn'tɝprɪt]","v.解释",'v.解释,演出,翻译|||[计算机]解释','I didn\'t presume to interpret it.','我不敢对这一点妄加解释。','Would you please interpret for me?','请你为我翻译一下好吗？'}

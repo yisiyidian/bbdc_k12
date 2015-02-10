@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["safari"]={"safari","[sə'fɑːrɪ]","[sə'fɑri]","n.旅行",'n.旅行,旅行队,奢侈的旅行','A team of african bearer come with us on safari.','有一队非洲脚夫和我们一起进行狩猎旅行。','A team of African bearers came with us on safari.','有一队非洲脚夫和我们一起进行狩猎旅行.'}

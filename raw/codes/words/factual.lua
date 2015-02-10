@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["factual"]={"factual","['fæktʃʊəl; -tjʊəl]","['fæktʃuəl]","adj.事实的",'adj.事实的,真实的','A documentary means a factual movie','纪录片就是真人真事。','We have factual hierarchy in spite of the nominal equality in our company','尽管名义上平等，我们公司有着事实上的等级关系'}

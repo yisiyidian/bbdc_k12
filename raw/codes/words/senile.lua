@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["senile"]={"senile","['siːnaɪl]","['sinaɪl]","adj.年老的",'adj.年老的,衰老的,年老所致的','He may belong to senile residents who stray from home.','他可能是那种离家迷失在外的昏聩老年人。','He keeps forgetting things: I think he\'s getting senile.','他总忘事, 我看他是老了.'}

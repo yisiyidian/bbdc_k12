@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incident"]={"incident","['ɪnsɪd(ə)nt]","['ɪnsɪdənt]","n.事件",'n.事件,（常指）军事冲突,插曲，事变|||adj.难免的，附带的，(物理)入射的','The kidnapping caused an international incident.','这一绑架事件引起了国际纠纷。','An unusual conjunction of circumstances led to the incident.','各种情况的偶然巧合导致了这件事的发生。'}

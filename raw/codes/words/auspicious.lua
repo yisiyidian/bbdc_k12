@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["auspicious"]={"auspicious","[ɔː'spɪʃəs]","[ɔ'spɪʃəs]","adj.吉兆的",'adj.吉兆的,幸运的,有利的','The publication of my first book was an auspicious beginning of my career.','我的第一本书的出版是我事业吉祥的开始。','His career as a playwright had an auspicious start.','他的剧作家生涯有了一个好的开头。'}

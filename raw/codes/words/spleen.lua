@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["spleen"]={"spleen","[spliːn]","[splin]","n.脾",'n.脾,脾气,怒气','I waited for him to get the rest of the spleen out of his system.','我等着他把心头的余怒全部发泄出来。','Some men give their blood to their country; others their spleen.','既有人为国捐躯，亦有人捐坏脾气（怀恨）。'}

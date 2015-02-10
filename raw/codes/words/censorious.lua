@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["censorious"]={"censorious","[sen'sɔːrɪəs]","[sɛn'sɔrɪəs]","adj.苛求的",'adj.苛求的，爱挑剔的','His treatment of him is sympathetic rather than readily censorious.','他对他的态度是同情而并非一味批评。','Despite strong principles he was never censorious.','虽然他原则性很强，可从来不会吹毛求疵。'}

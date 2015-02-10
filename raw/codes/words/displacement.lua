@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["displacement"]={"displacement","[dɪs'pleɪsm(ə)nt]","[dɪs'plesmənt]","n.换置",'n.换置,转位,移动|||[计算机]位移','We halved the purchase tax on small-displacement automobiles.','减半征收小排量汽车购置税','I can infer the recoil by its displacement','我能从它的位移推断出后坐力'}

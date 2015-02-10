@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["death"]={"death","[deθ]","[dɛθ]","n.死",'n.死,死亡，死神，毁灭','That motorbike will be the death of you.','那辆摩托车就会要了你的命。','That defeat meant the death of all my hopes.','那次失败毁灭了我所有的希望。'}

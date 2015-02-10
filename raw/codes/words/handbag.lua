@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["handbag"]={"handbag","['hæn(d)bæg]","['hænd'bæg]","n.手提包",'n.手提包','The catch on my handbag is broken.','我的手提包的扣坏了.','She described to me how he ran up to her and grabbed her handbag.','她向我讲述了他是怎样跑到她跟前抢走她的手提包的.'}

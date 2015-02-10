@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["necessity"]={"necessity","[nɪ'sesɪtɪ]","[nə'sɛsəti]","n.需要",'n.需要,必需品,必然','It was done under the pressure of the necessity.','这件事是在迫切需要的情况下而做的。','||Necessity|| is the mother of invention.','需要是发明之母。'}

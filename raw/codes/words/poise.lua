@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["poise"]={"poise","[pɒɪz]","[pɔɪz]","n.平衡",'n.平衡,姿势,镇静,悬空|||vt.使...平衡,为...做准备,保持...姿势|||vi.做准备,盘旋','We admired the graceful poise of the dancer.','我们很欣赏那位舞蹈演员的优美舞姿。','He has perfect poise and never seems embarrassed.','他的神智安宁，似乎从没困惑过。'}

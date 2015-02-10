@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hedgehog"]={"hedgehog","['hedʒ(h)ɒg]","['hɛdʒhɔɡ]","n.刺猬",'n.刺猬','The hedgehog rolled up into a spiky ball.','刺猬卷起身子成了一个刺球.','We found a little hedgehog in the field.','我们在田里发现了一只小刺猬。'}

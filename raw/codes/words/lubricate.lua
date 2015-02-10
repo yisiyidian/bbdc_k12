@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lubricate"]={"lubricate","['luːbrɪkeɪt]","['lubrɪket]","v.润滑",'v.润滑,加润滑剂','If you never bother to lubricate your engine, of course it will seize up.','如果你老是怕麻烦，不给发动机添加润滑油，发动机当然会失灵卡住啦。','Mineral oils are used to lubricate machinery.','矿物油被用来润滑机器。'}

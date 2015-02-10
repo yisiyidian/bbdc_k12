@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sympathetic"]={"sympathetic","[sɪmpə'θetɪk]","[,sɪmpə'θɛtɪk]","adj.同情的",'adj.同情的,共鸣的|||n.交感神经','You\'ve got to be firm, but at the same time you must be sympathetic.','你态度要强硬, 但还必须有同情心.','a sympathetic glance.','同情的一瞥'}

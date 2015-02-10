@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flair"]={"flair","[fleə]","[flɛr]","n.鉴别力",'n.鉴别力(眼光,本领,才能)','He has a flair for good poetry.','他有监别好诗的眼光。','She performs the songs with style and flair.','她演唱歌曲既有风度又有才华。'}

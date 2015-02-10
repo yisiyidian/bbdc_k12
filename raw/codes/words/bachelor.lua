@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bachelor"]={"bachelor","['bætʃələ]","['bætʃəlɚ]","n.单身汉",'n.单身汉,学士','They three get along well with one another; one is married, another is still a bachelor, and the other has a girl friend.','他们三人彼此相处愉快；一个已婚，一个仍是光棍，而另一个则已有了女友。','You have the alternative of marrying or remaining a bachelor.','你可以结婚也可以仍做单身汉, 任你选择.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["likelihood"]={"likelihood","['laɪklɪhʊd]","['laɪklɪhʊd]","n.可能性",'n.可能性','We must try our best to reduce the likelihood of war.','我们必须尽最大努力减少战争的可能性.','Do you think there is any likelihood of his agreeing to it?','你认为他有同意此事的可能性 吗 ?'}

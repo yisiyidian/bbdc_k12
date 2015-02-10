@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bisect"]={"bisect","[baɪ'sekt]","[baɪ'sɛkt]","vt.平分",'vt.平分,切分为二|||vi.交叉','bisect the road','平分了这条道路','bisects an area or line = it divides the area or line in half.','对半分；二等分'}

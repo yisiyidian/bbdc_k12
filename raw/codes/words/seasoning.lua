@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seasoning"]={"seasoning","['siːz(ə)nɪŋ]","['sizənɪŋ]","n.风干",'n.风干(时效,调质,贮放,涂光,不稳定性)|||n.调料','A  little home flavour is the best seasoning','家庭的味道是最好的调料','Salt is the most common seasoning','盐是最常用的调味品。'}

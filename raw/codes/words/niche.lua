@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["niche"]={"niche","[niːʃ; nɪtʃ]","[niʃ]","n.壁龛(适当的位置)",'n.壁龛(适当的位置)|||vt放在适当的位置','Holidays in the Antarctic are a niche market.','南极假日游是一个利基市场。','He found the right niche for himself.','他发现了一个适合他的职位。'}

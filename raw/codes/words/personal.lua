@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["personal"]={"personal","['pɜːs(ə)n(ə)l]","['pɝsənl]","adj.私人的",'adj.私人的,个人的|||n.(报刊的)私人专栏','||Personal|| cleanliness is important to health as well as to appearance.','个人清洁对于健康和仪表同样重要。','I have something personal to discuss with you.','我有点私事和你商量。'}

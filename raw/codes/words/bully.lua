@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bully"]={"bully","['bʊlɪ]","['bʊli]","n.欺凌弱小者",'n.欺凌弱小者,土霸,开球|||vt.威胁,恐吓,欺负','They bully into line at the gas pump','“他们在气泵前恶棍似地插队”','Don\'t let them bully you. Fight back!','别让他们欺侮你. 把他们顶回去!'}

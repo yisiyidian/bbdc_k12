@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cry"]={"cry","[kraɪ]","[kraɪ]","n.哭",'n.叫,哭,喊,口号,叫卖声,普遍意见|||vt.大声叫喊,宣传,哭得...|||vi.哭,叫,喊,强烈要求','She ||cried|| with grief when she heard news of her friend\'s death.','听到朋友死亡的消息，她难过地哭了。','Don\'t cry down her real achievements.','不要贬低她真正的成就'}

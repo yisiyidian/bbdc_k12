@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["crocodile"]={"crocodile","['krɒkədaɪl]","['krɑkə'daɪl]","n.鳄鱼",'n.鳄鱼','Leather made from crocodile skin.','鳄鱼皮革用鳄鱼皮做成的皮革','She go up the Nile as far as the first crocodile.','她溯尼罗河之源而上, 直至遇上第一条鳄鱼。'}

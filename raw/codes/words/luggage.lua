@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["luggage"]={"luggage","['lʌgɪdʒ]","['lʌɡɪdʒ]","n.行李",'n.行李','All the luggage has been strapped up.','所有行李都已捆扎好。','The porter will carry your luggage to your room.','搬运工会把你的行李搬到你的房间去的。'}

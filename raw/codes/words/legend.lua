@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["legend"]={"legend","['ledʒ(ə)nd]","['lɛdʒənd]","n.传说",'n.传说,传奇人物,铭文','The little girl is very interested in the old legend of immortal creatures.','小女孩对有关永生的精灵的古老传奇非常感兴趣。','The castle is steeped in history and legend.','这座城堡历史悠久，充满了传奇。'}

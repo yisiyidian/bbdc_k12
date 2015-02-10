@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["portion"]={"portion","['pɔːʃ(ə)n]","['pɔrʃən]","n.部分",'n.部分,份,命运|||v.将...分配,分配','Sorrow has always been her portion.','她的命运一直与悲哀相连。','You may find the information you need in the first portion of the book.','你可以在这本书的第一部分找到你要的资料。'}

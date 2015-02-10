@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["relaxation"]={"relaxation","[riːlæk'seɪʃ(ə)n]","['rilæk'seʃən]","n.松弛",'n.松弛,放松,减轻','His day is evenly divided between work and relaxation.','他一天的时间一半花在工作上, 一半用在娱乐上。','What do you do for relaxation?','你做什么消遣。'}

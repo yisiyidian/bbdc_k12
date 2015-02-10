@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cynicism"]={"cynicism","['sɪnɪsɪz(ə)m]","['sɪnɪsɪz(ə)m]","n.愤世嫉俗",'n.愤世嫉俗，讥笑，冷言冷语|||Cynicism:犬儒主义，犬儒哲学','There was not a trace of cynicism in his voice.','他的语气里没有一丝挖苦.','I found Ben\'s cynicism wearing at times.','我觉得本的愤世嫉俗论有时让人烦。'}

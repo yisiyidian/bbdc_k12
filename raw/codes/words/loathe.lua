@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["loathe"]={"loathe","[ləʊð]","[loð]","v.厌恶",'v.厌恶,憎恶','The two men loathe each other.','两个男人互相看不顺眼。','I loathe people who spread malicious gossip.','我讨厌那些散布恶意流言的人。'}

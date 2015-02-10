@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["student"]={"student","['stjuːd(ə)nt]","['studnt]","n.学生",'n.学生','A young student fainted in the hot sun.','有个年幼的学生在炎炎烈日下晕倒了。','John is more diligent than any other student in his class.','约翰比班上其他的同学用功。'}

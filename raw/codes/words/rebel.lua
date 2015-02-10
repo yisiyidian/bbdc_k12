@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rebel"]={"rebel","['reb(ə)l]","[rɪ'bɛl]","n.叛徒",'n.叛徒,起义者|||vi.造反,反抗,反感|||adj.造反的,反抗的,反叛者的','He spent two years as the prisoner of rebel soldiers in the mountains.','他被山里的叛军抓走有两年之久.','The colonists took up weapons to rebel against the British ruler.','殖民地的人们拿起武器反抗英国统治者。'}

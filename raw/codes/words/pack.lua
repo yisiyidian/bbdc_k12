@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pack"]={"pack","[pæk]","[pæk]","n.包裹",'n.包裹,一群,一副,一帮,一群|||vt.包装,捆扎,塞满,收拾行李，佩戴|||vi.包装，（用某物）保存，保藏,塞进','He was told to pack his bags.','已经告诉他让他走人。','The wind packed the snow against the wall.','风把雪吹得堆积在墙边。'}

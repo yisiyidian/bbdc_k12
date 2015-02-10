@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["embrace"]={"embrace","[ɪm'breɪs; em-]","[ɪm'bres]","n.拥抱",'n.拥抱|||v.拥抱,互相拥抱,包含','He enfolded the child in an affectionate embrace.','他疼爱得把孩子紧紧搂在怀里。','A fond embrace.','深情的拥抱'}

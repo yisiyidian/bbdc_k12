@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["doctrine"]={"doctrine","['dɒktrɪn]","['dɑktrɪn]","n.教义",'n.教义,主义,学说;[古]教学,指导,指令指示;军事战略','The doctrine holding that Jesus was human only and not divine.','基督凡人论认为耶稣是人而非神的教义','The doctrine or belief that the evil in the world outweighs the good.','这种主义认为世界上邪恶远远强于正义的主义和信念'}

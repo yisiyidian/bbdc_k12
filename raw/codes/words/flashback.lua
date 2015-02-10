@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flashback"]={"flashback","['flæʃbæk]","['flæʃbæk]","n.闪回",'n.闪回，(电影等)倒叙,插叙|||n.迷幻药效幻觉重现','The event that leads up to the murder is shown in a series of flashback.','酿成谋杀案的各个环节是通过一系列倒叙手法来表现的。','The events that led up to the murder were shown in a series of flashbacks.','酿成谋杀案的各个环节是通过一系列倒叙手法来表现的.'}

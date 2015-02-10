@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pan"]={"pan","[pæn]","[pæn]","n.平底锅",'n.平底锅,严厉批评,(天平的)秤盘|||vt.用淘盘淘洗(含金或贵重矿物的砂砾),严厉批评,(为拍摄动景或全景)左右移动(摄影机)','I cracked two eggs into the frying pan.','我往平底锅里打了两个鸡蛋。','It depends how things pan out.','那得看事情结果怎样了。'}

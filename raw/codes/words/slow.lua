@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slow"]={"slow","[sləʊ]","[sloʊ]","adj.慢的",'adj.慢的|||adv.慢慢地|||vt.&vi.放慢,减速','My watch is five minutes slow.','我的表慢五分钟。','This student is slow in learning English.','这个学生学英语很笨。'}

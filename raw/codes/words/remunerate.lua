@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["remunerate"]={"remunerate","[rɪ'mjuːnəreɪt]","[rɪ'mjunəret]","vt.给与报酬",'vt.给与报酬,赔偿,酬劳','remunerate his efforts.','报偿他的努力','You will be remunerated and so will your staff.','你将会得到报酬，你的员工也会。'}

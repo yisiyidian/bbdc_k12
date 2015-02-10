@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["substantiate"]={"substantiate","[səb'stænʃɪeɪt]","[səb'stænʃɪet]","v.实体化",'v.实体化,证实','Can you substantiate your accusations against him?','你指责他，能提出事实根据吗？','The paper substantiates the claims you have made.','文章了证实所有你讲过的主张。'}

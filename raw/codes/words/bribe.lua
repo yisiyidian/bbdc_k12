@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bribe"]={"bribe","[braɪb]","[braɪb]","n.贿赂",'n.贿赂,贿赂物|||vt.&vi.贿赂','He is so honest that he will not accept bribe.','他忠诚老实，不肯受贿。','He quit in disgrace over the bribe.','他因受贿而不光彩地辞职了。'}

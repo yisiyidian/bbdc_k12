@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hangdog"]={"hangdog","['hæŋdɒg]","['hæŋdɔɡ]","adj.忧愁的",'adj.忧愁的,悲哀的,鬼鬼祟祟的,卑躬屈膝的','He always went about with a hangdog look','他总是面带愁容四处走动','He sneaked out of the room with a hangdog expression on his face.','他溜出房间，面容惭愧。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["taxi"]={"taxi","['tæksɪ]","['tæksi]","n.计程车",'n.计程车，出租汽车|||v.用出租车运送，乘计程车，（飞机）滑行','Let me go shares with you in the taxi fare.','我和你分摊计程车费吧。','If you want to ensure that you catch the plane, take a taxi.','你要想确保能赶上那班飞机，就坐出租车去吧。'}

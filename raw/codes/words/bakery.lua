@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bakery"]={"bakery","['beɪk(ə)rɪ]","['bekəri]","n.面包店",'n.面包店','The bakery serves us with fresh bread daily.','面包店每天都给我们提供新鲜面包。','A bakery specializing in French pastry.','专制法国点心的面包店'}

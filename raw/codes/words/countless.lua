@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["countless"]={"countless","['kaʊntlɪs]","['kaʊntləs]","adj.无数的",'adj.无数的，数不尽的','No one can plead ignorance of a subject any longer, for there are countless do- it- yourself publications.','再没有任何人以不懂某事为理由而辩解了，因为有数不清的介绍“自己动手”的出版物。','||Countless|| washer women have rubbed the stone away.','无数洗衣妇的搓洗将那块石头磨掉了。'}

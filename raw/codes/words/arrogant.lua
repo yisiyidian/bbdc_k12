@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["arrogant"]={"arrogant","['ærəg(ə)nt]","['ærəɡənt]","adj.傲慢的",'adj.傲慢的,自大的','I dislike his arrogant demeanour.','我讨厌他那傲慢的行为.','One should never be arrogant even when he is at his best.','一个人在最得意时也不应傲慢。'}

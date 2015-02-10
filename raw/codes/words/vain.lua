@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vain"]={"vain","[veɪn]","[ven]","adj.徒然的",'adj.徒然的,虚荣的,空虚的','They endeavoured to make her happy but in vain.','他们尽量使她快乐, 却徒劳无功.','He tried in vain to catch the butterfly on the flower.','他白费力气想抓住停在花上的蝴蝶。'}

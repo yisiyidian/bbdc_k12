@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stumble"]={"stumble","['stʌmb(ə)l]","['stʌmbl]","n.绊倒",'n.绊倒,失策|||vi.绊倒,失策,踌躇,无意中发现|||vt.绊倒,困惑','The child stumbled through a piece by Chopin.','那孩子费劲地奏完一支肖邦的曲子。','I stumbled over a tree root.','我在一个树根上绊了一跤。'}

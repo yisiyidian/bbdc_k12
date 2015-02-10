@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eloquence"]={"eloquence","['eləkwəns]","['ɛləkwəns]","n.雄辩",'n.雄辩,口才','Her eloquence is so good that she cuts down the best orator.','她的口才如此之好，连最优秀的演说家也会相形见绌。','His eloquence did not avail against the facts.','他的雄辩在事实面前不起什么作用。'}

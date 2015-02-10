@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["whine"]={"whine","[waɪn]","[waɪn]","n.抱怨",'n.抱怨,牢骚|||v.哭诉,发牢骚','The cat whined at the door, asking to be let out.','猫在门口哀叫着想出去。','Stop ||whining|| around me!','别在我身边嘀嘀咕咕！'}

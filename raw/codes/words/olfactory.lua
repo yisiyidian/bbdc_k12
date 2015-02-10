@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["olfactory"]={"olfactory","[ɒl'fækt(ə)rɪ]","[ɑl'fæktəri]","adj.嗅觉的",'adj.嗅觉的','Police use dog\'s sensitive olfactory sense to look for drugs and bombs.','警察用狗灵敏的嗅觉找毒品和炸弹。','It arouses their olfactory sense.','这“唤起”了他们的嗅觉。'}

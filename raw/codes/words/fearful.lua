@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fearful"]={"fearful","['fɪəfʊl; -f(ə)l]","['fɪrfəl]","adj.可怕的",'adj.担心的,可怕的','a fearful howling.','一声可怕的嚎叫','The wool got in a fearful tangle.','毛线乱成了一团。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["outfox"]={"outfox","[aʊt'fɒks]","[,aʊt'fɑks]","vt.以机智胜过",'vt.以机智胜过','He always outfoxes his opponents at chess.','他下国际象棋总是胜人一筹.','There is no greater thrill than to bluff a man, trap him, and outfox him.','没有什么比虚张声势吓唬别人、让他钻入圈套并用计将他击败更加刺激了。'}

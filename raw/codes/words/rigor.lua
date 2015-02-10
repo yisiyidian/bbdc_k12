@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rigor"]={"rigor","['rɪgɚ]","[ 'riɡə ]","n.严格",'n.严格，严酷,严密，严厉，[医]寒战，僵直，强直','||Rigor|| mortis had already set in.','尸体已经僵硬。','Their analysis lacks rigor.','他们的分析缺乏严谨性。'}

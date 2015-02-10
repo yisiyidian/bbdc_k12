@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["impetuous"]={"impetuous","[ɪm'petjʊəs]","[ɪm'pɛtʃʊəs]","adj.冲动的",'adj.冲动的,猛烈的,轻率的','She regretted her impetuous decision.','她后悔自己做了冲动的决定。','Never be arrogant and impetuous when life is smooth.','在生活顺利时千万不要骄躁。'}

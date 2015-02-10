@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["abusive"]={"abusive","[ə'bjuːsɪv]","[ə'bjʊsɪv]","adj.辱骂的",'adj.辱骂的,诅咒的,虐待的,滥用的','Good manners ban abusive language anyplace.','讲礼貌就是在任何地方都不能讲粗话.','He became openly abusive.','他开始公然大骂。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["defective"]={"defective","[dɪ'fektɪv]","[dɪ'fɛktɪv]","adj.有缺陷的",'adj.有缺陷的,欠缺,不完全变化动词|||n.有缺陷的人,不完全变化动词','She has a defective utterance.','她发音有缺陷。','He is defective in moral sense.','他不能分辨善恶。'}

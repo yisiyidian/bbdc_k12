@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interact"]={"interact","[ɪntər'ækt]","[,ɪntɚ'ækt]","vi.相互作用",'vi.相互作用,相互影响','All things are interrelated and interact on each other.','一切事物互相联系并互相作用。','The region occupied by a group of interacting organisms.','共生区由一群相互作用的生物体占据的区域'}

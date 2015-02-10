@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["asleep"]={"asleep","[ə'sliːp]","[ə'slip]","adj.睡着的",'adj.睡着的,已死的，不活跃的，麻木的|||adv.处于或进入睡眠状态地，陷入麻木不仁状态地','He soon fell asleep with weariness.','他疲倦地很快就睡着了。','Some people grind their teeth while they are asleep.','有些人睡觉时磨牙齿。'}

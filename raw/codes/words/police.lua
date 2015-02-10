@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["police"]={"police","[pə'liːs]","[pə'lis]","n.警察",'adj.警察的|||n.警察,警方|||v.管辖','The police are always hounding me.','警方一直在追捕我。','The police recovered the stolen jewellery.','警察找回了被盗的珠宝。'}

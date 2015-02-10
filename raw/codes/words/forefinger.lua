@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["forefinger"]={"forefinger","['fɔːfɪŋgə]","['fɔrfɪŋɡɚ]","n.食指",'n.食指','He pinched the leaf between his thumb and forefinger.','他将叶子捏在拇指和食指之间.','I can make my thumb and forefinger meet round your bicep.','你的胳膊还不如我的大拇指和食指合拢来的圈儿那么粗.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["furor"]={"furor","['fjuːrɔː]","['fjʊrrɔr]","n.激怒",'n.激怒,狂热,(诗情的)激情','The furor made him a bloody butcher','愤怒让他成为了一个血腥的屠夫。','The half hour lecture caused an enormous furor.','那半小时的演讲引起了极大的轰动。'}

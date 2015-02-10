@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["officious"]={"officious","[ə'fɪʃəs]","[ə'fɪʃəs]","adj.爱指手画脚的",'adj.爱指手画脚的；爱发号施令的；非正式的','He is an officious leader.','他是个爱发号施令的领导。','I moved because I can\'t put up with that officious landlady any longer.','我搬家是因为我再也受不了那个好管闲事的女房东了。'}

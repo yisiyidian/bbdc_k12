@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rostrum"]={"rostrum","['rɒstrəm]","['rɔstrəm]","n.演讲坛",'n.演讲坛,喙形船首|||n.[生]喙，吻突','It grasps its victim in its forelegs and pierce it with its rostrum.','它用前腿抓住牺牲品，把喙刺入对方身体。','Every eye at the conference was focused on the rostrum.','代表们的眼光都集注在大会主席台上。'}

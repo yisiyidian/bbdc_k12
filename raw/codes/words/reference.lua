@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reference"]={"reference","['ref(ə)r(ə)ns]","['rɛfrəns]","n.参考",'n.参考,出处,参照|||n.推荐人,推荐函|||vt.提供参考','He loaded his pages with references.','他在文章中引用大量参考资料。','You should make a reference to a dictionary.','你应该参考字典。'}

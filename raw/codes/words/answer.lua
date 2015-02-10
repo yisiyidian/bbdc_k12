@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["answer"]={"answer","['ɑːnsə]","['ænsɚ]","vt.&vi.答复",'vt.&vi.答复；解答；答辩；适应|||n.回答；答案；反应；足以媲美的人','Have you had an answer to your letter?','你的信是否有了回信？','I agree but I can\'t answer for my colleagues.','我同意，但是我不能代表我的同事们。'}

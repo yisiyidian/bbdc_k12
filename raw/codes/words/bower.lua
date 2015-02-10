@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bower"]={"bower","['baʊə]","['baʊɚ]","n.树荫处",'n.树荫处(凉亭,村舍,大主锚,船首锚)','There is a bower on the knoll.','小山上有一个凉亭。','He sat in the bower to have a rest.','他坐在凉亭里，休息一会儿。'}

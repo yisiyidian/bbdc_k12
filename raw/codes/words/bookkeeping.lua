@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bookkeeping"]={"bookkeeping","['bʊkkiːpɪŋ]","['bʊk,kipɪŋ]","n.簿记",'n.簿记，记账','Since when has she been learning bookkeeping?','她从什么时候起学薄记的？','He go on a refresher course in bookkeeping.','他继续学习笔记进修课程。'}

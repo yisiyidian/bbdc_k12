@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gum"]={"gum","[gʌm]","[ɡʌm]","n.树胶",'n.树胶,橡皮(糖),齿龈,粘性物质,牙床|||vt.搞砸,用牙床嚼,以树胶粘合|||vi.形成胶质,发粘','Frankincense is a type of sweet-smelling gum from a tree.','乳香是从树上提炼的一种有甜味的树脂。','Many people like to chew mint gum in the summer.','许多人喜欢在夏天嚼薄荷口香糖。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["telegraph"]={"telegraph","['telɪgrɑːf]","['tɛlɪɡræf]","n.电报",'n.电报,电报机|||vt.打电报,显示','The spoken representation of the dot in radio and telegraph code.','（电码中的）点表示无线电码或电报电码的“滴滴”、“嗒嗒”声','He sent me the news by wireless telegraph.','他用无线电报把消息告诉我。'}

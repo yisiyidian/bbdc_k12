@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["limber"]={"limber","['lɪmbə]","['lɪmbɚ]","adj.柔软的",'adj.柔软的,敏捷的|||v.使柔软,将前车接上|||v.做柔软运动','You should limber up your muscles and joints.','你应该舒展一下筋骨。','||Limber|| yourself up before swimming.','在游泳前活动一下身子吧。'}

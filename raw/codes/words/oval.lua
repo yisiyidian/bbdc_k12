@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["oval"]={"oval","['əʊv(ə)l]","['ovl]","n.椭圆",'n.椭圆,椭圆形跑道|||adj.卵形的,椭圆形的','Comets move around the sun like planets, but in long oval course.','彗星象行星一样绕太阳运转，然而其轨道呈狭长的椭圆形。','The mirror is oval.','镜子是椭圆的。'}

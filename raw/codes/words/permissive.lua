@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["permissive"]={"permissive","[pə'mɪsɪv]","[pɚ'mɪsɪv]","adj.许可的",'adj.许可的,获准的,自由的','The climate was permissive, supportive, and approving of mind control experimentation.','风气是许可的, 支持的, 以及赞成精神控制实验的.','Single parents are more likely to be permissive.','单亲家庭的父母更容易放任自己的孩子。'}

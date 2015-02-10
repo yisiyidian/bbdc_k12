@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["juxtaposition"]={"juxtaposition","[,dʒʌkstəpə'zɪʃ(ə)n]","[,dʒʌkstəpə'zɪʃən]","n.并排",'n.并排','The juxtaposition of these two remarks was startling.','这两句话连在一起使人听了震惊.','The pictures would be such a great juxtaposition of time.','这些照片将是时代交替的一个见证.'}

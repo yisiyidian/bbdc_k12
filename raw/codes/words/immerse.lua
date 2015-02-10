@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["immerse"]={"immerse","[ɪ'mɜːs]","[ɪ'mɝs]","vt.浸",'vt.浸,陷入','Please immerse the plant in water for a few minutes.','把那棵植物在水里浸泡几分钟。','He immersed himself totally in his work.','他埋头于工作。'}

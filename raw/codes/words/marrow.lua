@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["marrow"]={"marrow","['mærəʊ]","['mæro]","n.骨髓",'n.骨髓,精华,活力|||n.西葫芦','Come by the fire you must be chilled to the marrow!','到火旁边来吧－－你一定冻坏了。','It was so cold that he felt frozen to the marrow.','天气太冷了，他感到寒冷刺骨。'}

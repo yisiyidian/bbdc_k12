@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["restaurant"]={"restaurant","['restrɒnt]","['rɛstrɑnt]","n.餐馆",'n.餐馆,饭店','This restaurant gets three stars in the guidebook.','这家餐馆在旅游指南中标有三颗星.','There are many streamers in front of the restaurant.','饭店门前有许多长条旗。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["circulate"]={"circulate","['sɜːkjʊleɪt]","['sɝkjəlet]","vi.流通",'vi.流通,循环,传播|||vt.使流通','Please open a window to allow the air to circulate.','打开窗子让空气流通。','The news of her death circulated quickly.','她死去的消息迅速传开。'}

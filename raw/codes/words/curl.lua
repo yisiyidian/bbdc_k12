@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["curl"]={"curl","[kɜːl]","[kɝl]","n.卷曲",'n.卷曲,卷发|||v.弄卷,卷曲,弯曲','My father\'s bad jokes always make me curl up.','父亲那些要不得的玩笑总是让我很难为情。','A blow to the stomach made him curl up.','他腹部受到一击而直不起腰来。'}

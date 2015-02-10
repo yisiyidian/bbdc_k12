@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["jamb"]={"jamb","[dʒæm]","[dʒæm]","n.门窗的侧柱",'n.门窗的侧柱，矿柱','Warp is any distortion in the door itself, and it does not refer to the door in relation to the frame or the jamb in which it is hung.','弯曲是指门页自身引起的变形，不牵涉由于门页悬挂在门框或边框上引起的变形。','They would linger at the jamb of the door.','他们就在门旁侧壁那呆着不走.'}

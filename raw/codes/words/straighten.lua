@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["straighten"]={"straighten","['streɪt(ə)n]","['stretn]","v.弄直",'v.弄直,使正确,整顿，挺直','She twitched the corner of the rug to straighten it.','她拉了拉小地毯的一角，把它弄正。','You\'d better straighten up your house.','你最好把屋子搞整洁。'}

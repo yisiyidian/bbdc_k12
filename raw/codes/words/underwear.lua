@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["underwear"]={"underwear","['ʌndəweə]","['ʌndɚwɛr]","n.内衣",'n.内衣','He had removed his underwear.','他已脱去了内衣.','They left off their woollen underwear when the weather got warm.','天气转暖的时候,他们不再穿羊毛内衣.'}

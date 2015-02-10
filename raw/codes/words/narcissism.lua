@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["narcissism"]={"narcissism","['nɑːsɪsɪz(ə)m; nɑː'sɪs-]","['nɑrsɪ'sɪzəm]","n.自我陶醉",'n.自我陶醉,自恋','Those who suffer from narcissism become self-absorbed or chronic show-offs.','被自恋症折磨的人会变得只专注于自己的事情，或者不断地自我炫耀。','the chinese modeern romantic writers\' narcissism complex','中国现代浪漫主义作家的自恋情绪'}

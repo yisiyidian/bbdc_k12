@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nasal"]={"nasal","['neɪz(ə)l]","['nezl]","adj.鼻的",'adj.鼻的,鼻声的,护鼻的|||n.鼻音,鼻音字','Every person has two nasal orifices.','一个人有两个鼻孔。','A strongly nasal tone of voice, especially as a peculiarity of certain regional dialects.','鼻音，土音说话时的浓厚的鼻音，尤指某些地方方言的特有的口音'}

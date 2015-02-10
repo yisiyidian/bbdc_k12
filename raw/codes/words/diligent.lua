@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["diligent"]={"diligent","['dɪlɪdʒ(ə)nt]","['dɪlɪdʒənt]","adj.勤奋的",'adj.勤奋的,用功的','In comparison with other students, Mike is more diligent.','和其他学生相比, 麦克更加勤勉一些。','John is more diligent than anyone else in his class.','约翰比班上其他的同学用功。'}

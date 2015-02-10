@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sportsman"]={"sportsman","['spɔːtsmən]","['spɔrtsmən]","n.运动员",'n.运动员','The sportsman did not fire into the brown, but took careful aim at some particular bird.','那猎人并没有向鸟群开枪，只瞄准了特定的一只鸟。','The newspaper publishes a profile of a leading sportsman every week.','该报每周刊登一篇关於一个优秀运动员的简介.'}

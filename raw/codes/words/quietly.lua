@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quietly"]={"quietly","[ˈkwaɪətli]","[ˈkwaɪətli]","adj.寂静地",'adj.寂静地,静止地|||adv.安静地,平静地','The alert leopard went up to a deer quietly.','警觉的豹子静悄悄地走近一只鹿。','After praying quietly he faced his difficulties with a fortified spirit.','默默地祈祷后, 他面对困难的勇气倍增。'}

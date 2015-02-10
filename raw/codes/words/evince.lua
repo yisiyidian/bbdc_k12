@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["evince"]={"evince","[ɪ'vɪns]","[ɪ'vɪns]","vt.表明",'vt.表明,表示','The boy evinces great intelligence.','这个男孩表现出很高的智慧。','He evinced great sorrow for what he had done.','他对自己的所作所为深表歉疚。'}

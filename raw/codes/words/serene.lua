@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["serene"]={"serene","[sɪ'riːn]","[sə'rin]","adj.安详的",'adj.安详的,宁静的,平静的','It was a beautiful morning, calm and serene.','那是一个宁静、明媚的早晨。','The story took place in a serene summer night.','故事发生在一个宁静的夏夜。'}

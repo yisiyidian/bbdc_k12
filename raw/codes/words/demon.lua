@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["demon"]={"demon","['diːmən]","['dimən]","n.魔鬼",'n.魔鬼,邪恶,狂热者','He\'s very violent: it\'s the demon drink, you know.','他大撒酒疯, 你要知道就是因为喝了那种酒。','Her husband is a demon for work.','她丈夫工作起来精力过人。'}

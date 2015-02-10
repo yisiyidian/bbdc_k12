@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["determine"]={"determine","[dɪ'tɜːmɪn]","[dɪ'tɝmɪn]","vt.决定",'vt.&vi.（使）下决心，（使）做出决定|||vt.决定，确定；判定，判决；使决定；限定|||vi.[主用于法律]了结，终止，结束','The exam results could determine your career.','考试成绩可能会决定你的前途。','That determined her against leaving home.','那件事使她决定不离开家了。'}

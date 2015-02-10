@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["monetary"]={"monetary","['mʌnɪt(ə)rɪ]","['mʌnɪtɛri]","adj.货币的",'adj.货币的,金融的','The monetary unit of Great Britain is the pound.','英国的货币单位是镑。','The monetary system of some countries used to be based on gold.','过去有些国家的货币制度是金本位制的。'}

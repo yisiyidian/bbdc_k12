@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["banjo"]={"banjo","['bændʒəʊ]","['bændʒo]","n.班究琴",'n.班究琴','A phrase improvised by a soloist, especially on the guitar or banjo.','小过门一段由独奏演员即兴创作的乐句, 尤指在吉它或班卓琴上完成的','Before he began to play, Harry tuned up his banjo.','开始演奏前, 哈利先行调好他的五弦琴。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["insist"]={"insist","[ɪn'sɪst]","[ɪn'sɪst]","vt.坚持",'vt.坚持,强调|||vi.坚决主张','Since you insist, I must amend the letter of credit.','既然你坚持，我就只好修改信用证。','The bank will insist on collateral for a loan of that size.','银行对这样的大笔贷款一定要有抵押物。'}

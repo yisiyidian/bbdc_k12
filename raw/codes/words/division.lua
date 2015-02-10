@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["division"]={"division","[dɪ'vɪʒ(ə)n]","[də'vɪʒən]","n.区分",'n.区分,分开,除法,公司,部门，师（军队里）','Can you do long division?','你会长除法吗?','Addition and division are forms of computation.','加法和除法都是计算方法.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["formula"]={"formula","['fɔːmjʊlə]","['fɔrmjələ]","n.公式",'n.公式,配方,规则；代乳品|||adj.（赛车的）级的，方程式的','They are working on the perfection of their new paint formula.','他们正在努力研制尽善尽美的新颜料配方.','It\'s the formula for converting gallons into liters.','这是加仑与升的换算公式。'}

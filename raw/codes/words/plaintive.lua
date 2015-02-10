@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["plaintive"]={"plaintive","['pleɪntɪv]","['plentɪv]","adj.悲哀的",'adj.悲哀的,哀伤的','I heard a plaintive cry.','我听到一声悲伤的哭泣。','The song has plaintive melody.','这首歌曲调悲伤。'}

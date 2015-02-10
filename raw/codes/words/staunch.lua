@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["staunch"]={"staunch","[stɔːn(t)ʃ]","[stɔntʃ]","vt.止住",'vt.止住,止血|||adj.坚固的,坚强的,忠实可信的，不漏水的|||=stanch','He\'s a staunch supporter of the monarchy.','他是君主制的坚定拥护者。','I helped her staunch cut.','我帮助她止住了伤口的血。'}

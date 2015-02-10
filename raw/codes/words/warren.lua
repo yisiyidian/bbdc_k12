@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["warren"]={"warren","['wɒr(ə)n]","['wɔrən]","n.沃伦(男子名)|||[warren]n.大杂院",'n.沃伦(男子名)|||[warren]n.大杂院,养兔场','The offices were a warren of small rooms and passages.','这些办公室房间小，通道窄。','you live in a warren.','你住在大杂院里。'}

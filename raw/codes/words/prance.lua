@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prance"]={"prance","[prɑːns]","[præns]","n.(马)后足立地腾跃",'n.(马)后足立地腾跃,昂首阔步|||vi.腾跃,欢跃,昂首阔步|||vt.使腾跃','That cheeky new secretary just pranced up to me and asked if I worked here!','那个冒失的新秘书兴冲冲地蹦跳到我跟前，问我是否在这里工作。','The children were ||prancing|| about with delight.','孩子们高兴得蹦蹦跳跳。'}

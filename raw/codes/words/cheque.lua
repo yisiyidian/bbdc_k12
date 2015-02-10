@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cheque"]={"cheque","[tʃek]","[tʃɛk]","n.支票",'n.支票','Don\'t forget to date your cheque.','不要忘记在支票上写上日期.','I enclose a cheque in settlement of your account.','兹附支票一张以结清贵处帐目。'}

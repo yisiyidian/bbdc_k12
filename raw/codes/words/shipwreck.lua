@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["shipwreck"]={"shipwreck","['ʃɪprek]","['ʃɪprɛk]","n.遇难船",'n.遇难船,海难|||vt.使遭遇海难','The news of shipwreck soon spread out widely.','船只失事的消息很快就广泛地传开了。','The captain is absolved from all blame and responsibility for the shipwreck.','那位船长被免除了因船只失事而遭致的非难和罪责。'}

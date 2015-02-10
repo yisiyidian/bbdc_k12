@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["determination"]={"determination","[dɪ,tɜːmɪ'neɪʃ(ə)n]","[dɪ,tɝmɪ'neʃən]","n.(正式)决定",'n.(正式)决定,规定,决心,测定,定位','His determination carried him through (the ordeal).','他靠坚定的信心度过了难关.','He confronted his pile of work with determination.','他很坚定地正视这一大堆工作。'}

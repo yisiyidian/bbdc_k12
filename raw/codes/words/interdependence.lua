@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interdependence"]={"interdependence","[,ɪntədɪ'pendəns]","[,ɪntɚdɪ'pɛndəns]","n.互相依赖",'n.互相依赖','We are all vulnerable and need interdependence .','我们都是脆弱的，需要互相依赖','Ture interdependence is important when evaluating the success of teamwork','是否真正相互依赖对于衡量团队成功与否十分重要。'}

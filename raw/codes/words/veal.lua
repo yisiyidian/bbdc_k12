@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["veal"]={"veal","[viːl]","[vil]","n.小牛肉",'n.小牛肉','The posterior portion of a side of beef, lamb, veal, or mutton, including a hind leg and one or two ribs.','后腿肉供食用的牛、小牛、羊或羔羊的一侧后半身，包括一条腿和一些排骨','A thin slice of meat, usually veal or lamb, cut from the leg or ribs.','肉片，肉排从腿部或肋条处切割下来的薄的肉片，通常指牛肉或羊肉'}

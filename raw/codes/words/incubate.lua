@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incubate"]={"incubate","['ɪŋkjʊbeɪt]","['ɪŋkjubet]","v.抱",'v.抱,孵,培养|||v.孵蛋,筑巢,孵化','The virus can incubate for up to ten days after the initial infection.','病毒在初次感染以后可以潜伏长达 10 天。','How to incubate the ideas of science?','如何酝酿科学的思想？'}

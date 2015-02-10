@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["constitution"]={"constitution","[kɒnstɪ'tjuːʃ(ə)n]","['kɑnstə'tʊʃən]","n.组织",'n.组织,宪法,体格','Hunger and disease had weakened his constitution.','他饥饿与疾病交加，体质已削弱。','The country\'s constitution embodies the ideals of freedom and equality.','这个国家的宪法体现了自由和平等的理想。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pint"]={"pint","[paɪnt]","[paɪnt]","n.品脱",'n.品脱','He ordered himself a pint of beer.','他要了一品脱啤酒.','He drank a pint of milk in one go.','他一口气喝了一品脱牛奶.'}

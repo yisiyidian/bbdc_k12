@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inconvenient"]={"inconvenient","[ɪnkən'viːnɪənt]","[,ɪnkən'vinɪənt]","adj.不方便的",'adj.不方便的','This is inconvenient in the extreme.','这极不方便.','Well, this is most inconvenient.','真是的，这叫人非常不便。'}

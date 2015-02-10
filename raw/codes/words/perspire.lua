@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perspire"]={"perspire","[pə'spaɪə]","[pɚ'spaɪɚ]","v.出汗",'v.出汗,流汗','I perspire after I play basketball.','我在打球之后出汗','He began to perspire heavily.','他开始大量出汗。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["debase"]={"debase","[dɪ'beɪs]","[dɪ'bes]","v.贬低",'v.贬低,贬损，（使货币）贬值','Sport is being debased by commercialism.','体育运动的价值受商业化的影响而逐渐下降。','You debase yourself by telling such lies.','你说这些谎话就降低了身份。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ledger"]={"ledger","['ledʒə]","['lɛdʒɚ]","n.总帐",'n.总帐,分类帐|||n.帐簿','A page in a ledger or two facing pages that are assigned a single number.','页帐簿中的一页或相对的两张，只标一个数码','Rule out that entry in the ledger, the transaction was cancelled.','那项交易已取消了，请从分类帐上划去那笔帐目。'}

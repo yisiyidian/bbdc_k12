@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fraudulent"]={"fraudulent","['frɔːdjʊl(ə)nt]","['frɔdʒələnt]","adj.欺诈的",'adj.欺诈的,不正的,不诚实的','The investigation has laid bare their fraudulent scheme.','这个调查把他们的骗局暴露无遗。','Business world combined with a lot of fraudulent deals.','商业世界中充满了欺诈交易。'}

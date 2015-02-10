@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tryptophan"]={"tryptophan","['trɪptəfæn]","['trɪptə,fæn]","n.[生化]色氨酸",'n.[生化]色氨酸','She rates dozens of foods for their levels of tryptophan.','她对数十种食物的色氨酸水平进行了估计。','But almond can also help your sleep because it contains tryptophan and magnesium.','但是杏仁一样可以帮助你的睡眠，因为它富含色氨酸和镁。'}

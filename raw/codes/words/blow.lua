@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["blow"]={"blow","[bləʊ]","[blo]","vt.&vi.吹",'n.吹,打击,殴打|||vt.&vi.吹,风吹,擤（鼻子）|||【口】浪费（机会）','The death of their daughter was a cruel blow.','女儿的死对他们是一个残酷的打击。','He is an agreeable fellow, but likes to blow his own horn.','他是一个随和的人，但就是喜欢自吹自擂。'}

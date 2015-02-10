@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inform"]={"inform","[ɪn'fɔːm]","[ɪn'fɔrm]","vt.通知",'vt.通知；使活跃，使充满；预示|||vi.通知；告发','Please inform me by letter of your plans.','请来信把你的计划告诉我.','If you see anything suspicious, inform the police at once.','你要是看到什么可疑的东西就马上通知警察。'}

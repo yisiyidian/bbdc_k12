@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["wizardry"]={"wizardry","['wɪzədrɪ]","['wɪzɚdri]","n.魔术",'n.魔术,巫术，绝技','The second goal was sheer wizardry.','第二记入球真是神奇。','He has an undeserved reputation for financial wizardry, based upon his supposed expertise in rectifying the damage done by the bubble.','他恢复了泡沫经济所造成的破坏，俨然是一个专业的财政魔法师，但实际上他根本名不副实。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["routine"]={"routine","[ruː'tiːn]","[rʊ'tin]","n.例行公事",'n.例行公事,常规，无聊|||adj.常规的,例行的，乏味的','We must introduce some system into our office routine.','我们须在我们日常公务中建立一些制度.','There was little deviation from his usual routine.','他没有什麽反常的举动.'}

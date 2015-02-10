@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["doorway"]={"doorway","['dɔːweɪ]","['dɔr'we]","n.门口",'n.门口','She bumped her head in the doorway and swore loudly.','她的头撞到门框上, 大骂了一声.','He stood framed in the doorway to the hall.','他站在门口, 堵住通向大厅的路.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nationality"]={"nationality","[næʃə'nælɪtɪ]","[,næʃə'næləti]","n.国籍",'n.国籍,民族','The nationality of the minority groups in that country is still at issue.','在那个国家的少数民族的国籍问题上仍有争论。','She has dual nationality.','她有双重国籍。'}

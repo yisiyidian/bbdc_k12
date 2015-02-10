@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["weed"]={"weed","[wiːd]","[wid]","n.杂草",'n.杂草,菸草|||vi.除草|||vt.除草,摆脱','The garden is choked with weeds.','花园杂草丛生.','There are so many weeds in his field!','他的田里有那么多野草！'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["champion"]={"champion","['tʃæmpɪən]","['tʃæmpɪən]","n.冠军",'n.冠军,拥护者,勇士|||vt.保卫,拥护','He is the undisputed champion.','他是无可争辩的冠军。','My boss asked me to write a profile for the new tennis champion.','我上司让我给这位新网球冠军写篇小传。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["door"]={"door","[dɔː]","[dɔr]","n.门",'n.门','Did you say anything to him or just shut the door in his face?','你对他说了什么还是直接将他拒于门外？','Mrs. Cade\'s house was only a few doors down from her daughter\'s apartment.','从凯德夫人的房子到她女儿的公寓只隔了几座房屋。'}

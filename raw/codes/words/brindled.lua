@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["brindled"]={"brindled","['brɪndld]","['brɪndld]","adj.有斑纹的",'adj.有斑纹的','My mother\'s brindled cat prefer to fishes.','妈妈养的条纹猫喜欢吃鱼。','Zebra is a kind of brindled animals.','斑马是一种有斑纹的动物。'}

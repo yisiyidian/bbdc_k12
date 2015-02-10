@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["unusually"]={"unusually","[ʌn'ju:ʒuəlɪ]","[ʌn'juʒuəli]","adv.异乎寻常地",'adv.异乎寻常地(显著地,非常)','Our gas bill for the last quarter was unusually high.','我们上季度的煤气费异常高.','It won\'t have escaped your notice that I\'ve been unusually busy recently.','你一定注意到了我最近一直忙得不得了.'}

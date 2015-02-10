@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["convene"]={"convene","[kən'viːn]","[kən'vin]","v.集合",'v.集合,召集,召唤|||v.聚集,集合','People were convened here for an emergency meeting.','人们被召集到这里举行紧急会议。','The tribunal will convene tomorrow.','法庭将于明日开庭。'}

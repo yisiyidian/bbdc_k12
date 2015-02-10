@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["voltage"]={"voltage","['vəʊltɪdʒ; 'vɒltɪdʒ]","['voltɪdʒ]","n.电压",'n.电压','A measure of the induced voltage in a circuit caused by a magnetic flux and equal to the flux times the number of turns in the coil that surrounds it.','碰撞，匝链电路中由于磁通量而造成电伏减少的单位，等于穿过一载流线圈的磁通量与线圈匝数之积','Its voltage has not been exceeded.','它的电压没有超过。'}

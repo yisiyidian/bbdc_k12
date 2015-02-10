@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["conceal"]={"conceal","[kən'siːl]","[kən'sil]","vt.隐藏",'vt.隐藏,掩盖','If words were invented to conceal thought, newspapers are a great improvement on a bad invention.','假使语言是为了隐藏思想而被发明的，那么报纸就是对这不良发明的一大改进。','He couldn\'t conceal his envy of me.','他遮掩不住对我的忌妒。'}

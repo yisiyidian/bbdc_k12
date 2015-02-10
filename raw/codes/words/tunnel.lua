@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tunnel"]={"tunnel","['tʌnl]","['tʌnl]","n.隧道",'n.隧道,地下道|||v.挖隧道','The heavy traffic crawled through the narrow tunnel.','拥挤的车辆慢吞吞地穿过狭窄的隧道。','The kid dug a tunnel in the sand.','小孩们在沙堆里挖了一个地道。'}

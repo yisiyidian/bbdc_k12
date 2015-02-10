@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exceptionable"]={"exceptionable","[ɪk'sepʃ(ə)nəb(ə)l; ek-]","[ ik'sepʃənəbl ]","adj.引起反感的",'adj.引起反感的','There are no exceptionable scenes in the play.','这出剧中没有能引起争议的情节.','Frankly speaking, there is nothing exceptionable in his conduct.','坦率地说，他的行为并没有什么不好的地方。'}

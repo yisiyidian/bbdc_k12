@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exorcise"]={"exorcise","['eksɔːsaɪz]","['ɛksɔr,saɪz]","v.除怪",'v.除怪,驱邪','A priest exorcised the ghost from the house.','教士将鬼从房屋中驱走。','||Exorcising|| a ghost is not science.','驱魔不是科学。'}

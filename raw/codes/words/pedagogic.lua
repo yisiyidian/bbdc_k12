@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pedagogic"]={"pedagogic","[,pedə'gɒdʒɪk; -'gɒg-]","[,pɛdə'ɡɑdʒɪk]","adj.教学法的",'adj.教学法的','They show great pedagogic skills.','他们展示了高超的教学技巧。','||Pedagogic|| ability remains vital everywhere.','无论在哪里，教学能力都是至关重要的。'}

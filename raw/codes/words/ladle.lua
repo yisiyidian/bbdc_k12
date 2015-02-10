@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ladle"]={"ladle","['leɪd(ə)l]","['ledl]","n.杓子",'n.杓子,长柄杓|||vt.以杓舀取','Can you ladle the soup out of this deep pan for me?','你能从这个深底盆里舀点汤给我吗？','he isnt one to ladle out praise so when he says good he means it','他可不轻易夸奖人 所以他要是说‘好’ 他一定认为真好'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alive"]={"alive","[ə'laɪv]","[ə'laɪv]","adj.活着的",'adj.活着的,有活力','He was alive to the danger of the work.','他非常清楚这项工作的危险。','The city was all alive when he arrived.','当他到达时，城里非常热闹。'}

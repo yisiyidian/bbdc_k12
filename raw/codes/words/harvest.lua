@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["harvest"]={"harvest","['hɑːvɪst]","['hɑrvɪst]","n.收获(期)",'n.收获(期),成果,收获物|||vt.&vi.收割,收获','The bad harvest led to severe food shortage.','歉收引起食物严重短缺。','We have a plenteous harvest this year.','我们今年取得了大丰收。'}

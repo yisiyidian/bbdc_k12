@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["attentive"]={"attentive","[ə'tentɪv]","[ə'tɛntɪv]","adj.注意的",'adj.注意的,留意的','My husband is very attentive when he\'s at home, but when he\'s away on business he never even thinks to phone me-----out of sight, out of mind.','我丈夫在家时对我很关心，但一出差从不想着给我打电话——真是眼不见，心不想。','Alert to circumstances; attentive.','对周围环境敏感的；留心的'}

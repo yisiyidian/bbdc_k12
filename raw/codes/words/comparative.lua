@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comparative"]={"comparative","[kəm'pærətɪv]","[kəm'pærətɪv]","adj.比较的",'adj.比较的,相当的|||n.对手','The comparative study of folk knowledge and culture.','民俗研究对民间知识和文化的比较研究','To illustrate my point，I have done a comparative analysis.','为说明我的观点, 我做了对比分析.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["essay"]={"essay","['eseɪ]","['ɛse]","n.论文",'n.尝试,短文,论文|||vt.尝试','This essay is admirable in all respects.','这篇文章在各方面都很值得欣赏。','I had turn over my essay to the professor.','我已经把论文交给教授了。'}

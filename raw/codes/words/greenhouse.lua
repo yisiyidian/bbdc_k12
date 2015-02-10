@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["greenhouse"]={"greenhouse","['griːnhaʊs]","['ɡrinhaʊs]","n.温室",'n.温室,暖房','Exotic tropical plants in a greenhouse.','温室里引进的热带植物','Most vegetables we buy in winter are nurtured in the greenhouse.','我们冬天买的大多数蔬菜都是在温室里培育的。'}

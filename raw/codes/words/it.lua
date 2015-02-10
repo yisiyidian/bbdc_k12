@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["it"]={"it","[ɪt]","[ɪt]","pron.它",'pron.它','There is a rosebush near the fence and it is very beautiful.','篱笆附近有一丛玫瑰，长得非常美丽。','Where\'s your car?|| It||\'s in the garage.','你的汽车在哪儿呢？在车库里。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["intimidate"]={"intimidate","[ɪn'tɪmɪdeɪt]","[ɪn'tɪmɪdet]","vt.威胁",'vt.威胁,恐吓,胁迫','He said he would never be intimidated by big names and authorities','他说他绝不会被名人，权威所吓倒。','felt intimidated by his opponent\'s power and prestige.','为他对手的权力和威望吓倒。'}

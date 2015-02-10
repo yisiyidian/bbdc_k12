@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["appreciable"]={"appreciable","[ə'priːʃəb(ə)l; -ʃɪə-]","[ə'priʃəbl]","adj.可感知的",'adj.可感知的,可评估的，很可观的','The increase in salary will be appreciable.','薪水的增加将很可观。','There is no appreciable difference between the two.','两者之间没有什么可感知的区别。'}

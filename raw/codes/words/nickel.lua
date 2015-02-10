@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["nickel"]={"nickel","['nɪk(ə)l]","['nɪkl]","n.镍",'n.镍,镍币,五分镍币|||vt.镀镍于','Eddy try to nickel and dime his way through life.','埃迪想脚踏实地慢慢地取得成功。','Rick found a sure-enough nickel.','里克发现一个纯正的镍币。'}

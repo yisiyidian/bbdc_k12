@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["view"]={"view","[vjuː]","[vju]","n.视野",'n.视野,风景,见解,方法,检查|||vt.把...视为,看,考虑','The valley was hidden from view in the mist.','溪谷隐没在雾霭之中，看不见了。','His view of life is different from yours.','他的人生观与你的不同。'}

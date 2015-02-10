@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reverberate"]={"reverberate","[rɪ'vɜːbəreɪt]","[rɪ'vɝbə'ret]","v.回响",'v.回响,反响,反射','The noise of the shot reverberated in the room.','房间里回响着枪声。','The roar of rushing water is ||reverberating|| in the gorge.','水流的轰鸣声在峡谷里回荡。'}

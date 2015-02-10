@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["reparation"]={"reparation","[,repə'reɪʃ(ə)n]","[ˌrepəˈreɪʃn]","n.补偿",'n.补偿,赔偿','Whenever you find your wrongdoing, be quick with your reparation.','任何时候当你发现自己的错误，要尽快去弥补和挽救。','I\'ll demand reparation from the company.','我将要求公司给予赔偿。'}

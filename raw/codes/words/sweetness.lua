@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sweetness"]={"sweetness","['switnəs]","[ 'swi:tnis ]","n.美味",'n.美味,芳香,美妙','Beauty in a woman\'s face, like sweetness in a woman\'s lips, is a matter of taste.','女性面貌之美，有如其香唇之甜，是趣味（嗜好）的问题。','The slave has never experienced the sweetness of freedom.','这个奴隶从未体验过自由的快乐。'}

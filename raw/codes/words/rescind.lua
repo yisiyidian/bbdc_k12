@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["rescind"]={"rescind","[rɪ'sɪnd]","[rɪ'sɪnd]","v.废除",'n.(rescission)|||adj.退还,取消|||v.废除,取消','If one party fails to honor the contract, the other party is entitled to rescind it.','如果一方不履行合同，另一方就有权撤消该合同。','They accepted his advice and rescinded the original plan.','他们听从了他的劝告，撤销了原计划。'}

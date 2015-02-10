@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["farmer"]={"farmer","['fɑːmə]","['fɑmɚ]","n.农夫",'n.农夫','The farmer decided to leave the land fallow for a year.','农夫决定让土地休耕一年。','The farmer paid 3 laborers to gather the crop.','农场主雇佣3名工人收割庄稼。'}

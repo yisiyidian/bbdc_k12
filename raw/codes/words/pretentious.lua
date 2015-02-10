@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pretentious"]={"pretentious","[prɪ'tenʃəs]","[prɪ'tɛnʃəs]","adj.自负的",'adj.自负的,自命不凡的，炫耀的','His response was full of pretentious nonsense.','他的答复是一派荒谬的虚夸之词。','He is a talented but pretentious writer.','他是一个有才华但自命不凡的作家。'}

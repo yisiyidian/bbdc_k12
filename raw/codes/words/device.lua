@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["device"]={"device","[dɪ'vaɪs]","[dɪ'vaɪs]","n.装置",'n.装置,设计,策略,设备','left the child to her own devices for an hour in the afternoon.','允许孩子在下午有一个小时的自由支配时间','The device will be in production by the end of the year.','该装置将於年底投入生产.'}

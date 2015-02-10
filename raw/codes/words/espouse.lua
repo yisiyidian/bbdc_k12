@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["espouse"]={"espouse","[ɪ'spaʊz; e-]","[ɪ'spaʊz]","vt.支持",'vt.支持,赞成,嫁娶','This organization espouses the socialist philosophy.','这个组织支持社会主义哲学。','The idea he espouses is totally incomprehensible to me.','他信奉的观点在我看来完全不可理喻。'}

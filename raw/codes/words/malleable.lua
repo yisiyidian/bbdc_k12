@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["malleable"]={"malleable","['mælɪəb(ə)l]","['mælɪəbl]","adj.可塑的",'adj.可塑的,易改变的','The young are more malleable than the old.','年轻人比老年人容易受影响。','The boy is young and malleable, so the peer pressure affacted him greatly.','那个男孩年轻并且易受外界影响，因此他同伴的言行对他的影响很大。'}

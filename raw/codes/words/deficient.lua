@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["deficient"]={"deficient","[dɪ'fɪʃ(ə)nt]","[dɪ'fɪʃnt]","adj.不足的",'adj.不足的,不充分的,有缺陷的','We are deficient in hands.','我们人手不够。','One that is physically or mentally deficient.','有缺陷的人身心不健全的人'}

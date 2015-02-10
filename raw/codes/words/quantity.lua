@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["quantity"]={"quantity","['kwɒntɪtɪ]","['kwɑntəti]","n.量",'n.量,数量,大量','The new sales director is still a bit of an unknown quantity.','新来的销售部主任大家还不大了解。','This company is more concerned with quality than with quantity.','这家公司对质量比对产量更重视.'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fragile"]={"fragile","['frædʒaɪl]","['frædʒəl]","adj.易碎的",'adj.易碎的,脆的,精细的','Human teeth are really fragile,  so please take care of them.','牙齿容易坏，要保护好它们','||Fragile|| handle with care.','易碎品--小心轻放.'}

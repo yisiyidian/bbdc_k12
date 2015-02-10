@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["exemplify"]={"exemplify","[ɪg'zemplɪfaɪ; eg-]","[ɪɡ'zɛmplɪfaɪ]","vt.例证",'vt.例证,例示','I\'m going to exemplify one or two of these points.','我打算就论点中的一、两个方面举例说明。','This painting ||exemplifies|| the artist\'s early style.','这幅画是该画家早期艺术风格的典型。'}

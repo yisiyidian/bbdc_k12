@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["novice"]={"novice","['nɒvɪs]","['nɑvɪs]","n.新手",'n.新手,初学者','He is a novice at swimming.','他是一个游泳新手。','As a novice writer, this is something I\'m interested in.','作为初涉写作的人，我对此很感兴趣。'}

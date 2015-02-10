@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["steerage"]={"steerage","['stɪərɪdʒ]","['stɪrɪdʒ]","n.最低票价的舱位",'n.最低票价的舱位,士官的二等室,把舵','steerage','最低票价的舱位,士官的二等室,把舵','my money is only for the steerage','我的钱只够最低票价'}

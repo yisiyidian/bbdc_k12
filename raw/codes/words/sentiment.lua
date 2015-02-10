@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sentiment"]={"sentiment","['sentɪm(ə)nt]","['sɛntɪmənt]","n.感情",'n.感情,情趣,意见，观点,多愁善感','||Sentiment|| in the town is now in favor of a cut in tax.','市民的情绪是赞成减税。','This author runs to sentiment.','这个作家流于伤感。'}

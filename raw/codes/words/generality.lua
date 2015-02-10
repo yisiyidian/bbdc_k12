@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["generality"]={"generality","[dʒenə'rælɪtɪ]","[,dʒɛnə'ræləti]","n.一般性",'n.一般性，概论，大部分','Nothing happens without a cause is a generality.','“凡事必有因”是一个通则。','The generality of Swedes are blond.','瑞典人大部分是金发的。'}

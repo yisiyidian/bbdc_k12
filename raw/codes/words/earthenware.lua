@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["earthenware"]={"earthenware","['ɜːθ(ə)nweə]","['ɝθnwɛr]","n.陶器",'n.陶器','She poured some water into the earthenware jug.','她向那个陶罐里倒了些水。','||Earthenware|| has an advantage over wood in being more easily kept clean.','陶器的优点在于比木器更容易保持清洁'}

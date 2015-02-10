@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["materialize"]={"materialize","[mə'tɪrɪəlaɪz]","[ mə'tiəriəlaiz ]","v.赋与实质",'v.赋与实质,使体现,物质化|||v.成有形,体现,实现','Your promises have failed to materialize.','你没有信守诺言.','He claimed that he could make ghosts materialize.','他声称他可以使鬼魂现身.'}

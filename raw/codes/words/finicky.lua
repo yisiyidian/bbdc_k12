@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["finicky"]={"finicky","['fɪnɪkɪ]","['fɪnɪki]","adj.苛求的(过分讲究的",'adj.苛求的(过分讲究的,小题大作的)','This job is too finicky for me.','我做不了这么细致的工作。','Even the most finicky eater will find something appetizing here.','即使是最挑剔的食客在这里也会找到让人胃口大开的美食。'}

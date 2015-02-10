@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["sixteen"]={"sixteen","[sɪks'tiːn; 'sɪkstiːn]","[,sɪks'tin]","num.十六",'num.十六|||pron.&adj.十六(个,只...)','She is sixteen years old but has a mental age of five.','她十六岁, 而智力年龄是五岁.','He left his parents and began an independent life at sixteen.','他在十六岁时离开双亲独立生活。'}

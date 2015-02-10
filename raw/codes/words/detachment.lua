@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["detachment"]={"detachment","[dɪ'tætʃm(ə)nt]","[dɪ'tætʃmənt]","n.分离",'n.分离，分遣，冷漠，公正','He watched her suffering with clinical detachment.','他冷静客观地看著她遭受的痛苦.','The detachment of the main force was ambushed by the enemy.','从主力部队派遣的小分队遭到敌人的伏击。'}

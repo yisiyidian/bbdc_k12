@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["gasp"]={"gasp","[gɑːsp]","[ɡæsp]","n.喘气",'n.喘气|||v.喘气,喘息,渴望','The team were at their last gasp when the whistle went.','球队正在做最后拼搏， 这时哨声响了。','He gasped out the message.','他喘着气说出了这个消息。'}

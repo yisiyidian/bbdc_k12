@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["chilli"]={"chilli","['tʃɪlɪ]","['tʃɪli]","n.(干)辣椒",'n.(干)辣椒','How does chilli taste?','辣椒的味道是怎样的？','The chicken was garnished with coriander and red chilli.','这道鸡配上了芫荽和红辣椒。'}

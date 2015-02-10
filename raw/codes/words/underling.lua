@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["underling"]={"underling","['ʌndəlɪŋ]","['ʌndɚlɪŋ]","n.部下",'n.部下,下僚,下属','...underlings who do the dirty work.','...干肮脏勾当的走卒们。','underling','部下'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["distort"]={"distort","[dɪ'stɔːt]","[dɪ'stɔrt]","vt.变形",'vt.变形,扭曲,歪曲|||vi.歪曲','How dare he distort the facts so brazenly!','他怎么敢如此肆无忌惮地歪曲事实！','The government was accused of having systematically distorted the protester\'s case.','政府因为有计划地歪曲抗议者的观点而受到责难。'}

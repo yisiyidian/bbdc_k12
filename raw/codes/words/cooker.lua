@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cooker"]={"cooker","['kʊkə]","['kʊkɚ]","n.炊具",'n.炊具，炉灶','The cooker won\'t fit in/into your new kitchen.','你的新厨房装不下这套炉具.','Where does the cooker connect with the gas-pipe?','煤气炉在什麽地方与煤气管道衔接?'}

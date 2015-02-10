@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pulchritude"]={"pulchritude","['pʌlkrɪtjuːd]","[ 'pʌlkritju:d ]","n.美丽",'n.美丽','Her dress shows her pulchritude to advantage.','她的裙子衬托出了她的美丽。','Her pulchritude attracts lots of men.','她的美丽让很多男人心动。'}

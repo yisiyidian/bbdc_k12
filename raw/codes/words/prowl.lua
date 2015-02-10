@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["prowl"]={"prowl","[praʊl]","[praʊl]","n.潜行",'n.潜行,徘徊,悄悄踱步|||v.潜行以觅食,窥伺,逡巡于','I saw someone prowling around among the trees.','我见有人在树林里鬼鬼祟祟地走动。','He saw a hungry wolf on the prowl with his telescope.','他通过望远镜看到了一头四处觅食的饿狼。'}

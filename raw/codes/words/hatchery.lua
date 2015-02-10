@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hatchery"]={"hatchery","['hætʃərɪ]","['hætʃəri]","n.孵卵所",'n.孵卵所','The park authorities operated a trout hatchery.','公园管理处建造了一个鲑鱼孵化场.','The hatchery is very advanced','这个孵化所非常先进'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cram"]={"cram","[kræm]","[kræm]","v.塞满",'v.塞满,填满,猛吃，仓促备考|||n.仓促备考，挤成一堆的人群|||Cram|||n.克拉姆（姓氏）','My son go to cram school every evening.','我的儿子每晚都去上补习班。','How do they all cram into that doll\'s house?','那小小的房子怎麽挤得下他们大家呢?'}

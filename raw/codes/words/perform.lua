@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perform"]={"perform","[pə'fɔːm]","[pɚ'fɔrm]","v.执行",'v.执行,表演,做','Lasers can be used to perform operations nowadays.','现在激光可以用来做手术。','That notary is authorised to perform the certain legal functions.','公证人被授权执行某些法律职能。'}

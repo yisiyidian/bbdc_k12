@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["airport"]={"airport","['eəpɔːt]","['ɛr'pɔrt]","n.机场",'n.机场','I\'m bargaining on your help to drive us to the airport.','我指望着你开车送我们到机场','There was a great outcry about the construction of the new airport.','公众强烈反对修建该机场。'}

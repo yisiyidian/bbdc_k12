@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["supplement"]={"supplement","['sʌplɪm(ə)nt]","['sʌplɪmənt]","n.补充物",'n.补充物,增刊|||vt.补充,增补','She gives private lessons to supplement her income.','她给私人授课以贴补收入.','I never refuse odd jobs to supplement my income——it\'s all grist to the mill.','我为增加收入, 对於做零活总是来者不拒--多多益善。'}

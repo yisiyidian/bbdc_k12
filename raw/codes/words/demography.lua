@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["demography"]={"demography","[dɪ'mɒgrəfɪ]","[dɪ'mɑɡrəfi]","n.人口统计学",'n.人口统计学','Such an abrupt change is hard to explain by demography alone, however.','如此剧烈的变化是很难仅仅用人口统计学解释的。','of or relating to demography.','属于或有关人口统计学的。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["entomology"]={"entomology","[,entə'mɒlədʒɪ]","[,ɛntə'mɑlədʒi]","n.昆虫学",'n.昆虫学','His hobby is entomology.','他爱好昆虫学。','darwin was addicted to entomology, when he is young.','达尔文小时候痴迷昆虫学。'}

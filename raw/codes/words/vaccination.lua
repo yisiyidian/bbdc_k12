@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vaccination"]={"vaccination","[,væksɪ'neɪʃən]","[,væksn'eʃən]","n.接种疫苗",'n.接种疫苗,种痘','Our vet is very efficient; he sends us a reminder when the cat is due for a booster vaccination as a matter of course.','我们的兽医工作效率很高，当猫要按时免疫接种时，他总给我们寄一张提醒单来。','I\'m immune to smallpox as a result of vaccination.','我种过牛痘了, 所以对天花有免疫力.'}

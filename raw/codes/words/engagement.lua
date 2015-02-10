@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["engagement"]={"engagement","[ɪn'geɪdʒm(ə)nt; en-]","[ɪn'ɡedʒmənt]","n.诺言",'n.诺言,约会,婚约,交战,雇用,(机器零件等)啮合','Fidelity to engagement is a virtue.','信守诺言是一种美德。','I have numerous engagements for next year.','我明年有许多约会。'}

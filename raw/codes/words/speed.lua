@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["speed"]={"speed","[spiːd]","[spid]","n.速度",'n.速度,迅速,感光度,超速|||vt.加速,催促,促进|||vi.超速,加速,进展','The train soon speeded up.','火车不久就加快了速度。','We\'d better speed up if we want to get there in time.','如果我们想准时到达那里，我们最好加快速度。'}

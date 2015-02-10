@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vagary"]={"vagary","['veɪg(ə)rɪ]","[ 'veiɡəri ]","n.奇特",'n.奇特,好奇,奇特行为，变幻莫测','The style of vagary and ghastfulness and the sense of mystery are full of thestory of Allan.','爱伦的小说风格奇特恐怖，充满了神秘感。','The vagary weather is peculiar to Wuhan.','这多变的天气为武汉所特有。'}

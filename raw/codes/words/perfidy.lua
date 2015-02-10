@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["perfidy"]={"perfidy","['pɜːfɪdɪ]","['pɝfədi]","n.不诚实",'n.不诚实,不忠','act of perfidy','背信弃义的行为','In Act 2 he learns of Giovanni\'s perfidy and swears revenge.','//'}

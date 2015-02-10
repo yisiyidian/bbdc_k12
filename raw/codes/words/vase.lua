@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["vase"]={"vase","[vɑːz]","[veɪz]","n.花瓶",'n.花瓶','The flaw in this vase makes it less valuable.','这个花瓶因为有点缺陷，不那么值钱了。','That\'s an alabaster vase.','那是个雪花石膏做的花瓶。'}

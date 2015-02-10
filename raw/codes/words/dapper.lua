@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dapper"]={"dapper","['dæpə]","['dæpɚ]","adj.衣冠楚楚的",'adj.衣冠楚楚的,干净的','He is a dapper little salesman in a business suit.','他是一个穿西装的矮小精悍的推销员。','a dapper little fellow.','矫健的小伙子。'}

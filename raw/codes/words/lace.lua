@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["lace"]={"lace","[leɪs]","[les]","n.饰带",'n.饰带,花边,缎带|||v.结带子,饰以花边','Jewelry and lace are mostly feminine belongings.','珠宝和蕾丝大多是女性用品。','I help him to lace up his boots.','我帮他系好靴子的鞋带。'}

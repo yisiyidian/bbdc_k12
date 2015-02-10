@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["decorate"]={"decorate","['dekəreɪt]","['dɛkəret]","vt.装饰",'vt.装饰,装修,授予某人奖章或其他奖状','Several soldiers were decorated for bravery.','数名士兵因英勇而受嘉奖。','We decorated the house for Christmas.','我们装饰房屋过圣诞节。'}

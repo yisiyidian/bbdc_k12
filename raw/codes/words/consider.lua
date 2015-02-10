@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["consider"]={"consider","[kən'sɪdə]","[kən'sɪdɚ]","vt.考虑",'vt.考虑,思考,认为','He will be considered a weak leader.','他会被认为是个软弱无能的领导人。','Your suggestion shall be carefully considered.','你的建议会得到仔细考虑的。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["qualification"]={"qualification","[,kwɒlɪfɪ'keɪʃ(ə)n]","[,kwɑlɪfɪ'keʃən]","n.资格",'n.资格,条件,限制','What sort of qualifications do you need for the job?','做这项工作需要什么资格？','I can recommend him without qualification.','我可以毫无保留地推荐他。'}

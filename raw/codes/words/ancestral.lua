@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ancestral"]={"ancestral","[æn'sestr(ə)l]","[æn'sɛstrəl]","adj.祖先的",'adj.祖先的,祖传的','We should study our ancestral achievements.','我们应该学习祖先的成就。','They kept their ancestral customs.','他们保持了祖辈的习俗。'}

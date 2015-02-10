@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["engraving"]={"engraving","[ɪn'greɪvɪŋ; en-]","[ɪn'ɡrevɪŋ]","n.雕刻",'n.雕刻,镌版术,雕版|||动词engrave的现在分词','I bought an old engraving of the high street.','我买了一张‘大街’的旧版画','The art of paper cutting has assimilated many techniques used in wood engraving.','这些刻纸吸收了版画的创作技巧'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["tonic"]={"tonic","['tɒnɪk]","['tɑnɪk]","n.补药",'n.补药,奎宁水,[音]主调音或基音,|||adj.滋补的,振奋精神的,[医]肌肉紧张的,[音]主音的','This tonic will work miracles for your depression.','这种补药对治疗你的忧郁症十分有效。','The good news acted as a tonic on us all.','那个好消息让我们大家欢欣鼓舞。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discourteous"]={"discourteous","[dɪs'kɜːtjəs]","[dɪs'kɝtɪəs]","adj.失礼的",'adj.失礼的,无礼貌的','It was discourteous of you to arrive late.','你迟到了, 真没礼貌.','It would be discourteous for young people to ignore their parents\' basic request for living together.','年轻人无视父母要求住在一起的基本需求是无礼的。'}

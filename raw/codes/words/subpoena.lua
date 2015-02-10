@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["subpoena"]={"subpoena","[sə'piːnə]","[sə'pinə]","n.传票",'n.传票|||vt.传审,传讯','Failure of a witness or party to appear in response to a subpoena or notice is called nonappearance.','证人或当事人接到传票或通知后未现身，叫做未出庭。','He has been served with a subpoena to answer the charges in court.','他接到传票要出庭应诉。'}

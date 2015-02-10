@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pavilion"]={"pavilion","[pə'vɪljən]","[pə'vɪlɪən]","n.大帐蓬",'n.大帐蓬,观众席,楼阁|||vt.搭帐蓬','Do not you love that pavilion?','你不喜欢那座亭子吗？','A pavilion is halfway up the hill.','山的半中腰有一座亭子。'}

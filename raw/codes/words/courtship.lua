@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["courtship"]={"courtship","['kɔːtʃɪp]","[ 'kɔ:tʃip ]","n.求爱",'n.求爱,求婚,求爱时期','His courtship swept her off her feet.','她立即接受了他的求婚。','She was swept off her feet by a whirlwind courtship.','狂热的求爱使她控制不住自己的感情。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["cacophony"]={"cacophony","[kə'kɒf(ə)nɪ]","[kə'kɑfəni]","n.刺耳的声音",'n.刺耳的声音，杂音','A cacophony of horns was heard during the traffic jam.','交通阻塞时，响起一片刺耳的喇叭声。','All around was bubbling a cacophony of voices.','周围人声嘈杂。'}

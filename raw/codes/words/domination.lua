@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["domination"]={"domination","[dɒmɪ'neɪʃ(ə)n]","[,dɑmə'neʃən]","n.支配",'n.支配,控制,管辖|||（复数）dominations:[宗]主天使','She longed to escape from her mother\'s domination.','她渴望摆脱母亲的操纵.','All the rigid rule of his forebears, all the domination of an unjust social order, grip him.','父辈的严峻的法规, 不公平的社会制度, 把他牢牢地控制住了。'}

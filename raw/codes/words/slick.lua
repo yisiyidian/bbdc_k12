@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["slick"]={"slick","[slɪk]","[slɪk]","adj.光滑的(巧妙的",'adj.光滑的(巧妙的,完全的,老一套的,第一流的)|||adv.滑溜地(直接地)','The hurricane carried away the roof as slick as a whistle.','飓风把屋顶不费吹灰之力地刮掉了。','I advised them to watch out for slick spots on the sidewalk.','我叫他们当心人行道上路滑的地方。'}

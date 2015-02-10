@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["overlord"]={"overlord","['əʊvəlɔːd]","['ovɚlɔrd]","n.大君主",'n.大君主,最高君主|||n.外星人','Operation ||Overlord||.','大封主作战行动。','A Mafia overlord; a Mafia organization.','黑手党大地主；黑手党组织'}

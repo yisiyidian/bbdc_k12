@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discomfort"]={"discomfort","[dɪs'kʌmfət]","[dɪs'kʌmfɚt]","n.不适",'n.不便之处,不适|||vt.使不适','She still suffers considerable discomfort from her injury.','她因那次受伤至今仍感不适。','My discomfort is caused by such nasty shampoo','我的不适是由这糟糕的洗发水引起的'}

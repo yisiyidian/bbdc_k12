@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pump"]={"pump","[pʌmp]","[pʌmp]","n.抽水机",'n.抽水机,打气筒,心脏,抽水,轻软舞鞋|||vt.抽水,打气,用泵输送,盘问,涌出|||vi.用泵抽水,快速上下(或内外)运动','Can you lend me your bicycle pump?','能把你的打气筒借给我吗？','It\'s hard work to pump facts into unwilling students.','向不自觉的学生灌输知识并非易事。'}

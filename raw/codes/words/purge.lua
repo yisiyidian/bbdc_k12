@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["purge"]={"purge","[pɜːdʒ]","[pɝdʒ]","n.整肃",'n.整肃,清除,泻药,净化|||vt.净化,清除,摆脱|||vi.清除,通便,腹泻,变得清洁','Take some purgative and it will help you purge your bowels of bad matter.','吃点泻药有助于你将肠胃中的有害物质除去。','Our team need to be purged immediately.','我们的队伍需要立即进行整肃。'}

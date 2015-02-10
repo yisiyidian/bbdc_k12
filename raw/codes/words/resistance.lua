@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["resistance"]={"resistance","[rɪ'zɪst(ə)ns]","[rɪ'zɪstəns]","n.抵抗力",'n.抵抗力,反抗,反抗行动;阻力,电阻;反对|||adj.抵抗的','Her resistance to the proposal has crumpled.','她对这个建议的抵触情绪已化为乌有了。','We anticipate that we will meet a certain amount of resistance to our plan.','我们预料我们的计划会遇到一些人的反对。'}

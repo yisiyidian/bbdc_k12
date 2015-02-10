@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["inexpedient"]={"inexpedient","[ɪnɪk'spiːdɪənt; ɪnek-]","[,ɪnɪk'spidɪənt]","adj.不适当的",'adj.不适当的,不明智的','It would be inexpedient to inform them at this stage.','在目前阶段就通知他们很不妥当.','an inexpedient tactic.','不明智的战术'}

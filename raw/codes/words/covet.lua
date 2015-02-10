@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["covet"]={"covet","['kʌvɪt]","['kʌvət]","v.妄想",'v.妄想,垂涎,贪','The Asian peoples covet the right to shape their own free destiny.','亚洲人民渴望开创自己的自由生活的现实，这十分重要。','All covet, all lose.','贪多损失大。'}

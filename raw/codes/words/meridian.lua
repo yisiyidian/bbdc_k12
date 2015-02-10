@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["meridian"]={"meridian","[mə'rɪdɪən]","[mə'rɪdɪən]","n.子午线",'n.子午线,经线,顶点，正午|||adj.子午线的,日中的,顶点的','All places on the same meridian have the same longitude.','在同一子午线上的地方都有相同的经度.','He is at the meridian of life.','他正值壮年。'}

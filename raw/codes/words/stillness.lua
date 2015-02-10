@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["stillness"]={"stillness","['stɪlnɪs]","['stɪlnəs]","n.沉静",'n.静止,沉静','The stillness was rent by thunderous applause.','雷鸣般的掌声打破了寂静。','There was a sudden stillness in the air.','空中突然间一片沉寂.'}

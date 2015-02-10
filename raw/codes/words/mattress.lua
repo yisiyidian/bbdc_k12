@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["mattress"]={"mattress","['mætrɪs]","['mætrəs]","n.床垫",'n.床垫','A narrow, hard bed or straw-filled mattress.','草垫一种窄的硬床或装满草的垫子','An inflatable mattress.','一个充气床垫'}

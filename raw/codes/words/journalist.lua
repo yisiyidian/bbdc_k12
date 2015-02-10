@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["journalist"]={"journalist","['dʒɜːn(ə)lɪst]","['dʒɝnəlɪst]","n.记者",'n.记者,新闻工作者','The journalist has handed in her copy.','这个女记者交了稿.','He\'s a journalist on the Daily Telegraph\'.','他是《每日电讯报》的记者.'}

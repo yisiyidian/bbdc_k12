@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["incongruity"]={"incongruity","[,ɪnkɒŋ'gruːɪtɪ]","[,ɪnkɑŋ'grʊəti]","n.不调和",'n.不调和,不一致,不配合','She smiled at the incongruity of the question.','面对这样突兀的问题，她笑了','I\'m completely bewildered by the constant incongruity of his words and behavior.','他总是言行不一，弄得我晕头转向。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["invitation"]={"invitation","[ɪnvɪ'teɪʃ(ə)n]","[,ɪnvɪ'teʃən]","n.邀请",'n.邀请','He made a refusal of her invitation.','他拒绝了她的邀请。','She may be offended if you don\'t reply to her invitation.','她请你, 你要是不回个信儿就可能把她得罪了.'}

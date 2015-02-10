@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["discredit"]={"discredit","[dɪs'kredɪt]","[dɪs'krɛdɪt]","vt.使...不可信",'vt.使...不可信,怀疑,损害...的信用|||n.失信,怀疑,不信任','His attempt to discredit his opponent boomeranged on him when he was charged with libel.','他企图败坏对手名声反而自食其果，被控诽谤。','He said such methods would discredit the party worldwide.','他说这一举措会让该政党在全世界名誉扫地。'}

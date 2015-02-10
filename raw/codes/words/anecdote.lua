@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["anecdote"]={"anecdote","['ænɪkdəʊt]","['ænɪkdot]","n.轶事",'n.轶事,奇闻','Pete was telling them an anecdote about their mother.','皮特正在给他们讲一件他们母亲的趣闻。','He told me some anecdote about our English teacher.','他告诉了我几件英语老师的趣事。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["eye"]={"eye","[aɪ]","[aɪ]","n.眼睛",'n.眼睛|||v.看,注视','I hope I never set eyes on him again.','我希望永远不要再见到他。','How did you know I was behind you? You must have eyes in the back of your head.','你怎么知道我在你後边？你脑袋後面准是长眼睛了吧。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["announcer"]={"announcer","[ə'naʊnsə]","[ə'naʊnsɚ]","n.广播员",'n.广播员,告知者','The announcer led with the day\'s top stories.','播音员以一天中的头条事件为开始','If that radio announcer doesn\'t get off the air, I\'ll stop breathing it.','要是那无线电广播员再不停止，我可就不要听下去了。'}

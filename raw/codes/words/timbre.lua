@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["timbre"]={"timbre","['tæmbə]","['tæmbɚ]","n.音色",'n.音色,音质','Her timbre is still like a child although he has been more than 20 years old.','虽然她已经二十多岁了， 声音还是像个孩子。','Pianos which have a pleasant timbre are of higher price.','音品好的钢琴价格往往也比一般的高。'}

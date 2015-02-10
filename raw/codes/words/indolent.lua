@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indolent"]={"indolent","['ɪnd(ə)l(ə)nt]","['ɪndələnt]","adj.懒惰的",'adj.懒惰的，慢性的','I don\'t want to make friends with indolent persons.','我不喜欢和懒惰的人交朋友。','He is indolent about everything.','他对什么事都没兴趣。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["upturn"]={"upturn","['ʌptɜːn]","['ʌptɝn]","n.情况好转",'n.情况好转|||v.使...向上,转朝上,挖掘','Company profits have declined over the last three years but there are signs of an upturn on the horizon.','公司的利润在过去的３年中持续下降，不过，好转的兆头已露端倪。','An upturn in the sales figures delighted our manager.','销售额的增长使我们的经理很高兴。'}

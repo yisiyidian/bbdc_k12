@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["bloc"]={"bloc","[blɒk]","[ 'blɔk ]","n.集团",'n.集团','They left the meeting en bloc.','他们一起离开了会场.','Nations in the Communist bloc.','共产主义集团的国家'}

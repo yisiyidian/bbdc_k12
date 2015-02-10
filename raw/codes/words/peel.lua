@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["peel"]={"peel","[piːl]","[pil]","n.皮",'n.皮|||vt.削皮,剥落|||vi.脱皮,脱衣服,脱离','The bark of plane trees peels off regularly.','悬铃木的树皮到时候就脱落。','One squadron peeled off to attack enemy bombers.','一中队战机脱离编队攻击敌轰炸机群。'}

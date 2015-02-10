@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["indicator"]={"indicator","['ɪndɪkeɪtə]","['ɪndɪketɚ]","n.指示器",'n.指示器,指示剂|||[计算机]指示符','He talks about economic growth as a great indicator for freedom, I agree with him.','他论及经济增长是自由的一个有力的显示器，我同意。','An indicator or a sighting apparatus on a plane table, used in angular measurement.','旋标装置飞机控制板上的指示器或观测仪，用来测量角度'}

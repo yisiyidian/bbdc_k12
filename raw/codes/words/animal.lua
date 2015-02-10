@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["animal"]={"animal","['ænɪm(ə)l]","['ænɪml]","n.动物",'n.动物，兽，牲畜；[俚]家畜，牲口；[俚]畜生（一般的人）；兽性|||adj.动物的；肉体的；肉欲的','The jackal is a wild animal in Africa and Asia.','豺狼是产于亚非的一种野生动物。','A dog is a vertebrate animal.','狗是脊椎动物。'}

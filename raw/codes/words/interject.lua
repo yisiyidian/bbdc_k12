@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["interject"]={"interject","[,ɪntə'dʒekt]","[,ɪntɚ'dʒɛkt]","v.插话",'v.插话','If I may interject a note of caution into the discussion...','请容我在讨论中插句话, 要注意...','When I brought up the question of funding, he quickly interjected that it had been settled.','我刚提出筹集基金的问题, 他急忙插嘴说问题已经解决了.'}

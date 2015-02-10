@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["dusk"]={"dusk","[dʌsk]","[dʌsk]","n.黄昏",'n.黄昏,薄暮|||vi.(天)变黑,变暗|||vt.把…变黑变暗|||adj.颜色暗沉的,昏暗的','We made a landfall at dusk after three weeks at sea.','在海上航行三周後的一个黄昏, 我们看到了陆地.','It seems probable that he will arrive before dusk.','他似乎有可能黄昏前到达.'}

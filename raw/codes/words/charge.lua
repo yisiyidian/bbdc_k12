@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["charge"]={"charge","[tʃɑːdʒ]","[tʃɑrdʒ]","n.费用",'n.电荷,指控,费用;照顾,责任|||vt.&vi控诉,加罪于,要价,赊帐,充电,管理','He became his uncle\'s charge after his parents died.','他在父母去世後，由叔父抚养。','As long as you\'ve paid in advance we won\'t charge you for delivery.','只要你预先付款，我们就不收你送货费。'}

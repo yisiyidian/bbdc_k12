@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["pine"]={"pine","[paɪn]","[paɪn]","n.松树",'n.松树,松木|||vi.消瘦,憔悴,渴望','The pine trees defy severe cold.','松树不畏严寒。','He pined away after his daughter died.','他的女儿死后，他逐渐变得憔悴了。'}

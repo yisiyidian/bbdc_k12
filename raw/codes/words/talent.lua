@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["talent"]={"talent","['tælənt]","['tælənt]","n.才能",'n.才能,人才,天资','She\'s got such talent.','她有非凡的才能.','The show is a veritable reservoir of new talent.','这个演出真是新秀集萃。'}

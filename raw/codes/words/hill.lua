@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hill"]={"hill","[hɪl]","[hɪl]","n.小山",'n.小山,小堆,斜坡|||vt.堆起,培土','Have you seen the hill whereon a tower is standing?','你看到耸立着一座塔的那座小山了吗？','Trees crowned the hill.','树木覆盖着小山。'}

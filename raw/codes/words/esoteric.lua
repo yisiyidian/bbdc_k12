@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["esoteric"]={"esoteric","[,esə'terɪk; ,iːsə-]","[,ɛsə'tɛrɪk]","adj.秘传的",'adj.秘传的，神秘的，难懂的','Some words are really too esoteric for this dictionary.','有些单词实在太生僻了，未收入本词典内。','This is a really esoteric word.','这真是一个生僻的词汇。'}

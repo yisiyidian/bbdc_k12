@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["permanently"]={"permanently","['pɜːm(ə)nəntlɪ]","['pɝmənəntli]","adv.永久地",'adv.永久地','A vaulted canopy permanently placed over an altar.','祭祀天盖拱形的天篷，永久放置在祭坛上','Epitaph: a belated advertisement for a line of goods that has permanently discontinued.','墓志铭——是一则已经永久断市的货物的过时广告。'}

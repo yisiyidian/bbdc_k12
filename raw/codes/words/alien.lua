@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["alien"]={"alien","['eɪlɪən]","[ˈeliən,ˈeljən]","n.外星人",'n.外侨;外星人|||adj.外国的,相异的，陌生的|||vt.转让','I ran into an old friend in the alien land.','我在异国他乡遇到了故知。','Immigrant workers were classed as resident aliens.','移民来的工人已归入外侨类。'}

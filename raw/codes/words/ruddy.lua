@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["ruddy"]={"ruddy","['rʌdɪ]","['rʌdi]","adj.红的",'adj.红的,红润的','His ruddy face still routinely creases with mirth.','他红润的脸庞仍旧时常笑得堆起褶子。','He took the paraffin stove on a picnic and the ruddy thing wouldn\'t work.','他带了那个煤油炉去野餐，但是那个该死的东西根本用不了。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["optimist"]={"optimist","[ˈɒptɪmɪst]","['ɑptɪmɪst]","n.乐观主义者",'n.乐观主义者','He is an irredeemable optimist.','他就是这么一个不可救药的乐天派。','We are optimist and realist.','我们是乐观主义者，又是现实主义者。'}

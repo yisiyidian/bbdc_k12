@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["fork"]={"fork","[fɔːk]","[fɔrk]","n.叉",'n.叉,叉状物|||vt.&vi.叉起,耙,成叉状','He stabbed the meat with his fork.','他用叉子叉肉。','Stick the fork into the potato.','用叉子插土豆.'}

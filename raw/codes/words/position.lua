@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["position"]={"position","[pə'zɪʃ(ə)n]","[pə'zɪʃən]","n.位置",'n.位置,职位;状态,立场|||vt.安置,决定...的位置','The runners got into position on the starting line.','赛跑运动员已进入起跑线上的位置。','The orchestra were all in position, waiting for the conductor.','管弦乐队队员都已各就各位，等待著指挥。'}

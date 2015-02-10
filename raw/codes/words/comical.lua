@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["comical"]={"comical","['kɒmɪk(ə)l]","['kɑmɪkl]","adj.好笑的",'adj.好笑的,滑稽的|||喜剧的','The comedian is very comical.','那个喜剧演员非常滑稽。','He looked highly comical wearing that tiny hat.','他戴上那顶小帽子，看上去很滑稽。'}

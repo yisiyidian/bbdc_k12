@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["hang"]={"hang","[hæŋ]","[hæŋ]","vt.悬挂",'vt.悬挂；（被）绞死；贴，装饰；使悬而未决|||vi.悬垂；被吊死；附属，依靠；悬而未决|||n.悬挂的样子；（动作的）暂停；〈口〉大意，要点；〈口〉做法，诀窍','||Hang|| it all, they hardly know each other!','真见鬼，他们彼此不太认识。','The rooms were ||hung|| with tapestries.','这些房间都装饰著挂毯。'}

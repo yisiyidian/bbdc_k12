@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["heart"]={"heart","[hɑːt]","[hɑrt]","n.心",'n.心,中心,要点,在扑克牌中指红桃|||v.鼓起勇气,激励','The princess captured the hearts of the nation.','那位公主赢得了全体国民的心。','I want you to put more heart into your singing.','我希望你在唱的时候多带点感情。'}

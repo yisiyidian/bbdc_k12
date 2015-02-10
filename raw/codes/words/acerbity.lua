@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["acerbity"]={"acerbity","[ə'sɜːbətɪ]","[ə'sɝbəti]","n.涩",'n.涩,酸,刻薄','The tooth dare be not touched too cool too hot too acerbity too hot too exciting thing, how to do?','牙齿不敢碰太凉太热太酸太辣太刺激的东西了，怎么办？','We can\'t bear your acerbity.','我们无法忍受你的尖酸刻薄。'}

@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["flyspeck"]={"flyspeck","['flaɪspek]","['flaɪ,spɛk]","n.蝇粪留下的污点",'n.蝇粪留下的污点,小斑,污点|||v.弄脏','The flyspeck is hard to clean.','蝇粪留下的污点很难清洗','Hit upon on nose recently spot of a lot of flyspeck , how to do?','最近鼻子上突然有了很多小斑斑，怎么办？'}

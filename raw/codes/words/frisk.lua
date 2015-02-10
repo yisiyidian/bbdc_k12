@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["frisk"]={"frisk","[frɪsk]","[frɪsk]","vt.（用手）搜（某人）的身",'vt.（用手）搜（某人）的身|||vi.（动物）活蹦乱跳','Everyone was frisked before getting on the plane.','每个人都经过搜身才登上飞机.','There are lambs frisking in the meadow.','那儿有些在草地上跳来跳去的小羊。'}

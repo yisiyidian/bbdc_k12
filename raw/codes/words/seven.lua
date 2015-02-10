@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["seven"]={"seven","['sev(ə)n]","['sɛvn]","num.七",'num.七','Four multiplied by seven is twenty-eight.','7乘4等于28。','I have seven roommates in my university.','上大学时，我有七个室友。'}

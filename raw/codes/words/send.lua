@@ -1,1 +1,0 @@
-local Manager = s_WordDictionaryDatabase; Manager.allwords["send"]={"send","[send]","[sɛnd]","vt.寄",'vt.送给,传,寄，发射|||vi.放送|||n.波浪的推力','He was ||sent|| down for ten years for armed robbery.','他因持械抢劫被判入狱十年。','Men who refused to strike were ||sent|| to coventry by their colleagues.','凡是不参加罢工的人，同事都不理睬他们。'}
