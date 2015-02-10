@@ -77,7 +77,7 @@ function ChapterLayer:checkUnlockLevel()
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
 --    currentProgress = 10
     s_CURRENT_USER.levelInfo:updateDataToServer()  -- update book progress
- if currentProgress % s_islands_per_page == 0 and currentProgress > 0 then       
+ if currentProgress % s_islands_per_page == 0 and currentProgress > 0 and currentProgress - oldProgress > 0 then       
         -- unlock chapter
         self:plotUnlockCloudAnimation()
         local currentChapterKey = 'chapter'..math.floor(currentProgress / s_islands_per_page)
