@@ -42,6 +42,7 @@ function ShareBottom:ctor()
         if eventType == ccui.TouchEventType.began then
             self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
         elseif eventType == ccui.TouchEventType.ended then
+        	AnalyticsShare('save')
             local imagePath = cc.FileUtils:getInstance():getWritablePath()..png
             cx.CXUtils:getInstance():addImageToGallery(imagePath)
             self:getParent():shareEnd()
@@ -94,8 +95,10 @@ function ShareBottom:ctor()
             --self.target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
             local imagePath = cc.FileUtils:getInstance():getWritablePath()..png_shared
             if sender == qq_button then
+            	AnalyticsShare('qq')
                 cx.CXUtils:getInstance():shareImageToQQFriend(imagePath, '分享我的记录', '贝贝单词－根本停不下来')
             else
+            	AnalyticsShare('weixin')
                 cx.CXUtils:getInstance():shareImageToWeiXin(imagePath, '分享我的记录', '贝贝单词－根本停不下来')
             end
 

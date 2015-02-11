@@ -104,13 +104,7 @@ function ShareCheckIn:ctor()
             target:setVisible(false)
         end
 		if eventType == ccui.TouchEventType.ended then
-		    
-            -- local pImage = target:newImage()
-            -- local tex = cc.Director:getInstance():getTextureCache():addImage(pImage, png)
-            -- pImage:release()
-            -- local sprite = cc.Sprite:createWithTexture(tex)
-            -- background:addChild(sprite,10)
-            -- sprite:setPosition(background:getContentSize().width / 2,background:getContentSize().height / 2)
+			AnalyticsButtonToShare()
 
 			sender:setVisible(false)
 			close_button:setVisible(false)

@@ -186,6 +186,7 @@ function DownloadSoundButton.create(parentNode)
     --touch event of the button downloadEvent
     button_download_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
+            AnalyticsDownloadSoundBtn()
             print("Download button touch began")
             local downloadSC = require("view.book.DownloadSoundController").create(bookKey)
             downloadSC:beginSoundDownloadUpdate()

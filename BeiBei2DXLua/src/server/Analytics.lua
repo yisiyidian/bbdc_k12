@@ -197,6 +197,22 @@ function Analytics_applicationDidEnterBackground(layerName)
 end
 
 ----------------------------------------------------------------------------------------
+
+function AnalyticsButtonToShare()
+    cx.CXAnalytics:logEventAndLabel('Share', 'TOUCH')
+end
+
+function AnalyticsShare(name)
+    cx.CXAnalytics:logEventAndLabel('Share', name)
+end
+
+----------------------------------------------------------------------------------------
+
+function AnalyticsDownloadSoundBtn()
+    cx.CXAnalytics:logEventAndLabel('DownloadSound', 'TOUCH')
+end
+
+----------------------------------------------------------------------------------------
 -- first
 ANALYTICS_FIRST_BOOK = 0
 ANALYTICS_FIRST_LEVEL = 1
