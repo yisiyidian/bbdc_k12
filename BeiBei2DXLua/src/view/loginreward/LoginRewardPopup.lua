@@ -115,12 +115,13 @@ function LoginRewardPopup:ctor()
         end
     end
     
+    local tag = 6
     local addColor6 = cc.Sprite:create("image/loginreward/tagsix.png")
     addColor6:setPosition(67 ,98 ) 
     addColor6:setAnchorPoint(0,0)
     addColor6:ignoreAnchorPointForPosition(true)
     backPopup:addChild(addColor6)
-    addColor6:setName("reward6")
+    addColor6:setName("reward"..tag)
     addColor6:setVisible(false)
     
      local loginData = s_CURRENT_USER.logInDatas
