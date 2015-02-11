@@ -197,6 +197,10 @@ function Analytics_applicationDidEnterBackground(layerName)
 end
 
 ----------------------------------------------------------------------------------------
+function Analytics_replaceGameLayer(layerName)
+    cx.CXAnalytics:logEventAndLabel('replaceGameLayer', layerName)
+end
+
 
 function AnalyticsButtonToShare()
     cx.CXAnalytics:logEventAndLabel('Share', 'TOUCH')
