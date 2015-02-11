@@ -24,7 +24,8 @@ local function addStudyButton(word,wrongNum, preWordName, preWordNameState)
     local click_study_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
-        elseif eventType == ccui.TouchEventType.ended then     
+        elseif eventType == ccui.TouchEventType.ended then  
+            AnalyticsContinueReviewBtn()   
             local normal = function ()
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 local SlideCoconutLayer = require("view.newstudy.SlideCoconutLayer")

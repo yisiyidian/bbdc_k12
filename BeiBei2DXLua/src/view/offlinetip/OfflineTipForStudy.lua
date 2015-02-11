@@ -11,7 +11,7 @@ function OfflineTipForStudy.create()
     backColor:setPosition(s_LEFT_X, -100)
     layer:addChild(backColor)
 
-    local tip = cc.Label:createWithSystemFont("网络链接失败，建议在有网的时候下载音频包。","",24)
+    local tip = cc.Label:createWithSystemFont("播放声音请下载音频包。","",24)
     tip:setPosition(backColor:getContentSize().width / 2,backColor:getContentSize().height / 2)
     tip:setColor(cc.c4b(109,125,128,255))
     backColor:addChild(tip)
