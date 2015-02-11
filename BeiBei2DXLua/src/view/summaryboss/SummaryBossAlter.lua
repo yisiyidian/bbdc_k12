@@ -243,6 +243,7 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
                 if s_LocalDatabaseManager:getTodayRemainTaskNum() < 2 then
                     s_SCENE:checkInAnimation()
                 else
+                    s_HUD_LAYER:removeChildByName('missionCompleteCircle')
                     s_CorePlayManager.enterLevelLayer()
                 end
             end
