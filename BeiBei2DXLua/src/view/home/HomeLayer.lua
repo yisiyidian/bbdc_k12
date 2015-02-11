@@ -34,6 +34,14 @@ function HomeLayer.create(share)
     print("todayTotalTaskNum : "..todayTotalTaskNum)
     print("todayRemainTaskNum : "..todayRemainTaskNum)
 
+    local totalStudyWordNum     = s_LocalDatabaseManager.getStudyWordsNum(os.date('%x',os.time()))
+    local totalGraspWordNum     = s_LocalDatabaseManager.getGraspWordsNum(os.date('%x',os.time()))
+    local totalStudyDayNum      = s_LocalDatabaseManager.getStudyDayNum()
+
+    print("totalStudyWordNum : "..totalStudyWordNum)
+    print("totalGraspWordNum : "..totalGraspWordNum)
+    print("totalStudyDayNum : "..totalStudyDayNum)
+
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DataManager.books[s_CURRENT_USER.bookKey].words

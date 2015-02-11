@@ -2,6 +2,7 @@ local ChapterLayerBase = require('view.level.ChapterLayerBase')
 
 local s_chapter0_base_height = 3014
 s_chapterKey = 'chapter1'
+s_startLevelKey = 'level0'
 
 local RepeatChapterLayer = class("RepeatChapterLayer",function()
     return ChapterLayerBase.create(s_chapterKey, s_startLevelKey)
@@ -20,6 +21,7 @@ function RepeatChapterLayer:ctor(chapterKey)
     --    print_lua_table(s_CURRENT_USER)
     --    local chapterConfig = s_DataManager.getChapterConfig(s_CURRENT_USER.bookKey,self.chapterKey)
     local chapterSize = 1
+    print('####'..chapterKey)
     local chapterIndex = string.sub(chapterKey, 8) + 0
 --    if self.chapterKey == 'chapter1' then
 --        chapterSize = 2

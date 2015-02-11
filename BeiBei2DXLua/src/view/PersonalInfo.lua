@@ -233,7 +233,7 @@ function PersonalInfo:PLVM()
     
     local updateTime = 0
     local tolearnCount = s_LocalDatabaseManager.getTotalStudyWordsNum()
-    local toMasterCount = tolearnCount - s_LocalDatabaseManager.getTotalGraspWordsNum()
+    local toMasterCount = s_LocalDatabaseManager.getTotalGraspWordsNum()
     local learnPercent = tolearnCount / s_DataManager.books[s_CURRENT_USER.bookKey].words
     local masterPercent = toMasterCount / s_DataManager.books[s_CURRENT_USER.bookKey].words
     
@@ -427,6 +427,7 @@ function PersonalInfo:PLVI()
             for j = 1,7 do
                 local str = getDayStringForDailyStudyInfo(time)
                 countArray[1] = countArray[1] + s_LocalDatabaseManager.getStudyWordsNum(str)
+                print(str,countArray[1])
                 time = time - 24 * 3600
             end
         end
