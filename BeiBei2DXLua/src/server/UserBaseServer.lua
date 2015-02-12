@@ -289,6 +289,36 @@ function UserBaseServer.getFollowersAndFolloweesOfCurrentUser(onResponse)
     end
 end
 
+function UserBaseServer.getFollowersOfCurrentUser(onResponse)
+    if s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken() then
+        s_SERVER.requestFollowers(s_CURRENT_USER.objectId, 
+            function (api, result, err)
+                if result ~= nil then
+                    s_CURRENT_USER:parseServerFollowersData(result.results) -- who follow me
+                end
+                if onResponse ~= nil then onResponse(api, result, err) end
+            end)
+    else
+        s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
+        if onResponse ~= nil then onResponse('unfollow', nil, 'err') end
+    end
+end
+
+function UserBaseServer.getFolloweesOfCurrentUser(onResponse)
+    if s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken() then
+        s_SERVER.requestFollowees(s_CURRENT_USER.objectId, 
+            function (api, result, err)
+                if result ~= nil then
+                    s_CURRENT_USER:parseServerFolloweesData(result.results) -- who I follow
+                end
+                if onResponse ~= nil then onResponse(api, result, err) end
+            end)
+    else
+        s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
+        if onResponse ~= nil then onResponse('unfollow', nil, 'err') end
+    end
+end
+
 function UserBaseServer.follow(targetDataUser, onResponse)
     if s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken() then
         s_SERVER.follow(s_CURRENT_USER.objectId, targetDataUser.objectId, onResponse)
