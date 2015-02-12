@@ -20,14 +20,22 @@ function FriendRequest:ctor()
     back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
     self:addChild(back)
 
-    s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser(
+    s_UserBaseServer.getFolloweesOfCurrentUser(
         function (api, result)
-            self:main()
-            hideProgressHUD()
+            s_UserBaseServer.getFollowersOfCurrentUser(
+            function (api, result)
+                self:main()
+                hideProgressHUD()
+            end,
+            function (api, code, message, description)
+                hideProgressHUD()
+            end)
         end,
         function (api, code, message, description)
             hideProgressHUD()
         end)
+
+    
 end
 
 function FriendRequest:main()
