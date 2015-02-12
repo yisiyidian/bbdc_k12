@@ -143,20 +143,25 @@ function M.getTodayReviewBoss()
     return todayReviewBoss
 end
 
-function M.getMaxBossID()
+function M.getMaxBoss()
     local userId    = s_CURRENT_USER.objectId
     local bookKey   = s_CURRENT_USER.bookKey
     local username  = s_CURRENT_USER.username
-    local time      = os.time()
 
     local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
 
-    local maxBossID = 1
+    local maxBoss = nil
     for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." ORDER BY bossID DESC LIMIT 1 ;") do
-        maxBossID   = row.bossID
+        maxBoss = row
     end
 
-    return maxBossID
+    return maxBoss
+end
+
+function M.getMaxBossID()
+    local boss = M.getMaxBoss()
+    if boss ~= nil then return boss.bossID end
+    return 1
 end
 
 function M.getBossInfo(bossID)
