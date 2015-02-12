@@ -128,19 +128,19 @@ function LoginRewardPopup:ctor()
      local dayInWeekBegin = 0
      local firstWeek = s_CURRENT_USER.logInDatas[1] 
      
-     if firstWeek.Monday > 10000 then
+     if firstWeek.Monday > 0 then
         dayInWeekBegin = 1
-     elseif firstWeek.Tuesday > 10000 then
+     elseif firstWeek.Tuesday > 0 then
         dayInWeekBegin = 2
-     elseif firstWeek.Wednesday > 10000 then
+     elseif firstWeek.Wednesday > 0 then
         dayInWeekBegin = 3
-     elseif firstWeek.Thursday > 10000 then
+     elseif firstWeek.Thursday > 0 then
         dayInWeekBegin = 4
-     elseif firstWeek.Friday > 10000 then
+     elseif firstWeek.Friday > 0 then
         dayInWeekBegin = 5
-     elseif firstWeek.Saturday > 10000 then
+     elseif firstWeek.Saturday > 0 then
         dayInWeekBegin = 6
-     elseif firstWeek.Sunday > 10000 then
+     elseif firstWeek.Sunday > 0 then
         dayInWeekBegin = 7
      end
 
@@ -154,13 +154,6 @@ function LoginRewardPopup:ctor()
      
      local currentWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
      local dayTime = 24 * 60 * 60
-     print("~~~~~~~~~~~~")
-     print("dayInWeekBegin"..dayInWeekBegin)
-     print("dayInWeekEnd"..dayInWeekEnd)
-     print("~~~~~~~~~~~~")
-     print_lua_table(s_CURRENT_USER.logInDatas)
-     print("~~~~~~~~~~~~")
-     print(os.date('%x',os.time()))
      if dayInWeekEnd <= 7 then
         for i = dayInWeekBegin,dayInWeekEnd do
             table.insert(currentData,currentWeek:isGotReward(os.time() + (dayInWeekBegin - dayInWeekEnd + i - dayInWeekBegin) * dayTime))
