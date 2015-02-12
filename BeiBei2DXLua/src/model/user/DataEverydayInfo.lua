@@ -59,7 +59,7 @@ function getWeekDay(secondsFrom1970)
 end
 
 function getCurrentLogInWeek(currentTime,localTime)
-    local ret = (currentTime - localTime) / (7 * 24 * 60 * 60.0)
+    local ret = (currentTime - localTime) / (24 * 60 * 60.0)
     local t = math.ceil(ret) + getNumberOfWeekDay(localTime) - getNumberOfWeekDay(currentTime)
     t = t / 7 + 1
     if t - math.floor(t) > 0.5 then

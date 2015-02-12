@@ -90,7 +90,7 @@ function FriendRequest:main()
         local custom_item = ccui.Layout:create()
         custom_item:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,280 + 2))
         custom_button:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
-        custom_item:addChild(custom_button)
+        custom_item:addChild(custom_button,1)
 
         local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,282)
         back:ignoreAnchorPointForPosition(false)
