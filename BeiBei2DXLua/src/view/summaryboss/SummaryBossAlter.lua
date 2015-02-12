@@ -41,7 +41,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index,entrance,wordList)
             playMusic(s_sound_win,false)
         end)
     else
-        layer:lose()
+        layer:lose(entrance)
         
         cc.SimpleAudioEngine:getInstance():pauseMusic()
 
@@ -54,7 +54,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index,entrance,wordList)
     return layer
 end
 
-function SummaryBossAlter:lose()
+function SummaryBossAlter:lose(entrance)
     if s_CURRENT_USER.tutorialStep == s_tutorial_complete then
         s_CURRENT_USER:setTutorialStep(s_tutorial_complete + 1)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_timeout)
@@ -91,7 +91,7 @@ function SummaryBossAlter:lose()
 
     local function nextBoard(sender)
         
-        self:lose2()
+        self:lose2(entrance)
 
     end
     continue:registerScriptTapHandler(nextBoard)
@@ -99,7 +99,7 @@ function SummaryBossAlter:lose()
     
 end
 
-function SummaryBossAlter:lose2()
+function SummaryBossAlter:lose2(entrance)
     if s_CURRENT_USER.tutorialStep == s_tutorial_complete then
         s_CURRENT_USER:setTutorialStep(s_tutorial_complete + 1)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_lose)
@@ -168,7 +168,7 @@ function SummaryBossAlter:lose2()
     local function challengeAgain(sender)
         
         --local summaryboss = require('view.summaryboss.SummaryBossLayer')
-        if entrance then
+        if entrance == ENTRANCE_NORMAL then
             s_CorePlayManager.initSummaryModel()
         else
             local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
@@ -198,6 +198,8 @@ function SummaryBossAlter:win1(entrance)
     if s_LocalDatabaseManager:getTodayRemainTaskNum() < 2 and not hasCheckedIn then
         checkInEverydayInfo()
     end
+    print('hasCheckedIn',hasCheckedIn)
+    print('entrance',entrance)
     if not hasCheckedIn and entrance == ENTRANCE_NORMAL then
         local missionCompleteCircle = require('view.MissionCompleteCircle').create()
         s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
