@@ -7,7 +7,7 @@ local app_version_release = 180000
 -- All test code must in example.example
 local TEST_CODE   = 1 -- constant value
 local NORMAL_CODE = 0 -- constant value
-local test_code = TEST_CODE -- switch normal or test in this line
+local test_code = NORMAL_CODE -- switch normal or test in this line
 
 -- *************************************
 
