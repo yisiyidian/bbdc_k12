@@ -113,6 +113,8 @@ start = function ()
             errorObj['RA'] = BUILD_TARGET
             s_SERVER.createData(errorObj)
         end
+
+        onErrorNeedRestartAppHappend('非常抱歉，程序运行时出现错误，点击确定可以重启应用。')
     end
     
     if cc.Director:getInstance():getRunningScene() then
@@ -123,6 +125,8 @@ start = function ()
 
     s_DataManager.loadText()
     
+    local i = nil
+    if i + 1 == 0 then end
 -- *************************************
 if test_code == NORMAL_CODE then -- do NOT change this line
     local startApp = function ()
