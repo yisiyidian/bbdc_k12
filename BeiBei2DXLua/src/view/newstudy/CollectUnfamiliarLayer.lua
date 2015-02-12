@@ -78,12 +78,18 @@ function CollectUnfamiliarLayer:createRandWord(word,randomWrongNumber)
                 isIn = 1
                 break
             end
+            if tostring(s_LocalDatabaseManager.getWordInfoFromWordName(randomNameArray[i]).wordMeaningSmall) == 
+                tostring(s_LocalDatabaseManager.getWordInfoFromWordName(randomWord).wordMeaningSmall) then
+                isIn = 1
+                break
+            end
             local word1 = split(tostring(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall),"%.")
             local word2 = split(tostring(s_LocalDatabaseManager.getWordInfoFromWordName(randomWord).wordMeaningSmall),"%.")
             if word1[1] ~= word2[1] then
                 isIn = 1
                 break
             end
+
         end
         
         if isIn == 0 then

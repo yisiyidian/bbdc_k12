@@ -47,7 +47,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken, playWordOrNot)
     local pronounce = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             local wordSoundState = playWordSound(wordname)
-            if wordSoundState == PLAY_WORD_SOUND_NO then
+            if wordSoundState == PLAY_WORD_SOUND_NO or s_SERVER.isNetworkConnectedNow() == false then
                 offlineTip.setTrue()
             end
         end
@@ -106,16 +106,12 @@ function SoundMark.create(wordname, soundmarkus, soundmarken, playWordOrNot)
     else
         button_soundmark_us:setVisible(false)
     end
-    if playWordOrNot == false then
+ 
+    local wordSoundState = playWordSound(wordname)
+    --add offline
+    offlineTip = OfflineTip.create()
+    main:addChild(offlineTip,2)
 
-    else   
-        local wordSoundState = playWordSound(wordname)
-        --add offline
-        offlineTip = OfflineTip.create()
-        if s_SERVER.isNetworkConnectedNow() == false and wordSoundState == PLAY_WORD_SOUND_NO then
-            main:addChild(offlineTip,2)
-        end
-    end
     
     local onTouchBegan = function(touch, event)
         return true
@@ -126,7 +122,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken, playWordOrNot)
  
         if cc.rectContainsPoint(button_wordname:getBoundingBox(),location) then
             playWordSound(wordname)
-            if online == false then
+            if s_SERVER.isNetworkConnectedNow()  == false then
                 offlineTip.setTrue()
             end
         elseif s_CURRENT_USER.isSoundAm == 1 and cc.rectContainsPoint(button_soundmark_us:getBoundingBox(),location) then
