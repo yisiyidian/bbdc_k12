@@ -38,6 +38,11 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
     local type = 1
     local answer
     
+    local seed = math.randomseed(os.time())
+    local randomType = math.random(1,10)
+    type = randomType
+
+   
     local wordList = {}
     table.foreachi(ReviewWordList, function(i, v)
         if  ReviewWordList ~= "" then
