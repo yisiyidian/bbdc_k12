@@ -97,11 +97,9 @@ function HomeLayer.create(share)
     local offlineTipHome = OfflineTipHome.create()
     local offlineTipFriend = OfflineTipFriend.create()
 
+    layer:addChild(offlineTipHome,2)
+    layer:addChild(offlineTipFriend,2) 
 
-    if online == false then
-        layer:addChild(offlineTipHome,2)
-        layer:addChild(offlineTipFriend,2) 
-    end
     local mission_progress
     if share ~= nil and share then
         mission_progress = MissionProgress.create(true)
@@ -345,7 +343,7 @@ function HomeLayer.create(share)
                     end
                 elseif label_name[i] == "登出游戏" then
                     if not s_SERVER.isNetworkConnectedNow() then
-                        offlineTipHome.setTrue(OfflineTipForHome_Logout)
+                           offlineTipHome.setTrue(OfflineTipForHome_Logout)
                     else
                         -- logout
                         AnalyticsLogOut()
