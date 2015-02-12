@@ -788,7 +788,10 @@ function PersonalInfo:login()
                     --print('curIndex'..curIndex)
                     
                     if self.checkIn ~= nil and self.checkIn then
-                        local tick = s_HUD_LAYER:getChildByName('missionCompleteCircle'):getChildByName('back')
+                        local tick = nil
+                        if s_HUD_LAYER:getChildByName('missionCompleteCircle') ~= nil then
+                           tick = s_HUD_LAYER:getChildByName('missionCompleteCircle'):getChildByName('back')
+                        end
                         local move = cc.MoveTo:create(0.5,cc.p(loadingList[curIndex]:getPositionX() + s_LEFT_X,loadingList[curIndex]:getPositionY()))
                         local delay = cc.DelayTime:create(0.5)
                         local tickChange = cc.CallFunc:create(function ()
@@ -796,12 +799,18 @@ function PersonalInfo:login()
                             newtick:setPosition(loadingList[#loadingList]:getContentSize().width / 2,loadingList[#loadingList]:getContentSize().height / 2)
                             loadingList[#loadingList]:addChild(newtick,2)
                             checkInList[#checkInList]:setVisible(false)
-                            tick:removeFromParent()
+                            if tick ~= nil then
+                                tick:removeFromParent()
+                            end
                             newtick:runAction(cc.Sequence:create(cc.DelayTime:create(1.0),cc.CallFunc:create(function ()
                                 s_SCENE:checkInOver()
                             end,{})))
                         end,{})
-                        tick:runAction(cc.Sequence:create(delay,move,tickChange))
+                        if tick ~= nil then
+                            tick:runAction(cc.Sequence:create(delay,move,tickChange))
+                        else
+                            back:runAction(cc.Sequence:create(delay,tickChange))
+                        end
                     end
                     curIndex = curIndex + 1
                 end

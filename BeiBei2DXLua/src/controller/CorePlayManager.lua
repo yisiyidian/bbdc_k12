@@ -110,7 +110,6 @@ function CorePlayManager.leaveStudyModel(state)
         CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
         s_LocalDatabaseManager.addStudyWordsNum()
         s_LocalDatabaseManager.addGraspWordsNum(1)
-        s_CURRENT_USER.levelInfo:setCurrentWordIndex(CorePlayManager.currentIndex)
 
         CorePlayManager.preWordName           = CorePlayManager.BookWordList[CorePlayManager.currentIndex-1]
         CorePlayManager.preWordNameState      = true
@@ -123,7 +122,6 @@ function CorePlayManager.leaveStudyModel(state)
         s_LocalDatabaseManager.printBossWord()
         CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
         s_LocalDatabaseManager.addStudyWordsNum()
-        s_CURRENT_USER.levelInfo:setCurrentWordIndex(CorePlayManager.currentIndex)
 
         CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
 
