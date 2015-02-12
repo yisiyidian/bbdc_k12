@@ -38,7 +38,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index,entrance,wordList)
 
         s_SCENE:callFuncWithDelay(0.3,function()
         -- win sound
-        playSound(s_sound_win)
+            playMusic(s_sound_win,false)
         end)
     else
         layer:lose()
