@@ -1,16 +1,10 @@
 {
-"skeleton": {
-	"hash": "t3/OU8/3fWQDEfTRZrRutr/h0lg",
-	"spine": "2.0.22",
-	"width": 2562.56,
-	"height": 953.94,
-	"images": "/Users/wangsiyu/Desktop/ /单词游戏/第一关/复习boss背景动画"
-},
+"skeleton": { "hash": "MhuahKG0alEQUrwEKK19M+g7MrI", "spine": "2.1.10", "width": 2562.56, "height": 953.94, "images": "" },
 "bones": [
 	{ "name": "root" },
 	{ "name": "bone", "parent": "root", "x": 264.63, "y": 214.89 },
-	{ "name": "bone2", "parent": "root", "x": -1296.44, "y": -23.82 },
-	{ "name": "bone3", "parent": "root", "x": 1300.14, "y": -302.68 },
+	{ "name": "bone2", "parent": "root", "x": -1296.44, "y": 46.17 },
+	{ "name": "bone3", "parent": "root", "x": 1300.14, "y": -202.68 },
 	{ "name": "bone4", "parent": "root", "length": 96.46, "x": 232.61, "y": -572.37, "rotation": 90.45 },
 	{ "name": "bone5", "parent": "root", "length": 61.83, "x": 90.42, "y": -545.39, "rotation": 102 },
 	{ "name": "bone6", "parent": "root", "length": 83.43, "x": -349.91, "y": -575.96, "rotation": 74.59 },
@@ -29,7 +23,7 @@
 	{ "name": "fuxiboss_diyiguan_weave7_222_333", "bone": "bone8", "attachment": "fuxiboss_diyiguan_weave7_222_333" },
 	{ "name": "unmove_weave_1", "bone": "root", "attachment": "unmove_weave_1" },
 	{ "name": "unmove_weave_2", "bone": "root", "attachment": "unmove_weave_2" },
-	{ "name": "fuxiboss_diyiguan_boat", "bone": "bone7", "attachment": "fuxiboss_diyiguan_boat" },
+	{ "name": "fuxiboss_diyiguan_boat", "bone": "bone7" },
 	{ "name": "fuxiboss_diyiguan_weave1_zuo", "bone": "bone", "attachment": "fuxiboss_diyiguan_weave1_zuo" },
 	{ "name": "fuxiboss_diyiguan_weave1_you", "bone": "bone", "attachment": "fuxiboss_diyiguan_weave1_you" },
 	{ "name": "fuxiboss_diyiguan_weave2_zuo", "bone": "bone2", "attachment": "fuxiboss_diyiguan_weave2_zuo" },
@@ -46,7 +40,8 @@
 	{ "name": "fuxiboss_diyiguan_weave2_you2", "bone": "bone2", "attachment": "fuxiboss_diyiguan_weave2_you" },
 	{ "name": "fuxiboss_diyiguan_weave2_zuo2", "bone": "bone2", "attachment": "fuxiboss_diyiguan_weave2_zuo" },
 	{ "name": "fuxiboss_diyiguan_weave3_you2", "bone": "bone3", "attachment": "fuxiboss_diyiguan_weave3_you" },
-	{ "name": "fuxiboss_diyiguan_weave3——zuo2", "bone": "bone3", "attachment": "fuxiboss_diyiguan_weave3——zuo" }
+	{ "name": "fuxiboss_diyiguan_weave3——zuo2", "bone": "bone3", "attachment": "fuxiboss_diyiguan_weave3——zuo" },
+	{ "name": "39CO28V~AU%WMSG_4Q`R)`E", "bone": "root" }
 ],
 "skins": {
 	"default": {
@@ -55,9 +50,6 @@
 		},
 		"fuxiboss_bj2": {
 			"fuxiboss_bj2": { "x": 255.96, "y": 281.32, "width": 342, "height": 204 }
-		},
-		"fuxiboss_diyiguan_boat": {
-			"fuxiboss_diyiguan_boat": { "x": 5.62, "y": 41.67, "width": 135, "height": 117 }
 		},
 		"fuxiboss_diyiguan_grass1": {
 			"fuxiboss_diyiguan_grass1": { "x": 51.83, "y": 2.2, "rotation": -90.45, "width": 78, "height": 98 }
@@ -123,13 +115,13 @@
 			"fuxiboss_diyiguan_weave7_222_333": { "x": 726.5, "y": 26.8, "width": 342, "height": 100 }
 		},
 		"paopaopaop_fuxiboss_1": {
-			"paopaopaop_fuxiboss_1": { "x": -64.18, "y": -275.52, "width": 108, "height": 49 }
+			"paopaopaop_fuxiboss_1": { "x": -64.18, "y": -181.94, "width": 108, "height": 49 }
 		},
 		"paopaopaop_fuxiboss_2": {
-			"paopaopaop_fuxiboss_2": { "x": -258.04, "y": 15.49, "width": 74, "height": 69 }
+			"paopaopaop_fuxiboss_2": { "x": -261.47, "y": 75.44, "width": 74, "height": 69 }
 		},
 		"paopaopaop_fuxiboss_3": {
-			"paopaopaop_fuxiboss_3": { "x": 248.03, "y": 35.16, "width": 42, "height": 111 }
+			"paopaopaop_fuxiboss_3": { "x": 249.74, "y": 96.83, "width": 42, "height": 111 }
 		},
 		"unmove_weave_1": {
 			"unmove_weave_1": { "x": -170.6, "y": 230.35, "width": 512, "height": 67 }
