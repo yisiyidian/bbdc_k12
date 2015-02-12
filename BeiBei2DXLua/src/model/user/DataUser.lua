@@ -347,8 +347,8 @@ function DataUser:getFriendsInfo()
     self.fans = {}
     local friendsObjId = {}
     local friends = {}
---    print_lua_table (s_CURRENT_USER.followers)
---    print_lua_table (s_CURRENT_USER.followees)
+   print_lua_table (s_CURRENT_USER.followers)
+   print_lua_table (s_CURRENT_USER.followees)
     for key, followee in pairs(self.followees) do
         friendsObjId[followee.objectId] = 1
         friends[followee.objectId] = followee
