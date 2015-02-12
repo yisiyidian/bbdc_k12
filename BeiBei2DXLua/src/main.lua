@@ -125,8 +125,6 @@ start = function ()
 
     s_DataManager.loadText()
     
-    local i = nil
-    if i + 1 == 0 then end
 -- *************************************
 if test_code == NORMAL_CODE then -- do NOT change this line
     local startApp = function ()
