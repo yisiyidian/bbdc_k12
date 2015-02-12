@@ -96,7 +96,9 @@ function MissionCompleteCircle:ctor()
         				final:runAction(cc.FadeIn:create(0.5))
         				delayTime = 1.5
             		end
-          			s_SCENE.touchEventBlockLayer.unlockTouch()
+                    s_SCENE:callFuncWithDelay(delayTime + 0.5,function ()
+                        s_SCENE.touchEventBlockLayer.unlockTouch()
+                    end)
             		background:runAction(cc.Sequence:create(cc.DelayTime:create(delayTime),cc.FadeOut:create(0.5)))
             		backCircle:runAction(cc.Sequence:create(cc.DelayTime:create(delayTime),cc.Spawn:create(cc.ScaleTo:create(0.5,0.1),cc.MoveBy:create(0.5,cc.p(-bigWidth / 2 + 40,s_DESIGN_HEIGHT / 2 - 40)))))
             	end,{})))
