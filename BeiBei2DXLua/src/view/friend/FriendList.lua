@@ -18,7 +18,7 @@ function FriendList:ctor()
     back:setAnchorPoint(0.5,0.5)
     back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
     self:addChild(back)
-    showProgressHUD('正在加载好友列表')
+    showProgressHUD('正在加载好友列表',true)
 
     s_UserBaseServer.getFolloweesOfCurrentUser( 
         function (api, result)
@@ -49,15 +49,15 @@ function FriendList:ctor()
                 end
                 self:addList()
                 
-                hideProgressHUD()
+                hideProgressHUD(true)
             end,
             function (api, code, message, description)
-                hideProgressHUD()
+                hideProgressHUD(true)
             end
             )
         end,
         function (api, code, message, description)
-            hideProgressHUD()
+            hideProgressHUD(true)
         end
     )
 
