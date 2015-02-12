@@ -1,0 +1,13 @@
+
+duigou.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dugou
+  rotate: false
+  xy: 2, 27
+  size: 81, 56
+  orig: 81, 56
+  offset: 0, 0
+  index: -1

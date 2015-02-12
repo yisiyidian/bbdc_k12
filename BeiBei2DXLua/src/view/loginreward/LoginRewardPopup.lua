@@ -186,15 +186,16 @@ function LoginRewardPopup:ctor()
         local mark = cc.Sprite:create("image/loginreward/mark.png")
         mark:setPosition(sprite:getContentSize().width * 0.7,sprite:getContentSize().height * 0.3)
         mark:setScale(0.8)
-        sprite:addChild(mark)
         if i < #currentData then
             if currentData[i] == false  then
                 mark:setTexture("image/loginreward/miss.png")
             end  
             sprite:setVisible(true)
+            sprite:addChild(mark)
         else
             if todayMark > 0  then
                 sprite:setVisible(true)
+                sprite:addChild(mark)
             end  
         end
     end
@@ -208,9 +209,19 @@ function LoginRewardPopup:ctor()
         if todayMark == 0 and sprite ~= nil then
             local location = backPopup:convertToNodeSpace(touch:getLocation())
             if cc.rectContainsPoint(sprite:getBoundingBox(), location)  then
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 s_CURRENT_USER:addBeans(rewardList[#currentData].reward)  
                 saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
                 sprite:setVisible(true) 
+                
+                local spine = sp.SkeletonAnimation:create('spine/duigou.json', 'spine/duigou.atlas',1)
+                local action = cc.DelayTime:create(0.3)
+                spine:runAction(cc.Sequence:create(action,cc.CallFunc:create(function()spine:addAnimation(0, 'animation', false)
+                    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+                    end)))
+                spine:setPosition(50,0)
+                sprite:addChild(spine)
+                spine:setScale(0.8)
                 currentWeek:getReward(os.time())
                 getRewardEverydayInfo()
                 s_CURRENT_USER.getDailyRewardTime = currentTime 
