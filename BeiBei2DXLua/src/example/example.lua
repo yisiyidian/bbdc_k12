@@ -11,9 +11,9 @@ local ProtocolBase = require('server.protocol.ProtocolBase')
 require('server.protocol.protocols')
 
 function test()
-    local WordDictionaryDatabase = require('model.WordDictionaryDatabase')
-    WordDictionaryDatabase.init()
-    print_lua_table( WordDictionaryDatabase.testGetWord('apple') )
+    -- local WordDictionaryDatabase = require('model.WordDictionaryDatabase')
+    -- WordDictionaryDatabase.init()
+    -- print_lua_table( WordDictionaryDatabase.testGetWord('apple') )
 
     -- local username = 'tester112'
     -- isUsernameExist(username, function (exsit, error)
@@ -60,8 +60,8 @@ function test()
  -- s_SCENE:replaceGameLayer(newStudyLayer)
 -- new study layer test end
 
-    -- local circle = require('view.summaryboss.SummaryBossLayer').create(1)
-    -- s_SCENE:replaceGameLayer(circle)
+    local circle = require('view.share.ShareCheckIn').create()
+    s_SCENE:replaceGameLayer(circle)
 
 
 

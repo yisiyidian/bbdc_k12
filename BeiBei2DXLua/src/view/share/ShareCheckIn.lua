@@ -12,6 +12,7 @@ end
 
 function ShareCheckIn:ctor()
 	local background = cc.ProgressTimer:create(cc.Sprite:create('image/share/share_background.png'))
+	--local background = cc.Sprite:create('image/share/share_background.png')
 	background:setAnchorPoint(0.5,1)
 	background:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT)
 	self:addChild(background)
@@ -91,16 +92,18 @@ function ShareCheckIn:ctor()
 
 	local target = cc.RenderTexture:create(s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT, cc.TEXTURE2_D_PIXEL_FORMAT_RGB_A8888)
     target:retain()
-    target:setPosition(cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2))
-    background:addChild(target, -1)
+    target:setPosition(cc.p(background:getContentSize().width / 2 + s_LEFT_X, s_DESIGN_HEIGHT / 2))
+    self:addChild(target, -1)
 
 	local function share(sender,eventType)
 	    if eventType == ccui.TouchEventType.began then
         	icon:setVisible(true)
+        	background:setPosition(s_DESIGN_WIDTH / 2 - s_LEFT_X,s_DESIGN_HEIGHT)
             target:begin()
             background:visit()
             target:endToLua()
             icon:setVisible(false)
+            background:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT)
             target:setVisible(false)
         end
 		if eventType == ccui.TouchEventType.ended then
