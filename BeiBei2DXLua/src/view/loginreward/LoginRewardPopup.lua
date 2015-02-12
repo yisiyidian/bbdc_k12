@@ -125,27 +125,23 @@ function LoginRewardPopup:ctor()
     addColor6:setVisible(false)
     
      local loginData = s_CURRENT_USER.logInDatas
-     local loginData_array = {}
-     for i = 1,#loginData do
-         loginData_array[i] = loginData[i]:getDays()
-     end
      local dayInWeekBegin = 0
-     local firstWeek = s_CURRENT_USER.logInDatas[1]
-        {'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'}
-     if firstWeek.Sunday > 0 then
-     	dayInWeekBegin = 0
-     elseif firstWeek.Monday > 0 then
+     local firstWeek = s_CURRENT_USER.logInDatas[1] 
+     
+     if firstWeek.Monday > 10000 then
         dayInWeekBegin = 1
-     elseif firstWeek.Tuesday > 0 then
+     elseif firstWeek.Tuesday > 10000 then
         dayInWeekBegin = 2
-     elseif firstWeek.Wednesday > 0 then
+     elseif firstWeek.Wednesday > 10000 then
         dayInWeekBegin = 3
-     elseif firstWeek.Thursday > 0 then
+     elseif firstWeek.Thursday > 10000 then
         dayInWeekBegin = 4
-     elseif firstWeek.Friday > 0 then
+     elseif firstWeek.Friday > 10000 then
         dayInWeekBegin = 5
-     elseif firstWeek.TueSaturdaysday > 0 then
+     elseif firstWeek.Saturday > 10000 then
         dayInWeekBegin = 6
+     elseif firstWeek.Sunday > 10000 then
+        dayInWeekBegin = 7
      end
 
      local currentData = {}
@@ -156,41 +152,33 @@ function LoginRewardPopup:ctor()
      local today = math.floor((currentTime - s_CURRENT_USER.localTime) / ( 24 * 60 * 60 ) ) % 7
      local dayInWeekEnd = dayInWeekBegin + today
      
-     
-
      local currentWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
      local dayTime = 24 * 60 * 60
      print("~~~~~~~~~~~~")
      print("dayInWeekBegin"..dayInWeekBegin)
      print("dayInWeekEnd"..dayInWeekEnd)
-     if dayInWeekEnd <= 6 then
+     print("~~~~~~~~~~~~")
+     print_lua_table(s_CURRENT_USER.logInDatas)
+     print("~~~~~~~~~~~~")
+     print(os.date('%x',os.time()))
+     if dayInWeekEnd <= 7 then
         for i = dayInWeekBegin,dayInWeekEnd do
             table.insert(currentData,currentWeek:isGotReward(os.time() + (dayInWeekBegin - dayInWeekEnd + i - dayInWeekBegin) * dayTime))
         end
      else
         local last = (#s_CURRENT_USER.logInDatas) - 1
         local lastWeek = s_CURRENT_USER.logInDatas[last]
-        print("~~~~~~~~~~~~")
-        print_lua_table(s_CURRENT_USER.logInDatas)
-        for i = dayInWeekBegin,6 do
+        for i = dayInWeekBegin,7 do
             if lastWeek == nil then
                 table.insert(currentData,false)
             else
                 table.insert(currentData,lastWeek:isGotReward(os.time() + (dayInWeekBegin - dayInWeekEnd + i - dayInWeekBegin) * dayTime))
             end     
         end
-        if dayInWeekEnd == 7 then
-            table.insert(currentData,currentWeek:isGotReward(os.time()))
-        else
-            table.insert(currentData,currentWeek:isGotReward(os.time() - (dayInWeekEnd - 7) * dayTime))
-            print("~~~~~~~~~~~~~~~")
-            print(currentWeek:isGotReward(os.time() - (dayInWeekEnd - 7) * dayTime))
-            for i = 1,dayInWeekEnd - 7 do
-                table.insert(currentData,currentWeek:isGotReward(os.time() - (dayInWeekEnd - 7 - i) * dayTime)) 
-            end
+        for i = 1,dayInWeekEnd - 7 do
+            table.insert(currentData,currentWeek:isGotReward(os.time() - (dayInWeekEnd - 7 - i) * dayTime)) 
         end
      end
-
 
     local lastTime = s_CURRENT_USER.getDailyRewardTime
     local todayMark = 0
