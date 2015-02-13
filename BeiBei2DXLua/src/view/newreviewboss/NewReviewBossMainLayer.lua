@@ -391,6 +391,9 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
                         local missionCompleteCircle = require('view.MissionCompleteCircle').create()
                             s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
                             layer:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
+                                if s_LocalDatabaseManager:getTodayRemainBossNum() <= 0 then
+                                    s_level_popup_state = 1
+                                end
                                 s_CorePlayManager.leaveReviewModel(true)  
                             end,{})))
                     end
