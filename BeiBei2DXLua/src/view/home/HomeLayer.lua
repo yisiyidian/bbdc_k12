@@ -18,10 +18,10 @@ local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 local list = {}
 
 function HomeLayer.create(share) 
-    if s_CURRENT_USER:getBeans() < 1 then
-        s_CURRENT_USER:addBeans(10000)
-        saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
-    end
+    -- if s_CURRENT_USER:getBeans() < 1 then
+    --     s_CURRENT_USER:addBeans(10000)
+    --     saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
+    -- end
 
     -- task
     local todayTotalBossNum     = s_LocalDatabaseManager:getTodayTotalBossNum()
