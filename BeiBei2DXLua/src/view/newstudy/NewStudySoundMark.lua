@@ -107,7 +107,9 @@ function SoundMark.create(wordname, soundmarkus, soundmarken, playWordOrNot)
         button_soundmark_us:setVisible(false)
     end
  
-    local wordSoundState = playWordSound(wordname)
+    if playWordOrNot ~= false then
+    	playWordSound(wordname)
+    end
     --add offline
     offlineTip = OfflineTip.create()
     main:addChild(offlineTip,2)
