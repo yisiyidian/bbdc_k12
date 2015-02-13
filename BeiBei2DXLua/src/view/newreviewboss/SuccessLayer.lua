@@ -36,9 +36,7 @@ local function createNextButton(getBean)
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
             --print("next")
-            if s_LocalDatabaseManager:getTodayRemainBossNum() <= 0 then
-                s_level_popup_state = 1
-            end
+            
             s_HUD_LAYER:removeChildByName('missionCompleteCircle')
             s_CorePlayManager.enterLevelLayer()
         end
