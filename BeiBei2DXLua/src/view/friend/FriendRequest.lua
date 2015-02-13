@@ -12,7 +12,7 @@ function FriendRequest.create()
 end
 
 function FriendRequest:ctor()
-    showProgressHUD('正在加载好友请求')
+    showProgressHUD('正在加载好友请求',true)
 
     local back = cc.LayerColor:create(cc.c4b(255,255,255,255),s_RIGHT_X - s_LEFT_X,162 * 6)
     back:ignoreAnchorPointForPosition(false)
@@ -20,14 +20,22 @@ function FriendRequest:ctor()
     back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
     self:addChild(back)
 
-    s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser(
+    s_UserBaseServer.getFolloweesOfCurrentUser(
         function (api, result)
-            self:main()
-            hideProgressHUD()
+            s_UserBaseServer.getFollowersOfCurrentUser(
+            function (api, result)
+                self:main()
+                hideProgressHUD(true)
+            end,
+            function (api, code, message, description)
+                hideProgressHUD(true)
+            end)
         end,
         function (api, code, message, description)
-            hideProgressHUD()
+            hideProgressHUD(true)
         end)
+
+    
 end
 
 function FriendRequest:main()

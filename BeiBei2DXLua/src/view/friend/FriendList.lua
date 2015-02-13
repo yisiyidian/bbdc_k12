@@ -18,7 +18,49 @@ function FriendList:ctor()
     back:setAnchorPoint(0.5,0.5)
     back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
     self:addChild(back)
-    showProgressHUD('正在加载好友列表')
+    showProgressHUD('正在加载好友列表',true)
+
+    s_UserBaseServer.getFolloweesOfCurrentUser( 
+        function (api, result)
+            s_UserBaseServer.getFollowersOfCurrentUser( 
+            function (api, result)
+                s_CURRENT_USER:getFriendsInfo() 
+
+                local function listViewEvent(sender, eventType)
+                    if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
+                        print("select child index = ",sender:getCurSelectedIndex())
+                    end
+                end
+
+                self.array = {}
+                for i,f in ipairs(s_CURRENT_USER.friends) do
+                    self.array[#self.array + 1] = f
+                end
+                self.array[#self.array + 1] = s_CURRENT_USER
+                self.selectIndex = -2
+                for i = 1,#self.array do
+                    for j = i, #self.array do
+                        if self.array[i].wordsCount < self.array[j].wordsCount or (self.array[i].wordsCount == self.array[j].wordsCount and self.array[i].masterCount < self.array[j].masterCount) then
+                            local temp = self.array[i]
+                            self.array[i] = self.array[j]
+                            self.array[j] = temp
+                        end
+                    end
+                end
+                self:addList()
+                
+                hideProgressHUD(true)
+            end,
+            function (api, code, message, description)
+                hideProgressHUD(true)
+            end
+            )
+        end,
+        function (api, code, message, description)
+            hideProgressHUD(true)
+        end
+    )
+
     s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser( 
         function (api, result)
             s_CURRENT_USER:getFriendsInfo() 

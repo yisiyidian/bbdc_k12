@@ -489,26 +489,31 @@ function HomeLayer.create(share)
                 end
             end
             button_friend:scheduleUpdateWithPriorityLua(updateFriendButton,0)
+            s_UserBaseServer.getFolloweesOfCurrentUser( 
+                function (api,result)
+                    s_UserBaseServer.getFollowersOfCurrentUser( 
+                    function (api, result)
+                        --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+                        s_CURRENT_USER:getFriendsInfo()
+                        --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
 
-            s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser( 
-                function (api, result)
-                    --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
-                    s_CURRENT_USER:getFriendsInfo()
-                    --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+                        if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
+                            local redHint = cc.Sprite:create('image/friend/fri_infor.png')
+                            redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
+                            button_friend:addChild(redHint)
 
-                    if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
-                        local redHint = cc.Sprite:create('image/friend/fri_infor.png')
-                        redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
-                        button_friend:addChild(redHint)
-
-                        local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
-                        num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
-                        redHint:addChild(num)
+                            local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
+                            num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
+                            redHint:addChild(num)
+                        end
+                    end,
+                    function (api, code, message, description)
                     end
+                    )
                 end,
                 function (api, code, message, description)
                 end
-            )
+                )
 
 ----
         button_back[i] = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")

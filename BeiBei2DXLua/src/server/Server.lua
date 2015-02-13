@@ -288,6 +288,24 @@ function Server.requestFollowersAndFollowees(userObjectId, onResponse)
         create_onFailed(onResponse))
 end
 
+function Server.requestFollowers(userObjectId, onResponse)
+    __request__('users/' .. userObjectId .. '/followers?include=follower', 
+        'GET', 
+        CONTENT_TYPE_JSON, 
+        nil, 
+        create_onSucceed(onResponse),
+        create_onFailed(onResponse))
+end
+
+function Server.requestFollowees(userObjectId, onResponse)
+    __request__('users/' .. userObjectId .. '/followees?include=followee', 
+        'GET', 
+        CONTENT_TYPE_JSON, 
+        nil, 
+        create_onSucceed(onResponse),
+        create_onFailed(onResponse))
+end
+
 function Server.follow(userObjectId, targetObjectId, onResponse)
     __request__('users/' .. userObjectId .. '/friendship/' .. targetObjectId, 
         'POST', 
