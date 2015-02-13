@@ -41,7 +41,7 @@ local function onError()
 end
 
 function onErrorNeedRestartAppHappend(e)
-    s_TIPS_LAYER:showSmall(e, onError, onError)
+    s_TIPS_LAYER:showSmall(e, onError, nil)
 end
 
 ----------------------------------------------------------------------------------------------------------------
