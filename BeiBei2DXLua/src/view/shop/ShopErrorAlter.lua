@@ -47,7 +47,8 @@ function ShopErrorAlter.create()
 
     local button_sure_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            main.sure()
+            -- main.sure()
+            s_CorePlayManager.enterLevelLayer()
         end
     end
 

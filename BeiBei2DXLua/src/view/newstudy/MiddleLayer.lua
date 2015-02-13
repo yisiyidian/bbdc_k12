@@ -139,6 +139,7 @@ local function createNextButton(getBean)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            s_level_popup_state = 1
             s_HUD_LAYER:removeChildByName('missionCompleteCircle')
             s_CURRENT_USER.beanRewardForIron = 3
             s_CorePlayManager.leaveStudyOverModel()

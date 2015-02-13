@@ -158,7 +158,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     
     -- TODO add review boss position
     -- TODO check level state
---    local levelState = math.random(0, 3)
+----    local levelState = math.random(0, 3)
 --    levelState = 5
     if levelState == 0 then
         local deco = cc.Sprite:create('image/chapter/elements/tubiao_daizi_tanchu_xiaoguan.png')
@@ -214,6 +214,7 @@ function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex)
 end
 
 function ChapterLayerBase:addPopup(levelIndex)
+--    print('addPopup:'..levelIndex)
     -- TODO check level state
     local bossList = s_LocalDatabaseManager.getAllBossInfo()
     local state, coolingDay

@@ -11,6 +11,7 @@ local function _initConstant()
     s_gamestate_reviewmodel                 = 3
     s_gamestate_studymodel_extra            = 4
     s_gamestate_reviewmodel_extra           = 5
+    s_level_popup_state                     = 0
     
     --need to do next version maybe
     s_gamestate_reviewbossmodel_today       = 9
