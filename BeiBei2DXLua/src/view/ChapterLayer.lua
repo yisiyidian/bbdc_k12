@@ -124,11 +124,11 @@ function ChapterLayer:checkUnlockLevel()
             self:scrollLevelLayer(currentProgress,0.3)
 
         end)
-        if taskIndex == -2 then
-            s_SCENE:callFuncWithDelay(1.5, function() 
-            self.chapterDic[currentChapterKey]:addPopup(currentProgress)
-            end)
-        end
+--        if taskIndex == -2 then
+--            s_SCENE:callFuncWithDelay(1.5, function() 
+--            self.chapterDic[currentChapterKey]:addPopup(currentProgress)
+--            end)
+--        end
         s_SCENE:callFuncWithDelay(2.0, function() 
             self:addBottomBounce()
         end)
@@ -148,14 +148,15 @@ function ChapterLayer:checkUnlockLevel()
         s_SCENE:callFuncWithDelay(1, function()
             self:scrollLevelLayer(currentProgress, 1)
         end)
-        if taskIndex == -2 then
-            s_SCENE:callFuncWithDelay(1.3, function() 
-                self.chapterDic[chapterKey]:addPopup(currentProgress)
-            end)
-        end
+--        if taskIndex == -2 then
+--            s_SCENE:callFuncWithDelay(1.3, function() 
+--                self.chapterDic[chapterKey]:addPopup(currentProgress)
+--            end)
+--        end
     else
         local chapterKey = 'chapter'..math.floor(oldProgress / s_islands_per_page)
-        if taskIndex == -2 then
+        if taskIndex == -2 and s_level_popup_state == 1 then
+            s_level_popup_state = 0
             s_SCENE:callFuncWithDelay(1.0, function() 
                 self.chapterDic[chapterKey]:addPopup(currentProgress)
             end)
