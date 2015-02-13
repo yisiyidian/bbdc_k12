@@ -205,7 +205,7 @@ function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex)
         local wordLibrary = WordLibrary.create(levelIndex)
         s_SCENE.popupLayer:addChild(wordLibrary)   
         back:runAction(cc.MoveBy:create(0.2,cc.p(800,0)))
-        wordLibrary.close = function ( )
+        wordLibrary.close = function ()
             back:runAction(cc.MoveBy:create(0.2,cc.p(-800,0)))
         end
     else
@@ -227,15 +227,6 @@ function ChapterLayerBase:addPopup(levelIndex)
             coolingDay = bossInfo["coolingDay"]
         end
     end
---    -- check active
---    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
---    local active
-----    print('###todayReviewBoss'..#todayReviewBoss)
---    if #todayReviewBoss == 0 or todayReviewBoss[0] - (levelIndex + 1) ~= 0 then
---        active = 0
---    else
---        active = 1
---    end
     
     local levelPosition = self:getLevelPosition('level'..levelIndex)
     local function taskEvent(sender,eventType)
