@@ -133,7 +133,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     local levelState, coolingDay
     local currentTaskBossIndex = -1
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 then
+        if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 and bossInfo["typeIndex"] - 8 < 0 then
             currentTaskBossIndex = bossID - 1
         end
         if bossID - (levelIndex + 1) == 0 then
@@ -220,7 +220,7 @@ function ChapterLayerBase:addPopup(levelIndex)
     local state, coolingDay
     local currentTaskBossIndex = -1
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 then
+        if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 and bossInfo["typeIndex"] - 8 < 0 then
             currentTaskBossIndex = bossID - 1
         end
         if bossID - (levelIndex + 1) == 0 then

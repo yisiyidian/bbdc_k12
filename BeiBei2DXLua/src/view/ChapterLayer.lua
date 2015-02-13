@@ -79,14 +79,16 @@ function ChapterLayer:checkUnlockLevel()
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
     -- check state
     local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    print('---BOSS list')
+    print_lua_table(bossList)
     local taskIndex = -2
     local taskState = -2
     local progressIndex = progress
     local progressState = 0
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 and taskIndex == -2 then
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 and taskIndex == -2 and bossInfo["typeIndex"] - 8 < 0 then
             taskIndex = bossID - 1
-            taskState = bossInfo["typeIndex"] 
+            taskState = bossInfo["typeIndex"]
         end
         if (progressIndex + 1) == bossID then
             progressState = bossInfo["typeIndex"]
@@ -177,7 +179,7 @@ function ChapterLayer:addNotification()
     local progressIndex = progress
     local progressState = 0
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 and taskIndex == -2 then
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 and taskIndex == -2 and bossInfo["typeIndex"] - 8 < 0 then
             taskIndex = bossID - 1
             taskState = bossInfo["typeIndex"] 
         end
