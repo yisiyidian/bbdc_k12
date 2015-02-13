@@ -114,7 +114,7 @@ start = function ()
             s_SERVER.createData(errorObj)
         end
 
-        onErrorNeedRestartAppHappend('非常抱歉，程序运行时出现错误，点击确定可以重启应用。')
+        onErrorNeedRestartAppHappend('非常抱歉，贝贝在运行时开小差了，出现了错误，点击[确定]可以重启贝贝，点击[取消]继续开小差。')
     end
     
     if cc.Director:getInstance():getRunningScene() then
