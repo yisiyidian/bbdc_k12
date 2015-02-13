@@ -107,9 +107,7 @@ function ChapterLayer:checkUnlockLevel()
         s_SCENE:callFuncWithDelay(2.0, function() 
             self:addBottomBounce()
         end)
-        
 
-       
 
     elseif currentProgress - oldProgress > 0 then   -- unlock level
         local chapterKey = 'chapter'..math.floor(oldProgress / s_islands_per_page)
@@ -148,15 +146,6 @@ function ChapterLayer:addNotification()
     local notification = cc.Sprite:create('image/chapter/chapter0/notifi.png') 
     notification:setAnchorPoint(cc.p(0.5,0))
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-   
-
---    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
---    -- check active index
---    if #todayReviewBoss == 0 then
---        taskIndex = progress
---    else
---        taskIndex = todayReviewBoss[0] - 1
---    end
     -- check state
     local bossList = s_LocalDatabaseManager.getAllBossInfo()
     local taskIndex = -2
@@ -173,7 +162,7 @@ function ChapterLayer:addNotification()
         end
     end
     
---    taskIndex = 1
+--    taskIndex = 5
     
     if taskIndex == -2 then
 --        self:scrollLevelLayer(progress,0)
@@ -183,6 +172,7 @@ function ChapterLayer:addNotification()
         return
     else
         self:scrollLevelLayer(taskIndex,0)
+        return
     end
     
     local text = cc.Label:createWithSystemFont('当前任务','',23)
@@ -467,17 +457,12 @@ end
 
 -- scroll self.listView to show the specific chapter and level
 function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
+--    print('scrollLevelLayer:'..levelIndex)
     if levelIndex == 0 then
         return
     end
-    -- compute self.listView inner height
---    local itemList = self.listView:getItems()
---    local innerHeight = 0
---    for i = 1,#itemList do
---        innerHeight = innerHeight + itemList[i]:getContentSize().height
---    end
-
-    local currentLevelCount = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 1
+--    local currentLevelCount = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 1
+    local currentLevelCount = levelIndex + 1
     local totalLevelCount = (math.floor((currentLevelCount-1) / s_islands_per_page) + 1) * s_islands_per_page
     local innerHeight = s_chapter0_base_height * (math.floor((currentLevelCount-1) / s_islands_per_page) + 1)
     self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
