@@ -34,6 +34,7 @@ function DataLevelInfo:getBookCurrentLevelIndex()
 end
 
 function DataLevelInfo:getLevelInfo(bookKey)
+--    return 19
     for i, v in ipairs(g_BOOKKEYS) do
         if v == bookKey then
             return self[DataLevelInfo.BOOKKEY .. g_BOOKS[i]]
@@ -43,7 +44,7 @@ function DataLevelInfo:getLevelInfo(bookKey)
 end
 
 function DataLevelInfo:computeCurrentProgress()
---    return 4
+--    return 20
      return s_LocalDatabaseManager.getMaxBossID() - 1
 end
 

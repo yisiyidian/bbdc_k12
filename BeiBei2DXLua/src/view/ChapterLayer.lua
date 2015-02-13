@@ -53,9 +53,10 @@ function ChapterLayer:ctor()
     -- add chapter node
     self:addChapterIntoListView('chapter0')
     local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey) + 0
-    print('#### current levelINfo '..levelInfo)
+--    print('#### current levelINfo '..levelInfo)
     local currentChapterIndex = math.floor(levelInfo / s_islands_per_page)   
     for i = 1, currentChapterIndex do
+        print('start add chapter:'..i)
         self:addChapterIntoListView('chapter'..i)
     end
     -- add player
@@ -79,16 +80,26 @@ function ChapterLayer:checkUnlockLevel()
 --    currentProgress = 10
     s_CURRENT_USER.levelInfo:updateDataToServer()  -- update book progress
  if currentProgress % s_islands_per_page == 0 and currentProgress > 0 and currentProgress - oldProgress > 0 then       
-        -- unlock chapter
+    -- unlock chapter
         self:plotUnlockCloudAnimation()
         local currentChapterKey = 'chapter'..math.floor(currentProgress / s_islands_per_page)
+--        
+--        local delay = 0.5
+--        local func = function()
+--            self:addChapterIntoListView(currentChapterKey)
+--        end
+--
+--        local delayAction = cc.DelayTime:create(delay)
+--        local callAction = cc.CallFunc:create(func)
+--        local sequence = cc.Sequence:create(delayAction, callAction)
+--        self:runAction(sequence)
         s_SCENE:callFuncWithDelay(0.1, function() 
             self:addChapterIntoListView(currentChapterKey)
         end)
-        s_SCENE:callFuncWithDelay(0.3, function() 
+        s_SCENE:callFuncWithDelay(1.0, function() 
             self.chapterDic[currentChapterKey]:plotUnlockLevelAnimation('level'..currentProgress)
         end)
-        s_SCENE:callFuncWithDelay(1.0, function() 
+        s_SCENE:callFuncWithDelay(0.5, function() 
             --self:addPlayerOnLevel(currentChapterKey,'level'..currentProgress)     
             self:scrollLevelLayer(currentProgress,0.3)
 
@@ -427,6 +438,7 @@ function ChapterLayer:addPlayerOnLevel(chapterKey, levelKey)
 end
 
 function ChapterLayer:addChapterIntoListView(chapterKey)
+    print('add chapter list view:'..chapterKey)
     if chapterKey == 'chapter0' then    
         local ChapterLayer0 = require('view.level.ChapterLayer0')
         self.chapterDic['chapter0'] = ChapterLayer0.create("start")
@@ -447,9 +459,9 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
         custom_item:setContentSize(self.chapterDic[chapterKey]:getContentSize())  
         custom_item:setName(chapterKey)  
         --self.chapterDic['chapter0']:setAnchorPoint(cc.p(0,0))
-        self.listView:addChild(self.chapterDic[chapterKey]) 
-    end
-    
+--        self.listView:addChild(self.chapterDic[chapterKey]) 
+        self.listView:pushBackCustomItem(self.chapterDic[chapterKey])
+    end    
 
 end
 
