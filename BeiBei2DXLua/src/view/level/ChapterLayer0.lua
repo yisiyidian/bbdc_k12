@@ -15,6 +15,8 @@ local Chapter0ResTable = {
     back3_2 = {'res/image/chapter/chapter0/3_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height-1940),"back"},
     rest = {'res/image/chapter/chapter0/rest.png',cc.p(0,1),cc.p(200,2630)},
     swim = {'image/chapter_level/youyongquan.png',cc.p(0,1),cc.p(460,1930)},
+    island2 = {'res/image/chapter/island2.png',cc.p(0,1),cc.p(395,2040),"add"},
+    island3 = {'res/image/chapter/island3.png',cc.p(0,1),cc.p(470,630),"add"},
     leftIsland = {'image/chapter/leftIsland.png',cc.p(0,1),cc.p(0,2900),"add"},
     rightIsland = {'image/chapter/rightIsland.png',cc.p(1,1),cc.p(s_DESIGN_WIDTH,2030),"add"},
     island0Table = {"image/levelLayer/island.png",cc.p(0,1),cc.p(527, 2662),"island","level0"}
@@ -86,6 +88,8 @@ function ChapterLayer0:loadResource()
     
     self:createObjectForResource(Chapter0ResTable['rest'])
     self:createObjectForResource(Chapter0ResTable['swim'])
+    self:createObjectForResource(Chapter0ResTable['island2'])
+    self:createObjectForResource(Chapter0ResTable['island3'])
     self:createObjectForResource(Chapter0ResTable['leftIsland'])
 --    self:createObjectForResource(Chapter0ResTable['rightIsland'])
     -- plot boat
