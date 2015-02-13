@@ -183,10 +183,10 @@ function IntroLayer.create(directOnLogin)
     cloud:addChild(button_register)
 
     local label_hint_array = {}
-    table.insert(label_hint_array, "一关一城市 贝贝带你游美国")
-    table.insert(label_hint_array, "随时随地 消消记记")
-    table.insert(label_hint_array, "生词错词分类 数据私人定制")
-    table.insert(label_hint_array, "登陆贝贝单词 发现更多精彩")
+    table.insert(label_hint_array, "贝贝独创：学习就是游戏")
+    table.insert(label_hint_array, "生词进度：从此一目了然")
+    table.insert(label_hint_array, "过关斩怪兽：根本停不下来")
+    table.insert(label_hint_array, "登陆贝贝单词：发现更多精彩")
     
     local label_hint = cc.Label:createWithSystemFont(label_hint_array[currentIndex],"",36)
     label_hint:setColor(cc.c4b(115,197,243,255))
