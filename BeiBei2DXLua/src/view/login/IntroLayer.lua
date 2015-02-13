@@ -34,7 +34,7 @@ function IntroLayer.create(directOnLogin)
     layer:addChild(backColor)
     
     local backLight = cc.Sprite:create("image/login/denglu_background.png")
-    backLight:setContentSize(s_DESIGN_WIDTH, s_DESIGN_HEIGHT)
+    --backLight:setContentSize(s_DESIGN_WIDTH, s_DESIGN_HEIGHT)
     backLight:setAnchorPoint(0.5,0.5)
     backLight:ignoreAnchorPointForPosition(false)
     backLight:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
