@@ -171,6 +171,8 @@ function MiddleLayer:ctor()
     backColor:ignoreAnchorPointForPosition(false)
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     self:addChild(backColor)
+
+    s_SCENE.popupLayer.pauseBtn:setVisible(false)
     
     self.bean = s_CURRENT_USER:getBeans()
     self.beanSprite = createBeanSprite(self.bean)
