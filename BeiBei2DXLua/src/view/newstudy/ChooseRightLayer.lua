@@ -39,8 +39,8 @@ local function addStudyButton(word,wrongNum, preWordName, preWordNameState)
                 s_SCENE:popup(guideAlter)
                 guideAlter.addbeibeiThrowHeart()
                 guideAlter.sure = function()
-                    print("guide alter tag: "..guideAlter.box_tag)
                     s_CURRENT_USER.isAlterOn = 0
+                    saveUserToServer({['isAlterOn'] = s_CURRENT_USER.isAlterOn})
                     normal()
                 end
             else
@@ -77,8 +77,8 @@ local function addNextButton(word,wrongNum, preWordName, preWordNameState)
                 s_SCENE:popup(guideAlter)
                 guideAlter.addbeibeiBreakHeart()
                 guideAlter.sure = function()
-                    print("guide alter tag: "..guideAlter.box_tag)
                     s_CURRENT_USER.isAlterOn = 0
+                    saveUserToServer({['isAlterOn'] = s_CURRENT_USER.isAlterOn})
                     normal()
                     AnalyticsFirst(ANALYTICS_FIRST_SKIP_REVIEW, 'sure')
                 end

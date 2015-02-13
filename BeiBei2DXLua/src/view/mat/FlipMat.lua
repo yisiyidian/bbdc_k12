@@ -130,7 +130,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
                 local randomIndex = math.random(1, #charaster_set_filtered)
                 node = FlipNode.create(spineName, charaster_set_filtered[randomIndex], i, j)
 
-                if isNewPlayerModel then
+                if isNewPlayerModel == true then
                     node:setPosition(320, -1136)
                     main:addChild(node)
 
@@ -144,6 +144,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
                     tmp_label:setOpacity(120)
                     tmp_label:setPosition(tmp_sprite:getContentSize().width/2 + 3, tmp_sprite:getContentSize().height/2 + 3)
                     tmp_sprite:addChild(tmp_label)
+                    
                 else
                     node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
                     main:addChild(node)
@@ -191,7 +192,11 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
         local action6 = cc.Sequence:create(actionList)
         finger:runAction(cc.RepeatForever:create(action6))
     end
-    --main.finger_action()
+    
+    if isNewPlayerModel == true then
+        main.finger_action()
+    end
+    
     local back_box = cc.Layer:create()
     local back_box_num = 0
     local updateSelectWord = function()
@@ -218,7 +223,6 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
         end
         back_box_num = #selectStack
     end
-
 
     -- local function
     local checkTouchLocation = function(location)

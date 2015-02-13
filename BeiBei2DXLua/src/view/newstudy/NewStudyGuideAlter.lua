@@ -116,7 +116,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
         local button_cancel_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
                 main.cancel()
-                main:removeFromParent()
+                s_SCENE:removeAllPopups()
             end
         end
     
@@ -130,6 +130,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
         local button_sure_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
                 main.sure()
+                s_SCENE:removeAllPopups()
             end
         end
     

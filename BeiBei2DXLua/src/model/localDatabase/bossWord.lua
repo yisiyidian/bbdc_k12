@@ -92,7 +92,6 @@ function M.getTodayReviewBoss()
     end
 
     local getGapDay = function(day1, day2)
-        print('local getGapDay = function(day1, day2)', day1, day2)
         local t1 = split(day1, "/")
         local t2 = split(day2, "/")
         local d1 = {}

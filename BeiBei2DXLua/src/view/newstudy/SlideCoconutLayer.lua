@@ -103,10 +103,16 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
     backColor:addChild(word_meaning_label)
     
     local size_big = backColor:getContentSize()
-    if wrongWordList ~= nil then
-        mat = FlipMat.create(self.wordInfo[2],4,4,false,"coconut_light")
+    local isNewPlayer = true
+    if s_CURRENT_USER.slideNum == 1  then
+        isNewPlayer = true
     else
-        mat = FlipMat.create(self.wordInfo[2],4,4,false,"coconut_light",self.progressBar.indexPosition())
+        isNewPlayer = false
+    end
+    if wrongWordList ~= nil then
+        mat = FlipMat.create(self.wordInfo[2],4,4,isNewPlayer,"coconut_light")
+    else
+        mat = FlipMat.create(self.wordInfo[2],4,4,isNewPlayer,"coconut_light",self.progressBar.indexPosition())
     end
     mat:setPosition(size_big.width/2, 160)
     backColor:addChild(mat)
@@ -174,10 +180,12 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
 
         if s_CURRENT_USER.slideNum == 1 then
             local guideAlter = GuideAlter.create(0, "划词加强记忆", "用来加强用户记忆的步骤，可以强化你对生词的印象。")
-            guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
-            backColor:addChild(guideAlter)
+            guideAlter:setPosition(s_LEFT_X + bigWidth / 2, s_DESIGN_HEIGHT/2)
+            s_SCENE:popup(guideAlter)
 
             guideAlter.know = function()
+                s_CURRENT_USER.slideNum = 0
+                saveUserToServer({['slideNum'] = s_CURRENT_USER.slideNum})
                 normal()
             end
         else
