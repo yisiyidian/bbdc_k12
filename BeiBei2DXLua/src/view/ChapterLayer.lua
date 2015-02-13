@@ -75,11 +75,31 @@ function ChapterLayer:ctor()
 end
 
 function ChapterLayer:checkUnlockLevel()
+    -- get state --
+    local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+    -- check state
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    local taskIndex = -2
+    local taskState = -2
+    local progressIndex = progress
+    local progressState = 0
+    for bossID, bossInfo in pairs(bossList) do
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 and taskIndex == -2 then
+            taskIndex = bossID - 1
+            taskState = bossInfo["typeIndex"] 
+        end
+        if (progressIndex + 1) == bossID then
+            progressState = bossInfo["typeIndex"]
+        end
+    end
+    -- get state --
+
     local oldProgress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)+0
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() +0
 --    currentProgress = 10
     s_CURRENT_USER.levelInfo:updateDataToServer()  -- update book progress
  if currentProgress % s_islands_per_page == 0 and currentProgress > 0 and currentProgress - oldProgress > 0 then       
+--   if true then
     -- unlock chapter
         self:plotUnlockCloudAnimation()
         local currentChapterKey = 'chapter'..math.floor(currentProgress / s_islands_per_page)
@@ -104,6 +124,11 @@ function ChapterLayer:checkUnlockLevel()
             self:scrollLevelLayer(currentProgress,0.3)
 
         end)
+        if taskIndex == -2 then
+            s_SCENE:callFuncWithDelay(1.5, function() 
+            self.chapterDic[currentChapterKey]:addPopup(currentProgress)
+            end)
+        end
         s_SCENE:callFuncWithDelay(2.0, function() 
             self:addBottomBounce()
         end)
@@ -119,24 +144,22 @@ function ChapterLayer:checkUnlockLevel()
 --            end
 --        )  
         self.chapterDic[chapterKey]:plotUnlockLevelAnimation('level'..currentProgress)
---        -- move player
---        s_SCENE:callFuncWithDelay(0.3,function()
---            local nextLevelPosition = self.chapterDic[chapterKey]:getLevelPosition('level'..currentProgress)
---            local playerAction = cc.MoveTo:create(0.5,cc.p(nextLevelPosition.x+100,nextLevelPosition.y))
---            local notification = self.player:getChildByTag(100)
---            local notificationAction1 = function()
---                local notificationAct = cc.ScaleTo:create(0.4,1)
---                notification:runAction(notificationAct)
---            end
---            self.player:runAction(cc.Sequence:create(playerAction,
---                cc.DelayTime:create(0.6),
---                cc.CallFunc:create(notificationAction1)))
---        end)
 
         s_SCENE:callFuncWithDelay(1, function()
             self:scrollLevelLayer(currentProgress, 1)
         end)
+        if taskIndex == -2 then
+            s_SCENE:callFuncWithDelay(1.3, function() 
+                self.chapterDic[chapterKey]:addPopup(currentProgress)
+            end)
+        end
     else
+        local chapterKey = 'chapter'..math.floor(oldProgress / s_islands_per_page)
+        if taskIndex == -2 then
+            s_SCENE:callFuncWithDelay(1.0, function() 
+                self.chapterDic[chapterKey]:addPopup(currentProgress)
+            end)
+        end
         -- add notification
 --        self:addPlayerNotification(true) 
     end
