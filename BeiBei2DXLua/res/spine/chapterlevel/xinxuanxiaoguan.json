@@ -1,0 +1,84 @@
+{
+"skeleton": {
+	"hash": "JQl9CivgNTjoaLn4b07GaJN8w5I",
+	"spine": "2.1.07",
+	"width": 337.02,
+	"height": 310.94,
+	"images": "/Users/yehanjie/Desktop/spine/xinxuanxiaoguan"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 31.4, "x": 65.9, "y": 0.21, "rotation": 92.25 },
+	{ "name": "bone3", "parent": "root", "length": 36.7, "x": 79.07, "y": 11.99, "rotation": 4.5 },
+	{ "name": "bone2", "parent": "bone", "length": 45.53, "x": 214.18, "y": 53.74, "rotation": -180 }
+],
+"slots": [
+	{ "name": "yisiyingzi", "bone": "bone3", "attachment": "yisiyingzi" },
+	{ "name": "yezishuye", "bone": "bone2", "attachment": "yezishuye" },
+	{ "name": "xuanxiaoguanyizishuzhi", "bone": "bone", "attachment": "xuanxiaoguanyizishuzhi" },
+	{ "name": "yezishu", "bone": "bone2", "attachment": "yezishu" },
+	{ "name": "yezi2", "bone": "bone2", "attachment": "yezi2" },
+	{ "name": "yizi1", "bone": "bone2", "attachment": "yizi1" }
+],
+"skins": {
+	"default": {
+		"xuanxiaoguanyizishuzhi": {
+			"xuanxiaoguanyizishuzhi": { "x": 92.33, "y": 19.21, "rotation": -92.25, "width": 77, "height": 178 }
+		},
+		"yezi2": {
+			"yezi2": { "x": 53.07, "y": 31.81, "rotation": 87.74, "width": 25, "height": 46 }
+		},
+		"yezishu": {
+			"yezishu": { "x": 21.16, "y": 4.03, "rotation": 87.74, "width": 162, "height": 142 }
+		},
+		"yezishuye": {
+			"yezishuye": { "x": 33.33, "y": 11.46, "rotation": 87.74, "width": 186, "height": 165 }
+		},
+		"yisiyingzi": {
+			"yisiyingzi": { "x": 80.27, "y": -9.83, "rotation": 174.57, "width": 211, "height": 108 }
+		},
+		"yizi1": {
+			"yizi1": { "x": 51.35, "y": 21.65, "rotation": 88.56, "width": 25, "height": 27 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 1.0333, "angle": 7.91 },
+					{ "time": 1.8333, "angle": 2.18 },
+					{ "time": 2.7, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2.7, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2.7, "x": 1, "y": 1 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "time": 0, "angle": 359.22 },
+					{ "time": 1, "angle": 5.51 },
+					{ "time": 2.7, "angle": 359.22 }
+				]
+			},
+			"bone3": {
+				"translate": [
+					{ "time": 1, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.962, "y": 1 },
+					{ "time": 1, "x": 1.003, "y": 1 },
+					{ "time": 2.7, "x": 0.962, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

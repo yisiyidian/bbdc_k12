@@ -161,7 +161,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         deco:setPosition(levelPosition.x,levelPosition.y+20)
         self:addChild(deco, 130)
     elseif levelState == 2 or levelIndex == currentTaskBossIndex then
-        local reviewBoss = sp.SkeletonAnimation:create('spine/3fxzlsxuanxiaoguandiaoluo.json', 'spine/3fxzlsxuanxiaoguandiaoluo.atlas', 1)
+        local reviewBoss = sp.SkeletonAnimation:create('spine/3 fxzlsxuanxiaoguandiaoluo1.json', 'spine/3 fxzlsxuanxiaoguandiaoluo1.atlas', 1)
 --        reviewBoss:addAnimation(0, '1', false)
 --        s_SCENE:callFuncWithDelay(1,function()
             reviewBoss:addAnimation(1, '2', true)

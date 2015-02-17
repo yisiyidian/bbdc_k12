@@ -83,7 +83,7 @@ function ChapterLayer0:loadResource()
     -- plot boat
     local boat1 = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
     boat1:addAnimation(0, 'animation', true)
-    boat1:setPosition(250, 2380)
+    boat1:setPosition(250, 2330)
     self:addChild(boat1, 140)
     local boat2 = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
     boat2:addAnimation(0, 'animation', true)
@@ -114,6 +114,16 @@ function ChapterLayer0:loadResource()
     local crabAction6 = cc.RepeatForever:create(cc.Sequence:create(crabAction3,crabAction4))
     crab:runAction(crabAction5)
     crab:runAction(crabAction6)
+    
+    -- tree animation
+    local tree1 = sp.SkeletonAnimation:create('spine/chapterlevel/xinxuanxiaoguan.json', 'spine/chapterlevel/xinxuanxiaoguan.atlas',1)
+    tree1:addAnimation(0, 'animation', true)
+    tree1:setPosition(530,1860)
+    self:addChild(tree1, 140)
+    local tree2 = sp.SkeletonAnimation:create('spine/chapterlevel/skeleton.json', 'spine/chapterlevel/skeleton.atlas',1)
+    tree2:addAnimation(0, 'animation', true)
+    tree2:setPosition(200,2420)
+    self:addChild(tree2, 140)
     
     -- wave action
     self:addWaveAnimation(cc.p(400, 200))

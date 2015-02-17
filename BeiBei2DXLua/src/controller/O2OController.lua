@@ -75,10 +75,12 @@ function O2OController.start()
 
     s_SERVER.initNetworkStatus()
 
-    local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
+    local tmpUser = DataUser.create()
+    local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
 
     if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() then
         if hasUserInLocalDB then
+            s_CURRENT_USER = tmpUser
             O2OController.logInOffline()
         else
             local introLayer = IntroLayer.create(hasUserInLocalDB)
@@ -95,13 +97,14 @@ end
 function O2OController.onAssetsManagerCompleted()
     hideProgressHUD()
     -- O2OController.start() : has got user from local database
-    local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(s_CURRENT_USER, USER_TYPE_ALL)
+    local tmpUser = DataUser.create()
+    local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
 
     if not s_LocalDatabaseManager.isLogOut() and hasUserInLocalDB then    
-        if s_CURRENT_USER.usertype == USER_TYPE_QQ then
+        if tmpUser.usertype == USER_TYPE_QQ then
             O2OController.logInByQQAuthData()
         else
-            O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
+            O2OController.logInOnline(tmpUser.username, tmpUser.password)
         end
     elseif s_LocalDatabaseManager.isLogOut() and hasUserInLocalDB then
         local introLayer = IntroLayer.create(true)

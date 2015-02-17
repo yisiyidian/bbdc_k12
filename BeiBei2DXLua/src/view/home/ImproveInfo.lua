@@ -107,7 +107,7 @@ showLogin = function()
             end
             
             
-            local updateUserNameAndPassword = function ()
+            local updateUserNameAndPassword = function (callback)
                 s_UserBaseServer.updateUsernameAndPassword(
                     username.textField:getString(), 
                     password.textField:getString(), 
@@ -115,10 +115,13 @@ showLogin = function()
                         AnalyticsAccountBind()                      
                         if errordescription then                  
                             s_TIPS_LAYER:showSmall(errordescription)
+                            hideProgressHUD(true)
                         else        
-                            main.close()                    
+                            main.close()     
+                            hideProgressHUD(true)
+                            if callback ~= nil then callback() end               
                         end     
-                        hideProgressHUD(true)
+                        
                     end
                 )
             end
@@ -129,13 +132,16 @@ showLogin = function()
                 or main.layerType == ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER then
                 updateUserNameAndPassword()
             else
-                s_UserBaseServer.logIn(s_CURRENT_USER.username, s_CURRENT_USER.password, function (userdata, errordescription, errorcode)
+                local tmpUser = DataUser.create()
+                local hasAccount = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
+                s_UserBaseServer.logIn(tmpUser.username, tmpUser.password, function (userdata, errordescription, errorcode)
                     if errordescription ~= nil then
                         s_TIPS_LAYER:showSmall(errordescription)
                         hideProgressHUD(true)
                     else
-                        updateUserNameAndPassword()
-                        s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
+                        updateUserNameAndPassword(function ()
+                            s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
+                        end)
                     end
                 end)
             end
