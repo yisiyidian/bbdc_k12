@@ -26,7 +26,7 @@ function M.addStudyWordsNum()
         Manager.saveData(data, userId, username, 1, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
     end
     s_CURRENT_USER.wordsCount = s_CURRENT_USER.wordsCount + 1
-    saveUserToServer({[DataUser.wordsCount]=s_CURRENT_USER[DataUser.wordsCount]})
+    saveUserToServer({['wordsCount']=s_CURRENT_USER.wordsCount})
     saveDailyStudyInfoToServer(data)
     return data
 end
