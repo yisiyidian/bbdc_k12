@@ -131,7 +131,9 @@ function MissionProgressLayer.create(share)
                                 local shareLayer = Share.create()
                                 shareLayer:setPosition(0,-s_DESIGN_HEIGHT)
                                 local move = cc.MoveTo:create(0.3,cc.p(0,0))
-                                shareLayer:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),move))
+                                shareLayer:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),move,cc.CallFunc:create(function ()
+                                    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+                                end,{})))
                                 s_GAME_LAYER:addChild(shareLayer,2)
                             end,{})
                             swell = cc.Spawn:create(cc.Sequence:create(a1,a2),cc.CallFunc:create(anotherSwelling))
@@ -174,6 +176,7 @@ function MissionProgressLayer.create(share)
                 finishProgress:runAction(cc.Sequence:create(swell))
                 finishProgress:setVisible(true) 
                 anotherEnterButton:setVisible(true) 
+                enterButton:setVisible(false)
 
             end
         end
