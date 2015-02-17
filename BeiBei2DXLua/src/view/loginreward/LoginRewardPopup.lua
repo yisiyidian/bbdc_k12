@@ -137,28 +137,31 @@ function LoginRewardPopup:ctor()
          end
      end
      local currentData = {}
+     if #currentData > 0 then
+        currentData = {}
+     end
      local currentTime = os.time()
      local today = math.floor((currentTime - s_CURRENT_USER.localTime) / ( 24 * 60 * 60 ) ) % 7
      local dayInWeekEnd = dayInWeekBegin + today
 
      local currentWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
+     local dayTime = 24 * 60 * 60
 
-     currentWeek:getReward(os.time())
      if dayInWeekEnd <= 7 then
         for i = dayInWeekBegin,dayInWeekEnd do
-            table.insert(currentData,currentWeek:isGotReward(os.time() - (dayInWeekEnd - dayInWeekBegin + i - dayInWeekBegin) * dayTime))
+            table.insert(currentData,currentWeek:isGotReward(os.time() + (dayInWeekBegin - dayInWeekEnd + i - dayInWeekBegin) * dayTime))
         end
      else
         local lastWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas - 1]
-        for i = 8,dayInWeekEnd do
+        for i = dayInWeekBegin,7 do
             if lastWeek == nil then
                table.insert(currentData,false)
             else
-               table.insert(currentData,lastWeek:isGotReward(os.time() - (dayInWeekEnd - dayInWeekBegin + i - 8) * dayTime))
+                table.insert(currentData,lastWeek:isGotReward(os.time() + (dayInWeekBegin - dayInWeekEnd + i - dayInWeekBegin) * dayTime))
             end     
         end
-        for i = 1,dayInWeekBegin do
-            table.insert(currentData,currentWeek:isGotReward(os.time() - (i - dayInWeekBegin) * dayTime))
+        for i = 1,dayInWeekEnd - 7 do
+            table.insert(currentData,currentWeek:isGotReward(os.time() - (dayInWeekEnd - 7 - i) * dayTime))
         end
      end
      
@@ -172,6 +175,9 @@ function LoginRewardPopup:ctor()
     else
        todayMark = 1
     end
+    print("~~~~~~~~~")
+    print_lua_table(currentData)
+    
     for i = 1,#currentData do
         local sprite = backPopup:getChildByName("reward"..i)
         local mark = cc.Sprite:create("image/loginreward/mark.png")
@@ -202,6 +208,7 @@ function LoginRewardPopup:ctor()
                 s_CURRENT_USER:addBeans(rewardList[#currentData].reward)  
                 saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
                 sprite:setVisible(true) 
+                currentWeek:getReward(os.time())
                 s_CURRENT_USER.getDailyRewardTime = currentTime 
                 saveUserToServer({['getDailyRewardTime'] = s_CURRENT_USER.getDailyRewardTime})
 
