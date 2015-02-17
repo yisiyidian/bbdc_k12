@@ -192,6 +192,10 @@ function Manager.getTodayReviewBoss()
     return localdatabase_bossWord.getTodayReviewBoss()
 end
 
+function Manager.getMaxBoss()
+    return localdatabase_bossWord.getMaxBoss()
+end
+
 function Manager.getMaxBossID()
     return localdatabase_bossWord.getMaxBossID()
 end
