@@ -103,8 +103,21 @@ function MissionCompleteCircle:ctor()
             		backCircle:runAction(cc.Sequence:create(cc.DelayTime:create(delayTime),cc.Spawn:create(cc.ScaleTo:create(0.5,0.1),cc.MoveBy:create(0.5,cc.p(-bigWidth / 2 + 40,s_DESIGN_HEIGHT / 2 - 40)))))
             	end,{})))
             end
-            back[i]:addChild(taskProgress)
+            -- back[i]:addChild(taskProgress)
+            if back ~= nil and #back >= i and taskProgress ~= nil then back[i]:addChild(taskProgress) end
 
+            -- error handle 
+            local err = ''
+            if back == nil then
+                err = err .. 'back == nil; '
+            elseif #back < i then
+                err = err .. '#back>' .. tostring(#back) .. ', i>' .. tostring(i) .. '; '
+            end
+            if taskProgress == nil then err = err .. 'taskProgress == nil; ' end
+            if err ~= '' then
+                err = 'view/MissionCompleteCircle.lua;back[i]:addChild(taskProgress); ' .. err
+                saveLuaErrorToServer(err)
+            end
         end
     
 

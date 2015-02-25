@@ -49,11 +49,11 @@
 
     
     <channel name="xiaomi" 
-        packageName="com.beibei.wordmaster.mi"
+        packageName="com.beibei.wordmaster"
 
-        leanCloudAppName="贝贝单词X"
-        leanCloudAppID="94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp"
-        leanCloudAppKey="lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"
+        leanCloudAppName="beibeidanci_v180"
+        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
+        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
 
         QQPkgName="com.beibei.wordmaster.tencentmyapp"
         QQName="贝贝单词"

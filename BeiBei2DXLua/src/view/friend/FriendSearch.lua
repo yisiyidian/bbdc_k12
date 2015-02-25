@@ -93,12 +93,16 @@ function FriendSearch:ctor()
             showProgressHUD('正在搜索相应用户', true)
             s_UserBaseServer.searchUserByNickName(username,
                 function(api,result)
-                    local f_user = result.results
+                    local f_user = {}
                     s_UserBaseServer.searchUserByUserName(username,
                         function(api,result)
                             hideProgressHUD(true)
-                            for i, user in ipairs(result.results) do
-                                f_user[#f_user + 1] = user
+                            if type(result.results) == 'string' then
+                                saveLuaErrorToServer('view/friend/FriendSearch.lua; ' .. result.results)
+                            else
+                                for i, user in ipairs(result.results) do
+                                    f_user[#f_user + 1] = user
+                                end
                             end
                             if #f_user > 0 then
                                 s_CURRENT_USER:getFriendsInfo() 

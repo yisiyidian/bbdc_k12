@@ -798,7 +798,11 @@ function PersonalInfo:login()
                             local newtick = cc.Sprite:create('image/PersonalInfo/login/learning_process_finish_task_tick_on_canlender.png')
                             newtick:setPosition(loadingList[#loadingList]:getContentSize().width / 2,loadingList[#loadingList]:getContentSize().height / 2)
                             loadingList[#loadingList]:addChild(newtick,2)
-                            checkInList[#checkInList]:setVisible(false)
+                            if #checkInList > 0 then 
+                                checkInList[#checkInList]:setVisible(false) 
+                            else
+                                saveLuaErrorToServer('PersonalInfo.lua; #checkInList <= 0; checkInList[#checkInList]:setVisible(false);')
+                            end
                             if tick ~= nil then
                                 tick:removeFromParent()
                             end

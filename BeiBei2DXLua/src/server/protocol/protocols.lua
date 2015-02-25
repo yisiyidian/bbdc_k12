@@ -5,6 +5,19 @@ local DataBossWord              = require('model.user.DataBossWord')
 
 ---------------------------------------------------------------------------------------------------
 
+function saveLuaErrorToServer(msg)
+    if s_SERVER.isNetworkConnectedNow() then
+        local errorObj = {}
+        errorObj['className'] = 'LuaError'
+        errorObj['msg'] = msg
+        errorObj['appVersion'] = s_APP_VERSION
+        errorObj['RA'] = BUILD_TARGET
+        s_SERVER.createData(errorObj)
+    end
+end
+
+---------------------------------------------------------------------------------------------------
+
 SKIP_WORDLIST = '1'
 -- wordList : only for DataBossWord
 local function dataTableToJSONString(dataTable, wordList)
