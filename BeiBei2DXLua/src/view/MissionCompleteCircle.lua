@@ -115,6 +115,7 @@ function MissionCompleteCircle:ctor()
             end
             if taskProgress == nil then err = err .. 'taskProgress == nil; ' end
             if err ~= '' then
+                back[#back]:addChild(taskProgress)
                 err = 'view/MissionCompleteCircle.lua;back[i]:addChild(taskProgress); ' .. err
                 saveLuaErrorToServer(err)
             end

@@ -334,6 +334,12 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             light:setPosition(location)
         end
 
+        -- error handle
+        if lastTouchLocation == nil then 
+            saveLuaErrorToServer('view/summaryboss/SummaryBossLayer.luac; lastTouchLocation is nil;')
+            lastTouchLocation = location 
+        end
+
         local length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
         if length <= length_gap then
             fakeTouchMoved(location)
