@@ -101,7 +101,7 @@ function IntroLayer.create(directOnLogin)
     
     button_login_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            local loginAlter = LoginAlter.createLogin()
+            local loginAlter = LoginAlter.createLogin(CreateLogin_FromNormal)
             loginAlter:setTag(1)
             loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
             layer:addChild(loginAlter)
@@ -117,7 +117,7 @@ function IntroLayer.create(directOnLogin)
         if eventType == ccui.TouchEventType.ended then
 
             local gotoRegistNewAccount = function ()
-                local loginAlter = LoginAlter.createRegister()
+                local loginAlter = LoginAlter.createRegister(CreateRegister_FromNormal)
                 loginAlter:setTag(2)
                 loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                 layer:addChild(loginAlter)
@@ -165,7 +165,7 @@ function IntroLayer.create(directOnLogin)
     button_login = ccui.Button:create()
     button_login:loadTextures("image/button/studyscene_blue_button.png", "", "")
     button_login:addTouchEventListener(button_login_clicked)
-    button_login:setPosition(cloud:getContentSize().width/2-150, 200)
+    button_login:setPosition(cloud:getContentSize().width/2-150, 125)
     button_login:setTitleFontSize(36)
     button_login:setTitleText("登陆")
     button_login:setTitleColor(cc.c4b(255,255,255,255))
@@ -175,7 +175,7 @@ function IntroLayer.create(directOnLogin)
     button_register = ccui.Button:create()
     button_register:loadTextures("image/button/button_white_denglu.png", "", "")
     button_register:addTouchEventListener(button_register_clicked)
-    button_register:setPosition(cloud:getContentSize().width/2+150, 200)
+    button_register:setPosition(cloud:getContentSize().width/2+150, 125)
     button_register:setTitleFontSize(36)
     button_register:setTitleText("注册")
     button_register:setTitleColor(cc.c4b(115,197,243,255))
@@ -190,22 +190,22 @@ function IntroLayer.create(directOnLogin)
     
     local label_hint = cc.Label:createWithSystemFont(label_hint_array[currentIndex],"",36)
     label_hint:setColor(cc.c4b(115,197,243,255))
-    label_hint:setPosition(s_DESIGN_WIDTH/2, 100)
-    layer:addChild(label_hint)
+    label_hint:setPosition(cloud:getContentSize().width/2, 300)
+    cloud:addChild(label_hint)
 
     local circle_back_array = {}
     local circle_font_array = {}
     local gap = 50
-    local left = s_DESIGN_WIDTH/2 - gap*1.5
+    local left = cloud:getContentSize().width / 2 - gap*1.5
     for i = 1, 4 do
         local circle_back = cc.Sprite:create("image/login/yuan_white_denglu.png")
-        circle_back:setPosition(left+gap*(i-1),50)
-        layer:addChild(circle_back)
+        circle_back:setPosition(left+gap*(i-1),250)
+        cloud:addChild(circle_back)
         table.insert(circle_back_array, circle_back)
         
         local circle_font = cc.Sprite:create("image/login/yuan_blue_denglu.png")
-        circle_font:setPosition(left+gap*(i-1),50)
-        layer:addChild(circle_font)
+        circle_font:setPosition(left+gap*(i-1),250)
+        cloud:addChild(circle_font)
         table.insert(circle_font_array, circle_font)
         
         if i == currentIndex then
@@ -271,8 +271,21 @@ function IntroLayer.create(directOnLogin)
                 
                 if currentIndex == 4 then
                     if isOnline == true then
-                        button_login:setVisible(false)
-                        button_register:setVisible(false)
+                        local action0 = cc.MoveBy:create(0.4,cc.p(0,-200))
+                        local action1 = cc.CallFunc:create(function ()
+                            button_login:setVisible(false)
+                        end)
+                        local action2 = cc.MoveBy:create(0,cc.p(0,200))
+                        local action3 = cc.Sequence:create(action0,action1,action2)
+                        button_login:runAction(action3)
+
+                        local action5 = cc.MoveBy:create(0.4,cc.p(0,-200))
+                        local action6 = cc.CallFunc:create(function ()
+                            button_register:setVisible(false)
+                        end)
+                        local action7 = cc.MoveBy:create(0,cc.p(0,200))
+                        local action8 = cc.Sequence:create(action5,action6,action7)
+                        button_register:runAction(action8)
                     end
 
                     local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, -200))
@@ -310,13 +323,24 @@ function IntroLayer.create(directOnLogin)
                 
                 if currentIndex == 3 then            
                     local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, 0))
-                    local action3 = cc.CallFunc:create(function()
-                        if isOnline == true then
-                            button_login:setVisible(true)
-                            button_register:setVisible(true)
-                        end
-                    end)
-                    cloud:runAction(cc.Sequence:create(action2, action3))
+                    if isOnline == true then
+                        local action0 = cc.MoveBy:create(0,cc.p(0,-200))
+                        local action1 = cc.CallFunc:create(function ()
+                                button_login:setVisible(true)
+                         end)
+                         local action2 = cc.MoveBy:create(0.5,cc.p(0,200))
+                        local action3 = cc.Sequence:create(action0,action1,action2)
+                         button_login:runAction(action3)
+
+                        local action5 = cc.MoveBy:create(0,cc.p(0,-200))
+                        local action6 = cc.CallFunc:create(function ()
+                         button_register:setVisible(true)
+                        end)
+                        local action7 = cc.MoveBy:create(0.5,cc.p(0,200))
+                        local action8 = cc.Sequence:create(action5,action6,action7)
+                         button_register:runAction(action8)
+                    end
+                    cloud:runAction(action2)
                 end
                 
                 circle_back_array[currentIndex]:setVisible(true)

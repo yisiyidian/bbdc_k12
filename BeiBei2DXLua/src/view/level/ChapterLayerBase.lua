@@ -6,6 +6,7 @@ s_chapter_resource_middle_type = "middle"
 s_chapter_resource_end_type = "end"
 s_chapter0_base_height = 3014
 s_chapter_layer_width = 854
+local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
 local ChapterLayerBase = class('ChapterLayerBase',function() 
     return ccui.Widget:create()
@@ -362,20 +363,30 @@ function ChapterLayerBase:addPopup(levelIndex)
     -- add close button
     local function touchEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            s_SCENE:removeAllPopups()
+            local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 1.5)))
+            local remove = cc.CallFunc:create(function() 
+                  s_SCENE:removeAllPopups()
+            end)
+            back:runAction(cc.Sequence:create(move,remove))
         end
     end
     
     local function wordEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
             local WordLibrary = require("view.islandPopup.WordLibraryPopup")
-            local wordLibrary = WordLibrary.create(levelIndex)
-            s_SCENE.popupLayer:addChild(wordLibrary)   
---            back:runAction(cc.MoveBy:create(0.2,cc.p(800,0)))
-            back:setVisible(false)
+            local wordLibrary = WordLibrary.create(levelIndex,CreateWordLibrary_FromNormal)
+            s_SCENE.popupLayer:addChild(wordLibrary)
+            wordLibrary:setVisible(false)
+            local action0 = cc.OrbitCamera:create(0.5,1, 0, 0, 90, 0, 0) 
+            local action1 = cc.CallFunc:create(function()
+                wordLibrary:setVisible(true)
+             end)
+            back:runAction(cc.Sequence:create(action0,action1))
+            
             wordLibrary.close = function ( )
---            back:runAction(cc.MoveBy:create(0.2,cc.p(-800,0)))
-            back:setVisible(true)
+                 local action0 = cc.DelayTime:create(0.5)
+                 local action1 = cc.OrbitCamera:create(0.5,1, 0, -90, 90, 0, 0) 
+                 back:runAction(cc.Sequence:create(action0,action1))
             end
         end
     end
@@ -396,18 +407,18 @@ function ChapterLayerBase:addPopup(levelIndex)
     s_SCENE:popup(back)
     if state >= 4 and levelIndex - currentTaskBossIndex ~= 0 then
         local WordLibrary = require("view.islandPopup.WordLibraryPopup")
-        local wordLibrary = WordLibrary.create(levelIndex)
+        local wordLibrary = WordLibrary.create(levelIndex,CreateWordLibrary_FromOther)
         s_SCENE.popupLayer:addChild(wordLibrary)   
---        back:runAction(cc.MoveBy:create(0.2,cc.p(800,0)))
-        back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 550))
-       -- back:setPosition(cc.p(800+(s_DESIGN_WIDTH-s_LEFT_X)/2,550))
+        back:setPosition(cc.p(s_DESIGN_WIDTH/2, 550))
         back:setVisible(false)
         wordLibrary.close = function ()
---            back:runAction(cc.MoveBy:create(0.2,cc.p(-800,0)))
-            back:setVisible(true)
+           back:setVisible(true)
         end
     else
-        back:setPosition(cc.p((s_DESIGN_WIDTH-s_LEFT_X)/2, 550))
+        back:setPosition(cc.p(s_DESIGN_WIDTH/2, 550 * 3))   
+        local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 550))
+        local action2 = cc.EaseBackOut:create(action1)
+        back:runAction(action2)
     end
 end
 

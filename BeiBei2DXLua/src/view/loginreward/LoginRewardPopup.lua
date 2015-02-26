@@ -38,14 +38,20 @@ function LoginRewardPopup:ctor()
     local rewardList = s_DataManager.bean
 
 	local backPopup = cc.Sprite:create("image/loginreward/backPopup.png")
-    backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
+    backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 * 3)
     self:addChild(backPopup)
-    
+
+    backPopup:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 0.5))))
+
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            s_SCENE:removeAllPopups()
+            local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5)))
+            local remove = cc.CallFunc:create(function() 
+                 s_SCENE:removeAllPopups()
+            end)
+            backPopup:runAction(cc.Sequence:create(move,remove))
         end
     end
 
@@ -87,11 +93,6 @@ function LoginRewardPopup:ctor()
                 local shadow_sprite = numberToSprite(tonumber(rewardList[tag].reward))
                 shadow_sprite:setPosition(addColor:getContentSize().width * 0.5,addColor:getContentSize().height * 0.3)
                 addColor:addChild(shadow_sprite) 
---                local reward_label = cc.Label:createWithSystemFont("+30","",25)
---                reward_label:setColor(cc.c4b(212,129,86,255))
---                reward_label:setPosition(addColor:getContentSize().width * 0.8,addColor:getContentSize().height * 0.12)
---                reward_label:setRotation(10)
---                addColor:addChild(reward_label)
             elseif tag == 8  then
                 local up_sprite = cc.Sprite:create("image/loginreward/up.png")
                 up_sprite:setPosition(addColor:getContentSize().width * 0.5 ,addColor:getContentSize().height * 0.5 )

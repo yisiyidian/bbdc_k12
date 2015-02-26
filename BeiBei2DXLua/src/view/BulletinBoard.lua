@@ -35,7 +35,7 @@ function BulletinBoard:ctor()
     self:addChild(node)
 
     ccbBulletinBoard['board']:setPosition(cc.p(cw / 2, ch * 1.5))
-    ccbBulletinBoard['board']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3, cc.p(cw / 2, ch * 0.5))))
+    ccbBulletinBoard['board']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.4, cc.p(cw / 2, ch * 0.5))))
 
     --click effect
     local menu = cc.Menu:create()

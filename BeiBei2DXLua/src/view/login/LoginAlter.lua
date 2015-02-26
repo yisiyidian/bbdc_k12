@@ -17,7 +17,13 @@ local back_register = nil
 local main = nil
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
-function LoginAlter.createLogin()
+CreateLogin_FromNormal    = 1
+CreateRegister_FromNormal = 1
+
+CreateLogin_FromRegister = 2
+CreateRegister_FromLogin = 2
+
+function LoginAlter.createLogin(FromWhere)
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
@@ -28,7 +34,7 @@ function LoginAlter.createLogin()
     back_login = nil
     back_register = nil
     
-    showLogin()
+    showLogin(FromWhere)
 
     local onTouchBegan = function(touch, event)
         --s_logd("touch began on block layer")
@@ -45,7 +51,7 @@ function LoginAlter.createLogin()
     return main
 end
 
-function LoginAlter.createRegister()
+function LoginAlter.createRegister(FromWhere)
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
@@ -56,7 +62,7 @@ function LoginAlter.createRegister()
     back_login = nil
     back_register = nil
 
-    showRegister()
+    showRegister(FromWhere)
 
     local onTouchBegan = function(touch, event)
         --s_logd("touch began on block layer")
@@ -74,21 +80,29 @@ function LoginAlter.createRegister()
 end
 
 
-showLogin = function()
+showLogin = function(FromWhere)
     if back_login then
+        back_login = nil
+    end
+    
+    if FromWhere == CreateLogin_FromNormal then
+        back_login = cc.Sprite:create("image/login/background_white_login.png")
+        back_login:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
+        main:addChild(back_login)
+
         local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
         local action2 = cc.EaseBackOut:create(action1)
         back_login:runAction(action2)
-        return
+    else
+        back_login = cc.Sprite:create("image/login/background_white_login.png")
+        back_login:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+        main:addChild(back_login)
+
+        local action0 = cc.OrbitCamera:create(0.5,1, 0, -90, 90, 0, 0) 
+        back_login:runAction(action0) 
     end
 
-    back_login = cc.Sprite:create("image/login/background_white_login.png")
-    back_login:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
-    main:addChild(back_login)
 
-    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
-    local action2 = cc.EaseBackOut:create(action1)
-    back_login:runAction(action2)
 
     local back_width = back_login:getContentSize().width
     local back_height = back_login:getContentSize().height
@@ -153,13 +167,18 @@ showLogin = function()
             -- button sound
             playSound(s_sound_buttonEffect)
             local remove = function()
-                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
-                local action2 = cc.EaseBackIn:create(action1)
-                back_login:runAction(action2)
+                -- local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+                -- local action2 = cc.EaseBackIn:create(action1)
+                -- back_login:runAction(action2)
+
+                local action0 = cc.OrbitCamera:create(0.5,1, 0, 0, 90, 0, 0) 
+                back_login:runAction(action0) 
             end
             local action1 = cc.CallFunc:create(remove)
             local action2 = cc.DelayTime:create(0.5)
-            local action3 = cc.CallFunc:create(showRegister)
+            local action3 = cc.CallFunc:create(function()
+                           showRegister(CreateRegister_FromLogin)
+                           end)
             local action4 = cc.Sequence:create(action1, action2, action3)
             main:runAction(action4)             
         end
@@ -220,7 +239,12 @@ showLogin = function()
         if eventType == ccui.TouchEventType.ended then
             -- button sound
             playSound(s_sound_buttonEffect)
-            main.close()
+            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                main.close()
+            end)
+            back_login:runAction(cc.Sequence:create(action2,action3))
         end
     end
     local button_close = ccui.Button:create("image/button/button_close.png")
@@ -229,21 +253,28 @@ showLogin = function()
     back_login:addChild(button_close)
 end
 
-showRegister = function()
+showRegister = function(FromWhere)
     if back_register then
+        back_register = nil
+    end
+
+    if FromWhere == CreateRegister_FromNormal then
+        back_register = cc.Sprite:create("image/login/background_white_login.png")
+        back_register:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
+        main:addChild(back_register)
+
         local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
         local action2 = cc.EaseBackOut:create(action1)
         back_register:runAction(action2)
-        return
+    else
+        back_register = cc.Sprite:create("image/login/background_white_login.png")
+        back_register:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+        main:addChild(back_register)
+
+        local action0 = cc.OrbitCamera:create(0.5,1, 0, -90, 90, 0, 0) 
+        back_register:runAction(action0)
     end
 
-    back_register = cc.Sprite:create("image/login/background_white_login.png")
-    back_register:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
-    main:addChild(back_register)
-
-    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
-    local action2 = cc.EaseBackOut:create(action1)
-    back_register:runAction(action2)
 
     local back_width = back_register:getContentSize().width
     local back_height = back_register:getContentSize().height
@@ -307,13 +338,16 @@ showRegister = function()
     local button_toggle_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             local remove = function()
-                local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
-                local action2 = cc.EaseBackIn:create(action1)
-                back_register:runAction(action2)
+                -- local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+                -- local action2 = cc.EaseBackIn:create(action1)
+                -- back_register:runAction(action2)
+
+                local action0 = cc.OrbitCamera:create(0.5,1, 0, 0, 90, 0, 0) 
+                back_register:runAction(action0) 
             end
             local action1 = cc.CallFunc:create(remove)
             local action2 = cc.DelayTime:create(0.5)
-            local action3 = cc.CallFunc:create(showLogin)
+            local action3 = cc.CallFunc:create(function()showLogin(CreateLogin_FromRegister)end)
             local action4 = cc.Sequence:create(action1, action2, action3)
             main:runAction(action4)  
             
@@ -362,7 +396,6 @@ showRegister = function()
 
 
     local button_weibo_clicked = function(sender, eventType)
-
         if eventType == ccui.TouchEventType.ended then
             print("weibo click")  
                   -- button sound
@@ -376,11 +409,14 @@ showRegister = function()
 --    back_register:addChild(button_weibo)
     
     local button_close_clicked = function(sender, eventType)
-
         if eventType == ccui.TouchEventType.ended then
-            main.close()      
-              -- button sound
-        playSound(s_sound_buttonEffect)
+            playSound(s_sound_buttonEffect)   
+            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                main.close()
+            end)
+            back_register:runAction(cc.Sequence:create(action2,action3))
         end
     end
     local button_close = ccui.Button:create("image/button/button_close.png")

@@ -16,14 +16,6 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local backColor = cc.LayerColor:create(cc.c4b(168,239,255,255), bigWidth, s_DESIGN_HEIGHT)  
-
---    local lastWordAndTotalNumber = LastWordAndTotalNumber.create()
---    backColor:addChild(lastWordAndTotalNumber,1)
---    
---    backColor.setWordAndNumber = function (number,word,bool)
---        lastWordAndTotalNumber.setWord(word,bool)
---        lastWordAndTotalNumber.setNumber(number)
---    end
     
     backColor.forceFail =function ()
 
@@ -52,6 +44,7 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
 
             local pauseLayer = Pause.create()
             pauseLayer:setPosition(s_LEFT_X, 0)
+            s_SCENE.popupLayer:addBackground()           
             s_SCENE.popupLayer:addChild(pauseLayer)
             s_SCENE.popupLayer.listener:setSwallowTouches(true)
 

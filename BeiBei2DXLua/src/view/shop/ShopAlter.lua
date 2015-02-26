@@ -99,7 +99,12 @@ function ShopAlter.create(itemId, location)
     
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
+            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT * 1.5))
+            local action2 = cc.EaseBackOut:create(action1)
+            local remove = cc.CallFunc:create(function() 
             main:removeFromParent()
+            end)
+            back:runAction(cc.Sequence:create(action2,remove))
         end
     end
 

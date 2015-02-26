@@ -58,7 +58,11 @@ function WordInfoPopup:ctor(wordname,index,wordlist)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            s_SCENE:removeAllPopups()
+            local move = cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5))
+            local remove = cc.CallFunc:create(function() 
+                  s_SCENE:removeAllPopups()
+            end)
+            backPopup:runAction(cc.Sequence:create(move,remove))
         end
     end
 
@@ -72,7 +76,11 @@ function WordInfoPopup:ctor(wordname,index,wordlist)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            self:removeFromParent()
+            local move = cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5))
+            local remove = cc.CallFunc:create(function() 
+                  self:removeFromParent()
+            end)
+            backPopup:runAction(cc.Sequence:create(move,remove))
         end
     end
 

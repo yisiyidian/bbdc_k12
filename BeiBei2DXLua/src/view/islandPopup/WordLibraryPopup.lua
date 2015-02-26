@@ -6,19 +6,24 @@ local StatePopup       = require("view.level.ChapterLayerBase")
 local Listview         = require("view.islandPopup.WordLibraryListview")
 local ChapterLayerBase = require("view.level.ChapterLayerBase")
 
+CreateWordLibrary_FromNormal = 1
+CreateWordLibrary_FromOther  = 2
 
-
-function WordLibraryPopup.create(index)
-    local layer = WordLibraryPopup.new(index)
+function WordLibraryPopup.create(index,fromWhere)
+    local layer = WordLibraryPopup.new(index,fromWhere)
     return layer
 end
 
-local function addCloseButton(top_sprite,self)
+local function addCloseButton(top_sprite,backPopup)
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            s_SCENE:removeAllPopups()
+            local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5)))
+            local remove = cc.CallFunc:create(function() 
+                  s_SCENE:removeAllPopups()
+            end)
+            backPopup:runAction(cc.Sequence:create(move,remove))
         end
     end
 
@@ -29,13 +34,17 @@ local function addCloseButton(top_sprite,self)
     return button_close
 end 
 
-local function addBackButton(top_sprite,self)
+local function addBackButton(top_sprite,self,backPopup)
     local button_back_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
+            local action0 = cc.OrbitCamera:create(0.5,1, 0, 0, 90, 0, 0) 
+            local action1 = cc.CallFunc:create(function() 
+                self:removeFromParent()
+            end)
+            backPopup:runAction(cc.Sequence:create(action0,action1))
             self.close()
-            self:removeFromParent()
         end
     end
 
@@ -139,12 +148,28 @@ local function addSummaryButton(bottom_sprite,boss)
     return summary_button
 end
 
-function WordLibraryPopup:ctor(index)
+function WordLibraryPopup:ctor(index,fromWhere)
     local boss = s_LocalDatabaseManager.getBossInfo(index + 1)
     
     local backPopup = cc.Sprite:create("image/islandPopup/backforlibrary.png")
     backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)
     self:addChild(backPopup)
+
+    if fromWhere == CreateWordLibrary_FromNormal then
+        local action1 = cc.DelayTime:create(0.5)
+        local action2 = cc.OrbitCamera:create(0.5,1, 0, -90, 90, 0, 0) 
+        local action3 = cc.Sequence:create(action1, action2)
+        backPopup:runAction(action3)   
+    else
+        backPopup:setVisible(false)
+        local action0 = cc.MoveTo:create(0.5,s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 * 3 ) 
+        local action1 = cc.CallFunc:create(function ()
+            backPopup:setVisible(true)
+        end)
+        local action2 = cc.MoveTo:create(0.5,s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10) 
+        local action3 = cc.Sequence:create(action0, action1, action2)
+        backPopup:runAction(action3)  
+    end
 
     local top_sprite = cc.Sprite:create("image/islandPopup/top.png")
     top_sprite:setPosition(backPopup:getContentSize().width * 0.5,backPopup:getContentSize().height * 0.95)
@@ -152,10 +177,10 @@ function WordLibraryPopup:ctor(index)
     top_sprite:setAnchorPoint(0.5,0.5)
     backPopup:addChild(top_sprite)
     
-    self.closeButton = addCloseButton(top_sprite,self)
+    self.closeButton = addCloseButton(top_sprite,backPopup)
     top_sprite:addChild(self.closeButton)
     
-    self.backButton = addBackButton(top_sprite,self)
+    self.backButton = addBackButton(top_sprite,self,backPopup)
     top_sprite:addChild(self.backButton)
     
     self.unfamiliarButton = addUnfamiliarButton(top_sprite)
@@ -170,11 +195,11 @@ function WordLibraryPopup:ctor(index)
     self.familiarButton = addfamiliarButton(top_sprite)
     top_sprite:addChild(self.familiarButton)
     
---    local line_sprite = cc.Sprite:create("image/islandPopup/line.png")
---    line_sprite:setPosition(top_sprite:getContentSize().width * 0.5,top_sprite:getContentSize().height * 0.05)
---    line_sprite:ignoreAnchorPointForPosition(false)
---    line_sprite:setAnchorPoint(0.5,0.5)
---    top_sprite:addChild(line_sprite)
+   local line_sprite = cc.Sprite:create("image/islandPopup/line.png")
+   line_sprite:setPosition(top_sprite:getContentSize().width * 0.5,top_sprite:getContentSize().height * 0.05)
+   line_sprite:ignoreAnchorPointForPosition(false)
+   line_sprite:setAnchorPoint(0.5,0.5)
+   top_sprite:addChild(line_sprite)
     
     local bottom_sprite = cc.Sprite:create("image/islandPopup/bottom.png")
     bottom_sprite:setPosition(backPopup:getContentSize().width * 0.5,backPopup:getContentSize().height * 0.03)
