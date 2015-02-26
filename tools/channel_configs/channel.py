@@ -361,7 +361,7 @@ def setupAndroidProject(channelAndroid, manifestSrc, manifestDst, androidProjSrc
     manifestRaw = open(manifestSrc).read()
     # <meta-data android:name="Channel ID" android:value="LeanCloud"/>
     manifestNew = manifestRaw.replace('com.beibei.wordmaster', channelAndroid.packageName)
-    manifestNew = manifestNew.replace('LeanCloud', channelAndroid.packageName)
+    manifestNew = manifestNew.replace('LeanCloud', channelAndroid.name)
     if len(channelAndroid.qq.AppID) > 0:
         manifestNew = manifestNew.replace('1103783596', channelAndroid.qq.AppID)
     else:
