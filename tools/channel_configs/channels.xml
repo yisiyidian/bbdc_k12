@@ -6,9 +6,9 @@
     <channel name="iOS" 
         packageName="com.BeiBeiDanCiX"
 
-        leanCloudAppName="贝贝单词X"
-        leanCloudAppID="94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp"
-        leanCloudAppKey="lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz"
+        leanCloudAppName="beibeidanci_v180"
+        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
+        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
 
         QQPkgName=""
         QQName="贝贝单词"
@@ -63,9 +63,9 @@
         isQQShareAvailable="true"
 
         WXName="贝贝单词-小米"
-        WXAppID="wx1858437590c609dc"
-        WXAppSecret="4f96fca821089773ace06d5a240d04ac"
-        WXSignature="b7cf8084bd0d4f782b2a4ebd2a0c90b8"
+        WXAppID=""
+        WXAppSecret=""
+        WXSignature="47424d9b8a7d88432ed09f9e113693d0"
 
         umengAppName="贝贝单词-小米"
         umengAppKey="5498fc3afd98c56b4200075d"/>
@@ -97,9 +97,9 @@
     <channel name="openQQ" 
         packageName="com.beibei.wordmaster.tencentmyapp"
 
-        leanCloudAppName="贝贝单词X_0"
-        leanCloudAppID="2ktgzl363xwj3y3l9axd5hx3i8t31k48tt6344ds0qdg38jq"
-        leanCloudAppKey="gycctmmh4csumv8opxtodi55e6837r3w5sjtm7tpunqgovjc"
+        leanCloudAppName="beibeidanci_v180"
+        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
+        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
 
         QQPkgName="com.beibei.wordmaster.tencentmyapp"
         QQName="贝贝单词"
@@ -108,10 +108,10 @@
         isQQLogInAvailable="true"
         isQQShareAvailable="true"
 
-        WXName=""
-        WXAppID=""
-        WXAppSecret=""
-        WXSignature=""
+        WXName="贝贝单词-360"
+        WXAppID="wx137f5433bb860905"
+        WXAppSecret="286a1be70a91e1d8c0a205f5264acce9"
+        WXSignature="b7cf8084bd0d4f782b2a4ebd2a0c90b8"
 
         umengAppName="贝贝单词-android"
         umengAppKey="549a5eb9fd98c5b2ac00144e"/>
