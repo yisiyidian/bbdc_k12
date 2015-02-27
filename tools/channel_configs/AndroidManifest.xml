@@ -105,8 +105,6 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 <!-- tencent end -->
         
-        <meta-data android:name="Channel ID" android:value="LeanCloud"/>
-        
     </application>
     
 </manifest> 

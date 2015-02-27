@@ -51,15 +51,16 @@ class QQ(object):
         return 'PkgName:' + self.PkgName + ', Name:' + self.Name + ', AppID:' + self.AppID + ', AppKey:' + self.AppKey + ', isLogInAvailable:' + self.isLogInAvailable + ', isShareAvailable:' + self.isShareAvailable
 
 class WeiXin(object):
-    def __init__(self, Name, AppID, AppSecret, Signature):
+    def __init__(self, Name, AppID, AppSecret, Signature, pkgName):
         super(WeiXin, self).__init__()
         self.Name = Name
         self.AppID = AppID
         self.AppSecret = AppSecret
         self.Signature = Signature
+        self.pkgName = pkgName
 
     def description(self):
-        return 'Name:' + self.Name + ', AppID:' + self.AppID + ', AppSecret:' + self.AppSecret + ', Signature:' + self.Signature
+        return 'Name:' + self.Name + ', AppID:' + self.AppID + ', AppSecret:' + self.AppSecret + ', Signature:' + self.Signature + ', pkgName:' + self.pkgName
         
 class UMeng(object):
     def __init__(self, AppName, AppKey):
@@ -83,31 +84,42 @@ class Channel(object):
     def description(self):
         return 'name:' + self.name + ', packageName:' + self.packageName + '\n    ' + self.server.description() + '\n    ' + self.qq.description() + '\n    ' + self.wx.description() + '\n    ' + self.um.description()
 
+def createChannel(channel):
+    server = Server(channel.attrib['leanCloudAppName'].encode("utf-8"), channel.attrib['leanCloudAppID'], channel.attrib['leanCloudAppKey'])
+
+    qq = QQ(channel.attrib['QQPkgName'] \
+        , channel.attrib['QQName'].encode("utf-8") \
+        , channel.attrib['QQAppID'] \
+        , channel.attrib['QQAppKey'] \
+        , channel.attrib['isQQLogInAvailable'] \
+        , channel.attrib['isQQShareAvailable'])
+
+    wx = WeiXin(channel.attrib['WXName'].encode("utf-8") \
+        , channel.attrib['WXAppID'] \
+        , channel.attrib['WXAppSecret'] \
+        , channel.attrib['WXSignature'] \
+        , channel.attrib['WXPkg'])
+
+    um = UMeng(channel.attrib['umengAppName'].encode("utf-8"), channel.attrib['umengAppKey'])
+
+    return Channel(channel.attrib['name'], channel.attrib['packageName'], server, qq, wx, um)
+
+def readAllChannelConfigurations(channelXml):
+    ret = {}
+    tree = ET.ElementTree(file=channelXml)
+    root = tree.getroot()
+    for channel in root:
+        if channel.tag == 'channel' and channel.attrib.has_key('leanCloudAppID'):
+            c = createChannel(channel)
+            ret[channel.attrib['name']] = c
+    return ret
+
 def readChannelConfigurations(channelXml, channelName):
     tree = ET.ElementTree(file=channelXml)
     root = tree.getroot()
     for channel in root:
         if channel.tag == 'channel' and channel.attrib['name'] == channelName:
-
-            server = Server(channel.attrib['leanCloudAppName'].encode("utf-8"), channel.attrib['leanCloudAppID'], channel.attrib['leanCloudAppKey'])
-
-            qq = QQ(channel.attrib['QQPkgName'] \
-                , channel.attrib['QQName'].encode("utf-8") \
-                , channel.attrib['QQAppID'] \
-                , channel.attrib['QQAppKey'] \
-                , channel.attrib['isQQLogInAvailable'] \
-                , channel.attrib['isQQShareAvailable'])
-
-            wx = WeiXin(channel.attrib['WXName'].encode("utf-8") \
-                , channel.attrib['WXAppID'] \
-                , channel.attrib['WXAppSecret'] \
-                , channel.attrib['WXSignature'])
-
-            um = UMeng(channel.attrib['umengAppName'].encode("utf-8"), channel.attrib['umengAppKey'])
-
-            currentChannel = Channel(channelName, channel.attrib['packageName'], server, qq, wx, um)
-
-            return currentChannel
+            return createChannel(channel)
 
     class NoSuchChannelException(Exception):
         def __init__(self, channelName):
@@ -126,7 +138,7 @@ def createLuaCodes(gitVer, testServer, buildTarget, channelAndroid, channeliOS, 
     buildInfo = '-- BUILD INFORMATION: %s (Android:%s, %s) (iOS:%s, %s)' % (buildTarget.description, channelAndroid.name, channelAndroid.packageName, channeliOS.name, channeliOS.packageName)
     # ---------------------------------------------------------------------------------    
     channelAndroidWX = 'false'
-    if channelAndroid.wx.AppID != '':
+    if channelAndroid.wx.AppID != '' or channelAndroid.wx.Signature != '':
         channelAndroidWX = 'true'
         
     snsAndroid = '''
@@ -304,7 +316,7 @@ def createObjectiveCCodes(gitVer, testServer, buildTarget, channeliOS, savePath)
 
 # ---------------------------------------------------------------------------------
 
-def createJavaCodes(gitVer, testServer, buildTarget, channelAndroid, savePath):
+def createJavaCodes(gitVer, testServer, buildTarget, channelAndroid, savePath, allChannelConfigurations):
     buildInfo = 'BUILD INFORMATION: %s (Android:%s, %s)' % (buildTarget.description, channelAndroid.name, channelAndroid.packageName)
 
     server = testServer
@@ -320,6 +332,20 @@ def createJavaCodes(gitVer, testServer, buildTarget, channelAndroid, savePath):
     if len(channelAndroid.um.AppKey) > 0:
         isUMengAvailable = 'true'
 
+    wx = 'String wx [] = new String [%d];\n        String wxid [] = new String [%d];\n\n' % (len(allChannelConfigurations), len(allChannelConfigurations))
+    j = 0
+    for i in allChannelConfigurations:
+        c = allChannelConfigurations[i]
+        wx = wx + '        wx[' + str(j) + ']   = "' + c.wx.pkgName + '"; // ' + c.name + '\n' + '        wxid[' + str(j) + '] = "' + c.wx.AppID + '"; \n\n'
+        j = j + 1
+    wx = wx + '''        for (int i = 0; i < wx.length; i++) {
+            if (pkgName.equals( wx[i] ) && wxid[i].length() > 0) {
+                WEIXIN_APP_ID = wxid[i];
+                break;
+            }
+        }
+    '''
+
     java = '''
 // ----------
 // %s
@@ -334,9 +360,11 @@ import com.avos.avoscloud.AVOSCloud;
 import com.umeng.analytics.AnalyticsConfig;
 
 public class AppVersionInfo {
-    public static final String WEIXIN_APP_ID = "%s";
+    public static String WEIXIN_APP_ID = "%s";
 
     public static void initServer(Activity a) {
+        String pkgName = a.getApplicationContext().getPackageName();
+
         // server: %s
         AVOSCloud.initialize(a, "%s", "%s");
         AVOSCloud.setDebugLogEnabled(%s);
@@ -344,11 +372,14 @@ public class AppVersionInfo {
 
         if (%s) {
             AnalyticsConfig.setAppkey("%s");
-            AnalyticsConfig.setChannel("%s");
+            AnalyticsConfig.setChannel(pkgName);
         }
+
+        // WeiXin
+        %s
     }
 }
-''' % (buildInfo, gitVer, channelAndroid.wx.AppID, server.AppName, server.AppID, server.AppKey, isDebugLogEnabled, isProduction, isUMengAvailable, channelAndroid.um.AppKey, channelAndroid.packageName)
+''' % (buildInfo, gitVer, channelAndroid.wx.AppID, server.AppName, server.AppID, server.AppKey, isDebugLogEnabled, isProduction, isUMengAvailable, channelAndroid.um.AppKey, wx)
     
     f = open(savePath, 'w')
     f.write(java)
@@ -359,9 +390,7 @@ public class AppVersionInfo {
 def setupAndroidProject(channelAndroid, manifestSrc, manifestDst, androidProjSrcPath, AppActivitySrc, AppActivityName, BBPushNotificationServiceSrc, BBPushNotificationServiceDst, MyProgressDialogSrc, MyProgressDialogDsc):
     # androidManifest ------------------------------------------------
     manifestRaw = open(manifestSrc).read()
-    # <meta-data android:name="Channel ID" android:value="LeanCloud"/>
     manifestNew = manifestRaw.replace('com.beibei.wordmaster', channelAndroid.packageName)
-    manifestNew = manifestNew.replace('LeanCloud', channelAndroid.name)
     if len(channelAndroid.qq.AppID) > 0:
         manifestNew = manifestNew.replace('1103783596', channelAndroid.qq.AppID)
     else:
@@ -418,6 +447,8 @@ TEST_SERVER = Server('贝贝单词X测试', 'gqzttdmaxmb451s2ypjkkdj91a0m9izsk06
 # createObjectiveCCodes('gitVer', TEST_SERVER, BUILD_TARGET_DEBUG, channeliOS, 'savePath')
 # createJavaCodes('gitVer', TEST_SERVER, BUILD_TARGET_DEBUG, channelAndroid, 'savePath')
 
+# readAllChannelConfigurations('/Users/bmo/Dev/YiSiYiDian/BeiBeiDanCiX/tools/channel_configs/channels.xml')
+
 if __name__ == "__main__":
     _appType = sys.argv[1]
     _ver = sys.argv[2]
@@ -451,9 +482,10 @@ if __name__ == "__main__":
 
     channeliOS = readChannelConfigurations(_channelXml, 'iOS')
     channelAndroid = readChannelConfigurations(_channelXml, _channelName)
+    allChannelConfigurations = readAllChannelConfigurations(_channelXml)
 
     createLuaCodes(_ver, TEST_SERVER, buildTarget, channelAndroid, channeliOS, _lua)
     createObjectiveCCodes(_ver, TEST_SERVER, buildTarget, channeliOS, _objc)
-    createJavaCodes(_ver, TEST_SERVER, buildTarget, channelAndroid, _java)
+    createJavaCodes(_ver, TEST_SERVER, buildTarget, channelAndroid, _java, allChannelConfigurations)
 
     setupAndroidProject(channelAndroid, _manifestSrc, _manifestDst, _androidProjSrcPath, _AppActivitySrc, _AppActivityName, _BBPushNotificationServiceSrc, _BBPushNotificationServiceDsc, _MyProgressDialogSrc, _MyProgressDialogDsc)

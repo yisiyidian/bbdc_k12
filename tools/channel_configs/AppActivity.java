@@ -72,6 +72,8 @@ public class AppActivity extends Cocos2dxActivity {
 		
 		AVAnalytics.trackAppOpened(getIntent());
 		AVAnalytics.enableCrashReport(this, true);
+        String pkgName = getApplicationContext().getPackageName();
+        AVAnalytics.setAppChannel(pkgName);
 		
 		PluginWrapper.init(this);
 		
