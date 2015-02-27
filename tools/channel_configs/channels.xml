@@ -2,7 +2,6 @@
 
 <configs>
 
-    
     <channel name="iOS" 
         packageName="com.BeiBeiDanCiX"
 
@@ -24,6 +23,8 @@
 
         umengAppName=""
         umengAppKey=""/>
+
+<channel name="----------------------------------------------------------------" />
 
     <channel name="DEBUG" 
         packageName="com.beibei.wordmaster"
@@ -47,6 +48,7 @@
         umengAppName=""
         umengAppKey=""/>
 
+<channel name="anysdk ----------------------------------------------------------------" />
     
     <channel name="xiaomi" 
         packageName="com.beibei.wordmaster"
@@ -63,13 +65,36 @@
         isQQShareAvailable="true"
 
         WXName="贝贝单词-小米"
-        WXAppID=""
-        WXAppSecret=""
+        WXAppID="wxba9933a1df2e29f4"
+        WXAppSecret="bf5a5107a33ad77c8125cd441c652cda"
         WXSignature="47424d9b8a7d88432ed09f9e113693d0"
 
         umengAppName="贝贝单词-小米"
         umengAppKey="5498fc3afd98c56b4200075d"/>
 
+    <channel name="wdj" 
+        packageName="com.beibei.wordmaster"
+
+        leanCloudAppName="beibeidanci_v180"
+        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
+        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
+
+        QQPkgName="com.beibei.wordmaster.tencentmyapp"
+        QQName="贝贝单词"
+        QQAppID="1103783596"
+        QQAppKey="n7vXdt6eDIggSsa6"
+        isQQLogInAvailable="false"
+        isQQShareAvailable="true"
+
+        WXName="贝贝单词-豌豆荚"
+        WXAppID=""
+        WXAppSecret=""
+        WXSignature="47424d9b8a7d88432ed09f9e113693d0"
+
+        umengAppName="贝贝单词-android"
+        umengAppKey="549a5eb9fd98c5b2ac00144e"/>
+
+<channel name="360 jiagu ----------------------------------------------------------------" />
     
     <channel name="360qihu" 
         packageName="com.beibei.wordmaster.qihu"
@@ -93,7 +118,6 @@
         umengAppName="贝贝单词-android"
         umengAppKey="549a5eb9fd98c5b2ac00144e"/>
 
-    
     <channel name="openQQ" 
         packageName="com.beibei.wordmaster.tencentmyapp"
 
@@ -108,21 +132,22 @@
         isQQLogInAvailable="true"
         isQQShareAvailable="true"
 
-        WXName="贝贝单词-360"
-        WXAppID="wx137f5433bb860905"
-        WXAppSecret="286a1be70a91e1d8c0a205f5264acce9"
+        WXName="贝贝单词-应用宝正式"
+        WXAppID="wxa29402ce25ebaf3a"
+        WXAppSecret="38af3cb750f2972b4ac8cfb12ef30405"
         WXSignature="b7cf8084bd0d4f782b2a4ebd2a0c90b8"
 
         umengAppName="贝贝单词-android"
         umengAppKey="549a5eb9fd98c5b2ac00144e"/>
 
-    
+<channel name="others ----------------------------------------------------------------" />
+
     <channel name="others" 
         packageName="com.beibei.wordmaster"
 
-        leanCloudAppName="贝贝单词X_0"
-        leanCloudAppID="2ktgzl363xwj3y3l9axd5hx3i8t31k48tt6344ds0qdg38jq"
-        leanCloudAppKey="gycctmmh4csumv8opxtodi55e6837r3w5sjtm7tpunqgovjc"
+        leanCloudAppName="beibeidanci_v180"
+        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
+        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
 
         QQPkgName=""
         QQName=""
@@ -138,6 +163,5 @@
 
         umengAppName="贝贝单词-android"
         umengAppKey="549a5eb9fd98c5b2ac00144e"/>
-
 
 </configs>

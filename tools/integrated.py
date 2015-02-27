@@ -9,10 +9,14 @@ echo ""
 echo " -------------------------------"
 echo "input App Type"
 echo "Enter < NUMBER > of app type"
+echo " -------------------------------"
+echo " "
 echo "Debug:            \\033[31m0\\033[0m"
 echo "Release:          \\033[31m1\\033[0m"
 echo "Release for test: \\033[31m2\\033[0m"
 echo "Development:      \\033[31m3\\033[0m"
+echo " "
+echo " -------------------------------"
 
 read APPTYPE 
 
@@ -37,10 +41,15 @@ echo ""
 echo " -------------------------------"
 echo "input Channel Id"
 echo "Enter < NUMBER > of channel"
+echo " -------------------------------"
+echo " "
 echo "xiao mi:          \\033[31m0\\033[0m"
 echo "open.QQ.com:      \\033[31m1\\033[0m"
 echo "360qihu:          \\033[31m2\\033[0m"
-echo "others:           \\033[31m3\\033[0m"
+echo "wan dou jia:      \\033[31m3\\033[0m"
+echo "others:           \\033[31m4\\033[0m"
+echo " "
+echo " -------------------------------"
 
 read CHANNEL_NAME_ID
 
@@ -52,6 +61,8 @@ elif [ $CHANNEL_NAME_ID = "1" ] ; then
 elif [ $CHANNEL_NAME_ID = "2" ] ; then 
     CHANNEL_NAME="360qihu" 
 elif [ $CHANNEL_NAME_ID = "3" ] ; then 
+    CHANNEL_NAME="wdj" 
+elif [ $CHANNEL_NAME_ID = "4" ] ; then 
     CHANNEL_NAME="others" 
 fi
 '''
