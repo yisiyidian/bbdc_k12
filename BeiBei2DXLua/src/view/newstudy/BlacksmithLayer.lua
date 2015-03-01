@@ -46,12 +46,12 @@ local function createOptions(randomNameArray,wordlist,position)
             feedback:setPosition(sender:getContentSize().width * 0.8 ,sender:getContentSize().height * 0.5)
             sender:addChild(feedback)
             
-            local action2 = cc.MoveTo:create(0.5,cc.p(position , 1070 - sender:getPositionY()))
-            local action3 = cc.ScaleTo:create(0.2,0)
+            local action2 = cc.MoveTo:create(0.3,cc.p(position , 1070 - sender:getPositionY()))
+            local action3 = cc.ScaleTo:create(0.1,0)
 
             if sender.tag == 1 then  
                 table.remove(wordlist,1)
-                local action1 = cc.DelayTime:create(0.5)
+                local action1 = cc.DelayTime:create(0.1)
                 feedback:runAction(cc.Sequence:create(action1,action2,action3,cc.CallFunc:create(function()
                     if #wordlist == 0 then
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanRewardForIron)
@@ -75,7 +75,7 @@ local function createOptions(randomNameArray,wordlist,position)
 
                 end)))            
             else
-                local action1 = cc.DelayTime:create(0.5)
+                local action1 = cc.DelayTime:create(0.3)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                     AnalyticsStudyGuessWrong_strikeWhileHot()
                     local bean = s_CURRENT_USER.beanRewardForIron
