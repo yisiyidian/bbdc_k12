@@ -197,6 +197,7 @@ function SummaryBossAlter:win1(entrance)
     local hasCheckedIn = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey)
     if s_LocalDatabaseManager:getTodayRemainTaskNum() < 2 and not hasCheckedIn then
         checkInEverydayInfo()
+        s_isCheckInAnimationDisplayed = false
     end
     print('hasCheckedIn',hasCheckedIn)
     print('entrance',entrance)
@@ -244,12 +245,12 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
                 s_CorePlayManager.enterLevelLayer()
             else
                 s_CorePlayManager.leaveSummaryModel(true)
-                if s_LocalDatabaseManager:getTodayRemainTaskNum() < 2 and not hasCheckedIn then
-                    s_SCENE:checkInAnimation()
-                else
+                -- if s_LocalDatabaseManager:getTodayRemainTaskNum() < 2 and not hasCheckedIn then
+                --     s_SCENE:checkInAnimation()
+                -- else
                     s_HUD_LAYER:removeChildByName('missionCompleteCircle')
                     s_CorePlayManager.enterLevelLayer()
-                end
+                -- end
             end
         end
     end

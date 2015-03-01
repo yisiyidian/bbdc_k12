@@ -5,7 +5,7 @@ end
 
 local function _initConstant()
     -- number
-    s_max_wrong_num_everyday                = 10
+    s_max_wrong_num_everyday                = 3
     s_gamestate_reviewbossmodel_beforetoday = 1
     s_gamestate_studymodel                  = 2
     s_gamestate_reviewmodel                 = 3
@@ -15,7 +15,9 @@ local function _initConstant()
     
     --need to do next version maybe
     s_gamestate_reviewbossmodel_today       = 9
-    
+
+    --checkInAnimation
+    s_isCheckInAnimationDisplayed           = false
     
     --
     s_spineCoconutLightJson   = "res/spine/coconut_light.json"

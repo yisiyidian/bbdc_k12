@@ -100,14 +100,13 @@ function HomeLayer.create(share)
     layer:addChild(offlineTipHome,2)
     layer:addChild(offlineTipFriend,2) 
 
-    local mission_progress
-    if share ~= nil and share then
-        mission_progress = MissionProgress.create(true)
-    else
-        mission_progress = MissionProgress.create()
-        mission_progress.animation()
+    local displayAnimation = false
+    if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) and not s_isCheckInAnimationDisplayed then
+        displayAnimation = true
+        s_isCheckInAnimationDisplayed = true
     end
-    backColor:addChild(mission_progress,1,'mission_progress')
+    local mission_progress
+
     local downloadSoundButton = require("view.home.DownloadSoundButton").create(top)
 
     local name = cc.Label:createWithSystemFont('贝贝单词','',50)
@@ -694,7 +693,16 @@ function HomeLayer.create(share)
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
     
-    -- main pape  "First_Noel_pluto" 
+    if displayAnimation then
+        mission_progress = MissionProgress.create(true)
+        layer:showDataLayer(true)
+        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+    else
+        mission_progress = MissionProgress.create()
+        mission_progress.animation()
+    end
+    backColor:addChild(mission_progress,1,'mission_progress')
+
     playMusic(s_sound_First_Noel_pluto,true)
     layer.button_main = button_main
     layer.button_sound = downloadSoundButton
@@ -846,7 +854,7 @@ function HomeLayer:showDataLayer(checkIn)
     if true then
         local PersonalInfo = require("view.PersonalInfo")
         PersonalInfo.getNotContainedInLocalDatas(function ()
-            local personalInfoLayer = PersonalInfo.create(true)
+            local personalInfoLayer = PersonalInfo.create(true,self)
             personalInfoLayer:setPosition(-s_LEFT_X,0)
             self.dataBack:addChild(personalInfoLayer,1,'PersonalInfo') 
         end)
