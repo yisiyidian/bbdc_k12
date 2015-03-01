@@ -9,10 +9,14 @@ echo ""
 echo " -------------------------------"
 echo "input App Type"
 echo "Enter < NUMBER > of app type"
+echo " -------------------------------"
+echo " "
 echo "Debug:            \\033[31m0\\033[0m"
 echo "Release:          \\033[31m1\\033[0m"
 echo "Release for test: \\033[31m2\\033[0m"
 echo "Development:      \\033[31m3\\033[0m"
+echo " "
+echo " -------------------------------"
 
 read APPTYPE 
 
@@ -32,27 +36,50 @@ fi
     return cmd
 
 def inputChannelId():
+
+# echo "xiao mi:          \\033[31m0\\033[0m"
+# echo "open.QQ.com:      \\033[31m1\\033[0m"
+# echo "360qihu:          \\033[31m2\\033[0m"
+# echo "wan dou jia:      \\033[31m3\\033[0m"
+# echo "baidu:            \\033[31m4\\033[0m"
+# echo "others:           \\033[31m100\\033[0m"
+
+# if [ $CHANNEL_NAME_ID = "0" ] ; then
+#     CHANNEL_NAME="xiaomi" 
+# elif [ $CHANNEL_NAME_ID = "1" ] ; then   
+#     CHANNEL_NAME="openQQ" 
+# elif [ $CHANNEL_NAME_ID = "2" ] ; then 
+#     CHANNEL_NAME="360qihu" 
+# elif [ $CHANNEL_NAME_ID = "3" ] ; then 
+#     CHANNEL_NAME="wdj" 
+# elif [ $CHANNEL_NAME_ID = "4" ] ; then 
+#     CHANNEL_NAME="baidu" 
+# elif [ $CHANNEL_NAME_ID = "100" ] ; then 
+#     CHANNEL_NAME="others" 
+# fi
+
     cmd = '''
 echo ""
 echo " -------------------------------"
 echo "input Channel Id"
 echo "Enter < NUMBER > of channel"
-echo "xiao mi:          \\033[31m0\\033[0m"
+echo " -------------------------------"
+echo " "
+echo "AnySDK:           \\033[31m0\\033[0m"
 echo "open.QQ.com:      \\033[31m1\\033[0m"
 echo "360qihu:          \\033[31m2\\033[0m"
-echo "others:           \\033[31m3\\033[0m"
+echo " "
+echo " -------------------------------"
 
 read CHANNEL_NAME_ID
 
 CHANNEL_NAME="DEBUG"
 if [ $CHANNEL_NAME_ID = "0" ] ; then
-    CHANNEL_NAME="xiaomi" 
+    CHANNEL_NAME="anysdk" 
 elif [ $CHANNEL_NAME_ID = "1" ] ; then   
     CHANNEL_NAME="openQQ" 
 elif [ $CHANNEL_NAME_ID = "2" ] ; then 
     CHANNEL_NAME="360qihu" 
-elif [ $CHANNEL_NAME_ID = "3" ] ; then 
-    CHANNEL_NAME="others" 
 fi
 '''
     return cmd
