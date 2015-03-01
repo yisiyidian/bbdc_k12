@@ -12,6 +12,9 @@ end
 
 function FriendLayer:ctor()
     
+    self.backToHome = function ()
+
+    end
 
     local back = cc.LayerColor:create(cc.c4b(255,255,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
     back:ignoreAnchorPointForPosition(false)
@@ -39,9 +42,7 @@ function FriendLayer:ctor()
         
             s_CURRENT_USER.seenFansCount = s_CURRENT_USER.fansCount
             saveUserToServer({['seenFansCount']=s_CURRENT_USER.seenFansCount}, function (datas, error)
-                local HomeLayer = require('view.home.HomeLayer')
-                local homeLayer = HomeLayer.create()
-                s_SCENE:replaceGameLayer(homeLayer)
+                 self.backToHome()
             end)
             
         end

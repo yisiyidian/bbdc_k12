@@ -67,18 +67,14 @@ function HomeLayer.create(share)
     top:setAnchorPoint(0.5,1)
     top:setPosition(0.5 * backColor:getContentSize().width,s_DESIGN_HEIGHT)
     backColor:addChild(top)
-
-    local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
+    
+    local been_number_back = cc.Sprite:create("image/bean/beanNumber.png")
     been_number_back:setPosition(bigWidth-100, s_DESIGN_HEIGHT-50)
     backColor:addChild(been_number_back)
 
-    local been = cc.Sprite:create("image/shop/been.png")
-    been:setPosition(0, been_number_back:getContentSize().height/2)
-    been_number_back:addChild(been)
-
     local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
     been_number:setColor(cc.c4b(0,0,0,255))
-    been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
+    been_number:setPosition(been_number_back:getContentSize().width * 0.65 , been_number_back:getContentSize().height/2)
     been_number_back:addChild(been_number)
 
     local function updateBean(delta)
@@ -126,7 +122,7 @@ function HomeLayer.create(share)
     	end
     end
     
-    local currentBook = cc.Label:createWithSystemFont("正在学习："..book_name,"",26)
+    local currentBook = cc.Label:createWithSystemFont("正在学习："..book_name,"",22)
     currentBook:setPosition(bigWidth/2, s_DESIGN_HEIGHT-140)
     currentBook:setColor(cc.c4b(255,255,255,255))
     backColor:addChild(currentBook)
@@ -373,7 +369,44 @@ function HomeLayer.create(share)
                             offlineTipFriend.setTrue()
                         else
                             if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                                s_CorePlayManager.enterFriendLayer()
+                                --s_CorePlayManager.enterFriendLayer()
+                                local FriendLayer = require("view.friend.FriendLayer") 
+                                local friendLayer = FriendLayer.create()
+                                layer:addChild(friendLayer)
+                                friendLayer:ignoreAnchorPointForPosition(false)
+                                friendLayer:setAnchorPoint(0,0.5)
+                                friendLayer:setPosition(s_RIGHT_X, s_DESIGN_HEIGHT/2)
+
+                                if viewIndex == 2 then
+                                   s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+       
+                                   mission_progress.stopListener = false
+            
+                                   viewIndex = 1
+
+                                   local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+                                   local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+                                   setting_back:runAction(cc.Sequence:create(action2, action3))
+                                end
+
+
+                                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2 - bigWidth,s_DESIGN_HEIGHT/2))
+                                backColor:runAction(action1)
+
+                                local action2 = cc.MoveTo:create(0.5, cc.p(bigWidth - bigWidth,s_DESIGN_HEIGHT/2))
+                                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+                                friendLayer:runAction(cc.Sequence:create(action2, action3))
+
+                                friendLayer.backToHome = function ()
+                                      s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                                      local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2 ,s_DESIGN_HEIGHT/2))
+                                      backColor:runAction(action1)
+
+                                      local action2 = cc.MoveTo:create(0.5, cc.p(bigWidth ,s_DESIGN_HEIGHT/2))
+                                      local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+                                      friendLayer:runAction(cc.Sequence:create(action2, action3))
+                                end
                             else
 
                                 if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
