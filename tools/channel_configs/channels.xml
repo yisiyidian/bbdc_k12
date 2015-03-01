@@ -196,7 +196,7 @@
         isQQLogInAvailable="false"
         isQQShareAvailable="true"
 
-        WXPkg="com.beibei.wordmaster.baidu" WXName="贝贝单词-?"
+        WXPkg="com.beibei.wordmaster.baidu" WXName="贝贝单词-百度"
         WXAppID=""
         WXAppSecret=""
         WXSignature="47424d9b8a7d88432ed09f9e113693d0"
