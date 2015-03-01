@@ -472,7 +472,7 @@ end
 -- callback(datas, error)
 function saveUserToServer(dataTable, callback)
     local function cb (datas, error)
-        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
+        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, s_CURRENT_USER.userId, s_CURRENT_USER.username)
         if error == nil then
             if callback then callback(datas, nil) end
         else

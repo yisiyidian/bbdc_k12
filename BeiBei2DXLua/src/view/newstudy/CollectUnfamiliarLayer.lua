@@ -128,7 +128,7 @@ local function createOptions(randomNameArray,word,wrongNum, preWordName, preWord
           
 
             if sender.tag == 1 then  
-                local action1 = cc.DelayTime:create(0.5)
+                local action1 = cc.DelayTime:create(0.3)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                     AnalyticsStudyAnswerRight()
 --                    local ChooseRightLayer = require("view.newstudy.ChooseRightLayer")
@@ -137,7 +137,7 @@ local function createOptions(randomNameArray,word,wrongNum, preWordName, preWord
                     s_CorePlayManager.leaveStudyModel(true)
                 end)))            
             else
-                local action1 = cc.DelayTime:create(0.5)
+                local action1 = cc.DelayTime:create(0.3)
                 feedback:runAction(cc.Sequence:create(action1,cc.CallFunc:create(function()
                     AnalyticsStudyGuessWrong()
                     local bean = s_CURRENT_USER.beanRewardForCollect
