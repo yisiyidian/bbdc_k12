@@ -26,7 +26,7 @@ local function createKnow(word,wrongNum, preWordName, preWordNameState)
 
     local choose_know_button = ccui.Button:create("image/newstudy/button_onebutton_size.png","image/newstudy/button_onebutton_size_pressed.png","")
     choose_know_button:setPosition(bigWidth/2, 500)
-    choose_know_button:setTitleText("认识")
+    choose_know_button:setTitleText("太熟悉了")
     choose_know_button:ignoreAnchorPointForPosition(false)
     choose_know_button:setAnchorPoint(0.5,0)
     choose_know_button:setTitleColor(cc.c4b(255,255,255,255))

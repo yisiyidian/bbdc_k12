@@ -58,11 +58,11 @@ function WordInfoPopup:ctor(wordname,index,wordlist)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            local move = cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5))
+            local move = cc.MoveBy:create(0.3, cc.p(0, s_DESIGN_HEIGHT))
             local remove = cc.CallFunc:create(function() 
                   s_SCENE:removeAllPopups()
             end)
-            backPopup:runAction(cc.Sequence:create(move,remove))
+            self:runAction(cc.Sequence:create(move,remove))
         end
     end
 
@@ -76,11 +76,11 @@ function WordInfoPopup:ctor(wordname,index,wordlist)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            local move = cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5))
+            local move = cc.MoveBy:create(0.3, cc.p(0, s_DESIGN_HEIGHT))
             local remove = cc.CallFunc:create(function() 
                   self:removeFromParent()
             end)
-            backPopup:runAction(cc.Sequence:create(move,remove))
+            self:runAction(cc.Sequence:create(move,remove))
         end
     end
 
@@ -118,6 +118,7 @@ function WordInfoPopup:ctor(wordname,index,wordlist)
     last_button:setPosition(progress_sprite:getContentSize().width * 0.1,progress_sprite:getContentSize().height * 0.5)
     last_button:ignoreAnchorPointForPosition(false)
     last_button:setAnchorPoint(0.5,0.5)
+    last_button:setScale(1.5)
     last_button:addTouchEventListener(last_button_clicked)
     progress_sprite:addChild(last_button)
 
@@ -133,6 +134,7 @@ function WordInfoPopup:ctor(wordname,index,wordlist)
     next_button:setPosition(progress_sprite:getContentSize().width * 0.9,progress_sprite:getContentSize().height * 0.5)
     next_button:ignoreAnchorPointForPosition(false)
     next_button:setAnchorPoint(0.5,0.5)
+    next_button:setScale(1.5)
     next_button:addTouchEventListener(next_button_clicked)
     progress_sprite:addChild(next_button)
 
