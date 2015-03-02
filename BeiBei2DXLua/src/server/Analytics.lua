@@ -201,10 +201,6 @@ function Analytics_replaceGameLayer(layerName)
 end
 
 ----------------------------------------------------------------------------------------
-function Analytics_replaceGameLayer(layerName)
-    cx.CXAnalytics:logEventAndLabel('replaceGameLayer', layerName)
-end
-
 
 function AnalyticsButtonToShare()
     cx.CXAnalytics:logEventAndLabel('Share', 'TOUCH')
@@ -218,6 +214,10 @@ end
 
 function AnalyticsDownloadSoundBtn()
     cx.CXAnalytics:logEventAndLabel('DownloadSound', 'TOUCH')
+end
+
+function AnalyticsBuy(itemId)
+    cx.CXAnalytics:logEventAndLabel('BuyProduct', tostring(itemId))
 end
 
 ----------------------------------------------------------------------------------------

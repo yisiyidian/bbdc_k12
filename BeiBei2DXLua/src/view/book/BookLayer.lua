@@ -67,8 +67,6 @@ function BookLayer.create()
         local click = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
 
-                cx.CXAnalytics:logEventAndLabel("BOOK_"..key, 'CHOOSE')
-
                 if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
                     s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
                 end
