@@ -176,7 +176,7 @@ function LoginRewardPopup:ctor()
 
     local lastTime = s_CURRENT_USER.getDailyRewardTime
     local todayMark = 0
-    if math.floor((currentTime - s_CURRENT_USER.getDailyRewardTime) / ( 24 * 60 * 60 )) >= 1 then
+    if currentData[#currentData] == false  then
        todayMark = 0
     else
        todayMark = 1
@@ -225,8 +225,6 @@ function LoginRewardPopup:ctor()
                 spine:setScale(0.8)
                 currentWeek:getReward(os.time())
                 getRewardEverydayInfo()
-                s_CURRENT_USER.getDailyRewardTime = currentTime 
-                saveUserToServer({['getDailyRewardTime'] = s_CURRENT_USER.getDailyRewardTime})
                 todayMark = 1   
             end
         end
