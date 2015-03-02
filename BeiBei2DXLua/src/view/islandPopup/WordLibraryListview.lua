@@ -101,6 +101,7 @@ function WordLibraryListview:ctor(wordList)
         arrow_button:setPosition(cc.p(current_sprite:getContentSize().width * 0.92,current_sprite:getContentSize().height / 2.0))
         arrow_button:addTouchEventListener(arrow_button_click)
         arrow_button:setName("arrow||"..i)
+        arrow_button:setScale(1.25)
         current_sprite:addChild(arrow_button)
           
         local line = cc.LayerColor:create(cc.c4b(244,245,246,255),current_sprite:getContentSize().width * 0.95  ,4)

@@ -162,11 +162,11 @@ function WordLibraryPopup:ctor(index,fromWhere)
         backPopup:runAction(action3)   
     else
         backPopup:setVisible(false)
-        local action0 = cc.MoveTo:create(0.5,s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 * 3 ) 
+        local action0 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 * 3)) 
         local action1 = cc.CallFunc:create(function ()
             backPopup:setVisible(true)
         end)
-        local action2 = cc.MoveTo:create(0.5,s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10) 
+        local action2 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)) 
         local action3 = cc.Sequence:create(action0, action1, action2)
         backPopup:runAction(action3)  
     end
