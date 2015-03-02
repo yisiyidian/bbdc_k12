@@ -280,6 +280,7 @@ function ChapterLayerBase:addPopup(levelIndex)
                     text:runAction(action2)
             else
                 s_CorePlayManager.initTotalPlay()
+                s_CURRENT_USER.islandIndex = tonumber(levelIndex)
             end
         end
     end
@@ -412,7 +413,9 @@ function ChapterLayerBase:addPopup(levelIndex)
         back:setPosition(cc.p(s_DESIGN_WIDTH/2, 550))
         back:setVisible(false)
         wordLibrary.close = function ()
-           back:setVisible(true)
+            local action0 = cc.DelayTime:create(0.5)
+            local action1 = cc.OrbitCamera:create(0.5,1, 0, -90, 90, 0, 0) 
+            back:runAction(cc.Sequence:create(action0,cc.CallFunc:create(function()back:setVisible(true)end),action1))
         end
     else
         back:setPosition(cc.p(s_DESIGN_WIDTH/2, 550 * 3))   

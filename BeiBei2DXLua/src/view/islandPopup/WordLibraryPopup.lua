@@ -85,13 +85,9 @@ local function addReviewButton(bottom_sprite,boss)
     local review_button_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             local ReviewBoss = require("view.newreviewboss.NewReviewBossMainLayer")
-            if boss.wrongWordList == nil or #boss.wrongWordList < s_max_wrong_num_everyday then
-                return 
-            else
-                local reviewBoss = ReviewBoss.create(boss.wrongWordList,Review_From_Word_Bank)
-                s_SCENE:replaceGameLayer(reviewBoss)
-                s_SCENE:removeAllPopups()
-            end
+            local reviewBoss = ReviewBoss.create(boss.wrongWordList,Review_From_Word_Bank)
+            s_SCENE:replaceGameLayer(reviewBoss)
+            s_SCENE:removeAllPopups()
         end
     end
 
@@ -114,14 +110,20 @@ local function addSummaryButton(bottom_sprite,boss)
         for i = 1 , # initWordList do
             table.insert(temp,initWordList[i])
         end
-        for i = 1 , 6 do
+        local length
+        if #initWordList > 6 then
+            length = 6
+        else
+            length = #initWordList
+        end   
+        for i = 1 , length do
             local randSeed = math.randomseed(os.time())
             local randNum  = math.random(1,#initWordList)
             local tempNum  = temp[randNum]
             temp[randNum] = temp[i]
             temp[i] = tempNum  
         end
-        for i = 1 , 6 do
+        for i = 1 , length do
             table.insert(endList,temp[i])
         end
         return  endList
@@ -227,8 +229,13 @@ function WordLibraryPopup:ctor(index,fromWhere)
         self.reviewButton:setVisible(false)
         self.summaryButton:setVisible(false)
     else
-        self.listview = Listview.create(boss.wrongWordList)
-        if #boss.wrongWordList >= s_max_wrong_num_everyday then
+        self.listview = Listview.create(boss.wrongWordList)     
+        if index == '0' then
+            if #boss.wrongWordList >= s_max_wrong_num_first_island then
+               self.reviewButton:setVisible(true)
+               self.summaryButton:setVisible(true)
+            end
+        elseif #boss.wrongWordList >= s_max_wrong_num_everyday then
             self.reviewButton:setVisible(true)
             self.summaryButton:setVisible(true)
         else

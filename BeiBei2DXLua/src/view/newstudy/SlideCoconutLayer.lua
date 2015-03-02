@@ -84,8 +84,16 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
     else
         color = "yellow"
     end
-    
-    self.progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, color)
+
+    local progressBar_total_number 
+
+    if s_CURRENT_USER.islandIndex == 0 then
+        progressBar_total_number = s_max_wrong_num_first_island
+    else
+        progressBar_total_number = s_max_wrong_num_everyday
+    end
+
+    self.progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
     self.progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(self.progressBar)
     
@@ -143,7 +151,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
 
             self:runAction(cc.Sequence:create(cc.DelayTime:create(1),cc.CallFunc:create(function()  
                 if wrongWordList == nil then
-                    if wrongNum == s_max_wrong_num_everyday - 1 then
+                    if wrongNum == progressBar_total_number - 1 then
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanRewardForCollect)
                         saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
                         print('logInDatas')
