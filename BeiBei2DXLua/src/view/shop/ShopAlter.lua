@@ -89,7 +89,13 @@ function ShopAlter.create(itemId, location)
         back:addChild(item)
     end
     
-    local label_content = cc.Label:createWithSystemFont(s_DataManager.product[itemId].productDescription,"",32)
+    local label_content
+    if itemId == 6 and state == 1 then -- vip
+        local vip_content = "恭喜你！获得贝贝VIP门票一张！请加微信：beibei001，距离VIP群，仅有一步之遥！"
+        label_content = cc.Label:createWithSystemFont(vip_content,"",32)
+    else
+        label_content = cc.Label:createWithSystemFont(s_DataManager.product[itemId].productDescription,"",32)
+    end
     label_content:setAnchorPoint(0.5, 1)
     label_content:setColor(cc.c4b(0,0,0,255))
     label_content:setDimensions(maxWidth-180,0)

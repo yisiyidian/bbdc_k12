@@ -53,6 +53,7 @@ function parseServerDataToClientData(serverdata, userdata)
         if type(value) ~= 'function' 
             and type(value) ~= 'table' 
             and key ~= 'sessionToken' 
+            and key ~= 'BEANSKEY'
             and key ~= 'password' 
             and key ~= 'appVersion' 
             and nil ~= serverdata[key] then
@@ -76,6 +77,7 @@ function dataToJSONString(dataObj)
     for key, value in pairs(dataObj) do  
         if (key == 'objectId'
             or key == 'sessionToken'
+            or key == 'BEANSKEY'
             or key == 'password' 
             or key == 'createdAt' 
             or key == 'updatedAt' 
