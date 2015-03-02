@@ -171,6 +171,8 @@ std::string CXUtils::compressAndBase64EncodeString(const std::string& str) {
     std::string outstring;
     outstring.append(out, outLength);
     
+    if (out) free(out);
+    
     return outstring;
 }
 
@@ -182,6 +184,8 @@ std::string CXUtils::base64DecodeAndDecompressString(const std::string& str) {
     
     std::string decodedStr;
     decodedStr.append(reinterpret_cast<const char *>(out), outLength);
+    
+    if (out) free(out);
     
     std::string outstring = decompress_string(decodedStr);
     return outstring;

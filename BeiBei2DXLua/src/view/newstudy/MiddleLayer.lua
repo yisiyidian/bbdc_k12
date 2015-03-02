@@ -96,41 +96,50 @@ end
 
 local function createNumberSprite(wrongNumber)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-    local figureback = cc.Sprite:create("image/newstudy/figurebackground.png")
-    figureback:setPosition(bigWidth /2 + 100, 1000)
+    local figureback_main = cc.Sprite:create("image/newstudy/figurebackground.png")
+    figureback_main:setPosition(bigWidth /2 + 100, 1000)
+    figureback_main:setOpacity(0)
+
+    local figureback_sub = cc.Sprite:create("image/newstudy/figurebackground.png")
+    figureback_sub:setPosition(figureback_main:getContentSize().width / 2 ,figureback_main:getContentSize().height / 2)
+    figureback_sub:setScale(0)
+    figureback_main:addChild(figureback_sub)
+
+    figureback_sub:runAction(cc.ScaleTo:create(1,1))
 
     local label_hint_part_one = cc.Label:createWithSystemFont("收集生词","",50)
     label_hint_part_one:setPosition(-20, 50)
     label_hint_part_one:ignoreAnchorPointForPosition(false)
     label_hint_part_one:setAnchorPoint(1,0.5)
     label_hint_part_one:setColor(cc.c4b(31,68,102,255))
-    figureback:addChild(label_hint_part_one)
+    figureback_main:addChild(label_hint_part_one)
 
     local label_hint_part_two = cc.Label:createWithSystemFont("个","",50)
     label_hint_part_two:setPosition(110, 50)
     label_hint_part_two:ignoreAnchorPointForPosition(false)
     label_hint_part_two:setAnchorPoint(0,0.5)
     label_hint_part_two:setColor(cc.c4b(31,68,102,255))
-    figureback:addChild(label_hint_part_two)
+    figureback_main:addChild(label_hint_part_two)
 
-    local labelWordNum = cc.Label:createWithSystemFont(wrongNumber,"",50)
+    local labelWordNum = cc.Label:createWithSystemFont(0,"",50)
     labelWordNum:setPosition(50,50)
     labelWordNum:setColor(cc.c4b(234,123,3,255))
-    figureback:addChild(labelWordNum)
+    figureback_main:addChild(labelWordNum)
     
     local time = 0
     local function update(delta)
        time = time + delta
-        if time <= 1 then
-            labelWordNum:setString(math.floor(wrongNumber * time))
+       if time <= 1 then
+       elseif time <= 2 then
+            labelWordNum:setString(math.floor(wrongNumber * (time - 1)))
        else
             labelWordNum:setString(wrongNumber)
-            figureback:unscheduleUpdate()
+            figureback_main:unscheduleUpdate()
        end
     end
-    figureback:scheduleUpdateWithPriorityLua(update, 0)
+    figureback_main:scheduleUpdateWithPriorityLua(update, 0)
     
-    return figureback
+    return figureback_main
 end
 
 local function createNextButton(getBean)

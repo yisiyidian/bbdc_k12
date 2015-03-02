@@ -207,7 +207,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
     if s_CURRENT_USER.username ~= username then
 
         isUsernameExist(username, function (exist, error)
-            if error then
+            if error ~= nil then
                 onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, error.description, error.code)
             elseif not exist then
                 saveUserToServer({['username']=username}, function (datas, error)
@@ -215,7 +215,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
                         onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, error.description, error.code)
                     else
                         s_CURRENT_USER.username = username
-                        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
+                        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, s_CURRENT_USER.userId, s_CURRENT_USER.username)
                         change_password(password, onResponse)
                     end
                 end)

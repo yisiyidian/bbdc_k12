@@ -14,18 +14,32 @@ function getSecondsFromString(srcDateTime)
     end
     local loh, lom = get_tzoffset(timezone)
 
-    -- iso8601
-    -- 2014-09-12T14:10:12.495Z
-    local Y  = string.sub(srcDateTime,  1,  4)  
-    local M  = string.sub(srcDateTime,  6,  7)  
-    local D  = string.sub(srcDateTime,  9, 10)  
-    local H  = string.sub(srcDateTime, 12, 13)  
-    local MM = string.sub(srcDateTime, 15, 16)  
-    local SS = string.sub(srcDateTime, 18, 19)  
-    local ms = string.sub(srcDateTime, 21, string.len(srcDateTime) - 1)
-    
-    local t = os.time{year=Y, month=M, day=D, hour=(H+loh), min=(MM+lom), sec=SS} 
-    return t + ms / 1000.0
+    if string.find(srcDateTime, 'GMT') ~= nil or string.find(srcDateTime, 'CST') ~= nil or string.find(srcDateTime, '%(') ~= nil then
+        -- Sun Mar 01 2015 07:56:45 GMT+0000 (CST)
+        -- 123456789012345678901234567890
+        local Y  = string.sub(srcDateTime,  12,  15)  
+        local M  = string.sub(srcDateTime,  5,  7)  
+        local D  = string.sub(srcDateTime,  9, 10)  
+        local H  = string.sub(srcDateTime, 17, 18)  
+        local MM = string.sub(srcDateTime, 20, 21)  
+        local SS = string.sub(srcDateTime, 23, 24) 
+        local months = { Jan=1, Feb=2, Mar=3, Apr=4, May=5, Jun=6, Jul=7, Aug=8, Sep=9, Oct=10, Nov=11, Dec=12 }
+        local t = os.time{year=Y, month=months[M], day=D, hour=(H+loh), min=(MM+lom), sec=SS} 
+        return t
+    else
+        -- iso8601
+        -- 2014-09-12T14:10:12.495Z
+        local Y  = string.sub(srcDateTime,  1,  4)  
+        local M  = string.sub(srcDateTime,  6,  7)  
+        local D  = string.sub(srcDateTime,  9, 10)  
+        local H  = string.sub(srcDateTime, 12, 13)  
+        local MM = string.sub(srcDateTime, 15, 16)  
+        local SS = string.sub(srcDateTime, 18, 19)  
+        local ms = string.sub(srcDateTime, 21, string.len(srcDateTime) - 1)
+        
+        local t = os.time{year=Y, month=M, day=D, hour=(H+loh), min=(MM+lom), sec=SS} 
+        return t + ms / 1000.0
+    end
 end
 
 function getLocalSeconds()
@@ -39,6 +53,7 @@ function parseServerDataToClientData(serverdata, userdata)
         if type(value) ~= 'function' 
             and type(value) ~= 'table' 
             and key ~= 'sessionToken' 
+            and key ~= 'BEANSKEY'
             and key ~= 'password' 
             and key ~= 'appVersion' 
             and nil ~= serverdata[key] then
@@ -62,6 +77,7 @@ function dataToJSONString(dataObj)
     for key, value in pairs(dataObj) do  
         if (key == 'objectId'
             or key == 'sessionToken'
+            or key == 'BEANSKEY'
             or key == 'password' 
             or key == 'createdAt' 
             or key == 'updatedAt' 

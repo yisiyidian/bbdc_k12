@@ -154,6 +154,9 @@ function LoginRewardPopup:ctor()
      local dayInWeekEnd = dayInWeekBegin + today
      
      local currentWeek = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]
+     -- print("~~~~~~~~~~~")
+     -- print_lua_table(currentWeek)
+     -- print("~~~~~~~~~~~")
      local dayTime = 24 * 60 * 60
      if dayInWeekEnd <= 7 then
         for i = dayInWeekBegin,dayInWeekEnd do
@@ -174,9 +177,13 @@ function LoginRewardPopup:ctor()
         end
      end
 
-    local lastTime = s_CURRENT_USER.getDailyRewardTime
+     -- print("~~~~~~~~~~~")
+     -- print_lua_table(currentData)
+     -- print("~~~~~~~~~~~")
+
+
     local todayMark = 0
-    if math.floor((currentTime - s_CURRENT_USER.getDailyRewardTime) / ( 24 * 60 * 60 )) >= 1 then
+    if currentData[#currentData] == false then
        todayMark = 0
     else
        todayMark = 1
@@ -225,8 +232,6 @@ function LoginRewardPopup:ctor()
                 spine:setScale(0.8)
                 currentWeek:getReward(os.time())
                 getRewardEverydayInfo()
-                s_CURRENT_USER.getDailyRewardTime = currentTime 
-                saveUserToServer({['getDailyRewardTime'] = s_CURRENT_USER.getDailyRewardTime})
                 todayMark = 1   
             end
         end

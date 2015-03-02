@@ -45,9 +45,15 @@ function DownloadSoundButton.create(parentNode)
     --init the label of loading bar
     local label = cc.Label:create()
     label:setAnchorPoint(0.5,0.5)    
-    label:setSystemFontSize(24) 
+    label:setSystemFontSize(15) 
     label:setPosition(postion)
     label:setString('')
+
+    local label_percent = cc.Label:create()
+    label_percent:setAnchorPoint(0.5,0.5)    
+    label_percent:setSystemFontSize(15) 
+    label_percent:setPosition(postion.x + 130, postion.y)
+    label_percent:setString('test')
 
     local button_download_clicked
     local button_offline_clicked = function(sender,eventType)
@@ -64,6 +70,7 @@ function DownloadSoundButton.create(parentNode)
             SoundsDownloadingInstance[bookKey]:killDownload()
             SoundsDownloadingInstance[bookKey]=nil
             label:setString("下载离线音频")
+            label_percent:setString('')
             button:setPercent(0)
             button_back:setEnabled(true)
             button_back:setBright(true)
@@ -83,6 +90,7 @@ function DownloadSoundButton.create(parentNode)
 
         if currentNetwork == true and isOffline == false then
             label:setString("下载离线音频")
+            label_percent:setString('')
             button:setPercent(0)
             button_back:loadTextureNormal("image/soundLoadingBar/loadingbar_back.png",ccui.TextureResType.localType)
             button_back:loadTexturePressed("image/soundLoadingBar/loadingbar_back_press.png",ccui.TextureResType.localType)
@@ -95,6 +103,7 @@ function DownloadSoundButton.create(parentNode)
             end           
 
             label:setString("下载离线音频")
+            label_percent:setString('')
             button:setPercent(0)
             button_back:loadTextureNormal("image/soundLoadingBar/no_network.png",ccui.TextureResType.localType)
             button_back:loadTexturePressed("image/soundLoadingBar/no_network_press.png",ccui.TextureResType.localType)
@@ -105,6 +114,7 @@ function DownloadSoundButton.create(parentNode)
 
         if downloadState == "SUCCESS" then
             label:setVisible(false)
+            label_percent:setVisible(false)
             button:setVisible(false)
             button_back:setVisible(false)
         end
@@ -117,6 +127,7 @@ function DownloadSoundButton.create(parentNode)
         local percent = SoundsDownloadingInstance[bookKey].downloadPercent
         local currentSize = string.format("%.2f", tonumber(string.sub(total_size, 1, -2))* percent/100)
         button:setPercent(percent)
+        label_percent:setString(percent.."%")
         label:setString(currentSize.."M / "..total_size)    
     end
     
@@ -131,6 +142,7 @@ function DownloadSoundButton.create(parentNode)
             popupSuccess:runMoveInAction()
         end
             label:setVisible(false)
+            label_percent:setVisible(false)
             button:setVisible(false)
             button_back:setVisible(false)
     end
@@ -172,6 +184,7 @@ function DownloadSoundButton.create(parentNode)
             print("cancel download")
             downloadState="NOTBEGIN"
             label:setString("下载离线音频")
+            label_percent:setString('')
             button:setPercent(0)
             button_back:setEnabled(true)
             button_back:setBright(true)
@@ -198,6 +211,7 @@ function DownloadSoundButton.create(parentNode)
     --update the stats when initial this layer
     if downloadState == "NOTBEGIN" then
         button:setPercent(0)
+        label_percent:setString('')
         label:setString("下载离线音频")
         button_back:addTouchEventListener(button_download_clicked)
     elseif downloadState == "DOWNLOADING" then
@@ -218,7 +232,8 @@ function DownloadSoundButton.create(parentNode)
     parentNode:addChild(button_back)
     parentNode:addChild(button)
     parentNode:addChild(label)
-    
+    parentNode:addChild(label_percent)
+
     return button
 end
 

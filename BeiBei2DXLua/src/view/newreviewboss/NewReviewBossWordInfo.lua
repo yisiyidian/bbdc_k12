@@ -8,7 +8,7 @@ local NewReviewBossWordInfo = class("NewReviewBossWordInfo", function()
 end)
 
 function NewReviewBossWordInfo.create(word,y)
-    local height = 520
+    local height = 480
     if y ~= nil then
     	height = y
     end
@@ -26,7 +26,7 @@ function NewReviewBossWordInfo.create(word,y)
     local label_sentencecn2
 
     local index_y = height
-    local text_length = 500
+    local text_length = 460
     local left = (s_DESIGN_WIDTH - text_length)/2
 
 

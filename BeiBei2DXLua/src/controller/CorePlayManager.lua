@@ -96,9 +96,13 @@ function CorePlayManager.enterStudyModel(wordName, wrongWordNum, preWordName, pr
                 print("preWordNameState: false")
             end
         end
-        local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
-        local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(wordName, wrongWordNum, preWordName, preWordNameState)
-        s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
+--        local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
+--        local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(wordName, wrongWordNum, preWordName, preWordNameState)
+--        s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
+        
+        local ChooseCollectWordLayer = require("view.newstudy.ChooseCollectWordLayer")
+        local chooseCollectWordLayer = ChooseCollectWordLayer.create(wordName, wrongWordNum, preWordName, preWordNameState)
+        s_SCENE:replaceGameLayer(chooseCollectWordLayer)
     end
 end
 

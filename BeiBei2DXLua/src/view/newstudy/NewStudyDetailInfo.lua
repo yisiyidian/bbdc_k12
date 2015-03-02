@@ -9,7 +9,7 @@ end)
 
 function WordDetailInfo.create(word)
 
-    local height = 520
+    local height = 480
 
     local main = cc.Layer:create()
     main:setContentSize(s_DESIGN_WIDTH, height)
@@ -25,7 +25,7 @@ function WordDetailInfo.create(word)
     local label_sentencecn2
 
     local index_y = height - 40
-    local text_length = 500
+    local text_length = 460
     local left = (s_DESIGN_WIDTH - text_length)/2
 
     -- label_wordname = cc.Label:createWithSystemFont(word.wordName,"",40)

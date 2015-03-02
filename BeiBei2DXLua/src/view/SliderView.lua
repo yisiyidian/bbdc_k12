@@ -21,7 +21,7 @@ function SliderView.create(width,screen_height,content_height)
 
     local backBar = ccui.Scale9Sprite:create('image/book/process_button_light_color.png',cc.rect(0,0,15,856),cc.rect(0, 10, 15, 836))
     backBar:setContentSize(cc.size(15,20 + length))
-    backBar:setPosition(0.97 * width,0.5 * screen_height)
+    backBar:setPosition(0.97 * width - 40,0.5 * screen_height)
     layer:addChild(backBar)  
     
     local progressBar = ccui.Scale9Sprite:create('image/book/process_button_dark_color.png',cc.rect(0,0,15,856),cc.rect(0, 10, 15, 836))
@@ -33,7 +33,7 @@ function SliderView.create(width,screen_height,content_height)
     progressBar:setContentSize(cc.size(15,20 + length * percent))
     progressBar:ignoreAnchorPointForPosition(false)
     progressBar:setAnchorPoint(0.5,1)
-    progressBar:setPosition(0.5 * backBar:getContentSize().width,backBar:getContentSize().height)
+    progressBar:setPosition(0.5 * backBar:getContentSize().width ,backBar:getContentSize().height)
     backBar:addChild(progressBar)  
 
     local function update(delta)

@@ -24,6 +24,7 @@ local function dataTableToJSONString(dataTable, wordList)
     local str = '{'
     for key, value in pairs(dataTable) do  
         if (key == 'sessionToken'
+            or key == 'BEANSKEY'
             or key == 'password' 
             or key == 'className' 
             or key == 'createdAt' 
@@ -90,6 +91,7 @@ function synUserAfterLogIn(localDBUser, serverUser, callback)
         if type(value) ~= 'function' 
             and type(value) ~= 'table' 
             and key ~= 'sessionToken'
+            and key ~= 'BEANSKEY'
             and key ~= 'objectId' 
             and key ~= 'password' 
             and key ~= 'createdAt' 
@@ -472,7 +474,7 @@ end
 -- callback(datas, error)
 function saveUserToServer(dataTable, callback)
     local function cb (datas, error)
-        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER)
+        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, s_CURRENT_USER.userId, s_CURRENT_USER.username)
         if error == nil then
             if callback then callback(datas, nil) end
         else
@@ -483,6 +485,7 @@ function saveUserToServer(dataTable, callback)
     local userdata = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId}
     for key, value in pairs(dataTable) do
         if (key == 'sessionToken'
+            or key == 'BEANSKEY'
             or key == 'password' 
             or key == 'className' 
             or key == 'createdAt' 
