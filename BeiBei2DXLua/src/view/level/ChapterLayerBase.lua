@@ -160,23 +160,39 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     -- TODO add review boss position
     -- TODO check level state
 ----    local levelState = math.random(0, 3)
---    levelState = 5
+   levelState = 2
     if levelState == 0 then
-        local deco = cc.Sprite:create('image/chapter/elements/tubiao_daizi_tanchu_xiaoguan.png')
-        deco:setPosition(levelPosition.x,levelPosition.y+20)
-        self:addChild(deco, 130)
+        -- local deco = cc.Sprite:create('image/chapter/elements/tubiao_daizi_tanchu_xiaoguan.png')
+        local deco = sp.SkeletonAnimation:create("spine/chapterlevel/beibeidaizi.json","spine/chapterlevel/beibeidaizi.atlas",1)
+        deco:setPosition(levelPosition.x-60,levelPosition.y-10)
+        deco:addAnimation(0,'animation',true)
+        self:addChild(deco, 131)
     elseif levelState == 1 then
-        local deco = cc.Sprite:create('image/chapter/elements/tubiao_chuizi_tanchu_xiaoguan.png')
-        deco:setPosition(levelPosition.x,levelPosition.y+20)
-        self:addChild(deco, 130)
+        local oldDeco = cc.Sprite:create('image/chapter/elements/tubiao_daizi_tanchu_xiaoguan.png')
+        oldDeco:setPosition(levelPosition.x, levelPosition.y+20)
+        local action = cc.FadeOut:create(0.5)
+        oldDeco:runAction(action)
+        self:addChild(oldDeco, 130)
+        s_SCENE:callFuncWithDelay(0.5, function()
+            local deco = cc.Sprite:create('image/chapter/elements/tubiao_chuizi_tanchu_xiaoguan.png')
+            deco:setPosition(levelPosition.x,levelPosition.y+20)
+            self:addChild(deco, 130)
+        end)
     elseif levelState == 2 or (levelState >= 4 and levelIndex == currentTaskBossIndex) then
-        local reviewBoss = sp.SkeletonAnimation:create('spine/3 fxzlsxuanxiaoguandiaoluo1.json', 'spine/3 fxzlsxuanxiaoguandiaoluo1.atlas', 1)
---        reviewBoss:addAnimation(0, '1', false)
---        s_SCENE:callFuncWithDelay(1,function()
-            reviewBoss:addAnimation(1, '2', true)
---        end)
-        reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
-        self:addChild(reviewBoss, 140)
+        local oldDeco = cc.Sprite:create('image/chapter/elements/tubiao_chuizi_tanchu_xiaoguan.png')
+        oldDeco:setPosition(levelPosition.x, levelPosition.y+20)
+        local action = cc.FadeOut:create(0.5)
+        oldDeco:runAction(action)
+        self:addChild(oldDeco, 130)
+        s_SCENE:callFuncWithDelay(0.5, function()
+            local reviewBoss = sp.SkeletonAnimation:create('spine/3 fxzlsxuanxiaoguandiaoluo1.json', 'spine/3 fxzlsxuanxiaoguandiaoluo1.atlas', 1)
+    --        reviewBoss:addAnimation(0, '1', false)
+    --        s_SCENE:callFuncWithDelay(1,function()
+                reviewBoss:addAnimation(1, '2', true)
+    --        end)
+            reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
+            self:addChild(reviewBoss, 140)
+        end)
         -- only one review boss
     elseif levelState == 3 then 
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
@@ -451,20 +467,11 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
     local levelIndex = string.sub(levelKey, 6)
     local levelPosition = self:getLevelPosition(levelKey)
     local chapterIndex = string.sub(self.chapterKey, 8)
---    if levelIndex - 0 == 0 and chapterIndex - 0 == 0 then  -- start 
---        local start = cc.Sprite:create('image/chapter/chapter0/start.png')
---        start:setPosition(levelPosition.x, levelPosition.y)
---        self:addChild(start, 130)
---    else
-        local number = ccui.TextBMFont:create()
-        number:setFntFile('font/number_inclined.fnt')
-        --number:setColor(cc.c3b(56,26,23))
-        number:setString(levelIndex+1)
-        number:setPosition(levelPosition.x, levelPosition.y+3)
-        self:addChild(number,130)
---    end
-
- 
+    local number = ccui.TextBMFont:create()
+    number:setFntFile('font/number_inclined.fnt')
+    number:setString(levelIndex+1)
+    number:setPosition(levelPosition.x, levelPosition.y+3)
+    self:addChild(number,130)
 end
 
 function ChapterLayerBase:loadResource()
