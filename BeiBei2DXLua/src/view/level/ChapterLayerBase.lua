@@ -377,12 +377,12 @@ function ChapterLayerBase:addPopup(levelIndex)
     end
 
     if state <= 7 and state >= 4 then
-        -- if coolingDay > 0 then
+        if coolingDay > 0 then
             local collingText = cc.Label:createWithSystemFont(coolingDay..'天后','',24)
             collingText:setPosition(taskButton:getContentSize().width-100,taskButton:getContentSize().height/2-50)
             collingText:setColor(cc.c3b(146,179,54))
             taskButton:addChild(collingText)
-        -- end
+        end
     end
     
     if state ~= 8 then
