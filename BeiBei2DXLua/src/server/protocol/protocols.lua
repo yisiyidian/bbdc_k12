@@ -188,6 +188,16 @@ function resetLocalEverydayInfos()
     print('>>> resetLocalEverydayInfos')
     print_lua_table(s_CURRENT_USER.logInDatas)
     print('<<< resetLocalEverydayInfos')
+
+    -- error handle
+    if #s_CURRENT_USER.logInDatas <= 0 then
+        local currentWeek = DataEverydayInfo.create()
+        updateDataFromUser(currentWeek, s_CURRENT_USER)
+        currentWeek.week = getCurrentLogInWeek(os.time(), s_CURRENT_USER.localTime)
+        currentWeek:setWeekDay(os.time())
+        s_LocalDatabaseManager.saveDataClassObject(currentWeek, currentWeek.userId, currentWeek.username, " and week = " .. tostring(currentWeek.week))
+        table.insert(s_CURRENT_USER.logInDatas, currentWeek)
+    end
 end
 
 function sysEverydayInfo(unsavedWeeks, currentWeek, callback)
