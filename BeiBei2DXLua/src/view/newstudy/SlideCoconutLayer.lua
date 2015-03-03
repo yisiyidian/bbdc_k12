@@ -152,6 +152,9 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
             self:runAction(cc.Sequence:create(cc.DelayTime:create(1),cc.CallFunc:create(function()  
                 if wrongWordList == nil then
                     if wrongNum == progressBar_total_number - 1 then
+                        if s_CURRENT_USER.islandIndex == 0 then
+                            print("恭喜你，完成新手体验。")
+                        end
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanRewardForCollect)
                         saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
                         print('logInDatas')
