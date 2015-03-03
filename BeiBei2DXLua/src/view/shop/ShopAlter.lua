@@ -15,30 +15,7 @@ function ShopAlter.create(itemId, location)
     local main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
-
-    main.sure = function()
-        if s_CURRENT_USER:getBeans() >= s_DataManager.product[itemId].productValue then
-            s_CURRENT_USER:subtractBeans(s_DataManager.product[itemId].productValue)
-            s_CURRENT_USER:unlockFunctionState(itemId)
-            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY], ['lockFunction']=s_CURRENT_USER.lockFunction})
-
-            main:removeFromParent()
-            
-            if location == 'in' then
-                local ShopLayer = require("view.shop.ShopLayer")
-                local shopLayer = ShopLayer.create()
-                s_SCENE:replaceGameLayer(shopLayer)
-            else
-                
-            end
-        else
-            local shopErrorAlter = ShopErrorAlter.create()
-            shopErrorAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
-            main:addChild(shopErrorAlter)
-        end
-    end
-
-    
+ 
     local back
     if location == 'out' then
         back = cc.Sprite:create("image/shop/alter_back_out.png")
@@ -55,8 +32,41 @@ function ShopAlter.create(itemId, location)
     local maxWidth = back:getContentSize().width
     local maxHeight = back:getContentSize().height
 
+    local item
+
+    main.sure = function()
+        if s_CURRENT_USER:getBeans() >= s_DataManager.product[itemId].productValue then
+            s_CURRENT_USER:subtractBeans(s_DataManager.product[itemId].productValue)
+            s_CURRENT_USER:unlockFunctionState(itemId)
+            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY], ['lockFunction']=s_CURRENT_USER.lockFunction})
+
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
+            item:removeFromParent()
+
+            local bing = sp.SkeletonAnimation:create("res/spine/shop/bing"..itemId..".json", "res/spine/shop/bing"..itemId..".atlas", 1)
+            bing:setPosition(maxWidth/2-100, maxHeight/2+60)
+            bing:addAnimation(0, 'animation', false)
+            back:addChild(bing)
+
+            s_SCENE:callFuncWithDelay(4,function()
+                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+                main:removeFromParent()
+                if location == 'in' then
+                    local ShopLayer = require("view.shop.ShopLayer")
+                    local shopLayer = ShopLayer.create()
+                    s_SCENE:replaceGameLayer(shopLayer)
+                end
+            end)
+        else
+            local shopErrorAlter = ShopErrorAlter.create()
+            shopErrorAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+            main:addChild(shopErrorAlter)
+        end
+    end
+    
     if state == 0 then
-        local item = cc.Sprite:create("image/shop/item"..itemId..".png")
+        item = cc.Sprite:create("image/shop/item"..itemId..".png")
         item:setPosition(maxWidth/2, maxHeight/2+150)
         back:addChild(item)
         
@@ -84,12 +94,18 @@ function ShopAlter.create(itemId, location)
         title:setPosition(maxWidth/2, maxHeight-80)
         back:addChild(title)
         
-        local item = cc.Sprite:create("image/shop/product"..itemId..".png")
+        item = cc.Sprite:create("image/shop/product"..itemId..".png")
         item:setPosition(maxWidth/2, maxHeight/2+150)
         back:addChild(item)
     end
     
-    local label_content = cc.Label:createWithSystemFont(s_DataManager.product[itemId].productDescription,"",32)
+    local label_content
+    if itemId == 6 and state == 1 then -- vip
+        local vip_content = "恭喜你！获得贝贝VIP门票一张！请加微信：beibei001，距离VIP群，仅有一步之遥！"
+        label_content = cc.Label:createWithSystemFont(vip_content,"",32)
+    else
+        label_content = cc.Label:createWithSystemFont(s_DataManager.product[itemId].productDescription,"",32)
+    end
     label_content:setAnchorPoint(0.5, 1)
     label_content:setColor(cc.c4b(0,0,0,255))
     label_content:setDimensions(maxWidth-180,0)
@@ -112,6 +128,8 @@ function ShopAlter.create(itemId, location)
     button_close:setPosition(maxWidth-30,maxHeight-30)
     button_close:addTouchEventListener(button_close_clicked)
     back:addChild(button_close)
+
+     
 
     -- touch lock
     local onTouchBegan = function(touch, event)        

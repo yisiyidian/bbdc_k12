@@ -10,6 +10,7 @@ function M.createTable(objectOfDataClass)
     local str = ''
     for key, value in pairs(objectOfDataClass) do  
         if (key == 'sessionToken'  
+            or key == 'BEANSKEY'
             or string.find(key, '__') ~= nil 
             or value == nil) == false then 
 
@@ -54,6 +55,7 @@ function M.alterLocalDatabase(objectOfDataClass)
     local dataCols = {}
     for key, value in pairs(objectOfDataClass) do  
         if (key == 'sessionToken'  
+            or key == 'BEANSKEY'
             or string.find(key, '__') ~= nil 
             or value == nil) == false then 
 
@@ -103,6 +105,7 @@ function getInsertRecord(objectOfDataClass)
     local keys, values = '', ''
     for key, value in pairs(objectOfDataClass) do  
         if (key == 'sessionToken'  
+            or key == 'BEANSKEY'
             or string.find(key, '__') ~= nil 
             or value == nil) == false then 
 
@@ -140,6 +143,7 @@ function getUpdateRecord(objectOfDataClass)
     local str = ''
     for key, value in pairs(objectOfDataClass) do  
         if (key == 'sessionToken'  
+            or key == 'BEANSKEY'
             or string.find(key, '__') ~= nil 
             or value == nil) == false then 
 
