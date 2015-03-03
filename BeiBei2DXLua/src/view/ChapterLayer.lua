@@ -544,7 +544,7 @@ function ChapterLayer:plotDecoration()
     local boat = sp.SkeletonAnimation:create('spine/chuan.json', 'spine/chuan.atlas',1)
     boat:addAnimation(0, 'animation', true)
 --    local boatPosition = cc.p(level0Position.x-100, level0Position.y+150)
-    boat:setPosition(level0Position.x-200, level0Position.y+100)
+    boat:setPosition(level0Position.x-200, level0Position.y+120)
     self.chapterDic['chapter0']:addChild(boat,130)
     
     -- add wave
