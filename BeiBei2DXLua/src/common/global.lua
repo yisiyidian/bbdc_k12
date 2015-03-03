@@ -17,7 +17,7 @@ local function _initConstant()
     s_gamestate_reviewbossmodel_today       = 9
 
     --checkInAnimation
-    s_isCheckInAnimationDisplayed           = false
+    s_isCheckInAnimationDisplayed           = true
     
     --
     s_spineCoconutLightJson   = "res/spine/coconut_light.json"

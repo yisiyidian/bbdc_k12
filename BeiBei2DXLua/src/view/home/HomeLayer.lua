@@ -11,18 +11,18 @@ local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
 end)
 
-local FRIEND_LOCKED = 0
+--local FRIEND_LOCKED = s_CURRENT_USER:getLockFunctionState(1)
 local SHOP_LOCKED = 0
 local REWARD_LOCKED = 0
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 local list = {}
 
 function HomeLayer.create(share) 
-    s_CURRENT_USER:addBeans(10000)
-    -- if s_CURRENT_USER:getBeans() < 1 then
-    --     s_CURRENT_USER:addBeans(10000)
-    --     saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
-    -- end
+    -- s_CURRENT_USER:addBeans(10000)
+    if s_CURRENT_USER:getBeans() < 1 then
+        s_CURRENT_USER:addBeans(10000)
+        saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
+    end
 
     -- task
     local todayTotalBossNum     = s_LocalDatabaseManager:getTodayTotalBossNum()
@@ -106,7 +106,7 @@ function HomeLayer.create(share)
 
     local downloadSoundButton = require("view.home.DownloadSoundButton").create(top)
 
-    local name = cc.Label:createWithSystemFont('贝贝单词','',50)
+    local name = cc.Sprite:create('image/homescene/BBDC_word_title.png')
     name:setPosition(bigWidth/2, s_DESIGN_HEIGHT-85)
     backColor:addChild(name)
 
@@ -181,6 +181,7 @@ function HomeLayer.create(share)
     backColor:addChild(button_main)
 
     local icon_main = cc.Sprite:create('image/homescene/home_page_setting.png')
+    icon_main:setRotation(180)
     icon_main:setPosition(button_main:getContentSize().width / 2,button_main:getContentSize().height / 2)
     button_main:addChild(icon_main)
     
@@ -251,8 +252,14 @@ function HomeLayer.create(share)
     data_back:setPosition(button_data:getContentSize().width/2, 0)
     button_data:addChild(data_back,2)
     layer.dataBack = data_back
+
+    data_bottom = cc.LayerColor:create(cc.c4b(255,255,255,255), bigWidth, 50)  
+    data_bottom:setAnchorPoint(0.5,1)
+    data_bottom:ignoreAnchorPointForPosition(false)  
+    data_bottom:setPosition(button_data:getContentSize().width/2, 0)
+    data_back:addChild(data_bottom,2)
     
-    local data_name = cc.Label:createWithSystemFont("数据","",28)
+    local data_name = cc.Label:createWithSystemFont("数据","",36)
     data_name:setColor(cc.c4b(0,150,210,255))
     data_name:setPosition(button_data:getContentSize().width/2+30, button_data:getContentSize().height/2-5)
     button_data:addChild(data_name,0)
@@ -376,6 +383,7 @@ function HomeLayer.create(share)
                                 friendLayer:ignoreAnchorPointForPosition(false)
                                 friendLayer:setAnchorPoint(0,0.5)
                                 friendLayer:setPosition(s_RIGHT_X, s_DESIGN_HEIGHT/2)
+                                backColor:removeChildByName('redHint')
 
                                 if viewIndex == 2 then
                                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -467,7 +475,8 @@ function HomeLayer.create(share)
 
             local button_friend 
             local icon_friend
-            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST and FRIEND_LOCKED == 0 then
+
+            if s_CURRENT_USER:getLockFunctionState(1) == 1 then
                 button_friend = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
                 button_friend:setPosition(bigWidth / 2 - 1, 200)
                 icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
@@ -495,7 +504,8 @@ function HomeLayer.create(share)
             layer.button_friend = button_friend
 
             local function updateFriendButton(delta)
-                if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST and FRIEND_LOCKED == 0 then
+            --print('friend is locked'..FRIEND_LOCKED)
+                if s_CURRENT_USER:getLockFunctionState(1) == 1 then
                     -- local unlocked_button_friend = cc.Sprite:create("image/homescene/home_page_function_bg2.png")
                     -- unlocked_button_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
                     -- local unlocked_icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
@@ -532,8 +542,8 @@ function HomeLayer.create(share)
 
                         if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
                             local redHint = cc.Sprite:create('image/friend/fri_infor.png')
-                            redHint:setPosition(button_friend:getContentSize().width * 0.8,button_friend:getContentSize().height * 0.9)
-                            button_friend:addChild(redHint)
+                            redHint:setPosition(button_friend:getPositionX() - button_friend:getContentSize().width * 0.2,button_friend:getPositionY() + button_friend:getContentSize().height * 0.4)
+                            backColor:addChild(redHint,1,'redHint')
 
                             local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
                             num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
@@ -627,18 +637,20 @@ function HomeLayer.create(share)
                    layer:setButtonEnabled(false)
                    button_data:setLocalZOrder(2)
                    button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
-                   if true then
-                       local PersonalInfo = require("view.PersonalInfo")
-                       PersonalInfo.getNotContainedInLocalDatas(function ()
-                           local personalInfoLayer = PersonalInfo.create()
-                           personalInfoLayer:setPosition(-s_LEFT_X,0)
-                           data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
-                       end)
-                   else
-                       local Item_popup = require("popup/PopupModel")
-                       local item_popup = Item_popup.create(Site_From_Information)  
-                       s_SCENE:popup(item_popup)
-                   end 
+                   s_SCENE:callFuncWithDelay(0.3,function()
+                       if true then
+                           local PersonalInfo = require("view.PersonalInfo")
+                           PersonalInfo.getNotContainedInLocalDatas(function ()
+                               local personalInfoLayer = PersonalInfo.create()
+                               personalInfoLayer:setPosition(-s_LEFT_X,0)
+                               data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
+                           end)
+                       else
+                           local Item_popup = require("popup/PopupModel")
+                           local item_popup = Item_popup.create(Site_From_Information)  
+                           s_SCENE:popup(item_popup)
+                       end 
+                   end)
                    return
             end
             
@@ -686,6 +698,7 @@ function HomeLayer.create(share)
                    layer:setButtonEnabled(false)
                    button_data:setLocalZOrder(2)
                    button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
+                   s_SCENE:callFuncWithDelay(0.3,function()
                    if true then
 
                     if online == false then
@@ -703,7 +716,8 @@ function HomeLayer.create(share)
                        local Item_popup = require("popup/PopupModel")
                        local item_popup = Item_popup.create(Site_From_Information)  
                        s_SCENE:popup(item_popup)
-                   end 
+                   end
+                   end) 
             end
 
         elseif location.y >  s_DESIGN_HEIGHT-280 and (math.abs(location.y - start_y) < 10 and math.abs(location.x - start_x) < 10) and viewIndex == 1 then
@@ -882,22 +896,25 @@ end
 --
 --end
 
+
 function HomeLayer:showDataLayer(checkIn)
     self.dataButton:setLocalZOrder(2)
     self.dataButton:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-280)))))
-    if true then
-        local PersonalInfo = require("view.PersonalInfo")
-        PersonalInfo.getNotContainedInLocalDatas(function ()
-            local personalInfoLayer = PersonalInfo.create(true,self)
-            personalInfoLayer:setPosition(-s_LEFT_X,0)
-            self.dataBack:addChild(personalInfoLayer,1,'PersonalInfo') 
-        end)
-        
-    else
-        local Item_popup = require("popup/PopupModel")
-        local item_popup = Item_popup.create(Site_From_Information)  
-        s_SCENE:popup(item_popup)
-    end 
+    s_SCENE:callFuncWithDelay(0.8,function()
+        if true then
+            local PersonalInfo = require("view.PersonalInfo")
+            PersonalInfo.getNotContainedInLocalDatas(function ()
+                local personalInfoLayer = PersonalInfo.create(true,self)
+                personalInfoLayer:setPosition(-s_LEFT_X,0)
+                self.dataBack:addChild(personalInfoLayer,1,'PersonalInfo') 
+            end)
+            
+        else
+            local Item_popup = require("popup/PopupModel")
+            local item_popup = Item_popup.create(Site_From_Information)  
+            s_SCENE:popup(item_popup)
+        end 
+    end)
 end
 
 function HomeLayer:hideDataLayer()
