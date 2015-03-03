@@ -319,7 +319,7 @@ end
 function O2OController.getDataLevelInfo(oncompleted)
     s_CURRENT_USER.levelInfo:getDataFromLocalDB()    
     sysLevelInfo(s_CURRENT_USER.levelInfo, function (serverData, error)
-        if error then
+        if error ~= nil then
             onErrorNeedRestartAppHappend(error.description)
             hideProgressHUD()
             return

@@ -211,35 +211,37 @@ end
 function M.saveDataClassObject(objectOfDataClass, userId, username, conditions)
     conditions = conditions or ''
 
-    local num = 0
     if objectOfDataClass.objectId ~= '' then
         local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE objectId = '".. objectOfDataClass.objectId .."'" .. conditions
         print ('M.saveDataClassObject: ' .. searchSql)
         for row in Manager.database:nrows(searchSql) do
-            num = num + 1
-            break
+            print ('M.saveDataClassObject: objectId')
+            M.saveData(objectOfDataClass, nil, nil, 1, conditions)
+            return
         end
     end
 
-    if num == 0 and userId ~= nil and userId ~= '' then
+    if userId ~= nil and userId ~= '' then
         local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE userId = '".. userId .."'" .. conditions
         print ('M.saveDataClassObject: ' .. searchSql)
         for row in Manager.database:nrows(searchSql) do
-            num = num + 1
-            break
+            print ('M.saveDataClassObject: userId')
+            M.saveData(objectOfDataClass, userId, nil, 1, conditions)
+            return
         end
     end
 
-    if num == 0 and username ~= nil and username ~= '' then
+    if username ~= nil and username ~= '' then
         local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE username = '".. username .."'" .. conditions
         print ('M.saveDataClassObject: ' .. searchSql)
         for row in Manager.database:nrows(searchSql) do
-            num = num + 1
-            break
+            print ('M.saveDataClassObject: username')
+            M.saveData(objectOfDataClass, nil, username, 1, conditions)
+            return
         end
     end
 
-    M.saveData(objectOfDataClass, userId, username, num, conditions)
+    M.saveData(objectOfDataClass, userId, username, 0, conditions)
 end
 
 ----------------------------------------------------------------------------------------------------

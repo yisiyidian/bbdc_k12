@@ -30,6 +30,7 @@ local function dataTableToJSONString(dataTable, wordList)
             or key == 'createdAt' 
             or key == 'updatedAt' 
             or string.find(key, '__') ~= nil 
+            -- or (key == 'objectId' and value ~= nil and string.len(value) <= 0)
             or value == nil) == false then 
 
             if wordList ~= nil and wordList == key then
