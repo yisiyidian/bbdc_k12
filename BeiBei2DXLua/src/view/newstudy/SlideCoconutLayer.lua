@@ -8,6 +8,7 @@ local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
+local Button                = require("view.newstudy.BlueButtonInStudyLayer")
 
 local  SlideCoconutLayer = class("SlideCoconutLayer", function ()
     return cc.Layer:create()
@@ -53,12 +54,10 @@ local function createLastButton(word,wrongNum,wrongWordList,preWordName, preWord
         end
     end
 
-    local choose_before_button = ccui.Button:create("image/newstudy/button_twobutton_size.png","image/newstudy/button_twobutton_size_pressed.png","")
-    choose_before_button:setPosition(bigWidth/2, 153)
-    choose_before_button:setTitleText("偷看一眼")
-    choose_before_button:setTitleColor(cc.c4b(255,255,255,255))
-    choose_before_button:setTitleFontSize(32)
+    local choose_before_button = Button.create("偷看一眼")
+    choose_before_button:setPosition(bigWidth/2, 100)
     choose_before_button:addTouchEventListener(click_before_button)
+    
     return choose_before_button  
 end
 
@@ -84,8 +83,16 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
     else
         color = "yellow"
     end
-    
-    self.progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, color)
+
+    local progressBar_total_number 
+
+    if s_CURRENT_USER.islandIndex == 0 then
+        progressBar_total_number = s_max_wrong_num_first_island
+    else
+        progressBar_total_number = s_max_wrong_num_everyday
+    end
+
+    self.progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
     self.progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(self.progressBar)
     
@@ -139,11 +146,22 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
             showAnswerStateBack:addChild(right_wordname)
 
             local action1 = cc.MoveTo:create(0.2,cc.p(backColor:getContentSize().width /2, 768))
-            showAnswerStateBack:runAction(action1)
+            showAnswerStateBack:runAction(cc.Sequence:create(action1,
+               cc.CallFunc:create(function()
+                  self.progressBar.addOne()
+               end),
+               cc.CallFunc:create(function()
+                  if wrongNum == progressBar_total_number - 1 then
+                    self.progressBar:runAction(cc.MoveBy:create(0.5,cc.p(0,200)))
+                  end
+               end)))
 
             self:runAction(cc.Sequence:create(cc.DelayTime:create(1),cc.CallFunc:create(function()  
                 if wrongWordList == nil then
-                    if wrongNum == s_max_wrong_num_everyday - 1 then
+                    if wrongNum == progressBar_total_number - 1 then
+                        if s_CURRENT_USER.islandIndex == 0 then
+                            print("恭喜你，完成新手体验。")
+                        end
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanRewardForCollect)
                         saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
                         print('logInDatas')

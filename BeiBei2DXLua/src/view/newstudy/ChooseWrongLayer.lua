@@ -8,6 +8,7 @@ local DetailInfo        = require("view.newstudy.NewStudyDetailInfo")
 local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
+local Button                = require("view.newstudy.BlueButtonInStudyLayer")
 
 local  ChooseWrongLayer = class("ChooseRightLayer", function ()
     return cc.Layer:create()
@@ -40,14 +41,10 @@ local function addNextButton(word,wrongNum,wrongWordList,preWordName, preWordNam
         end
     end
 
-    local choose_next_button = ccui.Button:create("image/newstudy/button_onebutton_size.png","image/newstudy/button_onebutton_size_pressed.png","")
+    local choose_next_button = Button.create("下一步")
     choose_next_button:setPosition(bigWidth/2, 100)
-    choose_next_button:setTitleText("下一步")
-    choose_next_button:ignoreAnchorPointForPosition(false)
-    choose_next_button:setAnchorPoint(0.5,0)
-    choose_next_button:setTitleColor(cc.c4b(255,255,255,255))
-    choose_next_button:setTitleFontSize(32)
     choose_next_button:addTouchEventListener(click_next_button)  
+
     return choose_next_button
 end
 
@@ -71,9 +68,17 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordN
         color = "yellow"
     end
 
-    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongNum, color)
+    local progressBar_total_number 
+
+    if s_CURRENT_USER.islandIndex == 0 then
+        progressBar_total_number = s_max_wrong_num_first_island
+    else
+        progressBar_total_number = s_max_wrong_num_everyday
+    end
+
+    local progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
     progressBar:setPosition(bigWidth/2+44, 1049)
-    backColor:addChild(progressBar)
+    backColor:addChild(progressBar,2)
 
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
@@ -84,7 +89,7 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordN
     end
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
-    soundMark:setPosition(bigWidth/2, 920)  
+    soundMark:setPosition(bigWidth/2, 925)  
     backColor:addChild(soundMark)
 
     local detailInfo = DetailInfo.create(self.wordInfo[1])

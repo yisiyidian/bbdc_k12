@@ -97,6 +97,8 @@ function DataUser:ctor()
     
     self.beanRewardForCollect              = 3 -- if begin a new mission ,bean = 3 ; if guess wrong word ,bean = 2 ,1 ,0
     self.beanRewardForIron                 = 3
+
+    self.islandIndex                       = 0
 end
 
 function DataUser:getLockFunctionState(productId)

@@ -114,8 +114,10 @@ function SoundMark.create(wordname, soundmarkus, soundmarken, playWordOrNot)
     offlineTip = OfflineTip.create()
     main:addChild(offlineTip,2)
 
-    
+    local touchLocation 
     local onTouchBegan = function(touch, event)
+        local location = main:convertToNodeSpace(touch:getLocation())
+        touchLocation = location
         return true
     end
     
@@ -123,9 +125,11 @@ function SoundMark.create(wordname, soundmarkus, soundmarken, playWordOrNot)
         local location = main:convertToNodeSpace(touch:getLocation())
  
         if cc.rectContainsPoint(button_wordname:getBoundingBox(),location) then
-            playWordSound(wordname)
-            if s_SERVER.isNetworkConnectedNow()  == false then
-                offlineTip.setTrue()
+            if location == touchLocation then
+                playWordSound(wordname)
+                if s_SERVER.isNetworkConnectedNow()  == false then
+                   offlineTip.setTrue()
+                end
             end
         elseif s_CURRENT_USER.isSoundAm == 1 and cc.rectContainsPoint(button_soundmark_us:getBoundingBox(),location) then
             s_CURRENT_USER.isSoundAm = 0

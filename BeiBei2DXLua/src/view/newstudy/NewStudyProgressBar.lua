@@ -45,7 +45,12 @@ function ProgressBar.create(totalIndex, currentIndex, color)
     index:setAnchorPoint(0.5,1)
     index:setPosition(left + gap*currentIndex, 0)
     main:addChild(index)
-    
+
+    local label_number = cc.Label:createWithSystemFont(currentIndex,"",24)
+    label_number:setColor(cc.c4b(255,255,255,255))
+    label_number:setPosition(index:getContentSize().width/2, index:getContentSize().height*0.4)
+    index:addChild(label_number)
+
     main.indexPosition = function ()
         return index:getPosition()
     end
@@ -56,10 +61,16 @@ function ProgressBar.create(totalIndex, currentIndex, color)
     	index:runAction(cc.Sequence:create(action1,action2))
     end
 
-    local label_number = cc.Label:createWithSystemFont(currentIndex,"",24)
-    label_number:setColor(cc.c4b(255,255,255,255))
-    label_number:setPosition(index:getContentSize().width/2, index:getContentSize().height*0.4)
-    index:addChild(label_number)
+    main.addOne = function()
+        currentIndex = currentIndex + 1
+        label_number:setString(currentIndex)
+        local action1 = cc.MoveTo:create(0.2,cc.p(left + gap* (currentIndex), 0))
+        index:runAction(action1)
+        local action2 = cc.ProgressTo:create(0.2, 100*(currentIndex)/totalIndex)
+        progress:runAction(action2)
+    end
+
+
     
     -- touch lock
     local onTouchBegan = function(touch, event)    

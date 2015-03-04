@@ -7,6 +7,7 @@ local GuessWrong        = require("view.newstudy.GuessWrongPunishPopup")
 local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
+local Button                = require("view.newstudy.BlueButtonInStudyLayer")
 
 local  BlacksmithLayer = class("BlacksmithLayer", function ()
     return cc.Layer:create()
@@ -19,8 +20,15 @@ function BlacksmithLayer.create(wordlist,index)
     return layer
 end
 
-local function createOptions(randomNameArray,wordlist,position)
+function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
+    local progressBar_total_number 
+    if s_CURRENT_USER.islandIndex == 0 then
+        progressBar_total_number = s_max_wrong_num_first_island
+    else
+        progressBar_total_number = s_max_wrong_num_everyday
+    end 
+    
     local wordMeaningTable= {}
     for i = 1, 4 do
         local name = randomNameArray[i]
@@ -45,14 +53,24 @@ local function createOptions(randomNameArray,wordlist,position)
             end    
             feedback:setPosition(sender:getContentSize().width * 0.8 ,sender:getContentSize().height * 0.5)
             sender:addChild(feedback)
-            
-            local action2 = cc.MoveTo:create(0.3,cc.p(position , 1070 - sender:getPositionY()))
-            local action3 = cc.ScaleTo:create(0.1,0)
 
             if sender.tag == 1 then  
                 table.remove(wordlist,1)
                 local action1 = cc.DelayTime:create(0.1)
-                feedback:runAction(cc.Sequence:create(action1,action2,action3,cc.CallFunc:create(function()
+                local action2 = cc.MoveTo:create(0.3,cc.p(position , 1070 - sender:getPositionY()))
+                local action3 = cc.ScaleTo:create(0.1,0)
+                local action4 = cc.DelayTime:create(0.3)
+                feedback:runAction(cc.Sequence:create(action1,action2,action3,               
+                  cc.CallFunc:create(function()
+                     self.progressBar.addOne()
+               end),               
+                  cc.CallFunc:create(function()
+                  if #wordlist == 0 then
+                    self.progressBar:runAction(cc.MoveBy:create(0.5,cc.p(0,200)))
+                  end
+               end),
+                  action4,
+                  cc.CallFunc:create(function()
                     if #wordlist == 0 then
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanRewardForIron)
                         saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
@@ -86,7 +104,7 @@ local function createOptions(randomNameArray,wordlist,position)
                         s_CURRENT_USER.beanRewardForIron = s_CURRENT_USER.beanRewardForIron - 1
                     end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-                    local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],s_max_wrong_num_everyday - #wordlist,wordlist)
+                    local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],progressBar_total_number - #wordlist,wordlist)
                     s_SCENE:replaceGameLayer(chooseWrongLayer)
                 end)))
             end
@@ -108,7 +126,7 @@ local function createOptions(randomNameArray,wordlist,position)
 
         local choose_label = cc.Label:createWithSystemFont(wordMeaningTable[i],"",32)
         choose_label:setAnchorPoint(0,0.5)
-        choose_label:setPosition(40, choose_button[i]:getContentSize().height/2)
+        choose_label:setPosition(40, choose_button[i]:getContentSize().height/2 + 4)
         choose_label:setColor(cc.c4b(98,124,148,255))
         choose_button[i]:addChild(choose_label)
     end
@@ -119,6 +137,13 @@ end
 local function createDontknow(wordlist)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
+    local progressBar_total_number 
+    if s_CURRENT_USER.islandIndex == 0 then
+        progressBar_total_number = s_max_wrong_num_first_island
+    else
+        progressBar_total_number = s_max_wrong_num_everyday
+    end 
+
     local click_dontknow_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
@@ -126,18 +151,13 @@ local function createDontknow(wordlist)
             AnalyticsStudyDontKnowAnswer_strikeWhileHot()
             AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW_STRIKEWHILEHOT, 'TOUCH')
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],s_max_wrong_num_everyday - #wordlist,wordlist)
+            local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],progressBar_total_number - #wordlist,wordlist)
             s_SCENE:replaceGameLayer(chooseWrongLayer)            
         end
     end
 
-    local choose_dontknow_button = ccui.Button:create("image/newstudy/button_onebutton_size.png","image/newstudy/button_onebutton_size_pressed.png","")
+    local choose_dontknow_button = Button.create("不认识")
     choose_dontknow_button:setPosition(bigWidth/2, 100)
-    choose_dontknow_button:setTitleText("不认识")
-    choose_dontknow_button:ignoreAnchorPointForPosition(false)
-    choose_dontknow_button:setAnchorPoint(0.5,0)
-    choose_dontknow_button:setTitleColor(cc.c4b(255,255,255,255))
-    choose_dontknow_button:setTitleFontSize(32)
     choose_dontknow_button:addTouchEventListener(click_dontknow_button)
 
     return choose_dontknow_button
@@ -157,8 +177,16 @@ function BlacksmithLayer:ctor(wordlist)
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
     self.randWord = CollectUnfamiliar:createRandWord(self.currentWord,4)
 
-    self.progressBar = ProgressBar.create(s_max_wrong_num_everyday, s_max_wrong_num_everyday - #wordlist, "yellow")
-    self.progressBar:setPosition(bigWidth/2+44, 1049)
+    local progressBar_total_number 
+
+    if s_CURRENT_USER.islandIndex == 0 then
+        progressBar_total_number = s_max_wrong_num_first_island
+    else
+        progressBar_total_number = s_max_wrong_num_everyday
+    end
+
+    self.progressBar = ProgressBar.create(progressBar_total_number, progressBar_total_number - #wordlist, "yellow")
+    self.progressBar:setPosition(bigWidth/2+44, 1054)
     backColor:addChild(self.progressBar)
 
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
@@ -168,10 +196,10 @@ function BlacksmithLayer:ctor(wordlist)
 
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
-    soundMark:setPosition(bigWidth/2, 920)  
+    soundMark:setPosition(bigWidth/2, 925)
     backColor:addChild(soundMark)
 
-    self.options = createOptions(self.randWord,wordlist,self.progressBar.indexPosition())
+    self.options = self:createOptions(self.randWord,wordlist,self.progressBar.indexPosition())
     for i = 1, #self.options do
         backColor:addChild(self.options[i])
     end

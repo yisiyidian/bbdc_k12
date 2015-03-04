@@ -7,6 +7,7 @@ local GuessWrong        = require("view.newstudy.GuessWrongPunishPopup")
 local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
+local Button                = require("view.newstudy.BlueButtonInStudyLayer")
 
 local  CollectUnfamiliarLayer = class("CollectUnfamiliarLayer", function ()
     return cc.Layer:create()
@@ -170,7 +171,7 @@ local function createOptions(randomNameArray,word,wrongNum, preWordName, preWord
 
         local choose_label = cc.Label:createWithSystemFont(wordMeaningTable[i],"",32)
         choose_label:setAnchorPoint(0,0.5)
-        choose_label:setPosition(40, choose_button[i]:getContentSize().height/2)
+        choose_label:setPosition(40, choose_button[i]:getContentSize().height/2 + 4)
         choose_label:setColor(cc.c4b(98,124,148,255))
         choose_button[i]:addChild(choose_label)
     end
@@ -193,13 +194,8 @@ local function createDontknow(word,wrongNum, preWordName, preWordNameState)
         end
     end
 
-    local choose_dontknow_button = ccui.Button:create("image/newstudy/button_onebutton_size.png","image/newstudy/button_onebutton_size_pressed.png","")
+    local choose_dontknow_button = Button.create("不认识")
     choose_dontknow_button:setPosition(bigWidth/2, 100)
-    choose_dontknow_button:setTitleText("不认识")
-    choose_dontknow_button:ignoreAnchorPointForPosition(false)
-    choose_dontknow_button:setAnchorPoint(0.5,0)
-    choose_dontknow_button:setTitleColor(cc.c4b(255,255,255,255))
-    choose_dontknow_button:setTitleFontSize(32)
     choose_dontknow_button:addTouchEventListener(click_dontknow_button)
     
     return choose_dontknow_button
@@ -226,8 +222,16 @@ function CollectUnfamiliarLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     self.wordInfo = self:createWordInfo(self.currentWord)
     self.randWord = self:createRandWord(self.currentWord,4)
     
-    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongWordNum, "blue")
-    progressBar:setPosition(bigWidth/2+44, 1049)
+    local progressBar_total_number 
+
+    if s_CURRENT_USER.islandIndex == 0 then
+        progressBar_total_number = s_max_wrong_num_first_island
+    else
+        progressBar_total_number = s_max_wrong_num_everyday
+    end
+
+    local progressBar = ProgressBar.create(progressBar_total_number, wrongWordNum, "blue")
+    progressBar:setPosition(bigWidth/2+44, 1054)
     backColor:addChild(progressBar,2)
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
@@ -241,7 +245,7 @@ function CollectUnfamiliarLayer:ctor(wordName, wrongWordNum, preWordName, preWor
 
     
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
-    soundMark:setPosition(bigWidth/2, 920)  
+    soundMark:setPosition(bigWidth/2, 925)  
     backColor:addChild(soundMark)
     
     self.options = createOptions(self.randWord,wordName,wrongWordNum, preWordName, preWordNameState)

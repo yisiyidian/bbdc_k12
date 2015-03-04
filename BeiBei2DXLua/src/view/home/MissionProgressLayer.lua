@@ -288,6 +288,8 @@ function MissionProgressLayer.create(share)
         local action1 = cc.RotateBy:create(1,360)
         finishProgress:runAction(cc.Sequence:create(action1,cc.CallFunc:create(anotherSwelling)))
     end
+
+
     
     -- local finishLabel = cc.Label:createWithSystemFont("已完成","",24)
     -- finishLabel:setPosition(bigWidth/2 - 80, s_DESIGN_HEIGHT/2 - 300)
@@ -307,26 +309,23 @@ function MissionProgressLayer.create(share)
     -- grayLump:setPosition(bigWidth/2 + 60, s_DESIGN_HEIGHT/2 - 310)
     -- layer:addChild(grayLump)
     
---    local stackButtonClick = function(sender, eventType)
---        if eventType == ccui.TouchEventType.began then
---            playSound(s_sound_buttonEffect)   
---        elseif eventType == ccui.TouchEventType.ended then
---            AnalyticsWordsLibBtn()
---        if layer:getChildByTag(8888) ~=nil then
---            local schedule = layer:getChildByTag(8888):getScheduler()
---                schedule:unscheduleScriptEntry(schedule.schedulerEntry)
---        end            
---           s_CorePlayManager.enterWordListLayer()
---        end
---    end
---    
---    local stackButton = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
---    stackButton:setPosition(bigWidth/2 , s_DESIGN_HEIGHT/2 - 400)
---    stackButton:setTitleText("词库")
---    stackButton:setTitleColor(cc.c4b(255,255,255,255))
---    stackButton:setTitleFontSize(40)
---    stackButton:addTouchEventListener(stackButtonClick)
---    layer:addChild(stackButton)
+   -- local ButtonClick = function(sender, eventType)
+   --     if eventType == ccui.TouchEventType.began then
+   --         playSound(s_sound_buttonEffect)   
+   --     elseif eventType == ccui.TouchEventType.ended then
+   --                  local SuccessLayer = require("view.newreviewboss.SuccessLayer")
+   --                  local successLayer = SuccessLayer.create(0)
+   --                  s_SCENE:replaceGameLayer(successLayer)
+   --     end
+   -- end
+   
+   -- local Button = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
+   -- Button:setPosition(bigWidth/2 + 200, s_DESIGN_HEIGHT * 0.7)
+   -- Button:setTitleText("EndLayer")
+   -- Button:setTitleColor(cc.c4b(255,255,255,255))
+   -- Button:setTitleFontSize(40)
+   -- Button:addTouchEventListener(ButtonClick)
+   -- layer:addChild(Button)
 
 
     -- local function enterSummaryBoss(sender, eventType)
