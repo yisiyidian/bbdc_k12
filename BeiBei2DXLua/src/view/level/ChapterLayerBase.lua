@@ -281,6 +281,8 @@ function ChapterLayerBase:addPopup(levelIndex)
             else
                 s_CorePlayManager.initTotalPlay()
                 s_CURRENT_USER.islandIndex = tonumber(levelIndex)
+                print("~~~~~~~~~~~~~~")
+                print(levelIndex)
             end
         end
     end

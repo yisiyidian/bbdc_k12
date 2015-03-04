@@ -7,6 +7,7 @@ local FlipMat           = require("view.mat.FlipMat")
 local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
+local Button                = require("view.newstudy.BlueButtonInStudyLayer")
 
 local  EndLayer = class("EndLayer", function ()
     return cc.Layer:create()
@@ -19,19 +20,14 @@ function EndLayer.create()
 end
 
 local function createBeanSprite(bean)
-    local beans = cc.Sprite:create('image/chapter/chapter0/beanBack.png')
-    beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
 
-    local beanLabel = cc.Sprite:create('image/chapter/chapter0/bean.png')
-    beanLabel:setPosition(beans:getContentSize().width/2 - 60, beans:getContentSize().height/2+5)
-    beans:addChild(beanLabel)
+    local beans = cc.Sprite:create("image/bean/beanNumber.png")
+    beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-40)
 
-    local beanCountLabel = cc.Label:createWithSystemFont(bean,'',33)
-    beanCountLabel:setColor(cc.c3b(13, 95, 156))
-    beanCountLabel:ignoreAnchorPointForPosition(false)
-    beanCountLabel:setAnchorPoint(1,0)
-    beanCountLabel:setPosition(90,2)
-    beans:addChild(beanCountLabel,10)
+    local been_number = cc.Label:createWithSystemFont(bean,'',24)
+    been_number:setColor(cc.c4b(0,0,0,255))
+    been_number:setPosition(beans:getContentSize().width * 0.65 , beans:getContentSize().height/2)
+    beans:addChild(been_number)
 
     return beans
 end
@@ -49,11 +45,8 @@ local function createNextButton(getBean)
         end
     end
 
-    local button_go = ccui.Button:create("image/newstudy/button_onebutton_size.png","image/newstudy/button_onebutton_size_pressed.png","")
-    button_go:setPosition(bigWidth/2, 153)
-    button_go:setTitleText("YES！")
-    button_go:setTitleColor(cc.c4b(255,255,255,255))
-    button_go:setTitleFontSize(32)
+    local button_go =  Button.create("YES！")
+    button_go:setPosition(bigWidth/2, 100)
     button_go:addTouchEventListener(button_go_click)
 
     local bean = cc.Sprite:create("image/newreviewboss/beibeidou2.png")

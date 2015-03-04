@@ -8,6 +8,7 @@ local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
+local Button                = require("view.newstudy.BlueButtonInStudyLayer")
 
 local  SlideCoconutLayer = class("SlideCoconutLayer", function ()
     return cc.Layer:create()
@@ -53,12 +54,10 @@ local function createLastButton(word,wrongNum,wrongWordList,preWordName, preWord
         end
     end
 
-    local choose_before_button = ccui.Button:create("image/newstudy/button_twobutton_size.png","image/newstudy/button_twobutton_size_pressed.png","")
-    choose_before_button:setPosition(bigWidth/2, 153)
-    choose_before_button:setTitleText("偷看一眼")
-    choose_before_button:setTitleColor(cc.c4b(255,255,255,255))
-    choose_before_button:setTitleFontSize(32)
+    local choose_before_button = Button.create("偷看一眼")
+    choose_before_button:setPosition(bigWidth/2, 100)
     choose_before_button:addTouchEventListener(click_before_button)
+    
     return choose_before_button  
 end
 

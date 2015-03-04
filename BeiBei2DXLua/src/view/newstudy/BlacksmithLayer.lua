@@ -7,6 +7,7 @@ local GuessWrong        = require("view.newstudy.GuessWrongPunishPopup")
 local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
+local Button                = require("view.newstudy.BlueButtonInStudyLayer")
 
 local  BlacksmithLayer = class("BlacksmithLayer", function ()
     return cc.Layer:create()
@@ -26,7 +27,7 @@ local function createOptions(randomNameArray,wordlist,position)
         progressBar_total_number = s_max_wrong_num_first_island
     else
         progressBar_total_number = s_max_wrong_num_everyday
-    end
+    end 
     
     local wordMeaningTable= {}
     for i = 1, 4 do
@@ -126,6 +127,13 @@ end
 local function createDontknow(wordlist)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
+    local progressBar_total_number 
+    if s_CURRENT_USER.islandIndex == 0 then
+        progressBar_total_number = s_max_wrong_num_first_island
+    else
+        progressBar_total_number = s_max_wrong_num_everyday
+    end 
+
     local click_dontknow_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
@@ -133,18 +141,13 @@ local function createDontknow(wordlist)
             AnalyticsStudyDontKnowAnswer_strikeWhileHot()
             AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW_STRIKEWHILEHOT, 'TOUCH')
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],s_max_wrong_num_everyday - #wordlist,wordlist)
+            local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],progressBar_total_number - #wordlist,wordlist)
             s_SCENE:replaceGameLayer(chooseWrongLayer)            
         end
     end
 
-    local choose_dontknow_button = ccui.Button:create("image/newstudy/button_onebutton_size.png","image/newstudy/button_onebutton_size_pressed.png","")
+    local choose_dontknow_button = Button.create("不认识")
     choose_dontknow_button:setPosition(bigWidth/2, 100)
-    choose_dontknow_button:setTitleText("不认识")
-    choose_dontknow_button:ignoreAnchorPointForPosition(false)
-    choose_dontknow_button:setAnchorPoint(0.5,0)
-    choose_dontknow_button:setTitleColor(cc.c4b(255,255,255,255))
-    choose_dontknow_button:setTitleFontSize(32)
     choose_dontknow_button:addTouchEventListener(click_dontknow_button)
 
     return choose_dontknow_button
