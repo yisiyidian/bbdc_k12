@@ -13,7 +13,7 @@
         QQName="贝贝单词"
         QQAppID="1103783596"
         QQAppKey="n7vXdt6eDIggSsa6"
-        isQQLogInAvailable="true"
+        isQQLogInAvailable="false"
         isQQShareAvailable="true"
 
         WXPkg="com.BeiBeiDanCiX" WXName="贝贝单词-背单词根本停不下来"
@@ -261,7 +261,7 @@
         QQName="贝贝单词"
         QQAppID="1103783596"
         QQAppKey="n7vXdt6eDIggSsa6"
-        isQQLogInAvailable="true"
+        isQQLogInAvailable="false"
         isQQShareAvailable="true"
 
         WXPkg="com.beibei.wordmaster.tencentmyapp" WXName="贝贝单词-应用宝正式"
