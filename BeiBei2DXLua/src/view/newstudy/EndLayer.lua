@@ -56,6 +56,11 @@ local function createNextButton(getBean)
     local rewardNumber = cc.Label:createWithSystemFont("+"..tostring(getBean),"",36)
     rewardNumber:setPosition(button_go:getContentSize().width * 0.85,button_go:getContentSize().height * 0.5)
     button_go:addChild(rewardNumber)
+
+    local action0 = cc.DelayTime:create(1)
+    local action1 = cc.MoveBy:create(1,cc.p(-button_go:getContentSize().width * 0.25 + bigWidth/2 - 100 ,-button_go:getContentSize().height * 0.5 - 100 +s_DESIGN_HEIGHT-40)) 
+    local action2 = cc.ScaleTo:create(0.1,0)
+    bean:runAction(cc.Sequence:create(action0,action1,action2))  
     
     return button_go
 end
@@ -75,17 +80,17 @@ function EndLayer:ctor()
     self.beanSprite = createBeanSprite(self.bean)
     self:addChild(self.beanSprite)
 
-    local label_hint = cc.Label:createWithSystemFont("任务完成！","",50)
+    local label_hint = cc.Label:createWithSystemFont("任务完成！","",40)
     label_hint:setPosition(bigWidth/2, 1000)
-    label_hint:setColor(cc.c4b(31,68,102,255))
+    label_hint:setColor(cc.c4b(42,120,158,255))
     backColor:addChild(label_hint)
 
     local beibeiAnimation = sp.SkeletonAnimation:create("spine/bb_happy_public.json", 'spine/bb_happy_public.atlas',1)
     beibeiAnimation:addAnimation(0, 'animation', false)
-    beibeiAnimation:setPosition(s_DESIGN_WIDTH/2-s_LEFT_X-100, 220)
+    beibeiAnimation:setPosition(s_DESIGN_WIDTH/2-s_LEFT_X-100, 320)
 
     local partical = cc.ParticleSystemQuad:create('image/studyscene/ribbon.plist')
-    partical:setPosition(s_DESIGN_WIDTH/2-s_LEFT_X, 600)
+    partical:setPosition(s_DESIGN_WIDTH/2-s_LEFT_X, 700)
     backColor:addChild(partical)
     backColor:addChild(beibeiAnimation)
 

@@ -20,7 +20,7 @@ function BlacksmithLayer.create(wordlist,index)
     return layer
 end
 
-local function createOptions(randomNameArray,wordlist,position)
+function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local progressBar_total_number 
     if s_CURRENT_USER.islandIndex == 0 then
@@ -53,14 +53,24 @@ local function createOptions(randomNameArray,wordlist,position)
             end    
             feedback:setPosition(sender:getContentSize().width * 0.8 ,sender:getContentSize().height * 0.5)
             sender:addChild(feedback)
-            
-            local action2 = cc.MoveTo:create(0.3,cc.p(position , 1070 - sender:getPositionY()))
-            local action3 = cc.ScaleTo:create(0.1,0)
 
             if sender.tag == 1 then  
                 table.remove(wordlist,1)
                 local action1 = cc.DelayTime:create(0.1)
-                feedback:runAction(cc.Sequence:create(action1,action2,action3,cc.CallFunc:create(function()
+                local action2 = cc.MoveTo:create(0.3,cc.p(position , 1070 - sender:getPositionY()))
+                local action3 = cc.ScaleTo:create(0.1,0)
+                local action4 = cc.DelayTime:create(0.3)
+                feedback:runAction(cc.Sequence:create(action1,action2,action3,               
+                  cc.CallFunc:create(function()
+                     self.progressBar.addOne()
+               end),               
+                  cc.CallFunc:create(function()
+                  if #wordlist == 0 then
+                    self.progressBar:runAction(cc.MoveBy:create(0.5,cc.p(0,200)))
+                  end
+               end),
+                  action4,
+                  cc.CallFunc:create(function()
                     if #wordlist == 0 then
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanRewardForIron)
                         saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
@@ -116,7 +126,7 @@ local function createOptions(randomNameArray,wordlist,position)
 
         local choose_label = cc.Label:createWithSystemFont(wordMeaningTable[i],"",32)
         choose_label:setAnchorPoint(0,0.5)
-        choose_label:setPosition(40, choose_button[i]:getContentSize().height/2)
+        choose_label:setPosition(40, choose_button[i]:getContentSize().height/2 + 4)
         choose_label:setColor(cc.c4b(98,124,148,255))
         choose_button[i]:addChild(choose_label)
     end
@@ -176,7 +186,7 @@ function BlacksmithLayer:ctor(wordlist)
     end
 
     self.progressBar = ProgressBar.create(progressBar_total_number, progressBar_total_number - #wordlist, "yellow")
-    self.progressBar:setPosition(bigWidth/2+44, 1049)
+    self.progressBar:setPosition(bigWidth/2+44, 1054)
     backColor:addChild(self.progressBar)
 
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
@@ -186,10 +196,10 @@ function BlacksmithLayer:ctor(wordlist)
 
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
-    soundMark:setPosition(bigWidth/2, 920)  
+    soundMark:setPosition(bigWidth/2, 925)
     backColor:addChild(soundMark)
 
-    self.options = createOptions(self.randWord,wordlist,self.progressBar.indexPosition())
+    self.options = self:createOptions(self.randWord,wordlist,self.progressBar.indexPosition())
     for i = 1, #self.options do
         backColor:addChild(self.options[i])
     end

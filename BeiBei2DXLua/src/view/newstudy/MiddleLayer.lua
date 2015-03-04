@@ -164,10 +164,10 @@ local function createNextButton(getBean)
     rewardNumber:setPosition(button_go:getContentSize().width * 0.85,button_go:getContentSize().height * 0.5)
     button_go:addChild(rewardNumber)
 
-    -- local action0 = cc.DelayTime:create(1)
-    -- local action1 = cc.MoveBy:create(1,cc.p(-button_go:getContentSize().width * 0.25 + bigWidth/2 - 100 ,-button_go:getContentSize().height * 0.5 - 100 +s_DESIGN_HEIGHT-40)) 
-    -- local action2 = cc.ScaleTo:create(0.1,0)
-    -- bean:runAction(cc.Sequence:create(action0,action1,action2))  
+    local action0 = cc.DelayTime:create(1)
+    local action1 = cc.MoveBy:create(1,cc.p(-button_go:getContentSize().width * 0.25 + bigWidth/2 - 100 ,-button_go:getContentSize().height * 0.5 - 100 +s_DESIGN_HEIGHT-40)) 
+    local action2 = cc.ScaleTo:create(0.1,0)
+    bean:runAction(cc.Sequence:create(action0,action1,action2))  
 
     return button_go
 end

@@ -89,7 +89,7 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordN
     end
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
-    soundMark:setPosition(bigWidth/2, 920)  
+    soundMark:setPosition(bigWidth/2, 925)  
     backColor:addChild(soundMark)
 
     local detailInfo = DetailInfo.create(self.wordInfo[1])

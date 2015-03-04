@@ -138,7 +138,7 @@ function ChooseRightLayer:ctor(word,wrongNum, preWordName, preWordNameState)
     end
     
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
-    soundMark:setPosition(bigWidth/2, 920)  
+    soundMark:setPosition(bigWidth/2, 925)  
     backColor:addChild(soundMark)
 
     local detailInfo = DetailInfo.create(self.wordInfo[1])

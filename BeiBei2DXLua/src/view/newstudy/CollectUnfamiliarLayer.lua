@@ -171,7 +171,7 @@ local function createOptions(randomNameArray,word,wrongNum, preWordName, preWord
 
         local choose_label = cc.Label:createWithSystemFont(wordMeaningTable[i],"",32)
         choose_label:setAnchorPoint(0,0.5)
-        choose_label:setPosition(40, choose_button[i]:getContentSize().height/2)
+        choose_label:setPosition(40, choose_button[i]:getContentSize().height/2 + 4)
         choose_label:setColor(cc.c4b(98,124,148,255))
         choose_button[i]:addChild(choose_label)
     end
@@ -231,7 +231,7 @@ function CollectUnfamiliarLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     end
 
     local progressBar = ProgressBar.create(progressBar_total_number, wrongWordNum, "blue")
-    progressBar:setPosition(bigWidth/2+44, 1049)
+    progressBar:setPosition(bigWidth/2+44, 1054)
     backColor:addChild(progressBar,2)
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
@@ -245,7 +245,7 @@ function CollectUnfamiliarLayer:ctor(wordName, wrongWordNum, preWordName, preWor
 
     
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
-    soundMark:setPosition(bigWidth/2, 920)  
+    soundMark:setPosition(bigWidth/2, 925)  
     backColor:addChild(soundMark)
     
     self.options = createOptions(self.randWord,wordName,wrongWordNum, preWordName, preWordNameState)
