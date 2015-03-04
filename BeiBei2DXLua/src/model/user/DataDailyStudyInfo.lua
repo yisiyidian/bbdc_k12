@@ -44,7 +44,7 @@ function DataDailyStudyInfo.getNoObjectIdAndTodayDatasFromLocalDB(todayString)
             data.className = row.className
             data.objectId = row.objectId
             data.userId = row.userId
-            data.username = row.userId
+            data.username = row.username
             data.createdAt = row.createdAt
             data.updatedAt = row.updatedAt
             

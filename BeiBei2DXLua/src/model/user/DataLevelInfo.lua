@@ -52,6 +52,7 @@ function DataLevelInfo:getDataFromLocalDB()
     updateDataFromUser(self, s_CURRENT_USER)
     s_LocalDatabaseManager.getDatas(self.className, s_CURRENT_USER.objectId, s_CURRENT_USER.username, function (row)
         parseLocalDBDataToClientData(row, self)
+        updateDataFromUser(self, s_CURRENT_USER)
     end)
 end
 

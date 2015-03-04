@@ -64,6 +64,10 @@ function parseServerDataToClientData(serverdata, userdata)
             end
         end
     end
+
+    if userdata['userId'] ~= nil and type(userdata['userId']) == 'string' and string.len(userdata['userId']) <= 0 then
+        userdata['userId'] = s_CURRENT_USER.objectId
+    end
 end
 
 function parseLocalDBDataToClientData(localdb, userdata)

@@ -183,6 +183,7 @@ function LoginRewardPopup:ctor()
 
 
     local todayMark = 0
+
     if currentData[#currentData] == false then
        todayMark = 0
     else
