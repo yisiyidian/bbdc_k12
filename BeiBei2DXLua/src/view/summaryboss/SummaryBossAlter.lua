@@ -199,8 +199,8 @@ function SummaryBossAlter:win1(entrance)
         checkInEverydayInfo()
         s_isCheckInAnimationDisplayed = false
     end
-    print('hasCheckedIn',hasCheckedIn)
-    print('entrance',entrance)
+    -- print('hasCheckedIn',hasCheckedIn)
+    -- print('entrance',entrance)
     if not hasCheckedIn and entrance == ENTRANCE_NORMAL then
         local missionCompleteCircle = require('view.MissionCompleteCircle').create()
         s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')

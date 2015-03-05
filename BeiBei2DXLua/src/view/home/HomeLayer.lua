@@ -18,6 +18,7 @@ local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 local list = {}
 
 function HomeLayer.create(share) 
+    -- s_CURRENT_USER:addBeans(10000)
     -- if s_CURRENT_USER:getBeans() < 1 then
     --     s_CURRENT_USER:addBeans(10000)
     --     saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
@@ -97,7 +98,9 @@ function HomeLayer.create(share)
     layer:addChild(offlineTipFriend,2) 
 
     local mission_progress
-    if share ~= nil and share then
+    local checkInDisplay = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) and not s_isCheckInAnimationDisplayed
+    if checkInDisplay then
+        s_isCheckInAnimationDisplayed = true
         mission_progress = MissionProgress.create(true)
     else
         mission_progress = MissionProgress.create()
@@ -737,6 +740,11 @@ function HomeLayer.create(share)
     layer.button_enter = mission_progress
     layer.button_reward = button_reward
 
+    if checkInDisplay then
+        layer:showDataLayer(true)
+        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+    end
+
     return layer
 end
 
@@ -882,7 +890,7 @@ function HomeLayer:showDataLayer(checkIn)
     if true then
         local PersonalInfo = require("view.PersonalInfo")
         PersonalInfo.getNotContainedInLocalDatas(function ()
-            local personalInfoLayer = PersonalInfo.create(true)
+            local personalInfoLayer = PersonalInfo.create(true,self)
             personalInfoLayer:setPosition(-s_LEFT_X,0)
             self.dataBack:addChild(personalInfoLayer,1,'PersonalInfo') 
         end)

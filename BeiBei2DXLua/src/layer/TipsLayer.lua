@@ -2,6 +2,7 @@ require("cocos.init")
 
 local BigAlter = require("view.alter.BigAlter")
 local SmallAlter = require("view.alter.SmallAlter")
+local SmallAlterWithOneButton = require("view.alter.SmallAlterWithOneButton")
 local OfflineTip = require('view.offlinetip.OfflineTip')
 
 local TipsLayer = class("TipsLayer", function ()
@@ -68,6 +69,30 @@ function TipsLayer:showSmall(message, confirmFunc, cancelFunc)
     
     smallAlter.close = function()
         if cancelFunc ~= nil then cancelFunc() end
+        closeTip()
+    end
+
+    return smallAlter
+end
+
+function TipsLayer:showSmallWithOneButton(message, confirmFunc)
+    self.listener:setSwallowTouches(true)
+    self.bg:setVisible(true)
+    self:setVisible(true)
+
+    local smallAlter = SmallAlterWithOneButton.create(message)
+    smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+    self:addChild(smallAlter)
+
+    local layer = self
+    local closeTip = function ()
+        smallAlter:removeFromParent()
+        layer.listener:setSwallowTouches(false)
+        layer:setVisible(false)
+    end
+
+    smallAlter.affirm = function()
+        if confirmFunc ~= nil then confirmFunc() end
         closeTip()
     end
 

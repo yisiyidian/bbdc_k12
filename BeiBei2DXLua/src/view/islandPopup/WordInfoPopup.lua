@@ -5,9 +5,9 @@ end)
 local DetailInfo        = require("view.newreviewboss.NewReviewBossWordInfo")
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 
-function WordInfoPopup.create(wordname,index,wordlist)
-    local layer = WordInfoPopup.new(wordname,index,wordlist)
-    layer:createInfo(wordname,index,wordlist)
+function WordInfoPopup.create(index,wordlist)
+    local layer = WordInfoPopup.new(index,wordlist)
+    layer:createInfo(index,wordlist)
     return layer
 end
 
@@ -40,7 +40,7 @@ local function creatWordLayout(word)
     return layout
 end
 
-function WordInfoPopup:ctor(wordname,index,wordlist)
+function WordInfoPopup:ctor(index,wordlist)
 
     if wordlist == nil then
         self.total_index = 0
@@ -176,7 +176,7 @@ local function findIndex(currentIndex,wordList,number)
     end
 end
 
-function WordInfoPopup:createInfo(wordname,index,wordlist)
+function WordInfoPopup:createInfo(index,wordlist)
 
     local pageView = ccui.PageView:create()
     pageView:setTouchEnabled(true)
@@ -199,7 +199,7 @@ function WordInfoPopup:createInfo(wordname,index,wordlist)
     -- change to current index
     pageView:scrollToPage(1) 
 
-    self.changeToPage = function (bool)
+    self.changeToPage = function (bool) 
         if bool == true then
             local target = pageView:getCurPageIndex()
             pageView:scrollToPage(target + 1)
@@ -219,7 +219,7 @@ function WordInfoPopup:createInfo(wordname,index,wordlist)
                 pageView:scrollToPage(1)             
                 self:changeNum(false)
             elseif pageView:getCurPageIndex() + 1 == 2 then
-
+                playWordSound(wordlist[tonumber(self.current_index)])
             elseif pageView:getCurPageIndex() + 1 == 3 then
                 pageView:removePageAtIndex(0)
                 local newIndex = findIndex(self.current_index,wordlist,2)
