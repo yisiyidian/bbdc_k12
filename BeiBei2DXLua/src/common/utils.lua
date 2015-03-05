@@ -214,8 +214,8 @@ end
 function is2TimeInSameDay(secondsA, secondsB)
     local a = os.date("*t", secondsA)
     local b = os.date("*t", secondsB)
-    print(string.format('is2TimeInSameDay:%d,%d,%d', a.year, a.month, a.day))
-    print(string.format('is2TimeInSameDay:%d,%d,%d', b.year, b.month, b.day))
+    -- print(string.format('is2TimeInSameDay:%d,%d,%d', a.year, a.month, a.day))
+    -- print(string.format('is2TimeInSameDay:%d,%d,%d', b.year, b.month, b.day))
     -- {year = 1998, month = 9, day = 16, yday = 259, wday = 4, hour = 23, min = 48, sec = 10, isdst = false}
     return a.year == b.year and a.month == b.month and a.day == b.day
 end
