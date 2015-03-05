@@ -109,7 +109,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         for i = 1, #layer.wordPool[layer.currentIndex] do
             if layer.crabOnView[i] then
                 if selectWord == layer.wordPool[layer.currentIndex][i] then
-                    
+                    playWordSound(selectWord)
                     killedCrabCount = killedCrabCount + 1
                     layer.rightWord = layer.rightWord + 1
                     layer.hintTime = 0
@@ -784,9 +784,9 @@ end
 
 function SummaryBossLayer:initWordList(word)
     local wordList = word
-    --if #wordList < 1 then
+    if #wordList < 1 then
         wordList = {'apple','many','tea','banana','cat','dog'}
-    --end
+    end
     local index = 1
     
     for i = 1, #wordList do

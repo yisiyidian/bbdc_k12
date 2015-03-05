@@ -109,7 +109,7 @@ function HomeLayer.create(share)
     backColor:addChild(mission_progress,1,'mission_progress')
     local downloadSoundButton = require("view.home.DownloadSoundButton").create(top)
 
-    local name = cc.Label:createWithSystemFont('贝贝单词','',50)
+    local name = cc.Sprite:create('image/homescene/BBDC_word_title.png')
     name:setPosition(bigWidth/2, s_DESIGN_HEIGHT-85)
     backColor:addChild(name)
 
@@ -633,18 +633,22 @@ function HomeLayer.create(share)
                    layer:setButtonEnabled(false)
                    button_data:setLocalZOrder(2)
                    button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
-                   if true then
-                       local PersonalInfo = require("view.PersonalInfo")
-                       PersonalInfo.getNotContainedInLocalDatas(function ()
-                           local personalInfoLayer = PersonalInfo.create()
-                           personalInfoLayer:setPosition(-s_LEFT_X,0)
-                           data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
-                       end)
-                   else
-                       local Item_popup = require("popup/PopupModel")
-                       local item_popup = Item_popup.create(Site_From_Information)  
-                       s_SCENE:popup(item_popup)
-                   end 
+                   s_SCENE:callFuncWithDelay(0.3,function ()
+                       -- body
+                       
+                       if true then
+                           local PersonalInfo = require("view.PersonalInfo")
+                           PersonalInfo.getNotContainedInLocalDatas(function ()
+                               local personalInfoLayer = PersonalInfo.create()
+                               personalInfoLayer:setPosition(-s_LEFT_X,0)
+                               data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
+                           end)
+                       else
+                           local Item_popup = require("popup/PopupModel")
+                           local item_popup = Item_popup.create(Site_From_Information)  
+                           s_SCENE:popup(item_popup)
+                       end 
+                   end)
                    return
             end
             
@@ -692,24 +696,26 @@ function HomeLayer.create(share)
                    layer:setButtonEnabled(false)
                    button_data:setLocalZOrder(2)
                    button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
-                   if true then
+                   s_SCENE:callFuncWithDelay(0.3,function ()
+                       if true then
 
-                    if online == false then
-                        offlineTipHome.setFalse()
-                        offlineTipFriend.setFalse()
-                    end
-                    
-                       local PersonalInfo = require("view.PersonalInfo")
-                       PersonalInfo.getNotContainedInLocalDatas(function ()
-                           local personalInfoLayer = PersonalInfo.create()
-                           personalInfoLayer:setPosition(-s_LEFT_X,0)
-                           data_back:addChild(personalInfoLayer,1,'PersonalInfo')
-                       end) 
-                   else
-                       local Item_popup = require("popup/PopupModel")
-                       local item_popup = Item_popup.create(Site_From_Information)  
-                       s_SCENE:popup(item_popup)
-                   end 
+                        if online == false then
+                            offlineTipHome.setFalse()
+                            offlineTipFriend.setFalse()
+                        end
+                        
+                           local PersonalInfo = require("view.PersonalInfo")
+                           PersonalInfo.getNotContainedInLocalDatas(function ()
+                               local personalInfoLayer = PersonalInfo.create()
+                               personalInfoLayer:setPosition(-s_LEFT_X,0)
+                               data_back:addChild(personalInfoLayer,1,'PersonalInfo')
+                           end) 
+                       else
+                           local Item_popup = require("popup/PopupModel")
+                           local item_popup = Item_popup.create(Site_From_Information)  
+                           s_SCENE:popup(item_popup)
+                       end
+                   end) 
             end
 
         elseif location.y >  s_DESIGN_HEIGHT-280 and (math.abs(location.y - start_y) < 10 and math.abs(location.x - start_x) < 10) and viewIndex == 1 then
@@ -887,19 +893,21 @@ end
 function HomeLayer:showDataLayer(checkIn)
     self.dataButton:setLocalZOrder(2)
     self.dataButton:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-280)))))
-    if true then
-        local PersonalInfo = require("view.PersonalInfo")
-        PersonalInfo.getNotContainedInLocalDatas(function ()
-            local personalInfoLayer = PersonalInfo.create(true,self)
-            personalInfoLayer:setPosition(-s_LEFT_X,0)
-            self.dataBack:addChild(personalInfoLayer,1,'PersonalInfo') 
-        end)
-        
-    else
-        local Item_popup = require("popup/PopupModel")
-        local item_popup = Item_popup.create(Site_From_Information)  
-        s_SCENE:popup(item_popup)
-    end 
+    s_SCENE:callFuncWithDelay(0.3,function ()
+        if true then
+            local PersonalInfo = require("view.PersonalInfo")
+            PersonalInfo.getNotContainedInLocalDatas(function ()
+                local personalInfoLayer = PersonalInfo.create(true,self)
+                personalInfoLayer:setPosition(-s_LEFT_X,0)
+                self.dataBack:addChild(personalInfoLayer,1,'PersonalInfo') 
+            end)
+            
+        else
+            local Item_popup = require("popup/PopupModel")
+            local item_popup = Item_popup.create(Site_From_Information)  
+            s_SCENE:popup(item_popup)
+        end 
+    end)
 end
 
 function HomeLayer:hideDataLayer()
