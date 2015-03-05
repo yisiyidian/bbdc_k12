@@ -44,6 +44,10 @@ function onErrorNeedRestartAppHappend(e)
     s_TIPS_LAYER:showSmall(e, onError, nil)
 end
 
+function onErrorNeedRestartAppHappendWithSingleButton(e, btnMsg)
+    s_TIPS_LAYER:showSmallWithOneButton(e, onError, btnMsg)
+end
+
 ----------------------------------------------------------------------------------------------------------------
 
 local O2OController = {}
