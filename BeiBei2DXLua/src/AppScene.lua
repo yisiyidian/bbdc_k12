@@ -103,6 +103,7 @@ function AppScene.create()
     return scene
 end
 
+local usingTimeSaveToLocalDB = 0
 -- delta time : seconds
 local function update(dt)
     -- s_O2OController.update(dt)
@@ -136,6 +137,19 @@ local function update(dt)
         elseif s_WordDictionaryDatabase.nextframe == WDD_NEXTFRAME_STATE__STARTLOADING then
             s_WordDictionaryDatabase.init()
             hideProgressHUD(true)
+        end
+    end
+
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER.dataDailyUsing:isInited() then
+        if s_CURRENT_USER.dataDailyUsing:isToday() then
+            s_CURRENT_USER.dataDailyUsing:update(dt)
+            usingTimeSaveToLocalDB = usingTimeSaveToLocalDB + dt
+            if usingTimeSaveToLocalDB > 5 * 60 then -- 5 min
+                usingTimeSaveToLocalDB = 0
+                -- save to local db
+            end
+        else
+            s_CURRENT_USER.dataDailyUsing:reset()
         end
     end
 end
