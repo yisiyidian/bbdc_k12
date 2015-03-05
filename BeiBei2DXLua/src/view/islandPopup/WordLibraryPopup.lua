@@ -238,6 +238,9 @@ function WordLibraryPopup:ctor(index,fromWhere)
             if #boss.wrongWordList >= s_max_wrong_num_first_island then
                self.reviewButton:setVisible(true)
                self.summaryButton:setVisible(true)
+            else
+               self.reviewButton:setVisible(false)
+               self.summaryButton:setVisible(false)
             end
         elseif #boss.wrongWordList >= s_max_wrong_num_everyday then
             self.reviewButton:setVisible(true)
@@ -247,6 +250,8 @@ function WordLibraryPopup:ctor(index,fromWhere)
             self.summaryButton:setVisible(false)
         end
     end
+
+    
     self.listview:setPosition(2,70)
     backPopup:addChild(self.listview)
     

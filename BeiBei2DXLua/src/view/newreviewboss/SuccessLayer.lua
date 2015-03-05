@@ -80,11 +80,10 @@ function SuccessLayer:ctor(number)
     waveSprite:setAnchorPoint(0.5,0)
     backColor:addChild(waveSprite)
     
-    local hammerSprite = cc.Sprite:create("image/newreviewboss/hammer.png")
-    hammerSprite:setPosition(waveSprite:getContentSize().width / 2,waveSprite:getContentSize().height * 0.6)
-    hammerSprite:ignoreAnchorPointForPosition(false)
-    hammerSprite:setAnchorPoint(0.5,0.5)
-    waveSprite:addChild(hammerSprite)
+    local bossDieSpine = sp.SkeletonAnimation:create('spine/reviewboss/beidafeide_zhanglaoshi2.json', 'spine/reviewboss/beidafeide_zhanglaoshi2.atlas',1)
+    bossDieSpine:addAnimation(0, 'animation', false)
+    bossDieSpine:setPosition(waveSprite:getContentSize().width * 0.25,200)
+    waveSprite:addChild(bossDieSpine,1)
 
     self.getBean = 3
     if number ~= nil then

@@ -84,9 +84,13 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     progressBar:setPosition(bigWidth/2+44, 1049)
     backColor:addChild(progressBar,2)
 
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    print_lua_table(bossList[#bossList].rightWordList)
+    print_lua_table(bossList[#bossList].wrongWordList)
+
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
-    local todayNumber = LastWordAndTotalNumber:getTodayNum()
+    local todayNumber = LastWordAndTotalNumber:getCurrentLevelNum()
     self.lastWordAndTotalNumber.setNumber(todayNumber)
     if preWordName ~= nil then
         self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
@@ -101,6 +105,9 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
 
     self.dontknow = createDontknow(wordName,wrongWordNum, preWordName, preWordNameState)
     backColor:addChild(self.dontknow)
+
+
+    
 end
 
 return ChooseCollectWordLayer

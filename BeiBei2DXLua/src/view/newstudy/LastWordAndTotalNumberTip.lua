@@ -11,6 +11,12 @@ function LastWordAndTotalNumberTip:getTodayNum()
     return todayNumber
 end
 
+function LastWordAndTotalNumberTip:getCurrentLevelNum()
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    local currentNumber = #bossList[#bossList].rightWordList + #bossList[#bossList].wrongWordList
+    return currentNumber
+end
+
 function LastWordAndTotalNumberTip.create()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
@@ -25,7 +31,7 @@ function LastWordAndTotalNumberTip.create()
         else
             layer.todayNumber = todayNumber
             local richtext1 = ccui.RichText:create()
-            local richElement1 = ccui.RichElementText:create(1,cc.c3b(41, 110, 146),255,"今已学习：","Helvetica",26)  
+            local richElement1 = ccui.RichElementText:create(1,cc.c3b(41, 110, 146),255,"已学习：","Helvetica",26)  
             local richElement2 = ccui.RichElementText:create(2,cc.c3b(252, 128, 0),255,layer.todayNumber,"Helvetica",26)  
             local richElement3 = ccui.RichElementText:create(3,cc.c3b(41, 110, 146),255," 个","Helvetica",26)                           
             richtext1:pushBackElement(richElement1) 

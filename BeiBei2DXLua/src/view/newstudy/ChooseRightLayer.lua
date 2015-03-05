@@ -131,7 +131,7 @@ function ChooseRightLayer:ctor(word,wrongNum, preWordName, preWordNameState)
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
-    local todayNumber = LastWordAndTotalNumber:getTodayNum()
+    local todayNumber = LastWordAndTotalNumber:getCurrentLevelNum()
     self.lastWordAndTotalNumber.setNumber(todayNumber)
     if wrongNum ~= 0  and preWordName ~= nil then
     self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)

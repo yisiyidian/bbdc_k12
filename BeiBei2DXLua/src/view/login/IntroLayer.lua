@@ -101,21 +101,27 @@ function IntroLayer.create(directOnLogin)
     
     button_login_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            local loginAlter = LoginAlter.createLogin(CreateLogin_FromNormal)
-            loginAlter:setTag(1)
-            loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-            layer:addChild(loginAlter)
-            -- button sound
-            playSound(s_sound_buttonEffect)
-            loginAlter.close = function()
-                layer:removeChildByTag(1)
+            if s_SERVER.isNetworkConnectedNow() == false then
+                offlineTip.setTrue()
+            else
+                local loginAlter = LoginAlter.createLogin(CreateLogin_FromNormal)
+                loginAlter:setTag(1)
+                loginAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                layer:addChild(loginAlter)
+
+                playSound(s_sound_buttonEffect)
+                loginAlter.close = function()
+                    layer:removeChildByTag(1)
+                end
             end
         end
     end
     
     button_register_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-
+            if s_SERVER.isNetworkConnectedNow() == false then
+                offlineTip.setTrue()
+            else
             local gotoRegistNewAccount = function ()
                 local loginAlter = LoginAlter.createRegister(CreateRegister_FromNormal)
                 loginAlter:setTag(2)
@@ -141,13 +147,10 @@ function IntroLayer.create(directOnLogin)
                 visitorRegister.close = function(which)
                     -- which = register,improve,close
                     layer:removeChildByTag(2)   
-
                     if which == "register" then
                         gotoRegistNewAccount()
-
                     elseif which == "improve" then
                         playSound(s_sound_buttonEffect)
-
                         local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_INTRO_LAYER)
                         improveInfo:setTag(1)
                         improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
@@ -158,6 +161,7 @@ function IntroLayer.create(directOnLogin)
                     end
 
                 end 
+            end
             end
         end
     end
@@ -238,13 +242,8 @@ function IntroLayer.create(directOnLogin)
         
         cloud:setPosition(s_DESIGN_WIDTH/2, 0)
 
-        if isOnline == true then
-            button_login:setVisible(true)
-            button_register:setVisible(true)
-        else
-            button_login:setVisible(false)
-            button_register:setVisible(false)
-        end
+        button_login:setVisible(true)
+        button_register:setVisible(true)
     end
         
     local moved = false
@@ -270,26 +269,24 @@ function IntroLayer.create(directOnLogin)
                 moved = true
                 
                 if currentIndex == 4 then
-                    if isOnline == true then
-                        local action0 = cc.MoveBy:create(0.4,cc.p(0,-200))
-                        local action1 = cc.CallFunc:create(function ()
-                            button_login:setVisible(false)
-                        end)
-                        local action2 = cc.MoveBy:create(0,cc.p(0,200))
-                        local action3 = cc.Sequence:create(action0,action1,action2)
-                        button_login:runAction(action3)
+                    local action0 = cc.MoveBy:create(0.4,cc.p(0,-200))
+                    local action1 = cc.CallFunc:create(function ()
+                        button_login:setVisible(false)
+                    end)
+                    local action2 = cc.MoveBy:create(0,cc.p(0,200))
+                    local action3 = cc.Sequence:create(action0,action1,action2)
+                    button_login:runAction(action3)
 
-                        local action5 = cc.MoveBy:create(0.4,cc.p(0,-200))
-                        local action6 = cc.CallFunc:create(function ()
-                            button_register:setVisible(false)
-                        end)
-                        local action7 = cc.MoveBy:create(0,cc.p(0,200))
-                        local action8 = cc.Sequence:create(action5,action6,action7)
-                        button_register:runAction(action8)
-                    end
+                    local action5 = cc.MoveBy:create(0.4,cc.p(0,-200))
+                    local action6 = cc.CallFunc:create(function ()
+                        button_register:setVisible(false)
+                    end)
+                    local action7 = cc.MoveBy:create(0,cc.p(0,200))
+                    local action8 = cc.Sequence:create(action5,action6,action7)
+                    button_register:runAction(action8)
 
-                    local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, -200))
-                    cloud:runAction(action2)
+                    local action9 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, -200))
+                    cloud:runAction(action9)
                 end
 
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*2,s_DESIGN_HEIGHT/2))
@@ -321,26 +318,24 @@ function IntroLayer.create(directOnLogin)
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 intro_array[currentIndex+1]:runAction(cc.Sequence:create(action2, action3))
                 
-                if currentIndex == 3 then            
-                    local action2 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, 0))
-                    if isOnline == true then
-                        local action0 = cc.MoveBy:create(0,cc.p(0,-200))
-                        local action1 = cc.CallFunc:create(function ()
-                                button_login:setVisible(true)
-                         end)
-                         local action2 = cc.MoveBy:create(0.5,cc.p(0,200))
-                        local action3 = cc.Sequence:create(action0,action1,action2)
-                         button_login:runAction(action3)
+                if currentIndex == 3 then           
+                    local action0 = cc.MoveBy:create(0,cc.p(0,-200))
+                    local action1 = cc.CallFunc:create(function ()
+                        button_login:setVisible(true)
+                    end)
+                    local action2 = cc.MoveBy:create(0.5,cc.p(0,200))
+                    local action3 = cc.Sequence:create(action0,action1,action2)
+                    button_login:runAction(action3)
 
-                        local action5 = cc.MoveBy:create(0,cc.p(0,-200))
-                        local action6 = cc.CallFunc:create(function ()
-                         button_register:setVisible(true)
-                        end)
-                        local action7 = cc.MoveBy:create(0.5,cc.p(0,200))
-                        local action8 = cc.Sequence:create(action5,action6,action7)
-                         button_register:runAction(action8)
-                    end
-                    cloud:runAction(action2)
+                    local action5 = cc.MoveBy:create(0,cc.p(0,-200))
+                    local action6 = cc.CallFunc:create(function ()
+                        button_register:setVisible(true)
+                    end)
+                    local action7 = cc.MoveBy:create(0.5,cc.p(0,200))
+                    local action8 = cc.Sequence:create(action5,action6,action7)
+                    button_register:runAction(action8)
+                    local action9 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH*0.5, 0))
+                    cloud:runAction(action9)
                 end
                 
                 circle_back_array[currentIndex]:setVisible(true)
@@ -354,8 +349,7 @@ function IntroLayer.create(directOnLogin)
             print(currentIndex)
         end
         
-
-        if isOnline == false then
+        if s_SERVER.isNetworkConnectedNow() == false then
             if currentIndex == 4 then
                 offlineTip.setTrue()
             elseif currentIndex == 3 then
@@ -366,11 +360,9 @@ function IntroLayer.create(directOnLogin)
     
     --add offline        
     offlineTip = Offline.create()
-    if isOnline == false then
-        layer:addChild(offlineTip)
-        if currentIndex == 4 then
-            offlineTip.setTrue()
-        end
+    layer:addChild(offlineTip)
+    if currentIndex == 4 and s_SERVER.isNetworkConnectedWhenInited() == false then
+        offlineTip.setTrue()
     end
     
     local listener = cc.EventListenerTouchOneByOne:create()

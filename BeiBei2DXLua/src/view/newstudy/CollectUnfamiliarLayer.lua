@@ -236,7 +236,7 @@ function CollectUnfamiliarLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
-    local todayNumber = LastWordAndTotalNumber:getTodayNum()
+    local todayNumber = LastWordAndTotalNumber:getCurrentLevelNum()
     self.lastWordAndTotalNumber.setNumber(todayNumber)
     if preWordName ~= nil then
     self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
