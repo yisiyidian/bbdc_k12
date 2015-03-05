@@ -94,8 +94,8 @@ function MissionProgressLayer.create(share)
 
     layer.animation = function()
         if share ~= nil and share then
-            if completeCount < missionCount and completeCount > 0 then
-                for i = 1, completeCount + 1 do 
+            if completeCount < missionCount then
+                for i = 1, missionCount do 
                     local split_line = cc.Sprite:create('image/homescene/home_page_task_circle_interval.png')
                     split_line:setAnchorPoint(0.5,- 161 / 80)
                     split_line:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2)
@@ -153,8 +153,8 @@ function MissionProgressLayer.create(share)
                 back[i]:addChild(taskProgress)
             end
         else
-            if completeCount < missionCount and completeCount > 0 then
-                for i = 1, completeCount + 1 do 
+            if completeCount < missionCount then
+                for i = 1, missionCount do 
                     local split_line = cc.Sprite:create('image/homescene/home_page_task_circle_interval.png')
                     split_line:setAnchorPoint(0.5,- 161 / 80)
                     split_line:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2)
@@ -276,7 +276,9 @@ function MissionProgressLayer.create(share)
         local action2 = cc.ScaleTo:create(0.15,1)
         local action3 = cc.ScaleTo:create(0.25,1.05)
         local action4 = cc.ScaleTo:create(0.15,1)
-        anotherEnterButton:runAction(cc.Sequence:create(action1,action2,action3,action4,cc.CallFunc:create(buttonSpin)))
+        local action5 = cc.DelayTime:create(2)
+        --anotherEnterButton:runAction(cc.Sequence:create(action1,action2,action3,action4,cc.CallFunc:create(buttonSpin)))
+        anotherEnterButton:runAction(cc.RepeatForever:create(cc.Sequence:create(action1,action2,action3,action4,action5)))
     end
     
     buttonSpin = function ()

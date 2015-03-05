@@ -16,6 +16,7 @@ local dir_up    = 1
 local dir_down  = 2
 local dir_left  = 3
 local dir_right = 4
+local HINT_TIME = 10
 
 function SummaryBossLayer.create(wordList,chapter,entrance)   
     AnalyticsSummaryBoss()
@@ -26,6 +27,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     --layer.levelConfig = levelConfig
     layer.coconut = {}
     layer.isFirst = {}
+    layer.firstNodeArray = {}
     layer.wordPool = {}
     layer.startIndexPool = {}
     layer.currentIndex = 1
@@ -35,6 +37,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     layer.isPaused = false
     layer.isHinting = false
     layer.wordStack = {}
+    layer.firstIndex = 1
     --layer.wordList = wordList
     -- slide coco
     local slideCoco = {}
@@ -106,12 +109,26 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         for i = 1, #layer.wordPool[layer.currentIndex] do
             if layer.crabOnView[i] then
                 if selectWord == layer.wordPool[layer.currentIndex][i] then
+                    playWordSound(selectWord)
                     killedCrabCount = killedCrabCount + 1
                     layer.rightWord = layer.rightWord + 1
                     layer.hintTime = 0
                     match = true
                     layer.globalLock = true
                     layer.crabOnView[i] = false
+                    if i == layer.firstIndex then
+                        local j = i
+                        while j <= #layer.wordPool[layer.currentIndex] do
+                            if layer.crabOnView[j] then
+                                layer.firstIndex = j
+                                break
+                            end
+                            j = j + 1
+                        end
+                        if j > #layer.wordPool[layer.currentIndex] then
+                            layer.firstIndex = 1
+                        end
+                    end
                     layer.currentBlood = layer.currentBlood - #selectStack
                     layer.boss.blood:setPercentage(100 * layer.currentBlood / layer.totalBlood)
                     --layer.boss:setAnimation(0,'a3',false)
@@ -162,9 +179,8 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                                     node.normal()
                                     node:setScale(scale)
                                 end
-                                if node.isFirst > 0 and layer.crabOnView[node.isFirst] then
-                                    node.firstStyle()
-                                end
+                                
+                                
                             end,{}
                         )
                         node:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),recover))
@@ -212,6 +228,11 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                             layer:runAction(cc.Sequence:create(cc.DelayTime:create(1.0),cc.CallFunc:create(function() 
                                 layer:initMap(chapter)
                             end,{})))
+                        else
+                            layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y].firstStyle()
+                            layer.crab[layer.firstIndex]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
+                            layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
+            
                         end
                         break
                     end
@@ -236,7 +257,9 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                 node.removeSelectStyle()
                 node:setScale(scale)
                 if node.isFirst > 0 and layer.crabOnView[node.isFirst] then
-                    node.firstStyle()
+                    if node.isFirst == layer.firstIndex then
+                        node.firstStyle()
+                    end
                     local shakeOnce = cc.Sequence:create(cc.RotateBy:create(0.05,9),cc.RotateBy:create(0.05,-18),cc.RotateBy:create(0.05,9))
                     local shake = cc.Repeat:create(shakeOnce,2)
                     local small = cc.CallFunc:create(function() 
@@ -246,6 +269,8 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                 end
             end
             selectStack = {}
+            layer.crab[layer.firstIndex]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
+            layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
             
             --slide wrong
             playSound(s_sound_learn_false)
@@ -258,6 +283,9 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
             return true
         end
+
+        layer.crab[layer.firstIndex]:stopAllActions()
+        layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y]:stopAllActions()
 
         isTouchEnded = false
         endTime = 0
@@ -395,7 +423,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
                             stackTop.removeSelectStyle()
                             stackTop:setScale(scale)
-                            if stackTop.isFirst > 0 then
+                            if stackTop.isFirst == layer.firstIndex then
                                 stackTop.firstStyle()
                             end
                             table.remove(selectStack)    
@@ -518,9 +546,9 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             endTime = 0
         end
         
-        if layer.hintTime < 10 or layer.isPaused then
-            if layer.hintTime >= 8 and layer.isPaused then
-                layer.hintTime = 8
+        if layer.hintTime < HINT_TIME or layer.isPaused then
+            if layer.hintTime >= 0.8 * HINT_TIME and layer.isPaused then
+                layer.hintTime = 0.8 * HINT_TIME
             else
                 layer.hintTime = layer.hintTime + delta
             end
@@ -685,6 +713,7 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
     local afraid = cc.CallFunc:create(function() 
         if self.currentBlood > 0 then
             self.girlAfraid = true
+            HINT_TIME = 4
             self.girl:setAnimation(0,'girl-afraid',true)
             -- deadline "Mechanical Clock Ring "
             playSound(s_sound_Mechanical_Clock_Ring)
@@ -732,9 +761,10 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
         bossAction[#bossAction + 1] = cc.Spawn:create(move,moveAnimation)
     end
     bossAction[#bossAction + 1] = cc.CallFunc:create(function() 
+
         if self.currentBlood > 0 then
             self.isLose = true
-            self:lose(chapter,entrance,wordList)
+            self:lose(chapter,entrance,wordList)    
         end
     end,{})
     bossNode:runAction(cc.Sequence:create(bossAction))
@@ -755,7 +785,7 @@ end
 function SummaryBossLayer:initWordList(word)
     local wordList = word
     if #wordList < 1 then
-        wordList = {'apple','many','tea'}
+        wordList = {'apple','many','tea','banana','cat','dog'}
     end
     local index = 1
     
@@ -895,6 +925,7 @@ function SummaryBossLayer:initCrab1()
         self.ccbcrab[i]['meaningSmall']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i]).wordMeaningSmall)
         self.ccbcrab[i]['meaningBig']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i]).wordMeaningSmall)
     end
+    self.crab[self.firstIndex]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
 end
 
 function SummaryBossLayer:initCrab2(chapter)
@@ -1048,7 +1079,10 @@ function SummaryBossLayer:initMapInfo()
 end
 
 function SummaryBossLayer:initMap(chapter)
-
+    self.firstNodeArray = {}
+    for i = 1, #self.wordPool[self.currentIndex] do
+        self.firstNodeArray[i] = cc.p(0,0)
+    end
     for i = 1, #self.crab do
         self.crab[i]:removeFromParent()
     end
@@ -1076,7 +1110,12 @@ function SummaryBossLayer:initMap(chapter)
                 end
              end
              if self.isFirst[self.currentIndex][i][j] == 1 or self.isFirst[self.currentIndex][i][j] == 2 or self.isFirst[self.currentIndex][i][j] == 3 then
+                self.firstNodeArray[self.isFirst[self.currentIndex][i][j]].x = i
+                self.firstNodeArray[self.isFirst[self.currentIndex][i][j]].y = j
+             end
+             if self.isFirst[self.currentIndex][i][j] == self.firstIndex then
                 self.coconut[i][j].firstStyle()
+                self.coconut[i][j]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
              end
            
             if self.currentIndex == 1 then
@@ -1190,9 +1229,11 @@ end
 function SummaryBossLayer:win(chapter,entrance,wordList)
     self.globalLock = true
     self.girl:setAnimation(0,'girl_win',true)
-    local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,chapter,entrance,wordList)
-    alter:setPosition(0,0)
-    self:addChild(alter,1000)
+    s_SCENE:callFuncWithDelay(1.5,function (  )
+        local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,chapter,entrance,wordList)
+        alter:setPosition(0,0)
+        self:addChild(alter,1000)
+    end)
     
 --    -- win sound
 --    playSound(s_sound_win)
@@ -1203,9 +1244,13 @@ end
 function SummaryBossLayer:lose(chapter,entrance,wordList)
     self.globalLock = true
     self.girl:setAnimation(0,'girl-fail',true)
-    local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,chapter,entrance,wordList)
-    alter:setPosition(0,0)
-    self:addChild(alter,1000)
+
+    s_SCENE:callFuncWithDelay(2,function (  )
+            -- body
+        local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,chapter,entrance,wordList)
+        alter:setPosition(0,0)
+        self:addChild(alter,1000)
+    end)
     
 --    -- lose sound
 --    playSound(s_sound_fail)    
@@ -1213,6 +1258,8 @@ function SummaryBossLayer:lose(chapter,entrance,wordList)
 end
 
 function SummaryBossLayer:hint()
+    self.crab[self.firstIndex]:stopAllActions()
+    self.coconut[self.firstNodeArray[self.firstIndex].x][self.firstNodeArray[self.firstIndex].y]:stopAllActions()
     self.isHinting = true
     local num = math.random(1,#self.wordPool[self.currentIndex])
     local index = 1

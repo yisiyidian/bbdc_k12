@@ -29,9 +29,10 @@ function PersonalInfo.getNotContainedInLocalDatas(callback)
     end)
 end
 
-function PersonalInfo.create(checkIn)
+function PersonalInfo.create(checkIn,homelayer)
     local layer = PersonalInfo.new()
     layer.checkIn = false
+    layer.homelayer = homelayer
     if checkIn then
         layer.checkIn = true
     end
@@ -756,9 +757,10 @@ function PersonalInfo:login()
             local function update(delta)
                 if curIndex > #loadingList then
                     local tickCount = #checkInList
-                    if self.checkIn ~= nil and self.checkIn then
-                        tickCount = tickCount - 1
-                    end
+                    -- if self.checkIn ~= nil and self.checkIn then
+                    --     tickCount = tickCount - 1
+                    -- end
+                    
                     if tickCount > 0 then
                         for i = 1,tickCount do
                             --local pos = checkInList[i]:getPosition()
@@ -766,6 +768,17 @@ function PersonalInfo:login()
                             tick:setPosition(checkInList[i]:getPositionX(),checkInList[i]:getPositionY())
                             calendar[index]:addChild(tick,2)
                             checkInList[i]:setVisible(false)
+                            if i == tickCount and self.checkIn ~= nil and self.checkIn then
+                                s_SCENE:callFuncWithDelay(1.0,function ()
+                                    self.homelayer:hideDataLayer()
+                                end)
+                            end
+                        end
+                    else
+                        if self.checkIn ~= nil and self.checkIn then
+                            s_SCENE:callFuncWithDelay(1.0,function ()
+                                self.homelayer:hideDataLayer()
+                            end)
                         end
                     end
                     calendar[index]:unscheduleUpdate()
@@ -787,35 +800,35 @@ function PersonalInfo:login()
                     loadingList[curIndex]:runAction(fadeIn)
                     --print('curIndex'..curIndex)
                     
-                    if self.checkIn ~= nil and self.checkIn then
-                        local tick = nil
-                        if s_HUD_LAYER:getChildByName('missionCompleteCircle') ~= nil then
-                           tick = s_HUD_LAYER:getChildByName('missionCompleteCircle'):getChildByName('back')
-                        end
-                        local move = cc.MoveTo:create(0.5,cc.p(loadingList[curIndex]:getPositionX() + s_LEFT_X,loadingList[curIndex]:getPositionY()))
-                        local delay = cc.DelayTime:create(0.5)
-                        local tickChange = cc.CallFunc:create(function ()
-                            local newtick = cc.Sprite:create('image/PersonalInfo/login/learning_process_finish_task_tick_on_canlender.png')
-                            newtick:setPosition(loadingList[#loadingList]:getContentSize().width / 2,loadingList[#loadingList]:getContentSize().height / 2)
-                            loadingList[#loadingList]:addChild(newtick,2)
-                            if #checkInList > 0 then 
-                                checkInList[#checkInList]:setVisible(false) 
-                            else
-                                saveLuaErrorToServer('PersonalInfo.lua; #checkInList <= 0; checkInList[#checkInList]:setVisible(false);')
-                            end
-                            if tick ~= nil then
-                                tick:removeFromParent()
-                            end
-                            newtick:runAction(cc.Sequence:create(cc.DelayTime:create(1.0),cc.CallFunc:create(function ()
-                                s_SCENE:checkInOver()
-                            end,{})))
-                        end,{})
-                        if tick ~= nil then
-                            tick:runAction(cc.Sequence:create(delay,move,tickChange))
-                        else
-                            back:runAction(cc.Sequence:create(delay,tickChange))
-                        end
-                    end
+                    -- if self.checkIn ~= nil and self.checkIn then
+                    --     local tick = nil
+                    --     if s_HUD_LAYER:getChildByName('missionCompleteCircle') ~= nil then
+                    --        tick = s_HUD_LAYER:getChildByName('missionCompleteCircle'):getChildByName('back')
+                    --     end
+                    --     local move = cc.MoveTo:create(0.5,cc.p(loadingList[curIndex]:getPositionX() + s_LEFT_X,loadingList[curIndex]:getPositionY()))
+                    --     local delay = cc.DelayTime:create(0.5)
+                    --     local tickChange = cc.CallFunc:create(function ()
+                    --         local newtick = cc.Sprite:create('image/PersonalInfo/login/learning_process_finish_task_tick_on_canlender.png')
+                    --         newtick:setPosition(loadingList[#loadingList]:getContentSize().width / 2,loadingList[#loadingList]:getContentSize().height / 2)
+                    --         loadingList[#loadingList]:addChild(newtick,2)
+                    --         if #checkInList > 0 then 
+                    --             checkInList[#checkInList]:setVisible(false) 
+                    --         else
+                    --             saveLuaErrorToServer('PersonalInfo.lua; #checkInList <= 0; checkInList[#checkInList]:setVisible(false);')
+                    --         end
+                    --         if tick ~= nil then
+                    --             tick:removeFromParent()
+                    --         end
+                    --         newtick:runAction(cc.Sequence:create(cc.DelayTime:create(1.0),cc.CallFunc:create(function ()
+                    --             s_SCENE:checkInOver()
+                    --         end,{})))
+                    --     end,{})
+                    --     if tick ~= nil then
+                    --         tick:runAction(cc.Sequence:create(delay,move,tickChange))
+                    --     else
+                    --         back:runAction(cc.Sequence:create(delay,tickChange))
+                    --     end
+                    -- end
                     curIndex = curIndex + 1
                 end
             end
