@@ -17,6 +17,7 @@ local dir_down  = 2
 local dir_left  = 3
 local dir_right = 4
 local HINT_TIME = 10
+local bullet_damage = 2
 
 function SummaryBossLayer.create(wordList,chapter,entrance)   
     AnalyticsSummaryBoss()
@@ -36,8 +37,10 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     layer.hintTime = 0
     layer.isPaused = false
     layer.isHinting = false
+    layer.currentHintWord = {false,false,false}
     layer.wordStack = {}
     layer.firstIndex = 1
+    layer.combo = 0
     --layer.wordList = wordList
     -- slide coco
     local slideCoco = {}
@@ -129,7 +132,15 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                             layer.firstIndex = 1
                         end
                     end
-                    layer.currentBlood = layer.currentBlood - #selectStack
+                    
+                    if layer.currentHintWord[i] then
+                        bullet_damage = 1
+                    else
+                        bullet_damage = 2 + layer.combo / 3
+                    end
+                    layer.combo = layer.combo + 1
+                    layer.currentBlood = layer.currentBlood - #selectStack * bullet_damage
+                    
                     layer.boss.blood:setPercentage(100 * layer.currentBlood / layer.totalBlood)
                     --layer.boss:setAnimation(0,'a3',false)
                     layer.boss:addAnimation(0,'a2',false)
@@ -139,9 +150,9 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                     -- slide true
                     playSound(s_sound_learn_true)
                     -- beat boss sound
-                    s_SCENE:callFuncWithDelay(0.3,function()
-                    playSound(s_sound_FightBoss)       
-                    end)
+                    -- s_SCENE:callFuncWithDelay(0.3,function()
+                    -- playSound(s_sound_FightBoss)       
+                    -- end)
 
                     
                     local delaytime = 0
@@ -150,9 +161,10 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         node.win()
                         local bullet = node.bullet
                         bullet:setVisible(true)
-                        local bossPos = cc.p(layer.bossNode:getPosition())
+                        local randP = cc.p(60 + math.random(0,80),60 + math.random(0,80))
+                        local bossPos = cc.p(layer.bossNode:getPositionX() + randP.x,layer.bossNode:getPositionY() + randP.y)
                         local bulletPos = cc.p(bullet:getPosition())
-                        bossPos = cc.p(bossPos.x + 50 - bulletPos.x, bossPos.y + 50 - bulletPos.y)
+                        bossPos = cc.p(bossPos.x + 0 - bulletPos.x, bossPos.y + 0 - bulletPos.y)
                         local time = math.sqrt(bossPos.x * bossPos.x + bossPos.y * bossPos.y) / 1200
                         if time > 0.5 then
                             time = 0.5
@@ -160,31 +172,62 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         if delaytime < time then
                             delaytime = time
                         end
+                        local delay = cc.DelayTime:create(0.2 * j)
                         local hit = cc.MoveBy:create(time,bossPos)
                         local hide = cc.Hide:create()
                         local attacked = cc.CallFunc:create(function() 
                             layer.boss:setAnimation(0,'a3',false)
+                            playSound(s_sound_FightBoss)  
+                            local damage_label = cc.Label:createWithSystemFont(string.format('%d',bullet_damage),'',36)
+                            damage_label:enableOutline(cc.c4b(255,0,0,255),2)
+                            damage_label:setColor(cc.c4b(255,0,0,255))
+                            damage_label:setPosition(randP)
+                            --damage_label:setOpacity(0)
+                            damage_label:runAction(cc.Spawn:create(cc.MoveBy:create(0.2,cc.p(0,30)),cc.FadeOut:create(0.2)))
+                            layer.boss:addChild(damage_label)
                         end,{})
                         local resume = cc.MoveTo:create(0.0,cc.p(bullet:getPosition()))
-                        bullet:runAction(cc.Sequence:create(hit,attacked,hide,resume))
-                        local recover = cc.CallFunc:create(
-                            function()
-                                if killedCrabCount > 0 and layer.globalLock then
-                                    layer.globalLock = false
+                        bullet:runAction(cc.Sequence:create(delay,hit,attacked,hide,resume))
+                        s_SCENE:callFuncWithDelay(0.2 * #selectStack,function (  )
+                                -- body
+                            local recover = cc.CallFunc:create(
+                                function()
+                                    if killedCrabCount > 0 and layer.globalLock then
+                                        layer.globalLock = false
+                                    end
+                                    if chapter == 2 then
+                                        node.removeSelectStyle()
+                                        node:setScale(scale)
+                                    else
+                                        node.normal()
+                                        node:setScale(scale)
+                                    end
+                                    
+                                    
+                                end,{}
+                            )
+                            node:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),recover))
+                            if killedCrabCount == #layer.wordPool[layer.currentIndex] and layer.currentBlood > 0 then
+                            --next group
+                                layer.globalLock = true
+                                layer.currentIndex = layer.currentIndex + 1
+                                killedCrabCount = 0
+                                for m = 1, 5 do
+                                    for n = 1, 5 do
+                                        local remove = cc.CallFunc:create(function() 
+    --                                        layer.coconut[m][n]:removeFromParent(true)    
+                                        end,{})
+                                        layer.coconut[m][n]:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7)),remove))
+                                    end
                                 end
-                                if chapter == 2 then
-                                    node.removeSelectStyle()
-                                    node:setScale(scale)
-                                else
-                                    node.normal()
-                                    node:setScale(scale)
-                                end
-                                
-                                
-                            end,{}
-                        )
-                        node:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),recover))
+                                layer:runAction(cc.Sequence:create(cc.DelayTime:create(1.0),cc.CallFunc:create(function() 
+                                    layer.currentHintWord = {false,false,false}
+                                    layer:initMap(chapter)
+                                end,{})))
+                            end
+                        end)
                     end
+
                     if layer.currentBlood <= 0 then
                         layer.globalLock = true
                         layer.blink:stopAllActions()
@@ -207,27 +250,26 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         else 
                             s = 'girl-stand'
                         end
-
-                        
                         layer.girl:setAnimation(0,'girl_happy',false)
                         layer.girl:addAnimation(0,'girl_happy',false)
                         layer.girl:addAnimation(0,s,true)
                         if killedCrabCount == #layer.wordPool[layer.currentIndex] then
                         --next group
-                            layer.globalLock = true
-                            layer.currentIndex = layer.currentIndex + 1
-                            killedCrabCount = 0
-                            for m = 1, 5 do
-                                for n = 1, 5 do
-                                    local remove = cc.CallFunc:create(function() 
---                                        layer.coconut[m][n]:removeFromParent(true)    
-                                    end,{})
-                                    layer.coconut[m][n]:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7)),remove))
-                                end
-                            end
-                            layer:runAction(cc.Sequence:create(cc.DelayTime:create(1.0),cc.CallFunc:create(function() 
-                                layer:initMap(chapter)
-                            end,{})))
+--                             layer.globalLock = true
+--                             layer.currentIndex = layer.currentIndex + 1
+--                             killedCrabCount = 0
+--                             for m = 1, 5 do
+--                                 for n = 1, 5 do
+--                                     local remove = cc.CallFunc:create(function() 
+-- --                                        layer.coconut[m][n]:removeFromParent(true)    
+--                                     end,{})
+--                                     layer.coconut[m][n]:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7)),remove))
+--                                 end
+--                             end
+--                             layer:runAction(cc.Sequence:create(cc.DelayTime:create(1.0),cc.CallFunc:create(function() 
+--                                 layer.currentHintWord = {false,false,false}
+--                                 layer:initMap(chapter)
+--                             end,{})))
                         else
                             layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y].firstStyle()
                             layer.crab[layer.firstIndex]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
@@ -244,6 +286,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             if endTime < 1 and not checkAtOnce then
                 return
             end
+            layer.combo = 0
             local s
             if layer.girlAfraid then
                 s = 'girl-afraid'
@@ -784,9 +827,9 @@ end
 
 function SummaryBossLayer:initWordList(word)
     local wordList = word
-    if #wordList < 1 then
-        wordList = {'apple','many','tea','banana','cat','dog'}
-    end
+    --if #wordList < 1 then
+        wordList = {'apple','many','tea','banana','cat','dog','camel','ant'}
+    --end
     local index = 1
     
     for i = 1, #wordList do
@@ -802,7 +845,7 @@ function SummaryBossLayer:initWordList(word)
 
     self.totalBlood = 0
     for i = 1,#wordList do
-        self.totalBlood = self.totalBlood + string.len(wordList[i])
+        self.totalBlood = self.totalBlood + string.len(wordList[i]) * 2
     end
     self.currentBlood = self.totalBlood
     self.totalTime = math.ceil(self.totalBlood / 7) * 15
@@ -1258,6 +1301,7 @@ function SummaryBossLayer:lose(chapter,entrance,wordList)
 end
 
 function SummaryBossLayer:hint()
+    self.combo = 0
     self.crab[self.firstIndex]:stopAllActions()
     self.coconut[self.firstNodeArray[self.firstIndex].x][self.firstNodeArray[self.firstIndex].y]:stopAllActions()
     self.isHinting = true
@@ -1269,6 +1313,7 @@ function SummaryBossLayer:hint()
             break
         end
     end
+    self.currentHintWord[index] = true
     for i = 1, 5 do
         for j = 1, 5 do
             if self.isCrab[self.currentIndex][i][j] == index then
