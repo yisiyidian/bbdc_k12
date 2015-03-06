@@ -171,7 +171,12 @@ function CorePlayManager.leaveTestModel()
 end
 
 function CorePlayManager.initReviewModel()
-    CorePlayManager.enterReviewModel(CorePlayManager.currentWrongWordList)
+    -- if currentWrongWordList == nil,boss cant be exist,but boss is over there,so add boss word
+    if CorePlayManager.currentWrongWordList == nil or #CorePlayManager.currentWrongWordList == 0 then
+        CorePlayManager.enterReviewModel(CorePlayManager.currentRightWordList)
+    else
+        CorePlayManager.enterReviewModel(CorePlayManager.currentWrongWordList)
+    end
 end
 
 function CorePlayManager.enterReviewModel(wordlist)
