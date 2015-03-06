@@ -29,6 +29,10 @@ def zipFolder(path, folder):
     with zipfile.ZipFile(zipname, 'w') as myzip:
         myzip.write(path + folder, folder, zipfile.ZIP_DEFLATED)
         for parent, dirnames, filenames in os.walk(path + folder):
+            for dirname in dirnames:
+                fullPath = os.path.join(parent, dirname)
+                myzip.write(fullPath, fullPath.replace(path, ''), zipfile.ZIP_DEFLATED)
+                
             for filename in filenames:
                 fullPath = os.path.join(parent, filename)
                 myzip.write(fullPath, fullPath.replace(path, ''), zipfile.ZIP_DEFLATED)
