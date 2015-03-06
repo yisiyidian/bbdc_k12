@@ -1,8 +1,8 @@
 
 -- *************************************
 
-local app_version_debug   = 200000
-local app_version_release = 200000
+local app_version_debug   = 200001
+local app_version_release = 200001
 
 -- All test code must in example.example
 local TEST_CODE   = 1 -- constant value
