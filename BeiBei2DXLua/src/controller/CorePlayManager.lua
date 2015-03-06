@@ -171,7 +171,10 @@ function CorePlayManager.leaveTestModel()
 end
 
 function CorePlayManager.initReviewModel()
-    CorePlayManager.enterReviewModel(CorePlayManager.currentWrongWordList)
+    if CorePlayManager.currentWrongWordList == nil or #CorePlayManager.currentWrongWordList == 0 then
+    else
+        CorePlayManager.enterReviewModel(CorePlayManager.currentWrongWordList)
+    end
 end
 
 function CorePlayManager.enterReviewModel(wordlist)

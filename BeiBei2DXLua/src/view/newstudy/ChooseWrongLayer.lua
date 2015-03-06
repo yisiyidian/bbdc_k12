@@ -17,13 +17,13 @@ end)
 CreateWrongLayer_From_CollectWord = 1
 CreateWrongLayer_From_Iron = 2
 
-function ChooseWrongLayer.create(word,wrongNum,preWordName, preWordNameState,fromWhere,wrongWordList)
-    local layer = ChooseWrongLayer.new(word,wrongNum,wrongWordList)
+function ChooseWrongLayer.create(word,wrongNum,preWordName,preWordNameState,fromWhere,wrongWordList)
+    local layer = ChooseWrongLayer.new(word,wrongNum,preWordName,preWordNameState,fromWhere,wrongWordList)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
 
-local function addNextButton(word,wrongNum,preWordName, preWordNameState,fromWhere,wrongWordList)
+local function addNextButton(word,wrongNum,preWordName,preWordNameState,fromWhere,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_next_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -34,10 +34,10 @@ local function addNextButton(word,wrongNum,preWordName, preWordNameState,fromWhe
             local slideCoconutLayer
             if wrongWordList == nil then
                 AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD, 'TOUCH')
-                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,preWordName, preWordNameState,fromWhere,wrongWordList)
+                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,preWordName, preWordNameState,CreateSlideLayer_From_CollectWord,nil)
             else
                 AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD_STRIKEWHILEHOT, 'TOUCH')
-                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,preWordName, preWordNameState,fromWhere,wrongWordList)
+                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,preWordName, preWordNameState,CreateSlideLayer_From_Iron,wrongWordList)
             end
 
             s_SCENE:replaceGameLayer(slideCoconutLayer)
@@ -51,7 +51,7 @@ local function addNextButton(word,wrongNum,preWordName, preWordNameState,fromWhe
     return choose_next_button
 end
 
-function ChooseWrongLayer:ctor(word,wrongNum,preWordName, preWordNameState,fromWhere,wrongWordList)
+function ChooseWrongLayer:ctor(word,wrongNum,preWordName,preWordNameState,fromWhere,wrongWordList)
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
@@ -81,19 +81,19 @@ function ChooseWrongLayer:ctor(word,wrongNum,preWordName, preWordNameState,fromW
     end
 
     local progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
-    progressBar:setPosition(bigWidth/2+44, 1049)
+    progressBar:setPosition(bigWidth/2+44, 1054)
     backColor:addChild(progressBar,2)
 
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
     local todayNumber = LastWordAndTotalNumber:getCurrentLevelNum()
     self.lastWordAndTotalNumber.setNumber(todayNumber)
-    if wrongNum ~= 0  and preWordName ~= nil and wrongWordList == nil then
+    if preWordName ~= nil then
     self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
     end
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
-    soundMark:setPosition(bigWidth/2, 925)  
+    soundMark:setPosition(bigWidth/2, 930)
     backColor:addChild(soundMark)
 
     local detailInfo = DetailInfo.create(self.wordInfo[1])
@@ -102,7 +102,7 @@ function ChooseWrongLayer:ctor(word,wrongNum,preWordName, preWordNameState,fromW
     detailInfo:setPosition(bigWidth/2, 520)
     backColor:addChild(detailInfo)
 
-    self.nextButton = addNextButton(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+    self.nextButton = addNextButton(word,wrongNum,preWordName,preWordNameState,fromWhere,wrongWordList)
     backColor:addChild(self.nextButton)
 end
 

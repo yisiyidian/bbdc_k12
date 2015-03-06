@@ -29,7 +29,7 @@ local function addStudyButton(word,wrongNum, preWordName, preWordNameState)
             local normal = function ()
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 local SlideCoconutLayer = require("view.newstudy.SlideCoconutLayer")
-                local slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum, preWordName, preWordNameState)
+                local slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum, preWordName, preWordNameState,CreateWrongLayer_From_CollectWord,nil)
                 s_SCENE:replaceGameLayer(slideCoconutLayer)
             end
 
@@ -126,7 +126,7 @@ function ChooseRightLayer:ctor(word,wrongNum, preWordName, preWordNameState)
     end
 
     local progressBar = ProgressBar.create(progressBar_total_number, wrongNum, "blue")
-    progressBar:setPosition(bigWidth/2+44, 1049)
+    progressBar:setPosition(bigWidth/2+44, 1054)
     backColor:addChild(progressBar,2)
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
@@ -138,7 +138,7 @@ function ChooseRightLayer:ctor(word,wrongNum, preWordName, preWordNameState)
     end
     
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
-    soundMark:setPosition(bigWidth/2, 925)  
+    soundMark:setPosition(bigWidth/2, 930)
     backColor:addChild(soundMark)
 
     local detailInfo = DetailInfo.create(self.wordInfo[1])

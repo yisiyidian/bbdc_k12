@@ -110,12 +110,8 @@ local function addSummaryButton(bottom_sprite,boss)
         for i = 1 , # initWordList do
             table.insert(temp,initWordList[i])
         end
-        local length
-        if #initWordList > 6 then
-            length = 6
-        else
-            length = #initWordList
-        end   
+        local length = #initWordList
+  
         for i = 1 , length do
             local randSeed = math.randomseed(os.time())
             local randNum  = math.random(1,#initWordList)

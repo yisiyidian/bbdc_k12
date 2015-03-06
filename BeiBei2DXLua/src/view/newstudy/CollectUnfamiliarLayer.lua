@@ -149,7 +149,7 @@ local function createOptions(randomNameArray,word,wrongNum, preWordName, preWord
                         s_CURRENT_USER.beanRewardForCollect  = s_CURRENT_USER.beanRewardForCollect - 1
                     end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-                    local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum, nil, preWordName, preWordNameState)
+                    local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum, preWordName, preWordNameState,CreateWrongLayer_From_CollectWord,nil)
                     s_SCENE:replaceGameLayer(chooseWrongLayer)   
                 end)))
             end
@@ -189,7 +189,7 @@ local function createDontknow(word,wrongNum, preWordName, preWordNameState)
             AnalyticsStudyDontKnowAnswer()  
             AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW, 'TOUCH')
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,nil,preWordName, preWordNameState)
+            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum, preWordName, preWordNameState,CreateWrongLayer_From_CollectWord,nil)
             s_SCENE:replaceGameLayer(chooseWrongLayer)          
         end
     end
@@ -245,7 +245,7 @@ function CollectUnfamiliarLayer:ctor(wordName, wrongWordNum, preWordName, preWor
 
     
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
-    soundMark:setPosition(bigWidth/2, 925)  
+    soundMark:setPosition(bigWidth/2, 930)
     backColor:addChild(soundMark)
     
     self.options = createOptions(self.randWord,wordName,wrongWordNum, preWordName, preWordNameState)

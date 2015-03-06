@@ -41,7 +41,7 @@ local function createDontknow(word,wrongNum, preWordName, preWordNameState)
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,nil,preWordName, preWordNameState)
+            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,preWordName,preWordNameState,CreateWrongLayer_From_CollectWord,nil)
             s_SCENE:replaceGameLayer(chooseWrongLayer)          
         end
     end
@@ -81,12 +81,8 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     end
 
     local progressBar = ProgressBar.create(progressBar_total_number, wrongWordNum, "blue")
-    progressBar:setPosition(bigWidth/2+44, 1049)
+    progressBar:setPosition(bigWidth/2+44, 1054)
     backColor:addChild(progressBar,2)
-
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
-    print_lua_table(bossList[#bossList].rightWordList)
-    print_lua_table(bossList[#bossList].wrongWordList)
 
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
@@ -97,7 +93,7 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     end
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
-    soundMark:setPosition(bigWidth/2, 925)  
+    soundMark:setPosition(bigWidth/2, 930)
     backColor:addChild(soundMark)
     
     self.iknow = createKnow(wordName,wrongWordNum, preWordName, preWordNameState)
