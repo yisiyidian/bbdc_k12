@@ -193,14 +193,14 @@ function SummaryBossAlter:win1(entrance)
         s_CURRENT_USER:setTutorialStep(s_tutorial_complete + 1)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_win)
     end
-
     local hasCheckedIn = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey)
     if s_LocalDatabaseManager:getTodayRemainTaskNum() < 2 and not hasCheckedIn then
         checkInEverydayInfo()
         s_isCheckInAnimationDisplayed = false
     end
-    -- print('hasCheckedIn',hasCheckedIn)
-    -- print('entrance',entrance)
+    if entrance == ENTRANCE_NORMAL then
+        s_CorePlayManager.leaveSummaryModel(true)
+    end
     if not hasCheckedIn and entrance == ENTRANCE_NORMAL then
         local missionCompleteCircle = require('view.MissionCompleteCircle').create()
         s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
@@ -244,7 +244,7 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
             if entrance == ENTRANCE_WORD_LIBRARY then
                 s_CorePlayManager.enterLevelLayer()
             else
-                s_CorePlayManager.leaveSummaryModel(true)
+                --s_CorePlayManager.leaveSummaryModel(true)
                 -- if s_LocalDatabaseManager:getTodayRemainTaskNum() < 2 and not hasCheckedIn then
                 --     s_SCENE:checkInAnimation()
                 -- else

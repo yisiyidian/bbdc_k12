@@ -183,7 +183,11 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                             damage_label:setColor(cc.c4b(255,0,0,255))
                             damage_label:setPosition(randP)
                             --damage_label:setOpacity(0)
-                            damage_label:runAction(cc.Spawn:create(cc.MoveBy:create(0.2,cc.p(0,30)),cc.FadeOut:create(0.2)))
+                            local action1 = cc.Spawn:create(cc.MoveBy:create(0.2,cc.p(0,30)),cc.FadeOut:create(0.2))
+                            local action2 = cc.CallFunc:create(function (  )
+                                damage_label:removeFromParent()
+                            end,{})
+                            damage_label:runAction(cc.Sequence:create(action1,action2))
                             layer.boss:addChild(damage_label)
                         end,{})
                         local resume = cc.MoveTo:create(0.0,cc.p(bullet:getPosition()))
@@ -207,6 +211,20 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                                 end,{}
                             )
                             node:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),recover))
+                            -- if layer.currentBlood <= 0 then
+                            --     --layer.boss:stopAllActions()
+                            --     local move = cc.MoveTo:create(0.5,cc.p(0.9 * s_DESIGN_WIDTH,1.1 * s_DESIGN_HEIGHT))
+                            --     local mini = cc.ScaleTo:create(0.5,0.5)
+                            --     local rotate = cc.RotateBy:create(0.5,360)
+                            --     local fly = cc.Spawn:create(move,rotate)
+                            --     local win = cc.CallFunc:create(function()
+                                    
+                            --         --layer.boss:removeFromParent()
+                            --         layer:win(chapter,entrance,wordList)
+                            --     end,{})
+                            --     layer.boss:runAction(cc.Sequence:create(cc.DelayTime:create(delaytime),fly,win))
+                                
+                            -- end
                             if killedCrabCount == #layer.wordPool[layer.currentIndex] and layer.currentBlood > 0 then
                             --next group
                                 layer.globalLock = true
@@ -229,20 +247,21 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                     end
 
                     if layer.currentBlood <= 0 then
-                        layer.globalLock = true
-                        layer.blink:stopAllActions()
-                        --layer.boss:stopAllActions()
-                        local move = cc.MoveTo:create(0.5,cc.p(0.9 * s_DESIGN_WIDTH,1.1 * s_DESIGN_HEIGHT))
-                        local mini = cc.ScaleTo:create(0.5,0.5)
-                        local rotate = cc.RotateBy:create(0.5,360)
-                        local fly = cc.Spawn:create(move,rotate)
-                        local win = cc.CallFunc:create(function()
-                            
-                            --layer.boss:removeFromParent()
-                            layer:win(chapter,entrance,wordList)
-                        end,{})
-                        layer.boss:runAction(cc.Sequence:create(cc.DelayTime:create(delaytime),fly,win))
-                        
+                        s_SCENE:callFuncWithDelay(#selectStack * 0.2,function()
+                            layer.globalLock = true
+                            layer.blink:stopAllActions()
+                            --layer.boss:stopAllActions()
+                            local move = cc.MoveTo:create(0.5,cc.p(0.9 * s_DESIGN_WIDTH,1.1 * s_DESIGN_HEIGHT))
+                            local mini = cc.ScaleTo:create(0.5,0.5)
+                            local rotate = cc.RotateBy:create(0.5,360)
+                            local fly = cc.Spawn:create(move,rotate)
+                            local win = cc.CallFunc:create(function()
+                                
+                                --layer.boss:removeFromParent()
+                                layer:win(chapter,entrance,wordList)
+                            end,{})
+                            layer.boss:runAction(cc.Sequence:create(cc.DelayTime:create(delaytime),fly,win))
+                        end)
                     else
                         selectStack = {}
                         if layer.girlAfraid then
@@ -827,9 +846,9 @@ end
 
 function SummaryBossLayer:initWordList(word)
     local wordList = word
-    --if #wordList < 1 then
+    if #wordList < 1 then
         wordList = {'apple','many','tea','banana','cat','dog','camel','ant'}
-    --end
+    end
     local index = 1
     
     for i = 1, #wordList do
@@ -848,7 +867,7 @@ function SummaryBossLayer:initWordList(word)
         self.totalBlood = self.totalBlood + string.len(wordList[i]) * 2
     end
     self.currentBlood = self.totalBlood
-    self.totalTime = math.ceil(self.totalBlood / 7) * 15
+    self.totalTime = math.ceil(self.totalBlood / 7) * 15 + s_CURRENT_USER.timeAdjust
 
     -- self.totalBlood = levelConfig.summary_boss_hp
     -- self.currentBlood = self.totalBlood
@@ -1271,6 +1290,7 @@ end
 
 function SummaryBossLayer:win(chapter,entrance,wordList)
     self.globalLock = true
+    --s_CorePlayManager.leaveSummaryModel(true)
     self.girl:setAnimation(0,'girl_win',true)
     s_SCENE:callFuncWithDelay(1.5,function (  )
         local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,chapter,entrance,wordList)

@@ -84,6 +84,11 @@ function DataUser:ctor()
     self.clientData                        = {0}
     self.levelInfo                         = DataLevelInfo.create()
 
+    -- summary boss time
+    self.timeAdjust                        = 0
+    self.failTime                          = 0
+    self.winCombo                          = 0
+
 --    self.lastUpdateSummaryBossTime         = 0
 --    self.summaryBossList                   = ''
 --    self.chestList                         = ''
