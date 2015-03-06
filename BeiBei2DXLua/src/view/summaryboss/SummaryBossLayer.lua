@@ -41,6 +41,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     layer.wordStack = {}
     layer.firstIndex = 1
     layer.combo = 0
+
     --layer.wordList = wordList
     -- slide coco
     local slideCoco = {}
@@ -599,6 +600,8 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             return
         end
 
+        layer.totalTime = layer.totalTime - delta
+
         if endTime < 1 and #selectStack > 0 and isTouchEnded then
             endTime = endTime + delta
         end
@@ -717,6 +720,23 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
     s_SCENE.popupLayer.pauseBtn = pauseBtn
     self:addChild(pauseBtn,100)
     pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
+
+    -- add combo icon
+    -- local combo_icon = {}
+    -- local combo_color = {cc.c3b(156,220,240),cc.c3b(255,216,2),cc.c3b(170,246,62),cc.c3b(255,148,34)}
+    -- for i = 1,4 do
+    --     combo_icon[i] = cc.ProgressTimer:create(cc.Sprite:create('image/summarybossscene/combo_zjboss_0color.png'))
+    --     combo_icon[i]:setPosition(s_DESIGN_WIDTH * 0.9,s_DESIGN_HEIGHT * 0.95 + 5)
+    --     self:addChild(combo_icon[i],100)
+    --     if i > 0 then
+    --         combo_icon[i]:setPercentage(0)
+    --     else
+    --         combo_icon[i]:setPercentage(100)
+    --     end
+    --     local label = cc.Label:create(string.format('+%d',i - 1),'',30)
+    --     label:setPosition(combo_icon[i]:getContentSize().width * 0.5,combo_icon[i]:getContentSize().height * 0.5)
+    --     combo_icon[i]:addChild(label)
+    -- end
 
     local function pauseScene(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -1290,6 +1310,22 @@ end
 
 function SummaryBossLayer:win(chapter,entrance,wordList)
     self.globalLock = true
+
+    self.failTime = 0
+    if self.totalTime < 10 then
+        s_CURRENT_USER.winCombo = 0
+    else 
+        s_CURRENT_USER.winCombo = s_CURRENT_USER.winCombo + 1
+    end
+    if s_CURRENT_USER.winCombo > 3 and s_CURRENT_USER.timeAdjust > -30 then
+        s_CURRENT_USER.timeAdjust = s_CURRENT_USER.timeAdjust - 5
+    elseif s_CURRENT_USER.winCombo <= 3 then
+        s_CURRENT_USER.timeAdjust = 0
+    end
+
+    saveUserToServer({['timeAdjust']=s_CURRENT_USER.timeAdjust, 
+                      ['winCombo']=s_CURRENT_USER.winCombo,
+                      ['failTime']=s_CURRENT_USER.failTime})
     --s_CorePlayManager.leaveSummaryModel(true)
     self.girl:setAnimation(0,'girl_win',true)
     s_SCENE:callFuncWithDelay(1.5,function (  )
@@ -1307,6 +1343,17 @@ end
 function SummaryBossLayer:lose(chapter,entrance,wordList)
     self.globalLock = true
     self.girl:setAnimation(0,'girl-fail',true)
+
+    s_CURRENT_USER.winCombo = 0
+    s_CURRENT_USER.failTime = s_CURRENT_USER.failTime + 1
+    if s_CURRENT_USER.failTime > 3 and s_CURRENT_USER.timeAdjust < 30 then
+        s_CURRENT_USER.timeAdjust = s_CURRENT_USER.timeAdjust + 5
+    elseif s_CURRENT_USER.failTime <= 3 then
+        s_CURRENT_USER.timeAdjust = 0
+    end
+    saveUserToServer({['timeAdjust']=s_CURRENT_USER.timeAdjust, 
+                      ['winCombo']=s_CURRENT_USER.winCombo,
+                      ['failTime']=s_CURRENT_USER.failTime})
 
     s_SCENE:callFuncWithDelay(2,function (  )
             -- body

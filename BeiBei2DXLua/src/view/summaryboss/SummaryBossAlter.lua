@@ -198,14 +198,15 @@ function SummaryBossAlter:win1(entrance)
         checkInEverydayInfo()
         s_isCheckInAnimationDisplayed = false
     end
-    if entrance == ENTRANCE_NORMAL then
-        s_CorePlayManager.leaveSummaryModel(true)
-    end
+    
     if not hasCheckedIn and entrance == ENTRANCE_NORMAL then
         local missionCompleteCircle = require('view.MissionCompleteCircle').create()
         s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
         self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
             self:win2(entrance,hasCheckedIn)
+            if entrance == ENTRANCE_NORMAL then
+                s_CorePlayManager.leaveSummaryModel(true)
+            end
         end,{})))
     else
         self:win2(entrance,hasCheckedIn)

@@ -523,7 +523,7 @@ function HomeLayer.create(share)
 
     local button_friend 
     local icon_friend
-    if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST and FRIEND_LOCKED == 0 then
+    if s_CURRENT_USER:getLockFunctionState(1) == 1 then
         button_friend = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
         button_friend:setPosition(bigWidth / 2 - 1, 200)
         icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
@@ -551,7 +551,7 @@ function HomeLayer.create(share)
     layer.button_friend = button_friend
 
     local function updateFriendButton(delta)
-        if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST and FRIEND_LOCKED == 0 then
+        if s_CURRENT_USER:getLockFunctionState(1) == 1 then
             -- local unlocked_button_friend = cc.Sprite:create("image/homescene/home_page_function_bg2.png")
             -- unlocked_button_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
             -- local unlocked_icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
