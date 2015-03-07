@@ -29,9 +29,11 @@ def zipFolder(path, folder):
     with zipfile.ZipFile(zipname, 'w') as myzip:
         myzip.write(path + folder, folder, zipfile.ZIP_DEFLATED)
         for parent, dirnames, filenames in os.walk(path + folder):
+            myzip.write(parent, parent.replace(path, ''), zipfile.ZIP_DEFLATED)
             for filename in filenames:
                 fullPath = os.path.join(parent, filename)
                 myzip.write(fullPath, fullPath.replace(path, ''), zipfile.ZIP_DEFLATED)
+
         return zipname
 
 def getAssetsMD5(folderName, src, dst):
