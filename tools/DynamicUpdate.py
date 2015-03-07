@@ -32,7 +32,8 @@ def zipFolder(path, folder):
             myzip.write(parent, parent.replace(path, ''), zipfile.ZIP_DEFLATED)
             for filename in filenames:
                 fullPath = os.path.join(parent, filename)
-                myzip.write(fullPath, fullPath.replace(path, ''), zipfile.ZIP_DEFLATED)
+                if fullPath.find('model/words') < 0:
+                    myzip.write(fullPath, fullPath.replace(path, ''), zipfile.ZIP_DEFLATED)
 
         return zipname
 
@@ -112,6 +113,10 @@ def exportAssets(isDebug, assetsPath, tmp_assetPath, AssetsManagerReleaseFolder,
         versionContent = versionDebug + '\n}'
         mContent = headDebug
 
+    if os.path.exists(tmp_assetPath):
+        shutil.rmtree(tmp_assetPath)
+    os.makedirs(tmp_assetPath)
+
     src = getAssetsMD5('src', assetsPath + 'src/', tmp_assetPath + 'src/')
     i = 0
     for c in src:
@@ -121,13 +126,13 @@ def exportAssets(isDebug, assetsPath, tmp_assetPath, AssetsManagerReleaseFolder,
             mContent = mContent + '\n' + c
             i = 1
 
-    res = getAssetsMD5('res', assetsPath + 'res/', tmp_assetPath + 'res/')
-    for c in res:
-        if i > 0:
-            mContent = mContent + ',\n' + c
-        else:
-            mContent = mContent + '\n' + c
-            i = 1
+    # res = getAssetsMD5('res', assetsPath + 'res/', tmp_assetPath + 'res/')
+    # for c in res:
+    #     if i > 0:
+    #         mContent = mContent + ',\n' + c
+    #     else:
+    #         mContent = mContent + '\n' + c
+    #         i = 1
 
     mContent = mContent + end
 
