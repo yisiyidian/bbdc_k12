@@ -20,22 +20,22 @@ local function createKnow(word,wrongNum, preWordName, preWordNameState)
     local click_know_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
-            choose_know_button:runAction(cc.MoveBy:create(0.1,cc.p(0,-3)))
+            choose_know_button:runAction(cc.MoveBy:create(0.1,cc.p(0,-5)))
         elseif eventType == ccui.TouchEventType.ended then
             -- local CollectUnfamiliarLayer = require("view.newstudy.CollectUnfamiliarLayer")
             -- local collectUnfamiliarLayer = CollectUnfamiliarLayer.create(word, wrongNum, preWordName, preWordNameState)
             -- s_SCENE:replaceGameLayer(collectUnfamiliarLayer)
             s_CorePlayManager.leaveStudyModel(true)
         elseif eventType == ccui.TouchEventType.canceled then  
-            choose_know_button:runAction(cc.MoveBy:create(0.1,cc.p(0,3)))
+            choose_know_button:runAction(cc.MoveBy:create(0.1,cc.p(0,5)))
         end
     end
 
     local choose_know_button_back = cc.Sprite:create("image/button/chooseBack.png")
-    choose_know_button_back:setPosition(bigWidth/2, 500)
+    choose_know_button_back:setPosition(bigWidth/2, 600)
     
     choose_know_button = ccui.Button:create("image/button/collect.png","image/button/collect.png","")
-    choose_know_button:setPosition(choose_know_button_back:getContentSize().width / 2, 3)
+    choose_know_button:setPosition(choose_know_button_back:getContentSize().width / 2, 5)
     choose_know_button:ignoreAnchorPointForPosition(false)
     choose_know_button:setAnchorPoint(0.5,0)
     choose_know_button:addTouchEventListener(click_know_button)
@@ -56,21 +56,21 @@ local function createDontknow(word,wrongNum, preWordName, preWordNameState)
     local click_dontknow_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
-            choose_dontknow_button:runAction(cc.MoveBy:create(0.1,cc.p(0,-3)))
+            choose_dontknow_button:runAction(cc.MoveBy:create(0.1,cc.p(0,-5)))
         elseif eventType == ccui.TouchEventType.ended then
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
             local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,preWordName,preWordNameState,CreateWrongLayer_From_CollectWord,nil)
             s_SCENE:replaceGameLayer(chooseWrongLayer)          
         elseif eventType == ccui.TouchEventType.canceled then  
-            choose_dontknow_button:runAction(cc.MoveBy:create(0.1,cc.p(0,3)))
+            choose_dontknow_button:runAction(cc.MoveBy:create(0.1,cc.p(0,5)))
         end
     end
 
     local choose_dontknow_button_back = cc.Sprite:create("image/button/chooseBack.png")
-    choose_dontknow_button_back:setPosition(bigWidth/2, 300)
+    choose_dontknow_button_back:setPosition(bigWidth/2, 350)
 
     choose_dontknow_button = ccui.Button:create("image/button/throw.png","image/button/throw.png","")
-    choose_dontknow_button:setPosition(choose_dontknow_button_back:getContentSize().width / 2, 3)
+    choose_dontknow_button:setPosition(choose_dontknow_button_back:getContentSize().width / 2, 5)
     choose_dontknow_button:ignoreAnchorPointForPosition(false)
     choose_dontknow_button:setAnchorPoint(0.5,0)
     choose_dontknow_button:addTouchEventListener(click_dontknow_button)
@@ -108,25 +108,13 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     self.currentWord = wordName
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
 
-    local progressBar_total_number 
-
-   if s_CURRENT_USER.islandIndex == 0 then
-       progressBar_total_number = s_max_wrong_num_first_island
-   else
-       progressBar_total_number = s_max_wrong_num_everyday
-   end
-
-   local progressBar = ProgressBar.create(progressBar_total_number, wrongWordNum, "blue")
-   progressBar:setPosition(bigWidth/2+44, 1054)
-   backColor:addChild(progressBar,2)
-
-   self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
-   backColor:addChild(self.lastWordAndTotalNumber,1)
-   local todayNumber = LastWordAndTotalNumber:getCurrentLevelNum()
-   self.lastWordAndTotalNumber.setNumber(todayNumber)
-   if preWordName ~= nil then
-       self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
-   end
+    self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
+    backColor:addChild(self.lastWordAndTotalNumber,1)
+    local todayNumber = LastWordAndTotalNumber:getCurrentLevelNum()
+    self.lastWordAndTotalNumber.setNumber(todayNumber)
+    if preWordName ~= nil then
+        self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
+    end
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
     soundMark:setPosition(bigWidth/2, 930)
