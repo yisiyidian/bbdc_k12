@@ -151,12 +151,12 @@ AssetsManagerReleaseFolder = '1.6.0'
 version = '2.0.0.0.0.1'
 engineVersion = '3.3 rc2'
 
-tmp_assetPath = os.getcwd() + '/../tmp_asset/debug/'
-manifestDebugFilePath = tmp_assetPath + 'project_server_debug.manifest'
-manifestVersionDebugFilePath = tmp_assetPath + 'version_debug.manifest'
+# tmp_assetPath = os.getcwd() + '/../tmp_asset/debug/'
+# manifestDebugFilePath = tmp_assetPath + 'project_server_debug.manifest'
+# manifestVersionDebugFilePath = tmp_assetPath + 'version_debug.manifest'
+# exportAssets(True, assetsPath, tmp_assetPath, AssetsManagerReleaseFolder, version, engineVersion, manifestDebugFilePath, manifestVersionDebugFilePath)
 
-# tmp_assetPath = os.getcwd() + '/../tmp_asset/release/'
-# manifestReleaseFilePath = tmp_assetPath + 'project_server_release.manifest'
-# manifestVersionReleaseFilePath = tmp_assetPath + 'version_release.manifest'
-
-exportAssets(True, assetsPath, tmp_assetPath, AssetsManagerReleaseFolder, version, engineVersion, manifestDebugFilePath, manifestVersionDebugFilePath)
+tmp_assetPath = os.getcwd() + '/../tmp_asset/release/'
+manifestReleaseFilePath = tmp_assetPath + 'project_server_release.manifest'
+manifestVersionReleaseFilePath = tmp_assetPath + 'version_release.manifest'
+exportAssets(False, assetsPath, tmp_assetPath, AssetsManagerReleaseFolder, version, engineVersion, manifestReleaseFilePath, manifestVersionReleaseFilePath)
