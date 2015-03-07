@@ -82,7 +82,8 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
 
     local progressBar_total_number 
 
-    if s_CURRENT_USER.islandIndex == 0 then
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    if #bossList == 1 then
         progressBar_total_number = 3
     else
         progressBar_total_number = s_max_wrong_num_everyday
