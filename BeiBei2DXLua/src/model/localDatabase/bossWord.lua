@@ -350,7 +350,7 @@ function M.addWrongWord(wordindex)
         wordList    = row.wordList
         record = row
     end
-
+    
     if bossID == nil then
         local query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, typeIndex, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', 1, 0, '"..wordname.."', "..wordindex..", 0) ;"
         Manager.database:exec(query)
@@ -365,7 +365,14 @@ function M.addWrongWord(wordindex)
         local newWordList = wordList.."|"..wordname
         local wordCount = #split(wordList, "|")
 
-        if wordCount == s_max_wrong_num_everyday - 1 then
+        local current_total_number
+        if s_CURRENT_USER.islandIndex == 0 then
+           current_total_number = s_max_wrong_num_first_island
+        else
+           current_total_number = s_max_wrong_num_everyday
+        end
+
+        if wordCount == current_total_number - 1 then
             s_LocalDatabaseManager.minusTodayRemainTaskNum()
 
             local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , typeIndex = 1 , wordList = '"..newWordList.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
