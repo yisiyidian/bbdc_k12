@@ -110,23 +110,23 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
 
     local progressBar_total_number 
 
---    if s_CURRENT_USER.islandIndex == 0 then
---        progressBar_total_number = s_max_wrong_num_first_island
---    else
---        progressBar_total_number = s_max_wrong_num_everyday
---    end
+   if s_CURRENT_USER.islandIndex == 0 then
+       progressBar_total_number = s_max_wrong_num_first_island
+   else
+       progressBar_total_number = s_max_wrong_num_everyday
+   end
 
---    local progressBar = ProgressBar.create(progressBar_total_number, wrongWordNum, "blue")
---    progressBar:setPosition(bigWidth/2+44, 1054)
---    backColor:addChild(progressBar,2)
+   local progressBar = ProgressBar.create(progressBar_total_number, wrongWordNum, "blue")
+   progressBar:setPosition(bigWidth/2+44, 1054)
+   backColor:addChild(progressBar,2)
 
---    self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
---    backColor:addChild(self.lastWordAndTotalNumber,1)
---    local todayNumber = LastWordAndTotalNumber:getCurrentLevelNum()
---    self.lastWordAndTotalNumber.setNumber(todayNumber)
---    if preWordName ~= nil then
---        self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
---    end
+   self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
+   backColor:addChild(self.lastWordAndTotalNumber,1)
+   local todayNumber = LastWordAndTotalNumber:getCurrentLevelNum()
+   self.lastWordAndTotalNumber.setNumber(todayNumber)
+   if preWordName ~= nil then
+       self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
+   end
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
     soundMark:setPosition(bigWidth/2, 930)
