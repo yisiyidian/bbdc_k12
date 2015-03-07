@@ -192,7 +192,7 @@ function MiddleLayer:ctor()
     local progressBar_total_number 
 
     if s_CURRENT_USER.islandIndex == 0 then
-        progressBar_total_number = s_max_wrong_num_first_island
+        progressBar_total_number = 3
     else
         progressBar_total_number = s_max_wrong_num_everyday
     end

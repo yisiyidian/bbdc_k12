@@ -367,7 +367,7 @@ function M.addWrongWord(wordindex)
 
         local current_total_number
         if s_CURRENT_USER.islandIndex == 0 then
-           current_total_number = s_max_wrong_num_first_island
+           current_total_number = 3
         else
            current_total_number = s_max_wrong_num_everyday
         end

@@ -234,7 +234,7 @@ function WordLibraryPopup:ctor(index,fromWhere)
         self.familiarButton:setTexture("image/islandPopup/familiarwordbegin.png")
         self.unfamiliarButton:setTexture("image/islandPopup/unfamiliarwordend.png")   
         if index == '0' then
-            if #boss.wrongWordList >= s_max_wrong_num_first_island then
+            if #boss.wrongWordList >= 3 then
                self.reviewButton:setVisible(true)
                self.summaryButton:setVisible(true)
             else
@@ -274,7 +274,7 @@ function WordLibraryPopup:ctor(index,fromWhere)
             self.listview:setPosition(2,70)
             backPopup:addChild(self.listview)
             if index == '0' then
-                if #boss.wrongWordList >= s_max_wrong_num_first_island then
+                if #boss.wrongWordList >= 3 then
                    self.reviewButton:setVisible(true)
                    self.summaryButton:setVisible(true)
                 else
