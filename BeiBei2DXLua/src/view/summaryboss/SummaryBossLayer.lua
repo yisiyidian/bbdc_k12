@@ -41,8 +41,10 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     layer.wordStack = {}
     layer.firstIndex = 1
     layer.combo = 0
+    layer.leftTime = 0
+    layer.useItem = false
 
-    --layer.wordList = wordList
+    layer.wordList = wordList
     -- slide coco
     local slideCoco = {}
     slideCoco[1] = s_sound_slideCoconut
@@ -137,9 +139,39 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                     if layer.currentHintWord[i] then
                         bullet_damage = 1
                     else
-                        bullet_damage = 2 + layer.combo / 3
+                        bullet_damage = 2 + math.floor(layer.combo / 3)
+                        local hasHint = false
+                        for k = 1,#layer.currentHintWord do
+                            hasHint = hasHint or (layer.currentHintWord[k] and layer.crabOnView[k])
+                        end
+                        if not hasHint then
+                            layer.combo = layer.combo + 1
+                        else 
+                            layer.combo = 0
+                        end
                     end
-                    layer.combo = layer.combo + 1
+                    if layer.combo > 9 then
+                        layer.combo = 9
+                    end
+                    if layer.combo > 0 then
+                        local icon_index = math.floor((layer.combo - 1) / 3) + 2
+                        layer.combo_icon[icon_index]:setPercentage(((layer.combo - 1) % 3 + 1) * 100 / 3)
+                        if layer.combo % 3 == 0 then
+                            layer.combo_label[2 * layer.combo / 3 + 1]:setVisible(true)
+                            layer.combo_label[2 * layer.combo / 3 + 2]:setVisible(true)
+                            layer.combo_label[2 * layer.combo / 3]:setVisible(false)
+                            layer.combo_label[2 * layer.combo / 3 - 1]:setVisible(false)
+                        end
+                    else
+                        layer.combo_label[1]:setVisible(true)
+                        layer.combo_label[2]:setVisible(true)
+                        layer.combo_icon[1]:setPercentage(100)
+                        for k = 2,4 do
+                            layer.combo_label[2 * k - 1]:setVisible(false)
+                            layer.combo_label[2 * k]:setVisible(false)
+                            layer.combo_icon[k]:setPercentage(0)
+                        end
+                    end
                     layer.currentBlood = layer.currentBlood - #selectStack * bullet_damage
                     
                     layer.boss.blood:setPercentage(100 * layer.currentBlood / layer.totalBlood)
@@ -307,6 +339,14 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                 return
             end
             layer.combo = 0
+            layer.combo_label[1]:setVisible(true)
+            layer.combo_label[2]:setVisible(true)
+            layer.combo_icon[1]:setPercentage(100)
+            for i = 2,4 do
+                layer.combo_label[2 * i - 1]:setVisible(false)
+                layer.combo_label[2 * i]:setVisible(false)
+                layer.combo_icon[i]:setPercentage(0)
+            end
             local s
             if layer.girlAfraid then
                 s = 'girl-afraid'
@@ -600,7 +640,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             return
         end
 
-        layer.totalTime = layer.totalTime - delta
+        layer.leftTime = layer.leftTime - delta
 
         if endTime < 1 and #selectStack > 0 and isTouchEnded then
             endTime = endTime + delta
@@ -722,21 +762,39 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
     pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
 
     -- add combo icon
-    -- local combo_icon = {}
-    -- local combo_color = {cc.c3b(156,220,240),cc.c3b(255,216,2),cc.c3b(170,246,62),cc.c3b(255,148,34)}
-    -- for i = 1,4 do
-    --     combo_icon[i] = cc.ProgressTimer:create(cc.Sprite:create('image/summarybossscene/combo_zjboss_0color.png'))
-    --     combo_icon[i]:setPosition(s_DESIGN_WIDTH * 0.9,s_DESIGN_HEIGHT * 0.95 + 5)
-    --     self:addChild(combo_icon[i],100)
-    --     if i > 0 then
-    --         combo_icon[i]:setPercentage(0)
-    --     else
-    --         combo_icon[i]:setPercentage(100)
-    --     end
-    --     local label = cc.Label:create(string.format('+%d',i - 1),'',30)
-    --     label:setPosition(combo_icon[i]:getContentSize().width * 0.5,combo_icon[i]:getContentSize().height * 0.5)
-    --     combo_icon[i]:addChild(label)
-    -- end
+    local combo_icon = {}
+    self.combo_label = {}
+    local combo_color = {cc.c4b(156,220,240,255),cc.c4b(255,216,2,255),cc.c4b(170,246,62,255),cc.c4b(255,148,34,255)}
+    for i = 1,4 do
+        combo_icon[i] = cc.ProgressTimer:create(cc.Sprite:create(string.format('image/summarybossscene/combo_zjboss_%dcolor.png',i-1)))
+        combo_icon[i]:setPosition(s_DESIGN_WIDTH * 0.9,s_DESIGN_HEIGHT * 0.95 + 5)
+        self:addChild(combo_icon[i],100)
+
+        local label1 = cc.Label:createWithSystemFont('+','',30)
+        label1:setAnchorPoint(1,0.5)
+        label1:setPosition(combo_icon[i]:getContentSize().width * 0.5 - 1,combo_icon[i]:getContentSize().height * 0.5 + 3)
+        combo_icon[i]:addChild(label1)
+        label1:setColor(combo_color[i])
+        label1:setName('label1')
+        self.combo_label[#self.combo_label + 1] = label1
+
+        local label2 = cc.Label:createWithSystemFont(string.format('%d',i - 1),'',30)
+        label2:setAnchorPoint(0,0.5)
+        label2:enableOutline(combo_color[i],1)
+        label2:setPosition(combo_icon[i]:getContentSize().width * 0.5 - 1,combo_icon[i]:getContentSize().height * 0.5 + 1)
+        combo_icon[i]:addChild(label2)
+        label2:setColor(combo_color[i])
+        label2:setName('label2')
+        self.combo_label[#self.combo_label + 1] = label2
+        if i > 1 then
+            combo_icon[i]:setPercentage(0)
+            label1:setVisible(false)
+            label2:setVisible(false)
+        else
+            combo_icon[i]:setPercentage(100)
+        end
+    end
+    self.combo_icon = combo_icon
 
     local function pauseScene(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -866,9 +924,9 @@ end
 
 function SummaryBossLayer:initWordList(word)
     local wordList = word
-    if #wordList < 1 then
-        wordList = {'apple','many','tea','banana','cat','dog','camel','ant'}
-    end
+    --if #wordList < 1 then
+        --wordList = {'apple','many','many','many','many','many','many','many','many','many','many','tea','banana','cat','dog','camel','ant'}
+    --end
     local index = 1
     
     for i = 1, #wordList do
@@ -887,8 +945,8 @@ function SummaryBossLayer:initWordList(word)
         self.totalBlood = self.totalBlood + string.len(wordList[i]) * 2
     end
     self.currentBlood = self.totalBlood
-    self.totalTime = math.ceil(self.totalBlood / 7) * 15 + s_CURRENT_USER.timeAdjust
-
+    self.totalTime = math.ceil(self.totalBlood / 7) * 3 + s_CURRENT_USER.timeAdjust
+    self.leftTime = self.totalTime
     -- self.totalBlood = levelConfig.summary_boss_hp
     -- self.currentBlood = self.totalBlood
     -- self.totalTime = levelConfig.summary_boss_time
@@ -1312,7 +1370,7 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
     self.globalLock = true
 
     self.failTime = 0
-    if self.totalTime < 10 then
+    if self.leftTime < 10 or self.useItem then
         s_CURRENT_USER.winCombo = 0
     else 
         s_CURRENT_USER.winCombo = s_CURRENT_USER.winCombo + 1
@@ -1329,7 +1387,7 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
     --s_CorePlayManager.leaveSummaryModel(true)
     self.girl:setAnimation(0,'girl_win',true)
     s_SCENE:callFuncWithDelay(1.5,function (  )
-        local alter = SummaryBossAlter.create(true,self.rightWord,self.currentBlood,chapter,entrance,wordList)
+        local alter = SummaryBossAlter.create(self,true,chapter,entrance)
         alter:setPosition(0,0)
         self:addChild(alter,1000)
     end)
@@ -1357,7 +1415,7 @@ function SummaryBossLayer:lose(chapter,entrance,wordList)
 
     s_SCENE:callFuncWithDelay(2,function (  )
             -- body
-        local alter = SummaryBossAlter.create(false,self.rightWord,self.currentBlood,chapter,entrance,wordList)
+        local alter = SummaryBossAlter.create(self,false,chapter,entrance)
         alter:setPosition(0,0)
         self:addChild(alter,1000)
     end)
@@ -1369,6 +1427,14 @@ end
 
 function SummaryBossLayer:hint()
     self.combo = 0
+    self.combo_label[1]:setVisible(true)
+    self.combo_label[2]:setVisible(true)
+    self.combo_icon[1]:setPercentage(100)
+    for i = 2,4 do
+        self.combo_label[2 * i - 1]:setVisible(false)
+        self.combo_label[2 * i]:setVisible(false)
+        self.combo_icon[i]:setPercentage(0)
+    end
     self.crab[self.firstIndex]:stopAllActions()
     self.coconut[self.firstNodeArray[self.firstIndex].x][self.firstNodeArray[self.firstIndex].y]:stopAllActions()
     self.isHinting = true
