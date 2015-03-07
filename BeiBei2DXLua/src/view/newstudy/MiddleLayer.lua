@@ -187,10 +187,20 @@ function MiddleLayer:ctor()
     self.bean = s_CURRENT_USER:getBeans()
     self.beanSprite = createBeanSprite(self.bean)
     self:addChild(self.beanSprite)
+
+
+    local progressBar_total_number 
+
+    if s_CURRENT_USER.islandIndex == 0 then
+        progressBar_total_number = s_max_wrong_num_first_island
+    else
+        progressBar_total_number = s_max_wrong_num_everyday
+    end
     
-    self.wrongNumber = s_max_wrong_num_everyday
+    self.wrongNumber = progressBar_total_number
     self.showNumber = createNumberSprite(self.wrongNumber)
     backColor:addChild(self.showNumber)
+
     
     local backBagSprite = cc.Sprite:create("image/newstudy/bagback.png")
     backBagSprite:setPosition(bigWidth * 0.6, 500)
