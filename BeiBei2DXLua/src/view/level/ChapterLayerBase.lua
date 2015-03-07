@@ -280,6 +280,7 @@ function ChapterLayerBase:addPopup(levelIndex)
                     text:runAction(action2)
             else
                 s_CorePlayManager.initTotalPlay()
+                s_CURRENT_USER.islandIndex = tonumber(levelIndex)
             end
         end
     end

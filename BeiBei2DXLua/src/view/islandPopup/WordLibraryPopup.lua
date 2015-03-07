@@ -82,10 +82,11 @@ local function addfamiliarButton(top_sprite)
 end
 
 local function addReviewButton(bottom_sprite,boss)
+
     local review_button_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             local ReviewBoss = require("view.newreviewboss.NewReviewBossMainLayer")
-            if boss.wrongWordList == nil or #boss.wrongWordList < s_max_wrong_num_everyday then
+            if boss.wrongWordList == nil then
                 return 
             else
                 local reviewBoss = ReviewBoss.create(boss.wrongWordList,Review_From_Word_Bank)
@@ -162,7 +163,7 @@ function WordLibraryPopup:ctor(index,fromWhere)
         backPopup:runAction(action3)   
     else
         backPopup:setVisible(false)
-        local action0 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 * 3)) 
+        local action0 = cc.MoveTo:create(0.1,cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 * 3)) 
         local action1 = cc.CallFunc:create(function ()
             backPopup:setVisible(true)
         end)
@@ -272,7 +273,15 @@ function WordLibraryPopup:ctor(index,fromWhere)
             self.listview = Listview.create(boss.wrongWordList) 
             self.listview:setPosition(2,70)
             backPopup:addChild(self.listview)
-            if #boss.wrongWordList >= s_max_wrong_num_everyday then
+            if index == '0' then
+                if #boss.wrongWordList >= s_max_wrong_num_first_island then
+                   self.reviewButton:setVisible(true)
+                   self.summaryButton:setVisible(true)
+                else
+                   self.reviewButton:setVisible(false)
+                   self.summaryButton:setVisible(false)
+                end
+            elseif #boss.wrongWordList >= s_max_wrong_num_everyday then
                 self.reviewButton:setVisible(true)
                 self.summaryButton:setVisible(true)
             else
