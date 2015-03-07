@@ -28,6 +28,7 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
     local back = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     layer:addChild(back)
+    back:setName('background')
     if win then
         if entrance == ENTRANCE_NORMAL then
             s_CURRENT_USER:addBeans(3)
@@ -98,7 +99,19 @@ function SummaryBossAlter:lose(entrance)
 
         local function buyTime(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                self:addTime()
+                local boss = self.bossLayer.bossNode
+                local distance = s_DESIGN_WIDTH * 0.45 * 30 / self.bossLayer.totalTime
+                self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
+                s_SCENE:callFuncWithDelay(0.3,function (  )
+                    -- body
+                    self:removeChildByName('background')
+                    boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75)),cc.CallFunc:create(function (  )
+                        -- body
+                        self:addTime()
+                    end)))
+                end)
+                
+                
             end
         end
         buyTimeBtn:addTouchEventListener(buyTime)
@@ -124,7 +137,7 @@ function SummaryBossAlter:addTime()
     local wordList = self.wordList
     bossLayer.useItem = true
 
-    boss:setPosition(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75)
+    --boss:setPosition(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75)
     bossLayer.globalLock = false
     bossLayer.girlAfraid = false
     bossLayer.girl:setAnimation(0,'girl-stand',true)
