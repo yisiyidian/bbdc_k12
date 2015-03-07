@@ -4,7 +4,7 @@ local SmallAlterWithOneButton = class("SmallAlterWithOneButton", function()
     return cc.Layer:create()
 end)
 
-function SmallAlterWithOneButton.create(info)
+function SmallAlterWithOneButton.create(info, btnMsg)
     local main = cc.Layer:create()
     main:setContentSize(s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
@@ -40,7 +40,11 @@ function SmallAlterWithOneButton.create(info)
 
     local button_ok = ccui.Button:create("image/newstudy/button_onebutton_size.png","image/newstudy/button_onebutton_size_pressed.png","")
     button_ok:setPosition(back:getContentSize().width/2, back:getContentSize().height/2-70)
-    button_ok:setTitleText("确定")
+    if btnMsg == nil then
+        button_ok:setTitleText("确定")
+    else
+        button_ok:setTitleText(tostring(btnMsg))
+    end
     button_ok:setTitleFontSize(30)
     button_ok:addTouchEventListener(button_ok_clicked)
     back:addChild(button_ok)    

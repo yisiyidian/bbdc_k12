@@ -2,6 +2,7 @@ local DataClassBase = require('model.user.DataClassBase')
 local DataEverydayInfo = require('model/user/DataEverydayInfo')
 local DataLevelInfo = require('model.user.DataLevelInfo')
 local DataDailyStudyInfo = require('model/user/DataDailyStudyInfo')
+local DataDailyUsing = require('model.user.DataDailyUsing')
 
 USER_TYPE_MANUAL = 0
 USER_TYPE_GUEST  = 1
@@ -83,6 +84,11 @@ function DataUser:ctor()
     self.clientData                        = {0}
     self.levelInfo                         = DataLevelInfo.create()
 
+    -- summary boss time
+    self.timeAdjust                        = 0
+    self.failTime                          = 0
+    self.winCombo                          = 0
+
 --    self.lastUpdateSummaryBossTime         = 0
 --    self.summaryBossList                   = ''
 --    self.chestList                         = ''
@@ -99,6 +105,8 @@ function DataUser:ctor()
     self.beanRewardForIron                 = 3
 
     self.islandIndex                       = 0
+
+    self.dataDailyUsing                    = DataDailyUsing.create()
 end
 
 function DataUser:getLockFunctionState(productId)

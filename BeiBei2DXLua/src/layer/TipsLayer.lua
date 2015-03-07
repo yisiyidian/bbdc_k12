@@ -75,12 +75,12 @@ function TipsLayer:showSmall(message, confirmFunc, cancelFunc)
     return smallAlter
 end
 
-function TipsLayer:showSmallWithOneButton(message, confirmFunc)
+function TipsLayer:showSmallWithOneButton(message, confirmFunc, btnMsg)
     self.listener:setSwallowTouches(true)
     self.bg:setVisible(true)
     self:setVisible(true)
 
-    local smallAlter = SmallAlterWithOneButton.create(message)
+    local smallAlter = SmallAlterWithOneButton.create(message, btnMsg)
     smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
     self:addChild(smallAlter)
 
