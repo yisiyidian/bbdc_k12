@@ -226,9 +226,18 @@ function CollectUnfamiliarLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     self.wordInfo = self:createWordInfo(self.currentWord)
     self.randWord = self:createRandWord(self.currentWord,4)
     
-    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongWordNum, "blue")
-    progressBar:setPosition(bigWidth/2+44, 1049)
+    local progressBar_total_number 
+
+    if s_CURRENT_USER.islandIndex == 0 then
+        progressBar_total_number = s_max_wrong_num_first_island
+    else
+        progressBar_total_number = s_max_wrong_num_everyday
+    end
+
+    local progressBar = ProgressBar.create(progressBar_total_number, wrongWordNum, "blue")
+    progressBar:setPosition(bigWidth/2+44, 1054)
     backColor:addChild(progressBar,2)
+
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
