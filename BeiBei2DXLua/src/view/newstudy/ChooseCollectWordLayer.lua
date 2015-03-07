@@ -80,8 +80,16 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     self.currentWord = wordName
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
 
-    local progressBar = ProgressBar.create(s_max_wrong_num_everyday, wrongWordNum, "blue")
-    progressBar:setPosition(bigWidth/2+44, 1049)
+    local progressBar_total_number 
+
+    if s_CURRENT_USER.islandIndex == 0 then
+        progressBar_total_number = s_max_wrong_num_first_island
+    else
+        progressBar_total_number = s_max_wrong_num_everyday
+    end
+
+    local progressBar = ProgressBar.create(progressBar_total_number, wrongWordNum, "blue")
+    progressBar:setPosition(bigWidth/2+44, 1054)
     backColor:addChild(progressBar,2)
 
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
