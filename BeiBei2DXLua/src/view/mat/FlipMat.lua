@@ -727,6 +727,8 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
         removeTimer()
         if selectWord == main_word then
             successFunction()
+        elseif #selectStack >= string.len(main_word) then
+            failFunction()
         else
             buildTimer()
         end
