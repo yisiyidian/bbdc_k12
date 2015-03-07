@@ -7,6 +7,7 @@ local DataLevelInfo             = require('model.user.DataLevelInfo')
 local DataDailyStudyInfo        = require('model.user.DataDailyStudyInfo')
 local DataBossWord              = require('model.user.DataBossWord')
 local DataTask                  = require('model.user.DataTask')
+local DataDailyUsing            = require('model.user.DataDailyUsing')
 
 local databaseTables = {
         DataEverydayInfo,
@@ -15,7 +16,8 @@ local databaseTables = {
 
         DataDailyStudyInfo,
         DataBossWord,
-        DataTask
+        DataTask,
+        DataDailyUsing
     }
 
 local localdatabase_utils           = nil
