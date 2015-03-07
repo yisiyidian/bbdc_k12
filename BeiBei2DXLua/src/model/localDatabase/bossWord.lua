@@ -366,7 +366,8 @@ function M.addWrongWord(wordindex)
         local wordCount = #split(wordList, "|")
 
         local current_total_number
-        if s_CURRENT_USER.islandIndex == 0 then
+        local bossList = s_LocalDatabaseManager.getAllBossInfo()
+        if #bossList == 1 then
            current_total_number = 3
         else
            current_total_number = s_max_wrong_num_everyday
