@@ -28,12 +28,19 @@ function DataDailyUsing:update(dt)
 end
 
 function DataDailyUsing:reset()
-    -- if
-    -- get data from local db
-    -- else
     updateDataFromUser(self, s_CURRENT_USER)
-    self.startTime = os.time() -- seconds
-    self.usingTime = 0 -- seconds
+
+    s_LocalDatabaseManager.getDatas('DataDailyUsing', s_CURRENT_USER.objectId, s_CURRENT_USER.username, function (row)
+        self.startTime = row.startTime
+        self.usingTime = row.usingTime
+    end)
+
+    if not self:isToday() then
+        self.startTime = os.time() -- seconds
+        self.usingTime = 0 -- seconds
+    end
+
+    s_LocalDatabaseManager.saveDataClassObject(self, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
 end
 
 return DataDailyUsing
