@@ -22,33 +22,40 @@ function ShareCheckIn:ctor()
 	background:setPercentage((s_RIGHT_X - s_LEFT_X) / background:getContentSize().width * 100)
 	self.background = background
 
-	local label = cc.Label:createWithSystemFont('贝贝单词，根本停不下来','',32)
+	local label = cc.Label:createWithSystemFont('发现一个好玩的软件贝贝','',32)
+	label:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
 	label:setColor(cc.c3b(254,241,99))
 	label:setPosition(background:getContentSize().width / 2,s_DESIGN_HEIGHT * 7 / 8)
 	background:addChild(label)
 
-	local label2 = cc.Label:createWithSystemFont('今日搞定  ','',32)
-	label2:setAnchorPoint(0.5,0)
+	local label2 = cc.Label:createWithSystemFont('背单词，根本停不下来','',32)
+	label2:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
 	label2:setColor(cc.c3b(254,241,99))
+	label2:setPosition(background:getContentSize().width / 2,s_DESIGN_HEIGHT * 6.5 / 8)
 	background:addChild(label2)
-	local length2 = label2:getContentSize().width
 
-	local label3 = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getStudyWordsNum(os.date('%x',os.time())),'',64)
-	label3:setAnchorPoint(0.5,0.2)
-	label3:setColor(cc.c3b(254,108,0))
-	background:addChild(label3)
+	-- local label2 = cc.Label:createWithSystemFont('今日搞定  ','',32)
+	-- label2:setAnchorPoint(0.5,0)
+	-- label2:setColor(cc.c3b(254,241,99))
+	-- background:addChild(label2)
+	-- local length2 = label2:getContentSize().width
 
-	local label4 = cc.Label:createWithSystemFont('  个单词','',32)
-	label4:setAnchorPoint(0.5,0)
-	label4:setColor(cc.c3b(254,241,99))
-	background:addChild(label4)
+	-- local label3 = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getStudyWordsNum(os.date('%x',os.time())),'',64)
+	-- label3:setAnchorPoint(0.5,0.2)
+	-- label3:setColor(cc.c3b(254,108,0))
+	-- background:addChild(label3)
 
-	local length2 = label2:getContentSize().width
-	local length3 = label3:getContentSize().width
-	local length4 = label4:getContentSize().width
-	label2:setPosition(background:getContentSize().width / 2 - (length3 + length4) / 2,s_DESIGN_HEIGHT * 6.3 / 8)
-	label3:setPosition(background:getContentSize().width / 2 + (length2 - length4) / 2,s_DESIGN_HEIGHT * 6.3 / 8)
-	label4:setPosition(background:getContentSize().width / 2 + (length3 + length2) / 2,s_DESIGN_HEIGHT * 6.3 / 8)
+	-- local label4 = cc.Label:createWithSystemFont('  个单词','',32)
+	-- label4:setAnchorPoint(0.5,0)
+	-- label4:setColor(cc.c3b(254,241,99))
+	-- background:addChild(label4)
+
+	-- local length2 = label2:getContentSize().width
+	-- local length3 = label3:getContentSize().width
+	-- local length4 = label4:getContentSize().width
+	-- label2:setPosition(background:getContentSize().width / 2 - (length3 + length4) / 2,s_DESIGN_HEIGHT * 6.3 / 8)
+	-- label3:setPosition(background:getContentSize().width / 2 + (length2 - length4) / 2,s_DESIGN_HEIGHT * 6.3 / 8)
+	-- label4:setPosition(background:getContentSize().width / 2 + (length3 + length2) / 2,s_DESIGN_HEIGHT * 6.3 / 8)
 
 	local close_button = ccui.Button:create('image/share/share_close_before_sharing.png')
 	close_button:setScale9Enabled(true)

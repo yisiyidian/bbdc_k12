@@ -1401,17 +1401,18 @@ end
 function SummaryBossLayer:lose(chapter,entrance,wordList)
     self.globalLock = true
     self.girl:setAnimation(0,'girl-fail',true)
-
-    s_CURRENT_USER.winCombo = 0
-    s_CURRENT_USER.failTime = s_CURRENT_USER.failTime + 1
-    if s_CURRENT_USER.failTime > 3 and s_CURRENT_USER.timeAdjust < 30 then
-        s_CURRENT_USER.timeAdjust = s_CURRENT_USER.timeAdjust + 5
-    elseif s_CURRENT_USER.failTime <= 3 then
-        s_CURRENT_USER.timeAdjust = 0
+    if not self.useItem then
+        s_CURRENT_USER.winCombo = 0
+        s_CURRENT_USER.failTime = s_CURRENT_USER.failTime + 1
+        if s_CURRENT_USER.failTime > 3 and s_CURRENT_USER.timeAdjust < 30 then
+            s_CURRENT_USER.timeAdjust = s_CURRENT_USER.timeAdjust + 5
+        elseif s_CURRENT_USER.failTime <= 3 then
+            s_CURRENT_USER.timeAdjust = 0
+        end
+        saveUserToServer({['timeAdjust']=s_CURRENT_USER.timeAdjust, 
+                          ['winCombo']=s_CURRENT_USER.winCombo,
+                          ['failTime']=s_CURRENT_USER.failTime})
     end
-    saveUserToServer({['timeAdjust']=s_CURRENT_USER.timeAdjust, 
-                      ['winCombo']=s_CURRENT_USER.winCombo,
-                      ['failTime']=s_CURRENT_USER.failTime})
 
     s_SCENE:callFuncWithDelay(2,function (  )
             -- body
