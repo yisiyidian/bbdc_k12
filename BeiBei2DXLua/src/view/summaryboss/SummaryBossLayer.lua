@@ -136,8 +136,9 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         end
                     end
                     
-                    if layer.currentHintWord[i] then
+                    if layer.currentHintWord[i] or layer.rightWord > layer.maxCount then
                         bullet_damage = 1
+                        layer:addMapInfo(selectWord)
                     else
                         bullet_damage = 2 + math.floor(layer.combo / 3)
                         local hasHint = false
@@ -149,6 +150,9 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         else 
                             layer.combo = 0
                         end
+                    end
+                    if layer.rightWord > layer.maxCount then
+                        layer.combo = 0
                     end
                     if layer.combo > 9 then
                         layer.combo = 9
@@ -945,7 +949,7 @@ function SummaryBossLayer:initWordList(word)
         self.totalBlood = self.totalBlood + string.len(wordList[i]) * 2
     end
     self.currentBlood = self.totalBlood
-    self.totalTime = math.ceil(self.totalBlood / 7) * 3 + s_CURRENT_USER.timeAdjust
+    self.totalTime = math.ceil(self.totalBlood / 7) * 15 + s_CURRENT_USER.timeAdjust
     self.leftTime = self.totalTime
     -- self.totalBlood = levelConfig.summary_boss_hp
     -- self.currentBlood = self.totalBlood
@@ -1123,14 +1127,20 @@ function SummaryBossLayer:initCrab2(chapter)
     end
 end
 
-
-
 function SummaryBossLayer:initMapInfo()
     local start = os.time()
     self.isFirst = {}
     self.isCrab = {}
     self.character = {}
-    for k = 1,#self.wordPool do
+    self:initMapInfoByIndex(1)
+end
+
+function SummaryBossLayer:initMapInfoByIndex(startIndex)
+    -- local start = os.time()
+    -- self.isFirst = {}
+    -- self.isCrab = {}
+    -- self.character = {}
+    for k = startIndex,#self.wordPool do
         self:initStartIndex(k)
         self.character[k] = {}
         self.isFirst[k] = {}
@@ -1216,6 +1226,29 @@ function SummaryBossLayer:initMapInfo()
         end
     end
     local finish = os.time()
+end
+
+function SummaryBossLayer:addMapInfo(word)
+    local flag = false
+    if #self.wordPool[#self.wordPool] >= 3 or self.currentIndex == #self.wordPool then
+        flag = true
+    else
+        local length = string.len(word)
+        for i = 1,#self.wordPool[#self.wordPool] do
+            length = string.len(self.wordPool[#self.wordPool][i]) + length
+        end
+        if length > 25 then
+            flag = true
+        end
+    end
+    if flag then
+        self.wordPool[#self.wordPool + 1] = {}
+        --print(word)
+        self.wordPool[#self.wordPool][1] = word
+    else
+        self.wordPool[#self.wordPool][#self.wordPool[#self.wordPool] + 1] = word
+    end
+    self:initMapInfoByIndex(#self.wordPool)
 end
 
 function SummaryBossLayer:initMap(chapter)

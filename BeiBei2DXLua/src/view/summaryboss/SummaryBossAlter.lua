@@ -355,10 +355,11 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     local been_button = cc.Sprite:create("image/shop/been.png")
     been_button:setPosition(button:getContentSize().width * 0.75, button:getContentSize().height/2)
     button:addChild(been_button)
-
-    local rewardNumber = cc.Label:createWithSystemFont("+"..3,"",36)
-    rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
-    button:addChild(rewardNumber)
+    if self.entrance == ENTRANCE_NORMAL then
+        local rewardNumber = cc.Label:createWithSystemFont("+"..3,"",36)
+        rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
+        button:addChild(rewardNumber)
+    end
 
     local label = cc.Label:createWithSystemFont('打败总结Boss！','',44)
     label:setColor(cc.c3b(31,68,102))
