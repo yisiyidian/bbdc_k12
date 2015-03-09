@@ -39,6 +39,10 @@ function HomeLayer.create(share)
     local totalGraspWordNum     = s_LocalDatabaseManager.getGraspWordsNum(os.date('%x',os.time()))
     local totalStudyDayNum      = s_LocalDatabaseManager.getStudyDayNum()
 
+    -- add tutorial step
+    if s_CURRENT_USER.tutorialStep == s_tutorial_home then
+        s_CURRENT_USER:setTutorialStep(s_tutorial_home+1)
+    end
     -- print("totalStudyWordNum : "..totalStudyWordNum)
     -- print("totalGraspWordNum : "..totalGraspWordNum)
     -- print("totalStudyDayNum : "..totalStudyDayNum)
