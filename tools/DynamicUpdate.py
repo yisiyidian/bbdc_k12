@@ -126,13 +126,13 @@ def exportAssets(isDebug, assetsPath, tmp_assetPath, AssetsManagerReleaseFolder,
             mContent = mContent + '\n' + c
             i = 1
 
-    res = getAssetsMD5('res', assetsPath + 'res/', tmp_assetPath + 'res/')
-    for c in res:
-        if i > 0:
-            mContent = mContent + ',\n' + c
-        else:
-            mContent = mContent + '\n' + c
-            i = 1
+    # res = getAssetsMD5('res', assetsPath + 'res/', tmp_assetPath + 'res/')
+    # for c in res:
+    #     if i > 0:
+    #         mContent = mContent + ',\n' + c
+    #     else:
+    #         mContent = mContent + '\n' + c
+    #         i = 1
 
     mContent = mContent + end
 
@@ -147,7 +147,7 @@ def exportAssets(isDebug, assetsPath, tmp_assetPath, AssetsManagerReleaseFolder,
 # --------------------------------------------------------------------------------
 
 assetsPath = os.getcwd() + '/../BeiBei2DXLua/frameworks/runtime-src/proj.android/assets/'
-AssetsManagerReleaseFolder = '2.0.2'
+AssetsManagerReleaseFolder = '1.6.0'
 version = '2.0.2.0.0.0'
 engineVersion = '3.3 rc2'
 

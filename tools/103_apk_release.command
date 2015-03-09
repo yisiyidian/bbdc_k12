@@ -1,7 +1,7 @@
 baseDirForScriptSelf=$(cd "$(dirname "$0")"; pwd)
 cd ${baseDirForScriptSelf}/../BeiBei2DXLua
 
-cocos compile \
+cocos run \
     -p android \
     -j 4 \
     -ap 17 \

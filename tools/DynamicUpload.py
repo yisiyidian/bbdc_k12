@@ -12,7 +12,7 @@ tmp_assetPath = os.getcwd() + '/../tmp_asset/debug/'
 AssetsManager = 'AssetsManagerDebug'
 
 # tmp_assetPath = os.getcwd() + '/../tmp_asset/release/'
-# AssetsManager = 'AssetsManagerRelease/2.0.2'
+# AssetsManager = 'AssetsManagerRelease/1.6.0'
 
 for parent, dirnames, filenames in os.walk(tmp_assetPath):
     for filename in filenames:
