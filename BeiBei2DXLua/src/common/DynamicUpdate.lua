@@ -44,7 +44,7 @@ function DynamicUpdate.beginLoginUpdate(updateInfo)
         message = "找不到贝贝的新东东，使用旧装备"
     else
         local function onUpdateEvent(event)
-            showProgressHUD(message)
+            showProgressHUD(message, true)
             
             local eventCode = event:getEventCode()
             if eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_NO_LOCAL_MANIFEST then
