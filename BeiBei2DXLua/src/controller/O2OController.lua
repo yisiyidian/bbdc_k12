@@ -99,7 +99,7 @@ function O2OController.start()
 end
 
 function O2OController.onAssetsManagerCompleted()
-    hideProgressHUD()
+    hideProgressHUD(true)
     -- O2OController.start() : has got user from local database
     local tmpUser = DataUser.create()
     local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)

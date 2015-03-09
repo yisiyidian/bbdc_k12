@@ -22,17 +22,15 @@ function ShareCheckIn:ctor()
 	background:setPercentage((s_RIGHT_X - s_LEFT_X) / background:getContentSize().width * 100)
 	self.background = background
 
-	local label = cc.Label:createWithSystemFont('发现一个好玩的软件贝贝','',32)
-	label:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
+	local label = cc.Label:createWithSystemFont('贝贝单词，根本停不下来','',32)
 	label:setColor(cc.c3b(254,241,99))
-	label:setPosition(background:getContentSize().width / 2,s_DESIGN_HEIGHT * 7 / 8)
+	label:setPosition(background:getContentSize().width / 2, s_DESIGN_HEIGHT * 7 / 8)
 	background:addChild(label)
 
-	local label2 = cc.Label:createWithSystemFont('背单词，根本停不下来','',32)
-	label2:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
-	label2:setColor(cc.c3b(254,241,99))
-	label2:setPosition(background:getContentSize().width / 2,s_DESIGN_HEIGHT * 6.5 / 8)
-	background:addChild(label2)
+    local labelx = cc.Label:createWithSystemFont('发现一个好玩的软件贝贝，背单词，根本停不下来','',32)
+    labelx:setColor(cc.c3b(254,241,99))
+    labelx:setPosition(background:getContentSize().width / 2, s_DESIGN_HEIGHT * 6.3 / 8)
+    background:addChild(labelx)
 
 	-- local label2 = cc.Label:createWithSystemFont('今日搞定  ','',32)
 	-- label2:setAnchorPoint(0.5,0)
