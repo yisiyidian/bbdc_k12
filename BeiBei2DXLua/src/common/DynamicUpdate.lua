@@ -11,7 +11,7 @@ function DynamicUpdate.initUpdateLabel()
 
     local updateInfo = cc.Label:create()
     updateInfo:setSystemFontSize(25)
-    updateInfo:setString(app_version_debug)
+    updateInfo:setString(tostring(s_APP_VERSION))
     updateInfo:setAnchorPoint(0,0)
     updateInfo:setPosition(s_LEFT_X,0)
     updateInfo:setColor(cc.c4b(0,0,0,0))
