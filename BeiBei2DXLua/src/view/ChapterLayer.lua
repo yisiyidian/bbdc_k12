@@ -18,6 +18,11 @@ end
 
 function ChapterLayer:ctor()
     s_SCENE.touchEventBlockLayer.unlockTouch()
+
+    if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
+        s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
+        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
+    end
     playMusic(s_sound_bgm1,true)
     self.chapterDic = {}
     -- add list view
@@ -294,14 +299,14 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
         notification:addChild(number)
         
         
-        if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
-            local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
-            finger:addAnimation(0, 'animation', true)
-            finger:setPosition(notification:getContentSize().width/2+20,-30)
-            notification:addChild(finger,10)
-            s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
-            s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
-        end
+        -- if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
+        --     local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
+        --     finger:addAnimation(0, 'animation', true)
+        --     finger:setPosition(notification:getContentSize().width/2+20,-30)
+        --     notification:addChild(finger,10)
+        --     s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
+        --     s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
+        -- end
         
         -- define touchEvent
         local function touchEvent(sender,eventType)
