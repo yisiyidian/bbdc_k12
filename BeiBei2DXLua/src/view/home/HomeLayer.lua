@@ -42,7 +42,7 @@ function HomeLayer.create(share)
     -- add tutorial step
     if s_CURRENT_USER.tutorialStep == s_tutorial_home then
         s_CURRENT_USER:setTutorialStep(s_tutorial_home+1)
-        print('tutorial_step:'..s_CURRENT_USER.tutorial_step)
+        -- print('tutorial_step:'..s_CURRENT_USER.tutorial_step)
     end
     -- print("totalStudyWordNum : "..totalStudyWordNum)
     -- print("totalGraspWordNum : "..totalGraspWordNum)
