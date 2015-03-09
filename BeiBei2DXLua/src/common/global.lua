@@ -167,3 +167,15 @@ function initApp(start)
     _declaration()
 end
 
+local flag_getMaxWrongNumEveryLevel = -1
+function getMaxWrongNumEveryLevel()
+    if flag_getMaxWrongNumEveryLevel <= 1 then
+        local bossList = s_LocalDatabaseManager.getAllBossInfo()
+        flag_getMaxWrongNumEveryLevel = #bossList
+    end
+    if flag_getMaxWrongNumEveryLevel <= 1 then
+        return s_max_wrong_num_first_island
+    else 
+        return s_max_wrong_num_everyday
+    end
+end

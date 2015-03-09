@@ -21,14 +21,7 @@ end
 
 local function createOptions(randomNameArray,wordlist,position)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-    local progressBar_total_number 
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
-    if #bossList == 1 then
-        progressBar_total_number = 3
-    else
-        progressBar_total_number = s_max_wrong_num_everyday
-    end 
-    
+    local progressBar_total_number = getMaxWrongNumEveryLevel()    
     local wordMeaningTable= {}
     for i = 1, 4 do
         local name = randomNameArray[i]
@@ -127,14 +120,8 @@ end
 local function createDontknow(wordlist)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
-    local progressBar_total_number 
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
-    if #bossList == 1 then
-        progressBar_total_number = 3
-    else
-        progressBar_total_number = s_max_wrong_num_everyday
-    end 
-
+    local progressBar_total_number = getMaxWrongNumEveryLevel()
+    
     local click_dontknow_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
@@ -174,14 +161,7 @@ function BlacksmithLayer:ctor(wordlist)
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
     self.randWord = CollectUnfamiliar:createRandWord(self.currentWord,4)
 
-    local progressBar_total_number 
-
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
-    if #bossList == 1 then
-        progressBar_total_number = 3
-    else
-        progressBar_total_number = s_max_wrong_num_everyday
-    end
+    local progressBar_total_number = getMaxWrongNumEveryLevel()
 
     self.progressBar = ProgressBar.create(progressBar_total_number, progressBar_total_number - #wordlist, "yellow")
     self.progressBar:setPosition(bigWidth/2+44, 1054)

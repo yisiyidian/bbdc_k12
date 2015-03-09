@@ -71,14 +71,7 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordN
         color = "yellow"
     end
     
-    local progressBar_total_number 
-
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
-    if #bossList == 1 then
-        progressBar_total_number = 3
-    else
-        progressBar_total_number = s_max_wrong_num_everyday
-    end
+    local progressBar_total_number = getMaxWrongNumEveryLevel()
 
     local progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
     progressBar:setPosition(bigWidth/2+44, 1054)
