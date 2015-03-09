@@ -14,7 +14,7 @@ local  ChooseWrongLayer = class("ChooseRightLayer", function ()
 end)
 
 function ChooseWrongLayer.create(word,wrongNum,wrongWordList,preWordName, preWordNameState)
-    local layer = ChooseWrongLayer.new(word,wrongNum,wrongWordList)
+    local layer = ChooseWrongLayer.new(word,wrongNum,wrongWordList,preWordName, preWordNameState)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end

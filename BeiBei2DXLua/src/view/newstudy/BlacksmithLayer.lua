@@ -130,7 +130,7 @@ local function createDontknow(wordlist)
             AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW_STRIKEWHILEHOT, 'TOUCH')
 
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],progressBar_total_number - #wordlist, preWordName,preWordNameState,CreateWrongLayer_From_Iron,wordlist)
+            local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1], progressBar_total_number - #wordlist, wordlist, CreateWrongLayer_From_Iron, wordlist)
             s_SCENE:replaceGameLayer(chooseWrongLayer)            
         end
     end
