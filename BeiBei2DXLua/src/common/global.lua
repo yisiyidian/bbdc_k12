@@ -1,7 +1,5 @@
-function reloadModule( moduleName )
-    package.loaded[moduleName] = nil
-    return require(moduleName)
-end
+app_version_debug   = 200002
+app_version_release = 200002
 
 local function _initConstant()
     -- number
