@@ -59,8 +59,8 @@ end
 function DataLevelInfo:updateDataToServer()
     local currentProgress = self:computeCurrentProgress() 
     local oldProgress = self:getLevelInfo(s_CURRENT_USER.bookKey) 
-    local increments = (currentProgress - oldProgress) * 2   -- add beans count
-    s_CURRENT_USER:addBeans(increments)
+    -- local increments = (currentProgress - oldProgress) * 2   -- add beans count
+    -- s_CURRENT_USER:addBeans(increments)
     saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
     -----------------------------
     bookKey = s_CURRENT_USER.bookKey

@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -34,7 +35,9 @@ import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
+import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.AVUser;
+import com.avos.avoscloud.FindCallback;
 import com.avos.avoscloud.FunctionCallback;
 import com.avos.avoscloud.GetDataCallback;
 import com.avos.avoscloud.GetFileCallback;
@@ -318,7 +321,6 @@ public class BBNDK {
 							String objectjson = json.toString();
 							invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, objectjson, null);
 						} else {
-							String msg = e.getMessage().replace("\"", "\'");
 							String errorjson = "{\"code\":" + e.hashCode() + ",\"message\":\"" + e.getMessage() + "\",\"description\":\"" + e.getLocalizedMessage() + "\"}";
 							invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, null, errorjson);
 						}
@@ -327,6 +329,69 @@ public class BBNDK {
 				
 			}
 		});
+	}
+	
+	public static void searchUser(String username, String nickName, final long cppObjPtr) {
+		boolean bu = username != null && username.length() > 0;
+		AVQuery<AVUser> query_username = null;
+		if (bu) {
+			query_username = AVUser.getQuery();
+			query_username.whereEqualTo("username", username);
+		}
+		
+		boolean bn = nickName != null && nickName.length() > 0;
+		AVQuery<AVUser> query_nickName = null;
+		if (bn) {
+			query_nickName = AVUser.getQuery();
+			query_nickName.whereEqualTo("nickName", nickName);
+		}
+
+		AVQuery<AVUser> mainQuery = null;
+		if (bu && bn) {
+			List<AVQuery<AVUser>> queries = new ArrayList<AVQuery<AVUser>>();
+			queries.add(query_username);
+			queries.add(query_nickName);
+			mainQuery = AVQuery.or(queries);
+		} else if (bu) {
+			mainQuery = query_username;
+		} else if (bn) {
+			mainQuery = query_nickName;
+		}
+
+		if (mainQuery != null) {
+			mainQuery.findInBackground(new FindCallback<AVUser>() {
+				public void done(final List<AVUser> results, final AVException e) {
+					((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
+						@Override
+						public void run() {
+							if (e == null) {
+								String jsons = "";
+								for (AVUser u : results) {
+									if (jsons.length() == 0) {
+										jsons += "{\"results\":[";
+										jsons += AVUserToJsonStr(u);
+									} else {
+										jsons += "," + AVUserToJsonStr(u);
+									}
+								}
+								if (jsons.length() > 0) {
+									jsons += "]}";
+								} else {
+									jsons = "{\"results\":[]}";
+								}
+								invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, jsons, null);
+							} else {
+								String errorjson = "{\"code\":" + e.hashCode() + ",\"message\":\"" + e.getMessage() + "\",\"description\":\"" + e.getLocalizedMessage() + "\"}";
+								invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, null, errorjson);
+							}
+						}
+					});
+				}
+			});
+		} else {
+			String errorjson = "{\"code\":-1" + ",\"message\":\"CXAVCloud-searchUser query\",\"description\":\"CXAVCloud-searchUser query\"}";
+			invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, null, errorjson);
+		}
 	}
 	
 	// ***************************************************************************************************************************

@@ -91,19 +91,21 @@ function FriendSearch:ctor()
             end
             local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
             showProgressHUD('正在搜索相应用户', true)
-            s_UserBaseServer.searchUserByNickName(username,
-                function(api,result)
-                    local f_user = {}
-                    s_UserBaseServer.searchUserByUserName(username,
-                        function(api,result)
+
+            local request = cx.CXAVCloud:new()
+            -- request:searchUser(username, nickName, callback)
+            request:searchUser(username, username, function (results, err)
+
                             hideProgressHUD(true)
-                            if type(result.results) == 'string' then
-                                saveLuaErrorToServer('view/friend/FriendSearch.lua; ' .. result.results)
-                            else
-                                for i, user in ipairs(result.results) do
+                            local f_user = {}
+                            print('request:searchUser:', results, err, type(results), string.len(results) > 0)
+                            if err == nil and results ~= nil and type(results) == 'string' and string.len(results) > 0 then
+                                local data = s_JSON.decode(results)
+                                for i, user in ipairs(data.results) do
                                     f_user[#f_user + 1] = user
                                 end
                             end
+
                             if #f_user > 0 then
                                 s_CURRENT_USER:getFriendsInfo() 
                                 local listView = ccui.ListView:create()
@@ -273,15 +275,7 @@ function FriendSearch:ctor()
                                 smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
                                 s_SCENE.popupLayer:addChild(smallAlter) 
                             end
-                        end,
-                        function(api, code, message, description)
-                            hideProgressHUD(true)
-                        end)
-
-                end,
-                function(api, code, message, description)
-                    hideProgressHUD(true)
-                end)
+            end)
             
             
             

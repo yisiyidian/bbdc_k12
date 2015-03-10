@@ -166,7 +166,7 @@ function ChapterLayer:checkUnlockLevel()
     else
         local chapterKey = 'chapter'..math.floor(oldProgress / s_islands_per_page)
         if taskIndex == -2 and s_level_popup_state == 1 then
-            s_level_popup_state = 0
+            s_level_popup_state = 2
             s_SCENE:callFuncWithDelay(1.0, function() 
                 self.chapterDic[chapterKey]:addPopup(currentProgress)
             end)
