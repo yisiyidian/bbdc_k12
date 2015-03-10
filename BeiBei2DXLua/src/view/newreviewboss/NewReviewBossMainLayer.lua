@@ -14,6 +14,10 @@ Review_From_Word_Bank = 1
 Review_From_Normal    = 2
 
 function NewReviewBossMainLayer.create(ReviewWordList,number)
+    if s_CURRENT_USER.tutorialStep == s_tutorial_review_boss then
+        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_review_boss)
+    end
+
     AnalyticsFirst(ANALYTICS_FIRST_REVIEW_BOSS, 'SHOW')
 
     --pause music
@@ -355,7 +359,11 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
                 if answer == sprite_array[logic_location.x][logic_location.y].character then
                     rightWordFuntion()
                 end
-            else            
+            else   
+                if s_CURRENT_USER.tutorialStep == s_tutorial_review_boss then
+                   s_CURRENT_USER:setTutorialStep(s_tutorial_review_boss + 1)
+                   s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_review_boss + 1)
+                end         
                 
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             

@@ -127,7 +127,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
         local normal = function()  
             if s_CURRENT_USER.tutorialStep == s_tutorial_study then
                s_CURRENT_USER:setTutorialStep(s_tutorial_study + 1)
-               s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_summary_boss)
+               s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_review_boss)
             end
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 

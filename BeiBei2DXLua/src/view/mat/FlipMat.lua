@@ -763,23 +763,35 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
     end
 
     failFunction = function ()
+        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
         if main.wrongLock then
             main.globalLock = true
         end
-
-        for i = 1, #selectStack do
-            local node = selectStack[i]
-            node.removeSelectStyle()
+        
+        local time = 0
+        local i = 1
+        local function slideFalseUpdate(delta)
+            time = time + delta
+            if time * 10 > #selectStack + 1 then
+                main:unscheduleUpdate()
+                selectStack = {}
+                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+            elseif time * 10 > i then
+                local node = selectStack[i]
+                if node ~= nil then
+                node.removeSelectStyle()
+                i = i + 1
+                else
+                main:unscheduleUpdate()
+                selectStack = {}
+                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+                end
+            end
         end
-        selectStack = {}
-
-        firstFlipNode.firstStyle()
         removeTimer()
-
         main.fail()
-
-        --slide wrong
         playSound(s_sound_learn_false)
+        main:scheduleUpdateWithPriorityLua(slideFalseUpdate, 0)
     end
 
     main.forceFail = function ()
@@ -829,10 +841,3 @@ end
 
 
 return FlipMat
-
-
-
-
-
-
-
