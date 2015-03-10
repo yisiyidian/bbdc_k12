@@ -32,7 +32,8 @@ def zipFolder(path, folder):
             myzip.write(parent, parent.replace(path, ''), zipfile.ZIP_DEFLATED)
             for filename in filenames:
                 fullPath = os.path.join(parent, filename)
-                myzip.write(fullPath, fullPath.replace(path, ''), zipfile.ZIP_DEFLATED)
+                if fullPath.find('model/words') < 0:
+                    myzip.write(fullPath, fullPath.replace(path, ''), zipfile.ZIP_DEFLATED)
 
         return zipname
 
@@ -112,6 +113,10 @@ def exportAssets(isDebug, assetsPath, tmp_assetPath, AssetsManagerReleaseFolder,
         versionContent = versionDebug + '\n}'
         mContent = headDebug
 
+    if os.path.exists(tmp_assetPath):
+        shutil.rmtree(tmp_assetPath)
+    os.makedirs(tmp_assetPath)
+
     src = getAssetsMD5('src', assetsPath + 'src/', tmp_assetPath + 'src/')
     i = 0
     for c in src:
@@ -121,13 +126,13 @@ def exportAssets(isDebug, assetsPath, tmp_assetPath, AssetsManagerReleaseFolder,
             mContent = mContent + '\n' + c
             i = 1
 
-    res = getAssetsMD5('res', assetsPath + 'res/', tmp_assetPath + 'res/')
-    for c in res:
-        if i > 0:
-            mContent = mContent + ',\n' + c
-        else:
-            mContent = mContent + '\n' + c
-            i = 1
+    # res = getAssetsMD5('res', assetsPath + 'res/', tmp_assetPath + 'res/')
+    # for c in res:
+    #     if i > 0:
+    #         mContent = mContent + ',\n' + c
+    #     else:
+    #         mContent = mContent + '\n' + c
+    #         i = 1
 
     mContent = mContent + end
 
@@ -142,16 +147,16 @@ def exportAssets(isDebug, assetsPath, tmp_assetPath, AssetsManagerReleaseFolder,
 # --------------------------------------------------------------------------------
 
 assetsPath = os.getcwd() + '/../BeiBei2DXLua/frameworks/runtime-src/proj.android/assets/'
-AssetsManagerReleaseFolder = '1.6.0'
-version = '2.0.0.0.0.1'
+AssetsManagerReleaseFolder = '2.0.2'
+version = '2.0.2.0.0.0'
 engineVersion = '3.3 rc2'
 
 tmp_assetPath = os.getcwd() + '/../tmp_asset/debug/'
 manifestDebugFilePath = tmp_assetPath + 'project_server_debug.manifest'
 manifestVersionDebugFilePath = tmp_assetPath + 'version_debug.manifest'
-
-# tmp_assetPath = os.getcwd() + '/../tmp_asset/release/'
-# manifestReleaseFilePath = tmp_assetPath + 'project_server_release.manifest'
-# manifestVersionReleaseFilePath = tmp_assetPath + 'version_release.manifest'
-
 exportAssets(True, assetsPath, tmp_assetPath, AssetsManagerReleaseFolder, version, engineVersion, manifestDebugFilePath, manifestVersionDebugFilePath)
+
+tmp_assetPath = os.getcwd() + '/../tmp_asset/release/'
+manifestReleaseFilePath = tmp_assetPath + 'project_server_release.manifest'
+manifestVersionReleaseFilePath = tmp_assetPath + 'version_release.manifest'
+exportAssets(False, assetsPath, tmp_assetPath, AssetsManagerReleaseFolder, version, engineVersion, manifestReleaseFilePath, manifestVersionReleaseFilePath)

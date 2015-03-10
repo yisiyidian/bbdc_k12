@@ -365,13 +365,7 @@ function M.addWrongWord(wordindex)
         local newWordList = wordList.."|"..wordname
         local wordCount = #split(wordList, "|")
 
-        local current_total_number
-        local bossList = s_LocalDatabaseManager.getAllBossInfo()
-        if #bossList == 1 then
-           current_total_number = 3
-        else
-           current_total_number = s_max_wrong_num_everyday
-        end
+        local current_total_number = getMaxWrongNumEveryLevel()
 
         if wordCount == current_total_number - 1 then
             s_LocalDatabaseManager.minusTodayRemainTaskNum()
@@ -412,7 +406,7 @@ function M.updateTypeIndex(bossID)
             Manager.database:exec(query)
             saveDataToServer(true, time, bossID + 1, 0, '', lastWordIndex, 0)
         elseif newTypeIndex == 8 then
-            s_LocalDatabaseManager.addGraspWordsNum(s_max_wrong_num_everyday)
+            s_LocalDatabaseManager.addGraspWordsNum(getMaxWrongNumEveryLevel())
         end
     end    
 

@@ -49,6 +49,10 @@ function CorePlayManager.initTotalPlay()
     CorePlayManager.currentTypeIndex       = CorePlayManager.currentBoss.typeIndex
     CorePlayManager.currentRightWordList   = CorePlayManager.currentBoss.rightWordList
     CorePlayManager.currentWrongWordList   = CorePlayManager.currentBoss.wrongWordList 
+    
+    CorePlayManager.BookWordList          = s_BookWord[s_CURRENT_USER.bookKey]
+    CorePlayManager.currentIndex          = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
+    CorePlayManager.wrongWordNum          = #CorePlayManager.currentWrongWordList
 
     if     CorePlayManager.currentTypeIndex == 0 then
         -- study   model
@@ -121,7 +125,7 @@ function CorePlayManager.leaveStudyModel(state)
         local wordName = CorePlayManager.BookWordList[CorePlayManager.currentIndex]
         CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum, CorePlayManager.preWordName, CorePlayManager.preWordNameState)
     else
-        print('answer wrong')
+        print('answer wrong' .. tostring(CorePlayManager.currentIndex))
         local isNewBossBirth = s_LocalDatabaseManager.addWrongWord(CorePlayManager.currentIndex)
         s_LocalDatabaseManager.printBossWord()
         CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
