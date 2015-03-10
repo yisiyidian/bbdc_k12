@@ -124,6 +124,9 @@ function DownloadSoundButton.create(parentNode)
     
     --update the state when the download state is "DOWNLOADING"
     local updateDownloadingState = function()
+        -- error handle
+        if SoundsDownloadingInstance[bookKey] == nil then return end
+
         local percent = SoundsDownloadingInstance[bookKey].downloadPercent
         local currentSize = string.format("%.2f", tonumber(string.sub(total_size, 1, -2))* percent/100)
         button:setPercent(percent)
@@ -133,7 +136,7 @@ function DownloadSoundButton.create(parentNode)
     
     --update the state when the download state is "SUCCESS"
     local updateSuccessState =function()
-        if SoundsDownloadingInstance[bookKey] ~=nil then
+        if SoundsDownloadingInstance[bookKey] ~= nil then
             SoundsDownloadingInstance[bookKey]=nil
             local popupSuccess = require("popup.PopupSoundDownloadSuccess").create()
             local parent = parentNode:getParent()

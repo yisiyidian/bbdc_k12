@@ -1,108 +1,172 @@
-{ 
-	"packageUrl" : "http://yisiyidian.com/AssetsManagerDebug/",
-	"remoteManifestUrl" : "http://yisiyidian.com/AssetsManagerDebug/project_server_debug.manifest", 
-	"remoteVersionUrl" : "http://yisiyidian.com/AssetsManagerDebug/version_debug.manifest", 
-	"version" : "1.6.0.0", 
-	"engineVersion" : "3.3 rc2", 
-	"assets" : {	
-		"ServerAssets/src/anysdkConst.luac" : {
-			"md5" : "b7b0cea110b887df9c2d6fe3cf718d44",
-			"compressed" : true
-		},
-		"ServerAssets/src/AppScene.luac" : {
-			"md5" : "083be9ad2c9914dc12eb80bf55638df7",
-			"compressed" : true
-		},
-		"ServerAssets/src/AppVersionInfo.luac" : {
-			"md5" : "5c400e751d925ea75ec000b433680b6d",
-			"compressed" : true
-		},
-		"ServerAssets/src/AudioMgr.luac" : {
-			"md5" : "cc45f5d5a4510d21562429b1d4f15ee9",
-			"compressed" : true
-		},
-		"ServerAssets/src/main.luac" : {
-			"md5" : "ba774da833f39b37cea8be8a5a3b10e2",
-			"compressed" : true
-		},
-		"ServerAssets/src/cocos.zip" : {
-			"md5" : "ecfc4b7941b6d6d9be25639b178b352d",
-			"compressed" : true
-		},
-		"ServerAssets/src/common.zip" : {
-			"md5" : "420f1255c16d4a215fb46f34440d8e15",
-			"compressed" : true
-		},		
-		"ServerAssets/src/controller.zip" : {
-			"md5" : "cdb5657fd2718a65b13bee1ae9f5e3ba",
-			"compressed" : true
-		},		
-		"ServerAssets/src/example.zip" : {
-			"md5" : "f0588465218911e57aa3912b68052fc0",
-			"compressed" : true
-		},		
-		"ServerAssets/src/layer.zip" : {
-			"md5" : "7ec5205a680ab7d4b6fedb38430f7ddc",
-			"compressed" : true
-		},		
-		"ServerAssets/src/model.zip" : {
-			"md5" : "87f8f1087151a30c990f2b9627a6b3af",
-			"compressed" : true
-		},		
-		"ServerAssets/src/popup.zip" : {
-			"md5" : "50c665e04c7067a3ec5d4a38438a73ba",
-			"compressed" : true
-		},		
-		"ServerAssets/src/server.zip" : {
-			"md5" : "d83c95bf3ee4ed081493ec659d58e0d3",
-			"compressed" : true
-		},		
-		"ServerAssets/src/store.zip" : {
-			"md5" : "dc916203c5d2d62806360b69ac967973",
-			"compressed" : true
-		},		
-		"ServerAssets/src/view.zip" : {
-			"md5" : "3a004bec65377d404067e487a0eab76f",
-			"compressed" : true
-		},			
-		"ServerAssets/res/ccb.zip" : {
-			"md5" : "c4e7d415eb7d7d7fa6843a32dedcbb2e",
-			"compressed" : true
-		},	
-		"ServerAssets/res/book.zip" : {
-			"md5" : "bd57ba8109e5c9fbdbf4b1806a77326a",
-			"compressed" : true
-		},	
-		"ServerAssets/res/cfg.zip" : {
-			"md5" : "bcf71af1a6bacc79988300fe5f632760",
-			"compressed" : true
-		},	
-		"ServerAssets/res/font.zip" : {
-			"md5" : "eaad8119b3c5f9e4d135fd8536105f61",
-			"compressed" : true
-		},	
-		"ServerAssets/res/image.zip" : {
-			"md5" : "9f9a976397f2d86fe0472693814b2123",
-			"compressed" : true
-		},	
-		"ServerAssets/res/manifest.zip" : {
-			"md5" : "a8ce540f7ae1e8c1cb9b3acc0ba04d8f",
-			"compressed" : true
-		},	
-		"ServerAssets/res/sound.zip" : {
-			"md5" : "810c2e0138e194b70601df29bf4b9bea",
-			"compressed" : true
-		},	
-		"ServerAssets/res/spine.zip" : {
-			"md5" : "154d2918057f70eb45a96eec0eb95981",
-			"compressed" : true
-		},	
-		"ServerAssets/res/words.zip" : {
-			"md5" : "71d593b78824940afc1f42da9884f06e",
-			"compressed" : true
-		}
-	}, 
-	"searchPaths" : [
-	
-    ] 
-}
+
+        
+    { 
+        "packageUrl" : "http://yisiyidian.com/AssetsManagerDebug/",
+        "remoteManifestUrl" : "http://yisiyidian.com/AssetsManagerDebug/project_server_debug.manifest", 
+        "remoteVersionUrl" : "http://yisiyidian.com/AssetsManagerDebug/version_debug.manifest", 
+        "version" : "2.0.2.0.0.0", 
+        "engineVersion" : "3.3 rc2" 
+    , 
+        "assets" : {    
+    
+
+        "ServerAssets/src/anysdkConst.luac" : 
+        {
+            "md5" : "b7b0cea110b887df9c2d6fe3cf718d44",
+            "compressed" : false
+        }
+            ,
+
+        "ServerAssets/src/AppScene.luac" : 
+        {
+            "md5" : "26da606bacdeb998c0e9eaa53ee03886",
+            "compressed" : false
+        }
+            ,
+
+        "ServerAssets/src/AppVersionInfo.luac" : 
+        {
+            "md5" : "c93d5648f89c4d85af53546ee2428a52",
+            "compressed" : false
+        }
+            ,
+
+        "ServerAssets/src/AudioMgr.luac" : 
+        {
+            "md5" : "5f7ccba6757f2e775fd19370fda4a60e",
+            "compressed" : false
+        }
+            ,
+
+        "ServerAssets/src/cocos.zip" : 
+        {
+            "md5" : "7db77b1e2e7012d24dbd0554e6fcb047",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/common.zip" : 
+        {
+            "md5" : "0a148e611b1cd9a2464c804eebe82b8c",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/controller.zip" : 
+        {
+            "md5" : "e39afcf0ff883c969ee3950a1c84e083",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/example.zip" : 
+        {
+            "md5" : "fd7f5075176c21578e88f3f88daafe7b",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/layer.zip" : 
+        {
+            "md5" : "211fc917d5e3ef7c7b387a51d9dd9e26",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/main.luac" : 
+        {
+            "md5" : "f425b957b0b9b5240a688f3ee862ec03",
+            "compressed" : false
+        }
+            ,
+
+        "ServerAssets/src/model.zip" : 
+        {
+            "md5" : "71b5d126dbcbbe11379ac0e457c2377d",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/popup.zip" : 
+        {
+            "md5" : "031fc8542a43c87b88e4ed0f8b8eeb10",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/server.zip" : 
+        {
+            "md5" : "ed19e8fee027d488872fc7cd85b750fb",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/store.zip" : 
+        {
+            "md5" : "b61b24344ad27b9300a8f54db5853414",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/view.zip" : 
+        {
+            "md5" : "07cd01a8b407bc6aff42830d7d408e4b",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/res/ccb.zip" : 
+        {
+            "md5" : "299807d8ba57b55863051fc8fd6b1a9c",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/res/cfg.zip" : 
+        {
+            "md5" : "d32bb5f4e1cb476cb70fbd2ca2e05b5f",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/res/font.zip" : 
+        {
+            "md5" : "f9ca74c6c252fd4cbc84a624bb837d85",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/res/image.zip" : 
+        {
+            "md5" : "899da8edbdc893547059e7511ba46590",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/res/manifest.zip" : 
+        {
+            "md5" : "b7d34e9c884108a420b67cc518f7b258",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/res/sound.zip" : 
+        {
+            "md5" : "24e15a92f00ffa85f44a5e2c66ff2dec",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/res/spine.zip" : 
+        {
+            "md5" : "c685ee58e56af75cfa250f00089394ac",
+            "compressed" : true
+        }
+            
+        }, 
+
+        "searchPaths" : [
+        
+        ] 
+    }
+    

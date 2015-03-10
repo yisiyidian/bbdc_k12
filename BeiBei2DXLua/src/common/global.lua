@@ -1,7 +1,5 @@
-function reloadModule( moduleName )
-    package.loaded[moduleName] = nil
-    return require(moduleName)
-end
+app_version_debug   = 202000
+app_version_release = 202000
 
 local function _initConstant()
     -- number
@@ -172,3 +170,15 @@ function initApp(start)
     _declaration()
 end
 
+local flag_getMaxWrongNumEveryLevel = {}
+function getMaxWrongNumEveryLevel()
+    if s_CURRENT_USER.bookKey == nil or s_CURRENT_USER.bookKey == '' or flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] == nil or flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] <= 1 then
+        local bossList = s_LocalDatabaseManager.getAllBossInfo()
+        flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] = #bossList
+    end
+    if flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] <= 1 then
+        return s_max_wrong_num_first_island
+    else 
+        return s_max_wrong_num_everyday
+    end
+end

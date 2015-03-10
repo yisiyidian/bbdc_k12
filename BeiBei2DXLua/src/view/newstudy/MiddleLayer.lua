@@ -41,13 +41,13 @@ local function wordAnimation(endPoint,back1,back2)
     local wordList = {}
     local bossId = s_LocalDatabaseManager.getMaxBossID()
     local boss = s_LocalDatabaseManager.getBossInfo(bossId)
-    for i=1, s_max_wrong_num_everyday do
+    for i=1, getMaxWrongNumEveryLevel() do
         table.insert(wordList,boss.wrongWordList[i])
     end
     back1:runAction(MiddleLayer:ShakeFunction(1,1))
     back2:runAction(MiddleLayer:ShakeFunction(1,1))
     local wordLabel = {}
-    for i=1, s_max_wrong_num_everyday do
+    for i=1, getMaxWrongNumEveryLevel() do
         local rand = math.randomseed(os.time() * i)
         wordLabel[i] = cc.Label:createWithSystemFont(wordList[i],"",30)
         wordLabel[i]:setColor(cc.c4b(0,0,0,255))
@@ -62,7 +62,7 @@ local function wordAnimation(endPoint,back1,back2)
     local i = 1
     local function update(delta)
         time = time + delta
-        if time * 10 > s_max_wrong_num_everyday + 1 then
+        if time * 10 > getMaxWrongNumEveryLevel() + 1 then
             back1:unscheduleUpdate()
             back1:runAction(MiddleLayer:ShakeFunction(2,2))
             back2:runAction(MiddleLayer:ShakeFunction(2,2))
@@ -186,18 +186,13 @@ function MiddleLayer:ctor()
     self.bean = s_CURRENT_USER:getBeans()
     self.beanSprite = createBeanSprite(self.bean)
     self:addChild(self.beanSprite)
-    
-    local progressBar_total_number 
 
-    if s_CURRENT_USER.islandIndex == 0 then
-        progressBar_total_number = s_max_wrong_num_first_island
-    else
-        progressBar_total_number = s_max_wrong_num_everyday
-    end
-    
+    local progressBar_total_number = getMaxWrongNumEveryLevel()
+
     self.wrongNumber = progressBar_total_number
     self.showNumber = createNumberSprite(self.wrongNumber)
     backColor:addChild(self.showNumber)
+
     
     local backBagSprite = cc.Sprite:create("image/newstudy/bagback.png")
     backBagSprite:setPosition(bigWidth * 0.65, 500)

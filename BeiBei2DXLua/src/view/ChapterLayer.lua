@@ -17,7 +17,15 @@ function ChapterLayer.create()
 end
 
 function ChapterLayer:ctor()
-    s_SCENE.touchEventBlockLayer.unlockTouch()
+    s_SCENE.touchEventBlockLayer.lockTouch()
+    s_SCENE:callFuncWithDelay(1, function()
+        s_SCENE.touchEventBlockLayer.unlockTouch()
+    end)
+
+    if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
+        s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
+        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
+    end
     playMusic(s_sound_bgm1,true)
     self.chapterDic = {}
     -- add list view
@@ -286,7 +294,7 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
         task_name:setAnchorPoint(0,0)
         task_name:setPosition(30,85)
         notification:addChild(task_name)
-        local number = cc.Label:createWithSystemFont('0 / '..s_max_wrong_num_everyday,'',25)
+        local number = cc.Label:createWithSystemFont('0 / '..getMaxWrongNumEveryLevel(),'',25)
         number:setColor(cc.c3b(165,55,80))
         number:ignoreAnchorPointForPosition(false)
         number:setAnchorPoint(0,0)
@@ -294,14 +302,14 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
         notification:addChild(number)
         
         
-        if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
-            local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
-            finger:addAnimation(0, 'animation', true)
-            finger:setPosition(notification:getContentSize().width/2+20,-30)
-            notification:addChild(finger,10)
-            s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
-            s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
-        end
+        -- if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
+        --     local finger = sp.SkeletonAnimation:create('spine/yindaoye_shoudonghua_dianji.json', 'spine/yindaoye_shoudonghua_dianji.atlas',1)
+        --     finger:addAnimation(0, 'animation', true)
+        --     finger:setPosition(notification:getContentSize().width/2+20,-30)
+        --     notification:addChild(finger,10)
+        --     s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
+        --     s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
+        -- end
         
         -- define touchEvent
         local function touchEvent(sender,eventType)
@@ -340,7 +348,7 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
         task_name:setAnchorPoint(0,0)
         task_name:setPosition(30,85)
         notification:addChild(task_name)
-        local number = cc.Label:createWithSystemFont('0 / '..s_max_wrong_num_everyday,'',25)
+        local number = cc.Label:createWithSystemFont('0 / '..getMaxWrongNumEveryLevel(),'',25)
         number:setColor(cc.c3b(165,55,80))
         number:ignoreAnchorPointForPosition(false)
         number:setAnchorPoint(0,0)

@@ -15,7 +15,7 @@ local  ChooseWrongLayer = class("ChooseRightLayer", function ()
 end)
 
 function ChooseWrongLayer.create(word,wrongNum,wrongWordList,preWordName, preWordNameState)
-    local layer = ChooseWrongLayer.new(word,wrongNum,wrongWordList)
+    local layer = ChooseWrongLayer.new(word,wrongNum,wrongWordList,preWordName, preWordNameState)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
@@ -67,14 +67,8 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordN
     else
         color = "yellow"
     end
-
-    local progressBar_total_number 
-
-    if s_CURRENT_USER.islandIndex == 0 then
-        progressBar_total_number = s_max_wrong_num_first_island
-    else
-        progressBar_total_number = s_max_wrong_num_everyday
-    end
+    
+    local progressBar_total_number = getMaxWrongNumEveryLevel()
 
     local progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
     progressBar:setPosition(bigWidth/2+44, 1049)
