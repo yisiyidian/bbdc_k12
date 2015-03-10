@@ -14,16 +14,13 @@ local  ChooseWrongLayer = class("ChooseRightLayer", function ()
     return cc.Layer:create()
 end)
 
-CreateWrongLayer_From_CollectWord = 1
-CreateWrongLayer_From_Iron = 2
-
-function ChooseWrongLayer.create(word,wrongNum,preWordName,preWordNameState,fromWhere,wrongWordList)
-    local layer = ChooseWrongLayer.new(word,wrongNum,preWordName,preWordNameState,fromWhere,wrongWordList)
+function ChooseWrongLayer.create(word,wrongNum,wrongWordList)
+    local layer = ChooseWrongLayer.new(word,wrongNum,wrongWordList)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
 
-local function addNextButton(word,wrongNum,preWordName,preWordNameState,fromWhere,wrongWordList)
+local function addNextButton(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_next_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -34,10 +31,10 @@ local function addNextButton(word,wrongNum,preWordName,preWordNameState,fromWher
             local slideCoconutLayer
             if wrongWordList == nil then
                 AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD, 'TOUCH')
-                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,preWordName, preWordNameState,CreateSlideLayer_From_CollectWord,nil)
+                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
             else
                 AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD_STRIKEWHILEHOT, 'TOUCH')
-                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,preWordName, preWordNameState,CreateSlideLayer_From_Iron,wrongWordList)
+                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,wrongWordList)
             end
 
             s_SCENE:replaceGameLayer(slideCoconutLayer)
@@ -51,7 +48,7 @@ local function addNextButton(word,wrongNum,preWordName,preWordNameState,fromWher
     return choose_next_button
 end
 
-function ChooseWrongLayer:ctor(word,wrongNum,preWordName,preWordNameState,fromWhere,wrongWordList)
+function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList)
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
@@ -103,7 +100,7 @@ function ChooseWrongLayer:ctor(word,wrongNum,preWordName,preWordNameState,fromWh
     detailInfo:setPosition(bigWidth/2, 520)
     backColor:addChild(detailInfo)
 
-    self.nextButton = addNextButton(word,wrongNum,preWordName,preWordNameState,fromWhere,wrongWordList)
+    self.nextButton = addNextButton(word,wrongNum,wrongWordList)
     backColor:addChild(self.nextButton)
 end
 

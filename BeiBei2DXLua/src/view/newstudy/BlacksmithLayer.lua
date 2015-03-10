@@ -13,14 +13,14 @@ local  BlacksmithLayer = class("BlacksmithLayer", function ()
     return cc.Layer:create()
 end)
 
-function BlacksmithLayer.create(wordlist,preWordName,preWordNameState)
-    local layer = BlacksmithLayer.new(wordlist,preWordName, preWordNameState)
+function BlacksmithLayer.create(wordlist)
+    local layer = BlacksmithLayer.new(wordlist)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     cc.SimpleAudioEngine:getInstance():pauseMusic()
     return layer
 end
 
-function BlacksmithLayer:createOptions(randomNameArray,wordlist,position,preWordName,preWordNameState)
+function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local progressBar_total_number 
     local bossList = s_LocalDatabaseManager.getAllBossInfo()
@@ -93,7 +93,7 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position,preWord
                     else
                         AnalyticsStudyAnswerRight_strikeWhileHot()
                         local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
-                        local blacksmithLayer = BlacksmithLayer.create(wordlist,preWord,true)
+                        local blacksmithLayer = BlacksmithLayer.create(wordlist)
                         s_SCENE:replaceGameLayer(blacksmithLayer)
                     end
 
@@ -110,7 +110,7 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position,preWord
                         s_CURRENT_USER.beanRewardForIron = s_CURRENT_USER.beanRewardForIron - 1
                     end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-                    local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],progressBar_total_number - #wordlist, preWordName,preWordNameState,CreateWrongLayer_From_Iron,wordlist)
+                    local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],progressBar_total_number - #wordlist,"","",CreateWrongLayer_From_Iron,wordlist)
                     s_SCENE:replaceGameLayer(chooseWrongLayer)
                 end)))
             end
@@ -140,7 +140,7 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position,preWord
     return choose_button
 end
 
-local function createDontknow(wordlist,preWordName, preWordNameState)
+local function createDontknow(wordlist)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local progressBar_total_number 
@@ -159,7 +159,7 @@ local function createDontknow(wordlist,preWordName, preWordNameState)
             AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW_STRIKEWHILEHOT, 'TOUCH')
 
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],progressBar_total_number - #wordlist, preWordName,preWordNameState,CreateWrongLayer_From_Iron,wordlist)
+            local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],progressBar_total_number - #wordlist,wordlist)
             s_SCENE:replaceGameLayer(chooseWrongLayer)            
         end
     end
@@ -171,7 +171,7 @@ local function createDontknow(wordlist,preWordName, preWordNameState)
     return choose_dontknow_button
 end
 
-function BlacksmithLayer:ctor(wordlist,preWordName, preWordNameState)
+function BlacksmithLayer:ctor(wordlist)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = BackLayer.create(45) 
@@ -202,20 +202,17 @@ function BlacksmithLayer:ctor(wordlist,preWordName, preWordNameState)
     backColor:addChild(self.lastWordAndTotalNumber,1)
     local todayNumber = LastWordAndTotalNumber:getCurrentLevelNum()
     self.lastWordAndTotalNumber.setNumber(todayNumber)
-    if preWordName ~= nil then
-        self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
-    end
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
     soundMark:setPosition(bigWidth/2, 930)
     backColor:addChild(soundMark)
 
-    self.options = self:createOptions(self.randWord,wordlist,self.progressBar.indexPosition(),preWordName,preWordNameState)
+    self.options = self:createOptions(self.randWord,wordlist,self.progressBar.indexPosition())
     for i = 1, #self.options do
         backColor:addChild(self.options[i])
     end
 
-    self.dontknow = createDontknow(wordlist,preWordName,preWordNameState)
+    self.dontknow = createDontknow(wordlist)
     backColor:addChild(self.dontknow)
 
     local label_dontknow = cc.Label:createWithSystemFont("不认识的单词请选择不认识","",26)

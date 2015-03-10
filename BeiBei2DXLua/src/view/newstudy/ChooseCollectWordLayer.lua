@@ -12,7 +12,7 @@ local  ChooseCollectWordLayer = class("ChooseCollectWordLayer", function ()
     return cc.Layer:create()
 end)
 
-local function createKnow(word,wrongNum, preWordName, preWordNameState)
+local function createKnow()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local click_know_button = function(sender, eventType)
@@ -33,7 +33,7 @@ local function createKnow(word,wrongNum, preWordName, preWordNameState)
     return choose_know_button
 end
 
-local function createDontknow(word,wrongNum, preWordName, preWordNameState)
+local function createDontknow(word,wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local click_dontknow_button = function(sender, eventType)
@@ -41,7 +41,7 @@ local function createDontknow(word,wrongNum, preWordName, preWordNameState)
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,nil,preWordName, preWordNameState)
+            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
             s_SCENE:replaceGameLayer(chooseWrongLayer)          
         end
     end
@@ -97,10 +97,10 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     soundMark:setPosition(bigWidth/2, 925)  
     backColor:addChild(soundMark)
     
-    self.iknow = createKnow(wordName,wrongWordNum, preWordName, preWordNameState)
+    self.iknow = createKnow()
     backColor:addChild(self.iknow)
 
-    self.dontknow = createDontknow(wordName,wrongWordNum, preWordName, preWordNameState)
+    self.dontknow = createDontknow(wordName,wrongWordNum)
     backColor:addChild(self.dontknow)
 end
 

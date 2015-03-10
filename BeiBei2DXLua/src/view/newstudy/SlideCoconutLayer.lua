@@ -14,7 +14,7 @@ local  SlideCoconutLayer = class("SlideCoconutLayer", function ()
     return cc.Layer:create()
 end)
 
-function SlideCoconutLayer.create(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+function SlideCoconutLayer.create(word,wrongNum,wrongWordList)
     local layer = SlideCoconutLayer.new(word,wrongNum,wrongWordList)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
@@ -36,7 +36,7 @@ local function createRefreshButton()
     return refreshButton  
 end
 
-local function createLastButton(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+local function createLastButton(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_before_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -46,7 +46,7 @@ local function createLastButton(word,wrongNum,wrongWordList,preWordName, preWord
             local chooseWrongLayer 
             AnalyticsStudyLookBackWord()
             if wrongWordList == nil then
-                chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,nil,preWordName, preWordNameState)
+                chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
             else
                 chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,wrongWordList)
             end
@@ -61,7 +61,7 @@ local function createLastButton(word,wrongNum,wrongWordList,preWordName, preWord
     return choose_before_button  
 end
 
-function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
@@ -103,9 +103,6 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
     backColor:addChild(self.lastWordAndTotalNumber,1)
     local todayNumber = LastWordAndTotalNumber:getTodayNum()
     self.lastWordAndTotalNumber.setNumber(todayNumber)
-    if wrongNum ~= 0  and preWordName ~= nil and wrongWordList == nil then
-    self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
-    end
     
     local word_meaning_label = cc.Label:createWithSystemFont(self.wordInfo[5],"",50)
     word_meaning_label:setPosition(bigWidth/2, 950)
@@ -220,7 +217,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
     self.refreshButton = createRefreshButton()
     backColor:addChild(self.refreshButton)
     
-    self.lastButton = createLastButton(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+    self.lastButton = createLastButton(word,wrongNum,wrongWordList)
     backColor:addChild(self.lastButton)
 end
 
