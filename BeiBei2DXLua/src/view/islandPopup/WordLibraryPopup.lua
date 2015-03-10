@@ -82,12 +82,17 @@ local function addfamiliarButton(top_sprite)
 end
 
 local function addReviewButton(bottom_sprite,boss)
+
     local review_button_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             local ReviewBoss = require("view.newreviewboss.NewReviewBossMainLayer")
-            local reviewBoss = ReviewBoss.create(boss.wrongWordList,Review_From_Word_Bank)
-            s_SCENE:replaceGameLayer(reviewBoss)
-            s_SCENE:removeAllPopups()
+            if boss.wrongWordList == nil then
+                return 
+            else
+                local reviewBoss = ReviewBoss.create(boss.wrongWordList,Review_From_Word_Bank)
+                s_SCENE:replaceGameLayer(reviewBoss)
+                s_SCENE:removeAllPopups()
+            end
         end
     end
 
@@ -110,8 +115,12 @@ local function addSummaryButton(bottom_sprite,boss)
         for i = 1 , # initWordList do
             table.insert(temp,initWordList[i])
         end
-        local length = #initWordList
-  
+        local length
+        if #initWordList > 6 then
+            length = 6
+        else
+            length = #initWordList
+        end   
         for i = 1 , length do
             local randSeed = math.randomseed(os.time())
             local randNum  = math.random(1,#initWordList)
@@ -160,7 +169,7 @@ function WordLibraryPopup:ctor(index,fromWhere)
         backPopup:runAction(action3)   
     else
         backPopup:setVisible(false)
-        local action0 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 * 3)) 
+        local action0 = cc.MoveTo:create(0.1,cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 * 3)) 
         local action1 = cc.CallFunc:create(function ()
             backPopup:setVisible(true)
         end)
@@ -230,15 +239,7 @@ function WordLibraryPopup:ctor(index,fromWhere)
         self.listview = Listview.create(boss.wrongWordList)  
         self.familiarButton:setTexture("image/islandPopup/familiarwordbegin.png")
         self.unfamiliarButton:setTexture("image/islandPopup/unfamiliarwordend.png")   
-        if index == '0' then
-            if #boss.wrongWordList >= s_max_wrong_num_first_island then
-               self.reviewButton:setVisible(true)
-               self.summaryButton:setVisible(true)
-            else
-               self.reviewButton:setVisible(false)
-               self.summaryButton:setVisible(false)
-            end
-        elseif #boss.wrongWordList >= s_max_wrong_num_everyday then
+        if #boss.wrongWordList >= getMaxWrongNumEveryLevel() then
             self.reviewButton:setVisible(true)
             self.summaryButton:setVisible(true)
         else
@@ -246,7 +247,6 @@ function WordLibraryPopup:ctor(index,fromWhere)
             self.summaryButton:setVisible(false)
         end
     end
-
     
     self.listview:setPosition(2,70)
     backPopup:addChild(self.listview)
@@ -271,7 +271,7 @@ function WordLibraryPopup:ctor(index,fromWhere)
             self.listview = Listview.create(boss.wrongWordList) 
             self.listview:setPosition(2,70)
             backPopup:addChild(self.listview)
-            if #boss.wrongWordList >= s_max_wrong_num_everyday then
+            if #boss.wrongWordList >= getMaxWrongNumEveryLevel() then
                 self.reviewButton:setVisible(true)
                 self.summaryButton:setVisible(true)
             else

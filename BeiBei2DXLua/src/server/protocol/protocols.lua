@@ -421,7 +421,7 @@ function sysBossWord(bosses, skipWordList, callback)
                 table.insert(unsavedDataTable, dataTableToJSONString(v, 'wordList'))
             else
                 local wordCount = #split(v.wordList, "|")
-                if wordCount == s_max_wrong_num_everyday and v.savedToServer == 0 then
+                if wordCount == getMaxWrongNumEveryLevel() and v.savedToServer == 0 then
                     table.insert(unsavedDataTable, dataTableToJSONString(v))
                 else
                     table.insert(unsavedDataTable, dataTableToJSONString(v, 'wordList'))
