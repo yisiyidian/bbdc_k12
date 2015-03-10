@@ -115,7 +115,11 @@ local function createOptions(randomNameArray,word,wrongNum, preWordName, preWord
     
     local click_choose = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)
+            if sender.tag == 1 then  
+                playSound(s_sound_learn_true)
+            else  
+                playSound(s_sound_learn_false)
+            end   
         elseif eventType == ccui.TouchEventType.ended then  
 --            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local feedback 
