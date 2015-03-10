@@ -37,7 +37,7 @@ local function createKnow(word,wrongNum, preWordName, preWordNameState)
     knowLabel:setColor(cc.c4b(58,185,224,255))
     choose_know_button:addChild(knowLabel)
 
-    local todayNumber = LastWordAndTotalNumber:getTodayNum()
+    local todayNumber = LastWordAndTotalNumber:getCurrentLevelRightNum()
     local progressLabel = cc.Label:createWithSystemFont(todayNumber,"",38)
     progressLabel:setPosition(choose_know_button:getContentSize().width *0.8, choose_know_button:getContentSize().height / 2)
     progressLabel:ignoreAnchorPointForPosition(false)
