@@ -69,8 +69,11 @@ function ChooseCollectWordLayer.create(wordName, wrongWordNum, preWordName, preW
 end
 
 function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWordNameState)
-    local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
+    if s_CURRENT_USER.tutorialStep == s_tutorial_study then
+        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_1)
+    end
 
+    local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local backColor = BackLayer.create(45) 
     backColor:setAnchorPoint(0.5,0.5)
     backColor:ignoreAnchorPointForPosition(false)

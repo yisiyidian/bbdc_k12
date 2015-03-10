@@ -52,6 +52,9 @@ local function addNextButton(word,wrongNum,wrongWordList,preWordName, preWordNam
 end
 
 function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+    if s_CURRENT_USER.tutorialStep == s_tutorial_study then
+        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_2)
+    end
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = BackLayer.create(45) 

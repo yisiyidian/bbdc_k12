@@ -63,7 +63,9 @@ local function createLastButton(word,wrongNum,wrongWordList,preWordName, preWord
 end
 
 function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordNameState)
-
+    if s_CURRENT_USER.tutorialStep == s_tutorial_study then
+        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_3)
+    end
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
     local isCollectLayer = true
@@ -130,6 +132,10 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
     local success = function()
         playWordSound(self.currentWord) 
         local normal = function()  
+            if s_CURRENT_USER.tutorialStep == s_tutorial_study then
+               s_CURRENT_USER:setTutorialStep(s_tutorial_study + 1)
+               s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_summary_boss)
+            end
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
             local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
