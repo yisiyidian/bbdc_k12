@@ -279,8 +279,10 @@ function ChapterLayerBase:addPopup(levelIndex)
                     local action2 = cc.FadeOut:create(1.5)
                     text:runAction(action2)
             else
-                s_CorePlayManager.initTotalPlay()
-                s_CURRENT_USER.islandIndex = tonumber(levelIndex)
+                s_SCENE:callFuncWithDelay(0.1, function()
+                    s_CorePlayManager.initTotalPlay()
+                    s_CURRENT_USER.islandIndex = tonumber(levelIndex)
+                end)
             end
         end
     end
@@ -349,15 +351,26 @@ function ChapterLayerBase:addPopup(levelIndex)
         taskButton:setName(levelIndex..'|'..state..'|'..coolingDay..'|'..currentTaskBossIndex)
         taskButton:addTouchEventListener(taskEvent)
         back:addChild(taskButton)
-        if state ~= 0 then
-            tick = cc.Sprite:create('image/chapter/popup/duigo_green_xiaoguan_tanchu.png')
-            tick:setPosition(taskButton:getPositionX()+165, taskButton:getPositionY() + 125)
-            tick:setScale(2.0)
-            local action1 = cc.ScaleTo:create(0.5, 2.0)
-            local action2 = cc.ScaleTo:create(0.5, 1.0)
-            local action3 = cc.Sequence:create(action1, action2)
-            tick:runAction(action2)
-            back:addChild(tick, 10) 
+        if s_level_popup_state == 2 then
+            s_SCENE:callFuncWithDelay(0.5, function()
+                if state ~= 0 then
+                    tick = cc.Sprite:create('image/chapter/popup/duigo_green_xiaoguan_tanchu.png')
+                    tick:setPosition(taskButton:getPositionX()+165, taskButton:getPositionY() + 115)
+                    s_level_popup_state = 0
+                    tick:setScale(2.0)
+                    local action1 = cc.ScaleTo:create(0.5, 2.0)
+                    local action2 = cc.ScaleTo:create(0.5, 1.0)
+                    local action3 = cc.Sequence:create(action1, action2)
+                    tick:runAction(action2)
+                    back:addChild(tick, 10) 
+                end
+            end)
+        else 
+                if state ~= 0 then
+                    tick = cc.Sprite:create('image/chapter/popup/duigo_green_xiaoguan_tanchu.png')
+                    tick:setPosition(taskButton:getPositionX()+165, taskButton:getPositionY() + 115)
+                    back:addChild(tick, 10) 
+                end
         end
     end
     
