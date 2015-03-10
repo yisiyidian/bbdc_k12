@@ -141,7 +141,9 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
             local action1 = cc.MoveTo:create(0.2,cc.p(backColor:getContentSize().width /2, 768))
             showAnswerStateBack:runAction(cc.Sequence:create(action1,
                cc.CallFunc:create(function()
+                if wrongWordList == nil then
                   self.progressBar.addOne()
+                end
                end),
                cc.CallFunc:create(function()
                   if wrongNum == progressBar_total_number - 1 then
