@@ -386,6 +386,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
                     s_CURRENT_USER:addBeans(3)
                     saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
                     if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) then
+                        s_level_popup_state = 1
                         s_CorePlayManager.leaveReviewModel(true)  
                     else
                         local missionCompleteCircle = require('view.MissionCompleteCircle').create()

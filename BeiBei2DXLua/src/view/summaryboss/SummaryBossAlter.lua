@@ -129,6 +129,11 @@ end
 
 function SummaryBossAlter:addTime()
 
+    if s_SCENE.popupLayer~=nil then
+        s_SCENE.popupLayer:setPauseBtnEnabled(true)
+        s_SCENE.popupLayer.isOtherAlter = false
+    end 
+
     local bossLayer = self.bossLayer
     local boss = bossLayer.bossNode
     local distance = s_DESIGN_WIDTH * 0.45 * 30 / bossLayer.totalTime
@@ -352,10 +357,12 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     item_name:setPosition(button:getContentSize().width/2, button:getContentSize().height/2)
     button:addChild(item_name)
 
-    local been_button = cc.Sprite:create("image/shop/been.png")
-    been_button:setPosition(button:getContentSize().width * 0.75, button:getContentSize().height/2)
-    button:addChild(been_button)
     if self.entrance == ENTRANCE_NORMAL then
+        
+        local been_button = cc.Sprite:create("image/shop/been.png")
+        been_button:setPosition(button:getContentSize().width * 0.75, button:getContentSize().height/2)
+        button:addChild(been_button)
+    
         local rewardNumber = cc.Label:createWithSystemFont("+"..3,"",36)
         rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
         button:addChild(rewardNumber)
