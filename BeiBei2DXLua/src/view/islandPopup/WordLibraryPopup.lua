@@ -239,7 +239,8 @@ function WordLibraryPopup:ctor(index,fromWhere)
         self.listview = Listview.create(boss.wrongWordList)  
         self.familiarButton:setTexture("image/islandPopup/familiarwordbegin.png")
         self.unfamiliarButton:setTexture("image/islandPopup/unfamiliarwordend.png")   
-        if #boss.wrongWordList >= getMaxWrongNumEveryLevel() then
+        --if #boss.wrongWordList >= getMaxWrongNumEveryLevel() then
+        if true then
             self.reviewButton:setVisible(true)
             self.summaryButton:setVisible(true)
         else
@@ -271,7 +272,8 @@ function WordLibraryPopup:ctor(index,fromWhere)
             self.listview = Listview.create(boss.wrongWordList) 
             self.listview:setPosition(2,70)
             backPopup:addChild(self.listview)
-            if #boss.wrongWordList >= getMaxWrongNumEveryLevel() then
+            --if #boss.wrongWordList >= getMaxWrongNumEveryLevel() then
+            if true then
                 self.reviewButton:setVisible(true)
                 self.summaryButton:setVisible(true)
             else

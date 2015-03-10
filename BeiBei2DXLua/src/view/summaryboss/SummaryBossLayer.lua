@@ -71,9 +71,14 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     local onTouchMoved
     local fakeTouchMoved
     local onTouchEnded
-    
+    local time1 = os.clock()
     layer:initWordList(wordList)
+    local time2 = os.clock()
+    --print('initWordList time =='..time2 - time1)
+    time1 = os.clock()
     layer:initBossLayer_back(chapter)
+    time2 = os.clock()
+    --print('initBosslayer time =='..time2 - time1)
     local isTouchEnded = true
     local endTime = 0
     local loadingTime = 0
@@ -82,7 +87,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     local light = cc.Sprite:create('image/studyscene/long_light.png')
     light:setAnchorPoint(0.5,0.05)
     layer:addChild(light,10)
-    light:setVisible(false)    
+    light:setVisible(false)  
 
 
     local function checkAnswer(checkAtOnce)
@@ -1152,8 +1157,11 @@ function SummaryBossLayer:initMapInfoByIndex(startIndex)
             local char = string.char(96+i)
             charaster_set_filtered[#charaster_set_filtered+1] = char
         end
+        local time1 = os.clock()
+        local main_logic_mat = getRandomBossPath()
+        local time2 = os.clock()
 
-        local main_logic_mat = randomMat(5, 5)
+        print('BFS time =='..time2 - time1)
         for i = 1, 5 do
             self.character[k][i] = {}
             self.isFirst[k][i] = {}

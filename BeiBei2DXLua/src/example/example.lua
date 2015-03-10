@@ -74,11 +74,16 @@ function test()
  -- s_SCENE:replaceGameLayer(newStudyLayer)
 -- new study layer test end
 
-    local circle = require('view.share.ShareCheckIn').create()
-    s_SCENE:replaceGameLayer(circle)
+    -- local circle = require('view.share.ShareCheckIn').create()
+    -- s_SCENE:replaceGameLayer(circle)
+    for i = 1,10 do
+        local time1 = os.clock()
+        local main_logic_mat = getRandomBossPath()
+        local time2 = os.clock()
 
-
-
+        print('BFS time = '..time2 - time1)
+        print_lua_table(main_logic_mat)
+    end
 --    local layer = cc.Layer:create()
     -- s_HttpRequestClient.downloadWordSoundFile('apply', function (objectId, filename, err, isSaved) 
     --     print(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))

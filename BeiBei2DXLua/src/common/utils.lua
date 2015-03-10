@@ -270,3 +270,12 @@ function getDayStringForDailyStudyInfo(time)
     local str = string.format('%s/%s/%s', os.date('%m', time), os.date('%d', time), os.date('%y', time))
     return str
 end
+
+function getRandomBossPath( )
+    map_path = {{{3,4,5,6,25},{2,1,8,7,24},{11,10,9,22,23},{12,15,16,21,20},{13,14,17,18,19}},
+            {{},{},{},{},{}},
+            {{},{},{},{},{}},
+            {{},{},{},{},{}},
+            {{},{},{},{},{}}}
+    return map_path[1]
+end
