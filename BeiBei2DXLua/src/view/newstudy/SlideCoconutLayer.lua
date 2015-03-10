@@ -83,15 +83,8 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
     else
         color = "yellow"
     end
-
-    local progressBar_total_number 
-
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
-    if #bossList == 1 then
-        progressBar_total_number = 3
-    else
-        progressBar_total_number = s_max_wrong_num_everyday
-    end
+    
+    local progressBar_total_number = getMaxWrongNumEveryLevel()
 
     self.progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
     self.progressBar:setPosition(bigWidth/2+44, 1049)

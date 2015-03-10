@@ -222,14 +222,7 @@ function CollectUnfamiliarLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     self.wordInfo = self:createWordInfo(self.currentWord)
     self.randWord = self:createRandWord(self.currentWord,4)
     
-    local progressBar_total_number 
-
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
-    if #bossList == 1 then
-        progressBar_total_number = 3
-    else
-        progressBar_total_number = s_max_wrong_num_everyday
-    end
+    local progressBar_total_number = getMaxWrongNumEveryLevel()
 
     local progressBar = ProgressBar.create(progressBar_total_number, wrongWordNum, "blue")
     progressBar:setPosition(bigWidth/2+44, 1054)
