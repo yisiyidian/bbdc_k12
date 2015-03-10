@@ -7,16 +7,16 @@ local SummaryBossAlter = class("SummaryBossAlter", function()
     return cc.Layer:create()
 end)
 
-function SummaryBossAlter.create(win,wordCount,blood,index,entrance,wordList)
+function SummaryBossAlter.create(bossLayer,win,index,entrance)
     
     local layer = SummaryBossAlter.new()
-    layer.wordCount = wordCount
-    layer.blood = blood
+    layer.wordCount = bossLayer.rightWord
     layer.win = win
     layer.index = index
     layer.levelIndex = levelIndex
-    layer.wordList = wordList
-    
+    layer.wordList = bossLayer.wordList
+    layer.bossLayer = bossLayer
+    layer.entrance = entrance
     --disable pauseBtn
     if s_SCENE.popupLayer~=nil then
         s_SCENE.popupLayer:setPauseBtnEnabled(false)
@@ -28,6 +28,7 @@ function SummaryBossAlter.create(win,wordCount,blood,index,entrance,wordList)
     local back = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     layer:addChild(back)
+    back:setName('background')
     if win then
         if entrance == ENTRANCE_NORMAL then
             s_CURRENT_USER:addBeans(3)
@@ -88,6 +89,33 @@ function SummaryBossAlter:lose(entrance)
     btn_title:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
     btn_title:setPosition(continue:getContentSize().width * 0.6,continue:getContentSize().height / 2)
     continue:addChild(btn_title)
+    if not self.bossLayer.useItem then
+        boss:setPosition(self.loseBoard:getContentSize().width / 4,self.loseBoard:getContentSize().height * 0.4)
+        menu:setPosition(self.loseBoard:getContentSize().width / 2,self.loseBoard:getContentSize().height * 0.18)
+        local buyTimeBtn = ccui.Button:create('image/button/bigBlueButton.png','','')
+        buyTimeBtn:setScale9Enabled(true)
+        buyTimeBtn:setPosition(self.loseBoard:getContentSize().width / 2,self.loseBoard:getContentSize().height * 0.3)
+        self.loseBoard:addChild(buyTimeBtn)
+
+        local function buyTime(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                local boss = self.bossLayer.bossNode
+                local distance = s_DESIGN_WIDTH * 0.45 * 30 / self.bossLayer.totalTime
+                self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
+                s_SCENE:callFuncWithDelay(0.3,function (  )
+                    -- body
+                    self:removeChildByName('background')
+                    boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75)),cc.CallFunc:create(function (  )
+                        -- body
+                        self:addTime()
+                    end)))
+                end)
+                
+                
+            end
+        end
+        buyTimeBtn:addTouchEventListener(buyTime)
+    end
 
     local function nextBoard(sender)
         
@@ -97,6 +125,64 @@ function SummaryBossAlter:lose(entrance)
     continue:registerScriptTapHandler(nextBoard)
     
     
+end
+
+function SummaryBossAlter:addTime()
+
+    local bossLayer = self.bossLayer
+    local boss = bossLayer.bossNode
+    local distance = s_DESIGN_WIDTH * 0.45 * 30 / bossLayer.totalTime
+    local index = self.index
+    local entrance = self.entrance
+    local wordList = self.wordList
+    bossLayer.useItem = true
+
+    --boss:setPosition(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75)
+    bossLayer.globalLock = false
+    bossLayer.girlAfraid = false
+    bossLayer.girl:setAnimation(0,'girl-stand',true)
+    bossLayer.isLose = false
+    bossLayer.leftTime = 30
+    bossLayer.totalTime = 30
+    local wait = cc.DelayTime:create(30.0 - bossLayer.totalTime * 0.2)
+    local afraid = cc.CallFunc:create(function() 
+        if bossLayer.currentBlood > 0 then
+            bossLayer.girlAfraid = true
+            HINT_TIME = 4
+            bossLayer.girl:setAnimation(0,'girl-afraid',true)
+            -- deadline "Mechanical Clock Ring "
+            playSound(s_sound_Mechanical_Clock_Ring)
+        end
+    end,{})
+    local blinkIn = cc.FadeTo:create(0.5,50)
+    local blinkOut = cc.FadeTo:create(0.5,0.0)
+    local blink = cc.Sequence:create(blinkIn,blinkOut)
+    local repeatBlink = cc.Repeat:create(blink,math.ceil(bossLayer.totalTime * 0.2))
+    bossLayer.blink:runAction(cc.Sequence:create(wait,afraid,repeatBlink))
+    local bossAction = {}
+    for i = 1, 6 do
+        local stop = cc.DelayTime:create(bossLayer.totalTime / 6 * 0.8)
+        local stopAnimation = cc.CallFunc:create(function() 
+            bossLayer.boss:setAnimation(0,'a2',true)
+        end,{})
+        local move = cc.MoveBy:create(bossLayer.totalTime / 6 * 0.2,cc.p(- distance / 6, 0))
+        local moveAnimation = cc.CallFunc:create(function() 
+            bossLayer.boss:setAnimation(0,'animation',false)
+        end,{})
+        bossAction[#bossAction + 1] = cc.Spawn:create(stop,stopAnimation)
+        bossAction[#bossAction + 1] = cc.Spawn:create(move,moveAnimation)
+    end
+    bossAction[#bossAction + 1] = cc.CallFunc:create(function() 
+
+        if bossLayer.currentBlood > 0 then
+            bossLayer.isLose = true
+            --print('chapter index'..self.index)
+            bossLayer:lose(index,entrance,wordList)    
+        end
+    end,{})
+    boss:runAction(cc.Sequence:create(bossAction))
+    self:removeFromParent()
+    --bossLayer.girl:
 end
 
 function SummaryBossAlter:lose2(entrance)
@@ -198,14 +284,15 @@ function SummaryBossAlter:win1(entrance)
         checkInEverydayInfo()
         s_isCheckInAnimationDisplayed = false
     end
-    if entrance == ENTRANCE_NORMAL then
-        s_CorePlayManager.leaveSummaryModel(true)
-    end
+    
     if not hasCheckedIn and entrance == ENTRANCE_NORMAL then
         local missionCompleteCircle = require('view.MissionCompleteCircle').create()
         s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
         self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
             self:win2(entrance,hasCheckedIn)
+            if entrance == ENTRANCE_NORMAL then
+                s_CorePlayManager.leaveSummaryModel(true)
+            end
         end,{})))
     else
         self:win2(entrance,hasCheckedIn)
@@ -268,10 +355,11 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     local been_button = cc.Sprite:create("image/shop/been.png")
     been_button:setPosition(button:getContentSize().width * 0.75, button:getContentSize().height/2)
     button:addChild(been_button)
-
-    local rewardNumber = cc.Label:createWithSystemFont("+"..3,"",36)
-    rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
-    button:addChild(rewardNumber)
+    if self.entrance == ENTRANCE_NORMAL then
+        local rewardNumber = cc.Label:createWithSystemFont("+"..3,"",36)
+        rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
+        button:addChild(rewardNumber)
+    end
 
     local label = cc.Label:createWithSystemFont('打败总结Boss！','',44)
     label:setColor(cc.c3b(31,68,102))

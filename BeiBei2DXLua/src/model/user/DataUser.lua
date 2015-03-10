@@ -100,11 +100,8 @@ function DataUser:ctor()
     self.isAlterOn                         = 1
     self.slideNum                          = 1
     self.familiarOrUnfamiliar              = 1 -- 0 for choose familiar ,1 for choose unfamiliar
-    
     self.beanRewardForCollect              = 3 -- if begin a new mission ,bean = 3 ; if guess wrong word ,bean = 2 ,1 ,0
     self.beanRewardForIron                 = 3
-
-    self.islandIndex                       = 0
 
     self.dataDailyUsing                    = DataDailyUsing.create()
 end

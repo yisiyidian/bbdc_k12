@@ -1,8 +1,8 @@
 
 -- *************************************
 
-local app_version_debug   = 200001
-local app_version_release = 200001
+app_version_debug   = 202000
+app_version_release = 202000
 
 -- All test code must in example.example
 local TEST_CODE   = 1 -- constant value
@@ -41,12 +41,18 @@ end
 
 s_WordDictionaryDatabase = nil
 
+function reloadModule( moduleName )
+    package.loaded[moduleName] = nil
+    return require(moduleName)
+end
+
 local start
 start = function ()
     s_APP_VERSION = app_version_release
     
-    require("common.global")
-    require("AppVersionInfo")
+    reloadModule("common.global")
+    s_APP_VERSION = app_version_release -- reset
+    reloadModule("AppVersionInfo")
     initBuildTarget()
     initApp(start)
     if IS_SNS_QQ_LOGIN_AVAILABLE or IS_SNS_QQ_SHARE_AVAILABLE then 
@@ -104,11 +110,11 @@ start = function ()
         if s_SERVER.isNetworkConnectedNow() then
             local errorObj = {}
             errorObj['className'] = 'LuaError'
-            local a = string.gsub(msg, ":",  "    ") 
+            local a = string.gsub(msg, ":",  ".    ") 
             local b = string.gsub(a,   '"',  "'") 
-            local c = string.gsub(b,   "\n", "    ") 
-            local d = string.gsub(c,   "\t", "    ") 
-            errorObj['msg'] = d
+            local c = string.gsub(b,   "\n", ".    ") 
+            local d = string.gsub(c,   "\t", ".    ") 
+            errorObj['msg'] = s_CURRENT_USER.objectId .. ' ;' .. d
             errorObj['appVersion'] = s_APP_VERSION
             errorObj['RA'] = BUILD_TARGET
             s_SERVER.createData(errorObj)

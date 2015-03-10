@@ -146,7 +146,7 @@ local function update(dt)
             usingTimeSaveToLocalDB = usingTimeSaveToLocalDB + dt
             if usingTimeSaveToLocalDB > 5 * 60 then -- 5 min
                 usingTimeSaveToLocalDB = 0
-                -- save to local db
+                s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.dataDailyUsing, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
             end
         else
             s_CURRENT_USER.dataDailyUsing:reset()

@@ -189,8 +189,9 @@ function MiddleLayer:ctor()
     
     local progressBar_total_number 
 
-    if s_CURRENT_USER.islandIndex == 0 then
-        progressBar_total_number = s_max_wrong_num_first_island
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    if #bossList == 1 then
+        progressBar_total_number = 3
     else
         progressBar_total_number = s_max_wrong_num_everyday
     end
@@ -198,6 +199,7 @@ function MiddleLayer:ctor()
     self.wrongNumber = progressBar_total_number
     self.showNumber = createNumberSprite(self.wrongNumber)
     backColor:addChild(self.showNumber)
+
     
     local backBagSprite = cc.Sprite:create("image/newstudy/bagback.png")
     backBagSprite:setPosition(bigWidth * 0.65, 500)

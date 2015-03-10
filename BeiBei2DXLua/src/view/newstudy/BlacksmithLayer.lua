@@ -23,8 +23,9 @@ end
 function BlacksmithLayer:createOptions(randomNameArray,wordlist,position,preWordName,preWordNameState)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local progressBar_total_number 
-    if s_CURRENT_USER.islandIndex == 0 then
-        progressBar_total_number = s_max_wrong_num_first_island
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    if #bossList == 1 then
+        progressBar_total_number = 3
     else
         progressBar_total_number = s_max_wrong_num_everyday
     end 
@@ -139,8 +140,9 @@ local function createDontknow(wordlist,preWordName, preWordNameState)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local progressBar_total_number 
-    if s_CURRENT_USER.islandIndex == 0 then
-        progressBar_total_number = s_max_wrong_num_first_island
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    if #bossList == 1 then
+        progressBar_total_number = 3
     else
         progressBar_total_number = s_max_wrong_num_everyday
     end 
@@ -181,8 +183,9 @@ function BlacksmithLayer:ctor(wordlist,preWordName, preWordNameState)
 
     local progressBar_total_number 
 
-    if s_CURRENT_USER.islandIndex == 0 then
-        progressBar_total_number = s_max_wrong_num_first_island
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    if #bossList == 1 then
+        progressBar_total_number = 3
     else
         progressBar_total_number = s_max_wrong_num_everyday
     end
