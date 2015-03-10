@@ -10,18 +10,18 @@
 #include "cocos2d.h"
 #import <AVOSCloud/AVOSCloud.h>
 
-NSString* NSDictionaryToJSONString(NSDictionary* json) {
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json
-                                                       options:0 // Pass 0 if you don't care about the readability of the generated string
+NSString * NSObjectToJSONString(id theData) {
+    NSError *error = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:theData
+                                                       options:NSJSONWritingPrettyPrinted
                                                          error:&error];
-    if (!jsonData) {
-        CCLOG("NSDictionaryToJSONString Got an error: %s", error.localizedDescription.UTF8String);
-        return @"{}";
-    } else {
+    
+    if ([jsonData length] > 0 && error == nil) {
         NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
         return jsonString;
-    }
+    }else{
+        CCLOG("NSObjectToJSONData Got an error: %s", error ? error.localizedDescription.UTF8String : "length == 0");
+        return @"{}";    }
 }
 
 NSDictionary* JSONStringToNSDictionary(NSString* jsonString, NSError** error) {
@@ -39,19 +39,19 @@ NSString* NSErrorToJSONString(NSError* error) {
 NSString* AVUserToJsonStr(AVUser* user) {
     NSMutableDictionary* json = [NSMutableDictionary dictionary];
     
-    json[@"objectId"] = user.objectId;
-    json[@"username"] = user.username;
-    json[@"sessionToken"] = user.sessionToken;
-    json[@"createdAt"] = @([user.createdAt timeIntervalSince1970]);
-    json[@"updatedAt"] = user.updatedAt ? @([user.updatedAt timeIntervalSince1970]) : json[@"createdAt"];
+    if (user.objectId) json[@"objectId"] = user.objectId;
+    if (user.username) json[@"username"] = user.username;
+    if (user.sessionToken) json[@"sessionToken"] = user.sessionToken;
+    if (user.createdAt) json[@"createdAt"] = @([user.createdAt timeIntervalSince1970]);
+    if (user.createdAt) json[@"updatedAt"] = user.updatedAt ? @([user.updatedAt timeIntervalSince1970]) : json[@"createdAt"];
     for (NSString* key in user.allKeys) {
         id obj = [user objectForKey:key];
-        if ([obj isKindOfClass:[NSString class]]) {
+        if (obj && [obj isKindOfClass:[NSString class]]) {
             json[key] = ((NSString*)obj);
-        } else if ([obj isKindOfClass:[NSNumber class]]) {
+        } else if (obj && [obj isKindOfClass:[NSNumber class]]) {
             json[key] = ((NSNumber*)obj);
         }
     }
     
-    return NSDictionaryToJSONString(json);
+    return NSObjectToJSONString(json);
 }

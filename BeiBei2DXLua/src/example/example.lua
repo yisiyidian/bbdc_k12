@@ -11,19 +11,24 @@ local ProtocolBase = require('server.protocol.ProtocolBase')
 require('server.protocol.protocols')
 
 function test()
+    local request = cx.CXAVCloud:new()
+    request:searchUser('tester23', nil, function (response, error)
+        print('request:searchUser response:' .. tostring(response))
+        print('request:searchUser error:' .. tostring(error))
+    end)
 
-        local srcDateTime = 'Sun Mar 01 2015 07:56:45 GMT+0000 (CST)'
-        -- 123456789012345678901234567890
-        local Y  = string.sub(srcDateTime,  12,  15)  
-        local M  = string.sub(srcDateTime,  5,  7)  
-        local D  = string.sub(srcDateTime,  9, 10)  
-        local H  = string.sub(srcDateTime, 17, 18)  
-        local MM = string.sub(srcDateTime, 20, 21)  
-        local SS = string.sub(srcDateTime, 23, 24) 
-        local months = { Jan=1, Feb=2, Mar=3, Apr=4, May=5, Jun=6, Jul=7, Aug=8, Sep=9, Oct=10, Nov=11, Dec=12 }
-        print_lua_table({year=Y, m=months[M], day=D, hour=H, min=MM, sec=SS} )
-        local t = os.time{year=Y, month=months[M], day=D, hour=H, min=MM, sec=SS} 
-        print(t)
+        -- local srcDateTime = 'Sun Mar 01 2015 07:56:45 GMT+0000 (CST)'
+        -- -- 123456789012345678901234567890
+        -- local Y  = string.sub(srcDateTime,  12,  15)  
+        -- local M  = string.sub(srcDateTime,  5,  7)  
+        -- local D  = string.sub(srcDateTime,  9, 10)  
+        -- local H  = string.sub(srcDateTime, 17, 18)  
+        -- local MM = string.sub(srcDateTime, 20, 21)  
+        -- local SS = string.sub(srcDateTime, 23, 24) 
+        -- local months = { Jan=1, Feb=2, Mar=3, Apr=4, May=5, Jun=6, Jul=7, Aug=8, Sep=9, Oct=10, Nov=11, Dec=12 }
+        -- print_lua_table({year=Y, m=months[M], day=D, hour=H, min=MM, sec=SS} )
+        -- local t = os.time{year=Y, month=months[M], day=D, hour=H, min=MM, sec=SS} 
+        -- print(t)
 
     -- local WordDictionaryDatabase = require('model.WordDictionaryDatabase')
     -- WordDictionaryDatabase.init()

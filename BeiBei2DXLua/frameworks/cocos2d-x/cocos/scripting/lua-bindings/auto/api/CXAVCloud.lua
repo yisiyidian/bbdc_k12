@@ -13,6 +13,14 @@
         
 --------------------------------
 -- 
+-- @function [parent=#CXAVCloud] searchUser 
+-- @param self
+-- @param #char username
+-- @param #char nickName
+-- @param #int nHandler
+        
+--------------------------------
+-- 
 -- @function [parent=#CXAVCloud] callAVCloudFunction 
 -- @param self
 -- @param #string func

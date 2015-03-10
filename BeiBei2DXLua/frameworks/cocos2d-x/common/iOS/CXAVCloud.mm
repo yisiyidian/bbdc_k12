@@ -34,7 +34,7 @@ void CXAVCloud::callAVCloudFunction(const std::string& func, const std::string& 
                 NSString* errorjson = NSErrorToJSONString(error);
                 invokeCallback(nullptr, errorjson.UTF8String);
             } else {
-                NSString* objectjson = NSDictionaryToJSONString(object);
+                NSString* objectjson = NSObjectToJSONString(object);
                 invokeCallback(objectjson.UTF8String, nullptr);
             }
             release();
@@ -43,5 +43,61 @@ void CXAVCloud::callAVCloudFunction(const std::string& func, const std::string& 
         NSString* errorjson = NSErrorToJSONString(error_json);
         invokeCallback(nullptr, errorjson.UTF8String);
         release();
+    }
+}
+
+void CXAVCloud::searchUser(const char* username, const char* nickName, CXLUAFUNC nHandler) {
+    bool bu = username && strlen(username) > 0;
+    AVQuery *query_username = nil;
+    if (bu) {
+        query_username = [AVQuery queryWithClassName:@"_User"];
+        [query_username whereKey:@"username" equalTo:[NSString stringWithUTF8String:username]];
+    }
+    
+    bool bn = nickName && strlen(nickName) > 0;
+    AVQuery *query_nickName = nil;
+    if (bn) {
+        query_nickName = [AVQuery queryWithClassName:@"_User"];
+        [query_nickName whereKey:@"nickName" equalTo:[NSString stringWithUTF8String:nickName]];
+    }
+    
+    AVQuery *query = nil;
+    if (bu && bn) {
+        query = [AVQuery orQueryWithSubqueries:[NSArray arrayWithObjects:query_username, query_nickName, nil]];
+    } else if (bu) {
+        query = query_username;
+    } else if (bn) {
+        query = query_nickName;
+    }
+    if (query != nil) {
+        m_callback = nHandler;
+        retain();
+        
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                NSString* objectjson = @"";
+                for (AVUser* u in objects) {
+                    NSString* json = AVUserToJsonStr(u);
+                    if (objectjson.length == 0) {
+                        objectjson = [objectjson stringByAppendingFormat:@"{\"results\":[%@", json];
+                    } else {
+                        objectjson = [objectjson stringByAppendingFormat:@",%@", json];
+                    }
+                }
+                if (objectjson.length > 0) {
+                    objectjson = [objectjson stringByAppendingString:@"]}"];
+                } else {
+                    objectjson = @"{\"results\":[]}";
+                }
+                invokeCallback(objectjson.UTF8String, nullptr);
+            } else {
+                NSString* errorjson = NSErrorToJSONString(error);
+                invokeCallback(nullptr, errorjson.UTF8String);
+            }
+            
+            release();
+        }];
+    } else {
+        invokeCallback(nullptr, "{\"code\":-1,\"message\":\"CXAVCloud-searchUser query\",\"description\":\"CXAVCloud-searchUser query\"}");
     }
 }
