@@ -240,9 +240,7 @@ function ChapterLayerBase:addPopup(levelIndex)
             local active = info[3] + 0
             local currentTaskID = info[4] + 1
             local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
---            print('#####sendr:name:'..sender:getName()..':'..currentProgress)
             s_SCENE:removeAllPopups()
---            print('######## state'..state..',active'..active)
             if state >= 4 and bossID ~= currentTaskID then
 --                if true then
 
@@ -447,16 +445,45 @@ function ChapterLayerBase:plotDecoration()
     
     for levelIndex, levelPosition in pairs(self.levelPos) do
         -- add level button
-        
+        local function touchEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                local levelIndex = string.sub(sender:getName(), 10)
+                local lockSprite = self:getChildByName('lock'..levelIndex)
+                local lockLayer = self:getChildByName('lockLayer'..levelIndex)
+                local action1 = cc.ScaleTo:create(0.12, 1.15, 0.85)
+                local action2 = cc.ScaleTo:create(0.12, 0.85, 1.15)
+                local action3 = cc.ScaleTo:create(0.12, 1.08, 0.92)
+                local action4 = cc.ScaleTo:create(0.12, 0.92, 1.08)
+                local action5 = cc.ScaleTo:create(0.12, 1.0, 1.0)
+                local action6 = cc.Sequence:create(action1, action2, action3, action4, action5, nil)
+
+                local l1 = cc.MoveBy:create(0.1, cc.p(10,0))
+                local l2 = cc.MoveBy:create(0.1, cc.p(-20,0))
+                local l3 = cc.MoveBy:create(0.1, cc.p(20,0))
+
+                local l4 = cc.Repeat:create(cc.Sequence:create(l2, l3),3)
+                local l5 = cc.MoveBy:create(0.1, cc.p(-10, 0))
+                lockSprite:runAction(cc.Sequence:create(l1,l4, l5,nil))
+                lockLayer:runAction(action6)
+            end
+        end
         if (levelIndex - currentLevelIndex) > 0 then
-            local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland2.png')
+            -- local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland2.png')
+            -- lockIsland:setName('lockLayer'..levelIndex)
+            -- lockIsland:addTouchEventListener(touchEvent)
+
+            local lockIsland = ccui.Button:create('image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png','iimage/chapter/chapter0/lockisland2.png')
+            lockIsland:setScale9Enabled(true)
             lockIsland:setName('lockLayer'..levelIndex)
+            lockIsland:addTouchEventListener(touchEvent)
+
             local lock = cc.Sprite:create('image/chapter/chapter0/lock.png')
             lock:setName('lock'..levelIndex)
             lockIsland:setPosition(levelPosition)
+            -- lock:setPosition(lockIsland:getContentSize().width/2, lockIsland:getContentSize().height/2)
             lock:setPosition(levelPosition)
-            self:addChild(lockIsland,120)
             self:addChild(lock,130)
+            self:addChild(lockIsland,120)
         else
             self:plotDecorationOfLevel(levelIndex)
         end  
