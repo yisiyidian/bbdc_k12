@@ -146,16 +146,16 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
     fillColor1:setPosition(s_DESIGN_WIDTH/2,0)
     layer:addChild(fillColor1)
 
-    local fillColor2 = cc.LayerColor:create(cc.c4b(26,169,227,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, 614-393)
+    local fillColor2 = cc.LayerColor:create(cc.c4b(26,169,227,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, 604-373)
     fillColor2:setAnchorPoint(0.5,0)
     fillColor2:ignoreAnchorPointForPosition(false)
-    fillColor2:setPosition(s_DESIGN_WIDTH/2,393)
+    fillColor2:setPosition(s_DESIGN_WIDTH/2,373)
     layer:addChild(fillColor2)
 
-    local fillColor3 = cc.LayerColor:create(cc.c4b(36,186,248,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, 811-614)
+    local fillColor3 = cc.LayerColor:create(cc.c4b(36,186,248,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, 811-604)
     fillColor3:setAnchorPoint(0.5,0)
     fillColor3:ignoreAnchorPointForPosition(false)
-    fillColor3:setPosition(s_DESIGN_WIDTH/2,614)
+    fillColor3:setPosition(s_DESIGN_WIDTH/2,604)
     layer:addChild(fillColor3)
 
     local fillColor4 = cc.LayerColor:create(cc.c4b(213,243,255,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-811)
@@ -206,7 +206,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
         local action1 = cc.DelayTime:create(0.5)
         local action2 = cc.CallFunc:create(s_SCENE.touchEventBlockLayer.unlockTouch)
         layer:runAction(cc.Sequence:create(action1, action2))
-
+        
         rbCurrentWordIndex = rbCurrentWordIndex + 1                
         currentWordName,currentWord,wordname,wordSoundMarkEn,wordSoundMarkAm,wordMeaningSmall,wordMeaning,sentenceEn,sentenceCn,
         sentenceEn2,sentenceCn2 = updateWord()
@@ -312,7 +312,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
     hint_button:setScale9Enabled(true)
     layer:addChild(hint_button,2) 
 
-    local hint_label = cc.Label:createWithSystemFont("这是啥？","",36)
+    local hint_label = cc.Label:createWithSystemFont("提示我","",36)
     hint_label:setPosition(hint_button:getContentSize().width * 0.5,hint_button:getContentSize().height * 0.5)
     hint_label:setColor(cc.c4b(255,255,255,255))
     hint_label:ignoreAnchorPointForPosition(false)
@@ -331,7 +331,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
             if answer == sprite_array[logic_location.x][logic_location.y].character then
                 sprite_array[logic_location.x][logic_location.y].right()
                 playSound(s_sound_learn_true)
-                
+                playWordSound(wordname)
                 local x = rbProgressBar:getPos()
                 
                 local position_X,position_Y = sprite_array[logic_location.x][logic_location.y]:getPosition()
