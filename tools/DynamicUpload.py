@@ -18,8 +18,8 @@ for parent, dirnames, filenames in os.walk(tmp_assetPath):
     for filename in filenames:
         fullPath = os.path.join(parent, filename)
         if filename.find('.manifest') > 0:
-            cmd = 'scp %s root@yisiyidian.com:/var/www/ysyd/%s/%s' % (fullPath, AssetsManager, fullPath.replace(tmp_assetPath, ''))
+            cmd = 'scp %s root@123.56.84.196:/var/www/ysyd/%s/%s' % (fullPath, AssetsManager, fullPath.replace(tmp_assetPath, ''))
         else:
-            cmd = 'scp %s root@yisiyidian.com:/var/www/ysyd/%s/ServerAssets/%s' % (fullPath, AssetsManager, fullPath.replace(tmp_assetPath, ''))
+            cmd = 'scp %s root@123.56.84.196:/var/www/ysyd/%s/ServerAssets/%s' % (fullPath, AssetsManager, fullPath.replace(tmp_assetPath, ''))
         print cmd
         subprocess.call(cmd, shell=True)
