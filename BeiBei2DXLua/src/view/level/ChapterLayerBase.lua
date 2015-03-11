@@ -125,7 +125,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     levelButton:setPosition(levelPosition)
     levelButton:setName(levelIndex)
     levelButton:addTouchEventListener(touchEvent)
-    self:addChild(levelButton, 40)
+    self:addChild(levelButton, 129)
     
 
     local currentIndex = levelIndex
