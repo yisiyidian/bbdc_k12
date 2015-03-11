@@ -117,16 +117,16 @@ function ChooseRightLayer:ctor(word,wrongNum, preWordName, preWordNameState)
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
     
-    local progressBar_total_number = getMaxWrongNumEveryLevel()
+    -- local progressBar_total_number = getMaxWrongNumEveryLevel()
 
-    local progressBar = ProgressBar.create(progressBar_total_number, wrongNum, "blue")
-    progressBar:setPosition(bigWidth/2+44, 1054)
-    backColor:addChild(progressBar,2)
+    -- local progressBar = ProgressBar.create(progressBar_total_number, wrongNum, "blue")
+    -- progressBar:setPosition(bigWidth/2+44, 1054)
+    -- backColor:addChild(progressBar,2)
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
-    local todayNumber = LastWordAndTotalNumber:getTodayNum()
-    self.lastWordAndTotalNumber.setNumber(todayNumber)
+    -- local todayNumber = LastWordAndTotalNumber:getTodayNum()
+    -- self.lastWordAndTotalNumber.setNumber(todayNumber)
     if wrongNum ~= 0  and preWordName ~= nil then
     self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
     end

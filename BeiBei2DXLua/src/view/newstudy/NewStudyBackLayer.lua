@@ -35,7 +35,7 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
 
-    pauseBtn:setPosition(s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT - 50)
+    pauseBtn:setPosition(s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)
     s_SCENE.popupLayer.pauseBtn = pauseBtn
     backColor:addChild(pauseBtn,100)
     local Pause = require('view.Pause')

@@ -8,6 +8,7 @@ local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
+local TotalWrongWordTip = require("view.newstudy.TotalWrongWordTip")
 
 local  SlideCoconutLayer = class("SlideCoconutLayer", function ()
     return cc.Layer:create()
@@ -91,16 +92,26 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
 
     self.progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
     self.progressBar:setPosition(bigWidth/2+44, 1054)
-    backColor:addChild(self.progressBar)
 
+    if wrongWordList ~= nil then
+       backColor:addChild(self.progressBar)
+    end
+    
+    self.totalWrongWordTip = TotalWrongWordTip.create()
+    backColor:addChild(self.totalWrongWordTip,1)
+    local todayNumber = TotalWrongWordTip:getCurrentLevelWrongNum()
+
+    if wrongWordList == nil then
+        self.totalWrongWordTip.setNumber(todayNumber + 1)
+    end
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
-    local todayNumber = LastWordAndTotalNumber:getTodayNum()
-    self.lastWordAndTotalNumber.setNumber(todayNumber)
-    if wrongNum ~= 0  and preWordName ~= nil and wrongWordList == nil then
-    self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
-    end
+    -- local todayNumber = LastWordAndTotalNumber:getTodayNum()
+    -- self.lastWordAndTotalNumber.setNumber(todayNumber)
+    --    if wrongNum ~= 0  and preWordName ~= nil and wrongWordList == nil then
+    --    self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
+    --    end
     
     local word_meaning_label = cc.Label:createWithSystemFont(self.wordInfo[5],"",50)
     word_meaning_label:setPosition(bigWidth/2, 950)
@@ -114,11 +125,9 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
     else
         isNewPlayer = false
     end
-    if wrongWordList ~= nil then
-        mat = FlipMat.create(self.wordInfo[2],4,4,isNewPlayer,"coconut_light")
-    else
-        mat = FlipMat.create(self.wordInfo[2],4,4,isNewPlayer,"coconut_light",self.progressBar.indexPosition())
-    end
+
+    mat = FlipMat.create(self.wordInfo[2],4,4,isNewPlayer,"coconut_light")
+    --     mat = FlipMat.create(self.wordInfo[2],4,4,isNewPlayer,"coconut_light",self.progressBar.indexPosition())
     mat:setPosition(size_big.width/2, 160)
     backColor:addChild(mat)
     

@@ -8,6 +8,7 @@ local DetailInfo        = require("view.newstudy.NewStudyDetailInfo")
 local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
+local TotalWrongWordTip = require("view.newstudy.TotalWrongWordTip")
 
 local  ChooseWrongLayer = class("ChooseRightLayer", function ()
     return cc.Layer:create()
@@ -78,16 +79,26 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordN
 
     local progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
     progressBar:setPosition(bigWidth/2+44, 1054)
-    backColor:addChild(progressBar,2)
-
+    if wrongWordList ~= nil then
+       backColor:addChild(progressBar,2)
+    end
 
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
-    local todayNumber = LastWordAndTotalNumber:getTodayNum()
-    self.lastWordAndTotalNumber.setNumber(todayNumber)
-    if wrongNum ~= 0  and preWordName ~= nil and wrongWordList == nil then
-    self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
+
+    self.totalWrongWordTip = TotalWrongWordTip.create()
+    backColor:addChild(self.totalWrongWordTip,1)
+    local todayNumber = TotalWrongWordTip:getCurrentLevelWrongNum()
+    
+    if wrongWordList == nil then
+        self.totalWrongWordTip.setNumber(todayNumber + 1)
     end
+    
+    -- local todayNumber = LastWordAndTotalNumber:getTodayNum()
+    -- self.lastWordAndTotalNumber.setNumber(todayNumber)
+--    if wrongNum ~= 0  and preWordName ~= nil and wrongWordList == nil then
+--    self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
+--    end
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
     soundMark:setPosition(bigWidth/2, 920)  

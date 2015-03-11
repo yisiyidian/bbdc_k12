@@ -169,8 +169,8 @@ function BlacksmithLayer:ctor(wordlist)
 
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
-    local todayNumber = LastWordAndTotalNumber:getTodayNum()
-    self.lastWordAndTotalNumber.setNumber(todayNumber)
+    -- local todayNumber = LastWordAndTotalNumber:getTodayNum()
+    -- self.lastWordAndTotalNumber.setNumber(todayNumber)
 
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
