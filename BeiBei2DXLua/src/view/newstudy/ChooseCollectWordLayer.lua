@@ -101,6 +101,7 @@ local function createKnow(word,wrongNum, preWordName, preWordNameState)
         knowLabel:enableOutline(cc.c4b(58,185,224,255),1)
         local location = layer:convertToNodeSpace(touch:getLocation())
         if cc.rectContainsPoint(choose_know_button:getBoundingBox(),location) then
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local action1 = cc.DelayTime:create(0.35) 
             local action2 = cc.DelayTime:create(1)
             choose_know_button:runAction(cc.Sequence:create(cc.CallFunc:create(function ()
@@ -175,6 +176,7 @@ local function createDontknow(word,wrongNum, preWordName, preWordNameState)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local action1 = cc.DelayTime:create(0.25) 
             local action2 = cc.DelayTime:create(1)
             local action3 = cc.DelayTime:create(1) 
