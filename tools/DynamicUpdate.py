@@ -74,17 +74,17 @@ def getAssetsMD5(folderName, src, dst):
 def exportAssets(isDebug, assetsPath, tmp_assetPath, AssetsManagerReleaseFolder, version, engineVersion, manifestFilePath, manifestVersionFilePath):
     versionDebug = '''
     { 
-        "packageUrl" : "http://yisiyidian.com/AssetsManagerDebug/",
-        "remoteManifestUrl" : "http://yisiyidian.com/AssetsManagerDebug/project_server_debug.manifest", 
-        "remoteVersionUrl" : "http://yisiyidian.com/AssetsManagerDebug/version_debug.manifest", 
+        "packageUrl" : "http://123.56.84.196/AssetsManagerDebug/",
+        "remoteManifestUrl" : "http://123.56.84.196/AssetsManagerDebug/project_server_debug.manifest", 
+        "remoteVersionUrl" : "http://123.56.84.196/AssetsManagerDebug/version_debug.manifest", 
         "version" : "%s", 
         "engineVersion" : "%s" 
     ''' % (version, engineVersion)
     versionRelease = '''
     { 
-        "packageUrl" : "http://yisiyidian.com/AssetsManagerRelease/%s",
-        "remoteManifestUrl" : "http://yisiyidian.com/AssetsManagerRelease/%s/project_server_release.manifest", 
-        "remoteVersionUrl" : "http://yisiyidian.com/AssetsManagerRelease/%s/version_release.manifest", 
+        "packageUrl" : "http://123.56.84.196/AssetsManagerRelease/%s",
+        "remoteManifestUrl" : "http://123.56.84.196/AssetsManagerRelease/%s/project_server_release.manifest", 
+        "remoteVersionUrl" : "http://123.56.84.196/AssetsManagerRelease/%s/version_release.manifest", 
         "version" : "%s", 
         "engineVersion" : "%s"
     ''' % (AssetsManagerReleaseFolder, AssetsManagerReleaseFolder, AssetsManagerReleaseFolder, version, engineVersion)
