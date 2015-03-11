@@ -8,11 +8,11 @@ import zipfile
 import shutil
 import hashlib
 
-tmp_assetPath = os.getcwd() + '/../tmp_asset/debug/'
-AssetsManager = 'AssetsManagerDebug'
+# tmp_assetPath = os.getcwd() + '/../tmp_asset/debug/'
+# AssetsManager = 'AssetsManagerDebug'
 
-# tmp_assetPath = os.getcwd() + '/../tmp_asset/release/'
-# AssetsManager = 'AssetsManagerRelease/2.0.2'
+tmp_assetPath = os.getcwd() + '/../tmp_asset/release/'
+AssetsManager = 'AssetsManagerRelease/2.0.2'
 
 for parent, dirnames, filenames in os.walk(tmp_assetPath):
     for filename in filenames:
