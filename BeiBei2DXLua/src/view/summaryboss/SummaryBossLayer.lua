@@ -39,11 +39,12 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     layer.isHinting = false
     layer.currentHintWord = {false,false,false}
     layer.wordStack = {}
+    layer.letterStack = {}
     layer.firstIndex = 1
     layer.combo = 0
     layer.leftTime = 0
     layer.useItem = false
-
+    layer.entrance = entrance
     layer.wordList = wordList
     -- slide coco
     local slideCoco = {}
@@ -163,6 +164,9 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         layer.combo = 9
                     end
                     if layer.combo > 0 then
+                        layer.combo_back:setScale(1)
+                        layer.combo_back:setOpacity(255)
+                        layer.combo_back:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,0),cc.ScaleTo:create(0.5,1.3)))
                         local icon_index = layer.combo + 3
                         local icon = layer.combo_icon[icon_index]
                         icon:setScale(1.3)
@@ -677,8 +681,11 @@ function SummaryBossLayer:updateWord(selectStack,chapter)
     for i = 1, #self.wordStack do
             self.wordStack[i]:stopAllActions()
             self.wordStack[i]:removeFromParent()
+
+            self.letterStack[i]:removeFromParent()
     end
     self.wordStack = {}
+    self.letterStack = {}
         
     local count = #selectStack
     local gap = 32
@@ -688,14 +695,15 @@ function SummaryBossLayer:updateWord(selectStack,chapter)
         local wordBack = cc.Sprite:create(string.format("image/summarybossscene/global_zongjiebossdancixianshi_%d.png",chapter))
             --wordBack:setScaleX(count * gap/wordBack:getContentSize().width + 1.0/5)
         wordBack:setPosition(left + gap*(i - 1), 0.72*s_DESIGN_HEIGHT)
-        wordBack:setScale(0.7)
+        --wordBack:setScale(0.7)
         self:addChild(wordBack)
         self.wordStack[i] = wordBack
-        local letter = cc.Label:createWithSystemFont(selectStack[i].main_character_content,"",30)
-        letter:setScale(10 / 7)
+        local letter = cc.Label:createWithTTF(selectStack[i].main_character_content,"font/CenturyGothic.ttf",36)
+        --letter:setScale(10 / 7)
         --letter:setColor(cc.c3b(0,0,0))
-        letter:setPosition(0.5 * wordBack:getContentSize().width, 0.5 * wordBack:getContentSize().height)
-        wordBack:addChild(letter)
+        letter:setPosition(left + gap*(i - 1), 0.72*s_DESIGN_HEIGHT)
+        self:addChild(letter,1)
+        self.letterStack[i] = letter
     end
 end
 
@@ -769,6 +777,12 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
     self.combo_label = {}
     local combo_color = {cc.c4b(156,220,240,255),cc.c4b(255,216,2,255),cc.c4b(170,246,62,255),cc.c4b(255,148,34,255)}
 
+    local combo_back = cc.Sprite:create('image/summarybossscene/liangguang_study_1.png')
+    combo_back:setPosition(s_DESIGN_WIDTH * 0.9,s_DESIGN_HEIGHT * 0.95 + 5)
+    self:addChild(combo_back)
+    self.combo_back = combo_back
+    combo_back:setOpacity(0)
+
     for i = 1,12 do
         combo_icon[i] = cc.ProgressTimer:create(cc.Sprite:create(string.format('image/summarybossscene/yuanhuan_zjboss_%d.png',math.ceil(i/3))))
         combo_icon[i]:setPosition(s_DESIGN_WIDTH * 0.9,s_DESIGN_HEIGHT * 0.95 + 5)
@@ -786,17 +800,19 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
     for i = 1,4 do
         local label1 = cc.Label:createWithSystemFont('+','',30)
         label1:setAnchorPoint(1,0.5)
-        label1:setPosition(combo_icon[i]:getPositionX() - 1,combo_icon[i]:getPositionY() + 3)
+        label1:setPosition(combo_icon[i]:getPositionX(),combo_icon[i]:getPositionY() + 3)
         self:addChild(label1,100)
         label1:setColor(combo_color[i])
+        label1:enableOutline(combo_color[i],2)
         self.combo_label[#self.combo_label + 1] = label1
 
         local label2 = cc.Label:createWithSystemFont(string.format('%d',i - 1),'',30)
         label2:setAnchorPoint(0,0.5)
-        label2:enableOutline(combo_color[i],1)
+        label2:enableOutline(combo_color[i],2)
         label2:setPosition(combo_icon[i]:getPositionX() - 1,combo_icon[i]:getPositionY() + 1)
         self:addChild(label2,100)
         label2:setColor(combo_color[i])
+
         self.combo_label[#self.combo_label + 1] = label2
 
         if i > 1 then
@@ -936,7 +952,7 @@ end
 function SummaryBossLayer:initWordList(word)
     local wordList = word
     --if #wordList < 1 then
-        wordList = {'apple','many','many','many','many','many','many','many','many','many','many','tea','banana','cat','dog','camel','ant'}
+        --wordList = {'apple','many','many','many','many','many','many','many','many','many','many','tea','banana','cat','dog','camel','ant'}
     --end
     local index = 1
     
@@ -956,7 +972,11 @@ function SummaryBossLayer:initWordList(word)
         self.totalBlood = self.totalBlood + string.len(wordList[i]) * 2
     end
     self.currentBlood = self.totalBlood
-    self.totalTime = math.ceil(self.totalBlood / 7) * 15 + s_CURRENT_USER.timeAdjust
+    if self.entrance then
+        self.totalTime = math.ceil(self.totalBlood / 14) * 15 + s_CURRENT_USER.timeAdjust
+    else
+        self.totalTime = math.ceil(self.totalBlood / 14) * 3
+    end
     self.leftTime = self.totalTime
     -- self.totalBlood = levelConfig.summary_boss_hp
     -- self.currentBlood = self.totalBlood
@@ -1418,10 +1438,12 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
     else 
         s_CURRENT_USER.winCombo = s_CURRENT_USER.winCombo + 1
     end
-    if s_CURRENT_USER.winCombo > 3 and s_CURRENT_USER.timeAdjust > -30 then
-        s_CURRENT_USER.timeAdjust = s_CURRENT_USER.timeAdjust - 5
-    elseif s_CURRENT_USER.winCombo <= 3 then
-        s_CURRENT_USER.timeAdjust = 0
+    if entrance then
+        if s_CURRENT_USER.winCombo > 3 and s_CURRENT_USER.timeAdjust > -30 then
+            s_CURRENT_USER.timeAdjust = s_CURRENT_USER.timeAdjust - 5
+        elseif s_CURRENT_USER.winCombo <= 3 then
+            s_CURRENT_USER.timeAdjust = 0
+        end
     end
 
     saveUserToServer({['timeAdjust']=s_CURRENT_USER.timeAdjust, 
@@ -1447,10 +1469,12 @@ function SummaryBossLayer:lose(chapter,entrance,wordList)
     if not self.useItem then
         s_CURRENT_USER.winCombo = 0
         s_CURRENT_USER.failTime = s_CURRENT_USER.failTime + 1
-        if s_CURRENT_USER.failTime > 3 and s_CURRENT_USER.timeAdjust < 30 then
-            s_CURRENT_USER.timeAdjust = s_CURRENT_USER.timeAdjust + 5
-        elseif s_CURRENT_USER.failTime <= 3 then
-            s_CURRENT_USER.timeAdjust = 0
+        if entrance then
+            if s_CURRENT_USER.failTime > 3 and s_CURRENT_USER.timeAdjust < 30 then
+                s_CURRENT_USER.timeAdjust = s_CURRENT_USER.timeAdjust + 5
+            elseif s_CURRENT_USER.failTime <= 3 then
+                s_CURRENT_USER.timeAdjust = 0
+            end
         end
         saveUserToServer({['timeAdjust']=s_CURRENT_USER.timeAdjust, 
                           ['winCombo']=s_CURRENT_USER.winCombo,
