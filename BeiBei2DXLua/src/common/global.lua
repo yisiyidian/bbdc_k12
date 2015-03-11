@@ -1,5 +1,5 @@
-app_version_debug   = 202000
-app_version_release = 202000
+app_version_debug   = 203000
+app_version_release = 203000
 
 local function _initConstant()
     -- number
