@@ -350,7 +350,7 @@ function ChapterLayerBase:addPopup(levelIndex)
         taskButton:addTouchEventListener(taskEvent)
         back:addChild(taskButton)
         if s_level_popup_state == 2 then
-            s_SCENE:callFuncWithDelay(0.5, function()
+            -- s_SCENE:callFuncWithDelay(0.5, function()
                 if state ~= 0 then
                     tick = cc.Sprite:create('image/chapter/popup/duigo_green_xiaoguan_tanchu.png')
                     tick:setPosition(taskButton:getPositionX()+165, taskButton:getPositionY() + 115)
@@ -362,7 +362,7 @@ function ChapterLayerBase:addPopup(levelIndex)
                     tick:runAction(action2)
                     back:addChild(tick, 10) 
                 end
-            end)
+            -- end)
         else 
                 if state ~= 0 then
                     tick = cc.Sprite:create('image/chapter/popup/duigo_green_xiaoguan_tanchu.png')
