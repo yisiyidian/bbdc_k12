@@ -272,10 +272,7 @@ function getDayStringForDailyStudyInfo(time)
 end
 
 function getRandomBossPath( )
-    map_path = {{{3,4,5,6,25},{2,1,8,7,24},{11,10,9,22,23},{12,15,16,21,20},{13,14,17,18,19}},
-            {{},{},{},{},{}},
-            {{},{},{},{},{}},
-            {{},{},{},{},{}},
-            {{},{},{},{},{}}}
-    return map_path[1]
+    local map_path = require('view.summaryboss.MapPath')
+    
+    return map_path[math.random(1,5)]
 end
