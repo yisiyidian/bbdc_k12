@@ -29,7 +29,7 @@ end
 function DynamicUpdate.beginLoginUpdate(updateInfo)
     
     if BUILD_TARGET==BUILD_TARGET_DEBUG or BUILD_TARGET==BUILD_TARGET_RELEASE_TEST   then
-        am = cc.AssetsManagerEx:create("manifest/book_sound_cet4.manifest",storagePath)
+        am = cc.AssetsManagerEx:create("manifest/project_debug.manifest",storagePath)
         am:retain()
         print("debug version")
     else 

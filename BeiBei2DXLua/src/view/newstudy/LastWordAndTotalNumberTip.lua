@@ -11,6 +11,12 @@ function LastWordAndTotalNumberTip:getTodayNum()
     return todayNumber
 end
 
+function LastWordAndTotalNumberTip:getCurrentLevelRightNum()
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    local currentNumber = #bossList[#bossList].rightWordList 
+    return currentNumber
+end
+
 function LastWordAndTotalNumberTip.create()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 

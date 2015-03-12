@@ -47,7 +47,7 @@ function SoundMark.create(wordname, soundmarkus, soundmarken, playWordOrNot)
     local pronounce = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             local wordSoundState = playWordSound(wordname)
-            if wordSoundState == PLAY_WORD_SOUND_NO or s_SERVER.isNetworkConnectedNow() == false then
+            if wordSoundState == PLAY_WORD_SOUND_NO  then
                 offlineTip.setTrue()
             end
         end

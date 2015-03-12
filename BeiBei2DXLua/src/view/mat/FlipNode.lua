@@ -134,6 +134,29 @@ function FlipNode.create(back, character, x, y)
         main.main_character_label:setColor(cc.c3b(0,0,0))
     end
 
+    main.shake = function ()
+        local action1 = cc.MoveBy:create(0.05, cc.p(-5,0))
+        local action2 = cc.MoveBy:create(0.05, cc.p(10,0))
+        local action3 = cc.MoveBy:create(0.05, cc.p(-10, 0))
+        local action4 = cc.Repeat:create(cc.Sequence:create(action2, action3),3)
+        local action5 = cc.MoveBy:create(0.05, cc.p(5,0)) 
+        local action = cc.Sequence:create(action1, action4, action5)
+        main.main_back:runAction(action)
+        
+        local action11 = cc.MoveBy:create(0.05, cc.p(-5,0))
+        local action12 = cc.MoveBy:create(0.05, cc.p(10,0))
+        local action13 = cc.MoveBy:create(0.05, cc.p(-10, 0))
+        local action14 = cc.Repeat:create(cc.Sequence:create(action12, action13),3)
+        local action15 = cc.MoveBy:create(0.05, cc.p(5,0)) 
+        local action10 = cc.Sequence:create(action11, action14, action15)
+        main.main_back:runAction(action10)
+
+        local action7 = cc.ScaleTo:create(0.075,1.15 ,0.85 )
+        local action8 = cc.ScaleTo:create(0.075,0.85 ,1.15 )
+        local action9 = cc.ScaleTo:create(0.05, 1 , 1 )
+        main.main_back:runAction(cc.Sequence:create(action7, action8, action9))
+    end
+
 
     return main
 end

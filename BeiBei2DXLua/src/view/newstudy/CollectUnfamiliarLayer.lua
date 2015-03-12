@@ -115,7 +115,11 @@ local function createOptions(randomNameArray,word,wrongNum, preWordName, preWord
     
     local click_choose = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)
+            if sender.tag == 1 then  
+                playSound(s_sound_learn_true)
+            else  
+                playSound(s_sound_learn_false)
+            end   
         elseif eventType == ccui.TouchEventType.ended then  
 --            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local feedback 
@@ -149,7 +153,7 @@ local function createOptions(randomNameArray,word,wrongNum, preWordName, preWord
                         s_CURRENT_USER.beanRewardForCollect  = s_CURRENT_USER.beanRewardForCollect - 1
                     end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-                    local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum, nil, preWordName, preWordNameState)
+                    local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum, preWordName, preWordNameState,CreateWrongLayer_From_CollectWord,nil)
                     s_SCENE:replaceGameLayer(chooseWrongLayer)   
                 end)))
             end
@@ -189,7 +193,7 @@ local function createDontknow(word,wrongNum, preWordName, preWordNameState)
             AnalyticsStudyDontKnowAnswer()  
             AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW, 'TOUCH')
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,nil,preWordName, preWordNameState)
+            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum, preWordName, preWordNameState,CreateWrongLayer_From_CollectWord,nil)
             s_SCENE:replaceGameLayer(chooseWrongLayer)          
         end
     end
@@ -230,7 +234,7 @@ function CollectUnfamiliarLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
-    local todayNumber = LastWordAndTotalNumber:getTodayNum()
+    local todayNumber = LastWordAndTotalNumber:getCurrentLevelNum()
     self.lastWordAndTotalNumber.setNumber(todayNumber)
     if preWordName ~= nil then
     self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
@@ -239,7 +243,7 @@ function CollectUnfamiliarLayer:ctor(wordName, wrongWordNum, preWordName, preWor
 
     
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
-    soundMark:setPosition(bigWidth/2, 925)  
+    soundMark:setPosition(bigWidth/2, 930)
     backColor:addChild(soundMark)
     
     self.options = createOptions(self.randWord,wordName,wrongWordNum, preWordName, preWordNameState)

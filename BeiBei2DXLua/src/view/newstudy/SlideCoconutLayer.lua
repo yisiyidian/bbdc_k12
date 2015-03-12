@@ -9,12 +9,13 @@ local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
 local Button                = require("view.newstudy.BlueButtonInStudyLayer")
+local TotalWrongWordTip = require("view.newstudy.TotalWrongWordTip")
 
 local  SlideCoconutLayer = class("SlideCoconutLayer", function ()
     return cc.Layer:create()
 end)
 
-function SlideCoconutLayer.create(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+function SlideCoconutLayer.create(word,wrongNum,wrongWordList)
     local layer = SlideCoconutLayer.new(word,wrongNum,wrongWordList)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
@@ -36,7 +37,7 @@ local function createRefreshButton()
     return refreshButton  
 end
 
-local function createLastButton(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+local function createLastButton(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_before_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -46,7 +47,7 @@ local function createLastButton(word,wrongNum,wrongWordList,preWordName, preWord
             local chooseWrongLayer 
             AnalyticsStudyLookBackWord()
             if wrongWordList == nil then
-                chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,nil,preWordName, preWordNameState)
+                chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
             else
                 chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,wrongWordList)
             end
@@ -57,11 +58,10 @@ local function createLastButton(word,wrongNum,wrongWordList,preWordName, preWord
     local choose_before_button = Button.create("偷看一眼")
     choose_before_button:setPosition(bigWidth/2, 100)
     choose_before_button:addTouchEventListener(click_before_button)
-    
     return choose_before_button  
 end
 
-function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
     if s_CURRENT_USER.tutorialStep == s_tutorial_study then
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_3)
     end
@@ -89,18 +89,22 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
     local progressBar_total_number = getMaxWrongNumEveryLevel()
 
     self.progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
-    self.progressBar:setPosition(bigWidth/2+44, 1049)
+    self.progressBar:setPosition(bigWidth/2+44, 1054)
 
-    backColor:addChild(self.progressBar)
+    if wrongWordList ~= nil then
+       backColor:addChild(self.progressBar)
+    end
+    
+    self.totalWrongWordTip = TotalWrongWordTip.create()
+    backColor:addChild(self.totalWrongWordTip,1)
+    local todayNumber = TotalWrongWordTip:getCurrentLevelWrongNum()
 
+    if wrongWordList == nil then
+        self.totalWrongWordTip.setNumber(todayNumber + 1)
+    end
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
-    local todayNumber = LastWordAndTotalNumber:getTodayNum()
-    self.lastWordAndTotalNumber.setNumber(todayNumber)
-    if wrongNum ~= 0  and preWordName ~= nil and wrongWordList == nil then
-    self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
-    end
     
     local word_meaning_label = cc.Label:createWithSystemFont(self.wordInfo[5],"",50)
     word_meaning_label:setPosition(bigWidth/2, 950)
@@ -114,11 +118,8 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
     else
         isNewPlayer = false
     end
-    if wrongWordList ~= nil then
-        mat = FlipMat.create(self.wordInfo[2],4,4,isNewPlayer,"coconut_light")
-    else
-        mat = FlipMat.create(self.wordInfo[2],4,4,isNewPlayer,"coconut_light",self.progressBar.indexPosition())
-    end
+
+    mat = FlipMat.create(self.wordInfo[2],4,4,isNewPlayer,"coconut_light")
     mat:setPosition(size_big.width/2, 160)
     backColor:addChild(mat)
     
@@ -127,7 +128,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
         local normal = function()  
             if s_CURRENT_USER.tutorialStep == s_tutorial_study then
                s_CURRENT_USER:setTutorialStep(s_tutorial_study + 1)
-               s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_summary_boss)
+               s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_review_boss)
             end
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
@@ -148,20 +149,11 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
             showAnswerStateBack:addChild(right_wordname)
 
             local action1 = cc.MoveTo:create(0.2,cc.p(backColor:getContentSize().width /2, 768))
-            showAnswerStateBack:runAction(cc.Sequence:create(action1,
-               cc.CallFunc:create(function()
-                  self.progressBar.addOne()
-               end),
-               cc.CallFunc:create(function()
-                  if wrongNum == progressBar_total_number - 1 then
-                    self.progressBar:runAction(cc.MoveBy:create(0.5,cc.p(0,200)))
-                  end
-               end)))
+            showAnswerStateBack:runAction(action1)
 
             self:runAction(cc.Sequence:create(cc.DelayTime:create(1),cc.CallFunc:create(function()  
                 if wrongWordList == nil then
                     if wrongNum == progressBar_total_number - 1 then
-
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanRewardForCollect)
                         saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
                         print('logInDatas')
@@ -219,7 +211,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
     self.refreshButton = createRefreshButton()
     backColor:addChild(self.refreshButton)
     
-    self.lastButton = createLastButton(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+    self.lastButton = createLastButton(word,wrongNum,wrongWordList)
     backColor:addChild(self.lastButton)
 end
 

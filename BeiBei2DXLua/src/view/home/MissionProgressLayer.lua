@@ -321,7 +321,7 @@ function MissionProgressLayer.create(share)
    --     end
    -- end
    
-   -- local Button = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
+   -- local Button = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png","")
    -- Button:setPosition(bigWidth/2 + 200, s_DESIGN_HEIGHT * 0.7)
    -- Button:setTitleText("EndLayer")
    -- Button:setTitleColor(cc.c4b(255,255,255,255))

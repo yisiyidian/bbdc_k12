@@ -18,15 +18,22 @@ end
 
 function ChapterLayer:ctor()
     s_SCENE.touchEventBlockLayer.lockTouch()
-    s_SCENE:callFuncWithDelay(1, function()
+    s_SCENE:callFuncWithDelay(0.5, function()
         s_SCENE.touchEventBlockLayer.unlockTouch()
     end)
+    
 
     if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
         s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
     end
     playMusic(s_sound_bgm1,true)
+
+    -- show repeat chapter list
+    self.activeChapterStartIndex = 0
+    self.activeChapterEndIndex = 0
+    self.biggestChapterIndex = 0
+
     self.chapterDic = {}
     -- add list view
     local function listViewEvent(sender, eventType)
@@ -36,6 +43,8 @@ function ChapterLayer:ctor()
 
     local function scrollViewEvent(sender, evenType)
         if evenType == ccui.ScrollviewEventType.scrollToBottom then
+            -- test
+            self:addChapterIntoListView("chapter0")
             print("SCROLL_TO_BOTTOM")
         elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
             print("SCROLL_TO_TOP")
@@ -64,7 +73,7 @@ function ChapterLayer:ctor()
 --    print('#### current levelINfo '..levelInfo)
     local currentChapterIndex = math.floor(levelInfo / s_islands_per_page)   
     for i = 1, currentChapterIndex do
-        print('start add chapter:'..i)
+        -- print('start add chapter:'..i)
         self:addChapterIntoListView('chapter'..i)
     end
     -- add player
@@ -80,6 +89,50 @@ function ChapterLayer:ctor()
     self:addBackToHome()
     self:addBeansUI()
    
+end
+
+function ChapterLayer:initActiveChapterRange()   -- initialize the active range of repeatable chapter ui
+    local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+    local activeLevelIndex
+    -- check whether exists task
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    local taskIndex = -2
+    local taskState = -2
+    local progressIndex = progress
+    local progressState = 0
+    for bossID, bossInfo in pairs(bossList) do
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 and taskIndex == -2 and bossInfo["typeIndex"] - 8 < 0 then
+            taskIndex = bossID - 1
+            taskState = bossInfo["typeIndex"] 
+        end
+        if (progressIndex + 1) == bossID then
+            progressState = bossInfo["typeIndex"]
+        end
+    end    
+    if taskIndex == -2 then
+        activeLevelIndex = taskIndex
+    else
+        activeLevelIndex = progress
+    end
+
+    -- check active chapterindex range
+    self.activeChapterIndex = math.floor(activeLevelIndex / s_islands_per_page)
+    self.biggestChapterIndex = math.floor(progress / s_islands_per_page)
+    if self.biggestChapterIndex < 3 then
+        self.activeChapterStartIndex = 0
+        self.activeChapterEndIndex = self.biggestChapterIndex
+    else 
+        if self.activeChapterIndex == 0 then
+            self.activeChapterStartIndex = 0
+            self.activeChapterEndIndex = 2
+        elseif self.activeChapterIndex == self.biggestChapterIndex then
+            self.activeChapterStartIndex = self.activeChapterIndex - 2
+            self.activeChapterEndIndex = self.biggestChapterIndex
+        else 
+            self.activeChapterStartIndex = self.activeChapterIndex - 1
+            self.activeChapterEndIndex = self.activeChapterIndex + 1
+        end
+    end
 end
 
 function ChapterLayer:checkUnlockLevel()

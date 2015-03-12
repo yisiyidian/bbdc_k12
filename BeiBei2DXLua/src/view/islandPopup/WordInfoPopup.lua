@@ -70,7 +70,7 @@ function WordInfoPopup:ctor(index,wordlist)
     button_close:setScale9Enabled(true)
     button_close:setPosition(backPopup:getContentSize().width - 30 , backPopup:getContentSize().height - 30 )
     button_close:addTouchEventListener(button_close_clicked)
-    backPopup:addChild(button_close,10)
+--    backPopup:addChild(button_close,10)
 
     local button_back_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then

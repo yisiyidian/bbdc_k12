@@ -13,8 +13,8 @@ local  BlacksmithLayer = class("BlacksmithLayer", function ()
     return cc.Layer:create()
 end)
 
-function BlacksmithLayer.create(wordlist,index)
-    local layer = BlacksmithLayer.new(wordlist,index)
+function BlacksmithLayer.create(wordlist)
+    local layer = BlacksmithLayer.new(wordlist)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     cc.SimpleAudioEngine:getInstance():pauseMusic()
     return layer
@@ -36,7 +36,11 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
 
     local click_choose = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)
+            if sender.tag == 1 then  
+                playSound(s_sound_learn_true)
+            else  
+                playSound(s_sound_learn_false)
+            end 
         elseif eventType == ccui.TouchEventType.ended then  
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local feedback 
@@ -49,6 +53,7 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
             sender:addChild(feedback)
 
             if sender.tag == 1 then  
+                local preWord = wordlist[1]
                 table.remove(wordlist,1)
                 local action1 = cc.DelayTime:create(0.1)
                 local action2 = cc.MoveTo:create(0.3,cc.p(position , 1070 - sender:getPositionY()))
@@ -98,7 +103,7 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
                         s_CURRENT_USER.beanRewardForIron = s_CURRENT_USER.beanRewardForIron - 1
                     end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-                    local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],progressBar_total_number - #wordlist,wordlist)
+                    local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1],progressBar_total_number - #wordlist, wordlist)
                     s_SCENE:replaceGameLayer(chooseWrongLayer)
                 end)))
             end
@@ -139,8 +144,9 @@ local function createDontknow(wordlist)
         elseif eventType == ccui.TouchEventType.ended then
             AnalyticsStudyDontKnowAnswer_strikeWhileHot()
             AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW_STRIKEWHILEHOT, 'TOUCH')
+
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1], progressBar_total_number - #wordlist, wordlist, CreateWrongLayer_From_Iron, wordlist)
+            local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1], progressBar_total_number - #wordlist, wordlist)
             s_SCENE:replaceGameLayer(chooseWrongLayer)            
         end
     end
@@ -172,14 +178,8 @@ function BlacksmithLayer:ctor(wordlist)
     self.progressBar:setPosition(bigWidth/2+44, 1054)
     backColor:addChild(self.progressBar)
 
-    self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
-    backColor:addChild(self.lastWordAndTotalNumber,1)
-    local todayNumber = LastWordAndTotalNumber:getTodayNum()
-    self.lastWordAndTotalNumber.setNumber(todayNumber)
-
-
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
-    soundMark:setPosition(bigWidth/2, 925)
+    soundMark:setPosition(bigWidth/2, 930)
     backColor:addChild(soundMark)
 
     self.options = self:createOptions(self.randWord,wordlist,self.progressBar.indexPosition())

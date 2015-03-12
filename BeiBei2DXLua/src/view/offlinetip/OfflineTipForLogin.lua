@@ -19,6 +19,12 @@ function OfflineTipForLogin.create()
    
     layer.setTrue = function ()
     	backColor:setVisible(true)
+        local action1 = cc.FadeIn:create(1)
+        local action2 = cc.FadeOut:create(10)
+        backColor:runAction(cc.Sequence:create(action1,action2))
+        local action3 = cc.FadeIn:create(1)
+        local action4 = cc.FadeOut:create(10)
+        tip:runAction(cc.Sequence:create(action3,action4))
     end
     
     layer.setFalse = function ()
