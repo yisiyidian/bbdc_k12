@@ -10,6 +10,8 @@ end)
 local s_chapter_layer_width = 854
 local oceanBlue = cc.c4b(61,191,244,255)
 local bounceSectionSize = cc.size(854,512)
+local scrollBottomLock = false
+local scrollTopLock = false
 
 function ChapterLayer.create()
     local layer = ChapterLayer.new()
@@ -42,15 +44,25 @@ function ChapterLayer:ctor()
         end
     end
 
+
     local function scrollViewEvent(sender, evenType)
         if evenType == ccui.ScrollviewEventType.scrollToBottom then
             -- test
             -- self:addChapterIntoListView("chapter0")
-            print("SCROLL_TO_BOTTOM")
+            if not scrollBottomLock then
+                scrollBottomLock = true
+                self:callFuncWithDelay(2.0, function()
+                    scrollBottomLock = false
+                end)
+                print("SCROLL_TO_BOTTOM")
             -- if self.activeChapterEndIndex < self.biggestChapterIndex then
                 self.activeChapterEndIndex = self.activeChapterEndIndex + 1
-                self:addChapterIntoListView("chapter0")
-                self:scrollLevelLayer(11,0.2)
+                self:addChapterIntoListView("chapter1")
+
+                -- self:callFuncWithDelay(0.1, function()
+                    self:scrollLevelLayer((self.activeChapterEndIndex-1) * s_islands_per_page,0.2)
+                -- end)
+            end
             -- end
         elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
             print("SCROLL_TO_TOP")
@@ -154,6 +166,13 @@ function ChapterLayer:initActiveChapterRange()   -- initialize the active range 
         end
     end
     print('###activeChapterRange:'..self.activeChapterStartIndex..','..self.activeChapterEndIndex..','..self.activeChapterIndex)
+end
+
+function ChapterLayer:callFuncWithDelay(delay, func) 
+    local delayAction = cc.DelayTime:create(delay)
+    local callAction = cc.CallFunc:create(func)
+    local sequence = cc.Sequence:create(delayAction, callAction)
+    self:runAction(sequence)   
 end
 
 function ChapterLayer:checkUnlockLevel()
@@ -582,7 +601,7 @@ function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
     local innerHeight = s_chapter0_base_height * (self.activeChapterEndIndex - self.activeChapterStartIndex + 1)
     self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
     local currentVerticalPercent = currentLevelCount / activeTotalLevelCount * 100
-    -- print('#######currentPercent:'..currentVerticalPercent,','..currentLevelCount..','..totalLevelCount)
+    print('#######currentPercent:'..currentVerticalPercent,','..currentLevelCount..','..activeTotalLevelCount)
     if scrollTime - 0 == 0 then
         self.listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,false)
     else
