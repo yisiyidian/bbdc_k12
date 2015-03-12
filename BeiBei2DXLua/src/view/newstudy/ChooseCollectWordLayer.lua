@@ -102,6 +102,7 @@ local function createKnow(word)
         local location = layer:convertToNodeSpace(touch:getLocation())
         if cc.rectContainsPoint(choose_know_button:getBoundingBox(),location) then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            ChooseCollectWordLayer.forceToEnd()
             local action1 = cc.DelayTime:create(0.35) 
             local action2 = cc.DelayTime:create(1)
             choose_know_button:runAction(cc.Sequence:create(cc.CallFunc:create(function ()
@@ -177,6 +178,7 @@ local function createDontknow(word,wrongNum)
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            ChooseCollectWordLayer.forceToEnd()
             local action1 = cc.DelayTime:create(0.25) 
             local action2 = cc.DelayTime:create(1)
             local action3 = cc.DelayTime:create(1) 
@@ -267,7 +269,7 @@ local function createLoading(interpretation)
     layer:addChild(meaningLabel)
     layer:addChild(circleSprite)
     
-    local forceToEnd = function ()
+    ChooseCollectWordLayer.forceToEnd = function ()
     	circleSprite:runAction(cc.FadeOut:create(0.1))
         meaningLabel:setVisible(true)
     end
@@ -279,13 +281,13 @@ local function createLoading(interpretation)
     local function onTouchEnded(touch, event)
         local location = layer:convertToNodeSpace(touch:getLocation())
         if cc.rectContainsPoint(circleSprite:getBoundingBox(),location) then
-        forceToEnd()
+            ChooseCollectWordLayer.forceToEnd()
         end
     end
 
 
     local action1 = cc.RotateBy:create(3,180 * 3)
-    local action2 = cc.CallFunc:create(function() forceToEnd() end)
+    local action2 = cc.CallFunc:create(function()   ChooseCollectWordLayer.forceToEnd() end)
     circleSprite:runAction(cc.Sequence:create(action1,action2))
 
     local listener = cc.EventListenerTouchOneByOne:create()
@@ -331,6 +333,10 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
     soundMark:setPosition(bigWidth/2, 920)  
     backColor:addChild(soundMark)
+    
+    self.forceToEnd = function ()
+    	
+    end
     
     self.circle = createLoading(self.wordInfo[5])
     backColor:addChild(self.circle) 

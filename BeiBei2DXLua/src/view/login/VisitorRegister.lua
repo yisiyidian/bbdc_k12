@@ -1,7 +1,7 @@
 require("common.global")
 
 
-local LoginAlter = require("view.login.LoginAlter")
+--local LoginAlter = require("view.login.LoginAlter")
 
 local BigAlter      = require("view.alter.BigAlter")
 local SmallAlter    = require("view.alter.SmallAlter")
