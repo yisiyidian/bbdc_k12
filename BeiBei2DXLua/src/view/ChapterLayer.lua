@@ -55,18 +55,40 @@ function ChapterLayer:ctor()
                     scrollBottomLock = false
                 end)
                 print("SCROLL_TO_BOTTOM")
-                print('begin:'..self.activeChapterStartIndex..',end:'..self.activeChapterEndIndex)
-            -- if self.activeChapterEndIndex < self.biggestChapterIndex then
-                self.activeChapterEndIndex = self.activeChapterEndIndex + 1
-                self:addChapterIntoListView("chapter1")
-                print('2begin:'..self.activeChapterStartIndex..',end:'..self.activeChapterEndIndex)
-                self:callFuncWithDelay(0.1, function()
-                    self:scrollLevelLayer(self.activeChapterEndIndex * s_islands_per_page,0.2)
-                end)
+                if self.activeChapterEndIndex < self.biggestChapterIndex then
+                    self.activeChapterEndIndex = self.activeChapterEndIndex + 1
+                    self:addChapterIntoListView("chapter"..self.activeChapterEndIndex)
+                    self:callFuncWithDelay(0.1, function()
+                        self:scrollLevelLayer(self.activeChapterEndIndex * s_islands_per_page,0)
+                    end)
+                end
             end
-            -- end
         elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
-            print("SCROLL_TO_TOP")
+            if not scrollTopLock then
+                scrollTopLock = true
+                self:callFuncWithDelay(2.0, function()
+                    scrollTopLock = false
+                end)
+                print("SCROLL_TO_TOP")
+                -- if self.activeChapterStartIndex > 0 then
+                    -- self.activeChapterStartIndex = self.activeChapterStartIndex - 1;
+            --         self.activeChapterStartIndex = 1
+            --         local chapterKey = 'chapter'..self.activeChapterStartIndex
+            --         local RepeatChapterLayer = require('view.level.RepeatChapterLayer')
+            --         self.chapterDic[chapterKey] = RepeatChapterLayer.create(chapterKey)
+            --         -- self.chapterDic[chapterKey]:setPosition(cc.p(0,0))
+            --         --print('contentSize:'..self.chapterDic[chapterKey]:getContentSize().height)
+            --         local custom_item = ccui.Layout:create()
+            --         custom_item:setContentSize(self.chapterDic[chapterKey]:getContentSize())  
+            --         custom_item:setName(chapterKey)  
+            --         custom_item:addChild(self.chapterDic[chapterKey])
+            --         custom_item:setPosition(cc.p(0,0))
+            -- --        self.listView:addChild(self.chapterDic[chapterKey]) 
+            --         -- self.listView:pushBackCustomItem(self.chapterDic[chapterKey])
+            --         self.listView:insertCustomItem(custom_item, 1)
+                -- end
+            end
+
 
             
         elseif evenType == ccui.ScrollviewEventType.scrolling then
