@@ -72,8 +72,8 @@ function SummaryBossAlter:lose(entrance)
     self:addChild(self.loseBoard)
 
     local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
-    been_number_back:setPosition(s_RIGHT_X - s_LEFT_X -100, s_DESIGN_HEIGHT-50)
-    self:getChildByName('background'):addChild(been_number_back)
+    been_number_back:setPosition(self.loseBoard:getContentSize().width -100, self.loseBoard:getContentSize().height * 0.75 + 50)
+    self.loseBoard:addChild(been_number_back)
 
     local been = cc.Sprite:create("image/shop/been.png")
     been:setPosition(0, been_number_back:getContentSize().height/2)
@@ -137,8 +137,9 @@ function SummaryBossAlter:lose(entrance)
                 self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
                 s_SCENE:callFuncWithDelay(0.3,function (  )
                     -- body
+                    --self.bossLayer:runAction(cc.Ripple3D:create(5, cc.size(32,24), cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2), 320, 4, 160))
                     self:removeChildByName('background')
-                    boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75 + 10)),cc.CallFunc:create(function (  )
+                    boss:runAction(cc.Sequence:create(cc.MoveTo:create(5.0,cc.p(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75 + 10)),cc.CallFunc:create(function (  )
                         -- body
                         self:addTime()
                     end)))

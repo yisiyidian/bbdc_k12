@@ -8,7 +8,7 @@ local FlipNode = require("view.mat.FlipNode")
 local TapNode = require("view.mat.TapNode")
 
 local SummaryBossLayer = class("SummaryBosslayer", function ()
-    return cc.Layer:create()
+    return cc.NodeGrid:create()
 end)
 
 local scale = 0.92
@@ -672,6 +672,11 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         end
         if layer.girlAfraid and not layer.bubble[1]:isVisible() then
             layer.bubble[1]:setVisible(true)
+            for i = 2,#layer.bubble do
+                if layer.bubble[i]:isVisible() then
+                    layer.bubble[i]:setVisible(false)
+                end
+            end
         elseif not layer.girlAfraid and layer.bubble[1]:isVisible() then
             layer.bubble[1]:setVisible(false)
         end
@@ -1061,6 +1066,8 @@ function SummaryBossLayer:initWordList(word)
         self.totalTime = math.ceil(self.totalBlood / 14) * 15
     end
     self.leftTime = self.totalTime
+    --self:runAction(cc.Ripple3D:create(20, cc.size(32,24), cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2), 120, 40, 240))
+    --self:runAction(cc.FlipX3D:create(2))
     -- self.totalBlood = levelConfig.summary_boss_hp
     -- self.currentBlood = self.totalBlood
     -- self.totalTime = levelConfig.summary_boss_time
@@ -1260,11 +1267,7 @@ function SummaryBossLayer:initMapInfoByIndex(startIndex)
             local char = string.char(96+i)
             charaster_set_filtered[#charaster_set_filtered+1] = char
         end
-        local time1 = os.clock()
         local main_logic_mat = getRandomBossPath()
-        local time2 = os.clock()
-
-        print('BFS time =='..time2 - time1)
         for i = 1, 5 do
             self.character[k][i] = {}
             self.isFirst[k][i] = {}
@@ -1365,6 +1368,7 @@ function SummaryBossLayer:addMapInfo(word)
 end
 
 function SummaryBossLayer:initMap(chapter)
+
     self.firstNodeArray = {}
     for i = 1, #self.wordPool[self.currentIndex] do
         self.firstNodeArray[i] = cc.p(0,0)
@@ -1439,6 +1443,7 @@ function SummaryBossLayer:initMap(chapter)
             self.coconut[i][j].isFirst = self.isFirst[self.currentIndex][i][j]
         end
     end
+    
     self:initCrab(chapter)
 end
 
