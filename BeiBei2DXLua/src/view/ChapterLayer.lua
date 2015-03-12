@@ -55,13 +55,14 @@ function ChapterLayer:ctor()
                     scrollBottomLock = false
                 end)
                 print("SCROLL_TO_BOTTOM")
+                print('begin:'..self.activeChapterStartIndex..',end:'..self.activeChapterEndIndex)
             -- if self.activeChapterEndIndex < self.biggestChapterIndex then
                 self.activeChapterEndIndex = self.activeChapterEndIndex + 1
                 self:addChapterIntoListView("chapter1")
-
-                -- self:callFuncWithDelay(0.1, function()
-                    self:scrollLevelLayer((self.activeChapterEndIndex-1) * s_islands_per_page,0.2)
-                -- end)
+                print('2begin:'..self.activeChapterStartIndex..',end:'..self.activeChapterEndIndex)
+                self:callFuncWithDelay(0.1, function()
+                    self:scrollLevelLayer(self.activeChapterEndIndex * s_islands_per_page,0.2)
+                end)
             end
             -- end
         elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
@@ -585,29 +586,48 @@ end
 
 -- scroll self.listView to show the specific chapter and level
 function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
-    if levelIndex == 0 then
-        return
-    end
-    local currentLevelCount = levelIndex + 1
-    -- local totalLevelCount = (math.floor((currentLevelCount-1) / s_islands_per_page) + 1) * s_islands_per_page
-    -- local innerHeight = s_chapter0_base_height * (math.floor((currentLevelCount-1) / s_islands_per_page) + 1)
-    -- self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
+    -- self:callFuncWithDelay(0.1, function()
+        print('enter scrollLevelLayer...levelIndex:'..levelIndex)
+        s_SCENE.touchEventBlockLayer.lockTouch()
+        self:callFuncWithDelay(0.3, function()
+            s_SCENE.touchEventBlockLayer.unlockTouch()
+        end)
+        if levelIndex == 0 then
+            return
+        end
+        local currentLevelCount = levelIndex + 1
+        -- local totalLevelCount = (math.floor((currentLevelCount-1) / s_islands_per_page) + 1) * s_islands_per_page
+        -- local innerHeight = s_chapter0_base_height * (math.floor((currentLevelCount-1) / s_islands_per_page) + 1)
+        -- self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
 
-    -- local currentVerticalPercent = currentLevelCount / totalLevelCount * 100
+        -- local currentVerticalPercent = currentLevelCount / totalLevelCount * 100
 
-    -- active chapter range
-    local activeLevelCount = levelIndex + 1 - self.activeChapterStartIndex * s_islands_per_page
-    local activeTotalLevelCount = (self.activeChapterEndIndex - self.activeChapterStartIndex + 1) * s_islands_per_page
-    local innerHeight = s_chapter0_base_height * (self.activeChapterEndIndex - self.activeChapterStartIndex + 1)
-    self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
-    local currentVerticalPercent = currentLevelCount / activeTotalLevelCount * 100
-    print('#######currentPercent:'..currentVerticalPercent,','..currentLevelCount..','..activeTotalLevelCount)
-    if scrollTime - 0 == 0 then
-        self.listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,false)
-    else
-        self.listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,true)
-    end
-    self.listView:setInertiaScrollEnabled(true)
+        -- active chapter range
+        local activeLevelCount = levelIndex + 1 - self.activeChapterStartIndex * s_islands_per_page
+        local activeTotalLevelCount = (self.activeChapterEndIndex - self.activeChapterStartIndex + 1) * s_islands_per_page
+        local innerHeight = s_chapter0_base_height * (self.activeChapterEndIndex - self.activeChapterStartIndex + 1)
+        print('innerCount:'..(self.activeChapterEndIndex - self.activeChapterStartIndex + 1))
+        self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
+        -- self.listView:updateInnerContainerSize()
+        -- compute vertical percent
+        local chapterCount = math.floor((currentLevelCount-1) / 10)
+        local levelCount = math.floor((currentLevelCount-1) % 10) + 1
+
+        local currentVerticalPercent = (chapterCount / (chapterCount + 1) + levelCount / (s_islands_per_page * (chapterCount + 1)) ) * 100
+        -- local currentVerticalPercent = (currentLevelCount / activeTotalLevelCount) * 100
+        -- print('#######currentPercent:'..currentVerticalPercent,','..currentLevelCount..','..activeTotalLevelCount)
+        print('#######currentPercent:'..currentVerticalPercent,','..chapterCount..','..levelCount)
+        -- self:callFuncWithDelay(0.2, function()
+            if scrollTime - 0 == 0 then
+                self.listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,false)
+            else
+                self.listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,true)
+            end
+            self.listView:setInertiaScrollEnabled(true)
+        -- end)
+
+    -- end)
+    
 end
 
 function ChapterLayer:plotUnlockCloudAnimation()
