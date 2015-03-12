@@ -293,7 +293,10 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                             end
                         end)
                     end
-
+                    if layer.bubble[8]~= nil then
+                        layer.bubble[8]:removeFromParent()
+                        layer.bubble[8] = nil
+                    end
                     if layer.currentBlood <= 0 then
                         s_SCENE:callFuncWithDelay(#selectStack * 0.2,function()
                             layer.globalLock = true
@@ -316,6 +319,13 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                             s = 'girl-afraid' 
                         else 
                             s = 'girl-stand'
+                            local bubble_index = math.random(3,5)
+                            layer.bubble[bubble_index]:runAction(cc.Sequence:create(cc.Show:create(),cc.DelayTime:create(2),cc.Hide:create()))
+                            for i = 1,7 do
+                                if i ~= bubble_index and layer.bubble[i]:isVisible() then
+                                    layer.bubble[i]:setVisible(false)
+                                end
+                            end
                         end
                         layer.girl:setAnimation(0,'girl_happy',false)
                         layer.girl:addAnimation(0,'girl_happy',false)
@@ -359,6 +369,13 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                 s = 'girl-afraid'
             else 
                 s = 'girl-stand'
+                local bubble_index = math.random(6,7)
+                layer.bubble[bubble_index]:runAction(cc.Sequence:create(cc.Show:create(),cc.DelayTime:create(2),cc.Hide:create()))
+                for i = 1,#layer.bubble do
+                    if i ~= bubble_index and layer.bubble[i]:isVisible() then
+                        layer.bubble[i]:setVisible(false)
+                    end
+                end
             end
             layer.girl:setAnimation(0,'girl-no',false)
             layer.girl:addAnimation(0,s,true)
@@ -637,7 +654,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         elseif loadingState == 6 then
             loadingState = 7
             
-            layer:initMap(chapter)
+            --layer:initMap(chapter)
         end
         if loadingTime < 5 then
             loadingTime = loadingTime + delta
@@ -647,7 +664,17 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             return
         end
 
+        layer.bubble[2]:setVisible(true)
+
         layer.leftTime = layer.leftTime - delta
+        if layer.leftTime < layer.totalTime - 2 and layer.bubble[2]:isVisible() then
+            layer.bubble[2]:setVisible(false)
+        end
+        if layer.girlAfraid and not layer.bubble[1]:isVisible() then
+            layer.bubble[1]:setVisible(true)
+        elseif not layer.girlAfraid and layer.bubble[1]:isVisible() then
+            layer.bubble[1]:setVisible(false)
+        end
 
         if endTime < 1 and #selectStack > 0 and isTouchEnded then
             endTime = endTime + delta
@@ -788,8 +815,6 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
         combo_icon[i]:setPosition(s_DESIGN_WIDTH * 0.9,s_DESIGN_HEIGHT * 0.95 + 5)
         self:addChild(combo_icon[i],100)
 
-
-        
         combo_icon[i]:setRotation(6 + 120 * ((i - 1)%3))
         combo_icon[i]:setPercentage(30)
         if i > 3 then
@@ -851,7 +876,11 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
     self:addChild(girl)
     girl:setAnimation(0,'girl-stand',true)
     self.girl = girl
-    
+
+     -- add bubble
+
+    self:addBubble()
+      
     --add readyGo
     local readyGoFile 
     if chapter == 1 then
@@ -870,6 +899,56 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
     playSound(s_sound_ReadyGo)
     
 end
+
+function SummaryBossLayer:addBubble()
+    local bubble = {}
+    self.bubble = bubble
+
+    bubble[1] = cc.Sprite:create('image/summarybossscene/bubble3.png')
+    bubble[1]:setAnchorPoint(0,0)
+    bubble[1]:setPosition(60,170)
+    self.girl:addChild(bubble[1]) 
+    bubble[1]:setVisible(false)
+
+    local emotion_label = cc.Label:createWithSystemFont('>﹏<','',20)
+    emotion_label:enableOutline(cc.c4b(255,255,255,255),1)
+    emotion_label:setPosition(bubble[1]:getContentSize().width / 2 + 7,bubble[1]:getContentSize().height / 2 + 10)
+    bubble[1]:addChild(emotion_label) 
+
+    bubble[2] = ccui.Scale9Sprite:create('image/summarybossscene/bubble1.png',cc.rect(0,0,175,88),cc.rect(60, 0, 55, 88))
+    local start_label = cc.Label:createWithSystemFont('怪兽过来了，\n快划单词消灭它','',20)
+    bubble[2]:setContentSize(cc.size(start_label:getContentSize().width + 20,88))
+    bubble[2]:ignoreAnchorPointForPosition(false)
+    bubble[2]:setAnchorPoint(0,0)
+    bubble[2]:setPosition(90,140)
+    self.girl:addChild(bubble[2])
+
+    start_label:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
+    start_label:setPosition(bubble[2]:getContentSize().width / 2,bubble[2]:getContentSize().height * 0.6)
+    bubble[2]:addChild(start_label)
+    bubble[2]:setVisible(false)
+    local text = {'太棒了','wonderful','太厉害了','加油','再仔细想想'}
+    for i = 3,7 do
+        bubble[i] = ccui.Scale9Sprite:create('image/summarybossscene/bubble2.png',cc.rect(0,0,123,52),cc.rect(40, 0, 43, 52))
+        local right_label = cc.Label:createWithSystemFont(text[i - 2],'',20)
+        local width = 60
+        if right_label:getContentSize().width > width then
+            width = right_label:getContentSize().width
+        end
+        bubble[i]:setContentSize(cc.size(width + 20,52))
+        bubble[i]:ignoreAnchorPointForPosition(false)
+        bubble[i]:setAnchorPoint(0,0)
+        bubble[i]:setPosition(100,150)
+        self.girl:addChild(bubble[i])
+
+        right_label:setPosition(bubble[i]:getContentSize().width / 2,bubble[i]:getContentSize().height * 0.6 + 2)
+        bubble[i]:addChild(right_label)
+        right_label:setName('label')
+        bubble[i]:setVisible(false)
+    end
+
+end
+
 
 function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
     
@@ -904,9 +983,9 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
     boss:setAnimation(0,'a2',true)
     local bossAction = {}
     bossAction[1] = cc.DelayTime:create(0.0)
-    bossAction[2] = cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.75)))
+    bossAction[2] = cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.75 + 10)))
     if chapter == 2 then
-        bossAction[2] = cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.76)))
+        bossAction[2] = cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.76 + 10)))
         --boss light
         local light_boss = cc.Sprite:create('image/summarybossscene/global_zongjiebosshuangshuboss_dierguan.png')
         light_boss:setAnchorPoint(0,0)
@@ -915,6 +994,10 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
         light_boss:setVisible(false)
         light_boss:runAction(cc.Sequence:create(cc.DelayTime:create(0.3),cc.Show:create()))
     end
+    bossAction[3] = cc.CallFunc:create(function (  )
+        -- body
+        self:initMap(chapter)
+    end,{})
     for i = 1, 10 do
         local stop = cc.DelayTime:create(self.totalTime / 10 * 0.8)
         local stopAnimation = cc.CallFunc:create(function() 
@@ -936,10 +1019,10 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
     end,{})
     bossNode:runAction(cc.Sequence:create(bossAction))
     local bloodBack = cc.Sprite:create("image/summarybossscene/summaryboss_blood_back.png")
-    bloodBack:setPosition(100,215)
+    bloodBack:setPosition(100,-10)
     boss:addChild(bloodBack)
-    boss.blood = cc.ProgressTimer:create(cc.Sprite:create("image/summarybossscene/summaryboss_blood_front.png"))
-    boss.blood:setPosition(100,215)
+    boss.blood = cc.ProgressTimer:create(cc.Sprite:create("image/summarybossscene/jindutiao.png"))
+    boss.blood:setPosition(100,-10)
     boss.blood:setType(cc.PROGRESS_TIMER_TYPE_BAR)
     boss.blood:setMidpoint(cc.p(0,0))
     boss.blood:setBarChangeRate(cc.p(1,0))
@@ -975,7 +1058,7 @@ function SummaryBossLayer:initWordList(word)
     if self.entrance then
         self.totalTime = math.ceil(self.totalBlood / 14) * 15 + s_CURRENT_USER.timeAdjust
     else
-        self.totalTime = math.ceil(self.totalBlood / 14) * 3
+        self.totalTime = math.ceil(self.totalBlood / 14) * 15
     end
     self.leftTime = self.totalTime
     -- self.totalBlood = levelConfig.summary_boss_hp
@@ -1514,7 +1597,27 @@ function SummaryBossLayer:hint()
             end
         end
     end
-    
+    if not self.girlAfraid then
+        for i = 1,7 do
+            if self.bubble[i]:isVisible() then
+                self.bubble[i]:setVisible(false)
+            end
+        end
+        if self.bubble[8] == nil then
+            local bubble = ccui.Scale9Sprite:create('image/summarybossscene/bubble1.png',cc.rect(0,0,175,88),cc.rect(60, 0, 55, 88))
+            local start_label = cc.Label:createWithSystemFont('恩~这个单词\n应该是'..self.wordPool[self.currentIndex][index],'',20)
+            bubble:setContentSize(cc.size(start_label:getContentSize().width + 30,88))
+            bubble:ignoreAnchorPointForPosition(false)
+            bubble:setAnchorPoint(0,0)
+            bubble:setPosition(90,140)
+            self.girl:addChild(bubble)
+            start_label:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
+            start_label:setPosition(bubble:getContentSize().width / 2,bubble:getContentSize().height * 0.6)
+            bubble:addChild(start_label)
+            self.bubble[8] = bubble
+        end
+        self.bubble[8]:setVisible(true)
+    end
 end
 
 function SummaryBossLayer:clearCombo()
