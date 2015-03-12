@@ -803,6 +803,10 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
 
     buildTimer = function ()
         time = 0
+        for i = 1, #selectStack do
+            local node = selectStack[i]
+            node.shake()
+        end
         local function update(delta)
             time = time + delta
             if time > 1 then

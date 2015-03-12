@@ -8,6 +8,8 @@ s_chapter0_base_height = 3014
 s_chapter_layer_width = 854
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
+local WordLibrary = require("view.islandPopup.WordLibraryPopup")
+
 local ChapterLayerBase = class('ChapterLayerBase',function() 
     return ccui.Widget:create()
     --return cc.Layer:create()
@@ -223,28 +225,27 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     end
 end
 
-function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex)
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
-    local state, coolingDay
-    for bossID, bossInfo in pairs(bossList) do
-        if bossID - (levelIndex + 1) == 0 then
-            state = bossInfo["typeIndex"] + 0
-            coolingDay = bossInfo["coolingDay"] + 0
-        end
-    end
-    
-    if state >= 4 and active ~= 0 then
-        local WordLibrary = require("view.islandPopup.WordLibraryPopup")
-        local wordLibrary = WordLibrary.create(levelIndex)
-        s_SCENE.popupLayer:addChild(wordLibrary)   
-        back:runAction(cc.MoveBy:create(0.2,cc.p(800,0)))
-        wordLibrary.close = function ()
-            back:runAction(cc.MoveBy:create(0.2,cc.p(-800,0)))
-        end
-    else
-        self:addPopup(levelIndex)
-    end
-end
+--function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex)
+--    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+--    local state, coolingDay
+--    for bossID, bossInfo in pairs(bossList) do
+--        if bossID - (levelIndex + 1) == 0 then
+--            state = bossInfo["typeIndex"] + 0
+--            coolingDay = bossInfo["coolingDay"] + 0
+--        end
+--    end
+--    
+--    if state >= 4 and active ~= 0 then
+--        local wordLibrary = WordLibrary.create(levelIndex)
+--        s_SCENE.popupLayer:addChild(wordLibrary)   
+--        back:runAction(cc.MoveBy:create(0.2,cc.p(800,0)))
+--        wordLibrary.close = function ()
+--            back:runAction(cc.MoveBy:create(0.2,cc.p(-800,0)))
+--        end
+--    else
+--        self:addPopup(levelIndex)
+--    end
+--end
 
 function ChapterLayerBase:addPopup(levelIndex)
 --    print('addPopup:'..levelIndex)
@@ -416,7 +417,6 @@ function ChapterLayerBase:addPopup(levelIndex)
     
     local function wordEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            local WordLibrary = require("view.islandPopup.WordLibraryPopup")
             local wordLibrary = WordLibrary.create(levelIndex,CreateWordLibrary_FromNormal)
             s_SCENE.popupLayer:addChild(wordLibrary)
             wordLibrary:setVisible(false)
@@ -449,7 +449,6 @@ function ChapterLayerBase:addPopup(levelIndex)
 
     s_SCENE:popup(back)
     if state >= 4 and levelIndex - currentTaskBossIndex ~= 0 then
-        local WordLibrary = require("view.islandPopup.WordLibraryPopup")
         local wordLibrary = WordLibrary.create(levelIndex,CreateWordLibrary_FromOther)
         s_SCENE.popupLayer:addChild(wordLibrary)   
         back:setPosition(cc.p(s_DESIGN_WIDTH/2, 550))
