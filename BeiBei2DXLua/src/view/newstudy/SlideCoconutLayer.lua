@@ -15,7 +15,7 @@ local  SlideCoconutLayer = class("SlideCoconutLayer", function ()
     return cc.Layer:create()
 end)
 
-function SlideCoconutLayer.create(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+function SlideCoconutLayer.create(word,wrongNum,wrongWordList)
     local layer = SlideCoconutLayer.new(word,wrongNum,wrongWordList)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
@@ -37,7 +37,7 @@ local function createRefreshButton()
     return refreshButton  
 end
 
-local function createLastButton(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+local function createLastButton(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_before_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -47,7 +47,7 @@ local function createLastButton(word,wrongNum,wrongWordList,preWordName, preWord
             local chooseWrongLayer 
             AnalyticsStudyLookBackWord()
             if wrongWordList == nil then
-                chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,nil,preWordName, preWordNameState)
+                chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
             else
                 chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,wrongWordList)
             end
@@ -61,7 +61,7 @@ local function createLastButton(word,wrongNum,wrongWordList,preWordName, preWord
     return choose_before_button  
 end
 
-function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
     if s_CURRENT_USER.tutorialStep == s_tutorial_study then
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_3)
     end
@@ -105,11 +105,6 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
-    -- local todayNumber = LastWordAndTotalNumber:getTodayNum()
-    -- self.lastWordAndTotalNumber.setNumber(todayNumber)
-    --    if wrongNum ~= 0  and preWordName ~= nil and wrongWordList == nil then
-    --    self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
-    --    end
     
     local word_meaning_label = cc.Label:createWithSystemFont(self.wordInfo[5],"",50)
     word_meaning_label:setPosition(bigWidth/2, 950)
@@ -125,7 +120,6 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
     end
 
     mat = FlipMat.create(self.wordInfo[2],4,4,isNewPlayer,"coconut_light")
-    --     mat = FlipMat.create(self.wordInfo[2],4,4,isNewPlayer,"coconut_light",self.progressBar.indexPosition())
     mat:setPosition(size_big.width/2, 160)
     backColor:addChild(mat)
     
@@ -155,17 +149,6 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
             showAnswerStateBack:addChild(right_wordname)
 
             local action1 = cc.MoveTo:create(0.2,cc.p(backColor:getContentSize().width /2, 768))
-            showAnswerStateBack:runAction(cc.Sequence:create(action1,
-               cc.CallFunc:create(function()
-                if wrongWordList == nil then
-                  self.progressBar.addOne()
-                end
-               end),
-               cc.CallFunc:create(function()
-                  if wrongNum == progressBar_total_number - 1 then
-                    self.progressBar:runAction(cc.MoveBy:create(0.5,cc.p(0,200)))
-                  end
-               end)))
             showAnswerStateBack:runAction(action1)
 
             self:runAction(cc.Sequence:create(cc.DelayTime:create(1),cc.CallFunc:create(function()  
@@ -228,7 +211,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWord
     self.refreshButton = createRefreshButton()
     backColor:addChild(self.refreshButton)
     
-    self.lastButton = createLastButton(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+    self.lastButton = createLastButton(word,wrongNum,wrongWordList)
     backColor:addChild(self.lastButton)
 end
 

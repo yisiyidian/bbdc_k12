@@ -9,18 +9,19 @@ local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
 local TotalWrongWordTip = require("view.newstudy.TotalWrongWordTip")
+local Button                = require("view.newstudy.BlueButtonInStudyLayer")
 
 local  ChooseWrongLayer = class("ChooseRightLayer", function ()
     return cc.Layer:create()
 end)
 
-function ChooseWrongLayer.create(word,wrongNum,wrongWordList,preWordName, preWordNameState)
-    local layer = ChooseWrongLayer.new(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+function ChooseWrongLayer.create(word,wrongNum,wrongWordList)
+    local layer = ChooseWrongLayer.new(word,wrongNum,wrongWordList)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
 
-local function addNextButton(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+local function addNextButton(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local click_next_button = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -31,7 +32,7 @@ local function addNextButton(word,wrongNum,wrongWordList,preWordName, preWordNam
             local slideCoconutLayer
             if wrongWordList == nil then
                 AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD, 'TOUCH')
-                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,nil,preWordName, preWordNameState)
+                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
             else
                 AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD_STRIKEWHILEHOT, 'TOUCH')
                 slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,wrongWordList)
@@ -41,21 +42,18 @@ local function addNextButton(word,wrongNum,wrongWordList,preWordName, preWordNam
         end
     end
 
-    local choose_next_button = ccui.Button:create("image/newstudy/button_onebutton_size.png","image/newstudy/button_onebutton_size_pressed.png","")
+    local choose_next_button = Button.create("下一步")
     choose_next_button:setPosition(bigWidth/2, 100)
-    choose_next_button:setTitleText("下一步")
-    choose_next_button:ignoreAnchorPointForPosition(false)
-    choose_next_button:setAnchorPoint(0.5,0)
-    choose_next_button:setTitleColor(cc.c4b(255,255,255,255))
-    choose_next_button:setTitleFontSize(32)
     choose_next_button:addTouchEventListener(click_next_button)  
+
     return choose_next_button
 end
 
-function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList)
     if s_CURRENT_USER.tutorialStep == s_tutorial_study then
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_2)
     end
+
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = BackLayer.create(45) 
@@ -93,12 +91,6 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordN
     if wrongWordList == nil then
         self.totalWrongWordTip.setNumber(todayNumber + 1)
     end
-    
-    -- local todayNumber = LastWordAndTotalNumber:getTodayNum()
-    -- self.lastWordAndTotalNumber.setNumber(todayNumber)
---    if wrongNum ~= 0  and preWordName ~= nil and wrongWordList == nil then
---    self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
---    end
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
     soundMark:setPosition(bigWidth/2, 920)  
@@ -110,7 +102,7 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,preWordName, preWordN
     detailInfo:setPosition(bigWidth/2, 520)
     backColor:addChild(detailInfo)
 
-    self.nextButton = addNextButton(word,wrongNum,wrongWordList,preWordName, preWordNameState)
+    self.nextButton = addNextButton(word,wrongNum,wrongWordList)
     backColor:addChild(self.nextButton)
 end
 

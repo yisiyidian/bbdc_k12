@@ -312,7 +312,6 @@ function ChapterLayerBase:addPopup(levelIndex)
             else
                 s_SCENE:callFuncWithDelay(0.1, function()
                     s_CorePlayManager.initTotalPlay()
-                    s_CURRENT_USER.islandIndex = tonumber(levelIndex)
                 end)
             end
         end
@@ -428,13 +427,15 @@ function ChapterLayerBase:addPopup(levelIndex)
     
     local function wordEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            local wordLibrary = WordLibrary.create(levelIndex,CreateWordLibrary_FromNormal)
+            local wordLibrary = WordLibrary.create(levelIndex)
             s_SCENE.popupLayer:addChild(wordLibrary)
             wordLibrary:setVisible(false)
             local action0 = cc.OrbitCamera:create(0.5,1, 0, 0, 90, 0, 0) 
             local action1 = cc.CallFunc:create(function()
                 wordLibrary:setVisible(true)
-             end)
+                local action2 = cc.OrbitCamera:create(0.5,1, 0, -90, 90, 0, 0) 
+                wordLibrary:runAction(cc.Sequence:create(action2))
+             end)     
             back:runAction(cc.Sequence:create(action0,action1))
             
             wordLibrary.close = function ( )
@@ -460,8 +461,16 @@ function ChapterLayerBase:addPopup(levelIndex)
 
     s_SCENE:popup(back)
     if state >= 4 and levelIndex - currentTaskBossIndex ~= 0 then
-        local wordLibrary = WordLibrary.create(levelIndex,CreateWordLibrary_FromOther)
-        s_SCENE.popupLayer:addChild(wordLibrary)   
+        local wordLibrary = WordLibrary.create(levelIndex)
+        s_SCENE.popupLayer:addChild(wordLibrary)
+        wordLibrary:setPosition(0,s_DESIGN_HEIGHT / 2 * 3)
+        local action1 = cc.CallFunc:create(function ()
+            wordLibrary:setVisible(true)
+        end)
+        local action2 = cc.MoveTo:create(0.5,cc.p(0,0)) 
+        local action3 = cc.Sequence:create(action1, action2)  
+        wordLibrary:runAction(action3)
+         
         back:setPosition(cc.p(s_DESIGN_WIDTH/2, 550))
         back:setVisible(false)
         wordLibrary.close = function ()

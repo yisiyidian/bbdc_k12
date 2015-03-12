@@ -7,6 +7,7 @@ local GuessWrong        = require("view.newstudy.GuessWrongPunishPopup")
 local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
+local Button                = require("view.newstudy.BlueButtonInStudyLayer")
 
 local  CollectUnfamiliarLayer = class("CollectUnfamiliarLayer", function ()
     return cc.Layer:create()
@@ -114,7 +115,11 @@ local function createOptions(randomNameArray,word,wrongNum, preWordName, preWord
     
     local click_choose = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)
+            if sender.tag == 1 then  
+                playSound(s_sound_learn_true)
+            else  
+                playSound(s_sound_learn_false)
+            end   
         elseif eventType == ccui.TouchEventType.ended then  
 --            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local feedback 
@@ -148,7 +153,7 @@ local function createOptions(randomNameArray,word,wrongNum, preWordName, preWord
                         s_CURRENT_USER.beanRewardForCollect  = s_CURRENT_USER.beanRewardForCollect - 1
                     end
                     local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-                    local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum, nil, preWordName, preWordNameState)
+                    local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum, preWordName, preWordNameState,CreateWrongLayer_From_CollectWord,nil)
                     s_SCENE:replaceGameLayer(chooseWrongLayer)   
                 end)))
             end
@@ -170,7 +175,7 @@ local function createOptions(randomNameArray,word,wrongNum, preWordName, preWord
 
         local choose_label = cc.Label:createWithSystemFont(wordMeaningTable[i],"",32)
         choose_label:setAnchorPoint(0,0.5)
-        choose_label:setPosition(40, choose_button[i]:getContentSize().height/2)
+        choose_label:setPosition(40, choose_button[i]:getContentSize().height/2 + 4)
         choose_label:setColor(cc.c4b(98,124,148,255))
         choose_button[i]:addChild(choose_label)
     end
@@ -188,18 +193,13 @@ local function createDontknow(word,wrongNum, preWordName, preWordNameState)
             AnalyticsStudyDontKnowAnswer()  
             AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW, 'TOUCH')
             local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,nil,preWordName, preWordNameState)
+            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum, preWordName, preWordNameState,CreateWrongLayer_From_CollectWord,nil)
             s_SCENE:replaceGameLayer(chooseWrongLayer)          
         end
     end
 
-    local choose_dontknow_button = ccui.Button:create("image/newstudy/button_onebutton_size.png","image/newstudy/button_onebutton_size_pressed.png","")
+    local choose_dontknow_button = Button.create("不认识")
     choose_dontknow_button:setPosition(bigWidth/2, 100)
-    choose_dontknow_button:setTitleText("不认识")
-    choose_dontknow_button:ignoreAnchorPointForPosition(false)
-    choose_dontknow_button:setAnchorPoint(0.5,0)
-    choose_dontknow_button:setTitleColor(cc.c4b(255,255,255,255))
-    choose_dontknow_button:setTitleFontSize(32)
     choose_dontknow_button:addTouchEventListener(click_dontknow_button)
     
     return choose_dontknow_button
@@ -228,21 +228,22 @@ function CollectUnfamiliarLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     
     local progressBar_total_number = getMaxWrongNumEveryLevel()
 
-    -- local progressBar = ProgressBar.create(progressBar_total_number, wrongWordNum, "blue")
-    -- progressBar:setPosition(bigWidth/2+44, 1054)
-    -- backColor:addChild(progressBar,2)
-
+    local progressBar = ProgressBar.create(progressBar_total_number, wrongWordNum, "blue")
+    progressBar:setPosition(bigWidth/2+44, 1054)
+    backColor:addChild(progressBar,2)
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
-    -- local todayNumber = LastWordAndTotalNumber:getTodayNum()
-    -- self.lastWordAndTotalNumber.setNumber(todayNumber)
+    local todayNumber = LastWordAndTotalNumber:getCurrentLevelNum()
+    self.lastWordAndTotalNumber.setNumber(todayNumber)
     if preWordName ~= nil then
     self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
     end
+
+
     
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])
-    soundMark:setPosition(bigWidth/2, 920)  
+    soundMark:setPosition(bigWidth/2, 930)
     backColor:addChild(soundMark)
     
     self.options = createOptions(self.randWord,wordName,wrongWordNum, preWordName, preWordNameState)

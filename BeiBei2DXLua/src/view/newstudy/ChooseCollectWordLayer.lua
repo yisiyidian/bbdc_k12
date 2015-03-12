@@ -11,7 +11,7 @@ local  ChooseCollectWordLayer = class("ChooseCollectWordLayer", function ()
     return cc.Layer:create()
 end)
 
-local function createKnow(word,wrongNum, preWordName, preWordNameState)
+local function createKnow(word)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local rubbish_bag
     local progressLabel
@@ -127,7 +127,7 @@ local function createKnow(word,wrongNum, preWordName, preWordNameState)
     return layer
 end
 
-local function createDontknow(word,wrongNum, preWordName, preWordNameState)
+local function createDontknow(word,wrongNum)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local beibei_bag
     local wordLabel
@@ -194,7 +194,7 @@ local function createDontknow(word,wrongNum, preWordName, preWordNameState)
             action3,
             cc.CallFunc:create(function ()
                 local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-                local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,nil,preWordName, preWordNameState)
+                local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
                 s_SCENE:replaceGameLayer(chooseWrongLayer) 
             end)))         
         end
@@ -308,8 +308,8 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     if s_CURRENT_USER.tutorialStep == s_tutorial_study then
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_1)
     end
-
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
+
     local backColor = BackLayer.create(45) 
     backColor:setAnchorPoint(0.5,0.5)
     backColor:ignoreAnchorPointForPosition(false)
@@ -321,14 +321,9 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
 
     local progressBar_total_number = getMaxWrongNumEveryLevel()
 
-    -- local progressBar = ProgressBar.create(progressBar_total_number, wrongWordNum, "blue")
-    -- progressBar:setPosition(bigWidth/2+44, 1054)
-    -- backColor:addChild(progressBar,2)
-
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
-    -- local todayNumber = LastWordAndTotalNumber:getTodayNum()
-    -- self.lastWordAndTotalNumber.setNumber(todayNumber)
+
     if preWordName ~= nil then
         self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
     end
@@ -340,10 +335,10 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     self.circle = createLoading(self.wordInfo[5])
     backColor:addChild(self.circle) 
     
-    self.iknow = createKnow(wordName,wrongWordNum, preWordName, preWordNameState)
+    self.iknow = createKnow(wordName)
     backColor:addChild(self.iknow)
 
-    self.dontknow = createDontknow(wordName,wrongWordNum, preWordName, preWordNameState)
+    self.dontknow = createDontknow(wordName,wrongWordNum)
     backColor:addChild(self.dontknow)
 end
 

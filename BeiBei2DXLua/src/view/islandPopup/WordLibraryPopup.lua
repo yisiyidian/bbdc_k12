@@ -2,15 +2,10 @@ local WordLibraryPopup = class ("WordLibraryPopup",function ()
     return cc.Layer:create()
 end) 
 
-local StatePopup       = require("view.level.ChapterLayerBase")
 local Listview         = require("view.islandPopup.WordLibraryListview")
-local ChapterLayerBase = require("view.level.ChapterLayerBase")
 
-CreateWordLibrary_FromNormal = 1
-CreateWordLibrary_FromOther  = 2
-
-function WordLibraryPopup.create(index,fromWhere)
-    local layer = WordLibraryPopup.new(index,fromWhere)
+function WordLibraryPopup.create(index)
+    local layer = WordLibraryPopup.new(index)
     return layer
 end
 
@@ -155,28 +150,12 @@ local function addSummaryButton(bottom_sprite,boss)
     return summary_button
 end
 
-function WordLibraryPopup:ctor(index,fromWhere)
+function WordLibraryPopup:ctor(index)
     local boss = s_LocalDatabaseManager.getBossInfo(index + 1)
     
     local backPopup = cc.Sprite:create("image/islandPopup/backforlibrary.png")
     backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)
     self:addChild(backPopup)
-
-    if fromWhere == CreateWordLibrary_FromNormal then
-        local action1 = cc.DelayTime:create(0.5)
-        local action2 = cc.OrbitCamera:create(0.5,1, 0, -90, 90, 0, 0) 
-        local action3 = cc.Sequence:create(action1, action2)
-        backPopup:runAction(action3)   
-    else
-        backPopup:setVisible(false)
-        local action0 = cc.MoveTo:create(0.1,cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 * 3)) 
-        local action1 = cc.CallFunc:create(function ()
-            backPopup:setVisible(true)
-        end)
-        local action2 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)) 
-        local action3 = cc.Sequence:create(action0, action1, action2)
-        backPopup:runAction(action3)  
-    end
 
     local top_sprite = cc.Sprite:create("image/islandPopup/top.png")
     top_sprite:setPosition(backPopup:getContentSize().width * 0.5,backPopup:getContentSize().height * 0.95)
@@ -203,10 +182,10 @@ function WordLibraryPopup:ctor(index,fromWhere)
     top_sprite:addChild(self.familiarButton)
     
    local line_sprite = cc.Sprite:create("image/islandPopup/line.png")
-   line_sprite:setPosition(top_sprite:getContentSize().width * 0.5,top_sprite:getContentSize().height * 0.05)
+   line_sprite:setPosition(top_sprite:getContentSize().width * 0.5 -1,0)
    line_sprite:ignoreAnchorPointForPosition(false)
    line_sprite:setAnchorPoint(0.5,0.5)
-   top_sprite:addChild(line_sprite)
+   top_sprite:addChild(line_sprite,-1)
     
     local bottom_sprite = cc.Sprite:create("image/islandPopup/bottom.png")
     bottom_sprite:setPosition(backPopup:getContentSize().width * 0.5,backPopup:getContentSize().height * 0.03)
@@ -280,26 +259,6 @@ function WordLibraryPopup:ctor(index,fromWhere)
             end
         end
     end
-
---    local timer = 0
---    local function update(delta)
---        local current_y = (0 - listView:getInnerContainer():getPositionY())
---        local current_height = listView:getInnerContainerSize().height
---        local current_percent = current_y / current_height + 0.2
---        local top_y = summury_back:getContentSize().height * 0.98
---        local bottom_y = summury_back:getContentSize().height * 0.28
---        local changetoposition_y = top_y -  (top_y - bottom_y) * (1 -current_percent)
---
---        timer = timer +  delta
---        if timer > 0.5 then
---            local action1 = cc.MoveTo:create(timer,cc.p(summury_back:getContentSize().width * 0.98,changetoposition_y))
---            percentBar:runAction(action1)
---            print(self.listview.getPosition())
---        timer = 0
---        end
---    end
---
---    self:scheduleUpdateWithPriorityLua(update, 0)
     
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
