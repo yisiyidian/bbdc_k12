@@ -33,6 +33,7 @@ function ChapterLayer:ctor()
     self.activeChapterStartIndex = 0
     self.activeChapterEndIndex = 0
     self.biggestChapterIndex = 0
+    self:initActiveChapterRange()
 
     self.chapterDic = {}
     -- add list view
@@ -44,10 +45,17 @@ function ChapterLayer:ctor()
     local function scrollViewEvent(sender, evenType)
         if evenType == ccui.ScrollviewEventType.scrollToBottom then
             -- test
-            self:addChapterIntoListView("chapter0")
+            -- self:addChapterIntoListView("chapter0")
             print("SCROLL_TO_BOTTOM")
+            -- if self.activeChapterEndIndex < self.biggestChapterIndex then
+                self.activeChapterEndIndex = self.activeChapterEndIndex + 1
+                self:addChapterIntoListView("chapter0")
+                self:scrollLevelLayer(11,0.2)
+            -- end
         elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
             print("SCROLL_TO_TOP")
+
+            
         elseif evenType == ccui.ScrollviewEventType.scrolling then
             --print('SCROLLING:'..sender:getPosition())
         end
@@ -68,12 +76,15 @@ function ChapterLayer:ctor()
     -- add bounce
     self:addTopBounce()
     -- add chapter node
-    self:addChapterIntoListView('chapter0')
-    local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey) + 0
---    print('#### current levelINfo '..levelInfo)
-    local currentChapterIndex = math.floor(levelInfo / s_islands_per_page)   
-    for i = 1, currentChapterIndex do
-        -- print('start add chapter:'..i)
+    -- self:addChapterIntoListView('chapter0')
+    -- local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey) + 0
+    -- local currentChapterIndex = math.floor(levelInfo / s_islands_per_page)   
+    -- for i = 1, currentChapterIndex do
+    --     self:addChapterIntoListView('chapter'..i)
+    -- end
+
+    -- add active chapter range
+    for i = self.activeChapterStartIndex, self.activeChapterEndIndex do
         self:addChapterIntoListView('chapter'..i)
     end
     -- add player
@@ -93,6 +104,7 @@ end
 
 function ChapterLayer:initActiveChapterRange()   -- initialize the active range of repeatable chapter ui
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+
     local activeLevelIndex
     -- check whether exists task
     local bossList = s_LocalDatabaseManager.getAllBossInfo()
@@ -110,13 +122,21 @@ function ChapterLayer:initActiveChapterRange()   -- initialize the active range 
         end
     end    
     if taskIndex == -2 then
-        activeLevelIndex = taskIndex
-    else
         activeLevelIndex = progress
+    else
+        activeLevelIndex = taskIndex
     end
 
     -- check active chapterindex range
+    -- test 
+    -- progress = 40
+    -- activeLevelIndex = 30
+
+
     self.activeChapterIndex = math.floor(activeLevelIndex / s_islands_per_page)
+
+    
+     --print('###activeChapterRange:'..self.activeChapterStartIndex..','..self.activeChapterEndIndex..','..self.activeChapterIndex)
     self.biggestChapterIndex = math.floor(progress / s_islands_per_page)
     if self.biggestChapterIndex < 3 then
         self.activeChapterStartIndex = 0
@@ -133,6 +153,7 @@ function ChapterLayer:initActiveChapterRange()   -- initialize the active range 
             self.activeChapterEndIndex = self.activeChapterIndex + 1
         end
     end
+    print('###activeChapterRange:'..self.activeChapterStartIndex..','..self.activeChapterEndIndex..','..self.activeChapterIndex)
 end
 
 function ChapterLayer:checkUnlockLevel()
@@ -523,8 +544,10 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
         local custom_item = ccui.Layout:create()
         custom_item:setContentSize(self.chapterDic['chapter0']:getContentSize())  
         custom_item:setName('chapter0')  
+        custom_item:addChild(self.chapterDic['chapter0'])
         --self.chapterDic['chapter0']:setAnchorPoint(cc.p(0,0))
-        self.listView:addChild(self.chapterDic['chapter0'])
+        -- self.listView:
+        -- self.listView:addChild(self.chapterDic['chapter0'])
    else    
         local RepeatChapterLayer = require('view.level.RepeatChapterLayer')
         self.chapterDic[chapterKey] = RepeatChapterLayer.create(chapterKey)
@@ -542,18 +565,23 @@ end
 
 -- scroll self.listView to show the specific chapter and level
 function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
---    print('scrollLevelLayer:'..levelIndex)
     if levelIndex == 0 then
         return
     end
---    local currentLevelCount = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 1
     local currentLevelCount = levelIndex + 1
-    local totalLevelCount = (math.floor((currentLevelCount-1) / s_islands_per_page) + 1) * s_islands_per_page
-    local innerHeight = s_chapter0_base_height * (math.floor((currentLevelCount-1) / s_islands_per_page) + 1)
-    self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
+    -- local totalLevelCount = (math.floor((currentLevelCount-1) / s_islands_per_page) + 1) * s_islands_per_page
+    -- local innerHeight = s_chapter0_base_height * (math.floor((currentLevelCount-1) / s_islands_per_page) + 1)
+    -- self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
 
-    local currentVerticalPercent = currentLevelCount / totalLevelCount * 100
-    print('#######currentPercent:'..currentVerticalPercent,','..currentLevelCount..','..totalLevelCount)
+    -- local currentVerticalPercent = currentLevelCount / totalLevelCount * 100
+
+    -- active chapter range
+    local activeLevelCount = levelIndex + 1 - self.activeChapterStartIndex * s_islands_per_page
+    local activeTotalLevelCount = (self.activeChapterEndIndex - self.activeChapterStartIndex + 1) * s_islands_per_page
+    local innerHeight = s_chapter0_base_height * (self.activeChapterEndIndex - self.activeChapterStartIndex + 1)
+    self.listView:setInnerContainerSize(cc.size(s_chapter_layer_width, innerHeight))
+    local currentVerticalPercent = currentLevelCount / activeTotalLevelCount * 100
+    -- print('#######currentPercent:'..currentVerticalPercent,','..currentLevelCount..','..totalLevelCount)
     if scrollTime - 0 == 0 then
         self.listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,false)
     else
@@ -570,9 +598,7 @@ function ChapterLayer:plotUnlockCloudAnimation()
     s_SCENE:callFuncWithDelay(1.6,function()
         self.chapterDic['leftCloud']:removeFromParent() 
         self.chapterDic['rightCloud']:removeFromParent()
-    end)
-   
-    
+    end)  
 end
 
 function ChapterLayer:addTopBounce()
