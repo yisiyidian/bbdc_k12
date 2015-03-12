@@ -13,7 +13,7 @@
 
 @class AVUser;
 
-NSString* NSDictionaryToJSONString(NSDictionary* json);
+NSString* NSObjectToJSONString(id json);
 NSDictionary* JSONStringToNSDictionary(NSString* jsonString, NSError** error);
 NSString* NSErrorToJSONString(NSError* error);
 

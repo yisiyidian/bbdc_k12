@@ -39,11 +39,12 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     layer.isHinting = false
     layer.currentHintWord = {false,false,false}
     layer.wordStack = {}
+    layer.letterStack = {}
     layer.firstIndex = 1
     layer.combo = 0
     layer.leftTime = 0
     layer.useItem = false
-
+    layer.entrance = entrance
     layer.wordList = wordList
     -- slide coco
     local slideCoco = {}
@@ -71,9 +72,14 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     local onTouchMoved
     local fakeTouchMoved
     local onTouchEnded
-    
+    local time1 = os.clock()
     layer:initWordList(wordList)
+    local time2 = os.clock()
+    --print('initWordList time =='..time2 - time1)
+    time1 = os.clock()
     layer:initBossLayer_back(chapter)
+    time2 = os.clock()
+    --print('initBosslayer time =='..time2 - time1)
     local isTouchEnded = true
     local endTime = 0
     local loadingTime = 0
@@ -82,7 +88,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     local light = cc.Sprite:create('image/studyscene/long_light.png')
     light:setAnchorPoint(0.5,0.05)
     layer:addChild(light,10)
-    light:setVisible(false)    
+    light:setVisible(false)  
 
 
     local function checkAnswer(checkAtOnce)
@@ -158,23 +164,28 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         layer.combo = 9
                     end
                     if layer.combo > 0 then
-                        local icon_index = math.floor((layer.combo - 1) / 3) + 2
-                        layer.combo_icon[icon_index]:setPercentage(((layer.combo - 1) % 3 + 1) * 100 / 3)
-                        if layer.combo % 3 == 0 then
-                            layer.combo_label[2 * layer.combo / 3 + 1]:setVisible(true)
-                            layer.combo_label[2 * layer.combo / 3 + 2]:setVisible(true)
-                            layer.combo_label[2 * layer.combo / 3]:setVisible(false)
-                            layer.combo_label[2 * layer.combo / 3 - 1]:setVisible(false)
-                        end
+                        layer.combo_back:setScale(1)
+                        layer.combo_back:setOpacity(255)
+                        layer.combo_back:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,0),cc.ScaleTo:create(0.5,1.3)))
+                        local icon_index = layer.combo + 3
+                        local icon = layer.combo_icon[icon_index]
+                        icon:setScale(1.3)
+                        icon:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,255),cc.EaseBackIn:create(cc.ScaleTo:create(0.5,1))))
+                        s_SCENE:callFuncWithDelay(0.5,function (  )
+                            
+                            if layer.combo % 3 == 0 then
+                                local label1 = layer.combo_label[2 * layer.combo / 3 + 1]
+                                label1:setScale(1.3)
+                                local label2 = layer.combo_label[2 * layer.combo / 3 + 2]
+                                label2:setScale(1.3)
+                                label1:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,255),cc.EaseBackIn:create(cc.ScaleTo:create(0.5,1))))
+                                label2:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,255),cc.EaseBackIn:create(cc.ScaleTo:create(0.5,1))))
+                                layer.combo_label[2 * layer.combo / 3]:runAction(cc.Spawn:create(cc.FadeOut:create(0.5)))
+                                layer.combo_label[2 * layer.combo / 3 - 1]:runAction(cc.Spawn:create(cc.FadeOut:create(0.5)))
+                            end
+                        end)
                     else
-                        layer.combo_label[1]:setVisible(true)
-                        layer.combo_label[2]:setVisible(true)
-                        layer.combo_icon[1]:setPercentage(100)
-                        for k = 2,4 do
-                            layer.combo_label[2 * k - 1]:setVisible(false)
-                            layer.combo_label[2 * k]:setVisible(false)
-                            layer.combo_icon[k]:setPercentage(0)
-                        end
+                        layer:clearCombo()
                     end
                     layer.currentBlood = layer.currentBlood - #selectStack * bullet_damage
                     
@@ -342,15 +353,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             if endTime < 1 and not checkAtOnce then
                 return
             end
-            layer.combo = 0
-            layer.combo_label[1]:setVisible(true)
-            layer.combo_label[2]:setVisible(true)
-            layer.combo_icon[1]:setPercentage(100)
-            for i = 2,4 do
-                layer.combo_label[2 * i - 1]:setVisible(false)
-                layer.combo_label[2 * i]:setVisible(false)
-                layer.combo_icon[i]:setPercentage(0)
-            end
+            layer:clearCombo()
             local s
             if layer.girlAfraid then
                 s = 'girl-afraid'
@@ -436,7 +439,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         end
         
         for i = 1,#layer.wordPool[layer.currentIndex] do
-            if cc.rectContainsPoint(layer.crab[i]:getBoundingBox(), location) then
+            if cc.rectContainsPoint(layer.crab[i]:getBoundingBox(), location) and location.y < 160 then
                 layer.isPaused = true
                 layer:crabBig(chapter,i)
                 layer.onCrab = i
@@ -678,8 +681,11 @@ function SummaryBossLayer:updateWord(selectStack,chapter)
     for i = 1, #self.wordStack do
             self.wordStack[i]:stopAllActions()
             self.wordStack[i]:removeFromParent()
+
+            self.letterStack[i]:removeFromParent()
     end
     self.wordStack = {}
+    self.letterStack = {}
         
     local count = #selectStack
     local gap = 32
@@ -689,14 +695,15 @@ function SummaryBossLayer:updateWord(selectStack,chapter)
         local wordBack = cc.Sprite:create(string.format("image/summarybossscene/global_zongjiebossdancixianshi_%d.png",chapter))
             --wordBack:setScaleX(count * gap/wordBack:getContentSize().width + 1.0/5)
         wordBack:setPosition(left + gap*(i - 1), 0.72*s_DESIGN_HEIGHT)
-        wordBack:setScale(0.7)
+        --wordBack:setScale(0.7)
         self:addChild(wordBack)
         self.wordStack[i] = wordBack
-        local letter = cc.Label:createWithSystemFont(selectStack[i].main_character_content,"",30)
-        letter:setScale(10 / 7)
+        local letter = cc.Label:createWithTTF(selectStack[i].main_character_content,"font/CenturyGothic.ttf",36)
+        --letter:setScale(10 / 7)
         --letter:setColor(cc.c3b(0,0,0))
-        letter:setPosition(0.5 * wordBack:getContentSize().width, 0.5 * wordBack:getContentSize().height)
-        wordBack:addChild(letter)
+        letter:setPosition(left + gap*(i - 1), 0.72*s_DESIGN_HEIGHT)
+        self:addChild(letter,1)
+        self.letterStack[i] = letter
     end
 end
 
@@ -769,35 +776,51 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
     local combo_icon = {}
     self.combo_label = {}
     local combo_color = {cc.c4b(156,220,240,255),cc.c4b(255,216,2,255),cc.c4b(170,246,62,255),cc.c4b(255,148,34,255)}
-    for i = 1,4 do
-        combo_icon[i] = cc.ProgressTimer:create(cc.Sprite:create(string.format('image/summarybossscene/combo_zjboss_%dcolor.png',i-1)))
+
+    local combo_back = cc.Sprite:create('image/summarybossscene/liangguang_study_1.png')
+    combo_back:setPosition(s_DESIGN_WIDTH * 0.9,s_DESIGN_HEIGHT * 0.95 + 5)
+    self:addChild(combo_back)
+    self.combo_back = combo_back
+    combo_back:setOpacity(0)
+
+    for i = 1,12 do
+        combo_icon[i] = cc.ProgressTimer:create(cc.Sprite:create(string.format('image/summarybossscene/yuanhuan_zjboss_%d.png',math.ceil(i/3))))
         combo_icon[i]:setPosition(s_DESIGN_WIDTH * 0.9,s_DESIGN_HEIGHT * 0.95 + 5)
         self:addChild(combo_icon[i],100)
 
+
+        
+        combo_icon[i]:setRotation(6 + 120 * ((i - 1)%3))
+        combo_icon[i]:setPercentage(30)
+        if i > 3 then
+            combo_icon[i]:setOpacity(0)    
+        end
+    end
+
+    for i = 1,4 do
         local label1 = cc.Label:createWithSystemFont('+','',30)
         label1:setAnchorPoint(1,0.5)
-        label1:setPosition(combo_icon[i]:getContentSize().width * 0.5 - 1,combo_icon[i]:getContentSize().height * 0.5 + 3)
-        combo_icon[i]:addChild(label1)
+        label1:setPosition(combo_icon[i]:getPositionX(),combo_icon[i]:getPositionY() + 3)
+        self:addChild(label1,100)
         label1:setColor(combo_color[i])
-        label1:setName('label1')
+        label1:enableOutline(combo_color[i],2)
         self.combo_label[#self.combo_label + 1] = label1
 
         local label2 = cc.Label:createWithSystemFont(string.format('%d',i - 1),'',30)
         label2:setAnchorPoint(0,0.5)
-        label2:enableOutline(combo_color[i],1)
-        label2:setPosition(combo_icon[i]:getContentSize().width * 0.5 - 1,combo_icon[i]:getContentSize().height * 0.5 + 1)
-        combo_icon[i]:addChild(label2)
+        label2:enableOutline(combo_color[i],2)
+        label2:setPosition(combo_icon[i]:getPositionX() - 1,combo_icon[i]:getPositionY() + 1)
+        self:addChild(label2,100)
         label2:setColor(combo_color[i])
-        label2:setName('label2')
+
         self.combo_label[#self.combo_label + 1] = label2
+
         if i > 1 then
-            combo_icon[i]:setPercentage(0)
-            label1:setVisible(false)
-            label2:setVisible(false)
-        else
-            combo_icon[i]:setPercentage(100)
+            label1:setOpacity(0)
+            label2:setOpacity(0)
         end
     end
+
     self.combo_icon = combo_icon
 
     local function pauseScene(sender,eventType)
@@ -949,7 +972,11 @@ function SummaryBossLayer:initWordList(word)
         self.totalBlood = self.totalBlood + string.len(wordList[i]) * 2
     end
     self.currentBlood = self.totalBlood
-    self.totalTime = math.ceil(self.totalBlood / 7) * 15 + s_CURRENT_USER.timeAdjust
+    if self.entrance then
+        self.totalTime = math.ceil(self.totalBlood / 14) * 15 + s_CURRENT_USER.timeAdjust
+    else
+        self.totalTime = math.ceil(self.totalBlood / 14) * 3
+    end
     self.leftTime = self.totalTime
     -- self.totalBlood = levelConfig.summary_boss_hp
     -- self.currentBlood = self.totalBlood
@@ -1150,8 +1177,11 @@ function SummaryBossLayer:initMapInfoByIndex(startIndex)
             local char = string.char(96+i)
             charaster_set_filtered[#charaster_set_filtered+1] = char
         end
+        local time1 = os.clock()
+        local main_logic_mat = getRandomBossPath()
+        local time2 = os.clock()
 
-        local main_logic_mat = randomMat(5, 5)
+        print('BFS time =='..time2 - time1)
         for i = 1, 5 do
             self.character[k][i] = {}
             self.isFirst[k][i] = {}
@@ -1408,10 +1438,12 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
     else 
         s_CURRENT_USER.winCombo = s_CURRENT_USER.winCombo + 1
     end
-    if s_CURRENT_USER.winCombo > 3 and s_CURRENT_USER.timeAdjust > -30 then
-        s_CURRENT_USER.timeAdjust = s_CURRENT_USER.timeAdjust - 5
-    elseif s_CURRENT_USER.winCombo <= 3 then
-        s_CURRENT_USER.timeAdjust = 0
+    if entrance then
+        if s_CURRENT_USER.winCombo > 3 and s_CURRENT_USER.timeAdjust > -30 then
+            s_CURRENT_USER.timeAdjust = s_CURRENT_USER.timeAdjust - 5
+        elseif s_CURRENT_USER.winCombo <= 3 then
+            s_CURRENT_USER.timeAdjust = 0
+        end
     end
 
     saveUserToServer({['timeAdjust']=s_CURRENT_USER.timeAdjust, 
@@ -1437,10 +1469,12 @@ function SummaryBossLayer:lose(chapter,entrance,wordList)
     if not self.useItem then
         s_CURRENT_USER.winCombo = 0
         s_CURRENT_USER.failTime = s_CURRENT_USER.failTime + 1
-        if s_CURRENT_USER.failTime > 3 and s_CURRENT_USER.timeAdjust < 30 then
-            s_CURRENT_USER.timeAdjust = s_CURRENT_USER.timeAdjust + 5
-        elseif s_CURRENT_USER.failTime <= 3 then
-            s_CURRENT_USER.timeAdjust = 0
+        if entrance then
+            if s_CURRENT_USER.failTime > 3 and s_CURRENT_USER.timeAdjust < 30 then
+                s_CURRENT_USER.timeAdjust = s_CURRENT_USER.timeAdjust + 5
+            elseif s_CURRENT_USER.failTime <= 3 then
+                s_CURRENT_USER.timeAdjust = 0
+            end
         end
         saveUserToServer({['timeAdjust']=s_CURRENT_USER.timeAdjust, 
                           ['winCombo']=s_CURRENT_USER.winCombo,
@@ -1460,15 +1494,7 @@ function SummaryBossLayer:lose(chapter,entrance,wordList)
 end
 
 function SummaryBossLayer:hint()
-    self.combo = 0
-    self.combo_label[1]:setVisible(true)
-    self.combo_label[2]:setVisible(true)
-    self.combo_icon[1]:setPercentage(100)
-    for i = 2,4 do
-        self.combo_label[2 * i - 1]:setVisible(false)
-        self.combo_label[2 * i]:setVisible(false)
-        self.combo_icon[i]:setPercentage(0)
-    end
+    self:clearCombo()
     self.crab[self.firstIndex]:stopAllActions()
     self.coconut[self.firstNodeArray[self.firstIndex].x][self.firstNodeArray[self.firstIndex].y]:stopAllActions()
     self.isHinting = true
@@ -1489,6 +1515,19 @@ function SummaryBossLayer:hint()
         end
     end
     
+end
+
+function SummaryBossLayer:clearCombo()
+    self.combo = 0
+    for i = 4,12 do
+        self.combo_icon[i]:runAction(cc.FadeOut:create(0))
+    end
+    for i = 1,2 do
+        self.combo_label[i]:runAction(cc.FadeTo:create(0.2,255))
+    end
+    for i = 3,8 do
+        self.combo_label[i]:runAction(cc.FadeTo:create(0.2,0))
+    end
 end
 
 return SummaryBossLayer

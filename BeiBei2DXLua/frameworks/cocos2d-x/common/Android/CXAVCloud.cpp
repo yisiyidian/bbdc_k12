@@ -35,3 +35,24 @@ void CXAVCloud::callAVCloudFunction(const std::string& func, const std::string& 
         t.env->DeleteLocalRef(t.classID);
     }
 }
+
+void CXAVCloud::searchUser(const char* username, const char* nickName, CXLUAFUNC callback) {
+    m_callback = callback;
+    
+    retain();
+    CCLOG("CXAVCloud::searchUser 1");
+
+    cocos2d::JniMethodInfo t;
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "searchUser", "(Ljava/lang/String;Ljava/lang/String;J)V")) {
+        jstring stringArg_func = t.env->NewStringUTF(username);
+        jstring stringArg_parameters = t.env->NewStringUTF(nickName);
+
+        long addr = (long)this;
+        CCLOG("CXAVCloud::searchUser 2, username:%s", username);
+        t.env->CallStaticVoidMethod(t.classID, t.methodID, stringArg_func, stringArg_parameters, (jlong)addr);
+        CCLOG("CXAVCloud::searchUser 3, nickName:%s", nickName);
+        t.env->DeleteLocalRef(stringArg_func);
+        t.env->DeleteLocalRef(stringArg_parameters);
+        t.env->DeleteLocalRef(t.classID);
+    }
+}

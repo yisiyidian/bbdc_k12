@@ -41,8 +41,12 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
         -- win sound
             playMusic(s_sound_win,false)
         end)
-    else
+    else    
+        if not bossLayer.useItem and s_CURRENT_USER:getBeans() >= 10 then
         layer:lose(entrance)
+        else
+            layer:lose2(entrance)
+        end
         
         cc.SimpleAudioEngine:getInstance():pauseMusic()
 
@@ -62,7 +66,7 @@ function SummaryBossAlter:lose(entrance)
     end
 
     --add board
-    self.loseBoard = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
+    self.loseBoard = cc.Sprite:create("image/summarybossscene/background_zjboss_tanchu.png")
     self.loseBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
     self.loseBoard:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
     self:addChild(self.loseBoard)
@@ -79,26 +83,42 @@ function SummaryBossAlter:lose(entrance)
     label:setColor(cc.c4b(52,177,241,255))
     self.loseBoard:addChild(label)
 
-    local menu = cc.Menu:create()
-    self.loseBoard:addChild(menu)
-    local continue = cc.MenuItemImage:create("image/summarybossscene/wsy_giveUpSummaryBoss.png","")
-    menu:setPosition(self.loseBoard:getContentSize().width / 2,self.loseBoard:getContentSize().height * 0.22)
-    menu:addChild(continue)
+    local continue = ccui.Button:create("image/summarybossscene/button_loose_zjboss.png","image/summarybossscene/button_loose_zjboss_pressed.png","")
+    continue:setPosition(self.loseBoard:getContentSize().width / 2 + 10,self.loseBoard:getContentSize().height * 0.18 + 2)
+    self.loseBoard:addChild(continue)
 
-    local btn_title = cc.Label:createWithSystemFont("放弃挑战",'',40)
+    local btn_title = cc.Label:createWithSystemFont("放弃挑战",'',36)
+    btn_title:enableOutline(cc.c4b(255,255,255,255),1)
     btn_title:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
-    btn_title:setPosition(continue:getContentSize().width * 0.6,continue:getContentSize().height / 2)
+    btn_title:setPosition(continue:getContentSize().width * 0.5,continue:getContentSize().height / 2)
     continue:addChild(btn_title)
-    if not self.bossLayer.useItem then
+ --   if not self.bossLayer.useItem then
         boss:setPosition(self.loseBoard:getContentSize().width / 4,self.loseBoard:getContentSize().height * 0.4)
-        menu:setPosition(self.loseBoard:getContentSize().width / 2,self.loseBoard:getContentSize().height * 0.18)
-        local buyTimeBtn = ccui.Button:create('image/button/bigBlueButton.png','','')
-        buyTimeBtn:setScale9Enabled(true)
-        buyTimeBtn:setPosition(self.loseBoard:getContentSize().width / 2,self.loseBoard:getContentSize().height * 0.3)
+        local buyTimeBtn = ccui.Button:create('image/summarybossscene/button_time_zjboss.png','image/summarybossscene/button_time_zjboss_pressed.png','')
+        buyTimeBtn:setPosition(self.loseBoard:getContentSize().width / 2,self.loseBoard:getContentSize().height * 0.3 + 15)
         self.loseBoard:addChild(buyTimeBtn)
+
+        local been_button = cc.Sprite:create("image/shop/been.png")
+        been_button:setScale(0.8)
+        been_button:setPosition(buyTimeBtn:getContentSize().width * 0.8, buyTimeBtn:getContentSize().height/2)
+        buyTimeBtn:addChild(been_button)
+    
+        local rewardNumber = cc.Label:createWithSystemFont(10,"",24)
+        rewardNumber:enableOutline(cc.c4b(255,255,255,255),1)
+        rewardNumber:setPosition(buyTimeBtn:getContentSize().width * 0.9,buyTimeBtn:getContentSize().height * 0.5)
+        buyTimeBtn:addChild(rewardNumber)
+
+        local btn_title2 = cc.Label:createWithSystemFont("再来30秒",'',36)
+        btn_title2:enableOutline(cc.c4b(255,255,255,255),1)
+        btn_title2:setPosition(buyTimeBtn:getContentSize().width * 0.5 + 10,buyTimeBtn:getContentSize().height / 2 + 2)
+        buyTimeBtn:addChild(btn_title2)
+
+
 
         local function buyTime(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
+                s_CURRENT_USER:addBeans(-10)
+                saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
                 local boss = self.bossLayer.bossNode
                 local distance = s_DESIGN_WIDTH * 0.45 * 30 / self.bossLayer.totalTime
                 self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
@@ -115,19 +135,24 @@ function SummaryBossAlter:lose(entrance)
             end
         end
         buyTimeBtn:addTouchEventListener(buyTime)
-    end
+ --   end
 
-    local function nextBoard(sender)
-        
-        self:lose2(entrance)
-
+    local function nextBoard(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then 
+            self:lose2(entrance)
+        end
     end
-    continue:registerScriptTapHandler(nextBoard)
+    continue:addTouchEventListener(nextBoard)
     
     
 end
 
 function SummaryBossAlter:addTime()
+
+    if s_SCENE.popupLayer~=nil then
+        s_SCENE.popupLayer:setPauseBtnEnabled(true)
+        s_SCENE.popupLayer.isOtherAlter = false
+    end 
 
     local bossLayer = self.bossLayer
     local boss = bossLayer.bossNode
@@ -193,14 +218,16 @@ function SummaryBossAlter:lose2(entrance)
 
     self.loseBoard2 = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
     self.loseBoard2:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5)
-    self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
+    if not self.bossLayer.useItem then
+        self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
+    end
     self.loseBoard2:runAction(cc.Sequence:create(cc.DelayTime:create(0.3),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5)))))
     self:addChild(self.loseBoard2)
     
     local boss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
     boss:setAnimation(0,'animation',false)
     boss:addAnimation(0,'jianxiao',true)
-    boss:setPosition(self.loseBoard:getContentSize().width / 4,self.loseBoard:getContentSize().height * 0.22)
+    boss:setPosition(self.loseBoard2:getContentSize().width / 4,self.loseBoard2:getContentSize().height * 0.22)
     self.loseBoard2:addChild(boss)
     
     local label = cc.Label:createWithSystemFont("挑战失败！",'',40)
@@ -352,10 +379,12 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     item_name:setPosition(button:getContentSize().width/2, button:getContentSize().height/2)
     button:addChild(item_name)
 
-    local been_button = cc.Sprite:create("image/shop/been.png")
-    been_button:setPosition(button:getContentSize().width * 0.75, button:getContentSize().height/2)
-    button:addChild(been_button)
     if self.entrance == ENTRANCE_NORMAL then
+        
+        local been_button = cc.Sprite:create("image/shop/been.png")
+        been_button:setPosition(button:getContentSize().width * 0.75, button:getContentSize().height/2)
+        button:addChild(been_button)
+    
         local rewardNumber = cc.Label:createWithSystemFont("+"..3,"",36)
         rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
         button:addChild(rewardNumber)

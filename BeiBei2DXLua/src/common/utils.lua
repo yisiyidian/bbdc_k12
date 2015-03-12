@@ -270,3 +270,9 @@ function getDayStringForDailyStudyInfo(time)
     local str = string.format('%s/%s/%s', os.date('%m', time), os.date('%d', time), os.date('%y', time))
     return str
 end
+
+function getRandomBossPath( )
+    local map_path = require('view.summaryboss.MapPath')
+    
+    return map_path[math.random(1,5)]
+end

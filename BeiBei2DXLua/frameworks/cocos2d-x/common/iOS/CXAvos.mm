@@ -68,7 +68,7 @@ static CXTencentSDKCallObserver* cxTencentSDKCallObserver = nil;
                         block:^(AVUser *user, NSError *error) {
         CXAvos::getInstance()->invokeLuaCallbackFunction_logInByQQ(user ? AVUserToJsonStr(user).UTF8String : nullptr,
                                                                    response ? [response message].UTF8String : nullptr,
-                                                                   NSDictionaryToJSONString(authData).UTF8String,
+                                                                   NSObjectToJSONString(authData).UTF8String,
                                                                    error ? error.localizedDescription.UTF8String : nullptr,
                                                                    error ? (int)error.code : 0);
     }];

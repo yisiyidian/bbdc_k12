@@ -24,6 +24,8 @@ public:
     
     void invokeCallback(const char* objectjson, const char* errorjson);
     
+    void searchUser(const char* username, const char* nickName, CXLUAFUNC nHandler);
+    
 private:
     CXLUAFUNC m_callback;
 };
