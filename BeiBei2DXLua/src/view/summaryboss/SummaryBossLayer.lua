@@ -830,7 +830,7 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
     for i = 1,4 do
         local label1 = cc.Label:createWithSystemFont('+','',30)
         label1:setAnchorPoint(1,0.5)
-        label1:setPosition(combo_icon[i]:getPositionX(),combo_icon[i]:getPositionY() + 3)
+        label1:setPosition(combo_icon[i]:getPositionX() + 3,combo_icon[i]:getPositionY() + 3)
         self:addChild(label1,100)
         label1:setColor(combo_color[i])
         label1:enableOutline(combo_color[i],2)
@@ -1040,7 +1040,7 @@ end
 function SummaryBossLayer:initWordList(word)
     local wordList = word
     --if #wordList < 1 then
-        --wordList = {'apple','many','many','many','many','many','many','many','many','many','many','tea','banana','cat','dog','camel','ant'}
+       -- wordList = {'apple','many','many','many','many','many','many','many','many','many','many','tea','banana','cat','dog','camel','ant'}
     --end
     local index = 1
     
