@@ -42,7 +42,7 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
             playMusic(s_sound_win,false)
         end)
     else    
-        if not bossLayer.useItem and s_CURRENT_USER:getBeans() >= 10 then
+        if not bossLayer.useItem or s_CURRENT_USER:getBeans() >= 10 then
         layer:lose(entrance)
         else
             layer:lose2(entrance)
@@ -130,17 +130,17 @@ function SummaryBossAlter:lose(entrance)
 
         local function buyTime(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                s_CURRENT_USER:addBeans(-10)
+                --s_CURRENT_USER:addBeans(-10)
                 saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
                 local boss = self.bossLayer.bossNode
                 local distance = s_DESIGN_WIDTH * 0.45 * 30 / self.bossLayer.totalTime
                 self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
                 s_SCENE:callFuncWithDelay(0.3,function (  )
                     -- body
-                    --self.bossLayer:runAction(cc.Ripple3D:create(5, cc.size(32,24), cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2), 320, 4, 160))
-                    self:removeChildByName('background')
-                    boss:runAction(cc.Sequence:create(cc.MoveTo:create(5.0,cc.p(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75 + 10)),cc.CallFunc:create(function (  )
+                    self:getChildByName('background'):runAction(cc.FadeOut:create(1.0))
+                    boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75 + 20)),cc.CallFunc:create(function (  )
                         -- body
+                        self:removeChildByName('background')
                         self:addTime()
                     end)))
                 end)
