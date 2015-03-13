@@ -42,7 +42,7 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
             playMusic(s_sound_win,false)
         end)
     else    
-        if not bossLayer.useItem or s_CURRENT_USER:getBeans() >= 10 then
+        if not bossLayer.useItem and s_CURRENT_USER:getBeans() >= 10 then
         layer:lose(entrance)
         else
             layer:lose2(entrance)
@@ -130,7 +130,7 @@ function SummaryBossAlter:lose(entrance)
 
         local function buyTime(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
-                --s_CURRENT_USER:addBeans(-10)
+                s_CURRENT_USER:addBeans(-10)
                 saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
                 local boss = self.bossLayer.bossNode
                 local distance = s_DESIGN_WIDTH * 0.45 * 30 / self.bossLayer.totalTime
