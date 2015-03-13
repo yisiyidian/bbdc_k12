@@ -663,9 +663,10 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
             return
         end
-
-        layer.bubble[2]:setVisible(true)
-
+        if not layer.isHinting then
+            layer.bubble[2]:setVisible(true)
+        end
+        
         layer.leftTime = layer.leftTime - delta
         if layer.leftTime < layer.totalTime - 2 and layer.bubble[2]:isVisible() then
             layer.bubble[2]:setVisible(false)
@@ -699,6 +700,11 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         elseif not layer.isPaused and not layer.isHinting then
             
             layer:hint()
+        end
+        if layer.isHinting and not layer.girlAfraid then
+            if layer.bubble[8] ~= nil and not layer.bubble[8]:isVisible() then
+                layer.bubble[8]:setVisible(true)
+            end
         end
     end
     layer:scheduleUpdateWithPriorityLua(update, 0)
@@ -878,7 +884,7 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
         light_girl:setPosition(0,0)
         girl:addChild(light_girl,-1)
     end
-    self:addChild(girl)
+    self:addChild(girl,1)
     girl:setAnimation(0,'girl-stand',true)
     self.girl = girl
 
@@ -988,9 +994,9 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
     boss:setAnimation(0,'a2',true)
     local bossAction = {}
     bossAction[1] = cc.DelayTime:create(0.0)
-    bossAction[2] = cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.75 + 10)))
+    bossAction[2] = cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.75 + 20)))
     if chapter == 2 then
-        bossAction[2] = cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.76 + 10)))
+        bossAction[2] = cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.76 + 20)))
         --boss light
         local light_boss = cc.Sprite:create('image/summarybossscene/global_zongjiebosshuangshuboss_dierguan.png')
         light_boss:setAnchorPoint(0,0)
@@ -1067,7 +1073,6 @@ function SummaryBossLayer:initWordList(word)
     end
     self.leftTime = self.totalTime
     --self:runAction(cc.Ripple3D:create(20, cc.size(32,24), cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2), 120, 40, 240))
-    --self:runAction(cc.FlipX3D:create(2))
     -- self.totalBlood = levelConfig.summary_boss_hp
     -- self.currentBlood = self.totalBlood
     -- self.totalTime = levelConfig.summary_boss_time
