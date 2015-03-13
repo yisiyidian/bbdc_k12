@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string></string>
+	<string>Icon-57.png</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.beibei.wordmaster</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -19,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>200</string>
+	<string>204</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -86,7 +86,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2.0.0</string>
+	<string>2.0.4</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIPrerenderedIcon</key>
@@ -103,6 +103,25 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon-29.png</string>
+		<string>Icon-40.png</string>
+		<string>Icon-50.png</string>
+		<string>Icon-58.png</string>
+		<string>Icon-72.png</string>
+		<string>Icon-76.png</string>
+		<string>Icon-80.png</string>
+		<string>Icon-100.png</string>
+		<string>Icon-114.png</string>
+		<string>Icon-120.png</string>
+		<string>Icon-144.png</string>
+		<string>Icon-152.png</string>
+		<string>Icon-180.png</string>
+		<string>Icon.png</string>
+		<string>Icon@2x.png</string>
+		<string>Icon-57.png</string>
 	</array>
 </dict>
 </plist>
