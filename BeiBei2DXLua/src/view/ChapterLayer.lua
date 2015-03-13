@@ -92,6 +92,9 @@ function ChapterLayer:ctor()
             --        self.listView:addChild(self.chapterDic[chapterKey]) 
                     -- self.listView:pushBackCustomItem(self.chapterDic[chapterKey])
                     self.listView:insertCustomItem(custom_item, 0)
+                    self:callFuncWithDelay(0.1, function()
+                        self:scrollLevelLayer((self.activeChapterStartIndex * 10 + 9) * s_islands_per_page,0)
+                    end)
                 end
             end
 
@@ -745,19 +748,33 @@ function ChapterLayer:addBackToHome()
 end
 
 function ChapterLayer:addBeansUI()
-    self.beans = cc.Sprite:create('image/chapter/chapter0/beanBack.png')
+    self.beans = cc.Sprite:create('image/bean/beanNumber.png')
     self.beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
     self:addChild(self.beans,150)
-    self.beanLabel = cc.Sprite:create('image/chapter/chapter0/bean.png')
-    self.beanLabel:setPosition(-self.beans:getContentSize().width/2+70, self.beans:getContentSize().height/2+5)
-    self.beans:addChild(self.beanLabel)    
+    -- self.beanLabel = cc.Sprite:create('image/chapter/chapter0/bean.png')
+    -- self.beanLabel:setPosition(-self.beans:getContentSize().width/2+70, self.beans:getContentSize().height/2+5)
+    -- self.beans:addChild(self.beanLabel)    
     self.beanCount = s_CURRENT_USER:getBeans()
-    self.beanCountLabel = cc.Label:createWithSystemFont(self.beanCount,'',33)
-    self.beanCountLabel:setColor(cc.c3b(13, 95, 156))
+    self.beanCountLabel = cc.Label:createWithSystemFont(self.beanCount,'',24)
+    self.beanCountLabel:setColor(cc.c4b(0,0,0,255))
     self.beanCountLabel:ignoreAnchorPointForPosition(false)
-    self.beanCountLabel:setAnchorPoint(1,0)
-    self.beanCountLabel:setPosition(105,2)
+    -- self.beanCountLabel:setAnchorPoint(1,0)
+    -- self.beanCountLabel:setPosition(105,2)
+    self.beanCountLabel:setPosition(self.beans:getContentSize().width * 0.65 , self.beans:getContentSize().height/2)
     self.beans:addChild(self.beanCountLabel,10)
+
+    -- local been_number_back = cc.Sprite:create("image/bean/beanNumber.png")
+    -- been_number_back:setPosition(bigWidth-100, s_DESIGN_HEIGHT-50)
+    -- backColor:addChild(been_number_back)
+
+    -- local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
+    -- been_number:setColor(cc.c4b(0,0,0,255))
+    -- been_number:setPosition(been_number_back:getContentSize().width * 0.65 , been_number_back:getContentSize().height/2)
+    -- been_number_back:addChild(been_number)
+
+    -- local function updateBean(delta)
+    --     been_number:setString(s_CURRENT_USER:getBeans())
+    -- end
 end
 
 function ChapterLayer:shakeBeansUI(beansIncrement)
