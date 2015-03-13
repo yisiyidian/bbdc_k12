@@ -6,6 +6,7 @@ s_chapter_resource_middle_type = "middle"
 s_chapter_resource_end_type = "end"
 s_chapter0_base_height = 3014
 s_chapter_layer_width = 854
+
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
 local ChapterLayerBase = class('ChapterLayerBase',function() 
@@ -506,7 +507,7 @@ function ChapterLayerBase:plotDecoration()
             -- lockIsland:setName('lockLayer'..levelIndex)
             -- lockIsland:addTouchEventListener(touchEvent)
 
-            local lockIsland = ccui.Button:create('image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png','iimage/chapter/chapter0/lockisland2.png')
+            local lockIsland = ccui.Button:create('image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png')
             lockIsland:setScale9Enabled(true)
             lockIsland:setName('lockLayer'..levelIndex)
             lockIsland:addTouchEventListener(touchEvent)
