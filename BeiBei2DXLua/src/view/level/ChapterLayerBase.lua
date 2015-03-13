@@ -425,6 +425,11 @@ function ChapterLayerBase:addPopup(levelIndex)
         s_SCENE.popupLayer:addChild(wordLibrary)   
         back:setPosition(cc.p(s_DESIGN_WIDTH/2, 550))
         back:setVisible(false)
+        
+        wordLibrary:setPosition(0,550 * 3)
+        local action2 = cc.MoveTo:create(0.5,cc.p(0, 0))
+        wordLibrary:runAction(action2)
+     
         wordLibrary.close = function ()
             local action0 = cc.DelayTime:create(0.5)
             local action1 = cc.OrbitCamera:create(0.5,1, 0, -90, 90, 0, 0) 
