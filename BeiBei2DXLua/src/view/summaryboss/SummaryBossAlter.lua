@@ -70,6 +70,19 @@ function SummaryBossAlter:lose(entrance)
     self.loseBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
     self.loseBoard:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
     self:addChild(self.loseBoard)
+
+    local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
+    been_number_back:setPosition(self.loseBoard:getContentSize().width -100, self.loseBoard:getContentSize().height * 0.75 + 50)
+    self.loseBoard:addChild(been_number_back)
+
+    local been = cc.Sprite:create("image/shop/been.png")
+    been:setPosition(0, been_number_back:getContentSize().height/2)
+    been_number_back:addChild(been)
+
+    local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
+    been_number:setColor(cc.c4b(0,0,0,255))
+    been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
+    been_number_back:addChild(been_number)
     
     local boss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
     boss:setAnimation(0,'animation',false)
@@ -124,8 +137,9 @@ function SummaryBossAlter:lose(entrance)
                 self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
                 s_SCENE:callFuncWithDelay(0.3,function (  )
                     -- body
+                    --self.bossLayer:runAction(cc.Ripple3D:create(5, cc.size(32,24), cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2), 320, 4, 160))
                     self:removeChildByName('background')
-                    boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75)),cc.CallFunc:create(function (  )
+                    boss:runAction(cc.Sequence:create(cc.MoveTo:create(5.0,cc.p(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75 + 10)),cc.CallFunc:create(function (  )
                         -- body
                         self:addTime()
                     end)))
@@ -218,7 +232,7 @@ function SummaryBossAlter:lose2(entrance)
 
     self.loseBoard2 = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
     self.loseBoard2:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5)
-    if not self.bossLayer.useItem then
+    if self.loseBoard ~= nil then
         self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
     end
     self.loseBoard2:runAction(cc.Sequence:create(cc.DelayTime:create(0.3),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5)))))
