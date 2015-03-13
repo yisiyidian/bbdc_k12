@@ -1,10 +1,10 @@
 
         
     { 
-        "packageUrl" : "http://yisiyidian.com/AssetsManagerDebug/",
-        "remoteManifestUrl" : "http://yisiyidian.com/AssetsManagerDebug/project_server_debug.manifest", 
-        "remoteVersionUrl" : "http://yisiyidian.com/AssetsManagerDebug/version_debug.manifest", 
-        "version" : "2.0.2.0.0.0", 
+        "packageUrl" : "http://123.56.84.196/AssetsManagerDebug/",
+        "remoteManifestUrl" : "http://123.56.84.196/AssetsManagerDebug/project_server_debug.manifest", 
+        "remoteVersionUrl" : "http://123.56.84.196/AssetsManagerDebug/version_debug.manifest", 
+        "version" : "2.0.4.0.0.0", 
         "engineVersion" : "3.3 rc2" 
     , 
         "assets" : {    
@@ -26,7 +26,7 @@
 
         "ServerAssets/src/AppVersionInfo.luac" : 
         {
-            "md5" : "c93d5648f89c4d85af53546ee2428a52",
+            "md5" : "a8fc20d8b01ed51bf3ff673fa1af4705",
             "compressed" : false
         }
             ,
@@ -40,126 +40,126 @@
 
         "ServerAssets/src/cocos.zip" : 
         {
-            "md5" : "7db77b1e2e7012d24dbd0554e6fcb047",
+            "md5" : "399a26e2756a454c0dbcdb4efdb7c504",
             "compressed" : true
         }
             ,
 
         "ServerAssets/src/common.zip" : 
         {
-            "md5" : "0a148e611b1cd9a2464c804eebe82b8c",
+            "md5" : "9e739c4580ca9b30cb1d568477cfbc3e",
             "compressed" : true
         }
             ,
 
         "ServerAssets/src/controller.zip" : 
         {
-            "md5" : "e39afcf0ff883c969ee3950a1c84e083",
+            "md5" : "298ac79e9a0d8cadb1dfaf394e150780",
             "compressed" : true
         }
             ,
 
         "ServerAssets/src/example.zip" : 
         {
-            "md5" : "fd7f5075176c21578e88f3f88daafe7b",
+            "md5" : "e22e7636b24421718468c0f01ca73a82",
             "compressed" : true
         }
             ,
 
         "ServerAssets/src/layer.zip" : 
         {
-            "md5" : "211fc917d5e3ef7c7b387a51d9dd9e26",
+            "md5" : "8f0dcd5ca9e6097b1fb0809fc0d66734",
             "compressed" : true
         }
             ,
 
         "ServerAssets/src/main.luac" : 
         {
-            "md5" : "f425b957b0b9b5240a688f3ee862ec03",
+            "md5" : "e936fc48dccbbe349a82f1983f84b122",
             "compressed" : false
         }
             ,
 
         "ServerAssets/src/model.zip" : 
         {
-            "md5" : "71b5d126dbcbbe11379ac0e457c2377d",
+            "md5" : "2f03b1d2ea0da0f7b6e00791c0578987",
             "compressed" : true
         }
             ,
 
         "ServerAssets/src/popup.zip" : 
         {
-            "md5" : "031fc8542a43c87b88e4ed0f8b8eeb10",
+            "md5" : "99d1150fa63e7b649838243f7cce4019",
             "compressed" : true
         }
             ,
 
         "ServerAssets/src/server.zip" : 
         {
-            "md5" : "ed19e8fee027d488872fc7cd85b750fb",
+            "md5" : "8dd51ffc34f2a71e07e70769523b5b26",
             "compressed" : true
         }
             ,
 
         "ServerAssets/src/store.zip" : 
         {
-            "md5" : "b61b24344ad27b9300a8f54db5853414",
+            "md5" : "ec7558d5fe4ae327f0e49ba20130db84",
             "compressed" : true
         }
             ,
 
         "ServerAssets/src/view.zip" : 
         {
-            "md5" : "07cd01a8b407bc6aff42830d7d408e4b",
+            "md5" : "25f60bf91a7bd12e9b3dbd156b8657e7",
             "compressed" : true
         }
             ,
 
         "ServerAssets/res/ccb.zip" : 
         {
-            "md5" : "299807d8ba57b55863051fc8fd6b1a9c",
+            "md5" : "7c24d83a996a0f43c63ae38b172e28e9",
             "compressed" : true
         }
             ,
 
         "ServerAssets/res/cfg.zip" : 
         {
-            "md5" : "d32bb5f4e1cb476cb70fbd2ca2e05b5f",
+            "md5" : "0cf23edd576dbf4a657ded153e65cda9",
             "compressed" : true
         }
             ,
 
         "ServerAssets/res/font.zip" : 
         {
-            "md5" : "f9ca74c6c252fd4cbc84a624bb837d85",
+            "md5" : "777b642989a8af8da3d5182b028957b3",
             "compressed" : true
         }
             ,
 
         "ServerAssets/res/image.zip" : 
         {
-            "md5" : "899da8edbdc893547059e7511ba46590",
+            "md5" : "a8b8438a577e242a3dce0aff0209f371",
             "compressed" : true
         }
             ,
 
         "ServerAssets/res/manifest.zip" : 
         {
-            "md5" : "b7d34e9c884108a420b67cc518f7b258",
+            "md5" : "98294eb6eac6dc97755623280a46ef1c",
             "compressed" : true
         }
             ,
 
         "ServerAssets/res/sound.zip" : 
         {
-            "md5" : "24e15a92f00ffa85f44a5e2c66ff2dec",
+            "md5" : "e365460298a9e696e61022bd3e373d5f",
             "compressed" : true
         }
             ,
 
         "ServerAssets/res/spine.zip" : 
         {
-            "md5" : "c685ee58e56af75cfa250f00089394ac",
+            "md5" : "0e8b39f1953b76a455008b33eadc49b5",
             "compressed" : true
         }
             

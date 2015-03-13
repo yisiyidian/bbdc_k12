@@ -17,10 +17,10 @@ function ChapterLayer.create()
 end
 
 function ChapterLayer:ctor()
-    s_SCENE.touchEventBlockLayer.lockTouch()
-    s_SCENE:callFuncWithDelay(0.5, function()
-        s_SCENE.touchEventBlockLayer.unlockTouch()
-    end)
+    -- s_SCENE.touchEventBlockLayer.lockTouch()
+    -- s_SCENE:callFuncWithDelay(0.5, function()
+    --     s_SCENE.touchEventBlockLayer.unlockTouch()
+    -- end)
     
 
     if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then

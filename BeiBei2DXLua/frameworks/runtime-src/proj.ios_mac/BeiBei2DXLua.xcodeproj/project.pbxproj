@@ -81,8 +81,6 @@
 		6602246F1A370FAC00233788 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6602246E1A370FAC00233788 /* CoreTelephony.framework */; };
 		660224711A370FBB00233788 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660224701A370FBB00233788 /* MobileCoreServices.framework */; };
 		660224731A370FC800233788 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660224721A370FC800233788 /* SystemConfiguration.framework */; };
-		66E529101A37EEA600D1FBB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66E5290F1A37EEA600D1FBB1 /* Images.xcassets */; };
-		66E529111A37EEA600D1FBB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66E5290F1A37EEA600D1FBB1 /* Images.xcassets */; };
 		AB6CB6F21A1F275E009C2562 /* ConnectWaitLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6EC1A1F275E009C2562 /* ConnectWaitLayer.cpp */; };
 		AB6CB6F31A1F275E009C2562 /* ConnectWaitLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6EC1A1F275E009C2562 /* ConnectWaitLayer.cpp */; };
 		AB6CB6F41A1F275E009C2562 /* ConsoleCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB6CB6EE1A1F275E009C2562 /* ConsoleCommand.cpp */; };
@@ -97,8 +95,29 @@
 		B85077521A5E67E900A66723 /* CXAvosCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B85077511A5E67E900A66723 /* CXAvosCommon.cpp */; };
 		B85077581A5F7CC400A66723 /* CXNetworkStatusCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B85077571A5F7CC400A66723 /* CXNetworkStatusCommon.cpp */; };
 		B850775A1A5F7CD500A66723 /* CXNetworkStatus.mm in Sources */ = {isa = PBXBuildFile; fileRef = B85077591A5F7CD500A66723 /* CXNetworkStatus.mm */; };
-		B8551C041A7CC98800F0037D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B8551C031A7CC98800F0037D /* Icon-72.png */; };
 		B895B1151A7CE968005D78F3 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B895B1121A7CE968005D78F3 /* libWeChatSDK.a */; };
+		B896075C1AB1A57C00BB266B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B89607471AB1A57C00BB266B /* Default-568h@2x.png */; };
+		B896075D1AB1A57C00BB266B /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B89607481AB1A57C00BB266B /* Default-667h@2x.png */; };
+		B896075E1AB1A57C00BB266B /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B89607491AB1A57C00BB266B /* Default-736h@3x.png */; };
+		B896075F1AB1A57C00BB266B /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = B896074A1AB1A57C00BB266B /* Default-Portrait.png */; };
+		B89607601AB1A57C00BB266B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B896074B1AB1A57C00BB266B /* Default.png */; };
+		B89607611AB1A57C00BB266B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B896074C1AB1A57C00BB266B /* Default@2x.png */; };
+		B89607621AB1A57C00BB266B /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = B896074D1AB1A57C00BB266B /* Icon-100.png */; };
+		B89607631AB1A57C00BB266B /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = B896074E1AB1A57C00BB266B /* Icon-114.png */; };
+		B89607641AB1A57C00BB266B /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = B896074F1AB1A57C00BB266B /* Icon-120.png */; };
+		B89607651AB1A57C00BB266B /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = B89607501AB1A57C00BB266B /* Icon-144.png */; };
+		B89607661AB1A57C00BB266B /* Icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = B89607511AB1A57C00BB266B /* Icon-152.png */; };
+		B89607671AB1A57C00BB266B /* Icon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = B89607521AB1A57C00BB266B /* Icon-180.png */; };
+		B89607681AB1A57C00BB266B /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = B89607531AB1A57C00BB266B /* Icon-29.png */; };
+		B89607691AB1A57C00BB266B /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = B89607541AB1A57C00BB266B /* Icon-40.png */; };
+		B896076A1AB1A57C00BB266B /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B89607551AB1A57C00BB266B /* Icon-50.png */; };
+		B896076B1AB1A57C00BB266B /* Icon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = B89607561AB1A57C00BB266B /* Icon-58.png */; };
+		B896076C1AB1A57C00BB266B /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B89607571AB1A57C00BB266B /* Icon-72.png */; };
+		B896076D1AB1A57C00BB266B /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = B89607581AB1A57C00BB266B /* Icon-76.png */; };
+		B896076E1AB1A57C00BB266B /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = B89607591AB1A57C00BB266B /* Icon-80.png */; };
+		B896076F1AB1A57C00BB266B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B896075A1AB1A57C00BB266B /* Icon.png */; };
+		B89607701AB1A57C00BB266B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B896075B1AB1A57C00BB266B /* Icon@2x.png */; };
+		B89607721AB1A77900BB266B /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = B89607711AB1A77900BB266B /* Icon-57.png */; };
 		B89B86901A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B89B868E1A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		B89B86911A454C3C00E596E0 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89B868F1A454C3C00E596E0 /* TencentOpenAPI.framework */; };
 		B89B86931A454CFC00E596E0 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B89B86921A454CFC00E596E0 /* libiconv.dylib */; };
@@ -291,7 +310,6 @@
 		6602246E1A370FAC00233788 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
 		660224701A370FBB00233788 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		660224721A370FC800233788 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		66E5290F1A37EEA600D1FBB1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "BeiBei2DXLua iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		AB6CB6EC1A1F275E009C2562 /* ConnectWaitLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConnectWaitLayer.cpp; sourceTree = "<group>"; };
 		AB6CB6ED1A1F275E009C2562 /* ConnectWaitLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectWaitLayer.h; sourceTree = "<group>"; };
 		AB6CB6EE1A1F275E009C2562 /* ConsoleCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConsoleCommand.cpp; sourceTree = "<group>"; };
@@ -311,10 +329,31 @@
 		B85077561A5F7CC400A66723 /* CXNetworkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNetworkStatus.h; sourceTree = "<group>"; };
 		B85077571A5F7CC400A66723 /* CXNetworkStatusCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXNetworkStatusCommon.cpp; sourceTree = "<group>"; };
 		B85077591A5F7CD500A66723 /* CXNetworkStatus.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CXNetworkStatus.mm; sourceTree = "<group>"; };
-		B8551C031A7CC98800F0037D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../proj.ios_mac/BeiBei2DXLua iOS/Images.xcassets/AppIcon.appiconset/Icon-72.png"; sourceTree = "<group>"; };
 		B895B1121A7CE968005D78F3 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		B895B1131A7CE968005D78F3 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		B895B1141A7CE968005D78F3 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		B89607471AB1A57C00BB266B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B89607481AB1A57C00BB266B /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
+		B89607491AB1A57C00BB266B /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
+		B896074A1AB1A57C00BB266B /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait.png"; sourceTree = "<group>"; };
+		B896074B1AB1A57C00BB266B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B896074C1AB1A57C00BB266B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B896074D1AB1A57C00BB266B /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
+		B896074E1AB1A57C00BB266B /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = "<group>"; };
+		B896074F1AB1A57C00BB266B /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
+		B89607501AB1A57C00BB266B /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-144.png"; sourceTree = "<group>"; };
+		B89607511AB1A57C00BB266B /* Icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-152.png"; sourceTree = "<group>"; };
+		B89607521AB1A57C00BB266B /* Icon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-180.png"; sourceTree = "<group>"; };
+		B89607531AB1A57C00BB266B /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
+		B89607541AB1A57C00BB266B /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		B89607551AB1A57C00BB266B /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
+		B89607561AB1A57C00BB266B /* Icon-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-58.png"; sourceTree = "<group>"; };
+		B89607571AB1A57C00BB266B /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		B89607581AB1A57C00BB266B /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		B89607591AB1A57C00BB266B /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
+		B896075A1AB1A57C00BB266B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B896075B1AB1A57C00BB266B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		B89607711AB1A77900BB266B /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
 		B89B868E1A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TencentOpenApi_IOS_Bundle.bundle; path = frameworks/TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		B89B868F1A454C3C00E596E0 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = frameworks/TencentOpenAPI/TencentOpenAPI.framework; sourceTree = "<group>"; };
 		B89B86921A454CFC00E596E0 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
@@ -514,13 +553,13 @@
 		5023810617EBBCAC00990C9B /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				B89607461AB1A57C00BB266B /* Icons */,
 				B895B1111A7CE968005D78F3 /* WeChatSDK */,
 				5023810717EBBCAC00990C9B /* AppController.h */,
 				5023810817EBBCAC00990C9B /* AppController.mm */,
 				B8246CB51A3D5CDC0087AB9B /* AppVersionInfo.h */,
 				B89B86A01A45636C00E596E0 /* CXTencentSDKCall.h */,
 				B89B86A11A45636C00E596E0 /* CXTencentSDKCall.m */,
-				66E5290F1A37EEA600D1FBB1 /* Images.xcassets */,
 				5023811317EBBCAC00990C9B /* Info.plist */,
 				5023811417EBBCAC00990C9B /* main.m */,
 				5023811517EBBCAC00990C9B /* Prefix.pch */,
@@ -613,6 +652,35 @@
 			name = WeChatSDK;
 			path = frameworks/WeChatSDK;
 			sourceTree = SOURCE_ROOT;
+		};
+		B89607461AB1A57C00BB266B /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B89607711AB1A77900BB266B /* Icon-57.png */,
+				B89607471AB1A57C00BB266B /* Default-568h@2x.png */,
+				B89607481AB1A57C00BB266B /* Default-667h@2x.png */,
+				B89607491AB1A57C00BB266B /* Default-736h@3x.png */,
+				B896074A1AB1A57C00BB266B /* Default-Portrait.png */,
+				B896074B1AB1A57C00BB266B /* Default.png */,
+				B896074C1AB1A57C00BB266B /* Default@2x.png */,
+				B896074D1AB1A57C00BB266B /* Icon-100.png */,
+				B896074E1AB1A57C00BB266B /* Icon-114.png */,
+				B896074F1AB1A57C00BB266B /* Icon-120.png */,
+				B89607501AB1A57C00BB266B /* Icon-144.png */,
+				B89607511AB1A57C00BB266B /* Icon-152.png */,
+				B89607521AB1A57C00BB266B /* Icon-180.png */,
+				B89607531AB1A57C00BB266B /* Icon-29.png */,
+				B89607541AB1A57C00BB266B /* Icon-40.png */,
+				B89607551AB1A57C00BB266B /* Icon-50.png */,
+				B89607561AB1A57C00BB266B /* Icon-58.png */,
+				B89607571AB1A57C00BB266B /* Icon-72.png */,
+				B89607581AB1A57C00BB266B /* Icon-76.png */,
+				B89607591AB1A57C00BB266B /* Icon-80.png */,
+				B896075A1AB1A57C00BB266B /* Icon.png */,
+				B896075B1AB1A57C00BB266B /* Icon@2x.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
 		};
 		C00FD4891938512100C6382D /* runtime */ = {
 			isa = PBXGroup;
@@ -736,7 +804,6 @@
 		F293BC4615EB859D00256477 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B8551C031A7CC98800F0037D /* Icon-72.png */,
 				64E5CEC31A6F5A69005770C9 /* res */,
 				C05D1C111923449100B808A4 /* config.json */,
 				C03781B818BF655400FE4F13 /* src */,
@@ -874,7 +941,6 @@
 			files = (
 				C03781BC18BF655400FE4F13 /* src in Resources */,
 				F405C6C919ED14AA005AD31C /* MainMenu.xib in Resources */,
-				66E529111A37EEA600D1FBB1 /* Images.xcassets in Resources */,
 				5023817617EBBE3400990C9B /* Icon.icns in Resources */,
 				C05D1C131923449100B808A4 /* config.json in Resources */,
 			);
@@ -884,13 +950,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89607611AB1A57C00BB266B /* Default@2x.png in Resources */,
+				B89607621AB1A57C00BB266B /* Icon-100.png in Resources */,
 				B89B86901A454C3C00E596E0 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				B896076C1AB1A57C00BB266B /* Icon-72.png in Resources */,
+				B89607661AB1A57C00BB266B /* Icon-152.png in Resources */,
+				B89607691AB1A57C00BB266B /* Icon-40.png in Resources */,
 				B8C6D59A1AA5C18900CA73EF /* InfoPlist.strings in Resources */,
-				66E529101A37EEA600D1FBB1 /* Images.xcassets in Resources */,
 				64E5CEC41A6F5A69005770C9 /* res in Resources */,
+				B896076B1AB1A57C00BB266B /* Icon-58.png in Resources */,
 				C03781BB18BF655400FE4F13 /* src in Resources */,
-				B8551C041A7CC98800F0037D /* Icon-72.png in Resources */,
+				B89607701AB1A57C00BB266B /* Icon@2x.png in Resources */,
+				B89607681AB1A57C00BB266B /* Icon-29.png in Resources */,
+				B896075E1AB1A57C00BB266B /* Default-736h@3x.png in Resources */,
+				B896076A1AB1A57C00BB266B /* Icon-50.png in Resources */,
+				B896075D1AB1A57C00BB266B /* Default-667h@2x.png in Resources */,
+				B896075C1AB1A57C00BB266B /* Default-568h@2x.png in Resources */,
+				B896075F1AB1A57C00BB266B /* Default-Portrait.png in Resources */,
+				B89607721AB1A77900BB266B /* Icon-57.png in Resources */,
+				B896076D1AB1A57C00BB266B /* Icon-76.png in Resources */,
+				B89607631AB1A57C00BB266B /* Icon-114.png in Resources */,
 				C05D1C121923449100B808A4 /* config.json in Resources */,
+				B896076F1AB1A57C00BB266B /* Icon.png in Resources */,
+				B89607641AB1A57C00BB266B /* Icon-120.png in Resources */,
+				B896076E1AB1A57C00BB266B /* Icon-80.png in Resources */,
+				B89607651AB1A57C00BB266B /* Icon-144.png in Resources */,
+				B89607671AB1A57C00BB266B /* Icon-180.png in Resources */,
+				B89607601AB1A57C00BB266B /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1175,8 +1261,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iOS Development: abby yi (7BBT23W58G)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: abby yi (7BBT23W58G)";
@@ -1201,7 +1285,7 @@
 					"-ObjC",
 					"-fobjc-arc",
 				);
-				PROVISIONING_PROFILE = "34534560-ebb6-48d3-9e55-51166c8cbd2a";
+				PROVISIONING_PROFILE = "949140dc-e6df-4c03-a3c4-a2bfb456d65b";
 				"PROVISIONING_PROFILE[sdk=*]" = "6caf29af-cc3a-4416-a7e3-44f4392e309c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1214,8 +1298,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: abby yi (9363QVK9E9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: abby yi (9363QVK9E9)";
