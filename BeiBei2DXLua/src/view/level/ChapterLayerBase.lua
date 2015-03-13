@@ -125,7 +125,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     levelButton:setPosition(levelPosition)
     levelButton:setName(levelIndex)
     levelButton:addTouchEventListener(touchEvent)
-    self:addChild(levelButton, 40)
+    self:addChild(levelButton, 129)
     
 
     local currentIndex = levelIndex
@@ -160,55 +160,23 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     -- TODO add review boss position
     -- TODO check level state
 ----    local levelState = math.random(0, 3)
-   -- levelState = 2
+--    levelState = 5
     if levelState == 0 then
-        -- local deco = cc.Sprite:create('image/chapter/elements/tubiao_daizi_tanchu_xiaoguan.png')
-        local deco = sp.SkeletonAnimation:create("spine/chapterlevel/beibeidaizi.json","spine/chapterlevel/beibeidaizi.atlas",1)
-        deco:setPosition(levelPosition.x-60,levelPosition.y-10)
-        deco:addAnimation(0,'animation',true)
-        self:addChild(deco, 131)
+        local deco = cc.Sprite:create('image/chapter/elements/tubiao_daizi_tanchu_xiaoguan.png')
+        deco:setPosition(levelPosition.x,levelPosition.y+20)
+        self:addChild(deco, 130)
     elseif levelState == 1 then
-        if s_level_popup_state == 1 then
-            local oldDeco = cc.Sprite:create('image/chapter/elements/tubiao_daizi_tanchu_xiaoguan.png')
-            oldDeco:setPosition(levelPosition.x, levelPosition.y+20)
-            local action = cc.FadeOut:create(0.5)
-            oldDeco:runAction(action)
-            self:addChild(oldDeco, 130)
-            s_SCENE:callFuncWithDelay(0.5, function()
-                local deco = cc.Sprite:create('image/chapter/elements/tubiao_chuizi_tanchu_xiaoguan.png')
-                deco:setPosition(levelPosition.x,levelPosition.y+20)
-                self:addChild(deco, 130)
-            end)
-        else
-            local deco = cc.Sprite:create('image/chapter/elements/tubiao_chuizi_tanchu_xiaoguan.png')
-            deco:setPosition(levelPosition.x,levelPosition.y+20)
-            self:addChild(deco, 130)
-        end
+        local deco = cc.Sprite:create('image/chapter/elements/tubiao_chuizi_tanchu_xiaoguan.png')
+        deco:setPosition(levelPosition.x,levelPosition.y+20)
+        self:addChild(deco, 130)
     elseif levelState == 2 or (levelState >= 4 and levelIndex == currentTaskBossIndex) then
-        if s_level_popup_state == 1 then
-            local oldDeco = cc.Sprite:create('image/chapter/elements/tubiao_chuizi_tanchu_xiaoguan.png')
-            oldDeco:setPosition(levelPosition.x, levelPosition.y+20)
-            local action = cc.FadeOut:create(0.5)
-            oldDeco:runAction(action)
-            self:addChild(oldDeco, 130)
-            s_SCENE:callFuncWithDelay(0.5, function()
-                local reviewBoss = sp.SkeletonAnimation:create('spine/3 fxzlsxuanxiaoguandiaoluo1.json', 'spine/3 fxzlsxuanxiaoguandiaoluo1.atlas', 1)
-        --        reviewBoss:addAnimation(0, '1', false)
-        --        s_SCENE:callFuncWithDelay(1,function()
-                    reviewBoss:addAnimation(1, '2', true)
-        --        end)
-                reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
-                self:addChild(reviewBoss, 140)
-            end)
-        else
-            local reviewBoss = sp.SkeletonAnimation:create('spine/3 fxzlsxuanxiaoguandiaoluo1.json', 'spine/3 fxzlsxuanxiaoguandiaoluo1.atlas', 1)
-    --        reviewBoss:addAnimation(0, '1', false)
-    --        s_SCENE:callFuncWithDelay(1,function()
-                reviewBoss:addAnimation(1, '2', true)
-    --        end)
-            reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
-            self:addChild(reviewBoss, 140)
-        end
+        local reviewBoss = sp.SkeletonAnimation:create('spine/3 fxzlsxuanxiaoguandiaoluo1.json', 'spine/3 fxzlsxuanxiaoguandiaoluo1.atlas', 1)
+--        reviewBoss:addAnimation(0, '1', false)
+--        s_SCENE:callFuncWithDelay(1,function()
+            reviewBoss:addAnimation(1, '2', true)
+--        end)
+        reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
+        self:addChild(reviewBoss, 140)
         -- only one review boss
     elseif levelState == 3 then 
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
@@ -272,9 +240,7 @@ function ChapterLayerBase:addPopup(levelIndex)
             local active = info[3] + 0
             local currentTaskID = info[4] + 1
             local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
---            print('#####sendr:name:'..sender:getName()..':'..currentProgress)
             s_SCENE:removeAllPopups()
---            print('######## state'..state..',active'..active)
             if state >= 4 and bossID ~= currentTaskID then
 --                if true then
 
@@ -311,18 +277,17 @@ function ChapterLayerBase:addPopup(levelIndex)
                     local action2 = cc.FadeOut:create(1.5)
                     text:runAction(action2)
             else
-
                 s_SCENE:callFuncWithDelay(0.1, function()
                     s_CorePlayManager.initTotalPlay()
+                    s_CURRENT_USER.islandIndex = tonumber(levelIndex)
                 end)
-
             end
         end
     end
 --    state = math.random(0, 7)
 --    print('state is '..state)
     local back, taskButton, tick
-   -- state = 7
+--    state = 5
 --    coolingDay = 1
     if state == 0 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_1.png')       
@@ -348,7 +313,6 @@ function ChapterLayerBase:addPopup(levelIndex)
         if coolingDay == 0 and levelIndex - currentTaskBossIndex == 0 then  
             taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_5.png','image/chapter/popup/button_pressed_xiaoguantancu_5.png','image/chapter/popup/button_unpressed_xiaoguantancu_5.png')
         else
-
             taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_?_1.png','image/chapter/popup/button_pressed_xiaoguantancu_?_1.png','')
         end
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-540)
@@ -379,15 +343,6 @@ function ChapterLayerBase:addPopup(levelIndex)
     elseif state == 8 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_9.png')
     end
-
-    if state <= 7 and state >= 4 then
-        if coolingDay > 0 then
-            local collingText = cc.Label:createWithSystemFont(coolingDay..'天后','',24)
-            collingText:setPosition(taskButton:getContentSize().width-100,taskButton:getContentSize().height/2-50)
-            collingText:setColor(cc.c3b(146,179,54))
-            taskButton:addChild(collingText)
-        end
-    end
     
     if state ~= 8 then
         taskButton:setScale9Enabled(true)
@@ -395,7 +350,7 @@ function ChapterLayerBase:addPopup(levelIndex)
         taskButton:addTouchEventListener(taskEvent)
         back:addChild(taskButton)
         if s_level_popup_state == 2 then
-            s_SCENE:callFuncWithDelay(0.5, function()
+            -- s_SCENE:callFuncWithDelay(0.5, function()
                 if state ~= 0 then
                     tick = cc.Sprite:create('image/chapter/popup/duigo_green_xiaoguan_tanchu.png')
                     tick:setPosition(taskButton:getPositionX()+165, taskButton:getPositionY() + 115)
@@ -407,11 +362,13 @@ function ChapterLayerBase:addPopup(levelIndex)
                     tick:runAction(action2)
                     back:addChild(tick, 10) 
                 end
-            end)
-        elseif state ~= 0 then
-            tick = cc.Sprite:create('image/chapter/popup/duigo_green_xiaoguan_tanchu.png')
-            tick:setPosition(taskButton:getPositionX()+165, taskButton:getPositionY() + 115)
-            back:addChild(tick, 10) 
+            -- end)
+        else 
+                if state ~= 0 then
+                    tick = cc.Sprite:create('image/chapter/popup/duigo_green_xiaoguan_tanchu.png')
+                    tick:setPosition(taskButton:getPositionX()+165, taskButton:getPositionY() + 115)
+                    back:addChild(tick, 10) 
+                end
         end
     end
     
@@ -490,16 +447,45 @@ function ChapterLayerBase:plotDecoration()
     
     for levelIndex, levelPosition in pairs(self.levelPos) do
         -- add level button
-        
+        local function touchEvent(sender,eventType)
+            if eventType == ccui.TouchEventType.ended then
+                local levelIndex = string.sub(sender:getName(), 10)
+                local lockSprite = self:getChildByName('lock'..levelIndex)
+                local lockLayer = self:getChildByName('lockLayer'..levelIndex)
+                local action1 = cc.ScaleTo:create(0.12, 1.15, 0.85)
+                local action2 = cc.ScaleTo:create(0.12, 0.85, 1.15)
+                local action3 = cc.ScaleTo:create(0.12, 1.08, 0.92)
+                local action4 = cc.ScaleTo:create(0.12, 0.92, 1.08)
+                local action5 = cc.ScaleTo:create(0.12, 1.0, 1.0)
+                local action6 = cc.Sequence:create(action1, action2, action3, action4, action5, nil)
+
+                local l1 = cc.MoveBy:create(0.1, cc.p(10,0))
+                local l2 = cc.MoveBy:create(0.1, cc.p(-20,0))
+                local l3 = cc.MoveBy:create(0.1, cc.p(20,0))
+
+                local l4 = cc.Repeat:create(cc.Sequence:create(l2, l3),3)
+                local l5 = cc.MoveBy:create(0.1, cc.p(-10, 0))
+                lockSprite:runAction(cc.Sequence:create(l1,l4, l5,nil))
+                lockLayer:runAction(action6)
+            end
+        end
         if (levelIndex - currentLevelIndex) > 0 then
-            local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland2.png')
+            -- local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland2.png')
+            -- lockIsland:setName('lockLayer'..levelIndex)
+            -- lockIsland:addTouchEventListener(touchEvent)
+
+            local lockIsland = ccui.Button:create('image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png','iimage/chapter/chapter0/lockisland2.png')
+            lockIsland:setScale9Enabled(true)
             lockIsland:setName('lockLayer'..levelIndex)
+            lockIsland:addTouchEventListener(touchEvent)
+
             local lock = cc.Sprite:create('image/chapter/chapter0/lock.png')
             lock:setName('lock'..levelIndex)
             lockIsland:setPosition(levelPosition)
+            -- lock:setPosition(lockIsland:getContentSize().width/2, lockIsland:getContentSize().height/2)
             lock:setPosition(levelPosition)
-            self:addChild(lockIsland,120)
             self:addChild(lock,130)
+            self:addChild(lockIsland,120)
         else
             self:plotDecorationOfLevel(levelIndex)
         end  
@@ -510,11 +496,20 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
     local levelIndex = string.sub(levelKey, 6)
     local levelPosition = self:getLevelPosition(levelKey)
     local chapterIndex = string.sub(self.chapterKey, 8)
-    local number = ccui.TextBMFont:create()
-    number:setFntFile('font/number_inclined.fnt')
-    number:setString(levelIndex+1)
-    number:setPosition(levelPosition.x, levelPosition.y+3)
-    self:addChild(number,130)
+--    if levelIndex - 0 == 0 and chapterIndex - 0 == 0 then  -- start 
+--        local start = cc.Sprite:create('image/chapter/chapter0/start.png')
+--        start:setPosition(levelPosition.x, levelPosition.y)
+--        self:addChild(start, 130)
+--    else
+        local number = ccui.TextBMFont:create()
+        number:setFntFile('font/number_inclined.fnt')
+        --number:setColor(cc.c3b(56,26,23))
+        number:setString(levelIndex+1)
+        number:setPosition(levelPosition.x, levelPosition.y+3)
+        self:addChild(number,130)
+--    end
+
+ 
 end
 
 function ChapterLayerBase:loadResource()
