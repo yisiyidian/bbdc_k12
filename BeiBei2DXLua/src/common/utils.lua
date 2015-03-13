@@ -18,6 +18,8 @@
 
 -- getDayStringForDailyStudyInfo(time)
 
+-- onAndroidKeyPressed(node, back_func, menu_func)
+
 ------------------------------------------------------------------------------------------------------------
 
 function randomMinN(M, N) -- random M numbers from 1 to N, N must >= M
@@ -275,4 +277,22 @@ function getRandomBossPath( )
     local map_path = require('view.summaryboss.MapPath')
     
     return map_path[math.random(1,5)]
+end
+
+function onAndroidKeyPressed(node, back_func, menu_func)
+    local function onKeyReleased(keyCode, event)
+        if keyCode == cc.KeyCode.KEY_BACK then
+            print("Android: BACK clicked!")
+            if back_func ~= nil then back_func() end
+        elseif keyCode == cc.KeyCode.KEY_MENU  then
+            print("Android: MENU clicked!")
+            if menu_func ~= nil then menu_func() end
+        end
+    end
+
+    local listener = cc.EventListenerKeyboard:create()
+    listener:registerScriptHandler(onKeyReleased, cc.Handler.EVENT_KEYBOARD_RELEASED)
+
+    local eventDispatcher = node:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, node)
 end
