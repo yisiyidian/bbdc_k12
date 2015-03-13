@@ -236,6 +236,16 @@ function LoginRewardPopup:ctor()
                 todayMark = 1   
             end
         end
+        
+        local location = self:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(backPopup:getBoundingBox(),location) then
+            local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH /2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                s_SCENE:removeAllPopups()
+            end)
+            backPopup:runAction(cc.Sequence:create(action2,action3))
+        end
     end
     
 
@@ -244,8 +254,8 @@ function LoginRewardPopup:ctor()
     listener:setSwallowTouches(true)
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
-    local eventDispatcher = backPopup:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, backPopup)  
+    local eventDispatcher = self:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)  
     
 end
 
