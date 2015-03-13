@@ -73,6 +73,25 @@ function Pause:ctor()
 
 
     ccbPause['mask']:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p((s_RIGHT_X - s_LEFT_X) * 0.5,s_DESIGN_HEIGHT * 0.5))))
+    
+    local onTouchBegan = function(touch, event)
+        return true
+    end
+
+    local onTouchEnded = function(touch, event)
+        local location = node:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(ccbPause['mask']:getBoundingBox(),location) then
+            self:onClose()
+        end
+    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = node:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, node)
  end
 
 function Pause:onClose()
