@@ -71,21 +71,26 @@ function ChapterLayer:ctor()
                 end)
                 print("SCROLL_TO_TOP")
                 -- if self.activeChapterStartIndex > 0 then
-                    -- self.activeChapterStartIndex = self.activeChapterStartIndex - 1;
-            --         self.activeChapterStartIndex = 1
-            --         local chapterKey = 'chapter'..self.activeChapterStartIndex
-            --         local RepeatChapterLayer = require('view.level.RepeatChapterLayer')
-            --         self.chapterDic[chapterKey] = RepeatChapterLayer.create(chapterKey)
-            --         -- self.chapterDic[chapterKey]:setPosition(cc.p(0,0))
-            --         --print('contentSize:'..self.chapterDic[chapterKey]:getContentSize().height)
-            --         local custom_item = ccui.Layout:create()
-            --         custom_item:setContentSize(self.chapterDic[chapterKey]:getContentSize())  
-            --         custom_item:setName(chapterKey)  
-            --         custom_item:addChild(self.chapterDic[chapterKey])
-            --         custom_item:setPosition(cc.p(0,0))
-            -- --        self.listView:addChild(self.chapterDic[chapterKey]) 
-            --         -- self.listView:pushBackCustomItem(self.chapterDic[chapterKey])
-            --         self.listView:insertCustomItem(custom_item, 1)
+                    self.activeChapterStartIndex = self.activeChapterStartIndex - 1;
+                    self.activeChapterStartIndex = 1
+                    local chapterKey = 'chapter'..self.activeChapterStartIndex
+                    local RepeatChapterLayer = require('view.level.RepeatChapterLayer')
+                    self.chapterDic[chapterKey] = RepeatChapterLayer.create(chapterKey)
+                    self.chapterDic[chapterKey]:setPosition(self.chapterDic[chapterKey]:getContentSize().width/2, 0)
+                    --print('contentSize:'..self.chapterDic[chapterKey]:getContentSize().height)
+                    local custom_item = ccui.Layout:create()
+                    custom_item:setContentSize(self.chapterDic[chapterKey]:getContentSize())  
+                    custom_item:setName(chapterKey)  
+                    custom_item:addChild(self.chapterDic[chapterKey])
+                    custom_item:setAnchorPoint(0.5,0)
+                    -- custom_item:setPosition(cc.p(0,0))
+                    local fullWidth = s_chapter_layer_width
+                    -- self.listView:setContentSize(fullWidth, s_DESIGN_HEIGHT)
+                    custom_item:setPosition(cc.p((s_DESIGN_WIDTH - s_chapter_layer_width) / 2, 0))
+
+            --        self.listView:addChild(self.chapterDic[chapterKey]) 
+                    -- self.listView:pushBackCustomItem(self.chapterDic[chapterKey])
+                    self.listView:insertCustomItem(custom_item, 1)
                 -- end
             end
 
