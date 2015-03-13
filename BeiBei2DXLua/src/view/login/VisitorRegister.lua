@@ -35,14 +35,26 @@ function VisitorRegister.create()
     showWindow()
 
     local onTouchBegan = function(touch, event)
-        --s_logd("touch began on block layer")
         return true
+    end
+    
+    local onTouchEnded = function(touch, event)
+        local location = main:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(back_login:getBoundingBox(),location) then
+            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                main.close("close")
+            end)
+            back_login:runAction(cc.Sequence:create(action2,action3))
+        end
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
 
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = main:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 
@@ -97,7 +109,12 @@ showWindow = function()
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            main.close("register")
+            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                main.close("register")
+            end)
+            back_login:runAction(cc.Sequence:create(action2,action3))
         end
     end
 
@@ -117,8 +134,12 @@ showWindow = function()
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            main.close("improve")
-
+            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                main.close("improve")
+            end)
+            back_login:runAction(cc.Sequence:create(action2,action3))        
         end
     end
     
@@ -135,10 +156,14 @@ showWindow = function()
 
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            main.close("close")
+            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                main.close("close")
+            end)
+            back_login:runAction(cc.Sequence:create(action2,action3))  
         end
     end
     
@@ -146,6 +171,8 @@ showWindow = function()
     button_close:setPosition(back_width-30,back_height-10)
     button_close:addTouchEventListener(button_close_clicked)
     back_login:addChild(button_close)
+    
+    
 end
 
 
