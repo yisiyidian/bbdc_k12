@@ -377,6 +377,7 @@ function IntroLayer.create(directOnLogin)
 --    return layer
     
     local layer = IntroLayer.new()
+    cc.SimpleAudioEngine:getInstance():stopMusic()
 
     local offlineTip
     local isOnline = s_SERVER.isNetworkConnectedWhenInited()

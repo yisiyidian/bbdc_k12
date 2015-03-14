@@ -35,7 +35,7 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
             saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
         end
         layer:win1(entrance)  
-        cc.SimpleAudioEngine:getInstance():pauseMusic()
+        cc.SimpleAudioEngine:getInstance():stopMusic()
 
         s_SCENE:callFuncWithDelay(0.3,function()
         -- win sound
@@ -48,7 +48,7 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
             layer:lose2(entrance)
         end
         
-        cc.SimpleAudioEngine:getInstance():pauseMusic()
+        cc.SimpleAudioEngine:getInstance():stopMusic()
 
         s_SCENE:callFuncWithDelay(0.3,function()
             -- win sound

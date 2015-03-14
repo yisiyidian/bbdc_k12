@@ -9,7 +9,7 @@ function NewStudyBookOverLayer.create()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 
     --pause music
-    cc.SimpleAudioEngine:getInstance():pauseMusic()
+    cc.SimpleAudioEngine:getInstance():stopMusic()
 
     -- ui 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH

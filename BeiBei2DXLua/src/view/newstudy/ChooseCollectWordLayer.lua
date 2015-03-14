@@ -303,7 +303,7 @@ end
 function ChooseCollectWordLayer.create(wordName, wrongWordNum, preWordName, preWordNameState)
     local layer = ChooseCollectWordLayer.new(wordName, wrongWordNum, preWordName, preWordNameState)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    cc.SimpleAudioEngine:getInstance():pauseMusic()
+    cc.SimpleAudioEngine:getInstance():stopMusic()
     return layer
 end
 

@@ -16,7 +16,7 @@ end)
 function BlacksmithLayer.create(wordlist)
     local layer = BlacksmithLayer.new(wordlist)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    cc.SimpleAudioEngine:getInstance():pauseMusic()
+    cc.SimpleAudioEngine:getInstance():stopMusic()
     return layer
 end
 
