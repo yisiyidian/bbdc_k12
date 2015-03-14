@@ -55,3 +55,37 @@ NSString* AVUserToJsonStr(AVUser* user) {
     
     return NSObjectToJSONString(json);
 }
+
+#pragma mark - FileDownloader
+
+@implementation FileDownloader
+
+-(void)download:(NSString*)url saveTo:(NSString*)path {
+    fileData = [[NSMutableData data] retain];
+    savePath = [path retain];
+    
+    NSURL *fileURL = [NSURL URLWithString:url];
+    NSURLRequest *req = [NSURLRequest requestWithURL:fileURL];
+    [NSURLConnection connectionWithRequest:req delegate:self];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    [fileData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [fileData appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    if ([fileData writeToFile:savePath options:NSAtomicWrite error:nil] == NO) {
+        CCLOG("connectionDidFinishLoading: false %s", savePath.UTF8String);
+    } else {
+        CCLOG("connectionDidFinishLoading: true %s", savePath.UTF8String);
+    }
+    [fileData release];
+    [savePath release];
+    [self release];
+}
+
+@end

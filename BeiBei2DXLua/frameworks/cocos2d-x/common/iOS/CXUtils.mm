@@ -9,6 +9,7 @@
 #include "CXUtils.h"
 #import "CXTencentSDKCall.h"
 #import "WXApi.h"
+#include "CXUtils_iOS.h"
 
 void CXUtils::shareImageToQQFriend(const std::string& path, const std::string& title, const std::string& desc) {
     [[CXTencentSDKCall getInstance] shareImageToQQFriend:[NSString stringWithUTF8String:path.c_str()]
@@ -46,6 +47,11 @@ void CXUtils::addImageToGallery(const std::string& filePath) {
         UIImage* image = [UIImage imageWithData:[NSData dataWithContentsOfFile:path]];
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
     });
+}
+
+void CXUtils::download(const char* url, const char* savePath, const char* filename) {
+    FileDownloader* f = [[FileDownloader alloc] init];
+    [f download:[NSString stringWithUTF8String:url] saveTo:[NSString stringWithFormat:@"%s%s", savePath, filename]];
 }
 
 //std::string CXUtils::getExternalStorageDirectory() {

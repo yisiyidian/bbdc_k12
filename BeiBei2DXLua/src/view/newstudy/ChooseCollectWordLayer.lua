@@ -347,6 +347,8 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
 
     self.dontknow = createDontknow(wordName,wrongWordNum)
     backColor:addChild(self.dontknow)
+
+    s_HttpRequestClient.downloadSoundsFromURL(s_CorePlayManager.currentIndex)
 end
 
 return ChooseCollectWordLayer

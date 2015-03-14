@@ -123,4 +123,31 @@ function HttpRequestClient.downloadSoundsOfLevel(levelKey, idOffset, prefix)
     end
 end
 
+function HttpRequestClient.downloadSoundsFromURL(currentIndex)
+    if s_BookWord == nil 
+        or s_CURRENT_USER == nil 
+        or s_CURRENT_USER.bookKey == nil 
+        or string.len(s_CURRENT_USER.bookKey) <= 0 
+        or s_BookWord[s_CURRENT_USER.bookKey] == nil 
+        or currentIndex > #s_BookWord[s_CURRENT_USER.bookKey] then
+        return
+    end
+
+    local length = #s_BookWord[s_CURRENT_USER.bookKey]
+    local i = currentIndex + 5
+    if i > length then return end
+
+    local wordName = s_BookWord[s_CURRENT_USER.bookKey][i]
+    local urls = getWordSoundFileDownloadURLs(wordName)
+    if not cc.FileUtils:getInstance():isFileExist(urls[3]) then
+        print('downloadSoundsFromURL ', urls[1])
+        cx.CXUtils:getInstance():download(urls[1], cc.FileUtils:getInstance():getWritablePath(), urls[3])
+    end
+    if not cc.FileUtils:getInstance():isFileExist(urls[4]) then
+        print('downloadSoundsFromURL ', urls[2])
+        cx.CXUtils:getInstance():download(urls[2], cc.FileUtils:getInstance():getWritablePath(), urls[4])
+    end
+    
+end
+
 return HttpRequestClient
