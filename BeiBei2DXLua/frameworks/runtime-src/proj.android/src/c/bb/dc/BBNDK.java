@@ -1,5 +1,13 @@
 package c.bb.dc;
 
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -9,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+import org.apache.http.util.ByteArrayBuffer;
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,6 +34,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Environment;
+import android.os.StrictMode;
 import android.provider.*;
 import android.provider.MediaStore.Images;
 import android.widget.Toast;
@@ -175,6 +185,18 @@ public class BBNDK {
 		String[] ids = objectIds.split("\\|");
 		BBConfigsDownloader o = new BBConfigsDownloader(ids, 0, ids.length, path);
 		o.start();
+	}
+	
+	// ***************************************************************************************************************************
+	// download
+	// ***************************************************************************************************************************
+	
+	public static void download(final String url, final String savePath, final String filename) {
+		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy); 
+        
+        String[] urls = {url, savePath, filename}; 
+        new DownloadFileFromURL().execute(urls);
 	}
 	
 	// ***************************************************************************************************************************

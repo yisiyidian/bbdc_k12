@@ -19,4 +19,16 @@ NSString* NSErrorToJSONString(NSError* error);
 
 NSString* AVUserToJsonStr(AVUser* user);
 
+#pragma mark - FileDownloader
+
+@interface FileDownloader : NSObject <NSURLConnectionDelegate>
+{
+    NSMutableData* fileData;
+    NSString* savePath;
+}
+
+-(void)download:(NSString*)url saveTo:(NSString*)path;
+
+@end
+
 #endif /* defined(__BeiBei2DXLua__CXUtils_iOS__) */

@@ -62,10 +62,14 @@ function getWordSoundFilePath(word)
 end
 
 function getWordSoundFileDownloadURLs(word)
+    local us = WORD_SOUND_US .. '_' .. word .. '.mp3'
+    local en = WORD_SOUND_EN .. '_' .. word .. '.mp3'
+
     local url = 'http://123.56.84.196/allsounds/'
-    local us_url = url .. WORD_SOUND_US .. '_' .. word .. '.mp3'
-    local en_url = url .. WORD_SOUND_EN .. '_' .. word .. '.mp3'
-    return {[0]=us_url, [1]=en_url}
+    local us_url = url .. us
+    local en_url = url .. en
+
+    return {[1]=us_url, [2]=en_url, [3]=us, [4]=en}
 end
 
 PLAY_WORD_SOUND_YES     = 'PLAY_WORD_SOUND_YES'

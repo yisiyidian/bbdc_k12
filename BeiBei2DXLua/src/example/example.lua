@@ -11,11 +11,16 @@ local ProtocolBase = require('server.protocol.ProtocolBase')
 require('server.protocol.protocols')
 
 function test()
-    local request = cx.CXAVCloud:new()
-    request:searchUser('tester23', nil, function (response, error)
-        print('request:searchUser response:' .. tostring(response))
-        print('request:searchUser error:' .. tostring(error))
-    end)
+    local urls = getWordSoundFileDownloadURLs('zoo')
+
+    cx.CXUtils:getInstance():download(urls[1], cc.FileUtils:getInstance():getWritablePath(), urls[3])
+    -- cx.CXUtils:getInstance():download(urls[2], cc.FileUtils:getInstance():getWritablePath() .. urls[4])
+
+    -- local request = cx.CXAVCloud:new()
+    -- request:searchUser('tester23', nil, function (response, error)
+    --     print('request:searchUser response:' .. tostring(response))
+    --     print('request:searchUser error:' .. tostring(error))
+    -- end)
 
         -- local srcDateTime = 'Sun Mar 01 2015 07:56:45 GMT+0000 (CST)'
         -- -- 123456789012345678901234567890
