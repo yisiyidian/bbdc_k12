@@ -609,7 +609,7 @@ function PersonalInfo:login()
     --print('loginData_array = '..#loginData)
     for i = 1,#loginData do
         loginData_array[i] = loginData[i]:getDays()
-        --print_lua_table(loginData_array[i])
+        print_lua_table(loginData_array[i])
     end
     local calendar = {}
     local weekDay = {'SUN','MON','TUE','WED','THU','FRI','SAT'}
@@ -634,6 +634,9 @@ function PersonalInfo:login()
 
     local nextDate
     local formerDate
+    local loadingList = {}
+    local lengthList = {}
+    local checkInList = {}
 
     local drawCalendar = function(selectDate,index)
         calendar[index] = nil
@@ -653,9 +656,19 @@ function PersonalInfo:login()
 
         local offset = tonumber(os.date('%w',selectDate),10)
         local delayTime = 0
-        local loadingList = {}
-        local lengthList = {}
-        local checkInList = {}
+        if #loadingList > 0 then
+            for j = 1,#loadingList do
+                loadingList[j]:removeFromParent()
+            end
+        end
+        if #checkInList > 0 then
+            for j = 1,#checkInList do
+                checkInList[j]:removeFromParent()
+            end
+        end
+        loadingList = {}
+        lengthList = {}
+        checkInList = {}
         while true do
             local date = tonumber(os.date('%d',selectDate),10)
             local week = tonumber(os.date('%w',selectDate),10)
@@ -681,7 +694,7 @@ function PersonalInfo:login()
                         table.insert(checkInList,label)
                     end
                     if dayIndex < 7 then
-                        if loginData_array[weekIndex][dayIndex + 1] == 0 or dayIndex == 6 then
+                        if loginData_array[weekIndex][dayIndex + 1] == 0 or dayIndex == 6 or tonumber(os.date('%d',selectDate + 24 * 3600),10) == 1  then
                             local length = 1
                             for i = 1,dayIndex do
                                 if i < dayIndex then
@@ -693,6 +706,9 @@ function PersonalInfo:login()
                                         break
                                     end
                                 else
+                                    break
+                                end
+                                if os.date('%m',selectDate) ~= os.date('%m',selectDate - length * 24 * 3600) then
                                     break
                                 end
                                 length = length + 1

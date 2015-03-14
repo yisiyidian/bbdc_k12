@@ -336,6 +336,9 @@ function SummaryBossAlter:win1(entrance)
             end
         end,{})))
     else
+        if entrance == ENTRANCE_NORMAL then
+            s_CorePlayManager.leaveSummaryModel(true)
+        end
         self:win2(entrance,hasCheckedIn)
     end
     
@@ -343,28 +346,31 @@ function SummaryBossAlter:win1(entrance)
 end
 
 function SummaryBossAlter:win2(entrance,hasCheckedIn)
-    local backColor = cc.LayerColor:create(cc.c4b(127,239,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
+    local backColor = cc.LayerColor:create(cc.c4b(180,241,254,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
     backColor:ignoreAnchorPointForPosition(false)
     backColor:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
     self:addChild(backColor)
 
-    local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
-    been_number_back:setPosition(s_RIGHT_X - s_LEFT_X -100, s_DESIGN_HEIGHT-50)
-    backColor:addChild(been_number_back)
+    -- local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
+    -- been_number_back:setPosition(s_RIGHT_X - s_LEFT_X -100, s_DESIGN_HEIGHT-50)
+    -- backColor:addChild(been_number_back)
 
-    local been = cc.Sprite:create("image/shop/been.png")
-    been:setPosition(0, been_number_back:getContentSize().height/2)
-    been_number_back:addChild(been)
+    -- local been = cc.Sprite:create("image/shop/been.png")
+    -- been:setPosition(0, been_number_back:getContentSize().height/2)
+    -- been_number_back:addChild(been)
 
-    local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
-    been_number:setColor(cc.c4b(0,0,0,255))
-    been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
-    been_number_back:addChild(been_number)
+    -- local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
+    -- been_number:setColor(cc.c4b(0,0,0,255))
+    -- been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
+    -- been_number_back:addChild(been_number)
 
     local win_back = cc.Sprite:create('image/summarybossscene/win_back.png')
     win_back:setAnchorPoint(0.5,0)
-    win_back:setPosition(s_DESIGN_WIDTH / 2,0)
+    win_back:setPosition(s_DESIGN_WIDTH / 2,-140)
     self:addChild(win_back)
+    if not self.entrance then
+        win_back:setPosition(s_DESIGN_WIDTH / 2,0)
+    end
 
     local function onButton(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -384,34 +390,158 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     end
 
     local button = ccui.Button:create("image/shop/long_button.png","image/shop/long_button_clicked.png","")
-    button:setPosition(win_back:getContentSize().width/2,150)
+    button:setPosition(s_DESIGN_WIDTH/2,150)
     button:addTouchEventListener(onButton)
-    win_back:addChild(button)
+    self:addChild(button)
 
-    local item_name = cc.Label:createWithTTF('OK','font/CenturyGothic.ttf',30)
-    --item_name:setColor(cc.c4b(255,255,255,255))
+    local item_name = cc.Label:createWithSystemFont('完成','',30)
+    item_name:enableOutline(cc.c4b(255,255,255,255),1)
     item_name:setPosition(button:getContentSize().width/2, button:getContentSize().height/2)
     button:addChild(item_name)
 
-    if self.entrance == ENTRANCE_NORMAL then
+    -- if self.entrance == ENTRANCE_NORMAL then
         
-        local been_button = cc.Sprite:create("image/shop/been.png")
-        been_button:setPosition(button:getContentSize().width * 0.75, button:getContentSize().height/2)
-        button:addChild(been_button)
+    --     local been_button = cc.Sprite:create("image/shop/been.png")
+    --     been_button:setPosition(button:getContentSize().width * 0.75, button:getContentSize().height/2)
+    --     button:addChild(been_button)
     
-        local rewardNumber = cc.Label:createWithSystemFont("+"..3,"",36)
-        rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
-        button:addChild(rewardNumber)
+    --     local rewardNumber = cc.Label:createWithSystemFont("+"..3,"",36)
+    --     rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
+    --     button:addChild(rewardNumber)
+    -- end
+    if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) or not self.entrance then
+        --print('self:addWinLabel(win_back)')
+        self:addWinLabel(win_back)
+    else
+        s_SCENE:callFuncWithDelay(2,function (  )
+            self:addWinLabel(win_back)
+        end)
     end
 
-    local label = cc.Label:createWithSystemFont('打败总结Boss！','',44)
-    label:setColor(cc.c3b(31,68,102))
-    label:setPosition(0.5 * backColor:getContentSize().width,0.85 * s_DESIGN_HEIGHT)
-    backColor:addChild(label)
 
-    local pic = cc.Sprite:create('image/summarybossscene/summaryboss_beated.png')
-    pic:setPosition(0.5 * win_back:getContentSize().width,0.5 * win_back:getContentSize().height)
-    win_back:addChild(pic)
+end
+
+function SummaryBossAlter:addWinLabel(win_back)
+
+    local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
+    been_number_back:setPosition(s_RIGHT_X -100, s_DESIGN_HEIGHT-50)
+    self:addChild(been_number_back)
+
+    local been = cc.Sprite:create("image/shop/been.png")
+    been:setPosition(0, been_number_back:getContentSize().height/2)
+    been_number_back:addChild(been)
+
+    local title = cc.Sprite:create('image/summarybossscene/title_shengli_study.png')
+    title:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.92)
+    self:addChild(title)
+
+    local right_label = cc.Label:createWithSystemFont('答对         单词','',32)
+    right_label:setColor(cc.c3b(70,136,158))
+    right_label:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.92 - 100)
+    self:addChild(right_label)
+    local word_count = 0
+    local word_count_label = cc.Label:createWithSystemFont(string.format('%d',word_count),'',48)
+    word_count_label:setPosition(right_label:getPositionX(),right_label:getPositionY() + 2)
+    word_count_label:setColor(cc.c3b(251,227,65))
+    word_count_label:enableOutline(cc.c4b(255,172,40,255),2)
+    self:addChild(word_count_label)
+
+    local time_label = cc.Label:createWithSystemFont('耗时       分钟         秒','',32)
+    time_label:setColor(cc.c3b(70,136,158))
+    time_label:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.92 - 170)
+    self:addChild(time_label)   
+
+    local min_count = 0
+    local sec_count = 0
+    local min_count_label = cc.Label:createWithSystemFont(string.format('%d',min_count),'',48)
+    min_count_label:setPosition(time_label:getPositionX() - 52,time_label:getPositionY() + 2)
+    min_count_label:setColor(cc.c3b(255,0,0))
+    --min_count:enableOutline(cc.c4b(255,0,0,255),1)
+    self:addChild(min_count_label)
+
+    local sec_count_label = cc.Label:createWithSystemFont(string.format('%d',sec_count),'',48)
+    sec_count_label:setPosition(time_label:getPositionX() + 72,time_label:getPositionY() + 2)
+    sec_count_label:setColor(cc.c3b(255,0,0))
+    --sec_count:enableOutline(cc.c4b(255,0,0,255),1)
+    self:addChild(sec_count_label)
+    local bean_back = {}
+    for i = 1,3 do
+        bean_back[i] = cc.Sprite:create('image/summarybossscene/been_background_complete_studys.png')
+        self:addChild(bean_back[i],1)
+        bean_back[i]:setVisible(false)
+    end
+    bean_back[1]:setPosition(s_DESIGN_WIDTH / 2 - 100,s_DESIGN_HEIGHT * 0.67)
+    bean_back[2]:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.67 + 30)
+    bean_back[3]:setPosition(s_DESIGN_WIDTH / 2 + 100,s_DESIGN_HEIGHT * 0.67)
+
+    local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans() - 3,'',24)
+    been_number:setColor(cc.c4b(0,0,0,255))
+    been_number:setPosition(been_number_back:getContentSize().width/2 + 20, been_number_back:getContentSize().height/2 )
+    been_number_back:addChild(been_number)
+    been_number:setVisible(false)
+
+    if self.entrance then
+        been_number:setVisible(true)
+        for i = 1,3 do
+            bean_back[i]:setVisible(true)
+        end
+    end
+
+    local function update(delta)
+        if word_count < self.bossLayer.maxCount then
+            word_count = word_count + 1
+            word_count_label:setString(string.format('%d',word_count))
+        end
+        if min_count < math.floor(self.bossLayer.useTime/60) then
+            min_count = min_count + 1
+            min_count_label:setString(string.format('%d',min_count))
+        end
+        if sec_count < math.floor(self.bossLayer.useTime%60) then
+            sec_count = sec_count + 1
+            sec_count_label:setString(string.format('%d',sec_count))
+        end
+        if word_count == self.bossLayer.maxCount and min_count == math.floor(self.bossLayer.useTime/60) and sec_count == math.floor(self.bossLayer.useTime%60) then
+            if self.entrance then
+                for i = 1,3 do
+                    local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')
+                    bean:setPosition(bean_back[i]:getContentSize().width / 2,bean_back[i]:getContentSize().height / 2 + 10)
+                    bean_back[i]:addChild(bean)
+                    bean:setOpacity(0)
+                    bean:setScale(3)
+                    local action1 = cc.DelayTime:create(0.3 * i)
+                    local action2 = cc.EaseSineIn:create(cc.ScaleTo:create(0.3,1))
+                    local action3 = cc.FadeIn:create(0.3)
+                    bean:runAction(cc.Sequence:create(action1,cc.Spawn:create(action2,action3)))
+                end
+                local shine = cc.Sprite:create('image/summarybossscene/shine_complete_studys.png')
+                shine:setOpacity(0)
+                shine:setPosition(bean_back[2]:getPositionX(),bean_back[2]:getPositionY())
+                self:addChild(shine)
+                local fadeInOut = cc.Sequence:create(cc.FadeTo:create(1,255 * 0.7),cc.FadeOut:create(1))
+                shine:runAction(cc.Spawn:create(fadeInOut,cc.RotateBy:create(2,360)))
+                for i = 1,3 do
+                    local action1 = cc.DelayTime:create(2 + 0.3 * i)
+                    local action2 = cc.EaseSineIn:create(cc.MoveTo:create(0.3,cc.p(been_number_back:getPosition())))
+                    local action3 = cc.ScaleTo:create(0.3,0)
+                    local action4 = cc.CallFunc:create(function (  )
+                        been_number:setString(s_CURRENT_USER:getBeans() - 3 + i)
+                    end,{})
+                    bean_back[i]:runAction(cc.Sequence:create(action1,cc.Sequence:create(action2,action3),action4))
+                end
+            end
+            self:unscheduleUpdate()
+
+        end
+
+    end
+    self:scheduleUpdateWithPriorityLua(update, 0)
+
+    local boss = sp.SkeletonAnimation:create("spine/summaryboss/beidadekls2.json","spine/summaryboss/beidadekls2.atlas",1)
+    boss:setAnimation(0,'animation',false)
+    boss:setPosition(0.5 * s_DESIGN_WIDTH- 200,230)
+    self:addChild(boss)
+
+
 end
 
 return SummaryBossAlter

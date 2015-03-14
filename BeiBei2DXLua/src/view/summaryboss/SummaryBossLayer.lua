@@ -43,6 +43,8 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     layer.firstIndex = 1
     layer.combo = 0
     layer.leftTime = 0
+    layer.useTime = 0
+    layer.gameStart = false
     layer.useItem = false
     layer.entrance = entrance
     layer.wordList = wordList
@@ -348,10 +350,14 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
 --                                 layer:initMap(chapter)
 --                             end,{})))
                         else
-                            layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y].firstStyle()
-                            layer.crab[layer.firstIndex]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
-                            layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
+                            s_SCENE:callFuncWithDelay(0.2 * #selectWord + 0.5,function (  )
+                                -- body
+                                layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y].firstStyle()
+                                layer.crab[layer.firstIndex]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
+                                layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
             
+                            end)
+                            
                         end
                         break
                     end
@@ -660,14 +666,18 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             loadingTime = loadingTime + delta
         end
         
-        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
+        if layer.currentBlood <= 0 or layer.isLose or s_SCENE.popupLayer.layerpaused or not layer.gameStart then
+            return
+        end
+        
+        layer.leftTime = layer.leftTime - delta
+        layer.useTime = layer.useTime + delta
+        if layer.globalLock then
             return
         end
         if not layer.isHinting then
             layer.bubble[2]:setVisible(true)
         end
-        
-        layer.leftTime = layer.leftTime - delta
         if layer.leftTime < layer.totalTime - 2 and layer.bubble[2]:isVisible() then
             layer.bubble[2]:setVisible(false)
         end
@@ -746,7 +756,7 @@ function SummaryBossLayer:updateWord(selectStack,chapter)
 end
 
 function SummaryBossLayer:initBossLayer_back(chapter)
-    self.globalLock = true
+    self.globalLock = false
     --stage info
     self.girlAfraid = false
     self.hasMap = false
@@ -1439,6 +1449,7 @@ function SummaryBossLayer:initMap(chapter)
             end
             if i == 5 and j == 1 then
                 local unlock = cc.CallFunc:create(function() 
+                    self.gameStart = true
                     self.globalLock = false
                 end,{})
                 self.coconut[i][j]:runAction(cc.Sequence:create(cc.DelayTime:create(0.1 * (3 + i - j) + delaytime),cc.ScaleTo:create(0.1, scale),unlock))
