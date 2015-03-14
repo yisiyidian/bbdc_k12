@@ -96,7 +96,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     local function checkAnswer(checkAtOnce)
             
         layer.isPaused = false
-        if layer.globalLock then
+        if layer.globalLock or not layer.gameStart then
             return
         end
         if layer.onCrab > 0 then
@@ -413,7 +413,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     
     -- handing touch events
     onTouchBegan = function(touch, event)
-        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
+        if layer.currentBlood <= 0 or layer.isLose or not layer.gameStart or s_SCENE.popupLayer.layerpaused or layer.globalLock then
             return true
         end
 
@@ -484,7 +484,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     end
 
     onTouchMoved = function(touch, event)
-        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused then
+        if layer.currentBlood <= 0 or layer.isLose or layer.globalLock or s_SCENE.popupLayer.layerpaused or not layer.gameStart then
             return true
         end
     
