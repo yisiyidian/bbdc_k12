@@ -5,6 +5,8 @@ local BulletinBoard = class("BulletinBoard", function()
     return cc.Layer:create()
 end)
 
+local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
+
 ccbBulletinBoard = ccbBulletinBoard or {}
 
 function BulletinBoard.create()
@@ -62,6 +64,25 @@ function BulletinBoard:ctor()
         end
     end
     click:registerScriptTapHandler(onClick)
+    
+    local onTouchBegan = function(touch, event)
+        return true
+    end
+
+    local onTouchEnded = function(touch, event)
+        local location = node:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(ccbBulletinBoard['board']:getBoundingBox(),location) then
+            self:onClose()
+        end
+    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = node:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, node)
 end
 
 function BulletinBoard:updateValue(index, title, content)

@@ -27,7 +27,7 @@ function PopupSoundOfflineDownload.create()
     layer:addDescription("请在有网络的情况下再进行下载。")
 
     --disable the touch event under this layer
-    layer:disableTouchevent()
+    --layer:disableTouchevent()
     
     return layer
 end

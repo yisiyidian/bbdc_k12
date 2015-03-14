@@ -6,7 +6,7 @@ end)
 
 function ReviewBossAlter.create()
 
-    cc.SimpleAudioEngine:getInstance():pauseMusic()
+    cc.SimpleAudioEngine:getInstance():stopMusic()
     
     if s_SCENE.popupLayer~=nil then
         s_SCENE.popupLayer:setPauseBtnEnabled(false)

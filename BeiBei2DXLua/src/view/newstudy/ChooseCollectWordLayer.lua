@@ -102,6 +102,7 @@ local function createKnow(word)
         local location = layer:convertToNodeSpace(touch:getLocation())
         if cc.rectContainsPoint(choose_know_button:getBoundingBox(),location) then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            ChooseCollectWordLayer.forceToEnd()
             local action1 = cc.DelayTime:create(0.35) 
             local action2 = cc.DelayTime:create(1)
             choose_know_button:runAction(cc.Sequence:create(cc.CallFunc:create(function ()
@@ -177,6 +178,7 @@ local function createDontknow(word,wrongNum)
             playSound(s_sound_buttonEffect)        
         elseif eventType == ccui.TouchEventType.ended then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            ChooseCollectWordLayer.forceToEnd()
             local action1 = cc.DelayTime:create(0.25) 
             local action2 = cc.DelayTime:create(1)
             local action3 = cc.DelayTime:create(1) 
@@ -186,9 +188,6 @@ local function createDontknow(word,wrongNum)
             action1,
             cc.CallFunc:create(function ()
                 bagAnimation()
-            end),
-            action2,
-            cc.CallFunc:create(function ()
                 progressAnimation()
             end),
             action3,
@@ -244,31 +243,40 @@ end
 
 local function createLoading(interpretation)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-  
-    local circleSprite = cc.Sprite:create("image/newstudy/loading_3s_study.png")
+    local tofinish = cc.ProgressTo:create(2,100)
+    
+    local button_back = cc.Sprite:create("image/newstudy/progressbegin.png")
+    
+    local button_progress = cc.ProgressTimer:create(cc.Sprite:create('image/newstudy/progressend.png'))
+    button_progress:setPosition(0.5 * button_back:getContentSize().width,0.5 * button_back:getContentSize().height)
+    button_progress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+    button_progress:setPercentage(0)
+    button_progress:runAction(tofinish)
+    button_back:addChild(button_progress)
     
     local layer = cc.LayerColor:create(cc.c4b(0,0,0,0))
-    layer:setContentSize(circleSprite:getContentSize().width,circleSprite:getContentSize().height)
+    layer:setContentSize(button_back:getContentSize().width,button_back:getContentSize().height)
     layer:setPosition(bigWidth/2, 660)
     layer:ignoreAnchorPointForPosition(false)
     layer:setAnchorPoint(0.5,0.5)
+    layer:addChild(button_back)
+    
+    button_back:setPosition(layer:getContentSize().width / 2, layer:getContentSize().height / 2)
     
     local meaningLabel = cc.Label:createWithSystemFont(interpretation,"",40)
-    meaningLabel:setPosition(layer:getContentSize().width / 2, layer:getContentSize().height / 2)
+    meaningLabel:setPosition(button_back:getContentSize().width / 2, button_back:getContentSize().height / 2)
     meaningLabel:ignoreAnchorPointForPosition(false)
     meaningLabel:setAnchorPoint(0.5,0.5)
     meaningLabel:setVisible(false)
     meaningLabel:setColor(cc.c4b(0,0,0,255))
+    button_back:addChild(meaningLabel)
     
-    circleSprite:setPosition(layer:getContentSize().width / 2, layer:getContentSize().height / 2)
-    circleSprite:ignoreAnchorPointForPosition(false)
-    circleSprite:setAnchorPoint(0.5,0.5)
+    local action1 = cc.DelayTime:create(2)
+    local action2 = cc.CallFunc:create(function()ChooseCollectWordLayer.forceToEnd()end)
+    layer:runAction(cc.Sequence:create(action1,action2))
     
-    layer:addChild(meaningLabel)
-    layer:addChild(circleSprite)
-    
-    local forceToEnd = function ()
-    	circleSprite:runAction(cc.FadeOut:create(0.1))
+    ChooseCollectWordLayer.forceToEnd = function ()
+        button_back:setTexture('image/newstudy/progressend.png')
         meaningLabel:setVisible(true)
     end
     
@@ -278,15 +286,10 @@ local function createLoading(interpretation)
     
     local function onTouchEnded(touch, event)
         local location = layer:convertToNodeSpace(touch:getLocation())
-        if cc.rectContainsPoint(circleSprite:getBoundingBox(),location) then
-        forceToEnd()
+        if cc.rectContainsPoint(button_back:getBoundingBox(),location) then
+            ChooseCollectWordLayer.forceToEnd()
         end
     end
-
-
-    local action1 = cc.RotateBy:create(3,180 * 3)
-    local action2 = cc.CallFunc:create(function() forceToEnd() end)
-    circleSprite:runAction(cc.Sequence:create(action1,action2))
 
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
@@ -300,7 +303,7 @@ end
 function ChooseCollectWordLayer.create(wordName, wrongWordNum, preWordName, preWordNameState)
     local layer = ChooseCollectWordLayer.new(wordName, wrongWordNum, preWordName, preWordNameState)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    cc.SimpleAudioEngine:getInstance():pauseMusic()
+    cc.SimpleAudioEngine:getInstance():stopMusic()
     return layer
 end
 
@@ -332,6 +335,10 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     soundMark:setPosition(bigWidth/2, 920)  
     backColor:addChild(soundMark)
     
+    self.forceToEnd = function ()
+    	
+    end
+    
     self.circle = createLoading(self.wordInfo[5])
     backColor:addChild(self.circle) 
     
@@ -340,6 +347,8 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
 
     self.dontknow = createDontknow(wordName,wrongWordNum)
     backColor:addChild(self.dontknow)
+
+    s_HttpRequestClient.downloadSoundsFromURL(s_CorePlayManager.currentIndex)
 end
 
 return ChooseCollectWordLayer

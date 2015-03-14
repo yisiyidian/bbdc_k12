@@ -38,11 +38,24 @@ function ImproveInfo.create(layerType)
         --s_logd("touch began on block layer")
         return true
     end
+    
+    local onTouchEnded = function(touch, event)
+        local location = main:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(back_login:getBoundingBox(),location) then
+            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                main.close()
+            end)
+            back_login:runAction(cc.Sequence:create(action2,action3))
+        end
+    end
 
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
 
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = main:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 
@@ -98,11 +111,11 @@ showLogin = function()
         elseif eventType == ccui.TouchEventType.ended then
             
             if validateUsername(username.textField:getString()) == false then
-                s_TIPS_LAYER:showSmall(s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
+                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
                 return
             end
             if validatePassword(password.textField:getString()) == false then
-                s_TIPS_LAYER:showSmall(s_DataManager.getTextWithIndex(TEXT_ID_PWD_ERROR))
+                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT_ID_PWD_ERROR))
                 return
             end
             
@@ -114,7 +127,7 @@ showLogin = function()
                     function(username, password, errordescription, errorcode )  
                         AnalyticsAccountBind()                      
                         if errordescription then                  
-                            s_TIPS_LAYER:showSmall(errordescription)
+                            s_TIPS_LAYER:showSmallWithOneButton(errordescription)
                             hideProgressHUD(true)
                         else        
                             main.close()     
@@ -136,7 +149,7 @@ showLogin = function()
                 local hasAccount = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
                 s_UserBaseServer.logIn(tmpUser.username, tmpUser.password, function (userdata, errordescription, errorcode)
                     if errordescription ~= nil then
-                        s_TIPS_LAYER:showSmall(errordescription)
+                        s_TIPS_LAYER:showSmallWithOneButton(errordescription)
                         hideProgressHUD(true)
                     else
                         updateUserNameAndPassword(function ()
@@ -166,7 +179,12 @@ showLogin = function()
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            main.close()
+            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                main.close()
+            end)
+            back_login:runAction(cc.Sequence:create(action2,action3))
         end
     end
     local button_close = ccui.Button:create("image/button/button_close.png")

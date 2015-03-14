@@ -54,6 +54,14 @@
         
 --------------------------------
 -- 
+-- @function [parent=#CXUtils] download 
+-- @param self
+-- @param #char url
+-- @param #char savePath
+-- @param #char filename
+        
+--------------------------------
+-- 
 -- @function [parent=#CXUtils] showMail 
 -- @param self
 -- @param #char mailTitle

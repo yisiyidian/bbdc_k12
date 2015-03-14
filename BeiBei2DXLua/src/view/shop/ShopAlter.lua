@@ -61,7 +61,7 @@ function ShopAlter.create(itemId, location)
         else
             local shopErrorAlter = ShopErrorAlter.create()
             shopErrorAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
-            main:addChild(shopErrorAlter)
+            s_SCENE:popup(shopErrorAlter)
         end
     end
     
@@ -116,7 +116,7 @@ function ShopAlter.create(itemId, location)
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT * 1.5))
-            local action2 = cc.EaseBackOut:create(action1)
+            local action2 = cc.EaseBackIn:create(action1)
             local remove = cc.CallFunc:create(function() 
             main:removeFromParent()
             end)
@@ -135,10 +135,23 @@ function ShopAlter.create(itemId, location)
     local onTouchBegan = function(touch, event)        
         return true
     end
+    
+    local onTouchEnded = function(touch, event)
+        local location = main:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(back:getBoundingBox(),location) then
+            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                main:removeFromParent()
+            end)
+            back:runAction(cc.Sequence:create(action2,action3))
+        end
+    end
 
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = main:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 

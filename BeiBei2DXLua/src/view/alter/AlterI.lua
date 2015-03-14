@@ -61,7 +61,12 @@ function AlterI.create(info)
     
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            main.close()
+            local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                main.close()
+            end)
+            back:runAction(cc.Sequence:create(action2,action3))
         end
     end
     local button_close = ccui.Button:create("image/button/button_close.png")
@@ -73,10 +78,23 @@ function AlterI.create(info)
         --s_logd("touch began on block layer")
         return true
     end
+    
+    local onTouchEnded = function(touch, event)
+        local location = main:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(back:getBoundingBox(),location) then
+            local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                main.close()
+            end)
+            back:runAction(cc.Sequence:create(action2,action3))
+        end
+    end
 
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = main:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 

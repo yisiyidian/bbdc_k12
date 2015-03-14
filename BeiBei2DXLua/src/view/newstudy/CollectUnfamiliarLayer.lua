@@ -208,7 +208,7 @@ end
 function CollectUnfamiliarLayer.create(wordName, wrongWordNum, preWordName, preWordNameState)
     local layer = CollectUnfamiliarLayer.new(wordName, wrongWordNum, preWordName, preWordNameState)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    cc.SimpleAudioEngine:getInstance():pauseMusic()
+    cc.SimpleAudioEngine:getInstance():stopMusic()
     return layer
 end
 

@@ -57,6 +57,22 @@ void CXUtils::addImageToGallery(const std::string& filePath) {
     }
 }
 
+void CXUtils::download(const char* url, const char* savePath, const char* filename) {
+    cocos2d::JniMethodInfo t;
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "download", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V")) {
+        jstring java_url = t.env->NewStringUTF(url);
+        jstring java_savePath = t.env->NewStringUTF(savePath);
+        jstring java_filename = t.env->NewStringUTF(filename);
+        
+        t.env->CallStaticVoidMethod(t.classID, t.methodID, java_url, java_savePath, java_filename);
+        
+        t.env->DeleteLocalRef(java_url);
+        t.env->DeleteLocalRef(java_savePath);
+        t.env->DeleteLocalRef(java_filename);
+        t.env->DeleteLocalRef(t.classID);
+    }
+}
+
 //std::string CXUtils::getExternalStorageDirectory() {
 //    cocos2d::JniMethodInfo t;
 //    bool b = cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "getSDCardPath", "()Ljava/lang/String;");

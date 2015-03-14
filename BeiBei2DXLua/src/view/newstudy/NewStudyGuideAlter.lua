@@ -143,26 +143,27 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
     end
 
  -- touch lock
-    local onTouchBegan = function(touch, event)
---        if box ~= nil then
---            local location = box:convertToNodeSpace(touch:getLocation())
---            if cc.rectContainsPoint({x=0,y=0,width=box:getBoundingBox().width,height=box:getBoundingBox().height}, location) then
---                if main.box_tag == 0 then
---                    main.box_tag = 1
---                    box_right:setVisible(true)
---                else
---                    main.box_tag = 0
---                    box_right:setVisible(false)
---                end
---            end
---        end
-        
+    local onTouchBegan = function(touch, event) 
         return true
+    end
+    
+    local onTouchEnded = function (touch, event)
+        local location = main:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(back:getBoundingBox(),location) then
+            local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+            main.know()
+            s_SCENE:removeAllPopups()
+            end)
+            back:runAction(cc.Sequence:create(action2,action3))
+        end
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = main:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 

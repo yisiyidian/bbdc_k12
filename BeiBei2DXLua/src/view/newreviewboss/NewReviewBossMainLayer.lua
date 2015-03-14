@@ -21,7 +21,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
     AnalyticsFirst(ANALYTICS_FIRST_REVIEW_BOSS, 'SHOW')
 
     --pause music
-    cc.SimpleAudioEngine:getInstance():pauseMusic()    
+    cc.SimpleAudioEngine:getInstance():stopMusic()    
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local layer = NewReviewBossMainLayer.new()
