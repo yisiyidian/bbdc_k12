@@ -28,7 +28,7 @@ function PopupSoundDownloadSuccess.create()
     layer:addDescription("赞，你可以听见单词声音了")
 
     --disable the touch event under this layer
-    layer:disableTouchevent()
+    --layer:disableTouchevent()
         
     return layer
 end
@@ -55,6 +55,30 @@ function PopupSoundDownloadSuccess:createBackground(popupPath)
     end
     closeBtn:addTouchEventListener(close_clicked)
     self:addChild(popup)
+    
+    local onTouchBegan = function(touch, event)
+        return true
+    end    
+
+    local onTouchMoved = function(touch, event)
+        local location = self:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(popup:getBoundingBox(),location) then
+           self:runMoveOutAction()
+        end
+    end
+
+    local onTouchEnded = function(touch, event)
+    end
+
+    self.listener = cc.EventListenerTouchOneByOne:create()
+
+    self.listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    self.listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
+    self.listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = self:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(self.listener, self)
+
+    self.listener:setSwallowTouches(true)
 end
 
 function PopupSoundDownloadSuccess:addConfirmButton(confirmPath,confirmPressPath,text)

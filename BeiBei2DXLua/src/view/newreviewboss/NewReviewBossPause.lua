@@ -16,6 +16,7 @@ function NewReviewBossPause.create()
         elseif eventType == ccui.TouchEventType.ended then
             local pauseLayer = Pause.create()
             pauseLayer:setPosition(s_LEFT_X, 0)
+            s_SCENE.popupLayer:addBackground()  
             s_SCENE.popupLayer:addChild(pauseLayer)
             s_SCENE.popupLayer.listener:setSwallowTouches(true)
         end

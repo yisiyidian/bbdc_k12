@@ -260,14 +260,22 @@ function WordLibraryPopup:ctor(index)
                 self.summaryButton:setVisible(false)
             end
         end
+        local location1 = self:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(backPopup:getBoundingBox(),location1) then
+            local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5)))
+            local remove = cc.CallFunc:create(function() 
+                s_SCENE:removeAllPopups()
+            end)
+            backPopup:runAction(cc.Sequence:create(move,remove))
+        end
     end
     
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:setSwallowTouches(true)
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
-    local eventDispatcher = top_sprite:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, top_sprite)   
+    local eventDispatcher = self:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)   
 
 end
 

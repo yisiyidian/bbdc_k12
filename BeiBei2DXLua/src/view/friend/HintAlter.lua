@@ -4,12 +4,13 @@ local HintAlter = class("HintAlter", function()
     return cc.Layer:create()
 end)
 
+local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
+
 function HintAlter.create(info)
-    local main = cc.Layer:create()
-    s_SCENE.popupLayer.listener:setSwallowTouches(true)
-    main:setContentSize(s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
+    local main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
-    main:ignoreAnchorPointForPosition(false)
+    main:ignoreAnchorPointForPosition(false)   
+    s_SCENE.popupLayer.listener:setSwallowTouches(true)
     
     local back = cc.Sprite:create("image/alter/tanchu_board_small_white.png")
     back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3)
@@ -47,6 +48,30 @@ function HintAlter.create(info)
     button_left:setTitleFontSize(30)
     button_left:addTouchEventListener(button_left_clicked)
     back:addChild(button_left)
+    
+    local onTouchBegan = function(touch, event)
+        return true
+    end
+
+    local onTouchEnded = function(touch, event)
+        local location = main:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(back:getBoundingBox(),location) then
+            s_SCENE.popupLayer.listener:setSwallowTouches(false)
+            local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*3/2)))
+            local remove = cc.CallFunc:create(function() 
+                main:removeFromParent() 
+            end,{})
+            back:runAction(cc.Sequence:create(move,remove))
+        end
+    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = main:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 
     return main    
 end

@@ -6,6 +6,7 @@ s_chapter_resource_middle_type = "middle"
 s_chapter_resource_end_type = "end"
 s_chapter0_base_height = 3014
 s_chapter_layer_width = 854
+
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
 local ChapterLayerBase = class('ChapterLayerBase',function() 
@@ -279,7 +280,6 @@ function ChapterLayerBase:addPopup(levelIndex)
             else
                 s_SCENE:callFuncWithDelay(0.1, function()
                     s_CorePlayManager.initTotalPlay()
-                    s_CURRENT_USER.islandIndex = tonumber(levelIndex)
                 end)
             end
         end
@@ -386,7 +386,8 @@ function ChapterLayerBase:addPopup(levelIndex)
     local function wordEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
             local WordLibrary = require("view.islandPopup.WordLibraryPopup")
-            local wordLibrary = WordLibrary.create(levelIndex,CreateWordLibrary_FromNormal)
+            local wordLibrary = WordLibrary.create(levelIndex)
+
             s_SCENE.popupLayer:addChild(wordLibrary)
             wordLibrary:setVisible(false)
             local action0 = cc.OrbitCamera:create(0.5,1, 0, 0, 90, 0, 0) 
@@ -417,11 +418,14 @@ function ChapterLayerBase:addPopup(levelIndex)
     
     back:addChild(closeButton)
     back:addChild(wordButton)
+    
+    local layer = cc.Layer:create()
+    layer:addChild(back)
 
-    s_SCENE:popup(back)
+    s_SCENE:popup(layer)
     if state >= 4 and levelIndex - currentTaskBossIndex ~= 0 then
         local WordLibrary = require("view.islandPopup.WordLibraryPopup")
-        local wordLibrary = WordLibrary.create(levelIndex,CreateWordLibrary_FromOther)
+        local wordLibrary = WordLibrary.create(levelIndex)
         s_SCENE.popupLayer:addChild(wordLibrary)   
         back:setPosition(cc.p(s_DESIGN_WIDTH/2, 550))
         back:setVisible(false)
@@ -441,6 +445,30 @@ function ChapterLayerBase:addPopup(levelIndex)
         local action2 = cc.EaseBackOut:create(action1)
         back:runAction(action2)
     end
+    
+    local onTouchBegan = function(touch, event)
+        return true
+    end
+
+    local onTouchEnded = function(touch, event)
+        local location = layer:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(back:getBoundingBox(),location) then
+            local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 550*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                s_SCENE:removeAllPopups()
+            end)
+            back:runAction(cc.Sequence:create(action2,action3))
+        end
+    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = layer:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
 end
 
 function ChapterLayerBase:plotDecoration()
@@ -479,7 +507,7 @@ function ChapterLayerBase:plotDecoration()
             -- lockIsland:setName('lockLayer'..levelIndex)
             -- lockIsland:addTouchEventListener(touchEvent)
 
-            local lockIsland = ccui.Button:create('image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png','iimage/chapter/chapter0/lockisland2.png')
+            local lockIsland = ccui.Button:create('image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png')
             lockIsland:setScale9Enabled(true)
             lockIsland:setName('lockLayer'..levelIndex)
             lockIsland:addTouchEventListener(touchEvent)

@@ -28,7 +28,7 @@ function PopupSoundDownloadFailed.create()
     layer:addDescription("网络异常，"..bookkey.."下载失败")
 
     --disable the touch event under this layer
-    layer:disableTouchevent()
+    --layer:disableTouchevent()
     
     return layer
 end

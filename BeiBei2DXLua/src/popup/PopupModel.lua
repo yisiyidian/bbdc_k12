@@ -63,8 +63,14 @@ function PopupModel.create(site)
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            s_SCENE:removeAllPopups()
+        elseif eventType == ccui.TouchEventType.ended then 
+            local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth / 2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            popup_window:runAction(action2)
+
+            local action3 = cc.DelayTime:create(0.5)
+            local action4 = cc.CallFunc:create(function()s_SCENE:removeAllPopups()end)
+            popup_window:runAction(cc.Sequence:create(action3,action4))
         end
     end
 
@@ -96,8 +102,8 @@ function PopupModel.create(site)
             if site == Site_From_Friend_Guest then
             
                 local action1 = cc.MoveTo:create(0.3, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3))
-                local action2 = cc.EaseBackOut:create(action1)
-                popup_window:runAction(action2) 
+                local action2 = cc.EaseBackIn:create(action1)
+                popup_window:runAction(action2)
                 
                 s_SCENE:callFuncWithDelay(0.3,function()
                     local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER)
@@ -115,8 +121,8 @@ function PopupModel.create(site)
             else
 
                 local action1 = cc.MoveTo:create(0.3, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3))
-                local action2 = cc.EaseBackOut:create(action1)
-                popup_window:runAction(action2) 
+                local action2 = cc.EaseBackIn:create(action1)
+                popup_window:runAction(action2)
 
                 showProgressHUD()
                 -- button sound
@@ -142,6 +148,30 @@ function PopupModel.create(site)
     label_button:setPosition(button_solution:getContentSize().width / 2 ,button_solution:getContentSize().height / 2)
     button_solution:addChild(label_button)
 
+    local onTouchBegan = function(touch, event)
+        return true
+    end
+
+    local onTouchEnded = function(touch, event)
+        local location = layer:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(popup_window:getBoundingBox(),location) then
+            local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                s_SCENE:removeAllPopups()
+            end)
+            popup_window:runAction(cc.Sequence:create(action2,action3))
+        end
+    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = layer:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
+    
     return layer
 end
 

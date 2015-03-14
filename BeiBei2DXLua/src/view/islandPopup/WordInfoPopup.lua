@@ -143,7 +143,14 @@ function WordInfoPopup:ctor(index,wordlist)
     end
 
     local onTouchEnded = function(touch, event)
-
+        local location = self:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(backPopup:getBoundingBox(),location) then
+            local move = cc.MoveBy:create(0.3, cc.p(0, s_DESIGN_HEIGHT))
+            local remove = cc.CallFunc:create(function() 
+                self:removeFromParent()
+            end)
+            self:runAction(cc.Sequence:create(move,remove))
+        end
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()

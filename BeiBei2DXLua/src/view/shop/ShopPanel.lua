@@ -32,8 +32,8 @@ function ShopPanel.create(itemId)
         else
             local shopErrorAlter = ShopErrorAlter.create()
             shopErrorAlter:setAnchorPoint(0.5, 0)
-            shopErrorAlter:setPosition(maxWidth/2, -50)
-            main:addChild(shopErrorAlter)
+            shopErrorAlter:setPosition(maxWidth/2, 0)
+            s_SCENE:popup(shopErrorAlter)
         end
     end
 
