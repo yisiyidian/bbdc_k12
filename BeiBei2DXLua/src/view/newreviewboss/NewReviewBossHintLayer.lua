@@ -60,7 +60,8 @@ function NewReviewBossHintLayer.create(currentWordName)
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
-            local action2 = cc.MoveTo:create(0.2, cc.p(s_DESIGN_WIDTH/2*3, s_DESIGN_HEIGHT * 0.55))
+            local action1 = cc.MoveTo:create(0.2, cc.p(s_DESIGN_WIDTH/2*3, s_DESIGN_HEIGHT * 0.55))
+            local action2 = cc.EaseBackIn:create(action1)
             white_back:runAction(action2)
         elseif eventType == ccui.TouchEventType.ended then
             layer.close()  
@@ -82,6 +83,30 @@ function NewReviewBossHintLayer.create(currentWordName)
     return_label:ignoreAnchorPointForPosition(false)
     return_label:setAnchorPoint(0.5,0.5)
     return_button:addChild(return_label)
+    
+    local onTouchBegan = function(touch, event)
+        return true
+    end
+
+    local onTouchEnded = function(touch, event)
+        local location = layer:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(white_back:getBoundingBox(),location) then
+            local action1 = cc.MoveTo:create(0.2, cc.p(s_DESIGN_WIDTH/2*3, s_DESIGN_HEIGHT * 0.55))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                layer.close()  
+            end)
+            white_back:runAction(cc.Sequence:create(action2,action3))
+        end
+    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = layer:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
     
     return layer
 end
