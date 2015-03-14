@@ -62,8 +62,11 @@ public class DownloadFileFromURL extends AsyncTask<String, String, String> {
             // closing streams
             output.close();
             input.close();
+            
+            Log.println(0, "DownloadFileFromURL", "connectionDidFinishLoading: true " + f_url[1] + f_url[2]);
 
         } catch (Exception e) {
+        	Log.println(0, "DownloadFileFromURL", "connectionDidFinishLoading: false " + f_url[1] + f_url[2]);
             Log.e("Error: ", e.getMessage());
         }
 
