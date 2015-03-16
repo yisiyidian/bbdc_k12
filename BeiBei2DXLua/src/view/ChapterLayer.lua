@@ -250,8 +250,8 @@ function ChapterLayer:checkUnlockLevel()
 --        self:runAction(sequence)
         self:callFuncWithDelay(0.1, function() 
             self:addChapterIntoListView(currentChapterKey)
-            self.activeChapterEndIndex += 1
-            self.biggestChapterIndex += 1
+            self.activeChapterEndIndex = self.activeChapterEndIndex + 1
+            self.biggestChapterIndex = self.biggestChapterIndex + 1
             -- if self.activeChapterEndIndex < self.biggestChapterIndex then
             --     self.activeChapterEndIndex = self.activeChapterEndIndex + 1               
             -- end
