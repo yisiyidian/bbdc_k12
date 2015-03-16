@@ -19,10 +19,6 @@ function ChapterLayer.create()
 end
 
 function ChapterLayer:ctor()
-    -- s_SCENE.touchEventBlockLayer.lockTouch()
-    -- s_SCENE:callFuncWithDelay(0.5, function()
-    --     s_SCENE.touchEventBlockLayer.unlockTouch()
-    -- end)
     
 
     if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
@@ -248,13 +244,18 @@ function ChapterLayer:checkUnlockLevel()
 --        local callAction = cc.CallFunc:create(func)
 --        local sequence = cc.Sequence:create(delayAction, callAction)
 --        self:runAction(sequence)
-        s_SCENE:callFuncWithDelay(0.1, function() 
+        self:callFuncWithDelay(0.1, function() 
             self:addChapterIntoListView(currentChapterKey)
+            self.activeChapterEndIndex = self.activeChapterEndIndex + 1
+            self.biggestChapterIndex = self.biggestChapterIndex + 1
+            -- if self.activeChapterEndIndex < self.biggestChapterIndex then
+            --     self.activeChapterEndIndex = self.activeChapterEndIndex + 1               
+            -- end
         end)
-        s_SCENE:callFuncWithDelay(1.0, function() 
+        self:callFuncWithDelay(1.0, function() 
             self.chapterDic[currentChapterKey]:plotUnlockLevelAnimation('level'..currentProgress)
         end)
-        s_SCENE:callFuncWithDelay(0.5, function() 
+        self:callFuncWithDelay(0.5, function() 
             --self:addPlayerOnLevel(currentChapterKey,'level'..currentProgress)     
             self:scrollLevelLayer(currentProgress,0.3)
 
@@ -292,6 +293,10 @@ function ChapterLayer:checkUnlockLevel()
         local chapterKey = 'chapter'..math.floor(oldProgress / s_islands_per_page)
         if taskIndex == -2 and s_level_popup_state == 1 then
             s_level_popup_state = 2
+                s_SCENE.touchEventBlockLayer.lockTouch()
+                self:callFuncWithDelay(1.1, function()
+                    s_SCENE.touchEventBlockLayer.unlockTouch()
+                end)
             s_SCENE:callFuncWithDelay(1.0, function() 
                 self.chapterDic[chapterKey]:addPopup(currentProgress)
             end)

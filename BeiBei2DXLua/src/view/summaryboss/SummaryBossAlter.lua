@@ -60,8 +60,8 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
 end
 
 function SummaryBossAlter:lose(entrance)
-    if s_CURRENT_USER.tutorialStep == s_tutorial_complete then
-        s_CURRENT_USER:setTutorialStep(s_tutorial_complete + 1)
+    if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
+        s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_timeout)
     end
 
@@ -225,8 +225,8 @@ function SummaryBossAlter:addTime()
 end
 
 function SummaryBossAlter:lose2(entrance)
-    if s_CURRENT_USER.tutorialStep == s_tutorial_complete then
-        s_CURRENT_USER:setTutorialStep(s_tutorial_complete + 1)
+    if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
+        s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_lose)
     end
 
@@ -316,8 +316,8 @@ end
 
 function SummaryBossAlter:win1(entrance)
     
-    if s_CURRENT_USER.tutorialStep == s_tutorial_complete then
-        s_CURRENT_USER:setTutorialStep(s_tutorial_complete + 1)
+    if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
+        s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_win)
     end
     local hasCheckedIn = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey)
