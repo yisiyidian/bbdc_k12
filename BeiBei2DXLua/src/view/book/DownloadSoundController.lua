@@ -63,7 +63,7 @@ function DownloadSoundController:initAssetsManagerByBookType(storagePath)
         SoundsDownloadingInstance["primary"] = self
         return cc.AssetsManagerEx:create("manifest/book_sound_primary.manifest",storagePath)   
     elseif self.bookkey == "pro4" then
-        SoundsDownloadingInstance["pro8"] = self
+        SoundsDownloadingInstance["pro4"] = self
         return cc.AssetsManagerEx:create("manifest/book_sound_pro4.manifest",storagePath)   
     elseif self.bookkey == "pro8" then
         SoundsDownloadingInstance["pro8"] = self
