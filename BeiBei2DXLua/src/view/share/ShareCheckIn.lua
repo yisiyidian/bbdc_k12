@@ -11,6 +11,7 @@ function ShareCheckIn.create()
 end
 
 function ShareCheckIn:ctor()
+	AnalyticsEnterShare()
 	local background = cc.ProgressTimer:create(cc.Sprite:create('image/share/share_background.png'))
 	--local background = cc.Sprite:create('image/share/share_background.png')
 	background:setAnchorPoint(0.5,1)
