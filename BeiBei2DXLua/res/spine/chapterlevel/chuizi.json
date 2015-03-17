@@ -1,0 +1,69 @@
+{
+"skeleton": { "hash": "N0I2oumX5Izv2QI550z9YtG7fno", "spine": "2.1.17", "width": 102.53, "height": 84.1, "images": "./chuizi/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 29.96, "x": 95.89, "y": 5.65, "rotation": 137.34 },
+	{ "name": "bone2", "parent": "root", "length": 108.79, "x": 94.86, "y": 84.95, "rotation": -140.15 }
+],
+"slots": [
+	{ "name": "chuizi", "bone": "bone", "attachment": "chuizi" },
+	{ "name": "feng", "bone": "bone2" }
+],
+"skins": {
+	"default": {
+		"chuizi": {
+			"chuizi": { "x": 53.86, "y": 0.93, "rotation": -141.68, "width": 97, "height": 77 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"feng": {
+				"attachment": [
+					{ "time": 0, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": -16.05, "curve": "stepped" },
+					{
+						"time": 0.3,
+						"angle": -16.05,
+						"curve": [ 0.25, 0, 0.764, 0 ]
+					},
+					{ "time": 0.5333, "angle": 21.4 },
+					{
+						"time": 0.8333,
+						"angle": -16.05,
+						"curve": [ 0.25, 0, 1, 0 ]
+					},
+					{ "time": 1.1, "angle": 21.4 },
+					{ "time": 1.4, "angle": -16.05, "curve": "stepped" },
+					{
+						"time": 1.7666,
+						"angle": -16.05,
+						"curve": [ 0.25, 0, 1, 0 ]
+					},
+					{ "time": 2.0666, "angle": 21.4 },
+					{
+						"time": 2.4,
+						"angle": -16.05,
+						"curve": [ 0.25, 0, 1, 0 ]
+					},
+					{ "time": 2.7, "angle": 21.4 },
+					{ "time": 3, "angle": -16.05 }
+				]
+			},
+			"bone2": {
+				"translate": [
+					{ "time": 0.4666, "x": -11.27, "y": -9.41 },
+					{ "time": 0.5333, "x": 23.11, "y": 19.31 }
+				]
+			}
+		}
+	}
+}
+}

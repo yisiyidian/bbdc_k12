@@ -163,12 +163,22 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 ----    local levelState = math.random(0, 3)
 --    levelState = 5
     if levelState == 0 then
-        local deco = cc.Sprite:create('image/chapter/elements/tubiao_daizi_tanchu_xiaoguan.png')
-        deco:setPosition(levelPosition.x,levelPosition.y+20)
+        local deco = sp.SkeletonAnimation:create("spine/chapterlevel/beibeidaizi.json","spine/chapterlevel/beibeidaizi.atlas",1)
+        deco:setPosition(levelPosition.x-60,levelPosition.y-10)
+        deco:setAnchorPoint(1,1)
+        deco:addAnimation(0, 'animation', true)
         self:addChild(deco, 130)
+        -- local deco = cc.Sprite:create('image/chapter/elements/tubiao_daizi_tanchu_xiaoguan.png')
+        -- deco:setPosition(levelPosition.x,levelPosition.y+20)
+        -- self:addChild(deco, 130)
     elseif levelState == 1 then
-        local deco = cc.Sprite:create('image/chapter/elements/tubiao_chuizi_tanchu_xiaoguan.png')
-        deco:setPosition(levelPosition.x,levelPosition.y+20)
+        -- local deco = cc.Sprite:create('image/chapter/elements/tubiao_chuizi_tanchu_xiaoguan.png')
+        -- deco:setPosition(levelPosition.x,levelPosition.y+20)
+        -- self:addChild(deco, 130)
+        local deco = sp.SkeletonAnimation:create("spine/chapterlevel/chuizi.json","spine/chapterlevel/chuizi.atlas",1)
+        deco:setPosition(levelPosition.x-60,levelPosition.y-10)
+        deco:setAnchorPoint(1,1)
+        deco:addAnimation(0, 'animation', true)
         self:addChild(deco, 130)
     elseif levelState == 2 or (levelState >= 4 and levelIndex == currentTaskBossIndex) then
         local reviewBoss = sp.SkeletonAnimation:create('spine/3 fxzlsxuanxiaoguandiaoluo1.json', 'spine/3 fxzlsxuanxiaoguandiaoluo1.atlas', 1)
@@ -292,7 +302,6 @@ function ChapterLayerBase:addPopup(levelIndex)
     if state == 0 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_1.png')       
         taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_1.png','image/chapter/popup/button_pressed_xiaoguantancu_1.png','image/chapter/popup/button_unpressed_xiaoguantancu_1.png')
---        taskButton:set
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-200)
     elseif state == 1 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_2.png')     
@@ -342,6 +351,16 @@ function ChapterLayerBase:addPopup(levelIndex)
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-810) 
     elseif state == 8 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_9.png')
+    end
+    -- add new hammer resource
+    if state == 0 then
+        local hammer = cc.Sprite:create('image/chapter/popup/chuizi_inactive.png')
+        hammer:setPosition(222, back:getContentSize().height-316)
+        back:addChild(hammer,10)
+    elseif state >= 2 and state <= 8 then
+        local hammer = cc.Sprite:create('image/chapter/popup/chuizi_active.png')
+        hammer:setPosition(222, back:getContentSize().height-246)
+        back:addChild(hammer,10)
     end
     
     if state ~= 8 then
