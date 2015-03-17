@@ -557,7 +557,7 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
         number:setFntFile('font/number_inclined.fnt')
         --number:setColor(cc.c3b(56,26,23))
         number:setString(levelIndex+1)
-        number:setPosition(levelPosition.x, levelPosition.y+3)
+        number:setPosition(levelPosition.x-5, levelPosition.y+10)
         self:addChild(number,130)
 --    end
 
