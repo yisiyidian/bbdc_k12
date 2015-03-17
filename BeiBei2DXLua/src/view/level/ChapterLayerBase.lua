@@ -302,7 +302,6 @@ function ChapterLayerBase:addPopup(levelIndex)
     if state == 0 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_1.png')       
         taskButton = ccui.Button:create('image/chapter/popup/button_unpressed_xiaoguantancu_1.png','image/chapter/popup/button_pressed_xiaoguantancu_1.png','image/chapter/popup/button_unpressed_xiaoguantancu_1.png')
---        taskButton:set
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-200)
     elseif state == 1 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_2.png')     
@@ -352,6 +351,16 @@ function ChapterLayerBase:addPopup(levelIndex)
         taskButton:setPosition(back:getContentSize().width/2, back:getContentSize().height-810) 
     elseif state == 8 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_9.png')
+    end
+    -- add new hammer resource
+    if state == 0 then
+        local hammer = cc.Sprite:create('image/chapter/popup/chuizi_inactive.png')
+        hammer:setPosition(222, back:getContentSize().height-316)
+        back:addChild(hammer,10)
+    elseif state >= 2 and state <= 8 then
+        local hammer = cc.Sprite:create('image/chapter/popup/chuizi_active.png')
+        hammer:setPosition(222, back:getContentSize().height-246)
+        back:addChild(hammer,10)
     end
     
     if state ~= 8 then
