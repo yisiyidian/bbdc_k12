@@ -39,7 +39,7 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
 
         s_SCENE:callFuncWithDelay(0.3,function()
         -- win sound
-            playMusic(s_sound_win,false)
+            playMusic(s_sound_win,true)
         end)
     else    
         if not bossLayer.useItem and s_CURRENT_USER:getBeans() >= 10 then
@@ -50,10 +50,10 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
         
         cc.SimpleAudioEngine:getInstance():stopMusic()
 
-        s_SCENE:callFuncWithDelay(0.3,function()
-            -- win sound
-            playSound(s_sound_fail)
-        end)
+        -- s_SCENE:callFuncWithDelay(0.3,function()
+        --     -- win sound
+        --     playSound(s_sound_fail)
+        -- end)
     end
     
     return layer
@@ -96,7 +96,7 @@ function SummaryBossAlter:lose(entrance)
     label:setColor(cc.c4b(52,177,241,255))
     self.loseBoard:addChild(label)
 
-    local continue = ccui.Button:create("image/summarybossscene/button_loose_zjboss.png","image/summarybossscene/button_loose_zjboss_pressed.png","")
+    local continue = ccui.Button:create("image/summarybossscene/button_fangqi_zjboss.png","image/summarybossscene/button_fangqi_zjboss_pressed.png","")
     continue:setPosition(self.loseBoard:getContentSize().width / 2 + 10,self.loseBoard:getContentSize().height * 0.18 + 2)
     self.loseBoard:addChild(continue)
 
@@ -229,6 +229,8 @@ function SummaryBossAlter:lose2(entrance)
         s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_lose)
     end
+
+    playMusic(s_sound_fail,true)
 
     self.loseBoard2 = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
     self.loseBoard2:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5)
@@ -389,7 +391,7 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
         end
     end
 
-    local button = ccui.Button:create("image/shop/long_button.png","image/shop/long_button_clicked.png","")
+    local button = ccui.Button:create("image/newstudy/button_onebutton_size.png","image/newstudy/button_onebutton_size_pressed.png","")
     button:setPosition(s_DESIGN_WIDTH/2,150)
     button:addTouchEventListener(onButton)
     self:addChild(button)
@@ -526,7 +528,10 @@ function SummaryBossAlter:addWinLabel(win_back)
                     local action4 = cc.CallFunc:create(function (  )
                         been_number:setString(s_CURRENT_USER:getBeans() - 3 + i)
                     end,{})
-                    bean_back[i]:runAction(cc.Sequence:create(action1,cc.Sequence:create(action2,action3),action4))
+                    local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')
+                    bean:setPosition(bean_back[i]:getContentSize().width / 2,bean_back[i]:getContentSize().height / 2 + 10)
+                    bean_back[i]:addChild(bean)
+                    bean:runAction(cc.Sequence:create(action1,cc.Sequence:create(action2,action3),action4))
                 end
             end
             self:unscheduleUpdate()
@@ -536,8 +541,8 @@ function SummaryBossAlter:addWinLabel(win_back)
     end
     self:scheduleUpdateWithPriorityLua(update, 0)
 
-    local boss = sp.SkeletonAnimation:create("spine/summaryboss/beidadekls2.json","spine/summaryboss/beidadekls2.atlas",1)
-    boss:setAnimation(0,'animation',false)
+    local boss = sp.SkeletonAnimation:create("spine/summaryboss/beidadekls.json","spine/summaryboss/beidadekls.atlas",1)
+    boss:setAnimation(0,'animation',true)
     boss:setPosition(0.5 * s_DESIGN_WIDTH- 200,230)
     self:addChild(boss)
 
