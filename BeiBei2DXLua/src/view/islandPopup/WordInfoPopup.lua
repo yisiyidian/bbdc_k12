@@ -158,7 +158,17 @@ function WordInfoPopup:ctor(index,wordlist)
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = self:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)  
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self) 
+
+    onAndroidKeyPressed(self, function ()
+        local move = cc.MoveBy:create(0.3, cc.p(0, s_DESIGN_HEIGHT))
+        local remove = cc.CallFunc:create(function() 
+            self:removeFromParent()
+        end)
+            self:runAction(cc.Sequence:create(move,remove))
+    end, function ()
+
+    end) 
 
 
 end

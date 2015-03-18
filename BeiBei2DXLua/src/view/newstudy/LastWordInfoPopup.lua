@@ -44,18 +44,21 @@ function LastWordInfoPopup:ctor(currentWordName)
     detailInfo:ignoreAnchorPointForPosition(false)
     detailInfo:setPosition(back:getContentSize().width/2, back:getContentSize().height * 0.45 )
     back:addChild(detailInfo)
-   
+
+    local function closeAnimation()
+        local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
+        local action2 = cc.EaseBackIn:create(action1)
+        local action3 = cc.CallFunc:create(function()
+            s_SCENE:removeAllPopups()
+        end)
+        back:runAction(cc.Sequence:create(action2,action3))
+    end
+
     local button_goon_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
-                s_SCENE:removeAllPopups()
-            end)
-            back:runAction(cc.Sequence:create(action2,action3))
+            closeAnimation()
         end
     end
 
@@ -74,12 +77,7 @@ function LastWordInfoPopup:ctor(currentWordName)
     local onTouchEnded = function(touch, event)
         local location = self:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint(back:getBoundingBox(),location) then
-            local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
-                s_SCENE:removeAllPopups()
-            end)
-            back:runAction(cc.Sequence:create(action2,action3))
+           closeAnimation()
         end
     end
 
@@ -90,6 +88,12 @@ function LastWordInfoPopup:ctor(currentWordName)
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
+
+    onAndroidKeyPressed(self, function ()
+        closeAnimation()
+    end, function ()
+
+    end)
 end
 
 return LastWordInfoPopup

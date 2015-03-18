@@ -44,4 +44,5 @@ function PopupLayer:setPauseBtnEnabled(var)
         self.pauseBtn:setTouchEnabled(var)
     end
 end
+
 return PopupLayer

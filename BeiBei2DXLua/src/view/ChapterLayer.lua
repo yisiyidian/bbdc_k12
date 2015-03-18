@@ -750,6 +750,16 @@ function ChapterLayer:addBackToHome()
     homeButton:setPosition(s_LEFT_X + 50  , s_DESIGN_HEIGHT - 50 )
     homeButton:setLocalZOrder(1)
     self:addChild(homeButton,200)
+    
+    onAndroidKeyPressed(self, function ()
+        local isPopup = s_SCENE.popupLayer:getChildren()
+        if #isPopup == 0 then
+            s_CorePlayManager.enterHomeLayer()
+        end
+    end, function ()
+
+    end)
+    
 end
 
 function ChapterLayer:addBeansUI()

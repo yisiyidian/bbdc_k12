@@ -63,13 +63,17 @@ function ShareCheckIn:ctor()
 	self:addChild(close_button)
 	self.close_button = close_button
 
+	local function closeAnimation()
+	    local remove = cc.CallFunc:create(function ()
+			self:removeFromParent()
+		end,{})
+		local move = cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT))
+		self:runAction(cc.Sequence:create(move,remove))
+	end
+
 	local function close(sender,eventType)
 		if eventType == ccui.TouchEventType.ended then
-			local remove = cc.CallFunc:create(function ()
-				self:removeFromParent()
-			end,{})
-			local move = cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT))
-			self:runAction(cc.Sequence:create(move,remove))
+           closeAnimation()
 		end
 	end
 
@@ -155,6 +159,12 @@ function ShareCheckIn:ctor()
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(self.listener, self)
     self.listener:setSwallowTouches(true)
+
+    onAndroidKeyPressed(self, function ()
+        closeAnimation()
+    end, function ()
+
+    end)
 
 end
 

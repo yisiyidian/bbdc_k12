@@ -62,9 +62,12 @@ local function createLastButton(word,wrongNum,wrongWordList)
 end
 
 function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
-    if s_CURRENT_USER.tutorialStep == s_tutorial_study then
-        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_3)
+    AnalyticsStudySlideCoconut_EnterLayer()
+
+    if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_3 then
+        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_3 + 1)
     end
+
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     
     local isCollectLayer = true
@@ -126,10 +129,11 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
     local success = function()
         playWordSound(self.currentWord) 
         local normal = function()  
-            if s_CURRENT_USER.tutorialStep == s_tutorial_study then
-               s_CURRENT_USER:setTutorialStep(s_tutorial_study + 1)
-               s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_review_boss)
+            if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_1 then
+               s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat2_1 + 1)
             end
+            AnalyticsStudySlideCoconut_LeaveLayer()
+
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
             local showAnswerStateBack = cc.Sprite:create("image/testscene/testscene_right_back.png")
@@ -160,6 +164,13 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
                         print_lua_table(s_CURRENT_USER.logInDatas)
                         print('isCheckIn')
                         -- print(s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey))
+
+                        if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_2 then
+                           s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat2_2 + 1)
+                        end
+
+                        AnalyticsStudyCollectAllWord()
+
                         if #s_CURRENT_USER.logInDatas > 0 and s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) then
                             s_CorePlayManager.leaveStudyModel(false)
                         else

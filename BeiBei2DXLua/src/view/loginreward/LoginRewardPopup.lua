@@ -43,15 +43,19 @@ function LoginRewardPopup:ctor()
 
     backPopup:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 0.5))))
 
+    local function closeAnimation()
+        local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5)))
+        local remove = cc.CallFunc:create(function() 
+             s_SCENE:removeAllPopups()
+        end)
+        backPopup:runAction(cc.Sequence:create(move,remove))
+    end
+
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5)))
-            local remove = cc.CallFunc:create(function() 
-                 s_SCENE:removeAllPopups()
-            end)
-            backPopup:runAction(cc.Sequence:create(move,remove))
+            closeAnimation()
         end
     end
 
@@ -239,12 +243,7 @@ function LoginRewardPopup:ctor()
         
         local location = self:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint(backPopup:getBoundingBox(),location) then
-            local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH /2, s_DESIGN_HEIGHT/2*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
-                s_SCENE:removeAllPopups()
-            end)
-            backPopup:runAction(cc.Sequence:create(action2,action3))
+              closeAnimation()
         end
     end
     
@@ -256,6 +255,12 @@ function LoginRewardPopup:ctor()
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)  
+
+    onAndroidKeyPressed(self, function ()
+        closeAnimation()
+    end, function ()
+
+    end)
     
 end
 

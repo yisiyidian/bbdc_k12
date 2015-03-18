@@ -68,13 +68,22 @@ end
 function EndLayer:ctor()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
-    local backColor = BackLayer.create(45)
+    local backColor = cc.LayerColor:create(cc.c4b(168,239,255,255), bigWidth, s_DESIGN_HEIGHT)  
+
+    local back_head = cc.Sprite:create("image/newstudy/back_head.png")
+    back_head:setAnchorPoint(0.5, 1)
+    back_head:setPosition(bigWidth/2, s_DESIGN_HEIGHT)
+    backColor:addChild(back_head)
+
+    local back_tail = cc.Sprite:create("image/newstudy/back_tail.png")
+    back_tail:setAnchorPoint(0.5, 0)
+    back_tail:setPosition(bigWidth/2, 0)
+    backColor:addChild(back_tail)
+
     backColor:setAnchorPoint(0.5,0.5)
     backColor:ignoreAnchorPointForPosition(false)
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
-    self:addChild(backColor)
-
-    s_SCENE.popupLayer.pauseBtn:setVisible(false)
+    self:addChild(backColor)    
 
     self.bean = s_CURRENT_USER:getBeans()
     self.beanSprite = createBeanSprite(self.bean)
@@ -100,7 +109,16 @@ function EndLayer:ctor()
     
     s_CURRENT_USER.beanRewardForIron = 3
 
+    onAndroidKeyPressed(self, function ()
+        s_level_popup_state = 1
+        s_HUD_LAYER:removeChildByName('missionCompleteCircle')
+        s_CorePlayManager.enterLevelLayer()
+    end, function ()
+
+    end)
+
     AnalyticsTasksFinished('NewStudySuccessLayer')
+    
 end
 
 return EndLayer

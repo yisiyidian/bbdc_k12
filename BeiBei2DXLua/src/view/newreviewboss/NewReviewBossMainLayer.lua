@@ -14,6 +14,7 @@ Review_From_Word_Bank = 1
 Review_From_Normal    = 2
 
 function NewReviewBossMainLayer.create(ReviewWordList,number)
+    AnalyticsReviewBoss_EnterLayer()
     if s_CURRENT_USER.tutorialStep == s_tutorial_review_boss then
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_review_boss)
     end
@@ -141,7 +142,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
     currentWordName,currentWord,wordname,wordSoundMarkEn,wordSoundMarkAm,wordMeaningSmall,wordMeaning,sentenceEn,sentenceCn,
             sentenceEn2,sentenceCn2 =  updateWord()
 
-    local pauseButton = Pause.create()
+    local pauseButton = Pause.create(CreatePauseFromReview)
     layer:addChild(pauseButton,100)
     
     local fillColor1 = cc.LayerColor:create(cc.c4b(10,152,210,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, 393)
@@ -360,6 +361,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
                     rightWordFuntion()
                 end
             else   
+                AnalyticsReviewBoss_LeaveLayer()
                 if s_CURRENT_USER.tutorialStep == s_tutorial_review_boss then
                    s_CURRENT_USER:setTutorialStep(s_tutorial_review_boss + 1)
                    s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_review_boss + 1)

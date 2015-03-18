@@ -6,6 +6,7 @@ local Pause = require("view.Pause")
 
 local FlipNode = require("view.mat.FlipNode")
 local TapNode = require("view.mat.TapNode")
+local PauseButton           = require("view.newreviewboss.NewReviewBossPause")
 
 local SummaryBossLayer = class("SummaryBosslayer", function ()
     return cc.NodeGrid:create()
@@ -869,22 +870,32 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
 
     self.combo_icon = combo_icon
 
+    local function createPausePopup()
+        if self.currentBlood <= 0 or self.isLose or self.globalLock or s_SCENE.popupLayer.layerpaused then
+            return
+        end
+        local pauseLayer = Pause.create()
+        pauseLayer:setPosition(s_LEFT_X, 0)
+        s_SCENE.popupLayer:addBackground()
+        s_SCENE.popupLayer:addChild(pauseLayer)
+        s_SCENE.popupLayer.listener:setSwallowTouches(true)
+    end
+
     local function pauseScene(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            if self.currentBlood <= 0 or self.isLose or self.globalLock or s_SCENE.popupLayer.layerpaused then
-                return
-            end
-            local pauseLayer = Pause.create()
-            pauseLayer:setPosition(s_LEFT_X, 0)
-            s_SCENE.popupLayer:addBackground()
-            s_SCENE.popupLayer:addChild(pauseLayer)
-            s_SCENE.popupLayer.listener:setSwallowTouches(true)
+           createPausePopup()
         
         --button sound
             playSound(s_sound_buttonEffect)
         end
     end
     pauseBtn:addTouchEventListener(pauseScene)
+
+    onAndroidKeyPressed(pauseBtn, function ()
+        createPausePopup()
+    end, function ()
+
+    end)
     --add girl
     local girl = sp.SkeletonAnimation:create("spine/summaryboss/girl-stand.json","spine/summaryboss/girl-stand.atlas",1)
     girl:setPosition(s_DESIGN_WIDTH * 0.05, s_DESIGN_HEIGHT * 0.76)

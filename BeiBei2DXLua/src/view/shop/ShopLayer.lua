@@ -118,6 +118,15 @@ function ShopLayer.create()
             item_name_back:addChild(item_name)
         end
     end
+
+    onAndroidKeyPressed(layer, function ()
+        local isPopup = s_SCENE.popupLayer:getChildren()
+        if #isPopup == 0 then
+        s_CorePlayManager.enterHomeLayer()
+        end
+    end, function ()
+
+    end)
     
     return layer
 end

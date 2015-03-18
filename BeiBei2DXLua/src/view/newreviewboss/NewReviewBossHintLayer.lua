@@ -55,16 +55,21 @@ function NewReviewBossHintLayer.create(currentWordName)
     local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.55))
     local action2 = cc.EaseBackOut:create(action1)
     white_back:runAction(action2)
+
+    local function closeAnimation()
+        local action1 = cc.MoveTo:create(0.2, cc.p(s_DESIGN_WIDTH/2*3, s_DESIGN_HEIGHT * 0.55))
+        local action2 = cc.EaseBackIn:create(action1)
+        local action3 = cc.CallFunc:create(function()
+            layer.close()  
+        end)
+        white_back:runAction(cc.Sequence:create(action2,action3))
+    end
     
     local return_click = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
-            -- button sound
             playSound(s_sound_buttonEffect)
-            local action1 = cc.MoveTo:create(0.2, cc.p(s_DESIGN_WIDTH/2*3, s_DESIGN_HEIGHT * 0.55))
-            local action2 = cc.EaseBackIn:create(action1)
-            white_back:runAction(action2)
         elseif eventType == ccui.TouchEventType.ended then
-            layer.close()  
+            closeAnimation() 
         end
     end
 
@@ -91,12 +96,7 @@ function NewReviewBossHintLayer.create(currentWordName)
     local onTouchEnded = function(touch, event)
         local location = layer:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint(white_back:getBoundingBox(),location) then
-            local action1 = cc.MoveTo:create(0.2, cc.p(s_DESIGN_WIDTH/2*3, s_DESIGN_HEIGHT * 0.55))
-            local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
-                layer.close()  
-            end)
-            white_back:runAction(cc.Sequence:create(action2,action3))
+            closeAnimation() 
         end
     end
 
@@ -107,6 +107,13 @@ function NewReviewBossHintLayer.create(currentWordName)
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
+
+
+    onAndroidKeyPressed(layer, function ()
+        closeAnimation()
+    end, function ()
+
+    end)
     
     return layer
 end
