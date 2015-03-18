@@ -334,19 +334,21 @@ function SummaryBossAlter:win1(entrance)
         checkInEverydayInfo()
         s_isCheckInAnimationDisplayed = false
     end
-
-    if entrance == ENTRANCE_NORMAL then
-        s_CorePlayManager.leaveSummaryModel(true)
-    end
     
     if not hasCheckedIn and entrance == ENTRANCE_NORMAL then
         local missionCompleteCircle = require('view.MissionCompleteCircle').create()
         s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
         self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
             self:win2(entrance,hasCheckedIn)
+            if entrance == ENTRANCE_NORMAL then
+                s_CorePlayManager.leaveSummaryModel(true)
+            end
         end,{})))
     else
         self:win2(entrance,hasCheckedIn)
+        if entrance == ENTRANCE_NORMAL then
+            s_CorePlayManager.leaveSummaryModel(true)
+        end
     end
     
     
@@ -416,7 +418,7 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     --     rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
     --     button:addChild(rewardNumber)
     -- end
-    if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) or not self.entrance then
+    if hasCheckedIn or not self.entrance then
         --print('self:addWinLabel(win_back)')
         self:addWinLabel(win_back)
     else
@@ -493,7 +495,6 @@ function SummaryBossAlter:addWinLabel(win_back)
             bean_back[i]:setVisible(true)
         end
     end
-local time1 = os.clock()
     local function update(delta)
         --print('delta='..delta)
         if word_count < self.bossLayer.maxCount then
@@ -505,11 +506,11 @@ local time1 = os.clock()
             min_count_label:setString(string.format('%d',min_count))
         end
         if sec_count < math.floor(self.bossLayer.useTime%60) then
-            if 60 - sec_count > 1 then
-                sec_count = sec_count + 2
-            else
+            -- if 60 - sec_count > 1 then
+            --     sec_count = sec_count + 2
+            -- else
                 sec_count = sec_count + 1 
-            end
+            -- end
             sec_count_label:setString(string.format('%d',sec_count))
         end
         if word_count == self.bossLayer.maxCount and min_count == math.floor(self.bossLayer.useTime/60) and sec_count >= math.floor(self.bossLayer.useTime%60) then
