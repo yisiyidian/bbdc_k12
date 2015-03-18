@@ -327,20 +327,18 @@ function SummaryBossAlter:win1(entrance)
         checkInEverydayInfo()
         s_isCheckInAnimationDisplayed = false
     end
+
+    if entrance == ENTRANCE_NORMAL then
+        s_CorePlayManager.leaveSummaryModel(true)
+    end
     
     if not hasCheckedIn and entrance == ENTRANCE_NORMAL then
         local missionCompleteCircle = require('view.MissionCompleteCircle').create()
         s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
         self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
             self:win2(entrance,hasCheckedIn)
-            if entrance == ENTRANCE_NORMAL then
-                s_CorePlayManager.leaveSummaryModel(true)
-            end
         end,{})))
     else
-        if entrance == ENTRANCE_NORMAL then
-            s_CorePlayManager.leaveSummaryModel(true)
-        end
         self:win2(entrance,hasCheckedIn)
     end
     
@@ -488,8 +486,9 @@ function SummaryBossAlter:addWinLabel(win_back)
             bean_back[i]:setVisible(true)
         end
     end
-
+local time1 = os.clock()
     local function update(delta)
+        --print('delta='..delta)
         if word_count < self.bossLayer.maxCount then
             word_count = word_count + 1
             word_count_label:setString(string.format('%d',word_count))
@@ -499,10 +498,14 @@ function SummaryBossAlter:addWinLabel(win_back)
             min_count_label:setString(string.format('%d',min_count))
         end
         if sec_count < math.floor(self.bossLayer.useTime%60) then
-            sec_count = sec_count + 1
+            if 60 - sec_count > 1 then
+                sec_count = sec_count + 2
+            else
+                sec_count = sec_count + 1 
+            end
             sec_count_label:setString(string.format('%d',sec_count))
         end
-        if word_count == self.bossLayer.maxCount and min_count == math.floor(self.bossLayer.useTime/60) and sec_count == math.floor(self.bossLayer.useTime%60) then
+        if word_count == self.bossLayer.maxCount and min_count == math.floor(self.bossLayer.useTime/60) and sec_count >= math.floor(self.bossLayer.useTime%60) then
             if self.entrance then
                 for i = 1,3 do
                     local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')
@@ -529,14 +532,18 @@ function SummaryBossAlter:addWinLabel(win_back)
                         been_number:setString(s_CURRENT_USER:getBeans() - 3 + i)
                     end,{})
                     local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')
-                    bean:setPosition(bean_back[i]:getContentSize().width / 2,bean_back[i]:getContentSize().height / 2 + 10)
-                    bean_back[i]:addChild(bean)
+                    bean:setPosition(bean_back[i]:getPositionX(),bean_back[i]:getPositionY() + 10)
+                    self:addChild(bean,2)
+                    bean:setVisible(false)
+                    bean:runAction(cc.Sequence:create(cc.DelayTime:create(1.2),cc.Show:create()))
                     bean:runAction(cc.Sequence:create(action1,cc.Sequence:create(action2,action3),action4))
                 end
             end
+            --print('count time = '..os.clock() - time1)
             self:unscheduleUpdate()
 
         end
+        
 
     end
     self:scheduleUpdateWithPriorityLua(update, 0)
