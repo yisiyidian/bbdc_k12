@@ -82,14 +82,19 @@ function O2OController.start()
     local tmpUser = DataUser.create()
     local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
 
+    -- offline
     if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() then
         if hasUserInLocalDB then
             s_CURRENT_USER = tmpUser
             O2OController.logInOffline()
         else
-            local introLayer = IntroLayer.create(hasUserInLocalDB)
-            s_SCENE:replaceGameLayer(introLayer)
+            -- remove IntroLayer
+            -- local introLayer = IntroLayer.create(hasUserInLocalDB)
+            -- s_SCENE:replaceGameLayer(introLayer)
+            
+            s_O2OController.signUpWithRandomUserName()
         end
+    -- online
     else
         -- go to O2OController.onAssetsManagerCompleted()
         local loadingView = LoadingView.create(true)
@@ -114,8 +119,11 @@ function O2OController.onAssetsManagerCompleted()
         local introLayer = IntroLayer.create(true)
         s_SCENE:replaceGameLayer(introLayer)
     else
-        local introLayer = IntroLayer.create(false)
-        s_SCENE:replaceGameLayer(introLayer)
+        -- remove IntroLayer
+        -- local introLayer = IntroLayer.create(false)
+        -- s_SCENE:replaceGameLayer(introLayer)
+
+        s_O2OController.signUpWithRandomUserName()
     end
 end
 
