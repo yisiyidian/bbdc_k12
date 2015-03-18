@@ -21,6 +21,9 @@ local bullet_damage = 2
 
 function SummaryBossLayer.create(wordList,chapter,entrance)   
     AnalyticsSummaryBoss()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        AnalyticsSummaryBossInFirstDay()
+    end
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()
     math.randomseed(os.time())
@@ -1592,6 +1595,9 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
 --    playSound(s_sound_win)
 
     AnalyticsSummaryBossResult('win')
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        AnalyticsSummaryBossResultInFirstDay('win')
+    end
 end
 
 function SummaryBossLayer:lose(chapter,entrance,wordList)

@@ -29,8 +29,15 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     layer:addChild(back)
     back:setName('background')
+    local function JudgeEnterSecondIslandInFirstDay()
+        local bossList = s_LocalDatabaseManager.getAllBossInfo()
+        if #bossList >= 2 and is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            AnalyticsPassSecondSummaryBossInFirstDay()
+        end
+    end
     if win then
         if entrance == ENTRANCE_NORMAL then
+            JudgeEnterSecondIslandInFirstDay()
             s_CURRENT_USER:addBeans(3)
             saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
         end
