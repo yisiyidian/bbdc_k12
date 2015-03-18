@@ -442,6 +442,29 @@ BUILD_TARGET_RELEASE      = BuildTarget(BUILD_TYPE_RELEASE,      'BUILD_TARGET_R
 BUILD_TARGET_RELEASE_TEST = BuildTarget(BUILD_TYPE_RELEASE_TEST, 'BUILD_TARGET_RELEASE_TEST', False, False)
 BUILD_TARGET_DEVELOPMENT  = BuildTarget(BUILD_TYPE_DEBUG,        'BUILD_TARGET_DEVELOPMENT',  False, True)
 TEST_SERVER = Server('贝贝单词X测试', 'gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn', 'x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3')
+# TEST_SERVER = Server('测试统计功能', '5nzm5l3gmz8tly459eg0m2gxhqls9tyuyfib3ordb5h8ze2w', 'vmf0x59pokcc19u9qs0rm0blva01oyoat94bwbe95q3y3d0l')
+
+# <channel name="DEBUG" 
+#         packageName="com.beibei.wordmaster"
+
+#         leanCloudAppName="测试统计功能"
+#         leanCloudAppID="5nzm5l3gmz8tly459eg0m2gxhqls9tyuyfib3ordb5h8ze2w"
+#         leanCloudAppKey="vmf0x59pokcc19u9qs0rm0blva01oyoat94bwbe95q3y3d0l"
+
+#         QQPkgName=""
+#         QQName="贝贝单词"
+#         QQAppID="1103783596"
+#         QQAppKey="n7vXdt6eDIggSsa6"
+#         isQQLogInAvailable="true"
+#         isQQShareAvailable="true"
+
+#         WXPkg="com.beibei.wordmaster" WXName="贝贝单词-背单词根本停不下来"
+#         WXAppID="wx68b3465c73ce139e"
+#         WXAppSecret="6a958c38c2ba812690b62bad4685750f"
+#         WXSignature=""
+
+#         umengAppName="测试统计功能"
+#         umengAppKey="5508f37bfd98c5488500108c"/>
 
 # createLuaCodes('gitVer', TEST_SERVER, BUILD_TARGET_DEBUG, channelAndroid, channeliOS, '/Users/bmo/Dev/YiSiYiDian/BeiBeiDanCiX/BeiBei2DXLua/src/AppVersionInfo.lua')
 # createObjectiveCCodes('gitVer', TEST_SERVER, BUILD_TARGET_DEBUG, channeliOS, 'savePath')
