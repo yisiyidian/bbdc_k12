@@ -210,6 +210,10 @@ function AnalyticsShare(name)
     cx.CXAnalytics:logEventAndLabel('Share', name)
 end
 
+function AnalyticsEnterShare()
+    cx.CXAnalytics:logEventAndLabel('Share', 'ENTER')
+end
+
 ----------------------------------------------------------------------------------------
 
 function AnalyticsDownloadSoundBtn()

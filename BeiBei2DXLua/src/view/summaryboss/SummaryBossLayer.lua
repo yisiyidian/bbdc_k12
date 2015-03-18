@@ -155,6 +155,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         end
                         if not hasHint then
                             layer.combo = layer.combo + 1
+                            
                         else 
                             layer.combo = 0
                         end
@@ -166,26 +167,38 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         layer.combo = 9
                     end
                     if layer.combo > 0 then
-                        layer.combo_back:setScale(1)
-                        layer.combo_back:setOpacity(255)
-                        layer.combo_back:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,0),cc.ScaleTo:create(0.5,1.3)))
-                        local icon_index = layer.combo + 3
-                        local icon = layer.combo_icon[icon_index]
-                        icon:setScale(1.3)
-                        icon:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,255),cc.EaseBackIn:create(cc.ScaleTo:create(0.5,1))))
-                        s_SCENE:callFuncWithDelay(0.5,function (  )
-                            
-                            if layer.combo % 3 == 0 then
-                                local label1 = layer.combo_label[2 * layer.combo / 3 + 1]
-                                label1:setScale(1.3)
-                                local label2 = layer.combo_label[2 * layer.combo / 3 + 2]
-                                label2:setScale(1.3)
-                                label1:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,255),cc.EaseBackIn:create(cc.ScaleTo:create(0.5,1))))
-                                label2:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,255),cc.EaseBackIn:create(cc.ScaleTo:create(0.5,1))))
-                                layer.combo_label[2 * layer.combo / 3]:runAction(cc.Spawn:create(cc.FadeOut:create(0.5)))
-                                layer.combo_label[2 * layer.combo / 3 - 1]:runAction(cc.Spawn:create(cc.FadeOut:create(0.5)))
-                            end
-                        end)
+                        local combo_pic = cc.Sprite:create('image/summarybossscene/combo_zongjieboss.png')
+                            combo_pic:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
+                            layer:addChild(combo_pic,100)
+                            combo_pic:setOpacity(0)
+                            combo_pic:setScale(0.8)
+                            local action1 = cc.Spawn:create(cc.FadeIn:create(0.3),cc.ScaleTo:create(0.3,1))
+                            local action2 = cc.Spawn:create(cc.EaseSineIn:create(cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH * 0.9,s_DESIGN_HEIGHT * 0.95 + 5))),cc.ScaleTo:create(0.5,0))
+                            local action3 = cc.CallFunc:create(function (  )
+                                combo_pic:removeFromParent()
+                                layer.combo_back:setScale(1)
+                                layer.combo_back:setOpacity(255)
+                                layer.combo_back:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,0),cc.ScaleTo:create(0.5,1.3)))
+                                local icon_index = layer.combo + 3
+                                local icon = layer.combo_icon[icon_index]
+                                icon:setScale(1.3)
+                                icon:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,255),cc.EaseBackIn:create(cc.ScaleTo:create(0.5,1))))
+                                s_SCENE:callFuncWithDelay(0.5,function (  )
+                                    
+                                    if layer.combo % 3 == 0 then
+                                        local label1 = layer.combo_label[2 * layer.combo / 3 + 1]
+                                        label1:setScale(1.3)
+                                        local label2 = layer.combo_label[2 * layer.combo / 3 + 2]
+                                        label2:setScale(1.3)
+                                        label1:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,255),cc.EaseBackIn:create(cc.ScaleTo:create(0.5,1))))
+                                        label2:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,255),cc.EaseBackIn:create(cc.ScaleTo:create(0.5,1))))
+                                        layer.combo_label[2 * layer.combo / 3]:runAction(cc.Spawn:create(cc.FadeOut:create(0.5)))
+                                        layer.combo_label[2 * layer.combo / 3 - 1]:runAction(cc.Spawn:create(cc.FadeOut:create(0.5)))
+                                    end
+                                end)
+                            end)
+                            combo_pic:runAction(cc.Sequence:create(action1,action2,action3))
+                        
                     else
                         layer:clearCombo()
                     end
@@ -215,14 +228,14 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         local bossPos = cc.p(layer.bossNode:getPositionX() + randP.x,layer.bossNode:getPositionY() + randP.y)
                         local bulletPos = cc.p(bullet:getPosition())
                         bossPos = cc.p(bossPos.x + 0 - bulletPos.x, bossPos.y + 0 - bulletPos.y)
-                        local time = math.sqrt(bossPos.x * bossPos.x + bossPos.y * bossPos.y) / 1200
+                        local time = math.sqrt(bossPos.x * bossPos.x + bossPos.y * bossPos.y) / (1200*(1 + j * 0.1))
                         if time > 0.5 then
                             time = 0.5
                         end
                         if delaytime < time then
                             delaytime = time
                         end
-                        local delay = cc.DelayTime:create(0.2 * j)
+                        local delay = cc.DelayTime:create(0.2 *math.pow(j,0.8))
                         local hit = cc.MoveBy:create(time,bossPos)
                         local hide = cc.Hide:create()
                         local attacked = cc.CallFunc:create(function() 
@@ -242,7 +255,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         end,{})
                         local resume = cc.MoveTo:create(0.0,cc.p(bullet:getPosition()))
                         bullet:runAction(cc.Sequence:create(delay,hit,attacked,hide,resume))
-                        s_SCENE:callFuncWithDelay(0.2 * #selectStack,function (  )
+                        s_SCENE:callFuncWithDelay(0.2 *math.pow(#selectStack,0.8),function (  )
                                 -- body
                             local recover = cc.CallFunc:create(
                                 function()
@@ -300,7 +313,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         layer.bubble[8] = nil
                     end
                     if layer.currentBlood <= 0 then
-                        s_SCENE:callFuncWithDelay(#selectStack * 0.2,function()
+                        s_SCENE:callFuncWithDelay(0.2 * math.pow(#selectStack,0.8),function()
                             layer.globalLock = true
                             layer.blink:stopAllActions()
                             --layer.boss:stopAllActions()
@@ -350,7 +363,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
 --                                 layer:initMap(chapter)
 --                             end,{})))
                         else
-                            s_SCENE:callFuncWithDelay(0.2 * #selectWord + 0.5,function (  )
+                            s_SCENE:callFuncWithDelay(0.2 * math.pow(#selectWord,0.8),function (  )
                                 -- body
                                 layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y].firstStyle()
                                 layer.crab[layer.firstIndex]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
@@ -521,6 +534,8 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         if layer.globalLock then
             return
         end
+
+        local time1 = os.clock()
     
         layer:checkTouchLocation(location)
         if chapter == 2 then
@@ -621,6 +636,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
 
             end
         end
+        --print('chack location time = '..os.clock() - time1)
         layer:updateWord(selectStack,chapter)
     end
 
@@ -700,6 +716,14 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             checkAnswer(false)
             endTime = 0
         end
+
+        if layer.girlAfraid and HINT_TIME == 10 then
+            HINT_TIME = 4
+        end
+
+        if not layer.girlAfraid and HINT_TIME == 4 then
+            HINT_TIME = 10
+        end        
         
         if layer.hintTime < HINT_TIME or layer.isPaused then
             if layer.hintTime >= 0.8 * HINT_TIME and layer.isPaused then
@@ -1465,6 +1489,7 @@ function SummaryBossLayer:initMap(chapter)
 end
 
 function SummaryBossLayer:checkTouchLocation(location)
+    --local time1 = os.clock()
     local main_width    = 640
     
     local gap       = 120
@@ -1510,6 +1535,7 @@ function SummaryBossLayer:checkTouchLocation(location)
     else
         self.onNode = false
     end
+    --print('chack location time = '..os.clock() - time1)
 end
 
 function SummaryBossLayer:crabSmall(chapter,index)
@@ -1612,6 +1638,7 @@ function SummaryBossLayer:hint()
         end
     end
     self.currentHintWord[index] = true
+    self.crab[self.firstIndex]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
     for i = 1, 5 do
         for j = 1, 5 do
             if self.isCrab[self.currentIndex][i][j] == index then
