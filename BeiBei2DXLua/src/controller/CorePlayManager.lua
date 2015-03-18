@@ -219,10 +219,10 @@ function CorePlayManager.leaveSummaryModel(state)
 end
 
 
-function CorePlayManager.enterIntroLayer()
-    local IntroLayer = IntroLayer.create(false)
-    s_SCENE:replaceGameLayer(IntroLayer)
-end
+-- function CorePlayManager.enterIntroLayer()
+--     local IntroLayer = IntroLayer.create(false)
+--     s_SCENE:replaceGameLayer(IntroLayer)
+-- end
 
 function CorePlayManager.enterHomeLayer()
     local homeLayer = HomeLayer.create()
