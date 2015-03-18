@@ -794,6 +794,7 @@ end
 function HomeLayer:addShopButton(backColor)
     local button_shop_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
+            AnalyticsShopBtn()
             local ShopLayer = require("view.shop.ShopLayer")
             local shopLayer = ShopLayer.create()
             s_SCENE:replaceGameLayer(shopLayer)

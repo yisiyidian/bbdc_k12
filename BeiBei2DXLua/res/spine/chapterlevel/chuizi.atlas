@@ -1,0 +1,13 @@
+
+chuizi.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chuizi
+  rotate: false
+  xy: 2, 22
+  size: 97, 77
+  orig: 97, 77
+  offset: 0, 0
+  index: -1

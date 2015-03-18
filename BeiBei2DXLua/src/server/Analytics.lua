@@ -205,12 +205,24 @@ function AnalyticsSummaryBoss()
     cx.CXAnalytics:logEventAndLabel('SummaryBoss', 'SHOW')
 end
 
+function AnalyticsSummaryBossInFirstDay()
+    cx.CXAnalytics:logEventAndLabel('SummaryBossInFirstDay', 'SHOW')
+end
+
 function AnalyticsSummaryBossWordCount(cnt)
     cx.CXAnalytics:logEventAndLabel('SummaryBoss', 'wordsCount_' .. tostring(cnt))
 end
 
 function AnalyticsSummaryBossResult(result)
     cx.CXAnalytics:logEventAndLabel('SummaryBoss', result)
+end
+
+function AnalyticsSummaryBossResultInFirstDay(result)
+    cx.CXAnalytics:logEventAndLabel('SummaryBossInFirstDay', result)
+end
+
+function AnalyticsPassSecondSummaryBossInFirstDay()
+    cx.CXAnalytics:logEventAndLabel('PassSecondSummaryBossInFirstDay', 'SHOW')
 end
 
 ----------------------------------------------------------------------------------------
@@ -237,8 +249,20 @@ function AnalyticsButtonToShare()
     cx.CXAnalytics:logEventAndLabel('Share', 'TOUCH')
 end
 
+function AnalyticsButtonToShareInFirstDay()
+    cx.CXAnalytics:logEventAndLabel('ShareInFirstDay', 'TOUCH')
+end
+
 function AnalyticsShare(name)
     cx.CXAnalytics:logEventAndLabel('Share', name)
+end
+
+function AnalyticsEnterShare()
+    cx.CXAnalytics:logEventAndLabel('Share', 'ENTER')
+end
+
+function AnalyticsEnterShareInFirstDay()
+    cx.CXAnalytics:logEventAndLabel('ShareInFirstDay', 'ENTER')
 end
 
 ----------------------------------------------------------------------------------------
@@ -249,6 +273,10 @@ end
 
 function AnalyticsBuy(itemId)
     cx.CXAnalytics:logEventAndLabel('BuyProduct', tostring(itemId))
+end
+
+function AnalyticsShopBtn()
+    cx.CXAnalytics:logEventAndLabel('Shop', 'TOUCH')
 end
 
 ----------------------------------------------------------------------------------------

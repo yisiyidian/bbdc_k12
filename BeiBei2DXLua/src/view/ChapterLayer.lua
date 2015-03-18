@@ -129,7 +129,7 @@ function ChapterLayer:ctor()
     end
     -- add player
 --    self:addPlayer()
-    self:plotDecoration()
+    -- self:plotDecoration()
     -- scroll to current chapter level
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
 --    self:scrollLevelLayer(progress,0)
