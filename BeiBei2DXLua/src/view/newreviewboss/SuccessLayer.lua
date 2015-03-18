@@ -94,6 +94,13 @@ function SuccessLayer:ctor(number)
     s_CURRENT_USER.beanRewardForCollect             = 3
     s_CURRENT_USER.beanRewardForIron                = 3
 
+    onAndroidKeyPressed(self, function ()
+        s_HUD_LAYER:removeChildByName('missionCompleteCircle')
+        s_CorePlayManager.enterLevelLayer()
+    end, function ()
+
+    end)
+
 end
 
 return SuccessLayer

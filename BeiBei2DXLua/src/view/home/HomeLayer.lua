@@ -18,7 +18,7 @@ local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 local list = {}
 
 function HomeLayer.create(share) 
-    -- s_CURRENT_USER:addBeans(10000)
+    -- s_CURRENT_USER:addBeans(10000)FriendLayer
     -- if s_CURRENT_USER:getBeans() < 1 then
     --     s_CURRENT_USER:addBeans(10000)
     --     saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
@@ -180,6 +180,22 @@ function HomeLayer.create(share)
             --s_SCENE:checkInAnimation()
         end
     end
+
+    onAndroidKeyPressed(layer, function ()
+        local isPopup = s_SCENE.popupLayer:getChildren()
+        if viewIndex == 2 and #isPopup == 0 then
+            local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
+            backColor:runAction(action1)
+
+            viewIndex = 1
+
+            local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+            setting_back:runAction(cc.Sequence:create(action2, action3))
+        end
+    end, function ()
+
+    end)
 
     local button_main = ccui.Button:create("image/homescene/home_page_function_bg1.png",'',"")
     button_main:setScale9Enabled(true)
@@ -755,6 +771,22 @@ function HomeLayer.create(share)
         layer:showDataLayer(true)
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     end
+
+    onAndroidKeyPressed(layer, function ()
+        local isPopup = s_SCENE.popupLayer:getChildren()
+        if isDataShow == true and #isPopup == 0 then
+            isDataShow = false
+            layer:setButtonEnabled(true)
+            local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
+            local action2 = cc.CallFunc:create(function()
+               button_data:setLocalZOrder(0)
+               data_back:removeChildByName('PersonalInfo')
+            end)
+            button_data:runAction(cc.Sequence:create(action1, action2))
+        end
+    end, function ()
+
+    end)
 
     return layer
 end

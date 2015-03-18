@@ -164,6 +164,12 @@ function SummaryBossAlter:lose(entrance)
         end
     end
     continue:addTouchEventListener(nextBoard)
+
+    onAndroidKeyPressed(self, function ()
+       self:lose2(entrance)
+    end, function ()
+
+    end)
     
     
 end
@@ -320,6 +326,14 @@ function SummaryBossAlter:lose2(entrance)
         AnalyticsSummaryBossResult('again')
     end
     again:registerScriptTapHandler(challengeAgain)
+
+    onAndroidKeyPressed(self, function ()
+        s_CorePlayManager.leaveSummaryModel(false)
+        s_CorePlayManager.enterLevelLayer() 
+        cc.SimpleAudioEngine:getInstance():stopAllEffects()
+    end, function ()
+
+    end)
     
 end
 
@@ -426,6 +440,13 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
             self:addWinLabel(win_back)
         end)
     end
+
+    onAndroidKeyPressed(self, function ()
+        s_HUD_LAYER:removeChildByName('missionCompleteCircle')
+        s_CorePlayManager.enterLevelLayer()
+    end, function ()
+
+    end)
 
 
 end

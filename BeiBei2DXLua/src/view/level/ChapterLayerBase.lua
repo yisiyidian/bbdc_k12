@@ -391,14 +391,18 @@ function ChapterLayerBase:addPopup(levelIndex)
         end
     end
     
+    local function closeAnimation()
+        local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 1.5)))
+        local remove = cc.CallFunc:create(function() 
+              s_SCENE:removeAllPopups()
+        end)
+        back:runAction(cc.Sequence:create(move,remove))
+    end
+
     -- add close button
     local function touchEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 1.5)))
-            local remove = cc.CallFunc:create(function() 
-                  s_SCENE:removeAllPopups()
-            end)
-            back:runAction(cc.Sequence:create(move,remove))
+           closeAnimation()
         end
     end
     
@@ -472,12 +476,7 @@ function ChapterLayerBase:addPopup(levelIndex)
     local onTouchEnded = function(touch, event)
         local location = layer:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint(back:getBoundingBox(),location) then
-            local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, 550*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
-                s_SCENE:removeAllPopups()
-            end)
-            back:runAction(cc.Sequence:create(action2,action3))
+           closeAnimation()
         end
     end
 
@@ -488,6 +487,12 @@ function ChapterLayerBase:addPopup(levelIndex)
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
+
+    onAndroidKeyPressed(layer, function ()
+        closeAnimation()
+    end, function ()
+
+    end)
 end
 
 function ChapterLayerBase:plotDecoration()

@@ -92,6 +92,12 @@ function Pause:ctor()
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = node:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, node)
+    
+    onAndroidKeyPressed(node, function ()
+        self:onClose()
+    end, function ()
+
+    end)
  end
 
 function Pause:onClose()

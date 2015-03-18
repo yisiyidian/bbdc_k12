@@ -17,7 +17,10 @@ end
 
 function LoginPopup:ctor()
 	local back_login = cc.Sprite:create("image/login/background_white_login.png")
-    back_login:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+    back_login:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+    back_login:ignoreAnchorPointForPosition(false)
+    back_login:setAnchorPoint(0.5,0.5)
+    self:setContentSize(back_login:getContentSize().width,s_DESIGN_HEIGHT)
     self:addChild(back_login)
     
     local back_width = back_login:getContentSize().width
@@ -108,16 +111,19 @@ function LoginPopup:ctor()
     button_toggle:setTitleColor(cc.c4b(115,197,243,255))
     back_login:addChild(button_toggle)  
 
+    local function closeAnimation()
+        local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3))
+        local action2 = cc.EaseBackIn:create(action1)
+        local action3 = cc.CallFunc:create(function()
+            s_SCENE:removeAllPopups()
+        end)
+        back_login:runAction(cc.Sequence:create(action2,action3))
+    end
+
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            playSound(s_sound_buttonEffect)   
-            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            back_login:runAction(action2)
-            
-            local action3 = cc.DelayTime:create(0.5)
-            local action4 = cc.CallFunc:create(function()s_SCENE:removeAllPopups()end)
-            back_login:runAction(cc.Sequence:create(action3,action4))
+            playSound(s_sound_buttonEffect) 
+            closeAnimation()
         end
     end
     
@@ -133,12 +139,7 @@ function LoginPopup:ctor()
     local onTouchEnded = function(touch, event)
         local location = self:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint(back_login:getBoundingBox(),location) then
-            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
-                s_SCENE:removeAllPopups()
-            end)
-            back_login:runAction(cc.Sequence:create(action2,action3))
+           closeAnimation()
         end
     end
 
@@ -149,6 +150,12 @@ function LoginPopup:ctor()
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
+
+    onAndroidKeyPressed(self, function ()
+           closeAnimation()
+    end, function ()
+
+    end)
 end
 
 return LoginPopup

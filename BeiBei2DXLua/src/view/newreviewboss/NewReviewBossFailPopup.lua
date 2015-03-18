@@ -27,21 +27,25 @@ function NewReviewBossFailPopup.create(currentWordName,reviewWordList,number)
     local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth / 2, s_DESIGN_HEIGHT/2))
     local action2 = cc.EaseBackOut:create(action1)
     back:runAction(action2)
+
+    local function closeAnimation()
+        local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
+        local action2 = cc.EaseBackIn:create(action1)
+        local action3 = cc.CallFunc:create(function()
+            s_SCENE:removeAllPopups()
+            local NewReviewBossMainLayer = require("view.newreviewboss.NewReviewBossMainLayer")
+            local newReviewBossMainLayer = NewReviewBossMainLayer.create(reviewWordList,number)
+            s_SCENE:replaceGameLayer(newReviewBossMainLayer)
+        end)
+        back:runAction(cc.Sequence:create(action2,action3))
+    end
     
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
-                s_SCENE:removeAllPopups()
-                local NewReviewBossMainLayer = require("view.newreviewboss.NewReviewBossMainLayer")
-                local newReviewBossMainLayer = NewReviewBossMainLayer.create(reviewWordList,number)
-                s_SCENE:replaceGameLayer(newReviewBossMainLayer)
-            end)
-            back:runAction(cc.Sequence:create(action2,action3))
+            closeAnimation()
         end
     end
     
@@ -79,15 +83,7 @@ function NewReviewBossFailPopup.create(currentWordName,reviewWordList,number)
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
-                s_SCENE:removeAllPopups()
-                local NewReviewBossMainLayer = require("view.newreviewboss.NewReviewBossMainLayer")
-                local newReviewBossMainLayer = NewReviewBossMainLayer.create(reviewWordList,number)
-                s_SCENE:replaceGameLayer(newReviewBossMainLayer)
-            end)
-            back:runAction(cc.Sequence:create(action2,action3))
+            closeAnimation()
         end
     end
     
@@ -130,6 +126,12 @@ function NewReviewBossFailPopup.create(currentWordName,reviewWordList,number)
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = layer:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
+
+    onAndroidKeyPressed(layer, function ()
+        closeAnimation()
+    end, function ()
+
+    end)
 
     
     return layer

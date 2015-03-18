@@ -199,6 +199,9 @@ function WordLibraryPopup:ctor(index)
     self.summaryButton = addSummaryButton(bottom_sprite,boss)
     bottom_sprite:addChild(self.summaryButton)
 
+    self.reviewButton:setVisible(false)
+    self.summaryButton:setVisible(false)
+
     self.close = function ()
     	
     end
@@ -217,8 +220,13 @@ function WordLibraryPopup:ctor(index)
     else
         self.listview = Listview.create(boss.wrongWordList)  
         self.familiarButton:setTexture("image/islandPopup/familiarwordbegin.png")
-        self.unfamiliarButton:setTexture("image/islandPopup/unfamiliarwordend.png")   
-        if #boss.wrongWordList >= getMaxWrongNumEveryLevel() then
+        self.unfamiliarButton:setTexture("image/islandPopup/unfamiliarwordend.png") 
+        if tonumber(index) == 0 then
+            if #boss.wrongWordList >= 3 then
+                self.reviewButton:setVisible(true)
+                self.summaryButton:setVisible(true)
+            end
+        elseif #boss.wrongWordList >= getMaxWrongNumEveryLevel() then
         --if true then
             self.reviewButton:setVisible(true)
             self.summaryButton:setVisible(true)
@@ -251,8 +259,12 @@ function WordLibraryPopup:ctor(index)
             self.listview = Listview.create(boss.wrongWordList) 
             self.listview:setPosition(2,70)
             backPopup:addChild(self.listview)
-            if #boss.wrongWordList >= getMaxWrongNumEveryLevel() then
-            --if true then
+            if tonumber(index) == 0 then
+                if #boss.wrongWordList >= 3 then
+                    self.reviewButton:setVisible(true)
+                    self.summaryButton:setVisible(true)
+                end
+            elseif #boss.wrongWordList >= getMaxWrongNumEveryLevel() then
                 self.reviewButton:setVisible(true)
                 self.summaryButton:setVisible(true)
             else
@@ -276,6 +288,16 @@ function WordLibraryPopup:ctor(index)
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)   
+
+    onAndroidKeyPressed(self, function ()
+        local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5)))
+        local remove = cc.CallFunc:create(function() 
+            s_SCENE:removeAllPopups()
+        end)
+        backPopup:runAction(cc.Sequence:create(move,remove))
+    end, function ()
+
+    end)
 
 end
 

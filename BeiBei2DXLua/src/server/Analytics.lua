@@ -162,12 +162,43 @@ function AnalyticsStudyLookBackWord()
     cx.CXAnalytics:logEventAndLabel('LookBackWord', 'TOUCH')
 end
 
+function AnalyticsStudySlideCoconut_EnterLayer()
+    cx.CXAnalytics:logEventAndLabel('SlideCoconut_EnterLayer', 'TOUCH')
+end
+
+function AnalyticsStudySlideCoconut_LeaveLayer()
+    cx.CXAnalytics:logEventAndLabel('SlideCoconut_LeaveLayer', 'TOUCH')
+end
+
+function AnalyticsStudyCollectAllWord()
+    cx.CXAnalytics:logEventAndLabel('CollectAllWord', 'TOUCH')
+end
+
+function AnalyticsForgeIron_EnterLayer()
+    cx.CXAnalytics:logEventAndLabel('ForgeIron_EnterLayer', 'TOUCH')
+end
+
+function AnalyticsForgeIron_LeaveLayer()
+    cx.CXAnalytics:logEventAndLabel('ForgeIron_LeaveLayer', 'TOUCH')
+end
+
+function AnalyticsFirstDayEnterSecondIsland()
+    cx.CXAnalytics:logEventAndLabel('FirstDayEnterSecondIsland', 'TOUCH')
+end
+
 ----------------------------------------------------------------------------------------
 
 function AnalyticsReviewBoss()
     cx.CXAnalytics:logEventAndLabel('ReviewBoss', 'SHOW')
 end
 
+function AnalyticsReviewBoss_EnterLayer()
+    cx.CXAnalytics:logEventAndLabel('ReviewBoss_EnterLayer', 'SHOW')
+end
+
+function AnalyticsReviewBoss_LeaveLayer()
+    cx.CXAnalytics:logEventAndLabel('ReviewBoss_LeaveLayer', 'SHOW')
+end
 ----------------------------------------------------------------------------------------
 
 function AnalyticsSummaryBoss()
@@ -248,6 +279,15 @@ function AnalyticsShopBtn()
     cx.CXAnalytics:logEventAndLabel('Shop', 'TOUCH')
 end
 
+----------------------------------------------------------------------------------------
+
+function AnalyticsImproveInfo()
+    cx.CXAnalytics:logEventAndLabel('AnalyticsImproveInfo', 'SHOW')
+end
+
+
+
+----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
 -- first
 ANALYTICS_FIRST_BOOK = 0

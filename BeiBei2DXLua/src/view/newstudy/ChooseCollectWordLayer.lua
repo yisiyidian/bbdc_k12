@@ -243,7 +243,7 @@ end
 
 local function createLoading(interpretation)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-    local tofinish = cc.ProgressTo:create(2,100)
+    local tofinish = cc.ProgressTo:create(5,100)
     
     local button_back = cc.Sprite:create("image/newstudy/progressbegin.png")
     
@@ -271,7 +271,7 @@ local function createLoading(interpretation)
     meaningLabel:setColor(cc.c4b(0,0,0,255))
     button_back:addChild(meaningLabel)
     
-    local action1 = cc.DelayTime:create(2)
+    local action1 = cc.DelayTime:create(5)
     local action2 = cc.CallFunc:create(function()ChooseCollectWordLayer.forceToEnd()end)
     layer:runAction(cc.Sequence:create(action1,action2))
     
@@ -307,10 +307,20 @@ function ChooseCollectWordLayer.create(wordName, wrongWordNum, preWordName, preW
     return layer
 end
 
-function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWordNameState)
-    if s_CURRENT_USER.tutorialStep == s_tutorial_study then
-        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_1)
+local function JudgeEnterSecondIslandInFirstDay()
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    if #bossList == 2 and is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) and  #s_LocalDatabaseManager.getBossInfo(1).rightWordList == 0 and #s_LocalDatabaseManager.getBossInfo(1).wrongWordList == 0 then
+        AnalyticsFirstDayEnterSecondIsland()
     end
+end
+
+function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWordNameState)
+    if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_1 then
+        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_1 + 1)
+    end
+
+    JudgeEnterSecondIslandInFirstDay()
+
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = BackLayer.create(45) 

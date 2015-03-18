@@ -4,6 +4,7 @@ require("common.global")
 local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local GuideAlter            = require("view.newstudy.NewStudyGuideAlter")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
+local PauseButton           = require("view.newreviewboss.NewReviewBossPause")
 
 local BackLayer = class("BackLayer", function()
     return cc.Layer:create()
@@ -31,52 +32,8 @@ function BackLayer.create(offset)   -- offset is 97 or 45 or 0
     back_tail:setPosition(bigWidth/2, 0)
     backColor:addChild(back_tail)
     
-    local pauseBtn = ccui.Button:create("image/button/pauseButtonWhite.png","image/button/pauseButtonWhite.png","image/button/pauseButtonWhite.png")
-    pauseBtn:ignoreAnchorPointForPosition(false)
-    pauseBtn:setAnchorPoint(0,1)
-
-    pauseBtn:setPosition(s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT)
-    s_SCENE.popupLayer.pauseBtn = pauseBtn
+    local pauseBtn = PauseButton.create(CreatePauseFromStudy)
     backColor:addChild(pauseBtn,100)
-    local Pause = require('view.Pause')
-    local function pauseScene(sender,eventType)
-        if eventType == ccui.TouchEventType.ended then
-
-            local pauseLayer = Pause.create()
-            pauseLayer:setPosition(s_LEFT_X, 0)
-            s_SCENE.popupLayer:addBackground()           
-            s_SCENE.popupLayer:addChild(pauseLayer)
-            s_SCENE.popupLayer.listener:setSwallowTouches(true)
-
-            --button sound
-            playSound(s_sound_buttonEffect)
-            
-            backColor.forceFail()
-        end
-    end
-    
-    pauseBtn:addTouchEventListener(pauseScene)
-
-
---    if s_CorePlayManager.isStudyModel() then
---        backColor.progressBar = ProgressBar.create(s_CorePlayManager.maxWrongWordCount, s_CorePlayManager.wrongWordNum, "blue")
---    else
---        backColor.progressBar = ProgressBar.create(s_CorePlayManager.wrongWordNum, s_CorePlayManager.wrongWordNum-s_CorePlayManager.candidateNum, "yellow")
---    end
---    
---    backColor.progressBar:setPosition(bigWidth/2+44, 1049)
---    backColor:addChild(backColor.progressBar)
---    
---    
---    backColor.indexSwell = function ()
---    return backColor.progressBar.swell()
---    end
---    
---    backColor.progressBar.hint = function()
---        local guideAlter = GuideAlter.create(0, "生词进度条", "代表你今天生词积攒任务的完成进度")
---        guideAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
---        backColor:addChild(guideAlter,pauseBtn:getLocalZOrder() + 1)
---    end
     
     return backColor
 end

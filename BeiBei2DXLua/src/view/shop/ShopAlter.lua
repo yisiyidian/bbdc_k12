@@ -155,6 +155,17 @@ function ShopAlter.create(itemId, location)
     local eventDispatcher = main:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 
+    onAndroidKeyPressed(main, function ()
+        local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT * 1.5))
+        local action2 = cc.EaseBackIn:create(action1)
+        local remove = cc.CallFunc:create(function() 
+        main:removeFromParent()
+        end)
+        back:runAction(cc.Sequence:create(action2,remove))
+    end, function ()
+
+    end)
+
     return main
 end
 
