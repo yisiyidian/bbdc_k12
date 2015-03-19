@@ -245,11 +245,10 @@ end
 ----------------------------------------------------------------------------------------
 
 function AnalyticsSummaryBoss()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('SummaryBossInFirstDay', 'SHOW')
+    end
     cx.CXAnalytics:logEventAndLabel('SummaryBoss', 'SHOW')
-end
-
-function AnalyticsSummaryBossInFirstDay()
-    cx.CXAnalytics:logEventAndLabel('SummaryBossInFirstDay', 'SHOW')
 end
 
 function AnalyticsSummaryBossWordCount(cnt)
@@ -257,15 +256,18 @@ function AnalyticsSummaryBossWordCount(cnt)
 end
 
 function AnalyticsSummaryBossResult(result)
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('SummaryBossInFirstDay', result)
+    end
     cx.CXAnalytics:logEventAndLabel('SummaryBoss', result)
 end
 
-function AnalyticsSummaryBossResultInFirstDay(result)
-    cx.CXAnalytics:logEventAndLabel('SummaryBossInFirstDay', result)
-end
-
-function AnalyticsPassSecondSummaryBossInFirstDay()
-    cx.CXAnalytics:logEventAndLabel('PassSecondSummaryBossInFirstDay', 'SHOW')
+function AnalyticsPassSecondSummaryBoss()
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+        if #bossList >= 2 and is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('PassSecondSummaryBossInFirstDay', 'SHOW')
+        end
+    cx.CXAnalytics:logEventAndLabel('PassSecondSummaryBoss', 'SHOW')
 end
 
 ----------------------------------------------------------------------------------------
@@ -289,11 +291,10 @@ end
 ----------------------------------------------------------------------------------------
 
 function AnalyticsButtonToShare()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('ShareInFirstDay', 'TOUCH')
+    end
     cx.CXAnalytics:logEventAndLabel('Share', 'TOUCH')
-end
-
-function AnalyticsButtonToShareInFirstDay()
-    cx.CXAnalytics:logEventAndLabel('ShareInFirstDay', 'TOUCH')
 end
 
 function AnalyticsShare(name)
@@ -301,11 +302,10 @@ function AnalyticsShare(name)
 end
 
 function AnalyticsEnterShare()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('ShareInFirstDay', 'ENTER')
+    end
     cx.CXAnalytics:logEventAndLabel('Share', 'ENTER')
-end
-
-function AnalyticsEnterShareInFirstDay()
-    cx.CXAnalytics:logEventAndLabel('ShareInFirstDay', 'ENTER')
 end
 
 ----------------------------------------------------------------------------------------
