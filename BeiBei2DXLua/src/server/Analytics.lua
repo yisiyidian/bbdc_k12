@@ -163,27 +163,60 @@ function AnalyticsStudyLookBackWord()
 end
 
 function AnalyticsStudySlideCoconut_EnterLayer()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
+        if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('SlideCoconut_EnterLayer_firstday', 'TOUCH')
+        end
+    end
     cx.CXAnalytics:logEventAndLabel('SlideCoconut_EnterLayer', 'TOUCH')
 end
 
 function AnalyticsStudySlideCoconut_LeaveLayer()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
+        if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('SlideCoconut_LeaveLayer_firstday', 'TOUCH')
+        end
+    end
     cx.CXAnalytics:logEventAndLabel('SlideCoconut_LeaveLayer', 'TOUCH')
 end
 
 function AnalyticsStudyCollectAllWord()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
+        if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('CollectAllWord_firstday', 'TOUCH')
+        end
+    end
     cx.CXAnalytics:logEventAndLabel('CollectAllWord', 'TOUCH')
 end
 
 function AnalyticsForgeIron_EnterLayer()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
+        if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('ForgeIron_EnterLayer_firstday', 'TOUCH')
+        end
+    end
     cx.CXAnalytics:logEventAndLabel('ForgeIron_EnterLayer', 'TOUCH')
 end
 
 function AnalyticsForgeIron_LeaveLayer()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
+        if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('ForgeIron_LeaveLayer_firstday', 'TOUCH')
+        end
+    end
     cx.CXAnalytics:logEventAndLabel('ForgeIron_LeaveLayer', 'TOUCH')
 end
-
 function AnalyticsFirstDayEnterSecondIsland()
-    cx.CXAnalytics:logEventAndLabel('FirstDayEnterSecondIsland', 'TOUCH')
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    if bossList == nil then
+        return
+    end
+    if #bossList == 2 and is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) and  #s_LocalDatabaseManager.getBossInfo(1).rightWordList == 0 and #s_LocalDatabaseManager.getBossInfo(1).wrongWordList == 0 then
+        cx.CXAnalytics:logEventAndLabel('FirstDayEnterSecondIsland', 'TOUCH')
+    end
+    if #bossList == 2 then
+    cx.CXAnalytics:logEventAndLabel('EnterSecondIsland', 'TOUCH')
+    end
 end
 
 ----------------------------------------------------------------------------------------
@@ -193,10 +226,20 @@ function AnalyticsReviewBoss()
 end
 
 function AnalyticsReviewBoss_EnterLayer()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
+        if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('ReviewBoss_EnterLayer_firstday', 'TOUCH')
+        end
+    end
     cx.CXAnalytics:logEventAndLabel('ReviewBoss_EnterLayer', 'SHOW')
 end
 
 function AnalyticsReviewBoss_LeaveLayer()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
+        if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('ReviewBoss_LeaveLayer_firstday', 'TOUCH')
+        end
+    end
     cx.CXAnalytics:logEventAndLabel('ReviewBoss_LeaveLayer', 'SHOW')
 end
 ----------------------------------------------------------------------------------------
