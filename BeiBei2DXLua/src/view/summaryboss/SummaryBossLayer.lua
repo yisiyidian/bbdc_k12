@@ -22,9 +22,6 @@ local bullet_damage = 2
 
 function SummaryBossLayer.create(wordList,chapter,entrance)   
     AnalyticsSummaryBoss()
-    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
-        AnalyticsSummaryBossInFirstDay()
-    end
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()
     math.randomseed(os.time())
@@ -748,7 +745,8 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     layer:scheduleUpdateWithPriorityLua(update, 0)
     
     -- boss "s_sound_Get_Outside"
-    playMusic(s_sound_Get_Outside,true)
+    playSoundByVolume(s_sound_Get_Outside,1,true)
+    playSoundByVolume(s_sound_Get_Outside_Speedup,0,true)
     
     return layer  
 end
@@ -1606,9 +1604,6 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
 --    playSound(s_sound_win)
 
     AnalyticsSummaryBossResult('win')
-    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
-        AnalyticsSummaryBossResultInFirstDay('win')
-    end
 end
 
 function SummaryBossLayer:lose(chapter,entrance,wordList)
