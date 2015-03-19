@@ -35,7 +35,7 @@ local function changeAccount(username, password)
         else
             -- s_SCENE:removeAllPopups()
 
-            -- AnalyticsLogOut()
+            AnalyticsAccountChange()
             cx.CXAvos:getInstance():logOut()
             -- s_LocalDatabaseManager.setLogOut(true)
             s_LocalDatabaseManager.close()
