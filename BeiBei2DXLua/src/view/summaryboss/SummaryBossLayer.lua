@@ -22,9 +22,6 @@ local bullet_damage = 2
 
 function SummaryBossLayer.create(wordList,chapter,entrance)   
     AnalyticsSummaryBoss()
-    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
-        AnalyticsSummaryBossInFirstDay()
-    end
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()
     math.randomseed(os.time())
@@ -749,6 +746,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     
     -- boss "s_sound_Get_Outside"
     playMusic(s_sound_Get_Outside,true)
+    --playSoundByVolume(s_sound_Get_Outside_Speedup,0,true)
     
     return layer  
 end
@@ -1023,6 +1021,7 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
             self.girl:setAnimation(0,'girl-afraid',true)
             -- deadline "Mechanical Clock Ring "
             playSound(s_sound_Mechanical_Clock_Ring)
+            playMusic(s_sound_Get_Outside_Speedup,true)
         end
     end,{})
     local blinkIn = cc.FadeTo:create(0.5,50)
@@ -1606,9 +1605,6 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
 --    playSound(s_sound_win)
 
     AnalyticsSummaryBossResult('win')
-    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
-        AnalyticsSummaryBossResultInFirstDay('win')
-    end
 end
 
 function SummaryBossLayer:lose(chapter,entrance,wordList)

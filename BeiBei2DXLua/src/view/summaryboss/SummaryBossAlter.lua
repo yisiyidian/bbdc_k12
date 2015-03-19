@@ -29,15 +29,10 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     layer:addChild(back)
     back:setName('background')
-    local function JudgeEnterSecondIslandInFirstDay()
-        local bossList = s_LocalDatabaseManager.getAllBossInfo()
-        if #bossList >= 2 and is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
-            AnalyticsPassSecondSummaryBossInFirstDay()
-        end
-    end
+
     if win then
         if entrance == ENTRANCE_NORMAL then
-            JudgeEnterSecondIslandInFirstDay()
+            AnalyticsPassSecondSummaryBoss()
             s_CURRENT_USER:addBeans(3)
             saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
         end
@@ -188,6 +183,7 @@ function SummaryBossAlter:addTime()
     local entrance = self.entrance
     local wordList = self.wordList
     bossLayer.useItem = true
+    playMusic(s_sound_Get_Outside,true)
 
     --boss:setPosition(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75)
     bossLayer.globalLock = false
@@ -204,6 +200,7 @@ function SummaryBossAlter:addTime()
             bossLayer.girl:setAnimation(0,'girl-afraid',true)
             -- deadline "Mechanical Clock Ring "
             playSound(s_sound_Mechanical_Clock_Ring)
+            playMusic(s_sound_Get_Outside_Speedup,true)
         end
     end,{})
     local blinkIn = cc.FadeTo:create(0.5,50)

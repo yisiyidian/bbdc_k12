@@ -8,10 +8,16 @@ end
 ----------------------------------------------------------------------------------------
 
 function AnalyticsTutorial(step)
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('TutorialStepInFirstDay', tostring(step))
+    end
     cx.CXAnalytics:logEventAndLabel('TutorialStep', tostring(step))
 end
 
 function AnalyticsSmallTutorial(step)
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('TutorialSmallStepInFirstDay', tostring(step))
+    end
     cx.CXAnalytics:logEventAndLabel('TutorialSmallStep', tostring(step))
 end
 
@@ -22,6 +28,9 @@ end
 ----------------------------------------------------------------------------------------
 
 function AnalyticsDailyCheckIn(day)
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('DailyCheckInInFirstDay', tostring(day))
+    end
     cx.CXAnalytics:logEventAndLabel('DailyCheckIn', tostring(day))
 end
 
@@ -40,68 +49,110 @@ function AnalyticsSignUp_QQ()
 end
 
 function AnalyticsAccountBind()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('AccountBindInFirstDay', 'YES')
+    end
     cx.CXAnalytics:logEventAndLabel('AccountBind', 'YES')
 end
 
 function AnalyticsLogOut()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('LogOutInFirstDay', 'YES')
+    end
     cx.CXAnalytics:logEventAndLabel('LogOut', 'YES')
 end
 
 ----------------------------------------------------------------------------------------
 
 function AnalyticsWordsLibBtn()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('WordsLibInFirstDay', 'TOUCH')
+    end
     cx.CXAnalytics:logEventAndLabel('WordsLib', 'TOUCH')
 end
 
 ----------------------------------------------------------------------------------------
 
 function AnalyticsFriendBtn()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('FriendInFirstDay', 'TOUCH')
+    end
     cx.CXAnalytics:logEventAndLabel('Friend', 'TOUCH')
 end
 
 function AnalyticsFriendRequest()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('FriendInFirstDay', 'Request')
+    end
     cx.CXAnalytics:logEventAndLabel('Friend', 'Request')
 end
 
 function AnalyticsFriendAccept()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('FriendInFirstDay', 'Accept')
+    end
     cx.CXAnalytics:logEventAndLabel('Friend', 'Accept')
 end
 
 ----------------------------------------------------------------------------------------
 
 function AnalyticsDataCenterBtn()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('DataCenterInFirstDay', 'TOUCH')
+    end
     cx.CXAnalytics:logEventAndLabel('DataCenter', 'TOUCH')
 end
 
 function AnalyticsDataCenterPage(pageName)
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('DataCenterInFirstDay', pageName)
+    end
     cx.CXAnalytics:logEventAndLabel('DataCenter', pageName)
 end
 
 ----------------------------------------------------------------------------------------
 
 function AnalyticsChangeBookBtn()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('BookInFirstDay', 'TOUCH')
+    end
     cx.CXAnalytics:logEventAndLabel('Book', 'TOUCH')
 end
 
 function AnalyticsBook(bookname)
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('BookInFirstDay', 'selected_' .. bookname)
+    end
     cx.CXAnalytics:logEventAndLabel('Book', 'selected_' .. bookname)
 end
 
 function AnalyticsDownloadBook(bookname)
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('BookInFirstDay', 'download_' .. bookname)
+    end
     cx.CXAnalytics:logEventAndLabel('Book', 'download_' .. bookname)
 end
 
 ----------------------------------------------------------------------------------------
 
 function AnalyticsEnterLevelLayerBtn()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('EnterLevelLayerInFirstDay', 'TOUCH')
+    end
     cx.CXAnalytics:logEventAndLabel('EnterLevelLayer', 'TOUCH')
 end
 
 function AnalyticsTasksBtn()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('TasksInFirstDay', 'TOUCH')
+    end
     cx.CXAnalytics:logEventAndLabel('Tasks', 'TOUCH')
 end
 
 function AnalyticsTasksFinished(layerName)
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('TasksFinishedInFirstDay', layerName)
+    end
     cx.CXAnalytics:logEventAndLabel('TasksFinished', layerName)
 end
 
@@ -109,81 +160,147 @@ end
 
 -- 点击 重玩错词
 function AnalyticsReplayWrongWordsBtn()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('ReplayWrongWordsInFirstDay', 'TOUCH')
+    end
     cx.CXAnalytics:logEventAndLabel('ReplayWrongWords', 'TOUCH')
 end
 
 -- 点击 依然复习
 function AnalyticsContinueReviewBtn()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('ContinueReviewInFirstDay', 'TOUCH')
+    end
     cx.CXAnalytics:logEventAndLabel('ContinueReview', 'TOUCH')
 end
 
 -- 点击 下一步
 function AnalyticsStudyNextBtn()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('StudyNextInFirstDay', 'TOUCH')
+    end
     cx.CXAnalytics:logEventAndLabel('StudyNext', 'TOUCH')
 end
 
 -- 猜错
 function AnalyticsStudyGuessWrong()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('answerWordMeaningInFirstDay', 'GuessWrong')
+    end
     cx.CXAnalytics:logEventAndLabel('answerWordMeaning', 'GuessWrong')
 end
 
 -- 答对
 function AnalyticsStudyAnswerRight()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('answerWordMeaningInFirstDay', 'AnswerRight')
+    end
     cx.CXAnalytics:logEventAndLabel('answerWordMeaning', 'AnswerRight')
 end
 
 -- 不会
 function AnalyticsStudyDontKnowAnswer()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('answerWordMeaningInFirstDay', 'DontKnowAnswer')
+    end
     cx.CXAnalytics:logEventAndLabel('answerWordMeaning', 'DontKnowAnswer')
 end
 
 -- 猜错
 function AnalyticsStudyGuessWrong_strikeWhileHot()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOTInFirstDay', 'GuessWrong')
+    end
     cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOT', 'GuessWrong')
 end
 
 -- 答对
 function AnalyticsStudyAnswerRight_strikeWhileHot()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOTInFirstDay', 'AnswerRight')
+    end
     cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOT', 'AnswerRight')
 end
 
 -- 不会
 function AnalyticsStudyDontKnowAnswer_strikeWhileHot()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOTInFirstDay', 'DontKnowAnswer')
+    end
     cx.CXAnalytics:logEventAndLabel('answerWordMeaningHOT', 'DontKnowAnswer')
 end
 
 -- 点击 跳过划单词步骤
 function AnalyticsStudySkipSwipeWord()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('SkipSwipeWordInFirstDay', 'TOUCH')
+    end
     cx.CXAnalytics:logEventAndLabel('SkipSwipeWord', 'TOUCH')
 end
 
 -- 点击 生词回看
 function AnalyticsStudyLookBackWord()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('LookBackWordInFirstDay', 'TOUCH')
+    end
     cx.CXAnalytics:logEventAndLabel('LookBackWord', 'TOUCH')
 end
 
 function AnalyticsStudySlideCoconut_EnterLayer()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
+        if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('SlideCoconut_EnterLayer_firstday', 'TOUCH')
+        end
+    end
     cx.CXAnalytics:logEventAndLabel('SlideCoconut_EnterLayer', 'TOUCH')
 end
 
 function AnalyticsStudySlideCoconut_LeaveLayer()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
+        if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('SlideCoconut_LeaveLayer_firstday', 'TOUCH')
+        end
+    end
     cx.CXAnalytics:logEventAndLabel('SlideCoconut_LeaveLayer', 'TOUCH')
 end
 
 function AnalyticsStudyCollectAllWord()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
+        if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('CollectAllWord_firstday', 'TOUCH')
+        end
+    end
     cx.CXAnalytics:logEventAndLabel('CollectAllWord', 'TOUCH')
 end
 
 function AnalyticsForgeIron_EnterLayer()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
+        if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('ForgeIron_EnterLayer_firstday', 'TOUCH')
+        end
+    end
     cx.CXAnalytics:logEventAndLabel('ForgeIron_EnterLayer', 'TOUCH')
 end
 
 function AnalyticsForgeIron_LeaveLayer()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
+        if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('ForgeIron_LeaveLayer_firstday', 'TOUCH')
+        end
+    end
     cx.CXAnalytics:logEventAndLabel('ForgeIron_LeaveLayer', 'TOUCH')
 end
-
 function AnalyticsFirstDayEnterSecondIsland()
-    cx.CXAnalytics:logEventAndLabel('FirstDayEnterSecondIsland', 'TOUCH')
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    if bossList == nil then
+        return
+    end
+    if #bossList == 2 and is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) and  #s_LocalDatabaseManager.getBossInfo(1).rightWordList == 0 and #s_LocalDatabaseManager.getBossInfo(1).wrongWordList == 0 then
+        cx.CXAnalytics:logEventAndLabel('FirstDayEnterSecondIsland', 'TOUCH')
+    end
+    if #bossList == 2 then
+    cx.CXAnalytics:logEventAndLabel('EnterSecondIsland', 'TOUCH')
+    end
 end
 
 ----------------------------------------------------------------------------------------
@@ -193,20 +310,29 @@ function AnalyticsReviewBoss()
 end
 
 function AnalyticsReviewBoss_EnterLayer()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
+        if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('ReviewBoss_EnterLayer_firstday', 'TOUCH')
+        end
+    end
     cx.CXAnalytics:logEventAndLabel('ReviewBoss_EnterLayer', 'SHOW')
 end
 
 function AnalyticsReviewBoss_LeaveLayer()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
+        if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('ReviewBoss_LeaveLayer_firstday', 'TOUCH')
+        end
+    end
     cx.CXAnalytics:logEventAndLabel('ReviewBoss_LeaveLayer', 'SHOW')
 end
 ----------------------------------------------------------------------------------------
 
 function AnalyticsSummaryBoss()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('SummaryBossInFirstDay', 'SHOW')
+    end
     cx.CXAnalytics:logEventAndLabel('SummaryBoss', 'SHOW')
-end
-
-function AnalyticsSummaryBossInFirstDay()
-    cx.CXAnalytics:logEventAndLabel('SummaryBossInFirstDay', 'SHOW')
 end
 
 function AnalyticsSummaryBossWordCount(cnt)
@@ -214,15 +340,18 @@ function AnalyticsSummaryBossWordCount(cnt)
 end
 
 function AnalyticsSummaryBossResult(result)
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('SummaryBossInFirstDay', result)
+    end
     cx.CXAnalytics:logEventAndLabel('SummaryBoss', result)
 end
 
-function AnalyticsSummaryBossResultInFirstDay(result)
-    cx.CXAnalytics:logEventAndLabel('SummaryBossInFirstDay', result)
-end
-
-function AnalyticsPassSecondSummaryBossInFirstDay()
-    cx.CXAnalytics:logEventAndLabel('PassSecondSummaryBossInFirstDay', 'SHOW')
+function AnalyticsPassSecondSummaryBoss()
+    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+        if #bossList >= 2 and is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+            cx.CXAnalytics:logEventAndLabel('PassSecondSummaryBossInFirstDay', 'SHOW')
+        end
+    cx.CXAnalytics:logEventAndLabel('PassSecondSummaryBoss', 'SHOW')
 end
 
 ----------------------------------------------------------------------------------------
@@ -246,11 +375,10 @@ end
 ----------------------------------------------------------------------------------------
 
 function AnalyticsButtonToShare()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('ShareInFirstDay', 'TOUCH')
+    end
     cx.CXAnalytics:logEventAndLabel('Share', 'TOUCH')
-end
-
-function AnalyticsButtonToShareInFirstDay()
-    cx.CXAnalytics:logEventAndLabel('ShareInFirstDay', 'TOUCH')
 end
 
 function AnalyticsShare(name)
@@ -258,11 +386,10 @@ function AnalyticsShare(name)
 end
 
 function AnalyticsEnterShare()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('ShareInFirstDay', 'ENTER')
+    end
     cx.CXAnalytics:logEventAndLabel('Share', 'ENTER')
-end
-
-function AnalyticsEnterShareInFirstDay()
-    cx.CXAnalytics:logEventAndLabel('ShareInFirstDay', 'ENTER')
 end
 
 ----------------------------------------------------------------------------------------
