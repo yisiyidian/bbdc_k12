@@ -745,8 +745,8 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     layer:scheduleUpdateWithPriorityLua(update, 0)
     
     -- boss "s_sound_Get_Outside"
-    playSoundByVolume(s_sound_Get_Outside,1,true)
-    playSoundByVolume(s_sound_Get_Outside_Speedup,0,true)
+    playMusic(s_sound_Get_Outside,true)
+    --playSoundByVolume(s_sound_Get_Outside_Speedup,0,true)
     
     return layer  
 end
@@ -1021,6 +1021,7 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
             self.girl:setAnimation(0,'girl-afraid',true)
             -- deadline "Mechanical Clock Ring "
             playSound(s_sound_Mechanical_Clock_Ring)
+            playMusic(s_sound_Get_Outside_Speedup,true)
         end
     end,{})
     local blinkIn = cc.FadeTo:create(0.5,50)

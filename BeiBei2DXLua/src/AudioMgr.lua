@@ -27,16 +27,6 @@ function playSound(filename)
     end
 end
 
-function playSoundByVolume(filename,volume,isLoop)
-    if db.isSoundOn() then
-        local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename)
-        cc.SimpleAudioEngine:getInstance():setEffectsVolume(volume)
-        if cc.FileUtils:getInstance():isFileExist(localPath) then
-            cc.SimpleAudioEngine:getInstance():playEffect(localPath,isLoop)
-        end
-    end
-end
-
 WORD_SOUND_US = 'us'
 WORD_SOUND_EN = 'en'
 function getWordSoundFileNamePrefix()
