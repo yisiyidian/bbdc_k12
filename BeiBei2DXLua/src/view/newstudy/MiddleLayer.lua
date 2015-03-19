@@ -80,7 +80,7 @@ local function wordAnimation(endPoint,back1,back2)
 end
 
 local function createBeanSprite(bean)
-    local beens = cc.Sprite:create("image/bean/beanNumber.png")
+    local beens = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
     beens:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-40)
 
     local been_number = cc.Label:createWithSystemFont(bean,'',24)

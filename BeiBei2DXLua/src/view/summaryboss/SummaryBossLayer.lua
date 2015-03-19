@@ -502,7 +502,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             return true
         end
     
-        local length_gap = 5.0
+        local length_gap = 50.0
 
         local location = layer:convertToNodeSpace(touch:getLocation())
         if chapter == 2 then
@@ -521,11 +521,13 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         else
             local deltaX = (location.x - lastTouchLocation.x) * length_gap/length
             local deltaY = (location.y - lastTouchLocation.y) * length_gap/length
-
+            --print('length'..length..'length_gap'..length_gap)
+            --local time = os.clock()
             for i = 1, length/length_gap do
                 fakeTouchMoved({x=lastTouchLocation.x+(i-1)*deltaX,y=lastTouchLocation.y+(i-1)*deltaY})
             end
             fakeTouchMoved(location)
+            --print('moved time = '..os.clock() -time)
         end
 
         lastTouchLocation = location
@@ -745,8 +747,8 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     layer:scheduleUpdateWithPriorityLua(update, 0)
     
     -- boss "s_sound_Get_Outside"
-    playSoundByVolume(s_sound_Get_Outside,1,true)
-    playSoundByVolume(s_sound_Get_Outside_Speedup,0,true)
+    playMusic(s_sound_Get_Outside,true)
+    --playSoundByVolume(s_sound_Get_Outside_Speedup,0,true)
     
     return layer  
 end
@@ -1021,6 +1023,7 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
             self.girl:setAnimation(0,'girl-afraid',true)
             -- deadline "Mechanical Clock Ring "
             playSound(s_sound_Mechanical_Clock_Ring)
+            playMusic(s_sound_Get_Outside_Speedup,true)
         end
     end,{})
     local blinkIn = cc.FadeTo:create(0.5,50)

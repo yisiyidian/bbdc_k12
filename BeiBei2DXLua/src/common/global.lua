@@ -38,7 +38,7 @@ local function _initConstant()
     s_sound_Get_Outside_Speedup = 'res/sound/Get_Outside_speedup.mp3'
     s_sound_learn_false = 'res/sound/learn_false.mp3'
     s_sound_learn_true = 'res/sound/learn_true.mp3'
-    s_sound_Mechanical_Clock_Ring = 'res/sound/Mechanical_Clock_Ring.mp3'
+    s_sound_Mechanical_Clock_Ring = 'res/sound/faster.wav'
     s_sound_Pluto = 'res/sound/Pluto.mp3'
     s_sound_ReadyGo = 'res/sound/ReadyGo.mp3'
     s_sound_Road_to_Moscow = 'res/sound/Road_to_Moscow.mp3'
