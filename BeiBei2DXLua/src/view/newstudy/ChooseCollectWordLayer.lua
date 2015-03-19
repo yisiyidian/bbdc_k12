@@ -7,6 +7,7 @@ local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
 
+
 local  ChooseCollectWordLayer = class("ChooseCollectWordLayer", function ()
     return cc.Layer:create()
 end)
@@ -307,19 +308,12 @@ function ChooseCollectWordLayer.create(wordName, wrongWordNum, preWordName, preW
     return layer
 end
 
-local function JudgeEnterSecondIslandInFirstDay()
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
-    if #bossList == 2 and is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) and  #s_LocalDatabaseManager.getBossInfo(1).rightWordList == 0 and #s_LocalDatabaseManager.getBossInfo(1).wrongWordList == 0 then
-        AnalyticsFirstDayEnterSecondIsland()
-    end
-end
-
 function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWordNameState)
     if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_1 then
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_1 + 1)
     end
 
-    JudgeEnterSecondIslandInFirstDay()
+    AnalyticsFirstDayEnterSecondIsland()
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
