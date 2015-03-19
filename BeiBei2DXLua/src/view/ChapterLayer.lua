@@ -762,7 +762,7 @@ function ChapterLayer:addBackToHome()
 end
 
 function ChapterLayer:addBeansUI()
-    -- self.beans = cc.Sprite:create('image/bean/beanNumber.png')
+    -- self.beans = cc.Sprite:create('image/chapter/chapter0/background_been_white.png')
     self.beans = cc.Sprite:create('image/chapter/chapter0/background_been_white.png')
     self.beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
     self:addChild(self.beans,150)
@@ -778,7 +778,7 @@ function ChapterLayer:addBeansUI()
     self.beanCountLabel:setPosition(self.beans:getContentSize().width * 0.65 , self.beans:getContentSize().height/2)
     self.beans:addChild(self.beanCountLabel,10)
 
-    -- local been_number_back = cc.Sprite:create("image/bean/beanNumber.png")
+    -- local been_number_back = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
     -- been_number_back:setPosition(bigWidth-100, s_DESIGN_HEIGHT-50)
     -- backColor:addChild(been_number_back)
 
