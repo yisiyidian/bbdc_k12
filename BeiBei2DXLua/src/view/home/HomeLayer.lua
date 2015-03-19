@@ -74,7 +74,7 @@ function HomeLayer.create(share)
     top:setPosition(0.5 * backColor:getContentSize().width,s_DESIGN_HEIGHT)
     backColor:addChild(top)
     
-    local been_number_back = cc.Sprite:create("image/bean/beanNumber.png")
+    local been_number_back = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
     been_number_back:setPosition(bigWidth-100, s_DESIGN_HEIGHT-50)
     backColor:addChild(been_number_back)
 
