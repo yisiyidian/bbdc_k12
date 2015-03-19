@@ -521,13 +521,13 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         else
             local deltaX = (location.x - lastTouchLocation.x) * length_gap/length
             local deltaY = (location.y - lastTouchLocation.y) * length_gap/length
-            print('length'..length..'length_gap'..length_gap)
-            local time = os.clock()
+            --print('length'..length..'length_gap'..length_gap)
+            --local time = os.clock()
             for i = 1, length/length_gap do
                 fakeTouchMoved({x=lastTouchLocation.x+(i-1)*deltaX,y=lastTouchLocation.y+(i-1)*deltaY})
             end
             fakeTouchMoved(location)
-            print('moved time = '..os.clock() -time)
+            --print('moved time = '..os.clock() -time)
         end
 
         lastTouchLocation = location
