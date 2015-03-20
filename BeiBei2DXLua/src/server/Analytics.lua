@@ -126,6 +126,13 @@ function AnalyticsBook(bookname)
     cx.CXAnalytics:logEventAndLabel('Book', 'selected_' .. bookname)
 end
 
+function AnalyticsFirstBook(bookname)
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('FirstBookInFirstDay', 'selected_' .. bookname)
+    end
+    cx.CXAnalytics:logEventAndLabel('FirstBook', 'selected_' .. bookname)
+end
+
 function AnalyticsDownloadBook(bookname)
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         cx.CXAnalytics:logEventAndLabel('BookInFirstDay', 'download_' .. bookname)

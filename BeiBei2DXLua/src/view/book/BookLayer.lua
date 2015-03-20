@@ -69,6 +69,7 @@ function BookLayer.create()
 
                 if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
                     s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
+                    AnalyticsFirstBook(key)
                 end
                 
                 s_CURRENT_USER.bookKey = key

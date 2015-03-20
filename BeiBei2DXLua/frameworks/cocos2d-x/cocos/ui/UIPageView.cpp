@@ -135,7 +135,7 @@ void PageView::addPage(Layout* page)
     {
         return;
     }
-
+    
     
     addChild(page);
     _pages.pushBack(page);
@@ -226,7 +226,7 @@ void PageView::onSizeChanged()
 {
     Layout::onSizeChanged();
     if (isVertical) {
-        _rightBoundary = getContentSize().height;
+        _rightBoundary = -getContentSize().height;
     }
     else {
         _rightBoundary = getContentSize().width;
@@ -571,7 +571,7 @@ void PageView::handleReleaseLogic(Touch *touch)
             pageWidth = getContentSize().height;
         }
         if (!_usingCustomScrollThreshold) {
-            _customScrollThreshold = pageWidth / 2.0;
+            _customScrollThreshold = pageWidth / 4.0;
         }
         float boundary = _customScrollThreshold;
         if (curPageLocation <= -boundary)
@@ -732,6 +732,8 @@ void PageView::setVertical(bool v){
     isVertical = v;
     if (v) {
         _curPageIdx = 100;
+        _rightBoundary = getContentSize().height;
+        _leftBoundary = getContentSize().height;
     }
 }
     
