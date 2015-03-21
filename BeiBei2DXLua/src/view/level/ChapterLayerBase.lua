@@ -427,7 +427,7 @@ function ChapterLayerBase:addPopup(levelIndex)
             local action1 = cc.CallFunc:create(function()
                 wordLibrary:setVisible(true)
                 local action2 = cc.OrbitCamera:create(0.5,1, 0, -90, 90, 0, 0)
-                wordLibrary:runAction(action2)
+                wordLibrary.backPopup:runAction(action2)
              end)
             back:runAction(cc.Sequence:create(action0,action1))
             
