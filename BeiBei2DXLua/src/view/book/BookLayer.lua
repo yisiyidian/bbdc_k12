@@ -49,6 +49,7 @@ function BookLayer.create()
     local name_array = {}
     local full_name_array = {}
     local key_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
+    --local key_array = g_BOOKKEYS
     for i = 1, #key_array do
         name_array[i] = string.upper(key_array[i])
         full_name_array[i] = string.upper(key_array[1])
@@ -92,6 +93,47 @@ function BookLayer.create()
 
         smallBack:addTouchEventListener(func_array[i])
         smallBack:setAnchorPoint(0.5,0)
+
+        if key == s_CURRENT_USER.bookKey then
+            local shine = cc.Sprite:create('image/book/choose_book_using_now.png')
+            shine:setPosition(smallBack:getContentSize().width / 2 - 7,smallBack:getContentSize().height / 2)
+            smallBack:addChild(shine)
+            local girl = cc.Sprite:create('image/book/choose_book_using_now_beibei.png')
+            smallBack:addChild(girl,-1)
+            if i == 1 or i % 2 == 0 then
+                girl:setPosition(-30,smallBack:getContentSize().height / 2 + 15)
+            else
+                girl:setRotationSkewY(180)
+                girl:setPosition(smallBack:getContentSize().width + 10,smallBack:getContentSize().height / 2 + 15)
+            end
+        end
+        if s_LocalDatabaseManager.getTotalStudyWordsNumByBookKey(key) > 0 then
+            local progressBack = cc.Sprite:create('image/book/book_progress2.png')
+            progressBack:setPosition(smallBack:getContentSize().width / 2 - 7,smallBack:getContentSize().height + 25)
+            smallBack:addChild(progressBack)
+            local percent = s_LocalDatabaseManager.getTotalStudyWordsNumByBookKey(key) / s_DataManager.books[key].words
+            --percent = 0.6
+            local progress = ccui.Scale9Sprite:create('image/book/book_progress1.png',cc.rect(0,0,127,15),cc.rect(7.5, 0, 112, 15))
+            progress:setContentSize(cc.size(15 + 178 * percent,15))
+            progress:ignoreAnchorPointForPosition(false)
+            progress:setAnchorPoint(0,0.5)
+            progress:setPosition(0,progressBack:getContentSize().height / 2)
+            progressBack:addChild(progress)
+            local per = '%'
+            local label = cc.Label:createWithSystemFont(string.format('%d%s',percent * 100,per),'',16)
+            label:ignoreAnchorPointForPosition(false)
+            label:setPosition(progress:getContentSize().width,progress:getContentSize().height / 2)
+            progress:addChild(label)
+            if percent < 0.5 then
+                if percent < 0.01 then
+                    label:setString(string.format('%.1f%s',percent * 100,per))
+                end
+                label:setAnchorPoint(-0.3,0.5)
+                label:setColor(cc.c3b(107,178,255))
+            else
+                label:setAnchorPoint(1.3,0.5)
+            end
+        end
 
         local richtext = ccui.RichText:create()
     
