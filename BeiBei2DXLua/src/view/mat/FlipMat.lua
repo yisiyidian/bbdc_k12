@@ -13,7 +13,7 @@ local FlipMat = class("FlipMat", function()
     return cc.Layer:create()
 end)
 
-function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
+function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
     if spineName == nil then
         spineName = "coconut_light"
     end
@@ -25,6 +25,8 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
     main:setContentSize(main_width, main_height)
     main:setAnchorPoint(0.5,0)
     main:ignoreAnchorPointForPosition(false)
+    -- main:setPosition(blackColor:getContentSize().width/2,160)
+    -- blackColor:addChild(main)
 
     main.success    = function()end
     main.fail       = function()end
@@ -76,15 +78,6 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
     slideCoco[5] = s_sound_slideCoconut4
     slideCoco[6] = s_sound_slideCoconut5
     slideCoco[7] = s_sound_slideCoconut6
-
-    --    local slideCoin = {}
-    --    slideCoin[1] = s_sound_slideCoin
-    --    slideCoin[2] = s_sound_slideCoin1
-    --    slideCoin[3] = s_sound_slideCoin2
-    --    slideCoin[4] = s_sound_slideCoin3
-    --    slideCoin[5] = s_sound_slideCoin4
-    --    slideCoin[6] = s_sound_slideCoin5
-    --    slideCoin[7] = s_sound_slideCoin6
 
     local selectStack = {}
 
@@ -165,37 +158,137 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
         end
     end
 
-    local finger = nil
-    main.finger_action = function()
-        if finger then
-            finger:removeFromParent()
-        end 
-
-        finger = cc.Sprite:create("image/studyscene/global_finger.png")
-        finger:setAnchorPoint(0,1)
-        finger:setPosition(firstFlipNode:getPosition())
-        main:addChild(finger)
-
+    local function guidePath()
         local actionList = {}
-        local action1 = cc.DelayTime:create(0.5)
-        table.insert(actionList, action1)
         for i = 1, #main.answerPath do
-            local action2 = cc.MoveTo:create(0.5, cc.p(main_mat[main.answerPath[i].x][main.answerPath[i].y]:getPosition()))
-            table.insert(actionList, action2)
+            local action1 = cc.MoveTo:create(0.3, cc.p(main_mat[main.answerPath[i].x][main.answerPath[i].y]:getPosition()))
+            table.insert(actionList, action1)
         end
-        local action3 = cc.FadeOut:create(0.5)
-        local action4 = cc.Place:create(cc.p(firstFlipNode:getPosition()))
-        local action5 = cc.FadeIn:create(0.5)
-        table.insert(actionList, action3)
-        table.insert(actionList, action4)
-        table.insert(actionList, action5)
-        local action6 = cc.Sequence:create(actionList)
-        finger:runAction(cc.RepeatForever:create(action6))
+
+        local action = cc.Sequence:create(actionList)
+        return action
+    end
+
+
+    local finger
+    main.finger_action = function()
+        finger = cc.Sprite:create('image/newstudy/qian.png')
+        finger:setPosition(firstFlipNode:getPositionX(),firstFlipNode:getPositionY())
+        finger:ignoreAnchorPointForPosition(false)
+        finger:setAnchorPoint(0.2,0.8)
+        finger:setScale(1.5)
+        main:addChild(finger) 
+
+        local action0 = cc.DelayTime:create(0.5)
+        local action2 = cc.DelayTime:create(1 + 0.3 * string.len(main_word))
+        local action3 = cc.DelayTime:create(0.2)
+
+        main:runAction(cc.RepeatForever:create(cc.Sequence:create(
+            cc.CallFunc:create(function ()
+                finger:runAction(cc.FadeIn:create(0.5))
+                finger:setTexture("image/newstudy/qian.png")
+                finger:runAction(cc.ScaleTo:create(0.5,1))
+            end),
+            action0,
+            cc.CallFunc:create(
+            function ()
+                finger:setTexture("image/newstudy/hou.png")
+                finger:runAction(guidePath())
+            end)
+            ,action2,
+            cc.CallFunc:create(function ()
+                finger:runAction(cc.FadeOut:create(0.2))
+                finger:setTexture("image/newstudy/qian.png")
+                finger:runAction(cc.ScaleTo:create(0.2,1.5))
+            end)
+            ,action3,
+            cc.CallFunc:create(function ()
+                finger:runAction(cc.Place:create(cc.p(firstFlipNode:getPosition())))
+            end)
+        )))
+        
+    end
+
+    local pointList = {}
+    main.guidePoint = function ()
+        for i = 1,15 do
+            local point = cc.LayerColor:create(cc.c4b(255,255,0 + i * 1,255 - i * 20), 16 - i , 16 - i)
+            point:setPosition(firstFlipNode:getPosition())
+            point:ignoreAnchorPointForPosition(false)
+            point:setAnchorPoint(0.5,0.5)
+            point:setVisible(false)
+            main:addChild(point)
+
+            table.insert(pointList,point)
+
+            local action0 = cc.DelayTime:create(0.5 + i/20)
+            local action2 = cc.DelayTime:create(1 + 0.3 * string.len(main_word) - i/20)
+            local action3 = cc.DelayTime:create(0.2)
+
+            main:runAction(cc.RepeatForever:create(cc.Sequence:create(action0,
+                cc.CallFunc:create(function ()
+                point:setVisible(true)
+                point:runAction(guidePath())
+                end)
+                ,action2,
+                cc.CallFunc:create(function ()
+                point:setVisible(false)
+                end)
+                ,action3,
+                cc.CallFunc:create(function ()
+                point:runAction(cc.Place:create(cc.p(firstFlipNode:getPosition())))
+                end)
+            )))
+        end
+    end
+
+    main.cocoAnimation = function()
+        local newList = {"up"}
+            for i=1, #main.answerPath - 1 do
+                if main.answerPath[i].x == main.answerPath[i+1].x and main.answerPath[i].y > main.answerPath[i+1].y then
+                    table.insert(newList,"down")
+                elseif main.answerPath[i].x == main.answerPath[i+1].x and main.answerPath[i].y < main.answerPath[i+1].y then
+                    table.insert(newList,"up")
+                elseif main.answerPath[i].x > main.answerPath[i+1].x and main.answerPath[i].y == main.answerPath[i+1].y then
+                    table.insert(newList,"left")
+                elseif main.answerPath[i].x < main.answerPath[i+1].x and main.answerPath[i].y == main.answerPath[i+1].y then
+                    table.insert(newList,"right")
+                end
+            end
+        for i = 1, #main.answerPath do
+            local node = main_mat[main.answerPath[i].x][main.answerPath[i].y]
+            local action0 = cc.DelayTime:create(0.5 + 0.3 * i)
+            local action2 = cc.DelayTime:create(1.2 + 0.3 * string.len(main_word) - 0.3 * i)
+
+            main:runAction(cc.RepeatForever:create(cc.Sequence:create(action0,
+                cc.CallFunc:create(function ()
+                    if newList[i] == "down" then
+                    node.down()
+                    elseif newList[i] == "up" then
+                    node.up()
+                    elseif newList[i] == "left" then
+                    node.left()
+                    elseif newList[i] == "right" then
+                    node.right()
+                    end
+                end)
+                ,action2,
+                cc.CallFunc:create(function ()
+                node.removeSelectStyle()
+                end)
+            )))
+        end
     end
     
     if isNewPlayerModel == true then
+        main.guidePoint()
+        main.cocoAnimation() 
         main.finger_action()
+        firstFlipNode:stopAllActions()
     end
+
+
+
     
     local back_box = cc.Layer:create()
     local back_box_num = 0
@@ -325,8 +418,26 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
 
     end
 
+    local isGuide = true
+
+    local stopAllGuide = function ()
+        main:stopAllActions()
+        for i=1,#main.answerPath do
+            local node = main_mat[main.answerPath[i].x][main.answerPath[i].y]
+            node.removeSelectStyle()
+        end
+        if finger ~= nil then
+        finger:runAction(cc.FadeOut:create(0.5))
+        end
+        if #pointList ~= 0 then
+           for i=1,#pointList do
+               pointList[i]:runAction(cc.FadeOut:create(0.5))
+           end
+        end
+        isGuide = false
+    end
+
     onTouchBegan = function(touch, event)
-        removeTimer()
 
         local location = main:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint({x=0,y=0,width=main:getBoundingBox().width,height=main:getBoundingBox().height}, location) then
@@ -347,29 +458,19 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
         checkTouchLocation(location)
 
         if onNode then
-            if #selectStack < 1 then
-                startNode = main_mat[current_node_x][current_node_y]
-                table.insert(selectStack, startNode)
-                updateSelectWord()
-                startNode.addSelectStyle()
-                startNode.bigSize()
-            else    
-                startNode = main_mat[current_node_x][current_node_y]
-                for i = 1 ,#selectStack do
-                    if startNode == selectStack[i] then
-                        failFunction()
-                        return true
-                    end
-                end
-                table.insert(selectStack, startNode)
-                updateSelectWord()
+            if isGuide and isNewPlayerModel then
+               stopAllGuide()
             end
+
+            startNode = main_mat[current_node_x][current_node_y]
+            table.insert(selectStack, startNode)
+            updateSelectWord()
+            startNode.addSelectStyle()
+            startNode.bigSize()
+            
             startAtNode = true
-            if #selectStack <= 7 then
-                playSound(slideCoco[#selectStack])
-            else
-                playSound(slideCoco[7])
-            end  
+            playSound(slideCoco[1])
+
             local x = location.x - startTouchLocation.x
             local y = location.y - startTouchLocation.y
 
@@ -390,7 +491,6 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
     end
 
     onTouchMoved = function(touch, event)
-        removeTimer()
 
         local location = main:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint({x=0,y=0,width=main:getBoundingBox().width,height=main:getBoundingBox().height}, location) then
@@ -511,13 +611,11 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
         for i = 1, #selectStack do
             selectWord = selectWord .. selectStack[i].main_character_content
         end
-        removeTimer()
+
         if selectWord == main_word then
             successFunction()
-        elseif #selectStack >= string.len(main_word) then
-            failFunction()
         else
-            buildTimer()
+            failFunction()
         end
     end
 
@@ -528,24 +626,13 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
 
         for i = 1, #selectStack do
             local node = selectStack[i]
-            local bullet = node:getChildByName("bullet")
-
             node.win()
-            if endPositionX ~= nil then
-                local startPositionX,startPositionY = node:getPosition()
-                local endPosition = endPositionX
-                local action1 = cc.CallFunc:create(function()bullet:setVisible(true) end)
-                local action2 = cc.MoveTo:create(0.3,cc.p(endPosition - startPositionX + 90,950 - startPositionY))
-                local action3 = cc.CallFunc:create(function()bullet:setVisible(false) end)
-                bullet:runAction(cc.Sequence:create(action1,action2,action3))
-            end
         end
         selectStack = {}
 
         firstFlipNode:setVisible(false)
 
         main.success()
-        removeTimer()
 
         -- slide true
         playSound(s_sound_learn_true)
@@ -556,31 +643,14 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
         if main.wrongLock then
             main.globalLock = true
         end
-        
-        local time = 0
-        local i = 1
-        local function slideFalseUpdate(delta)
-            time = time + delta
-            if time * 10 > #selectStack + 1 then
-                main:unscheduleUpdate()
-                selectStack = {}
-                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-            elseif time * 10 > i then
-                local node = selectStack[i]
-                if node ~= nil then
-                node.removeSelectStyle()
-                i = i + 1
-                else
-                main:unscheduleUpdate()
-                selectStack = {}
-                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-                end
-            end
+        for i = 1, #selectStack do
+            local node = selectStack[i]
+            node.removeSelectStyle()
         end
-        removeTimer()
+        selectStack = {}
+        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
         main.fail()
         playSound(s_sound_learn_false)
-        main:scheduleUpdateWithPriorityLua(slideFalseUpdate, 0)
     end
 
     main.forceFail = function ()
@@ -596,29 +666,8 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName,endPositionX)
         if #selectStack < 1 then
             return
         end        
-        removeTimer()
+
         judgementFunction()
-    end
-
-    buildTimer = function ()
-        time = 0
-        for i = 1, #selectStack do
-            local node = selectStack[i]
-            node.shake()
-        end
-        local function update(delta)
-            time = time + delta
-            if time > 1 then
-                removeTimer()
-                failFunction()
-            end
-        end   
-        main:scheduleUpdateWithPriorityLua(update, 0)
-    end
-
-    removeTimer = function ()
-        time = 0
-        main:unscheduleUpdate()
     end
 
 

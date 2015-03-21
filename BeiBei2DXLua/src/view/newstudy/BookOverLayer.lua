@@ -1,8 +1,6 @@
 require("cocos.init")
 require("common.global")
 
-local BackLayer         = require("view.newstudy.NewStudyBackLayer")
-
 local  BookOverLayer = class("BookOverLayer", function ()
     return cc.Layer:create()
 end)
