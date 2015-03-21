@@ -1,14 +1,13 @@
 require("cocos.init")
 require("common.global")
 
-local BackLayer         = require("view.newstudy.NewStudyBackLayer")
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 local FlipMat           = require("view.mat.FlipMat")
 local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
 local Button                = require("view.newstudy.BlueButtonInStudyLayer")
-
+local PauseButton           = require("view.newreviewboss.NewReviewBossPause")
 local  MiddleLayer = class("MiddleLayer", function ()
     return cc.Layer:create()
 end)
