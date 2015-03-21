@@ -375,6 +375,13 @@ function AnalyticsPassSecondSummaryBoss()
     cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'PassSecondSummaryBoss', 'SHOW')
 end
 
+function AnalyticsSummaryBossAddTime()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBossInFirstDay', 'AddTime')
+    end
+    cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBoss', 'AddTime')
+end
+
 ----------------------------------------------------------------------------------------
 
 function AnalyticsChestGeneratedCnt(cnt)
