@@ -332,8 +332,9 @@ function MissionProgressLayer.create(share)
 
     -- local function enterSummaryBoss(sender, eventType)
     --     if eventType == ccui.TouchEventType.ended then
-    --         local circle = require('view.summaryboss.SummaryBossLayer').create({},1)
-    --         s_SCENE:replaceGameLayer(circle) 
+    -- local MiddleLayer = require("view.newstudy.MiddleLayer")
+    -- local middleLayer = MiddleLayer.create()
+    -- s_SCENE:replaceGameLayer(middleLayer)
     --     end
     -- end
 

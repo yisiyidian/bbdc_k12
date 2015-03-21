@@ -147,6 +147,17 @@ function FriendLayer:ctor()
     self.friendListButton:registerScriptTapHandler(onFriendList)
     self.friendSearchButton:registerScriptTapHandler(onFriendSearch)
     self.friendRequestButton:registerScriptTapHandler(onFriendRequest)
+
+    onAndroidKeyPressed(self, 
+        function ()
+            s_CURRENT_USER.seenFansCount = s_CURRENT_USER.fansCount
+            saveUserToServer({['seenFansCount']=s_CURRENT_USER.seenFansCount}, function (datas, error)
+                 self.backToHome()
+            end)
+        end, 
+        function ()
+
+        end)
     
 end
 

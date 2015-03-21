@@ -17,7 +17,10 @@ end
 
 function RegisterPopup:ctor()
     local back_register = cc.Sprite:create("image/login/background_white_login.png")
-    back_register:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
+    back_register:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+    back_register:ignoreAnchorPointForPosition(false)
+    back_register:setAnchorPoint(0.5,0.5)
+    self:setContentSize(back_register:getContentSize().width,s_DESIGN_HEIGHT)
     self:addChild(back_register)
 
     local back_width = back_register:getContentSize().width
@@ -110,16 +113,19 @@ function RegisterPopup:ctor()
     button_toggle:setTitleColor(cc.c4b(115,197,243,255))
     back_register:addChild(button_toggle) 
 
+    local function closeAnimation()
+        local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3))
+        local action2 = cc.EaseBackIn:create(action1)
+        local action3 = cc.CallFunc:create(function()
+            s_SCENE:removeAllPopups()
+        end)
+        back_register:runAction(cc.Sequence:create(action2,action3))
+    end
+
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             playSound(s_sound_buttonEffect)   
-            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            back_register:runAction(action2)
-
-            local action3 = cc.DelayTime:create(0.5)
-            local action4 = cc.CallFunc:create(function()s_SCENE:removeAllPopups()end)
-            back_register:runAction(cc.Sequence:create(action3,action4))
+            closeAnimation()
         end
     end
     
@@ -135,12 +141,7 @@ function RegisterPopup:ctor()
     local onTouchEnded = function(touch, event)
         local location = self:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint(back_register:getBoundingBox(),location) then
-            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
-                s_SCENE:removeAllPopups()
-            end)
-            back_register:runAction(cc.Sequence:create(action2,action3))
+           closeAnimation()
         end
     end
 
@@ -151,6 +152,12 @@ function RegisterPopup:ctor()
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
+
+    onAndroidKeyPressed(self, function ()
+           closeAnimation()
+    end, function ()
+
+    end)
 end
 return RegisterPopup
 

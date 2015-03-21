@@ -6,6 +6,7 @@ local Pause = require("view.Pause")
 
 local FlipNode = require("view.mat.FlipNode")
 local TapNode = require("view.mat.TapNode")
+local PauseButton           = require("view.newreviewboss.NewReviewBossPause")
 
 local SummaryBossLayer = class("SummaryBosslayer", function ()
     return cc.NodeGrid:create()
@@ -21,9 +22,6 @@ local bullet_damage = 2
 
 function SummaryBossLayer.create(wordList,chapter,entrance)   
     AnalyticsSummaryBoss()
-    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
-        AnalyticsSummaryBossInFirstDay()
-    end
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()
     math.randomseed(os.time())
@@ -504,7 +502,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             return true
         end
     
-        local length_gap = 5.0
+        local length_gap = 50.0
 
         local location = layer:convertToNodeSpace(touch:getLocation())
         if chapter == 2 then
@@ -523,11 +521,13 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         else
             local deltaX = (location.x - lastTouchLocation.x) * length_gap/length
             local deltaY = (location.y - lastTouchLocation.y) * length_gap/length
-
+            --print('length'..length..'length_gap'..length_gap)
+            --local time = os.clock()
             for i = 1, length/length_gap do
                 fakeTouchMoved({x=lastTouchLocation.x+(i-1)*deltaX,y=lastTouchLocation.y+(i-1)*deltaY})
             end
             fakeTouchMoved(location)
+            --print('moved time = '..os.clock() -time)
         end
 
         lastTouchLocation = location
@@ -748,6 +748,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     
     -- boss "s_sound_Get_Outside"
     playMusic(s_sound_Get_Outside,true)
+    --playSoundByVolume(s_sound_Get_Outside_Speedup,0,true)
     
     return layer  
 end
@@ -896,22 +897,32 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
 
     self.combo_icon = combo_icon
 
+    local function createPausePopup()
+        if self.currentBlood <= 0 or self.isLose or self.globalLock or s_SCENE.popupLayer.layerpaused then
+            return
+        end
+        local pauseLayer = Pause.create()
+        pauseLayer:setPosition(s_LEFT_X, 0)
+        s_SCENE.popupLayer:addBackground()
+        s_SCENE.popupLayer:addChild(pauseLayer)
+        s_SCENE.popupLayer.listener:setSwallowTouches(true)
+    end
+
     local function pauseScene(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            if self.currentBlood <= 0 or self.isLose or self.globalLock or s_SCENE.popupLayer.layerpaused then
-                return
-            end
-            local pauseLayer = Pause.create()
-            pauseLayer:setPosition(s_LEFT_X, 0)
-            s_SCENE.popupLayer:addBackground()
-            s_SCENE.popupLayer:addChild(pauseLayer)
-            s_SCENE.popupLayer.listener:setSwallowTouches(true)
+           createPausePopup()
         
         --button sound
             playSound(s_sound_buttonEffect)
         end
     end
     pauseBtn:addTouchEventListener(pauseScene)
+
+    onAndroidKeyPressed(pauseBtn, function ()
+        createPausePopup()
+    end, function ()
+
+    end)
     --add girl
     local girl = sp.SkeletonAnimation:create("spine/summaryboss/girl-stand.json","spine/summaryboss/girl-stand.atlas",1)
     girl:setPosition(s_DESIGN_WIDTH * 0.05, s_DESIGN_HEIGHT * 0.76)
@@ -1012,6 +1023,7 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
             self.girl:setAnimation(0,'girl-afraid',true)
             -- deadline "Mechanical Clock Ring "
             playSound(s_sound_Mechanical_Clock_Ring)
+            playMusic(s_sound_Get_Outside_Speedup,true)
         end
     end,{})
     local blinkIn = cc.FadeTo:create(0.5,50)
@@ -1595,9 +1607,6 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
 --    playSound(s_sound_win)
 
     AnalyticsSummaryBossResult('win')
-    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
-        AnalyticsSummaryBossResultInFirstDay('win')
-    end
 end
 
 function SummaryBossLayer:lose(chapter,entrance,wordList)

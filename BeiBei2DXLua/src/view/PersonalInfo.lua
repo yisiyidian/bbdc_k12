@@ -51,13 +51,13 @@ function PersonalInfo:ctor()
     self.intro_array = {}
     local target = {}
 
-    
     local pageView = ccui.PageView:create()
     pageView:setTouchEnabled(true)
     pageView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT - 280))
     pageView:setPosition(s_LEFT_X,0)
     pageView:setVertical(true)   
-    pageView:setCustomScrollThreshold(s_DESIGN_HEIGHT / 4) 
+    pageView:setUsingCustomScrollThreshold(true)
+    pageView:setCustomScrollThreshold(180)
     
     for i = 1 , 4 do
         local layout = ccui.Layout:create()

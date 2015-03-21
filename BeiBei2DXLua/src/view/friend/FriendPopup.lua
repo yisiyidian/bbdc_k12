@@ -108,6 +108,12 @@ function FriendPopup.create()
     label_button:setColor(cc.c4b(255,255,255,255))
     label_button:setPosition(button_solution:getContentSize().width / 2 ,button_solution:getContentSize().height / 2)
     button_solution:addChild(label_button)
+
+    onAndroidKeyPressed(layer, function ()
+        s_SCENE:removeAllPopups()
+    end, function ()
+
+    end)
     
     return layer
 end

@@ -16,9 +16,10 @@ local SHOP_LOCKED = 0
 local REWARD_LOCKED = 0
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 local list = {}
+local TEXT_CHANGE_ACCOUNT = '切换账号' -- "登出游戏"
 
 function HomeLayer.create(share) 
-    -- s_CURRENT_USER:addBeans(10000)
+    -- s_CURRENT_USER:addBeans(10000)FriendLayer
     -- if s_CURRENT_USER:getBeans() < 1 then
     --     s_CURRENT_USER:addBeans(10000)
     --     saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
@@ -55,7 +56,7 @@ function HomeLayer.create(share)
 
     local username = "游客"
     local logo_name = {"head","book","feedback","information","logout"}
-    local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
+    local label_name = {username,"选择书籍","用户反馈","完善个人信息",TEXT_CHANGE_ACCOUNT}
 
     s_SCENE.touchEventBlockLayer.unlockTouch()
     local layer = HomeLayer.new()
@@ -74,7 +75,7 @@ function HomeLayer.create(share)
     top:setPosition(0.5 * backColor:getContentSize().width,s_DESIGN_HEIGHT)
     backColor:addChild(top)
     
-    local been_number_back = cc.Sprite:create("image/bean/beanNumber.png")
+    local been_number_back = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
     been_number_back:setPosition(bigWidth-100, s_DESIGN_HEIGHT-50)
     backColor:addChild(been_number_back)
 
@@ -181,6 +182,22 @@ function HomeLayer.create(share)
         end
     end
 
+    onAndroidKeyPressed(layer, function ()
+        local isPopup = s_SCENE.popupLayer:getChildren()
+        if viewIndex == 2 and #isPopup == 0 then
+            local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
+            backColor:runAction(action1)
+
+            viewIndex = 1
+
+            local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+            setting_back:runAction(cc.Sequence:create(action2, action3))
+        end
+    end, function ()
+
+    end)
+
     local button_main = ccui.Button:create("image/homescene/home_page_function_bg1.png",'',"")
     button_main:setScale9Enabled(true)
     button_main:setPosition(bigWidth / 2 - 166, 200)
@@ -275,7 +292,7 @@ function HomeLayer.create(share)
     if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
         username = s_CURRENT_USER:getNameForDisplay()
         logo_name = {"head","book","feedback","logout"}
-        label_name = {username,"选择书籍","用户反馈","登出游戏"}
+        label_name = {username,"选择书籍","用户反馈",TEXT_CHANGE_ACCOUNT}
     end
     local label = {}
     local logo = {}
@@ -345,16 +362,31 @@ function HomeLayer.create(share)
                             end
                         end
                     end
-                elseif label_name[i] == "登出游戏" then
+                elseif label_name[i] == TEXT_CHANGE_ACCOUNT then
                     if not s_SERVER.isNetworkConnectedNow() then
                            offlineTipHome.setTrue(OfflineTipForHome_Logout)
                     else
+                        
                         -- logout
-                        AnalyticsLogOut()
-                        cx.CXAvos:getInstance():logOut()
-                        s_LocalDatabaseManager.setLogOut(true)
-                        s_LocalDatabaseManager.close()
-                        s_START_FUNCTION()
+                        -- AnalyticsLogOut()
+                        -- cx.CXAvos:getInstance():logOut()
+                        -- s_LocalDatabaseManager.setLogOut(true)
+                        -- s_LocalDatabaseManager.close()
+                        -- s_START_FUNCTION()
+                        local ChangeAccountPopup = require('view.login.ChangeAccountPopup')
+                        local loginPopup = ChangeAccountPopup.create()
+                        s_SCENE:popup(loginPopup)
+                        
+                        loginPopup:setVisible(false)
+                        loginPopup:setPosition(0,s_DESIGN_HEIGHT * 1.5) 
+
+                        local action2 = cc.CallFunc:create(function()
+                            loginPopup:setVisible(true)
+                        end)
+                        local action3 = cc.MoveTo:create(0.5,cc.p(0,0)) 
+                        local action4 = cc.Sequence:create(action2, action3)
+                        loginPopup:runAction(action4)
+
                     end
                 else
                     -- do nothing
@@ -755,6 +787,22 @@ function HomeLayer.create(share)
         layer:showDataLayer(true)
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     end
+
+    onAndroidKeyPressed(layer, function ()
+        local isPopup = s_SCENE.popupLayer:getChildren()
+        if isDataShow == true and #isPopup == 0 then
+            isDataShow = false
+            layer:setButtonEnabled(true)
+            local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
+            local action2 = cc.CallFunc:create(function()
+               button_data:setLocalZOrder(0)
+               data_back:removeChildByName('PersonalInfo')
+            end)
+            button_data:runAction(cc.Sequence:create(action1, action2))
+        end
+    end, function ()
+
+    end)
 
     return layer
 end

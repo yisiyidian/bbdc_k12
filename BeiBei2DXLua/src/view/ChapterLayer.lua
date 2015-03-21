@@ -20,7 +20,6 @@ end
 
 function ChapterLayer:ctor()
     
-
     if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
         s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
@@ -750,10 +749,21 @@ function ChapterLayer:addBackToHome()
     homeButton:setPosition(s_LEFT_X + 50  , s_DESIGN_HEIGHT - 50 )
     homeButton:setLocalZOrder(1)
     self:addChild(homeButton,200)
+    
+    onAndroidKeyPressed(self, function ()
+        local isPopup = s_SCENE.popupLayer:getChildren()
+        if #isPopup == 0 then
+            s_CorePlayManager.enterHomeLayer()
+        end
+    end, function ()
+
+    end)
+    
 end
 
 function ChapterLayer:addBeansUI()
-    self.beans = cc.Sprite:create('image/bean/beanNumber.png')
+    -- self.beans = cc.Sprite:create('image/chapter/chapter0/background_been_white.png')
+    self.beans = cc.Sprite:create('image/chapter/chapter0/background_been_white.png')
     self.beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
     self:addChild(self.beans,150)
     -- self.beanLabel = cc.Sprite:create('image/chapter/chapter0/bean.png')
@@ -768,7 +778,7 @@ function ChapterLayer:addBeansUI()
     self.beanCountLabel:setPosition(self.beans:getContentSize().width * 0.65 , self.beans:getContentSize().height/2)
     self.beans:addChild(self.beanCountLabel,10)
 
-    -- local been_number_back = cc.Sprite:create("image/bean/beanNumber.png")
+    -- local been_number_back = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
     -- been_number_back:setPosition(bigWidth-100, s_DESIGN_HEIGHT-50)
     -- backColor:addChild(been_number_back)
 

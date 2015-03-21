@@ -12,9 +12,6 @@ end
 
 function ShareCheckIn:ctor()
 	AnalyticsEnterShare()
-	if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
-		AnalyticsEnterShareInFirstDay()
-	end
 	local background = cc.ProgressTimer:create(cc.Sprite:create('image/share/share_background.png'))
 	--local background = cc.Sprite:create('image/share/share_background.png')
 	background:setAnchorPoint(0.5,1)
@@ -67,13 +64,17 @@ function ShareCheckIn:ctor()
 	self:addChild(close_button)
 	self.close_button = close_button
 
+	local function closeAnimation()
+	    local remove = cc.CallFunc:create(function ()
+			self:removeFromParent()
+		end,{})
+		local move = cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT))
+		self:runAction(cc.Sequence:create(move,remove))
+	end
+
 	local function close(sender,eventType)
 		if eventType == ccui.TouchEventType.ended then
-			local remove = cc.CallFunc:create(function ()
-				self:removeFromParent()
-			end,{})
-			local move = cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT))
-			self:runAction(cc.Sequence:create(move,remove))
+           closeAnimation()
 		end
 	end
 
@@ -118,10 +119,6 @@ function ShareCheckIn:ctor()
 		if eventType == ccui.TouchEventType.ended then
 			AnalyticsButtonToShare()
 
-			if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
-				AnalyticsButtonToShareInFirstDay()
-			end
-
 			sender:setVisible(false)
 			close_button:setVisible(false)
 			background:runAction(cc.ScaleTo:create(0.3,0.78))
@@ -163,6 +160,12 @@ function ShareCheckIn:ctor()
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(self.listener, self)
     self.listener:setSwallowTouches(true)
+
+    onAndroidKeyPressed(self, function ()
+        closeAnimation()
+    end, function ()
+
+    end)
 
 end
 

@@ -34,14 +34,18 @@ function ShopErrorAlter.create()
     label_content:setPosition(maxWidth/2, maxHeight/2+60)
     back:addChild(label_content)
 
+    local function closeAnimation()
+        local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+        local action2 = cc.EaseBackIn:create(action1)
+        local action3 = cc.CallFunc:create(function()
+            s_SCENE:removeAllPopups()
+        end)
+        back:runAction(cc.Sequence:create(action2,action3))
+    end
+
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
-                s_SCENE:removeAllPopups()
-            end)
-            back:runAction(cc.Sequence:create(action2,action3))
+           closeAnimation()
         end
     end
 
@@ -72,12 +76,7 @@ function ShopErrorAlter.create()
     local onTouchEnded = function(touch, event)
         local location = main:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint(back:getBoundingBox(),location) then
-            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
-                s_SCENE:removeAllPopups()
-            end)
-            back:runAction(cc.Sequence:create(action2,action3))
+            closeAnimation()
         end
     end
 
@@ -87,6 +86,12 @@ function ShopErrorAlter.create()
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = main:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
+
+    onAndroidKeyPressed(main, function ()
+        closeAnimation()
+    end, function ()
+
+    end)
 
     return main
 end

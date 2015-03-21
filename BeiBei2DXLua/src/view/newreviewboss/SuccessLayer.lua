@@ -14,7 +14,7 @@ function SuccessLayer.create(number)
 end
 
 local function createBeanSprite(bean)
-    local beans = cc.Sprite:create("image/bean/beanNumber.png")
+    local beans = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
     beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-40)
 
     local been_number = cc.Label:createWithSystemFont(bean,'',24)
@@ -93,6 +93,13 @@ function SuccessLayer:ctor(number)
     backColor:addChild(self.nextButton)
     s_CURRENT_USER.beanRewardForCollect             = 3
     s_CURRENT_USER.beanRewardForIron                = 3
+
+    onAndroidKeyPressed(self, function ()
+        s_HUD_LAYER:removeChildByName('missionCompleteCircle')
+        s_CorePlayManager.enterLevelLayer()
+    end, function ()
+
+    end)
 
 end
 

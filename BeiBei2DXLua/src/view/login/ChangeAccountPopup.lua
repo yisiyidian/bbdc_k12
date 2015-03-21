@@ -4,18 +4,64 @@ local BigAlter      = require("view.alter.BigAlter")
 local SmallAlter    = require("view.alter.SmallAlter")
 local InputNode     = require("view.login.InputNode")
 
-local LoginPopup = class("LoginPopup", function()
+local PopupView = class("PopupView", function()
     return cc.Layer:create()
 end)
 
-local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
+local bigWidth = s_DESIGN_WIDTH + 2 * s_DESIGN_OFFSET_WIDTH
+local strTitle = '' -- 登 陆
+local strDes = '' -- 登陆可以和更多的好友一起背单词
+local strBtnConfirm = '' -- 登陆
+local onConfirm = function(username, password) end
 
-function LoginPopup.create()
-    local main = LoginPopup.new()
+local function changeAccount(username, password)
+    playSound(s_sound_buttonEffect)
+
+    if validateUsername(username) == false then
+        s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
+        return
+    end
+    if validatePassword(password) == false then
+        s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT_ID_PWD_ERROR))
+        return
+    end
+
+    showProgressHUD('', true)
+    cx.CXAvos:getInstance():logIn(username, password, function (objectjson, e, code)
+        hideProgressHUD(true)
+
+        if e ~= nil then
+            s_TIPS_LAYER:showSmall(e)
+        else
+            -- s_SCENE:removeAllPopups()
+
+            AnalyticsAccountChange()
+            cx.CXAvos:getInstance():logOut()
+            -- s_LocalDatabaseManager.setLogOut(true)
+            s_LocalDatabaseManager.close()
+
+            g_userName = username
+            g_userPassword = password
+            s_START_FUNCTION()
+
+            -- onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
+        end
+    end)
+end
+
+function PopupView.create()
+    -- TODO : refactory
+    strTitle = '切换账号'
+    strDes = '请输入用户名和密码'
+    strBtnConfirm = '切换'
+    onConfirm = changeAccount
+
+    local main = PopupView.new()
+    -- main:AddBtnGotoRegisterPopup()
     return main
 end
 
-function LoginPopup:ctor()
+function PopupView:ctor()
 	local back_login = cc.Sprite:create("image/login/background_white_login.png")
     back_login:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
     back_login:ignoreAnchorPointForPosition(false)
@@ -34,12 +80,12 @@ function LoginPopup:ctor()
     head:setPosition(circle:getContentSize().width/2, circle:getContentSize().height/2)
     circle:addChild(head)
 
-    local label1 = cc.Label:createWithSystemFont("登 陆","",48)
+    local label1 = cc.Label:createWithSystemFont(strTitle, "", 48)
     label1:setColor(cc.c4b(115,197,243,255))
     label1:setPosition(back_width/2,680)
     back_login:addChild(label1)
 
-    local label2 = cc.Label:createWithSystemFont("登陆可以和更多的好友一起背单词","",24)
+    local label2 = cc.Label:createWithSystemFont(strDes, "", 24)
     label2:setColor(cc.c4b(100,100,100,255))
     label2:setPosition(back_width/2,630)
     back_login:addChild(label2)
@@ -54,18 +100,7 @@ function LoginPopup:ctor()
 
     local submit_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            playSound(s_sound_buttonEffect)
-
-            if validateUsername(username.textField:getString()) == false then
-                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
-                return
-            end
-            if validatePassword(password.textField:getString()) == false then
-                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT_ID_PWD_ERROR))
-                return
-            end
-            s_O2OController.logInOnline(username.textField:getString(), password.textField:getString())
-            s_SCENE:removeAllPopups()
+            onConfirm(username.textField:getString(), password.textField:getString())
         end
     end
 
@@ -74,42 +109,12 @@ function LoginPopup:ctor()
     submit:addTouchEventListener(submit_clicked)
     back_login:addChild(submit)
 
-    local label_name = cc.Label:createWithSystemFont("登陆","",34)
+    local label_name = cc.Label:createWithSystemFont(strBtnConfirm, "", 34)
     label_name:setColor(cc.c4b(255,255,255,255))
     label_name:ignoreAnchorPointForPosition(false)
     label_name:setAnchorPoint(0,0.5)
     label_name:setPosition(30, submit:getContentSize().height/2)
     submit:addChild(label_name)
-
-    local button_toggle_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            playSound(s_sound_buttonEffect)
-            local RegisterPopup = require("view.login.RegisterPopup")
-            local registerPopup = RegisterPopup.create()
-            s_SCENE.popupLayer:addChild(registerPopup)  
-            registerPopup:setVisible(false)
-            
-            local action0 = cc.OrbitCamera:create(0.5,1, 0, 0, 90, 0, 0) 
-            back_login:runAction(action0) 
-            
-            local action1 = cc.DelayTime:create(0.5)
-            local action2 = cc.CallFunc:create(function()
-                registerPopup:setVisible(true)
-            end)
-            local action3 = cc.OrbitCamera:create(0.5,1, 0, -90, 90, 0, 0) 
-            local action4 = cc.Sequence:create(action1, action2, action3)
-            registerPopup:runAction(action4)   
-        end
-    end
-
-    local button_toggle = ccui.Button:create()
-    button_toggle:loadTextures("image/button/button_login_signup.png", "", "")
-    button_toggle:addTouchEventListener(button_toggle_clicked)
-    button_toggle:setPosition(back_width/2, 200)
-    button_toggle:setTitleFontSize(28)
-    button_toggle:setTitleText("返回注册")
-    button_toggle:setTitleColor(cc.c4b(115,197,243,255))
-    back_login:addChild(button_toggle)  
 
     local function closeAnimation()
         local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3))
@@ -158,7 +163,39 @@ function LoginPopup:ctor()
     end)
 end
 
-return LoginPopup
+function PopupView:AddBtnGotoRegisterPopup()
+    local button_toggle_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            playSound(s_sound_buttonEffect)
+            local RegisterPopup = require("view.login.RegisterPopup")
+            local registerPopup = RegisterPopup.create()
+            s_SCENE.popupLayer:addChild(registerPopup)  
+            registerPopup:setVisible(false)
+            
+            local action0 = cc.OrbitCamera:create(0.5,1, 0, 0, 90, 0, 0) 
+            back_login:runAction(action0) 
+            
+            local action1 = cc.DelayTime:create(0.5)
+            local action2 = cc.CallFunc:create(function()
+                registerPopup:setVisible(true)
+            end)
+            local action3 = cc.OrbitCamera:create(0.5,1, 0, -90, 90, 0, 0) 
+            local action4 = cc.Sequence:create(action1, action2, action3)
+            registerPopup:runAction(action4)   
+        end
+    end
+
+    local button_toggle = ccui.Button:create()
+    button_toggle:loadTextures("image/button/button_login_signup.png", "", "")
+    button_toggle:addTouchEventListener(button_toggle_clicked)
+    button_toggle:setPosition(back_width/2, 200)
+    button_toggle:setTitleFontSize(28)
+    button_toggle:setTitleText("返回注册")
+    button_toggle:setTitleColor(cc.c4b(115,197,243,255))
+    back_login:addChild(button_toggle)  
+end
+
+return PopupView
 
 
 

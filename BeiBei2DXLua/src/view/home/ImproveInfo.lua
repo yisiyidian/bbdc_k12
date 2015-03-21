@@ -19,6 +19,15 @@ ImproveInfoLayerType_UpdateNamePwd_FROM_HOME_LAYER  = 'FROM_HOME_LAYER'
 ImproveInfoLayerType_UpdateNamePwd_FROM_INTRO_LAYER = 'FROM_INTRO_LAYER'
 ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER = 'FROM_FRIEND_LAYER'
 
+local function closeAnimation()
+    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+    local action2 = cc.EaseBackIn:create(action1)
+    local action3 = cc.CallFunc:create(function()
+        main.close()
+    end)
+    back_login:runAction(cc.Sequence:create(action2,action3))
+end
+
 function ImproveInfo.create(layerType)
     main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
@@ -42,12 +51,7 @@ function ImproveInfo.create(layerType)
     local onTouchEnded = function(touch, event)
         local location = main:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint(back_login:getBoundingBox(),location) then
-            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
-                main.close()
-            end)
-            back_login:runAction(cc.Sequence:create(action2,action3))
+           closeAnimation()
         end
     end
 
@@ -131,6 +135,7 @@ showLogin = function()
                             hideProgressHUD(true)
                         else        
                             main.close()     
+                            AnalyticsImproveInfo()
                             hideProgressHUD(true)
                             if callback ~= nil then callback() end               
                         end     
@@ -179,18 +184,19 @@ showLogin = function()
             -- button sound
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
-            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
-                main.close()
-            end)
-            back_login:runAction(cc.Sequence:create(action2,action3))
+            closeAnimation()
         end
     end
     local button_close = ccui.Button:create("image/button/button_close.png")
     button_close:setPosition(back_width-30,back_height-10)
     button_close:addTouchEventListener(button_close_clicked)
     back_login:addChild(button_close)
+
+    onAndroidKeyPressed(main, function ()
+        closeAnimation()
+    end, function ()
+
+    end)
 end
 
 

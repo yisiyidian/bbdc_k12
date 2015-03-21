@@ -26,6 +26,15 @@ function HintAlter.create(info)
     label_info:setDimensions(back:getContentSize().width*4/5,0)
     label_info:setPosition(back:getContentSize().width/2, back:getContentSize().height/2+50)
     back:addChild(label_info)
+
+    local function closeAnimation()
+        s_SCENE.popupLayer.listener:setSwallowTouches(false)
+        local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*3/2)))
+        local remove = cc.CallFunc:create(function() 
+            main:removeFromParent() 
+        end,{})
+        back:runAction(cc.Sequence:create(move,remove)) 
+    end
     
     local button_left_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -33,12 +42,7 @@ function HintAlter.create(info)
             playSound(s_sound_buttonEffect)
             --            main.close()
         elseif eventType == ccui.TouchEventType.ended then
-            s_SCENE.popupLayer.listener:setSwallowTouches(false)
-            local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*3/2)))
-            local remove = cc.CallFunc:create(function() 
-                main:removeFromParent() 
-            end,{})
-            back:runAction(cc.Sequence:create(move,remove))
+            closeAnimation()
         end
     end
 
@@ -56,12 +60,7 @@ function HintAlter.create(info)
     local onTouchEnded = function(touch, event)
         local location = main:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint(back:getBoundingBox(),location) then
-            s_SCENE.popupLayer.listener:setSwallowTouches(false)
-            local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*3/2)))
-            local remove = cc.CallFunc:create(function() 
-                main:removeFromParent() 
-            end,{})
-            back:runAction(cc.Sequence:create(move,remove))
+           closeAnimation()
         end
     end
 
@@ -72,6 +71,12 @@ function HintAlter.create(info)
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = main:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
+
+    onAndroidKeyPressed(main, function ()
+           closeAnimation()
+    end, function ()
+
+    end)
 
     return main    
 end

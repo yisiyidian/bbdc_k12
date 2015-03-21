@@ -61,7 +61,7 @@ local function parseServerUser( objectjson )
     return true
 end
 
-local function onResponse_signUp_logIn(hasParsed, objectjson, e, code, onResponse)
+function onResponse_signUp_logIn(hasParsed, objectjson, e, code, onResponse)
     if e ~= nil then 
         print('signup/logIn:' .. e) 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, e, code) end
@@ -100,8 +100,8 @@ function UserBaseServer.logIn(username, password, onResponse)
     end)
 end
 
-function UserBaseServer.logInByQQAuthData(onResponse)
-    cx.CXAvos:getInstance():logInByQQAuthData(s_CURRENT_USER.openid, s_CURRENT_USER.access_token, s_CURRENT_USER.expires_in,
+function UserBaseServer.logInByQQAuthData(openid, access_token, expires_in, onResponse)
+    cx.CXAvos:getInstance():logInByQQAuthData(openid, access_token, expires_in,
         function (objectjson, qqjson, authjson, e, code)
             onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
         end

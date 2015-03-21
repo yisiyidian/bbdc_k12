@@ -46,6 +46,9 @@ function reloadModule( moduleName )
     return require(moduleName)
 end
 
+g_userName = nil
+g_userPassword = nil
+
 local start
 start = function ()
     s_APP_VERSION = app_version_release
@@ -131,29 +134,29 @@ start = function ()
 
     s_DataManager.loadText()
     
--- *************************************
-if test_code == NORMAL_CODE then -- do NOT change this line
-    local startApp = function ()
-        s_O2OController.start()
+    -- *************************************
+    if test_code == NORMAL_CODE then -- do NOT change this line
+        local startApp = function ()
+            s_O2OController.start()
+        end
+        if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+            local SplashView = require("view.SplashView")
+            local sv = SplashView.create()
+            s_SCENE:replaceGameLayer(sv)
+            sv:setOnFinished(startApp)
+        else
+            startApp()
+        end
+    else    
+       -- *************************************
+       -- for test
+       -- all test codes MUST be written in example.example.lua
+       -- do NOT write any test codes in here
+       -- do NOT change these lines below
+       require("example.example")
+       test()
+       -- *************************************
     end
-    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
-        local SplashView = require("view.SplashView")
-        local sv = SplashView.create()
-        s_SCENE:replaceGameLayer(sv)
-        sv:setOnFinished(startApp)
-    else
-        startApp()
-    end
-else    
-   -- *************************************
-   -- for test
-   -- all test codes MUST be written in example.example.lua
-   -- do NOT write any test codes in here
-   -- do NOT change these lines below
-   require("example.example")
-   test()
-   -- *************************************
-end
 
 end
 

@@ -69,6 +69,7 @@ function BookLayer.create()
 
                 if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
                     s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
+                    AnalyticsFirstBook(key)
                 end
                 
                 s_CURRENT_USER.bookKey = key
@@ -207,6 +208,13 @@ function BookLayer.create()
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED)
     local eventDispatcher = listView:getItem(count - 1):getChildByName('shelf'):getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, listView:getItem(count - 1):getChildByName('shelf'))
+
+    onAndroidKeyPressed(layer, function ()
+            s_CorePlayManager.enterHomeLayer()
+        
+    end, function ()
+
+    end)
 
     local function update(delta)
         local h = listView:getInnerContainer():getPositionY()
