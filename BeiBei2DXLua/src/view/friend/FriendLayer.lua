@@ -91,11 +91,12 @@ function FriendLayer:ctor()
         num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
         redHint:addChild(num)
     end
-    
-    local list = require('view.friend.FriendList')
-    local layer = list.create()
-    layer:setAnchorPoint(0.5,0)
-    self:addChild(layer,1,'list')
+    s_SCENE:callFuncWithDelay(0.5,function (  )
+        local list = require('view.friend.FriendList')
+        local layer = list.create()
+        layer:setAnchorPoint(0.5,0)
+        self:addChild(layer,1,'list')
+    end)
     
     local search = require('view.friend.FriendSearch')
     local searchlayer = search.create()
