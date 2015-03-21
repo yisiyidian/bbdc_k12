@@ -21,7 +21,6 @@ function ShopPanel.create(itemId)
 
     main.sure = function()
         if s_CURRENT_USER:getBeans() >= s_DataManager.product[itemId].productValue then
-            AnalyticsBuy(itemId)
 
             s_CURRENT_USER:subtractBeans(s_DataManager.product[itemId].productValue)
             s_CURRENT_USER:unlockFunctionState(itemId)
@@ -38,7 +37,7 @@ function ShopPanel.create(itemId)
     end
 
     local item = cc.Sprite:create("image/shop/item"..itemId..".png")
-    item:setPosition(maxWidth/2, 550)
+    item:setPosition(maxWidth/2, 470)
     main:addChild(item)
 
     local button_sure_clicked = function(sender, eventType)
@@ -48,7 +47,7 @@ function ShopPanel.create(itemId)
     end
 
     button_sure = ccui.Button:create("image/shop/long_button.png","image/shop/long_button_clicked.png","")
-    button_sure:setPosition(maxWidth/2,150)
+    button_sure:setPosition(maxWidth/2,240)
     button_sure:addTouchEventListener(button_sure_clicked)
     main:addChild(button_sure)
 
@@ -61,12 +60,12 @@ function ShopPanel.create(itemId)
     been:setPosition(50, button_sure:getContentSize().height/2)
     button_sure:addChild(been)
 
-    local label_content = cc.Label:createWithSystemFont(s_DataManager.product[itemId].productDescription,"",32)
+    local label_content = cc.Label:createWithSystemFont(s_DataManager.product[itemId].productDescription,"",30)
     label_content:setAnchorPoint(0.5, 1)
-    label_content:setColor(cc.c4b(0,0,0,255))
-    label_content:setDimensions(maxWidth-180,0)
-    label_content:setAlignment(0)
-    label_content:setPosition(maxWidth/2, 350)
+    label_content:setColor(cc.c4b(84,107,144,255))
+    label_content:setDimensions(370,0)
+    label_content:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
+    label_content:setPosition(maxWidth/2, 700)
     main:addChild(label_content)
 
     return main

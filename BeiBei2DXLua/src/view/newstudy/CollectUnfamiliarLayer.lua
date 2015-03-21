@@ -1,7 +1,6 @@
 require("cocos.init")
 require("common.global")
 
-local BackLayer         = require("view.newstudy.NewStudyBackLayer")
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 local GuessWrong        = require("view.newstudy.GuessWrongPunishPopup")
 local ProgressBar           = require("view.newstudy.NewStudyProgressBar")

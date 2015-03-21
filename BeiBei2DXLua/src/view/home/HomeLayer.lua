@@ -276,9 +276,15 @@ function HomeLayer.create(share)
     data_back:setPosition(button_data:getContentSize().width/2, 0)
     button_data:addChild(data_back,2)
     layer.dataBack = data_back
+    local bottom = cc.LayerColor:create(cc.c4b(255,255,255,255), bigWidth, 100)
+    bottom:setAnchorPoint(0.5,1)
+    bottom:ignoreAnchorPointForPosition(false)  
+    bottom:setPosition(button_data:getContentSize().width/2, 0)
+    data_back:addChild(bottom)
     
-    local data_name = cc.Label:createWithSystemFont("数据","",28)
+    local data_name = cc.Label:createWithSystemFont("数据","",36)
     data_name:setColor(cc.c4b(0,150,210,255))
+    --data_name:enableOutline(cc.c4b(0,150,210,255),1)
     data_name:setPosition(button_data:getContentSize().width/2+30, button_data:getContentSize().height/2-5)
     button_data:addChild(data_name,0)
 

@@ -1,7 +1,6 @@
 require("cocos.init")
 require("common.global")
 
-local BackLayer         = require("view.newstudy.NewStudyBackLayer")
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 local FlipMat           = require("view.mat.FlipMat")
 local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
@@ -10,6 +9,7 @@ local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip")
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
 local Button                = require("view.newstudy.BlueButtonInStudyLayer")
 local TotalWrongWordTip = require("view.newstudy.TotalWrongWordTip")
+local PauseButton           = require("view.newreviewboss.NewReviewBossPause")
 
 local  SlideCoconutLayer = class("SlideCoconutLayer", function ()
     return cc.Layer:create()
@@ -72,11 +72,26 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
     
     local isCollectLayer = true
 
-    local backColor = BackLayer.create(97) 
+    local backColor = cc.LayerColor:create(cc.c4b(168,239,255,255), bigWidth, s_DESIGN_HEIGHT) 
+
+    local back_head = cc.Sprite:create("image/newstudy/back_head.png")
+    back_head:setAnchorPoint(0.5, 1)
+    back_head:setPosition(bigWidth/2, s_DESIGN_HEIGHT + 97)
+    backColor:addChild(back_head,1)
+
+    local back_tail = cc.Sprite:create("image/newstudy/back_tail.png")
+    back_tail:setAnchorPoint(0.5, 0)
+    back_tail:setPosition(bigWidth/2, 0)
+    backColor:addChild(back_tail)
+    
+    local pauseBtn = PauseButton.create(CreatePauseFromStudy)
+    pauseBtn:setPosition(0, s_DESIGN_HEIGHT)
+    backColor:addChild(pauseBtn,1)    
+
     backColor:setAnchorPoint(0.5,0.5)
     backColor:ignoreAnchorPointForPosition(false)
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
-    self:addChild(backColor)
+    self:addChild(backColor)    
     
     self.currentWord = word
 
@@ -107,12 +122,12 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
     end
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
-    backColor:addChild(self.lastWordAndTotalNumber,1)
+    backColor:addChild(self.lastWordAndTotalNumber)
     
     local word_meaning_label = cc.Label:createWithSystemFont(self.wordInfo[5],"",50)
     word_meaning_label:setPosition(bigWidth/2, 950)
     word_meaning_label:setColor(cc.c4b(31,68,102,255))
-    backColor:addChild(word_meaning_label)
+    backColor:addChild(word_meaning_label,1)
     
     local size_big = backColor:getContentSize()
     local isNewPlayer = true
@@ -121,10 +136,13 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
     else
         isNewPlayer = false
     end
+    
+    self.lastButton = createLastButton(word,wrongNum,wrongWordList)
+    backColor:addChild(self.lastButton)
 
     mat = FlipMat.create(self.wordInfo[2],4,4,isNewPlayer,"coconut_light")
-    mat:setPosition(size_big.width/2, 160)
-    backColor:addChild(mat)
+    mat:setPosition(size_big.width/2, 200)
+    backColor:addChild(mat,2)
     
     local success = function()
         playWordSound(self.currentWord) 
@@ -140,7 +158,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
             showAnswerStateBack:setPosition(backColor:getContentSize().width *1.5, 768)
             showAnswerStateBack:ignoreAnchorPointForPosition(false)
             showAnswerStateBack:setAnchorPoint(0.5,0.5)
-            backColor:addChild(showAnswerStateBack)
+            backColor:addChild(showAnswerStateBack,3)
 
             local sign = cc.Sprite:create("image/testscene/testscene_right_v.png")
             sign:setPosition(showAnswerStateBack:getContentSize().width*0.9, showAnswerStateBack:getContentSize().height*0.45)
@@ -218,12 +236,55 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
     mat.success = success
     mat.rightLock = true
     mat.wrongLock = false
+
+    local darkColor = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
+    darkColor:setAnchorPoint(0.5,0)
+    darkColor:ignoreAnchorPointForPosition(false)
+    darkColor:setPosition(backColor:getContentSize().width / 2, 0)
+
+    local beibei = cc.Sprite:create("image/newstudy/yindao_huaci_gril_background.png")
+    beibei:setPosition(cc.p(darkColor:getContentSize().width / 2 , 150))
+    darkColor:addChild(beibei)
+
+    -- local beibei_hand = cc.Sprite:create("image/newstudy/yindao_huaci_gril_arm_background.png")
+    -- beibei_hand:setPosition(cc.p(beibei:getContentSize().width * 0.4 , beibei:getContentSize().height * 0.4))
+    -- beibei_hand:ignoreAnchorPointForPosition(false)
+    -- beibei_hand:setAnchorPoint(0.5,0.1)
+    -- beibei:addChild(beibei_hand,-1)
+
+    -- local action1 = cc.RotateTo:create(0.1,45)
+    -- local action2 = cc.RotateTo:create(1,-45)
+    -- local action3 = cc.RepeatForever:create(cc.Sequence:create(action1,action2))
+
+    -- beibei_hand:runAction(action3)
     
-    self.refreshButton = createRefreshButton()
-    backColor:addChild(self.refreshButton)
+    local beibei_tip_label = cc.Label:createWithSystemFont("划一划 !","",48)
+    beibei_tip_label:setPosition(beibei:getContentSize().width /2, beibei:getContentSize().height * 0.25)
+    beibei_tip_label:setColor(cc.c4b(36,63,79,255))
+    beibei:addChild(beibei_tip_label)
+
+    if s_CURRENT_USER.slideNum == 1 then
+        backColor:addChild(darkColor)
+    end
+
+    local onTouchBegan = function(touch, event)
+        return true
+    end
+
+    local onTouchEnded = function(touch, event)
+
+    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = darkColor:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, darkColor)
+
+
     
-    self.lastButton = createLastButton(word,wrongNum,wrongWordList)
-    backColor:addChild(self.lastButton)
 end
 
 return SlideCoconutLayer

@@ -2,7 +2,6 @@ require("cocos.init")
 require("common.global")
 
 local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
-local BackLayer         = require("view.newstudy.NewStudyBackLayer")
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 local DetailInfo        = require("view.newstudy.NewStudyDetailInfo")
 local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
@@ -10,6 +9,7 @@ local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip")
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
 local TotalWrongWordTip = require("view.newstudy.TotalWrongWordTip")
 local Button                = require("view.newstudy.BlueButtonInStudyLayer")
+local PauseButton           = require("view.newreviewboss.NewReviewBossPause")
 
 local  ChooseWrongLayer = class("ChooseRightLayer", function ()
     return cc.Layer:create()
@@ -56,7 +56,22 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList)
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
-    local backColor = BackLayer.create(45) 
+    local backColor = cc.LayerColor:create(cc.c4b(168,239,255,255), bigWidth, s_DESIGN_HEIGHT) 
+
+    local back_head = cc.Sprite:create("image/newstudy/back_head.png")
+    back_head:setAnchorPoint(0.5, 1)
+    back_head:setPosition(bigWidth/2, s_DESIGN_HEIGHT + 45)
+    backColor:addChild(back_head)
+
+    local back_tail = cc.Sprite:create("image/newstudy/back_tail.png")
+    back_tail:setAnchorPoint(0.5, 0)
+    back_tail:setPosition(bigWidth/2, 0)
+    backColor:addChild(back_tail)
+    
+    local pauseBtn = PauseButton.create(CreatePauseFromStudy)
+    pauseBtn:setPosition(0, s_DESIGN_HEIGHT)
+    backColor:addChild(pauseBtn,100)    
+
     backColor:setAnchorPoint(0.5,0.5)
     backColor:ignoreAnchorPointForPosition(false)
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)

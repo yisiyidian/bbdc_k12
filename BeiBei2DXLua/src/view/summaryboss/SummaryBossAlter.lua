@@ -171,6 +171,8 @@ end
 
 function SummaryBossAlter:addTime()
 
+    AnalyticsSummaryBossAddTime()
+
     if s_SCENE.popupLayer~=nil then
         s_SCENE.popupLayer:setPauseBtnEnabled(true)
         s_SCENE.popupLayer.isOtherAlter = false

@@ -19,7 +19,6 @@ function NewReviewBossPause.create(FromWhere)
     
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
-    pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT *0.99)
     s_SCENE.popupLayer.pauseBtn = pauseBtn
 
     local function createPausePopup()
