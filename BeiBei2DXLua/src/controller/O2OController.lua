@@ -105,6 +105,16 @@ end
 
 function O2OController.onAssetsManagerCompleted()
     hideProgressHUD(true)
+
+    if g_userName ~= nil and g_userPassword ~= nil then
+        O2OController.logInOnline(g_userName, g_userPassword)
+        g_userName = nil
+        g_userPassword = nil
+        return
+    end
+    g_userName = nil
+    g_userPassword = nil
+
     -- O2OController.start() : has got user from local database
     local tmpUser = DataUser.create()
     local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
@@ -149,7 +159,15 @@ end
 function O2OController.startLoadingData(userStartType, username, password)
     LOGTIME('startLoadingData')
     local tmpUser = DataUser.create()
-    local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
+    local hasUserInLocalDB = false
+    if username ~= nil then
+        s_LocalDatabaseManager.getDatas('_User', '', username, function (row)
+            parseLocalDBDataToClientData(row, tmpUser)
+            hasUserInLocalDB = true
+        end)
+    else
+        hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
+    end
     local isLocalNewerThenServer = false
 
     local function onResponse(u, e, code)
@@ -214,7 +232,7 @@ function O2OController.startLoadingData(userStartType, username, password)
     elseif userStartType == USER_START_TYPE_QQ then 
         s_UserBaseServer.onLogInByQQ(onResponse)
     elseif userStartType == USER_START_TYPE_QQ_AUTHDATA then 
-        s_UserBaseServer.logInByQQAuthData(onResponse)
+        s_UserBaseServer.logInByQQAuthData(tmpUser.openid, tmpUser.access_token, tmpUser.expires_in, onResponse)
     else
         s_UserBaseServer.signUp(username, password, onResponse)
     end

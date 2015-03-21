@@ -16,6 +16,7 @@ local SHOP_LOCKED = 0
 local REWARD_LOCKED = 0
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 local list = {}
+local TEXT_CHANGE_ACCOUNT = '切换账号' -- "登出游戏"
 
 function HomeLayer.create(share) 
     -- s_CURRENT_USER:addBeans(10000)FriendLayer
@@ -55,7 +56,7 @@ function HomeLayer.create(share)
 
     local username = "游客"
     local logo_name = {"head","book","feedback","information","logout"}
-    local label_name = {username,"选择书籍","用户反馈","完善个人信息","登出游戏"}
+    local label_name = {username,"选择书籍","用户反馈","完善个人信息",TEXT_CHANGE_ACCOUNT}
 
     s_SCENE.touchEventBlockLayer.unlockTouch()
     local layer = HomeLayer.new()
@@ -291,7 +292,7 @@ function HomeLayer.create(share)
     if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
         username = s_CURRENT_USER:getNameForDisplay()
         logo_name = {"head","book","feedback","logout"}
-        label_name = {username,"选择书籍","用户反馈","登出游戏"}
+        label_name = {username,"选择书籍","用户反馈",TEXT_CHANGE_ACCOUNT}
     end
     local label = {}
     local logo = {}
@@ -361,16 +362,31 @@ function HomeLayer.create(share)
                             end
                         end
                     end
-                elseif label_name[i] == "登出游戏" then
+                elseif label_name[i] == TEXT_CHANGE_ACCOUNT then
                     if not s_SERVER.isNetworkConnectedNow() then
                            offlineTipHome.setTrue(OfflineTipForHome_Logout)
                     else
+                        
                         -- logout
-                        AnalyticsLogOut()
-                        cx.CXAvos:getInstance():logOut()
-                        s_LocalDatabaseManager.setLogOut(true)
-                        s_LocalDatabaseManager.close()
-                        s_START_FUNCTION()
+                        -- AnalyticsLogOut()
+                        -- cx.CXAvos:getInstance():logOut()
+                        -- s_LocalDatabaseManager.setLogOut(true)
+                        -- s_LocalDatabaseManager.close()
+                        -- s_START_FUNCTION()
+                        local ChangeAccountPopup = require('view.login.ChangeAccountPopup')
+                        local loginPopup = ChangeAccountPopup.create()
+                        s_SCENE:popup(loginPopup)
+                        
+                        loginPopup:setVisible(false)
+                        loginPopup:setPosition(0,s_DESIGN_HEIGHT * 1.5) 
+
+                        local action2 = cc.CallFunc:create(function()
+                            loginPopup:setVisible(true)
+                        end)
+                        local action3 = cc.MoveTo:create(0.5,cc.p(0,0)) 
+                        local action4 = cc.Sequence:create(action2, action3)
+                        loginPopup:runAction(action4)
+
                     end
                 else
                     -- do nothing
