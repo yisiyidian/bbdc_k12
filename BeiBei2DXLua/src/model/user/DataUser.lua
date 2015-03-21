@@ -115,6 +115,8 @@ function DataUser:getLockFunctionState(productId)
 end
 
 function DataUser:unlockFunctionState(productId)
+    AnalyticsBuy(productId)
+    
     local lockFunction = self.lockFunction
     local addNum = 1
     for i = 1, productId - 1 do
