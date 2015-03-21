@@ -377,8 +377,10 @@ end
 
 function AnalyticsSummaryBossAddTime()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        print('Analytics', getAnalyticsPrefix() .. 'SummaryBossInFirstDay', 'AddTime')
         cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBossInFirstDay', 'AddTime')
     end
+    print('Analytics', getAnalyticsPrefix() .. 'SummaryBoss', 'AddTime')
     cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBoss', 'AddTime')
 end
 
@@ -442,16 +444,20 @@ end
 
 function AnalyticsLoginReward()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
-        cx.CXAnalytics:logEventAndLabel('LoginReward_firstday', 'TOUCH')
+        print('Analytics', getAnalyticsPrefix() .. 'LoginReward_firstday', 'TOUCH');
+        cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'LoginReward_firstday', 'TOUCH')
     end
-    cx.CXAnalytics:logEventAndLabel('LoginReward', 'TOUCH')
+    print('Analytics', getAnalyticsPrefix() .. 'LoginReward', 'TOUCH');
+    cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'LoginReward', 'TOUCH')
 end
 
 function AnalyticsDownloadSuccessful()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
-        cx.CXAnalytics:logEventAndLabel('DownloadSuccessful_firstday', 'TOUCH')
+        print('Analytics', getAnalyticsPrefix() .. 'DownloadSuccessful_firstday', 'TOUCH');
+        cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'DownloadSuccessful_firstday', 'TOUCH')
     end
-    cx.CXAnalytics:logEventAndLabel('DownloadSuccessful', 'TOUCH')
+    print('Analytics', getAnalyticsPrefix() .. 'DownloadSuccessful', 'TOUCH');
+    cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'DownloadSuccessful', 'TOUCH')
 end
 
 ----------------------------------------------------------------------------------------
