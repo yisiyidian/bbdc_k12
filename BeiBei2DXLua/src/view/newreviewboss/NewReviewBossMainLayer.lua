@@ -1,6 +1,7 @@
 require("cocos.init")
 require("common.global")
 
+local Button                = require("view.newstudy.BlueButtonInStudyLayer")
 local NewReviewBossNode = require("view.newreviewboss.NewReviewBossNode")
 local ProgressBar       = require("view.newreviewboss.NewReviewBossProgressBar")
 local Pause             = require("view.newreviewboss.NewReviewBossPause")
@@ -308,22 +309,11 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
             end   
         end
     end
-    
-    local hint_button = ccui.Button:create("image/newreviewboss/buttonreviewboss1nextend.png","","")
-    hint_button:setScale9Enabled(true)
-    hint_button:setPosition(s_DESIGN_WIDTH / 2, 100)
-    hint_button:ignoreAnchorPointForPosition(false)
-    hint_button:setAnchorPoint(0.5,0)
-    hint_button:addTouchEventListener(hint_click)
-    hint_button:setScale9Enabled(true)
-    layer:addChild(hint_button,2) 
 
-    local hint_label = cc.Label:createWithSystemFont("提示我","",36)
-    hint_label:setPosition(hint_button:getContentSize().width * 0.5,hint_button:getContentSize().height * 0.5)
-    hint_label:setColor(cc.c4b(255,255,255,255))
-    hint_label:ignoreAnchorPointForPosition(false)
-    hint_label:setAnchorPoint(0.5,0.5)
-    hint_button:addChild(hint_label)
+    local hint_button = Button.create("提示我")
+    hint_button:setPosition(s_DESIGN_WIDTH / 2, 100)
+    hint_button:addTouchEventListener(hint_click)  
+    layer:addChild(hint_button,2) 
     
     local onTouchBegan = function(touch, event)
         local location = layer:convertToNodeSpace(touch:getLocation())

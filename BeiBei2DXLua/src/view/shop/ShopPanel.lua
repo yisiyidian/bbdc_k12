@@ -21,7 +21,6 @@ function ShopPanel.create(itemId)
 
     main.sure = function()
         if s_CURRENT_USER:getBeans() >= s_DataManager.product[itemId].productValue then
-            AnalyticsBuy(itemId)
 
             s_CURRENT_USER:subtractBeans(s_DataManager.product[itemId].productValue)
             s_CURRENT_USER:unlockFunctionState(itemId)
