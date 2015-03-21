@@ -69,6 +69,7 @@ function BookLayer.create()
 
                 if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
                     s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
+                    s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_book_select+1)
                     AnalyticsFirstBook(key)
                 end
                 
@@ -126,8 +127,8 @@ function BookLayer.create()
                 text:setColor(cc.c3b(0,0,0))
                 tutorial_text:addChild(text)
                 
-                s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
-                s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_book_select+1)
+                -- s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
+                -- s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_book_select+1)
             end
         end
         layer.book[i] = smallBack
@@ -209,12 +210,12 @@ function BookLayer.create()
     local eventDispatcher = listView:getItem(count - 1):getChildByName('shelf'):getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, listView:getItem(count - 1):getChildByName('shelf'))
 
-    onAndroidKeyPressed(layer, function ()
-            s_CorePlayManager.enterHomeLayer()
+    -- onAndroidKeyPressed(layer, function ()
+    --         s_CorePlayManager.enterHomeLayer()
         
-    end, function ()
+    -- end, function ()
 
-    end)
+    -- end)
 
     local function update(delta)
         local h = listView:getInnerContainer():getPositionY()

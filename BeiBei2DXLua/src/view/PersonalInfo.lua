@@ -91,14 +91,13 @@ function PersonalInfo:ctor()
 
         end
 
-        local share = ccui.Button:create('image/PersonalInfo/share_button.png','','')
-        share:setScale9Enabled(true)
-        share:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X + 170,0.9 * intro:getContentSize().height)
+        local share = ccui.Button:create('image/PersonalInfo/button_fenxiang_data.png','image/PersonalInfo/button_fenxiang_data_pressed.png','')
+        share:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X + 250,0.9 * intro:getContentSize().height + 30)
         layout:addChild(share)
         local title_here = titleArray[5 - i]
         local title
         if s_CURRENT_USER:getLockFunctionState(6 - i) ~= UNLOCK then
-            title_here = titleArray[5 - i].."被锁住了！"
+            title_here = titleArray[5 - i].."被锁住了!"
             
             
             local ShopPanel = require('view.shop.ShopPanel')
@@ -110,6 +109,7 @@ function PersonalInfo:ctor()
                 local curPage = pageView:getCurPageIndex()
                 share:setVisible(true)
                 title:setString(titleArray[5 - i])
+                title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height + 30)
                 if curPage == 3 then
                     self:PLVM()
                     AnalyticsDataCenterPage('PLVM')
@@ -127,8 +127,13 @@ function PersonalInfo:ctor()
             
             share:setVisible(false)
         end
-        title = cc.Label:createWithSystemFont(title_here,'',30)
-        title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height)
+        title = cc.Label:createWithSystemFont(title_here,'',36)
+        --title:enableOutline(colorArray[5- i],1)
+        if s_CURRENT_USER:getLockFunctionState(6 - i) ~= UNLOCK then
+            title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height - 15)
+        else
+            title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height + 30)
+        end
         title:setColor(colorArray[5 - i])
         layout:addChild(title)
 
@@ -164,8 +169,8 @@ function PersonalInfo:ctor()
             name:setColor(cc.c3b(92,130,140))
             top:addChild(name)
 
-            local title = cc.Label:createWithSystemFont(titleArray[5 - i],'',30)
-            title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height)
+            local title = cc.Label:createWithSystemFont(titleArray[5 - i],'',36)
+            title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height + 30)
             title:setColor(colorArray[5 - i])
             intro:addChild(title)
             target[i]:begin()
@@ -245,7 +250,7 @@ function PersonalInfo:PLVM()
     
     local back = self.intro_array[4]
     local circleBack = cc.Sprite:create('image/PersonalInfo/PLVM/shuju_circle_white.png')
-    circleBack:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.42 * s_DESIGN_HEIGHT)
+    circleBack:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.42 * s_DESIGN_HEIGHT - 40)
     back:addChild(circleBack)
     
     local toLearn = cc.ProgressTo:create(learnPercent,learnPercent * 100)
@@ -353,30 +358,32 @@ function PersonalInfo:PLVM()
         smallCircle2:setVisible(false)
     end
     
-    local line = cc.LayerColor:create(cc.c4b(0,0,0,255),200,1)
+    local line = cc.LayerColor:create(cc.c4b(0,0,0,255),150,1)
     line:ignoreAnchorPointForPosition(false)
     line:setAnchorPoint(0.5,0.5)
     line:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
     circleBack:addChild(line)
     
-    local label_study = cc.Label:createWithSystemFont("已学单词","",36)
+    local label_study = cc.Label:createWithSystemFont("已学单词","",30)
     label_study:ignoreAnchorPointForPosition(false)
     label_study:setAnchorPoint(0.5,1)
-    label_study:setColor(cc.c4b(0,0,0 ,255))
-    label_study:setPosition(0.5 * circleBack:getContentSize().width,0.49 * circleBack:getContentSize().height)
+    label_study:setColor(cc.c4b(38,64,80,255))
+    label_study:setOpacity(150)
+    label_study:setPosition(0.5 * circleBack:getContentSize().width,0.49 * circleBack:getContentSize().height - 7)
     circleBack:addChild(label_study)
     
-    local label_book = cc.Label:createWithSystemFont(s_DataManager.books[s_CURRENT_USER.bookKey].name,"",28)
+    local label_book = cc.Label:createWithSystemFont(s_DataManager.books[s_CURRENT_USER.bookKey].name,"",20)
     label_book:ignoreAnchorPointForPosition(false)
     label_book:setAnchorPoint(0.5,1)
-    label_book:setColor(cc.c4b(0,0,0 ,255))
-    label_book:setPosition(0.5 * circleBack:getContentSize().width,0.4 * circleBack:getContentSize().height)
+    label_book:setColor(cc.c4b(38,64,80,255))
+    label_book:setOpacity(150)
+    label_book:setPosition(0.5 * circleBack:getContentSize().width,0.4 * circleBack:getContentSize().height + 2)
     circleBack:addChild(label_book)
     
-    local label_percent = cc.Label:createWithSystemFont("0%","",48)
+    local label_percent = cc.Label:createWithSystemFont("0%","",60)
     label_percent:ignoreAnchorPointForPosition(false)
     label_percent:setAnchorPoint(0.5,0)
-    label_percent:setColor(cc.c4b(0,0,0 ,255))
+    label_percent:setColor(cc.c4b(38,64,80,255))
     label_percent:setPosition(0.5 * circleBack:getContentSize().width,0.5 * circleBack:getContentSize().height)
     circleBack:addChild(label_percent)
     
@@ -412,14 +419,14 @@ function PersonalInfo:PLVI()
     local yBar = cc.Sprite:create("image/PersonalInfo/PLVI/lv_information_zuobiantiao_1.png")
     yBar:setScaleX(scale)
     yBar:setAnchorPoint(0, 1)
-    yBar:setPosition(-s_LEFT_X, s_DESIGN_HEIGHT * 0.77)
+    yBar:setPosition(-s_LEFT_X, s_DESIGN_HEIGHT * 0.77 - 100)
     back:addChild(yBar)
     
     local gezi = cc.Sprite:create("image/PersonalInfo/PLVI/wsy_gezi.png")
     gezi:setScaleX(scale)
     gezi:setOpacity(0)
     gezi:setAnchorPoint(0.0,0.5)
-    gezi:setPosition(-s_LEFT_X + yBar:getContentSize().width * scale, s_DESIGN_HEIGHT * 0.5)
+    gezi:setPosition(-s_LEFT_X + yBar:getContentSize().width * scale, s_DESIGN_HEIGHT * 0.5 - 100)
     back:addChild(gezi)
     
     local countArray = {}
@@ -446,6 +453,7 @@ function PersonalInfo:PLVI()
         local str = getDayStringForDailyStudyInfo(selectDate)
         countArray[i] = s_LocalDatabaseManager.getStudyWordsNum(str)
         countArray[i] = countArray[i - 1] + countArray[i]
+        --countArray[i] = i * i * 5
     end
     local point = {}
     local selectPoint
@@ -453,7 +461,7 @@ function PersonalInfo:PLVI()
     local tableHeight = gezi:getContentSize().height
     local tableWidth = gezi:getContentSize().width
     local function drawXYLabel(count)
-        local max = count[#count] + 10
+        local max = count[#count] * 1.1 + 10
         local min = count[1]
         if max == min then
             min = 0
@@ -467,9 +475,9 @@ function PersonalInfo:PLVI()
             x = (i - 1.3) / 7.5
             
             if max > min then
-                y = (count[i] - min) / (max - min) * 0.8
+                y = (count[i] - min) / (max - min) * 1.0
             elseif max > 0 then
-                y = 0.8 
+                y = 1.0
             else 
                 y = 0              
             end
@@ -482,7 +490,7 @@ function PersonalInfo:PLVI()
             x_i:setColor(cc.c4b(238,75,74,255 ))
             x_i:setPosition((i - 0.3) / 7.5 * tableWidth , - 0.2 * tableHeight)
             gezi:addChild(x_i)
-            local line = cc.LayerColor:create(cc.c4b(150,150,150,255),1, 0.8 * tableHeight)
+            local line = cc.LayerColor:create(cc.c4b(150,150,150,255),1, 1.0 * tableHeight)
             line:setAnchorPoint(0.5,0)
             line:setPosition((i - 0.3) / 7.5 * tableWidth , - 0.1 * tableHeight)
             gezi:addChild(line)
@@ -495,7 +503,7 @@ function PersonalInfo:PLVI()
             y[i]:setScaleX(1/ scale)
             y[i]:setColor(cc.c4b(238,75,74,255))
             y[i]:setAlignment(cc.TEXT_ALIGNMENT_RIGHT)
-            y[i]:setPosition(0.4 * yBar:getContentSize().width , (0.0 + 0.8 * (i - 1) / 6) * tableHeight)
+            y[i]:setPosition(0.4 * yBar:getContentSize().width , (0.0 + 1.0 * (i - 1) / 6) * tableHeight)
             yBar:addChild(y[i])
         end
         if max == 0 then
@@ -532,7 +540,7 @@ function PersonalInfo:PLVI()
         s_logd(string.format('selectPoint = %d, %d',selectPoint:getPositionX(),#count))
         gezi:addChild(selectPoint)
         selectPoint:setVisible(false)
-        selectPoint:setScale(0.8)
+        --selectPoint:setScale(0.8)
         
         local function update( delta )
             if curLine > #length then
@@ -568,22 +576,24 @@ function PersonalInfo:PLVI()
         board:setPosition(0.5 * selectPoint:getContentSize().width,selectPoint:getContentSize().height)
         selectPoint:addChild(board)
         
-        local label = cc.Label:createWithSystemFont('+','',36)
-        --label:setColor(cc.c3b(0,0,0))
-        label:setAnchorPoint(0.5,0.5)
-        label:setPosition(0.3 * board:getContentSize().width,0.75 * board:getContentSize().height)
-        board:addChild(label)
-
-        countLabel = cc.Label:createWithSystemFont(string.format('%d',count[#count] - count[#count - 1]),'',52)
-        countLabel:setAnchorPoint(0.5,0.5)
-        countLabel:setPosition(0.6 * board:getContentSize().width,0.7 * board:getContentSize().height)
+        countLabel = cc.Label:createWithSystemFont(string.format('%d',count[#count] - count[#count - 1]),'',55)
+        countLabel:enableOutline(cc.c4b(255,255,255,255),1)
+        countLabel:setAnchorPoint(0.5,0)
+        countLabel:setPosition(0.55 * board:getContentSize().width,0.4 * board:getContentSize().height + 10)
         board:addChild(countLabel,0,'count')
 
-        local totalLabel = cc.Label:createWithSystemFont(string.format('共%d个',count[#count]),'',26)
+        local label = cc.Label:createWithSystemFont('+','',24)
+        label:enableOutline(cc.c4b(255,255,255,255),1)
+        --label:setColor(cc.c3b(0,0,0))
+        label:setAnchorPoint(0.5,0)
+        label:setPosition(countLabel:getPositionX() - countLabel:getContentSize().width / 2 - 10,countLabel:getPositionY() + 10)
+        board:addChild(label)
+
+        local totalLabel = cc.Label:createWithSystemFont(string.format('共学%d',count[#count]),'',24)
         totalLabel:setAnchorPoint(0.5,0.5)
-        totalLabel:setColor(cc.c3b(0,0,0))
+        --totalLabel:setColor(cc.c3b(0,0,0))
         totalLabel:setOpacity(150)
-        totalLabel:setPosition(0.5 * board:getContentSize().width,0.35 * board:getContentSize().height)
+        totalLabel:setPosition(0.5 * board:getContentSize().width - 5,0.35 * board:getContentSize().height + 5)
         board:addChild(totalLabel,0,'count')
     end
     
