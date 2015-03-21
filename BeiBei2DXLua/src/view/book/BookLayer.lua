@@ -209,12 +209,12 @@ function BookLayer.create()
     local eventDispatcher = listView:getItem(count - 1):getChildByName('shelf'):getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, listView:getItem(count - 1):getChildByName('shelf'))
 
-    onAndroidKeyPressed(layer, function ()
-            s_CorePlayManager.enterHomeLayer()
+    -- onAndroidKeyPressed(layer, function ()
+    --         s_CorePlayManager.enterHomeLayer()
         
-    end, function ()
+    -- end, function ()
 
-    end)
+    -- end)
 
     local function update(delta)
         local h = listView:getInnerContainer():getPositionY()

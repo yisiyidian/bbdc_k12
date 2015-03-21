@@ -13,7 +13,7 @@ function HintAlter.create(info)
     s_SCENE.popupLayer.listener:setSwallowTouches(true)
     
     local back = cc.Sprite:create("image/alter/tanchu_board_small_white.png")
-    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3)
+    back:setPosition(main:getContentSize().width/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
 
     local action1 = cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
