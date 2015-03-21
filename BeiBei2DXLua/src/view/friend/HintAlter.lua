@@ -16,7 +16,7 @@ function HintAlter.create(info)
     back:setPosition(main:getContentSize().width/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
 
-    local action1 = cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
+    local action1 = cc.MoveTo:create(0.3,cc.p(main:getContentSize().width/2, s_DESIGN_HEIGHT/2))
     local action2 = cc.EaseBackOut:create(action1)
     back:runAction(action2)
 
@@ -29,7 +29,7 @@ function HintAlter.create(info)
 
     local function closeAnimation()
         s_SCENE.popupLayer.listener:setSwallowTouches(false)
-        local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*3/2)))
+        local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(main:getContentSize().width/2, s_DESIGN_HEIGHT*3/2)))
         local remove = cc.CallFunc:create(function() 
             main:removeFromParent() 
         end,{})
