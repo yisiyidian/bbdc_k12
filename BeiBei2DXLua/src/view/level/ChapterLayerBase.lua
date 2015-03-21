@@ -251,7 +251,10 @@ function ChapterLayerBase:addPopup(levelIndex)
             local active = info[3] + 0
             local currentTaskID = info[4] + 1
             local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
-            s_SCENE:removeAllPopups()
+            s_SCENE:callFuncWithDelay(0.1, function()
+                s_SCENE:removeAllPopups()
+            end)
+            
             if state >= 4 and bossID ~= currentTaskID then
 --                if true then
 
@@ -352,6 +355,12 @@ function ChapterLayerBase:addPopup(levelIndex)
     elseif state == 8 then
         back = cc.Sprite:create('image/chapter/popup/background_xiaoguan_tanchu_9.png')
     end
+
+    -- add popup title
+    local popup_title = cc.Label:createWithSystemFont('夏威夷-'..(levelIndex+1),'Verdana-Bold',38)
+    popup_title:setPosition(back:getContentSize().width/2,back:getContentSize().height-50)
+    popup_title:setColor(cc.c3b(255,255,255))
+    back:addChild(popup_title,20)
     -- add new hammer resource
     if state == 0 then
         local hammer = cc.Sprite:create('image/chapter/popup/chuizi_inactive.png')
