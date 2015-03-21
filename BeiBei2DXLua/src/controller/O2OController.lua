@@ -97,7 +97,7 @@ function O2OController.start()
     -- online
     else
         -- go to O2OController.onAssetsManagerCompleted()
-        local loadingView = LoadingView.create(true)
+        local loadingView = LoadingView.create()
         s_SCENE:replaceGameLayer(loadingView) 
 
     end

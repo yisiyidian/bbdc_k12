@@ -176,4 +176,5 @@ project_compile.py->_check_custom_options->
 
 在后加一句self._compile_script  = False
 
+因为QQ SDK的原因，豌豆荚需要单独打包
 
