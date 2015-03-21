@@ -153,20 +153,20 @@ end
 function WordLibraryPopup:ctor(index)
     local boss = s_LocalDatabaseManager.getBossInfo(index + 1)
     
-    local backPopup = cc.Sprite:create("image/islandPopup/backforlibrary.png")
-    backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)
-    self:addChild(backPopup)
+    self.backPopup = cc.Sprite:create("image/islandPopup/backforlibrary.png")
+    self.backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)
+    self:addChild(self.backPopup)
 
     local top_sprite = cc.Sprite:create("image/islandPopup/top.png")
-    top_sprite:setPosition(backPopup:getContentSize().width * 0.5,backPopup:getContentSize().height * 0.95)
+    top_sprite:setPosition(self.backPopup:getContentSize().width * 0.5,self.backPopup:getContentSize().height * 0.95)
     top_sprite:ignoreAnchorPointForPosition(false)
     top_sprite:setAnchorPoint(0.5,0.5)
-    backPopup:addChild(top_sprite)
+    self.backPopup:addChild(top_sprite)
     
-    self.closeButton = addCloseButton(top_sprite,backPopup)
+    self.closeButton = addCloseButton(top_sprite,self.backPopup)
     top_sprite:addChild(self.closeButton)
     
-    self.backButton = addBackButton(top_sprite,self,backPopup)
+    self.backButton = addBackButton(top_sprite,self,self.backPopup)
     top_sprite:addChild(self.backButton)
     
     self.unfamiliarButton = addUnfamiliarButton(top_sprite)
@@ -188,10 +188,10 @@ function WordLibraryPopup:ctor(index)
    top_sprite:addChild(line_sprite,-1)
     
     local bottom_sprite = cc.Sprite:create("image/islandPopup/bottom.png")
-    bottom_sprite:setPosition(backPopup:getContentSize().width * 0.5,backPopup:getContentSize().height * 0.03)
+    bottom_sprite:setPosition(self.backPopup:getContentSize().width * 0.5,self.backPopup:getContentSize().height * 0.03)
     bottom_sprite:ignoreAnchorPointForPosition(false)
     bottom_sprite:setAnchorPoint(0.5,0.5)
-    backPopup:addChild(bottom_sprite,2)
+    self.backPopup:addChild(bottom_sprite,2)
     
     self.reviewButton = addReviewButton(bottom_sprite,boss)
     bottom_sprite:addChild(self.reviewButton)
@@ -237,7 +237,7 @@ function WordLibraryPopup:ctor(index)
     end
     
     self.listview:setPosition(2,70)
-    backPopup:addChild(self.listview)
+    self.backPopup:addChild(self.listview)
     
     local onTouchEnded = function(touch, event)
         local location = top_sprite:convertToNodeSpace(touch:getLocation())
@@ -248,7 +248,7 @@ function WordLibraryPopup:ctor(index)
             self.listview:removeFromParent()
             self.listview = Listview.create(boss.rightWordList) 
             self.listview:setPosition(2,70)
-            backPopup:addChild(self.listview)
+            self.backPopup:addChild(self.listview)
             self.reviewButton:setVisible(false)
             self.summaryButton:setVisible(false)
         elseif cc.rectContainsPoint(self.unfamiliarButton:getBoundingBox(), location) then
@@ -258,7 +258,7 @@ function WordLibraryPopup:ctor(index)
             self.listview:removeFromParent()
             self.listview = Listview.create(boss.wrongWordList) 
             self.listview:setPosition(2,70)
-            backPopup:addChild(self.listview)
+            self.backPopup:addChild(self.listview)
             if tonumber(index) == 0 then
                 if #boss.wrongWordList >= 3 then
                     self.reviewButton:setVisible(true)
@@ -273,12 +273,12 @@ function WordLibraryPopup:ctor(index)
             end
         end
         local location1 = self:convertToNodeSpace(touch:getLocation())
-        if not cc.rectContainsPoint(backPopup:getBoundingBox(),location1) then
+        if not cc.rectContainsPoint(self.backPopup:getBoundingBox(),location1) then
             local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5)))
             local remove = cc.CallFunc:create(function() 
                 s_SCENE:removeAllPopups()
             end)
-            backPopup:runAction(cc.Sequence:create(move,remove))
+            self.backPopup:runAction(cc.Sequence:create(move,remove))
         end
     end
     
@@ -294,7 +294,7 @@ function WordLibraryPopup:ctor(index)
         local remove = cc.CallFunc:create(function() 
             s_SCENE:removeAllPopups()
         end)
-        backPopup:runAction(cc.Sequence:create(move,remove))
+        self.backPopup:runAction(cc.Sequence:create(move,remove))
     end, function ()
 
     end)

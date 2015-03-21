@@ -150,7 +150,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
     local onTouchEnded = function (touch, event)
         local location = main:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint(back:getBoundingBox(),location) then
-            local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
             local action2 = cc.EaseBackIn:create(action1)
             local action3 = cc.CallFunc:create(function()
             main.know()
@@ -168,7 +168,7 @@ function GuideAlter.create(type, title, content) -- 0 for small alter and 1 for 
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
     
     onAndroidKeyPressed(main, function ()
-        local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
+        local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
         local action2 = cc.EaseBackIn:create(action1)
         local action3 = cc.CallFunc:create(function()
         main.know()
