@@ -5,6 +5,7 @@ local PopupSoundDownloadSuccess = class("PopupSoundDownloadSuccess", function ()
 end)
 
 function PopupSoundDownloadSuccess.create()
+    AnalyticsDownloadSuccessful()
     
     local layer = PopupSoundDownloadSuccess.new()
     local bookkey = s_CURRENT_USER.bookKey

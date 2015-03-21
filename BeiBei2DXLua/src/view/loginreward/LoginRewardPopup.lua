@@ -35,6 +35,8 @@ end
 
 function LoginRewardPopup:ctor()
 
+    AnalyticsLoginReward()
+
     local rewardList = s_DataManager.bean
 
 	local backPopup = cc.Sprite:create("image/loginreward/backPopup.png")

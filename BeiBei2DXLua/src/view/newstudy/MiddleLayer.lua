@@ -203,14 +203,13 @@ function MiddleLayer:ctor()
 
     
     local backBagSprite = cc.Sprite:create("image/newstudy/bagback.png")
-    backBagSprite:setPosition(bigWidth * 0.65, 500)
+    backBagSprite:setPosition(bigWidth * 0.65, 495)
     backColor:addChild(backBagSprite)
     
     local frontBagSprite = cc.Sprite:create("image/newstudy/bagfront.png")
-    frontBagSprite:setPosition(bigWidth * 0.65 + 4, 510)
+    frontBagSprite:setPosition(bigWidth * 0.65 + 4, 505)
     frontBagSprite:ignoreAnchorPointForPosition(false)
     frontBagSprite:setAnchorPoint(0.5,1)
-    frontBagSprite:setColor(cc.c4b(234,123,3,255))
     backColor:addChild(frontBagSprite,2)
     
     local point = cc.p(backBagSprite:getPositionX(),backBagSprite:getPositionY())
@@ -222,7 +221,7 @@ function MiddleLayer:ctor()
 
     local beibeiAnimation = sp.SkeletonAnimation:create("spine/collectword.json", "spine/collectword.atlas",1)
     beibeiAnimation:addAnimation(0, 'animation', false)
-    beibeiAnimation:setPosition(bigWidth * 0.15, 300)
+    beibeiAnimation:setPosition(bigWidth * 0.15, 305)
     backColor:addChild(beibeiAnimation)
     
     self.getBean = s_CURRENT_USER.beanRewardForCollect
@@ -230,11 +229,17 @@ function MiddleLayer:ctor()
     self.nextButton = createNextButton(self.getBean)
     backColor:addChild(self.nextButton)
 
+    local CongratulationPopup = require("view.newstudy.CongratulationPopup").create()
+    s_SCENE:popup(CongratulationPopup)
+   
     onAndroidKeyPressed(self, function ()
-        s_level_popup_state = 1
-        s_HUD_LAYER:removeChildByName('missionCompleteCircle')
-        s_CURRENT_USER.beanRewardForIron = 3
-        s_CorePlayManager.leaveStudyOverModel()
+        local isPopup = s_SCENE.popupLayer:getChildren()
+        if #isPopup == 0 then
+            s_level_popup_state = 1
+            s_HUD_LAYER:removeChildByName('missionCompleteCircle')
+            s_CURRENT_USER.beanRewardForIron = 3
+            s_CorePlayManager.leaveStudyOverModel()
+        end
     end, function ()
 
     end)

@@ -440,7 +440,19 @@ function AnalyticsImproveInfo()
     print('Analytics', getAnalyticsPrefix() .. 'AnalyticsImproveInfo', 'SHOW'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'AnalyticsImproveInfo', 'SHOW')
 end
 
+function AnalyticsLoginReward()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('LoginReward_firstday', 'TOUCH')
+    end
+    cx.CXAnalytics:logEventAndLabel('LoginReward', 'TOUCH')
+end
 
+function AnalyticsDownloadSuccessful()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        cx.CXAnalytics:logEventAndLabel('DownloadSuccessful_firstday', 'TOUCH')
+    end
+    cx.CXAnalytics:logEventAndLabel('DownloadSuccessful', 'TOUCH')
+end
 
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------

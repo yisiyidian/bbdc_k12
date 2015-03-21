@@ -10,6 +10,7 @@ function PopupLayer.create()
 end
 
 function PopupLayer:ctor()
+
     local onTouchBegan = function(touch, event)
         return true
     end    
@@ -34,10 +35,10 @@ function PopupLayer:ctor()
 end
 
 function PopupLayer:addBackground()
-    local bg = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
-    bg:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
-    self:addChild(bg)
-end
+    self.backColor = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
+    self.backColor:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
+    self:addChild(self.backColor)
+end    
 
 function PopupLayer:setPauseBtnEnabled(var)
     if self.pauseBtn ~=nil then
