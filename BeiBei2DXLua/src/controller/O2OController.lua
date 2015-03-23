@@ -37,7 +37,9 @@ local function onError()
     if s_SERVER.hasSessionToken() then cx.CXAvos:getInstance():logOut() end
     s_LocalDatabaseManager.setLogOut(true)
     s_LocalDatabaseManager.close()
-    s_START_FUNCTION()
+    
+    local start = reloadModule('start')
+    start.init()
 end
 
 function onErrorNeedRestartAppHappend(e)
@@ -100,11 +102,11 @@ function O2OController.start()
         local loadingView = LoadingView.create()
         s_SCENE:replaceGameLayer(loadingView) 
 
+        O2OController.onAssetsManagerCompleted()
     end
 end
 
 function O2OController.onAssetsManagerCompleted()
-    hideProgressHUD(true)
 
     if g_userName ~= nil and g_userPassword ~= nil then
         O2OController.logInOnline(g_userName, g_userPassword)
