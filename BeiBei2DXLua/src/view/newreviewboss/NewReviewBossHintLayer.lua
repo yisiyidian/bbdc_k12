@@ -2,6 +2,7 @@ local ProgressBar       = require("view.newreviewboss.NewReviewBossProgressBar")
 local Pause             = require("view.newreviewboss.NewReviewBossPause")
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 local DetailInfo        = require("view.newreviewboss.NewReviewBossWordInfo")
+local Button                = require("view.newstudy.BlueButtonInStudyLayer")
 
 local  NewReviewBossHintLayer = class("NewReviewBossHintLayer", function ()
     return cc.Layer:create()
@@ -73,21 +74,10 @@ function NewReviewBossHintLayer.create(currentWordName)
         end
     end
 
-    local return_button = ccui.Button:create("image/newreviewboss/buttonreviewboss1nextend.png","","")
-    return_button:setScale9Enabled(true)
+    local return_button = Button.create("返回")
     return_button:setPosition(s_DESIGN_WIDTH / 2, 100)
-    return_button:ignoreAnchorPointForPosition(false)
-    return_button:setAnchorPoint(0.5,0)
-    return_button:addTouchEventListener(return_click)
-    return_button:setScale9Enabled(true)
+    return_button:addTouchEventListener(return_click) 
     layer:addChild(return_button) 
-
-    local return_label = cc.Label:createWithSystemFont("返回","",36)
-    return_label:setPosition(return_button:getContentSize().width * 0.5,return_button:getContentSize().height * 0.5)
-    return_label:setColor(cc.c4b(255,255,255,255))
-    return_label:ignoreAnchorPointForPosition(false)
-    return_label:setAnchorPoint(0.5,0.5)
-    return_button:addChild(return_label)
     
     local onTouchBegan = function(touch, event)
         return true

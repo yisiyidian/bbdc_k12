@@ -157,6 +157,20 @@ function M.getMaxBoss()
     return maxBoss
 end
 
+function M.getMaxBossByBookKey(bookKey)
+    local userId    = s_CURRENT_USER.objectId
+    local username  = s_CURRENT_USER.username
+
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+
+    local maxBoss = nil
+    for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." ORDER BY bossID DESC LIMIT 1 ;") do
+        maxBoss = row
+    end
+
+    return maxBoss
+end
+
 function M.getMaxBossID()
     local boss = M.getMaxBoss()
     if boss ~= nil then return boss.bossID end

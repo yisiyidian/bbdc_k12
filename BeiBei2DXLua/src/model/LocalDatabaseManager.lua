@@ -198,6 +198,10 @@ function Manager.getMaxBoss()
     return localdatabase_bossWord.getMaxBoss()
 end
 
+function Manager.getMaxBossByBookKey(bookKey)
+    return localdatabase_bossWord.getMaxBossByBookKey(bookKey)
+end
+
 function Manager.getMaxBossID()
     return localdatabase_bossWord.getMaxBossID()
 end
@@ -231,6 +235,10 @@ end
 
 function Manager.getTotalStudyWordsNum()
     return s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
+end
+
+function Manager.getTotalStudyWordsNumByBookKey(bookKey)
+    return s_CURRENT_USER.levelInfo:getWordIndex(bookKey) - 1
 end
 
 function Manager.getTotalGraspWordsNum()

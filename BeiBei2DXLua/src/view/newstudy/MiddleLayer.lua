@@ -229,8 +229,14 @@ function MiddleLayer:ctor()
     self.nextButton = createNextButton(self.getBean)
     backColor:addChild(self.nextButton)
 
-    local CongratulationPopup = require("view.newstudy.CongratulationPopup").create()
-    s_SCENE:popup(CongratulationPopup)
+    if s_CURRENT_USER.bookKey ~= nil and s_CURRENT_USER.bookKey ~= '' then
+        local bossList = s_LocalDatabaseManager.getAllBossInfo()
+
+        if #bossList <= 1 then
+            local CongratulationPopup = require("view.newstudy.CongratulationPopup").create()
+            s_SCENE:popup(CongratulationPopup)
+        end
+    end
    
     onAndroidKeyPressed(self, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()
