@@ -12,9 +12,7 @@ function ShopAlter.create(itemId, location)
     local state = s_CURRENT_USER:getLockFunctionState(itemId)
     local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
-    local main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
-    main:setAnchorPoint(0.5,0.5)
-    main:ignoreAnchorPointForPosition(false)
+    local main = cc.Layer:create()
  
     local back
     if location == 'out' then
@@ -22,10 +20,10 @@ function ShopAlter.create(itemId, location)
     else
         back = cc.Sprite:create("image/shop/alter_back_in.png")
     end
-    back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
+    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
 
-    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
+    local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
     local action2 = cc.EaseBackOut:create(action1)
     back:runAction(action2)
 
@@ -115,10 +113,10 @@ function ShopAlter.create(itemId, location)
     
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT * 1.5))
+            local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 1.5))
             local action2 = cc.EaseBackIn:create(action1)
             local remove = cc.CallFunc:create(function() 
-            main:removeFromParent()
+                    s_SCENE:removeAllPopups()
             end)
             back:runAction(cc.Sequence:create(action2,remove))
         end
@@ -142,7 +140,7 @@ function ShopAlter.create(itemId, location)
             local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
             local action2 = cc.EaseBackIn:create(action1)
             local action3 = cc.CallFunc:create(function()
-                main:removeFromParent()
+                        s_SCENE:removeAllPopups()
             end)
             back:runAction(cc.Sequence:create(action2,action3))
         end
@@ -159,7 +157,7 @@ function ShopAlter.create(itemId, location)
         local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT * 1.5))
         local action2 = cc.EaseBackIn:create(action1)
         local remove = cc.CallFunc:create(function() 
-        main:removeFromParent()
+                s_SCENE:removeAllPopups()
         end)
         back:runAction(cc.Sequence:create(action2,remove))
     end, function ()

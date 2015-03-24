@@ -182,22 +182,6 @@ function HomeLayer.create(share)
         end
     end
 
-    onAndroidKeyPressed(layer, function ()
-        local isPopup = s_SCENE.popupLayer:getChildren()
-        if viewIndex == 2 and #isPopup == 0 then
-            local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-            backColor:runAction(action1)
-
-            viewIndex = 1
-
-            local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
-            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            setting_back:runAction(cc.Sequence:create(action2, action3))
-        end
-    end, function ()
-
-    end)
-
     local button_main = ccui.Button:create("image/homescene/home_page_function_bg1.png",'',"")
     button_main:setScale9Enabled(true)
     button_main:setPosition(bigWidth / 2 - 166, 200)
@@ -315,20 +299,17 @@ function HomeLayer.create(share)
                         offlineTipHome.setTrue(OfflineTipForHome_Feedback)
                     else
                         local alter = AlterI.create("用户反馈")
-                        alter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                        layer:addChild(alter)
+                        s_SCENE:popup(alter)
                     end
                 elseif label_name[i] == "完善个人信息" then
                     if  online == false then
                         offlineTipHome.setTrue(OfflineTipForHome_ImproveInformation)
                     else
                         local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_HOME_LAYER)
-                        improveInfo:setTag(1)
-                        improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                        layer:addChild(improveInfo)
+                        s_SCENE:popup(improveInfo)
 
                         improveInfo.close = function()
-                            layer:removeChildByTag(1)
+                            s_SCENE:removeAllPopups()
                             if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
                                 local button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
                                 button_back:setOpacity(0)
@@ -460,8 +441,7 @@ function HomeLayer.create(share)
             if s_CURRENT_USER:getLockFunctionState(1) == 0 then -- check is friend function unlock
                 local ShopAlter = require("view.shop.ShopAlter")
                 local shopAlter = ShopAlter.create(1, 'out')
-                shopAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-            layer:addChild(shopAlter)
+                s_SCENE:popup(shopAlter)
             else
                 if  online == false then
                     offlineTipFriend.setTrue()
@@ -796,7 +776,16 @@ function HomeLayer.create(share)
 
     onAndroidKeyPressed(layer, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()
-        if isDataShow == true and #isPopup == 0 then
+        if viewIndex == 2 and #isPopup == 0 then
+            local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
+            backColor:runAction(action1)
+
+            viewIndex = 1
+
+            local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+            setting_back:runAction(cc.Sequence:create(action2, action3))
+        elseif isDataShow == true and #isPopup == 0 then
             isDataShow = false
             layer:setButtonEnabled(true)
             local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
@@ -805,7 +794,7 @@ function HomeLayer.create(share)
                data_back:removeChildByName('PersonalInfo')
             end)
             button_data:runAction(cc.Sequence:create(action1, action2))
-        elseif isDataShow == false and #isPopup == 0 then
+        elseif isDataShow == false and  viewIndex == 1 and #isPopup == 0 then
             cx.CXUtils:getInstance():shutDownApp()
         end
     end, function ()
