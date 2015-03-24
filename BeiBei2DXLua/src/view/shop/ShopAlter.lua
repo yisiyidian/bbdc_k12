@@ -49,7 +49,7 @@ function ShopAlter.create(itemId, location)
 
             s_SCENE:callFuncWithDelay(4,function()
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-                main:removeFromParent()
+                s_SCENE:removeAllPopups()
                 if location == 'in' then
                     local ShopLayer = require("view.shop.ShopLayer")
                     local shopLayer = ShopLayer.create()

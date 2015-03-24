@@ -19,12 +19,6 @@ local list = {}
 local TEXT_CHANGE_ACCOUNT = '切换账号' -- "登出游戏"
 
 function HomeLayer.create(share) 
-    -- s_CURRENT_USER:addBeans(10000)FriendLayer
-    -- if s_CURRENT_USER:getBeans() < 1 then
-    --     s_CURRENT_USER:addBeans(10000)
-    --     saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
-    -- end
-
     -- task
     local todayTotalBossNum     = s_LocalDatabaseManager:getTodayTotalBossNum()
     local todayRemainBossNum    = s_LocalDatabaseManager:getTodayRemainBossNum()
@@ -491,6 +485,7 @@ function HomeLayer.create(share)
                         if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
                             local Item_popup = require("popup/PopupModel")
                             local item_popup = Item_popup.create(Site_From_Friend_Guest)  
+                            s_SCENE:popup(item_popup)
 
                             item_popup.update = function()
                                 if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
@@ -530,8 +525,7 @@ function HomeLayer.create(share)
                                     if sprite3 ~= nil then sprite3:removeFromParent() end
                                 end
                             end
-
-                            s_SCENE:popup(item_popup)
+                        
                         else
                             local Item_popup = require("popup/PopupModel")
                             local item_popup = Item_popup.create(Site_From_Friend_Not_Enough_Level)  
