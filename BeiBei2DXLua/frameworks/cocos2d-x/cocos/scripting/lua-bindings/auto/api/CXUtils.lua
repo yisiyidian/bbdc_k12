@@ -41,6 +41,11 @@
         
 --------------------------------
 -- 
+-- @function [parent=#CXUtils] shutDownApp 
+-- @param self
+        
+--------------------------------
+-- 
 -- @function [parent=#CXUtils] _testCppApi_ 
 -- @param self
         
