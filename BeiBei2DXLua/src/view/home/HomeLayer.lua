@@ -805,6 +805,8 @@ function HomeLayer.create(share)
                data_back:removeChildByName('PersonalInfo')
             end)
             button_data:runAction(cc.Sequence:create(action1, action2))
+        elseif isDataShow == false and #isPopup == 0 then
+            cx.CXUtils:getInstance():shutDownApp()
         end
     end, function ()
 
