@@ -58,7 +58,6 @@ function ShopAlter.create(itemId, location)
             end)
         else
             local shopErrorAlter = ShopErrorAlter.create()
-            shopErrorAlter:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2)
             s_SCENE:popup(shopErrorAlter)
         end
     end
@@ -137,7 +136,7 @@ function ShopAlter.create(itemId, location)
     local onTouchEnded = function(touch, event)
         local location = main:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint(back:getBoundingBox(),location) then
-            local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+            local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3))
             local action2 = cc.EaseBackIn:create(action1)
             local action3 = cc.CallFunc:create(function()
                         s_SCENE:removeAllPopups()
@@ -154,7 +153,7 @@ function ShopAlter.create(itemId, location)
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 
     onAndroidKeyPressed(main, function ()
-        local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT * 1.5))
+        local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 1.5))
         local action2 = cc.EaseBackIn:create(action1)
         local remove = cc.CallFunc:create(function() 
                 s_SCENE:removeAllPopups()
