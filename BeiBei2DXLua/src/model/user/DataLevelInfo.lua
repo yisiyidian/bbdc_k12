@@ -28,6 +28,12 @@ function DataLevelInfo:getCurrentWordIndex()
     return 1
 end
 
+function DataLevelInfo:getWordIndex(bookKey)
+    local maxBoss = s_LocalDatabaseManager.getMaxBossByBookKey(bookKey)
+    if maxBoss ~= nil then return maxBoss.lastWordIndex + 1 end
+    return 1
+end
+
 function DataLevelInfo:getBookCurrentLevelIndex()
     local progress = self:getLevelInfo(s_CURRENT_USER.bookKey)
     return progress

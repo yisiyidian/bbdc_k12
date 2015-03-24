@@ -191,6 +191,15 @@ std::string CXUtils::base64DecodeAndDecompressString(const std::string& str) {
     return outstring;
 }
 
+void CXUtils::shutDownApp() {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
+    extern void shutDownApp();
+    shutDownApp();
+#else
+    exit(0);
+#endif
+}
+
 void CXUtils::_testCppApi_() {
     std::string raw = "{\"channels\":[{\"name\":\"小米\",\"packageName\":\"com.beibei.wordmaster.mi\",\"leanCloudAppName\":\"贝贝单词X\",\"leanCloudAppId\":\"94uw2vbd553rx8fa6h5kt2y1w07p0x2ekwusf4w88epybnrp\",\"leanCloudAppKey\":\"lqsgx6mtmj65sjgrekfn7e5c28xc7koptbk9mqag2oraagdz\",\"QQAppId\":\"\",\"QQAppKey\":\"\",\"isQQLogInAvailable\":\"false\",\"umengAppName\":\"贝贝单词-小米\",\"umengAppKey\":\"5498fc3afd98c56b4200075d\"},{\"name\":\"android\",\"packageName\":\"com.beibei.wordmaster\",\"leanCloudAppName\":\"贝贝单词X_0\",\"leanCloudAppId\":\"2ktgzl363xwj3y3l9axd5hx3i8t31k48tt6344ds0qdg38jq\",\"leanCloudAppKey\":\"gycctmmh4csumv8opxtodi55e6837r3w5sjtm7tpunqgovjc\",\"QQAppId\":\"1103783596\",\"QQAppKey\":\"n7vXdt6eDIggSsa6\",\"isQQLogInAvailable\":\"true\",\"umengAppName\":\"贝贝单词-android\",\"umengAppKey\":\"549a5eb9fd98c5b2ac00144e\"}]}";
     std::string now = compressAndBase64EncodeString(raw);

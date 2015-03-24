@@ -42,7 +42,9 @@ local function changeAccount(username, password)
 
             g_userName = username
             g_userPassword = password
-            s_START_FUNCTION()
+            
+            local start = reloadModule('start')
+            start.init()
 
             -- onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
         end
