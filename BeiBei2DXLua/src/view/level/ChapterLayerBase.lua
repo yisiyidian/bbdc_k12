@@ -188,8 +188,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
             deco:setAnchorPoint(1,1)
             deco:addAnimation(0, 'animation', true)
             self:addChild(deco, 130)
-            deco:runAction(cc.FadeOut:create(0.2));
-            self:callFuncWithDelay(0.2, function()
+            deco:runAction(cc.FadeOut:create(1.0));
+            self:callFuncWithDelay(0.5, function()
                 local deco = sp.SkeletonAnimation:create("spine/chapterlevel/chuizi.json","spine/chapterlevel/chuizi.atlas",1)
                 deco:setPosition(levelPosition.x-60,levelPosition.y-10)
                 deco:setAnchorPoint(1,1)
@@ -206,21 +206,49 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 
 
     elseif levelState == 2 or (levelState >= 4 and levelIndex == currentTaskBossIndex) then
-        local reviewBoss = sp.SkeletonAnimation:create('spine/3 fxzlsxuanxiaoguandiaoluo1.json', 'spine/3 fxzlsxuanxiaoguandiaoluo1.atlas', 1)
---        reviewBoss:addAnimation(0, '1', false)
---        s_SCENE:callFuncWithDelay(1,function()
-            reviewBoss:addAnimation(1, '2', true)
---        end)
-        reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
-        self:addChild(reviewBoss, 140)
+        if s_level_popup_state ~= 0 then
+            local deco = sp.SkeletonAnimation:create("spine/chapterlevel/chuizi.json","spine/chapterlevel/chuizi.atlas",1)
+            deco:setPosition(levelPosition.x-60,levelPosition.y-10)
+            deco:setAnchorPoint(1,1)
+            deco:addAnimation(0, 'animation', true)
+            self:addChild(deco, 130)
+            deco:runAction(cc.FadeOut:create(1.0))
+            self:callFuncWithDelay(0.5, function()
+                local reviewBoss = sp.SkeletonAnimation:create('spine/3 fxzlsxuanxiaoguandiaoluo1.json', 'spine/3 fxzlsxuanxiaoguandiaoluo1.atlas', 1)
+                reviewBoss:addAnimation(1, '2', true)   
+                reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
+                self:addChild(reviewBoss, 140)
+            end)
+        else
+            local reviewBoss = sp.SkeletonAnimation:create('spine/3 fxzlsxuanxiaoguandiaoluo1.json', 'spine/3 fxzlsxuanxiaoguandiaoluo1.atlas', 1)
+            reviewBoss:addAnimation(1, '2', true)   
+            reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
+            self:addChild(reviewBoss, 140)
+        end
         -- only one review boss
     elseif levelState == 3 then 
-        local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
-        summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
-        summaryboss:setAnchorPoint(1,1)
-        summaryboss:addAnimation(0, 'jianxiao', true)
-        summaryboss:setScale(0.7)
-        self:addChild(summaryboss, 140)
+        if s_level_popup_state ~= 0 then
+            local reviewBoss = sp.SkeletonAnimation:create('spine/3 fxzlsxuanxiaoguandiaoluo1.json', 'spine/3 fxzlsxuanxiaoguandiaoluo1.atlas', 1)
+            reviewBoss:addAnimation(1, '2', true)   
+            reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
+            self:addChild(reviewBoss, 140)
+            reviewBoss:runAction(cc.FadeOut:create(1.0))
+            self:callFuncWithDelay(0.5, function()
+                local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
+                summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
+                summaryboss:setAnchorPoint(1,1)
+                summaryboss:addAnimation(0, 'jianxiao', true)
+                summaryboss:setScale(0.7)
+                self:addChild(summaryboss, 140)
+            end)
+        else
+            local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
+            summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
+            summaryboss:setAnchorPoint(1,1)
+            summaryboss:addAnimation(0, 'jianxiao', true)
+            summaryboss:setScale(0.7)
+            self:addChild(summaryboss, 140)
+        end
     else
         -- plot level number
         self:plotLevelNumber('level'..levelIndex)
