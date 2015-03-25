@@ -655,6 +655,15 @@ function HomeLayer.create()
 
     local onTouchEnded = function(touch,event)
         local location = layer:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(setting_back:getBoundingBox(),location) and viewIndex == 2 then
+            local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
+            backColor:runAction(action1)
+            viewIndex = 1
+
+            local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+            setting_back:runAction(cc.Sequence:create(action2, action3))
+        end
         if not isDataShow then
             if math.abs(location.y - start_y) > 10 or math.abs(location.x - start_x) > 10 then
                 return
