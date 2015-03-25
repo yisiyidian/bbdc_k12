@@ -52,7 +52,7 @@ function ShopAlter.create(itemId, location)
 
             for i=1,5 do
                 if itemId == i then
-                    s_CURRENT_USER.buyMark = s_CURRENT_USER.buyMark + math.pow(10,i-1)
+                    s_LocalDatabaseManager.setBuy(math.pow(10,i-1))
                 end
             end 
 

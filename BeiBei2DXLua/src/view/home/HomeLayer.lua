@@ -711,7 +711,7 @@ function HomeLayer.create()
     end
 
     for i=1,5 do
-        if math.floor(s_CURRENT_USER.buyMark / math.pow(10,i-1)) == 1 then
+        if math.floor(s_LocalDatabaseManager.isBuy() / math.pow(10,i-1)) == 1 then
             if i == 1 then
                 layer.friendButtonFunc()
             elseif i == 2 then
@@ -731,7 +731,7 @@ function HomeLayer.create()
                 layer:showDataLayerByItem(0)
                 s_SCENE:removeAllPopups()
             end
-            s_CURRENT_USER.buyMark = 0
+            s_LocalDatabaseManager.setBuy(0)
             s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
         end
     end 
