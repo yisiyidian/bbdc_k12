@@ -169,6 +169,10 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     -- TODO check level state
 ----    local levelState = math.random(0, 3)
 --    levelState = 5
+
+    -- levelState = 3
+    -- s_level_popup_state = 1
+
     if levelState == 0 then
         local deco = sp.SkeletonAnimation:create("spine/chapterlevel/beibeidaizi.json","spine/chapterlevel/beibeidaizi.atlas",1)
         deco:setPosition(levelPosition.x-60,levelPosition.y-10)
@@ -232,7 +236,16 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
             reviewBoss:addAnimation(1, '2', true)   
             reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
             self:addChild(reviewBoss, 140)
-            reviewBoss:runAction(cc.FadeOut:create(1.0))
+            reviewBoss:setAnchorPoint(0.5,0.5)
+            -- reviewBoss:runAction(cc.FadeOut:create(1.0))
+            local action1 = cc.RotateBy:create(0.5, 360)
+            local action2 = cc.MoveBy:create(0.5, cc.p(250, 800))
+            local action3 = cc.ScaleTo:create(0.5, 0.75)
+            local action4 = cc.Spawn:create(action1, action2, action3)
+            reviewBoss:runAction(action4)
+            self:callFuncWithDelay(0.4, function() 
+                reviewBoss:runAction(cc.FadeOut:create(0.2))
+            end)
             self:callFuncWithDelay(0.5, function()
                 local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
                 summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
