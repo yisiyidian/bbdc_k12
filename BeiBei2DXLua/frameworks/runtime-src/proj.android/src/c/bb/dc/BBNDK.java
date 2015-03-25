@@ -37,6 +37,7 @@ import android.os.Environment;
 import android.os.StrictMode;
 import android.provider.*;
 import android.provider.MediaStore.Images;
+import android.util.Log;
 import android.widget.Toast;
 import c.bb.dc.notification.*;
 import c.bb.dc.sns.CXTencentSDKCall;
@@ -45,6 +46,7 @@ import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
+import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.FindCallback;
@@ -54,6 +56,7 @@ import com.avos.avoscloud.GetFileCallback;
 import com.avos.avoscloud.LogInCallback;
 import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SignUpCallback;
+import com.avos.avoscloud.SaveCallback;
 import com.avos.sns.*;
 import com.umeng.analytics.MobclickAgent;
 import com.tencent.mm.sdk.openapi.IWXAPI;
@@ -121,8 +124,50 @@ public class BBNDK {
 	// LeanCloud AVAnalytics
 	// ***************************************************************************************************************************
 	
+	private static AVObject dataAnalytics = null;
+	
+	private static void _save(String deviceId, String eventKey) {
+		dataAnalytics.put("DA_DEVICE_ID", deviceId);
+		dataAnalytics.increment(eventKey);
+		try {
+			dataAnalytics.saveEventually(new SaveCallback() {
+			    public void done(AVException e) {
+			        if (e == null) {
+			            // 保存成功
+			        } else {
+			        	Log.d("saveDataAnalytics: 1 保存失败", "_save: " + e.getMessage());
+			        }
+			    }
+			});
+		} catch (Exception e) {
+			Log.d("saveDataAnalytics: 2 保存失败", "_save: " + e.getMessage());
+		}
+	}
 	private static void saveDataAnalytics(String eventName, String tag) {
-		getDeviceUDID();
+		final String deviceId = getDeviceUDID();
+		final String eventKey = eventName + "_" + tag;
+		if (dataAnalytics == null) {
+			AVQuery<AVObject> query = new AVQuery<AVObject>("DataAnalytics");
+			query.whereEqualTo("DA_DEVICE_ID", deviceId);
+			query.findInBackground(new FindCallback<AVObject>() {
+			    public void done(List<AVObject> avObjects, AVException e) {
+			        if (e == null) {
+			            if (avObjects.size() > 0) {
+			            	dataAnalytics = avObjects.get(0);
+			            }
+			        } else {
+			            Log.d("saveDataAnalytics: 失败", "查询错误: " + e.getMessage());
+			        }
+			        
+			        if (dataAnalytics == null) {
+			        	dataAnalytics = AVObject.create("DataAnalytics");
+			        }
+			        _save(deviceId, eventKey);
+			    }
+			});
+		} else {
+			_save(deviceId, eventKey);
+		}
 	}
 	
 	public static void onEvent(String eventName, String  tag) {  
