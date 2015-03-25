@@ -29,12 +29,15 @@ function PersonalInfo.getNotContainedInLocalDatas(callback)
     end)
 end
 
-function PersonalInfo.create(checkIn,homelayer)
+function PersonalInfo.create(checkIn,homelayer,targetIndex)
     local layer = PersonalInfo.new()
     layer.checkIn = false
     layer.homelayer = homelayer
     if checkIn then
         layer.checkIn = true
+    end
+    if targetIndex ~= nil then
+        layer.targetIndex = targetIndex
     end
     return layer
 end
@@ -213,6 +216,10 @@ function PersonalInfo:ctor()
             if curPage ~= 1 then
                 pageView:scrollToPage(1)
             end
+        end
+        if self.targetIndex ~= nil then
+            pageView:scrollToPage(self.targetIndex)
+            self.targetIndex = nil
         end
         if curPage ~= lastPage then
             if lastPage >= 0 then

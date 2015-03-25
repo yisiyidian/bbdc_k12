@@ -218,15 +218,11 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
         end
 
         if s_CURRENT_USER.slideNum == 1 then
-            local guideAlter = GuideAlter.create(0, "划词加强记忆", "用来加强用户记忆的步骤，可以强化你对生词的印象。")
-            guideAlter:setPosition(s_LEFT_X + bigWidth / 2, s_DESIGN_HEIGHT/2)
-            s_SCENE:popup(guideAlter)
-
-            guideAlter.know = function()
-                s_CURRENT_USER.slideNum = 0
-                saveUserToServer({['slideNum'] = s_CURRENT_USER.slideNum})
-                normal()
-            end
+            local CongratulationPopup = require("view.newstudy.CongratulationPopup").create()
+            s_SCENE:popup(CongratulationPopup)
+            s_CURRENT_USER.slideNum = 0
+            saveUserToServer({['slideNum'] = s_CURRENT_USER.slideNum})
+            normal()
         else
             normal()
         end
