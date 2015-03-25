@@ -247,6 +247,7 @@ function O2OController.signUpWithRandomUserName()
     if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() then
         s_CURRENT_USER.usertype = USER_TYPE_GUEST
         O2OController.signUpOffline(randomUserName, PASSWORD)
+        AnalyticsSignUp_Guest()
     else
         isUsernameExist(randomUserName, function (exist, error)
             if error then

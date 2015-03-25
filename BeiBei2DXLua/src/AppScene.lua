@@ -178,7 +178,7 @@ function AppScene:replaceGameLayer(newLayer)
     else
         self.currentGameLayerName = 'unknown'
     end
-    Analytics_replaceGameLayer(self.currentGameLayerName)
+    -- Analytics_replaceGameLayer(self.currentGameLayerName)
 end
 
 function AppScene:addLoadingView(needUpdate)

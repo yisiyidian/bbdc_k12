@@ -121,6 +121,10 @@ public class BBNDK {
 	// LeanCloud AVAnalytics
 	// ***************************************************************************************************************************
 	
+	private static void saveDataAnalytics(String eventName, String tag) {
+		getDeviceUDID();
+	}
+	
 	public static void onEvent(String eventName, String  tag) {  
 		if (_context != null) {
 			AVAnalytics.onEvent(_context, eventName, tag);
@@ -128,6 +132,7 @@ public class BBNDK {
 			map.put("tag", tag);
 			MobclickAgent.onEvent(_context, eventName, map); 
 		}
+		saveDataAnalytics(eventName, tag);
 	}
 	
 	// ***************************************************************************************************************************
