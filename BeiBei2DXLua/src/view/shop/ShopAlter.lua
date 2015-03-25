@@ -50,32 +50,11 @@ function ShopAlter.create(itemId, location)
             bing:addAnimation(0, 'animation', false)
             back:addChild(bing) 
 
-            if itemId == 1 then 
-                if s_CURRENT_USER.buyFriend == 0 then
-                    s_CURRENT_USER.buyFriend = 1
-                    saveUserToServer({['buyFriend'] = s_CURRENT_USER.buyFriend})
+            for i=1,5 do
+                if itemId == i then
+                    s_CURRENT_USER.buyMark = s_CURRENT_USER.buyMark + math.pow(10,i-1)
                 end
-            elseif itemId == 2 then 
-                if s_CURRENT_USER.buyData1 == 0 then
-                    s_CURRENT_USER.buyData1 = 1
-                    saveUserToServer({['buyData1'] = s_CURRENT_USER.buyData1})
-                end
-            elseif itemId == 3 then
-                if s_CURRENT_USER.buyData2 == 0 then
-                    s_CURRENT_USER.buyData2 = 1
-                    saveUserToServer({['buyData2'] = s_CURRENT_USER.buyData2})
-                end
-            elseif itemId == 4 then
-                if s_CURRENT_USER.buyData3 == 0 then
-                    s_CURRENT_USER.buyData3 = 1
-                    saveUserToServer({['buyData3'] = s_CURRENT_USER.buyData3})
-                end
-            elseif itemId == 5 then
-                if s_CURRENT_USER.buyData4 == 0 then
-                    s_CURRENT_USER.buyData4 = 1
-                    saveUserToServer({['buyData4'] = s_CURRENT_USER.buyData4})
-                end
-            end
+            end 
 
             s_SCENE:callFuncWithDelay(4,function() 
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
