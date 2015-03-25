@@ -503,7 +503,7 @@ function ChapterLayerBase:addPopup(levelIndex)
     
     local closeButton = ccui.Button:create('image/button/button_close.png','image/button/button_close.png','image/button/button_close.png')
     closeButton:setScale9Enabled(true)
-    closeButton:setPosition(back:getContentSize().width-40, back:getContentSize().height-40)
+    closeButton:setPosition(back:getContentSize().width-60, back:getContentSize().height-60)
     closeButton:addTouchEventListener(touchEvent)
     
     local wordButton = ccui.Button:create('image/chapter/popup/button_change_to_ciku.png','image/chapter/popup/button_change_to_ciku.png','image/chapter/popup/button_change_to_ciku.png')

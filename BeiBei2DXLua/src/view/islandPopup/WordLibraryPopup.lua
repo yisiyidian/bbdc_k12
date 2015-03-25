@@ -24,7 +24,7 @@ local function addCloseButton(top_sprite,backPopup)
 
     local button_close = ccui.Button:create("image/friend/close.png","","")
     button_close:setScale9Enabled(true)
-    button_close:setPosition(top_sprite:getContentSize().width - 30 , top_sprite:getContentSize().height - 30 )
+    button_close:setPosition(top_sprite:getContentSize().width - 60 , top_sprite:getContentSize().height - 60 )
     button_close:addTouchEventListener(button_close_clicked)
     return button_close
 end 
