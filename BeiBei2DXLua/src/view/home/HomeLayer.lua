@@ -710,41 +710,31 @@ function HomeLayer.create()
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     end
 
-    if s_CURRENT_USER.buyFriend == 1 then
-        isDataShow = true
-        s_CURRENT_USER.buyFriend = 2
-        saveUserToServer({['buyFriend'] = s_CURRENT_USER.buyFriend})
-        layer.friendButtonFunc()
-        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    elseif s_CURRENT_USER.buyData1 == 1 then
-        isDataShow = true
-        s_CURRENT_USER.buyData1 = 2
-        saveUserToServer({['buyData1'] = s_CURRENT_USER.buyData1})   
-        layer:showDataLayerByItem(3)
-        s_SCENE:removeAllPopups()
-        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    elseif s_CURRENT_USER.buyData2 == 1 then
-        isDataShow = true
-        s_CURRENT_USER.buyData2 = 2
-        saveUserToServer({['buyData2'] = s_CURRENT_USER.buyData2})
-        layer:showDataLayerByItem(2)
-        s_SCENE:removeAllPopups()
-        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    elseif s_CURRENT_USER.buyData3 == 1 then
-        isDataShow = true
-        s_CURRENT_USER.buyData3 = 2
-        saveUserToServer({['buyData3'] = s_CURRENT_USER.buyData3})
-        layer:showDataLayerByItem(1)
-        s_SCENE:removeAllPopups()
-        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    elseif s_CURRENT_USER.buyData4 == 1 then
-        isDataShow = true
-        s_CURRENT_USER.buyData4 = 2
-        saveUserToServer({['buyData4'] = s_CURRENT_USER.buyData4})
-        layer:showDataLayerByItem(0)
-        s_SCENE:removeAllPopups()
-        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-    end
+    for i=1,5 do
+        if math.floor(s_LocalDatabaseManager.isBuy() / math.pow(10,i-1)) == 1 then
+            if i == 1 then
+                layer.friendButtonFunc()
+            elseif i == 2 then
+                isDataShow = true 
+                layer:showDataLayerByItem(3)
+                s_SCENE:removeAllPopups()
+            elseif i == 3 then
+                isDataShow = true 
+                layer:showDataLayerByItem(2)
+                s_SCENE:removeAllPopups()
+            elseif i == 4 then
+                isDataShow = true 
+                layer:showDataLayerByItem(1)
+                s_SCENE:removeAllPopups()
+            elseif i == 5 then
+                isDataShow = true 
+                layer:showDataLayerByItem(0)
+                s_SCENE:removeAllPopups()
+            end
+            s_LocalDatabaseManager.setBuy(0)
+            s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+        end
+    end 
 
     onAndroidKeyPressed(layer, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()

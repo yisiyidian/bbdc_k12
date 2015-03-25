@@ -104,13 +104,6 @@ function DataUser:ctor()
     self.beanRewardForIron                 = 3
 
     self.dataDailyUsing                    = DataDailyUsing.create()
-
-    self.buyFriend                         = 0 -- 0 for not buy ,1 for change view to friend , 2 for end
-    self.buyData1                          = 0
-    self.buyData2                          = 0
-    self.buyData3                          = 0
-    self.buyData4                          = 0
-
 end
 
 function DataUser:getLockFunctionState(productId)

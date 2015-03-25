@@ -324,6 +324,10 @@ local is_music_on_key = 'music'
 function Manager.isMusicOn() return cc.UserDefault:getInstance():getBoolForKey(is_music_on_key, true) end
 function Manager.setMusicOn(b) cc.UserDefault:getInstance():setBoolForKey(is_music_on_key, b) end
 
+local is_buy_key = 'buy'
+function Manager.isBuy() return cc.UserDefault:getInstance():getIntegerForKey(is_buy_key) end
+function Manager.setBuy(b) cc.UserDefault:getInstance():setIntegerForKey(is_buy_key, b) end
+
 return Manager
 
 
