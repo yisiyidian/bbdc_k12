@@ -8,7 +8,7 @@ local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
 local TotalWrongWordTip = require("view.newstudy.TotalWrongWordTip")
-local Button                = require("view.newstudy.BlueButtonInStudyLayer")
+local Button                = require("view.button.longButtonInStudy")
 local PauseButton           = require("view.newreviewboss.NewReviewBossPause")
 
 local  ChooseWrongLayer = class("ChooseRightLayer", function ()
@@ -23,11 +23,8 @@ end
 
 local function addNextButton(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-    local click_next_button = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)        
-        elseif eventType == ccui.TouchEventType.ended then
-            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+    local function button_func()
+        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local SlideCoconutLayer = require("view.newstudy.SlideCoconutLayer")
             local slideCoconutLayer
             if wrongWordList == nil then
@@ -39,12 +36,13 @@ local function addNextButton(word,wrongNum,wrongWordList)
             end
 
             s_SCENE:replaceGameLayer(slideCoconutLayer)
-        end
     end
 
-    local choose_next_button = Button.create("下一步")
+    local choose_next_button = Button.create("long","blue","下一步") 
     choose_next_button:setPosition(bigWidth/2, 100)
-    choose_next_button:addTouchEventListener(click_next_button)  
+    choose_next_button.func = function ()
+        button_func()
+    end
 
     return choose_next_button
 end

@@ -9,19 +9,17 @@ local button_sure
 function ShopErrorAlter.create()
     local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
-    local main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
-    main:setAnchorPoint(0.5,0.5)
-    main:ignoreAnchorPointForPosition(false)
+    local main = cc.Layer:create()
 
     main.sure = function() 
         main:removeFromParent()
     end
 
     local back = cc.Sprite:create("image/alter/tanchu_board_small_white.png")
-    back:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3)
+    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3)
     main:addChild(back)
 
-    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
+    local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
     local action2 = cc.EaseBackOut:create(action1)
     back:runAction(action2)
 
@@ -35,7 +33,7 @@ function ShopErrorAlter.create()
     back:addChild(label_content)
 
     local function closeAnimation()
-        local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+        local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3))
         local action2 = cc.EaseBackIn:create(action1)
         local action3 = cc.CallFunc:create(function()
             s_SCENE:removeAllPopups()

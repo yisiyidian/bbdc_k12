@@ -3,7 +3,7 @@
 <configs>
 
     <channel name="iOS" 
-        packageName="com.BeiBeiDanCiX"
+        packageName="com.beibei.wordmaster"
 
         leanCloudAppName="beibeidanci_v180"
         leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
@@ -16,7 +16,7 @@
         isQQLogInAvailable="false"
         isQQShareAvailable="true"
 
-        WXPkg="com.BeiBeiDanCiX" WXName="贝贝单词-背单词根本停不下来"
+        WXPkg="com.beibei.wordmaster" WXName="贝贝单词-背单词根本停不下来"
         WXAppID="wx68b3465c73ce139e"
         WXAppSecret="6a958c38c2ba812690b62bad4685750f"
         WXSignature=""
@@ -101,10 +101,10 @@
         leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
         leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
 
-        QQPkgName="com.beibei.wordmaster.tencentmyapp"
-        QQName="贝贝单词"
-        QQAppID="1103783596"
-        QQAppKey="n7vXdt6eDIggSsa6"
+        QQPkgName="com.beibei.wordmaster.wdj"
+        QQName="贝贝单词WDJ"
+        QQAppID="1104337006"
+        QQAppKey="XumzCNKIZUPG9t9J"
         isQQLogInAvailable="false"
         isQQShareAvailable="true"
 

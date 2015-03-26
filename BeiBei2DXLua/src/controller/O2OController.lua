@@ -37,7 +37,9 @@ local function onError()
     if s_SERVER.hasSessionToken() then cx.CXAvos:getInstance():logOut() end
     s_LocalDatabaseManager.setLogOut(true)
     s_LocalDatabaseManager.close()
-    s_START_FUNCTION()
+    
+    local start = reloadModule('start')
+    start.init()
 end
 
 function onErrorNeedRestartAppHappend(e)
@@ -97,14 +99,14 @@ function O2OController.start()
     -- online
     else
         -- go to O2OController.onAssetsManagerCompleted()
-        local loadingView = LoadingView.create(true)
+        local loadingView = LoadingView.create()
         s_SCENE:replaceGameLayer(loadingView) 
 
+        O2OController.onAssetsManagerCompleted()
     end
 end
 
 function O2OController.onAssetsManagerCompleted()
-    hideProgressHUD(true)
 
     if g_userName ~= nil and g_userPassword ~= nil then
         O2OController.logInOnline(g_userName, g_userPassword)
@@ -245,6 +247,7 @@ function O2OController.signUpWithRandomUserName()
     if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() then
         s_CURRENT_USER.usertype = USER_TYPE_GUEST
         O2OController.signUpOffline(randomUserName, PASSWORD)
+        AnalyticsSignUp_Guest()
     else
         isUsernameExist(randomUserName, function (exist, error)
             if error then

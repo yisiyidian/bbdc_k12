@@ -192,7 +192,7 @@ function ChapterLayer:initActiveChapterRange()   -- initialize the active range 
             self.activeChapterEndIndex = self.activeChapterIndex + 1
         end
     end
-    print('###activeChapterRange:'..self.activeChapterStartIndex..','..self.activeChapterEndIndex..','..self.activeChapterIndex)
+    --print('###activeChapterRange:'..self.activeChapterStartIndex..','..self.activeChapterEndIndex..','..self.activeChapterIndex)
 end
 
 function ChapterLayer:callFuncWithDelay(delay, func) 

@@ -33,6 +33,8 @@ public:
     
     void download(const char* url, const char* savePath, const char* filename);
     
+    void shutDownApp();
+    
     void _testCppApi_();
     
 //    std::string getExternalStorageDirectory();

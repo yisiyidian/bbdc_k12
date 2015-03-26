@@ -261,11 +261,11 @@ function initBuildTarget()
 end
 
 function getAppVersionDebugInfo()
-    if BUILD_TARGET_RELEASE == BUILD_TARGET then return end
+    if BUILD_TARGET_RELEASE == BUILD_TARGET or s_CURRENT_USER == nil or s_SERVER == nil then return '' end
 
     local str = ''
     -- if s_CURRENT_USER.sessionToken ~= '' then str = s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName end
-    str = '\\nname:' .. s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName .. '\\nchannel:' .. CHANNEL .. ' v:' .. s_APP_VERSION .. '\\n%s'
+    str = '\\nname:' .. s_CURRENT_USER.username .. '\\nnick:' .. s_CURRENT_USER.nickName .. '\\nchannel:' .. CHANNEL .. ' v:' .. tostring(s_APP_VERSION) .. '\\n%s'
     str = '[%s]' .. ' ' .. str .. '\\n' .. s_SERVER.appName .. '\\n' .. LUA_ERROR
     return str
 end

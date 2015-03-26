@@ -1,6 +1,5 @@
 require("cocos.init")
 require("common.global")
-require("common.DynamicUpdate")
 
 --local LoginAlter = require("view.login.LoginAlter")
 local VisitorRegister = require("view.login.VisitorRegister")

@@ -87,30 +87,6 @@ local function _initTool()
 end
 
 local function _initScene()
-    -- size
-    local size = cc.Director:getInstance():getOpenGLView():getDesignResolutionSize()
-    local _SCREEN_WIDTH  = size.width
-    local _SCREEN_HEIGHT = size.height
-    
-    -- ********************** --
-    s_DESIGN_WIDTH  = 640.0
-    s_DESIGN_HEIGHT = 1136.0
-
-    s_MAX_WIDTH     = 854.0
-    -- ********************** --
-
-    local _HEIGHT        = _SCREEN_HEIGHT
-    local _HEIGHT_SCALE  = _SCREEN_HEIGHT / s_DESIGN_HEIGHT
-    local _WIDTH         = s_DESIGN_WIDTH * _HEIGHT_SCALE
-
-    -- ********************** --
-    s_DESIGN_OFFSET_WIDTH = (_SCREEN_WIDTH - _WIDTH) / 2.0 / _HEIGHT_SCALE
-    s_LEFT_X = -s_DESIGN_OFFSET_WIDTH
-    s_RIGHT_X = s_DESIGN_WIDTH + s_DESIGN_OFFSET_WIDTH
-    -- ********************** --
-
-    cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(s_DESIGN_WIDTH, s_DESIGN_HEIGHT, cc.ResolutionPolicy.FIXED_HEIGHT)
-
     -- create main scene 
     local scene = reloadModule("AppScene")
     s_SCENE = scene.create()
@@ -159,9 +135,7 @@ local function _declaration()
     s_CorePlayManager = nil
 end
 
-function initApp(start)
-    s_START_FUNCTION = start
-
+function initApp()
     _initConstant()
     _initTool()
     _initScene()

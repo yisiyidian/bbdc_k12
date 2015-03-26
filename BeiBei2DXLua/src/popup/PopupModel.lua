@@ -52,15 +52,15 @@ function PopupModel.create(site)
     local popup_window = cc.Sprite:create("image/friend/broad.png")
     popup_window:setAnchorPoint(0.5,0.5)
     popup_window:ignoreAnchorPointForPosition(false)
-    popup_window:setPosition(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3)
+    popup_window:setPosition(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2 * 3)
     layer:addChild(popup_window)
 
-    local action1 = cc.MoveTo:create(0.3, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2))
+    local action1 = cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2))
     local action2 = cc.EaseBackOut:create(action1)
     popup_window:runAction(action2)
 
     local function closeAnimation()
-        local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
+        local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3))
         local action2 = cc.EaseBackIn:create(action1)
         local action3 = cc.CallFunc:create(function()
             s_SCENE:removeAllPopups()
@@ -104,18 +104,14 @@ function PopupModel.create(site)
 
             if site == Site_From_Friend_Guest then
             
-                local action1 = cc.MoveTo:create(0.3, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3))
+                local action1 = cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2 * 3))
                 local action2 = cc.EaseBackIn:create(action1)
                 popup_window:runAction(action2)
                 
                 s_SCENE:callFuncWithDelay(0.3,function()
                     local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER)
-                    improveInfo:setTag(1)
-                    improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-
-                    layer:addChild(improveInfo)   
-                    improveInfo.close = function()
-                        layer:removeChildByTag(1)  
+                    s_SCENE.popupLayer:addChild(improveInfo)   
+                    improveInfo.close = function() 
                         layer.update()  
                         s_SCENE:removeAllPopups()
                     end  
@@ -123,7 +119,7 @@ function PopupModel.create(site)
                 
             else
 
-                local action1 = cc.MoveTo:create(0.3, cc.p(s_LEFT_X + bigWidth / 2 , s_DESIGN_HEIGHT / 2 * 3))
+                local action1 = cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2 * 3))
                 local action2 = cc.EaseBackIn:create(action1)
                 popup_window:runAction(action2)
 

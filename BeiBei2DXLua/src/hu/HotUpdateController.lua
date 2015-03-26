@@ -1,48 +1,57 @@
-require("cocos.init")
-DynamicUpdate = {}
 
-local storagePath = cc.FileUtils:getInstance():getWritablePath().."AssetsManager"
-local searchPath = storagePath.."/ServerAssets"
+local HotUpdateController = {}
+
+local storagePath = cc.FileUtils:getInstance():getWritablePath() .. "AssetsManager"
+local searchPath = storagePath .. "/ServerAssets"
 local am = nil
 local listener = nil
 local message = ""
 
-function DynamicUpdate.initUpdateLabel()
+-- function HotUpdateController.initUpdateLabel()
 
-    local updateInfo = cc.Label:create()
-    updateInfo:setSystemFontSize(25)
-    updateInfo:setString(tostring(s_APP_VERSION))
-    updateInfo:setAnchorPoint(0,0)
-    updateInfo:setPosition(s_LEFT_X,0)
-    updateInfo:setColor(cc.c4b(0,0,0,0))
-    return updateInfo
+--     local updateInfo = cc.Label:create()
+--     updateInfo:setSystemFontSize(25)
+--     updateInfo:setString(tostring(s_APP_VERSION))
+--     updateInfo:setAnchorPoint(0,0)
+--     updateInfo:setPosition(s_LEFT_X,0)
+--     updateInfo:setColor(cc.c4b(0,0,0,0))
+--     return updateInfo
+-- end
+
+function HotUpdateController.init()
+    print("The HotUpdateController.storagePath is " .. storagePath)
+    print("The HotUpdateController.searchPath is " .. searchPath)
+    cc.FileUtils:getInstance():addSearchPath(searchPath, true)
 end
 
-function DynamicUpdate.loginUpdateCompleted()
-
-    print("The storagePath is "..storagePath)
-    cc.FileUtils:getInstance():addSearchPath(searchPath,true)
-
-    s_O2OController.onAssetsManagerCompleted()
+function HotUpdateController.getInfoMsg()
+    return message
 end
 
-function DynamicUpdate.beginLoginUpdate(updateInfo)
+function HotUpdateController.onCompleted()
+    reloadModule('common.utils')
+    hideProgressHUD(true)
+    local start = reloadModule('start')
+    start.start(true)
+end
+
+function HotUpdateController.start()
     
-    if BUILD_TARGET==BUILD_TARGET_DEBUG or BUILD_TARGET==BUILD_TARGET_RELEASE_TEST   then
-        am = cc.AssetsManagerEx:create("manifest/book_sound_cet4.manifest",storagePath)
+    if BUILD_TARGET == BUILD_TARGET_DEBUG or BUILD_TARGET == BUILD_TARGET_RELEASE_TEST   then
+        am = cc.AssetsManagerEx:create("manifest/project_debug.manifest", storagePath)
         am:retain()
         print("debug version")
     else 
-        am = cc.AssetsManagerEx:create("manifest/project_release.manifest",storagePath)
+        am = cc.AssetsManagerEx:create("manifest/project_release.manifest", storagePath)
         am:retain()        
         print("release version")
     end
 
-    local message = ''
-
     if not am:getLocalManifest():isLoaded() then
         message = "找不到贝贝的新东东，使用旧装备"
+        HotUpdateController.onCompleted()
     else
+        reloadModule('common.utils')
         local function onUpdateEvent(event)
             showProgressHUD(message, true)
             
@@ -50,8 +59,7 @@ function DynamicUpdate.beginLoginUpdate(updateInfo)
             if eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_NO_LOCAL_MANIFEST then
                 
                 message = "找不到贝贝的新东东，使用旧装备"
-                DynamicUpdate.loginUpdateCompleted()                              
-                updateInfo:setString(message)
+                HotUpdateController.onCompleted()                              
                 print(message)
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_PROGRESSION then
                                 
@@ -61,45 +69,40 @@ function DynamicUpdate.beginLoginUpdate(updateInfo)
                     message = "贝贝正在获取新的版本资源列表"
                 else
                     percent = string.format("%.2f",event:getPercent())
-                    message = "贝贝正在给新版本添料: "..percent.."%"
+                    message = "贝贝正在给新版本添料: " .. percent .. "%"
                 end            
-                updateInfo:setString(message)
                 print(message)
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_DOWNLOAD_MANIFEST or 
                 eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_PARSE_MANIFEST then
                 
                 message = "获取更新列表失败，跳过更新"
-                updateInfo:setString(message)
                 print(message)
-                DynamicUpdate.loginUpdateCompleted()                              
+                HotUpdateController.onCompleted()                              
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ALREADY_UP_TO_DATE then
                 
                 message = "贝贝登场"
-                updateInfo:setString(message)
                 print(message)
-                DynamicUpdate.loginUpdateCompleted()                              
+                HotUpdateController.onCompleted()                              
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.UPDATE_FINISHED then
             
                 message = "天空一个巨响，贝贝最新版登场"
-                updateInfo:setString(message)
                 print(message)
-                DynamicUpdate.loginUpdateCompleted()                           
+                HotUpdateController.onCompleted()                           
             elseif eventCode == cc.EventAssetsManagerEx.EventCode.ERROR_UPDATING then
                 
-                message = "文件更新失败，失败文件: "..event:getAssetId()..", 失败信息为"..event:getMessage()
-                updateInfo:setString(message)
+                message = "文件更新失败，失败文件: " .. event:getAssetId() .. ", 失败信息为" .. event:getMessage()
                 print(message)
-                DynamicUpdate.loginUpdateCompleted()                              
+                HotUpdateController.onCompleted()                              
             end
          end
 
-        listener = cc.EventListenerAssetsManagerEx:create(am,onUpdateEvent)
-        cc.Director:getInstance():getEventDispatcher():addEventListenerWithFixedPriority(listener,1)
+        listener = cc.EventListenerAssetsManagerEx:create(am, onUpdateEvent)
+        cc.Director:getInstance():getEventDispatcher():addEventListenerWithFixedPriority(listener, 1)
         am:update()
     end
 end
 
-function DynamicUpdate.killUpdate()
+function HotUpdateController.killUpdate()
     if listener ~= nil then
         cc.Director:getInstance():getEventDispatcher():removeEventListener(listener)
     end
@@ -109,4 +112,4 @@ function DynamicUpdate.killUpdate()
     end    
 end
 
-return DynamicUpdate
+return HotUpdateController

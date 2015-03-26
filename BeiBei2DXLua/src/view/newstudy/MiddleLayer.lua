@@ -98,10 +98,7 @@ local function createNumberSprite(wrongNumber)
 
     local figureback_sub = cc.Sprite:create("image/newstudy/figurebackground.png")
     figureback_sub:setPosition(figureback_main:getContentSize().width / 2 ,figureback_main:getContentSize().height / 2)
-    figureback_sub:setScale(0)
     figureback_main:addChild(figureback_sub)
-
-    figureback_sub:runAction(cc.ScaleTo:create(1,1))
 
     local label_hint_part_one = cc.Label:createWithSystemFont("收集生词","",40)
     label_hint_part_one:setPosition(-20, 50)
@@ -228,15 +225,6 @@ function MiddleLayer:ctor()
     s_CURRENT_USER.beanRewardForCollect = 3
     self.nextButton = createNextButton(self.getBean)
     backColor:addChild(self.nextButton)
-
-    if s_CURRENT_USER.bookKey ~= nil and s_CURRENT_USER.bookKey ~= '' then
-        local bossList = s_LocalDatabaseManager.getAllBossInfo()
-
-        if #bossList <= 1 then
-            local CongratulationPopup = require("view.newstudy.CongratulationPopup").create()
-            s_SCENE:popup(CongratulationPopup)
-        end
-    end
    
     onAndroidKeyPressed(self, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()

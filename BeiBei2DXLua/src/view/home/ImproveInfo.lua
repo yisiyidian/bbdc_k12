@@ -20,18 +20,16 @@ ImproveInfoLayerType_UpdateNamePwd_FROM_INTRO_LAYER = 'FROM_INTRO_LAYER'
 ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER = 'FROM_FRIEND_LAYER'
 
 local function closeAnimation()
-    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2*3))
+    local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3))
     local action2 = cc.EaseBackIn:create(action1)
     local action3 = cc.CallFunc:create(function()
-        main.close()
+        s_SCENE:removeAllPopups()
     end)
     back_login:runAction(cc.Sequence:create(action2,action3))
 end
 
 function ImproveInfo.create(layerType)
-    main = cc.LayerColor:create(cc.c4b(0,0,0,100),bigWidth,s_DESIGN_HEIGHT)
-    main:setAnchorPoint(0.5,0.5)
-    main:ignoreAnchorPointForPosition(false)
+    main = cc.Layer:create()
 
     main.layerType = layerType
 
@@ -69,17 +67,17 @@ end
 
 showLogin = function()
     if back_login then
-        local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
+        local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
         local action2 = cc.EaseBackOut:create(action1)
         back_login:runAction(action2)
         return
     end
 
     back_login = cc.Sprite:create("image/login/background_white_login.png")
-    back_login:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2*3) 
+    back_login:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3) 
     main:addChild(back_login)
 
-    local action1 = cc.MoveTo:create(0.5,cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
+    local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))
     local action2 = cc.EaseBackOut:create(action1)
     back_login:runAction(action2)
 

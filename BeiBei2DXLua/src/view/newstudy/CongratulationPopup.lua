@@ -43,7 +43,7 @@ function CongratulationPopup.create()
     back:addChild(girl_body, -1)
 
     local girl_head= cc.Sprite:create("image/newstudy/head_yindao_complete.png")
-    girl_head:setPosition(girl_body:getContentSize().width *0.52,girl_body:getContentSize().height * 0.6)
+    girl_head:setPosition(girl_body:getContentSize().width *0.55,girl_body:getContentSize().height * 0.68)
     girl_head:ignoreAnchorPointForPosition(false)
     girl_head:setAnchorPoint(0.5,0)
     girl_body:addChild(girl_head)
