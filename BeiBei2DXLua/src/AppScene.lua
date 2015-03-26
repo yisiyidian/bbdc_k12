@@ -144,7 +144,7 @@ local function update(dt)
         if s_CURRENT_USER.dataDailyUsing:isToday() then
             s_CURRENT_USER.dataDailyUsing:update(dt)
             usingTimeSaveToLocalDB = usingTimeSaveToLocalDB + dt
-            if usingTimeSaveToLocalDB > 5 * 60 then -- 5 min
+            if usingTimeSaveToLocalDB > 10 then -- 5 min
                 usingTimeSaveToLocalDB = 0
                 s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.dataDailyUsing, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
             end
@@ -268,6 +268,9 @@ function applicationWillEnterForeground()
 end
 
 function applicationDidEnterBackgroundLua()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER.dataDailyUsing:isInited() and s_CURRENT_USER.dataDailyUsing:isToday() then
+        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.dataDailyUsing, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
+    end
     Analytics_applicationDidEnterBackground( s_SCENE.currentGameLayerName )
 end
 

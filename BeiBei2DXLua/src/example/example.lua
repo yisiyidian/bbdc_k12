@@ -84,18 +84,18 @@ function test()
  -- s_SCENE:replaceGameLayer(newStudyLayer)
 -- new study layer test end
 
-    -- local circle = require('view.share.ShareCheckIn').create()
-    -- s_SCENE:replaceGameLayer(circle)
-    local main_logic_mat = {}
-    for i = 1,10 do
-        main_logic_mat[i] = getRandomBossPath()
-        -- local mat = {}
-        -- for i = 1,5 do
+    local circle = require('view.home.DataShare').create()
+    s_SCENE:replaceGameLayer(circle)
+    -- local main_logic_mat = {}
+    -- for i = 1,10 do
+    --     main_logic_mat[i] = getRandomBossPath()
+    --     -- local mat = {}
+    --     -- for i = 1,5 do
 
-        -- end
+    --     -- end
         
-    end
-    print_lua_table(main_logic_mat)
+    -- end
+    -- print_lua_table(main_logic_mat)
 --    local layer = cc.Layer:create()
     -- s_HttpRequestClient.downloadWordSoundFile('apply', function (objectId, filename, err, isSaved) 
     --     print(string.format('%s, %s, %s, %s', tostring(objectId), tostring(filename), tostring(err), tostring(isSaved)))

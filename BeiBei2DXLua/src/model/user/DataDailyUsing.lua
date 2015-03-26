@@ -29,13 +29,15 @@ end
 
 function DataDailyUsing:reset()
     updateDataFromUser(self, s_CURRENT_USER)
-
+    print('reset'..self.startTime)
     s_LocalDatabaseManager.getDatas('DataDailyUsing', s_CURRENT_USER.objectId, s_CURRENT_USER.username, function (row)
         self.startTime = row.startTime
         self.usingTime = row.usingTime
     end)
+    print('reset startTime'..self.startTime)
 
-    if not self:isToday() then
+    if not self:isToday() or not self:isInited() then
+        print('reset startTime')
         self.startTime = os.time() -- seconds
         self.usingTime = 0 -- seconds
     end

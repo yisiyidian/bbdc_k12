@@ -288,7 +288,7 @@ function O2OController.logInOffline()
         s_CorePlayManager.enterHomeLayer()
     end
 
-    s_CURRENT_USER.dataDailyUsing:reset()
+    --s_CURRENT_USER.dataDailyUsing:reset()
 
     hideProgressHUD()
 end
@@ -305,7 +305,7 @@ function O2OController.getUserDatasOnline()
         O2OController.getDataEverydayInfo(function ()
             if s_CURRENT_USER.bookKey == '' then
                 s_CorePlayManager.enterBookLayer() 
-                s_CURRENT_USER.dataDailyUsing:reset()
+                --s_CURRENT_USER.dataDailyUsing:reset()
             else
 
                 LOGTIME('getBossWord')               
@@ -316,7 +316,7 @@ function O2OController.getUserDatasOnline()
                         LOGTIME('enterHomeLayer')
                         s_CorePlayManager.enterHomeLayer()
                         O2OController.getBulletinBoard()   
-                        s_CURRENT_USER.dataDailyUsing:reset() 
+                        --s_CURRENT_USER.dataDailyUsing:reset() 
                     end)
 
                 end)

@@ -24,6 +24,7 @@ function HomeLayer.create(share)
     --     s_CURRENT_USER:addBeans(10000)
     --     saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
     -- end
+    s_CURRENT_USER.dataDailyUsing:reset()
 
     -- task
     local todayTotalBossNum     = s_LocalDatabaseManager:getTodayTotalBossNum()
@@ -108,9 +109,12 @@ function HomeLayer.create(share)
     if checkInDisplay then
         s_isCheckInAnimationDisplayed = true
         mission_progress = MissionProgress.create(true)
+        
     else
         mission_progress = MissionProgress.create()
         mission_progress.animation()
+        local circle = require('view.home.DataShare').create()
+        layer:addChild(circle,1000)
     end
     backColor:addChild(mission_progress,1,'mission_progress')
     local downloadSoundButton = require("view.home.DownloadSoundButton").create(top)
