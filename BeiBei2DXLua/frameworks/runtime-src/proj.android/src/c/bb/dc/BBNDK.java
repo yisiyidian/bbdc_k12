@@ -126,16 +126,16 @@ public class BBNDK {
 	
 	private static AVObject dataAnalytics = null;
 	
-	private static void _save(String deviceId, String eventKey) {
+	private static void _save(final String deviceId, final String eventKey) {
 		dataAnalytics.put("DA_DEVICE_ID", deviceId);
 		dataAnalytics.increment(eventKey);
 		try {
 			dataAnalytics.saveEventually(new SaveCallback() {
 			    public void done(AVException e) {
 			        if (e == null) {
-			            // 保存成功
+			        	Log.d("saveDataAnalytics", "1 保存成功 _save: " + deviceId + ", " + eventKey);
 			        } else {
-			        	Log.d("saveDataAnalytics: 1 保存失败", "_save: " + e.getMessage());
+			        	Log.d("saveDataAnalytics", "1 保存失败 _save: " + e.getMessage());
 			        }
 			    }
 			});
@@ -156,7 +156,7 @@ public class BBNDK {
 			            	dataAnalytics = avObjects.get(0);
 			            }
 			        } else {
-			            Log.d("saveDataAnalytics: 失败", "查询错误: " + e.getMessage());
+			            Log.d("saveDataAnalytics", "失败 查询错误: " + e.getMessage());
 			        }
 			        
 			        if (dataAnalytics == null) {
