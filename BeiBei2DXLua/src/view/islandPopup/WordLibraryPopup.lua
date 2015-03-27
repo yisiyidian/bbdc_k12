@@ -3,6 +3,7 @@ local WordLibraryPopup = class ("WordLibraryPopup",function ()
 end) 
 
 local Listview         = require("view.islandPopup.WordLibraryListview")
+local Button                = require("view.button.longButtonInStudy")
 
 function WordLibraryPopup.create(index)
     local layer = WordLibraryPopup.new(index)
@@ -78,27 +79,22 @@ end
 
 local function addReviewButton(bottom_sprite,boss)
 
-    local review_button_click = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            local ReviewBoss = require("view.newreviewboss.NewReviewBossMainLayer")
-            if boss.wrongWordList == nil then
-                return 
-            else
-                local reviewBoss = ReviewBoss.create(boss.wrongWordList,Review_From_Word_Bank)
-                s_SCENE:replaceGameLayer(reviewBoss)
-                s_SCENE:removeAllPopups()
-            end
+    local button_func = function()
+        local ReviewBoss = require("view.newreviewboss.NewReviewBossMainLayer")
+        if boss.wrongWordList == nil then
+            return 
+        else
+            local reviewBoss = ReviewBoss.create(boss.wrongWordList,Review_From_Word_Bank)
+            s_SCENE:replaceGameLayer(reviewBoss)
+            s_SCENE:removeAllPopups()
         end
     end
 
-    local review_button = ccui.Button:create("image/islandPopup/button.png","","")
-    review_button:setScale9Enabled(true)
+    local review_button = Button.create("small","blue","复习怪兽")
     review_button:setPosition(bottom_sprite:getContentSize().width * 0.7,bottom_sprite:getContentSize().height * 0.5)
-    review_button:ignoreAnchorPointForPosition(false)
-    review_button:setAnchorPoint(0.5,0.5)
-    review_button:setTitleText("复习怪兽")
-    review_button:setTitleFontSize(30)
-    review_button:addTouchEventListener(review_button_click)
+    review_button.func = function ()
+        button_func()
+    end
     
     return review_button
 end
@@ -128,24 +124,18 @@ local function addSummaryButton(bottom_sprite,boss)
         end
         return  endList
     end
-    local summary_button_click = function(sender, eventType)
+    local button_func = function()
         local endList = wordList(boss.wrongWordList)
-        if eventType == ccui.TouchEventType.ended then
         local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
         local summaryBossLayer = SummaryBossLayer.create(endList,1,false)
         s_SCENE:replaceGameLayer(summaryBossLayer) 
         s_SCENE:removeAllPopups()
-        end
     end
-
-    local summary_button = ccui.Button:create("image/islandPopup/button.png","","")
-    summary_button:setScale9Enabled(true)
+    local summary_button = Button.create("small","blue","总结怪兽")
     summary_button:setPosition(bottom_sprite:getContentSize().width * 0.3,bottom_sprite:getContentSize().height * 0.5)
-    summary_button:ignoreAnchorPointForPosition(false)
-    summary_button:setAnchorPoint(0.5,0.5)
-    summary_button:setTitleText("总结怪兽")
-    summary_button:setTitleFontSize(30)
-    summary_button:addTouchEventListener(summary_button_click)
+    summary_button.func = function ()
+        button_func()
+    end
     
     return summary_button
 end

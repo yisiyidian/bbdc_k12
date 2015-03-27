@@ -1,6 +1,7 @@
 require("common.global")
 
 local ShopErrorAlter = require("view.shop.ShopErrorAlter")
+local Button                = require("view.button.longButtonInStudy")
 
 local ShopPanel = class("ShopPanel", function()
     return cc.Layer:create()
@@ -38,25 +39,20 @@ function ShopPanel.create(itemId)
     item:setPosition(maxWidth/2, 470)
     main:addChild(item)
 
-    local button_sure_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            main.sure()
-        end
+    local button_func = function()
+        main.sure()
     end
 
-    button_sure = ccui.Button:create("image/shop/long_button.png","image/shop/long_button_clicked.png","")
+    button_sure = Button.create("middle","blue",s_DataManager.product[itemId].productValue.."贝贝豆购买") 
     button_sure:setPosition(maxWidth/2,240)
-    button_sure:addTouchEventListener(button_sure_clicked)
+    button_sure.func = function ()
+        button_func()
+    end
     main:addChild(button_sure)
 
-    local item_name = cc.Label:createWithSystemFont(s_DataManager.product[itemId].productValue.."贝贝豆购买",'',30)
-    item_name:setColor(cc.c4b(255,255,255,255))
-    item_name:setPosition(button_sure:getContentSize().width/2+10, button_sure:getContentSize().height/2)
-    button_sure:addChild(item_name)
-
     local been = cc.Sprite:create("image/shop/been.png")
-    been:setPosition(50, button_sure:getContentSize().height/2)
-    button_sure:addChild(been)
+    been:setPosition(50, button_sure.button_front:getContentSize().height/2)
+    button_sure.button_front:addChild(been)
 
     local label_content = cc.Label:createWithSystemFont(s_DataManager.product[itemId].productDescription,"",30)
     label_content:setAnchorPoint(0.5, 1)

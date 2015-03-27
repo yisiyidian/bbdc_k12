@@ -1,3 +1,5 @@
+local Button                = require("view.button.longButtonInStudy")
+
 local NewReviewBossFailPopup = class ("NewReviewBossFailPopup",function ()
     return cc.Layer:create()
 end)
@@ -78,13 +80,9 @@ function NewReviewBossFailPopup.create(currentWordName,reviewWordList,number)
     popup_meaning:setAnchorPoint(0.5,0.5)
     back:addChild(popup_meaning)
     
-    local button_goon_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            -- button sound
-            playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            closeAnimation()
-        end
+    local button_func = function()
+        playSound(s_sound_buttonEffect)
+        closeAnimation()
     end
     
     local girl = sp.SkeletonAnimation:create("spine/bb_unhappy_public.json","spine/bb_unhappy_public.atlas",1)
@@ -92,12 +90,11 @@ function NewReviewBossFailPopup.create(currentWordName,reviewWordList,number)
     girl:setPosition(back:getContentSize().width *0.33,back:getContentSize().height * 0.3)
     back:addChild(girl)
 
-    local button_goon = ccui.Button:create("image/newreviewboss/buttonreviewboss1nextend.png","","")
-    button_goon:setScale9Enabled(true)
+    local button_goon = Button.create("long","blue","重新挑战")
+    button_goon.func = function ()
+        button_func()
+    end
     button_goon:setPosition(back:getContentSize().width * 0.5,back:getContentSize().height * 0.2)
-    button_goon:setTitleText("重新挑战")
-    button_goon:setTitleFontSize(30)
-    button_goon:addTouchEventListener(button_goon_clicked)
     back:addChild(button_goon)
     
     local onTouchBegan = function(touch, event)

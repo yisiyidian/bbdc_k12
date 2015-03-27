@@ -2,7 +2,7 @@ local ProgressBar       = require("view.newreviewboss.NewReviewBossProgressBar")
 local Pause             = require("view.newreviewboss.NewReviewBossPause")
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 local DetailInfo        = require("view.newreviewboss.NewReviewBossWordInfo")
-local Button                = require("view.newstudy.BlueButtonInStudyLayer")
+local Button            = require("view.button.longButtonInStudy")
 
 local  NewReviewBossHintLayer = class("NewReviewBossHintLayer", function ()
     return cc.Layer:create()
@@ -32,10 +32,6 @@ function NewReviewBossHintLayer.create(currentWordName)
     local return_button
     local white_back
     local line_y
-
-    layer.close  = function ()
-    	
-    end
     
     white_back = cc.Sprite:create("image/newreviewboss/backgroundreviewboss1tishi.png")
     white_back:setPosition(s_DESIGN_WIDTH/2*2, s_DESIGN_HEIGHT * 0.55)
@@ -61,22 +57,21 @@ function NewReviewBossHintLayer.create(currentWordName)
         local action1 = cc.MoveTo:create(0.2, cc.p(s_DESIGN_WIDTH/2*3, s_DESIGN_HEIGHT * 0.55))
         local action2 = cc.EaseBackIn:create(action1)
         local action3 = cc.CallFunc:create(function()
-            layer.close()  
+            s_SCENE:removeAllPopups()
         end)
         white_back:runAction(cc.Sequence:create(action2,action3))
     end
     
-    local return_click = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            closeAnimation() 
-        end
+    local button_func = function()
+        playSound(s_sound_buttonEffect)
+        closeAnimation() 
     end
 
-    local return_button = Button.create("返回")
+    local return_button = Button.create("long","blue","返回")
     return_button:setPosition(s_DESIGN_WIDTH / 2, 100)
-    return_button:addTouchEventListener(return_click) 
+    return_button.func = function ()
+        button_func()
+    end
     layer:addChild(return_button) 
     
     local onTouchBegan = function(touch, event)

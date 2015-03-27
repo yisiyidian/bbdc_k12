@@ -1,5 +1,6 @@
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 local DetailInfo        = require("view.newreviewboss.NewReviewBossWordInfo")
+local Button                = require("view.button.longButtonInStudy")
 
 local LastWordInfoPopup = class ("LastWordInfoPopup",function ()
     return cc.Layer:create()
@@ -54,20 +55,17 @@ function LastWordInfoPopup:ctor(currentWordName)
         back:runAction(cc.Sequence:create(action2,action3))
     end
 
-    local button_goon_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            closeAnimation()
-        end
+    local button_func = function()
+        playSound(s_sound_buttonEffect)
+        closeAnimation()
     end
 
-    local button_goon = ccui.Button:create("image/newstudy/button_ok.png","","")
-    button_goon:setScale9Enabled(true)
+    local button_goon = Button.create("small","blue","确定") 
     button_goon:setPosition(back:getContentSize().width * 0.5,back:getContentSize().height * 0.1)
-    button_goon:setTitleText("确定")
-    button_goon:setTitleFontSize(30)
-    button_goon:addTouchEventListener(button_goon_clicked)
+    button_goon.func = function ()
+        button_func()
+    end
+
     back:addChild(button_goon)
     
     local onTouchBegan = function(touch, event)

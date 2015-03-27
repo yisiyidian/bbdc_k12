@@ -6,7 +6,7 @@ local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
 local PauseButton           = require("view.newreviewboss.NewReviewBossPause")
-
+local Button                = require("view.button.longButtonInStudy")
 
 local  ChooseCollectWordLayer = class("ChooseCollectWordLayer", function ()
     return cc.Layer:create()
@@ -174,69 +174,58 @@ local function createDontknow(word,wrongNum)
         lightSprite:runAction(action10)   
     end
     
-    local click_dontknow_button = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)        
-        elseif eventType == ccui.TouchEventType.ended then
-            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            ChooseCollectWordLayer.forceToEnd()
-            local action1 = cc.DelayTime:create(0.25) 
-            local action2 = cc.DelayTime:create(1)
-            local action3 = cc.DelayTime:create(1) 
-            sender:runAction(cc.Sequence:create(cc.CallFunc:create(function ()
-                labelAnimation()
-            end),
-            action1,
-            cc.CallFunc:create(function ()
-                bagAnimation()
-                progressAnimation()
-            end),
-            action3,
-            cc.CallFunc:create(function ()
-                local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-                local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
-                s_SCENE:replaceGameLayer(chooseWrongLayer) 
-            end)))         
-        end
+    local button_func = function()
+        playSound(s_sound_buttonEffect)        
+        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+        ChooseCollectWordLayer.forceToEnd()
+        local action1 = cc.DelayTime:create(0.25) 
+        local action2 = cc.DelayTime:create(1)
+        local action3 = cc.DelayTime:create(1) 
+        choose_dontknow_button:runAction(cc.Sequence:create(cc.CallFunc:create(function ()
+            labelAnimation()
+        end),
+        action1,
+        cc.CallFunc:create(function ()
+            bagAnimation()
+            progressAnimation()
+        end),
+        action3,
+        cc.CallFunc:create(function ()
+            local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
+            local chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
+            s_SCENE:replaceGameLayer(chooseWrongLayer) 
+        end)))         
     end
 
-    choose_dontknow_button = ccui.Button:create("image/newstudy/button_study_unknow.png","image/newstudy/button_study_unknow_pressed.png","")
+    choose_dontknow_button = Button.create("special","blue","不认识") 
     choose_dontknow_button:setPosition(bigWidth/2, 400)
-    choose_dontknow_button:ignoreAnchorPointForPosition(false)
-    choose_dontknow_button:setAnchorPoint(0.5,0)
-    choose_dontknow_button:addTouchEventListener(click_dontknow_button)
-
-    local unknowLabel = cc.Label:createWithSystemFont("不认识","",30)
-    unknowLabel:enableOutline(cc.c4b(255,255,255,255),1)
-    unknowLabel:setPosition(choose_dontknow_button:getContentSize().width / 2, choose_dontknow_button:getContentSize().height / 2)
-    unknowLabel:ignoreAnchorPointForPosition(false)
-    unknowLabel:setAnchorPoint(0.5,0.5)
-    unknowLabel:setColor(cc.c4b(255,255,255,255))
-    choose_dontknow_button:addChild(unknowLabel)
+    choose_dontknow_button.func = function ()
+        button_func()
+    end
     
     lightSprite = cc.Sprite:create("image/newstudy/liangguang_study.png")
-    lightSprite:setPosition(choose_dontknow_button:getContentSize().width *0.8, choose_dontknow_button:getContentSize().height / 2)
+    lightSprite:setPosition(choose_dontknow_button.button_front:getContentSize().width *0.8, choose_dontknow_button.button_front:getContentSize().height / 2)
     lightSprite:ignoreAnchorPointForPosition(false)
     lightSprite:setAnchorPoint(0.5,0.5)
     lightSprite:setScale(0)
-    choose_dontknow_button:addChild(lightSprite)
+    choose_dontknow_button.button_front:addChild(lightSprite)
     
     progressLabel = cc.Label:createWithSystemFont(wrongNum.." / "..total_number,"",38)
-    progressLabel:setPosition(choose_dontknow_button:getContentSize().width *0.8, choose_dontknow_button:getContentSize().height / 2)
+    progressLabel:setPosition(choose_dontknow_button.button_front:getContentSize().width *0.8, choose_dontknow_button.button_front:getContentSize().height / 2)
     progressLabel:ignoreAnchorPointForPosition(false)
     progressLabel:setAnchorPoint(0.5,0.5)
     progressLabel:setColor(cc.c4b(255,255,255,255))
     progressLabel:enableOutline(cc.c4b(255,255,255,255),1)
-    choose_dontknow_button:addChild(progressLabel)
+    choose_dontknow_button.button_front:addChild(progressLabel)
 
     beibei_bag = cc.Sprite:create("image/newstudy/daizi_study_unknow.png")
-    beibei_bag:setPosition(choose_dontknow_button:getContentSize().width*0.125,choose_dontknow_button:getContentSize().height*0.5)
-    choose_dontknow_button:addChild(beibei_bag)
+    beibei_bag:setPosition(choose_dontknow_button.button_front:getContentSize().width*0.125,choose_dontknow_button.button_front:getContentSize().height*0.5)
+    choose_dontknow_button.button_front:addChild(beibei_bag)
 
     wordLabel = cc.Label:createWithTTF(word,'font/CenturyGothic.ttf',64)
     wordLabel:setColor(cc.c4b(31,68,102,255))
-    wordLabel:setPosition(choose_dontknow_button:getContentSize().width /2 ,choose_dontknow_button:getContentSize().height /2 + 475)
-    choose_dontknow_button:addChild(wordLabel)
+    wordLabel:setPosition(choose_dontknow_button.button_front:getContentSize().width /2 ,choose_dontknow_button.button_front:getContentSize().height /2 + 475)
+    choose_dontknow_button.button_front:addChild(wordLabel)
     wordLabel:setVisible(false)
  
     return choose_dontknow_button
