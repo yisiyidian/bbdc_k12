@@ -163,8 +163,8 @@ function AppScene:ctor()
     -- self:registerCustomEvent()
 end
 
-function AppScene:replaceGameLayer(newLayer)
-    self.gameLayer:removeAllChildren()
+function AppScene:replaceGameLayer(newLayer)   
+    self.gameLayer:removeAllChildren()     
     self.gameLayer:addChild(newLayer)
 
     updateCurrentEverydayInfo()

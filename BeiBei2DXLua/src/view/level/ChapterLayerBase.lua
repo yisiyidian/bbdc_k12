@@ -519,9 +519,9 @@ function ChapterLayerBase:addPopup(levelIndex)
     closeButton:setPosition(back:getContentSize().width-60, back:getContentSize().height-60)
     closeButton:addTouchEventListener(touchEvent)
     
-    local wordButton = ccui.Button:create('image/chapter/popup/button_change_to_ciku.png','image/chapter/popup/button_change_to_ciku.png','image/chapter/popup/button_change_to_ciku.png')
+    local wordButton = ccui.Button:create('image/chapter/popup/button_change_to_ciku.png','','')
     wordButton:setScale9Enabled(true)
-    wordButton:setPosition(100, back:getContentSize().height-50)
+    wordButton:setPosition(60, back:getContentSize().height-50)
     wordButton:addTouchEventListener(wordEvent)
     
     back:addChild(closeButton)

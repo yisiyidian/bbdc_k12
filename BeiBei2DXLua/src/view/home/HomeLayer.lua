@@ -826,7 +826,7 @@ function HomeLayer.create()
     end, function ()
 
     end)
-
+   
     return layer
 end
 

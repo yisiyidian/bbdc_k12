@@ -311,42 +311,26 @@ function MissionProgressLayer.create(share)
     -- grayLump:setPosition(bigWidth/2 + 60, s_DESIGN_HEIGHT/2 - 310)
     -- layer:addChild(grayLump)
     
--- local ButtonClick = function(sender, eventType)
---     if eventType == ccui.TouchEventType.began then
---         playSound(s_sound_buttonEffect)   
---     elseif eventType == ccui.TouchEventType.ended then
---                  local SuccessLayer = require("view.login.LoginPopup")
---                  local successLayer = SuccessLayer.create()
---                  s_SCENE:popup(successLayer)
---     end
--- end
---   
--- local Button = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png","")
--- Button:setPosition(bigWidth/2 + 200, s_DESIGN_HEIGHT * 0.7)
--- Button:setTitleText("test")
--- Button:setTitleColor(cc.c4b(255,255,255,255))
--- Button:setTitleFontSize(40)
--- Button:addTouchEventListener(ButtonClick)
--- layer:addChild(Button)
 
 
---    local function enterSummaryBoss(sender, eventType)
---        if eventType == ccui.TouchEventType.ended then
---    local MiddleLayer = require("view.newstudy.MiddleLayer")
---    local middleLayer = MiddleLayer.create()
---    s_SCENE:replaceGameLayer(middleLayer)
---        end
---    end
---
---    local Button_boss = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
---    Button_boss:setPosition(bigWidth/2 - 300 , s_DESIGN_HEIGHT/2 - 400)
---    Button_boss:setTitleText("summaryboss")
---    Button_boss:setTitleColor(cc.c4b(255,255,255,255))
---    Button_boss:setTitleFontSize(40)
---    Button_boss:addTouchEventListener(enterSummaryBoss)
---    layer:addChild(Button_boss)
---
---    Button_boss:setScale(0.5)
+
+   -- local function enterSummaryBoss(sender, eventType)
+   --     if eventType == ccui.TouchEventType.ended then
+   -- local MiddleLayer = require("view.newstudy.MiddleLayer")
+   -- local middleLayer = MiddleLayer.create()
+   -- s_SCENE:replaceGameLayer(middleLayer)
+   --     end
+   -- end
+
+   -- local Button_boss = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
+   -- Button_boss:setPosition(bigWidth/2 - 300 , s_DESIGN_HEIGHT/2 - 400)
+   -- Button_boss:setTitleText("test")
+   -- Button_boss:setTitleColor(cc.c4b(255,255,255,255))
+   -- Button_boss:setTitleFontSize(40)
+   -- Button_boss:addTouchEventListener(enterSummaryBoss)
+   -- layer:addChild(Button_boss)
+
+   -- Button_boss:setScale(0.5)
     
     
     

@@ -199,11 +199,11 @@ function MiddleLayer:ctor()
 
     
     local backBagSprite = cc.Sprite:create("image/newstudy/bagback.png")
-    backBagSprite:setPosition(bigWidth * 0.65, 495)
+    backBagSprite:setPosition(bigWidth * 0.63, 495)
     backColor:addChild(backBagSprite)
     
     local frontBagSprite = cc.Sprite:create("image/newstudy/bagfront.png")
-    frontBagSprite:setPosition(bigWidth * 0.65 + 4, 505)
+    frontBagSprite:setPosition(bigWidth * 0.63 + 4, 505)
     frontBagSprite:ignoreAnchorPointForPosition(false)
     frontBagSprite:setAnchorPoint(0.5,1)
     backColor:addChild(frontBagSprite,2)
@@ -216,10 +216,10 @@ function MiddleLayer:ctor()
     end
 
     local beibeiAnimation = sp.SkeletonAnimation:create("spine/collectword.json", "spine/collectword.atlas",1)
-    beibeiAnimation:addAnimation(0, 'animation', false)
-    beibeiAnimation:setPosition(bigWidth * 0.15, 305)
+    beibeiAnimation:addAnimation(0, 'animation', true)
+    beibeiAnimation:setPosition(bigWidth * 0.18, 305)
     backColor:addChild(beibeiAnimation)
-    
+
     self.getBean = s_CURRENT_USER.beanRewardForCollect
     s_CURRENT_USER.beanRewardForCollect = 3
     self.nextButton = createNextButton(self.getBean)
