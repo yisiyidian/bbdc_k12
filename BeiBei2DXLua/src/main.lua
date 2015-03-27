@@ -45,6 +45,7 @@ local function main()
     cc.FileUtils:getInstance():addSearchPath("src")
     cc.FileUtils:getInstance():addSearchPath("res")
     cc.FileUtils:getInstance():addSearchPath("res/sound/words/")
+    cc.FileUtils:getInstance():addSearchPath(cc.FileUtils:getInstance():getWritablePath())
     require("cocos.init")
 
     local HotUpdateController = require("hu.HotUpdateController")

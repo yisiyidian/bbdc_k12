@@ -29,6 +29,7 @@ function HotUpdateController.getInfoMsg()
 end
 
 function HotUpdateController.onCompleted()
+    reloadModule('common.utils')
     hideProgressHUD(true)
     local start = reloadModule('start')
     start.start(true)
