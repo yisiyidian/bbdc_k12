@@ -142,9 +142,9 @@ end
 
 function AnalyticsFirstBook(bookname)
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
-        print('Analytics', 'FirstBook_1st_day', 'selected_' .. bookname); cx.CXAnalytics:logEventAndLabel('FirstBook_1st_day', 'selected_' .. bookname)
+        print('Analytics', 'FirstBook_1st_day', 'selected_' .. bookname); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'FirstBook_1st_day', 'selected_' .. bookname)
     end
-    print('Analytics','FirstBook', 'selected_' .. bookname); cx.CXAnalytics:logEventAndLabel('FirstBook', 'selected_' .. bookname)
+    print('Analytics','FirstBook', 'selected_' .. bookname); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'FirstBook', 'selected_' .. bookname)
 end
 
 function AnalyticsDownloadBook(bookname)
