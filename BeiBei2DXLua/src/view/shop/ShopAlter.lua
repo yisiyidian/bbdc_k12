@@ -2,6 +2,7 @@ require("common.global")
 
 local ShopErrorAlter = require("view.shop.ShopErrorAlter")
 local HomeLayer   = require("view.home.HomeLayer")
+local Button                = require("view.button.longButtonInStudy")
 
 local ShopAlter = class("ShopAlter", function()
     return cc.Layer:create()
@@ -77,30 +78,46 @@ function ShopAlter.create(itemId, location)
         end
     end
 
+    main.go = function ()
+        for i=1,5 do
+            if itemId == i then
+                s_LocalDatabaseManager.setBuy(math.pow(10,i-1))
+            end
+        end 
+
+        if itemId ~= 6 then
+            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+                   s_SCENE:removeAllPopups()
+                end
+            local homeLayer = HomeLayer.create(true) 
+            s_SCENE:replaceGameLayer(homeLayer)
+        else   
+            s_SCENE:removeAllPopups()
+            local ShopLayer = require("view.shop.ShopLayer")
+            local shopLayer = ShopLayer.create()
+            s_SCENE:replaceGameLayer(shopLayer)
+        end
+    end
+    
     if state == 0 then
         item = cc.Sprite:create("image/shop/item"..itemId..".png")
         item:setPosition(maxWidth/2, maxHeight/2+150)
         back:addChild(item)
 
-        local button_sure_clicked = function(sender, eventType)
-            if eventType == ccui.TouchEventType.ended then
-                main.sure()
-            end
+        local button_func = function()
+            main.sure()
         end
 
-        button_sure = ccui.Button:create("image/shop/long_button.png","image/shop/long_button_clicked.png","")
+        button_sure = Button.create("middle","blue",s_DataManager.product[itemId].productValue.."贝贝豆购买") 
         button_sure:setPosition(maxWidth/2,100)
-        button_sure:addTouchEventListener(button_sure_clicked)
+        button_sure.func = function ()
+            button_func()
+        end
         back:addChild(button_sure)
 
-        local item_name = cc.Label:createWithSystemFont(s_DataManager.product[itemId].productValue.."贝贝豆购买",'',30)
-        item_name:setColor(cc.c4b(255,255,255,255))
-        item_name:setPosition(button_sure:getContentSize().width/2+10, button_sure:getContentSize().height/2)
-        button_sure:addChild(item_name)
-
         local been = cc.Sprite:create("image/shop/been.png")
-        been:setPosition(50, button_sure:getContentSize().height/2)
-        button_sure:addChild(been)
+        been:setPosition(50, button_sure.button_front:getContentSize().height/2)
+        button_sure.button_front:addChild(been)
     else
         local title = cc.Sprite:create("image/shop/label"..itemId..".png")
         title:setPosition(maxWidth/2, maxHeight-80)
@@ -109,6 +126,17 @@ function ShopAlter.create(itemId, location)
         item = cc.Sprite:create("image/shop/product"..itemId..".png")
         item:setPosition(maxWidth/2, maxHeight/2+150)
         back:addChild(item)
+        
+        local button_func = function()
+            main.go()
+        end
+
+        button_sure = Button.create("middle","blue","去看一看") 
+        button_sure:setPosition(maxWidth/2,100)
+        button_sure.func = function ()
+            button_func()
+        end
+        back:addChild(button_sure)
     end
 
     local label_content

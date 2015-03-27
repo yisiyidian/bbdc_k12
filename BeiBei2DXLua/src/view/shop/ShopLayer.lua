@@ -51,18 +51,14 @@ function ShopLayer.create()
     button_back:addTouchEventListener(button_back_clicked)
     layer:addChild(button_back) 
 
-    local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
-    been_number_back:setPosition(s_DESIGN_WIDTH-100, s_DESIGN_HEIGHT-50)
-    layer:addChild(been_number_back)
-
-    local been = cc.Sprite:create("image/shop/been.png")
-    been:setPosition(0, been_number_back:getContentSize().height/2)
-    been_number_back:addChild(been)
+    local beans = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
+    beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
+    layer:addChild(beans)
 
     local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
     been_number:setColor(cc.c4b(0,0,0,255))
-    been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
-    been_number_back:addChild(been_number)
+    been_number:setPosition(beans:getContentSize().width * 0.65 , beans:getContentSize().height/2)
+    beans:addChild(been_number)
 
     local height = 320
     local productNum = #s_DataManager.product

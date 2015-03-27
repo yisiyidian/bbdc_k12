@@ -1,4 +1,5 @@
 require("common.global")
+local Button                = require("view.button.longButtonInStudy")
 
 local ShopErrorAlter = class("ShopErrorAlter", function()
     return cc.Layer:create()
@@ -52,18 +53,16 @@ function ShopErrorAlter.create()
     button_close:addTouchEventListener(button_close_clicked)
     back:addChild(button_close)
 
-    local button_sure_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            s_SCENE:removeAllPopups()
-            s_CorePlayManager.enterLevelLayer()
-        end
+    local button_func = function()
+        s_SCENE:removeAllPopups()
+        s_CorePlayManager.enterLevelLayer()
     end
 
-    button_sure = ccui.Button:create("image/shop/long_button.png","image/shop/long_button_clicked.png","")
-    button_sure:setTitleText("赚取贝贝豆")
-    button_sure:setTitleFontSize(30)
+    button_sure = Button.create("middle","blue","赚取贝贝豆") 
     button_sure:setPosition(maxWidth/2,100)
-    button_sure:addTouchEventListener(button_sure_clicked)
+    button_sure.func = function ()
+        button_func()
+    end
     back:addChild(button_sure)
 
     -- touch lock

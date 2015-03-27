@@ -7,7 +7,7 @@ local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
-local Button                = require("view.newstudy.BlueButtonInStudyLayer")
+local Button                = require("view.button.longButtonInStudy")
 local TotalWrongWordTip = require("view.newstudy.TotalWrongWordTip")
 local PauseButton           = require("view.newreviewboss.NewReviewBossPause")
 
@@ -39,25 +39,24 @@ end
 
 local function createLastButton(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-    local click_before_button = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)        
-        elseif eventType == ccui.TouchEventType.ended then
-            local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer 
-            AnalyticsStudyLookBackWord()
-            if wrongWordList == nil then
-                chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
-            else
-                chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,wrongWordList)
-            end
-            s_SCENE:replaceGameLayer(chooseWrongLayer)  
+    local button_func = function()
+        playSound(s_sound_buttonEffect)        
+        local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
+        local chooseWrongLayer 
+        AnalyticsStudyLookBackWord()
+        if wrongWordList == nil then
+            chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
+        else
+            chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,wrongWordList)
         end
+        s_SCENE:replaceGameLayer(chooseWrongLayer)  
     end
 
-    local choose_before_button = Button.create("偷看一眼")
+    local choose_before_button = Button.create("long","blue","偷看一眼") 
     choose_before_button:setPosition(bigWidth/2, 100)
-    choose_before_button:addTouchEventListener(click_before_button)
+    choose_before_button.func = function ()
+        button_func()
+    end
     return choose_before_button  
 end
 
@@ -238,8 +237,8 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
     darkColor:ignoreAnchorPointForPosition(false)
     darkColor:setPosition(backColor:getContentSize().width / 2, 0)
 
-    local beibei = cc.Sprite:create("image/newstudy/yindao_huaci_gril_background.png")
-    beibei:setPosition(cc.p(darkColor:getContentSize().width / 2 , 150))
+    local beibei = cc.Sprite:create("image/newstudy/background_yindao.png")
+    beibei:setPosition(cc.p(darkColor:getContentSize().width / 2 , 170))
     darkColor:addChild(beibei)
 
     -- local beibei_hand = cc.Sprite:create("image/newstudy/yindao_huaci_gril_arm_background.png")
@@ -255,7 +254,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
     -- beibei_hand:runAction(action3)
     
     local beibei_tip_label = cc.Label:createWithSystemFont("划一划 !","",48)
-    beibei_tip_label:setPosition(beibei:getContentSize().width /2, beibei:getContentSize().height * 0.25)
+    beibei_tip_label:setPosition(beibei:getContentSize().width /2, beibei:getContentSize().height * 0.5)
     beibei_tip_label:setColor(cc.c4b(36,63,79,255))
     beibei:addChild(beibei_tip_label)
 

@@ -25,17 +25,17 @@ local function addNextButton(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local function button_func()
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            local SlideCoconutLayer = require("view.newstudy.SlideCoconutLayer")
-            local slideCoconutLayer
-            if wrongWordList == nil then
-                AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD, 'TOUCH')
-                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
-            else
-                AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD_STRIKEWHILEHOT, 'TOUCH')
-                slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,wrongWordList)
-            end
-
-            s_SCENE:replaceGameLayer(slideCoconutLayer)
+        playSound(s_sound_buttonEffect)
+        local SlideCoconutLayer = require("view.newstudy.SlideCoconutLayer")
+        local slideCoconutLayer
+        if wrongWordList == nil then
+            AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD, 'TOUCH')
+            slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
+        else
+            AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD_STRIKEWHILEHOT, 'TOUCH')
+            slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,wrongWordList)
+        end
+        s_SCENE:replaceGameLayer(slideCoconutLayer)
     end
 
     local choose_next_button = Button.create("long","blue","下一步") 

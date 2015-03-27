@@ -70,7 +70,7 @@ function HomeLayer.create()
     backColor:addChild(top)
 
     local been_number_back = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
-    been_number_back:setPosition(bigWidth-100, s_DESIGN_HEIGHT-50)
+    been_number_back:setPosition(bigWidth-100, s_DESIGN_HEIGHT-70)
     backColor:addChild(been_number_back)
 
     local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
