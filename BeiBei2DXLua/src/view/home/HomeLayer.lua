@@ -187,7 +187,89 @@ function HomeLayer.create()
     icon_main:setPosition(button_main:getContentSize().width / 2,button_main:getContentSize().height / 2)
     button_main:addChild(icon_main)
 
-    layer:addShopButton(backColor)
+    local function changeViewToFriendOrShop(destination)
+        local DestinationLayer
+        if destination == "ShopLayer" then
+            DestinationLayer = require("view.shop."..destination)
+        elseif destination == "FriendLayer" then
+            DestinationLayer = require("view.friend."..destination)
+        else
+            return
+        end
+            
+        local destinationLayer = DestinationLayer.create()
+        layer:addChild(destinationLayer)
+        destinationLayer:ignoreAnchorPointForPosition(false)
+        destinationLayer:setAnchorPoint(0,0.5)
+        destinationLayer:setPosition(s_RIGHT_X, s_DESIGN_HEIGHT/2)
+        backColor:removeChildByName('redHint')
+        if viewIndex == 2 then
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            mission_progress.stopListener = false
+            viewIndex = 1
+            local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+            setting_back:runAction(cc.Sequence:create(action2, action3))
+        end
+        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+           local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2 - bigWidth,s_DESIGN_HEIGHT/2))
+        backColor:runAction(action1)
+        local action2 = cc.MoveTo:create(0.5, cc.p(bigWidth - bigWidth,s_DESIGN_HEIGHT/2))
+        local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+        destinationLayer:runAction(cc.Sequence:create(action2, action3))
+
+        destinationLayer.backToHome = function ()
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2 ,s_DESIGN_HEIGHT/2))
+            backColor:runAction(action1)
+            local action2 = cc.MoveTo:create(0.5, cc.p(bigWidth ,s_DESIGN_HEIGHT/2))
+            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+            local action4 = cc.CallFunc:create(function ()
+                destinationLayer:removeFromParent()
+            end)
+            destinationLayer:runAction(cc.Sequence:create(action2, action3,action4))
+        end  
+    end
+
+
+    local button_shop_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            AnalyticsShopBtn()
+            changeViewToFriendOrShop("ShopLayer")
+        end
+    end
+
+    local button_shop
+    local icon_shop
+
+    if SHOP_LOCKED == 0 then
+        button_shop = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
+        button_shop:setPosition(bigWidth / 2 + 1, 200)
+        icon_shop = cc.Sprite:create('image/homescene/home_page_store.png')
+    else
+        button_shop = ccui.Button:create("image/homescene/home_page_function_locked_bg1.png","","")
+        button_shop:setPosition(bigWidth / 2 + 0.5, 200)
+        local cover = cc.Sprite:create('image/homescene/home_page_function_locked_cover1.png')
+        cover:setPosition(button_shop:getContentSize().width / 2,button_shop:getContentSize().height / 2)
+        button_shop:addChild(cover)
+        local lock = cc.Sprite:create('image/homescene/home_page_function_lock.png')
+        lock:setAnchorPoint(1,0)
+        lock:setPosition(button_friend:getContentSize().width,button_friend:getContentSize().height * 0)
+        button_shop:addChild(lock)
+        icon_shop = cc.Sprite:create('image/homescene/home_page_store_locked.png')
+    end
+
+    button_shop:setScale9Enabled(true)
+    button_shop:setAnchorPoint(0,0.5)
+    --button_shop:setPosition(bigWidth / 2 + 1, 200)
+
+    icon_shop:setPosition(button_shop:getContentSize().width / 2,button_shop:getContentSize().height / 2)
+    button_shop:addChild(icon_shop)
+
+    button_shop:addTouchEventListener(button_shop_clicked)
+    backColor:addChild(button_shop) 
+    layer.button_shop = button_shop
+
     --    layer:addFriendButton(backColor)  
 
     local button_reward_clicked = function(sender, eventType)
@@ -435,36 +517,7 @@ function HomeLayer.create()
             offlineTipFriend.setTrue()
         else
             if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                local FriendLayer = require("view.friend.FriendLayer") 
-                local friendLayer = FriendLayer.create()
-                layer:addChild(friendLayer)
-                friendLayer:ignoreAnchorPointForPosition(false)
-                friendLayer:setAnchorPoint(0,0.5)
-                friendLayer:setPosition(s_RIGHT_X, s_DESIGN_HEIGHT/2)
-                backColor:removeChildByName('redHint')
-                if viewIndex == 2 then
-                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                    mission_progress.stopListener = false
-                    viewIndex = 1
-                    local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
-                    local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-                    setting_back:runAction(cc.Sequence:create(action2, action3))
-                end
-                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2 - bigWidth,s_DESIGN_HEIGHT/2))
-                backColor:runAction(action1)
-                local action2 = cc.MoveTo:create(0.5, cc.p(bigWidth - bigWidth,s_DESIGN_HEIGHT/2))
-                local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-                friendLayer:runAction(cc.Sequence:create(action2, action3))
-
-                friendLayer.backToHome = function ()
-                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                    local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2 ,s_DESIGN_HEIGHT/2))
-                    backColor:runAction(action1)
-                    local action2 = cc.MoveTo:create(0.5, cc.p(bigWidth ,s_DESIGN_HEIGHT/2))
-                    local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-                    friendLayer:runAction(cc.Sequence:create(action2, action3))
-                end
+                changeViewToFriendOrShop("FriendLayer")
             else
                 if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
                     local Item_popup = require("popup/PopupModel")
@@ -775,48 +828,6 @@ function HomeLayer.create()
     end)
 
     return layer
-end
-
-function HomeLayer:addShopButton(backColor)
-    local button_shop_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            AnalyticsShopBtn()
-            local ShopLayer = require("view.shop.ShopLayer")
-            local shopLayer = ShopLayer.create()
-            s_SCENE:replaceGameLayer(shopLayer)
-        end
-    end
-
-    local button_shop
-    local icon_shop
-
-    if SHOP_LOCKED == 0 then
-        button_shop = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
-        button_shop:setPosition(bigWidth / 2 + 1, 200)
-        icon_shop = cc.Sprite:create('image/homescene/home_page_store.png')
-    else
-        button_shop = ccui.Button:create("image/homescene/home_page_function_locked_bg1.png","","")
-        button_shop:setPosition(bigWidth / 2 + 0.5, 200)
-        local cover = cc.Sprite:create('image/homescene/home_page_function_locked_cover1.png')
-        cover:setPosition(button_shop:getContentSize().width / 2,button_shop:getContentSize().height / 2)
-        button_shop:addChild(cover)
-        local lock = cc.Sprite:create('image/homescene/home_page_function_lock.png')
-        lock:setAnchorPoint(1,0)
-        lock:setPosition(button_friend:getContentSize().width,button_friend:getContentSize().height * 0)
-        button_shop:addChild(lock)
-        icon_shop = cc.Sprite:create('image/homescene/home_page_store_locked.png')
-    end
-
-    button_shop:setScale9Enabled(true)
-    button_shop:setAnchorPoint(0,0.5)
-    --button_shop:setPosition(bigWidth / 2 + 1, 200)
-
-    icon_shop:setPosition(button_shop:getContentSize().width / 2,button_shop:getContentSize().height / 2)
-    button_shop:addChild(icon_shop)
-
-    button_shop:addTouchEventListener(button_shop_clicked)
-    backColor:addChild(button_shop) 
-    self.button_shop = button_shop
 end
 
 function HomeLayer:showDataLayerByItem(index)

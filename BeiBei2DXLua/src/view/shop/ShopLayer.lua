@@ -40,9 +40,13 @@ function ShopLayer.create()
     back_head:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT)
     layer:addChild(back_head)
 
+    layer.backToHome = function ()
+
+    end
+
     local button_back_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-           s_CorePlayManager.enterHomeLayer()
+           layer.backToHome()
         end
     end
 
@@ -117,7 +121,7 @@ function ShopLayer.create()
     onAndroidKeyPressed(layer, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()
         if #isPopup == 0 then
-        s_CorePlayManager.enterHomeLayer()
+            layer.backToHome()
         end
     end, function ()
 
