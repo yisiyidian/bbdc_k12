@@ -66,12 +66,13 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
                end),
                   action4,
                   cc.CallFunc:create(function()
-                    if #wordlist == 0 then  
+                    if #wordlist == 0 then   
+                        AnalyticsForgeIron_LeaveLayer()
                         if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat3_1 then
                             s_CURRENT_USER:setTutorialStep(s_tutorial_study + 1)
                             s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_review_boss)
                         end
-                        AnalyticsForgeIron_LeaveLayer()
+
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanRewardForIron)
                         saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
                         if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) then
