@@ -61,9 +61,9 @@ local function createLastButton(word,wrongNum,wrongWordList)
 end
 
 function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
-    AnalyticsStudySlideCoconut_EnterLayer()
 
-    if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_3 then
+    if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_3 then 
+        AnalyticsStudySlideCoconut_EnterLayer()
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_3 + 1)
     end
 
@@ -147,9 +147,10 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
         playWordSound(self.currentWord) 
         local normal = function()  
             if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_1 then
-               s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat2_1 + 1)
+                s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat2_1 + 1)
+                AnalyticsStudySlideCoconut_LeaveLayer()
             end
-            AnalyticsStudySlideCoconut_LeaveLayer()
+
 
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
