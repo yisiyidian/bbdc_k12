@@ -5,9 +5,9 @@
     <channel name="iOS" 
         packageName="com.beibei.wordmaster"
 
-        leanCloudAppName="beibeidanci_v180"
-        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
-        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
 
         QQPkgName=""
         QQName="贝贝单词"
@@ -29,9 +29,9 @@
     <channel name="DEBUG" 
         packageName="com.beibei.wordmaster"
 
-        leanCloudAppName="贝贝单词X测试"
-        leanCloudAppID="gqzttdmaxmb451s2ypjkkdj91a0m9izsk069hu4wji3tuepn"
-        leanCloudAppKey="x6uls40kqxb3by8uig1b42v9m6erd2xd6xqtw1z3lpg4znb3"
+        leanCloudAppName="K12_test"
+        leanCloudAppID="sda0nhbk4hs8h4dsqopr8a2p7orssj06e1qu5ju4lo40ej2z"
+        leanCloudAppKey="3flq2akl5o9l25znb3sfto3j1otmizfee5hyzwrjdkieulfa"
 
         QQPkgName=""
         QQName="贝贝单词"
@@ -53,9 +53,9 @@
     <channel name="anysdk" 
         packageName="com.beibei.wordmaster"
 
-        leanCloudAppName="beibeidanci_v180"
-        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
-        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
 
         QQPkgName="com.beibei.wordmaster.tencentmyapp"
         QQName="贝贝单词"
@@ -75,9 +75,9 @@
     <channel name="xiaomi" 
         packageName="com.beibei.wordmaster"
 
-        leanCloudAppName="beibeidanci_v180"
-        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
-        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
 
         QQPkgName="com.beibei.wordmaster.tencentmyapp"
         QQName="贝贝单词"
@@ -97,9 +97,9 @@
     <channel name="wdj" 
         packageName="com.beibei.wordmaster"
 
-        leanCloudAppName="beibeidanci_v180"
-        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
-        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
 
         QQPkgName="com.beibei.wordmaster.wdj"
         QQName="贝贝单词WDJ"
@@ -119,9 +119,9 @@
     <channel name="anzhi" 
         packageName="com.beibei.wordmaster"
 
-        leanCloudAppName="beibeidanci_v180"
-        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
-        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
 
         QQPkgName="com.beibei.wordmaster.tencentmyapp"
         QQName="贝贝单词"
@@ -141,9 +141,9 @@
     <channel name="meizu" 
         packageName="com.beibei.wordmaster"
 
-        leanCloudAppName="beibeidanci_v180"
-        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
-        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
 
         QQPkgName="com.beibei.wordmaster.tencentmyapp"
         QQName="贝贝单词"
@@ -163,9 +163,9 @@
     <channel name="huawei" 
         packageName="com.beibei.wordmaster"
 
-        leanCloudAppName="beibeidanci_v180"
-        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
-        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
 
         QQPkgName="com.beibei.wordmaster.tencentmyapp"
         QQName="贝贝单词"
@@ -185,9 +185,9 @@
     <channel name="baidu" 
         packageName="com.beibei.wordmaster"
 
-        leanCloudAppName="beibeidanci_v180"
-        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
-        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
 
         QQPkgName="com.beibei.wordmaster.tencentmyapp"
         QQName="贝贝单词"
@@ -207,9 +207,9 @@
     <channel name="jifeng" 
         packageName="com.beibei.wordmaster"
 
-        leanCloudAppName="beibeidanci_v180"
-        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
-        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
 
         QQPkgName="com.beibei.wordmaster.tencentmyapp"
         QQName="贝贝单词"
@@ -231,9 +231,9 @@
     <channel name="360qihu" 
         packageName="com.beibei.wordmaster.qihu"
 
-        leanCloudAppName="beibeidanci_v180"
-        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
-        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
 
         QQPkgName="com.beibei.wordmaster.tencentmyapp"
         QQName="贝贝单词"
@@ -253,9 +253,9 @@
     <channel name="openQQ" 
         packageName="com.beibei.wordmaster.tencentmyapp"
 
-        leanCloudAppName="beibeidanci_v180"
-        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
-        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
 
         QQPkgName="com.beibei.wordmaster.tencentmyapp"
         QQName="贝贝单词"
@@ -277,9 +277,9 @@
     <channel name="others" 
         packageName="com.beibei.wordmaster"
 
-        leanCloudAppName="beibeidanci_v180"
-        leanCloudAppID="935lvmzn16sqvq8mbwflzb2mqy1p041zwyy8ofi13cg4oguk"
-        leanCloudAppKey="2rmiqb2437n4rovbufuivgssf04znlvhmeshu1a2a1fq3g9i"
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
 
         QQPkgName=""
         QQName=""

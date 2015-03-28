@@ -294,7 +294,17 @@ function BookLayer.create()
     end
 
     layer:scheduleUpdateWithPriorityLua(update, 0)
+
+    layer:popupAccountBind()
+
     return layer
+end
+
+function BookLayer:popupAccountBind()
+    if s_CURRENT_USER.tutorialStep > s_tutorial_book_select then return end
+
+    local K12AccountBindView = require('view.login.K12AccountBindView')
+    local view = K12AccountBindView.create(K12AccountBindView.Type_username)
 end
 
 return BookLayer

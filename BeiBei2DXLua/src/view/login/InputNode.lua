@@ -4,7 +4,10 @@ local InputNode = class("InputNode", function()
     return cc.Layer:create()
 end)
 
-function InputNode.create(type)
+InputNode.type_username = 'username'
+InputNode.type_pwd = 'pwd'
+
+function InputNode.create(type, hint, eventHandleCB)
     local width = 450
     local height = 80
 
@@ -15,14 +18,9 @@ function InputNode.create(type)
     
     local backImage
     local cursor
-    local hint1 = "用户名"
-    local hint2 = "密码"
     main.textField = nil
     
-    local cursorShowUp
-    local eventHandle
-    
-    if type == "username" then
+    if type ~= InputNode.type_pwd then
         backImage = cc.Sprite:create("image/login/sl_username.png")
     else
         backImage = cc.Sprite:create("image/login/sl_password.png")
@@ -31,18 +29,14 @@ function InputNode.create(type)
     main:addChild(backImage)
       
 
-    eventHandle = function(sender, eventType)
+    local eventHandle = function(sender, eventType)
+        if eventHandleCB ~= nil then eventHandleCB(sender, eventType) end
         if eventType == ccui.TextFiledEventType.attach_with_ime then   
 --            print("in text field")
             main.textField:setPlaceHolder("")
             cursor:setVisible(true)
         elseif eventType == ccui.TextFiledEventType.detach_with_ime then
---            print("out text field")
-            if type == "username" then
-                main.textField:setPlaceHolder(hint1)
-            else
-                main.textField:setPlaceHolder(hint2)
-            end
+            main.textField:setPlaceHolder(hint)
             cursor:setVisible(false)
         elseif eventType == ccui.TextFiledEventType.insert_text then
             cursor:setVisible(true)
@@ -60,11 +54,10 @@ function InputNode.create(type)
     main.textField:setMaxLengthEnabled(true)
     main.textField:setPlaceHolderColor(cc.c3b(150,150,150))
     main.textField:setTextColor(cc.c4b(0,0,0,255))
-    if type == "username" then
-        main.textField:setPlaceHolder(hint1)
+    main.textField:setPlaceHolder(hint)
+    if type ~= InputNode.type_pwd then
         main.textField:setMaxLength(10)
     else
-        main.textField:setPlaceHolder(hint2)
         main.textField:setMaxLength(16)
         main.textField:setPasswordEnabled(true)
         main.textField:setPasswordStyleText("*")

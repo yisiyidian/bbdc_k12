@@ -221,8 +221,8 @@ function AppScene:removeAllPopups()
     if self.popupLayer.backColor ~= nil then
         self.popupLayer.backColor:runAction(action1)
     end
-    s_SCENE:callFuncWithDelay(0.2,function ()
-    self.popupLayer:removeAllChildren()
+    s_SCENE:callFuncWithDelay(0.2, function ()
+        self.popupLayer:removeAllChildren()
     end)
 end
 
