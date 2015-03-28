@@ -33,7 +33,7 @@ function PopupSummaryFail:ctor(current_star, total_star)
     
     
     -- set title
-    self.ccbPopupSummaryFail['summary_boss_text']:setString(s_DataManager.getTextWithIndex(TEXT_ID_NEED_XXX_STARS_TO_UNLOCK_LV))
+    self.ccbPopupSummaryFail['summary_boss_text']:setString(s_DataManager.getTextWithIndex(TEXT__NEED_XXX_STARS_TO_UNLOCK_LV))
     -- add sad girl
     local girl = sp.SkeletonAnimation:create('spine/bb_yumen_public.json', 'spine/bb_yumen_public.atlas',1)
     girl:addAnimation(0, 'animation', true)

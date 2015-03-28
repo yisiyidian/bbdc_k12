@@ -113,11 +113,11 @@ showLogin = function()
         elseif eventType == ccui.TouchEventType.ended then
             
             if validateUsername(username.textField:getString()) == false then
-                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
+                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR))
                 return
             end
             if validatePassword(password.textField:getString()) == false then
-                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT_ID_PWD_ERROR))
+                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__PWD_ERROR))
                 return
             end
             
