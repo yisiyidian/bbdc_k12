@@ -260,11 +260,11 @@ function ChapterLayer:checkUnlockLevel()
 
         end)
 --        if taskIndex == -2 then
---            s_SCENE:callFuncWithDelay(1.5, function() 
+--            self:callFuncWithDelay(1.5, function() 
 --            self.chapterDic[currentChapterKey]:addPopup(currentProgress)
 --            end)
 --        end
-        s_SCENE:callFuncWithDelay(2.0, function() 
+        self:callFuncWithDelay(2.0, function() 
             self:addBottomBounce()
         end)
 
@@ -272,7 +272,7 @@ function ChapterLayer:checkUnlockLevel()
     elseif currentProgress - oldProgress > 0 then   -- unlock level
         local chapterKey = 'chapter'..math.floor(oldProgress / s_islands_per_page)
         local delayTime = 0
---        s_SCENE:callFuncWithDelay(delayTime, 
+--        self:callFuncWithDelay(delayTime, 
 --            function()
 --                -- add notification
 --                self:addPlayerNotification(false) 
@@ -280,11 +280,11 @@ function ChapterLayer:checkUnlockLevel()
 --        )  
         self.chapterDic[chapterKey]:plotUnlockLevelAnimation('level'..currentProgress)
 
-        s_SCENE:callFuncWithDelay(1, function()
+        self:callFuncWithDelay(1, function()
             self:scrollLevelLayer(currentProgress, 1)
         end)
 --        if taskIndex == -2 then
---            s_SCENE:callFuncWithDelay(1.3, function() 
+--            self:callFuncWithDelay(1.3, function() 
 --                self.chapterDic[chapterKey]:addPopup(currentProgress)
 --            end)
 --        end
@@ -296,7 +296,7 @@ function ChapterLayer:checkUnlockLevel()
                 self:callFuncWithDelay(1.1, function()
                     s_SCENE.touchEventBlockLayer.unlockTouch()
                 end)
-            s_SCENE:callFuncWithDelay(1.0, function() 
+            self:callFuncWithDelay(1.0, function() 
                 self.chapterDic[chapterKey]:addPopup(currentProgress)
             end)
         end
@@ -358,6 +358,7 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
     self.player:removeAllChildren()
     -- TODO get state
 --    local state
+
 --    if state == 0 then
 --        local title = cc.Label:createWithSystemFont('当前任务','',28)
 --        title:setColor(cc.c3b(56,26,23))
@@ -670,7 +671,7 @@ function ChapterLayer:plotUnlockCloudAnimation()
     local action2 = cc.MoveBy:create(1.5, cc.p(s_DESIGN_WIDTH*2,0))
     self.chapterDic['leftCloud']:runAction(action1)
     self.chapterDic['rightCloud']:runAction(action2)
-    s_SCENE:callFuncWithDelay(1.6,function()
+    self:callFuncWithDelay(1.6,function()
         self.chapterDic['leftCloud']:removeFromParent() 
         self.chapterDic['rightCloud']:removeFromParent()
     end)  
