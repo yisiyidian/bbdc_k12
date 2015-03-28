@@ -2,6 +2,13 @@ local GuideLine = class("GuideLine", function()
     return cc.Sprite:create()
 end)
 
+function GuideLine:findDistance(sp1,sp2)
+    local p1 = cc.p(sp1:getPosition())
+    local p2 = cc.p(sp2:getPosition())
+    local distance = math.sqrt((p1.x - p2.x)*(p1.x - p2.x)+(p1.y - p2.y)*(p1.y - p2.y))
+    return distance
+end
+
 function GuideLine:createLayer(oldLayer)  
     local main = cc.Layer:create()
     local main_width = oldLayer:getContentSize().width
@@ -9,6 +16,7 @@ function GuideLine:createLayer(oldLayer)
     main:setContentSize(main_width, main_height)
     main:setAnchorPoint(0.5,0)
     main:ignoreAnchorPointForPosition(false)
+    return main
 end
 
 function GuideLine.create(color)
