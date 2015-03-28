@@ -32,7 +32,7 @@ python exportLevels.py  ${RAW_CONFIGS}/Level.json ${TMP_DIR}/ 'cet6'
 python exportLevels.py  ${RAW_CONFIGS}/Level.json ${TMP_DIR}/ 'ielts'
 python exportLevels.py  ${RAW_CONFIGS}/Level.json ${TMP_DIR}/ 'toefl'
 
-python exportTextCodes.py ${RAW_CONFIGS}/text.json ${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/src/common/text.lua
+# python exportTextCodes.py ${RAW_CONFIGS}/text.json ${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/src/common/text.lua
 
 # cp ${RAW_BOOKS}/*.book ${TMP_DIR}/ too slow for lua xxtea
 cp ${RAW_CONFIGS}/books.json ${TMP_DIR}/
