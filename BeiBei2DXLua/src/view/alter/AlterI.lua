@@ -32,10 +32,10 @@ function AlterI.create(info)
 
     local button_up_func = function()
         playSound(s_sound_buttonEffect)
-        cx.CXUtils:showMail(s_DataManager.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION), s_CURRENT_USER.username)
+        cx.CXUtils:showMail(s_DataManager.getTextWithIndex(TEXT__FEEDBACK_MAIL_SUGGESTION), s_CURRENT_USER.username)
     end
 
-    local button_up = Button.create("middle","blue",s_DataManager.getTextWithIndex(TEXT_ID_FEEDBACK_BTN_SUGGESTION))
+    local button_up = Button.create("middle","blue",s_DataManager.getTextWithIndex(TEXT__FEEDBACK_BTN_SUGGESTION))
     button_up.func = function ()
         button_up_func()
     end
@@ -45,10 +45,10 @@ function AlterI.create(info)
 
     local button_down_func = function()
         playSound(s_sound_buttonEffect)
-        cx.CXUtils:showMail(s_DataManager.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_BUG), s_CURRENT_USER.username)
+        cx.CXUtils:showMail(s_DataManager.getTextWithIndex(TEXT__FEEDBACK_MAIL_BUG), s_CURRENT_USER.username)
     end
 
-    local button_down = Button.create("middle","blue",s_DataManager.getTextWithIndex(TEXT_ID_FEEDBACK_BTN_BUG))
+    local button_down = Button.create("middle","blue",s_DataManager.getTextWithIndex(TEXT__FEEDBACK_BTN_BUG))
     button_down.func = function ()
         button_down_func()
     end

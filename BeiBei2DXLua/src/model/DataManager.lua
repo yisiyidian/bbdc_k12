@@ -1,7 +1,5 @@
 local DataManager = {}
 
-require('common.text')
-
 ---------------------------------------------------------------------------
 local s_USE_XXTEA = true
 
@@ -59,7 +57,6 @@ s_items = 'cfg/items.json'
 local getLevelConfigFilePath = function (bookkey) return string.format('cfg/lv_%s.json', bookkey) end
 s_review_boss = 'cfg/review_boss.json'
 s_starRule = 'cfg/starRule.json'
-s_text = 'cfg/text.json'
 s_product = 'cfg/product.json'
 
 local function loadXxteaFile(filepath)
@@ -92,29 +89,8 @@ end
 
 -- text -------------------------------------------------------------------
 
-function DataManager.loadText()
-    local jsonObj = loadJsonFile(s_text)
-    DataManager.text = jsonObj['text']
-end
-
-function DataManager.getTextWithIndex(TEXT_ID_)
-    if DataManager.text ~= nil and TEXT_ID_ > 0 and TEXT_ID_ <= #DataManager.text then
-        return DataManager.text[TEXT_ID_]['cn']
-    else
-        return 'error: no text with ' .. TEXT_ID_
-    end
-end
-
-function DataManager.getTextWithKey(key)
-    if DataManager.text ~= nil then
-        for i = 1, #DataManager.text do
-            if DataManager.text[i]['key'] == key then
-                return DataManager.text[i]['cn']
-            end
-        end
-    end
-
-    return 'error: no text with ' .. key
+function DataManager.getTextWithIndex(TEXT__)
+    return TEXT__
 end
 
 -- word -------------------------------------------------------------------
