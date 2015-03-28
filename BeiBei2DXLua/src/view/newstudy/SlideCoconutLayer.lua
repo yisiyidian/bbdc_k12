@@ -146,10 +146,10 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
     local success = function()
         playWordSound(self.currentWord) 
         local normal = function()  
+            AnalyticsStudySlideCoconut_LeaveLayer()
             if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_1 then
                s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat2_1 + 1)
             end
-            AnalyticsStudySlideCoconut_LeaveLayer()
 
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
@@ -182,11 +182,11 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
                         print('isCheckIn')
                         -- print(s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey))
 
+                        AnalyticsStudyCollectAllWord()
                         if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_2 then
                            s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat2_2 + 1)
                         end
 
-                        AnalyticsStudyCollectAllWord()
 
                         if #s_CURRENT_USER.logInDatas > 0 and s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) then
                             s_CorePlayManager.leaveStudyModel(false)
