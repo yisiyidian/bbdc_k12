@@ -151,18 +151,18 @@ local function createNextButton(getBean)
         button_func()
     end
 
-    local bean = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
-    bean:setPosition(button_go.button_front:getContentSize().width * 0.75,button_go.button_front:getContentSize().height * 0.5)
-    button_go.button_front:addChild(bean)
+    -- local bean = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
+    -- bean:setPosition(button_go.button_front:getContentSize().width * 0.75,button_go.button_front:getContentSize().height * 0.5)
+    -- button_go.button_front:addChild(bean)
 
-    local rewardNumber = cc.Label:createWithSystemFont("+"..tostring(getBean),"",36)
-    rewardNumber:setPosition(button_go.button_front:getContentSize().width * 0.85,button_go.button_front:getContentSize().height * 0.5)
-    button_go.button_front:addChild(rewardNumber)
+    -- local rewardNumber = cc.Label:createWithSystemFont("+"..tostring(getBean),"",36)
+    -- rewardNumber:setPosition(button_go.button_front:getContentSize().width * 0.85,button_go.button_front:getContentSize().height * 0.5)
+    -- button_go.button_front:addChild(rewardNumber)
 
-    local action0 = cc.DelayTime:create(1)
-    local action1 = cc.MoveBy:create(1,cc.p(-button_go:getContentSize().width * 0.25 + bigWidth/2 - 100 ,-button_go:getContentSize().height * 0.5 - 100 +s_DESIGN_HEIGHT-50)) 
-    local action2 = cc.ScaleTo:create(0.1,0)
-    bean:runAction(cc.Sequence:create(action0,action1,action2))  
+    -- local action0 = cc.DelayTime:create(1)
+    -- local action1 = cc.MoveBy:create(1,cc.p(-button_go:getContentSize().width * 0.25 + bigWidth/2 - 100 ,-button_go:getContentSize().height * 0.5 - 100 +s_DESIGN_HEIGHT-50)) 
+    -- local action2 = cc.ScaleTo:create(0.1,0)
+    -- bean:runAction(cc.Sequence:create(action0,action1,action2))  
 
     return button_go
 end

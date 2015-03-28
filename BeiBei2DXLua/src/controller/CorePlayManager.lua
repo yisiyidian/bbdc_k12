@@ -83,8 +83,9 @@ function CorePlayManager.initStudyModel()
     CorePlayManager.preWordName           = CorePlayManager.BookWordList[CorePlayManager.currentIndex-1]
     CorePlayManager.preWordNameState      = s_LocalDatabaseManager.getPrevWordState()
 
-    local wordName = CorePlayManager.BookWordList[CorePlayManager.currentIndex]
-    CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum, CorePlayManager.preWordName, CorePlayManager.preWordNameState)
+    -- local wordName = CorePlayManager.BookWordList[CorePlayManager.currentIndex]
+    -- CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum, CorePlayManager.preWordName, CorePlayManager.preWordNameState)
+    CorePlayManager.leaveStudyModel(false)
 end
 
 function CorePlayManager.enterStudyModel(wordName, wrongWordNum, preWordName, preWordNameState)
@@ -123,24 +124,28 @@ function CorePlayManager.leaveStudyModel(state)
         CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum, CorePlayManager.preWordName, CorePlayManager.preWordNameState)
     else
         print('answer wrong' .. tostring(CorePlayManager.currentIndex))
-        local isNewBossBirth = s_LocalDatabaseManager.addWrongWord(CorePlayManager.currentIndex)
-        s_LocalDatabaseManager.printBossWord()
-        CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
-        s_LocalDatabaseManager.addStudyWordsNum()
+        local current_total_number = getMaxWrongNumEveryLevel()
+        for i=1,current_total_number do
+            local isNewBossBirth = s_LocalDatabaseManager.addWrongWord(CorePlayManager.currentIndex)
+            s_LocalDatabaseManager.printBossWord()
+            CorePlayManager.currentIndex = CorePlayManager.currentIndex + 1
+            s_LocalDatabaseManager.addStudyWordsNum()
 
-        CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
+            CorePlayManager.wrongWordNum = CorePlayManager.wrongWordNum + 1
 
-        CorePlayManager.preWordName           = CorePlayManager.BookWordList[CorePlayManager.currentIndex-1]
-        CorePlayManager.preWordNameState      = false
+            CorePlayManager.preWordName           = CorePlayManager.BookWordList[CorePlayManager.currentIndex-1]
+            CorePlayManager.preWordNameState      = false
 
-        if isNewBossBirth then
-            -- do collect enough words
-            CorePlayManager.enterStudyOverModel()
-        else
-            -- do not collect enough words
-            local wordName = CorePlayManager.BookWordList[CorePlayManager.currentIndex]
-            CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum, CorePlayManager.preWordName, CorePlayManager.preWordNameState)
+            if isNewBossBirth then
+                -- do collect enough words
+                CorePlayManager.enterStudyOverModel()
+            -- else
+            --     -- do not collect enough words
+            --     local wordName = CorePlayManager.BookWordList[CorePlayManager.currentIndex]
+            --     CorePlayManager.enterStudyModel(wordName, CorePlayManager.wrongWordNum, CorePlayManager.preWordName, CorePlayManager.preWordNameState)
+            end
         end
+
     end
 end
 
