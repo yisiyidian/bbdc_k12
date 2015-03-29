@@ -20,10 +20,10 @@ K12AccountBindView.Type_username = 0
 K12AccountBindView.Type_password = 1
 K12AccountBindView.Type_teacher = 2
 
-function K12AccountBindView.create(viewtype)
+function K12AccountBindView.create(viewtype, ex)
     
     local view = K12AccountBindView.new()
-    view:init(viewtype)
+    view:init(viewtype, ex)
     s_SCENE:popup(view)
     view:setVisible(false)
     view:setPosition(0, s_DESIGN_HEIGHT * 1.5) 
@@ -37,6 +37,8 @@ function K12AccountBindView.create(viewtype)
 end
 
 function K12AccountBindView:closeAnimation(cb)
+    cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
+    
     local action1 = cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2 * 3))
     local action2 = cc.EaseBackIn:create(action1)
     local action3 = cc.CallFunc:create(function() 
@@ -92,7 +94,8 @@ function K12AccountBindView:ctor()
     onAndroidKeyPressed(self, function () self:closeAnimation() end)
 end
 
-function K12AccountBindView:init(t)
+function K12AccountBindView:init(t, ex)
+    self.ex = ex
     
     local eventHandle = function(sender, eventType)
 
@@ -126,45 +129,11 @@ function K12AccountBindView:init(t)
         if eventType == ccui.TouchEventType.ended then
             local str = self.inputnode.textField:getString()
             if K12AccountBindView.Type_username == t then 
-
-                if validateUsername(str) == false then
-                    s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR))
-                else
-                    self:closeAnimation(function ()
-                        K12AccountBindView.create(K12AccountBindView.Type_password)
-                        print('K12AccountBindView.create(K12AccountBindView.Type_password)')
-                    end)
-                end
-
+                self:gotoPwd(str)
             elseif K12AccountBindView.Type_password == t then 
-                
-                if validatePassword(str) == false then
-                    s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__PWD_ERROR))
-                else
-                    -- showProgressHUD('', true)
-                    -- s_UserBaseServer.updateUsernameAndPassword(
-                    -- username.textField:getString(), 
-                    -- password.textField:getString(), 
-                    -- function(username, password, errordescription, errorcode )  
-                    --     AnalyticsAccountBind()                      
-                    --     if errordescription then                  
-                    --         s_TIPS_LAYER:showSmallWithOneButton(errordescription)
-                    --         hideProgressHUD(true)
-                    --     else        
-                    --         main.close()     
-                    --         AnalyticsImproveInfo()
-                    --         hideProgressHUD(true)
-                    --         if callback ~= nil then callback() end               
-                    --     end     
-                        
-                    -- end
-                    self:closeAnimation(function ()
-                        K12AccountBindView.create(K12AccountBindView.Type_teacher)
-                    end)
-                end
-
+                self:gotoUpdateUsernameAndPassword(str)
             else
-
+                self:gotoAddTeacher(str)
             end
         end
     end
@@ -173,6 +142,90 @@ function K12AccountBindView:init(t)
     submit:setPosition(self.back_width / 2, 100)
     submit:addTouchEventListener(submit_clicked)
     self.bg:addChild(submit)
+
+    local label_name = cc.Label:createWithSystemFont("下一步", "", 34)
+    label_name:setColor(cc.c4b(255, 255, 255, 255))
+    label_name:ignoreAnchorPointForPosition(false)
+    label_name:setAnchorPoint(0, 0.5)
+    label_name:setPosition(30, submit:getContentSize().height / 2)
+    submit:addChild(label_name)
+end
+
+function K12AccountBindView:gotoPwd(username)
+    if validateUsername(username) == false then
+        s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR))
+    else
+        showProgressHUD('', true)
+        isUsernameExist(username, function (exist, error)
+            if error ~= nil then
+                s_TIPS_LAYER:showSmallWithOneButton(error.description)
+            elseif not exist then
+                self:closeAnimation(function () K12AccountBindView.create(K12AccountBindView.Type_password, username) end)
+                print(username, 'K12AccountBindView.create(K12AccountBindView.Type_password)')
+            else
+                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__USERNAME_HAS_ALREADY_BEEN_TAKEN))
+            end
+            hideProgressHUD(true)
+        end)
+    end
+end
+
+function K12AccountBindView:gotoUpdateUsernameAndPassword(pwd)
+    if validatePassword(pwd) == false then
+        s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__PWD_ERROR))
+    else
+        showProgressHUD('', true)
+        s_UserBaseServer.updateUsernameAndPassword(self.ex, pwd, function(username, password, errordescription, errorcode )  
+                -- AnalyticsAccountBind()                      
+                if errordescription then                  
+                    s_TIPS_LAYER:showSmallWithOneButton(errordescription)
+                else        
+                    -- s_CURRENT_USER.username = self.ex
+                    -- s_CURRENT_USER.password = pwd
+                    self:closeAnimation(function () K12AccountBindView.create(K12AccountBindView.Type_teacher) end)
+                    -- AnalyticsImproveInfo()
+                end     
+                hideProgressHUD(true)
+        end)
+        
+    end
+end
+
+function K12AccountBindView:gotoAddTeacher(teacherName)
+    showProgressHUD('', true)
+
+    local request = cx.CXAVCloud:new()
+    -- request:searchUser(username, nickName, callback)
+    request:searchUser(teacherName, teacherName, function (results, err)
+
+        local f_user = {}
+        print('gotoAddTeacher searchUser:', results, err, type(results), string.len(results) > 0)
+        if err == nil and results ~= nil and type(results) == 'string' and string.len(results) > 0 then
+            local data = s_JSON.decode(results)
+            for i, user in ipairs(data.results) do
+                f_user[#f_user + 1] = user
+            end
+        end
+
+        if #f_user > 0 then
+            local user = DataUser.create()
+            parseServerDataToClientData(f_user[1], user)
+
+            s_UserBaseServer.follow(user, function (api, result, err)
+                if err == nil then
+                    s_CURRENT_USER:parseServerFollowData(user)
+                    self:closeAnimation()
+                else
+                    s_TIPS_LAYER:showSmallWithOneButton(err.description)
+                end
+                hideProgressHUD(true)
+            end)
+        else
+            s_TIPS_LAYER:showSmallWithOneButton('找不到' .. teacherName .. '老师')
+            hideProgressHUD(true)
+        end
+
+    end)
 end
 
 return K12AccountBindView
