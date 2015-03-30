@@ -63,6 +63,11 @@ function K12AccountBindView:ctor()
     self.back_width = self.bg:getContentSize().width
     self.back_height = self.bg:getContentSize().height
 
+    local girl_hello = sp.SkeletonAnimation:create('spine/bb_hello_public.json', 'spine/bb_hello_public.atlas', 1)
+    girl_hello:setPosition(self.back_width * 0.5, self.back_height * 0.4)
+    girl_hello:addAnimation(0, 'animation', true)
+    self.bg:addChild(girl_hello, 5)
+
     ------------------------------------------------------------------------------------------
 
     local button_close_clicked = function(sender, eventType)
