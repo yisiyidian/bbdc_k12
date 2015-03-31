@@ -1,3 +1,5 @@
+local Button                = require("view.button.longButtonInStudy")
+
 local GuessWrongPunishPopup = class ("GuessWrongPunishPopup",function ()
     return cc.Layer:create()
 end)
@@ -62,25 +64,21 @@ function GuessWrongPunishPopup:ctor(currentReward,totalReward)
     end)))
 
 
-    self.button_goon_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
-            local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
-                s_SCENE:removeAllPopups()
-            end)
-            back:runAction(cc.Sequence:create(action2,action3))
-        end
+    local button_func = function()
+        playSound(s_sound_buttonEffect)
+        local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + bigWidth/2, s_DESIGN_HEIGHT/2*3))
+        local action2 = cc.EaseBackIn:create(action1)
+        local action3 = cc.CallFunc:create(function()
+            s_SCENE:removeAllPopups()
+        end)
+        back:runAction(cc.Sequence:create(action2,action3))
     end  
 
-    local button_goon = ccui.Button:create("image/newstudy/button_ok.png","","")
-    button_goon:setScale9Enabled(true)
+    local button_goon =  Button.create("small","blue","知道了")
     button_goon:setPosition(back:getContentSize().width * 0.5,back:getContentSize().height * 0.2)
-    button_goon:setTitleText("再也不乱猜了～")
-    button_goon:setTitleFontSize(20)
-    button_goon:addTouchEventListener(self.button_goon_clicked)
+    button_goon.func = function ()
+        button_func()
+    end
     back:addChild(button_goon)
     
     local onTouchBegan = function(touch, event)

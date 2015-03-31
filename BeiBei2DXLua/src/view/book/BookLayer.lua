@@ -164,7 +164,7 @@ function BookLayer.create()
                 backColor:addChild(tutorial_text,120)
                 --tutorial_text:setColor(cc.c3b(255,255,255))
                 
-                local text = cc.Label:createWithSystemFont(s_DataManager.getTextWithIndex(TEXT_ID_TUTORIAL_BOOK_SELECT),'',28)
+                local text = cc.Label:createWithSystemFont(s_DataManager.getTextWithIndex(TEXT__TUTORIAL_BOOK_SELECT),'',28)
                 text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
                 text:setColor(cc.c3b(0,0,0))
                 tutorial_text:addChild(text)

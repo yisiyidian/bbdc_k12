@@ -35,7 +35,7 @@ s_tutorial_summary_boss = 5
 s_tutorial_complete = 6
 -- define small tutorial state
 s_smalltutorial_book_select = 0
-s_smalltutorial_home = 1
+s_smalltutorial_home = 1 -- 没有用到
 s_smalltutorial_level_select = 2
 s_smalltutorial_studyRepeat1_1 = 3 -- 收集生词
 s_smalltutorial_studyRepeat1_2 = 4 -- 去划单词
@@ -163,8 +163,8 @@ function AppScene:ctor()
     -- self:registerCustomEvent()
 end
 
-function AppScene:replaceGameLayer(newLayer)
-    self.gameLayer:removeAllChildren()
+function AppScene:replaceGameLayer(newLayer)   
+    self.gameLayer:removeAllChildren()     
     self.gameLayer:addChild(newLayer)
 
     updateCurrentEverydayInfo()

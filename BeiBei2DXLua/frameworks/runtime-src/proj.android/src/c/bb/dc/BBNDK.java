@@ -124,18 +124,29 @@ public class BBNDK {
 	// LeanCloud AVAnalytics
 	// ***************************************************************************************************************************
 	
-	private static AVObject dataAnalytics = null;
+	private static HashMap<String, AVObject> daMap = new HashMap<String, AVObject>();
 	
-	private static void _save(String deviceId, String eventKey) {
-		dataAnalytics.put("DA_DEVICE_ID", deviceId);
-		dataAnalytics.increment(eventKey);
+	private static void _save(final String deviceId, final String cls, final String tag) {
+		AVObject dataAnalytics = daMap.get(cls);
+		if (dataAnalytics == null) {
+			dataAnalytics = AVObject.create(cls);
+			daMap.put(cls, dataAnalytics);
+		}
+		if (dataAnalytics.containsKey("DA_DEVICE_ID") == false) {
+			dataAnalytics.put("DA_DEVICE_ID", deviceId);
+		}
+		if (dataAnalytics.containsKey(tag) == false) {
+			dataAnalytics.put(tag, 1);
+		} else {
+			dataAnalytics.increment(tag);
+		}
 		try {
 			dataAnalytics.saveEventually(new SaveCallback() {
 			    public void done(AVException e) {
 			        if (e == null) {
-			            // 保存成功
+			        	Log.d("saveDataAnalytics", "1 T: " + deviceId + ", " + cls + ", " + tag);
 			        } else {
-			        	Log.d("saveDataAnalytics: 1 保存失败", "_save: " + e.getMessage());
+			        	Log.d("saveDataAnalytics", "1 F: " + deviceId + ", " + cls + ", " + tag + ", " + e.getMessage());
 			        }
 			    }
 			});
@@ -143,30 +154,40 @@ public class BBNDK {
 			Log.d("saveDataAnalytics: 2 保存失败", "_save: " + e.getMessage());
 		}
 	}
-	private static void saveDataAnalytics(String eventName, String tag) {
+	private static void saveDataAnalytics(final String eventName, final String tag) {
+		final String cls = "Z_" + eventName;
 		final String deviceId = getDeviceUDID();
-		final String eventKey = eventName + "_" + tag;
-		if (dataAnalytics == null) {
-			AVQuery<AVObject> query = new AVQuery<AVObject>("DataAnalytics");
-			query.whereEqualTo("DA_DEVICE_ID", deviceId);
-			query.findInBackground(new FindCallback<AVObject>() {
-			    public void done(List<AVObject> avObjects, AVException e) {
-			        if (e == null) {
-			            if (avObjects.size() > 0) {
-			            	dataAnalytics = avObjects.get(0);
-			            }
-			        } else {
-			            Log.d("saveDataAnalytics: 失败", "查询错误: " + e.getMessage());
-			        }
-			        
-			        if (dataAnalytics == null) {
-			        	dataAnalytics = AVObject.create("DataAnalytics");
-			        }
-			        _save(deviceId, eventKey);
-			    }
-			});
+		
+		if (getConnectedType() == getConnectedType_MOBILE() || getConnectedType() == getConnectedType_WIFI()) {
+		
+			if (daMap.get(cls) == null) {
+				AVQuery<AVObject> query = new AVQuery<AVObject>(cls);
+				query.whereEqualTo("DA_DEVICE_ID", deviceId);
+				query.findInBackground(new FindCallback<AVObject>() {
+				    public void done(List<AVObject> avObjects, AVException e) {
+				        if (e == null) {
+				            if (avObjects.size() > 0) {
+				            	daMap.put(cls, avObjects.get(0));
+				            }
+				        } else {
+				            Log.d("saveDataAnalytics", "query err: " + e.getMessage());
+				        }
+				        
+				        if (daMap.get(cls) == null) {
+				        	daMap.put(cls, AVObject.create(cls));
+				        }
+				        _save(deviceId, cls, tag);
+				    }
+				});
+			} else {
+				_save(deviceId, cls, tag);
+			}
+		
 		} else {
-			_save(deviceId, eventKey);
+			if (daMap.get(cls) == null) {
+	        	daMap.put(cls, AVObject.create(cls));
+	        }
+	        _save(deviceId, cls, tag);
 		}
 	}
 	

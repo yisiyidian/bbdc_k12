@@ -142,9 +142,9 @@ end
 
 function AnalyticsFirstBook(bookname)
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
-        print('Analytics', 'FirstBook_1st_day', 'selected_' .. bookname); cx.CXAnalytics:logEventAndLabel('FirstBook_1st_day', 'selected_' .. bookname)
+        print('Analytics', 'FirstBook_1st_day', 'selected_' .. bookname); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'FirstBook_1st_day', 'selected_' .. bookname)
     end
-    print('Analytics','FirstBook', 'selected_' .. bookname); cx.CXAnalytics:logEventAndLabel('FirstBook', 'selected_' .. bookname)
+    print('Analytics','FirstBook', 'selected_' .. bookname); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'FirstBook', 'selected_' .. bookname)
 end
 
 function AnalyticsDownloadBook(bookname)
@@ -271,15 +271,23 @@ function AnalyticsStudySlideCoconut_EnterLayer()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
         if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
             print('Analytics', getAnalyticsPrefix() .. 'SlideCoconut_EnterLayer_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SlideCoconut_EnterLayer_1st_day', 'TOUCH')
+            if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_3 then
+                print('Analytics', getAnalyticsPrefix() .. 'SlideCoconut_EnterLayer_1st_day_1st_time', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SlideCoconut_EnterLayer_1st_day_1st_time', 'TOUCH')
+            end 
         end
     end
     print('Analytics', getAnalyticsPrefix() .. 'SlideCoconut_EnterLayer', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SlideCoconut_EnterLayer', 'TOUCH')
 end
 
+
+
 function AnalyticsStudySlideCoconut_LeaveLayer()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
         if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
             print('Analytics', getAnalyticsPrefix() .. 'SlideCoconut_LeaveLayer_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SlideCoconut_LeaveLayer_1st_day', 'TOUCH')
+            if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_1 then
+                print('Analytics', getAnalyticsPrefix() .. 'SlideCoconut_LeaveLayer_1st_day_1st_time', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SlideCoconut_LeaveLayer_1st_day_1st_time', 'TOUCH')
+            end
         end
     end
     print('Analytics', getAnalyticsPrefix() .. 'SlideCoconut_LeaveLayer', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SlideCoconut_LeaveLayer', 'TOUCH')
@@ -289,6 +297,9 @@ function AnalyticsStudyCollectAllWord()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
         if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
             print('Analytics', getAnalyticsPrefix() .. 'CollectAllWord_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'CollectAllWord_1st_day', 'TOUCH')
+            if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_2 then
+                print('Analytics', getAnalyticsPrefix() .. 'CollectAllWord_1st_day_1st_time', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'CollectAllWord_1st_day_1st_time', 'TOUCH')
+            end
         end
     end
     print('Analytics', getAnalyticsPrefix() .. 'CollectAllWord', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'CollectAllWord', 'TOUCH')
@@ -298,6 +309,9 @@ function AnalyticsForgeIron_EnterLayer()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
         if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
             print('Analytics', getAnalyticsPrefix() .. 'ForgeIron_EnterLayer_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ForgeIron_EnterLayer_1st_day', 'TOUCH')
+            if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_3 then
+                print('Analytics', getAnalyticsPrefix() .. 'ForgeIron_EnterLayer_1st_day_1st_time', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ForgeIron_EnterLayer_1st_day_1st_time', 'TOUCH')
+            end
         end
     end
     print('Analytics', getAnalyticsPrefix() .. 'ForgeIron_EnterLayer', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ForgeIron_EnterLayer', 'TOUCH')
@@ -307,6 +321,9 @@ function AnalyticsForgeIron_LeaveLayer()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
         if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
             print('Analytics', getAnalyticsPrefix() .. 'ForgeIron_LeaveLayer_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ForgeIron_LeaveLayer_1st_day', 'TOUCH')
+            if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat3_1 then
+                print('Analytics', getAnalyticsPrefix() .. 'ForgeIron_LeaveLayer_1st_day_1st_time', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ForgeIron_LeaveLayer_1st_day_1st_time', 'TOUCH')                           
+            end
         end
     end
     print('Analytics', getAnalyticsPrefix() .. 'ForgeIron_LeaveLayer', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ForgeIron_LeaveLayer', 'TOUCH')
@@ -334,6 +351,9 @@ function AnalyticsReviewBoss_EnterLayer()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
         if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
             print('Analytics', getAnalyticsPrefix() .. 'ReviewBoss_EnterLayer_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ReviewBoss_EnterLayer_1st_day', 'TOUCH')
+            if s_CURRENT_USER.tutorialStep == s_tutorial_review_boss then
+                print('Analytics', getAnalyticsPrefix() .. 'ReviewBoss_EnterLayer_1st_day_1st_time', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ReviewBoss_EnterLayer_1st_day_1st_time', 'TOUCH')
+            end
         end
     end
     print('Analytics', getAnalyticsPrefix() .. 'ReviewBoss_EnterLayer', 'SHOW'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ReviewBoss_EnterLayer', 'SHOW')
@@ -343,6 +363,9 @@ function AnalyticsReviewBoss_LeaveLayer()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
         if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
             print('Analytics', getAnalyticsPrefix() .. 'ReviewBoss_LeaveLayer_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ReviewBoss_LeaveLayer_1st_day', 'TOUCH')
+            if s_CURRENT_USER.tutorialStep == s_tutorial_review_boss then
+                print('Analytics', getAnalyticsPrefix() .. 'ReviewBoss_LeaveLayer_1st_day_1st_time', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ReviewBoss_LeaveLayer_1st_day_1st_time', 'TOUCH')
+            end  
         end
     end
     print('Analytics', getAnalyticsPrefix() .. 'ReviewBoss_LeaveLayer', 'SHOW'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ReviewBoss_LeaveLayer', 'SHOW')
@@ -352,6 +375,9 @@ end
 function AnalyticsSummaryBoss()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'SummaryBoss_1st_day', 'SHOW'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBoss_1st_day', 'SHOW')
+        if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
+            print('Analytics', getAnalyticsPrefix() .. 'SummaryBoss_1st_day_1st_time', 'SHOW'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBoss_1st_day_1st_time', 'SHOW')
+        end
     end
     print('Analytics', getAnalyticsPrefix() .. 'SummaryBoss', 'SHOW'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBoss', 'SHOW')
 end
@@ -363,6 +389,9 @@ end
 function AnalyticsSummaryBossResult(result)
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'SummaryBoss_1st_day', result); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBoss_1st_day', result)
+        if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
+            print('Analytics', getAnalyticsPrefix() .. 'SummaryBoss_1st_day_1st_time', result); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBoss_1st_day_1st_time', result)
+        end
     end
     print('Analytics', getAnalyticsPrefix() .. 'SummaryBoss', result); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBoss', result)
 end

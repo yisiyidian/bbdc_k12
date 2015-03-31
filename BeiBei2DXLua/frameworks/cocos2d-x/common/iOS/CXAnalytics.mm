@@ -9,11 +9,18 @@
 #include "CXAnalytics.h"
 #import <AVOSCloud/AVOSCloud.h>
 #include "CXUtils.h"
+#include "CXNetworkStatus.h"
 
 #define DA_DEVICE_ID "DA_DEVICE_ID"
 void _save(AVObject* dataAnalytics, NSString* deviceId, NSString* eventKey) {
-    [dataAnalytics setObject:deviceId forKey:@DA_DEVICE_ID];
-    [dataAnalytics incrementKey:eventKey];
+    if ([dataAnalytics objectForKey:@DA_DEVICE_ID] == nil) {
+        [dataAnalytics setObject:deviceId forKey:@DA_DEVICE_ID];
+    }
+    if ([dataAnalytics objectForKey:eventKey] == nil) {
+        [dataAnalytics setObject:[NSNumber numberWithInt:1] forKey:eventKey];
+    } else {
+        [dataAnalytics incrementKey:eventKey];
+    }
 #if (COCOS2D_DEBUG > 0)
     [dataAnalytics saveEventually:^(BOOL succeeded, NSError *error) {
         if (!error) {
@@ -45,25 +52,39 @@ void saveDataAnalytics(const char* event, const char* label) {
     __block NSString* eventKey = [NSString stringWithFormat:@"%s_%s", event, label];
     [eventKey retain];
     
-    if (dataAnalytics == nil) {
-        AVQuery *query = [AVQuery queryWithClassName:@"DataAnalytics"];
-        [query whereKey:@DA_DEVICE_ID equalTo:did];
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            if (!error) {
-                if (objects.count > 0) {
-                    dataAnalytics = objects[0];
+    if (CXNetworkStatus::getInstance()->getStatus() == CXNetworkStatus::STATUS_MOBILE
+        || CXNetworkStatus::getInstance()->getStatus() == CXNetworkStatus::STATUS_WIFI
+        || CXNetworkStatus::getInstance()->start() == CXNetworkStatus::STATUS_MOBILE
+        || CXNetworkStatus::getInstance()->start() == CXNetworkStatus::STATUS_WIFI) {
+    
+        if (dataAnalytics == nil) {
+            AVQuery *query = [AVQuery queryWithClassName:@"DataAnalytics"];
+            [query whereKey:@DA_DEVICE_ID equalTo:did];
+            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                if (!error) {
+                    if (objects.count > 0) {
+                        dataAnalytics = objects[0];
+                    }
+                } else {
+                    CCLOG("dataAnalytics:%s,%s", eventKey.UTF8String, error.localizedDescription.UTF8String);
                 }
-            } else {
-                CCLOG("dataAnalytics:%s,%s", eventKey.UTF8String, error.localizedDescription.UTF8String);
-            }
-            
-            if (dataAnalytics == nil) {
-                dataAnalytics = [AVObject objectWithClassName:@"DataAnalytics"];
-            }
-            [dataAnalytics retain];
+                
+                if (dataAnalytics == nil) {
+                    dataAnalytics = [AVObject objectWithClassName:@"DataAnalytics"];
+                }
+                [dataAnalytics retain];
+                
+                _save(dataAnalytics, did, eventKey);
+            }];
+        } else {
             _save(dataAnalytics, did, eventKey);
-        }];
+        }
+        
     } else {
+        if (dataAnalytics == nil) {
+            dataAnalytics = [AVObject objectWithClassName:@"DataAnalytics"];
+            [dataAnalytics retain];
+        }
         _save(dataAnalytics, did, eventKey);
     }
 }

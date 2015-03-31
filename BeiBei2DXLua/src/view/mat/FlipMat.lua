@@ -3,6 +3,7 @@ require("common.global")
 
 local FlipNode            = require("view.mat.FlipNode")
 local NodeBulletAnimation = require("view.mat.NodeBulletAnimation")
+local GuideLine           = require("view.mat.GuideLine")
 
 local dir_up    = 1
 local dir_down  = 2
@@ -25,9 +26,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
     main:setContentSize(main_width, main_height)
     main:setAnchorPoint(0.5,0)
     main:ignoreAnchorPointForPosition(false)
-    -- main:setPosition(blackColor:getContentSize().width/2,160)
-    -- blackColor:addChild(main)
-
+    
     main.success    = function()end
     main.fail       = function()end
     main.globalLock = false
@@ -287,7 +286,47 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
         firstFlipNode:stopAllActions()
     end
 
+    local guideLineLayer = GuideLine:createLayer(main)
+    guideLineLayer:setPosition(main:getContentSize().width/2,0)
+    main:addChild(guideLineLayer,-1)
 
+
+
+    local function updateGuideLine()
+        guideLineLayer:removeAllChildren()
+        local node_current = selectStack[#selectStack]
+        local node_current_p = cc.p(node_current:getPosition())
+
+        for i = 1, main_m do
+            for j = 1, main_n do
+                local node = main_mat[i][j]
+                local node_p = cc.p(node:getPosition())
+                if node.hasSelected == false then
+                   local number = GuideLine:findDistance(node,node_current)
+                   if number == gap then
+                        local line = GuideLine.create("dark")
+                        line:setPosition((node_current_p.x+node_p.x)/2,(node_current_p.y+node_p.y)/2)
+                        guideLineLayer:addChild(line)
+                        if node_current_p.y == node_p.y then
+                            line:setRotation(90)
+                        end
+                   end
+                end
+            end
+        end
+
+        for i=1,#selectStack - 1 do
+            local node_last = cc.p(selectStack[i]:getPosition())
+            local node_next = cc.p(selectStack[i+1]:getPosition())
+            local line = GuideLine.create()
+            line:setPosition((node_last.x+node_next.x)/2,(node_last.y+node_next.y)/2)
+            guideLineLayer:addChild(line)
+            if node_last.y == node_next.y then
+                line:setRotation(90)
+            end
+        end
+        
+    end
 
     
     local back_box = cc.Layer:create()
@@ -371,10 +410,10 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
         if location.x < (left - node_example_size.width / 2) or location.x > (main_width - (left - node_example_size.width / 2)) or
             location.y < (bottom - node_example_size.height / 2) or location.y > (main_height - (bottom - node_example_size.height / 2)) then
             onNode = false
-        elseif  ((gap - node_example_size.width )/2) < ((location.x - (left - node_example_size.width / 2)) % gap) and
-            ((gap + node_example_size.width )/2) > ((location.x - (left - node_example_size.width / 2)) % gap) and
-            ((gap - node_example_size.height )/2) < ((location.y - (bottom - node_example_size.height / 2)) % gap) and
-            ((gap + node_example_size.height )/2) > ((location.y - (bottom - node_example_size.height / 2)) % gap) then
+        elseif  0 < ((location.x - (left - node_example_size.width / 2)) % gap) and
+            node_example_size.width > ((location.x - (left - node_example_size.width / 2)) % gap) and
+            0 < ((location.y - (bottom - node_example_size.height / 2)) % gap) and
+            node_example_size.height > ((location.y - (bottom - node_example_size.height / 2)) % gap) then
 
             i = math.ceil((location.x - (left - node_example_size.width / 2)) / gap)
             j = math.ceil((location.y - (bottom - node_example_size.height / 2)) / gap)
@@ -464,9 +503,11 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
 
             startNode = main_mat[current_node_x][current_node_y]
             table.insert(selectStack, startNode)
+            updateGuideLine()
             updateSelectWord()
             startNode.addSelectStyle()
             startNode.bigSize()
+            startNode.hasSelected = true
             
             startAtNode = true
             playSound(slideCoco[1])
@@ -553,6 +594,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
                         if currentNode.logicX == secondStackTop.logicX and currentNode.logicY == secondStackTop.logicY then
                             stackTop.removeSelectStyle()
                             table.remove(selectStack)
+                            updateGuideLine()
                             updateSelectWord()
                             if #selectStack <= 7 then
                                 playSound(slideCoco[#selectStack])
@@ -574,11 +616,13 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
                         end
                         currentNode.hasSelected = true
                         table.insert(selectStack, currentNode)
+                        updateGuideLine()
                         updateSelectWord()
                     else
                         local stackTop = selectStack[#selectStack]
                         if math.abs(currentNode.logicX - stackTop.logicX) + math.abs(currentNode.logicY - stackTop.logicY) == 1 then
                             table.insert(selectStack, currentNode)
+                            updateGuideLine()
                             updateSelectWord()
                             -- slide coco "s_sound_slideCoconut"
                             if #selectStack <= 7 then
@@ -648,6 +692,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
             node.removeSelectStyle()
         end
         selectStack = {}
+        guideLineLayer:removeAllChildren()
         s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
         main.fail()
         playSound(s_sound_learn_false)

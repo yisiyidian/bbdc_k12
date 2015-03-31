@@ -1,7 +1,7 @@
 require("cocos.init")
 require("common.global")
 
-local Button                = require("view.newstudy.BlueButtonInStudyLayer")
+local Button            = require("view.button.longButtonInStudy")
 local NewReviewBossNode = require("view.newreviewboss.NewReviewBossNode")
 local ProgressBar       = require("view.newreviewboss.NewReviewBossProgressBar")
 local Pause             = require("view.newreviewboss.NewReviewBossPause")
@@ -291,28 +291,18 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
         end
     end
 
-    local hint_click = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            -- button sound
-            playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            local action1 = cc.MoveBy:create(0.4,cc.p(0,200))
-            pauseButton:runAction(action1)
-            local HintView = require("view.newreviewboss.NewReviewBossHintLayer")
-            local hintView = HintView.create(currentWordName)
-            s_SCENE:popup(hintView)        
-            hintView.close = function ()          
-                s_SCENE:removeAllPopups()
-                hintWordFunction()        
-                local action2 = cc.MoveBy:create(0.4,cc.p(0,-200))
-                pauseButton:runAction(action2)
-            end   
-        end
+    local button_func = function()
+        playSound(s_sound_buttonEffect)
+        local HintView = require("view.newreviewboss.NewReviewBossHintLayer")
+        local hintView = HintView.create(currentWordName)
+        s_SCENE:popup(hintView)                 
+        hintWordFunction()          
     end
-
-    local hint_button = Button.create("提示我")
+    local hint_button = Button.create("long","blue","提示我")
     hint_button:setPosition(s_DESIGN_WIDTH / 2, 100)
-    hint_button:addTouchEventListener(hint_click)  
+    hint_button.func = function ()
+        button_func()
+    end
     layer:addChild(hint_button,2) 
     
     local onTouchBegan = function(touch, event)

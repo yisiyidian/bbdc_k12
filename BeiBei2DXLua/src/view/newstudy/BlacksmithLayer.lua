@@ -7,7 +7,7 @@ local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
 local PauseButton           = require("view.newreviewboss.NewReviewBossPause")
-local Button                = require("view.newstudy.BlueButtonInStudyLayer")
+local Button                = require("view.button.longButtonInStudy")
 
 local  BlacksmithLayer = class("BlacksmithLayer", function ()
     return cc.Layer:create()
@@ -34,29 +34,25 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
     wordMeaningTable[1] = wordMeaningTable[rightIndex]
     wordMeaningTable[rightIndex] = tmp
 
-    local click_choose = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            if sender.tag == 1 then  
+    local button_func = function(button)
+            local feedback 
+            if button.tag == 1 then  
                 playSound(s_sound_learn_true)
+                feedback = cc.Sprite:create("image/newstudy/right.png")
             else  
                 playSound(s_sound_learn_false)
-            end 
-        elseif eventType == ccui.TouchEventType.ended then  
-            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            local feedback 
-            if sender.tag == 1 then  
-                feedback = cc.Sprite:create("image/newstudy/right.png")            
-            else  
                 feedback = cc.Sprite:create("image/newstudy/wrong.png")
-            end    
-            feedback:setPosition(sender:getContentSize().width * 0.8 ,sender:getContentSize().height * 0.5)
-            sender:addChild(feedback)
+            end 
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+  
+            feedback:setPosition(button:getContentSize().width * 0.8 ,button:getContentSize().height * 0.5)
+            button:addChild(feedback)
 
-            if sender.tag == 1 then  
+            if button.tag == 1 then  
                 local preWord = wordlist[1]
                 table.remove(wordlist,1)
                 local action1 = cc.DelayTime:create(0.1)
-                local action2 = cc.MoveTo:create(0.3,cc.p(position , 1070 - sender:getPositionY()))
+                local action2 = cc.MoveTo:create(0.3,cc.p(position , 1070 - button:getPositionY()))
                 local action3 = cc.ScaleTo:create(0.1,0)
                 local action4 = cc.DelayTime:create(0.3)
                 feedback:runAction(cc.Sequence:create(action1,action2,action3,               
@@ -70,12 +66,13 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
                end),
                   action4,
                   cc.CallFunc:create(function()
-                    if #wordlist == 0 then  
+                    if #wordlist == 0 then   
+                        AnalyticsForgeIron_LeaveLayer()
                         if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat3_1 then
                             s_CURRENT_USER:setTutorialStep(s_tutorial_study + 1)
                             s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_review_boss)
                         end
-                        AnalyticsForgeIron_LeaveLayer()
+
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanRewardForIron)
                         saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
                         if s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) then
@@ -83,7 +80,7 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
                         else
                             local missionCompleteCircle = require('view.MissionCompleteCircle').create()
                             s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
-                            sender:runAction(cc.Sequence:create(cc.DelayTime:create(2.0),cc.CallFunc:create(function ()
+                            button:runAction(cc.Sequence:create(cc.DelayTime:create(2.0),cc.CallFunc:create(function ()
                                 s_CorePlayManager.leaveTestModel()   
                             end,{})))
                         end
@@ -112,27 +109,28 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
                     s_SCENE:replaceGameLayer(chooseWrongLayer)
                 end)))
             end
-
-        end
     end
 
     local choose_button = {}
 
     for i = 1 , 4 do
-        choose_button[i] = ccui.Button:create("image/newstudy/button_words_white_normal.png","image/newstudy/button_words_white_pressed.png","")
+        choose_button[i] = Button.create("long","white") 
         choose_button[i]:setPosition(bigWidth/2, 319+(i-1)*135)
         if i == rightIndex then
             choose_button[i].tag = 1
         else
             choose_button[i].tag = 0
         end
-        choose_button[i]:addTouchEventListener(click_choose)
+
+        choose_button[i].func = function ()
+            button_func(choose_button[i])
+        end
 
         local choose_label = cc.Label:createWithSystemFont(wordMeaningTable[i],"",32)
         choose_label:setAnchorPoint(0,0.5)
-        choose_label:setPosition(40, choose_button[i]:getContentSize().height/2 + 4)
+        choose_label:setPosition(40, choose_button[i].button_front:getContentSize().height/2)
         choose_label:setColor(cc.c4b(98,124,148,255))
-        choose_button[i]:addChild(choose_label)
+        choose_button[i].button_front:addChild(choose_label)
     end
 
     return choose_button
@@ -143,22 +141,21 @@ local function createDontknow(wordlist)
 
     local progressBar_total_number = getMaxWrongNumEveryLevel()
     
-    local click_dontknow_button = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)        
-        elseif eventType == ccui.TouchEventType.ended then
-            AnalyticsStudyDontKnowAnswer_strikeWhileHot()
-            AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW_STRIKEWHILEHOT, 'TOUCH')
+    local button_func = function()
+        playSound(s_sound_buttonEffect)        
+        AnalyticsStudyDontKnowAnswer_strikeWhileHot()
+        AnalyticsFirst(ANALYTICS_FIRST_DONT_KNOW_STRIKEWHILEHOT, 'TOUCH')
 
-            local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
-            local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1], progressBar_total_number - #wordlist, wordlist)
-            s_SCENE:replaceGameLayer(chooseWrongLayer)            
-        end
+        local ChooseWrongLayer = require("view.newstudy.ChooseWrongLayer")
+        local chooseWrongLayer = ChooseWrongLayer.create(wordlist[1], progressBar_total_number - #wordlist, wordlist)
+        s_SCENE:replaceGameLayer(chooseWrongLayer)            
     end
 
-    local choose_dontknow_button = Button.create("不认识")
+    local choose_dontknow_button = Button.create("long","blue","不认识") 
     choose_dontknow_button:setPosition(bigWidth/2, 100)
-    choose_dontknow_button:addTouchEventListener(click_dontknow_button)
+    choose_dontknow_button.func = function ()
+        button_func()
+    end
 
     return choose_dontknow_button
 end

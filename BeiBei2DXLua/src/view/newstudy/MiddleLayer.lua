@@ -6,7 +6,7 @@ local FlipMat           = require("view.mat.FlipMat")
 local GuideAlter        = require("view.newstudy.NewStudyGuideAlter")
 local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
-local Button                = require("view.newstudy.BlueButtonInStudyLayer")
+local Button                = require("view.button.longButtonInStudy")
 local PauseButton           = require("view.newreviewboss.NewReviewBossPause")
 local  MiddleLayer = class("MiddleLayer", function ()
     return cc.Layer:create()
@@ -80,7 +80,7 @@ end
 
 local function createBeanSprite(bean)
     local beens = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
-    beens:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-40)
+    beens:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
 
     local been_number = cc.Label:createWithSystemFont(bean,'',24)
     been_number:setColor(cc.c4b(0,0,0,255))
@@ -137,31 +137,30 @@ end
 
 local function createNextButton(getBean)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-    local button_go_click = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)        
-        elseif eventType == ccui.TouchEventType.ended then
-            s_level_popup_state = 1
-            s_HUD_LAYER:removeChildByName('missionCompleteCircle')
-            s_CURRENT_USER.beanRewardForIron = 3
-            s_CorePlayManager.leaveStudyOverModel()
-        end
+    local button_func = function()
+        playSound(s_sound_buttonEffect)        
+        s_level_popup_state = 1
+        s_HUD_LAYER:removeChildByName('missionCompleteCircle')
+        s_CURRENT_USER.beanRewardForIron = 3
+        s_CorePlayManager.leaveStudyOverModel()
     end
 
-    local button_go = Button.create("趁热打铁")
+    local button_go = Button.create("long","blue","趁热打铁") 
     button_go:setPosition(bigWidth/2, 100)
-    button_go:addTouchEventListener(button_go_click)
+    button_go.func = function ()
+        button_func()
+    end
 
     local bean = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
-    bean:setPosition(button_go:getContentSize().width * 0.75,button_go:getContentSize().height * 0.5)
-    button_go:addChild(bean)
+    bean:setPosition(button_go.button_front:getContentSize().width * 0.75,button_go.button_front:getContentSize().height * 0.5)
+    button_go.button_front:addChild(bean)
 
     local rewardNumber = cc.Label:createWithSystemFont("+"..tostring(getBean),"",36)
-    rewardNumber:setPosition(button_go:getContentSize().width * 0.85,button_go:getContentSize().height * 0.5)
-    button_go:addChild(rewardNumber)
+    rewardNumber:setPosition(button_go.button_front:getContentSize().width * 0.85,button_go.button_front:getContentSize().height * 0.5)
+    button_go.button_front:addChild(rewardNumber)
 
     local action0 = cc.DelayTime:create(1)
-    local action1 = cc.MoveBy:create(1,cc.p(-button_go:getContentSize().width * 0.25 + bigWidth/2 - 100 ,-button_go:getContentSize().height * 0.5 - 100 +s_DESIGN_HEIGHT-40)) 
+    local action1 = cc.MoveBy:create(1,cc.p(-button_go:getContentSize().width * 0.25 + bigWidth/2 - 100 ,-button_go:getContentSize().height * 0.5 - 100 +s_DESIGN_HEIGHT-50)) 
     local action2 = cc.ScaleTo:create(0.1,0)
     bean:runAction(cc.Sequence:create(action0,action1,action2))  
 
@@ -200,11 +199,11 @@ function MiddleLayer:ctor()
 
     
     local backBagSprite = cc.Sprite:create("image/newstudy/bagback.png")
-    backBagSprite:setPosition(bigWidth * 0.65, 495)
+    backBagSprite:setPosition(bigWidth * 0.63, 495)
     backColor:addChild(backBagSprite)
     
     local frontBagSprite = cc.Sprite:create("image/newstudy/bagfront.png")
-    frontBagSprite:setPosition(bigWidth * 0.65 + 4, 505)
+    frontBagSprite:setPosition(bigWidth * 0.63 + 4, 505)
     frontBagSprite:ignoreAnchorPointForPosition(false)
     frontBagSprite:setAnchorPoint(0.5,1)
     backColor:addChild(frontBagSprite,2)
@@ -217,10 +216,10 @@ function MiddleLayer:ctor()
     end
 
     local beibeiAnimation = sp.SkeletonAnimation:create("spine/collectword.json", "spine/collectword.atlas",1)
-    beibeiAnimation:addAnimation(0, 'animation', false)
-    beibeiAnimation:setPosition(bigWidth * 0.15, 305)
+    beibeiAnimation:addAnimation(0, 'animation', true)
+    beibeiAnimation:setPosition(bigWidth * 0.18, 305)
     backColor:addChild(beibeiAnimation)
-    
+
     self.getBean = s_CURRENT_USER.beanRewardForCollect
     s_CURRENT_USER.beanRewardForCollect = 3
     self.nextButton = createNextButton(self.getBean)

@@ -1,7 +1,7 @@
 require("cocos.init")
 require("common.global")
 
-local Button                = require("view.newstudy.BlueButtonInStudyLayer")
+local Button                = require("view.button.longButtonInStudy")
 
 local  SuccessLayer = class("SuccessLayer", function ()
     return cc.Layer:create()
@@ -15,7 +15,7 @@ end
 
 local function createBeanSprite(bean)
     local beans = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
-    beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-40)
+    beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
 
     local been_number = cc.Label:createWithSystemFont(bean,'',24)
     been_number:setColor(cc.c4b(0,0,0,255))
@@ -27,26 +27,25 @@ end
 
 local function createNextButton(getBean)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-    local button_go_click = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            s_HUD_LAYER:removeChildByName('missionCompleteCircle')
-            s_CorePlayManager.enterLevelLayer()
-        end
+    local button_func = function()
+        playSound(s_sound_buttonEffect)
+        s_HUD_LAYER:removeChildByName('missionCompleteCircle')
+        s_CorePlayManager.enterLevelLayer()
     end
 
-    local button_go = Button.create("OK！")
+    local button_go = Button.create("long","blue","OK")
+    button_go.func = function ()
+        button_func()
+    end
     button_go:setPosition(bigWidth/2, 100)
-    button_go:addTouchEventListener(button_go_click)
 
     local bean = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
-    bean:setPosition(button_go:getContentSize().width * 0.75,button_go:getContentSize().height * 0.5)
-    button_go:addChild(bean)
+    bean:setPosition(button_go.button_front:getContentSize().width * 0.75,button_go.button_front:getContentSize().height * 0.5)
+    button_go.button_front:addChild(bean)
 
     local rewardNumber = cc.Label:createWithSystemFont("+"..tostring(getBean),"",36)
-    rewardNumber:setPosition(button_go:getContentSize().width * 0.85,button_go:getContentSize().height * 0.5)
-    button_go:addChild(rewardNumber)
+    rewardNumber:setPosition(button_go.button_front:getContentSize().width * 0.85,button_go.button_front:getContentSize().height * 0.5)
+    button_go.button_front:addChild(rewardNumber)
 
     local action0 = cc.DelayTime:create(1)
     local action1 = cc.MoveBy:create(1,cc.p(-button_go:getContentSize().width * 0.25 + bigWidth/2 - 100 ,-button_go:getContentSize().height * 0.5 - 100 +s_DESIGN_HEIGHT-40)) 
@@ -80,8 +79,8 @@ function SuccessLayer:ctor(number)
     waveSprite:setAnchorPoint(0.5,0)
     backColor:addChild(waveSprite)
     
-    local bossDieSpine = sp.SkeletonAnimation:create('spine/reviewboss/beidafeide_zhanglaoshi2.json', 'spine/reviewboss/beidafeide_zhanglaoshi2.atlas',1)
-    bossDieSpine:addAnimation(0, 'animation', false)
+    local bossDieSpine = sp.SkeletonAnimation:create('spine/reviewboss/beidafeide_zhanglaoshi.json', 'spine/reviewboss/beidafeide_zhanglaoshi.atlas',1)
+    bossDieSpine:addAnimation(0, 'animation', true)
     bossDieSpine:setPosition(waveSprite:getContentSize().width * 0.25,200)
     waveSprite:addChild(bossDieSpine,1)
 

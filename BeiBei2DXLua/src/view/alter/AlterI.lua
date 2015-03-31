@@ -1,4 +1,5 @@
 require("common.global")
+local Button                = require("view.button.longButtonInStudy")
 
 local AlterI = class("AlterI", function()
     return cc.Layer:create()
@@ -29,32 +30,30 @@ function AlterI.create(info)
     label_info:setPosition(backWidth/2, backHeight/2+100)
     back:addChild(label_info)
 
-    local button_left_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            playSound(s_sound_buttonEffect)
-            cx.CXUtils:showMail(s_DataManager.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_SUGGESTION), s_CURRENT_USER.username)
-        end
+    local button_up_func = function()
+        playSound(s_sound_buttonEffect)
+        cx.CXUtils:showMail(s_DataManager.getTextWithIndex(TEXT__FEEDBACK_MAIL_SUGGESTION), s_CURRENT_USER.username)
     end
 
-    local button_up = ccui.Button:create("image/button/bigBlueButton.png","image/button/bigBlueButton.png","")
+    local button_up = Button.create("middle","blue",s_DataManager.getTextWithIndex(TEXT__FEEDBACK_BTN_SUGGESTION))
+    button_up.func = function ()
+        button_up_func()
+    end
+
     button_up:setPosition(backWidth/2, backHeight/2)
-    button_up:setTitleText(s_DataManager.getTextWithIndex(TEXT_ID_FEEDBACK_BTN_SUGGESTION))
-    button_up:setTitleFontSize(30)
-    button_up:addTouchEventListener(button_left_clicked)
     back:addChild(button_up)
 
-    local button_right_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            playSound(s_sound_buttonEffect)
-            cx.CXUtils:showMail(s_DataManager.getTextWithIndex(TEXT_ID_FEEDBACK_MAIL_BUG), s_CURRENT_USER.username)
-        end
+    local button_down_func = function()
+        playSound(s_sound_buttonEffect)
+        cx.CXUtils:showMail(s_DataManager.getTextWithIndex(TEXT__FEEDBACK_MAIL_BUG), s_CURRENT_USER.username)
     end
 
-    local button_down = ccui.Button:create("image/button/bigBlueButton.png","image/button/bigBlueButton.png","")
-    button_down:setPosition(backWidth/2, backHeight/2-100)
-    button_down:setTitleText(s_DataManager.getTextWithIndex(TEXT_ID_FEEDBACK_BTN_BUG))
-    button_down:setTitleFontSize(30)
-    button_down:addTouchEventListener(button_right_clicked)
+    local button_down = Button.create("middle","blue",s_DataManager.getTextWithIndex(TEXT__FEEDBACK_BTN_BUG))
+    button_down.func = function ()
+        button_down_func()
+    end
+
+    button_down:setPosition(backWidth/2, backHeight/2-150)
     back:addChild(button_down)
 
     local function closeAnimation()

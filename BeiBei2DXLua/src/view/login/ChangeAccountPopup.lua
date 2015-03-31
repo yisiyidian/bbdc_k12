@@ -18,11 +18,11 @@ local function changeAccount(username, password)
     playSound(s_sound_buttonEffect)
 
     if validateUsername(username) == false then
-        s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
+        s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR))
         return
     end
     if validatePassword(password) == false then
-        s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT_ID_PWD_ERROR))
+        s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__PWD_ERROR))
         return
     end
 
