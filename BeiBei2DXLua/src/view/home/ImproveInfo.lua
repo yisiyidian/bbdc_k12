@@ -95,11 +95,11 @@ showLogin = function()
     label2:setPosition(back_width/2,640)
     back_login:addChild(label2)
 
-    local username = ImproveInfoNode.create("username")
+    local username = ImproveInfoNode.create(InputNode.type_username)
     username:setPosition(back_width/2, 550)
     back_login:addChild(username)
 
-    local password = ImproveInfoNode.create("password")
+    local password = ImproveInfoNode.create(InputNode.type_pwd)
     password:setPosition(back_width/2, 450)
     back_login:addChild(password)
 
@@ -113,11 +113,11 @@ showLogin = function()
         elseif eventType == ccui.TouchEventType.ended then
             
             if validateUsername(username.textField:getString()) == false then
-                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
+                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR))
                 return
             end
             if validatePassword(password.textField:getString()) == false then
-                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT_ID_PWD_ERROR))
+                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__PWD_ERROR))
                 return
             end
             

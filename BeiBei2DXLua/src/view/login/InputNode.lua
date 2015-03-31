@@ -4,7 +4,11 @@ local InputNode = class("InputNode", function()
     return cc.Layer:create()
 end)
 
-function InputNode.create(type)
+InputNode.type_username = 'username'
+InputNode.type_pwd = 'pwd'
+InputNode.type_teachername = "teachername"
+
+function InputNode.create(type, hint, eventHandleCB)
     local width = 450
     local height = 80
 
@@ -14,35 +18,21 @@ function InputNode.create(type)
     main:ignoreAnchorPointForPosition(false)
     
     local cursor
-    local hint1 = "用户名"
-    local hint2 = "密码"
-    local hint3 = "教师姓名"
     main.textField = nil
     
-    local cursorShowUp
-    local eventHandle
-    
-
     local backImage = cc.Sprite:create("image/login/white_shurukuang_zhuce.png")
-
     backImage:setPosition(width/2, height/2)
     main:addChild(backImage)
       
 
-    eventHandle = function(sender, eventType)
+    local eventHandle = function(sender, eventType)
+        if eventHandleCB ~= nil then eventHandleCB(sender, eventType) end
         if eventType == ccui.TextFiledEventType.attach_with_ime then   
 --            print("in text field")
             main.textField:setPlaceHolder("")
             cursor:setVisible(true)
         elseif eventType == ccui.TextFiledEventType.detach_with_ime then
---            print("out text field")
-            if type == "username" then
-                main.textField:setPlaceHolder(hint1)
-            elseif type == "password" then
-                main.textField:setPlaceHolder(hint2)
-            else
-                main.textField:setPlaceHolder(hint3)
-            end
+            main.textField:setPlaceHolder(hint)
             cursor:setVisible(false)
         elseif eventType == ccui.TextFiledEventType.insert_text then
             cursor:setVisible(true)
@@ -60,17 +50,13 @@ function InputNode.create(type)
     main.textField:setMaxLengthEnabled(true)
     main.textField:setPlaceHolderColor(cc.c3b(150,150,150))
     main.textField:setTextColor(cc.c4b(0,0,0,255))
-    if type == "username" then
-        main.textField:setPlaceHolder(hint1)
+    main.textField:setPlaceHolder(hint)
+    if type ~= InputNode.type_pwd then
         main.textField:setMaxLength(10)
-    elseif type == "password" then
-        main.textField:setPlaceHolder(hint2)
+    else
         main.textField:setMaxLength(16)
         main.textField:setPasswordEnabled(true)
         main.textField:setPasswordStyleText("*")
-    else
-        main.textField:setPlaceHolder(hint3)
-        main.textField:setMaxLength(10)
     end
     main.textField:setPosition(cc.p(30, backImage:getContentSize().height / 2))
     main.textField:addEventListener(eventHandle)

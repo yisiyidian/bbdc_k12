@@ -9,32 +9,36 @@ local UserBaseServer = {}
 function validateUsername(s)
     local length = string.len(s)
     if length < 1 then return false end
-    print(string.format('%s, %d', s, length))
+    print(string.format('validateUsername:0 name:%s, str length:%d', s, length))
 
     local c = s:sub(1, 1)
     local ord = c:byte()
     if (ord >= 65 and ord <= 90) or (ord >= 97 and ord <= 122) or ord > 128 then 
         local i = 1
         local len = 0
+        local lenChinese = 0
         while i <= length do
             local c = s:sub(i, i)
             local ord = c:byte()
+            local isChinese = false
             if (ord >= 48 and ord <= 57) or(ord >= 65 and ord <= 90) or (ord >= 97 and ord <= 122) or ord > 128 then
                 if ord > 128 then
                     i = i + 3
+                    isChinese = true
                 else
                     i = i + 1
                 end
             else
-                print(string.format('%s, %d, %s', s, length, c))
+                print(string.format('validateUsername:1 name:%s, str length:%d, c:%s', s, length, c))
                 return false
             end
 
             len = len + 1
+            if isChinese then lenChinese = lenChinese + 1 end
         end
 
-        if len < 4 or len > 10 then 
-          print(string.format('%s, %d, %d', s, length, len))
+        if lenChinese < 2 and (len < 2 or len > 10) then 
+          print(string.format('validateUsername:2 name:%s, str length:%d, name len:%d, lenChinese:%d', s, length, len, lenChinese))
           return false 
         end
     else
@@ -220,7 +224,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
                     end
                 end)
             else
-                onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_HAS_ALREADY_BEEN_TAKEN), ERROR_CODE_MAX)
+                onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, s_DataManager.getTextWithIndex(TEXT__USERNAME_HAS_ALREADY_BEEN_TAKEN), ERROR_CODE_MAX)
             end
         end)
 

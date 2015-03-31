@@ -38,6 +38,8 @@ end
 function start.init()
     initResolution()
 
+    reloadModule('common.text')
+
     NETWORK_STATUS_WIFI = 1
     NETWORK_STATUS_MOBILE = 2
     local status = cx.CXNetworkStatus:getInstance():start()
@@ -72,6 +74,7 @@ function start.init()
 end
 
 function start.start(hotUpdate)
+    reloadModule('common.text')
     reloadModule("common.global")
     s_APP_VERSION = app_version_release -- reset
     
@@ -151,7 +154,7 @@ function start.start(hotUpdate)
         cc.Director:getInstance():runWithScene(s_SCENE)
     end
 
-    s_DataManager.loadText()
+
     
     -- *************************************
     if test_code == NORMAL_CODE then -- do NOT change this line

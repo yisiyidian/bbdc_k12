@@ -164,7 +164,7 @@ function BookLayer.create()
                 backColor:addChild(tutorial_text,120)
                 --tutorial_text:setColor(cc.c3b(255,255,255))
                 
-                local text = cc.Label:createWithSystemFont(s_DataManager.getTextWithIndex(TEXT_ID_TUTORIAL_BOOK_SELECT),'',28)
+                local text = cc.Label:createWithSystemFont(s_DataManager.getTextWithIndex(TEXT__TUTORIAL_BOOK_SELECT),'',28)
                 text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
                 text:setColor(cc.c3b(0,0,0))
                 tutorial_text:addChild(text)
@@ -294,7 +294,17 @@ function BookLayer.create()
     end
 
     layer:scheduleUpdateWithPriorityLua(update, 0)
+
+    layer:popupAccountBind()
+
     return layer
+end
+
+function BookLayer:popupAccountBind()
+    if s_CURRENT_USER.tutorialStep > s_tutorial_book_select or s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then return end
+
+    local K12AccountBindView = require('view.login.K12AccountBindView')
+    local view = K12AccountBindView.create(K12AccountBindView.Type_username)
 end
 
 return BookLayer

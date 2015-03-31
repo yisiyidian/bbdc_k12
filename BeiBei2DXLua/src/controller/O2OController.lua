@@ -27,12 +27,6 @@ local USER_START_TYPE_OLD         = 1
 local USER_START_TYPE_QQ          = 2
 local USER_START_TYPE_QQ_AUTHDATA = 3
 
-local LOADING_TEXTS = {'用户登录中 30%', '加载配置中 70%', '更新单词信息中 80%', '保存用户信息中 90%'}
-local _TEXT_ID_USER        = 1
-local _TEXT_ID_CFG         = 2
-local _TEXT_ID_UPDATE_BP   = 3
-local _TEXT_ID_UPDATE_USER = 4
-
 local function onError()
     if s_SERVER.hasSessionToken() then cx.CXAvos:getInstance():logOut() end
     s_LocalDatabaseManager.setLogOut(true)
@@ -221,7 +215,7 @@ function O2OController.startLoadingData(userStartType, username, password)
     end
 
     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
-    showProgressHUD(LOADING_TEXTS[_TEXT_ID_USER])
+    showProgressHUD('用户登录中 30%')
     if userStartType == USER_START_TYPE_OLD then 
         print(string.format('startLoadingData: objectId:%s, username:%s, updatedAt:%f, createdAt:%f', tmpUser.objectId, tmpUser.username, tmpUser.updatedAt, tmpUser.createdAt))
         if hasUserInLocalDB and tmpUser.username == username and tmpUser.objectId == '' then
@@ -332,7 +326,7 @@ end
 ---------------------------------------------------------------------------------------------------
 
 function O2OController.loadConfigs()
-    showProgressHUD(LOADING_TEXTS[_TEXT_ID_CFG])
+    showProgressHUD('加载配置中 70%')
     
     LOGTIME('loadBooks')
     s_DataManager.loadBooks()
@@ -417,7 +411,7 @@ local function updateWeek(localDBDatas, week, onSaved)
 end
 
 function O2OController.getDataEverydayInfo(onSaved)
-    showProgressHUD(LOADING_TEXTS[_TEXT_ID_UPDATE_USER])
+    showProgressHUD('保存用户信息中 90%')
     if s_CURRENT_USER.localTime == 0 then
         -- 1st log in
         s_CURRENT_USER.localTime = os.time()

@@ -13,12 +13,14 @@ def export(jsonFile, codeFile):
     jsonStr = json.loads(s)
     texts = jsonStr['text']
     k = 0
-    outStr = ''
+    outStr = ''.encode('utf8')
 
     for text in texts:
         key = text['key']
         # outStr += '#define ' + key.upper() + ' ' + str(k) + '    //' + text['cn'].encode('gbk') + '\n'
-        outStr += 'TEXT_ID_' + key.upper() + ' = ' + str(k + 1) + '\n' #+ '// ' + str(json.dumps(text['cn'])) + '\n'
+        # outStr += 'TEXT_ID_' + key.upper() + ' = ' + str(k + 1) + '\n' #+ '// ' + str(json.dumps(text['cn'])) + '\n'
+        # print(text['cn'].encode("utf-8"))
+        outStr += 'TEXT__'.encode('utf8') + key.upper().encode('utf8') + ' = "'.encode('utf8') + text['cn'].encode("utf-8") + '"\n'.encode('utf8')
         k = k + 1
 
     out = open(codeFile, 'w')

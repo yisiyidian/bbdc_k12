@@ -44,11 +44,11 @@ function RegisterPopup:ctor()
     label2:setPosition(back_width/2,630)
     back_register:addChild(label2)
 
-    local username = InputNode.create("username")
+    local username = InputNode.create(InputNode.type_username, '请输入用户名')
     username:setPosition(back_width/2, 550)
     back_register:addChild(username)
 
-    local password = InputNode.create("password")
+    local password = InputNode.create(InputNode.type_pwd, '请输入密码')
     password:setPosition(back_width/2, 450)
     back_register:addChild(password)
 
@@ -57,11 +57,11 @@ function RegisterPopup:ctor()
             -- button sound
             playSound(s_sound_buttonEffect)
             if validateUsername(username.textField:getString()) == false then
-                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT_ID_USERNAME_ERROR))
+                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR))
                 return
             end
             if validatePassword(password.textField:getString()) == false then
-                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT_ID_PWD_ERROR))
+                s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__PWD_ERROR))
                 return
             end
             s_CURRENT_USER.usertype = USER_TYPE_MANUAL
