@@ -12,20 +12,11 @@ function GuideLayer.create()
     back:ignoreAnchorPointForPosition(false)
     back:setAnchorPoint(0.5,0.5)
     layer:addChild(back)
-
-    local beibei = cc.Sprite:create("image/newsyudy/bb_big_yindao.png")
-    back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.55*(-3))
-    back:ignoreAnchorPointForPosition(false)
-    back:setAnchorPoint(0.5,0.5)
-    layer:addChild(back)
     
     local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.55))
     local action2 = cc.EaseBackOut:create(action1)
     back:runAction(action2)
 
-    local action3 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.55))
-    local action4 = cc.EaseBackOut:create(action1)
-    beibei:runAction(action4)
 
     local function closeAnimation()
         local action1 = cc.MoveTo:create(0.2, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.55*3))
