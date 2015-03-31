@@ -353,7 +353,7 @@ function HomeLayer.create()
     data_back:setPosition(button_data:getContentSize().width/2, 0)
     button_data:addChild(data_back,2)
     layer.dataBack = data_back
-    local bottom = cc.LayerColor:create(cc.c4b(255,255,255,255), bigWidth, 100)
+    local bottom = cc.LayerColor:create(cc.c4b(255,255,255,255), button_data:getContentSize().width, 100)
     bottom:setAnchorPoint(0.5,1)
     bottom:ignoreAnchorPointForPosition(false)  
     bottom:setPosition(button_data:getContentSize().width/2, 0)
