@@ -291,62 +291,23 @@ function MissionProgressLayer.create(share)
         finishProgress:runAction(cc.Sequence:create(action1,cc.CallFunc:create(anotherSwelling)))
     end
 
-
-    
-    -- local finishLabel = cc.Label:createWithSystemFont("已完成","",24)
-    -- finishLabel:setPosition(bigWidth/2 - 80, s_DESIGN_HEIGHT/2 - 300)
-    -- finishLabel:setColor(cc.c4b(134,150,159,255))
-    -- layer:addChild(finishLabel)
-    
-    -- local blueLump = cc.LayerColor:create(cc.c4b(31,165,234,255),20,20)
-    -- blueLump:setPosition(bigWidth/2 - 140, s_DESIGN_HEIGHT/2 - 310)
-    -- layer:addChild(blueLump)
-    
-    -- local unfinishLabel = cc.Label:createWithSystemFont("未完成","",24)
-    -- unfinishLabel:setPosition(bigWidth/2 + 120, s_DESIGN_HEIGHT/2 - 300)
-    -- unfinishLabel:setColor(cc.c4b(134,150,159,255))
-    -- layer:addChild(unfinishLabel)
-    
-    -- local grayLump = cc.LayerColor:create(cc.c4b(184,223,240,255),20,20)
-    -- grayLump:setPosition(bigWidth/2 + 60, s_DESIGN_HEIGHT/2 - 310)
-    -- layer:addChild(grayLump)
-    
--- local ButtonClick = function(sender, eventType)
---     if eventType == ccui.TouchEventType.began then
---         playSound(s_sound_buttonEffect)   
---     elseif eventType == ccui.TouchEventType.ended then
---                  local SuccessLayer = require("view.login.LoginPopup")
---                  local successLayer = SuccessLayer.create()
---                  s_SCENE:popup(successLayer)
---     end
--- end
---   
--- local Button = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png","")
--- Button:setPosition(bigWidth/2 + 200, s_DESIGN_HEIGHT * 0.7)
--- Button:setTitleText("test")
--- Button:setTitleColor(cc.c4b(255,255,255,255))
--- Button:setTitleFontSize(40)
--- Button:addTouchEventListener(ButtonClick)
--- layer:addChild(Button)
-
-
---    local function enterSummaryBoss(sender, eventType)
---        if eventType == ccui.TouchEventType.ended then
---    local MiddleLayer = require("view.newstudy.MiddleLayer")
---    local middleLayer = MiddleLayer.create()
---    s_SCENE:replaceGameLayer(middleLayer)
---        end
---    end
---
---    local Button_boss = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png.png","")
---    Button_boss:setPosition(bigWidth/2 - 300 , s_DESIGN_HEIGHT/2 - 400)
---    Button_boss:setTitleText("summaryboss")
---    Button_boss:setTitleColor(cc.c4b(255,255,255,255))
---    Button_boss:setTitleFontSize(40)
---    Button_boss:addTouchEventListener(enterSummaryBoss)
---    layer:addChild(Button_boss)
---
---    Button_boss:setScale(0.5)
+    -- local ButtonClick = function(sender, eventType)
+    --     if eventType == ccui.TouchEventType.began then
+    --         playSound(s_sound_buttonEffect)   
+    --     elseif eventType == ccui.TouchEventType.ended then
+    --                  local SuccessLayer = require("view.login.PrimaryRegisterPopup")
+    --                  local successLayer = SuccessLayer.create()
+    --                  s_SCENE:popup(successLayer)
+    --     end
+    -- end
+      
+    -- local Button = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png","")
+    -- Button:setPosition(bigWidth/2 + 200, s_DESIGN_HEIGHT * 0.7)
+    -- Button:setTitleText("test")
+    -- Button:setTitleColor(cc.c4b(255,255,255,255))
+    -- Button:setTitleFontSize(40)
+    -- Button:addTouchEventListener(ButtonClick)
+    -- layer:addChild(Button)
     
     
     

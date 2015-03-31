@@ -13,20 +13,18 @@ function InputNode.create(type)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
     
-    local backImage
     local cursor
     local hint1 = "用户名"
     local hint2 = "密码"
+    local hint3 = "教师姓名"
     main.textField = nil
     
     local cursorShowUp
     local eventHandle
     
-    if type == "username" then
-        backImage = cc.Sprite:create("image/login/sl_username.png")
-    else
-        backImage = cc.Sprite:create("image/login/sl_password.png")
-    end    
+
+    local backImage = cc.Sprite:create("image/login/white_shurukuang_zhuce.png")
+
     backImage:setPosition(width/2, height/2)
     main:addChild(backImage)
       
@@ -40,8 +38,10 @@ function InputNode.create(type)
 --            print("out text field")
             if type == "username" then
                 main.textField:setPlaceHolder(hint1)
-            else
+            elseif type == "password" then
                 main.textField:setPlaceHolder(hint2)
+            else
+                main.textField:setPlaceHolder(hint3)
             end
             cursor:setVisible(false)
         elseif eventType == ccui.TextFiledEventType.insert_text then
@@ -63,11 +63,14 @@ function InputNode.create(type)
     if type == "username" then
         main.textField:setPlaceHolder(hint1)
         main.textField:setMaxLength(10)
-    else
+    elseif type == "password" then
         main.textField:setPlaceHolder(hint2)
         main.textField:setMaxLength(16)
         main.textField:setPasswordEnabled(true)
         main.textField:setPasswordStyleText("*")
+    else
+        main.textField:setPlaceHolder(hint3)
+        main.textField:setMaxLength(10)
     end
     main.textField:setPosition(cc.p(30, backImage:getContentSize().height / 2))
     main.textField:addEventListener(eventHandle)
@@ -81,7 +84,7 @@ function InputNode.create(type)
     main:addChild(cursor)
     
     local update = function(dt)
-        cursor:setPosition(30+main.textField:getContentSize().width, height/2)
+        cursor:setPosition(15+main.textField:getContentSize().width, height/2)
     end
     main:scheduleUpdateWithPriorityLua(update, 0)
 
