@@ -354,6 +354,10 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     self.dontknow = createDontknow(wordName,wrongWordNum)
     backColor:addChild(self.dontknow)
 
+    local GuideLayer = require("view.newstudy.GuideLayer")
+    local guideLayer = GuideLayer.create()
+    s_SCENE:popup(guideLayer)
+
     s_HttpRequestClient.downloadSoundsFromURL(s_CorePlayManager.currentIndex)
 end
 
