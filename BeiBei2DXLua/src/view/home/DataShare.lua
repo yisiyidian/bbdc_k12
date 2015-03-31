@@ -25,49 +25,79 @@ function DataShare:ctor()
 	if LEARN_INDEX > 100 then
 		LEARN_INDEX = 100
 	end
-	-- add curtain
-	local curtain = cc.LayerColor:create(cc.c4b(0,0,0,200),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
+	-- -- add curtain
+	local curtain = cc.LayerColor:create(cc.c4b(0,0,0,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
 	curtain:ignoreAnchorPointForPosition(false)
 	curtain:setAnchorPoint(0.5,0.5)
 	curtain:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
 	self:addChild(curtain)
+	self.curtain = curtain
+	self.curtain:setOpacity(0)
 	-- data share UI
-	local background = cc.LayerColor:create(cc.c4b(200,240,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
+	local background = cc.LayerColor:create(cc.c4b(200,240,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT * 1.2)
 	background:ignoreAnchorPointForPosition(false)
 	background:setAnchorPoint(0.5,0)
 	background:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT)
 	self:addChild(background)
-	background:runAction(cc.EaseBackOut:create(cc.MoveBy:create(0.5,cc.p(0,- s_DESIGN_HEIGHT * 5 / 6))))
+	self.background = background
+	--background:runAction(cc.EaseBackOut:create(cc.MoveBy:create(0.5,cc.p(0,- s_DESIGN_HEIGHT * 5 / 6))))
 	self.background = background
 	-- add label
-	self:addLabel(background,0)
+	self:addLabel(background,150)
 	--add medal
-	self:addMedal(background,0,true)
+	self:addMedal(background,150,true)
 
 	--add animation
 
-	local bangle = cc.Sprite:create('image/homescene/datashare/main_interface_drop_down_share_bangle.png')
-	bangle:setAnchorPoint(0.5,1)
-	bangle:setPosition(s_DESIGN_WIDTH * 0.25 + (background:getContentSize().width - s_DESIGN_WIDTH) * 0.5,0)
-	background:addChild(bangle)
+	local node = cc.Node:create()
+	node:setPosition(s_DESIGN_WIDTH * 0.25 + (background:getContentSize().width - s_DESIGN_WIDTH) * 0.5,0)
+	background:addChild(node,-1)
 
-	local girl = cc.Sprite:create('image/homescene/datashare/main_interface_drop_down_share_beibei.png')
-	girl:setAnchorPoint(0.9,0.7)
-	girl:setPosition(0,20)
-	bangle:addChild(girl,-1)
+	local bangle = ccui.Button:create('image/homescene/datashare/main_interface_drop_down_share_bangle.png')
+	bangle:setAnchorPoint(0.5,1)
+	bangle:setPosition(0,40)
+	node:addChild(bangle)
+	bangle:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.MoveBy:create(0.4,cc.p(0,-40)),cc.MoveBy:create(0.4,cc.p(0,40)),cc.DelayTime:create(16 / 30))))
+
+	local girl = sp.SkeletonAnimation:create("res/spine/girl_wave/girl_wave.json", "res/spine/girl_wave/girl_wave.atlas", 1)
+    --girl:setAnchorPoint(0.9,0.7)
+    girl:setPosition(-background:getContentSize().width * 0.2,-350)
+    girl:setScale(0.75)
+    node:addChild(girl,-1)
+    girl:addAnimation(0, 'animation', true)
 
 	self.bangle = bangle
 	self.girl = girl
+	self.node = node
+
+	local function onBangle(sender,eventType)
+		if eventType == ccui.TouchEventType.ended then
+			self:moveDown()
+			
+		end
+	end  
+	bangle:addTouchEventListener(onBangle)
 
 	local button = ccui.Button:create('image/homescene/datashare/main_interface_drop_down_share_up_button.png','image/homescene/datashare/main_interface_drop_down_share_up_button_click.png')
-	button:setPosition(curtain:getContentSize().width * 0.8,curtain:getContentSize().height / 12)
-	curtain:addChild(button)
+	button:setPosition(background:getContentSize().width * 0.5,background:getContentSize().height / 12)
+	background:addChild(button)
 	self.close_button = button
 
 	local function onBtnClicked(sender,eventType)
 		if eventType == ccui.TouchEventType.ended then
-			background:runAction(cc.Sequence:create(cc.EaseBackIn:create(cc.MoveBy:create(0.5,cc.p(0,s_DESIGN_HEIGHT))),cc.CallFunc:create(function (  )
-				self:removeFromParent()
+			girl:setPosition(-background:getContentSize().width * 0.2,-350)
+			--self.curtain:setOpacity(100)
+			self.curtain:runAction(cc.FadeOut:create(1))
+			background:runAction(cc.Sequence:create(cc.EaseBackIn:create(cc.MoveBy:create(1.0,cc.p(0,s_DESIGN_HEIGHT * 1.1))),cc.CallFunc:create(function (  )
+				self:setLocalZOrder(0)
+				background:runAction(cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT * 0.1)))
+				girl:runAction(cc.Sequence:create(cc.JumpBy:create(0.3, cc.p(0,0), 170, 1),cc.CallFunc:create(function (  )
+					
+					bangle:setPosition(0,40)
+					bangle:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.MoveBy:create(0.4,cc.p(0,-40)),cc.MoveBy:create(0.4,cc.p(0,40)),cc.DelayTime:create(16 / 30))))
+					self.listener:setSwallowTouches(false)
+					girl:setAnimation(0, 'animation', true)
+				end,{})))
 			end,{})))
 		end
 	end
@@ -92,8 +122,22 @@ function DataShare:ctor()
     self.listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(self.listener, self)
-    self.listener:setSwallowTouches(true)
+    -- self.listener:setSwallowTouches(true)
 
+end
+
+function DataShare:moveDown()
+	
+	self.bangle:stopAllActions()
+	self.bangle:setPosition(0,0)
+	self.listener:setSwallowTouches(true)
+	self.girl:setAnimation(0,'stable_girl',false)
+	self.girl:runAction(cc.Sequence:create(cc.JumpBy:create(0.3, cc.p(0,100), -70, 1),cc.CallFunc:create(function (  )
+		self.curtain:runAction(cc.EaseSineOut:create(cc.FadeTo:create(2,230)))
+		self.node:runAction(cc.Sequence:create(cc.RotateBy:create(0.5,30),cc.RotateBy:create(1,-60),cc.RotateBy:create(0.5,30)))
+		self:setLocalZOrder(1)
+		self.background:runAction(cc.EaseSineOut:create(cc.MoveBy:create(2,cc.p(0,- s_DESIGN_HEIGHT))))
+	end,{})))	
 end
 
 function DataShare:addLabel(background,offset)
@@ -173,19 +217,19 @@ function DataShare:addMedal(background,offset,forShare)
 			shine1:setPosition(medal:getContentSize().width / 2,medal:getContentSize().height / 3 + 20)
 			medal:addChild(shine1,-2)
 
-			shine1:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.Show:create(),cc.DelayTime:create(0.5),cc.Hide:create(),cc.DelayTime:create(0.5),cc.Show:create(),cc.DelayTime:create(0.5))))
+			shine1:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.Show:create(),cc.DelayTime:create(0.4),cc.Hide:create(),cc.DelayTime:create(0.4),cc.Show:create(),cc.DelayTime:create(0.4))))
 
 			local shine2 = cc.Sprite:create('image/homescene/datashare/main_interface_drop_down_share_glow2.png')
 			shine2:setAnchorPoint(0.5,0)
 			shine2:setPosition(medal:getContentSize().width / 2,medal:getContentSize().height / 3 - 5)
 			medal:addChild(shine2,-2)
 
-			shine2:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.Hide:create(),cc.DelayTime:create(0.5),cc.Show:create(),cc.DelayTime:create(1.0))))
+			shine2:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.Hide:create(),cc.DelayTime:create(0.4),cc.Show:create(),cc.DelayTime:create(0.8))))
 		end
 
 		if forShare then
 			local shareBtn = ccui.Button:create('image/homescene/datashare/main_interface_drop_down_share_button.png','image/homescene/datashare/main_interface_drop_down_share_button_click.png')
-			shareBtn:setPosition(background:getContentSize().width / 2,s_DESIGN_HEIGHT / 9)
+			shareBtn:setPosition(background:getContentSize().width / 2,s_DESIGN_HEIGHT / 5 + 50)
 			background:addChild(shareBtn)
 			shareBtn:setTitleText('分 享')
 			shareBtn:setTitleFontSize(30)

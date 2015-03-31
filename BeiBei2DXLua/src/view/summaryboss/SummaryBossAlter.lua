@@ -577,7 +577,7 @@ function SummaryBossAlter:addWinLabel(win_back)
     self:scheduleUpdateWithPriorityLua(update, 0)
 
     local boss = sp.SkeletonAnimation:create("spine/summaryboss/beidadekls.json","spine/summaryboss/beidadekls.atlas",1)
-    boss:setAnimation(0,'animation',true)
+    boss:setAnimation(0,'animation',false)
     boss:setPosition(0.5 * s_DESIGN_WIDTH- 200,230)
     self:addChild(boss)
 
