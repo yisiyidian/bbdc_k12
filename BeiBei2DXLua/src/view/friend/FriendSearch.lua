@@ -98,7 +98,7 @@ function FriendSearch:ctor()
 
                             hideProgressHUD(true)
                             local f_user = {}
-                            print('request:searchUser:', results, err, type(results), string.len(results) > 0)
+                            print('request:searchUser:', tostring(results))
                             if err == nil and results ~= nil and type(results) == 'string' and string.len(results) > 0 then
                                 local data = s_JSON.decode(results)
                                 for i, user in ipairs(data.results) do

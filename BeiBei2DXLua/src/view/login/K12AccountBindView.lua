@@ -204,7 +204,7 @@ function K12AccountBindView:gotoAddTeacher(teacherName)
     request:searchUser(teacherName, teacherName, function (results, err)
 
         local f_user = {}
-        print('gotoAddTeacher searchUser:', results, err, type(results), string.len(results) > 0)
+        print('gotoAddTeacher searchUser:', tostring(results), tostring(err))
         if err == nil and results ~= nil and type(results) == 'string' and string.len(results) > 0 then
             local data = s_JSON.decode(results)
             for i, user in ipairs(data.results) do
