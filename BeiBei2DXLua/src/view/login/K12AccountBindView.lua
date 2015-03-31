@@ -13,6 +13,7 @@
 -- loginPopup:runAction(action4)
 
 local InputNode = require("view.login.InputNode")
+local Button                = require("view.button.longButtonInStudy")
 
 local K12AccountBindView = class("K12AccountBindView", function() return cc.Layer:create() end)
 
@@ -53,7 +54,7 @@ function K12AccountBindView:closeAnimation(cb)
 end
 
 function K12AccountBindView:ctor()
-    self.bg = cc.Sprite:create("image/login/background_white_login.png")
+    self.bg = cc.Sprite:create("image/login/store_tanchu_background.png")
     self.bg:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2)
     self.bg:ignoreAnchorPointForPosition(false)
     self.bg:setAnchorPoint(0.5, 0.5)
@@ -64,7 +65,7 @@ function K12AccountBindView:ctor()
     self.back_height = self.bg:getContentSize().height
 
     local girl_hello = sp.SkeletonAnimation:create('spine/bb_hello_public.json', 'spine/bb_hello_public.atlas', 1)
-    girl_hello:setPosition(self.back_width * 0.5, self.back_height * 0.4)
+    girl_hello:setPosition(self.back_width * 0.5, self.back_height * 0.45)
     girl_hello:addAnimation(0, 'animation', true)
     self.bg:addChild(girl_hello, 5)
 
@@ -127,33 +128,28 @@ function K12AccountBindView:init(t, ex)
     end
 
     self.inputnode = InputNode.create(inputnodeType, hint, eventHandle)
-    self.inputnode:setPosition(self.back_width / 2, 200)
+    self.inputnode:setPosition(self.back_width / 2, 225)
     self.bg:addChild(self.inputnode)
 
-    local submit_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            local str = self.inputnode.textField:getString()
-            if K12AccountBindView.Type_username == t then 
-                self:gotoPwd(str)
-            elseif K12AccountBindView.Type_password == t then 
-                self:gotoUpdateUsernameAndPassword(str)
-            else
-                self:gotoAddTeacher(str)
-            end
+    local submit_clicked = function()
+        local str = self.inputnode.textField:getString()
+        if K12AccountBindView.Type_username == t then 
+            self:gotoPwd(str)
+        elseif K12AccountBindView.Type_password == t then 
+            self:gotoUpdateUsernameAndPassword(str)
+        else
+            self:gotoAddTeacher(str)
         end
     end
 
-    local submit = ccui.Button:create("image/login/sl_button_confirm.png", "image/login/sl_button_confirm.png", "")
+    local submit = Button.create("long","blue","下一步")
     submit:setPosition(self.back_width / 2, 100)
-    submit:addTouchEventListener(submit_clicked)
     self.bg:addChild(submit)
 
-    local label_name = cc.Label:createWithSystemFont("下一步", "", 34)
-    label_name:setColor(cc.c4b(255, 255, 255, 255))
-    label_name:ignoreAnchorPointForPosition(false)
-    label_name:setAnchorPoint(0, 0.5)
-    label_name:setPosition(30, submit:getContentSize().height / 2)
-    submit:addChild(label_name)
+    submit.func = function ()
+        submit_clicked()
+    end
+
 end
 
 function K12AccountBindView:gotoPwd(username)
