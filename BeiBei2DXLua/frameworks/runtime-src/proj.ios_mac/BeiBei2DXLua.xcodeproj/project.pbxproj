@@ -835,9 +835,9 @@
 			productReference = 5023816B17EBBCE400990C9B /* BeiBei2DXLua Mac.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F293B3C715EB7BE500256477 /* BeiBei2DXLua iOS */ = {
+		F293B3C715EB7BE500256477 /* BeiBei_K12 iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F293B6C415EB7BEA00256477 /* Build configuration list for PBXNativeTarget "BeiBei2DXLua iOS" */;
+			buildConfigurationList = F293B6C415EB7BEA00256477 /* Build configuration list for PBXNativeTarget "BeiBei_K12 iOS" */;
 			buildPhases = (
 				F293B3C415EB7BE500256477 /* Sources */,
 				F293B3C515EB7BE500256477 /* Frameworks */,
@@ -850,7 +850,7 @@
 				152A349F199CE72E004B68DC /* PBXTargetDependency */,
 				15D1F3091994BBCA00302043 /* PBXTargetDependency */,
 			);
-			name = "BeiBei2DXLua iOS";
+			name = "BeiBei_K12 iOS";
 			productName = BeiBei2DXLua;
 			productReference = F293B3C815EB7BE500256477 /* BeiBei2DXLua iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -897,7 +897,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				F293B3C715EB7BE500256477 /* BeiBei2DXLua iOS */,
+				F293B3C715EB7BE500256477 /* BeiBei_K12 iOS */,
 				5023812617EBBCE400990C9B /* BeiBei2DXLua Mac */,
 			);
 		};
@@ -1351,7 +1351,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F293B6C415EB7BEA00256477 /* Build configuration list for PBXNativeTarget "BeiBei2DXLua iOS" */ = {
+		F293B6C415EB7BEA00256477 /* Build configuration list for PBXNativeTarget "BeiBei_K12 iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F293B6C515EB7BEA00256477 /* Debug */,
