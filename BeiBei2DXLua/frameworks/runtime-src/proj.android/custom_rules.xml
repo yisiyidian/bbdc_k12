@@ -7,15 +7,18 @@
     <path id="libs3rd.lib">
         <path path="${toString:project.all.jars.path}"></path>
         <pathelement location="${libs3rd.dir}/android-async-http-1.4.6.jar"></pathelement>
-        <pathelement location="${libs3rd.dir}/avoscloud-v2.6.9.2.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/android-support-v4.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/avoscloud-push-v3.0.2.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/avoscloud-sdk-v3.0.2.jar"></pathelement>
         <pathelement location="${libs3rd.dir}/avossns-v2.6.9.2.jar"></pathelement>
         <pathelement location="${libs3rd.dir}/avosstatistics-v2.6.9.2.jar"></pathelement>
         <pathelement location="${libs3rd.dir}/fastjson.jar"></pathelement>
         <pathelement location="${libs3rd.dir}/httpmime-4.2.4.jar"></pathelement>
-        <pathelement location="${libs3rd.dir}/libPluginProtocol.jar"></pathelement>
-        <pathelement location="${libs3rd.dir}/umeng-analytics-v5.2.4.jar"></pathelement>
-        <pathelement location="${libs3rd.dir}/open_sdk_r4346_lite.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/Java-WebSocket-1.2.0-leancloud.jar"></pathelement>
         <pathelement location="${libs3rd.dir}/libammsdk.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/libPluginProtocol.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/open_sdk_r4346_lite.jar"></pathelement>
+        <pathelement location="${libs3rd.dir}/umeng-analytics-v5.2.4.jar"></pathelement>
     </path>
 
     <path id="project.all.jars.path">

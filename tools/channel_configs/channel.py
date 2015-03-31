@@ -316,7 +316,7 @@ def createObjectiveCCodes(gitVer, testServer, buildTarget, channeliOS, savePath)
 
 # ---------------------------------------------------------------------------------
 
-def createJavaCodes(gitVer, testServer, buildTarget, channelAndroid, savePath, allChannelConfigurations):
+def createJavaCodes(gitVer, testServer, buildTarget, channelAndroid, savePath, allChannelConfigurations, androidProjSrcPath):
     buildInfo = 'BUILD INFORMATION: %s (Android:%s, %s)' % (buildTarget.description, channelAndroid.name, channelAndroid.packageName)
 
     server = testServer
@@ -366,9 +366,9 @@ public class AppVersionInfo {
         String pkgName = a.getApplicationContext().getPackageName();
 
         // server: %s
-        AVOSCloud.initialize(a, "%s", "%s");
-        AVOSCloud.setDebugLogEnabled(%s);
-        AVCloud.setProductionMode(%s);
+        // AVOSCloud.initialize(a, "%s", "%s");
+        // AVOSCloud.setDebugLogEnabled(%s);
+        // AVCloud.setProductionMode(%s);
 
         if (%s) {
             AnalyticsConfig.setAppkey("%s");
@@ -383,6 +383,33 @@ public class AppVersionInfo {
     
     f = open(savePath, 'w')
     f.write(java)
+    f.close()
+
+
+    javaApp = '''
+package com.beibei.wordmaster;
+
+import com.avos.avoscloud.AVCloud;
+import com.avos.avoscloud.AVOSCloud;
+
+import android.app.Application;
+
+public class App extends Application {
+    
+    @Override
+      public void onCreate() {
+        super.onCreate();
+        // server: %s
+        AVOSCloud.initialize(this, "%s", "%s");
+        AVOSCloud.setDebugLogEnabled(%s);
+        AVCloud.setProductionMode(%s);
+    }
+
+}    
+''' % (server.AppName, server.AppID, server.AppKey, isDebugLogEnabled, isProduction)
+    pkgPath = androidProjSrcPath + '/' + channelAndroid.packageName.replace('.', '/') + '/'
+    f = open(pkgPath + 'App.java', 'w')
+    f.write(javaApp)
     f.close()
 
 # ---------------------------------------------------------------------------------
@@ -403,29 +430,29 @@ def setupAndroidProject(channelAndroid, manifestSrc, manifestDst, androidProjSrc
     # androidManifest ------------------------------------------------
 
     # AppActivity.java ------------------------------------------------
-    if os.path.exists(androidProjSrcPath + '/com/beibei/wordmaster'):
-        shutil.rmtree(androidProjSrcPath + '/com/beibei/wordmaster')
-    pkgPath = androidProjSrcPath + '/' + channelAndroid.packageName.replace('.', '/') + '/'
-    os.makedirs(pkgPath)
+    # if os.path.exists(androidProjSrcPath + '/com/beibei/wordmaster'):
+    #     shutil.rmtree(androidProjSrcPath + '/com/beibei/wordmaster')
+    # pkgPath = androidProjSrcPath + '/' + channelAndroid.packageName.replace('.', '/') + '/'
+    # os.makedirs(pkgPath)
 
-    rawJavaStr = open(AppActivitySrc).read()
-    newJavaStr = rawJavaStr.replace('com.beibei.wordmaster', channelAndroid.packageName)
+    # rawJavaStr = open(AppActivitySrc).read()
+    # newJavaStr = rawJavaStr.replace('com.beibei.wordmaster', channelAndroid.packageName)
 
-    newAppActivityJava = open(pkgPath + AppActivityName, 'w')
-    newAppActivityJava.write(newJavaStr)
-    newAppActivityJava.close()
+    # newAppActivityJava = open(pkgPath + AppActivityName, 'w')
+    # newAppActivityJava.write(newJavaStr)
+    # newAppActivityJava.close()
     # AppActivity.java ------------------------------------------------
 
     # BBPushNotificationService.java
-    rawJavaStr = open(BBPushNotificationServiceSrc).read()
-    newJavaStr = rawJavaStr.replace('com.beibei.wordmaster', channelAndroid.packageName)
-    newAppActivityJava = open(BBPushNotificationServiceDst, 'w')
-    newAppActivityJava.write(newJavaStr)
-    newAppActivityJava.close()
+    # rawJavaStr = open(BBPushNotificationServiceSrc).read()
+    # newJavaStr = rawJavaStr.replace('com.beibei.wordmaster.R', channelAndroid.packageName + '.R')
+    # newAppActivityJava = open(BBPushNotificationServiceDst, 'w')
+    # newAppActivityJava.write(newJavaStr)
+    # newAppActivityJava.close()
     # BBPushNotificationService.java
 
     rawJavaStr = open(MyProgressDialogSrc).read()
-    newJavaStr = rawJavaStr.replace('com.beibei.wordmaster', channelAndroid.packageName)
+    newJavaStr = rawJavaStr.replace('com.beibei.wordmaster.R', channelAndroid.packageName + '.R')
     newAppActivityJava = open(MyProgressDialogDsc, 'w')
     newAppActivityJava.write(newJavaStr)
     newAppActivityJava.close()
@@ -509,6 +536,6 @@ if __name__ == "__main__":
 
     createLuaCodes(_ver, TEST_SERVER, buildTarget, channelAndroid, channeliOS, _lua)
     createObjectiveCCodes(_ver, TEST_SERVER, buildTarget, channeliOS, _objc)
-    createJavaCodes(_ver, TEST_SERVER, buildTarget, channelAndroid, _java, allChannelConfigurations)
+    createJavaCodes(_ver, TEST_SERVER, buildTarget, channelAndroid, _java, allChannelConfigurations, _androidProjSrcPath)
 
     setupAndroidProject(channelAndroid, _manifestSrc, _manifestDst, _androidProjSrcPath, _AppActivitySrc, _AppActivityName, _BBPushNotificationServiceSrc, _BBPushNotificationServiceDsc, _MyProgressDialogSrc, _MyProgressDialogDsc)
