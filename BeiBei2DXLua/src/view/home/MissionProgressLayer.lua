@@ -21,7 +21,7 @@ function MissionProgressLayer.getNotContainedInLocalDatas(callback)
     end)
 end
 
-function MissionProgressLayer.create(share)
+function MissionProgressLayer.create(share,dataShare)
     local missionCount = s_LocalDatabaseManager:getTodayTotalTaskNum()
     local completeCount = missionCount - s_LocalDatabaseManager:getTodayRemainTaskNum()
     if share ~= nil and share then
@@ -128,7 +128,7 @@ function MissionProgressLayer.create(share)
                             local a1 = cc.DelayTime:create(0.1)
                             local a2 = cc.CallFunc:create(function ()
                                 local Share = require('view.share.ShareCheckIn')
-                                local shareLayer = Share.create()
+                                local shareLayer = Share.create(dataShare)
                                 shareLayer:setPosition(0,-s_DESIGN_HEIGHT)
                                 local move = cc.MoveTo:create(0.3,cc.p(0,0))
                                 shareLayer:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),move,cc.CallFunc:create(function ()
@@ -208,10 +208,10 @@ function MissionProgressLayer.create(share)
             if eventType == ccui.TouchEventType.began then
                 playSound(s_sound_buttonEffect)   
             elseif eventType == ccui.TouchEventType.ended then
-                local action1 = cc.RotateBy:create(1,360)
-                local action2 = cc.FadeOut:create(1)
+                local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + 60  , s_DESIGN_HEIGHT - 60))
+                local action2 = cc.ScaleTo:create(0.5,0.15)
                 local action3 = cc.Spawn:create(action1,action2)
-                sender:runAction(cc.Sequence:create(action3, cc.CallFunc:create(enterGame)))
+                backProgress:runAction(cc.Sequence:create(action3, cc.CallFunc:create(enterGame)))
             end
         else
             return

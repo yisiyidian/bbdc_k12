@@ -1,0 +1,49 @@
+{
+"skeleton": { "hash": "6XOzs6ObN7ziJJr3uBS17rFJpDI", "spine": "2.1.18", "width": 153, "height": 377, "images": "./girl_wave/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "x": 78.63, "y": 190 }
+],
+"slots": [
+	{ "name": "girl_wave1", "bone": "bone", "attachment": "girl_wave6" }
+],
+"skins": {
+	"default": {
+		"girl_wave1": {
+			"girl_wave1": { "width": 155, "height": 377 },
+			"girl_wave2": { "width": 153, "height": 376 },
+			"girl_wave3": { "width": 153, "height": 377 },
+			"girl_wave4": { "width": 155, "height": 377 },
+			"girl_wave5": { "width": 153, "height": 376 },
+			"girl_wave6": { "width": 153, "height": 377 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"girl_wave1": {
+				"attachment": [
+					{ "time": 0, "name": "girl_wave1" },
+					{ "time": 0.1333, "name": "girl_wave2" },
+					{ "time": 0.2666, "name": "girl_wave3" },
+					{ "time": 0.4, "name": "girl_wave4" },
+					{ "time": 0.5333, "name": "girl_wave5" },
+					{ "time": 0.6666, "name": "girl_wave6" },
+					{ "time": 0.8, "name": "girl_wave1" },
+					{ "time": 3, "name": "girl_wave1" }
+				]
+			}
+		}
+	},
+	"stable_girl": {
+		"slots": {
+			"girl_wave1": {
+				"attachment": [
+					{ "time": 0, "name": "girl_wave1" }
+				]
+			}
+		}
+	}
+}
+}

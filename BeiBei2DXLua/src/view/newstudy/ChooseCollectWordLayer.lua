@@ -57,7 +57,6 @@ local function createKnow(word)
     choose_know_button:addChild(rubbish_bag)
 
     knowLabel = cc.Label:createWithSystemFont("太熟悉了","",30)
-    knowLabel:enableOutline(cc.c4b(58,185,224,255),1)
     knowLabel:setPosition(choose_know_button:getContentSize().width / 2, choose_know_button:getContentSize().height / 2)
     knowLabel:ignoreAnchorPointForPosition(false)
     knowLabel:setAnchorPoint(0.5,0.5)

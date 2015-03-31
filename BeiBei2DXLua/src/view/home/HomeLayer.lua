@@ -19,6 +19,7 @@ local list = {}
 local TEXT_CHANGE_ACCOUNT = '切换账号' -- "登出游戏"
 
 function HomeLayer.create()
+    --s_CURRENT_USER:addBeans(100)
     -- task
     local todayTotalBossNum     = s_LocalDatabaseManager:getTodayTotalBossNum()
     local todayRemainBossNum    = s_LocalDatabaseManager:getTodayRemainBossNum()
@@ -62,12 +63,27 @@ function HomeLayer.create()
     backColor:setAnchorPoint(0.5,0.5)
     backColor:ignoreAnchorPointForPosition(false)  
     backColor:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-    layer:addChild(backColor)
+    layer:addChild(backColor,1)
 
     local top = cc.Sprite:create('image/homescene/home_page_bg_top.png')
     top:setAnchorPoint(0.5,1)
     top:setPosition(0.5 * backColor:getContentSize().width,s_DESIGN_HEIGHT)
     backColor:addChild(top)
+
+    -- local girl = sp.SkeletonAnimation:create("res/spine/girl_wave/girl_wave.json", "res/spine/girl_wave/girl_wave.atlas", 1)
+    -- --girl:setAnchorPoint(0.9,0.7)
+    -- girl:setPosition(backColor:getContentSize().width * 0.06,s_DESIGN_HEIGHT * 0.7)
+    -- girl:setScale(0.8)
+    -- backColor:addChild(girl,0)
+    -- girl:addAnimation(0, 'animation', true)
+
+    local dataShare = require('view.home.DataShare').create()
+    backColor:addChild(dataShare,0,'dataShare')
+    
+    local background = cc.Sprite:create('image/homescene/home_back.png')
+    background:setAnchorPoint(0.5,0)
+    background:setPosition(0.5 * backColor:getContentSize().width,0)
+    backColor:addChild(background,1)
 
     local been_number_back = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
     been_number_back:setPosition(bigWidth-100, s_DESIGN_HEIGHT-70)
@@ -101,8 +117,9 @@ function HomeLayer.create()
     local checkInDisplay = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) and not s_isCheckInAnimationDisplayed
     if checkInDisplay then
         s_isCheckInAnimationDisplayed = true
-        mission_progress = MissionProgress.create(true)
+        mission_progress = MissionProgress.create(true,dataShare)
     else
+        dataShare:moveDown()
         mission_progress = MissionProgress.create()
         mission_progress.animation()
     end
@@ -181,7 +198,7 @@ function HomeLayer.create()
     button_main:setPosition(bigWidth / 2 - 166, 200)
     button_main:setRotation(180)
     button_main:addTouchEventListener(button_left_clicked)
-    backColor:addChild(button_main)
+    backColor:addChild(button_main,1)
 
     local icon_main = cc.Sprite:create('image/homescene/home_page_setting.png')
     icon_main:setPosition(button_main:getContentSize().width / 2,button_main:getContentSize().height / 2)
@@ -198,7 +215,7 @@ function HomeLayer.create()
         end
             
         local destinationLayer = DestinationLayer.create()
-        layer:addChild(destinationLayer)
+        layer:addChild(destinationLayer,1)
         destinationLayer:ignoreAnchorPointForPosition(false)
         destinationLayer:setAnchorPoint(0,0.5)
         destinationLayer:setPosition(s_RIGHT_X, s_DESIGN_HEIGHT/2)
@@ -267,7 +284,7 @@ function HomeLayer.create()
     button_shop:addChild(icon_shop)
 
     button_shop:addTouchEventListener(button_shop_clicked)
-    backColor:addChild(button_shop) 
+    backColor:addChild(button_shop,1) 
     layer.button_shop = button_shop
 
     --    layer:addFriendButton(backColor)  
@@ -311,7 +328,7 @@ function HomeLayer.create()
     button_reward:setScale9Enabled(true)
     --button_reward:setPosition(bigWidth / 2 + 166, 200)
     button_reward:addTouchEventListener(button_reward_clicked)
-    backColor:addChild(button_reward)   
+    backColor:addChild(button_reward,1)   
 
 
     --icon_reward = cc.Sprite:create('image/homescene/home_page_medal.png')
@@ -327,7 +344,7 @@ function HomeLayer.create()
     button_data:setAnchorPoint(0.5,0)
     button_data:setPosition(bigWidth/2, 0)
     --button_data:addTouchEventListener(button_data_clicked)
-    backColor:addChild(button_data)
+    backColor:addChild(button_data,1)
     layer.dataButton = button_data
 
     data_back = cc.LayerColor:create(cc.c4b(255,255,255,255), bigWidth, s_DESIGN_HEIGHT - 280)  
@@ -353,7 +370,7 @@ function HomeLayer.create()
     -- setting_back:setOpacity(0)
     setting_back:setAnchorPoint(1,0.5)
     setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
-    layer:addChild(setting_back)
+    layer:addChild(setting_back,1)
 
     local function updateSettingLayer()
         local button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
@@ -573,7 +590,7 @@ function HomeLayer.create()
     button_friend:setAnchorPoint(1,0.5)
     --button_friend:setPosition(bigWidth / 2 - 1, 200)
     button_friend:addTouchEventListener(button_right_clicked)
-    backColor:addChild(button_friend)   
+    backColor:addChild(button_friend,1)   
 
     icon_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
     button_friend:addChild(icon_friend)
@@ -599,7 +616,7 @@ function HomeLayer.create()
             button_friend:setAnchorPoint(1,0.5)
             --button_friend:setPosition(bigWidth / 2 - 1, 200)
             button_friend:addTouchEventListener(button_right_clicked)
-            backColor:addChild(button_friend)   
+            backColor:addChild(button_friend,1)   
 
             icon_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
             button_friend:addChild(icon_friend)
@@ -608,31 +625,33 @@ function HomeLayer.create()
         end
     end
     button_friend:scheduleUpdateWithPriorityLua(updateFriendButton,0)
-    s_UserBaseServer.getFolloweesOfCurrentUser( 
-        function (api,result)
-            s_UserBaseServer.getFollowersOfCurrentUser( 
-                function (api, result)
-                    --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
-                    s_CURRENT_USER:getFriendsInfo()
-                    --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+    if math.floor(s_LocalDatabaseManager.isBuy() / math.pow(10,0)) == 0 then
+        s_UserBaseServer.getFolloweesOfCurrentUser( 
+            function (api,result)
+                s_UserBaseServer.getFollowersOfCurrentUser( 
+                    function (api, result)
+                        --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+                        s_CURRENT_USER:getFriendsInfo()
+                        --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
 
-                    if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
-                        local redHint = cc.Sprite:create('image/friend/fri_infor.png')
-                        redHint:setPosition(button_friend:getPositionX() - button_friend:getContentSize().width * 0.2, button_friend:getPositionY() + button_friend:getContentSize().height * 0.4)
-                        backColor:addChild(redHint,1,'redHint')
+                        if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
+                            local redHint = cc.Sprite:create('image/friend/fri_infor.png')
+                            redHint:setPosition(bigWidth / 2 - 22, 233)
+                            backColor:addChild(redHint,1,'redHint')
 
-                        local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
-                        num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
-                        redHint:addChild(num)
+                            local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
+                            num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
+                            redHint:addChild(num)
+                        end
+                    end,
+                    function (api, code, message, description)
                     end
-                end,
-                function (api, code, message, description)
-                end
-            )
-        end,
-        function (api, code, message, description)
-        end
-    )
+                )
+            end,
+            function (api, code, message, description)
+            end
+        )
+    end
 
 
     local moveLength = 100
@@ -680,7 +699,7 @@ function HomeLayer.create()
                 layer:setButtonEnabled(true)
                 local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
                 local action2 = cc.CallFunc:create(function()
-                    button_data:setLocalZOrder(0)
+                    button_data:setLocalZOrder(1)
                     data_back:removeChildByName('PersonalInfo')
                 end)
                 button_data:runAction(cc.Sequence:create(action1, action2))
@@ -745,7 +764,7 @@ function HomeLayer.create()
             layer:setButtonEnabled(true)
             local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
             local action2 = cc.CallFunc:create(function()
-                button_data:setLocalZOrder(0)
+                button_data:setLocalZOrder(1)
                 data_back:removeChildByName('PersonalInfo')
             end)
             button_data:runAction(cc.Sequence:create(action1, action2))
@@ -815,7 +834,7 @@ function HomeLayer.create()
 
             local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
             local action2 = cc.CallFunc:create(function()
-                button_data:setLocalZOrder(0)
+                button_data:setLocalZOrder(1)
                 data_back:removeChildByName('PersonalInfo')
             end)
             button_data:runAction(cc.Sequence:create(action1, action2))
@@ -861,7 +880,7 @@ function HomeLayer:hideDataLayer()
     self.button_enter.animation()
     local action1 = cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, 0))
     local action2 = cc.CallFunc:create(function()
-        self.dataButton:setLocalZOrder(0)
+        self.dataButton:setLocalZOrder(1)
         self.dataBack:removeChildByName('PersonalInfo')
     end)
     self.dataButton:runAction(cc.Sequence:create(action1, action2))

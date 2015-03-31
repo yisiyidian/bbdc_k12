@@ -380,9 +380,9 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         end
         
         if not match then
-            if endTime < 1 and not checkAtOnce then
-                return
-            end
+            -- if endTime < 1 and not checkAtOnce then
+            --     return
+            -- end
             layer:clearCombo()
             local s
             if layer.girlAfraid then
@@ -711,14 +711,14 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             layer.bubble[1]:setVisible(false)
         end
 
-        if endTime < 1 and #selectStack > 0 and isTouchEnded then
-            endTime = endTime + delta
-        end
-        if endTime >= 1 then
+        -- if endTime < 1 and #selectStack > 0 and isTouchEnded then
+        --     endTime = endTime + delta
+        -- end
+        -- if endTime >= 1 then
             
-            checkAnswer(false)
-            endTime = 0
-        end
+        --     checkAnswer(false)
+        --     endTime = 0
+        -- end
 
         if layer.girlAfraid and HINT_TIME == 10 then
             HINT_TIME = 4
