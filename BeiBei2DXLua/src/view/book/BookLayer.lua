@@ -17,6 +17,25 @@ function BookLayer.create()
     backColor:ignoreAnchorPointForPosition(false)  
     backColor:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
     layer:addChild(backColor)    
+
+ 
+    local ButtonClick = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            playSound(s_sound_buttonEffect)   
+        elseif eventType == ccui.TouchEventType.ended then
+            cx.CXUtils:getInstance():shutDownApp()
+        end
+    end
+      
+    local testButton = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png","")
+    testButton:setPosition(s_DESIGN_WIDTH - 100,s_DESIGN_HEIGHT - 100)
+    testButton:setTitleText("登出")
+    testButton:setTitleColor(cc.c4b(255,255,255,255))
+    testButton:setTitleFontSize(40)
+    testButton:ignoreAnchorPointForPosition(false)
+    testButton:setAnchorPoint(1,1)
+    testButton:addTouchEventListener(ButtonClick)
+    layer:addChild(testButton)
     
     local click_back = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
