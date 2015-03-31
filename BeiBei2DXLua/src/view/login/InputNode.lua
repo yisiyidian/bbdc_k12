@@ -6,6 +6,7 @@ end)
 
 InputNode.type_username = 'username'
 InputNode.type_pwd = 'pwd'
+InputNode.type_teachername = "teachername"
 
 function InputNode.create(type, hint, eventHandleCB)
     local width = 450
@@ -16,15 +17,10 @@ function InputNode.create(type, hint, eventHandleCB)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
     
-    local backImage
     local cursor
     main.textField = nil
     
-    if type ~= InputNode.type_pwd then
-        backImage = cc.Sprite:create("image/login/sl_username.png")
-    else
-        backImage = cc.Sprite:create("image/login/sl_password.png")
-    end    
+    local backImage = cc.Sprite:create("image/login/white_shurukuang_zhuce.png")
     backImage:setPosition(width/2, height/2)
     main:addChild(backImage)
       
@@ -74,7 +70,7 @@ function InputNode.create(type, hint, eventHandleCB)
     main:addChild(cursor)
     
     local update = function(dt)
-        cursor:setPosition(30+main.textField:getContentSize().width, height/2)
+        cursor:setPosition(15+main.textField:getContentSize().width, height/2)
     end
     main:scheduleUpdateWithPriorityLua(update, 0)
 
