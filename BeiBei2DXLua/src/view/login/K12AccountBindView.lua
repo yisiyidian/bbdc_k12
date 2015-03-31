@@ -131,25 +131,30 @@ function K12AccountBindView:init(t, ex)
     self.inputnode:setPosition(self.back_width / 2, 225)
     self.bg:addChild(self.inputnode)
 
-    local submit_clicked = function()
-        local str = self.inputnode.textField:getString()
-        if K12AccountBindView.Type_username == t then 
-            self:gotoPwd(str)
-        elseif K12AccountBindView.Type_password == t then 
-            self:gotoUpdateUsernameAndPassword(str)
-        else
-            self:gotoAddTeacher(str)
+    local submit_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local str = self.inputnode.textField:getString()
+            if K12AccountBindView.Type_username == t then 
+                self:gotoPwd(str)
+            elseif K12AccountBindView.Type_password == t then 
+                self:gotoUpdateUsernameAndPassword(str)
+            else
+                self:gotoAddTeacher(str)
+            end
         end
     end
 
-    local submit = Button.create("long","blue","下一步")
-    submit:setPosition(self.back_width / 2, 100)
+    local submit = ccui.Button:create("image/login/sl_button_confirm.png","image/login/sl_button_confirm.png","")
+    submit:setPosition(self.back_width/2, 100)
+    submit:addTouchEventListener(submit_clicked)
     self.bg:addChild(submit)
 
-    submit.func = function ()
-        submit_clicked()
-    end
-
+    local label_name = cc.Label:createWithSystemFont("下一步", "", 34)
+    label_name:setColor(cc.c4b(255,255,255,255))
+    label_name:ignoreAnchorPointForPosition(false)
+    label_name:setAnchorPoint(0,0.5)
+    label_name:setPosition(30, submit:getContentSize().height/2)
+    submit:addChild(label_name)
 end
 
 function K12AccountBindView:gotoPwd(username)
