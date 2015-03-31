@@ -7,7 +7,7 @@ function GuideLayer.create()
 
     local layer = GuideLayer.new()
     
-    local back = cc.Sprite:create("image/newsyudy/background_yindao_big.png")
+    local back = cc.Sprite:create("image/newstudy/background_yindao_big.png")
     back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.55*3)
     back:ignoreAnchorPointForPosition(false)
     back:setAnchorPoint(0.5,0.5)
@@ -17,7 +17,10 @@ function GuideLayer.create()
     local action2 = cc.EaseBackOut:create(action1)
     back:runAction(action2)
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     local function closeAnimation()
         local action1 = cc.MoveTo:create(0.2, cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.55*3))
         local action2 = cc.EaseBackIn:create(action1)
