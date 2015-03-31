@@ -66,6 +66,14 @@ function DataShare:ctor()
     node:addChild(girl,-1)
     girl:addAnimation(0, 'animation', true)
 
+   	local girlBtn = ccui.Button:create('image/homescene/datashare/main_interface_drop_down_share_beibei.png')
+   	girlBtn:setAnchorPoint(0,0)
+   	girlBtn:setScale(4 / 3)
+   	girlBtn:setOpacity(0)
+   	girlBtn:setPosition(0,0)
+   	girl:addChild(girlBtn)
+   	
+
 	self.bangle = bangle
 	self.girl = girl
 	self.node = node
@@ -76,6 +84,7 @@ function DataShare:ctor()
 			
 		end
 	end  
+	girlBtn:addTouchEventListener(onBangle)
 	bangle:addTouchEventListener(onBangle)
 
 	local button = ccui.Button:create('image/homescene/datashare/main_interface_drop_down_share_up_button.png','image/homescene/datashare/main_interface_drop_down_share_up_button_click.png')

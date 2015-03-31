@@ -19,6 +19,7 @@ local list = {}
 local TEXT_CHANGE_ACCOUNT = '切换账号' -- "登出游戏"
 
 function HomeLayer.create()
+    --s_CURRENT_USER:addBeans(100)
     -- task
     local todayTotalBossNum     = s_LocalDatabaseManager:getTodayTotalBossNum()
     local todayRemainBossNum    = s_LocalDatabaseManager:getTodayRemainBossNum()
@@ -214,7 +215,7 @@ function HomeLayer.create()
         end
             
         local destinationLayer = DestinationLayer.create()
-        layer:addChild(destinationLayer)
+        layer:addChild(destinationLayer,1)
         destinationLayer:ignoreAnchorPointForPosition(false)
         destinationLayer:setAnchorPoint(0,0.5)
         destinationLayer:setPosition(s_RIGHT_X, s_DESIGN_HEIGHT/2)
@@ -283,7 +284,7 @@ function HomeLayer.create()
     button_shop:addChild(icon_shop)
 
     button_shop:addTouchEventListener(button_shop_clicked)
-    backColor:addChild(button_shop) 
+    backColor:addChild(button_shop,1) 
     layer.button_shop = button_shop
 
     --    layer:addFriendButton(backColor)  
@@ -624,31 +625,33 @@ function HomeLayer.create()
         end
     end
     button_friend:scheduleUpdateWithPriorityLua(updateFriendButton,0)
-    s_UserBaseServer.getFolloweesOfCurrentUser( 
-        function (api,result)
-            s_UserBaseServer.getFollowersOfCurrentUser( 
-                function (api, result)
-                    --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
-                    s_CURRENT_USER:getFriendsInfo()
-                    --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+    if math.floor(s_LocalDatabaseManager.isBuy() / math.pow(10,0)) == 0 then
+        s_UserBaseServer.getFolloweesOfCurrentUser( 
+            function (api,result)
+                s_UserBaseServer.getFollowersOfCurrentUser( 
+                    function (api, result)
+                        --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
+                        s_CURRENT_USER:getFriendsInfo()
+                        --print("seenFansCount = %d, fansCount = %d",s_CURRENT_USER.seenFansCount,s_CURRENT_USER.fansCount)
 
-                    if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
-                        local redHint = cc.Sprite:create('image/friend/fri_infor.png')
-                        redHint:setPosition(button_friend:getPositionX() - button_friend:getContentSize().width * 0.2, button_friend:getPositionY() + button_friend:getContentSize().height * 0.4)
-                        backColor:addChild(redHint,1,'redHint')
+                        if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
+                            local redHint = cc.Sprite:create('image/friend/fri_infor.png')
+                            redHint:setPosition(bigWidth / 2 - 22, 233)
+                            backColor:addChild(redHint,1,'redHint')
 
-                        local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
-                        num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
-                        redHint:addChild(num)
+                            local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
+                            num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
+                            redHint:addChild(num)
+                        end
+                    end,
+                    function (api, code, message, description)
                     end
-                end,
-                function (api, code, message, description)
-                end
-            )
-        end,
-        function (api, code, message, description)
-        end
-    )
+                )
+            end,
+            function (api, code, message, description)
+            end
+        )
+    end
 
 
     local moveLength = 100
