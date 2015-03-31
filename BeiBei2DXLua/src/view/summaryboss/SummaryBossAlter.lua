@@ -46,7 +46,7 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
             playMusic(s_sound_win,true)
         end)
     else    
-        if not bossLayer.useItem and s_CURRENT_USER:getBeans() >= 10 then
+        if not bossLayer.useItem then
             layer:lose(entrance)
         else
             layer:lose2(entrance)
@@ -126,20 +126,25 @@ function SummaryBossAlter:lose(entrance)
 
 
     local function button_buyTime_func()
-        s_CURRENT_USER:addBeans(-10)
-        saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
-        local boss = self.bossLayer.bossNode
-        local distance = s_DESIGN_WIDTH * 0.45 * 30 / self.bossLayer.totalTime
-        self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
-        s_SCENE:callFuncWithDelay(0.3,function (  )
-            -- body
-            self:getChildByName('background'):runAction(cc.FadeOut:create(1.0))
-            boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75 + 20)),cc.CallFunc:create(function (  )
+        if s_CURRENT_USER:getBeans() >= 10 then
+            s_CURRENT_USER:addBeans(-10)
+            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
+            local boss = self.bossLayer.bossNode
+            local distance = s_DESIGN_WIDTH * 0.45 * 30 / self.bossLayer.totalTime
+            self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
+            s_SCENE:callFuncWithDelay(0.3,function (  )
                 -- body
-                self:removeChildByName('background')
-                self:addTime()
-            end)))
-        end)
+                self:getChildByName('background'):runAction(cc.FadeOut:create(1.0))
+                boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75 + 20)),cc.CallFunc:create(function (  )
+                    -- body
+                    self:removeChildByName('background')
+                    self:addTime()
+                end)))
+            end)
+        else
+            local shopErrorAlter = require("view.shop.ShopErrorAlter").create()
+            s_SCENE:popup(shopErrorAlter)
+        end
     end
 
     buyTimeBtn.func = function ()
