@@ -68,7 +68,6 @@ local function createKnow(word)
     progressLabel:setPosition(choose_know_button:getContentSize().width *0.8, choose_know_button:getContentSize().height / 2)
     progressLabel:ignoreAnchorPointForPosition(false)
     progressLabel:setAnchorPoint(0.5,0.5)
-    progressLabel:enableOutline(cc.c4b(58,185,224,255),1)
     progressLabel:setColor(cc.c4b(58,185,224,255))
     choose_know_button:addChild(progressLabel)
 
@@ -86,8 +85,6 @@ local function createKnow(word)
             choose_know_button:setTexture("image/newstudy/button_study_know_pressed.png")   
             knowLabel:setColor(cc.c4b(127,239,255,255))
             progressLabel:setColor(cc.c4b(127,239,255,255))
-            knowLabel:enableOutline(cc.c4b(127,239,255,255),1)
-            progressLabel:enableOutline(cc.c4b(127,239,255,255),1)
         end
         return true
     end
@@ -97,8 +94,6 @@ local function createKnow(word)
         rubbish_bag:setTexture("image/newstudy/button_study_know_rubbish.png")
         knowLabel:setColor(cc.c4b(58,185,224,255))
         progressLabel:setColor(cc.c4b(58,185,224,255))
-        progressLabel:enableOutline(cc.c4b(58,185,224,255),1)
-        knowLabel:enableOutline(cc.c4b(58,185,224,255),1)
         local location = layer:convertToNodeSpace(touch:getLocation())
         if cc.rectContainsPoint(choose_know_button:getBoundingBox(),location) then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -214,7 +209,6 @@ local function createDontknow(word,wrongNum)
     progressLabel:ignoreAnchorPointForPosition(false)
     progressLabel:setAnchorPoint(0.5,0.5)
     progressLabel:setColor(cc.c4b(255,255,255,255))
-    progressLabel:enableOutline(cc.c4b(255,255,255,255),1)
     choose_dontknow_button.button_front:addChild(progressLabel)
 
     beibei_bag = cc.Sprite:create("image/newstudy/daizi_study_unknow.png")
@@ -299,6 +293,11 @@ end
 function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWordNameState)
     if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_1 then
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_1 + 1)
+        s_SCENE:callFuncWithDelay(0.5, function()
+            local GuideLayer = require("view.newstudy.GuideLayer")
+            local guideLayer = GuideLayer.create(GUIDE_ENTER_COLLECT_WORD_LAYER)
+                s_SCENE:popup(guideLayer)
+            end)
     end
 
     AnalyticsFirstDayEnterSecondIsland()
@@ -353,10 +352,6 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
 
     self.dontknow = createDontknow(wordName,wrongWordNum)
     backColor:addChild(self.dontknow)
-
-    local GuideLayer = require("view.newstudy.GuideLayer")
-    local guideLayer = GuideLayer.create()
-    s_SCENE:popup(guideLayer)
 
     s_HttpRequestClient.downloadSoundsFromURL(s_CorePlayManager.currentIndex)
 end
