@@ -304,7 +304,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
                 if node.hasSelected == false then
                    local number = GuideLine:findDistance(node,node_current)
                    if number == gap then
-                        local line = GuideLine.create("dark")
+                        local line = GuideLine.create("light")
                         line:setPosition((node_current_p.x+node_p.x)/2,(node_current_p.y+node_p.y)/2)
                         guideLineLayer:addChild(line)
                         if node_current_p.y == node_p.y then

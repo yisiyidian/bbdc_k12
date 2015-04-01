@@ -3,10 +3,11 @@ require("common.global")
 
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 local ProgressBar           = require("view.newstudy.NewStudyProgressBar")
-local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip") 
+local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip")
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
 local PauseButton           = require("view.newreviewboss.NewReviewBossPause")
 local Button                = require("view.button.longButtonInStudy")
+local GuideLayer = require("view.newstudy.GuideLayer")
 
 local  ChooseCollectWordLayer = class("ChooseCollectWordLayer", function ()
     return cc.Layer:create()
@@ -110,6 +111,10 @@ local function createKnow(word)
             action2,
             cc.CallFunc:create(function ()
                 s_CorePlayManager.leaveStudyModel(true)
+                if todayNumber == 0 and s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_2 then
+                    local guideLayer = GuideLayer.create(GUIDE_CLICK_I_KNOW_BUTTON,word)
+                    s_SCENE:popup(guideLayer)             
+                end
             end)))  
         end
     end
@@ -294,7 +299,6 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_1 then
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_1 + 1)
         s_SCENE:callFuncWithDelay(0.5, function()
-            local GuideLayer = require("view.newstudy.GuideLayer")
             local guideLayer = GuideLayer.create(GUIDE_ENTER_COLLECT_WORD_LAYER)
                 s_SCENE:popup(guideLayer)
             end)
@@ -328,12 +332,12 @@ function ChooseCollectWordLayer:ctor(wordName, wrongWordNum, preWordName, preWor
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
 
     local progressBar_total_number = getMaxWrongNumEveryLevel()
-
-    self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
-    backColor:addChild(self.lastWordAndTotalNumber,1)
+    
+    local lastWordAndTotalNumber = LastWordAndTotalNumber.create()
+    backColor:addChild(lastWordAndTotalNumber,1)
 
     if preWordName ~= nil then
-        self.lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
+        lastWordAndTotalNumber.setWord(preWordName,preWordNameState)
     end
 
     local soundMark = SoundMark.create(self.wordInfo[2], self.wordInfo[3], self.wordInfo[4])

@@ -24,7 +24,6 @@ function LastWordAndTotalNumberTip.create()
     
     layer.todayNumber = 9999
     layer.word  = "apple"
-
     
     layer.setNumber = function (todayNumber)
         if todayNumber == -1 then
@@ -44,7 +43,7 @@ function LastWordAndTotalNumberTip.create()
             richtext1:setPosition(bigWidth/2 - 150,1100)     
             layer:addChild(richtext1,1)
         end
-    end
+    end   
     
     layer.setWord = function (word,bool)
         if word ~= 0 then
@@ -68,16 +67,22 @@ function LastWordAndTotalNumberTip.create()
             lastButton:addTouchEventListener(lastButtonClick)
             layer:addChild(lastButton,1)
 
-            local mark = cc.Sprite:create("image/newstudy/right.png")
-            mark:setPosition(lastButton:getContentSize().width * 0.1,lastButton:getContentSize().height * 0.5)
-            mark:setScale(0.8)
-            lastButton:addChild(mark)
-            
-            if bool == true then
-                mark:setTexture("image/newstudy/right.png")
-            else
-                mark:setTexture("image/newstudy/wrong.png")
+
+
+            if bool == nil then
+                lastButton:setEnabled(false)
             end
+
+            -- local mark = cc.Sprite:create("image/newstudy/right.png")
+            -- mark:setPosition(lastButton:getContentSize().width * 0.1,lastButton:getContentSize().height * 0.5)
+            -- mark:setScale(0.8)
+            -- lastButton:addChild(mark)
+            
+            -- if bool == true then
+            --     mark:setTexture("image/newstudy/right.png")
+            -- else
+            --     mark:setTexture("image/newstudy/wrong.png")
+            -- end
 
             local lastWord = cc.Label:createWithSystemFont(layer.word,"Helvetica",26)
             lastWord:setColor(cc.c4b(119,232,251,255))

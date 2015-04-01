@@ -20,12 +20,12 @@ function GuideLine:createLayer(oldLayer)
 end
 
 function GuideLine.create(color)
-    local line = cc.Sprite:create("image/guideline/line_light_study.png")
+    local line = cc.Sprite:create("image/guideline/line_dark_study.png")
     line:setAnchorPoint(0.5,0.5)
     line:ignoreAnchorPointForPosition(false)
     
-    if color == "dark" then
-    	line:setTexture("image/guideline/line_dark_study.png")
+    if color == "light" then
+    	line:setTexture("image/guideline/line_light_study.png")
     end
 
     return line
