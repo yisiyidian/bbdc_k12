@@ -673,7 +673,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
             node.win()
         end
         selectStack = {}
-
+        guideLineLayer:removeAllChildren()
         firstFlipNode:setVisible(false)
 
         main.success()

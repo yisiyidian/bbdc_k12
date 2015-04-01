@@ -36,6 +36,7 @@ function HomeLayer.create()
     local totalStudyDayNum      = s_LocalDatabaseManager.getStudyDayNum()
 
     -- add tutorial step
+    AnalyticsTutorialHome()
     if s_CURRENT_USER.tutorialStep == s_tutorial_home then
         s_CURRENT_USER:setTutorialStep(s_tutorial_home+1)
         -- print('tutorial_step:'..s_CURRENT_USER.tutorial_step)

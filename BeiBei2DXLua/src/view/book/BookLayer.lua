@@ -67,7 +67,8 @@ function BookLayer.create()
         local key = key_array[i]
         local click = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
-
+                AnalyticsTutorialBookSelect()
+                
                 if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
                     s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
                     s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_book_select+1)

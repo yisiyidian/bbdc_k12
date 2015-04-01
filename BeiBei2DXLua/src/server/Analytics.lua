@@ -126,6 +126,39 @@ end
 
 ----------------------------------------------------------------------------------------
 
+function AnalyticsTutorialBookSelect()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        print('Analytics', getAnalyticsPrefix() .. 'TutorialBookSelect_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialBookSelect_1st_day', 'TOUCH')
+        if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
+            print('Analytics', getAnalyticsPrefix() .. 'TutorialBookSelect_1st_day_1st_time', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialBookSelect_1st_day_1st_time', 'TOUCH')
+        end
+    end
+    print('Analytics', getAnalyticsPrefix() .. 'TutorialBookSelect', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialBookSelect', 'TOUCH')
+end
+
+function AnalyticsTutorialHome()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        print('Analytics', getAnalyticsPrefix() .. 'TutorialHome_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialHome_1st_day', 'TOUCH')
+        if s_CURRENT_USER.tutorialStep == s_tutorial_home then
+            print('Analytics', getAnalyticsPrefix() .. 'TutorialHome_1st_day_1st_time', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialHome_1st_day_1st_time', 'TOUCH')
+        end
+    end
+    print('Analytics', getAnalyticsPrefix() .. 'TutorialHome', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialHome', 'TOUCH')
+end
+
+
+function AnalyticsTutorialLevelSelect()
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
+        print('Analytics', getAnalyticsPrefix() .. 'TutorialLevelSelect_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialLevelSelect_1st_day', 'TOUCH')
+        if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
+            print('Analytics', getAnalyticsPrefix() .. 'TutorialLevelSelect_1st_day_1st_time', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialLevelSelect_1st_day_1st_time', 'TOUCH')
+        end
+    end
+    print('Analytics', getAnalyticsPrefix() .. 'TutorialLevelSelect', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialLevelSelect', 'TOUCH')
+end
+
+----------------------------------------------------------------------------------------
+
 function AnalyticsChangeBookBtn()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'ChangeBookBtn_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ChangeBookBtn_1st_day', 'TOUCH')
