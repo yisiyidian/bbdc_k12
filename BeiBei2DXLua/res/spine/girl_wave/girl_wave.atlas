@@ -1,0 +1,48 @@
+
+girl_wave.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+girl_wave1
+  rotate: false
+  xy: 2, 2
+  size: 155, 377
+  orig: 155, 377
+  offset: 0, 0
+  index: -1
+girl_wave4
+  rotate: false
+  xy: 2, 2
+  size: 155, 377
+  orig: 155, 377
+  offset: 0, 0
+  index: -1
+girl_wave2
+  rotate: false
+  xy: 469, 3
+  size: 153, 376
+  orig: 153, 376
+  offset: 0, 0
+  index: -1
+girl_wave5
+  rotate: false
+  xy: 469, 3
+  size: 153, 376
+  orig: 153, 376
+  offset: 0, 0
+  index: -1
+girl_wave3
+  rotate: false
+  xy: 159, 2
+  size: 153, 377
+  orig: 153, 377
+  offset: 0, 0
+  index: -1
+girl_wave6
+  rotate: false
+  xy: 314, 2
+  size: 153, 377
+  orig: 153, 377
+  offset: 0, 0
+  index: -1

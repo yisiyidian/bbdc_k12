@@ -1,32 +1,17 @@
 package c.bb.dc;
 
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URLConnection;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
-import org.apache.http.util.ByteArrayBuffer;
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
-import android.app.AlarmManager;
 import android.app.PendingIntent;
-import android.app.ProgressDialog;
-import android.content.BroadcastReceiver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -35,11 +20,11 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.StrictMode;
-import android.provider.*;
+import android.provider.MediaStore;
 import android.provider.MediaStore.Images;
+import android.provider.Settings;
 import android.util.Log;
 import android.widget.Toast;
-import c.bb.dc.notification.*;
 import c.bb.dc.sns.CXTencentSDKCall;
 
 import com.avos.avoscloud.AVAnalytics;
@@ -55,12 +40,13 @@ import com.avos.avoscloud.GetDataCallback;
 import com.avos.avoscloud.GetFileCallback;
 import com.avos.avoscloud.LogInCallback;
 import com.avos.avoscloud.ProgressCallback;
-import com.avos.avoscloud.SignUpCallback;
 import com.avos.avoscloud.SaveCallback;
-import com.avos.sns.*;
-import com.umeng.analytics.MobclickAgent;
+import com.avos.avoscloud.SignUpCallback;
+import com.avos.sns.SNS;
+import com.avos.sns.SNSType;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
+import com.umeng.analytics.MobclickAgent;
 
 public class BBNDK {
 	private static String _hostIPAdress = "0.0.0.0";
@@ -557,58 +543,6 @@ public class BBNDK {
 			}
 			
 		});
-	}
-	
-	// ***************************************************************************************************************************
-	// push Notification
-	// ***************************************************************************************************************************	
-	
-	private static ArrayList<BBPushNotification> notis = new ArrayList<BBPushNotification>();
-	
-	public static void pushNotification() {
-		long ms = 1 * 60 * 60 * 1000;
-		long hourNow = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-		long offsetTomorrow12 = (12 - hourNow + 24) * ms;
-		long offsetTomorrow20 = (20 - hourNow + 24) * ms;
-		long offsetDayAfterTomorrow20 = (20 - hourNow + 48) * ms;
-		
-		Class<?> a[] = {BBPushNotificationReceiverA.class, BBPushNotificationReceiverB.class};
-		Class<?> b[] = {BBPushNotificationReceiverC.class, BBPushNotificationReceiverA.class};
-		Class<?> c[] = {BBPushNotificationReceiverB.class, BBPushNotificationReceiverC.class};
-		Random random = new Random(System.currentTimeMillis());
-		int r = random.nextInt() % 300;
-		Class<?> ran[] = a;
-		if (r < -100) ran = b;
-		if (r > 100) ran = c;
-		
-		BBPushNotification n = null;
-		
-//		n = new BBPushNotification();
-//		n.pushNotification(System.currentTimeMillis() + 3000, _instance, BBPushNotificationReceiverA.class);
-//		notis.add(n);
-		
-		n = new BBPushNotification();
-		n.pushNotification(System.currentTimeMillis() + offsetTomorrow12, _instance, ran[0]);
-		notis.add(n);
-		
-		n = new BBPushNotification();
-		n.pushNotification(System.currentTimeMillis() + offsetTomorrow20, _instance, ran[1]);
-		notis.add(n);
-		
-		n = new BBPushNotification();
-		n.pushNotification(System.currentTimeMillis() + offsetDayAfterTomorrow20, _instance, BBPushNotificationReceiverD.class);
-		notis.add(n);
-	}
-	
-	public static void cancelNotification() {
-//		AlarmManager alarmManager = (AlarmManager)_instance.getSystemService(android.content.Context.ALARM_SERVICE);
-//	    alarmManager.cancel(_pendingIntent);
-//	    return alarmManager;
-		
-		for (BBPushNotification obj : notis) {
-			obj.cancelNotification(_instance);
-		}
-		notis.clear();
 	}
 	
 	// ***************************************************************************************************************************

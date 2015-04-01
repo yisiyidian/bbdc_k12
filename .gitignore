@@ -54,7 +54,7 @@ BeiBei2DXLua/frameworks/runtime-src/proj.ios_mac/ios/AppVersionInfo.h
 BeiBei2DXLua/src/AppVersionInfo.lua
 BeiBei2DXLua/frameworks/runtime-src/proj.android/AndroidManifest.xml
 BeiBei2DXLua/frameworks/runtime-src/proj.android/src/c/bb/dc/notification/BBPushNotificationService.java
-BeiBei2DXLua/frameworks/runtime-src/proj.android/src/com/beibei/wordmaster
+# BeiBei2DXLua/frameworks/runtime-src/proj.android/src/com/beibei/wordmaster
 
 tmp_apk
 tmp_asset
@@ -63,3 +63,4 @@ BeiBei2DXLua/frameworks/runtime-src/proj.android/src/c/bb/dc/MyProgressDialog.ja
 
 BeiBei2DXLua/src/model/words
 
+App.java

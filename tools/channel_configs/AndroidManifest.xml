@@ -50,7 +50,9 @@
                       android:largeScreens="true"
                       android:xlargeScreens="true"/>
 
-  <application android:allowBackup="true"
+  <application 
+      android:name="com.beibei.wordmaster.App"
+      android:allowBackup="true"
       android:icon="@drawable/icon"
       android:label="@string/app_name">
     
@@ -68,24 +70,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <service android:name="c.bb.dc.notification.BBPushNotificationService"
-        android:enabled="true" />
-        <service android:name="c.bb.dc.notification.BBPushNotificationServiceA"
-        android:enabled="true" />
-        <service android:name="c.bb.dc.notification.BBPushNotificationServiceB"
-        android:enabled="true" />
-        <service android:name="c.bb.dc.notification.BBPushNotificationServiceC"
-        android:enabled="true" />
-        <service android:name="c.bb.dc.notification.BBPushNotificationServiceD"
-        android:enabled="true" />
-        
-        <receiver android:name="c.bb.dc.notification.BBPushNotificationReceiver"/>
-        <receiver android:name="c.bb.dc.notification.BBPushNotificationReceiverA"/>
-        <receiver android:name="c.bb.dc.notification.BBPushNotificationReceiverB"/>
-        <receiver android:name="c.bb.dc.notification.BBPushNotificationReceiverC"/>
-        <receiver android:name="c.bb.dc.notification.BBPushNotificationReceiverD"/>
-        
+
+        <!-- avos push -->
+        <service android:name="com.avos.avoscloud.PushService"/>
+
+        <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="c.bb.dc.notification.AvosReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.beibei.wordmaster.push" />
+            </intent-filter>
+        </receiver>
+
 <!-- tencent start -->
         <activity
          android:name="com.tencent.tauth.AuthActivity"

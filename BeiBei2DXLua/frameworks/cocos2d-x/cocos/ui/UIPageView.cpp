@@ -226,7 +226,7 @@ void PageView::onSizeChanged()
 {
     Layout::onSizeChanged();
     if (isVertical) {
-        _rightBoundary = -getContentSize().height;
+        _rightBoundary = - getContentSize().height;
     }
     else {
         _rightBoundary = getContentSize().width;
@@ -422,6 +422,7 @@ void PageView::movePages(float offset)
         }
         
     }
+    CCLOG("%f",offset);
 }
 
 bool PageView::scrollPages(float touchOffset)
@@ -578,7 +579,8 @@ void PageView::handleReleaseLogic(Touch *touch)
         {
             if (_curPageIdx >= pageCount-1)
             {
-                scrollPages(-curPageLocation);
+                //scrollPages(-curPageLocation);
+                scrollToPage(pageCount-1);
             }
             else
             {
@@ -589,7 +591,8 @@ void PageView::handleReleaseLogic(Touch *touch)
         {
             if (_curPageIdx <= 0)
             {
-                scrollPages(-curPageLocation);
+                //scrollPages(-curPageLocation);
+                scrollToPage(0);
             }
             else
             {
@@ -732,8 +735,8 @@ void PageView::setVertical(bool v){
     isVertical = v;
     if (v) {
         _curPageIdx = 100;
-        _rightBoundary = getContentSize().height;
-        _leftBoundary = getContentSize().height;
+        //_rightBoundary = 0.1 * getContentSize().height;
+        _leftBoundary = 1.0 * getContentSize().height;
     }
 }
     

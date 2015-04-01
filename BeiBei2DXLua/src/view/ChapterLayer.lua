@@ -743,13 +743,62 @@ function ChapterLayer:addBackToHome()
 
 
     -- return to homepage button
-    local homeButton = ccui.Button:create("image/chapter/chapter0/backHome.png","image/chapter/chapter0/backHome.png","")
+    local homeButton = ccui.Button:create("image/homescene/missionprogress/white_circle.png","image/homescene/missionprogress/white_circle.png","")
     homeButton:addTouchEventListener(click_home)
     homeButton:ignoreAnchorPointForPosition(false)
-    homeButton:setAnchorPoint(0,1)
-    homeButton:setPosition(s_LEFT_X + 50  , s_DESIGN_HEIGHT - 50 )
+    homeButton:setScale(0.15)
+    --homeButton:setAnchorPoint(0,1)
+    homeButton:setPosition(s_LEFT_X + 60  , s_DESIGN_HEIGHT - 60 )
     homeButton:setLocalZOrder(1)
+    homeButton:setOpacity(0)
     self:addChild(homeButton,200)
+
+    local missionCount = s_LocalDatabaseManager:getTodayTotalTaskNum()
+    local completeCount = missionCount - s_LocalDatabaseManager:getTodayRemainTaskNum()
+
+    local back = {}
+    for i = 1,missionCount do
+        back[i] = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/missionprogress/white_circle.png'))
+        back[i]:setColor(cc.c4b(170,217,231,255 * 0.2 * (i % 3 + 1)))
+        back[i]:setOpacity(255 * 0.2 * ((i - 1) % 3 + 1))
+        back[i]:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+        back[i]:setPercentage(100 / missionCount)
+        back[i]:setRotation(360 * (i - 1) / missionCount)
+        back[i]:setPosition(homeButton:getContentSize().width / 2 ,homeButton:getContentSize().height / 2 )
+        homeButton:addChild(back[i])
+        
+    end
+    local circle_color = {cc.c3b(76,223,204),cc.c3b(36,168,217),cc.c3b(18,128,213)}
+    if completeCount < missionCount then
+        for i = 1, missionCount do 
+            local split_line = cc.Sprite:create('image/homescene/home_page_task_circle_interval.png')
+            split_line:setAnchorPoint(0.5,- 161 / 80)
+            split_line:setPosition(homeButton:getContentSize().width / 2 ,homeButton:getContentSize().height / 2)
+            homeButton:addChild(split_line,1)
+            split_line:setRotation(360 * (i - 1) / missionCount)
+        end
+        for i = 1,completeCount do
+            local taskProgress = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/missionprogress/white_circle.png'))
+            taskProgress:setColor(circle_color[(i - 1) % 3 + 1])
+            taskProgress:setPosition(homeButton:getContentSize().width / 2 ,homeButton:getContentSize().height / 2 )
+            taskProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+            taskProgress:setReverseDirection(false)
+            taskProgress:setPercentage(100 / missionCount)
+            back[i]:addChild(taskProgress)
+        end
+    elseif completeCount == missionCount then
+        local finishProgress = cc.Sprite:create('image/homescene/missionprogress/home_page_task_finished_circle.png')
+        finishProgress:setPosition(homeButton:getContentSize().width / 2 ,homeButton:getContentSize().height / 2 )
+        homeButton:addChild(finishProgress)
+    end
+    
+    local str = "image/homescene/missionprogress/taskstartbutton.png"
+    if missionCount == completeCount then
+        str = "image/homescene/missionprogress/taskfinishedstartbutton.png"
+    end
+    local btnSprite = cc.Sprite:create(str)
+    btnSprite:setPosition(homeButton:getContentSize().width / 2 ,homeButton:getContentSize().height / 2 )
+    homeButton:addChild(btnSprite)
     
     onAndroidKeyPressed(self, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()

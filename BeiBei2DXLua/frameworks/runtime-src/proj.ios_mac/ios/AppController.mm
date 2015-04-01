@@ -67,6 +67,19 @@ static AppDelegate s_sharedApplication;
          UIRemoteNotificationTypeSound];
     }
 
+    if (application.applicationState != UIApplicationStateBackground) {
+        // Track an app open here if we launch with a push, unless
+        // "content_available" was used to trigger a background push (introduced
+        // in iOS 7). In that case, we skip tracking here to avoid double
+        // counting the app-open.
+        BOOL preBackgroundPush = ![application respondsToSelector:@selector(backgroundRefreshStatus)];
+        BOOL oldPushHandlerOnly = ![self respondsToSelector:@selector(application:didReceiveRemoteNotification:fetchCompletionHandler:)];
+        BOOL noPushPayload = ![launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+        if (preBackgroundPush || oldPushHandlerOnly || noPushPayload) {
+            [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+        }
+    }
+    
     cocos2d::Application *app = cocos2d::Application::getInstance();
     app->initGLContextAttrs();
     cocos2d::GLViewImpl::convertAttrs();
@@ -139,6 +152,15 @@ static AppDelegate s_sharedApplication;
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
     cocos2d::Director::getInstance()->resume();
+    
+    NSInteger num = application.applicationIconBadgeNumber;
+    if (num != 0){
+        AVInstallation *currentInstallation = [AVInstallation currentInstallation];
+        [currentInstallation setBadge:0];
+        [currentInstallation saveEventually];
+        application.applicationIconBadgeNumber = 0;
+    }
+    [application cancelAllLocalNotifications];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -188,7 +210,18 @@ static AppDelegate s_sharedApplication;
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     AVInstallation *currentInstallation = [AVInstallation currentInstallation];
     [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation addUniqueObject:@"public" forKey:@"channels"];
     [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    if (application.applicationState == UIApplicationStateActive) {
+        // 此处可以写上应用激活状态下接收到通知的处理代码，如无需处理可忽略
+    } else {
+        // The application was just brought from the background to the foreground,
+        // so we consider the app as having been "opened by a push notification."
+        [AVAnalytics trackAppOpenedWithRemoteNotificationPayload:userInfo];
+    }
 }
 
 #pragma mark -

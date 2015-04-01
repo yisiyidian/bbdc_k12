@@ -128,15 +128,24 @@ function ShareBottom:ctor()
 
 	local function closeShare(sender,eventType)
 		if eventType == ccui.TouchEventType.ended then
+			self:getParent():shareEnd()
+			local move = cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT * 0.21))
 			local remove = cc.CallFunc:create(function ()
 				for i = 1, 4 do 
 					local png = string.format("share_sample%d.png",i)
 					local filename = string.format('%s%s',cc.FileUtils:getInstance():getWritablePath(),png)
         			os.remove(filename)
         		end
-				self:getParent():removeFromParent()
+				
+				
+            	local remove = cc.CallFunc:create(function ()
+
+					self:removeFromParent()
+				end)
+
+				--self:getParent():removeFromParent()
 			end)
-			bottom:runAction(remove)
+			bottom:runAction(cc.Sequence:create(move,remove))
 		end
 	end
 
