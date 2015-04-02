@@ -5,6 +5,7 @@ local function _initConstant()
     -- number
     s_max_wrong_num_everyday                = 10
     s_max_wrong_num_first_island            = 3
+    s_max_wrong_num                         = {3,5,7,10}
 
     s_gamestate_reviewbossmodel_beforetoday = 1
     s_gamestate_studymodel                  = 2
@@ -147,13 +148,17 @@ end
 
 local flag_getMaxWrongNumEveryLevel = {}
 function getMaxWrongNumEveryLevel()
-    if s_CURRENT_USER.bookKey == nil or s_CURRENT_USER.bookKey == '' or flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] == nil or flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] <= 1 then
+    if s_CURRENT_USER.bookKey == nil or s_CURRENT_USER.bookKey == '' or flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] == nil or flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] <= 9 then
         local bossList = s_LocalDatabaseManager.getAllBossInfo()
         flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] = #bossList
     end
     if flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] <= 1 then
-        return s_max_wrong_num_first_island
-    else 
-        return s_max_wrong_num_everyday
+        return s_max_wrong_num[1]
+    elseif flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] == 2 or flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] == 5 then 
+        return s_max_wrong_num[2]
+    elseif flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] == 3 or flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] == 6 or flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] == 8 then 
+        return s_max_wrong_num[3]
+    else
+        return s_max_wrong_num[4]
     end
 end
