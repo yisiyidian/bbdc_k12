@@ -4,6 +4,7 @@ end)
 
 BEIBEI_ENTER_COLLECT_WORD_LAYER  = 'COLLECT_WORD'
 BEIBEI_CLICK_I_KNOW_BUTTON       = 'CLICK_I_KNOW_BUTTON'
+BEIBEI_ENTER_FORGE_IRON_LAYER  = 'FORGE_IRON'
 
 function BeibeiLayer.create(BEIBEI_TYPE)
     local layer = BeibeiLayer.new(BEIBEI_TYPE)
@@ -40,7 +41,7 @@ function BeibeiLayer:createFromCollectWord()
 end
 
 function BeibeiLayer:ctor(BEIBEI_TYPE)
-    if BEIBEI_TYPE == BEIBEI_ENTER_COLLECT_WORD_LAYER then
+    if BEIBEI_TYPE == BEIBEI_ENTER_COLLECT_WORD_LAYER or BEIBEI_TYPE == BEIBEI_ENTER_FORGE_IRON_LAYER then
        self:createFromCollectWord()
     end
 end

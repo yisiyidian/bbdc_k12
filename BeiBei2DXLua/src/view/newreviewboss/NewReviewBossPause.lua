@@ -2,23 +2,23 @@ local NewReviewBossPause = class("NewReviewBossPause", function()
     return ccui.Button:create()
 end)
 
+local EnlargeTouchAreaReturnButton = require("view.islandPopup.EnlargeTouchAreaReturnButton")
+
 CreatePauseFromStudy   = 1
 CreatePauseFromReview  = 2
 CreatePauseFromSummary = 3
 
 function NewReviewBossPause.create(FromWhere)
-    local pauseBtn = ccui.Button:create("image/button/pauseButtonWhite.png","image/button/pauseButtonWhite.png","image/button/pauseButtonWhite.png")
+    local pauseBtn 
     
     if FromWhere == CreatePauseFromStudy then
-       pauseBtn:loadTextures("image/button/pauseButtonWhite.png","image/button/pauseButtonWhite.png","image/button/pauseButtonWhite.png")
+        pauseBtn = EnlargeTouchAreaReturnButton.create("image/button/pauseButtonWhite.png","image/button/pauseButtonWhite.png")
     elseif FromWhere == CreatePauseFromReview then
-       pauseBtn:loadTextures("image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png")
+        pauseBtn = EnlargeTouchAreaReturnButton.create("image/button/pauseButtonBlue.png","image/button/pauseButtonBlue.png")
     else
-       pauseBtn:loadTextures("image/button/pauseButtonWhite.png","image/button/pauseButtonWhite.png","image/button/pauseButtonWhite.png")
+        pauseBtn = EnlargeTouchAreaReturnButton.create("image/button/pauseButtonWhite.png","image/button/pauseButtonWhite.png")
     end
     
-    pauseBtn:ignoreAnchorPointForPosition(false)
-    pauseBtn:setAnchorPoint(0,1)
     s_SCENE.popupLayer.pauseBtn = pauseBtn
 
     local function createPausePopup()
@@ -30,15 +30,15 @@ function NewReviewBossPause.create(FromWhere)
         s_SCENE.popupLayer.listener:setSwallowTouches(true)
     end
 
-    local function pauseScene(sender,eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            createPausePopup()
-        end
+    local function pauseScene()
+        playSound(s_sound_buttonEffect)
+        createPausePopup()
     end
-    pauseBtn:addTouchEventListener(pauseScene)
 
+    pauseBtn.func = function ()
+       pauseScene()
+    end
+    
     onAndroidKeyPressed(pauseBtn, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()
         if #isPopup == 0 then

@@ -84,7 +84,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
     backColor:addChild(back_tail)
     
     local pauseBtn = PauseButton.create(CreatePauseFromStudy)
-    pauseBtn:setPosition(0, s_DESIGN_HEIGHT)
+    pauseBtn:setPosition(30 , s_DESIGN_HEIGHT -50)
     backColor:addChild(pauseBtn,1)    
 
     backColor:setAnchorPoint(0.5,0.5)

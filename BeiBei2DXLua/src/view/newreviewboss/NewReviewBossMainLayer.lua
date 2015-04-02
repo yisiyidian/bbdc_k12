@@ -144,7 +144,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
             sentenceEn2,sentenceCn2 =  updateWord()
 
     local pauseButton = Pause.create(CreatePauseFromReview)
-    pauseButton:setPosition(0, s_DESIGN_HEIGHT)
+    pauseButton:setPosition(30 , s_DESIGN_HEIGHT -50)
     layer:addChild(pauseButton,100)
     
     local fillColor1 = cc.LayerColor:create(cc.c4b(10,152,210,255), s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH, 393)
