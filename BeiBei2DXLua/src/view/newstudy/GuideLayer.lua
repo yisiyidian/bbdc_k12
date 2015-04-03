@@ -7,6 +7,7 @@ end)
 
 GUIDE_ENTER_COLLECT_WORD_LAYER  = 'COLLECT_WORD'
 GUIDE_CLICK_I_KNOW_BUTTON       = 'CLICK_I_KNOW_BUTTON'
+GUIDE_ENTER_FORGE_IRON_LAYER    = 'ENTER_FORGE_IRON'
 
 function GuideLayer.create(GUIDE_TYPE,word)
     local layer = GuideLayer.new(GUIDE_TYPE)
@@ -16,7 +17,7 @@ function GuideLayer.create(GUIDE_TYPE,word)
     return layer
 end
 
-function GuideLayer:createFromCollectWord()
+function GuideLayer:createFromCollectWord(GUIDE_TYPE)
     local back_exist = true
     local back = cc.Sprite:create("image/newstudy/background_yindao_big.png")
     back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.55*3)
@@ -29,25 +30,42 @@ function GuideLayer:createFromCollectWord()
     title:setColor(cc.c3b(35,181,229))
     back:addChild(title)
 
-    local richtext1 = ccui.RichText:create()
-     
-    local richElement = {
-    ccui.RichElementText:create(1,cc.c3b(0  , 0  , 0  ),255,"找到","Helvetica",26),
-    ccui.RichElementText:create(2,cc.c3b(35 , 181, 229),255,"3","Helvetica",26),  
-    ccui.RichElementText:create(3,cc.c3b(0  , 0  , 0  ),255,"个","Helvetica",26),  
-    ccui.RichElementText:create(4,cc.c3b(35 , 181, 229),255,"不认识","Helvetica",26),  
-    ccui.RichElementText:create(5,cc.c3b(0  , 0  , 0  ),255,"的生词","Helvetica",26)   }
-    
-    for i=1,#richElement do
-        richtext1:pushBackElement(richElement[i]) 
+    if GUIDE_TYPE == GUIDE_ENTER_COLLECT_WORD_LAYER then
+
+        local richtext1 = ccui.RichText:create()
+         
+        local richElement = {
+        ccui.RichElementText:create(1,cc.c3b(0  , 0  , 0  ),255,"找到","Helvetica",26),
+        ccui.RichElementText:create(2,cc.c3b(35 , 181, 229),255,"3","Helvetica",26),  
+        ccui.RichElementText:create(3,cc.c3b(0  , 0  , 0  ),255,"个","Helvetica",26),  
+        ccui.RichElementText:create(4,cc.c3b(35 , 181, 229),255,"不认识","Helvetica",26),  
+        ccui.RichElementText:create(5,cc.c3b(0  , 0  , 0  ),255,"的生词","Helvetica",26)   }
+        
+        for i=1,#richElement do
+            richtext1:pushBackElement(richElement[i]) 
+        end
+
+        richtext1:setContentSize(cc.size(300,50)) 
+        richtext1:ignoreContentAdaptWithSize(false)
+        richtext1:ignoreAnchorPointForPosition(false)
+        richtext1:setAnchorPoint(cc.p(0.5,0.5))
+        richtext1:setPosition(back:getContentSize().width/2 + 10,back:getContentSize().height*0.5)     
+        back:addChild(richtext1)
+
+    else
+        local text1 = cc.Label:createWithSystemFont('请选择正确的意思','',28)
+        text1:setPosition(back:getContentSize().width/2,back:getContentSize().height*0.65)
+        text1:setColor(cc.c3b(0,0,0))
+        back:addChild(text1)
+
+        local text2 = cc.Label:createWithSystemFont('（忘记了请选择不认识）','',28)
+        text2:setPosition(back:getContentSize().width/2,back:getContentSize().height*0.45)
+        text2:setColor(cc.c3b(35,181,229))
+        back:addChild(text2)
     end
 
-    richtext1:setContentSize(cc.size(300,50)) 
-    richtext1:ignoreContentAdaptWithSize(false)
-    richtext1:ignoreAnchorPointForPosition(false)
-    richtext1:setAnchorPoint(cc.p(0.5,0.5))
-    richtext1:setPosition(back:getContentSize().width/2 + 10,back:getContentSize().height*0.5)     
-    back:addChild(richtext1)
+
+
 
     local beibei
 
@@ -223,8 +241,8 @@ function GuideLayer:createFromFamiliarWord()
 end
 
 function GuideLayer:ctor(GUIDE_TYPE)
-    if GUIDE_TYPE == GUIDE_ENTER_COLLECT_WORD_LAYER then
-        self:createFromCollectWord()
+    if GUIDE_TYPE == GUIDE_ENTER_COLLECT_WORD_LAYER or GUIDE_TYPE == GUIDE_ENTER_FORGE_IRON_LAYER then
+        self:createFromCollectWord(GUIDE_TYPE)
     elseif GUIDE_TYPE == GUIDE_CLICK_I_KNOW_BUTTON then
         self:createFromFamiliarWord()
     end

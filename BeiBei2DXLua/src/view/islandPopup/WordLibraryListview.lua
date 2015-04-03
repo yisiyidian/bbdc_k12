@@ -59,7 +59,7 @@ function WordLibraryListview:ctor(wordList)
     end
     
     for i = 1,count do
-        local current_sprite = ccui.Button:create("image/islandPopup/anniu.png","image/islandPopup/anniu.png","")
+        local current_sprite = ccui.Button:create("image/islandPopup/anniu.png","image/islandPopup/anniuback.png","")
         current_sprite:ignoreAnchorPointForPosition(false)
         current_sprite:setAnchorPoint(0.5,0.5)  
         current_sprite:addTouchEventListener(current_sprite_click)
@@ -98,12 +98,9 @@ function WordLibraryListview:ctor(wordList)
         lookup_label:setPosition(cc.p(lookup_button:getContentSize().width * 0.5,lookup_button:getContentSize().height / 2.0))
         lookup_button:addChild(lookup_label)
         
-        -- local arrow_button = ccui.Button:create("image/islandPopup/arrow.png","","")
-        -- arrow_button:setPosition(cc.p(current_sprite:getContentSize().width * 0.92,current_sprite:getContentSize().height / 2.0))
-        -- arrow_button:addTouchEventListener(arrow_button_click)
-        -- arrow_button:setName("arrow||"..i)
-        -- arrow_button:setScale(1.25)
-        -- current_sprite:addChild(arrow_button)
+        local arrow_button = cc.Sprite:create("image/islandPopup/arrow.png")
+        arrow_button:setPosition(cc.p(current_sprite:getContentSize().width * 0.92,current_sprite:getContentSize().height / 2.0))
+        current_sprite:addChild(arrow_button)
           
         local line = cc.LayerColor:create(cc.c4b(244,245,246,255),current_sprite:getContentSize().width * 0.95  ,4)
         line:ignoreAnchorPointForPosition(false)

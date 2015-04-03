@@ -4,6 +4,7 @@ end)
 
 local Listview         = require("view.islandPopup.WordLibraryListview")
 local Button                = require("view.button.longButtonInStudy")
+local EnlargeTouchAreaReturnButton = require("view.islandPopup.EnlargeTouchAreaReturnButton")
 
 function WordLibraryPopup.create(index)
     local layer = WordLibraryPopup.new(index)
@@ -31,23 +32,23 @@ local function addCloseButton(top_sprite,backPopup)
 end 
 
 local function addBackButton(top_sprite,self,backPopup)
-    local button_back_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            local action0 = cc.OrbitCamera:create(0.5,1, 0, 0, 90, 0, 0) 
-            local action1 = cc.CallFunc:create(function() 
-                self:removeFromParent()
-            end)
-            backPopup:runAction(cc.Sequence:create(action0,action1))
-            self.close()
-        end
+    local button_back_clicked = function()
+        playSound(s_sound_buttonEffect)
+        local action0 = cc.OrbitCamera:create(0.5,1, 0, 0, 90, 0, 0) 
+        local action1 = cc.CallFunc:create(function() 
+            self:removeFromParent()
+        end)
+        backPopup:runAction(cc.Sequence:create(action0,action1))
+        self.close()
     end
 
-    local button_back = ccui.Button:create("image/islandPopup/backtopocess.png","","")
-    button_back:setScale9Enabled(true)
+    local button_back = EnlargeTouchAreaReturnButton.create("image/islandPopup/backtopocess.png","image/islandPopup/backtopocessback.png")
     button_back:setPosition(top_sprite:getContentSize().width *0.1 , top_sprite:getContentSize().height *0.5 )
-    button_back:addTouchEventListener(button_back_clicked)
+
+    button_back.func = function ()
+       button_back_clicked()
+    end
+    
     return button_back
 end
 

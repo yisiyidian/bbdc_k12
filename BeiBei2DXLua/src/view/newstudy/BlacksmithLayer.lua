@@ -8,6 +8,7 @@ local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip")
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
 local PauseButton           = require("view.newreviewboss.NewReviewBossPause")
 local Button                = require("view.button.longButtonInStudy")
+local GuideLayer = require("view.newstudy.GuideLayer")
 
 local  BlacksmithLayer = class("BlacksmithLayer", function ()
     return cc.Layer:create()
@@ -165,6 +166,10 @@ function BlacksmithLayer:ctor(wordlist)
 
     if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_3 then
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat2_3 + 1)
+        s_SCENE:callFuncWithDelay(0.5, function()
+            local guideLayer = GuideLayer.create(GUIDE_ENTER_FORGE_IRON_LAYER)
+                s_SCENE:popup(guideLayer)
+            end)
     end
 
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
@@ -182,7 +187,7 @@ function BlacksmithLayer:ctor(wordlist)
     backColor:addChild(back_tail)
     
     local pauseBtn = PauseButton.create(CreatePauseFromStudy)
-    pauseBtn:setPosition(0, s_DESIGN_HEIGHT)
+    pauseBtn:setPosition(30 , s_DESIGN_HEIGHT -50)
     backColor:addChild(pauseBtn,100)    
 
     backColor:setAnchorPoint(0.5,0.5)
