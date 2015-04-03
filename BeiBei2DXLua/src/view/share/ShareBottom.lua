@@ -138,10 +138,10 @@ function ShareBottom:ctor()
         		end
 				
 				
-            	local remove = cc.CallFunc:create(function ()
+            	--local remove = cc.CallFunc:create(function ()
 
 					self:removeFromParent()
-				end)
+				--end)
 
 				--self:getParent():removeFromParent()
 			end)

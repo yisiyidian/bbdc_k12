@@ -81,7 +81,7 @@ function MissionProgressLayer.create(share,dataShare)
     for i = 1,missionCount do
         back[i] = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/missionprogress/white_circle.png'))
         back[i]:setColor(cc.c4b(170,217,231,255 * 0.2 * (i % 3 + 1)))
-        back[i]:setOpacity(255 * 0.2 * ((i - 1) % 3 + 1))
+        --back[i]:setOpacity(255 * 0.2 * ((i - 1) % 3 + 1))
         back[i]:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
         back[i]:setPercentage(100 / missionCount)
         back[i]:setRotation(360 * (i - 1) / missionCount)
