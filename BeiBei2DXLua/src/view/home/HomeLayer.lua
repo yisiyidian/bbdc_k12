@@ -117,6 +117,7 @@ function HomeLayer.create()
     local mission_progress
     local checkInDisplay = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) and not s_isCheckInAnimationDisplayed
     if checkInDisplay then
+        s_HUD_LAYER:getChildByName('missionCompleteCircle'):setVisible(true)
         s_isCheckInAnimationDisplayed = true
         mission_progress = MissionProgress.create(true,dataShare)
     else
@@ -348,7 +349,7 @@ function HomeLayer.create()
     backColor:addChild(button_data,1)
     layer.dataButton = button_data
 
-    data_back = cc.LayerColor:create(cc.c4b(255,255,255,255), bigWidth, s_DESIGN_HEIGHT - 280)  
+    data_back = cc.LayerColor:create(cc.c4b(255,255,255,255), bigWidth, s_DESIGN_HEIGHT - 260)  
     data_back:setAnchorPoint(0.5,1)
     data_back:ignoreAnchorPointForPosition(false)  
     data_back:setPosition(button_data:getContentSize().width/2, 0)
@@ -682,7 +683,7 @@ function HomeLayer.create()
                 isDataShow = true
                 layer:setButtonEnabled(false)
                 button_data:setLocalZOrder(2)
-                button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
+                button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-260))))
                 s_SCENE:callFuncWithDelay(0.3,function ()
                     local PersonalInfo = require("view.PersonalInfo")
                     PersonalInfo.getNotContainedInLocalDatas(function ()
@@ -694,7 +695,7 @@ function HomeLayer.create()
                 return
             end
         end
-        if start_y > s_DESIGN_HEIGHT - 280 and start_x > s_DESIGN_WIDTH * 0.0 and start_x < s_DESIGN_WIDTH * 2.0 then
+        if start_y > s_DESIGN_HEIGHT - 260 and start_x > s_DESIGN_WIDTH * 0.0 and start_x < s_DESIGN_WIDTH * 2.0 then
             if now_y + moveLength < start_y and isDataShow and viewIndex == 1 then
                 isDataShow = false
                 layer:setButtonEnabled(true)
@@ -744,7 +745,7 @@ function HomeLayer.create()
                 isDataShow = true
                 layer:setButtonEnabled(false)
                 button_data:setLocalZOrder(2)
-                button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-280))))
+                button_data:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(bigWidth/2, s_DESIGN_HEIGHT-260))))
                 s_SCENE:callFuncWithDelay(0.3,function ()
                     if online == false then
                         offlineTipHome.setFalse()
@@ -759,7 +760,7 @@ function HomeLayer.create()
                 end) 
             end
 
-        elseif location.y >  s_DESIGN_HEIGHT-280 and (math.abs(location.y - start_y) < 10 and math.abs(location.x - start_x) < 10) and viewIndex == 1 then
+        elseif location.y >  s_DESIGN_HEIGHT-260 and (math.abs(location.y - start_y) < 10 and math.abs(location.x - start_x) < 10) and viewIndex == 1 then
             --print('isDataShow')
             isDataShow = false
             layer:setButtonEnabled(true)
@@ -853,7 +854,7 @@ end
 function HomeLayer:showDataLayerByItem(index)
     self:setButtonEnabled(false)
     self.dataButton:setLocalZOrder(2)
-    self.dataButton:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-280)))))
+    self.dataButton:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-260)))))
     s_SCENE:callFuncWithDelay(0.3,function ()
         local PersonalInfo = require("view.PersonalInfo")
         PersonalInfo.getNotContainedInLocalDatas(function ()
@@ -866,7 +867,7 @@ end
 
 function HomeLayer:showDataLayer(checkIn)
     self.dataButton:setLocalZOrder(2)
-    self.dataButton:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-280)))))
+    self.dataButton:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-260)))))
     s_SCENE:callFuncWithDelay(0.3,function ()
         local PersonalInfo = require("view.PersonalInfo")
         PersonalInfo.getNotContainedInLocalDatas(function ()

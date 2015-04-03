@@ -208,9 +208,9 @@ function MissionProgressLayer.create(share,dataShare)
             if eventType == ccui.TouchEventType.began then
                 playSound(s_sound_buttonEffect)   
             elseif eventType == ccui.TouchEventType.ended then
-                local action1 = cc.MoveTo:create(0.5,cc.p(s_LEFT_X + 60  , s_DESIGN_HEIGHT - 60))
+                local action1 = cc.MoveTo:create(0.5,cc.p(60  , s_DESIGN_HEIGHT - 60))
                 local action2 = cc.ScaleTo:create(0.5,0.15)
-                local action3 = cc.Spawn:create(action1,action2)
+                local action3 = cc.EaseSineIn:create(cc.Spawn:create(action1,action2))
                 backProgress:runAction(cc.Sequence:create(action3, cc.CallFunc:create(enterGame)))
             end
         else
