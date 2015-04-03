@@ -15,9 +15,8 @@ function DataShare.create()
 end
 
 function DataShare:ctor()
-	-- print('s_CURRENT_USER.dataDailyUsing.startTime',s_CURRENT_USER.dataDailyUsing.startTime)
-	-- print('s_CURRENT_USER.dataDailyUsing.usingTime',s_CURRENT_USER.dataDailyUsing.usingTime)
-	LEARN_TIME = math.ceil(s_CURRENT_USER.dataDailyUsing.usingTime / 60.0) + 40
+	
+	LEARN_TIME = math.ceil(s_CURRENT_USER.dataDailyUsing.usingTime / 60.0)
 	LEARN_INDEX = math.ceil(LEARN_TIME * 2.5)
 	LEARN_COUNT = s_LocalDatabaseManager.getStudyWordsNum(os.date('%x',os.time()))
 	-- LEARN_TIME = 23
@@ -29,7 +28,7 @@ function DataShare:ctor()
 	local curtain = cc.LayerColor:create(cc.c4b(0,0,0,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
 	curtain:ignoreAnchorPointForPosition(false)
 	curtain:setAnchorPoint(0.5,0.5)
-	curtain:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
+	curtain:setPosition((s_RIGHT_X - s_LEFT_X) / 2,s_DESIGN_HEIGHT / 2)
 	self:addChild(curtain)
 	self.curtain = curtain
 	self.curtain:setOpacity(0)
@@ -37,7 +36,7 @@ function DataShare:ctor()
 	local background = cc.LayerColor:create(cc.c4b(200,240,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT * 1.2)
 	background:ignoreAnchorPointForPosition(false)
 	background:setAnchorPoint(0.5,0)
-	background:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT)
+	background:setPosition((s_RIGHT_X - s_LEFT_X) / 2,s_DESIGN_HEIGHT)
 	self:addChild(background)
 	self.background = background
 	--background:runAction(cc.EaseBackOut:create(cc.MoveBy:create(0.5,cc.p(0,- s_DESIGN_HEIGHT * 5 / 6))))
@@ -61,7 +60,7 @@ function DataShare:ctor()
 
 	local girl = sp.SkeletonAnimation:create("res/spine/girl_wave/girl_wave.json", "res/spine/girl_wave/girl_wave.atlas", 1)
     --girl:setAnchorPoint(0.9,0.7)
-    girl:setPosition(-background:getContentSize().width * 0.2,-350)
+    girl:setPosition(-128,-350)
     girl:setScale(0.75)
     node:addChild(girl,-1)
     girl:addAnimation(0, 'animation', true)
@@ -94,14 +93,15 @@ function DataShare:ctor()
 
 	local function onBtnClicked(sender,eventType)
 		if eventType == ccui.TouchEventType.ended then
-			girl:setPosition(-background:getContentSize().width * 0.2,-350)
+			s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+			girl:setPosition(-128,-350)
 			--self.curtain:setOpacity(100)
 			self.curtain:runAction(cc.FadeOut:create(1))
 			background:runAction(cc.Sequence:create(cc.EaseBackIn:create(cc.MoveBy:create(1.0,cc.p(0,s_DESIGN_HEIGHT * 1.1))),cc.CallFunc:create(function (  )
 				self:setLocalZOrder(0)
 				background:runAction(cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT * 0.1)))
 				girl:runAction(cc.Sequence:create(cc.JumpBy:create(0.3, cc.p(0,0), 170, 1),cc.CallFunc:create(function (  )
-					
+					s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 					bangle:setPosition(0,40)
 					bangle:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.MoveBy:create(0.4,cc.p(0,-40)),cc.MoveBy:create(0.4,cc.p(0,40)),cc.DelayTime:create(16 / 30))))
 					self.listener:setSwallowTouches(false)
@@ -136,7 +136,9 @@ function DataShare:ctor()
 end
 
 function DataShare:moveDown()
-	
+ print('s_CURRENT_USER.dataDailyUsing.startTime',s_CURRENT_USER.dataDailyUsing.startTime)
+	 print('s_CURRENT_USER.dataDailyUsing.usingTime',s_CURRENT_USER.dataDailyUsing.usingTime)
+	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	self.bangle:stopAllActions()
 	self.bangle:setPosition(0,0)
 	self.listener:setSwallowTouches(true)
@@ -145,7 +147,9 @@ function DataShare:moveDown()
 		self.curtain:runAction(cc.EaseSineOut:create(cc.FadeTo:create(2,230)))
 		self.node:runAction(cc.Sequence:create(cc.RotateBy:create(0.5,30),cc.RotateBy:create(1,-60),cc.RotateBy:create(0.5,30)))
 		self:setLocalZOrder(1)
-		self.background:runAction(cc.EaseSineOut:create(cc.MoveBy:create(2,cc.p(0,- s_DESIGN_HEIGHT))))
+		self.background:runAction(cc.Sequence:create(cc.EaseSineOut:create(cc.MoveBy:create(2,cc.p(0,- s_DESIGN_HEIGHT))),cc.CallFunc:create(function (  )
+			s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+		end)))
 	end,{})))	
 end
 
