@@ -327,7 +327,7 @@ end
 function DataShare:setEnabled(enable)
 	self.girlBtn:setEnabled(enable)
 	self.bangle:setEnabled(enable)
-	self.close_button::setEnabled(enable)
+	self.close_button:setEnabled(enable)
 end
 
 return DataShare

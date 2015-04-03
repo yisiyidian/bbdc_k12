@@ -199,7 +199,47 @@ function MissionProgressLayer.create(share,dataShare)
                 local schedule = layer:getChildByTag(8888):getScheduler()
                 schedule:unscheduleScriptEntry(schedule.schedulerEntry)
             end
-            s_CorePlayManager.enterLevelLayer()
+            -- local target = cc.RenderTexture:create(s_RIGHT_X - s_LEFT_X, cc.TEXTURE2_D_PIXEL_FORMAT_RGB_A8888)
+            -- target:retain()
+            -- target:setPosition(cc.p(0,0))
+            -- s_GAME_LAYER:addChild(target, -1)
+            -- target:begin()
+            -- layer:getParent():visit()
+            -- target:endToLua()
+            -- local png = "share_sample.png"
+            -- target:saveToFile(png, cc.IMAGE_FORMAT_PNG)
+            -- layer.png = png
+            -- local pImage = target:newImage()
+            -- local tex = cc.Director:getInstance():getTextureCache():addImage(pImage, png)
+            -- pImage:release()
+            -- local sprite = cc.Sprite:createWithTexture(tex)
+            -- sprite:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
+            -- print(cc.FileUtils:getInstance():getWritablePath())
+            -- s_HUD_LAYER:addChild(sprite)
+            -- sprite:runAction(cc.Sequence:create(cc.FadeOut:create(0.5),cc.CallFunc:create(function (  )
+            --     sprite:removeFromParent()
+            -- end,{})))
+            --s_CorePlayManager.enterLevelLayer()
+            local function afterCaptured(succeed, outputFile)
+                if succeed then
+                    local sp = cc.Sprite:create(outputFile)
+                    s_HUD_LAYER:addChild(sp, 0, childTag)
+                    sp:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2)
+                    sp:runAction(cc.Sequence:create(cc.FadeOut:create(0.5),cc.CallFunc:create(function (  )
+                        sp:removeFromParent()
+                    end)))
+                    s_CorePlayManager.enterLevelLayer()
+                    --sp:setScale(0.25)
+                    fileName = outputFile
+                else
+                    cclog("Capture screen failed.")
+                end
+            end
+
+            --local function onCaptured(tag, sender)
+            local fileName = "CaptureScreenTest.png"
+                cc.utils:captureScreen(afterCaptured, fileName)
+            --end
         end)
     end
 
@@ -211,7 +251,7 @@ function MissionProgressLayer.create(share,dataShare)
                 local action1 = cc.MoveTo:create(0.5,cc.p(60  , s_DESIGN_HEIGHT - 60))
                 local action2 = cc.ScaleTo:create(0.5,0.15)
                 local action3 = cc.EaseSineIn:create(cc.Spawn:create(action1,action2))
-                backProgress:runAction(cc.Sequence:create(action3, cc.CallFunc:create(enterGame)))
+                backProgress:runAction(cc.Sequence:create(action3,cc.DelayTime:create(0.1), cc.CallFunc:create(enterGame)))
             end
         else
             return
