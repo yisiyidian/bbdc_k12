@@ -95,7 +95,7 @@ function DataShare:ctor()
 
 	local function onBtnClicked(sender,eventType)
 		if eventType == ccui.TouchEventType.ended then
-			s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+			self:setEnabled(false)
 			girl:setPosition(-128,-350)
 			--self.curtain:setOpacity(100)
 			self.curtain:runAction(cc.FadeOut:create(1))
@@ -103,7 +103,7 @@ function DataShare:ctor()
 				self:setLocalZOrder(0)
 				background:runAction(cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT * 0.1)))
 				girl:runAction(cc.Sequence:create(cc.JumpBy:create(0.3, cc.p(0,0), 170, 1),cc.CallFunc:create(function (  )
-					s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+					self:setEnabled(true)
 					bangle:setPosition(0,40)
 					bangle:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.MoveBy:create(0.4,cc.p(0,-20)),cc.MoveBy:create(0.4,cc.p(0,20)),cc.DelayTime:create(2.2))))
 					self.listener:setSwallowTouches(false)
@@ -138,12 +138,9 @@ function DataShare:ctor()
 end
 
 function DataShare:moveDown()
-	if LEARN_TIME == 0 then
-		return
-	end
  -- print('s_CURRENT_USER.dataDailyUsing.startTime',s_CURRENT_USER.dataDailyUsing.startTime)
 	--  print('s_CURRENT_USER.dataDailyUsing.usingTime',s_CURRENT_USER.dataDailyUsing.usingTime)
-	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+	self:setEnabled(false)
 	self.bangle:stopAllActions()
 	self.bangle:setPosition(0,20)
 	self.listener:setSwallowTouches(true)
@@ -153,7 +150,7 @@ function DataShare:moveDown()
 		self.node:runAction(cc.Sequence:create(cc.RotateBy:create(0.5,30),cc.RotateBy:create(1,-60),cc.RotateBy:create(0.5,30)))
 		self:setLocalZOrder(1)
 		self.background:runAction(cc.Sequence:create(cc.EaseSineOut:create(cc.MoveBy:create(2,cc.p(0,- s_DESIGN_HEIGHT))),cc.CallFunc:create(function (  )
-			s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+			self:setEnabled(true)
 		end)))
 	end,{})))	
 end
@@ -330,6 +327,7 @@ end
 function DataShare:setEnabled(enable)
 	self.girlBtn:setEnabled(enable)
 	self.bangle:setEnabled(enable)
+	self.close_button::setEnabled(enable)
 end
 
 return DataShare
