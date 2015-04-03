@@ -187,6 +187,12 @@ function AnalyticsDownloadBook(bookname)
     print('Analytics', getAnalyticsPrefix() .. 'Book', 'download_' .. bookname); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Book', 'download_' .. bookname)
 end
 
+function AnalyticsSecondDayBook(bookname)
+    if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime + 24 * 3600) and s_CURRENT_USER.dataDailyUsing.usingTime < 10 then
+        print('Analytics', getAnalyticsPrefix() .. 'Book_2nd_day', 'selected_' .. bookname); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Book_2nd_day', 'selected_' .. bookname)
+    end
+end
+
 ----------------------------------------------------------------------------------------
 
 function AnalyticsEnterLevelLayerBtn()

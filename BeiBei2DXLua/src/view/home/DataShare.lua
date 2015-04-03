@@ -56,7 +56,7 @@ function DataShare:ctor()
 	bangle:setAnchorPoint(0.5,1)
 	bangle:setPosition(0,40)
 	node:addChild(bangle)
-	bangle:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.MoveBy:create(0.4,cc.p(0,-40)),cc.MoveBy:create(0.4,cc.p(0,40)),cc.DelayTime:create(16 / 30))))
+	bangle:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.MoveBy:create(0.4,cc.p(0,-20)),cc.MoveBy:create(0.4,cc.p(0,20)),cc.DelayTime:create(2.2))))
 
 	local girl = sp.SkeletonAnimation:create("res/spine/girl_wave/girl_wave.json", "res/spine/girl_wave/girl_wave.atlas", 1)
     --girl:setAnchorPoint(0.9,0.7)
@@ -71,6 +71,8 @@ function DataShare:ctor()
    	girlBtn:setOpacity(0)
    	girlBtn:setPosition(0,0)
    	girl:addChild(girlBtn)
+
+   	self.girlBtn = girlBtn
    	
 
 	self.bangle = bangle
@@ -103,7 +105,7 @@ function DataShare:ctor()
 				girl:runAction(cc.Sequence:create(cc.JumpBy:create(0.3, cc.p(0,0), 170, 1),cc.CallFunc:create(function (  )
 					s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 					bangle:setPosition(0,40)
-					bangle:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.MoveBy:create(0.4,cc.p(0,-40)),cc.MoveBy:create(0.4,cc.p(0,40)),cc.DelayTime:create(16 / 30))))
+					bangle:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.MoveBy:create(0.4,cc.p(0,-20)),cc.MoveBy:create(0.4,cc.p(0,20)),cc.DelayTime:create(2.2))))
 					self.listener:setSwallowTouches(false)
 					girl:setAnimation(0, 'animation', true)
 				end,{})))
@@ -136,11 +138,14 @@ function DataShare:ctor()
 end
 
 function DataShare:moveDown()
- print('s_CURRENT_USER.dataDailyUsing.startTime',s_CURRENT_USER.dataDailyUsing.startTime)
-	 print('s_CURRENT_USER.dataDailyUsing.usingTime',s_CURRENT_USER.dataDailyUsing.usingTime)
+	if LEARN_TIME == 0 then
+		return
+	end
+ -- print('s_CURRENT_USER.dataDailyUsing.startTime',s_CURRENT_USER.dataDailyUsing.startTime)
+	--  print('s_CURRENT_USER.dataDailyUsing.usingTime',s_CURRENT_USER.dataDailyUsing.usingTime)
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	self.bangle:stopAllActions()
-	self.bangle:setPosition(0,0)
+	self.bangle:setPosition(0,20)
 	self.listener:setSwallowTouches(true)
 	self.girl:setAnimation(0,'stable_girl',false)
 	self.girl:runAction(cc.Sequence:create(cc.JumpBy:create(0.3, cc.p(0,100), -70, 1),cc.CallFunc:create(function (  )
@@ -320,6 +325,11 @@ function DataShare:shareEnd()
 	self.girl:setVisible(true)
 	self.shareBtn:setVisible(true)
 	--self.background:runAction(cc.ScaleTo:create(0.3,1))
+end
+
+function DataShare:setEnabled(enable)
+	self.girlBtn:setEnabled(enable)
+	self.bangle:setEnabled(enable)
 end
 
 return DataShare
