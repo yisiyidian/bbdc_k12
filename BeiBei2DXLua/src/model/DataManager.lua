@@ -116,10 +116,10 @@ function DataManager.loadBookWords()
     
 end
 
--- primary book word
+-- primary book word   book[unit[word]]
 function DataManager.loadPrimaryBooks()
     local bookWord = {}
-        local bookName = {'primary_1', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'middle', 'ncee', 'primary', 'pro4', 'pro8', 'sat', 'toefl'}
+        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'}
         for i = 1, #bookName do
             bookWord[bookName[i]] = {}
             local filepath = "cfg/" .. bookName[i] .. ".book"
@@ -127,7 +127,8 @@ function DataManager.loadPrimaryBooks()
             local lines = split(content, "\n")
             for j = 1, #lines do
                 if lines[j] ~= "" then
-                    table.insert(bookWord[bookName[i]], lines[j])
+                    tabs = split(lines[j],"\t")
+                    table.insert(bookWord[bookName[i]][tabs[1]], tabs[2])
                 end
             end
         end
