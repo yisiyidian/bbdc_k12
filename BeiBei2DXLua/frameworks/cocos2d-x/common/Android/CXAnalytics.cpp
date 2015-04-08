@@ -36,7 +36,7 @@ void CXAnalytics::logEventAndLabel(const char* event, const char* tag) {
 
 void CXAnalytics::logUsingTime(const char* userId, const char* bookKey, int startTime, int usingTime) {
     cocos2d::JniMethodInfo t;
-    if (cocos2d::JniHelper::getStaticMethodInfo(t, "c/bb/dc/BBNDK", "logUsingTime", "(Ljava/lang/String;Ljava/lang/String;I;I;)V")) {
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, "c/bb/dc/BBNDK", "logUsingTime", "(Ljava/lang/String;Ljava/lang/String;II)V")) {
         jstring stringArgEvent = t.env->NewStringUTF(userId);
         jstring stringArgTag = t.env->NewStringUTF(bookKey);
 
