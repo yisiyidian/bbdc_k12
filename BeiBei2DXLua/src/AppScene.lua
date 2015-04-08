@@ -270,6 +270,7 @@ end
 function applicationDidEnterBackgroundLua()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER.dataDailyUsing:isInited() and s_CURRENT_USER.dataDailyUsing:isToday() then
         s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.dataDailyUsing, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
+        cx.CXAnalytics:logUsingTime(tostring(s_CURRENT_USER.objectId), tostring(s_CURRENT_USER.bookKey), s_CURRENT_USER.dataDailyUsing.startTime, s_CURRENT_USER.dataDailyUsing.usingTime)
     end
     Analytics_applicationDidEnterBackground( s_SCENE.currentGameLayerName )
 end
