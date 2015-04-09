@@ -17,6 +17,7 @@ function DataUnit.ctor()
 	self.unitID = 0   -- unit id 
 	self.unitState = 0 -- current unit state (1|2|3|4|5|6|7|8)
 	self.wordList = ''
+	self.currentWordIndex = 0  -- current word Index in current unit wordlist
 	self.savedToServer = 0
 end
 
@@ -32,6 +33,7 @@ function DataUnit.getNoObjectIdDatasFromLocalDB()
             data.unitID = row.unitID
             data.unitState = row.unitState
             data.wordList = row.wordList
+            data.currentWordIndex = row.currentWordIndex
             data.savedToServer = row.savedToServer
 
             data.className = row.className
