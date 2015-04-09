@@ -21,9 +21,9 @@ function CorePlayManager.initTotalPlay()
     CorePlayManager.currentBossID = nil
     for i = 1, #bossList do
         local boss = bossList[i]
-        print("boss info")
-        print(boss.bossID)
-        print(boss.coolingDay)
+        -- print("boss info")
+        -- print(boss.bossID)
+        -- print(boss.coolingDay)
         if boss.typeIndex >= 4 and boss.typeIndex <= 7 then
             if boss.coolingDay == 0 then
                 CorePlayManager.currentBossID = boss.bossID
