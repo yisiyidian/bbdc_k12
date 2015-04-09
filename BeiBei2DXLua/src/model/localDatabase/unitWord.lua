@@ -158,19 +158,19 @@ function M.getMaxUnit()
     return maxUnit
 end
 
--- function M.getMaxBossByBookKey(bookKey)
---     local userId    = s_CURRENT_USER.objectId
---     local username  = s_CURRENT_USER.username
+function M.getMaxUnitByBookKey(bookKey)
+    local userId    = s_CURRENT_USER.objectId
+    local username  = s_CURRENT_USER.username
 
---     local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
 
---     local maxBoss = nil
---     for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." ORDER BY bossID DESC LIMIT 1 ;") do
---         maxBoss = row
---     end
+    local maxUnit = nil
+    for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." ORDER BY unitID DESC LIMIT 1 ;") do
+        maxUnit = row
+    end
 
---     return maxBoss
--- end
+    return maxUnit
+end
 
 function M.getMaxUnitID()
     local unit = M.getMaxUnit()

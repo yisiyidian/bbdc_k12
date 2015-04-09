@@ -25,6 +25,7 @@ local localdatabase_user            = nil
 local localdatabase_dailyStudyInfo  = nil
 local localdatabase_bossWord        = nil
 local localdatabase_task            = nil
+local localdatabase_unit            = nil
 
 -- define Manager
 local Manager = {}
@@ -44,6 +45,7 @@ function Manager.init()
     localdatabase_dailyStudyInfo    = reloadModule('model.localDatabase.dailyStudyInfo')
     localdatabase_bossWord          = reloadModule('model.localDatabase.bossWord')
     localdatabase_task              = reloadModule('model.localDatabase.task')
+    localdatabase_unitWord          = reloadModule('model.localDatabase.unitWord')
     
     Manager.initTables()
 end
@@ -186,51 +188,85 @@ end
 
 ---- Boss Word -------------------------------------------------------------------------------------------
 
-function Manager.getPrevWordState()
-    return localdatabase_bossWord.getPrevWordState()
-end
+-- function Manager.getPrevWordState()
+--     return localdatabase_bossWord.getPrevWordState()
+-- end
 
+-- function Manager.getTodayReviewBoss()
+--     return localdatabase_bossWord.getTodayReviewBoss()
+-- end
+
+-- function Manager.getMaxBoss()
+--     return localdatabase_bossWord.getMaxBoss()
+-- end
+
+-- function Manager.getMaxBossByBookKey(bookKey)
+--     return localdatabase_bossWord.getMaxBossByBookKey(bookKey)
+-- end
+
+-- function Manager.getMaxBossID()
+--     return localdatabase_bossWord.getMaxBossID()
+-- end
+
+-- function Manager.getBossInfo(bossID)
+--     return localdatabase_bossWord.getBossInfo(bossID)
+-- end
+
+-- function Manager.getAllBossInfo()
+--     return localdatabase_bossWord.getAllBossInfo()
+-- end
+
+-- function Manager.addRightWord(wordindex)
+--     localdatabase_bossWord.addRightWord(wordindex)
+-- end
+
+-- function Manager.addWrongWord(wordindex)
+--     return localdatabase_bossWord.addWrongWord(wordindex)
+-- end
+
+-- function Manager.updateTypeIndex(bossID)
+--     Manager.minusTodayRemainTaskNum()
+--     localdatabase_bossWord.updateTypeIndex(bossID)
+-- end
+
+-- function Manager.printBossWord()
+--     localdatabase_bossWord.printBossWord()
+-- end
+
+---- Unit word -----------------------------------------------------------------------------------------
 function Manager.getTodayReviewBoss()
-    return localdatabase_bossWord.getTodayReviewBoss()
+    return localdatabase_unitWord.getTodayReviewBoss()
 end
 
-function Manager.getMaxBoss()
-    return localdatabase_bossWord.getMaxBoss()
+function Manager.getMaxUnit()
+    return localdatabase_unitWord.getMaxUnit()
 end
 
-function Manager.getMaxBossByBookKey(bookKey)
-    return localdatabase_bossWord.getMaxBossByBookKey(bookKey)
+function Manager.getMaxUnitByBookKey(bookKey)
+    return localdatabase_unitWord.getMaxUnitByBookKey(bookKey)
 end
 
-function Manager.getMaxBossID()
-    return localdatabase_bossWord.getMaxBossID()
+function Manager.getMaxUnitID()
+    return localdatabase_unitWord.getMaxUnitID()
 end
 
-function Manager.getBossInfo(bossID)
-    return localdatabase_bossWord.getBossInfo(bossID)
+function Manager.getUnitInfo(unitID)
+    return localdatabase_unitWord.getUnitInfo(unitID)
 end
 
-function Manager.getAllBossInfo()
-    return localdatabase_bossWord.getAllBossInfo()
+function Manager.getAllUnitInfo()
+    return localdatabase_unitWord.getAllUnitInfo()
 end
 
-function Manager.addRightWord(wordindex)
-    localdatabase_bossWord.addRightWord(wordindex)
+
+function Manager.updateUnitState(unitID)   -- TODO
+    -- Manager.minusTodayRemainTaskNum()
+    -- localdatabase_bossWord.updateTypeIndex(bossID)
 end
 
-function Manager.addWrongWord(wordindex)
-    return localdatabase_bossWord.addWrongWord(wordindex)
+function Manager.printUnitWord()
+    localdatabase_unitWord.printUnitWord()
 end
-
-function Manager.updateTypeIndex(bossID)
-    Manager.minusTodayRemainTaskNum()
-    localdatabase_bossWord.updateTypeIndex(bossID)
-end
-
-function Manager.printBossWord()
-    localdatabase_bossWord.printBossWord()
-end
-
 ---- Statistics -----------------------------------------------------------------------------------------
 
 function Manager.getTotalStudyWordsNum()
