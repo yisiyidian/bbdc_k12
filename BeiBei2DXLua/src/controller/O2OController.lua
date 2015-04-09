@@ -332,6 +332,7 @@ function O2OController.loadConfigs()
     s_DataManager.loadBooks()
     LOGTIME('loadBookWords')
     s_BookWord = s_DataManager.loadBookWords()
+    -- TODO load K12 books
     LOGTIME('loadChapters')
     s_DataManager.loadChapters()
     LOGTIME('loadReviewBoss')
