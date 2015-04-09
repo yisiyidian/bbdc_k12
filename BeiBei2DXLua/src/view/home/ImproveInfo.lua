@@ -2,7 +2,7 @@ require("common.global")
 
 local BigAlter      = require("view.alter.BigAlter")
 local SmallAlter    = require("view.alter.SmallAlter")
-local ImproveInfoNode     = require("view.home.ImproveInfoNode")
+local InputNode  = require("view.login.InputNode")
 
 local ImproveInfo = {}
 
@@ -95,11 +95,11 @@ showLogin = function()
     label2:setPosition(back_width/2,640)
     back_login:addChild(label2)
 
-    local username = ImproveInfoNode.create(InputNode.type_username)
+    local username = InputNode.create(InputNode.type_username)
     username:setPosition(back_width/2, 550)
     back_login:addChild(username)
 
-    local password = ImproveInfoNode.create(InputNode.type_pwd)
+    local password = InputNode.create(InputNode.type_pwd)
     password:setPosition(back_width/2, 450)
     back_login:addChild(password)
 

@@ -20,7 +20,11 @@ function InputNode.create(type, hint, eventHandleCB)
     local cursor
     main.textField = nil
     
-    local backImage = cc.Sprite:create("image/login/white_shurukuang_zhuce.png")
+    if type == "username" then
+        backImage = cc.Sprite:create("image/login/sl_username.png")
+    else
+        backImage = cc.Sprite:create("image/login/sl_password.png")
+    end    
     backImage:setPosition(width/2, height/2)
     main:addChild(backImage)
       
@@ -70,7 +74,7 @@ function InputNode.create(type, hint, eventHandleCB)
     main:addChild(cursor)
     
     local update = function(dt)
-        cursor:setPosition(15+main.textField:getContentSize().width, height/2)
+        cursor:setPosition(30+main.textField:getContentSize().width, height/2)
     end
     main:scheduleUpdateWithPriorityLua(update, 0)
 

@@ -67,7 +67,8 @@ function BookLayer.create()
     backColor:addChild(hint) 
     local name_array = {}
     local full_name_array = {}
-    local key_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
+    --local key_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
+    local key_array = {'primary'}
     --local key_array = g_BOOKKEYS
     for i = 1, #key_array do
         name_array[i] = string.upper(key_array[i])

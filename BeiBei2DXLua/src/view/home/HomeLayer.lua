@@ -19,6 +19,12 @@ local list = {}
 local TEXT_CHANGE_ACCOUNT = '切换账号' -- "登出游戏"
 
 function HomeLayer.create()
+    --unlock friend
+
+    if s_CURRENT_USER:getLockFunctionState(1) == 0 then
+        s_CURRENT_USER:unlockFunctionState(1)
+    end
+
     -- task
     local todayTotalBossNum     = s_LocalDatabaseManager:getTodayTotalBossNum()
     local todayRemainBossNum    = s_LocalDatabaseManager:getTodayRemainBossNum()

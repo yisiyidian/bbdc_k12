@@ -14,8 +14,6 @@ function ShopAlter.create(itemId, location)
     local state = s_CURRENT_USER:getLockFunctionState(itemId)
     local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
-    local homeLayer = HomeLayer.create()
-
     local main = cc.Layer:create()
 
     local back

@@ -1590,11 +1590,13 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
         elseif s_CURRENT_USER.winCombo <= 3 then
             s_CURRENT_USER.timeAdjust = 0
         end
+        s_CURRENT_USER.wordsCount = s_CURRENT_USER.wordsCount + self.maxCount
     end
 
     saveUserToServer({['timeAdjust']=s_CURRENT_USER.timeAdjust, 
                       ['winCombo']=s_CURRENT_USER.winCombo,
-                      ['failTime']=s_CURRENT_USER.failTime})
+                      ['failTime']=s_CURRENT_USER.failTime},
+                      ['wordsCount'] = s_CURRENT_USER.wordsCount)
     --s_CorePlayManager.leaveSummaryModel(true)
     self.girl:setAnimation(0,'girl_win',true)
     s_SCENE:callFuncWithDelay(1.5,function (  )
