@@ -116,6 +116,25 @@ function DataManager.loadBookWords()
     
 end
 
+-- primary book word   book[unit[word]]
+function DataManager.loadPrimaryBooks()
+    local bookWord = {}
+        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'}
+        for i = 1, #bookName do
+            bookWord[bookName[i]] = {}
+            local filepath = "cfg/" .. bookName[i] .. ".book"
+            local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
+            local lines = split(content, "\n")
+            for j = 1, #lines do
+                if lines[j] ~= "" then
+                    tabs = split(lines[j],"\t")
+                    table.insert(bookWord[bookName[i]][tabs[1]], tabs[2])
+                end
+            end
+        end
+    return bookWord
+end
+
 -- book -------------------------------------------------------------------
 
 function DataManager.loadBooks()
@@ -139,6 +158,28 @@ function DataManager.loadBooks()
         DataManager.books[data['key']] = book
     end
 end
+
+-- function DataManager.loadPrimaryBooks()
+--     local jsonObj = loadJsonFile(s_books)
+--     local jsonArr = jsonObj['books']
+--     local MetaBook = require("model.meta.MetaBook")
+--     DataManager.books = {}
+--     for i = 1, #jsonArr do 
+--         local data = jsonArr[i]
+--         local book = MetaBook.create(data['key'],
+--                                     data['name'],
+--                                     data['words'],
+--                                     data['color_r'],
+--                                     data['color_g'],
+--                                     data['color_b'],
+--                                     data['figureName'],
+--                                     data['progressColor_r'],
+--                                     data['progressColor_g'],
+--                                     data['progressColor_b'],
+--                                     data['music'])
+--         DataManager.books[data['key']] = book
+--     end
+-- end
 
 
 
