@@ -400,76 +400,76 @@ end
 --     end
 -- end
 
--- function M.updateunitState(bossID)
---     local userId    = s_CURRENT_USER.objectId
---     local bookKey   = s_CURRENT_USER.bookKey
---     local username  = s_CURRENT_USER.username
---     local time      = os.time()
+function M.updateUnitState(unitID)
+    local userId    = s_CURRENT_USER.objectId
+    local bookKey   = s_CURRENT_USER.bookKey
+    local username  = s_CURRENT_USER.username
+    local time      = os.time()
 
---     local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
 
---     for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." and bossID = "..bossID.." ;") do
---         local newunitState = row.unitState + 1
---         local lastWordIndex = row.lastWordIndex
+    for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." and unitID = "..unitID.." ;") do
+        local newUnitState = row.unitState + 1
+        local currentWordIndex = row.currentWordIndex
 
---         local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , unitState = "..newunitState.." WHERE "..condition.." and bossID = "..bossID.." ;"
---         Manager.database:exec(query)
---         saveDataToServer(true, time, row.bossID, newunitState, row.wordList, lastWordIndex, row.savedToServer)
+        local query = "UPDATE DataUnit SET lastUpdate = '"..time.."' , unitState = "..newUnitState.." WHERE "..condition.." and bossID = "..bossID.." ;"
+        Manager.database:exec(query)
+        saveDataToServer(true, time, row.unitID, newUnitState, row.wordList, currentWordIndex, row.savedToServer)
 
---         if newunitState == 4 then
---             query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, unitState, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..", 0) ;"
---             Manager.database:exec(query)
---             saveDataToServer(true, time, bossID + 1, 0, '', lastWordIndex, 0)
---         elseif newunitState == 8 then
---             s_LocalDatabaseManager.addGraspWordsNum(getMaxWrongNumEveryLevel())
---         end
---     end    
+        if newUnitState == 4 then
+            query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, unitState, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..", 0) ;"
+            Manager.database:exec(query)
+            saveDataToServer(true, time, unitID + 1, 0, '', 0, 0)
+        elseif newunitState == 8 then
+            -- s_LocalDatabaseManager.addGraspWordsNum(getMaxWrongNumEveryLevel())
+        end
+    end    
 
---     M.printBossWord()
--- end
+    M.printUnitWord()
+end
 
--- function M.printBossWord()
---     if BUILD_TARGET ~= BUILD_TARGET_DEBUG then return end
+function M.printUnitWord()
+    if BUILD_TARGET ~= BUILD_TARGET_DEBUG then return end
 
---     local userId    = s_CURRENT_USER.objectId
---     local bookKey   = s_CURRENT_USER.bookKey
---     local username  = s_CURRENT_USER.username
+    local userId    = s_CURRENT_USER.objectId
+    local bookKey   = s_CURRENT_USER.bookKey
+    local username  = s_CURRENT_USER.username
 
---     local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
 
---     local query = "SELECT * FROM DataBossWord WHERE "..condition.." ;"
---     print(query)
---     print("<bossWord>")
---     for row in Manager.database:nrows(query) do
---         print("<item>")
---         print("bossID: "..row.bossID)
---         print("unitState: "..row.unitState)
---         print("wordList: "..row.wordList)
---         print("lastWordIndex: "..row.lastWordIndex)
---         print("</item>")
---     end
---     print("</bossWord>")
--- end
+    local query = "SELECT * FROM DataUnit WHERE "..condition.." ;"
+    print(query)
+    print("<unitWord>")
+    for row in Manager.database:nrows(query) do
+        print("<item>")
+        print("unitID: "..row.unitID)
+        print("unitState: "..row.unitState)
+        print("wordList: "..row.wordList)
+        print("currentWordIndex: "..row.currentWordIndex)
+        print("</item>")
+    end
+    print("</unitWord>")
+end
 
 
--- function M.getAllWrongWordList()
---     local userId    = s_CURRENT_USER.objectId
---     local bookKey   = s_CURRENT_USER.bookKey
---     local username  = s_CURRENT_USER.username
+function M.getAllWrongWordList()
+    local userId    = s_CURRENT_USER.objectId
+    local bookKey   = s_CURRENT_USER.bookKey
+    local username  = s_CURRENT_USER.username
 
---     local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
 
---     local wordPool = {}
---     for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." ORDER BY bossID ;") do
---         if row.wordList ~= '' then
---             local t = split(row.wordList, "|")
---             for i = 1, #t do
---                 table.insert(wordPool, t[i])
---             end
---         end
---     end
---     return wordPool
--- end
+    local wordPool = {}
+    for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." ORDER BY unitID ;") do
+        if row.wordList ~= '' then
+            local t = split(row.wordList, "|")
+            for i = 1, #t do
+                table.insert(wordPool, t[i])
+            end
+        end
+    end
+    return wordPool
+end
 
 
 return M
