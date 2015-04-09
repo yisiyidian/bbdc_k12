@@ -38,110 +38,110 @@ local function saveDataToServer(skip_wordList, lastUpdate, unitID, unitState, wo
     end)
 end
 
-function M.getPrevWordState()
-    local preIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
-    local currentUnit = M.getMaxUnitID()
-    local preWord  = s_BookWord[s_CURRENT_USER.bookKey][currentUnit][preIndex]
+-- function M.getPrevWordState()
+--     local preIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
+--     local currentUnit = M.getMaxUnitID()
+--     local preWord  = s_BookWord[s_CURRENT_USER.bookKey][currentUnit][preIndex]
 
-    if preWord == nil then
-        return true
-    else
-        local maxBossID = M.getMaxBossID()
-        local boss = M.getBossInfo(maxBossID)
-        if #boss.wrongWordList == 0 then
-            if maxBossID == 1 then
-                return true
-            else
-                local preBoss = M.getBossInfo(maxBossID - 1)
-                local lastWrongWord = preBoss.wrongWordList[#preBoss.wrongWordList]
-                if preWord == lastWrongWord then
-                    return false
-                else
-                    return true
-                end
-            end
-        else
-            local lastWrongWord = boss.wrongWordList[#boss.wrongWordList]
-            if preWord == lastWrongWord then
-                return false
-            else
-                return true
-            end
+--     if preWord == nil then
+--         return true
+--     else
+--         local maxUnitID = M.getMaxUnitID()
+--         local unit = M.getUnitInfo(maxUnitID)
+--         if #unit.wrongWordList == 0 then
+--             if maxUnitID == 1 then
+--                 return true
+--             else
+--                 local preUnit = M.getUnitInfo(maxUnitID - 1)
+--                 local lastWrongWord = preUnit.wrongWordList[#preBoss.wrongWordList]
+--                 if preWord == lastWrongWord then
+--                     return false
+--                 else
+--                     return true
+--                 end
+--             end
+--         else
+--             local lastWrongWord = unit.wrongWordList[#unit.wrongWordList]
+--             if preWord == lastWrongWord then
+--                 return false
+--             else
+--                 return true
+--             end
+--         end
+--     end
+-- end
+
+function M.getTodayReviewBoss()
+    local userId    = s_CURRENT_USER.objectId
+    local bookKey   = s_CURRENT_USER.bookKey
+    local username  = s_CURRENT_USER.username
+
+    local time      = os.time()
+    local today     = os.date("%x", time)
+
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+
+    local unitList  = {}
+    for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." ORDER BY unitID ;") do
+        if row.unitState >= 4 and row.unitState <= 7 then
+            local unit  = {}
+            unit.unitID = row.unitID
+            unit.unitState  = row.unitState
+            unit.lastUpdate = row.lastUpdate
+            table.insert(unitList, unit)
         end
     end
-end
 
--- function M.getTodayReviewBoss()
---     local userId    = s_CURRENT_USER.objectId
---     local bookKey   = s_CURRENT_USER.bookKey
---     local username  = s_CURRENT_USER.username
+    local getGapDay = function(day1, day2)
+        local t1 = split(day1, "/")
+        local t2 = split(day2, "/")
+        local d1 = {}
+        local d2 = {}
+        d1.year  = tonumber("20"..t1[3])
+        d1.month = tonumber(t1[1])
+        d1.day   = tonumber(t1[2])
+        d2.year  = tonumber("20"..t2[3])
+        d2.month = tonumber(t2[1])
+        d2.day   = tonumber(t2[2])
 
---     local time      = os.time()
---     local today     = os.date("%x", time)
+        local y = tonumber(os.date('%Y', os.time()))
+        if d1.year > y then d1.year = y end
+        if d2.year > y then d2.year = y end
 
---     local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
-
---     local bossList  = {}
---     for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." ORDER BY bossID ;") do
---         if row.unitState >= 4 and row.unitState <= 7 then
---             local boss  = {}
---             boss.bossID = row.bossID
---             boss.unitState  = row.unitState
---             boss.lastUpdate = row.lastUpdate
---             table.insert(bossList, boss)
---         end
---     end
-
---     local getGapDay = function(day1, day2)
---         local t1 = split(day1, "/")
---         local t2 = split(day2, "/")
---         local d1 = {}
---         local d2 = {}
---         d1.year  = tonumber("20"..t1[3])
---         d1.month = tonumber(t1[1])
---         d1.day   = tonumber(t1[2])
---         d2.year  = tonumber("20"..t2[3])
---         d2.month = tonumber(t2[1])
---         d2.day   = tonumber(t2[2])
-
---         local y = tonumber(os.date('%Y', os.time()))
---         if d1.year > y then d1.year = y end
---         if d2.year > y then d2.year = y end
-
---         local numDay1 = os.time(d1)
---         local numDay2 = os.time(d2)
---         local gap = (numDay2-numDay1)/(3600*24)
---         return gap
---     end
+        local numDay1 = os.time(d1)
+        local numDay2 = os.time(d2)
+        local gap = (numDay2-numDay1)/(3600*24)
+        return gap
+    end
 
 
---     local todayReviewBoss = {}
---     for i = 1, #bossList do
---         local boss = bossList[i]
+    local todayReviewBoss = {}
+    for i = 1, #unitList do
+        local unit = unitList[i]
         
---         local gap
---         if     boss.unitState == 4 then
---             gap = 1
---         elseif boss.unitState == 5 then
---             gap = 2
---         elseif boss.unitState == 6 then
---             gap = 3
---         elseif boss.unitState == 7 then
---             gap = 8
---         end
+        local gap
+        if     unit.unitState == 4 then
+            gap = 1
+        elseif unit.unitState == 5 then
+            gap = 2
+        elseif unit.unitState == 6 then
+            gap = 3
+        elseif unit.unitState == 7 then
+            gap = 8
+        end
 
---         local lastUpdateDay = os.date("%x", boss.lastUpdate)
---         if boss.lastUpdate == nil or boss.lastUpdate == 0 then
---             lastUpdateDay = os.date("%x", boss.updatedAt)
---         end
---         local gapDayNum = getGapDay(lastUpdateDay, today)
---         if gapDayNum >= gap then
---             table.insert(todayReviewBoss, boss.bossID)
---         end
---     end
+        local lastUpdateDay = os.date("%x", unit.lastUpdate)
+        if unit.lastUpdate == nil or unit.lastUpdate == 0 then
+            lastUpdateDay = os.date("%x", unit.updatedAt)
+        end
+        local gapDayNum = getGapDay(lastUpdateDay, today)
+        if gapDayNum >= gap then
+            table.insert(todayReviewBoss, unit.unitID)
+        end
+    end
 
---     return todayReviewBoss
--- end
+    return todayReviewBoss
+end
 
 function M.getMaxUnit()
     local userId    = s_CURRENT_USER.objectId
@@ -303,17 +303,17 @@ function M.getUnitInfo(unitID)
     return unit
 end
 
--- function M.getAllBossInfo()
---     local bossList = {}
+function M.getAllUnitInfo()
+    local unitList = {}
 
---     local maxBossID = M.getMaxBossID()
---     for i = 1, maxBossID do
---         local boss = M.getBossInfo(i)
---         table.insert(bossList, boss)
---     end
+    local maxUnitID = M.getMaxUnitID()
+    for i = 1, maxUnitID do
+        local unit = M.getBossInfo(i)
+        table.insert(unitList, unit)
+    end
 
---     return bossList
--- end
+    return unitList
+end
 
 
 -- function M.addRightWord(wordindex)
