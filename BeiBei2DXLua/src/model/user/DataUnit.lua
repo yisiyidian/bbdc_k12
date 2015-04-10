@@ -9,7 +9,7 @@ function DataUnit.create()
 	return data
 end
 
-function DataUnit.ctor() 
+function DataUnit:ctor() 
 	self.className = 'DataUnit'
 	self.bookKey = ''
 	self.lastUpdate = 0
