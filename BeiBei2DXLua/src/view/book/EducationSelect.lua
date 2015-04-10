@@ -63,7 +63,7 @@ function EducationSelect:ctor()
         end
     end
 
-    local education = {'primary','middle','high'}
+    local education = {'primary','junior','senior'}
     local titleArray = {'小学','初中','高中'}
     for i = 1,#education do
     	local bookBtn = ccui.Button:create('image/book/k12/K12_choose_book_'..education[i]..'_school_button.png','image/book/k12/K12_choose_book_'..education[i]..'_school_button_press.png')
@@ -73,9 +73,20 @@ function EducationSelect:ctor()
 
 		local title = cc.Label:createWithSystemFont(titleArray[i],'',34)
         title:setPosition(bookBtn:getContentSize().width*0.35,bookBtn:getContentSize().height*0.4)
-        bookBtn:addChild(title)    	
+        bookBtn:addChild(title)   
+
+        bookBtn:addTouchEventListener(enterBookLayer) 	
     end
 
+    self:popupAccountBind()
+
+end
+
+function EducationSelect:popupAccountBind()
+    if s_CURRENT_USER.tutorialStep > s_tutorial_book_select or s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then return end
+
+    local K12AccountBindView = require('view.login.K12AccountBindView')
+    local view = K12AccountBindView.create(K12AccountBindView.Type_username)
 end
 
 return EducationSelect
