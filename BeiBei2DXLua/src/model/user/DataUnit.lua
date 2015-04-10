@@ -15,7 +15,7 @@ function DataUnit.ctor()
 	self.lastUpdate = 0
 
 	self.unitID = 0   -- unit id 
-	self.unitState = 0 -- current unit state (1|2|3|4|5|6|7|8)
+	self.unitState = 0 -- current unit state (1|2|3|4|5|6|7)
 	self.wordList = ''
 	self.currentWordIndex = 0  -- current word Index in current unit wordlist
 	self.savedToServer = 0
@@ -40,7 +40,7 @@ function DataUnit.getNoObjectIdDatasFromLocalDB()
             data.objectId = row.objectId
             data.userId = row.userId
             data.username = row.username
-            data.createdAt = row.createdAt
+            data.createdAt = row.createdAt  
             data.updatedAt = row.updatedAt
             
             table.insert(noObjectIdDatas, data)
