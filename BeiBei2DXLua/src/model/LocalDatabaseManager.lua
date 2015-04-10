@@ -188,85 +188,85 @@ end
 
 ---- Boss Word -------------------------------------------------------------------------------------------
 
--- function Manager.getPrevWordState()
---     return localdatabase_bossWord.getPrevWordState()
--- end
+function Manager.getPrevWordState()
+    return localdatabase_bossWord.getPrevWordState()
+end
 
--- function Manager.getTodayReviewBoss()
---     return localdatabase_bossWord.getTodayReviewBoss()
--- end
+function Manager.getTodayReviewBoss()
+    return localdatabase_bossWord.getTodayReviewBoss()
+end
 
--- function Manager.getMaxBoss()
---     return localdatabase_bossWord.getMaxBoss()
--- end
+function Manager.getMaxBoss()
+    return localdatabase_bossWord.getMaxBoss()
+end
 
--- function Manager.getMaxBossByBookKey(bookKey)
---     return localdatabase_bossWord.getMaxBossByBookKey(bookKey)
--- end
+function Manager.getMaxBossByBookKey(bookKey)
+    return localdatabase_bossWord.getMaxBossByBookKey(bookKey)
+end
 
--- function Manager.getMaxBossID()
---     return localdatabase_bossWord.getMaxBossID()
--- end
+function Manager.getMaxBossID()
+    return localdatabase_bossWord.getMaxBossID()
+end
 
--- function Manager.getBossInfo(bossID)
---     return localdatabase_bossWord.getBossInfo(bossID)
--- end
+function Manager.getBossInfo(bossID)
+    return localdatabase_bossWord.getBossInfo(bossID)
+end
 
--- function Manager.getAllBossInfo()
---     return localdatabase_bossWord.getAllBossInfo()
--- end
+function Manager.getAllBossInfo()
+    return localdatabase_bossWord.getAllBossInfo()
+end
 
--- function Manager.addRightWord(wordindex)
---     localdatabase_bossWord.addRightWord(wordindex)
--- end
+function Manager.addRightWord(wordindex)
+    localdatabase_bossWord.addRightWord(wordindex)
+end
 
--- function Manager.addWrongWord(wordindex)
---     return localdatabase_bossWord.addWrongWord(wordindex)
--- end
+function Manager.addWrongWord(wordindex)
+    return localdatabase_bossWord.addWrongWord(wordindex)
+end
 
--- function Manager.updateTypeIndex(bossID)
---     Manager.minusTodayRemainTaskNum()
---     localdatabase_bossWord.updateTypeIndex(bossID)
--- end
+function Manager.updateTypeIndex(bossID)
+    Manager.minusTodayRemainTaskNum()
+    localdatabase_bossWord.updateTypeIndex(bossID)
+end
 
--- function Manager.printBossWord()
---     localdatabase_bossWord.printBossWord()
--- end
+function Manager.printBossWord()
+    localdatabase_bossWord.printBossWord()
+end
 
 ---- Unit word -----------------------------------------------------------------------------------------
-function Manager.getTodayReviewBoss()
-    return localdatabase_unitWord.getTodayReviewBoss()
-end
+-- function Manager.getTodayReviewBoss()
+--     return localdatabase_unitWord.getTodayReviewBoss()
+-- end
 
-function Manager.getMaxUnit()
-    return localdatabase_unitWord.getMaxUnit()
-end
+-- function Manager.getMaxUnit()
+--     return localdatabase_unitWord.getMaxUnit()
+-- end
 
-function Manager.getMaxUnitByBookKey(bookKey)
-    return localdatabase_unitWord.getMaxUnitByBookKey(bookKey)
-end
+-- function Manager.getMaxUnitByBookKey(bookKey)
+--     return localdatabase_unitWord.getMaxUnitByBookKey(bookKey)
+-- end
 
-function Manager.getMaxUnitID()
-    return localdatabase_unitWord.getMaxUnitID()
-end
+-- function Manager.getMaxUnitID()
+--     return localdatabase_unitWord.getMaxUnitID()
+-- end
 
-function Manager.getUnitInfo(unitID)
-    return localdatabase_unitWord.getUnitInfo(unitID)
-end
+-- function Manager.getUnitInfo(unitID)
+--     return localdatabase_unitWord.getUnitInfo(unitID)
+-- end
 
-function Manager.getAllUnitInfo()
-    return localdatabase_unitWord.getAllUnitInfo()
-end
+-- function Manager.getAllUnitInfo()
+--     return localdatabase_unitWord.getAllUnitInfo()
+-- end
 
 
-function Manager.updateUnitState(unitID)   -- TODO
-    -- Manager.minusTodayRemainTaskNum()
-    -- localdatabase_bossWord.updateTypeIndex(bossID)
-end
+-- function Manager.updateUnitState(unitID)   -- TODO
+--     -- Manager.minusTodayRemainTaskNum()
+--     -- localdatabase_bossWord.updateTypeIndex(bossID)
+-- end
 
-function Manager.printUnitWord()
-    localdatabase_unitWord.printUnitWord()
-end
+-- function Manager.printUnitWord()
+--     localdatabase_unitWord.printUnitWord()
+-- end
 ---- Statistics -----------------------------------------------------------------------------------------
 
 function Manager.getTotalStudyWordsNum()
