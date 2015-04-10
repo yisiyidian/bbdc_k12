@@ -412,7 +412,7 @@ function HomeLayer.create()
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
                     AnalyticsChangeBookBtn()
-                    s_CorePlayManager.enterBookLayer()
+                    s_CorePlayManager.enterBookLayer(s_CURRENT_USER.bookKey)
                 elseif label_name[i] == "用户反馈" then
                     if  online == false then
                         offlineTipHome.setTrue(OfflineTipForHome_Feedback)

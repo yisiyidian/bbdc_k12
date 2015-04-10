@@ -61,10 +61,10 @@ function DownloadLayer.create(bookKey)
                     DownloadSoundController.killDownload(bookKey)
                     s_LocalDatabaseManager.updateDownloadState(bookKey, 0)
 
-                    s_CorePlayManager.enterBookLayer()
+                    s_CorePlayManager.enterBookLayer(s_CURRENT_USER.bookKey)
                 end
             else
-                s_CorePlayManager.enterBookLayer()
+                s_CorePlayManager.enterBookLayer(s_CURRENT_USER.bookKey)
             end
         end
     end

@@ -8,7 +8,7 @@ local BookLayer = class("BookLayer", function ()
 end)
 
 
-function BookLayer.create()
+function BookLayer.create(education)
     local layer = BookLayer.new()
     layer.book = {}
 
