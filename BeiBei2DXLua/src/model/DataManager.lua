@@ -125,21 +125,23 @@ function DataManager.loadK12Books()
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
         for i = 1, #bookName do
-            bookWord[bookName[i]] = {}
+            bookUnitWord[bookName[i]] = {}
             local filepath = "cfg/" .. bookName[i] .. ".book"
             local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
             local lines = split(content, "\n")
             local current_unit = 0
             for j = 1, #lines do
                 if lines[j] ~= "" then
+                    -- print(lines[j])
                     unit_word = split(lines[j],"\t")
                     if unit_word[1] - current_unit ~= 0 then
-                        bookWord[bookName[i]][unit_word[1]] = {}
+                        bookUnitWord[bookName[i]][unit_word[1]] = {}
                         current_unit = unit_word[1]
                     end
-                    table.insert(bookWord[bookName[i]][unit_word[1]], unit_word[2])
+                    table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])
                 end
             end
+            -- print_lua_table(bookUnitWord[bookName[i]])
         end
     return bookUnitWord
 end
