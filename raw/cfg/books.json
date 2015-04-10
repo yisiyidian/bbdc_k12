@@ -1,173 +1,148 @@
 {
     "books": [
               {
-              "key": "ncee",
-              "name": "高考",
-              "words": 3492,
-              "color_r": 254,
-              "color_g": 204,
-              "color_b": 235,
-              "figureName": "button_choose_book_college_entrance_examination.png",
-              "progressColor_r": 127,
-              "progressColor_g": 229,
-              "progressColor_b": 255,
+              "key": "primary_1",
+              "name": "三年级上",
+              "words": 68,
               "music": "17M"
               },
               {
-              "key": "cet4",
-              "name": "四级",
-              "words": 4231,
-              "color_r": 252,
-              "color_g": 181,
-              "color_b": 167,
-              "figureName": "button_choose_book_CET4.png",
-              "progressColor_r": 179,
-              "progressColor_g": 224,
-              "progressColor_b": 28,
-              "music": "21M"
+              "key": "primary_2",
+              "name": "三年级下",
+              "words": 64,
+              "music": "17M"
               },
               {
-              "key": "cet6",
-              "name": "六级",
-              "words": 1896,
-              "color_r": 237,
-              "color_g": 213,
-              "color_b": 118,
-              "figureName": "button_choose_book_CET6.png",
-              "progressColor_r": 77,
-              "progressColor_g": 200,
-              "progressColor_b": 103,
-              "music": "10M"
+              "key": "primary_3",
+              "name": "四年级上",
+              "words": 132,
+              "music": "17M"
               },
               {
-              "key": "ielts",
-              "name": "雅思",
-              "words": 2036,
-              "color_r": 154,
-              "color_g": 234,
-              "color_b": 167,
-              "figureName": "button_choose_book_TOEFL.png",
-              "progressColor_r": 195,
-              "progressColor_g": 121,
-              "progressColor_b": 212,
-              "music": "11M"  
+              "key": "primary_4",
+              "name": "四年级下",
+              "words": 78,
+              "music": "17M"  
               },
               {
-              "key": "toefl",
-              "name": "托福",
-              "words": 4304,
-              "color_r": 154,
-              "color_g": 221,
-              "color_b": 244,
-              "figureName": "button_choose_book_IELTS.png",
-              "progressColor_r": 234,
-              "progressColor_g": 125,
-              "progressColor_b": 157,
-              "music": "23M"
+              "key": "primary_5",
+              "name": "五年级上",
+              "words": 81,
+              "music": "17M"
               },
               {
-              "key": "gmat",
-              "name": "GMAT",
-              "words": 2029,
-              "color_r": 154,
-              "color_g": 221,
-              "color_b": 244,
-              "figureName": "button_choose_book_TOEFL.png",
-              "progressColor_r": 234,
-              "progressColor_g": 125,
-              "progressColor_b": 157,
-              "music": "11M"
+              "key": "primary_6",
+              "name": "五年级下",
+              "words": 78,
+              "music": "17M"
               },
               {
-              "key": "gre",
-              "name": "GRE",
-              "words": 5572,
-              "color_r": 154,
-              "color_g": 221,
-              "color_b": 244,
-              "figureName": "button_choose_book_TOEFL.png",
-              "progressColor_r": 234,
-              "progressColor_g": 125,
-              "progressColor_b": 157,
-              "music": "30M"
+              "key": "primary_7",
+              "name": "六年级上",
+              "words": 77,
+              "music": "17M"
               },
               {
-              "key": "gse",
-              "name": "考研",
-              "words": 5395,
-              "color_r": 154,
-              "color_g": 221,
-              "color_b": 244,
-              "figureName": "button_choose_book_TOEFL.png",
-              "progressColor_r": 234,
-              "progressColor_g": 125,
-              "progressColor_b": 157,
-              "music": "27M"
+              "key": "primary_8",
+              "name": "六年级下",
+              "words": 49,
+              "music": "17M"
               },
               {
-              "key": "middle",
-              "name": "中学",
-              "words": 1762,
-              "color_r": 154,
-              "color_g": 221,
-              "color_b": 244,
-              "figureName": "button_choose_book_TOEFL.png",
-              "progressColor_r": 234,
-              "progressColor_g": 125,
-              "progressColor_b": 157,
+              "key": "junior_1",
+              "name": "初一上",
+              "words": 347,
               "music": "8.2M"
               },
               {
-              "key": "primary",
-              "name": "小学",
-              "words": 633,
-              "color_r": 154,
-              "color_g": 221,
-              "color_b": 244,
-              "figureName": "button_choose_book_TOEFL.png",
-              "progressColor_r": 234,
-              "progressColor_g": 125,
-              "progressColor_b": 157,
-              "music": "2.9M"
+              "key": "junior_2",
+              "name": "初一下",
+              "words": 396,
+              "music": "8.2M"
               },
               {
-              "key": "pro4",
-              "name": "专四",
-              "words": 2786,
-              "color_r": 154,
-              "color_g": 221,
-              "color_b": 244,
-              "figureName": "button_choose_book_TOEFL.png",
-              "progressColor_r": 234,
-              "progressColor_g": 125,
-              "progressColor_b": 157,
-              "music": "15M"
+              "key": "junior_3",
+              "name": "初二上",
+              "words": 346,
+              "music": "8.2M"
               },
               {
-              "key": "pro8",
-              "name": "专八",
-              "words": 2681,
-              "color_r": 154,
-              "color_g": 221,
-              "color_b": 244,
-              "figureName": "button_choose_book_TOEFL.png",
-              "progressColor_r": 234,
-              "progressColor_g": 125,
-              "progressColor_b": 157,
-              "music": "14M"
+              "key": "junior_4",
+              "name": "初二下",
+              "words": 363,
+              "music": "8.2M"
               },
               {
-              "key": "sat",
-              "name": "SAT",
-              "words": 3542,
-              "color_r": 154,
-              "color_g": 221,
-              "color_b": 244,
-              "figureName": "button_choose_book_TOEFL.png",
-              "progressColor_r": 234,
-              "progressColor_g": 125,
-              "progressColor_b": 157,
-              "music": "19M"
+              "key": "junior_5",
+              "name": "初三",
+              "words": 575,
+              "music": "8.2M"
+              },
+              {
+              "key": "senior_1",
+              "name": "必修1",
+              "words": 217,
+              "music": "17M"
+              },
+              {
+              "key": "senior_2",
+              "name": "必修2",
+              "words": 230,
+              "music": "17M"  
+              },
+              {
+              "key": "senior_3",
+              "name": "必修3",
+              "words": 268,
+              "music": "17M"
+              },
+              {
+              "key": "senior_4",
+              "name": "必修4",
+              "words": 236,
+              "music": "17M"
+              },
+              {
+              "key": "senior_5",
+              "name": "必修5",
+              "words": 295,
+              "music": "17M"
+              },
+              {
+              "key": "senior_6",
+              "name": "选修1",
+              "words": 306,
+              "music": "17M"
+              },
+              {
+              "key": "senior_7",
+              "name": "选修2",
+              "words": 289,
+              "music": "8.2M"
+              },
+              {
+              "key": "senior_8",
+              "name": "选修3",
+              "words": 304,
+              "music": "8.2M"
+              },
+              {
+              "key": "senior_9",
+              "name": "选修4",
+              "words": 283,
+              "music": "8.2M"
+              },
+              {
+              "key": "senior_10",
+              "name": "选修5",
+              "words": 275,
+              "music": "8.2M"
+              },
+              {
+              "key": "senior_11",
+              "name": "选修6",
+              "words": 234,
+              "music": "8.2M"
               }
               ]
 }

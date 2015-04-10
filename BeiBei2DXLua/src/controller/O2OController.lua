@@ -267,7 +267,7 @@ function O2OController.signUpOffline(username, password)
     O2OController.getDataLevelInfo()
     O2OController.getDataEverydayInfo()
 
-    s_CorePlayManager.enterBookLayer()
+    s_CorePlayManager.enterEducationLayer()
 
     hideProgressHUD()
 end
@@ -278,7 +278,7 @@ function O2OController.logInOffline()
     O2OController.getDataEverydayInfo()
 
     if s_CURRENT_USER.bookKey == '' then
-        s_CorePlayManager.enterBookLayer()
+        s_CorePlayManager.enterEducationLayer()
     else
         O2OController.getBossWord()
         O2OController.getDailyStudyInfo()
@@ -301,7 +301,7 @@ function O2OController.getUserDatasOnline()
         LOGTIME('getDataEverydayInfo')
         O2OController.getDataEverydayInfo(function ()
             if s_CURRENT_USER.bookKey == '' then
-                s_CorePlayManager.enterBookLayer() 
+                s_CorePlayManager.enterEducationLayer() 
                 s_CURRENT_USER.dataDailyUsing:reset()
             else
 

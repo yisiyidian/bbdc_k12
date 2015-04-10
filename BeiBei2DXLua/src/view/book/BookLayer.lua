@@ -8,7 +8,7 @@ local BookLayer = class("BookLayer", function ()
 end)
 
 
-function BookLayer.create()
+function BookLayer.create(education)
     local layer = BookLayer.new()
     layer.book = {}
 
@@ -20,7 +20,7 @@ function BookLayer.create()
     
     local click_back = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            s_CorePlayManager.enterHomeLayer()
+            s_CorePlayManager.enterEducationLayer()
             playSound(s_sound_buttonEffect)
         end
     end
@@ -36,28 +36,35 @@ function BookLayer.create()
     
     --whether bookKey == nil
     
-    if s_CURRENT_USER.bookKey == '' then 
-       backButton:setVisible(false)
-    else
-       backButton:setVisible(true)
-    end
+    -- if s_CURRENT_USER.bookKey == '' then 
+    --    backButton:setVisible(false)
+    -- else
+    --    backButton:setVisible(true)
+    -- end
     
-    local hint = cc.Label:createWithSystemFont("请您先选择一本合适您的书籍","",24)
+    local hint = cc.Label:createWithSystemFont("所有的教材都是人教版教材","",24)
     hint:setPosition((s_RIGHT_X - s_LEFT_X)/2,1073)
     hint:setColor(cc.c4b(66,66,62,255))
     backColor:addChild(hint) 
-    local name_array = {}
-    local full_name_array = {}
+    --local name_array = {}
     --local key_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
-    local key_array = {'primary'}
-    --local key_array = g_BOOKKEYS
-    for i = 1, #key_array do
-        name_array[i] = string.upper(key_array[i])
-        full_name_array[i] = string.upper(key_array[1])
-        if i <= 5 then
-            full_name_array[i] = string.upper(key_array[i])
-        end
+    local grade = split(education,'_')
+    local key_array = {}
+    if grade[1] == 'primary' then
+        key_array = {'primary_1','primary_2','primary_3','primary_4','primary_5','primary_6','primary_7','primary_8'}
+    elseif grade[1] == 'junior' then
+        key_array = {'junior_1','junior_2','junior_3','junior_4','junior_5'}
+    else
+        key_array = {'senior_1','senior_2','senior_3','senior_4','senior_5','senior_6','senior_7','senior_8','senior_9','senior_10','senior_11'}
     end
+    --local key_array = g_BOOKKEYS
+    -- for i = 1, #key_array do
+    --     name_array[i] = string.upper(key_array[i])
+    --     full_name_array[i] = string.upper(key_array[1])
+    --     if i <= 5 then
+    --         full_name_array[i] = string.upper(key_array[i])
+    --     end
+    -- end
     local func_array = {}
     local bookCount = #key_array
     for i = 1, bookCount do
@@ -89,7 +96,7 @@ function BookLayer.create()
         end
         table.insert(func_array, click)
     
-        local smallBack = ccui.Button:create("image/book/"..name_array[i]..".png", "", "")
+        local smallBack = ccui.Button:create("image/book/"..grade[1].."/K12_choose_book_"..key_array[i]..".png", "", "")
         smallBack:setTouchEnabled(true)
         smallBack:setScale9Enabled(true)
 
@@ -97,8 +104,14 @@ function BookLayer.create()
         smallBack:setAnchorPoint(0.5,0)
 
         if key == s_CURRENT_USER.bookKey then
-            local shine = cc.Sprite:create('image/book/choose_book_using_now.png')
-            shine:setPosition(smallBack:getContentSize().width / 2 - 7,smallBack:getContentSize().height / 2)
+            local shine
+            if grade[1]== 'senior' then
+                shine = cc.Sprite:create('image/book/choose_book_using_now.png')
+                shine:setPosition(smallBack:getContentSize().width / 2 - 7,smallBack:getContentSize().height / 2)
+            else
+                shine = cc.Sprite:create('image/book/choose_book_using_now_round.png')
+                shine:setPosition(smallBack:getContentSize().width / 2 - 3,smallBack:getContentSize().height / 2)
+            end
             smallBack:addChild(shine)
             local girl = cc.Sprite:create('image/book/choose_book_using_now_beibei.png')
             smallBack:addChild(girl,-1)
@@ -158,22 +171,22 @@ function BookLayer.create()
         smallBack:addChild(richtext) 
 
 
-        if i == 1 then
-            if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
-                local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
-                tutorial_text:setPosition((s_RIGHT_X - s_LEFT_X)/2, 1073)
-                backColor:addChild(tutorial_text,120)
-                --tutorial_text:setColor(cc.c3b(255,255,255))
+        -- if i == 1 then
+        --     if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
+        --         local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
+        --         tutorial_text:setPosition((s_RIGHT_X - s_LEFT_X)/2, 1073)
+        --         backColor:addChild(tutorial_text,120)
+        --         --tutorial_text:setColor(cc.c3b(255,255,255))
                 
-                local text = cc.Label:createWithSystemFont(s_DataManager.getTextWithIndex(TEXT__TUTORIAL_BOOK_SELECT),'',28)
-                text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
-                text:setColor(cc.c3b(0,0,0))
-                tutorial_text:addChild(text)
+        --         local text = cc.Label:createWithSystemFont(s_DataManager.getTextWithIndex(TEXT__TUTORIAL_BOOK_SELECT),'',28)
+        --         text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
+        --         text:setColor(cc.c3b(0,0,0))
+        --         tutorial_text:addChild(text)
                 
-                -- s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
-                -- s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_book_select+1)
-            end
-        end
+        --         -- s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
+        --         -- s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_book_select+1)
+        --     end
+        -- end
         layer.book[i] = smallBack
         
     end
@@ -185,7 +198,7 @@ function BookLayer.create()
     listView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,0.85 * s_DESIGN_HEIGHT))
     listView:setPosition(s_LEFT_X,0)
     layer:addChild(listView)
-    local count = math.ceil(bookCount / 2) + 1
+    local count = math.ceil(bookCount / 2 + 0.5)
     for i = 1, count do 
         local shelf = cc.Sprite:create('image/book/bookshelf_choose_book_button.png')
         shelf:ignoreAnchorPointForPosition(false)
@@ -198,18 +211,27 @@ function BookLayer.create()
         custom_item:addChild(shelf,0,'shelf')
 
         listView:insertCustomItem(custom_item,i - 1)
-        if i == 1 and bookCount%2 == 1 then
+        if i == 1 then
             layer.book[i]:setPosition(0.5 * custom_item:getContentSize().width,custom_item:getContentSize().height * 0.2 + 0.25 * shelf:getContentSize().height)
             custom_item:addChild(layer.book[i])
-            local flower = cc.Sprite:create('image/book/flower_choose_book.png')
+            
+            local flower 
+            if grade[1] == 'senior' then
+                flower = cc.Sprite:create('image/book/flower_choose_book.png')
+            else
+                flower = cc.Sprite:create('image/book/K12_choose_book__monkey_toy.png')
+            end
             flower:setAnchorPoint(0.5,0)
             flower:setPosition(0.75 * shelf:getContentSize().width,0.75 * shelf:getContentSize().height)
             shelf:addChild(flower)
-        elseif i < count then
-            layer.book[2 * (i - 1) + bookCount%2 - 1]:setPosition(custom_item:getContentSize().width / 2.0 - 0.2 * shelf:getContentSize().width,custom_item:getContentSize().height * 0.2 + 0.25 * shelf:getContentSize().height)
-            layer.book[2 * (i - 1) + bookCount%2]:setPosition(custom_item:getContentSize().width / 2.0 + 0.2 * shelf:getContentSize().width,custom_item:getContentSize().height * 0.2 + 0.25 * shelf:getContentSize().height)
-            custom_item:addChild(layer.book[2 * (i - 1) + bookCount%2 - 1])
-            custom_item:addChild(layer.book[2 * (i - 1) + bookCount%2])
+        elseif bookCount%2 == 1 or i < count then
+            layer.book[2 * (i - 1)]:setPosition(custom_item:getContentSize().width / 2.0 - 0.2 * shelf:getContentSize().width,custom_item:getContentSize().height * 0.2 + 0.25 * shelf:getContentSize().height)
+            layer.book[2 * (i - 1) + 1]:setPosition(custom_item:getContentSize().width / 2.0 + 0.2 * shelf:getContentSize().width,custom_item:getContentSize().height * 0.2 + 0.25 * shelf:getContentSize().height)
+            custom_item:addChild(layer.book[2 * (i - 1)])
+            custom_item:addChild(layer.book[2 * (i - 1)+1])
+        else
+            layer.book[#layer.book]:setPosition(0.5 * custom_item:getContentSize().width,custom_item:getContentSize().height * 0.2 + 0.25 * shelf:getContentSize().height)
+            custom_item:addChild(layer.book[#layer.book])
         end
 
     end
@@ -296,16 +318,16 @@ function BookLayer.create()
 
     layer:scheduleUpdateWithPriorityLua(update, 0)
 
-    layer:popupAccountBind()
+    --layer:popupAccountBind()
 
     return layer
 end
 
-function BookLayer:popupAccountBind()
-    if s_CURRENT_USER.tutorialStep > s_tutorial_book_select or s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then return end
+-- function BookLayer:popupAccountBind()
+--     if s_CURRENT_USER.tutorialStep > s_tutorial_book_select or s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then return end
 
-    local K12AccountBindView = require('view.login.K12AccountBindView')
-    local view = K12AccountBindView.create(K12AccountBindView.Type_username)
-end
+--     local K12AccountBindView = require('view.login.K12AccountBindView')
+--     local view = K12AccountBindView.create(K12AccountBindView.Type_username)
+-- end
 
 return BookLayer

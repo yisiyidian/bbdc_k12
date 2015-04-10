@@ -6,7 +6,9 @@ local s_USE_XXTEA = true
 ---------------------------------------------------------------------------
 -- DO NOT modify these below
 g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13'}
-g_BOOKKEYS = {'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'middle', 'ncee',  'primary', 'pro4', 'pro8', 'sat', 'toefl'}
+g_BOOKKEYS = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'
+        , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
+        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
 
 s_BOOK_KEY_CET4     = g_BOOKKEYS[1] -- 'cet4'
 s_BOOK_KEY_CET6     = g_BOOKKEYS[2] -- 'cet6'
@@ -159,13 +161,6 @@ function DataManager.loadBooks()
         local book = MetaBook.create(data['key'],
                                     data['name'],
                                     data['words'],
-                                    data['color_r'],
-                                    data['color_g'],
-                                    data['color_b'],
-                                    data['figureName'],
-                                    data['progressColor_r'],
-                                    data['progressColor_g'],
-                                    data['progressColor_b'],
                                     data['music'])
         DataManager.books[data['key']] = book
     end
