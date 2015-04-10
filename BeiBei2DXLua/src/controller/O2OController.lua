@@ -334,7 +334,7 @@ function O2OController.loadConfigs()
     s_BookWord = s_DataManager.loadBookWords()
     -- TODO load K12 books
     s_BookUnitWord = s_DataManager.loadK12Books()
-    --print_lua_table(s_BookWord['primary_1'])
+    -- print_lua_table(s_BookUnitWord['primary_1'])
 
     LOGTIME('loadChapters')
     s_DataManager.loadChapters()

@@ -130,6 +130,7 @@ function DataManager.loadK12Books()
             local current_unit = 0
             for j = 1, #lines do
                 if lines[j] ~= "" then
+                    -- print(lines[j])
                     unit_word = split(lines[j],"\t")
                     if unit_word[1] - current_unit ~= 0 then
                         bookUnitWord[bookName[i]][unit_word[1]] = {}
@@ -138,6 +139,7 @@ function DataManager.loadK12Books()
                     table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])
                 end
             end
+            -- print_lua_table(bookUnitWord[bookName[i]])
         end
     return bookUnitWord
 end

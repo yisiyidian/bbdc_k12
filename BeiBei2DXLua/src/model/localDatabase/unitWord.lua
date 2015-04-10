@@ -41,7 +41,7 @@ end
 -- function M.getPrevWordState()
 --     local preIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
 --     local currentUnit = M.getMaxUnitID()
---     local preWord  = s_BookWord[s_CURRENT_USER.bookKey][currentUnit][preIndex]
+--     local preWord  = s_BookUnitWord[s_CURRENT_USER.bookKey][currentUnit][preIndex]
 
 --     if preWord == nil then
 --         return true
@@ -224,7 +224,7 @@ function M.getUnitInfo(unitID)
 
         unit.rightWordList = {}
         -- for i = startIndex, unit.lastWordIndex do
-        --     local wordname = s_BookWord[s_CURRENT_USER.bookKey][i]
+        --     local wordname = s_BookUnitWord[s_CURRENT_USER.bookKey][i]
         --     if hash[wordname] ~= 1 then
         --         table.insert(unit.rightWordList, wordname)
         --     end
@@ -317,7 +317,7 @@ end
 
 
 -- function M.addRightWord(wordindex)
---     local wordname = s_BookWord[s_CURRENT_USER.bookKey][wordindex]
+--     local wordname = s_BookUnitWord[s_CURRENT_USER.bookKey][wordindex]
 
 --     local userId    = s_CURRENT_USER.objectId
 --     local bookKey   = s_CURRENT_USER.bookKey
@@ -346,7 +346,7 @@ end
 
 
 -- function M.addWrongWord(wordindex)
---     local wordname = s_BookWord[s_CURRENT_USER.bookKey][wordindex]
+--     local wordname = s_BookUnitWord[s_CURRENT_USER.bookKey][wordindex]
 
 --     local userId    = s_CURRENT_USER.objectId
 --     local bookKey   = s_CURRENT_USER.bookKey
