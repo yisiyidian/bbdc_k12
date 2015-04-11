@@ -308,7 +308,7 @@ function M.getAllUnitInfo()
 
     local maxUnitID = M.getMaxUnitID()
     for i = 1, maxUnitID do
-        local unit = M.getBossInfo(i)
+        local unit = M.getUnitInfo(i)
         table.insert(unitList, unit)
     end
 
