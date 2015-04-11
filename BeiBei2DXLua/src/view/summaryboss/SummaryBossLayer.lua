@@ -1595,8 +1595,8 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
 
     saveUserToServer({['timeAdjust']=s_CURRENT_USER.timeAdjust, 
                       ['winCombo']=s_CURRENT_USER.winCombo,
-                      ['failTime']=s_CURRENT_USER.failTime},
-                      ['wordsCount'] = s_CURRENT_USER.wordsCount)
+                      ['failTime']=s_CURRENT_USER.failTime,
+                      ['wordsCount'] = s_CURRENT_USER.wordsCount})
     --s_CorePlayManager.leaveSummaryModel(true)
     self.girl:setAnimation(0,'girl_win',true)
     s_SCENE:callFuncWithDelay(1.5,function (  )
