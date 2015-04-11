@@ -169,9 +169,10 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     -- TODO check level state
 ----    local levelState = math.random(0, 3)
 --    levelState = 5
-
-    -- levelState = 3
+    -- test
+    -- levelState = -1
     -- s_level_popup_state = 1
+
 
     if levelState == 0 then
         local deco = sp.SkeletonAnimation:create("spine/chapterlevel/beibeidaizi.json","spine/chapterlevel/beibeidaizi.atlas",1)
@@ -266,6 +267,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         -- plot level number
         self:plotLevelNumber('level'..levelIndex)
     end
+
 end
 
 function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex)
@@ -621,11 +623,30 @@ function ChapterLayerBase:plotDecoration()
             lockIsland:setName('lockLayer'..levelIndex)
             lockIsland:addTouchEventListener(touchEvent)
 
-            local lock = cc.Sprite:create('image/chapter/chapter0/lock.png')
+            local lock = cc.Sprite:create('image/chapter/chapter0/unit_lock.png')
             lock:setName('lock'..levelIndex)
             lockIsland:setPosition(levelPosition)
             -- lock:setPosition(lockIsland:getContentSize().width/2, lockIsland:getContentSize().height/2)
             lock:setPosition(levelPosition)
+
+            -- add text
+            local unitText = cc.Sprite:create('image/chapter/chapter0/unit_black.png')
+            unitText:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2+10)
+            lock:addChild(unitText, 130)
+
+            local number = cc.Label:createWithSystemFont(''..(levelIndex+1),'',35)
+            number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-20)
+            number:setColor(cc.c3b(164, 125, 46))
+            lock:addChild(number, 130)
+
+            -- local number = ccui.TextBMFont:create()
+            -- number:setFntFile('font/number_brown.fnt')
+            -- --number:setColor(cc.c3b(56,26,23))
+            -- number:setString(levelIndex+1)
+            -- number:setScale(0.85)
+            -- number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-10)
+            -- lock:addChild(number,130)
+
             self:addChild(lock,130)
             self:addChild(lockIsland,120)
         else
@@ -643,11 +664,21 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
 --        start:setPosition(levelPosition.x, levelPosition.y)
 --        self:addChild(start, 130)
 --    else
+
+        local unitText = cc.Sprite:create('image/chapter/chapter0/unit.png')
+        unitText:setPosition(levelPosition.x-5, levelPosition.y + 35)
+        self:addChild(unitText, 130)
+
+        -- local number = cc.Label:createWithSystemFont(''..(levelIndex+1),'',55)
+        -- number:setPosition(levelPosition.x-5, levelPosition.y - 10)
+        -- number:setColor(cc.c3b(255, 255, 255))
+        -- self:addChild(number, 130)
         local number = ccui.TextBMFont:create()
         number:setFntFile('font/number_inclined.fnt')
         --number:setColor(cc.c3b(56,26,23))
         number:setString(levelIndex+1)
-        number:setPosition(levelPosition.x-5, levelPosition.y+10)
+        number:setScale(0.85)
+        number:setPosition(levelPosition.x-5, levelPosition.y-10)
         self:addChild(number,130)
 --    end
 

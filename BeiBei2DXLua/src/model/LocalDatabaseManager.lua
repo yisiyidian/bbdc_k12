@@ -7,6 +7,7 @@ local DataLevelInfo             = require('model.user.DataLevelInfo')
 local DataDailyStudyInfo        = require('model.user.DataDailyStudyInfo')
 local DataBossWord              = require('model.user.DataBossWord')
 local DataTask                  = require('model.user.DataTask')
+local DataUnit                  = require('model.user.DataUnit')
 local DataDailyUsing            = require('model.user.DataDailyUsing')
 
 local databaseTables = {
@@ -17,6 +18,7 @@ local databaseTables = {
         DataDailyStudyInfo,
         DataBossWord,
         DataTask,
+        DataUnit,
         DataDailyUsing
     }
 
@@ -234,39 +236,39 @@ function Manager.printBossWord()
 end
 
 ---- Unit word -----------------------------------------------------------------------------------------
--- function Manager.getTodayReviewBoss()
---     return localdatabase_unitWord.getTodayReviewBoss()
--- end
+function Manager.getTodayReviewBoss()
+    return localdatabase_unitWord.getTodayReviewBoss()
+end
 
--- function Manager.getMaxUnit()
---     return localdatabase_unitWord.getMaxUnit()
--- end
+function Manager.getMaxUnit()
+    return localdatabase_unitWord.getMaxUnit()
+end
 
--- function Manager.getMaxUnitByBookKey(bookKey)
---     return localdatabase_unitWord.getMaxUnitByBookKey(bookKey)
--- end
+function Manager.getMaxUnitByBookKey(bookKey)
+    return localdatabase_unitWord.getMaxUnitByBookKey(bookKey)
+end
 
--- function Manager.getMaxUnitID()
---     return localdatabase_unitWord.getMaxUnitID()
--- end
+function Manager.getMaxUnitID()
+    return localdatabase_unitWord.getMaxUnitID()
+end
 
--- function Manager.getUnitInfo(unitID)
---     return localdatabase_unitWord.getUnitInfo(unitID)
--- end
+function Manager.getUnitInfo(unitID)
+    return localdatabase_unitWord.getUnitInfo(unitID)
+end
 
--- function Manager.getAllUnitInfo()
---     return localdatabase_unitWord.getAllUnitInfo()
--- end
+function Manager.getAllUnitInfo()
+    return localdatabase_unitWord.getAllUnitInfo()
+end
 
 
--- function Manager.updateUnitState(unitID)   -- TODO
---     -- Manager.minusTodayRemainTaskNum()
---     -- localdatabase_bossWord.updateTypeIndex(bossID)
--- end
+function Manager.updateUnitState(unitID)   -- TODO
+    -- Manager.minusTodayRemainTaskNum()
+    -- localdatabase_bossWord.updateTypeIndex(bossID)
+end
 
--- function Manager.printUnitWord()
---     localdatabase_unitWord.printUnitWord()
--- end
+function Manager.printUnitWord()
+    localdatabase_unitWord.printUnitWord()
+end
 ---- Statistics -----------------------------------------------------------------------------------------
 
 function Manager.getTotalStudyWordsNum()

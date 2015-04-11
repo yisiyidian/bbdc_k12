@@ -120,18 +120,18 @@ function HomeLayer.create()
     backColor:addChild(name)
 
 
-    local book_name 
+    -- local book_name 
 
-    local English_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
-    local simple_array = {'四级','六级','高考','托福','雅思','gre','考研','专四','专八','gmat','sat','中学','小学'}
+    -- local English_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
+    -- local simple_array = {'四级','六级','高考','托福','雅思','gre','考研','专四','专八','gmat','sat','中学','小学'}
 
-    for i = 1, #English_array do
-        if s_CURRENT_USER.bookKey == English_array[i] then
-            book_name = simple_array[i]
-        end
-    end
+    -- for i = 1, #English_array do
+    --     if s_CURRENT_USER.bookKey == English_array[i] then
+    --         book_name = s_DataManager.books[key].name
+    --     end
+    -- end
 
-    local currentBook = cc.Label:createWithSystemFont("正在学习："..book_name,"",22)
+    local currentBook = cc.Label:createWithSystemFont("正在学习："..s_DataManager.books[s_CURRENT_USER.bookKey].name,"",22)
     currentBook:setPosition(bigWidth/2, s_DESIGN_HEIGHT-140)
     currentBook:setColor(cc.c4b(255,255,255,255))
     backColor:addChild(currentBook)
@@ -412,7 +412,7 @@ function HomeLayer.create()
                 playSound(s_sound_buttonEffect)
                 if label_name[i] == "选择书籍" then
                     AnalyticsChangeBookBtn()
-                    s_CorePlayManager.enterBookLayer()
+                    s_CorePlayManager.enterBookLayer(s_CURRENT_USER.bookKey)
                 elseif label_name[i] == "用户反馈" then
                     if  online == false then
                         offlineTipHome.setTrue(OfflineTipForHome_Feedback)

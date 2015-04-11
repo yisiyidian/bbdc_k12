@@ -6,7 +6,9 @@ local s_USE_XXTEA = true
 ---------------------------------------------------------------------------
 -- DO NOT modify these below
 g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13'}
-g_BOOKKEYS = {'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'middle', 'ncee',  'primary', 'pro4', 'pro8', 'sat', 'toefl'}
+g_BOOKKEYS = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'
+        , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
+        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
 
 s_BOOK_KEY_CET4     = g_BOOKKEYS[1] -- 'cet4'
 s_BOOK_KEY_CET6     = g_BOOKKEYS[2] -- 'cet6'
@@ -123,21 +125,26 @@ function DataManager.loadK12Books()
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
         for i = 1, #bookName do
-            bookWord[bookName[i]] = {}
+            bookUnitWord[bookName[i]] = {}
             local filepath = "cfg/" .. bookName[i] .. ".book"
             local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
             local lines = split(content, "\n")
             local current_unit = 0
+            local word_count = 0
             for j = 1, #lines do
+                word_count = word_count + 1
                 if lines[j] ~= "" then
+                    -- print(lines[j])
                     unit_word = split(lines[j],"\t")
                     if unit_word[1] - current_unit ~= 0 then
-                        bookWord[bookName[i]][unit_word[1]] = {}
+                        bookUnitWord[bookName[i]][unit_word[1]] = {}
                         current_unit = unit_word[1]
                     end
-                    table.insert(bookWord[bookName[i]][unit_word[1]], unit_word[2])
+                    table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])
                 end
             end
+            print(bookName[i]..'\t'..(word_count-1))
+            -- print_lua_table(bookUnitWord[bookName[i]])
         end
     return bookUnitWord
 end
@@ -154,13 +161,6 @@ function DataManager.loadBooks()
         local book = MetaBook.create(data['key'],
                                     data['name'],
                                     data['words'],
-                                    data['color_r'],
-                                    data['color_g'],
-                                    data['color_b'],
-                                    data['figureName'],
-                                    data['progressColor_r'],
-                                    data['progressColor_g'],
-                                    data['progressColor_b'],
                                     data['music'])
         DataManager.books[data['key']] = book
     end

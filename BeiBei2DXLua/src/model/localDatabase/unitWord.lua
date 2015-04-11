@@ -41,7 +41,7 @@ end
 -- function M.getPrevWordState()
 --     local preIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
 --     local currentUnit = M.getMaxUnitID()
---     local preWord  = s_BookWord[s_CURRENT_USER.bookKey][currentUnit][preIndex]
+--     local preWord  = s_BookUnitWord[s_CURRENT_USER.bookKey][currentUnit][preIndex]
 
 --     if preWord == nil then
 --         return true
@@ -224,7 +224,7 @@ function M.getUnitInfo(unitID)
 
         unit.rightWordList = {}
         -- for i = startIndex, unit.lastWordIndex do
-        --     local wordname = s_BookWord[s_CURRENT_USER.bookKey][i]
+        --     local wordname = s_BookUnitWord[s_CURRENT_USER.bookKey][i]
         --     if hash[wordname] ~= 1 then
         --         table.insert(unit.rightWordList, wordname)
         --     end
@@ -286,15 +286,15 @@ function M.getUnitInfo(unitID)
 
     if     unit.unitState == 0 then
         unit.proficiency = 0
-    elseif unit.unitState >= 1 and unit.unitState <= 4 then
+    elseif unit.unitState >= 1 and unit.unitState <= 3 then
         unit.proficiency = 1
-    elseif unit.unitState == 5 then
+    elseif unit.unitState == 4 then
         unit.proficiency = 2
-    elseif unit.unitState == 6 then
+    elseif unit.unitState == 5 then
         unit.proficiency = 3
-    elseif unit.unitState == 7 then
+    elseif unit.unitState == 6 then
         unit.proficiency = 4
-    elseif unit.unitState == 8 then
+    elseif unit.unitState == 7 then
         unit.proficiency = 5
     else
         unit.proficiency = 0
@@ -308,7 +308,7 @@ function M.getAllUnitInfo()
 
     local maxUnitID = M.getMaxUnitID()
     for i = 1, maxUnitID do
-        local unit = M.getBossInfo(i)
+        local unit = M.getUnitInfo(i)
         table.insert(unitList, unit)
     end
 
@@ -317,7 +317,7 @@ end
 
 
 -- function M.addRightWord(wordindex)
---     local wordname = s_BookWord[s_CURRENT_USER.bookKey][wordindex]
+--     local wordname = s_BookUnitWord[s_CURRENT_USER.bookKey][wordindex]
 
 --     local userId    = s_CURRENT_USER.objectId
 --     local bookKey   = s_CURRENT_USER.bookKey
@@ -346,7 +346,7 @@ end
 
 
 -- function M.addWrongWord(wordindex)
---     local wordname = s_BookWord[s_CURRENT_USER.bookKey][wordindex]
+--     local wordname = s_BookUnitWord[s_CURRENT_USER.bookKey][wordindex]
 
 --     local userId    = s_CURRENT_USER.objectId
 --     local bookKey   = s_CURRENT_USER.bookKey

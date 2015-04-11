@@ -747,7 +747,7 @@ function ChapterLayer:addBackToHome()
     homeButton:addTouchEventListener(click_home)
     homeButton:ignoreAnchorPointForPosition(false)
     homeButton:setAnchorPoint(0,1)
-    homeButton:setPosition(s_LEFT_X + 50  , s_DESIGN_HEIGHT - 50 )
+    homeButton:setPosition(s_LEFT_X + 30  , s_DESIGN_HEIGHT - 32 )
     homeButton:setLocalZOrder(1)
     self:addChild(homeButton,200)
     

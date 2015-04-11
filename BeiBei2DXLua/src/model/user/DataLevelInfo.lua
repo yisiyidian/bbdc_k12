@@ -26,12 +26,20 @@ function DataLevelInfo:getCurrentWordIndex()
     local maxBoss = s_LocalDatabaseManager.getMaxBoss()
     if maxBoss ~= nil then return maxBoss.lastWordIndex + 1 end
     return 1
+
+    -- local maxUnit = s_LocalDatabaseManager.getMaxUnit()
+    -- if maxUnit ~= nil then return maxUnit.currentWordIndex + 1 end
+    -- return 1
 end
 
 function DataLevelInfo:getWordIndex(bookKey)
     local maxBoss = s_LocalDatabaseManager.getMaxBossByBookKey(bookKey)
     if maxBoss ~= nil then return maxBoss.lastWordIndex + 1 end
     return 1
+
+    -- local maxUnit = s_LocalDatabaseManager.getMaxUnitByBookKey(bookKey)
+    -- if maxUnit ~= nil then return maxUnit.currentWordIndex + 1 end
+    -- return 1
 end
 
 function DataLevelInfo:getBookCurrentLevelIndex()
@@ -52,6 +60,7 @@ end
 function DataLevelInfo:computeCurrentProgress()
 --    return 20
      return s_LocalDatabaseManager.getMaxBossID() - 1
+     -- return s_LocalDatabaseManager.getMaxUnitID()
 end
 
 function DataLevelInfo:getDataFromLocalDB()
