@@ -26,13 +26,13 @@ function K12AccountBindView.create(viewtype, ex)
     local view = K12AccountBindView.new()
     view:init(viewtype, ex)
     s_SCENE:popup(view)
-    view:setVisible(false)
-    view:setPosition(0, s_DESIGN_HEIGHT * 1.5) 
+    --view:setVisible(false)
+    view:setPosition(0, 0) 
 
-    local action2 = cc.CallFunc:create(function() view:setVisible(true) end)
-    local action3 = cc.MoveTo:create(0.4, cc.p(0, 0)) 
-    local action4 = cc.Sequence:create(action2, action3)
-    view:runAction(action4)
+    -- local action2 = cc.CallFunc:create(function() view:setVisible(true) end)
+    -- local action3 = cc.MoveTo:create(0.4, cc.p(0, 0)) 
+    -- local action4 = cc.Sequence:create(action2, action3)
+    -- view:runAction(action4)
 
     return view
 end
@@ -54,32 +54,66 @@ function K12AccountBindView:closeAnimation(cb)
 end
 
 function K12AccountBindView:ctor()
-    self.bg = cc.Sprite:create("image/login/store_tanchu_background.png")
-    self.bg:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2)
-    self.bg:ignoreAnchorPointForPosition(false)
-    self.bg:setAnchorPoint(0.5, 0.5)
-    self:setContentSize(self.bg:getContentSize().width, s_DESIGN_HEIGHT)
-    self:addChild(self.bg)
+    -- self.bg = cc.Sprite:create("image/login/store_tanchu_background.png")
+    -- self.bg:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT / 2)
+    -- self.bg:ignoreAnchorPointForPosition(false)
+    -- self.bg:setAnchorPoint(0.5, 0.5)
+    -- self:setContentSize(self.bg:getContentSize().width, s_DESIGN_HEIGHT)
+    -- self:addChild(self.bg)
 
-    self.back_width = self.bg:getContentSize().width
-    self.back_height = self.bg:getContentSize().height
+    self.back_width = 854
+    self.back_height = s_DESIGN_HEIGHT
 
-    local girl_hello = sp.SkeletonAnimation:create('spine/bb_hello_public.json', 'spine/bb_hello_public.atlas', 1)
-    girl_hello:setPosition(self.back_width * 0.5, self.back_height * 0.45)
-    girl_hello:addAnimation(0, 'animation', true)
-    self.bg:addChild(girl_hello, 5)
+    -- local girl_hello = sp.SkeletonAnimation:create('spine/bb_hello_public.json', 'spine/bb_hello_public.atlas', 1)
+    -- girl_hello:setPosition(self.back_width * 0.5, self.back_height * 0.45)
+    -- girl_hello:addAnimation(0, 'animation', true)
+    -- self.bg:addChild(girl_hello, 5)
+
+    local backColor = cc.LayerColor:create(cc.c4b(35,167,227,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
+    backColor:ignoreAnchorPointForPosition(false)
+    backColor:setAnchorPoint(0.5,0)
+    backColor:setPosition(0.5 * s_DESIGN_WIDTH,0)
+    self:addChild(backColor)
+
+    local background = ccui.Scale9Sprite:create('image/signup/frontground_children_login.png',cc.rect(0,0,854,87),cc.rect(0, 43, 854, 1))
+    background:setContentSize(cc.size(854,87+825))
+    background:ignoreAnchorPointForPosition(false)
+    background:setAnchorPoint(0.5,0)
+    background:setPosition(0.5 * s_DESIGN_WIDTH,0)
+    self:addChild(background)
+
+    self.bg = background
+
+    local girl = sp.SkeletonAnimation:create("res/spine/signup/bbchildren2.json", "res/spine/signup/bbchildren2.atlas", 1)
+    --girl:setAnimation(0,'animation',true)
+    self:addChild(girl)
+    girl:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
+
+    local bubble = cc.Sprite:create('image/signup/dauglog_bbchildren_background.png')
+    bubble:setAnchorPoint(0,0.15)
+    bubble:setPosition(0.5 * s_DESIGN_WIDTH - 49,s_DESIGN_HEIGHT - 10 - 0.85 * bubble:getContentSize().height)
+    self:addChild(bubble)
+
+    local welcome = cc.Label:createWithSystemFont('欢迎来到\n贝贝单词','',40)
+    welcome:setPosition(bubble:getContentSize().width / 2,bubble:getContentSize().height / 2)
+    bubble:addChild(welcome)
+
+    -- bubble:setScale(0)
+    -- local appear = cc.ScaleTo:create(1.0,1)
+    local shake = cc.RepeatForever:create(cc.Sequence:create(cc.RotateBy:create(0.5,3),cc.RotateBy:create(1,-6),cc.RotateBy:create(0.5,3)))
+    bubble:runAction(shake)
 
     ------------------------------------------------------------------------------------------
 
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             playSound(s_sound_buttonEffect) 
-            self:closeAnimation()
+            self:removeFromParent()
         end
     end
     
-    local button_close = ccui.Button:create("image/button/button_close.png")
-    button_close:setPosition(self.back_width - 30, self.back_height - 10)
+    local button_close = ccui.Button:create("image/signup/button_ignore_bbchildren_login.png")
+    button_close:setPosition(self.back_width /2, self.back_height * 0.5)
     button_close:addTouchEventListener(button_close_clicked)
     self.bg:addChild(button_close)
 
@@ -97,7 +131,7 @@ function K12AccountBindView:ctor()
     -- local eventDispatcher = self:getEventDispatcher()
     -- eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
 
-    onAndroidKeyPressed(self, function () self:closeAnimation() end)
+    onAndroidKeyPressed(self, function () self:removeFromParent() end)
 end
 
 function K12AccountBindView:init(t, ex)
@@ -128,7 +162,7 @@ function K12AccountBindView:init(t, ex)
     end
 
     self.inputnode = InputNode.create(inputnodeType, hint, eventHandle)
-    self.inputnode:setPosition(self.back_width / 2, 225)
+    self.inputnode:setPosition(self.back_width / 2, 768)
     self.bg:addChild(self.inputnode)
 
     local submit_clicked = function(sender, eventType)

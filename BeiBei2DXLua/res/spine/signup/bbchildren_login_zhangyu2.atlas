@@ -1,0 +1,27 @@
+
+bbchildren_login_zhangyu2.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zhangyu
+  rotate: false
+  xy: 2, 129
+  size: 235, 215
+  orig: 235, 215
+  offset: 0, 0
+  index: -1
+zhangyueye
+  rotate: false
+  xy: 239, 294
+  size: 105, 50
+  orig: 105, 50
+  offset: 0, 0
+  index: -1
+zhangyutui
+  rotate: false
+  xy: 2, 28
+  size: 67, 99
+  orig: 67, 99
+  offset: 0, 0
+  index: -1
