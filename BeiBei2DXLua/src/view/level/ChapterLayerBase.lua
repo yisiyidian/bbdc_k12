@@ -170,7 +170,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 ----    local levelState = math.random(0, 3)
 --    levelState = 5
     -- test
-    levelState = -1
+    -- levelState = -1
     -- s_level_popup_state = 1
 
 
