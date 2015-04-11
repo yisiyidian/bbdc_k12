@@ -90,6 +90,8 @@ function CorePlayManager.initStudyModel()
     CorePlayManager.leaveStudyModel(false)
 end
 
+-- TODO remove study-related function
+
 function CorePlayManager.enterStudyModel(wordName, wrongWordNum, preWordName, preWordNameState)
     if wordName == nil then
         -- book over
@@ -296,26 +298,26 @@ function CorePlayManager.initTotalUnitPlay()
 
     CorePlayManager.currentUnit            = s_LocalDatabaseManager.getUnitInfo(CorePlayManager.currentUnitID)
     CorePlayManager.currentUnitState       = CorePlayManager.currentUnit.unitState
-    -- CorePlayManager.currentRightWordList   = CorePlayManager.currentBoss.rightWordList
+    -- CorePlayManager.currentRightWordList   = CorePlayManager.currentUnit.rightWordList
     CorePlayManager.currentWrongWordList   = CorePlayManager.currentUnit.wrongWordList 
     
     CorePlayManager.BookUnitWordList       = s_BookUnitWord[s_CURRENT_USER.bookKey]
     CorePlayManager.currentIndex           = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
     CorePlayManager.wrongWordNum           = #CorePlayManager.currentWrongWordList
 
-    if     CorePlayManager.currentUnitState == 0 then
-        -- study   model
-        CorePlayManager.initStudyModel()
-    elseif CorePlayManager.currentUnitState == 1 then
+    -- if     CorePlayManager.currentUnitState == 0 then
+    --     -- study   model
+    --     CorePlayManager.initStudyModel()
+    if CorePlayManager.currentUnitState == 0 then
         -- test    model
         CorePlayManager.initTestModel()
-    elseif CorePlayManager.currentUnitState == 2 then
+    elseif CorePlayManager.currentUnitState == 1 then
         -- review  model
         CorePlayManager.initReviewModel()
-    elseif CorePlayManager.currentUnitState == 3 then
+    elseif CorePlayManager.currentUnitState == 2 then
         -- summary model
         CorePlayManager.initSummaryModel()
-    elseif CorePlayManager.currentUnitState >= 4 and CorePlayManager.currentUnitState <= 7 then
+    elseif CorePlayManager.currentUnitState >= 3 and CorePlayManager.currentUnitState <= 6 then
         -- review model
         CorePlayManager.initReviewModel()
     else
