@@ -76,6 +76,7 @@ function CorePlayManager.initTotalPlay()
     end
 end
 
+
 function CorePlayManager.initStudyModel()
     CorePlayManager.BookWordList          = s_BookWord[s_CURRENT_USER.bookKey]
     CorePlayManager.currentIndex          = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
@@ -264,6 +265,63 @@ end
 function CorePlayManager.enterFriendLayer()
     local friendLayer = FriendLayer.create()
     s_SCENE:replaceGameLayer(friendLayer)
+end
+
+function CorePlayManager.initTotalUnitPlay()
+    local unitList = s_LocalDatabaseManager.getAllUnitInfo()
+
+    CorePlayManager.currentUnitID = nil
+    for i = 1, #unitList do
+        local unit = unitList[i]
+        if unit.unitState >= 4 and unit.unitState <= 7 then
+            if unit.coolingDay == 0 then
+                CorePlayManager.currentUnitID = unit.unitID
+                break
+            else
+                -- pass
+            end
+        elseif unit.unitState == 8 then
+            -- pass
+        else
+            CorePlayManager.currentUnitID = unit.unitID
+            break
+        end
+    end
+
+    if CorePlayManager.currentUnitID == nil then
+        -- pass all
+    else
+        -- exist boss
+    end
+
+    CorePlayManager.currentUnit            = s_LocalDatabaseManager.getUnitInfo(CorePlayManager.currentUnitID)
+    CorePlayManager.currentUnitState       = CorePlayManager.currentUnit.unitState
+    -- CorePlayManager.currentRightWordList   = CorePlayManager.currentBoss.rightWordList
+    CorePlayManager.currentWrongWordList   = CorePlayManager.currentUnit.wrongWordList 
+    
+    CorePlayManager.BookUnitWordList       = s_BookUnitWord[s_CURRENT_USER.bookKey]
+    CorePlayManager.currentIndex           = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
+    CorePlayManager.wrongWordNum           = #CorePlayManager.currentWrongWordList
+
+    if     CorePlayManager.currentUnitState == 0 then
+        -- study   model
+        CorePlayManager.initStudyModel()
+    elseif CorePlayManager.currentUnitState == 1 then
+        -- test    model
+        CorePlayManager.initTestModel()
+    elseif CorePlayManager.currentUnitState == 2 then
+        -- review  model
+        CorePlayManager.initReviewModel()
+    elseif CorePlayManager.currentUnitState == 3 then
+        -- summary model
+        CorePlayManager.initSummaryModel()
+    elseif CorePlayManager.currentUnitState >= 4 and CorePlayManager.currentUnitState <= 7 then
+        -- review model
+        CorePlayManager.initReviewModel()
+    else
+        -- over model
+        CorePlayManager.initOverModel()
+    end
 end
 
 return CorePlayManager

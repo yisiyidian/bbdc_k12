@@ -130,7 +130,9 @@ function DataManager.loadK12Books()
             local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
             local lines = split(content, "\n")
             local current_unit = 0
+            local word_count = 0
             for j = 1, #lines do
+                word_count = word_count + 1
                 if lines[j] ~= "" then
                     -- print(lines[j])
                     unit_word = split(lines[j],"\t")
@@ -141,6 +143,7 @@ function DataManager.loadK12Books()
                     table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])
                 end
             end
+            print(bookName[i]..'\t'..(word_count-1))
             -- print_lua_table(bookUnitWord[bookName[i]])
         end
     return bookUnitWord
