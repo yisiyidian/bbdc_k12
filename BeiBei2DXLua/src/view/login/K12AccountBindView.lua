@@ -68,16 +68,18 @@ function K12AccountBindView:ctor()
     bubble:setPosition(0.5 * s_DESIGN_WIDTH - 49,s_DESIGN_HEIGHT - 10 - 0.85 * bubble:getContentSize().height)
     self:addChild(bubble)
 
-    local welcome = cc.Label:createWithSystemFont('欢迎来到\n贝贝单词','',40)
+    local welcome = cc.Label:createWithSystemFont('欢迎来到\n贝贝单词','',38)
     welcome:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
     welcome:setPosition(bubble:getContentSize().width / 2,bubble:getContentSize().height / 2)
     bubble:addChild(welcome)
     self.welcome = welcome
 
-    -- bubble:setScale(0)
-    -- local appear = cc.ScaleTo:create(1.0,1)
+    bubble:setScale(0)
+    local appear = cc.ScaleTo:create(1.0,1)
     local shake = cc.RepeatForever:create(cc.Sequence:create(cc.RotateBy:create(0.5,3),cc.RotateBy:create(1,-6),cc.RotateBy:create(0.5,3)))
+    bubble:runAction(appear)
     bubble:runAction(shake)
+    bubble:setName('bubble0')
 
     local boss = sp.SkeletonAnimation:create("res/spine/signup/bbchildren_login_zhangyu1.json", "res/spine/signup/bbchildren_login_zhangyu1.atlas", 1)
     boss:setPosition(self.back_width / 2,s_DESIGN_HEIGHT /2 + 50)
@@ -89,21 +91,6 @@ function K12AccountBindView:ctor()
     self.glView:setIMEKeyboardState(true)
 
     -----------------------------------------------------------------------------------------
-
-
-    -- local onTouchBegan = function(touch, event) return true end
-    -- local onTouchEnded = function(touch, event)
-    --     local location = self:convertToNodeSpace(touch:getLocation())
-    --     if not cc.rectContainsPoint(self.bg:getBoundingBox(), location) then
-    --        self:closeAnimation()
-    --     end
-    -- end
-    -- local listener = cc.EventListenerTouchOneByOne:create()
-    -- listener:setSwallowTouches(true)
-    -- listener:registerScriptHandler(onTouchBegan, cc.Handler.EVENT_TOUCH_BEGAN )
-    -- listener:registerScriptHandler(onTouchEnded, cc.Handler.EVENT_TOUCH_ENDED )
-    -- local eventDispatcher = self:getEventDispatcher()
-    -- eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
 
     onAndroidKeyPressed(self, function () s_SCENE:removeAllPopups()  end)
 end
@@ -223,7 +210,27 @@ function K12AccountBindView:gotoPwd(username)
                 self.back:addChild(boss)
                 boss:setAnimation(0,'animation',true)
                 self.boss = boss
-                self.welcome:setString('Hi~\n'..username)
+
+                local bubble_old = self:getChildByName('bubble0')
+                bubble_old:runAction(cc.Sequence:create(cc.Spawn:create(cc.FadeOut:create(0.5),cc.ScaleTo:create(0.5,0),cc.MoveBy:create(0.5,cc.p(-s_DESIGN_WIDTH*0.5,0))),cc.CallFunc:create(function ( )
+                    bubble_old:removeFromParent()
+                end,{})))
+                local bubble = cc.Sprite:create('image/signup/dauglog_bbchildren_background.png')
+                bubble:setAnchorPoint(0,0.15)
+                bubble:setPosition(0.5 * s_DESIGN_WIDTH - 49,s_DESIGN_HEIGHT - 10 - 0.85 * bubble:getContentSize().height)
+                self:addChild(bubble)
+
+                local welcome = cc.Label:createWithSystemFont('Hi~\n'..username,'',38)
+                welcome:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
+                welcome:setPosition(bubble:getContentSize().width / 2,bubble:getContentSize().height / 2)
+                bubble:addChild(welcome)
+
+                bubble:setScale(0)
+                local appear = cc.ScaleTo:create(1.0,1)
+                local shake = cc.RepeatForever:create(cc.Sequence:create(cc.RotateBy:create(0.5,3),cc.RotateBy:create(1,-6),cc.RotateBy:create(0.5,3)))
+                bubble:runAction(appear)
+                bubble:runAction(shake)
+                bubble:setName('bubble1')
                 print(username, 'K12AccountBindView.create(K12AccountBindView.Type_password)')
             else
                 s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__USERNAME_HAS_ALREADY_BEEN_TAKEN))
@@ -248,9 +255,6 @@ function K12AccountBindView:gotoUpdateUsernameAndPassword(pwd)
                     self.bg:runAction(cc.MoveBy:create(0.3, cc.p(-self.back_width, 0)))
                     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
 
-                    self.welcome:setString('哇塞 你是我\n们的新用户！')
-                    self.welcome:setSystemFontSize(34)
-
                     self.girl:removeFromParent()
                     self.girl = sp.SkeletonAnimation:create("res/spine/signup/children_login_bb_3.json", "res/spine/signup/children_login_bb_3.atlas", 1)
                     self.girl:setAnimation(0,'animation',true)
@@ -263,6 +267,26 @@ function K12AccountBindView:gotoUpdateUsernameAndPassword(pwd)
                     self.back:addChild(boss)
                     boss:setAnimation(0,'animation',true)
                     self.boss = boss
+
+                    local bubble_old = self:getChildByName('bubble1')
+                    bubble_old:runAction(cc.Sequence:create(cc.Spawn:create(cc.FadeOut:create(0.5),cc.ScaleTo:create(0.5,0),cc.MoveBy:create(0.5,cc.p(-s_DESIGN_WIDTH*0.5,0))),cc.CallFunc:create(function ( )
+                        bubble_old:removeFromParent()
+                    end,{})))
+                    local bubble = cc.Sprite:create('image/signup/dauglog2_bbchildren_background.png')
+                    bubble:setAnchorPoint(0,0.15)
+                    bubble:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT - 10 - 0.85 * bubble:getContentSize().height)
+                    self:addChild(bubble)
+
+                    local welcome = cc.Label:createWithSystemFont('哇塞 你是我\n们的新用户！','',38)
+                    welcome:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
+                    welcome:setPosition(bubble:getContentSize().width / 2,bubble:getContentSize().height / 2)
+                    bubble:addChild(welcome)
+
+                    bubble:setScale(0)
+                    local appear = cc.ScaleTo:create(1.0,1)
+                    local shake = cc.RepeatForever:create(cc.Sequence:create(cc.RotateBy:create(0.5,3),cc.RotateBy:create(1,-6),cc.RotateBy:create(0.5,3)))
+                    bubble:runAction(appear)
+                    bubble:runAction(shake)
                     -- AnalyticsImproveInfo()
                 end     
                 hideProgressHUD(true)
