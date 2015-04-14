@@ -7,7 +7,6 @@ function ProgressBar.create(totalIndex, currentIndex)
 
     local backImageName     = "image/islandPopup/subtask_progress_bar_bg.png"
     local frontImageName    = "image/islandPopup/subtask_progress_bar_rectangle.png"
-    local indexImageName    = "image/islandPopup/subtask_progress_bar_beibei_present.png"
 
     local main = ProgressBar.new()
     main:setContentSize(s_DESIGN_WIDTH, 10)
@@ -27,36 +26,57 @@ function ProgressBar.create(totalIndex, currentIndex)
     progress:setBarChangeRate(cc.p(1, 0))
     progress:setPosition(progress_back:getPosition())
     progress:setPercentage(100*currentIndex/totalIndex)
-    main:addChild(progress)
+    main:addChild(progress,1)
 
-    local left = (local_size.width - progress_back:getContentSize().width) / 2
-    local gap = progress_back:getContentSize().width / totalIndex
+    local width = progress_back:getContentSize().width - 20
+    local left = (local_size.width - width) / 2 
+    local gap = width / totalIndex
 
-    local index = cc.Sprite:create(indexImageName)
-    index:setAnchorPoint(0.5,0)
-    index:setPosition(left + gap*currentIndex, 0)
-    main:addChild(index)
 
-    for i=1,totalIndex do
-        local point_sprite = cc.Sprite:create(indexImageName)
+
+    local index = cc.Sprite:create("image/islandPopup/subtask_progress_bar_circle.png")
+    index:setAnchorPoint(0.5,0.5)
+    index:setPosition(left + gap*currentIndex, 5)
+    main:addChild(index,1)
+
+    local index_beibei = cc.Sprite:create("image/islandPopup/subtask_progress_bar_beibei_present.png")
+    index_beibei:setAnchorPoint(0.5,0.5)
+    index_beibei:setPosition(index:getContentSize().width / 2, 75)
+    index:addChild(index_beibei) 
+
+    local light = cc.Sprite:create("image/islandPopup/subtask_progress_bar_circle_at_present.png")
+    light:setAnchorPoint(0.5,0.5)
+    light:setPosition(left + gap*currentIndex, 5)
+    main:addChild(light,1)
+
+    for i=0,totalIndex do
+        local point_sprite 
+        if i == 2 then
+            point_sprite = cc.Sprite:create("image/islandPopup/subtask_progress_bar_milestone.png")
+        else
+            point_sprite = cc.Sprite:create("image/islandPopup/subtask_progress_bar_unfinished_circle.png")
+        end
         point_sprite:setAnchorPoint(0.5,0.5)
-        point_sprite:setPosition(left + gap*currentIndex, 0)
-        main:addChild(index)
-    end  
-    
-    main.swell = function ()
-    	local action1 = cc.ScaleTo:create(0.5,1.2)
-    	local action2 = cc.ScaleTo:create(0.5,1)
-    	index:runAction(cc.Sequence:create(action1,action2))
+        point_sprite:setPosition(left + gap*i, 5)
+        main:addChild(point_sprite)
     end
+
+    local flag = cc.Sprite:create("image/islandPopup/subtask_progress_bar_flag.png")
+    flag:setAnchorPoint(0.5,0)
+    flag:setPosition(progress_back:getContentSize().width, 20)
+    progress_back:addChild(flag)
 
     main.addOne = function()
         currentIndex = currentIndex + 1
-        label_number:setString(currentIndex)
-        local action1 = cc.MoveTo:create(0.2,cc.p(left + gap* (currentIndex), 0))
+        local action1 = cc.MoveTo:create(0.2,cc.p(left + gap* (currentIndex), 4))
         index:runAction(action1)
         local action2 = cc.ProgressTo:create(0.2, 100*(currentIndex)/totalIndex)
         progress:runAction(action2)
+    end
+
+    main.moveLightCircle = function (Papeindex)
+        local action1 = cc.MoveTo:create(0.2,cc.p(left + gap* Papeindex, 4))
+        light:runAction(action1)
     end
 
     return main

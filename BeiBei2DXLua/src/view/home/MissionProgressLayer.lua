@@ -292,23 +292,23 @@ function MissionProgressLayer.create(share)
         finishProgress:runAction(cc.Sequence:create(action1,cc.CallFunc:create(anotherSwelling)))
     end
 
-    local ButtonClick = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)   
-        elseif eventType == ccui.TouchEventType.ended then
-                     local SuccessLayer = require("view.islandPopup.LevelProgressPopup")
-                     local successLayer = SuccessLayer.create()
-                     s_SCENE:popup(successLayer)
-        end
-    end
+    -- local ButtonClick = function(sender, eventType)
+    --     if eventType == ccui.TouchEventType.began then
+    --         playSound(s_sound_buttonEffect)   
+    --     elseif eventType == ccui.TouchEventType.ended then
+    --                  local SuccessLayer = require("view.islandPopup.LevelProgressPopup")
+    --                  local successLayer = SuccessLayer.create()
+    --                  s_SCENE:popup(successLayer)
+    --     end
+    -- end
       
-    local Button = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png","")
-    Button:setPosition(bigWidth/2 + 200, s_DESIGN_HEIGHT * 0.7)
-    Button:setTitleText("test")
-    Button:setTitleColor(cc.c4b(255,255,255,255))
-    Button:setTitleFontSize(40)
-    Button:addTouchEventListener(ButtonClick)
-    layer:addChild(Button)
+    -- local Button = ccui.Button:create("image/homescene/missionprogress/taskwordcollectionbutton.png","image/homescene/missionprogress/taskwordcollectionclickbutton.png","")
+    -- Button:setPosition(bigWidth/2 + 200, s_DESIGN_HEIGHT * 0.7)
+    -- Button:setTitleText("test")
+    -- Button:setTitleColor(cc.c4b(255,255,255,255))
+    -- Button:setTitleFontSize(40)
+    -- Button:addTouchEventListener(ButtonClick)
+    -- layer:addChild(Button)
     
     
     
