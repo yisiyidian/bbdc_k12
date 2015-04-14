@@ -69,6 +69,7 @@ function K12AccountBindView:ctor()
     self:addChild(bubble)
 
     local welcome = cc.Label:createWithSystemFont('欢迎来到\n贝贝单词','',40)
+    welcome:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
     welcome:setPosition(bubble:getContentSize().width / 2,bubble:getContentSize().height / 2)
     bubble:addChild(welcome)
     self.welcome = welcome
@@ -222,10 +223,7 @@ function K12AccountBindView:gotoPwd(username)
                 self.back:addChild(boss)
                 boss:setAnimation(0,'animation',true)
                 self.boss = boss
-                -- s_SCENE:callFuncWithDelay(0.3,function ( )
-                --     self.node:removeChildByName('inputNode'..0)
-                -- end)
-                -- self.welcome:setString('')
+                self.welcome:setString('Hi~\n'..username)
                 print(username, 'K12AccountBindView.create(K12AccountBindView.Type_password)')
             else
                 s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__USERNAME_HAS_ALREADY_BEEN_TAKEN))
@@ -249,6 +247,9 @@ function K12AccountBindView:gotoUpdateUsernameAndPassword(pwd)
                     -- s_CURRENT_USER.password = pwd
                     self.bg:runAction(cc.MoveBy:create(0.3, cc.p(-self.back_width, 0)))
                     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
+
+                    self.welcome:setString('哇塞 你是我\n们的新用户！')
+                    self.welcome:setSystemFontSize(34)
 
                     self.girl:removeFromParent()
                     self.girl = sp.SkeletonAnimation:create("res/spine/signup/children_login_bb_3.json", "res/spine/signup/children_login_bb_3.atlas", 1)
