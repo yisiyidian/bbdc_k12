@@ -402,15 +402,111 @@ function HomeLayer.create()
 
     -- add follow button
     print('start add button')
-    local followButton = ccui.Button:create("image/setting/attention_button.png","image/setting/attention_button_press.png","image/setting/attention_button_press.png")
+    local follow_button_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            -- popup layer
+            local back = cc.Sprite:create("image/homescene/background_ciku_white.png")
+            back:setPosition(cc.p(s_DESIGN_WIDTH/2, 550))
+            local avatar = cc.Sprite:create("image/homescene/attention_beibei.png")
+            avatar:setPosition(back:getContentSize().width/2, back:getContentSize().height-200)
+            back:addChild(avatar)
+
+            local close_button_clicked = function(sender, eventType)
+                if eventType == ccui.TouchEventType.ended then
+                    s_SCENE:removeAllPopups()
+                end
+            end
+            local closeButton = ccui.Button:create("image/popupwindow/closeButtonRed.png","image/popupwindow/closeButtonRed.png","")
+            closeButton:setPosition(back:getContentSize().width-30, back:getContentSize().height-30)
+            closeButton:addTouchEventListener(close_button_clicked)
+            back:addChild(closeButton)
+
+            local label1 = cc.Label:createWithSystemFont("贝贝单词","",30)
+            label1:setPosition(back:getContentSize().width/2, avatar:getPositionY()-190)
+            label1:setColor(cc.c4b(36,61,78,255))
+            back:addChild(label1)
+            local label2 = cc.Label:createWithSystemFont("版本号：V2.0.1","",25)
+            label2:setColor(cc.c4b(36,61,78,255))
+            label2:setPosition(back:getContentSize().width/2, label1:getPositionY()-50)
+            back:addChild(label2)
+
+            local weiboLogo = cc.Sprite:create("image/homescene/attention_weibo.png")
+            weiboLogo:setPosition(back:getContentSize().width/2-150, label2:getPositionY()-80)
+            back:addChild(weiboLogo)
+            local weiboLabel1 = cc.Label:createWithSystemFont("官方微博：","",20)
+            weiboLabel1:setColor(cc.c4b(36,61,78,255))
+            weiboLabel1:setPosition(back:getContentSize().width/2-50, weiboLogo:getPositionY())
+            back:addChild(weiboLabel1)
+
+            local weiboLabel2 = cc.Label:createWithSystemFont("@贝贝单词","",20)
+            weiboLabel2:setColor(cc.c4b(17,172,227,255))
+            weiboLabel2:setPosition(back:getContentSize().width/2+50, weiboLogo:getPositionY())
+            back:addChild(weiboLabel2)
+
+            local weixinLogo = cc.Sprite:create("image/homescene/attention_weichat.png")
+            weixinLogo:setPosition(back:getContentSize().width/2-150, weiboLogo:getPositionY()-65)
+            back:addChild(weixinLogo)
+            local weixinLabel1 = cc.Label:createWithSystemFont("官方微信：","",20)
+            weixinLabel1:setColor(cc.c4b(36,61,78,255))
+            weixinLabel1:setPosition(back:getContentSize().width/2-50, weixinLogo:getPositionY())
+            back:addChild(weixinLabel1)
+
+            local weixinLabel2 = cc.Label:createWithSystemFont("贝贝单词","",20)
+            weixinLabel2:setColor(cc.c4b(17,172,227,255))
+            weixinLabel2:setPosition(back:getContentSize().width/2+50, weixinLogo:getPositionY())
+            back:addChild(weixinLabel2)
+
+            local websiteLogo = cc.Sprite:create("image/homescene/attention_website.png")
+            websiteLogo:setPosition(back:getContentSize().width/2-150, weixinLogo:getPositionY()-65)
+            back:addChild(websiteLogo)
+            local websiteLabel1 = cc.Label:createWithSystemFont("官方网站：","",20)
+            websiteLabel1:setColor(cc.c4b(36,61,78,255))
+            websiteLabel1:setPosition(back:getContentSize().width/2-50, websiteLogo:getPositionY())
+            back:addChild(websiteLabel1)
+
+            local websiteLabel2 = cc.Label:createWithSystemFont("yisiyidian.com","",20)
+            websiteLabel2:setColor(cc.c4b(17,172,227,255))
+            websiteLabel2:setPosition(back:getContentSize().width/2+70, websiteLogo:getPositionY())
+            back:addChild(websiteLabel2)
+
+            local phoneLogo = cc.Sprite:create("image/homescene/attention_phone.png")
+            phoneLogo:setPosition(back:getContentSize().width/2-150, websiteLogo:getPositionY()-80)
+            back:addChild(phoneLogo)
+
+            local phoneLabel1 = cc.Label:createWithSystemFont("客服电话：","",20)
+            phoneLabel1:setColor(cc.c4b(36,61,78,255))
+            phoneLabel1:setPosition(back:getContentSize().width/2-50, phoneLogo:getPositionY()+15)
+            back:addChild(phoneLabel1)
+
+            local phoneLabel3 = cc.Label:createWithSystemFont("（周一至周六8am-11pm）","",20)
+            phoneLabel3:setColor(cc.c4b(36,61,78,255))
+            phoneLabel3:setPosition(back:getContentSize().width/2, phoneLogo:getPositionY()-15)
+            back:addChild(phoneLabel3)
+
+            local phoneLabel2 = cc.Label:createWithSystemFont("010-61196434","",20)
+            phoneLabel2:setColor(cc.c4b(17,172,227,255))
+            phoneLabel2:setPosition(back:getContentSize().width/2+70, phoneLogo:getPositionY()+15)
+            back:addChild(phoneLabel2)
+
+            local layer = cc.Layer:create()
+            layer:addChild(back)
+
+            s_SCENE:popup(layer)
+        end
+    end
+    local followButton = ccui.Button:create("image/homescene/attention_button.png","image/homescene/attention_button_press.png","image/setting/attention_button_press.png")
     followButton:setAnchorPoint(0,1)
-    followButton:setPosition(500,300)
+    followButton:setPosition(400,190)
     setting_back:addChild(followButton,10)
+    local deco = cc.Sprite:create("image/homescene/attention_beibei1.png")
+    deco:setPosition(750,100)
+    setting_back:addChild(deco, 10)
     local text = cc.Label:createWithSystemFont("关注贝贝","",36)
     text:setColor(cc.c4b(255,255,255,255))
     -- text:setAnchorPoint(0, 0)
     text:setPosition(followButton:getContentSize().width/2, followButton:getContentSize().height/2)
     followButton:addChild(text)
+    followButton:addTouchEventListener(follow_button_clicked)
     print('-------------#####test####')
     print(followButton:getPosition())
 
