@@ -368,6 +368,8 @@ function HomeLayer.create()
         button_back:setPosition(0, s_DESIGN_HEIGHT-button_back:getContentSize().height * (1 - 1) - 80)
         setting_back:addChild(button_back)
 
+        
+
         local logo = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
         logo:setScale(0.9)
         logo:setPosition(button_back:getContentSize().width-offset+120, button_back:getContentSize().height/2 + 40)
@@ -397,6 +399,20 @@ function HomeLayer.create()
         local sprite3 = setting_back:getChildByName("button4")                               
         if sprite3 ~= nil then sprite3:removeFromParent() end
     end
+
+    -- add follow button
+    print('start add button')
+    local followButton = ccui.Button:create("image/setting/attention_button.png","image/setting/attention_button_press.png","image/setting/attention_button_press.png")
+    followButton:setAnchorPoint(0,1)
+    followButton:setPosition(500,300)
+    setting_back:addChild(followButton,10)
+    local text = cc.Label:createWithSystemFont("关注贝贝","",36)
+    text:setColor(cc.c4b(255,255,255,255))
+    -- text:setAnchorPoint(0, 0)
+    text:setPosition(followButton:getContentSize().width/2, followButton:getContentSize().height/2)
+    followButton:addChild(text)
+    print('-------------#####test####')
+    print(followButton:getPosition())
 
     if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
         username = s_CURRENT_USER:getNameForDisplay()
