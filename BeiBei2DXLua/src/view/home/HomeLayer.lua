@@ -55,8 +55,8 @@ function HomeLayer.create()
     -- data end
 
     local username = "游客"
-    local logo_name = {"head","book","feedback","information","logout"}
-    local label_name = {username,"选择书籍","用户反馈","完善个人信息",TEXT_CHANGE_ACCOUNT}
+    local logo_name = {"head","book","information","logout"}
+    local label_name = {username,"选择书籍","完善个人信息",TEXT_CHANGE_ACCOUNT}
 
     s_SCENE.touchEventBlockLayer.unlockTouch()
     local layer = HomeLayer.new()
@@ -400,8 +400,8 @@ function HomeLayer.create()
 
     if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
         username = s_CURRENT_USER:getNameForDisplay()
-        logo_name = {"head","book","feedback","logout"}
-        label_name = {username,"选择书籍","用户反馈",TEXT_CHANGE_ACCOUNT}
+        logo_name = {"head","book","logout"}
+        label_name = {username,"选择书籍",TEXT_CHANGE_ACCOUNT}
     end
     local label = {}
     local logo = {}
@@ -413,13 +413,13 @@ function HomeLayer.create()
                 if label_name[i] == "选择书籍" then
                     AnalyticsChangeBookBtn()
                     s_CorePlayManager.enterBookLayer(s_CURRENT_USER.bookKey)
-                elseif label_name[i] == "用户反馈" then
-                    if  online == false then
-                        offlineTipHome.setTrue(OfflineTipForHome_Feedback)
-                    else
-                        local alter = AlterI.create("用户反馈")
-                        s_SCENE:popup(alter)
-                    end
+                -- elseif label_name[i] == "用户反馈" then
+                --     if  online == false then
+                --         offlineTipHome.setTrue(OfflineTipForHome_Feedback)
+                --     else
+                --         local alter = AlterI.create("用户反馈")
+                --         s_SCENE:popup(alter)
+                --     end
                 elseif label_name[i] == "完善个人信息" then
                     if  online == false then
                         offlineTipHome.setTrue(OfflineTipForHome_ImproveInformation)
