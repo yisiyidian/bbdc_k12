@@ -408,17 +408,17 @@ function M.initUnitInfo(unitID)
     local wordlist = s_BookUnitWord[bookKey][''..unitID]
     local currentWordIndex = 1
     local unitState = 0
-    print('wordlist:'..wordlist)
+    --print('wordlist:'..wordlist)
 
     query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, unitID, unitState, wordList, currentWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..unitID..", 0, '"..wordlist.."', "..currentWordIndex..", 0) ;"
-    print('sql:'..query)
+    --print('sql:'..query)
     Manager.database:exec(query)
 
-    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
-    print('row:')
-    for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition..";") do
-        print(row.unitID)
-    end
+    -- local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+    -- print('row:')
+    -- for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition..";") do
+    --     print(row.unitID)
+    -- end
     --saveDataToServer(true, time, unitID, unitState, wordList, currentWordIndex, 0)
 end
 

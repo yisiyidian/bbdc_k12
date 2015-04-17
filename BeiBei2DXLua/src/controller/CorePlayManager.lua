@@ -174,7 +174,7 @@ function CorePlayManager.enterTestModel(wordlist)
 end
 
 function CorePlayManager.leaveTestModel()
-    s_LocalDatabaseManager.updateTypeIndex(CorePlayManager.currentBossID)
+    s_LocalDatabaseManager.updateUnitState(CorePlayManager.currentUnitID)
     local MiddleLayer = require("view.newstudy.EndLayer")
     local middleLayer = MiddleLayer.create()
     s_SCENE:replaceGameLayer(middleLayer)
@@ -197,7 +197,7 @@ end
 
 function CorePlayManager.leaveReviewModel(state)
     if state then
-        s_LocalDatabaseManager.updateTypeIndex(CorePlayManager.currentBossID)
+        s_LocalDatabaseManager.updateUnitState(CorePlayManager.currentUnitID)
         local SuccessLayer = require("view.newreviewboss.SuccessLayer")
         local successLayer = SuccessLayer.create()
         s_SCENE:replaceGameLayer(successLayer)
@@ -220,7 +220,7 @@ end
 
 function CorePlayManager.leaveSummaryModel(state)
     if state then
-        s_LocalDatabaseManager.updateTypeIndex(CorePlayManager.currentBossID)
+        s_LocalDatabaseManager.updateUnitState(CorePlayManager.currentUnitID)
     else
         -- do nothing
     end
@@ -303,9 +303,9 @@ function CorePlayManager.initTotalUnitPlay()
     else
         -- exist boss
     end
-    print('currentUnitID:'..CorePlayManager.currentUnitID)
+    --print('currentUnitID:'..CorePlayManager.currentUnitID)
     CorePlayManager.currentUnit            = s_LocalDatabaseManager.getUnitInfo(CorePlayManager.currentUnitID)
-    print_lua_table(CorePlayManager.currentUnit)
+    -- print_lua_table(CorePlayManager.currentUnit)
     CorePlayManager.currentUnitState       = CorePlayManager.currentUnit.unitState
     -- CorePlayManager.currentRightWordList   = CorePlayManager.currentUnit.rightWordList
     CorePlayManager.currentWrongWordList   = CorePlayManager.currentUnit.wrongWordList 
