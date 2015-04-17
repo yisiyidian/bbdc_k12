@@ -8,7 +8,7 @@ InputNode.type_username = 'username'
 InputNode.type_pwd = 'pwd'
 InputNode.type_teachername = "teachername"
 
-function InputNode.create(type, hint, eventHandleCB)
+function InputNode.create(type, hint, eventHandleCB, k12)
     local width = 450
     local height = 80
 
@@ -19,12 +19,15 @@ function InputNode.create(type, hint, eventHandleCB)
     
     local cursor
     main.textField = nil
-    
-    if type == "username" then
-        backImage = cc.Sprite:create("image/login/sl_username.png")
+    if k12 ~= nil and k12 then
+        backImage = cc.Sprite:create("image/signup/shuru_bbchildren_white.png")
     else
-        backImage = cc.Sprite:create("image/login/sl_password.png")
-    end    
+        if type == "username" then
+            backImage = cc.Sprite:create("image/login/sl_username.png")
+        else
+            backImage = cc.Sprite:create("image/login/sl_password.png")
+        end   
+    end 
     backImage:setPosition(width/2, height/2)
     main:addChild(backImage)
       
@@ -47,14 +50,15 @@ function InputNode.create(type, hint, eventHandleCB)
 
     main.textField = ccui.TextField:create()
     main.textField:ignoreAnchorPointForPosition(false)
-    main.textField:setAnchorPoint(0,0.5)
+    main.textField:setAnchorPoint(0.5,0.5)
     main.textField:setTouchSize(backImage:getContentSize())
     main.textField:setTouchAreaEnabled(true)
     main.textField:setFontSize(34)
     main.textField:setMaxLengthEnabled(true)
-    main.textField:setPlaceHolderColor(cc.c3b(150,150,150))
+    main.textField:setPlaceHolderColor(cc.c3b(153,168,181))
     main.textField:setTextColor(cc.c4b(0,0,0,255))
     main.textField:setPlaceHolder(hint)
+    main.textField:setDetachWithIME(false)
     if type ~= InputNode.type_pwd then
         main.textField:setMaxLength(10)
     else
@@ -62,7 +66,7 @@ function InputNode.create(type, hint, eventHandleCB)
         main.textField:setPasswordEnabled(true)
         main.textField:setPasswordStyleText("*")
     end
-    main.textField:setPosition(cc.p(30, backImage:getContentSize().height / 2))
+    main.textField:setPosition(cc.p(backImage:getContentSize().width / 2, backImage:getContentSize().height / 2))
     main.textField:addEventListener(eventHandle)
     backImage:addChild(main.textField)
 
@@ -74,7 +78,7 @@ function InputNode.create(type, hint, eventHandleCB)
     main:addChild(cursor)
     
     local update = function(dt)
-        cursor:setPosition(30+main.textField:getContentSize().width, height/2)
+        cursor:setPosition(width / 2+main.textField:getContentSize().width/2 + 2, height/2)
     end
     main:scheduleUpdateWithPriorityLua(update, 0)
 

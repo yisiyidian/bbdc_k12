@@ -35,8 +35,9 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.StrictMode;
-import android.provider.*;
+import android.provider.MediaStore;
 import android.provider.MediaStore.Images;
+import android.provider.Settings;
 import android.util.Log;
 import android.widget.Toast;
 import c.bb.dc.notification.*;
@@ -51,16 +52,18 @@ import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.FindCallback;
 import com.avos.avoscloud.FunctionCallback;
+import com.avos.avoscloud.GetCallback;
 import com.avos.avoscloud.GetDataCallback;
 import com.avos.avoscloud.GetFileCallback;
 import com.avos.avoscloud.LogInCallback;
 import com.avos.avoscloud.ProgressCallback;
-import com.avos.avoscloud.SignUpCallback;
 import com.avos.avoscloud.SaveCallback;
-import com.avos.sns.*;
-import com.umeng.analytics.MobclickAgent;
+import com.avos.avoscloud.SignUpCallback;
+import com.avos.sns.SNS;
+import com.avos.sns.SNSType;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
+import com.umeng.analytics.MobclickAgent;
 
 public class BBNDK {
 	private static String _hostIPAdress = "0.0.0.0";
@@ -151,7 +154,7 @@ public class BBNDK {
 			    }
 			});
 		} catch (Exception e) {
-			Log.d("saveDataAnalytics: 2 保存失败", "_save: " + e.getMessage());
+			Log.d("saveDataAnalytics:", "2 保存失败 _save: " + e.getMessage());
 		}
 	}
 	private static void saveDataAnalytics(final String eventName, final String tag) {
@@ -199,6 +202,27 @@ public class BBNDK {
 			MobclickAgent.onEvent(_context, eventName, map); 
 		}
 		saveDataAnalytics(eventName, tag);
+	}
+	
+	public static void logUsingTime(final String userId, final String bookKey, final int startTime, final int usingTime) {
+		AVObject dataDailyUsing = AVObject.create("DataDailyUsing");
+		dataDailyUsing.put("userId", userId);
+		dataDailyUsing.put("bookKey", bookKey);
+		dataDailyUsing.put("startTime", startTime);
+		dataDailyUsing.put("usingTime", usingTime);
+		try {
+			dataDailyUsing.saveEventually(new SaveCallback() {
+			    public void done(AVException e) {
+			        if (e == null) {
+			        	Log.d("save dataDailyUsing", "1 T: " + userId + ", " + bookKey + ", " + startTime + ", " + usingTime);
+			        } else {
+			        	Log.d("save dataDailyUsing", "1 F: " + userId + ", " + bookKey + ", " + startTime + ", " + usingTime + ", " + e.getMessage());
+			        }
+			    }
+			});
+		} catch (Exception e) {
+			Log.d("save dataDailyUsing:", "2 保存失败 _save: " + userId + ", " + bookKey + ", " + startTime + ", " + usingTime + ", " + e.getMessage());
+		}
 	}
 	
 	// ***************************************************************************************************************************
@@ -487,6 +511,30 @@ public class BBNDK {
 		}
 	}
 	
+	public static void getBulletinBoard(final long cppObjPtr) {
+		AVQuery<AVObject> query = AVQuery.getQuery("DataBulletinBoard");
+		query.getFirstInBackground(new GetCallback<AVObject>() {
+	        public void done(final AVObject object, final AVException e) {
+	        	
+	        	((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
+					@Override
+					public void run() {
+						if (object != null) {
+							Number index = object.getNumber("index");
+							String content_top = object.getString("content_top");
+							String content = object.getString("content");
+							invokeLuaCallbackFunctionGetBulletinBoard(cppObjPtr, index != null ? index.intValue() : -1, content_top != null ? content_top : "", content != null ? content : "", null);
+			            } else {
+			            	String errorjson = e != null ? "{\"code\":" + e.hashCode() + ",\"message\":\"" + e.getMessage() + "\",\"description\":\"" + e.getLocalizedMessage() + "\"}" : null;
+			        		invokeLuaCallbackFunctionGetBulletinBoard(cppObjPtr, -1, "", "", errorjson);
+			            }
+			        }
+					
+	        	});
+	        }
+		});
+	}
+	
 	// ***************************************************************************************************************************
 	// share
 	// ***************************************************************************************************************************
@@ -686,5 +734,6 @@ public class BBNDK {
 	public static native void invokeLuaCallbackFunctionSU(String objectjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionLI(String objectjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionLIQQ(String objectjson, String qqjson, String authjson, String error, int errorcode);
-	public static native void invokeLuaCallbackFunctionCallAVCloudFunction(long cppObjPtr, String func, String parameters);
+	public static native void invokeLuaCallbackFunctionCallAVCloudFunction(long cppObjPtr, String jsons, String errorjson);
+	public static native void invokeLuaCallbackFunctionGetBulletinBoard(long cppObjPtr, int index, String content_top, String content, String error);
 }
