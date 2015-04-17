@@ -208,7 +208,7 @@ function MissionProgressLayer.create(share)
             if eventType == ccui.TouchEventType.began then
                 playSound(s_sound_buttonEffect)   
             elseif eventType == ccui.TouchEventType.ended then
-                self:setEnabled(false)
+                layer:setEnabled(false)
                 local action1 = cc.RotateBy:create(1,360)
                 local action2 = cc.FadeOut:create(1)
                 local action3 = cc.Spawn:create(action1,action2)
