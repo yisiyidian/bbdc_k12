@@ -66,6 +66,7 @@ function CollectUnfamiliarLayer:createRandWord(word,randomWrongNumber)
         if #randomNameArray >= randomWrongNumber then
             break
         end 
+
         local randomIndex = math.random(1, #s_BookWord[s_CURRENT_USER.bookKey])
         local randomWord = s_BookWord[s_CURRENT_USER.bookKey][randomIndex]
         local isIn = 0
