@@ -193,6 +193,20 @@ function LevelProgressPopup:createPape()
     self.backPopup:addChild(pageView)
 end
 
+local function createTitle(Text,parent)
+    local title = cc.Label:createWithSystemFont(Text,"",36)
+    title:setColor(cc.c4b(50,60,64,255))
+    title:setPosition(cc.p(parent:getContentSize().width * 0.5,parent:getContentSize().height * 0.75))
+    parent:addChild(title)
+end
+
+local function createSubtitle(Text,parent)
+    local subtitle = cc.Label:createWithSystemFont(Text,"",18)
+    subtitle:setColor(cc.c4b(108,108,108,255))
+    subtitle:setPosition(cc.p(parent:getContentSize().width * 0.5,parent:getContentSize().height * 0.7))
+    parent:addChild(subtitle)
+end
+
 function LevelProgressPopup:createStrikeIron()
     local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
 
@@ -200,15 +214,8 @@ function LevelProgressPopup:createStrikeIron()
     hammer_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
     back:addChild(hammer_sprite)
     
-    local title = cc.Label:createWithSystemFont("趁热打铁","",36)
-    title:setColor(cc.c4b(50,60,64,255))
-    title:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.75))
-    back:addChild(title)
-
-    local subtitle = cc.Label:createWithSystemFont("复习上课学过的单词","",18)
-    subtitle:setColor(cc.c4b(108,108,108,255))
-    subtitle:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.7))
-    back:addChild(subtitle)
+    createTitle("趁热打铁",back)
+    createSubtitle("复习上课学过的单词",back)
 
     local review_label = cc.Label:createWithSystemFont("复习生词","",25)
     review_label:setColor(cc.c4b(98,98,98,255))
@@ -264,16 +271,9 @@ function LevelProgressPopup:createReview(mysterious_index)
     local review_sprite = cc.Sprite:create("image/islandPopup/subtask_review_boss.png")
     review_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
     back:addChild(review_sprite)
-    
-    local title = cc.Label:createWithSystemFont("复习怪兽","",36)
-    title:setColor(cc.c4b(50,60,64,255))
-    title:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.75))
-    back:addChild(title)
 
-    local subtitle = cc.Label:createWithSystemFont("挑出和给出意思对应的章鱼","",18)
-    subtitle:setColor(cc.c4b(108,108,108,255))
-    subtitle:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.7))
-    back:addChild(subtitle)
+    createTitle("复习怪兽",back)
+    createSubtitle("挑出和给出意思对应的章鱼",back)
 
     local review_label = cc.Label:createWithSystemFont("复习生词","",25)
     review_label:setColor(cc.c4b(98,98,98,255))
@@ -342,16 +342,9 @@ function LevelProgressPopup:createSummary()
     local summary_sprite = cc.Sprite:create("image/islandPopup/subtask_summary_boss.png")
     summary_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
     back:addChild(summary_sprite)
-    
-    local title = cc.Label:createWithSystemFont("总结怪兽","",36)
-    title:setColor(cc.c4b(50,60,64,255))
-    title:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.75))
-    back:addChild(title)
 
-    local subtitle = cc.Label:createWithSystemFont("划出给出中文对应的单词来击败boss","",18)
-    subtitle:setColor(cc.c4b(108,108,108,255))
-    subtitle:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.7))
-    back:addChild(subtitle)
+    createTitle("总结怪兽",back)
+    createSubtitle("划出给出中文对应的单词来击败boss",back)
 
     local review_label = cc.Label:createWithSystemFont("复习生词","",25)
     review_label:setColor(cc.c4b(98,98,98,255))
@@ -409,16 +402,9 @@ function LevelProgressPopup:createMysterious()
     local mysterious_sprite = cc.Sprite:create("image/islandPopup/subtask_mysterious_task.png")
     mysterious_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
     back:addChild(mysterious_sprite)
-    
-    local title = cc.Label:createWithSystemFont("神秘任务","",36)
-    title:setColor(cc.c4b(50,60,64,255))
-    title:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.75))
-    back:addChild(title)
 
-    local subtitle = cc.Label:createWithSystemFont("一个即将到来的神秘玩法","",18)
-    subtitle:setColor(cc.c4b(108,108,108,255))
-    subtitle:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.7))
-    back:addChild(subtitle)
+    createTitle("神秘任务",back)
+    createSubtitle("一个即将到来的神秘玩法",back)
 
     local review_label = cc.Label:createWithSystemFont("复习生词","",25)
     review_label:setColor(cc.c4b(98,98,98,255))
