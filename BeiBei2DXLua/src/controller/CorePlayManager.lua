@@ -168,9 +168,6 @@ function CorePlayManager.initTestModel()
 end
 
 function CorePlayManager.enterTestModel(wordlist)
-    print("~~~~~")
-    print_lua_table(CorePlayManager.currentUnit)
-    print("~~~~~")
     local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
     local blacksmithLayer = BlacksmithLayer.create(wordlist)
     s_SCENE:replaceGameLayer(blacksmithLayer)
@@ -192,9 +189,9 @@ function CorePlayManager.initReviewModel()
     end
 end
 
-function CorePlayManager.enterReviewModel(wordlist)
+function CorePlayManager.enterReviewModel(wordlist,isUpdateUnitState)
     local NewReviewBossMainLayer = require("view.newreviewboss.NewReviewBossMainLayer")
-    local newReviewBossMainLayer = NewReviewBossMainLayer.create(wordlist)
+    local newReviewBossMainLayer = NewReviewBossMainLayer.create(wordlist,isUpdateUnitState)
     s_SCENE:replaceGameLayer(newReviewBossMainLayer)
 end
 
@@ -273,8 +270,16 @@ function CorePlayManager.enterFriendLayer()
 end
 
 function CorePlayManager.initTotalUnitPlay()
+    -- check current unit count 
+    print('enterunitplay')
+    local maxID = s_LocalDatabaseManager.getMaxUnitID()
+    --if maxID == 0 then -- empty
+        print('####test init unit info')
+        s_LocalDatabaseManager.initUnitInfo(1)
+    --end
     local unitList = s_LocalDatabaseManager.getAllUnitInfo()
-    
+    print('all unit list size:'..#unitList)
+
     CorePlayManager.currentUnitID = nil
     for i = 1, #unitList do
         local unit = unitList[i]
@@ -298,8 +303,9 @@ function CorePlayManager.initTotalUnitPlay()
     else
         -- exist boss
     end
-
+    print('currentUnitID:'..CorePlayManager.currentUnitID)
     CorePlayManager.currentUnit            = s_LocalDatabaseManager.getUnitInfo(CorePlayManager.currentUnitID)
+    print_lua_table(CorePlayManager.currentUnit)
     CorePlayManager.currentUnitState       = CorePlayManager.currentUnit.unitState
     -- CorePlayManager.currentRightWordList   = CorePlayManager.currentUnit.rightWordList
     CorePlayManager.currentWrongWordList   = CorePlayManager.currentUnit.wrongWordList 
@@ -307,10 +313,6 @@ function CorePlayManager.initTotalUnitPlay()
     CorePlayManager.BookUnitWordList       = s_BookUnitWord[s_CURRENT_USER.bookKey]
     CorePlayManager.currentIndex           = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
     CorePlayManager.wrongWordNum           = #CorePlayManager.currentWrongWordList
-
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    print_lua_table(CorePlayManager.currentUnit)
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
     -- if     CorePlayManager.currentUnitState == 0 then
     --     -- study   model
