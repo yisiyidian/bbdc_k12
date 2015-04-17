@@ -5,8 +5,18 @@ end)
 local Button                = require("view.button.longButtonInStudy")
 local ProgressBar           = require("view.islandPopup.ProgressBar")
 
-function LevelProgressPopup.create()
+function LevelProgressPopup.create(index)
+    print("~~~"..index)
     local layer = LevelProgressPopup.new()
+    layer.unit = s_LocalDatabaseManager.getUnitInfo(index)
+    print("~~~~~~~~~")
+    layer.wrongWordList = {}
+    for i = 1 ,#layer.unit.wrongWordList do
+        table.insert(layer.wrongWordList,layer.unit.wrongWordList[i])
+    end
+    print_lua_table(layer.unit)
+    layer.current_index = layer.unit.unitState
+    layer.coolingDay = layer.unit.coolingDay
     layer:createPape()
     return layer
 end
@@ -33,9 +43,6 @@ end
 
 function LevelProgressPopup:ctor()
     self.total_index = 7
-    self.current_index = 1
-    
-    
     
     self.backPopup = cc.Sprite:create("image/islandPopup/subtask_bg.png")
     self.backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)
@@ -117,8 +124,8 @@ function LevelProgressPopup:ctor()
 end
 
 function LevelProgressPopup:createPape()
-    local pageViewSize = cc.size(545, 683)
-    local backgroundSize = cc.size(545, 683)
+    local pageViewSize = cc.size(545, 900)
+    local backgroundSize = cc.size(545, 900)
 
     local pageView = ccui.PageView:create()
     pageView:setTouchEnabled(true)
@@ -149,6 +156,9 @@ function LevelProgressPopup:createPape()
         elseif i == 3 then
             local SummaryLayer = self:createSummary()
             layout:addChild(SummaryLayer)
+        elseif i <= self.current_index then
+            local ReviewLayer = self:createReview(i)
+            layout:addChild(ReviewLayer)
         else
             local MysteriousLayer = self:createMysterious()
             layout:addChild(MysteriousLayer) 
@@ -158,7 +168,7 @@ function LevelProgressPopup:createPape()
     end
 
     -- change to current index
-    pageView:scrollToPage(0) 
+    pageView:scrollToPage(self.current_index - 1) 
 
     self.changeToPage = function (bool) 
         if bool == true then
@@ -184,7 +194,7 @@ function LevelProgressPopup:createPape()
 end
 
 function LevelProgressPopup:createStrikeIron()
-    local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 683)
+    local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
 
     local hammer_sprite = cc.Sprite:create("image/islandPopup/subtask_hammer.png")
     hammer_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
@@ -192,21 +202,21 @@ function LevelProgressPopup:createStrikeIron()
     
     local title = cc.Label:createWithSystemFont("趁热打铁","",36)
     title:setColor(cc.c4b(50,60,64,255))
-    title:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.8))
+    title:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.75))
     back:addChild(title)
 
     local subtitle = cc.Label:createWithSystemFont("复习上课学过的单词","",18)
     subtitle:setColor(cc.c4b(108,108,108,255))
-    subtitle:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.75))
+    subtitle:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.7))
     back:addChild(subtitle)
 
     local review_label = cc.Label:createWithSystemFont("复习生词","",25)
     review_label:setColor(cc.c4b(98,98,98,255))
-    review_label:setPosition(cc.p(back:getContentSize().width * 0.2,back:getContentSize().height * 0.25))
+    review_label:setPosition(cc.p(back:getContentSize().width * 0.2,back:getContentSize().height * 0.3))
     back:addChild(review_label)
 
     local review_sprite = cc.Sprite:create("image/islandPopup/subtask_number_bg.png")
-    review_sprite:setPosition(cc.p(back:getContentSize().width * 0.4,back:getContentSize().height * 0.25))
+    review_sprite:setPosition(cc.p(back:getContentSize().width * 0.4,back:getContentSize().height * 0.3))
     back:addChild(review_sprite)
 
     local review_num = cc.Label:createWithSystemFont("10 / 10","",24)
@@ -216,23 +226,39 @@ function LevelProgressPopup:createStrikeIron()
 
     local reward_label = cc.Label:createWithSystemFont("奖励","",25)
     reward_label:setColor(cc.c4b(98,98,98,255))
-    reward_label:setPosition(cc.p(back:getContentSize().width * 0.6,back:getContentSize().height * 0.25))
+    reward_label:setPosition(cc.p(back:getContentSize().width * 0.6,back:getContentSize().height * 0.3))
     back:addChild(reward_label)
 
     local reward_sprite = cc.Sprite:create("image/islandPopup/subtask_beibeibean.png")
-    reward_sprite:setPosition(cc.p(back:getContentSize().width * 0.8,back:getContentSize().height * 0.25))
+    reward_sprite:setPosition(cc.p(back:getContentSize().width * 0.8,back:getContentSize().height * 0.3))
     back:addChild(reward_sprite)
 
     local reward_num = cc.Label:createWithSystemFont("3","",24)
     reward_num:setColor(cc.c4b(255,255,255,255))
     reward_num:setPosition(cc.p(reward_sprite:getContentSize().width * 0.75,reward_sprite:getContentSize().height * 0.5))
     reward_sprite:addChild(reward_num)
+
+    local button_func = function()
+        playSound(s_sound_buttonEffect)        
+        s_CorePlayManager.enterTestModel(self.wrongWordList)           
+    end
+
+    local go_button = Button.create("long","blue","GO") 
+    go_button:setPosition(back:getContentSize().width * 0.5, back:getContentSize().height * 0.05)
+    go_button.func = function ()
+        button_func()
+    end
+
+    if self.current_index == 0 then
+        back:addChild(go_button)
+    end
     
     return back
 end
 
-function LevelProgressPopup:createReview()
-    local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 683)
+function LevelProgressPopup:createReview(mysterious_index)
+    local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
+    local isUpdateUnitState = 2 -- 1 for update ,2 for not
 
     local review_sprite = cc.Sprite:create("image/islandPopup/subtask_review_boss.png")
     review_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
@@ -240,21 +266,21 @@ function LevelProgressPopup:createReview()
     
     local title = cc.Label:createWithSystemFont("复习怪兽","",36)
     title:setColor(cc.c4b(50,60,64,255))
-    title:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.8))
+    title:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.75))
     back:addChild(title)
 
     local subtitle = cc.Label:createWithSystemFont("挑出和给出意思对应的章鱼","",18)
     subtitle:setColor(cc.c4b(108,108,108,255))
-    subtitle:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.75))
+    subtitle:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.7))
     back:addChild(subtitle)
 
     local review_label = cc.Label:createWithSystemFont("复习生词","",25)
     review_label:setColor(cc.c4b(98,98,98,255))
-    review_label:setPosition(cc.p(back:getContentSize().width * 0.2,back:getContentSize().height * 0.25))
+    review_label:setPosition(cc.p(back:getContentSize().width * 0.2,back:getContentSize().height * 0.3))
     back:addChild(review_label)
 
     local review_sprite = cc.Sprite:create("image/islandPopup/subtask_number_bg.png")
-    review_sprite:setPosition(cc.p(back:getContentSize().width * 0.4,back:getContentSize().height * 0.25))
+    review_sprite:setPosition(cc.p(back:getContentSize().width * 0.4,back:getContentSize().height * 0.3))
     back:addChild(review_sprite)
 
     local review_num = cc.Label:createWithSystemFont("10 / 10","",24)
@@ -264,23 +290,53 @@ function LevelProgressPopup:createReview()
 
     local reward_label = cc.Label:createWithSystemFont("奖励","",25)
     reward_label:setColor(cc.c4b(98,98,98,255))
-    reward_label:setPosition(cc.p(back:getContentSize().width * 0.6,back:getContentSize().height * 0.25))
+    reward_label:setPosition(cc.p(back:getContentSize().width * 0.6,back:getContentSize().height * 0.3))
     back:addChild(reward_label)
 
     local reward_sprite = cc.Sprite:create("image/islandPopup/subtask_beibeibean.png")
-    reward_sprite:setPosition(cc.p(back:getContentSize().width * 0.8,back:getContentSize().height * 0.25))
+    reward_sprite:setPosition(cc.p(back:getContentSize().width * 0.8,back:getContentSize().height * 0.3))
     back:addChild(reward_sprite)
 
     local reward_num = cc.Label:createWithSystemFont("3","",24)
     reward_num:setColor(cc.c4b(255,255,255,255))
     reward_num:setPosition(cc.p(reward_sprite:getContentSize().width * 0.75,reward_sprite:getContentSize().height * 0.5))
     reward_sprite:addChild(reward_num)
+
+    local button_func = function()
+        playSound(s_sound_buttonEffect)        
+        s_CorePlayManager.enterReviewModel(self.wrongWordList,isUpdateUnitState)        
+    end
+
+    local go_button = Button.create("long","blue","GO") 
+    go_button:setPosition(back:getContentSize().width * 0.5, back:getContentSize().height * 0.05)
+    go_button.func = function ()
+        button_func()
+    end
+
+    if mysterious_index ~= nil then
+        if (self.current_index == (mysterious_index - 1) and self.coolingDay == 0) then
+            back:addChild(go_button)
+            isUpdateUnitState = 2
+        elseif self.current_index >= mysterious_index then
+            back:addChild(go_button)
+            isUpdateUnitState = 1
+        end
+    else
+        if self.current_index == 1 then
+            back:addChild(go_button)
+            isUpdateUnitState = 2
+        elseif self.current_index > 1 then
+            back:addChild(go_button)
+            isUpdateUnitState = 1
+        end
+    end
     
     return back
 end
 
 function LevelProgressPopup:createSummary()
-    local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 683)
+    local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
+    local isUpdateUnitState = false -- true for update ,false for not
 
     local summary_sprite = cc.Sprite:create("image/islandPopup/subtask_summary_boss.png")
     summary_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
@@ -288,21 +344,21 @@ function LevelProgressPopup:createSummary()
     
     local title = cc.Label:createWithSystemFont("总结怪兽","",36)
     title:setColor(cc.c4b(50,60,64,255))
-    title:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.8))
+    title:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.75))
     back:addChild(title)
 
     local subtitle = cc.Label:createWithSystemFont("划出给出中文对应的单词来击败boss","",18)
     subtitle:setColor(cc.c4b(108,108,108,255))
-    subtitle:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.75))
+    subtitle:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.7))
     back:addChild(subtitle)
 
     local review_label = cc.Label:createWithSystemFont("复习生词","",25)
     review_label:setColor(cc.c4b(98,98,98,255))
-    review_label:setPosition(cc.p(back:getContentSize().width * 0.2,back:getContentSize().height * 0.25))
+    review_label:setPosition(cc.p(back:getContentSize().width * 0.2,back:getContentSize().height * 0.3))
     back:addChild(review_label)
 
     local review_sprite = cc.Sprite:create("image/islandPopup/subtask_number_bg.png")
-    review_sprite:setPosition(cc.p(back:getContentSize().width * 0.4,back:getContentSize().height * 0.25))
+    review_sprite:setPosition(cc.p(back:getContentSize().width * 0.4,back:getContentSize().height * 0.3))
     back:addChild(review_sprite)
 
     local review_num = cc.Label:createWithSystemFont("10 / 10","",24)
@@ -312,23 +368,42 @@ function LevelProgressPopup:createSummary()
 
     local reward_label = cc.Label:createWithSystemFont("奖励","",25)
     reward_label:setColor(cc.c4b(98,98,98,255))
-    reward_label:setPosition(cc.p(back:getContentSize().width * 0.6,back:getContentSize().height * 0.25))
+    reward_label:setPosition(cc.p(back:getContentSize().width * 0.6,back:getContentSize().height * 0.3))
     back:addChild(reward_label)
 
     local reward_sprite = cc.Sprite:create("image/islandPopup/subtask_beibeibean.png")
-    reward_sprite:setPosition(cc.p(back:getContentSize().width * 0.8,back:getContentSize().height * 0.25))
+    reward_sprite:setPosition(cc.p(back:getContentSize().width * 0.8,back:getContentSize().height * 0.3))
     back:addChild(reward_sprite)
 
     local reward_num = cc.Label:createWithSystemFont("3","",24)
     reward_num:setColor(cc.c4b(255,255,255,255))
     reward_num:setPosition(cc.p(reward_sprite:getContentSize().width * 0.75,reward_sprite:getContentSize().height * 0.5))
     reward_sprite:addChild(reward_num)
+
+    local button_func = function()
+        playSound(s_sound_buttonEffect)        
+        s_CorePlayManager.enterSummaryModel(self.wrongWordList,isUpdateUnitState)
+    end
+
+    local go_button = Button.create("long","blue","GO") 
+    go_button:setPosition(back:getContentSize().width * 0.5, back:getContentSize().height * 0.05)
+    go_button.func = function ()
+        button_func()
+    end
+    
+    if self.current_index == 1 then
+        back:addChild(go_button)
+        isUpdateUnitState = true
+    elseif self.current_index > 1 then
+        back:addChild(go_button)
+        isUpdateUnitState = false
+    end
     
     return back
 end
 
 function LevelProgressPopup:createMysterious()
-    local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 683)
+    local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
 
     local mysterious_sprite = cc.Sprite:create("image/islandPopup/subtask_mysterious_task.png")
     mysterious_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
@@ -336,21 +411,21 @@ function LevelProgressPopup:createMysterious()
     
     local title = cc.Label:createWithSystemFont("神秘任务","",36)
     title:setColor(cc.c4b(50,60,64,255))
-    title:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.8))
+    title:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.75))
     back:addChild(title)
 
     local subtitle = cc.Label:createWithSystemFont("一个即将到来的神秘玩法","",18)
     subtitle:setColor(cc.c4b(108,108,108,255))
-    subtitle:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.75))
+    subtitle:setPosition(cc.p(back:getContentSize().width * 0.5,back:getContentSize().height * 0.7))
     back:addChild(subtitle)
 
     local review_label = cc.Label:createWithSystemFont("复习生词","",25)
     review_label:setColor(cc.c4b(98,98,98,255))
-    review_label:setPosition(cc.p(back:getContentSize().width * 0.2,back:getContentSize().height * 0.25))
+    review_label:setPosition(cc.p(back:getContentSize().width * 0.2,back:getContentSize().height * 0.3))
     back:addChild(review_label)
 
     local review_sprite = cc.Sprite:create("image/islandPopup/subtask_number_bg.png")
-    review_sprite:setPosition(cc.p(back:getContentSize().width * 0.4,back:getContentSize().height * 0.25))
+    review_sprite:setPosition(cc.p(back:getContentSize().width * 0.4,back:getContentSize().height * 0.3))
     back:addChild(review_sprite)
 
     local review_num = cc.Label:createWithSystemFont("？ / ？","",24)
@@ -360,11 +435,11 @@ function LevelProgressPopup:createMysterious()
 
     local reward_label = cc.Label:createWithSystemFont("奖励","",25)
     reward_label:setColor(cc.c4b(98,98,98,255))
-    reward_label:setPosition(cc.p(back:getContentSize().width * 0.6,back:getContentSize().height * 0.25))
+    reward_label:setPosition(cc.p(back:getContentSize().width * 0.6,back:getContentSize().height * 0.3))
     back:addChild(reward_label)
 
     local reward_sprite = cc.Sprite:create("image/islandPopup/subtask_beibeibean.png")
-    reward_sprite:setPosition(cc.p(back:getContentSize().width * 0.8,back:getContentSize().height * 0.25))
+    reward_sprite:setPosition(cc.p(back:getContentSize().width * 0.8,back:getContentSize().height * 0.3))
     back:addChild(reward_sprite)
 
     local reward_num = cc.Label:createWithSystemFont("？","",24)

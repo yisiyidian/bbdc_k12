@@ -75,8 +75,13 @@ function ProgressBar.create(totalIndex, currentIndex)
     end
 
     main.moveLightCircle = function (Papeindex)
+        s_TOUCH_EVENT_BLOCK_LAYER:lockTouch()
+        local widthMax =  local_size.width
         local action1 = cc.MoveTo:create(0.2,cc.p(left + gap* Papeindex, 4))
         light:runAction(action1)
+        s_SCENE:callFuncWithDelay(0.2, function()
+                 s_TOUCH_EVENT_BLOCK_LAYER:unlockTouch()
+              end)
     end
 
     return main
