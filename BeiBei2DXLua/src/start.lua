@@ -154,7 +154,6 @@ function start.start(hotUpdate)
         cc.Director:getInstance():runWithScene(s_SCENE)
     end
 
-
     
     -- *************************************
     if test_code == NORMAL_CODE then -- do NOT change this line
