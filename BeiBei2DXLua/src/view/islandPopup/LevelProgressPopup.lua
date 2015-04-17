@@ -240,7 +240,7 @@ function LevelProgressPopup:createStrikeIron()
 
     local button_func = function()
         playSound(s_sound_buttonEffect)        
-        s_CorePlayManager.enterTestModel(self.wrongWordList)           
+        s_CorePlayManager.initTotalUnitPlay()          
     end
 
     local go_button = Button.create("long","blue","GO") 
@@ -304,7 +304,7 @@ function LevelProgressPopup:createReview(mysterious_index)
 
     local button_func = function()
         playSound(s_sound_buttonEffect)        
-        s_CorePlayManager.enterReviewModel(self.wrongWordList,isUpdateUnitState)        
+        s_CorePlayManager.initTotalUnitPlay()
     end
 
     local go_button = Button.create("long","blue","GO") 

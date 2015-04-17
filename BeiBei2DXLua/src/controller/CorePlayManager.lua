@@ -168,6 +168,9 @@ function CorePlayManager.initTestModel()
 end
 
 function CorePlayManager.enterTestModel(wordlist)
+    print("~~~~~")
+    print_lua_table(CorePlayManager.currentUnit)
+    print("~~~~~")
     local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
     local blacksmithLayer = BlacksmithLayer.create(wordlist)
     s_SCENE:replaceGameLayer(blacksmithLayer)
@@ -189,9 +192,9 @@ function CorePlayManager.initReviewModel()
     end
 end
 
-function CorePlayManager.enterReviewModel(wordlist,isUpdateUnitState)
+function CorePlayManager.enterReviewModel(wordlist)
     local NewReviewBossMainLayer = require("view.newreviewboss.NewReviewBossMainLayer")
-    local newReviewBossMainLayer = NewReviewBossMainLayer.create(wordlist,isUpdateUnitState)
+    local newReviewBossMainLayer = NewReviewBossMainLayer.create(wordlist)
     s_SCENE:replaceGameLayer(newReviewBossMainLayer)
 end
 
@@ -271,7 +274,7 @@ end
 
 function CorePlayManager.initTotalUnitPlay()
     local unitList = s_LocalDatabaseManager.getAllUnitInfo()
-
+    
     CorePlayManager.currentUnitID = nil
     for i = 1, #unitList do
         local unit = unitList[i]
@@ -304,6 +307,10 @@ function CorePlayManager.initTotalUnitPlay()
     CorePlayManager.BookUnitWordList       = s_BookUnitWord[s_CURRENT_USER.bookKey]
     CorePlayManager.currentIndex           = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
     CorePlayManager.wrongWordNum           = #CorePlayManager.currentWrongWordList
+
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print_lua_table(CorePlayManager.currentUnit)
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
     -- if     CorePlayManager.currentUnitState == 0 then
     --     -- study   model
