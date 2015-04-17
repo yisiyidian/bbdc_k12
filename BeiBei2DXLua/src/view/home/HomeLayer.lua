@@ -392,7 +392,7 @@ function HomeLayer.create()
         split:setPosition(button_back:getContentSize().width/2, 0)
         button_back:addChild(split)
 
-        local sprite1 = setting_back:getChildByName("button1")                               
+        local sprite1 = setting_back:getChildByName("button1")
         if sprite1 ~= nil then sprite1:removeFromParent() end
         local sprite2 = setting_back:getChildByName("button5")  
         if sprite2 ~= nil then sprite2:setPosition(0, s_DESIGN_HEIGHT - sprite2:getContentSize().height * (4 - 1) - 90) end
@@ -737,7 +737,7 @@ function HomeLayer.create()
                     if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
                         local redHint = cc.Sprite:create('image/friend/fri_infor.png')
                         redHint:setPosition(button_friend:getPositionX() - button_friend:getContentSize().width * 0.2, button_friend:getPositionY() + button_friend:getContentSize().height * 0.4)
-                        backColor:addChild(redHint,1,'redHint')
+                        backColor:addChild(redHint,1,"redHint")
 
                         local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
                         num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)

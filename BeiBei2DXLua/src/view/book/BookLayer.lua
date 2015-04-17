@@ -81,7 +81,7 @@ function BookLayer.create(education)
                     s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_book_select+1)
                     AnalyticsFirstBook(key)
                 end
-                
+                print("s_CURRENT_USER.bookKey2"..bookKey)
                 s_CURRENT_USER.bookKey = key
                 saveUserToServer({['bookKey']=s_CURRENT_USER.bookKey})
                 AnalyticsBook(key)

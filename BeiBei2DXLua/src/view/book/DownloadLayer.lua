@@ -91,7 +91,7 @@ function DownloadLayer.create(bookKey)
                     if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
                         s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
                     end
-
+                    print("s_CURRENT_USER.bookKey"..bookKey)
                     s_CURRENT_USER.bookKey = bookKey
                     saveUserToServer({['bookKey']=s_CURRENT_USER.bookKey})
                     AnalyticsBook(bookKey)
@@ -103,7 +103,7 @@ function DownloadLayer.create(bookKey)
                 if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
                     s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
                 end
-
+                print("s_CURRENT_USER.bookKey2"..bookKey)
                 s_CURRENT_USER.bookKey = bookKey
                 saveUserToServer({['bookKey']=s_CURRENT_USER.bookKey})
                 AnalyticsBook(bookKey)
