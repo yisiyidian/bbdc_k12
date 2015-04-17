@@ -7,8 +7,9 @@ local ProgressBar           = require("view.islandPopup.ProgressBar")
 
 function LevelProgressPopup.create(index)
     print("~~~"..index)
+    local islandIndex = tonumber(index) + 1
     local layer = LevelProgressPopup.new()
-    layer.unit = s_LocalDatabaseManager.getUnitInfo(index)
+    layer.unit = s_LocalDatabaseManager.getUnitInfo(islandIndex)
     print("~~~~~~~~~")
     layer.wrongWordList = {}
     for i = 1 ,#layer.unit.wrongWordList do
@@ -207,6 +208,42 @@ local function createSubtitle(Text,parent)
     parent:addChild(subtitle)
 end
 
+local function createReviewLabel(parent)
+    local review_label = cc.Label:createWithSystemFont("复习生词","",25)
+    review_label:setColor(cc.c4b(98,98,98,255))
+    review_label:setPosition(cc.p(parent:getContentSize().width * 0.2,parent:getContentSize().height * 0.3))
+    parent:addChild(review_label)
+end
+
+local function createReviewSprite(current,total,parent)
+    local review_sprite = cc.Sprite:create("image/islandPopup/subtask_number_bg.png")
+    review_sprite:setPosition(cc.p(parent:getContentSize().width * 0.4,parent:getContentSize().height * 0.3))
+    parent:addChild(review_sprite)
+
+    local review_num = cc.Label:createWithSystemFont(current.." / "..total,"",24)
+    review_num:setColor(cc.c4b(255,255,255,255))
+    review_num:setPosition(cc.p(review_sprite:getContentSize().width * 0.5,review_sprite:getContentSize().height * 0.5))
+    review_sprite:addChild(review_num)
+end
+
+local function createRewardLabel(parent)
+    local reward_label = cc.Label:createWithSystemFont("奖励","",25)
+    reward_label:setColor(cc.c4b(98,98,98,255))
+    reward_label:setPosition(cc.p(parent:getContentSize().width * 0.6,parent:getContentSize().height * 0.3))
+    parent:addChild(reward_label)
+end
+
+local function createRewardSprite(num,parent)
+    local reward_sprite = cc.Sprite:create("image/islandPopup/subtask_beibeibean.png")
+    reward_sprite:setPosition(cc.p(parent:getContentSize().width * 0.8,parent:getContentSize().height * 0.3))
+    parent:addChild(reward_sprite)
+
+    local reward_num = cc.Label:createWithSystemFont(num,"",24)
+    reward_num:setColor(cc.c4b(255,255,255,255))
+    reward_num:setPosition(cc.p(reward_sprite:getContentSize().width * 0.75,reward_sprite:getContentSize().height * 0.5))
+    reward_sprite:addChild(reward_num)
+end
+
 function LevelProgressPopup:createStrikeIron()
     local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
 
@@ -216,39 +253,15 @@ function LevelProgressPopup:createStrikeIron()
     
     createTitle("趁热打铁",back)
     createSubtitle("复习上课学过的单词",back)
-
-    local review_label = cc.Label:createWithSystemFont("复习生词","",25)
-    review_label:setColor(cc.c4b(98,98,98,255))
-    review_label:setPosition(cc.p(back:getContentSize().width * 0.2,back:getContentSize().height * 0.3))
-    back:addChild(review_label)
-
-    local review_sprite = cc.Sprite:create("image/islandPopup/subtask_number_bg.png")
-    review_sprite:setPosition(cc.p(back:getContentSize().width * 0.4,back:getContentSize().height * 0.3))
-    back:addChild(review_sprite)
-
-    local review_num = cc.Label:createWithSystemFont("10 / 10","",24)
-    review_num:setColor(cc.c4b(255,255,255,255))
-    review_num:setPosition(cc.p(review_sprite:getContentSize().width * 0.5,review_sprite:getContentSize().height * 0.5))
-    review_sprite:addChild(review_num)
-
-    local reward_label = cc.Label:createWithSystemFont("奖励","",25)
-    reward_label:setColor(cc.c4b(98,98,98,255))
-    reward_label:setPosition(cc.p(back:getContentSize().width * 0.6,back:getContentSize().height * 0.3))
-    back:addChild(reward_label)
-
-    local reward_sprite = cc.Sprite:create("image/islandPopup/subtask_beibeibean.png")
-    reward_sprite:setPosition(cc.p(back:getContentSize().width * 0.8,back:getContentSize().height * 0.3))
-    back:addChild(reward_sprite)
-
-    local reward_num = cc.Label:createWithSystemFont("3","",24)
-    reward_num:setColor(cc.c4b(255,255,255,255))
-    reward_num:setPosition(cc.p(reward_sprite:getContentSize().width * 0.75,reward_sprite:getContentSize().height * 0.5))
-    reward_sprite:addChild(reward_num)
+    createReviewLabel(back)
+    createReviewSprite(10,10,back)
+    createRewardLabel(back)
+    createRewardSprite(3,back)
 
     local button_func = function()
-        playSound(s_sound_buttonEffect)        
-        -- s_CorePlayManager.enterTestModel(self.wrongWordList)      
-        s_CorePlayManager.initTotalUnitPlay()     
+        playSound(s_sound_buttonEffect)           
+        s_CorePlayManager.initTotalUnitPlay() 
+        s_SCENE:removeAllPopups()    
     end
 
     local go_button = Button.create("long","blue","GO") 
@@ -274,34 +287,10 @@ function LevelProgressPopup:createReview(mysterious_index)
 
     createTitle("复习怪兽",back)
     createSubtitle("挑出和给出意思对应的章鱼",back)
-
-    local review_label = cc.Label:createWithSystemFont("复习生词","",25)
-    review_label:setColor(cc.c4b(98,98,98,255))
-    review_label:setPosition(cc.p(back:getContentSize().width * 0.2,back:getContentSize().height * 0.3))
-    back:addChild(review_label)
-
-    local review_sprite = cc.Sprite:create("image/islandPopup/subtask_number_bg.png")
-    review_sprite:setPosition(cc.p(back:getContentSize().width * 0.4,back:getContentSize().height * 0.3))
-    back:addChild(review_sprite)
-
-    local review_num = cc.Label:createWithSystemFont("10 / 10","",24)
-    review_num:setColor(cc.c4b(255,255,255,255))
-    review_num:setPosition(cc.p(review_sprite:getContentSize().width * 0.5,review_sprite:getContentSize().height * 0.5))
-    review_sprite:addChild(review_num)
-
-    local reward_label = cc.Label:createWithSystemFont("奖励","",25)
-    reward_label:setColor(cc.c4b(98,98,98,255))
-    reward_label:setPosition(cc.p(back:getContentSize().width * 0.6,back:getContentSize().height * 0.3))
-    back:addChild(reward_label)
-
-    local reward_sprite = cc.Sprite:create("image/islandPopup/subtask_beibeibean.png")
-    reward_sprite:setPosition(cc.p(back:getContentSize().width * 0.8,back:getContentSize().height * 0.3))
-    back:addChild(reward_sprite)
-
-    local reward_num = cc.Label:createWithSystemFont("3","",24)
-    reward_num:setColor(cc.c4b(255,255,255,255))
-    reward_num:setPosition(cc.p(reward_sprite:getContentSize().width * 0.75,reward_sprite:getContentSize().height * 0.5))
-    reward_sprite:addChild(reward_num)
+    createReviewLabel(back)
+    createReviewSprite(10,10,back)
+    createRewardLabel(back)
+    createRewardSprite(3,back)
 
     local button_func = function()
         playSound(s_sound_buttonEffect)        
@@ -345,34 +334,10 @@ function LevelProgressPopup:createSummary()
 
     createTitle("总结怪兽",back)
     createSubtitle("划出给出中文对应的单词来击败boss",back)
-
-    local review_label = cc.Label:createWithSystemFont("复习生词","",25)
-    review_label:setColor(cc.c4b(98,98,98,255))
-    review_label:setPosition(cc.p(back:getContentSize().width * 0.2,back:getContentSize().height * 0.3))
-    back:addChild(review_label)
-
-    local review_sprite = cc.Sprite:create("image/islandPopup/subtask_number_bg.png")
-    review_sprite:setPosition(cc.p(back:getContentSize().width * 0.4,back:getContentSize().height * 0.3))
-    back:addChild(review_sprite)
-
-    local review_num = cc.Label:createWithSystemFont("10 / 10","",24)
-    review_num:setColor(cc.c4b(255,255,255,255))
-    review_num:setPosition(cc.p(review_sprite:getContentSize().width * 0.5,review_sprite:getContentSize().height * 0.5))
-    review_sprite:addChild(review_num)
-
-    local reward_label = cc.Label:createWithSystemFont("奖励","",25)
-    reward_label:setColor(cc.c4b(98,98,98,255))
-    reward_label:setPosition(cc.p(back:getContentSize().width * 0.6,back:getContentSize().height * 0.3))
-    back:addChild(reward_label)
-
-    local reward_sprite = cc.Sprite:create("image/islandPopup/subtask_beibeibean.png")
-    reward_sprite:setPosition(cc.p(back:getContentSize().width * 0.8,back:getContentSize().height * 0.3))
-    back:addChild(reward_sprite)
-
-    local reward_num = cc.Label:createWithSystemFont("3","",24)
-    reward_num:setColor(cc.c4b(255,255,255,255))
-    reward_num:setPosition(cc.p(reward_sprite:getContentSize().width * 0.75,reward_sprite:getContentSize().height * 0.5))
-    reward_sprite:addChild(reward_num)
+    createReviewLabel(back)
+    createReviewSprite(10,10,back)
+    createRewardLabel(back)
+    createRewardSprite(3,back)
 
     local button_func = function()
         playSound(s_sound_buttonEffect)        
@@ -405,34 +370,10 @@ function LevelProgressPopup:createMysterious()
 
     createTitle("神秘任务",back)
     createSubtitle("一个即将到来的神秘玩法",back)
-
-    local review_label = cc.Label:createWithSystemFont("复习生词","",25)
-    review_label:setColor(cc.c4b(98,98,98,255))
-    review_label:setPosition(cc.p(back:getContentSize().width * 0.2,back:getContentSize().height * 0.3))
-    back:addChild(review_label)
-
-    local review_sprite = cc.Sprite:create("image/islandPopup/subtask_number_bg.png")
-    review_sprite:setPosition(cc.p(back:getContentSize().width * 0.4,back:getContentSize().height * 0.3))
-    back:addChild(review_sprite)
-
-    local review_num = cc.Label:createWithSystemFont("？ / ？","",24)
-    review_num:setColor(cc.c4b(255,255,255,255))
-    review_num:setPosition(cc.p(review_sprite:getContentSize().width * 0.5,review_sprite:getContentSize().height * 0.5))
-    review_sprite:addChild(review_num)
-
-    local reward_label = cc.Label:createWithSystemFont("奖励","",25)
-    reward_label:setColor(cc.c4b(98,98,98,255))
-    reward_label:setPosition(cc.p(back:getContentSize().width * 0.6,back:getContentSize().height * 0.3))
-    back:addChild(reward_label)
-
-    local reward_sprite = cc.Sprite:create("image/islandPopup/subtask_beibeibean.png")
-    reward_sprite:setPosition(cc.p(back:getContentSize().width * 0.8,back:getContentSize().height * 0.3))
-    back:addChild(reward_sprite)
-
-    local reward_num = cc.Label:createWithSystemFont("？","",24)
-    reward_num:setColor(cc.c4b(255,255,255,255))
-    reward_num:setPosition(cc.p(reward_sprite:getContentSize().width * 0.75,reward_sprite:getContentSize().height * 0.5))
-    reward_sprite:addChild(reward_num)
+    createReviewLabel(back)
+    createReviewSprite("?","?",back)
+    createRewardLabel(back)
+    createRewardSprite("?",back)
     
     return back
 end
