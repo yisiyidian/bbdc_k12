@@ -270,7 +270,15 @@ function CorePlayManager.enterFriendLayer()
 end
 
 function CorePlayManager.initTotalUnitPlay()
+    -- check current unit count 
+    print('enterunitplay')
+    local maxID = s_LocalDatabaseManager.getMaxUnitID()
+    --if maxID == 0 then -- empty
+        print('####test init unit info')
+        s_LocalDatabaseManager.initUnitInfo(1)
+    --end
     local unitList = s_LocalDatabaseManager.getAllUnitInfo()
+    print('all unit list size:'..#unitList)
 
     CorePlayManager.currentUnitID = nil
     for i = 1, #unitList do
@@ -295,8 +303,9 @@ function CorePlayManager.initTotalUnitPlay()
     else
         -- exist boss
     end
-
+    print('currentUnitID:'..CorePlayManager.currentUnitID)
     CorePlayManager.currentUnit            = s_LocalDatabaseManager.getUnitInfo(CorePlayManager.currentUnitID)
+    print_lua_table(CorePlayManager.currentUnit)
     CorePlayManager.currentUnitState       = CorePlayManager.currentUnit.unitState
     -- CorePlayManager.currentRightWordList   = CorePlayManager.currentUnit.rightWordList
     CorePlayManager.currentWrongWordList   = CorePlayManager.currentUnit.wrongWordList 

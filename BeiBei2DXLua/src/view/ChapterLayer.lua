@@ -448,7 +448,7 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
                 AnalyticsFirst(ANALYTICS_FIRST_STUDY, 'TOUCH')
                 
                 -- TODO go to study
-                s_CorePlayManager.initTotalPlay()
+                s_CorePlayManager.initTotalUnitPlay()
             end
         end
         local start = ccui.Button:create('image/chapter/chapter0/button.png','image/chapter/chapter0/button.png','image/chapter/chapter0/button.png')
@@ -488,7 +488,7 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
         local function touchEvent(sender,eventType)
             if eventType == ccui.TouchEventType.ended then
                 -- TODO go to study
-                s_CorePlayManager.initTotalPlay()
+                s_CorePlayManager.initTotalUnitPlay()
             end
         end
         local start = ccui.Button:create('image/chapter/chapter0/button.png','image/chapter/chapter0/button.png','image/chapter/chapter0/button.png')
@@ -523,7 +523,7 @@ function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
             if eventType == ccui.TouchEventType.ended then
                 -- TODO go to study
                 print('on review boss')
-                s_CorePlayManager.initTotalPlay()
+                s_CorePlayManager.initTotalUnitPlay()
             end
         end
         local start = ccui.Button:create('image/chapter/chapter0/button.png','image/chapter/chapter0/button.png','image/chapter/chapter0/button.png')

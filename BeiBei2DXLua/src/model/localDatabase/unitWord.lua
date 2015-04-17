@@ -4,7 +4,7 @@ local Manager = s_LocalDatabaseManager
 local M = {}
 
 local function createData(bookKey, lastUpdate, unitID, unitState, wordList, currentWordIndex, savedToServer)
-    local data = DataBossWord.create()
+    local data = DataUnit.create()
     updateDataFromUser(data, s_CURRENT_USER)
 
     data.bookKey = bookKey
@@ -30,7 +30,7 @@ local function saveDataToServer(skip_wordList, lastUpdate, unitID, unitState, wo
         
         for i, v in ipairs(serverDatas) do
 
-            local query = "UPDATE DataBossWord SET objectId = '"..v.objectId.."', savedToServer = " .. v.savedToServer .. " WHERE "..condition.." and bossID = "..bossID.." ;"
+            local query = "UPDATE DataUnit SET objectId = '"..v.objectId.."', savedToServer = " .. v.savedToServer .. " WHERE "..condition.." and unitID = "..unitID.." ;"
             Manager.database:exec(query)
 
             break
@@ -175,7 +175,7 @@ end
 function M.getMaxUnitID()
     local unit = M.getMaxUnit()
     if unit ~= nil then return unit.unitID end
-    return 1
+    return 0
 end
 
 function M.getUnitInfo(unitID)
@@ -400,6 +400,28 @@ end
 --     end
 -- end
 
+function M.initUnitInfo(unitID)
+    local userId    = s_CURRENT_USER.objectId
+    local bookKey   = s_CURRENT_USER.bookKey
+    local username  = s_CURRENT_USER.username
+    local time      = os.time()
+    local wordlist = s_BookUnitWord[bookKey][''..unitID]
+    local currentWordIndex = 1
+    local unitState = 0
+    print('wordlist:'..wordlist)
+
+    query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, unitID, unitState, wordList, currentWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..unitID..", 0, '"..wordlist.."', "..currentWordIndex..", 0) ;"
+    print('sql:'..query)
+    Manager.database:exec(query)
+
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+    print('row:')
+    for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition..";") do
+        print(row.unitID)
+    end
+    --saveDataToServer(true, time, unitID, unitState, wordList, currentWordIndex, 0)
+end
+
 function M.updateUnitState(unitID)
     local userId    = s_CURRENT_USER.objectId
     local bookKey   = s_CURRENT_USER.bookKey
@@ -417,7 +439,7 @@ function M.updateUnitState(unitID)
         saveDataToServer(true, time, row.unitID, newUnitState, row.wordList, currentWordIndex, row.savedToServer)
 
         if newUnitState == 4 then
-            query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, unitState, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..", 0) ;"
+            query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, bossID, unitState, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..", 0) ;"
             Manager.database:exec(query)
             saveDataToServer(true, time, unitID + 1, 0, '', 0, 0)
         elseif newunitState == 8 then

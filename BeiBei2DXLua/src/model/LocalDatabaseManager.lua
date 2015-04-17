@@ -260,6 +260,9 @@ function Manager.getAllUnitInfo()
     return localdatabase_unitWord.getAllUnitInfo()
 end
 
+function Manager.initUnitInfo(unitID)
+    return localdatabase_unitWord.initUnitInfo(unitID)
+end
 
 function Manager.updateUnitState(unitID)   -- TODO
     -- Manager.minusTodayRemainTaskNum()

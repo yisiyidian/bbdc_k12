@@ -137,10 +137,12 @@ function DataManager.loadK12Books()
                     -- print(lines[j])
                     unit_word = split(lines[j],"\t")
                     if unit_word[1] - current_unit ~= 0 then
-                        bookUnitWord[bookName[i]][unit_word[1]] = {}
+                        bookUnitWord[bookName[i]][unit_word[1]] = unit_word[2]
                         current_unit = unit_word[1]
+                    else
+                        bookUnitWord[bookName[i]][unit_word[1]] = bookUnitWord[bookName[i]][unit_word[1]]..'|'..unit_word[2]
                     end
-                    table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])
+                    -- table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])
                 end
             end
             print(bookName[i]..'\t'..(word_count-1))
