@@ -178,7 +178,7 @@ function LevelProgressPopup:createPape()
         (back_height - backgroundSize.height) / 2 +
         (backgroundSize.height - pageView:getContentSize().height) / 2 + 80 ))
 
-    local progressBar = ProgressBar.create(6,self.current_index - 1)
+    local progressBar = ProgressBar.create(6,self.current_index)
     progressBar:setPosition(self.backPopup:getContentSize().width * 0.5,self.backPopup:getContentSize().height * 0.25)
     self.backPopup:addChild(progressBar)
 
