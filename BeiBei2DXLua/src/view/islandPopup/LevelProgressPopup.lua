@@ -7,8 +7,8 @@ local ProgressBar           = require("view.islandPopup.ProgressBar")
 
 function LevelProgressPopup.create(index)
     print("~~~"..index)
+    local layer = LevelProgressPopup.new(index)
     local islandIndex = tonumber(index) + 1
-    local layer = LevelProgressPopup.new()
     layer.unit = s_LocalDatabaseManager.getUnitInfo(islandIndex)
     print("~~~~~~~~~")
     layer.wrongWordList = {}
@@ -42,8 +42,43 @@ local function addCloseButton(backPopup)
     return button_close
 end 
 
-function LevelProgressPopup:ctor()
+local function addBackButton(backPopup,islandIndex)
+    local button_back_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.began then
+            playSound(s_sound_buttonEffect)
+        elseif eventType == ccui.TouchEventType.ended then
+            local WordLibrary = require("view.islandPopup.WordLibraryPopup")
+            local wordLibrary = WordLibrary.create(islandIndex)
+            s_SCENE.popupLayer:addChild(wordLibrary)  
+            wordLibrary:setVisible(false)
+            
+            local action0 = cc.OrbitCamera:create(0.5,1, 0, 0, 90, 0, 0) 
+            backPopup:runAction(action0) 
+            
+            local action1 = cc.DelayTime:create(0.5)
+            local action2 = cc.CallFunc:create(function()
+                wordLibrary:setVisible(true)
+            end)
+            local action3 = cc.OrbitCamera:create(0.5,1, 0, -90, 90, 0, 0) 
+            local action4 = cc.Sequence:create(action1, action2, action3)
+            wordLibrary:runAction(action4)  
+        end
+    end
+
+    local button_back = ccui.Button:create("image/islandPopup/button_change_to_ciku.png","","")
+    button_back:setScale9Enabled(true)
+    button_back:setPosition(backPopup:getContentSize().width *0.1 , backPopup:getContentSize().height *0.95 )
+    button_back:addTouchEventListener(button_back_clicked)
+    return button_back
+end
+
+function LevelProgressPopup:ctor(index)
+    local islandIndex = tonumber(index) + 1
     self.total_index = 7
+
+    self.animation = function ()
+
+    end
     
     self.backPopup = cc.Sprite:create("image/islandPopup/subtask_bg.png")
     self.backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)
@@ -52,7 +87,10 @@ function LevelProgressPopup:ctor()
     self.closeButton = addCloseButton(self.backPopup)
     self.backPopup:addChild(self.closeButton,2)
 
-    local popup_title = cc.Label:createWithSystemFont('夏威夷-','Verdana-Bold',38)
+    self.backBtn = addBackButton(self.backPopup,islandIndex)
+    self.backPopup:addChild(self.backBtn,2)
+
+    local popup_title = cc.Label:createWithSystemFont('夏威夷-'..islandIndex,'Verdana-Bold',38)
     popup_title:setPosition(self.backPopup:getContentSize().width/2,self.backPopup:getContentSize().height-50)
     popup_title:setColor(cc.c3b(255,255,255))
     self.backPopup:addChild(popup_title,20)
@@ -244,6 +282,42 @@ local function createRewardSprite(num,parent)
     reward_sprite:addChild(reward_num)
 end
 
+local function createNormalPlay(parent)
+    local button_func = function()
+        playSound(s_sound_buttonEffect)           
+        s_CorePlayManager.initTotalUnitPlay() 
+        s_SCENE:removeAllPopups()    
+    end
+
+    local go_button = Button.create("long","blue","GO") 
+    go_button:setPosition(parent:getContentSize().width * 0.5, parent:getContentSize().height * 0.05)
+    go_button.func = function ()
+        button_func()
+    end
+
+    parent:addChild(go_button)
+end
+
+local function createRepeatlPlay(playModel,parent)
+    local button_func = function()
+        playSound(s_sound_buttonEffect)           
+        if playModel == "review" then
+
+        elseif playModel == "summary" then
+
+        end 
+        s_SCENE:removeAllPopups()    
+    end
+
+    local go_button = Button.create("long","blue","重玩") 
+    go_button:setPosition(parent:getContentSize().width * 0.5, parent:getContentSize().height * 0.05)
+    go_button.func = function ()
+        button_func()
+    end
+
+    parent:addChild(go_button)
+end
+
 function LevelProgressPopup:createStrikeIron()
     local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
 
@@ -258,20 +332,8 @@ function LevelProgressPopup:createStrikeIron()
     createRewardLabel(back)
     createRewardSprite(3,back)
 
-    local button_func = function()
-        playSound(s_sound_buttonEffect)           
-        s_CorePlayManager.initTotalUnitPlay() 
-        s_SCENE:removeAllPopups()    
-    end
-
-    local go_button = Button.create("long","blue","GO") 
-    go_button:setPosition(back:getContentSize().width * 0.5, back:getContentSize().height * 0.05)
-    go_button.func = function ()
-        button_func()
-    end
-
     if self.current_index == 0 then
-        back:addChild(go_button)
+        createNormalPlay(back)
     end
     
     return back
@@ -279,7 +341,6 @@ end
 
 function LevelProgressPopup:createReview(mysterious_index)
     local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
-    local isUpdateUnitState = 2 -- 1 for update ,2 for not
 
     local review_sprite = cc.Sprite:create("image/islandPopup/subtask_review_boss.png")
     review_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
@@ -292,32 +353,17 @@ function LevelProgressPopup:createReview(mysterious_index)
     createRewardLabel(back)
     createRewardSprite(3,back)
 
-    local button_func = function()
-        playSound(s_sound_buttonEffect)        
-        s_CorePlayManager.enterReviewModel(self.wrongWordList,isUpdateUnitState)        
-    end
-
-    local go_button = Button.create("long","blue","GO") 
-    go_button:setPosition(back:getContentSize().width * 0.5, back:getContentSize().height * 0.05)
-    go_button.func = function ()
-        button_func()
-    end
-
     if mysterious_index ~= nil then
         if (self.current_index == (mysterious_index - 1) and self.coolingDay == 0) then
-            back:addChild(go_button)
-            isUpdateUnitState = 2
+            createNormalPlay(back)
         elseif self.current_index >= mysterious_index then
-            back:addChild(go_button)
-            isUpdateUnitState = 1
+            createRepeatlPlay("review",back)
         end
     else
         if self.current_index == 1 then
-            back:addChild(go_button)
-            isUpdateUnitState = 2
+            createNormalPlay(back)
         elseif self.current_index > 1 then
-            back:addChild(go_button)
-            isUpdateUnitState = 1
+            createRepeatlPlay("review",back)
         end
     end
     
@@ -326,7 +372,6 @@ end
 
 function LevelProgressPopup:createSummary()
     local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
-    local isUpdateUnitState = false -- true for update ,false for not
 
     local summary_sprite = cc.Sprite:create("image/islandPopup/subtask_summary_boss.png")
     summary_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
@@ -338,24 +383,11 @@ function LevelProgressPopup:createSummary()
     createReviewSprite(10,10,back)
     createRewardLabel(back)
     createRewardSprite(3,back)
-
-    local button_func = function()
-        playSound(s_sound_buttonEffect)        
-        s_CorePlayManager.enterSummaryModel(self.wrongWordList,isUpdateUnitState)
-    end
-
-    local go_button = Button.create("long","blue","GO") 
-    go_button:setPosition(back:getContentSize().width * 0.5, back:getContentSize().height * 0.05)
-    go_button.func = function ()
-        button_func()
-    end
     
-    if self.current_index == 1 then
-        back:addChild(go_button)
-        isUpdateUnitState = true
-    elseif self.current_index > 1 then
-        back:addChild(go_button)
-        isUpdateUnitState = false
+    if self.current_index == 2 then
+        createNormalPlay(back)
+    elseif self.current_index > 2 then
+        createRepeatlPlay("summary",back)
     end
     
     return back

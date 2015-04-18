@@ -2,7 +2,7 @@ local WordLibraryPopup = class ("WordLibraryPopup",function ()
     return cc.Layer:create()
 end) 
 
-local Listview         = require("view.islandPopup.WordLibraryListview")
+local Listview              = require("view.islandPopup.WordLibraryListview")
 local Button                = require("view.button.longButtonInStudy")
 
 function WordLibraryPopup.create(index)
@@ -30,23 +30,32 @@ local function addCloseButton(top_sprite,backPopup)
     return button_close
 end 
 
-local function addBackButton(top_sprite,self,backPopup)
+local function addBackButton(backPopup,islandIndex)
     local button_back_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)
         elseif eventType == ccui.TouchEventType.ended then
+            local LevelProgress         = require("view.islandPopup.LevelProgressPopup") 
+            local levelProgressPopup = LevelProgress.create(islandIndex - 1)
+            s_SCENE.popupLayer:addChild(levelProgressPopup)  
+            levelProgressPopup:setVisible(false)
+                
             local action0 = cc.OrbitCamera:create(0.5,1, 0, 0, 90, 0, 0) 
-            local action1 = cc.CallFunc:create(function() 
-                self:removeFromParent()
+            backPopup:runAction(action0) 
+                
+            local action1 = cc.DelayTime:create(0.5)
+            local action2 = cc.CallFunc:create(function()
+                levelProgressPopup:setVisible(true)
             end)
-            backPopup:runAction(cc.Sequence:create(action0,action1))
-            self.close()
+            local action3 = cc.OrbitCamera:create(0.5,1, 0, -90, 90, 0, 0) 
+            local action4 = cc.Sequence:create(action1, action2, action3)
+            levelProgressPopup:runAction(action4)  
         end
     end
 
     local button_back = ccui.Button:create("image/islandPopup/backtopocess.png","","")
     button_back:setScale9Enabled(true)
-    button_back:setPosition(top_sprite:getContentSize().width *0.1 , top_sprite:getContentSize().height *0.5 )
+    button_back:setPosition(backPopup:getContentSize().width *0.1 , backPopup:getContentSize().height *0.95 )
     button_back:addTouchEventListener(button_back_clicked)
     return button_back
 end
@@ -140,8 +149,12 @@ local function addSummaryButton(bottom_sprite,boss)
     return summary_button
 end
 
-function WordLibraryPopup:ctor(index)
-    local boss = s_LocalDatabaseManager.getBossInfo(index + 1)
+function WordLibraryPopup:ctor(islandIndex)
+    local boss = s_LocalDatabaseManager.getBossInfo(islandIndex)
+
+    self.animation = function ()
+
+    end
     
     self.backPopup = cc.Sprite:create("image/islandPopup/backforlibrary.png")
     self.backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)
@@ -156,8 +169,8 @@ function WordLibraryPopup:ctor(index)
     self.closeButton = addCloseButton(top_sprite,self.backPopup)
     top_sprite:addChild(self.closeButton)
     
-    self.backButton = addBackButton(top_sprite,self,self.backPopup)
-    top_sprite:addChild(self.backButton)
+    self.backButton = addBackButton(self.backPopup,islandIndex)
+    self.backPopup:addChild(self.backButton,2)
     
     self.unfamiliarButton = addUnfamiliarButton(top_sprite)
     top_sprite:addChild(self.unfamiliarButton)
@@ -191,10 +204,6 @@ function WordLibraryPopup:ctor(index)
 
     self.reviewButton:setVisible(false)
     self.summaryButton:setVisible(false)
-
-    self.close = function ()
-    	
-    end
     
     local onTouchBegan = function(touch, event)
         return true  
