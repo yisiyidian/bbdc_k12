@@ -436,7 +436,7 @@ function M.updateUnitState(unitID)
 
         local query = "UPDATE DataUnit SET lastUpdate = '"..time.."' , unitState = "..newUnitState.." WHERE "..condition.." and unitID = "..unitID.." ;"
         Manager.database:exec(query)
-        saveDataToServer(true, time, row.unitID, newUnitState, row.wordList, currentWordIndex, row.savedToServer)
+        -- saveDataToServer(true, time, row.unitID, newUnitState, row.wordList, currentWordIndex, row.savedToServer)
 
         if newUnitState == 3 then
             -- query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, unitID, unitState, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..", 0) ;"

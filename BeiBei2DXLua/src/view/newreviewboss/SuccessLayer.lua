@@ -79,7 +79,7 @@ function SuccessLayer:ctor(number)
     waveSprite:setAnchorPoint(0.5,0)
     backColor:addChild(waveSprite)
     
-    local bossDieSpine = sp.SkeletonAnimation:create('spine/reviewboss/beidafeide_zhanglaoshi2.json', 'spine/reviewboss/beidafeide_zhanglaoshi2.atlas',1)
+    local bossDieSpine = sp.SkeletonAnimation:create('spine/reviewboss/beidafeide_zhanglaoshi.json', 'spine/reviewboss/beidafeide_zhanglaoshi.atlas',1)
     bossDieSpine:addAnimation(0, 'animation', false)
     bossDieSpine:setPosition(waveSprite:getContentSize().width * 0.25,200)
     waveSprite:addChild(bossDieSpine,1)

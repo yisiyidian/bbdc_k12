@@ -172,7 +172,11 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     -- test
     -- levelState = -1
     -- s_level_popup_state = 1
-
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print("levelIndex"..levelIndex)
+    print("currentTaskBossIndex"..currentTaskBossIndex)
+    print("levelState"..levelState)
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
     if levelState == 0 then
         local deco = sp.SkeletonAnimation:create("spine/chapterlevel/beibeidaizi.json","spine/chapterlevel/beibeidaizi.atlas",1)

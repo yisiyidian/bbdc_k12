@@ -190,9 +190,9 @@ function CorePlayManager.initReviewModel()
     end
 end
 
-function CorePlayManager.enterReviewModel(wordlist,isUpdateUnitState)
+function CorePlayManager.enterReviewModel(wordlist)
     local NewReviewBossMainLayer = require("view.newreviewboss.NewReviewBossMainLayer")
-    local newReviewBossMainLayer = NewReviewBossMainLayer.create(wordlist,isUpdateUnitState)
+    local newReviewBossMainLayer = NewReviewBossMainLayer.create(wordlist)
     s_SCENE:replaceGameLayer(newReviewBossMainLayer)
 end
 
@@ -213,9 +213,9 @@ function CorePlayManager.initSummaryModel()
     CorePlayManager.enterSummaryModel(CorePlayManager.currentWrongWordList)
 end
 
-function CorePlayManager.enterSummaryModel(wordlist,isUpdateUnitState)
+function CorePlayManager.enterSummaryModel(wordlist)
     local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
-    local summaryBossLayer = SummaryBossLayer.create(wordlist,1,isUpdateUnitState)
+    local summaryBossLayer = SummaryBossLayer.create(wordlist,1,true)
     s_SCENE:replaceGameLayer(summaryBossLayer) 
 end
 

@@ -178,7 +178,7 @@ function LevelProgressPopup:createPape()
         (back_height - backgroundSize.height) / 2 +
         (backgroundSize.height - pageView:getContentSize().height) / 2 + 80 ))
 
-    local progressBar = ProgressBar.create(6,0)
+    local progressBar = ProgressBar.create(6,self.current_index - 1)
     progressBar:setPosition(self.backPopup:getContentSize().width * 0.5,self.backPopup:getContentSize().height * 0.25)
     self.backPopup:addChild(progressBar)
 
@@ -207,7 +207,7 @@ function LevelProgressPopup:createPape()
     end
 
     -- change to current index
-    pageView:scrollToPage(self.current_index - 1) 
+    pageView:scrollToPage(self.current_index) 
 
     self.changeToPage = function (bool) 
         if bool == true then
@@ -290,7 +290,7 @@ local function createNormalPlay(parent)
     end
 
     local go_button = Button.create("long","blue","GO") 
-    go_button:setPosition(parent:getContentSize().width * 0.5, parent:getContentSize().height * 0.05)
+    go_button:setPosition(parent:getContentSize().width * 0.5 - 2, parent:getContentSize().height * 0.05)
     go_button.func = function ()
         button_func()
     end
@@ -310,7 +310,7 @@ local function createRepeatlPlay(playModel,parent)
     end
 
     local go_button = Button.create("long","blue","重玩") 
-    go_button:setPosition(parent:getContentSize().width * 0.5, parent:getContentSize().height * 0.05)
+    go_button:setPosition(parent:getContentSize().width * 0.5 - 2, parent:getContentSize().height * 0.05)
     go_button.func = function ()
         button_func()
     end

@@ -150,7 +150,7 @@ local function addSummaryButton(bottom_sprite,boss)
 end
 
 function WordLibraryPopup:ctor(islandIndex)
-    local boss = s_LocalDatabaseManager.getBossInfo(islandIndex)
+    local boss = s_LocalDatabaseManager.getUnitInfo(islandIndex)
 
     self.animation = function ()
 
