@@ -266,7 +266,7 @@ end
 
 function Manager.updateUnitState(unitID)   -- TODO
     -- Manager.minusTodayRemainTaskNum()
-    -- localdatabase_bossWord.updateTypeIndex(bossID)
+    localdatabase_unitWord.updateUnitState(unitID)
 end
 
 function Manager.printUnitWord()

@@ -434,15 +434,16 @@ function M.updateUnitState(unitID)
         local newUnitState = row.unitState + 1
         local currentWordIndex = row.currentWordIndex
 
-        local query = "UPDATE DataUnit SET lastUpdate = '"..time.."' , unitState = "..newUnitState.." WHERE "..condition.." and bossID = "..bossID.." ;"
+        local query = "UPDATE DataUnit SET lastUpdate = '"..time.."' , unitState = "..newUnitState.." WHERE "..condition.." and unitID = "..unitID.." ;"
         Manager.database:exec(query)
         saveDataToServer(true, time, row.unitID, newUnitState, row.wordList, currentWordIndex, row.savedToServer)
 
-        if newUnitState == 4 then
-            query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, bossID, unitState, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..", 0) ;"
-            Manager.database:exec(query)
-            saveDataToServer(true, time, unitID + 1, 0, '', 0, 0)
-        elseif newunitState == 8 then
+        if newUnitState == 3 then
+            -- query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, unitID, unitState, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..", 0) ;"
+            -- Manager.database:exec(query)
+            -- saveDataToServer(true, time, unitID + 1, 0, '', 0, 0)
+            M.initUnitInfo(unitID+1)
+        elseif newunitState == 7 then -- grasp word
             -- s_LocalDatabaseManager.addGraspWordsNum(getMaxWrongNumEveryLevel())
         end
     end    
