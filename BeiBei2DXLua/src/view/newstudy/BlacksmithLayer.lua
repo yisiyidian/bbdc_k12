@@ -13,8 +13,8 @@ local  BlacksmithLayer = class("BlacksmithLayer", function ()
     return cc.Layer:create()
 end)
 
-function BlacksmithLayer.create(wordlist)
-    local layer = BlacksmithLayer.new(wordlist)
+function BlacksmithLayer.create(wordlist,islandIndex)
+    local layer = BlacksmithLayer.new(wordlist,islandIndex)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     cc.SimpleAudioEngine:getInstance():stopMusic()
     return layer
@@ -159,7 +159,7 @@ local function createDontknow(wordlist)
     return choose_dontknow_button
 end
 
-function BlacksmithLayer:ctor(wordlist)
+function BlacksmithLayer:ctor(wordlist,islandIndex)
     AnalyticsForgeIron_EnterLayer()
 
     if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_3 then
@@ -196,6 +196,10 @@ function BlacksmithLayer:ctor(wordlist)
 
     local progressBar_total_number = getMaxWrongNumEveryLevel()
 
+    if islandIndex ~= nil then
+        progressBar_total_number = #s_LocalDatabaseManager.getUnitInfo(islandIndex + 1).wrongWordList
+    end
+    
     self.progressBar = ProgressBar.create(progressBar_total_number, progressBar_total_number - #wordlist, "yellow")
     self.progressBar:setPosition(bigWidth/2+44, 1054)
     backColor:addChild(self.progressBar)
