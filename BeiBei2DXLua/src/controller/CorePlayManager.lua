@@ -273,10 +273,10 @@ function CorePlayManager.initTotalUnitPlay()
     -- check current unit count 
     print('enterunitplay')
     local maxID = s_LocalDatabaseManager.getMaxUnitID()
-    --if maxID == 0 then -- empty
-        print('####test init unit info')
+    if maxID == 0 then -- empty
+        -- print('####test init unit info')
         s_LocalDatabaseManager.initUnitInfo(1)
-    --end
+    end
     local unitList = s_LocalDatabaseManager.getAllUnitInfo()
     print('all unit list size:'..#unitList)
 
