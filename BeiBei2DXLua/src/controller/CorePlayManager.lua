@@ -175,6 +175,7 @@ end
 
 function CorePlayManager.leaveTestModel()
     s_LocalDatabaseManager.updateUnitState(CorePlayManager.currentUnitID)
+    print("CorePlayManager.currentUnitID"..CorePlayManager.currentUnitID)
     local MiddleLayer = require("view.newstudy.EndLayer")
     local middleLayer = MiddleLayer.create()
     s_SCENE:replaceGameLayer(middleLayer)
