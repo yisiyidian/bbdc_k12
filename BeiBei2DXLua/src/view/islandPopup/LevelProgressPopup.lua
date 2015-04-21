@@ -6,11 +6,9 @@ local Button                = require("view.button.longButtonInStudy")
 local ProgressBar           = require("view.islandPopup.ProgressBar")
 
 function LevelProgressPopup.create(index)
-    print("~~~"..index)
     local layer = LevelProgressPopup.new(index)
     local islandIndex = tonumber(index) + 1
     layer.unit = s_LocalDatabaseManager.getUnitInfo(islandIndex)
-    print("~~~~~~~~~")
     layer.wrongWordList = {}
     for i = 1 ,#layer.unit.wrongWordList do
         table.insert(layer.wrongWordList,layer.unit.wrongWordList[i])
@@ -298,16 +296,22 @@ local function createNormalPlay(parent)
     parent:addChild(go_button)
 end
 
-local function createRepeatlPlay(playModel,parent)
+local function createRepeatlPlay(playModel,wordList,parent)--重复玩，参数 玩法／要玩的词／父亲节点
     local button_func = function()
         playSound(s_sound_buttonEffect)           
-        if playModel == "review" then
-
-        elseif playModel == "summary" then
-
-        elseif playModel == "iron" then
-
-        end 
+        -- if playModel == "summary" then
+        --     local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
+        --     local summaryBossLayer = SummaryBossLayer.create(wordList,1,true)
+        --     s_SCENE:replaceGameLayer(summaryBossLayer) 
+        -- elseif playModel == "review" then
+        --     local NewReviewBossMainLayer = require("view.newreviewboss.NewReviewBossMainLayer")
+        --     local newReviewBossMainLayer = NewReviewBossMainLayer.create(wordList,Review_From_Word_Bank)
+        --     s_SCENE:replaceGameLayer(newReviewBossMainLayer)
+        -- elseif playModel == "iron" then
+        --     local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
+        --     local blacksmithLayer = BlacksmithLayer.create(wordList,false)
+        --     s_SCENE:replaceGameLayer(blacksmithLayer)
+        -- end 
         s_SCENE:removeAllPopups()    
     end
 
@@ -337,7 +341,7 @@ function LevelProgressPopup:createStrikeIron()
     if self.current_index == 0 then
         createNormalPlay(back)
     elseif self.current_index > 0 then
-        createRepeatlPlay("iron",back)
+        createRepeatlPlay("iron",self.wrongWordList,back)
     end
     
     return back
@@ -367,7 +371,7 @@ function LevelProgressPopup:createReview(mysterious_index)
         if self.current_index == 1 then
             createNormalPlay(back)
         elseif self.current_index > 1 then
-            createRepeatlPlay("review",back)
+            createRepeatlPlay("review",self.wrongWordList,back)
         end
     end
     
@@ -391,7 +395,7 @@ function LevelProgressPopup:createSummary()
     if self.current_index == 2 then
         createNormalPlay(back)
     elseif self.current_index > 2 then
-        createRepeatlPlay("summary",back)
+        createRepeatlPlay("summary",self.wrongWordList,back)
     end
     
     return back
