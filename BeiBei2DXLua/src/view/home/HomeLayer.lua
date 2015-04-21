@@ -40,6 +40,13 @@ function HomeLayer.create()
     local totalGraspWordNum     = s_LocalDatabaseManager.getGraspWordsNum(os.date('%x',os.time()))
     local totalStudyDayNum      = s_LocalDatabaseManager.getStudyDayNum()
 
+    -- init first unit
+    local maxID = s_LocalDatabaseManager.getMaxUnitID()
+    if maxID == 0 then -- empty
+        -- print('####test init unit info')
+        s_LocalDatabaseManager.initUnitInfo(1)
+    end
+
     -- add tutorial step
     if s_CURRENT_USER.tutorialStep == s_tutorial_home then
         s_CURRENT_USER:setTutorialStep(s_tutorial_home+1)
