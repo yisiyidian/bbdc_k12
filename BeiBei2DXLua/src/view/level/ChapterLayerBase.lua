@@ -142,7 +142,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     local levelState, coolingDay
     local currentTaskBossIndex = -1
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 and bossInfo["unitState"] - 8 < 0 then
+
+        if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 and bossInfo["unitState"] - 7 < 0 then
             currentTaskBossIndex = bossID - 1
         end
         print('bossID:'..bossID..','..levelIndex)
