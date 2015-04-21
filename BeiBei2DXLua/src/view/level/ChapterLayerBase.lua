@@ -138,15 +138,16 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 
     local currentIndex = levelIndex
     -- to do get level state
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    local bossList = s_LocalDatabaseManager.getAllUnitInfo()
     local levelState, coolingDay
     local currentTaskBossIndex = -1
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 and bossInfo["typeIndex"] - 8 < 0 then
+        if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 and bossInfo["unitState"] - 8 < 0 then
             currentTaskBossIndex = bossID - 1
         end
+        print('bossID:'..bossID..','..levelIndex)
         if bossID - (levelIndex + 1) == 0 then
-            levelState = bossInfo["typeIndex"] 
+            levelState = bossInfo["unitState"] 
             coolingDay = bossInfo["coolingDay"] + 0
         end
     end
@@ -180,6 +181,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 
     if levelState == 0 then
         local deco = sp.SkeletonAnimation:create("spine/chapterlevel/beibeidaizi.json","spine/chapterlevel/beibeidaizi.atlas",1)
+        --local deco = sp.SkeletonAnimation:create("spine/tutorial/jieshao1.json","spine/tutorial/jieshao1.atlas",1)
         deco:setPosition(levelPosition.x-60,levelPosition.y-10)
         deco:setAnchorPoint(1,1)
         deco:addAnimation(0, 'animation', true)
