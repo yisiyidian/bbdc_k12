@@ -22,7 +22,7 @@ end
 
 function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-    local progressBar_total_number = getMaxWrongNumEveryLevel()    
+    local progressBar_total_number = s_CorePlayManager.wrongWordNum
     local wordMeaningTable= {}
     for i = 1, 4 do
         local name = randomNameArray[i]
