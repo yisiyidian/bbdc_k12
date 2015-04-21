@@ -28,7 +28,13 @@ public:
     
     void logIn(const char* username, const char* password, CXLUAFUNC nHandler);
     void invokeLuaCallbackFunction_li(const char* objectjson, const char* error, int errorcode);
-    
+    /**请求短信验证码*/
+    void requestSMSCode(const char* phoneNumber);
+    /**验证短信验证码*/
+    void verifySMSCode(const char* phoneNumber,const char* smsCode,CXLUAFUNC mHandler);
+    /**验证之后的回调*/
+    void invokeLuaCallBackFunction_vc(const char* error,int errorCode);
+
     void initTencentQQ(const char* appId, const char* appKey);
     void logInByQQ(CXLUAFUNC nHandler);
     void logInByQQAuthData(const char* openid, const char* access_token, const char* expires_in, CXLUAFUNC nHandler);
@@ -44,6 +50,7 @@ private:
     int mLuaHandlerId_dl;
     int mLuaHandlerId_signUp;
     int mLuaHandlerId_logIn;
+    int mLuaHandlerId_vc;//短信验证在lua中的回调函数句柄
     int mLuaHandlerId_logInByQQ;
 };
 

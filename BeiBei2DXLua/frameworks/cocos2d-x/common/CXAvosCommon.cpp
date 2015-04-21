@@ -24,6 +24,7 @@ CXAvos::CXAvos()
 : mLuaHandlerId_dl(0)
 , mLuaHandlerId_signUp(0)
 , mLuaHandlerId_logIn(0)
+, mLuaHandlerId_vc(0)
 , mLuaHandlerId_logInByQQ(0) {
     init();
 }
@@ -43,6 +44,12 @@ void CXAvos::invokeLuaCallbackFunction_dl(const char* objectId, const char* file
     }
 }
 
+/**
+*   注册帐号回调
+*   objectjson  用户数据的json
+*   error       错误
+*   errorcode   错误号
+*/
 void CXAvos::invokeLuaCallbackFunction_su(const char* objectjson, const char* error, int errorcode) {
     if (mLuaHandlerId_signUp > 0) {
         auto engine = LuaEngine::getInstance();
@@ -55,6 +62,13 @@ void CXAvos::invokeLuaCallbackFunction_su(const char* objectjson, const char* er
     }
 }
 
+/**
+ * 登陆回调
+ * @param   objectjson  用户数据json
+ * @param   error       错误信息
+ * @param   errorCode   错误号
+ */
+
 void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* error, int errorcode) {
     if (mLuaHandlerId_logIn > 0) {
         auto engine = LuaEngine::getInstance();
@@ -63,6 +77,22 @@ void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* er
         stack->pushString(error);
         stack->pushInt(errorcode);
         stack->executeFunctionByHandler(mLuaHandlerId_logIn, 3);
+        stack->clean();
+    }
+}
+
+/**
+ * 短信验证回调
+ * error        错误信息
+ * errorCode    错误号
+ */
+void invokeLuaCallBackFunction_vc(const char* error,int errorCode){
+    if(mLuaHandlerId_vc > 0){
+        auto engine = LuaEngine::getInstance();
+        LuaStack* stack = engine->getLuaStack();
+        stack->pushString(error);
+        stack->pushInt(errorCode);
+        stack->executeFunctionByHandler(mLuaHandlerId_vc,2);
         stack->clean();
     }
 }

@@ -47,6 +47,8 @@ import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
+import com.avos.avoscloud.AVMobilePhoneVerifyCallback;
+import com.avos.avoscloud.AVOSCloud;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.AVUser;
@@ -304,6 +306,46 @@ public class BBNDK {
 		
 //		return user.getSessionToken();
 	}
+	
+	/**
+	 * 请求短信验证码
+	 * @param phoneNumber
+	 */
+	public static void requestSMSCode(String phoneNumber){
+		AVOSCloud.requestSMSCodeInBackgroud(phoneNumber, "贝贝单词", "手机验证", 30, null);
+	}
+	
+	/***
+	 * 验证 短信验证码
+	 * @param smsCode 短信验证码
+	 * @param phoneNumber	电话号码
+	 */
+	public static void verifySMSCode(String phoneNumber,String smsCode){
+		//请求验证
+		AVOSCloud.verifySMSCodeInBackground(smsCode, phoneNumber, new AVMobilePhoneVerifyCallback(){
+			@Override
+			public void done(AVException e){
+				//验证结果
+				if(e==null){
+					//成功
+					onVerifySMSCode("验证成功！",0);
+				}else{
+					//失败
+					onVerifySMSCode("验证失败！",e.getCode());
+				}
+			}
+		});
+	}
+	
+	/**
+	 * 验证短信结果
+	 * @param error		错误信息
+	 * @param errorCode	错误号 0 就是成功
+	 */
+	private static void onVerifySMSCode(String error,int errorCode){
+		invokeLuaCallbackFunctionVC(error,errorCode);
+	}
+	
 	
 	public static void signUp(String username, String password) {
 		final AVUser user = new AVUser();
@@ -733,6 +775,7 @@ public class BBNDK {
 	public static native void invokeLuaCallbackFunctionDL(String objectId, String filename, String error, int isSaved);
 	public static native void invokeLuaCallbackFunctionSU(String objectjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionLI(String objectjson, String error, int errorcode);
+	public static native void invokeLuaCallbackFunctionVC(String error,int errorcode);
 	public static native void invokeLuaCallbackFunctionLIQQ(String objectjson, String qqjson, String authjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionCallAVCloudFunction(long cppObjPtr, String jsons, String errorjson);
 	public static native void invokeLuaCallbackFunctionGetBulletinBoard(long cppObjPtr, int index, String content_top, String content, String error);
