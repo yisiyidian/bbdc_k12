@@ -305,6 +305,8 @@ local function createRepeatlPlay(playModel,parent)
 
         elseif playModel == "summary" then
 
+        elseif playModel == "iron" then
+
         end 
         s_SCENE:removeAllPopups()    
     end
@@ -334,6 +336,8 @@ function LevelProgressPopup:createStrikeIron()
 
     if self.current_index == 0 then
         createNormalPlay(back)
+    elseif self.current_index > 0 then
+        createRepeatlPlay("iron",back)
     end
     
     return back

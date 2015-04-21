@@ -138,15 +138,15 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 
     local currentIndex = levelIndex
     -- to do get level state
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    local bossList = s_LocalDatabaseManager.getAllUnitInfo()
     local levelState, coolingDay
     local currentTaskBossIndex = -1
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 and bossInfo["typeIndex"] - 8 < 0 then
+        if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 and bossInfo["unitState"] - 7 < 0 then
             currentTaskBossIndex = bossID - 1
         end
         if bossID - (levelIndex + 1) == 0 then
-            levelState = bossInfo["typeIndex"] 
+            levelState = bossInfo["unitState"] 
             coolingDay = bossInfo["coolingDay"] + 0
         end
     end
