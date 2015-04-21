@@ -133,7 +133,7 @@ function ChapterLayer:ctor()
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
 --    self:scrollLevelLayer(progress,0)
     self:addBottomBounce()
-    self:addNotification()
+    -- self:addNotification()
     -- check unlock level
     self:checkUnlockLevel()
     self:addBackToHome()
@@ -146,18 +146,18 @@ function ChapterLayer:initActiveChapterRange()   -- initialize the active range 
 
     local activeLevelIndex
     -- check whether exists task
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    local bossList = s_LocalDatabaseManager.getAllUnitInfo()
     local taskIndex = -2
     local taskState = -2
     local progressIndex = progress
     local progressState = 0
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 and taskIndex == -2 and bossInfo["typeIndex"] - 8 < 0 then
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 3 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 7 < 0 then
             taskIndex = bossID - 1
-            taskState = bossInfo["typeIndex"] 
+            taskState = bossInfo["unitState"] 
         end
         if (progressIndex + 1) == bossID then
-            progressState = bossInfo["typeIndex"]
+            progressState = bossInfo["unitState"]
         end
     end    
     if taskIndex == -2 then
@@ -206,7 +206,7 @@ function ChapterLayer:checkUnlockLevel()
     -- get state --
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
     -- check state
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    local bossList = s_LocalDatabaseManager.getAllUnitInfo()
     print('---BOSS list')
     print_lua_table(bossList)
     local taskIndex = -2
@@ -214,12 +214,12 @@ function ChapterLayer:checkUnlockLevel()
     local progressIndex = progress
     local progressState = 0
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 and taskIndex == -2 and bossInfo["typeIndex"] - 8 < 0 then
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 3 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 7 < 0 then
             taskIndex = bossID - 1
-            taskState = bossInfo["typeIndex"]
+            taskState = bossInfo["unitState"]
         end
         if (progressIndex + 1) == bossID then
-            progressState = bossInfo["typeIndex"]
+            progressState = bossInfo["unitState"]
         end
     end
     -- get state --
@@ -305,54 +305,54 @@ function ChapterLayer:checkUnlockLevel()
     end
 end
 
-function ChapterLayer:addNotification()
-    local notification = cc.Sprite:create('image/chapter/chapter0/notifi.png') 
-    notification:setAnchorPoint(cc.p(0.5,0))
-    local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    -- check state
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
-    local taskIndex = -2
-    local taskState = -2
-    local progressIndex = progress
-    local progressState = 0
-    for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 and taskIndex == -2 and bossInfo["typeIndex"] - 8 < 0 then
-            taskIndex = bossID - 1
-            taskState = bossInfo["typeIndex"] 
-        end
-        if (progressIndex + 1) == bossID then
-            progressState = bossInfo["typeIndex"]
-        end
-    end
+-- function ChapterLayer:addNotification()
+--     local notification = cc.Sprite:create('image/chapter/chapter0/notifi.png') 
+--     notification:setAnchorPoint(cc.p(0.5,0))
+--     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+--     -- check state
+--     local bossList = s_LocalDatabaseManager.getAllBossInfo()
+--     local taskIndex = -2
+--     local taskState = -2
+--     local progressIndex = progress
+--     local progressState = 0
+--     for bossID, bossInfo in pairs(bossList) do
+--         if bossInfo["coolingDay"] - 0 == 0 and bossInfo["typeIndex"] - 4 >= 0 and taskIndex == -2 and bossInfo["typeIndex"] - 8 < 0 then
+--             taskIndex = bossID - 1
+--             taskState = bossInfo["typeIndex"] 
+--         end
+--         if (progressIndex + 1) == bossID then
+--             progressState = bossInfo["typeIndex"]
+--         end
+--     end
     
-    if taskIndex == -2 then
---        self:scrollLevelLayer(progress,0)
-        --test
-        self:scrollLevelLayer(progress,0)
+--     if taskIndex == -2 then
+-- --        self:scrollLevelLayer(progress,0)
+--         --test
+--         self:scrollLevelLayer(progress,0)
         
-        return
-    else
-        self:scrollLevelLayer(taskIndex,0)
-        return
-    end
+--         return
+--     else
+--         self:scrollLevelLayer(taskIndex,0)
+--         return
+--     end
     
-    local text = cc.Label:createWithSystemFont('当前任务','',23)
-    text:setPosition(notification:getContentSize().width/2,notification:getContentSize().height/2+10)
-    text:setColor(cc.c3b(95,112,116))
-    notification:addChild(text,10)
+--     local text = cc.Label:createWithSystemFont('当前任务','',23)
+--     text:setPosition(notification:getContentSize().width/2,notification:getContentSize().height/2+10)
+--     text:setColor(cc.c3b(95,112,116))
+--     notification:addChild(text,10)
     
-    local taskChapterKey = 'chapter'..math.floor(taskIndex/s_islands_per_page)
-    local taskKey = 'level'..taskIndex
---    print('task:'..taskKey..taskChapterKey)
-    local taskPosition = self.chapterDic[taskChapterKey]:getLevelPosition(taskKey)
-    notification:setPosition(cc.p(taskPosition.x, taskPosition.y + 150))
-    local action1 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 170))
-    local action2 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 150))
-    local action3 = cc.Sequence:create(action1, action2)
-    local action4 = cc.RepeatForever:create(action3)
-    notification:runAction(action4)
-    self.chapterDic[taskChapterKey]:addChild(notification, 150)
-end
+--     local taskChapterKey = 'chapter'..math.floor(taskIndex/s_islands_per_page)
+--     local taskKey = 'level'..taskIndex
+-- --    print('task:'..taskKey..taskChapterKey)
+--     local taskPosition = self.chapterDic[taskChapterKey]:getLevelPosition(taskKey)
+--     notification:setPosition(cc.p(taskPosition.x, taskPosition.y + 150))
+--     local action1 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 170))
+--     local action2 = cc.MoveTo:create(1, cc.p(taskPosition.x, taskPosition.y + 150))
+--     local action3 = cc.Sequence:create(action1, action2)
+--     local action4 = cc.RepeatForever:create(action3)
+--     notification:runAction(action4)
+--     self.chapterDic[taskChapterKey]:addChild(notification, 150)
+-- end
 
 function ChapterLayer:addPlayerNotification(isRunScale)  -- notification
     self.player:removeAllChildren()
