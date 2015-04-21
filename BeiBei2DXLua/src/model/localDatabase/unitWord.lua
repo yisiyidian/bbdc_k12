@@ -202,14 +202,14 @@ function M.getUnitInfo(unitID)
         unit.rightWordList  = {}
         unit.coolingDay     = 0
     else
-        local startIndex
-        if unit.unitID == 1 then
-            startIndex = 1
-        else
-            for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." and unitID = "..(unitID-1).." ;") do
-                startIndex  = row.lastWordIndex + 1
-            end
-        end
+        -- local startIndex
+        -- if unit.unitID == 1 then
+        --     startIndex = 1
+        -- else
+        --     for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." and unitID = "..(unitID-1).." ;") do
+        --         startIndex  = row.lastWordIndex + 1
+        --     end
+        -- end
 
         -- local hash = {}
         if  unit.wrongWordList == '' then
