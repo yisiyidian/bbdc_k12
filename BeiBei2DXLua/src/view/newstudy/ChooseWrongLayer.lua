@@ -15,13 +15,13 @@ local  ChooseWrongLayer = class("ChooseRightLayer", function ()
     return cc.Layer:create()
 end)
 
-function ChooseWrongLayer.create(word,wrongNum,wrongWordList)
-    local layer = ChooseWrongLayer.new(word,wrongNum,wrongWordList)
+function ChooseWrongLayer.create(word,wrongNum,wrongWordList,islandIndex)
+    local layer = ChooseWrongLayer.new(word,wrongNum,wrongWordList,islandIndex)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
 
-local function addNextButton(word,wrongNum,wrongWordList)
+function ChooseWrongLayer:addNextButton(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local function button_func()
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -33,7 +33,7 @@ local function addNextButton(word,wrongNum,wrongWordList)
             slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum)
         else
             AnalyticsFirst(ANALYTICS_FIRST_SWIPE_WORD_STRIKEWHILEHOT, 'TOUCH')
-            slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,wrongWordList)
+            slideCoconutLayer = SlideCoconutLayer.create(word,wrongNum,wrongWordList,self.islandIndex)
         end
         s_SCENE:replaceGameLayer(slideCoconutLayer)
     end
@@ -47,7 +47,11 @@ local function addNextButton(word,wrongNum,wrongWordList)
     return choose_next_button
 end
 
-function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList)
+function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
+    if islandIndex ~= nil then
+        self.islandIndex = islandIndex
+    end
+
     if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_2 then
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_2 + 1)
     end
@@ -86,7 +90,14 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList)
         color = "yellow"
     end
     
-    local progressBar_total_number = getMaxWrongNumEveryLevel()
+    local progressBar_total_number 
+
+    if self.islandIndex ~= nil then
+        local info = s_LocalDatabaseManager.getUnitInfo(self.islandIndex)
+        progressBar_total_number = #info.wrongWordList
+    else
+        progressBar_total_number = s_CorePlayManager.wrongWordNum
+    end
 
     local progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
     progressBar:setPosition(bigWidth/2+44, 1054)
@@ -115,7 +126,7 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList)
     detailInfo:setPosition(bigWidth/2, 520)
     backColor:addChild(detailInfo)
 
-    self.nextButton = addNextButton(word,wrongNum,wrongWordList)
+    self.nextButton = self:addNextButton(word,wrongNum,wrongWordList,status)
     backColor:addChild(self.nextButton)
 end
 

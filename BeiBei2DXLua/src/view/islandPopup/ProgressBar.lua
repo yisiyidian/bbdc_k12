@@ -57,7 +57,7 @@ function ProgressBar.create(totalIndex, currentIndex)
             point_sprite = cc.Sprite:create("image/islandPopup/subtask_progress_bar_unfinished_circle.png")
         end
         point_sprite:setAnchorPoint(0.5,0.5)
-        point_sprite:setPosition(left + gap*i, 5)
+        point_sprite:setPosition(left + gap*i - 1, 5)
         main:addChild(point_sprite)
     end
 

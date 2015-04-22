@@ -254,19 +254,19 @@ function M.getUnitInfo(unitID)
             return gap
         end
 
-        if unit.unitState < 4 or unit.unitState > 7 then
+        if unit.unitState < 3 or unit.unitState > 6 then
             -- other model
             unit.coolingDay = 0
         else
             -- review unit model
             local gap
-            if     unit.unitState == 4 then
+            if     unit.unitState == 3 then
                 gap = 1
-            elseif unit.unitState == 5 then
+            elseif unit.unitState == 4 then
                 gap = 2
-            elseif unit.unitState == 6 then
+            elseif unit.unitState == 5 then
                 gap = 3
-            elseif unit.unitState == 7 then
+            elseif unit.unitState == 6 then
                 gap = 8
             end
 
@@ -286,15 +286,15 @@ function M.getUnitInfo(unitID)
 
     if     unit.unitState == 0 then
         unit.proficiency = 0
-    elseif unit.unitState >= 1 and unit.unitState <= 3 then
+    elseif unit.unitState >= 1 and unit.unitState <= 2 then
         unit.proficiency = 1
-    elseif unit.unitState == 4 then
+    elseif unit.unitState == 3 then
         unit.proficiency = 2
-    elseif unit.unitState == 5 then
+    elseif unit.unitState == 4 then
         unit.proficiency = 3
-    elseif unit.unitState == 6 then
+    elseif unit.unitState == 5 then
         unit.proficiency = 4
-    elseif unit.unitState == 7 then
+    elseif unit.unitState == 6 then
         unit.proficiency = 5
     else
         unit.proficiency = 0
