@@ -265,7 +265,7 @@ function Manager.initUnitInfo(unitID)
 end
 
 function Manager.updateUnitState(unitID)   -- TODO
-    -- Manager.minusTodayRemainTaskNum()
+    Manager.minusTodayRemainTaskNum()
     localdatabase_unitWord.updateUnitState(unitID)
 end
 

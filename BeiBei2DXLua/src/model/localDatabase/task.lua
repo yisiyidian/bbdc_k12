@@ -36,14 +36,18 @@ function M.updateEveryDay()
     if lastUpdateDay == nil or lastUpdateDay ~= today then
         local todayTotalBossNum = #s_LocalDatabaseManager.getTodayReviewBoss()
 
-        local maxBossID = s_LocalDatabaseManager.getMaxBossID()
-        local boss = s_LocalDatabaseManager.getBossInfo(maxBossID)
+        local maxID = s_LocalDatabaseManager.getMaxUnitID()
+        if maxID == 0 then -- empty
+            s_LocalDatabaseManager.initUnitInfo(1)
+            maxID = 1
+        end
+        local boss = s_LocalDatabaseManager.getAllUnitInfo()[1]
 
         local todayTotalTaskNum = nil
-        if boss.typeIndex == 0 then
-            todayTotalTaskNum = todayTotalBossNum + 4
-        elseif boss.typeIndex >= 1 and boss.typeIndex <= 3 then
-            todayTotalTaskNum = todayTotalBossNum + 8 - boss.typeIndex
+        if boss.unitState == 0 then
+            todayTotalTaskNum = todayTotalBossNum + 3
+        elseif boss.unitState >= 1 and boss.unitState <= 2 then
+            todayTotalTaskNum = todayTotalBossNum + 6 - boss.unitState
         else
             todayTotalTaskNum = todayTotalBossNum
         end
