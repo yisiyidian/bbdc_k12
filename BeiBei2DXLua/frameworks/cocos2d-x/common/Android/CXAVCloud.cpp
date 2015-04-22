@@ -14,6 +14,17 @@
 
 using namespace cocos2d;
 
+CXAVCloud* CXAVCloud::create(){
+    CXAVCloud * cx = new (std::nothrow) CXAVCloud();
+    if(cx){
+        cx->autorelease();
+        return cx;
+    }
+    CC_SAFE_DELETE(cx);
+    return nullptr;
+}
+
+
 void CXAVCloud::callAVCloudFunction(const std::string& func, const std::string& parameters/*json*/, CXLUAFUNC callback) {
     m_callback = callback;
     

@@ -13,7 +13,8 @@ end
 function FriendLayer:ctor()
     
     self.backToHome = function ()
-
+        print("gogogogo home")
+        s_CorePlayManager.enterHomeLayer()
     end
 
     local back = cc.LayerColor:create(cc.c4b(255,255,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
@@ -37,17 +38,18 @@ function FriendLayer:ctor()
     backBtn:setPosition(0,0.5 * topline:getContentSize().height)
     topline:addChild(backBtn)
     
-    local function onBack(sender,eventType)
+    --返回按钮事件
+    local function onBack(sel,sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-        
+            print("eventType:"..eventType)
             s_CURRENT_USER.seenFansCount = s_CURRENT_USER.fansCount
             saveUserToServer({['seenFansCount']=s_CURRENT_USER.seenFansCount}, function (datas, error)
-                 self.backToHome()
+                 sel.backToHome()
             end)
             
         end
     end
-    backBtn:addTouchEventListener(onBack)
+    backBtn:addTouchEventListener(handler(self,onBack))
     
     local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
     

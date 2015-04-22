@@ -58,6 +58,7 @@ end
 
 ---------------------------------------------------------------------------------------------------
 
+--查询玩家昵称是否存在，请求服务器
 -- callback(isExist, error)
 function isUsernameExist(username, callback)
     local api = 'searchusername'

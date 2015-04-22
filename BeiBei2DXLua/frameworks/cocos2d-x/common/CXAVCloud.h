@@ -19,6 +19,8 @@ class CXAVCloud : public cocos2d::Ref
 public:
     CXAVCloud();
     ~CXAVCloud();
+
+    static CXAVCloud* create();
     
     void callAVCloudFunction(const std::string& func, const std::string& parameters/*json*/, CXLUAFUNC callback);
     

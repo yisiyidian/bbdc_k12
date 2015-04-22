@@ -31,6 +31,20 @@
 -- @param #int errorcode
         
 --------------------------------
+-- 请求短信验证码
+-- @function [parent=#CXAvos] requestSMSCode 
+-- @param self
+-- @param #char phoneNumber
+        
+--------------------------------
+-- 验证短信验证码
+-- @function [parent=#CXAvos] verifySMSCode 
+-- @param self
+-- @param #char phoneNumber
+-- @param #char smsCode
+-- @param #int mHandler
+        
+--------------------------------
 -- 
 -- @function [parent=#CXAvos] signUp 
 -- @param self
@@ -105,6 +119,13 @@
 -- @param self
 -- @param #char appId
 -- @param #char appKey
+        
+--------------------------------
+-- 验证之后的回调
+-- @function [parent=#CXAvos] invokeLuaCallBackFunction_vc 
+-- @param self
+-- @param #char error
+-- @param #int errorCode
         
 --------------------------------
 -- 

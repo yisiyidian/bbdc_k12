@@ -86,7 +86,7 @@ void CXAvos::invokeLuaCallbackFunction_li(const char* objectjson, const char* er
  * error        错误信息
  * errorCode    错误号
  */
-void invokeLuaCallBackFunction_vc(const char* error,int errorCode){
+void CXAvos::invokeLuaCallBackFunction_vc(const char* error,int errorCode){
     if(mLuaHandlerId_vc > 0){
         auto engine = LuaEngine::getInstance();
         LuaStack* stack = engine->getLuaStack();

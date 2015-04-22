@@ -90,8 +90,8 @@ function Server.request(api, serverRequestType, parameters, callback)
     end
 
     Server.logLuaTable(api, params, 'request PARAMS')
-
-    local request = cx.CXAVCloud:new()
+    --new会导致内存泄露 用create代替
+    local request = cx.CXAVCloud:create()
     request:callAVCloudFunction('cld', s_JSON.encode(params), function (response, error)
         local cb = function (result, error) end
         callback = callback or cb
@@ -132,7 +132,7 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
         print('>> request: ' .. api)
         if parameters then print_lua_table(parameters) end
         print('<< request: ' .. api)
-        local request = cx.CXAVCloud:new()
+        local request = cx.CXAVCloud:create()
         request:callAVCloudFunction(string.gsub(api, 'functions/', ''), s_JSON.encode(parameters), function (obj, err)
             if err and onFailed then
                 print('response >>' .. api)

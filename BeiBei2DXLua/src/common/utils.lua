@@ -296,3 +296,10 @@ function onAndroidKeyPressed(node, back_func, menu_func)
     local eventDispatcher = node:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, node)
 end
+
+--绑定对象和其方法，使回调函数不丢失self
+function handler(obj,method)
+    return function(...)
+        return method(obj,...)        -- body
+    end
+end

@@ -92,7 +92,7 @@ function FriendSearch:ctor()
             local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
             showProgressHUD('正在搜索相应用户', true)
 
-            local request = cx.CXAVCloud:new()
+            local request = cx.CXAVCloud:create()
             -- request:searchUser(username, nickName, callback)
             request:searchUser(username, username, function (results, err)
 

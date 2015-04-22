@@ -4,7 +4,7 @@ local HttpRequestClient = {}
 
 -- callbackFunc: function (index, title, content)
 function HttpRequestClient.getBulletinBoard(callbackFunc)
-    local request = cx.CXAVCloud:new()
+    local request = cx.CXAVCloud:create()
     request:getBulletinBoard(function (index, content_top, content, errorjson)
         print('getBulletinBoard', index, content_top, content)
         if callbackFunc ~= nil then callbackFunc(index, content_top, content) end

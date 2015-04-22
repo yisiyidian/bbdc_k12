@@ -298,7 +298,7 @@ end
 function K12AccountBindView:gotoAddTeacher(teacherName)
     showProgressHUD('', true)
 
-    local request = cx.CXAVCloud:new()
+    local request = cx.CXAVCloud:create()
     -- request:searchUser(username, nickName, callback)
     request:searchUser(teacherName, teacherName, function (results, err)
 
