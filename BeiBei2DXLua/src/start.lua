@@ -74,6 +74,8 @@ function start.init()
     end
 end
 
+--进入游戏
+--hotUpdate 是否完成热更
 function start.start(hotUpdate)
     reloadModule('common.text')
     reloadModule("common.global")

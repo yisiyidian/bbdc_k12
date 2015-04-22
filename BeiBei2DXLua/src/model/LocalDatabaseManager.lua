@@ -22,7 +22,8 @@ local databaseTables = {
         DataDailyUsing
     }
 
-local localdatabase_utils           = nil
+
+local localdatabase_utils           = nil --本地数据库管理工具 localDatabase.utils里的表M
 local localdatabase_user            = nil
 local localdatabase_dailyStudyInfo  = nil
 local localdatabase_bossWord        = nil

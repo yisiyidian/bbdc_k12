@@ -460,6 +460,7 @@ end
 
 ---------------------------------------------------------------------------------------------------
 
+--如果无网络或者无SessionToken,则不推送，直接回调
 -- dataTable = {['className']=className, ['objectId']=objectId, ...}
 -- callback(datas, error)
 function saveToServer(dataTable, callback)
@@ -483,6 +484,7 @@ function saveToServer(dataTable, callback)
     protocol:request()
 end
 
+--保存User的数据到服务器上，推送到服务器
 -- callback(datas, error)
 function saveUserToServer(dataTable, callback)
     local function cb (datas, error)

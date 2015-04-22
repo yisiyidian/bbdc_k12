@@ -12,6 +12,13 @@
 -- local action4 = cc.Sequence:create(action2, action3)
 -- loginPopup:runAction(action4)
 
+--新安装用户需要提升他注册帐号，
+--第一步输入姓名
+--第二步输入密码
+--。。。。。
+--现在这些东西都需要改掉
+
+
 local InputNode = require("view.login.InputNode")
 local Button                = require("view.button.longButtonInStudy")
 

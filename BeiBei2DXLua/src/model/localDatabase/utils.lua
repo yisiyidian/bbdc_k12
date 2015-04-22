@@ -248,7 +248,7 @@ end
 
 -- handleRecordRow(row)
 function M.getDatas(classNameOfDataClass, userId, username, handleRecordRow, conditions)
-    print ('\n\n\nM getDatas >>>')
+    print ('\n\n\nM getDatas >>> LocalDataBaseManager')
     conditions = conditions or ''
     local sql = ''
     local sqlUsername = string.format('SELECT * FROM %s WHERE username = "%s" ', classNameOfDataClass, username, conditions)

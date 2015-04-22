@@ -176,6 +176,8 @@ function DataEverydayInfo.getAllDatasFromLocalDB(handleRow)
     return localDatas
 end
 
+--从本地数据库中获取当前周的数据
+--
 function DataEverydayInfo.getNoObjectIdAndCurrentWeekDatasFromLocalDB()
     local noObjectIdDatas = {}
     local currentWeek = nil

@@ -266,7 +266,7 @@ function O2OController.signUpOffline(username, password)
     O2OController.loadConfigs()
     O2OController.getDataLevelInfo()
     O2OController.getDataEverydayInfo()
-
+    --进入选择教育程度的界面 小初高什么的
     s_CorePlayManager.enterEducationLayer()
 
     hideProgressHUD()
@@ -370,7 +370,7 @@ function O2OController.getDataLevelInfo(oncompleted)
 end
 
 ---------------------------------------------------------------------------------------------------
-
+--
 local function onUpdateWeekCompleted(serverDatas, currentWeek, onSaved)
     if serverDatas ~= nil then
         for i, v in ipairs(serverDatas) do
@@ -421,8 +421,13 @@ function O2OController.getDataEverydayInfo(onSaved)
         -- 1st log in
         s_CURRENT_USER.localTime = os.time()
         local localDBDatas = {['noObjectIdDatas']={}, ['currentWeek']=nil}
-        saveUserToServer({['localTime']=s_CURRENT_USER.localTime}, function (datas, error) updateWeek(localDBDatas, 1, onSaved) end)
+        --保存用户的信息到服务器
+        saveUserToServer({['localTime']=s_CURRENT_USER.localTime}, 
+            function (datas, error) 
+                updateWeek(localDBDatas, 1, onSaved)
+            end)
     else
+        --
         local localDBDatas = DataEverydayInfo.getNoObjectIdAndCurrentWeekDatasFromLocalDB()
         updateWeek(localDBDatas, getCurrentLogInWeek(os.time(),s_CURRENT_USER.localTime), onSaved)
     end

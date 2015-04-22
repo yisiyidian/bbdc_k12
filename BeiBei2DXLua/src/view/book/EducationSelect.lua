@@ -1,6 +1,9 @@
 require("cocos.init")
 require("common.global")
 
+--选择年级  小学 初中 高中
+--
+
 local EducationSelect = class("EducationSelect", function ()
     return cc.Layer:create()
 end)
@@ -54,7 +57,7 @@ function EducationSelect:ctor()
     else
         backBtn:setVisible(true)
     end
-
+    --进入选书界面
     local enterBookLayer = function (sender,eventType)
     	if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)   
@@ -77,11 +80,13 @@ function EducationSelect:ctor()
 
         bookBtn:addTouchEventListener(enterBookLayer) 	
     end
-
+    --弹出注册帐号
     self:popupAccountBind()
 
 end
 
+
+--弹出注册帐号的界面
 function EducationSelect:popupAccountBind()
     if s_CURRENT_USER.tutorialStep > s_tutorial_book_select or s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then return end
 
