@@ -16,7 +16,7 @@ function LevelProgressPopup.create(index)
     print_lua_table(layer.unit)
     layer.current_index = layer.unit.unitState
     layer.coolingDay = layer.unit.coolingDay
-    layer:createPape()
+    layer:createPape(islandIndex)
     return layer
 end
 
@@ -71,7 +71,7 @@ local function addBackButton(backPopup,islandIndex)
 end
 
 function LevelProgressPopup:ctor(index)
-    local islandIndex = tonumber(index) + 1
+    self.islandIndex = tonumber(index) + 1
     self.total_index = 7
 
     self.animation = function ()
@@ -85,10 +85,10 @@ function LevelProgressPopup:ctor(index)
     self.closeButton = addCloseButton(self.backPopup)
     self.backPopup:addChild(self.closeButton,2)
 
-    self.backBtn = addBackButton(self.backPopup,islandIndex)
+    self.backBtn = addBackButton(self.backPopup,self.islandIndex)
     self.backPopup:addChild(self.backBtn,2)
 
-    local popup_title = cc.Label:createWithSystemFont('夏威夷-'..islandIndex,'Verdana-Bold',38)
+    local popup_title = cc.Label:createWithSystemFont('夏威夷-'..self.islandIndex,'Verdana-Bold',38)
     popup_title:setPosition(self.backPopup:getContentSize().width/2,self.backPopup:getContentSize().height-50)
     popup_title:setColor(cc.c3b(255,255,255))
     self.backPopup:addChild(popup_title,20)
@@ -160,7 +160,7 @@ function LevelProgressPopup:ctor(index)
 
 end
 
-function LevelProgressPopup:createPape()
+function LevelProgressPopup:createPape(islandIndex)
     local pageViewSize = cc.size(545, 900)
     local backgroundSize = cc.size(545, 900)
 
@@ -180,27 +180,51 @@ function LevelProgressPopup:createPape()
     progressBar:setPosition(self.backPopup:getContentSize().width * 0.5,self.backPopup:getContentSize().height * 0.25)
     self.backPopup:addChild(progressBar)
 
-    for i=1, self.total_index do  
+    local layout = ccui.Layout:create()
+    layout:setContentSize(pageViewSize)
+    local StrikeLayer = self:createStrikeIron(islandIndex)
+    layout:addChild(StrikeLayer)
+    pageView:addPage(layout)
+
+    local layout = ccui.Layout:create()
+    layout:setContentSize(pageViewSize)
+    local ReviewLayer = self:createReview()
+    layout:addChild(ReviewLayer)
+    pageView:addPage(layout)
+
+    local layout = ccui.Layout:create()
+    layout:setContentSize(pageViewSize)
+    local SummaryLayer = self:createSummary()
+    layout:addChild(SummaryLayer)
+    pageView:addPage(layout)
+
+    for i = 4,self.current_index do
         local layout = ccui.Layout:create()
         layout:setContentSize(pageViewSize)
+        local ReviewLayer = self:createReview("repeat")
+        layout:addChild(ReviewLayer)
+        pageView:addPage(layout)
+    end
 
-        if i == 1 then
-            local StrikeLayer = self:createStrikeIron()
-            layout:addChild(StrikeLayer)
-        elseif i == 2 then
-            local ReviewLayer = self:createReview()
-            layout:addChild(ReviewLayer)
-        elseif i == 3 then
-            local SummaryLayer = self:createSummary()
-            layout:addChild(SummaryLayer)
-        elseif i <= self.current_index then
-            local ReviewLayer = self:createReview(i)
-            layout:addChild(ReviewLayer)
-        else
-            local MysteriousLayer = self:createMysterious()
-            layout:addChild(MysteriousLayer) 
-        end
+    if self.coolingDay == 0 then
+        local layout = ccui.Layout:create()
+        layout:setContentSize(pageViewSize)
+        local ReviewLayer = self:createReview("normal")
+        layout:addChild(ReviewLayer)
+        pageView:addPage(layout)
+    else
+        local layout = ccui.Layout:create()
+        layout:setContentSize(pageViewSize)
+        local MysteriousLayer = self:createMysterious()
+        layout:addChild(MysteriousLayer)
+        pageView:addPage(layout)
+    end
 
+    for i = self.current_index + 2 ,self.total_index do
+        local layout = ccui.Layout:create()
+        layout:setContentSize(pageViewSize)
+        local MysteriousLayer = self:createMysterious()
+        layout:addChild(MysteriousLayer) 
         pageView:addPage(layout)
     end
 
@@ -280,10 +304,26 @@ local function createRewardSprite(num,parent)
     reward_sprite:addChild(reward_num)
 end
 
-local function createNormalPlay(parent)
+function LevelProgressPopup:createNormalPlay(parent)
     local button_func = function()
-        playSound(s_sound_buttonEffect)           
-        s_CorePlayManager.initTotalUnitPlay() 
+        playSound(s_sound_buttonEffect) 
+
+        local bossList = s_LocalDatabaseManager.getAllUnitInfo()
+        local taskIndex = -2
+
+        for bossID, bossInfo in pairs(bossList) do
+            if bossInfo["coolingDay"] == 0 and bossInfo["unitState"] - 3 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 7 < 0 then
+                taskIndex = bossID
+            end
+        end    
+
+        if taskIndex == -2 then         
+            s_CorePlayManager.initTotalUnitPlay() -- 之前没有boss
+        elseif taskIndex == self.islandIndex then
+            s_CorePlayManager.initTotalUnitPlay() -- 按顺序打第一个boss
+        else
+
+        end
         s_SCENE:removeAllPopups()    
     end
 
@@ -296,22 +336,22 @@ local function createNormalPlay(parent)
     parent:addChild(go_button)
 end
 
-local function createRepeatlPlay(playModel,wordList,parent)--重复玩，参数 玩法／要玩的词／父亲节点
+function LevelProgressPopup:createRepeatlPlay(playModel,wordList,parent)--重复玩，参数 玩法／要玩的词／父亲节点
     local button_func = function()
         playSound(s_sound_buttonEffect)           
-        -- if playModel == "summary" then
-        --     local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
-        --     local summaryBossLayer = SummaryBossLayer.create(wordList,1,true)
-        --     s_SCENE:replaceGameLayer(summaryBossLayer) 
-        -- elseif playModel == "review" then
-        --     local NewReviewBossMainLayer = require("view.newreviewboss.NewReviewBossMainLayer")
-        --     local newReviewBossMainLayer = NewReviewBossMainLayer.create(wordList,Review_From_Word_Bank)
-        --     s_SCENE:replaceGameLayer(newReviewBossMainLayer)
-        -- elseif playModel == "iron" then
-        --     local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
-        --     local blacksmithLayer = BlacksmithLayer.create(wordList,false)
-        --     s_SCENE:replaceGameLayer(blacksmithLayer)
-        -- end 
+        if playModel == "summary" then
+            local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
+            local summaryBossLayer = SummaryBossLayer.create(wordList,1,false)
+            s_SCENE:replaceGameLayer(summaryBossLayer) 
+        elseif playModel == "review" then
+            local NewReviewBossMainLayer = require("view.newreviewboss.NewReviewBossMainLayer")
+            local newReviewBossMainLayer = NewReviewBossMainLayer.create(wordList,Review_From_Word_Bank)
+            s_SCENE:replaceGameLayer(newReviewBossMainLayer)
+        elseif playModel == "iron" then
+            local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
+            local blacksmithLayer = BlacksmithLayer.create(wordList,self.islandIndex)
+            s_SCENE:replaceGameLayer(blacksmithLayer)
+        end 
         s_SCENE:removeAllPopups()    
     end
 
@@ -324,7 +364,7 @@ local function createRepeatlPlay(playModel,wordList,parent)--重复玩，参数 
     parent:addChild(go_button)
 end
 
-function LevelProgressPopup:createStrikeIron()
+function LevelProgressPopup:createStrikeIron(islandIndex)
     local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
 
     local hammer_sprite = cc.Sprite:create("image/islandPopup/subtask_hammer.png")
@@ -339,15 +379,15 @@ function LevelProgressPopup:createStrikeIron()
     createRewardSprite(3,back)
 
     if self.current_index == 0 then
-        createNormalPlay(back)
+        self:createNormalPlay(back)
     elseif self.current_index > 0 then
-        createRepeatlPlay("iron",self.wrongWordList,back)
+        self:createRepeatlPlay("iron",self.wrongWordList,back,islandIndex)
     end
     
     return back
 end
 
-function LevelProgressPopup:createReview(mysterious_index)
+function LevelProgressPopup:createReview(playModel)
     local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
 
     local review_sprite = cc.Sprite:create("image/islandPopup/subtask_review_boss.png")
@@ -361,18 +401,14 @@ function LevelProgressPopup:createReview(mysterious_index)
     createRewardLabel(back)
     createRewardSprite(3,back)
 
-    if mysterious_index ~= nil then
-        if (self.current_index == (mysterious_index - 1) and self.coolingDay == 0) then
-            createNormalPlay(back)
-        elseif self.current_index >= mysterious_index then
-            createRepeatlPlay("review",back)
-        end
-    else
-        if self.current_index == 1 then
-            createNormalPlay(back)
-        elseif self.current_index > 1 then
-            createRepeatlPlay("review",self.wrongWordList,back)
-        end
+    if playModel == "normal" then
+        self:createNormalPlay(back)
+    elseif playModel == "repeat" then
+        self:createRepeatlPlay("review",self.wrongWordList,back)
+    elseif self.current_index == 1 then
+        self:createNormalPlay(back)
+    elseif self.current_index > 1 then
+        self:createRepeatlPlay("review",self.wrongWordList,back)
     end
     
     return back
@@ -393,9 +429,9 @@ function LevelProgressPopup:createSummary()
     createRewardSprite(3,back)
     
     if self.current_index == 2 then
-        createNormalPlay(back)
+        self:createNormalPlay(back)
     elseif self.current_index > 2 then
-        createRepeatlPlay("summary",self.wrongWordList,back)
+        self:createRepeatlPlay("summary",self.wrongWordList,back)
     end
     
     return back

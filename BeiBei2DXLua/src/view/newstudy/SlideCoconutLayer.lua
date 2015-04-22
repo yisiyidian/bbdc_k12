@@ -15,8 +15,8 @@ local  SlideCoconutLayer = class("SlideCoconutLayer", function ()
     return cc.Layer:create()
 end)
 
-function SlideCoconutLayer.create(word,wrongNum,wrongWordList)
-    local layer = SlideCoconutLayer.new(word,wrongNum,wrongWordList)
+function SlideCoconutLayer.create(word,wrongNum,wrongWordList,islandIndex)
+    local layer = SlideCoconutLayer.new(word,wrongNum,wrongWordList,islandIndex)
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     return layer
 end
@@ -37,7 +37,7 @@ local function createRefreshButton()
     return refreshButton  
 end
 
-local function createLastButton(word,wrongNum,wrongWordList)
+function SlideCoconutLayer:createLastButton(word,wrongNum,wrongWordList)
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local button_func = function()
         playSound(s_sound_buttonEffect)        
@@ -47,7 +47,7 @@ local function createLastButton(word,wrongNum,wrongWordList)
         if wrongWordList == nil then
             chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum)
         else
-            chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,wrongWordList)
+            chooseWrongLayer = ChooseWrongLayer.create(word,wrongNum,wrongWordList,self.islandIndex)
         end
         s_SCENE:replaceGameLayer(chooseWrongLayer)  
     end
@@ -60,7 +60,10 @@ local function createLastButton(word,wrongNum,wrongWordList)
     return choose_before_button  
 end
 
-function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
+function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
+    if islandIndex ~= nil then
+        self.islandIndex = islandIndex
+    end
     AnalyticsStudySlideCoconut_EnterLayer()
 
     if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_3 then
@@ -103,7 +106,14 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
         color = "yellow"
     end
     
-    local progressBar_total_number = getMaxWrongNumEveryLevel()
+    local progressBar_total_number 
+
+    if self.islandIndex ~= nil then
+        local info = s_LocalDatabaseManager.getUnitInfo(self.islandIndex)
+        progressBar_total_number = #info.wrongWordList
+    else
+        progressBar_total_number = s_CorePlayManager.wrongWordNum
+    end
 
     self.progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
     self.progressBar:setPosition(bigWidth/2+44, 1054)
@@ -136,7 +146,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
         isNewPlayer = false
     end
     
-    self.lastButton = createLastButton(word,wrongNum,wrongWordList)
+    self.lastButton = self:createLastButton(word,wrongNum,wrongWordList)
     backColor:addChild(self.lastButton)
 
     mat = FlipMat.create(self.wordInfo[2],4,4,isNewPlayer,"coconut_light")
@@ -210,7 +220,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList)
                     end                                   
 
                     local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
-                    local blacksmithLayer = BlacksmithLayer.create(wrongWordList)
+                    local blacksmithLayer = BlacksmithLayer.create(wrongWordList,self.islandIndex)
                     s_SCENE:replaceGameLayer(blacksmithLayer)
                 end
             end)))
