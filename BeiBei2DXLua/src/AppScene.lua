@@ -272,12 +272,19 @@ function applicationDidEnterBackgroundLua()
 end
 
 function AppScene:checkInAnimation()
+    -- local DramaLayer = require("view.home.DramaLayer")
+    -- local dramaLayer = DramaLayer.create()
+    -- self:replaceGameLayer(dramaLayer)
+    -- test
     local HomeLayer = require("view.home.HomeLayer")
     local homeLayer = HomeLayer.create(true)
     homeLayer:setName('homeLayer')
     self:replaceGameLayer(homeLayer)
     homeLayer:showDataLayer(true)
     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+
+
+
     -- local delay = cc.DelayTime:create(3)
     -- local hide = cc.CallFunc:create(function()
         
