@@ -194,9 +194,9 @@ function Manager.getPrevWordState()
     return localdatabase_bossWord.getPrevWordState()
 end
 
-function Manager.getTodayReviewBoss()
-    return localdatabase_bossWord.getTodayReviewBoss()
-end
+-- function Manager.getTodayReviewBoss()
+--     return localdatabase_bossWord.getTodayReviewBoss()
+-- end
 
 function Manager.getMaxBoss()
     return localdatabase_bossWord.getMaxBoss()
@@ -265,7 +265,7 @@ function Manager.initUnitInfo(unitID)
 end
 
 function Manager.updateUnitState(unitID)   -- TODO
-    -- Manager.minusTodayRemainTaskNum()
+    Manager.minusTodayRemainTaskNum()
     localdatabase_unitWord.updateUnitState(unitID)
 end
 
