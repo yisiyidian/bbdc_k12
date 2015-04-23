@@ -25,7 +25,7 @@ function ProgressBar.create(totalIndex, currentIndex)
     progress:setMidpoint(cc.p(0, 0))
     progress:setBarChangeRate(cc.p(1, 0))
     progress:setPosition(progress_back:getPosition())
-    progress:setPercentage(100*currentIndex/totalIndex)
+    progress:setPercentage(100 * currentIndex / totalIndex + 2)
     main:addChild(progress,1)
 
     local width = progress_back:getContentSize().width - 20
@@ -44,9 +44,13 @@ function ProgressBar.create(totalIndex, currentIndex)
     index_beibei:setPosition(index:getContentSize().width / 2, 75)
     index:addChild(index_beibei) 
 
+    local lightPositionX = left + gap*currentIndex
+    if currentIndex > 0 then
+        lightPositionX = left + gap* (currentIndex - 1)
+    end
     local light = cc.Sprite:create("image/islandPopup/subtask_progress_bar_circle_at_present.png")
     light:setAnchorPoint(0.5,0.5)
-    light:setPosition(left + gap*currentIndex, 5)
+    light:setPosition(lightPositionX, 5)
     main:addChild(light,1)
 
     for i=0,totalIndex do
@@ -57,7 +61,7 @@ function ProgressBar.create(totalIndex, currentIndex)
             point_sprite = cc.Sprite:create("image/islandPopup/subtask_progress_bar_unfinished_circle.png")
         end
         point_sprite:setAnchorPoint(0.5,0.5)
-        point_sprite:setPosition(left + gap*i - 1, 5)
+        point_sprite:setPosition(left + gap*i , 5)
         main:addChild(point_sprite)
     end
 
