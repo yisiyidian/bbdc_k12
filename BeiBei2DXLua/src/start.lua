@@ -35,10 +35,13 @@ local function initResolution()
     cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(s_DESIGN_WIDTH, s_DESIGN_HEIGHT, cc.ResolutionPolicy.FIXED_HEIGHT)
 end
 
+--main.lua 进到这里
 function start.init()
+    --分辨率适配
     initResolution()
+    --在AppVersionInfo.lua里 初始化一些全局变量
     initBuildTarget()
-
+    
     reloadModule('common.text')
 
     NETWORK_STATUS_WIFI = 1
@@ -138,8 +141,8 @@ function start.start(hotUpdate)
             local errorObj = {}
             errorObj['className'] = 'LuaError'
             local a = string.gsub(msg, ":",  ".    ") 
-            local b = string.gsub(a,   '"',  "'") 
-            local c = string.gsub(b,   "\n", ".    ") 
+            local b = string.gsub(a,   '"',  "'")
+            local c = string.gsub(b,   "\n", ".    ")
             local d = string.gsub(c,   "\t", ".    ") 
             errorObj['msg'] = s_CURRENT_USER.objectId .. ' ;' .. d
             errorObj['appVersion'] = s_APP_VERSION

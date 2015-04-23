@@ -1,3 +1,5 @@
+--Loading界面
+--只是做个loading效果，没有loading任何东西
 local LoadingView = class ("LoadingView", function()
     return cc.Layer:create()
 end)

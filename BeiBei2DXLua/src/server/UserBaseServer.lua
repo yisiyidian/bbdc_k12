@@ -65,14 +65,16 @@ local function parseServerUser( objectjson )
     return true
 end
 
+--注册或者登陆之后的回调
 function onResponse_signUp_logIn(hasParsed, objectjson, e, code, onResponse)
     if e ~= nil then 
         print('signup/logIn:' .. e) 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, e, code) end
     elseif objectjson ~= nil then 
+        --没有错误  直接返回数据
         print('signup/logIn:' .. type(objectjson) .. ',  ' .. objectjson)
         if hasParsed == false then parseServerUser( objectjson ) end
-
+        --
         s_CURRENT_USER.userId = s_CURRENT_USER.objectId
         s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, nil, s_CURRENT_USER.username)
         s_LocalDatabaseManager.setLogOut(false)
@@ -85,7 +87,11 @@ function onResponse_signUp_logIn(hasParsed, objectjson, e, code, onResponse)
 end
 
 -- https://cn.avoscloud.com/docs/error_code.html
-
+-- 注册用户 首次安装会进这里 注册一个匿名的账号
+-- 卸载再安装的话，就会生成一个新的匿名账号
+--username 帐号
+--password 密码
+---onResponese 回调函数
 -- function (user data, error description, error code)
 function UserBaseServer.signUp(username, password, onResponse)
     s_CURRENT_USER.username = username
@@ -100,6 +106,7 @@ function UserBaseServer.logIn(username, password, onResponse)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
     cx.CXAvos:getInstance():logIn(username, password, function (objectjson, e, code)
+        dump(objectjson,"登陆返回数据")
         onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
     end)
 end

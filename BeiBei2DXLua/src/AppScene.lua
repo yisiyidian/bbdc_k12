@@ -1,6 +1,6 @@
+--游戏主场景
 require("cocos.init")
 
-local BackgroundLayer = require("layer.BackgroundLayer")
 local GameLayer = require("layer.GameLayer")
 local HudLayer = require("layer.HudLayer")
 local PopupLayer = require("layer.PopupLayer")
@@ -67,9 +67,6 @@ function AppScene.create()
     scene.rootLayer = cc.Layer:create()
     scene.rootLayer:setPosition(s_DESIGN_OFFSET_WIDTH, 0)
     scene:addChild(scene.rootLayer)
-    
-    scene.bgLayer = BackgroundLayer.create()
-    scene.rootLayer:addChild(scene.bgLayer)
 
     scene.gameLayer = GameLayer.create()
     scene.rootLayer:addChild(scene.gameLayer)
@@ -163,6 +160,9 @@ function AppScene:ctor()
     -- self:registerCustomEvent()
 end
 
+--替换游戏的主Layer
+--此时不会释放资源
+--TODO 释放资源
 function AppScene:replaceGameLayer(newLayer)
     self.gameLayer:removeAllChildren()
     self.gameLayer:addChild(newLayer)

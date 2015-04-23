@@ -95,7 +95,7 @@ function O2OController.start()
         -- go to O2OController.onAssetsManagerCompleted()
         local loadingView = LoadingView.create()
         s_SCENE:replaceGameLayer(loadingView) 
-
+        --未注册用户 进这个
         O2OController.onAssetsManagerCompleted()
     end
 end
@@ -114,11 +114,11 @@ function O2OController.onAssetsManagerCompleted()
     -- O2OController.start() : has got user from local database
     local tmpUser = DataUser.create()
     local hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
-
-    if not s_LocalDatabaseManager.isLogOut() and hasUserInLocalDB then    
+    if not s_LocalDatabaseManager.isLogOut() and hasUserInLocalDB then 
         if tmpUser.usertype == USER_TYPE_QQ then
             O2OController.logInByQQAuthData()
         else
+            --在有网络的情况下            
             O2OController.logInOnline(tmpUser.username, tmpUser.password)
         end
     elseif s_LocalDatabaseManager.isLogOut() and hasUserInLocalDB then
@@ -128,7 +128,6 @@ function O2OController.onAssetsManagerCompleted()
         -- remove IntroLayer
         -- local introLayer = IntroLayer.create(false)
         -- s_SCENE:replaceGameLayer(introLayer)
-
         s_O2OController.signUpWithRandomUserName()
     end
 end
@@ -153,7 +152,7 @@ function O2OController.logInByQQAuthData()
 end
 
 function O2OController.startLoadingData(userStartType, username, password)
-    LOGTIME('startLoadingData')
+    LOGTIME('O2OController.startLoadingData')
     local tmpUser = DataUser.create()
     local hasUserInLocalDB = false
     if username ~= nil then
@@ -166,9 +165,11 @@ function O2OController.startLoadingData(userStartType, username, password)
     end
     local isLocalNewerThenServer = false
 
+    --登陆或者注册之后的回调
     local function onResponse(u, e, code)
+        -- 成功的情况下u是DataUser的实例,e 是nil,code是0
         -- u is s_CURRENT_USER and u is server data
-        if e == nil and s_CURRENT_USER.tutorialStep == 0 then 
+        if e == nil and s_CURRENT_USER.tutorialStep == 0 then
             AnalyticsTutorial(0)
             AnalyticsSmallTutorial(0)
         end
@@ -184,10 +185,11 @@ function O2OController.startLoadingData(userStartType, username, password)
             end
             hideProgressHUD()
         else -- no error
+            --没报错的情况下 走这里
             if hasUserInLocalDB and tmpUser.objectId ~= '' and tmpUser.username == username and tmpUser.updatedAt > s_CURRENT_USER.updatedAt then
                 isLocalNewerThenServer = true
             end
-
+            print("isLocalNewerThenServer:"..tostring(isLocalNewerThenServer))
             if isLocalNewerThenServer then
                 tmpUser.objectId = s_CURRENT_USER.objectId
                 tmpUser.userId = s_CURRENT_USER.objectId
@@ -216,7 +218,9 @@ function O2OController.startLoadingData(userStartType, username, password)
 
     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
     showProgressHUD('用户登录中 30%')
-    if userStartType == USER_START_TYPE_OLD then 
+    print("userStartType:"..userStartType)
+    if userStartType == USER_START_TYPE_OLD then
+        --老用户或者本地有记录的情况下 走这里  包括已经打开一次客户端的情况
         print(string.format('startLoadingData: objectId:%s, username:%s, updatedAt:%f, createdAt:%f', tmpUser.objectId, tmpUser.username, tmpUser.updatedAt, tmpUser.createdAt))
         if hasUserInLocalDB and tmpUser.username == username and tmpUser.objectId == '' then
             print(string.format('startLoadingData: objectId:%s, username:%s, updatedAt:%f, createdAt:%f', tmpUser.objectId, tmpUser.username, tmpUser.updatedAt, tmpUser.createdAt))
@@ -230,6 +234,8 @@ function O2OController.startLoadingData(userStartType, username, password)
     elseif userStartType == USER_START_TYPE_QQ_AUTHDATA then 
         s_UserBaseServer.logInByQQAuthData(tmpUser.openid, tmpUser.access_token, tmpUser.expires_in, onResponse)
     else
+        --安装客户端之后，首次打开的情况下，走这里
+        --仅限首次
         s_UserBaseServer.signUp(username, password, onResponse)
     end
 end
@@ -301,6 +307,7 @@ function O2OController.getUserDatasOnline()
         LOGTIME('getDataEverydayInfo')
         O2OController.getDataEverydayInfo(function ()
             if s_CURRENT_USER.bookKey == '' then
+                print("当前bookKey为空,进入EducationLayer")
                 s_CorePlayManager.enterEducationLayer() 
                 s_CURRENT_USER.dataDailyUsing:reset()
             else
