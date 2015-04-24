@@ -250,11 +250,15 @@ function LevelProgressPopup:createPape(islandIndex)
     end
 
     -- change to current index
-    if self.current_index > 0 then
+    if self.current_index > 0 and self.current_index < 3 then
+        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
         pageView:scrollToPage(self.current_index - 1)
         --如果进入的不是第一页，跳转到上一页，播放动画
         s_SCENE:callFuncWithDelay(2,function ()
             pageView:scrollToPage(self.current_index)
+        end)
+        s_SCENE:callFuncWithDelay(3,function ()
+            s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch() 
         end)
     else
         pageView:scrollToPage(self.current_index)
@@ -472,7 +476,7 @@ function LevelProgressPopup:createCantPlay(text,parent,goToPlay)--现在不能�
     
     if text == "" then
         local function update(delta)
-            cantPlay_Label:setString("剩余时间"..self.coolingDay)
+            cantPlay_Label:setString("剩余时间"..s_LocalDatabaseManager.getUnitCoolingSeconds(islandIndex))
         end
         parent:scheduleUpdateWithPriorityLua(update, 0)
     end

@@ -45,7 +45,7 @@ function ProgressBar.create(totalIndex, currentIndex)
     index:addChild(index_beibei) 
 
     local lightPositionX = left + gap*currentIndex
-    if currentIndex > 0 then
+    if currentIndex > 0 and currentIndex< 3 then 
         lightPositionX = left + gap* (currentIndex - 1)
     end
     local light = cc.Sprite:create("image/islandPopup/subtask_progress_bar_circle_at_present.png")
