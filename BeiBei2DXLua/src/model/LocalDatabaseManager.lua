@@ -129,8 +129,8 @@ function Manager.getRandomWord()
     return localdatabase_dailyStudyInfo.getRandomWord()
 end
 
-function Manager.addStudyWordsNum()
-    local data = localdatabase_dailyStudyInfo.addStudyWordsNum()
+function Manager.addStudyWordsNum(addNum)
+    local data = localdatabase_dailyStudyInfo.addStudyWordsNum(addNum)
     -- s_UserBaseServer.synTodayDailyStudyInfo(data, nil, false)
 end
 
@@ -279,15 +279,18 @@ end
 ---- Statistics -----------------------------------------------------------------------------------------
 
 function Manager.getTotalStudyWordsNum()
-    return s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
+    --return s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
+    return localdatabase_dailyStudyInfo.getTotalStudyWordsNum()
 end
 
 function Manager.getTotalStudyWordsNumByBookKey(bookKey)
-    return s_CURRENT_USER.levelInfo:getWordIndex(bookKey) - 1
+    --return s_CURRENT_USER.levelInfo:getWordIndex(bookKey) - 1
+    return localdatabase_dailyStudyInfo.getTotalStudyWordsNumByBookKey(bookKey)
 end
 
 function Manager.getTotalGraspWordsNum()
-    return #localdatabase_bossWord.getAllWrongWordList()
+    --return #localdatabase_bossWord.getAllWrongWordList()
+    return localdatabase_dailyStudyInfo.getTotalGraspWordsNum()
 end
 
 function Manager.getStudyWords()
