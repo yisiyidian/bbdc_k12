@@ -548,6 +548,10 @@ function M.printUnitWord()
     print("</unitWord>")
 end
 
+function M.getBookMaxUnitID(bookKey)
+    return #s_BookUnitWord[bookKey]
+end
+
 
 function M.getAllWrongWordList()
     local userId    = s_CURRENT_USER.objectId
