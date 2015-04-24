@@ -284,7 +284,8 @@ function Manager.getTotalStudyWordsNum()
 end
 
 function Manager.getTotalStudyWordsNumByBookKey(bookKey)
-    return s_CURRENT_USER.levelInfo:getWordIndex(bookKey) - 1
+    --return s_CURRENT_USER.levelInfo:getWordIndex(bookKey) - 1
+    return localdatabase_dailyStudyInfo.getTotalStudyWordsNumByBookKey(bookKey)
 end
 
 function Manager.getTotalGraspWordsNum()

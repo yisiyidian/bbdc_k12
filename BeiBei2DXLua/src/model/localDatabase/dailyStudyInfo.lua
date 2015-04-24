@@ -144,6 +144,30 @@ function M.getTotalStudyWordsNum()
     return num
 end
 
+function M.getTotalStudyWordsNumByBookKey(bookKey)
+    local userId = s_CURRENT_USER.objectId
+    local username = s_CURRENT_USER.username
+
+    local num = 0
+    if userId ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
+            num = num + row.studyNum
+        end
+    end
+    if num == 0 and username ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE username = '"..username.."' and bookKey = '"..bookKey.."' ;") do
+            num = num + row.studyNum
+        end
+    end
+
+    -- if dbData ~= nil then
+    --     local data = DataDailyStudyInfo.createData(dbData.bookKey, dbData.dayString, dbData.studyNum, dbData.graspNum, dbData.lastUpdate)
+    --     parseLocalDBDataToClientData(dbData, data)
+    --     return data
+    -- end
+    return num
+end
+
 function M.getTotalGraspWordsNum()
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
