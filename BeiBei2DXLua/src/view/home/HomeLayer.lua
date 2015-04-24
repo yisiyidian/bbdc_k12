@@ -113,8 +113,11 @@ function HomeLayer.create()
     local mission_progress
     local checkInDisplay = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) and not s_isCheckInAnimationDisplayed
     if checkInDisplay then
+        if s_HUD_LAYER:getChildByName('missionComplete') ~= nil then
+            s_HUD_LAYER:getChildByName('missionComplete'):setVisible(true)
+        end
         s_isCheckInAnimationDisplayed = true
-        mission_progress = MissionProgress.create(true)
+        mission_progress = MissionProgress.create(true,layer)
     else
         mission_progress = MissionProgress.create()
         mission_progress.animation()
@@ -1003,6 +1006,17 @@ function HomeLayer:hideDataLayer()
         self.dataBack:removeChildByName('PersonalInfo')
     end)
     self.dataButton:runAction(cc.Sequence:create(action1, action2))
+end
+
+function HomeLayer:showShareCheckIn()
+    local Share = require('view.share.ShareCheckIn')
+    local shareLayer = Share.create(self)
+    shareLayer:setPosition(0,-s_DESIGN_HEIGHT)
+    local move = cc.MoveTo:create(0.3,cc.p(0,0))
+    shareLayer:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),move,cc.CallFunc:create(function ()
+        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+    end,{})))
+    self:addChild(shareLayer,2)
 end
 
 function HomeLayer:setButtonEnabled(enabled)

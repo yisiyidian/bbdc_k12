@@ -293,9 +293,9 @@ function AppScene:checkInAnimation()
 
 end
 
-function AppScene:checkInOver()
-    s_HUD_LAYER:removeChildByName('missionCompleteCircle')
-    s_GAME_LAYER:getChildByName('homeLayer'):hideDataLayer()
+function AppScene:checkInOver(homeLayer)
+    s_HUD_LAYER:removeChildByName('missionComplete')
+    homeLayer:hideDataLayer()
     --s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 end
 
