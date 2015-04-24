@@ -73,7 +73,11 @@ function DownloadSoundController:initAssetsManagerByBookType(storagePath)
         return cc.AssetsManagerEx:create("manifest/book_sound_sat.manifest",storagePath)   
     elseif self.bookkey == "toefl" then
         SoundsDownloadingInstance["toefl"] = self
-        return cc.AssetsManagerEx:create("manifest/book_sound_toefl.manifest",storagePath)       
+        return cc.AssetsManagerEx:create("manifest/book_sound_toefl.manifest",storagePath)    
+    elseif self.bookkey == "primary_1" then
+        SoundsDownloadingInstance["primary_1"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_primary_1.manifest",storagePath)    
+
     end
 end
 

@@ -251,15 +251,27 @@ function LevelProgressPopup:createPape(islandIndex)
 
     -- change to current index
     if self.current_index > 0 and self.current_index < 3 then
-        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
         pageView:scrollToPage(self.current_index - 1)
         --如果进入的不是第一页，跳转到上一页，播放动画
-        s_SCENE:callFuncWithDelay(2,function ()
+        local backColor = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
+        backColor:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
+        self:addChild(backColor,10)
+
+        local onTouchBegan = function(touch, event)
+            return true  
+        end
+
+        local onTouchEnded = function(touch, event)
             pageView:scrollToPage(self.current_index)
-        end)
-        s_SCENE:callFuncWithDelay(3,function ()
-            s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch() 
-        end)
+            backColor:removeFromParent()
+        end
+
+        local listener = cc.EventListenerTouchOneByOne:create()
+        listener:setSwallowTouches(true)
+        listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+        listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+        local eventDispatcher = self:getEventDispatcher()
+        eventDispatcher:addEventListenerWithSceneGraphPriority(listener, backColor)
     else
         pageView:scrollToPage(self.current_index)
     end
@@ -338,7 +350,6 @@ local function createRewardSprite(num,parent,isShowAnimation)
     reward_sprite:addChild(reward_num)
 
     if isShowAnimation == true then
-
         local rightSign_sprite = cc.Sprite:create("image/islandPopup/duigo_green_xiaoguan_tanchu.png")
         rightSign_sprite:setPosition(cc.p(reward_sprite:getContentSize().width * 0.3 - 150,reward_sprite:getContentSize().height * 0.5 + 180)) 
         rightSign_sprite:setScale(0)
