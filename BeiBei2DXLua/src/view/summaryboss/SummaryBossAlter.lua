@@ -475,7 +475,7 @@ function SummaryBossAlter:addWinLabel(win_back)
     end
     local function update(delta)
         --print('delta='..delta)
-        if word_count < self.bossLayer.maxCount then
+        if word_count < self.bossLayer.rightWord then
             word_count = word_count + 1
             word_count_label:setString(string.format('%d',word_count))
         end
@@ -491,7 +491,7 @@ function SummaryBossAlter:addWinLabel(win_back)
             -- end
             sec_count_label:setString(string.format('%d',sec_count))
         end
-        if word_count == self.bossLayer.maxCount and min_count == math.floor(self.bossLayer.useTime/60) and sec_count >= math.floor(self.bossLayer.useTime%60) then
+        if word_count == self.bossLayer.rightWord and min_count == math.floor(self.bossLayer.useTime/60) and sec_count >= math.floor(self.bossLayer.useTime%60) then
             if self.entrance then
                 for i = 1,3 do
                     local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')

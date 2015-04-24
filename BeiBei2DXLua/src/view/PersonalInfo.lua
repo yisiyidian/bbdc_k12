@@ -251,7 +251,7 @@ function PersonalInfo:PLVM()
     
     local updateTime = 0
     local tolearnCount = s_LocalDatabaseManager.getTotalStudyWordsNum()
-    local toMasterCount = s_LocalDatabaseManager.getTotalGraspWordsNum()
+    local toMasterCount = tolearnCount - s_LocalDatabaseManager.getTotalGraspWordsNum()
     local learnPercent = tolearnCount / s_DataManager.books[s_CURRENT_USER.bookKey].words
     local masterPercent = toMasterCount / s_DataManager.books[s_CURRENT_USER.bookKey].words
     
