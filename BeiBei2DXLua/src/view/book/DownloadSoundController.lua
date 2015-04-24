@@ -73,11 +73,88 @@ function DownloadSoundController:initAssetsManagerByBookType(storagePath)
         return cc.AssetsManagerEx:create("manifest/book_sound_sat.manifest",storagePath)   
     elseif self.bookkey == "toefl" then
         SoundsDownloadingInstance["toefl"] = self
-        return cc.AssetsManagerEx:create("manifest/book_sound_toefl.manifest",storagePath)    
+        return cc.AssetsManagerEx:create("manifest/book_sound_toefl.manifest",storagePath)  
+    -- 小学  
     elseif self.bookkey == "primary_1" then
         SoundsDownloadingInstance["primary_1"] = self
         return cc.AssetsManagerEx:create("manifest/book_sound_primary_1.manifest",storagePath)    
-
+    elseif self.bookkey == "primary_2" then
+        SoundsDownloadingInstance["primary_2"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_primary_2.manifest",storagePath) 
+    elseif self.bookkey == "primary_3" then
+        SoundsDownloadingInstance["primary_3"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_primary_3.manifest",storagePath)    
+    elseif self.bookkey == "primary_4" then
+        SoundsDownloadingInstance["primary_4"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_primary_4.manifest",storagePath) 
+    elseif self.bookkey == "primary_5" then
+        SoundsDownloadingInstance["primary_5"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_primary_5.manifest",storagePath)    
+    elseif self.bookkey == "primary_6" then
+        SoundsDownloadingInstance["primary_6"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_primary_6.manifest",storagePath) 
+    elseif self.bookkey == "primary_7" then
+        SoundsDownloadingInstance["primary_7"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_primary_7.manifest",storagePath)    
+    elseif self.bookkey == "primary_8" then
+        SoundsDownloadingInstance["primary_8"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_primary_8.manifest",storagePath) 
+    -- 初中
+    elseif self.bookkey == "junior_1" then
+        SoundsDownloadingInstance["junior_1"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_junior_1.manifest",storagePath)    
+    elseif self.bookkey == "junior_2" then
+        SoundsDownloadingInstance["junior_2"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_junior_2.manifest",storagePath) 
+    elseif self.bookkey == "junior_3" then
+        SoundsDownloadingInstance["junior_3"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_junior_3.manifest",storagePath)    
+    elseif self.bookkey == "junior_4" then
+        SoundsDownloadingInstance["junior_4"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_junior_4.manifest",storagePath) 
+    elseif self.bookkey == "junior_5" then
+        SoundsDownloadingInstance["junior_5"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_junior_5.manifest",storagePath)    
+    -- 高中
+    elseif self.bookkey == "senior_1" then
+        SoundsDownloadingInstance["senior_1"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_senior_1.manifest",storagePath)    
+    elseif self.bookkey == "senior_2" then
+        SoundsDownloadingInstance["senior_2"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_senior_2.manifest",storagePath) 
+    elseif self.bookkey == "senior_3" then
+        SoundsDownloadingInstance["senior_3"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_senior_3.manifest",storagePath)    
+    elseif self.bookkey == "senior_4" then
+        SoundsDownloadingInstance["senior_4"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_senior_4.manifest",storagePath) 
+    elseif self.bookkey == "senior_5" then
+        SoundsDownloadingInstance["senior_5"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_senior_5.manifest",storagePath)    
+    elseif self.bookkey == "senior_6" then
+        SoundsDownloadingInstance["senior_6"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_senior_6.manifest",storagePath) 
+    elseif self.bookkey == "senior_7" then
+        SoundsDownloadingInstance["senior_7"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_senior_7.manifest",storagePath)    
+    elseif self.bookkey == "senior_8" then
+        SoundsDownloadingInstance["senior_8"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_senior_8.manifest",storagePath) 
+    elseif self.bookkey == "senior_9" then
+        SoundsDownloadingInstance["senior_9"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_senior_9.manifest",storagePath)    
+    elseif self.bookkey == "senior_10" then
+        SoundsDownloadingInstance["senior_10"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_senior_10.manifest",storagePath) 
+    elseif self.bookkey == "senior_11" then
+        SoundsDownloadingInstance["senior_11"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_senior_11.manifest",storagePath)    
+    elseif self.bookkey == "senior_12" then
+        SoundsDownloadingInstance["senior_12"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_senior_12.manifest",storagePath) 
+    elseif self.bookkey == "senior_13" then
+        SoundsDownloadingInstance["senior_13"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_senior_13.manifest",storagePath)
     end
 end
 
