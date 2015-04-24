@@ -475,10 +475,16 @@ function LevelProgressPopup:createCantPlay(text,parent,goToPlay)--现在不能�
     cantPlay_Sprite:addChild(cantPlay_Label)
     
     if text == "" then
-        local function update(delta)
-            cantPlay_Label:setString("剩余时间"..s_LocalDatabaseManager.getUnitCoolingSeconds(islandIndex))
+        local time = s_LocalDatabaseManager.getUnitCoolingSeconds(self.islandIndex)
+        if time > 24 * 60 * 60 then
+            cantPlay_Label:setString("剩余时间"..math.ceil(time/(24*60*60)).."天")
+        else
+            cantPlay_Label:setString("剩余时间"..math.ceil(time/24).."小时")
         end
-        parent:scheduleUpdateWithPriorityLua(update, 0)
+        -- local function update(delta)
+        --     cantPlay_Label:setString("剩余时间"..s_LocalDatabaseManager.getUnitCoolingSeconds(self.islandIndex))
+        -- end
+        -- parent:scheduleUpdateWithPriorityLua(update, 0)
     end
 
     if goToPlay == "normal" then
