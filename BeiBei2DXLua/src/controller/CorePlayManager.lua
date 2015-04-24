@@ -235,8 +235,13 @@ end
 -- end
 
 function CorePlayManager.enterHomeLayer()
+
+    -- local DramaLayer = require("view.home.DramaLayer")
+    -- local dramaLayer = DramaLayer.create()
+    -- s_SCENE:replaceGameLayer(dramaLayer)
     local homeLayer = HomeLayer.create()
     s_SCENE:replaceGameLayer(homeLayer)
+
 end
 
 function CorePlayManager.enterLevelLayer()

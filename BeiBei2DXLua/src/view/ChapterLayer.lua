@@ -19,7 +19,7 @@ function ChapterLayer.create()
 end
 
 function ChapterLayer:ctor()
-    
+    --print('test seconds'..s_LocalDatabaseManager.getUnitCoolingSeconds(1))
     if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
         s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)

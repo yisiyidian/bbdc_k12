@@ -269,6 +269,10 @@ function Manager.updateUnitState(unitID)   -- TODO
     localdatabase_unitWord.updateUnitState(unitID)
 end
 
+function Manager.getUnitCoolingSeconds(unitID)
+    return localdatabase_unitWord.getUnitCoolingSeconds(unitID)
+end
+
 function Manager.printUnitWord()
     localdatabase_unitWord.printUnitWord()
 end
