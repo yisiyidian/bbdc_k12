@@ -77,9 +77,11 @@ PLAY_WORD_SOUND_NO      = 'PLAY_WORD_SOUND_NO'
 PLAY_WORD_SOUND_UNKNOWN = 'PLAY_WORD_SOUND_UNKNOWN'
 function playWordSound(word)
     if db.isSoundOn() then
+        local wordPath = cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey
+
         local filename = getWordSoundFileName(word)
                 
-        if cc.FileUtils:getInstance():isFileExist(filename) then
+        if cc.FileUtils:getInstance():isFileExist(filename) or cc.FileUtils:getInstance():isFileExist("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..filename) then
             print ('playWordSound Y : ' .. filename)
             cc.SimpleAudioEngine:getInstance():playEffect(filename, false)
             return PLAY_WORD_SOUND_YES
