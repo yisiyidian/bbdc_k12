@@ -2,11 +2,11 @@
 	"packageUrl" : "http://123.56.84.196/BookSoundBag/",
 	"remoteManifestUrl" : "http://123.56.84.196/BookSoundBag/book_sound_senior_1_server.manifest", 
 	"remoteVersionUrl" : "http://123.56.84.196/BookSoundBag/book_sound_senior_1_version.manifest", 
-	"version" : "1.9.9", 
+	"version" : "1.9.8", 
 	"engineVersion" : "3.3 rc2", 
 	"assets" : {	
 		"senior_1.zip" : {
-			"md5" : "793ef8b87a74034a7fbddb4ec45f1ed6",
+			"md5" : "",
 			"compressed" : true
 		}
 	}, 
