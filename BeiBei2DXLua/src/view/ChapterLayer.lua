@@ -219,14 +219,22 @@ function ChapterLayer:checkUnlockLevel()
 
     -- get state --
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    local bookMaxUnitID = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey)
-
 
 
     -- check state
     local bossList = s_LocalDatabaseManager.getAllUnitInfo()
     print('---BOSS list')
     print_lua_table(bossList)
+
+    --------------------- last level ------------------------
+    local bookMaxUnitID = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey)
+    if progress - bookMaxUnitID == 0 then -- last level
+        for bossID, bossInfo in pairs(bossList) do
+
+        end
+    end
+    ---------------------------------------------------------
+
     local taskIndex = -2
     local taskState = -2
     local progressIndex = progress

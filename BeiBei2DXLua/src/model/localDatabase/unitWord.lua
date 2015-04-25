@@ -380,6 +380,11 @@ end
 function M.getAllUnitInfo()
     local unitList = {}
 
+
+    -- local bookMaxID = M.getBookMaxUnitID(s_CURRENT_USER.bookKey)
+    -- print('test book max ID:'..bookMaxID)
+    -- print_lua_table(s_BookUnitWord)
+
     local maxUnitID = M.getMaxUnitID()
     for i = 1, maxUnitID do
         local unit = M.getUnitInfo(i)
@@ -517,6 +522,7 @@ function M.updateUnitState(unitID)
             -- Manager.database:exec(query)
             -- saveDataToServer(true, time, unitID + 1, 0, '', 0, 0)
             local bookMaxID = M.getBookMaxUnitID(bookKey)
+            print('test book max ID:'..bookMaxID)
             if unitID - bookMaxID < 0 then
                 M.initUnitInfo(unitID+1)
             end
@@ -552,7 +558,17 @@ function M.printUnitWord()
 end
 
 function M.getBookMaxUnitID(bookKey)
-    return #s_BookUnitWord[bookKey]
+    -- print('getBookmaxunit')
+    -- print('bookKey:'..bookKey)
+    -- print_lua_table(s_BookUnitWord[bookKey])
+    local maxID = 1
+    for unitID, unitWord in pairs(s_BookUnitWord[bookKey]) do
+        if unitID - maxID > 0 then
+            maxID = unitID + 0
+        end
+    end
+    -- print('maxID:'..maxID)
+    return maxID
 end
 
 
