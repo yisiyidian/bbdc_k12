@@ -207,7 +207,7 @@ function BookLayer.create(education)
 
         local custom_item = ccui.Layout:create()
         custom_item:setTouchEnabled(true)
-        custom_item:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,0.26 * s_DESIGN_HEIGHT))
+        custom_item:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,0.28 * s_DESIGN_HEIGHT))
         shelf:setPosition(cc.p(custom_item:getContentSize().width / 2.0, custom_item:getContentSize().height * 0.2))
         custom_item:addChild(shelf,0,'shelf')
 
@@ -243,7 +243,7 @@ function BookLayer.create(education)
 
     local progressBar = ccui.Scale9Sprite:create('image/book/process_button_dark_color.png',cc.rect(0,0,15,856),cc.rect(0, 10, 15, 836))
     --backBar:setContentSize(cc.size(15,1000))
-    local percent = 0.85 / (count * 0.26)
+    local percent = 0.85 / (count * 0.28)
     if percent > 1 then
         percent = 1
     end
@@ -298,7 +298,7 @@ function BookLayer.create(education)
         end
         scrollY = h
         time = time + delta
-        local y = - h / (count * 0.26 * s_DESIGN_HEIGHT) - (count * 0.26 - 0.85) / (count * 0.26)
+        local y = - h / (count * 0.28 * s_DESIGN_HEIGHT) - (count * 0.28 - 0.85) / (count * 0.28)
         if h > 0 then
             local p = percent * (s_DESIGN_HEIGHT - h) / s_DESIGN_HEIGHT
             progressBar:setContentSize(cc.size(15,20 + 836 * p))
