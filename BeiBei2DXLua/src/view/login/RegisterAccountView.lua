@@ -96,7 +96,9 @@ function RegisterAccountView:goStep(step,...)
 	elseif step == RegisterAccountView.STEP_3 then
 		self:showChooseSex(args)
 	elseif step == RegisterAccountView.STEP_4 then
-		self:showInputPwd(args)
+		self:showInputNickName()
+	elseif step == RegisterAccountView.STEP_5 then
+		self:showInputPwd()
 	end
 end
 
@@ -137,7 +139,8 @@ function RegisterAccountView:onTouchPhoneNumberOK(sender,eventType)
 	if string.find(phoneNumber,"^1[3|4|5|8][0-9]%d%d%d%d%d%d%d%d$") then
 		--是手机号码
 		self.phoneNumber = phoneNumber
-		self:requestSMSCode(phoneNumber)
+		--TODO fix
+		-- self:requestSMSCode(phoneNumber)
 		--跳转到输入验证码的界面
 		self.curStep = self.curStep + 1
 		self:goStep(self.curStep)
@@ -152,7 +155,7 @@ end
 
 --显示输入验证码的界面
 function RegisterAccountView:showInputSmsCode(args)
-	local countDown
+	local countDown = args and tonumber(args[1]) or 0
 	if args ~= nil then
 	end
 
@@ -180,16 +183,16 @@ function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
 
 	local SMSCode = self.inputNode:getText()
 	if string.find(SMSCode,"^%d%d%d%d%d%d$") then
-		--是手机号码
 		self.SMSCode = SMSCode
 		--向服务器请求验证 验证码
-		self:verifySMSCode(self.phoneNumber,self.SMSCode)
-		-- self:requestSMSCode(SMSCode)
-		--跳转到输入验证码的界面
+		--TODO fix
+		-- self:verifySMSCode(self.phoneNumber,self.SMSCode)
+		-- nonono
+		--TODO loading
 		self.curStep = self.curStep + 1
 		self:goStep(self.curStep)
 	else
-		--不是手机号码
+		--不是验证码
 		--TODO icon
 		self.alertTip:setTextColor(cc.c3b(220, 57, 8))
 		self.alertTip:setString("请输入有效的验证码！")
@@ -198,12 +201,151 @@ end
 
 --显示选择性别的界面
 function RegisterAccountView:showChooseSex()
+	local headImg = cc.Sprite:create("image/homescene/setup_head.png")
+	headImg:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
+	self.views[#self.views + 1] = headImg
+	self:addChild(headImg)
+	--checkbox回调
+	local chkCallBack = function (self,sender,eventType)
+		local checkName = sender:getName()
+		local state = eventType == 0 or false
+		print("eventType:"..eventType)
+		if eventType == ccui.CheckBoxEventType.selected then
+			print("eventType:"..eventType)
+			--state = false
+		elseif eventType == ccui.CheckBoxEventType.unselected then
+			print("eventType:"..eventType)
+			-- state = true
+		end
+		print("checkName:"..checkName)
+		if checkName == "Male" and state then
+			print("禁用自己："..checkName)
+			self.checkBoxMale:setTouchEnabled(false) --禁用自己
+			self.checkBoxFeMale:setTouchEnabled(true) --启用另外一个
+			self.checkBoxFeMale:setSelected(false)
+		elseif checkName == "Female" and state then
+			self.checkBoxMale:setTouchEnabled(true) --启用另外一个
+			self.checkBoxFeMale:setTouchEnabled(false) --禁用自己
+			self.checkBoxMale:setSelected(false)
+		end
+	end
 
+	--性别复选框 男
+	local checkBoxMale = ccui.CheckBox:create()
+	checkBoxMale:setTouchEnabled(true)
+	checkBoxMale:setName("Male")
+	checkBoxMale:loadTextures(
+		"image/newstudy/wordsbackgroundblue.png",--normal
+		"image/newstudy/wordsbackgroundblue.png",--normal press
+		"image/newstudy/pause_button_begin.png",--normal active
+		"image/newstudy/wordsbackgroundblue.png",-- normal disable
+		"image/newstudy/wordsbackgroundblue.png"--active disable
+		)
+	checkBoxMale:addEventListener(handler(self, chkCallBack))
+	checkBoxMale:setPosition(0.5 * s_DESIGN_WIDTH - 100,s_DESIGN_HEIGHT*0.6 - 50)
+	checkBoxMale:setSelected(true)	--默认选中
+	self.checkBoxMale = checkBoxMale
+	self:addChild(checkBoxMale)
+	self.views[#self.views+1] = checkBoxMale
+	--女
+	local checkBoxFeMale = ccui.CheckBox:create()
+	checkBoxFeMale:setTouchEnabled(true)
+	checkBoxFeMale:setName("Female")
+	checkBoxFeMale:loadTextures(
+		"image/newstudy/wordsbackgroundblue.png",--normal
+		"image/newstudy/wordsbackgroundblue.png",--normal press
+		"image/newstudy/pause_button_begin.png",--normal active
+		"image/newstudy/wordsbackgroundblue.png",-- normal disable
+		"image/newstudy/wordsbackgroundblue.png"--active disable
+		)
+	checkBoxFeMale:addEventListener(handler(self, chkCallBack))
+	checkBoxFeMale:setPosition(0.5 * s_DESIGN_WIDTH + 100,s_DESIGN_HEIGHT*0.6 - 50)
+	self.checkBoxFeMale = checkBoxFeMale
+	self:addChild(checkBoxFeMale)
+	self.views[#self.views+1] = checkBoxFeMale
+
+	local btnSexOK = ccui.Button:create("image/login/sl_button_confirm.png")
+	btnSexOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.5 - 100)
+	btnSexOK:addTouchEventListener(handler(self, self.onTouchSexOK))
+	btnSexOK:setTitleText("下一步")
+	btnSexOK:setTitleFontSize(36)
+	self:addChild(btnSexOK)
+	self.views[#self.views+1] = btnSexOK
+
+	cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
+end
+
+--选择性别确定
+function RegisterAccountView:onTouchSexOK(sender,eventType)
+	--获取性别 女0  男1
+	self.sex = self.checkBoxFeMale:isSelected() and 0 or 1
+
+	self.curStep = self.curStep + 1
+	self:goStep(self.curStep)
+end
+
+--显示输入昵称
+function RegisterAccountView:showInputNickName()
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入昵称",nil,nil,nil,nil,11)
+	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
+	self:addChild(inputNode)
+	self.inputNode = inputNode
+	inputNode:openIME()
+	self.views[#self.views+1] = inputNode
+
+	local btnNickName = ccui.Button:create("image/login/sl_button_confirm.png")
+	btnNickName:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 350)
+	btnNickName:addTouchEventListener(handler(self, self.onTouchRegister))
+	btnNickName:setTitleText("下一步")
+	btnNickName:setTitleFontSize(36)
+	self:addChild(btnNickName)
+	self.views[#self.views+1] = btnNickName
+end
+
+--昵称触摸事件
+function RegisterAccountView:onTouchNickNameOK(sender,eventType)
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+
+	
 end
 
 --显示输入密码的界面
 function RegisterAccountView:showInputPwd()
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请设置密码",nil,nil,nil,nil,11)
+	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
+	self:addChild(inputNode)
+	self.inputNode = inputNode
+	inputNode:openIME()
+	self.views[#self.views+1] = inputNode
 	
+	local inputNodeV = InputNode.new("image/signup/shuru_bbchildren_white.png","请确认密码",nil,nil,nil,nil,11)
+	inputNodeV:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 250)
+	self:addChild(inputNodeV)
+	self.inputNodeV = inputNodeV
+	inputNodeV:openIME()
+	self.views[#self.views+1] = inputNodeV
+	
+	-- cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
+	local btnRegister = ccui.Button:create("image/login/sl_button_confirm.png")
+	btnRegister:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 350)
+	btnRegister:addTouchEventListener(handler(self, self.onTouchRegister))
+	btnRegister:setTitleText("下一步")
+	btnRegister:setTitleFontSize(36)
+	self:addChild(btnRegister)
+	self.views[#self.views+1] = btnRegister
+end
+
+--Touch点击
+function RegisterAccountView:onTouchRegister(sender,eventType)
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+
+	print("电话号码:"..self.phoneNumber)
+	print("昵称:"..self.phoneNumber)
+	print("请求注册....")
 end
 
 
