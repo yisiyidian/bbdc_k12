@@ -490,7 +490,7 @@ function LevelProgressPopup:createCantPlay(text,parent,goToPlay)--现在不能�
         if time > 24 * 60 * 60 then
             cantPlay_Label:setString("剩余时间"..math.ceil(time/(24*60*60)).."天")
         else
-            cantPlay_Label:setString("剩余时间"..math.ceil(time/24).."小时")
+            cantPlay_Label:setString("剩余时间"..math.ceil(time/(60*60)).."小时")
         end
         -- local function update(delta)
         --     cantPlay_Label:setString("剩余时间"..s_LocalDatabaseManager.getUnitCoolingSeconds(self.islandIndex))
