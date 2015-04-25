@@ -5,7 +5,7 @@ local s_USE_XXTEA = true
 
 ---------------------------------------------------------------------------
 -- DO NOT modify these below
-g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13'}
+g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13','14','15','16','17','18','19','20','21','22','23','24'}
 g_BOOKKEYS = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
