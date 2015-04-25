@@ -203,8 +203,13 @@ function ChapterLayer:callFuncWithDelay(delay, func)
 end
 
 function ChapterLayer:checkUnlockLevel()
+
     -- get state --
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+    local bookMaxUnitID = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey)
+
+
+
     -- check state
     local bossList = s_LocalDatabaseManager.getAllUnitInfo()
     print('---BOSS list')
@@ -223,6 +228,8 @@ function ChapterLayer:checkUnlockLevel()
         end
     end
     -- get state --
+
+    -- check max unit ID
 
     local oldProgress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)+0
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() +0

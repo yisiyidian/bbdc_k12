@@ -264,7 +264,7 @@ function Manager.initUnitInfo(unitID)
     return localdatabase_unitWord.initUnitInfo(unitID)
 end
 
-function Manage.getBookMaxUnitID(bookKey)
+function Manager.getBookMaxUnitID(bookKey)
     return localdatabase_unitWord.getBookMaxUnitID(bookKey)
 end
 

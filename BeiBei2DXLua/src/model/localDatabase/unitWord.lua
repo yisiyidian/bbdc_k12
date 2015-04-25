@@ -516,7 +516,10 @@ function M.updateUnitState(unitID)
             -- query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, unitID, unitState, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..", 0) ;"
             -- Manager.database:exec(query)
             -- saveDataToServer(true, time, unitID + 1, 0, '', 0, 0)
-            M.initUnitInfo(unitID+1)
+            local bookMaxID = M.getBookMaxUnitID(bookKey)
+            if unitID - bookMaxID < 0 then
+                M.initUnitInfo(unitID+1)
+            end
         elseif newunitState == 7 then -- grasp word
             -- s_LocalDatabaseManager.addGraspWordsNum(getMaxWrongNumEveryLevel())
         end
