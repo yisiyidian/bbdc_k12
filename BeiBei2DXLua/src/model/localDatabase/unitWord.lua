@@ -383,6 +383,12 @@ function M.getAllUnitInfo()
 
     -- local bookMaxID = M.getBookMaxUnitID(s_CURRENT_USER.bookKey)
     -- print('test book max ID:'..bookMaxID)
+    -- local unitID = 1
+    -- local bookMaxID = M.getBookMaxUnitID(s_CURRENT_USER.bookKey)
+    -- print('test book max ID ##:'..bookMaxID)
+    -- if unitID - bookMaxID < 0 then
+    --     M.initUnitInfo(unitID+1)
+    -- end
     -- print_lua_table(s_BookUnitWord)
 
     local maxUnitID = M.getMaxUnitID()
@@ -518,11 +524,12 @@ function M.updateUnitState(unitID)
         -- saveDataToServer(true, time, row.unitID, newUnitState, row.wordList, currentWordIndex, row.savedToServer)
 
         if newUnitState == 3 then
+        -- if true then
             -- query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, unitID, unitState, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..", 0) ;"
             -- Manager.database:exec(query)
             -- saveDataToServer(true, time, unitID + 1, 0, '', 0, 0)
             local bookMaxID = M.getBookMaxUnitID(bookKey)
-            print('test book max ID:'..bookMaxID)
+            print('test book max ID ##:'..bookMaxID)
             if unitID - bookMaxID < 0 then
                 M.initUnitInfo(unitID+1)
             end
@@ -567,7 +574,7 @@ function M.getBookMaxUnitID(bookKey)
             maxID = unitID + 0
         end
     end
-    -- print('maxID:'..maxID)
+    print('maxID:'..maxID)
     return maxID
 end
 
