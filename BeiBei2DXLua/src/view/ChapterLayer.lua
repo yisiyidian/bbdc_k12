@@ -20,10 +20,11 @@ end
 
 function ChapterLayer:ctor()
     --print('test seconds'..s_LocalDatabaseManager.getUnitCoolingSeconds(1))
-    if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
-        s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
-        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
-    end
+    -- if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
+    --     s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
+    --     s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
+    -- end
+  
     playMusic(s_sound_bgm1,true)
 
     -- show repeat chapter list
@@ -138,6 +139,18 @@ function ChapterLayer:ctor()
     self:checkUnlockLevel()
     self:addBackToHome()
     self:addBeansUI()
+
+    -- if s_CURRENT_USER.newTutorialStep == s_newtutorial_island_finger then
+    --     s_CURRENT_USER.newTutorialStep = s_newtutorial_island_alter_finger
+    --     saveUserToServer({['newTutorialStep'] = s_CURRENT_USER.newTutorialStep})
+    --     local level0Position = self.chapterDic['chapter0']:getLevelPosition('level0')
+    --     -- print finger animation
+    --     local finger = sp.SkeletonAnimation:create('spine/tutorial/fingle.json', 'spine/tutorial/fingle.atlas',1)
+    --     finger:addAnimation(0, 'animation', true)
+    -- --    local boatPosition = cc.p(level0Position.x-100, level0Position.y+150)
+    --     finger:setPosition(level0Position.x, level0Position.y-70)
+    --     self.chapterDic['chapter0']:addChild(finger,130)
+    -- end  
    
 end
 
