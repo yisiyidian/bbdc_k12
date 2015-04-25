@@ -257,13 +257,27 @@ function LevelProgressPopup:createPape(islandIndex)
         backColor:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
         self:addChild(backColor,10)
 
+        local action0 = cc.DelayTime:create(1)
+        local action1 = cc.CallFunc:create(function ()
+            if backColor ~= nil then
+                pageView:scrollToPage(self.current_index)
+                backColor:removeFromParent()
+                backColor = nil
+            end
+        end)
+        local action2 = cc.Sequence:create(action0,action1)
+        self:runAction(action2)
+
         local onTouchBegan = function(touch, event)
             return true  
         end
 
         local onTouchEnded = function(touch, event)
-            pageView:scrollToPage(self.current_index)
-            backColor:removeFromParent()
+            if backColor ~= nil then
+                pageView:scrollToPage(self.current_index)
+                backColor:removeFromParent()
+                backColor = nil
+            end
         end
 
         local listener = cc.EventListenerTouchOneByOne:create()
