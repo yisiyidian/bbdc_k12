@@ -504,7 +504,7 @@ function M.initUnitInfo(unitID)
     -- for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition..";") do
     --     print(row.unitID)
     -- end
-    --saveDataToServer(true, time, unitID, unitState, wordList, currentWordIndex, 0)
+    saveDataToServer(true, time, unitID, unitState, wordList, currentWordIndex, 0)
 end
 
 function M.updateUnitState(unitID)
@@ -521,7 +521,7 @@ function M.updateUnitState(unitID)
 
         local query = "UPDATE DataUnit SET lastUpdate = '"..time.."' , unitState = "..newUnitState.." WHERE "..condition.." and unitID = "..unitID.." ;"
         Manager.database:exec(query)
-        -- saveDataToServer(true, time, row.unitID, newUnitState, row.wordList, currentWordIndex, row.savedToServer)
+        saveDataToServer(true, time, row.unitID, newUnitState, row.wordList, currentWordIndex, row.savedToServer)
 
         if newUnitState == 3 then
         -- if true then
@@ -529,7 +529,7 @@ function M.updateUnitState(unitID)
             -- Manager.database:exec(query)
             -- saveDataToServer(true, time, unitID + 1, 0, '', 0, 0)
             local bookMaxID = M.getBookMaxUnitID(bookKey)
-            print('test book max ID ##:'..bookMaxID)
+            -- print('test book max ID ##:'..bookMaxID)
             if unitID - bookMaxID < 0 then
                 M.initUnitInfo(unitID+1)
             end

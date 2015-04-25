@@ -335,9 +335,9 @@ function CorePlayManager.initTotalUnitPlay()
     elseif CorePlayManager.currentUnitState >= 3 and CorePlayManager.currentUnitState <= 6 then
         -- review model
         CorePlayManager.initReviewModel()
-    else
+    -- else
         -- over model
-        CorePlayManager.initOverModel()
+        --CorePlayManager.initOverModel()
     end
 end
 

@@ -230,7 +230,9 @@ function ChapterLayer:checkUnlockLevel()
     local bookMaxUnitID = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey)
     if progress - bookMaxUnitID == 0 then -- last level
         for bossID, bossInfo in pairs(bossList) do
+            if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 3 >= 0 then 
 
+            end
         end
     end
     ---------------------------------------------------------
