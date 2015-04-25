@@ -168,7 +168,7 @@ function HomeLayer.create()
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2+offset,s_DESIGN_HEIGHT/2))
                 backColor:runAction(action1)
 
-                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X+offset,s_DESIGN_HEIGHT/2))
+                local action2 = cc.DelayTime:create(0.5)
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 setting_back:runAction(cc.Sequence:create(action2, action3))
 
@@ -184,7 +184,7 @@ function HomeLayer.create()
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
                 backColor:runAction(action1)
 
-                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+                local action2 = cc.DelayTime:create(0.5)
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 setting_back:runAction(cc.Sequence:create(action2, action3))
             end
@@ -223,7 +223,7 @@ function HomeLayer.create()
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             mission_progress.stopListener = false
             viewIndex = 1
-            local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+            local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
             setting_back:runAction(cc.Sequence:create(action2, action3))
         end
@@ -352,7 +352,7 @@ function HomeLayer.create()
     data_back:setPosition(button_data:getContentSize().width/2, 0)
     button_data:addChild(data_back,2)
     layer.dataBack = data_back
-    local bottom = cc.LayerColor:create(cc.c4b(255,255,255,255), bigWidth, 100)
+    local bottom = cc.LayerColor:create(cc.c4b(255,255,255,255), button_data:getContentSize().width, 100)
     bottom:setAnchorPoint(0.5,1)
     bottom:ignoreAnchorPointForPosition(false)  
     bottom:setPosition(button_data:getContentSize().width/2, 0)
@@ -368,8 +368,8 @@ function HomeLayer.create()
     setting_back = cc.Sprite:create("image/homescene/setup_background.png")
     -- setting_back:setOpacity(0)
     setting_back:setAnchorPoint(1,0.5)
-    setting_back:setPosition(s_LEFT_X, s_DESIGN_HEIGHT/2)
-    layer:addChild(setting_back)
+    setting_back:setPosition(0, s_DESIGN_HEIGHT/2)
+    backColor:addChild(setting_back)
 
     local function updateSettingLayer()
         local button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
@@ -829,7 +829,7 @@ function HomeLayer.create()
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
                 backColor:runAction(action1)
 
-                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+                local action2 = cc.DelayTime:create(0.5)
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 setting_back:runAction(cc.Sequence:create(action2, action3))
             end
@@ -849,7 +849,7 @@ function HomeLayer.create()
             local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
             backColor:runAction(action1)
 
-            local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+            local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
             setting_back:runAction(cc.Sequence:create(action2, action3))
         end
@@ -946,7 +946,7 @@ function HomeLayer.create()
             local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
             backColor:runAction(action1)
 
-            local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+            local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
             setting_back:runAction(cc.Sequence:create(action2, action3))
 
