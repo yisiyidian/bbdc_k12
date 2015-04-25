@@ -7,6 +7,8 @@ local MissionProgress = require("view.home.MissionProgressLayer")
 local OfflineTipHome = require("view.offlinetip.OfflineTipForHome")
 local OfflineTipFriend = require("view.offlinetip.OfflineTipForFriend")
 
+local RegisterAccountView = require("view.login.RegisterAccountView") --注册账号界面
+
 local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
 end)
@@ -539,6 +541,17 @@ function HomeLayer.create()
                     if  online == false then
                         offlineTipHome.setTrue(OfflineTipForHome_ImproveInformation)
                     else
+                        local regiserView = RegisterAccountView.new()
+                        s_SCENE:popup(regiserView)
+
+                        regiserView.close = function()
+                            s_SCENE:removeAllPopups()
+                            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+                                updateSettingLayer()
+                            end
+                        end
+
+                        --[[
                         local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_HOME_LAYER)
                         s_SCENE:popup(improveInfo)
 
@@ -548,6 +561,9 @@ function HomeLayer.create()
                                 updateSettingLayer()
                             end
                         end
+                        ]]
+
+
                     end
                 elseif label_name[i] == TEXT_CHANGE_ACCOUNT then
                     if not s_SERVER.isNetworkConnectedNow() then

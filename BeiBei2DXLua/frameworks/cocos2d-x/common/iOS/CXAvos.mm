@@ -146,6 +146,7 @@ void CXAvos::requestSMSCode(const char *phoneNumber){
 
 //核对短信验证码
 void CXAvos::verifySMSCode(const char *phoneNumber, const char *smsCode, CXLUAFUNC mHandler){
+    mLuaHandlerId_vc = mHandler;
     [AVOSCloud verifySmsCode:[NSString stringWithUTF8String:smsCode] mobilePhoneNumber:[NSString stringWithUTF8String:phoneNumber] callback:^(BOOL succeeded, NSError *error) {
         //回调给lua层
         invokeLuaCallBackFunction_vc(error?error.localizedDescription.UTF8String:nullptr, error?(int)error.code:0);

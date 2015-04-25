@@ -20,7 +20,7 @@
 
 
 local InputNode = require("view.login.InputNode")
-local Button                = require("view.button.longButtonInStudy")
+local Button    = require("view.button.longButtonInStudy")
 
 local K12AccountBindView = class("K12AccountBindView", function() return cc.Layer:create() end)
 
@@ -29,11 +29,11 @@ K12AccountBindView.Type_password = 1
 K12AccountBindView.Type_teacher = 2
 
 function K12AccountBindView.create(viewtype, ex)
-    
     local view = K12AccountBindView.new()
     view:init(K12AccountBindView.Type_username, ex)
     view:init(K12AccountBindView.Type_password, ex)
     view:init(K12AccountBindView.Type_teacher, ex)
+    --create出来的时候，就pop出来了
     s_SCENE:popup(view)
     view:setPosition(0, 0) 
 
