@@ -264,6 +264,10 @@ function Manager.initUnitInfo(unitID)
     return localdatabase_unitWord.initUnitInfo(unitID)
 end
 
+function Manager.getBookMaxUnitID(bookKey)
+    return localdatabase_unitWord.getBookMaxUnitID(bookKey)
+end
+
 function Manager.updateUnitState(unitID)   -- TODO
     Manager.minusTodayRemainTaskNum()
     localdatabase_unitWord.updateUnitState(unitID)
