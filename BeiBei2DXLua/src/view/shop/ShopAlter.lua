@@ -42,7 +42,7 @@ function ShopAlter.create(itemId, location)
 
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
-            item:removeFromParent()
+            item:setVisible(false)
 
             local bing = sp.SkeletonAnimation:create("res/spine/shop/bing"..itemId..".json", "res/spine/shop/bing"..itemId..".atlas", 1)
             bing:setPosition(maxWidth/2-100, maxHeight/2+60)
@@ -55,8 +55,8 @@ function ShopAlter.create(itemId, location)
                 end
             end 
 
-            s_SCENE:callFuncWithDelay(4,function() 
-                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+            local action0 = cc.DelayTime:create(4)
+            local action1 = cc.CallFunc:create(function ()
                 if itemId ~= 6 then
                     if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
                         s_SCENE:removeAllPopups()
@@ -67,9 +67,13 @@ function ShopAlter.create(itemId, location)
                     s_SCENE:removeAllPopups()
                     local ShopLayer = require("view.shop.ShopLayer")
                     local shopLayer = ShopLayer.create()
-                    s_SCENE:replaceGameLayer(shopLayer)
+                    s_SCENE:replaceGameLayer(shopLayer) 
                 end
+                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
             end)
+            local action2 = cc.Sequence:create(action0,action1)
+            main:runAction(action2)
+
         else
             local shopErrorAlter = ShopErrorAlter.create()
             s_SCENE:popup(shopErrorAlter)
@@ -134,7 +138,10 @@ function ShopAlter.create(itemId, location)
         button_sure.func = function ()
             button_func()
         end
-        back:addChild(button_sure)
+
+        if itemId ~= 6 then
+            back:addChild(button_sure)
+        end
     end
 
     local label_content

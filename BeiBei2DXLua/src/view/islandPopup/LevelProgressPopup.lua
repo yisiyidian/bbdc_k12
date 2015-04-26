@@ -400,7 +400,7 @@ function LevelProgressPopup:createNormalPlay(playModel,wordList,parent,isShowAni
         else
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch() 
             local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
-            tutorial_text:setPosition((s_chapter_layer_width-s_LEFT_X)/2, levelPosition.y)
+            tutorial_text:setPosition(parent:getContentSize().width * 0.5 + 45,300)
             self:addChild(tutorial_text,520)
             local text = cc.Label:createWithSystemFont('请先打败前面的boss','',28)
             text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
