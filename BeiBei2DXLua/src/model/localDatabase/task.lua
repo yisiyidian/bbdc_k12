@@ -41,7 +41,7 @@ function M.updateEveryDay()
             s_LocalDatabaseManager.initUnitInfo(1)
             maxID = 1
         end
-        local boss = s_LocalDatabaseManager.getAllUnitInfo()[1]
+        local boss = s_LocalDatabaseManager.getAllUnitInfo()[maxID]
 
         local todayTotalTaskNum = nil
         if boss.unitState == 0 then

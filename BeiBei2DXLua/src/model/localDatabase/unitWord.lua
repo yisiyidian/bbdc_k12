@@ -83,7 +83,7 @@ function M.getTodayReviewBoss()
 
     local unitList  = {}
     for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." ORDER BY unitID ;") do
-        if row.unitState >= 4 and row.unitState <= 7 then
+        if row.unitState >= 3 and row.unitState <= 6 then
             local unit  = {}
             unit.unitID = row.unitID
             unit.unitState  = row.unitState
@@ -120,13 +120,13 @@ function M.getTodayReviewBoss()
         local unit = unitList[i]
         
         local gap
-        if     unit.unitState == 4 then
+        if     unit.unitState == 3 then
             gap = 1
-        elseif unit.unitState == 5 then
+        elseif unit.unitState == 4 then
             gap = 2
-        elseif unit.unitState == 6 then
+        elseif unit.unitState == 5 then
             gap = 3
-        elseif unit.unitState == 7 then
+        elseif unit.unitState == 6 then
             gap = 8
         end
 
