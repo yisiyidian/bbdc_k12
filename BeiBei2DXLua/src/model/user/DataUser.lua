@@ -31,6 +31,7 @@ function DataUser:ctor()
     self.username                          = ''
     self.nickName                          = ''
     self.password                          = ''
+    self.mobilePhoneNumber                 = ''
     self.sessionToken                      = ''
     self.usertype                          = USER_TYPE_GUEST
     self.channelId                         = ''

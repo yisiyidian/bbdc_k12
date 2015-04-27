@@ -59,6 +59,7 @@ function RegisterAccountView:init()
 	--alert tip 错误提示文本
 	local alertTip = cc.Label:createWithSystemFont(" ","",26)
 	alertTip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 90)
+	alertTip:setTextColor(cc.c3b(220, 57, 8))
 	self.alertTip = alertTip
 	self:addChild(alertTip)
 
@@ -88,6 +89,7 @@ end
 function RegisterAccountView:goStep(step,...)
 	local args = {...}
 	self:resetView()
+	self.alertTip:setString("")
 	--处理UI切换
 	if step == RegisterAccountView.STEP_1 then
 		self:showInputPhoneNumber(args)
@@ -96,9 +98,9 @@ function RegisterAccountView:goStep(step,...)
 	elseif step == RegisterAccountView.STEP_3 then
 		self:showChooseSex(args)
 	elseif step == RegisterAccountView.STEP_4 then
-		self:showInputNickName()
+		self:showInputNickName(args)
 	elseif step == RegisterAccountView.STEP_5 then
-		self:showInputPwd()
+		self:showInputPwd(args)
 	end
 end
 
@@ -184,11 +186,17 @@ function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
 	local SMSCode = self.inputNode:getText()
 	if string.find(SMSCode,"^%d%d%d%d%d%d$") then
 		self.SMSCode = SMSCode
+
+		--验证网络状况
+		if not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then
+        	s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
+        	return
+        end
+
 		--向服务器请求验证 验证码
-		--TODO fix
+		--TODO 解除注释
 		-- self:verifySMSCode(self.phoneNumber,self.SMSCode)
-		-- nonono
-		--TODO loading
+		--TODO 注释掉
 		self.curStep = self.curStep + 1
 		self:goStep(self.curStep)
 	else
@@ -295,7 +303,7 @@ function RegisterAccountView:showInputNickName()
 
 	local btnNickName = ccui.Button:create("image/login/sl_button_confirm.png")
 	btnNickName:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 350)
-	btnNickName:addTouchEventListener(handler(self, self.onTouchRegister))
+	btnNickName:addTouchEventListener(handler(self, self.onTouchNickNameOK))
 	btnNickName:setTitleText("下一步")
 	btnNickName:setTitleFontSize(36)
 	self:addChild(btnNickName)
@@ -307,21 +315,31 @@ function RegisterAccountView:onTouchNickNameOK(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
+	--验证昵称合法性
+	local nickName = self.inputNode:getText()
+	if nickName == "" then
+		self.alertTip:setString("昵称不能为空！")
+		return
+	end
 
-	
+	--昵称合法
+	self.nickName =  nickName
+
+	self.curStep = self.curStep + 1
+	self:goStep(self.curStep)
 end
 
 --显示输入密码的界面
 function RegisterAccountView:showInputPwd()
-	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请设置密码",nil,nil,nil,nil,11)
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请设置密码",nil,nil,nil,true,11)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputNode)
 	self.inputNode = inputNode
 	inputNode:openIME()
 	self.views[#self.views+1] = inputNode
 	
-	local inputNodeV = InputNode.new("image/signup/shuru_bbchildren_white.png","请确认密码",nil,nil,nil,nil,11)
-	inputNodeV:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 250)
+	local inputNodeV = InputNode.new("image/signup/shuru_bbchildren_white.png","请确认密码",nil,nil,nil,true,11)
+	inputNodeV:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
 	self:addChild(inputNodeV)
 	self.inputNodeV = inputNodeV
 	inputNodeV:openIME()
@@ -329,9 +347,9 @@ function RegisterAccountView:showInputPwd()
 	
 	-- cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
 	local btnRegister = ccui.Button:create("image/login/sl_button_confirm.png")
-	btnRegister:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 350)
+	btnRegister:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 400)
 	btnRegister:addTouchEventListener(handler(self, self.onTouchRegister))
-	btnRegister:setTitleText("下一步")
+	btnRegister:setTitleText("注 册")
 	btnRegister:setTitleFontSize(36)
 	self:addChild(btnRegister)
 	self.views[#self.views+1] = btnRegister
@@ -343,40 +361,48 @@ function RegisterAccountView:onTouchRegister(sender,eventType)
 		return
 	end
 
-	print("电话号码:"..self.phoneNumber)
-	print("昵称:"..self.phoneNumber)
-	print("请求注册....")
+	local pwd = self.inputNode:getText()
+	local pwdVerify = self.inputNodeV:getText()
+
+	if pwd == "" or pwdVerify == "" then
+		self.alertTip:setString("密码不能为空！")
+		return
+	elseif pwd ~= pwdVerify then
+		self.alertTip:setString("两次输入密码不一致！")
+		return
+	else
+		self.alertTip:setString("")
+	end
+
+	--注册
+	self:register(self.phoneNumber,pwd,self.nickName)
 end
 
 
 --------------------------------API-------------------
 
---结束注册
-function RegisterAccountView:endRegister()
-	-- body
-end
 
 --请求手机验证码
 --phoneNumber 	电话号码
 function RegisterAccountView:requestSMSCode(phoneNumber)
 	print("请求验证码")
-	--TODO test 
+	--TODO 解除注释 
 	--cx.CXAvos:getInstance():requestSMSCode(phoneNumber)
-	--这里是木有回调的
 end
 
 --验证手机验证码
 function RegisterAccountView:verifySMSCode(phoneNumber,smsCode)
 	print("验证手机验证码："..phoneNumber.." code:"..smsCode)
+	showProgressHUD('', true)
 	cx.CXAvos:getInstance():verifySMSCode(phoneNumber, smsCode,handler(self, self.onVerifySMSCodeCallBack))
 end
 --验证手机验证码  返回回调
+--error 	错误消息
+--errorCode 错误号
 function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
-	dump(error,"错误信息")
-	dump(errorCode,"错误码")
+	hideProgressHUD(true)
 	if errorCode~= 0 then
-		--有错误
-		self.alertTip:setString(error..":"..errorCode)
+		s_TIPS_LAYER:showSmallWithOneButton(error)
 	else
 		self.curStep = self.curStep + 1
 		self:goStep(self.curStep)
@@ -384,13 +410,33 @@ function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 end
 
 --开始注册
-function RegisterAccountView:register()
-	
+--phoneNumber 	就是手机号码
+--pwd 			密码
+--nickName 		昵称
+function RegisterAccountView:register(phoneNumber,pwd,nickName)
+	print("电话号码:"..phoneNumber)
+	print("密码:"..pwd)
+	print("昵称:"..nickName)
+	print("请求注册....")
+	showProgressHUD('', true)
+
+	s_UserBaseServer.updateLoginInfo(nickName,pwd,phoneNumber,handler(self,self.onRegisterCallBack))
 end
 
 --注册返回 回调
-function RegisterAccountView:onRegisterCallBack()
-	
+--nickName 		昵称
+--pwd 			密码
+--phoneNumber 	就是手机号码
+--error 错误信息
+--error 错误号
+function RegisterAccountView:onRegisterCallBack(nickName,pwd,phoneNumber,error,errorCode)
+	dump(error)
+	dump(errorCode)
+end
+
+--结束注册
+function RegisterAccountView:endRegister()
+
 end
 
 --重置界面

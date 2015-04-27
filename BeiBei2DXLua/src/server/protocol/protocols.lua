@@ -74,6 +74,25 @@ function isUsernameExist(username, callback)
     protocol:request()
 end
 
+--检查手机号码是否已存在
+function isPhoneNumberExist(phoneNumber,callback)
+    local api = "searchphonenumber"
+    local serverRequestType = SERVER_REQUEST_TYPE_NORMAL
+
+    --没出错则返回结果，出错之后则返回错误信息
+    local function cb(result,error)
+        local result = (error == nil) and result.datas.count > 0 or nil
+        if callback then
+            callback(result,error)
+        end
+    end
+
+    local protocol = ProtocolBase.create(api,serverRequestType,{["mobilePhoneNumber"]=phoneNumber},cb)
+    protocol:request()
+end
+
+
+
 -- localDBUser is newer than serverUser
 -- callback(updatedAt, error)
 function synUserAfterLogIn(localDBUser, serverUser, callback)
@@ -497,10 +516,11 @@ function saveUserToServer(dataTable, callback)
     end
 
     local userdata = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId}
+    --排除dataTable中指定的字段、function、table
     for key, value in pairs(dataTable) do
         if (key == 'sessionToken'
             or key == 'BEANSKEY'
-            or key == 'password' 
+            or key == 'password'
             or key == 'className' 
             or key == 'createdAt' 
             or key == 'updatedAt' 

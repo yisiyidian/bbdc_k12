@@ -240,6 +240,41 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
     end
 end
 
+--更新登陆信息
+--username 昵称
+--password 密码
+--phoneNumber 手机号码
+--onResponse  回调函数
+function UserBaseServer.updateLoginInfo(username, password, phoneNumber,onResponse)
+    if not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then
+        s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
+        if onResponse ~= nil then onResponse(username, password, phoneNumber,s_TIPS_LAYER.offlineOrNoSessionTokenTip, ERROR_CODE_MAX) end
+        return
+    end
+
+    if s_CURRENT_USER.mobilePhoneNumber ~= phoneNumber then
+        --判断手机号是否已存在
+        isPhoneNumberExist(phoneNumber,function (exist,error)
+            if error ~= nil then
+                onResponse(s_CURRENT_USER.username,s_CURRENT_USER.password,s_CURRENT_USER.mobilePhoneNumber,error.description,error.code)
+            elseif not exist then
+                saveUserToServer({["username"]=username,["password"]=password,["mobilePhoneNumber"]=phoneNumber}, function(datas,error)
+                    if error ~= nil then
+                        onResponse(s_CURRENT_USER.username,s_CURRENT_USER.password,phoneNumber,error.description,error.code)
+                    else
+                        s_CURRENT_USER.username = username
+                        s_CURRENT_USER.password = password
+                        s_CURRENT_USER.mobilePhoneNumber = phoneNumber
+                        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER,s_CURRENT_USER.userId,s_CURRENT_USER.username," and ")
+                        --修改用户资料返回
+                        onResponse(s_CURRENT_USER.username,s_CURRENT_USER.password,s_CURRENT_USER.mobilePhoneNumber,nil,0)
+                    end
+                end)
+            end            
+        end)
+    end
+end
+
 ---------------------------------------------------------------------------------------------------------------------
 
 -- onSucceed(api, result) -- result : json
