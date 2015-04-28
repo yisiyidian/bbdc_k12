@@ -418,14 +418,26 @@ function RegisterAccountView:onLoginTouch(sender,eventType)
 		return
 	end
 
+	--验证密码
+	if validatePassword(password.textField:getString()) == false then
+        s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__PWD_ERROR))
+        return
+    end
+
 	--验证id是手机还是用户名
 	--区分类型 然后走两个不同的登录接口
 	if string.find(phoneNumber,"^1[3|4|5|8][0-9]%d%d%d%d%d%d%d%d$") then
 		--手机号码登陆
+		s_O2OController.logInOnline(id, pw , true)
 	else
 		--username登陆
+		if validateUsername(username.textField:getString()) == false then
+        	s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR))
+        	return
+    	end
+		--登陆
+    	s_O2OController.logInOnline(id, pwd)
 	end
-
 end
 
 --显示修改密码界面

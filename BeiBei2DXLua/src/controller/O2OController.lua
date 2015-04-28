@@ -142,6 +142,10 @@ end
 function O2OController.logInOnline(username, password)
     O2OController.startLoadingData(USER_START_TYPE_OLD, username, password)
 end
+--通过手机号码登陆
+function O2OController.lonInOnlineByPhoneNumber(phoneNumber,password)
+    O2OController.startLoadingData(USER_START_TYPE_OLD, username, password,isPhoneNumber) 
+end
 
 function O2OController.logInByQQ()
     O2OController.startLoadingData(USER_START_TYPE_QQ, nil, nil) 
@@ -151,7 +155,7 @@ function O2OController.logInByQQAuthData()
     O2OController.startLoadingData(USER_START_TYPE_QQ_AUTHDATA, nil, nil) 
 end
 
-function O2OController.startLoadingData(userStartType, username, password)
+function O2OController.startLoadingData(userStartType, username, password,isPhoneNumber)
     LOGTIME('O2OController.startLoadingData')
     local tmpUser = DataUser.create()
     local hasUserInLocalDB = false
@@ -227,7 +231,12 @@ function O2OController.startLoadingData(userStartType, username, password)
             isLocalNewerThenServer = true
             s_UserBaseServer.signUp(username, password, onResponse)
         else
-            s_UserBaseServer.logIn(username, password, onResponse)
+            if isPhoneNumber then
+                --手机号码登陆
+                s_UserBaseServer.loginByPhoneNumber(username, password, onResponse)
+            else
+                s_UserBaseServer.logIn(username, password, onResponse)
+            end
         end
     elseif userStartType == USER_START_TYPE_QQ then 
         s_UserBaseServer.onLogInByQQ(onResponse)
