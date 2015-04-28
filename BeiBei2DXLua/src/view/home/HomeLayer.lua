@@ -50,7 +50,7 @@ function HomeLayer.create()
 
     -- add tutorial step
     if s_CURRENT_USER.tutorialStep == s_tutorial_home then
-        s_CURRENT_USER:setTutorialStep(s_tutorial_home+1)
+        s_CURRENT_USER:setTutorialStep(s_tutorial_home+1) --1 -> 2
         -- print('tutorial_step:'..s_CURRENT_USER.tutorial_step)
     end
     -- print("totalStudyWordNum : "..totalStudyWordNum)

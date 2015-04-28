@@ -312,7 +312,7 @@ function O2OController.getUserDatasOnline()
                     O2OController.getDailyStudyInfo(function () 
                         LOGTIME('enterHomeLayer')
                         s_CorePlayManager.enterHomeLayer()
-                        O2OController.getBulletinBoard()   
+                        -- O2OController.getBulletinBoard()   
                         s_CURRENT_USER.dataDailyUsing:reset() 
                     end)
 

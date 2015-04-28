@@ -33,9 +33,11 @@ function ShopAlter.create(itemId, location)
     local maxHeight = back:getContentSize().height
 
     local item
+    local click_button = 0
 
     main.sure = function()
-        if s_CURRENT_USER:getBeans() >= s_DataManager.product[itemId].productValue then
+        if s_CURRENT_USER:getBeans() >= s_DataManager.product[itemId].productValue and click_button == 0 then
+            click_button = 1
             s_CURRENT_USER:subtractBeans(s_DataManager.product[itemId].productValue)
             s_CURRENT_USER:unlockFunctionState(itemId)
             saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY], ['lockFunction']=s_CURRENT_USER.lockFunction})
@@ -74,30 +76,34 @@ function ShopAlter.create(itemId, location)
             local action2 = cc.Sequence:create(action0,action1)
             main:runAction(action2)
 
-        else
+        elseif s_CURRENT_USER:getBeans() < s_DataManager.product[itemId].productValue and click_button == 0 then
+            click_button = 1
             local shopErrorAlter = ShopErrorAlter.create()
             s_SCENE:popup(shopErrorAlter)
         end
     end
 
     main.go = function ()
-        for i=1,5 do
-            if itemId == i then
-                s_LocalDatabaseManager.setBuy(math.pow(10,i-1))
-            end
-        end 
-
-        if itemId ~= 6 then
-            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                   s_SCENE:removeAllPopups()
+        if click_button == 0 then
+            click_button = 1
+            for i=1,5 do
+                if itemId == i then
+                    s_LocalDatabaseManager.setBuy(math.pow(10,i-1))
                 end
-            local homeLayer = HomeLayer.create(true) 
-            s_SCENE:replaceGameLayer(homeLayer)
-        else   
-            s_SCENE:removeAllPopups()
-            local ShopLayer = require("view.shop.ShopLayer")
-            local shopLayer = ShopLayer.create()
-            s_SCENE:replaceGameLayer(shopLayer)
+            end 
+
+            if itemId ~= 6 then
+                if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+                       s_SCENE:removeAllPopups()
+                    end
+                local homeLayer = HomeLayer.create(true) 
+                s_SCENE:replaceGameLayer(homeLayer)
+            else   
+                s_SCENE:removeAllPopups()
+                local ShopLayer = require("view.shop.ShopLayer")
+                local shopLayer = ShopLayer.create()
+                s_SCENE:replaceGameLayer(shopLayer)
+            end
         end
     end
     
