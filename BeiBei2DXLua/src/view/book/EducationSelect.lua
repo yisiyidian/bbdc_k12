@@ -1,6 +1,8 @@
 require("cocos.init")
 require("common.global")
 
+IntroLayer = require("view.login.IntroLayer")
+
 --选择年级  小学 初中 高中
 --
 
@@ -84,6 +86,7 @@ function EducationSelect:ctor()
         bookBtn:addTouchEventListener(enterBookLayer) 	
     end
     --弹出注册帐号
+    --TODO 这块的流程太乱 需整理
     self:popupAccountBind()
 
 end
@@ -92,9 +95,15 @@ end
 --弹出注册帐号的界面
 function EducationSelect:popupAccountBind()
     if s_CURRENT_USER.tutorialStep > s_tutorial_book_select or s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then return end
-
+    --
+    local introLayer = IntroLayer.create()
+    s_SCENE:popup(introLayer)
+    
+    --被废弃的账号注册流程
+    --[[
     local K12AccountBindView = require('view.login.K12AccountBindView')
     local view = K12AccountBindView.create(K12AccountBindView.Type_username)
+    ]]
 end
 
 return EducationSelect

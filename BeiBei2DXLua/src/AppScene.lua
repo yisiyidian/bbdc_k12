@@ -166,7 +166,8 @@ end
 function AppScene:replaceGameLayer(newLayer)
     self.gameLayer:removeAllChildren()
     self.gameLayer:addChild(newLayer)
-
+    --
+    print("replace GameLayer OK")
     updateCurrentEverydayInfo()
 
     if newLayer.class ~= nil and newLayer.class.__cname ~= nil then 

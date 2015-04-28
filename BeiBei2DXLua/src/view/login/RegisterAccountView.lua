@@ -447,8 +447,11 @@ end
 
 --结束注册
 function RegisterAccountView:endRegister()
-	--TODO处理登陆的信息 刷新个人资料面板
-	s_SCENE:removeAllPopups()
+	if self.close ~= nil then
+		self.close()
+	else
+		s_SCENE:removeAllPopups()
+	end
 end
 
 --重置界面
