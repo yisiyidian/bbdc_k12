@@ -9,7 +9,7 @@ function M.getRandomWord()
     return "apple"
 end
 
-function M.addStudyWordsNum()
+function M.addStudyWordsNum(addNum)
     local userId = s_CURRENT_USER.objectId
     local bookKey = s_CURRENT_USER.bookKey
     local username = s_CURRENT_USER.username
@@ -19,13 +19,13 @@ function M.addStudyWordsNum()
 
     local data = M.getDataDailyStudyInfo(today)
     if data == nil then
-        data = DataDailyStudyInfo.createData(bookKey, today, 1, 0, time, 0)
+        data = DataDailyStudyInfo.createData(bookKey, today, addNum, 0, time, 0)
         Manager.saveData(data, userId, username, 0)
     else
-        data.studyNum = data.studyNum + 1
-        Manager.saveData(data, userId, username, 1, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
+        data.studyNum = data.studyNum + addNum
+        Manager.saveData(data, userId, username, addNum, " and bookKey = '"..bookKey.."' and dayString = '"..today.."' ;")
     end
-    s_CURRENT_USER.wordsCount = s_CURRENT_USER.wordsCount + 1
+    s_CURRENT_USER.wordsCount = s_CURRENT_USER.wordsCount + addNum
     saveUserToServer({['wordsCount']=s_CURRENT_USER.wordsCount})
     saveDailyStudyInfoToServer(data)
     return data
@@ -117,6 +117,80 @@ function M.getDataDailyStudyInfo(dayString)
         return data
     end
     return nil
+end
+
+function M.getTotalStudyWordsNum()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local username = s_CURRENT_USER.username
+
+    local num = 0
+    if userId ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
+            num = num + row.studyNum
+        end
+    end
+    if num == 0 and username ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE username = '"..username.."' and bookKey = '"..bookKey.."' ;") do
+            num = num + row.studyNum
+        end
+    end
+
+    -- if dbData ~= nil then
+    --     local data = DataDailyStudyInfo.createData(dbData.bookKey, dbData.dayString, dbData.studyNum, dbData.graspNum, dbData.lastUpdate)
+    --     parseLocalDBDataToClientData(dbData, data)
+    --     return data
+    -- end
+    return num
+end
+
+function M.getTotalStudyWordsNumByBookKey(bookKey)
+    local userId = s_CURRENT_USER.objectId
+    local username = s_CURRENT_USER.username
+
+    local num = 0
+    if userId ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
+            num = num + row.studyNum
+        end
+    end
+    if num == 0 and username ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE username = '"..username.."' and bookKey = '"..bookKey.."' ;") do
+            num = num + row.studyNum
+        end
+    end
+
+    -- if dbData ~= nil then
+    --     local data = DataDailyStudyInfo.createData(dbData.bookKey, dbData.dayString, dbData.studyNum, dbData.graspNum, dbData.lastUpdate)
+    --     parseLocalDBDataToClientData(dbData, data)
+    --     return data
+    -- end
+    return num
+end
+
+function M.getTotalGraspWordsNum()
+    local userId = s_CURRENT_USER.objectId
+    local bookKey = s_CURRENT_USER.bookKey
+    local username = s_CURRENT_USER.username
+
+    local num = 0
+    if userId ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE userId = '"..userId.."' and bookKey = '"..bookKey.."' ;") do
+            num = num + row.graspNum
+        end
+    end
+    if num == 0 and username ~= '' then
+        for row in Manager.database:nrows("SELECT * FROM DataDailyStudyInfo WHERE username = '"..username.."' and bookKey = '"..bookKey.."' ;") do
+            num = num + row.graspNum
+        end
+    end
+
+    -- if dbData ~= nil then
+    --     local data = DataDailyStudyInfo.createData(dbData.bookKey, dbData.dayString, dbData.studyNum, dbData.graspNum, dbData.lastUpdate)
+    --     parseLocalDBDataToClientData(dbData, data)
+    --     return data
+    -- end
+    return num
 end
 
 function M.saveDataDailyStudyInfo(data)

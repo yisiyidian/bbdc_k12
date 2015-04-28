@@ -380,9 +380,9 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         end
         
         if not match then
-            if endTime < 1 and not checkAtOnce then
-                return
-            end
+            -- if endTime < 1 and not checkAtOnce then
+            --     return
+            -- end
             layer:clearCombo()
             local s
             if layer.girlAfraid then
@@ -645,7 +645,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
 
     onTouchEnded = function(touch, event)
         isTouchEnded = true
-        checkAnswer(false)
+        checkAnswer(true)
     end
 
     
@@ -709,15 +709,6 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             end
         elseif not layer.girlAfraid and layer.bubble[1]:isVisible() then
             layer.bubble[1]:setVisible(false)
-        end
-
-        if endTime < 1 and #selectStack > 0 and isTouchEnded then
-            endTime = endTime + delta
-        end
-        if endTime >= 1 then
-            
-            checkAnswer(false)
-            endTime = 0
         end
 
         if layer.girlAfraid and HINT_TIME == 10 then
@@ -1590,7 +1581,8 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
         elseif s_CURRENT_USER.winCombo <= 3 then
             s_CURRENT_USER.timeAdjust = 0
         end
-        s_CURRENT_USER.wordsCount = s_CURRENT_USER.wordsCount + self.maxCount
+        --s_CURRENT_USER.wordsCount = s_CURRENT_USER.wordsCount + self.maxCount
+        s_LocalDatabaseManager.addStudyWordsNum(self.maxCount)
     end
 
     saveUserToServer({['timeAdjust']=s_CURRENT_USER.timeAdjust, 
@@ -1598,6 +1590,7 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
                       ['failTime']=s_CURRENT_USER.failTime,
                       ['wordsCount'] = s_CURRENT_USER.wordsCount})
     --s_CorePlayManager.leaveSummaryModel(true)
+    
     self.girl:setAnimation(0,'girl_win',true)
     s_SCENE:callFuncWithDelay(1.5,function (  )
         local alter = SummaryBossAlter.create(self,true,chapter,entrance)

@@ -130,8 +130,8 @@ function Manager.getRandomWord()
     return localdatabase_dailyStudyInfo.getRandomWord()
 end
 
-function Manager.addStudyWordsNum()
-    local data = localdatabase_dailyStudyInfo.addStudyWordsNum()
+function Manager.addStudyWordsNum(addNum)
+    local data = localdatabase_dailyStudyInfo.addStudyWordsNum(addNum)
     -- s_UserBaseServer.synTodayDailyStudyInfo(data, nil, false)
 end
 
@@ -195,9 +195,9 @@ function Manager.getPrevWordState()
     return localdatabase_bossWord.getPrevWordState()
 end
 
-function Manager.getTodayReviewBoss()
-    return localdatabase_bossWord.getTodayReviewBoss()
-end
+-- function Manager.getTodayReviewBoss()
+--     return localdatabase_bossWord.getTodayReviewBoss()
+-- end
 
 function Manager.getMaxBoss()
     return localdatabase_bossWord.getMaxBoss()
@@ -265,9 +265,17 @@ function Manager.initUnitInfo(unitID)
     return localdatabase_unitWord.initUnitInfo(unitID)
 end
 
+function Manager.getBookMaxUnitID(bookKey)
+    return localdatabase_unitWord.getBookMaxUnitID(bookKey)
+end
+
 function Manager.updateUnitState(unitID)   -- TODO
-    -- Manager.minusTodayRemainTaskNum()
+    Manager.minusTodayRemainTaskNum()
     localdatabase_unitWord.updateUnitState(unitID)
+end
+
+function Manager.getUnitCoolingSeconds(unitID)
+    return localdatabase_unitWord.getUnitCoolingSeconds(unitID)
 end
 
 function Manager.printUnitWord()
@@ -276,15 +284,18 @@ end
 ---- Statistics -----------------------------------------------------------------------------------------
 
 function Manager.getTotalStudyWordsNum()
-    return s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
+    --return s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
+    return localdatabase_dailyStudyInfo.getTotalStudyWordsNum()
 end
 
 function Manager.getTotalStudyWordsNumByBookKey(bookKey)
-    return s_CURRENT_USER.levelInfo:getWordIndex(bookKey) - 1
+    --return s_CURRENT_USER.levelInfo:getWordIndex(bookKey) - 1
+    return localdatabase_dailyStudyInfo.getTotalStudyWordsNumByBookKey(bookKey)
 end
 
 function Manager.getTotalGraspWordsNum()
-    return #localdatabase_bossWord.getAllWrongWordList()
+    --return #localdatabase_bossWord.getAllWrongWordList()
+    return localdatabase_dailyStudyInfo.getTotalGraspWordsNum()
 end
 
 function Manager.getStudyWords()

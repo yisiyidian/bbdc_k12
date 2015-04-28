@@ -1,0 +1,62 @@
+{
+"skeleton": { "hash": "WpTT/eMVtIgzkPMQbGRIQkFIx7k", "spine": "2.1.27", "width": 1393.09, "height": 1135.5, "images": "./图/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "vvv", "bone": "root", "attachment": "vvv" },
+	{ "name": "yun", "bone": "root", "attachment": "yun" },
+	{ "name": "bccbcbcbbc", "bone": "root", "attachment": "bccbcbcbbc" },
+	{ "name": "2_ccizi", "bone": "root", "attachment": "2_ccizi" },
+	{ "name": "2_paizi", "bone": "root", "attachment": "2_paizi" },
+	{ "name": "yingzibbbb", "bone": "root", "attachment": "yingzibbbb" },
+	{ "name": "2", "bone": "root", "attachment": "2" },
+	{ "name": "2_zi", "bone": "root", "attachment": "2_zi" },
+	{ "name": "2_paizi 2", "bone": "root", "attachment": "2_paizi 2" }
+],
+"skins": {
+	"default": {
+		"2": {
+			"2": { "y": 463.46, "width": 28, "height": 49 }
+		},
+		"2_ccizi": {
+			"2_ccizi": { "x": 35.07, "y": -16.02, "width": 217, "height": 175 }
+		},
+		"2_paizi": {
+			"2_paizi": { "y": -186.45, "width": 508, "height": 99 }
+		},
+		"2_paizi 2": {
+			"2_paizi 2": { "x": 712.09, "y": -186.17, "width": 508, "height": 99 }
+		},
+		"2_zi": {
+			"2_zi": { "y": 358.17, "width": 359, "height": 37 }
+		},
+		"bccbcbcbbc": {
+			"bccbcbcbbc": { "y": -436, "width": 854, "height": 264 }
+		},
+		"vvv": {
+			"vvv": { "y": -50.38, "scaleY": 54.208, "width": 854, "height": 19 }
+		},
+		"yingzibbbb": {
+			"yingzibbbb": { "x": 8.15, "y": -295.91, "scaleX": 2.304, "scaleY": 0.553, "width": 222, "height": 47 }
+		},
+		"yun": {
+			"yun": { "y": 336, "width": 854, "height": 463 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 1619.15, "y": 0 },
+					{ "time": 0.2, "x": -69.33, "y": 0 },
+					{ "time": 0.3333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2.1, "x": 0, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

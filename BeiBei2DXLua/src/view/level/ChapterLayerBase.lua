@@ -142,9 +142,11 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     local levelState, coolingDay
     local currentTaskBossIndex = -1
     for bossID, bossInfo in pairs(bossList) do
+
         if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 and bossInfo["unitState"] - 7 < 0 then
             currentTaskBossIndex = bossID - 1
         end
+        print('bossID:'..bossID..','..levelIndex)
         if bossID - (levelIndex + 1) == 0 then
             levelState = bossInfo["unitState"] 
             coolingDay = bossInfo["coolingDay"] + 0
@@ -178,43 +180,45 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     print("levelState"..levelState)
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
+    -- if levelState == 0 then
+    --     local deco = sp.SkeletonAnimation:create("spine/chapterlevel/beibeidaizi.json","spine/chapterlevel/beibeidaizi.atlas",1)
+    --     --local deco = sp.SkeletonAnimation:create("spine/tutorial/jieshao1.json","spine/tutorial/jieshao1.atlas",1)
+    --     deco:setPosition(levelPosition.x-60,levelPosition.y-10)
+    --     deco:setAnchorPoint(1,1)
+    --     deco:addAnimation(0, 'animation', true)
+    --     self:addChild(deco, 130)
+    --     -- local deco = cc.Sprite:create('image/chapter/elements/tubiao_daizi_tanchu_xiaoguan.png')
+    --     -- deco:setPosition(levelPosition.x,levelPosition.y+20)
+    --     -- self:addChild(deco, 130)
+    -- else
     if levelState == 0 then
-        local deco = sp.SkeletonAnimation:create("spine/chapterlevel/beibeidaizi.json","spine/chapterlevel/beibeidaizi.atlas",1)
-        deco:setPosition(levelPosition.x-60,levelPosition.y-10)
-        deco:setAnchorPoint(1,1)
-        deco:addAnimation(0, 'animation', true)
-        self:addChild(deco, 130)
-        -- local deco = cc.Sprite:create('image/chapter/elements/tubiao_daizi_tanchu_xiaoguan.png')
-        -- deco:setPosition(levelPosition.x,levelPosition.y+20)
-        -- self:addChild(deco, 130)
-    elseif levelState == 1 then
         -- local deco = cc.Sprite:create('image/chapter/elements/tubiao_chuizi_tanchu_xiaoguan.png')
         -- deco:setPosition(levelPosition.x,levelPosition.y+20)
         -- self:addChild(deco, 130)
-        if s_level_popup_state ~= 0 then
-            local deco = sp.SkeletonAnimation:create("spine/chapterlevel/beibeidaizi.json","spine/chapterlevel/beibeidaizi.atlas",1)
-            deco:setPosition(levelPosition.x-60,levelPosition.y-10)
-            deco:setAnchorPoint(1,1)
-            deco:addAnimation(0, 'animation', true)
-            self:addChild(deco, 130)
-            deco:runAction(cc.FadeOut:create(1.0));
-            self:callFuncWithDelay(0.5, function()
-                local deco = sp.SkeletonAnimation:create("spine/chapterlevel/chuizi.json","spine/chapterlevel/chuizi.atlas",1)
-                deco:setPosition(levelPosition.x-60,levelPosition.y-10)
-                deco:setAnchorPoint(1,1)
-                deco:addAnimation(0, 'animation', true)
-                self:addChild(deco, 130)
-            end)
-        else
+        -- if s_level_popup_state ~= 0 then
+        --     local deco = sp.SkeletonAnimation:create("spine/chapterlevel/beibeidaizi.json","spine/chapterlevel/beibeidaizi.atlas",1)
+        --     deco:setPosition(levelPosition.x-60,levelPosition.y-10)
+        --     deco:setAnchorPoint(1,1)
+        --     deco:addAnimation(0, 'animation', true)
+        --     self:addChild(deco, 130)
+        --     deco:runAction(cc.FadeOut:create(1.0));
+        --     self:callFuncWithDelay(0.5, function()
+        --         local deco = sp.SkeletonAnimation:create("spine/chapterlevel/chuizi.json","spine/chapterlevel/chuizi.atlas",1)
+        --         deco:setPosition(levelPosition.x-60,levelPosition.y-10)
+        --         deco:setAnchorPoint(1,1)
+        --         deco:addAnimation(0, 'animation', true)
+        --         self:addChild(deco, 130)
+        --     end)
+        -- else
             local deco = sp.SkeletonAnimation:create("spine/chapterlevel/chuizi.json","spine/chapterlevel/chuizi.atlas",1)
             deco:setPosition(levelPosition.x-60,levelPosition.y-10)
             deco:setAnchorPoint(1,1)
             deco:addAnimation(0, 'animation', true)
             self:addChild(deco, 130)
-        end
+        -- end
 
 
-    elseif levelState == 2 or (levelState >= 4 and levelIndex == currentTaskBossIndex) then
+    elseif levelState == 1 or (levelState >= 3 and levelState <= 6 and levelIndex == currentTaskBossIndex) then
         if s_level_popup_state ~= 0 then
             local deco = sp.SkeletonAnimation:create("spine/chapterlevel/chuizi.json","spine/chapterlevel/chuizi.atlas",1)
             deco:setPosition(levelPosition.x-60,levelPosition.y-10)
@@ -235,7 +239,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
             self:addChild(reviewBoss, 140)
         end
         -- only one review boss
-    elseif levelState == 3 then 
+    elseif levelState == 2 then 
         if s_level_popup_state ~= 0 then
             local reviewBoss = sp.SkeletonAnimation:create('spine/3 fxzlsxuanxiaoguandiaoluo1.json', 'spine/3 fxzlsxuanxiaoguandiaoluo1.atlas', 1)
             reviewBoss:addAnimation(1, '2', true)   
@@ -275,16 +279,16 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 end
 
 function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex)
-    local bossList = s_LocalDatabaseManager.getAllBossInfo()
+    local bossList = s_LocalDatabaseManager.getAllUnitInfo()
     local state, coolingDay
     for bossID, bossInfo in pairs(bossList) do
         if bossID - (levelIndex + 1) == 0 then
-            state = bossInfo["typeIndex"] + 0
+            state = bossInfo["unitState"] + 0
             coolingDay = bossInfo["coolingDay"] + 0
         end
     end
     
-    if state >= 4 and active ~= 0 then
+    if state >= 3 and active ~= 0 then
         local WordLibrary = require("view.islandPopup.WordLibraryPopup")
         local wordLibrary = WordLibrary.create(levelIndex)
         s_SCENE.popupLayer:addChild(wordLibrary)   

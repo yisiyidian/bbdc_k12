@@ -3,145 +3,145 @@
               {
               "key": "primary_1",
               "name": "三年级（上）",
-              "words": 68,
+              "words": 64,
               "music": "17M"
               },
               {
               "key": "primary_2",
               "name": "三年级（下）",
-              "words": 64,
+              "words": 57,
               "music": "17M"
               },
               {
               "key": "primary_3",
               "name": "四年级（上）",
-              "words": 132,
+              "words": 121,
               "music": "17M"
               },
               {
               "key": "primary_4",
               "name": "四年级（下）",
-              "words": 78,
+              "words": 71,
               "music": "17M"  
               },
               {
               "key": "primary_5",
               "name": "五年级（上）",
-              "words": 81,
+              "words": 71,
               "music": "17M"
               },
               {
               "key": "primary_6",
               "name": "五年级（下）",
-              "words": 78,
+              "words": 61,
               "music": "17M"
               },
               {
               "key": "primary_7",
               "name": "六年级（上）",
-              "words": 77,
+              "words": 75,
               "music": "17M"
               },
               {
               "key": "primary_8",
               "name": "六年级（下）",
-              "words": 49,
+              "words": 19,
               "music": "17M"
               },
               {
               "key": "junior_1",
               "name": "初一（上）",
-              "words": 347,
+              "words": 305,
               "music": "8.2M"
               },
               {
               "key": "junior_2",
               "name": "初一（下）",
-              "words": 396,
+              "words": 369,
               "music": "8.2M"
               },
               {
               "key": "junior_3",
               "name": "初二（上）",
-              "words": 346,
+              "words": 318,
               "music": "8.2M"
               },
               {
               "key": "junior_4",
               "name": "初二（下）",
-              "words": 363,
+              "words": 327,
               "music": "8.2M"
               },
               {
               "key": "junior_5",
               "name": "初三",
-              "words": 575,
+              "words": 506,
               "music": "8.2M"
               },
               {
               "key": "senior_1",
               "name": "英语1",
-              "words": 217,
+              "words": 194,
               "music": "17M"
               },
               {
               "key": "senior_2",
               "name": "英语2",
-              "words": 230,
+              "words": 211,
               "music": "17M"  
               },
               {
               "key": "senior_3",
               "name": "英语3",
-              "words": 268,
+              "words": 241,
               "music": "17M"
               },
               {
               "key": "senior_4",
               "name": "英语4",
-              "words": 236,
+              "words": 207,
               "music": "17M"
               },
               {
               "key": "senior_5",
               "name": "英语5",
-              "words": 295,
+              "words": 276,
               "music": "17M"
               },
               {
               "key": "senior_6",
               "name": "英语6",
-              "words": 306,
+              "words": 285,
               "music": "17M"
               },
               {
               "key": "senior_7",
               "name": "英语7",
-              "words": 289,
+              "words": 265,
               "music": "8.2M"
               },
               {
               "key": "senior_8",
               "name": "英语8",
-              "words": 304,
+              "words": 280,
               "music": "8.2M"
               },
               {
               "key": "senior_9",
               "name": "英语9",
-              "words": 283,
+              "words": 247,
               "music": "8.2M"
               },
               {
               "key": "senior_10",
               "name": "英语10",
-              "words": 275,
+              "words": 243,
               "music": "8.2M"
               },
               {
               "key": "senior_11",
               "name": "英语11",
-              "words": 234,
+              "words": 197,
               "music": "8.2M"
               }
               ]

@@ -64,10 +64,10 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
 end
 
 function SummaryBossAlter:lose(entrance)
-    if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
-        s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
-        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_timeout)
-    end
+    -- if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
+    --     s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
+    --     s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_timeout)
+    -- end
 
     --add board
     self.loseBoard = cc.Sprite:create("image/summarybossscene/background_zjboss_tanchu.png")
@@ -101,6 +101,7 @@ function SummaryBossAlter:lose(entrance)
     self.loseBoard:addChild(giveup)
 
     local function button_giveup_func()
+        playSound(s_sound_buttonEffect)
         self:lose2(entrance)
     end
 
@@ -126,20 +127,26 @@ function SummaryBossAlter:lose(entrance)
 
 
     local function button_buyTime_func()
-        s_CURRENT_USER:addBeans(-10)
-        saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
-        local boss = self.bossLayer.bossNode
-        local distance = s_DESIGN_WIDTH * 0.45 * 30 / self.bossLayer.totalTime
-        self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
-        s_SCENE:callFuncWithDelay(0.3,function (  )
-            -- body
-            self:getChildByName('background'):runAction(cc.FadeOut:create(1.0))
-            boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75 + 20)),cc.CallFunc:create(function (  )
+        playSound(s_sound_buttonEffect)
+        if s_CURRENT_USER:getBeans() >= 10 then
+            s_CURRENT_USER:addBeans(-10)
+            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
+            local boss = self.bossLayer.bossNode
+            local distance = s_DESIGN_WIDTH * 0.45 * 30 / self.bossLayer.totalTime
+            self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
+            s_SCENE:callFuncWithDelay(0.3,function (  )
                 -- body
-                self:removeChildByName('background')
-                self:addTime()
-            end)))
-        end)
+                self:getChildByName('background'):runAction(cc.FadeOut:create(1.0))
+                boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75 + 20)),cc.CallFunc:create(function (  )
+                    -- body
+                    self:removeChildByName('background')
+                    self:addTime()
+                end)))
+            end)
+        else
+            local shopErrorAlter = require("view.shop.ShopErrorAlter").create()
+            s_SCENE:popup(shopErrorAlter)
+        end
     end
 
     buyTimeBtn.func = function ()
@@ -346,19 +353,6 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     backColor:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
     self:addChild(backColor)
 
-    -- local been_number_back = cc.Sprite:create("image/shop/been_number_back.png")
-    -- been_number_back:setPosition(s_RIGHT_X - s_LEFT_X -100, s_DESIGN_HEIGHT-50)
-    -- backColor:addChild(been_number_back)
-
-    -- local been = cc.Sprite:create("image/shop/been.png")
-    -- been:setPosition(0, been_number_back:getContentSize().height/2)
-    -- been_number_back:addChild(been)
-
-    -- local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
-    -- been_number:setColor(cc.c4b(0,0,0,255))
-    -- been_number:setPosition(been_number_back:getContentSize().width/2 , been_number_back:getContentSize().height/2)
-    -- been_number_back:addChild(been_number)
-
     local win_back = cc.Sprite:create('image/summarybossscene/win_back.png')
     win_back:setAnchorPoint(0.5,0)
     win_back:setPosition(s_DESIGN_WIDTH / 2,-140)
@@ -368,12 +362,21 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     end
 
     local function button_func()
+        playSound(s_sound_buttonEffect)
+        if not s_isCheckInAnimationDisplayed then
+            if s_HUD_LAYER:getChildByName('missionCompleteCircle') ~= nil then
+                s_HUD_LAYER:getChildByName('missionCompleteCircle'):setName('missionComplete')
+            end
+        end
+        s_HUD_LAYER:removeChildByName('missionCompleteCircle')
         if entrance == ENTRANCE_WORD_LIBRARY then
             s_CorePlayManager.enterLevelLayer()
         else
-            s_HUD_LAYER:removeChildByName('missionCompleteCircle')
+            if s_HUD_LAYER:getChildByName('missionComplete') ~= nil then
+                s_HUD_LAYER:getChildByName('missionComplete'):setVisible(false)
+            end
             s_CorePlayManager.enterLevelLayer()
-        end
+        end  
     end
 
     local button = Button.create("long","blue","完成")
@@ -404,6 +407,9 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
 
     onAndroidKeyPressed(self, function ()
         s_HUD_LAYER:removeChildByName('missionCompleteCircle')
+        if s_HUD_LAYER:getChildByName('missionComplete') ~= nil then
+            s_HUD_LAYER:getChildByName('missionComplete'):setVisible(false)
+        end
         s_CorePlayManager.enterLevelLayer()
     end, function ()
 
@@ -475,7 +481,7 @@ function SummaryBossAlter:addWinLabel(win_back)
     end
     local function update(delta)
         --print('delta='..delta)
-        if word_count < self.bossLayer.maxCount then
+        if word_count < self.bossLayer.rightWord then
             word_count = word_count + 1
             word_count_label:setString(string.format('%d',word_count))
         end
@@ -491,7 +497,7 @@ function SummaryBossAlter:addWinLabel(win_back)
             -- end
             sec_count_label:setString(string.format('%d',sec_count))
         end
-        if word_count == self.bossLayer.maxCount and min_count == math.floor(self.bossLayer.useTime/60) and sec_count >= math.floor(self.bossLayer.useTime%60) then
+        if word_count == self.bossLayer.rightWord and min_count == math.floor(self.bossLayer.useTime/60) and sec_count >= math.floor(self.bossLayer.useTime%60) then
             if self.entrance then
                 for i = 1,3 do
                     local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')

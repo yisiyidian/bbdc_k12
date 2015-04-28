@@ -235,8 +235,13 @@ end
 -- end
 
 function CorePlayManager.enterHomeLayer()
+
+    -- local DramaLayer = require("view.home.DramaLayer")
+    -- local dramaLayer = DramaLayer.create()
+    -- s_SCENE:replaceGameLayer(dramaLayer)
     local homeLayer = HomeLayer.create()
     s_SCENE:replaceGameLayer(homeLayer)
+
 end
 
 function CorePlayManager.enterLevelLayer()
@@ -285,7 +290,7 @@ function CorePlayManager.initTotalUnitPlay()
     CorePlayManager.currentUnitID = nil
     for i = 1, #unitList do
         local unit = unitList[i]
-        if unit.unitState >= 4 and unit.unitState <= 7 then
+        if unit.unitState >= 3 and unit.unitState <= 6 then
             if unit.coolingDay == 0 then
                 CorePlayManager.currentUnitID = unit.unitID
                 break
