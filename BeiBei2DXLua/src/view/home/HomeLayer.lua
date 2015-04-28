@@ -168,7 +168,7 @@ function HomeLayer.create()
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2+offset,s_DESIGN_HEIGHT/2))
                 --backColor:runAction(action1)
 
-                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X+offset,s_DESIGN_HEIGHT/2))
+                local action2 = cc.DelayTime:create(0.5)
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 backColor:runAction(cc.Sequence:create(action1, action3))
                 --offline tip
@@ -183,7 +183,7 @@ function HomeLayer.create()
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
                 --backColor:runAction(action1)
 
-                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+                local action2 = cc.DelayTime:create(0.5)
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 backColor:runAction(cc.Sequence:create(action1, action3))
             end
@@ -828,7 +828,7 @@ function HomeLayer.create()
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
                 --backColor:runAction(action1)
 
-                local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+                local action2 = cc.DelayTime:create(0.5)
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 backColor:runAction(cc.Sequence:create(action1, action3))
             end
@@ -848,7 +848,7 @@ function HomeLayer.create()
             local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
             --backColor:runAction(action1)
 
-            local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+            local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
             backColor:runAction(cc.Sequence:create(action1, action3))
         end
@@ -945,7 +945,7 @@ function HomeLayer.create()
             local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
             --backColor:runAction(action1)
 
-            local action2 = cc.MoveTo:create(0.5, cc.p(s_LEFT_X,s_DESIGN_HEIGHT/2))
+            local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
             backColor:runAction(cc.Sequence:create(action1, action3))
 

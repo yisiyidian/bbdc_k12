@@ -380,6 +380,17 @@ end
 function M.getAllUnitInfo()
     local unitList = {}
 
+
+    -- local bookMaxID = M.getBookMaxUnitID(s_CURRENT_USER.bookKey)
+    -- print('test book max ID:'..bookMaxID)
+    -- local unitID = 1
+    -- local bookMaxID = M.getBookMaxUnitID(s_CURRENT_USER.bookKey)
+    -- print('test book max ID ##:'..bookMaxID)
+    -- if unitID - bookMaxID < 0 then
+    --     M.initUnitInfo(unitID+1)
+    -- end
+    -- print_lua_table(s_BookUnitWord)
+
     local maxUnitID = M.getMaxUnitID()
     for i = 1, maxUnitID do
         local unit = M.getUnitInfo(i)
@@ -493,7 +504,7 @@ function M.initUnitInfo(unitID)
     -- for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition..";") do
     --     print(row.unitID)
     -- end
-    --saveDataToServer(true, time, unitID, unitState, wordList, currentWordIndex, 0)
+    saveDataToServer(true, time, unitID, unitState, wordList, currentWordIndex, 0)
 end
 
 function M.updateUnitState(unitID)
@@ -510,13 +521,15 @@ function M.updateUnitState(unitID)
 
         local query = "UPDATE DataUnit SET lastUpdate = '"..time.."' , unitState = "..newUnitState.." WHERE "..condition.." and unitID = "..unitID.." ;"
         Manager.database:exec(query)
-        -- saveDataToServer(true, time, row.unitID, newUnitState, row.wordList, currentWordIndex, row.savedToServer)
+        saveDataToServer(true, time, row.unitID, newUnitState, row.wordList, currentWordIndex, row.savedToServer)
 
         if newUnitState == 3 then
+        -- if true then
             -- query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, unitID, unitState, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..", 0) ;"
             -- Manager.database:exec(query)
             -- saveDataToServer(true, time, unitID + 1, 0, '', 0, 0)
             local bookMaxID = M.getBookMaxUnitID(bookKey)
+            -- print('test book max ID ##:'..bookMaxID)
             if unitID - bookMaxID < 0 then
                 M.initUnitInfo(unitID+1)
             end
@@ -552,7 +565,17 @@ function M.printUnitWord()
 end
 
 function M.getBookMaxUnitID(bookKey)
-    return #s_BookUnitWord[bookKey]
+    -- print('getBookmaxunit')
+    -- print('bookKey:'..bookKey)
+    -- print_lua_table(s_BookUnitWord[bookKey])
+    local maxID = 1
+    for unitID, unitWord in pairs(s_BookUnitWord[bookKey]) do
+        if unitID - maxID > 0 then
+            maxID = unitID + 0
+        end
+    end
+    print('maxID:'..maxID)
+    return maxID
 end
 
 

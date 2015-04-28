@@ -20,10 +20,11 @@ end
 
 function ChapterLayer:ctor()
     --print('test seconds'..s_LocalDatabaseManager.getUnitCoolingSeconds(1))
-    if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
-        s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
-        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
-    end
+    -- if s_CURRENT_USER.tutorialStep == s_tutorial_level_select then
+    --     s_CURRENT_USER:setTutorialStep(s_tutorial_level_select+1)
+    --     s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_level_select+1)
+    -- end
+  
     playMusic(s_sound_bgm1,true)
 
     -- show repeat chapter list
@@ -138,6 +139,18 @@ function ChapterLayer:ctor()
     self:checkUnlockLevel()
     self:addBackToHome()
     self:addBeansUI()
+
+    -- if s_CURRENT_USER.newTutorialStep == s_newtutorial_island_finger then
+    --     s_CURRENT_USER.newTutorialStep = s_newtutorial_island_alter_finger
+    --     saveUserToServer({['newTutorialStep'] = s_CURRENT_USER.newTutorialStep})
+    --     local level0Position = self.chapterDic['chapter0']:getLevelPosition('level0')
+    --     -- print finger animation
+    --     local finger = sp.SkeletonAnimation:create('spine/tutorial/fingle.json', 'spine/tutorial/fingle.atlas',1)
+    --     finger:addAnimation(0, 'animation', true)
+    -- --    local boatPosition = cc.p(level0Position.x-100, level0Position.y+150)
+    --     finger:setPosition(level0Position.x, level0Position.y-70)
+    --     self.chapterDic['chapter0']:addChild(finger,130)
+    -- end  
    
 end
 
@@ -206,14 +219,82 @@ function ChapterLayer:checkUnlockLevel()
 
     -- get state --
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    local bookMaxUnitID = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey)
-
 
 
     -- check state
     local bossList = s_LocalDatabaseManager.getAllUnitInfo()
     print('---BOSS list')
     print_lua_table(bossList)
+
+    --------------------- last level ------------------------
+    local bookMaxUnitID = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey)
+    if progress - bookMaxUnitID == 0 then -- last level
+        for bossID, bossInfo in pairs(bossList) do
+            if bossID - bossMaxUnitID == 0 and bossInfo["unitState"] - 3 >= 0 then 
+            -- if true then
+                local back = cc.Sprite:create("image/homescene/background_ciku_white.png")
+                back:setPosition(cc.p(s_DESIGN_WIDTH/2, 550))
+                -- local info = cc.Sprite:create('image/homescene/Phone-Hook1.png')
+                -- info:setPosition(back:getContentSize().width/2, back:getContentSize().height/2)
+                -- back:addChild(info)
+
+                local close_button_clicked = function(sender, eventType)
+                    if eventType == ccui.TouchEventType.ended then
+                        s_SCENE:removeAllPopups()
+                    end
+                end
+                local closeButton = ccui.Button:create("image/popupwindow/closeButtonRed.png","image/popupwindow/closeButtonRed.png","")
+                closeButton:setPosition(back:getContentSize().width-30, back:getContentSize().height-30)
+                closeButton:addTouchEventListener(close_button_clicked)
+                back:addChild(closeButton)
+
+                local label1 = cc.Label:createWithSystemFont("恭喜你","",45)
+                label1:setPosition(back:getContentSize().width/2, back:getContentSize().height-100)
+                label1:setColor(cc.c4b(36,61,78,255))
+                back:addChild(label1)
+                local label2 = cc.Label:createWithSystemFont("完成了这本书的学习","",30)
+                label2:setColor(cc.c4b(36,61,78,255))
+                label2:setPosition(back:getContentSize().width/2, back:getContentSize().height-175)
+                back:addChild(label2)
+
+                local beibeiAnimation = sp.SkeletonAnimation:create("spine/bb_happy_public.json", 'spine/bb_happy_public.atlas',1)
+                beibeiAnimation:addAnimation(0, 'animation', false)
+                beibeiAnimation:setPosition(back:getContentSize().width/3, 320)
+
+                local partical = cc.ParticleSystemQuad:create('image/studyscene/ribbon.plist')
+                partical:setPosition(s_DESIGN_WIDTH/2-s_LEFT_X, 700)
+                back:addChild(partical)
+                back:addChild(beibeiAnimation)
+
+                local change_button_clicked = function(sender, eventType)
+                    if eventType == ccui.TouchEventType.ended then
+                        -- 
+                        s_CorePlayManager.enterBookLayer(s_CURRENT_USER.bookKey)
+                        s_SCENE:removeAllPopups()
+                    end
+                end
+
+                local changeButton = ccui.Button:create("image/homescene/attention_button.png","image/homescene/attention_button_press.png","image/setting/attention_button_press.png")
+                -- changeButton:setAnchorPoint(0,1)
+                changeButton:setPosition(back:getContentSize().width/2, 200)
+                back:addChild(changeButton,10)
+                local text = cc.Label:createWithSystemFont("去换本书","",36)
+                text:setColor(cc.c4b(255,255,255,255))
+                -- text:setAnchorPoint(0, 0)
+                text:setPosition(changeButton:getContentSize().width/2, changeButton:getContentSize().height/2)
+                changeButton:addChild(text)
+                changeButton:addTouchEventListener(change_button_clicked)
+                
+
+                local layer = cc.Layer:create()
+                layer:addChild(back)
+
+                s_SCENE:popup(layer)
+            end
+        end
+    end
+    ---------------------------------------------------------
+
     local taskIndex = -2
     local taskState = -2
     local progressIndex = progress
@@ -232,7 +313,7 @@ function ChapterLayer:checkUnlockLevel()
     -- check max unit ID
 
     local oldProgress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)+0
-    local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() +0
+    local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
 --    currentProgress = 10
     s_CURRENT_USER.levelInfo:updateDataToServer()  -- update book progress
  if currentProgress % s_islands_per_page == 0 and currentProgress > 0 and currentProgress - oldProgress > 0 then       
