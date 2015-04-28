@@ -1,7 +1,7 @@
 local ProtocolBase = require('server.protocol.ProtocolBase')
 local DataEverydayInfo          = require('model.user.DataEverydayInfo')
 local DataDailyStudyInfo        = require('model.user.DataDailyStudyInfo')
-local DataBossWord              = require('model.user.DataBossWord')
+local DataBossWord              = require('model.user.DataUnit')
 
 ---------------------------------------------------------------------------------------------------
 
@@ -427,8 +427,8 @@ function sysBossWord(bosses, skipWordList, callback)
         if error == nil then
             if result.datas ~= nil then
                 for i, v in ipairs(result.datas) do
-                    if v.wordList == SKIP_WORDLIST and skips[v.bossID] ~= nil then
-                        v.wordList = skips[v.bossID].wordList
+                    if v.wordList == SKIP_WORDLIST and skips[v.unitID] ~= nil then
+                        v.wordList = skips[v.unitID].wordList
                     end
                 end
             end
@@ -452,11 +452,11 @@ function sysBossWord(bosses, skipWordList, callback)
                     table.insert(unsavedDataTable, dataTableToJSONString(v, 'wordList'))
                 end
             end
-            skips[v.bossID] = v
+            skips[v.unitID] = v
         end
     end
 
-    local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataBossWord', ['bookKey']=s_CURRENT_USER.bookKey, ['us']=unsavedDataTable}, cb)
+    local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataUnit', ['bookKey']=s_CURRENT_USER.bookKey, ['us']=unsavedDataTable}, cb)
     protocol:request()
 end
 
@@ -466,13 +466,13 @@ function saveWordBossToServer(clientData, skipWordList, callback)
 end
 
 function getNotContainedInLocalBossWordFromServer(callback)
-    getNotContainedInLocalDatasFromServer('DataBossWord', " and bookKey = '".. s_CURRENT_USER.bookKey .. "' ", function (serverDatas, error)
+    getNotContainedInLocalDatasFromServer('DataUnit', " and bookKey = '".. s_CURRENT_USER.bookKey .. "' ", function (serverDatas, error)
         if error == nil then
             if serverDatas ~= nil then
                 for i, v in ipairs(serverDatas) do 
-                    local data = DataBossWord.create()
+                    local data = DataUnit.create()
                     parseServerDataToClientData(v, data)
-                    s_LocalDatabaseManager.saveDataClassObject(data, s_CURRENT_USER.userId, s_CURRENT_USER.username, " and bookKey = '".. s_CURRENT_USER.bookKey .."' and bossID = '".. data.bossID .."' ;")
+                    s_LocalDatabaseManager.saveDataClassObject(data, s_CURRENT_USER.userId, s_CURRENT_USER.username, " and bookKey = '".. s_CURRENT_USER.bookKey .."' and unitID = '".. data.unitID .."' ;")
                 end
             end
             if callback then callback(serverDatas, nil) end

@@ -73,7 +73,6 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
                         end 
                         if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat3_1 then
                             s_CURRENT_USER:setTutorialStep(s_tutorial_study + 1)
-                            s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_review_boss)
                         end
                         AnalyticsForgeIron_LeaveLayer()
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanRewardForIron)
@@ -168,10 +167,10 @@ function BlacksmithLayer:ctor(wordlist,islandIndex)
     end
     AnalyticsForgeIron_EnterLayer()
 
-    if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_3 then
+    if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep <= s_smalltutorial_studyRepeat1_1 then
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat2_3 + 1)
     end
-
+    
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = cc.LayerColor:create(cc.c4b(168,239,255,255), bigWidth, s_DESIGN_HEIGHT) 

@@ -33,16 +33,18 @@ function ShopAlter.create(itemId, location)
     local maxHeight = back:getContentSize().height
 
     local item
+    local click_button = 0
 
     main.sure = function()
-        if s_CURRENT_USER:getBeans() >= s_DataManager.product[itemId].productValue then
+        if s_CURRENT_USER:getBeans() >= s_DataManager.product[itemId].productValue and click_button == 0 then
+            click_button = 1
             s_CURRENT_USER:subtractBeans(s_DataManager.product[itemId].productValue)
             s_CURRENT_USER:unlockFunctionState(itemId)
             saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY], ['lockFunction']=s_CURRENT_USER.lockFunction})
 
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
-            item:removeFromParent()
+            item:setVisible(false)
 
             local bing = sp.SkeletonAnimation:create("res/spine/shop/bing"..itemId..".json", "res/spine/shop/bing"..itemId..".atlas", 1)
             bing:setPosition(maxWidth/2-100, maxHeight/2+60)
@@ -55,8 +57,8 @@ function ShopAlter.create(itemId, location)
                 end
             end 
 
-            s_SCENE:callFuncWithDelay(4,function() 
-                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+            local action0 = cc.DelayTime:create(4)
+            local action1 = cc.CallFunc:create(function ()
                 if itemId ~= 6 then
                     if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
                         s_SCENE:removeAllPopups()
@@ -67,33 +69,41 @@ function ShopAlter.create(itemId, location)
                     s_SCENE:removeAllPopups()
                     local ShopLayer = require("view.shop.ShopLayer")
                     local shopLayer = ShopLayer.create()
-                    s_SCENE:replaceGameLayer(shopLayer)
+                    s_SCENE:replaceGameLayer(shopLayer) 
                 end
+                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
             end)
-        else
+            local action2 = cc.Sequence:create(action0,action1)
+            main:runAction(action2)
+
+        elseif s_CURRENT_USER:getBeans() < s_DataManager.product[itemId].productValue and click_button == 0 then
+            click_button = 1
             local shopErrorAlter = ShopErrorAlter.create()
             s_SCENE:popup(shopErrorAlter)
         end
     end
 
     main.go = function ()
-        for i=1,5 do
-            if itemId == i then
-                s_LocalDatabaseManager.setBuy(math.pow(10,i-1))
-            end
-        end 
-
-        if itemId ~= 6 then
-            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                   s_SCENE:removeAllPopups()
+        if click_button == 0 then
+            click_button = 1
+            for i=1,5 do
+                if itemId == i then
+                    s_LocalDatabaseManager.setBuy(math.pow(10,i-1))
                 end
-            local homeLayer = HomeLayer.create(true) 
-            s_SCENE:replaceGameLayer(homeLayer)
-        else   
-            s_SCENE:removeAllPopups()
-            local ShopLayer = require("view.shop.ShopLayer")
-            local shopLayer = ShopLayer.create()
-            s_SCENE:replaceGameLayer(shopLayer)
+            end 
+
+            if itemId ~= 6 then
+                if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+                       s_SCENE:removeAllPopups()
+                    end
+                local homeLayer = HomeLayer.create(true) 
+                s_SCENE:replaceGameLayer(homeLayer)
+            else   
+                s_SCENE:removeAllPopups()
+                local ShopLayer = require("view.shop.ShopLayer")
+                local shopLayer = ShopLayer.create()
+                s_SCENE:replaceGameLayer(shopLayer)
+            end
         end
     end
     
@@ -134,7 +144,10 @@ function ShopAlter.create(itemId, location)
         button_sure.func = function ()
             button_func()
         end
-        back:addChild(button_sure)
+
+        if itemId ~= 6 then
+            back:addChild(button_sure)
+        end
     end
 
     local label_content

@@ -297,7 +297,7 @@ function CorePlayManager.initTotalUnitPlay()
             else
                 -- pass
             end
-        elseif unit.unitState == 8 then
+        elseif unit.unitState >= 7 then
             -- pass
         else
             CorePlayManager.currentUnitID = unit.unitID
@@ -324,6 +324,7 @@ function CorePlayManager.initTotalUnitPlay()
     -- if     CorePlayManager.currentUnitState == 0 then
     --     -- study   model
     --     CorePlayManager.initStudyModel()
+    print("CorePlayManager.currentUnitState"..CorePlayManager.currentUnitState)
     if CorePlayManager.currentUnitState == 0 then
         -- test    model
         CorePlayManager.initTestModel()
@@ -336,9 +337,9 @@ function CorePlayManager.initTotalUnitPlay()
     elseif CorePlayManager.currentUnitState >= 3 and CorePlayManager.currentUnitState <= 6 then
         -- review model
         CorePlayManager.initReviewModel()
-    else
+    -- else
         -- over model
-        CorePlayManager.initOverModel()
+        --CorePlayManager.initOverModel()
     end
 end
 

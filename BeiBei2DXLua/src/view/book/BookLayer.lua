@@ -77,8 +77,8 @@ function BookLayer.create(education)
             if eventType == ccui.TouchEventType.ended then
 
                 if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
-                    s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
-                    s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_book_select+1)
+                    s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1) -- 0 -> 1
+                    s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_book_select+1) -- 0 -> 1
                     AnalyticsFirstBook(key)
                 end
                 --print("s_CURRENT_USER.bookKey2"..bookKey)
