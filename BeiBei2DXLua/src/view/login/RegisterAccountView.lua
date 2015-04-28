@@ -5,6 +5,8 @@
 --统一流程去管理
 --在一个view下实现多步操作
 
+--返回按钮、标题、提示文本是公用的 输入框，下一步按钮是在每个函数里各自定义的
+
 --self.debug = true 开启调试模式，调试模式不会向手机发送验证码，手机号码和验证码随便输入
 
 --输入框封装
@@ -27,22 +29,22 @@ RegisterAccountView.STEP_7 = 7	--修改密码
 RegisterAccountView.STEP_8 = 8	--密码找回
 
 --构造
-function RegisterAccountView:ctor()
-	self:init()
+function RegisterAccountView:ctor(step)
+	self:init(step)
 	self.debug = true
 end
 
 --初始化各个view
-function RegisterAccountView:init()
+function RegisterAccountView:init(step)
 	self.views = {}
-	self.curStep = 1
+	self.curStep = step or 1
 	self.phoneNumber = ""
 	--初始化UI
-
 	--标题 “注册”
 	local title = cc.Label:createWithSystemFont("注 册","",60)
 	title:setTextColor(cc.c3b(121,200,247))
 	title:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9)
+	self.title = title
 	self:addChild(title)
 	--返回按钮
 	local btnReturn = ccui.Button:create("image/shop/button_back.png")
@@ -79,7 +81,7 @@ function RegisterAccountView:onReturnClick(sender,eventType)
 		--在HomeLayer里赋值的close函数 临时函数
 		print("从注册界面返回")
 		sender:setEnabled(false)
-		self.close()
+		self:endRegister()
 	end
 end
 
@@ -91,15 +93,21 @@ function RegisterAccountView:goStep(step,...)
 	self.alertTip:setString("")
 	--处理UI切换
 	if step == RegisterAccountView.STEP_1 then
-		self:showInputPhoneNumber(args)
+		self:showInputPhoneNumber(args)-----------------注册：输入手机号
 	elseif step == RegisterAccountView.STEP_2 then
-		self:showInputSmsCode(args)
+		self:showInputSmsCode(args)---------------------注册：输入短信验证码
 	elseif step == RegisterAccountView.STEP_3 then
-		self:showChooseSex(args)
+		self:showChooseSex(args)------------------------注册：选择性别
 	elseif step == RegisterAccountView.STEP_4 then
-		self:showInputNickName(args)
+		self:showInputNickName(args)--------------------注册：输入昵称
 	elseif step == RegisterAccountView.STEP_5 then
-		self:showInputPwd(args)
+		self:showInputPwd(args)-------------------------注册：输入密码
+	elseif step == RegisterAccountView.STEP_6 then
+		self:showLoginView(args)------------------------登陆界面
+	elseif step == RegisterAccountView.STEP_7 then
+		self:showModifyPwdView(args)--------------------修改密码
+	elseif step == RegisterAccountView.STEP_8 then
+		self:showModifyPwdBySMSCode(args)---------------重置密码
 	end
 end
 
@@ -183,17 +191,14 @@ function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
-
 	local SMSCode = self.inputNode:getText()
 	if string.find(SMSCode,"^%d%d%d%d%d%d$") then
 		self.SMSCode = SMSCode
-
 		--验证网络状况
 		if not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then
         	s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
         	return
         end
-
 		--向服务器请求验证 验证码
 		if not self.debug then
 			self:verifySMSCode(self.phoneNumber,self.SMSCode)
@@ -202,7 +207,7 @@ function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
 			self:goStep(self.curStep)
 		end
 	else
-		--不是验证码
+		--验证码无效
 		--TODO icon
 		self.alertTip:setTextColor(cc.c3b(220, 57, 8))
 		self.alertTip:setString("请输入有效的验证码！")
@@ -289,7 +294,6 @@ end
 function RegisterAccountView:onTouchSexOK(sender,eventType)
 	--获取性别 女0  男1
 	self.sex = self.checkBoxFeMale:isSelected() and 0 or 1
-
 	self.curStep = self.curStep + 1
 	self:goStep(self.curStep)
 end
@@ -344,7 +348,6 @@ function RegisterAccountView:showInputPwd()
 	inputNodeV:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
 	self:addChild(inputNodeV)
 	self.inputNodeV = inputNodeV
-	inputNodeV:openIME()
 	self.views[#self.views+1] = inputNodeV
 	
 	-- cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
@@ -357,7 +360,7 @@ function RegisterAccountView:showInputPwd()
 	self.views[#self.views+1] = btnRegister
 end
 
---Touch点击
+--注册Touch点击
 function RegisterAccountView:onTouchRegister(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
@@ -375,14 +378,69 @@ function RegisterAccountView:onTouchRegister(sender,eventType)
 	else
 		self.alertTip:setString("")
 	end
-
 	--注册
 	self:register(self.phoneNumber,pwd,self.nickName)
 end
 
+--显示登陆界面
+function RegisterAccountView:showLoginView( ... )
+	self.title:setString("登 录")
+
+	local inputNodeID = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入账号",nil,nil,nil,false,11)
+	inputNodeID:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
+	self:addChild(inputNodeID)
+	self.inputNodeID = inputNodeID
+	inputNodeID:openIME()
+	self.views[#self.views+1] = inputNodeID
+	
+	local inputNodePwd = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入密码",nil,nil,nil,true,11)
+	inputNodePwd:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
+	self:addChild(inputNodePwd)
+	self.inputNodePwd = inputNodePwd
+	self.views[#self.views+1] = inputNodePwd
+
+	local btnLogin = ccui.Button:create("image/login/sl_button_confirm.png")
+	btnLogin:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 400)
+	btnLogin:addTouchEventListener(handler(self, self.onLoginTouch))
+	btnLogin:setTitleText("登 录")
+	btnLogin:setTitleFontSize(36)
+	self:addChild(btnLogin)
+	self.views[#self.views+1] = btnLogin
+end
+
+--登陆按钮点击事件
+function RegisterAccountView:onLoginTouch(sender,eventType)
+	local id 	= self.inputNodeID:getText()
+	local pwd 	= self.inputNodePwd:getText()
+
+	if id == "" or pwd == "" then
+		self.alertTip:setString("帐号和密码不能为空！")
+		return
+	end
+
+	--验证id是手机还是用户名
+	--区分类型 然后走两个不同的登录接口
+	if string.find(phoneNumber,"^1[3|4|5|8][0-9]%d%d%d%d%d%d%d%d$") then
+		--手机号码登陆
+	else
+		--username登陆
+	end
+
+end
+
+--显示修改密码界面
+function RegisterAccountView:showModifyPwdView( ... )
+	
+end
+
+--显示密码找回界面
+--通过手机验证码 重置密码
+--TODO要想实现手机验证码重置密码，必须验证手机号，验证码是注册的时候，服务器自动发的，目前服务器没开手机号码验证，开启之后会自动发短信
+function RegisterAccountView:showModifyPwdBySMSCode( ... )
+	
+end
 
 --------------------------------API-------------------
-
 
 --请求手机验证码
 --phoneNumber 	电话号码

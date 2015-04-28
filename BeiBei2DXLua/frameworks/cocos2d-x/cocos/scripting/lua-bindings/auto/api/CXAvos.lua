@@ -68,6 +68,14 @@
         
 --------------------------------
 -- 
+-- @function [parent=#CXAvos] logInByPhoneNumber 
+-- @param self
+-- @param #char PhoneNumber
+-- @param #char password
+-- @param #int nHandler
+        
+--------------------------------
+-- 
 -- @function [parent=#CXAvos] downloadWordSoundFiles 
 -- @param self
 -- @param #char prefix

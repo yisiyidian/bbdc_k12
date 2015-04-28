@@ -95,6 +95,21 @@ void CXAvos::logIn(const char* username, const char* password, CXLUAFUNC nHandle
     }
 }
 
+void CXAvos::logInByPhoneNumber(const char* phoneNumber,const char* password,CXLUAFUNC mHandler)  {
+    mLuaHandlerId_logIn = nHandler;
+    cocos2d::JniMethodInfo t;
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "logInByPhoneNumber", "(Ljava/lang/String;Ljava/lang/String;)V")) {
+        jstring stringArg_phoneNumber = t.env->NewStringUTF(phoneNumber);
+        jstring stringArg_password = t.env->NewStringUTF(password);
+
+        t.env->CallStaticVoidMethod(t.classID, t.methodID, stringArg_phoneNumber, stringArg_password);
+
+        t.env->DeleteLocalRef(stringArg_phoneNumber);
+        t.env->DeleteLocalRef(stringArg_password);
+        t.env->DeleteLocalRef(t.classID);
+    }
+}
+
 /**
 *   请求短信验证码
 *   phoneNumber 电话号码

@@ -27,6 +27,8 @@ public:
     void invokeLuaCallbackFunction_su(const char* objectjson, const char* error, int errorcode);
     
     void logIn(const char* username, const char* password, CXLUAFUNC nHandler);
+    /*用手机号登陆*/
+    void logInByPhoneNumber(const char* PhoneNumber, const char* password, CXLUAFUNC nHandler);
     void invokeLuaCallbackFunction_li(const char* objectjson, const char* error, int errorcode);
     /**请求短信验证码*/
     void requestSMSCode(const char* phoneNumber);

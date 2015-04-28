@@ -385,6 +385,18 @@ public class BBNDK {
 		});
 	}
 	
+	public static void logInByPhoneNumber(String phoneNumber,String password){
+		AVUser.loginByMobilePhoneNumber(phoneNumber,password, new LogInCallback<AVUser>(){
+			public void done(AVUser user,AVException e){
+				if(e==null){
+					onLogIn(AVUserToJsonStr(user),null,0);
+				}else{
+					onLogIn(null,e.getLocalizedMessage(),e.getCode());
+				}
+			}
+		});
+	}
+
 	private static void onLogIn(final String objectjson, final String error, final int errorcode) {
 		((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
 

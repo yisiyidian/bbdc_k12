@@ -112,6 +112,18 @@ function UserBaseServer.logIn(username, password, onResponse)
     end)
 end
 
+--用手机号码+密码登陆
+function UserBaseServer.loginByPhoneNumber(phoneNumber,password,onResponse)
+    s_CURRENT_USER.username = ""
+    s_CURRENT_USER.mobilePhoneNumber = phoneNumber
+    s_CURRENT_USER.password = password
+
+    cx.CXAvos:getInstance():logIn(username, password, function (objectjson, e, code)
+        dump(objectjson,"登陆返回数据")
+        onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
+    end)
+end
+
 function UserBaseServer.logInByQQAuthData(openid, access_token, expires_in, onResponse)
     cx.CXAvos:getInstance():logInByQQAuthData(openid, access_token, expires_in,
         function (objectjson, qqjson, authjson, e, code)
