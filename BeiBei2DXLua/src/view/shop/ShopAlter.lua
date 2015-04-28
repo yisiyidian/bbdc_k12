@@ -66,12 +66,11 @@ function ShopAlter.create(itemId, location)
                     local homeLayer = HomeLayer.create(true) 
                     s_SCENE:replaceGameLayer(homeLayer)
                 else   
-                    s_SCENE:removeAllPopups()
-                    local ShopLayer = require("view.shop.ShopLayer")
-                    local shopLayer = ShopLayer.create()
-                    s_SCENE:replaceGameLayer(shopLayer) 
+                    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+                    local ShopAlter = require("view.shop.ShopAlter")
+                    local shopAlter = ShopAlter.create(6, 'in')
+                    s_SCENE:popup(shopAlter)
                 end
-                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
             end)
             local action2 = cc.Sequence:create(action0,action1)
             main:runAction(action2)
@@ -92,18 +91,11 @@ function ShopAlter.create(itemId, location)
                 end
             end 
 
-            if itemId ~= 6 then
-                if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                       s_SCENE:removeAllPopups()
-                    end
-                local homeLayer = HomeLayer.create(true) 
-                s_SCENE:replaceGameLayer(homeLayer)
-            else   
-                s_SCENE:removeAllPopups()
-                local ShopLayer = require("view.shop.ShopLayer")
-                local shopLayer = ShopLayer.create()
-                s_SCENE:replaceGameLayer(shopLayer)
-            end
+            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+                   s_SCENE:removeAllPopups()
+                end
+            local homeLayer = HomeLayer.create(true) 
+            s_SCENE:replaceGameLayer(homeLayer)
         end
     end
     

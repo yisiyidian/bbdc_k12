@@ -5,7 +5,7 @@ end)
 local Button                = require("view.button.longButtonInStudy")
 local ProgressBar           = require("view.islandPopup.ProgressBar")
 
-function LevelProgressPopup.create(index)
+function LevelProgressPopup.create(index,playAnimation)
     local layer = LevelProgressPopup.new(index)
     local islandIndex = tonumber(index) + 1
     layer.unit = s_LocalDatabaseManager.getUnitInfo(islandIndex)
@@ -182,7 +182,7 @@ function LevelProgressPopup:createPape(islandIndex)
     local back_height = self.backPopup:getContentSize().height
 
     pageView:setPosition(cc.p((back_width - backgroundSize.width) / 2 +
-        (backgroundSize.width - pageView:getContentSize().width) / 2,
+        (backgroundSize.width - pageView:getContentSize().width) / 2 - 7,
         (back_height - backgroundSize.height) / 2 +
         (backgroundSize.height - pageView:getContentSize().height) / 2 + 80 ))
 
