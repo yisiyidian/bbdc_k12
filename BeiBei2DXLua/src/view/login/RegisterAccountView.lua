@@ -5,14 +5,13 @@
 --统一流程去管理
 --在一个view下实现多步操作
 
+--self.debug = true 开启调试模式，调试模式不会向手机发送验证码，手机号码和验证码随便输入
+
 --输入框封装
 local InputNode = require("view.login.InputNode")
 
-
 local RegisterAccountView = class("RegisterAccountView",function()
 	local layout = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
-	--layout:ignoreAnchorPointForPosition(false)
-	--layout:setPosition(0.5 * s_DESIGN_WIDTH,0)
 	return layout
 end)
 
@@ -27,10 +26,10 @@ RegisterAccountView.STEP_6 = 6	--登陆
 RegisterAccountView.STEP_7 = 7	--修改密码
 RegisterAccountView.STEP_8 = 8	--密码找回
 
-
 --构造
 function RegisterAccountView:ctor()
 	self:init()
+	self.debug = true
 end
 
 --初始化各个view
@@ -141,8 +140,10 @@ function RegisterAccountView:onTouchPhoneNumberOK(sender,eventType)
 	if string.find(phoneNumber,"^1[3|4|5|8][0-9]%d%d%d%d%d%d%d%d$") then
 		--是手机号码
 		self.phoneNumber = phoneNumber
-		--TODO fix
-		-- self:requestSMSCode(phoneNumber)
+		
+		if not self.debug then
+			self:requestSMSCode(phoneNumber)
+		end
 		--跳转到输入验证码的界面
 		self.curStep = self.curStep + 1
 		self:goStep(self.curStep)
@@ -194,11 +195,12 @@ function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
         end
 
 		--向服务器请求验证 验证码
-		--TODO 解除注释
-		-- self:verifySMSCode(self.phoneNumber,self.SMSCode)
-		--TODO 注释掉
-		self.curStep = self.curStep + 1
-		self:goStep(self.curStep)
+		if not self.debug then
+			self:verifySMSCode(self.phoneNumber,self.SMSCode)
+		else
+			self.curStep = self.curStep + 1
+			self:goStep(self.curStep)
+		end
 	else
 		--不是验证码
 		--TODO icon
@@ -386,15 +388,18 @@ end
 --phoneNumber 	电话号码
 function RegisterAccountView:requestSMSCode(phoneNumber)
 	print("请求验证码")
-	--TODO 解除注释 
-	--cx.CXAvos:getInstance():requestSMSCode(phoneNumber)
+	if not self.debug then
+		cx.CXAvos:getInstance():requestSMSCode(phoneNumber)
+	end
 end
 
 --验证手机验证码
 function RegisterAccountView:verifySMSCode(phoneNumber,smsCode)
 	print("验证手机验证码："..phoneNumber.." code:"..smsCode)
 	showProgressHUD('', true)
-	cx.CXAvos:getInstance():verifySMSCode(phoneNumber, smsCode,handler(self, self.onVerifySMSCodeCallBack))
+	if not self.debug then
+		cx.CXAvos:getInstance():verifySMSCode(phoneNumber, smsCode,handler(self, self.onVerifySMSCodeCallBack))
+	end
 end
 --验证手机验证码  返回回调
 --error 	错误消息
@@ -430,13 +435,20 @@ end
 --error 错误信息
 --error 错误号
 function RegisterAccountView:onRegisterCallBack(nickName,pwd,phoneNumber,error,errorCode)
-	dump(error)
-	dump(errorCode)
+	hideProgressHUD(true)
+	cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
+	if errorCode ~= 0 then
+		s_TIPS_LAYER:showSmallWithOneButton(error)
+		return
+	end
+
+	self:endRegister()
 end
 
 --结束注册
 function RegisterAccountView:endRegister()
-
+	--TODO处理登陆的信息 刷新个人资料面板
+	s_SCENE:removeAllPopups()
 end
 
 --重置界面

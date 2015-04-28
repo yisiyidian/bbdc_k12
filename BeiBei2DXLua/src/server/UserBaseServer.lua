@@ -105,6 +105,7 @@ end
 function UserBaseServer.logIn(username, password, onResponse)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
+    dump(s_CURRENT_USER)
     cx.CXAvos:getInstance():logIn(username, password, function (objectjson, e, code)
         dump(objectjson,"登陆返回数据")
         onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
@@ -251,27 +252,55 @@ function UserBaseServer.updateLoginInfo(username, password, phoneNumber,onRespon
         if onResponse ~= nil then onResponse(username, password, phoneNumber,s_TIPS_LAYER.offlineOrNoSessionTokenTip, ERROR_CODE_MAX) end
         return
     end
+    --修改密码成功回调
+    local onCompleted = function()
+        s_CURRENT_USER.password = passwordUSER_TYPE_BIND
+        s_CURRENT_USER.usertype = USER_TYPE_BIND
+
+        saveUserToServer({['usertype']=USER_TYPE_BIND}, function (datas, error)
+            onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password,s_CURRENT_USER.mobilePhoneNumber ,nil, 0)
+        end)
+    end
+
+    --调用Server里修改密码的方法
+    --修改username 和 mobilePhoneNumber成功的回调
+    local nameAndPhoneComplete = function (password)
+        if s_CURRENT_USER.password ~= password then
+            s_SERVER.updatePassword(s_CURRENT_USER.password, password, s_CURRENT_USER.objectId, 
+                function (api, result) 
+                    onCompleted()
+                end, 
+                function (api, code, message, description) 
+                    onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, description, code)
+                end)
+        else
+            onCompleted()
+        end
+    end
 
     if s_CURRENT_USER.mobilePhoneNumber ~= phoneNumber then
         --判断手机号是否已存在
         isPhoneNumberExist(phoneNumber,function (exist,error)
             if error ~= nil then
-                onResponse(s_CURRENT_USER.username,s_CURRENT_USER.password,s_CURRENT_USER.mobilePhoneNumber,error.description,error.code)
+                --手机号码已存在
+                onResponse(s_CURRENT_USER.username,password,s_CURRENT_USER.mobilePhoneNumber,error.description,error.code)
             elseif not exist then
-                saveUserToServer({["username"]=username,["password"]=password,["mobilePhoneNumber"]=phoneNumber}, function(datas,error)
-                    if error ~= nil then
-                        onResponse(s_CURRENT_USER.username,s_CURRENT_USER.password,phoneNumber,error.description,error.code)
-                    else
-                        s_CURRENT_USER.username = username
-                        s_CURRENT_USER.password = password
-                        s_CURRENT_USER.mobilePhoneNumber = phoneNumber
-                        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER,s_CURRENT_USER.userId,s_CURRENT_USER.username," and ")
-                        --修改用户资料返回
-                        onResponse(s_CURRENT_USER.username,s_CURRENT_USER.password,s_CURRENT_USER.mobilePhoneNumber,nil,0)
-                    end
-                end)
+                if s_CURRENT_USER.username ~= username then
+                    saveUserToServer({["username"]=username,["mobilePhoneNumber"]=phoneNumber}, function(datas,error)
+                        if error ~= nil then
+                            onResponse(s_CURRENT_USER.username,s_CURRENT_USER.password,phoneNumber,error.description,error.code)
+                        else
+                            s_CURRENT_USER.username = username
+                            s_CURRENT_USER.mobilePhoneNumber = phoneNumber
+                            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER,s_CURRENT_USER.userId,s_CURRENT_USER.username)
+                            nameAndPhoneComplete(password)
+                        end
+                    end)
+                end
             end            
         end)
+    else
+        --TODO手机号码已绑定
     end
 end
 

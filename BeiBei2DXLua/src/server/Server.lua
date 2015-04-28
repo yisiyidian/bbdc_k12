@@ -7,7 +7,7 @@ local Server = {}
 
 Server.debugLocalHost = false -- CQL can NOT debug at local host
 Server.isAppStoreServer = false
-Server.production = 0
+Server.production = 0   --  0 表示leancloud的测试环境,1 表示leancloud的生产环境
 Server.appName = ''
 Server.appId = ''
 Server.appKey = ''

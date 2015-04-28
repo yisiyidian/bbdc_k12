@@ -10,7 +10,9 @@ InputNode.type_teachername = "teachername"
 
 --构造
 function InputNode:ctor(backgroundImage,placeHolder,callback,width,height,isPwd,maxLength)
-    self:init(backgroundImage,placeHolder,callback,width,height,isPwd,maxLength)
+    if backgroundImage then
+        self:init(backgroundImage,placeHolder,callback,width,height,isPwd,maxLength)
+    end
 end
 
 --初始化
