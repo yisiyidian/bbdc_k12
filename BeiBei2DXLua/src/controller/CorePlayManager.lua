@@ -296,7 +296,7 @@ function CorePlayManager.initTotalUnitPlay()
             else
                 -- pass
             end
-        elseif unit.unitState == 8 then
+        elseif unit.unitState >= 7 then
             -- pass
         else
             CorePlayManager.currentUnitID = unit.unitID
