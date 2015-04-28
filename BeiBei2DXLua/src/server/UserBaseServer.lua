@@ -254,7 +254,7 @@ function UserBaseServer.updateLoginInfo(username, password, phoneNumber,onRespon
     end
     --修改密码成功回调
     local onCompleted = function()
-        s_CURRENT_USER.password = passwordUSER_TYPE_BIND
+        s_CURRENT_USER.password = password
         s_CURRENT_USER.usertype = USER_TYPE_BIND
 
         saveUserToServer({['usertype']=USER_TYPE_BIND}, function (datas, error)
