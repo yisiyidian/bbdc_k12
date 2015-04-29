@@ -25,7 +25,7 @@ function DataUnit.getNoObjectIdDatasFromLocalDB()
     local noObjectIdDatas = {}
     s_LocalDatabaseManager.getDatas('DataUnit', s_CURRENT_USER.objectId, s_CURRENT_USER.username, function (row)
         if row.bookKey ~= '' and row.bookKey ~= nil and row.bookKey == s_CURRENT_USER.bookKey and (row.objectId == '' or row.objectId == nil) then
-            local data = DataBossWord.create()
+            local data = DataUnit.create()
 
             data.bookKey = row.bookKey
             data.lastUpdate = row.lastUpdate
