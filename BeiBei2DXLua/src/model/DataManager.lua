@@ -126,7 +126,7 @@ function DataManager.loadK12Books()
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
         for i = 1, #bookName do
             bookUnitWord[bookName[i]] = {}
-            local filepath = "cfg/" .. bookName[i] .. ".book"
+            local filepath = "cfg/" .. bookName[i] .. ".newbook"
             local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
             local lines = split(content, "\n")
             local current_unit = 0
@@ -160,7 +160,7 @@ function DataManager.loadUnitName()
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
         for i = 1, #bookName do
             bookUnitName[bookName[i]] = {}
-            local filepath = "cfg/" .. bookName[i] .. ".book"
+            local filepath = "cfg/" .. bookName[i] .. ".newbook"
             local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
             local lines = split(content, "\n")
             local current_unit = 0
@@ -170,12 +170,15 @@ function DataManager.loadUnitName()
                 if lines[j] ~= "" then
                     -- print(lines[j])
                     unit_word = split(lines[j],"\t")
+                    -- print unit_word
                     if unit_word[1] - current_unit ~= 0 then
+                        -- print('unit word')
+                        -- print_lua_table(unit_word)
                         if unit_word[4] - 1 == 0 then   -- only one subunit
                             unit_name = split(unit_word[3],'_')
                             bookUnitName[bookName[i]][unit_word[1]] = unit_name[1]
                         else
-                            bookUnitName[bookName[i][unit_word[1]] = unit_word[3]
+                            bookUnitName[bookName[i]][unit_word[1]] = unit_word[3]
                         end
                         current_unit = unit_word[1]
                     -- else
