@@ -17,7 +17,7 @@ MoreInformationRender.SWITCH = "MoreInformationRender.SWITCH"
 MoreInformationRender.ICON = "MoreInformationRender.ICON"
 
 --其他的类型 如修改密码
-MoreInformationRender.ANOTHER = "MoreInformationRender.ANOTHER"
+MoreInformationRender.OTHER = "MoreInformationRender.OTHER"
 
 function MoreInformationRender:ctor(type)
 	self.type = type
