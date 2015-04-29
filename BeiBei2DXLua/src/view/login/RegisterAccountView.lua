@@ -520,6 +520,7 @@ end
 
 --结束注册
 function RegisterAccountView:endRegister()
+	cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
 	if self.close ~= nil then
 		self.close()
 	else

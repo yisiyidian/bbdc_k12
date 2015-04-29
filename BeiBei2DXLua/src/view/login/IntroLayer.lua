@@ -84,6 +84,15 @@ function IntroLayer.create(directOnLogin)
                 offlineTip.setTrue()
             else
                 playSound(s_sound_buttonEffect)
+
+                --弹出RegisterAccountView的登陆界面  RegisterAccountView.STEP_6 就是登陆
+                local loginView = RegisterAccountView.new(RegisterAccountView.STEP_6)
+                loginView.close = function ()
+                    local introLayer = IntroLayer.create()
+                    s_SCENE:popup(introLayer)
+                end
+                s_SCENE:popup(loginView)
+                --[[
                 local LoginPopup = require("view.login.LoginPopup")
                 local loginPopup = LoginPopup.create()
                 s_SCENE:popup(loginPopup)
@@ -97,6 +106,7 @@ function IntroLayer.create(directOnLogin)
                 local action3 = cc.MoveTo:create(0.5,cc.p(0,0)) 
                 local action4 = cc.Sequence:create(action2, action3)
                 loginPopup:runAction(action4)
+                ]]
             end
         end
     end
@@ -109,59 +119,11 @@ function IntroLayer.create(directOnLogin)
             else
 
                 local layer = RegisterAccountView.new()
-                 s_SCENE:popup(layer)
-
-                -- local gotoRegistNewAccount = function ()
-                --     playSound(s_sound_buttonEffect)
-                --     local RegisterPopup = require("view.login.RegisterPopup")
-                --     local registerPopup = RegisterPopup.create()
-                --     s_SCENE:popup(registerPopup)
-
-                --     registerPopup:setVisible(false)
-                --     registerPopup:setPosition(0,s_DESIGN_HEIGHT * 1.5) 
-
-                --     local action2 = cc.CallFunc:create(function()
-                --         registerPopup:setVisible(true)
-                --     end)
-                --     local action3 = cc.MoveTo:create(0.5,cc.p(0,0)) 
-                --     local action4 = cc.Sequence:create(action2, action3)
-                --     registerPopup:runAction(action4) 
-                -- end
-
-
-                -- gotoRegistNewAccount()
-
-
-                -- local tmpUser = DataUser.create()
-                -- local hasAccount = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
-
-                -- if tmpUser.usertype == USER_TYPE_GUEST then
-                --     gotoRegistNewAccount()
-                -- else
-                    -- local visitorRegister = VisitorRegister.create()
-                    -- visitorRegister:setTag(2)
-                    -- visitorRegister:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                    -- layer:addChild(visitorRegister)
-                    -- -- button sound
-                    -- playSound(s_sound_buttonEffect)
-                    -- visitorRegister.close = function(which)
-                    --     -- which = register,improve,close
-                    --     layer:removeChildByTag(2)   
-                    --     if which == "register" then
-                    --         gotoRegistNewAccount()
-                    --     elseif which == "improve" then
-                    --         playSound(s_sound_buttonEffect)
-                    --         local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_INTRO_LAYER)
-                    --         improveInfo:setTag(1)
-                    --         improveInfo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                    --         layer:addChild(improveInfo)
-                    --         improveInfo.close = function()
-                    --             layer:removeChildByTag(1)   
-                    --         end                                  
-                    --     end
-
-                    -- end 
-                -- end
+                layer.close = function ()
+                    local introLayer = IntroLayer.create()
+                    s_SCENE:popup(introLayer)
+                end
+                s_SCENE:popup(layer)
             end
         end
     end
