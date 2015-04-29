@@ -104,6 +104,8 @@ function DataUser:ctor()
     self.beanRewardForIron                 = 3
 
     self.dataDailyUsing                    = DataDailyUsing.create()
+
+    self.k12SmallStep                      = 0
 end
 
 function DataUser:getLockFunctionState(productId)
@@ -294,6 +296,12 @@ function DataUser:setTutorialStep(step)
     self.tutorialStep = step
     saveUserToServer({['tutorialStep']=tutorialStep})
     AnalyticsTutorial(step)
+end
+
+function DataUser:setK12SmallStep(step)
+    self.k12SmallStep = step
+    saveUserToServer({['k12SmallStep']=k12SmallStep})
+    AnalyticsK12SmallStep(step)
 end
 
 function DataUser:setTutorialSmallStep(step)

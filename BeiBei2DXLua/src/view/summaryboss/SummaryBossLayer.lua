@@ -20,7 +20,11 @@ local dir_right = 4
 local HINT_TIME = 10
 local bullet_damage = 2
 
-function SummaryBossLayer.create(wordList,chapter,entrance)   
+function SummaryBossLayer.create(wordList,chapter,entrance)  
+    if s_CURRENT_USER.k12SmallStep < s_K12_summaryBoss then
+        s_CURRENT_USER:setK12SmallStep(s_K12_summaryBoss)
+    end
+    -- 打点 
     AnalyticsSummaryBoss()
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossLayer.new()

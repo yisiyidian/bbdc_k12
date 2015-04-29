@@ -57,6 +57,11 @@ function HomeLayer.create()
     -- print("totalGraspWordNum : "..totalGraspWordNum)
     -- print("totalStudyDayNum : "..totalStudyDayNum)
 
+    if s_CURRENT_USER.k12SmallStep < s_K12_enterHomeLayer then
+        s_CURRENT_USER:setK12SmallStep(s_K12_enterHomeLayer)
+    end
+    -- 打点
+
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DataManager.books[s_CURRENT_USER.bookKey].words

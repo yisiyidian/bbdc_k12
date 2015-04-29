@@ -53,6 +53,38 @@ s_smalltutorial_complete_win = 100
 s_smalltutorial_complete_lose = 101
 s_smalltutorial_complete_timeout = 102
 
+-- k12打点流程
+-- 进入输入用户名界面   0
+-- 进入输入密码界面    1
+-- 进入输入老师名字界面  2
+-- 进入选择年级界面    3
+-- 进入选书界面  4
+-- 进入主界面   5
+-- 进入选小关   6
+-- 进入趁热打铁  7
+-- 进入趁热打铁胜利界面  8
+-- 进入复习boss    9
+-- 进入复习boss胜利界面    10
+-- 进入总结boss    11
+-- 进入总结boss胜利界面    12
+-- 进入总结boss失败界面    13
+
+s_K12_inputUserName = 0
+s_K12_inputUserPassWord = 1
+s_K12_inputTeacherName = 2
+s_K12_selectGrade = 3
+s_K12_selectBook = 4
+s_K12_enterHomeLayer = 5
+s_K12_enterLevelLayer = 6
+s_K12_strikeIron = 7
+s_K12_strikeIronEnd = 8
+s_K12_reviewBoss = 9
+s_K12_reviewBossEnd = 10
+s_K12_summaryBoss = 11
+s_K12_summaryBossSuccess = 12
+s_K12_summaryBossFailure = 13
+s_K12_end = 100
+
 -- define review boss tutorial
 
 local AppScene = class("AppScene", function()
