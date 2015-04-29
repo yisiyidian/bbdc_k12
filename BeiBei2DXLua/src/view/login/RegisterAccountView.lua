@@ -375,6 +375,9 @@ function RegisterAccountView:onTouchRegister(sender,eventType)
 	elseif pwd ~= pwdVerify then
 		self.alertTip:setString("两次输入密码不一致！")
 		return
+	elseif not validatePassword(pwd) then
+		--密码不合规范
+		s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__PWD_ERROR))
 	else
 		self.alertTip:setString("")
 	end
