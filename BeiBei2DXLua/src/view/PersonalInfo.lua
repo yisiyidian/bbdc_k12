@@ -2,6 +2,9 @@ require("cocos.init")
 require("common.global")
 CC_USE_DEPRECATED_API = true
 
+--数据统计界面
+--位于HomeLayer下方
+
 local PersonalInfo = class("PersonalInfo", function()
     return cc.Layer:create()
 end)
