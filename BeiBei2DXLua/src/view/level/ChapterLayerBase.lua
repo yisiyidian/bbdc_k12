@@ -281,7 +281,9 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 
 end
 
-function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex)
+-- ｛没用到 
+function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex) 
+
     local bossList = s_LocalDatabaseManager.getAllUnitInfo()
     local state, coolingDay
     for bossID, bossInfo in pairs(bossList) do
@@ -302,14 +304,17 @@ function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex)
     else
         local playAnimation = true
         self:addPopup(levelIndex,playAnimation)
+        print("self:addPopup(levelIndex,playAnimation)"..tostring(playAnimation))
     end
 end
 
 function ChapterLayerBase:addPopup(levelIndex,playAnimation)
+    print("ChapterLayerBase:addPopup(levelIndex,playAnimation)"..tostring(playAnimation))
     local LevelProgressPopup = require("view.islandPopup.LevelProgressPopup")
     local levelProgressPopup = LevelProgressPopup.create(levelIndex,playAnimation)
     s_SCENE:popup(levelProgressPopup)
 end
+--没用到 ｝
 
 function ChapterLayerBase:plotDecoration()
     local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)

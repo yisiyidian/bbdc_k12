@@ -6,7 +6,8 @@ local Button                = require("view.button.longButtonInStudy")
 local ProgressBar           = require("view.islandPopup.ProgressBar")
 
 function LevelProgressPopup.create(index,playAnimation)
-    local layer = LevelProgressPopup.new(index)
+    local layer = LevelProgressPopup.new(index,playAnimation)
+    print("playAnimation"..tostring(playAnimation))
     local islandIndex = tonumber(index) + 1
     layer.unit = s_LocalDatabaseManager.getUnitInfo(islandIndex)
     layer.wrongWordList = {}
@@ -71,16 +72,18 @@ local function addBackButton(backPopup,islandIndex)
     return button_back
 end
 
-function LevelProgressPopup:ctor(index)
+function LevelProgressPopup:ctor(index,playAnimation)
     if s_CURRENT_USER.tutorialStep < s_tutorial_study then
         s_CURRENT_USER:setTutorialStep(s_tutorial_study) -- 2 -> 3
     end
+
+    self.playAnimation = false
+    if playAnimation ~= nil then
+        self.playAnimation = playAnimation
+    end
+
     self.islandIndex = tonumber(index) + 1
     self.total_index = 7
-
-    self.animation = function ()
-
-    end
     
     self.backPopup = cc.Sprite:create("image/islandPopup/subtask_bg.png")
     self.backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)
@@ -259,7 +262,8 @@ function LevelProgressPopup:createPape(islandIndex)
     end
 
     -- change to current index
-    if self.current_index > 0 and self.current_index < 3 then
+    print("self.playAnimation"..tostring(self.playAnimation))
+    if self.current_index > 0 and self.current_index < 3 and self.playAnimation == true then
         pageView:scrollToPage(self.current_index - 1)
         --如果进入的不是第一页，跳转到上一页，播放动画
         local backColor = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
@@ -362,7 +366,7 @@ local function createRewardLabel(parent)
     parent:addChild(reward_label)
 end
 
-local function createRewardSprite(num,parent,isShowAnimation)
+function LevelProgressPopup:createRewardSprite(num,parent,isShowAnimation)
     local reward_sprite = cc.Sprite:create("image/islandPopup/subtask_beibeibean.png")
     reward_sprite:setPosition(cc.p(parent:getContentSize().width * 0.8,parent:getContentSize().height * 0.3))
     parent:addChild(reward_sprite)
@@ -372,7 +376,7 @@ local function createRewardSprite(num,parent,isShowAnimation)
     reward_num:setPosition(cc.p(reward_sprite:getContentSize().width * 0.75,reward_sprite:getContentSize().height * 0.5))
     reward_sprite:addChild(reward_num)
 
-    if isShowAnimation == true then
+    if isShowAnimation == true and self.playAnimation ~= true then
         local rightSign_sprite = cc.Sprite:create("image/islandPopup/duigo_green_xiaoguan_tanchu.png")
         rightSign_sprite:setPosition(cc.p(reward_sprite:getContentSize().width * 0.3 - 150,reward_sprite:getContentSize().height * 0.5 + 180)) 
         rightSign_sprite:setScale(0)
@@ -383,7 +387,11 @@ local function createRewardSprite(num,parent,isShowAnimation)
         local action3 = cc.MoveBy:create(0.3,cc.p(150,-180)) 
         local action4 = cc.Sequence:create(action1,action2,action3)
         rightSign_sprite:runAction(action4)
-
+    elseif isShowAnimation == true and self.playAnimation == true then
+        local rightSign_sprite = cc.Sprite:create("image/islandPopup/duigo_green_xiaoguan_tanchu.png")
+        rightSign_sprite:setPosition(cc.p(reward_sprite:getContentSize().width * 0.3 ,reward_sprite:getContentSize().height * 0.5)) 
+        rightSign_sprite:setScale(2)
+        reward_sprite:addChild(rightSign_sprite)
     end
 end
 
@@ -435,14 +443,16 @@ function LevelProgressPopup:createNormalPlay(playModel,wordList,parent,isShowAni
         button_func()
     end
 
-    if isShowAnimation == "normal" then
+    if isShowAnimation == "normal" and self.playAnimation == true then
         go_button:setScale(0)
         local action2 = cc.ScaleTo:create(0.3,1)
         local action3 = cc.Sequence:create(action2)
         go_button:runAction(action3)   
+    elseif isShowAnimation == "normal" and self.playAnimation ~= true then
+
     end
 
-    if isShowAnimation == true then
+    if isShowAnimation == true and self.playAnimation == true then
         --gobutton 缩小
         local action1 = cc.DelayTime:create(1)
         local action2 = cc.ScaleTo:create(0.3,0)
@@ -451,7 +461,9 @@ function LevelProgressPopup:createNormalPlay(playModel,wordList,parent,isShowAni
         end)
         local action4 = cc.Sequence:create(action1,action2,action3)
         go_button:runAction(action4)   
-
+        self:createRepeatlPlay(playModel,wordList,parent,isShowAnimation)
+    elseif isShowAnimation == true and self.playAnimation ~= true then
+        go_button:removeFromParent()
         self:createRepeatlPlay(playModel,wordList,parent,isShowAnimation)
     end
 
@@ -483,7 +495,7 @@ function LevelProgressPopup:createRepeatlPlay(playModel,wordList,parent,isShowAn
         button_func()
     end
 
-    if isShowAnimation == true then
+    if isShowAnimation == true and self.playAnimation == true then
         --重玩button 放大
         go_button:setScale(0)
         local action1 = cc.DelayTime:create(1)
@@ -493,6 +505,7 @@ function LevelProgressPopup:createRepeatlPlay(playModel,wordList,parent,isShowAn
         end)
         local action4 = cc.Sequence:create(action1,action2,action3)
         go_button:runAction(action4) 
+    elseif isShowAnimation == true and self.playAnimation ~= true then
 
     end
 
@@ -517,13 +530,9 @@ function LevelProgressPopup:createCantPlay(text,parent,goToPlay)--现在不能�
         else
             cantPlay_Label:setString("剩余时间"..math.ceil(time/(60*60)).."小时")
         end
-        -- local function update(delta)
-        --     cantPlay_Label:setString("剩余时间"..s_LocalDatabaseManager.getUnitCoolingSeconds(self.islandIndex))
-        -- end
-        -- parent:scheduleUpdateWithPriorityLua(update, 0)
     end
 
-    if goToPlay == "normal" then
+    if goToPlay == "normal" and self.playAnimation == true then
         local action0 = cc.DelayTime:create(2.5)
         local action1 = cc.ScaleTo:create(0.3,0)
         local action2 = cc.CallFunc:create(function ()
@@ -531,6 +540,9 @@ function LevelProgressPopup:createCantPlay(text,parent,goToPlay)--现在不能�
         end)
         local action3 = cc.Sequence:create(action0,action1,action2)
         cantPlay_Sprite:runAction(action3)
+    elseif goToPlay == "normal" and self.playAnimation ~= true then
+        cantPlay_Sprite:removeFromParent()
+        self:createNormalPlay("","",parent,"normal")
     elseif goToPlay == "mysterious" then
 
 
@@ -551,9 +563,9 @@ function LevelProgressPopup:createStrikeIron()
     createRewardLabel(back)
 
     if self.animationFlag >= 1 then
-        createRewardSprite(3,back,true)
+        self:createRewardSprite(3,back,true)
     else
-        createRewardSprite(3,back)
+        self:createRewardSprite(3,back)
     end
 
     if self.current_index == 0 then
@@ -580,9 +592,9 @@ function LevelProgressPopup:createReview(playModel)
     createRewardLabel(back)
 
     if self.animationFlag >= 2 and playModel == nil then -- 普通复习boss
-        createRewardSprite(3,back,true)
+        self:createRewardSprite(3,back,true)
     else
-        createRewardSprite(3,back)
+        self:createRewardSprite(3,back)
     end
 
     if playModel == "normal" then
@@ -621,9 +633,9 @@ function LevelProgressPopup:createSummary()
     createRewardLabel(back)
 
     if self.animationFlag >= 3 then
-        createRewardSprite(3,back,true)
+        self:createRewardSprite(3,back,true)
     else
-        createRewardSprite(3,back)
+        self:createRewardSprite(3,back)
     end
     
     if self.current_index == 2 then
@@ -652,7 +664,7 @@ function LevelProgressPopup:createMysterious(text)
     createReviewLabel(back)
     createReviewSprite("?","?",back)
     createRewardLabel(back)
-    createRewardSprite("?",back)
+    self:createRewardSprite("?",back)
 
     if text ~= "time" then
         self:createCantPlay("请先完成前边的任务",back)

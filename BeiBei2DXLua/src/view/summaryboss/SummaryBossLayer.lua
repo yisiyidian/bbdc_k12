@@ -1106,6 +1106,8 @@ function SummaryBossLayer:initWordList(word)
     self.maxCount = #wordList
     AnalyticsSummaryBossWordCount(self.maxCount)
 
+    local levelNumber = #s_LocalDatabaseManager.getAllUnitInfo()
+
     self.totalBlood = 0
     for i = 1,#wordList do
         self.totalBlood = self.totalBlood + string.len(wordList[i]) * 2
@@ -1115,6 +1117,9 @@ function SummaryBossLayer:initWordList(word)
         self.totalTime = math.ceil(self.totalBlood / 14) * 15 + s_CURRENT_USER.timeAdjust
     else
         self.totalTime = math.ceil(self.totalBlood / 14) * 15
+    end
+    if levelNumber == 1 then
+        self.totalTime = 2 * self.totalTime
     end
     self.leftTime = self.totalTime
     --self:runAction(cc.Ripple3D:create(20, cc.size(32,24), cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2), 120, 40, 240))

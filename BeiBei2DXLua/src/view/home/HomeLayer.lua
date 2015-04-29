@@ -20,7 +20,7 @@ local TEXT_CHANGE_ACCOUNT = '切换账号' -- "登出游戏"
 
 function HomeLayer.create()
     --unlock friend
-    s_CURRENT_USER:addBeans(600)  
+    -- s_CURRENT_USER:addBeans(600)  
 
     if s_CURRENT_USER:getLockFunctionState(1) == 0 then
         s_CURRENT_USER:unlockFunctionState(1)
