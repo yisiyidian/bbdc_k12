@@ -323,6 +323,7 @@ function CorePlayManager.initTotalUnitPlay()
     -- if     CorePlayManager.currentUnitState == 0 then
     --     -- study   model
     --     CorePlayManager.initStudyModel()
+    print("CorePlayManager.currentUnitState"..CorePlayManager.currentUnitState)
     if CorePlayManager.currentUnitState == 0 then
         -- test    model
         CorePlayManager.initTestModel()

@@ -5,7 +5,7 @@ end)
 local Button                = require("view.button.longButtonInStudy")
 local ProgressBar           = require("view.islandPopup.ProgressBar")
 
-function LevelProgressPopup.create(index)
+function LevelProgressPopup.create(index,playAnimation)
     local layer = LevelProgressPopup.new(index)
     local islandIndex = tonumber(index) + 1
     layer.unit = s_LocalDatabaseManager.getUnitInfo(islandIndex)
@@ -72,6 +72,9 @@ local function addBackButton(backPopup,islandIndex)
 end
 
 function LevelProgressPopup:ctor(index)
+    if s_CURRENT_USER.tutorialStep < s_tutorial_study then
+        s_CURRENT_USER:setTutorialStep(s_tutorial_study) -- 2 -> 3
+    end
     self.islandIndex = tonumber(index) + 1
     self.total_index = 7
 
@@ -166,7 +169,7 @@ function LevelProgressPopup:createPape(islandIndex)
     local backgroundSize = cc.size(545, 900)
 
     self.animationFlag = 0
-    if self.current_index > 0 then
+    if self.current_index > 0 and self.current_index < 7 then
         self.animationFlag = self.current_index
         --动画位置在前一页
     end
@@ -179,11 +182,17 @@ function LevelProgressPopup:createPape(islandIndex)
     local back_height = self.backPopup:getContentSize().height
 
     pageView:setPosition(cc.p((back_width - backgroundSize.width) / 2 +
-        (backgroundSize.width - pageView:getContentSize().width) / 2,
+        (backgroundSize.width - pageView:getContentSize().width) / 2 - 7,
         (back_height - backgroundSize.height) / 2 +
         (backgroundSize.height - pageView:getContentSize().height) / 2 + 80 ))
 
-    local progressBar = ProgressBar.create(6,self.current_index)
+    local progress_index = self.current_index
+
+    if self.current_index >= 6 then
+        progress_index = 6
+    end
+
+    local progressBar = ProgressBar.create(6,progress_index)
     progressBar:setPosition(self.backPopup:getContentSize().width * 0.5,self.backPopup:getContentSize().height * 0.25)
     self.backPopup:addChild(progressBar)
 
@@ -225,7 +234,7 @@ function LevelProgressPopup:createPape(islandIndex)
         local MysteriousLayer = self:createMysterious("time")
         layout:addChild(MysteriousLayer)
         pageView:addPage(layout)
-    else
+    elseif self.current_index < self.total_index then
         local layout = ccui.Layout:create()
         layout:setContentSize(pageViewSize)
         local MysteriousLayer = self:createMysterious()
@@ -287,7 +296,7 @@ function LevelProgressPopup:createPape(islandIndex)
         local eventDispatcher = self:getEventDispatcher()
         eventDispatcher:addEventListenerWithSceneGraphPriority(listener, backColor)
     else
-        pageView:scrollToPage(self.current_index)
+        pageView:scrollToPage(progress_index)
     end
 
 
@@ -394,13 +403,15 @@ function LevelProgressPopup:createNormalPlay(playModel,wordList,parent,isShowAni
         if taskIndex == -2 then         
             s_CorePlayManager.initTotalUnitPlay() -- 之前没有boss
             s_SCENE:removeAllPopups()  
+            print("之前没有boss")
         elseif taskIndex == self.islandIndex then
             s_CorePlayManager.initTotalUnitPlay() -- 按顺序打第一个boss
-            s_SCENE:removeAllPopups()  
+            s_SCENE:removeAllPopups() 
+            print("按顺序打第一个boss") 
         else
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch() 
             local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
-            tutorial_text:setPosition((s_chapter_layer_width-s_LEFT_X)/2, levelPosition.y)
+            tutorial_text:setPosition(parent:getContentSize().width * 0.5 + 45,300)
             self:addChild(tutorial_text,520)
             local text = cc.Label:createWithSystemFont('请先打败前面的boss','',28)
             text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)

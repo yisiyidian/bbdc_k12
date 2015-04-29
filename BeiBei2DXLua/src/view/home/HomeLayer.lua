@@ -20,6 +20,7 @@ local TEXT_CHANGE_ACCOUNT = '切换账号' -- "登出游戏"
 
 function HomeLayer.create()
     --unlock friend
+    s_CURRENT_USER:addBeans(600)  
 
     if s_CURRENT_USER:getLockFunctionState(1) == 0 then
         s_CURRENT_USER:unlockFunctionState(1)
@@ -49,7 +50,7 @@ function HomeLayer.create()
 
     -- add tutorial step
     if s_CURRENT_USER.tutorialStep == s_tutorial_home then
-        s_CURRENT_USER:setTutorialStep(s_tutorial_home+1)
+        s_CURRENT_USER:setTutorialStep(s_tutorial_home+1) --1 -> 2
         -- print('tutorial_step:'..s_CURRENT_USER.tutorial_step)
     end
     -- print("totalStudyWordNum : "..totalStudyWordNum)
