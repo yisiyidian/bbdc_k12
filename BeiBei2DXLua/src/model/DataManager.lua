@@ -151,6 +151,47 @@ function DataManager.loadK12Books()
     return bookUnitWord
 end
 
+
+-- return unit name   books[book][unit] = 'unitName'  3/   3-1
+function DataManager.loadUnitName()
+    local bookUnitName = {}
+        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'
+        , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
+        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
+        for i = 1, #bookName do
+            bookUnitName[bookName[i]] = {}
+            local filepath = "cfg/" .. bookName[i] .. ".book"
+            local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
+            local lines = split(content, "\n")
+            local current_unit = 0
+            local word_count = 0
+            for j = 1, #lines do
+                word_count = word_count + 1
+                if lines[j] ~= "" then
+                    -- print(lines[j])
+                    unit_word = split(lines[j],"\t")
+                    if unit_word[1] - current_unit ~= 0 then
+                        if unit_word[4] - 1 == 0 then   -- only one subunit
+                            unit_name = split(unit_word[3],'_')
+                            bookUnitName[bookName[i]][unit_word[1]] = unit_name[1]
+                        else
+                            bookUnitName[bookName[i][unit_word[1]] = unit_word[3]
+                        end
+                        current_unit = unit_word[1]
+                    -- else
+                    --     bookUnitName[bookName[i]][unit_word[1]] = bookUnitName[bookName[i]][unit_word[1]]..'|'..unit_word[2]
+                    end
+                    -- table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])
+                end
+            end
+            -- print(bookName[i]..'\t'..(word_count-1))
+            -- print_lua_table(bookUnitWord[bookName[i]])
+        end
+    return bookUnitName
+end
+
+
+
 -- return book[bookKey] = {wordList}
 function DataManager.loadK12BookWords()
     local bookWord = {}
