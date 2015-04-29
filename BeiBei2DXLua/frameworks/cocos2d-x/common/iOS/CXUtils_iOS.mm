@@ -44,6 +44,7 @@ NSString* AVUserToJsonStr(AVUser* user) {
     if (user.sessionToken) json[@"sessionToken"] = user.sessionToken;
     if (user.createdAt) json[@"createdAt"] = @([user.createdAt timeIntervalSince1970]);
     if (user.createdAt) json[@"updatedAt"] = user.updatedAt ? @([user.updatedAt timeIntervalSince1970]) : json[@"createdAt"];
+    if (user.mobilePhoneNumber) json[@"mobilePhoneNumber"] = user.mobilePhoneNumber;
     for (NSString* key in user.allKeys) {
         id obj = [user objectForKey:key];
         if (obj && [obj isKindOfClass:[NSString class]]) {
