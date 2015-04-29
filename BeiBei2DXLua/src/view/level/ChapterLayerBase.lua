@@ -192,7 +192,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     --     -- self:addChild(deco, 130)
     -- else
     --test
-    self:plotLevelNumber('level'..levelIndex)
+    -- self:plotLevelNumber('level'..levelIndex)
 
     if levelState == 0 then
         -- local deco = cc.Sprite:create('image/chapter/elements/tubiao_chuizi_tanchu_xiaoguan.png')
