@@ -346,38 +346,47 @@ function ChapterLayerBase:plotDecoration()
             -- local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland2.png')
             -- lockIsland:setName('lockLayer'..levelIndex)
             -- lockIsland:addTouchEventListener(touchEvent)
+            local bookMaxUnitID = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey)
+            if levelIndex - bookMaxUnitID < 0 then 
+                local lockIsland = ccui.Button:create('image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png')
+                lockIsland:setScale9Enabled(true)
+                lockIsland:setName('lockLayer'..levelIndex)
+                lockIsland:addTouchEventListener(touchEvent)
 
-            local lockIsland = ccui.Button:create('image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png')
-            lockIsland:setScale9Enabled(true)
-            lockIsland:setName('lockLayer'..levelIndex)
-            lockIsland:addTouchEventListener(touchEvent)
+                local lock = cc.Sprite:create('image/chapter/chapter0/unit_lock.png')
+                lock:setName('lock'..levelIndex)
+                lockIsland:setPosition(levelPosition)
+                -- lock:setPosition(lockIsland:getContentSize().width/2, lockIsland:getContentSize().height/2)
+                lock:setPosition(levelPosition)
 
-            local lock = cc.Sprite:create('image/chapter/chapter0/unit_lock.png')
-            lock:setName('lock'..levelIndex)
-            lockIsland:setPosition(levelPosition)
-            -- lock:setPosition(lockIsland:getContentSize().width/2, lockIsland:getContentSize().height/2)
-            lock:setPosition(levelPosition)
+                print('s_book:')
+                print_lua_table(s_BookUnitName[s_CURRENT_USER.bookKey])
+                local unitName = split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(levelIndex+1)],'_')
 
-            -- add text
-            local unitText = cc.Sprite:create('image/chapter/chapter0/unit_black.png')
-            unitText:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2+10)
-            lock:addChild(unitText, 130)
+                -- add text
+                local unitText = cc.Sprite:create('image/chapter/chapter0/unit_black.png')
+                unitText:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2+10)
+                lock:addChild(unitText, 130)
 
-            local number = cc.Label:createWithSystemFont(''..(levelIndex+1),'',35)
-            number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-20)
-            number:setColor(cc.c3b(164, 125, 46))
-            lock:addChild(number, 130)
+                if #unitName == 1 then
+                    local number = cc.Label:createWithSystemFont(''..unitName[1],'',35)
+                    number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-20)
+                    number:setColor(cc.c3b(164, 125, 46))
+                    lock:addChild(number, 130)
+                else
+                    local number = cc.Label:createWithSystemFont(''..unitName[1],'',35)
+                    number:setPosition(lock:getContentSize().width/2-5, lock:getContentSize().height/2-20)
+                    number:setColor(cc.c3b(164, 125, 46))
+                    lock:addChild(number, 130)
+                    local number2 = cc.Label:createWithSystemFont('('..unitName[2]..')','',23)
+                    number2:setPosition(lock:getContentSize().width/2+20, lock:getContentSize().height/2-22)
+                    number2:setColor(cc.c3b(164, 125, 46))
+                    lock:addChild(number2, 130)
+                end
 
-            -- local number = ccui.TextBMFont:create()
-            -- number:setFntFile('font/number_brown.fnt')
-            -- --number:setColor(cc.c3b(56,26,23))
-            -- number:setString(levelIndex+1)
-            -- number:setScale(0.85)
-            -- number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-10)
-            -- lock:addChild(number,130)
-
-            self:addChild(lock,130)
-            self:addChild(lockIsland,120)
+                self:addChild(lock,130)
+                self:addChild(lockIsland,120)
+            end
         else
             self:plotDecorationOfLevel(levelIndex)
         end  
