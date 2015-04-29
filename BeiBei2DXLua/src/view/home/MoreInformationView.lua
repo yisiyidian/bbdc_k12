@@ -39,7 +39,9 @@ function MoreInfomationView:init()
 
 
 	--先init数据
+	self:initData()
 	--再initUI
+	sefl:initUI()
 end
 
 --初始化数据
@@ -83,7 +85,7 @@ end
 function MoreInfomationView:initUI()
 	local render = nil 
 	for k,v in pairs(self.listData) do
-		render = MoreInformationRender.new(v.type)
+		render = MoreInformationRender.new(v.type,v.title,v.content,v.callback,v.data)
 		render:setData(v.key)
 		-- TODO计算坐标位置
 		-- render:setPosition(position)
