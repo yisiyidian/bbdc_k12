@@ -325,6 +325,8 @@ function K12AccountBindView:gotoAddTeacher(teacherName)
                 if err == nil then
                     s_CURRENT_USER:parseServerFollowData(user)
                     s_SCENE:removeAllPopups() 
+                elseif self.username == teacherName then
+                    s_TIPS_LAYER:showSmallWithOneButton("请不要搜自己的名字")
                 else
                     s_TIPS_LAYER:showSmallWithOneButton(err.description)
                 end
