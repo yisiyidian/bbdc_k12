@@ -21,15 +21,51 @@ MoreInformationRender.OTHER = "MoreInformationRender.OTHER"
 
 function MoreInformationRender:ctor(type)
 	self.type = type
+	self.showContent = false
 	self:init(type)
 end
 
 --初始化UI
 function MoreInformationRender:init(type)
 	--白色底
+	local bg = cc.Sprite:create("image/homescene/setup_button.png")
+	local size = bg:getContentSize()
+	bg:setPosition(size.width/2,size.height/2)
+	self:addChild(bg)
 	--title
-	--内容文本
-	--other情况
+	local titleLabel = cc.Label:createWithSystemFont("",26)
+	titleLabel:setPosition(10,20) --TODO fix
+	self.titleLabel = titleLabel
+	self:addChild(titleLabel)
+	
+	if self.type == MoreInformationRender.SWITCH then 
+		--开关
+		local checkBox = ccui.CheckBox:create()
+		checkBox:setTouchEnabled(true)
+		checkBox:loadTextures(
+			"image/newstudy/wordsbackgroundblue.png",--normal
+			"image/newstudy/wordsbackgroundblue.png",--normal press
+			"image/newstudy/pause_button_begin.png",--normal active
+			"image/newstudy/wordsbackgroundblue.png",-- normal disable
+			"image/newstudy/wordsbackgroundblue.png"--active disable
+			)
+		checkBox:addEventListener(handler(self, chkCallBack))
+		checkBox:setPosition(0.5 * s_DESIGN_WIDTH - 100,s_DESIGN_HEIGHT*0.6 - 50)
+		checkBox:setSelected(true)	--默认选中
+		self.checkBox = checkBox
+		self:addChild(checkBox)
+	elseif self.type == MoreInformationRender.ICON  then
+		--TODO  icons
+	elseif self.type == MoreInformationRender.OTHER then
+		--
+	else
+		self.showContent = true
+		--内容文本
+		local content = cc.Label:createWithSystemFont("",26)
+		content:setPosition(100,20)
+		self.contentLabel = content
+		self:addChild(content)
+	end
 end
 
 --设置显示数据
@@ -50,7 +86,17 @@ end
 
 --更新界面
 function MoreInformationRender:updateView()
-	
+	self:titleLabel:setString(self.title)
+
+	if self.showContent then
+		self.contentLabel:setString(self.content)
+	end
+
+	if self.type == MoreInformationRender.SWITCH then
+		self.checkBox:setSelected(self.data)
+	elseif self.type == MoreInformationRender.ICON then
+		--TODO ICONS
+	end
 end
 
 --点击按钮 触发回调
