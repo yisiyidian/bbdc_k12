@@ -86,12 +86,12 @@ end
 
 --更新界面
 function MoreInformationRender:updateView()
-	self:titleLabel:setString(self.title)
+	self.titleLabel:setString(self.title)
 
 	if self.showContent then
 		self.contentLabel:setString(self.content)
 	end
-
+	
 	if self.type == MoreInformationRender.SWITCH then
 		self.checkBox:setSelected(self.data)
 	elseif self.type == MoreInformationRender.ICON then
