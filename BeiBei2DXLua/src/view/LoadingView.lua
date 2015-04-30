@@ -5,7 +5,6 @@ local LoadingView = class ("LoadingView", function()
 end)
 
 function LoadingView.create()
-    
     local layer = LoadingView.new()
     
     local background = cc.Sprite:create('image/loading/loading_little_girl_background.png')

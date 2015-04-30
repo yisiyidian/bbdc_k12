@@ -105,7 +105,7 @@ end
 function UserBaseServer.logIn(username, password, onResponse)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
-    dump(s_CURRENT_USER)
+    -- dump(s_CURRENT_USER,"UserBaseServer.logIn登陆前数据")
     cx.CXAvos:getInstance():logIn(username, password, function (objectjson, e, code)
         dump(objectjson,"登陆返回数据")
         onResponse_signUp_logIn(false, objectjson, e, code, onResponse)

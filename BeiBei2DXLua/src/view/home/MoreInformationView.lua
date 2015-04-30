@@ -84,11 +84,13 @@ end
 --初始化UI
 function MoreInfomationView:initUI()
 	local render = nil 
+	local sumY = 0
 	for k,v in pairs(self.listData) do
-		render = MoreInformationRender.new(v.type,v.title,v.content,v.callback,v.data)
-		render:setData(v.key)
-		-- TODO计算坐标位置
-		-- render:setPosition(position)
+		render = MoreInformationRender.new(v.type)
+		render:setData(v.key,v.title,v.content,v.callback,v.data)
+		--TODO计算坐标位置
+		render:setPosition(10,sumY)
+		sumY = sumY + 30
 		self.listView:addChild(render)
 	end
 
