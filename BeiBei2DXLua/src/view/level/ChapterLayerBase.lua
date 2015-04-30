@@ -115,16 +115,15 @@ function ChapterLayerBase:callFuncWithDelay(delay, func)
 end
 
 
+--摆放每个单元的小岛  eq:unit1
+--levelIndex    关卡索引
 function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
-    local levelPosition = self.levelPos[levelIndex]
+    local levelPosition = self.levelPos[levelIndex]    
     
-    -- define touchEvent
     local function touchEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
             print('BaseLayer:levelbutton '..sender:getName()..' touched...')                
             self:addPopup(sender:getName())
---              self:checkLevelStateBeforePopup(sender:getName())
-            
         end
     end
 
@@ -135,15 +134,16 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     levelButton:addTouchEventListener(touchEvent)
     self:addChild(levelButton, 129)
     
-
     local currentIndex = levelIndex
     -- to do get level state
     local bossList = s_LocalDatabaseManager.getAllUnitInfo()
     local levelState = 0
     local coolingDay = 0 
     local currentTaskBossIndex = -1
-    for bossID, bossInfo in pairs(bossList) do
 
+    -- dump(bossList,"bossList",99)
+
+    for bossID, bossInfo in pairs(bossList) do
         if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 and bossInfo["unitState"] - 7 < 0 then
             currentTaskBossIndex = bossID - 1
         end
@@ -154,76 +154,24 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         end
     end
     
-    -- check active
---    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
---    local active
---    if #todayReviewBoss == 0 or todayReviewBoss[0] - (levelIndex + 1) ~= 0 then
---        active = 0
---    else
---        active = 1
---    end
---    print('####active'..active..','..levelState)
---    if levelConfig['type'] == 1 then
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
     local currentChapterKey = 'chapter'..math.floor(currentProgress/10)
     
-    
-    -- TODO add review boss position
-    -- TODO check level state
-----    local levelState = math.random(0, 3)
---    levelState = 5
-    -- test
-    -- levelState = -1
-    -- s_level_popup_state = 1
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("levelIndex"..levelIndex)
     print("currentTaskBossIndex"..currentTaskBossIndex)
     print("levelState"..levelState)
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-
-    -- if levelState == 0 then
-    --     local deco = sp.SkeletonAnimation:create("spine/chapterlevel/beibeidaizi.json","spine/chapterlevel/beibeidaizi.atlas",1)
-    --     --local deco = sp.SkeletonAnimation:create("spine/tutorial/jieshao1.json","spine/tutorial/jieshao1.atlas",1)
-    --     deco:setPosition(levelPosition.x-60,levelPosition.y-10)
-    --     deco:setAnchorPoint(1,1)
-    --     deco:addAnimation(0, 'animation', true)
-    --     self:addChild(deco, 130)
-    --     -- local deco = cc.Sprite:create('image/chapter/elements/tubiao_daizi_tanchu_xiaoguan.png')
-    --     -- deco:setPosition(levelPosition.x,levelPosition.y+20)
-    --     -- self:addChild(deco, 130)
-    -- else
-    --test
-    -- self:plotLevelNumber('level'..levelIndex)
-
     if levelState == 0 then
-        -- local deco = cc.Sprite:create('image/chapter/elements/tubiao_chuizi_tanchu_xiaoguan.png')
-        -- deco:setPosition(levelPosition.x,levelPosition.y+20)
-        -- self:addChild(deco, 130)
-        -- if s_level_popup_state ~= 0 then
-        --     local deco = sp.SkeletonAnimation:create("spine/chapterlevel/beibeidaizi.json","spine/chapterlevel/beibeidaizi.atlas",1)
-        --     deco:setPosition(levelPosition.x-60,levelPosition.y-10)
-        --     deco:setAnchorPoint(1,1)
-        --     deco:addAnimation(0, 'animation', true)
-        --     self:addChild(deco, 130)
-        --     deco:runAction(cc.FadeOut:create(1.0));
-        --     self:callFuncWithDelay(0.5, function()
-        --         local deco = sp.SkeletonAnimation:create("spine/chapterlevel/chuizi.json","spine/chapterlevel/chuizi.atlas",1)
-        --         deco:setPosition(levelPosition.x-60,levelPosition.y-10)
-        --         deco:setAnchorPoint(1,1)
-        --         deco:addAnimation(0, 'animation', true)
-        --         self:addChild(deco, 130)
-        --     end)
-        -- else
-            local deco = sp.SkeletonAnimation:create("spine/chapterlevel/chuizi.json","spine/chapterlevel/chuizi.atlas",1)
-            deco:setPosition(levelPosition.x-60,levelPosition.y-10)
-            deco:setAnchorPoint(1,1)
-            deco:addAnimation(0, 'animation', true)
-            self:addChild(deco, 130)
-        -- end
-
-
+        --锤子
+        local deco = sp.SkeletonAnimation:create("spine/chapterlevel/chuizi.json","spine/chapterlevel/chuizi.atlas",1)
+        deco:setPosition(levelPosition.x-60,levelPosition.y-10)
+        deco:setAnchorPoint(1,1)
+        deco:addAnimation(0, 'animation', true)
+        self:addChild(deco, 130)
     elseif levelState == 1 or (levelState >= 3 and levelState <= 6 and levelIndex == currentTaskBossIndex) then
         if s_level_popup_state ~= 0 then
+            --锤子
             local deco = sp.SkeletonAnimation:create("spine/chapterlevel/chuizi.json","spine/chapterlevel/chuizi.atlas",1)
             deco:setPosition(levelPosition.x-60,levelPosition.y-10)
             deco:setAnchorPoint(1,1)
@@ -231,6 +179,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
             self:addChild(deco, 130)
             deco:runAction(cc.FadeOut:create(1.0))
             self:callFuncWithDelay(0.5, function()
+                --章鱼的动画
                 local reviewBoss = sp.SkeletonAnimation:create('spine/3 fxzlsxuanxiaoguandiaoluo1.json', 'spine/3 fxzlsxuanxiaoguandiaoluo1.atlas', 1)
                 reviewBoss:addAnimation(1, '2', true)   
                 reviewBoss:setPosition(levelPosition.x-110, levelPosition.y-80)
@@ -318,12 +267,13 @@ function ChapterLayerBase:addPopup(levelIndex,playAnimation)
 end
 
 function ChapterLayerBase:plotDecoration()
+    print("AAAs_CURRENT_USER.bookKey:"..s_CURRENT_USER.bookKey)
     local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
     local currentLevelIndex = levelInfo
-    local currentChapterIndex = math.floor(levelInfo / s_islands_per_page)
+    
     local chapterIndex = string.sub(self.chapterKey, 8)
     -- add state information
-    
+    print("currentLevelIndex:"..currentLevelIndex)
     for levelIndex, levelPosition in pairs(self.levelPos) do
         -- add level button
         local function touchEvent(sender,eventType)
@@ -349,9 +299,8 @@ function ChapterLayerBase:plotDecoration()
             end
         end
         if (levelIndex - currentLevelIndex) > 0 then
-            -- local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland2.png')
-            -- lockIsland:setName('lockLayer'..levelIndex)
-            -- lockIsland:addTouchEventListener(touchEvent)
+            print("levelIndex:"..levelIndex)
+            --未开启的单元
             local bookMaxUnitID = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey)
             if levelIndex - bookMaxUnitID < 0 then 
                 local lockIsland = ccui.Button:create('image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png')
@@ -362,7 +311,6 @@ function ChapterLayerBase:plotDecoration()
                 local lock = cc.Sprite:create('image/chapter/chapter0/unit_lock.png')
                 lock:setName('lock'..levelIndex)
                 lockIsland:setPosition(levelPosition)
-                -- lock:setPosition(lockIsland:getContentSize().width/2, lockIsland:getContentSize().height/2)
                 lock:setPosition(levelPosition)
 
                 print('s_book:')
@@ -394,6 +342,7 @@ function ChapterLayerBase:plotDecoration()
                 self:addChild(lockIsland,120)
             end
         else
+            --已开启的单元
             self:plotDecorationOfLevel(levelIndex)
         end  
     end

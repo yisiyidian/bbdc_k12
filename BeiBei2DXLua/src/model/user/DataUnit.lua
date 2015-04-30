@@ -15,7 +15,13 @@ function DataUnit:ctor()
 	self.lastUpdate = 0
 
 	self.unitID = 0   -- unit id 
-	self.unitState = 0 -- current unit state (1|2|3|4|5|6|7)
+    -- current unit state (0|1|2|3|4|5|6|7)
+    -- 0 初始状态
+    -- 1 复习BOSS 
+    -- 2 总结BOSS
+    -- 3-6 四个神秘人物
+    -- 7 结束
+	self.unitState = 0 
 	self.wordList = ''
 	self.currentWordIndex = 0  -- current word Index in current unit wordlist
 	self.savedToServer = 0
