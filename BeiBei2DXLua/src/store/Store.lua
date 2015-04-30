@@ -13,9 +13,9 @@ function Store.init()
     -- AppKey： 5651726838156
     -- AppSecret： HGZ2qylwis37Ro0qlNC8qQ==
 
-        local appKey = "AAE74B88-AB0E-4345-E14C-867708E18AFA"
-        local appSecret = "a254b3174edb02ed4a93b231887cddf1"
-        local privateKey = "DADD0816DB496CA2C98A34D9A616BD55"
+        local appKey = "81747487-DF11-AD30-010C-64917A6F1AD0"
+        local appSecret = "dcc51a0a707116e0d2e4488b4c2c29a1"
+        local privateKey = "421414309FCFB3993201634A6FA81B7C"
         local oauthLoginServer = "http://oauth.anysdk.com/api/User/LoginOauth/"
         local agent = AgentManager:getInstance()
         agent:init(appKey,appSecret,privateKey,oauthLoginServer)

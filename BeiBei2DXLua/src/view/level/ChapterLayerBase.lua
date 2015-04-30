@@ -307,6 +307,7 @@ function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex)
         print("self:addPopup(levelIndex,playAnimation)"..tostring(playAnimation))
     end
 end
+--没用到 ｝
 
 function ChapterLayerBase:addPopup(levelIndex,playAnimation)
     print("ChapterLayerBase:addPopup(levelIndex,playAnimation)"..tostring(playAnimation))
@@ -314,7 +315,6 @@ function ChapterLayerBase:addPopup(levelIndex,playAnimation)
     local levelProgressPopup = LevelProgressPopup.create(levelIndex,playAnimation)
     s_SCENE:popup(levelProgressPopup)
 end
---没用到 ｝
 
 function ChapterLayerBase:plotDecoration()
     local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
