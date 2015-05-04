@@ -531,12 +531,14 @@ function saveUserToServer(dataTable, callback)
             or key == 'updatedAt' 
             or string.find(key, '__') ~= nil 
             or value == nil) == false 
-            and (type(value) ~= 'function' and type(value) ~= 'table') then 
+            and (type(value) ~= 'function' and type(value) ~= 'table')
+            and not (key == "mobilePhoneNumber" and value == "") then
 
             userdata[key] = value
 
         end
     end
+    dump(userdata)
     saveToServer(userdata, cb)    
 end
 

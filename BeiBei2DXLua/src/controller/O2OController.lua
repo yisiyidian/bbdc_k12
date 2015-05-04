@@ -213,14 +213,10 @@ function O2OController.startLoadingData(userStartType, username, password,isPhon
                     s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, nil, username)
                     O2OController.getUserDatasOnline()
                 end)
-                
             else
                 O2OController.getUserDatasOnline()
             end
-
-            s_SCENE:removeAllPopups()
         end
-        
     end
 
     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
@@ -331,7 +327,8 @@ function O2OController.getUserDatasOnline()
                     O2OController.getDailyStudyInfo(function () 
                         LOGTIME('enterHomeLayer')
                         s_CorePlayManager.enterHomeLayer()
-                        -- O2OController.getBulletinBoard()   
+                        s_SCENE:removeAllPopups()
+                        -- O2OController.getBulletinBoard()
                         s_CURRENT_USER.dataDailyUsing:reset() 
                     end)
 

@@ -63,7 +63,8 @@ function M.alterLocalDatabase(objectOfDataClass)
             if (type(value) == 'string') then
                 data = createData(key, 'TEXT', false)
             elseif (type(value) == 'boolean') then
-                data = createData(key, 'Boolean', false)
+                -- data = createData(key, 'Boolean', false)
+                data = createData(key, 'INTEGER', false)
             elseif (type(value) == 'number') then
                 data = createData(key, 'INTEGER', false)
             end 
@@ -73,7 +74,7 @@ function M.alterLocalDatabase(objectOfDataClass)
         end
     end
 
-    Manager.database:exec('PRAGMA table_info(' .. objectOfDataClass.className .. ')', 
+    local result = Manager.database:exec('PRAGMA table_info(' .. objectOfDataClass.className .. ')', 
         function (udata, cols, values, names)
             local n = nil
             local t = nil
@@ -119,7 +120,8 @@ function getInsertRecord(objectOfDataClass)
                 if string.len(keys) > 0 then keys = keys .. ',' end
                 if string.len(values) > 0 then values = values .. ',' end
                     keys = keys .. "'" .. key .. "'"
-                    values = values .. tostring(value)
+                    local v = value and 1 or 0
+                    values = values .. tostring(v)
                 -- if value then
                 --     keys = keys .. "'" .. key .. "'"
                 --     values = values .. '1'
@@ -152,7 +154,8 @@ function getUpdateRecord(objectOfDataClass)
                 str = str .. "'" .. key .. "'" .. '=' .. "'" .. value .. "'"
             elseif (type(value) == 'boolean') then
                 if string.len(str) > 0 then str = str .. ',' end
-                str = str .. "'" .. key .. "'=" .. tostring(value)
+                local v = value and 1 or 0
+                str = str .. "'" .. key .. "'=" .. tostring(v)
                 -- if value then
                 --     str = str .. "'" .. key .. "'=1"
                 -- else
@@ -199,6 +202,14 @@ function M.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
     end
 
     print ('[M saveData: result:' .. tostring(ret) .. ']: ' .. query .. '\n\n')
+
+    local re = {}
+    for row in Manager.database:nrows("SELECT * FROM _USER") do
+        table.insert(re, row)
+    end
+
+    dump(re)
+
 end
 
 function M.addData(objectOfDataClass, userId, username)
@@ -249,6 +260,7 @@ end
 -- handleRecordRow(row)
 function M.getDatas(classNameOfDataClass, userId, username, handleRecordRow, conditions)
     print ('\n\n\nM getDatas >>> LocalDataBaseManager')
+    print(debug.traceback())
     conditions = conditions or ''
     local sql = ''
     local sqlUsername = string.format('SELECT * FROM %s WHERE username = "%s" ', classNameOfDataClass, username, conditions)

@@ -31,17 +31,17 @@ function DataUser:ctor()
     self.username                          = ''
     self.nickName                          = ''
     self.sex                               = 0 --性别 0女 1男
-    self.email                             = '' --电子邮箱
+    -- self.email                             = nil --电子邮箱
     self.headImg                           = 0  --头像ID
-    self.birthday                          = 0
+    self.birth                             = ""
     self.job                               = ""  --职业
     self.school                            = ""  --学校
     self.examination                       = ""  --正准备的考试
     self.position                          = ""  --位置
 
     self.relateContacts                     = 0  --关联通讯录
-    self.bindAccount                        = 0  --绑定帐号
-    self.showPosition                       = 0  --位置可见
+    self.bindAccount                        = "" --绑定帐号
+    self.showLocation                       = 0  --位置可见
 
     self.password                          = ''
     self.mobilePhoneNumber                 = ''
