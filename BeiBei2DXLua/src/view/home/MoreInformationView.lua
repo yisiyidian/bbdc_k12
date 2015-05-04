@@ -17,10 +17,12 @@ function MoreInfomationView:init()
 
 	local listView = ccui.ListView:create()
     listView:setDirection(ccui.ScrollViewDir.vertical)
-    listView:setBounceEnabled(false)
+    listView:setBounceEnabled(true)
+    listView:setTouchEnabled(true)
     listView:setBackGroundImageScale9Enabled(true)
     -- listView:addEventListener(listViewEvent)
     -- listView:addScrollViewEventListener(scrollViewEvent)
+    listView:setContentSize(s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
     listView:removeAllChildren()
     self:addChild(listView)
     self.listView = listView
@@ -41,7 +43,7 @@ function MoreInfomationView:init()
 	--先init数据
 	self:initData()
 	--再initUI
-	sefl:initUI()
+	self:initUI()
 end
 
 --初始化数据
@@ -61,7 +63,7 @@ function MoreInfomationView:initData()
 	local showPosition   = s_CURRENT_USER.showPosition   --位置可见
 
 	local listData = {}
-	listData[1] = {["key"] = "headImg",			["type"] = MoreInformationRender.TEXT,["title"] = "头像",["content"] = "",			["callback"]=nil,["data"] = headImg} --头像
+	listData[1] = {["key"] = "headImg",			["type"] = MoreInformationRender.TEXT,["title"] = "头像",["content"] = "",			["callback"]=nil,["data"] = headImg} --头像	
 	listData[2] = {["key"] = "nickName",		["type"] = MoreInformationRender.TEXT,["title"] = "昵称",["content"] = nickName,		["callback"]=nil,["data"] = nil} --昵称
 	listData[3] = {["key"] = "sex",				["type"] = MoreInformationRender.SEX,["title"] = "性别",["content"] = sex,			["callback"]=nil,["data"] = nil}--性别
 	listData[4] = {["key"] = "email",			["type"] = MoreInformationRender.TEXT,["title"] = "邮箱",["content"] = email,		["callback"]=nil,["data"] = nil}--邮箱
@@ -71,9 +73,9 @@ function MoreInfomationView:initData()
 	listData[8] = {["key"] = "position",		["type"] = MoreInformationRender.TEXT,["title"] = "位置",["content"] = position,		["callback"]=nil,["data"] = nil}--位置
 	listData[9] = {["key"] = "examination",		["type"] = MoreInformationRender.TEXT,["title"] = "在准备的考试",["content"] = examination,		["callback"]=nil,["data"] = 1}--在准备的考试
 
-	listData[10] = {["key"] = "relateContacts",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",	["content"] = "",				["callback"]=nil,["data"] = 1}--关联通讯录
+	listData[10] = {["key"] = "relateContacts",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",	["content"] = "",				["callback"]=nil,["data"] = false}--关联通讯录
 	listData[11] = {["key"] = "bindAccount"   ,	["type"] = MoreInformationRender.ICON,  ["title"] = "帐号绑定",	["content"] = "",				["callback"]=nil,["data"] = 1}--帐号绑定
-	listData[12] = {["key"] = "showPosition",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",["content"] = "",				["callback"]=nil,["data"] = 1}--位置可见
+	listData[12] = {["key"] = "showPosition",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",["content"] = "",				["callback"]=nil,["data"] = false}--位置可见
 
 	listData[13] = {["key"] = "changPwd",		["type"] = MoreInformationRender.OTHER,["title"] = "修改密码",	["content"] = "",			["callback"]=nil,["data"] = 1}--修改密码
 
@@ -85,16 +87,21 @@ end
 function MoreInfomationView:initUI()
 	local render = nil 
 	local sumY = 0
+	local innerHeight = 0
 	for k,v in pairs(self.listData) do
 		render = MoreInformationRender.new(v.type)
 		render:setData(v.key,v.title,v.content,v.callback,v.data)
 		--TODO计算坐标位置
-		render:setPosition(10,sumY)
-		sumY = sumY + 30
+		render:setPosition(0,sumY)
+		sumY = sumY + 120
 		self.listView:addChild(render)
+		innerHeight = innerHeight + 120
 	end
 
+	
 
+	-- setInnerContainerSize
+	self.listView:setInnerContainerSize(cc.size(s_DESIGN_WIDTH,innerHeight))
 end
 
 --返回按钮点击

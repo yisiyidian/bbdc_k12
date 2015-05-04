@@ -139,6 +139,7 @@ function start.start(hotUpdate)
     if AgentManager ~= nil then s_CURRENT_USER.channelId = AgentManager:getInstance():getChannelId() end
 
     saveLuaError = function (msg)
+    --[[
         if s_SERVER.isNetworkConnectedNow() then
             local errorObj = {}
             errorObj['className'] = 'LuaError'
@@ -153,6 +154,7 @@ function start.start(hotUpdate)
         end
 
         onErrorNeedRestartAppHappendWithSingleButton('贝贝开小差了。。。需要重新启动', '原谅你')
+        ]]
     end
     
     if cc.Director:getInstance():getRunningScene() then

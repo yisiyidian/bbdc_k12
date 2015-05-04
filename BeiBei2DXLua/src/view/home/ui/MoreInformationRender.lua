@@ -33,9 +33,11 @@ function MoreInformationRender:init(type)
 	bg:setPosition(size.width/2,size.height/2)
 	self:addChild(bg)
 	--title
-	local titleLabel = cc.Label:createWithSystemFont("",26)
-	titleLabel:setPosition(10,20) --TODO fix
+	local titleLabel = cc.Label:createWithSystemFont("","",26)
+	titleLabel:setPosition(10,30)
 	self.titleLabel = titleLabel
+	self.titleLabel:setAnchorPoint(cc.p(0.0,0.0))
+	self.titleLabel:setTextColor(cc.c3b(0, 0, 0))
 	self:addChild(titleLabel)
 	
 	if self.type == MoreInformationRender.SWITCH then 
@@ -50,7 +52,7 @@ function MoreInformationRender:init(type)
 			"image/newstudy/wordsbackgroundblue.png"--active disable
 			)
 		checkBox:addEventListener(handler(self, chkCallBack))
-		checkBox:setPosition(0.5 * s_DESIGN_WIDTH - 100,s_DESIGN_HEIGHT*0.6 - 50)
+		-- checkBox:setPosition(0.5 * s_DESIGN_WIDTH - 100,s_DESIGN_HEIGHT*0.6 - 50)
 		checkBox:setSelected(true)	--默认选中
 		self.checkBox = checkBox
 		self:addChild(checkBox)
@@ -61,7 +63,7 @@ function MoreInformationRender:init(type)
 	else
 		self.showContent = true
 		--内容文本
-		local content = cc.Label:createWithSystemFont("",26)
+		local content = cc.Label:createWithSystemFont("","",26)
 		content:setPosition(100,20)
 		self.contentLabel = content
 		self:addChild(content)
@@ -86,6 +88,7 @@ end
 
 --更新界面
 function MoreInformationRender:updateView()
+	print("updateView:"..self.title)
 	self.titleLabel:setString(self.title)
 
 	if self.showContent then
