@@ -23,6 +23,8 @@ function MoreInformationRender:ctor(type)
 	self.type = type
 	self.showContent = false
 	self:init(type)
+	self:setAnchorPoint(cc.p(0,0))
+	self:setContentSize(cc.size(854,114))
 end
 
 --初始化UI
@@ -51,8 +53,8 @@ function MoreInformationRender:init(type)
 			"image/newstudy/wordsbackgroundblue.png",-- normal disable
 			"image/newstudy/wordsbackgroundblue.png"--active disable
 			)
-		checkBox:addEventListener(handler(self, chkCallBack))
-		-- checkBox:setPosition(0.5 * s_DESIGN_WIDTH - 100,s_DESIGN_HEIGHT*0.6 - 50)
+		checkBox:addEventListener(handler(self, self.onCheckBoxTouch))
+		checkBox:setPosition(size.width*0.6 , 45)
 		checkBox:setSelected(true)	--默认选中
 		self.checkBox = checkBox
 		self:addChild(checkBox)
@@ -64,9 +66,11 @@ function MoreInformationRender:init(type)
 		self.showContent = true
 		--内容文本
 		local content = cc.Label:createWithSystemFont("","",26)
-		content:setPosition(100,20)
+		content:setPosition(size.width*0.5,30)
+		content:setAnchorPoint(cc.p(0.0,0.0))
 		self.contentLabel = content
-		self:addChild(content)
+		self.contentLabel:setTextColor(cc.c3b(0, 0, 0))
+		self:addChild(self.contentLabel)
 	end
 end
 
@@ -92,7 +96,11 @@ function MoreInformationRender:updateView()
 	self.titleLabel:setString(self.title)
 
 	if self.showContent then
-		self.contentLabel:setString(self.content)
+		if self.content and self.content~="" then
+			self.contentLabel:setString(self.content)
+		else
+			self.contentLabel:setString("未设置 >")
+		end
 	end
 	
 	if self.type == MoreInformationRender.SWITCH then
@@ -110,6 +118,15 @@ function MoreInformationRender:onRenderTouch(sender,eventType)
 
 	if callback ~= nil then
 		callback(self.type,self.key)
+	end
+end
+
+--复选框事件处理
+function MoreInformationRender:onCheckBoxTouch(sender,eventType)
+	if eventType == ccui.CheckBoxEventType.selected then
+		
+	elseif eventType == ccui.CheckBoxEventType.unselected then
+		
 	end
 end
 

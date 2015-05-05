@@ -15,11 +15,11 @@ end
 
 function MoreInfomationView:init()
 
-	local listView = ccui.ListView:create()
+	local listView = ccui.ScrollView:create()
     listView:setDirection(ccui.ScrollViewDir.vertical)
     listView:setBounceEnabled(true)
     listView:setTouchEnabled(true)
-    listView:setBackGroundImageScale9Enabled(true)
+    -- listView:setBackGroundImageScale9Enabled(true)
     -- listView:addEventListener(listViewEvent)
     -- listView:addScrollViewEventListener(scrollViewEvent)
     listView:setContentSize(s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
@@ -29,14 +29,15 @@ function MoreInfomationView:init()
 
 	local title = cc.Label:createWithSystemFont("个人信息","",60)
 	title:setTextColor(cc.c3b(121,200,247))
-	title:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9)
+	-- title:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9)
 	self.title = title
-	self:addChild(title)
+	-- self:addChild(title)
 
 	local btnReturn = ccui.Button:create("image/shop/button_back.png")
-	btnReturn:setPosition(0.1*s_DESIGN_WIDTH,0.9*s_DESIGN_HEIGHT)
+	-- btnReturn:setPosition(0.1*s_DESIGN_WIDTH,0.9*s_DESIGN_HEIGHT)
 	btnReturn:addTouchEventListener(handler(self, self.onReturnClick))
-	self:addChild(btnReturn)
+	self.btnReturn = btnReturn
+	-- self:addChild(btnReturn)
 
 
 
@@ -88,17 +89,34 @@ function MoreInfomationView:initUI()
 	local render = nil 
 	local sumY = 0
 	local innerHeight = 0
+	local renders = {} --临时容器
 	for k,v in pairs(self.listData) do
 		render = MoreInformationRender.new(v.type)
 		render:setData(v.key,v.title,v.content,v.callback,v.data)
+		renders[#renders+1] = render
 		--TODO计算坐标位置
-		render:setPosition(0,sumY)
+		-- render:setPosition(0,sumY)
 		sumY = sumY + 120
 		self.listView:addChild(render)
 		innerHeight = innerHeight + 120
 	end
 
-	
+	--
+	local tlen = innerHeight - 120
+	for _,rd in pairs(renders) do
+		rd:setPosition(0,tlen)
+		tlen = tlen - 120
+	end
+
+	print("innerHeight:"..innerHeight)
+	print("s_DESIGN_HEIGHT:"..s_DESIGN_HEIGHT)
+
+	innerHeight = innerHeight + 130
+
+	self.title:setPosition(s_DESIGN_WIDTH*0.5,innerHeight - 80)
+	self.listView:addChild(self.title)
+	self.btnReturn:setPosition(s_DESIGN_WIDTH*0.1,innerHeight - 80)
+	self.listView:addChild(self.btnReturn)
 
 	-- setInnerContainerSize
 	self.listView:setInnerContainerSize(cc.size(s_DESIGN_WIDTH,innerHeight))
