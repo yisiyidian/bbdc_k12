@@ -39,8 +39,6 @@ function MoreInfomationView:init()
 	self.btnReturn = btnReturn
 	-- self:addChild(btnReturn)
 
-
-
 	--先init数据
 	self:initData()
 	--再initUI
@@ -64,21 +62,21 @@ function MoreInfomationView:initData()
 	local showPosition   = s_CURRENT_USER.showPosition   --位置可见
 
 	local listData = {}
-	listData[1] = {["key"] = "headImg",			["type"] = MoreInformationRender.TEXT,["title"] = "头像",["content"] = "",			["callback"]=nil,["data"] = headImg} --头像	
-	listData[2] = {["key"] = "nickName",		["type"] = MoreInformationRender.TEXT,["title"] = "昵称",["content"] = nickName,		["callback"]=nil,["data"] = nil} --昵称
-	listData[3] = {["key"] = "sex",				["type"] = MoreInformationRender.SEX,["title"] = "性别",["content"] = sex,			["callback"]=nil,["data"] = nil}--性别
-	listData[4] = {["key"] = "email",			["type"] = MoreInformationRender.TEXT,["title"] = "邮箱",["content"] = email,		["callback"]=nil,["data"] = nil}--邮箱
-	listData[5] = {["key"] = "birthday",		["type"] = MoreInformationRender.DATE,["title"] = "生日",["content"] = birthday,		["callback"]=nil,["data"] = nil}--生日
-	listData[6] = {["key"] = "job",				["type"] = MoreInformationRender.TEXT,["title"] = "职业",["content"] = job,			["callback"]=nil,["data"] = nil}--职业
-	listData[7] = {["key"] = "school",			["type"] = MoreInformationRender.TEXT,["title"] = "学校",["content"] = school,		["callback"]=nil,["data"] = nil}--学校
-	listData[8] = {["key"] = "position",		["type"] = MoreInformationRender.TEXT,["title"] = "位置",["content"] = position,		["callback"]=nil,["data"] = nil}--位置
-	listData[9] = {["key"] = "examination",		["type"] = MoreInformationRender.TEXT,["title"] = "在准备的考试",["content"] = examination,		["callback"]=nil,["data"] = 1}--在准备的考试
+	listData[1] = {["key"] = "headImg",			["type"] = MoreInformationRender.TEXT,["title"] = "头像",			["content"] = "",			["callback"]=nil,["data"] = headImg} --头像	
+	listData[2] = {["key"] = "nickName",		["type"] = MoreInformationRender.TEXT,["title"] = "昵称",			["content"] = nickName,		["callback"]=nil,["data"] = nil} --昵称
+	listData[3] = {["key"] = "sex",				["type"] = MoreInformationRender.SEX,["title"] = "性别",				["content"] = sex,			["callback"]=nil,["data"] = nil}--性别
+	listData[4] = {["key"] = "email",			["type"] = MoreInformationRender.TEXT,["title"] = "邮箱",			["content"] = email,		["callback"]=nil,["data"] = nil}--邮箱
+	listData[5] = {["key"] = "birthday",		["type"] = MoreInformationRender.DATE,["title"] = "生日",			["content"] = birthday,		["callback"]=nil,["data"] = nil}--生日
+	listData[6] = {["key"] = "job",				["type"] = MoreInformationRender.TEXT,["title"] = "职业",			["content"] = job,			["callback"]=nil,["data"] = nil}--职业
+	listData[7] = {["key"] = "school",			["type"] = MoreInformationRender.TEXT,["title"] = "学校",			["content"] = school,		["callback"]=nil,["data"] = nil}--学校
+	listData[8] = {["key"] = "position",		["type"] = MoreInformationRender.TEXT,["title"] = "位置",			["content"] = position,		["callback"]=nil,["data"] = nil}--位置
+	listData[9] = {["key"] = "examination",		["type"] = MoreInformationRender.TEXT,["title"] = "在准备的考试",		["content"] = examination,	["callback"]=nil,["data"] = 1}--在准备的考试
 
-	listData[10] = {["key"] = "relateContacts",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",	["content"] = "",				["callback"]=nil,["data"] = false}--关联通讯录
-	listData[11] = {["key"] = "bindAccount"   ,	["type"] = MoreInformationRender.ICON,  ["title"] = "帐号绑定",	["content"] = "",				["callback"]=nil,["data"] = 1}--帐号绑定
-	listData[12] = {["key"] = "showPosition",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",["content"] = "",				["callback"]=nil,["data"] = false}--位置可见
+	listData[10] = {["key"] = "relateContacts",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",		["content"] = "",			["callback"]=nil,["data"] = false}--关联通讯录
+	listData[11] = {["key"] = "bindAccount"   ,	["type"] = MoreInformationRender.ICON,  ["title"] = "帐号绑定",		["content"] = "",			["callback"]=nil,["data"] = {}}--帐号绑定
+	listData[12] = {["key"] = "showPosition",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",		["content"] = "",			["callback"]=nil,["data"] = false}--位置可见
 
-	listData[13] = {["key"] = "changPwd",		["type"] = MoreInformationRender.OTHER,["title"] = "修改密码",	["content"] = "",			["callback"]=nil,["data"] = 1}--修改密码
+	listData[13] = {["key"] = "changPwd",		["type"] = MoreInformationRender.OTHER,["title"] = "修改密码",		["content"] = "",			["callback"]=nil,["data"] = 1}--修改密码
 
 	--列表数据
 	self.listData = listData

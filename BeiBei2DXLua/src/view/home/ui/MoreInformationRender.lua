@@ -25,6 +25,15 @@ function MoreInformationRender:ctor(type)
 	self:init(type)
 	self:setAnchorPoint(cc.p(0,0))
 	self:setContentSize(cc.size(854,114))
+
+	--自定义的触摸事件监听
+	self.listener = cc.EventListenerTouchOneByOne:create()
+	self.listener:registerScriptHandler(handler(self, self.onTouchBegan),cc.Handler.EVENT_TOUCH_BEGAN)
+	self.listener:registerScriptHandler(handler(self, self.onTouchMoved),cc.Handler.EVENT_TOUCH_MOVED)
+	self.listener:registerScriptHandler(handler(self, self.onTouchEnded),cc.Handler.EVENT_TOUCH_ENDED)
+
+	local eventDispatcher = self:getEventDispatcher()
+	eventDispatcher:addEventListenerWithSceneGraphPriority(self.listener, self)
 end
 
 --初始化UI
@@ -45,7 +54,9 @@ function MoreInformationRender:init(type)
 	if self.type == MoreInformationRender.SWITCH then 
 		--开关
 		local checkBox = ccui.CheckBox:create()
-		checkBox:setTouchEnabled(true)
+		-- TODO 目前禁用这个功能
+		-- checkBox:setTouchEnabled(true)
+		checkBox:setTouchEnabled(false)
 		checkBox:loadTextures(
 			"image/newstudy/wordsbackgroundblue.png",--normal
 			"image/newstudy/wordsbackgroundblue.png",--normal press
@@ -110,17 +121,6 @@ function MoreInformationRender:updateView()
 	end
 end
 
---点击按钮 触发回调
-function MoreInformationRender:onRenderTouch(sender,eventType)
-	if eventType ~= ccui.TouchEventType.ended then
-		return
-	end
-
-	if callback ~= nil then
-		callback(self.type,self.key)
-	end
-end
-
 --复选框事件处理
 function MoreInformationRender:onCheckBoxTouch(sender,eventType)
 	if eventType == ccui.CheckBoxEventType.selected then
@@ -137,9 +137,36 @@ end
 function MoreInformationRender:onModifyCallBack(title,content,data)
 	self.title = title
 	self.content = content
-	self.callback = callback
+	self.data = data
 
 	self:updateView()
+end
+
+--自己处理 触摸事件三个阶段
+function MoreInformationRender:onTouchBegan(touch,event)
+	local target = event:getCurrentTarget()
+	local locationInNode = target:convertToNodeSpace(touch:getLocation())
+	local s = target:getContentSize()
+	local rect = cc.rect(0,0,s.width,s.height)
+	if cc.rectContainsPoint(rect,locationInNode) then
+		return true
+	end
+	return false
+end
+
+function MoreInformationRender:onTouchMoved(touch,event)
+	
+end
+
+function MoreInformationRender:onTouchEnded(touch,event)
+	if self.type == MoreInformationRender.SWITCH then
+		--TODO checkBox
+	end
+	if self.callback ~= nil then
+		--调用外部回调函数 
+		--同时把自己的回调函数也传过去
+		self.callback(self.type,self.key,handler(self,self.onModifyCallBack))
+	end
 end
 
 return MoreInformationRender
