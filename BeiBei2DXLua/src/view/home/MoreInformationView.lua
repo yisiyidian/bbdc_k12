@@ -73,7 +73,7 @@ function MoreInfomationView:initData()
 
 	listData[10] = {["key"] = "relateContacts",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",	["content"] = "",				["callback"]=nil,["data"] = 1}--关联通讯录
 	listData[11] = {["key"] = "bindAccount"   ,	["type"] = MoreInformationRender.ICON,  ["title"] = "帐号绑定",	["content"] = "",				["callback"]=nil,["data"] = 1}--帐号绑定
-	listData[12] = {["key"] = "showPosition",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",["content"] = "",				["callback"]=nil,["data"] = 1}--位置可见
+	listData[12] = {["key"] = "showPosition",	["type"] = MoreInformationRender.SWITCH,["title"] = "位置可见",["content"] = "",				["callback"]=nil,["data"] = 1}--位置可见
 
 	listData[13] = {["key"] = "changPwd",		["type"] = MoreInformationRender.OTHER,["title"] = "修改密码",	["content"] = "",			["callback"]=nil,["data"] = 1}--修改密码
 
@@ -84,10 +84,13 @@ end
 --初始化UI
 function MoreInfomationView:initUI()
 	local render = nil 
+	self.view = {}
 	for k,v in pairs(self.listData) do
-		render = MoreInformationRender.new(v.type,v.title,v.content,v.callback,v.data)
-		render:setData(v.key)
+		render = MoreInformationRender.new(v.type)
+		render:setData(v.key,v.title,v.content,v.callback,v.data)
 		-- TODO计算坐标位置
+
+
 		-- render:setPosition(position)
 		self.listView:addChild(render)
 	end
