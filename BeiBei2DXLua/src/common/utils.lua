@@ -458,5 +458,27 @@ function dump(value, desciption, nesting)
     end
 end
 
+--让Layer的触摸事件不穿透
+function layerHoldTouch(layer)
+    local onTouchBegan = function(touch, event)
+        return true
+    end    
+    
+    local onTouchMoved = function(touch, event)
+    end
+    
+    local onTouchEnded = function(touch, event)
+    end
+    
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = layer:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
+
+    listener:setSwallowTouches(true)
+end
+
 
 

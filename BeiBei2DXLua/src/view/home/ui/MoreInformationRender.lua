@@ -165,7 +165,18 @@ function MoreInformationRender:onTouchEnded(touch,event)
 	if self.callback ~= nil then
 		--调用外部回调函数 
 		--同时把自己的回调函数也传过去
-		self.callback(self.type,self.key,handler(self,self.onModifyCallBack))
+		local t = nil --数据
+		if self.showContent then
+			t = self.content
+		else
+			t = self.data
+		end
+		print("RenderTouch:"..self.key)
+		self.callback(self.type,
+			self.key,
+			t,
+			handler(self,self.onModifyCallBack)
+			)
 	end
 end
 

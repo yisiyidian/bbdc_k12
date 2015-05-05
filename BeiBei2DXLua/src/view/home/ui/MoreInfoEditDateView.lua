@@ -3,7 +3,7 @@
 -- Date: 2015-05-05 15:15:52
 --
 local MoreInfoEditDateView = class("MoreInfoEditDateView", function()
-	local layer = cc.Layer:create()
+	local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
 	return layer
 end)
 
