@@ -19,14 +19,14 @@ function MoreInfoEditTextView:initUI()
 	--标题
 	local title = cc.Label:createWithSystemFont("修改信息","",60)
 	title:setTextColor(cc.c3b(121,200,247))
+	title:setPosition(s_DESIGN_WIDTH*0.5,s_DESIGN_HEIGHT*0.9)
+	self:addChild(title)
 	self.title = title
-	-- self.title:setPosition(position)
-	self:addChild(self.title)
 	--返回按钮
 	local btnReturn = ccui.Button:create("image/shop/button_back.png")
 	btnReturn:addTouchEventListener(handler(self, self.onReturnClick))
 	self.btnReturn = btnReturn
-	-- self.btnReturn:setPosition(position)
+	self.btnReturn:setPosition(s_DESIGN_WIDTH*0.1,s_DESIGN_HEIGHT*0.9)
 	self:addChild(self.btnReturn)
 end
 
