@@ -163,7 +163,8 @@ function MoreInfomationView:onRenderTouch(renderType,key,data,title,callback,che
 		view = MoreInfoEditTextView.new()
 		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
 	elseif renderType == MoreInformationRender.DATE then
-		
+		view = MoreInfoEditDateView.new()
+		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
 	elseif renderType == MoreInformationRender.SEX then
 		view = MoreInfoEditSexView.new()
 		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
