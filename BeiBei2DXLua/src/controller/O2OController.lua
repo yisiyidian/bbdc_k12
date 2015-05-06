@@ -155,6 +155,7 @@ function O2OController.logInByQQAuthData()
     O2OController.startLoadingData(USER_START_TYPE_QQ_AUTHDATA, nil, nil) 
 end
 
+--登陆
 function O2OController.startLoadingData(userStartType, username, password,isPhoneNumber)
     LOGTIME('O2OController.startLoadingData')
     local tmpUser = DataUser.create()
@@ -212,12 +213,10 @@ function O2OController.startLoadingData(userStartType, username, password,isPhon
                     s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, nil, username)
                     O2OController.getUserDatasOnline()
                 end)
-                
             else
                 O2OController.getUserDatasOnline()
             end
         end
-        
     end
 
     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
@@ -307,6 +306,7 @@ end
 
 ----------------------------------------------------------------------------------------------------------------
 
+--登陆成功 获取线上数据
 function O2OController.getUserDatasOnline()
     LOGTIME('loadConfigs')
     O2OController.loadConfigs()
@@ -323,12 +323,12 @@ function O2OController.getUserDatasOnline()
 
                 LOGTIME('getBossWord')               
                 O2OController.getBossWord(function ()
-
                     LOGTIME('getDailyStudyInfo')
                     O2OController.getDailyStudyInfo(function () 
                         LOGTIME('enterHomeLayer')
                         s_CorePlayManager.enterHomeLayer()
-                        -- O2OController.getBulletinBoard()   
+                        s_SCENE:removeAllPopups()
+                        -- O2OController.getBulletinBoard()
                         s_CURRENT_USER.dataDailyUsing:reset() 
                     end)
 
