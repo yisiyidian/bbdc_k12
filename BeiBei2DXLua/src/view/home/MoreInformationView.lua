@@ -1,8 +1,6 @@
 --查看更多个人信息界面
 --从左侧菜单栏进入
-
-
----
+--
 ---listView由MoreInformationRender渲染单元组成，MoreInformationRender由listData驱动显示,
 ---触摸Render会触发回调，根据Render表示的数据类型显示指定的EditView（见require的table）,
 ---EditView修改完成之后会触发回调MoreInfomationView:onEditClose,然后更新数据到s_CURRENT_USER,调用Render的回调renderEditCall修改Render显示的内容
@@ -47,7 +45,7 @@ end
 
 --初始化数据
 function MoreInfomationView:initData()
-	local nickName  	= s_CURRENT_USER.nickName
+	local nickName  	= s_CURRENT_USER.username
 	local sex 			= s_CURRENT_USER.sex == 0 and "女" or "男"
 	local headImg 		= s_CURRENT_USER.headImg
 	local email 		= s_CURRENT_USER.email    --邮箱
@@ -60,6 +58,10 @@ function MoreInfomationView:initData()
 	local relateContacts = s_CURRENT_USER.relateContacts --关联通讯录
 	local bindAccount    = s_CURRENT_USER.bindAccount    --帐号绑定
 	local showPosition   = s_CURRENT_USER.showPosition   --位置可见
+	--特殊处理一下名字
+	if s_CURRENT_USER.nickName ~= "" then
+		nickName = s_CURRENT_USER.nickName
+	end
 	--验证昵称是否合法
 	local function checkName(text)
 		if validateUsername(text) then
@@ -180,13 +182,21 @@ end
 --关闭EditView
 --同时触发Render的回调以修改Render的显示内容
 --同时修改玩家的资料
-function MoreInfomationView:onEditClose(key,data)
+function MoreInfomationView:onEditClose(key,type,data)
 	self:hideEditView()
 	if key == nil then
 		return
 	end
 	--修改玩家的数据
 	--s_CURRENT_USER
+	if type == MoreInformationRender.TEXT then
+		s_CURRENT_USER[key] == data
+	elseif type == MoreInformationRender.DATE then
+
+	elseif type == MoreInformationRender.SEX then
+
+	end
+
 	--回调给Render
 	if self.renderEditCall ~= nil then
 		self.renderEditCall(key,data)

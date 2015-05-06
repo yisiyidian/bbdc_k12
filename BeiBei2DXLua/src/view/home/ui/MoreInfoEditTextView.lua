@@ -94,10 +94,9 @@ function MoreInfoEditTextView:onConfirmTouch(sender,eventType)
 	end
 
 	--关闭回调
-	--Render里的onModifyCallBack
-	
+	--MoreInformationView里的onEditClose
 	if self.closeCallBack ~= nil then
-		self.closeCallBack(self.key,text)
+		self.closeCallBack(self.key,self.type,text)
 	end
 end
 
