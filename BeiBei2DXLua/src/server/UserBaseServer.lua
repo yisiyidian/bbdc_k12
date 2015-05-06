@@ -48,6 +48,17 @@ function validateUsername(s)
     return true
 end
 
+--验证邮箱
+function validateEmail(email)
+    if (email:match("[A-Za-z0-9%.%%%+%-]+@[A-Za-z0-9%.%%%+%-]+%.%w%w%w?%w?")) then 
+        -- print(email .. " is a valid email address") 
+        return true
+    else 
+        -- print(email .. " is a invalid email address") 
+        return false
+    end 
+end
+
 function validatePassword(s)
     local length = string.len(s)
     if length < 6 or length > 16 then return false end

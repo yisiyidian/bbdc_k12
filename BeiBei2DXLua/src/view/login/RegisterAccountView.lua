@@ -142,7 +142,6 @@ function RegisterAccountView:onTouchPhoneNumberOK(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
-
 	-- 验证手机号码^1[3|4|5|8][0-9]%d%d%d%d%d%d%d%d$
 	local phoneNumber = self.inputNode:getText()
 	if string.find(phoneNumber,"^1[3|4|5|8][0-9]%d%d%d%d%d%d%d%d$") then

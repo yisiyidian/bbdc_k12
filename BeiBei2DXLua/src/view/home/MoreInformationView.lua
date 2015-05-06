@@ -2,6 +2,11 @@
 --从左侧菜单栏进入
 
 
+---
+---listView由MoreInformationRender渲染单元组成，MoreInformationRender由listData驱动显示,
+---触摸Render会触发回调，根据Render表示的数据类型显示指定的EditView（见require的table）,
+---EditView修改完成之后会触发回调MoreInfomationView:onEditClose,然后更新数据到s_CURRENT_USER,调用Render的回调renderEditCall修改Render显示的内容
+
 local MoreInformationRender = require("view.home.ui.MoreInformationRender")--小格子
 local MoreInfoEditSexView = require("view.home.ui.MoreInfoEditSexView")	--修改性别的view
 local MoreInfoEditDateView = require("view.home.ui.MoreInfoEditDateView") --修改日期的view
@@ -55,24 +60,48 @@ function MoreInfomationView:initData()
 	local relateContacts = s_CURRENT_USER.relateContacts --关联通讯录
 	local bindAccount    = s_CURRENT_USER.bindAccount    --帐号绑定
 	local showPosition   = s_CURRENT_USER.showPosition   --位置可见
+	--验证昵称是否合法
+	local function checkName(text)
+		if validateUsername(text) then
+			return true,""
+		else
+			-- s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR))
+			print(s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR))
+			return false,s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR)
+		end
+	end
+	--验证邮箱
+	local function checkEmail(text)
+		if validateEmail(text) then
+			return true,""
+		else
+			return false,"邮箱格式不正确！"
+		end
+	end
+	--非空验证
+	local function checkNotNil(text)
+		if text ~= "" then
+			return true,""
+		end
+		return false,"内容不能为空！"
+	end
 
 	local listData = {}
-	listData[1] = {["key"] = "headImg",			["type"] = MoreInformationRender.TEXT,["title"] = "头像",			["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["data"] = headImg} --头像	
-	listData[2] = {["key"] = "nickName",		["type"] = MoreInformationRender.TEXT,["title"] = "昵称",			["content"] = nickName,		["callback"]=handler(self,self.onRenderTouch),["data"] = nil} --昵称
-	listData[3] = {["key"] = "sex",				["type"] = MoreInformationRender.SEX,["title"] = "性别",				["content"] = sex,			["callback"]=handler(self,self.onRenderTouch),["data"] = nil}--性别
-	listData[4] = {["key"] = "email",			["type"] = MoreInformationRender.TEXT,["title"] = "邮箱",			["content"] = email,		["callback"]=handler(self,self.onRenderTouch),["data"] = nil}--邮箱
-	listData[5] = {["key"] = "birthday",		["type"] = MoreInformationRender.DATE,["title"] = "生日",			["content"] = birthday,		["callback"]=handler(self,self.onRenderTouch),["data"] = nil}--生日
-	listData[6] = {["key"] = "job",				["type"] = MoreInformationRender.TEXT,["title"] = "职业",			["content"] = job,			["callback"]=handler(self,self.onRenderTouch),["data"] = nil}--职业
-	listData[7] = {["key"] = "school",			["type"] = MoreInformationRender.TEXT,["title"] = "学校",			["content"] = school,		["callback"]=handler(self,self.onRenderTouch),["data"] = nil}--学校
-	listData[8] = {["key"] = "position",		["type"] = MoreInformationRender.TEXT,["title"] = "位置",			["content"] = position,		["callback"]=handler(self,self.onRenderTouch),["data"] = nil}--位置
-	listData[9] = {["key"] = "examination",		["type"] = MoreInformationRender.TEXT,["title"] = "在准备的考试",		["content"] = examination,	["callback"]=handler(self,self.onRenderTouch),["data"] = 1}--在准备的考试
+	listData[1] = {["key"] = "headImg",			["type"] = MoreInformationRender.TEXT,["title"] = "头像",			["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = headImg} --头像	
+	listData[2] = {["key"] = "nickName",		["type"] = MoreInformationRender.TEXT,["title"] = "昵称",			["content"] = nickName,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkName,	["data"] = nil} --昵称
+	listData[3] = {["key"] = "sex",				["type"] = MoreInformationRender.SEX,["title"] = "性别",				["content"] = sex,			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = nil}--性别
+	listData[4] = {["key"] = "email",			["type"] = MoreInformationRender.TEXT,["title"] = "邮箱",			["content"] = email,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkEmail,	["data"] = nil}--邮箱
+	listData[5] = {["key"] = "birthday",		["type"] = MoreInformationRender.DATE,["title"] = "生日",			["content"] = birthday,		["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = nil}--生日
+	listData[6] = {["key"] = "job",				["type"] = MoreInformationRender.TEXT,["title"] = "职业",			["content"] = job,			["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = nil}--职业
+	listData[7] = {["key"] = "school",			["type"] = MoreInformationRender.TEXT,["title"] = "学校",			["content"] = school,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = nil}--学校
+	listData[8] = {["key"] = "position",		["type"] = MoreInformationRender.TEXT,["title"] = "位置",			["content"] = position,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = nil}--位置
+	listData[9] = {["key"] = "examination",		["type"] = MoreInformationRender.TEXT,["title"] = "在准备的考试",		["content"] = examination,	["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = 1}--在准备的考试
 
-	listData[10] = {["key"] = "relateContacts",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["data"] = false}--关联通讯录
-	listData[11] = {["key"] = "bindAccount"   ,	["type"] = MoreInformationRender.ICON,  ["title"] = "帐号绑定",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["data"] = {}}--帐号绑定
-	listData[12] = {["key"] = "showPosition",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["data"] = false}--位置可见
+	listData[10] = {["key"] = "relateContacts",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = false}--关联通讯录
+	listData[11] = {["key"] = "bindAccount"   ,	["type"] = MoreInformationRender.ICON,  ["title"] = "帐号绑定",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = {}}--帐号绑定
+	listData[12] = {["key"] = "showPosition",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = false}--位置可见
 
-	listData[13] = {["key"] = "changPwd",		["type"] = MoreInformationRender.OTHER,["title"] = "修改密码",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["data"] = 1}--修改密码
-
+	listData[13] = {["key"] = "changPwd",		["type"] = MoreInformationRender.OTHER,["title"] = "修改密码",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = 1}--修改密码
 	--列表数据
 	self.listData = listData
 end
@@ -85,31 +114,26 @@ function MoreInfomationView:initUI()
 	local renders = {} --临时容器
 	for k,v in pairs(self.listData) do
 		render = MoreInformationRender.new(v.type)
-		render:setData(v.key,v.title,v.content,v.callback,v.data)
+		-- render:setData(v.key,v.title,v.content,v.callback,v.data,v.check)
+		render:setData(v)
 		renders[#renders+1] = render
 		sumY = sumY + 120
 		self.listView:addChild(render)
 		innerHeight = innerHeight + 120
 	end
-
-	--
+	--计算render坐标
 	local tlen = innerHeight - 120
 	for _,rd in pairs(renders) do
 		rd:setPosition(0,tlen)
 		tlen = tlen - 120
 	end
-
-	print("innerHeight:"..innerHeight)
-	print("s_DESIGN_HEIGHT:"..s_DESIGN_HEIGHT)
-
+	--设置标题 返回按钮的坐标
 	innerHeight = innerHeight + 130
-
 	self.title:setPosition(s_DESIGN_WIDTH*0.5,innerHeight - 80)
 	self.listView:addChild(self.title)
 	self.btnReturn:setPosition(s_DESIGN_WIDTH*0.1,innerHeight - 80)
 	self.listView:addChild(self.btnReturn)
 
-	-- setInnerContainerSize
 	self.listView:setInnerContainerSize(cc.size(s_DESIGN_WIDTH,innerHeight))
 end
 
@@ -118,7 +142,6 @@ function MoreInfomationView:onReturnClick(sender, eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
-
 	s_SCENE:removeAllPopups()
 end
 
@@ -126,16 +149,18 @@ end
 --type 显示类型
 --key  键值
 --data 数据	
---callback 回调
-function MoreInfomationView:onRenderTouch(renderType,key,data,callback)
+--callback 回调 		在修改界面完成输入之后,回调给Render去更新显示内容
+function MoreInfomationView:onRenderTouch(renderType,key,data,title,callback,checkCall)
 	--文本 格子点击事件	
 	--性别格子点击
 	--日期格子点击
 	local view = nil
+	self.renderEditCall = nil
 	print("renderType:"..renderType)
 	if renderType == MoreInformationRender.TEXT then
 		view = MoreInfoEditTextView.new()
-		view:setData(data,handler(self, self.onEditClose))
+		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
+		self.renderEditCall = callback --绑定回调
 	elseif renderType == MoreInformationRender.DATE then
 
 	elseif renderType == MoreInformationRender.SEX then
@@ -147,37 +172,42 @@ function MoreInfomationView:onRenderTouch(renderType,key,data,callback)
 	elseif renderType == MoreInformationRender.OTHER then
 
 	end
-
 	--显示编辑界面
 	if view then
 		self:showEditView(view)
 	end
 end
-
---关闭
-function MoreInfomationView:onEditClose()
+--关闭EditView
+--同时触发Render的回调以修改Render的显示内容
+--同时修改玩家的资料
+function MoreInfomationView:onEditClose(key,data)
 	self:hideEditView()
+	if key == nil then
+		return
+	end
+	--修改玩家的数据
+	--s_CURRENT_USER
+	--回调给Render
+	if self.renderEditCall ~= nil then
+		self.renderEditCall(key,data)
+	end
 end
-
 --显示修改界面
 function MoreInfomationView:showEditView(view)
-	print("AAAAAAAAAAAAAAAAAAAAAA")
 	self.listView:setTouchEnabled(false)
 	self.editView = view
 	self.editView:setPosition(s_DESIGN_WIDTH,0)--移到屏幕左侧
 	self:addChild(self.editView)
 	
-	local action1 = cc.MoveTo:create(0.3,cc.p(0,0))--移动的Action
-	-- local action2 = cc.CallFunc:create(handler(self, self.moveComplete))
-	self.editView:runAction(action1)
-	
+	local actionMove = cc.MoveTo:create(0.3,cc.p(0,0))--移动的Action
+	self.editView:runAction(actionMove)
 end
 --隐藏修改界面
 function MoreInfomationView:hideEditView()
 	if self.editView then
-		local action1 = cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH,0))
-		local action2 = cc.CallFunc:create(handler(self, self.moveComplete))
-		self.editView:runAction(cc.Sequence:create(action1,action2))
+		local actionMove 		= cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH,0))
+		local actionComplete 	= cc.CallFunc:create(handler(self, self.moveComplete))
+		self.editView:runAction(cc.Sequence:create(actionMove,actionComplete))
 	end
 end
 --移动完成回调

@@ -23,7 +23,6 @@ function InputNode:init(backgroundImage,placeHolder,callback,width,height,isPwd,
     self.height = height or 80    --高 默认80
     self.isPwd = isPwd or false  --是否密码格式  默认false
     self.callback = callbacks
-
     self.placeHolder = placeHolder
 
     self:setContentSize(self.width, self.height)
@@ -102,8 +101,6 @@ end
 --开关键盘
 function InputNode:openIME()
     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
-    -- self.textField:getVirtualRenderer():attachWithIME()
-    -- self.textField:getVirtualRenderer():attachWithIME()
 end
 
 function InputNode:closeIME()
@@ -113,7 +110,11 @@ end
 function InputNode:getText()
     return self.textField:getString()
 end
-
+--设置占位文本
+function InputNode:setPlaceHolder(placeHolder)
+    self.placeHolder = placeHolder
+    self.textField:setPlaceHolder(placeHolder)--占位文本
+end
 
 
 --deprecated

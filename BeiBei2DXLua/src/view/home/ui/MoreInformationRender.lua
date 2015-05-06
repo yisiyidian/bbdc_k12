@@ -85,22 +85,29 @@ function MoreInformationRender:init(type)
 	end
 end
 
---设置显示数据
+--设置显示数据,data的属性
 --key 属性键值
 --title 标题文本
 --content 内容文本  fun(type,key)
---callback 点击Render的回调
+--callback 点击Render的回调 
+--		MoreInfomationView:onRenderTouch(renderType,key,data,callback)
+--		type 显示类型
+--		key  键值
+--		data 数据	
+--		callback 回调 	在修改界面完成输入之后,回调给Render去更新显示内容
+--		checkCallBack   数据格式检查的函数
 --data 自定义数据 如开关状态什么的
-function MoreInformationRender:setData(key,title,content,callback,data)
-	self.key = key
-	self.title = title
-	self.content = content
-	self.callback = callback
-	self.data = data
-
+--checkCallBack 检查数据格式
+function MoreInformationRender:setData(data)
+	-- v.key,v.title,v.content,v.callback,v.data,v.check
+	self.key 			= data.key
+	self.title 			= data.title
+	self.content 		= data.content
+	self.callback 		= data.callback
+	self.data 			= data.data
+	self.checkCallBack 	= data.check
 	self:updateView()
 end
-
 --更新界面
 function MoreInformationRender:updateView()
 	print("updateView:"..self.title)
@@ -131,14 +138,13 @@ function MoreInformationRender:onCheckBoxTouch(sender,eventType)
 end
 
 --修改数据完成回调
---title 	标题
+--title 	key 没啥用
 --content 	内容
 --data 		数据
-function MoreInformationRender:onModifyCallBack(title,content,data)
-	self.title = title
+function MoreInformationRender:onModifyCallBack(key,content,data)
+	-- self.title = title
 	self.content = content
 	self.data = data
-
 	self:updateView()
 end
 
@@ -175,7 +181,9 @@ function MoreInformationRender:onTouchEnded(touch,event)
 		self.callback(self.type,
 			self.key,
 			t,
-			handler(self,self.onModifyCallBack)
+			self.title,
+			handler(self,self.onModifyCallBack),
+			self.checkCallBack --检查数据格式的回调
 			)
 	end
 end
