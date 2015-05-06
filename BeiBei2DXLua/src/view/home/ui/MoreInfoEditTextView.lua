@@ -17,7 +17,6 @@ end
 function MoreInfoEditTextView:initUI()
 	self:setTouchEnabled(true)
 	self:setSwallowsTouches(true)
-	print("self:isSwallowTouches():"..tostring(self:isSwallowsTouches()))
 	--标题
 	local title = cc.Label:createWithSystemFont("修改信息","",60)
 	title:setTextColor(cc.c3b(121,200,247))

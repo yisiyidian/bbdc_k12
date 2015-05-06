@@ -25,5 +25,44 @@ function MoreInfoEditDateView:setData(data,callback)
 	self.callback = callback
 end
 
+--返回按钮点击
+function MoreInfoEditTextView:onReturnClick(sender,eventType)
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+
+	if self.closeCallBack ~= nil then
+		self.closeCallBack()
+	end
+end
+--确定按钮点击
+function MoreInfoEditTextView:onConfirmTouch(sender,eventType)
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+	--验证文本合法性
+	local text = self.inputNode:getText()
+	if text == "" then
+		s_TIPS_LAYER:showSmallWithOneButton("文本不能为空!")
+		return
+	end
+
+	if self.check ~= nil then
+		local result,tip = self.check(text)
+		if not result then
+			print("昵称格式不符合")
+			print(tip)
+			s_TIPS_LAYER:showSmallWithOneButton(tip)
+			return
+		end
+	end
+
+	--关闭回调
+	--MoreInformationView里的onEditClose
+	if self.closeCallBack ~= nil then
+		self.closeCallBack(self.key,self.type,text)
+	end
+end
+
 
 return MoreInfoEditDateView
