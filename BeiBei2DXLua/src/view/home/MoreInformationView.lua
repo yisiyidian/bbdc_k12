@@ -190,7 +190,7 @@ function MoreInfomationView:onEditClose(key,type,data)
 	--修改玩家的数据
 	--s_CURRENT_USER
 	if type == MoreInformationRender.TEXT then
-		s_CURRENT_USER[key] == data
+		s_CURRENT_USER[key] = data
 	elseif type == MoreInformationRender.DATE then
 
 	elseif type == MoreInformationRender.SEX then
