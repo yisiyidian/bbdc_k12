@@ -5,6 +5,7 @@
 
 local MoreInfoEditSexView = class("MoreInfoEditSexView", function()
 	local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
+	layerHoldTouch(layer)
 	return layer
 end)
 
@@ -50,7 +51,7 @@ function MoreInfoEditSexView:setData(key,data,title,closeCallBack,check)
 end
 
 --返回按钮点击
-function MoreInfoEditTextView:onReturnClick(sender,eventType)
+function MoreInfoEditSexView:onReturnClick(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
@@ -60,7 +61,7 @@ function MoreInfoEditTextView:onReturnClick(sender,eventType)
 	end
 end
 --确定按钮点击
-function MoreInfoEditTextView:onConfirmTouch(sender,eventType)
+function MoreInfoEditSexView:onConfirmTouch(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end

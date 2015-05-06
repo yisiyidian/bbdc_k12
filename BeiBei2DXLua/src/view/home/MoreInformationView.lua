@@ -157,16 +157,16 @@ function MoreInfomationView:onRenderTouch(renderType,key,data,title,callback,che
 	--性别格子点击
 	--日期格子点击
 	local view = nil
-	self.renderEditCall = nil
+	self.renderEditCall = callback
 	print("renderType:"..renderType)
 	if renderType == MoreInformationRender.TEXT then
 		view = MoreInfoEditTextView.new()
 		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
-		self.renderEditCall = callback --绑定回调
 	elseif renderType == MoreInformationRender.DATE then
-
+		
 	elseif renderType == MoreInformationRender.SEX then
-
+		view = MoreInfoEditSexView.new()
+		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
 	elseif renderType == MoreInformationRender.SWITCH then
 
 	elseif renderType == MoreInformationRender.ICON then
