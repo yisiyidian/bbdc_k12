@@ -10,6 +10,25 @@ local MoreInfoEditDateView = class("MoreInfoEditDateView", function()
 	return layer
 end)
 
+local function judgeDate(y,m,d)
+	-- 判断日期
+	local dateList = {31,28,31,30,
+					31,30,31,31,
+					30,31,30,31}
+
+	if (y % 4 == 0 and y % 100 ~= 0) or (y % 400 == 0) then
+		dateList[2] = 29
+	end
+	print(y.."年"..m.."月"..d.."日")
+	if d <= dateList[m] and d > 0 then
+		print("存在")
+		return true
+	else
+		print("不存在")
+		return false
+	end
+end
+
 function MoreInfoEditDateView:ctor()
 	self:initUI()
 end
@@ -95,17 +114,49 @@ function MoreInfoEditDateView:onConfirmTouch(sender, eventType)
 
 	if year:match("^%d%d%d%d$") then
 		local y = tonumber(year)
-		local nowYear = tonumber(os.data("%Y",os.time()))
+		local nowYear = tonumber(os.date("%Y",os.time()))
 		if y > nowYear or y < 1900 then
 			s_TIPS_LAYER:showSmallWithOneButton("无效的年份")	
+			return 
 		end
 	else
 		s_TIPS_LAYER:showSmallWithOneButton("年份格式不正确")
+		return 
 	end
 	
-	--TODO
+	if month:match("^%d$") or month:match("^%d%d$") then
+		local m = tonumber(month)
+		if m > 12 or m <= 0 then
+			s_TIPS_LAYER:showSmallWithOneButton("无效的月份")	
+			return 
+		end
+	else
+		s_TIPS_LAYER:showSmallWithOneButton("月份格式不正确")
+		return 
+	end
+
+	if day:match("^%d$") or day:match("^%d%d$") then
+		local exist = judgeDate(tonumber(year),tonumber(month),tonumber(day))
+		if exist == false then
+			s_TIPS_LAYER:showSmallWithOneButton("无效的日期")	
+			return 
+		end
+	else
+		s_TIPS_LAYER:showSmallWithOneButton("日期格式不正确")
+		return 
+	end
 end
 
+--返回按钮点击
+function MoreInfoEditDateView:onReturnClick(sender,eventType)
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+
+	if self.closeCallBack ~= nil then
+		self.closeCallBack()
+	end
+end
 
 
 return MoreInfoEditDateView
