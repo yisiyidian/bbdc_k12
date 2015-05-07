@@ -23,6 +23,19 @@ function MoreInfoEditSexView:initUI()
 	self.views = {}
 	self:setTouchEnabled(true)
 	self:setSwallowsTouches(true)
+
+	--头像
+	local headImg = cc.Sprite:create("image/homescene/setup_head.png")
+	headImg:setPosition(0.6 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 100)
+	self.views[#self.views + 1] = headImg
+	self:addChild(headImg)
+
+	local headImg = cc.Sprite:create("image/homescene/change_head_setting_2.png")
+	headImg:setPosition(0.4 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 100)
+	self.views[#self.views + 1] = headImg
+	self:addChild(headImg)
+
+	
 	--标题
 	local title = cc.Label:createWithSystemFont("修改性别", "", 36)
 	title:setPosition(s_DESIGN_WIDTH * 0.5, s_DESIGN_HEIGHT * 0.9)
@@ -62,7 +75,7 @@ function MoreInfoEditSexView:initUI()
 		end
 			
 	end
-	--男
+	--女
 	local checkBoxMale = ccui.CheckBox:create()
 	checkBoxMale:setTouchEnabled(true)        --可点击
 	checkBoxMale:loadTextures(
@@ -80,7 +93,7 @@ function MoreInfoEditSexView:initUI()
 	self:addChild(checkBoxMale)
 	self.views[#self.views+1] = checkBoxMale
 
-	--女
+	--男
 	local checkBoxFemale = ccui.CheckBox:create()
 	checkBoxFemale:setTouchEnabled(true)
 	checkBoxFemale:setName("Female")
@@ -112,13 +125,15 @@ end
 
 --设置回调
 --data  性别数据 0 女  1 男
-function MoreInfoEditSexView:setData(key,data,title,closeCallBack,check)
+function MoreInfoEditSexView:setData(key,type,data,title,closeCallBack,check)
 	self.key = key
+	self.type = type
 	self.data = data
 	self.titleText = title
 	self.closeCallBack = closeCallBack
 	self.check = check
 	--TODO 设置占位文本
+
 	self.title:setString("修改"..self.titleText)
 end
 
@@ -138,29 +153,34 @@ function MoreInfoEditSexView:onConfirmTouch(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
-	local text = nil
+	local data = nil
 	-- 0是被选中  1是不被选中
 	local sexnan = self.checkBoxMale:isSelected() and 0 or 1 
 	local sexnv = self.checkBoxFemale:isSelected() and 0 or 1
+	print("sexnv"..sexnv)
 	if sexnan == 1 and sexnv == 1 then 
 		s_TIPS_LAYER:showSmallWithOneButton("性别不能为空!")
 		return
 	end
-	self.sex = sex
+	self.sexnv = sexnv
+	self.sexnan = sexnan
 	if sexnv == 0 then 
-		 text = "女"  
+		 data = 0 
 		 self.checkBoxMale:setSelected(false)
 		 self.checkBoxFemale:setSelected(true)
 	elseif sexnv == 1 then
-		 text = "男" 
+		 data = 1
 		 self.checkBoxFemale:setSelected(false)
 		 self.checkBoxMale:setSelected(true)
 	end
+	print("data"..data)
+	print("self.key"..self.key)
+
 
 	--关闭回调
 	--MoreInformationView里的onEditClose
 	if self.closeCallBack ~= nil then
-		self.closeCallBack(self.key,self.type,text)
+		self.closeCallBack(self.key,self.type,data)
 	end
 	
 end

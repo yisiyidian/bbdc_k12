@@ -179,12 +179,14 @@ function MoreInfomationView:onRenderTouch(renderType,key,data,title,callback,che
 	if renderType == MoreInformationRender.TEXT then
 		view = MoreInfoEditTextView.new()
 		view:setData(key,MoreInformationRender.TEXT,data,title,handler(self, self.onEditClose),checkCall)
+
 	elseif renderType == MoreInformationRender.DATE then
 		view = MoreInfoEditDateView.new()
 		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
+
 	elseif renderType == MoreInformationRender.SEX then
 		view = MoreInfoEditSexView.new()
-		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
+		view:setData(key,MoreInformationRender.SEX,data,title,handler(self, self.onEditClose),checkCall)
 	elseif renderType == MoreInformationRender.SWITCH then
 
 	elseif renderType == MoreInformationRender.ICON then
@@ -216,7 +218,8 @@ function MoreInfomationView:onEditClose(key,type,data)
 		s_CURRENT_USER[key] = data
 		value = data
 	elseif type == MoreInformationRender.SEX then
-
+		s_CURRENT_USER[key] = data
+		value = data
 	end
 	--保存到服务器 回调用
 	self.renderData = value
