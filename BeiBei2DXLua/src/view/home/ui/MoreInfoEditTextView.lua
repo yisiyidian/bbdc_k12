@@ -49,8 +49,9 @@ end
 --title 
 --closeCallBack 关闭的回调  会触发移动 会触发render里的修改内容
 --check 验证合法性的函数
-function MoreInfoEditTextView:setData(key,data,title,closeCallBack,check)
+function MoreInfoEditTextView:setData(key,type,data,title,closeCallBack,check)
 	self.key = key
+	self.type = type
 	self.data = data
 	self.titleText = title
 	self.closeCallBack = closeCallBack
@@ -85,8 +86,6 @@ function MoreInfoEditTextView:onConfirmTouch(sender,eventType)
 	if self.check ~= nil then
 		local result,tip = self.check(text)
 		if not result then
-			print("昵称格式不符合")
-			print(tip)
 			s_TIPS_LAYER:showSmallWithOneButton(tip)
 			return
 		end

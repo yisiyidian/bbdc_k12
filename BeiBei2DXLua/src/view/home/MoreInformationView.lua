@@ -173,10 +173,12 @@ function MoreInfomationView:onRenderTouch(renderType,key,data,title,callback,che
 	--日期格子点击
 	local view = nil
 	self.renderEditCall = callback
+	self.renderKey = key
+	self.renderData = nil
 	print("renderType:"..renderType)
 	if renderType == MoreInformationRender.TEXT then
 		view = MoreInfoEditTextView.new()
-		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
+		view:setData(key,MoreInformationRender.TEXT,data,title,handler(self, self.onEditClose),checkCall)
 	elseif renderType == MoreInformationRender.DATE then
 		view = MoreInfoEditDateView.new()
 		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
@@ -203,24 +205,44 @@ function MoreInfomationView:onEditClose(key,type,data)
 	if key == nil then
 		return
 	end
+	local value = nil --key对应的值，有可能是String 有可能是Number,对应LeanCloud上的值
 	--修改玩家的数据
 	--s_CURRENT_USER
+	print("key:"..key.." type:"..type.." data:"..data)
 	if type == MoreInformationRender.TEXT then
 		s_CURRENT_USER[key] = data
+		value = data
 	elseif type == MoreInformationRender.DATE then
-
+		s_CURRENT_USER[key] = data
+		value = data
 	elseif type == MoreInformationRender.SEX then
 
 	end
+	--保存到服务器 回调用
+	self.renderData = value
+	--存本地
+	print("s_CURRENT_USER存储到本地:"..key.." "..tostring(value))
+	s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, s_CURRENT_USER.userId, s_CURRENT_USER.username)
+	--推送到服务器上,回调的时候再更新Render
+	print("s_CURRENT_USER存储到服务器:"..key.." "..tostring(value))
+	saveUserToServer({[key] = value},handler(self, self.onEditSaveToServerCallBack))
 
+end
+
+--保存数据的回调
+function MoreInfomationView:onEditSaveToServerCallBack(data,error)
 	--回调给Render
 	if self.renderEditCall ~= nil then
-		self.renderEditCall(key,data)
+		self.renderEditCall(self.renderKey,self.renderData)
 	end
+
+	-- print("保存回来")
+	-- dump(data)
+	-- dump(error)
 end
+
 --显示修改界面
 function MoreInfomationView:showEditView(view)
-	-- self.listView:setTouchEnabled(false)
 	self.editView = view
 	self.editView:setPosition(s_DESIGN_WIDTH,0)--移到屏幕左侧
 	self:addChild(self.editView)
@@ -238,8 +260,6 @@ function MoreInfomationView:hideEditView()
 end
 --移动完成回调
 function MoreInfomationView:moveComplete()
-	self.listView:setTouchEnabled(true)
-
 	self.editView:removeFromParent()
 	self.editView = nil
 end

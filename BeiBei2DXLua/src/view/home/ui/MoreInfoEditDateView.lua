@@ -145,6 +145,12 @@ function MoreInfoEditDateView:onConfirmTouch(sender, eventType)
 		s_TIPS_LAYER:showSmallWithOneButton("日期格式不正确")
 		return 
 	end
+
+	if self.closeCallBack ~= nil then
+		local date = year.."-"..month.."-"..day
+		self.closeCallBack(self.key,self.type,date)
+		return
+	end
 end
 
 --返回按钮点击
