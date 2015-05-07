@@ -115,8 +115,12 @@ function MoreInformationRender:updateView()
 	self.titleLabel:setString(self.title)
 
 	if self.showContent then
-		if self.content and self.content~="" then
+		if self.content and self.content~="" and self.content ~= 0 and self.content ~= 1 then
 			self.contentLabel:setString(self.content)
+		elseif self.content == 1 then
+			self.contentLabel:setString("男")
+		elseif self.content == 0 then
+			self.contentLabel:setString("女")
 		else
 			self.contentLabel:setString("未设置 >")
 		end
