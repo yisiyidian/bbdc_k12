@@ -289,14 +289,14 @@ function CorePlayManager.initTotalUnitPlay()
     CorePlayManager.currentUnitID = nil
     for i = 1, #unitList do
         local unit = unitList[i]
-        if unit.unitState >= 3 and unit.unitState <= 6 then
+        if unit.unitState >= 1 and unit.unitState <= 4 then
             if unit.coolingDay == 0 then
                 CorePlayManager.currentUnitID = unit.unitID
                 break
             else
                 -- pass
             end
-        elseif unit.unitState == 8 then
+        elseif unit.unitState == 5 then
             -- pass
         else
             CorePlayManager.currentUnitID = unit.unitID
@@ -309,7 +309,7 @@ function CorePlayManager.initTotalUnitPlay()
     else
         -- exist boss
     end
-    --print('currentUnitID:'..CorePlayManager.currentUnitID)
+    print('currentUnitID:'..CorePlayManager.currentUnitID)
     CorePlayManager.currentUnit            = s_LocalDatabaseManager.getUnitInfo(CorePlayManager.currentUnitID)
     print_lua_table(CorePlayManager.currentUnit)
     CorePlayManager.currentUnitState       = CorePlayManager.currentUnit.unitState
@@ -323,16 +323,16 @@ function CorePlayManager.initTotalUnitPlay()
     -- if     CorePlayManager.currentUnitState == 0 then
     --     -- study   model
     --     CorePlayManager.initStudyModel()
+    -- if CorePlayManager.currentUnitState == 0 then
+    --     -- test    model
+    --     CorePlayManager.initTestModel()
+    -- elseif CorePlayManager.currentUnitState == 1 then
+    --     -- review  model
+    --     CorePlayManager.initReviewModel()
     if CorePlayManager.currentUnitState == 0 then
-        -- test    model
-        CorePlayManager.initTestModel()
-    elseif CorePlayManager.currentUnitState == 1 then
-        -- review  model
-        CorePlayManager.initReviewModel()
-    elseif CorePlayManager.currentUnitState == 2 then
         -- summary model
         CorePlayManager.initSummaryModel()
-    elseif CorePlayManager.currentUnitState >= 3 and CorePlayManager.currentUnitState <= 6 then
+    elseif CorePlayManager.currentUnitState >= 1 and CorePlayManager.currentUnitState <= 4 then
         -- review model
         CorePlayManager.initReviewModel()
     -- else

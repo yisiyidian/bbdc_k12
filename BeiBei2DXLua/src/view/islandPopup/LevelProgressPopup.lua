@@ -65,6 +65,10 @@ function LevelProgressPopup:createSummary()
     --加入按钮
     local go_button = Button.create("long","blue","GO") 
     go_button:setPosition(background:getContentSize().width * 0.5 - 2, background:getContentSize().height * 0.13)
+
+    local function button_func(  )
+        s_CorePlayManager.initTotalUnitPlay()
+    end
     go_button.func = function ()
         button_func()
     end
