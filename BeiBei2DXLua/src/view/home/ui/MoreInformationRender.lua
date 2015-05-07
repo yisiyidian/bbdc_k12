@@ -1,7 +1,7 @@
 --查看更多个人信息界面的小格子
 
 local MoreInformationRender = class("MoreInformationRender",function()
-		local sprite = cc.Sprite:create()
+		local sprite = ccui.Layout:create()
 		return sprite
 end)
 
@@ -25,7 +25,6 @@ function MoreInformationRender:ctor(type)
 	self:init(type)
 	self:setAnchorPoint(cc.p(0,0))
 	self:setContentSize(cc.size(854,114))
-
 	--自定义的触摸事件监听
 	self.listener = cc.EventListenerTouchOneByOne:create()
 	self.listener:registerScriptHandler(handler(self, self.onTouchBegan),cc.Handler.EVENT_TOUCH_BEGAN)
@@ -34,6 +33,8 @@ function MoreInformationRender:ctor(type)
 
 	local eventDispatcher = self:getEventDispatcher()
 	eventDispatcher:addEventListenerWithSceneGraphPriority(self.listener, self)
+
+	self.listener:setSwallowTouches(false)
 end
 
 --初始化UI
@@ -153,8 +154,11 @@ function MoreInformationRender:onTouchBegan(touch,event)
 	local target = event:getCurrentTarget()
 	local locationInNode = target:convertToNodeSpace(touch:getLocation())
 	local s = target:getContentSize()
+	local pos =  target:convertToWorldSpace(cc.p(0,0))
+	--hack一下,如果移动距离超出Began时候 Render的大小则不响应ended
 	local rect = cc.rect(0,0,s.width,s.height)
 	if cc.rectContainsPoint(rect,locationInNode) then
+		self.rect = cc.rect(pos.x,pos.y,s.width,s.height)
 		return true
 	end
 	return false
@@ -165,8 +169,17 @@ function MoreInformationRender:onTouchMoved(touch,event)
 end
 
 function MoreInformationRender:onTouchEnded(touch,event)
+	local target = event:getCurrentTarget()
+	local touchp = touch:getLocation()
+	-- local locationInNode = target:convertToWorldSpace(touch:getLocation())
+	if not cc.rectContainsPoint(self.rect,touchp) then
+		self.rect = nil
+		return
+	end
+
 	if self.type == MoreInformationRender.SWITCH then
 		--TODO checkBox
+		--return
 	end
 	if self.callback ~= nil then
 		--调用外部回调函数 

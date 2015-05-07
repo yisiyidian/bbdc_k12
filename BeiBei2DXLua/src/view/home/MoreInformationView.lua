@@ -22,6 +22,21 @@ function MoreInfomationView:ctor()
 end
 
 function MoreInfomationView:init()
+
+	-- local function listViewEvent(sender, eventType)
+	-- 	print("eventType:"..eventType)
+	-- end
+
+	-- local function scrollViewEvent(sender, evenType)
+	--     if evenType == ccui.ScrollviewEventType.scrollToBottom then
+	--         print("SCROLL_TO_BOTTOM")
+	--     elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
+	--         print("SCROLL_TO_TOP")
+	--     elseif evenType == ccui.ScrollviewEventType.scrolling then
+	       
+	--     end
+	-- end 
+
 	local listView = ccui.ScrollView:create()
     listView:setDirection(ccui.ScrollViewDir.vertical)
     listView:setBounceEnabled(true)
@@ -163,7 +178,8 @@ function MoreInfomationView:onRenderTouch(renderType,key,data,title,callback,che
 		view = MoreInfoEditTextView.new()
 		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
 	elseif renderType == MoreInformationRender.DATE then
-		
+		view = MoreInfoEditDateView.new()
+		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
 	elseif renderType == MoreInformationRender.SEX then
 		view = MoreInfoEditSexView.new()
 		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
@@ -204,7 +220,7 @@ function MoreInfomationView:onEditClose(key,type,data)
 end
 --显示修改界面
 function MoreInfomationView:showEditView(view)
-	self.listView:setTouchEnabled(false)
+	-- self.listView:setTouchEnabled(false)
 	self.editView = view
 	self.editView:setPosition(s_DESIGN_WIDTH,0)--移到屏幕左侧
 	self:addChild(self.editView)
