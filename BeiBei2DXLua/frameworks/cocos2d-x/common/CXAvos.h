@@ -36,7 +36,12 @@ public:
     void verifySMSCode(const char* phoneNumber,const char* smsCode,CXLUAFUNC mHandler);
     /**验证之后的回调*/
     void invokeLuaCallBackFunction_vc(const char* error,int errorCode);
-
+    
+    /**修改密码*/
+    void changePwd(const char* username,const char* oldPwd,const char* newPwd,CXLUAFUNC nHandler);
+    /**修改密码完成的回调*/
+    void invokeLuaCallbackFunction_cp(const char* error, int errorcode);
+    
     void initTencentQQ(const char* appId, const char* appKey);
     void logInByQQ(CXLUAFUNC nHandler);
     void logInByQQAuthData(const char* openid, const char* access_token, const char* expires_in, CXLUAFUNC nHandler);
@@ -53,6 +58,7 @@ private:
     int mLuaHandlerId_signUp;
     int mLuaHandlerId_logIn;
     int mLuaHandlerId_vc;//短信验证在lua中的回调函数句柄
+    int mLuaHandlerId_cp;//修改密码在lua中的回调函数句柄
     int mLuaHandlerId_logInByQQ;
 };
 

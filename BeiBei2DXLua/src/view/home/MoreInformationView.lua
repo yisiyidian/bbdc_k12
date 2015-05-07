@@ -10,6 +10,8 @@ local MoreInfoEditSexView = require("view.home.ui.MoreInfoEditSexView")	--修改
 local MoreInfoEditDateView = require("view.home.ui.MoreInfoEditDateView") --修改日期的view
 local MoreInfoEditTextView = require("view.home.ui.MoreInfoEditTextView") --修改文本的view
 
+local MoreInfoChangePwdView = require("view.home.ui.MoreInfoChangePwdView") --修改密码View
+
 local MoreInfomationView = class("MoreInfomationView", function()
 	local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
 	return layer
@@ -184,13 +186,14 @@ function MoreInfomationView:onRenderTouch(renderType,key,data,title,callback,che
 		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
 	elseif renderType == MoreInformationRender.SEX then
 		view = MoreInfoEditSexView.new()
-		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
+		view:setData(key,MoreInformationRender.SEX,data,title,handler(self, self.onEditClose),checkCall)
 	elseif renderType == MoreInformationRender.SWITCH then
 
 	elseif renderType == MoreInformationRender.ICON then
 
 	elseif renderType == MoreInformationRender.OTHER then
-
+		view = MoreInfoChangePwdView.new()--修改密码
+		view:setData(key,MoreInformationRender.OTHER,data,title,handler(self, self.onEditClose))
 	end
 	--显示编辑界面
 	if view then
@@ -216,6 +219,8 @@ function MoreInfomationView:onEditClose(key,type,data)
 		s_CURRENT_USER[key] = data
 		value = data
 	elseif type == MoreInformationRender.SEX then
+
+	elseif type == MoreInformationRender.OTHER then
 
 	end
 	--保存到服务器 回调用

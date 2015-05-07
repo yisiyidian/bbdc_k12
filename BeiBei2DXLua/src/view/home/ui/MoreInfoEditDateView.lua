@@ -70,7 +70,6 @@ function MoreInfoEditDateView:initUI()
 	btnConfirm:setTitleText("确 定")
 	btnConfirm:setTitleFontSize(36)
 	self:addChild(btnConfirm)
-
 end
 
 --设置回调

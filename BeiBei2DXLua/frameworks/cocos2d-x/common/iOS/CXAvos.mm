@@ -161,6 +161,14 @@ void CXAvos::verifySMSCode(const char *phoneNumber, const char *smsCode, CXLUAFU
     }];
 }
 
+void CXAvos::changePwd(const char* username,const char *oldPwd, const char *newPwd, CXLUAFUNC nHandler){
+    mLuaHandlerId_cp = nHandler;
+    [[AVUser currentUser] updatePassword:[NSString stringWithUTF8String:oldPwd] newPassword:[NSString stringWithUTF8String:newPwd] block:^(id object, NSError *error) {
+        //
+        invokeLuaCallbackFunction_cp(error?error.localizedDescription.UTF8String:nullptr,error?(int)error.code:0);
+    }];
+}
+
 void CXAvos::initTencentQQ(const char* appId, const char* appKey) {
     [[CXTencentSDKCall getInstance] setAppId:[NSString stringWithUTF8String:appId] appKey:[NSString stringWithUTF8String:appKey]];
 }

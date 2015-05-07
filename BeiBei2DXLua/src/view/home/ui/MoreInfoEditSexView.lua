@@ -112,8 +112,9 @@ end
 
 --设置回调
 --data  性别数据 0 女  1 男
-function MoreInfoEditSexView:setData(key,data,title,closeCallBack,check)
+function MoreInfoEditSexView:setData(key,type,data,title,closeCallBack,check)
 	self.key = key
+	self.type = type
 	self.data = data
 	self.titleText = title
 	self.closeCallBack = closeCallBack

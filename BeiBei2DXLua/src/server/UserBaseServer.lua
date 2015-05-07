@@ -143,6 +143,11 @@ function UserBaseServer.logInByQQAuthData(openid, access_token, expires_in, onRe
     )
 end
 
+
+-- function UserBaseServer.changePa( ... )
+--     -- body
+-- end
+
 -- ["access_token"] = "F24DE9192D4FB7E96594D33AEAD3E848",
 -- ["openid"] = "4736E8D1D0A42BF6DF94F7A972CDD933",
 -- ["expires_in"] = "1427014567",
@@ -209,7 +214,8 @@ function UserBaseServer.onLogInByQQ(onResponse)
 end
 
 -- function (username, password, error description, error code)
-function UserBaseServer.updateUsernameAndPassword(username, password, onResponse)
+--oldPwd 通过个人信息面板修改密码的时候
+function UserBaseServer.updateUsernameAndPassword(username, password, onResponse ,oldPwd)
     if not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then
         s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
         if onResponse ~= nil then onResponse(username, password, s_TIPS_LAYER.offlineOrNoSessionTokenTip, ERROR_CODE_MAX) end
@@ -226,14 +232,24 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
     end
 
     local change_password = function (password, onResponse)
-        if s_CURRENT_USER.password ~= password then
-            s_SERVER.updatePassword(s_CURRENT_USER.password, password, s_CURRENT_USER.objectId, 
+        if s_CURRENT_USER.password ~= password or oldPwd ~=nil then
+            --如果新旧密码不一致 老的修改逻辑
+            --如果oldPwd不为nil 新的修改逻辑
+            local oPwd = nil
+            if oldPwd~=nil then
+                oPwd = oldPwd
+            else
+                oPwd = s_CURRENT_USER.password
+            end
+            
+            s_SERVER.updatePassword(oPwd, password, s_CURRENT_USER.objectId, 
                 function (api, result) 
                     onCompleted()
                 end, 
                 function (api, code, message, description) 
                     onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, description, code)
                 end)
+
         else
             onCompleted()
         end

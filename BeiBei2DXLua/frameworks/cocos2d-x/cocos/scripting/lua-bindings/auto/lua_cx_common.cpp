@@ -445,6 +445,64 @@ int lua_cx_common_CXAvos_logInByQQ(lua_State* tolua_S)
 
     return 0;
 }
+int lua_cx_common_CXAvos_changePwd(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_changePwd'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 4) 
+    {
+        const char* arg0;
+        const char* arg1;
+        const char* arg2;
+        CXLUAFUNC arg3;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:changePwd"); arg0 = arg0_tmp.c_str();
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:changePwd"); arg1 = arg1_tmp.c_str();
+
+        std::string arg2_tmp; ok &= luaval_to_std_string(tolua_S, 4, &arg2_tmp, "CXAvos:changePwd"); arg2 = arg2_tmp.c_str();
+
+        arg3 = (  toluafix_ref_function(tolua_S,5,0));
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_changePwd'", nullptr);
+            return 0;
+        }
+        cobj->changePwd(arg0, arg1, arg2, arg3);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:changePwd",argc, 4);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_changePwd'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cx_common_CXAvos_logInByPhoneNumber(lua_State* tolua_S)
 {
     int argc = 0;
@@ -496,6 +554,58 @@ int lua_cx_common_CXAvos_logInByPhoneNumber(lua_State* tolua_S)
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
     tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_logInByPhoneNumber'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 2) 
+    {
+        const char* arg0;
+        int arg1;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:invokeLuaCallbackFunction_cp"); arg0 = arg0_tmp.c_str();
+
+        ok &= luaval_to_int32(tolua_S, 3,(int *)&arg1, "CXAvos:invokeLuaCallbackFunction_cp");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp'", nullptr);
+            return 0;
+        }
+        cobj->invokeLuaCallbackFunction_cp(arg0, arg1);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:invokeLuaCallbackFunction_cp",argc, 2);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp'.",&tolua_err);
 #endif
 
     return 0;
@@ -985,7 +1095,9 @@ int lua_register_cx_common_CXAvos(lua_State* tolua_S)
         tolua_function(tolua_S,"signUp",lua_cx_common_CXAvos_signUp);
         tolua_function(tolua_S,"downloadFile",lua_cx_common_CXAvos_downloadFile);
         tolua_function(tolua_S,"logInByQQ",lua_cx_common_CXAvos_logInByQQ);
+        tolua_function(tolua_S,"changePwd",lua_cx_common_CXAvos_changePwd);
         tolua_function(tolua_S,"logInByPhoneNumber",lua_cx_common_CXAvos_logInByPhoneNumber);
+        tolua_function(tolua_S,"invokeLuaCallbackFunction_cp",lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp);
         tolua_function(tolua_S,"downloadWordSoundFiles",lua_cx_common_CXAvos_downloadWordSoundFiles);
         tolua_function(tolua_S,"downloadConfigFiles",lua_cx_common_CXAvos_downloadConfigFiles);
         tolua_function(tolua_S,"logOut",lua_cx_common_CXAvos_logOut);

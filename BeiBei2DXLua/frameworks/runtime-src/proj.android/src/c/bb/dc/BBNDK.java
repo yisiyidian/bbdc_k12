@@ -345,6 +345,38 @@ public class BBNDK {
 	private static void onVerifySMSCode(String error,int errorCode){
 		invokeLuaCallbackFunctionVC(error,errorCode);
 	}
+
+	/**
+	 * 修改密码
+	 * @param username 	用户名
+	 * @param oldPwd 	旧密码
+	 * @param newPwd 	新密码
+	 */
+	public static void changePwd(String username,String oldPwd,String newPwd){
+		AVUser user = AVUser.logIn(username,oldPwd);
+		userA.updatePasswordInBackground(oldPwd, newPwd,new UpdatePasswordCallback(){
+	      @Override
+	      public void done(AVException e) {
+	      	if(e==null){
+	      		Log.d("修改密码成功");
+	      		onChangePwd("",0);
+	      	}else{
+	      		Log.d("修改密码失败:"+e.getLocalizedMessage());
+	      		// String errorjson = "{\"code\":" + e.hashCode() + ",\"message\":\"" + e.getMessage() + "\",\"description\":\"" + e.getLocalizedMessage() + "\"}";
+	      		onChangePwd(e.getLocalizedMessage(),e.getCode());
+	      	}
+	      }
+	    });
+	}
+
+	/**
+	 * 修改密码回调
+	 * @param error     错误信息
+	 * @param errorCode 错误号
+	 */
+	private static void onChangePwd(String error,int errorCode){
+		invokeLuaCallbackFunctionCP(error,errorCode);
+	}
 	
 	
 	public static void signUp(String username, String password) {
@@ -788,6 +820,7 @@ public class BBNDK {
 	public static native void invokeLuaCallbackFunctionSU(String objectjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionLI(String objectjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionVC(String error,int errorcode);
+	public static native void invokeLuaCallbackFunctionCP(String error,int errorcode);//修改密码
 	public static native void invokeLuaCallbackFunctionLIQQ(String objectjson, String qqjson, String authjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionCallAVCloudFunction(long cppObjPtr, String jsons, String errorjson);
 	public static native void invokeLuaCallbackFunctionGetBulletinBoard(long cppObjPtr, int index, String content_top, String content, String error);

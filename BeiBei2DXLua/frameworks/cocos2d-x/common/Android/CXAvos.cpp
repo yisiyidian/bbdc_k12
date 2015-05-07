@@ -145,6 +145,29 @@ void CXAvos::verifySMSCode(const char* phoneNumber,const char* smsCode,CXLUAFUNC
         t.env->DeleteLocalRef(stringArg_smsCode);
         t.env->DeleteLocalRef(t.classID);
     }
+
+/**
+ * 请求修改密码
+ * @param username 用户名
+ * @param oldPwd   旧密码
+ * @param newPwd   新密码
+ * @param nHandler 回调函数句柄
+ */
+void CXAvos::changePwd(const char* username,const char* oldPwd,const char* newPwd,CXLUAFUNC nHandler){
+    mLuaHandlerId_cp = nHandler;
+    cocos2d::JniMethodInfo t;
+    if(cocos2d::JniHelper::getStaticMethodInfo(t,JAVA_PKG,"changePwd","((Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V)")){
+        jstring stringArg_username = t.env->NewStringUTF(username)
+        jstring stringArg_passwordOld = t.env->NewStringUTF(oldPwd)
+        jstring stringArg_passwordNew = t.env->NewStringUTF(newPwd)
+
+        t.env->CallStaticVoidMethod(t.classID,t.methodID,stringArg_username,stringArg_passwordOld,stringArg_passwordNew);
+
+        t.env->DeleteLocalRef(stringArg_username);
+        t.env->DeleteLocalRef(stringArg_passwordOld);
+        t.env->DeleteLocalRef(stringArg_passwordNew);
+        t.env->DeleteLocalRef(t.classID);
+    }
 }
 
 

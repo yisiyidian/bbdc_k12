@@ -96,6 +96,21 @@ void CXAvos::invokeLuaCallBackFunction_vc(const char* error,int errorCode){
         stack->clean();
     }
 }
+/**
+ * 修改密码的回调
+ * error        错误信息
+ * errorCode    错误号
+ */
+void CXAvos::invokeLuaCallbackFunction_cp(const char* error,int errorCode){
+    if(mLuaHandlerId_cp > 0){
+        auto engine = LuaEngine::getInstance();
+        LuaStack* stack = engine->getLuaStack();
+        stack->pushString(error);
+        stack->pushInt(errorCode);
+        stack->executeFunctionByHandler(mLuaHandlerId_cp, 2);
+        stack->clean();
+    }
+}
 
 void CXAvos::invokeLuaCallbackFunction_logInByQQ(const char* objectjson, const char* qqjson, const char* authjson, const char* error, int errorcode) {
     if (mLuaHandlerId_logInByQQ > 0) {
