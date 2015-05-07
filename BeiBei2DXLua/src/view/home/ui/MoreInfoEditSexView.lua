@@ -119,7 +119,9 @@ function MoreInfoEditSexView:setData(key,data,title,closeCallBack,check)
 	self.closeCallBack = closeCallBack
 	self.check = check
 	--TODO 设置占位文本
+	self.title:setString("修改"..self.titleText)
 end
+
 
 function MoreInfoEditSexView:onReturnClick(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then 
@@ -154,8 +156,6 @@ function MoreInfoEditSexView:onConfirmTouch(sender,eventType)
 		 self.checkBoxFemale:setSelected(false)
 		 self.checkBoxMale:setSelected(true)
 	end
-
-
 
 	--关闭回调
 	--MoreInformationView里的onEditClose
