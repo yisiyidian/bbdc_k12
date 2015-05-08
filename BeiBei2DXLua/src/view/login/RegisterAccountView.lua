@@ -42,25 +42,25 @@ function RegisterAccountView:init(step)
 	--初始化UI
 	--标题 “注册”
 	local title = cc.Label:createWithSystemFont("注 册","",60)
-	title:setTextColor(cc.c3b(121,200,247))
+	title:setTextColor(cc.c3b(106,182,240))
 	title:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9)
 	self.title = title
 	self:addChild(title)
 	--返回按钮
-	local btnReturn = ccui.Button:create("image/shop/button_back.png")
+	local btnReturn = ccui.Button:create("image/shop/button_back2.png")
 	btnReturn:setPosition(0.1*s_DESIGN_WIDTH,0.9*s_DESIGN_HEIGHT)
 	btnReturn:addTouchEventListener(handler(self, self.onReturnClick))
 	self:addChild(btnReturn)
 	--tip 注册可以和更多好友一起背单词
 	local tip = cc.Label:createWithSystemFont("注册可以和更多好友一起背单词","",26)
-	tip:setTextColor(cc.c3b(115,115,115))
+	tip:setTextColor(cc.c3b(122,126,128))
 	tip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 60)
 	self.tip = tip
 	self:addChild(tip)
 	--alert tip 错误提示文本
-	local alertTip = cc.Label:createWithSystemFont(" ","",26)
+	local alertTip = cc.Label:createWithSystemFont(" ","",20)
 	alertTip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 90)
-	alertTip:setTextColor(cc.c3b(220, 57, 8))
+	alertTip:setTextColor(cc.c3b(216, 85, 67))
 	self.alertTip = alertTip
 	self:addChild(alertTip)
 
@@ -128,7 +128,7 @@ function RegisterAccountView:showInputPhoneNumber()
 	self.views[#self.views+1] = inputNode
 	-- cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
 
-	local btnPhoneNumberOK = ccui.Button:create("image/login/sl_button_confirm.png")
+	local btnPhoneNumberOK = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
 	btnPhoneNumberOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
 	btnPhoneNumberOK:addTouchEventListener(handler(self, self.onTouchPhoneNumberOK))
 	btnPhoneNumberOK:setTitleText("下一步")
@@ -157,8 +157,11 @@ function RegisterAccountView:onTouchPhoneNumberOK(sender,eventType)
 	else
 		--不是手机号码
 		--TODO icon
+		local errorIcon = cc.Sprite:create("image/login/error_zhuce.png")
+		errorIcon:setPosition(0.5 * s_DESIGN_WIDTH - 60,s_DESIGN_HEIGHT * 0.9 - 90)
+		self:addChild(errorIcon)
 		self.alertTip:setTextColor(cc.c3b(220, 57, 8))
-		self.alertTip:setString("请输入有效的手机号码！")
+		self.alertTip:setString("请输入手机号！")
 	end
 end
 
@@ -177,7 +180,7 @@ function RegisterAccountView:showInputSmsCode(args)
 	self.views[#self.views+1] = inputNode
 	-- cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
 
-	local btnSMSCodeOK = ccui.Button:create("image/login/sl_button_confirm.png")
+	local btnSMSCodeOK = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
 	btnSMSCodeOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
 	btnSMSCodeOK:addTouchEventListener(handler(self, self.onTouchSMSCodeOK))
 	btnSMSCodeOK:setTitleText("下一步")
@@ -249,11 +252,11 @@ function RegisterAccountView:showChooseSex()
 	checkBoxMale:setTouchEnabled(true)
 	checkBoxMale:setName("Male")
 	checkBoxMale:loadTextures(
-		"image/newstudy/wordsbackgroundblue.png",--normal
-		"image/newstudy/wordsbackgroundblue.png",--normal press
-		"image/newstudy/pause_button_begin.png",--normal active
-		"image/newstudy/wordsbackgroundblue.png",-- normal disable
-		"image/newstudy/wordsbackgroundblue.png"--active disable
+		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal
+		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal press
+		"image/login/button_boygirl_zhuce.png",--normal active
+		"image/login/button_boygirl_gray_zhuce_unpressed.png",-- normal disable
+		"image/login/button_boygirl_gray_zhuce_unpressed.png"--active disable
 		)
 	checkBoxMale:addEventListener(handler(self, chkCallBack))
 	checkBoxMale:setPosition(0.5 * s_DESIGN_WIDTH - 100,s_DESIGN_HEIGHT*0.6 - 50)
@@ -261,16 +264,20 @@ function RegisterAccountView:showChooseSex()
 	self.checkBoxMale = checkBoxMale
 	self:addChild(checkBoxMale)
 	self.views[#self.views+1] = checkBoxMale
+
+	local labelMan = cc.Label:createWithSystemFont("♂ 男","",20)
+	labelMan:setPosition(checkBoxMale:getContentSize().width/2,checkBoxMale:getContentSize().height/2)
+	checkBoxMale:addChild(labelMan)
 	--女
 	local checkBoxFeMale = ccui.CheckBox:create()
 	checkBoxFeMale:setTouchEnabled(true)
 	checkBoxFeMale:setName("Female")
 	checkBoxFeMale:loadTextures(
-		"image/newstudy/wordsbackgroundblue.png",--normal
-		"image/newstudy/wordsbackgroundblue.png",--normal press
-		"image/newstudy/pause_button_begin.png",--normal active
-		"image/newstudy/wordsbackgroundblue.png",-- normal disable
-		"image/newstudy/wordsbackgroundblue.png"--active disable
+		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal
+		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal press
+		"image/login/button_boygirl_zhuce.png",--normal active
+		"image/login/button_boygirl_gray_zhuce_unpressed.png",-- normal disable
+		"image/login/button_boygirl_gray_zhuce_unpressed.png"--active disable
 		)
 	checkBoxFeMale:addEventListener(handler(self, chkCallBack))
 	checkBoxFeMale:setPosition(0.5 * s_DESIGN_WIDTH + 100,s_DESIGN_HEIGHT*0.6 - 50)
@@ -278,7 +285,11 @@ function RegisterAccountView:showChooseSex()
 	self:addChild(checkBoxFeMale)
 	self.views[#self.views+1] = checkBoxFeMale
 
-	local btnSexOK = ccui.Button:create("image/login/sl_button_confirm.png")
+	local labelWomen = cc.Label:createWithSystemFont("♀ 女","",20)
+	labelWomen:setPosition(checkBoxFeMale:getContentSize().width/2,checkBoxFeMale:getContentSize().height/2)
+	checkBoxFeMale:addChild(labelWomen)
+
+	local btnSexOK = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
 	btnSexOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.5 - 100)
 	btnSexOK:addTouchEventListener(handler(self, self.onTouchSexOK))
 	btnSexOK:setTitleText("下一步")
@@ -306,7 +317,7 @@ function RegisterAccountView:showInputNickName()
 	inputNode:openIME()
 	self.views[#self.views+1] = inputNode
 
-	local btnNickName = ccui.Button:create("image/login/sl_button_confirm.png")
+	local btnNickName = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
 	btnNickName:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 350)
 	btnNickName:addTouchEventListener(handler(self, self.onTouchNickNameOK))
 	btnNickName:setTitleText("下一步")
@@ -350,10 +361,10 @@ function RegisterAccountView:showInputPwd()
 	self.views[#self.views+1] = inputNodeV
 	
 	-- cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
-	local btnRegister = ccui.Button:create("image/login/sl_button_confirm.png")
+	local btnRegister = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
 	btnRegister:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 400)
 	btnRegister:addTouchEventListener(handler(self, self.onTouchRegister))
-	btnRegister:setTitleText("注 册")
+	btnRegister:setTitleText("完成注册")
 	btnRegister:setTitleFontSize(36)
 	self:addChild(btnRegister)
 	self.views[#self.views+1] = btnRegister
@@ -372,7 +383,10 @@ function RegisterAccountView:onTouchRegister(sender,eventType)
 		self.alertTip:setString("密码不能为空！")
 		return
 	elseif pwd ~= pwdVerify then
-		self.alertTip:setString("两次输入密码不一致！")
+		local errorIcon = cc.Sprite:create("image/login/error_zhuce.png")
+		errorIcon:setPosition(0.5 * s_DESIGN_WIDTH - 60,s_DESIGN_HEIGHT * 0.9 - 90)
+		self:addChild(errorIcon)
+		self.alertTip:setString("两次密码不一致！")
 		return
 	elseif not validatePassword(pwd) then
 		--密码不合规范
@@ -388,7 +402,7 @@ end
 function RegisterAccountView:showLoginView( ... )
 	self.title:setString("登 录")
 
-	local inputNodeID = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入账号",nil,nil,nil,false,11)
+	local inputNodeID = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入手机号",nil,nil,nil,false,11)
 	inputNodeID:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputNodeID)
 	self.inputNodeID = inputNodeID
@@ -401,7 +415,7 @@ function RegisterAccountView:showLoginView( ... )
 	self.inputNodePwd = inputNodePwd
 	self.views[#self.views+1] = inputNodePwd
 
-	local btnLogin = ccui.Button:create("image/login/sl_button_confirm.png")
+	local btnLogin = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
 	btnLogin:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 400)
 	btnLogin:addTouchEventListener(handler(self, self.onLoginTouch))
 	btnLogin:setTitleText("登 录")
@@ -422,6 +436,9 @@ function RegisterAccountView:onLoginTouch(sender,eventType)
 
 	--验证密码
 	if validatePassword(pwd) == false then
+		local errorIcon = cc.Sprite:create("image/login/error_zhuce.png")
+		errorIcon:setPosition(0.5 * s_DESIGN_WIDTH - 60,s_DESIGN_HEIGHT * 0.9 - 90)
+		self:addChild(errorIcon)
         s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__PWD_ERROR))
         return
     end

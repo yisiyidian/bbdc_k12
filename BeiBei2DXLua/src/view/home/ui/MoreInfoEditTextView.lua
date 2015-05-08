@@ -24,7 +24,7 @@ function MoreInfoEditTextView:initUI()
 	self:addChild(title)
 	self.title = title
 	--返回按钮
-	local btnReturn = ccui.Button:create("image/shop/button_back.png")
+	local btnReturn = ccui.Button:create("image/shop/button_back2.png")
 	btnReturn:addTouchEventListener(handler(self, self.onReturnClick))
 	self.btnReturn = btnReturn
 	self.btnReturn:setPosition(s_DESIGN_WIDTH*0.1,s_DESIGN_HEIGHT*0.9)

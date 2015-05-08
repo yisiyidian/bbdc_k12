@@ -39,12 +39,13 @@ function MoreInfoEditSexView:initUI()
 	--标题
 	local title = cc.Label:createWithSystemFont("修改性别", "", 36)
 	title:setPosition(s_DESIGN_WIDTH * 0.5, s_DESIGN_HEIGHT * 0.9)
-	title:setTextColor(cc.c3b(100,100,100))
+	title:setTextColor(cc.c3b(121,200,247))
 	self.title = title
 	self:addChild(title)
 
 
 	--返回按钮
+
 	local btnReturn = ccui.Button:create("image/shop/button_back2.png")
 	btnReturn:setPosition(s_DESIGN_WIDTH * 0.1, s_DESIGN_HEIGHT * 0.9)
 	btnReturn:addTouchEventListener(handler(self, self.onReturnClick))

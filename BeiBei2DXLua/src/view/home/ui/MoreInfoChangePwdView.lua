@@ -27,24 +27,24 @@ function MoreInfoChangePwdView:initUI()
 	self:addChild(title)
 	self.title = title
 	--返回按钮
-	local btnReturn = ccui.Button:create("image/shop/button_back.png")
+	local btnReturn = ccui.Button:create("image/shop/button_back2.png")
 	btnReturn:addTouchEventListener(handler(self, self.onReturnClick))
 	self.btnReturn = btnReturn
 	self.btnReturn:setPosition(s_DESIGN_WIDTH*0.1,s_DESIGN_HEIGHT*0.9)
 	self:addChild(self.btnReturn)
 	
 	--输入框 旧密码
-	local inputOldPwd = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入旧密码",nil,nil,nil,nil,11)
+	local inputOldPwd = InputNode.new("image/signup/shuru_bbchildren_white.png","填写旧密码",nil,nil,nil,nil,11)
 	inputOldPwd:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputOldPwd)
 	self.inputOldPwd = inputOldPwd
 	--输入框 月份
-	local inputNewPwd = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入新密码",nil,nil,nil,nil,11)
+	local inputNewPwd = InputNode.new("image/signup/shuru_bbchildren_white.png","填写新密码",nil,nil,nil,nil,11)
 	inputNewPwd:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
 	self:addChild(inputNewPwd)
 	self.inputNewPwd = inputNewPwd
 	--日期
-	local inputNewPwdConfirm = InputNode.new("image/signup/shuru_bbchildren_white.png","请再次输入新密码",nil,nil,nil,nil,11)
+	local inputNewPwdConfirm = InputNode.new("image/signup/shuru_bbchildren_white.png","确认新密码",nil,nil,nil,nil,11)
 	inputNewPwdConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 400)
 	self:addChild(inputNewPwdConfirm)
 	self.inputNewPwdConfirm = inputNewPwdConfirm

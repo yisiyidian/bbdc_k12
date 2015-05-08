@@ -52,7 +52,7 @@ function MoreInfomationView:init()
 	title:setTextColor(cc.c3b(121,200,247))
 	self.title = title
 	--返回按钮
-	local btnReturn = ccui.Button:create("image/shop/button_back.png")
+	local btnReturn = ccui.Button:create("image/shop/button_back2.png")
 	btnReturn:addTouchEventListener(handler(self, self.onReturnClick))
 	self.btnReturn = btnReturn
 	
