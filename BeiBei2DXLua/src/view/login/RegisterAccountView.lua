@@ -527,16 +527,28 @@ function RegisterAccountView:onRegisterCallBack(nickName,pwd,phoneNumber,error,e
 		return
 	end
 
-	self:endRegister()
+	self:endRegister(true)
 end
 
 --结束注册
-function RegisterAccountView:endRegister()
+--state是否是注册成功
+function RegisterAccountView:endRegister(state)
+	print("结束注册 注册成功 进入游戏")
 	cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
+	--登陆
+	print("s_O2OController.logInOnline id:"..s_CURRENT_USER.username)
+	print("s_O2OController.logInOnline pwd:"..s_CURRENT_USER.password)
+	-- s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
+	if state then
+		s_SCENE:removeAllPopups()
+		s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
+	end
 	if self.close ~= nil then
+		print("回调close")
 		self.close()
 	else
 		s_SCENE:removeAllPopups()
+		print("s_SCENE:removeAllPopups")
 	end
 end
 

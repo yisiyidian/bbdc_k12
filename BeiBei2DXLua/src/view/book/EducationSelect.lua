@@ -87,8 +87,14 @@ function EducationSelect:ctor()
     end
     --弹出注册帐号
     --TODO 这块的流程太乱 需整理
-    self:popupAccountBind()
-
+    
+    --如果是直接登陆的用户没有选书 则走else
+    --如果是游客登录或者注册 就走if
+    if s_CURRENT_USER.usertype ~= USER_TYPE_BIND then
+        self:popupAccountBind()
+    else
+        s_SCENE:removeAllPopups()
+    end
 end
 
 
@@ -98,12 +104,6 @@ function EducationSelect:popupAccountBind()
     --
     local introLayer = IntroLayer.create()
     s_SCENE:popup(introLayer)
-    
-    --被废弃的账号注册流程
-    --[[
-    local K12AccountBindView = require('view.login.K12AccountBindView')
-    local view = K12AccountBindView.create(K12AccountBindView.Type_username)
-    ]]
 end
 
 return EducationSelect
