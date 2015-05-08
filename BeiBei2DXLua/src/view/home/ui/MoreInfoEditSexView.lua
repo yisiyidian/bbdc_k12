@@ -104,7 +104,7 @@ function MoreInfoEditSexView:initUI()
 	self:addChild(checkBoxMale)
 	self.views[#self.views+1] = checkBoxMale
 
-	local labelWomen = cc.Label:createWithSystemFont("♂ 男","",20)
+	local labelWomen = cc.Label:createWithSystemFont("♂ 男","",30)
 	labelWomen:setPosition(checkBoxMale:getContentSize().width/2,checkBoxMale:getContentSize().height/2)
 	checkBoxMale:addChild(labelWomen)
 
@@ -126,7 +126,7 @@ function MoreInfoEditSexView:initUI()
 	self:addChild(checkBoxFemale)
 	self.views[#self.views+1] = checkBoxFemale
 
-	local labelWomen = cc.Label:createWithSystemFont("♀ 女","",20)
+	local labelWomen = cc.Label:createWithSystemFont("♀ 女","",30)
 	labelWomen:setPosition(checkBoxFemale:getContentSize().width/2,checkBoxFemale:getContentSize().height/2)
 	checkBoxFemale:addChild(labelWomen)
 

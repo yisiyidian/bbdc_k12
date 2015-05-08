@@ -74,12 +74,14 @@ end
 
 --设置回调
 --key s_CURRENT_USER里的键值
+--type 类型 
 --data 	文本
 --title 
 --closeCallBack 关闭的回调  会触发移动 会触发render里的修改内容
 --check 验证合法性的函数
-function MoreInfoEditDateView:setData(key,data,title,closeCallBack,check)
+function MoreInfoEditDateView:setData(key,type,data,title,closeCallBack,check)
 	self.key = key
+	self.type = type
 	self.data = data
 	self.titleText = title
 	self.closeCallBack = closeCallBack
