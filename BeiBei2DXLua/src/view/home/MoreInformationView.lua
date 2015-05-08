@@ -109,12 +109,12 @@ function MoreInfomationView:initData()
 	listData[7] = {["key"] = "school",			["type"] = MoreInformationRender.TEXT,["title"] = "学校",			["content"] = school,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = nil}--学校
 	listData[8] = {["key"] = "position",		["type"] = MoreInformationRender.TEXT,["title"] = "位置",			["content"] = position,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = nil}--位置
 	listData[9] = {["key"] = "examination",		["type"] = MoreInformationRender.TEXT,["title"] = "在准备的考试",		["content"] = examination,	["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = 1}--在准备的考试
-
-	listData[10] = {["key"] = "relateContacts",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = false}--关联通讯录
-	listData[11] = {["key"] = "bindAccount"   ,	["type"] = MoreInformationRender.ICON,  ["title"] = "帐号绑定",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = {}}--帐号绑定
-	listData[12] = {["key"] = "showPosition",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = false}--位置可见
-
-	listData[13] = {["key"] = "changPwd",		["type"] = MoreInformationRender.OTHER,["title"] = "修改密码",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = 1}--修改密码
+	listData[10] = {["key"] = "split"}
+	listData[11] = {["key"] = "relateContacts",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = false}--关联通讯录
+	listData[12] = {["key"] = "bindAccount"   ,	["type"] = MoreInformationRender.ICON,  ["title"] = "帐号绑定",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = {}}--帐号绑定
+	listData[13] = {["key"] = "showPosition",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = false}--位置可见
+	listData[14] = {["key"] = "split"}
+	listData[15] = {["key"] = "changPwd",		["type"] = MoreInformationRender.OTHER,["title"] = "修改密码",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = 1}--修改密码
 	--列表数据
 	self.listData = listData
 end
@@ -124,21 +124,33 @@ function MoreInfomationView:initUI()
 	local render = nil 
 	local sumY = 0
 	local innerHeight = 0
+	local splitheight = 20
+	local renderheight = 100
 	local renders = {} --临时容器
 	for k,v in pairs(self.listData) do
-		render = MoreInformationRender.new(v.type)
-		-- render:setData(v.key,v.title,v.content,v.callback,v.data,v.check)
-		render:setData(v)
-		renders[#renders+1] = render
-		sumY = sumY + 120
-		self.listView:addChild(render)
-		innerHeight = innerHeight + 120
+		if v.key ~= "split" then
+			render = MoreInformationRender.new(v.type)
+			render:setData(v)
+			renders[#renders+1] = render
+			self.listView:addChild(render)
+		else
+			renders[#renders+1] = "split"
+			sumY = sumY + splitheight
+			innerHeight = innerHeight + splitheight
+		end
+		sumY = sumY + renderheight
+		innerHeight = innerHeight + renderheight
 	end
 	--计算render坐标
-	local tlen = innerHeight - 120
+	local tlen = innerHeight - renderheight
 	for _,rd in pairs(renders) do
-		rd:setPosition(0,tlen)
-		tlen = tlen - 120
+		if rd ~= "split" then
+			rd:setPosition(0,tlen)
+			tlen = tlen - renderheight
+		else
+			tlen = tlen - splitheight	
+		end
+		
 	end
 	--设置标题 返回按钮的坐标
 	innerHeight = innerHeight + 130
@@ -178,7 +190,7 @@ function MoreInfomationView:onRenderTouch(renderType,key,data,title,callback,che
 
 	elseif renderType == MoreInformationRender.DATE then
 		view = MoreInfoEditDateView.new()
-		view:setData(key,data,title,handler(self, self.onEditClose),checkCall)
+		view:setData(key,MoreInformationRender.DATE,data,title,handler(self, self.onEditClose),checkCall)
 
 	elseif renderType == MoreInformationRender.SEX then
 		view = MoreInfoEditSexView.new()
