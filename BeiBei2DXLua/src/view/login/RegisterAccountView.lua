@@ -90,11 +90,18 @@ end
 --返回按钮点击
 function RegisterAccountView:onReturnClick(sender,eventType)
 	-- body
-	if eventType == ccui.TouchEventType.ended then
-		--在HomeLayer里赋值的close函数 临时函数
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+
+	self.curStep = self.curStep - 1
+	--在HomeLayer里赋值的close函数 临时函数
+	if self.curStep == 0 then
 		print("从注册界面返回")
 		sender:setEnabled(false)
 		self:endRegister()
+	else
+		self:goStep(self.curStep)
 	end
 end
 
