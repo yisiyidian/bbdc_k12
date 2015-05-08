@@ -219,7 +219,9 @@ end
 function AppScene:removeAllPopups()
     self.popupLayer.listener:setSwallowTouches(false)
     local action1 = cc.FadeOut:create(0.2)
-    if self.popupLayer.backColor ~= nil then
+
+    --怎么能这么写！！！！
+    if self.popupLayer.backColor ~= nil and not tolua.isnull(self.popupLayer.backColor) then
         self.popupLayer.backColor:runAction(action1)
     end
     s_SCENE:callFuncWithDelay(0.2, function ()
