@@ -36,7 +36,7 @@ function MoreInfoEditTextView:initUI()
 	self.inputNode = inputNode
 	-- inputNode:openIME()
 	local btnConfirm = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 350)
+	btnConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 330)
 	btnConfirm:addTouchEventListener(handler(self, self.onConfirmTouch))
 	btnConfirm:setTitleText("确 定")
 	btnConfirm:setTitleFontSize(36)

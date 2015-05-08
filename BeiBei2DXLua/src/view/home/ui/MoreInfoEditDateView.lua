@@ -55,17 +55,17 @@ function MoreInfoEditDateView:initUI()
 	self.inputNodeYear = inputNodeYear
 	--输入框 月份
 	local inputNodeMonth = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入月份",nil,nil,nil,nil,11)
-	inputNodeMonth:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 350)
+	inputNodeMonth:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 330)
 	self:addChild(inputNodeMonth)
 	self.inputNodeMonth = inputNodeMonth
 	--日期
 	local inputNodeDay = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入日期",nil,nil,nil,nil,11)
-	inputNodeDay:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 500)
+	inputNodeDay:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
 	self:addChild(inputNodeDay)
 	self.inputNodeDay = inputNodeDay
 
 	local btnConfirm = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 650)
+	btnConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 590)
 	btnConfirm:addTouchEventListener(handler(self, self.onConfirmTouch))
 	btnConfirm:setTitleText("确 定")
 	btnConfirm:setTitleFontSize(36)
