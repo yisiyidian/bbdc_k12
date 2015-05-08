@@ -86,9 +86,9 @@ function MoreInfoEditSexView:initUI()
 		end
 			
 	end
---女
+--男
 	local checkBoxMale = ccui.CheckBox:create()
-	checkBoxMale:setTouchEnabled(true)        --不可点击
+	checkBoxMale:setTouchEnabled(true)        
 	checkBoxMale:loadTextures(
 		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal
 		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal press
@@ -108,7 +108,7 @@ function MoreInfoEditSexView:initUI()
 	labelWomen:setPosition(checkBoxMale:getContentSize().width/2,checkBoxMale:getContentSize().height/2)
 	checkBoxMale:addChild(labelWomen)
 
---男
+--女
 	local checkBoxFemale = ccui.CheckBox:create()
 	checkBoxFemale:setTouchEnabled(false)
 	checkBoxFemale:setName("Female")
@@ -121,7 +121,7 @@ function MoreInfoEditSexView:initUI()
 		)
 	checkBoxFemale:setPosition(s_DESIGN_WIDTH * 0.4, s_DESIGN_HEIGHT * 0.9 - 400)
 	checkBoxFemale:addEventListener(handler(self,chkCallback))
-	checkBoxMale:setSelected(true)
+	checkBoxFemale:setSelected(true)
 	self.checkBoxFemale = checkBoxFemale
 	self:addChild(checkBoxFemale)
 	self.views[#self.views+1] = checkBoxFemale
@@ -175,8 +175,8 @@ function MoreInfoEditSexView:onConfirmTouch(sender,eventType)
 	end
 	local data = nil
 	-- 0是被选中  1是不被选中
-	local sexnv = self.checkBoxMale:isSelected() and 0 or 1 
-	local sexnan = self.checkBoxFemale:isSelected() and 0 or 1
+	local sexnan = self.checkBoxMale:isSelected() and 0 or 1 
+	local sexnv = self.checkBoxFemale:isSelected() and 0 or 1
 	print("sexnv"..sexnv)
 	if sexnan == 1 and sexnv == 1 then 
 		s_TIPS_LAYER:showSmallWithOneButton("性别不能为空!")
@@ -186,12 +186,12 @@ function MoreInfoEditSexView:onConfirmTouch(sender,eventType)
 	self.sexnan = sexnan
 	if sexnv == 1 then 
 		 data = 0 
-		 self.checkBoxMale:setSelected(true)
-		 self.checkBoxFemale:setSelected(false)
+		 -- self.checkBoxMale:setSelected(true)
+		 -- self.checkBoxFemale:setSelected(false)
 	elseif sexnv == 0 then
 		 data = 1
-		 self.checkBoxFemale:setSelected(true)
-		 self.checkBoxMale:setSelected(false)
+		 -- self.checkBoxFemale:setSelected(true)
+		 -- self.checkBoxMale:setSelected(false)
 	end
 	print("data"..data)
 	print("self.key"..self.key)
