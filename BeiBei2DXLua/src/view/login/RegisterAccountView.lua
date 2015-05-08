@@ -16,8 +16,10 @@ local RegisterAccountView = class("RegisterAccountView",function()
 	local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
 	return layer
 end)
+
 --标志
-IconShow = false 
+-- IconShow = false
+
 --首次登陆执行的流程
 RegisterAccountView.STEP_1 = 1 	--输入手机号
 RegisterAccountView.STEP_2 = 2	--输入验证码
@@ -35,14 +37,23 @@ function RegisterAccountView:ctor(step)
 	self.debug = true
 end
 
-
-
-function RegisterAccountView:ShowIcon()
-	local errorIcon = cc.Sprite:create("image/login/error_zhuce.png")
-	errorIcon:setPosition(0.5 * s_DESIGN_WIDTH - 100,s_DESIGN_HEIGHT * 0.9 - 90)
-	self:addChild(errorIcon)
-	self.errorIcon = errorIcon
+function RegisterAccountView:showErrorIcon()
+	if self.errorIcon == nil then
+		local errorIcon = cc.Sprite:create("image/login/error_zhuce.png")
+		errorIcon:setPosition(0.5 * s_DESIGN_WIDTH - 100,s_DESIGN_HEIGHT * 0.9 - 90)
+		self:addChild(errorIcon)
+		self.errorIcon = errorIcon
+	else
+		self.errorIcon:setVisible(true)
+	end
 end
+
+function RegisterAccountView:hideErrorICON()
+	if self.errorIcon then
+		self.errorIcon:setVisible(false)
+	end
+end
+
 --初始化各个view
 function RegisterAccountView:init(step)
 	self.views = {}
@@ -66,19 +77,12 @@ function RegisterAccountView:init(step)
 	tip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 60)
 	self.tip = tip
 	self:addChild(tip)
-	--alert tip 错误提示文本
+	--alert tip 提示文本 提示应该输入什么
 	local alertTip = cc.Label:createWithSystemFont(" ","",20)
 	alertTip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 90)
-	alertTip:setTextColor(cc.c3b(222, 224, 228))
+	alertTip:setTextColor(cc.c3b(164, 171, 128))
 	self.alertTip = alertTip
 	self:addChild(alertTip)
-
-	-- --错误图标
-	-- local alertICON = cc.Sprite:create("")
-	-- alertICON:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 30)
-	-- self.alertICON = alertICON
-	-- self:addChild(alertICON)
-
 	--进入第一步
 	self:goStep(self.curStep)
 end
@@ -151,6 +155,8 @@ function RegisterAccountView:showInputPhoneNumber()
 	btnPhoneNumberOK:setTitleFontSize(36)
 	self:addChild(btnPhoneNumberOK)
 	self.views[#self.views+1] = btnPhoneNumberOK
+
+	self.alertTip:setString("输入手机号码")
 end
 
 --电话号码输入OK
@@ -170,19 +176,10 @@ function RegisterAccountView:onTouchPhoneNumberOK(sender,eventType)
 		--跳转到输入验证码的界面
 		self.curStep = self.curStep + 1
 		self:goStep(self.curStep)
-		if IconShow == true then
-		   self.errorIcon:setVisible(false)
-		   IconShow = false
-		end
 	else
 		--不是手机号码
-		--TODO icon
-		if IconShow == false then
-			self:ShowIcon()
-			IconShow = true
-		end
-		self.alertTip:setTextColor(cc.c3b(220, 57, 8))
-		self.alertTip:setString("请输入手机号！")
+		-- self.alertTip:setString("请输入手机号！")
+		s_TIPS_LAYER:showSmallWithOneButton("请输入有效的手机号码！")
 	end
 end
 
@@ -199,7 +196,6 @@ function RegisterAccountView:showInputSmsCode(args)
 	self.inputNode = inputNode
 	inputNode:openIME()
 	self.views[#self.views+1] = inputNode
-	-- cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
 
 	local btnSMSCodeOK = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
 	btnSMSCodeOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
@@ -208,6 +204,8 @@ function RegisterAccountView:showInputSmsCode(args)
 	btnSMSCodeOK:setTitleFontSize(36)
 	self:addChild(btnSMSCodeOK)
 	self.views[#self.views+1] = btnSMSCodeOK
+
+	self.alertTip:setString("输入验证码")
 end
 
 function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
@@ -231,14 +229,16 @@ function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
 		end
 	else
 		--验证码无效
-		--TODO icon
-		self.alertTip:setTextColor(cc.c3b(220, 57, 8))
-		self.alertTip:setString("请输入有效的验证码！")
+		s_TIPS_LAYER:showSmallWithOneButton("请输入有效的验证码！")
+		-- self.alertTip:setTextColor(cc.c3b(220, 57, 8))
+		-- self.alertTip:setString("请输入有效的验证码！")
 	end
 end
 
 --显示选择性别的界面
 function RegisterAccountView:showChooseSex()
+	self.alertTip:setString("")
+
 	local headImg = cc.Sprite:create("image/homescene/setup_head.png")
 	headImg:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self.views[#self.views + 1] = headImg
@@ -250,10 +250,8 @@ function RegisterAccountView:showChooseSex()
 		print("eventType:"..eventType)
 		if eventType == ccui.CheckBoxEventType.selected then
 			print("eventType:"..eventType)
-			--state = false
 		elseif eventType == ccui.CheckBoxEventType.unselected then
 			print("eventType:"..eventType)
-			-- state = true
 		end
 		print("checkName:"..checkName)
 		if checkName == "Male" and state then
@@ -286,7 +284,7 @@ function RegisterAccountView:showChooseSex()
 	self:addChild(checkBoxMale)
 	self.views[#self.views+1] = checkBoxMale
 
-	local labelMan = cc.Label:createWithSystemFont("♂ 男","",20)
+	local labelMan = cc.Label:createWithSystemFont("♂ 男","",30)
 	labelMan:setPosition(checkBoxMale:getContentSize().width/2,checkBoxMale:getContentSize().height/2)
 	checkBoxMale:addChild(labelMan)
 	--女
@@ -306,7 +304,7 @@ function RegisterAccountView:showChooseSex()
 	self:addChild(checkBoxFeMale)
 	self.views[#self.views+1] = checkBoxFeMale
 
-	local labelWomen = cc.Label:createWithSystemFont("♀ 女","",20)
+	local labelWomen = cc.Label:createWithSystemFont("♀ 女","",30)
 	labelWomen:setPosition(checkBoxFeMale:getContentSize().width/2,checkBoxFeMale:getContentSize().height/2)
 	checkBoxFeMale:addChild(labelWomen)
 
@@ -355,7 +353,7 @@ function RegisterAccountView:onTouchNickNameOK(sender,eventType)
 	--验证昵称合法性
 	local nickName = self.inputNode:getText()
 	if nickName == "" then
-		self.alertTip:setString("昵称不能为空！")
+		s_TIPS_LAYER:showSmallWithOneButton("昵称不能为空！")
 		return
 	end
 
@@ -368,6 +366,8 @@ end
 
 --显示输入密码的界面
 function RegisterAccountView:showInputPwd()
+	self.alertTip:setString("输入密码")
+
 	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请设置密码",nil,nil,nil,true,11)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputNode)
@@ -401,31 +401,20 @@ function RegisterAccountView:onTouchRegister(sender,eventType)
 	local pwdVerify = self.inputNodeV:getText()
 
 	if pwd == "" or pwdVerify == "" then
-		self.alertTip:setString("密码不能为空！")
+		s_TIPS_LAYER:showSmallWithOneButton("密码不能为空！")
 		return
 	elseif pwd ~= pwdVerify then
-		if IconShow == false then
-		   self:ShowIcon()
-		   IconShow = true
-		end
-		self.alertTip:setString("两次密码不一致！")
+		s_TIPS_LAYER:showSmallWithOneButton("两次密码不一致！")
 		return
 	elseif not validatePassword(pwd) then
 		--密码不合规范
 		s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__PWD_ERROR))
 	else
-		self.alertTip:setString("")
-		if IconShow == true then
-		end
-
+		-- do nothing
 	end
 
 	--注册
 	self:register(self.phoneNumber,pwd,self.nickName)
-	if IconShow == true then
-		self.errorIcon:setVisible(false)
-		IconShow = false
-	end
 end
 
 --显示登陆界面
@@ -460,16 +449,12 @@ function RegisterAccountView:onLoginTouch(sender,eventType)
 	local pwd 	= self.inputNodePwd:getText()
 
 	if id == "" or pwd == "" then
-		self.alertTip:setString("帐号和密码不能为空！")
+		s_TIPS_LAYER:showSmallWithOneButton("帐号和密码不能为空！")
 		return
 	end
 
 	--验证密码
 	if validatePassword(pwd) == false then
-		-- if IconShow == false then
-		--    slef.ShowIcon()
-		--    IconShow = true
-		-- end
         s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__PWD_ERROR))
         return
     end
@@ -482,19 +467,11 @@ function RegisterAccountView:onLoginTouch(sender,eventType)
 	else
 		--username登陆
 		if validateUsername(id) == false then
-			-- if IconShow == false then
-			--    slef.ShowIcon()
-			--    IconShow = true
-			-- end
         	s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR))
         	return
     	end
 		--登陆
     	s_O2OController.logInOnline(id, pwd)
-    	if IconShow == true then
-    		self.errorIcon:ShowIcon()
-    		IconShow = false
-    	end
 	end
 end
 
@@ -569,7 +546,6 @@ function RegisterAccountView:onRegisterCallBack(nickName,pwd,phoneNumber,error,e
 		s_TIPS_LAYER:showSmallWithOneButton(error)
 		return
 	end
-
 	self:endRegister(true)
 end
 
@@ -581,7 +557,7 @@ function RegisterAccountView:endRegister(state)
 	--登陆
 	print("s_O2OController.logInOnline id:"..s_CURRENT_USER.username)
 	print("s_O2OController.logInOnline pwd:"..s_CURRENT_USER.password)
-	-- s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
+	
 	if state then
 		s_SCENE:removeAllPopups()
 		s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
