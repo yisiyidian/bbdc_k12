@@ -17,7 +17,6 @@ function MoreInfoEditSexView:ctor()
 
 end
 
-
 function MoreInfoEditSexView:initUI()
 
 	self.views = {}
@@ -25,16 +24,19 @@ function MoreInfoEditSexView:initUI()
 	self:setSwallowsTouches(true)
 
 	--头像
-	local headImg = cc.Sprite:create("image/homescene/setup_head.png")
-	headImg:setPosition(0.7 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 100)
+	local headImg = cc.Sprite:create("image/login/gril_head.png")
+	headImg:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self.views[#self.views + 1] = headImg
 	self:addChild(headImg)
+	self.headImg = headImg
 
-	local headImg = cc.Sprite:create("image/homescene/change_head_setting_2.png")
-	headImg:setPosition(0.4 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 100)
-	self.views[#self.views + 1] = headImg
-	self:addChild(headImg)
+	local headImg1 = cc.Sprite:create("image/login/change_head_setting_3.png")
+	headImg1:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
+	self.views[#self.views + 1] = headImg1
+	self:addChild(headImg1)
+	self.headImg1 = headImg1
 
+	self.headImg1:setVisible(false)
 	
 	--标题
 	local title = cc.Label:createWithSystemFont("修改性别", "", 60)
@@ -68,17 +70,25 @@ function MoreInfoEditSexView:initUI()
 			self.checkBoxMale:setTouchEnabled(false) --禁用自己
 			self.checkBoxFemale:setTouchEnabled(true) --启用另外一个
 			self.checkBoxFemale:setSelected(false)
+			self.checkBoxMale:setSelected(true)
+
+			self.headImg1:setVisible(true)
+			self.headImg:setVisible(false)
 		end	
 		if chkName == "Female" and state then
 			self.checkBoxMale:setTouchEnabled(true) --启用另外一个
 			self.checkBoxFemale:setTouchEnabled(false) --禁用自己
 			self.checkBoxMale:setSelected(false)
+			self.checkBoxFemale:setSelected(true)
+
+			self.headImg:setVisible(true)
+			self.headImg1:setVisible(false)
 		end
 			
 	end
-	--女
+--女
 	local checkBoxMale = ccui.CheckBox:create()
-	checkBoxMale:setTouchEnabled(true)        --可点击
+	checkBoxMale:setTouchEnabled(true)        --不可点击
 	checkBoxMale:loadTextures(
 		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal
 		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal press
@@ -86,7 +96,7 @@ function MoreInfoEditSexView:initUI()
 		"image/login/button_boygirl_gray_zhuce_unpressed.png",-- normal disable
 		"image/login/button_boygirl_gray_zhuce_unpressed.png"--active disable
 		)
-	checkBoxMale:setPosition(s_DESIGN_WIDTH * 0.4, s_DESIGN_HEIGHT * 0.9 - 200)
+	checkBoxMale:setPosition(s_DESIGN_WIDTH * 0.7, s_DESIGN_HEIGHT * 0.9 - 400)
 	checkBoxMale:addEventListener(handler(self, chkCallback))
 	checkBoxMale:setName("Male")
 	checkBoxMale:setSelected(false)
@@ -98,9 +108,9 @@ function MoreInfoEditSexView:initUI()
 	labelWomen:setPosition(checkBoxMale:getContentSize().width/2,checkBoxMale:getContentSize().height/2)
 	checkBoxMale:addChild(labelWomen)
 
-	--男
+--男
 	local checkBoxFemale = ccui.CheckBox:create()
-	checkBoxFemale:setTouchEnabled(true)
+	checkBoxFemale:setTouchEnabled(false)
 	checkBoxFemale:setName("Female")
 	checkBoxFemale:loadTextures(
 		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal
@@ -109,8 +119,9 @@ function MoreInfoEditSexView:initUI()
 		"image/login/button_boygirl_gray_zhuce_unpressed.png",-- normal disable
 		"image/login/button_boygirl_gray_zhuce_unpressed.png"--active disable
 		)
-	checkBoxFemale:setPosition(s_DESIGN_WIDTH * 0.7, s_DESIGN_HEIGHT * 0.9 - 200)
+	checkBoxFemale:setPosition(s_DESIGN_WIDTH * 0.4, s_DESIGN_HEIGHT * 0.9 - 400)
 	checkBoxFemale:addEventListener(handler(self,chkCallback))
+	checkBoxMale:setSelected(true)
 	self.checkBoxFemale = checkBoxFemale
 	self:addChild(checkBoxFemale)
 	self.views[#self.views+1] = checkBoxFemale
@@ -122,7 +133,7 @@ function MoreInfoEditSexView:initUI()
 
 	--确定按钮
 	local btnConfirm = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
+	btnConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 600)
 	btnConfirm:addTouchEventListener(handler(self, self.onConfirmTouch))
 	btnConfirm:setTitleText("确 定")
 	btnConfirm:setTitleFontSize(36)
@@ -164,8 +175,8 @@ function MoreInfoEditSexView:onConfirmTouch(sender,eventType)
 	end
 	local data = nil
 	-- 0是被选中  1是不被选中
-	local sexnan = self.checkBoxMale:isSelected() and 0 or 1 
-	local sexnv = self.checkBoxFemale:isSelected() and 0 or 1
+	local sexnv = self.checkBoxMale:isSelected() and 0 or 1 
+	local sexnan = self.checkBoxFemale:isSelected() and 0 or 1
 	print("sexnv"..sexnv)
 	if sexnan == 1 and sexnv == 1 then 
 		s_TIPS_LAYER:showSmallWithOneButton("性别不能为空!")
@@ -173,14 +184,14 @@ function MoreInfoEditSexView:onConfirmTouch(sender,eventType)
 	end
 	self.sexnv = sexnv
 	self.sexnan = sexnan
-	if sexnv == 0 then 
+	if sexnv == 1 then 
 		 data = 0 
-		 self.checkBoxMale:setSelected(false)
-		 self.checkBoxFemale:setSelected(true)
-	elseif sexnv == 1 then
-		 data = 1
-		 self.checkBoxFemale:setSelected(false)
 		 self.checkBoxMale:setSelected(true)
+		 self.checkBoxFemale:setSelected(false)
+	elseif sexnv == 0 then
+		 data = 1
+		 self.checkBoxFemale:setSelected(true)
+		 self.checkBoxMale:setSelected(false)
 	end
 	print("data"..data)
 	print("self.key"..self.key)

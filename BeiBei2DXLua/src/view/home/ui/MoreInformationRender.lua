@@ -40,7 +40,8 @@ end
 --初始化UI
 function MoreInformationRender:init(type)
 	--白色底
-	local bg = cc.Sprite:create("image/homescene/setup_button.png")
+	--local bg = cc.Sprite:create("image/homescene/setup_button.png")
+	local bg = cc.Sprite:create("image/login/login_white_background.png")
 	local size = bg:getContentSize()
 	bg:setPosition(size.width/2,size.height/2)
 	self:addChild(bg)
