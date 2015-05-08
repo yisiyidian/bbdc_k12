@@ -831,6 +831,7 @@ function ChapterLayer:addBackToHome()
 
 
     -- return to homepage button
+    --左上角的返回按钮
     local homeButton = ccui.Button:create("image/chapter/chapter0/backHome.png","image/chapter/chapter0/backHome.png","")
     homeButton:addTouchEventListener(click_home)
     homeButton:ignoreAnchorPointForPosition(false)

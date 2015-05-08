@@ -13,7 +13,8 @@
 local InputNode = require("view.login.InputNode")
 
 local RegisterAccountView = class("RegisterAccountView",function()
-	local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
+	-- local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
+	local layer = cc.Layer:create()
 	return layer
 end)
 
@@ -39,6 +40,18 @@ function RegisterAccountView:init(step)
 	self.views = {}
 	self.curStep = step or 1
 	self.phoneNumber = ""
+
+
+    local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
+    local bigHeight = 1.0*s_DESIGN_HEIGHT
+    --背景层
+    local initColor = cc.LayerColor:create(cc.c4b(220,233,239,255), bigWidth, s_DESIGN_HEIGHT)
+    initColor:setAnchorPoint(0.5,0.5)
+    initColor:ignoreAnchorPointForPosition(false)  
+    initColor:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+    self:addChild(initColor)
+
+
 	--初始化UI
 	--标题 “注册”
 	local title = cc.Label:createWithSystemFont("注 册","",60)
@@ -48,7 +61,7 @@ function RegisterAccountView:init(step)
 	self:addChild(title)
 	--返回按钮
 	local btnReturn = ccui.Button:create("image/shop/button_back.png")
-	btnReturn:setPosition(0.1*s_DESIGN_WIDTH,0.9*s_DESIGN_HEIGHT)
+	btnReturn:setPosition(s_LEFT_X + 60 , 0.9*s_DESIGN_HEIGHT)
 	btnReturn:addTouchEventListener(handler(self, self.onReturnClick))
 	self:addChild(btnReturn)
 	--tip 注册可以和更多好友一起背单词
