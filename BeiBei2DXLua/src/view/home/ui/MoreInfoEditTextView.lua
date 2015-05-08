@@ -19,7 +19,7 @@ function MoreInfoEditTextView:initUI()
 	self:setSwallowsTouches(true)
 	--标题
 	local title = cc.Label:createWithSystemFont("修改信息","",60)
-	title:setTextColor(cc.c3b(225,234,240))
+	title:setTextColor(cc.c3b(132,211,249))
 	title:setPosition(s_DESIGN_WIDTH*0.5,s_DESIGN_HEIGHT*0.9)
 	self:addChild(title)
 	self.title = title
@@ -36,7 +36,7 @@ function MoreInfoEditTextView:initUI()
 	self.inputNode = inputNode
 	-- inputNode:openIME()
 	local btnConfirm = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
+	btnConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 350)
 	btnConfirm:addTouchEventListener(handler(self, self.onConfirmTouch))
 	btnConfirm:setTitleText("确 定")
 	btnConfirm:setTitleFontSize(36)

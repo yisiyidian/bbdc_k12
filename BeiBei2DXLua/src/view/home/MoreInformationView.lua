@@ -13,7 +13,7 @@ local MoreInfoEditTextView = require("view.home.ui.MoreInfoEditTextView") --修�
 local MoreInfoChangePwdView = require("view.home.ui.MoreInfoChangePwdView") --修改密码View
 
 local MoreInfomationView = class("MoreInfomationView", function()
-	local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
+	local layer = cc.Layer:create()
 	return layer
 end)
 
@@ -24,20 +24,14 @@ function MoreInfomationView:ctor()
 end
 
 function MoreInfomationView:init()
-
-	-- local function listViewEvent(sender, eventType)
-	-- 	print("eventType:"..eventType)
-	-- end
-
-	-- local function scrollViewEvent(sender, evenType)
-	--     if evenType == ccui.ScrollviewEventType.scrollToBottom then
-	--         print("SCROLL_TO_BOTTOM")
-	--     elseif evenType ==  ccui.ScrollviewEventType.scrollToTop then
-	--         print("SCROLL_TO_TOP")
-	--     elseif evenType == ccui.ScrollviewEventType.scrolling then
-	       
-	--     end
-	-- end 
+	local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
+    local bigHeight = 1.0*s_DESIGN_HEIGHT
+    --背景层
+    local initColor = cc.LayerColor:create(cc.c4b(220,233,239,255), bigWidth, s_DESIGN_HEIGHT)
+    initColor:setAnchorPoint(0.5,0.5)
+    initColor:ignoreAnchorPointForPosition(false)  
+    initColor:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+    self:addChild(initColor)
 
 	local listView = ccui.ScrollView:create()
     listView:setDirection(ccui.ScrollViewDir.vertical)
@@ -52,7 +46,7 @@ function MoreInfomationView:init()
 	title:setTextColor(cc.c3b(121,200,247))
 	self.title = title
 	--返回按钮
-	local btnReturn = ccui.Button:create("image/shop/button_back2.png")
+	local btnReturn = ccui.Button:create("image/shop/button_back.png")
 	btnReturn:addTouchEventListener(handler(self, self.onReturnClick))
 	self.btnReturn = btnReturn
 	
@@ -243,6 +237,10 @@ function MoreInfomationView:onEditSaveToServerCallBack(data,error)
 	if self.renderEditCall ~= nil then
 		self.renderEditCall(self.renderKey,self.renderData)
 	end
+
+	-- print("保存回来")
+	-- dump(data)
+	-- dump(error)
 end
 
 --显示修改界面

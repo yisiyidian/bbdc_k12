@@ -22,7 +22,7 @@ end
 function MoreInfoChangePwdView:initUI()
 	--标题
 	local title = cc.Label:createWithSystemFont("修改密码","",60)
-	title:setTextColor(cc.c3b(225,234,240))
+	title:setTextColor(cc.c3b(132,211,249))
 	title:setPosition(s_DESIGN_WIDTH*0.5,s_DESIGN_HEIGHT*0.9)
 	self:addChild(title)
 	self.title = title

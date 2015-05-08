@@ -39,7 +39,8 @@ function MoreInfoEditSexView:initUI()
 	--标题
 	local title = cc.Label:createWithSystemFont("修改性别", "", 36)
 	title:setPosition(s_DESIGN_WIDTH * 0.5, s_DESIGN_HEIGHT * 0.9)
-	title:setTextColor(cc.c3b(225,234,240))
+	-- title:setTextColor(cc.c3b(225,234,240))
+	title:setTextColor(cc.c3b(132,211,249))
 	self.title = title
 	self:addChild(title)
 
