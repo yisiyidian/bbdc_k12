@@ -59,11 +59,11 @@ function MoreInformationRender:init(type)
 		-- checkBox:setTouchEnabled(true)
 		checkBox:setTouchEnabled(false)
 		checkBox:loadTextures(
-			"image/newstudy/wordsbackgroundblue.png",--normal
-			"image/newstudy/wordsbackgroundblue.png",--normal press
-			"image/newstudy/pause_button_begin.png",--normal active
-			"image/newstudy/wordsbackgroundblue.png",-- normal disable
-			"image/newstudy/wordsbackgroundblue.png"--active disable
+			"image/login/button_circle_denglu_white.png",--normal
+			"image/login/button_circle_denglu.png",--normal press
+			"image/login/button_circle_denglu_blue.png",--normal active
+			"image/login/button_circle_denglu_white.png",-- normal disable
+			"image/login/button_circle_denglu.png"--active disable
 			)
 		checkBox:addEventListener(handler(self, self.onCheckBoxTouch))
 		checkBox:setPosition(size.width*0.6 , 45)

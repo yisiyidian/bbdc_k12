@@ -39,7 +39,7 @@ function MoreInfoEditSexView:initUI()
 	--标题
 	local title = cc.Label:createWithSystemFont("修改性别", "", 36)
 	title:setPosition(s_DESIGN_WIDTH * 0.5, s_DESIGN_HEIGHT * 0.9)
-	title:setTextColor(cc.c3b(121,200,247))
+	title:setTextColor(cc.c3b(225,234,240))
 	self.title = title
 	self:addChild(title)
 
@@ -80,11 +80,11 @@ function MoreInfoEditSexView:initUI()
 	local checkBoxMale = ccui.CheckBox:create()
 	checkBoxMale:setTouchEnabled(true)        --可点击
 	checkBoxMale:loadTextures(
-		"image/newstudy/wordsbackgroundblue.png",--normal
-		"image/newstudy/wordsbackgroundblue.png",--normal press
-		"image/newstudy/pause_button_begin.png",--normal active
-		"image/newstudy/wordsbackgroundblue.png",-- normal disable
-		"image/newstudy/wordsbackgroundblue.png"--active disable
+		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal
+		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal press
+		"image/login/button_boygirl_zhuce.png",--normal active
+		"image/login/button_boygirl_gray_zhuce_unpressed.png",-- normal disable
+		"image/login/button_boygirl_gray_zhuce_unpressed.png"--active disable
 		)
 	checkBoxMale:setPosition(s_DESIGN_WIDTH * 0.4, s_DESIGN_HEIGHT * 0.9 - 200)
 	checkBoxMale:addEventListener(handler(self, chkCallback))
@@ -99,11 +99,11 @@ function MoreInfoEditSexView:initUI()
 	checkBoxFemale:setTouchEnabled(true)
 	checkBoxFemale:setName("Female")
 	checkBoxFemale:loadTextures(
-		"image/newstudy/wordsbackgroundblue.png",--normal
-		"image/newstudy/wordsbackgroundblue.png",--normal press
-		"image/newstudy/pause_button_begin.png",--normal active
-		"image/newstudy/wordsbackgroundblue.png",-- normal disable
-		"image/newstudy/wordsbackgroundblue.png"--active disable
+		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal
+		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal press
+		"image/login/button_boygirl_zhuce.png",--normal active
+		"image/login/button_boygirl_gray_zhuce_unpressed.png",-- normal disable
+		"image/login/button_boygirl_gray_zhuce_unpressed.png"--active disable
 		)
 	checkBoxFemale:setPosition(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.9 - 200)
 	checkBoxFemale:addEventListener(handler(self,chkCallback))
@@ -113,11 +113,11 @@ function MoreInfoEditSexView:initUI()
 
 
 	--确定按钮
-	local btnConfirm = ccui.Button:create("image/login/sl_button_confirm.png")
+	local btnConfirm = ccui.Button:create()
 	btnConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
 	btnConfirm:addTouchEventListener(handler(self, self.onConfirmTouch))
 	btnConfirm:setTitleText("确 定")
-	btnConfirm:setTitleFontSize(26)
+	btnConfirm:setTitleFontSize(36)
 	self:addChild(btnConfirm)
 	self.btnConfirm = btnConfirm
 	self.views[#self.views+1] = btnConfirm

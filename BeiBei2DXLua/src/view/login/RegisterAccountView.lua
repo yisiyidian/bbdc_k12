@@ -16,7 +16,8 @@ local RegisterAccountView = class("RegisterAccountView",function()
 	local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
 	return layer
 end)
-
+--标志
+IconShow = false 
 --首次登陆执行的流程
 RegisterAccountView.STEP_1 = 1 	--输入手机号
 RegisterAccountView.STEP_2 = 2	--输入验证码
@@ -34,6 +35,14 @@ function RegisterAccountView:ctor(step)
 	self.debug = true
 end
 
+
+
+function RegisterAccountView:ShowIcon()
+	local errorIcon = cc.Sprite:create("image/login/error_zhuce.png")
+	errorIcon:setPosition(0.5 * s_DESIGN_WIDTH - 100,s_DESIGN_HEIGHT * 0.9 - 90)
+	self:addChild(errorIcon)
+	self.errorIcon = errorIcon
+end
 --初始化各个view
 function RegisterAccountView:init(step)
 	self.views = {}
@@ -53,23 +62,23 @@ function RegisterAccountView:init(step)
 	self:addChild(btnReturn)
 	--tip 注册可以和更多好友一起背单词
 	local tip = cc.Label:createWithSystemFont("注册可以和更多好友一起背单词","",26)
-	tip:setTextColor(cc.c3b(122,126,128))
+	tip:setTextColor(cc.c3b(164,171,128))
 	tip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 60)
 	self.tip = tip
 	self:addChild(tip)
 	--alert tip 错误提示文本
 	local alertTip = cc.Label:createWithSystemFont(" ","",20)
 	alertTip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 90)
-	alertTip:setTextColor(cc.c3b(216, 85, 67))
+	alertTip:setTextColor(cc.c3b(222, 224, 228))
 	self.alertTip = alertTip
 	self:addChild(alertTip)
 
-	--[[
-	local alertICON = cc.Sprite:create("")
-	alertICON:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 30)
-	self.alertICON = alertICON
-	self:addChild(alertICON)
-	]]
+	-- --错误图标
+	-- local alertICON = cc.Sprite:create("")
+	-- alertICON:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 30)
+	-- self.alertICON = alertICON
+	-- self:addChild(alertICON)
+
 	--进入第一步
 	self:goStep(self.curStep)
 end
@@ -154,12 +163,17 @@ function RegisterAccountView:onTouchPhoneNumberOK(sender,eventType)
 		--跳转到输入验证码的界面
 		self.curStep = self.curStep + 1
 		self:goStep(self.curStep)
+		if IconShow == true then
+		   self.errorIcon:setVisible(false)
+		   IconShow = false
+		end
 	else
 		--不是手机号码
 		--TODO icon
-		local errorIcon = cc.Sprite:create("image/login/error_zhuce.png")
-		errorIcon:setPosition(0.5 * s_DESIGN_WIDTH - 60,s_DESIGN_HEIGHT * 0.9 - 90)
-		self:addChild(errorIcon)
+		if IconShow == false then
+			self:ShowIcon()
+			IconShow = true
+		end
 		self.alertTip:setTextColor(cc.c3b(220, 57, 8))
 		self.alertTip:setString("请输入手机号！")
 	end
@@ -383,9 +397,10 @@ function RegisterAccountView:onTouchRegister(sender,eventType)
 		self.alertTip:setString("密码不能为空！")
 		return
 	elseif pwd ~= pwdVerify then
-		local errorIcon = cc.Sprite:create("image/login/error_zhuce.png")
-		errorIcon:setPosition(0.5 * s_DESIGN_WIDTH - 60,s_DESIGN_HEIGHT * 0.9 - 90)
-		self:addChild(errorIcon)
+		if IconShow == false then
+		   self:ShowIcon()
+		   IconShow = true
+		end
 		self.alertTip:setString("两次密码不一致！")
 		return
 	elseif not validatePassword(pwd) then
@@ -393,9 +408,17 @@ function RegisterAccountView:onTouchRegister(sender,eventType)
 		s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__PWD_ERROR))
 	else
 		self.alertTip:setString("")
+		if IconShow == true then
+		end
+
 	end
+
 	--注册
 	self:register(self.phoneNumber,pwd,self.nickName)
+	if IconShow == true then
+		self.errorIcon:setVisible(false)
+		IconShow = false
+	end
 end
 
 --显示登陆界面
@@ -436,9 +459,10 @@ function RegisterAccountView:onLoginTouch(sender,eventType)
 
 	--验证密码
 	if validatePassword(pwd) == false then
-		local errorIcon = cc.Sprite:create("image/login/error_zhuce.png")
-		errorIcon:setPosition(0.5 * s_DESIGN_WIDTH - 60,s_DESIGN_HEIGHT * 0.9 - 90)
-		self:addChild(errorIcon)
+		-- if IconShow == false then
+		--    slef.ShowIcon()
+		--    IconShow = true
+		-- end
         s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__PWD_ERROR))
         return
     end
@@ -451,11 +475,19 @@ function RegisterAccountView:onLoginTouch(sender,eventType)
 	else
 		--username登陆
 		if validateUsername(id) == false then
+			-- if IconShow == false then
+			--    slef.ShowIcon()
+			--    IconShow = true
+			-- end
         	s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR))
         	return
     	end
 		--登陆
     	s_O2OController.logInOnline(id, pwd)
+    	if IconShow == true then
+    		self.errorIcon:ShowIcon()
+    		IconShow = false
+    	end
 	end
 end
 

@@ -22,7 +22,7 @@ end
 function MoreInfoChangePwdView:initUI()
 	--标题
 	local title = cc.Label:createWithSystemFont("修改密码","",60)
-	title:setTextColor(cc.c3b(121,200,247))
+	title:setTextColor(cc.c3b(225,234,240))
 	title:setPosition(s_DESIGN_WIDTH*0.5,s_DESIGN_HEIGHT*0.9)
 	self:addChild(title)
 	self.title = title
@@ -49,7 +49,7 @@ function MoreInfoChangePwdView:initUI()
 	self:addChild(inputNewPwdConfirm)
 	self.inputNewPwdConfirm = inputNewPwdConfirm
 
-	local btnConfirm = ccui.Button:create("image/login/sl_button_confirm.png")
+	local btnConfirm = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
 	btnConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 500)
 	btnConfirm:addTouchEventListener(handler(self, self.onConfirmTouch))
 	btnConfirm:setTitleText("确 定")
