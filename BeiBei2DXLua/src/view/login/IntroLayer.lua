@@ -88,8 +88,8 @@ function IntroLayer.create(directOnLogin)
                 --弹出RegisterAccountView的登陆界面  RegisterAccountView.STEP_6 就是登陆
                 local loginView = RegisterAccountView.new(RegisterAccountView.STEP_6)
                 loginView.close = function ()
-                    local introLayer = IntroLayer.create()
-                    s_SCENE:popup(introLayer)
+                    -- local introLayer = IntroLayer.create()
+                    -- s_SCENE:popup(introLayer)
                 end
                 s_SCENE:popup(loginView)
                 --[[
@@ -120,8 +120,8 @@ function IntroLayer.create(directOnLogin)
 
                 local layer = RegisterAccountView.new()
                 layer.close = function ()
-                    local introLayer = IntroLayer.create()
-                    s_SCENE:popup(introLayer)
+                    -- local introLayer = IntroLayer.create()
+                    -- s_SCENE:popup(introLayer)
                 end
                 s_SCENE:popup(layer)
             end

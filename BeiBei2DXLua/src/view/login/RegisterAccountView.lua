@@ -86,11 +86,18 @@ end
 --返回按钮点击
 function RegisterAccountView:onReturnClick(sender,eventType)
 	-- body
-	if eventType == ccui.TouchEventType.ended then
-		--在HomeLayer里赋值的close函数 临时函数
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+
+	self.curStep = self.curStep - 1
+	--在HomeLayer里赋值的close函数 临时函数
+	if self.curStep == 0 then
 		print("从注册界面返回")
 		sender:setEnabled(false)
 		self:endRegister()
+	else
+		self:goStep(self.curStep)
 	end
 end
 
@@ -563,16 +570,28 @@ function RegisterAccountView:onRegisterCallBack(nickName,pwd,phoneNumber,error,e
 		return
 	end
 
-	self:endRegister()
+	self:endRegister(true)
 end
 
 --结束注册
-function RegisterAccountView:endRegister()
+--state是否是注册成功
+function RegisterAccountView:endRegister(state)
+	print("结束注册 注册成功 进入游戏")
 	cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
+	--登陆
+	print("s_O2OController.logInOnline id:"..s_CURRENT_USER.username)
+	print("s_O2OController.logInOnline pwd:"..s_CURRENT_USER.password)
+	-- s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
+	if state then
+		s_SCENE:removeAllPopups()
+		s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
+	end
 	if self.close ~= nil then
+		print("回调close")
 		self.close()
 	else
 		s_SCENE:removeAllPopups()
+		print("s_SCENE:removeAllPopups")
 	end
 end
 
