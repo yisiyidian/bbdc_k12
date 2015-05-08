@@ -19,7 +19,7 @@ function MoreInfoEditTextView:initUI()
 	self:setSwallowsTouches(true)
 	--标题
 	local title = cc.Label:createWithSystemFont("修改信息","",60)
-	title:setTextColor(cc.c3b(225,234,240))
+	title:setTextColor(cc.c3b(106,182,240))
 	title:setPosition(s_DESIGN_WIDTH*0.5,s_DESIGN_HEIGHT*0.9)
 	self:addChild(title)
 	self.title = title
@@ -90,6 +90,8 @@ function MoreInfoEditTextView:onConfirmTouch(sender,eventType)
 			return
 		end
 	end
+
+	cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
 
 	--关闭回调
 	--MoreInformationView里的onEditClose

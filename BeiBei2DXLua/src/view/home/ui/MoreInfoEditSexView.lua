@@ -26,7 +26,7 @@ function MoreInfoEditSexView:initUI()
 
 	--头像
 	local headImg = cc.Sprite:create("image/homescene/setup_head.png")
-	headImg:setPosition(0.6 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 100)
+	headImg:setPosition(0.7 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 100)
 	self.views[#self.views + 1] = headImg
 	self:addChild(headImg)
 
@@ -37,9 +37,9 @@ function MoreInfoEditSexView:initUI()
 
 	
 	--标题
-	local title = cc.Label:createWithSystemFont("修改性别", "", 36)
+	local title = cc.Label:createWithSystemFont("修改性别", "", 60)
 	title:setPosition(s_DESIGN_WIDTH * 0.5, s_DESIGN_HEIGHT * 0.9)
-	title:setTextColor(cc.c3b(225,234,240))
+	title:setTextColor(cc.c3b(106,182,240))
 	self.title = title
 	self:addChild(title)
 
@@ -94,6 +94,10 @@ function MoreInfoEditSexView:initUI()
 	self:addChild(checkBoxMale)
 	self.views[#self.views+1] = checkBoxMale
 
+	local labelWomen = cc.Label:createWithSystemFont("♂ 男","",20)
+	labelWomen:setPosition(checkBoxMale:getContentSize().width/2,checkBoxMale:getContentSize().height/2)
+	checkBoxMale:addChild(labelWomen)
+
 	--男
 	local checkBoxFemale = ccui.CheckBox:create()
 	checkBoxFemale:setTouchEnabled(true)
@@ -105,15 +109,19 @@ function MoreInfoEditSexView:initUI()
 		"image/login/button_boygirl_gray_zhuce_unpressed.png",-- normal disable
 		"image/login/button_boygirl_gray_zhuce_unpressed.png"--active disable
 		)
-	checkBoxFemale:setPosition(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.9 - 200)
+	checkBoxFemale:setPosition(s_DESIGN_WIDTH * 0.7, s_DESIGN_HEIGHT * 0.9 - 200)
 	checkBoxFemale:addEventListener(handler(self,chkCallback))
 	self.checkBoxFemale = checkBoxFemale
 	self:addChild(checkBoxFemale)
 	self.views[#self.views+1] = checkBoxFemale
 
+	local labelWomen = cc.Label:createWithSystemFont("♀ 女","",20)
+	labelWomen:setPosition(checkBoxFemale:getContentSize().width/2,checkBoxFemale:getContentSize().height/2)
+	checkBoxFemale:addChild(labelWomen)
+
 
 	--确定按钮
-	local btnConfirm = ccui.Button:create()
+	local btnConfirm = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
 	btnConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
 	btnConfirm:addTouchEventListener(handler(self, self.onConfirmTouch))
 	btnConfirm:setTitleText("确 定")

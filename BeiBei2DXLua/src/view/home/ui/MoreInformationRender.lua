@@ -125,6 +125,7 @@ function MoreInformationRender:updateView()
 			self.contentLabel:setString("未设置 >")
 		end
 	end
+
 	
 	if self.type == MoreInformationRender.SWITCH then
 		self.checkBox:setSelected(self.data)
