@@ -109,6 +109,7 @@ function MoreInformationRender:setData(data)
 	self.callback 		= data.callback
 	self.data 			= data.data
 	self.checkCallBack 	= data.check
+	self.type 			= data.type
 	self:updateView()
 end
 --更新界面
@@ -117,24 +118,26 @@ function MoreInformationRender:updateView()
 	self.titleLabel:setString(self.title)
 
 	if self.showContent then
-		if self.content and self.content~="" and self.content ~= 0 and self.content ~= 1 then
+		if self.type == MoreInformationRender.SEX then
+			--性别
+			if self.content == 1 then
+				self.contentLabel:setString("男")
+			elseif self.content == 0 then
+				self.contentLabel:setString("女")
+		elseif self.content and self.content ~= "" then
+			--普通内容
 			self.contentLabel:setString(self.content)
-		elseif self.content == 1 then
-			self.contentLabel:setString("男")
-		elseif self.content == 0 then
-			self.contentLabel:setString("女")
-			elseif self.title == "头像" then
-				local headImgGrilContent = cc.Sprite:create("image/login/gril_head.png")
-				headImgGrilContent:setPosition(self.bg:getContentSize().width * 0.8 + 20,40)
-				self:addChild(headImgGrilContent)
-				self.headImgGrilContent = headImgGrilContent
-				headImgGrilContent:setScale(0.5)
+		elseif self.title == "头像" then
+			local headImgGrilContent = cc.Sprite:create("image/login/gril_head.png")
+			headImgGrilContent:setPosition(self.bg:getContentSize().width * 0.8 + 20,40)
+			self:addChild(headImgGrilContent)
+			self.headImgGrilContent = headImgGrilContent
+			headImgGrilContent:setScale(0.5)
 		else
 			self.contentLabel:setString("未设置 >")
 		end
 	end
 
-	
 	if self.type == MoreInformationRender.SWITCH then
 		self.checkBox:setSelected(self.data)
 	elseif self.type == MoreInformationRender.ICON then

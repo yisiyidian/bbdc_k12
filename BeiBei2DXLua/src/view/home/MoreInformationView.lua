@@ -57,7 +57,7 @@ end
 --初始化数据
 function MoreInfomationView:initData()
 	local nickName  	= s_CURRENT_USER.username
-	local sex 			= s_CURRENT_USER.sex == 0 and "女" or "男"
+	local sex 			= s_CURRENT_USER.sex
 	local headImg 		= s_CURRENT_USER.headImg
 	local email 		= s_CURRENT_USER.email    --邮箱
 	local birthday 		= s_CURRENT_USER.birthday --生日

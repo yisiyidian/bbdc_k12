@@ -315,6 +315,7 @@ function RegisterAccountView:showChooseSex()
 	local headImg = cc.Sprite:create(boyImg)
 	--local headImg = cc.Sprite:create("image/homescene/setup_head.png")
 	headImg:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
+	self.headImg = headImg
 	self.views[#self.views + 1] = headImg
 	self:addChild(headImg)
 	--checkbox回调
@@ -330,10 +331,12 @@ function RegisterAccountView:showChooseSex()
 		print("checkName:"..checkName)
 		if checkName == "Male" and state then
 			print("禁用自己："..checkName)
+			self.headImg:setTexture(boyImg)
 			self.checkBoxMale:setTouchEnabled(false) --禁用自己
 			self.checkBoxFeMale:setTouchEnabled(true) --启用另外一个
 			self.checkBoxFeMale:setSelected(false)
 		elseif checkName == "Female" and state then
+			self.headImg:setTexture(girlImg)
 			self.checkBoxMale:setTouchEnabled(true) --启用另外一个
 			self.checkBoxFeMale:setTouchEnabled(false) --禁用自己
 			self.checkBoxMale:setSelected(false)
@@ -397,6 +400,8 @@ end
 function RegisterAccountView:onTouchSexOK(sender,eventType)
 	--获取性别 女0  男1
 	self.sex = self.checkBoxFeMale:isSelected() and 0 or 1
+	print("sex:"..self.sex)
+	s_CURRENT_USER.sex = self.sex
 	self.curStep = self.curStep + 1
 	self:goStep(self.curStep)
 end
