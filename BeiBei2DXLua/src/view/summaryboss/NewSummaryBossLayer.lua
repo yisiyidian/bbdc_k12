@@ -57,7 +57,7 @@ function NewSummaryBossLayer:initStageInfo(unit)
     --boss剩余血量
     self.currentBlood = self.totalBlood
     --总时间
-    self.totalTime = math.ceil(self.totalBlood / 14) * 15
+    self.totalTime = 15--math.ceil(self.totalBlood / 14) * 15
     --剩余时间
     self.leftTime = self.totalTime
     --花费时间
