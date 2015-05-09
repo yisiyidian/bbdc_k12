@@ -24,19 +24,19 @@ function MoreInfoEditSexView:initUI()
 	self:setSwallowsTouches(true)
 
 	--头像
-	local headImg = cc.Sprite:create("image/login/gril_head.png")
-	headImg:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
-	self.views[#self.views + 1] = headImg
-	self:addChild(headImg)
-	self.headImg = headImg
+	local headImgGril = cc.Sprite:create("image/login/gril_head.png")
+	headImgGril:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
+	self.views[#self.views + 1] = headImgGril
+	self:addChild(headImgGril)
+	self.headImgGril = headImgGril
 
-	local headImg1 = cc.Sprite:create("image/login/change_head_setting_3.png")
-	headImg1:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
-	self.views[#self.views + 1] = headImg1
-	self:addChild(headImg1)
-	self.headImg1 = headImg1
+	local headImgBoy = cc.Sprite:create("image/login/boy_head.png")
+	headImgBoy:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
+	self.views[#self.views + 1] = headImgBoy
+	self:addChild(headImgBoy)
+	self.headImgBoy = headImgBoy
 
-	self.headImg1:setVisible(false)
+	self.headImgBoy:setVisible(false)
 	
 	--标题
 	local title = cc.Label:createWithSystemFont("修改性别", "", 60)
@@ -72,8 +72,8 @@ function MoreInfoEditSexView:initUI()
 			self.checkBoxFemale:setSelected(false)
 			self.checkBoxMale:setSelected(true)
 
-			self.headImg1:setVisible(true)
-			self.headImg:setVisible(false)
+			self.headImgBoy:setVisible(true)
+			self.headImgGril:setVisible(false)
 		end	
 		if chkName == "Female" and state then
 			self.checkBoxMale:setTouchEnabled(true) --启用另外一个
@@ -81,8 +81,8 @@ function MoreInfoEditSexView:initUI()
 			self.checkBoxMale:setSelected(false)
 			self.checkBoxFemale:setSelected(true)
 
-			self.headImg:setVisible(true)
-			self.headImg1:setVisible(false)
+			self.headImgGril:setVisible(true)
+			self.headImgBoy:setVisible(false)
 		end
 			
 	end

@@ -122,6 +122,7 @@ function MoreInformationRender:updateView()
 			self.contentLabel:setString("男")
 		elseif self.content == 0 then
 			self.contentLabel:setString("女")
+			elseif self
 		else
 			self.contentLabel:setString("未设置 >")
 		end
