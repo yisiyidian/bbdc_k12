@@ -203,9 +203,9 @@ function RegisterAccountView:showInputSmsCode(args)
 
 	--重试按钮 点击重新请求验证码 间隔60S
 	local btnRetry = ccui.Button:create("image/login/login_50s_send.png")
-	btnRetry:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 400)
+	btnRetry:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
 	btnRetry:addTouchEventListener(handler(self, self.onRetrySMSTouch))
-	btnRetry:setTextColor(cc.c3b(153,168,181))
+	btnRetry:setTitleColor(cc.c3b(153,168,181))
 	btnRetry:setTitleText("60秒重新发送")
 	btnRetry:setTitleFontSize(36)
 	btnRetry:setTouchEnabled(false)
@@ -243,12 +243,17 @@ function RegisterAccountView:SMSCodeTick()
 		self.scheduler:unscheduleScriptEntry(self.schedulerID)
 		self.scheduler = nil
 		self.schedulerID = nil
-		self.btnRetry:setTouchEnabled(true)
-		self.btnRetry:setTitleText("")
-		--换按钮皮肤
-		self.btnRetry:loadTextureNormal("image/login/button_sendagain_zhuce.png",ccui.TextureResType.localType)
+		
+		if self.btnRetry and not tolua.isnull(self.btnRetry) then
+			self.btnRetry:setTouchEnabled(true)
+			self.btnRetry:setTitleText("")
+			--换按钮皮肤
+			self.btnRetry:loadTextureNormal("image/login/button_sendagain_zhuce.png",ccui.TextureResType.localType)
+		end
 	else
-		self.btnRetry:setTitleText(tostring(self.countDown).."秒重新发送")
+		if self.btnRetry and not tolua.isnull(self.btnRetry) then
+			self.btnRetry:setTitleText(tostring(self.countDown).."秒重新发送")
+		end
 	end
 end
 
@@ -616,17 +621,18 @@ function RegisterAccountView:endRegister(state)
 	--登陆
 	print("s_O2OController.logInOnline id:"..s_CURRENT_USER.username)
 	print("s_O2OController.logInOnline pwd:"..s_CURRENT_USER.password)
-	
+	self.scheduler:unscheduleScriptEntry(self.schedulerID)
 	if state then
 		s_SCENE:removeAllPopups()
 		s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
-	end
-	if self.close ~= nil then
-		print("回调close")
-		self.close()
 	else
-		s_SCENE:removeAllPopups()
-		print("s_SCENE:removeAllPopups")
+		if self.close ~= nil then
+			print("回调close")
+			self.close()
+		else
+			s_SCENE:removeAllPopups()
+			print("s_SCENE:removeAllPopups")
+		end
 	end
 end
 
