@@ -95,7 +95,7 @@ void CXAvos::logIn(const char* username, const char* password, CXLUAFUNC nHandle
     }
 }
 
-void CXAvos::logInByPhoneNumber(const char* phoneNumber,const char* password,CXLUAFUNC mHandler)  {
+void CXAvos::logInByPhoneNumber(const char* phoneNumber,const char* password,CXLUAFUNC nHandler)  {
     mLuaHandlerId_logIn = nHandler;
     cocos2d::JniMethodInfo t;
     if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "logInByPhoneNumber", "(Ljava/lang/String;Ljava/lang/String;)V")) {
