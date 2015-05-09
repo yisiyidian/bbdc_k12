@@ -527,7 +527,7 @@ function RegisterAccountView:onLoginTouch(sender,eventType)
 
 	--验证id是手机还是用户名
 	--区分类型 然后走两个不同的登录接口
-	if string.find(id,"^1[3|4|5|8][0-9]%d%d%d%d%d%d%d%d$") then
+	if string.find(id,"^1[3|4|6|5|8][0-9]%d%d%d%d%d%d%d%d$") then
 		--手机号码登陆
 		s_O2OController.logInOnline(id, pw , true)
 	else
