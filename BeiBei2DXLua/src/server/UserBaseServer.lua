@@ -226,7 +226,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
         s_CURRENT_USER.password = password
         s_CURRENT_USER.usertype = USER_TYPE_BIND
 
-        saveUserToServer({['usertype']=USER_TYPE_BIND}, function (datas, error)
+        saveUserToServer({['usertype']=USER_TYPE_BIND,["sex"]=s_CURRENT_USER.sex}, function (datas, error)
             onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
         end)
     end
