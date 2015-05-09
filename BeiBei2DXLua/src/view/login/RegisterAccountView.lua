@@ -621,7 +621,13 @@ function RegisterAccountView:endRegister(state)
 	--登陆
 	print("s_O2OController.logInOnline id:"..s_CURRENT_USER.username)
 	print("s_O2OController.logInOnline pwd:"..s_CURRENT_USER.password)
-	self.scheduler:unscheduleScriptEntry(self.schedulerID)
+
+	if self.scheduler then 
+		self.scheduler:unscheduleScriptEntry(self.schedulerID)
+		self.scheduler = nil
+		self.schedulerID = nil
+	end
+
 	if state then
 		s_SCENE:removeAllPopups()
 		s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
