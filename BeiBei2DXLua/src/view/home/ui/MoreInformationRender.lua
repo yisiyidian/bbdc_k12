@@ -47,7 +47,7 @@ function MoreInformationRender:init(type)
 	self:addChild(bg)
 	--title
 	local titleLabel = cc.Label:createWithSystemFont("","",26)
-	titleLabel:setPosition(10,30)
+	titleLabel:setPosition(20,30)
 	self.titleLabel = titleLabel
 	self.titleLabel:setAnchorPoint(cc.p(0.0,0.0))
 	self.titleLabel:setTextColor(cc.c3b(0, 0, 0))
@@ -67,7 +67,7 @@ function MoreInformationRender:init(type)
 			"image/login/button_left_login.png"--active disable
 			)
 		checkBox:addEventListener(handler(self, self.onCheckBoxTouch))
-		checkBox:setPosition(size.width*0.6 , 45)
+		checkBox:setPosition(size.width*0.8 + 20 , 45)
 		checkBox:setSelected(true)	--默认选中
 		self.checkBox = checkBox
 		self:addChild(checkBox)
@@ -79,7 +79,7 @@ function MoreInformationRender:init(type)
 		self.showContent = true
 		--内容文本
 		local content = cc.Label:createWithSystemFont("","",26)
-		content:setPosition(size.width*0.5,30)
+		content:setPosition(size.width*0.8 - 20,30)
 		content:setAnchorPoint(cc.p(0.0,0.0))
 		self.contentLabel = content
 		self.contentLabel:setTextColor(cc.c3b(0, 0, 0))
