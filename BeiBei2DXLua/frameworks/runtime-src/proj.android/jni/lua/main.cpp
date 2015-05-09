@@ -78,7 +78,7 @@ extern "C"
         const char *nativeString_error = error ? env->GetStringUTFChars(error, 0) : 0;
         CXAvos::getInstance()->invokeLuaCallbackFunction_vc(nativeString_error,errorcode);
 
-        if(error) env->ReleaseStringUTFChars(error);    
+        if(error) env->ReleaseStringUTFChars(error,nativeString_error);    
     }
 
     void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionLI(JNIEnv *env, jobject thisz,
@@ -103,7 +103,7 @@ extern "C"
         const char *nativeString_error = error ? env->GetStringUTFChars(error, 0) : 0;
         CXAvos::getInstance()->invokeLuaCallbackFunction_cp(nativeString_error,errorcode);
 
-        if(error) env->ReleaseStringUTFChars(error);
+        if(error) env->ReleaseStringUTFChars(error,nativeString_error);
     }    
 
     void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionLIQQ(JNIEnv *env, jobject thisz,
