@@ -89,7 +89,6 @@ end
 
 --返回按钮点击
 function RegisterAccountView:onReturnClick(sender,eventType)
-	-- body
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
@@ -173,22 +172,19 @@ function RegisterAccountView:onTouchPhoneNumberOK(sender,eventType)
 		if not self.debug then
 			self:requestSMSCode(phoneNumber)
 		end
-		--跳转到输入验证码的界面
+		--跳转到输入验证码的界面 直接跳过去
 		self.curStep = self.curStep + 1
-		self:goStep(self.curStep)
+		self:goStep(self.curStep,60) --60秒
 	else
 		--不是手机号码
-		-- self.alertTip:setString("请输入手机号！")
 		s_TIPS_LAYER:showSmallWithOneButton("请输入有效的手机号码！")
 	end
 end
 
-
 --显示输入验证码的界面
 function RegisterAccountView:showInputSmsCode(args)
 	local countDown = args and tonumber(args[1]) or 0
-	if args ~= nil then
-	end
+	print("countDown:"..countDown)
 
 	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入验证码",nil,nil,nil,nil,11)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
@@ -205,7 +201,73 @@ function RegisterAccountView:showInputSmsCode(args)
 	self:addChild(btnSMSCodeOK)
 	self.views[#self.views+1] = btnSMSCodeOK
 
+	--重试按钮 点击重新请求验证码 间隔60S
+	local btnRetry = ccui.Button:create("image/login/login_50s_send.png")
+	btnRetry:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
+	btnRetry:addTouchEventListener(handler(self, self.onRetrySMSTouch))
+	btnRetry:setTitleColor(cc.c3b(153,168,181))
+	btnRetry:setTitleText("60秒重新发送")
+	btnRetry:setTitleFontSize(36)
+	btnRetry:setTouchEnabled(false)
+	self:addChild(btnRetry)
+	self.btnRetry = btnRetry
+	self.views[#self.views+1] = btnRetry
+
+	if countDown ~= 0 then
+		--倒计时 请求验证码
+		self:startSMSTick(countDown)
+	end
+
 	self.alertTip:setString("输入验证码")
+end
+
+--开始倒计时
+function RegisterAccountView:startSMSTick(countDown)
+	if countDown ~= 0 then
+		--倒计时 请求验证码
+		self.countDown = countDown
+		print(self.scheduler)
+		if self.scheduler == nil then
+			self.scheduler = cc.Director:getInstance():getScheduler()
+			self.schedulerID = self.scheduler:scheduleScriptFunc(handler(self, self.SMSCodeTick),1,false)
+			self.btnRetry:loadTextureNormal("image/login/login_50s_send.png",ccui.TextureResType.localType)
+			self.btnRetry:setTitleText(tostring(self.countDown).."秒重新发送")
+		end
+	end
+end
+
+--倒计时调用
+function RegisterAccountView:SMSCodeTick()
+	self.countDown = self.countDown - 1
+	if self.countDown == 0 then
+		self.scheduler:unscheduleScriptEntry(self.schedulerID)
+		self.scheduler = nil
+		self.schedulerID = nil
+		
+		if self.btnRetry and not tolua.isnull(self.btnRetry) then
+			self.btnRetry:setTouchEnabled(true)
+			self.btnRetry:setTitleText("")
+			--换按钮皮肤
+			self.btnRetry:loadTextureNormal("image/login/button_sendagain_zhuce.png",ccui.TextureResType.localType)
+		end
+	else
+		if self.btnRetry and not tolua.isnull(self.btnRetry) then
+			self.btnRetry:setTitleText(tostring(self.countDown).."秒重新发送")
+		end
+	end
+end
+
+--重新请求验证码按钮触摸
+function RegisterAccountView:onRetrySMSTouch(sender,eventType)
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+
+	if not self.debug then
+		self:requestSMSCode(self.phoneNumber)
+	end
+
+	self:startSMSTick(50)
 end
 
 function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
@@ -230,8 +292,8 @@ function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
 	else
 		--验证码无效
 		s_TIPS_LAYER:showSmallWithOneButton("请输入有效的验证码！")
-		-- self.alertTip:setTextColor(cc.c3b(220, 57, 8))
-		-- self.alertTip:setString("请输入有效的验证码！")
+		
+		
 	end
 end
 
@@ -345,7 +407,7 @@ function RegisterAccountView:showInputNickName()
 	self.views[#self.views+1] = btnNickName
 end
 
---昵称触摸事件
+--昵称按钮触摸事件
 function RegisterAccountView:onTouchNickNameOK(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
@@ -516,6 +578,7 @@ function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 		s_TIPS_LAYER:showSmallWithOneButton(error)
 	else
 		self.curStep = self.curStep + 1
+		--60秒之后再重试
 		self:goStep(self.curStep)
 	end
 end
@@ -558,17 +621,18 @@ function RegisterAccountView:endRegister(state)
 	--登陆
 	print("s_O2OController.logInOnline id:"..s_CURRENT_USER.username)
 	print("s_O2OController.logInOnline pwd:"..s_CURRENT_USER.password)
-	
+	self.scheduler:unscheduleScriptEntry(self.schedulerID)
 	if state then
 		s_SCENE:removeAllPopups()
 		s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
-	end
-	if self.close ~= nil then
-		print("回调close")
-		self.close()
 	else
-		s_SCENE:removeAllPopups()
-		print("s_SCENE:removeAllPopups")
+		if self.close ~= nil then
+			print("回调close")
+			self.close()
+		else
+			s_SCENE:removeAllPopups()
+			print("s_SCENE:removeAllPopups")
+		end
 	end
 end
 
