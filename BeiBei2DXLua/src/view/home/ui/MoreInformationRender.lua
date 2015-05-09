@@ -109,6 +109,7 @@ function MoreInformationRender:setData(data)
 	self.callback 		= data.callback
 	self.data 			= data.data
 	self.checkCallBack 	= data.check
+	self.type 			= data.type
 	self:updateView()
 end
 --更新界面
@@ -117,28 +118,45 @@ function MoreInformationRender:updateView()
 	self.titleLabel:setString(self.title)
 
 	if self.showContent then
-		if self.content and self.content~="" and self.content ~= 0 and self.content ~= 1 then
+		if self.type == MoreInformationRender.SEX then
+			--性别
+			if self.content == 1 then
+				self.contentLabel:setString("男")
+			elseif self.content == 0 then
+				self.contentLabel:setString("女")
+			end
+		elseif self.content and self.content ~= "" then
+			--普通内容
 			self.contentLabel:setString(self.content)
-		elseif self.content == 1 then
-			self.contentLabel:setString("男")
-		elseif self.content == 0 then
-			self.contentLabel:setString("女")
-			elseif self.title == "头像" then
-				local headImgGrilContent = cc.Sprite:create("image/login/gril_head.png")
-				headImgGrilContent:setPosition(self.bg:getContentSize().width * 0.8 + 20,40)
-				self:addChild(headImgGrilContent)
-				self.headImgGrilContent = headImgGrilContent
-				headImgGrilContent:setScale(0.5)
 		else
 			self.contentLabel:setString("未设置 >")
 		end
 	end
 
-	
 	if self.type == MoreInformationRender.SWITCH then
 		self.checkBox:setSelected(self.data)
 	elseif self.type == MoreInformationRender.ICON then
-		--TODO ICONS
+		--
+		if type(self.data) == "table" then
+			--绑定选项
+		else
+			local headImgContent = nil
+			if self.headImgContent == nil then
+				headImgContent = cc.Sprite:create("image/login/gril_head.png")
+				self.headImgContent = headImgContent	
+				self:addChild(headImgContent)
+			else
+				headImgContent = self.headImgContent
+			end
+			if self.data == 0 then
+				headImgContent:setTexture("image/login/gril_head.png") 
+			else
+				headImgContent:setTexture("image/login/boy_head.png")
+			end
+
+			headImgContent:setPosition(self.bg:getContentSize().width * 0.8 + 20,40)
+			headImgContent:setScale(0.5)
+		end
 	end
 end
 
