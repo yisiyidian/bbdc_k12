@@ -73,14 +73,14 @@ function RegisterAccountView:init(step)
 	self:addChild(btnReturn)
 	--tip 注册可以和更多好友一起背单词
 	local tip = cc.Label:createWithSystemFont("注册可以和更多好友一起背单词","",26)
-	tip:setTextColor(cc.c3b(164,171,128))
+	tip:setTextColor(cc.c3b(118,123,124))
 	tip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 60)
 	self.tip = tip
 	self:addChild(tip)
 	--alert tip 提示文本 提示应该输入什么
 	local alertTip = cc.Label:createWithSystemFont(" ","",20)
 	alertTip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 90)
-	alertTip:setTextColor(cc.c3b(164, 171, 128))
+	alertTip:setTextColor(cc.c3b(140, 139, 139))
 	self.alertTip = alertTip
 	self:addChild(alertTip)
 	--进入第一步
@@ -148,7 +148,7 @@ function RegisterAccountView:showInputPhoneNumber()
 	-- cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
 
 	local btnPhoneNumberOK = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnPhoneNumberOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
+	btnPhoneNumberOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 330)
 	btnPhoneNumberOK:addTouchEventListener(handler(self, self.onTouchPhoneNumberOK))
 	btnPhoneNumberOK:setTitleText("下一步")
 	btnPhoneNumberOK:setTitleFontSize(36)
@@ -194,7 +194,7 @@ function RegisterAccountView:showInputSmsCode(args)
 	self.views[#self.views+1] = inputNode
 
 	local btnSMSCodeOK = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnSMSCodeOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
+	btnSMSCodeOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 330)
 	btnSMSCodeOK:addTouchEventListener(handler(self, self.onTouchSMSCodeOK))
 	btnSMSCodeOK:setTitleText("下一步")
 	btnSMSCodeOK:setTitleFontSize(36)
@@ -295,8 +295,8 @@ end
 --显示选择性别的界面
 function RegisterAccountView:showChooseSex()
 	self.alertTip:setString("")
-
-	local headImg = cc.Sprite:create("image/homescene/setup_head.png")
+	local headImg = cc.Sprite:create("image/login/gril_head.png")
+	--local headImg = cc.Sprite:create("image/homescene/setup_head.png")
 	headImg:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self.views[#self.views + 1] = headImg
 	self:addChild(headImg)
@@ -366,7 +366,7 @@ function RegisterAccountView:showChooseSex()
 	checkBoxFeMale:addChild(labelWomen)
 
 	local btnSexOK = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnSexOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.5 - 100)
+	btnSexOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.6 - 180)
 	btnSexOK:addTouchEventListener(handler(self, self.onTouchSexOK))
 	btnSexOK:setTitleText("下一步")
 	btnSexOK:setTitleFontSize(36)
@@ -394,7 +394,7 @@ function RegisterAccountView:showInputNickName()
 	self.views[#self.views+1] = inputNode
 
 	local btnNickName = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnNickName:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 350)
+	btnNickName:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 330)
 	btnNickName:addTouchEventListener(handler(self, self.onTouchNickNameOK))
 	btnNickName:setTitleText("下一步")
 	btnNickName:setTitleFontSize(36)
@@ -433,14 +433,14 @@ function RegisterAccountView:showInputPwd()
 	self.views[#self.views+1] = inputNode
 	
 	local inputNodeV = InputNode.new("image/signup/shuru_bbchildren_white.png","请确认密码",nil,nil,nil,true,11)
-	inputNodeV:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
+	inputNodeV:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 330)
 	self:addChild(inputNodeV)
 	self.inputNodeV = inputNodeV
 	self.views[#self.views+1] = inputNodeV
 	
 	-- cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
 	local btnRegister = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnRegister:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 400)
+	btnRegister:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
 	btnRegister:addTouchEventListener(handler(self, self.onTouchRegister))
 	btnRegister:setTitleText("完成注册")
 	btnRegister:setTitleFontSize(36)
@@ -477,9 +477,10 @@ end
 --显示登陆界面
 function RegisterAccountView:showLoginView( ... )
 	self.title:setString("登 录")
+	self.tip:setString("登录可以和更多好友一起背单词")
 
 	local inputNodeID = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入手机号",nil,nil,nil,false,11)
-	inputNodeID:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
+	inputNodeID:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 170)
 	self:addChild(inputNodeID)
 	self.inputNodeID = inputNodeID
 	inputNodeID:openIME()
@@ -492,7 +493,7 @@ function RegisterAccountView:showLoginView( ... )
 	self.views[#self.views+1] = inputNodePwd
 
 	local btnLogin = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnLogin:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 400)
+	btnLogin:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 430)
 	btnLogin:addTouchEventListener(handler(self, self.onLoginTouch))
 	btnLogin:setTitleText("登 录")
 	btnLogin:setTitleFontSize(36)

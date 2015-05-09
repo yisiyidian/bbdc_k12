@@ -40,17 +40,17 @@ function MoreInfoChangePwdView:initUI()
 	self.inputOldPwd = inputOldPwd
 	--输入框 月份
 	local inputNewPwd = InputNode.new("image/signup/shuru_bbchildren_white.png","填写新密码",nil,nil,nil,nil,11)
-	inputNewPwd:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
+	inputNewPwd:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 330)
 	self:addChild(inputNewPwd)
 	self.inputNewPwd = inputNewPwd
 	--日期
 	local inputNewPwdConfirm = InputNode.new("image/signup/shuru_bbchildren_white.png","确认新密码",nil,nil,nil,nil,11)
-	inputNewPwdConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 400)
+	inputNewPwdConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
 	self:addChild(inputNewPwdConfirm)
 	self.inputNewPwdConfirm = inputNewPwdConfirm
 
 	local btnConfirm = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 500)
+	btnConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 590)
 	btnConfirm:addTouchEventListener(handler(self, self.onConfirmTouch))
 	btnConfirm:setTitleText("确 定")
 	btnConfirm:setTitleFontSize(36)
