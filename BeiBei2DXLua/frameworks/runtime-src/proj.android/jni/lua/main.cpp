@@ -76,7 +76,7 @@ extern "C"
     void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionVC(JNIEnv *env,jstring error,jint errorcode)
     {   
         const char *nativeString_error = error ? env->GetStringUTFChars(error, 0) : 0;
-        CXAvos::getInstance()->invokeLuaCallbackFunction_vc(nativeString_error,errorcode);
+        CXAvos::getInstance()->invokeLuaCallBackFunction_vc(nativeString_error,errorcode);
 
         if(error) env->ReleaseStringUTFChars(error,nativeString_error);    
     }
