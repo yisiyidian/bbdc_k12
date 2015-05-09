@@ -301,15 +301,14 @@ end
 function RegisterAccountView:showChooseSex()
 	self.alertTip:setString("")
 	local girlImg = "image/login/gril_head.png"
-	local boyImg = "image/login/gril_head.png"
+	local boyImg = "image/login/boy_head.png"
 
-	local headImg = cc.Sprite:create(girlImg)
+	local headImg = cc.Sprite:create(boyImg)
 	--local headImg = cc.Sprite:create("image/homescene/setup_head.png")
 	headImg:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self.views[#self.views + 1] = headImg
 	self.headImg = headImg
 	self:addChild(headImg)
-	self.views[#self.views+1] = headImg
 	--checkbox回调
 	local chkCallBack = function (self,sender,eventType)
 		local checkName = sender:getName()
@@ -337,7 +336,7 @@ function RegisterAccountView:showChooseSex()
 
 	--性别复选框 男
 	local checkBoxMale = ccui.CheckBox:create()
-	checkBoxMale:setTouchEnabled(true)
+	checkBoxMale:setTouchEnabled(false)
 	checkBoxMale:setName("Male")
 	checkBoxMale:loadTextures(
 		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal
