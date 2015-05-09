@@ -20,6 +20,11 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_review_boss)
     end
 
+    if s_CURRENT_USER.k12SmallStep < s_K12_reviewBoss then
+        s_CURRENT_USER:setK12SmallStep(s_K12_reviewBoss)
+    end
+    -- 打点
+
     AnalyticsFirst(ANALYTICS_FIRST_REVIEW_BOSS, 'SHOW')
 
     --pause music

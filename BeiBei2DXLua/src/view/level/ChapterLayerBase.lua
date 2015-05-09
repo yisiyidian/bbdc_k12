@@ -115,16 +115,15 @@ function ChapterLayerBase:callFuncWithDelay(delay, func)
 end
 
 
+--摆放每个单元的小岛  eq:unit1
+--levelIndex    关卡索引
 function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
-    local levelPosition = self.levelPos[levelIndex]
+    local levelPosition = self.levelPos[levelIndex]    
     
-    -- define touchEvent
     local function touchEvent(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
             print('BaseLayer:levelbutton '..sender:getName()..' touched...')                
             self:addPopup(sender:getName())
---              self:checkLevelStateBeforePopup(sender:getName())
-            
         end
     end
 
@@ -135,14 +134,15 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     levelButton:addTouchEventListener(touchEvent)
     self:addChild(levelButton, 129)
     
-
     local currentIndex = levelIndex
     -- to do get level state
     local bossList = s_LocalDatabaseManager.getAllUnitInfo()
-    local levelState, coolingDay
+    local levelState = 0
+    local coolingDay = 0 
     local currentTaskBossIndex = -1
-    for bossID, bossInfo in pairs(bossList) do
 
+
+    for bossID, bossInfo in pairs(bossList) do
         if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 and bossInfo["unitState"] - 5 < 0 then
             currentTaskBossIndex = bossID - 1
         end
@@ -153,27 +153,9 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         end
     end
     
-    -- check active
---    local todayReviewBoss = s_LocalDatabaseManager.getTodayReviewBoss()
---    local active
---    if #todayReviewBoss == 0 or todayReviewBoss[0] - (levelIndex + 1) ~= 0 then
---        active = 0
---    else
---        active = 1
---    end
---    print('####active'..active..','..levelState)
---    if levelConfig['type'] == 1 then
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
     local currentChapterKey = 'chapter'..math.floor(currentProgress/10)
     
-    
-    -- TODO add review boss position
-    -- TODO check level state
-----    local levelState = math.random(0, 3)
---    levelState = 5
-    -- test
-    -- levelState = -1
-    -- s_level_popup_state = 1
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("levelIndex"..levelIndex)
     print("currentTaskBossIndex"..currentTaskBossIndex)
@@ -199,7 +181,6 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
         summaryboss:addAnimation(0, 'jianxiao', true)
         summaryboss:setScale(0.7)
         self:addChild(summaryboss, 140)
-
     else
         -- plot level number
         self:plotLevelNumber('level'..levelIndex)
@@ -207,7 +188,9 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 
 end
 
-function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex)
+-- ｛没用到 
+function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex) 
+
     local bossList = s_LocalDatabaseManager.getAllUnitInfo()
     local state, coolingDay
     for bossID, bossInfo in pairs(bossList) do
@@ -226,23 +209,28 @@ function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex)
             back:runAction(cc.MoveBy:create(0.2,cc.p(-800,0)))
         end
     else
-        self:addPopup(levelIndex)
+        local playAnimation = true
+        self:addPopup(levelIndex,playAnimation)
+        print("self:addPopup(levelIndex,playAnimation)"..tostring(playAnimation))
     end
 end
+--没用到 ｝
 
-function ChapterLayerBase:addPopup(levelIndex)
+function ChapterLayerBase:addPopup(levelIndex,playAnimation)
+    print("ChapterLayerBase:addPopup(levelIndex,playAnimation)"..tostring(playAnimation))
     local LevelProgressPopup = require("view.islandPopup.LevelProgressPopup")
-    local levelProgressPopup = LevelProgressPopup.create(levelIndex)
+    local levelProgressPopup = LevelProgressPopup.create(levelIndex,playAnimation)
     s_SCENE:popup(levelProgressPopup)
 end
 
 function ChapterLayerBase:plotDecoration()
+    print("AAAs_CURRENT_USER.bookKey:"..s_CURRENT_USER.bookKey)
     local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
     local currentLevelIndex = levelInfo
-    local currentChapterIndex = math.floor(levelInfo / s_islands_per_page)
+    
     local chapterIndex = string.sub(self.chapterKey, 8)
     -- add state information
-    
+    print("currentLevelIndex:"..currentLevelIndex)
     for levelIndex, levelPosition in pairs(self.levelPos) do
         -- add level button
         local function touchEvent(sender,eventType)
@@ -268,42 +256,50 @@ function ChapterLayerBase:plotDecoration()
             end
         end
         if (levelIndex - currentLevelIndex) > 0 then
-            -- local lockIsland = cc.Sprite:create('image/chapter/chapter0/lockisland2.png')
-            -- lockIsland:setName('lockLayer'..levelIndex)
-            -- lockIsland:addTouchEventListener(touchEvent)
+            print("levelIndex:"..levelIndex)
+            --未开启的单元
+            local bookMaxUnitID = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey)
+            if levelIndex - bookMaxUnitID < 0 then 
+                local lockIsland = ccui.Button:create('image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png')
+                lockIsland:setScale9Enabled(true)
+                lockIsland:setName('lockLayer'..levelIndex)
+                lockIsland:addTouchEventListener(touchEvent)
 
-            local lockIsland = ccui.Button:create('image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png','image/chapter/chapter0/lockisland2.png')
-            lockIsland:setScale9Enabled(true)
-            lockIsland:setName('lockLayer'..levelIndex)
-            lockIsland:addTouchEventListener(touchEvent)
+                local lock = cc.Sprite:create('image/chapter/chapter0/unit_lock.png')
+                lock:setName('lock'..levelIndex)
+                lockIsland:setPosition(levelPosition)
+                lock:setPosition(levelPosition)
 
-            local lock = cc.Sprite:create('image/chapter/chapter0/unit_lock.png')
-            lock:setName('lock'..levelIndex)
-            lockIsland:setPosition(levelPosition)
-            -- lock:setPosition(lockIsland:getContentSize().width/2, lockIsland:getContentSize().height/2)
-            lock:setPosition(levelPosition)
+                print('s_book:')
+                print_lua_table(s_BookUnitName[s_CURRENT_USER.bookKey])
+                local unitName = split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(levelIndex+1)],'_')
 
-            -- add text
-            local unitText = cc.Sprite:create('image/chapter/chapter0/unit_black.png')
-            unitText:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2+10)
-            lock:addChild(unitText, 130)
+                -- add text
+                local unitText = cc.Sprite:create('image/chapter/chapter0/unit_black.png')
+                unitText:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2+10)
+                lock:addChild(unitText, 130)
 
-            local number = cc.Label:createWithSystemFont(''..(levelIndex+1),'',35)
-            number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-20)
-            number:setColor(cc.c3b(164, 125, 46))
-            lock:addChild(number, 130)
+                if #unitName == 1 then
+                    local number = cc.Label:createWithSystemFont(''..unitName[1],'',35)
+                    number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-20)
+                    number:setColor(cc.c3b(164, 125, 46))
+                    lock:addChild(number, 130)
+                else
+                    local number = cc.Label:createWithSystemFont(''..unitName[1],'',35)
+                    number:setPosition(lock:getContentSize().width/2-5, lock:getContentSize().height/2-20)
+                    number:setColor(cc.c3b(164, 125, 46))
+                    lock:addChild(number, 130)
+                    local number2 = cc.Label:createWithSystemFont('('..unitName[2]..')','',23)
+                    number2:setPosition(lock:getContentSize().width/2+20, lock:getContentSize().height/2-22)
+                    number2:setColor(cc.c3b(164, 125, 46))
+                    lock:addChild(number2, 130)
+                end
 
-            -- local number = ccui.TextBMFont:create()
-            -- number:setFntFile('font/number_brown.fnt')
-            -- --number:setColor(cc.c3b(56,26,23))
-            -- number:setString(levelIndex+1)
-            -- number:setScale(0.85)
-            -- number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-10)
-            -- lock:addChild(number,130)
-
-            self:addChild(lock,130)
-            self:addChild(lockIsland,120)
+                self:addChild(lock,130)
+                self:addChild(lockIsland,120)
+            end
         else
+            --已开启的单元
             self:plotDecorationOfLevel(levelIndex)
         end  
     end
@@ -318,22 +314,46 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
 --        start:setPosition(levelPosition.x, levelPosition.y)
 --        self:addChild(start, 130)
 --    else
-
+        -- print_lua_table(s_BookUnitName[s_CURRENT_USER.bookKey])
         local unitText = cc.Sprite:create('image/chapter/chapter0/unit.png')
         unitText:setPosition(levelPosition.x-5, levelPosition.y + 35)
         self:addChild(unitText, 130)
-
-        -- local number = cc.Label:createWithSystemFont(''..(levelIndex+1),'',55)
-        -- number:setPosition(levelPosition.x-5, levelPosition.y - 10)
-        -- number:setColor(cc.c3b(255, 255, 255))
-        -- self:addChild(number, 130)
-        local number = ccui.TextBMFont:create()
-        number:setFntFile('font/number_inclined.fnt')
-        --number:setColor(cc.c3b(56,26,23))
-        number:setString(levelIndex+1)
-        number:setScale(0.85)
-        number:setPosition(levelPosition.x-5, levelPosition.y-10)
-        self:addChild(number,130)
+        local unitName = split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(levelIndex+1)],'_')
+        -- local unitName = split("3",'_')
+        if #unitName == 1 then
+            local number = ccui.TextBMFont:create()
+            number:setFntFile('font/number_inclined.fnt')
+            number:setString(unitName[1])
+            number:setScale(0.85)
+            number:setPosition(levelPosition.x-5, levelPosition.y-10)
+            self:addChild(number,130)
+        else
+            -- local tag = cc.Label:createWithSystemFont('( )','',38)
+            -- tag:setPosition(levelPosition.x+10, levelPosition.y - 20)
+            -- tag:setColor(cc.c3b(255, 255, 255))
+            -- self:addChild(tag, 130)
+            local number1 = ccui.TextBMFont:create()
+            number1:setFntFile('font/number_inclined.fnt')
+            --number:setColor(cc.c3b(56,26,23))
+            number1:setString(unitName[1])
+            number1:setScale(0.8)
+            number1:setPosition(levelPosition.x-25, levelPosition.y-10)
+            self:addChild(number1,130)
+            local number2 = ccui.TextBMFont:create()
+            number2:setFntFile('font/number_inclined.fnt')
+            number2:setString(unitName[2])
+            number2:setScale(0.55)
+            number2:setPosition(levelPosition.x+20, levelPosition.y-18)
+            self:addChild(number2,130)
+            local leftBracket = cc.Sprite:create('image/chapter/leftBracket.png')
+            leftBracket:setScale(0.4)
+            leftBracket:setPosition(levelPosition.x+5, levelPosition.y-23)
+            local rightBracket = cc.Sprite:create('image/chapter/rightBracket.png')
+            rightBracket:setPosition(levelPosition.x+35, levelPosition.y-23)
+            rightBracket:setScale(0.4)
+            self:addChild(leftBracket,130)
+            self:addChild(rightBracket,130)
+        end
 --    end
 
  

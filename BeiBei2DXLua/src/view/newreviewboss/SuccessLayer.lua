@@ -56,6 +56,10 @@ local function createNextButton(getBean)
 end
 
 function SuccessLayer:ctor(number)
+    if s_CURRENT_USER.k12SmallStep < s_K12_reviewBossEnd then
+        s_CURRENT_USER:setK12SmallStep(s_K12_reviewBossEnd)
+    end
+    -- 打点
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
 
     local backColor = cc.LayerColor:create(cc.c4b(127,239,255,255), bigWidth, s_DESIGN_HEIGHT)  

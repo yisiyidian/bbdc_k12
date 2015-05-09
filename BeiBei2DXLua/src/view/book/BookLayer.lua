@@ -9,6 +9,11 @@ end)
 
 
 function BookLayer.create(education)
+    if s_CURRENT_USER.k12SmallStep < s_K12_selectBook then
+        s_CURRENT_USER:setK12SmallStep(s_K12_selectBook)
+    end
+    -- 打点
+    
     local layer = BookLayer.new()
     layer.book = {}
 
@@ -77,8 +82,8 @@ function BookLayer.create(education)
             if eventType == ccui.TouchEventType.ended then
 
                 if s_CURRENT_USER.tutorialStep == s_tutorial_book_select then
-                    s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1)
-                    s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_book_select+1)
+                    s_CURRENT_USER:setTutorialStep(s_tutorial_book_select+1) -- 0 -> 1
+                    s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_book_select+1) -- 0 -> 1
                     AnalyticsFirstBook(key)
                 end
                 --print("s_CURRENT_USER.bookKey2"..bookKey)
@@ -88,7 +93,7 @@ function BookLayer.create(education)
                 AnalyticsFirst(ANALYTICS_FIRST_BOOK, key)
                 
                 s_CorePlayManager.enterHomeLayer()
-                s_O2OController.getBulletinBoard()
+                -- s_O2OController.getBulletinBoard()
             
                 playSound(s_sound_buttonEffect)   
 

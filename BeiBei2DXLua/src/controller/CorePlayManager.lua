@@ -296,7 +296,7 @@ function CorePlayManager.initTotalUnitPlay()
             else
                 -- pass
             end
-        elseif unit.unitState == 5 then
+        elseif unit.unitState >= 5 then
             -- pass
         else
             CorePlayManager.currentUnitID = unit.unitID
@@ -323,12 +323,7 @@ function CorePlayManager.initTotalUnitPlay()
     -- if     CorePlayManager.currentUnitState == 0 then
     --     -- study   model
     --     CorePlayManager.initStudyModel()
-    -- if CorePlayManager.currentUnitState == 0 then
-    --     -- test    model
-    --     CorePlayManager.initTestModel()
-    -- elseif CorePlayManager.currentUnitState == 1 then
-    --     -- review  model
-    --     CorePlayManager.initReviewModel()
+
     if CorePlayManager.currentUnitState == 0 then
         -- summary model
         CorePlayManager.initSummaryModel()

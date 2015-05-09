@@ -187,6 +187,11 @@ function MissionProgressLayer.create(share,homelayer)
             AnalyticsEnterLevelLayerBtn()
             AnalyticsFirst(ANALYTICS_FIRST_LEVEL, 'TOUCH')
 
+            if s_CURRENT_USER.k12SmallStep < s_K12_enterLevelLayer then
+                s_CURRENT_USER:setK12SmallStep(s_K12_enterLevelLayer)
+            end
+            -- 打点
+
             playSound(s_sound_buttonEffect)
             if layer:getChildByTag(8888) ~=nil then
                 local schedule = layer:getChildByTag(8888):getScheduler()
