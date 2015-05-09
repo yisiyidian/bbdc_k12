@@ -13,7 +13,8 @@
 local InputNode = require("view.login.InputNode")
 
 local RegisterAccountView = class("RegisterAccountView",function()
-	local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
+	-- local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
+	local layer = cc.Layer:create()
 	return layer
 end)
 
@@ -59,6 +60,14 @@ function RegisterAccountView:init(step)
 	self.views = {}
 	self.curStep = step or 1
 	self.phoneNumber = ""
+	local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
+    local bigHeight = 1.0*s_DESIGN_HEIGHT
+	local initColor = cc.LayerColor:create(cc.c4b(220,233,239,255), bigWidth, s_DESIGN_HEIGHT)
+    initColor:setAnchorPoint(0.5,0.5)
+    initColor:ignoreAnchorPointForPosition(false)  
+    initColor:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+    self:addChild(initColor)
+
 	--初始化UI
 	--标题 “注册”
 	local title = cc.Label:createWithSystemFont("注 册","",60)
