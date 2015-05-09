@@ -139,12 +139,10 @@ function O2OController.signUpOnline(username, password)
     O2OController.startLoadingData(USER_START_TYPE_NEW, username, password)
 end
 
-function O2OController.logInOnline(username, password)
-    O2OController.startLoadingData(USER_START_TYPE_OLD, username, password)
-end
---通过手机号码登陆
-function O2OController.lonInOnlineByPhoneNumber(phoneNumber,password)
-    O2OController.startLoadingData(USER_START_TYPE_OLD, username, password,isPhoneNumber) 
+--登陆
+--isPhone是否通过手机号码登陆
+function O2OController.logInOnline(username, password ,isPhoneNumber)
+    O2OController.startLoadingData(USER_START_TYPE_OLD, username, password,isPhoneNumber)
 end
 
 function O2OController.logInByQQ()
@@ -160,13 +158,16 @@ function O2OController.startLoadingData(userStartType, username, password,isPhon
     LOGTIME('O2OController.startLoadingData')
     local tmpUser = DataUser.create()
     local hasUserInLocalDB = false
-    if username ~= nil then
-        s_LocalDatabaseManager.getDatas('_User', '', username, function (row)
-            parseLocalDBDataToClientData(row, tmpUser)
-            hasUserInLocalDB = true
-        end)
-    else
-        hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
+
+    if not isPhoneNumber then
+        if username ~= nil then
+            s_LocalDatabaseManager.getDatas('_User', '', username, function (row)
+                parseLocalDBDataToClientData(row, tmpUser)
+                hasUserInLocalDB = true
+            end)
+        else
+            hasUserInLocalDB = s_LocalDatabaseManager.getLastLogInUser(tmpUser, USER_TYPE_ALL)
+        end
     end
     local isLocalNewerThenServer = false
 

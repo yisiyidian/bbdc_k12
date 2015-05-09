@@ -129,7 +129,7 @@ function UserBaseServer.loginByPhoneNumber(phoneNumber,password,onResponse)
     s_CURRENT_USER.mobilePhoneNumber = phoneNumber
     s_CURRENT_USER.password = password
 
-    cx.CXAvos:getInstance():logIn(username, password, function (objectjson, e, code)
+    cx.CXAvos:getInstance():logInByPhoneNumber(phoneNumber, password, function (objectjson, e, code)
         dump(objectjson,"登陆返回数据")
         onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
     end)

@@ -92,14 +92,14 @@ function RegisterAccountView:onReturnClick(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
-
-	self.curStep = self.curStep - 1
 	--在HomeLayer里赋值的close函数 临时函数
-	if self.curStep == 0 then
+	--返回introlayer 或者结束登陆 修改密码流程
+	if self.curStep == RegisterAccountView.STEP_1 or self.curStep > RegisterAccountView.STEP_5 then
 		print("从注册界面返回")
 		sender:setEnabled(false)
 		self:endRegister()
 	else
+		self.curStep = self.curStep - 1
 		self:goStep(self.curStep)
 	end
 end
@@ -529,7 +529,7 @@ function RegisterAccountView:onLoginTouch(sender,eventType)
 	--区分类型 然后走两个不同的登录接口
 	if string.find(id,"^1[3|4|6|5|8][0-9]%d%d%d%d%d%d%d%d$") then
 		--手机号码登陆
-		s_O2OController.logInOnline(id, pw , true)
+		s_O2OController.logInOnline(id, pwd,true)
 	else
 		--username登陆
 		if validateUsername(id) == false then
