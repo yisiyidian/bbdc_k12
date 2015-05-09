@@ -217,6 +217,8 @@ function NewSummaryBossLayer:initMat()
     end
     --划对单词后
     mat.success = function(stack)
+        if self.gameOver then return end
+        self.boss:stopAllActions()
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
         self.girl:setAnimation("right")
         if self.resetCount < self.maxCount then
