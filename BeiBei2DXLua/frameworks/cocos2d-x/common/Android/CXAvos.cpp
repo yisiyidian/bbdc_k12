@@ -145,7 +145,7 @@ void CXAvos::verifySMSCode(const char* phoneNumber,const char* smsCode,CXLUAFUNC
         t.env->DeleteLocalRef(stringArg_smsCode);
         t.env->DeleteLocalRef(t.classID);
     }
-
+}
 /**
  * 请求修改密码
  * @param username 用户名
