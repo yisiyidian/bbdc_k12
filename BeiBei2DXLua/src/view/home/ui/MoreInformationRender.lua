@@ -45,6 +45,7 @@ function MoreInformationRender:init(type)
 	local size = bg:getContentSize()
 	bg:setPosition(size.width/2,size.height/2)
 	self:addChild(bg)
+	self.bg = bg
 	--title
 	local titleLabel = cc.Label:createWithSystemFont("","",26)
 	titleLabel:setPosition(20,30)
@@ -122,7 +123,12 @@ function MoreInformationRender:updateView()
 			self.contentLabel:setString("男")
 		elseif self.content == 0 then
 			self.contentLabel:setString("女")
-			elseif self
+			elseif self.title == "头像" then
+				local headImgGrilContent = cc.Sprite:create("image/login/gril_head.png")
+				headImgGrilContent:setPosition(self.bg:getContentSize().width * 0.8 + 20,40)
+				self:addChild(headImgGrilContent)
+				self.headImgGrilContent = headImgGrilContent
+				headImgGrilContent:setScale(0.5)
 		else
 			self.contentLabel:setString("未设置 >")
 		end
