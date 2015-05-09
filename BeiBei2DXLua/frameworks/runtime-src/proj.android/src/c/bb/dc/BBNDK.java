@@ -61,6 +61,7 @@ import com.avos.avoscloud.LogInCallback;
 import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SaveCallback;
 import com.avos.avoscloud.SignUpCallback;
+import com.avos.avoscloud.UpdatePasswordCallback;
 import com.avos.sns.SNS;
 import com.avos.sns.SNSType;
 import com.tencent.mm.sdk.openapi.IWXAPI;
@@ -353,15 +354,23 @@ public class BBNDK {
 	 * @param newPwd 	新密码
 	 */
 	public static void changePwd(String username,String oldPwd,String newPwd){
-		AVUser user = AVUser.logIn(username,oldPwd);
-		userA.updatePasswordInBackground(oldPwd, newPwd,new UpdatePasswordCallback(){
+		AVUser user;
+		try {
+			user = AVUser.logIn(username,oldPwd);
+		} catch (AVException e1) {
+			// TODO Auto-generated catch block
+			//e1.printStackTrace();
+			onChangePwd(e1.getLocalizedMessage(),e1.getCode());
+			return;
+		}
+		user.updatePasswordInBackground(oldPwd, newPwd,new UpdatePasswordCallback(){
 	      @Override
 	      public void done(AVException e) {
 	      	if(e==null){
-	      		Log.d("修改密码成功");
+	      		Log.d("changepwd","修改密码成功");
 	      		onChangePwd("",0);
 	      	}else{
-	      		Log.d("修改密码失败:"+e.getLocalizedMessage());
+	      		Log.d("changepwd","修改密码失败:"+e.getLocalizedMessage());
 	      		// String errorjson = "{\"code\":" + e.hashCode() + ",\"message\":\"" + e.getMessage() + "\",\"description\":\"" + e.getLocalizedMessage() + "\"}";
 	      		onChangePwd(e.getLocalizedMessage(),e.getCode());
 	      	}
@@ -418,7 +427,8 @@ public class BBNDK {
 	}
 	
 	public static void logInByPhoneNumber(String phoneNumber,String password){
-		AVUser.loginByMobilePhoneNumber(phoneNumber,password, new LogInCallback<AVUser>(){
+//		AVUser.loginByMobilePhoneNumberInBackground(phone, password, callback);
+		AVUser.loginByMobilePhoneNumberInBackground(phoneNumber,password, new LogInCallback<AVUser>(){
 			public void done(AVUser user,AVException e){
 				if(e==null){
 					onLogIn(AVUserToJsonStr(user),null,0);

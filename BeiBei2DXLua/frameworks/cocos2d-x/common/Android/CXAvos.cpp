@@ -157,9 +157,9 @@ void CXAvos::changePwd(const char* username,const char* oldPwd,const char* newPw
     mLuaHandlerId_cp = nHandler;
     cocos2d::JniMethodInfo t;
     if(cocos2d::JniHelper::getStaticMethodInfo(t,JAVA_PKG,"changePwd","((Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V)")){
-        jstring stringArg_username = t.env->NewStringUTF(username)
-        jstring stringArg_passwordOld = t.env->NewStringUTF(oldPwd)
-        jstring stringArg_passwordNew = t.env->NewStringUTF(newPwd)
+        jstring stringArg_username = t.env->NewStringUTF(username);
+        jstring stringArg_passwordOld = t.env->NewStringUTF(oldPwd);
+        jstring stringArg_passwordNew = t.env->NewStringUTF(newPwd);
 
         t.env->CallStaticVoidMethod(t.classID,t.methodID,stringArg_username,stringArg_passwordOld,stringArg_passwordNew);
 
