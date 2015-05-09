@@ -58,7 +58,8 @@ end
 function MoreInfomationView:initData()
 	local nickName  	= s_CURRENT_USER.username
 	local sex 			= s_CURRENT_USER.sex
-	local headImg 		= s_CURRENT_USER.headImg
+	local headImg 		= s_CURRENT_USER.sex
+	-- local headImg 		= s_CURRENT_USER.headImg --目前一个性别只有一个头像 so 就用性别来区分了
 	local email 		= s_CURRENT_USER.email    --邮箱
 	local birthday 		= s_CURRENT_USER.birthday --生日
 	local job 			= s_CURRENT_USER.job 	  --职业
@@ -100,8 +101,8 @@ function MoreInfomationView:initData()
 	end
 
 	local listData = {}
-	listData[1] = {["key"] = "headImg",			["type"] = MoreInformationRender.TEXT,["title"] = "头像",			["content"] = "",			["callback"]=nil,["check"]=nil,		["data"] = headImg} --头像	
-	listData[2] = {["key"] = "nickName",		["type"] = MoreInformationRender.TEXT,["title"] = "昵称",			["content"] = nickName,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkName,	["data"] = nil} --昵称
+	listData[1] = {["key"] = "headImg",			["type"] = MoreInformationRender.ICON,["title"] = "头像",			["content"] = "",			["callback"]=nil,["check"]=nil,		["data"] = headImg} --头像	
+	listData[2] = {["key"] = "nickName",		["type"] = MoreInformationRender.TEXT,["title"] = "昵称",			["content"] = nickName,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkName,	["data"] = sex} --昵称
 	listData[3] = {["key"] = "sex",				["type"] = MoreInformationRender.SEX,["title"] = "性别",				["content"] = sex,			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = nil}--性别
 	listData[4] = {["key"] = "email",			["type"] = MoreInformationRender.TEXT,["title"] = "邮箱",			["content"] = email,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkEmail,	["data"] = nil}--邮箱
 	listData[5] = {["key"] = "birthday",		["type"] = MoreInformationRender.DATE,["title"] = "生日",			["content"] = birthday,		["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = nil}--生日
@@ -127,6 +128,9 @@ function MoreInfomationView:initUI()
 	local splitheight = 20
 	local renderheight = 100
 	local renders = {} --临时容器
+
+	self.headRender = nil --头像的Render
+
 	for k,v in pairs(self.listData) do
 		if v.key ~= "split" then
 			render = MoreInformationRender.new(v.type)
@@ -150,8 +154,10 @@ function MoreInfomationView:initUI()
 		else
 			tlen = tlen - splitheight	
 		end
-		
 	end
+
+	self.headRender = renders[1]
+
 	--设置标题 返回按钮的坐标
 	innerHeight = innerHeight + 130
 	self.title:setPosition(s_DESIGN_WIDTH*0.5,innerHeight - 80)
@@ -229,6 +235,9 @@ function MoreInfomationView:onEditClose(key,type,data)
 	elseif type == MoreInformationRender.SEX then
 		s_CURRENT_USER[key] = data
 		value = data
+		--更新头像
+		self.headRender.data = value
+		self.headRender:updateView()
 	elseif type == MoreInformationRender.OTHER then
 		
 	end
