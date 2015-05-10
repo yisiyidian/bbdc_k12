@@ -190,7 +190,7 @@ function M.getUnitInfo(unitID)
     for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." and unitID = "..unitID.." ;") do
         unit.unitID         = row.unitID
         unit.unitState      = row.unitState
-        unit.wrongWordList  = row.wordList
+        unit.rightWordList  = row.wordList
         unit.currentWordIndex  = row.currentWordIndex
         unit.lastUpdate     = row.lastUpdate
     end
@@ -201,6 +201,7 @@ function M.getUnitInfo(unitID)
         unit.wrongWordList  = {}
         unit.rightWordList  = {}
         unit.coolingDay     = 0
+        --print('unit.unitID == nil')
     else
         -- local startIndex
         -- if unit.unitID == 1 then
@@ -211,18 +212,23 @@ function M.getUnitInfo(unitID)
         --     end
         -- end
 
-        -- local hash = {}
-        if  unit.wrongWordList == '' then
-            unit.wrongWordList = {}
+        local hash = {}
+        unit.wrongWordList  = s_BookUnitWord[bookKey][''..unitID]
+        print('rightWordList',unit.rightWordList)
+         print('wrongWordList',unit.wrongWordList)
+        unit.wrongWordList = split(unit.wrongWordList, "|")
+         
+        if  unit.rightWordList == '' then
+            unit.rightWordList = {}
         else
-            unit.wrongWordList = split(unit.wrongWordList, "|")
-            for i = 1, #unit.wrongWordList do
-                local wordname = unit.wrongWordList[i]
-                -- hash[wordname] = 1
-            end
+            unit.rightWordList = split(unit.rightWordList, "|")
+            -- for i = 1, #unit.rightWordList do
+            --     local wordname = unit.rightWordList[i]
+            --     hash[wordname] = 1
+            -- end
         end
 
-        unit.rightWordList = {}
+        -- unit.rightWordList = {}
         -- for i = startIndex, unit.lastWordIndex do
         --     local wordname = s_BookUnitWord[s_CURRENT_USER.bookKey][i]
         --     if hash[wordname] ~= 1 then
@@ -405,8 +411,7 @@ function M.getAllUnitInfo()
 end
 
 
--- function M.addRightWord(wordindex)
---     local wordname = s_BookUnitWord[s_CURRENT_USER.bookKey][wordindex]
+-- function M.addRightWord(wordname)
 
 --     local userId    = s_CURRENT_USER.objectId
 --     local bookKey   = s_CURRENT_USER.bookKey
@@ -417,17 +422,17 @@ end
 
 --     local bossID    = nil
 --     local record = nil
---     for row in Manager.database:nrows("SELECT * FROM DataBossWord WHERE "..condition.." ORDER BY bossID DESC LIMIT 1 ;") do
---         bossID      = row.bossID
+--     for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." ORDER BY bossID DESC LIMIT 1 ;") do
+--         unitID      = row.unitID
 --         record      = row
 --     end
 
 --     if bossID == nil then
---         local query = "INSERT INTO DataBossWord (userId, username, bookKey, lastUpdate, bossID, unitState, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', 1, 0, '', "..wordindex..", 0) ;"
+--         local query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, bossID, unitState, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', 1, 0, '', "..wordindex..", 0) ;"
 --         Manager.database:exec(query)
 --         saveDataToServer(true, time, 1, 0, '', wordindex, 0)
 --     else
---         local query = "UPDATE DataBossWord SET lastUpdate = '"..time.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
+--         local query = "UPDATE DataUnit SET lastUpdate = '"..time.."' , lastWordIndex = "..wordindex.." WHERE "..condition.." and bossID = "..bossID.." ;"
 --         Manager.database:exec(query)
 --         saveDataToServer(true, time, record.bossID, record.unitState, record.wordList, wordindex, record.savedToServer)
 --     end
@@ -494,7 +499,7 @@ function M.initUnitInfo(unitID)
     local bookKey   = s_CURRENT_USER.bookKey
     local username  = s_CURRENT_USER.username
     local time      = os.time()
-    local wordlist = s_BookUnitWord[bookKey][''..unitID]
+    local wordlist = ''
     local currentWordIndex = 1
     local unitState = 0
     --print('wordlist:'..wordlist)
@@ -502,6 +507,7 @@ function M.initUnitInfo(unitID)
     query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, unitID, unitState, wordList, currentWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..unitID..", 0, '"..wordlist.."', "..currentWordIndex..", 0) ;"
     --print('sql:'..query)
     Manager.database:exec(query)
+    -- print("initUnitInfo",wordlist)
 
     -- local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
     -- print('row:')
@@ -538,10 +544,29 @@ function M.updateUnitState(unitID)
                 M.initUnitInfo(unitID+1)
             end
         elseif newunitState == 5 then -- grasp word
-            -- s_LocalDatabaseManager.addGraspWordsNum(getMaxWrongNumEveryLevel())
+            s_LocalDatabaseManager.addGraspWordsNum(#row.wordList)
         end
     end    
 
+    M.printUnitWord()
+end
+
+function M.addRightWord(wordlist,unitID)
+    local userId    = s_CURRENT_USER.objectId
+    local bookKey   = s_CURRENT_USER.bookKey
+    local username  = s_CURRENT_USER.username
+    local time      = os.time()
+
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+    
+    for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." and unitID = "..unitID.." ;") do
+        local rightWordList = row.wordList
+
+        local query = "UPDATE DataUnit SET lastUpdate = '"..time.."' , wordList = '"..wordlist.."' WHERE "..condition.." and unitID = "..unitID.." ;"
+        Manager.database:exec(query)
+        --print("addRightWord",row.wordList)
+        saveDataToServer(true, time, row.unitID, row.unitState, wordlist, row.currentWordIndex, row.savedToServer)
+    end       
     M.printUnitWord()
 end
 

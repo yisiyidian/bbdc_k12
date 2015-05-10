@@ -18,10 +18,7 @@ function SummaryBossAlter.create(bossLayer,win,entrance)
     layer.bossLayer = bossLayer
 
     layer.entrance = entrance
-    layer.needToAddBean = true
-    if bossLayer.unit.unitState > 0 then
-        layer.needToAddBean = false
-    end
+    layer.needToAddBean = not bossLayer.isReplay
     --disable pauseBtn
     if s_SCENE.popupLayer~=nil then
         s_SCENE.popupLayer:setPauseBtnEnabled(false)

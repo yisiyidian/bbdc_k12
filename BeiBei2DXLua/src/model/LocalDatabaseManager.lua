@@ -218,9 +218,9 @@ function Manager.getAllBossInfo()
     return localdatabase_bossWord.getAllBossInfo()
 end
 
-function Manager.addRightWord(wordindex)
-    localdatabase_bossWord.addRightWord(wordindex)
-end
+-- function Manager.addRightWord(wordindex)
+--     localdatabase_bossWord.addRightWord(wordindex)
+-- end
 
 function Manager.addWrongWord(wordindex)
     return localdatabase_bossWord.addWrongWord(wordindex)
@@ -279,6 +279,10 @@ end
 
 function Manager.printUnitWord()
     localdatabase_unitWord.printUnitWord()
+end
+
+function Manager.addRightWord(wordList,unitID)
+    localdatabase_unitWord.addRightWord(wordList,unitID)
 end
 ---- Statistics -----------------------------------------------------------------------------------------
 

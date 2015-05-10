@@ -43,6 +43,8 @@ function NewSummaryBossLayer:initStageInfo(unit)
     self.useItem = false
     --单元
     self.unit = unit
+    --是否是重玩
+    self.isReplay = true
 	--单词
 	self.wordList = self:initWordList()
 	--总词数
@@ -64,6 +66,8 @@ function NewSummaryBossLayer:initStageInfo(unit)
     self.mat_length = 4
     --生词数
     self.wrongWord = 0
+    --熟词
+    self.rightWordList = ''
     --换词次数
     self.resetCount = 0
 end
@@ -73,13 +77,14 @@ function NewSummaryBossLayer:initWordList()
 	local unit = self.unit
     local wordList
     if unit == nil then
+        self.isReplay = false
         wordList = s_CorePlayManager.currentWrongWordList
         self.unit = s_CorePlayManager.currentUnit
     else
         wordList = unit.wrongWordList
     end
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~")
-    print_lua_table(unit)
+    --print("~~~~~~~~~~~~~~~~~~~~~~~~~")
+    --print_lua_table(unit)
     -- 打乱取词
     for i = 1, #wordList do
         local randomIndex = math.random(1,#wordList)
@@ -213,7 +218,14 @@ function NewSummaryBossLayer:initMat()
     --划对单词后
     mat.success = function(stack)
         self.girl:setAnimation("right")
-        
+        if self.resetCount < self.maxCount then
+            if self.rightWordList == '' then
+                self.rightWordList = self.wordList[1]
+            else
+                self.rightWordList = self.rightWordList..'|'..self.wordList[1]
+            end
+        end
+        print(self.rightWordList)
         --子弹打boss
         local delaytime = 0
         for i = 1, #stack do
@@ -222,7 +234,7 @@ function NewSummaryBossLayer:initMat()
             local randP = cc.p(60 + math.random(0,80),60 + math.random(0,80))
             local bossPos = cc.p(self.boss:getPositionX() + randP.x,self.boss:getPositionY() + randP.y)
             local bulletPos = cc.p(stack[i]:getPosition())
-            print(bulletPos.x,bulletPos.y)
+            
             bossPos = cc.p(bossPos.x - bulletPos.x, bossPos.y - 150 - bulletPos.y)
             local time = math.sqrt(bossPos.x * bossPos.x + bossPos.y * bossPos.y) / (1200*(1 + i * 0.1))
             if time > 0.5 then
@@ -298,6 +310,7 @@ function NewSummaryBossLayer:addChangeBtn()
         if eventType == ccui.TouchEventType.ended then
             if self.resetCount < self.maxCount then
                 self.wrongWord = self.wrongWord + 1
+                --print('self.wrongWord',self.wrongWord)
             end
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local curtain = cc.LayerColor:create(cc.c4b(0,0,0,150),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
@@ -358,6 +371,11 @@ function NewSummaryBossLayer:gameOverFunc(win)
 	if win then
         if self.unit.unitState == 0 then
             s_LocalDatabaseManager.addStudyWordsNum(self.maxCount)
+            s_LocalDatabaseManager.addRightWord(self.rightWordList,self.unit.unitID)
+            s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - self.wrongWord)
+        elseif self.unit.unitState == 4 then
+            s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - #split(self.rightWordList,'|'))
+            s_LocalDatabaseManager.addRightWord(self.unit.wrongWordList,self.unit.unitID)
         end
         self.boss:fly()
 		self.girl:setAnimation("win")

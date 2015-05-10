@@ -69,7 +69,8 @@ function LevelProgressPopup:createSummary()
 
         local bossList = s_LocalDatabaseManager.getAllUnitInfo()
         local maxID = s_LocalDatabaseManager.getMaxUnitID()
-        if maxID > self.islandIndex and self.unit.coolingDay > 0 then
+        if maxID > self.islandIndex and self.unit.coolingDay > 0 and self.unit.unitState < 5 then
+            print('replay island')
             local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
             local summaryBossLayer = SummaryBossLayer.create(self.unit)
             s_SCENE:replaceGameLayer(summaryBossLayer) 

@@ -24,7 +24,7 @@ function HomeLayer.create()
     if s_CURRENT_USER:getLockFunctionState(1) == 0 then
         s_CURRENT_USER:unlockFunctionState(1)
     end
-
+    --s_CURRENT_USER:addBeans(200)
     -- task
     local todayTotalBossNum     = s_LocalDatabaseManager:getTodayTotalBossNum()
     local todayRemainBossNum    = s_LocalDatabaseManager:getTodayRemainBossNum()
@@ -52,9 +52,9 @@ function HomeLayer.create()
         s_CURRENT_USER:setTutorialStep(s_tutorial_home+1)
         -- print('tutorial_step:'..s_CURRENT_USER.tutorial_step)
     end
-    -- print("totalStudyWordNum : "..totalStudyWordNum)
-    -- print("totalGraspWordNum : "..totalGraspWordNum)
-    -- print("totalStudyDayNum : "..totalStudyDayNum)
+    print("totalStudyWordNum : "..totalStudyWordNum)
+    print("totalGraspWordNum : "..totalGraspWordNum)
+    print("totalStudyDayNum : "..totalStudyDayNum)
 
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
