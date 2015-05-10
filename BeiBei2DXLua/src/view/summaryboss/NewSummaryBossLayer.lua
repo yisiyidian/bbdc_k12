@@ -217,6 +217,7 @@ function NewSummaryBossLayer:initMat()
     end
     --划对单词后
     mat.success = function(stack)
+        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
         self.girl:setAnimation("right")
         if self.resetCount < self.maxCount then
             if self.rightWordList == '' then
