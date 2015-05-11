@@ -24,7 +24,7 @@ function MoreInformationRender:ctor(type)
 	self.showContent = false
 	self:init(type)
 	self:setAnchorPoint(cc.p(0,0))
-	self:setContentSize(cc.size(854,114))
+	self:setContentSize(cc.size(667,91))
 	--自定义的触摸事件监听
 	self.listener = cc.EventListenerTouchOneByOne:create()
 	self.listener:registerScriptHandler(handler(self, self.onTouchBegan),cc.Handler.EVENT_TOUCH_BEGAN)
@@ -80,8 +80,8 @@ function MoreInformationRender:init(type)
 		self.showContent = true
 		--内容文本
 		local content = cc.Label:createWithSystemFont("","",26)
-		content:setPosition(size.width*0.8 - 20,30)
-		content:setAnchorPoint(cc.p(0.0,0.0))
+		content:setPosition(size.width*0.9,30)
+		content:setAnchorPoint(cc.p(1.0,0.0))
 		self.contentLabel = content
 		self.contentLabel:setTextColor(cc.c3b(0, 0, 0))
 		self:addChild(self.contentLabel)
@@ -112,6 +112,8 @@ function MoreInformationRender:setData(data)
 	self.type 			= data.type
 
 	self.maxlen = data.maxlen --最大输入长度
+
+	self:setName(self.key)
 
 	self:updateView()
 end
@@ -191,15 +193,22 @@ function MoreInformationRender:onTouchBegan(touch,event)
 	local pos =  target:convertToWorldSpace(cc.p(0,0))
 	--hack一下,如果移动距离超出Began时候 Render的大小则不响应ended
 	local rect = cc.rect(0,0,s.width,s.height)
+
 	if cc.rectContainsPoint(rect,locationInNode) then
-		self.rect = cc.rect(pos.x,pos.y,s.width,s.height)
+		--可触摸区域 如果是showcontent的类型的
+		if self.showContent then
+			self.rect = cc.rect(pos.x + s.width*0.75,pos.y,s.width*0.25,s.height)
+		else 
+			--右侧四分之一的区域 算点击区域
+			self.rect = cc.rect(pos.x,pos.y,s.width,s.height)
+		end
 		return true
 	end
 	return false
 end
 
 function MoreInformationRender:onTouchMoved(touch,event)
-	
+
 end
 
 function MoreInformationRender:onTouchEnded(touch,event)
