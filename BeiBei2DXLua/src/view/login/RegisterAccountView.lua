@@ -35,7 +35,7 @@ RegisterAccountView.STEP_8 = 8	--密码找回
 --构造
 function RegisterAccountView:ctor(step)
 	self:init(step)
-	self.debug = true
+	self.debug = false
 end
 
 function RegisterAccountView:showErrorIcon()
@@ -179,14 +179,32 @@ function RegisterAccountView:onTouchPhoneNumberOK(sender,eventType)
 		self.phoneNumber = phoneNumber
 		
 		if not self.debug then
-			self:requestSMSCode(phoneNumber)
+			--查询手机号码是否存在
+			self:verifyPhoneNumber(phoneNumber)
+		else
+			--跳转到输入验证码的界面 直接跳过去
+			self.curStep = self.curStep + 1
+			self:goStep(self.curStep,60) --60秒
 		end
-		--跳转到输入验证码的界面 直接跳过去
-		self.curStep = self.curStep + 1
-		self:goStep(self.curStep,60) --60秒
 	else
 		--不是手机号码
 		s_TIPS_LAYER:showSmallWithOneButton("请输入有效的手机号码！")
+	end
+end
+
+--验证手机号码是否有效
+function RegisterAccountView:verifyPhoneNumber(phoneNumber)
+	isPhoneNumberExist(phoneNumber, handler(self, self.onVerifyPhoneNumberBack))
+end
+--验证手机号码回调
+function RegisterAccountView:onVerifyPhoneNumberBack(exist,error)
+	if error ~= nil then
+		s_TIPS_LAYER:showSmallWithOneButton("该手机号码已被注册！")
+  		-- s_TIPS_LAYER:showSmallWithOneButton(error.description)
+	else
+		self:requestSMSCode(self.phoneNumber)
+		self.curStep = self.curStep + 1
+		self:goStep(self.curStep,60) --60秒
 	end
 end
 
@@ -408,7 +426,7 @@ end
 
 --显示输入昵称
 function RegisterAccountView:showInputNickName()
-	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入昵称",nil,nil,nil,nil,11)
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入昵称",nil,nil,nil,nil,10)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputNode)
 	self.inputNode = inputNode
@@ -591,6 +609,7 @@ end
 --errorCode 错误号
 function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 	hideProgressHUD(true)
+	print("验证手机验证码回调："..error.." ,"..errorCode)
 	if errorCode~= 0 then
 		s_TIPS_LAYER:showSmallWithOneButton(error)
 	else

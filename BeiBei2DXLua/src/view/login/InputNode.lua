@@ -115,6 +115,11 @@ function InputNode:setPlaceHolder(placeHolder)
     self.placeHolder = placeHolder
     self.textField:setPlaceHolder(placeHolder)--占位文本
 end
+--设置最大文本输入长度
+function InputNode:setMaxLength(len)
+    self.textField:setMaxLength(len)
+end
+
 
 
 --deprecated

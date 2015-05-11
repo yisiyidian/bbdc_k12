@@ -343,8 +343,15 @@ public class BBNDK {
 	 * @param error		错误信息
 	 * @param errorCode	错误号 0 就是成功
 	 */
-	private static void onVerifySMSCode(String error,int errorCode){
-		invokeLuaCallbackFunctionVC(error,errorCode);
+	private static void onVerifySMSCode(final String error,final int errorCode){
+		Log.d("sms code：", error);
+		Log.d("sms code：", String.valueOf(errorCode));
+		((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
+			@Override
+			public void run() {
+				invokeLuaCallbackFunctionVC(error,errorCode);
+			}
+		});
 	}
 
 	/**
@@ -358,8 +365,6 @@ public class BBNDK {
 		try {
 			user = AVUser.logIn(username,oldPwd);
 		} catch (AVException e1) {
-			// TODO Auto-generated catch block
-			//e1.printStackTrace();
 			onChangePwd(e1.getLocalizedMessage(),e1.getCode());
 			return;
 		}
@@ -383,8 +388,14 @@ public class BBNDK {
 	 * @param error     错误信息
 	 * @param errorCode 错误号
 	 */
-	private static void onChangePwd(String error,int errorCode){
-		invokeLuaCallbackFunctionCP(error,errorCode);
+	private static void onChangePwd(final String error,final int errorCode){
+		((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
+
+			@Override
+			public void run() {
+				invokeLuaCallbackFunctionCP(error,errorCode);
+			}
+		});
 	}
 	
 	
@@ -427,7 +438,6 @@ public class BBNDK {
 	}
 	
 	public static void logInByPhoneNumber(String phoneNumber,String password){
-//		AVUser.loginByMobilePhoneNumberInBackground(phone, password, callback);
 		AVUser.loginByMobilePhoneNumberInBackground(phoneNumber,password, new LogInCallback<AVUser>(){
 			public void done(AVUser user,AVException e){
 				if(e==null){

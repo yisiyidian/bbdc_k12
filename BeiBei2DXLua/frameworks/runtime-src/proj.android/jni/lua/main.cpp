@@ -73,9 +73,11 @@ extern "C"
      * @param   错误信息
      * @param   错误号 0 是没错误
      */
-    void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionVC(JNIEnv *env,jstring error,jint errorcode)
+    void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionVC(JNIEnv *env,jobject thisz,jstring error,jint errorcode)
     {   
         const char *nativeString_error = error ? env->GetStringUTFChars(error, 0) : 0;
+        LOGD("error %s",nativeString_error);
+        LOGD("errorCode %d",errorcode);
         CXAvos::getInstance()->invokeLuaCallBackFunction_vc(nativeString_error,errorcode);
 
         if(error) env->ReleaseStringUTFChars(error,nativeString_error);    

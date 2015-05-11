@@ -102,9 +102,9 @@ function MoreInfomationView:initData()
 
 	local listData = {}
 	listData[1] = {["key"] = "headImg",			["type"] = MoreInformationRender.ICON,["title"] = "头像",			["content"] = "",			["callback"]=nil,["check"]=nil,		["data"] = headImg} --头像	
-	listData[2] = {["key"] = "nickName",		["type"] = MoreInformationRender.TEXT,["title"] = "昵称",			["content"] = nickName,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkName,	["data"] = sex} --昵称
+	listData[2] = {["key"] = "nickName",		["type"] = MoreInformationRender.TEXT,["title"] = "昵称",			["content"] = nickName,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkName,	["data"] = sex,maxlen = 10} --昵称
 	listData[3] = {["key"] = "sex",				["type"] = MoreInformationRender.SEX,["title"] = "性别",				["content"] = sex,			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = nil}--性别
-	listData[4] = {["key"] = "email",			["type"] = MoreInformationRender.TEXT,["title"] = "邮箱",			["content"] = email,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkEmail,	["data"] = nil}--邮箱
+	listData[4] = {["key"] = "email",			["type"] = MoreInformationRender.TEXT,["title"] = "邮箱",			["content"] = email,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkEmail,	["data"] = nil,maxlen = 40}--邮箱
 	listData[5] = {["key"] = "birthday",		["type"] = MoreInformationRender.DATE,["title"] = "生日",			["content"] = birthday,		["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = nil}--生日
 	listData[6] = {["key"] = "job",				["type"] = MoreInformationRender.TEXT,["title"] = "职业",			["content"] = job,			["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = nil}--职业
 	listData[7] = {["key"] = "school",			["type"] = MoreInformationRender.TEXT,["title"] = "学校",			["content"] = school,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = nil}--学校
@@ -181,7 +181,8 @@ end
 --key  键值
 --data 数据	
 --callback 回调 		在修改界面完成输入之后,回调给Render去更新显示内容
-function MoreInfomationView:onRenderTouch(renderType,key,data,title,callback,checkCall)
+--maxlen 最大输入长度
+function MoreInfomationView:onRenderTouch(renderType,key,data,title,callback,checkCall,maxlen)
 	--文本 格子点击事件	
 	--性别格子点击
 	--日期格子点击
@@ -192,8 +193,7 @@ function MoreInfomationView:onRenderTouch(renderType,key,data,title,callback,che
 	print("renderType:"..renderType)
 	if renderType == MoreInformationRender.TEXT then
 		view = MoreInfoEditTextView.new()
-		view:setData(key,MoreInformationRender.TEXT,data,title,handler(self, self.onEditClose),checkCall)
-
+		view:setData(key,MoreInformationRender.TEXT,data,title,handler(self, self.onEditClose),checkCall,maxlen)
 	elseif renderType == MoreInformationRender.DATE then
 		view = MoreInfoEditDateView.new()
 		view:setData(key,MoreInformationRender.DATE,data,title,handler(self, self.onEditClose),checkCall)

@@ -49,14 +49,19 @@ end
 --title 
 --closeCallBack 关闭的回调  会触发移动 会触发render里的修改内容
 --check 验证合法性的函数
-function MoreInfoEditTextView:setData(key,type,data,title,closeCallBack,check)
+--maxlen 最大输入长度
+function MoreInfoEditTextView:setData(key,type,data,title,closeCallBack,check,maxlen)
 	self.key = key
 	self.type = type
 	self.data = data
 	self.titleText = title
 	self.closeCallBack = closeCallBack
 	self.check = check
-	--TODO 设置占位文本
+	--最大输入长度
+	self.maxlen = maxlen or 10
+	self.inputNode:setMaxLength(self.maxlen)
+	--
+
 
 	self.title:setString("修改"..self.titleText)
 end

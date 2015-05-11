@@ -87,13 +87,13 @@ function isPhoneNumberExist(phoneNumber,callback)
         end
     end
     --TODO 解开注释
-    -- local protocol = ProtocolBase.create(api,serverRequestType,{["mobilePhoneNumber"]=phoneNumber},cb)
-    -- protocol:request()
+    local protocol = ProtocolBase.create(api,serverRequestType,{["mobilePhoneNumber"]=phoneNumber},cb)
+    protocol:request()
     --TODO 注释
-    local re = {}
-    re.datas = {}
-    re.datas.count = 0
-    cb(re,nil)
+    -- local re = {}
+    -- re.datas = {}
+    -- re.datas.count = 0
+    -- cb(re,nil)
 end
 
 

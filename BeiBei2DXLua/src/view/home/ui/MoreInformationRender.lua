@@ -110,6 +110,9 @@ function MoreInformationRender:setData(data)
 	self.data 			= data.data
 	self.checkCallBack 	= data.check
 	self.type 			= data.type
+
+	self.maxlen = data.maxlen --最大输入长度
+
 	self:updateView()
 end
 --更新界面
@@ -227,7 +230,8 @@ function MoreInformationRender:onTouchEnded(touch,event)
 			t,
 			self.title,
 			handler(self,self.onModifyCallBack),
-			self.checkCallBack --检查数据格式的回调
+			self.checkCallBack, --检查数据格式的回调
+			self.maxlen
 			)
 	end
 end
