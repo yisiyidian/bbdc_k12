@@ -16,7 +16,12 @@ function SummaryBossAlter.create(bossLayer,win,entrance)
     layer.win = win
     layer.wordList = bossLayer.wordList
     layer.bossLayer = bossLayer
+
     layer.entrance = entrance
+    layer.needToAddBean = true
+    if bossLayer.unit.unitState > 0 then
+        layer.needToAddBean = false
+    end
     --disable pauseBtn
     if s_SCENE.popupLayer~=nil then
         s_SCENE.popupLayer:setPauseBtnEnabled(false)
@@ -28,7 +33,7 @@ function SummaryBossAlter.create(bossLayer,win,entrance)
     back:setName('background')
 
     if win then
-        if entrance == ENTRANCE_NORMAL then
+        if entrance == ENTRANCE_NORMAL and layer.needToAddBean then
             AnalyticsPassSecondSummaryBoss()
             s_CURRENT_USER:addBeans(3)
             saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
@@ -276,13 +281,13 @@ function SummaryBossAlter:win1(entrance)
         s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
         self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
             self:win2(entrance,hasCheckedIn)
-            if entrance == ENTRANCE_NORMAL then
+            if entrance == ENTRANCE_NORMAL and self.needToAddBean then
                 s_CorePlayManager.leaveSummaryModel(true)
             end
         end,{})))
     else
         self:win2(entrance,hasCheckedIn)
-        if entrance == ENTRANCE_NORMAL then
+        if entrance == ENTRANCE_NORMAL and self.needToAddBean then
             s_CorePlayManager.leaveSummaryModel(true)
         end
     end
@@ -296,9 +301,10 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     backColor:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
     self:addChild(backColor)
 
-    local win_back = cc.Sprite:create('image/summarybossscene/win_back.png')
-    win_back:setAnchorPoint(0.5,0)
-    win_back:setPosition(s_DESIGN_WIDTH / 2,-140)
+    local win_back = sp.SkeletonAnimation:create('spine/summaryboss/ertongban_dabaiboss.json','spine/summaryboss/ertongban_dabaiboss.atlas',1)
+    --win_back:setAnchorPoint(0.5,0)
+    win_back:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
+    win_back:setAnimation(0,'animation',true)
     self:addChild(win_back)
     if not self.entrance then
         win_back:setPosition(s_DESIGN_WIDTH / 2,0)
@@ -416,7 +422,7 @@ function SummaryBossAlter:addWinLabel(win_back)
     bean_back[2]:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.67 + 30)
     bean_back[3]:setPosition(s_DESIGN_WIDTH / 2 + 100,s_DESIGN_HEIGHT * 0.67)
 
-    if self.entrance then
+    if self.needToAddBean then
         been_number:setVisible(true)
         for i = 1,3 do
             bean_back[i]:setVisible(true)
@@ -441,7 +447,7 @@ function SummaryBossAlter:addWinLabel(win_back)
             sec_count_label:setString(string.format('%d',sec_count))
         end
         if word_count == self.bossLayer.maxCount and min_count == math.floor(self.bossLayer.useTime/60) and sec_count >= math.floor(self.bossLayer.useTime%60) then
-            if self.entrance then
+            if self.needToAddBean then
                 for i = 1,3 do
                     local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')
                     bean:setPosition(bean_back[i]:getContentSize().width / 2,bean_back[i]:getContentSize().height / 2 + 10)
@@ -482,11 +488,6 @@ function SummaryBossAlter:addWinLabel(win_back)
 
     end
     self:scheduleUpdateWithPriorityLua(update, 0)
-
-    local boss = sp.SkeletonAnimation:create("spine/summaryboss/beidadekls.json","spine/summaryboss/beidadekls.atlas",1)
-    boss:setAnimation(0,'animation',true)
-    boss:setPosition(0.5 * s_DESIGN_WIDTH- 200,230)
-    self:addChild(boss)
 
 
 end

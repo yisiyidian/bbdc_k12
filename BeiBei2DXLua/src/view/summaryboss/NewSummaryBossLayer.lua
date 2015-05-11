@@ -5,15 +5,15 @@ local NewSummaryBossLayer = class("NewSummaryBossLayer", function ()
     return cc.Layer:create()
 end)
 
-function NewSummaryBossLayer.create()
-	local layer = NewSummaryBossLayer.new()
+function NewSummaryBossLayer.create(unit)
+	local layer = NewSummaryBossLayer.new(unit)
 	return layer
 end
 
-function NewSummaryBossLayer:ctor()
+function NewSummaryBossLayer:ctor(unit)
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	--设置关卡信息
-	self:initStageInfo()
+	self:initStageInfo(unit)
 	--添加小女孩
 	self:initBackground()
 	--ready go 之后添加boss
@@ -34,13 +34,15 @@ function NewSummaryBossLayer:ctor()
 
 end
 
-function NewSummaryBossLayer:initStageInfo()
+function NewSummaryBossLayer:initStageInfo(unit)
     --游戏开始的标志
     self.gameStart = false
     --游戏结束的标志
     self.gameOver = false
     --是否加过道具
     self.useItem = false
+    --单元
+    self.unit = unit
 	--单词
 	self.wordList = self:initWordList()
 	--总词数
@@ -60,11 +62,24 @@ function NewSummaryBossLayer:initStageInfo()
     self.useTime = 0
     --椰子的行列数
     self.mat_length = 4
+    --生词数
+    self.wrongWord = 0
+    --换词次数
+    self.resetCount = 0
 end
 
 function NewSummaryBossLayer:initWordList()
 	-- 取词
-	local wordList = s_CorePlayManager.currentWrongWordList
+	local unit = self.unit
+    local wordList
+    if unit == nil then
+        wordList = s_CorePlayManager.currentWrongWordList
+        self.unit = s_CorePlayManager.currentUnit
+    else
+        wordList = unit.wrongWordList
+    end
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print_lua_table(unit)
     -- 打乱取词
     for i = 1, #wordList do
         local randomIndex = math.random(1,#wordList)
@@ -247,6 +262,7 @@ function NewSummaryBossLayer:initMat()
 end
 --重置mat
 function NewSummaryBossLayer:resetMat()
+    self.resetCount = self.resetCount + 1
     self.crab:moveOut()
     local remove = cc.CallFunc:create(function() 
         self.mat:removeFromParent() 
@@ -280,6 +296,9 @@ function NewSummaryBossLayer:addChangeBtn()
     changeBtn:runAction(cc.EaseBackOut:create(cc.ScaleTo:create(0.5,1)))
     local function changeWord(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
+            if self.resetCount < self.maxCount then
+                self.wrongWord = self.wrongWord + 1
+            end
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local curtain = cc.LayerColor:create(cc.c4b(0,0,0,150),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
             self:addChild(curtain,99)
@@ -337,6 +356,9 @@ function NewSummaryBossLayer:gameOverFunc(win)
     self.gameOver = true
     self.blink:stopAllActions()
 	if win then
+        if self.unit.unitState == 0 then
+            s_LocalDatabaseManager.addStudyWordsNum(self.maxCount)
+        end
         self.boss:fly()
 		self.girl:setAnimation("win")
 	else

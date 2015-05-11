@@ -8,8 +8,8 @@ local ProgressBar           = require("view.islandPopup.ProgressBar")
 
 function LevelProgressPopup.create(index)
     local layer = LevelProgressPopup.new(index)
-    local islandIndex = tonumber(index) + 1
-    layer.unit = s_LocalDatabaseManager.getUnitInfo(islandIndex)
+    layer.islandIndex = tonumber(index) + 1
+    layer.unit = s_LocalDatabaseManager.getUnitInfo(layer.islandIndex)
     layer.wrongWordList = {}
     for i = 1 ,#layer.unit.wrongWordList do
         table.insert(layer.wrongWordList,layer.unit.wrongWordList[i])
@@ -18,8 +18,6 @@ function LevelProgressPopup.create(index)
     return layer
     
 end
-
-
 
 
 function LevelProgressPopup:ctor()
@@ -67,7 +65,51 @@ function LevelProgressPopup:createSummary()
     go_button:setPosition(background:getContentSize().width * 0.5 - 2, background:getContentSize().height * 0.13)
 
     local function button_func(  )
-        s_CorePlayManager.initTotalUnitPlay()
+        playSound(s_sound_buttonEffect) 
+
+        local bossList = s_LocalDatabaseManager.getAllUnitInfo()
+        local maxID = s_LocalDatabaseManager.getMaxUnitID()
+        if maxID > self.islandIndex and self.unit.coolingDay > 0 then
+            local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
+            local summaryBossLayer = SummaryBossLayer.create(self.unit)
+            s_SCENE:replaceGameLayer(summaryBossLayer) 
+            s_SCENE:removeAllPopups()  
+            return
+        end
+
+        local taskIndex = -2
+
+        for bossID, bossInfo in pairs(bossList) do
+            if bossInfo["coolingDay"] == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 5 < 0 then
+                taskIndex = bossID
+            end
+        end    
+
+        if taskIndex == -2 then         
+            s_CorePlayManager.initTotalUnitPlay() -- 之前没有boss
+            s_SCENE:removeAllPopups()  
+        elseif taskIndex == self.islandIndex then
+            s_CorePlayManager.initTotalUnitPlay() -- 按顺序打第一个boss
+            s_SCENE:removeAllPopups()  
+        else
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch() 
+            local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
+            tutorial_text:setPosition(s_DESIGN_WIDTH / 2, 300)
+            self:addChild(tutorial_text,520)
+            local text = cc.Label:createWithSystemFont('请先打败前面的boss','',28)
+            text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
+            text:setColor(cc.c3b(0,0,0))
+            tutorial_text:addChild(text)
+            local action1 = cc.FadeOut:create(1.5)
+            local action1_1 = cc.MoveBy:create(1.5, cc.p(0, 100))
+            local action1_2 = cc.Spawn:create(action1,action1_1)
+            tutorial_text:runAction(action1_2)
+            local action2 = cc.FadeOut:create(1.5)
+            local action3 = cc.CallFunc:create(function ()
+                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch() 
+            end)
+            text:runAction(cc.Sequence:create(action2,action3))
+        end 
     end
     go_button.func = function ()
         button_func()
