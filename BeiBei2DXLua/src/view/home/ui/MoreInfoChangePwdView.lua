@@ -34,17 +34,17 @@ function MoreInfoChangePwdView:initUI()
 	self:addChild(self.btnReturn)
 	
 	--输入框 旧密码
-	local inputOldPwd = InputNode.new("image/signup/shuru_bbchildren_white.png","填写旧密码",nil,nil,nil,nil,11)
+	local inputOldPwd = InputNode.new("image/signup/shuru_bbchildren_white.png","填写旧密码",nil,nil,nil,true,11)
 	inputOldPwd:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputOldPwd)
 	self.inputOldPwd = inputOldPwd
 	--输入框 月份
-	local inputNewPwd = InputNode.new("image/signup/shuru_bbchildren_white.png","填写新密码",nil,nil,nil,nil,11)
+	local inputNewPwd = InputNode.new("image/signup/shuru_bbchildren_white.png","填写新密码",nil,nil,nil,true,11)
 	inputNewPwd:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 330)
 	self:addChild(inputNewPwd)
 	self.inputNewPwd = inputNewPwd
 	--日期
-	local inputNewPwdConfirm = InputNode.new("image/signup/shuru_bbchildren_white.png","确认新密码",nil,nil,nil,nil,11)
+	local inputNewPwdConfirm = InputNode.new("image/signup/shuru_bbchildren_white.png","确认新密码",nil,nil,nil,true,11)
 	inputNewPwdConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
 	self:addChild(inputNewPwdConfirm)
 	self.inputNewPwdConfirm = inputNewPwdConfirm
@@ -119,6 +119,10 @@ function MoreInfoChangePwdView:onChangPwdCallBack(username, password, errordescr
 	    print("修改密码成功了")
 	end     
 	hideProgressHUD(true)
+	--修改密码
+	if self.closeCallBack ~= nil then
+		self.closeCallBack()
+	end
 end
 
 return MoreInfoChangePwdView

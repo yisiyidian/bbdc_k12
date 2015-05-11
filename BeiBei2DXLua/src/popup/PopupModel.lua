@@ -2,6 +2,9 @@ local PopupModel = class ("PopupModel",function ()
     return cc.Layer:create()
 end)
 
+--注册界面
+local RegisterAccountView = require("view.login.RegisterAccountView")
+
 local ImproveInfo = require("view.home.ImproveInfo")
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
@@ -109,12 +112,15 @@ function PopupModel.create(site)
                 popup_window:runAction(action2)
                 
                 s_SCENE:callFuncWithDelay(0.3,function()
-                    local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER)
-                    s_SCENE.popupLayer:addChild(improveInfo)   
-                    improveInfo.close = function() 
+
+                    --完善个人信息
+                    -- local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER)
+                    local regiserView = RegisterAccountView.new()
+                    s_SCENE.popupLayer:addChild(regiserView)
+                    regiserView.close = function() 
                         layer.update()  
                         s_SCENE:removeAllPopups()
-                    end  
+                    end
                 end)
                 
             else

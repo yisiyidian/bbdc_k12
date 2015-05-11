@@ -15,6 +15,7 @@ local InputNode = require("view.login.InputNode")
 local RegisterAccountView = class("RegisterAccountView",function()
 	-- local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
 	local layer = cc.Layer:create()
+	layerHoldTouch(layer)
 	return layer
 end)
 
@@ -66,6 +67,7 @@ function RegisterAccountView:init(step)
     initColor:setAnchorPoint(0.5,0.5)
     initColor:ignoreAnchorPointForPosition(false)  
     initColor:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+    initColor:setTouchEnabled(false)
     self:addChild(initColor)
 
 	--初始化UI
@@ -609,7 +611,7 @@ end
 --errorCode 错误号
 function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 	hideProgressHUD(true)
-	print("验证手机验证码回调："..error.." ,"..errorCode)
+	print("验证手机验证码回调："..tostring(error).." ,"..errorCode)
 	if errorCode~= 0 then
 		s_TIPS_LAYER:showSmallWithOneButton(error)
 	else
