@@ -200,7 +200,7 @@ function RegisterAccountView:verifyPhoneNumber(phoneNumber)
 end
 --验证手机号码回调
 function RegisterAccountView:onVerifyPhoneNumberBack(exist,error)
-	if error ~= nil then
+	if exist then
 		s_TIPS_LAYER:showSmallWithOneButton("该手机号码已被注册！")
   		-- s_TIPS_LAYER:showSmallWithOneButton(error.description)
 	else
@@ -632,7 +632,7 @@ function RegisterAccountView:register(phoneNumber,pwd,nickName)
 	print("请求注册....")
 	showProgressHUD('', true)
 
-	s_UserBaseServer.updateLoginInfo(nickName,pwd,phoneNumber,handler(self,self.onRegisterCallBack))
+	s_UserBaseServer.updateLoginInfo(s_CURRENT_USER.username,pwd,phoneNumber,handler(self,self.onRegisterCallBack),nickName)
 end
 
 --注册返回 回调

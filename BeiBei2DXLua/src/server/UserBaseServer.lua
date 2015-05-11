@@ -281,11 +281,11 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
 end
 
 --更新登陆信息
---username 昵称
+--username 昵称 在老版本的登陆里,昵称作为username,在新版本的登陆里昵称就是昵称,不允许用昵称登陆
 --password 密码
 --phoneNumber 手机号码
 --onResponse  回调函数
-function UserBaseServer.updateLoginInfo(username, password, phoneNumber,onResponse)
+function UserBaseServer.updateLoginInfo(username, password, phoneNumber,onResponse,nickName)
     if not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then
         s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
         if onResponse ~= nil then onResponse(username, password, phoneNumber,s_TIPS_LAYER.offlineOrNoSessionTokenTip, ERROR_CODE_MAX) end
@@ -324,12 +324,12 @@ function UserBaseServer.updateLoginInfo(username, password, phoneNumber,onRespon
                 --手机号码已存在
                 onResponse(s_CURRENT_USER.username,password,s_CURRENT_USER.mobilePhoneNumber,error.description,error.code)
             elseif not exist then
-                if s_CURRENT_USER.username ~= username then
-                    saveUserToServer({["username"]=username,["mobilePhoneNumber"]=phoneNumber}, function(datas,error)
+                if s_CURRENT_USER.nickName ~= nickName then
+                    saveUserToServer({["nickName"]=nickName,["mobilePhoneNumber"]=phoneNumber}, function(datas,error)
                         if error ~= nil then
                             onResponse(s_CURRENT_USER.username,s_CURRENT_USER.password,phoneNumber,error.description,error.code)
                         else
-                            s_CURRENT_USER.username = username
+                            s_CURRENT_USER.nickName = nickName
                             s_CURRENT_USER.mobilePhoneNumber = phoneNumber
                             s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER,s_CURRENT_USER.userId,s_CURRENT_USER.username)
                             nameAndPhoneComplete(password)

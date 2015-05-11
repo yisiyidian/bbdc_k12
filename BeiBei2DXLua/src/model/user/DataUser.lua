@@ -273,8 +273,15 @@ function DataUser:removeSummaryBoss(index)
 end
 
 function DataUser:getNameForDisplay()
-    if s_CURRENT_USER.usertype == USER_TYPE_QQ then return self.nickName end
-    if s_CURRENT_USER.usertype == USER_TYPE_GUEST then return '游客' end
+    if s_CURRENT_USER.usertype == USER_TYPE_QQ then 
+        return self.nickName
+    end
+    if s_CURRENT_USER.usertype == USER_TYPE_GUEST then 
+        return '游客' 
+    end
+    if self.nickName ~= "" then
+        return self.nickName
+    end
     return self.username
 end
 
