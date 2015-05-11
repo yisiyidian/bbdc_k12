@@ -49,17 +49,17 @@ function MoreInfoEditDateView:initUI()
 	self:addChild(self.btnReturn)
 	
 	--输入框 年份
-	local inputNodeYear = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入年份",nil,nil,nil,nil,11)
+	local inputNodeYear = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入年份",nil,nil,nil,nil,4)
 	inputNodeYear:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputNodeYear)
 	self.inputNodeYear = inputNodeYear
 	--输入框 月份
-	local inputNodeMonth = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入月份",nil,nil,nil,nil,11)
+	local inputNodeMonth = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入月份",nil,nil,nil,nil,2)
 	inputNodeMonth:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 330)
 	self:addChild(inputNodeMonth)
 	self.inputNodeMonth = inputNodeMonth
 	--日期
-	local inputNodeDay = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入日期",nil,nil,nil,nil,11)
+	local inputNodeDay = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入日期",nil,nil,nil,nil,2)
 	inputNodeDay:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
 	self:addChild(inputNodeDay)
 	self.inputNodeDay = inputNodeDay
