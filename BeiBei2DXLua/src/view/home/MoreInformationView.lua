@@ -128,22 +128,22 @@ function MoreInfomationView:initUI()
 	local splitheight = 20
 	local renderheight = 100
 	local renders = {} --临时容器
-
+	
 	self.headRender = nil --头像的Render
-
 	for k,v in pairs(self.listData) do
 		if v.key ~= "split" then
 			render = MoreInformationRender.new(v.type)
 			render:setData(v)
 			renders[#renders+1] = render
 			self.listView:addChild(render)
+			--
+			sumY = sumY + renderheight
+			innerHeight = innerHeight + renderheight
 		else
 			renders[#renders+1] = "split"
 			sumY = sumY + splitheight
 			innerHeight = innerHeight + splitheight
 		end
-		sumY = sumY + renderheight
-		innerHeight = innerHeight + renderheight
 	end
 	--计算render坐标
 	local tlen = innerHeight - renderheight
