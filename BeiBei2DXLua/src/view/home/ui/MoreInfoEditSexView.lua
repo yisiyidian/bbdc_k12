@@ -23,7 +23,7 @@ function MoreInfoEditSexView:initUI()
 	self:setTouchEnabled(true)
 	self:setSwallowsTouches(true)
 
-	local headImgGril = "image/login/gril_head.png"
+	local headImgGril = "image/PersonalInfo/hj_personal_avatar.png"
 	local headImgBoy = "image/login/boy_head.png"
 	self.headImgGril = headImgGril 
 	self.headImgBoy  = headImgBoy
