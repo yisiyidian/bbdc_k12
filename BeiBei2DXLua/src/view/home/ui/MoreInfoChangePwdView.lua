@@ -115,6 +115,8 @@ end
 function MoreInfoChangePwdView:onChangPwdCallBack(username, password, errordescription, errorcode)
 	if errordescription then                  
 	    s_TIPS_LAYER:showSmallWithOneButton(errordescription)
+	    hideProgressHUD(true)
+	    return
 	else        
 	    print("修改密码成功了")
 	end     
