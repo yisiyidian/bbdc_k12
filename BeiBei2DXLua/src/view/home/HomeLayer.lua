@@ -493,6 +493,8 @@ function HomeLayer.create()
                     if not s_SERVER.isNetworkConnectedNow() then
                         offlineTipHome.setTrue(OfflineTipForHome_Logout)
                     else
+
+                        --[[
                         local ChangeAccountPopup = require('view.login.ChangeAccountPopup')
                         local loginPopup = ChangeAccountPopup.create()
                         s_SCENE:popup(loginPopup)
@@ -506,6 +508,10 @@ function HomeLayer.create()
                         local action3 = cc.MoveTo:create(0.5,cc.p(0,0)) 
                         local action4 = cc.Sequence:create(action2, action3)
                         loginPopup:runAction(action4)
+                        ]]
+
+                        local registerView = RegisterAccountView.new(RegisterAccountView.STEP_6)
+                        s_SCENE:popup(registerView)
 
                     end
                 else
