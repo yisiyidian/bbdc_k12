@@ -152,7 +152,7 @@ function MoreInformationRender:updateView()
 				headImgContent = self.headImgContent
 			end
 			if self.data == 0 then
-				headImgContent:setTexture("image/login/gril_head.png") 
+				headImgContent:setTexture("image/PersonalInfo/hj_personal_avatar.png") 
 			else
 				headImgContent:setTexture("image/login/boy_head.png")
 			end
