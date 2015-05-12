@@ -42,6 +42,7 @@ function NewSummaryBossLayer:initStageInfo(unit)
     --是否加过道具
     self.useItem = false
     --单元
+    self.oldUnit = unit
     self.unit = unit
     --是否是重玩
     self.isReplay = true
@@ -75,14 +76,17 @@ end
 function NewSummaryBossLayer:initWordList()
 	-- 取词
 	local unit = self.unit
-    local wordList
+    local wordList = {}
     if unit == nil then
-        self.isReplay = false
-        wordList = s_CorePlayManager.currentWrongWordList
+        self.isReplay = false   
         self.unit = s_CorePlayManager.currentUnit
-    else
-        wordList = unit.wrongWordList
     end
+    for i = 1,#self.unit.wrongWordList do
+        wordList[i] = self.unit.wrongWordList[i]
+    end
+    -- else
+    --     wordList = unit.wrongWordList
+    -- end
     --print("~~~~~~~~~~~~~~~~~~~~~~~~~")
     --print_lua_table(unit)
     -- 打乱取词
@@ -228,7 +232,7 @@ function NewSummaryBossLayer:initMat()
                 self.rightWordList = self.rightWordList..'|'..self.wordList[1]
             end
         end
-        print(self.rightWordList)
+        --print(self.rightWordList)
         --子弹打boss
         local delaytime = 0
         for i = 1, #stack do
@@ -269,9 +273,14 @@ function NewSummaryBossLayer:initMat()
             bullet:runAction(cc.Sequence:create(delay,hit,attacked,hide))
         end
         --更换mat
-        s_SCENE:callFuncWithDelay(0.2 *math.pow(#stack,0.8),function ()
-            self.boss:goBack(self.totalTime)
-            self:resetMat()
+        s_SCENE:callFuncWithDelay(0.2 *math.pow(#stack,0.8) + 0.5,function ()
+            print('self.currentBlood',self.currentBlood)
+            if self.currentBlood > 0 then
+                self.boss:goBack(self.totalTime)
+                self:resetMat()
+            else
+                self:gameOverFunc(true)
+            end
         end)
 	end
 end
@@ -282,11 +291,7 @@ function NewSummaryBossLayer:resetMat()
     local remove = cc.CallFunc:create(function() 
         self.mat:removeFromParent() 
         table.remove(self.wordList,1)
-        if self.currentBlood > 0 then
-            self:initMat()
-        else
-            self:gameOverFunc(true)
-        end
+        self:initMat()
     end,{})
     self.mat:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7)),remove))
 end

@@ -246,7 +246,9 @@ function SummaryBossAlter:lose2(entrance)
     self.loseBoard2:addChild(again)
 
     local function challengeAgain()
-        s_CorePlayManager.initSummaryModel()
+        local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
+        local summaryBossLayer = SummaryBossLayer.create(self.bossLayer.oldUnit)
+        s_SCENE:replaceGameLayer(summaryBossLayer) 
 
         cc.SimpleAudioEngine:getInstance():stopAllEffects()
         playSound(s_sound_buttonEffect)

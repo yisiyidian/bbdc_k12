@@ -20,15 +20,15 @@ function LevelProgressPopup.create(index)
 end
 
 
-function LevelProgressPopup:ctor()
+function LevelProgressPopup:ctor(index)
 
     --界面初始化
     --createPape()
-    self:createSummary()
+    self:createSummary(index)
 
 end
 
-function LevelProgressPopup:createSummary()
+function LevelProgressPopup:createSummary(index)
     --local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
 
 
@@ -70,7 +70,7 @@ function LevelProgressPopup:createSummary()
         local bossList = s_LocalDatabaseManager.getAllUnitInfo()
         local maxID = s_LocalDatabaseManager.getMaxUnitID()
         if maxID > self.islandIndex and self.unit.coolingDay > 0 and self.unit.unitState < 5 then
-            print('replay island')
+            --print('replay island')
             local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
             local summaryBossLayer = SummaryBossLayer.create(self.unit)
             s_SCENE:replaceGameLayer(summaryBossLayer) 
@@ -119,7 +119,7 @@ function LevelProgressPopup:createSummary()
 
 
     --加入title
-    local title = cc.Label:createWithSystemFont("Unit1","",50)
+    local title = cc.Label:createWithSystemFont('Unit '..s_BookUnitName[s_CURRENT_USER.bookKey][''..tonumber(index) + 1],"",50)
     title:setPosition(background:getContentSize().width/2, background:getContentSize().height - 75)
     title:setColor(cc.c3b(255,255,255))
     background:addChild(title)
