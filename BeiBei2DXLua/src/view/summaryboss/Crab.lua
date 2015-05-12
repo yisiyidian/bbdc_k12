@@ -24,6 +24,7 @@ function Crab:ctor(word)
     self:big()
     self:moveIn()
     s_SCENE:callFuncWithDelay(0.5,function (  )
+        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
         self:hint()
     end)
 end

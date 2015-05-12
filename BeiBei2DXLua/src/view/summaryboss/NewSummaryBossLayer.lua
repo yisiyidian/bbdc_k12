@@ -11,6 +11,7 @@ function NewSummaryBossLayer.create(unit)
 end
 
 function NewSummaryBossLayer:ctor(unit)
+    s_SCENE:removeAllPopups()
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	--设置关卡信息
 	self:initStageInfo(unit)
@@ -300,7 +301,7 @@ function NewSummaryBossLayer:initCrab()
     local crab = require("view.summaryboss.Crab").create(self.wordList[1])
     self:addChild(crab)
     self.crab = crab
-    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+    -- s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     if self.gameStart then return end
     self.gameStart = true
     self.boss:goForward(self.totalTime)
@@ -338,7 +339,6 @@ function NewSummaryBossLayer:addChangeBtn()
             word_cn:setPosition(wordBoard:getContentSize().width / 2,wordBoard:getContentSize().height * 1 / 4)
             wordBoard:addChild(word_cn)
             word_cn:setColor(cc.c3b(0,0,0))
-
             
             s_SCENE:callFuncWithDelay(2.6,function (  )
                 --s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
@@ -381,6 +381,7 @@ function NewSummaryBossLayer:gameOverFunc(win)
             s_LocalDatabaseManager.addStudyWordsNum(self.maxCount)
             s_LocalDatabaseManager.addRightWord(self.rightWordList,self.unit.unitID)
             s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - self.wrongWord)
+            print(self.maxCount - self.wrongWord)
         elseif self.unit.unitState == 4 then
             s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - #split(self.rightWordList,'|'))
             s_LocalDatabaseManager.addRightWord(self.unit.wrongWordList,self.unit.unitID)
