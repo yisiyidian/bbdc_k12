@@ -75,7 +75,8 @@ function FriendSearch:ctor()
             print('touchEvent')
             self:removeChildByName('searchResult',true)
             local username = textField:getString()
-            if username == s_CURRENT_USER.username then
+            --判断昵称不是自己
+            if username == s_CURRENT_USER.username or username == s_CURRENT_USER.nickName then
                 local SmallAlter = require('view.friend.HintAlter')
                 local smallAlter = SmallAlter.create('请不要搜索自己哦亲~')
                 smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
@@ -101,11 +102,12 @@ function FriendSearch:ctor()
                             print('request:searchUser:', tostring(results))
                             if err == nil and results ~= nil and type(results) == 'string' and string.len(results) > 0 then
                                 local data = s_JSON.decode(results)
+                                -- dump(data,"搜素好友列表返回",99)
                                 for i, user in ipairs(data.results) do
                                     f_user[#f_user + 1] = user
                                 end
                             end
-
+                            dump(f_user,"搜素好友列表返回",99)
                             if #f_user > 0 then
                                 s_CURRENT_USER:getFriendsInfo() 
                                 local listView = ccui.ListView:create()
@@ -117,6 +119,7 @@ function FriendSearch:ctor()
                                 self:addChild(listView)
                                 listView:setName('searchResult')
                                 for i, fuser in ipairs(f_user) do
+                                    print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
                                     local user = DataUser.create()
                                     parseServerDataToClientData(fuser,user)
                                     local button = cc.Sprite:create("image/friend/friendRankButton.png")
@@ -140,8 +143,12 @@ function FriendSearch:ctor()
                                     head:setScale(0.8)
                                     head:setPosition(0.26 * button:getContentSize().width,0.5 * button:getContentSize().height)
                                     button:addChild(head)
-                
-                                    local fri_name = cc.Label:createWithSystemFont(user.username,'',32)
+                                    
+                                    local tname = user.username
+                                    if user.nickName ~= "" then
+                                        tname = user.nickName
+                                    end
+                                    local fri_name = cc.Label:createWithSystemFont(tname,'',32)
                                     fri_name:setColor(cc.c3b(0,0,0))
                                     fri_name:ignoreAnchorPointForPosition(false)
                                     fri_name:setAnchorPoint(0,0)
@@ -164,6 +171,7 @@ function FriendSearch:ctor()
                                         self.array[i] = s_CURRENT_USER.friends[i]
                                     end
                                     self.array[#self.array + 1] = s_CURRENT_USER
+                                    --如果这个玩家在自己的好友列表里 则计算出他的排名
                                     for i = 1,#self.array do
                                         for j = i, #self.array do
                                             if self.array[i].wordsCount < self.array[j].wordsCount or (self.array[i].wordsCount == self.array[j].wordsCount and self.array[i].masterCount < self.array[j].masterCount) then
@@ -266,8 +274,6 @@ function FriendSearch:ctor()
                                         end
                                         add:addTouchEventListener(onAdd)
                                     end
-                                    
-                                    break
                                 end
                             else --not find user
                                 local SmallAlter = require('view.friend.HintAlter')

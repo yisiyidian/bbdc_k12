@@ -247,8 +247,6 @@ function RegisterAccountView:showInputSmsCode(args)
 		self:startSMSTick(countDown)
 	end
 	self.alertTip:setString("输入验证码")
-	--不让返回了
-	self.btnReturn:setTouchEnabled(false)
 end
 
 --开始倒计时
@@ -316,15 +314,12 @@ function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
 		if not self.debug then
 			self:verifySMSCode(self.phoneNumber,self.SMSCode)
 		else
-			self.btnReturn:setTouchEnabled(true) --启用返回按钮
 			self.curStep = self.curStep + 1
 			self:goStep(self.curStep)
 		end
 	else
 		--验证码无效
 		s_TIPS_LAYER:showSmallWithOneButton("请输入有效的验证码！")
-		
-		
 	end
 end
 
@@ -430,6 +425,8 @@ end
 
 --显示输入昵称
 function RegisterAccountView:showInputNickName()
+	self.btnReturn:setTouchEnabled(false) --启用返回按钮
+
 	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入昵称",nil,nil,nil,nil,10)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputNode)
@@ -461,6 +458,7 @@ function RegisterAccountView:onTouchNickNameOK(sender,eventType)
 	--昵称合法
 	self.nickName =  nickName
 
+	self.btnReturn:setTouchEnabled(true)
 	self.curStep = self.curStep + 1
 	self:goStep(self.curStep)
 end
@@ -617,7 +615,6 @@ function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 	if errorCode~= 0 then
 		s_TIPS_LAYER:showSmallWithOneButton(error)
 	else
-		self.btnReturn:setTouchEnabled(true)
 		self.curStep = self.curStep + 1
 		self:goStep(self.curStep)
 	end

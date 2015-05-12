@@ -119,12 +119,15 @@ function MoreInfoChangePwdView:onChangPwdCallBack(username, password, errordescr
 	    return
 	else        
 	    print("修改密码成功了")
+	    cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
+	    s_TIPS_LAYER:showSmallWithOneButton("修改密码成功!",handler(self,function ()
+			if self.closeCallBack ~= nil then
+				self.closeCallBack()
+			end
+	    end))
 	end     
 	hideProgressHUD(true)
 	--修改密码
-	if self.closeCallBack ~= nil then
-		self.closeCallBack()
-	end
 end
 
 return MoreInfoChangePwdView
