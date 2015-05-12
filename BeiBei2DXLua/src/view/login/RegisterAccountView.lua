@@ -81,6 +81,7 @@ function RegisterAccountView:init(step)
 	local btnReturn = ccui.Button:create("image/shop/button_back2.png")
 	btnReturn:setPosition(0.1*s_DESIGN_WIDTH,0.93*s_DESIGN_HEIGHT)
 	btnReturn:addTouchEventListener(handler(self, self.onReturnClick))
+	self.btnReturn = btnReturn
 	self:addChild(btnReturn)
 	--tip 注册可以和更多好友一起背单词
 	local tip = cc.Label:createWithSystemFont("注册可以和更多好友一起背单词","",26)
@@ -229,7 +230,6 @@ function RegisterAccountView:showInputSmsCode(args)
 	btnSMSCodeOK:setTitleFontSize(36)
 	self:addChild(btnSMSCodeOK)
 	self.views[#self.views+1] = btnSMSCodeOK
-
 	--重试按钮 点击重新请求验证码 间隔60S
 	local btnRetry = ccui.Button:create("image/login/login_50s_send.png")
 	btnRetry:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
@@ -246,8 +246,9 @@ function RegisterAccountView:showInputSmsCode(args)
 		--倒计时 请求验证码
 		self:startSMSTick(countDown)
 	end
-
 	self.alertTip:setString("输入验证码")
+	--不让返回了
+	self.btnReturn:setTouchEnabled(false)
 end
 
 --开始倒计时
@@ -315,6 +316,7 @@ function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
 		if not self.debug then
 			self:verifySMSCode(self.phoneNumber,self.SMSCode)
 		else
+			self.btnReturn:setTouchEnabled(true) --启用返回按钮
 			self.curStep = self.curStep + 1
 			self:goStep(self.curStep)
 		end
@@ -615,8 +617,8 @@ function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 	if errorCode~= 0 then
 		s_TIPS_LAYER:showSmallWithOneButton(error)
 	else
+		self.btnReturn:setTouchEnabled(true)
 		self.curStep = self.curStep + 1
-		--60秒之后再重试
 		self:goStep(self.curStep)
 	end
 end
