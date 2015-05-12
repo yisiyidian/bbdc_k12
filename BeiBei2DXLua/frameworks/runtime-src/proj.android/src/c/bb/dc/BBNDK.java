@@ -561,7 +561,13 @@ public class BBNDK {
 		});
 	}
 	
-	public static void searchUser(String username, String nickName, final long cppObjPtr) {
+	/**
+	 * 查询用户
+	 * @param username  用户名
+	 * @param nickName	昵称
+	 * @param cppObjPtr
+	 */
+	public static void searchUser(final String username, final String nickName, final long cppObjPtr) {
 		boolean bu = username != null && username.length() > 0;
 		AVQuery<AVUser> query_username = null;
 		if (bu) {
@@ -597,11 +603,21 @@ public class BBNDK {
 							if (e == null) {
 								String jsons = "";
 								for (AVUser u : results) {
+									String tNickName = u.get("nickName").toString();
+									String tUserName = u.getUsername().toString();
 									if (jsons.length() == 0) {
-										jsons += "{\"results\":[";
-										jsons += AVUserToJsonStr(u);
+										if((!tNickName.equals("")) && (!tNickName.equals(nickName)) && (tUserName.equals(nickName))){
+											//do nothing
+										}else{
+											jsons += "{\"results\":[";
+											jsons += AVUserToJsonStr(u);
+										}
 									} else {
-										jsons += "," + AVUserToJsonStr(u);
+										if((!tNickName.equals("")) && (!tNickName.equals(nickName)) && (tUserName.equals(nickName))){
+											
+										}else{
+											jsons += "," + AVUserToJsonStr(u);
+										}
 									}
 								}
 								if (jsons.length() > 0) {
