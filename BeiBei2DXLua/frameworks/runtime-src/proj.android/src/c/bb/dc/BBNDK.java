@@ -58,6 +58,7 @@ import com.avos.avoscloud.GetCallback;
 import com.avos.avoscloud.GetDataCallback;
 import com.avos.avoscloud.GetFileCallback;
 import com.avos.avoscloud.LogInCallback;
+import com.avos.avoscloud.LogUtil.log;
 import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SaveCallback;
 import com.avos.avoscloud.SignUpCallback;
@@ -542,7 +543,13 @@ public class BBNDK {
 							@SuppressWarnings("unchecked")
 							JSONObject json = new JSONObject((Map<String, String>)(object));
 							String objectjson = json.toString();
-							invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, objectjson, null);
+							if(json.optString("code") != ""){
+								//修改密码的时候  输入错误的旧密码 e可能为空
+								String errorjson = "{\"code\":" + json.optString("code") + ",\"message\":\"" + json.optString("error") + "\",\"description\":\"" + json.optString("error") + "\"}";
+								invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, null, errorjson);
+							}else{
+								invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, objectjson, null);
+							}
 						} else {
 							String errorjson = "{\"code\":" + e.hashCode() + ",\"message\":\"" + e.getMessage() + "\",\"description\":\"" + e.getLocalizedMessage() + "\"}";
 							invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, null, errorjson);

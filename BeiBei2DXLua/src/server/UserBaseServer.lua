@@ -221,7 +221,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
         if onResponse ~= nil then onResponse(username, password, s_TIPS_LAYER.offlineOrNoSessionTokenTip, ERROR_CODE_MAX) end
         return
     end
-
+    -- 修改密码成功回调
     local onCompleted = function ()
         s_CURRENT_USER.password = password
         s_CURRENT_USER.usertype = USER_TYPE_BIND
@@ -232,7 +232,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
     end
 
     local change_password = function (password, onResponse)
-        if s_CURRENT_USER.password ~= password or oldPwd ~=nil then
+        if s_CURRENT_USER.password ~= password or oldPwd ~= nil then
             --如果新旧密码不一致 老的修改逻辑
             --如果oldPwd不为nil 新的修改逻辑
             local oPwd = nil
@@ -243,7 +243,7 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
             end
             
             s_SERVER.updatePassword(oPwd, password, s_CURRENT_USER.objectId, 
-                function (api, result) 
+                function (api, result)
                     onCompleted()
                 end, 
                 function (api, code, message, description) 

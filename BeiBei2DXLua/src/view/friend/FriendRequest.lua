@@ -124,7 +124,7 @@ function FriendRequest:main()
         button:addChild(head)
 
         local name = s_CURRENT_USER.fans[i].username
-        if s_CURRENT_USER.fans[i].userType == USER_TYPE_QQ then
+        if s_CURRENT_USER.fans[i].userType == USER_TYPE_QQ or s_CURRENT_USER.fans[i].nickName ~= "" then
             name = s_CURRENT_USER.fans[i].nickName
         end
 
