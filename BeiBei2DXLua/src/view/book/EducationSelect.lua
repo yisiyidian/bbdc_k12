@@ -16,6 +16,10 @@ function EducationSelect.create()
 end
 
 function EducationSelect:ctor()
+    if s_CURRENT_USER.k12SmallStep < s_K12_selectGrade then
+        s_CURRENT_USER:setK12SmallStep(s_K12_selectGrade)
+    end
+    -- 打点
 	local background = cc.LayerColor:create(cc.c4b(200,240,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
 	background:ignoreAnchorPointForPosition(false)
 	background:setAnchorPoint(0.5,0)

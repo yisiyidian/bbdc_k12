@@ -471,7 +471,29 @@ function AnalyticsDownloadSuccessful()
     print('Analytics', getAnalyticsPrefix() .. 'DownloadSuccessful', 'TOUCH');
     cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'DownloadSuccessful', 'TOUCH')
 end
+----------------------------------------------------------------------------------------
+-- k12打点流程
+-- 进入输入用户名界面   0
+-- 进入输入密码界面    1
+-- 进入输入老师名字界面  2
+-- 进入选择年级界面    3
+-- 进入选书界面  4
+-- 进入主界面   5
+-- 进入选小关   6
+-- 进入趁热打铁  7
+-- 进入趁热打铁胜利界面  8
+-- 进入复习boss    9
+-- 进入复习boss胜利界面    10
+-- 进入总结boss    11
+-- 进入总结boss胜利界面    12
+-- 进入总结boss失败界面    13
+function AnalyticsK12SmallStep(index)
+    cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'K12TutorialSmallStep', tostring(index))
+end
 
+
+-- k12打点流程结束
+----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------
 -- first

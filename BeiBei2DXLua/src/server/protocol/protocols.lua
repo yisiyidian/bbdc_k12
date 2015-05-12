@@ -1,7 +1,7 @@
-local ProtocolBase = require('server.protocol.ProtocolBase')
-local DataEverydayInfo          = require('model.user.DataEverydayInfo')
-local DataDailyStudyInfo        = require('model.user.DataDailyStudyInfo')
-local DataBossWord              = require('model.user.DataUnit')
+local ProtocolBase          = require('server.protocol.ProtocolBase')
+local DataEverydayInfo      = require('model.user.DataEverydayInfo')
+local DataDailyStudyInfo    = require('model.user.DataDailyStudyInfo')
+local DataUnit              = require('model.user.DataUnit')
 
 ---------------------------------------------------------------------------------------------------
 

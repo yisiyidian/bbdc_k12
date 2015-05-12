@@ -9,6 +9,11 @@ end)
 
 
 function BookLayer.create(education)
+    if s_CURRENT_USER.k12SmallStep < s_K12_selectBook then
+        s_CURRENT_USER:setK12SmallStep(s_K12_selectBook)
+    end
+    -- 打点
+    
     local layer = BookLayer.new()
     layer.book = {}
 
@@ -88,7 +93,7 @@ function BookLayer.create(education)
                 AnalyticsFirst(ANALYTICS_FIRST_BOOK, key)
                 
                 s_CorePlayManager.enterHomeLayer()
-                s_O2OController.getBulletinBoard()
+                -- s_O2OController.getBulletinBoard()
             
                 playSound(s_sound_buttonEffect)   
 

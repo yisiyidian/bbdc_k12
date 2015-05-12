@@ -23,7 +23,7 @@ local TEXT_CHANGE_ACCOUNT = '切换账号' -- "登出游戏"
 
 function HomeLayer.create()
     --unlock friend
-    s_CURRENT_USER:addBeans(600)  
+    -- s_CURRENT_USER:addBeans(600)  
 
     if s_CURRENT_USER:getLockFunctionState(1) == 0 then
         s_CURRENT_USER:unlockFunctionState(1)
@@ -50,6 +50,15 @@ function HomeLayer.create()
         s_CURRENT_USER:setTutorialStep(s_tutorial_home+1) --1 -> 2
         -- print('tutorial_step:'..s_CURRENT_USER.tutorial_step)
     end
+
+    -- print("totalStudyWordNum : "..totalStudyWordNum)
+    -- print("totalGraspWordNum : "..totalGraspWordNum)
+    -- print("totalStudyDayNum : "..totalStudyDayNum)
+
+    if s_CURRENT_USER.k12SmallStep < s_K12_enterHomeLayer then
+        s_CURRENT_USER:setK12SmallStep(s_K12_enterHomeLayer)
+    end
+    -- 打点
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DataManager.books[s_CURRENT_USER.bookKey].words
