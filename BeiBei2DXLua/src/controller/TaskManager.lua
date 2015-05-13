@@ -90,12 +90,9 @@ end
 function TaskManager:getTotalLoginTask()
 	return 1,2,1
 end
-
 --获取随机任务状态
 function TaskManager:getNormalTaskData(taskId)
 	
 end
-
-
 
 return TaskManager
