@@ -480,5 +480,3 @@ function layerHoldTouch(layer)
     listener:setSwallowTouches(true)
 end
 
-
-

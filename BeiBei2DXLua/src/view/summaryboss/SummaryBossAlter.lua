@@ -68,7 +68,15 @@ function SummaryBossAlter:lose(entrance)
     --     s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
     --     s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_timeout)
     -- end
+    if s_CURRENT_USER.k12SmallStep < s_K12_summaryBossFailure then
+        s_CURRENT_USER:setK12SmallStep(s_K12_summaryBossFailure)
+    end
+    -- 打点
 
+    if s_CURRENT_USER.k12SmallStep < s_K12_end then
+        s_CURRENT_USER:setK12SmallStep(s_K12_end)
+    end
+    -- 打点
     --add board
     self.loseBoard = cc.Sprite:create("image/summarybossscene/background_zjboss_tanchu.png")
     self.loseBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
@@ -348,6 +356,14 @@ function SummaryBossAlter:win1(entrance)
 end
 
 function SummaryBossAlter:win2(entrance,hasCheckedIn)
+    if s_CURRENT_USER.k12SmallStep < s_K12_summaryBossSuccess then
+        s_CURRENT_USER:setK12SmallStep(s_K12_summaryBossSuccess)
+    end
+    -- 打点
+    if s_CURRENT_USER.k12SmallStep < s_K12_end then
+        s_CURRENT_USER:setK12SmallStep(s_K12_end)
+    end
+    -- 打点
     local backColor = cc.LayerColor:create(cc.c4b(180,241,254,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
     backColor:ignoreAnchorPointForPosition(false)
     backColor:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
@@ -419,7 +435,6 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
 end
 
 function SummaryBossAlter:addWinLabel(win_back)
-
     local beans = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
     beans:setPosition(s_RIGHT_X -100, s_DESIGN_HEIGHT-70)
     self:addChild(beans)

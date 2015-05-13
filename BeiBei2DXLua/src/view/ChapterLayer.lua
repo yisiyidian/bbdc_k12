@@ -385,7 +385,8 @@ function ChapterLayer:checkUnlockLevel()
                     s_SCENE.touchEventBlockLayer.unlockTouch()
                 end)
             self:callFuncWithDelay(1.0, function() 
-                self.chapterDic[chapterKey]:addPopup(currentProgress)
+                local playAnimation = true
+                self.chapterDic[chapterKey]:addPopup(currentProgress,playAnimation)
             end)
         end
         -- add notification

@@ -51,6 +51,7 @@ function DataLevelInfo:getLevelInfo(bookKey)
 --    return 19
     print_lua_table(g_BOOKKEYS)
     print_lua_table(g_BOOKS)
+    -- dump(self,"DataLevelInfo",99)
     for i, v in ipairs(g_BOOKKEYS) do
         if v == bookKey then
             return self[DataLevelInfo.BOOKKEY .. g_BOOKS[i]]

@@ -58,6 +58,7 @@ import com.avos.avoscloud.GetCallback;
 import com.avos.avoscloud.GetDataCallback;
 import com.avos.avoscloud.GetFileCallback;
 import com.avos.avoscloud.LogInCallback;
+import com.avos.avoscloud.LogUtil.log;
 import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SaveCallback;
 import com.avos.avoscloud.SignUpCallback;
@@ -542,7 +543,13 @@ public class BBNDK {
 							@SuppressWarnings("unchecked")
 							JSONObject json = new JSONObject((Map<String, String>)(object));
 							String objectjson = json.toString();
-							invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, objectjson, null);
+							if(json.optString("code") != ""){
+								//修改密码的时候  输入错误的旧密码 e可能为空
+								String errorjson = "{\"code\":" + json.optString("code") + ",\"message\":\"" + json.optString("error") + "\",\"description\":\"" + json.optString("error") + "\"}";
+								invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, null, errorjson);
+							}else{
+								invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, objectjson, null);
+							}
 						} else {
 							String errorjson = "{\"code\":" + e.hashCode() + ",\"message\":\"" + e.getMessage() + "\",\"description\":\"" + e.getLocalizedMessage() + "\"}";
 							invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, null, errorjson);
@@ -554,7 +561,13 @@ public class BBNDK {
 		});
 	}
 	
-	public static void searchUser(String username, String nickName, final long cppObjPtr) {
+	/**
+	 * 查询用户
+	 * @param username  用户名
+	 * @param nickName	昵称
+	 * @param cppObjPtr
+	 */
+	public static void searchUser(final String username, final String nickName, final long cppObjPtr) {
 		boolean bu = username != null && username.length() > 0;
 		AVQuery<AVUser> query_username = null;
 		if (bu) {
@@ -590,11 +603,12 @@ public class BBNDK {
 							if (e == null) {
 								String jsons = "";
 								for (AVUser u : results) {
-									if (jsons.length() == 0) {
-										jsons += "{\"results\":[";
-										jsons += AVUserToJsonStr(u);
+									if (jsons.length() == 0) {	
+											jsons += "{\"results\":[";
+											jsons += AVUserToJsonStr(u);
+										
 									} else {
-										jsons += "," + AVUserToJsonStr(u);
+											jsons += "," + AVUserToJsonStr(u);
 									}
 								}
 								if (jsons.length() > 0) {

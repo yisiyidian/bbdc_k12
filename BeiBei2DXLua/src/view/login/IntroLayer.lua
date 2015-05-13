@@ -5,7 +5,7 @@ require("common.global")
 --界面包含:游客登陆 登陆 注册 三个入口
 
 local VisitorRegister = require("view.login.VisitorRegister")
-local ImproveInfo = require("view.home.ImproveInfo")
+
 local Offline = require("view.offlinetip.OfflineTipForLogin")
 
 local RegisterAccountView = require("view.login.RegisterAccountView")

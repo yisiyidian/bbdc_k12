@@ -135,13 +135,13 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
         local request = cx.CXAVCloud:create()
         request:callAVCloudFunction(string.gsub(api, 'functions/', ''), s_JSON.encode(parameters), function (obj, err)
             if err and onFailed then
-                print('response >>' .. api)
+                print('response fail >>' .. api)
                 print(err)
                 print('response <<' .. api)
                 err = s_JSON.decode(err)
                 onFailed(api, err.code, err.message, err.description)
             elseif obj and onSucceed then
-                print('response >>' .. api)
+                print('response success >>' .. api)
                 print(obj)
                 print('response <<' .. api)
                 obj = s_JSON.decode(obj)

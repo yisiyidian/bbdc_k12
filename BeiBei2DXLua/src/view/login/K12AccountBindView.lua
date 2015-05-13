@@ -29,6 +29,8 @@ K12AccountBindView.Type_password = 1
 K12AccountBindView.Type_teacher = 2
 
 function K12AccountBindView.create(viewtype, ex)
+    AnalyticsK12SmallStep(s_K12_inputUserName)
+    -- 打点
     local view = K12AccountBindView.new()
     view:init(K12AccountBindView.Type_username, ex)
     view:init(K12AccountBindView.Type_password, ex)
@@ -207,6 +209,8 @@ function K12AccountBindView:gotoPwd(username)
             if error ~= nil then
                 s_TIPS_LAYER:showSmallWithOneButton(error.description)
             elseif not exist then
+                AnalyticsK12SmallStep(s_K12_inputUserPassWord)
+                -- 打点
                 self.username = username
                 self.bg:runAction(cc.MoveBy:create(0.3, cc.p(-self.back_width, 0)))
                 cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
@@ -256,7 +260,9 @@ function K12AccountBindView:gotoUpdateUsernameAndPassword(pwd)
                 -- AnalyticsAccountBind()                      
                 if errordescription then                  
                     s_TIPS_LAYER:showSmallWithOneButton(errordescription)
-                else        
+                else     
+                    AnalyticsK12SmallStep(s_K12_inputTeacherName)   
+                    -- 打点
                     -- s_CURRENT_USER.username = self.ex
                     -- s_CURRENT_USER.password = pwd
                     self.bg:runAction(cc.MoveBy:create(0.3, cc.p(-self.back_width, 0)))
@@ -326,6 +332,8 @@ function K12AccountBindView:gotoAddTeacher(teacherName)
                 if err == nil then
                     s_CURRENT_USER:parseServerFollowData(user)
                     s_SCENE:removeAllPopups() 
+                elseif self.username == teacherName then
+                    s_TIPS_LAYER:showSmallWithOneButton("请不要搜自己的名字")
                 else
                     s_TIPS_LAYER:showSmallWithOneButton(err.description)
                 end

@@ -173,6 +173,10 @@ function MoreInfomationView:onReturnClick(sender, eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
+	--关闭回调Homelayer里
+	if self.close ~= nil then
+		self.close()
+	end
 	s_SCENE:removeAllPopups()
 end
 
@@ -258,7 +262,6 @@ function MoreInfomationView:onEditSaveToServerCallBack(data,error)
 	if self.renderEditCall ~= nil then
 		self.renderEditCall(self.renderKey,self.renderData)
 	end
-
 	-- print("保存回来")
 	-- dump(data)
 	-- dump(error)
