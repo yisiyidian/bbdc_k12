@@ -262,7 +262,6 @@ function MoreInfomationView:onEditSaveToServerCallBack(data,error)
 	if self.renderEditCall ~= nil then
 		self.renderEditCall(self.renderKey,self.renderData)
 	end
-
 	-- print("保存回来")
 	-- dump(data)
 	-- dump(error)

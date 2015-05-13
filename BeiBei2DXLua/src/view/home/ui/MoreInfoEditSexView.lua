@@ -10,15 +10,11 @@ local MoreInfoEditSexView = class("MoreInfoEditSexView", function()
 	return layer
 end)
 
-
 function MoreInfoEditSexView:ctor()
-
 	self:initUI()
-
 end
 
 function MoreInfoEditSexView:initUI()
-
 	self.views = {}
 	self:setTouchEnabled(true)
 	self:setSwallowsTouches(true)
@@ -64,7 +60,7 @@ function MoreInfoEditSexView:initUI()
 		end
 		self:updateChk(self.data)
 	end
---男
+	--男
 	local checkBoxMale = ccui.CheckBox:create()
 	checkBoxMale:setTouchEnabled(true)        
 	checkBoxMale:loadTextures(
@@ -85,8 +81,7 @@ function MoreInfoEditSexView:initUI()
 	local labelWomen = cc.Label:createWithSystemFont("♂ 男","",30)
 	labelWomen:setPosition(checkBoxMale:getContentSize().width/2,checkBoxMale:getContentSize().height/2)
 	checkBoxMale:addChild(labelWomen)
-
---女
+	--女
 	local checkBoxFemale = ccui.CheckBox:create()
 	checkBoxFemale:setTouchEnabled(false)
 	checkBoxFemale:setName("Female")
@@ -108,7 +103,6 @@ function MoreInfoEditSexView:initUI()
 	labelWomen:setPosition(checkBoxFemale:getContentSize().width/2,checkBoxFemale:getContentSize().height/2)
 	checkBoxFemale:addChild(labelWomen)
 
-
 	--确定按钮
 	local btnConfirm = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
 	btnConfirm:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 550)
@@ -118,9 +112,7 @@ function MoreInfoEditSexView:initUI()
 	self:addChild(btnConfirm)
 	self.btnConfirm = btnConfirm
 	self.views[#self.views+1] = btnConfirm
-	
 end
-
 --data  性别数据 0 女  1 男
 function MoreInfoEditSexView:updateChk(data)
 	if data == 1 then 
@@ -141,8 +133,6 @@ function MoreInfoEditSexView:updateChk(data)
 		self.headImgG:setTexture(self.headImgGril)
 	end
 end
-
-
 --设置回调
 --data  性别数据 0 女  1 男
 function MoreInfoEditSexView:setData(key,type,data,title,closeCallBack,check)
@@ -154,24 +144,20 @@ function MoreInfoEditSexView:setData(key,type,data,title,closeCallBack,check)
 	self.check = check
 
 	self.title:setString("修改"..self.titleText)
-
 	print("修改性别："..data)
 	self:updateChk(self.data)
 end
-
 
 function MoreInfoEditSexView:onReturnClick(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then 
 		return 
 	end
-
 	if self.closeCallBack ~= nil then
 		self.closeCallBack()
 	end
 end
 
 function MoreInfoEditSexView:onConfirmTouch(sender,eventType)
-	
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
@@ -181,7 +167,6 @@ function MoreInfoEditSexView:onConfirmTouch(sender,eventType)
 	if self.closeCallBack ~= nil then
 		self.closeCallBack(self.key,self.type,data)
 	end
-	
 end
 
 return MoreInfoEditSexView
