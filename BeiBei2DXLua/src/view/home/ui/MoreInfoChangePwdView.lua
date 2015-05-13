@@ -100,6 +100,7 @@ function MoreInfoChangePwdView:onConfirmTouch(sender,eventType)
 	--密码符合规范
 	if not validatePassword(newPwd) then
 		s_TIPS_LAYER:showSmallWithOneButton(s_DataManager.getTextWithIndex(TEXT__PWD_ERROR))
+		return
 	end
 
 	--请求更新密码

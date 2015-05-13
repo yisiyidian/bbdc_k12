@@ -147,7 +147,7 @@ function MoreInformationRender:updateView()
 		else
 			local headImgContent = nil
 			if self.headImgContent == nil then
-				headImgContent = cc.Sprite:create("image/login/gril_head.png")
+				headImgContent = cc.Sprite:create()
 				self.headImgContent = headImgContent	
 				self:addChild(headImgContent)
 			else
@@ -156,7 +156,7 @@ function MoreInformationRender:updateView()
 			if self.data == 0 then
 				headImgContent:setTexture("image/PersonalInfo/hj_personal_avatar.png") 
 			else
-				headImgContent:setTexture("image/login/boy_head.png")
+				headImgContent:setTexture("image/PersonalInfo/boy_head.png")
 			end
 
 			headImgContent:setPosition(self.bg:getContentSize().width * 0.8 + 20,40)

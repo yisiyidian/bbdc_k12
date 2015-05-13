@@ -24,11 +24,11 @@ function MoreInfoEditSexView:initUI()
 	self:setSwallowsTouches(true)
 
 	local headImgGril = "image/PersonalInfo/hj_personal_avatar.png"
-	local headImgBoy = "image/login/boy_head.png"
+	local headImgBoy = "image/PersonalInfo/boy_head.png"
 	self.headImgGril = headImgGril 
 	self.headImgBoy  = headImgBoy
 	--头像
-	local headImgG = cc.Sprite:create("image/login/gril_head.png")
+	local headImgG = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
 	headImgG:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self.views[#self.views + 1] = headImgG
 	self:addChild(headImgG)

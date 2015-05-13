@@ -325,9 +325,12 @@ end
 
 --显示选择性别的界面
 function RegisterAccountView:showChooseSex()
+	self.btnReturn:setTouchEnabled(false) --禁用返回按钮
+	self.btnReturn:setVisible(false)
+
 	self.alertTip:setString("")
-	local girlImg = "image/login/gril_head.png"
-	local boyImg = "image/login/boy_head.png"
+	local girlImg = "image/PersonalInfo/hj_personal_avatar.png"
+	local boyImg = "image/PersonalInfo/boy_head.png"
 
 	local headImg = cc.Sprite:create(boyImg)
 	--local headImg = cc.Sprite:create("image/homescene/setup_head.png")
@@ -415,6 +418,8 @@ end
 
 --选择性别确定
 function RegisterAccountView:onTouchSexOK(sender,eventType)
+	self.btnReturn:setTouchEnabled(true) --启用返回按钮
+	self.btnReturn:setVisible(true)
 	--获取性别 女0  男1
 	self.sex = self.checkBoxFeMale:isSelected() and 0 or 1
 	print("sex:"..self.sex)
@@ -425,8 +430,6 @@ end
 
 --显示输入昵称
 function RegisterAccountView:showInputNickName()
-	self.btnReturn:setTouchEnabled(false) --启用返回按钮
-
 	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入昵称",nil,nil,nil,nil,10)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputNode)
@@ -457,8 +460,6 @@ function RegisterAccountView:onTouchNickNameOK(sender,eventType)
 
 	--昵称合法
 	self.nickName =  nickName
-
-	self.btnReturn:setTouchEnabled(true)
 	self.curStep = self.curStep + 1
 	self:goStep(self.curStep)
 end
