@@ -113,6 +113,7 @@ function SettingLayer:updateView()
     for _,b in pairs(self.btns) do
     	b:removeFromParent()
     end
+    self.btns = {}
 
     local btn 	= nil
     local size 	= nil
