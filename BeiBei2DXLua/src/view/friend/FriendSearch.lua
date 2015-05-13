@@ -76,13 +76,15 @@ function FriendSearch:ctor()
             self:removeChildByName('searchResult',true)
             local username = textField:getString()
             --判断昵称不是自己
-            if username == s_CURRENT_USER.username or username == s_CURRENT_USER.nickName then
-                local SmallAlter = require('view.friend.HintAlter')
-                local smallAlter = SmallAlter.create('请不要搜索自己哦亲~')
-                smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                s_SCENE.popupLayer:addChild(smallAlter)
-                return
-            end
+            --[[
+                if username == s_CURRENT_USER.username or username == s_CURRENT_USER.nickName then
+                    local SmallAlter = require('view.friend.HintAlter')
+                    local smallAlter = SmallAlter.create('请不要搜索自己哦亲~')
+                    smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    s_SCENE.popupLayer:addChild(smallAlter)
+                    return
+                end
+            ]]
             if  username == "" then
                 local SmallAlter = require('view.friend.HintAlter')
                 local smallAlter = SmallAlter.create('无名氏什么的才没有的说~')
@@ -102,9 +104,15 @@ function FriendSearch:ctor()
                             print('request:searchUser:', tostring(results))
                             if err == nil and results ~= nil and type(results) == 'string' and string.len(results) > 0 then
                                 local data = s_JSON.decode(results)
-                                -- dump(data,"搜素好友列表返回",99)
+                                dump(data,"搜素好友列表返回",99)
                                 for i, user in ipairs(data.results) do
-                                    f_user[#f_user + 1] = user
+                                    if user.nickName~="" and user.nickName~= username and user.username == username then
+                                        --do nothing
+                                    else
+                                        if user.username ~= s_CURRENT_USER.username then
+                                            f_user[#f_user + 1] = user
+                                        end
+                                    end
                                 end
                             end
                             dump(f_user,"搜素好友列表返回",99)
@@ -119,14 +127,9 @@ function FriendSearch:ctor()
                                 self:addChild(listView)
                                 listView:setName('searchResult')
                                 for i, fuser in ipairs(f_user) do
-                                    print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
                                     local user = DataUser.create()
                                     parseServerDataToClientData(fuser,user)
                                     local button = cc.Sprite:create("image/friend/friendRankButton.png")
-                                    --button:setPosition(0.5 * s_DESIGN_WIDTH, 0.65 * s_DESIGN_HEIGHT)
-                                    --button:setScale9Enabled(true)
-                                    --self:addChild(button,0,'searchResult')
-
                                     local custom_item = ccui.Layout:create()
                                     custom_item:setTouchEnabled(true)
                                     custom_item:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,button:getContentSize().height + 4))

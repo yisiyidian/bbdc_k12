@@ -603,21 +603,12 @@ public class BBNDK {
 							if (e == null) {
 								String jsons = "";
 								for (AVUser u : results) {
-									String tNickName = u.get("nickName").toString();
-									String tUserName = u.getUsername().toString();
-									if (jsons.length() == 0) {
-										if((!tNickName.equals("")) && (!tNickName.equals(nickName)) && (tUserName.equals(nickName))){
-											//do nothing
-										}else{
+									if (jsons.length() == 0) {	
 											jsons += "{\"results\":[";
 											jsons += AVUserToJsonStr(u);
-										}
+										
 									} else {
-										if((!tNickName.equals("")) && (!tNickName.equals(nickName)) && (tUserName.equals(nickName))){
-											
-										}else{
 											jsons += "," + AVUserToJsonStr(u);
-										}
 									}
 								}
 								if (jsons.length() > 0) {
