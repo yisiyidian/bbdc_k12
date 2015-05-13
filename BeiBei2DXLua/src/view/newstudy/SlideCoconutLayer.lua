@@ -132,6 +132,24 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
     
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber)
+
+    local currentWordOrWordGroup = self.wordInfo[2]
+    local tip 
+    if self.isWord == true then
+        currentWordOrWordGroup = self.wordInfo[2]
+    else
+        local word = split("abc abd", " ")
+        currentWordOrWordGroup = word[1]
+        local temp = split(self.wordInfo[2], word[1])
+        tip = "()"..temp[2]
+    end
+
+    if tip ~= nil then
+        local word_tip = cc.Label:createWithSystemFont(tip,"",50)
+        word_tip:setPosition(bigWidth/2, 1050)
+        word_tip:setColor(cc.c4b(31,68,102,255))
+        backColor:addChild(word_tip,1)
+    end
     
     local word_meaning_label = cc.Label:createWithSystemFont(self.wordInfo[5],"",50)
     word_meaning_label:setPosition(bigWidth/2, 950)
@@ -187,10 +205,6 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
                     if wrongNum == progressBar_total_number - 1 then
                         s_CURRENT_USER:addBeans(s_CURRENT_USER.beanRewardForCollect)
                         saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]}) 
-                        print('logInDatas')
-                        print_lua_table(s_CURRENT_USER.logInDatas)
-                        print('isCheckIn')
-                        -- print(s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey))
 
                         if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat2_2 then
                            s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat2_2 + 1)
@@ -227,8 +241,6 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
         end
 
         if s_CURRENT_USER.slideNum == 1 then
-            -- local CongratulationPopup = require("view.newstudy.CongratulationPopup").create()
-            -- s_SCENE:popup(CongratulationPopup)
             s_CURRENT_USER.slideNum = 0
             saveUserToServer({['slideNum'] = s_CURRENT_USER.slideNum})
             normal()
@@ -250,18 +262,6 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
     local beibei = cc.Sprite:create("image/newstudy/background_yindao.png")
     beibei:setPosition(cc.p(darkColor:getContentSize().width / 2 , 170))
     darkColor:addChild(beibei)
-
-    -- local beibei_hand = cc.Sprite:create("image/newstudy/yindao_huaci_gril_arm_background.png")
-    -- beibei_hand:setPosition(cc.p(beibei:getContentSize().width * 0.4 , beibei:getContentSize().height * 0.4))
-    -- beibei_hand:ignoreAnchorPointForPosition(false)
-    -- beibei_hand:setAnchorPoint(0.5,0.1)
-    -- beibei:addChild(beibei_hand,-1)
-
-    -- local action1 = cc.RotateTo:create(0.1,45)
-    -- local action2 = cc.RotateTo:create(1,-45)
-    -- local action3 = cc.RepeatForever:create(cc.Sequence:create(action1,action2))
-
-    -- beibei_hand:runAction(action3)
     
     local beibei_tip_label = cc.Label:createWithSystemFont("划一划 !","",48)
     beibei_tip_label:setPosition(beibei:getContentSize().width /2, beibei:getContentSize().height * 0.5)

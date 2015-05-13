@@ -221,6 +221,11 @@ function BlacksmithLayer:ctor(wordlist,islandIndex)
     soundMark:setPosition(bigWidth/2, 930)
     backColor:addChild(soundMark)
 
+    local wordGroupLabel =  cc.Label:createWithSystemFont("XXXXXX123132123","",40)
+    wordGroupLabel:setPosition(bigWidth/2, 925)
+    wordGroupLabel:setColor(cc.c4b(0,0,0,255))
+    backColor:addChild(wordGroupLabel)
+
     self.options = self:createOptions(self.randWord,wordlist,self.progressBar.indexPosition())
     for i = 1, #self.options do
         backColor:addChild(self.options[i])

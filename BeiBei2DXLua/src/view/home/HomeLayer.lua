@@ -68,8 +68,8 @@ function HomeLayer.create()
     -- data end
 
     local username = "游客"
-    local logo_name = {"head","book","information","logout"}
-    local label_name = {username,"选择书籍","完善个人信息",TEXT_CHANGE_ACCOUNT}
+    local logo_name = {"head","information","logout"}
+    local label_name = {username,"完善个人信息",TEXT_CHANGE_ACCOUNT}
 
     s_SCENE.touchEventBlockLayer.unlockTouch()
     local layer = HomeLayer.new()
@@ -384,8 +384,6 @@ function HomeLayer.create()
         button_back:setPosition(0, s_DESIGN_HEIGHT-button_back:getContentSize().height * (1 - 1) - 80)
         setting_back:addChild(button_back)
 
-        
-
         local logo = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
         logo:setScale(0.9)
         logo:setPosition(button_back:getContentSize().width-offset+120, button_back:getContentSize().height/2 + 40)
@@ -531,8 +529,8 @@ function HomeLayer.create()
 
     if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
         username = s_CURRENT_USER:getNameForDisplay()
-        logo_name = {"head","book","logout"}
-        label_name = {username,"选择书籍",TEXT_CHANGE_ACCOUNT}
+        logo_name = {"head","logout"}
+        label_name = {username,TEXT_CHANGE_ACCOUNT}
     end
     local label = {}
     local logo = {}

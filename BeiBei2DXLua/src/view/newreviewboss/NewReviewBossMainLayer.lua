@@ -70,7 +70,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
         local RandomWord = CollectUnfamiliar:createRandWord(wordname,3)
         local rightIndex = math.random(1,1024)%3 + 1
 
-        if type%2 == 0 then    
+        if true then    
             local ans = {}
             ans[rightIndex] = wordname
             if rightIndex == 1 then  ans[2] = RandomWord[2] ans[3] = RandomWord[3]

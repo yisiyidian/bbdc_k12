@@ -21,6 +21,15 @@ K12AccountBindView.Type_username = 0
 K12AccountBindView.Type_password = 1
 K12AccountBindView.Type_teacher = 2
 
+----need to do
+
+local function GotoStudy()
+    s_CURRENT_USER.bookKey = 'primary_1'
+    saveUserToServer({['bookKey']=s_CURRENT_USER.bookKey})
+    s_SCENE:removeAllPopups()
+    s_CorePlayManager.enterHomeLayer()
+end
+
 function K12AccountBindView.create(viewtype, ex)
     AnalyticsK12SmallStep(s_K12_inputUserName)
     -- 打点
@@ -94,7 +103,7 @@ function K12AccountBindView:ctor()
 
     -----------------------------------------------------------------------------------------
 
-    onAndroidKeyPressed(self, function () s_SCENE:removeAllPopups()  end)
+    onAndroidKeyPressed(self, function () GotoStudy() end)
 end
 
 function K12AccountBindView:init(t, ex)
@@ -173,7 +182,7 @@ function K12AccountBindView:init(t, ex)
         if eventType == ccui.TouchEventType.ended then
             playSound(s_sound_buttonEffect) 
             cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
-            s_SCENE:removeAllPopups() 
+            GotoStudy() 
         end
     end
     
@@ -324,7 +333,7 @@ function K12AccountBindView:gotoAddTeacher(teacherName)
             s_UserBaseServer.follow(user, function (api, result, err)
                 if err == nil then
                     s_CURRENT_USER:parseServerFollowData(user)
-                    s_SCENE:removeAllPopups() 
+                    GotoStudy()
                 elseif self.username == teacherName then
                     s_TIPS_LAYER:showSmallWithOneButton("请不要搜自己的名字")
                 else
