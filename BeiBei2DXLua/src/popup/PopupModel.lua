@@ -5,7 +5,6 @@ end)
 --注册界面
 local RegisterAccountView = require("view.login.RegisterAccountView")
 
-local ImproveInfo = require("view.home.ImproveInfo")
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
 Site_From_Information = "Site_From_Information"
@@ -114,7 +113,6 @@ function PopupModel.create(site)
                 s_SCENE:callFuncWithDelay(0.3,function()
 
                     --完善个人信息
-                    -- local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_FRIEND_LAYER)
                     local regiserView = RegisterAccountView.new()
                     s_SCENE.popupLayer:addChild(regiserView)
                     regiserView.close = function() 

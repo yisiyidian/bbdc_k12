@@ -3,10 +3,8 @@ require("common.global")
 
 --HomeLayer 主界面
 --
-
-
 local AlterI = require("view.alter.AlterI")
-local ImproveInfo = require("view.home.ImproveInfo")
+-- local ImproveInfo = require("view.home.ImproveInfo")
 local MissionProgress = require("view.home.MissionProgressLayer")
 local OfflineTipHome = require("view.offlinetip.OfflineTipForHome")
 local OfflineTipFriend = require("view.offlinetip.OfflineTipForFriend")
@@ -26,8 +24,6 @@ local list = {}
 local TEXT_CHANGE_ACCOUNT = '切换账号' -- "登出游戏"
 
 function HomeLayer.create()
-    --unlock friend
-    -- s_CURRENT_USER:addBeans(600)  
 
     if s_CURRENT_USER:getLockFunctionState(1) == 0 then
         s_CURRENT_USER:unlockFunctionState(1)
@@ -152,27 +148,19 @@ function HomeLayer.create()
 
             if viewIndex == 1 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
                 mission_progress.stopListener = true
-
                 viewIndex = 2
-
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2+offset,s_DESIGN_HEIGHT/2))
                 backColor:runAction(action1)
 
                 local action2 = cc.DelayTime:create(0.5)
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 setting_back:runAction(cc.Sequence:create(action2, action3))
-
                 --offline tip
-
             else
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
                 mission_progress.stopListener = false
-
                 viewIndex = 1
-
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
                 backColor:runAction(action1)
 
