@@ -334,6 +334,11 @@ function NewSummaryBossLayer:addChangeBtn()
             end
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             self.gamePaused = true
+            --fws
+            local director = cc.Director:getInstance()
+            self.targets = director:getActionManager():pauseTarget(self.boss)
+
+            --
             local curtain = cc.LayerColor:create(cc.c4b(0,0,0,150),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
             self:addChild(curtain,99)
             curtain:setPosition(s_LEFT_X,0)
@@ -356,6 +361,7 @@ function NewSummaryBossLayer:addChangeBtn()
                 --s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                 curtain:removeFromParent()
                 self.gamePaused = false
+                director:getActionManager():resumeTarget(self.boss)
                 table.insert(self.wordList,self.wordList[1])
                 self:resetMat()
             end)
