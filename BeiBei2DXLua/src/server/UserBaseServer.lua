@@ -285,7 +285,8 @@ end
 --password 密码
 --phoneNumber 手机号码
 --onResponse  回调函数
-function UserBaseServer.updateLoginInfo(username, password, phoneNumber,onResponse,nickName)
+--sex 性别
+function UserBaseServer.updateLoginInfo(username, password, phoneNumber,onResponse,nickName,sex)
     if not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then
         s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
         if onResponse ~= nil then onResponse(username, password, phoneNumber,s_TIPS_LAYER.offlineOrNoSessionTokenTip, ERROR_CODE_MAX) end
@@ -325,7 +326,7 @@ function UserBaseServer.updateLoginInfo(username, password, phoneNumber,onRespon
                 onResponse(s_CURRENT_USER.username,password,s_CURRENT_USER.mobilePhoneNumber,error.description,error.code)
             elseif not exist then
                 if s_CURRENT_USER.nickName ~= nickName then
-                    saveUserToServer({["nickName"]=nickName,["mobilePhoneNumber"]=phoneNumber}, function(datas,error)
+                    saveUserToServer({["nickName"]=nickName,["mobilePhoneNumber"]=phoneNumber,['sex']=sex}, function(datas,error)
                         if error ~= nil then
                             onResponse(s_CURRENT_USER.username,s_CURRENT_USER.password,phoneNumber,error.description,error.code)
                         else

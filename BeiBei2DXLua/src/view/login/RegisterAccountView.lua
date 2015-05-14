@@ -517,7 +517,7 @@ function RegisterAccountView:onTouchRegister(sender,eventType)
 	end
 
 	--注册
-	self:register(self.phoneNumber,pwd,self.nickName)
+	self:register(self.phoneNumber,pwd,self.nickName,self.sex)
 end
 
 --显示登陆界面
@@ -628,14 +628,15 @@ end
 --phoneNumber 	就是手机号码
 --pwd 			密码
 --nickName 		昵称
-function RegisterAccountView:register(phoneNumber,pwd,nickName)
+function RegisterAccountView:register(phoneNumber,pwd,nickName,sex)
 	print("电话号码:"..phoneNumber)
 	print("密码:"..pwd)
 	print("昵称:"..nickName)
+	print("性别:"..sex)
 	print("请求注册....")
 	showProgressHUD('', true)
 
-	s_UserBaseServer.updateLoginInfo(s_CURRENT_USER.username,pwd,phoneNumber,handler(self,self.onRegisterCallBack),nickName)
+	s_UserBaseServer.updateLoginInfo(s_CURRENT_USER.username,pwd,phoneNumber,handler(self,self.onRegisterCallBack),nickName,sex)
 end
 
 --注册返回 回调
