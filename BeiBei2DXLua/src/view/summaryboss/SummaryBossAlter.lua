@@ -133,8 +133,8 @@ function SummaryBossAlter:lose(entrance)
 
     local function button_buyTime_func()
         playSound(s_sound_buttonEffect)
-        if s_CURRENT_USER:getBeans() >= 0 then
-            s_CURRENT_USER:addBeans(-0)
+        if s_CURRENT_USER:getBeans() >= 10 then
+            s_CURRENT_USER:addBeans(-10)
             saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
             local boss = self.bossLayer.boss
             local distance = s_DESIGN_WIDTH * 0.6
@@ -316,10 +316,10 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     backColor:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
     self:addChild(backColor)
 
-    local win_back = sp.SkeletonAnimation:create('spine/summaryboss/ertongban_dabaiboss.json','spine/summaryboss/ertongban_dabaiboss.atlas',1)
+    local win_back = sp.SkeletonAnimation:create('spine/summaryboss/jieshao_6.json','spine/summaryboss/jieshao_6.atlas',1)
     --win_back:setAnchorPoint(0.5,0)
     win_back:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
-    win_back:setAnimation(0,'animation',true)
+    win_back:setAnimation(0,'animation',false)
     self:addChild(win_back)
     if not self.entrance then
         win_back:setPosition(s_DESIGN_WIDTH / 2,0)
@@ -344,7 +344,7 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     end
 
     local button = Button.create("long","blue","完成")
-    button:setPosition(s_DESIGN_WIDTH / 2 ,150)
+    button:setPosition(s_DESIGN_WIDTH / 2 ,80)
     self:addChild(button)
     button.func = function ()
         button_func()

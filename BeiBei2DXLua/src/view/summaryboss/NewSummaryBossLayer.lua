@@ -11,7 +11,7 @@ function NewSummaryBossLayer.create(unit)
 end
 
 function NewSummaryBossLayer:ctor(unit)
-    s_SCENE:removeAllPopups()
+    --s_SCENE:removeAllPopups()
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	--设置关卡信息
 	self:initStageInfo(unit)
