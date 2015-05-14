@@ -106,8 +106,6 @@ function DataUser:ctor()
     self.dataDailyUsing                    = DataDailyUsing.create()
 
     self.k12SmallStep                      = 0
-
-    self.isFirstTime                       = true
 end
 
 function DataUser:getLockFunctionState(productId)

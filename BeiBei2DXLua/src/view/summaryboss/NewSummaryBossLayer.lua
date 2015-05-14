@@ -213,7 +213,7 @@ function NewSummaryBossLayer:initBoss()
 end
 
 function NewSummaryBossLayer:initMat()
-	local mat = require("view.summaryboss.Mat").create(self,s_CURRENT_USER.isFirstTime,"coconut_dark")
+	local mat = require("view.summaryboss.Mat").create(self,s_CURRENT_USER.k12SmallStep < s_K12_summaryBoss,"coconut_dark")
     mat:setPosition(s_DESIGN_WIDTH/2, 150)
     self:addChild(mat,1)
     self.mat = mat
@@ -229,9 +229,8 @@ function NewSummaryBossLayer:initMat()
     --划对单词后
     mat.success = function(stack)
         if self.gameOver then return end
-        if s_CURRENT_USER.isFirstTime then
-            s_CURRENT_USER.isFirstTime = false
-            saveUserToServer({['isFirstTime'] = s_CURRENT_USER.isFirstTime})
+        if s_CURRENT_USER.k12SmallStep < s_K12_summaryBoss then
+            s_CURRENT_USER:setK12SmallStep(s_K12_summaryBoss)
         end
         playWordSound(self.wordList[1])
         self.boss:stopAllActions()
