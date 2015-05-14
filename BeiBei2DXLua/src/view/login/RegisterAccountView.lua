@@ -36,7 +36,7 @@ RegisterAccountView.STEP_8 = 8	--密码找回
 --构造
 function RegisterAccountView:ctor(step)
 	self:init(step)
-	self.debug = false
+	self.debug = true
 end
 
 function RegisterAccountView:showErrorIcon()
@@ -61,7 +61,7 @@ function RegisterAccountView:init(step)
 	self.views = {}
 	self.curStep = step or 1
 	self.phoneNumber = ""
-	local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
+	local bigWidth = s_DESIGN_WIDTH + 2 * s_DESIGN_OFFSET_WIDTH
     local bigHeight = 1.0*s_DESIGN_HEIGHT
 	local initColor = cc.LayerColor:create(cc.c4b(220,233,239,255), bigWidth, s_DESIGN_HEIGHT)
     initColor:setAnchorPoint(0.5,0.5)
@@ -90,8 +90,8 @@ function RegisterAccountView:init(step)
 	self.tip = tip
 	self:addChild(tip)
 	--alert tip 提示文本 提示应该输入什么
-	local alertTip = cc.Label:createWithSystemFont(" ","",20)
-	alertTip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 90)
+	local alertTip = cc.Label:createWithSystemFont(" ","",26)
+	alertTip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 100)
 	alertTip:setTextColor(cc.c3b(140, 139, 139))
 	self.alertTip = alertTip
 	self:addChild(alertTip)
@@ -430,7 +430,7 @@ end
 
 --显示输入昵称
 function RegisterAccountView:showInputNickName()
-	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入昵称",nil,nil,nil,nil,10)
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入昵称",nil,nil,nil,nil,8)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputNode)
 	self.inputNode = inputNode
@@ -444,6 +444,8 @@ function RegisterAccountView:showInputNickName()
 	btnNickName:setTitleFontSize(36)
 	self:addChild(btnNickName)
 	self.views[#self.views+1] = btnNickName
+
+	self.alertTip:setString("输入昵称")
 end
 
 --昵称按钮触摸事件
@@ -466,8 +468,6 @@ end
 
 --显示输入密码的界面
 function RegisterAccountView:showInputPwd()
-	self.alertTip:setString("输入密码")
-
 	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请设置密码",nil,nil,nil,true,11)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputNode)
@@ -489,6 +489,8 @@ function RegisterAccountView:showInputPwd()
 	btnRegister:setTitleFontSize(36)
 	self:addChild(btnRegister)
 	self.views[#self.views+1] = btnRegister
+
+	self.alertTip:setString("输入密码")
 end
 
 --注册Touch点击

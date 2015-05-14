@@ -44,7 +44,7 @@ function InputNode:init(backgroundImage,placeHolder,callback,width,height,isPwd,
     self.textField:setPlaceHolderColor(cc.c3b(153,168,181))
     self.textField:setTextColor(cc.c4b(0,0,0,255))
     self.textField:setPlaceHolder(placeHolder)--占位文本
-    self.textField:setDetachWithIME(false)
+    -- self.textField:setDetachWithIME(false)
 
     --设置长度限制
     local tlen = maxLength or 10
@@ -100,7 +100,9 @@ end
 
 --开关键盘
 function InputNode:openIME()
-    cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
+    -- self.textField:getVirtualRenderer():attachWithIME()
+    -- cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
+    self.textField:attachWithIME()
 end
 
 function InputNode:closeIME()

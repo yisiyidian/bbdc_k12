@@ -142,7 +142,13 @@ function FriendSearch:ctor()
                                     line:setPosition(button:getContentSize().width / 2 , button:getContentSize().height / 2)
                                     button:addChild(line,-1)
                 
-                                    local head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
+                                    -- local head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
+                                    local head = nil        
+                                    if user.sex == 0 then
+                                        head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
+                                    else
+                                        head = cc.Sprite:create('image/PersonalInfo/boy_head.png')
+                                    end
                                     head:setScale(0.8)
                                     head:setPosition(0.26 * button:getContentSize().width,0.5 * button:getContentSize().height)
                                     button:addChild(head)

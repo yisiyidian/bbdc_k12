@@ -356,7 +356,13 @@ function FriendList:addList()
         rankIcon:addChild(rankLabel)
         rankLabel:setName('rankLabel')
         
-        local head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
+        local head = nil        
+        if self.array[i].sex == 0 then
+            head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
+        else
+            head = cc.Sprite:create('image/PersonalInfo/boy_head.png')
+        end
+        -- local head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
         head:setScaleX(1 / scale * 0.8)
         head:setScaleY(0.8)
         head:setPosition(0.26 * button:getContentSize().width,0.5 * button:getContentSize().height)

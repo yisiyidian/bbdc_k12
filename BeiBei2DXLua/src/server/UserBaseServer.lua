@@ -339,7 +339,9 @@ function UserBaseServer.updateLoginInfo(username, password, phoneNumber,onRespon
             end            
         end)
     else
-        --TODO手机号码已绑定
+        --手机号码已绑定
+        print("s_CURRENT_USER.mobilePhoneNumber:"..s_CURRENT_USER.mobilePhoneNumber)
+        print("phoneNumber:"..phoneNumber)
     end
 end
 
