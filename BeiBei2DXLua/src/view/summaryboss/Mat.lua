@@ -132,12 +132,14 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
 
                     local tmp_sprite = cc.Sprite:create("image/coconut_font.png")
                     tmp_sprite:setPosition(left+gap*(i-1), bottom+gap*(j-1))
-                    tmp_sprite:setOpacity(120)
+                    --tmp_sprite:setOpacity(120)
                     main:addChild(tmp_sprite)
+                    tmp_sprite:setScale(0)
+                    tmp_sprite:runAction(cc.Sequence:create(cc.DelayTime:create(0.1 * (3 + i - j)),cc.ScaleTo:create(0.1, 1)))
 
                     local tmp_label = cc.Label:createWithTTF(charaster_set_filtered[randomIndex],'font/CenturyGothic.ttf',60)
                     tmp_label:setColor(cc.c3b(20,20,20))
-                    tmp_label:setOpacity(120)
+                    --tmp_label:setOpacity(120)
                     tmp_label:setPosition(tmp_sprite:getContentSize().width/2 + 3, tmp_sprite:getContentSize().height/2 + 3)
                     tmp_sprite:addChild(tmp_label)
                     
@@ -153,12 +155,14 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
             if diff == 0 then
                 firstFlipNode = node
                 firstFlipNode.firstStyle()
-                main:runAction(cc.Sequence:create(cc.DelayTime:create(1.2),cc.CallFunc:create(function (  )
-                    local action1 = cc.ScaleTo:create(0.5,1.05)
-                    local action2 = cc.ScaleTo:create(0.5,0.95)
-                    local action3 = cc.Sequence:create(action1,action2)
-                    firstFlipNode:runAction(cc.RepeatForever:create(action3))
-                end,{})))
+                if not isNewPlayerModel then
+                    main:runAction(cc.Sequence:create(cc.DelayTime:create(1.2),cc.CallFunc:create(function (  )
+                        local action1 = cc.ScaleTo:create(0.5,1.05)
+                        local action2 = cc.ScaleTo:create(0.5,0.95)
+                        local action3 = cc.Sequence:create(action1,action2)
+                        firstFlipNode:runAction(cc.RepeatForever:create(action3))
+                    end,{})))
+                end
             end
         end
     end
@@ -286,10 +290,13 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     end
     
     if isNewPlayerModel == true then
-        main.guidePoint()
-        main.cocoAnimation() 
-        main.finger_action()
-        firstFlipNode:stopAllActions()
+        s_SCENE:callFuncWithDelay(1.2,function (  )
+            main.guidePoint()
+            main.cocoAnimation()   
+            main.finger_action()
+            firstFlipNode:stopAllActions()
+        end)
+        
     end
 
 

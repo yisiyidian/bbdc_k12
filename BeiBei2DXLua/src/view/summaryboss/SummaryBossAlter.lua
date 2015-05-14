@@ -60,6 +60,28 @@ function SummaryBossAlter.create(bossLayer,win,entrance)
     return layer
 end
 
+function SummaryBossAlter:ctor(  )
+    local onTouchBegan = function(touch, event)
+        return true
+    end    
+    self.isOtherAlter = false
+    
+    local onTouchMoved = function(touch, event)
+    end
+    
+    local onTouchEnded = function(touch, event)
+    end
+    
+    self.listener = cc.EventListenerTouchOneByOne:create()
+    
+    self.listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    self.listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
+    self.listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = self:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(self.listener, self)
+    self.listener:setSwallowTouches(true)
+end
+
 function SummaryBossAlter:lose(entrance)
     -- if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
     --     s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)

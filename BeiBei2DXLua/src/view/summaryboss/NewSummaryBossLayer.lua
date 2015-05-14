@@ -19,6 +19,9 @@ function NewSummaryBossLayer:ctor(unit)
 	self:initBackground()
 	--ready go 之后添加boss
 	s_SCENE:callFuncWithDelay(1.5,function()
+        --添加音乐
+        playMusic(s_sound_Get_Outside,true)
+        --加boss
 		self:initBoss()
 	end)
     --boss下落后增加椰子
@@ -27,7 +30,7 @@ function NewSummaryBossLayer:ctor(unit)
     end)
 
     local function update(delta)
-        if self.gameStart and not self.gameOver then 
+        if self.gameStart and not self.gameOver and not self.gamePaused then 
             self.useTime = self.useTime + delta
         end
     end 
@@ -40,6 +43,8 @@ function NewSummaryBossLayer:initStageInfo(unit)
     self.gameStart = false
     --游戏结束的标志
     self.gameOver = false
+    --游戏暂停的标志
+    self.gamePaused = false
     --是否加过道具
     self.useItem = false
     --单元
@@ -203,11 +208,12 @@ function NewSummaryBossLayer:initBoss()
         self.girl:setAfraid(false)
         self.girl:setAnimation("normal")
         self.blink:stopAllActions()
+        self.blink:setOpacity(0)
     end
 end
 
 function NewSummaryBossLayer:initMat()
-	local mat = require("view.summaryboss.Mat").create(self,false,"coconut_dark")
+	local mat = require("view.summaryboss.Mat").create(self,s_CURRENT_USER.isFirstTime,"coconut_dark")
     mat:setPosition(s_DESIGN_WIDTH/2, 150)
     self:addChild(mat,1)
     self.mat = mat
@@ -223,6 +229,11 @@ function NewSummaryBossLayer:initMat()
     --划对单词后
     mat.success = function(stack)
         if self.gameOver then return end
+        if s_CURRENT_USER.isFirstTime then
+            s_CURRENT_USER.isFirstTime = false
+            saveUserToServer({['isFirstTime'] = s_CURRENT_USER.isFirstTime})
+        end
+        playWordSound(self.wordList[1])
         self.boss:stopAllActions()
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
         self.girl:setAnimation("right")
@@ -277,6 +288,7 @@ function NewSummaryBossLayer:initMat()
         s_SCENE:callFuncWithDelay(0.2 *math.pow(#stack,0.8) + 0.5,function ()
             print('self.currentBlood',self.currentBlood)
             if self.currentBlood > 0 then
+                playMusic(s_sound_Get_Outside)
                 self.boss:goBack(self.totalTime)
                 self:resetMat()
             else
@@ -322,6 +334,7 @@ function NewSummaryBossLayer:addChangeBtn()
                 --print('self.wrongWord',self.wrongWord)
             end
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            self.gamePaused = true
             local curtain = cc.LayerColor:create(cc.c4b(0,0,0,150),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
             self:addChild(curtain,99)
             curtain:setPosition(s_LEFT_X,0)
@@ -343,6 +356,7 @@ function NewSummaryBossLayer:addChangeBtn()
             s_SCENE:callFuncWithDelay(2.6,function (  )
                 --s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                 curtain:removeFromParent()
+                self.gamePaused = false
                 table.insert(self.wordList,self.wordList[1])
                 self:resetMat()
             end)
