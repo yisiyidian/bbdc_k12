@@ -332,7 +332,7 @@ function RegisterAccountView:showChooseSex()
 	local girlImg = "image/PersonalInfo/hj_personal_avatar.png"
 	local boyImg = "image/PersonalInfo/boy_head.png"
 
-	local headImg = cc.Sprite:create(boyImg)
+	local headImg = cc.Sprite:create(girlImg)
 	--local headImg = cc.Sprite:create("image/homescene/setup_head.png")
 	headImg:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self.headImg = headImg
@@ -365,7 +365,7 @@ function RegisterAccountView:showChooseSex()
 
 	--性别复选框 男
 	local checkBoxMale = ccui.CheckBox:create()
-	checkBoxMale:setTouchEnabled(false)
+	checkBoxMale:setTouchEnabled(true)
 	checkBoxMale:setName("Male")
 	checkBoxMale:loadTextures(
 		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal
@@ -376,7 +376,7 @@ function RegisterAccountView:showChooseSex()
 		)
 	checkBoxMale:addEventListener(handler(self, chkCallBack))
 	checkBoxMale:setPosition(0.5 * s_DESIGN_WIDTH - 100,s_DESIGN_HEIGHT*0.6 - 50)
-	checkBoxMale:setSelected(true)	--默认选中
+	checkBoxMale:setSelected(false)	--默认选中
 	self.checkBoxMale = checkBoxMale
 	self:addChild(checkBoxMale)
 	self.views[#self.views+1] = checkBoxMale
@@ -386,7 +386,7 @@ function RegisterAccountView:showChooseSex()
 	checkBoxMale:addChild(labelMan)
 	--女
 	local checkBoxFeMale = ccui.CheckBox:create()
-	checkBoxFeMale:setTouchEnabled(true)
+	checkBoxFeMale:setTouchEnabled(false)
 	checkBoxFeMale:setName("Female")
 	checkBoxFeMale:loadTextures(
 		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal
@@ -397,6 +397,7 @@ function RegisterAccountView:showChooseSex()
 		)
 	checkBoxFeMale:addEventListener(handler(self, chkCallBack))
 	checkBoxFeMale:setPosition(0.5 * s_DESIGN_WIDTH + 100,s_DESIGN_HEIGHT*0.6 - 50)
+	checkBoxFeMale:setSelected(true)
 	self.checkBoxFeMale = checkBoxFeMale
 	self:addChild(checkBoxFeMale)
 	self.views[#self.views+1] = checkBoxFeMale
