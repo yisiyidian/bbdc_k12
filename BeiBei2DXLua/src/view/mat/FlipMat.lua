@@ -14,11 +14,11 @@ local FlipMat = class("FlipMat", function()
 end)
 
 function FlipMat:init(word)
-    if word.find("|") == -1 end
+    if word.find(word,"|") == -1 then
         return {word}
     else
         return string.split(word, "|")
-
+    end
 end
 
 function FlipMat.create(word, m ,n)
@@ -295,35 +295,49 @@ function FlipMat.create(word, m ,n)
     end
 
     local back_box = cc.Layer:create()
-    local back_box_num = 0
     local updateSelectWord = function()
-        for i = 1, back_box_num do
-            main:removeChildByTag(i,true)
-            main:removeChildByTag(100+i,true)
-        end
-        local gap = 28
-        local left = s_DESIGN_WIDTH/2 - (#selectStack-1)*gap/2
-        for i = 1, #selectStack do
-            local term_back = cc.Sprite:create("image/newstudy/wordsbackgroundblue.png")
-            term_back:setPosition(left+(i-1)*gap,640)
-            term_back:setTag(i)
-            main:addChild(term_back)
-        end
-        for i = 1, #selectStack do
-            local term_char = cc.Label:createWithTTF(selectStack[i].main_character_content,'font/CenturyGothic.ttf',36)
-            term_char:setColor(cc.c4b(255,255,255,255))
-            term_char:setPosition(left+(i-1)*gap,640)
-            term_char:setTag(100+i)
-            main:addChild(term_char)
-        end
-        back_box_num = #selectStack
-        for i = 1,#main.word then
+        main:removeChildByTag(1,true)
+        local totalWord = ""
+        for i = 1,#main.word do
             if i ~= 1 then
-                for j = 1,#string.len(main.word[i]) do
-                    
-                end
+                totalWord = " "..main.word[i]
             end
         end
+
+        local sprite =  ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(28.25,4,28.75,70))
+        sprite:setPosition(s_DESIGN_WIDTH/2,640)
+        sprite:setContentSize(#selectStack * 16 + 79 ,74)
+        sprite:setTag(1)
+        main:addChild(sprite)
+        local word = ""
+        for i = 1, #selectStack do
+            word = word..selectStack[i].main_character_content
+        end
+
+        local label1 = cc.Label:createWithTTF(word,'font/CenturyGothic.ttf',36)
+        label1:setColor(cc.c4b(255,255,255,255))
+        label1:setPosition(30 ,sprite:getContentSize().height/2)
+        label1:ignoreAnchorPointForPosition(false)
+        label1:setAnchorPoint(0,0.5)
+        label1:setScale(1)
+        sprite:addChild(label1)
+
+        local line = cc.LayerColor:create(cc.c4b(208,212,215,255),#selectStack * 16,2)
+        line:setPosition(30 ,sprite:getContentSize().height*0.2)
+        line:ignoreAnchorPointForPosition(false)
+        line:setAnchorPoint(0,0.5)
+        line:setScale(1)
+        sprite:addChild(line)
+
+        local label2 = cc.Label:createWithTTF(totalWord,'font/CenturyGothic.ttf',36)
+        label2:setColor(cc.c4b(255,255,255,255))
+        label2:setPosition(sprite:getContentSize().width - 30 ,sprite:getContentSize().height/2)
+        label2:ignoreAnchorPointForPosition(false)
+        label2:setAnchorPoint(1,0.5)
+        label2:setScale(1)
+        sprite:addChild(label2)
+
+
     end
 
     -- local function
