@@ -130,8 +130,8 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
     self.wordGroupLabel = wordGroupLabel
 
 
-    --判断单词是否为词组 是词组的话显示此组本身 隐藏音标 反之 显示为空
-    if string.find(self.currentWord, "|") ~= -1 then
+    local a,b = string.find(self.currentWord, "|") 
+    if a == nil then
         --不是词组 把XXXXXX123132123 改为空 音标显示
         self.wordGroupLabel:setString("")
         self.soundMark:setVisible(true)

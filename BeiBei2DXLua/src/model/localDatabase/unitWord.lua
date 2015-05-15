@@ -215,7 +215,7 @@ function M.getUnitInfo(unitID)
         if  unit.wrongWordList == '' then
             unit.wrongWordList = {}
         else
-            unit.wrongWordList = split(unit.wrongWordList, "|")
+            unit.wrongWordList = split(unit.wrongWordList, "||")
             for i = 1, #unit.wrongWordList do
                 local wordname = unit.wrongWordList[i]
                 -- hash[wordname] = 1
@@ -508,7 +508,7 @@ function M.getAllWrongWordList()
     local wordPool = {}
     for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." ORDER BY unitID ;") do
         if row.wordList ~= '' then
-            local t = split(row.wordList, "|")
+            local t = split(row.wordList, "||")
             for i = 1, #t do
                 table.insert(wordPool, t[i])
             end

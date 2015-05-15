@@ -115,12 +115,12 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
         progressBar_total_number = s_CorePlayManager.wrongWordNum
     end
 
-    self.progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
-    self.progressBar:setPosition(bigWidth/2+44, 1054)
+    -- self.progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
+    -- self.progressBar:setPosition(bigWidth/2+44, 1054)
 
-    if wrongWordList ~= nil then
-       backColor:addChild(self.progressBar)
-    end
+    -- if wrongWordList ~= nil then
+    --    backColor:addChild(self.progressBar)
+    -- end
     
     self.totalWrongWordTip = TotalWrongWordTip.create()
     backColor:addChild(self.totalWrongWordTip,1)
@@ -133,26 +133,27 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber)
 
-    local currentWordOrWordGroup = self.wordInfo[2]
-    local tip 
-    if self.isWord == true then
-        currentWordOrWordGroup = self.wordInfo[2]
-    else
-        -- local word = split("abc abd", " ")
-        -- currentWordOrWordGroup = word[1]
-        -- local temp = split(self.wordInfo[2], word[1])
-        -- tip = "()"..temp[2]
-    end
+    local a,b = string.find(self.currentWord, "|") 
+    if a == nil then
 
-    if tip ~= nil then
-        local word_tip = cc.Label:createWithSystemFont(tip,"",50)
-        word_tip:setPosition(bigWidth/2, 1050)
-        word_tip:setColor(cc.c4b(31,68,102,255))
-        backColor:addChild(word_tip,1)
+    else
+        --是词组 把XXXXXX123132123 改为显示词组 隐藏音标 隐藏单词 放大字体
+        local wordGroup = string.split(self.wordInfo[2], "|")
+        local word = ""
+        for i=1,#wordGroup do
+            if i ~= 1 then
+                word = word.." "..wordGroup[i]
+            end
+        end
+        word = "_"..word
+        local  label = cc.Label:createWithSystemFont(word,"",50)
+        label:setPosition(bigWidth/2, 980)
+        label:setColor(cc.c4b(31,68,102,255))
+        backColor:addChild(label,1)
     end
     
     local word_meaning_label = cc.Label:createWithSystemFont(self.wordInfo[5],"",50)
-    word_meaning_label:setPosition(bigWidth/2, 950)
+    word_meaning_label:setPosition(bigWidth/2, 1050)
     word_meaning_label:setColor(cc.c4b(31,68,102,255))
     backColor:addChild(word_meaning_label,1)
     

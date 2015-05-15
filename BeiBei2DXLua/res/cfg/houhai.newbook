@@ -6,8 +6,8 @@
 1	evidence	1A_1	4
 1	approximately	1A_1	4
 1	basic	1A_1	4
-1	olive oil	1A_1	4
-1	account for	1A_1	4
+1	olive|oil	1A_1	4
+1	account|for	1A_1	4
 2	process	1A_2	4
 2	liquid	1A_2	4
 2	separate	1A_2	4
@@ -15,10 +15,10 @@
 2	harvest	1A_2	4
 2	leading	1A_2	4
 2	attacker	1A_2	4
-2	a variety of	1A_2	4
-2	heat up	1A_2	4
-2	drop down	1A_2	4
-3	religious 	1A_3	4
+2	a|variety|of	1A_2	4
+2	heat|up	1A_2	4
+2	drop|down	1A_2	4
+3	religious	1A_3	4
 3	ceremony	1A_3	4
 3	freshness	1A_3	4
 3	associated	1A_3	4
@@ -27,26 +27,26 @@
 3	benefit	1A_3	4
 3	enhance	1A_3	4
 3	confirm	1A_3	4
-3	breast cancer	1A_3	4
+3	breast|cancer	1A_3	4
 4	down	1A_4	4
 4	lamp	1A_4	4
 4	produce	1A_4	4
-4	recently 	1A_4	4
+4	recently	1A_4	4
 4	secret	1A_4	4
 4	sight	1A_4	4
 4	soap	1A_4	4
-4	traditional 	1A_4	4
-4	trans fats	1A_4	4
+4	traditional	1A_4	4
+4	trans|fats	1A_4	4
 5	remarkable	1B_1	3
 5	cuisine	1B_1	3
 5	immigration	1B_1	3
 5	shape	1B_1	3
-5	contribution 	1B_1	3
+5	contribution	1B_1	3
 5	inhabit	1B_1	3
 5	rodents	1B_1	3
-5	Puerto Rico	1B_1	3
-5	rich in	1B_1	3
-5	such as	1B_1	3
+5	Puerto|Rico	1B_1	3
+5	rich|in	1B_1	3
+5	such|as	1B_1	3
 6	shellfish	1B_2	3
 6	yam	1B_2	3
 6	aspect	1B_2	3
@@ -71,8 +71,8 @@
 8	lighthearted	2A_1	3
 8	splash	2A_1	3
 8	awareness	2A_1	3
-8	humpback whale	2A_1	3
-8	marine biologist	2A_1	3
+8	humpback|whale	2A_1	3
+8	marine|biologist	2A_1	3
 9	curiously	2A_2	3
 9	harm	2A_2	3
 9	complex	2A_2	3
@@ -109,17 +109,17 @@
 12	hospitalization	2B_2	4
 12	affection	2B_2	4
 12	beneficial	2B_2	4
-12	safe from 	2B_2	4
+12	safe|from	2B_2	4
 13	domestic	2B_3	4
 13	luxury	2B_3	4
 13	mystery	2B_3	4
 13	packed	2B_3	4
 13	ready	2B_3	4
-13	recording 	2B_3	4
+13	recording	2B_3	4
 13	rule	2B_3	4
 13	schedule	2B_3	4
 13	shock	2B_3	4
-13	thanks to	2B_3	4
+13	thanks|to	2B_3	4
 14	smell	2B_4	4
 14	team	2B_4	4
 14	tightly	2B_4	4
@@ -130,7 +130,7 @@
 14	attach	2B_4	4
 14	chance	2B_4	4
 14	clue	2B_4	4
-14	interaction  	2B_4	4
+14	interaction		2B_4	4
 15	archeologist	3A_1	4
 15	tomb	3A_1	4
 15	coffin	3A_1	4
@@ -146,9 +146,9 @@
 16	theory	3A_2	4
 16	injury	3A_2	4
 16	fracture	3A_2	4
-16	attached to	3A_2	4
-16	lead to	3A_2	4
-16	take control of	3A_2	4
+16	attached|to	3A_2	4
+16	lead|to	3A_2	4
+16	take|control|of	3A_2	4
 17	infection	3A_3	4
 17	antiquity	3A_3	4
 17	analyze	3A_3	4
@@ -186,7 +186,7 @@
 20	reddish	3B_2	2
 20	scene	3B_2	2
 20	understand	3B_2	2
-20	put forward	3B_2	2
+20	put|forward	3B_2	2
 21	terminal	4A_1	3
 21	conveniently	4A_1	3
 21	Located	4A_1	3
@@ -194,8 +194,8 @@
 21	reflect	4A_1	3
 21	economic	4A_1	3
 21	basement	4A_1	3
-21	information booth	4A_1	3
-21	Emergency Stop	4A_1	3
+21	information|booth	4A_1	3
+21	Emergency|Stop	4A_1	3
 22	feature	4A_2	3
 22	ceiling	4A_2	3
 22	modernization	4A_2	3
@@ -203,13 +203,13 @@
 22	landmark	4A_2	3
 22	threaten	4A_2	3
 22	destruction	4A_2	3
-22	in the name of	4A_2	3
-22	be worth doing	4A_2	3
+22	in|the|name|of	4A_2	3
+22	be|worth|doing	4A_2	3
 23	sightseer	4A_3	3
 23	recycle	4A_3	3
 23	officially	4A_3	3
 23	million	4A_3	3
-23	tobacco 	4A_3	3
+23	tobacco|	4A_3	3
 23	smoke	4A_3	3
 23	soldier	4A_3	3
 23	passage	4A_3	3
@@ -229,9 +229,9 @@
 25	cave	4B_2	3
 25	sculpture	4B_2	3
 25	preserved	4B_2	3
-25	crowd 	4B_2	3
-25	appeal to	4B_2	3
-25	World Heritage Site	4B_2	3
+25	crowd	4B_2	3
+25	appeal|to	4B_2	3
+25	World|Heritage|Site	4B_2	3
 26	traffic	4B_3	3
 26	traditional	4B_3	3
 26	refer	4B_3	3
@@ -249,7 +249,7 @@
 27	expose	5A_1	3
 27	widespread	5A_1	3
 27	distribute	5A_1	3
-27	in terms of	5A_1	3
+27	in|terms|of	5A_1	3
 28	loot	5A_2	3
 28	extend	5A_2	3
 28	currently	5A_2	3
@@ -258,7 +258,7 @@
 28	steal	5A_2	3
 28	curtain	5A_2	3
 28	hung	5A_2	3
-28	global warming	5A_2	3
+28	global|warming	5A_2	3
 29	focus	5A_3	3
 29	predict	5A_3	3
 29	storm	5A_3	3
@@ -288,8 +288,8 @@
 31	season	5B_2	3
 31	prediction	5B_2	3
 31	Celsius	5B_2	3
-31	tend to	5B_2	3
-32	Fahrenheit 	5B_3	3
+31	tend|to	5B_2	3
+32	Fahrenheit	5B_3	3
 32	slightly	5B_3	3
 32	equator	5B_3	3
 32	height	5B_3	3
@@ -315,7 +315,7 @@
 34	cyanide	6A_2	4
 34	stunned	6A_2	4
 34	consumption	6A_2	4
-34	ornament 	6A_2	4
+34	ornament	6A_2	4
 35	pollution	6A_3	4
 35	impact	6A_3	4
 35	conservation	6A_3	4
@@ -324,7 +324,7 @@
 35	global	6A_3	4
 35	concrete	6A_3	4
 35	powder	6A_3	4
-35	in addition	6A_3	4
+35	in|addition	6A_3	4
 36	involve	6A_4	4
 36	setting	6A_4	4
 36	receive	6A_4	4
@@ -333,7 +333,7 @@
 36	ornament	6A_4	4
 36	jewelry	6A_4	4
 36	concern	6A_4	4
-36	toward 	6A_4	4
+36	toward|	6A_4	4
 36	ingredient	6A_4	4
 37	surfboard	6B_1	3
 37	scan	6B_1	3
@@ -394,7 +394,7 @@
 42	straight	7A_3	3
 42	rough	7A_3	3
 42	hall	7A_3	3
-42	freight train	7A_3	3
+42	freight|train	7A_3	3
 43	perfume	7B_1	3
 43	emotion	7B_1	3
 43	insist	7B_1	3
@@ -404,7 +404,7 @@
 43	essence	7B_1	3
 43	synthetic	7B_1	3
 43	obtain	7B_1	3
-43	derive from	7B_1	3
+43	derive|from	7B_1	3
 44	authority	7B_2	3
 44	roundness	7B_2	3
 44	sparkle	7B_2	3
@@ -414,13 +414,13 @@
 44	emphasis	7B_2	3
 44	commercial	7B_2	3
 44	hype	7B_2	3
-44	precede by	7B_2	3
+44	precede|by	7B_2	3
 45	hanger	7B_3	3
 45	sale	7B_3	3
 45	glass	7B_3	3
 45	rare	7B_3	3
 45	balance	7B_3	3
-45	backbone  	7B_3	3
+45	backbone	7B_3	3
 45	wear	7B_3	3
 45	launch	7B_3	3
 45	fantasy	7B_3	3
@@ -442,7 +442,7 @@
 47	crowd	8A_2	2
 47	entrance	8A_2	2
 47	previous	8A_2	2
-47	various 	8A_2	2
+47	various		8A_2	2
 47	plentiful	8A_2	2
 47	geographic	8A_2	2
 48	manuscript	8B_1	3
@@ -451,9 +451,9 @@
 48	profitable	8B_1	3
 48	preserve	8B_1	3
 48	slain	8B_1	3
-48	driven by	8B_1	3
-48	name after	8B_1	3
-48	take over	8B_1	3
+48	driven|by	8B_1	3
+48	name|after	8B_1	3
+48	take|over	8B_1	3
 49	suspend	8B_2	3
 49	prior	8B_2	3
 49	unpredictable	8B_2	3
@@ -462,11 +462,11 @@
 49	misfortune	8B_2	3
 49	scatter	8B_2	3
 49	belongings	8B_2	3
-49	based on	8B_2	3
+49	based|on	8B_2	3
 50	wisdom	8B_3	3
 50	consent	8B_3	3
 50	unparalleled	8B_3	3
-50	incredible 	8B_3	3
+50	incredible	8B_3	3
 50	celebrated	8B_3	3
 50	version	8B_3	3
 50	shore	8B_3	3
@@ -483,7 +483,7 @@
 51	sumo	9A_1	3
 51	restriction	9A_1	3
 51	dimension	9A_1	3
-51	fall into place	9A_1	3
+51	fall|into|place	9A_1	3
 52	shame	9A_2	3
 52	shrine	9A_2	3
 52	illustrate	9A_2	3
@@ -520,7 +520,7 @@
 54	jealous	9B_1	2
 55	caravan	9B_2	2
 55	absent	9B_2	2
-55	camel 	9B_2	2
+55	camel	9B_2	2
 55	rub	9B_2	2
 55	approve	9B_2	2
 55	presence	9B_2	2
@@ -536,16 +536,16 @@
 56	unstoppable	10A_1	3
 56	pessimistic	10A_1	3
 56	environmentalist	10A_1	3
-56	in the long run	10A_1	3
+56	in|the|long|run	10A_1	3
 57	unexpected	10A_2	3
 57	critical	10A_2	3
 57	dire	10A_2	3
 57	consequence	10A_2	3
 57	shift	10A_2	3
 57	address	10A_2	3
-57	take place	10A_2	3
-57	have an impact on	10A_2	3
-57	as a result	10A_2	3
+57	take|place	10A_2	3
+57	have|an|impact|on	10A_2	3
+57	as|a|result	10A_2	3
 58	issue	10A_3	3
 58	arctic	10A_3	3
 58	extinction	10A_3	3
@@ -553,7 +553,7 @@
 58	amount	10A_3	3
 58	toward	10A_3	3
 58	slide	10A_3	3
-58	immediate 	10A_3	3
+58	immediate	10A_3	3
 58	Antarctica,	10A_3	3
 59	dogsled	10B_1	2
 59	urgently	10B_1	2
@@ -565,7 +565,7 @@
 59	corporation	10B_1	2
 59	harpoon	10B_1	2
 59	quantity	10B_1	2
-59	head toward	10B_1	2
+59	head|toward	10B_1	2
 60	resource	10B_2	2
 60	gem	10B_2	2
 60	rope	10B_2	2
@@ -622,10 +622,10 @@
 65	thrill	12A_1	1
 65	atmosphere	12A_1	1
 65	enterprise	12A_1	1
-65	crash 	12A_1	1
+65	crash	12A_1	1
 65	requirement	12A_1	1
 65	aboard	12A_1	1
-65	private 	12A_1	1
+65	private	12A_1	1
 65	realize	12A_1	1
 65	pilot	12A_1	1
 65	scheme	12A_1	1

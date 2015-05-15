@@ -144,7 +144,7 @@ function DataManager.loadK12Books()
                         bookUnitWord[bookName[i]][unit_word[1]] = unit_word[2]
                         current_unit = unit_word[1]
                     else
-                        bookUnitWord[bookName[i]][unit_word[1]] = bookUnitWord[bookName[i]][unit_word[1]]..'|'..unit_word[2]
+                        bookUnitWord[bookName[i]][unit_word[1]] = bookUnitWord[bookName[i]][unit_word[1]]..'||'..unit_word[2]
                     end
                     -- table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])
                 end

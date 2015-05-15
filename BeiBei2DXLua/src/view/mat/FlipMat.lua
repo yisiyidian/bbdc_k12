@@ -300,13 +300,14 @@ function FlipMat.create(word, m ,n)
         local totalWord = ""
         for i = 1,#main.word do
             if i ~= 1 then
-                totalWord = " "..main.word[i]
+                totalWord = totalWord.." "..main.word[i]
             end
         end
+        totalWord = " "..totalWord
 
         local sprite =  ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(28.25,4,28.75,70))
         sprite:setPosition(s_DESIGN_WIDTH/2,640)
-        sprite:setContentSize(#selectStack * 16 + 79 ,74)
+        sprite:setContentSize((#selectStack + string.len(totalWord)) * 16 + 79 ,74)
         sprite:setTag(1)
         main:addChild(sprite)
         local word = ""
