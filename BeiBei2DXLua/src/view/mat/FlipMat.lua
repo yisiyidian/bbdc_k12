@@ -14,8 +14,10 @@ local FlipMat = class("FlipMat", function()
 end)
 
 function FlipMat:init(word)
-    -- if word.find(" ") ~= -1 end
-    --     return  
+    if word.find("|") == -1 end
+        return {word}
+    else
+        return string.split(word, "|")
 
 end
 
@@ -29,10 +31,9 @@ function FlipMat.create(word, m ,n)
     main:setContentSize(main_width, main_height)
     main:setAnchorPoint(0.5,0)
     main:ignoreAnchorPointForPosition(false)
-    -- main:setPosition(blackColor:getContentSize().width/2,160)
-    -- blackColor:addChild(main)
 
     main.word = FlipMat:init(word)
+    word = main.word[1]
 
     main.success    = function()end
     main.fail       = function()end
@@ -293,9 +294,6 @@ function FlipMat.create(word, m ,n)
         firstFlipNode:stopAllActions()
     end
 
-
-
-    
     local back_box = cc.Layer:create()
     local back_box_num = 0
     local updateSelectWord = function()
@@ -303,12 +301,10 @@ function FlipMat.create(word, m ,n)
             main:removeChildByTag(i,true)
             main:removeChildByTag(100+i,true)
         end
-
         local gap = 28
         local left = s_DESIGN_WIDTH/2 - (#selectStack-1)*gap/2
-
         for i = 1, #selectStack do
-            local term_back = cc.Sprite:create("image/newstudy/wordsbackgroundblue.png") -- "image/newstudy/wordbackground.png"
+            local term_back = cc.Sprite:create("image/newstudy/wordsbackgroundblue.png")
             term_back:setPosition(left+(i-1)*gap,640)
             term_back:setTag(i)
             main:addChild(term_back)
@@ -321,6 +317,13 @@ function FlipMat.create(word, m ,n)
             main:addChild(term_char)
         end
         back_box_num = #selectStack
+        for i = 1,#main.word then
+            if i ~= 1 then
+                for j = 1,#string.len(main.word[i]) do
+                    
+                end
+            end
+        end
     end
 
     -- local function
