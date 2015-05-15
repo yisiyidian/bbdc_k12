@@ -21,7 +21,12 @@ end
 
 
 function LevelProgressPopup:ctor(index)
-
+    print("index "..index)
+    if tonumber(index) == 0 then
+        s_CURRENT_USER:setSummaryStep(s_summary_enterFirstPopup) 
+    elseif tonumber(index) == 1 then
+        s_CURRENT_USER:setSummaryStep(s_summary_enterSecondPopup) 
+    end
     --界面初始化
     --createPape()
     self:createSummary(index)

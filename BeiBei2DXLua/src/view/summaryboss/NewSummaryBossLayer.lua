@@ -11,6 +11,11 @@ function NewSummaryBossLayer.create(unit)
 end
 
 function NewSummaryBossLayer:ctor(unit)
+    if s_CURRENT_USER.summaryStep == s_summary_enterFirstPopup then
+        s_CURRENT_USER:setSummaryStep(s_summary_enterFirstLevel) 
+    elseif s_CURRENT_USER.summaryStep == s_summary_enterSecondPopup then
+        s_CURRENT_USER:setSummaryStep(s_summary_enterSecondLevel) 
+    end
     --s_SCENE:removeAllPopups()
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	--设置关卡信息
@@ -196,6 +201,7 @@ function NewSummaryBossLayer:initBoss()
 		if self.currentBlood > 0 then
             -- self.isLose = true
             self:gameOverFunc(false)   
+            s_CURRENT_USER:setSummaryStep(s_summary_failFirstLevel) 
         end
 	end
     --boss靠近
@@ -228,6 +234,7 @@ function NewSummaryBossLayer:initMat()
     end
     --划对单词后
     mat.success = function(stack)
+        s_CURRENT_USER:setSummaryStep(s_summary_doFirstWord) 
         if self.gameOver then return end
         if s_CURRENT_USER.k12SmallStep < s_K12_summaryBoss then
             s_CURRENT_USER:setK12SmallStep(s_K12_summaryBoss)
@@ -292,6 +299,7 @@ function NewSummaryBossLayer:initMat()
                 self:resetMat()
             else
                 self:gameOverFunc(true)
+                s_CURRENT_USER:setSummaryStep(s_summary_successFirstLevel) 
             end
         end)
 	end
