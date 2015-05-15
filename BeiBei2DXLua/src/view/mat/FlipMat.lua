@@ -13,10 +13,14 @@ local FlipMat = class("FlipMat", function()
     return cc.Layer:create()
 end)
 
-function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
-    if spineName == nil then
-        spineName = "coconut_light"
-    end
+function FlipMat:init(word)
+    -- if word.find(" ") ~= -1 end
+    --     return  
+
+end
+
+function FlipMat.create(word, m ,n)
+    spineName = "coconut_light"
 
     local main_width    = 640
     local main_height   = 640
@@ -27,6 +31,8 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
     main:ignoreAnchorPointForPosition(false)
     -- main:setPosition(blackColor:getContentSize().width/2,160)
     -- blackColor:addChild(main)
+
+    main.word = FlipMat:init(word)
 
     main.success    = function()end
     main.fail       = function()end
@@ -123,7 +129,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
                 local randomIndex = math.random(1, #charaster_set_filtered)
                 node = FlipNode.create(spineName, charaster_set_filtered[randomIndex], i, j)
 
-                if isNewPlayerModel == true then
+                if s_CURRENT_USER.slideNum == 1 then
                     node:setPosition(320, -1136)
                     main:addChild(node)
 
@@ -280,7 +286,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
         end
     end
     
-    if isNewPlayerModel == true then
+    if s_CURRENT_USER.slideNum == 1 then
         main.guidePoint()
         main.cocoAnimation() 
         main.finger_action()
@@ -458,7 +464,7 @@ function FlipMat.create(word, m ,n, isNewPlayerModel, spineName)
         checkTouchLocation(location)
 
         if onNode then
-            if isGuide and isNewPlayerModel then
+            if isGuide and s_CURRENT_USER.slideNum == 1 then
                stopAllGuide()
             end
 
