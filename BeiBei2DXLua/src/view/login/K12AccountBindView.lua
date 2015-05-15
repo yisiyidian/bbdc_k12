@@ -24,7 +24,7 @@ K12AccountBindView.Type_teacher = 2
 ----need to do
 
 local function GotoStudy()
-    s_CURRENT_USER.bookKey = 'primary_1'
+    s_CURRENT_USER.bookKey = 'houhai'
     saveUserToServer({['bookKey']=s_CURRENT_USER.bookKey})
     s_SCENE:removeAllPopups()
     s_CorePlayManager.enterHomeLayer()

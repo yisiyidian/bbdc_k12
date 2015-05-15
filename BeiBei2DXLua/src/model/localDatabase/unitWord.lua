@@ -406,6 +406,9 @@ function M.initUnitInfo(unitID)
     local bookKey   = s_CURRENT_USER.bookKey
     local username  = s_CURRENT_USER.username
     local time      = os.time()
+    print('-----------unitID-----------')
+    print('bookKey:'..bookKey)
+    print_lua_table(s_BookUnitWord[bookKey])
     local wordlist = s_BookUnitWord[bookKey][''..unitID]
     local currentWordIndex = 1
     local unitState = 0

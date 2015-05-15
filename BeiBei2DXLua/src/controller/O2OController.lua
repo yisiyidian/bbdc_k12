@@ -336,7 +336,9 @@ function O2OController.loadConfigs()
     s_BookWord = s_DataManager.loadK12BookWords()
     s_BookUnitWord = s_DataManager.loadK12Books()
     s_BookUnitName = s_DataManager.loadUnitName()
-    print('load book unit name')
+    s_CURRENT_USER.bookKey = 'houhai'
+    print('load book unit name:'..s_CURRENT_USER.bookKey)
+    print_lua_table(s_BookUnitWord)
     print_lua_table(s_BookUnitName)
     -- print_lua_table(s_BookUnitWord['primary_1'])
 

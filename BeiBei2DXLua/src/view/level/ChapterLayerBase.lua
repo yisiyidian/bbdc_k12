@@ -323,17 +323,17 @@ function ChapterLayerBase:plotDecoration()
                 lock:addChild(unitText, 130)
 
                 if #unitName == 1 then
-                    local number = cc.Label:createWithSystemFont(''..unitName[1],'',35)
+                    local number = cc.Label:createWithSystemFont(''..unitName[1],'',30)
                     number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-20)
                     number:setColor(cc.c3b(164, 125, 46))
                     lock:addChild(number, 130)
                 else
-                    local number = cc.Label:createWithSystemFont(''..unitName[1],'',35)
+                    local number = cc.Label:createWithSystemFont(''..unitName[1],'',30)
                     number:setPosition(lock:getContentSize().width/2-5, lock:getContentSize().height/2-20)
                     number:setColor(cc.c3b(164, 125, 46))
                     lock:addChild(number, 130)
                     local number2 = cc.Label:createWithSystemFont('('..unitName[2]..')','',23)
-                    number2:setPosition(lock:getContentSize().width/2+20, lock:getContentSize().height/2-22)
+                    number2:setPosition(lock:getContentSize().width/2+30, lock:getContentSize().height/2-22)
                     number2:setColor(cc.c3b(164, 125, 46))
                     lock:addChild(number2, 130)
                 end
