@@ -36,7 +36,6 @@
 4	sight	1A_4	4
 4	soap	1A_4	4
 4	traditional 	1A_4	4
-4	Share their secret	1A_4	4
 4	trans fats	1A_4	4
 5	remarkable	1B_1	3
 5	cuisine	1B_1	3
@@ -57,7 +56,6 @@
 6	import	1B_2	3
 6	assumption	1B_2	3
 6	base	1B_2	3
-6	be heavily influenced by	1B_2	3
 7	oregano	1B_3	3
 7	cilantro	1B_3	3
 7	handful	1B_3	3
@@ -215,7 +213,6 @@
 23	smoke	4A_3	3
 23	soldier	4A_3	3
 23	passage	4A_3	3
-23	secrets	4A_3	3
 23	private	4A_3	3
 24	vibrant	4B_1	3
 24	derive	4B_1	3
@@ -524,7 +521,6 @@
 55	caravan	9B_2	2
 55	absent	9B_2	2
 55	camel 	9B_2	2
-55	races	9B_2	2
 55	rub	9B_2	2
 55	approve	9B_2	2
 55	presence	9B_2	2
@@ -576,7 +572,6 @@
 60	respond	10B_2	2
 60	shelf	10B_2	2
 60	pull	10B_2	2
-60	minerals	10B_2	2
 60	thin	10B_2	2
 60	jewel	10B_2	2
 60	polar	10B_2	2
@@ -634,7 +629,6 @@
 65	realize	12A_1	1
 65	pilot	12A_1	1
 65	scheme	12A_1	1
-65	license  for	12A_1	1
 66	conquer	12B_1	2
 66	necessity	12B_1	2
 66	ease	12B_1	2

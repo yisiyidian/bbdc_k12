@@ -157,17 +157,10 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
     backColor:addChild(word_meaning_label,1)
     
     local size_big = backColor:getContentSize()
-    local isNewPlayer = true
-    if s_CURRENT_USER.slideNum == 1  then
-        isNewPlayer = true
-    else
-        isNewPlayer = false
-    end
-    
     self.lastButton = self:createLastButton(word,wrongNum,wrongWordList)
     backColor:addChild(self.lastButton)
 
-    mat = FlipMat.create(self.wordInfo[2],4,4,isNewPlayer,"coconut_light")
+    mat = FlipMat.create(self.wordInfo[2],4,4)
     mat:setPosition(size_big.width/2, 200)
     backColor:addChild(mat,2)
     
