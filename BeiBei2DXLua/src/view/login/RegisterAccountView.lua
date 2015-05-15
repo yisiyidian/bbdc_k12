@@ -36,7 +36,7 @@ RegisterAccountView.STEP_8 = 8	--密码找回
 --构造
 function RegisterAccountView:ctor(step)
 	self:init(step)
-	self.debug = true
+	self.debug = false
 end
 
 function RegisterAccountView:showErrorIcon()
