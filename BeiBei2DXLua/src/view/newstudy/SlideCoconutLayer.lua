@@ -138,10 +138,10 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
     if self.isWord == true then
         currentWordOrWordGroup = self.wordInfo[2]
     else
-        local word = split("abc abd", " ")
-        currentWordOrWordGroup = word[1]
-        local temp = split(self.wordInfo[2], word[1])
-        tip = "()"..temp[2]
+        -- local word = split("abc abd", " ")
+        -- currentWordOrWordGroup = word[1]
+        -- local temp = split(self.wordInfo[2], word[1])
+        -- tip = "()"..temp[2]
     end
 
     if tip ~= nil then
