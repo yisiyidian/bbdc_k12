@@ -141,17 +141,17 @@ function DataManager.loadK12Books()
                     -- print(lines[j])
                     unit_word = split(lines[j],"\t")
                     if unit_word[1] - current_unit ~= 0 then
-                        bookUnitWord[bookName[i]][unit_word[1]] = unit_word[2]
+                        bookUnitWord[bookName[i]][unit_word[1]] = string.lower(unit_word[2])
                         current_unit = unit_word[1]
                     else
-                        bookUnitWord[bookName[i]][unit_word[1]] = bookUnitWord[bookName[i]][unit_word[1]]..'||'..unit_word[2]
+                        bookUnitWord[bookName[i]][unit_word[1]] = bookUnitWord[bookName[i]][unit_word[1]]..'||'..string.lower(unit_word[2])
                     end
                     -- table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])
                 end
             end
-            print('test_houhai')
-            print(bookName[i]..'\t'..(word_count-1))
-            print_lua_table(bookUnitWord[bookName[i]])
+            -- print('test_houhai')
+            -- print(bookName[i]..'\t'..(word_count-1))
+            -- print_lua_table(bookUnitWord[bookName[i]])
         end
     return bookUnitWord
 end
@@ -220,7 +220,7 @@ function DataManager.loadK12BookWords()
                 -- word_count = word_count + 1
                 if lines[j] ~= "" then
                     unit_word = split(lines[j],"\t")
-                    table.insert(bookWord[bookName[i]], unit_word[2])
+                    table.insert(bookWord[bookName[i]], string.lower(unit_word[2]))
                 end
             end
             -- print('load book word')
