@@ -69,6 +69,17 @@ function LevelProgressPopup:createSummary(index)
     local go_button = Button.create("long","blue","GO") 
     go_button:setPosition(background:getContentSize().width * 0.5 - 2, background:getContentSize().height * 0.13)
 
+    local close_Click = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            s_SCENE:removeAllPopups()
+        end
+    end
+    --加入关闭按钮
+    local close_button = ccui.Button:create("image/button/button_close.png")
+    close_button:setPosition(background:getContentSize().width - 20,background:getContentSize().height - 20)
+    close_button:addTouchEventListener(close_Click)
+    background:addChild(close_button)
+
     local function button_func(  )
         playSound(s_sound_buttonEffect) 
 
