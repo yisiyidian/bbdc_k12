@@ -234,7 +234,7 @@ function DownloadSoundController:releaseDownload()
     end
 
     if self.am ~= nil then
-        self.am:release()
+        -- self.am:release()  --release 在Android会崩溃
         self.am =nil
     end
 end
