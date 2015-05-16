@@ -43,8 +43,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     layer.isPaused = false
     layer.isHinting = false
     layer.currentHintWord = {false,false,false}
-    layer.wordStack = {}
-    layer.letterStack = {}
+    layer.wordStack = nil
     layer.firstIndex = 1
     layer.combo = 0
     layer.leftTime = 0
@@ -53,6 +52,11 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     layer.useItem = false
     layer.entrance = entrance
     layer.wordList = wordList
+    --矩阵大小
+    layer.length = 5
+    if s_CorePlayManager.currentUnitID == 1 then
+        layer.length = 4
+    end
     -- slide coco
     local slideCoco = {}
     slideCoco[1] = s_sound_slideCoconut
@@ -127,7 +131,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         local match = false
         for i = 1, #layer.wordPool[layer.currentIndex] do
             if layer.crabOnView[i] then
-                if selectWord == layer.wordPool[layer.currentIndex][i] then
+                if selectWord == layer.wordPool[layer.currentIndex][i][1] then
                     playWordSound(selectWord)
                     killedCrabCount = killedCrabCount + 1
                     layer.rightWord = layer.rightWord + 1
@@ -151,7 +155,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                     
                     if layer.currentHintWord[i] or layer.rightWord > layer.maxCount then
                         bullet_damage = 1
-                        layer:addMapInfo(selectWord)
+                        layer:addMapInfo(layer.wordPool[layer.currentIndex][i])
                     else
                         bullet_damage = 2 + math.floor(layer.combo / 3)
                         local hasHint = false
@@ -298,8 +302,8 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                                 layer.globalLock = true
                                 layer.currentIndex = layer.currentIndex + 1
                                 killedCrabCount = 0
-                                for m = 1, 5 do
-                                    for n = 1, 5 do
+                                for m = 1, layer.length do
+                                    for n = 1, layer.length do
                                         local remove = cc.CallFunc:create(function() 
     --                                        layer.coconut[m][n]:removeFromParent(true)    
                                         end,{})
@@ -351,22 +355,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         layer.girl:addAnimation(0,'girl_happy',false)
                         layer.girl:addAnimation(0,s,true)
                         if killedCrabCount == #layer.wordPool[layer.currentIndex] then
-                        --next group
---                             layer.globalLock = true
---                             layer.currentIndex = layer.currentIndex + 1
---                             killedCrabCount = 0
---                             for m = 1, 5 do
---                                 for n = 1, 5 do
---                                     local remove = cc.CallFunc:create(function() 
--- --                                        layer.coconut[m][n]:removeFromParent(true)    
---                                     end,{})
---                                     layer.coconut[m][n]:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7)),remove))
---                                 end
---                             end
---                             layer:runAction(cc.Sequence:create(cc.DelayTime:create(1.0),cc.CallFunc:create(function() 
---                                 layer.currentHintWord = {false,false,false}
---                                 layer:initMap(chapter)
---                             end,{})))
+
                         else
                             s_SCENE:callFuncWithDelay(0.2 * math.pow(#selectWord,0.8),function (  )
                                 -- body
@@ -453,8 +442,8 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         end
         if layer.onNode then
             layer.isPaused = true
-            for i = 1, 5 do
-                for j = 1,5 do
+            for i = 1, layer.length do
+                for j = 1,layer.length do
                     layer.coconut[i][j]:stopAllActions()
                     layer.coconut[i][j]:setScale(scale)
                 end
@@ -463,6 +452,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             if not startNode.hasSelected then
                 selectStack[#selectStack+1] = startNode
                 layer:updateWord(selectStack,chapter)
+                
                 --startNode.hasSelected = true
                 startNode.addSelectStyle()
                 startNode.right()
@@ -484,8 +474,8 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                 layer.isPaused = true
                 layer:crabBig(chapter,i)
                 layer.onCrab = i
-                for m = 1, 5 do
-                    for n = 1,5 do
+                for m = 1, layer.length do
+                    for n = 1,layer.length do
                         if layer.coconut[m][n].isFirst == i then
                             layer.coconut[m][n]:runAction(cc.Repeat:create(cc.Sequence:create(cc.ScaleTo:create(0.5,1.2 * scale),cc.ScaleTo:create(0.5,1.0 * scale)),2))
                             break
@@ -551,23 +541,6 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
 
         if startAtNode then
             startAtNode = false
-            -- local x = location.x - startTouchLocation.x
-            -- local y = location.y - startTouchLocation.y
-
-            -- if math.abs(x) > 5 or math.abs(y) > 5 then
-            --     if chapter ~= 2 then
-            --         if y > x and y > -x then
-            --             startNode:up()
-            --         elseif y < x and y < -x then
-            --             startNode:down()
-            --         elseif y > x and y < -x then
-            --             startNode:left()
-            --         else
-            --             startNode:right()
-            --         end
-            --     end
-            --     startAtNode = false
-            -- end
         else
             if layer.onNode then
                 local currentNode = layer.coconut[layer.current_node_x][layer.current_node_y]
@@ -749,33 +722,28 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
 end
 
 function SummaryBossLayer:updateWord(selectStack,chapter)
-    for i = 1, #self.wordStack do
-            self.wordStack[i]:stopAllActions()
-            self.wordStack[i]:removeFromParent()
+    if self.wordStack ~= nil then
+        self.wordStack:stopAllActions()
+        self.wordStack:removeFromParent()
+    end
+    self.wordStack = nil
 
-            self.letterStack[i]:removeFromParent()
-    end
-    self.wordStack = {}
-    self.letterStack = {}
-        
-    local count = #selectStack
-    local gap = 32
-    local left = (s_DESIGN_WIDTH - (count-1)*gap)/2
-        
+    local w = ''
     for i = 1, #selectStack do
-        local wordBack = cc.Sprite:create(string.format("image/summarybossscene/global_zongjiebossdancixianshi_%d.png",chapter))
-            --wordBack:setScaleX(count * gap/wordBack:getContentSize().width + 1.0/5)
-        wordBack:setPosition(left + gap*(i - 1), 0.72*s_DESIGN_HEIGHT)
-        --wordBack:setScale(0.7)
-        self:addChild(wordBack)
-        self.wordStack[i] = wordBack
-        local letter = cc.Label:createWithTTF(selectStack[i].main_character_content,"font/CenturyGothic.ttf",36)
-        --letter:setScale(10 / 7)
-        --letter:setColor(cc.c3b(0,0,0))
-        letter:setPosition(left + gap*(i - 1), 0.72*s_DESIGN_HEIGHT)
-        self:addChild(letter,1)
-        self.letterStack[i] = letter
+        w = w..selectStack[i].main_character_content
     end
+    if self.wordPool[self.currentIndex][1][2] ~= '' then
+        w = w..' '..self.wordPool[self.currentIndex][1][2]
+    end
+    local sprite =  ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(28.25,4,28.75,70))
+    sprite:setPosition(s_DESIGN_WIDTH/2,0.72*s_DESIGN_HEIGHT)
+    sprite:setContentSize(string.len(w) * 16 + 79 ,74)
+    self:addChild(sprite)
+    self.wordStack = sprite
+    local letter = cc.Label:createWithTTF(w,"font/CenturyGothic.ttf",36)
+    letter:setPosition(sprite:getContentSize().width / 2,sprite:getContentSize().height / 2)
+    sprite:addChild(letter,1)
+
 end
 
 function SummaryBossLayer:initBossLayer_back(chapter)
@@ -820,11 +788,11 @@ function SummaryBossLayer:initBossLayer_back(chapter)
     --add hole
     local hole = {}    
     local gap = 120
-    local left = (s_DESIGN_WIDTH - (5 - 1)*gap)/2
-    local bottom = 220
-    for i = 1, 5 do
+    local left = (s_DESIGN_WIDTH - (self.length - 1)*gap)/2
+    local bottom = 220 + (5 - self.length) * 50
+    for i = 1, self.length do
         hole[i] = {}
-        for j = 1, 5 do
+        for j = 1, self.length do
             hole[i][j] = cc.Sprite:create(string.format("image/summarybossscene/hole_%d.png",chapter))
             hole[i][j]:setScale(0.92)
             hole[i][j]:setPosition(left + gap * (i - 1), bottom + gap * (j - 1))
@@ -1127,16 +1095,32 @@ function SummaryBossLayer:initWordList(word)
     -- self.currentBlood = self.totalBlood
     -- self.totalTime = levelConfig.summary_boss_time
 
+    local n = 3 --最多出现的词数
+    if s_CorePlayManager.currentUnitID == 1 then
+        n = 1
+    end
 
     while true do
         local totalLength = 0
         local tmp = {}
-        for i = 1, 3 do
+        for i = 1, n do
             local w = wordList[index]
-            if(totalLength + string.len(w) <= 25) then
-                tmp[#tmp + 1] = w
-                totalLength = totalLength + string.len(w)
-                index = index + 1
+            local w_split = split(w,'|')
+            if(totalLength + string.len(w) <= self.length * self.length) then
+                if #w_split == 1 then
+                    tmp[#tmp + 1] = {w,'',w}
+                    totalLength = totalLength + string.len(w)
+                    index = index + 1
+                else
+                    if i == 1 then
+                        tmp[#tmp + 1] = {w_split[1],w_split[2],w}
+                        totalLength = totalLength + string.len(w_split[1])
+                        index = index + 1
+                    end
+                    
+                    
+                    break
+                end
                 if index > #wordList then
                     self.wordPool[#self.wordPool + 1] = tmp
                     break
@@ -1153,26 +1137,26 @@ end
 function SummaryBossLayer:initStartIndex(index)
     self.startIndexPool = {}
     if #self.wordPool[index] == 1 then
-        local localgap = 25 - string.len(self.wordPool[index][1])
+        local localgap = self.length * self.length - string.len(self.wordPool[index][1][1])
         local randomStart = math.random(0,localgap)
         self.startIndexPool[#self.startIndexPool + 1] = randomStart + 1
     elseif #self.wordPool[index] == 2 then
-        local localgap = 25 - string.len(self.wordPool[index][1]) - string.len(self.wordPool[index][2])
+        local localgap = self.length * self.length - string.len(self.wordPool[index][1][1]) - string.len(self.wordPool[index][2][1])
         local randomStart1 = math.random(0,localgap)
         localgap = localgap - randomStart1
         local randomStart2 = math.random(0,localgap)
         self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + 1
-        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1]) + randomStart2 + 1
+        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1][1]) + randomStart2 + 1
     elseif #self.wordPool[index] == 3 then
-        local localgap = 25 - string.len(self.wordPool[index][1]) - string.len(self.wordPool[index][2]) - string.len(self.wordPool[index][3])
+        local localgap = self.length * self.length - string.len(self.wordPool[index][1][1]) - string.len(self.wordPool[index][2][1]) - string.len(self.wordPool[index][3][1])
         local randomStart1 = math.random(0,localgap)
         localgap = localgap - randomStart1
         local randomStart2 = math.random(0,localgap)
         localgap = localgap - randomStart2
         local randomStart3 = math.random(0,localgap)
         self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + 1
-        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1]) + randomStart2 + 1
-        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1]) + randomStart2 + string.len(self.wordPool[index][2]) + randomStart3 + 1        
+        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1][1]) + randomStart2 + 1
+        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1][1]) + randomStart2 + string.len(self.wordPool[index][2][1]) + randomStart3 + 1        
     end
 end
 
@@ -1238,8 +1222,8 @@ function SummaryBossLayer:initCrab1()
             --delaytime = 1.5
         end
         self.crab[i]:runAction(cc.Sequence:create(cc.DelayTime:create(1.1 + delaytime),appear))
-        self.ccbcrab[i]['meaningSmall']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i]).wordMeaningSmall)
-        self.ccbcrab[i]['meaningBig']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i]).wordMeaningSmall)
+        self.ccbcrab[i]['meaningSmall']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i][3]).wordMeaningSmall)
+        self.ccbcrab[i]['meaningBig']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i][3]).wordMeaningSmall)
     end
     self.crab[self.firstIndex]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
 end
@@ -1270,7 +1254,7 @@ function SummaryBossLayer:initCrab2(chapter)
         hand:setAnchorPoint(0.5,0.7)
         hand:setPosition(0.5 * self.crab[i]:getContentSize().width,-10)
         self.crab[i]:addChild(hand)
-        local meaning = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i]).wordMeaningSmall,'',28)
+        local meaning = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i][3]).wordMeaningSmall,'',28)
         if chapter == 3 then
             meaning:setColor(cc.c3b(0,0,0))
         end
@@ -1322,19 +1306,24 @@ function SummaryBossLayer:initMapInfoByIndex(startIndex)
             local char = string.char(96+i)
             charaster_set_filtered[#charaster_set_filtered+1] = char
         end
-        local main_logic_mat = getRandomBossPath()
-        for i = 1, 5 do
+        local main_logic_mat
+        if self.length == 4 then
+            main_logic_mat = randomMat(4, 4)
+        else
+            main_logic_mat = getRandomBossPath()
+        end
+        for i = 1, self.length do
             self.character[k][i] = {}
             self.isFirst[k][i] = {}
             self.isCrab[k][i] = {}
-            for j = 1, 5 do
+            for j = 1, self.length do
                 local randomIndex = math.random(1, #charaster_set_filtered)
                 self.isFirst[k][i][j] = 0
                 self.isCrab[k][i][j] = 0
                 if #self.wordPool[k] == 1 then
                     local diff = main_logic_mat[i][j] - self.startIndexPool[1]
-                    if diff >= 0 and diff < string.len(self.wordPool[k][1]) then
-                        self.character[k][i][j] = string.sub(self.wordPool[k][1],diff+1,diff+1)
+                    if diff >= 0 and diff < string.len(self.wordPool[k][1][1]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][1][1],diff+1,diff+1)
                         self.isCrab[k][i][j] = 1
                         if diff == 0 then
                             self.isFirst[k][i][j] = 1
@@ -1347,11 +1336,11 @@ function SummaryBossLayer:initMapInfoByIndex(startIndex)
                 elseif #self.wordPool[k] == 2 then
                     local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
                     local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
-                    if diff1 >= 0 and diff1 < string.len(self.wordPool[k][1]) then
-                        self.character[k][i][j] = string.sub(self.wordPool[k][1],diff1+1,diff1+1)
+                    if diff1 >= 0 and diff1 < string.len(self.wordPool[k][1][1]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][1][1],diff1+1,diff1+1)
                         self.isCrab[k][i][j] = 1
-                    elseif diff2 >= 0 and diff2 < string.len(self.wordPool[k][2]) then
-                        self.character[k][i][j] = string.sub(self.wordPool[k][2],diff2+1,diff2+1)
+                    elseif diff2 >= 0 and diff2 < string.len(self.wordPool[k][2][1]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][2][1],diff2+1,diff2+1)
                         self.isCrab[k][i][j] = 2
                     else
                         local randomIndex = math.random(1, #charaster_set_filtered)
@@ -1368,14 +1357,14 @@ function SummaryBossLayer:initMapInfoByIndex(startIndex)
                     local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
                     local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
                     local diff3 = main_logic_mat[i][j] - self.startIndexPool[3]
-                    if diff1 >= 0 and diff1 < string.len(self.wordPool[k][1]) then
-                        self.character[k][i][j] = string.sub(self.wordPool[k][1],diff1+1,diff1+1)
+                    if diff1 >= 0 and diff1 < string.len(self.wordPool[k][1][1]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][1][1],diff1+1,diff1+1)
                         self.isCrab[k][i][j] = 1
-                    elseif diff2 >= 0 and diff2 < string.len(self.wordPool[k][2]) then
-                        self.character[k][i][j] = string.sub(self.wordPool[k][2],diff2+1,diff2+1)
+                    elseif diff2 >= 0 and diff2 < string.len(self.wordPool[k][2][1]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][2][1],diff2+1,diff2+1)
                         self.isCrab[k][i][j] = 2
-                    elseif diff3 >= 0 and diff3 < string.len(self.wordPool[k][3]) then
-                        self.character[k][i][j] = string.sub(self.wordPool[k][3],diff3+1,diff3+1)
+                    elseif diff3 >= 0 and diff3 < string.len(self.wordPool[k][3][1]) then
+                        self.character[k][i][j] = string.sub(self.wordPool[k][3][1],diff3+1,diff3+1)
                         self.isCrab[k][i][j] = 3
                     else
                         local randomIndex = math.random(1, #charaster_set_filtered)
@@ -1406,9 +1395,9 @@ function SummaryBossLayer:addMapInfo(word)
     else
         local length = string.len(word)
         for i = 1,#self.wordPool[#self.wordPool] do
-            length = string.len(self.wordPool[#self.wordPool][i]) + length
+            length = string.len(self.wordPool[#self.wordPool][i][1]) + length
         end
-        if length > 25 then
+        if length > self.length ^ 2 then
             flag = true
         end
     end
@@ -1436,11 +1425,11 @@ function SummaryBossLayer:initMap(chapter)
         self.crabOnView[i] = true
     end
     
-    for i = 1, 5 do
+    for i = 1, self.length do
         if self.currentIndex == 1 then
             self.coconut[i] = {}
         end
-        for j = 1, 5 do
+        for j = 1, self.length do
             
              if self.currentIndex > 1 then
                 self.coconut[i][j].main_character_content = self.character[self.currentIndex][i][j]
@@ -1487,17 +1476,20 @@ function SummaryBossLayer:initMap(chapter)
             if self.currentIndex == 1 then
                 --delaytime = 1.5
             end
-            if i == 5 and j == 1 then
+            if i == self.length and j == 1 then
                 local unlock = cc.CallFunc:create(function() 
                     self.gameStart = true
                     self.globalLock = false
                 end,{})
-                self.coconut[i][j]:runAction(cc.Sequence:create(cc.DelayTime:create(0.1 * (3 + i - j) + delaytime),cc.ScaleTo:create(0.1, scale),unlock))
+                self.coconut[i][j]:runAction(cc.Sequence:create(cc.DelayTime:create(0.1 * (self.length - 1 + i - j) + delaytime),cc.ScaleTo:create(0.1, scale),unlock))
             else
-                self.coconut[i][j]:runAction(cc.Sequence:create(cc.DelayTime:create(0.1 * (3 + i - j) + delaytime),cc.ScaleTo:create(0.1, scale)))
+                self.coconut[i][j]:runAction(cc.Sequence:create(cc.DelayTime:create(0.1 * (self.length - 1 + i - j) + delaytime),cc.ScaleTo:create(0.1, scale)))
             end
             self.coconut[i][j].isFirst = self.isFirst[self.currentIndex][i][j]
         end
+    end
+    if self.wordPool[self.currentIndex][1][2] ~= '' then
+        self:updateWord('',chapter)
     end
     
     self:initCrab(chapter)
@@ -1508,9 +1500,10 @@ function SummaryBossLayer:checkTouchLocation(location)
     local main_width    = 640
     
     local gap       = 120
-    local left      = (main_width - (5-1)*gap) / 2
-    local main_height   = 220 * 2 + 4 * gap
-    local bottom    = 220
+    local left      = (main_width - (self.length-1)*gap) / 2
+    
+    local bottom    = 220 + (5 - self.length) * 50
+    local main_height   = bottom * 2 + (self.length - 1) * gap
     local i = 0
     local j = 0
 
@@ -1658,8 +1651,8 @@ function SummaryBossLayer:hint()
     end
     self.currentHintWord[index] = true
     self.crab[self.firstIndex]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
-    for i = 1, 5 do
-        for j = 1, 5 do
+    for i = 1, self.length do
+        for j = 1, self.length do
             if self.isCrab[self.currentIndex][i][j] == index then
                 self.coconut[i][j]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
             end
@@ -1673,7 +1666,7 @@ function SummaryBossLayer:hint()
         end
         if self.bubble[8] == nil then
             local bubble = ccui.Scale9Sprite:create('image/summarybossscene/bubble1.png',cc.rect(0,0,175,88),cc.rect(60, 0, 55, 88))
-            local start_label = cc.Label:createWithSystemFont('恩~这个单词\n应该是'..self.wordPool[self.currentIndex][index],'',20)
+            local start_label = cc.Label:createWithSystemFont('恩~这个单词\n应该是'..self.wordPool[self.currentIndex][index][1],'',20)
             bubble:setContentSize(cc.size(start_label:getContentSize().width + 30,88))
             bubble:ignoreAnchorPointForPosition(false)
             bubble:setAnchorPoint(0,0)
