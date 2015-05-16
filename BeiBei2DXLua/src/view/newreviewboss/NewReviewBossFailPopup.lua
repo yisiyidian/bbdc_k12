@@ -65,8 +65,10 @@ function NewReviewBossFailPopup.create(currentWordName,reviewWordList,number)
     popup_title:ignoreAnchorPointForPosition(false)
     popup_title:setAnchorPoint(0.5,0.5)
     back:addChild(popup_title)
+
+    local showWord = string.gsub(wordname,"|"," ")
     
-    local popup_word = cc.Label:createWithSystemFont(wordname,"",40)
+    local popup_word = cc.Label:createWithSystemFont(showWord,"",40)
     popup_word:setPosition(back:getContentSize().width / 2,back:getContentSize().height *0.7)
     popup_word:setColor(cc.c4b(0,0,0,255))
     popup_word:ignoreAnchorPointForPosition(false)

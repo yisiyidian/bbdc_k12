@@ -155,6 +155,9 @@ function DownloadSoundController:initAssetsManagerByBookType(storagePath)
     elseif self.bookkey == "senior_13" then
         SoundsDownloadingInstance["senior_13"] = self
         return cc.AssetsManagerEx:create("manifest/book_sound_senior_13.manifest",storagePath)
+    elseif self.bookkey == "houhai" then
+        SoundsDownloadingInstance["houhai"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_houhai.manifest",storagePath)
     end
 end
 

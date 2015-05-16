@@ -45,14 +45,9 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
     local sentenceCn        
     local sentenceEn2       
     local sentenceCn2    
-    
-    local type = 1
     local answer
     
     local seed = math.randomseed(os.time())
-    local randomType = math.random(1,10)
-    type = randomType
-
    
     local wordList = {}
     table.foreachi(ReviewWordList, function(i, v)
@@ -185,18 +180,12 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
     rbProgressBar:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 0.9)
     layer:addChild(rbProgressBar)
     
-    local huge_word = cc.Label:createWithSystemFont(wordname,"",48)
+    local huge_word = cc.Label:createWithSystemFont(wordMeaningSmall,"",48)
     huge_word:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT * 0.8)
     huge_word:setColor(cc.c4b(0,0,0,255))
     huge_word:ignoreAnchorPointForPosition(false)
     huge_word:setAnchorPoint(0.5,0.5)
     layer:addChild(huge_word)
-    
-    if type % 2 == 0 then
-        huge_word:setString(wordMeaningSmall)
-    else
-        huge_word:setString(wordname)
-    end
     
     local rightWordFuntion = function ()
         for i = 1, #wordToBeTested do
@@ -222,11 +211,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
         rbCurrentWordIndex = rbCurrentWordIndex + 1                
         currentWordName,currentWord,wordname,wordSoundMarkEn,wordSoundMarkAm,wordMeaningSmall,wordMeaning,sentenceEn,sentenceCn,
         sentenceEn2,sentenceCn2 = updateWord()
-        if type % 2 == 0 then
-            huge_word:setString(wordMeaningSmall)
-        else
-            huge_word:setString(wordname)
-        end
+        huge_word:setString(wordMeaningSmall)
     end
     
     local wrongWordFunction = function ()
@@ -262,11 +247,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
             tmp[j] = sprite
         end
         table.insert(sprite_array, tmp)
-        if type % 2 == 0 then
-            answer = wordToBeTested[rbCurrentWordIndex]
-        else
-            answer = s_LocalDatabaseManager.getWordInfoFromWordName(wordToBeTested[rbCurrentWordIndex]).wordMeaningSmall
-        end
+        answer = wordToBeTested[rbCurrentWordIndex]
         for i = 1, #wordToBeTested do
             for j = 1, 3 do
                 local sprite = sprite_array[i][j]
@@ -289,11 +270,7 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
         rbCurrentWordIndex = rbCurrentWordIndex + 1                
         currentWordName,currentWord,wordname,wordSoundMarkEn,wordSoundMarkAm,wordMeaningSmall,wordMeaning,sentenceEn,sentenceCn,
         sentenceEn2,sentenceCn2 = updateWord()
-        if type % 2 == 0 then
-            huge_word:setString(wordMeaningSmall)
-        else
-            huge_word:setString(wordname)
-        end
+        huge_word:setString(wordMeaningSmall)
     end
 
     local button_func = function()
@@ -314,11 +291,8 @@ function NewReviewBossMainLayer.create(ReviewWordList,number)
         local location = layer:convertToNodeSpace(touch:getLocation())
         local logic_location = checkTouchIndex(location)
         if logic_location.x == rbCurrentWordIndex then
-            if type % 2 == 0 then
-                answer = wordToBeTested[logic_location.x]
-            else
-                answer = s_LocalDatabaseManager.getWordInfoFromWordName(wordToBeTested[logic_location.x]).wordMeaningSmall
-            end
+            answer = wordToBeTested[logic_location.x]
+
             if answer == sprite_array[logic_location.x][logic_location.y].character then
                 sprite_array[logic_location.x][logic_location.y].right()
                 playSound(s_sound_learn_true)

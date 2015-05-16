@@ -133,6 +133,8 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber)
 
+
+    local showWord = string.gsub(self.currentWord,"|"," ")
     local a,b = string.find(self.currentWord, "|") 
     if a == nil then
 
@@ -185,7 +187,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
             sign:setPosition(showAnswerStateBack:getContentSize().width*0.9, showAnswerStateBack:getContentSize().height*0.45)
             showAnswerStateBack:addChild(sign)
 
-            local right_wordname = cc.Label:createWithSystemFont(self.currentWord,"",60)
+            local right_wordname = cc.Label:createWithSystemFont(showWord,"",60)
             right_wordname:setColor(cc.c4b(130,186,47,255))
             right_wordname:setPosition(showAnswerStateBack:getContentSize().width*0.5, showAnswerStateBack:getContentSize().height*0.45)
             right_wordname:setScale(math.min(300/right_wordname:getContentSize().width,1))

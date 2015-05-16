@@ -223,7 +223,7 @@ function BlacksmithLayer:ctor(wordlist,islandIndex)
     self.soundMark = soundMark
 
     --词组
-    local wordGroupLabel =  cc.Label:createWithSystemFont("XXXXXX123132123","",50)
+    local wordGroupLabel =  cc.Label:createWithSystemFont("","",50)
     wordGroupLabel:setPosition(bigWidth/2, 925)
     wordGroupLabel:setColor(cc.c4b(0,0,0,255))
     backColor:addChild(wordGroupLabel)
@@ -233,11 +233,10 @@ function BlacksmithLayer:ctor(wordlist,islandIndex)
     local a,b = string.find(self.currentWord, "|") 
     if a == nil then
         --不是词组 把XXXXXX123132123 改为空 音标显示
-        self.wordGroupLabel:setString("")
         self.soundMark:setVisible(true)
     else
         --是词组 把XXXXXX123132123 改为显示词组 隐藏音标 隐藏单词 放大字体
-        local word,count = string.gsub(self.currentWord,"|","")
+        local word,count = string.gsub(self.currentWord,"|"," ")
         self.wordGroupLabel:setString(word)
         self.soundMark:setVisible(false)
     end

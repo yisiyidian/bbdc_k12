@@ -89,21 +89,6 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
     else
         color = "yellow"
     end
-    
-    local progressBar_total_number 
-
-    if self.islandIndex ~= nil then
-        local info = s_LocalDatabaseManager.getUnitInfo(self.islandIndex)
-        progressBar_total_number = #info.wrongWordList
-    else
-        progressBar_total_number = s_CorePlayManager.wrongWordNum
-    end
-
-    local progressBar = ProgressBar.create(progressBar_total_number, wrongNum, color)
-    progressBar:setPosition(bigWidth/2+44, 1054)
-    if wrongWordList ~= nil then
-       backColor:addChild(progressBar,2)
-    end
 
     self.lastWordAndTotalNumber = LastWordAndTotalNumber.create()
     backColor:addChild(self.lastWordAndTotalNumber,1)
@@ -123,7 +108,7 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
 
 
     --词组
-    local wordGroupLabel =  cc.Label:createWithSystemFont("XXXXXX123132123","",50)
+    local wordGroupLabel =  cc.Label:createWithSystemFont("","",50)
     wordGroupLabel:setPosition(bigWidth/2, 925)
     wordGroupLabel:setColor(cc.c4b(0,0,0,255))
     backColor:addChild(wordGroupLabel)
@@ -137,7 +122,7 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
         self.soundMark:setVisible(true)
     else
         --是词组 把XXXXXX123132123 改为显示词组 隐藏音标 隐藏单词 放大字体
-        local word,count = string.gsub(self.currentWord,"|","")
+        local word,count = string.gsub(self.currentWord,"|"," ")
         self.wordGroupLabel:setString(word)
         self.soundMark:setVisible(false)
     end
