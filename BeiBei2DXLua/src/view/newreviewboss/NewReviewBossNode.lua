@@ -20,14 +20,15 @@ function NewReviewBossNode.create(character)
     main.main_back = cc.Sprite:create("image/newreviewboss/reviewbossbig.png")
     main.main_back:setPosition(mainSize.width/2, mainSize.height / 2)
     main:addChild(main.main_back)
+
+    local showWord = string.gsub(character,"|"," ")
     
-    
-    main.main_character_label = cc.Label:createWithSystemFont(character,"",24)
+    main.main_character_label = cc.Label:createWithSystemFont(showWord,"",24)
     main.main_character_label:setColor(cc.c4b(73,73,73,255))
     main.main_character_label:setPosition(mainSize.width/2, mainSize.height* 0.3)
     main:addChild(main.main_character_label)
     
-    if string.len(character) >= 13  then
+    if string.len(showWord) >= 13  then
     	main.main_character_label:setSystemFontSize(20)
     end
 

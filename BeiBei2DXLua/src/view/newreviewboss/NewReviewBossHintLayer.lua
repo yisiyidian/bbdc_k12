@@ -24,8 +24,6 @@ function NewReviewBossHintLayer.create(currentWordName)
     local sentenceCn2       = currentWord.sentenceCn2
     
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-    
-    local type = s_CorePlayManager.typeIndex
 
     local layer = NewReviewBossHintLayer.new()
    
@@ -39,9 +37,18 @@ function NewReviewBossHintLayer.create(currentWordName)
     white_back:setAnchorPoint(0.5,0.5)
     layer:addChild(white_back)
     
-    local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
-    soundMark:setPosition(white_back:getContentSize().width/2, white_back:getContentSize().height * 0.85 )  
-    white_back:addChild(soundMark)
+    local a,b = string.find(wordname, "|") 
+    if a == nil then
+        local soundMark = SoundMark.create(wordname, wordSoundMarkEn, wordSoundMarkAm)
+        soundMark:setPosition(white_back:getContentSize().width/2, white_back:getContentSize().height * 0.85 )  
+        white_back:addChild(soundMark)
+    else
+        local showWord = string.gsub(wordname,"|"," ")
+        local  label = cc.Label:createWithSystemFont(showWord,"",50)
+        label:setPosition(white_back:getContentSize().width/2, white_back:getContentSize().height * 0.85 )
+        label:setColor(cc.c4b(31,68,102,255))
+        white_back:addChild(label,1)
+    end
     
     local detailInfo = DetailInfo.create(currentWord)
     detailInfo:setAnchorPoint(0.5,0.5)
