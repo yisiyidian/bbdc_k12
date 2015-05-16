@@ -304,9 +304,9 @@ function FlipMat.create(word, m ,n)
             end
         end
 
-        local sprite =  ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(28.49,0,28.51,74))
+        local sprite =  ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(28.499,0,28.501,74))
         sprite:setPosition(s_DESIGN_WIDTH/2,640)
-        sprite:setContentSize((#selectStack + string.len(totalWord)) * 20 + 60 ,74)
+        sprite:setContentSize((#selectStack + string.len(totalWord)) * 18 + 60 ,74)
         sprite:setTag(1)
         main:addChild(sprite)
         local word = ""
@@ -322,7 +322,7 @@ function FlipMat.create(word, m ,n)
         label1:setScale(1)
         sprite:addChild(label1)
 
-        local line = cc.LayerColor:create(cc.c4b(208,212,215,255),#selectStack * 20,2)
+        local line = cc.LayerColor:create(cc.c4b(208,212,215,255),#selectStack * 18,2)
         line:setPosition(30 ,sprite:getContentSize().height*0.2)
         line:ignoreAnchorPointForPosition(false)
         line:setAnchorPoint(0,0.5)
