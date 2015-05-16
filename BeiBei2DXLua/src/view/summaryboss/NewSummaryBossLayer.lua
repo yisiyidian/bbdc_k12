@@ -40,7 +40,6 @@ function NewSummaryBossLayer:ctor(unit)
         end
     end 
     self:scheduleUpdateWithPriorityLua(update, 0)
-
 end
 
 function NewSummaryBossLayer:initStageInfo(unit)
@@ -340,40 +339,17 @@ function NewSummaryBossLayer:addChangeBtn()
                 self.wrongWord = self.wrongWord + 1
                 --print('self.wrongWord',self.wrongWord)
             end
-            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            self.gamePaused = true
-            --fws
-            local director = cc.Director:getInstance()
-            self.targets = director:getActionManager():pauseTarget(self.boss)
-
-            --
-            local curtain = cc.LayerColor:create(cc.c4b(0,0,0,150),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
-            self:addChild(curtain,99)
-            curtain:setPosition(s_LEFT_X,0)
-            --出现中英对照
-            local wordBoard = cc.Sprite:create('image/summarybossscene/bckground_words_h5_boss.png')
-            wordBoard:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 3 / 2)
-            self:addChild(wordBoard,100)
-
-            local word_en = cc.Label:createWithTTF(self.wordList[1],'font/CenturyGothic.ttf',40)
-            word_en:setPosition(wordBoard:getContentSize().width / 2,wordBoard:getContentSize().height * 3 / 4)
-            wordBoard:addChild(word_en)
-            word_en:setColor(cc.c3b(0,0,0))
-
-            local word_cn = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordList[1]).wordMeaningSmall,'',40)
-            word_cn:setPosition(wordBoard:getContentSize().width / 2,wordBoard:getContentSize().height * 1 / 4)
-            wordBoard:addChild(word_cn)
-            word_cn:setColor(cc.c3b(0,0,0))
             
-            s_SCENE:callFuncWithDelay(2.6,function (  )
-                --s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-                curtain:removeFromParent()
+            self.gamePaused = true
+            local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1],self.boss)
+            s_SCENE.popupLayer:addChild(hintBoard)
+            
+            hintBoard.hintOver = function (  )
+                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 self.gamePaused = false
-                director:getActionManager():resumeTarget(self.boss)
                 table.insert(self.wordList,self.wordList[1])
                 self:resetMat()
-            end)
-            wordBoard:runAction(cc.Sequence:create(cc.EaseBackOut:create(cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT))),cc.DelayTime:create(2),cc.EaseBackIn:create(cc.MoveBy:create(0.3,cc.p(0,s_DESIGN_HEIGHT)))))
+            end
             
         end
     end
