@@ -17,24 +17,36 @@ function HintWord:ctor(word,target)
 
     --
     local curtain = cc.LayerColor:create(cc.c4b(0,0,0,150),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
-    self:addChild(curtain,99)
+    self:addChild(curtain)
     curtain:setPosition(s_LEFT_X,0)
-    --出现中英对照
-    local wordBoard = cc.Sprite:create('image/summarybossscene/bckground_words_h5_boss.png')
-    wordBoard:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 3 / 2)
-    self:addChild(wordBoard,100)
+    local wordBoard
+    if word ~= '' then
+        --出现中英对照
+        wordBoard = cc.Sprite:create('image/summarybossscene/bckground_words_h5_boss.png')
+        wordBoard:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 3 / 2)
+        self:addChild(wordBoard,100)
 
-    local word_en = cc.Label:createWithTTF(word,'font/CenturyGothic.ttf',40)
-    word_en:setPosition(wordBoard:getContentSize().width / 2,wordBoard:getContentSize().height * 3 / 4)
-    wordBoard:addChild(word_en)
-    word_en:setColor(cc.c3b(0,0,0))
+        local word_en = cc.Label:createWithTTF(word,'font/CenturyGothic.ttf',40)
+        word_en:setPosition(wordBoard:getContentSize().width / 2,wordBoard:getContentSize().height * 3 / 4)
+        wordBoard:addChild(word_en)
+        word_en:setColor(cc.c3b(0,0,0))
 
-    local word_cn = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall,'',40)
-    word_cn:setPosition(wordBoard:getContentSize().width / 2,wordBoard:getContentSize().height * 1 / 4)
-    wordBoard:addChild(word_cn)
-    word_cn:setColor(cc.c3b(0,0,0))
+        local word_cn = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall,'',40)
+        word_cn:setPosition(wordBoard:getContentSize().width / 2,wordBoard:getContentSize().height * 1 / 4)
+        wordBoard:addChild(word_cn)
+        word_cn:setColor(cc.c3b(0,0,0))
 
-    wordBoard:runAction(cc.EaseBackOut:create(cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT))))
+        local title = cc.Sprite:create('image/summarybossscene/time_paused.png')
+        title:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.7)
+        title:setScale(1.5)
+        self:addChild(title)
+
+        wordBoard:runAction(cc.EaseBackOut:create(cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT))))
+    else
+        local sprite = cc.Sprite:create("image/summarybossscene/hint_change_word.png")
+        sprite:setPosition(s_DESIGN_WIDTH * 0.84,210)
+        self:addChild(sprite)
+    end
 
     
     local onTouchBegan = function(touch, event)
@@ -42,14 +54,16 @@ function HintWord:ctor(word,target)
     end
 
     local onTouchEnded = function(touch, event)
-        self.hintOver()
-        director:getActionManager():resumeTarget(target)
-        local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT/2*3))
-        local action2 = cc.EaseBackIn:create(action1)
-        local action3 = cc.CallFunc:create(function()
-            self:removeFromParent()
-        end)
-        wordBoard:runAction(cc.Sequence:create(action2,action3))
+        if word ~= '' then
+            self.hintOver()
+            director:getActionManager():resumeTarget(target)
+            local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT/2*3))
+            local action2 = cc.EaseBackIn:create(action1)
+            local action3 = cc.CallFunc:create(function()
+                self:removeFromParent()
+            end)
+            wordBoard:runAction(cc.Sequence:create(action2,action3))
+        end
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()

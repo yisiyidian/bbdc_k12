@@ -291,6 +291,10 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     
     if isNewPlayerModel == true then
         s_SCENE:callFuncWithDelay(1.2,function (  )
+            local hintBoard = cc.Sprite:create('image/summarybossscene/hint_slide.png')
+            hintBoard:setPosition(0.5 * s_DESIGN_WIDTH,0.72 * s_DESIGN_HEIGHT - 180)
+            main:addChild(hintBoard)
+            hintBoard:setName('board')
             main.guidePoint()
             main.cocoAnimation()   
             main.finger_action()
@@ -433,6 +437,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     local isGuide = true
 
     local stopAllGuide = function ()
+        main:removeChildByName('board')
         main:stopAllActions()
         for i=1,#main.answerPath do
             local node = main_mat[main.answerPath[i].x][main.answerPath[i].y]
