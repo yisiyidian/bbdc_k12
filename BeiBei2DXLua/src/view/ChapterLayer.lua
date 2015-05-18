@@ -399,7 +399,6 @@ function ChapterLayer:addBackToHome()
     homeButton:setLocalZOrder(1)
     self:addChild(homeButton,200)
     
-
     onAndroidKeyPressed(self, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()
         if #isPopup == 0 then
