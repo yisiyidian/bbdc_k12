@@ -135,9 +135,7 @@ function start.start(hotUpdate)
             s_SERVER.appKey = LEAN_CLOUD_KEY_TEST
         end
     end
-
-    dump(s_SERVER)
-
+    
     s_CURRENT_USER.appVersion = s_APP_VERSION
     if AgentManager ~= nil then s_CURRENT_USER.channelId = AgentManager:getInstance():getChannelId() end
 

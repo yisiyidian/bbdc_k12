@@ -1,4 +1,4 @@
--- 玩家任务管理器 新的任务系统
+-- 玩家任务管理器 新的任务系统  在global.lua里初始化
 -- Author: whe
 -- Date: 2015-05-12 11:21:08
 --	
@@ -27,6 +27,7 @@
 local MissionManager = class("MissionManager")
 
 local MissionConfig  = reloadModule("model.mission.MissionConfig") --任务配置文件
+local DataMission    = require("model.user.DataMission")
 
 function MissionManager:ctor()
 	self.taskNum = 6 		--随机任务数量
@@ -38,16 +39,10 @@ end
 function MissionManager:init()
 	-- self.missionData -对应--> DataMission.lua
 	self.missionData = s_LocalDatabaseManager.getMissionData()
-	--数据为空
-	if self.missionData == nil then
-		-- self.missionData.taskList = self:generalTasks()
-		self:generalTasks()
-		--保存数据到数据库
-		-- s_LocalDatabaseManager.save()
-		return
-	end
-
-	
+	--刷新任务数据
+	self:generalTasks()
+	--保存数据
+	self:saveTaskToLocal()
 end
 
 --生成今日的任务数据
@@ -65,7 +60,7 @@ function MissionManager:generalTasks()
 	local tNow  = os.date("%x", os.time())				--当前日期
 
 	--如果是今天第一次登陆 则重新生成任务列表
-	if tNow ~= tDate then		
+	if tNow ~= tDate or self.missionData.taskList == "" then
 		loginDay = loginDay + 1	--天数+1
 		--重新生成任务列表
 		local result = {} 	-- 生成结果
@@ -148,19 +143,23 @@ function MissionManager:generalTasks()
 				end
 			end
 		end
+		--TEST 
+		--result[#result + 1] = {["mission_id"] = "2-2",["type"] = 2,["condition"]= {1,3,5,10,20},["bean"]=0}
 		--result 生成的任务列表
 		local mission_str 			= "" --- 1-1_0_1_1|2-2_0_1_1|3-1_1_2_1 任务ID_任务状态_任务条件_任务游标
 		local temp_mission_str  	= ""
 		local condition 			= "" 
 		for k,v in pairs(result) do
-			temp_mission_str = temp_mission_str..v.mission_id
+			temp_mission_str = v.mission_id
 			condition = v.condition
 			if #condition == 1 then
 				temp_mission_str = temp_mission_str.."_0_"..condition[1].."_1"
 			else
+				local hit = false --命中
 				for kk,vv in pairs(temp_series_missions) do --系列任务的列表
-					if vv[1] == v.mission_id then 
-						--TODO 计算正确的游标
+					if vv[1] == v.mission_id then
+						hit = true
+						--计算正确的游标
 						--任务状态 如果是已领取,则把游标定位到下一个系列任务
 						--TODO 如果是已完成，未领取状态，是不是要优先加入任务列表？？？TODO
 						-- vv[2] 任务游标
@@ -177,20 +176,22 @@ function MissionManager:generalTasks()
 								temp_mission_str = temp_mission_str.."_0_"..vcon.."_"..(vv[2] + 1)
 							end
 						end
-						break
+						break --找到一个就退出  最多也就一个
 					end
+				end
+				--未命中 从未接过此系列任务,就生成一个新的任务状态
+				if not hit then
+					temp_mission_str = temp_mission_str.."_0_"..condition[1].."_1"
 				end
 			end
 			--用|分割每个任务
-			if temp_mission_str == "" then
+			if mission_str == "" then
 				mission_str = temp_mission_str
-			else
+			elseif temp_mission_str ~= "" then
 				mission_str = mission_str.."|"..temp_mission_str
 			end
 		end
-
-
-		---任务字符串生成完毕 mission_str
+		self.missionData.taskList = mission_str
 	end
 		
 	
@@ -214,6 +215,10 @@ function MissionManager:generalTasks()
 	self.missionData.totalLoginDay = loginDay
 end
 
+--获取任务数据
+function MissionManager:getMissionData()
+	return self.missionData
+end
 --获取当前的任务列表
 function MissionManager:getTaskList()
 	
@@ -221,7 +226,8 @@ end
 
 --保存数据到本地数据库
 function MissionManager:saveTaskToLocal()
-	
+	--保存到本地数据库
+	s_LocalDatabaseManager.saveDataClassObject(self.missionData, s_CURRENT_USER.userId, s_CURRENT_USER.username)
 end
 
 --从服务器拉取任务信息

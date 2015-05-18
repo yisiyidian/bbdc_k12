@@ -64,6 +64,7 @@ local function _initConstant()
 
     s_DataManager = reloadModule('model.DataManager')
     s_DataManager.clear()
+
 end
 
 local function _initTool()
@@ -133,6 +134,8 @@ end
 
 local function _declaration()
     s_CorePlayManager = nil
+    --任务管理器
+    s_MissionManager = reloadModule("controller.MissionManager").new()
 end
 
 --start.lua里的start() 会调用这个函数

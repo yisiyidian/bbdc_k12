@@ -1,6 +1,7 @@
 require("cocos.init")
 require('common.global')
 
+local MissionView = require("view.mission.MissionView") --任务面板
 --选单元的界面 unit1 unit2....
 --
 
@@ -411,7 +412,9 @@ end
 function ChapterLayer:addMissionBtn()
     local click_home = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-            print("task touch")
+            --弹出任务面板
+            local missionView = MissionView.new()
+            s_SCENE:popup(missionView)
         end
     end
     --临时资源用返回按钮的
