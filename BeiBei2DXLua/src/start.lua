@@ -84,7 +84,10 @@ function start.start(hotUpdate)
     reloadModule("common.global")
     s_APP_VERSION = app_version_release -- reset
     
-    initApp()
+    --------------------------------------
+    initApp() --初始化静态数据,数据库Manager.  initApp() 在global.lua里
+    --------------------------------------
+
     if IS_SNS_QQ_LOGIN_AVAILABLE or IS_SNS_QQ_SHARE_AVAILABLE then 
         cx.CXAvos:getInstance():initTencentQQ(SNS_QQ_APPID, SNS_QQ_APPKEY) 
     end

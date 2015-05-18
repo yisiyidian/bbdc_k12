@@ -112,7 +112,7 @@ local function _initServer()
     
     -- user base server
     s_UserBaseServer          = reloadModule('server.UserBaseServer')
-    s_HttpRequestClient       = reloadModule('server.HttpRequestClient')
+s_HttpRequestClient       = reloadModule('server.HttpRequestClient')
 
     reloadModule('server.Analytics')
 end
@@ -134,6 +134,8 @@ end
 local function _declaration()
     s_CorePlayManager = nil
 end
+
+--start.lua里的start() 会调用这个函数
 
 function initApp()
     _initConstant()
