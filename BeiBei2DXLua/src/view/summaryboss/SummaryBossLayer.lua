@@ -190,7 +190,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                                 icon:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,255),cc.EaseBackIn:create(cc.ScaleTo:create(0.5,1))))
                                 s_SCENE:callFuncWithDelay(0.5,function (  )
                                     
-                                    if layer.combo % 3 == 0 then
+                                    if layer.combo % 3 == 0 and layer.combo > 0 then
                                         local label1 = layer.combo_label[2 * layer.combo / 3 + 1]
                                         label1:setScale(1.3)
                                         local label2 = layer.combo_label[2 * layer.combo / 3 + 2]
