@@ -20,6 +20,14 @@ local dir_right = 4
 local HINT_TIME = 10
 local bullet_damage = 2
 
+function SummaryBossLayer:getLength(word)
+    if word == nil then
+        return 0
+    else
+        return string.len(word)
+    end
+end
+
 function SummaryBossLayer.create(wordList,chapter,entrance)  
     if s_CURRENT_USER.k12SmallStep < s_K12_summaryBoss then
         s_CURRENT_USER:setK12SmallStep(s_K12_summaryBoss)
@@ -155,6 +163,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                     
                     if layer.currentHintWord[i] or layer.rightWord > layer.maxCount then
                         bullet_damage = 1
+                        print_lua_table(layer.wordPool)
                         layer:addMapInfo(layer.wordPool[layer.currentIndex][i])
                     else
                         bullet_damage = 2 + math.floor(layer.combo / 3)
@@ -297,6 +306,8 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                             --     layer.boss:runAction(cc.Sequence:create(cc.DelayTime:create(delaytime),fly,win))
                                 
                             -- end
+                            print(layer.currentIndex)
+                            print_lua_table(layer.wordPool[layer.currentIndex])
                             if killedCrabCount == #layer.wordPool[layer.currentIndex] and layer.currentBlood > 0 then
                             --next group
                                 layer.globalLock = true
@@ -737,7 +748,7 @@ function SummaryBossLayer:updateWord(selectStack,chapter)
     end
     local sprite =  ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(28.25,4,28.75,70))
     sprite:setPosition(s_DESIGN_WIDTH/2,0.72*s_DESIGN_HEIGHT)
-    sprite:setContentSize(string.len(w) * 16 + 79 ,74)
+    sprite:setContentSize(self:getLength(w) * 16 + 79 ,74)
     self:addChild(sprite)
     self.wordStack = sprite
     local letter = cc.Label:createWithTTF(w,"font/CenturyGothic.ttf",36)
@@ -1078,7 +1089,7 @@ function SummaryBossLayer:initWordList(word)
 
     self.totalBlood = 0
     for i = 1,#wordList do
-        self.totalBlood = self.totalBlood + string.len(wordList[i]) * 2
+        self.totalBlood = self.totalBlood + self:getLength(wordList[i]) * 2
     end
     self.currentBlood = self.totalBlood
     if self.entrance then
@@ -1106,15 +1117,15 @@ function SummaryBossLayer:initWordList(word)
         for i = 1, n do
             local w = wordList[index]
             local w_split = split(w,'|')
-            if(totalLength + string.len(w) <= self.length * self.length) then
+            if(totalLength + self:getLength(w) <= self.length * self.length) then
                 if #w_split == 1 then
                     tmp[#tmp + 1] = {w,'',w}
-                    totalLength = totalLength + string.len(w)
+                    totalLength = totalLength + self:getLength(w)
                     index = index + 1
                 else
                     if i == 1 then
                         tmp[#tmp + 1] = {w_split[1],w_split[2],w}
-                        totalLength = totalLength + string.len(w_split[1])
+                        totalLength = totalLength + self:getLength(w_split[1])
                         index = index + 1
                     end
                     
@@ -1137,26 +1148,26 @@ end
 function SummaryBossLayer:initStartIndex(index)
     self.startIndexPool = {}
     if #self.wordPool[index] == 1 then
-        local localgap = self.length * self.length - string.len(self.wordPool[index][1][1])
+        local localgap = self.length * self.length - self:getLength(self.wordPool[index][1][1])
         local randomStart = math.random(0,localgap)
         self.startIndexPool[#self.startIndexPool + 1] = randomStart + 1
     elseif #self.wordPool[index] == 2 then
-        local localgap = self.length * self.length - string.len(self.wordPool[index][1][1]) - string.len(self.wordPool[index][2][1])
+        local localgap = self.length * self.length - self:getLength(self.wordPool[index][1][1]) - self:getLength(self.wordPool[index][2][1])
         local randomStart1 = math.random(0,localgap)
         localgap = localgap - randomStart1
         local randomStart2 = math.random(0,localgap)
         self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + 1
-        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1][1]) + randomStart2 + 1
+        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + self:getLength(self.wordPool[index][1][1]) + randomStart2 + 1
     elseif #self.wordPool[index] == 3 then
-        local localgap = self.length * self.length - string.len(self.wordPool[index][1][1]) - string.len(self.wordPool[index][2][1]) - string.len(self.wordPool[index][3][1])
+        local localgap = self.length * self.length - self:getLength(self.wordPool[index][1][1]) - self:getLength(self.wordPool[index][2][1]) - self:getLength(self.wordPool[index][3][1])
         local randomStart1 = math.random(0,localgap)
         localgap = localgap - randomStart1
         local randomStart2 = math.random(0,localgap)
         localgap = localgap - randomStart2
         local randomStart3 = math.random(0,localgap)
         self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + 1
-        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1][1]) + randomStart2 + 1
-        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + string.len(self.wordPool[index][1][1]) + randomStart2 + string.len(self.wordPool[index][2][1]) + randomStart3 + 1        
+        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + self:getLength(self.wordPool[index][1][1]) + randomStart2 + 1
+        self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + self:getLength(self.wordPool[index][1][1]) + randomStart2 + self:getLength(self.wordPool[index][2][1]) + randomStart3 + 1        
     end
 end
 
@@ -1322,7 +1333,7 @@ function SummaryBossLayer:initMapInfoByIndex(startIndex)
                 self.isCrab[k][i][j] = 0
                 if #self.wordPool[k] == 1 then
                     local diff = main_logic_mat[i][j] - self.startIndexPool[1]
-                    if diff >= 0 and diff < string.len(self.wordPool[k][1][1]) then
+                    if diff >= 0 and diff < self:getLength(self.wordPool[k][1][1]) then
                         self.character[k][i][j] = string.sub(self.wordPool[k][1][1],diff+1,diff+1)
                         self.isCrab[k][i][j] = 1
                         if diff == 0 then
@@ -1336,10 +1347,10 @@ function SummaryBossLayer:initMapInfoByIndex(startIndex)
                 elseif #self.wordPool[k] == 2 then
                     local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
                     local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
-                    if diff1 >= 0 and diff1 < string.len(self.wordPool[k][1][1]) then
+                    if diff1 >= 0 and diff1 < self:getLength(self.wordPool[k][1][1]) then
                         self.character[k][i][j] = string.sub(self.wordPool[k][1][1],diff1+1,diff1+1)
                         self.isCrab[k][i][j] = 1
-                    elseif diff2 >= 0 and diff2 < string.len(self.wordPool[k][2][1]) then
+                    elseif diff2 >= 0 and diff2 < self:getLength(self.wordPool[k][2][1]) then
                         self.character[k][i][j] = string.sub(self.wordPool[k][2][1],diff2+1,diff2+1)
                         self.isCrab[k][i][j] = 2
                     else
@@ -1357,13 +1368,13 @@ function SummaryBossLayer:initMapInfoByIndex(startIndex)
                     local diff1 = main_logic_mat[i][j] - self.startIndexPool[1]
                     local diff2 = main_logic_mat[i][j] - self.startIndexPool[2]
                     local diff3 = main_logic_mat[i][j] - self.startIndexPool[3]
-                    if diff1 >= 0 and diff1 < string.len(self.wordPool[k][1][1]) then
+                    if diff1 >= 0 and diff1 < self:getLength(self.wordPool[k][1][1]) then
                         self.character[k][i][j] = string.sub(self.wordPool[k][1][1],diff1+1,diff1+1)
                         self.isCrab[k][i][j] = 1
-                    elseif diff2 >= 0 and diff2 < string.len(self.wordPool[k][2][1]) then
+                    elseif diff2 >= 0 and diff2 < self:getLength(self.wordPool[k][2][1]) then
                         self.character[k][i][j] = string.sub(self.wordPool[k][2][1],diff2+1,diff2+1)
                         self.isCrab[k][i][j] = 2
-                    elseif diff3 >= 0 and diff3 < string.len(self.wordPool[k][3][1]) then
+                    elseif diff3 >= 0 and diff3 < self:getLength(self.wordPool[k][3][1]) then
                         self.character[k][i][j] = string.sub(self.wordPool[k][3][1],diff3+1,diff3+1)
                         self.isCrab[k][i][j] = 3
                     else
@@ -1393,9 +1404,9 @@ function SummaryBossLayer:addMapInfo(word)
     if #self.wordPool[#self.wordPool] >= 3 or self.currentIndex == #self.wordPool then
         flag = true
     else
-        local length = string.len(word)
+        local length = self:getLength(word[1])
         for i = 1,#self.wordPool[#self.wordPool] do
-            length = string.len(self.wordPool[#self.wordPool][i][1]) + length
+            length = self:getLength(self.wordPool[#self.wordPool][i][1]) + length
         end
         if length > self.length ^ 2 then
             flag = true

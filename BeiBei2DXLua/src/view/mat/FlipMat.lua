@@ -322,6 +322,11 @@ function FlipMat.create(word, m ,n)
         label1:setScale(1)
         sprite:addChild(label1)
 
+        if totalWord == "" or totalWord == nil then
+            label1:setPosition(sprite:getContentSize().width/2 ,sprite:getContentSize().height/2)
+            label1:setAnchorPoint(0.5,0.5)
+        end
+
         local line = cc.LayerColor:create(cc.c4b(208,212,215,255),#selectStack * 18,2)
         line:setPosition(30 ,sprite:getContentSize().height*0.2)
         line:ignoreAnchorPointForPosition(false)
