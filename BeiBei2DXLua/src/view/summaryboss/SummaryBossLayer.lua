@@ -127,19 +127,19 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         if #selectStack < 1 then
             return
         end
-        
-    
-        --local location = layer:convertToNodeSpace(touch:getLocation())
 
         local selectWord = ""
         for i = 1, #selectStack do
             selectWord = selectWord .. selectStack[i].main_character_content
         end
+        -- 划出的词
         --check answer
         local match = false
         for i = 1, #layer.wordPool[layer.currentIndex] do
             if layer.crabOnView[i] then
+                -- 答对
                 if selectWord == layer.wordPool[layer.currentIndex][i][1] then
+                    layer:updateWord('',"removeAll")
                     playWordSound(selectWord)
                     killedCrabCount = killedCrabCount + 1
                     layer.rightWord = layer.rightWord + 1
@@ -223,18 +223,10 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                     layer.currentBlood = layer.currentBlood - #selectStack * bullet_damage
                     
                     layer.boss.blood:setPercentage(100 * layer.currentBlood / layer.totalBlood)
-                    --layer.boss:setAnimation(0,'a3',false)
                     layer.boss:addAnimation(0,'a2',false)
                     layer:crabSmall(chapter,i)
                     layer.crab[i]:runAction(cc.EaseBackIn:create(cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT * 0.2))))
-                    
-                    -- slide true
                     playSound(s_sound_learn_true)
-                    -- beat boss sound
-                    -- s_SCENE:callFuncWithDelay(0.3,function()
-                    -- playSound(s_sound_FightBoss)       
-                    -- end)
-
                     
                     local delaytime = 0
                     for j = 1, #selectStack do
@@ -263,7 +255,6 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                             damage_label:enableOutline(cc.c4b(255,0,0,255),2)
                             damage_label:setColor(cc.c4b(255,0,0,255))
                             damage_label:setPosition(randP)
-                            --damage_label:setOpacity(0)
                             local action1 = cc.Spawn:create(cc.MoveBy:create(0.2,cc.p(0,30)),cc.FadeOut:create(0.2))
                             local action2 = cc.CallFunc:create(function (  )
                                 damage_label:removeFromParent()
@@ -274,7 +265,6 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                         local resume = cc.MoveTo:create(0.0,cc.p(bullet:getPosition()))
                         bullet:runAction(cc.Sequence:create(delay,hit,attacked,hide,resume))
                         s_SCENE:callFuncWithDelay(0.2 *math.pow(#selectStack,0.8),function (  )
-                                -- body
                             local recover = cc.CallFunc:create(
                                 function()
                                     if killedCrabCount > 0 and layer.globalLock then
@@ -292,31 +282,14 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                                 end,{}
                             )
                             node:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),recover))
-                            -- if layer.currentBlood <= 0 then
-                            --     --layer.boss:stopAllActions()
-                            --     local move = cc.MoveTo:create(0.5,cc.p(0.9 * s_DESIGN_WIDTH,1.1 * s_DESIGN_HEIGHT))
-                            --     local mini = cc.ScaleTo:create(0.5,0.5)
-                            --     local rotate = cc.RotateBy:create(0.5,360)
-                            --     local fly = cc.Spawn:create(move,rotate)
-                            --     local win = cc.CallFunc:create(function()
-                                    
-                            --         --layer.boss:removeFromParent()
-                            --         layer:win(chapter,entrance,wordList)
-                            --     end,{})
-                            --     layer.boss:runAction(cc.Sequence:create(cc.DelayTime:create(delaytime),fly,win))
-                                
-                            -- end
-                            print(layer.currentIndex)
-                            print_lua_table(layer.wordPool[layer.currentIndex])
+
                             if killedCrabCount == #layer.wordPool[layer.currentIndex] and layer.currentBlood > 0 then
-                            --next group
                                 layer.globalLock = true
                                 layer.currentIndex = layer.currentIndex + 1
                                 killedCrabCount = 0
                                 for m = 1, layer.length do
                                     for n = 1, layer.length do
-                                        local remove = cc.CallFunc:create(function() 
-    --                                        layer.coconut[m][n]:removeFromParent(true)    
+                                        local remove = cc.CallFunc:create(function()    
                                         end,{})
                                         layer.coconut[m][n]:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7)),remove))
                                     end
@@ -369,24 +342,18 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
 
                         else
                             s_SCENE:callFuncWithDelay(0.2 * math.pow(#selectWord,0.8),function (  )
-                                -- body
                                 layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y].firstStyle()
                                 layer.crab[layer.firstIndex]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
                                 layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
-            
-                            end)
-                            
+                            end) 
                         end
                         break
                     end
                 end
             end
         end
-        
+        -- 没答对
         if not match then
-            -- if endTime < 1 and not checkAtOnce then
-            --     return
-            -- end
             layer:clearCombo()
             local s
             if layer.girlAfraid then
@@ -422,12 +389,9 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             selectStack = {}
             layer.crab[layer.firstIndex]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
             layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y]:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.DelayTime:create(2),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale),cc.ScaleTo:create(0.5,1.15 * scale),cc.ScaleTo:create(0.5,1.0 * scale))))
-            
-            --slide wrong
             playSound(s_sound_learn_false)
         end
     end
-    
     
     -- handing touch events
     onTouchBegan = function(touch, event)
@@ -724,15 +688,13 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         end
     end
     layer:scheduleUpdateWithPriorityLua(update, 0)
-    
-    -- boss "s_sound_Get_Outside"
     playMusic(s_sound_Get_Outside,true)
-    --playSoundByVolume(s_sound_Get_Outside_Speedup,0,true)
     
     return layer  
 end
 
-function SummaryBossLayer:updateWord(selectStack,chapter)
+-- 用于显示划单词的反馈
+function SummaryBossLayer:updateWord(selectStack,value)
     if self.wordStack ~= nil then
         self.wordStack:stopAllActions()
         self.wordStack:removeFromParent()
@@ -746,6 +708,11 @@ function SummaryBossLayer:updateWord(selectStack,chapter)
     if self.wordPool[self.currentIndex][1][2] ~= '' then
         w = w..' '..self.wordPool[self.currentIndex][1][2]
     end
+    -- 划对后移除显示精灵
+    if value == "removeAll" then
+        w = ""
+    end
+
     local sprite =  ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(28.25,4,28.75,70))
     sprite:setPosition(s_DESIGN_WIDTH/2,0.72*s_DESIGN_HEIGHT)
     sprite:setContentSize(self:getLength(w) * 16 + 79 ,74)
@@ -755,8 +722,23 @@ function SummaryBossLayer:updateWord(selectStack,chapter)
     letter:setPosition(sprite:getContentSize().width / 2,sprite:getContentSize().height / 2)
     sprite:addChild(letter,1)
 
+    local lineLength = 0
+    if #selectStack < 4 then
+        lineLength  =  3 * 18
+    else
+        lineLength = #selectStack * 18
+    end
+
+    local line = cc.LayerColor:create(cc.c4b(208,212,215,255),lineLength,2)
+    line:setPosition(20 ,sprite:getContentSize().height*0.2)
+    line:ignoreAnchorPointForPosition(false)
+    line:setAnchorPoint(0,0.5)
+    line:setScale(1)
+    sprite:addChild(line)
+
 end
 
+-- 初始化背景及坑洞
 function SummaryBossLayer:initBossLayer_back(chapter)
     self.globalLock = false
     --stage info
@@ -812,7 +794,7 @@ function SummaryBossLayer:initBossLayer_back(chapter)
     end
     self.hole = hole
 end
-
+-- 初始化暂停按钮贝贝小女孩
 function SummaryBossLayer:initBossLayer_girl(chapter)
     --add pauseButton
     local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
@@ -933,7 +915,7 @@ function SummaryBossLayer:initBossLayer_girl(chapter)
     playSound(s_sound_ReadyGo)
     
 end
-
+-- 贝贝提示框
 function SummaryBossLayer:addBubble()
     local bubble = {}
     self.bubble = bubble
@@ -983,7 +965,7 @@ function SummaryBossLayer:addBubble()
 
 end
 
-
+-- 初始化boss
 function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
     
     local blinkBack = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
@@ -1066,7 +1048,7 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
     self.boss = boss
     self.bossNode = bossNode
 end
-
+-- 初始化词表
 function SummaryBossLayer:initWordList(word)
     local wordList = word
     --if #wordList < 1 then
@@ -1144,7 +1126,7 @@ function SummaryBossLayer:initWordList(word)
         self.wordPool[#self.wordPool + 1] = tmp          
     end
 end
-
+-- 开始游戏的位置
 function SummaryBossLayer:initStartIndex(index)
     self.startIndexPool = {}
     if #self.wordPool[index] == 1 then
@@ -1170,7 +1152,7 @@ function SummaryBossLayer:initStartIndex(index)
         self.startIndexPool[#self.startIndexPool + 1] = randomStart1 + self:getLength(self.wordPool[index][1][1]) + randomStart2 + self:getLength(self.wordPool[index][2][1]) + randomStart3 + 1        
     end
 end
-
+-- 螃蟹
 function SummaryBossLayer:initCrab( chapter )
     if chapter == 1 then
         self:initCrab1()
@@ -1293,7 +1275,7 @@ function SummaryBossLayer:initCrab2(chapter)
         self.crab[i]:runAction(cc.Sequence:create(cc.DelayTime:create(1.1 + delaytime),appear))
     end
 end
-
+-- 地图信息
 function SummaryBossLayer:initMapInfo()
     local start = os.time()
     self.isFirst = {}
@@ -1398,7 +1380,7 @@ function SummaryBossLayer:initMapInfoByIndex(startIndex)
     end
     local finish = os.time()
 end
-
+-- 补充未通过的单词
 function SummaryBossLayer:addMapInfo(word)
     local flag = false
     if #self.wordPool[#self.wordPool] >= 3 or self.currentIndex == #self.wordPool then
@@ -1421,7 +1403,7 @@ function SummaryBossLayer:addMapInfo(word)
     end
     self:initMapInfoByIndex(#self.wordPool)
 end
-
+-- 初始化地图
 function SummaryBossLayer:initMap(chapter)
 
     self.firstNodeArray = {}
@@ -1505,7 +1487,7 @@ function SummaryBossLayer:initMap(chapter)
     
     self:initCrab(chapter)
 end
-
+-- 每个坑洞的触摸检测
 function SummaryBossLayer:checkTouchLocation(location)
     --local time1 = os.clock()
     local main_width    = 640
@@ -1578,7 +1560,7 @@ function SummaryBossLayer:crabBig(chapter,index)
         self.crab[index]:setScale(1.2)
     end
 end
-
+-- 胜利了
 function SummaryBossLayer:win(chapter,entrance,wordList)
     self.globalLock = true
 
@@ -1616,7 +1598,7 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
 
     AnalyticsSummaryBossResult('win')
 end
-
+-- 失败了
 function SummaryBossLayer:lose(chapter,entrance,wordList)
     self.globalLock = true
     self.girl:setAnimation(0,'girl-fail',true)
@@ -1646,7 +1628,7 @@ function SummaryBossLayer:lose(chapter,entrance,wordList)
 --    playSound(s_sound_fail)    
     AnalyticsSummaryBossResult('lose')
 end
-
+-- 打击boss
 function SummaryBossLayer:hint()
     self:clearCombo()
     self.crab[self.firstIndex]:stopAllActions()
@@ -1691,7 +1673,7 @@ function SummaryBossLayer:hint()
         self.bubble[8]:setVisible(true)
     end
 end
-
+-- 清楚连击
 function SummaryBossLayer:clearCombo()
     self.combo = 0
     for i = 4,12 do

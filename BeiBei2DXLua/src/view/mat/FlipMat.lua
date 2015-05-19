@@ -313,36 +313,29 @@ function FlipMat.create(word, m ,n)
         for i = 1, #selectStack do
             word = word..selectStack[i].main_character_content
         end
+        word = word..totalWord
 
         local label1 = cc.Label:createWithTTF(word,'font/CenturyGothic.ttf',36)
         label1:setColor(cc.c4b(255,255,255,255))
-        label1:setPosition(30 ,sprite:getContentSize().height/2)
+        label1:setPosition(sprite:getContentSize().width/2 ,sprite:getContentSize().height/2)
         label1:ignoreAnchorPointForPosition(false)
-        label1:setAnchorPoint(0,0.5)
+        label1:setAnchorPoint(0.5,0.5)
         label1:setScale(1)
         sprite:addChild(label1)
 
-        if totalWord == "" or totalWord == nil then
-            label1:setPosition(sprite:getContentSize().width/2 ,sprite:getContentSize().height/2)
-            label1:setAnchorPoint(0.5,0.5)
+        local lineLength = 0
+        if #selectStack < 4 then
+            lineLength  =  3 * 18
+        else
+            lineLength = #selectStack * 18
         end
 
-        local line = cc.LayerColor:create(cc.c4b(208,212,215,255),#selectStack * 18,2)
-        line:setPosition(30 ,sprite:getContentSize().height*0.2)
+        local line = cc.LayerColor:create(cc.c4b(208,212,215,255),lineLength,2)
+        line:setPosition(20 ,sprite:getContentSize().height*0.2)
         line:ignoreAnchorPointForPosition(false)
         line:setAnchorPoint(0,0.5)
         line:setScale(1)
         sprite:addChild(line)
-
-        local label2 = cc.Label:createWithTTF(totalWord,'font/CenturyGothic.ttf',36)
-        label2:setColor(cc.c4b(255,255,255,255))
-        label2:setPosition(sprite:getContentSize().width - 30 ,sprite:getContentSize().height/2)
-        label2:ignoreAnchorPointForPosition(false)
-        label2:setAnchorPoint(1,0.5)
-        label2:setScale(1)
-        sprite:addChild(label2)
-
-
     end
 
     -- local function

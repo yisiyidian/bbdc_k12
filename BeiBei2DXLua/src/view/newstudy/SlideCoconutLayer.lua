@@ -147,7 +147,7 @@ function SlideCoconutLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
                 word = word.." "..wordGroup[i]
             end
         end
-        word = "_"..word
+        word = "____"..word
         local  label = cc.Label:createWithSystemFont(word,"",50)
         label:setPosition(bigWidth/2, 980)
         label:setColor(cc.c4b(31,68,102,255))
