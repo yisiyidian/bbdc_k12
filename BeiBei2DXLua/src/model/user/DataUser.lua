@@ -106,15 +106,16 @@ function DataUser:ctor()
     self.dataDailyUsing                    = DataDailyUsing.create()
 
     self.k12SmallStep                      = 0
-    self.summaryStep                       = 0
+    --self.summaryStep                       = 0
 end
 
 function DataUser:setSummaryStep(step)
-    if self.summaryStep < step then
-        self.summaryStep = step
-        saveUserToServer({['summaryStep']=summaryStep})
-        AnalyticsSummaryStep(step)
-    end
+    -- if self.summaryStep < step then
+    --     self.summaryStep = step
+    --     saveUserToServer({['summaryStep']=summaryStep})
+    --     AnalyticsSummaryStep(step)
+    -- end
+    --AnalyticsSummaryStep(step)
 end
 
 function DataUser:getLockFunctionState(productId)
@@ -309,7 +310,7 @@ end
 
 function DataUser:setK12SmallStep(step)
     self.k12SmallStep = step
-    saveUserToServer({['k12SmallStep']=k12SmallStep})
+    saveUserToServer({['k12SmallStep']=self.k12SmallStep})
     AnalyticsK12SmallStep(step)
 end
 
