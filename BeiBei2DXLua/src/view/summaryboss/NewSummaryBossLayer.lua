@@ -189,7 +189,9 @@ function NewSummaryBossLayer:initBackground()
     pauseBtn:addTouchEventListener(pauseScene)
 
     onAndroidKeyPressed(pauseBtn, function ()
-        createPausePopup()
+        if not self.gamePaused then 
+            createPausePopup()
+        end
     end, function ()
 
     end)
