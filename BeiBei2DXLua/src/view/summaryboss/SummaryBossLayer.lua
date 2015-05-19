@@ -1673,7 +1673,7 @@ function SummaryBossLayer:hint()
         self.bubble[8]:setVisible(true)
     end
 end
--- 清楚连击
+-- 清空连击
 function SummaryBossLayer:clearCombo()
     self.combo = 0
     for i = 4,12 do
