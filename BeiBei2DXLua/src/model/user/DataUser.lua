@@ -112,7 +112,7 @@ end
 function DataUser:setSummaryStep(step)
     if self.summaryStep < step then
         self.summaryStep = step
-        saveUserToServer({['summaryStep']=self.summaryStep})
+        saveUserToServer({['summaryStep']=summaryStep})
         AnalyticsSummaryStep(step)
     end
 end
