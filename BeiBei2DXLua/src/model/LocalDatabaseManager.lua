@@ -284,16 +284,6 @@ function LocalDataBaseManager.getMissionData()
     return localdatabase_mission.getMissionData()
 end
 
---更新任务状态
-function LocalDataBaseManager.updateMissionData(missionState,genData)
-    
-end
-
---更新累计登陆天数
-function LocalDataBaseManager.updateMissionLoginDay()
-    
-end
-
 ---- Statistics -----------------------------------------------------------------------------------------
 
 function LocalDataBaseManager.getTotalStudyWordsNum()
