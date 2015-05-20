@@ -35,20 +35,20 @@ function NewSummaryBossLayer:ctor(unit)
     end)
 
     local function update(delta)
-       print(s_CURRENT_USER.k12SmallStep)
+       --print(s_CURRENT_USER.bossTutorialStep)
         if self.gameStart and not self.gameOver and not self.gamePaused then 
             self.useTime = self.useTime + delta
             
             --提示换词
-            if s_CURRENT_USER.k12SmallStep < s_K12_summaryBossFailure then
+            if s_CURRENT_USER.bossTutorialStep < s_K12_summaryBossFailure then
                 self.changeBtnTime = self.changeBtnTime + delta
                 if self.changeBtnTime > self.totalTime / 2 then
                     self.changeBtnTime = -10000
                     self.gamePaused = true
-                    if s_CURRENT_USER.k12SmallStep == s_K12_summaryBossSuccess then
-                        s_CURRENT_USER:setK12SmallStep(s_K12_summaryBossFailure + 1)
+                    if s_CURRENT_USER.bossTutorialStep == s_K12_summaryBossSuccess then
+                        s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossFailure + 1)
                     else
-                        s_CURRENT_USER:setK12SmallStep(s_K12_summaryBossFailure)
+                        s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossFailure)
                     end
                     local hintBoard = require("view.summaryboss.HintWord").create('',self.boss,self.firstTimeToChange)
                     self:addChild(hintBoard,1)
@@ -100,7 +100,7 @@ function NewSummaryBossLayer:initStageInfo(unit)
     self.changeBtnTime = 0
     self.hintChangeBtn = nil
     --是否首次换词
-    self.firstTimeToChange = s_CURRENT_USER.k12SmallStep < s_K12_summaryBossFailure
+    self.firstTimeToChange = s_CURRENT_USER.bossTutorialStep < s_K12_summaryBossFailure
     --椰子的行列数
     self.mat_length = 4
     --生词数
@@ -249,7 +249,7 @@ function NewSummaryBossLayer:initBoss()
 end
 
 function NewSummaryBossLayer:initMat()
-	local mat = require("view.summaryboss.Mat").create(self,s_CURRENT_USER.k12SmallStep < s_K12_summaryBoss or s_CURRENT_USER.k12SmallStep == s_K12_summaryBossFailure,"coconut_dark")
+	local mat = require("view.summaryboss.Mat").create(self,s_CURRENT_USER.bossTutorialStep < s_K12_summaryBoss or s_CURRENT_USER.bossTutorialStep == s_K12_summaryBossFailure,"coconut_dark")
     mat:setPosition(s_DESIGN_WIDTH/2, 150)
     self:addChild(mat,1)
     self.mat = mat
@@ -264,15 +264,15 @@ function NewSummaryBossLayer:initMat()
     end
     --划对单词后
     mat.success = function(stack)
-    print('s_CURRENT_USER.k12SmallStep',s_CURRENT_USER.k12SmallStep)
+    --print('s_CURRENT_USER.k12SmallStep',s_CURRENT_USER.k12SmallStep)
         self.changeBtnTime = 0
         s_CURRENT_USER:setSummaryStep(s_summary_doFirstWord) 
         if self.gameOver then return end
-        if s_CURRENT_USER.k12SmallStep < s_K12_summaryBoss or s_CURRENT_USER.k12SmallStep == s_K12_summaryBossFailure then
-            if s_CURRENT_USER.k12SmallStep == s_K12_summaryBossFailure then
-                s_CURRENT_USER:setK12SmallStep(s_K12_summaryBossFailure + 1)
+        if s_CURRENT_USER.bossTutorialStep < s_K12_summaryBoss or s_CURRENT_USER.bossTutorialStep == s_K12_summaryBossFailure then
+            if s_CURRENT_USER.bossTutorialStep == s_K12_summaryBossFailure then
+                s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossFailure + 1)
             else
-                s_CURRENT_USER:setK12SmallStep(s_K12_summaryBossSuccess)
+                s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossSuccess)
             end
         end
         playWordSound(self.wordList[1])
@@ -378,11 +378,11 @@ function NewSummaryBossLayer:addChangeBtn()
                 self.hintChangeBtn = nil
                 --return
             end
-            if s_CURRENT_USER.k12SmallStep < s_K12_summaryBossFailure then
-                if s_CURRENT_USER.k12SmallStep == s_K12_summaryBossSuccess then
-                    s_CURRENT_USER:setK12SmallStep(s_K12_summaryBossFailure + 1)
+            if s_CURRENT_USER.bossTutorialStep < s_K12_summaryBossFailure then
+                if s_CURRENT_USER.bossTutorialStep == s_K12_summaryBossSuccess then
+                    s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossFailure + 1)
                 else
-                    s_CURRENT_USER:setK12SmallStep(s_K12_summaryBossFailure)
+                    s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossFailure)
                 end
             end
             if self.resetCount < self.maxCount then
