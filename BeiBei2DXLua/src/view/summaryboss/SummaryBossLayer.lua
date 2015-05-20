@@ -203,7 +203,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                                 icon:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,255),cc.EaseBackIn:create(cc.ScaleTo:create(0.5,1))))
                                 s_SCENE:callFuncWithDelay(0.5,function (  )
                                     
-                                    if layer.combo % 3 == 0 then
+                                    if layer.combo % 3 == 0 and layer.combo > 0 then
                                         local label1 = layer.combo_label[2 * layer.combo / 3 + 1]
                                         label1:setScale(1.3)
                                         local label2 = layer.combo_label[2 * layer.combo / 3 + 2]
@@ -399,9 +399,6 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             return true
         end
 
-        layer.crab[layer.firstIndex]:stopAllActions()
-        layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y]:stopAllActions()
-
         isTouchEnded = false
         endTime = 0
         
@@ -411,6 +408,10 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         lastTouchLocation = location
         
         layer:checkTouchLocation(location)
+        if layer.onNode then
+            layer.crab[layer.firstIndex]:stopAllActions()
+            layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y]:stopAllActions()
+        end
         if chapter == 2 then
             light:setPosition(location)
             light:setVisible(true)
@@ -446,6 +447,8 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         
         for i = 1,#layer.wordPool[layer.currentIndex] do
             if cc.rectContainsPoint(layer.crab[i]:getBoundingBox(), location) and location.y < 160 then
+                layer.crab[layer.firstIndex]:stopAllActions()
+                layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y]:stopAllActions()
                 layer.isPaused = true
                 layer:crabBig(chapter,i)
                 layer.onCrab = i
@@ -1050,7 +1053,10 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
 end
 -- 初始化词表
 function SummaryBossLayer:initWordList(word)
-    local wordList = word
+    local wordList = {}
+    for i = 1,#word do
+        wordList[i] = word[i]
+    end
     --if #wordList < 1 then
        -- wordList = {'apple','many','many','many','many','many','many','many','many','many','many','tea','banana','cat','dog','camel','ant'}
     --end
@@ -1070,19 +1076,7 @@ function SummaryBossLayer:initWordList(word)
     local levelNumber = #s_LocalDatabaseManager.getAllUnitInfo()
 
     self.totalBlood = 0
-    for i = 1,#wordList do
-        self.totalBlood = self.totalBlood + self:getLength(wordList[i]) * 2
-    end
-    self.currentBlood = self.totalBlood
-    if self.entrance then
-        self.totalTime = math.ceil(self.totalBlood / 14) * 15 + s_CURRENT_USER.timeAdjust
-    else
-        self.totalTime = math.ceil(self.totalBlood / 14) * 15
-    end
-    if levelNumber == 1 then
-        self.totalTime = 2 * self.totalTime
-    end
-    self.leftTime = self.totalTime
+    
     --self:runAction(cc.Ripple3D:create(20, cc.size(32,24), cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2), 120, 40, 240))
     -- self.totalBlood = levelConfig.summary_boss_hp
     -- self.currentBlood = self.totalBlood
@@ -1099,16 +1093,26 @@ function SummaryBossLayer:initWordList(word)
         for i = 1, n do
             local w = wordList[index]
             local w_split = split(w,'|')
-            if(totalLength + self:getLength(w) <= self.length * self.length) then
+
+            if #w_split > 2 then
+                for i = 3,#w_split do
+                w_split[2] = w_split[2]..' '..w_split[3]
+                end
+            end
+            if(totalLength + self:getLength(w_split[1]) <= self.length * self.length) then
                 if #w_split == 1 then
                     tmp[#tmp + 1] = {w,'',w}
-                    totalLength = totalLength + self:getLength(w)
+                    totalLength = totalLength + self:getLength(w_split[1])
                     index = index + 1
+                    self.totalBlood = self.totalBlood + self:getLength(w_split[1]) * 2
+                    print('blood',self.totalBlood)
                 else
                     if i == 1 then
                         tmp[#tmp + 1] = {w_split[1],w_split[2],w}
                         totalLength = totalLength + self:getLength(w_split[1])
                         index = index + 1
+                        self.totalBlood = self.totalBlood + self:getLength(w_split[1]) * 2
+                        print('blood',self.totalBlood)
                     end
                     
                     
@@ -1125,6 +1129,19 @@ function SummaryBossLayer:initWordList(word)
         end
         self.wordPool[#self.wordPool + 1] = tmp          
     end
+    -- for i = 1,#wordList do
+    --     self.totalBlood = self.totalBlood + self:getLength(wordList[i]) * 2
+    -- end
+    self.currentBlood = self.totalBlood
+    if self.entrance then
+        self.totalTime = math.ceil(self.totalBlood / 14) * 15 + s_CURRENT_USER.timeAdjust
+    else
+        self.totalTime = math.ceil(self.totalBlood / 14) * 15
+    end
+    if levelNumber == 1 then
+        self.totalTime = 2 * self.totalTime
+    end
+    self.leftTime = self.totalTime
 end
 -- 开始游戏的位置
 function SummaryBossLayer:initStartIndex(index)
@@ -1208,12 +1225,13 @@ function SummaryBossLayer:initCrab1()
         self:addChild(self.crab[3])
         
     end
+    self.globalLock = true
+    s_SCENE:callFuncWithDelay(0.5,function (  )
+        self.globalLock = false
+    end)
     for i = 1,#self.crab do
         local appear = cc.EaseBackOut:create(cc.MoveBy:create(0.5,cc.p(0,s_DESIGN_HEIGHT * 0.2)))
         local delaytime = 0
-        if self.currentIndex == 1 then
-            --delaytime = 1.5
-        end
         self.crab[i]:runAction(cc.Sequence:create(cc.DelayTime:create(1.1 + delaytime),appear))
         self.ccbcrab[i]['meaningSmall']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i][3]).wordMeaningSmall)
         self.ccbcrab[i]['meaningBig']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i][3]).wordMeaningSmall)
