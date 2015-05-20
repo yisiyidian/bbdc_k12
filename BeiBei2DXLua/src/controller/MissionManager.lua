@@ -308,13 +308,13 @@ function MissionManager:handleMissionServerData(data)
 	dump(data,"服务器返回任务数据")
 	local change = false
 	for k,v in pairs(data) do
-		if self.missionData[v] ~= v then
-			self.missionData[v] = v
+		if self.missionData[k] ~= v then
+			self.missionData[k] = v
 			change = true
 		end
 	end
 	if change then
-		self:saveTaskToLocal()--存到本地
+		self:saveTaskToLocal()--如果有改动 存到本地
 	end
 end
 
