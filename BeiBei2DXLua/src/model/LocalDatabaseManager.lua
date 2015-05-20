@@ -281,7 +281,7 @@ end
 ---- Mission -----------------------------任务------------------------------------------------------------
 --获取当前用户的任务数据
 function LocalDataBaseManager.getMissionData()
-    
+    return localdatabase_mission.getMissionData()
 end
 
 --更新任务状态

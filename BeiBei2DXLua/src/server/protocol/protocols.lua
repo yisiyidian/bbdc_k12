@@ -481,6 +481,38 @@ function getNotContainedInLocalBossWordFromServer(callback)
         end
     end)
 end
+---------------------------------------------------------------------------------------------------
+--保存任务数据到服务器
+--missionData   任务数据
+--callback      完成回调
+function saveMissionToServer(missionData,callback)
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
+        if callback then callback(nil, nil) end
+        return
+    end
+
+    local api = 'sysmission'
+    local serverRequestType = math['or'](SERVER_REQUEST_TYPE_CLIENT_ENCODE, SERVER_REQUEST_TYPE_CLIENT_DECODE)
+
+    local function cb(result, error)
+        if error == nil then
+            if result.datas ~= nil then
+                --回调给s_MissionManager处理数据
+                s_MissionManager:handleMissionServerData(result.datas)
+            end
+            if callback then callback(result.datas, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
+    end
+    missionData.userId = s_CURRENT_USER.userId;
+    missionData.username = s_CURRENT_USER.username;
+    local unsavedDataTable = dataTableToJSONString(missionData)
+    -- dump(unsavedDataTable,"unsavedDataTable")
+    -- --数据推送到服务器上去
+    local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataMission',['us']=unsavedDataTable}, cb)
+    protocol:request()
+end
 
 ---------------------------------------------------------------------------------------------------
 
@@ -538,8 +570,8 @@ function saveUserToServer(dataTable, callback)
 
         end
     end
-    dump(userdata)
-    saveToServer(userdata, cb)    
+    dump(userdata,"同步User数据到服务器")
+    saveToServer(userdata, cb)
 end
 
 

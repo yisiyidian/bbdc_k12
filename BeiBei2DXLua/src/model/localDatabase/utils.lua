@@ -221,7 +221,7 @@ end
 -- else create record
 function M.saveDataClassObject(objectOfDataClass, userId, username, conditions)
     conditions = conditions or ''
-
+    --寻找以前就存在的记录进行修改
     if objectOfDataClass.objectId ~= '' then
         local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE objectId = '".. objectOfDataClass.objectId .."'" .. conditions
         print ('M.saveDataClassObject: ' .. searchSql)
@@ -231,7 +231,7 @@ function M.saveDataClassObject(objectOfDataClass, userId, username, conditions)
             return
         end
     end
-
+    --寻找以前就存在的记录进行修改
     if userId ~= nil and userId ~= '' then
         local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE userId = '".. userId .."'" .. conditions
         print ('M.saveDataClassObject: ' .. searchSql)
@@ -241,7 +241,7 @@ function M.saveDataClassObject(objectOfDataClass, userId, username, conditions)
             return
         end
     end
-
+    --寻找以前就存在的记录进行修改
     if username ~= nil and username ~= '' then
         local searchSql = "SELECT * FROM " .. objectOfDataClass.className .. " WHERE username = '".. username .."'" .. conditions
         print ('M.saveDataClassObject: ' .. searchSql)
@@ -251,7 +251,6 @@ function M.saveDataClassObject(objectOfDataClass, userId, username, conditions)
             return
         end
     end
-
     M.saveData(objectOfDataClass, userId, username, 0, conditions)
 end
 

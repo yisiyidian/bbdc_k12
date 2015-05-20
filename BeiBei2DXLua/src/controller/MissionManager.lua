@@ -31,37 +31,32 @@ local DataMission    = require("model.user.DataMission")
 
 function MissionManager:ctor()
 	self.taskNum = 6 		--随机任务数量
-	self.missionData = nil  --任务数据	
-	self:init()
+	self.missionData = nil  --任务数据
 end
 
---初始化任务数据
-function MissionManager:init()
-	-- self.missionData -对应--> DataMission.lua
-	self.missionData = s_LocalDatabaseManager.getMissionData()
-	--刷新任务数据
-	self:generalTasks()
-	--保存数据
-	self:saveTaskToLocal()
-end
 
 --生成今日的任务数据
 function MissionManager:generalTasks()
 	local loginDay = 0 			--累计登陆天数
 	local lastLoginDate = nil 	--上一次的登陆时间
+	local taskGenDate = nil
 	
 	if self.missionData == nil then
 		self.missionData = DataMission.create()
 	end
-	
+	-- taskGenDate
 	lastLoginDate   = self.missionData.lastLoginDate 	--取上一次的登陆时间
 	loginDay 		= self.missionData.totalLoginDay	--累计登陆天数
+	taskGenDate 	= self.missionData.taskGenDate 		--任务列表生成时间 TODO
 	local tDate = os.date("%x", lastLoginDate)			--最后登陆日期
 	local tNow  = os.date("%x", os.time())				--当前日期
-
+	print("last Date:"..tDate)
+	print("now  Date:"..tNow)
 	--如果是今天第一次登陆 则重新生成任务列表
 	if tNow ~= tDate or self.missionData.taskList == "" then
+		print("重新生成任务列表")
 		loginDay = loginDay + 1	--天数+1
+		taskGenDate = os.time()
 		--重新生成任务列表
 		local result = {} 	-- 生成结果
 		local tasksConfig =  MissionConfig.randomMission
@@ -162,8 +157,7 @@ function MissionManager:generalTasks()
 						--计算正确的游标
 						--任务状态 如果是已领取,则把游标定位到下一个系列任务
 						--TODO 如果是已完成，未领取状态，是不是要优先加入任务列表？？？TODO
-						-- vv[2] 任务游标
-						-- vv[3] 任务状态 0未完成  1完成  2已领取
+						-- vv[2] 任务游标 -- vv[3] 任务状态 0未完成  1完成  2已领取
 						if vv[3] == "0" and vv[3] == "1" then--游标不变
 							temp_mission_str = temp_mission_str.."_0_"..condition[vv[2]].."_"..vv[2]
 						elseif vv[3] == "2" then--游标定位到下一个
@@ -193,65 +187,135 @@ function MissionManager:generalTasks()
 		end
 		self.missionData.taskList = mission_str
 	end
-		
 	
-
-	-- if self.missionData ~= nil then
-	-- 	--上次登陆日期 跟现在的日期比较,如果不一样的话,就增加一天 一样的话就不动了
-	-- 	local lastLoginDate = self.missionData.lastLoginDate
-	-- 	local lastLoginDay = os.date("%x", lastLoginDate) 	--05/15/15   月/日/年		
-	-- 	local nowDate = os.date("%x",os.time())				--05/15/15   月/日/年  	当前的时间
-	-- 	--今天第一次登陆了  以前也登陆过
-	-- 	if lastLoginDate ~= nowDate then
-	-- 		self.missionData.totalLoginDay = self.missionData.totalLoginDay + 1
-	-- 	end
-	-- 	loginDay = self.missionData.totalLoginDay
-	-- else
-
-	-- end
-
-
-	self.missionData.lastLoginDate = os.time()
+	self.missionData.lastLoginDate = os.time()  	--取当前的时间
 	self.missionData.totalLoginDay = loginDay
+	self.missionData.taskGenDate   = taskGenDate 	--任务列表生成时间
 end
 
 --获取任务数据
 function MissionManager:getMissionData()
+	-- self.missionData -对应--> DataMission.lua
+	self.missionData = s_LocalDatabaseManager.getMissionData()
+	--刷新任务数据
+	self:generalTasks()
+	--保存数据
+	self:saveTaskToLocal()
+	dump(self.missionData,"任务数据 ")
 	return self.missionData
 end
+
+--获取任务的missionData
+function MissionManager:getNornalMissionData()
+	return self.missionData
+end
+
 --获取当前的任务列表
 function MissionManager:getTaskList()
-	
+	--任务列表的str转成 table
+	return self:strToTable(strself.missionData.taskList)
 end
 
 --保存数据到本地数据库
 function MissionManager:saveTaskToLocal()
 	--保存到本地数据库
+	self.missionData.userId = s_CURRENT_USER.userId
+	self.missionData.username = s_CURRENT_USER.username
 	s_LocalDatabaseManager.saveDataClassObject(self.missionData, s_CURRENT_USER.userId, s_CURRENT_USER.username)
 end
 
---从服务器拉取任务信息
-function MissionManager:pullTaskFromServer()
-	
-end
-
---保存当前的任务到服务器
-function MissionManager:pushTaskToServer()
-	
-end
-
---更新任务状态
---taskId 	任务ID
---taskData 	任务数据
-function MissionManager:updateTask(taskId,taskData)
-	
-end
-
---完成任务
+-- 更新任务状态------------------------------------------------------------------外部调用-----------更新任务状态---
 -- taskId 	任务ID
--- callBack	回调
+-- taskData 	任务数据 条件,修改条件
+-- callBack 修改完成回调
+function MissionManager:updateTask(taskId,taskData,callBack)
+	taskData = taskData or 1
+	local tb = self:strToTable(self.missionData.taskList)
+	local re = false
+	for k,v in pairs(tb) do
+		if v[1] == taskId then
+			v[3] = tostring(tonumber(v[3]) + taskData) --默认条件+1
+			if v[3] == v[4] then --如果当前任务条件和 任务总条件匹配,则标记为已完成
+				v[2] = 1 --标记为已完成 未领取
+				re = true
+			end
+		end
+	end
+	self.missionData.taskList = self:tableToStr(tb)
+	self:saveTaskToLocal()
+	s_O2OController.syncMission(callBack)  --同步数据 到服务器
+	return re
+end
+
+-- 领取任务奖励-----------------------------------------------------------------外部调用-----------完成任务---
+-- TODO  奖励贝贝豆 
+-- taskId 	任务ID
+-- callBack	领取完成回调
 function MissionManager:completeTask(taskId,callBack)
-	
+	local tb = self:strToTable(self.missionData.taskList)
+	local re = false
+	for k,v in pairs(tb) do
+		if v[1] == taskId then
+			if v[2] == 1 then
+				v[2] 	= 2  	--修改状态为已领取
+				re 		= true
+				break
+			end 
+		end
+	end
+	self.missionData.taskList = self:tableToStr(tb)
+	self:saveTaskToLocal()
+	s_O2OController.syncMission(callBack) --同步数据 到服务器
+	return re
+end
+
+--任务数据 str转换成table 结构
+--“|”分任务   “_”分字段
+function MissionManager:strToTable(str)
+	local re = {}
+	local missions = string.split(str,"|")
+	for k,v in pairs(missions) do
+		re[#re + 1] = string.split(v,"_")
+	end
+	return re
+end
+--任务数据  由 table 转到 string
+function MissionManager:tableToStr(tb)
+	local re = ""
+	local tempStr = ""
+	for k,v in pairs(tb) do
+		tempStr = ""
+		for kk,vv in pairs(v) do
+			if tempStr == "" then
+				tempStr = vv
+			else
+				tempStr = tempStr.."_"..vv
+			end
+		end
+		if re == "" then
+			re = tempStr
+		else
+			re = re.."|"..tempStr
+		end
+	end
+	return re
+end
+
+
+--
+function MissionManager:handleMissionServerData(data)
+	--服务器 发来了数据
+	dump(data,"服务器返回任务数据")
+	local change = false
+	for k,v in pairs(data) do
+		if self.missionData[v] ~= v then
+			self.missionData[v] = v
+			change = true
+		end
+	end
+	if change then
+		self:saveTaskToLocal()--存到本地
+	end
 end
 
 ---------------累计登陆相关------------
