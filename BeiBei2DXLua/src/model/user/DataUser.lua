@@ -116,7 +116,6 @@ function DataUser:setSummaryStep(step)
         saveUserToServer({['summaryStep']=self.summaryStep})
         AnalyticsSummaryStep(step)
     end
-    --AnalyticsSummaryStep(step)
 end
 
 function DataUser:setBossTutorialStep(step)
