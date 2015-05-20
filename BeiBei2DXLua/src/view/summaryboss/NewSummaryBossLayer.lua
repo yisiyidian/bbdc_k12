@@ -35,7 +35,7 @@ function NewSummaryBossLayer:ctor(unit)
     end)
 
     local function update(delta)
-        print(s_CURRENT_USER.k12SmallStep)
+       print(s_CURRENT_USER.k12SmallStep)
         if self.gameStart and not self.gameOver and not self.gamePaused then 
             self.useTime = self.useTime + delta
             
@@ -50,7 +50,7 @@ function NewSummaryBossLayer:ctor(unit)
                     else
                         s_CURRENT_USER:setK12SmallStep(s_K12_summaryBossFailure)
                     end
-                    local hintBoard = require("view.summaryboss.HintWord").create('',self.boss)
+                    local hintBoard = require("view.summaryboss.HintWord").create('',self.boss,self.firstTimeToChange)
                     self:addChild(hintBoard,1)
                     self.hintChangeBtn = hintBoard
                     
@@ -99,6 +99,8 @@ function NewSummaryBossLayer:initStageInfo(unit)
     --提示换词功能
     self.changeBtnTime = 0
     self.hintChangeBtn = nil
+    --是否首次换词
+    self.firstTimeToChange = s_CURRENT_USER.k12SmallStep < s_K12_summaryBossFailure
     --椰子的行列数
     self.mat_length = 4
     --生词数
@@ -263,6 +265,7 @@ function NewSummaryBossLayer:initMat()
     --划对单词后
     mat.success = function(stack)
     print('s_CURRENT_USER.k12SmallStep',s_CURRENT_USER.k12SmallStep)
+        self.changeBtnTime = 0
         s_CURRENT_USER:setSummaryStep(s_summary_doFirstWord) 
         if self.gameOver then return end
         if s_CURRENT_USER.k12SmallStep < s_K12_summaryBoss or s_CURRENT_USER.k12SmallStep == s_K12_summaryBossFailure then
@@ -362,13 +365,14 @@ end
 
 function NewSummaryBossLayer:addChangeBtn()
     --换词按钮
-    local changeBtn = ccui.Button:create('image/summarybossscene/button_change_h5_boss.png','image/summarybossscene/button_pressed_change_h5_boss.png')
+    local changeBtn = ccui.Button:create('image/summarybossscene/hint_change_btn.png','image/summarybossscene/hint_change_btn_click.png')
     changeBtn:setPosition(s_DESIGN_WIDTH * 0.84,100)
     self:addChild(changeBtn,2)
     changeBtn:setScale(0)
     changeBtn:runAction(cc.EaseBackOut:create(cc.ScaleTo:create(0.5,1)))
     local function changeWord(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
+            playWordSound(self.wordList[1])
             if self.hintChangeBtn ~= nil then
                 self.hintChangeBtn.hintOver()
                 self.hintChangeBtn = nil
@@ -387,14 +391,17 @@ function NewSummaryBossLayer:addChangeBtn()
             end
             
             self.gamePaused = true
-            local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1],self.boss)
+            local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1],self.boss,self.firstTimeToChange)
             s_SCENE.popupLayer:addChild(hintBoard)
             
             hintBoard.hintOver = function (  )
-                s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                self.firstTimeToChange = false
                 self.gamePaused = false
-                table.insert(self.wordList,self.wordList[1])
-                self:resetMat()
+                if #self.wordList > 1 then
+                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                    table.insert(self.wordList,self.wordList[1])
+                    self:resetMat()
+                end
             end
             
         end
@@ -430,7 +437,7 @@ function NewSummaryBossLayer:gameOverFunc(win)
             s_LocalDatabaseManager.addStudyWordsNum(self.maxCount)
             s_LocalDatabaseManager.addRightWord(self.rightWordList,self.unit.unitID)
             s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - self.wrongWord)
-            print(self.maxCount - self.wrongWord)
+         --   print(self.maxCount - self.wrongWord)
         elseif self.unit.unitState == 4 then
             s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - #split(self.rightWordList,'|'))
             s_LocalDatabaseManager.addRightWord(self.unit.wrongWordList,self.unit.unitID)

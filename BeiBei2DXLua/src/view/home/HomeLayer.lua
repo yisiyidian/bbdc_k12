@@ -59,6 +59,8 @@ function HomeLayer.create()
     print("totalGraspWordNum : "..totalGraspWordNum)
     print("totalStudyDayNum : "..totalStudyDayNum)
 
+    print('s_CURRENT_USER.k12SmallStep',s_CURRENT_USER.k12SmallStep)
+
     if s_CURRENT_USER.k12SmallStep < s_K12_enterHomeLayer then
         s_CURRENT_USER:setK12SmallStep(s_K12_enterHomeLayer)
     end

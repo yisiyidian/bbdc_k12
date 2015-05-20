@@ -87,14 +87,14 @@ function SummaryBossAlter:lose(entrance)
     --     s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
     --     s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_timeout)
     -- end
-    if s_CURRENT_USER.k12SmallStep < s_K12_summaryBossFailure then
-        s_CURRENT_USER:setK12SmallStep(s_K12_summaryBossFailure)
-    end
-    -- 打点
+    -- if s_CURRENT_USER.k12SmallStep < s_K12_summaryBossFailure then
+    --     s_CURRENT_USER:setK12SmallStep(s_K12_summaryBossFailure)
+    -- end
+    -- -- 打点
 
-    if s_CURRENT_USER.k12SmallStep < s_K12_end then
-        s_CURRENT_USER:setK12SmallStep(s_K12_end)
-    end
+    -- if s_CURRENT_USER.k12SmallStep < s_K12_end then
+    --     s_CURRENT_USER:setK12SmallStep(s_K12_end)
+    -- end
     -- 打点
     --add board
     self.loseBoard = cc.Sprite:create("image/summarybossscene/background_zjboss_tanchu.png")
@@ -325,13 +325,13 @@ function SummaryBossAlter:win1(entrance)
 end
 
 function SummaryBossAlter:win2(entrance,hasCheckedIn)
-    if s_CURRENT_USER.k12SmallStep < s_K12_summaryBossSuccess then
-        s_CURRENT_USER:setK12SmallStep(s_K12_summaryBossSuccess)
-    end
-    -- 打点
-    if s_CURRENT_USER.k12SmallStep < s_K12_end then
-        s_CURRENT_USER:setK12SmallStep(s_K12_end)
-    end
+    -- if s_CURRENT_USER.k12SmallStep < s_K12_summaryBossSuccess then
+    --     s_CURRENT_USER:setK12SmallStep(s_K12_summaryBossSuccess)
+    -- end
+    -- -- 打点
+    -- if s_CURRENT_USER.k12SmallStep < s_K12_end then
+    --     s_CURRENT_USER:setK12SmallStep(s_K12_end)
+    -- end
     -- 打点
     local backColor = cc.LayerColor:create(cc.c4b(180,241,254,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
     backColor:ignoreAnchorPointForPosition(false)

@@ -4,12 +4,12 @@ local HintWord = class ("HintWord",function ()
     return cc.Layer:create()
 end)
 
-function HintWord.create(word,target)
-    local layer = HintWord.new(word,target)
+function HintWord.create(word,target,firstTime)
+    local layer = HintWord.new(word,target,firstTime)
     return layer
 end
 
-function HintWord:ctor(word,target)
+function HintWord:ctor(word,target,firstTime)
     self.hintOver = function() end
 
     local director = cc.Director:getInstance()
@@ -40,6 +40,16 @@ function HintWord:ctor(word,target)
         title:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.7)
         title:setScale(1.5)
         self:addChild(title)
+        
+        if firstTime then
+            local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
+            tutorial_text:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 0.8)
+            self:addChild(tutorial_text,120)
+            local text = cc.Label:createWithSystemFont('这个词一会儿还会再出现的哦！','',28)
+            text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
+            text:setColor(cc.c3b(0,0,0))
+            tutorial_text:addChild(text)
+        end
 
         wordBoard:runAction(cc.EaseBackOut:create(cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT))))
     else
