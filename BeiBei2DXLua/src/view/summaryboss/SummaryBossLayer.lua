@@ -32,13 +32,12 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
     if s_CURRENT_USER.k12SmallStep < s_K12_summaryBoss then
         s_CURRENT_USER:setK12SmallStep(s_K12_summaryBoss)
     end
-    -- 打点 
     AnalyticsSummaryBoss()
+    -- 打点
     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+    -- 触摸解锁
     local layer = SummaryBossLayer.new()
     math.randomseed(os.time())
-    --add coconut
-    --layer.levelConfig = levelConfig
     layer.coconut = {}
     layer.isFirst = {}
     layer.firstNodeArray = {}
@@ -956,18 +955,15 @@ function SummaryBossLayer:addBubble()
         bubble[i]:setAnchorPoint(0,0)
         bubble[i]:setPosition(100,150)
         self.girl:addChild(bubble[i])
-
         right_label:setPosition(bubble[i]:getContentSize().width / 2,bubble[i]:getContentSize().height * 0.6 + 2)
         bubble[i]:addChild(right_label)
         right_label:setName('label')
         bubble[i]:setVisible(false)
     end
-
 end
 
 -- 初始化boss
 function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
-    
     local blinkBack = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     blinkBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     self:addChild(blinkBack,0)
@@ -977,7 +973,6 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
             self.girlAfraid = true
             HINT_TIME = 4
             self.girl:setAnimation(0,'girl-afraid',true)
-            -- deadline "Mechanical Clock Ring "
             playSound(s_sound_Mechanical_Clock_Ring)
             playMusic(s_sound_Get_Outside_Speedup,true)
         end
@@ -988,9 +983,6 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
     local repeatBlink = cc.Repeat:create(blink,math.ceil(self.totalTime * 0.1))
     blinkBack:runAction(cc.Sequence:create(wait,afraid,repeatBlink))
     self.blink = blinkBack
-
-    
-    --add boss
     local bossNode = cc.Node:create()
     bossNode:setPosition(s_DESIGN_WIDTH * 0.65, s_DESIGN_HEIGHT * 1.15)
     self:addChild(bossNode)
@@ -1003,7 +995,6 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
     bossAction[2] = cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.75 + 20)))
     if chapter == 2 then
         bossAction[2] = cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.76 + 20)))
-        --boss light
         local light_boss = cc.Sprite:create('image/summarybossscene/global_zongjiebosshuangshuboss_dierguan.png')
         light_boss:setAnchorPoint(0,0)
         light_boss:setPosition(0,0)
@@ -1011,8 +1002,7 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
         light_boss:setVisible(false)
         light_boss:runAction(cc.Sequence:create(cc.DelayTime:create(0.3),cc.Show:create()))
     end
-    bossAction[3] = cc.CallFunc:create(function (  )
-        -- body
+    bossAction[3] = cc.CallFunc:create(function ()
         self:initMap(chapter)
     end,{})
     for i = 1, 10 do
@@ -1051,9 +1041,6 @@ end
 -- 初始化词表
 function SummaryBossLayer:initWordList(word)
     local wordList = word
-    --if #wordList < 1 then
-       -- wordList = {'apple','many','many','many','many','many','many','many','many','many','many','tea','banana','cat','dog','camel','ant'}
-    --end
     local index = 1
     
     for i = 1, #wordList do
@@ -1061,7 +1048,6 @@ function SummaryBossLayer:initWordList(word)
         local tmp = wordList[i]
         wordList[i] = wordList[randomIndex]
         wordList[randomIndex] = tmp
-        
     end
 
     self.maxCount = #wordList
@@ -1083,10 +1069,6 @@ function SummaryBossLayer:initWordList(word)
         self.totalTime = 2 * self.totalTime
     end
     self.leftTime = self.totalTime
-    --self:runAction(cc.Ripple3D:create(20, cc.size(32,24), cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2), 120, 40, 240))
-    -- self.totalBlood = levelConfig.summary_boss_hp
-    -- self.currentBlood = self.totalBlood
-    -- self.totalTime = levelConfig.summary_boss_time
 
     local n = 3 --最多出现的词数
     if s_CorePlayManager.currentUnitID == 1 then
@@ -1210,11 +1192,7 @@ function SummaryBossLayer:initCrab1()
     end
     for i = 1,#self.crab do
         local appear = cc.EaseBackOut:create(cc.MoveBy:create(0.5,cc.p(0,s_DESIGN_HEIGHT * 0.2)))
-        local delaytime = 0
-        if self.currentIndex == 1 then
-            --delaytime = 1.5
-        end
-        self.crab[i]:runAction(cc.Sequence:create(cc.DelayTime:create(1.1 + delaytime),appear))
+        self.crab[i]:runAction(cc.Sequence:create(cc.DelayTime:create(1.1),appear))
         self.ccbcrab[i]['meaningSmall']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i][3]).wordMeaningSmall)
         self.ccbcrab[i]['meaningBig']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(self.wordPool[self.currentIndex][i][3]).wordMeaningSmall)
     end
@@ -1268,11 +1246,7 @@ function SummaryBossLayer:initCrab2(chapter)
         end
         self.crab[i]:setAnchorPoint(0.5,0)
         local appear = cc.EaseBackOut:create(cc.MoveBy:create(0.5,cc.p(0,s_DESIGN_HEIGHT * 0.2)))
-        local delaytime = 0
-        if self.currentIndex == 1 then
-            --delaytime = 1.5
-        end
-        self.crab[i]:runAction(cc.Sequence:create(cc.DelayTime:create(1.1 + delaytime),appear))
+        self.crab[i]:runAction(cc.Sequence:create(cc.DelayTime:create(1.1),appear))
     end
 end
 -- 地图信息
@@ -1285,10 +1259,6 @@ function SummaryBossLayer:initMapInfo()
 end
 
 function SummaryBossLayer:initMapInfoByIndex(startIndex)
-    -- local start = os.time()
-    -- self.isFirst = {}
-    -- self.isCrab = {}
-    -- self.character = {}
     for k = startIndex,#self.wordPool do
         self:initStartIndex(k)
         self.character[k] = {}
