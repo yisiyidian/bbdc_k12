@@ -14,6 +14,7 @@ local Mat = class("Mat", function()
 end)
 
 function Mat.create(bosslayer, isNewPlayerModel, spineName)
+
     local word = bosslayer.wordList[1]
     local m = bosslayer.mat_length
     local n = m
@@ -309,55 +310,39 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     local back_box = cc.Layer:create()
     local back_box_num = 0
     local updateSelectWord = function()
-        -- for i = 1, back_box_num do
-        --     main:removeChildByTag(i,true)
-        --     main:removeChildByTag(100+i,true)
-        -- end
-
-        -- local gap = 28
-        -- local left = s_DESIGN_WIDTH/2 - (#selectStack-1)*gap/2
-
-        -- for i = 1, #selectStack do
-        --     local term_back = cc.Sprite:create("image/summarybossscene/global_zongjiebossdancixianshi_1.png") -- "image/newstudy/wordbackground.png"
-        --     term_back:setPosition(left+(i-1)*gap,640)
-        --     term_back:setTag(i)
-        --     main:addChild(term_back)
-        -- end
-        -- for i = 1, #selectStack do
-        --     local term_char = cc.Label:createWithTTF(selectStack[i].main_character_content,'font/CenturyGothic.ttf',36)
-        --     term_char:setColor(cc.c4b(255,255,255,255))
-        --     term_char:setPosition(left+(i-1)*gap,640)
-        --     term_char:setTag(100+i)
-        --     main:addChild(term_char)
-        -- end
-        -- back_box_num = #selectStack
-        main:removeChildByTag(1,true)
-        -- local totalWord = ""
-        -- for i = 1,#word do
-        --     if i ~= 1 then
-        --         totalWord = totalWord.." "..main.word[i]
-        --     end
-        -- end
+ 
+        bosslayer:removeChildByTag(1,true)
+        if #selectStack == 0 then
+            return
+        end
 
         local sprite =  ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(28.499,0,28.501,74))
-        sprite:setPosition(s_DESIGN_WIDTH/2,640)
-        sprite:setContentSize((string.len(word)) * 18 + 60 ,74)
+        sprite:setPosition(s_DESIGN_WIDTH/2,790)
+        sprite:setContentSize((#selectStack) * 18 + 60 ,74)
         sprite:setTag(1)
-        main:addChild(sprite)
-        -- local word = ""
-        -- for i = 1, #selectStack do
-        --     word = word..selectStack[i].main_character_content
-        -- end
-        -- word = word..totalWord
+        bosslayer:addChild(sprite)
 
-        local label1 = cc.Label:createWithTTF(word,'font/CenturyGothic.ttf',36)
+        local circle_succeed = ccui.Scale9Sprite:create("image/mat/circle_succeed.png",cc.rect(0,0,232,94),cc.rect(47,0,138,94))
+        circle_succeed:setPosition(sprite:getContentSize().width/2 ,sprite:getContentSize().height/2)
+        circle_succeed:setContentSize((#selectStack) * 18 + 94 ,94)
+        sprite:addChild(circle_succeed)
+        circle_succeed:setOpacity(0)
+        main.circle_succeed = circle_succeed
+
+        local selectWord = ""
+        for i = 1, #selectStack do
+            selectWord = selectWord..selectStack[i].main_character_content
+        end
+
+        local label1 = cc.Label:createWithTTF(selectWord,'font/CenturyGothic.ttf',36)
         label1:setColor(cc.c4b(255,255,255,255))
-        label1:setPosition(sprite:getContentSize().width/2 ,sprite:getContentSize().height/2)
+        label1:setPosition(circle_succeed:getContentSize().width/2 ,circle_succeed:getContentSize().height/2)
         label1:ignoreAnchorPointForPosition(false)
         label1:setAnchorPoint(0.5,0.5)
         label1:setScale(1)
-        sprite:addChild(label1)
+        circle_succeed:addChild(label1)
     end
+    updateSelectWord()
 
     -- local function
     local checkTouchLocation = function(location)
@@ -677,7 +662,8 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         main.success(selectStack)
 
         selectStack = {}
-        updateSelectWord()
+        main.circle_succeed:runAction(cc.Sequence:create(cc.FadeIn:create(0.2),cc.ScaleTo:create(0.2,1.2),cc.ScaleTo:create(0.2,1.0)))
+        -- updateSelectWord()
         -- slide true
         playSound(s_sound_learn_true)
     end
