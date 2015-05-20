@@ -95,7 +95,7 @@ function SummaryBossAlter:lose(entrance)
     if s_CURRENT_USER.k12SmallStep < s_K12_end then
         s_CURRENT_USER:setK12SmallStep(s_K12_end)
     end
-    打点
+    --打点
     --add board
     self.loseBoard = cc.Sprite:create("image/summarybossscene/background_zjboss_tanchu.png")
     self.loseBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
