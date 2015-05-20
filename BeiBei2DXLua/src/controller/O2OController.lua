@@ -281,6 +281,8 @@ function O2OController.signUpOffline(username, password)
     O2OController.loadConfigs()
     O2OController.getDataLevelInfo()
     O2OController.getDataEverydayInfo()
+    O2OController.syncMission() --生成任务
+    -- O2OController.getDataEverydayInfo()
     --进入选择教育程度的界面 小初高什么的
     s_CorePlayManager.enterEducationLayer()
 
@@ -291,7 +293,7 @@ function O2OController.logInOffline()
     O2OController.loadConfigs()
     O2OController.getDataLevelInfo()
     O2OController.getDataEverydayInfo()
-
+    O2OController.syncMission() --生成、同步任务列表
     if s_CURRENT_USER.bookKey == '' then
         s_CorePlayManager.enterEducationLayer()
     else
@@ -301,7 +303,6 @@ function O2OController.logInOffline()
     end
 
     s_CURRENT_USER.dataDailyUsing:reset()
-
     hideProgressHUD()
 end
 
@@ -309,32 +310,33 @@ end
 
 --登陆成功 获取线上数据
 function O2OController.getUserDatasOnline()
-    LOGTIME('loadConfigs')
+    LOGTIME('loadConfigs')  --加载静态配置
     O2OController.loadConfigs()
 
-    LOGTIME('getDataLevelInfo')
+    LOGTIME('getDataLevelInfo') --获取每本书的进度
     O2OController.getDataLevelInfo(function () 
-        LOGTIME('getDataEverydayInfo')
+        LOGTIME('getDataEverydayInfo')  --
         O2OController.getDataEverydayInfo(function ()
             if s_CURRENT_USER.bookKey == '' then
                 print("当前bookKey为空,进入EducationLayer")
                 s_CorePlayManager.enterEducationLayer() 
                 s_CURRENT_USER.dataDailyUsing:reset()
+                --TODO 任务
             else
-
                 LOGTIME('getBossWord')               
                 O2OController.getBossWord(function ()
                     LOGTIME('getDailyStudyInfo')
-                    O2OController.getDailyStudyInfo(function () 
-                        LOGTIME('enterHomeLayer')
-                        s_CorePlayManager.enterHomeLayer()
-                        s_SCENE:removeAllPopups()
-                        -- O2OController.getBulletinBoard()
-                        s_CURRENT_USER.dataDailyUsing:reset() 
+                    O2OController.getDailyStudyInfo(function ()
+                        LOGTIME('syncMission')   --获取任务数据
+                        O2OController.syncMission(function()
+                                LOGTIME('enterHomeLayer')
+                                s_CorePlayManager.enterHomeLayer()
+                                s_SCENE:removeAllPopups()
+                                -- O2OController.getBulletinBoard()
+                                s_CURRENT_USER.dataDailyUsing:reset() 
+                        end)
                     end)
-
                 end)
-                
             end 
         end)
     end)
@@ -529,6 +531,21 @@ function O2OController.getBulletinBoard()
 
         hideProgressHUD()
     end)
+end
+
+----------------------------------------------------------------------------------------------------------------
+--从线上获取任务数据
+function O2OController.syncMission(onCompleted)
+    local missionData = s_MissionManager:getMissionData()
+    if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
+        if onCompleted then 
+            onCompleted()
+        end
+        return
+    end
+    print("同步任务数据..")
+    -- local missionData = s_MissionManager:getMissionData()
+    saveMissionToServer(missionData,onCompleted)
 end
 
 ----------------------------------------------------------------------------------------------------------------

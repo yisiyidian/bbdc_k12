@@ -20,7 +20,8 @@ CONTENT_TYPE_FORM = 'application/x-www-form-urlencoded; charset=UTF-8'
 
 local function getURL()
     if Server.debugLocalHost then
-        return 'http://localhost:3000/avos/'
+        -- return 'http://localhost:3000/avos/'
+        return 'http://192.168.31.197/:3000/avos/'
     else
         return 'https://leancloud.cn/1.1/'
     end

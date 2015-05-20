@@ -1,6 +1,8 @@
 require("cocos.init")
 require("common.global")
 
+--记录每本书的进度
+
 local DataClassBase = require('model.user.DataClassBase')
 
 local DataLevelInfo = class("DataLevelInfo", function()
@@ -26,20 +28,12 @@ function DataLevelInfo:getCurrentWordIndex()
     local maxBoss = s_LocalDatabaseManager.getMaxBoss()
     if maxBoss ~= nil then return maxBoss.lastWordIndex + 1 end
     return 1
-
-    -- local maxUnit = s_LocalDatabaseManager.getMaxUnit()
-    -- if maxUnit ~= nil then return maxUnit.currentWordIndex + 1 end
-    -- return 1
 end
 
 function DataLevelInfo:getWordIndex(bookKey)
     local maxBoss = s_LocalDatabaseManager.getMaxBossByBookKey(bookKey)
     if maxBoss ~= nil then return maxBoss.lastWordIndex + 1 end
     return 1
-
-    -- local maxUnit = s_LocalDatabaseManager.getMaxUnitByBookKey(bookKey)
-    -- if maxUnit ~= nil then return maxUnit.currentWordIndex + 1 end
-    -- return 1
 end
 
 function DataLevelInfo:getBookCurrentLevelIndex()
@@ -48,10 +42,9 @@ function DataLevelInfo:getBookCurrentLevelIndex()
 end
 
 function DataLevelInfo:getLevelInfo(bookKey)
---    return 19
     print_lua_table(g_BOOKKEYS)
     print_lua_table(g_BOOKS)
-    -- dump(self,"DataLevelInfo",99)
+
     for i, v in ipairs(g_BOOKKEYS) do
         if v == bookKey then
             return self[DataLevelInfo.BOOKKEY .. g_BOOKS[i]]
@@ -61,8 +54,6 @@ function DataLevelInfo:getLevelInfo(bookKey)
 end
 
 function DataLevelInfo:computeCurrentProgress()
---    return 20
-     -- return s_LocalDatabaseManager.getMaxBossID() - 1
      return s_LocalDatabaseManager.getMaxUnitID() - 1
 end
 
@@ -77,8 +68,6 @@ end
 function DataLevelInfo:updateDataToServer()
     local currentProgress = self:computeCurrentProgress() 
     local oldProgress = self:getLevelInfo(s_CURRENT_USER.bookKey) 
-    -- local increments = (currentProgress - oldProgress) * 2   -- add beans count
-    -- s_CURRENT_USER:addBeans(increments)
     saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
     -----------------------------
     bookKey = s_CURRENT_USER.bookKey
