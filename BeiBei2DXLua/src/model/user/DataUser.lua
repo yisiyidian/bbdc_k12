@@ -112,7 +112,7 @@ end
 function DataUser:setSummaryStep(step)
     if self.summaryStep < step then
         self.summaryStep = step
-        saveUserToServer({['summaryStep']=summaryStep})
+        saveUserToServer({['summaryStep']=self.summaryStep})
         AnalyticsSummaryStep(step)
     end
 end
@@ -303,19 +303,19 @@ end
 
 function DataUser:setTutorialStep(step)
     self.tutorialStep = step
-    saveUserToServer({['tutorialStep']=tutorialStep})
+    saveUserToServer({['tutorialStep']=self.tutorialStep})
     AnalyticsTutorial(step)
 end
 
 function DataUser:setK12SmallStep(step)
     self.k12SmallStep = step
-    saveUserToServer({['k12SmallStep']=k12SmallStep})
+    saveUserToServer({['k12SmallStep']=self.k12SmallStep})
     AnalyticsK12SmallStep(step)
 end
 
 function DataUser:setTutorialSmallStep(step)
     self.tutorialSmallStep = step
-    saveUserToServer({['tutorialSmallStep']=tutorialSmallStep})
+    saveUserToServer({['tutorialSmallStep']=self.tutorialSmallStep})
     AnalyticsSmallTutorial(step)
 end
 
