@@ -309,28 +309,54 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     local back_box = cc.Layer:create()
     local back_box_num = 0
     local updateSelectWord = function()
-        for i = 1, back_box_num do
-            main:removeChildByTag(i,true)
-            main:removeChildByTag(100+i,true)
-        end
+        -- for i = 1, back_box_num do
+        --     main:removeChildByTag(i,true)
+        --     main:removeChildByTag(100+i,true)
+        -- end
 
-        local gap = 28
-        local left = s_DESIGN_WIDTH/2 - (#selectStack-1)*gap/2
+        -- local gap = 28
+        -- local left = s_DESIGN_WIDTH/2 - (#selectStack-1)*gap/2
 
-        for i = 1, #selectStack do
-            local term_back = cc.Sprite:create("image/summarybossscene/global_zongjiebossdancixianshi_1.png") -- "image/newstudy/wordbackground.png"
-            term_back:setPosition(left+(i-1)*gap,640)
-            term_back:setTag(i)
-            main:addChild(term_back)
-        end
-        for i = 1, #selectStack do
-            local term_char = cc.Label:createWithTTF(selectStack[i].main_character_content,'font/CenturyGothic.ttf',36)
-            term_char:setColor(cc.c4b(255,255,255,255))
-            term_char:setPosition(left+(i-1)*gap,640)
-            term_char:setTag(100+i)
-            main:addChild(term_char)
-        end
-        back_box_num = #selectStack
+        -- for i = 1, #selectStack do
+        --     local term_back = cc.Sprite:create("image/summarybossscene/global_zongjiebossdancixianshi_1.png") -- "image/newstudy/wordbackground.png"
+        --     term_back:setPosition(left+(i-1)*gap,640)
+        --     term_back:setTag(i)
+        --     main:addChild(term_back)
+        -- end
+        -- for i = 1, #selectStack do
+        --     local term_char = cc.Label:createWithTTF(selectStack[i].main_character_content,'font/CenturyGothic.ttf',36)
+        --     term_char:setColor(cc.c4b(255,255,255,255))
+        --     term_char:setPosition(left+(i-1)*gap,640)
+        --     term_char:setTag(100+i)
+        --     main:addChild(term_char)
+        -- end
+        -- back_box_num = #selectStack
+        main:removeChildByTag(1,true)
+        -- local totalWord = ""
+        -- for i = 1,#word do
+        --     if i ~= 1 then
+        --         totalWord = totalWord.." "..main.word[i]
+        --     end
+        -- end
+
+        local sprite =  ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(28.499,0,28.501,74))
+        sprite:setPosition(s_DESIGN_WIDTH/2,640)
+        sprite:setContentSize((string.len(word)) * 18 + 60 ,74)
+        sprite:setTag(1)
+        main:addChild(sprite)
+        -- local word = ""
+        -- for i = 1, #selectStack do
+        --     word = word..selectStack[i].main_character_content
+        -- end
+        -- word = word..totalWord
+
+        local label1 = cc.Label:createWithTTF(word,'font/CenturyGothic.ttf',36)
+        label1:setColor(cc.c4b(255,255,255,255))
+        label1:setPosition(sprite:getContentSize().width/2 ,sprite:getContentSize().height/2)
+        label1:ignoreAnchorPointForPosition(false)
+        label1:setAnchorPoint(0.5,0.5)
+        label1:setScale(1)
+        sprite:addChild(label1)
     end
 
     -- local function
