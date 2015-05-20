@@ -365,7 +365,7 @@ end
 
 function NewSummaryBossLayer:addChangeBtn()
     --换词按钮
-    local changeBtn = ccui.Button:create('image/summarybossscene/button_change_h5_boss.png','image/summarybossscene/button_pressed_change_h5_boss.png')
+    local changeBtn = ccui.Button:create('image/summarybossscene/hint_change_btn.png','image/summarybossscene/hint_change_btn_click.png')
     changeBtn:setPosition(s_DESIGN_WIDTH * 0.84,100)
     self:addChild(changeBtn,2)
     changeBtn:setScale(0)
