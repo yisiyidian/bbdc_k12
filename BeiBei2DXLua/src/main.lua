@@ -18,7 +18,8 @@ end
 
 function LOGTIME(des)
     if BUILD_TARGET == BUILD_TARGET_RELEASE then return end
-    print('LOGTIME', des, os.time())
+    local traceback = string.split(debug.traceback("",2),"\n")
+    print('LOGTIME', des, os.time()," from:",string.trim(traceback[3]))
     -- LUA_ERROR = LUA_ERROR .. '\n' .. 'LOGTIME:' .. des .. ', ' .. tostring(os.time())
 end
 
@@ -35,8 +36,8 @@ local function main()
     
     cc.Director:getInstance():setDisplayStats(false)
 
-    app_version_debug   = 205000
-    app_version_release = 205000
+    app_version_debug   = 206000
+    app_version_release = 206000
 
     g_userName = nil
     g_userPassword = nil

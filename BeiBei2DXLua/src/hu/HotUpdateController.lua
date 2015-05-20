@@ -1,4 +1,4 @@
-
+--热更新控制器
 local HotUpdateController = {}
 
 local storagePath = cc.FileUtils:getInstance():getWritablePath() .. "AssetsManager"
@@ -18,6 +18,7 @@ local message = ""
 --     return updateInfo
 -- end
 
+
 function HotUpdateController.init()
     print("The HotUpdateController.storagePath is " .. storagePath)
     print("The HotUpdateController.searchPath is " .. searchPath)
@@ -35,6 +36,7 @@ function HotUpdateController.onCompleted()
     start.start(true)
 end
 
+--开始热更逻辑
 function HotUpdateController.start()
     
     if BUILD_TARGET == BUILD_TARGET_DEBUG or BUILD_TARGET == BUILD_TARGET_RELEASE_TEST   then

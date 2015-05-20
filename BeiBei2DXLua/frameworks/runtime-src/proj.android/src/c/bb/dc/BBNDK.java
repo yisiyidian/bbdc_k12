@@ -47,6 +47,8 @@ import com.avos.avoscloud.AVAnalytics;
 import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
+import com.avos.avoscloud.AVMobilePhoneVerifyCallback;
+import com.avos.avoscloud.AVOSCloud;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.AVUser;
@@ -56,9 +58,11 @@ import com.avos.avoscloud.GetCallback;
 import com.avos.avoscloud.GetDataCallback;
 import com.avos.avoscloud.GetFileCallback;
 import com.avos.avoscloud.LogInCallback;
+import com.avos.avoscloud.LogUtil.log;
 import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SaveCallback;
 import com.avos.avoscloud.SignUpCallback;
+import com.avos.avoscloud.UpdatePasswordCallback;
 import com.avos.sns.SNS;
 import com.avos.sns.SNSType;
 import com.tencent.mm.sdk.openapi.IWXAPI;
@@ -305,6 +309,97 @@ public class BBNDK {
 //		return user.getSessionToken();
 	}
 	
+	/**
+	 * 请求短信验证码
+	 * @param phoneNumber
+	 */
+	public static void requestSMSCode(String phoneNumber){
+		AVOSCloud.requestSMSCodeInBackgroud(phoneNumber, "贝贝单词", "手机验证", 30, null);
+	}
+	
+	/***
+	 * 验证 短信验证码
+	 * @param smsCode 短信验证码
+	 * @param phoneNumber	电话号码
+	 */
+	public static void verifySMSCode(String phoneNumber,String smsCode){
+		//请求验证
+		AVOSCloud.verifySMSCodeInBackground(smsCode, phoneNumber, new AVMobilePhoneVerifyCallback(){
+			@Override
+			public void done(AVException e){
+				//验证结果
+				if(e==null){
+					//成功
+					onVerifySMSCode("验证成功！",0);
+				}else{
+					//失败
+					onVerifySMSCode("验证失败！",e.getCode());
+				}
+			}
+		});
+	}
+	
+	/**
+	 * 验证短信结果
+	 * @param error		错误信息
+	 * @param errorCode	错误号 0 就是成功
+	 */
+	private static void onVerifySMSCode(final String error,final int errorCode){
+		Log.d("sms code：", error);
+		Log.d("sms code：", String.valueOf(errorCode));
+		((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
+			@Override
+			public void run() {
+				invokeLuaCallbackFunctionVC(error,errorCode);
+			}
+		});
+	}
+
+	/**
+	 * 修改密码
+	 * @param username 	用户名
+	 * @param oldPwd 	旧密码
+	 * @param newPwd 	新密码
+	 */
+	public static void changePwd(String username,String oldPwd,String newPwd){
+		AVUser user;
+		try {
+			user = AVUser.logIn(username,oldPwd);
+		} catch (AVException e1) {
+			onChangePwd(e1.getLocalizedMessage(),e1.getCode());
+			return;
+		}
+		user.updatePasswordInBackground(oldPwd, newPwd,new UpdatePasswordCallback(){
+	      @Override
+	      public void done(AVException e) {
+	      	if(e==null){
+	      		Log.d("changepwd","修改密码成功");
+	      		onChangePwd("",0);
+	      	}else{
+	      		Log.d("changepwd","修改密码失败:"+e.getLocalizedMessage());
+	      		// String errorjson = "{\"code\":" + e.hashCode() + ",\"message\":\"" + e.getMessage() + "\",\"description\":\"" + e.getLocalizedMessage() + "\"}";
+	      		onChangePwd(e.getLocalizedMessage(),e.getCode());
+	      	}
+	      }
+	    });
+	}
+
+	/**
+	 * 修改密码回调
+	 * @param error     错误信息
+	 * @param errorCode 错误号
+	 */
+	private static void onChangePwd(final String error,final int errorCode){
+		((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
+
+			@Override
+			public void run() {
+				invokeLuaCallbackFunctionCP(error,errorCode);
+			}
+		});
+	}
+	
+	
 	public static void signUp(String username, String password) {
 		final AVUser user = new AVUser();
 		user.setUsername(username);
@@ -343,6 +438,18 @@ public class BBNDK {
 		});
 	}
 	
+	public static void logInByPhoneNumber(String phoneNumber,String password){
+		AVUser.loginByMobilePhoneNumberInBackground(phoneNumber,password, new LogInCallback<AVUser>(){
+			public void done(AVUser user,AVException e){
+				if(e==null){
+					onLogIn(AVUserToJsonStr(user),null,0);
+				}else{
+					onLogIn(null,e.getLocalizedMessage(),e.getCode());
+				}
+			}
+		});
+	}
+
 	private static void onLogIn(final String objectjson, final String error, final int errorcode) {
 		((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
 
@@ -436,7 +543,13 @@ public class BBNDK {
 							@SuppressWarnings("unchecked")
 							JSONObject json = new JSONObject((Map<String, String>)(object));
 							String objectjson = json.toString();
-							invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, objectjson, null);
+							if(json.optString("code") != ""){
+								//修改密码的时候  输入错误的旧密码 e可能为空
+								String errorjson = "{\"code\":" + json.optString("code") + ",\"message\":\"" + json.optString("error") + "\",\"description\":\"" + json.optString("error") + "\"}";
+								invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, null, errorjson);
+							}else{
+								invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, objectjson, null);
+							}
 						} else {
 							String errorjson = "{\"code\":" + e.hashCode() + ",\"message\":\"" + e.getMessage() + "\",\"description\":\"" + e.getLocalizedMessage() + "\"}";
 							invokeLuaCallbackFunctionCallAVCloudFunction(cppObjPtr, null, errorjson);
@@ -448,7 +561,13 @@ public class BBNDK {
 		});
 	}
 	
-	public static void searchUser(String username, String nickName, final long cppObjPtr) {
+	/**
+	 * 查询用户
+	 * @param username  用户名
+	 * @param nickName	昵称
+	 * @param cppObjPtr
+	 */
+	public static void searchUser(final String username, final String nickName, final long cppObjPtr) {
 		boolean bu = username != null && username.length() > 0;
 		AVQuery<AVUser> query_username = null;
 		if (bu) {
@@ -484,11 +603,12 @@ public class BBNDK {
 							if (e == null) {
 								String jsons = "";
 								for (AVUser u : results) {
-									if (jsons.length() == 0) {
-										jsons += "{\"results\":[";
-										jsons += AVUserToJsonStr(u);
+									if (jsons.length() == 0) {	
+											jsons += "{\"results\":[";
+											jsons += AVUserToJsonStr(u);
+										
 									} else {
-										jsons += "," + AVUserToJsonStr(u);
+											jsons += "," + AVUserToJsonStr(u);
 									}
 								}
 								if (jsons.length() > 0) {
@@ -733,6 +853,8 @@ public class BBNDK {
 	public static native void invokeLuaCallbackFunctionDL(String objectId, String filename, String error, int isSaved);
 	public static native void invokeLuaCallbackFunctionSU(String objectjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionLI(String objectjson, String error, int errorcode);
+	public static native void invokeLuaCallbackFunctionVC(String error,int errorcode);
+	public static native void invokeLuaCallbackFunctionCP(String error,int errorcode);//修改密码
 	public static native void invokeLuaCallbackFunctionLIQQ(String objectjson, String qqjson, String authjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionCallAVCloudFunction(long cppObjPtr, String jsons, String errorjson);
 	public static native void invokeLuaCallbackFunctionGetBulletinBoard(long cppObjPtr, int index, String content_top, String content, String error);

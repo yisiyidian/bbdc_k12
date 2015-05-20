@@ -75,13 +75,16 @@ function FriendSearch:ctor()
             print('touchEvent')
             self:removeChildByName('searchResult',true)
             local username = textField:getString()
-            if username == s_CURRENT_USER.username then
-                local SmallAlter = require('view.friend.HintAlter')
-                local smallAlter = SmallAlter.create('请不要搜索自己哦亲~')
-                smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-                s_SCENE.popupLayer:addChild(smallAlter)
-                return
-            end
+            --判断昵称不是自己
+            --[[
+                if username == s_CURRENT_USER.username or username == s_CURRENT_USER.nickName then
+                    local SmallAlter = require('view.friend.HintAlter')
+                    local smallAlter = SmallAlter.create('请不要搜索自己哦亲~')
+                    smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+                    s_SCENE.popupLayer:addChild(smallAlter)
+                    return
+                end
+            ]]
             if  username == "" then
                 local SmallAlter = require('view.friend.HintAlter')
                 local smallAlter = SmallAlter.create('无名氏什么的才没有的说~')
@@ -92,7 +95,7 @@ function FriendSearch:ctor()
             local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
             showProgressHUD('正在搜索相应用户', true)
 
-            local request = cx.CXAVCloud:new()
+            local request = cx.CXAVCloud:create()
             -- request:searchUser(username, nickName, callback)
             request:searchUser(username, username, function (results, err)
 
@@ -101,11 +104,18 @@ function FriendSearch:ctor()
                             print('request:searchUser:', tostring(results))
                             if err == nil and results ~= nil and type(results) == 'string' and string.len(results) > 0 then
                                 local data = s_JSON.decode(results)
+                                dump(data,"搜素好友列表返回",99)
                                 for i, user in ipairs(data.results) do
-                                    f_user[#f_user + 1] = user
+                                    if user.nickName~="" and user.nickName~= username and user.username == username then
+                                        --do nothing
+                                    else
+                                        if user.username ~= s_CURRENT_USER.username then
+                                            f_user[#f_user + 1] = user
+                                        end
+                                    end
                                 end
                             end
-
+                            dump(f_user,"搜素好友列表返回",99)
                             if #f_user > 0 then
                                 s_CURRENT_USER:getFriendsInfo() 
                                 local listView = ccui.ListView:create()
@@ -120,10 +130,6 @@ function FriendSearch:ctor()
                                     local user = DataUser.create()
                                     parseServerDataToClientData(fuser,user)
                                     local button = cc.Sprite:create("image/friend/friendRankButton.png")
-                                    --button:setPosition(0.5 * s_DESIGN_WIDTH, 0.65 * s_DESIGN_HEIGHT)
-                                    --button:setScale9Enabled(true)
-                                    --self:addChild(button,0,'searchResult')
-
                                     local custom_item = ccui.Layout:create()
                                     custom_item:setTouchEnabled(true)
                                     custom_item:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,button:getContentSize().height + 4))
@@ -136,12 +142,22 @@ function FriendSearch:ctor()
                                     line:setPosition(button:getContentSize().width / 2 , button:getContentSize().height / 2)
                                     button:addChild(line,-1)
                 
-                                    local head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
+                                    -- local head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
+                                    local head = nil        
+                                    if user.sex == 0 then
+                                        head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
+                                    else
+                                        head = cc.Sprite:create('image/PersonalInfo/boy_head.png')
+                                    end
                                     head:setScale(0.8)
                                     head:setPosition(0.26 * button:getContentSize().width,0.5 * button:getContentSize().height)
                                     button:addChild(head)
-                
-                                    local fri_name = cc.Label:createWithSystemFont(user.username,'',32)
+                                    
+                                    local tname = user.username
+                                    if user.nickName ~= "" then
+                                        tname = user.nickName
+                                    end
+                                    local fri_name = cc.Label:createWithSystemFont(tname,'',32)
                                     fri_name:setColor(cc.c3b(0,0,0))
                                     fri_name:ignoreAnchorPointForPosition(false)
                                     fri_name:setAnchorPoint(0,0)
@@ -164,6 +180,7 @@ function FriendSearch:ctor()
                                         self.array[i] = s_CURRENT_USER.friends[i]
                                     end
                                     self.array[#self.array + 1] = s_CURRENT_USER
+                                    --如果这个玩家在自己的好友列表里 则计算出他的排名
                                     for i = 1,#self.array do
                                         for j = i, #self.array do
                                             if self.array[i].wordsCount < self.array[j].wordsCount or (self.array[i].wordsCount == self.array[j].wordsCount and self.array[i].masterCount < self.array[j].masterCount) then
@@ -266,8 +283,6 @@ function FriendSearch:ctor()
                                         end
                                         add:addTouchEventListener(onAdd)
                                     end
-                                    
-                                    break
                                 end
                             else --not find user
                                 local SmallAlter = require('view.friend.HintAlter')

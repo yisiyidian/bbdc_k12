@@ -30,7 +30,21 @@ function DataUser:ctor()
     self.serverTime                        = 0
     self.username                          = ''
     self.nickName                          = ''
+    self.sex                               = 0 --性别 0女 1男
+    -- self.email                             = nil --电子邮箱
+    self.headImg                           = 0  --头像ID
+    self.birth                             = ""
+    self.job                               = ""  --职业
+    self.school                            = ""  --学校
+    self.examination                       = ""  --正准备的考试
+    self.position                          = ""  --位置
+
+    self.relateContacts                     = 0  --关联通讯录
+    self.bindAccount                        = "" --绑定帐号
+    self.showLocation                       = 0  --位置可见
+
     self.password                          = ''
+    self.mobilePhoneNumber                 = ''
     self.sessionToken                      = ''
     self.usertype                          = USER_TYPE_GUEST
     self.channelId                         = ''
@@ -261,8 +275,15 @@ function DataUser:removeSummaryBoss(index)
 end
 
 function DataUser:getNameForDisplay()
-    if s_CURRENT_USER.usertype == USER_TYPE_QQ then return self.nickName end
-    if s_CURRENT_USER.usertype == USER_TYPE_GUEST then return '游客' end
+    if s_CURRENT_USER.usertype == USER_TYPE_QQ then 
+        return self.nickName
+    end
+    if s_CURRENT_USER.usertype == USER_TYPE_GUEST then 
+        return '游客' 
+    end
+    if self.nickName ~= "" then
+        return self.nickName
+    end
     return self.username
 end
 

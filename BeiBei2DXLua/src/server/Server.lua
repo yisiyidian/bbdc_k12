@@ -7,7 +7,7 @@ local Server = {}
 
 Server.debugLocalHost = false -- CQL can NOT debug at local host
 Server.isAppStoreServer = false
-Server.production = 0
+Server.production = 0   --  0 表示leancloud的测试环境,1 表示leancloud的生产环境
 Server.appName = ''
 Server.appId = ''
 Server.appKey = ''
@@ -90,8 +90,8 @@ function Server.request(api, serverRequestType, parameters, callback)
     end
 
     Server.logLuaTable(api, params, 'request PARAMS')
-
-    local request = cx.CXAVCloud:new()
+    --new会导致内存泄露 用create代替
+    local request = cx.CXAVCloud:create()
     request:callAVCloudFunction('cld', s_JSON.encode(params), function (response, error)
         local cb = function (result, error) end
         callback = callback or cb
@@ -132,16 +132,16 @@ local function __request__(api, httpRequestType, contentType, parameters, onSucc
         print('>> request: ' .. api)
         if parameters then print_lua_table(parameters) end
         print('<< request: ' .. api)
-        local request = cx.CXAVCloud:new()
+        local request = cx.CXAVCloud:create()
         request:callAVCloudFunction(string.gsub(api, 'functions/', ''), s_JSON.encode(parameters), function (obj, err)
             if err and onFailed then
-                print('response >>' .. api)
+                print('response fail >>' .. api)
                 print(err)
                 print('response <<' .. api)
                 err = s_JSON.decode(err)
                 onFailed(api, err.code, err.message, err.description)
             elseif obj and onSucceed then
-                print('response >>' .. api)
+                print('response success >>' .. api)
                 print(obj)
                 print('response <<' .. api)
                 obj = s_JSON.decode(obj)

@@ -44,6 +44,12 @@
         
 --------------------------------
 -- 
+-- @function [parent=#CXAVCloud] create 
+-- @param self
+-- @return CXAVCloud#CXAVCloud ret (return value: CXAVCloud)
+        
+--------------------------------
+-- 
 -- @function [parent=#CXAVCloud] CXAVCloud 
 -- @param self
         

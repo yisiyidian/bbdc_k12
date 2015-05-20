@@ -231,20 +231,18 @@ function DownloadSoundController:releaseDownload()
     end
 
     if self.am ~= nil then
-        self.am:release()
+        -- self.am:release()  --release 在Android会崩溃
         self.am =nil
     end
 end
 
 function DownloadSoundController:killDownload()
-    
     self:deleteBookSound()    
     self:releaseDownload()
 end
 
 
 function DownloadSoundController:deleteBookSound()
-
     local bookKey = self.bookkey
     cc.FileUtils:getInstance():removeDirectory(cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..bookKey.."/")
     print("删除单词包成功")

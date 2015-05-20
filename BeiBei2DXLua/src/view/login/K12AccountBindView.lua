@@ -12,8 +12,15 @@
 -- local action4 = cc.Sequence:create(action2, action3)
 -- loginPopup:runAction(action4)
 
+--新安装用户需要提升他注册帐号，
+--第一步输入姓名
+--第二步输入密码
+--。。。。。
+--现在这些东西都需要改掉
+
+
 local InputNode = require("view.login.InputNode")
-local Button                = require("view.button.longButtonInStudy")
+local Button    = require("view.button.longButtonInStudy")
 
 local K12AccountBindView = class("K12AccountBindView", function() return cc.Layer:create() end)
 
@@ -24,11 +31,11 @@ K12AccountBindView.Type_teacher = 2
 function K12AccountBindView.create(viewtype, ex)
     AnalyticsK12SmallStep(s_K12_inputUserName)
     -- 打点
-
     local view = K12AccountBindView.new()
     view:init(K12AccountBindView.Type_username, ex)
     view:init(K12AccountBindView.Type_password, ex)
     view:init(K12AccountBindView.Type_teacher, ex)
+    --create出来的时候，就pop出来了
     s_SCENE:popup(view)
     view:setPosition(0, 0) 
 
@@ -304,7 +311,7 @@ end
 function K12AccountBindView:gotoAddTeacher(teacherName)
     showProgressHUD('', true)
 
-    local request = cx.CXAVCloud:new()
+    local request = cx.CXAVCloud:create()
     -- request:searchUser(username, nickName, callback)
     request:searchUser(teacherName, teacherName, function (results, err)
 

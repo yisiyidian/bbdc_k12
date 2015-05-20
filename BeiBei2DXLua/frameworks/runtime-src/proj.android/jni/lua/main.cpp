@@ -67,6 +67,22 @@ extern "C"
         if (error) env->ReleaseStringUTFChars(error, nativeString_error);
     }
 
+    /**
+     * 短信验证回调
+     * @param
+     * @param   错误信息
+     * @param   错误号 0 是没错误
+     */
+    void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionVC(JNIEnv *env,jobject thisz,jstring error,jint errorcode)
+    {   
+        const char *nativeString_error = error ? env->GetStringUTFChars(error, 0) : 0;
+        LOGD("error %s",nativeString_error);
+        LOGD("errorCode %d",errorcode);
+        CXAvos::getInstance()->invokeLuaCallBackFunction_vc(nativeString_error,errorcode);
+
+        if(error) env->ReleaseStringUTFChars(error,nativeString_error);    
+    }
+
     void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionLI(JNIEnv *env, jobject thisz,
                                                     jstring objectjson, jstring error, jint errorcode)
     {
@@ -78,6 +94,19 @@ extern "C"
         if (objectjson) env->ReleaseStringUTFChars(objectjson, nativeString_objectjson);
         if (error) env->ReleaseStringUTFChars(error, nativeString_error);
     }
+    /**
+     * 修改密码回调
+     * @param env        [description]
+     * @param error      [错误信息]
+     * @param errorcode  [错误号]
+     */
+    void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionCP(JNIEnv *env, jstring error, jint errorcode)
+    {
+        const char *nativeString_error = error ? env->GetStringUTFChars(error, 0) : 0;
+        CXAvos::getInstance()->invokeLuaCallbackFunction_cp(nativeString_error,errorcode);
+
+        if(error) env->ReleaseStringUTFChars(error,nativeString_error);
+    }    
 
     void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionLIQQ(JNIEnv *env, jobject thisz,
                                                     jstring objectjson, 

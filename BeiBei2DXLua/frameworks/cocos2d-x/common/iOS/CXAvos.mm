@@ -137,6 +137,38 @@ void CXAvos::logIn(const char* username, const char* password, CXLUAFUNC nHandle
     }];
 }
 
+//通过手机号码登陆
+void CXAvos::logInByPhoneNumber(const char *phoneNumber, const char *password, CXLUAFUNC nHandler){
+    mLuaHandlerId_logIn = nHandler;
+    [AVUser logInWithMobilePhoneNumberInBackground:[NSString stringWithUTF8String:phoneNumber] password:[NSString stringWithUTF8String:password] block:^(AVUser *user, NSError *error) {
+        invokeLuaCallbackFunction_li(user ? AVUserToJsonStr(user).UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr, error ? (int)error.code : 0);
+    }];
+}
+
+//请求短信验证码
+void CXAvos::requestSMSCode(const char *phoneNumber){
+    [AVOSCloud requestSmsCodeWithPhoneNumber:[NSString stringWithUTF8String:phoneNumber] appName:@"贝贝单词" operation:@"注册" timeToLive:30 callback:^(BOOL succeeded, NSError *error) {
+        //do nothing
+    }];
+}
+
+//核对短信验证码
+void CXAvos::verifySMSCode(const char *phoneNumber, const char *smsCode, CXLUAFUNC mHandler){
+    mLuaHandlerId_vc = mHandler;
+    [AVOSCloud verifySmsCode:[NSString stringWithUTF8String:smsCode] mobilePhoneNumber:[NSString stringWithUTF8String:phoneNumber] callback:^(BOOL succeeded, NSError *error) {
+        //回调给lua层
+        invokeLuaCallBackFunction_vc(error?error.localizedDescription.UTF8String:nullptr, error?(int)error.code:0);
+    }];
+}
+
+void CXAvos::changePwd(const char* username,const char *oldPwd, const char *newPwd, CXLUAFUNC nHandler){
+    mLuaHandlerId_cp = nHandler;
+    [[AVUser currentUser] updatePassword:[NSString stringWithUTF8String:oldPwd] newPassword:[NSString stringWithUTF8String:newPwd] block:^(id object, NSError *error) {
+        //
+        invokeLuaCallbackFunction_cp(error?error.localizedDescription.UTF8String:nullptr,error?(int)error.code:0);
+    }];
+}
+
 void CXAvos::initTencentQQ(const char* appId, const char* appKey) {
     [[CXTencentSDKCall getInstance] setAppId:[NSString stringWithUTF8String:appId] appKey:[NSString stringWithUTF8String:appKey]];
 }

@@ -256,6 +256,7 @@ function CorePlayManager.enterBookLayer(education)
 end
 
 function CorePlayManager.enterEducationLayer()
+    print("进入选择教育程度界面：EducationSelect.lua")
     local educationLayer = EducationLayer.create()
     s_SCENE:replaceGameLayer(educationLayer)
 end

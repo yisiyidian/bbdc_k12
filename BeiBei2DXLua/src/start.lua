@@ -35,10 +35,13 @@ local function initResolution()
     cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(s_DESIGN_WIDTH, s_DESIGN_HEIGHT, cc.ResolutionPolicy.FIXED_HEIGHT)
 end
 
+--main.lua 进到这里
 function start.init()
+    --分辨率适配
     initResolution()
+    --在AppVersionInfo.lua里 初始化一些全局变量
     initBuildTarget()
-
+    
     reloadModule('common.text')
 
     NETWORK_STATUS_WIFI = 1
@@ -74,6 +77,8 @@ function start.init()
     end
 end
 
+--进入游戏
+--hotUpdate 是否完成热更
 function start.start(hotUpdate)
     reloadModule('common.text')
     reloadModule("common.global")
@@ -128,16 +133,19 @@ function start.start(hotUpdate)
         end
     end
 
+    dump(s_SERVER)
+
     s_CURRENT_USER.appVersion = s_APP_VERSION
     if AgentManager ~= nil then s_CURRENT_USER.channelId = AgentManager:getInstance():getChannelId() end
 
     saveLuaError = function (msg)
+    --[[
         if s_SERVER.isNetworkConnectedNow() then
             local errorObj = {}
             errorObj['className'] = 'LuaError'
             local a = string.gsub(msg, ":",  ".    ") 
-            local b = string.gsub(a,   '"',  "'") 
-            local c = string.gsub(b,   "\n", ".    ") 
+            local b = string.gsub(a,   '"',  "'")
+            local c = string.gsub(b,   "\n", ".    ")
             local d = string.gsub(c,   "\t", ".    ") 
             errorObj['msg'] = s_CURRENT_USER.objectId .. ' ;' .. d
             errorObj['appVersion'] = s_APP_VERSION
@@ -146,6 +154,7 @@ function start.start(hotUpdate)
         end
 
         onErrorNeedRestartAppHappendWithSingleButton('贝贝开小差了。。。需要重新启动', '原谅你')
+        ]]
     end
     
     if cc.Director:getInstance():getRunningScene() then

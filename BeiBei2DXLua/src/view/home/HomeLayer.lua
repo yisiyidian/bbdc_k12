@@ -1,11 +1,16 @@
 require("cocos.init")
 require("common.global")
 
+--HomeLayer 主界面
+--
 local AlterI = require("view.alter.AlterI")
-local ImproveInfo = require("view.home.ImproveInfo")
+local SettingLayer = require("view.home.SettingLayer")
 local MissionProgress = require("view.home.MissionProgressLayer")
 local OfflineTipHome = require("view.offlinetip.OfflineTipForHome")
 local OfflineTipFriend = require("view.offlinetip.OfflineTipForFriend")
+
+local RegisterAccountView = require("view.login.RegisterAccountView") --注册账号界面
+local MoreInfomationView = require("view.home.MoreInformationView")   --修改/查看个人信息
 
 local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
@@ -16,26 +21,17 @@ local SHOP_LOCKED = 0
 local REWARD_LOCKED = 0
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 local list = {}
-local TEXT_CHANGE_ACCOUNT = '切换账号' -- "登出游戏"
 
 function HomeLayer.create()
-    --unlock friend
-    -- s_CURRENT_USER:addBeans(600)  
 
     if s_CURRENT_USER:getLockFunctionState(1) == 0 then
         s_CURRENT_USER:unlockFunctionState(1)
     end
-
     -- task
     local todayTotalBossNum     = s_LocalDatabaseManager:getTodayTotalBossNum()
     local todayRemainBossNum    = s_LocalDatabaseManager:getTodayRemainBossNum()
     local todayTotalTaskNum     = s_LocalDatabaseManager:getTodayTotalTaskNum()
     local todayRemainTaskNum    = s_LocalDatabaseManager:getTodayRemainTaskNum()
-
-    -- print("todayTotalBossNum : "..todayTotalBossNum)
-    -- print("todayRemainBossNum : "..todayRemainBossNum)
-    -- print("todayTotalTaskNum : "..todayTotalTaskNum)
-    -- print("todayRemainTaskNum : "..todayRemainTaskNum)
 
     local totalStudyWordNum     = s_LocalDatabaseManager.getStudyWordsNum(os.date('%x',os.time()))
     local totalGraspWordNum     = s_LocalDatabaseManager.getGraspWordsNum(os.date('%x',os.time()))
@@ -53,6 +49,7 @@ function HomeLayer.create()
         s_CURRENT_USER:setTutorialStep(s_tutorial_home+1) --1 -> 2
         -- print('tutorial_step:'..s_CURRENT_USER.tutorial_step)
     end
+
     -- print("totalStudyWordNum : "..totalStudyWordNum)
     -- print("totalGraspWordNum : "..totalGraspWordNum)
     -- print("totalStudyDayNum : "..totalStudyDayNum)
@@ -61,15 +58,10 @@ function HomeLayer.create()
         s_CURRENT_USER:setK12SmallStep(s_K12_enterHomeLayer)
     end
     -- 打点
-
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DataManager.books[s_CURRENT_USER.bookKey].words
     -- data end
-
-    local username = "游客"
-    local logo_name = {"head","book","information","logout"}
-    local label_name = {username,"选择书籍","完善个人信息",TEXT_CHANGE_ACCOUNT}
 
     s_SCENE.touchEventBlockLayer.unlockTouch()
     local layer = HomeLayer.new()
@@ -105,9 +97,6 @@ function HomeLayer.create()
 
     local setting_back
 
-    --add offline
-
-
     local online = s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()
     --    online = false
     local offlineTipHome = OfflineTipHome.create()
@@ -135,18 +124,6 @@ function HomeLayer.create()
     name:setPosition(bigWidth/2, s_DESIGN_HEIGHT-85)
     backColor:addChild(name)
 
-
-    -- local book_name 
-
-    -- local English_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
-    -- local simple_array = {'四级','六级','高考','托福','雅思','gre','考研','专四','专八','gmat','sat','中学','小学'}
-
-    -- for i = 1, #English_array do
-    --     if s_CURRENT_USER.bookKey == English_array[i] then
-    --         book_name = s_DataManager.books[key].name
-    --     end
-    -- end
-
     local currentBook = cc.Label:createWithSystemFont("正在学习："..s_DataManager.books[s_CURRENT_USER.bookKey].name,"",22)
     currentBook:setPosition(bigWidth/2, s_DESIGN_HEIGHT-140)
     currentBook:setColor(cc.c4b(255,255,255,255))
@@ -166,27 +143,19 @@ function HomeLayer.create()
 
             if viewIndex == 1 then
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
                 mission_progress.stopListener = true
-
                 viewIndex = 2
-
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2+offset,s_DESIGN_HEIGHT/2))
                 backColor:runAction(action1)
 
                 local action2 = cc.DelayTime:create(0.5)
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
                 setting_back:runAction(cc.Sequence:create(action2, action3))
-
                 --offline tip
-
             else
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
                 mission_progress.stopListener = false
-
                 viewIndex = 1
-
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
                 backColor:runAction(action1)
 
@@ -371,283 +340,20 @@ function HomeLayer.create()
     button_data:addChild(data_name,0)
 
     -- setting ui
-    setting_back = cc.Sprite:create("image/homescene/setup_background.png")
-    -- setting_back:setOpacity(0)
-    setting_back:setAnchorPoint(1,0.5)
+    setting_back = SettingLayer.new()
+    -- setting_back:setAnchorPoint(1,0.5)
     setting_back:setPosition(0, s_DESIGN_HEIGHT/2)
     backColor:addChild(setting_back)
 
+    --更新左侧设置界面
     local function updateSettingLayer()
-        local button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
-        button_back:setOpacity(0)
-        button_back:setAnchorPoint(0, 1)
-        button_back:setPosition(0, s_DESIGN_HEIGHT-button_back:getContentSize().height * (1 - 1) - 80)
-        setting_back:addChild(button_back)
-
-        
-
-        local logo = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
-        logo:setScale(0.9)
-        logo:setPosition(button_back:getContentSize().width-offset+120, button_back:getContentSize().height/2 + 40)
-        button_back:addChild(logo)
-        local label = cc.Label:createWithSystemFont(s_CURRENT_USER.username,"",36)
-        label:setColor(cc.c4b(0,0,0,255))
-        label:setAnchorPoint(0, 0)
-        label:setPosition(button_back:getContentSize().width-offset+210, button_back:getContentSize().height/2 + 30)
-        button_back:addChild(label)
-
-        local label2 = cc.Label:createWithSystemFont('正在学习'..bookName..'词汇',"",24)
-        label2:setColor(cc.c4b(0,0,0,255))
-        label2:setAnchorPoint(0, 1)
-        label2:setPosition(button_back:getContentSize().width-offset+210, button_back:getContentSize().height/2 + 30)
-        button_back:addChild(label2)
-
-        local split = cc.LayerColor:create(cc.c4b(150,150,150,255),854,1)
-        split:ignoreAnchorPointForPosition(false)
-        split:setAnchorPoint(0.5,0)
-        split:setPosition(button_back:getContentSize().width/2, 0)
-        button_back:addChild(split)
-
-        local sprite1 = setting_back:getChildByName("button1")
-        if sprite1 ~= nil then sprite1:removeFromParent() end
-        local sprite2 = setting_back:getChildByName("button5")  
-        if sprite2 ~= nil then sprite2:setPosition(0, s_DESIGN_HEIGHT - sprite2:getContentSize().height * (4 - 1) - 90) end
-        local sprite3 = setting_back:getChildByName("button4")                               
-        if sprite3 ~= nil then sprite3:removeFromParent() end
+        setting_back:updateView()
+        print("updateSettingLayer------------------------")
     end
-
-    -- add follow button
-    print('start add button')
-    local follow_button_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            -- popup layer
-            local back = cc.Sprite:create("image/homescene/background_ciku_white.png")
-            back:setPosition(cc.p(s_DESIGN_WIDTH/2, 550))
-            local info = cc.Sprite:create('image/homescene/Phone-Hook1.png')
-            info:setPosition(back:getContentSize().width/2, back:getContentSize().height/2)
-            back:addChild(info)
-            -- local avatar = cc.Sprite:create("image/homescene/attention_beibei.png")
-            -- avatar:setPosition(back:getContentSize().width/2, back:getContentSize().height-200)
-            -- back:addChild(avatar)
-
-            local close_button_clicked = function(sender, eventType)
-                if eventType == ccui.TouchEventType.ended then
-                    s_SCENE:removeAllPopups()
-                end
-            end
-            local closeButton = ccui.Button:create("image/popupwindow/closeButtonRed.png","image/popupwindow/closeButtonRed.png","")
-            closeButton:setPosition(back:getContentSize().width-30, back:getContentSize().height-30)
-            closeButton:addTouchEventListener(close_button_clicked)
-            back:addChild(closeButton)
-
-            -- local label1 = cc.Label:createWithSystemFont("贝贝单词","",30)
-            -- label1:setPosition(back:getContentSize().width/2, avatar:getPositionY()-190)
-            -- label1:setColor(cc.c4b(36,61,78,255))
-            -- back:addChild(label1)
-            local label2 = cc.Label:createWithSystemFont("V2.0.5","",25)
-            label2:setColor(cc.c4b(36,61,78,255))
-            label2:setPosition(back:getContentSize().width/2+45, back:getContentSize().height/2+75)
-            info:addChild(label2)
-
-            -- local weiboLogo = cc.Sprite:create("image/homescene/attention_weibo.png")
-            -- weiboLogo:setPosition(back:getContentSize().width/2-150, label2:getPositionY()-80)
-            -- back:addChild(weiboLogo)
-            -- local weiboLabel1 = cc.Label:createWithSystemFont("官方微博：","",15)
-            -- weiboLabel1:setColor(cc.c4b(36,61,78,255))
-            -- weiboLabel1:setPosition(back:getContentSize().width/2-50, weiboLogo:getPositionY())
-            -- back:addChild(weiboLabel1)
-
-            -- local weiboLabel2 = cc.Label:createWithSystemFont("@贝贝单词","",20)
-            -- weiboLabel2:setColor(cc.c4b(17,172,227,255))
-            -- weiboLabel2:setPosition(back:getContentSize().width/2+50, weiboLogo:getPositionY())
-            -- back:addChild(weiboLabel2)
-
-            -- local weixinLogo = cc.Sprite:create("image/homescene/attention_weichat.png")
-            -- weixinLogo:setPosition(back:getContentSize().width/2-150, weiboLogo:getPositionY()-65)
-            -- back:addChild(weixinLogo)
-            -- local weixinLabel1 = cc.Label:createWithSystemFont("官方微信：","",15)
-            -- weixinLabel1:setColor(cc.c4b(36,61,78,255))
-            -- weixinLabel1:setPosition(back:getContentSize().width/2-50, weixinLogo:getPositionY())
-            -- back:addChild(weixinLabel1)
-
-            -- local weixinLabel2 = cc.Label:createWithSystemFont("贝贝单词","",20)
-            -- weixinLabel2:setColor(cc.c4b(17,172,227,255))
-            -- weixinLabel2:setPosition(back:getContentSize().width/2+45, weixinLogo:getPositionY())
-            -- back:addChild(weixinLabel2)
-
-            -- local websiteLogo = cc.Sprite:create("image/homescene/attention_website.png")
-            -- websiteLogo:setPosition(back:getContentSize().width/2-150, weixinLogo:getPositionY()-65)
-            -- back:addChild(websiteLogo)
-            -- local websiteLabel1 = cc.Label:createWithSystemFont("官方网站：","",15)
-            -- websiteLabel1:setColor(cc.c4b(36,61,78,255))
-            -- websiteLabel1:setPosition(back:getContentSize().width/2-50, websiteLogo:getPositionY())
-            -- back:addChild(websiteLabel1)
-
-            -- local websiteLabel2 = cc.Label:createWithSystemFont("yisiyidian.com","",20)
-            -- websiteLabel2:setColor(cc.c4b(17,172,227,255))
-            -- websiteLabel2:setPosition(back:getContentSize().width/2+70, websiteLogo:getPositionY())
-            -- back:addChild(websiteLabel2)
-
-            -- local phoneLogo = cc.Sprite:create("image/homescene/attention_phone.png")
-            -- phoneLogo:setPosition(back:getContentSize().width/2-150, websiteLogo:getPositionY()-80)
-            -- back:addChild(phoneLogo)
-
-            -- local phoneLabel1 = cc.Label:createWithSystemFont("客服电话：","",15)
-            -- phoneLabel1:setColor(cc.c4b(36,61,78,255))
-            -- phoneLabel1:setPosition(back:getContentSize().width/2-50, phoneLogo:getPositionY()+15)
-            -- back:addChild(phoneLabel1)
-
-            -- local phoneLabel3 = cc.Label:createWithSystemFont("（周一至周六8am-11pm）","",15)
-            -- phoneLabel3:setColor(cc.c4b(36,61,78,255))
-            -- phoneLabel3:setPosition(back:getContentSize().width/2, phoneLogo:getPositionY()-15)
-            -- back:addChild(phoneLabel3)
-
-            -- local phoneLabel2 = cc.Label:createWithSystemFont("010-61196434","",20)
-            -- phoneLabel2:setColor(cc.c4b(17,172,227,255))
-            -- phoneLabel2:setPosition(back:getContentSize().width/2+70, phoneLogo:getPositionY()+15)
-            -- back:addChild(phoneLabel2)
-
-            local layer = cc.Layer:create()
-            layer:addChild(back)
-
-            s_SCENE:popup(layer)
-        end
-    end
-    local followButton = ccui.Button:create("image/homescene/attention_button.png","image/homescene/attention_button_press.png","image/setting/attention_button_press.png")
-    followButton:setAnchorPoint(0,1)
-    followButton:setPosition(400,190)
-    setting_back:addChild(followButton,10)
-    local deco = cc.Sprite:create("image/homescene/attention_beibei1.png")
-    deco:setPosition(750,100)
-    setting_back:addChild(deco, 10)
-    local text = cc.Label:createWithSystemFont("关注贝贝","",36)
-    text:setColor(cc.c4b(255,255,255,255))
-    -- text:setAnchorPoint(0, 0)
-    text:setPosition(followButton:getContentSize().width/2, followButton:getContentSize().height/2)
-    followButton:addChild(text)
-    followButton:addTouchEventListener(follow_button_clicked)
+    setting_back:updateView()
+    
     -- print('-------------#####test####')
     -- print(followButton:getPosition())
-
-    if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-        username = s_CURRENT_USER:getNameForDisplay()
-        logo_name = {"head","book","logout"}
-        label_name = {username,"选择书籍",TEXT_CHANGE_ACCOUNT}
-    end
-    local label = {}
-    local logo = {}
-    local button_back = {}
-    for i = 1, #logo_name do
-        local button_back_clicked = function(sender, eventType)
-            if eventType == ccui.TouchEventType.ended then
-                playSound(s_sound_buttonEffect)
-                if label_name[i] == "选择书籍" then
-                    AnalyticsChangeBookBtn()
-                    s_CorePlayManager.enterBookLayer(s_CURRENT_USER.bookKey)
-                -- elseif label_name[i] == "用户反馈" then
-                --     if  online == false then
-                --         offlineTipHome.setTrue(OfflineTipForHome_Feedback)
-                --     else
-                --         local alter = AlterI.create("用户反馈")
-                --         s_SCENE:popup(alter)
-                --     end
-                elseif label_name[i] == "完善个人信息" then
-                    if  online == false then
-                        offlineTipHome.setTrue(OfflineTipForHome_ImproveInformation)
-                    else
-                        local improveInfo = ImproveInfo.create(ImproveInfoLayerType_UpdateNamePwd_FROM_HOME_LAYER)
-                        s_SCENE:popup(improveInfo)
-
-                        improveInfo.close = function()
-                            s_SCENE:removeAllPopups()
-                            if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                                updateSettingLayer()
-                            end
-                        end
-                    end
-                elseif label_name[i] == TEXT_CHANGE_ACCOUNT then
-                    if not s_SERVER.isNetworkConnectedNow() then
-                        offlineTipHome.setTrue(OfflineTipForHome_Logout)
-                    else
-
-                        -- logout
-                        -- AnalyticsLogOut()
-                        -- cx.CXAvos:getInstance():logOut()
-                        -- s_LocalDatabaseManager.setLogOut(true)
-                        -- s_LocalDatabaseManager.close()
-                        -- s_START_FUNCTION()
-                        local ChangeAccountPopup = require('view.login.ChangeAccountPopup')
-                        local loginPopup = ChangeAccountPopup.create()
-                        s_SCENE:popup(loginPopup)
-
-                        loginPopup:setVisible(false)
-                        loginPopup:setPosition(0,s_DESIGN_HEIGHT * 1.5) 
-
-                        local action2 = cc.CallFunc:create(function()
-                            loginPopup:setVisible(true)
-                        end)
-                        local action3 = cc.MoveTo:create(0.5,cc.p(0,0)) 
-                        local action4 = cc.Sequence:create(action2, action3)
-                        loginPopup:runAction(action4)
-
-                    end
-                else
-                -- do nothing
-                end
-            end
-        end
-        ----
-
-        ----
-        button_back[i] = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
-        button_back[i]:setOpacity(0)
-        button_back[i]:setAnchorPoint(0, 1)
-        button_back[i]:setPosition(0, s_DESIGN_HEIGHT-button_back[i]:getContentSize().height * (i - 1) - 80)
-        button_back[i]:addTouchEventListener(button_back_clicked)
-        button_back[i]:setName("button"..i)
-        setting_back:addChild(button_back[i])
-
-        if i > 1 then
-            logo[i] = cc.Sprite:create("image/homescene/setup_"..logo_name[i]..".png")
-            logo[i]:setPosition(button_back[i]:getContentSize().width-offset+120, button_back[i]:getContentSize().height/2)
-            button_back[i]:addChild(logo[i])
-            label[i] = cc.Label:createWithSystemFont(label_name[i],"",32)
-            label[i]:setColor(cc.c4b(0,0,0,255))
-            label[i]:setAnchorPoint(0, 0.5)
-            label[i]:setPosition(button_back[i]:getContentSize().width-offset+200, button_back[i]:getContentSize().height/2)
-            button_back[i]:addChild(label[i])
-        else
-            logo[i] = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
-            logo[i]:setScale(0.9)
-            logo[i]:setPosition(button_back[i]:getContentSize().width-offset+120, button_back[i]:getContentSize().height/2 + 40)
-            button_back[i]:addChild(logo[i])
-            label[i] = cc.Label:createWithSystemFont(label_name[i],"",36)
-            label[i]:setColor(cc.c4b(0,0,0,255))
-            label[i]:setAnchorPoint(0, 0)
-            label[i]:setPosition(button_back[i]:getContentSize().width-offset+210, button_back[i]:getContentSize().height/2 + 30)
-            button_back[i]:addChild(label[i])
-
-            local label2 = cc.Label:createWithSystemFont('正在学习'..bookName..'词汇',"",24)
-            label2:setColor(cc.c4b(0,0,0,255))
-            label2:setAnchorPoint(0, 1)
-            label2:setPosition(button_back[i]:getContentSize().width-offset+210, button_back[i]:getContentSize().height/2 + 30)
-            button_back[i]:addChild(label2)
-        end
-
-        local split = cc.LayerColor:create(cc.c4b(150,150,150,255),854,1)
-        split:ignoreAnchorPointForPosition(false)
-        split:setAnchorPoint(0.5,0)
-        split:setPosition(button_back[i]:getContentSize().width/2, 0)
-        button_back[i]:addChild(split)
-
-        --add offline 
-        if i == 1 or i == 2 then
-        else
-            if online == false then
-                label[i]:setColor(cc.c4b(157,157,157,255))
-            end
-        end
-    end
 
     layer.friendButtonFunc = function ()
         if  online == false then
@@ -670,8 +376,6 @@ function HomeLayer.create()
             end   
         end
     end
-
-
 
     local button_right_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.began then
@@ -719,22 +423,12 @@ function HomeLayer.create()
 
     local function updateFriendButton(delta)
         if s_CURRENT_USER:getLockFunctionState(1) == 1 then
-            -- local unlocked_button_friend = cc.Sprite:create("image/homescene/home_page_function_bg2.png")
-            -- unlocked_button_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
-            -- local unlocked_icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
-            -- unlocked_icon_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
-
-            -- button_friend:addChild(unlocked_button_friend)
-            -- button_friend:addChild(unlocked_icon_friend)
-            -- button_friend:setPosition(bigWidth / 2 - 0.5, 200)
-            -- button_friend:unscheduleUpdate()
             button_friend:removeFromParent()
             button_friend = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
             button_friend:setPosition(bigWidth / 2 - 1, 200)
             icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
             button_friend:setScale9Enabled(true)
             button_friend:setAnchorPoint(1,0.5)
-            --button_friend:setPosition(bigWidth / 2 - 1, 200)
             button_friend:addTouchEventListener(button_right_clicked)
             backColor:addChild(button_friend)   
 
@@ -770,7 +464,6 @@ function HomeLayer.create()
         function (api, code, message, description)
         end
     )
-
 
     local moveLength = 100
     local moved = false
@@ -840,7 +533,6 @@ function HomeLayer.create()
                 setting_back:runAction(cc.Sequence:create(action2, action3))
             end
         end
-
     end
 
     local onTouchEnded = function(touch,event)
@@ -891,7 +583,6 @@ function HomeLayer.create()
                 data_back:removeChildByName('PersonalInfo')
             end)
             button_data:runAction(cc.Sequence:create(action1, action2))
-
         end
     end
 
@@ -1032,7 +723,6 @@ function HomeLayer:setButtonEnabled(enabled)
     self.button_sound:setEnabled(enabled)
     self.button_enter:setEnabled(enabled)
     self.button_reward:setEnabled(enabled)
-
 end
 
 return HomeLayer

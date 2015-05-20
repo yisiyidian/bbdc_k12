@@ -13,7 +13,8 @@ end
 function FriendLayer:ctor()
     
     self.backToHome = function ()
-
+        print("gogogogo home")
+        s_CorePlayManager.enterHomeLayer()
     end
 
     local back = cc.LayerColor:create(cc.c4b(255,255,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
@@ -37,17 +38,18 @@ function FriendLayer:ctor()
     backBtn:setPosition(0,0.5 * topline:getContentSize().height)
     topline:addChild(backBtn)
     
-    local function onBack(sender,eventType)
+    --返回按钮事件
+    local function onBack(sel,sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-        
+            print("eventType:"..eventType)
             s_CURRENT_USER.seenFansCount = s_CURRENT_USER.fansCount
             saveUserToServer({['seenFansCount']=s_CURRENT_USER.seenFansCount}, function (datas, error)
-                 self.backToHome()
+                 sel.backToHome()
             end)
             
         end
     end
-    backBtn:addTouchEventListener(onBack)
+    backBtn:addTouchEventListener(handler(self,onBack))
     
     local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
     
@@ -66,6 +68,7 @@ function FriendLayer:ctor()
     self.friendSearchButton = cc.MenuItemImage:create('image/friend/fri_titleback_unselect.png','image/friend/fri_titleback_unselect.png','')
     self.friendSearchButton:setScaleX(scale)
     self.friendSearchButton:setPosition(s_DESIGN_WIDTH / 2,0)
+
     local title2 = cc.Label:createWithSystemFont('查找好友','',28)
     title2:setScaleX(1 / scale)
     title2:setPosition(self.friendSearchButton:getContentSize().width / 2,self.friendSearchButton:getContentSize().height / 2)
@@ -75,6 +78,7 @@ function FriendLayer:ctor()
     self.friendRequestButton:setScaleX(scale)
     self.friendRequestButton:setAnchorPoint(1,0.5)
     self.friendRequestButton:setPosition(s_RIGHT_X,0)
+    
     local title3 = cc.Label:createWithSystemFont('好友请求','',28)
     title3:setScaleX(1 / scale)
     title3:setPosition(self.friendRequestButton:getContentSize().width / 2,self.friendRequestButton:getContentSize().height / 2)

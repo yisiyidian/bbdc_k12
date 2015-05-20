@@ -31,6 +31,20 @@
 -- @param #int errorcode
         
 --------------------------------
+-- 请求短信验证码
+-- @function [parent=#CXAvos] requestSMSCode 
+-- @param self
+-- @param #char phoneNumber
+        
+--------------------------------
+-- 验证短信验证码
+-- @function [parent=#CXAvos] verifySMSCode 
+-- @param self
+-- @param #char phoneNumber
+-- @param #char smsCode
+-- @param #int mHandler
+        
+--------------------------------
 -- 
 -- @function [parent=#CXAvos] signUp 
 -- @param self
@@ -51,6 +65,30 @@
 -- @function [parent=#CXAvos] logInByQQ 
 -- @param self
 -- @param #int nHandler
+        
+--------------------------------
+-- 修改密码
+-- @function [parent=#CXAvos] changePwd 
+-- @param self
+-- @param #char username
+-- @param #char oldPwd
+-- @param #char newPwd
+-- @param #int nHandler
+        
+--------------------------------
+-- 
+-- @function [parent=#CXAvos] logInByPhoneNumber 
+-- @param self
+-- @param #char PhoneNumber
+-- @param #char password
+-- @param #int nHandler
+        
+--------------------------------
+-- 修改密码完成的回调
+-- @function [parent=#CXAvos] invokeLuaCallbackFunction_cp 
+-- @param self
+-- @param #char error
+-- @param #int errorcode
         
 --------------------------------
 -- 
@@ -105,6 +143,13 @@
 -- @param self
 -- @param #char appId
 -- @param #char appKey
+        
+--------------------------------
+-- 验证之后的回调
+-- @function [parent=#CXAvos] invokeLuaCallBackFunction_vc 
+-- @param self
+-- @param #char error
+-- @param #int errorCode
         
 --------------------------------
 -- 

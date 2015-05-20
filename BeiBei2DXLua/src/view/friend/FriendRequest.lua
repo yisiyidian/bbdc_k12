@@ -118,13 +118,20 @@ function FriendRequest:main()
         local button = item:getChildByName("Title Button")
         local index = listView:getIndex(item)
         
-        local head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
+        local head = nil        
+        if s_CURRENT_USER.fans[i].sex == 0 then
+            head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
+        else
+            head = cc.Sprite:create('image/PersonalInfo/boy_head.png')
+        end
+        -- local head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
+
         head:setScale(0.8)
         head:setPosition(0.26 * button:getContentSize().width,0.6 * button:getContentSize().height)
         button:addChild(head)
 
         local name = s_CURRENT_USER.fans[i].username
-        if s_CURRENT_USER.fans[i].userType == USER_TYPE_QQ then
+        if s_CURRENT_USER.fans[i].userType == USER_TYPE_QQ or s_CURRENT_USER.fans[i].nickName ~= "" then
             name = s_CURRENT_USER.fans[i].nickName
         end
 

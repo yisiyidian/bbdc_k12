@@ -1,5 +1,5 @@
-app_version_debug   = 205000
-app_version_release = 205000
+app_version_debug   = 206000
+app_version_release = 206000
 
 local function _initConstant()
     -- number
@@ -91,7 +91,7 @@ local function _initScene()
     local scene = reloadModule("AppScene")
     s_SCENE = scene.create()
     -- layers of main scene
-    s_BG_LAYER                = s_SCENE.bgLayer
+
     s_GAME_LAYER              = s_SCENE.gameLayer
     s_HUD_LAYER               = s_SCENE.hudLayer
     s_POPUP_LAYER             = s_SCENE.popupLayer

@@ -48,6 +48,17 @@ function validateUsername(s)
     return true
 end
 
+--验证邮箱
+function validateEmail(email)
+    if (email:match("[A-Za-z0-9%.%%%+%-]+@[A-Za-z0-9%.%%%+%-]+%.%w%w%w?%w?")) then 
+        -- print(email .. " is a valid email address") 
+        return true
+    else 
+        -- print(email .. " is a invalid email address") 
+        return false
+    end 
+end
+
 function validatePassword(s)
     local length = string.len(s)
     if length < 6 or length > 16 then return false end
@@ -65,14 +76,16 @@ local function parseServerUser( objectjson )
     return true
 end
 
+--注册或者登陆之后的回调
 function onResponse_signUp_logIn(hasParsed, objectjson, e, code, onResponse)
     if e ~= nil then 
         print('signup/logIn:' .. e) 
         if onResponse ~= nil then onResponse(s_CURRENT_USER, e, code) end
     elseif objectjson ~= nil then 
+        --没有错误  直接返回数据
         print('signup/logIn:' .. type(objectjson) .. ',  ' .. objectjson)
         if hasParsed == false then parseServerUser( objectjson ) end
-
+        --
         s_CURRENT_USER.userId = s_CURRENT_USER.objectId
         s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, nil, s_CURRENT_USER.username)
         s_LocalDatabaseManager.setLogOut(false)
@@ -85,7 +98,11 @@ function onResponse_signUp_logIn(hasParsed, objectjson, e, code, onResponse)
 end
 
 -- https://cn.avoscloud.com/docs/error_code.html
-
+-- 注册用户 首次安装会进这里 注册一个匿名的账号
+-- 卸载再安装的话，就会生成一个新的匿名账号
+--username 帐号
+--password 密码
+---onResponese 回调函数
 -- function (user data, error description, error code)
 function UserBaseServer.signUp(username, password, onResponse)
     s_CURRENT_USER.username = username
@@ -99,7 +116,21 @@ end
 function UserBaseServer.logIn(username, password, onResponse)
     s_CURRENT_USER.username = username
     s_CURRENT_USER.password = password
+    -- dump(s_CURRENT_USER,"UserBaseServer.logIn登陆前数据")
     cx.CXAvos:getInstance():logIn(username, password, function (objectjson, e, code)
+        dump(objectjson,"登陆返回数据")
+        onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
+    end)
+end
+
+--用手机号码+密码登陆
+function UserBaseServer.loginByPhoneNumber(phoneNumber,password,onResponse)
+    s_CURRENT_USER.username = ""
+    s_CURRENT_USER.mobilePhoneNumber = phoneNumber
+    s_CURRENT_USER.password = password
+
+    cx.CXAvos:getInstance():logInByPhoneNumber(phoneNumber, password, function (objectjson, e, code)
+        dump(objectjson,"登陆返回数据")
         onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
     end)
 end
@@ -111,6 +142,11 @@ function UserBaseServer.logInByQQAuthData(openid, access_token, expires_in, onRe
         end
     )
 end
+
+
+-- function UserBaseServer.changePa( ... )
+--     -- body
+-- end
 
 -- ["access_token"] = "F24DE9192D4FB7E96594D33AEAD3E848",
 -- ["openid"] = "4736E8D1D0A42BF6DF94F7A972CDD933",
@@ -178,31 +214,42 @@ function UserBaseServer.onLogInByQQ(onResponse)
 end
 
 -- function (username, password, error description, error code)
-function UserBaseServer.updateUsernameAndPassword(username, password, onResponse)
+--oldPwd 通过个人信息面板修改密码的时候
+function UserBaseServer.updateUsernameAndPassword(username, password, onResponse ,oldPwd)
     if not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then
         s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
         if onResponse ~= nil then onResponse(username, password, s_TIPS_LAYER.offlineOrNoSessionTokenTip, ERROR_CODE_MAX) end
         return
     end
-
+    -- 修改密码成功回调
     local onCompleted = function ()
         s_CURRENT_USER.password = password
         s_CURRENT_USER.usertype = USER_TYPE_BIND
 
-        saveUserToServer({['usertype']=USER_TYPE_BIND}, function (datas, error)
+        saveUserToServer({['usertype']=USER_TYPE_BIND,["sex"]=s_CURRENT_USER.sex}, function (datas, error)
             onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, nil, 0)
         end)
     end
 
     local change_password = function (password, onResponse)
-        if s_CURRENT_USER.password ~= password then
-            s_SERVER.updatePassword(s_CURRENT_USER.password, password, s_CURRENT_USER.objectId, 
-                function (api, result) 
+        if s_CURRENT_USER.password ~= password or oldPwd ~= nil then
+            --如果新旧密码不一致 老的修改逻辑
+            --如果oldPwd不为nil 新的修改逻辑
+            local oPwd = nil
+            if oldPwd~=nil then
+                oPwd = oldPwd
+            else
+                oPwd = s_CURRENT_USER.password
+            end
+            
+            s_SERVER.updatePassword(oPwd, password, s_CURRENT_USER.objectId, 
+                function (api, result)
                     onCompleted()
                 end, 
                 function (api, code, message, description) 
                     onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, description, code)
                 end)
+
         else
             onCompleted()
         end
@@ -230,6 +277,72 @@ function UserBaseServer.updateUsernameAndPassword(username, password, onResponse
 
     else
         change_password(password, onResponse)
+    end
+end
+
+--更新登陆信息
+--username 昵称 在老版本的登陆里,昵称作为username,在新版本的登陆里昵称就是昵称,不允许用昵称登陆
+--password 密码
+--phoneNumber 手机号码
+--onResponse  回调函数
+--sex 性别
+function UserBaseServer.updateLoginInfo(username, password, phoneNumber,onResponse,nickName,sex)
+    if not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then
+        s_TIPS_LAYER:showTip(s_TIPS_LAYER.offlineOrNoSessionTokenTip)
+        if onResponse ~= nil then onResponse(username, password, phoneNumber,s_TIPS_LAYER.offlineOrNoSessionTokenTip, ERROR_CODE_MAX) end
+        return
+    end
+    --修改密码成功回调
+    local onCompleted = function()
+        s_CURRENT_USER.password = password
+        s_CURRENT_USER.usertype = USER_TYPE_BIND
+
+        saveUserToServer({['usertype']=USER_TYPE_BIND}, function (datas, error)
+            onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password,s_CURRENT_USER.mobilePhoneNumber ,nil, 0)
+        end)
+    end
+
+    --调用Server里修改密码的方法
+    --修改username 和 mobilePhoneNumber成功的回调
+    local nameAndPhoneComplete = function (password)
+        if s_CURRENT_USER.password ~= password then
+            s_SERVER.updatePassword(s_CURRENT_USER.password, password, s_CURRENT_USER.objectId, 
+                function (api, result) 
+                    onCompleted()
+                end, 
+                function (api, code, message, description) 
+                    onResponse(s_CURRENT_USER.username, s_CURRENT_USER.password, description, code)
+                end)
+        else
+            onCompleted()
+        end
+    end
+
+    if s_CURRENT_USER.mobilePhoneNumber ~= phoneNumber then
+        --判断手机号是否已存在
+        isPhoneNumberExist(phoneNumber,function (exist,error)
+            if error ~= nil then
+                --手机号码已存在
+                onResponse(s_CURRENT_USER.username,password,s_CURRENT_USER.mobilePhoneNumber,error.description,error.code)
+            elseif not exist then
+                if s_CURRENT_USER.nickName ~= nickName then
+                    saveUserToServer({["nickName"]=nickName,["mobilePhoneNumber"]=phoneNumber,['sex']=sex}, function(datas,error)
+                        if error ~= nil then
+                            onResponse(s_CURRENT_USER.username,s_CURRENT_USER.password,phoneNumber,error.description,error.code)
+                        else
+                            s_CURRENT_USER.nickName = nickName
+                            s_CURRENT_USER.mobilePhoneNumber = phoneNumber
+                            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER,s_CURRENT_USER.userId,s_CURRENT_USER.username)
+                            nameAndPhoneComplete(password)
+                        end
+                    end)
+                end
+            end            
+        end)
+    else
+        --手机号码已绑定
+        print("s_CURRENT_USER.mobilePhoneNumber:"..s_CURRENT_USER.mobilePhoneNumber)
+        print("phoneNumber:"..phoneNumber)
     end
 end
 

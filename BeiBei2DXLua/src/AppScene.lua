@@ -1,6 +1,6 @@
+--游戏主场景
 require("cocos.init")
 
-local BackgroundLayer = require("layer.BackgroundLayer")
 local GameLayer = require("layer.GameLayer")
 local HudLayer = require("layer.HudLayer")
 local PopupLayer = require("layer.PopupLayer")
@@ -99,9 +99,6 @@ function AppScene.create()
     scene.rootLayer = cc.Layer:create()
     scene.rootLayer:setPosition(s_DESIGN_OFFSET_WIDTH, 0)
     scene:addChild(scene.rootLayer)
-    
-    scene.bgLayer = BackgroundLayer.create()
-    scene.rootLayer:addChild(scene.bgLayer)
 
     scene.gameLayer = GameLayer.create()
     scene.rootLayer:addChild(scene.gameLayer)
@@ -162,7 +159,7 @@ local function update(dt)
     -- end 
 
     if IS_DEVELOPMENT_MODE and s_WordDictionaryDatabase and not s_WordDictionaryDatabase.allwords and s_SCENE.currentGameLayerName == 'HomeLayer' then
-        print(s_WordDictionaryDatabase.nextframe, 's_WordDictionaryDatabase.nextframe')
+        -- print(s_WordDictionaryDatabase.nextframe, 's_WordDictionaryDatabase.nextframe')
         if s_WordDictionaryDatabase.nextframe == WDD_NEXTFRAME_STATE__RM_LOAD then
             showProgressHUD('', true)
             s_WordDictionaryDatabase.nextframe = WDD_NEXTFRAME_STATE__STARTLOADING
@@ -195,10 +192,14 @@ function AppScene:ctor()
     -- self:registerCustomEvent()
 end
 
+--替换游戏的主Layer
+--此时不会释放资源
+--TODO 释放资源
 function AppScene:replaceGameLayer(newLayer)
     self.gameLayer:removeAllChildren()
     self.gameLayer:addChild(newLayer)
-
+    --
+    print("replace GameLayer OK")
     updateCurrentEverydayInfo()
 
     if newLayer.class ~= nil and newLayer.class.__cname ~= nil then 
@@ -250,7 +251,9 @@ end
 function AppScene:removeAllPopups()
     self.popupLayer.listener:setSwallowTouches(false)
     local action1 = cc.FadeOut:create(0.2)
-    if self.popupLayer.backColor ~= nil then
+
+    --怎么能这么写！！！！
+    if self.popupLayer.backColor ~= nil and not tolua.isnull(self.popupLayer.backColor) then
         self.popupLayer.backColor:runAction(action1)
     end
     s_SCENE:callFuncWithDelay(0.2, function ()

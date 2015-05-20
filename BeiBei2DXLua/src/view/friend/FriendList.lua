@@ -352,18 +352,25 @@ function FriendList:addList()
         rankIcon:setName('rankIcon')
         
         local rankLabel = cc.Label:createWithSystemFont(string.format('%d',i),'',36)
-        --rankLabel:setScaleX(scale)
         rankLabel:setPosition(rankIcon:getContentSize().width / 2,rankIcon:getContentSize().width / 2)
         rankIcon:addChild(rankLabel)
         rankLabel:setName('rankLabel')
         
-        local head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
+        local head = nil        
+        if self.array[i].sex == 0 then
+            head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
+        else
+            head = cc.Sprite:create('image/PersonalInfo/boy_head.png')
+        end
+        -- local head = cc.Sprite:create('image/PersonalInfo/hj_personal_avatar.png')
         head:setScaleX(1 / scale * 0.8)
         head:setScaleY(0.8)
         head:setPosition(0.26 * button:getContentSize().width,0.5 * button:getContentSize().height)
         button:addChild(head)
+        
         local name = self.array[i].username
-        if self.array[i].userType == USER_TYPE_QQ then
+        --如果是QQ登陆 或者是新的注册用户(手机注册并且启用nickName字段)
+        if self.array[i].userType == USER_TYPE_QQ or self.array[i].nickName ~= "" then
             name = self.array[i].nickName
         end
         local fri_name = cc.Label:createWithSystemFont(name,'',32)

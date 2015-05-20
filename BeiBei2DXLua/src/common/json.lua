@@ -69,7 +69,7 @@ echo(str) -- [null,null,2,null,3]
 function json.encode(var)
     local status, result = pcall(cjson.encode, var)
     if status then return result end
-    if DEBUG > 1 then
+    if DEBUG and DEBUG > 1 then
         printError("json.encode() - encoding failed: %s", tostring(result))
     end
 end
@@ -120,7 +120,7 @@ dump(tb) --[ [
 function json.decode(text)
     local status, result = pcall(cjson.decode, text)
     if status then return result end
-    if DEBUG > 1 then
+    if DEBUG and DEBUG > 1 then
         printError("json.decode() - decoding failed: %s", tostring(result))
     end
 end

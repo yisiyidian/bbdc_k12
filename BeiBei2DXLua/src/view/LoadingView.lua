@@ -1,9 +1,10 @@
+--Loading界面
+--只是做个loading效果，没有loading任何东西
 local LoadingView = class ("LoadingView", function()
     return cc.Layer:create()
 end)
 
 function LoadingView.create()
-    
     local layer = LoadingView.new()
     
     local background = cc.Sprite:create('image/loading/loading_little_girl_background.png')

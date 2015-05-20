@@ -58,6 +58,7 @@ end
 
 ---------------------------------------------------------------------------------------------------
 
+--查询玩家昵称是否存在，请求服务器
 -- callback(isExist, error)
 function isUsernameExist(username, callback)
     local api = 'searchusername'
@@ -72,6 +73,30 @@ function isUsernameExist(username, callback)
     local protocol = ProtocolBase.create(api, serverRequestType, {['username']=username}, cb)
     protocol:request()
 end
+
+--检查手机号码是否已存在
+function isPhoneNumberExist(phoneNumber,callback)
+    local api = "searchphonenumber"
+    local serverRequestType = SERVER_REQUEST_TYPE_NORMAL
+
+    --没出错则返回结果，出错之后则返回错误信息
+    local function cb(result,error)
+        local result = (error == nil) and result.datas.count > 0 or nil
+        if callback then
+            callback(result,error)
+        end
+    end
+    --TODO 解开注释
+    local protocol = ProtocolBase.create(api,serverRequestType,{["mobilePhoneNumber"]=phoneNumber},cb)
+    protocol:request()
+    --TODO 注释
+    -- local re = {}
+    -- re.datas = {}
+    -- re.datas.count = 0
+    -- cb(re,nil)
+end
+
+
 
 -- localDBUser is newer than serverUser
 -- callback(updatedAt, error)
@@ -459,6 +484,7 @@ end
 
 ---------------------------------------------------------------------------------------------------
 
+--如果无网络或者无SessionToken,则不推送，直接回调
 -- dataTable = {['className']=className, ['objectId']=objectId, ...}
 -- callback(datas, error)
 function saveToServer(dataTable, callback)
@@ -482,6 +508,7 @@ function saveToServer(dataTable, callback)
     protocol:request()
 end
 
+--保存User的数据到服务器上，推送到服务器
 -- callback(datas, error)
 function saveUserToServer(dataTable, callback)
     local function cb (datas, error)
@@ -494,21 +521,24 @@ function saveUserToServer(dataTable, callback)
     end
 
     local userdata = {['className']=s_CURRENT_USER.className, ['objectId']=s_CURRENT_USER.objectId}
+    --排除dataTable中指定的字段、function、table
     for key, value in pairs(dataTable) do
         if (key == 'sessionToken'
             or key == 'BEANSKEY'
-            or key == 'password' 
+            or key == 'password'
             or key == 'className' 
             or key == 'createdAt' 
             or key == 'updatedAt' 
             or string.find(key, '__') ~= nil 
             or value == nil) == false 
-            and (type(value) ~= 'function' and type(value) ~= 'table') then 
+            and (type(value) ~= 'function' and type(value) ~= 'table')
+            and not (key == "mobilePhoneNumber" and value == "") then
 
             userdata[key] = value
 
         end
     end
+    dump(userdata)
     saveToServer(userdata, cb)    
 end
 
