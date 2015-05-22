@@ -52,7 +52,8 @@ function Crab:moveOut()
 end
 
 function Crab:shake()
-    --self.crab:stopAllActions()
+    self.crab:stopAllActions()
+    self.crab:setRotation(0)
 	local shakeOnce = cc.Sequence:create(cc.RotateBy:create(0.05,9),cc.RotateBy:create(0.05,-18),cc.RotateBy:create(0.05,9))
     local shake = cc.Repeat:create(shakeOnce,2)
     local small = cc.CallFunc:create(function() 
