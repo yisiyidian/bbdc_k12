@@ -1043,7 +1043,7 @@ function SummaryBossLayer:initBossLayer_boss(chapter,entrance,wordList)
 end
 -- 初始化词表
 function SummaryBossLayer:initWordList(word)
-<<<<<<< HEAD
+
     local wordList = {}
     for i = 1,#word do
         wordList[i] = word[i]
