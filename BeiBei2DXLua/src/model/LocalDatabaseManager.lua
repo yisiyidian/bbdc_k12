@@ -102,6 +102,7 @@ function Manager.getWordInfoFromWordName(word)
     ret.wordName = word
     if s_WordDictionaryDatabase.allwords ~= nil then
         local raw = s_WordDictionaryDatabase.allwords[word]
+        -- dump(raw)
         if not IS_DEVELOPMENT_MODE and raw == nil then
             s_WordDictionaryDatabase.allwords[word] = require('model.words.' .. word)
             raw = s_WordDictionaryDatabase.allwords[word]
@@ -115,13 +116,12 @@ function Manager.getWordInfoFromWordName(word)
             ret.wordMeaning        =   raw[4 + indexOffset]
             ret.sentenceEn         =   raw[5 + indexOffset]
             ret.sentenceCn         =   raw[6 + indexOffset]
-            ret.sentenceEn2        =   raw[7 + indexOffset]
-            ret.sentenceCn2        =   raw[8 + indexOffset]
+            ret.sentenceEn2        =   raw[7 + indexOffset] or ""
+            ret.sentenceCn2        =   raw[8 + indexOffset] or ""
         end
     end
 
     return ret
-    
 end
 
 ---- Daily Study Info -----------------------------------------------------------------------------------

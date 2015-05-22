@@ -51,7 +51,7 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
     if islandIndex ~= nil then
         self.islandIndex = islandIndex
     end
-
+    
     if s_CURRENT_USER.tutorialStep == s_tutorial_study and s_CURRENT_USER.tutorialSmallStep == s_smalltutorial_studyRepeat1_2 then
         s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_studyRepeat1_2 + 1)
     end
@@ -82,7 +82,6 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
     self.currentWord = word
 
     self.wordInfo = CollectUnfamiliar:createWordInfo(self.currentWord)
-    
     local color 
     if wrongWordList == nil then
         color = "blue"
@@ -106,14 +105,12 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
     backColor:addChild(soundMark)
     self.soundMark = soundMark
 
-
     --词组
     local wordGroupLabel =  cc.Label:createWithSystemFont("","",50)
     wordGroupLabel:setPosition(bigWidth/2, 925)
     wordGroupLabel:setColor(cc.c4b(0,0,0,255))
     backColor:addChild(wordGroupLabel)
     self.wordGroupLabel = wordGroupLabel
-
 
     local a,b = string.find(self.currentWord, "|") 
     if a == nil then
@@ -126,15 +123,14 @@ function ChooseWrongLayer:ctor(word,wrongNum,wrongWordList,islandIndex)
         self.wordGroupLabel:setString(word)
         self.soundMark:setVisible(false)
     end
-
     local detailInfo = DetailInfo.create(self.wordInfo[1])
     detailInfo:setAnchorPoint(0.5,0.5)
     detailInfo:ignoreAnchorPointForPosition(false)
     detailInfo:setPosition(bigWidth/2, 520)
     backColor:addChild(detailInfo)
-
     self.nextButton = self:addNextButton(word,wrongNum,wrongWordList,status)
     backColor:addChild(self.nextButton)
+
 end
 
 return ChooseWrongLayer

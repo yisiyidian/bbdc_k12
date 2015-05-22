@@ -19,10 +19,12 @@ function CollectUnfamiliarLayer:createWordInfo(word)
     local wordSoundMarkAm   = currentWord.wordSoundMarkAm
     local wordMeaningSmall  = currentWord.wordMeaningSmall
     local wordMeaning       = currentWord.wordMeaning
-    local sentenceEn        = currentWord.sentenceEn
-    local sentenceCn        = currentWord.sentenceCn
-    local sentenceEn2       = currentWord.sentenceEn2
-    local sentenceCn2       = currentWord.sentenceCn2
+    local sentenceEn        = currentWord.sentenceEn or ""
+    local sentenceCn        = currentWord.sentenceCn or ""
+    local sentenceEn2       = currentWord.sentenceEn2 or ""
+    local sentenceCn2       = currentWord.sentenceCn2 or ""
+
+    
     
     return {currentWord,wordname,wordSoundMarkEn,wordSoundMarkAm,wordMeaningSmall,
         wordMeaning,sentenceEn,sentenceCn,sentenceEn2,sentenceCn2 }

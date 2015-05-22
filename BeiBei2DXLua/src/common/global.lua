@@ -59,8 +59,12 @@ local function _initConstant()
     CUSTOM_EVENT_SIGNUP = 'CUSTOMxx_EVENT_SIGNUP'
     CUSTOM_EVENT_LOGIN = 'CUSTOMxx_EVENT_LOGIN'
 
+    print(s_WordDictionaryDatabase)
     s_WordDictionaryDatabase = s_WordDictionaryDatabase or require('model.WordDictionaryDatabase')
-    if not IS_DEVELOPMENT_MODE then s_WordDictionaryDatabase.init() end
+    if not IS_DEVELOPMENT_MODE then 
+        --开发模式 不进这里
+        s_WordDictionaryDatabase.init() 
+    end
 
     s_DataManager = reloadModule('model.DataManager')
     s_DataManager.clear()

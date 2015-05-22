@@ -10,7 +10,6 @@ end)
 function WordDetailInfo.create(word)
 
     local height = 480
-
     local main = cc.Layer:create()
     main:setContentSize(s_DESIGN_WIDTH, height)
     main:setAnchorPoint(0.5,1)
@@ -28,14 +27,6 @@ function WordDetailInfo.create(word)
     local text_length = 460
     local left = (s_DESIGN_WIDTH - text_length)/2
 
-    -- label_wordname = cc.Label:createWithSystemFont(word.wordName,"",40)
-    -- label_wordname:setAnchorPoint(0,1)
-    -- label_wordname:setColor(cc.c4b(0,0,0,255))
-    -- label_wordname:setDimensions(text_length,0)
-    -- label_wordname:setAlignment(0)
-    -- label_wordname:setPosition(left, index_y)
-    -- main:addChild(label_wordname)
-    -- index_y = index_y - label_wordname:getContentSize().height - 10
     local meanings = split(word.wordMeaning, "|||")
     for i = 1, #meanings do
         label_wordmeaning = cc.Label:createWithSystemFont(meanings[i],"",24)
@@ -48,7 +39,7 @@ function WordDetailInfo.create(word)
         main:addChild(label_wordmeaning)
         index_y = index_y - label_wordmeaning:getContentSize().height - 10 
     end 
-
+    
     index_y = index_y - 20
 
     -- add sprite for split
@@ -77,7 +68,7 @@ function WordDetailInfo.create(word)
     label_sentenceen:setDimensions(0,0)
     length[1] = label_sentenceen:getContentSize().width
     wordHeight = label_sentenceen:getContentSize().height
-
+    
     label_sentencecn = cc.Label:createWithSystemFont(word.sentenceCn,"",24)
     label_sentencecn:setOpacity(200)
     label_sentencecn:setAnchorPoint(0,1)
@@ -89,7 +80,7 @@ function WordDetailInfo.create(word)
     index_y = index_y - label_sentencecn:getContentSize().height - 10
     length[2] = label_sentencecn:getContentSize().width
     local y2 = index_y
-
+    -- print("word.sentenceEn2:"..word.sentenceEn2)
     label_sentenceen2 = cc.Label:createWithTTF(word.sentenceEn2,'font/CenturyGothic.ttf',26)
     label_sentenceen2:setOpacity(180)
     label_sentenceen2:setAnchorPoint(0,1)
@@ -101,7 +92,7 @@ function WordDetailInfo.create(word)
     index_y = index_y - label_sentenceen2:getContentSize().height - 10
     label_sentenceen2:setDimensions(0,0)
     length[3] = label_sentenceen2:getContentSize().width
-
+    
     label_sentencecn2 = cc.Label:createWithSystemFont(word.sentenceCn2,"",24)
     label_sentencecn2:setOpacity(200)
     label_sentencecn2:setAnchorPoint(0,1)
@@ -192,14 +183,14 @@ function WordDetailInfo.create(word)
     -- local richElementCn1 = ccui.RichElementText:create(index,cc.c3b(0, 0, 0),200,word.sentenceCn,'',26) 
     -- index = index + 1                       
     -- richtext:pushBackElement(richElementCn1) 
-    local richtext2 = ccui.RichText:create()
 
+    local richtext2 = ccui.RichText:create()
     richtext2:ignoreContentAdaptWithSize(false)
-    
     richtext2:setContentSize(cc.size(text_length, wordHeight * math.ceil(length[3] / text_length)))  
     richtext2:ignoreAnchorPointForPosition(false) 
     richtext2:setPosition(left + text_length / 2, y2 - richtext2:getContentSize().height / 2)
-    main:addChild(richtext2)  
+    main:addChild(richtext2)
+
     index = 1
     for i = 1,#sentence2 do
         if split2 then
@@ -207,6 +198,7 @@ function WordDetailInfo.create(word)
             if i % 2 == 0 then
                 clr = cc.c3b(255, 90, 17)
             end
+            
             local richElement1 = ccui.RichElementText:create(index,clr,200,sentence2[i],'font/CenturyGothic.ttf',26)
             index = index + 1                           
             richtext2:pushBackElement(richElement1) 
@@ -240,9 +232,6 @@ function WordDetailInfo.create(word)
             end
         end
     end
-    -- local richElementCn2 = ccui.RichElementText:create(index,cc.c3b(0, 0, 0),200,word.sentenceCn2,'',26) 
-    -- index = index + 1                       
-    -- richtext:pushBackElement(richElementCn2) 
 
     local layer
     if realHeight <= height then
@@ -279,7 +268,6 @@ function WordDetailInfo.create(word)
     
     return layer
 end
-
 
 return WordDetailInfo
 
