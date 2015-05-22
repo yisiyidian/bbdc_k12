@@ -24,6 +24,10 @@
 -- 		解锁数据1 解锁数据2 解锁数据4
 --		解锁VIP
 
+--TODO  累计登陆任务
+--		领取奖励
+--		换机器同步
+
 local MissionManager = class("MissionManager")
 
 local MissionConfig  = reloadModule("model.mission.MissionConfig") --任务配置文件
@@ -33,7 +37,6 @@ function MissionManager:ctor()
 	self.taskNum = 6 		--随机任务数量
 	self.missionData = nil  --任务数据
 end
-
 
 --生成今日的任务数据
 function MissionManager:generalTasks()
@@ -47,7 +50,7 @@ function MissionManager:generalTasks()
 	-- taskGenDate
 	lastLoginDate   = self.missionData.lastLoginDate 	--取上一次的登陆时间
 	loginDay 		= self.missionData.totalLoginDay	--累计登陆天数
-	taskGenDate 	= self.missionData.taskGenDate 		--任务列表生成时间 TODO
+	taskGenDate 	= self.missionData.taskGenDate 		--任务列表生成时间
 	local tDate = os.date("%x", lastLoginDate)			--最后登陆日期
 	local tNow  = os.date("%x", os.time())				--当前日期
 	print("last Date:"..tDate)
@@ -92,7 +95,7 @@ function MissionManager:generalTasks()
 			for k,v in pairs(t) do
 				len = len + 1
 				if len == index then
-					t[v] = nil
+					t[k] = nil
 					return v
 				end
 			end
@@ -300,24 +303,21 @@ function MissionManager:tableToStr(tb)
 	end
 	return re
 end
-
-
---
+--推送记录到服务器 处理返回数据
 function MissionManager:handleMissionServerData(data)
-	--服务器 发来了数据
 	dump(data,"服务器返回任务数据")
 	local change = false
 	for k,v in pairs(data) do
-		if self.missionData[v] ~= v then
-			self.missionData[v] = v
+		if self.missionData[k] ~= v then
+			self.missionData[k] = v
 			change = true
 		end
 	end
+	dump(self.missionData,"服务器返回任务数据2")
 	if change then
-		self:saveTaskToLocal()--存到本地
+		self:saveTaskToLocal()--如果有改动 存到本地
 	end
 end
-
 ---------------累计登陆相关------------
 --获取当前的累计登陆状态
 --根据累计的登陆天数计算、如果前边的任务不领取完成奖励，一样可以继续往后边累计
@@ -327,8 +327,31 @@ end
 --totaldays	任务总天数
 --nowdays	当前总天数
 function MissionManager:getTotalLoginTask()
+	--TODO 根据累计登陆天数 算出当前的任务状态
 	return 1,2,1
 end
+
+--领取累计登陆的奖励
+function MissionManager:getLoginReward(taskId)
+	
+end
+
+--计算当前的累计登陆的任务
+--	如果有未领取的奖励 返回最早的没有领取奖励的任务
+--	如果没有未领取的奖励 则返回当前的任务
+function MissionManager:calcLoginMission()
+	local totalloginDay = self.missionData.totalLoginDay    --累计登陆的天数
+	local rewardIndex = self.missionData.loginRewardIndex   --领取奖励的index 默认0
+	local loginConfig = MissionConfig.loginMission 			--登陆任务的配置
+	--
+	for k,v in pairs(loginConfig) do
+		if k == rewardIndex then
+			
+		end
+	end
+
+end
+
 --获取随机任务状态
 function MissionManager:getNormalTaskData(taskId)
 	
