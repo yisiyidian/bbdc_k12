@@ -569,13 +569,8 @@ function saveUserToServer(dataTable, callback)
 
         end
     end
-<<<<<<< Updated upstream
     dump(userdata,"同步User数据到服务器")
     saveToServer(userdata, cb)
-=======
-    -- dump(userdata)
-    saveToServer(userdata, cb)    
->>>>>>> Stashed changes
 end
 
 
