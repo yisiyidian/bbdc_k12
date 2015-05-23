@@ -161,13 +161,13 @@ fi
 
 if [ $APPTYPE = "0" ] ; then
     cocos compile -p android -j 4 -ap 17    
-    cp ${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/runtime/android/BeiBei2DXLua-debug.apk ${APK_CHANNEL_PATH}/debug_$VER_houhai.apk
+    cp ${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/runtime/android/BeiBei2DXLua-debug.apk ${APK_CHANNEL_PATH}/debug_$VER.apk
 elif [ $APPTYPE = "1" ] ; then   
     cocos compile -p android -j 4 -ap 17 -m release --luacompile --lua-encrypt --lua-encrypt-key "fuck2dxLua" --lua-encrypt-sign "fuckXXTEA" —disable-compile true
-    cp ${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/publish/android/BeiBei2DXLua-release-signed.apk ${APK_CHANNEL_PATH}/release-signed_$VER_houhai.apk
+    cp ${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/publish/android/BeiBei2DXLua-release-signed.apk ${APK_CHANNEL_PATH}/release-signed_$VER.apk
 elif [ $APPTYPE = "2" ] ; then 
     cocos compile -p android -j 4 -ap 17 -m release
-    cp ${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/publish/android/BeiBei2DXLua-release-unsigned.apk ${APK_CHANNEL_PATH}/release-unsigned_$VER_houhai.apk
+    cp ${BASE_DIR_FOR_SCRIPT_SELF}/../BeiBei2DXLua/publish/android/BeiBei2DXLua-release-unsigned.apk ${APK_CHANNEL_PATH}/release-unsigned_$VER.apk
 else 
     exit 0
 fi
