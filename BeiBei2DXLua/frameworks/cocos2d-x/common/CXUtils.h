@@ -29,6 +29,7 @@ public:
     
     void shareImageToQQFriend(const std::string& path, const std::string& title, const std::string& desc);
     void shareImageToWeiXin(const std::string& path, const std::string& title, const std::string& desc);
+    void shareURLToWeiXin(const std::string& url, const std::string& title, const std::string& desc);
     void addImageToGallery(const std::string& filePath);
     
     void download(const char* url, const char* savePath, const char* filename);

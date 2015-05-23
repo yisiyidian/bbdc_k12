@@ -405,6 +405,21 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
 end
 
 function SummaryBossAlter:addWinLabel(win_back)
+    local shareBtn = ccui.Button:create('image/share/share_click.png')
+    shareBtn:setScale9Enabled(true)
+    shareBtn:setPosition(s_DESIGN_WIDTH * 0.8,80)
+    self:addChild(shareBtn)
+    local function onShare(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local wordList = self.bossLayer.unit.wrongWordList[1]
+            for i = 2,#self.bossLayer.unit.wrongWordList do
+                wordList = wordList..'|'..self.bossLayer.unit.wrongWordList[i]
+            end
+            cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.html?time='..self.bossLayer.totalTime..'&wordlist='..wordList, '', '贝贝单词－根本停不下来')
+        end
+    end
+    shareBtn:addTouchEventListener(onShare)
+
     local beans = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
     beans:setPosition(s_RIGHT_X -100, s_DESIGN_HEIGHT-70)
     self:addChild(beans)
