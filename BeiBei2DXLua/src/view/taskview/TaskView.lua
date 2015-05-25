@@ -1,6 +1,6 @@
-
-local TaskViewRender = require("view.taskview.TaskViewRender")
-local MissionManager    = require("controller.MissionManager")
+-- 任务界面UI
+local TaskViewRender = require("view.taskview.TaskViewRender")  --任务列表渲染单元
+local MissionManager = require("controller.MissionManager")		--任务管理器
 
 local TaskView = class("TaskView", function()
 	local layer = cc.Layer:create()
@@ -8,12 +8,11 @@ local TaskView = class("TaskView", function()
 end)
 
 function TaskView:ctor()
-	self:init()
+	self:initUI()
 end
 
-function TaskView:init()
-
-
+--初始化UI
+function TaskView:initUI()
 	local background = cc.Sprite:create("image/islandPopup/task_background.png")
     background:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
     self:addChild(background)
@@ -40,27 +39,27 @@ function TaskView:init()
 	self.closeButton = closeButton
 	self.closeButton:setPosition(bigWidth,s_DESIGN_HEIGHT / 2 + bigHeight * 0.43)
 	self:addChild(closeButton)
-
 	--初始化数据
-	self:initData()
-	--初始化UI
-	self:initUI()
+	-- self:initData()
+	--渲染列表
+	self:resetView()
 	
 end
 
 --初始化数据
 function TaskView:initData()
 	--生成任务数据
-	local missionmanager = MissionManager.new()
-	missionmanager:generalTasks()
+	-- local missionmanager = MissionManager.new()
+	-- s_MissionManager:
+	-- missionmanager:generalTasks()
 	--获取任务数据
-	local MissionData = missionmanager:getMissionData()
+	-- local MissionData = missionmanager:getMissionData()
 
-	local TaskList = missionmanager:getMissionList()                   --获取当前任务列表
+	local MissionList = s_MissionManager:getMissionList()                   --获取当前任务列表
 
 	--累计登陆天数 = 累计登陆中的贝贝豆数量
-	local bbdnum = missionmanager.missionData.totalLoginDay            --贝贝豆数量
-	local TotalLoginDay = missionmanager.missionData.totalLoginDay     --累计登陆天数
+	-- local bbdnum = missionmanager.missionData.totalLoginDay            --贝贝豆数量
+	-- local TotalLoginDay = missionmanager.missionData.totalLoginDay     --累计登陆天数
 
 
 	-- local str = "1234,389,abc";
@@ -86,13 +85,11 @@ function TaskView:initData()
 	listData[2] = {["taskid"] = "taskrandom",  ["type"] = TaskViewRender.TASKRANDOM, ["taskname"] = "解锁好友功能", ["callback"] = nil, ["bbdnum"] = 100,    ["loginday"] = TotalLoginDay, ["taskflag"] = "false"}
 
 	self.listData = listData
-
-
 end
 
 --初始化UI
-function TaskView:initUI()
-
+function TaskView:resetView()
+	self.missionList = s_MissionManager:getMissionList()   
 	--创建中间的任务部分
 	local render = nil
 	local renders = {} --临时容器 计算坐标用
@@ -101,10 +98,10 @@ function TaskView:initUI()
 	local renderheight = 160
 
 	--遍历listData初始化
-	for k,v in pairs(self.listData) do
-		render = TaskViewRender.new(v.type)
+	for k,v in pairs(self.missionList) do
+		render = TaskViewRender.new(v[1])
 	    render:setData(v)
-		renders[#renders+1] = render 
+		renders[#renders + 1] = render 
 		self:addChild(render)
 		innerHeight = innerHeight + splitheight
 	end
@@ -115,8 +112,6 @@ function TaskView:initUI()
 		rd:setPosition(110,tlen)
 		tlen = tlen - renderheight	
 	end
-
-
 end
 
 --关闭按钮点击

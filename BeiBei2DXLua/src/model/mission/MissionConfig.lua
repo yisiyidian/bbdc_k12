@@ -13,20 +13,20 @@ local MissionConfig = {}
 --TODO 任务描述 desc字段,和奖励贝贝豆数量的字段
 MissionConfig.randomMission = {
 	--普通任务
-	{["mission_id"] = "1-1",["type"] = 1,["condition"]= {1},["bean"]=0,desc=""}, --神秘任务
-	{["mission_id"] = "1-2",["type"] = 1,["condition"]= {1},["bean"]=0,desc=""}, --打卡
-	{["mission_id"] = "1-3",["type"] = 1,["condition"]= {1},["bean"]=0,desc=""}, --趁热打铁
-	{["mission_id"] = "1-4",["type"] = 1,["condition"]= {1},["bean"]=0,desc=""}, --分享
-	{["mission_id"] = "1-5",["type"] = 1,["condition"]= {1},["bean"]=0,desc=""}, --完成一次总结BOSS
+	{["mission_id"] = "1-1",["type"] = 1,["condition"]= {1},["bean"]=10,desc=""}, --神秘任务
+	{["mission_id"] = "1-2",["type"] = 1,["condition"]= {1},["bean"]=10,desc=""}, --打卡
+	{["mission_id"] = "1-3",["type"] = 1,["condition"]= {1},["bean"]=10,desc=""}, --趁热打铁
+	{["mission_id"] = "1-4",["type"] = 1,["condition"]= {1},["bean"]=10,desc=""}, --分享
+	{["mission_id"] = "1-5",["type"] = 1,["condition"]= {1},["bean"]=10,desc=""}, --完成一次总结BOSS
 	--特殊任务
-	{["mission_id"] = "2-1",["type"] = 2,["condition"]= {1},["bean"]=0,desc=""}, 	--完善信息
+	{["mission_id"] = "2-1",["type"] = 2,["condition"]= {1},["bean"]=10,desc=""}, 	--完善信息
 	{["mission_id"] = "2-2",["type"] = 2,["condition"]= {1,3,5,10,20},["bean"]=0,desc=""},	--拥有X个好友
-	{["mission_id"] = "2-3",["type"] = 2,["condition"]= {1},["bean"]=0,desc=""}, 			--下载音频
+	{["mission_id"] = "2-3",["type"] = 2,["condition"]= {1},["bean"]=10,desc=""}, 			--下载音频
 	--特殊任务中的解锁任务
-	{["mission_id"] = "3-1",["type"] = 3,["condition"]= {1},["bean"]=0,desc=""}, --解锁数据1
-	{["mission_id"] = "3-2",["type"] = 3,["condition"]= {1},["bean"]=0,desc=""}, --解锁数据2
-	{["mission_id"] = "3-3",["type"] = 3,["condition"]= {1},["bean"]=0,desc=""}, --解锁数据4
-	{["mission_id"] = "3-4",["type"] = 3,["condition"]= {1},["bean"]=0,desc=""}, --解锁VIP
+	{["mission_id"] = "3-1",["type"] = 3,["condition"]= {1},["bean"]=10,desc=""}, --解锁数据1
+	{["mission_id"] = "3-2",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据2"}, --解锁数据2
+	{["mission_id"] = "3-3",["type"] = 3,["condition"]= {1},["bean"]=10,desc=""}, --解锁数据4
+	{["mission_id"] = "3-4",["type"] = 3,["condition"]= {1},["bean"]=10,desc=""}, --解锁VIP
 }
 
 MissionConfig.MISSION_SHENMI 	= "1-1" --神秘任务

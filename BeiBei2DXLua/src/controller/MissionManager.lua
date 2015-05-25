@@ -55,11 +55,11 @@ function MissionManager:getMissionList()
     end
 
 	local loginTask = {}
-	loginTask[1] = MissionConfig.MISSION_LOGIN
-	loginTask[2] = status 
-	loginTask[3] = loginTaskData[2] 
-	loginTask[4] = loginTaskData[3]
-	loginTask[5] = loginTaskData[1]
+	loginTask[1] = MissionConfig.MISSION_LOGIN  --ID
+	loginTask[2] = status 						--状态
+	loginTask[3] = loginTaskData[2] 			--条件
+	loginTask[4] = loginTaskData[3]				--总条件
+	loginTask[5] = loginTaskData[1]				--任务游标
 	--获取指定任务的状态
 	local randomTask = self:getCurRandomTaskData()
 	return {loginTask,randomTask}
@@ -110,6 +110,18 @@ function MissionManager:completeMission(taskId,callBack)
 	s_O2OController.syncMission(callBack) --同步数据 到服务器
 	return re
 end
+
+--------------------------------------------------------------------------------------------------------------------
+--根据ID 获取指定任务的配置
+--missionId 任务ID
+function MissionManager:getRandomMissionConfig(missionId)
+	for k,v in pairs(MissionConfig.randomMission) do
+		if v.mission_id == missionId then
+			return v
+		end
+	end
+end
+
 ------------------------------------------------------------------------------------------------------------------------------
 --生成今日的任务数据
 function MissionManager:generalTasks()
