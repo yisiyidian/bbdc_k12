@@ -77,7 +77,7 @@ function MissionManager:updateMission(missionId,missionsData,callBack)
 		if v[1] == missionId then
 			v[3] = tostring(tonumber(v[3]) + missionId) --默认条件+1
 			if v[3] == v[4] then --如果当前任务条件和 任务总条件匹配,则标记为已完成
-				v[2] = 1 --标记为已完成 未领取
+				v[2] = "1" --标记为已完成 未领取
 				re = true
 			end
 		end
@@ -97,8 +97,8 @@ function MissionManager:completeMission(taskId,callBack)
 	local re = false
 	for k,v in pairs(tb) do
 		if v[1] == taskId then
-			if v[2] == 1 then
-				v[2] 	= 2  	--修改状态为已领取
+			if v[2] == "1" then
+				v[2] 	= "2"  	--修改状态为已领取
 				re 		= true
 				break
 			end 
@@ -435,17 +435,20 @@ function MissionManager:updateRandomMissionId()
 	local taskList  = self:strToTable(self.missionData.taskList)
 	local undoTask = {} --未完成的任务
 	local needRecalc = true --是否需要重新计算 当前任务ID
+	
 	for k,v in pairs(taskList) do
-		if v[2] == 0 then
+		if v[2] == "0" then
 			undoTask[#undoTask + 1] = v
 		end
 		--如果当前激活的任务,状态是未完成,或者是未领取
-		if curTaskId == v[1] and v[2] == 0 and v[2] == 1 then
+		if curTaskId == v[1] and (not (v[2] == "2")) then
 			needRecalc = false
 			break
 		end
 	end
-	if not needRecalc then return end
+	if not needRecalc then
+		return 
+	end
 	if #undoTask == 0 then
 		self.missionData.curTaskId = "" --任务都做完了
 		return
@@ -453,9 +456,11 @@ function MissionManager:updateRandomMissionId()
 	--重新指定激活任务的ID
 	local randomTaskId = undoTask[math.random(#undoTask)][1]
 	self.missionData.curTaskId = randomTaskId
+	print("重新生成激活任务结束："..self.missionData.curTaskId)
 end
 --获取当前激活的随机任务的数据
 function MissionManager:getCurRandomTaskData()
+	-- print("self.missionData.curTaskId:"..self.missionData.curTaskId)
 	local curTaskId = self.missionData.curTaskId --完成某个随机任务、然后更新
 	local taskList  = self:strToTable(self.missionData.taskList)
 	for k,v in pairs(taskList) do
@@ -465,5 +470,4 @@ function MissionManager:getCurRandomTaskData()
 	end
 	return nil
 end
-
 return MissionManager

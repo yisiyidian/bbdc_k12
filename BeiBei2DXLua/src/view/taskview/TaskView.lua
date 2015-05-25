@@ -89,7 +89,8 @@ end
 
 --初始化UI
 function TaskView:resetView()
-	self.missionList = s_MissionManager:getMissionList()   
+	self.missionList = s_MissionManager:getMissionList()
+	-- dump(self.missionList,"任务列表数据")
 	--创建中间的任务部分
 	local render = nil
 	local renders = {} --临时容器 计算坐标用

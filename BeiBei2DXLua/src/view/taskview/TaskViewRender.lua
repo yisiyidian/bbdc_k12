@@ -1,4 +1,5 @@
 --任务列表渲染Render
+local MissionConfig = require("model.mission.MissionConfig")
 local TaskViewRender = class("TaskViewRender", function()
 	local layer = cc.Layer:create()
 	return layer
@@ -106,7 +107,7 @@ end
 --更新数据 更新按钮状态
 function TaskViewRender:updataView()
 	--累积登录
-	if self.type == MissionConfig.MISSION_LOGIN then 
+	if self.taskID == MissionConfig.MISSION_LOGIN then 
 		--获取用户连续多少天登录 贝贝豆数量
 		local LoginTaskBBD = "奖励："..self.totalCount.."贝贝豆"
 		self.bbdNum:setString(LoginTaskBBD)
@@ -147,7 +148,7 @@ function TaskViewRender:updataView()
 
 	else
 		--随机任务 贝贝豆数量
-		local config = s_MissionManager:getRandomMissionConfig(self.taskId) ---数据多的话,这么写的效率很低
+		local config = s_MissionManager:getRandomMissionConfig(self.taskID) ---数据多的话,这么写的效率很低
 
 		local RandomTaskBBD = "奖励："..config.bean.."贝贝豆"
 		self.bbdNum:setString(RandomTaskBBD)
