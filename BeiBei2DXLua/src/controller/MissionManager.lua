@@ -95,6 +95,7 @@ end
 function MissionManager:completeMission(taskId,callBack)
 	local tb = self:strToTable(self.missionData.taskList)
 	local re = false
+	local bean = 0
 	for k,v in pairs(tb) do
 		if v[1] == taskId then
 			if v[2] == "1" then
@@ -104,11 +105,17 @@ function MissionManager:completeMission(taskId,callBack)
 			end 
 		end
 	end
-	self.missionData.taskList = self:tableToStr(tb)
-	self:updateRandomMissionId() --重新生成激活任务的ID
-	self:saveTaskToLocal()
-	s_O2OController.syncMission(callBack) --同步数据 到服务器
-	return re
+	if re then
+		self.missionData.taskList = self:tableToStr(tb)
+		self:updateRandomMissionId() --重新生成激活任务的ID
+		self:saveTaskToLocal()
+		s_O2OController.syncMission(callBack) --同步数据 到服务器
+		local config = s_MissionManager:getRandomMissionConfig(self.taskID) ---数据多的话,这么写的效率很低
+		bean = config.bean
+		s_CURRENT_USER:addBeans(bean) --获取贝贝豆
+        saveUserToServer({[DataUser.BEANSKEY] = s_CURRENT_USER[DataUser.BEANSKEY]}) --同步到
+	end
+	return re,bean
 end
 
 --------------------------------------------------------------------------------------------------------------------
@@ -406,7 +413,7 @@ function MissionManager:calcLoginMission()
 	local loginConfig = MissionConfig.loginMission 			--登陆任务的配置
 	--
 	local index 	= 0
-	local nowDay 	= 0
+	local nowDay 	= self.missionData.totalLoginDay
 	local totalDay 	= 0
 
 	local remainDay = totalloginDay

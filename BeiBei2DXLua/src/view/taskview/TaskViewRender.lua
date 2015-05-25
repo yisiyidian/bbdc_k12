@@ -158,7 +158,7 @@ function TaskViewRender:updataView()
 
 	--设置按钮的状态
 	--任务完成 可以领取 按钮为可点击  蓝色
-	if self.status == 2 then
+	if self.status == 1 then
 		self.button_task:setTouchEnabled(true)
 		self.button_task:setVisible(true)
 		self.spriteBtn:setVisible(false)
