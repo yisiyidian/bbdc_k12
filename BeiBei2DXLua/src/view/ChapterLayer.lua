@@ -1,7 +1,7 @@
 require("cocos.init")
 require('common.global')
 
-local MissionView = require("view.mission.MissionView") --任务面板
+-- local MissionView = require("view.mission.MissionView") --任务面板
 local TaskView = require("view.taskview.TaskView")
 --选单元的界面 unit1 unit2....
 --
@@ -106,8 +106,6 @@ function ChapterLayer:ctor()
     self:checkUnlockLevel()
     self:addBackToHome()    --返回按钮      左上
     self:addBeansUI()       --贝贝豆图标    右上
-    self:addMissionBtn()    --任务按钮      右下
-    --fws 
     self:addTaskBOX()       --放置任务的宝箱
 
     print("任务宝箱")
@@ -414,27 +412,7 @@ function ChapterLayer:addBackToHome()
     end)
 end
 
---添加任务按钮 宝箱样式的
-function ChapterLayer:addMissionBtn()
-    local click_home = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            --弹出任务面板
-            local missionView = MissionView.new()
-            s_SCENE:popup(missionView)
-        end
-    end
-    --临时资源用返回按钮的
-    local missionButton = ccui.Button:create("image/chapter/chapter0/backHome.png","image/chapter/chapter0/backHome.png","")
-    missionButton:addTouchEventListener(click_home)
-    missionButton:ignoreAnchorPointForPosition(false)
-    missionButton:setAnchorPoint(0,1)
-    missionButton:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100 ,100)
-    missionButton:setLocalZOrder(1)
-    self:addChild(missionButton,200)
-end
-
---fws
---添加宝箱  包厢里面存放着任务
+--任务按钮  宝箱样式
 function ChapterLayer:addTaskBOX()
     local boxButton = ccui.Button:create("image/islandPopup/task_turntable.png")
     boxButton:addTouchEventListener(handler(self,self.click_box))

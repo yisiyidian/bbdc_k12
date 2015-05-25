@@ -112,7 +112,7 @@ function TaskViewRender:updataView()
 		self.labelTask:setString(LoginDayLabel)
 	else
 		--随机任务 贝贝豆数量
-		local config = s_MissionManager:getRandomMissionConfig(self.taskID) ---数据多的话,这么写的效率很低
+		local config = s_MissionManager:getRandomMissionConfig(self.taskID) ---Render多的话,这么写的效率很低
 		local RandomTaskBBD = "奖励："..config.bean.."贝贝豆"
 		self.bbdNum:setString(RandomTaskBBD)
 		--任务名称
