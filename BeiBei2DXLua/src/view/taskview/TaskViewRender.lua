@@ -91,15 +91,11 @@ function TaskViewRender:init(type)
 end
 
 function TaskViewRender:setData(data)
-	--任务ID_任务状态_任务条件_任务总条件_任务游标
-	self.taskID 	= data[1]
-	-- self.type 		= data.type
-	-- self.taskname 	= data.taskname
-	self.status 	= data[2]
-	self.nowCount 	= data[3]
-	self.totalCount = data[4]
+	self.taskID 	= data[1] --任务ID
+	self.status 	= data[2] --任务状态
+	self.nowCount 	= data[3] --任务条件
+	self.totalCount = data[4] --任务总条件
 	self.index 		= data[5] --系列任务的游标
-
 	--更新界面
 	self:updataView()
 end
@@ -111,45 +107,12 @@ function TaskViewRender:updataView()
 		--获取用户连续多少天登录 贝贝豆数量
 		local LoginTaskBBD = "奖励："..self.totalCount.."贝贝豆"
 		self.bbdNum:setString(LoginTaskBBD)
-		--修改labelTask 累计登陆天数 奖励贝贝豆的数量（x）等于累积的天数  x = 1,3,5,10... 后面依次为5的倍数
-		-- local x = 0  
-		-- local i = 5    --后面的循环用 做5的累加
-		-- --第一天登录时
-		-- if self.loginday == 1 then 
-		-- 	x = 1
-		-- 	self.flag = 1
-		-- --三天以内
-		-- elseif self.loginday <=3 then
-		-- 	x = 3
-		-- 	if self.loginday == 3 then 
-		-- 		self.flag = 1
-		-- 	end
-		-- else 
-		-- 	--一百天以内
-		-- 	if i < 100 then
-		-- 		if self.loginday == i then 
-		-- 			self.flag = 1
-		-- 		end
-		-- 		if self.loginday <= i then 
-		-- 			x = 1
-		-- 		else
-		-- 			i = i + 5
-		-- 			x = i
-		-- 		end
-		-- 	else
-		-- 		--显示 签到达人
-		-- 	end
-		-- 	x = 5
-		-- end
 
 		local LoginDayLabel = "登录"..self.nowCount.."/"..self.totalCount.."天"
 		self.labelTask:setString(LoginDayLabel)
-
-
 	else
 		--随机任务 贝贝豆数量
 		local config = s_MissionManager:getRandomMissionConfig(self.taskID) ---数据多的话,这么写的效率很低
-
 		local RandomTaskBBD = "奖励："..config.bean.."贝贝豆"
 		self.bbdNum:setString(RandomTaskBBD)
 		--任务名称
@@ -198,8 +161,6 @@ function TaskViewRender:onButtonTouch(sender,eventType)
     end
     local action4 = cc.CallFunc:create(release)
     bean:runAction(cc.Sequence:create(action0,action1,action2,action4)) 
-
 end
  
-
 return TaskViewRender
