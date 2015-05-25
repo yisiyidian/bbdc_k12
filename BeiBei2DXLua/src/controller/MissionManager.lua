@@ -1,4 +1,4 @@
-M-- 玩家任务管理器 新的任务系统  在global.lua里初始化
+-- 玩家任务管理器 新的任务系统  在global.lua里初始化
 -- Author: whe
 -- Date: 2015-05-12 11:21:08
 --	
@@ -38,6 +38,79 @@ function MissionManager:ctor()
 	self.missionData = nil  --任务数据
 end
 
+--获取当前的任务列表 --View层调用
+function MissionManager:getMissionList()
+	--任务列表的str转成 table
+	--TODO 返回当前的任务列表 包括累计登陆任务和随机任务,只有2个任务
+	--任务ID_任务状态_任务条件_任务总条件_任务游标
+	local loginTaskData = self:getLoginTask()
+	--1:	任务序号
+    --2:	当前连续的天数 
+    --3:	当前任务总天数
+    local status = 0
+    if loginTaskData[2] < loginTaskData[3] then
+    	status = 0
+    else
+    	status = 1
+    end
+
+	local loginTask = {}
+	loginTask[1] = MissionConfig.MISSION_LOGIN
+	loginTask[2] = status 
+	loginTask[3] = loginTaskData[2] 
+	loginTask[4] = loginTaskData[3]
+	loginTask[5] = loginTaskData[1]
+	--获取指定任务的状态
+	local randomTask = self:getCurRandomTaskData()
+	return {loginTask,randomTask}
+end
+
+-- 更新任务状态------------------------------------------------------------------外部调用-----------更新任务状态---
+-- missionId 		任务ID
+-- missionData 	任务数据 条件,修改条件
+-- callBack 		修改完成回调 cb(result, error)
+function MissionManager:updateMission(missionId,missionsData,callBack)
+	missionId = missionId or 1
+	local tb = self:strToTable(self.missionData.taskList)
+	local re = false
+	for k,v in pairs(tb) do
+		if v[1] == missionId then
+			v[3] = tostring(tonumber(v[3]) + missionId) --默认条件+1
+			if v[3] == v[4] then --如果当前任务条件和 任务总条件匹配,则标记为已完成
+				v[2] = 1 --标记为已完成 未领取
+				re = true
+			end
+		end
+	end
+	self.missionData.taskList = self:tableToStr(tb)
+	self:saveTaskToLocal()
+	s_O2OController.syncMission(callBack)  --同步数据 到服务器
+	return re
+end
+
+-- 领取任务奖励-----------------------------------------------------------------外部调用-----------完成任务---
+-- TODO  	奖励贝贝豆 
+-- taskId 	任务ID
+-- callBack	领取完成回调  cb(result, error)
+function MissionManager:completeMission(taskId,callBack)
+	local tb = self:strToTable(self.missionData.taskList)
+	local re = false
+	for k,v in pairs(tb) do
+		if v[1] == taskId then
+			if v[2] == 1 then
+				v[2] 	= 2  	--修改状态为已领取
+				re 		= true
+				break
+			end 
+		end
+	end
+	self.missionData.taskList = self:tableToStr(tb)
+	self:updateRandomMissionId() --重新生成激活任务的ID
+	self:saveTaskToLocal()
+	s_O2OController.syncMission(callBack) --同步数据 到服务器
+	return re
+end
+------------------------------------------------------------------------------------------------------------------------------
 --生成今日的任务数据
 function MissionManager:generalTasks()
 	local loginDay = 0 			--累计登陆天数
@@ -191,6 +264,7 @@ function MissionManager:generalTasks()
 		self.missionData.taskList = mission_str
 	end
 	
+	self:updateRandomMissionId()   -- 重新生成激活任务的ID
 	self.missionData.lastLoginDate = os.time()  	--取当前的时间
 	self.missionData.totalLoginDay = loginDay
 	self.missionData.taskGenDate   = taskGenDate 	--任务列表生成时间
@@ -213,15 +287,6 @@ function MissionManager:getNornalMissionData()
 	return self.missionData
 end
 
---获取当前的任务列表
-function MissionManager:getTaskList()
-	--任务列表的str转成 table
-	--TODO 返回当前的任务列表 包括累计登陆任务和随机任务,只有2个任务
-
-
-	return self:strToTable(strself.missionData.taskList)
-end
-
 --保存数据到本地数据库
 function MissionManager:saveTaskToLocal()
 	--保存到本地数据库
@@ -230,53 +295,12 @@ function MissionManager:saveTaskToLocal()
 	s_LocalDatabaseManager.saveDataClassObject(self.missionData, s_CURRENT_USER.userId, s_CURRENT_USER.username)
 end
 
--- 更新任务状态------------------------------------------------------------------外部调用-----------更新任务状态---
--- taskId 	任务ID
--- taskData 	任务数据 条件,修改条件
--- callBack 修改完成回调 cb(result, error)
-function MissionManager:updateTask(taskId,taskData,callBack)
-	taskData = taskData or 1
-	local tb = self:strToTable(self.missionData.taskList)
-	local re = false
-	for k,v in pairs(tb) do
-		if v[1] == taskId then
-			v[3] = tostring(tonumber(v[3]) + taskData) --默认条件+1
-			if v[3] == v[4] then --如果当前任务条件和 任务总条件匹配,则标记为已完成
-				v[2] = 1 --标记为已完成 未领取
-				re = true
-			end
-		end
-	end
-	self.missionData.taskList = self:tableToStr(tb)
-	self:saveTaskToLocal()
-	s_O2OController.syncMission(callBack)  --同步数据 到服务器
-	return re
-end
-
--- 领取任务奖励-----------------------------------------------------------------外部调用-----------完成任务---
--- TODO  奖励贝贝豆 
--- taskId 	任务ID
--- callBack	领取完成回调  cb(result, error)
-function MissionManager:completeTask(taskId,callBack)
-	local tb = self:strToTable(self.missionData.taskList)
-	local re = false
-	for k,v in pairs(tb) do
-		if v[1] == taskId then
-			if v[2] == 1 then
-				v[2] 	= 2  	--修改状态为已领取
-				re 		= true
-				break
-			end 
-		end
-	end
-	self.missionData.taskList = self:tableToStr(tb)
-	self:saveTaskToLocal()
-	s_O2OController.syncMission(callBack) --同步数据 到服务器
-	return re
-end
-
---任务数据 str转换成table 结构
+--任务数据 str转换成table 结构,字段说明参见DataMission.lua
 --“|”分任务   “_”分字段
+--1 任务ID
+--2 任务状态
+--3 任务当前达到的条件数量
+--4 任务总条件数量
 function MissionManager:strToTable(str)
 	local re = {}
 	local missions = string.split(str,"|")
@@ -330,40 +354,40 @@ end
 --2:	当前连续的天数
 --3:	当前任务总天数
 function MissionManager:getLoginTask()
-	--TODO 根据累计登陆天数 算出当前的任务状态
 	return self:calcLoginMission()
 end
 
 --领取累计登陆的奖励
-function MissionManager:getLoginReward(taskId)
+--taskId 	任务ID
+--callBack 	完成回调 cb(result, error)
+function MissionManager:getLoginReward(taskId,callBack)
 	local totalloginDay = self.missionData.totalLoginDay    --累计登陆的天数
 	local rewardIndex = self.missionData.loginRewardIndex   --领取奖励的index 默认0
 	local loginConfig = MissionConfig.loginMission 			--登陆任务的配置
 
-
 	local remainDay = totalloginDay
 	local re = false --领取成功与否
-	local reward = 0
-	for k,v in pairs(loginConfig) do
+	local reward = 0 --奖励的贝贝豆数量等于累计登陆的天数
+	for k,v in pairs(loginConfig) do  -- v 就是完成当前任务所需的天数
 		if taskId == k then
 			if remainDay >= v then
 				missionData.loginRewardIndex = k --保存当前领取的任务的id
 				re = true
-				reward = 2 --TODO 给出正确的数值
+				reward = v --奖励的贝贝豆
 				break
 			end
 		else
 			remainDay = remainDay - v
 		end
 	end
-
-	--TODO 保存数据
+	--保存数据 到本地 到服务器
+	self:saveTaskToLocal()
+	s_O2OController.syncMission(callBack) --同步数据 到服务器
 	return re,reward
 end
-
---计算当前的累计登陆的任务
---	如果有未领取的奖励 返回最早的没有领取奖励的任务
---	如果没有未领取的奖励 则返回当前的任务
+-- 	计算当前的累计登陆的任务
+--	如果有未领取的奖励 	返回最早的没有领取奖励的任务
+--	如果没有未领取的奖励 	则返回当前的任务
 function MissionManager:calcLoginMission()
 	local totalloginDay = self.missionData.totalLoginDay    --累计登陆的天数
 	local rewardIndex = self.missionData.loginRewardIndex   --领取奖励的index 默认0
@@ -384,18 +408,50 @@ function MissionManager:calcLoginMission()
 			else
 				remainDay = remainDay - v				
 			end
-			break --退出
+			break --找到当前对应的任务 退出
 		else
-			remainDay = remainDay - v --
+			remainDay = remainDay - v
 		end
 	end
-	--返回  任务索引,当前已经连续的天数,任务所需连续登陆天数
-	return {index,nowDay,totalDay}
+	--返回 任务索引,当前已经连续的天数,任务所需连续登陆天数
+	return {index , nowDay, totalDay}
 end
 
---获取随机任务状态
-function MissionManager:getNormalTaskData(taskId)
-	
+--更新随机任务的ID
+function MissionManager:updateRandomMissionId()
+	local curTaskId = self.missionData.curTaskId --完成某个随机任务、然后更新
+	local taskList  = self:strToTable(self.missionData.taskList)
+	local undoTask = {} --未完成的任务
+	local needRecalc = true --是否需要重新计算 当前任务ID
+	for k,v in pairs(taskList) do
+		if v[2] == 0 then
+			undoTask[#undoTask + 1] = v
+		end
+		--如果当前激活的任务,状态是未完成,或者是未领取
+		if curTaskId == v[1] and v[2] == 0 and v[2] == 1 then
+			needRecalc = false
+			break
+		end
+	end
+	if not needRecalc then return end
+	if #undoTask == 0 then
+		self.missionData.curTaskId = "" --任务都做完了
+		return
+	end
+	--重新指定激活任务的ID
+	local randomTaskId = undoTask[math.random(#undoTask)][1]
+	self.missionData.curTaskId = randomTaskId
+end
+--获取当前激活的随机任务的数据
+function MissionManager:getCurRandomTaskData()
+	local curTaskId = self.missionData.curTaskId --完成某个随机任务、然后更新
+	local taskList  = self:strToTable(self.missionData.taskList)
+	for k,v in pairs(taskList) do
+		if v[1] == curTaskId then
+			return v --返回要查询的任务数据
+		end
+	end
+	return nil
 end
 
 return MissionManager

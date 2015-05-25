@@ -59,6 +59,8 @@ function HomeLayer.create()
     end
     -- 打点
     -- data begin
+    print("s_CURRENT_USER.bookKey:"..s_CURRENT_USER.bookKey)
+
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
     local bookWordCount     = s_DataManager.books[s_CURRENT_USER.bookKey].words
     -- data end
