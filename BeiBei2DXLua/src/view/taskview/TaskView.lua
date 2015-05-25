@@ -56,7 +56,7 @@ function TaskView:initData()
 	--获取任务数据
 	local MissionData = missionmanager:getMissionData()
 
-	local TaskList = missionmanager:getTaskList()                      --获取当前任务列表
+	local TaskList = missionmanager:getMissionList()                   --获取当前任务列表
 
 	--累计登陆天数 = 累计登陆中的贝贝豆数量
 	local bbdnum = missionmanager.missionData.totalLoginDay            --贝贝豆数量
