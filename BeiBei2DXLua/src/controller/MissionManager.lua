@@ -1,4 +1,4 @@
--- 玩家任务管理器 新的任务系统  在global.lua里初始化
+M-- 玩家任务管理器 新的任务系统  在global.lua里初始化
 -- Author: whe
 -- Date: 2015-05-12 11:21:08
 --	
@@ -216,6 +216,9 @@ end
 --获取当前的任务列表
 function MissionManager:getTaskList()
 	--任务列表的str转成 table
+	--TODO 返回当前的任务列表 包括累计登陆任务和随机任务,只有2个任务
+
+
 	return self:strToTable(strself.missionData.taskList)
 end
 
@@ -230,7 +233,7 @@ end
 -- 更新任务状态------------------------------------------------------------------外部调用-----------更新任务状态---
 -- taskId 	任务ID
 -- taskData 	任务数据 条件,修改条件
--- callBack 修改完成回调
+-- callBack 修改完成回调 cb(result, error)
 function MissionManager:updateTask(taskId,taskData,callBack)
 	taskData = taskData or 1
 	local tb = self:strToTable(self.missionData.taskList)
@@ -253,7 +256,7 @@ end
 -- 领取任务奖励-----------------------------------------------------------------外部调用-----------完成任务---
 -- TODO  奖励贝贝豆 
 -- taskId 	任务ID
--- callBack	领取完成回调
+-- callBack	领取完成回调  cb(result, error)
 function MissionManager:completeTask(taskId,callBack)
 	local tb = self:strToTable(self.missionData.taskList)
 	local re = false
@@ -323,17 +326,39 @@ end
 --根据累计的登陆天数计算、如果前边的任务不领取完成奖励，一样可以继续往后边累计
 --需要记录一个当前展示的任务ID 从1-22
 --返回值 
---taskId	任务序号
---totaldays	任务总天数
---nowdays	当前总天数
-function MissionManager:getTotalLoginTask()
+--1:	任务序号
+--2:	当前连续的天数
+--3:	当前任务总天数
+function MissionManager:getLoginTask()
 	--TODO 根据累计登陆天数 算出当前的任务状态
-	return 1,2,1
+	return self:calcLoginMission()
 end
 
 --领取累计登陆的奖励
 function MissionManager:getLoginReward(taskId)
-	
+	local totalloginDay = self.missionData.totalLoginDay    --累计登陆的天数
+	local rewardIndex = self.missionData.loginRewardIndex   --领取奖励的index 默认0
+	local loginConfig = MissionConfig.loginMission 			--登陆任务的配置
+
+
+	local remainDay = totalloginDay
+	local re = false --领取成功与否
+	local reward = 0
+	for k,v in pairs(loginConfig) do
+		if taskId == k then
+			if remainDay >= v then
+				missionData.loginRewardIndex = k --保存当前领取的任务的id
+				re = true
+				reward = 2 --TODO 给出正确的数值
+				break
+			end
+		else
+			remainDay = remainDay - v
+		end
+	end
+
+	--TODO 保存数据
+	return re,reward
 end
 
 --计算当前的累计登陆的任务
@@ -344,12 +369,28 @@ function MissionManager:calcLoginMission()
 	local rewardIndex = self.missionData.loginRewardIndex   --领取奖励的index 默认0
 	local loginConfig = MissionConfig.loginMission 			--登陆任务的配置
 	--
+	local index 	= 0
+	local nowDay 	= 0
+	local totalDay 	= 0
+
+	local remainDay = totalloginDay
 	for k,v in pairs(loginConfig) do
-		if k == rewardIndex then
-			
+		if k == (rewardIndex + 1) then
+			--计算任务的状态 完成天数、总天数、什么的
+			index = k
+			totalDay  = v
+			if remainDay >= v then
+				remainDay = v
+			else
+				remainDay = remainDay - v				
+			end
+			break --退出
+		else
+			remainDay = remainDay - v --
 		end
 	end
-
+	--返回  任务索引,当前已经连续的天数,任务所需连续登陆天数
+	return {index,nowDay,totalDay}
 end
 
 --获取随机任务状态

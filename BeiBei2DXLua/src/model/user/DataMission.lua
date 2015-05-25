@@ -32,6 +32,11 @@ function DataMission:ctor()
     任务状态:0未完成  1完成  2 已领取
     系列任务的游标,如果是系列任务,则要保存状态到这个列表里
     ]]
+
+    self.taskCompleteList   = "" --[[
+    3-1|3-2
+    已经完成的特殊任务的ID  特殊任务只能做一次
+    ]]
 end
 
 return DataMission

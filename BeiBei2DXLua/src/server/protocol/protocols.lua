@@ -508,7 +508,6 @@ function saveMissionToServer(missionData,callback)
     missionData.userId = s_CURRENT_USER.userId;
     missionData.username = s_CURRENT_USER.username;
     local unsavedDataTable = dataTableToJSONString(missionData)
-    -- dump(unsavedDataTable,"unsavedDataTable")
     -- --数据推送到服务器上去
     local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataMission',['us']=unsavedDataTable}, cb)
     protocol:request()
