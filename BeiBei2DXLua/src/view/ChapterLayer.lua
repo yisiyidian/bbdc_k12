@@ -2,6 +2,7 @@ require("cocos.init")
 require('common.global')
 
 local MissionView = require("view.mission.MissionView") --任务面板
+local TaskView = require("view.taskview.TaskView")
 --选单元的界面 unit1 unit2....
 --
 
@@ -106,6 +107,10 @@ function ChapterLayer:ctor()
     self:addBackToHome()    --返回按钮      左上
     self:addBeansUI()       --贝贝豆图标    右上
     self:addMissionBtn()    --任务按钮      右下
+    --fws 
+    self:addTaskBOX()       --放置任务的宝箱
+
+    print("任务宝箱")
 end
 -- initialize the active range of repeatable chapter ui
 function ChapterLayer:initActiveChapterRange()
@@ -408,6 +413,7 @@ function ChapterLayer:addBackToHome()
     end, function()
     end)
 end
+
 --添加任务按钮 宝箱样式的
 function ChapterLayer:addMissionBtn()
     local click_home = function(sender, eventType)
@@ -427,9 +433,49 @@ function ChapterLayer:addMissionBtn()
     self:addChild(missionButton,200)
 end
 
+--fws
+--添加宝箱  包厢里面存放着任务
+function ChapterLayer:addTaskBOX()
+    local boxButton = ccui.Button:create("image/islandPopup/task_turntable.png")
+    boxButton:addTouchEventListener(handler(self,self.click_box))
+    boxButton:setAnchorPoint(0.5,0.5)
+    boxButton:ignoreAnchorPointForPosition(false)
+    boxButton:setPosition(s_RIGHT_X-180 ,180)
+    boxButton:setTouchEnabled(true)
+    self:addChild(boxButton,200)
+    self.boxButton = boxButton
+    print("添加宝箱图片")
+    
+    --根据是否有可以领取的任务 判断宝箱是否晃动
+    --if      then
+    --有可以完成的任务
+    --宝箱晃动
+        local action1 = cc.MoveBy:create(0.05,cc.p(5,0))
+        local action2 = action1:reverse()
+        local action3 = cc.RepeatForever:create(cc.Sequence:create(action1, action2))
+        self.boxButton:runAction(action3)
+    --else
+        --停止所有动作
+
+
+    --end
+end
+
+function ChapterLayer:click_box(sender,eventType)
+
+    if eventType ~= ccui.TouchEventType.ended then
+        return
+    end
+    --弹出任务面板
+    --local TaskView = require("view.taskview.TaskView")
+    local taskview = TaskView.new()
+    s_SCENE:popup(taskview)
+    print("点击宝箱")
+end
+
 function ChapterLayer:addBeansUI()
     self.beans = cc.Sprite:create('image/chapter/chapter0/background_been_white.png')
-    self.beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
+    self.beans:setPosition(s_RIGHT_X-100, s_DESIGN_HEIGHT-70)
     self:addChild(self.beans,150) 
     self.beanCount = s_CURRENT_USER:getBeans()
     self.beanCountLabel = cc.Label:createWithSystemFont(self.beanCount,'',24)
