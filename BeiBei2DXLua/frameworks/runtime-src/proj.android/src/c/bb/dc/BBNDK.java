@@ -547,6 +547,10 @@ public class BBNDK {
 		CXTencentSDKCall.getInstance().shareImageToWeiXin(path, title, desc);
 	}
 	
+	public static void shareURLToWeiXin(String url, String title, String desc) {
+		CXTencentSDKCall.getInstance().shareImageToWeiXin(url, title, desc);
+	}
+
 	public static void addImageToGallery(final String filePath) {
 
 		String s = CXTencentSDKCall.getInstance().addImageToGallery(filePath);
