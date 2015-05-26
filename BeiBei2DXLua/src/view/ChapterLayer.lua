@@ -424,19 +424,23 @@ function ChapterLayer:addTaskBOX()
     self.boxButton = boxButton
     print("添加宝箱图片")
     
+    --获取任务列表 
+    local MissionManager = require("controller.MissionManager")     --任务管理器
+    self.missionlist = s_MissionManager:getMissionList()
+    dump(self.missionlist)
     --根据是否有可以领取的任务 判断宝箱是否晃动
-    --if      then
+    if self.missionlist[1][2] == 1 then
     --有可以完成的任务
     --宝箱晃动
         local action1 = cc.MoveBy:create(0.05,cc.p(5,0))
         local action2 = action1:reverse()
         local action3 = cc.RepeatForever:create(cc.Sequence:create(action1, action2))
         self.boxButton:runAction(action3)
-    --else
+    else
         --停止所有动作
+        self.boxButton:stopAllActions()
 
-
-    --end
+    end
 end
 
 function ChapterLayer:click_box(sender,eventType)
