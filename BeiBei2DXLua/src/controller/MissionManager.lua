@@ -24,9 +24,7 @@
 -- 		解锁数据1 解锁数据2 解锁数据4
 --		解锁VIP
 
---TODO  累计登陆任务
---		领取奖励
---		换机器同步
+--TODO  换机器同步
 
 local MissionManager = class("MissionManager")
 
@@ -41,7 +39,7 @@ end
 --获取当前的任务列表 --View层调用
 function MissionManager:getMissionList()
 	--任务列表的str转成 table
-	--TODO 返回当前的任务列表 包括累计登陆任务和随机任务,只有2个任务
+	--返回当前的任务列表 包括累计登陆任务和随机任务,只有2个任务
 	--任务ID_任务状态_任务条件_任务总条件_任务游标
 	local loginTaskData = self:getLoginTask()
 	--1:	任务序号
@@ -89,7 +87,6 @@ function MissionManager:updateMission(missionId,missionsData,callBack)
 end
 
 -- 领取任务奖励-----------------------------------------------------------------外部调用-----------完成任务---
--- TODO  	奖励贝贝豆 
 -- taskId 	任务ID
 -- callBack	领取完成回调  cb(result, error)
 function MissionManager:completeMission(taskId,callBack)
