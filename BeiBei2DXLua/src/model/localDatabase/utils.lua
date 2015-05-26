@@ -208,7 +208,7 @@ function M.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
         table.insert(re, row)
     end
 
-    dump(re)
+    -- dump(re)
 
 end
 
