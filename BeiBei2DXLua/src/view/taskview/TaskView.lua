@@ -68,11 +68,11 @@ function TaskView:resetView()
 	local innerHeight = 0
 	-- local splitheight = 265
 	local renderheight = 160
-
+	self.listView:removeAllChildren()
 	--遍历listData初始化
 	for k,v in pairs(self.missionList) do
 		render = TaskViewRender.new(v[1])
-	    render:setData(v,handler(self,self.callback))
+	    render:setData(v,handler(self,self.getRewardCallBack))
 		renders[#renders + 1] = render 
 		self.listView:addChild(render)
 		innerHeight = innerHeight + renderheight
@@ -96,6 +96,8 @@ function TaskView:CloseClick(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
+
+
 	local action1 = cc.FadeOut:create(0.5)
 	local action2 = cc.ScaleTo:create(0.5,0)
 	local action3 = cc.MoveTo:create(0.5,cc.p(s_RIGHT_X - 600, - 400))
@@ -106,22 +108,31 @@ function TaskView:CloseClick(sender,eventType)
 	self:runAction(cc.Sequence:create(action5,action4))
 end
 
-function TaskView:callback()
+function TaskView:getRewardCallBack(taskId,index)
 	--获取任务列表   随机生成了一个新的任务
 	-- print("wwwwwwwwwwww")
-	self.missionlist = s_MissionManager:getMissionList()
+	-- self.missionlist = s_MissionManager:getMissionList()
 	-- dump(self.missionlist)
 
 	--修改UI
-	self:resetView()
+	-- self:resetView()
 	-- print("ssssssssssss")
 
-	local bean = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
-	bean:setPosition(0,0)
-	self:addChild(bean)
-	self.bean = bean
-	print('position..',self:getPositionX(),self:getPositionY())
+	local re,bean = s_MissionManager:completeMission(taskId,index)
+	if not re then
+		print("完成任务失败")
+		return
+	end
 
+	print("re:"..tostring(re))
+	print("bean:"..bean)
+	self:resetView()
+	-- local beanImg = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
+	-- beanImg:setPosition(0,0)
+	-- self:addChild(beanImg)
+	-- self.beanImg = beanImg
+	-- print('position..',self:getPositionX(),self:getPositionY())
+	--[[
 	local action0 = cc.DelayTime:create(1)
 	--要减去起始点的坐标  s_RIGHT_X为界面最右边的坐标（ipad会比iphone长一点 所以s_DESIGN_WIDTH不是左右边坐标）
 	--减去精灵坐标 是要算出算出精灵再大的界面上的相对坐标
@@ -132,7 +143,7 @@ function TaskView:callback()
     end
     local action4 = cc.CallFunc:create(release)
     bean:runAction(cc.Sequence:create(action0,action1,action2,action4)) 
-
+	]]
     --右上角 增加贝贝豆
 	
 end

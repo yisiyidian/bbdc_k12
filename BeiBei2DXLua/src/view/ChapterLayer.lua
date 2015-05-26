@@ -425,7 +425,7 @@ function ChapterLayer:addTaskBOX()
     print("添加宝箱图片")
     
     --获取任务列表 
-    local MissionManager = require("controller.MissionManager")     --任务管理器
+    -- local MissionManager = require("controller.MissionManager")     --任务管理器
     self.missionlist = s_MissionManager:getMissionList()
     dump(self.missionlist)
     --根据是否有可以领取的任务 判断宝箱是否晃动

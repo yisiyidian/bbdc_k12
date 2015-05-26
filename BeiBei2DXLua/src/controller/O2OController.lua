@@ -321,7 +321,8 @@ function O2OController.getUserDatasOnline()
                 print("当前bookKey为空,进入EducationLayer")
                 s_CorePlayManager.enterEducationLayer() 
                 s_CURRENT_USER.dataDailyUsing:reset()
-                --TODO 任务
+                --任务
+                O2OController.syncMission()
             else
                 LOGTIME('getBossWord')               
                 O2OController.getBossWord(function ()

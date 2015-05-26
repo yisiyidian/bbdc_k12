@@ -46,7 +46,7 @@ function TaskViewRender:init(type)
 	bbdNum:setTextColor(cc.c3b(0, 0, 0))
 	self:addChild(bbdNum)
 	--领取按钮 
-	local button_task = ccui.Button:create("image/islandPopup/task_button1.png","image/islandPopup/task_button2.png","")
+	local button_task = ccui.Button:create("image/islandPopup/task_button1.png","","image/islandPopup/task_button2.png")
 	button_task:setPosition(s_DESIGN_WIDTH/2 + 60,90)
 	button_task:setTouchEnabled(true)
 	button_task:addTouchEventListener(handler(self,self.onButtonTouch))
@@ -75,12 +75,15 @@ function TaskViewRender:init(type)
 	 end
 end
 
-function TaskViewRender:setData(data)
+function TaskViewRender:setData(data,getRewardCallBack)
+	dump(data)
 	self.taskID 	= data[1] --任务ID
 	self.status 	= data[2] --任务状态
 	self.nowCount 	= data[3] --任务条件
 	self.totalCount = data[4] --任务总条件
 	self.index 		= data[5] --系列任务的游标
+
+	self.getRewardCallBack = getRewardCallBack
 	--更新界面
 	self:updataView()
 end
@@ -108,9 +111,11 @@ function TaskViewRender:updataView()
 	--任务完成 可以领取 按钮为可点击  蓝色
 	if self.status == 1 then
 		self.button_task:setTouchEnabled(true)
+		self.button_task:setBright(true)
 	else
 		--按钮和精灵相反
 		self.button_task:setTouchEnabled(false)
+		self.button_task:setBright(false)
 	end
 end
 
@@ -119,12 +124,19 @@ function TaskViewRender:onButtonTouch(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
+	
+	-- print("fuck")
 	--按钮变灰 不可点击
-	self.button_task:setTouchEnabled(false)  --不可点击
+	-- self.button_task:setTouchEnabled(false)  --不可点击
 	-- self.button_task:setVisible(false)
 	-- self.spriteBtn:setVisible(true)
 	--改变贝贝豆数量(右上角) 做一个动画  TODO: 贝贝豆的位置需要调整
 	--创建豆的精灵
+	if self.getRewardCallBack ~= nil then
+		self.getRewardCallBack(self.taskID,self.index)
+	end
+
+	--[[
 	local bean = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
 	bean:setPosition(0,0)
 	self:addChild(bean)
@@ -142,6 +154,7 @@ function TaskViewRender:onButtonTouch(sender,eventType)
     end
     local action4 = cc.CallFunc:create(release)
     bean:runAction(cc.Sequence:create(action0,action1,action2,action4)) 
+    ]]
 end
  
 return TaskViewRender

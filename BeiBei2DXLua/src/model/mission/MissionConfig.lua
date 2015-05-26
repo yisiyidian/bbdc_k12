@@ -10,7 +10,7 @@ local MissionConfig = {}
 --condition 任务条件，只有1个数据的,代表任务条件的次数
 --					 数据是table的,代表每次任务条件的个数  需要保存一个当前完成任务链的游标
 --bean      任务奖励 贝贝豆个数
---TODO 任务描述 desc字段,和奖励贝贝豆数量的字段
+--任务描述 desc字段,和奖励贝贝豆数量的字段
 --任务描述  可以直接传进来 
 MissionConfig.randomMission = {
 	--普通任务

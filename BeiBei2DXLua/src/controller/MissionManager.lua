@@ -89,30 +89,36 @@ end
 -- 领取任务奖励-----------------------------------------------------------------外部调用-----------完成任务---
 -- taskId 	任务ID
 -- callBack	领取完成回调  cb(result, error)
-function MissionManager:completeMission(taskId,callBack)
-	local tb = self:strToTable(self.missionData.taskList)
+function MissionManager:completeMission(taskId,index,callBack)
+	--区分是累计登陆任务 还是随机任务
 	local re = false
 	local bean = 0
-	for k,v in pairs(tb) do
-		if v[1] == taskId then
-			if v[2] == "1" then
-				v[2] 	= "2"  	--修改状态为已领取
-				re 		= true
-				break
-			end 
+	if taskId == MissionConfig.MISSION_LOGIN then
+		return self:getLoginReward(index,callBack)
+	else
+		local tb = self:strToTable(self.missionData.taskList)
+		for k,v in pairs(tb) do
+			if v[1] == taskId then
+				if v[2] == "1" then
+					v[2] 	= "2"  	--修改状态为已领取
+					re 		= true
+					break
+				end 
+			end
 		end
+		--领取成功
+		if re then
+			self.missionData.taskList = self:tableToStr(tb)
+			self:updateRandomMissionId() --重新生成激活任务的ID
+			self:saveTaskToLocal()
+			s_O2OController.syncMission(callBack) --同步数据 到服务器
+			local config = s_MissionManager:getRandomMissionConfig(self.taskID) ---数据多的话,这么写的效率很低
+			bean = config.bean
+			s_CURRENT_USER:addBeans(bean) --获取贝贝豆
+        	saveUserToServer({[DataUser.BEANSKEY] = s_CURRENT_USER[DataUser.BEANSKEY]}) --同步到
+		end
+		return re,bean
 	end
-	if re then
-		self.missionData.taskList = self:tableToStr(tb)
-		self:updateRandomMissionId() --重新生成激活任务的ID
-		self:saveTaskToLocal()
-		s_O2OController.syncMission(callBack) --同步数据 到服务器
-		local config = s_MissionManager:getRandomMissionConfig(self.taskID) ---数据多的话,这么写的效率很低
-		bean = config.bean
-		s_CURRENT_USER:addBeans(bean) --获取贝贝豆
-        saveUserToServer({[DataUser.BEANSKEY] = s_CURRENT_USER[DataUser.BEANSKEY]}) --同步到
-	end
-	return re,bean
 end
 
 --------------------------------------------------------------------------------------------------------------------
@@ -233,14 +239,14 @@ function MissionManager:generalTasks()
 		--TEST 
 		--result[#result + 1] = {["mission_id"] = "2-2",["type"] = 2,["condition"]= {1,3,5,10,20},["bean"]=0}
 		--result 生成的任务列表
-		local mission_str 			= "" --- 1-1_0_1_1|2-2_0_1_1|3-1_1_2_1 任务ID_任务状态_任务条件_任务游标
+		local mission_str 			= "" --- 1-1_0_1_1|2-2_0_1_1|3-1_1_2_1 任务ID_任务状态_任务条件_任务总条件_任务游标
 		local temp_mission_str  	= ""
 		local condition 			= "" 
 		for k,v in pairs(result) do
 			temp_mission_str = v.mission_id
 			condition = v.condition
 			if #condition == 1 then
-				temp_mission_str = temp_mission_str.."_0_"..condition[1].."_1"
+				temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1"
 			else
 				local hit = false --命中
 				for kk,vv in pairs(temp_series_missions) do --系列任务的列表
@@ -380,14 +386,17 @@ function MissionManager:getLoginReward(taskId,callBack)
 	local totalloginDay = self.missionData.totalLoginDay    --累计登陆的天数
 	local rewardIndex = self.missionData.loginRewardIndex   --领取奖励的index 默认0
 	local loginConfig = MissionConfig.loginMission 			--登陆任务的配置
+	print("taskid:"..taskId)
+	print("totalloginDay:"..totalloginDay)
 
 	local remainDay = totalloginDay
 	local re = false --领取成功与否
 	local reward = 0 --奖励的贝贝豆数量等于累计登陆的天数
 	for k,v in pairs(loginConfig) do  -- v 就是完成当前任务所需的天数
 		if taskId == k then
+			print("AAAAAAAAAAA")
 			if remainDay >= v then
-				missionData.loginRewardIndex = k --保存当前领取的任务的id
+				self.missionData.loginRewardIndex = k --保存当前领取的任务的id
 				re = true
 				reward = v --奖励的贝贝豆
 				break
@@ -397,8 +406,13 @@ function MissionManager:getLoginReward(taskId,callBack)
 		end
 	end
 	--保存数据 到本地 到服务器
-	self:saveTaskToLocal()
-	s_O2OController.syncMission(callBack) --同步数据 到服务器
+	if re then
+		self:saveTaskToLocal()
+		s_O2OController.syncMission(callBack) --同步数据 到服务器
+		s_CURRENT_USER:addBeans(reward) --获取贝贝豆
+	    saveUserToServer({[DataUser.BEANSKEY] = s_CURRENT_USER[DataUser.BEANSKEY]}) --同步到
+	end
+	
 	return re,reward
 end
 -- 	计算当前的累计登陆的任务
@@ -467,6 +481,7 @@ function MissionManager:getCurRandomTaskData()
 	-- print("self.missionData.curTaskId:"..self.missionData.curTaskId)
 	local curTaskId = self.missionData.curTaskId --完成某个随机任务、然后更新
 	local taskList  = self:strToTable(self.missionData.taskList)
+	dump(taskList,"taskList")
 	for k,v in pairs(taskList) do
 		if v[1] == curTaskId then
 			return v --返回要查询的任务数据
