@@ -160,7 +160,7 @@ function MissionManager:completeMission(taskId,index,callBack)
 					end
 				end
 				self.missionData.taskSeriesList = self:tableToStr(seriesMissions)
-			elseif #config.condition == 1 then
+			elseif #config.condition == 1 and (string.sub(taskId,1,1) == "2" or string.sub(taskId,1,1) == "3") then
 				onceTaskComplete = true
 			end
 			--特殊任务 要保存进度 确保不会重复出现
