@@ -33,7 +33,7 @@ function TaskViewRender:init(type)
 	self.imgsmall = imgsmall
 	--中间的label 天数(登录)
 	local labelTask = cc.Label:createWithSystemFont("0","",20)
-	labelTask:setPosition(s_DESIGN_WIDTH/2 - 102,80)
+	labelTask:setPosition(s_DESIGN_WIDTH/2 - 102,100)
 	labelTask:setAnchorPoint(0.5,0.5)
 	self.labelTask = labelTask
 	labelTask:setTextColor(cc.c3b(0, 0, 0))
@@ -47,7 +47,7 @@ function TaskViewRender:init(type)
 	self:addChild(bbdNum)
 	--领取按钮 
 	local button_task = ccui.Button:create("image/islandPopup/task_button1.png","","image/islandPopup/task_button2.png")
-	button_task:setPosition(s_DESIGN_WIDTH/2 + 60,90)
+	button_task:setPosition(s_DESIGN_WIDTH/2 + 60,80)
 	button_task:setTouchEnabled(true)
 	button_task:addTouchEventListener(handler(self,self.onButtonTouch))
 	button_task:setTitleText("领取")
@@ -100,7 +100,7 @@ function TaskViewRender:updataView()
 		self.labelTask:setString(LoginDayLabel)
 
 		--修改label
-		self.labelday:setString(self.totalCount)
+		self.labelday:setString(self.nowCount)
 	else
 		--随机任务 贝贝豆数量
 		local config = s_MissionManager:getRandomMissionConfig(self.taskID) ---Render多的话,这么写的效率很低
@@ -116,7 +116,6 @@ function TaskViewRender:updataView()
 		self.button_task:setTouchEnabled(true)
 		self.button_task:setBright(true)
 	else
-		--按钮和精灵相反
 		self.button_task:setTouchEnabled(false)
 		self.button_task:setBright(false)
 	end

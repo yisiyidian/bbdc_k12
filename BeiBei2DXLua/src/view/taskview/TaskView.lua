@@ -8,8 +8,9 @@ local TaskView = class("TaskView", function()
 	return layer
 end)
 
-function TaskView:ctor()
+function TaskView:ctor(callbox)
 	self.listView = nil
+	self.callbox = callbox
 	self:initUI()
 end
 
@@ -105,11 +106,17 @@ function TaskView:CloseClick(sender,eventType)
 									    s_SCENE:removeAllPopups()
 										end,{})
 	local action5 = cc.Spawn:create(action1,action2,action3)
-	--关闭宝箱
+	-- --关闭宝箱
 	local action6 = cc.CallFunc:create(function ()
-		
+
+	if self.callbox ~= nil then
+		self.callbox()
+	end
+
 	end)
+	print("关闭宝箱动作")
 	self:runAction(cc.Sequence:create(action5,action4,action6))
+
 end
 
 function TaskView:getRewardCallBack(taskId,index)
@@ -123,16 +130,16 @@ function TaskView:getRewardCallBack(taskId,index)
 	-- print("ssssssssssss")
 
 	local re,bean = s_MissionManager:completeMission(taskId,index)
-	if not re then
-		print("完成任务失败")
-		return
-	end
+	-- if not re then
+	-- 	print("完成任务失败")
+	-- 	return
+	-- end
 
 	print("re:"..tostring(re))
 	print("bean:"..bean)
 
 	local beanImg = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
-	beanImg:setPosition(40,400)
+	beanImg:setPosition(260,380)
 	self:addChild(beanImg)
 	self.beanImg = beanImg
 	print('position..',self:getPositionX(),self:getPositionY())
