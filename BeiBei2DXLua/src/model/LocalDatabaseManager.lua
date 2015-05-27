@@ -118,6 +118,10 @@ function Manager.getWordInfoFromWordName(word)
             ret.sentenceCn         =   raw[6 + indexOffset]
             ret.sentenceEn2        =   raw[7 + indexOffset]
             ret.sentenceCn2        =   raw[8 + indexOffset]
+        else
+            print("-------------------")
+            print("not get word!")
+            print("-------------------")
         end
     end
 
@@ -219,9 +223,9 @@ function Manager.getAllBossInfo()
     return localdatabase_bossWord.getAllBossInfo()
 end
 
-function Manager.addRightWord(wordindex)
-    localdatabase_bossWord.addRightWord(wordindex)
-end
+-- function Manager.addRightWord(wordindex)
+--     localdatabase_bossWord.addRightWord(wordindex)
+-- end
 
 function Manager.addWrongWord(wordindex)
     return localdatabase_bossWord.addWrongWord(wordindex)
@@ -280,6 +284,10 @@ end
 
 function Manager.printUnitWord()
     localdatabase_unitWord.printUnitWord()
+end
+
+function Manager.addRightWord(wordList,unitID)
+    localdatabase_unitWord.addRightWord(wordList,unitID)
 end
 ---- Statistics -----------------------------------------------------------------------------------------
 

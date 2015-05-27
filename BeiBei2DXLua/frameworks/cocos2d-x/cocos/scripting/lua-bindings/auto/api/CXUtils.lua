@@ -67,6 +67,14 @@
         
 --------------------------------
 -- 
+-- @function [parent=#CXUtils] shareURLToWeiXin 
+-- @param self
+-- @param #string url
+-- @param #string title
+-- @param #string desc
+        
+--------------------------------
+-- 
 -- @function [parent=#CXUtils] showMail 
 -- @param self
 -- @param #char mailTitle

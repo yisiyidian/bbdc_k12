@@ -191,7 +191,7 @@ function MissionProgressLayer.create(share,homelayer)
                 s_CURRENT_USER:setK12SmallStep(s_K12_enterLevelLayer)
             end
             -- 打点
-
+            s_CURRENT_USER:setSummaryStep(s_summary_enterLevelLayer) 
             playSound(s_sound_buttonEffect)
             if layer:getChildByTag(8888) ~=nil then
                 local schedule = layer:getChildByTag(8888):getScheduler()

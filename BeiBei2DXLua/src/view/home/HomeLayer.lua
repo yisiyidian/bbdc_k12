@@ -23,10 +23,15 @@ local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 local list = {}
 
 function HomeLayer.create()
+    --unlock friend
+    -- s_CURRENT_USER:addBeans(600)  
+    print("----------------------------------")
+    print_lua_table(s_BookUnitName[s_CURRENT_USER.bookKey])
 
     if s_CURRENT_USER:getLockFunctionState(1) == 0 then
         s_CURRENT_USER:unlockFunctionState(1)
     end
+
     -- task
     local todayTotalBossNum     = s_LocalDatabaseManager:getTodayTotalBossNum()
     local todayRemainBossNum    = s_LocalDatabaseManager:getTodayRemainBossNum()
@@ -50,13 +55,17 @@ function HomeLayer.create()
         -- print('tutorial_step:'..s_CURRENT_USER.tutorial_step)
     end
 
-    -- print("totalStudyWordNum : "..totalStudyWordNum)
-    -- print("totalGraspWordNum : "..totalGraspWordNum)
-    -- print("totalStudyDayNum : "..totalStudyDayNum)
+    print("totalStudyWordNum : "..totalStudyWordNum)
+    print("totalGraspWordNum : "..totalGraspWordNum)
+    print("totalStudyDayNum : "..totalStudyDayNum)
+
+    print('s_CURRENT_USER.k12SmallStep',s_CURRENT_USER.k12SmallStep)
 
     if s_CURRENT_USER.k12SmallStep < s_K12_enterHomeLayer then
         s_CURRENT_USER:setK12SmallStep(s_K12_enterHomeLayer)
     end
+
+    s_CURRENT_USER:setSummaryStep(s_summary_enterHomeLayer) 
     -- 打点
     -- data begin
     local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
@@ -146,22 +155,23 @@ function HomeLayer.create()
                 mission_progress.stopListener = true
                 viewIndex = 2
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2+offset,s_DESIGN_HEIGHT/2))
-                backColor:runAction(action1)
+                --backColor:runAction(action1)
 
                 local action2 = cc.DelayTime:create(0.5)
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-                setting_back:runAction(cc.Sequence:create(action2, action3))
+                --setting_back:runAction(cc.Sequence:create(action2, action3))
+                backColor:runAction(cc.Sequence:create(action1, action3))
                 --offline tip
             else
                 s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                 mission_progress.stopListener = false
                 viewIndex = 1
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-                backColor:runAction(action1)
+                --backColor:runAction(action1)
 
                 local action2 = cc.DelayTime:create(0.5)
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-                setting_back:runAction(cc.Sequence:create(action2, action3))
+                backColor:runAction(cc.Sequence:create(action1, action3))
             end
             --s_SCENE:checkInAnimation()
         end
@@ -526,11 +536,11 @@ function HomeLayer.create()
                 viewIndex = 1
 
                 local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-                backColor:runAction(action1)
+                --backColor:runAction(action1)
 
                 local action2 = cc.DelayTime:create(0.5)
                 local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-                setting_back:runAction(cc.Sequence:create(action2, action3))
+                backColor:runAction(cc.Sequence:create(action1, action3))
             end
         end
     end
@@ -545,11 +555,11 @@ function HomeLayer.create()
             viewIndex = 1
 
             local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-            backColor:runAction(action1)
+            --backColor:runAction(action1)
 
             local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            setting_back:runAction(cc.Sequence:create(action2, action3))
+            backColor:runAction(cc.Sequence:create(action1, action3))
         end
         if not isDataShow then
             if math.abs(location.y - start_y) > 10 or math.abs(location.x - start_x) > 10 then
@@ -641,11 +651,11 @@ function HomeLayer.create()
             viewIndex = 1
 
             local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-            backColor:runAction(action1)
+            --backColor:runAction(action1)
 
             local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            setting_back:runAction(cc.Sequence:create(action2, action3))
+            backColor:runAction(cc.Sequence:create(action1, action3))
 
         elseif isDataShow == true and #isPopup == 0 then
             isDataShow = false

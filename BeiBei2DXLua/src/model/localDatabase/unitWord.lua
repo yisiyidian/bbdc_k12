@@ -83,7 +83,7 @@ function M.getTodayReviewBoss()
 
     local unitList  = {}
     for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." ORDER BY unitID ;") do
-        if row.unitState >= 3 and row.unitState <= 6 then
+        if row.unitState >= 1 and row.unitState <= 4 then
             local unit  = {}
             unit.unitID = row.unitID
             unit.unitState  = row.unitState
@@ -120,13 +120,13 @@ function M.getTodayReviewBoss()
         local unit = unitList[i]
         
         local gap
-        if     unit.unitState == 3 then
+        if     unit.unitState == 1 then
             gap = 1
-        elseif unit.unitState == 4 then
+        elseif unit.unitState == 2 then
             gap = 2
-        elseif unit.unitState == 5 then
+        elseif unit.unitState == 3 then
             gap = 3
-        elseif unit.unitState == 6 then
+        elseif unit.unitState == 4 then
             gap = 8
         end
 
@@ -190,7 +190,7 @@ function M.getUnitInfo(unitID)
     for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." and unitID = "..unitID.." ;") do
         unit.unitID         = row.unitID
         unit.unitState      = row.unitState
-        unit.wrongWordList  = row.wordList
+        unit.rightWordList  = row.wordList
         unit.currentWordIndex  = row.currentWordIndex
         unit.lastUpdate     = row.lastUpdate
     end
@@ -201,6 +201,7 @@ function M.getUnitInfo(unitID)
         unit.wrongWordList  = {}
         unit.rightWordList  = {}
         unit.coolingDay     = 0
+        --print('unit.unitID == nil')
     else
         -- local startIndex
         -- if unit.unitID == 1 then
@@ -211,18 +212,23 @@ function M.getUnitInfo(unitID)
         --     end
         -- end
 
-        -- local hash = {}
-        if  unit.wrongWordList == '' then
-            unit.wrongWordList = {}
+        local hash = {}
+        unit.wrongWordList  = s_BookUnitWord[bookKey][''..unitID]
+        print('rightWordList',unit.rightWordList)
+         print('wrongWordList',unit.wrongWordList)
+        unit.wrongWordList = split(unit.wrongWordList, "|")
+         
+        if  unit.rightWordList == '' then
+            unit.rightWordList = {}
         else
-            unit.wrongWordList = split(unit.wrongWordList, "|")
-            for i = 1, #unit.wrongWordList do
-                local wordname = unit.wrongWordList[i]
-                -- hash[wordname] = 1
-            end
+            unit.rightWordList = split(unit.rightWordList, "|")
+            -- for i = 1, #unit.rightWordList do
+            --     local wordname = unit.rightWordList[i]
+            --     hash[wordname] = 1
+            -- end
         end
 
-        unit.rightWordList = {}
+        -- unit.rightWordList = {}
         -- for i = startIndex, unit.lastWordIndex do
         --     local wordname = s_BookUnitWord[s_CURRENT_USER.bookKey][i]
         --     if hash[wordname] ~= 1 then
@@ -254,19 +260,19 @@ function M.getUnitInfo(unitID)
             return gap
         end
 
-        if unit.unitState < 3 or unit.unitState > 6 then
+        if unit.unitState < 1 or unit.unitState > 4 then
             -- other model
             unit.coolingDay = 0
         else
             -- review unit model
             local gap
-            if     unit.unitState == 3 then
+            if     unit.unitState == 1 then
                 gap = 1
-            elseif unit.unitState == 4 then
+            elseif unit.unitState == 2 then
                 gap = 2
-            elseif unit.unitState == 5 then
+            elseif unit.unitState == 3 then
                 gap = 3
-            elseif unit.unitState == 6 then
+            elseif unit.unitState == 4 then
                 gap = 8
             end
 
@@ -283,22 +289,26 @@ function M.getUnitInfo(unitID)
             end
         end
     end
-
-    if     unit.unitState == 0 then
-        unit.proficiency = 0
-    elseif unit.unitState >= 1 and unit.unitState <= 2 then
-        unit.proficiency = 1
-    elseif unit.unitState == 3 then
-        unit.proficiency = 2
-    elseif unit.unitState == 4 then
-        unit.proficiency = 3
-    elseif unit.unitState == 5 then
-        unit.proficiency = 4
-    elseif unit.unitState == 6 then
-        unit.proficiency = 5
+    if unit.unitState >= 0 and unit.unitState <= 5 then
+        unit.proficiency = unit.unitState
     else
         unit.proficiency = 0
     end
+    -- if     unit.unitState == 0 then
+    --     unit.proficiency = 0
+    -- elseif unit.unitState >= 1 and unit.unitState <= 2 then
+    --     unit.proficiency = 1
+    -- elseif unit.unitState == 1 then
+    --     unit.proficiency = 2
+    -- elseif unit.unitState == 2 then
+    --     unit.proficiency = 3
+    -- elseif unit.unitState == 4 then
+    --     unit.proficiency = 4
+    -- elseif unit.unitState == 5 then
+    --     unit.proficiency = 5
+    -- else
+    --     unit.proficiency = 0
+    -- end
 
     return unit
 end
@@ -346,18 +356,18 @@ function M.getUnitCoolingSeconds(unitID)
             return gap
         end
 
-        if unit.unitState < 3 or unit.unitState > 6 then
+        if unit.unitState < 1 or unit.unitState > 4 then
             return -1
         else
             -- review unit model
             local gap
-            if     unit.unitState == 3 then
+            if     unit.unitState == 1 then
                 gap = 1
-            elseif unit.unitState == 4 then
+            elseif unit.unitState == 2 then
                 gap = 2
-            elseif unit.unitState == 5 then
+            elseif unit.unitState == 3 then
                 gap = 3
-            elseif unit.unitState == 6 then
+            elseif unit.unitState == 4 then
                 gap = 8
             end
             gap = gap * 3600 * 24
@@ -400,13 +410,12 @@ function M.getAllUnitInfo()
     return unitList
 end
 
-
 function M.initUnitInfo(unitID)
     local userId    = s_CURRENT_USER.objectId
     local bookKey   = s_CURRENT_USER.bookKey
     local username  = s_CURRENT_USER.username
     local time      = os.time()
-    local wordlist = s_BookUnitWord[bookKey][''..unitID]
+    local wordlist = ''
     local currentWordIndex = 1
     local unitState = 0
     --print('wordlist:'..wordlist)
@@ -414,6 +423,7 @@ function M.initUnitInfo(unitID)
     query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, unitID, unitState, wordList, currentWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..unitID..", 0, '"..wordlist.."', "..currentWordIndex..", 0) ;"
     --print('sql:'..query)
     Manager.database:exec(query)
+    -- print("initUnitInfo",wordlist)
 
     -- local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
     -- print('row:')
@@ -439,7 +449,7 @@ function M.updateUnitState(unitID)
         Manager.database:exec(query)
         saveDataToServer(true, time, row.unitID, newUnitState, row.wordList, currentWordIndex, row.savedToServer)
 
-        if newUnitState == 3 then
+        if newUnitState == 1 then
         -- if true then
             -- query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, unitID, unitState, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..", 0) ;"
             -- Manager.database:exec(query)
@@ -449,11 +459,30 @@ function M.updateUnitState(unitID)
             if unitID - bookMaxID < 0 then
                 M.initUnitInfo(unitID+1)
             end
-        elseif newunitState == 7 then -- grasp word
-            -- s_LocalDatabaseManager.addGraspWordsNum(getMaxWrongNumEveryLevel())
+        elseif newunitState == 5 then -- grasp word
+            s_LocalDatabaseManager.addGraspWordsNum(#row.wordList)
         end
     end    
 
+    M.printUnitWord()
+end
+
+function M.addRightWord(wordlist,unitID)
+    local userId    = s_CURRENT_USER.objectId
+    local bookKey   = s_CURRENT_USER.bookKey
+    local username  = s_CURRENT_USER.username
+    local time      = os.time()
+
+    local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
+    
+    for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." and unitID = "..unitID.." ;") do
+        local rightWordList = row.wordList
+
+        local query = "UPDATE DataUnit SET lastUpdate = '"..time.."' , wordList = '"..wordlist.."' WHERE "..condition.." and unitID = "..unitID.." ;"
+        Manager.database:exec(query)
+        --print("addRightWord",row.wordList)
+        saveDataToServer(true, time, row.unitID, row.unitState, wordlist, row.currentWordIndex, row.savedToServer)
+    end       
     M.printUnitWord()
 end
 
