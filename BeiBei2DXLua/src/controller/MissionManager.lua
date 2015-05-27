@@ -65,15 +65,15 @@ end
 
 -- 更新任务状态------------------------------------------------------------------外部调用-----------更新任务状态---
 -- missionId 		任务ID
--- missionData 	任务数据 条件,修改条件
+-- missionData 		任务数据 条件,修改条件
 -- callBack 		修改完成回调 cb(result, error)
 function MissionManager:updateMission(missionId,missionsData,callBack)
-	missionId = missionId or 1
+	missionsData = missionsData or 1
 	local tb = self:strToTable(self.missionData.taskList)
 	local re = false
 	for k,v in pairs(tb) do
 		if v[1] == missionId then
-			v[3] = tostring(tonumber(v[3]) + missionId) --默认条件+1
+			v[3] = tostring(tonumber(v[3]) + missionsData) --默认条件+1
 			if v[3] == v[4] then --如果当前任务条件和 任务总条件匹配,则标记为已完成
 				v[2] = "1" --标记为已完成 未领取
 				re = true
@@ -112,7 +112,7 @@ function MissionManager:completeMission(taskId,index,callBack)
 			self:updateRandomMissionId() --重新生成激活任务的ID
 			self:saveTaskToLocal()
 			s_O2OController.syncMission(callBack) --同步数据 到服务器
-			local config = s_MissionManager:getRandomMissionConfig(self.taskID) ---数据多的话,这么写的效率很低
+			local config = self:getRandomMissionConfig(taskID) ---数据多的话,这么写的效率很低
 			bean = config.bean
 			s_CURRENT_USER:addBeans(bean) --获取贝贝豆
         	saveUserToServer({[DataUser.BEANSKEY] = s_CURRENT_USER[DataUser.BEANSKEY]}) --同步到

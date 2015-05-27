@@ -107,13 +107,9 @@ function TaskView:CloseClick(sender,eventType)
 	local action5 = cc.Spawn:create(action1,action2,action3)
 	--关闭宝箱
 	local action6 = cc.CallFunc:create(function ()
-	local ChapterLayer = require("view.ChapterLayer")
-	chapterlayer:create()
-	chapterlayer:closeBox()
+		
 	end)
 	self:runAction(cc.Sequence:create(action5,action4,action6))
-
-
 end
 
 function TaskView:getRewardCallBack(taskId,index)

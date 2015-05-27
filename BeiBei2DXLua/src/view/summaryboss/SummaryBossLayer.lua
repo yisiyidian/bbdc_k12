@@ -1,5 +1,10 @@
+--总结BOSS
+
+--？？这俩有用吗
 require("cocos.init")
 require("common.global")
+
+local MissionConfig = require("model.mission.MissionConfig") --任务配置
 
 local SummaryBossAlter = require("view.summaryboss.SummaryBossAlter")
 local Pause = require("view.Pause")
@@ -1609,8 +1614,11 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
     
 --    -- win sound
 --    playSound(s_sound_win)
-
+    
     AnalyticsSummaryBossResult('win')
+
+    --胜利 触发总结BOSS任务
+    s_MissionManager:updateMission(MissionConfig.MISSION_ZJBOSS)
 end
 
 function SummaryBossLayer:lose(chapter,entrance,wordList)
