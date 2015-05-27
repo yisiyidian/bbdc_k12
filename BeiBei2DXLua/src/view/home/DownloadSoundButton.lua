@@ -1,5 +1,6 @@
 require("cocos.init")
 require("common.global")
+local MissionConfig          = require("model.mission.MissionConfig") --任务的配置数据
 
 local DownloadSoundButton = class("DownloadSoundButton", function ()
     return ccui.LoadingBar:create()
@@ -138,6 +139,7 @@ function DownloadSoundButton.create(parentNode)
     local updateSuccessState =function()
         if SoundsDownloadingInstance[bookKey] ~= nil then
             SoundsDownloadingInstance[bookKey]=nil
+            s_MissionManager:updateMission(MissionConfig.MISSION_AUDIO)
             local popupSuccess = require("popup.PopupSoundDownloadSuccess").create()
             local parent = parentNode:getParent()
             popupSuccess:setPosition(parent:getContentSize().width/2,parent:getContentSize().height+800)
@@ -221,6 +223,7 @@ function DownloadSoundButton.create(parentNode)
 
     elseif downloadState == "SUCCESS"  then
         updateSuccessState()
+
     elseif downloadState == "FAILED" then
         updateFailedState()
     end

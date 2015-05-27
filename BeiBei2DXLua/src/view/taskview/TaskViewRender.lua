@@ -72,7 +72,7 @@ function TaskViewRender:init(type)
 		--随机任务类型
 		self.imgbig:setTexture(imgrandom)
 		self.imgsmall:setTexture(imgturntable)
-	 end
+	end
 end
 
 function TaskViewRender:setData(data,getRewardCallBack)
@@ -108,6 +108,7 @@ function TaskViewRender:updataView()
 		self.bbdNum:setString(RandomTaskBBD)
 		--任务名称
 		self.labelTask:setString(config.desc)
+
 	end
 
 	--设置按钮的状态
@@ -127,17 +128,10 @@ function TaskViewRender:onButtonTouch(sender,eventType)
 		return
 	end
 	
-	-- print("fuck")
-	--按钮变灰 不可点击
-	-- self.button_task:setTouchEnabled(false)  --不可点击
-	-- self.button_task:setVisible(false)
-	-- self.spriteBtn:setVisible(true)
-
-
+	local pos = self:convertToWorldSpace(cc.p(sender:getPosition()))
     if self.getRewardCallBack ~= nil then
-		self.getRewardCallBack(self.taskID,self.index)
+		self.getRewardCallBack(self.taskID,self.index,pos)
 	end
-
 end
  
 return TaskViewRender

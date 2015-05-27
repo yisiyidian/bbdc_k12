@@ -8,9 +8,9 @@ local TaskView = class("TaskView", function()
 	return layer
 end)
 
-function TaskView:ctor(callbox)
+function TaskView:ctor(callBox)
 	self.listView = nil
-	self.callbox = callbox
+	self.callBox = callBox
 	self:initUI()
 end
 
@@ -109,8 +109,8 @@ function TaskView:CloseClick(sender,eventType)
 	-- --关闭宝箱
 	local action6 = cc.CallFunc:create(function ()
 
-	if self.callbox ~= nil then
-		self.callbox()
+	if self.callBox ~= nil then
+		self.callBox()
 	end
 
 	end)
@@ -119,27 +119,21 @@ function TaskView:CloseClick(sender,eventType)
 
 end
 
-function TaskView:getRewardCallBack(taskId,index)
+function TaskView:getRewardCallBack(taskId,index,position)
 	--获取任务列表   随机生成了一个新的任务
-	-- print("wwwwwwwwwwww")
-	-- self.missionlist = s_MissionManager:getMissionList()
-	-- dump(self.missionlist)
-
 	--修改UI
-	-- self:resetView()
-	-- print("ssssssssssss")
-
 	local re,bean = s_MissionManager:completeMission(taskId,index)
-	-- if not re then
-	-- 	print("完成任务失败")
-	-- 	return
-	-- end
+	if not re then
+		print("完成任务失败")
+		return
+	end
 
 	print("re:"..tostring(re))
 	print("bean:"..bean)
-
+	local pos = self:convertToNodeSpace(cc.p(position.x,position.y))
 	local beanImg = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
-	beanImg:setPosition(260,380)
+	--beanImg:setPosition(260,380)
+	beanImg:setPosition(pos.x-420,pos.y-52)
 	self:addChild(beanImg)
 	self.beanImg = beanImg
 	print('position..',self:getPositionX(),self:getPositionY())

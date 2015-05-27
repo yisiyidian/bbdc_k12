@@ -3,6 +3,7 @@ require("common.global")
 local ShopErrorAlter = require("view.shop.ShopErrorAlter")
 local HomeLayer   = require("view.home.HomeLayer")
 local Button                = require("view.button.longButtonInStudy")
+local MissionConfig          = require("model.mission.MissionConfig") --任务的配置数据
 
 local ShopAlter = class("ShopAlter", function()
     return cc.Layer:create()
@@ -74,6 +75,17 @@ function ShopAlter.create(itemId, location)
             end)
             local action2 = cc.Sequence:create(action0,action1)
             main:runAction(action2)
+            print("fwsfwfwfs"..itemId)
+            if itemId == 2 then 
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA1)
+            -- elseif itemId == 3 then
+            --     s_MissionManager:updateMission(MissionConfig.MISSION_DATA2)
+            -- elseif itemId == 5 then
+            --     s_MissionManager:updateMission(MissionConfig.MISSION_DATA3)
+            -- else
+            --     s_MissionManager:updateMission(MissionConfig.MISSION_VIP)
+            end
+
 
         elseif s_CURRENT_USER:getBeans() < s_DataManager.product[itemId].productValue and click_button == 0 then
             click_button = 1

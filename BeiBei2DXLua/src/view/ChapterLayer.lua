@@ -108,7 +108,6 @@ function ChapterLayer:ctor()
     self:addBeansUI()       --贝贝豆图标    右上
     self:addTaskBOX()       --放置任务的宝箱
 
-    print("任务宝箱")
 end
 -- initialize the active range of repeatable chapter ui
 function ChapterLayer:initActiveChapterRange()
@@ -423,7 +422,6 @@ function ChapterLayer:addTaskBOX()
     self:addChild(boxButton,200)
     boxButton:setBright(true)
     self.boxButton = boxButton
-    print("添加宝箱图片")
     
     --获取任务列表 
     -- local MissionManager = require("controller.MissionManager")     --任务管理器
@@ -445,8 +443,6 @@ end
 
 --关闭宝箱
 function ChapterLayer:callBox()
-    -- body
-    print("毁掉内部")
     --改变按钮点击状态
     self.boxButton:setBright(true)
 end
@@ -457,13 +453,11 @@ function ChapterLayer:click_box(sender,eventType)
         return
     end
     --弹出任务面板
-    --local TaskView = require("view.taskview.TaskView")
     self.boxButton:setBright(false)
     --不可点击
     --self.boxButton:setTouchEnabled(false)
     local taskview = TaskView.new(handler(self,self.callBox))
     s_SCENE:popup(taskview)
-    print("点击宝箱")
 end
 
 function ChapterLayer:addBeansUI()

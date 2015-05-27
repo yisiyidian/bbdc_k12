@@ -1,5 +1,6 @@
 require("cocos.init")
 require("common.global")
+local MissionConfig          = require("model.mission.MissionConfig") --任务的配置数据
 
 local ShareBottom = class('ShareBottom',function ()
 	return cc.Layer:create()
@@ -113,6 +114,7 @@ function ShareBottom:ctor()
 				self:removeFromParent()
 			end)
             bottom:runAction(cc.Sequence:create(move,remove))
+            s_MissionManager:updateMission(MissionConfig.MISSION_FENXIANG)
         end
     end
 
