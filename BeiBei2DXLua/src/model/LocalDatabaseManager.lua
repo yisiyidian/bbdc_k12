@@ -117,6 +117,10 @@ function Manager.getWordInfoFromWordName(word)
             ret.sentenceCn         =   raw[6 + indexOffset]
             ret.sentenceEn2        =   raw[7 + indexOffset]
             ret.sentenceCn2        =   raw[8 + indexOffset]
+        else
+            print("-------------------")
+            print("not get word!")
+            print("-------------------")
         end
     end
 
