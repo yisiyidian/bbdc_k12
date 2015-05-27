@@ -547,7 +547,7 @@ function SummaryBossAlter:addWinLabel(win_back)
                     
                 end
             else
-               if self.bossLayer.useTime < 90 then
+               if self.bossLayer.useTime < 0 then
                     local wordList = self.bossLayer.unit.wrongWordList[1]
                      for i = 2,#self.bossLayer.unit.wrongWordList do
                          wordList = wordList..'|'..self.bossLayer.unit.wrongWordList[i]
