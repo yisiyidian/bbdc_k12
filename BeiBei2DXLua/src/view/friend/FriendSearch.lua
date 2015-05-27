@@ -1,5 +1,5 @@
-require("cocos.init")
-require("common.global")
+-- require("cocos.init")
+-- require("common.global")
 
 local FriendSearch = class("FriendSearch", function()
     return cc.Layer:create()

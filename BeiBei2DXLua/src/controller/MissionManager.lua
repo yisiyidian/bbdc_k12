@@ -66,15 +66,25 @@ end
 -- 更新任务状态------------------------------------------------------------------外部调用-----------更新任务状态---
 -- missionId 		任务ID
 -- missionData 		任务数据 条件,修改条件
+-- addData 			数据类型是 1增加的类型 true 还是 2 赋值的类型false 。所谓增加的类型,比如打败一次BOSS,增加一次。所谓赋值的类型,如好友数量,直接赋值,覆盖以前的值
 -- callBack 		修改完成回调 cb(result, error)
-function MissionManager:updateMission(missionId,missionsData,callBack)
+function MissionManager:updateMission(missionId,missionsData,addData,callBack)
 	missionsData = missionsData or 1
+	addData = addData or true
+	print("更新任务:"..missionId.." 条件:"..missionsData.." 类型:"..tostring(addData))
+	-- if not self.missionData then
+	-- 	return
+	-- end
 	local tb = self:strToTable(self.missionData.taskList)
 	local re = false
 	for k,v in pairs(tb) do
 		if v[1] == missionId then
-			v[3] = tostring(tonumber(v[3]) + missionsData) --默认条件+1
-			if v[3] == v[4] then --如果当前任务条件和 任务总条件匹配,则标记为已完成
+			if addData then
+				v[3] = tostring(tonumber(v[3]) + missionsData) --默认条件+1
+			else
+				v[3] = tostring(missionsData) --直接赋值
+			end
+			if v[3] >= v[4] then --如果当前任务条件和 任务总条件匹配,则标记为已完成
 				v[2] = "1" --标记为已完成 未领取
 				re = true
 			end
@@ -96,11 +106,13 @@ function MissionManager:completeMission(taskId,index,callBack)
 	if taskId == MissionConfig.MISSION_LOGIN then
 		return self:getLoginReward(index,callBack)
 	else
-		local tb = self:strToTable(self.missionData.taskList)
+		local tb = self:strToTable(self.missionData.taskList) --取出来
+		local curTaskData = nil
 		for k,v in pairs(tb) do
 			if v[1] == taskId then
 				if v[2] == "1" then
 					v[2] 	= "2"  	--修改状态为已领取
+					curTaskData = v
 					re 		= true
 					break
 				end 
@@ -108,11 +120,60 @@ function MissionManager:completeMission(taskId,index,callBack)
 		end
 		--领取成功
 		if re then
-			self.missionData.taskList = self:tableToStr(tb)
+			self.missionData.taskList = self:tableToStr(tb) --存回去
+			local config = self:getRandomMissionConfig(taskId) ---数据多的话,这么写的效率很低
+			local onceTaskComplete = false --特殊任务的完成标记
+			--存储系列任务的ID
+			--TODO 如果是系列任务全部完成状态 从系列任务进度列表里删除 移到完成任务列表里
+			if #config.condition > 1 and curTaskData[5] ~= #config.condition then
+				local seriesMissions = self:strToTable(self.missionData.taskSeriesList)
+				local update = false
+				for k,v in pairs(seriesMissions) do
+					if v[1] == taskId then
+						update = true
+						v[2] = curTaskData[2] --状态
+						v[3] = curTaskData[3] --条件
+						v[4] = curTaskData[4] --总条件
+						v[5] = curTaskData[5] --index
+					end
+				end
+
+				if not update then
+					local tb = {}
+					tb[1] = curTaskData[1]
+					tb[2] = curTaskData[2]
+					tb[3] = curTaskData[3]
+					tb[4] = curTaskData[4]
+					tb[5] = curTaskData[5]
+					seriesMissions[#seriesMissions + 1] = tb
+				end
+				--保存任务进度
+				self.missionData.taskSeriesList = self:tableToStr(seriesMissions)
+			elseif #config.condition > 1 and #config.condition == curTaskData[5] then
+				onceTaskComplete = true
+				--删除系列任务的进度
+				local seriesMissions = self:strToTable(self.missionData.taskSeriesList)
+				for k,v in pairs(seriesMissions) do
+					if v[1] == taskId then
+						seriesMissions[k] = nil
+						break
+					end
+				end
+				self.missionData.taskSeriesList = self:tableToStr(seriesMissions)
+			elseif #config.condition == 1 then
+				onceTaskComplete = true
+			end
+			--特殊任务 要保存进度 确保不会重复出现
+			if onceTaskComplete then
+				local comTable = self:strToTable(self.missionData.taskCompleteList)
+				comTable[#comTable + 1] = taskId
+				self.missionData.taskCompleteList = self:tableToStr(comTable)
+			end
+
 			self:updateRandomMissionId() --重新生成激活任务的ID
 			self:saveTaskToLocal()
 			s_O2OController.syncMission(callBack) --同步数据 到服务器
-			local config = self:getRandomMissionConfig(taskId) ---数据多的话,这么写的效率很低
+			
 			bean = config.bean
 			s_CURRENT_USER:addBeans(bean) --获取贝贝豆
         	saveUserToServer({[DataUser.BEANSKEY] = s_CURRENT_USER[DataUser.BEANSKEY]}) --同步到
@@ -196,27 +257,39 @@ function MissionManager:generalTasks()
 			end
 			return nil
 		end
-		--先精简任务列表 把已经领取奖励的系列任务去掉  【领取奖励】= 已结束
-		local temp_series_missions = {} --系列任务进度的table,table中的每一项是table结构{{"1-1","1","0"},{"2-2","1","1"}}
-		if self.missionData.taskSeriesList ~= "" then
-			local temp_mission = string.split(self.missionData.taskSeriesList,"|")
-			for _,v in pairs(temp_mission) do
-				temp_series_missions[#temp_series_missions + 1] = string.split(v,"_")
-			end
+		--先精简任务列表 把已经领取奖励的特殊任务去掉  【领取奖励】= 已结束
+		local temp_comp_missions = {} --系列任务进度的table,table中的每一项是table结构{{"1-1","1","0","1","1"},{"2-2","1","1","1","1"}}
+		if self.missionData.taskCompleteList ~= "" then
+			local temp_comp_missions = string.split(self.missionData.taskCompleteList,"|")
+			-- string.split(self.missionData.taskSeriesList,"|")
+			-- for _,v in pairs(temp_mission) do
+			-- 	temp_series_missions[#temp_series_missions + 1] = string.split(v,"_")
+			-- end
 			--处理特殊任务中 删除掉 已经完成的系列任务
-			--任务状态:0未完成  1完成  2 已领取
+			--任务状态: 0未完成  1已完成 未领取 2已领取
 			local mission_id = nil
-			for k,v in pairs(temp_series_missions) do
-				mission_id = v[1]
+			for k,v in pairs(temp_comp_missions) do
+				mission_id = v
+				--精简特殊任务
 				for kk,vv in pairs(ts_task) do
-					if mission_id == vv.mission_id and v[2] == vv.condition[#vv.condition] and v[3] == "2"  then
+					if mission_id == vv.mission_id then
 						--如果 【1】任务ID匹配,【2】并且是任务最后一条(非系列任务只有1项),【4】并且状态是已领取奖励 则从任务列表里 移除这个任务
 						ts_task[kk] = nil
 						break
 					end
 				end
+				--精简 解锁任务
+				for kkk,vvv in pairs(js_task) do
+					if mission_id == vv.mission_id then
+						ts_task[kkk] = nil
+					break
+					end
+				end
 			end
+
+
 		end
+		-- dump(ts_task,"ts_task")
 		--从特殊任务和解锁任务里随机抽取	
 		local tlen = 6 - #result  --可以抽取的任务数量
 		local hasLockMission = false  --已经有解锁任务了  解锁任务只能领取一个
@@ -239,7 +312,7 @@ function MissionManager:generalTasks()
 		--TEST 
 		--result[#result + 1] = {["mission_id"] = "2-2",["type"] = 2,["condition"]= {1,3,5,10,20},["bean"]=0}
 		--result 生成的任务列表
-		local mission_str 			= "" --- 1-1_0_1_1|2-2_0_1_1|3-1_1_2_1 任务ID_任务状态_任务条件_任务总条件_任务游标
+		local mission_str 			= "" --- 1-1_0_0_1_1|2-2_0_0_1_1|3-1_1_2_2_1 任务ID_任务状态_任务条件_任务总条件_任务游标
 		local temp_mission_str  	= ""
 		local condition 			= "" 
 		for k,v in pairs(result) do
@@ -257,7 +330,7 @@ function MissionManager:generalTasks()
 						--TODO 如果是已完成，未领取状态，是不是要优先加入任务列表？？？TODO
 						-- vv[2] 任务游标 -- vv[3] 任务状态 0未完成  1完成  2已领取
 						if vv[3] == "0" and vv[3] == "1" then--游标不变
-							temp_mission_str = temp_mission_str.."_0_"..condition[vv[2]].."_"..vv[2]
+							temp_mission_str = temp_mission_str.."_0_0_"..condition[vv[2]].."_"..vv[2] --_0_0_ 是状态_当前完成度
 						elseif vv[3] == "2" then--游标定位到下一个
 							local nextIndex = 0
 							------从系列任务的配置里,取下一条-----
@@ -265,7 +338,7 @@ function MissionManager:generalTasks()
 							if vcon == nil then --取不到任务了
 								temp_mission_str = ""
 							else --定位到系列任务的下一项
-								temp_mission_str = temp_mission_str.."_0_"..vcon.."_"..(vv[2] + 1)
+								temp_mission_str = temp_mission_str.."_0_0_"..vcon.."_"..(vv[2] + 1)
 							end
 						end
 						break --找到一个就退出  最多也就一个
@@ -273,7 +346,7 @@ function MissionManager:generalTasks()
 				end
 				--未命中 从未接过此系列任务,就生成一个新的任务状态
 				if not hit then
-					temp_mission_str = temp_mission_str.."_0_"..condition[1].."_1"
+					temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1"
 				end
 			end
 			--用|分割每个任务
@@ -475,10 +548,9 @@ function MissionManager:updateRandomMissionId()
 end
 --获取当前激活的随机任务的数据
 function MissionManager:getCurRandomTaskData()
-	-- print("self.missionData.curTaskId:"..self.missionData.curTaskId)
+	print("self.missionData.curTaskId:"..self.missionData.curTaskId)
 	local curTaskId = self.missionData.curTaskId --完成某个随机任务、然后更新
 	local taskList  = self:strToTable(self.missionData.taskList)
-	dump(taskList,"taskList")
 	for k,v in pairs(taskList) do
 		if v[1] == curTaskId then
 			return v --返回要查询的任务数据

@@ -107,7 +107,7 @@ function TaskViewRender:updataView()
 		local RandomTaskBBD = "奖励："..config.bean.."贝贝豆"
 		self.bbdNum:setString(RandomTaskBBD)
 		--任务名称
-		self.labelTask:setString(config.desc)
+		self.labelTask:setString(string.format(config.desc,self.totalCount,self.nowCount,self.totalCount))
 	end
 
 	--设置按钮的状态
