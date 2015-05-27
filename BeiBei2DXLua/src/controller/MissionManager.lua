@@ -165,9 +165,18 @@ function MissionManager:completeMission(taskId,index,callBack)
 			end
 			--特殊任务 要保存进度 确保不会重复出现
 			if onceTaskComplete then
-				local comTable = self:strToTable(self.missionData.taskCompleteList)
+				-- local comTable = self:strToTable(self.missionData.taskCompleteList)
+				local comTable = string.split(self.missionData.taskCompleteList,"|")
 				comTable[#comTable + 1] = taskId
-				self.missionData.taskCompleteList = self:tableToStr(comTable)
+				local restr = ""
+				for k,v in pairs(comTable) do
+					if restr == "" then
+						restr = v
+					else
+						restr = restr.."|"..v
+					end
+				end
+				self.missionData.taskCompleteList = restr
 			end
 
 			self:updateRandomMissionId() --重新生成激活任务的ID
