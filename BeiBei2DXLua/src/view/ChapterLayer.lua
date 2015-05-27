@@ -444,8 +444,10 @@ function ChapterLayer:addTaskBOX()
 end
 
 --关闭宝箱
-function closeBox()
+function ChapterLayer:callBox()
     -- body
+    print("毁掉内部")
+    --改变按钮点击状态
     self.boxButton:setBright(true)
 end
 
@@ -457,7 +459,9 @@ function ChapterLayer:click_box(sender,eventType)
     --弹出任务面板
     --local TaskView = require("view.taskview.TaskView")
     self.boxButton:setBright(false)
-    local taskview = TaskView.new()
+    --不可点击
+    --self.boxButton:setTouchEnabled(false)
+    local taskview = TaskView.new(handler(self,self.callBox))
     s_SCENE:popup(taskview)
     print("点击宝箱")
 end
