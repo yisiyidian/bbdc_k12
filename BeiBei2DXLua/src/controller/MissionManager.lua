@@ -394,15 +394,12 @@ function MissionManager:getLoginReward(taskId,callBack)
 	local reward = 0 --奖励的贝贝豆数量等于累计登陆的天数
 	for k,v in pairs(loginConfig) do  -- v 就是完成当前任务所需的天数
 		if taskId == k then
-			print("AAAAAAAAAAA")
 			if remainDay >= v then
 				self.missionData.loginRewardIndex = k --保存当前领取的任务的id
 				re = true
 				reward = v --奖励的贝贝豆
 				break
 			end
-		else
-			remainDay = remainDay - v
 		end
 	end
 	--保存数据 到本地 到服务器
