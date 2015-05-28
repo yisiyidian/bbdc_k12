@@ -18,7 +18,6 @@ end
 function TaskView:initUI()
 
 	-- self:setPosition()
-
 	local background = cc.Sprite:create("image/islandPopup/task_background.png")
     background:setAnchorPoint(0.0,0.0)
     self.background = background
@@ -145,9 +144,12 @@ function TaskView:getRewardCallBack(taskId,index,position)
     local action2 = cc.ScaleTo:create(0.1,0)
     local release = function()
     	beanImg:removeFromParent()
+    	s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     end
     local action4 = cc.CallFunc:create(release)
     beanImg:runAction(cc.Sequence:create(action0,action1,action2,action4)) 
+
+
     self:resetView()
 
     --右上角 增加贝贝豆

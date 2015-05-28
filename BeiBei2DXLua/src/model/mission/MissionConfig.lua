@@ -14,12 +14,12 @@ local MissionConfig = {}
 --任务描述  可以直接传进来 
 MissionConfig.randomMission = {
 	--普通任务
-	-- {["mission_id"] = "1-1",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次神秘任务"}, --神秘任务
+	{["mission_id"] = "1-1",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次神秘任务"}, --神秘任务
 	{["mission_id"] = "1-2",["type"] = 1,["condition"]= {1},["bean"]=10,desc="打卡"}, 			--打卡
 	{["mission_id"] = "1-3",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次趁热打铁"}, --趁热打铁
 	{["mission_id"] = "1-4",["type"] = 1,["condition"]= {1},["bean"]=10,desc="分享你的成绩"}, 	--分享（分享你的成绩）
 	{["mission_id"] = "1-5",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次总结BOSS"}, --完成一次总结BOSS
-	--特殊任务
+	特殊任务
 	{["mission_id"] = "2-1",["type"] = 2,["condition"]= {1},["bean"]=10,desc="完善个人信息"}, 	--完善信息
 	{["mission_id"] = "2-2",["type"] = 2,["condition"]= {1,3,5,10,20},["bean"]=10,desc="拥有%s个好友：进度%s/%s"},	--拥有X个好友
 	{["mission_id"] = "2-3",["type"] = 2,["condition"]= {1},["bean"]=10,desc="下载音频"}, 		--下载音频

@@ -13,6 +13,7 @@ local button_sure
 
 function ShopAlter.create(itemId, location)
     local state = s_CURRENT_USER:getLockFunctionState(itemId)
+
     local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 
     local main = cc.Layer:create()
@@ -75,14 +76,13 @@ function ShopAlter.create(itemId, location)
             end)
             local action2 = cc.Sequence:create(action0,action1)
             main:runAction(action2)
-            --触发任务完成
             if itemId == 2 then 
                 s_MissionManager:updateMission(MissionConfig.MISSION_DATA1)
             elseif itemId == 3 then
                 s_MissionManager:updateMission(MissionConfig.MISSION_DATA2)
             elseif itemId == 5 then
                 s_MissionManager:updateMission(MissionConfig.MISSION_DATA3)
-            else
+            elseif itemId == 6 then
                 s_MissionManager:updateMission(MissionConfig.MISSION_VIP)
             end
             
@@ -101,7 +101,6 @@ function ShopAlter.create(itemId, location)
                     s_LocalDatabaseManager.setBuy(math.pow(10,i-1))
                 end
             end 
-
             if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
                    s_SCENE:removeAllPopups()
                 end
@@ -222,5 +221,6 @@ function ShopAlter.create(itemId, location)
 
     return main
 end
+
 
 return ShopAlter

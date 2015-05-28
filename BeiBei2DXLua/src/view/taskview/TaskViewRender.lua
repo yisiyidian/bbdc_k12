@@ -148,10 +148,11 @@ end
 
 --按钮事件处理
 function TaskViewRender:onButtonTouch(sender,eventType)
+	
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
-	
+	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	local pos = self:convertToWorldSpace(cc.p(sender:getPosition()))
   
   if self.getRewardCallBack ~= nil then
