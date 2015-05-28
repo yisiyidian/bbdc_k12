@@ -414,13 +414,14 @@ end
 
 --任务按钮  宝箱样式
 function ChapterLayer:addTaskBOX()
-    local boxButton = ccui.Button:create("image/islandPopup/task_turntable.png")
+    local boxButton = ccui.Button:create("image/islandPopup/close.png","","image/islandPopup/open.png")
     boxButton:addTouchEventListener(handler(self,self.click_box))
     boxButton:setAnchorPoint(0.5,0.5)
     boxButton:ignoreAnchorPointForPosition(false)
     boxButton:setPosition(s_RIGHT_X-180 ,180)
     boxButton:setTouchEnabled(true)
     self:addChild(boxButton,200)
+    boxButton:setBright(true)
     self.boxButton = boxButton
     print("添加宝箱图片")
     
@@ -439,8 +440,13 @@ function ChapterLayer:addTaskBOX()
     else
         --停止所有动作
         self.boxButton:stopAllActions()
-
     end
+end
+
+--关闭宝箱
+function closeBox()
+    -- body
+    self.boxButton:setBright(true)
 end
 
 function ChapterLayer:click_box(sender,eventType)
@@ -450,6 +456,7 @@ function ChapterLayer:click_box(sender,eventType)
     end
     --弹出任务面板
     --local TaskView = require("view.taskview.TaskView")
+    self.boxButton:setBright(false)
     local taskview = TaskView.new()
     s_SCENE:popup(taskview)
     print("点击宝箱")

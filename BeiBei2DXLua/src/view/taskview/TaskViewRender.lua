@@ -62,8 +62,8 @@ function TaskViewRender:init(type)
 		self.imgbig:setTexture(imglogin)
 		self.imgsmall:setVisible(false)
 		--添加按钮名字 添加label 累计登陆上的天数
-	    local labelday = cc.Label:createWithSystemFont("23","",20)
-		labelday:setPosition(s_DESIGN_WIDTH/2 - 520/2 - 10, 30)
+	    local labelday = cc.Label:createWithSystemFont("23","",26)
+		labelday:setPosition(s_DESIGN_WIDTH/2 - 520/2 - 10, 40)
 		labelday:setAnchorPoint(0.5,0.5)
 		self.labelday = labelday
 		self.labelday:setTextColor(cc.c3b(0, 0, 0))
@@ -98,6 +98,9 @@ function TaskViewRender:updataView()
 
 		local LoginDayLabel = "登录"..self.nowCount.."/"..self.totalCount.."天"
 		self.labelTask:setString(LoginDayLabel)
+
+		--修改label
+		self.labelday:setString(self.totalCount)
 	else
 		--随机任务 贝贝豆数量
 		local config = s_MissionManager:getRandomMissionConfig(self.taskID) ---Render多的话,这么写的效率很低
@@ -130,31 +133,12 @@ function TaskViewRender:onButtonTouch(sender,eventType)
 	-- self.button_task:setTouchEnabled(false)  --不可点击
 	-- self.button_task:setVisible(false)
 	-- self.spriteBtn:setVisible(true)
-	--改变贝贝豆数量(右上角) 做一个动画  TODO: 贝贝豆的位置需要调整
-	--创建豆的精灵
-	if self.getRewardCallBack ~= nil then
+
+
+    if self.getRewardCallBack ~= nil then
 		self.getRewardCallBack(self.taskID,self.index)
 	end
 
-	--[[
-	local bean = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
-	bean:setPosition(0,0)
-	self:addChild(bean)
-	self.bean = bean
-	print('position..',self:getPositionX(),self:getPositionY())
-
-	local action0 = cc.DelayTime:create(1)
-	--要减去起始点的坐标  s_RIGHT_X为界面最右边的坐标（ipad会比iphone长一点 所以s_DESIGN_WIDTH不是左右边坐标）
-	--减去精灵坐标 是要算出算出精灵再大的界面上的相对坐标
-    local action1 = cc.MoveTo:create(1,cc.p(s_RIGHT_X-140 - self:getPositionX(), s_DESIGN_HEIGHT-70 - self:getPositionY()))
-    --local action1 = cc.MoveTo:create(1,cc.p(s_RIGHT_X - 100,s_DESIGN_HEIGHT - 100))
-    local action2 = cc.ScaleTo:create(0.1,0)
-    local release = function()
-    	bean:removeFromParent()
-    end
-    local action4 = cc.CallFunc:create(release)
-    bean:runAction(cc.Sequence:create(action0,action1,action2,action4)) 
-    ]]
 end
  
 return TaskViewRender

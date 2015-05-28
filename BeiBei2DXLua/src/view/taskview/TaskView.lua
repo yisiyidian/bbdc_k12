@@ -105,7 +105,15 @@ function TaskView:CloseClick(sender,eventType)
 									    s_SCENE:removeAllPopups()
 										end,{})
 	local action5 = cc.Spawn:create(action1,action2,action3)
-	self:runAction(cc.Sequence:create(action5,action4))
+	--关闭宝箱
+	local action6 = cc.CallFunc:create(function ()
+	local ChapterLayer = require("view.ChapterLayer")
+	chapterlayer:create()
+	chapterlayer:closeBox()
+	end)
+	self:runAction(cc.Sequence:create(action5,action4,action6))
+
+
 end
 
 function TaskView:getRewardCallBack(taskId,index)
@@ -126,25 +134,27 @@ function TaskView:getRewardCallBack(taskId,index)
 
 	print("re:"..tostring(re))
 	print("bean:"..bean)
-	self:resetView()
-	-- local beanImg = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
-	-- beanImg:setPosition(0,0)
-	-- self:addChild(beanImg)
-	-- self.beanImg = beanImg
-	-- print('position..',self:getPositionX(),self:getPositionY())
-	--[[
+
+	local beanImg = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
+	beanImg:setPosition(40,400)
+	self:addChild(beanImg)
+	self.beanImg = beanImg
+	print('position..',self:getPositionX(),self:getPositionY())
+
 	local action0 = cc.DelayTime:create(1)
 	--要减去起始点的坐标  s_RIGHT_X为界面最右边的坐标（ipad会比iphone长一点 所以s_DESIGN_WIDTH不是左右边坐标）
 	--减去精灵坐标 是要算出算出精灵再大的界面上的相对坐标
     local action1 = cc.MoveTo:create(1,cc.p(s_RIGHT_X-140 - self:getPositionX(), s_DESIGN_HEIGHT-70 - self:getPositionY()))
     local action2 = cc.ScaleTo:create(0.1,0)
     local release = function()
-    	bean:removeFromParent()
+    	beanImg:removeFromParent()
     end
     local action4 = cc.CallFunc:create(release)
-    bean:runAction(cc.Sequence:create(action0,action1,action2,action4)) 
-	]]
+    beanImg:runAction(cc.Sequence:create(action0,action1,action2,action4)) 
+    self:resetView()
+
     --右上角 增加贝贝豆
+    --s_CURRENT_USER:addBeans(bean)
 	
 end
 
