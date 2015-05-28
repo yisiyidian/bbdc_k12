@@ -619,9 +619,9 @@ end
 function HomeLayer:changeViewToFriendOrShop(destination)
     local DestinationLayer = nil
     if destination == "ShopLayer" then
-        DestinationLayer = require("view.shop.ShopLayer")
+        DestinationLayer = require("view.shop."..destination)
     elseif destination == "FriendLayer" then
-        DestinationLayer = require("view.friend.FriendLayer")
+        DestinationLayer = require("view.friend."..destination)
     else
         return
     end

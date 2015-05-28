@@ -94,6 +94,9 @@ function FriendList:ctor()
             hideProgressHUD()
         end
     )
+    
+    
+    
 end
 
 function FriendList:addList()

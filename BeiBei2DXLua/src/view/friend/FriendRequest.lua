@@ -1,6 +1,5 @@
--- 处理好友请求
--- require("cocos.init")
--- require("common.global")
+require("cocos.init")
+require("common.global")
 
 local FriendRequest = class("FriendRequest", function()
     return cc.Layer:create()
@@ -8,6 +7,7 @@ end)
 
 function FriendRequest.create()
     local layer = FriendRequest.new()
+    --layer.friend = friend
     return layer 
 end
 
@@ -44,9 +44,9 @@ function FriendRequest:main()
     s_CURRENT_USER.seenFansCount = s_CURRENT_USER.fansCount
     saveUserToServer({['seenFansCount']=s_CURRENT_USER.seenFansCount})
     local array = s_CURRENT_USER.fans
-    -- for i = 1,#array do
+    for i = 1,#array do
         --array[i] = string.format("ListView_item_%d",i - 1)
-    -- end
+    end
 
 
     local listView = ccui.ListView:create()
@@ -56,6 +56,7 @@ function FriendRequest:main()
     listView:setBackGroundImageScale9Enabled(true)
     listView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,162 * 6))
     listView:setPosition(s_LEFT_X,0)
+    --listView:addEventListener(listViewEvent)
     self:addChild(listView)
 
 
@@ -229,8 +230,11 @@ function FriendRequest:main()
             end
         end
         refuse:addTouchEventListener(onRefuse)
+        
+        
     end
 
+    --set items margin
     listView:setItemsMargin(2.0)
 end
 

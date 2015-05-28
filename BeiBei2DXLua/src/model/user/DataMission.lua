@@ -19,7 +19,7 @@ function DataMission:ctor()
     self.lastLoginDate 		= 0  --上一次的登陆时间
     self.loginRewardIndex   = 0  --累积登陆的奖励,领取到哪次了 默认是0,领取了第一次奖励,值就是1
 
-    self.curTaskId          = "2-2" --当前随机任务的ID,此ID是任务列表里的ID
+    self.curTaskId          = "" --当前随机任务的ID,此ID是任务列表里的ID
     self.taskGenDate 		= 0  --上一次生成任务列表的时间
     self.taskList 			= "" --[[
     任务列表   
