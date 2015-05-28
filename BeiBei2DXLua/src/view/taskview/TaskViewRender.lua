@@ -91,16 +91,22 @@ end
 --更新数据 更新按钮状态
 function TaskViewRender:updataView()
 	--累积登录
-	if self.taskID == MissionConfig.MISSION_LOGIN then 
-		--获取用户连续多少天登录 贝贝豆数量
-		local LoginTaskBBD = "奖励："..self.totalCount.."贝贝豆"
-		self.bbdNum:setString(LoginTaskBBD)
+	if self.taskID == MissionConfig.MISSION_LOGIN then
 
-		local LoginDayLabel = "登录"..self.nowCount.."/"..self.totalCount.."天"
-		self.labelTask:setString(LoginDayLabel)
+		--是否完成全部任务
+		if self.index == 0 then
+			--TODO 完成全部累计登陆任务
+		else
+			--获取用户连续多少天登录 贝贝豆数量
+			local LoginTaskBBD = "奖励："..self.totalCount.."贝贝豆"
+			self.bbdNum:setString(LoginTaskBBD)
 
-		--修改label
-		self.labelday:setString(self.nowCount)
+			local LoginDayLabel = "登录"..self.nowCount.."/"..self.totalCount.."天"
+			self.labelTask:setString(LoginDayLabel)
+
+			--修改label
+			self.labelday:setString(self.nowCount)
+		end
 	else
 		--随机任务 贝贝豆数量
 		local config = s_MissionManager:getRandomMissionConfig(self.taskID) ---Render多的话,这么写的效率很低
@@ -130,7 +136,8 @@ function TaskViewRender:onButtonTouch(sender,eventType)
 	end
 	
 	local pos = self:convertToWorldSpace(cc.p(sender:getPosition()))
-    if self.getRewardCallBack ~= nil then
+  
+  if self.getRewardCallBack ~= nil then
 		self.getRewardCallBack(self.taskID,self.index,pos)
 	end
 end

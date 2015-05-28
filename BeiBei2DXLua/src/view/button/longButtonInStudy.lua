@@ -1,5 +1,5 @@
-require("cocos.init")
-require("common.global")
+-- require("cocos.init")
+-- require("common.global")
 
 local  longButtonInStudy = class("longButtonInStudy", function ()
     return cc.Sprite:create()
@@ -29,12 +29,11 @@ function longButtonInStudy.create(size,color,text)
 
     if text ~= nil then
         local label = cc.Label:createWithSystemFont(text,"",30)
-        -- label:enableOutline(cc.c4b(58,185,224,255),1)
         label:setPosition(button_back.button_front:getContentSize().width / 2, button_back.button_front:getContentSize().height / 2)
         label:ignoreAnchorPointForPosition(false)
         label:setAnchorPoint(0.5,0.5)
         label:setColor(cc.c4b(255,255,255,255))
-        button_back.button_front:addChild(label) 
+        button_back.button_front:addChild(label)
     end
 
     local function onTouchBegan(touch, event)

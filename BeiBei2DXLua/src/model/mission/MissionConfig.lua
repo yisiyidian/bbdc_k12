@@ -14,7 +14,7 @@ local MissionConfig = {}
 --任务描述  可以直接传进来 
 MissionConfig.randomMission = {
 	--普通任务
-	{["mission_id"] = "1-1",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次神秘任务"}, --神秘任务
+	-- {["mission_id"] = "1-1",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次神秘任务"}, --神秘任务
 	{["mission_id"] = "1-2",["type"] = 1,["condition"]= {1},["bean"]=10,desc="打卡"}, 			--打卡
 	{["mission_id"] = "1-3",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次趁热打铁"}, --趁热打铁
 	{["mission_id"] = "1-4",["type"] = 1,["condition"]= {1},["bean"]=10,desc="分享你的成绩"}, 	--分享（分享你的成绩）
