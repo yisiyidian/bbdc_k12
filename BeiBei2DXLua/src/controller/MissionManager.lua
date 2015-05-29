@@ -289,7 +289,7 @@ function MissionManager:generalTasks()
 				end
 				--精简 解锁任务
 				for kkk,vvv in pairs(js_task) do
-					if mission_id == vv.mission_id then
+					if mission_id == vvv.mission_id then
 						ts_task[kkk] = nil
 					break
 					end
