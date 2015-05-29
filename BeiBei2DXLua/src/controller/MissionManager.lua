@@ -538,8 +538,8 @@ function MissionManager:updateRandomMissionId()
 		if v[2] == "0" then
 			undoTask[#undoTask + 1] = v
 		end
-		--如果当前激活的任务,状态是未完成,或者是未领取
-		if curTaskId == v[1] and (not (v[2] == "1")) then
+		--如果当前激活的任务 如果是已完成 未领取的情况,不会刷新任务
+		if curTaskId == v[1] and (v[2] == "1") then
 			needRecalc = false
 			break
 		end

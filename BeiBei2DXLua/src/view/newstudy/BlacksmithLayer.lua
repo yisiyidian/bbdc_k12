@@ -1,5 +1,4 @@
-require("cocos.init")
-require("common.global")
+--趁热打铁
 
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 local GuessWrong        = require("view.newstudy.GuessWrongPunishPopup")
@@ -34,8 +33,8 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
     wordMeaningTable[1] = wordMeaningTable[rightIndex]
     wordMeaningTable[rightIndex] = tmp
 
-    dump(wordMeaningTable,"趁热打铁 选项")
-    dump(randomNameArray,"趁热打铁 randomNameArray")
+    -- dump(wordMeaningTable,"趁热打铁 选项")
+    -- dump(randomNameArray,"趁热打铁 randomNameArray")
 
     local button_func = function(button)
             local feedback 
