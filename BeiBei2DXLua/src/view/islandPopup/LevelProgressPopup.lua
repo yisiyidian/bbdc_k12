@@ -80,6 +80,19 @@ function LevelProgressPopup:createSummary(index)
     close_button:addTouchEventListener(close_Click)
     background:addChild(close_button)
 
+    local wordCard_Click = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local WordCardView = require("view.wordcard.WordCardView")
+            local wordCardView = WordCardView.create()
+            s_SCENE:popup(wordCardView)
+        end
+    end
+    --加入 词库按钮
+    local wordCard_button = ccui.Button:create("image/islandPopup/button_change_to_ciku.png")
+    wordCard_button:setPosition(40,background:getContentSize().height - 40)
+    wordCard_button:addTouchEventListener(wordCard_Click)
+    background:addChild(wordCard_button)
+
     local function button_func(  )
         playSound(s_sound_buttonEffect) 
 
