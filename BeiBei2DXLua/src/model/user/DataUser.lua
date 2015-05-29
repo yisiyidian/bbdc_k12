@@ -418,8 +418,8 @@ function DataUser:getFriendsInfo()
     saveUserToServer({['friendsCount']=self.friendsCount, ['fansCount']=self.fansCount})
 
     --处理添加好友的任务
-    -- s_MissionManager:updateMission(MissionConfig.MISSION_FRIEND, self.friendsCount, false)
-    s_MissionManager:updateMission(MissionConfig.MISSION_FRIEND, 5, false)
+    s_MissionManager:updateMission(MissionConfig.MISSION_FRIEND, self.friendsCount, false)
+    -- s_MissionManager:updateMission(MissionConfig.MISSION_FRIEND, 5, false)
 end
 
 function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)
