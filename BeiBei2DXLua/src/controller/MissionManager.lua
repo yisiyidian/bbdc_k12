@@ -257,7 +257,7 @@ function MissionManager:generalTasks()
 						--TODO 如果是已完成，未领取状态，是不是要优先加入任务列表？？？TODO
 						-- vv[2] 任务游标 -- vv[3] 任务状态 0未完成  1完成  2已领取
 						if vv[3] == "0" and vv[3] == "1" then--游标不变
-							temp_mission_str = temp_mission_str.."_0_"..condition[vv[2]].."_"..vv[2]
+							temp_mission_str = temp_mission_str.."_0_0_"..condition[vv[2]].."_"..vv[2]
 						elseif vv[3] == "2" then--游标定位到下一个
 							local nextIndex = 0
 							------从系列任务的配置里,取下一条-----
@@ -265,7 +265,7 @@ function MissionManager:generalTasks()
 							if vcon == nil then --取不到任务了
 								temp_mission_str = ""
 							else --定位到系列任务的下一项
-								temp_mission_str = temp_mission_str.."_0_"..vcon.."_"..(vv[2] + 1)
+								temp_mission_str = temp_mission_str.."_0_0_"..vcon.."_"..(vv[2] + 1)
 							end
 						end
 						break --找到一个就退出  最多也就一个
@@ -273,7 +273,7 @@ function MissionManager:generalTasks()
 				end
 				--未命中 从未接过此系列任务,就生成一个新的任务状态
 				if not hit then
-					temp_mission_str = temp_mission_str.."_0_"..condition[1].."_1"
+					temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1"
 				end
 			end
 			--用|分割每个任务
