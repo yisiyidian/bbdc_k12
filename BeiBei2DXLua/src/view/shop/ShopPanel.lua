@@ -34,12 +34,12 @@ function ShopPanel.create(itemId)
             if itemId == 2 then 
                 s_MissionManager:updateMission(MissionConfig.MISSION_DATA1)
                 print("数据一")
-            -- elseif itemId == 3 then
-            --     s_MissionManager:updateMission(MissionConfig.MISSION_DATA2)
-            -- elseif itemId == 5 then
-            --     s_MissionManager:updateMission(MissionConfig.MISSION_DATA3)
-            -- else
-            --     s_MissionManager:updateMission(MissionConfig.MISSION_VIP)
+            elseif itemId == 3 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA2)
+            elseif itemId == 5 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA3)
+            else
+                s_MissionManager:updateMission(MissionConfig.MISSION_VIP)
             end
         else
             local shopErrorAlter = ShopErrorAlter.create()
