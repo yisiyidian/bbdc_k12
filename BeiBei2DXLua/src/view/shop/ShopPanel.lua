@@ -26,21 +26,8 @@ function ShopPanel.create(itemId)
             s_CURRENT_USER:subtractBeans(s_DataManager.product[itemId].productValue)
             s_CURRENT_USER:unlockFunctionState(itemId)
             saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY], ['lockFunction']=s_CURRENT_USER.lockFunction})
-            print("fwsfwsfws"..itemId)
             main.feedback()
             main:removeFromParent()
-
-            print("解锁数据")
-            if itemId == 2 then 
-                s_MissionManager:updateMission(MissionConfig.MISSION_DATA1)
-                print("数据一")
-            elseif itemId == 3 then
-                s_MissionManager:updateMission(MissionConfig.MISSION_DATA2)
-            elseif itemId == 5 then
-                s_MissionManager:updateMission(MissionConfig.MISSION_DATA3)
-            else
-                s_MissionManager:updateMission(MissionConfig.MISSION_VIP)
-            end
         else
             local shopErrorAlter = ShopErrorAlter.create()
             s_SCENE:popup(shopErrorAlter)

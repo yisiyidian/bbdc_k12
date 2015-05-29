@@ -75,15 +75,14 @@ function ShopAlter.create(itemId, location)
             end)
             local action2 = cc.Sequence:create(action0,action1)
             main:runAction(action2)
-            print("fwsfwfwfs"..itemId)
             if itemId == 2 then 
                 s_MissionManager:updateMission(MissionConfig.MISSION_DATA1)
-            -- elseif itemId == 3 then
-            --     s_MissionManager:updateMission(MissionConfig.MISSION_DATA2)
-            -- elseif itemId == 5 then
-            --     s_MissionManager:updateMission(MissionConfig.MISSION_DATA3)
-            -- else
-            --     s_MissionManager:updateMission(MissionConfig.MISSION_VIP)
+            elseif itemId == 3 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA2)
+            elseif itemId == 5 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA3)
+            else
+                s_MissionManager:updateMission(MissionConfig.MISSION_VIP)
             end
 
 
