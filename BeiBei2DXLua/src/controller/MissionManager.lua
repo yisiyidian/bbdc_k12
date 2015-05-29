@@ -567,6 +567,6 @@ function MissionManager:getCurRandomTaskData()
 			return v --返回要查询的任务数据
 		end
 	end
-	return nil
+	return {0} --随机任务 明日再来
 end
 return MissionManager
