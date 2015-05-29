@@ -270,11 +270,6 @@ function MissionManager:generalTasks()
 		local temp_comp_missions = {} --系列任务进度的table,table中的每一项是table结构{{"1-1","1","0","1","1"},{"2-2","1","1","1","1"}}
 		if self.missionData.taskCompleteList ~= "" then
 			local temp_comp_missions = string.split(self.missionData.taskCompleteList,"|")
-			-- string.split(self.missionData.taskSeriesList,"|")
-			-- for _,v in pairs(temp_mission) do
-			-- 	temp_series_missions[#temp_series_missions + 1] = string.split(v,"_")
-			-- end
-			--处理特殊任务中 删除掉 已经完成的系列任务
 			--任务状态: 0未完成  1已完成 未领取 2已领取
 			local mission_id = nil
 			for k,v in pairs(temp_comp_missions) do
@@ -295,9 +290,15 @@ function MissionManager:generalTasks()
 					end
 				end
 			end
-
-
 		end
+
+		--系列任务的完成记录 生成任务列表的时候会用到，比如加好友的任务已经进行到第二步了，再生成加好友的任务 游标就要从2
+		local temp_series_missions = {} 
+		local temp_mission = string.split(self.missionData.taskSeriesList,"|")
+		for _,v in pairs(temp_mission) do
+			temp_series_missions[#temp_series_missions + 1] = string.split(v,"_")
+		end
+
 		-- dump(ts_task,"ts_task")
 		--从特殊任务和解锁任务里随机抽取	
 		local tlen = 6 - #result  --可以抽取的任务数量
@@ -331,23 +332,23 @@ function MissionManager:generalTasks()
 				temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1"
 			else
 				local hit = false --命中
-				for kk,vv in pairs(temp_mission_str) do --系列任务的列表
+				for kk,vv in pairs(temp_series_missions) do --系列任务的列表
 					if vv[1] == v.mission_id then
 						hit = true
 						--计算正确的游标
 						--任务状态 如果是已领取,则把游标定位到下一个系列任务
 						--TODO 如果是已完成，未领取状态，是不是要优先加入任务列表？？？TODO
-						-- vv[2] 任务游标 -- vv[3] 任务状态 0未完成  1完成  2已领取
-						if vv[3] == "0" and vv[3] == "1" then--游标不变
-							temp_mission_str = temp_mission_str.."_0_0_"..condition[vv[2]].."_"..vv[2] --_0_0_ 是状态_当前完成度
-						elseif vv[3] == "2" then--游标定位到下一个
+						-- vv[5] 任务游标 -- vv[2] 任务状态 0未完成  1完成  2已领取
+						if vv[2] == "0" and vv[2] == "1" then--游标不变
+							temp_mission_str = temp_mission_str.."_0_0_"..condition[vv[4]].."_"..vv[5] --_0_0_ 是状态_当前完成度
+						elseif vv[2] == "2" then--游标定位到下一个
 							local nextIndex = 0
 							------从系列任务的配置里,取下一条-----
-							local vcon = condition[vv[2]+1]
+							local vcon = condition[vv[5]+1]
 							if vcon == nil then --取不到任务了
 								temp_mission_str = ""
 							else --定位到系列任务的下一项
-								temp_mission_str = temp_mission_str.."_0_0_"..vcon.."_"..(vv[2] + 1)
+								temp_mission_str = temp_mission_str.."_0_0_"..vcon.."_"..(vv[5] + 1)
 							end
 						end
 						break --找到一个就退出  最多也就一个
