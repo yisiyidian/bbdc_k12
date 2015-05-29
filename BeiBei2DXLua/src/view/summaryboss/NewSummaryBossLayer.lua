@@ -121,7 +121,19 @@ function NewSummaryBossLayer:initWordList()
     end
 
     for i = 1,#self.unit.wrongWordList do
-        wordList[i] = self.unit.wrongWordList[i]
+        local list = split(self.unit.wrongWordList[i],'|')
+        wordList[i] = {}
+        --wordList[i][1]表示这个词组的第一个单词，如果不是词组则取单词本身，【2】表示词组剩余部分
+        wordList[i][1] = list[1]
+        if #list > 1 then
+            wordList[i][2] = ''
+            for i = 2,#list do
+                wordList[i][2] = wordList[i][2]..' '..list[i]
+            end  
+        else
+            wordList[i][2] = ''
+        end
+        wordList[i][3] = wordList[i][1]..wordList[i][2]
     end
 
     --第一关时间加倍
