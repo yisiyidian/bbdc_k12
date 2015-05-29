@@ -75,6 +75,7 @@ function ShopAlter.create(itemId, location)
             end)
             local action2 = cc.Sequence:create(action0,action1)
             main:runAction(action2)
+            --触发任务完成
             if itemId == 2 then 
                 s_MissionManager:updateMission(MissionConfig.MISSION_DATA1)
             elseif itemId == 3 then
@@ -84,8 +85,7 @@ function ShopAlter.create(itemId, location)
             else
                 s_MissionManager:updateMission(MissionConfig.MISSION_VIP)
             end
-
-
+            
         elseif s_CURRENT_USER:getBeans() < s_DataManager.product[itemId].productValue and click_button == 0 then
             click_button = 1
             local shopErrorAlter = ShopErrorAlter.create()
