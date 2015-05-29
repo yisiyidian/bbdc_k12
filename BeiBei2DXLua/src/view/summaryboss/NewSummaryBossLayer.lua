@@ -131,7 +131,7 @@ function NewSummaryBossLayer:initWordList()
                 wordList[i][2] = wordList[i][2]..' '..list[i]
             end  
         else
-            wordList[i][2] = ' fucker'
+            wordList[i][2] = ''
         end
         wordList[i][3] = wordList[i][1]..wordList[i][2]
         wordList[i][4] = self.unit.wrongWordList[i]
