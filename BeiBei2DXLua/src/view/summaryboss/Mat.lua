@@ -15,7 +15,7 @@ end)
 
 function Mat.create(bosslayer, isNewPlayerModel, spineName)
 
-    local word = bosslayer.wordList[1]
+    local word = bosslayer.wordList[1][1]
     local m = bosslayer.mat_length
     local n = m
     if spineName == nil then
@@ -312,19 +312,27 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     local updateSelectWord = function()
  
         bosslayer:removeChildByTag(1,true)
-        if #selectStack == 0 then
+        if #selectStack == 0 and bosslayer.wordList[1][2] == '' then
             return
         end
 
         local sprite =  ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(28.499,0,28.501,74))
         sprite:setPosition(s_DESIGN_WIDTH/2,790)
-        sprite:setContentSize((#selectStack) * 18 + 60 ,74)
+        if bosslayer.wordList[1][2] == '' then
+            sprite:setContentSize((#selectStack) * 18 + 60 ,74)
+        else
+            sprite:setContentSize((#selectStack+string.len(bosslayer.wordList[1][2])+1) * 18 + 60 ,74)
+        end
         sprite:setTag(1)
         bosslayer:addChild(sprite)
 
         local circle_succeed = ccui.Scale9Sprite:create("image/mat/circle_succeed.png",cc.rect(0,0,232,94),cc.rect(47,0,138,94))
         circle_succeed:setPosition(sprite:getContentSize().width/2 ,sprite:getContentSize().height/2)
-        circle_succeed:setContentSize((#selectStack) * 18 + 94 ,94)
+        if bosslayer.wordList[1][2] == '' then
+            circle_succeed:setContentSize((#selectStack) * 18 + 60 ,74)
+        else
+            circle_succeed:setContentSize((#selectStack+string.len(bosslayer.wordList[1][2])+1) * 18 + 94 ,94)
+        end
         sprite:addChild(circle_succeed)
         circle_succeed:setOpacity(0)
         main.circle_succeed = circle_succeed
@@ -333,6 +341,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         for i = 1, #selectStack do
             selectWord = selectWord..selectStack[i].main_character_content
         end
+        selectWord = selectWord..bosslayer.wordList[1][2]
 
         local label1 = cc.Label:createWithTTF(selectWord,'font/CenturyGothic.ttf',36)
         label1:setColor(cc.c4b(255,255,255,255))
@@ -341,6 +350,12 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         label1:setAnchorPoint(0.5,0.5)
         label1:setScale(1)
         circle_succeed:addChild(label1)
+
+        if bosslayer.wordList[1][2] ~= '' then
+            local line = cc.LayerColor:create(cc.c4b(255,255,255,255),18 * #selectStack + 18,1)
+            line:setPosition(47 + #selectStack / 2,20)
+            circle_succeed:addChild(line)
+        end
     end
     updateSelectWord()
 

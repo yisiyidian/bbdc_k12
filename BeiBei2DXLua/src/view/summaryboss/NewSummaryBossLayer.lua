@@ -92,7 +92,7 @@ function NewSummaryBossLayer:initStageInfo(unit)
 	--boss血量
     self.totalBlood = 0
     for i = 1,#self.wordList do
-        self.totalBlood = self.totalBlood + string.len(self.wordList[i]) * 2
+        self.totalBlood = self.totalBlood + string.len(self.wordList[i][1]) * 2
     end
     --boss剩余血量
     self.currentBlood = self.totalBlood
@@ -123,17 +123,18 @@ function NewSummaryBossLayer:initWordList()
     for i = 1,#self.unit.wrongWordList do
         local list = split(self.unit.wrongWordList[i],'|')
         wordList[i] = {}
-        --wordList[i][1]表示这个词组的第一个单词，如果不是词组则取单词本身，【2】表示词组剩余部分
+        --wordList[i][1]表示这个词组的第一个单词，如果不是词组则取单词本身，【2】表示词组剩余部分,[3]表示词组以空格分隔，【4】表示词组以|分隔
         wordList[i][1] = list[1]
+        wordList[i][2] = ''
         if #list > 1 then
-            wordList[i][2] = ''
             for i = 2,#list do
                 wordList[i][2] = wordList[i][2]..' '..list[i]
             end  
         else
-            wordList[i][2] = ''
+            wordList[i][2] = ' fucker'
         end
         wordList[i][3] = wordList[i][1]..wordList[i][2]
+        wordList[i][4] = self.unit.wrongWordList[i]
     end
 
     --第一关时间加倍
@@ -287,15 +288,15 @@ function NewSummaryBossLayer:initMat()
                 s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossSuccess)
             end
         end
-        playWordSound(self.wordList[1])
+        playWordSound(self.wordList[1][4])
         self.boss:stopAllActions()
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
         self.girl:setAnimation("right")
         if self.resetCount < self.maxCount then
             if self.rightWordList == '' then
-                self.rightWordList = self.wordList[1]
+                self.rightWordList = self.wordList[1][4]
             else
-                self.rightWordList = self.rightWordList..'|'..self.wordList[1]
+                self.rightWordList = self.rightWordList..'||'..self.wordList[1][4]
             end
         end
         --print(self.rightWordList)
@@ -365,7 +366,7 @@ function NewSummaryBossLayer:resetMat()
 end
 
 function NewSummaryBossLayer:initCrab()
-    local crab = require("view.summaryboss.Crab").create(self.wordList[1])
+    local crab = require("view.summaryboss.Crab").create(self.wordList[1][4])
     self:addChild(crab)
     self.crab = crab
     -- s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
@@ -384,7 +385,7 @@ function NewSummaryBossLayer:addChangeBtn()
     changeBtn:runAction(cc.EaseBackOut:create(cc.ScaleTo:create(0.5,1)))
     local function changeWord(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            playWordSound(self.wordList[1])
+            playWordSound(self.wordList[1][4])
             if self.hintChangeBtn ~= nil then
                 self.hintChangeBtn.hintOver()
                 self.hintChangeBtn = nil
@@ -403,7 +404,7 @@ function NewSummaryBossLayer:addChangeBtn()
             end
             
             self.gamePaused = true
-            local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1],self.boss,self.firstTimeToChange)
+            local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1][4],self.boss,self.firstTimeToChange)
             s_SCENE.popupLayer:addChild(hintBoard)
             
             hintBoard.hintOver = function (  )
@@ -453,9 +454,9 @@ function NewSummaryBossLayer:gameOverFunc(win)
         elseif self.unit.unitState == 4 then
             local list = self.unit.wrongWordList[1]
              for i = 2,#self.unit.wrongWordList do
-                 list = list..'|'..self.unit.wrongWordList[i]
+                 list = list..'||'..self.unit.wrongWordList[i]
              end
-            s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - #split(self.rightWordList,'|'))
+            s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - #split(self.rightWordList,'||'))
             s_LocalDatabaseManager.addRightWord(list,self.unit.unitID)
         end
         self.boss:fly()
