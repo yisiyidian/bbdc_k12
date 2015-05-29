@@ -1,13 +1,7 @@
-require("cocos.init")
-require('common.global')
-
--- local MissionView = require("view.mission.MissionView") --任务面板
-local TaskView = require("view.taskview.TaskView")
 --选单元的界面 unit1 unit2....
---
+local TaskView = require("view.taskview.TaskView")
 
--- s_0_base_height     = 3014  ---???没用到
-s_islands_per_page  = 10
+local s_islands_per_page = 10
 local ChapterLayer = class('ChapterLayer', function() 
     return cc.Layer:create()
 end)
@@ -447,8 +441,19 @@ function ChapterLayer:callBox()
     self.boxButton:setBright(true)
 end
 
-function ChapterLayer:click_box(sender,eventType)
+--更新贝贝豆数量 在任务界面TaskView里回调
+function ChapterLayer:updateBean()
+    print("更新贝贝豆")
+    -- s_CURRENT_USER[DataUser.BEANSKEY]
+    local bean = s_CURRENT_USER:getBeans()
+    self.beanCount = bean
+    self.beanCountLabel:setString(bean)
+    -- local increments = tonumber(bean) - self.beanCount
+    -- self:shakeBeansUI(increments)
+end
 
+--宝箱触摸事件
+function ChapterLayer:click_box(sender,eventType)
     if eventType ~= ccui.TouchEventType.ended then
         return
     end
@@ -456,7 +461,7 @@ function ChapterLayer:click_box(sender,eventType)
     self.boxButton:setBright(false)
     --不可点击
     --self.boxButton:setTouchEnabled(false)
-    local taskview = TaskView.new(handler(self,self.callBox))
+    local taskview = TaskView.new(handler(self,self.callBox),handler(self, self.updateBean))
     s_SCENE:popup(taskview)
 end
 
@@ -472,27 +477,27 @@ function ChapterLayer:addBeansUI()
     self.beans:addChild(self.beanCountLabel,10)
 end
 
-function ChapterLayer:shakeBeansUI(beansIncrement)
-    if self.beanLabel ~= nil and self.beanCountLabel~=nil and self.beanCount ~=nil then
-        local beanLabelPostionX = self.beanLabel:getPositionX()
-        local beanLabelPostionY = self.beanLabel:getPositionY()
-        local beanLabelAct1 = cc.MoveTo:create(0.05,cc.p(beanLabelPostionX,beanLabelPostionY+10))
-        local beanLabelAct2 = cc.MoveTo:create(0.05,cc.p(beanLabelPostionX,beanLabelPostionY-10))
-        local beanLabelAct3 = cc.MoveTo:create(0.05,cc.p(beanLabelPostionX,beanLabelPostionY))
-        self.beanLabel:runAction(cc.Sequence:create(beanLabelAct1,beanLabelAct2,beanLabelAct3))
+-- function ChapterLayer:shakeBeansUI(beansIncrement)
+--     if self.beanLabel ~= nil and self.beanCountLabel~=nil and self.beanCount ~=nil then
+--         local beanLabelPostionX = self.beanLabel:getPositionX()
+--         local beanLabelPostionY = self.beanLabel:getPositionY()
+--         local beanLabelAct1 = cc.MoveTo:create(0.05,cc.p(beanLabelPostionX,beanLabelPostionY+10))
+--         local beanLabelAct2 = cc.MoveTo:create(0.05,cc.p(beanLabelPostionX,beanLabelPostionY-10))
+--         local beanLabelAct3 = cc.MoveTo:create(0.05,cc.p(beanLabelPostionX,beanLabelPostionY))
+--         self.beanLabel:runAction(cc.Sequence:create(beanLabelAct1,beanLabelAct2,beanLabelAct3))
 
-        self.beanCount = self.beanCount + beansIncrement
-        self.beanCountLabel:setString(self.beanCount)
+--         self.beanCount = self.beanCount + beansIncrement
+--         self.beanCountLabel:setString(self.beanCount)
         
-        local addBeanLabel = cc.Label:createWithSystemFont("+豆豆",'',20)
-        addBeanLabel:setPosition(self.beanCountLabel:getPositionX()-20,self.beanCountLabel:getPositionY()+50)
-        addBeanLabel:setColor(cc.c3b(0,0,0))
-        self.beans:addChild(addBeanLabel)
+--         local addBeanLabel = cc.Label:createWithSystemFont("+豆豆",'',20)
+--         addBeanLabel:setPosition(self.beanCountLabel:getPositionX()-20,self.beanCountLabel:getPositionY()+50)
+--         addBeanLabel:setColor(cc.c3b(0,0,0))
+--         self.beans:addChild(addBeanLabel)
         
-        local addBeanLabelAct1 = cc.MoveTo:create(0.2,cc.p(addBeanLabel:getPositionX(),addBeanLabel:getPositionY()+10))
-        local addBeanLabelAct2 = cc.FadeOut:create(0.3)
-        addBeanLabel:runAction(cc.Spawn:create(addBeanLabelAct1,addBeanLabelAct2))
-    end
-end
+--         local addBeanLabelAct1 = cc.MoveTo:create(0.2,cc.p(addBeanLabel:getPositionX(),addBeanLabel:getPositionY()+10))
+--         local addBeanLabelAct2 = cc.FadeOut:create(0.3)
+--         addBeanLabel:runAction(cc.Spawn:create(addBeanLabelAct1,addBeanLabelAct2))
+--     end
+-- end
 
 return ChapterLayer

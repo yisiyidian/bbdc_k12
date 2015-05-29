@@ -8,16 +8,18 @@ local TaskView = class("TaskView", function()
 	return layer
 end)
 
-function TaskView:ctor(callBox)
+-- 构造函数
+-- callBox      关闭界面的回调
+-- beanCallBack	贝贝豆的增加回调
+function TaskView:ctor(callBox,beanCallBack)
 	self.listView = nil
 	self.callBox = callBox
+	self.beanCallBack = beanCallBack
 	self:initUI()
 end
 
 --初始化UI
 function TaskView:initUI()
-
-	-- self:setPosition()
 	local background = cc.Sprite:create("image/islandPopup/task_background.png")
     background:setAnchorPoint(0.0,0.0)
     self.background = background
@@ -142,19 +144,17 @@ function TaskView:getRewardCallBack(taskId,index,position)
 	--减去精灵坐标 是要算出算出精灵再大的界面上的相对坐标
     local action1 = cc.MoveTo:create(1,cc.p(s_RIGHT_X-140 - self:getPositionX(), s_DESIGN_HEIGHT-70 - self:getPositionY()))
     local action2 = cc.ScaleTo:create(0.1,0)
-    local release = function()
+    local release = function(self)
     	beanImg:removeFromParent()
     	s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+    	if self.beanCallBack ~= nil then 
+    		self.beanCallBack()
+    	end
     end
-    local action4 = cc.CallFunc:create(release)
+    local action4 = cc.CallFunc:create(handler(self,release))
     beanImg:runAction(cc.Sequence:create(action0,action1,action2,action4)) 
 
-
     self:resetView()
-
-    --右上角 增加贝贝豆
-    --s_CURRENT_USER:addBeans(bean)
-	
 end
 
 return TaskView
