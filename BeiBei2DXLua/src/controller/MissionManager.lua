@@ -45,11 +45,11 @@ function MissionManager:getMissionList()
 	--1:	任务序号
     --2:	当前连续的天数 
     --3:	当前任务总天数
-    local status = 0
+    local status = "0"
     if loginTaskData[2] < loginTaskData[3] then
-    	status = 0
+    	status = "0"
     else
-    	status = 1
+    	status = "1"
     end
 
 	local loginTask = {}
@@ -112,7 +112,7 @@ function MissionManager:completeMission(taskId,index,callBack)
 			self:updateRandomMissionId() --重新生成激活任务的ID
 			self:saveTaskToLocal()
 			s_O2OController.syncMission(callBack) --同步数据 到服务器
-			local config = self:getRandomMissionConfig(taskID) ---数据多的话,这么写的效率很低
+			local config = self:getRandomMissionConfig(taskId) ---数据多的话,这么写的效率很低
 			bean = config.bean
 			s_CURRENT_USER:addBeans(bean) --获取贝贝豆
         	saveUserToServer({[DataUser.BEANSKEY] = s_CURRENT_USER[DataUser.BEANSKEY]}) --同步到
