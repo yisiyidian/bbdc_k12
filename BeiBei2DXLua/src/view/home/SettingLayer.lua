@@ -66,7 +66,7 @@ function SettingLayer:initUI()
     split:setPosition(size.width/2, 0)
     self:addChild(split)
 
-    local followButton = ccui.Button:create("image/homescene/attention_button.png","image/homescene/attention_button_press.png","image/setting/attention_button_press.png")
+    local followButton = ccui.Button:create("image/homescene/attention_button.png","image/homescene/attention_button_press.png","image/homescene/attention_button_press.png")
     followButton:setAnchorPoint(0,1)
     followButton:setPosition(400,190)
     self:addChild(followButton,10)

@@ -331,7 +331,7 @@ function MissionManager:generalTasks()
 				temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1"
 			else
 				local hit = false --命中
-				for kk,vv in pairs(temp_series_missions) do --系列任务的列表
+				for kk,vv in pairs(temp_mission_str) do --系列任务的列表
 					if vv[1] == v.mission_id then
 						hit = true
 						--计算正确的游标
