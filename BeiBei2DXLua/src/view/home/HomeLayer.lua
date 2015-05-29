@@ -126,7 +126,7 @@ function HomeLayer:ctor()
     self:addChild(offlineTipHome,2)
     self:addChild(offlineTipFriend,2)
     --设置界面
-    local setting_back = SettingLayer.new()
+    local setting_back = SettingLayer.new(self)
     setting_back:setPosition(0, s_DESIGN_HEIGHT/2)
     setting_back:updateView()
     self.setting_back = setting_back
@@ -288,14 +288,16 @@ function HomeLayer:ctor()
     self.button_friend = button_friend
     button_friend:scheduleUpdateWithPriorityLua(handler(self,self.updateFriendButton),0)
     --获取好友？？？？？ TODO fix self
-    s_UserBaseServer.getFolloweesOfCurrentUser(
-        function (api,result)
-            s_UserBaseServer.getFollowersOfCurrentUser( 
-                function (api, result)                    
+    s_UserBaseServer.getFolloweesOfCurrentUser(handler(self,
+        function (s,api,result)
+            s_UserBaseServer.getFollowersOfCurrentUser(handler(s,
+                function (s,api, result)     
                     s_CURRENT_USER:getFriendsInfo()
                     if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
                         local redHint = cc.Sprite:create('image/friend/fri_infor.png')
-                        redHint:setPosition(button_friend:getPositionX() - button_friend:getContentSize().width * 0.2, button_friend:getPositionY() + button_friend:getContentSize().height * 0.4)
+                        local pos = s.button_friend:getPosition()
+                        local size = s.button_friend:getContentSize()
+                        redHint:setPosition(pos.x - size.width * 0.2, pos.y + size.height * 0.4)
                         backColor:addChild(redHint,1,"redHint")
                         local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
                         num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
@@ -304,11 +306,11 @@ function HomeLayer:ctor()
                 end,
                 function (api, code, message, description)
                 end
-            )
+            ))
         end,
         function (api, code, message, description)
         end
-    )
+    ))
     
     --自定义的事件监听
     local listener = cc.EventListenerTouchOneByOne:create()
