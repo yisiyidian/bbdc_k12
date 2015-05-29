@@ -46,7 +46,7 @@ function TaskViewRender:init(type)
 	bbdNum:setTextColor(cc.c3b(0, 0, 0))
 	self:addChild(bbdNum)
 	--领取按钮 
-	local button_task = ccui.Button:create("image/islandPopup/task_button1.png","","image/islandPopup/task_button2.png")
+	local button_task = ccui.Button:create("image/islandPopup/task_button1.png","image/islandPopup/task_button2.png","image/islandPopup/task_button2.png")
 	button_task:setPosition(s_DESIGN_WIDTH/2 + 60,80)
 	button_task:setTouchEnabled(true)
 	button_task:addTouchEventListener(handler(self,self.onButtonTouch))
@@ -55,6 +55,16 @@ function TaskViewRender:init(type)
 	self:addChild(button_task)
 	self.button_task = button_task
 
+	--累计登陆任务完成显示文字  先隐藏
+	local labelTaskComplete = cc.Label:createWithSystemFont("恭喜你获得称号：签到达人","",30)
+	labelTaskComplete:setPosition(s_DESIGN_WIDTH/2 - 520/2 + 215,80)
+	labelTaskComplete:setAnchorPoint(0.5,0.5)
+	labelTaskComplete:setTextColor(cc.c3b(0,0,0))
+	self:addChild(labelTaskComplete)
+	labelTaskComplete:setVisible(false)
+	self.labelTaskComplete = labelTaskComplete
+
+
 	--左侧的图片更新的时候是不会变的，所以根据不同类型 写死
 	--累计登录任务类型
 	if type == MissionConfig.MISSION_LOGIN then
@@ -62,7 +72,7 @@ function TaskViewRender:init(type)
 		self.imgbig:setTexture(imglogin)
 		self.imgsmall:setVisible(false)
 		--添加按钮名字 添加label 累计登陆上的天数
-	    local labelday = cc.Label:createWithSystemFont("23","",26)
+	    local labelday = cc.Label:createWithSystemFont("10","",26)
 		labelday:setPosition(s_DESIGN_WIDTH/2 - 520/2 - 10, 40)
 		labelday:setAnchorPoint(0.5,0.5)
 		self.labelday = labelday
@@ -96,6 +106,13 @@ function TaskViewRender:updataView()
 		--是否完成全部任务
 		if self.index == 0 then
 			--TODO 完成全部累计登陆任务
+			--隐藏label 与按钮 贝贝豆数量
+			self.labelTask:setVisible(false)
+			self.button_task:setVisible(false)
+			self.bbdNum:setVisible(false)
+			self.labelTaskComplete:setVisible(true)
+			self.labelday:setString(self.nowCount)
+
 		else
 			--获取用户连续多少天登录 贝贝豆数量
 			local LoginTaskBBD = "奖励："..self.totalCount.."贝贝豆"
