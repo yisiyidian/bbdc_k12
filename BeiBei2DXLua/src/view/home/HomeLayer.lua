@@ -150,7 +150,7 @@ function HomeLayer:ctor()
 
     if checkIn then
         --触发打卡任务
-        s_MissionManager:updateMission(MissionConfig.MISSION_DAKA)
+        s_MissionManager:updateMission(MissionConfig.MISSION_DAKA,1,false)
     end
 
     self.mission_progress = mission_progress
