@@ -1,11 +1,7 @@
 require "common.global"
 
-local ReviewBossLayer        = require("view.reviewboss.reviewbossI.ReviewBossLayer")
-local ReviewBossLayerII      = require("view.reviewboss.reviewbossII.ReviewBossLayerII")
-local ReviewBossLayerIII     = require("view.reviewboss.reviewbossIII.ReviewBossLayerIII")
 local IntroLayer             = require("view.login.IntroLayer")
 local HomeLayer              = require("view.home.HomeLayer")
-local LevelLayer             = require("view.LevelLayer")
 local BookLayer              = require("view.book.BookLayer")
 local EducationLayer         = require("view.book.EducationSelect")
 local DownloadLayer          = require("view.book.DownloadLayer")
