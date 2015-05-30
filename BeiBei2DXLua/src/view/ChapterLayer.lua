@@ -455,6 +455,7 @@ function ChapterLayer:callBox()
     --改变按钮点击状态
     self.boxButton:setBright(true)
     self:updataBoxState()
+    self.boxButton:setTouchEnabled(true)
 end
 
 --更新贝贝豆数量 在任务界面TaskView里回调
@@ -478,7 +479,7 @@ function ChapterLayer:click_box(sender,eventType)
     --弹出任务面板
     self.boxButton:setBright(false)
     --不可点击
-    --self.boxButton:setTouchEnabled(false)
+    self.boxButton:setTouchEnabled(false)
     local taskview = TaskView.new(handler(self,self.callBox),handler(self, self.updateBean))
     s_SCENE:popup(taskview)
 end
