@@ -1,7 +1,7 @@
 -- 词库渲染
 local WordCardRender = class("WordCardRender", function()
 	local layer = ccui.Layout:create()
-	layer:setContentSize(cc.size(541,160))
+	layer:setContentSize(cc.size(560,120))
 	return layer
 end)
 
@@ -25,6 +25,9 @@ function WordCardRender:init()
     playSoundButton:addTouchEventListener(handler(self,self.PlaySound))
     self.playSoundButton = playSoundButton
     self:addChild(self.playSoundButton)
+
+    self:setTouchEnabled(true)
+    self:addTouchEventListener(handler(self,self.PlaySound))
 
     local poxitionX = playSoundButton:getContentSize().width
     local poxitionY = playSoundButton:getContentSize().height
@@ -71,9 +74,9 @@ function WordCardRender:init()
 
     -- 分割线
     local line = cc.Sprite:create("image/islandPopup/parting_line.png")
-    line:setPosition(layerWidth*0.4, 0)
+    line:setPosition(48, 0)
     line:ignoreAnchorPointForPosition(false)
-    line:setAnchorPoint(0.5,0.5)
+    line:setAnchorPoint(0,0.5)
     self.line = line
     self:addChild(self.line)
 
@@ -109,7 +112,7 @@ function WordCardRender:updataView()
     positionX = self.playSoundButton:getPositionX() + self.playSoundButton:getContentSize().width + 40
     self.wordLabel:setPositionX(positionX)
 	self.wordLabel:setString(self.word)
-    positionX = positionX + self.wordLabel:getContentSize().width + 70
+    positionX = positionX + self.wordLabel:getContentSize().width + 38
     self.wordMeaningLabel:setPositionX(positionX)
 	self.wordMeaningLabel:setString(self.meaning)
 end

@@ -31,10 +31,11 @@ function WordCardView:initUI()
     -- 提示信息
     local text = cc.Label:createWithSystemFont("挑战前先看看吧","",32)
     text:setColor(cc.c4b(255,255,255,255))
-    text:setPosition(backPopupWidth/2,backPopupHeight* 0.9)
+    text:setPosition(backPopupWidth/2,backPopupHeight* 0.93)
  	self.text = text
     self.backPopup:addChild(self.text)
 
+   	--单词信息
     local listView = ccui.ScrollView:create()
     listView:setDirection(ccui.ScrollViewDir.vertical)
     listView:setBounceEnabled(false)
@@ -46,10 +47,10 @@ function WordCardView:initUI()
     self.listView = listView
 
     -- 返回按钮
-    local returnButton = ccui.Button:create("image/islandPopup/unit_words_back_button.png","image/islandPopup/unit_words_back.png","")
+    local returnButton = ccui.Button:create("image/islandPopup/unit_words_back.png","image/islandPopup/unit_words_back_button.png","")
 	returnButton:addTouchEventListener(handler(self,self.ReturnClick))
 	self.returnButton = returnButton
-	self.returnButton:setPosition(50,backPopupHeight - 50)
+	self.returnButton:setPosition(75,backPopupHeight - 65)
 	self.backPopup:addChild(self.returnButton)
 	--渲染列表
 	self:resetView()
@@ -59,6 +60,7 @@ function WordCardView:initUI()
 end
 
 function WordCardView:resetView()
+	-- 小岛编号 注意加1
 	self.islandIndex = tonumber(self.index) + 1
 	self.unit = s_LocalDatabaseManager.getUnitInfo(self.islandIndex)
 	self.wordList = {}
@@ -75,9 +77,10 @@ function WordCardView:resetView()
 	local render = nil 
 	local renders = {} 
 	local innerHeight = self.backPopup:getContentSize().height * 0.75
-	local renderheight = 160
+	local renderheight = 120
 	self.listView:removeAllChildren()
 
+	-- 填充信息
 	for i = 1,#self.wordList do
 		render = WordCardRender.new(self.wordList[i],self.meaningList[i])
 	    render:setData()
@@ -85,16 +88,20 @@ function WordCardView:resetView()
 		self.listView:addChild(render)
 	end
 
+	-- 第一个单词高度信息
 	if innerHeight < renderheight * #self.wordList then
 		innerHeight = renderheight * #self.wordList
 		self:createSlider(innerHeight)
 	end
+
+	-- 调整高度
 	local tlen = innerHeight - renderheight
 	for _,rd in pairs(renders) do
-		rd:setPosition(50,tlen)
+		rd:setPosition(0,tlen)
 		tlen = tlen - renderheight	
 	end
 
+	-- 容器高度
 	self.listView:setInnerContainerSize(cc.size(self.backPopup:getContentSize().width,renderheight * #self.wordList))
 end
 
@@ -107,6 +114,7 @@ function WordCardView:ReturnClick(sender,eventType)
 	self:CloseFunc()
 end
 
+-- 滚动条创建
 function WordCardView:createSlider(innerHeight)
 	local slider = cc.Sprite:create("image/islandPopup/unit_words_scrollbar_bg.png")
     slider:setPosition(self.backPopup:getContentSize().width * 0.9,self.backPopup:getContentSize().height * 0.8)
@@ -124,13 +132,14 @@ function WordCardView:createSlider(innerHeight)
 
     local function update(delta)
         local h = -self.listView:getInnerContainer():getPositionY()
-        local height = (self.slider:getContentSize().height - self.bar:getContentSize().height) * h * 1.5 / innerHeight + self.bar:getContentSize().height
+        local height = (self.slider:getContentSize().height - self.bar:getContentSize().height) * h * 2.2 / innerHeight + self.bar:getContentSize().height
         self.bar:setPositionY(height)
     end
 
     self:scheduleUpdateWithPriorityLua(update, 0)
 end
 
+-- 返回事件
 function WordCardView:CloseFunc()
     local remove = cc.CallFunc:create(function() 
        	local LevelProgressPopup = require("view.islandPopup.LevelProgressPopup")
