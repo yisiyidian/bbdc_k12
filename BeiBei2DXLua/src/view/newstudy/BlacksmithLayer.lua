@@ -34,6 +34,9 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
     wordMeaningTable[1] = wordMeaningTable[rightIndex]
     wordMeaningTable[rightIndex] = tmp
 
+    dump(wordMeaningTable,"趁热打铁 选项")
+    dump(randomNameArray,"趁热打铁 randomNameArray")
+
     local button_func = function(button)
             local feedback 
             if button.tag == 1 then  
@@ -67,8 +70,7 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
                   action4,
                   cc.CallFunc:create(function()
                     if #wordlist == 0 then  
-                        s_MissionManager:updateMission(MissionConfig.MISSION_DATIE)
-                        print("aaaaaaaaaa")
+                        s_MissionManager:updateMission(MissionConfig.MISSION_DATIE) --趁热打铁
                         if self.islandIndex ~= nil then
                             s_CorePlayManager.enterLevelLayer()
                             s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()

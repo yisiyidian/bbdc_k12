@@ -366,9 +366,10 @@ function MissionManager:generalTasks()
 			end
 		end
 		self.missionData.taskList = mission_str
+
+		self:updateRandomMissionId()   -- 重新生成激活任务的ID
 	end
 	
-	self:updateRandomMissionId()   -- 重新生成激活任务的ID
 	self.missionData.lastLoginDate = os.time()  	--取当前的时间
 	self.missionData.totalLoginDay = loginDay
 	self.missionData.taskGenDate   = taskGenDate 	--任务列表生成时间
