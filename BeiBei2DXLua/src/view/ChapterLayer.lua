@@ -416,29 +416,45 @@ function ChapterLayer:addTaskBOX()
     self:addChild(boxButton,200)
     boxButton:setBright(true)
     self.boxButton = boxButton
-    
-    --获取任务列表 
-    -- local MissionManager = require("controller.MissionManager")     --任务管理器
-    self.missionlist = s_MissionManager:getMissionList()
-    dump(self.missionlist)
-    --根据是否有可以领取的任务 判断宝箱是否晃动
-    if self.missionlist[1][2] == 1 then
-    --有可以完成的任务
-    --宝箱晃动
-        local action1 = cc.MoveBy:create(0.05,cc.p(5,0))
-        local action2 = action1:reverse()
-        local action3 = cc.RepeatForever:create(cc.Sequence:create(action1, action2))
-        self.boxButton:runAction(action3)
-    else
-        --停止所有动作
-        self.boxButton:stopAllActions()
+
+    s_MissionManager:setCanCompleteCallBack(handler(self,self.updataBoxState))
+
+    self:updataBoxState()
+
+end
+
+--更新宝箱状态  在任务界面TaskView里回调
+function ChapterLayer:updataBoxState()
+
+    local missionlist = s_MissionManager:getMissionList()
+    local canComCount = 0
+    for k,v in pairs(missionlist) do
+        if v[2] == "1" then
+            canComCount = canComCount + 1
+            if self.boxButton ~= nil and not tolua.isnull(self.boxButton) then
+                --宝箱晃动
+                local action1 = cc.MoveBy:create(0.05,cc.p(5,0))
+                local action2 = action1:reverse()
+                local action3 = cc.RepeatForever:create(cc.Sequence:create(action1, action2))
+                self.boxButton:runAction(action3)
+                break
+            end
+        end
     end
+
+    if canComCount == 0 then
+        if self.boxButton ~= nil and not tolua.isnull(self.boxButton) then
+            self.boxButton:stopAllActions()
+        end
+    end
+
 end
 
 --关闭宝箱
 function ChapterLayer:callBox()
     --改变按钮点击状态
     self.boxButton:setBright(true)
+    self:updataBoxState()
 end
 
 --更新贝贝豆数量 在任务界面TaskView里回调
@@ -457,6 +473,8 @@ function ChapterLayer:click_box(sender,eventType)
     if eventType ~= ccui.TouchEventType.ended then
         return
     end
+    --箱子停止抖动
+    self.boxButton:stopAllActions()
     --弹出任务面板
     self.boxButton:setBright(false)
     --不可点击

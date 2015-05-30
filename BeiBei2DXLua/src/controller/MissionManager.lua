@@ -34,6 +34,7 @@ local DataMission    = require("model.user.DataMission")
 function MissionManager:ctor()
 	self.taskNum = 6 		--随机任务数量
 	self.missionData = nil  --任务数据
+
 end
 
 --获取当前的任务列表 --View层调用
@@ -93,6 +94,14 @@ function MissionManager:updateMission(missionId,missionsData,addData,callBack)
 			end
 		end
 	end
+
+	--如果有可以领取的任务 调用回调函数以更新箱子状态
+	if re then
+		if self.canCompleteCallBack ~= nil then
+	   		self.canCompleteCallBack()
+		end
+	end
+
 	self.missionData.taskList = self:tableToStr(tb)
 	self:saveTaskToLocal()
 	s_O2OController.syncMission(callBack)  --同步数据 到服务器
@@ -193,6 +202,13 @@ function MissionManager:completeMission(taskId,index,callBack)
 		return re,bean
 	end
 end
+
+---设置完成任务状态的回调
+function MissionManager:setCanCompleteCallBack(canCompleteCallBack)
+	self.canCompleteCallBack = canCompleteCallBack   --宝箱回调
+end
+
+
 
 --------------------------------------------------------------------------------------------------------------------
 --根据ID 获取指定任务的配置

@@ -115,7 +115,6 @@ function TaskView:CloseClick(sender,eventType)
 	end
 
 	end)
-	print("关闭宝箱动作")
 	self:runAction(cc.Sequence:create(action5,action4,action6))
 
 end
@@ -141,7 +140,7 @@ function TaskView:getRewardCallBack(taskId,index,position)
 
 	local action0 = cc.DelayTime:create(1)
 	--要减去起始点的坐标  s_RIGHT_X为界面最右边的坐标（ipad会比iphone长一点 所以s_DESIGN_WIDTH不是左右边坐标）
-	--减去精灵坐标 是要算出算出精灵再大的界面上的相对坐标
+	--减去精灵坐标 是要算出算出精灵在大的界面上的相对坐标
     local action1 = cc.MoveTo:create(1,cc.p(s_RIGHT_X-140 - self:getPositionX(), s_DESIGN_HEIGHT-70 - self:getPositionY()))
     local action2 = cc.ScaleTo:create(0.1,0)
     local release = function(self)
@@ -153,7 +152,6 @@ function TaskView:getRewardCallBack(taskId,index,position)
     end
     local action4 = cc.CallFunc:create(handler(self,release))
     beanImg:runAction(cc.Sequence:create(action0,action1,action2,action4)) 
-
     self:resetView()
 end
 

@@ -114,7 +114,6 @@ function TaskViewRender:updataView()
 
 		--是否完成全部任务
 		if self.index == 0 then
-			--TODO 完成全部累计登陆任务
 			--隐藏label 与按钮 贝贝豆数量
 			self.labelTask:setVisible(false)
 			self.button_task:setVisible(false)
@@ -135,7 +134,6 @@ function TaskViewRender:updataView()
 		end
 	else
 		if self.taskID == 0 then
-			--TODO 完成全部累计登陆任务
 			--隐藏label 与按钮 贝贝豆数量
 			self.labelTask:setVisible(false)
 			self.button_task:setVisible(false)
