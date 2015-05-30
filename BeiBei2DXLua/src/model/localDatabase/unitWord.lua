@@ -216,12 +216,12 @@ function M.getUnitInfo(unitID)
         unit.wrongWordList  = s_BookUnitWord[bookKey][''..unitID]
         print('rightWordList',unit.rightWordList)
          print('wrongWordList',unit.wrongWordList)
-        unit.wrongWordList = split(unit.wrongWordList, "|")
+        unit.wrongWordList = split(unit.wrongWordList, "||")
          
         if  unit.rightWordList == '' then
             unit.rightWordList = {}
         else
-            unit.rightWordList = split(unit.rightWordList, "|")
+            unit.rightWordList = split(unit.rightWordList, "||")
             -- for i = 1, #unit.rightWordList do
             --     local wordname = unit.rightWordList[i]
             --     hash[wordname] = 1
@@ -534,7 +534,7 @@ function M.getAllWrongWordList()
     local wordPool = {}
     for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." ORDER BY unitID ;") do
         if row.wordList ~= '' then
-            local t = split(row.wordList, "|")
+            local t = split(row.wordList, "||")
             for i = 1, #t do
                 table.insert(wordPool, t[i])
             end

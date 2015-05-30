@@ -144,7 +144,7 @@ function DataManager.loadK12Books()
                                 bookUnitWord[bookName[i]][unit_word[1]] = unit_word[2]
                                 current_unit = unit_word[1]
                             else
-                                bookUnitWord[bookName[i]][unit_word[1]] = bookUnitWord[bookName[i]][unit_word[1]]..'|'..unit_word[2]
+                                bookUnitWord[bookName[i]][unit_word[1]] = bookUnitWord[bookName[i]][unit_word[1]]..'||'..unit_word[2]
                                 print(bookUnitWord[bookName[i]][unit_word[1]])
                             end
                         else
@@ -152,7 +152,7 @@ function DataManager.loadK12Books()
                                 bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = unit_word[2]
                                 current_unit = unit_word[1]+1
                             else
-                                bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = bookUnitWord[bookName[i]][''..(unit_word[1]+1)]..'|'..unit_word[2]
+                                bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = bookUnitWord[bookName[i]][''..(unit_word[1]+1)]..'||'..unit_word[2]
                             end
                         end
                     else
@@ -162,7 +162,7 @@ function DataManager.loadK12Books()
                             current_unit = unit_word[1]+1
                         else
                             print(''..(unit_word[1]+1))
-                            bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = bookUnitWord[bookName[i]][''..(unit_word[1]+1)]..'|'..unit_word[2]
+                            bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = bookUnitWord[bookName[i]][''..(unit_word[1]+1)]..'||'..unit_word[2]
                         end
                     end
                     -- table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])

@@ -96,9 +96,11 @@ function LevelProgressPopup:createSummary(index)
     local function button_func(  )
         playSound(s_sound_buttonEffect) 
 
+
         local bossList = s_LocalDatabaseManager.getAllUnitInfo()
         local maxID = s_LocalDatabaseManager.getMaxUnitID()
         if self.unit.coolingDay > 0 or self.unit.unitState >= 5 then
+            showProgressHUD('', true)
             --print('replay island')
             local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
             local summaryBossLayer = SummaryBossLayer.create(self.unit)
@@ -115,10 +117,12 @@ function LevelProgressPopup:createSummary(index)
             end
         end    
 
-        if taskIndex == -2 then         
+        if taskIndex == -2 then     
+            showProgressHUD('', true)    
             s_CorePlayManager.initTotalUnitPlay() -- 之前没有boss
             s_SCENE:removeAllPopups()  
         elseif taskIndex == self.islandIndex then
+            showProgressHUD('', true) 
             s_CorePlayManager.initTotalUnitPlay() -- 按顺序打第一个boss
             s_SCENE:removeAllPopups()  
         else
