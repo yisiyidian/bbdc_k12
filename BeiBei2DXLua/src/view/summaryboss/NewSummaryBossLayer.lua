@@ -343,7 +343,7 @@ function NewSummaryBossLayer:initMat()
         end
         --更换mat
         s_SCENE:callFuncWithDelay(0.2 *math.pow(#stack,0.8) + 0.5,function ()
-            print('self.currentBlood',self.currentBlood)
+            --print('self.currentBlood',self.currentBlood)
             if self.currentBlood > 0 then
                 playMusic(s_sound_Get_Outside)
                 self.boss:goBack(self.totalTime)
