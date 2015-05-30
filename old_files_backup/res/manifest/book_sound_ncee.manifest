@@ -1,0 +1,17 @@
+{ 
+	"packageUrl" : "http://123.56.84.196/BookSoundBag/",
+	"remoteManifestUrl" : "http://123.56.84.196/BookSoundBag/book_sound_ncee_server.manifest", 
+	"remoteVersionUrl" : "http://123.56.84.196/BookSoundBag/book_sound_ncee_version.manifest", 
+	"version" : "1.6.0.0", 
+	"engineVersion" : "3.3 rc2", 
+	"assets" : {	
+		"ncee.zip" : {
+			"md5" : "0d4c9e8705ea07793049373cf8ad0bde",
+			"compressed" : true
+		}
+	}, 
+
+	"searchPaths" : [
+	
+    ] 
+}

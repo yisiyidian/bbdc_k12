@@ -1,0 +1,174 @@
+
+coconut_dark.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+coconut_bumb1
+  rotate: false
+  xy: 2, 758
+  size: 183, 215
+  orig: 183, 215
+  offset: 0, 0
+  index: -1
+coconut_bumb2
+  rotate: false
+  xy: 2, 541
+  size: 183, 215
+  orig: 183, 215
+  offset: 0, 0
+  index: -1
+coconut_bumb3
+  rotate: false
+  xy: 187, 758
+  size: 183, 215
+  orig: 183, 215
+  offset: 0, 0
+  index: -1
+coconut_bumb4
+  rotate: false
+  xy: 2, 324
+  size: 183, 215
+  orig: 183, 215
+  offset: 0, 0
+  index: -1
+coconut_bumb5
+  rotate: false
+  xy: 2, 3
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+coconut_font
+  rotate: false
+  xy: 339, 295
+  size: 115, 114
+  orig: 115, 114
+  offset: 0, 0
+  index: -1
+light_coconut_back
+  rotate: false
+  xy: 2, 174
+  size: 148, 148
+  orig: 148, 148
+  offset: 0, 0
+  index: -1
+light_coconut_down1
+  rotate: false
+  xy: 187, 609
+  size: 152, 147
+  orig: 152, 147
+  offset: 0, 0
+  index: -1
+light_coconut_down2
+  rotate: false
+  xy: 670, 840
+  size: 151, 133
+  orig: 151, 133
+  offset: 0, 0
+  index: -1
+light_coconut_down3
+  rotate: false
+  xy: 372, 693
+  size: 151, 129
+  orig: 151, 129
+  offset: 0, 0
+  index: -1
+light_coconut_down4
+  rotate: false
+  xy: 187, 326
+  size: 150, 134
+  orig: 150, 134
+  offset: 0, 0
+  index: -1
+light_coconut_font
+  rotate: false
+  xy: 372, 824
+  size: 150, 149
+  orig: 150, 149
+  offset: 0, 0
+  index: -1
+light_coconut_left1
+  rotate: false
+  xy: 2, 25
+  size: 142, 147
+  orig: 142, 147
+  offset: 0, 0
+  index: -1
+light_coconut_left2
+  rotate: true
+  xy: 645, 560
+  size: 128, 147
+  orig: 128, 147
+  offset: 0, 0
+  index: -1
+light_coconut_left3
+  rotate: false
+  xy: 471, 412
+  size: 127, 147
+  orig: 127, 147
+  offset: 0, 0
+  index: -1
+light_coconut_left4
+  rotate: true
+  xy: 525, 690
+  size: 132, 148
+  orig: 132, 148
+  offset: 0, 0
+  index: -1
+light_coconut_right1
+  rotate: false
+  xy: 524, 824
+  size: 144, 149
+  orig: 144, 149
+  offset: 0, 0
+  index: -1
+light_coconut_right2
+  rotate: false
+  xy: 339, 411
+  size: 130, 149
+  orig: 130, 149
+  offset: 0, 0
+  index: -1
+light_coconut_right3
+  rotate: true
+  xy: 341, 562
+  size: 129, 150
+  orig: 129, 150
+  offset: 0, 0
+  index: -1
+light_coconut_right4
+  rotate: false
+  xy: 675, 690
+  size: 132, 148
+  orig: 132, 148
+  offset: 0, 0
+  index: -1
+light_coconut_up1
+  rotate: false
+  xy: 187, 462
+  size: 150, 145
+  orig: 150, 145
+  offset: 0, 0
+  index: -1
+light_coconut_up2
+  rotate: false
+  xy: 809, 706
+  size: 150, 131
+  orig: 150, 131
+  offset: 0, 0
+  index: -1
+light_coconut_up3
+  rotate: false
+  xy: 493, 561
+  size: 150, 127
+  orig: 150, 127
+  offset: 0, 0
+  index: -1
+light_coconut_up4
+  rotate: false
+  xy: 823, 839
+  size: 150, 134
+  orig: 150, 134
+  offset: 0, 0
+  index: -1

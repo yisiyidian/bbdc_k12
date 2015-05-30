@@ -1,0 +1,48 @@
+
+chuan.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+beibei
+  rotate: true
+  xy: 2, 32
+  size: 48, 85
+  orig: 48, 85
+  offset: 0, 0
+  index: -1
+chuan
+  rotate: false
+  xy: 89, 181
+  size: 160, 68
+  orig: 160, 68
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 2, 22
+  size: 30, 8
+  orig: 30, 8
+  offset: 0, 0
+  index: -1
+fan
+  rotate: false
+  xy: 2, 82
+  size: 85, 167
+  orig: 85, 167
+  offset: 0, 0
+  index: -1
+kou
+  rotate: false
+  xy: 89, 155
+  size: 5, 6
+  orig: 5, 6
+  offset: 0, 0
+  index: -1
+ziti
+  rotate: false
+  xy: 89, 163
+  size: 35, 16
+  orig: 35, 16
+  offset: 0, 0
+  index: -1

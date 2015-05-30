@@ -1,0 +1,13 @@
+
+yindaoye_shoudonghua_dianji.png
+size: 149,149
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shoudonghua_yindaoye
+  rotate: false
+  xy: 2, 26
+  size: 147, 123
+  orig: 147, 123
+  offset: 0, 0
+  index: -1

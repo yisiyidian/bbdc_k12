@@ -1,0 +1,81 @@
+{
+"skeleton": { "spine": "1.9.17", "hash": "IxMhrVj62ab0Nq541yVnaTO2yy8", "width": 119.8, "height": 135.43 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 28.55, "x": 265.42, "y": -66.8, "rotation": -70.08 },
+	{ "name": "bone2", "parent": "root", "x": 206.11, "y": -99.2 },
+	{ "name": "bone3", "parent": "root", "x": 510.78, "y": -70.19 }
+],
+"slots": [
+	{ "name": "level_qiqiu5_dh_2", "bone": "root", "attachment": "level_qiqiu5_dh_2" },
+	{ "name": "level_qiqiu3_dh_2", "bone": "bone", "attachment": "level_qiqiu3_dh_2" },
+	{ "name": "level_qiqiu4_dh_2", "bone": "root", "attachment": "level_qiqiu4_dh_2" },
+	{ "name": "level_qiqiu2_dh_2", "bone": "bone3", "attachment": "level_qiqiu2_dh_2" },
+	{ "name": "level_qiqiu1_dh_2", "bone": "bone2", "attachment": "level_qiqiu1_dh_2" }
+],
+"skins": {
+	"default": {
+		"level_qiqiu1_dh_2": {
+			"level_qiqiu1_dh_2": { "x": -0.73, "y": 1.33, "rotation": -1.09, "width": 52, "height": 52 }
+		},
+		"level_qiqiu2_dh_2": {
+			"level_qiqiu2_dh_2": { "x": -305.72, "y": -41.93, "rotation": -1.09, "width": 84, "height": 71 }
+		},
+		"level_qiqiu3_dh_2": {
+			"level_qiqiu3_dh_2": { "x": 14.02, "y": 0.72, "rotation": 68.99, "width": 22, "height": 36 }
+		},
+		"level_qiqiu4_dh_2": {
+			"level_qiqiu4_dh_2": { "x": 235.05, "y": -57.6, "rotation": -1.09, "width": 86, "height": 78 }
+		},
+		"level_qiqiu5_dh_2": {
+			"level_qiqiu5_dh_2": { "x": 232.45, "y": -106.91, "rotation": -1.09, "width": 90, "height": 91 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"bone": {
+				"rotate": [
+					{
+						"time": 0,
+						"angle": 0,
+						"curve": [ 0.25, 0, 0.521, 1 ]
+					},
+					{
+						"time": 1,
+						"angle": 56.11,
+						"curve": [ 0.25, 0, 0.398, 1 ]
+					},
+					{ "time": 2, "angle": 0 },
+					{
+						"time": 3,
+						"angle": 56.11,
+						"curve": [ 0.25, 0, 0.398, 1 ]
+					},
+					{ "time": 4, "angle": 0 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0, "curve": "stepped" },
+					{ "time": 2, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 2, "x": 12.08, "y": -11.28 },
+					{ "time": 4, "x": 0, "y": 0 }
+				]
+			},
+			"bone3": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 2, "x": 12.89, "y": -4.03 },
+					{ "time": 4, "x": 0, "y": 0 }
+				]
+			}
+		}
+	}
+}
+}

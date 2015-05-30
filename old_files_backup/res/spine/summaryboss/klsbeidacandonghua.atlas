@@ -1,0 +1,146 @@
+
+klsbeidacandonghua.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bengdaixuan
+  rotate: false
+  xy: 236, 359
+  size: 43, 44
+  orig: 43, 44
+  offset: 0, 0
+  index: -1
+bengdaiyinying
+  rotate: false
+  xy: 160, 405
+  size: 155, 105
+  orig: 155, 105
+  offset: 0, 0
+  index: -1
+duzi
+  rotate: true
+  xy: 2, 42
+  size: 130, 96
+  orig: 130, 96
+  offset: 0, 0
+  index: -1
+jiao
+  rotate: true
+  xy: 2, 2
+  size: 38, 33
+  orig: 38, 33
+  offset: 0, 0
+  index: -1
+moutch
+  rotate: false
+  xy: 317, 483
+  size: 62, 27
+  orig: 62, 27
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: false
+  xy: 2, 340
+  size: 156, 170
+  orig: 156, 170
+  offset: 0, 0
+  index: -1
+shetou
+  rotate: false
+  xy: 381, 485
+  size: 29, 25
+  orig: 29, 25
+  offset: 0, 0
+  index: -1
+weiba
+  rotate: false
+  xy: 160, 345
+  size: 74, 58
+  orig: 74, 58
+  offset: 0, 0
+  index: -1
+yanlie
+  rotate: false
+  xy: 359, 468
+  size: 5, 13
+  orig: 5, 13
+  offset: 0, 0
+  index: -1
+youbi
+  rotate: false
+  xy: 122, 274
+  size: 34, 64
+  orig: 34, 64
+  offset: 0, 0
+  index: -1
+youyan
+  rotate: false
+  xy: 317, 442
+  size: 40, 39
+  orig: 40, 39
+  offset: 0, 0
+  index: -1
+youyanbai
+  rotate: true
+  xy: 122, 233
+  size: 39, 16
+  orig: 39, 16
+  offset: 0, 0
+  index: -1
+youyanbengdai
+  rotate: false
+  xy: 281, 371
+  size: 17, 32
+  orig: 17, 32
+  offset: 0, 0
+  index: -1
+youyanren
+  rotate: false
+  xy: 74, 32
+  size: 9, 8
+  orig: 9, 8
+  offset: 0, 0
+  index: -1
+zuilimian
+  rotate: true
+  xy: 100, 122
+  size: 50, 13
+  orig: 50, 13
+  offset: 0, 0
+  index: -1
+zuobi
+  rotate: true
+  xy: 2, 174
+  size: 164, 118
+  orig: 164, 118
+  offset: 0, 0
+  index: -1
+zuoyan
+  rotate: false
+  xy: 37, 8
+  size: 35, 32
+  orig: 35, 32
+  offset: 0, 0
+  index: -1
+zuoyanbai
+  rotate: false
+  xy: 236, 348
+  size: 32, 9
+  orig: 32, 9
+  offset: 0, 0
+  index: -1
+zuoyanren
+  rotate: false
+  xy: 100, 115
+  size: 6, 5
+  orig: 6, 5
+  offset: 0, 0
+  index: -1
+zuoyanzhu
+  rotate: false
+  xy: 317, 409
+  size: 15, 31
+  orig: 15, 31
+  offset: 0, 0
+  index: -1

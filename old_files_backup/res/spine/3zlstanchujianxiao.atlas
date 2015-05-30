@@ -1,0 +1,90 @@
+
+3zlstanchujianxiao.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bai eye
+  rotate: true
+  xy: 241, 332
+  size: 39, 18
+  orig: 39, 18
+  offset: 0, 0
+  index: -1
+erduo副本
+  rotate: false
+  xy: 273, 392
+  size: 144, 111
+  orig: 144, 111
+  offset: 0, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 84
+  size: 159, 157
+  orig: 159, 157
+  offset: 0, 0
+  index: -1
+foot
+  rotate: false
+  xy: 2, 373
+  size: 269, 130
+  orig: 269, 130
+  offset: 0, 0
+  index: -1
+lift eye
+  rotate: false
+  xy: 115, 38
+  size: 43, 44
+  orig: 43, 44
+  offset: 0, 0
+  index: -1
+liuhai副本
+  rotate: true
+  xy: 195, 271
+  size: 100, 44
+  orig: 100, 44
+  offset: 0, 0
+  index: -1
+moutch
+  rotate: true
+  xy: 163, 175
+  size: 66, 28
+  orig: 66, 28
+  offset: 0, 0
+  index: -1
+right
+  rotate: false
+  xy: 419, 459
+  size: 44, 44
+  orig: 44, 44
+  offset: 0, 0
+  index: -1
+toufa副本
+  rotate: false
+  xy: 2, 243
+  size: 191, 128
+  orig: 191, 128
+  offset: 0, 0
+  index: -1
+yachi
+  rotate: false
+  xy: 273, 375
+  size: 50, 15
+  orig: 50, 15
+  offset: 0, 0
+  index: -1
+yinying
+  rotate: false
+  xy: 2, 2
+  size: 111, 80
+  orig: 111, 80
+  offset: 0, 0
+  index: -1
+youbaieye
+  rotate: false
+  xy: 195, 251
+  size: 40, 18
+  orig: 40, 18
+  offset: 0, 0
+  index: -1

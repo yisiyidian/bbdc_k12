@@ -1,0 +1,27 @@
+
+fuxiboss_bea_dispare.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+button_audupus_wright_boss2_an1
+  rotate: false
+  xy: 2, 238
+  size: 215, 135
+  orig: 215, 135
+  offset: 0, 0
+  index: -1
+button_audupus_wright_boss2_an2
+  rotate: false
+  xy: 2, 114
+  size: 188, 122
+  orig: 188, 122
+  offset: 0, 0
+  index: -1
+button_audupus_wright_boss2_an3
+  rotate: false
+  xy: 219, 277
+  size: 154, 96
+  orig: 154, 96
+  offset: 0, 0
+  index: -1

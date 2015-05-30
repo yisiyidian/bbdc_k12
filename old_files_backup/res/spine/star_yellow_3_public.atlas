@@ -1,0 +1,20 @@
+
+star_yellow_3_public.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+star_gray_public
+  rotate: false
+  xy: 2, 106
+  size: 109, 106
+  orig: 109, 106
+  offset: 0, 0
+  index: -1
+star_yellow_public
+  rotate: false
+  xy: 2, 2
+  size: 106, 102
+  orig: 106, 102
+  offset: 0, 0
+  index: -1

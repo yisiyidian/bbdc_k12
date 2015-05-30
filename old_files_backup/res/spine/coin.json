@@ -1,0 +1,220 @@
+{
+"skeleton": {
+	"hash": "kJ4x+uVI9wTBvDtpTXH3zp1OiRs",
+	"spine": "2.0.23",
+	"width": 139,
+	"height": 116,
+	"images": "/Users/ziaoang/Documents/git/BeiBeiDanCiX/raw/spine/image/coin"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" }
+],
+"slots": [
+	{ "name": "coin", "bone": "bone", "attachment": "global_coin_up6" }
+],
+"skins": {
+	"default": {
+		"coin": {
+			"global_coin_back": { "width": 140, "height": 135 },
+			"global_coin_down1": { "width": 137, "height": 132 },
+			"global_coin_down2": { "width": 138, "height": 116 },
+			"global_coin_down3": { "width": 140, "height": 116 },
+			"global_coin_down4": { "width": 139, "height": 116 },
+			"global_coin_down5": { "width": 138, "height": 116 },
+			"global_coin_down6": { "width": 137, "height": 116 },
+			"global_coin_left1": { "width": 132, "height": 137 },
+			"global_coin_left2": { "width": 115, "height": 138 },
+			"global_coin_left3": { "width": 115, "height": 140 },
+			"global_coin_left4": { "width": 115, "height": 139 },
+			"global_coin_left5": { "width": 115, "height": 138 },
+			"global_coin_left6": { "width": 115, "height": 137 },
+			"global_coin_normal": { "width": 127, "height": 122 },
+			"global_coin_right1": { "width": 132, "height": 137 },
+			"global_coin_right2": { "width": 115, "height": 138 },
+			"global_coin_right3": { "width": 115, "height": 140 },
+			"global_coin_right4": { "width": 115, "height": 139 },
+			"global_coin_right5": { "width": 115, "height": 138 },
+			"global_coin_right6": { "width": 115, "height": 137 },
+			"global_coin_selcet": { "width": 140, "height": 135 },
+			"global_coin_up1": { "width": 137, "height": 132 },
+			"global_coin_up2": { "width": 138, "height": 116 },
+			"global_coin_up3": { "width": 140, "height": 116 },
+			"global_coin_up4": { "width": 139, "height": 116 },
+			"global_coin_up5": { "width": 138, "height": 116 },
+			"global_coin_up6": { "width": 137, "height": 116 }
+		}
+	}
+},
+"animations": {
+	"down": {
+		"slots": {
+			"coin": {
+				"attachment": [
+					{ "time": 0, "name": "global_coin_normal" },
+					{ "time": 0.0333, "name": "global_coin_down1" },
+					{ "time": 0.0666, "name": "global_coin_down2" },
+					{ "time": 0.1, "name": "global_coin_down3" },
+					{ "time": 0.1333, "name": "global_coin_down4" },
+					{ "time": 0.1666, "name": "global_coin_down5" },
+					{ "time": 0.2, "name": "global_coin_down6" },
+					{ "time": 0.2333, "name": "global_coin_back" }
+				]
+			}
+		}
+	},
+	"down_back": {
+		"slots": {
+			"coin": {
+				"attachment": [
+					{ "time": 0, "name": "global_coin_back" },
+					{ "time": 0.0333, "name": "global_coin_down6" },
+					{ "time": 0.0666, "name": "global_coin_down5" },
+					{ "time": 0.1, "name": "global_coin_down4" },
+					{ "time": 0.1333, "name": "global_coin_down3" },
+					{ "time": 0.1666, "name": "global_coin_down2" },
+					{ "time": 0.2, "name": "global_coin_down1" },
+					{ "time": 0.2333, "name": "global_coin_normal" }
+				]
+			}
+		}
+	},
+	"left": {
+		"slots": {
+			"coin": {
+				"attachment": [
+					{ "time": 0, "name": "global_coin_normal" },
+					{ "time": 0.0333, "name": "global_coin_left1" },
+					{ "time": 0.0666, "name": "global_coin_left2" },
+					{ "time": 0.1, "name": "global_coin_left3" },
+					{ "time": 0.1333, "name": "global_coin_left4" },
+					{ "time": 0.1666, "name": "global_coin_left5" },
+					{ "time": 0.2, "name": "global_coin_left6" },
+					{ "time": 0.2333, "name": "global_coin_back" }
+				]
+			}
+		}
+	},
+	"left_back": {
+		"slots": {
+			"coin": {
+				"attachment": [
+					{ "time": 0, "name": "global_coin_back" },
+					{ "time": 0.0333, "name": "global_coin_left6" },
+					{ "time": 0.0666, "name": "global_coin_left5" },
+					{ "time": 0.1, "name": "global_coin_left4" },
+					{ "time": 0.1333, "name": "global_coin_left3" },
+					{ "time": 0.1666, "name": "global_coin_left2" },
+					{ "time": 0.2, "name": "global_coin_left1" },
+					{ "time": 0.2333, "name": "global_coin_normal" }
+				]
+			}
+		}
+	},
+	"normal": {
+		"slots": {
+			"coin": {
+				"attachment": [
+					{ "time": 0, "name": "global_coin_normal" }
+				]
+			}
+		}
+	},
+	"right": {
+		"slots": {
+			"coin": {
+				"attachment": [
+					{ "time": 0, "name": "global_coin_normal" },
+					{ "time": 0.0333, "name": "global_coin_right1" },
+					{ "time": 0.0666, "name": "global_coin_right2" },
+					{ "time": 0.1, "name": "global_coin_right3" },
+					{ "time": 0.1333, "name": "global_coin_right4" },
+					{ "time": 0.1666, "name": "global_coin_right5" },
+					{ "time": 0.2, "name": "global_coin_right6" },
+					{ "time": 0.2333, "name": "global_coin_back" }
+				]
+			}
+		}
+	},
+	"right_back": {
+		"slots": {
+			"coin": {
+				"attachment": [
+					{ "time": 0, "name": "global_coin_back" },
+					{ "time": 0.0333, "name": "global_coin_right6" },
+					{ "time": 0.0666, "name": "global_coin_right5" },
+					{ "time": 0.1, "name": "global_coin_right4" },
+					{ "time": 0.1333, "name": "global_coin_right3" },
+					{ "time": 0.1666, "name": "global_coin_right2" },
+					{ "time": 0.2, "name": "global_coin_right1" },
+					{ "time": 0.2333, "name": "global_coin_normal" }
+				]
+			}
+		}
+	},
+	"select": {
+		"slots": {
+			"coin": {
+				"attachment": [
+					{ "time": 0, "name": "global_coin_selcet" }
+				]
+			}
+		}
+	},
+	"up": {
+		"slots": {
+			"coin": {
+				"attachment": [
+					{ "time": 0, "name": "global_coin_normal" },
+					{ "time": 0.0333, "name": "global_coin_up1" },
+					{ "time": 0.0666, "name": "global_coin_up2" },
+					{ "time": 0.1, "name": "global_coin_up3" },
+					{ "time": 0.1333, "name": "global_coin_up4" },
+					{ "time": 0.1666, "name": "global_coin_up5" },
+					{ "time": 0.2, "name": "global_coin_up6" },
+					{ "time": 0.2333, "name": "global_coin_back" }
+				]
+			}
+		}
+	},
+	"up_back": {
+		"slots": {
+			"coin": {
+				"attachment": [
+					{ "time": 0, "name": "global_coin_back" },
+					{ "time": 0.0333, "name": "global_coin_up6" },
+					{ "time": 0.0666, "name": "global_coin_up5" },
+					{ "time": 0.1, "name": "global_coin_up4" },
+					{ "time": 0.1333, "name": "global_coin_up3" },
+					{ "time": 0.1666, "name": "global_coin_up2" },
+					{ "time": 0.2, "name": "global_coin_up1" },
+					{ "time": 0.2333, "name": "global_coin_normal" }
+				]
+			}
+		}
+	},
+	"win": {
+		"slots": {
+			"coin": {
+				"attachment": [
+					{ "time": 0, "name": "global_coin_back" },
+					{ "time": 0.0666, "name": "global_coin_down6" },
+					{ "time": 0.1333, "name": "global_coin_down5" },
+					{ "time": 0.2, "name": "global_coin_down4" },
+					{ "time": 0.2666, "name": "global_coin_down3" },
+					{ "time": 0.3333, "name": "global_coin_down2" },
+					{ "time": 0.4, "name": "global_coin_down1" },
+					{ "time": 0.4666, "name": "global_coin_selcet" },
+					{ "time": 0.5333, "name": "global_coin_up1" },
+					{ "time": 0.6, "name": "global_coin_up2" },
+					{ "time": 0.6666, "name": "global_coin_up3" },
+					{ "time": 0.7333, "name": "global_coin_up4" },
+					{ "time": 0.8, "name": "global_coin_up5" },
+					{ "time": 0.8666, "name": "global_coin_up6" },
+					{ "time": 0.9333, "name": "global_coin_back" }
+				]
+			}
+		}
+	}
+}
+}

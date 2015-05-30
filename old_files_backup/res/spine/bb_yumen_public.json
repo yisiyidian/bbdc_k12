@@ -1,0 +1,76 @@
+{
+"skeleton": {
+	"hash": "JmPqE7LZLXDP+JBTonEwZ4Z6elc",
+	"spine": "2.0.22",
+	"width": 159.74,
+	"height": 367,
+	"images": "/Users/wangsiyu/Desktop/ /单词游戏/第一关/贝贝动画/bbyumen"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "x": -42.16, "y": 33.39 }
+],
+"slots": [
+	{ "name": "bb_pangxie", "bone": "bone", "attachment": "bb_pangxie" },
+	{ "name": "bb_yumen_1", "bone": "root", "attachment": "bb_yumen_8" }
+],
+"skins": {
+	"default": {
+		"bb_pangxie": {
+			"bb_pangxie": { "x": 0.26, "y": -0.66, "width": 36, "height": 32 }
+		},
+		"bb_yumen_1": {
+			"bb_yumen_1": { "y": 177.92, "width": 156, "height": 355 },
+			"bb_yumen_2": { "x": 21.53, "y": 183.89, "width": 143, "height": 367 },
+			"bb_yumen_3": { "x": 34.57, "y": 183.33, "width": 158, "height": 366 },
+			"bb_yumen_4": { "x": 23.01, "y": 181.4, "width": 157, "height": 362 },
+			"bb_yumen_5": { "x": 10.47, "y": 177.55, "width": 152, "height": 344 },
+			"bb_yumen_6": { "x": 10.63, "y": 174.91, "width": 152, "height": 349 },
+			"bb_yumen_7": { "x": 23.17, "y": 178.77, "width": 154, "height": 349 },
+			"bb_yumen_8": { "x": 14.32, "y": 174.58, "width": 159, "height": 341 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"bb_pangxie": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.2333, "name": "bb_pangxie" },
+					{ "time": 2.4666, "name": null }
+				]
+			},
+			"bb_yumen_1": {
+				"attachment": [
+					{ "time": 0, "name": "bb_yumen_1" },
+					{ "time": 1.0333, "name": "bb_yumen_2" },
+					{ "time": 1.5, "name": "bb_yumen_3" },
+					{ "time": 1.6, "name": "bb_yumen_4" },
+					{ "time": 1.7, "name": "bb_yumen_5" },
+					{ "time": 1.8, "name": "bb_yumen_6" },
+					{ "time": 1.9, "name": "bb_yumen_7" },
+					{ "time": 2, "name": "bb_yumen_8" },
+					{ "time": 2.3666, "name": "bb_yumen_7" },
+					{ "time": 2.4666, "name": "bb_yumen_4" },
+					{ "time": 2.5666, "name": "bb_yumen_3" },
+					{ "time": 2.6666, "name": "bb_yumen_1" },
+					{ "time": 3.6666, "name": "bb_yumen_1" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"translate": [
+					{ "time": 0.2333, "x": 0, "y": 0 },
+					{ "time": 0.8333, "x": 133.68, "y": -11.32, "curve": "stepped" },
+					{ "time": 2, "x": 133.68, "y": -11.32 },
+					{ "time": 2.1666, "x": 286.56, "y": -6.71 },
+					{ "time": 2.3333, "x": 395.76, "y": -23.42 },
+					{ "time": 2.5333, "x": 538, "y": -79.81 }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,27 @@
+
+baoxiangdakai.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+baoxiang
+  rotate: false
+  xy: 2, 124
+  size: 173, 130
+  orig: 173, 130
+  offset: 0, 0
+  index: -1
+dakai
+  rotate: true
+  xy: 177, 106
+  size: 148, 77
+  orig: 148, 77
+  offset: 0, 0
+  index: -1
+gaiziheshang
+  rotate: false
+  xy: 2, 19
+  size: 159, 103
+  orig: 159, 103
+  offset: 0, 0
+  index: -1

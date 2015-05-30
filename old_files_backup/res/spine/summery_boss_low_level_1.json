@@ -1,0 +1,43 @@
+{
+"skeleton": { "spine": "1.9.17", "hash": "X0GyeREOVqVn5RSZaFjdck0nXhA", "width": 422.74, "height": 380.38 },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "boss_body_shadow", "bone": "root", "attachment": "boss_body_shadow" },
+	{ "name": "boss_right_hand", "bone": "root", "attachment": "boss_right_hand" },
+	{ "name": "boss_left_hand", "bone": "root", "attachment": "boss_left_hand" },
+	{ "name": "boss_body", "bone": "root", "attachment": "boss_body" },
+	{ "name": "eye1", "bone": "root", "attachment": "eye1" }
+],
+"skins": {
+	"default": {
+		"boss_body": {
+			"boss_body": { "x": -1.2, "y": -7.97, "width": 283, "height": 375 }
+		},
+		"boss_body_shadow": {
+			"boss_body_shadow": { "x": 24.63, "y": -17.85, "width": 396, "height": 366 }
+		},
+		"boss_left_hand": {
+			"boss_left_hand": { "x": -157.6, "y": 22.94, "width": 85, "height": 60 }
+		},
+		"boss_right_hand": {
+			"boss_right_hand": { "x": 155.19, "y": 23.62, "width": 85, "height": 60 }
+		},
+		"eye1": {
+			"eye1": { "x": 0.15, "y": 90.26, "width": 131, "height": 49 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0, "x": -40.37, "y": -302.41 }
+				]
+			}
+		}
+	}
+}
+}

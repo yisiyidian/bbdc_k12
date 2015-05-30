@@ -1,0 +1,41 @@
+
+summery_boss_low_level.png
+size: 407,407
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+boss_body
+  rotate: false
+  xy: 2, 34
+  size: 142, 188
+  orig: 142, 188
+  offset: 0, 0
+  index: -1
+boss_body_shadow
+  rotate: false
+  xy: 2, 224
+  size: 198, 183
+  orig: 198, 183
+  offset: 0, 0
+  index: -1
+boss_left_hand
+  rotate: false
+  xy: 2, 2
+  size: 43, 30
+  orig: 43, 30
+  offset: 0, 0
+  index: -1
+boss_right_hand
+  rotate: false
+  xy: 146, 192
+  size: 43, 30
+  orig: 43, 30
+  offset: 0, 0
+  index: -1
+eye1
+  rotate: false
+  xy: 202, 382
+  size: 66, 25
+  orig: 66, 25
+  offset: 0, 0
+  index: -1

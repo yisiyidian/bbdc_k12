@@ -1,0 +1,54 @@
+{
+"skeleton": {
+	"hash": "lUiDxbMrf0rb5TD2uLKF9Owpd/c",
+	"spine": "2.0.22",
+	"width": 153,
+	"height": 377,
+	"images": "/Users/wangsiyu/Desktop/ /单词游戏/第一关/贝贝动画/bbhello"
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "bb_hello_1", "bone": "root", "attachment": "bb_hello_1" }
+],
+"skins": {
+	"default": {
+		"bb_hello_1": {
+			"bb_hello_1": { "y": 186.01, "width": 175, "height": 370 },
+			"bb_hello_2": { "x": -2.07, "y": 188.01, "width": 175, "height": 374 },
+			"bb_hello_3": { "x": -8, "y": 188.45, "width": 157, "height": 375 },
+			"bb_hello_4": { "x": -8.51, "y": 191.49, "width": 162, "height": 381 },
+			"bb_hello_5": { "x": -12.11, "y": 190.85, "width": 153, "height": 378 },
+			"bb_hello_6": { "x": -11.03, "y": 191.45, "width": 155, "height": 377 },
+			"bb_hello_7": { "x": -11.75, "y": 191.05, "width": 153, "height": 376 },
+			"bb_hello_8": { "x": -12.03, "y": 191.41, "width": 153, "height": 377 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"bb_hello_1": {
+				"attachment": [
+					{ "time": 0, "name": "bb_hello_1" },
+					{ "time": 0.1, "name": "bb_hello_2" },
+					{ "time": 0.2, "name": "bb_hello_3" },
+					{ "time": 0.3, "name": "bb_hello_4" },
+					{ "time": 0.4, "name": "bb_hello_5" },
+					{ "time": 0.5, "name": "bb_hello_6" },
+					{ "time": 0.6, "name": "bb_hello_8" },
+					{ "time": 0.7, "name": "bb_hello_7" },
+					{ "time": 0.8, "name": "bb_hello_8" },
+					{ "time": 0.9, "name": "bb_hello_6" },
+					{ "time": 1, "name": "bb_hello_5" },
+					{ "time": 1.1, "name": "bb_hello_4" },
+					{ "time": 1.2, "name": "bb_hello_2" },
+					{ "time": 1.3, "name": "bb_hello_1" },
+					{ "time": 1.8333, "name": "bb_hello_1" }
+				]
+			}
+		}
+	}
+}
+}

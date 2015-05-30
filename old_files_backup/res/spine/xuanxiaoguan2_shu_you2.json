@@ -1,0 +1,66 @@
+{
+"skeleton": { "hash": "Zk+3gpp8iakGnaSgOWgxLFaEc5A", "spine": "2.0.22", "width": 110, "height": 91.5, "images": "./yezishu2 2/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 53.24, "x": 83.43, "y": 37.17, "rotation": 116.02 },
+	{ "name": "bone2", "parent": "bone", "length": 54.27, "x": 66.64, "y": 3.04, "rotation": 107.89 },
+	{ "name": "bone3", "parent": "bone", "length": 41.13, "x": 52.1, "y": 4.67, "rotation": 146.94 }
+],
+"slots": [
+	{ "name": "yezishuxuanxiaoguan1_shu2_4", "bone": "root" },
+	{ "name": "yezishuxuanxiaoguan1_shu2_3", "bone": "bone3", "attachment": "yezishuxuanxiaoguan1_shu2_3" },
+	{ "name": "yezishuxuanxiaoguan1_shu2_2", "bone": "bone", "attachment": "yezishuxuanxiaoguan1_shu2_2" },
+	{ "name": "yezishuxuanxiaoguan1_shu2_1", "bone": "bone2", "attachment": "yezishuxuanxiaoguan1_shu2_1" }
+],
+"skins": {
+	"default": {
+		"yezishuxuanxiaoguan1_shu2_1": {
+			"yezishuxuanxiaoguan1_shu2_1": { "x": 4.52, "y": 10.53, "rotation": 136.08, "width": 110, "height": 84 }
+		},
+		"yezishuxuanxiaoguan1_shu2_2": {
+			"yezishuxuanxiaoguan1_shu2_2": { "x": 29.31, "y": 1.19, "rotation": -116.02, "width": 28, "height": 55 }
+		},
+		"yezishuxuanxiaoguan1_shu2_3": {
+			"yezishuxuanxiaoguan1_shu2_3": { "x": 18.04, "y": 0.33, "rotation": 97.03, "width": 20, "height": 42 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0.8333, "angle": 0 },
+					{ "time": 1.7666, "angle": 8.84 },
+					{ "time": 2.6, "angle": 0, "curve": "stepped" },
+					{ "time": 2.7666, "angle": 0 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "time": 0.8333, "angle": 0 },
+					{ "time": 1.7666, "angle": 6.72 },
+					{ "time": 2.6, "angle": 0, "curve": "stepped" },
+					{ "time": 2.7666, "angle": 0 }
+				]
+			},
+			"bone3": {
+				"rotate": [
+					{ "time": 0.8333, "angle": 0 },
+					{ "time": 1.7666, "angle": -12.33 },
+					{ "time": 2.6, "angle": 0, "curve": "stepped" },
+					{ "time": 2.7666, "angle": 0 }
+				]
+			},
+			"root": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": -27.86 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.8, "y": 0.8 }
+				]
+			}
+		}
+	}
+}
+}
