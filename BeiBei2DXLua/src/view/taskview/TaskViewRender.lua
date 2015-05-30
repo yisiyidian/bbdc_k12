@@ -56,13 +56,22 @@ function TaskViewRender:init(type)
 	self.button_task = button_task
 
 	--累计登陆任务完成显示文字  先隐藏
-	local labelTaskComplete = cc.Label:createWithSystemFont("恭喜你获得称号：签到达人","",30)
-	labelTaskComplete:setPosition(s_DESIGN_WIDTH/2 - 520/2 + 215,80)
-	labelTaskComplete:setAnchorPoint(0.5,0.5)
-	labelTaskComplete:setTextColor(cc.c3b(0,0,0))
-	self:addChild(labelTaskComplete)
-	labelTaskComplete:setVisible(false)
-	self.labelTaskComplete = labelTaskComplete
+	local labelTaskLoginComplete = cc.Label:createWithSystemFont("恭喜你获得称号:签到达人","",30)
+	labelTaskLoginComplete:setPosition(s_DESIGN_WIDTH/2 - 520/2 + 215,80)
+	labelTaskLoginComplete:setAnchorPoint(0.5,0.5)
+	labelTaskLoginComplete:setTextColor(cc.c3b(0,0,0))
+	self:addChild(labelTaskLoginComplete)
+	labelTaskLoginComplete:setVisible(false)
+	self.labelTaskLoginComplete = labelTaskLoginComplete
+
+	--随机任务完成显示文字  先隐藏
+	local labelTaskRandomComplete = cc.Label:createWithSystemFont("今日任务已毕:请明日再来","",30)
+	labelTaskRandomComplete:setPosition(s_DESIGN_WIDTH/2 - 520/2 + 215,80)
+	labelTaskRandomComplete:setAnchorPoint(0.5,0.5)
+	labelTaskRandomComplete:setTextColor(cc.c3b(0,0,0))
+	self:addChild(labelTaskRandomComplete)
+	labelTaskRandomComplete:setVisible(false)
+	self.labelTaskRandomComplete = labelTaskRandomComplete
 
 
 	--左侧的图片更新的时候是不会变的，所以根据不同类型 写死
@@ -110,7 +119,7 @@ function TaskViewRender:updataView()
 			self.labelTask:setVisible(false)
 			self.button_task:setVisible(false)
 			self.bbdNum:setVisible(false)
-			self.labelTaskComplete:setVisible(true)
+			self.labelTaskLoginComplete:setVisible(true)
 			self.labelday:setString(self.nowCount)
 
 		else
@@ -125,13 +134,23 @@ function TaskViewRender:updataView()
 			self.labelday:setString(self.nowCount)
 		end
 	else
-		--随机任务 贝贝豆数量
-		local config = s_MissionManager:getRandomMissionConfig(self.taskID) ---Render多的话,这么写的效率很低
-		local RandomTaskBBD = "奖励："..config.bean.."贝贝豆"
-		self.bbdNum:setString(RandomTaskBBD)
-		--任务名称
+		if self.taskID == 0 then
+			--TODO 完成全部累计登陆任务
+			--隐藏label 与按钮 贝贝豆数量
+			self.labelTask:setVisible(false)
+			self.button_task:setVisible(false)
+			self.bbdNum:setVisible(false)
+			self.labelTaskRandomComplete:setVisible(true)
+		else
 
-		self.labelTask:setString(string.format(config.desc,self.totalCount,self.nowCount,self.totalCount))
+			--随机任务 贝贝豆数量
+			local config = s_MissionManager:getRandomMissionConfig(self.taskID) ---Render多的话,这么写的效率很低
+			local RandomTaskBBD = "奖励："..config.bean.."贝贝豆"
+			self.bbdNum:setString(RandomTaskBBD)
+			--任务名称
+
+			self.labelTask:setString(string.format(config.desc,self.totalCount,self.nowCount,self.totalCount))
+		end
 
 	end
 
