@@ -76,17 +76,17 @@ function MissionManager:updateMission(missionId,missionsData,addData,callBack)
 	end
   
 	print("更新任务:"..missionId.." 条件:"..missionsData.." 类型:"..tostring(addData))
-	-- if not self.missionData then
-	-- 	return
-	-- end
+
 	local tb = self:strToTable(self.missionData.taskList)
 	local re = false
+	local hit = false --命中 更新的任务在任务列表中存在,需要同步任务数据,如果不存在 则无需同步
 	for k,v in pairs(tb) do
 		if v[1] == missionId then
+			hit = true
 			if addData then
 				v[3] = tostring(tonumber(v[3]) + missionsData) --默认条件+1
 			else
-				v[3] = tostring(missionsData) --直接赋值
+				v[3] = tostring(missionsData) --当前完成度  直接赋值
 			end
 			if v[3] >= v[4] then --如果当前任务条件和 任务总条件匹配,则标记为已完成
 				v[2] = "1" --标记为已完成 未领取
@@ -101,10 +101,11 @@ function MissionManager:updateMission(missionId,missionsData,addData,callBack)
 	   		self.canCompleteCallBack()
 		end
 	end
-
-	self.missionData.taskList = self:tableToStr(tb)
-	self:saveTaskToLocal()
-	s_O2OController.syncMission(callBack)  --同步数据 到服务器
+	if hit then
+		self.missionData.taskList = self:tableToStr(tb)
+		self:saveTaskToLocal()
+		s_O2OController.syncMission(callBack)  --同步数据 到服务器
+	end
 	return re
 end
 

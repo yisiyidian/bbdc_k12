@@ -134,7 +134,8 @@ function HomeLayer:ctor()
     --任务开始按钮
     local mission_progress = nil
     --是否打卡
-    local checkInDisplay = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey) and not s_isCheckInAnimationDisplayed --s_isCheckInAnimationDisplayed 在global.lua里
+    local checkIn = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey)
+    local checkInDisplay = checkIn and not s_isCheckInAnimationDisplayed --s_isCheckInAnimationDisplayed 在global.lua里
     if checkInDisplay then
         --打卡
         if s_HUD_LAYER:getChildByName('missionComplete') ~= nil then
@@ -142,12 +143,16 @@ function HomeLayer:ctor()
         end
         s_isCheckInAnimationDisplayed = true
         mission_progress = MissionProgress.create(true,self)
-        --触发打卡任务
-        s_MissionManager:updateMission(MissionConfig.MISSION_DAKA)
     else
         mission_progress = MissionProgress.create()
         mission_progress.animation()
     end
+
+    if checkIn then
+        --触发打卡任务
+        s_MissionManager:updateMission(MissionConfig.MISSION_DAKA)
+    end
+
     self.mission_progress = mission_progress
     backColor:addChild(mission_progress,1,'mission_progress')
     --下载音频的按钮
