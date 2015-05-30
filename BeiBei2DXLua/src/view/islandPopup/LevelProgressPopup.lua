@@ -59,11 +59,24 @@ function LevelProgressPopup:createSummary(index)
     background:addChild(monsters)
     monsters:addAnimation(0, 'animation', true)
 
-    --加入任务提示
-    local text = cc.Label:createWithSystemFont("任务目标： 打败这货","",30)
-    text:setPosition(background:getContentSize().width/2,background:getContentSize().height * 0.25)
-    text:setColor(cc.c4b(50,50,50,255))
-    background:addChild(text)
+    -- --加入任务提示
+    -- local text = cc.Label:createWithSystemFont("任务目标： 打败这货","",30)
+    -- text:setPosition(background:getContentSize().width/2,background:getContentSize().height * 0.25)
+    -- text:setColor(cc.c4b(50,50,50,255))
+    -- background:addChild(text)
+
+    local wordCard_Click = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local WordCardView = require("view.wordcard.WordCardView")
+            local wordCardView = WordCardView.create(index)
+            s_SCENE:popup(wordCardView)
+        end
+    end
+    --加入 词库按钮
+    local wordCard_button = ccui.Button:create("image/islandPopup/unit_words_button_click.png","image/islandPopup/unit_words_button.png","")
+    wordCard_button:setPosition(background:getContentSize().width * 0.5 - 2, background:getContentSize().height * 0.25)
+    wordCard_button:addTouchEventListener(wordCard_Click)
+    background:addChild(wordCard_button)
 
     --加入按钮
     local go_button = Button.create("long","blue","GO") 
@@ -79,19 +92,6 @@ function LevelProgressPopup:createSummary(index)
     close_button:setPosition(background:getContentSize().width - 20,background:getContentSize().height - 20)
     close_button:addTouchEventListener(close_Click)
     background:addChild(close_button)
-
-    local wordCard_Click = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            local WordCardView = require("view.wordcard.WordCardView")
-            local wordCardView = WordCardView.create()
-            s_SCENE:popup(wordCardView)
-        end
-    end
-    --加入 词库按钮
-    local wordCard_button = ccui.Button:create("image/islandPopup/button_change_to_ciku.png")
-    wordCard_button:setPosition(40,background:getContentSize().height - 40)
-    wordCard_button:addTouchEventListener(wordCard_Click)
-    background:addChild(wordCard_button)
 
     local function button_func(  )
         playSound(s_sound_buttonEffect) 
