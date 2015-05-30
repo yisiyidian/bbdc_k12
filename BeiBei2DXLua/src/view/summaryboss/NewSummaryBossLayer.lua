@@ -11,6 +11,7 @@ function NewSummaryBossLayer.create(unit)
 end
 
 function NewSummaryBossLayer:ctor(unit)
+
     if s_CURRENT_USER.summaryStep == s_summary_enterFirstPopup then
         s_CURRENT_USER:setSummaryStep(s_summary_enterFirstLevel) 
     elseif s_CURRENT_USER.summaryStep == s_summary_enterSecondPopup then
@@ -231,6 +232,7 @@ function NewSummaryBossLayer:initBackground()
     blinkBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     self:addChild(blinkBack,0)
     self.blink = blinkBack
+    hideProgressHUD(true) 
 end
 
 function NewSummaryBossLayer:initBoss()

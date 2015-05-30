@@ -48,6 +48,7 @@ local function main()
     cc.FileUtils:getInstance():addSearchPath("res/sound/words/")
     cc.FileUtils:getInstance():addSearchPath(cc.FileUtils:getInstance():getWritablePath())
     require("cocos.init")
+    require("mobdebug").start()
 
     local HotUpdateController = require("hu.HotUpdateController")
     HotUpdateController.init()

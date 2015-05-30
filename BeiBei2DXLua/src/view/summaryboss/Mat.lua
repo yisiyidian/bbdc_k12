@@ -96,8 +96,11 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     local gap       = 132
     local left      = (main_width - (main_m-1)*gap) / 2
     local bottom    = left
-
+    local time1=  os.clock()
     local main_logic_mat = randomMat(main_m, main_n)
+    --local main_logic_mat = {{1,2,3,4},{8,7,6,5},{9,10,11,12},{16,15,14,13}}
+    -- print_lua_table(main_logic_mat)
+    -- print('map time = ',os.clock() - time1)
     local randomStartIndex = math.random(1, main_m*main_n-string.len(main_word)+1)
 
     local main_mat = {}
@@ -329,7 +332,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         local circle_succeed = ccui.Scale9Sprite:create("image/mat/circle_succeed.png",cc.rect(0,0,232,94),cc.rect(47,0,138,94))
         circle_succeed:setPosition(sprite:getContentSize().width/2 ,sprite:getContentSize().height/2)
         if bosslayer.wordList[1][2] == '' then
-            circle_succeed:setContentSize((#selectStack) * 18 + 60 ,74)
+            circle_succeed:setContentSize((#selectStack) * 18 + 94 ,94)
         else
             circle_succeed:setContentSize((#selectStack+string.len(bosslayer.wordList[1][2])+1) * 18 + 94 ,94)
         end
