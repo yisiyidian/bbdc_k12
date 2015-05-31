@@ -311,9 +311,17 @@ function MissionManager:generalTasks()
 				if ts_index > 0 then
 					result[#result + 1] = tget(ts_task,ts_index)
 				end
-			else --解锁任务
+			else 
+			    --解锁任务  取价格最低的
 				hasLockMission = true
-				local js_index = math.random(tnum(js_task))
+				local minprice = 0
+				local js_index = 0
+				for k,v in pairs(js_task) do
+					if v.cost > minprice then
+						minprice = v.cost
+						js_index = k
+					end
+				end
 				if js_index > 0 then
 					result[#result + 1] = tget(js_task,js_index)
 				end
