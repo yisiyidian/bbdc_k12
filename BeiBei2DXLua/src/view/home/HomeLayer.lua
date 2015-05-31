@@ -19,6 +19,7 @@ local DownloadSoundButton = require("view.home.DownloadSoundButton") --下载音
 local MissionConfig = require("model.mission.MissionConfig") --任务的配置数据
 
 
+
 local HomeLayer = class("HomeLayer", function ()
     return cc.Layer:create()
 end)
@@ -84,6 +85,12 @@ function HomeLayer:ctor()
     self.moved = false
     self.start_x = nil
     self.start_y = nil
+
+    --判断是否是注册用户
+    if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
+        --任务：完善信息直接完成
+        s_MissionManager:updateMission(MissionConfig.MISSION_INFO,1,false)
+    end
     --背景颜色层
     local backColor = cc.LayerColor:create(cc.c4b(211,239,254,255), bigWidth, s_DESIGN_HEIGHT)  
     backColor:setAnchorPoint(0.5,0.5)
