@@ -70,7 +70,10 @@ end
 -- callBack 		修改完成回调 cb(result, error)
 function MissionManager:updateMission(missionId,missionsData,addData,callBack)
 	missionsData = missionsData or 1
-	addData = addData or true
+	if addData == nil then
+		addData = true
+	end
+  
 	print("更新任务:"..missionId.." 条件:"..missionsData.." 类型:"..tostring(addData))
 	-- if not self.missionData then
 	-- 	return
