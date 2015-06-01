@@ -279,7 +279,11 @@ end
 
 -- return {followers: [粉丝列表], followees: [关注用户列表]}
 -- TODO: status
-
+-- api
+-- 'users/' .. userObjectId .. '/followersAndFollowees?include=followee
+-- followersAndFollowees -- 同时查询粉丝和关注的人
+-- 
+-- https://cn.avoscloud.com/docs/status_system.html#查询粉丝或者关注者列表_API  fuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuck!!!!!!!!!!!!!!!!!!!!!
 function Server.requestFollowersAndFollowees(userObjectId, onResponse)
     __request__('users/' .. userObjectId .. '/followersAndFollowees?include=followee', 
         'GET', 

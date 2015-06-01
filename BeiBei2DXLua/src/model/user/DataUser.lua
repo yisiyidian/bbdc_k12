@@ -40,6 +40,8 @@ function DataUser:ctor()
     self.school                            = ""  --学校
     self.examination                       = ""  --正准备的考试
     self.position                          = ""  --位置
+    self.grade                             = ""  --班级号
+    self.gradeName                         = ""  --班级名
 
     self.relateContacts                     = 0  --关联通讯录
     self.bindAccount                        = "" --绑定帐号

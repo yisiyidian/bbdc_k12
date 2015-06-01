@@ -66,6 +66,7 @@ function MoreInfomationView:initData()
 	local school		= s_CURRENT_USER.school   --学校
 	local position  	= s_CURRENT_USER.position --位置
 	local examination 	= s_CURRENT_USER.examination --正准备的考试
+	local grade 		= s_CURRENT_USER.grade  --班级
 
 	local relateContacts = s_CURRENT_USER.relateContacts --关联通讯录
 	local bindAccount    = s_CURRENT_USER.bindAccount    --帐号绑定
@@ -83,6 +84,10 @@ function MoreInfomationView:initData()
 			print(s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR))
 			return false,s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR)
 		end
+	end
+	--验证班级是否合法
+	local function checkGrade(text)
+		
 	end
 	--验证邮箱
 	local function checkEmail(text)
@@ -104,18 +109,21 @@ function MoreInfomationView:initData()
 	listData[1] = {["key"] = "headImg",			["type"] = MoreInformationRender.ICON,["title"] = "头像",			["content"] = "",			["callback"]=nil,["check"]=nil,		["data"] = headImg} --头像	
 	listData[2] = {["key"] = "nickName",		["type"] = MoreInformationRender.TEXT,["title"] = "昵称",			["content"] = nickName,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkName,	["data"] = sex,maxlen = 10} --昵称
 	listData[3] = {["key"] = "sex",				["type"] = MoreInformationRender.SEX,["title"] = "性别",				["content"] = sex,			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = nil}--性别
-	listData[4] = {["key"] = "email",			["type"] = MoreInformationRender.TEXT,["title"] = "邮箱",			["content"] = email,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkEmail,	["data"] = nil,maxlen = 40}--邮箱
-	listData[5] = {["key"] = "birthday",		["type"] = MoreInformationRender.DATE,["title"] = "生日",			["content"] = birthday,		["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = nil}--生日
-	listData[6] = {["key"] = "job",				["type"] = MoreInformationRender.TEXT,["title"] = "职业",			["content"] = job,			["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = nil}--职业
-	listData[7] = {["key"] = "school",			["type"] = MoreInformationRender.TEXT,["title"] = "学校",			["content"] = school,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = nil}--学校
-	listData[8] = {["key"] = "position",		["type"] = MoreInformationRender.TEXT,["title"] = "位置",			["content"] = position,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = nil}--位置
-	listData[9] = {["key"] = "examination",		["type"] = MoreInformationRender.TEXT,["title"] = "在准备的考试",		["content"] = examination,	["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = 1}--在准备的考试
-	listData[10] = {["key"] = "split"}
-	listData[11] = {["key"] = "relateContacts",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = false}--关联通讯录
-	listData[12] = {["key"] = "bindAccount"   ,	["type"] = MoreInformationRender.ICON,  ["title"] = "帐号绑定",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = {}}--帐号绑定
-	listData[13] = {["key"] = "showPosition",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = false}--位置可见
-	listData[14] = {["key"] = "split"}
-	listData[15] = {["key"] = "changPwd",		["type"] = MoreInformationRender.OTHER,["title"] = "修改密码",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = 1}--修改密码
+	listData[4] = {["key"] = "split"}
+	listData[5] = {["key"] = "grade",			["type"] = MoreInformationRender.GRADE,["title"] = "机构班级",		["content"] = grade,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkEmail,	["data"] = nil,maxlen = 40}--班级
+	listData[6] = {["key"] = "split"}
+	listData[7] = {["key"] = "email",			["type"] = MoreInformationRender.TEXT,["title"] = "邮箱",			["content"] = email,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkEmail,	["data"] = nil,maxlen = 40}--邮箱
+	listData[8] = {["key"] = "birthday",		["type"] = MoreInformationRender.DATE,["title"] = "生日",			["content"] = birthday,		["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = nil}--生日
+	listData[9] = {["key"] = "job",				["type"] = MoreInformationRender.TEXT,["title"] = "职业",			["content"] = job,			["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = nil}--职业
+	listData[10] = {["key"] = "school",			["type"] = MoreInformationRender.TEXT,["title"] = "学校",			["content"] = school,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = nil}--学校
+	listData[11] = {["key"] = "position",		["type"] = MoreInformationRender.TEXT,["title"] = "位置",			["content"] = position,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = nil}--位置
+	listData[12] = {["key"] = "examination",	["type"] = MoreInformationRender.TEXT,["title"] = "在准备的考试",		["content"] = examination,	["callback"]=handler(self,self.onRenderTouch),["check"]=checkNotNil,["data"] = 1}--在准备的考试
+	listData[13] = {["key"] = "split"}
+	listData[14] = {["key"] = "relateContacts",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = false}--关联通讯录
+	listData[15] = {["key"] = "bindAccount"   ,	["type"] = MoreInformationRender.ICON,  ["title"] = "帐号绑定",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = {}}--帐号绑定
+	listData[16] = {["key"] = "showPosition",	["type"] = MoreInformationRender.SWITCH,["title"] = "关联通讯录",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = false}--位置可见
+	listData[17] = {["key"] = "split"}
+	listData[18] = {["key"] = "changPwd",		["type"] = MoreInformationRender.OTHER,["title"] = "修改密码",		["content"] = "",			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = 1}--修改密码
 	--列表数据
 	self.listData = listData
 end

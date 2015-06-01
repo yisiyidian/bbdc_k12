@@ -54,7 +54,9 @@ function FriendList:ctor()
             hideProgressHUD(true)
         end
     )
+    
 
+    --获取好友列表
     s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser(
         handler(self,
         function(self,api, result)

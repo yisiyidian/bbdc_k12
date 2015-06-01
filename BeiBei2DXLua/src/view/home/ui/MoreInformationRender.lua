@@ -15,6 +15,8 @@ MoreInformationRender.DATE = "MoreInformationRender.DATE"
 MoreInformationRender.SWITCH = "MoreInformationRender.SWITCH"
 --ICON
 MoreInformationRender.ICON = "MoreInformationRender.ICON"
+--班级号
+MoreInformationRender.GRADE = "MoreInformationRender.GRADE"
 
 --其他的类型 如修改密码
 MoreInformationRender.OTHER = "MoreInformationRender.OTHER"

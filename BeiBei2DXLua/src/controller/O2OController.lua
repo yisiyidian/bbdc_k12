@@ -550,5 +550,4 @@ function O2OController.syncMission(onCompleted)
 end
 
 ----------------------------------------------------------------------------------------------------------------
-
 return O2OController

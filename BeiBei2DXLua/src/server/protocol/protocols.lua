@@ -86,16 +86,34 @@ function isPhoneNumberExist(phoneNumber,callback)
             callback(result,error)
         end
     end
-    --TODO 解开注释
+    
     local protocol = ProtocolBase.create(api,serverRequestType,{["mobilePhoneNumber"]=phoneNumber},cb)
     protocol:request()
-    --TODO 注释
-    -- local re = {}
-    -- re.datas = {}
-    -- re.datas.count = 0
-    -- cb(re,nil)
 end
 
+--加入班级
+function joinGrade(gradeNumber,callback)
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
+        if callback then callback(nil, nil) end
+        return
+    end
+    local api = "joingrade"
+    local serverRequestType = SERVER_REQUEST_TYPE_NORMAL
+
+    local function cb(result,error)
+        if error == nil then
+            if result.datas ~= nil then
+                --TODO保存数据
+                dump(result,"加入班级返回数据")
+            end
+            if callback then callback(result.datas,nil) end
+        else
+            if callback then callback(nil,error) end
+        end
+    end
+    local protocol = ProtocolBase.create(api,serverRequestType,{["grade"] = gradeNumber},cb)
+    protocol:request()
+end
 
 
 -- localDBUser is newer than serverUser
@@ -512,6 +530,8 @@ function saveMissionToServer(missionData,callback)
     local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataMission',['us']=unsavedDataTable}, cb)
     protocol:request()
 end
+---------------------------------------------------------------------------------------------------
+
 
 ---------------------------------------------------------------------------------------------------
 
