@@ -1,4 +1,5 @@
-require("common.global")
+
+local MissionConfig  = require("model.mission.MissionConfig")
 
 local Button                = require("view.button.longButtonInStudy")
 
@@ -294,6 +295,8 @@ function SummaryBossAlter:lose2(entrance)
 end
 
 function SummaryBossAlter:win1(entrance)
+    --完成总结BOSS
+    s_MissionManager:updateMission(MissionConfig.MISSION_ZJBOSS, 1, false)
 
     if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
         s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
@@ -320,8 +323,6 @@ function SummaryBossAlter:win1(entrance)
             s_CorePlayManager.leaveSummaryModel(true)
         end
     end
-
-
 end
 
 function SummaryBossAlter:win2(entrance,hasCheckedIn)
