@@ -335,6 +335,10 @@ function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
         local levelCount = math.floor((currentLevelCount-1) % 10) + 1
 
         local currentVerticalPercent = (chapterCount / (chapterCount + 1) + levelCount / (s_islands_per_page * (chapterCount + 1)) ) * 100
+        
+        if currentVerticalPercent >= 80 and levelCount >= 8 then
+            currentVerticalPercent = 100
+        end
         print('#######currentPercent:'..currentVerticalPercent,','..chapterCount..','..levelCount)
         if scrollTime - 0 == 0 then
             self.listView:scrollToPercentVertical(currentVerticalPercent,scrollTime,false)
