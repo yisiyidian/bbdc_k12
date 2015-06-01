@@ -121,56 +121,56 @@ end
 -- K12 book word   books[book][unit] = {wordlist} 
 function DataManager.loadK12Books()
     local bookUnitWord = {}
-        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'
-        , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
-        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
-        for i = 1, #bookName do
-            bookUnitWord[bookName[i]] = {}
-            local filepath = "cfg/" .. bookName[i] .. ".newbook"
-            local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
-            local lines = split(content, "\n")
-            local current_unit = 0
-            local word_count = 0
-            local first_count = 0
-            for j = 1, #lines do
-                word_count = word_count + 1
-                if lines[j] ~= "" then
-                    -- print(lines[j])
-                    unit_word = split(lines[j],"\t")
-                    if unit_word[1] - 1 == 0 then
-                        first_count = first_count + 1
-                        if first_count < 4 then
-                            if unit_word[1] - current_unit ~= 0 then
-                                bookUnitWord[bookName[i]][unit_word[1]] = unit_word[2]
-                                current_unit = unit_word[1]
-                            else
-                                bookUnitWord[bookName[i]][unit_word[1]] = bookUnitWord[bookName[i]][unit_word[1]]..'||'..unit_word[2]
-                                print(bookUnitWord[bookName[i]][unit_word[1]])
-                            end
+    local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'
+    , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
+    , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
+    for i = 1, #bookName do
+        bookUnitWord[bookName[i]] = {}
+        local filepath = "cfg/" .. bookName[i] .. ".newbook"
+        local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
+        local lines = split(content, "\n")
+        local current_unit = 0
+        local word_count = 0
+        local first_count = 0
+        for j = 1, #lines do
+            word_count = word_count + 1
+            if lines[j] ~= "" then
+                -- print(lines[j])
+                unit_word = split(lines[j],"\t")
+                if unit_word[1] - 1 == 0 then
+                    first_count = first_count + 1
+                    if first_count < 4 then
+                        if unit_word[1] - current_unit ~= 0 then
+                            bookUnitWord[bookName[i]][unit_word[1]] = unit_word[2]
+                            current_unit = unit_word[1]
                         else
-                            if unit_word[1] + 1 - current_unit ~= 0 then
-                                bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = unit_word[2]
-                                current_unit = unit_word[1]+1
-                            else
-                                bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = bookUnitWord[bookName[i]][''..(unit_word[1]+1)]..'||'..unit_word[2]
-                            end
+                            bookUnitWord[bookName[i]][unit_word[1]] = bookUnitWord[bookName[i]][unit_word[1]]..'||'..unit_word[2]
+                            print(bookUnitWord[bookName[i]][unit_word[1]])
                         end
                     else
-                        print((unit_word[1]+1-current_unit))
-                        if unit_word[1]+1 - current_unit ~= 0 then
+                        if unit_word[1] + 1 - current_unit ~= 0 then
                             bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = unit_word[2]
                             current_unit = unit_word[1]+1
                         else
-                            print(''..(unit_word[1]+1))
                             bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = bookUnitWord[bookName[i]][''..(unit_word[1]+1)]..'||'..unit_word[2]
                         end
                     end
-                    -- table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])
+                else
+                    -- print((unit_word[1]+1-current_unit))
+                    if unit_word[1]+1 - current_unit ~= 0 then
+                        bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = unit_word[2]
+                        current_unit = unit_word[1]+1
+                    else
+                        -- print(''..(unit_word[1]+1))
+                        bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = bookUnitWord[bookName[i]][''..(unit_word[1]+1)]..'||'..unit_word[2]
+                    end
                 end
+                -- table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])
             end
-            print(bookName[i]..'\t'..(word_count-1))
-            -- print_lua_table(bookUnitWord[bookName[i]])
         end
+        print(bookName[i]..'\t'..(word_count-1))
+        -- print_lua_table(bookUnitWord[bookName[i]])
+    end
     return bookUnitWord
 end
 
