@@ -66,7 +66,7 @@ function HintWord:ctor(time,wordlist)
     local shareBtn = Button.create("middle","blue","分享看看谁更棒！") 
     shareBtn:setPosition(back:getContentSize().width / 2,120)
     shareBtn.func = function ()
-        cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.html?time='..string.format('%.2f',time)..'&wordlist='..wordlist, '我完成这些单词只用了'..string.format('%.2f',time)..'秒，你能做到吗？', '贝贝单词－根本停不下来')
+        cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.php?time='..string.format('%.2f',time)..'&wordlist='..wordlist, '我完成这些单词只用了'..string.format('%.2f',time)..'秒，你能做到吗？', '贝贝单词－根本停不下来')
         self:removeFromParent()
     end
     back:addChild(shareBtn)
