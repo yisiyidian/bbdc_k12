@@ -55,6 +55,9 @@ function BookLayer.create(education)
     --local name_array = {}
     --local key_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
     local grade = split(education,'_')
+    if grade[1] == 'kwekwe' then
+        grade[1] = 'primary'
+    end
     local key_array = {}
     if grade[1] == 'primary' then
         key_array = {'primary_1','primary_2','primary_3','primary_4','primary_5','primary_6','primary_7','primary_8','kwekwe'}

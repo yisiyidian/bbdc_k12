@@ -8,7 +8,7 @@ local s_USE_XXTEA = true
 g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13','14','15','16','17','18','19','20','21','22','23','24','25','26'}
 g_BOOKKEYS = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
-        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11','kwekwe'}
+        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
 
 s_BOOK_KEY_CET4     = g_BOOKKEYS[1] -- 'cet4'
 s_BOOK_KEY_CET6     = g_BOOKKEYS[2] -- 'cet6'
@@ -123,7 +123,7 @@ function DataManager.loadK12Books()
     local bookUnitWord = {}
         local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
-        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11','kwekwe'}
+        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
         for i = 1, #bookName do
             bookUnitWord[bookName[i]] = {}
             local filepath = "cfg/" .. bookName[i] .. ".newbook"
@@ -178,9 +178,9 @@ end
 -- return unit name   books[book][unit] = 'unitName'  3/   3-1
 function DataManager.loadUnitName()
     local bookUnitName = {}
-        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'
+        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
-        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11','kwekwe'}
+        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
         for i = 1, #bookName do
             bookUnitName[bookName[i]] = {}
             local filepath = "cfg/" .. bookName[i] .. ".newbook"
@@ -232,7 +232,7 @@ function DataManager.loadK12BookWords()
     local bookWord = {}
         local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
-        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11','kwekwe'}
+        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
         for i = 1, #bookName do
             bookWord[bookName[i]] = {}
             local filepath = "cfg/" .. bookName[i] .. ".book"
