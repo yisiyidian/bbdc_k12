@@ -94,7 +94,13 @@ function ChapterLayer:ctor()
     end
     -- add player
     -- scroll to current chapter level
-    local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+    -- local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+    -- local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+    -- if progress - 0 == 0 then
+    --     self:scrollLevelLayer(progress, 0)
+    -- else
+    --     self:scrollLevelLayer(progress+1,0)
+    -- end
     self:addBottomBounce()
     -- check unlock level
     self:checkUnlockLevel()
@@ -267,6 +273,7 @@ function ChapterLayer:checkUnlockLevel()
     else
         local chapterKey = 'chapter'..math.floor(oldProgress / s_islands_per_page)
         if taskIndex == -2 and s_level_popup_state == 1 then
+            self:scrollLevelLayer(currentProgress, 0)
             s_level_popup_state = 2
                 s_SCENE.touchEventBlockLayer.lockTouch()
                 self:callFuncWithDelay(1.1, function()
@@ -276,6 +283,12 @@ function ChapterLayer:checkUnlockLevel()
                 local playAnimation = true
                 self.chapterDic[chapterKey]:addPopup(currentProgress,playAnimation)
             end)
+        elseif taskIndex ~= -2 then 
+            if taskIndex - 0 == 0 then
+                self:scrollLevelLayer(taskIndex, 0)
+            else
+                self:scrollLevelLayer(taskIndex+1,0)
+            end
         end
     end
 end
