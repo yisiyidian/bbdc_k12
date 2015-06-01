@@ -17,8 +17,8 @@
         isQQShareAvailable="true"
 
         WXPkg="com.beibei.wordmaster" WXName="贝贝单词-背单词根本停不下来"
-        WXAppID="wx68b3465c73ce139e"
-        WXAppSecret="6a958c38c2ba812690b62bad4685750f"
+        WXAppID="wxc6c7c5671ab0618a"
+        WXAppSecret="bffe6217d2d59898d17badfd4d509b57"
         WXSignature=""
 
         umengAppName=""
@@ -41,9 +41,9 @@
         isQQShareAvailable="true"
 
         WXPkg="com.beibei.wordmaster" WXName="贝贝单词-背单词根本停不下来"
-        WXAppID="wx68b3465c73ce139e"
-        WXAppSecret="6a958c38c2ba812690b62bad4685750f"
-        WXSignature="c8a909a077374e6de51aa55cadd30ce3"
+        WXAppID="wxc6c7c5671ab0618a"
+        WXAppSecret="bffe6217d2d59898d17badfd4d509b57"
+        WXSignature="7a635f57953ba431a36c617bebaecba1"
 
         umengAppName=""
         umengAppKey=""/>
