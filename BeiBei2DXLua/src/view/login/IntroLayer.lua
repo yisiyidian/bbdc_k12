@@ -45,13 +45,13 @@ function IntroLayer.create(directOnLogin)
     head:setPosition(s_DESIGN_WIDTH/2, 800)
     intro:addChild(head)
 
-    --游客登陆点击回调
-    -- local button_visitor_clicked = function(sender, eventType)
-    --     if eventType == ccui.TouchEventType.ended then
-    --         s_SCENE:removeAllPopups() 
-    --         playSound(s_sound_buttonEffect)
-    --     end
-    -- end
+    -- 游客登陆点击回调
+    local button_visitor_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            s_SCENE:removeAllPopups() 
+            playSound(s_sound_buttonEffect)
+        end
+    end
 
     -- if IS_SNS_QQ_LOGIN_AVAILABLE and isOnline then
     --     local button_qq = ccui.Button:create()
@@ -62,14 +62,14 @@ function IntroLayer.create(directOnLogin)
     --     button_qq:setTitleText("QQ登陆")
     --     intro:addChild(button_qq)
     -- end
-    --游客登陆按钮
-    -- local button_visitor = ccui.Button:create()
-    -- button_visitor:loadTextures("image/button/button_login_2.png", "", "")
-    -- button_visitor:addTouchEventListener(button_visitor_clicked)
-    -- button_visitor:setPosition(s_DESIGN_WIDTH/2, 500)
-    -- button_visitor:setTitleFontSize(30)
-    -- button_visitor:setTitleText("游客登陆")
-    -- intro:addChild(button_visitor)
+    -- 游客登陆按钮
+    local button_visitor = ccui.Button:create()
+    button_visitor:loadTextures("image/button/button_login_2.png", "", "")
+    button_visitor:addTouchEventListener(button_visitor_clicked)
+    button_visitor:setPosition(s_DESIGN_WIDTH/2, 500)
+    button_visitor:setTitleFontSize(30)
+    button_visitor:setTitleText("游客登陆")
+    intro:addChild(button_visitor)
     
     --白色云彩
     local cloud = cc.Sprite:create("image/login/cloud_denglu.png")

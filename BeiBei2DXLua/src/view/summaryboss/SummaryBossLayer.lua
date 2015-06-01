@@ -195,7 +195,7 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
                                 icon:runAction(cc.Spawn:create(cc.FadeTo:create(0.5,255),cc.EaseBackIn:create(cc.ScaleTo:create(0.5,1))))
                                 s_SCENE:callFuncWithDelay(0.5,function (  )
                                     
-                                    if layer.combo % 3 == 0 then
+                                    if layer.combo % 3 == 0 and layer.combo > 0 then
                                         local label1 = layer.combo_label[2 * layer.combo / 3 + 1]
                                         label1:setScale(1.3)
                                         local label2 = layer.combo_label[2 * layer.combo / 3 + 2]
@@ -440,9 +440,6 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
             return true
         end
 
-        layer.crab[layer.firstIndex]:stopAllActions()
-        layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y]:stopAllActions()
-
         isTouchEnded = false
         endTime = 0
         
@@ -452,6 +449,10 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         lastTouchLocation = location
         
         layer:checkTouchLocation(location)
+        if layer.onNode then
+            layer.crab[layer.firstIndex]:stopAllActions()
+            layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y]:stopAllActions()
+        end
         if chapter == 2 then
             light:setPosition(location)
             light:setVisible(true)
@@ -486,6 +487,8 @@ function SummaryBossLayer.create(wordList,chapter,entrance)
         
         for i = 1,#layer.wordPool[layer.currentIndex] do
             if cc.rectContainsPoint(layer.crab[i]:getBoundingBox(), location) and location.y < 160 then
+                layer.crab[layer.firstIndex]:stopAllActions()
+                layer.coconut[layer.firstNodeArray[layer.firstIndex].x][layer.firstNodeArray[layer.firstIndex].y]:stopAllActions()
                 layer.isPaused = true
                 layer:crabBig(chapter,i)
                 layer.onCrab = i
@@ -1228,6 +1231,10 @@ function SummaryBossLayer:initCrab1()
         self:addChild(self.crab[3])
         
     end
+    self.globalLock = true
+    s_SCENE:callFuncWithDelay(0.5,function (  )
+        self.globalLock = false
+    end)
     for i = 1,#self.crab do
         local appear = cc.EaseBackOut:create(cc.MoveBy:create(0.5,cc.p(0,s_DESIGN_HEIGHT * 0.2)))
         local delaytime = 0
