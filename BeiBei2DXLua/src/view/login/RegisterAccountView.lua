@@ -11,6 +11,7 @@
 
 --输入框封装
 local InputNode = require("view.login.InputNode")
+local MissionConfig          = require("model.mission.MissionConfig") --任务的配置数据
 
 local RegisterAccountView = class("RegisterAccountView",function()
 	-- local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
@@ -515,6 +516,8 @@ function RegisterAccountView:onTouchRegister(sender,eventType)
 	else
 		-- do nothing
 	end
+
+	s_MissionManager:updateMission(MissionConfig.MISSION_INFO)
 
 	--注册
 	self:register(self.phoneNumber,pwd,self.nickName,self.sex)

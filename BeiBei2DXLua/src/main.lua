@@ -33,6 +33,8 @@ local function main()
     -- avoid memory leak
     collectgarbage("setpause", 100)
     collectgarbage("setstepmul", 5000)
+
+    
     
     cc.Director:getInstance():setDisplayStats(false)
 
@@ -49,6 +51,8 @@ local function main()
     cc.FileUtils:getInstance():addSearchPath(cc.FileUtils:getInstance():getWritablePath())
     require("cocos.init")
     require("mobdebug").start()
+
+    require("mobdebug").start() --start zerobrain debugging
 
     local HotUpdateController = require("hu.HotUpdateController")
     HotUpdateController.init()

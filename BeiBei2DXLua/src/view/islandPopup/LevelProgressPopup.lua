@@ -1,5 +1,8 @@
-local LevelProgressPopup = class ("LevelProgressPopup",
-    function ()
+
+-- 选玩法的界面
+-- 趁热打铁 复习怪兽 总结怪兽 神秘任务
+
+local LevelProgressPopup = class ("LevelProgressPopup",function ()
     return cc.Layer:create()
 end) 
 

@@ -2,6 +2,7 @@ require("cocos.init")
 require("common.global")
 
 local ShopAlter = require("view.shop.ShopAlter")
+local MissionConfig          = require("model.mission.MissionConfig") --任务的配置数据
 
 local ShopLayer = class("ShopLayer", function()
     return cc.Layer:create()
@@ -119,6 +120,16 @@ function ShopLayer.create()
             item_name:setColor(cc.c4b(0,0,0,255))
             item_name:setPosition(item_name_back:getContentSize().width/2-20, item_name_back:getContentSize().height/2-5)
             item_name_back:addChild(item_name)
+
+            if i == 2 then 
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA1)
+            elseif i == 3 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA2)
+            elseif i == 5 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA3)
+            elseif i == 6 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_VIP)
+            end
         end
     end
 

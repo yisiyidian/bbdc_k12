@@ -439,6 +439,9 @@ function M.updateUnitState(unitID)
     local username  = s_CURRENT_USER.username
     local time      = os.time()
 
+    --TODO 处理bookKey标记的书不存在的情况
+    --用户用同一帐号,登陆不同的版本,会出现这种情况
+
     local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
 
     for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." and unitID = "..unitID.." ;") do
