@@ -276,6 +276,11 @@ function ChapterLayerBase:plotDecoration()
 
                 -- add text
                 local unitText = cc.Sprite:create('image/chapter/chapter0/unit_black.png')
+                -- if true then
+                if s_CURRENT_USER.bookKey == 'kwekwe' and levelIndex - 19 > 0 then
+                    unitText = cc.Sprite:create('image/chapter/realwordlock.png')
+                end
+
                 unitText:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2+10)
                 lock:addChild(unitText, 130)
 
@@ -316,6 +321,10 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
 --    else
         -- print_lua_table(s_BookUnitName[s_CURRENT_USER.bookKey])
         local unitText = cc.Sprite:create('image/chapter/chapter0/unit.png')
+        -- if true then 
+        if s_CURRENT_USER.bookKey == 'kwekwe' and levelIndex - 19 > 0 then
+            unitText = cc.Sprite:create('image/chapter/realword.png')
+        end
         unitText:setPosition(levelPosition.x-5, levelPosition.y + 35)
         self:addChild(unitText, 130)
         local unitName = split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(levelIndex+1)],'_')
