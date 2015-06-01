@@ -123,6 +123,10 @@ function LocalDataBaseManager.getWordInfoFromWordName(word)
             ret.sentenceCn         =   raw[6 + indexOffset]
             ret.sentenceEn2        =   raw[7 + indexOffset]
             ret.sentenceCn2        =   raw[8 + indexOffset]
+        else
+            print("-------------------")
+            print("not get word!")
+            print("-------------------")
         end
     end
     return ret
@@ -216,10 +220,6 @@ function LocalDataBaseManager.getAllBossInfo()
     return localdatabase_bossWord.getAllBossInfo()
 end
 
-function LocalDataBaseManager.addRightWord(wordindex)
-    localdatabase_bossWord.addRightWord(wordindex)
-end
-
 function LocalDataBaseManager.addWrongWord(wordindex)
     return localdatabase_bossWord.addWrongWord(wordindex)
 end
@@ -278,6 +278,11 @@ end
 function LocalDataBaseManager.printUnitWord()
     localdatabase_unitWord.printUnitWord()
 end
+
+function LocalDataBaseManager.addRightWord(wordList,unitID)
+    localdatabase_unitWord.addRightWord(wordList,unitID)
+end
+
 ---- Mission -----------------------------任务------------------------------------------------------------
 --获取当前用户的任务数据
 function LocalDataBaseManager.getMissionData()

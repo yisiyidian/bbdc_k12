@@ -1,0 +1,27 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3xuanxiaoguanyeshuyingzi
+  rotate: false
+  xy: 2, 2
+  size: 57, 24
+  orig: 57, 24
+  offset: 0, 0
+  index: -1
+3xuanxiaoguanyeshuzhi
+  rotate: false
+  xy: 2, 28
+  size: 85, 309
+  orig: 85, 309
+  offset: 0, 0
+  index: -1
+xuanxiaoguanyeshuye
+  rotate: false
+  xy: 89, 159
+  size: 179, 178
+  orig: 179, 178
+  offset: 0, 0
+  index: -1

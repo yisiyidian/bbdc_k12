@@ -9,6 +9,7 @@ end)
 
 
 function BookLayer.create(education)
+    s_CURRENT_USER:setSummaryStep(s_summary_selectBook) 
     if s_CURRENT_USER.k12SmallStep < s_K12_selectBook then
         s_CURRENT_USER:setK12SmallStep(s_K12_selectBook)
     end

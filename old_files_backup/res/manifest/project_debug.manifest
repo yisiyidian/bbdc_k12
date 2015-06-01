@@ -1,0 +1,172 @@
+
+        
+    { 
+        "packageUrl" : "http://123.56.84.196/AssetsManagerDebug/",
+        "remoteManifestUrl" : "http://123.56.84.196/AssetsManagerDebug/project_server_debug.manifest", 
+        "remoteVersionUrl" : "http://123.56.84.196/AssetsManagerDebug/version_debug.manifest", 
+        "version" : "2.0.5.0.0.0", 
+        "engineVersion" : "3.3 rc2" 
+    , 
+        "assets" : {    
+    
+
+        "ServerAssets/src/anysdkConst.luac" : 
+        {
+            "md5" : "b7b0cea110b887df9c2d6fe3cf718d44",
+            "compressed" : false
+        }
+            ,
+
+        "ServerAssets/src/AppScene.luac" : 
+        {
+            "md5" : "26da606bacdeb998c0e9eaa53ee03886",
+            "compressed" : false
+        }
+            ,
+
+        "ServerAssets/src/AppVersionInfo.luac" : 
+        {
+            "md5" : "a8fc20d8b01ed51bf3ff673fa1af4705",
+            "compressed" : false
+        }
+            ,
+
+        "ServerAssets/src/AudioMgr.luac" : 
+        {
+            "md5" : "5f7ccba6757f2e775fd19370fda4a60e",
+            "compressed" : false
+        }
+            ,
+
+        "ServerAssets/src/cocos.zip" : 
+        {
+            "md5" : "399a26e2756a454c0dbcdb4efdb7c504",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/common.zip" : 
+        {
+            "md5" : "9e739c4580ca9b30cb1d568477cfbc3e",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/controller.zip" : 
+        {
+            "md5" : "298ac79e9a0d8cadb1dfaf394e150780",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/example.zip" : 
+        {
+            "md5" : "e22e7636b24421718468c0f01ca73a82",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/layer.zip" : 
+        {
+            "md5" : "8f0dcd5ca9e6097b1fb0809fc0d66734",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/main.luac" : 
+        {
+            "md5" : "e936fc48dccbbe349a82f1983f84b122",
+            "compressed" : false
+        }
+            ,
+
+        "ServerAssets/src/model.zip" : 
+        {
+            "md5" : "2f03b1d2ea0da0f7b6e00791c0578987",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/popup.zip" : 
+        {
+            "md5" : "99d1150fa63e7b649838243f7cce4019",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/server.zip" : 
+        {
+            "md5" : "8dd51ffc34f2a71e07e70769523b5b26",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/store.zip" : 
+        {
+            "md5" : "ec7558d5fe4ae327f0e49ba20130db84",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/src/view.zip" : 
+        {
+            "md5" : "25f60bf91a7bd12e9b3dbd156b8657e7",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/res/ccb.zip" : 
+        {
+            "md5" : "7c24d83a996a0f43c63ae38b172e28e9",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/res/cfg.zip" : 
+        {
+            "md5" : "0cf23edd576dbf4a657ded153e65cda9",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/res/font.zip" : 
+        {
+            "md5" : "777b642989a8af8da3d5182b028957b3",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/res/image.zip" : 
+        {
+            "md5" : "a8b8438a577e242a3dce0aff0209f371",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/res/manifest.zip" : 
+        {
+            "md5" : "98294eb6eac6dc97755623280a46ef1c",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/res/sound.zip" : 
+        {
+            "md5" : "e365460298a9e696e61022bd3e373d5f",
+            "compressed" : true
+        }
+            ,
+
+        "ServerAssets/res/spine.zip" : 
+        {
+            "md5" : "0e8b39f1953b76a455008b33eadc49b5",
+            "compressed" : true
+        }
+            
+        }, 
+
+        "searchPaths" : [
+        
+        ] 
+    }
+    

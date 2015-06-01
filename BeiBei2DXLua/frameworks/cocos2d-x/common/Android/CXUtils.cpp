@@ -45,6 +45,22 @@ void CXUtils::shareImageToWeiXin(const std::string& path, const std::string& tit
     }
 }
 
+void CXUtils::shareURLToWeiXin(const std::string& url, const std::string& title, const std::string& desc) {
+    cocos2d::JniMethodInfo t;
+    if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "shareURLToWeiXin", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V")) {
+        jstring java_url = t.env->NewStringUTF(url.c_str());
+        jstring java_title = t.env->NewStringUTF(title.c_str());
+        jstring java_desc = t.env->NewStringUTF(desc.c_str());
+
+        t.env->CallStaticVoidMethod(t.classID, t.methodID, java_url, java_title, java_desc);
+
+        t.env->DeleteLocalRef(java_url);
+        t.env->DeleteLocalRef(java_title);
+        t.env->DeleteLocalRef(java_desc);
+        t.env->DeleteLocalRef(t.classID);
+    }
+}
+
 void CXUtils::addImageToGallery(const std::string& filePath) {
     cocos2d::JniMethodInfo t;
     if (cocos2d::JniHelper::getStaticMethodInfo(t, JAVA_PKG, "addImageToGallery", "(Ljava/lang/String;)V")) {

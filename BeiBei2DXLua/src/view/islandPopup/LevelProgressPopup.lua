@@ -1,3 +1,4 @@
+
 -- 选玩法的界面
 -- 趁热打铁 复习怪兽 总结怪兽 神秘任务
 
@@ -8,421 +9,129 @@ end)
 local Button                = require("view.button.longButtonInStudy")
 local ProgressBar           = require("view.islandPopup.ProgressBar")
 
-function LevelProgressPopup.create(index,playAnimation)
-    local layer = LevelProgressPopup.new(index,playAnimation)
-    print("playAnimation"..tostring(playAnimation))
-    local islandIndex = tonumber(index) + 1
-    layer.unit = s_LocalDatabaseManager.getUnitInfo(islandIndex)
+function LevelProgressPopup.create(index)
+    local layer = LevelProgressPopup.new(index)
+    layer.islandIndex = tonumber(index) + 1
+    layer.unit = s_LocalDatabaseManager.getUnitInfo(layer.islandIndex)
     layer.wrongWordList = {}
     for i = 1 ,#layer.unit.wrongWordList do
         table.insert(layer.wrongWordList,layer.unit.wrongWordList[i])
     end
     print_lua_table(layer.unit)
-    layer.wordNumber = #layer.wrongWordList
-    layer.current_index = layer.unit.unitState
-    layer.coolingDay = layer.unit.coolingDay
-    layer:createPape(islandIndex)
     return layer
+    
 end
 
-local function addCloseButton(backPopup)
-    local button_close_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5)))
-            local remove = cc.CallFunc:create(function() 
-                  s_SCENE:removeAllPopups()
-            end)
-            backPopup:runAction(cc.Sequence:create(move,remove))
-        end
+
+function LevelProgressPopup:ctor(index)
+    print("index "..index)
+    if tonumber(index) == 0 then
+        s_CURRENT_USER:setSummaryStep(s_summary_enterFirstPopup) 
+    elseif tonumber(index) == 1 then
+        s_CURRENT_USER:setSummaryStep(s_summary_enterSecondPopup) 
     end
+    --界面初始化
+    --createPape()
+    self:createSummary(index)
 
-    local button_close = ccui.Button:create("image/friend/close.png","","")
-    button_close:setScale9Enabled(true)
-    button_close:setPosition(backPopup:getContentSize().width - 60 , backPopup:getContentSize().height - 60 )
-    button_close:addTouchEventListener(button_close_clicked)
-    return button_close
-end 
-
-local function addBackButton(backPopup,islandIndex)
-    local button_back_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            local WordLibrary = require("view.islandPopup.WordLibraryPopup")
-            local wordLibrary = WordLibrary.create(islandIndex)
-            s_SCENE.popupLayer:addChild(wordLibrary)  
-            wordLibrary:setVisible(false)
-            
-            local action0 = cc.OrbitCamera:create(0.5,1, 0, 0, 90, 0, 0) 
-            backPopup:runAction(action0) 
-            
-            local action1 = cc.DelayTime:create(0.5)
-            local action2 = cc.CallFunc:create(function()
-                wordLibrary:setVisible(true)
-            end)
-            local action3 = cc.OrbitCamera:create(0.5,1, 0, -90, 90, 0, 0) 
-            local action4 = cc.Sequence:create(action1, action2, action3)
-            wordLibrary:runAction(action4)  
-        end
-    end
-
-    local button_back = ccui.Button:create("image/islandPopup/button_change_to_ciku.png","","")
-    button_back:setScale9Enabled(true)
-    button_back:setPosition(backPopup:getContentSize().width *0.1 , backPopup:getContentSize().height *0.95 )
-    button_back:addTouchEventListener(button_back_clicked)
-    return button_back
 end
 
-function LevelProgressPopup:ctor(index,playAnimation)
-    if s_CURRENT_USER.tutorialStep < s_tutorial_study then
-        s_CURRENT_USER:setTutorialStep(s_tutorial_study) -- 2 -> 3
-    end
+function LevelProgressPopup:createSummary(index)
+    --local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
 
-    self.playAnimation = false
-    if playAnimation ~= nil then
-        self.playAnimation = playAnimation
-    end
 
-    self.islandIndex = tonumber(index) + 1
-    self.total_index = 7
+    local background = cc.Sprite:create("image/islandPopup/subtask_bg.png")
+    background:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)
+    self:addChild(background)
+    self.background = background
+
     
-    self.backPopup = cc.Sprite:create("image/islandPopup/subtask_bg.png")
-    self.backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)
-    self:addChild(self.backPopup)
+    --加入上部 绿色背景
+    local background_green = cc.Sprite:create("image/boss_view/background_green.png")
+    background_green:setPosition(0,background:getContentSize().height)
+    background_green:ignoreAnchorPointForPosition(false)
+    background_green:setAnchorPoint(0,1)
+    background:setContentSize(background_green:getContentSize().width,background:getContentSize().height)
+    background:addChild(background_green)
 
-    self.closeButton = addCloseButton(self.backPopup)
-    self.backPopup:addChild(self.closeButton,2)
-
-    self.backBtn = addBackButton(self.backPopup,self.islandIndex)
-    self.backPopup:addChild(self.backBtn,2)
-
-    local popup_title = cc.Label:createWithSystemFont('夏威夷-'..self.islandIndex,'Verdana-Bold',38)
-    popup_title:setPosition(self.backPopup:getContentSize().width/2,self.backPopup:getContentSize().height-50)
-    popup_title:setColor(cc.c3b(255,255,255))
-    self.backPopup:addChild(popup_title,20)
-
-    local last_button_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            self.changeToPage(false) 
-        end
-    end
-
-    local last_button = ccui.Button:create("image/islandPopup/subtask_previous_button.png","","")
-    last_button:setPosition(self.backPopup:getContentSize().width * 0.1,self.backPopup:getContentSize().height * 0.5 + 80)
-    last_button:setScale9Enabled(true)
-    last_button:ignoreAnchorPointForPosition(false)
-    last_button:setAnchorPoint(0.5,0.5)
-    last_button:addTouchEventListener(last_button_clicked)
-    self.backPopup:addChild(last_button,1)
-
-    local next_button_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.began then
-            playSound(s_sound_buttonEffect)
-        elseif eventType == ccui.TouchEventType.ended then
-            self.changeToPage(true) 
-        end
-    end
-
-    local next_button = ccui.Button:create("image/islandPopup/subtask_next_button.png","","")
-    next_button:setScale9Enabled(true)
-    next_button:setPosition(self.backPopup:getContentSize().width * 0.9,self.backPopup:getContentSize().height * 0.5 + 80)
-    next_button:ignoreAnchorPointForPosition(false)
-    next_button:setAnchorPoint(0.5,0.5)
-    next_button:addTouchEventListener(next_button_clicked)
-    self.backPopup:addChild(next_button,1)
     
-    local onTouchBegan = function(touch, event)
-        return true  
-    end
 
-    local onTouchEnded = function(touch, event)
-        local location = self:convertToNodeSpace(touch:getLocation())
-        if not cc.rectContainsPoint(self.backPopup:getBoundingBox(),location) then
-            local move = cc.MoveBy:create(0.3, cc.p(0, s_DESIGN_HEIGHT))
-            local remove = cc.CallFunc:create(function() 
-                s_SCENE:removeAllPopups()
-            end)
-            self.backPopup:runAction(cc.Sequence:create(move,remove))
+    --加入怪物
+    local monsters = sp.SkeletonAnimation:create("image/boss_view/guaishou_special.json", "image/boss_view/guaishou_special.atlas")
+    monsters:setPosition(background:getContentSize().width/2,background:getContentSize().height/2)
+    background:addChild(monsters)
+    monsters:addAnimation(0, 'animation', true)
+
+    -- --加入任务提示
+    -- local text = cc.Label:createWithSystemFont("任务目标： 打败这货","",30)
+    -- text:setPosition(background:getContentSize().width/2,background:getContentSize().height * 0.25)
+    -- text:setColor(cc.c4b(50,50,50,255))
+    -- background:addChild(text)
+
+    local wordCard_Click = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local WordCardView = require("view.wordcard.WordCardView")
+            local wordCardView = WordCardView.create(index)
+            s_SCENE:popup(wordCardView)
         end
     end
+    --加入 词库按钮
+    local wordCard_button = ccui.Button:create("image/islandPopup/unit_words_button_click.png","image/islandPopup/unit_words_button.png","")
+    wordCard_button:setPosition(background:getContentSize().width * 0.5 - 2, background:getContentSize().height * 0.25)
+    wordCard_button:addTouchEventListener(wordCard_Click)
+    background:addChild(wordCard_button)
 
-    local listener = cc.EventListenerTouchOneByOne:create()
-    listener:setSwallowTouches(true)
-    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
-    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
-    local eventDispatcher = self:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self) 
+    --加入按钮
+    local go_button = Button.create("long","blue","GO") 
+    go_button:setPosition(background:getContentSize().width * 0.5 - 2, background:getContentSize().height * 0.13)
 
-
-    onAndroidKeyPressed(self, function ()
-        local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5)))
-        local remove = cc.CallFunc:create(function() 
+    local close_Click = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
             s_SCENE:removeAllPopups()
-        end)
-        self.backPopup:runAction(cc.Sequence:create(move,remove))
-    end, function ()
-
-    end)
-
-end
-
-function LevelProgressPopup:createPape(islandIndex)
-    local pageViewSize = cc.size(545, 900)
-    local backgroundSize = cc.size(545, 900)
-
-    self.animationFlag = 0
-    if self.current_index > 0 and self.current_index < 7 then
-        self.animationFlag = self.current_index
-        --动画位置在前一页
-    end
-
-    local pageView = ccui.PageView:create()
-    pageView:setTouchEnabled(true)
-    pageView:setContentSize(pageViewSize)
-
-    local back_width = self.backPopup:getContentSize().width
-    local back_height = self.backPopup:getContentSize().height
-
-    pageView:setPosition(cc.p((back_width - backgroundSize.width) / 2 +
-        (backgroundSize.width - pageView:getContentSize().width) / 2 - 7,
-        (back_height - backgroundSize.height) / 2 +
-        (backgroundSize.height - pageView:getContentSize().height) / 2 + 80 ))
-
-    local progress_index = self.current_index
-
-    if self.current_index >= 6 then
-        progress_index = 6
-    end
-
-    local progressBar = ProgressBar.create(6,progress_index)
-    progressBar:setPosition(self.backPopup:getContentSize().width * 0.5,self.backPopup:getContentSize().height * 0.25)
-    self.backPopup:addChild(progressBar)
-
-    local layout = ccui.Layout:create()
-    layout:setContentSize(pageViewSize)
-    local StrikeLayer = self:createStrikeIron()
-    layout:addChild(StrikeLayer)
-    pageView:addPage(layout)
-
-    local layout = ccui.Layout:create()
-    layout:setContentSize(pageViewSize)
-    local ReviewLayer = self:createReview()
-    layout:addChild(ReviewLayer)
-    pageView:addPage(layout)
-
-    local layout = ccui.Layout:create()
-    layout:setContentSize(pageViewSize)
-    local SummaryLayer = self:createSummary()
-    layout:addChild(SummaryLayer)
-    pageView:addPage(layout)
-
-    for i = 4,self.current_index do
-        local layout = ccui.Layout:create()
-        layout:setContentSize(pageViewSize)
-        local ReviewLayer = self:createReview("repeat")
-        layout:addChild(ReviewLayer)
-        pageView:addPage(layout)
-    end
-
-    if self.coolingDay == 0 and self.current_index >= 3 and self.current_index < self.total_index then
-        local layout = ccui.Layout:create()
-        layout:setContentSize(pageViewSize)
-        local ReviewLayer = self:createReview("normal")
-        layout:addChild(ReviewLayer)
-        pageView:addPage(layout)
-    elseif self.coolingDay ~= 0 and self.current_index >= 3 and self.current_index < self.total_index then
-        local layout = ccui.Layout:create()
-        layout:setContentSize(pageViewSize)
-        local MysteriousLayer = self:createMysterious("time")
-        layout:addChild(MysteriousLayer)
-        pageView:addPage(layout)
-    elseif self.current_index < self.total_index then
-        local layout = ccui.Layout:create()
-        layout:setContentSize(pageViewSize)
-        local MysteriousLayer = self:createMysterious()
-        layout:addChild(MysteriousLayer)
-        pageView:addPage(layout)
-    end
-
-
-    local MysteriousLayer_begin_index = 5
-    if self.current_index < 2 then
-        MysteriousLayer_begin_index = 5
-    else
-        MysteriousLayer_begin_index = self.current_index + 2
-    end  
-
-    for i = MysteriousLayer_begin_index,self.total_index do
-        local layout = ccui.Layout:create()
-        layout:setContentSize(pageViewSize)
-        local MysteriousLayer = self:createMysterious()
-        layout:addChild(MysteriousLayer) 
-        pageView:addPage(layout)
-    end
-
-    -- change to current index
-    print("self.playAnimation"..tostring(self.playAnimation))
-    if self.current_index > 0 and self.current_index < 3 and self.playAnimation == true then
-        pageView:scrollToPage(self.current_index - 1)
-        --如果进入的不是第一页，跳转到上一页，播放动画
-        local backColor = cc.LayerColor:create(cc.c4b(0,0,0,0), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
-        backColor:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
-        self:addChild(backColor,10)
-
-        local action0 = cc.DelayTime:create(1)
-        local action1 = cc.CallFunc:create(function ()
-            if backColor ~= nil then
-                pageView:scrollToPage(self.current_index)
-                backColor:removeFromParent()
-                backColor = nil
-            end
-        end)
-        local action2 = cc.Sequence:create(action0,action1)
-        self:runAction(action2)
-
-        local onTouchBegan = function(touch, event)
-            return true  
-        end
-
-        local onTouchEnded = function(touch, event)
-            if backColor ~= nil then
-                pageView:scrollToPage(self.current_index)
-                backColor:removeFromParent()
-                backColor = nil
-            end
-        end
-
-        local listener = cc.EventListenerTouchOneByOne:create()
-        listener:setSwallowTouches(true)
-        listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
-        listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
-        local eventDispatcher = self:getEventDispatcher()
-        eventDispatcher:addEventListenerWithSceneGraphPriority(listener, backColor)
-    else
-        pageView:scrollToPage(progress_index)
-    end
-
-
-    self.changeToPage = function (bool) 
-        if bool == true then
-            local target = pageView:getCurPageIndex()
-            if target ~= 6 then
-                pageView:scrollToPage(target + 1)
-            end
-        elseif bool == false then
-            local target = pageView:getCurPageIndex()
-            if target ~= 0 then
-                pageView:scrollToPage(target - 1)
-            end
         end
     end
+    --加入关闭按钮
+    local close_button = ccui.Button:create("image/button/button_close.png")
+    close_button:setPosition(background:getContentSize().width - 20,background:getContentSize().height - 20)
+    close_button:addTouchEventListener(close_Click)
+    background:addChild(close_button)
 
-    local function pageViewEvent(sender, eventType)
-        if eventType == ccui.PageViewEventType.turning then
-           progressBar.moveLightCircle(pageView:getCurPageIndex())
-        end
-    end 
-    pageView:addEventListener(pageViewEvent)
-    self.backPopup:addChild(pageView)
-end
-
-local function createTitle(Text,parent)
-    local title = cc.Label:createWithSystemFont(Text,"",36)
-    title:setColor(cc.c4b(50,60,64,255))
-    title:setPosition(cc.p(parent:getContentSize().width * 0.5,parent:getContentSize().height * 0.75))
-    parent:addChild(title)
-end
-
-local function createSubtitle(Text,parent)
-    local subtitle = cc.Label:createWithSystemFont(Text,"",18)
-    subtitle:setColor(cc.c4b(108,108,108,255))
-    subtitle:setPosition(cc.p(parent:getContentSize().width * 0.5,parent:getContentSize().height * 0.7))
-    parent:addChild(subtitle)
-end
-
-local function createReviewLabel(parent)
-    local review_label = cc.Label:createWithSystemFont("复习生词","",25)
-    review_label:setColor(cc.c4b(98,98,98,255))
-    review_label:setPosition(cc.p(parent:getContentSize().width * 0.2,parent:getContentSize().height * 0.3))
-    parent:addChild(review_label)
-end
-
-local function createReviewSprite(current,total,parent)
-    local review_sprite = cc.Sprite:create("image/islandPopup/subtask_number_bg.png")
-    review_sprite:setPosition(cc.p(parent:getContentSize().width * 0.4,parent:getContentSize().height * 0.3))
-    parent:addChild(review_sprite)
-
-    local review_num = cc.Label:createWithSystemFont(current.." / "..total,"",24)
-    review_num:setColor(cc.c4b(255,255,255,255))
-    review_num:setPosition(cc.p(review_sprite:getContentSize().width * 0.5,review_sprite:getContentSize().height * 0.5))
-    review_sprite:addChild(review_num)
-end
-
-local function createRewardLabel(parent)
-    local reward_label = cc.Label:createWithSystemFont("奖励","",25)
-    reward_label:setColor(cc.c4b(98,98,98,255))
-    reward_label:setPosition(cc.p(parent:getContentSize().width * 0.6,parent:getContentSize().height * 0.3))
-    parent:addChild(reward_label)
-end
-
-function LevelProgressPopup:createRewardSprite(num,parent,isShowAnimation)
-    local reward_sprite = cc.Sprite:create("image/islandPopup/subtask_beibeibean.png")
-    reward_sprite:setPosition(cc.p(parent:getContentSize().width * 0.8,parent:getContentSize().height * 0.3))
-    parent:addChild(reward_sprite)
-
-    local reward_num = cc.Label:createWithSystemFont(num,"",24)
-    reward_num:setColor(cc.c4b(255,255,255,255))
-    reward_num:setPosition(cc.p(reward_sprite:getContentSize().width * 0.75,reward_sprite:getContentSize().height * 0.5))
-    reward_sprite:addChild(reward_num)
-
-    if isShowAnimation == true and self.playAnimation ~= true then
-        local rightSign_sprite = cc.Sprite:create("image/islandPopup/duigo_green_xiaoguan_tanchu.png")
-        rightSign_sprite:setPosition(cc.p(reward_sprite:getContentSize().width * 0.3 - 150,reward_sprite:getContentSize().height * 0.5 + 180)) 
-        rightSign_sprite:setScale(0)
-        reward_sprite:addChild(rightSign_sprite)
-                        
-        local action1 = cc.ScaleTo:create(0.3,2)
-        local action2 = cc.DelayTime:create(0.3)
-        local action3 = cc.MoveBy:create(0.3,cc.p(150,-180)) 
-        local action4 = cc.Sequence:create(action1,action2,action3)
-        rightSign_sprite:runAction(action4)
-    elseif isShowAnimation == true and self.playAnimation == true then
-        local rightSign_sprite = cc.Sprite:create("image/islandPopup/duigo_green_xiaoguan_tanchu.png")
-        rightSign_sprite:setPosition(cc.p(reward_sprite:getContentSize().width * 0.3 ,reward_sprite:getContentSize().height * 0.5)) 
-        rightSign_sprite:setScale(2)
-        reward_sprite:addChild(rightSign_sprite)
-    end
-end
-
-function LevelProgressPopup:createNormalPlay(playModel,wordList,parent,isShowAnimation)
-    local button_func = function()
+    local function button_func(  )
         playSound(s_sound_buttonEffect) 
 
+
         local bossList = s_LocalDatabaseManager.getAllUnitInfo()
+        local maxID = s_LocalDatabaseManager.getMaxUnitID()
+        if self.unit.coolingDay > 0 or self.unit.unitState >= 5 then
+            showProgressHUD('', true)
+            --print('replay island')
+            local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
+            local summaryBossLayer = SummaryBossLayer.create(self.unit)
+            s_SCENE:replaceGameLayer(summaryBossLayer) 
+            s_SCENE:removeAllPopups()  
+            return
+        end
+
         local taskIndex = -2
 
         for bossID, bossInfo in pairs(bossList) do
-            if bossInfo["coolingDay"] == 0 and bossInfo["unitState"] - 3 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 7 < 0 then
+            if bossInfo["coolingDay"] == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 5 < 0 then
                 taskIndex = bossID
             end
         end    
 
-        if taskIndex == -2 then         
+        if taskIndex == -2 then     
+            showProgressHUD('', true)    
             s_CorePlayManager.initTotalUnitPlay() -- 之前没有boss
             s_SCENE:removeAllPopups()  
-            print("之前没有boss")
         elseif taskIndex == self.islandIndex then
+            showProgressHUD('', true) 
             s_CorePlayManager.initTotalUnitPlay() -- 按顺序打第一个boss
-            s_SCENE:removeAllPopups() 
-            print("按顺序打第一个boss") 
+            s_SCENE:removeAllPopups()  
         else
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch() 
             local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
-            tutorial_text:setPosition(parent:getContentSize().width * 0.5 + 45,300)
+            tutorial_text:setPosition(s_DESIGN_WIDTH / 2, 300)
             self:addChild(tutorial_text,520)
             local text = cc.Label:createWithSystemFont('请先打败前面的boss','',28)
             text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
@@ -437,245 +146,72 @@ function LevelProgressPopup:createNormalPlay(playModel,wordList,parent,isShowAni
                 s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch() 
             end)
             text:runAction(cc.Sequence:create(action2,action3))
-        end  
-    end
-
-    local go_button = Button.create("long","blue","GO") 
-    go_button:setPosition(parent:getContentSize().width * 0.5 - 2, parent:getContentSize().height * 0.05)
-    go_button.func = function ()
-        button_func()
-    end
-
-    if isShowAnimation == "normal" and self.playAnimation == true then
-        go_button:setScale(0)
-        local action2 = cc.ScaleTo:create(0.3,1)
-        local action3 = cc.Sequence:create(action2)
-        go_button:runAction(action3)   
-    elseif isShowAnimation == "normal" and self.playAnimation ~= true then
-
-    end
-
-    if isShowAnimation == true and self.playAnimation == true then
-        --gobutton 缩小
-        local action1 = cc.DelayTime:create(1)
-        local action2 = cc.ScaleTo:create(0.3,0)
-        local action3 = cc.CallFunc:create(function ()
-            go_button:removeFromParent()
-        end)
-        local action4 = cc.Sequence:create(action1,action2,action3)
-        go_button:runAction(action4)   
-        self:createRepeatlPlay(playModel,wordList,parent,isShowAnimation)
-    elseif isShowAnimation == true and self.playAnimation ~= true then
-        go_button:removeFromParent()
-        self:createRepeatlPlay(playModel,wordList,parent,isShowAnimation)
-    end
-
-    parent:addChild(go_button)
-end
-
-function LevelProgressPopup:createRepeatlPlay(playModel,wordList,parent,isShowAnimation)--重复玩，参数 玩法／要玩的词／父亲节点/是否有动画
-    local button_func = function()
-        playSound(s_sound_buttonEffect)           
-        if playModel == "summary" then
-            local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
-            local summaryBossLayer = SummaryBossLayer.create(wordList,1,false)
-            s_SCENE:replaceGameLayer(summaryBossLayer) 
-        elseif playModel == "review" then
-            local NewReviewBossMainLayer = require("view.newreviewboss.NewReviewBossMainLayer")
-            local newReviewBossMainLayer = NewReviewBossMainLayer.create(wordList,Review_From_Word_Bank)
-            s_SCENE:replaceGameLayer(newReviewBossMainLayer)
-        elseif playModel == "iron" then
-            local BlacksmithLayer = require("view.newstudy.BlacksmithLayer")
-            local blacksmithLayer = BlacksmithLayer.create(wordList,self.islandIndex)
-            s_SCENE:replaceGameLayer(blacksmithLayer)
         end 
-        s_SCENE:removeAllPopups()    
     end
-
-    local go_button = Button.create("long","blue","重玩") 
-    go_button:setPosition(parent:getContentSize().width * 0.5 - 2, parent:getContentSize().height * 0.05)
     go_button.func = function ()
         button_func()
     end
+    background:addChild(go_button)
 
-    if isShowAnimation == true and self.playAnimation == true then
-        --重玩button 放大
-        go_button:setScale(0)
-        local action1 = cc.DelayTime:create(1)
-        local action2 = cc.ScaleTo:create(0.3,1)
-        local action3 = cc.CallFunc:create(function ()
 
-        end)
-        local action4 = cc.Sequence:create(action1,action2,action3)
-        go_button:runAction(action4) 
-    elseif isShowAnimation == true and self.playAnimation ~= true then
+    --加入title
+    local title = cc.Label:createWithSystemFont('Unit '..s_BookUnitName[s_CURRENT_USER.bookKey][''..tonumber(index) + 1],"",50)
+    title:setPosition(background:getContentSize().width/2, background:getContentSize().height - 75)
+    title:setColor(cc.c3b(255,255,255))
+    background:addChild(title)
 
+--[[
+    local title2 = cc.Label:createWithSystemFont("good good study day day up", "",25)
+    title2:setPosition(background:getContentSize().width/2, background:getContentSize().height - 150)
+    title2:setColor(cc.c3b(255,255,255))
+    background:addChild(title2)
+]]--
+
+    --点击开始
+    local onTouchBegan = function(touch, event)
+        return true  
     end
 
-    parent:addChild(go_button)
-end
-
-function LevelProgressPopup:createCantPlay(text,parent,goToPlay)--现在不能玩，参数 文字／父亲节点/是否有动画/动画之后玩什么
-    local cantPlay_Sprite = cc.Sprite:create("image/button/longbluefront.png")
-    cantPlay_Sprite:setPosition(parent:getContentSize().width * 0.5 - 2, parent:getContentSize().height * 0.05)
-    cantPlay_Sprite:setColor(cc.c4b(199,199,193,255))
-    parent:addChild(cantPlay_Sprite)
-
-    
-    local cantPlay_Label = cc.Label:createWithSystemFont(text,"",30)
-    cantPlay_Label:setPosition(cc.p(cantPlay_Sprite:getContentSize().width / 2 ,cantPlay_Sprite:getContentSize().height / 2))
-    cantPlay_Sprite:addChild(cantPlay_Label)
-    
-    if text == "" then
-        local time = s_LocalDatabaseManager.getUnitCoolingSeconds(self.islandIndex)
-        if time > 24 * 60 * 60 then
-            cantPlay_Label:setString("剩余时间"..math.ceil(time/(24*60*60)).."天")
-        else
-            cantPlay_Label:setString("剩余时间"..math.ceil(time/(60*60)).."小时")
+    --点击结束
+    local onTouchEnded = function(touch, event)
+        --获取点击的位置
+        local location = self:convertToNodeSpace(touch:getLocation())
+        --判断是否点击在弹出的方框内
+        if not cc.rectContainsPoint(self.background:getBoundingBox(),location) then
+            --是  移走
+            local move = cc.MoveBy:create(0.3, cc.p(0, s_DESIGN_HEIGHT))
+            local remove = cc.CallFunc:create(function() 
+                s_SCENE:removeAllPopups()
+            end)
+            --执行动作
+            self.background:runAction(cc.Sequence:create(move,remove))
         end
     end
 
-    if goToPlay == "normal" and self.playAnimation == true then
-        local action0 = cc.DelayTime:create(2.5)
-        local action1 = cc.ScaleTo:create(0.3,0)
-        local action2 = cc.CallFunc:create(function ()
-            self:createNormalPlay("","",parent,"normal")
+    --监听函数
+    local listener = cc.EventListenerTouchOneByOne:create()
+    --不向下传递触摸
+    listener:setSwallowTouches(true)
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    --获取响应事件
+    local eventDispatcher = self:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self) 
+
+
+
+      onAndroidKeyPressed(self, function ()
+        local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5)))
+        local remove = cc.CallFunc:create(function() 
+            s_SCENE:removeAllPopups()
         end)
-        local action3 = cc.Sequence:create(action0,action1,action2)
-        cantPlay_Sprite:runAction(action3)
-    elseif goToPlay == "normal" and self.playAnimation ~= true then
-        cantPlay_Sprite:removeFromParent()
-        self:createNormalPlay("","",parent,"normal")
-    elseif goToPlay == "mysterious" then
+        self.background:runAction(cc.Sequence:create(move,remove))
+    end, function ()
 
-
-    end
-
+    end)
 end
 
-function LevelProgressPopup:createStrikeIron()
-    local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
 
-    local hammer_sprite = cc.Sprite:create("image/islandPopup/subtask_hammer.png")
-    hammer_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
-    back:addChild(hammer_sprite)
-    
-    createTitle("趁热打铁",back)
-    createSubtitle("复习上课学过的单词",back)
-    createReviewLabel(back)
-    createRewardLabel(back)
 
-    if self.animationFlag >= 1 then
-        self:createRewardSprite(3,back,true)
-    else
-        self:createRewardSprite(3,back)
-    end
-
-    if self.current_index == 0 then
-        self:createNormalPlay("iron",self.wrongWordList,back,false)
-        createReviewSprite(0,self.wordNumber,back)
-    elseif self.current_index > 0 then
-        self:createNormalPlay("iron",self.wrongWordList,back,true)
-        createReviewSprite(self.wordNumber,self.wordNumber,back)
-    end
-    
-    return back
-end
-
-function LevelProgressPopup:createReview(playModel)
-    local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
-
-    local review_sprite = cc.Sprite:create("image/islandPopup/subtask_review_boss.png")
-    review_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
-    back:addChild(review_sprite)
-
-    createTitle("复习怪兽",back)
-    createSubtitle("挑出和给出意思对应的章鱼",back)
-    createReviewLabel(back)
-    createRewardLabel(back)
-
-    if self.animationFlag >= 2 and playModel == nil then -- 普通复习boss
-        self:createRewardSprite(3,back,true)
-    else
-        self:createRewardSprite(3,back)
-    end
-
-    if playModel == "normal" then
-        self:createNormalPlay("review",self.wrongWordList,back,false)
-        createReviewSprite(0,self.wordNumber,back)
-    elseif playModel == "repeat" then
-        self:createRepeatlPlay("review",self.wrongWordList,back)
-        createReviewSprite(self.wordNumber,self.wordNumber,back)
-    elseif self.current_index == 1 then
-        self:createCantPlay("请先完成前边的任务",back,"normal")
-        createReviewSprite(0,self.wordNumber,back)
-    elseif self.current_index > 1 then
-        self:createNormalPlay("review",self.wrongWordList,back,true)
-        createReviewSprite(self.wordNumber,self.wordNumber,back)
-    elseif self.current_index < 1 then
-        self:createCantPlay("请先完成前边的任务",back)
-        createReviewSprite(0,self.wordNumber,back)
-    else
-        self:createCantPlay("time",back)
-        createReviewSprite(0,self.wordNumber,back)
-    end
-    
-    return back
-end
-
-function LevelProgressPopup:createSummary()
-    local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
-
-    local summary_sprite = cc.Sprite:create("image/islandPopup/subtask_summary_boss.png")
-    summary_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
-    back:addChild(summary_sprite)
-
-    createTitle("总结怪兽",back)
-    createSubtitle("划出给出中文对应的单词来击败boss",back)
-    createReviewLabel(back)
-    createRewardLabel(back)
-
-    if self.animationFlag >= 3 then
-        self:createRewardSprite(3,back,true)
-    else
-        self:createRewardSprite(3,back)
-    end
-    
-    if self.current_index == 2 then
-        self:createCantPlay("请先完成前边的任务",back,"normal")
-        createReviewSprite(0,self.wordNumber,back)
-    elseif self.current_index > 2 then
-        self:createNormalPlay("summary",self.wrongWordList,back,true)
-        createReviewSprite(self.wordNumber,self.wordNumber,back)
-    elseif self.current_index < 2 then
-        self:createCantPlay("请先完成前边的任务",back)
-        createReviewSprite(0,self.wordNumber,back)
-    end
-    
-    return back
-end
-
-function LevelProgressPopup:createMysterious(text)
-    local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
-
-    local mysterious_sprite = cc.Sprite:create("image/islandPopup/subtask_mysterious_task.png")
-    mysterious_sprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height / 2)
-    back:addChild(mysterious_sprite)
-
-    createTitle("神秘任务",back)
-    createSubtitle("一个即将到来的神秘玩法",back)
-    createReviewLabel(back)
-    createReviewSprite("?","?",back)
-    createRewardLabel(back)
-    self:createRewardSprite("?",back)
-
-    if text ~= "time" then
-        self:createCantPlay("请先完成前边的任务",back)
-    else
-        self:createCantPlay("",back)
-    end
-    
-    return back
-end
 
 return LevelProgressPopup

@@ -1,0 +1,34 @@
+
+xuanxiaoguan1_shu_1.png
+size: 234,234
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+xuanxiaoguanyezishu1__1
+  rotate: false
+  xy: 2, 143
+  size: 117, 91
+  orig: 117, 91
+  offset: 0, 0
+  index: -1
+xuanxiaoguanyezishu1__2
+  rotate: false
+  xy: 65, 68
+  size: 25, 73
+  orig: 25, 73
+  offset: 0, 0
+  index: -1
+xuanxiaoguanyezishu1__3
+  rotate: false
+  xy: 121, 175
+  size: 70, 59
+  orig: 70, 59
+  offset: 0, 0
+  index: -1
+xuanxiaoguanyezishu1__4
+  rotate: true
+  xy: 2, 2
+  size: 139, 61
+  orig: 139, 61
+  offset: 0, 0
+  index: -1

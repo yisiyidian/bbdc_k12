@@ -1,0 +1,27 @@
+
+guaishou_special.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+boss_special
+  rotate: false
+  xy: 2, 113
+  size: 347, 284
+  orig: 347, 284
+  offset: 0, 0
+  index: -1
+eye_boss_special
+  rotate: false
+  xy: 351, 357
+  size: 46, 40
+  orig: 46, 40
+  offset: 0, 0
+  index: -1
+ying_special
+  rotate: false
+  xy: 2, 62
+  size: 308, 49
+  orig: 308, 49
+  offset: 0, 0
+  index: -1

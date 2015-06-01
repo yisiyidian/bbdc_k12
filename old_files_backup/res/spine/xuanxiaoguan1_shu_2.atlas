@@ -1,0 +1,34 @@
+
+xuanxiaoguan1_shu_2.png
+size: 188,188
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+yezishuxuanxiaoguan1_shu2_1
+  rotate: false
+  xy: 2, 104
+  size: 110, 84
+  orig: 110, 84
+  offset: 0, 0
+  index: -1
+yezishuxuanxiaoguan1_shu2_2
+  rotate: false
+  xy: 114, 133
+  size: 28, 55
+  orig: 28, 55
+  offset: 0, 0
+  index: -1
+yezishuxuanxiaoguan1_shu2_3
+  rotate: false
+  xy: 2, 2
+  size: 20, 42
+  orig: 20, 42
+  offset: 0, 0
+  index: -1
+yezishuxuanxiaoguan1_shu2_4
+  rotate: false
+  xy: 2, 46
+  size: 56, 56
+  orig: 56, 56
+  offset: 0, 0
+  index: -1
