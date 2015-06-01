@@ -5,8 +5,8 @@ local s_USE_XXTEA = true
 
 ---------------------------------------------------------------------------
 -- DO NOT modify these below
-g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13','14','15','16','17','18','19','20','21','22','23','24','25'}
-g_BOOKKEYS = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'
+g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13','14','15','16','17','18','19','20','21','22','23','24','25','26'}
+g_BOOKKEYS = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11','kwekwe'}
 
@@ -122,7 +122,7 @@ end
 function DataManager.loadK12Books()
     local bookUnitWord = {}
 
-        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'
+        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11','kwekwe'}
         for i = 1, #bookName do
@@ -173,9 +173,9 @@ function DataManager.loadK12Books()
                 -- table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])
             end
         end
-        print(bookName[i]..'\t'..(word_count-1))
-        -- print_lua_table(bookUnitWord[bookName[i]])
-    end
+    --     print(bookName[i]..'\t'..(word_count-1))
+    --     -- print_lua_table(bookUnitWord[bookName[i]])
+    -- end
     return bookUnitWord
 end
 
@@ -235,7 +235,7 @@ end
 -- return book[bookKey] = {wordList}
 function DataManager.loadK12BookWords()
     local bookWord = {}
-        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'
+        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11','kwekwe'}
         for i = 1, #bookName do
