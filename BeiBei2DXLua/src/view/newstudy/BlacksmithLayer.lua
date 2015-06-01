@@ -1,5 +1,4 @@
-require("cocos.init")
-require("common.global")
+--趁热打铁
 
 local SoundMark         = require("view.newstudy.NewStudySoundMark")
 local GuessWrong        = require("view.newstudy.GuessWrongPunishPopup")
@@ -8,6 +7,7 @@ local LastWordAndTotalNumber= require("view.newstudy.LastWordAndTotalNumberTip")
 local CollectUnfamiliar = require("view.newstudy.CollectUnfamiliarLayer")
 local PauseButton           = require("view.newreviewboss.NewReviewBossPause")
 local Button                = require("view.button.longButtonInStudy")
+local MissionConfig          = require("model.mission.MissionConfig") --任务的配置数据
 
 local  BlacksmithLayer = class("BlacksmithLayer", function ()
     return cc.Layer:create()
@@ -32,6 +32,9 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
     local tmp = wordMeaningTable[1]
     wordMeaningTable[1] = wordMeaningTable[rightIndex]
     wordMeaningTable[rightIndex] = tmp
+
+    -- dump(wordMeaningTable,"趁热打铁 选项")
+    -- dump(randomNameArray,"趁热打铁 randomNameArray")
 
     local button_func = function(button)
             local feedback 
@@ -66,6 +69,7 @@ function BlacksmithLayer:createOptions(randomNameArray,wordlist,position)
                   action4,
                   cc.CallFunc:create(function()
                     if #wordlist == 0 then  
+                        s_MissionManager:updateMission(MissionConfig.MISSION_DATIE) --趁热打铁
                         if self.islandIndex ~= nil then
                             s_CorePlayManager.enterLevelLayer()
                             s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()

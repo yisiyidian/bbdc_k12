@@ -1,5 +1,10 @@
-require("cocos.init")
-require("common.global")
+--总结BOSS
+
+--？？这俩有用吗
+-- require("cocos.init")
+-- require("common.global")
+
+local MissionConfig = require("model.mission.MissionConfig") --任务配置
 
 local SummaryBossAlter = require("view.summaryboss.SummaryBossAlter")
 local Pause = require("view.Pause")
@@ -1090,9 +1095,6 @@ end
 
 function SummaryBossLayer:initWordList(word)
     local wordList = word
-    --if #wordList < 1 then
-       -- wordList = {'apple','many','many','many','many','many','many','many','many','many','many','tea','banana','cat','dog','camel','ant'}
-    --end
     local index = 1
     
     for i = 1, #wordList do
@@ -1122,11 +1124,6 @@ function SummaryBossLayer:initWordList(word)
         self.totalTime = 2 * self.totalTime
     end
     self.leftTime = self.totalTime
-    --self:runAction(cc.Ripple3D:create(20, cc.size(32,24), cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2), 120, 40, 240))
-    -- self.totalBlood = levelConfig.summary_boss_hp
-    -- self.currentBlood = self.totalBlood
-    -- self.totalTime = levelConfig.summary_boss_time
-
 
     while true do
         local totalLength = 0
@@ -1609,8 +1606,11 @@ function SummaryBossLayer:win(chapter,entrance,wordList)
     
 --    -- win sound
 --    playSound(s_sound_win)
-
+    
     AnalyticsSummaryBossResult('win')
+
+    --胜利 触发总结BOSS任务
+    s_MissionManager:updateMission(MissionConfig.MISSION_ZJBOSS)
 end
 
 function SummaryBossLayer:lose(chapter,entrance,wordList)

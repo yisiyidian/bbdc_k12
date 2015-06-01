@@ -11,7 +11,8 @@ local SettingLayer = class("SettingLayer",function ()
 end)
 
 --构造
-function SettingLayer:ctor()
+function SettingLayer:ctor(homeLayer)
+    self.homeLayer = homeLayer --HomeLayer的引用
 	-- self.username = "游客"
  --    self.logo_name = {"head","book","information","logout"}
  --    self.label_name = {username,"选择书籍","完善个人信息","切换帐号"}
@@ -66,7 +67,7 @@ function SettingLayer:initUI()
     split:setPosition(size.width/2, 0)
     self:addChild(split)
 
-    local followButton = ccui.Button:create("image/homescene/attention_button.png","image/homescene/attention_button_press.png","image/setting/attention_button_press.png")
+    local followButton = ccui.Button:create("image/homescene/attention_button.png","image/homescene/attention_button_press.png","image/homescene/attention_button_press.png")
     followButton:setAnchorPoint(0,1)
     followButton:setPosition(400,190)
     self:addChild(followButton,10)
@@ -183,7 +184,7 @@ function SettingLayer:onInfoTouch(sender,eventType)
 		--如果当前用户是游客 则显示注册帐号
 		local online = s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()
 		if  online == false then
-	        offlineTipHome.setTrue(OfflineTipForHome_ImproveInformation)
+	        self.homeLayer.offlineTipHome.setTrue(OfflineTipForHome_ImproveInformation)
 	    else
 	        local regiserView = RegisterAccountView.new()
 	        s_SCENE:popup(regiserView)
@@ -202,7 +203,7 @@ function SettingLayer:onLoginTouch(sender,eventType)
 	playSound(s_sound_buttonEffect)
 
 	if not s_SERVER.isNetworkConnectedNow() then
-        offlineTipHome.setTrue(OfflineTipForHome_Logout)
+        self.homeLayer.offlineTipHome.setTrue(OfflineTipForHome_Logout)
     else
         local registerView = RegisterAccountView.new(RegisterAccountView.STEP_6)
         s_SCENE:popup(registerView)

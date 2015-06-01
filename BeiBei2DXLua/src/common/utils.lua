@@ -337,9 +337,11 @@ local res = string.split(input, "-+-")
 -- end --
 
 function string.split(input, delimiter)
-input = tostring(input)
-delimiter=tostring(delimiter)
-if(delimiter=='') then return false end
+    input = tostring(input)
+    delimiter=tostring(delimiter)
+    if(delimiter=='') then 
+        return false 
+    end
     local pos,arr = 0, {}
     -- for each divider found
     for st,sp in function() return string.find(input, delimiter, pos, true) end do
