@@ -1,0 +1,13 @@
+
+huadanci_jindutiao_public_wrong.png
+size: 64,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+xuexiceshi_jindutiao_wrong
+  rotate: false
+  xy: 2, 16
+  size: 49, 35
+  orig: 49, 35
+  offset: 0, 0
+  index: -1

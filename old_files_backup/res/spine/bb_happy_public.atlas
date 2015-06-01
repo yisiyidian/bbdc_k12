@@ -1,0 +1,41 @@
+
+bb_happy_public.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bb_happy_1
+  rotate: false
+  xy: 2, 600
+  size: 215, 379
+  orig: 215, 379
+  offset: 0, 0
+  index: -1
+bb_happy_2
+  rotate: false
+  xy: 2, 219
+  size: 215, 379
+  orig: 215, 379
+  offset: 0, 0
+  index: -1
+bb_happy_3
+  rotate: false
+  xy: 219, 600
+  size: 215, 379
+  orig: 215, 379
+  offset: 0, 0
+  index: -1
+bb_happy_4
+  rotate: false
+  xy: 219, 219
+  size: 215, 379
+  orig: 215, 379
+  offset: 0, 0
+  index: -1
+bb_happy_5
+  rotate: true
+  xy: 2, 2
+  size: 215, 379
+  orig: 215, 379
+  offset: 0, 0
+  index: -1

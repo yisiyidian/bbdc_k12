@@ -1,0 +1,58 @@
+{
+"skeleton": { "spine": "1.9.17", "hash": "H9q5tc+cU1Yxn6Z2Y5Rjszdy8lY", "width": 174.57, "height": 151.06 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 67.71, "x": 42.93, "y": 33.66, "rotation": 75.85 },
+	{ "name": "bone2", "parent": "bone", "length": 42.43, "x": 66.79, "y": -0.16, "rotation": -9.9 },
+	{ "name": "bone3", "parent": "bone", "length": 42.88, "x": 63.85, "y": -1.49, "rotation": -23.03 }
+],
+"slots": [
+	{ "name": "xuanxiaoguanyezishu1__4", "bone": "root", "attachment": "xuanxiaoguanyezishu1__4" },
+	{ "name": "xuanxiaoguanyezishu1__3", "bone": "bone3", "attachment": "xuanxiaoguanyezishu1__3" },
+	{ "name": "xuanxiaoguanyezishu1__2", "bone": "bone", "attachment": "xuanxiaoguanyezishu1__2" },
+	{ "name": "xuanxiaoguanyezishu1__1", "bone": "bone2", "attachment": "xuanxiaoguanyezishu1__1" }
+],
+"skins": {
+	"default": {
+		"xuanxiaoguanyezishu1__1": {
+			"xuanxiaoguanyezishu1__1": { "x": 6.56, "y": 2.52, "rotation": -65.95, "width": 117, "height": 91 }
+		},
+		"xuanxiaoguanyezishu1__2": {
+			"xuanxiaoguanyezishu1__2": { "x": 35.75, "y": 1.49, "rotation": -75.85, "width": 25, "height": 73 }
+		},
+		"xuanxiaoguanyezishu1__3": {
+			"xuanxiaoguanyezishu1__3": { "x": -9.99, "y": -3.03, "rotation": -52.82, "width": 70, "height": 59 }
+		},
+		"xuanxiaoguanyezishu1__4": {
+			"xuanxiaoguanyezishu1__4": { "x": 106.35, "y": 30.34, "width": 139, "height": 61 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 1.6333, "angle": -8.44 },
+					{ "time": 3.2333, "angle": 0 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 1.6333, "angle": -13.97 },
+					{ "time": 3.2333, "angle": 0 }
+				]
+			},
+			"bone3": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 1.6333, "angle": 3.98 },
+					{ "time": 3.2333, "angle": 0 }
+				]
+			}
+		}
+	}
+}
+}

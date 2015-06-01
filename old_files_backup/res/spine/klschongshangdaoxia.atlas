@@ -1,0 +1,160 @@
+
+klschongshangdaoxia.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+abdomen
+  rotate: false
+  xy: 2, 143
+  size: 168, 126
+  orig: 168, 126
+  offset: 0, 0
+  index: -1
+duzi
+  rotate: false
+  xy: 2, 119
+  size: 110, 22
+  orig: 110, 22
+  offset: 0, 0
+  index: -1
+duzi1
+  rotate: false
+  xy: 2, 119
+  size: 110, 22
+  orig: 110, 22
+  offset: 0, 0
+  index: -1
+jiao
+  rotate: false
+  xy: 197, 321
+  size: 28, 38
+  orig: 28, 38
+  offset: 0, 0
+  index: -1
+lift eye
+  rotate: false
+  xy: 298, 410
+  size: 31, 30
+  orig: 31, 30
+  offset: 0, 0
+  index: -1
+right eye
+  rotate: false
+  xy: 298, 410
+  size: 31, 30
+  orig: 31, 30
+  offset: 0, 0
+  index: -1
+liftarm
+  rotate: true
+  xy: 298, 442
+  size: 27, 76
+  orig: 27, 76
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 197, 361
+  size: 88, 36
+  orig: 88, 36
+  offset: 0, 0
+  index: -1
+right arm
+  rotate: false
+  xy: 2, 40
+  size: 26, 77
+  orig: 26, 77
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: false
+  xy: 2, 271
+  size: 193, 198
+  orig: 193, 198
+  offset: 0, 0
+  index: -1
+tooth
+  rotate: true
+  xy: 172, 209
+  size: 60, 17
+  orig: 60, 17
+  offset: 0, 0
+  index: -1
+weiba
+  rotate: false
+  xy: 197, 399
+  size: 99, 70
+  orig: 99, 70
+  offset: 0, 0
+  index: -1
+yachixian
+  rotate: false
+  xy: 376, 453
+  size: 40, 16
+  orig: 40, 16
+  offset: 0, 0
+  index: -1
+youshou
+  rotate: false
+  xy: 197, 304
+  size: 17, 15
+  orig: 17, 15
+  offset: 0, 0
+  index: -1
+youyanbai
+  rotate: true
+  xy: 172, 180
+  size: 27, 13
+  orig: 27, 13
+  offset: 0, 0
+  index: -1
+youyangun
+  rotate: false
+  xy: 2, 2
+  size: 15, 36
+  orig: 15, 36
+  offset: 0, 0
+  index: -1
+zuoyangun
+  rotate: false
+  xy: 2, 2
+  size: 15, 36
+  orig: 15, 36
+  offset: 0, 0
+  index: -1
+youyanzhu
+  rotate: false
+  xy: 114, 121
+  size: 10, 6
+  orig: 10, 6
+  offset: 0, 0
+  index: -1
+zuixian
+  rotate: false
+  xy: 114, 129
+  size: 54, 12
+  orig: 54, 12
+  offset: 0, 0
+  index: -1
+zuoshou
+  rotate: false
+  xy: 227, 344
+  size: 15, 15
+  orig: 15, 15
+  offset: 0, 0
+  index: -1
+zuoyanbai
+  rotate: false
+  xy: 30, 103
+  size: 27, 14
+  orig: 27, 14
+  offset: 0, 0
+  index: -1
+zuoyanzhu
+  rotate: true
+  xy: 287, 386
+  size: 11, 6
+  orig: 11, 6
+  offset: 0, 0
+  index: -1

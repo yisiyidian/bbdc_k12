@@ -1,0 +1,29 @@
+{
+"skeleton": { "hash": "oDYovgM7HQu2lS2O2pRSEdpmnjA", "spine": "2.0.22", "width": 91.45, "height": 95.56, "images": "/Users/wangsiyu/Desktop" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "zongjieboss_douzi", "bone": "root", "attachment": "zongjieboss_douzi" }
+],
+"skins": {
+	"default": {
+		"zongjieboss_douzi": {
+			"zongjieboss_douzi": { "width": 58, "height": 76 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"root": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.2666, "angle": 181 },
+					{ "time": 0.5, "angle": 364 }
+				]
+			}
+		}
+	}
+}
+}

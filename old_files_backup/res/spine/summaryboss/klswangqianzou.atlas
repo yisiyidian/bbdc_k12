@@ -1,0 +1,111 @@
+
+klswangqianzou.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+duzi
+  rotate: true
+  xy: 153, 124
+  size: 130, 99
+  orig: 130, 99
+  offset: 0, 0
+  index: -1
+duzixian
+  rotate: false
+  xy: 2, 54
+  size: 95, 44
+  orig: 95, 44
+  offset: 0, 0
+  index: -1
+moutch
+  rotate: true
+  xy: 99, 37
+  size: 61, 28
+  orig: 61, 28
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: false
+  xy: 2, 100
+  size: 149, 154
+  orig: 149, 154
+  offset: 0, 0
+  index: -1
+weiba
+  rotate: false
+  xy: 153, 67
+  size: 77, 55
+  orig: 77, 55
+  offset: 0, 0
+  index: -1
+yachi
+  rotate: false
+  xy: 2, 2
+  size: 31, 11
+  orig: 31, 11
+  offset: 0, 0
+  index: -1
+yanxian
+  rotate: true
+  xy: 129, 32
+  size: 66, 17
+  orig: 66, 17
+  offset: 0, 0
+  index: -1
+youshou
+  rotate: false
+  xy: 2, 15
+  size: 54, 37
+  orig: 54, 37
+  offset: 0, 0
+  index: -1
+youyan
+  rotate: false
+  xy: 58, 28
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1
+youyanbai
+  rotate: false
+  xy: 207, 56
+  size: 23, 9
+  orig: 23, 9
+  offset: 0, 0
+  index: -1
+youyanzhu
+  rotate: false
+  xy: 84, 22
+  size: 13, 30
+  orig: 13, 30
+  offset: 0, 0
+  index: -1
+zuoshou
+  rotate: false
+  xy: 232, 66
+  size: 16, 56
+  orig: 16, 56
+  offset: 0, 0
+  index: -1
+zuoyan
+  rotate: false
+  xy: 148, 42
+  size: 25, 23
+  orig: 25, 23
+  offset: 0, 0
+  index: -1
+zuoyanbai
+  rotate: false
+  xy: 58, 17
+  size: 24, 9
+  orig: 24, 9
+  offset: 0, 0
+  index: -1
+zuoyanzhu
+  rotate: true
+  xy: 175, 52
+  size: 13, 30
+  orig: 13, 30
+  offset: 0, 0
+  index: -1

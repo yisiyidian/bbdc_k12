@@ -1,0 +1,60 @@
+{
+"skeleton": { "hash": "jIE4npzxOOHt7AfLwWTdrA5R4nA", "spine": "2.0.22", "width": 213, "height": 295, "images": "./bbunhappy/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "bb_inhappy_1", "bone": "root", "attachment": "bb_inhappy_6" }
+],
+"skins": {
+	"default": {
+		"bb_inhappy_1": {
+			"bb_inhappy_1": { "x": 106.91, "y": 148.44, "width": 213, "height": 295 },
+			"bb_inhappy_2": { "x": 106.91, "y": 148.44, "width": 213, "height": 295 },
+			"bb_inhappy_3": { "x": 106.91, "y": 148.44, "width": 213, "height": 295 },
+			"bb_inhappy_4": { "x": 106.91, "y": 148.44, "width": 213, "height": 295 },
+			"bb_inhappy_5": { "x": 106.91, "y": 148.44, "width": 213, "height": 295 },
+			"bb_inhappy_6": { "x": 106.91, "y": 148.44, "width": 213, "height": 295 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"bb_inhappy_1": {
+				"attachment": [
+					{ "time": 0, "name": "bb_inhappy_1" },
+					{ "time": 0.1666, "name": "bb_inhappy_2" },
+					{ "time": 0.2666, "name": "bb_inhappy_1" },
+					{ "time": 0.5, "name": "bb_inhappy_2" },
+					{ "time": 0.6, "name": "bb_inhappy_1" },
+					{ "time": 0.8, "name": "bb_inhappy_2" },
+					{ "time": 0.9, "name": "bb_inhappy_1" },
+					{ "time": 1, "name": "bb_inhappy_3" },
+					{ "time": 1.1333, "name": "bb_inhappy_4" },
+					{ "time": 1.2666, "name": "bb_inhappy_5" },
+					{ "time": 1.3666, "name": "bb_inhappy_6" },
+					{ "time": 1.4666, "name": "bb_inhappy_5" },
+					{ "time": 1.6, "name": "bb_inhappy_6" },
+					{ "time": 1.7333, "name": "bb_inhappy_5" },
+					{ "time": 1.8333, "name": "bb_inhappy_6" },
+					{ "time": 1.9333, "name": "bb_inhappy_5" },
+					{ "time": 2.0666, "name": "bb_inhappy_6" },
+					{ "time": 2.2, "name": "bb_inhappy_5" },
+					{ "time": 2.3333, "name": "bb_inhappy_6" },
+					{ "time": 2.4333, "name": "bb_inhappy_5" },
+					{ "time": 2.5666, "name": "bb_inhappy_6" },
+					{ "time": 2.7, "name": "bb_inhappy_5" },
+					{ "time": 2.8, "name": "bb_inhappy_6" },
+					{ "time": 2.9, "name": "bb_inhappy_5" },
+					{ "time": 3.0333, "name": "bb_inhappy_6" },
+					{ "time": 3.1666, "name": "bb_inhappy_5" },
+					{ "time": 3.3, "name": "bb_inhappy_4" },
+					{ "time": 3.4333, "name": "bb_inhappy_3" },
+					{ "time": 3.5666, "name": "bb_inhappy_2" }
+				]
+			}
+		}
+	}
+}
+}

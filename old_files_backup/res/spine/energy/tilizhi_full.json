@@ -1,0 +1,81 @@
+{
+"skeleton": {
+	"hash": "ymDjdhXCdU991DDNj34IVwEkrXQ",
+	"spine": "2.0.22",
+	"width": 133.72,
+	"height": 116.53,
+	"images": "/Users/wangsiyu/Desktop/ /单词游戏/体力值动画"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 85.6, "y": -51.32, "rotation": 90.45 }
+],
+"slots": [
+	{ "name": "tilizih_1", "bone": "bone", "attachment": "tilizih_1" }
+],
+"skins": {
+	"default": {
+		"tilizih_1": {
+			"tilizih_1": { "x": 51.32, "y": -0.41, "rotation": -90.45, "width": 129, "height": 111 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0.8333, "angle": 0 },
+					{ "time": 0.9, "angle": 4.92 },
+					{ "time": 0.9666, "angle": 0 },
+					{ "time": 1.0333, "angle": -5.38 },
+					{ "time": 1.1, "angle": 0 },
+					{ "time": 1.1666, "angle": 4.92 },
+					{ "time": 1.2333, "angle": 0 },
+					{ "time": 1.3, "angle": -5.38 },
+					{ "time": 1.3666, "angle": 0 },
+					{ "time": 1.4333, "angle": 4.92 },
+					{ "time": 1.5, "angle": 0 },
+					{ "time": 1.5666, "angle": -5.38 },
+					{ "time": 1.6333, "angle": 0, "curve": "stepped" },
+					{ "time": 2.3333, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.2666, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.5333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.8333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.9666, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.0333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.1, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.2333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.3, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.3666, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.5, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.5666, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 1.6333, "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 2.3333, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.1333, "x": 1.158, "y": 0.914 },
+					{ "time": 0.2666, "x": 1, "y": 1 },
+					{ "time": 0.4, "x": 1.158, "y": 0.914 },
+					{ "time": 0.5333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.8333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 0.9666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.0333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.1, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.2333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.3, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.3666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.5, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.5666, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1.6333, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 2.3333, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}
