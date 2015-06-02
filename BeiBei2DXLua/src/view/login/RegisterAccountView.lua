@@ -516,10 +516,6 @@ function RegisterAccountView:onTouchRegister(sender,eventType)
 	else
 		-- do nothing
 	end
-<<<<<<< HEAD
-=======
-
->>>>>>> 41a3a3c1d1a62cf194979669635d9c60a0217e8d
 	--注册
 	self:register(self.phoneNumber,pwd,self.nickName,self.sex)
 end
@@ -656,12 +652,9 @@ function RegisterAccountView:onRegisterCallBack(nickName,pwd,phoneNumber,error,e
 		s_TIPS_LAYER:showSmallWithOneButton(error)
 		return
 	end
-<<<<<<< HEAD
-	s_MissionManager:updateMission(MissionConfig.MISSION_INFO)
-=======
+
 	--触发完善信息任务
 	s_MissionManager:updateMission(MissionConfig.MISSION_INFO,1,false)
->>>>>>> 41a3a3c1d1a62cf194979669635d9c60a0217e8d
 	self:endRegister(true)
 end
 
