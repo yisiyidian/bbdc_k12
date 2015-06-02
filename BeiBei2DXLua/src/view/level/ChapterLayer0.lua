@@ -1,3 +1,4 @@
+-- 第一大关（章节）的实现，使用了ChapterLayerBase的公共方法
 local ChapterLayerBase = require('view.level.ChapterLayerBase')
 
 local s_chapterKey = 'chapter0'
@@ -7,6 +8,7 @@ local ChapterLayer0 = class("ChapterLayer0",function()
     return ChapterLayerBase.create(s_chapterKey, s_startLevelKey)
 end)
 
+-- 关卡的资源
 local Chapter0ResTable = {
     back1_1 = {'res/image/chapter/chapter0/1_1.png',cc.p(0,1),cc.p(0,s_chapter0_base_height),"back"},
     back1_2 = {'res/image/chapter/chapter0/1_2.png',cc.p(0,1),cc.p(0,s_chapter0_base_height),"back"},
@@ -42,6 +44,7 @@ function ChapterLayer0:ctor(resourceType)
     self:loadResource()
 end
 
+-- 从资源中导入每个关卡的位置
 function ChapterLayer0:loadLevelPosition(startLevelKey)
     self.startLevelKey = startLevelKey
     for i= 1, 10 do
@@ -50,6 +53,7 @@ function ChapterLayer0:loadLevelPosition(startLevelKey)
     end
 end
 
+-- 添加波浪的动画
 function ChapterLayer0:addWaveAnimation(position)
     local wave1 = cc.Sprite:create('image/chapter/chapter0/wave.png')
     local wave2 = cc.Sprite:create('image/chapter/chapter0/wave.png')
@@ -75,6 +79,7 @@ function ChapterLayer0:addWaveAnimation(position)
     
 end
 
+-- 导入关卡的资源
 function ChapterLayer0:loadResource()
     if self.resourceType == s_chapter_resource_start_type then
         self:createObjectForResource(Chapter0ResTable['back1_1'])
