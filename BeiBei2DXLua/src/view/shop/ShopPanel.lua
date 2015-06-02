@@ -1,8 +1,9 @@
 --商店界面
 
 local ShopErrorAlter = require("view.shop.ShopErrorAlter")
-local Button                = require("view.button.longButtonInStudy")
-local MissionConfig          = require("model.mission.MissionConfig") --任务的配置数据
+local MissionConfig  = require("model.mission.MissionConfig") --任务的配置数据
+local Button         = require("view.button.longButtonInStudy")
+
 
 local ShopPanel = class("ShopPanel", function()
     return cc.Layer:create()

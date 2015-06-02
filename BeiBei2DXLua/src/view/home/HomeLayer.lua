@@ -682,7 +682,7 @@ function HomeLayer:changeViewToFriendOrShop(destination)
     destinationLayer:runAction(cc.Sequence:create(action2, action3))
 
     destinationLayer.backToHome = handler(self,
-        function(...)
+        function(self)
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2 ,s_DESIGN_HEIGHT/2))
             self.backColor:runAction(action1)

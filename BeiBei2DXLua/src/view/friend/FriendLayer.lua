@@ -13,7 +13,6 @@ end
 function FriendLayer:ctor()
     
     self.backToHome = function ()
-        print("gogogogo home")
         s_CorePlayManager.enterHomeLayer()
     end
 
@@ -44,7 +43,12 @@ function FriendLayer:ctor()
             print("eventType:"..eventType)
             s_CURRENT_USER.seenFansCount = s_CURRENT_USER.fansCount
             saveUserToServer({['seenFansCount']=s_CURRENT_USER.seenFansCount}, function (datas, error)
-                 sel.backToHome()
+                if sel~= nil and not tolua.isnull(sel) then
+                    if sel.backToHome ~= nil then
+                        sel.backToHome()
+                        sel.backToHome = nil
+                    end
+                end
             end)
             
         end
