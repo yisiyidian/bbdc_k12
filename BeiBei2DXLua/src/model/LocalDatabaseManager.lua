@@ -105,6 +105,8 @@ end
 function LocalDataBaseManager.getWordInfoFromWordName(word)
     local DataWord = require('model.user.DataWord')
     local ret = DataWord.create()
+    -- 大写单词转成小写
+    local word = string.lower(word)
     ret.wordName = word
     if s_WordDictionaryDatabase.allwords ~= nil then
         local raw = s_WordDictionaryDatabase.allwords[word]
