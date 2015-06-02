@@ -1,4 +1,4 @@
-require("common.global")
+--商店界面
 
 local ShopErrorAlter = require("view.shop.ShopErrorAlter")
 local Button                = require("view.button.longButtonInStudy")

@@ -116,7 +116,8 @@ function TaskView:CloseClick(sender,eventType)
 
 	end)
 	self:runAction(cc.Sequence:create(action5,action4,action6))
-
+	--开启触摸
+	s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 end
 
 function TaskView:getRewardCallBack(taskId,index,position)
@@ -150,6 +151,7 @@ function TaskView:getRewardCallBack(taskId,index,position)
     		self.beanCallBack()
     	end
     end
+    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     local action4 = cc.CallFunc:create(handler(self,release))
     beanImg:runAction(cc.Sequence:create(action0,action1,action2,action4)) 
     self:resetView()
