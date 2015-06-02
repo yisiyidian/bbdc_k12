@@ -1,0 +1,17 @@
+{ 
+	"packageUrl" : "http://123.56.84.196/BookSoundBag/",
+	"remoteManifestUrl" : "http://123.56.84.196/BookSoundBag/book_sound_gse_server.manifest", 
+	"remoteVersionUrl" : "http://123.56.84.196/BookSoundBag/book_sound_gse_version.manifest", 
+	"version" : "1.6.0.0", 
+	"engineVersion" : "3.3 rc2", 
+	"assets" : {	
+		"gse.zip" : {
+			"md5" : "c1800bab97608887ffefedde6f066cae",
+			"compressed" : true
+		}
+	}, 
+
+	"searchPaths" : [
+	
+    ] 
+}

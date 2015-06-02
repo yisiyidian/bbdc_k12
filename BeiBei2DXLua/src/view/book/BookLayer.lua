@@ -9,6 +9,7 @@ end)
 
 
 function BookLayer.create(education)
+    s_CURRENT_USER:setSummaryStep(s_summary_selectBook) 
     if s_CURRENT_USER.k12SmallStep < s_K12_selectBook then
         s_CURRENT_USER:setK12SmallStep(s_K12_selectBook)
     end
@@ -54,9 +55,12 @@ function BookLayer.create(education)
     --local name_array = {}
     --local key_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
     local grade = split(education,'_')
+    if grade[1] == 'kwekwe' then
+        grade[1] = 'primary'
+    end
     local key_array = {}
     if grade[1] == 'primary' then
-        key_array = {'primary_1','primary_2','primary_3','primary_4','primary_5','primary_6','primary_7','primary_8'}
+        key_array = {'kwekwe','primary_1','primary_2','primary_3','primary_4','primary_5','primary_6','primary_7','primary_8'}
     elseif grade[1] == 'junior' then
         key_array = {'junior_1','junior_2','junior_3','junior_4','junior_5'}
     else

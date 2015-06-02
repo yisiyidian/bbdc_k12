@@ -1,5 +1,5 @@
-app_version_debug   = 206000
-app_version_release = 206000
+app_version_debug   = 211000
+app_version_release = 211000
 
 local function _initConstant()
     -- number
@@ -64,6 +64,7 @@ local function _initConstant()
 
     s_DataManager = reloadModule('model.DataManager')
     s_DataManager.clear()
+
 end
 
 local function _initTool()
@@ -112,7 +113,7 @@ local function _initServer()
     
     -- user base server
     s_UserBaseServer          = reloadModule('server.UserBaseServer')
-    s_HttpRequestClient       = reloadModule('server.HttpRequestClient')
+s_HttpRequestClient       = reloadModule('server.HttpRequestClient')
 
     reloadModule('server.Analytics')
 end
@@ -133,7 +134,11 @@ end
 
 local function _declaration()
     s_CorePlayManager = nil
+    --任务管理器
+    s_MissionManager = reloadModule("controller.MissionManager").new()
 end
+
+--start.lua里的start() 会调用这个函数
 
 function initApp()
     _initConstant()

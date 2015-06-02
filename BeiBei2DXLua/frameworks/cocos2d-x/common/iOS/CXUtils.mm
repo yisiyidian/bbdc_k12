@@ -40,6 +40,28 @@ void CXUtils::shareImageToWeiXin(const std::string& path, const std::string& tit
     [WXApi sendReq:req];
 
 }
+void CXUtils::shareURLToWeiXin(const std::string& url, const std::string& title, const std::string& desc) {
+    
+    WXMediaMessage *message = [WXMediaMessage message];
+    [message setThumbImage:[UIImage imageNamed:@"Icon-72.png"]];
+    
+    WXWebpageObject *ext = [WXWebpageObject object];
+    ext.webpageUrl = [NSString stringWithUTF8String:url.c_str()];
+    
+    message.mediaObject = ext;
+    message.mediaTagName = @"WECHAT_TAG_JUMP_APP";
+    message.title = [NSString stringWithUTF8String:title.c_str()];
+    message.description = [NSString stringWithUTF8String:desc.c_str()];
+    message.messageExt = [NSString stringWithUTF8String:title.c_str()];
+    message.messageAction = @"<action>dotalist</action>";
+    
+    SendMessageToWXReq* req = [[[SendMessageToWXReq alloc] init] autorelease];
+    req.bText = NO;
+    req.message = message;
+    req.scene = WXSceneTimeline;
+    
+    [WXApi sendReq:req];
+}
 
 void CXUtils::addImageToGallery(const std::string& filePath) {
     NSString* path = [NSString stringWithUTF8String:filePath.c_str()];

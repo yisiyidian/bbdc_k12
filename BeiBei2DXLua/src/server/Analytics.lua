@@ -28,9 +28,9 @@ function AnalyticsSmallTutorial(step)
     print('Analytics', getAnalyticsPrefix() .. 'TutorialSmallStep', tostring(step)); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialSmallStep', tostring(step))
 end
 
---function AnalyticsReviewBossTutorial(step)
---    print('Analytics', , ); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ReviewBossTutorialStep', tostring(step))
---end
+function AnalyticsSummaryStep(step)
+    print('Analytics', getAnalyticsPrefix() .. 'TutorialSummaryStep', tostring(step)); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialSummaryStep', tostring(step))
+end
 
 ----------------------------------------------------------------------------------------
 

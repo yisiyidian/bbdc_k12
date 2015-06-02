@@ -337,9 +337,11 @@ local res = string.split(input, "-+-")
 -- end --
 
 function string.split(input, delimiter)
-input = tostring(input)
-delimiter=tostring(delimiter)
-if(delimiter=='') then return false end
+    input = tostring(input)
+    delimiter=tostring(delimiter)
+    if(delimiter=='') then 
+        return false 
+    end
     local pos,arr = 0, {}
     -- for each divider found
     for st,sp in function() return string.find(input, delimiter, pos, true) end do
@@ -478,5 +480,29 @@ function layerHoldTouch(layer)
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
 
     listener:setSwallowTouches(true)
+end
+
+-- 弹出面板，触摸黑底关闭面板
+function touchBackgroundClosePopup(layer,popup,closeFunc)
+    local onTouchBegan = function(touch, event)
+        return true  
+    end
+    
+    local onTouchEnded = function(touch, event)
+        local location = layer:convertToNodeSpace(touch:getLocation())
+        if not cc.rectContainsPoint(popup:getBoundingBox(),location) then
+            if closeFunc ~= nil then closeFunc() end
+            print("ClosePopup")
+        else
+            print("nothing happen")
+        end
+    end
+    
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = layer:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)  
 end
 

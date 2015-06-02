@@ -1,7 +1,13 @@
 
+---本地数据管理器 
+---1、管理所有本地sqlite数据库的表
+---2、也管理UserDefault
+local LocalDataBaseManager = {}
+
+
 require("common.global")
 local sqlite3 = require("lsqlite3")
-
+--Model 层
 local DataEverydayInfo          = require('model.user.DataEverydayInfo')
 local DataLevelInfo             = require('model.user.DataLevelInfo')
 local DataDailyStudyInfo        = require('model.user.DataDailyStudyInfo')
@@ -10,101 +16,108 @@ local DataTask                  = require('model.user.DataTask')
 local DataUnit                  = require('model.user.DataUnit')
 local DataDailyUsing            = require('model.user.DataDailyUsing')
 
+local DataMission               = require("model.user.DataMission")--任务
+
 local databaseTables = {
         DataEverydayInfo,
         DataUser,
         DataLevelInfo,
-
         DataDailyStudyInfo,
         DataBossWord,
         DataTask,
         DataUnit,
-        DataDailyUsing
+        DataDailyUsing,
+        DataMission, --任务
     }
 
-
 local localdatabase_utils           = nil --本地数据库管理工具 localDatabase.utils里的表M
-local localdatabase_user            = nil
+local localdatabase_user            = nil 
 local localdatabase_dailyStudyInfo  = nil
 local localdatabase_bossWord        = nil
 local localdatabase_task            = nil
 local localdatabase_unit            = nil
+local localdatabase_mission         = nil --任务
 
--- define Manager
-local Manager = {}
-
--- define Manager's variables
-Manager.database = nil
-
--- connect local sqlite
-function Manager.init()
+--初始化
+function LocalDataBaseManager.init()
+    LocalDataBaseManager.database = nil
+    --打开数据库
     local databasePath = cc.FileUtils:getInstance():getWritablePath() .. 'bbdx.sqlite' --  version 1.7.x- "localDB.sqlite"
-    Manager.database = sqlite3.open(databasePath)
+    LocalDataBaseManager.database = sqlite3.open(databasePath)
     print ('databasePath:' .. databasePath)
-
+    --数据 业务访问层
     localdatabase_utils             = reloadModule('model.localDatabase.utils')
     localdatabase_user              = reloadModule('model.localDatabase.user')
-
     localdatabase_dailyStudyInfo    = reloadModule('model.localDatabase.dailyStudyInfo')
     localdatabase_bossWord          = reloadModule('model.localDatabase.bossWord')
     localdatabase_task              = reloadModule('model.localDatabase.task')
     localdatabase_unitWord          = reloadModule('model.localDatabase.unitWord')
-    
-    Manager.initTables()
+    localdatabase_mission           = reloadModule('model.localDatabase.mission') --业务层
+    --创建数据表
+    LocalDataBaseManager.initTables()
 end
 
--- close local sqlite
-function Manager.close() Manager.database:close() end
+--关闭数据库连接
+function LocalDataBaseManager.close() 
+    LocalDataBaseManager.database:close() 
+end
 
--- init data structure
-function Manager.initTables()    
-    
+--创建sqlite里的各种表
+function LocalDataBaseManager.initTables()
     -- CREATE table Download State
     -- just used in local
-    Manager.database:exec[[
+    LocalDataBaseManager.database:exec[[
         create table if not exists DataDownloadState(
             bookKey TEXT,
             isDownloaded INTEGER,
             lastUpdate INTEGER
         );
     ]]
-    
+    --依次创建数据表
+    dump(databaseTables)
     for i = 1, #databaseTables do
         localdatabase_utils.createTable(databaseTables[i].create())
     end
 end
 
-function Manager.saveDataClassObject(objectOfDataClass, userId, username, conditions)
+function LocalDataBaseManager.saveDataClassObject(objectOfDataClass, userId, username, conditions)
     localdatabase_utils.saveDataClassObject(objectOfDataClass, userId, username, conditions)
 end
 ---------------------------------------------------------------------------------------------------------
 
-function Manager.getLastLogInUser(objectOfDataClass, usertype)
+function LocalDataBaseManager.getLastLogInUser(objectOfDataClass, usertype)
     return localdatabase_user.getUserDataFromLocalDB(objectOfDataClass, usertype)
 end
 
 ---------------------------------------------------------------------------------------------------------
 
-function Manager.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
+function LocalDataBaseManager.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
     localdatabase_utils.saveData(objectOfDataClass, userId, username, recordsNum, conditions)
 end
 
 -- handleRecordRow : nil or function(row)
-function Manager.getDatas(classNameOfDataClass, userId, username, handleRecordRow)
+function LocalDataBaseManager.getDatas(classNameOfDataClass, userId, username, handleRecordRow)
     return localdatabase_utils.getDatas(classNameOfDataClass, userId, username, handleRecordRow)
 end
 
 ---------------------------------------------------------------------------------------------------------
 
-function Manager.getWordInfoFromWordName(word)
-
+function LocalDataBaseManager.getWordInfoFromWordName(word)
     local DataWord = require('model.user.DataWord')
     local ret = DataWord.create()
     ret.wordName = word
     if s_WordDictionaryDatabase.allwords ~= nil then
         local raw = s_WordDictionaryDatabase.allwords[word]
+        if raw == nil then
+          print("s_WordDictionaryDatabase.allwords nil:"..word)
+        end
+        print("IS_DEVELOPMENT_MODE:"..tostring(IS_DEVELOPMENT_MODE))
         if not IS_DEVELOPMENT_MODE and raw == nil then
-            s_WordDictionaryDatabase.allwords[word] = require('model.words.' .. word)
+            local tword =  require('model.words.' .. word)
+            if tword == nil then
+              print("require:model.words."..word.." is nil")
+            end
+            s_WordDictionaryDatabase.allwords[word] = tword
             raw = s_WordDictionaryDatabase.allwords[word]
         end
         if raw ~= nil then
@@ -118,70 +131,70 @@ function Manager.getWordInfoFromWordName(word)
             ret.sentenceCn         =   raw[6 + indexOffset]
             ret.sentenceEn2        =   raw[7 + indexOffset]
             ret.sentenceCn2        =   raw[8 + indexOffset]
+        else
+            print("-------------------")
+            print("not get word!"..word)
+            print("-------------------")
         end
     end
-
     return ret
-    
 end
 
 ---- Daily Study Info -----------------------------------------------------------------------------------
-function Manager.getRandomWord()
+function LocalDataBaseManager.getRandomWord()
     return localdatabase_dailyStudyInfo.getRandomWord()
 end
 
-function Manager.addStudyWordsNum(addNum)
+function LocalDataBaseManager.addStudyWordsNum(addNum)
     local data = localdatabase_dailyStudyInfo.addStudyWordsNum(addNum)
-    -- s_UserBaseServer.synTodayDailyStudyInfo(data, nil, false)
 end
 
-function Manager.addGraspWordsNum(addNum)
+function LocalDataBaseManager.addGraspWordsNum(addNum)
     local data = localdatabase_dailyStudyInfo.addGraspWordsNum(addNum)
-    -- s_UserBaseServer.synTodayDailyStudyInfo(data, nil, false)
 end
 
 
-function Manager.getStudyDayNum()
+function LocalDataBaseManager.getStudyDayNum()
     return localdatabase_dailyStudyInfo.getStudyDayNum()
 end
 
-function Manager.getStudyWordsNum(dayString)
+function LocalDataBaseManager.getStudyWordsNum(dayString)
     -- day must be a string like "11/16/14", as month + day + year
     return localdatabase_dailyStudyInfo.getStudyWordsNum(dayString)
 end
 
-function Manager.getGraspWordsNum(dayString)
+function LocalDataBaseManager.getGraspWordsNum(dayString)
     -- day must be a string like "11/16/14", as month + day + year
     return localdatabase_dailyStudyInfo.getGraspWordsNum(dayString)
 end
 
-function Manager.getDataDailyStudyInfo(dayString)
+function LocalDataBaseManager.getDataDailyStudyInfo(dayString)
     return localdatabase_dailyStudyInfo.getDataDailyStudyInfo(dayString)
 end
 
-function Manager.saveDataDailyStudyInfo(data)
+function LocalDataBaseManager.saveDataDailyStudyInfo(data)
    localdatabase_dailyStudyInfo.saveDataDailyStudyInfo(data)
 end
 
 ---- Task ------------------------------------------------------------------------------------------------
 
-function Manager.getTodayTotalTaskNum()
+function LocalDataBaseManager.getTodayTotalTaskNum()
     return localdatabase_task.getTodayTotalTaskNum()
 end
 
-function Manager.getTodayRemainTaskNum()
+function LocalDataBaseManager.getTodayRemainTaskNum()
     return localdatabase_task.getTodayRemainTaskNum()
 end
 
-function Manager.getTodayTotalBossNum()
+function LocalDataBaseManager.getTodayTotalBossNum()
     return localdatabase_task.getTodayTotalBossNum()
 end
 
-function Manager.getTodayRemainBossNum()
+function LocalDataBaseManager.getTodayRemainBossNum()
     return #localdatabase_bossWord.getTodayReviewBoss()
 end
 
-function Manager.minusTodayRemainTaskNum()
+function LocalDataBaseManager.minusTodayRemainTaskNum()
     local todayRemainTaskNum = localdatabase_task.getTodayRemainTaskNum()
 
     if todayRemainTaskNum > 0 then
@@ -191,114 +204,114 @@ end
 
 ---- Boss Word -------------------------------------------------------------------------------------------
 
-function Manager.getPrevWordState()
+function LocalDataBaseManager.getPrevWordState()
     return localdatabase_bossWord.getPrevWordState()
 end
 
--- function Manager.getTodayReviewBoss()
---     return localdatabase_bossWord.getTodayReviewBoss()
--- end
-
-function Manager.getMaxBoss()
+function LocalDataBaseManager.getMaxBoss()
     return localdatabase_bossWord.getMaxBoss()
 end
 
-function Manager.getMaxBossByBookKey(bookKey)
+function LocalDataBaseManager.getMaxBossByBookKey(bookKey)
     return localdatabase_bossWord.getMaxBossByBookKey(bookKey)
 end
 
-function Manager.getMaxBossID()
+function LocalDataBaseManager.getMaxBossID()
     return localdatabase_bossWord.getMaxBossID()
 end
 
-function Manager.getBossInfo(bossID)
+function LocalDataBaseManager.getBossInfo(bossID)
     return localdatabase_bossWord.getBossInfo(bossID)
 end
 
-function Manager.getAllBossInfo()
+function LocalDataBaseManager.getAllBossInfo()
     return localdatabase_bossWord.getAllBossInfo()
 end
 
-function Manager.addRightWord(wordindex)
-    localdatabase_bossWord.addRightWord(wordindex)
-end
-
-function Manager.addWrongWord(wordindex)
+function LocalDataBaseManager.addWrongWord(wordindex)
     return localdatabase_bossWord.addWrongWord(wordindex)
 end
 
-function Manager.updateTypeIndex(bossID)
-    Manager.minusTodayRemainTaskNum()
+function LocalDataBaseManager.updateTypeIndex(bossID)
+    LocalDataBaseManager.minusTodayRemainTaskNum()
     localdatabase_bossWord.updateTypeIndex(bossID)
 end
 
-function Manager.printBossWord()
+function LocalDataBaseManager.printBossWord()
     localdatabase_bossWord.printBossWord()
 end
 
 ---- Unit word -----------------------------------------------------------------------------------------
-function Manager.getTodayReviewBoss()
+function LocalDataBaseManager.getTodayReviewBoss()
     return localdatabase_unitWord.getTodayReviewBoss()
 end
 
-function Manager.getMaxUnit()
+function LocalDataBaseManager.getMaxUnit()
     return localdatabase_unitWord.getMaxUnit()
 end
 
-function Manager.getMaxUnitByBookKey(bookKey)
+function LocalDataBaseManager.getMaxUnitByBookKey(bookKey)
     return localdatabase_unitWord.getMaxUnitByBookKey(bookKey)
 end
 
-function Manager.getMaxUnitID()
+function LocalDataBaseManager.getMaxUnitID()
     return localdatabase_unitWord.getMaxUnitID()
 end
 
-function Manager.getUnitInfo(unitID)
+function LocalDataBaseManager.getUnitInfo(unitID)
     return localdatabase_unitWord.getUnitInfo(unitID)
 end
 
-function Manager.getAllUnitInfo()
+function LocalDataBaseManager.getAllUnitInfo()
     return localdatabase_unitWord.getAllUnitInfo()
 end
 
-function Manager.initUnitInfo(unitID)
+function LocalDataBaseManager.initUnitInfo(unitID)
     return localdatabase_unitWord.initUnitInfo(unitID)
 end
 
-function Manager.getBookMaxUnitID(bookKey)
+function LocalDataBaseManager.getBookMaxUnitID(bookKey)
     return localdatabase_unitWord.getBookMaxUnitID(bookKey)
 end
 
-function Manager.updateUnitState(unitID)   -- TODO
-    Manager.minusTodayRemainTaskNum()
+function LocalDataBaseManager.updateUnitState(unitID)   -- TODO
+    LocalDataBaseManager.minusTodayRemainTaskNum()
     localdatabase_unitWord.updateUnitState(unitID)
 end
 
-function Manager.getUnitCoolingSeconds(unitID)
+function LocalDataBaseManager.getUnitCoolingSeconds(unitID)
     return localdatabase_unitWord.getUnitCoolingSeconds(unitID)
 end
 
-function Manager.printUnitWord()
+function LocalDataBaseManager.printUnitWord()
     localdatabase_unitWord.printUnitWord()
 end
+
+function LocalDataBaseManager.addRightWord(wordList,unitID)
+    localdatabase_unitWord.addRightWord(wordList,unitID)
+end
+
+---- Mission -----------------------------任务------------------------------------------------------------
+--获取当前用户的任务数据
+function LocalDataBaseManager.getMissionData()
+    return localdatabase_mission.getMissionData()
+end
+
 ---- Statistics -----------------------------------------------------------------------------------------
 
-function Manager.getTotalStudyWordsNum()
-    --return s_CURRENT_USER.levelInfo:getCurrentWordIndex() - 1
+function LocalDataBaseManager.getTotalStudyWordsNum()
     return localdatabase_dailyStudyInfo.getTotalStudyWordsNum()
 end
 
-function Manager.getTotalStudyWordsNumByBookKey(bookKey)
-    --return s_CURRENT_USER.levelInfo:getWordIndex(bookKey) - 1
+function LocalDataBaseManager.getTotalStudyWordsNumByBookKey(bookKey)
     return localdatabase_dailyStudyInfo.getTotalStudyWordsNumByBookKey(bookKey)
 end
 
-function Manager.getTotalGraspWordsNum()
-    --return #localdatabase_bossWord.getAllWrongWordList()
+function LocalDataBaseManager.getTotalGraspWordsNum()
     return localdatabase_dailyStudyInfo.getTotalGraspWordsNum()
 end
 
-function Manager.getStudyWords()
+function LocalDataBaseManager.getStudyWords()
     local bookKey = s_CURRENT_USER.bookKey
     local wordList = s_BookWord[bookKey]
     local currentIndex = s_CURRENT_USER.levelInfo:getCurrentWordIndex()
@@ -310,13 +323,13 @@ function Manager.getStudyWords()
     return wordPool
 end
 
-function Manager.getWrongWords()
+function LocalDataBaseManager.getWrongWords()
     return localdatabase_bossWord.getAllWrongWordList()
 end
 
-function Manager.getGraspWords()
-    local studyWordPool = Manager.getStudyWords()
-    local wrongWordPool = Manager.getWrongWords()
+function LocalDataBaseManager.getGraspWords()
+    local studyWordPool = LocalDataBaseManager.getStudyWords()
+    local wrongWordPool = LocalDataBaseManager.getWrongWords()
     
     local dict = {}
     for i = 1, #wrongWordPool do
@@ -335,54 +348,52 @@ function Manager.getGraspWords()
     return wordPool
 end
 
-
 ---- Download --------------------------------------------------------------------------------------------
-
-function Manager.getDownloadState(bookKey)
+function LocalDataBaseManager.getDownloadState(bookKey)
     local isDownloaded = 0
-    for row in Manager.database:nrows("SELECT * FROM DataDownloadState WHERE bookKey = '"..bookKey.."' ;") do
+    for row in LocalDataBaseManager.database:nrows("SELECT * FROM DataDownloadState WHERE bookKey = '"..bookKey.."' ;") do
         isDownloaded = row.isDownloaded
     end
     return isDownloaded
 end
 
-function Manager.updateDownloadState(bookKey, isDownloaded)
+function LocalDataBaseManager.updateDownloadState(bookKey, isDownloaded)
     local time = os.time()
 
     local num = 0
-    for row in Manager.database:nrows("SELECT * FROM DataDownloadState WHERE bookKey = '"..bookKey.."' ;") do
+    for row in LocalDataBaseManager.database:nrows("SELECT * FROM DataDownloadState WHERE bookKey = '"..bookKey.."' ;") do
         num = num + 1
     end
     
     if num == 0 then
         local query = "INSERT INTO DataDownloadState VALUES ('"..bookKey.."', "..isDownloaded..", "..time..");"
-        Manager.database:exec(query)
+        LocalDataBaseManager.database:exec(query)
     else
         local query = "UPDATE DataDownloadState SET isDownloaded = "..isDownloaded..", lastUpdate = "..time.." WHERE bookKey = '"..bookKey.."' ;"    
-        Manager.database:exec(query)
+        LocalDataBaseManager.database:exec(query)
     end
 end
 
 ---- UserDefault -----------------------------------------------------------------------------------------
 
 local is_log_out_key = 'log_out'
-function Manager.isLogOut() return false end -- TODO return cc.UserDefault:getInstance():getBoolForKey(is_log_out_key, false) end
-function Manager.setLogOut(b) cc.UserDefault:getInstance():setBoolForKey(is_log_out_key, b) end
+function LocalDataBaseManager.isLogOut() return false end -- TODO return cc.UserDefault:getInstance():getBoolForKey(is_log_out_key, false) end
+function LocalDataBaseManager.setLogOut(b) cc.UserDefault:getInstance():setBoolForKey(is_log_out_key, b) end
 
 local is_sound_on_key = 'sound'
-function Manager.isSoundOn() return cc.UserDefault:getInstance():getBoolForKey(is_sound_on_key, true) end
-function Manager.setSoundOn(b) cc.UserDefault:getInstance():setBoolForKey(is_sound_on_key, b) end
+function LocalDataBaseManager.isSoundOn() return cc.UserDefault:getInstance():getBoolForKey(is_sound_on_key, true) end
+function LocalDataBaseManager.setSoundOn(b) cc.UserDefault:getInstance():setBoolForKey(is_sound_on_key, b) end
 
 local is_music_on_key = 'music'
-function Manager.isMusicOn() return cc.UserDefault:getInstance():getBoolForKey(is_music_on_key, true) end
-function Manager.setMusicOn(b) cc.UserDefault:getInstance():setBoolForKey(is_music_on_key, b) end
+function LocalDataBaseManager.isMusicOn() return cc.UserDefault:getInstance():getBoolForKey(is_music_on_key, true) end
+function LocalDataBaseManager.setMusicOn(b) cc.UserDefault:getInstance():setBoolForKey(is_music_on_key, b) end
 
 local is_buy_key = 'buy'
-function Manager.isBuy() return cc.UserDefault:getInstance():getIntegerForKey(is_buy_key) end
-function Manager.setBuy(b) cc.UserDefault:getInstance():setIntegerForKey(is_buy_key, b) end
+function LocalDataBaseManager.isBuy() return cc.UserDefault:getInstance():getIntegerForKey(is_buy_key) end
+function LocalDataBaseManager.setBuy(b) cc.UserDefault:getInstance():setIntegerForKey(is_buy_key, b) end
 
 local DA_DEVICE_ID = 'DA_DEVICE_ID'
-function Manager.get_DA_DEVICE_ID() 
+function LocalDataBaseManager.get_DA_DEVICE_ID() 
     if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
         return cx.CXNetworkStatus:getInstance():getDeviceUDID()
     else
@@ -390,6 +401,6 @@ function Manager.get_DA_DEVICE_ID()
     end
 end
 
-return Manager
+return LocalDataBaseManager
 
 

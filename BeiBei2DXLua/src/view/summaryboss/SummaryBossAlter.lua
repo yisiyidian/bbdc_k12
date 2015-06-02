@@ -1,4 +1,5 @@
-require("common.global")
+
+local MissionConfig  = require("model.mission.MissionConfig")
 
 local Button                = require("view.button.longButtonInStudy")
 
@@ -9,31 +10,28 @@ local SummaryBossAlter = class("SummaryBossAlter", function()
     return cc.Layer:create()
 end)
 
-function SummaryBossAlter.create(bossLayer,win,index,entrance)
+function SummaryBossAlter.create(bossLayer,win,entrance)
 
     local layer = SummaryBossAlter.new()
-    layer.wordCount = bossLayer.rightWord
+    layer.wordCount = bossLayer.maxCount
     layer.win = win
-    layer.index = index
-    layer.levelIndex = levelIndex
     layer.wordList = bossLayer.wordList
     layer.bossLayer = bossLayer
+
     layer.entrance = entrance
+    layer.needToAddBean = not bossLayer.isReplay
     --disable pauseBtn
     if s_SCENE.popupLayer~=nil then
         s_SCENE.popupLayer:setPauseBtnEnabled(false)
         s_SCENE.popupLayer.isOtherAlter = true
     end    
-    if layer.index > 3 then
-        layer.index = 3
-    end
     local back = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     back:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     layer:addChild(back)
     back:setName('background')
 
     if win then
-        if entrance == ENTRANCE_NORMAL then
+        if entrance == ENTRANCE_NORMAL and layer.needToAddBean then
             AnalyticsPassSecondSummaryBoss()
             s_CURRENT_USER:addBeans(3)
             saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
@@ -46,7 +44,7 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
             playMusic(s_sound_win,true)
         end)
     else    
-        if not bossLayer.useItem and s_CURRENT_USER:getBeans() >= 10 then
+        if not bossLayer.useItem and s_CURRENT_USER:getBeans() >= 0 then
             layer:lose(entrance)
         else
             layer:lose2(entrance)
@@ -63,6 +61,28 @@ function SummaryBossAlter.create(bossLayer,win,index,entrance)
     return layer
 end
 
+function SummaryBossAlter:ctor(  )
+    local onTouchBegan = function(touch, event)
+        return true
+    end    
+    self.isOtherAlter = false
+    
+    local onTouchMoved = function(touch, event)
+    end
+    
+    local onTouchEnded = function(touch, event)
+    end
+    
+    self.listener = cc.EventListenerTouchOneByOne:create()
+    
+    self.listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    self.listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
+    self.listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = self:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(self.listener, self)
+    self.listener:setSwallowTouches(true)
+end
+
 function SummaryBossAlter:lose(entrance)
     -- if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
     --     s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
@@ -76,7 +96,7 @@ function SummaryBossAlter:lose(entrance)
     if s_CURRENT_USER.k12SmallStep < s_K12_end then
         s_CURRENT_USER:setK12SmallStep(s_K12_end)
     end
-    -- 打点
+    --打点
     --add board
     self.loseBoard = cc.Sprite:create("image/summarybossscene/background_zjboss_tanchu.png")
     self.loseBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
@@ -118,7 +138,7 @@ function SummaryBossAlter:lose(entrance)
     end
 
     boss:setPosition(self.loseBoard:getContentSize().width / 4,self.loseBoard:getContentSize().height * 0.4)
-    local buyTimeBtn = Button.create("addtime","blue","再来30秒")
+    local buyTimeBtn = Button.create("addtime","blue","立刻复活")
     buyTimeBtn:setPosition(self.loseBoard:getContentSize().width / 2,self.loseBoard:getContentSize().height * 0.3 + 15)
     self.loseBoard:addChild(buyTimeBtn)
 
@@ -139,13 +159,13 @@ function SummaryBossAlter:lose(entrance)
         if s_CURRENT_USER:getBeans() >= 10 then
             s_CURRENT_USER:addBeans(-10)
             saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
-            local boss = self.bossLayer.bossNode
-            local distance = s_DESIGN_WIDTH * 0.45 * 30 / self.bossLayer.totalTime
+            local boss = self.bossLayer.boss
+            local distance = s_DESIGN_WIDTH * 0.6
             self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
             s_SCENE:callFuncWithDelay(0.3,function (  )
                 -- body
                 self:getChildByName('background'):runAction(cc.FadeOut:create(1.0))
-                boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75 + 20)),cc.CallFunc:create(function (  )
+                boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(distance , s_DESIGN_HEIGHT * 0.75 + 20)),cc.CallFunc:create(function (  )
                     -- body
                     self:removeChildByName('background')
                     self:addTime()
@@ -180,61 +200,15 @@ function SummaryBossAlter:addTime()
     end 
 
     local bossLayer = self.bossLayer
-    local boss = bossLayer.bossNode
-    local distance = s_DESIGN_WIDTH * 0.45 * 30 / bossLayer.totalTime
-    local index = self.index
-    local entrance = self.entrance
-    local wordList = self.wordList
+
     bossLayer.useItem = true
-    playMusic(s_sound_Get_Outside,true)
-
-    --boss:setPosition(s_DESIGN_WIDTH * 0.15 + distance , s_DESIGN_HEIGHT * 0.75)
-    bossLayer.globalLock = false
-    bossLayer.girlAfraid = false
-    bossLayer.girl:setAnimation(0,'girl-stand',true)
-    bossLayer.isLose = false
-    bossLayer.leftTime = 30
-    bossLayer.totalTime = 30
-    local wait = cc.DelayTime:create(30.0 - bossLayer.totalTime * 0.2)
-    local afraid = cc.CallFunc:create(function() 
-        if bossLayer.currentBlood > 0 then
-            bossLayer.girlAfraid = true
-            HINT_TIME = 4
-            bossLayer.girl:setAnimation(0,'girl-afraid',true)
-            -- deadline "Mechanical Clock Ring "
-            playSound(s_sound_Mechanical_Clock_Ring)
-            playMusic(s_sound_Get_Outside_Speedup,true)
-        end
-    end,{})
-    local blinkIn = cc.FadeTo:create(0.5,50)
-    local blinkOut = cc.FadeTo:create(0.5,0.0)
-    local blink = cc.Sequence:create(blinkIn,blinkOut)
-    local repeatBlink = cc.Repeat:create(blink,math.ceil(bossLayer.totalTime * 0.2))
-    bossLayer.blink:runAction(cc.Sequence:create(wait,afraid,repeatBlink))
-    local bossAction = {}
-    for i = 1, 6 do
-        local stop = cc.DelayTime:create(bossLayer.totalTime / 6 * 0.8)
-        local stopAnimation = cc.CallFunc:create(function() 
-            bossLayer.boss:setAnimation(0,'a2',true)
-        end,{})
-        local move = cc.MoveBy:create(bossLayer.totalTime / 6 * 0.2,cc.p(- distance / 6, 0))
-        local moveAnimation = cc.CallFunc:create(function() 
-            bossLayer.boss:setAnimation(0,'animation',false)
-        end,{})
-        bossAction[#bossAction + 1] = cc.Spawn:create(stop,stopAnimation)
-        bossAction[#bossAction + 1] = cc.Spawn:create(move,moveAnimation)
-    end
-    bossAction[#bossAction + 1] = cc.CallFunc:create(function() 
-
-            if bossLayer.currentBlood > 0 then
-                bossLayer.isLose = true
-                --print('chapter index'..self.index)
-                bossLayer:lose(index,entrance,wordList)    
-            end
-    end,{})
-    boss:runAction(cc.Sequence:create(bossAction))
+    bossLayer.gameOver = false
+    
+    local boss = bossLayer.boss
+    boss:goForward(bossLayer.totalTime)
+    boss.bossBack()
+    
     self:removeFromParent()
-    --bossLayer.girl:
 end
 
 function SummaryBossAlter:lose2(entrance)
@@ -245,7 +219,7 @@ function SummaryBossAlter:lose2(entrance)
 
     playMusic(s_sound_fail,true)
 
-    self.loseBoard2 = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_%d.png",self.index))
+    self.loseBoard2 = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_1.png"))
     self.loseBoard2:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5)
     if self.loseBoard ~= nil then
         self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
@@ -265,7 +239,7 @@ function SummaryBossAlter:lose2(entrance)
     label:setColor(cc.c4b(251.0, 39.0, 10.0, 255))
     self.loseBoard2:addChild(label)
 
-    local label1 = cc.Label:createWithSystemFont(string.format("还需要找出%d个单词！\n做好准备再来",#self.wordList - self.wordCount),'',40)
+    local label1 = cc.Label:createWithSystemFont(string.format("还需要找出%d个单词！\n做好准备再来",#self.wordList),'',40)
     label1:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
     label1:setPosition(self.loseBoard2:getContentSize().width / 2,self.loseBoard2:getContentSize().height * 0.55)
     label1:setColor(cc.c4b(52,177,241,255))
@@ -295,13 +269,9 @@ function SummaryBossAlter:lose2(entrance)
     self.loseBoard2:addChild(again)
 
     local function challengeAgain()
-        if entrance == ENTRANCE_NORMAL then
-            s_CorePlayManager.initSummaryModel()
-        else
-            local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
-            local summaryBossLayer = SummaryBossLayer.create(self.wordList,1,false)
-            s_SCENE:replaceGameLayer(summaryBossLayer) 
-        end
+        local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
+        local summaryBossLayer = SummaryBossLayer.create(self.bossLayer.oldUnit)
+        s_SCENE:replaceGameLayer(summaryBossLayer) 
 
         cc.SimpleAudioEngine:getInstance():stopAllEffects()
         playSound(s_sound_buttonEffect)
@@ -325,6 +295,8 @@ function SummaryBossAlter:lose2(entrance)
 end
 
 function SummaryBossAlter:win1(entrance)
+    --完成总结BOSS
+    s_MissionManager:updateMission(MissionConfig.MISSION_ZJBOSS, 1, false)
 
     if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
         s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
@@ -336,23 +308,21 @@ function SummaryBossAlter:win1(entrance)
         s_isCheckInAnimationDisplayed = false
     end
 
-    if not hasCheckedIn and entrance == ENTRANCE_NORMAL then
+    if not hasCheckedIn and self.bossLayer.oldUnit == nil then
         local missionCompleteCircle = require('view.MissionCompleteCircle').create()
         s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
         self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
             self:win2(entrance,hasCheckedIn)
-            if entrance == ENTRANCE_NORMAL then
+            if entrance == ENTRANCE_NORMAL and self.needToAddBean then
                 s_CorePlayManager.leaveSummaryModel(true)
             end
         end,{})))
     else
         self:win2(entrance,hasCheckedIn)
-        if entrance == ENTRANCE_NORMAL then
+        if entrance == ENTRANCE_NORMAL and self.needToAddBean then
             s_CorePlayManager.leaveSummaryModel(true)
         end
     end
-
-
 end
 
 function SummaryBossAlter:win2(entrance,hasCheckedIn)
@@ -369,9 +339,10 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     backColor:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
     self:addChild(backColor)
 
-    local win_back = cc.Sprite:create('image/summarybossscene/win_back.png')
-    win_back:setAnchorPoint(0.5,0)
-    win_back:setPosition(s_DESIGN_WIDTH / 2,-140)
+    local win_back = sp.SkeletonAnimation:create('spine/summaryboss/jieshao_6.json','spine/summaryboss/jieshao_6.atlas',1)
+    --win_back:setAnchorPoint(0.5,0)
+    win_back:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
+    win_back:setAnimation(0,'animation',false)
     self:addChild(win_back)
     if not self.entrance then
         win_back:setPosition(s_DESIGN_WIDTH / 2,0)
@@ -396,7 +367,7 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     end
 
     local button = Button.create("long","blue","完成")
-    button:setPosition(s_DESIGN_WIDTH / 2 ,150)
+    button:setPosition(s_DESIGN_WIDTH / 2 ,80)
     self:addChild(button)
     button.func = function ()
         button_func()
@@ -412,7 +383,7 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     --     rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
     --     button:addChild(rewardNumber)
     -- end
-    if hasCheckedIn or not self.entrance then
+    if hasCheckedIn or self.bossLayer.oldUnit ~= nil then
         --print('self:addWinLabel(win_back)')
         self:addWinLabel(win_back)
     else
@@ -435,6 +406,25 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
 end
 
 function SummaryBossAlter:addWinLabel(win_back)
+    if self.bossLayer.useTime < 0 then
+        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+    end
+
+    -- local shareBtn = ccui.Button:create('image/share/share_click.png')
+    -- shareBtn:setScale9Enabled(true)
+    -- shareBtn:setPosition(s_DESIGN_WIDTH * 0.8,80)
+    -- self:addChild(shareBtn)
+    -- local function onShare(sender,eventType)
+    --     if eventType == ccui.TouchEventType.ended then
+    --         local wordList = self.bossLayer.unit.wrongWordList[1]
+    --         for i = 2,#self.bossLayer.unit.wrongWordList do
+    --             wordList = wordList..'|'..self.bossLayer.unit.wrongWordList[i]
+    --         end
+    --         cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.html?time='..self.bossLayer.totalTime..'&wordlist='..wordList, '', '贝贝单词－根本停不下来')
+    --     end
+    -- end
+    -- shareBtn:addTouchEventListener(onShare)
+
     local beans = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
     beans:setPosition(s_RIGHT_X -100, s_DESIGN_HEIGHT-70)
     self:addChild(beans)
@@ -488,7 +478,7 @@ function SummaryBossAlter:addWinLabel(win_back)
     bean_back[2]:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.67 + 30)
     bean_back[3]:setPosition(s_DESIGN_WIDTH / 2 + 100,s_DESIGN_HEIGHT * 0.67)
 
-    if self.entrance then
+    if self.needToAddBean then
         been_number:setVisible(true)
         for i = 1,3 do
             bean_back[i]:setVisible(true)
@@ -496,7 +486,7 @@ function SummaryBossAlter:addWinLabel(win_back)
     end
     local function update(delta)
         --print('delta='..delta)
-        if word_count < self.bossLayer.rightWord then
+        if word_count < self.bossLayer.maxCount then
             word_count = word_count + 1
             word_count_label:setString(string.format('%d',word_count))
         end
@@ -512,8 +502,8 @@ function SummaryBossAlter:addWinLabel(win_back)
             -- end
             sec_count_label:setString(string.format('%d',sec_count))
         end
-        if word_count == self.bossLayer.rightWord and min_count == math.floor(self.bossLayer.useTime/60) and sec_count >= math.floor(self.bossLayer.useTime%60) then
-            if self.entrance then
+        if word_count == self.bossLayer.maxCount and min_count == math.floor(self.bossLayer.useTime/60) and sec_count >= math.floor(self.bossLayer.useTime%60) then
+            if self.needToAddBean then
                 for i = 1,3 do
                     local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')
                     bean:setPosition(bean_back[i]:getContentSize().width / 2,bean_back[i]:getContentSize().height / 2 + 10)
@@ -537,6 +527,16 @@ function SummaryBossAlter:addWinLabel(win_back)
                     local action3 = cc.ScaleTo:create(0.3,0)
                     local action4 = cc.CallFunc:create(function (  )
                         been_number:setString(s_CURRENT_USER:getBeans() - 3 + i)
+                        if i == 3 then
+                            if self.bossLayer.useTime < 0 then
+                                local wordList = self.bossLayer.unit.wrongWordList[1]
+                                 for i = 2,#self.bossLayer.unit.wrongWordList do
+                                     wordList = wordList..'|'..self.bossLayer.unit.wrongWordList[i]
+                                 end
+                                local shareBoard = require('view.summaryboss.ShareBoard').create(self.bossLayer.useTime,wordList)
+                                s_SCENE.popupLayer:addChild(shareBoard)
+                            end
+                        end
                     end,{})
                     local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')
                     bean:setPosition(bean_back[i]:getPositionX(),bean_back[i]:getPositionY() + 10)
@@ -544,9 +544,20 @@ function SummaryBossAlter:addWinLabel(win_back)
                     bean:setVisible(false)
                     bean:runAction(cc.Sequence:create(cc.DelayTime:create(1.2),cc.Show:create()))
                     bean:runAction(cc.Sequence:create(action1,cc.Sequence:create(action2,action3),action4))
+                    
+                    
                 end
+            else
+               if self.bossLayer.useTime < 0 then
+                    local wordList = self.bossLayer.unit.wrongWordList[1]
+                     for i = 2,#self.bossLayer.unit.wrongWordList do
+                         wordList = wordList..'|'..self.bossLayer.unit.wrongWordList[i]
+                     end
+                    local shareBoard = require('view.summaryboss.ShareBoard').create(self.bossLayer.useTime,wordList)
+                    s_SCENE.popupLayer:addChild(shareBoard)
+                end 
             end
-            --print('count time = '..os.clock() - time1)
+            
             self:unscheduleUpdate()
 
         end
@@ -554,11 +565,6 @@ function SummaryBossAlter:addWinLabel(win_back)
 
     end
     self:scheduleUpdateWithPriorityLua(update, 0)
-
-    local boss = sp.SkeletonAnimation:create("spine/summaryboss/beidadekls.json","spine/summaryboss/beidadekls.atlas",1)
-    boss:setAnimation(0,'animation',true)
-    boss:setPosition(0.5 * s_DESIGN_WIDTH- 200,230)
-    self:addChild(boss)
 
 
 end

@@ -1,11 +1,7 @@
 require "common.global"
 
-local ReviewBossLayer        = require("view.reviewboss.reviewbossI.ReviewBossLayer")
-local ReviewBossLayerII      = require("view.reviewboss.reviewbossII.ReviewBossLayerII")
-local ReviewBossLayerIII     = require("view.reviewboss.reviewbossIII.ReviewBossLayerIII")
 local IntroLayer             = require("view.login.IntroLayer")
 local HomeLayer              = require("view.home.HomeLayer")
-local LevelLayer             = require("view.LevelLayer")
 local BookLayer              = require("view.book.BookLayer")
 local EducationLayer         = require("view.book.EducationSelect")
 local DownloadLayer          = require("view.book.DownloadLayer")
@@ -214,8 +210,8 @@ function CorePlayManager.initSummaryModel()
 end
 
 function CorePlayManager.enterSummaryModel(wordlist)
-    local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
-    local summaryBossLayer = SummaryBossLayer.create(wordlist,1,true)
+    local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
+    local summaryBossLayer = SummaryBossLayer.create()
     s_SCENE:replaceGameLayer(summaryBossLayer) 
 end
 
@@ -290,14 +286,14 @@ function CorePlayManager.initTotalUnitPlay()
     CorePlayManager.currentUnitID = nil
     for i = 1, #unitList do
         local unit = unitList[i]
-        if unit.unitState >= 3 and unit.unitState <= 6 then
+        if unit.unitState >= 1 and unit.unitState <= 4 then
             if unit.coolingDay == 0 then
                 CorePlayManager.currentUnitID = unit.unitID
                 break
             else
                 -- pass
             end
-        elseif unit.unitState >= 7 then
+        elseif unit.unitState >= 5 then
             -- pass
         else
             CorePlayManager.currentUnitID = unit.unitID
@@ -310,7 +306,7 @@ function CorePlayManager.initTotalUnitPlay()
     else
         -- exist boss
     end
-    --print('currentUnitID:'..CorePlayManager.currentUnitID)
+    print('currentUnitID:'..CorePlayManager.currentUnitID)
     CorePlayManager.currentUnit            = s_LocalDatabaseManager.getUnitInfo(CorePlayManager.currentUnitID)
     print_lua_table(CorePlayManager.currentUnit)
     CorePlayManager.currentUnitState       = CorePlayManager.currentUnit.unitState
@@ -324,19 +320,13 @@ function CorePlayManager.initTotalUnitPlay()
     -- if     CorePlayManager.currentUnitState == 0 then
     --     -- study   model
     --     CorePlayManager.initStudyModel()
-    print("CorePlayManager.currentUnitState"..CorePlayManager.currentUnitState)
+
     if CorePlayManager.currentUnitState == 0 then
-        -- test    model
-        CorePlayManager.initTestModel()
-    elseif CorePlayManager.currentUnitState == 1 then
-        -- review  model
-        CorePlayManager.initReviewModel()
-    elseif CorePlayManager.currentUnitState == 2 then
         -- summary model
         CorePlayManager.initSummaryModel()
-    elseif CorePlayManager.currentUnitState >= 3 and CorePlayManager.currentUnitState <= 6 then
+    elseif CorePlayManager.currentUnitState >= 1 and CorePlayManager.currentUnitState <= 4 then
         -- review model
-        CorePlayManager.initReviewModel()
+        CorePlayManager.initSummaryModel()
     -- else
         -- over model
         --CorePlayManager.initOverModel()

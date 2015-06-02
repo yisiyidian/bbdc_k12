@@ -33,11 +33,13 @@ local function main()
     -- avoid memory leak
     collectgarbage("setpause", 100)
     collectgarbage("setstepmul", 5000)
+
+    
     
     cc.Director:getInstance():setDisplayStats(false)
 
-    app_version_debug   = 206000
-    app_version_release = 206000
+    app_version_debug   = 211000
+    app_version_release = 211000
 
     g_userName = nil
     g_userPassword = nil
@@ -48,6 +50,9 @@ local function main()
     cc.FileUtils:getInstance():addSearchPath("res/sound/words/")
     cc.FileUtils:getInstance():addSearchPath(cc.FileUtils:getInstance():getWritablePath())
     require("cocos.init")
+    require("mobdebug").start()
+
+    require("mobdebug").start() --start zerobrain debugging
 
     local HotUpdateController = require("hu.HotUpdateController")
     HotUpdateController.init()

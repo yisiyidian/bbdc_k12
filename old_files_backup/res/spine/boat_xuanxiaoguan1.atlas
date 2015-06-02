@@ -1,0 +1,27 @@
+
+boat_xuanxiaoguan1.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chuan_boat
+  rotate: false
+  xy: 2, 123
+  size: 160, 92
+  orig: 160, 92
+  offset: 0, 0
+  index: -1
+chuan_boern_1
+  rotate: false
+  xy: 164, 205
+  size: 51, 10
+  orig: 51, 10
+  offset: 0, 0
+  index: -1
+chuan_xian
+  rotate: false
+  xy: 2, 32
+  size: 26, 89
+  orig: 26, 89
+  offset: 0, 0
+  index: -1

@@ -107,7 +107,10 @@ bool AppDelegate::applicationDidFinishLaunching()
     engine->addSearchPath(pathSrc.c_str());
     engine->addSearchPath(pathRes.c_str());
     CCLOG("the cpp path is %s",pathSrc.c_str());
-
+    
+    //设置可以调试
+    setenv("LOG_CURL", "YES", 0);
+    //TODO 移除不必要的搜索目录
     std::vector<std::string> soundRes;
     soundRes.push_back(writablePath + "BookSounds"+"/cet4/cet4");
     soundRes.push_back(writablePath + "BookSounds"+"/cet6/cet6");

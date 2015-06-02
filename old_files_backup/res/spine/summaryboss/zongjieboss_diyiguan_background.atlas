@@ -1,0 +1,68 @@
+
+zongjieboss_diyiguan_background.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+background_zongjieboss_guanqia1_di_zuo
+  rotate: false
+  xy: 2, 95
+  size: 854, 923
+  orig: 854, 923
+  offset: 0, 0
+  index: -1
+background_zongjieboss_guanqia1_haioooooo
+  rotate: false
+  xy: 516, 66
+  size: 47, 27
+  orig: 47, 27
+  offset: 0, 0
+  index: -1
+background_zongjieboss_guanqia1_weaveblue_you1
+  rotate: true
+  xy: 934, 676
+  size: 342, 84
+  orig: 342, 84
+  offset: 0, 0
+  index: -1
+background_zongjieboss_guanqia1_weaveblue_zuo1
+  rotate: false
+  xy: 2, 9
+  size: 512, 84
+  orig: 512, 84
+  offset: 0, 0
+  index: -1
+background_zongjieboss_guanqia1_weavewhite_you1
+  rotate: true
+  xy: 858, 162
+  size: 342, 74
+  orig: 342, 74
+  offset: 0, 0
+  index: -1
+background_zongjieboss_guanqia1_weavewhite_zuo1
+  rotate: true
+  xy: 858, 506
+  size: 512, 74
+  orig: 512, 74
+  offset: 0, 0
+  index: -1
+
+zongjieboss_diyiguan_background2.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+background_zongjieboss_guanqia1_di_you1
+  rotate: true
+  xy: 2, 2
+  size: 342, 512
+  orig: 342, 512
+  offset: 0, 0
+  index: -1
+background_zongjieboss_guanqia1_di_zuo1
+  rotate: false
+  xy: 2, 346
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1

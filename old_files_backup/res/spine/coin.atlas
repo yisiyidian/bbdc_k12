@@ -1,0 +1,195 @@
+
+coin.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+global_coin_back
+  rotate: false
+  xy: 2, 887
+  size: 140, 135
+  orig: 140, 135
+  offset: 0, 0
+  index: -1
+global_coin_down1
+  rotate: false
+  xy: 144, 890
+  size: 137, 132
+  orig: 137, 132
+  offset: 0, 0
+  index: -1
+global_coin_down2
+  rotate: false
+  xy: 846, 906
+  size: 138, 116
+  orig: 138, 116
+  offset: 0, 0
+  index: -1
+global_coin_down3
+  rotate: true
+  xy: 2, 469
+  size: 140, 116
+  orig: 140, 116
+  offset: 0, 0
+  index: -1
+global_coin_down4
+  rotate: false
+  xy: 422, 906
+  size: 139, 116
+  orig: 139, 116
+  offset: 0, 0
+  index: -1
+global_coin_down5
+  rotate: false
+  xy: 278, 654
+  size: 138, 116
+  orig: 138, 116
+  offset: 0, 0
+  index: -1
+global_coin_down6
+  rotate: true
+  xy: 136, 611
+  size: 137, 116
+  orig: 137, 116
+  offset: 0, 0
+  index: -1
+global_coin_left1
+  rotate: false
+  xy: 2, 611
+  size: 132, 137
+  orig: 132, 137
+  offset: 0, 0
+  index: -1
+global_coin_left2
+  rotate: false
+  xy: 120, 471
+  size: 115, 138
+  orig: 115, 138
+  offset: 0, 0
+  index: -1
+global_coin_left3
+  rotate: false
+  xy: 2, 327
+  size: 115, 140
+  orig: 115, 140
+  offset: 0, 0
+  index: -1
+global_coin_left4
+  rotate: false
+  xy: 2, 186
+  size: 115, 139
+  orig: 115, 139
+  offset: 0, 0
+  index: -1
+global_coin_left5
+  rotate: true
+  xy: 254, 537
+  size: 115, 138
+  orig: 115, 138
+  offset: 0, 0
+  index: -1
+global_coin_left6
+  rotate: false
+  xy: 120, 50
+  size: 115, 137
+  orig: 115, 137
+  offset: 0, 0
+  index: -1
+global_coin_normal
+  rotate: true
+  xy: 354, 291
+  size: 127, 122
+  orig: 127, 122
+  offset: 0, 0
+  index: -1
+global_coin_right1
+  rotate: false
+  xy: 144, 751
+  size: 132, 137
+  orig: 132, 137
+  offset: 0, 0
+  index: -1
+global_coin_right2
+  rotate: true
+  xy: 237, 420
+  size: 115, 138
+  orig: 115, 138
+  offset: 0, 0
+  index: -1
+global_coin_right3
+  rotate: true
+  xy: 563, 907
+  size: 115, 140
+  orig: 115, 140
+  offset: 0, 0
+  index: -1
+global_coin_right4
+  rotate: true
+  xy: 705, 907
+  size: 115, 139
+  orig: 115, 139
+  offset: 0, 0
+  index: -1
+global_coin_right5
+  rotate: false
+  xy: 237, 280
+  size: 115, 138
+  orig: 115, 138
+  offset: 0, 0
+  index: -1
+global_coin_right6
+  rotate: false
+  xy: 237, 141
+  size: 115, 137
+  orig: 115, 137
+  offset: 0, 0
+  index: -1
+global_coin_selcet
+  rotate: false
+  xy: 2, 750
+  size: 140, 135
+  orig: 140, 135
+  offset: 0, 0
+  index: -1
+global_coin_up1
+  rotate: false
+  xy: 283, 890
+  size: 137, 132
+  orig: 137, 132
+  offset: 0, 0
+  index: -1
+global_coin_up2
+  rotate: true
+  xy: 119, 329
+  size: 138, 116
+  orig: 138, 116
+  offset: 0, 0
+  index: -1
+global_coin_up3
+  rotate: false
+  xy: 278, 772
+  size: 140, 116
+  orig: 140, 116
+  offset: 0, 0
+  index: -1
+global_coin_up4
+  rotate: true
+  xy: 2, 45
+  size: 139, 116
+  orig: 139, 116
+  offset: 0, 0
+  index: -1
+global_coin_up5
+  rotate: true
+  xy: 119, 189
+  size: 138, 116
+  orig: 138, 116
+  offset: 0, 0
+  index: -1
+global_coin_up6
+  rotate: true
+  xy: 237, 2
+  size: 137, 116
+  orig: 137, 116
+  offset: 0, 0
+  index: -1

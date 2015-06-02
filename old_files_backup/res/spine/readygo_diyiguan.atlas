@@ -1,0 +1,27 @@
+
+readygo_diyiguan.png
+size: 797,797
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+readygo_diyiguan_go
+  rotate: false
+  xy: 603, 727
+  size: 194, 70
+  orig: 194, 70
+  offset: 0, 0
+  index: -1
+readygo_diyiguan_rea
+  rotate: false
+  xy: 2, 590
+  size: 299, 68
+  orig: 299, 68
+  offset: 0, 0
+  index: -1
+readygo_guanqia1_di
+  rotate: false
+  xy: 2, 660
+  size: 599, 137
+  orig: 599, 137
+  offset: 0, 0
+  index: -1

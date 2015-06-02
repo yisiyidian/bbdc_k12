@@ -26,12 +26,6 @@ function FriendList:ctor()
             function (api, result)
                 s_CURRENT_USER:getFriendsInfo() 
 
-                local function listViewEvent(sender, eventType)
-                    if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
-                        --print("select child index = ",sender:getCurSelectedIndex())
-                    end
-                end
-
                 self.array = {}
                 for i,f in ipairs(s_CURRENT_USER.friends) do
                     self.array[#self.array + 1] = f
@@ -61,15 +55,10 @@ function FriendList:ctor()
         end
     )
 
-    s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser( 
-        function (api, result)
-            s_CURRENT_USER:getFriendsInfo() 
-
-            local function listViewEvent(sender, eventType)
-                if eventType == ccui.ListViewEventType.ONSELECTEDITEM_START then
-                    --print("select child index = ",sender:getCurSelectedIndex())
-                end
-            end
+    s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser(
+        handler(self,
+        function(self,api, result)
+            s_CURRENT_USER:getFriendsInfo()
 
             self.array = {}
             for i,f in ipairs(s_CURRENT_USER.friends) do
@@ -93,7 +82,7 @@ function FriendList:ctor()
         function (api, code, message, description)
             hideProgressHUD()
         end
-    )
+    ))
     
     
     
