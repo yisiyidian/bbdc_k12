@@ -429,10 +429,12 @@ function ChapterLayer:updataBoxState()
     local missionlist = s_MissionManager:getMissionList()
     local canComCount = 0
     for k,v in pairs(missionlist) do
-        if v[2] == "1" then
+        if v[2] == "1" and v[5] ~= 0 then
             canComCount = canComCount + 1
             if self.boxButton ~= nil and not tolua.isnull(self.boxButton) then
                 --宝箱晃动
+                self.boxButton:stopAllActions()
+                
                 local action1 = cc.MoveBy:create(0.05,cc.p(5,0))
                 local action2 = action1:reverse()
                 local action3 = cc.RepeatForever:create(cc.Sequence:create(action1, action2))
