@@ -126,7 +126,12 @@ function TaskViewRender:updataView()
 			local LoginTaskBBD = "奖励："..self.totalCount.."贝贝豆"
 			self.bbdNum:setString(LoginTaskBBD)
 
-			local LoginDayLabel = "登录"..self.nowCount.."/"..self.totalCount.."天"
+			local LoginDayLabel = nil
+			if self.nowCount > self.totalCount then 
+				LoginDayLabel = "登录"..self.totalCount.."/"..self.totalCount.."天"
+			else
+				LoginDayLabel = "登录"..self.nowCount.."/"..self.totalCount.."天"
+			end
 			self.labelTask:setString(LoginDayLabel)
 
 			--修改label
@@ -169,7 +174,7 @@ function TaskViewRender:onButtonTouch(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
-	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+	-- s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	local pos = self:convertToWorldSpace(cc.p(sender:getPosition()))
   
   if self.getRewardCallBack ~= nil then

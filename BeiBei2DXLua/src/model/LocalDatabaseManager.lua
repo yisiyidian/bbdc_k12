@@ -108,8 +108,16 @@ function LocalDataBaseManager.getWordInfoFromWordName(word)
     ret.wordName = word
     if s_WordDictionaryDatabase.allwords ~= nil then
         local raw = s_WordDictionaryDatabase.allwords[word]
+        if raw == nil then
+          print("s_WordDictionaryDatabase.allwords nil:"..word)
+        end
+        print("IS_DEVELOPMENT_MODE:"..tostring(IS_DEVELOPMENT_MODE))
         if not IS_DEVELOPMENT_MODE and raw == nil then
-            s_WordDictionaryDatabase.allwords[word] = require('model.words.' .. word)
+            local tword =  require('model.words.' .. word)
+            if tword == nil then
+              print("require:model.words."..word.." is nil")
+            end
+            s_WordDictionaryDatabase.allwords[word] = tword
             raw = s_WordDictionaryDatabase.allwords[word]
         end
         if raw ~= nil then
@@ -123,6 +131,10 @@ function LocalDataBaseManager.getWordInfoFromWordName(word)
             ret.sentenceCn         =   raw[6 + indexOffset]
             ret.sentenceEn2        =   raw[7 + indexOffset]
             ret.sentenceCn2        =   raw[8 + indexOffset]
+        else
+            print("-------------------")
+            print("not get word!"..word)
+            print("-------------------")
         end
     end
     return ret
@@ -216,10 +228,6 @@ function LocalDataBaseManager.getAllBossInfo()
     return localdatabase_bossWord.getAllBossInfo()
 end
 
-function LocalDataBaseManager.addRightWord(wordindex)
-    localdatabase_bossWord.addRightWord(wordindex)
-end
-
 function LocalDataBaseManager.addWrongWord(wordindex)
     return localdatabase_bossWord.addWrongWord(wordindex)
 end
@@ -278,6 +286,11 @@ end
 function LocalDataBaseManager.printUnitWord()
     localdatabase_unitWord.printUnitWord()
 end
+
+function LocalDataBaseManager.addRightWord(wordList,unitID)
+    localdatabase_unitWord.addRightWord(wordList,unitID)
+end
+
 ---- Mission -----------------------------任务------------------------------------------------------------
 --获取当前用户的任务数据
 function LocalDataBaseManager.getMissionData()

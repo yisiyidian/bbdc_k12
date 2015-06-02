@@ -1,0 +1,20 @@
+
+2xuanxiaoguanyizishu.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2xinxuanxiaoguanyezishuzhi
+  rotate: false
+  xy: 2, 2
+  size: 106, 184
+  orig: 106, 184
+  offset: 0, 0
+  index: -1
+2xuanxiaoguanyeshuye
+  rotate: false
+  xy: 2, 188
+  size: 181, 182
+  orig: 181, 182
+  offset: 0, 0
+  index: -1

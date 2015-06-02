@@ -16,7 +16,7 @@ MissionConfig.randomMission = {
 	--普通任务
 	-- {["mission_id"] = "1-1",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次神秘任务"}, --神秘任务
 	{["mission_id"] = "1-2",["type"] = 1,["condition"]= {1},["bean"]=10,desc="打卡"}, 			--打卡
-	{["mission_id"] = "1-3",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次趁热打铁"}, --趁热打铁
+	-- {["mission_id"] = "1-3",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次趁热打铁"}, --趁热打铁
 	{["mission_id"] = "1-4",["type"] = 1,["condition"]= {1},["bean"]=10,desc="分享你的成绩"}, 	--分享（分享你的成绩）
 	{["mission_id"] = "1-5",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次总结BOSS"}, --完成一次总结BOSS
 	-- 特殊任务
@@ -42,7 +42,7 @@ MissionConfig.MISSION_AUDIO 	= "2-3" --下载音频
 
 MissionConfig.MISSION_DATA1 	= "3-1" --解锁数据1	
 MissionConfig.MISSION_DATA2 	= "3-2" --解锁数据2	
-MissionConfig.MISSION_DATA3 	= "3-3" --解锁数据3	
+MissionConfig.MISSION_DATA3 	= "3-3" --解锁数据4
 MissionConfig.MISSION_VIP 		= "3-4" --解锁VIP 	
 
 --累计登陆的任务类型

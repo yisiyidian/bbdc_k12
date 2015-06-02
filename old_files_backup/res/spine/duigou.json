@@ -1,0 +1,40 @@
+{
+"skeleton": {
+	"hash": "N9iEw0j8SwGRuPBbMvn82JXu4os",
+	"spine": "2.1.09",
+	"width": 84.08,
+	"height": 60.56,
+	"images": "/Users/yehanjie/Desktop/spine/duigou"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 134.03, "x": 52.5, "y": 43.99, "rotation": 90.9 }
+],
+"slots": [
+	{ "name": "dugou", "bone": "bone", "attachment": "dugou" }
+],
+"skins": {
+	"default": {
+		"dugou": {
+			"dugou": { "x": 11.95, "y": -7.55, "rotation": -94.23, "width": 81, "height": 56 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"bone": {
+				"scale": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.0666, "x": 1.196, "y": 1.28 },
+					{ "time": 0.1666, "x": 1.028, "y": 1.109 },
+					{ "time": 0.2333, "x": 1.081, "y": 1.156 },
+					{ "time": 0.3333, "x": 1.035, "y": 1.117 },
+					{ "time": 0.4, "x": 1.081, "y": 1.156 },
+					{ "time": 0.4666, "x": 1.035, "y": 1.117 }
+				]
+			}
+		}
+	}
+}
+}

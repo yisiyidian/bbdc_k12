@@ -1,0 +1,44 @@
+{
+"skeleton": {
+	"hash": "HZrC9j4WhCNMahXJNKt4URVptJw",
+	"spine": "2.0.22",
+	"width": 215,
+	"height": 379,
+	"images": "/Users/wangsiyu/Desktop/ /单词游戏/第一关/学习测试界面动画/bb"
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "bb_happy_1", "bone": "root", "attachment": "bb_happy_1" }
+],
+"skins": {
+	"default": {
+		"bb_happy_1": {
+			"bb_happy_1": { "x": 108.19, "y": 189.93, "width": 215, "height": 379 },
+			"bb_happy_2": { "x": 112.26, "y": 191.73, "width": 215, "height": 379 },
+			"bb_happy_3": { "x": 113.03, "y": 213.32, "width": 215, "height": 379 },
+			"bb_happy_4": { "x": 115.35, "y": 200.22, "width": 215, "height": 379 },
+			"bb_happy_5": { "x": 113.03, "y": 201.76, "width": 215, "height": 379 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"bb_happy_1": {
+				"attachment": [
+					{ "time": 0, "name": "bb_happy_1" },
+					{ "time": 0.1, "name": "bb_happy_2" },
+					{ "time": 0.2, "name": "bb_happy_3" },
+					{ "time": 0.3, "name": "bb_happy_4" },
+					{ "time": 0.4, "name": "bb_happy_5" },
+					{ "time": 0.5, "name": "bb_happy_4" },
+					{ "time": 0.6, "name": "bb_happy_3" },
+					{ "time": 0.7, "name": "bb_happy_1" }
+				]
+			}
+		}
+	}
+}
+}

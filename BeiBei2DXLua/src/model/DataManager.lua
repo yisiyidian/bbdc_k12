@@ -5,8 +5,8 @@ local s_USE_XXTEA = true
 
 ---------------------------------------------------------------------------
 -- DO NOT modify these below
-g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13','14','15','16','17','18','19','20','21','22','23','24'}
-g_BOOKKEYS = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'
+g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13','14','15','16','17','18','19','20','21','22','23','24','25','26'}
+g_BOOKKEYS = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
 
@@ -121,7 +121,7 @@ end
 -- K12 book word   books[book][unit] = {wordlist} 
 function DataManager.loadK12Books()
     local bookUnitWord = {}
-        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'
+        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
         for i = 1, #bookName do
@@ -131,16 +131,39 @@ function DataManager.loadK12Books()
             local lines = split(content, "\n")
             local current_unit = 0
             local word_count = 0
+            local first_count = 0
             for j = 1, #lines do
                 word_count = word_count + 1
                 if lines[j] ~= "" then
                     -- print(lines[j])
                     unit_word = split(lines[j],"\t")
-                    if unit_word[1] - current_unit ~= 0 then
-                        bookUnitWord[bookName[i]][unit_word[1]] = unit_word[2]
-                        current_unit = unit_word[1]
+                    if unit_word[1] - 1 == 0 then
+                        first_count = first_count + 1
+                        if first_count < 4 then
+                            if unit_word[1] - current_unit ~= 0 then
+                                bookUnitWord[bookName[i]][unit_word[1]] = unit_word[2]
+                                current_unit = unit_word[1]
+                            else
+                                bookUnitWord[bookName[i]][unit_word[1]] = bookUnitWord[bookName[i]][unit_word[1]]..'||'..unit_word[2]
+                                -- print(bookUnitWord[bookName[i]][unit_word[1]])
+                            end
+                        else
+                            if unit_word[1] + 1 - current_unit ~= 0 then
+                                bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = unit_word[2]
+                                current_unit = unit_word[1]+1
+                            else
+                                bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = bookUnitWord[bookName[i]][''..(unit_word[1]+1)]..'||'..unit_word[2]
+                            end
+                        end
                     else
-                        bookUnitWord[bookName[i]][unit_word[1]] = bookUnitWord[bookName[i]][unit_word[1]]..'|'..unit_word[2]
+                        -- print((unit_word[1]+1-current_unit))
+                        if unit_word[1]+1 - current_unit ~= 0 then
+                            bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = unit_word[2]
+                            current_unit = unit_word[1]+1
+                        else
+                            -- print(''..(unit_word[1]+1))
+                            bookUnitWord[bookName[i]][''..(unit_word[1]+1)] = bookUnitWord[bookName[i]][''..(unit_word[1]+1)]..'||'..unit_word[2]
+                        end
                     end
                     -- table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])
                 end
@@ -155,7 +178,7 @@ end
 -- return unit name   books[book][unit] = 'unitName'  3/   3-1
 function DataManager.loadUnitName()
     local bookUnitName = {}
-        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'
+        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
         for i = 1, #bookName do
@@ -165,22 +188,31 @@ function DataManager.loadUnitName()
             local lines = split(content, "\n")
             local current_unit = 0
             local word_count = 0
+            local first_count = 0
             for j = 1, #lines do
                 word_count = word_count + 1
                 if lines[j] ~= "" then
                     -- print(lines[j])
                     unit_word = split(lines[j],"\t")
                     -- print unit_word
-                    if unit_word[1] - current_unit ~= 0 then
+                    if unit_word[1] - 1 == 0 then
+                        first_count = first_count + 1
+                        if first_count < 4 then
+                            bookUnitName[bookName[i]][unit_word[1]] = '1_1'
+                        else
+                            bookUnitName[bookName[i]][''..(unit_word[1]+1)] = '1_2'
+                        end
+                        current_unit = unit_word[1]
+                    elseif unit_word[1]+1 - current_unit ~= 0 then
                         -- print('unit word')
                         -- print_lua_table(unit_word)
                         if unit_word[4] - 1 == 0 then   -- only one subunit
                             unit_name = split(unit_word[3],'_')
-                            bookUnitName[bookName[i]][unit_word[1]] = unit_name[1]
+                            bookUnitName[bookName[i]][''..(unit_word[1]+1)] = unit_name[1]
                         else
-                            bookUnitName[bookName[i]][unit_word[1]] = unit_word[3]
+                            bookUnitName[bookName[i]][''..(unit_word[1]+1)] = unit_word[3]
                         end
-                        current_unit = unit_word[1]
+                        current_unit = unit_word[1]+1
                     -- else
                     --     bookUnitName[bookName[i]][unit_word[1]] = bookUnitName[bookName[i]][unit_word[1]]..'|'..unit_word[2]
                     end
@@ -198,7 +230,7 @@ end
 -- return book[bookKey] = {wordList}
 function DataManager.loadK12BookWords()
     local bookWord = {}
-        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8'
+        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'}
         for i = 1, #bookName do

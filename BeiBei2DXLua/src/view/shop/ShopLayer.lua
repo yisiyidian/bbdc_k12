@@ -1,8 +1,7 @@
-require("cocos.init")
-require("common.global")
+--商店界面 商品列表部分 可滚动
 
-local ShopAlter = require("view.shop.ShopAlter")
-local MissionConfig          = require("model.mission.MissionConfig") --任务的配置数据
+local ShopAlter     = require("view.shop.ShopAlter")
+local MissionConfig = require("model.mission.MissionConfig") --任务的配置数据
 
 local ShopLayer = class("ShopLayer", function()
     return cc.Layer:create()
@@ -79,7 +78,7 @@ function ShopLayer.create()
 
     for i = 1, productNum do
         local x = s_DESIGN_WIDTH/2+150*(1-2*(i%2))
-        local y = bigHeight-height*(math.floor((i-1)/2))-435
+        local y = bigHeight - height*(math.floor((i-1)/2))-435
         
         local item_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
@@ -92,6 +91,7 @@ function ShopLayer.create()
         item_name_back:setPosition(x+15, y)
         backColor:addChild(item_name_back) 
 
+        --获取商品解锁状态
         if s_CURRENT_USER:getLockFunctionState(i) == 0 then
             local item = ccui.Button:create("image/shop/item"..i..".png","image/shop/item"..i..".png","")
             item:setPosition(x, y+150)
@@ -120,15 +120,15 @@ function ShopLayer.create()
             item_name:setColor(cc.c4b(0,0,0,255))
             item_name:setPosition(item_name_back:getContentSize().width/2-20, item_name_back:getContentSize().height/2-5)
             item_name_back:addChild(item_name)
-
+            --触发任务
             if i == 2 then 
-                s_MissionManager:updateMission(MissionConfig.MISSION_DATA1)
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA1,1,false)
             elseif i == 3 then
-                s_MissionManager:updateMission(MissionConfig.MISSION_DATA2)
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA2,1,false)
             elseif i == 5 then
-                s_MissionManager:updateMission(MissionConfig.MISSION_DATA3)
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA3,1,false)
             elseif i == 6 then
-                s_MissionManager:updateMission(MissionConfig.MISSION_VIP)
+                s_MissionManager:updateMission(MissionConfig.MISSION_VIP,1,false)
             end
         end
     end

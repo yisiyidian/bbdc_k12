@@ -24,6 +24,7 @@ import com.tencent.connect.common.Constants;
 import com.tencent.connect.share.QQShare;
 import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.sdk.modelmsg.WXImageObject;
+import com.tencent.mm.sdk.modelmsg.WXWebpageObject;
 import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.sdk.modelmsg.WXTextObject;
 import com.tencent.mm.sdk.openapi.*;
@@ -187,6 +188,58 @@ public class CXTencentSDKCall {
 
 	}
 	
+public void shareURLToWeiXin(final String url, final String title, final String desc) {
+
+            	
+				// File file = new File(url);
+				// if (!file.exists()) {
+				// 	return;
+				// }
+				
+				//Bitmap rawbmp = BitmapFactory.decodeFile(path);
+				// String newpath = BBNDK.getSDCardPath() + "/beibeidanci/screenshot/";
+				// String tmpfilename = /*System.currentTimeMillis() + */"tmp.png";
+				//if (saveMyBitmap(newpath, tmpfilename, rawbmp) == false) return;
+				
+				WXWebpageObject webObj = new WXWebpageObject();
+				webObj.webpageUrl = url;
+				
+				WXMediaMessage msg = new WXMediaMessage();
+				msg.mediaObject = webObj;
+				
+				// Bitmap bmp = BitmapFactory.decodeFile("Icon-72.png");
+				// final int THUMB_SIZE = 128;
+				// Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, THUMB_SIZE, THUMB_SIZE, true);
+				// bmp.recycle();
+				// msg.thumbData = Util.bmpToByteArray(thumbBmp, true);
+				msg.title = title;
+				msg.description = desc;
+				
+				SendMessageToWX.Req req = new SendMessageToWX.Req();
+				req.transaction = String.valueOf(System.currentTimeMillis());
+				req.message = msg;
+				req.scene = SendMessageToWX.Req.WXSceneTimeline;
+				BBNDK.wxapi.sendReq(req);
+				
+		//		String text = "share our application";  
+		//        WXTextObject textObj = new WXTextObject();  
+		//        textObj.text = text;  
+		//
+		//        WXMediaMessage msg = new WXMediaMessage(textObj);  
+		//        msg.mediaObject = textObj;  
+		//        msg.description = text;  
+		//          
+		//        SendMessageToWX.Req req = new SendMessageToWX.Req();  
+		//        req.transaction = String.valueOf(System.currentTimeMillis());  
+		//        req.scene = SendMessageToWX.Req.WXSceneTimeline;
+		//        req.message = msg;  
+		//          
+		//        BBNDK.wxapi.sendReq(req); 
+				
+
+
+	}
+
 	private String buildTransaction(final String type) {
 		return (type == null) ? String.valueOf(System.currentTimeMillis()) : type + System.currentTimeMillis();
 	}

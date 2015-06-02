@@ -24,7 +24,6 @@
 -- 		解锁数据1 解锁数据2 解锁数据4
 --		解锁VIP
 
---TODO  换机器同步
 
 local MissionManager = class("MissionManager")
 
@@ -246,9 +245,10 @@ function MissionManager:generalTasks()
 		loginDay = loginDay + 1	--天数+1
 		taskGenDate = os.time()
 		--重新生成任务列表
-		local result = {} 	-- 生成结果
+		local result = {} 	 --生成结果
 		local tasksConfig =  MissionConfig.randomMission
-		
+			
+		-- ts_task 和 js_task 是任务生成的后备列表
 		local ts_task = {} 		--特殊任务  配置  MissionConfig.randomMission 的项,例如 {["mission_id"] = "2-1",["type"] = 2,["condition"]= {1},["bean"]=0}, --完善信息
 		local js_task = {} 		--解锁任务  配置
 		--临时变量
@@ -331,13 +331,12 @@ function MissionManager:generalTasks()
 				if ts_index > 0 then
 					result[#result + 1] = tget(ts_task,ts_index)
 				end
-			else 
-			    --解锁任务  取价格最低的
-				hasLockMission = true
+			else
+				hasLockMission = true --解锁任务  取价格最低的
 				local minprice = 0
 				local js_index = 0
 				for k,v in pairs(js_task) do
-					if v.cost > minprice then
+					if v.cost < minprice or minprice == 0 then
 						minprice = v.cost
 						js_index = k
 					end
