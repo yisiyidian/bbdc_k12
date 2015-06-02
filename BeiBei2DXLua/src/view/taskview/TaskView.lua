@@ -102,7 +102,7 @@ function TaskView:CloseClick(sender,eventType)
 
 	local action1 = cc.FadeOut:create(0.5)
 	local action2 = cc.ScaleTo:create(0.5,0)
-	local action3 = cc.MoveTo:create(0.5,cc.p(s_RIGHT_X - 600, - 400))
+	local action3 = cc.MoveTo:create(0.5,cc.p(s_RIGHT_X - 500, - 400))
 	local action4 = cc.CallFunc:create(function ()
 									    s_SCENE:removeAllPopups()
 										end,{})

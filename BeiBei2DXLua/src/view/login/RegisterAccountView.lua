@@ -516,7 +516,6 @@ function RegisterAccountView:onTouchRegister(sender,eventType)
 	else
 		-- do nothing
 	end
-
 	--注册
 	self:register(self.phoneNumber,pwd,self.nickName,self.sex)
 end
@@ -653,6 +652,7 @@ function RegisterAccountView:onRegisterCallBack(nickName,pwd,phoneNumber,error,e
 		s_TIPS_LAYER:showSmallWithOneButton(error)
 		return
 	end
+
 	--触发完善信息任务
 	s_MissionManager:updateMission(MissionConfig.MISSION_INFO,1,false)
 	self:endRegister(true)
