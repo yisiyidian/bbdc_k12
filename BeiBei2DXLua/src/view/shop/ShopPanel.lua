@@ -1,7 +1,8 @@
-require("common.global")
+--商店界面
 
 local ShopErrorAlter = require("view.shop.ShopErrorAlter")
 local Button                = require("view.button.longButtonInStudy")
+local MissionConfig          = require("model.mission.MissionConfig") --任务的配置数据
 
 local ShopPanel = class("ShopPanel", function()
     return cc.Layer:create()
@@ -25,6 +26,15 @@ function ShopPanel.create(itemId)
 
             s_CURRENT_USER:subtractBeans(s_DataManager.product[itemId].productValue)
             s_CURRENT_USER:unlockFunctionState(itemId)
+            if itemId == 2 then 
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA1)
+            elseif itemId == 3 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA2)
+            elseif itemId == 5 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA3)
+            elseif itemId == 6 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_VIP)
+            end
             saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY], ['lockFunction']=s_CURRENT_USER.lockFunction})
             main.feedback()
             main:removeFromParent()

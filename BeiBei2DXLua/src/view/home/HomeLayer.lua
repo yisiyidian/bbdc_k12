@@ -155,6 +155,7 @@ function HomeLayer:ctor()
 
     self.mission_progress = mission_progress
     backColor:addChild(mission_progress,1,'mission_progress')
+
     --下载音频的按钮
     local downloadSoundButton = DownloadSoundButton.create(top)
 
@@ -292,7 +293,7 @@ function HomeLayer:ctor()
     button_friend:addChild(icon_friend)
     self.button_friend = button_friend
     button_friend:scheduleUpdateWithPriorityLua(handler(self,self.updateFriendButton),0)
-    --获取好友？？？？？ TODO fix self
+    --获取好友
     s_UserBaseServer.getFolloweesOfCurrentUser(handler(self,
         function (s,api,result)
             s_UserBaseServer.getFollowersOfCurrentUser(handler(s,
@@ -316,6 +317,23 @@ function HomeLayer:ctor()
         function (api, code, message, description)
         end
     ))
+    
+    --商品解锁任务触发 start
+    local productNum = #s_DataManager.product
+    for iii = 1,productNum do
+        if s_CURRENT_USER:getLockFunctionState(iii) ~= 0 then
+            if iii == 2 then 
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA1,1,false)
+            elseif iii == 3 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA2,1,false)
+            elseif iii == 5 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA3,1,false)
+            elseif iii == 6 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_VIP,1,false)
+            end
+        end
+    end
+    --商品解锁任务触发 end
     
     --自定义的事件监听
     local listener = cc.EventListenerTouchOneByOne:create()

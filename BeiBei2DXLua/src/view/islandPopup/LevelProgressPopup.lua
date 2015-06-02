@@ -36,16 +36,12 @@ function LevelProgressPopup:ctor(index)
 
 end
 
+
 function LevelProgressPopup:createSummary(index)
-    --local back = cc.LayerColor:create(cc.c4b(0,0,0,0), 545, 900)
-
-
     local background = cc.Sprite:create("image/islandPopup/subtask_bg.png")
     background:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)
     self:addChild(background)
     self.background = background
-
-    
     --加入上部 绿色背景
     local background_green = cc.Sprite:create("image/boss_view/background_green.png")
     background_green:setPosition(0,background:getContentSize().height)
@@ -53,20 +49,11 @@ function LevelProgressPopup:createSummary(index)
     background_green:setAnchorPoint(0,1)
     background:setContentSize(background_green:getContentSize().width,background:getContentSize().height)
     background:addChild(background_green)
-
-    
-
     --加入怪物
     local monsters = sp.SkeletonAnimation:create("image/boss_view/guaishou_special.json", "image/boss_view/guaishou_special.atlas")
     monsters:setPosition(background:getContentSize().width/2,background:getContentSize().height/2)
     background:addChild(monsters)
     monsters:addAnimation(0, 'animation', true)
-
-    -- --加入任务提示
-    -- local text = cc.Label:createWithSystemFont("任务目标： 打败这货","",30)
-    -- text:setPosition(background:getContentSize().width/2,background:getContentSize().height * 0.25)
-    -- text:setColor(cc.c4b(50,50,50,255))
-    -- background:addChild(text)
 
     local wordCard_Click = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -88,6 +75,7 @@ function LevelProgressPopup:createSummary(index)
     local close_Click = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             s_SCENE:removeAllPopups()
+            s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch() --放开点击
         end
     end
     --加入关闭按钮
@@ -98,7 +86,6 @@ function LevelProgressPopup:createSummary(index)
 
     local function button_func(  )
         playSound(s_sound_buttonEffect) 
-
 
         local bossList = s_LocalDatabaseManager.getAllUnitInfo()
         local maxID = s_LocalDatabaseManager.getMaxUnitID()
@@ -129,7 +116,7 @@ function LevelProgressPopup:createSummary(index)
             s_CorePlayManager.initTotalUnitPlay() -- 按顺序打第一个boss
             s_SCENE:removeAllPopups()  
         else
-            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch() 
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch() --锁定触摸
             local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
             tutorial_text:setPosition(s_DESIGN_WIDTH / 2, 300)
             self:addChild(tutorial_text,520)
@@ -143,7 +130,7 @@ function LevelProgressPopup:createSummary(index)
             tutorial_text:runAction(action1_2)
             local action2 = cc.FadeOut:create(1.5)
             local action3 = cc.CallFunc:create(function ()
-                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch() 
+                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
             end)
             text:runAction(cc.Sequence:create(action2,action3))
         end 
