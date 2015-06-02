@@ -155,6 +155,7 @@ function HomeLayer:ctor()
 
     self.mission_progress = mission_progress
     backColor:addChild(mission_progress,1,'mission_progress')
+
     --下载音频的按钮
     local downloadSoundButton = DownloadSoundButton.create(top)
 
@@ -292,7 +293,7 @@ function HomeLayer:ctor()
     button_friend:addChild(icon_friend)
     self.button_friend = button_friend
     button_friend:scheduleUpdateWithPriorityLua(handler(self,self.updateFriendButton),0)
-    --获取好友？？？？？ TODO fix self
+    --获取好友
     s_UserBaseServer.getFolloweesOfCurrentUser(handler(self,
         function (s,api,result)
             s_UserBaseServer.getFollowersOfCurrentUser(handler(s,
@@ -309,13 +310,30 @@ function HomeLayer:ctor()
                         redHint:addChild(num)
                     end
                 end,
-                function (api, code, message, description)
+                function (api, code, message, description)             
                 end
             ))
         end,
         function (api, code, message, description)
         end
     ))
+    
+    --商品解锁任务触发 start
+    local productNum = #s_DataManager.product
+    for iii = 1,productNum do
+        if s_CURRENT_USER:getLockFunctionState(iii) ~= 0 then
+            if iii == 2 then 
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA1,1,false)
+            elseif iii == 3 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA2,1,false)
+            elseif iii == 5 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_DATA3,1,false)
+            elseif iii == 6 then
+                s_MissionManager:updateMission(MissionConfig.MISSION_VIP,1,false)
+            end
+        end
+    end
+    --商品解锁任务触发 end
     
     --自定义的事件监听
     local listener = cc.EventListenerTouchOneByOne:create()
@@ -429,7 +447,9 @@ function HomeLayer:onTouchMoved(touch, event)
                 local PersonalInfo = require("view.PersonalInfo")
                 PersonalInfo.getNotContainedInLocalDatas(function ()
                     local personalInfoLayer = PersonalInfo.create()
+                    self.personalInfoLayer = personalInfoLayer
                     self.personalInfoLayer:setPosition(-s_LEFT_X,0)
+                    --personalInfoLayer:setPosition(-s_LEFT_X,0)
                     self.data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
                 end)
             end)
@@ -662,7 +682,7 @@ function HomeLayer:changeViewToFriendOrShop(destination)
     destinationLayer:runAction(cc.Sequence:create(action2, action3))
 
     destinationLayer.backToHome = handler(self,
-        function(...)
+        function(self)
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2 ,s_DESIGN_HEIGHT/2))
             self.backColor:runAction(action1)

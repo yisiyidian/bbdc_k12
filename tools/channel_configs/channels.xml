@@ -226,6 +226,72 @@
         umengAppName="贝贝单词-android"
         umengAppKey="549a5eb9fd98c5b2ac00144e"/>
 
+    <channel name="tengxun" 
+        packageName="com.beibei.wordmaster.k12"
+
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
+
+        QQPkgName="com.beibei.wordmaster.tencentmyapp"
+        QQName="贝贝单词"
+        QQAppID="1103783596"
+        QQAppKey="n7vXdt6eDIggSsa6"
+        isQQLogInAvailable="false"
+        isQQShareAvailable="true"
+
+        WXPkg="com.beibei.wordmaster.tencentmyapp" WXName="贝贝单词-应用宝正式"
+        WXAppID="wxa29402ce25ebaf3a"
+        WXAppSecret="38af3cb750f2972b4ac8cfb12ef30405"
+        WXSignature="b7cf8084bd0d4f782b2a4ebd2a0c90b8"
+
+        umengAppName="贝贝单词-android"
+        umengAppKey="549a5eb9fd98c5b2ac00144e"/>
+
+    <channel name="mumayi" 
+        packageName="com.beibei.wordmaster.k12"
+
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
+
+        QQPkgName="com.beibei.wordmaster.tencentmyapp"
+        QQName="贝贝单词"
+        QQAppID="1103783596"
+        QQAppKey="n7vXdt6eDIggSsa6"
+        isQQLogInAvailable="false"
+        isQQShareAvailable="true"
+
+        WXPkg="" WXName=""
+        WXAppID=""
+        WXAppSecret=""
+        WXSignature=""
+
+        umengAppName="贝贝单词-android"
+        umengAppKey="549a5eb9fd98c5b2ac00144e"/>
+
+    <channel name="nduo" 
+        packageName="com.beibei.wordmaster.k12"
+
+        leanCloudAppName="K12"
+        leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
+        leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
+
+        QQPkgName="com.beibei.wordmaster.tencentmyapp"
+        QQName="贝贝单词"
+        QQAppID="1103783596"
+        QQAppKey="n7vXdt6eDIggSsa6"
+        isQQLogInAvailable="false"
+        isQQShareAvailable="true"
+
+        WXPkg="" WXName=""
+        WXAppID=""
+        WXAppSecret=""
+        WXSignature=""
+
+        umengAppName="贝贝单词-android"
+        umengAppKey="549a5eb9fd98c5b2ac00144e"/>
+
 <channel name="360 jiagu ----------------------------------------------------------------" />
     
     <channel name="360qihu" 

@@ -60,7 +60,7 @@ function BookLayer.create(education)
     end
     local key_array = {}
     if grade[1] == 'primary' then
-        key_array = {'primary_1','primary_2','primary_3','primary_4','primary_5','primary_6','primary_7','primary_8','kwekwe'}
+        key_array = {'kwekwe','primary_1','primary_2','primary_3','primary_4','primary_5','primary_6','primary_7','primary_8'}
     elseif grade[1] == 'junior' then
         key_array = {'junior_1','junior_2','junior_3','junior_4','junior_5'}
     else
