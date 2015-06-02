@@ -1,8 +1,14 @@
+-- 音频播放
+-- 注释添加时间2015年06月02日18:08:52
+-- 侯琪
 require("cocos.init")
 
 local db = require('model.LocalDatabaseManager')
 currentBGM = ""
 
+-- 播放声音，参数（文件，是否循环）
+-- 声音一次只能播放一首
+-- global.lua里面有常用的音频
 function playMusic(filename, isLoop)
     currentBGM = filename
     if db.isMusicOn() then
@@ -17,6 +23,8 @@ function playMusic(filename, isLoop)
     end
 end
 
+-- 播放音效，参数（文件）
+-- 音效可以播放多个
 function playSound(filename)
     if db.isSoundOn() then
         local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename)
@@ -29,6 +37,11 @@ end
 
 WORD_SOUND_US = 'us'
 WORD_SOUND_EN = 'en'
+-- 根据s_CURRENT_USER.isSoundAm
+-- 判断播放英式美式发音
+-- 对应规则
+-- s_CURRENT_USER.isSoundAm == 0 英式
+-- s_CURRENT_USER.isSoundAm == 1 美式
 function getWordSoundFileNamePrefix()
     local isAm = WORD_SOUND_US
     if s_CURRENT_USER ~= nil then 
@@ -38,20 +51,31 @@ function getWordSoundFileNamePrefix()
     end
     return isAm
 end
-
+-- 获取单词文件名
+-- us_apple.mp3
+-- en_apple.mp3
 function getWordSoundFileName(word)
     local isAm = getWordSoundFileNamePrefix()
     local filename = isAm .. '_' .. word .. '.mp3'
     return filename
 end
-
+-- 获得单词路径
+-- 每本书自带若干音频，外加从音频包中获取的资源 
+-- 位置是localPath或
+-- 找到音频时，播放
+-- 找不到音频时，从http://123.56.84.196/allsounds/获取音频下载地址
 function getWordSoundFilePath(word)
     local filename = getWordSoundFileName(word)
     
     local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename)
+    local wordPath = cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey 
+
     if cc.FileUtils:getInstance():isFileExist(localPath) then
         print("getWordSoundFilePath localPath Y :" .. localPath)
         return localPath
+    elseif cc.FileUtils:getInstance():isFileExist("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..filename) then
+        print("getWordSoundFilePath localPath Y :" .. wordPath)
+        return wordPath
     else
         print("getWordSoundFilePath localPath N :" .. localPath)
     end
@@ -60,7 +84,7 @@ function getWordSoundFilePath(word)
     print("getWordSoundFilePath downloadPath :" .. downloadPath)
     return downloadPath
 end
-
+-- 获取音频下载地址
 function getWordSoundFileDownloadURLs(word)
     local us = WORD_SOUND_US .. '_' .. word .. '.mp3'
     local en = WORD_SOUND_EN .. '_' .. word .. '.mp3'
@@ -75,6 +99,7 @@ end
 PLAY_WORD_SOUND_YES     = 'PLAY_WORD_SOUND_YES'
 PLAY_WORD_SOUND_NO      = 'PLAY_WORD_SOUND_NO'
 PLAY_WORD_SOUND_UNKNOWN = 'PLAY_WORD_SOUND_UNKNOWN'
+-- 播放单词声音
 function playWordSound(word)
     if db.isSoundOn() then
         local wordPath = cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey
