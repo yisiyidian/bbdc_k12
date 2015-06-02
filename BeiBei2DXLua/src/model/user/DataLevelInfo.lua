@@ -54,6 +54,8 @@ function DataLevelInfo:getLevelInfo(bookKey)
 end
 
 function DataLevelInfo:computeCurrentProgress()
+    -- local tmp = self:getLevelInfo(s_CURRENT_USER.bookKey)
+    -- return tmp + 1
      return s_LocalDatabaseManager.getMaxUnitID() - 1
 end
 
