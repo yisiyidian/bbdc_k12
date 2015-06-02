@@ -95,12 +95,12 @@ function ChapterLayer:ctor()
     -- add player
     -- scroll to current chapter level
     -- local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    -- local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    -- if progress - 0 == 0 then
-    --     self:scrollLevelLayer(progress, 0)
-    -- else
-    --     self:scrollLevelLayer(progress+1,0)
-    -- end
+    local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
+    if progress - 0 == 0 then
+        self:scrollLevelLayer(progress, 0)
+    else
+        self:scrollLevelLayer(progress+1,0)
+    end
     self:addBottomBounce()
     -- check unlock level
     self:checkUnlockLevel()
@@ -334,9 +334,31 @@ function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
         local chapterCount = math.floor((currentLevelCount-1) / 10)
         local levelCount = math.floor((currentLevelCount-1) % 10) + 1
 
-        local currentVerticalPercent = (chapterCount / (chapterCount + 1) + levelCount / (s_islands_per_page * (chapterCount + 1)) ) * 100
-        
-        if currentVerticalPercent >= 80 and levelCount >= 8 then
+        -- local temp = 0
+        -- if levelCount <= 2 then 
+        --     temp = 0
+        -- elseif levelCount == 2 then
+        --     temp = 31.55
+        -- elseif levelCount == 3 then
+        --     temp = 39.83
+        -- elseif levelCount == 4 then
+        --     temp = 48.97
+        -- elseif levelCount == 5 then
+        --     temp = 57.89
+        -- elseif levelCount == 6 then
+        --     temp = 68.69
+        -- elseif levelCount == 7 then
+        --     temp = 78.31
+        -- elseif levelCount == 8 then
+        --     temp = 91.93
+        -- else 
+        --     temp = 100
+        -- end
+        -- temp = temp / 100
+        -- local currentVerticalPercent = ((chapterCount / chapterCount + 1)+ temp/(chapterCount + 1)) * 100
+        local currentVerticalPercent = (chapterCount / (chapterCount + 1) + (levelCount + 1)/ (s_islands_per_page * (chapterCount + 1)) ) * 100
+
+        if (currentVerticalPercent >= 80 and levelCount >= 8) or currentVerticalPercent > 100 then
             currentVerticalPercent = 100
         end
         print('#######currentPercent:'..currentVerticalPercent,','..chapterCount..','..levelCount)
