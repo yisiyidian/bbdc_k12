@@ -310,7 +310,7 @@ function HomeLayer:ctor()
                         redHint:addChild(num)
                     end
                 end,
-                function (api, code, message, description)
+                function (api, code, message, description)             
                 end
             ))
         end,
@@ -447,7 +447,9 @@ function HomeLayer:onTouchMoved(touch, event)
                 local PersonalInfo = require("view.PersonalInfo")
                 PersonalInfo.getNotContainedInLocalDatas(function ()
                     local personalInfoLayer = PersonalInfo.create()
+                    self.personalInfoLayer = personalInfoLayer
                     self.personalInfoLayer:setPosition(-s_LEFT_X,0)
+                    --personalInfoLayer:setPosition(-s_LEFT_X,0)
                     self.data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
                 end)
             end)
