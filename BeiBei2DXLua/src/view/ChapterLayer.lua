@@ -1,4 +1,5 @@
 --选单元的界面 unit1 unit2....
+-- 关卡的主界面显示，将每个单元的UI都添加到该类中，控制滚动等
 local TaskView = require("view.taskview.TaskView")
 
 local s_islands_per_page = 10
@@ -153,6 +154,7 @@ function ChapterLayer:initActiveChapterRange()
     end
 end
 
+-- 延时调用方法
 function ChapterLayer:callFuncWithDelay(delay, func) 
     local delayAction = cc.DelayTime:create(delay)
     local callAction = cc.CallFunc:create(func)
@@ -160,6 +162,7 @@ function ChapterLayer:callFuncWithDelay(delay, func)
     self:runAction(sequence)   
 end
 
+-- 检查是否需要解锁关卡（分为解锁大关卡和解锁小关卡）
 function ChapterLayer:checkUnlockLevel()
     -- get state --
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
@@ -167,7 +170,7 @@ function ChapterLayer:checkUnlockLevel()
     local bossList = s_LocalDatabaseManager.getAllUnitInfo()
     print('---BOSS list')
     print_lua_table(bossList)
-    --------------------- last level ------------------------
+    --------------------- last level ------------------------ 某本书学习完成时的逻辑
     local bookMaxUnitID = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey)
     if progress - bookMaxUnitID == 0 then -- last level
         for bossID, bossInfo in pairs(bossList) do
@@ -227,6 +230,7 @@ function ChapterLayer:checkUnlockLevel()
         end
     end
     ---------------------------------------------------------
+    -- 记录任务关卡索引和当前关卡索引
     local taskIndex = -2
     local taskState = -2
     local progressIndex = progress
@@ -245,6 +249,7 @@ function ChapterLayer:checkUnlockLevel()
     local oldProgress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)+0
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
     s_CURRENT_USER.levelInfo:updateDataToServer()  -- update book progress
+    -- 解锁大关卡
     if currentProgress % s_islands_per_page == 0 and currentProgress > 0 and currentProgress - oldProgress > 0 then       
         --unlock chapter
         self:plotUnlockCloudAnimation()
@@ -263,6 +268,7 @@ function ChapterLayer:checkUnlockLevel()
         self:callFuncWithDelay(2.0, function() 
             self:addBottomBounce()
         end)
+    -- 解锁小关卡
     elseif currentProgress - oldProgress > 0 then   -- unlock level
         local chapterKey = 'chapter'..math.floor(oldProgress / s_islands_per_page)
         local delayTime = 0
@@ -293,9 +299,10 @@ function ChapterLayer:checkUnlockLevel()
     end
 end
 
+-- 将某个大关卡（章节）添加到滚动列表中
 function ChapterLayer:addChapterIntoListView(chapterKey)
     print('add chapter list view:'..chapterKey)
-    --?????????  区分类型的意义是什么
+    --Chapter0使用一种UI，其他Chapter使用重复的RepeatChapterLayer，方便关卡的扩展（目前只有一种逻辑）
     if chapterKey == 'chapter0' then    
         local ChapterLayer0 = require('view.level.ChapterLayer0')
         self.chapterDic['chapter0'] = ChapterLayer0.create("start")
@@ -370,6 +377,7 @@ function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
         self.listView:setInertiaScrollEnabled(true)
 end
 
+-- 播放解锁大关卡时云层的动画
 function ChapterLayer:plotUnlockCloudAnimation()
     local action1 = cc.MoveBy:create(1.5, cc.p(-s_DESIGN_WIDTH*2,0))
     local action2 = cc.MoveBy:create(1.5, cc.p(s_DESIGN_WIDTH*2,0))
@@ -381,6 +389,7 @@ function ChapterLayer:plotUnlockCloudAnimation()
     end)  
 end
 
+-- 添加头部的bounce
 function ChapterLayer:addTopBounce()
     local blueLayerColor = cc.LayerColor:create(oceanBlue,s_chapter_layer_width,s_DESIGN_HEIGHT)
     blueLayerColor:ignoreAnchorPointForPosition(false)
@@ -389,6 +398,7 @@ function ChapterLayer:addTopBounce()
     self:addChild(blueLayerColor,-1)
 end
 
+-- 添加界面中的元素
 function ChapterLayer:plotDecoration()
     -- plot user and boat
     local level0Position = self.chapterDic['chapter0']:getLevelPosition('level0')
@@ -406,6 +416,7 @@ function ChapterLayer:plotDecoration()
     wave:runAction(action3)
 end
 
+-- 添加底部的bounce
 function ChapterLayer:addBottomBounce()
     self.chapterDic['leftCloud'] = cc.Sprite:create('image/chapter/leftCloud.png')
     self.chapterDic['rightCloud'] = cc.Sprite:create('image/chapter/rightCloud.png')
@@ -525,6 +536,7 @@ function ChapterLayer:click_box(sender,eventType)
     s_SCENE:popup(taskview)
 end
 
+-- 添加贝贝豆
 function ChapterLayer:addBeansUI()
     self.beans = cc.Sprite:create('image/chapter/chapter0/background_been_white.png')
     self.beans:setPosition(s_RIGHT_X-100, s_DESIGN_HEIGHT-70)

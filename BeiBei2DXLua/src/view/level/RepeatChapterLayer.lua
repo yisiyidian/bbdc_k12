@@ -1,3 +1,5 @@
+-- 除第一大章节外的其他关卡，历史遗留代码，之前的设计是和第一大章节不同
+
 local ChapterLayerBase = require('view.level.ChapterLayerBase')
 
 local s_chapter0_base_height = 3014
@@ -15,6 +17,8 @@ function RepeatChapterLayer.create(chapterKey)
     return layer
 end
 
+-- 初始化某个章节的资源
+-- chapterKey: 章节的索引如'chapter1'
 function RepeatChapterLayer:ctor(chapterKey)
     self.chapterKey = chapterKey
     --    print('repeateChapter: ')
