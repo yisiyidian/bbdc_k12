@@ -458,7 +458,7 @@ end
 --任务按钮  宝箱样式
 function ChapterLayer:addTaskBOX()
     local boxButton = ccui.Button:create("image/islandPopup/close.png","","image/islandPopup/open.png")
-    boxButton:addTouchEventListener(handler(self,self.click_box))
+    boxButton:addTouchEventListener(handler(self,self.onTaskBoxTouch))
     boxButton:setAnchorPoint(0.5,0.5)
     boxButton:ignoreAnchorPointForPosition(false)
     boxButton:setPosition(s_RIGHT_X-180 ,180)
@@ -522,10 +522,11 @@ function ChapterLayer:updateBean()
 end
 
 --宝箱触摸事件
-function ChapterLayer:click_box(sender,eventType)
+function ChapterLayer:onTaskBoxTouch(sender,eventType)
     if eventType ~= ccui.TouchEventType.ended then
         return
     end
+    -- print("触摸箱子-------")
     --箱子停止抖动
     self.boxButton:stopAllActions()
     --弹出任务面板

@@ -197,9 +197,9 @@
         isQQShareAvailable="true"
 
         WXPkg="com.beibei.wordmaster.baidu" WXName="贝贝单词-百度"
-        WXAppID="wxd42564eafd80df63"
-        WXAppSecret="1d6c08c8a95484803fe3020a2b927c46"
-        WXSignature="47424d9b8a7d88432ed09f9e113693d0"
+        WXAppID="wxa888fafd83912e2c"
+        WXAppSecret="8c8b62b5764b44af2b09e4e62cf44119"
+        WXSignature="7a635f57953ba431a36c617bebaecba1"
 
         umengAppName="贝贝单词-android"
         umengAppKey="549a5eb9fd98c5b2ac00144e"/>
