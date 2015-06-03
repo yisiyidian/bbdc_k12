@@ -1,3 +1,5 @@
+-- 基本关卡功能结构类
+-- 共享不同关卡的公共方法和数据结构
 require("cocos.init")
 require('common.global')
 
@@ -26,6 +28,8 @@ function ChapterLayerBase:ctor(chapterKey, startLevelKey)
     self.levelPos = {}
 end
 
+-- 获取某个关卡的位置
+-- levelKey: 如'level0'
 function ChapterLayerBase:getLevelPosition(levelKey)
     for k, v in pairs(self.levelPos) do
         if string.sub(levelKey, 6) - k == 0 then
@@ -80,6 +84,8 @@ function ChapterLayerBase:createObjectForResource(t)
     return object
 end
 
+-- 播放某个关卡解锁时的动画
+-- levelKey: 关卡key
 function ChapterLayerBase:plotUnlockLevelAnimation(levelKey)
     local levelIndex = string.sub(levelKey, 6)
     local lockSprite = self:getChildByName('lock'..levelIndex)
@@ -107,6 +113,9 @@ function ChapterLayerBase:plotUnlockLevelAnimation(levelKey)
     end
 end
 
+-- 延时调用某个方法
+-- delay:延迟时间
+-- func:方法
 function ChapterLayerBase:callFuncWithDelay(delay, func) 
     local delayAction = cc.DelayTime:create(delay)
     local callAction = cc.CallFunc:create(func)
@@ -173,6 +182,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     --     -- deco:setPosition(levelPosition.x,levelPosition.y+20)
     --     -- self:addChild(deco, 130)
     -- else
+    -- if false then
     if levelState == 0 or (levelState >= 1 and levelState <= 4 and levelIndex == currentTaskBossIndex) then
         
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
@@ -188,34 +198,37 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 
 end
 
--- ｛没用到 
-function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex) 
+-- -- ｛没用到 
+-- function ChapterLayerBase:checkLevelStateBeforePopup(levelIndex) 
 
-    local bossList = s_LocalDatabaseManager.getAllUnitInfo()
-    local state, coolingDay
-    for bossID, bossInfo in pairs(bossList) do
-        if bossID - (levelIndex + 1) == 0 then
-            state = bossInfo["unitState"] + 0
-            coolingDay = bossInfo["coolingDay"] + 0
-        end
-    end
+--     local bossList = s_LocalDatabaseManager.getAllUnitInfo()
+--     local state, coolingDay
+--     for bossID, bossInfo in pairs(bossList) do
+--         if bossID - (levelIndex + 1) == 0 then
+--             state = bossInfo["unitState"] + 0
+--             coolingDay = bossInfo["coolingDay"] + 0
+--         end
+--     end
     
-    if state >= 1 and active ~= 0 then
-        local WordLibrary = require("view.islandPopup.WordLibraryPopup")
-        local wordLibrary = WordLibrary.create(levelIndex)
-        s_SCENE.popupLayer:addChild(wordLibrary)   
-        back:runAction(cc.MoveBy:create(0.2,cc.p(800,0)))
-        wordLibrary.close = function ()
-            back:runAction(cc.MoveBy:create(0.2,cc.p(-800,0)))
-        end
-    else
-        local playAnimation = true
-        self:addPopup(levelIndex,playAnimation)
-        print("self:addPopup(levelIndex,playAnimation)"..tostring(playAnimation))
-    end
-end
---没用到 ｝
+--     if state >= 1 and active ~= 0 then
+--         local WordLibrary = require("view.islandPopup.WordLibraryPopup")
+--         local wordLibrary = WordLibrary.create(levelIndex)
+--         s_SCENE.popupLayer:addChild(wordLibrary)   
+--         back:runAction(cc.MoveBy:create(0.2,cc.p(800,0)))
+--         wordLibrary.close = function ()
+--             back:runAction(cc.MoveBy:create(0.2,cc.p(-800,0)))
+--         end
+--     else
+--         local playAnimation = true
+--         self:addPopup(levelIndex,playAnimation)
+--         print("self:addPopup(levelIndex,playAnimation)"..tostring(playAnimation))
+--     end
+-- end
+-- --没用到 ｝
 
+-- 添加某个关卡点击时的弹窗
+-- levelIndex:关卡索引
+-- playAnimation: 是否播放动画
 function ChapterLayerBase:addPopup(levelIndex,playAnimation)
     print("ChapterLayerBase:addPopup(levelIndex,playAnimation)"..tostring(playAnimation))
     local LevelProgressPopup = require("view.islandPopup.LevelProgressPopup")
@@ -223,6 +236,7 @@ function ChapterLayerBase:addPopup(levelIndex,playAnimation)
     s_SCENE:popup(levelProgressPopup)
 end
 
+-- 为关卡上添加装饰品（如章鱼boss，恐龙boss)
 function ChapterLayerBase:plotDecoration()
     print("AAAs_CURRENT_USER.bookKey:"..s_CURRENT_USER.bookKey)
     local levelInfo = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
@@ -290,14 +304,23 @@ function ChapterLayerBase:plotDecoration()
                     number:setColor(cc.c3b(164, 125, 46))
                     lock:addChild(number, 130)
                 else
-                    local number = cc.Label:createWithSystemFont(''..unitName[1],'',35)
-                    number:setPosition(lock:getContentSize().width/2-5, lock:getContentSize().height/2-20)
-                    number:setColor(cc.c3b(164, 125, 46))
-                    lock:addChild(number, 130)
-                    local number2 = cc.Label:createWithSystemFont('('..unitName[2]..')','',23)
-                    number2:setPosition(lock:getContentSize().width/2+20, lock:getContentSize().height/2-22)
-                    number2:setColor(cc.c3b(164, 125, 46))
-                    lock:addChild(number2, 130)
+                    if s_CURRENT_USER.bookKey == 'kwekwe' and levelIndex - 19 > 0 then
+                    -- if true then
+                        local number2 = cc.Label:createWithSystemFont(unitName[2],'',35)
+                        number2:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-20)
+                        number2:setColor(cc.c3b(164, 125, 46))
+                        lock:addChild(number2, 130)
+                    else
+                        local number = cc.Label:createWithSystemFont(''..unitName[1],'',35)
+                        number:setPosition(lock:getContentSize().width/2-5, lock:getContentSize().height/2-20)
+                        number:setColor(cc.c3b(164, 125, 46))
+                        lock:addChild(number, 130)
+                        local number2 = cc.Label:createWithSystemFont('('..unitName[2]..')','',23)
+                        -- local number2 = cc.Label:createWithSystemFont(unitName[2],'',23)
+                        number2:setPosition(lock:getContentSize().width/2+23, lock:getContentSize().height/2-22)
+                        number2:setColor(cc.c3b(164, 125, 46))
+                        lock:addChild(number2, 130)
+                    end
                 end
 
                 self:addChild(lock,130)
@@ -310,6 +333,8 @@ function ChapterLayerBase:plotDecoration()
     end
 end
 
+-- 添加关卡上数字显示内容
+-- levelKey: 关卡索引key，如'level0'
 function ChapterLayerBase:plotLevelNumber(levelKey)
     local levelIndex = string.sub(levelKey, 6)
     local levelPosition = self:getLevelPosition(levelKey)
@@ -341,27 +366,38 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
             -- tag:setPosition(levelPosition.x+10, levelPosition.y - 20)
             -- tag:setColor(cc.c3b(255, 255, 255))
             -- self:addChild(tag, 130)
-            local number1 = ccui.TextBMFont:create()
-            number1:setFntFile('font/number_inclined.fnt')
-            --number:setColor(cc.c3b(56,26,23))
-            number1:setString(unitName[1])
-            number1:setScale(0.8)
-            number1:setPosition(levelPosition.x-25, levelPosition.y-10)
-            self:addChild(number1,130)
-            local number2 = ccui.TextBMFont:create()
-            number2:setFntFile('font/number_inclined.fnt')
-            number2:setString(unitName[2])
-            number2:setScale(0.55)
-            number2:setPosition(levelPosition.x+20, levelPosition.y-18)
-            self:addChild(number2,130)
-            local leftBracket = cc.Sprite:create('image/chapter/leftBracket.png')
-            leftBracket:setScale(0.4)
-            leftBracket:setPosition(levelPosition.x+5, levelPosition.y-23)
-            local rightBracket = cc.Sprite:create('image/chapter/rightBracket.png')
-            rightBracket:setPosition(levelPosition.x+35, levelPosition.y-23)
-            rightBracket:setScale(0.4)
-            self:addChild(leftBracket,130)
-            self:addChild(rightBracket,130)
+
+            -- if true then
+            if s_CURRENT_USER.bookKey == 'kwekwe' and levelIndex - 19 > 0 then
+                local number2 = ccui.TextBMFont:create()
+                number2:setFntFile('font/number_inclined.fnt')
+                number2:setString(unitName[2])
+                number2:setScale(0.8)
+                number2:setPosition(levelPosition.x, levelPosition.y-13)
+                self:addChild(number2,130)
+            else
+                local number1 = ccui.TextBMFont:create()
+                number1:setFntFile('font/number_inclined.fnt')
+                --number:setColor(cc.c3b(56,26,23))
+                number1:setString(unitName[1])
+                number1:setScale(0.8)
+                number1:setPosition(levelPosition.x-25, levelPosition.y-10)
+                self:addChild(number1,130)
+                local number2 = ccui.TextBMFont:create()
+                number2:setFntFile('font/number_inclined.fnt')
+                number2:setString(unitName[2])
+                number2:setScale(0.55)
+                number2:setPosition(levelPosition.x+20, levelPosition.y-18)
+                self:addChild(number2,130)
+                local leftBracket = cc.Sprite:create('image/chapter/leftBracket.png')
+                leftBracket:setScale(0.4)
+                leftBracket:setPosition(levelPosition.x+5, levelPosition.y-23)
+                local rightBracket = cc.Sprite:create('image/chapter/rightBracket.png')
+                rightBracket:setPosition(levelPosition.x+35, levelPosition.y-23)
+                rightBracket:setScale(0.4)
+                self:addChild(leftBracket,130)
+                self:addChild(rightBracket,130)
+            end
         end
 --    end
 
