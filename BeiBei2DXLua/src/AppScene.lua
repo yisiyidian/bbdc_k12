@@ -276,19 +276,28 @@ end
 function AppScene:popup(popupNode)
     self.popupLayer.listener:setSwallowTouches(true)
     self.popupLayer:removeAllChildren()
+    if self.rpAction ~= nil then
+        self:stopAction(self.rpAction)
+        self.rpAction = nil
+    end
     self.popupLayer:addBackground()
-    self.popupLayer:addChild(popupNode) 
+    self.popupLayer:addChild(popupNode)
+    -- print("AppScene:popup:"..popupNode.__cname)
 end
 
 function AppScene:removeAllPopups()
     self.popupLayer.listener:setSwallowTouches(false)
     local action1 = cc.FadeOut:create(0.2)
 
+    --移除所有的弹出面板
+    -- print("AppScene:removeAllPopups()")
+
     --怎么能这么写！！！！
     if self.popupLayer.backColor ~= nil and not tolua.isnull(self.popupLayer.backColor) then
         self.popupLayer.backColor:runAction(action1)
     end
     s_SCENE:callFuncWithDelay(0.2, function ()
+        self.rpAction = nil
         self.popupLayer:removeAllChildren()
     end)
 end
@@ -297,7 +306,7 @@ function AppScene:callFuncWithDelay(delay, func)
     local delayAction = cc.DelayTime:create(delay)
     local callAction = cc.CallFunc:create(func)
     local sequence = cc.Sequence:create(delayAction, callAction)
-    self:runAction(sequence)   
+    self.rpAction = self:runAction(sequence)
 end
 
 ---- custom event

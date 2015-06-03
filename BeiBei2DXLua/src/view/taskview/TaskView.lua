@@ -98,26 +98,31 @@ function TaskView:CloseClick(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
+	
+	self.closeButton:setTouchEnabled(false)
 
-
+	-- if self.action ~= nil then
+	-- 	return
+	-- end
+	-- dump(self)
 	local action1 = cc.FadeOut:create(0.5)
 	local action2 = cc.ScaleTo:create(0.5,0)
-	local action3 = cc.MoveTo:create(0.5,cc.p(s_RIGHT_X - 500, - 400))
+	local action3 = cc.MoveTo:create(0.5,cc.p(s_RIGHT_X - 500, -400))
 	local action4 = cc.CallFunc:create(function ()
 									    s_SCENE:removeAllPopups()
+									    -- s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 										end,{})
 	local action5 = cc.Spawn:create(action1,action2,action3)
 	-- --关闭宝箱
 	local action6 = cc.CallFunc:create(function ()
-
-	if self.callBox ~= nil then
-		self.callBox()
-	end
-
+		if self.callBox ~= nil then
+			self.callBox()
+		end
 	end)
+	-- self.action = 
 	self:runAction(cc.Sequence:create(action5,action4,action6))
-	--开启触摸
-	s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+	-- --开启触摸
+	-- s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 end
 
 function TaskView:getRewardCallBack(taskId,index,position)

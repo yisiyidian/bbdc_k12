@@ -74,6 +74,7 @@ function LevelProgressPopup:createSummary(index)
 
     local close_Click = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
+            sender:setTouchEnabled(false)
             s_SCENE:removeAllPopups()
             s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch() --放开点击
         end
