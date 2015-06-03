@@ -193,7 +193,7 @@ function MissionProgressLayer.create(share,homelayer)
             -- 打点
             s_CURRENT_USER:setSummaryStep(s_summary_enterLevelLayer) 
             playSound(s_sound_buttonEffect)
-            if layer:getChildByTag(8888) ~=nil then
+            if layer ~= nil and not tolua.isnull(layer) and layer:getChildByTag(8888) ~= nil then
                 local schedule = layer:getChildByTag(8888):getScheduler()
                 schedule:unscheduleScriptEntry(schedule.schedulerEntry)
             end

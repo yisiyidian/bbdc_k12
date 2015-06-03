@@ -9,6 +9,7 @@ local MoreInformationRender = require("view.home.ui.MoreInformationRender")--小
 local MoreInfoEditSexView = require("view.home.ui.MoreInfoEditSexView")	--修改性别的view
 local MoreInfoEditDateView = require("view.home.ui.MoreInfoEditDateView") --修改日期的view
 local MoreInfoEditTextView = require("view.home.ui.MoreInfoEditTextView") --修改文本的view
+local MoreInfoEditGradeView = require("view.home.ui.MoreInfoEditGradeView") --修改班级的view
 
 local MoreInfoChangePwdView = require("view.home.ui.MoreInfoChangePwdView") --修改密码View
 
@@ -85,9 +86,13 @@ function MoreInfomationView:initData()
 			return false,s_DataManager.getTextWithIndex(TEXT__USERNAME_ERROR)
 		end
 	end
-	--验证班级是否合法
+	--验证班级格式是否合法
 	local function checkGrade(text)
-		
+		if string.find(text,"^%d%d%d%d$") then
+			return true,""
+		else
+			return false,"班级格式为四位数字！"
+		end 
 	end
 	--验证邮箱
 	local function checkEmail(text)
@@ -110,7 +115,7 @@ function MoreInfomationView:initData()
 	listData[2] = {["key"] = "nickName",		["type"] = MoreInformationRender.TEXT,["title"] = "昵称",			["content"] = nickName,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkName,	["data"] = sex,maxlen = 10} --昵称
 	listData[3] = {["key"] = "sex",				["type"] = MoreInformationRender.SEX,["title"] = "性别",				["content"] = sex,			["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = nil}--性别
 	listData[4] = {["key"] = "split"}
-	listData[5] = {["key"] = "grade",			["type"] = MoreInformationRender.GRADE,["title"] = "机构班级",		["content"] = grade,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkEmail,	["data"] = nil,maxlen = 40}--班级
+	listData[5] = {["key"] = "grade",			["type"] = MoreInformationRender.GRADE,["title"] = "机构班级",		["content"] = grade,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkGrade,	["data"] = nil,maxlen = 4}--班级
 	listData[6] = {["key"] = "split"}
 	listData[7] = {["key"] = "email",			["type"] = MoreInformationRender.TEXT,["title"] = "邮箱",			["content"] = email,		["callback"]=handler(self,self.onRenderTouch),["check"]=checkEmail,	["data"] = nil,maxlen = 40}--邮箱
 	listData[8] = {["key"] = "birthday",		["type"] = MoreInformationRender.DATE,["title"] = "生日",			["content"] = birthday,		["callback"]=handler(self,self.onRenderTouch),["check"]=nil,		["data"] = nil}--生日
@@ -214,9 +219,12 @@ function MoreInfomationView:onRenderTouch(renderType,key,data,title,callback,che
 		view = MoreInfoEditSexView.new()
 		view:setData(key,MoreInformationRender.SEX,data,title,handler(self, self.onEditClose),checkCall)
 	elseif renderType == MoreInformationRender.SWITCH then
-
+		print("MoreInformationRender.SWITCH touch do nothing")
 	elseif renderType == MoreInformationRender.ICON then
-
+		print("MoreInformationRender.ICON touch do nothing")
+	elseif renderType == MoreInformationRender.GRADE then
+		view = MoreInfoEditGradeView.new()
+		view:setData(key,MoreInformationRender.GRADE,data,title,handler(self, self.onEditClose),checkCall,maxlen)
 	elseif renderType == MoreInformationRender.OTHER then
 		view = MoreInfoChangePwdView.new()--修改密码
 		view:setData(key,MoreInformationRender.OTHER,data,title,handler(self, self.onEditClose))
@@ -270,9 +278,7 @@ function MoreInfomationView:onEditSaveToServerCallBack(data,error)
 	if self.renderEditCall ~= nil then
 		self.renderEditCall(self.renderKey,self.renderData)
 	end
-	-- print("保存回来")
-	-- dump(data)
-	-- dump(error)
+	
 end
 
 --显示修改界面
