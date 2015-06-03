@@ -410,24 +410,24 @@ end
 function Analytics_applicationDidEnterBackground(layerName)
     print('Analytics', getAnalyticsPrefix() .. 'AppEnterBackground', layerName); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'AppEnterBackground', layerName)
 end
-
+-- 替换游戏层
 function Analytics_replaceGameLayer(layerName)
     print('Analytics', getAnalyticsPrefix() .. 'replaceGameLayer', layerName); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'replaceGameLayer', layerName)
 end
 
 ----------------------------------------------------------------------------------------
-
+-- 分享按钮
 function AnalyticsButtonToShare()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'Share_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Share_1st_day', 'TOUCH')
     end
     print('Analytics', getAnalyticsPrefix() .. 'Share', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Share', 'TOUCH')
 end
-
+-- 分享事件
 function AnalyticsShare(name)
     print('Analytics', getAnalyticsPrefix() .. 'Share', name); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Share', name)
 end
-
+-- 进入分享界面
 function AnalyticsEnterShare()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'Share_1st_day', 'ENTER'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Share_1st_day', 'ENTER')
@@ -436,21 +436,21 @@ function AnalyticsEnterShare()
 end
 
 ----------------------------------------------------------------------------------------
-
+-- 下载音频按钮点击
 function AnalyticsDownloadSoundBtn()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'DownloadSound_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'DownloadSound_1st_day', 'TOUCH')
     end
     print('Analytics', getAnalyticsPrefix() .. 'DownloadSound', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'DownloadSound', 'TOUCH')
 end
-
+-- 购买了哪样商品
 function AnalyticsBuy(itemId)
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'BuyProduct_1st_day', tostring(itemId)); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'BuyProduct_1st_day', tostring(itemId))
     end
     print('Analytics', getAnalyticsPrefix() .. 'BuyProduct', tostring(itemId)); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'BuyProduct', tostring(itemId))
 end
-
+-- 进入商店界面
 function AnalyticsShopBtn()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'Shop_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Shop_1st_day', 'TOUCH')
@@ -459,14 +459,14 @@ function AnalyticsShopBtn()
 end
 
 ----------------------------------------------------------------------------------------
-
+-- 没用到
 function AnalyticsImproveInfo()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'AnalyticsImproveInfo_1st_day', 'SHOW'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'AnalyticsImproveInfo_1st_day', 'SHOW')
     end
     print('Analytics', getAnalyticsPrefix() .. 'AnalyticsImproveInfo', 'SHOW'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'AnalyticsImproveInfo', 'SHOW')
 end
-
+-- 进入每日领奖界面
 function AnalyticsLoginReward()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'LoginReward_1st_day', 'TOUCH');
@@ -475,7 +475,7 @@ function AnalyticsLoginReward()
     print('Analytics', getAnalyticsPrefix() .. 'LoginReward', 'TOUCH');
     cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'LoginReward', 'TOUCH')
 end
-
+-- 成功下载音频
 function AnalyticsDownloadSuccessful()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'DownloadSuccessful_1st_day', 'TOUCH');
@@ -536,7 +536,7 @@ local ANALYTICS_FIRST_EVENTS = {
     'firstStudyStrikeWhileHot', 'firstSkipReviewStrikeWhileHot', 'firstDontKnowStrikeWhileHot', 'firstSwipeWordStrikeWhileHot', 'firstFinish',
     'firstReviewBoss', 'firstReviewBossResult'
 }
-
+-- V180版本的新手流程打点打点
 function AnalyticsFirst(eventindex, eventDes)
     if math["and"](s_CURRENT_USER.statsMask, (2 ^ eventindex)) == 0 then
         local event = ANALYTICS_FIRST_EVENTS[eventindex + 1]
