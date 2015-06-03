@@ -49,7 +49,8 @@ function SummaryBossAlter.create(bossLayer,win,entrance)
         else
             layer:lose2(entrance)
         end
-
+        -- boss失败的后的标志，非凡用
+        s_game_fail_state = 1
         cc.SimpleAudioEngine:getInstance():stopMusic()
 
         -- s_SCENE:callFuncWithDelay(0.3,function()
