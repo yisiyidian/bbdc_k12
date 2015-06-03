@@ -137,28 +137,28 @@ function AnalyticsDataCenterPage(pageName)
 end
 
 ----------------------------------------------------------------------------------------
--- 点击选书
+-- 点击换书
 function AnalyticsChangeBookBtn()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'ChangeBookBtn_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ChangeBookBtn_1st_day', 'TOUCH')
     end
     print('Analytics', getAnalyticsPrefix() .. 'ChangeBookBtn', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ChangeBookBtn', 'TOUCH')
 end
-
+-- 点击选书
 function AnalyticsBook(bookname)
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'Book_1st_day', 'selected_' .. bookname); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Book_1st_day', 'selected_' .. bookname)
     end
     print('Analytics', getAnalyticsPrefix() .. 'Book', 'selected_' .. bookname); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Book', 'selected_' .. bookname)
 end
-
+-- 第一次选哪本书
 function AnalyticsFirstBook(bookname)
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', 'FirstBook_1st_day', 'selected_' .. bookname); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'FirstBook_1st_day', 'selected_' .. bookname)
     end
     print('Analytics','FirstBook', 'selected_' .. bookname); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'FirstBook', 'selected_' .. bookname)
 end
-
+-- 下载哪本书
 function AnalyticsDownloadBook(bookname)
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'Book_1st_day', 'download_' .. bookname); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Book_1st_day', 'download_' .. bookname)
@@ -167,21 +167,21 @@ function AnalyticsDownloadBook(bookname)
 end
 
 ----------------------------------------------------------------------------------------
-
+-- 进入选小关界面
 function AnalyticsEnterLevelLayerBtn()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'EnterLevelLayer_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'EnterLevelLayer_1st_day', 'TOUCH')
     end
     print('Analytics', getAnalyticsPrefix() .. 'EnterLevelLayer', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'EnterLevelLayer', 'TOUCH')
 end
-
+-- 没用到
 function AnalyticsTasksBtn()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'Tasks_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Tasks_1st_day', 'TOUCH')
     end
     print('Analytics', getAnalyticsPrefix() .. 'Tasks', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Tasks', 'TOUCH')
 end
-
+-- 没用到
 function AnalyticsTasksFinished(layerName)
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'TasksFinished_1st_day', layerName); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TasksFinished_1st_day', layerName)
@@ -191,7 +191,7 @@ end
 
 ----------------------------------------------------------------------------------------
 
--- 点击 重玩错词
+-- 没用到
 function AnalyticsReplayWrongWordsBtn()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'ReplayWrongWords_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ReplayWrongWords_1st_day', 'TOUCH')
@@ -199,7 +199,7 @@ function AnalyticsReplayWrongWordsBtn()
     print('Analytics', getAnalyticsPrefix() .. 'ReplayWrongWords', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ReplayWrongWords', 'TOUCH')
 end
 
--- 点击 依然复习
+-- 没用到
 function AnalyticsContinueReviewBtn()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'ContinueReview_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ContinueReview_1st_day', 'TOUCH')
@@ -207,7 +207,7 @@ function AnalyticsContinueReviewBtn()
     print('Analytics', getAnalyticsPrefix() .. 'ContinueReview', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ContinueReview', 'TOUCH')
 end
 
--- 点击 下一步
+-- 没用到
 function AnalyticsStudyNextBtn()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'StudyNext_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'StudyNext_1st_day', 'TOUCH')
@@ -215,7 +215,7 @@ function AnalyticsStudyNextBtn()
     print('Analytics', getAnalyticsPrefix() .. 'StudyNext', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'StudyNext', 'TOUCH')
 end
 
--- 猜错
+-- 没用到
 function AnalyticsStudyGuessWrong()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'answerWordMeaning_1st_day', 'GuessWrong'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'answerWordMeaning_1st_day', 'GuessWrong')
@@ -223,7 +223,7 @@ function AnalyticsStudyGuessWrong()
     print('Analytics', getAnalyticsPrefix() .. 'answerWordMeaning', 'GuessWrong'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'answerWordMeaning', 'GuessWrong')
 end
 
--- 答对
+-- 没用到
 function AnalyticsStudyAnswerRight()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'answerWordMeaning_1st_day', 'AnswerRight'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'answerWordMeaning_1st_day', 'AnswerRight')
@@ -231,7 +231,7 @@ function AnalyticsStudyAnswerRight()
     print('Analytics', getAnalyticsPrefix() .. 'answerWordMeaning', 'AnswerRight'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'answerWordMeaning', 'AnswerRight')
 end
 
--- 不会
+-- 没用到
 function AnalyticsStudyDontKnowAnswer()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'answerWordMeaning_1st_day', 'DontKnowAnswer'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'answerWordMeaning_1st_day', 'DontKnowAnswer')
@@ -239,7 +239,7 @@ function AnalyticsStudyDontKnowAnswer()
     print('Analytics', getAnalyticsPrefix() .. 'answerWordMeaning', 'DontKnowAnswer'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'answerWordMeaning', 'DontKnowAnswer')
 end
 
--- 猜错
+-- 没用到
 function AnalyticsStudyGuessWrong_strikeWhileHot()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'answerWordMeaningHOT_1st_day', 'GuessWrong'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'answerWordMeaningHOT_1st_day', 'GuessWrong')
@@ -247,7 +247,7 @@ function AnalyticsStudyGuessWrong_strikeWhileHot()
     print('Analytics', getAnalyticsPrefix() .. 'answerWordMeaningHOT', 'GuessWrong'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'answerWordMeaningHOT', 'GuessWrong')
 end
 
--- 答对
+-- 没用到
 function AnalyticsStudyAnswerRight_strikeWhileHot()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'answerWordMeaningHOT_1st_day', 'AnswerRight'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'answerWordMeaningHOT_1st_day', 'AnswerRight')
@@ -255,7 +255,7 @@ function AnalyticsStudyAnswerRight_strikeWhileHot()
     print('Analytics', getAnalyticsPrefix() .. 'answerWordMeaningHOT', 'AnswerRight'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'answerWordMeaningHOT', 'AnswerRight')
 end
 
--- 不会
+-- 没用到
 function AnalyticsStudyDontKnowAnswer_strikeWhileHot()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'answerWordMeaningHOT_1st_day', 'DontKnowAnswer'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'answerWordMeaningHOT_1st_day', 'DontKnowAnswer')
@@ -263,7 +263,7 @@ function AnalyticsStudyDontKnowAnswer_strikeWhileHot()
     print('Analytics', getAnalyticsPrefix() .. 'answerWordMeaningHOT', 'DontKnowAnswer'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'answerWordMeaningHOT', 'DontKnowAnswer')
 end
 
--- 点击 跳过划单词步骤
+-- 没用到
 function AnalyticsStudySkipSwipeWord()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'SkipSwipeWord_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SkipSwipeWord_1st_day', 'TOUCH')
@@ -271,14 +271,14 @@ function AnalyticsStudySkipSwipeWord()
     print('Analytics', getAnalyticsPrefix() .. 'SkipSwipeWord', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SkipSwipeWord', 'TOUCH')
 end
 
--- 点击 生词回看
+-- 没用到
 function AnalyticsStudyLookBackWord()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'LookBackWord_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'LookBackWord_1st_day', 'TOUCH')
     end
     print('Analytics', getAnalyticsPrefix() .. 'LookBackWord', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'LookBackWord', 'TOUCH')
 end
-
+-- 没用到
 function AnalyticsStudySlideCoconut_EnterLayer()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
         if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
@@ -287,7 +287,7 @@ function AnalyticsStudySlideCoconut_EnterLayer()
     end
     print('Analytics', getAnalyticsPrefix() .. 'SlideCoconut_EnterLayer', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SlideCoconut_EnterLayer', 'TOUCH')
 end
-
+-- 没用到
 function AnalyticsStudySlideCoconut_LeaveLayer()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
         if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
@@ -296,7 +296,7 @@ function AnalyticsStudySlideCoconut_LeaveLayer()
     end
     print('Analytics', getAnalyticsPrefix() .. 'SlideCoconut_LeaveLayer', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SlideCoconut_LeaveLayer', 'TOUCH')
 end
-
+-- 没用到
 function AnalyticsStudyCollectAllWord()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
         if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
@@ -305,7 +305,7 @@ function AnalyticsStudyCollectAllWord()
     end
     print('Analytics', getAnalyticsPrefix() .. 'CollectAllWord', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'CollectAllWord', 'TOUCH')
 end
-
+-- 没用到
 function AnalyticsForgeIron_EnterLayer()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
         if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
@@ -314,7 +314,7 @@ function AnalyticsForgeIron_EnterLayer()
     end
     print('Analytics', getAnalyticsPrefix() .. 'ForgeIron_EnterLayer', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ForgeIron_EnterLayer', 'TOUCH')
 end
-
+-- 没用到
 function AnalyticsForgeIron_LeaveLayer()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
         if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
@@ -323,6 +323,7 @@ function AnalyticsForgeIron_LeaveLayer()
     end
     print('Analytics', getAnalyticsPrefix() .. 'ForgeIron_LeaveLayer', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ForgeIron_LeaveLayer', 'TOUCH')
 end
+-- 没用到
 function AnalyticsFirstDayEnterSecondIsland()
     local bossList = s_LocalDatabaseManager.getAllBossInfo()
     if bossList == nil then
