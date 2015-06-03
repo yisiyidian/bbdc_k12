@@ -3,6 +3,7 @@ require("common.global")
 
 local FlipNode            = require("view.mat.FlipNode")
 local NodeBulletAnimation = require("view.mat.NodeBulletAnimation")
+local GuideLine           = require("view.mat.GuideLine")
 
 local dir_up    = 1
 local dir_down  = 2
@@ -442,19 +443,6 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
             else
                 current_dir = dir_right
             end
-
-            --            print("i="..i)
-            --            print("j="..j)
-            --            print("node_position.x="..node_position.x)
-            --            print("node_position.y="..node_position.y)    
-            --            print("location.x="..location.x)
-            --            print("location.y="..location.y) 
-            --            
-            --            
-            --            print("node_example_size.width="..node_example_size.width)
-            --            print("main_width="..main_width)
-            --            print("left="..left)
-
 
             onNode = true
         else

@@ -91,7 +91,7 @@ function WordCardView:resetView()
 	-- 第一个单词高度信息
 	if innerHeight < renderheight * #self.wordList then
 		innerHeight = renderheight * #self.wordList
-		self:createSlider(innerHeight)
+		self:createSlider()
 	end
 
 	-- 调整高度
@@ -115,7 +115,7 @@ function WordCardView:ReturnClick(sender,eventType)
 end
 
 -- 滚动条创建
-function WordCardView:createSlider(innerHeight)
+function WordCardView:createSlider()
 	local slider = cc.Sprite:create("image/islandPopup/unit_words_scrollbar_bg.png")
     slider:setPosition(self.backPopup:getContentSize().width * 0.9,self.backPopup:getContentSize().height * 0.8)
     slider:ignoreAnchorPointForPosition(false)
@@ -130,9 +130,15 @@ function WordCardView:createSlider(innerHeight)
     self.bar = bar
     self.slider:addChild(self.bar)
 
+    local maxh = 1
     local function update(delta)
         local h = -self.listView:getInnerContainer():getPositionY()
-        local height = (self.slider:getContentSize().height - self.bar:getContentSize().height) * h * 2.2 / innerHeight + self.bar:getContentSize().height
+        if h > maxh then
+        	maxh = h
+        end
+        local percent = h / maxh
+        local height = self.slider:getContentSize().height * percent
+        self.bar:setAnchorPoint(0.5,percent)
         self.bar:setPositionY(height)
     end
 
