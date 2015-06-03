@@ -18,6 +18,9 @@ local function _initConstant()
     
     --need to do next version maybe
     s_gamestate_reviewbossmodel_today       = 9
+    -- 记录挑战失败时的数据
+    s_game_fail_state                       = 0  -- 挑战是否失败
+    s_game_fail_level_index                 = 0  -- 挑战失败时所选择的关卡
     
     
     --
