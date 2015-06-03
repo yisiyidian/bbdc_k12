@@ -1,3 +1,14 @@
+-- 打点代码
+-- 添加注释时间2015年06月02日18:48:46
+-- 侯琪
+-- **********************************************************************
+-- 打了很多用不着的点！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+-- 看到写的不对的注释，自行修改！！！！！！！！！！！！！！！！！！！！！！！！！！
+-- **********************************************************************
+
+-- 打点的前缀
+-- debug模式下为Test
+-- 其他没有前缀
 local function getAnalyticsPrefix()
     if BUILD_TARGET == BUILD_TARGET_DEBUG then
         return 'TEST_'
@@ -6,6 +17,7 @@ local function getAnalyticsPrefix()
     end
 end
 
+-- 渠道信息点 xiaomi。etc
 function AnalyticsChannel(channelId)
     if channelId ~= nil and string.len(channelId) > 0 then
         print('Analytics', getAnalyticsPrefix() .. 'Channel', channelId); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Channel', channelId)
@@ -13,27 +25,27 @@ function AnalyticsChannel(channelId)
 end
 
 ----------------------------------------------------------------------------------------
-
+-- 原版本180的一级引导
 function AnalyticsTutorial(step)
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'TutorialStep_1st_day', tostring(step)); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialStep_1st_day', tostring(step))
     end
     print('Analytics', getAnalyticsPrefix() .. 'TutorialStep', tostring(step)); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialStep', tostring(step))
 end
-
+-- 原版本180的二级引导
 function AnalyticsSmallTutorial(step)
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'TutorialSmallStep_1st_day', tostring(step)); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialSmallStep_1st_day', tostring(step))
     end
     print('Analytics', getAnalyticsPrefix() .. 'TutorialSmallStep', tostring(step)); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialSmallStep', tostring(step))
 end
-
+-- 畅玩版本的引导
 function AnalyticsSummaryStep(step)
     print('Analytics', getAnalyticsPrefix() .. 'TutorialSummaryStep', tostring(step)); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialSummaryStep', tostring(step))
 end
 
 ----------------------------------------------------------------------------------------
-
+-- 每日打卡引导
 function AnalyticsDailyCheckIn(day)
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'DailyCheckIn_1st_day', tostring(day)); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'DailyCheckIn_1st_day', tostring(day))
@@ -42,33 +54,33 @@ function AnalyticsDailyCheckIn(day)
 end
 
 ----------------------------------------------------------------------------------------
-
+-- 游客登录
 function AnalyticsSignUp_Guest()
     print('Analytics', getAnalyticsPrefix() .. 'SignUp', 'Guest'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SignUp', 'Guest')
 end
-
+-- 通过账号密码登陆
 function AnalyticsSignUp_Normal()
     print('Analytics', getAnalyticsPrefix() .. 'SignUp', 'Normal'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SignUp', 'Normal')
 end
-
+-- 通过QQ登陆
 function AnalyticsSignUp_QQ()
     print('Analytics', getAnalyticsPrefix() .. 'SignUp', 'QQ'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SignUp', 'QQ')
 end
-
+-- 搜不到，不知道什么意思
 function AnalyticsAccountBind()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'AccountBind_1st_day', 'YES'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'AccountBind_1st_day', 'YES')
     end
     print('Analytics', getAnalyticsPrefix() .. 'AccountBind', 'YES'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'AccountBind', 'YES')
 end
-
+-- 搜不到，不知道什么意思
 function AnalyticsLogOut()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'LogOut_1st_day', 'YES'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'LogOut_1st_day', 'YES')
     end
     print('Analytics', getAnalyticsPrefix() .. 'LogOut', 'YES'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'LogOut', 'YES')
 end
-
+-- 切换账户
 function AnalyticsAccountChange()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'AccountChange_1st_day', 'YES'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'AccountChange_1st_day', 'YES')
@@ -77,7 +89,7 @@ function AnalyticsAccountChange()
 end
 
 ----------------------------------------------------------------------------------------
-
+-- 搜不到，不知道什么意思
 function AnalyticsWordsLibBtn()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'WordsLib_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'WordsLib_1st_day', 'TOUCH')
@@ -86,21 +98,21 @@ function AnalyticsWordsLibBtn()
 end
 
 ----------------------------------------------------------------------------------------
-
+-- 点击好友功能
 function AnalyticsFriendBtn()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'Friend_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Friend_1st_day', 'TOUCH')
     end
     print('Analytics', getAnalyticsPrefix() .. 'Friend', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Friend', 'TOUCH')
 end
-
+-- 发送好友请求
 function AnalyticsFriendRequest()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'Friend_1st_day', 'Request'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Friend_1st_day', 'Request')
     end
     print('Analytics', getAnalyticsPrefix() .. 'Friend', 'Request'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Friend', 'Request')
 end
-
+-- 接受好友请求
 function AnalyticsFriendAccept()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'Friend_1st_day', 'Accept'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Friend_1st_day', 'Accept')
@@ -109,14 +121,14 @@ function AnalyticsFriendAccept()
 end
 
 ----------------------------------------------------------------------------------------
-
+-- 搜不到，不知道什么意思
 function AnalyticsDataCenterBtn()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'DataCenter_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'DataCenter_1st_day', 'TOUCH')
     end
     print('Analytics', getAnalyticsPrefix() .. 'DataCenter', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'DataCenter', 'TOUCH')
 end
-
+-- 进入对应信息界面
 function AnalyticsDataCenterPage(pageName)
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'DataCenter_1st_day', pageName); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'DataCenter_1st_day', pageName)
@@ -125,7 +137,7 @@ function AnalyticsDataCenterPage(pageName)
 end
 
 ----------------------------------------------------------------------------------------
-
+-- 点击选书
 function AnalyticsChangeBookBtn()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'ChangeBookBtn_1st_day', 'TOUCH'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ChangeBookBtn_1st_day', 'TOUCH')
