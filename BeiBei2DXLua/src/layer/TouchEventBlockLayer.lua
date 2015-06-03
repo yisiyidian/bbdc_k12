@@ -37,10 +37,12 @@ function TouchEventBlockLayer.create()
 end
 
 function TouchEventBlockLayer.lockTouch()
+    -- print("TouchEventBlockLayer.lockTouch")
     listener:setSwallowTouches(true)
 end
 
 function TouchEventBlockLayer.unlockTouch()
+    -- print("TouchEventBlockLayer.unlockTouch")
     listener:setSwallowTouches(false)
 end
 

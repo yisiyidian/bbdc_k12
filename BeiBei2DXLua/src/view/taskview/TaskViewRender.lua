@@ -95,7 +95,7 @@ function TaskViewRender:init(type)
 end
 
 function TaskViewRender:setData(data,getRewardCallBack)
-	dump(data)
+	-- dump(data)
 	self.taskID 	= data[1] --任务ID  为0的情况 就是随机任务的 明日再来
 	self.status 	= data[2] --任务状态
 	self.nowCount 	= data[3] --任务条件

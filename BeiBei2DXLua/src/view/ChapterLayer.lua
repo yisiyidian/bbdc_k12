@@ -97,11 +97,21 @@ function ChapterLayer:ctor()
     -- scroll to current chapter level
     -- local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    if progress - 0 == 0 then
-        self:scrollLevelLayer(progress, 0)
+    local taskIndex = self:getActiveTaskIndex()
+    if s_game_fail_state == 1 then
+        self:scrollLevelLayer(s_game_fail_level_index, 0)
+        s_game_fail_state = 0
+    elseif taskIndex >= 0 then
+        self:scrollLevelLayer(taskIndex, 0)
     else
-        self:scrollLevelLayer(progress+1,0)
+        self:scrollLevelLayer(progress, 0)
     end
+    -- if progress - 0 == 0 then
+    --     self:scrollLevelLayer(progress, 0)
+    -- else
+    --     self:scrollLevelLayer(progress+1,0)
+    -- end
+
     self:addBottomBounce()
     -- check unlock level
     self:checkUnlockLevel()
@@ -110,6 +120,21 @@ function ChapterLayer:ctor()
     self:addTaskBOX()       --放置任务的宝箱
 
 end
+
+-- 检查是否有任务（如复习boss)
+-- 如果有，返回对应的taskIndex(即levelIndex)
+-- 如果没有，返回-2
+function ChapterLayer:getActiveTaskIndex()
+    local bossList = s_LocalDatabaseManager.getAllUnitInfo()
+    local taskIndex = -2
+    for bossID, bossInfo in pairs(bossList) do
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 3 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 7 < 0 then
+            taskIndex = bossID - 1
+        end
+    end    
+    return taskIndex
+end
+
 -- initialize the active range of repeatable chapter ui
 function ChapterLayer:initActiveChapterRange()
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
@@ -327,7 +352,7 @@ function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
         self:callFuncWithDelay(0.3, function()
             s_SCENE.touchEventBlockLayer.unlockTouch()
         end)
-        if levelIndex == 0 then
+        if levelIndex <= 1 then
             return
         end
         local currentLevelCount = levelIndex + 1
@@ -458,7 +483,7 @@ end
 --任务按钮  宝箱样式
 function ChapterLayer:addTaskBOX()
     local boxButton = ccui.Button:create("image/islandPopup/close.png","","image/islandPopup/open.png")
-    boxButton:addTouchEventListener(handler(self,self.click_box))
+    boxButton:addTouchEventListener(handler(self,self.onTaskBoxTouch))
     boxButton:setAnchorPoint(0.5,0.5)
     boxButton:ignoreAnchorPointForPosition(false)
     boxButton:setPosition(s_RIGHT_X-180 ,180)
@@ -522,10 +547,11 @@ function ChapterLayer:updateBean()
 end
 
 --宝箱触摸事件
-function ChapterLayer:click_box(sender,eventType)
+function ChapterLayer:onTaskBoxTouch(sender,eventType)
     if eventType ~= ccui.TouchEventType.ended then
         return
     end
+    -- print("触摸箱子-------")
     --箱子停止抖动
     self.boxButton:stopAllActions()
     --弹出任务面板
