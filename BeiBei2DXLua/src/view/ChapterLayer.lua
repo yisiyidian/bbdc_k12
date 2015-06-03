@@ -126,9 +126,11 @@ end
 -- 如果没有，返回-2
 function ChapterLayer:getActiveTaskIndex()
     local bossList = s_LocalDatabaseManager.getAllUnitInfo()
+    print('-------getActiveTaskIndex----------')
+    print_lua_table(bossList)
     local taskIndex = -2
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 3 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 7 < 0 then
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 4 < 0 then
             taskIndex = bossID - 1
         end
     end    
@@ -146,7 +148,7 @@ function ChapterLayer:initActiveChapterRange()
     local progressIndex = progress
     local progressState = 0
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 3 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 7 < 0 then
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 4 < 0 then
             taskIndex = bossID - 1
             taskState = bossInfo["unitState"] 
         end
@@ -199,7 +201,7 @@ function ChapterLayer:checkUnlockLevel()
     local bookMaxUnitID = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey)
     if progress - bookMaxUnitID == 0 then -- last level
         for bossID, bossInfo in pairs(bossList) do
-            if bossID - bossMaxUnitID == 0 and bossInfo["unitState"] - 3 >= 0 then 
+            if bossID - bossMaxUnitID == 0 and bossInfo["unitState"] - 1 >= 0 then 
                 local back = cc.Sprite:create("image/homescene/background_ciku_white.png")
                 back:setPosition(cc.p(s_DESIGN_WIDTH/2, 550))
 
@@ -261,7 +263,7 @@ function ChapterLayer:checkUnlockLevel()
     local progressIndex = progress
     local progressState = 0
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 3 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 7 < 0 then
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 5 < 0 then
             taskIndex = bossID - 1
             taskState = bossInfo["unitState"]
         end
