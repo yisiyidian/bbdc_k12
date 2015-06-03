@@ -75,11 +75,11 @@ function EducationSelect:ctor()
         end
     end
 
-    local education = {'primary','junior','senior'}
-    local titleArray = {'小学','初中','高中'}
+    local education = {'primary','junior','senior','college','more','mybook'}
+    local titleArray = {'小学','初中','高中','大学','更多','我的书'}
     for i = 1,#education do
     	local bookBtn = ccui.Button:create('image/book/k12/K12_choose_book_'..education[i]..'_school_button.png','image/book/k12/K12_choose_book_'..education[i]..'_school_button_press.png')
-    	bookBtn:setPosition((s_RIGHT_X - s_LEFT_X) / 2,s_DESIGN_HEIGHT / 2 + (2 - i) * 240 + 50)
+    	bookBtn:setPosition((s_RIGHT_X - s_LEFT_X) / 2,s_DESIGN_HEIGHT / 2 + (2 - i) * 160 + 250)
     	background:addChild(bookBtn)
     	bookBtn:setName(education[i])
 

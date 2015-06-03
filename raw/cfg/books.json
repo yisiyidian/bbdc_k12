@@ -149,6 +149,66 @@
               "name": "英语11",
               "words": 197,
               "music": "8.2M"
+              },
+              {
+              "key": "cet4",
+              "name": "四级",
+              "words": 4231,
+              "music": "21M"
+              },
+              {
+              "key": "cet6",
+              "name": "六级",
+              "words": 1896,
+              "music": "10M"
+              },
+              {
+              "key": "ielts",
+              "name": "雅思",
+              "words": 2036,
+              "music": "11M"  
+              },
+              {
+              "key": "toefl",
+              "name": "托福",
+              "words": 4304,
+              "music": "23M"
+              },
+              {
+              "key": "gmat",
+              "name": "GMAT",
+              "words": 2029,
+              "music": "11M"
+              },
+              {
+              "key": "gre",
+              "name": "GRE",
+              "words": 5572,
+              "music": "30M"
+              },
+              {
+              "key": "gse",
+              "name": "考研",
+              "words": 5395,
+              "music": "27M"
+              },
+              {
+              "key": "pro4",
+              "name": "专四",
+              "words": 2786,
+              "music": "15M"
+              },
+              {
+              "key": "pro8",
+              "name": "专八",
+              "words": 2681,
+              "music": "14M"
+              },
+              {
+              "key": "sat",
+              "name": "SAT",
+              "words": 3542,
+              "music": "19M"
               }
               ]
 }
