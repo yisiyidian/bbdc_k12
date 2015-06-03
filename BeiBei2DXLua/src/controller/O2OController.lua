@@ -549,5 +549,15 @@ function O2OController.syncMission(onCompleted)
     saveMissionToServer(missionData,onCompleted)
 end
 
+
 ----------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------
+--请求加入班级
+function O2OController.joinGrade(gradeNumber, callback)
+    joinGrade(gradeNumber, callback)
+end
+----------------------------------------------------------------------------------------------------------------
+
+
 return O2OController

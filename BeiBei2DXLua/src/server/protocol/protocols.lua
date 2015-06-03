@@ -531,7 +531,30 @@ function saveMissionToServer(missionData,callback)
     protocol:request()
 end
 ---------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--请求加入班级
+--
+function joinGrade(gradeNumber,callback)
+    --无网络的情况下 直接return
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
+        if callback then callback(nil, nil) end
+        return
+    end
 
+    local api = 'joingrade'
+    local serverRequestType = math['or'](SERVER_REQUEST_TYPE_CLIENT_ENCODE, SERVER_REQUEST_TYPE_CLIENT_DECODE)
+
+    local function cb(result,error)
+        if error == nil then
+            callback(result.datas,error)
+        else
+            callback(nil,error)
+        end
+    end 
+    --发送请求
+    local protocol = ProtocolBase.create(api,serverRequestType,{['grade'] = gradeNumber,['username'] = s_CURRENT_USER.username,['nickName'] = s_CURRENT_USER.nickName},cb)
+    protocol:request()
+end
 
 ---------------------------------------------------------------------------------------------------
 
