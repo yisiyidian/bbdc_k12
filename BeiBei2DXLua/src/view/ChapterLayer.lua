@@ -368,7 +368,7 @@ function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
 
         -- local temp = 0
         -- if levelCount <= 2 then 
-        --     temp = 0
+        --     levelCount = 0
         -- elseif levelCount == 2 then
         --     temp = 31.55
         -- elseif levelCount == 3 then
@@ -387,6 +387,17 @@ function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
         --     temp = 100
         -- end
         -- temp = temp / 100
+        if chapterCount == 0 then
+            if levelCount == 3 then
+                levelCount = 1.7
+            elseif levelCount == 4 then
+                levelCount = 2.7
+            elseif levelCount == 5 then
+                levelCount = 4.4
+            elseif levelCount == 6 then
+                levelCount = 5.7
+            end
+        end
         -- local currentVerticalPercent = ((chapterCount / chapterCount + 1)+ temp/(chapterCount + 1)) * 100
         local currentVerticalPercent = (chapterCount / (chapterCount + 1) + (levelCount + 1)/ (s_islands_per_page * (chapterCount + 1)) ) * 100
 
