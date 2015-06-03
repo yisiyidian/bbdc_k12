@@ -111,7 +111,8 @@ function WordCardRender:updataView()
     -- 计算横坐标
     positionX = self.playSoundButton:getPositionX() + self.playSoundButton:getContentSize().width + 40
     self.wordLabel:setPositionX(positionX)
-	self.wordLabel:setString(string.gsub(self.word,"|"," "))
+    local word = string.gsub(self.word,"|"," ")
+	self.wordLabel:setString(word)
     positionX = positionX + self.wordLabel:getContentSize().width + 38
     self.wordMeaningLabel:setPositionX(positionX)
 	self.wordMeaningLabel:setString(self.meaning)

@@ -338,11 +338,11 @@ function AnalyticsFirstDayEnterSecondIsland()
 end
 
 ----------------------------------------------------------------------------------------
-
+-- 没用到
 function AnalyticsReviewBoss()
     print('Analytics', getAnalyticsPrefix() .. 'ReviewBoss', 'SHOW'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ReviewBoss', 'SHOW')
 end
-
+-- 没用到
 function AnalyticsReviewBoss_EnterLayer()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
         if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
@@ -351,7 +351,7 @@ function AnalyticsReviewBoss_EnterLayer()
     end
     print('Analytics', getAnalyticsPrefix() .. 'ReviewBoss_EnterLayer', 'SHOW'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ReviewBoss_EnterLayer', 'SHOW')
 end
-
+-- 没用到
 function AnalyticsReviewBoss_LeaveLayer()
     if s_CURRENT_USER ~= nil and s_CURRENT_USER ~= '' then
         if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
@@ -361,25 +361,25 @@ function AnalyticsReviewBoss_LeaveLayer()
     print('Analytics', getAnalyticsPrefix() .. 'ReviewBoss_LeaveLayer', 'SHOW'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ReviewBoss_LeaveLayer', 'SHOW')
 end
 ----------------------------------------------------------------------------------------
-
+-- 没用到
 function AnalyticsSummaryBoss()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'SummaryBoss_1st_day', 'SHOW'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBoss_1st_day', 'SHOW')
     end
     print('Analytics', getAnalyticsPrefix() .. 'SummaryBoss', 'SHOW'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBoss', 'SHOW')
 end
-
+-- 没用到
 function AnalyticsSummaryBossWordCount(cnt)
     print('Analytics', getAnalyticsPrefix() .. 'SummaryBoss', 'wordsCount_' .. tostring(cnt)); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBoss', 'wordsCount_' .. tostring(cnt))
 end
-
+-- 总结boss后续事件
 function AnalyticsSummaryBossResult(result)
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'SummaryBoss_1st_day', result); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBoss_1st_day', result)
     end
     print('Analytics', getAnalyticsPrefix() .. 'SummaryBoss', result); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'SummaryBoss', result)
 end
-
+-- 通过第二个boss
 function AnalyticsPassSecondSummaryBoss()
     local bossList = s_LocalDatabaseManager.getAllBossInfo()
         if #bossList >= 2 and is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
@@ -387,7 +387,7 @@ function AnalyticsPassSecondSummaryBoss()
         end
     print('Analytics', getAnalyticsPrefix() .. 'PassSecondSummaryBoss', 'SHOW'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'PassSecondSummaryBoss', 'SHOW')
 end
-
+-- 总结boss加时
 function AnalyticsSummaryBossAddTime()
     if is2TimeInSameDay(os.time(),s_CURRENT_USER.localTime) then
         print('Analytics', getAnalyticsPrefix() .. 'SummaryBoss_1st_day', 'AddTime')
@@ -398,15 +398,15 @@ function AnalyticsSummaryBossAddTime()
 end
 
 ----------------------------------------------------------------------------------------
-
+-- 没用到
 function AnalyticsChestGeneratedCnt(cnt)
     print('Analytics', getAnalyticsPrefix() .. 'ChestGeneratedCnt', tostring(cnt)); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ChestGeneratedCnt', tostring(cnt))
 end
-
+-- 没用到
 function AnalyticsChestCollectedCnt(name)
     print('Analytics', getAnalyticsPrefix() .. 'ChestCollectedCnt', name); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ChestCollectedCnt', name)
 end
-
+-- 退出app前留在那个页面
 function Analytics_applicationDidEnterBackground(layerName)
     print('Analytics', getAnalyticsPrefix() .. 'AppEnterBackground', layerName); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'AppEnterBackground', layerName)
 end
