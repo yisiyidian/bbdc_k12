@@ -63,14 +63,17 @@ function BookLayer.create(education)
     -- else
     --    backButton:setVisible(true)
     -- end
+    local grade = split(education,'_')
+    if grade[1] == 'primary' or grade[1] == 'junior' or grade[1] == 'senior' then
     
-    local hint = cc.Label:createWithSystemFont("所有的教材都是人教版教材","",24)
-    hint:setPosition((s_RIGHT_X - s_LEFT_X)/2,1073)
-    hint:setColor(cc.c4b(66,66,62,255))
-    backColor:addChild(hint) 
+        local hint = cc.Label:createWithSystemFont("所有的教材都是人教版教材","",24)
+        hint:setPosition((s_RIGHT_X - s_LEFT_X)/2 - 40,1073)
+        hint:setColor(cc.c4b(66,66,62,255))
+        backColor:addChild(hint) 
+    end
     --local name_array = {}
     --local key_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
-    local grade = split(education,'_')
+    
     local rect_table = {'senior_1','senior_2','senior_3','senior_4','senior_5','senior_6','senior_7','senior_8','senior_9','senior_10','senior_11'
                       ,'cet4','cet6','pro4','pro8','gse'
                       ,'gre','gmat','sat','toefl','ielts'}
