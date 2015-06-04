@@ -39,6 +39,22 @@ function BookLayer.create(education)
     backButton:setPosition((s_RIGHT_X - s_LEFT_X) / 2 - 238, 1073)
     backButton:addTouchEventListener(click_back)
     backColor:addChild(backButton)
+
+    --我的书
+    if s_CURRENT_USER.bookList ~= '' and education ~= 'mybook' then
+        local enterBookLayer = function (sender,eventType)
+            if eventType == ccui.TouchEventType.began then
+                playSound(s_sound_buttonEffect)   
+            elseif eventType == ccui.TouchEventType.ended then
+                s_CorePlayManager.enterBookLayer(sender:getName())
+            end
+        end
+        local mybookBtn = ccui.Button:create('image/book/k12/select_grade_mybook_button.png','image/book/k12/select_grade_mybook_button_click.png')
+        mybookBtn:setPosition((s_RIGHT_X - s_LEFT_X) /2 +200,1073)
+        backColor:addChild(mybookBtn)
+        mybookBtn:setName('mybook') 
+        mybookBtn:addTouchEventListener(enterBookLayer)
+    end
     
     --whether bookKey == nil
     
