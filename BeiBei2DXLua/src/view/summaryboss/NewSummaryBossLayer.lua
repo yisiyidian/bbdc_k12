@@ -63,7 +63,9 @@ function NewSummaryBossLayer:ctor(unit)
             end
         end
     end 
-    self:scheduleUpdateWithPriorityLua(update, 0)
+    if s_CURRENT_USER.summaryStep == s_summary_enterFirstLevel then
+        self:scheduleUpdateWithPriorityLua(update, 0)
+    end
 end
 
 function NewSummaryBossLayer:initStageInfo(unit)
