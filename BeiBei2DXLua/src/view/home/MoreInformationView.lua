@@ -67,7 +67,7 @@ function MoreInfomationView:initData()
 	local school		= s_CURRENT_USER.school   --学校
 	local position  	= s_CURRENT_USER.position --位置
 	local examination 	= s_CURRENT_USER.examination --正准备的考试
-	local grade 		= s_CURRENT_USER.grade  --班级
+	local grade 		= s_CURRENT_USER.gradeName  --班级
 
 	local relateContacts = s_CURRENT_USER.relateContacts --关联通讯录
 	local bindAccount    = s_CURRENT_USER.bindAccount    --帐号绑定
@@ -237,6 +237,9 @@ end
 --关闭EditView
 --同时触发Render的回调以修改Render的显示内容
 --同时修改玩家的资料
+--key listData里的key,跟DataUser的key保持一致
+--type listData里的type
+--data 数据
 function MoreInfomationView:onEditClose(key,type,data)
 	self:hideEditView()
 	if key == nil then
@@ -259,7 +262,15 @@ function MoreInfomationView:onEditClose(key,type,data)
 		self.headRender.data = value
 		self.headRender:updateView()
 	elseif type == MoreInformationRender.OTHER then
-		
+
+	elseif type == MoreInformationRender.GRADE then
+		--更新班级信息  这里已经修改了服务器端User的gradeNum 和 gradeName 无需再存到服务器
+		if self.renderEditCall ~= nil then
+			self.renderData = data
+			self.renderEditCall(self.renderKey,data)
+			s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, s_CURRENT_USER.userId, s_CURRENT_USER.username)
+			return
+		end
 	end
 	--保存到服务器 回调用
 	self.renderData = value
@@ -278,7 +289,6 @@ function MoreInfomationView:onEditSaveToServerCallBack(data,error)
 	if self.renderEditCall ~= nil then
 		self.renderEditCall(self.renderKey,self.renderData)
 	end
-	
 end
 
 --显示修改界面

@@ -1,5 +1,4 @@
-require("cocos.init")
-require("common.global")
+--好友的主界面
 
 local FriendLayer = class("FriendLayer", function()
     return cc.Layer:create()
@@ -111,6 +110,7 @@ function FriendLayer:ctor()
     searchlayer:setAnchorPoint(0.5,0)
     self:addChild(searchlayer,0,'search')
     
+    --好友列表
     local function onFriendList(sender)
         self.friendListButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_select.png',cc.rect(0,0,213,87)))
         self.friendRequestButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_unselect.png',cc.rect(0,0,213,87)))
@@ -125,7 +125,7 @@ function FriendLayer:ctor()
             searchlayer:setLocalZOrder(-1)
         end
     end
-    
+    --好友搜索
     local function onFriendSearch(sender)
         self.friendListButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_unselect.png',cc.rect(0,0,213,87)))
         self.friendRequestButton:setNormalSpriteFrame(cc.SpriteFrame:create('image/friend/fri_titleback_unselect.png',cc.rect(0,0,213,87)))
@@ -134,7 +134,7 @@ function FriendLayer:ctor()
         self:removeChildByName('request',true)
         searchlayer:setLocalZOrder(0)
     end
-    
+    --好友请求
     local function onFriendRequest(sender)
         if redHint then
             redHint:setVisible(false)

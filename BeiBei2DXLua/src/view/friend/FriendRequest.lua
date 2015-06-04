@@ -77,15 +77,6 @@ function FriendRequest:main()
 
     --add default item
     local count = table.getn(array)
-    for i = 1,math.floor(count) do
-        listView:pushBackDefaultItem()
-    end
-    --insert default item
-    for i = 1,math.floor(count) do
-        listView:insertDefaultItem(0)
-    end
-
-    listView:removeAllChildren()
 
     --add custom item
     for i = 1,count do

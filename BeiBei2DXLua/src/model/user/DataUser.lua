@@ -405,8 +405,8 @@ function DataUser:getFriendsInfo()
     self.fans = {}
     local friendsObjId = {}
     local friends = {}
-    dump(s_CURRENT_USER.followers,"s_CURRENT_USER.followers")
-    dump(s_CURRENT_USER.followees,"s_CURRENT_USER.followees")
+    -- dump(s_CURRENT_USER.followers,"s_CURRENT_USER.followers")
+    -- dump(s_CURRENT_USER.followees,"s_CURRENT_USER.followees")
     for key, followee in pairs(self.followees) do
         friendsObjId[followee.objectId] = 1
         friends[followee.objectId] = followee
@@ -433,7 +433,7 @@ function DataUser:getFriendsInfo()
 
     self.friendsCount = #self.friends
     self.fansCount = #self.fans
-    dump(s_CURRENT_USER.fans)
+    -- dump(s_CURRENT_USER.fans)
     saveUserToServer({['friendsCount']=self.friendsCount, ['fansCount']=self.fansCount})
 
     --处理添加好友的任务

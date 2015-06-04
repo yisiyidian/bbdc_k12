@@ -85,7 +85,11 @@ function MissionManager:updateMission(missionId,missionsData,addData,callBack)
 			if addData then
 				v[3] = tostring(tonumber(v[3]) + missionsData) --默认条件+1
 			else
-				v[3] = tostring(missionsData) --当前完成度  直接赋值
+				if v[3] ~= tostring(missionsData) then
+					v[3] = tostring(missionsData) --当前完成度  直接赋值
+				else
+					hit = false	
+				end
 			end
 			if v[3] >= v[4] then --如果当前任务条件和 任务总条件匹配,则标记为已完成
 				v[2] = "1" --标记为已完成 未领取

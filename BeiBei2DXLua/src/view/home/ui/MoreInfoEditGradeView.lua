@@ -76,19 +76,38 @@ function MoreInfoEditGradeView:onConfirmTouch(sender, eventType)
 			return
 		end
 	end
-
 	--TODO --> 然后调用加入班级的API  ->根据返回值来 弹出提示
 	--加入班级功能 跟保存user数据功能分开
 	print("加入班级:"..gradeNumber)
-
 	s_O2OController.joinGrade(gradeNumber, handler(self,self.onJoinGradeCallBack))
+end
+
+--返回按钮
+function MoreInfoEditGradeView:onReturnClick(sender,eventType)
+	if eventType ~= ccui.TouchEventType.ended then 
+		return 
+	end
+	if self.closeCallBack ~= nil then
+		self.closeCallBack()
+	end
 end
 
 --加入班级回调
 function MoreInfoEditGradeView:onJoinGradeCallBack(data,error)
 	print("请求加入班级返回:")
-	dump(data)
-	dump(error)
+	if error ~= nil then
+		s_TIPS_LAYER:showSmallWithOneButton(error.description)
+		return
+	end
+	local grade = data[1]
+	if grade ~= nil then
+		s_CURRENT_USER.gradeNum = grade.gradeNum
+		s_CURRENT_USER.gradeName = grade.gradeName
+
+		if self.closeCallBack ~= nil then
+			self.closeCallBack(self.key,self.type,grade.gradeName)
+		end
+	end
 end
 
 return MoreInfoEditGradeView
