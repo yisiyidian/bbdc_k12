@@ -36,34 +36,44 @@ function NewSummaryBossLayer:ctor(unit)
     end)
 
     local function update(delta)
-       --print(s_CURRENT_USER.bossTutorialStep)
         if self.gameStart and not self.gameOver and not self.gamePaused then 
             self.useTime = self.useTime + delta
-            
-            --提示换词
             if s_CURRENT_USER.bossTutorialStep < s_K12_summaryBossFailure then
-                self.changeBtnTime = self.changeBtnTime + delta
-                if self.changeBtnTime > self.totalTime / 2 then
-                    self.changeBtnTime = -10000
-                    self.gamePaused = true
-                    if s_CURRENT_USER.bossTutorialStep == s_K12_summaryBossSuccess then
-                        s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossFailure + 1)
-                    else
-                        s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossFailure)
-                    end
-                    local hintBoard = require("view.summaryboss.HintWord").create('',self.boss,self.firstTimeToChange)
-                    self:addChild(hintBoard,1)
-                    self.hintChangeBtn = hintBoard
-                    
-                    hintBoard.hintOver = function (  )
-                        hintBoard:removeFromParent()
-                        self.gamePaused = false
-                    end
+                if s_CURRENT_USER.bossTutorialStep == s_K12_summaryBossSuccess then
+                    s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossFailure + 1)
+                else
+                    s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossFailure)
                 end
             end
         end
     end 
     self:scheduleUpdateWithPriorityLua(update, 0)
+end
+
+function NewSummaryBossLayer:initGuideInfo()
+    local function update(delta)
+        if self.gameStart and not self.gameOver and not self.gamePaused then 
+            self.changeBtnTime = self.changeBtnTime + delta
+            if self.changeBtnTime > self.totalTime / 2 then
+                self.changeBtnTime = - 10000
+                self.gamePaused = true
+                s_CURRENT_USER.isFirstBossGuide = 1
+                self.isFirstBossGuide = 1
+                saveUserToServer({['isFirstBossGuide']=s_CURRENT_USER.isFirstBossGuide})
+                local hintBoard = require("view.summaryboss.HintWord").create('',self.boss,self.firstTimeToChange)
+                self:addChild(hintBoard,1)
+                self.hintChangeBtn = hintBoard
+                
+                hintBoard.hintOver = function (  )
+                    hintBoard:removeFromParent()
+                    self.gamePaused = false
+                end
+            end
+        end
+    end 
+    if s_CURRENT_USER.isFirstBossGuide == 0 and self.isFirstBossGuide == 0 then
+        self:scheduleUpdateWithPriorityLua(update, 0)
+    end
 end
 
 function NewSummaryBossLayer:initStageInfo(unit)
@@ -110,6 +120,7 @@ function NewSummaryBossLayer:initStageInfo(unit)
     self.rightWordList = ''
     --换词次数
     self.resetCount = 0
+    self.isFirstBossGuide = 0
 end
 
 function NewSummaryBossLayer:initWordList()
@@ -279,7 +290,7 @@ function NewSummaryBossLayer:initMat()
     end
     --划对单词后
     mat.success = function(stack)
-    --print('s_CURRENT_USER.k12SmallStep',s_CURRENT_USER.k12SmallStep)
+        self:initGuideInfo()
         self.changeBtnTime = 0
         s_CURRENT_USER:setSummaryStep(s_summary_doFirstWord) 
         if self.gameOver then return end
