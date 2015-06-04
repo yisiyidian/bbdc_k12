@@ -131,22 +131,24 @@ function NewSummaryBossLayer:initWordList()
         self.isReplay = false   
         self.unit = s_CorePlayManager.currentUnit
     end
-
+    print_lua_table(self.unit.wrongWordList)
     for i = 1,#self.unit.wrongWordList do
         local list = split(self.unit.wrongWordList[i],'|')
+        print_lua_table(list)
         wordList[i] = {}
         --wordList[i][1]表示这个词组的第一个单词，如果不是词组则取单词本身，【2】表示词组剩余部分,[3]表示词组以空格分隔，【4】表示词组以|分隔
         wordList[i][1] = list[1]
         wordList[i][2] = ''
         if #list > 1 then
-            for i = 2,#list do
-                wordList[i][2] = wordList[i][2]..' '..list[i]
+            for j = 2,#list do
+                wordList[i][2] = wordList[i][2]..' '..list[j]
             end  
         else
             wordList[i][2] = ''
         end
         wordList[i][3] = wordList[i][1]..wordList[i][2]
         wordList[i][4] = self.unit.wrongWordList[i]
+        list = nil
     end
 
     --第一关时间加倍
@@ -160,6 +162,9 @@ function NewSummaryBossLayer:initWordList()
         wordList[i] = wordList[randomIndex]
         wordList[randomIndex] = tmp     
     end
+
+    print_lua_table(wordList)
+
     return wordList
 end
 
