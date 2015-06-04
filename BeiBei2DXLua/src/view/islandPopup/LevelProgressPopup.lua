@@ -93,7 +93,7 @@ function LevelProgressPopup:createSummary(index)
         if self.unit.coolingDay > 0 or self.unit.unitState >= 5 then
             -- 记录用户点击的关卡号
             -- print('user unit:'..self.unit.unitID)
-            s_game_fail_level_index = self.unit.uniID - 1
+            s_game_fail_level_index = self.unit.unitID - 1
 
             showProgressHUD('', true)
             --print('replay island')

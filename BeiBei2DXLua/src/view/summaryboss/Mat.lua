@@ -308,7 +308,47 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         
     end
 
+-- local guideLineLayer = GuideLine:createLayer(main)
+--     guideLineLayer:setPosition(main:getContentSize().width/2,0)
+--     main:addChild(guideLineLayer,-1)
 
+
+
+--     local function updateGuideLine()
+--         guideLineLayer:removeAllChildren()
+--         local node_current = selectStack[#selectStack]
+--         local node_current_p = cc.p(node_current:getPosition())
+
+--         for i = 1, main_m do
+--             for j = 1, main_n do
+--                 local node = main_mat[i][j]
+--                 local node_p = cc.p(node:getPosition())
+--                 if node.hasSelected == false then
+--                    local number = GuideLine:findDistance(node,node_current)
+--                    if number == gap then
+--                         local line = GuideLine.create("light")
+--                         line:setPosition((node_current_p.x+node_p.x)/2,(node_current_p.y+node_p.y)/2)
+--                         guideLineLayer:addChild(line)
+--                         if node_current_p.y == node_p.y then
+--                             line:setRotation(90)
+--                         end
+--                    end
+--                 end
+--             end
+--         end
+
+--         for i=1,#selectStack - 1 do
+--             local node_last = cc.p(selectStack[i]:getPosition())
+--             local node_next = cc.p(selectStack[i+1]:getPosition())
+--             local line = GuideLine.create()
+--             line:setPosition((node_last.x+node_next.x)/2,(node_last.y+node_next.y)/2)
+--             guideLineLayer:addChild(line)
+--             if node_last.y == node_next.y then
+--                 line:setRotation(90)
+--             end
+--         end
+        
+--     end
 
     
     local back_box = cc.Layer:create()

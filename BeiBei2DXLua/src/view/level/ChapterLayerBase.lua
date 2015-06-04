@@ -347,6 +347,7 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
 --        self:addChild(start, 130)
 --    else
         -- print_lua_table(s_BookUnitName[s_CURRENT_USER.bookKey])
+        local unitName = split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(levelIndex+1)],'_')
         local unitText = cc.Sprite:create('image/chapter/chapter0/unit.png')
         -- if true then 
         if s_CURRENT_USER.bookKey == 'kwekwe' and #unitName > 1 and unitName[1] - 21 == 0 then
@@ -354,7 +355,7 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
         end
         unitText:setPosition(levelPosition.x-5, levelPosition.y + 35)
         self:addChild(unitText, 130)
-        local unitName = split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(levelIndex+1)],'_')
+        
         -- test 
         -- local unitName = split("3",'_')
         if #unitName == 1 then
