@@ -288,10 +288,12 @@ function ChapterLayerBase:plotDecoration()
                 print_lua_table(s_BookUnitName[s_CURRENT_USER.bookKey])
                 local unitName = split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(levelIndex+1)],'_')
 
+                -- test
+                -- local unitName = split('21_3','_')
                 -- add text
                 local unitText = cc.Sprite:create('image/chapter/chapter0/unit_black.png')
                 -- if true then
-                if s_CURRENT_USER.bookKey == 'kwekwe' and levelIndex - 19 > 0 then
+                if s_CURRENT_USER.bookKey == 'kwekwe' and #unitName > 1 and unitName[1] - 21 == 0 then
                     unitText = cc.Sprite:create('image/chapter/realwordlock.png')
                 end
 
@@ -304,7 +306,7 @@ function ChapterLayerBase:plotDecoration()
                     number:setColor(cc.c3b(164, 125, 46))
                     lock:addChild(number, 130)
                 else
-                    if s_CURRENT_USER.bookKey == 'kwekwe' and levelIndex - 19 > 0 then
+                    if s_CURRENT_USER.bookKey == 'kwekwe' and #unitName > 1 and unitName[1] - 21 == 0 then
                     -- if true then
                         local number2 = cc.Label:createWithSystemFont(unitName[2],'',35)
                         number2:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-20)
@@ -347,12 +349,13 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
         -- print_lua_table(s_BookUnitName[s_CURRENT_USER.bookKey])
         local unitText = cc.Sprite:create('image/chapter/chapter0/unit.png')
         -- if true then 
-        if s_CURRENT_USER.bookKey == 'kwekwe' and levelIndex - 19 > 0 then
+        if s_CURRENT_USER.bookKey == 'kwekwe' and #unitName > 1 and unitName[1] - 21 == 0 then
             unitText = cc.Sprite:create('image/chapter/realword.png')
         end
         unitText:setPosition(levelPosition.x-5, levelPosition.y + 35)
         self:addChild(unitText, 130)
         local unitName = split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(levelIndex+1)],'_')
+        -- test 
         -- local unitName = split("3",'_')
         if #unitName == 1 then
             local number = ccui.TextBMFont:create()
@@ -368,7 +371,7 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
             -- self:addChild(tag, 130)
 
             -- if true then
-            if s_CURRENT_USER.bookKey == 'kwekwe' and levelIndex - 19 > 0 then
+            if s_CURRENT_USER.bookKey == 'kwekwe' and #unitName > 1 and unitName[1] - 21 == 0 then
                 local number2 = ccui.TextBMFont:create()
                 number2:setFntFile('font/number_inclined.fnt')
                 number2:setString(unitName[2])

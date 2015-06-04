@@ -310,6 +310,9 @@ function M.getUnitInfo(unitID)
     --     unit.proficiency = 0
     -- end
 
+    -- test
+    -- unit.coolingDay = 0
+
     return unit
 end
 
