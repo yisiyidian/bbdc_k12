@@ -42,7 +42,7 @@ function LevelProgressPopup:ctor(index)
 
     -- 添加引导
     if s_CURRENT_USER.guideStep == s_guide_step_enterCard then
-        s_CorePlayManager.enterGuideScene(13,self)
+        s_CorePlayManager.enterGuideScene(8,self)
         s_CURRENT_USER:setGuideStep(s_guide_step_returnPopup) 
     end
 end
