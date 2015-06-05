@@ -34,6 +34,9 @@ function LevelProgressPopup:ctor(index)
     --createPape()
     self:createSummary(index)
 
+    s_CorePlayManager.enterGuideScene(6,self)
+
+    s_CorePlayManager.enterGuideScene(8,self)
 end
 
 

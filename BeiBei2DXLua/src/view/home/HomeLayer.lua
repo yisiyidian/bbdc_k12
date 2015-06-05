@@ -5,7 +5,7 @@ require("common.global")
 --
 
 -- local AlterI = require("view.alter.AlterI")
-
+local GuideView = require ("view.guide.GuideView")
 local SettingLayer = require("view.home.SettingLayer") --设置界面
 local MissionProgress = require("view.home.MissionProgressLayer") --中间的原型开始按钮
 local OfflineTipHome = require("view.offlinetip.OfflineTipForHome")
@@ -378,6 +378,11 @@ function HomeLayer:ctor()
             s_LocalDatabaseManager.setBuy(0)
             s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
         end
+    end
+    -- 添加引导
+    if s_CURRENT_USER.guideStep == 2 then
+        s_CorePlayManager.enterGuideScene(3,self)
+        s_CURRENT_USER:setGuideStep(s_guide_step_enterHome) 
     end
 
     onAndroidKeyPressed(self, function ()

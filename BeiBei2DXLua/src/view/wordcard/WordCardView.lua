@@ -16,6 +16,7 @@ function WordCardView:ctor(index)
 	-- 用于显示词库
 	self:initUI()
 	-- 初始化UI
+    s_CorePlayManager.enterGuideScene(7,self)
 end
 
 function WordCardView:initUI()
