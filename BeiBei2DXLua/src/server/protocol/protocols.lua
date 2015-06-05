@@ -473,7 +473,7 @@ function sysBossWord(bosses, skipWordList, callback)
             skips[v.unitID] = v
         end
     end
-
+    dump(unsavedDataTable,"unsavedDataTable")
     local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataUnit', ['bookKey']=s_CURRENT_USER.bookKey, ['us']=unsavedDataTable}, cb)
     protocol:request()
 end

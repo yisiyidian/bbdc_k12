@@ -154,7 +154,7 @@ function M.getMaxUnit()
     for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." ORDER BY unitID DESC LIMIT 1 ;") do
         maxUnit = row
     end
-
+    dump(maxUnit,"maxUnit")
     return maxUnit
 end
 

@@ -180,8 +180,7 @@ function MissionProgressLayer.create(share,homelayer)
     
     local enterGame = function ()
         MissionProgressLayer.getNotContainedInLocalDatas(function ()
-            s_CURRENT_USER:generateSummaryBossList()
-            s_CURRENT_USER:generateChestList()
+
             s_CURRENT_USER:updateDataToServer()
 
             AnalyticsEnterLevelLayerBtn()

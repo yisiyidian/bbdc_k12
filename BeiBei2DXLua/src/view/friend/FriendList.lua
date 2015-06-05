@@ -18,7 +18,7 @@ function FriendList:ctor()
     back:setPosition(0.5 * s_DESIGN_WIDTH,162 * 3)
     self:addChild(back)
     showProgressHUD('正在加载好友列表',true)
-    -- [[
+
     s_UserBaseServer.getFolloweesOfCurrentUser(
         function(api, result)
             s_UserBaseServer.getFollowersOfCurrentUser(
@@ -54,47 +54,12 @@ function FriendList:ctor()
         end,
         function (api, code, message, description)
             hideProgressHUD(true)
-        end
-    )
-    -- ]]
-   
-   --[[
-
-    --获取好友列表
-    s_UserBaseServer.getFollowersAndFolloweesOfCurrentUser(
-        handler(self,
-        function(self,api, result)
-            s_CURRENT_USER:getFriendsInfo()
-
-            self.array = {}
-            for i,f in ipairs(s_CURRENT_USER.friends) do
-                self.array[#self.array + 1] = f
-            end
-            self.array[#self.array + 1] = s_CURRENT_USER
-            self.selectIndex = -2
-            for i = 1,#self.array do
-                for j = i, #self.array do
-                    if self.array[i].wordsCount < self.array[j].wordsCount or (self.array[i].wordsCount == self.array[j].wordsCount and self.array[i].masterCount < self.array[j].masterCount) then
-                        local temp = self.array[i]
-                        self.array[i] = self.array[j]
-                        self.array[j] = temp
-                    end
-                end
-            end
-            self:addList()
-            
-            hideProgressHUD(true)
-        end,
-        function (api, code, message, description)
-            hideProgressHUD(true)
-        end
-    ))
-    
-]]
+        end)
 end
 
 --构造列表
 function FriendList:addList()
+    dump(self.array,"好友数据列表")
     self:removeChildByName('listView',true)
     local listView = ccui.ListView:create()
     --set list view ex direction
@@ -106,137 +71,22 @@ function FriendList:addList()
     listView:setName('listView')
     self:addChild(listView)
     local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
-    --listView:add
-    
-    -- create model
-    
-    -- local default_button = ccui.Button:create('image/friend/friendRankButton.png', 'image/friend/friendRankButton.png')
-    -- default_button:setName("Title Button")
-
-    -- local default_item = ccui.Layout:create()
-    -- default_item:setTouchEnabled(true)
-    -- default_item:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X, default_button:getContentSize().height))
-    -- default_button:setPosition(cc.p((s_RIGHT_X - s_LEFT_X) / 2.0, default_item:getContentSize().height / 2.0))
-    -- default_item:addChild(default_button)
-
-    --set model
-    -- listView:setItemModel(default_item)
-    --local array = {}
     --add default item
     local count = #self.array
     --add custom item
     for i = 1,count do
         local custom_item = FriendRender.new()
-        custom_item:setData(self.array[i],i,handler(self, self.onRenderTouch))
+        custom_item:setData(self.array[i],i)
+        -- custom_item:setData(self.array[i],i,handler(self, self.onRenderTouch)) --暂时移除删除好友功能
         listView:addChild(custom_item)
-        
-        -- local function touchEvent(sender,eventType)
-        --     if eventType == ccui.TouchEventType.ended then
-        --         if self.selectIndex ~= sender.index and sender.index ~= 0 then
-                    
-        --             local arrow = sender:getChildByName('arrow')
-        --             arrow:setTexture('image/friend/fri_jiantoushang.png')
-        --             if self.selectIndex > -1 then
-        --                 local item = listView:getItem(self.selectIndex - 1)
-        --                 local btn = item:getChildByName("Title Button")
-        --                 local arr = sender:getChildByName('arrow')
-        --                 arr:setTexture('image/friend/fri_jiantouxia.png')
-        --             end
-                     
-        --             local custom_button = ccui.Button:create("image/friend/delete_friend_back.png", "image/friend/delete_friend_back.png")
-        --             custom_button:setName("Title Button")
-        --             custom_button:setScale9Enabled(true)
-        --             custom_button:setContentSize(cc.size(640,160))
-        --             custom_button:setScaleX(scale)
-        --             custom_button.index = 0
-        --             custom_button:addTouchEventListener(touchEvent)
-        --             local custom_item = ccui.Layout:create()
-        --             custom_item:setContentSize(custom_button:getContentSize())
-        --             custom_button:setPosition(cc.p((s_RIGHT_X - s_LEFT_X) / 2.0, custom_item:getContentSize().height / 2.0))
-        --             custom_item:addChild(custom_button,1)
-
-        --             local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,custom_button:getContentSize().height + 2)
-        --             back:ignoreAnchorPointForPosition(false)
-        --             back:setAnchorPoint(0.5,0.5)
-        --             back:setPosition((s_RIGHT_X - s_LEFT_X) * 0.5, custom_item:getContentSize().height * 0.5)
-        --             custom_item:addChild(back,0)
-
-        --             listView:insertCustomItem(custom_item,listView:getCurSelectedIndex() + 1)
-        --             local delete = cc.Sprite:create('image/friend/fri_delete.png')
-        --             delete:setScaleX(1 / scale)
-        --             delete:setPosition(cc.p(custom_button:getContentSize().width / 2.0, custom_item:getContentSize().height / 2.0))
-        --             custom_button:addChild(delete)
-        --             if self.selectIndex > -1 then
-        --                 if self.selectIndex > sender.index then
-        --                     listView:removeItem(self.selectIndex + 1)
-        --                 else
-        --                     listView:removeItem(self.selectIndex)
-        --                 end
-        --             end
-        --             self.selectIndex = sender.index
-        --         elseif sender.index == 0 then --delete friend
-                    
-        --             local back = cc.Sprite:create("image/alter/tanchu_board_small_white.png")
-        --             back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3)
-        --             s_SCENE.popupLayer:addChild(back)
-        --             s_SCENE.popupLayer.listener:setSwallowTouches(true)
-        --             back:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2))))
-                
-        --             local label_info = cc.Label:createWithSystemFont('确认删除好友？',"",28)
-        --             label_info:setColor(cc.c4b(0,0,0,255))
-        --             label_info:setDimensions(back:getContentSize().width*4/5,0)
-        --             label_info:setPosition(back:getContentSize().width/2, back:getContentSize().height/2+50)
-        --             back:addChild(label_info)
-                    
-       
-                
-        --             local button_left = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
-        --             button_left:setPosition(back:getContentSize().width/2-120, back:getContentSize().height/2-70)
-        --             button_left:setTitleText("确定")
-        --             button_left:setTitleFontSize(30)
-        --             button_left:addTouchEventListener(button_left_clicked)
-        --             back:addChild(button_left)
-                    
-        --             local button_right_clicked = function(sender, eventType)
-        --                 if eventType == ccui.TouchEventType.began then
-        --                     -- button sound
-        --                     playSound(s_sound_buttonEffect)
-        --                 elseif eventType == ccui.TouchEventType.ended then
-        --                     s_SCENE.popupLayer.listener:setSwallowTouches(false)
-        --                     local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*3/2)))
-        --                     local remove = cc.CallFunc:create(function() 
-        --                         back:removeFromParent() 
-        --                     end,{})
-        --                     back:runAction(cc.Sequence:create(move,remove))
-        --                 end
-        --             end
-                
-        --             local button_right = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
-        --             button_right:setPosition(back:getContentSize().width/2+120, back:getContentSize().height/2-70)
-        --             button_right:setTitleText("取消")
-        --             button_right:setTitleFontSize(30)
-        --             button_right:addTouchEventListener(button_right_clicked)
-        --             back:addChild(button_right)
-                    
-        --         else
-        --             local arrow = sender:getChildByName('arrow')
-        --             arrow:setTexture('image/friend/fri_jiantouxia.png')
-        --             listView:removeItem(sender.index)
-        --             self.selectIndex = -2
-        --         end
-                
-        --     end
-        -- end
-
-        -- if self.array[custom_item.index].username ~= s_CURRENT_USER.username then
-        --     custom_item:addTouchEventListener(touchEvent) 
-        -- end            
     end
 
     listView:setItemsMargin(2.0)
     self.listView = listView
 end
 
+--[[
+--暂时注释删除好友的功能
 --格子触摸事件
 function FriendList:onRenderTouch(sender)
     local listView = self.listView
@@ -395,6 +245,6 @@ function FriendList:cancelDel(sender, eventType)
         self.back:runAction(cc.Sequence:create(move,remove))
     end
 end
-
+]]
 
 return FriendList

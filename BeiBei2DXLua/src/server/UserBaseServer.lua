@@ -411,6 +411,7 @@ function UserBaseServer.getFollowersOfCurrentUser(onResponse)
         s_SERVER.requestFollowers(s_CURRENT_USER.objectId, 
             function (api, result, err)
                 if result ~= nil then
+                    dump(result.results,"result.results",99)
                     s_CURRENT_USER:parseServerFollowersData(result.results) -- who follow me
                 end
                 if onResponse ~= nil then onResponse(api, result, err) end
@@ -426,6 +427,7 @@ function UserBaseServer.getFolloweesOfCurrentUser(onResponse)
         s_SERVER.requestFollowees(s_CURRENT_USER.objectId, 
             function (api, result, err)
                 if result ~= nil then
+                    dump(result.results,"result.results",99)
                     s_CURRENT_USER:parseServerFolloweesData(result.results) -- who I follow
                 end
                 if onResponse ~= nil then onResponse(api, result, err) end

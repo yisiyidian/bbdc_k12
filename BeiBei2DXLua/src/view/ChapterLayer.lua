@@ -95,7 +95,6 @@ function ChapterLayer:ctor()
     end
     -- add player
     -- scroll to current chapter level
-    -- local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
     if progress - 0 == 0 then
         self:scrollLevelLayer(progress, 0)
@@ -340,29 +339,7 @@ function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
         -- compute vertical percent
         local chapterCount = math.floor((currentLevelCount-1) / 10)
         local levelCount = math.floor((currentLevelCount-1) % 10) + 1
-
-        -- local temp = 0
-        -- if levelCount <= 2 then 
-        --     temp = 0
-        -- elseif levelCount == 2 then
-        --     temp = 31.55
-        -- elseif levelCount == 3 then
-        --     temp = 39.83
-        -- elseif levelCount == 4 then
-        --     temp = 48.97
-        -- elseif levelCount == 5 then
-        --     temp = 57.89
-        -- elseif levelCount == 6 then
-        --     temp = 68.69
-        -- elseif levelCount == 7 then
-        --     temp = 78.31
-        -- elseif levelCount == 8 then
-        --     temp = 91.93
-        -- else 
-        --     temp = 100
-        -- end
-        -- temp = temp / 100
-        -- local currentVerticalPercent = ((chapterCount / chapterCount + 1)+ temp/(chapterCount + 1)) * 100
+        
         local currentVerticalPercent = (chapterCount / (chapterCount + 1) + (levelCount + 1)/ (s_islands_per_page * (chapterCount + 1)) ) * 100
 
         if (currentVerticalPercent >= 80 and levelCount >= 8) or currentVerticalPercent > 100 then
@@ -470,7 +447,6 @@ function ChapterLayer:addTaskBOX()
     s_MissionManager:setCanCompleteCallBack(handler(self,self.updataBoxState))
 
     self:updataBoxState()
-
 end
 
 --更新宝箱状态  在任务界面TaskView里回调
@@ -549,28 +525,5 @@ function ChapterLayer:addBeansUI()
     self.beanCountLabel:setPosition(self.beans:getContentSize().width * 0.65 , self.beans:getContentSize().height/2)
     self.beans:addChild(self.beanCountLabel,10)
 end
-
--- function ChapterLayer:shakeBeansUI(beansIncrement)
---     if self.beanLabel ~= nil and self.beanCountLabel~=nil and self.beanCount ~=nil then
---         local beanLabelPostionX = self.beanLabel:getPositionX()
---         local beanLabelPostionY = self.beanLabel:getPositionY()
---         local beanLabelAct1 = cc.MoveTo:create(0.05,cc.p(beanLabelPostionX,beanLabelPostionY+10))
---         local beanLabelAct2 = cc.MoveTo:create(0.05,cc.p(beanLabelPostionX,beanLabelPostionY-10))
---         local beanLabelAct3 = cc.MoveTo:create(0.05,cc.p(beanLabelPostionX,beanLabelPostionY))
---         self.beanLabel:runAction(cc.Sequence:create(beanLabelAct1,beanLabelAct2,beanLabelAct3))
-
---         self.beanCount = self.beanCount + beansIncrement
---         self.beanCountLabel:setString(self.beanCount)
-        
---         local addBeanLabel = cc.Label:createWithSystemFont("+豆豆",'',20)
---         addBeanLabel:setPosition(self.beanCountLabel:getPositionX()-20,self.beanCountLabel:getPositionY()+50)
---         addBeanLabel:setColor(cc.c3b(0,0,0))
---         self.beans:addChild(addBeanLabel)
-        
---         local addBeanLabelAct1 = cc.MoveTo:create(0.2,cc.p(addBeanLabel:getPositionX(),addBeanLabel:getPositionY()+10))
---         local addBeanLabelAct2 = cc.FadeOut:create(0.3)
---         addBeanLabel:runAction(cc.Spawn:create(addBeanLabelAct1,addBeanLabelAct2))
---     end
--- end
 
 return ChapterLayer

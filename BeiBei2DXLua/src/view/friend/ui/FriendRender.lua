@@ -29,6 +29,8 @@ function FriendRender:initUI()
     self.button = button
     self:addChild(button,1)
 
+    local btnsize = button:getContentSize()
+
     --背景
     local back = cc.LayerColor:create(cc.c4b(208,212,215,255),s_RIGHT_X - s_LEFT_X,160 + 2)
     back:ignoreAnchorPointForPosition(false)
@@ -40,6 +42,7 @@ function FriendRender:initUI()
     rankIcon:setScaleX(1 / scale)
     rankIcon:setPosition(0.08 * 640,0.5 * 160)
     self.rankIcon = rankIcon
+    rankIcon:setName('rankIcon')
     button:addChild(rankIcon)
     --头像
     local head = cc.Sprite:create()
@@ -54,19 +57,47 @@ function FriendRender:initUI()
     fri_name:setColor(cc.c3b(0,0,0))
     fri_name:ignoreAnchorPointForPosition(false)
     fri_name:setAnchorPoint(0,0)
-    fri_name:setPosition(0.42 * button:getContentSize().width,0.52 * button:getContentSize().height)
+    fri_name:setPosition(0.42 * btnsize.width,0.60 * btnsize.height)
     button:addChild(fri_name)
     self.fri_name = fri_name
 
     -- local fri_word = cc.Label:createWithSystemFont(string.format('已学单词总数：%d',self.array[i].wordsCount),'',24)
-    local fri_word = cc.Label:createWithSystemFont('','',24)
-    fri_word:setScaleX(1 / scale)
-    fri_word:setColor(cc.c3b(0,0,0))
-    fri_word:ignoreAnchorPointForPosition(false)
-    fri_word:setAnchorPoint(0,1)
-    fri_word:setPosition(0.42 * button:getContentSize().width,0.48 * button:getContentSize().height)
-    self.fri_word = fri_word
-    button:addChild(fri_word)
+    --单词数
+    local fri_process = cc.Label:createWithSystemFont('','',24)
+    fri_process:setScaleX(1 / scale)
+    fri_process:setColor(cc.c3b(150,153,156))
+    fri_process:ignoreAnchorPointForPosition(false)
+    fri_process:setAnchorPoint(0,1)
+    fri_process:setPosition(0.42 * btnsize.width,0.52 * btnsize.height)
+    self.fri_process = fri_process
+    button:addChild(fri_process)
+    --今日关卡
+    local fri_guanka = cc.Label:createWithSystemFont('','',24)
+    fri_guanka:setScaleX(1 / scale)
+    fri_guanka:setColor(cc.c3b(150,153,156))
+    fri_guanka:ignoreAnchorPointForPosition(false)
+    fri_guanka:setAnchorPoint(0,1)
+    fri_guanka:setPosition(0.42 * btnsize.width,0.30 * btnsize.height)
+    self.fri_guanka = fri_guanka
+    button:addChild(fri_guanka)
+    --用时
+    local fri_time = cc.Label:createWithSystemFont('','',24)
+    fri_time:setScaleX(1 / scale)
+    fri_time:setColor(cc.c3b(150,153,156))
+    fri_time:ignoreAnchorPointForPosition(false)
+    fri_time:setAnchorPoint(0,1)
+    fri_time:setPosition(0.65 * btnsize.width,0.30 * btnsize.height)
+    self.fri_time = fri_time
+    button:addChild(fri_time)
+    --班级名称
+    local fri_grade = cc.Label:createWithSystemFont('','',24)
+    fri_grade:setScaleX(1 / scale)
+    fri_grade:setColor(cc.c3b(111,181,219))
+    fri_grade:ignoreAnchorPointForPosition(false)
+    fri_grade:setAnchorPoint(0,1)
+    fri_grade:setPosition(0.80 * btnsize.width,0.75 * btnsize.height)
+    self.fri_grade = fri_grade
+    button:addChild(fri_grade)
 end
 
 --设置数据
@@ -75,18 +106,20 @@ function FriendRender:setData(data,index,callback)
 	self.data = data
 	self.callback = callback
 	self.button.index = index
-	dump(data)
+	--前三名的特殊ICON
 	local str = 'n'
     if index < 4 then
         str = string.format('%d',index)
     end
-
+    --排名ICON
 	self.rankIcon:setTexture(string.format('image/friend/fri_rank_%s.png',str))
-
+	--排名文本
 	local rankLabel = cc.Label:createWithSystemFont(string.format('%d',index),'',36)
     rankLabel:setPosition(self.rankIcon:getContentSize().width / 2,self.rankIcon:getContentSize().width / 2)
+    rankLabel:setName("rankLabel")
     self.rankIcon:addChild(rankLabel)
-    local headimg = nil --头像
+    --头像
+    local headimg = nil 
     if data.sex == 0 then
 		headimg = "image/PersonalInfo/hj_personal_avatar.png"
     else
@@ -94,16 +127,21 @@ function FriendRender:setData(data,index,callback)
     end
     self.head:setTexture(headimg)
 
-
+    --如果是QQ登陆 或者是新的注册用户(手机注册并且启用nickName字段)
     local name = self.data.username
-        --如果是QQ登陆 或者是新的注册用户(手机注册并且启用nickName字段)
     if self.data.userType == USER_TYPE_QQ or self.data.nickName ~= "" then
         name = self.data.nickName
     end
     self.fri_name:setString(name)
-
-    self.fri_word:setString(string.format('已学单词总数：%d',self.data.wordsCount))
-    
+    --已学单词数
+    self.fri_process:setString(string.format('当前进度：%d',self.data.unitID))
+    --今日关卡
+    self.fri_guanka:setString(string.format("今日关卡：%d",self.data.masterCount))
+    --用时
+	self.fri_time:setString(string.format("用时：%d分钟",1))
+	--班级
+	self.fri_grade:setString(self.data.gradeName)
+    --[[  --注释掉删除好友箭头
     if self.data.username ~= s_CURRENT_USER.username then
         local str = 'image/friend/fri_jiantouxia.png'
         local arrow = cc.Sprite:create(str)
@@ -112,11 +150,7 @@ function FriendRender:setData(data,index,callback)
         self.button:addChild(arrow,0)
         arrow:setName("arrow")
     end
-end
-
---设置索引
-function FriendRender:setIndex(index)
-	
+    ]]
 end
 
 function FriendRender:onBtnTouch(sender,eventType)

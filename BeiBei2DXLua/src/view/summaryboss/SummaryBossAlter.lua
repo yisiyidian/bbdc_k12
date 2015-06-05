@@ -295,7 +295,7 @@ function SummaryBossAlter:lose2(entrance)
 end
 
 function SummaryBossAlter:win1(entrance)
-    --完成总结BOSS
+    --完成总结BOSS任务
     s_MissionManager:updateMission(MissionConfig.MISSION_ZJBOSS, 1, false)
 
     if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then

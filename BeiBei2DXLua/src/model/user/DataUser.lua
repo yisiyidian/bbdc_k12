@@ -1,7 +1,9 @@
+--玩家的数据模型
+
 local DataClassBase = require('model.user.DataClassBase')
-local DataEverydayInfo = require('model/user/DataEverydayInfo')
+local DataEverydayInfo = require('model.user.DataEverydayInfo')
 local DataLevelInfo = require('model.user.DataLevelInfo')
-local DataDailyStudyInfo = require('model/user/DataDailyStudyInfo')
+local DataDailyStudyInfo = require('model.user.DataDailyStudyInfo')
 local DataDailyUsing = require('model.user.DataDailyUsing')
 
 local MissionConfig = require("model.mission.MissionConfig") --任务的配置
@@ -40,7 +42,7 @@ function DataUser:ctor()
     self.school                            = ""  --学校
     self.examination                       = ""  --正准备的考试
     self.position                          = ""  --位置
-    self.grade                             = ""  --班级号
+    self.gradeNum                          = ""  --班级号
     self.gradeName                         = ""  --班级名
 
     self.relateContacts                     = 0  --关联通讯录
@@ -48,7 +50,7 @@ function DataUser:ctor()
     self.showLocation                       = 0  --位置可见
 
     self.password                          = ''
-    self.mobilePhoneNumber                 = ''
+    self.mobilePhoneNumber                 = '' --电话号码
     self.sessionToken                      = ''
     self.usertype                          = USER_TYPE_GUEST
     self.channelId                         = ''
@@ -58,14 +60,11 @@ function DataUser:ctor()
     self.tutorialStep                      = 0 
     self.tutorialSmallStep                 = 0 
     self.isSoundAm                         = 1 
---    self.reviewBossTutorialStep            = 0 
+
     self.bookKey                           = ''
-
---    self.energyLastCoolDownTime            = -1 
---    self.energyCount                       = s_energyMaxCount
-
     self.wordsCount                        = 0 
     self.masterCount                       = 0 
+    self.unitID                            = 0  --当前书本 开启到哪个关卡
     
     self.fansCount                         = 0 
     self.friendsCount                      = 0 
@@ -76,26 +75,14 @@ function DataUser:ctor()
     self.seenFansCount                     = 0
 
     self.currentWordsIndex                 = 0 
---    self.currentChapterKey                 = ''
-    --self.currentSelectedChapterKey         = ''
---    self.currentLevelKey                   = ''
-    --self.currentSelectedLevelKey           = ''
-
---    self.stars                             = 0 
 
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
     self[DataUser.BEANSKEY]                = BEANS_PREFIX .. '0' .. BEANS_SUBFIX
     self.newStudyRightLayerMask            = 0
 
-
     self.needToUnlockNextChapter           = 0
 
-
---    self.needToUnlockNextChapter           = 0
-
-
---    self.levels                            = {}
     self.logInDatas                        = {}
     self.localAuthData                     = nil
     self.snsUserInfo                       = nil
@@ -105,13 +92,7 @@ function DataUser:ctor()
     -- summary boss time
     self.timeAdjust                        = 0
     self.failTime                          = 0
-    self.winCombo                          = 0
-
---    self.lastUpdateSummaryBossTime         = 0
---    self.summaryBossList                   = ''
---    self.chestList                         = ''
---    self.lastUpdateChestTime               = 0
-    
+    self.winCombo                          = 0    
     -- function lock
     self.lockFunction                      = 8
 
@@ -183,118 +164,6 @@ function DataUser:subtractBeans(count)
     self:setBeans( self:getBeans() - count )
 end
 
-function DataUser:generateChestList()
---    --print("###########start generate chest########")
---    local timePass = os.time() - s_CURRENT_USER.lastUpdateChestTime
-----    print('osTime:'..os.time())
-----    print('lastUpdate:'..s_CURRENT_USER.lastUpdateChestTime)
---    if timePass >= 3600 * 24 * 2 then   -- two days
---        s_CURRENT_USER.lastUpdateChestTime = os.time()
---        local currentIndex = s_CURRENT_USER.levelInfo:getBookCurrentLevelIndex()
---        if currentIndex == 0 then
---            return 
---        end
---        local chest1 = math.random(0, currentIndex - 1) + 0
---        local chest2 = math.random(0, currentIndex - 1) + 0
-----        print('chest1:'..chest1)
-----        print('chest2:'..chest2)
-----        while (chest2 - chest1) == 0 do
-----            print('chest1:'..chest1)
-----            print('chest2:'..chest2)
-----            chest2 = math.random(0, currentIndex - 1)
-----            print('diff'..(chest2-chest1)..'###')
-----        end
---        self.chestList = chest1..'|'..chest2
-----        self.chestList = '0'
-----        print('chestList:'..self.chestList)
---    end
-end
-
-function DataUser:generateSummaryBossList() 
-
---    local updateTime = self.levelInfo:getUpdateBossTime(self.bookKey)
---    --print('!!!!updatetime:'..os.date('%x',updateTime))
---    local list = self.levelInfo:getBossList(self.bookKey)
---    local isSameDate = (os.date('%x',updateTime) == os.date('%x',os.time()))
---    local summaryBossList = split(list,'|')
---    if list == '' then
---        summaryBossList = {}
---    end
---    local index = self.levelInfo:getBookCurrentLevelIndex()
---    if index == 0 then
---        return
---    end
---    
---    if (not isSameDate) and #summaryBossList < 3 and index - #summaryBossList > 0 then
---        updateTime = os.time()
---        --print('currentIndex:'..index)
---        if #summaryBossList == 0 then
---            list = tostring(math.random(0,index - 1)) 
---        else
---            local id = math.random(1,index - 1 - #summaryBossList)
---            for i = 1,#summaryBossList do
---                if summaryBossList[i] == '' then
---                    break
---                end
---                if id - summaryBossList[i] < 0 then
---                    table.insert(summaryBossList,i,tostring(id))
---                    break
---                else
---                    id = id + 1
---                end
---            end
---            if summaryBossList[#summaryBossList] ~= '' and id - summaryBossList[#summaryBossList] > 0 then
---                table.insert(summaryBossList,#summaryBossList + 1,tostring(id))
---            end
---            self.summaryBossList = summaryBossList[1]
---            for i = 2,#summaryBossList do
---                list = list..'|'..summaryBossList[i]
---            end
---        end
---   
---        self.levelInfo:updateBossList(self.bookKey,list)
---        
---    end
---    self.levelInfo:updateTime(self.bookKey,os.time())
---    self.levelInfo:sysData()
-    --print("summaryBossList:"..self.summaryBossList.."lastUpdate:"..os.date('%x',self.lastUpdateSummaryBossTime))
-end
-
-function DataUser:removeChest(index)
-
---    local list = split(self.chestList,'|')
---    local tempList = ''
---    print_lua_table(list)
---    for i = 1, #list do 
---        if list[i] - index ~= 0 then
---            if tempList == '' then
---                tempList = list[i]
---            else
---                tempList = tempList..'|'..list[i]
---            end
---        end
---    end
---    self.chestList = tempList
-
-end
-
-function DataUser:removeSummaryBoss(index)
---    local bosslist = self.levelInfo:getBossList(self.bookKey)
---    local list = split(bosslist,'|')
---    local tempList = ''
---    for i = 1, #list do 
---        if list[i] - index ~= 0 then
---            if tempList == '' then
---                tempList = list[i]
---            else
---                tempList = tempList..'|'..list[i]
---            end
---        end
---    end
---    self.levelInfo:updateBossList(self.bookKey, tempList)
---    self.levelInfo:sysData()
-end
-
 function DataUser:getNameForDisplay()
     if s_CURRENT_USER.usertype == USER_TYPE_QQ then 
         return self.nickName
@@ -315,17 +184,6 @@ function DataUser:parseServerData(data)
         end
     end
 end
-
--- function DataUser:parseServerDataEverydayInfo(results)
---     local DataDailyCheckIn = require('model.user.DataEverydayInfo')
---    self.logInDatas = {}
---    for i, v in ipairs(results) do
---        local data = DataEverydayInfo.create()
---        parseServerDataToClientData(v, data)
---        self.logInDatas[i] = data
---        print_lua_table(data)
---    end 
--- end
 
 function DataUser:parseServerDataLevelInfo(results)
     for i, v in ipairs(results) do
@@ -433,12 +291,11 @@ function DataUser:getFriendsInfo()
 
     self.friendsCount = #self.friends
     self.fansCount = #self.fans
-    -- dump(s_CURRENT_USER.fans)
+    
     saveUserToServer({['friendsCount']=self.friendsCount, ['fansCount']=self.fansCount})
 
     --处理添加好友的任务
     s_MissionManager:updateMission(MissionConfig.MISSION_FRIEND, self.friendsCount, false)
-    -- s_MissionManager:updateMission(MissionConfig.MISSION_FRIEND, 5, false)
 end
 
 function DataUser:getBookChapterLevelData(bookKey, chapterKey, levelKey)

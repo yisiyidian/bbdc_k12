@@ -208,6 +208,8 @@ local function update(dt)
             if usingTimeSaveToLocalDB > 5 * 60 then -- 5 min
                 usingTimeSaveToLocalDB = 0
                 s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.dataDailyUsing, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
+                --同步在线时长
+                cx.CXAnalytics:logUsingTime(tostring(s_CURRENT_USER.objectId), tostring(s_CURRENT_USER.bookKey), s_CURRENT_USER.dataDailyUsing.startTime, s_CURRENT_USER.dataDailyUsing.usingTime)
             end
         else
             s_CURRENT_USER.dataDailyUsing:reset()
@@ -344,6 +346,12 @@ function applicationWillEnterForeground()
 end
 
 function applicationDidEnterBackgroundLua()
+    if s_CURRENT_USER ~= nil and s_CURRENT_USER.dataDailyUsing:isInited() and s_CURRENT_USER.dataDailyUsing:isToday() then
+        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER.dataDailyUsing, s_CURRENT_USER.objectId, s_CURRENT_USER.username)
+        --同步在线时长
+        cx.CXAnalytics:logUsingTime(tostring(s_CURRENT_USER.objectId), tostring(s_CURRENT_USER.bookKey), s_CURRENT_USER.dataDailyUsing.startTime, s_CURRENT_USER.dataDailyUsing.usingTime)
+    end
+
     Analytics_applicationDidEnterBackground( s_SCENE.currentGameLayerName )
 end
 

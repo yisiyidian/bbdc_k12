@@ -244,6 +244,7 @@ math["xor"]=function(x,y,z)
 end
 
 function showProgressHUD(info, native)
+    print("showProgressHUD-------------------------------------------"..tostring(native))
     if native then
         info = info or ''
         cx.CXProgressHUD:show(info)
@@ -253,6 +254,7 @@ function showProgressHUD(info, native)
 end
 
 function hideProgressHUD(native)
+    print("hideProgressHUD-------------------------------------------"..tostring(native))
     if native then
         cx.CXProgressHUD:hide()
     else
