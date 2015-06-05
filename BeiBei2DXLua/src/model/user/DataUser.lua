@@ -126,6 +126,15 @@ function DataUser:ctor()
     self.bossTutorialStep                  = 0
     -- 是否是过出现boss换词引导
     self.isFirstBossGuide                  = 0
+
+    self.guideStep                         = 0 
+end
+-- 设置引导步骤
+function DataUser:setGuideStep(step)
+    if self.guideStep < step then
+        self.guideStep = step
+        saveUserToServer({['guideStep']=self.guideStep})
+    end
 end
 
 function DataUser:setSummaryStep(step)

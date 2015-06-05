@@ -7,7 +7,6 @@ local BookLayer = class("BookLayer", function ()
     return cc.Layer:create()
 end)
 
-
 function BookLayer.create(education)
     s_CURRENT_USER:setSummaryStep(s_summary_selectBook) 
     if s_CURRENT_USER.k12SmallStep < s_K12_selectBook then
@@ -329,6 +328,11 @@ function BookLayer.create(education)
     layer:scheduleUpdateWithPriorityLua(update, 0)
 
     --layer:popupAccountBind()
+    -- 添加引导
+    if s_CURRENT_USER.guideStep == 1 then
+        s_CorePlayManager.enterGuideScene(2,layer)
+        s_CURRENT_USER:setGuideStep(s_guide_step_selectBook) 
+    end
 
     return layer
 end

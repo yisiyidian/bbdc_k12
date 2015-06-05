@@ -272,6 +272,12 @@ function CorePlayManager.enterFriendLayer()
     s_SCENE:replaceGameLayer(friendLayer)
 end
 
+function CorePlayManager.enterGuideScene(index,parent)
+    local GuideView = require ("view.guide.GuideView")
+    local guideView = GuideView.create(index)
+    parent:addChild(guideView)
+end
+
 function CorePlayManager.initTotalUnitPlay()
     -- check current unit count 
     print('enterunitplay')

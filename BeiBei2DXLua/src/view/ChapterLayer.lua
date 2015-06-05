@@ -119,6 +119,7 @@ function ChapterLayer:ctor()
     self:addBeansUI()       --贝贝豆图标    右上
     self:addTaskBOX()       --放置任务的宝箱
 
+    s_CorePlayManager.enterGuideScene(5,self)
 end
 
 -- 检查是否有任务（如复习boss)
