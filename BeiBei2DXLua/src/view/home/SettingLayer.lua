@@ -6,23 +6,16 @@ local RegisterAccountView = require("view.login.RegisterAccountView") --注册�
 local MoreInfomationView = require("view.home.MoreInformationView")   --修改/查看个人信息
 
 local SettingLayer = class("SettingLayer",function ()
-	local layout = cc.Sprite:create("image/homescene/setup_background.png")
-	return layout
+	-- local layout = cc.Sprite:create("image/homescene/setup_background.png")
+	-- return layout
+	local layer = cc.Layer:create()
+	return layer
 end)
 
 --构造
 function SettingLayer:ctor(homeLayer)
+--function SettingLayer:ctor()
     self.homeLayer = homeLayer --HomeLayer的引用
-	-- self.username = "游客"
- --    self.logo_name = {"head","book","information","logout"}
- --    self.label_name = {username,"选择书籍","完善个人信息","切换帐号"}
-
-
- --    if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
- --        username = s_CURRENT_USER:getNameForDisplay()
- --        logo_name = {"head","book","information","logout"}
- --        label_name = {username,"选择书籍","查看个人信息",TEXT_CHANGE_ACCOUNT}
- --    end
  	self.logo_name = {"book","information","logout"}
  	self.btns = {} --列表按钮集合
  	self.offset = 500
@@ -31,59 +24,83 @@ end
 
 --初始化UI
 function SettingLayer:initUI()
-	self:setAnchorPoint(1,0.5)
-	--头像什么的容器
-	-- local button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
-	local button_back = cc.Sprite:create("image/homescene/setup_button.png")
-	local size = button_back:getContentSize()
-	button_back:setPosition(0, s_DESIGN_HEIGHT - size.height * (1 - 1) - 80)
-	button_back:setAnchorPoint(0,1)
-	self:addChild(button_back)
-    self.button_back = button_back
+
+	--创建背景图片
+    local backGround = cc.Sprite:create("image/homescene/set_background.png")
+    backGround:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
+    backGround:setAnchorPoint(0.5,0.5)
+    backGround:ignoreAnchorPointForPosition(false)
+    self:addChild(backGround)
+    self.backGround = backGround
+
+    local width = self.backGround:getContentSize().width
+    local height = self.backGround:getContentSize().height
+	-- --头像什么的容器
+	-- -- local button_back = ccui.Button:create("image/homescene/setup_button.png","image/homescene/setup_button.png","")
+	-- local button_back = cc.Sprite:create("image/homescene/setup_button.png")
+	-- local size = button_back:getContentSize()
+	-- button_back:setPosition(0, s_DESIGN_HEIGHT - size.height * (1 - 1) - 80)
+	-- button_back:setAnchorPoint(0,1)
+	-- self:addChild(button_back)
+ --    self.button_back = button_back
     --头像
     local headlogo = cc.Sprite:create("image/PersonalInfo/hj_personal_avatar.png")
-    headlogo:setPosition(size.width - self.offset + 120, size.height/2 + 40)
-    button_back:addChild(headlogo)
+    headlogo:setPosition(width/2 - 130,height - 100)
+    backGround:addChild(headlogo)
     headlogo:setScale(0.9)
     self.headlogo = headlogo
     --姓名文本
     local labelname = cc.Label:createWithSystemFont(s_CURRENT_USER:getNameForDisplay(),"",36)
-    labelname:setPosition(size.width - self.offset + 210, size.height/2 + 30)    
+    labelname:setPosition(width/2,height - 100)    
     labelname:setColor(cc.c4b(0,0,0,255))
     labelname:setAnchorPoint(0, 0)
-    button_back:addChild(labelname)
+    backGround:addChild(labelname)
     self.labelname = labelname
     --正在学习的文本
     local labellearn = cc.Label:createWithSystemFont('正在学习词汇',"",24)
-    labellearn:setPosition(size.width - self.offset + 210, size.height/2 + 30)
+    labellearn:setPosition(width/2-60,height-140)
     labellearn:setColor(cc.c4b(0,0,0,255))
     labellearn:setAnchorPoint(0, 1)
-    button_back:addChild(labellearn)
+    backGround:addChild(labellearn)
     self.labellearn = labellearn
-    --分割线
-    local split = cc.LayerColor:create(cc.c4b(150,150,150,255),854,1)
-    split:ignoreAnchorPointForPosition(false)
-    split:setAnchorPoint(0.5,0)
-    split:setPosition(size.width/2, 0)
-    self:addChild(split)
+
+    --创建关闭按钮
+    local closeButton = ccui.Button:create("image/popupwindow/closeButtonRed.png")
+    closeButton:setPosition(width-30,height-30)
+    backGround:addChild(closeButton)
+    closeButton:addTouchEventListener(handler(self,self.onCloseTouch))
+    closeButton:setAnchorPoint(0.5,0.5)
+    closeButton:ignoreAnchorPointForPosition(false)
+    self.closeButton = closeButton
+
+    -- --分割线
+    -- local split = cc.LayerColor:create(cc.c4b(150,150,150,255),854,1)
+    -- split:ignoreAnchorPointForPosition(false)
+    -- split:setAnchorPoint(0.5,0)
+    -- split:setPosition(width/2, 0)
+    -- self:addChild(split)
 
     local followButton = ccui.Button:create("image/homescene/attention_button.png","image/homescene/attention_button_press.png","image/homescene/attention_button_press.png")
-    followButton:setAnchorPoint(0,1)
-    followButton:setPosition(400,190)
-    self:addChild(followButton,10)
+    followButton:setAnchorPoint(0.5,0.5)
+    followButton:setPosition(width/2-80,140)
+    backGround:addChild(followButton)
     local deco = cc.Sprite:create("image/homescene/attention_beibei1.png")
-    deco:setPosition(750,100)
-    self:addChild(deco, 10)
+    deco:setPosition(width-100,100)
+    backGround:addChild(deco, 10)
     local text = cc.Label:createWithSystemFont("关注贝贝","",36)
     text:setColor(cc.c4b(255,255,255,255))
     text:setPosition(followButton:getContentSize().width/2, followButton:getContentSize().height/2)
     followButton:addChild(text)
     followButton:addTouchEventListener(handler(self,self.onFollowTouch))
 
+
+
     --按钮的回调函数
     self.btncall1 = handler(self, self.onChangeBookTouch)
     self.btncall2 = handler(self, self.onInfoTouch)
     self.btncall3 = handler(self, self.onLoginTouch)
+
+    self:updateView()
 end
 
 --更新显示数据
@@ -126,19 +143,22 @@ function SettingLayer:updateView()
     	size = btn:getContentSize()  --只调用一次好
         btn:setOpacity(0)
         btn:setAnchorPoint(0, 1)
-        btn:setPosition(0, s_DESIGN_HEIGHT - size.height * k - 80)
+        btn:setPosition(0, s_DESIGN_HEIGHT - size.height * k - 300)
+        --print("qweqweqwe"..self["btncall"..k])
         btn:addTouchEventListener(self["btncall"..k])
-        self:addChild(btn)
+        --self:addChild(btn)
+        self.backGround:addChild(btn)
         self.btns[#self.btns + 1] = btn
         --图标
         logo = cc.Sprite:create("image/homescene/setup_"..self.logo_name[k]..".png")
-        logo:setPosition(size.width - self.offset + 120, size.height / 2)
+        --logo:setPosition(size.width - self.offset + 120, size.height / 2)
+        logo:setPosition(100, size.height / 2)
         btn:addChild(logo)
         --文本
         label = cc.Label:createWithSystemFont(self.label_name[k],"",32)
         label:setColor(cc.c4b(0,0,0,255))
         label:setAnchorPoint(0, 0.5)
-        label:setPosition(size.width - self.offset + 200, size.height / 2)
+        label:setPosition(200, size.height / 2)
         btn:addChild(label)
 
        	local split = cc.LayerColor:create(cc.c4b(150,150,150,255),854,1)
@@ -154,6 +174,15 @@ function SettingLayer:updateView()
     end
 end
 
+--点击关闭按钮
+function SettingLayer:onCloseTouch(sender,eventType)
+    if eventType ~= ccui.TouchEventType.ended then
+        return 
+    end
+    s_SCENE:removeAllPopups()
+    
+end
+
 --更换课本 触摸事件
 function SettingLayer:onChangeBookTouch(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
@@ -162,6 +191,7 @@ function SettingLayer:onChangeBookTouch(sender,eventType)
 
 	playSound(s_sound_buttonEffect)
 	AnalyticsChangeBookBtn()
+	s_SCENE:removeAllPopups()
 	--选书
 	s_CorePlayManager.enterBookLayer(s_CURRENT_USER.bookKey)
 end
@@ -186,7 +216,7 @@ function SettingLayer:onInfoTouch(sender,eventType)
 		if  online == false then
 	        self.homeLayer.offlineTipHome.setTrue(OfflineTipForHome_ImproveInformation)
 	    else
-	        local regiserView = RegisterAccountView.new()
+	        local regiserView = RegisterAccountView.new(RegisterAccountView.STEP_1)
 	        s_SCENE:popup(regiserView)
 	        --回调关闭函数 用来更新界面
 	        regiserView.close = handler(self, self.closeCallBack)
@@ -254,3 +284,4 @@ end
 
 
 return SettingLayer
+
