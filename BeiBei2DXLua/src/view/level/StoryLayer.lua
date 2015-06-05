@@ -75,7 +75,7 @@ function StoryLayer:directStory(requestTag)   -- request tag:发起切换剧情�
 		local action2 = cc.FadeOut:create(0.8)
 		local action3 = cc.Spawn:create(action1, action2)
 		self:getChildByName('drama3'):runAction(action3)
-		self:addIntroduction4() 
+		self:addIntroduction6() 
 	elseif self.tag == 4 then
 		self.tag = self.tag + 1
 		local action1 = cc.MoveBy:create(0.8, cc.p(-s_DESIGN_WIDTH*2, 0))
@@ -127,6 +127,9 @@ function StoryLayer:addIntroduction2()
 	drama:addAnimation(0, 'animation', false)
 	drama:setName("drama2")
 	self:addChild(drama)
+	if s_CURRENT_USER.guideStep < s_guide_step_enterStory2 then
+        s_CURRENT_USER:setGuideStep(s_guide_step_enterStory2)
+    end
 	self:callFuncWithDelay(2, function()
 		self:directStory(2)
 	end)
@@ -139,6 +142,9 @@ function StoryLayer:addIntroduction3()
 	drama:addAnimation(0, 'animation', true)
 	drama:setName("drama3")
 	self:addChild(drama)
+	if s_CURRENT_USER.guideStep < s_guide_step_enterStory3 then
+        s_CURRENT_USER:setGuideStep(s_guide_step_enterStory3)
+    end
 	self:callFuncWithDelay(2, function()
 		self:directStory(3)
 	end)
@@ -175,6 +181,9 @@ function StoryLayer:addIntroduction6()
 	drama:addAnimation(0, 'animation', true)
 	drama:setName("drama6")
 	self:addChild(drama)
+	if s_CURRENT_USER.guideStep < s_guide_step_enterStory4 then
+        s_CURRENT_USER:setGuideStep(s_guide_step_enterStory4)
+    end
 	-- self:callFuncWithDelay(2.5, function()
 	-- 	self:directStory(6)
 	-- end)
@@ -183,7 +192,9 @@ function StoryLayer:addIntroduction6()
 	drama:addChild(button)
 
 	button.func = function ()
-
+		if s_CURRENT_USER.guideStep < s_guide_step_tryBoss then
+        	s_CURRENT_USER:setGuideStep(s_guide_step_tryBoss)
+    	end
 		local SummaryBossLayer = require('view.summaryboss.SummaryBossLayer')
         local summaryBossLayer = SummaryBossLayer.create(nil,0,true)
         s_SCENE:replaceGameLayer(summaryBossLayer) 
@@ -197,7 +208,9 @@ function StoryLayer:addIntroduction7()
 	drama:addAnimation(0, 'animation', true)
 	drama:setName("drama7")
 	self:addChild(drama)
-
+	if s_CURRENT_USER.guideStep < s_guide_step_enterStory7 then
+        s_CURRENT_USER:setGuideStep(s_guide_step_enterStory7)
+    end
 	-- TODO
 	self:callFuncWithDelay(2, function()
 		self:directStory(7)
