@@ -30,6 +30,7 @@ function StoryLayer:ctor(tag)
 	self:addSkipButton()
 end
 
+-- 添加skip 选项
 function StoryLayer:addSkipButton()
 	local click_skip = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -51,6 +52,9 @@ function StoryLayer:addSkipButton()
     skipButton:addChild(skipLabel)
 end
 
+-- 控制播放动画的逻辑
+-- requestTag:请求切换场景的动画tag
+-- skip:这次切换请求是否由于点击skip引起
 function StoryLayer:directStory(requestTag)   -- request tag:发起切换剧情请求的tag
 	if requestTag - self.tag < 0 then 
 		return -- request disabled (because skip button)
@@ -61,14 +65,24 @@ function StoryLayer:directStory(requestTag)   -- request tag:发起切换剧情�
 		local action2 = cc.FadeOut:create(0.8)
 		local action3 = cc.Spawn:create(action1, action2)
 		self:getChildByName('drama1'):runAction(action3)
-		self:addIntroduction2() 
+		if self.skip then
+			self.tag = 6
+			self:addIntroduction6() 
+		else
+			self:addIntroduction2() 
+		end
 	elseif self.tag == 2 then
 		self.tag = self.tag + 1
 		local action1 = cc.MoveBy:create(0.8, cc.p(-s_DESIGN_WIDTH*2, 0))
 		local action2 = cc.FadeOut:create(0.8)
 		local action3 = cc.Spawn:create(action1, action2)
 		self:getChildByName('drama2'):runAction(action3)
-		self:addIntroduction3() 
+		if self.skip then
+			self.tag = 6
+			self:addIntroduction6() 
+		else
+			self:addIntroduction3() 
+		end
 	elseif self.tag == 3 then
 		-- self.tag = self.tag + 1
 		self.tag = 6
