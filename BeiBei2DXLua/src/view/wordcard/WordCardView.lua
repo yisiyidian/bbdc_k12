@@ -16,7 +16,11 @@ function WordCardView:ctor(index)
 	-- 用于显示词库
 	self:initUI()
 	-- 初始化UI
-    s_CorePlayManager.enterGuideScene(7,self)
+	-- 添加引导
+    if s_CURRENT_USER.guideStep == s_guide_step_enterPopup then
+        s_CorePlayManager.enterGuideScene(7,self)
+        s_CURRENT_USER:setGuideStep(s_guide_step_enterCard) 
+    end
 end
 
 function WordCardView:initUI()

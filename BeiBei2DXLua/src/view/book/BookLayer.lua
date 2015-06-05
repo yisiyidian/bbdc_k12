@@ -329,7 +329,7 @@ function BookLayer.create(education)
 
     --layer:popupAccountBind()
     -- 添加引导
-    if s_CURRENT_USER.guideStep == 1 then
+    if s_CURRENT_USER.guideStep == s_guide_step_selectGrade then
         s_CorePlayManager.enterGuideScene(2,layer)
         s_CURRENT_USER:setGuideStep(s_guide_step_selectBook) 
     end

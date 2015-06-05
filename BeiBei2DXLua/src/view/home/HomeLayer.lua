@@ -380,7 +380,7 @@ function HomeLayer:ctor()
         end
     end
     -- 添加引导
-    if s_CURRENT_USER.guideStep == 2 then
+    if s_CURRENT_USER.guideStep == s_guide_step_selectBook then
         s_CorePlayManager.enterGuideScene(3,self)
         s_CURRENT_USER:setGuideStep(s_guide_step_enterHome) 
     end

@@ -119,7 +119,17 @@ function ChapterLayer:ctor()
     self:addBeansUI()       --贝贝豆图标    右上
     self:addTaskBOX()       --放置任务的宝箱
 
-    s_CorePlayManager.enterGuideScene(5,self)
+    -- 添加引导
+    if s_CURRENT_USER.guideStep == s_guide_step_enterStory5 then
+        s_CorePlayManager.enterGuideScene(5,self)
+        s_CURRENT_USER:setGuideStep(s_guide_step_enterLevel) 
+    end
+
+    -- 添加引导
+    if s_CURRENT_USER.guideStep == s_guide_step_second then
+        s_CorePlayManager.enterGuideScene(8,self)
+        s_CURRENT_USER:setGuideStep(s_guide_step_bag1) 
+    end
 end
 
 -- 检查是否有任务（如复习boss)
