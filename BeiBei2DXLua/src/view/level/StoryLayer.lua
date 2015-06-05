@@ -70,7 +70,8 @@ function StoryLayer:directStory(requestTag)   -- request tag:发起切换剧情�
 		self:getChildByName('drama2'):runAction(action3)
 		self:addIntroduction3() 
 	elseif self.tag == 3 then
-		self.tag = self.tag + 1
+		-- self.tag = self.tag + 1
+		self.tag = 6
 		local action1 = cc.MoveBy:create(0.8, cc.p(-s_DESIGN_WIDTH*2, 0))
 		local action2 = cc.FadeOut:create(0.8)
 		local action3 = cc.Spawn:create(action1, action2)
@@ -208,8 +209,8 @@ function StoryLayer:addIntroduction7()
 	drama:addAnimation(0, 'animation', true)
 	drama:setName("drama7")
 	self:addChild(drama)
-	if s_CURRENT_USER.guideStep < s_guide_step_enterStory7 then
-        s_CURRENT_USER:setGuideStep(s_guide_step_enterStory7)
+	if s_CURRENT_USER.guideStep < s_guide_step_enterStory5 then
+        s_CURRENT_USER:setGuideStep(s_guide_step_enterStory5)
     end
 	-- TODO
 	self:callFuncWithDelay(2, function()
