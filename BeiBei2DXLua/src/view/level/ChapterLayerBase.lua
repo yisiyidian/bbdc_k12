@@ -67,10 +67,7 @@ function ChapterLayerBase:createObjectForResource(t)
         if t[3]~=nil then
             object:setPosition(t[3].x,t[3].y)
         end
---        if t[4]~=nil and t[4]== "island" then
---            object:setTag(islandTag)
---            islandTag=islandTag + 1
---        end
+
         if t[4] ~= nil then
             if t[4] == "back" then
                 self:addChild(object,40)

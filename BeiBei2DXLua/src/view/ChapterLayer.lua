@@ -286,13 +286,13 @@ function ChapterLayer:checkUnlockLevel()
             self.activeChapterEndIndex = self.activeChapterEndIndex + 1
             self.biggestChapterIndex = self.biggestChapterIndex + 1
         end)
-        self:callFuncWithDelay(1.0, function() 
+        self:callFuncWithDelay(1.8, function() 
             self.chapterDic[currentChapterKey]:plotUnlockLevelAnimation('level'..currentProgress)
         end)
         self:callFuncWithDelay(0.5, function() 
-            self:scrollLevelLayer(currentProgress,0.3)
+            self:scrollLevelLayer(currentProgress,1.3)
         end)
-        self:callFuncWithDelay(2.0, function() 
+        self:callFuncWithDelay(2.7, function() 
             self:addBottomBounce()
         end)
     -- 解锁小关卡
@@ -347,6 +347,7 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
         self.listView:pushBackCustomItem(self.chapterDic[chapterKey])
     end
 end
+
 -- scroll self.listView to show the specific chapter and level
 function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
         print('enter scrollLevelLayer...levelIndex:'..levelIndex)
@@ -368,27 +369,6 @@ function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
         local chapterCount = math.floor((currentLevelCount-1) / 10)
         local levelCount = math.floor((currentLevelCount-1) % 10) + 1
 
-        -- local temp = 0
-        -- if levelCount <= 2 then 
-        --     levelCount = 0
-        -- elseif levelCount == 2 then
-        --     temp = 31.55
-        -- elseif levelCount == 3 then
-        --     temp = 39.83
-        -- elseif levelCount == 4 then
-        --     temp = 48.97
-        -- elseif levelCount == 5 then
-        --     temp = 57.89
-        -- elseif levelCount == 6 then
-        --     temp = 68.69
-        -- elseif levelCount == 7 then
-        --     temp = 78.31
-        -- elseif levelCount == 8 then
-        --     temp = 91.93
-        -- else 
-        --     temp = 100
-        -- end
-        -- temp = temp / 100
         if chapterCount == 0 then
             if levelCount == 3 then
                 levelCount = 1.7
