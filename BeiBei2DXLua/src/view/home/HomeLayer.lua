@@ -7,6 +7,7 @@ require("common.global")
 -- local AlterI = require("view.alter.AlterI")
 local GuideView = require ("view.guide.GuideView")
 local SettingLayer = require("view.home.SettingLayer") --设置界面
+
 local MissionProgress = require("view.home.MissionProgressLayer") --中间的原型开始按钮
 local OfflineTipHome = require("view.offlinetip.OfflineTipForHome")
 local OfflineTipFriend = require("view.offlinetip.OfflineTipForFriend")
@@ -125,12 +126,12 @@ function HomeLayer:ctor()
     self.offlineTipFriend = offlineTipFriend
     self:addChild(offlineTipHome,2)
     self:addChild(offlineTipFriend,2)
-    --设置界面
-    local setting_back = SettingLayer.new(self)
-    setting_back:setPosition(0, s_DESIGN_HEIGHT/2)
-    setting_back:updateView()
-    self.setting_back = setting_back
-    backColor:addChild(setting_back)
+    -- --设置界面
+    -- local setting_back = SettingLayer.new(self)
+    -- setting_back:setPosition(0, s_DESIGN_HEIGHT/2)
+    -- setting_back:updateView()
+    -- self.setting_back = setting_back
+    -- backColor:addChild(setting_back)
     --任务开始按钮
     local mission_progress = nil
     --是否打卡
@@ -399,7 +400,7 @@ function HomeLayer:ctor()
 
             local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            self.setting_back:runAction(cc.Sequence:create(action2, action3))
+            --self.setting_back:runAction(cc.Sequence:create(action2, action3))
 
         elseif self.isDataShow == true and #isPopup == 0 then
             self.isDataShow = false
@@ -487,7 +488,7 @@ function HomeLayer:onTouchMoved(touch, event)
 
             local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            self.setting_back:runAction(cc.Sequence:create(action2, action3))
+            --self.setting_back:runAction(cc.Sequence:create(action2, action3))
         end
     end
 end
@@ -497,20 +498,20 @@ function HomeLayer:onTouchEnded(touch,event)
     local start_y = self.start_y
     
     local location = self:convertToNodeSpace(touch:getLocation())
-    if not cc.rectContainsPoint(self.setting_back:getBoundingBox(),location) and self.viewIndex == 2 then
-        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+    -- if not cc.rectContainsPoint(self.setting_back:getBoundingBox(),location) and self.viewIndex == 2 then
+    --     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
-        self.mission_progress.stopListener = false
+    --     self.mission_progress.stopListener = false
 
-        self.viewIndex = 1
+    --     self.viewIndex = 1
 
-        local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-        self.backColor:runAction(action1)
+    --     local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
+    --     self.backColor:runAction(action1)
 
-        local action2 = cc.DelayTime:create(0.5)
-        local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-        self.setting_back:runAction(cc.Sequence:create(action2, action3))
-    end
+    --     local action2 = cc.DelayTime:create(0.5)
+    --     local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+    --     self.setting_back:runAction(cc.Sequence:create(action2, action3))
+    -- end
     if not self.isDataShow then
         if math.abs(location.y - start_y) > 10 or math.abs(location.x - start_x) > 10 then
             return
@@ -628,29 +629,33 @@ function HomeLayer:onBtnSettingTouch(sender,eventType)
             self.offlineTipHome.setFalse()
             self.offlineTipFriend.setFalse()
         end
+        local SettingLayer = require("view.home.SettingLayer")
+        local settinglayer = SettingLayer.new()
+        --SetLayerRender:updateView()
+        s_SCENE:popup(settinglayer)
 
-        if self.viewIndex == 1 then
-            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            self.mission_progress.stopListener = true
-            self.viewIndex = 2
-            local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH / 2 + self.offset,s_DESIGN_HEIGHT/2))
-            self.backColor:runAction(action1)
+        -- if self.viewIndex == 1 then
+            -- s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            -- self.mission_progress.stopListener = true
+            -- self.viewIndex = 2
+            -- local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH / 2 + self.offset,s_DESIGN_HEIGHT/2))
+            -- self.backColor:runAction(action1)
 
-            local action2 = cc.DelayTime:create(0.5)
-            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            self.setting_back:runAction(cc.Sequence:create(action2, action3))
+            -- local action2 = cc.DelayTime:create(0.5)
+            -- local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+            -- self.setting_back:runAction(cc.Sequence:create(action2, action3))
             --offline tip
-        else
-            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            self.mission_progress.stopListener = false
-            self.viewIndex = 1
-            local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-            self.backColor:runAction(action1)
+        -- else
+            -- s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            -- self.mission_progress.stopListener = false
+            -- self.viewIndex = 1
+            -- local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
+            -- self.backColor:runAction(action1)
 
-            local action2 = cc.DelayTime:create(0.5)
-            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            self.setting_back:runAction(cc.Sequence:create(action2, action3))
-        end 
+            -- local action2 = cc.DelayTime:create(0.5)
+            -- local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+            -- self.setting_back:runAction(cc.Sequence:create(action2, action3))
+        -- end 
     end
 end
 
@@ -677,7 +682,7 @@ function HomeLayer:changeViewToFriendOrShop(destination)
         self.viewIndex = 1
         local action2 = cc.DelayTime:create(0.5)
         local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-        self.setting_back:runAction(cc.Sequence:create(action2, action3))
+        --self.setting_back:runAction(cc.Sequence:create(action2, action3))
     end
     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
        local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2 - bigWidth,s_DESIGN_HEIGHT/2))

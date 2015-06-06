@@ -494,7 +494,7 @@ function ChapterLayer:addBackToHome()
     homeButton:setAnchorPoint(0,1)
     homeButton:setPosition(s_LEFT_X + 30  , s_DESIGN_HEIGHT - 32 )
     homeButton:setLocalZOrder(1)
-    self:addChild(homeButton,200)
+    self:addChild(homeButton)
     
     onAndroidKeyPressed(self, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()
@@ -513,7 +513,7 @@ function ChapterLayer:addTaskBOX()
     boxButton:ignoreAnchorPointForPosition(false)
     boxButton:setPosition(s_RIGHT_X-180 ,180)
     boxButton:setTouchEnabled(true)
-    self:addChild(boxButton,200)
+    self:addChild(boxButton)
     boxButton:setBright(true)
     self.boxButton = boxButton
 
