@@ -1,5 +1,5 @@
 
--- 引导功能UI
+-- 引导功能显示label
 -- by 侯琪
 -- 2015年06月05日11:27:18
 local GuideConfig = require ("model/guide/GuideConfig.lua")
