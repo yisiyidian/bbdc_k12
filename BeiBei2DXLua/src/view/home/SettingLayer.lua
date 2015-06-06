@@ -1,9 +1,9 @@
 -- 设置面板，在HomeLayer左侧
--- Author: whe
--- Date: 2015-05-13 16:12:08
 --
 local RegisterAccountView = require("view.login.RegisterAccountView") --注册账号界面
 local MoreInfomationView = require("view.home.MoreInformationView")   --修改/查看个人信息
+local PopupModel = require("popup.PopupModel")
+--local IntroLayer = require("view.login.IntroLayer")
 
 local SettingLayer = class("SettingLayer",function ()
 	-- local layout = cc.Sprite:create("image/homescene/setup_background.png")
@@ -15,7 +15,7 @@ end)
 --构造
 function SettingLayer:ctor(homeLayer)
 --function SettingLayer:ctor()
-    self.homeLayer = homeLayer --HomeLayer的引用
+  self.homeLayer = homeLayer --HomeLayer的引用
  	self.logo_name = {"book","information","logout"}
  	self.btns = {} --列表按钮集合
  	self.offset = 500
@@ -145,6 +145,7 @@ function SettingLayer:updateView()
         btn:setAnchorPoint(0, 1)
         btn:setPosition(0, s_DESIGN_HEIGHT - size.height * k - 300)
         --print("qweqweqwe"..self["btncall"..k])
+        -- btn:addTouchEventListener(handler(self, self.onInfoTouch))
         btn:addTouchEventListener(self["btncall"..k])
         --self:addChild(btn)
         self.backGround:addChild(btn)
@@ -161,6 +162,7 @@ function SettingLayer:updateView()
         label:setPosition(200, size.height / 2)
         btn:addChild(label)
 
+        --分割线
        	local split = cc.LayerColor:create(cc.c4b(150,150,150,255),854,1)
         split:ignoreAnchorPointForPosition(false)
         split:setAnchorPoint(0.5,0)
@@ -207,7 +209,8 @@ function SettingLayer:onInfoTouch(sender,eventType)
 	if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
 		--如果当前用户是注册的用户 则显示查看个人信息
         local moreview = MoreInfomationView.new()
-        s_SCENE:popup(moreview)
+        --s_SCENE:popup(moreview)
+        s_SCENE.popupLayer:addChild(moreview)
         ----回调关闭函数 用来更新界面
         moreview.close = handler(self, self.closeCallBack)
 	else
@@ -216,9 +219,12 @@ function SettingLayer:onInfoTouch(sender,eventType)
 		if  online == false then
 	        self.homeLayer.offlineTipHome.setTrue(OfflineTipForHome_ImproveInformation)
 	    else
-	        local regiserView = RegisterAccountView.new(RegisterAccountView.STEP_1)
-	        s_SCENE:popup(regiserView)
+	        local regiserView = RegisterAccountView.new()
+            -- s_SCENE:popup(regiserView,self)
+            s_SCENE.popupLayer:addChild(regiserView)
+	        -- s_SCENE:popup(regiserView,self)
 	        --回调关闭函数 用来更新界面
+            print(self.closeCallBack)
 	        regiserView.close = handler(self, self.closeCallBack)
 	    end
 	end
