@@ -19,13 +19,13 @@ function Crab:ctor(word)
     self.crab = CCBReaderLoad("ccb/crab1.ccbi", proxy, self.ccbcrab,self.ccb)
     self.crab:setPosition(s_DESIGN_WIDTH * 0.5, -s_DESIGN_HEIGHT * 0.1)
     self:addChild(self.crab)
-    if s_CURRENT_USER.bossTutorialStep < s_K12_summaryBoss then
-        self.ccbcrab['meaningSmall']:setString(word)
-        self.ccbcrab['meaningBig']:setString(word)
-    else
+    -- if s_CURRENT_USER.bossTutorialStep < s_K12_summaryBoss then
+    --     self.ccbcrab['meaningSmall']:setString(word)
+    --     self.ccbcrab['meaningBig']:setString(word)
+    -- else
         self.ccbcrab['meaningSmall']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall)
         self.ccbcrab['meaningBig']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall)
-    end
+    -- end
     self:big()
     self:moveIn()
     s_SCENE:callFuncWithDelay(0.5,function (  )

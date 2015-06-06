@@ -15,6 +15,10 @@ local Mat = class("Mat", function()
 end)
 
 function Mat.create(bosslayer, isNewPlayerModel, spineName)
+    local director = cc.Director:getInstance()
+    -- if isNewPlayerModel then
+    --     director:getActionManager():pauseTarget(bosslayer.boss)
+    -- end
 
     local word = bosslayer.wordList[1][1]
     local m = bosslayer.mat_length
@@ -114,7 +118,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
             if diff >= 0 and diff < string.len(main_word) then
                 node = FlipNode.create(spineName, string.sub(main_word,diff+1,diff+1), i, j)
                 node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
-                main:addChild(node) 
+                main:addChild(node,1) 
 
                 --add bullet 
                 bullet = NodeBulletAnimation.create()
@@ -191,7 +195,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         finger:ignoreAnchorPointForPosition(false)
         finger:setAnchorPoint(0.2,0.8)
         finger:setScale(1.5)
-        main:addChild(finger) 
+        main:addChild(finger,1) 
 
         local action0 = cc.DelayTime:create(0.5)
         local action2 = cc.DelayTime:create(1 + 0.3 * string.len(main_word))
@@ -296,14 +300,19 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     
     if isNewPlayerModel == true then
         s_SCENE:callFuncWithDelay(1.2,function (  )
+            
             local hintBoard = cc.Sprite:create('image/summarybossscene/hint_slide.png')
             hintBoard:setPosition(0.5 * s_DESIGN_WIDTH,0.72 * s_DESIGN_HEIGHT - 180)
-            main:addChild(hintBoard)
+            main:addChild(hintBoard,1)
             hintBoard:setName('board')
             main.guidePoint()
             main.cocoAnimation()   
             main.finger_action()
             firstFlipNode:stopAllActions()
+            local curtain = cc.LayerColor:create(cc.c4b(0,0,0,150),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
+            main:addChild(curtain)
+            curtain:setPosition(s_LEFT_X,-150)
+            curtain:setName("curtain")
         end)
     end
 
@@ -511,9 +520,13 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
 
     onTouchBegan = function(touch, event)
 
+        if not main:isVisible() then
+            return false
+        end
+
         local location = main:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint({x=0,y=0,width=main:getBoundingBox().width,height=main:getBoundingBox().height}, location) then
-            return false
+            return true
         end
 
         if main.globalLock then
@@ -696,6 +709,10 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     end
 
     successFunction = function ()
+        if isNewPlayerModel then
+            director:getActionManager():resumeTarget(bosslayer.boss)
+            main:removeChildByName("curtain")
+        end
         if main.rightLock then
             main.globalLock = true
         end
@@ -752,15 +769,29 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         judgementFunction()
     end
 
-
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
     listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = main:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
+    
+
+    local function update( delta )
+        if main:isVisible() then
+            director:getActionManager():pauseTarget(bosslayer.boss)
+            main:unscheduleUpdate()
+        end
+    end
+
+    if isNewPlayerModel then
+        listener:setSwallowTouches(true)
+        main:scheduleUpdateWithPriorityLua(update, 0)
+    end
+
 
     return main
+
 end
 
 return Mat

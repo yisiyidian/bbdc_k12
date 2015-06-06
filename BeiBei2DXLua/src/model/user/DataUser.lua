@@ -123,7 +123,8 @@ function DataUser:ctor()
 
     self.k12SmallStep                      = 0
     self.summaryStep                       = 0
-    self.bossTutorialStep                  = 0
+    self.needBossSlideTutorial             = 0 -- 划词引导
+    self.needBossChangeWordTutorial        = 0 -- 换词引导
     -- 是否是过出现boss换词引导
     self.isFirstBossGuide                  = 0
 
@@ -142,13 +143,6 @@ function DataUser:setSummaryStep(step)
         self.summaryStep = step
         saveUserToServer({['summaryStep']=self.summaryStep})
         AnalyticsSummaryStep(step)
-    end
-end
-
-function DataUser:setBossTutorialStep(step)
-    if self.bossTutorialStep < step then
-        self.bossTutorialStep = step
-        saveUserToServer({['bossTutorialStep']=self.bossTutorialStep})
     end
 end
 
