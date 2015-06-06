@@ -309,21 +309,21 @@ function SummaryBossAlter:win1(entrance)
         s_isCheckInAnimationDisplayed = false
     end
 
-    if not hasCheckedIn and self.bossLayer.oldUnit == nil then
-        local missionCompleteCircle = require('view.MissionCompleteCircle').create()
-        s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
-        self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
-            self:win2(entrance,hasCheckedIn)
-            if entrance == ENTRANCE_NORMAL and self.needToAddBean then
-                s_CorePlayManager.leaveSummaryModel(true)
-            end
-        end,{})))
-    else
-        self:win2(entrance,hasCheckedIn)
-        if entrance == ENTRANCE_NORMAL and self.needToAddBean then
-            s_CorePlayManager.leaveSummaryModel(true)
-        end
+    -- if not hasCheckedIn and self.bossLayer.oldUnit == nil then
+    --     local missionCompleteCircle = require('view.MissionCompleteCircle').create()
+    --     s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
+    --     self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
+    --         self:win2(entrance,hasCheckedIn)
+    --         if entrance == ENTRANCE_NORMAL and self.needToAddBean then
+    --             s_CorePlayManager.leaveSummaryModel(true)
+    --         end
+    --     end,{})))
+    -- else
+    self:win2(entrance,hasCheckedIn)
+    if entrance == ENTRANCE_NORMAL and self.needToAddBean then
+        s_CorePlayManager.leaveSummaryModel(true)
     end
+    -- end
 end
 
 function SummaryBossAlter:win2(entrance,hasCheckedIn)
