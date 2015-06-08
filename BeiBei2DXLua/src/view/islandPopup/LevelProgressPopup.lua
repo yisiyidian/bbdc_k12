@@ -91,6 +91,10 @@ function LevelProgressPopup:createSummary(index)
         local bossList = s_LocalDatabaseManager.getAllUnitInfo()
         local maxID = s_LocalDatabaseManager.getMaxUnitID()
         if self.unit.coolingDay > 0 or self.unit.unitState >= 5 then
+            -- 记录用户点击的关卡号
+            -- print('user unit:'..self.unit.unitID)
+            s_game_fail_level_index = self.unit.unitID - 1
+
             showProgressHUD('', true)
             --print('replay island')
             local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')

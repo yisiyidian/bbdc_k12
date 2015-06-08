@@ -1,29 +1,41 @@
-app_version_debug   = 211000
-app_version_release = 211000
+-- 2015年06月04日15:34:42
+-- 侯琪
+-- 版本号
+app_version_debug   = 212000
+app_version_release = 212000
 
+
+-- 初始化常量
 local function _initConstant()
     -- number
+    -- 每个小岛的收集的错词上限
     s_max_wrong_num_everyday                = 10
+    -- 第一个小岛错词上限，特殊处理
     s_max_wrong_num_first_island            = 3
-
+    -- 没搜到
+    -- *******************************************
     s_gamestate_reviewbossmodel_beforetoday = 1
     s_gamestate_studymodel                  = 2
     s_gamestate_reviewmodel                 = 3
     s_gamestate_studymodel_extra            = 4
-    s_gamestate_reviewmodel_extra           = 5
+    s_gamestate_reviewmodel_extra           = 5 
+    s_gamestate_reviewbossmodel_today       = 9
+    -- *******************************************
+    -- 小岛面板状态
     s_level_popup_state                     = 0
 
-    -- checkInAnimation state
+    --打卡标志
     s_isCheckInAnimationDisplayed           = true
+
+    -- 记录挑战失败时的数据
+    -- boss失败的后的标志，非凡用
+    s_game_fail_state                       = 0  -- 挑战是否失败
+    s_game_fail_level_index                 = 0  -- 挑战失败时所选择的关卡
     
-    --need to do next version maybe
-    s_gamestate_reviewbossmodel_today       = 9
     
-    
-    --
+    --常用资源
     s_spineCoconutLightJson   = "res/spine/coconut_light.json"
     s_spineCoconutLightAtalas = "res/spine/coconut_light.atlas"
-
     s_sound_Aluminum_Can_Open = 'res/sound/Aluminum_Can_Open.mp3'
     s_sound_bgm1 = 'res/sound/bgm1.mp3'
     s_sound_buttonEffect = 'res/sound/buttonEffect.mp3'
@@ -56,12 +68,19 @@ local function _initConstant()
     s_sound_win = 'res/sound/win.mp3'
     s_sound_wrong = 'res/sound/wrong.mp3'
 
+    -- 没搜到
+    -- *******************************************
     CUSTOM_EVENT_SIGNUP = 'CUSTOMxx_EVENT_SIGNUP'
     CUSTOM_EVENT_LOGIN = 'CUSTOMxx_EVENT_LOGIN'
+    -- *******************************************
 
+    -- 初始化词库
     s_WordDictionaryDatabase = s_WordDictionaryDatabase or require('model.WordDictionaryDatabase')
+    -- DEVELOPMENT_MODE 模式在模拟器使用
+    -- debug or release 模式在真机条件下测试
     if not IS_DEVELOPMENT_MODE then s_WordDictionaryDatabase.init() end
 
+    -- 初始化数据库
     s_DataManager = reloadModule('model.DataManager')
     s_DataManager.clear()
 
@@ -150,6 +169,7 @@ function initApp()
     _declaration()
 end
 
+-- 计算每个小岛的词量
 local flag_getMaxWrongNumEveryLevel = {}
 function getMaxWrongNumEveryLevel()
     if s_CURRENT_USER.bookKey == nil or s_CURRENT_USER.bookKey == '' or flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] == nil or flag_getMaxWrongNumEveryLevel[s_CURRENT_USER.bookKey] <= 1 then

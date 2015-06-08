@@ -4,7 +4,7 @@ local NodeBulletAnimation = class("NodeBulletAnimation", function()
     return cc.Layer:create()
 end)
 
-
+-- 子弹
 function NodeBulletAnimation.create()
 
     local main = NodeBulletAnimation.new()

@@ -305,16 +305,54 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
             main.finger_action()
             firstFlipNode:stopAllActions()
         end)
-        
     end
 
+    local guideLineLayer = GuideLine:createLayer(main)
+    guideLineLayer:setPosition(main:getContentSize().width/2,0)
+    main:addChild(guideLineLayer,-1)
 
+    local function updateGuideLine()
+        if #selectStack <= 0 then
+            return 
+        end
+        guideLineLayer:removeAllChildren()
+        local node_current = selectStack[#selectStack]
+        local node_current_p = cc.p(node_current:getPosition())
+
+        for i = 1, main_m do
+            for j = 1, main_n do
+                local node = main_mat[i][j]
+                local node_p = cc.p(node:getPosition())
+                if node.hasSelected == false then
+                   local number = GuideLine:findDistance(node,node_current)
+                   if number == gap then
+                        local line = GuideLine.create("light")
+                        line:setPosition((node_current_p.x+node_p.x)/2,(node_current_p.y+node_p.y)/2)
+                        guideLineLayer:addChild(line)
+                        if node_current_p.y == node_p.y then
+                            line:setRotation(90)
+                        end
+                   end
+                end
+            end
+        end
+
+        for i=1,#selectStack - 1 do
+            local node_last = cc.p(selectStack[i]:getPosition())
+            local node_next = cc.p(selectStack[i+1]:getPosition())
+            local line = GuideLine.create()
+            line:setPosition((node_last.x+node_next.x)/2,(node_last.y+node_next.y)/2)
+            guideLineLayer:addChild(line)
+            if node_last.y == node_next.y then
+                line:setRotation(90)
+            end
+        end
+    end
 
     
     local back_box = cc.Layer:create()
     local back_box_num = 0
     local updateSelectWord = function()
- 
         bosslayer:removeChildByTag(1,true)
         if #selectStack == 0 and bosslayer.wordList[1][2] == '' then
             return
@@ -499,6 +537,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
             startNode = main_mat[current_node_x][current_node_y]
             table.insert(selectStack, startNode)
             updateSelectWord()
+            updateGuideLine()
             startNode.addSelectStyle()
             startNode.bigSize()
             
@@ -588,6 +627,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
                             stackTop.removeSelectStyle()
                             table.remove(selectStack)
                             updateSelectWord()
+                            updateGuideLine()
                             if #selectStack <= 7 then
                                 playSound(slideCoco[#selectStack])
                             else
@@ -609,11 +649,13 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
                         currentNode.hasSelected = true
                         table.insert(selectStack, currentNode)
                         updateSelectWord()
+                        updateGuideLine()
                     else
                         local stackTop = selectStack[#selectStack]
                         if math.abs(currentNode.logicX - stackTop.logicX) + math.abs(currentNode.logicY - stackTop.logicY) == 1 then
                             table.insert(selectStack, currentNode)
                             updateSelectWord()
+                            updateGuideLine()
                             -- slide coco "s_sound_slideCoconut"
                             if #selectStack <= 7 then
                                 playSound(slideCoco[#selectStack])
@@ -671,6 +713,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         main.circle_succeed:runAction(cc.Sequence:create(cc.FadeIn:create(0.2),cc.ScaleTo:create(0.2,1.2),cc.ScaleTo:create(0.2,1.0)))
         -- updateSelectWord()
         -- slide true
+        guideLineLayer:removeAllChildren()
         playSound(s_sound_learn_true)
     end
 
@@ -687,12 +730,14 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         firstFlipNode.firstStyle()
         s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
         main.fail()
+        guideLineLayer:removeAllChildren()
         playSound(s_sound_learn_false)
     end
 
     main.forceFail = function ()
         failFunction()
         updateSelectWord()
+        updateGuideLine()
     end
 
     onTouchEnded = function(touch, event)

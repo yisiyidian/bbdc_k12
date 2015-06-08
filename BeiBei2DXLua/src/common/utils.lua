@@ -46,6 +46,7 @@ function randomMinN(M, N) -- random M numbers from 1 to N, N must >= M
     return indexPool
 end
 
+-- 将table数据转为string
 function changeTableToString(wordTable)
     if #wordTable == 0 then
         return ""
@@ -58,6 +59,7 @@ function changeTableToString(wordTable)
     end
 end
 
+-- 分割字符串，转为table
 function split(szFullString, szSeparator)
     local nFindStartIndex = 1
     local nSplitIndex = 1
@@ -182,6 +184,7 @@ function randomMat(m, n)
     return main_mat
 end
 
+-- 打印table
 DEBUG_PRINT_LUA_TABLE = false
 function print_lua_table (lua_table, indent)
     if DEBUG_PRINT_LUA_TABLE == false then return end
@@ -212,7 +215,7 @@ function print_lua_table (lua_table, indent)
         end
     end
 end
-
+-- 判断是否是同一天
 function is2TimeInSameDay(secondsA, secondsB)
     local a = os.date("*t", secondsA)
     local b = os.date("*t", secondsB)
@@ -243,6 +246,7 @@ math["xor"]=function(x,y,z)
     return math["and"](nand(x,y,z),math["or"](x,y,z),z)
 end
 
+-- 显示载入界面
 function showProgressHUD(info, native)
     print("showProgressHUD-------------------------------------------"..tostring(native))
     if native then
@@ -253,6 +257,7 @@ function showProgressHUD(info, native)
     end
 end
 
+-- 隐藏载入界面
 function hideProgressHUD(native)
     print("hideProgressHUD-------------------------------------------"..tostring(native))
     if native then
@@ -262,6 +267,7 @@ function hideProgressHUD(native)
     end
 end
 
+-- 判断音频是否存在
 function checkIfDownloadSoundsExist(bookkey)
     local storagePath = cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..bookkey.."/"..bookkey
 
@@ -270,6 +276,7 @@ function checkIfDownloadSoundsExist(bookkey)
     return  cc.FileUtils:getInstance():isFileExist(storagePath)
 end
 
+-- 返回日期信息
 function getDayStringForDailyStudyInfo(time)
     local str = string.format('%s/%s/%s', os.date('%m', time), os.date('%d', time), os.date('%y', time))
     return str

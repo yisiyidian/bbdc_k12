@@ -1,11 +1,11 @@
 { 
 	"packageUrl" : "http://123.56.84.196/BookSoundBag/",
-	"remoteManifestUrl" : "http://123.56.84.196/BookSoundBag/book_sound_primary_1_server.manifest", 
-	"remoteVersionUrl" : "http://123.56.84.196/BookSoundBag/book_sound_primary_1_version.manifest", 
+	"remoteManifestUrl" : "http://123.56.84.196/BookSoundBag/book_sound_junior_4_server.manifest", 
+	"remoteVersionUrl" : "http://123.56.84.196/BookSoundBag/book_sound_junior_4_version.manifest", 
 	"version" : "1.9.8", 
 	"engineVersion" : "3.3 rc2", 
 	"assets" : {	
-		"primary_1.zip" : {
+		"junior_4.zip" : {
 			"md5" : "",
 			"compressed" : true
 		}

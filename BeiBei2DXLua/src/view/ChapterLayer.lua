@@ -96,11 +96,21 @@ function ChapterLayer:ctor()
     -- add player
     -- scroll to current chapter level
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    if progress - 0 == 0 then
-        self:scrollLevelLayer(progress, 0)
+    local taskIndex = self:getActiveTaskIndex()
+    if s_game_fail_state == 1 then
+        self:scrollLevelLayer(s_game_fail_level_index, 0)
+        s_game_fail_state = 0
+    elseif taskIndex >= 0 then
+        self:scrollLevelLayer(taskIndex, 0)
     else
-        self:scrollLevelLayer(progress+1,0)
+        self:scrollLevelLayer(progress, 0)
     end
+    -- if progress - 0 == 0 then
+    --     self:scrollLevelLayer(progress, 0)
+    -- else
+    --     self:scrollLevelLayer(progress+1,0)
+    -- end
+
     self:addBottomBounce()
     -- check unlock level
     self:checkUnlockLevel()
@@ -109,6 +119,23 @@ function ChapterLayer:ctor()
     self:addTaskBOX()       --放置任务的宝箱
 
 end
+
+-- 检查是否有任务（如复习boss)
+-- 如果有，返回对应的taskIndex(即levelIndex)
+-- 如果没有，返回-2
+function ChapterLayer:getActiveTaskIndex()
+    local bossList = s_LocalDatabaseManager.getAllUnitInfo()
+    print('-------getActiveTaskIndex----------')
+    print_lua_table(bossList)
+    local taskIndex = -2
+    for bossID, bossInfo in pairs(bossList) do
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 4 < 0 then
+            taskIndex = bossID - 1
+        end
+    end    
+    return taskIndex
+end
+
 -- initialize the active range of repeatable chapter ui
 function ChapterLayer:initActiveChapterRange()
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
@@ -120,7 +147,7 @@ function ChapterLayer:initActiveChapterRange()
     local progressIndex = progress
     local progressState = 0
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 3 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 7 < 0 then
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 4 < 0 then
             taskIndex = bossID - 1
             taskState = bossInfo["unitState"] 
         end
@@ -173,7 +200,7 @@ function ChapterLayer:checkUnlockLevel()
     local bookMaxUnitID = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey)
     if progress - bookMaxUnitID == 0 then -- last level
         for bossID, bossInfo in pairs(bossList) do
-            if bossID - bossMaxUnitID == 0 and bossInfo["unitState"] - 3 >= 0 then 
+            if bossID - bossMaxUnitID == 0 and bossInfo["unitState"] - 1 >= 0 then 
                 local back = cc.Sprite:create("image/homescene/background_ciku_white.png")
                 back:setPosition(cc.p(s_DESIGN_WIDTH/2, 550))
 
@@ -235,7 +262,7 @@ function ChapterLayer:checkUnlockLevel()
     local progressIndex = progress
     local progressState = 0
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 3 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 7 < 0 then
+        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 5 < 0 then
             taskIndex = bossID - 1
             taskState = bossInfo["unitState"]
         end
@@ -258,13 +285,13 @@ function ChapterLayer:checkUnlockLevel()
             self.activeChapterEndIndex = self.activeChapterEndIndex + 1
             self.biggestChapterIndex = self.biggestChapterIndex + 1
         end)
-        self:callFuncWithDelay(1.0, function() 
+        self:callFuncWithDelay(1.8, function() 
             self.chapterDic[currentChapterKey]:plotUnlockLevelAnimation('level'..currentProgress)
         end)
         self:callFuncWithDelay(0.5, function() 
-            self:scrollLevelLayer(currentProgress,0.3)
+            self:scrollLevelLayer(currentProgress,1.3)
         end)
-        self:callFuncWithDelay(2.0, function() 
+        self:callFuncWithDelay(2.7, function() 
             self:addBottomBounce()
         end)
     -- 解锁小关卡
@@ -319,6 +346,7 @@ function ChapterLayer:addChapterIntoListView(chapterKey)
         self.listView:pushBackCustomItem(self.chapterDic[chapterKey])
     end
 end
+
 -- scroll self.listView to show the specific chapter and level
 function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
         print('enter scrollLevelLayer...levelIndex:'..levelIndex)
@@ -326,7 +354,7 @@ function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
         self:callFuncWithDelay(0.3, function()
             s_SCENE.touchEventBlockLayer.unlockTouch()
         end)
-        if levelIndex == 0 then
+        if levelIndex <= 1 then
             return
         end
         local currentLevelCount = levelIndex + 1
@@ -339,7 +367,20 @@ function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
         -- compute vertical percent
         local chapterCount = math.floor((currentLevelCount-1) / 10)
         local levelCount = math.floor((currentLevelCount-1) % 10) + 1
-        
+
+        if chapterCount == 0 then
+            if levelCount == 3 then
+                levelCount = 1.7
+            elseif levelCount == 4 then
+                levelCount = 2.7
+            elseif levelCount == 5 then
+                levelCount = 4.4
+            elseif levelCount == 6 then
+                levelCount = 5.7
+            end
+        end
+        -- local currentVerticalPercent = ((chapterCount / chapterCount + 1)+ temp/(chapterCount + 1)) * 100
+
         local currentVerticalPercent = (chapterCount / (chapterCount + 1) + (levelCount + 1)/ (s_islands_per_page * (chapterCount + 1)) ) * 100
 
         if (currentVerticalPercent >= 80 and levelCount >= 8) or currentVerticalPercent > 100 then

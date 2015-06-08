@@ -109,6 +109,8 @@ function DataUser:ctor()
     self.k12SmallStep                      = 0
     self.summaryStep                       = 0
     self.bossTutorialStep                  = 0
+    -- 是否是过出现boss换词引导
+    self.isFirstBossGuide                  = 0
 end
 
 function DataUser:setSummaryStep(step)
