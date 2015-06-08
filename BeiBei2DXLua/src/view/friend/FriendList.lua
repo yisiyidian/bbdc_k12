@@ -28,20 +28,30 @@ function FriendList:ctor()
                 self.array = {}
                 --把自己的好友 筛选出来
                 for i,f in ipairs(s_CURRENT_USER.friends) do
+
+                    local ssecond = f.bossCountUpdate --时间
+                    local sbosscount = f.bossCount
+                    local tDate = os.date("%x", ssecond)          --最后登陆日期
+                    local tNow  = os.date("%x", os.time())        --当前日期
+                    if tDate ~= tNow then
+                        sbosscount = 1
+                    end
+                    f.bossCount = sbosscount
+                    f.bossCountUpdate = os.time()
                     self.array[#self.array + 1] = f
                 end
                 self.array[#self.array + 1] = s_CURRENT_USER
                 self.selectIndex = -2
                 --对好友排序 TODO 用sort实现
-                for i = 1,#self.array do
-                    for j = i, #self.array do
-                        if self.array[i].wordsCount < self.array[j].wordsCount or (self.array[i].wordsCount == self.array[j].wordsCount and self.array[i].masterCount < self.array[j].masterCount) then
-                            local temp = self.array[i]
-                            self.array[i] = self.array[j]
-                            self.array[j] = temp
-                        end
-                    end
-                end
+                -- for i = 1,#self.array do
+                --     for j = i, #self.array do
+                --         if self.array[i].wordsCount < self.array[j].wordsCount or (self.array[i].wordsCount == self.array[j].wordsCount and self.array[i].masterCount < self.array[j].masterCount) then
+                --             local temp = self.array[i]
+                --             self.array[i] = self.array[j]
+                --             self.array[j] = temp
+                --         end
+                --     end
+                -- end
                 --构造列表
                 self:addList()
                 
@@ -71,6 +81,31 @@ function FriendList:addList()
     listView:setName('listView')
     self:addChild(listView)
     local scale = (s_RIGHT_X - s_LEFT_X) / s_DESIGN_WIDTH
+    -- dump(self.array,"排序前",999)
+    table.sort( self.array, function (a,b)
+        if a.gradeNum == s_CURRENT_USER.gradeNum and b.gradeNum ~= s_CURRENT_USER.gradeNum then
+            return true
+        elseif a.gradeNum ~= s_CURRENT_USER.gradeNum and b.gradeNum == s_CURRENT_USER.gradeNum then
+            return false
+        elseif a.gradeNum ~= b.gradeNum and a.gradeNum ~= "" and b.gradeNum ~= "" then
+            return a.gradeNum < b.gradeNum
+        elseif a.gradeNum == "" and b.gradeNum ~= "" then
+            return false
+        elseif b.gradeNum == "" and a.gradeNum ~= "" then
+            return true        
+        end
+
+        if a.usingTime ~= b.usingTime then
+            return a.usingTime > b.usingTime
+        end
+
+        if a.bossCount ~= b.bossCount then
+            return a.bossCount > b.bossCount
+        end
+
+        return a.userId < b.userId
+    end )
+    -- dump(self.array,"排序后",999)
     --add default item
     local count = #self.array
     --add custom item
