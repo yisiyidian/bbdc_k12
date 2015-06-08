@@ -31,11 +31,25 @@ function SummaryBossAlter.create(bossLayer,win,entrance)
     back:setName('background')
 
     if win then
+
+        --殴打BOSS 数量
+        local ssecond = s_CURRENT_USER.bossCountUpdate --时间
+        local sbosscount = s_CURRENT_USER.bossCount
+        local tDate = os.date("%x", ssecond)          --最后登陆日期
+        local tNow  = os.date("%x", os.time())        --当前日期
+        if tDate ~= tNow then
+            sbosscount = 1
+        end
+        s_CURRENT_USER.bossCountUpdate = os.time()
         if entrance == ENTRANCE_NORMAL and layer.needToAddBean then
             AnalyticsPassSecondSummaryBoss()
             s_CURRENT_USER:addBeans(3)
-            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
+            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY],['bossCount'] = sbosscount,['bossCountUpdate'] = s_CURRENT_USER.bossCountUpdate })
+        else     
+            saveUserToServer({['bossCount'] = sbosscount,['bossCountUpdate'] = s_CURRENT_USER.bossCountUpdate })
         end
+
+
         layer:win1(entrance)  
         cc.SimpleAudioEngine:getInstance():stopMusic()
 

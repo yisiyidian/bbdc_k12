@@ -65,7 +65,10 @@ function DataUser:ctor()
     self.wordsCount                        = 0 
     self.masterCount                       = 0 
     self.unitID                            = 0  --当前书本 开启到哪个关卡
-    
+
+    self.bossCount                         = 0  --今日打败BOSS的数量
+    self.bossCountUpdate                   = 0  --bossCount 的更新时间
+   
     self.fansCount                         = 0 
     self.friendsCount                      = 0 
     self.fans                              = {}

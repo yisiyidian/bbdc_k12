@@ -94,7 +94,7 @@ function FriendRender:initUI()
     fri_grade:setScaleX(1 / scale)
     fri_grade:setColor(cc.c3b(111,181,219))
     fri_grade:ignoreAnchorPointForPosition(false)
-    fri_grade:setAnchorPoint(0,1)
+    fri_grade:setAnchorPoint(1,0)
     fri_grade:setPosition(0.80 * btnsize.width,0.75 * btnsize.height)
     self.fri_grade = fri_grade
     button:addChild(fri_grade)
@@ -137,10 +137,21 @@ function FriendRender:setData(data,index,callback)
         name = self.data.nickName
     end
     self.fri_name:setString(name)
+
+    local ssecond = self.data.bossCountUpdate --时间
+    local sbosscount = self.data.bossCount
+    local tDate = os.date("%x", ssecond)          --最后登陆日期
+    local tNow  = os.date("%x", os.time())        --当前日期
+    if tDate ~= tNow then
+        sbosscount = 1
+    end
+
+
+    local unitName = 'Unit '..s_BookUnitName[self.data.bookKey][''..tonumber(self.data.unitID) + 1]
     --已学单词数
-    self.fri_process:setString(string.format('当前进度：%d',self.data.unitID))
+    self.fri_process:setString(string.format('当前进度：%s',unitName))
     --今日关卡
-    self.fri_guanka:setString(string.format("今日关卡：%d",self.data.masterCount))
+    self.fri_guanka:setString(string.format("今日关卡：%d",sbosscount))
     --用时
 	self.fri_time:setString(string.format("用时：%d分钟",math.ceil(self.data.usingTime/60000)))
 	--班级

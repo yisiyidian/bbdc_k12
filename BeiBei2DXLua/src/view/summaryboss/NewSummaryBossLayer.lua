@@ -213,8 +213,7 @@ function NewSummaryBossLayer:initBackground()
 
     local function pauseScene(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-           createPausePopup()
-        --button sound
+            createPausePopup()
             playSound(s_sound_buttonEffect)
         end
     end
@@ -466,9 +465,12 @@ function NewSummaryBossLayer:gameOverFunc(win)
     self.gameOver = true
     self.blink:stopAllActions()
 	if win then
+
+        s_CURRENT_USER.bossCount = s_CURRENT_USER.bossCount + 1 --BOSS计数 +1
+
         if self.unit.unitState == 0 then
             s_LocalDatabaseManager.addStudyWordsNum(self.maxCount)
-            s_LocalDatabaseManager.addRightWord(self.rightWordList,self.unit.unitID)
+            s_LocalDatabaseManager.addRightWord(self.rightWordList,self.unit.unitID) --sysbossword 1
             s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - self.wrongWord)
          --   print(self.maxCount - self.wrongWord)
         elseif self.unit.unitState == 4 then

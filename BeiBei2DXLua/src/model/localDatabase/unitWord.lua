@@ -421,18 +421,9 @@ function M.initUnitInfo(unitID)
     local wordlist = ''
     local currentWordIndex = 1
     local unitState = 0
-    --print('wordlist:'..wordlist)
 
     query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, unitID, unitState, wordList, currentWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..unitID..", 0, '"..wordlist.."', "..currentWordIndex..", 0) ;"
-    --print('sql:'..query)
     Manager.database:exec(query)
-    -- print("initUnitInfo",wordlist)
-
-    -- local condition = "(userId = '"..userId.."' or username = '"..username.."') and bookKey = '"..bookKey.."'"
-    -- print('row:')
-    -- for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition..";") do
-    --     print(row.unitID)
-    -- end
     saveDataToServer(true, time, unitID, unitState, wordList, currentWordIndex, 0)
 end
 
@@ -456,14 +447,9 @@ function M.updateUnitState(unitID)
         saveDataToServer(true, time, row.unitID, newUnitState, row.wordList, currentWordIndex, row.savedToServer)
 
         if newUnitState == 1 then
-        -- if true then
-            -- query = "INSERT INTO DataUnit (userId, username, bookKey, lastUpdate, unitID, unitState, wordList, lastWordIndex, savedToServer) VALUES ('"..userId.."', '"..username.."', '"..bookKey.."', '"..time.."', "..(bossID+1)..", 0, '', "..lastWordIndex..", 0) ;"
-            -- Manager.database:exec(query)
-            -- saveDataToServer(true, time, unitID + 1, 0, '', 0, 0)
             local bookMaxID = M.getBookMaxUnitID(bookKey)
-            -- print('test book max ID ##:'..bookMaxID)
             if unitID - bookMaxID < 0 then
-                M.initUnitInfo(unitID+1)
+                M.initUnitInfo(unitID + 1)
             end
         elseif newunitState == 5 then -- grasp word
             s_LocalDatabaseManager.addGraspWordsNum(#row.wordList)

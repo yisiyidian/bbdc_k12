@@ -432,6 +432,8 @@ end
 -- bosses: DataDailyStudyInfo table
 -- callback : function (serverDatas, error)
 function sysBossWord(bosses, skipWordList, callback)
+    print(debug.traceback())
+
     if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
         if callback then callback(nil, nil) end
         return
@@ -474,7 +476,19 @@ function sysBossWord(bosses, skipWordList, callback)
         end
     end
     dump(unsavedDataTable,"unsavedDataTable")
-    local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataUnit', ['bookKey']=s_CURRENT_USER.bookKey, ['us']=unsavedDataTable}, cb)
+    --殴打BOSS 数量
+    local ssecond = s_CURRENT_USER.bossCountUpdate --时间
+    local sbosscount = s_CURRENT_USER.bossCount
+    
+    --
+    local tDate = os.date("%x", ssecond)          --最后登陆日期
+    local tNow  = os.date("%x", os.time())        --当前日期
+    if tDate ~= tNow then
+        sbosscount = 1
+        s_CURRENT_USER.bossCountUpdate = os.time()
+    end
+    --
+    local protocol = ProtocolBase.create(api, serverRequestType, {['className']='DataUnit', ['bookKey']=s_CURRENT_USER.bookKey, ['us']=unsavedDataTable ,['bossCount'] = sbosscount,['bossCountUpdate'] = s_CURRENT_USER.bossCountUpdate}, cb)
     protocol:request()
 end
 
