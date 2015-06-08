@@ -106,6 +106,10 @@ function FriendRender:setData(data,index,callback)
 	self.data = data
 	self.callback = callback
 	self.button.index = index
+
+	print("startTime"..tostring(self.data.startTime))
+	print("usingTime"..tostring(self.data.usingTime))
+
 	--前三名的特殊ICON
 	local str = 'n'
     if index < 4 then
@@ -138,7 +142,7 @@ function FriendRender:setData(data,index,callback)
     --今日关卡
     self.fri_guanka:setString(string.format("今日关卡：%d",self.data.masterCount))
     --用时
-	self.fri_time:setString(string.format("用时：%d分钟",1))
+	self.fri_time:setString(string.format("用时：%d分钟",math.ceil(self.data.usingTime/60000)))
 	--班级
 	self.fri_grade:setString(self.data.gradeName)
     --[[  --注释掉删除好友箭头

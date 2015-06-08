@@ -59,7 +59,7 @@ end
 
 --构造列表
 function FriendList:addList()
-    dump(self.array,"好友数据列表")
+    -- dump(self.array,"好友数据列表")
     self:removeChildByName('listView',true)
     local listView = ccui.ListView:create()
     --set list view ex direction

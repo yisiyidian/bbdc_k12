@@ -167,6 +167,7 @@ function HomeLayer:ctor()
     local currentBook = cc.Label:createWithSystemFont("正在学习："..s_DataManager.books[s_CURRENT_USER.bookKey].name,"",22)
     currentBook:setPosition(bigWidth/2, s_DESIGN_HEIGHT-140)
     currentBook:setColor(cc.c4b(255,255,255,255))
+    self.currentBook = currentBook
     backColor:addChild(currentBook)
     --设置按钮
     local button_setting = ccui.Button:create("image/homescene/home_page_function_bg1.png",'',"")

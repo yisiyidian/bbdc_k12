@@ -99,10 +99,21 @@ function MoreInfoEditGradeView:onJoinGradeCallBack(data,error)
 		s_TIPS_LAYER:showSmallWithOneButton(error.description)
 		return
 	end
-	local grade = data[1]
+	dump(data)
+	
+	cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
+
+	local grade = data
 	if grade ~= nil then
 		s_CURRENT_USER.gradeNum = grade.gradeNum
 		s_CURRENT_USER.gradeName = grade.gradeName
+		
+		--TODO bookKey可用的话 会涉及到换书
+		local bookKey = grade.bookKey
+		if bookKey and bookKey ~= "" then
+			
+			s_CURRENT_USER.bookKey = bookKey
+		end
 
 		if self.closeCallBack ~= nil then
 			self.closeCallBack(self.key,self.type,grade.gradeName)

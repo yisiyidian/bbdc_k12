@@ -103,7 +103,9 @@ function DataUser:ctor()
     self.beanRewardForIron                 = 3
 
     self.dataDailyUsing                    = DataDailyUsing.create()
-
+    self.startTime                         = 0
+    self.usingTime                         = 0
+    
     self.k12SmallStep                      = 0
     self.summaryStep                       = 0
     self.bossTutorialStep                  = 0
