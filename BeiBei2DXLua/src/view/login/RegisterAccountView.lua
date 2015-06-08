@@ -34,6 +34,10 @@ RegisterAccountView.STEP_6 = 6	--登陆
 RegisterAccountView.STEP_7 = 7	--修改密码
 RegisterAccountView.STEP_8 = 8	--密码找回
 
+RegisterAccountView.STEP_9 = 9   
+RegisterAccountView.STEP_10 = 10 
+RegisterAccountView.STEP_11 = 11
+
 --构造
 function RegisterAccountView:ctor(step)
 	self:init(step)
@@ -60,7 +64,7 @@ end
 --初始化各个view
 function RegisterAccountView:init(step)
 	self.views = {}
-	self.curStep = step or 1
+	self.curStep = step or 1 --step 默认是1
 	self.phoneNumber = ""
 	local bigWidth = s_DESIGN_WIDTH + 2 * s_DESIGN_OFFSET_WIDTH
     local bigHeight = 1.0*s_DESIGN_HEIGHT
@@ -158,7 +162,6 @@ function RegisterAccountView:showInputPhoneNumber()
 	self.inputNode = inputNode
 	inputNode:openIME()
 	self.views[#self.views+1] = inputNode
-	-- cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
 
 	local btnPhoneNumberOK = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
 	btnPhoneNumberOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 330)
@@ -168,7 +171,36 @@ function RegisterAccountView:showInputPhoneNumber()
 	self:addChild(btnPhoneNumberOK)
 	self.views[#self.views+1] = btnPhoneNumberOK
 
-	self.alertTip:setString("输入手机号码")
+	self.alertTip:setString("输入您的手机号码")
+	self.title:setString("登陆/注册")
+	--让返回按钮不可点
+	self.btnReturn:setVisible(false)
+	self.btnReturn:setTouchEnabled(false)
+
+	--其他登陆方式
+	-- login_50s_send.png 是临时资源  要替换成全部透明的图片
+	local btnOtherLogin = ccui.Button:create("image/login/login_50s_send.png")
+	btnOtherLogin:setPosition(0.8 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
+	-- btnOtherLogin:addTouchEventListener(handler(self, self.onRetrySMSTouch))
+	btnOtherLogin:setTitleColor(cc.c3b(153,168,181))
+	btnOtherLogin:setTitleText("其他登陆方式")
+	btnOtherLogin:setTitleFontSize(20)
+	btnOtherLogin:setTouchEnabled(false)
+	self:addChild(btnOtherLogin)
+	self.btnOtherLogin = btnOtherLogin
+	self.views[#self.views+1] = btnOtherLogin
+	--游客登陆
+	local btnGuestLogin = ccui.Button:create("image/login/login_50s_send.png")
+	btnGuestLogin:setPosition(0.2 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
+	-- btnGuestLogin:addTouchEventListener(handler(self, self.onRetrySMSTouch))
+	btnGuestLogin:setTitleColor(cc.c3b(153,168,181))
+	btnGuestLogin:setTitleText("游客登陆")
+	btnGuestLogin:setTitleFontSize(20)
+	btnGuestLogin:setTouchEnabled(false)
+	self:addChild(btnGuestLogin)
+	self.btnGuestLogin = btnGuestLogin
+	self.views[#self.views+1] = btnGuestLogin
+
 end
 
 --电话号码输入OK

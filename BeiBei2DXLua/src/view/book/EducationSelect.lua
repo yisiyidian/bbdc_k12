@@ -1,8 +1,7 @@
-require("cocos.init")
-require("common.global")
+
 
 IntroLayer = require("view.login.IntroLayer")
-
+local RegisterAccountView = require("view.login.RegisterAccountView")
 --选择年级  小学 初中 高中
 --
 
@@ -106,8 +105,13 @@ end
 function EducationSelect:popupAccountBind()
     if s_CURRENT_USER.tutorialStep > s_tutorial_book_select or s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then return end
     --
-    local introLayer = IntroLayer.create()
-    s_SCENE:popup(introLayer)
+    --这里修改为直接进登陆/注册界面
+    -- local introLayer = IntroLayer.create()
+    -- s_SCENE:popup(introLayer)
+    -- 
+    --直接进登陆了
+    local layer = RegisterAccountView.new()
+    s_SCENE:popup(layer)
 end
 
 return EducationSelect

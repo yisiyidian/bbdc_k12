@@ -1,7 +1,5 @@
-require("cocos.init")
-require("common.global")
 
---登陆引导页
+--登陆引导页  已废弃了
 --界面包含:游客登陆 登陆 注册 三个入口
 
 local VisitorRegister = require("view.login.VisitorRegister")
