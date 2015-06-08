@@ -163,10 +163,11 @@ function SettingLayer:updateView()
         btn:addChild(label)
 
         --分割线
-       	local split = cc.LayerColor:create(cc.c4b(150,150,150,255),854,1)
+       	local split = cc.LayerColor:create(cc.c4b(150,150,150,255),self.backGround:getContentSize().width-10,1)
         split:ignoreAnchorPointForPosition(false)
-        split:setAnchorPoint(0.5,0)
-        split:setPosition(size.width/2, 0)
+        split:setAnchorPoint(0,1)
+        --split:setPosition(size.width/2 + 120, 0)
+        split:setPosition(0, 0)
         btn:addChild(split)
         
         --离线灰色

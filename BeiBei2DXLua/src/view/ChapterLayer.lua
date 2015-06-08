@@ -513,7 +513,6 @@ function ChapterLayer:addTaskBOX()
     s_MissionManager:setCanCompleteCallBack(handler(self,self.updataBoxState))
 
     self:updataBoxState()
-
 end
 
 --更新宝箱状态  在任务界面TaskView里回调
@@ -527,22 +526,23 @@ function ChapterLayer:updataBoxState()
             if self.boxButton ~= nil and not tolua.isnull(self.boxButton) then
                 --宝箱晃动
                 self.boxButton:stopAllActions()
-                
-                local action1 = cc.MoveBy:create(0.05,cc.p(5,0))
+                local action1 = cc.MoveBy:create(0.1,cc.p(10,0))
                 local action2 = action1:reverse()
-                local action3 = cc.RepeatForever:create(cc.Sequence:create(action1, action2))
-                self.boxButton:runAction(action3)
+                local action4 = cc.DelayTime:create(1)
+                local action6 = cc.Sequence:create(action1,action2)
+                --local action3 = cc.RepeatForever:create(cc.Sequence:create(action1, action2))
+                local action3 = cc.Sequence:create(action6,action6,action6,action4)
+                local action5 = cc.RepeatForever:create(action3)
+                self.boxButton:runAction(action5)
                 break
             end
         end
     end
-
     if canComCount == 0 then
         if self.boxButton ~= nil and not tolua.isnull(self.boxButton) then
             self.boxButton:stopAllActions()
         end
     end
-
 end
 
 --关闭宝箱
