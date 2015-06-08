@@ -756,4 +756,9 @@ function HomeLayer:setButtonEnabled(enabled)
     self.button_reward:setEnabled(enabled)
 end
 
+--更新正在学习的文本
+function HomeLayer:updateLearningBook()
+    self.currentBook:setString("正在学习："..s_DataManager.books[s_CURRENT_USER.bookKey].name)    
+end
+
 return HomeLayer

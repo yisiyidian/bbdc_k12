@@ -250,6 +250,8 @@ function SettingLayer:closeCallBack()
     	--刷新本界面
        self:updateView()
     end
+
+    self.homeLayer:updateLearningBook()
 end
 
 
