@@ -56,7 +56,9 @@ function NewSummaryBossLayer:ctor(unit)
             end
         end
     end 
-    self:scheduleUpdateWithPriorityLua(update, 0)
+    if not self.isTrying then
+        self:scheduleUpdateWithPriorityLua(update, 0)
+    end
 end
 --第二次划词引导
 function NewSummaryBossLayer:secondWordTutorial()
@@ -158,6 +160,11 @@ function NewSummaryBossLayer:initWordList()
     if unit == nil then
         self.isReplay = false   
         self.unit = s_CorePlayManager.currentUnit
+    end
+    -- 试玩特殊处理
+    if self.isTrying then
+        wordList = {{'apple','','apple','apple'},{'pear','','pear','pear'}}
+        return wordList
     end
     print_lua_table(self.unit.wrongWordList)
     for i = 1,#self.unit.wrongWordList do
@@ -286,13 +293,15 @@ function NewSummaryBossLayer:initBoss()
 	self.boss = boss
     boss:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.75 + 20))))
 	--过关失败
-	boss.bossWin = function ()
-		if self.currentBlood > 0 then
-            -- self.isLose = true
-            self:gameOverFunc(false)   
-            s_CURRENT_USER:setSummaryStep(s_summary_failFirstLevel) 
-        end
-	end
+    if not self.isTrying then
+	    boss.bossWin = function ()
+    		if self.currentBlood > 0 then
+                -- self.isLose = true
+                self:gameOverFunc(false)   
+                s_CURRENT_USER:setSummaryStep(s_summary_failFirstLevel) 
+            end
+    	end
+    end
     --boss靠近
     boss.bossClose = function (  )
         --self.girl:setAnimation("afraid")
@@ -308,7 +317,7 @@ function NewSummaryBossLayer:initBoss()
 end
 
 function NewSummaryBossLayer:initMat(visible)
-	local mat = require("view.summaryboss.Mat").create(self,self.tutorialStep < 1 or (visible ~= nil and not visible),"coconut_dark")
+	local mat = require("view.summaryboss.Mat").create(self,self.tutorialStep < 1 or (visible ~= nil and not visible) or (self.isTrying and self.wordList[1][1] == 'apple'),"coconut_dark")
     mat:setPosition(s_DESIGN_WIDTH/2, 150)
     self:addChild(mat,1)
     if visible ~= nil and not visible then
@@ -426,7 +435,7 @@ function NewSummaryBossLayer:resetMat()
 end
 
 function NewSummaryBossLayer:initCrab()
-    local crab = require("view.summaryboss.Crab").create(self.wordList[1][4])
+    local crab = require("view.summaryboss.Crab").create(self.wordList[1][4],self.isTrying)
     self:addChild(crab,1)
     self.crab = crab
     -- s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
@@ -501,6 +510,12 @@ function NewSummaryBossLayer:gameOverFunc(win)
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     self.gameOver = true
     self.blink:stopAllActions()
+    if self.isTrying then
+        local StoryLayer = require('view.level.StoryLayer')
+        local storyLayer = StoryLayer.create(7)
+        s_SCENE:replaceGameLayer(storyLayer)
+        return
+    end
 	if win then
         if self.tutorialStep >= 2 then
             s_CURRENT_USER.needBossSlideTutorial = 1

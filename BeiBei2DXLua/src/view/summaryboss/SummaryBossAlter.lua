@@ -388,7 +388,7 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
         --print('self:addWinLabel(win_back)')
         self:addWinLabel(win_back)
     else
-        s_SCENE:callFuncWithDelay(2,function (  )
+        s_SCENE:callFuncWithDelay(0,function (  )
             self:addWinLabel(win_back)
         end)
     end
