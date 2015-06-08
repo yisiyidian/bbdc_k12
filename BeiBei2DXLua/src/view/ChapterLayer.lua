@@ -124,6 +124,13 @@ function ChapterLayer:ctor()
         s_CorePlayManager.enterGuideScene(5,self)
         s_CURRENT_USER:setGuideStep(s_guide_step_enterLevel) 
     end
+    -- 添加引导
+    if s_CURRENT_USER.guideStep == s_guide_step_second then
+        local GuideToTaskView = require("view.guide.GuideToTaskView")
+        local guideToTaskView = GuideToTaskView.create()
+        self:addChild(guideToTaskView)
+        s_CURRENT_USER:setGuideStep(s_guide_step_bag1) 
+    end
 end
 
 -- 检查是否有任务（如复习boss)
