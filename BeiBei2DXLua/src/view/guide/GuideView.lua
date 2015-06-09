@@ -17,6 +17,7 @@ function GuideView:ctor(index)
 	self.index = index
 	self.content = ""
 	self.color = ""
+	self.bbName = "" 
 	self.pos = cc.p(0,0)
 	self:initUI()
 	-- 初始化UI
@@ -43,11 +44,13 @@ end
 function GuideView:resetView()
 	local content = ""
 	local color = ""
+	local bbName = ""
 	local pos = cc.p(0,0)
-	table.foreach(GuideConfig.data, function(i, v)  if v.guide_id == self.index then print("当前引导是第"..i.."/"..#GuideConfig.data.."步") content = v.desc pos = v.pos color = v.color end end)
+	table.foreach(GuideConfig.data, function(i, v)  if v.guide_id == self.index then print("当前引导是第"..i.."/"..#GuideConfig.data.."步") content = v.desc pos = v.pos color = v.color bbName = v.bb end end)
 	self.content = content
 	self.pos = pos
 	self.color = color
+	self.bbName = bbName
 	self.label:setString(content)
 
 	if self.color == "white" then
@@ -73,6 +76,15 @@ function GuideView:resetView()
 		local action1 = cc.RotateBy:create(1,10)
 		local action2 = cc.RotateBy:create(1,-10)
 		self.back:runAction(cc.RepeatForever:create(cc.Sequence:create(action1,action2)))
+	end
+
+	if self.bbName ~= nil then
+		local bb = cc.Sprite:create('image/guide/'..self.bbName..'.png')
+		bb:setPosition(cc.p(self.back:getContentSize().width/4,self.back:getContentSize().height-20))
+		bb:ignoreAnchorPointForPosition(false)
+		bb:setAnchorPoint(0.5,0)
+		self.bb = bb
+		self.back:addChild(self.bb)
 	end
 end
 
