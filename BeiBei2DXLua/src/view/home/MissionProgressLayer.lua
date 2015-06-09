@@ -1,3 +1,4 @@
+-- 进入游戏的按钮
 require("cocos.init")
 require("common.global")
 
@@ -6,7 +7,6 @@ local MissionProgressLayer = class("MissionProgressLayer", function ()
 end)
 
 MissionProgressLayer.hasGotNotContainedInLocalDatas = false
--- function callback() end
 function MissionProgressLayer.getNotContainedInLocalDatas(callback)
     if MissionProgressLayer.hasGotNotContainedInLocalDatas or (not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken()) then
         if callback then callback() end
@@ -21,34 +21,9 @@ function MissionProgressLayer.getNotContainedInLocalDatas(callback)
     end)
 end
 
+
 function MissionProgressLayer.create(share,homelayer)
-    --今天色任务数量
-    local missionCount = s_LocalDatabaseManager:getTodayTotalTaskNum()
-    local completeCount = missionCount - s_LocalDatabaseManager:getTodayRemainTaskNum()
-    if share ~= nil and share then
-        completeCount = missionCount
-    end
-
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
-    
-    local taskTotal = 120
-    local taskCurrent = 120
-    
-    local bossNumber = 0
-
-    
-    taskTotal = (bossNumber + 2) * getMaxWrongNumEveryLevel()
-    
-    local startTime = 0
-    local rollingCircle
-    local finishProgress
-    local enterButton
-    local anotherEnterButton
-    local anotherSwelling
-    local buttonSpin
-    local circleSpin
-    
-    
     local layer = MissionProgressLayer.new()
     
     layer.stopListener = false
@@ -82,16 +57,13 @@ function MissionProgressLayer.create(share,homelayer)
                 local schedule = layer:getChildByTag(8888):getScheduler()
                 schedule:unscheduleScriptEntry(schedule.schedulerEntry)
             end
-            -- todo check enter story layer
+
             if s_CURRENT_USER.guideStep < s_guide_step_enterStory1 then
                 s_CURRENT_USER:setGuideStep(s_guide_step_enterStory1)
                 s_CorePlayManager.enterStoryLayer()
             else
                   s_CorePlayManager.enterLevelLayer()
-                 --s_CorePlayManager.enterStoryLayer() 
             end
-
-            -- s_CorePlayManager.enterLevelLayer()
         end)
     end
 
@@ -109,10 +81,6 @@ function MissionProgressLayer.create(share,homelayer)
     backProgress:runAction(action)
 
     return layer
-end
-
-function  MissionProgressLayer:setEnabled(enabled)
-    self.button:setEnabled(enabled)
 end
 
 return MissionProgressLayer

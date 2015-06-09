@@ -143,12 +143,8 @@ function HomeLayer:ctor()
             s_HUD_LAYER:getChildByName('missionComplete'):setVisible(true)
         end
         s_isCheckInAnimationDisplayed = true
-        mission_progress = MissionProgress.create(true,self)
-    else
-        mission_progress = MissionProgress.create()
-       -- mission_progress.animation()
     end
-
+    mission_progress = MissionProgress.create()
     if checkIn then
         --触发打卡任务
         s_MissionManager:updateMission(MissionConfig.MISSION_DAKA,1,false)
@@ -347,7 +343,6 @@ function HomeLayer:ctor()
     playMusic(s_sound_First_Noel_pluto,true)  --播放音乐
     self.button_setting = button_setting
     self.button_sound = downloadSoundButton
-    self.button_enter = mission_progress
     self.button_reward = button_reward
 
     if checkInDisplay then
@@ -395,8 +390,6 @@ function HomeLayer:ctor()
         local isPopup = s_SCENE.popupLayer:getChildren()
         if self.viewIndex == 2 and #isPopup == 0 then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
-            mission_progress.stopListener = false
 
             self.viewIndex = 1
 
@@ -485,7 +478,6 @@ function HomeLayer:onTouchMoved(touch, event)
     if now_x + moveLength < start_x and not self.isDataShow then
         if self.viewIndex == 2 then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            self.mission_progress.stopListener = false
             self.viewIndex = 1
 
             local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
@@ -686,7 +678,6 @@ function HomeLayer:changeViewToFriendOrShop(destination)
     self.backColor:removeChildByName('redHint')
     if self.viewIndex == 2 then
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-        self.mission_progress.stopListener = false
         self.viewIndex = 1
         local action2 = cc.DelayTime:create(0.5)
         local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
@@ -745,7 +736,6 @@ function HomeLayer:showDataLayer(checkIn)
 end
 
 function HomeLayer:hideDataLayer()
-    self.button_enter.animation()
     local action1 = cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, 0))
     local action2 = cc.CallFunc:create(function()
         self.button_data:setLocalZOrder(0)
@@ -770,7 +760,6 @@ function HomeLayer:setButtonEnabled(enabled)
     self.button_shop:setEnabled(enabled)
     self.button_setting:setEnabled(enabled)
     self.button_sound:setEnabled(enabled)
-    self.button_enter:setEnabled(enabled)
     self.button_reward:setEnabled(enabled)
 end
 

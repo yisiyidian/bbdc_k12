@@ -8,8 +8,8 @@
 local GuideConfig = {}
 
 GuideConfig.data = {
-	{["guide_id"] = 1,	pos=cc.p(s_DESIGN_WIDTH / 2,1000)	,desc="请选择合适你的年级"					,color="white"			}, 			
-	{["guide_id"] = 2,	pos=cc.p(s_DESIGN_WIDTH / 2,1000)	,desc="请选择合适你的书籍"					,color="white"			}, 	
+	{["guide_id"] = 1,	pos=cc.p(s_DESIGN_WIDTH / 2,1070)	,desc="请选择合适你的年级"					,color="white"			}, 			
+	{["guide_id"] = 2,	pos=cc.p(s_DESIGN_WIDTH / 2,1050)	,desc="请选择合适你的书籍"					,color="white"			}, 	
 	{["guide_id"] = 3,	pos=cc.p(s_DESIGN_WIDTH / 2,200)	,desc="点击上方按钮进入游戏"				,color="yellow"			},
 	{["guide_id"] = 4,	pos=cc.p(s_DESIGN_WIDTH / 2,1000)	,desc="boss过来啦，快划词"				,color="yellow"			},
 	{["guide_id"] = 5,	pos=cc.p(s_DESIGN_WIDTH / 2,600)	,desc="是时候来一场真正的战斗了"			,color="yellow"			,bb="bb"},
