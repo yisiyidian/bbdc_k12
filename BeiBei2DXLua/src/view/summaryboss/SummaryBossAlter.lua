@@ -119,7 +119,7 @@ function SummaryBossAlter:lose(entrance)
     boss:setPosition(self.loseBoard:getContentSize().width / 4,self.loseBoard:getContentSize().height / 3)
     self.loseBoard:addChild(boss)
 
-    local label = cc.Label:createWithSystemFont("时间已经用完了！",'',40)
+    local label = cc.Label:createWithSystemFont("贝贝被怪兽抓住了！",'',40)
     label:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
     label:setPosition(self.loseBoard:getContentSize().width / 2,self.loseBoard:getContentSize().height * 0.75)
     label:setColor(cc.c4b(52,177,241,255))
