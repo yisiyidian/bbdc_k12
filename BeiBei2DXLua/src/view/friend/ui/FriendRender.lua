@@ -95,7 +95,7 @@ function FriendRender:initUI()
     fri_grade:setColor(cc.c3b(111,181,219))
     fri_grade:ignoreAnchorPointForPosition(false)
     fri_grade:setAnchorPoint(1,1)
-    fri_grade:setPosition(0.80 * btnsize.width,0.75 * btnsize.height)
+    fri_grade:setPosition(0.85 * btnsize.width,0.80 * btnsize.height)
     self.fri_grade = fri_grade
     button:addChild(fri_grade)
 end
@@ -145,9 +145,24 @@ function FriendRender:setData(data,index,callback)
     if tDate ~= tNow then
         sbosscount = 1
     end
+    
+    local bookName = s_DataManager.books[s_CURRENT_USER.bookKey].name or ""
+    local unitName = ''
+    local unitData = s_BookUnitName[self.data.bookKey]
+    if unitData ~= nil then
+        local unit = unitData[''..tonumber(self.data.unitID) + 1]
+        if unit ~= nil then
+            local uus = string.split(unit,'_')
+            if #uus > 1 then
+                unitName = 'Unit'..uus[1].."("..uus[2]..")"
+            else
+                unitName = 'Unit'..unit
+            end
+        end
+    end
 
 
-    local unitName = 'Unit '..s_BookUnitName[self.data.bookKey][''..tonumber(self.data.unitID) + 1]
+    -- local unitName = 'Unit '..s_BookUnitName[self.data.bookKey][''..tonumber(self.data.unitID) + 1]
     --已学单词数
     self.fri_process:setString(string.format('当前进度：%s',unitName))
     --今日关卡
