@@ -39,7 +39,7 @@ function GuideToTaskView:initUI()
     -- 暗色背景
 
     -- 箱子里的纸张
-    local pape = cc.Sprite:create("image/friend/broad.png")
+    local pape = cc.Sprite:create("image/guide/yindao_baoxiang_paper.png")
     pape:setScale(0)
     pape:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /2)
     pape:ignoreAnchorPointForPosition(false)
@@ -171,15 +171,15 @@ function GuideToTaskView:resetPage()
 	local action1 = cc.DelayTime:create(0.3)
 	local action2 = cc.CallFunc:create(function ()
 		if self.index == 3 then
-			local action1 = cc.Place:create(cc.p(self.boxPos.x,self.boxPos.y + 40))
-			local action2 = cc.ScaleTo:create(0.1,0.3)
+			local action1 = cc.Place:create(cc.p(self.boxPos.x,self.boxPos.y + 100))
+			local action2 = cc.ScaleTo:create(0.1,1)
 			local action = cc.Sequence:create(action1,action2)
 			self.pape:runAction(action)
 		elseif self.index == 4 then
 			local action1 = cc.ScaleTo:create(0.1,1)
 			local action2 = cc.MoveBy:create(0.1,cc.p(0, -40))
 			local action3 = cc.CallFunc:create(function ()
-				GuideToTaskRender.create(self.pape)
+				self.page:setTexture()
 			end)
 			local action = cc.Sequence:create(action1,action2,action3)
 			self.pape:runAction(action)

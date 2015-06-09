@@ -125,12 +125,12 @@ function ChapterLayer:ctor()
         s_CURRENT_USER:setGuideStep(s_guide_step_enterLevel) 
     end
     -- 添加引导
-    if s_CURRENT_USER.guideStep == s_guide_step_second then
+    -- if s_CURRENT_USER.guideStep == s_guide_step_second then
         local GuideToTaskView = require("view.guide.GuideToTaskView")
         local guideToTaskView = GuideToTaskView.create()
         self:addChild(guideToTaskView)
-        s_CURRENT_USER:setGuideStep(s_guide_step_bag1) 
-    end
+        -- s_CURRENT_USER:setGuideStep(s_guide_step_bag1) 
+    -- end
 end
 
 -- 检查是否有任务（如复习boss)
@@ -507,7 +507,7 @@ end
 
 --任务按钮  宝箱样式
 function ChapterLayer:addTaskBOX()
-    local boxButton = ccui.Button:create("image/islandPopup/close.png","","image/islandPopup/open.png")
+    local boxButton = ccui.Button:create("image/islandPopup/baoxiang_close.png","","image/islandPopup/baoxiang_open.png")
     boxButton:addTouchEventListener(handler(self,self.onTaskBoxTouch))
     boxButton:setAnchorPoint(0.5,0.5)
     boxButton:ignoreAnchorPointForPosition(false)
