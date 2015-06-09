@@ -63,10 +63,8 @@ function LevelProgressPopup:initUI()
     if s_CURRENT_USER.guideStep == s_guide_step_enterLevel then
         s_CorePlayManager.enterGuideScene(6,self)
         s_CURRENT_USER:setGuideStep(s_guide_step_enterPopup) 
-    end
-
     -- 添加引导
-    if s_CURRENT_USER.guideStep <= s_guide_step_enterCard and s_CURRENT_USER.guideStep > s_guide_step_enterLevel then
+    elseif s_CURRENT_USER.guideStep <= s_guide_step_enterCard and s_CURRENT_USER.guideStep > s_guide_step_enterLevel then
         s_CorePlayManager.enterGuideScene(8,self)
         s_CURRENT_USER:setGuideStep(s_guide_step_returnPopup) 
     end
@@ -114,11 +112,14 @@ function LevelProgressPopup:createSummary(index)
     local function button_func(  )
         playSound(s_sound_buttonEffect) 
 
-        if s_CURRENT_USER.guideStep == s_guide_step_enterLevel then  
+        if s_CURRENT_USER.guideStep <= s_guide_step_enterCard then  
             local SmallAlterWithOneButton = require("view.alter.SmallAlterWithOneButton")
             local smallAlter = SmallAlterWithOneButton.create("请先跟着引导点击词库")
             smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-            self:addChild(smallAlter)
+            s_SCENE.popupLayer:addChild(smallAlter)
+            smallAlter.affirm = function ()
+                smallAlter:removeFromParent()
+            end
             return
         end
 
