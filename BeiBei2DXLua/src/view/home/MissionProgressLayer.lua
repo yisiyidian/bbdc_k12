@@ -22,6 +22,7 @@ function MissionProgressLayer.getNotContainedInLocalDatas(callback)
 end
 
 function MissionProgressLayer.create(share,homelayer)
+    --今天色任务数量
     local missionCount = s_LocalDatabaseManager:getTodayTotalTaskNum()
     local completeCount = missionCount - s_LocalDatabaseManager:getTodayRemainTaskNum()
     if share ~= nil and share then
@@ -77,107 +78,142 @@ function MissionProgressLayer.create(share,homelayer)
     backProgress:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2 - 20)
     layer:addChild(backProgress)
 
+    --选书之后和返回点击按钮之后都从新创建了一下中间的按钮
     local back = {}
-    for i = 1,missionCount do
-        back[i] = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/missionprogress/white_circle.png'))
-        back[i]:setColor(cc.c4b(170,217,231,255 * 0.2 * (i % 3 + 1)))
-        back[i]:setOpacity(255 * 0.2 * ((i - 1) % 3 + 1))
-        back[i]:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
-        back[i]:setPercentage(100 / missionCount)
-        back[i]:setRotation(360 * (i - 1) / missionCount)
-        back[i]:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2 )
-        backProgress:addChild(back[i])
+    -- for i = 1,missionCount do
+    --     back[i] = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/missionprogress/white_circle.png'))
+    --     back[i]:setColor(cc.c4b(170,217,231,255 * 0.2 * (i % 3 + 1)))
+    --     back[i]:setOpacity(255 * 0.2 * ((i - 1) % 3 + 1))
+    --     back[i]:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+    --     back[i]:setPercentage(100 / missionCount)
+    --     back[i]:setRotation(360 * (i - 1) / missionCount)
+    --     back[i]:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2 )
+    --     backProgress:addChild(back[i])
         
-    end
+    -- end
+
+
+    back = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/missionprogress/white_circle.png'))
+    back:setColor(cc.c4b(170,217,231,255 * 0.2))
+    back:setOpacity(255 * 0.2 + 1)
+    back:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+    back:setPercentage(100 / missionCount)
+    back:setRotation(360 / missionCount)
+    back:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2 )
+    backProgress:addChild(back)
+
+
+    -- local circle_color = {cc.c3b(76,223,204),cc.c3b(36,168,217),cc.c3b(18,128,213)}
+
+    -- layer.animation = function()
+    --     if share ~= nil and share then
+    --         if completeCount < missionCount then
+    --             for i = 1, missionCount do 
+    --                 local split_line = cc.Sprite:create('image/homescene/home_page_task_circle_interval.png')
+    --                 split_line:setAnchorPoint(0.5,- 161 / 80)
+    --                 split_line:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2)
+    --                 backProgress:addChild(split_line,1)
+    --                 split_line:setRotation(360 * (i - 1) / missionCount)
+    --                 split_line:setVisible(false)
+    --                 split_line:runAction(cc.Sequence:create(cc.DelayTime:create((i - 1) / missionCount),cc.Show:create()))
+    --             end
+    --         end
+    --         local shareDelayTime = 0
+    --         if share ~= nil and share then
+    --             shareDelayTime = 0
+    --         end
+    --         for i = 1, completeCount do 
+    --             local taskProgress = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/missionprogress/white_circle.png'))
+    --             taskProgress:setColor(circle_color[(i - 1) % 3 + 1])
+    --             taskProgress:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2 )
+    --             taskProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+    --             taskProgress:setReverseDirection(false)
+    --             taskProgress:setPercentage(0)
+    --             local runProgress = cc.ProgressTo:create(1 / missionCount ,100 / missionCount)
+    --             taskProgress:runAction(cc.Sequence:create(cc.DelayTime:create((i - 1) / missionCount + shareDelayTime),runProgress,cc.CallFunc:create(function()
+    --                 if i < missionCount then
+    --                     return
+    --                 else--if taskTotal == taskCurrent then
+    --                     local action1 = cc.FadeOut:create(1)
+    --                     local action2 = cc.FadeOut:create(2)
+    --                     local swell = cc.CallFunc:create(anotherSwelling)
+    --                     if share ~= nil and share then
+    --                         local a1 = cc.DelayTime:create(0.1)
+    --                         local a2 = cc.CallFunc:create(function ()
+    --                             homelayer:showShareCheckIn()
+    --                         end,{})
+    --                         swell = cc.Spawn:create(cc.Sequence:create(a1,a2),cc.CallFunc:create(anotherSwelling))
+    --                     end
+    --                     finishProgress:runAction(cc.Sequence:create(cc.ProgressTo:create(1 , 100),swell))
+    --                     finishProgress:setVisible(true) 
+    --                     anotherEnterButton:setVisible(true)    
+
+    --                     enterButton:runAction(action1)
+    --                     taskProgress:runAction(action2)     
+
+                        
+    --                 -- else
+    --                 --     swelling()
+    --                 end
+    --             end)))
+    --             back[i]:addChild(taskProgress)
+    --         end
+    --     else
+    --         if completeCount < missionCount then
+    --            -- 完成任务箭头不要
+    --             for i = 1, missionCount do 
+    --                 --完成任务的箭头
+    --                 local split_line = cc.Sprite:create('image/homescene/home_page_task_circle_interval.png')
+    --                 split_line:setAnchorPoint(0.5,- 161 / 80)
+    --                 split_line:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2)
+    --                 backProgress:addChild(split_line,1)
+    --                 split_line:setRotation(360 * (i - 1) / missionCount)
+    --             end
+    --             for i = 1,completeCount do
+    --                 --外面的大圈
+    --                 --不进行按钮的着色 
+    --                 local taskProgress = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/missionprogress/white_circle.png'))
+    --                 taskProgress:setColor(circle_color[(i - 1) % 3 + 1])
+    --                 taskProgress:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2 )
+    --                 taskProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+    --                 taskProgress:setReverseDirection(false)
+    --                 taskProgress:setPercentage(100 / missionCount)
+    --                 back[i]:addChild(taskProgress)
+    --             end
+    --         elseif completeCount == missionCount then
+    --         --if completeCount == missionCount then
+    --             local swell = cc.CallFunc:create(anotherSwelling)
+    --             finishProgress:setPercentage(100)
+    --             finishProgress:runAction(cc.Sequence:create(swell))
+    --             finishProgress:setVisible(true) 
+    --             anotherEnterButton:setVisible(true) 
+    --             enterButton:setVisible(false)
+    --         end
+    --     end
+
 
     local circle_color = {cc.c3b(76,223,204),cc.c3b(36,168,217),cc.c3b(18,128,213)}
 
-    layer.animation = function()
-        if share ~= nil and share then
-            if completeCount < missionCount then
-                for i = 1, missionCount do 
-                    local split_line = cc.Sprite:create('image/homescene/home_page_task_circle_interval.png')
-                    split_line:setAnchorPoint(0.5,- 161 / 80)
-                    split_line:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2)
-                    backProgress:addChild(split_line,1)
-                    split_line:setRotation(360 * (i - 1) / missionCount)
-                    split_line:setVisible(false)
-                    split_line:runAction(cc.Sequence:create(cc.DelayTime:create((i - 1) / missionCount),cc.Show:create()))
-                end
-            end
-            local shareDelayTime = 0
-            if share ~= nil and share then
-                shareDelayTime = 0
-            end
-            for i = 1, completeCount do 
-                local taskProgress = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/missionprogress/white_circle.png'))
-                taskProgress:setColor(circle_color[(i - 1) % 3 + 1])
-                taskProgress:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2 )
-                taskProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
-                taskProgress:setReverseDirection(false)
-                taskProgress:setPercentage(0)
-                local runProgress = cc.ProgressTo:create(1 / missionCount ,100 / missionCount)
-                taskProgress:runAction(cc.Sequence:create(cc.DelayTime:create((i - 1) / missionCount + shareDelayTime),runProgress,cc.CallFunc:create(function()
-                    if i < missionCount then
-                        return
-                    else--if taskTotal == taskCurrent then
-                        local action1 = cc.FadeOut:create(1)
-                        local action2 = cc.FadeOut:create(2)
-                        local swell = cc.CallFunc:create(anotherSwelling)
-                        if share ~= nil and share then
-                            local a1 = cc.DelayTime:create(0.1)
-                            local a2 = cc.CallFunc:create(function ()
-                                homelayer:showShareCheckIn()
-                            end,{})
-                            swell = cc.Spawn:create(cc.Sequence:create(a1,a2),cc.CallFunc:create(anotherSwelling))
-                        end
-                        finishProgress:runAction(cc.Sequence:create(cc.ProgressTo:create(1 , 100),swell))
-                        finishProgress:setVisible(true) 
-                        anotherEnterButton:setVisible(true)    
-
-                        enterButton:runAction(action1)
-                        taskProgress:runAction(action2)     
-
-                        
-                    -- else
-                    --     swelling()
-                    end
-                end)))
-                back[i]:addChild(taskProgress)
-            end
-        else
-            if completeCount < missionCount then
-                for i = 1, missionCount do 
-                    local split_line = cc.Sprite:create('image/homescene/home_page_task_circle_interval.png')
-                    split_line:setAnchorPoint(0.5,- 161 / 80)
-                    split_line:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2)
-                    backProgress:addChild(split_line,1)
-                    split_line:setRotation(360 * (i - 1) / missionCount)
-                end
-                for i = 1,completeCount do
-                    local taskProgress = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/missionprogress/white_circle.png'))
-                    taskProgress:setColor(circle_color[(i - 1) % 3 + 1])
-                    taskProgress:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2 )
-                    taskProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
-                    taskProgress:setReverseDirection(false)
-                    taskProgress:setPercentage(100 / missionCount)
-                    back[i]:addChild(taskProgress)
-                end
-            elseif completeCount == missionCount then
-                local swell = cc.CallFunc:create(anotherSwelling)
-                finishProgress:setPercentage(100)
-                finishProgress:runAction(cc.Sequence:create(swell))
-                finishProgress:setVisible(true) 
-                anotherEnterButton:setVisible(true) 
-                enterButton:setVisible(false)
-
-            end
-        end
-
+    if completeCount < missionCount then
+            local split_line = cc.Sprite:create('image/homescene/home_page_task_circle_interval.png')
+            split_line:setAnchorPoint(0.5,- 161 / 80)
+            split_line:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2)
+            backProgress:addChild(split_line,1)
+            split_line:setRotation(360/ missionCount)
+            split_line:setVisible(false)
+            split_line:runAction(cc.Sequence:create(cc.DelayTime:create(1/ missionCount),cc.Show:create()))
     end
+    local shareDelayTime = 0
+    local taskProgress = cc.ProgressTimer:create(cc.Sprite:create('image/homescene/missionprogress/white_circle.png'))
+    taskProgress:setColor(circle_color[1])
+    taskProgress:setPosition(backProgress:getContentSize().width / 2 ,backProgress:getContentSize().height / 2 )
+    taskProgress:setType(cc.PROGRESS_TIMER_TYPE_RADIAL)
+    taskProgress:setReverseDirection(false)
+    taskProgress:setPercentage(0)
+    back:addChild(taskProgress)
     
     
-    
+    --进入游戏
     local enterGame = function ()
         MissionProgressLayer.getNotContainedInLocalDatas(function ()
             s_CURRENT_USER:generateSummaryBossList()
@@ -210,6 +246,7 @@ function MissionProgressLayer.create(share,homelayer)
         end)
     end
 
+    --进入游戏按钮点击
     local enterButtonClick = function(sender, eventType)
         if layer.stopListener == false then
             if eventType == ccui.TouchEventType.began then
@@ -279,6 +316,7 @@ function MissionProgressLayer.create(share,homelayer)
     backProgress:addChild(anotherEnterButton) 
     anotherEnterButton:setVisible(false)
     
+    --大箭头（按钮）转圈
     anotherSwelling = function ()
         local action1 = cc.ScaleTo:create(0.25,1.05)
         local action2 = cc.ScaleTo:create(0.15,1)
