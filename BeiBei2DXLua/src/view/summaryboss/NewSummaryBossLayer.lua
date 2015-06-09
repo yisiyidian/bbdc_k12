@@ -67,14 +67,21 @@ function NewSummaryBossLayer:secondWordTutorial()
     local curtain = require('view.summaryboss.Curtain').create()
     self:addChild(curtain,2)
     self.boss:setLocalZOrder(3)
-    self.girl:setLocalZOrder(3)
+    local hint = cc.Sprite:create('image/guide/yindao_background_xiaoguan.png')
+    hint:setPosition(curtain:getContentSize().width / 2 - 50 , 870)
+    curtain:addChild(hint)
+    local label = cc.Label:createWithSystemFont('怪兽抓到贝贝就完蛋了！','',36)
+    label:setColor(cc.c3b(0,0,0))
+    label:setPosition(hint:getContentSize().width/2,hint:getContentSize().height * 0.25)
+    hint:addChild(label)
+    --self.girl:setLocalZOrder(3)
     cc.Director:getInstance():getActionManager():pauseTarget(self.boss)
     curtain.remove = function()
         --s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
         self.invisibleMat:setVisible(true)
         self.mat:setVisible(false)
         self.boss:setLocalZOrder(0)
-        self.girl:setLocalZOrder(0)
+        --self.girl:setLocalZOrder(0)
         curtain:removeFromParent()
     end
 end
@@ -320,6 +327,9 @@ function NewSummaryBossLayer:initMat(visible)
 	local mat = require("view.summaryboss.Mat").create(self,self.tutorialStep < 1 or (visible ~= nil and not visible) or (self.isTrying and self.wordList[1][1] == 'apple'),"coconut_dark")
     mat:setPosition(s_DESIGN_WIDTH/2, 150)
     self:addChild(mat,1)
+    if self.tutorialStep == 0 then
+        cc.Director:getInstance():getActionManager():pauseTarget(self.boss)
+    end
     if visible ~= nil and not visible then
         self.invisibleMat = mat
         mat:setVisible(false)

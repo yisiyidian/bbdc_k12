@@ -301,10 +301,22 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     if isNewPlayerModel == true then
         s_SCENE:callFuncWithDelay(1.2,function (  )
             
-            local hintBoard = cc.Sprite:create('image/summarybossscene/hint_slide.png')
+            local hintBoard = cc.Sprite:create('image/guide/yindao_background_yellow.png')
             hintBoard:setPosition(0.5 * s_DESIGN_WIDTH,0.72 * s_DESIGN_HEIGHT - 180)
             main:addChild(hintBoard,1)
             hintBoard:setName('board')
+            local str
+            if bosslayer.isTrying then
+                str = 'boss过来啦，快划词'
+            elseif bosslayer.tutorialStep == 0 then
+                str = '把牌子上对应的英文划出来'
+            else
+                str = '这个词应该是'..word
+            end
+            local label = cc.Label:createWithSystemFont(str,'',36)
+            label:setPosition(hintBoard:getContentSize().width / 2,hintBoard:getContentSize().height/2)
+            hintBoard:addChild(label)
+            label:setColor(cc.c3b(0,0,0))
             main.guidePoint()
             main.cocoAnimation()   
             main.finger_action()
@@ -779,6 +791,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
 
     local function update( delta )
         if main:isVisible() then
+           -- print('director:getActionManager():pauseTarget(bosslayer.boss)')
             director:getActionManager():pauseTarget(bosslayer.boss)
             main:unscheduleUpdate()
         end
