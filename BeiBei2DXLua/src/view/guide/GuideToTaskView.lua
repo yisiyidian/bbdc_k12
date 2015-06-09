@@ -38,6 +38,7 @@ function GuideToTaskView:initUI()
     self.backColor:addChild(self.back)
     -- 暗色背景
 
+    -- 箱子里的纸张
     local pape = cc.Sprite:create("image/friend/broad.png")
     pape:setScale(0)
     pape:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /2)
@@ -46,6 +47,7 @@ function GuideToTaskView:initUI()
     self.pape = pape
     self.backColor:addChild(self.pape)
 
+    -- 箱子拟人的对话框
     local pop = cc.Sprite:create("image/alter/tanchu_board_small_white.png")
     pop:setScale(0)
     pop:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /2)
@@ -54,6 +56,7 @@ function GuideToTaskView:initUI()
     self.pop = pop
     self.backColor:addChild(self.pop)
 
+    -- 对话框里的内容
     local con = cc.Label:createWithSystemFont("","",30)
     con:setPosition(cc.p(self.pop:getContentSize().width / 2,self.pop:getContentSize().height /2))
     con:setColor(cc.c4b(0,0,0,255))
@@ -62,11 +65,12 @@ function GuideToTaskView:initUI()
     self.con = con
     self.pop:addChild(self.con)
 
-	-- 临时图层
+	-- 临时图层，用于放置引导label
 	local layer = cc.Layer:create()
 	self.layer = layer
 	self.backColor:addChild(self.layer)
 
+	-- 箱子
    	local box = cc.Sprite:create("image/islandPopup/close.png")
    	box:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT *1.5)
    	box:ignoreAnchorPointForPosition(false)
@@ -75,8 +79,9 @@ function GuideToTaskView:initUI()
     self.back:addChild(self.box)
 
 	self.back:setTouchEnabled(true)
+	-- 背景的触摸事件
 	self.back:addTouchEventListener(handler(self,self.touchFunc))   
-	--渲染列表
+	--渲染
 	self:resetView()
 end
 
@@ -88,6 +93,7 @@ function GuideToTaskView:touchFunc(sender,eventType)
 end
 
 function GuideToTaskView:resetView()
+	-- 初始化数据
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	self.layer:removeAllChildren()
 	local boxPos = cc.p(0,0)
@@ -109,6 +115,7 @@ function GuideToTaskView:resetView()
 	self.isOpen = isOpen
 	self.boxPos = boxPos
 
+	-- 根据数据改变ui
 	self:resetLock()
 	self:resetLabel()
 	self:resetBox()
@@ -116,6 +123,7 @@ function GuideToTaskView:resetView()
 	self:resetPopup()
 	self:resetGuideStep()
 
+	-- 结束引导
 	if self.index == 7 then
 		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 		self:removeFromParent()
@@ -124,11 +132,13 @@ function GuideToTaskView:resetView()
 	self.index = self.index + 1
 end
 
+-- 更新引导步
 function GuideToTaskView:resetGuideStep()
 	local currentStep = s_CURRENT_USER.guideStep
 	s_CURRENT_USER:setGuideStep(currentStep + 1)
 end
 
+-- 加入锁屏
 function GuideToTaskView:resetLock()
 	local action1 = cc.DelayTime:create(0.3)
 	local action2 = cc.CallFunc:create(function ()
@@ -137,6 +147,7 @@ function GuideToTaskView:resetLock()
 	self:runAction(cc.Sequence:create(action1,action2))
 end
 
+-- 重置对话框
 function GuideToTaskView:resetPopup()
 	local action1 = cc.DelayTime:create(0.3)
 	local action2 = cc.CallFunc:create(function ()
@@ -155,6 +166,7 @@ function GuideToTaskView:resetPopup()
 	self:runAction(cc.Sequence:create(action1,action2))
 end
 
+-- 重置箱子纸张
 function GuideToTaskView:resetPage()
 	local action1 = cc.DelayTime:create(0.3)
 	local action2 = cc.CallFunc:create(function ()
@@ -181,6 +193,7 @@ function GuideToTaskView:resetPage()
 	self:runAction(cc.Sequence:create(action1,action2))
 end
 
+-- 重置引导Label
 function GuideToTaskView:resetLabel()
 	local action1 = cc.DelayTime:create(0.3)
 	local action2 = cc.CallFunc:create(function ()
@@ -189,6 +202,7 @@ function GuideToTaskView:resetLabel()
 	self:runAction(cc.Sequence:create(action1,action2))
 end
 
+-- 重置箱子
 function GuideToTaskView:resetBox()
 	local action1 = cc.ScaleTo:create(0.3,self.scaleTo)
 	local action2 = cc.MoveTo:create(0.3,self.boxPos)

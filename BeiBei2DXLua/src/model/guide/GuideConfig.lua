@@ -1,7 +1,9 @@
 -- 引导label数据 配置文件
 -- by 侯琪
 -- 2015年06月05日11:47:47
---
+--{["guide_id"] = 引导的步骤
+-- pos=label出现的位置	
+-- desc=label显示的文字}, 			
 
 local GuideConfig = {}
 

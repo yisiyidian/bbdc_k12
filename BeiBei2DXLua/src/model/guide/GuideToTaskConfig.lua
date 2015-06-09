@@ -1,7 +1,11 @@
 -- 任务引导数据 配置文件
 -- by 侯琪
 -- 2015年06月05日11:47:47
---
+--["guideToTask_id"] = 任务引导的步骤
+--boxPos=箱子的位置
+--isOpen=箱子状态	
+--scaleTo=箱子大小
+--guideId = 出现的label引导编号
 
 local GuideToTaskConfig = {}
 
