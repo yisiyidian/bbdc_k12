@@ -71,27 +71,6 @@ function LevelProgressPopup:initUI()
 end    
 
 function LevelProgressPopup:createSummary(index)
-    local wordCard_Click = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            local WordCardView = require("view.wordcard.WordCardView")
-            local wordCardView = WordCardView.create(index)
-            s_SCENE:popup(wordCardView)
-        end
-    end
-    --加入 词库按钮
-    local wordCard_button = ccui.Button:create("image/islandPopup/unit_words_button_click.png","image/islandPopup/unit_words_button.png","")
-    wordCard_button:setPosition(self.background:getContentSize().width * 0.5 - 2, self.background:getContentSize().height * 0.25)
-    wordCard_button:addTouchEventListener(wordCard_Click)
-    self.background:addChild(wordCard_button)
-
-    -- 加入引导手指
-    if s_CURRENT_USER.guideStep == s_guide_step_enterLevel then
-        local guideFingerView = require("view.guide.GuideFingerView").create()
-        guideFingerView:setPosition(wordCard_button:getContentSize().width,0)
-        wordCard_button:addChild(guideFingerView,2)
-    end
-
-
     --加入按钮
     local go_button = Button.create("long","blue","GO") 
     go_button:setPosition(self.background:getContentSize().width * 0.5 - 2, self.background:getContentSize().height * 0.13)
@@ -182,8 +161,28 @@ function LevelProgressPopup:createSummary(index)
 
     if s_CURRENT_USER.guideStep <= s_guide_step_enterCard and s_CURRENT_USER.guideStep > s_guide_step_enterLevel then
         local guideFingerView = require("view.guide.GuideFingerView").create()
-        guideFingerView:setPosition(go_button:getContentSize().width,0)
-        go_button:addChild(guideFingerView,2)
+        guideFingerView:setPosition(go_button:getContentSize().width *0.8,0)
+        go_button:addChild(guideFingerView,3)
+    end
+
+    local wordCard_Click = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            local WordCardView = require("view.wordcard.WordCardView")
+            local wordCardView = WordCardView.create(index)
+            s_SCENE:popup(wordCardView)
+        end
+    end
+    --加入 词库按钮
+    local wordCard_button = ccui.Button:create("image/islandPopup/unit_words_button_click.png","image/islandPopup/unit_words_button.png","")
+    wordCard_button:setPosition(self.background:getContentSize().width * 0.5 - 2, self.background:getContentSize().height * 0.25)
+    wordCard_button:addTouchEventListener(wordCard_Click)
+    self.background:addChild(wordCard_button)
+
+    -- 加入引导手指
+    if s_CURRENT_USER.guideStep == s_guide_step_enterLevel then
+        local guideFingerView = require("view.guide.GuideFingerView").create()
+        guideFingerView:setPosition(wordCard_button:getContentSize().width,0)
+        wordCard_button:addChild(guideFingerView,3)
     end
 
     onAndroidKeyPressed(self,function() self:closeFunc() end, function ()end)

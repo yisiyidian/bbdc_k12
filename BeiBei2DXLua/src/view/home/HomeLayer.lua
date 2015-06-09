@@ -384,6 +384,11 @@ function HomeLayer:ctor()
     if s_CURRENT_USER.guideStep == s_guide_step_selectBook then
         s_CorePlayManager.enterGuideScene(3,self)
         s_CURRENT_USER:setGuideStep(s_guide_step_enterHome) 
+
+        button_friend:setTouchEnabled(false)
+        button_reward:setTouchEnabled(false)
+        button_setting:setTouchEnabled(false)
+        button_shop:setTouchEnabled(false)
     end
 
     onAndroidKeyPressed(self, function ()
@@ -550,6 +555,9 @@ end
 
 --好友按钮 处理触摸
 function HomeLayer:onBtnFriendTouch(sender,eventType)
+    if s_CURRENT_USER.guideStep <= s_guide_step_enterHome then
+        return
+    end
     if eventType == ccui.TouchEventType.began then
         AnalyticsFriendBtn()
         playSound(s_sound_buttonEffect)
