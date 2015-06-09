@@ -38,41 +38,58 @@ function NewSummaryBossLayer:ctor(unit)
     local function update(delta)
         if self.gameStart and not self.gameOver and not self.gamePaused then 
             self.useTime = self.useTime + delta
-            if s_CURRENT_USER.bossTutorialStep < s_K12_summaryBossFailure then
-                if s_CURRENT_USER.bossTutorialStep == s_K12_summaryBossSuccess then
-                    s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossFailure + 1)
-                else
-                    s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossFailure)
-                end
-            end
-        end
-    end 
-    self:scheduleUpdateWithPriorityLua(update, 0)
-end
 
-function NewSummaryBossLayer:initGuideInfo()
-    local function update(delta)
-        if self.gameStart and not self.gameOver and not self.gamePaused then 
-            self.changeBtnTime = self.changeBtnTime + delta
-            if self.changeBtnTime > self.totalTime / 2 then
-                self.changeBtnTime = - 10000
-                self.gamePaused = true
-                s_CURRENT_USER.isFirstBossGuide = 1
-                self.isFirstBossGuide = 1
-                saveUserToServer({['isFirstBossGuide']=s_CURRENT_USER.isFirstBossGuide})
-                local hintBoard = require("view.summaryboss.HintWord").create('',self.boss,self.firstTimeToChange)
-                self:addChild(hintBoard,1)
-                self.hintChangeBtn = hintBoard
-                
-                hintBoard.hintOver = function (  )
-                    hintBoard:removeFromParent()
-                    self.gamePaused = false
+            if self.tutorialStep == 1 then
+                self.changeBtnTime = self.changeBtnTime + delta
+                --第二次划词引导
+                if self.changeBtnTime > self.totalTime / 2 then
+                    self:secondWordTutorial()
+                end
+            end
+            if self.tutorialStep >= 2 then
+                self.changeBtnTime = self.changeBtnTime + delta
+                --两次划词引导结束后，判断是否需要换词引导
+                if self.changeBtnTime > self.totalTime / 2 and self.firstTimeToChange then
+                    self.changeBtnTime = - 10000
+                    self:changeWordTutorial()
                 end
             end
         end
     end 
-    if s_CURRENT_USER.isFirstBossGuide == 0 and self.isFirstBossGuide == 0 then
+    if not self.isTrying then
         self:scheduleUpdateWithPriorityLua(update, 0)
+    end
+end
+--第二次划词引导
+function NewSummaryBossLayer:secondWordTutorial()
+    self.gamePaused = true
+    --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+    local curtain = require('view.summaryboss.Curtain').create()
+    self:addChild(curtain,2)
+    self.boss:setLocalZOrder(3)
+    self.girl:setLocalZOrder(3)
+    cc.Director:getInstance():getActionManager():pauseTarget(self.boss)
+    curtain.remove = function()
+        --s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+        self.invisibleMat:setVisible(true)
+        self.mat:setVisible(false)
+        self.boss:setLocalZOrder(0)
+        self.girl:setLocalZOrder(0)
+        curtain:removeFromParent()
+    end
+end
+--换词引导
+function NewSummaryBossLayer:changeWordTutorial()
+    self.gamePaused = true
+    self.changeBtn:setLocalZOrder(2)
+    local hintBoard = require("view.summaryboss.HintWord").create('',self.boss,self.firstTimeToChange)
+    self:addChild(hintBoard,1)
+    self.hintChangeBtn = hintBoard
+    
+    hintBoard.hintOver = function (  )
+        hintBoard:removeFromParent()
+        self.gamePaused = false
+        self.changeBtn:setLocalZOrder(0)
     end
 end
 
@@ -88,6 +105,13 @@ function NewSummaryBossLayer:initStageInfo(unit)
     --单元
     self.oldUnit = unit
     self.unit = unit
+    --是否是试玩
+    self.isTrying = false
+    if unit == 0 then
+        self.isTrying = true
+        self.oldUnit = nil
+        self.unit = nil
+    end
     --是否是重玩
     self.isReplay = true
     --总时间
@@ -111,7 +135,8 @@ function NewSummaryBossLayer:initStageInfo(unit)
     self.changeBtnTime = 0
     self.hintChangeBtn = nil
     --是否首次换词
-    self.firstTimeToChange = s_CURRENT_USER.bossTutorialStep < s_K12_summaryBossFailure
+    self.firstTimeToChange = s_CURRENT_USER.needBossChangeWordTutorial == 0
+    print('firstTimeToChange',tostring(self.firstTimeToChange))
     --椰子的行列数
     self.mat_length = 4
     --生词数
@@ -121,6 +146,11 @@ function NewSummaryBossLayer:initStageInfo(unit)
     --换词次数
     self.resetCount = 0
     self.isFirstBossGuide = 0
+    --划词引导阶段，0为需要首次划词提示，1为需要二次划词提示，2为不需要引导
+    self.tutorialStep = 0
+    if s_CURRENT_USER.needBossSlideTutorial == 1 then
+        self.tutorialStep = 2
+    end
 end
 
 function NewSummaryBossLayer:initWordList()
@@ -130,6 +160,11 @@ function NewSummaryBossLayer:initWordList()
     if unit == nil then
         self.isReplay = false   
         self.unit = s_CorePlayManager.currentUnit
+    end
+    -- 试玩特殊处理
+    if self.isTrying then
+        wordList = {{'apple','','apple','apple'},{'pear','','pear','pear'}}
+        return wordList
     end
     print_lua_table(self.unit.wrongWordList)
     for i = 1,#self.unit.wrongWordList do
@@ -198,7 +233,7 @@ function NewSummaryBossLayer:initBackground()
     pauseBtn:ignoreAnchorPointForPosition(false)
     pauseBtn:setAnchorPoint(0,1)
     s_SCENE.popupLayer.pauseBtn = pauseBtn
-    self:addChild(pauseBtn,100)
+    self:addChild(pauseBtn,1)
     pauseBtn:setPosition(s_LEFT_X, s_DESIGN_HEIGHT)
     local function createPausePopup()
         if self.currentBlood <= 0 or self.gameOver or s_SCENE.popupLayer.layerpaused then
@@ -254,17 +289,19 @@ end
 function NewSummaryBossLayer:initBoss()
 	local boss = require("view.summaryboss.Boss").create()
 	boss:setPosition(s_DESIGN_WIDTH * 0.65, s_DESIGN_HEIGHT * 1.15)
-	self:addChild(boss)
+	self:addChild(boss,1)
 	self.boss = boss
     boss:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.75 + 20))))
 	--过关失败
-	boss.bossWin = function ()
-		if self.currentBlood > 0 then
-            -- self.isLose = true
-            self:gameOverFunc(false)   
-            s_CURRENT_USER:setSummaryStep(s_summary_failFirstLevel) 
-        end
-	end
+    if not self.isTrying then
+	    boss.bossWin = function ()
+    		if self.currentBlood > 0 then
+                -- self.isLose = true
+                self:gameOverFunc(false)   
+                s_CURRENT_USER:setSummaryStep(s_summary_failFirstLevel) 
+            end
+    	end
+    end
     --boss靠近
     boss.bossClose = function (  )
         --self.girl:setAnimation("afraid")
@@ -279,15 +316,20 @@ function NewSummaryBossLayer:initBoss()
     end
 end
 
-function NewSummaryBossLayer:initMat()
-	local mat = require("view.summaryboss.Mat").create(self,s_CURRENT_USER.bossTutorialStep < s_K12_summaryBoss or s_CURRENT_USER.bossTutorialStep == s_K12_summaryBossFailure,"coconut_dark")
+function NewSummaryBossLayer:initMat(visible)
+	local mat = require("view.summaryboss.Mat").create(self,self.tutorialStep < 1 or (visible ~= nil and not visible) or (self.isTrying and self.wordList[1][1] == 'apple'),"coconut_dark")
     mat:setPosition(s_DESIGN_WIDTH/2, 150)
     self:addChild(mat,1)
-    self.mat = mat
-    --提示的螃蟹
-    s_SCENE:callFuncWithDelay(0.7,function (  )
-        self:initCrab()
-    end)
+    if visible ~= nil and not visible then
+        self.invisibleMat = mat
+        mat:setVisible(false)
+    else
+        self.mat = mat
+        --提示的螃蟹
+        s_SCENE:callFuncWithDelay(0.7,function (  )
+            self:initCrab()
+        end)
+    end 
     --划错单词后
     mat.fail = function (  )
         self.girl:setAnimation("wrong")
@@ -295,17 +337,13 @@ function NewSummaryBossLayer:initMat()
     end
     --划对单词后
     mat.success = function(stack)
-        self:initGuideInfo()
+        if self.tutorialStep < 2 then
+            self.tutorialStep = self.tutorialStep + 1
+        end
+        --self:initGuideInfo()
         self.changeBtnTime = 0
         s_CURRENT_USER:setSummaryStep(s_summary_doFirstWord) 
         if self.gameOver then return end
-        if s_CURRENT_USER.bossTutorialStep < s_K12_summaryBoss or s_CURRENT_USER.bossTutorialStep == s_K12_summaryBossFailure then
-            if s_CURRENT_USER.bossTutorialStep == s_K12_summaryBossFailure then
-                s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossFailure + 1)
-            else
-                s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossSuccess)
-            end
-        end
         playWordSound(self.wordList[1][4])
         self.boss:stopAllActions()
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -378,29 +416,43 @@ function NewSummaryBossLayer:resetMat()
     self.resetCount = self.resetCount + 1
     self.crab:moveOut()
     local remove = cc.CallFunc:create(function() 
-        self.mat:removeFromParent() 
+        self.mat:removeFromParent()
+        if self.invisibleMat ~= nil then
+            self.invisibleMat:removeFromParent()
+        end
+        self.mat = nil
+        self.invisibleMat = nil
         table.remove(self.wordList,1)
         self:initMat()
+        if self.tutorialStep == 1 then
+            self:initMat(false)
+        end
     end,{})
     self.mat:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7)),remove))
+    if self.invisibleMat ~= nil then
+        self.mat:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7))))
+    end
 end
 
 function NewSummaryBossLayer:initCrab()
-    local crab = require("view.summaryboss.Crab").create(self.wordList[1][4])
-    self:addChild(crab)
+    local crab = require("view.summaryboss.Crab").create(self.wordList[1][4],self.isTrying)
+    self:addChild(crab,1)
     self.crab = crab
     -- s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     if self.gameStart then return end
     self.gameStart = true
     self.boss:goForward(self.totalTime)
-    self:addChangeBtn()
+    if not self.isTrying then
+        self:addChangeBtn()
+    end
 end
 
 function NewSummaryBossLayer:addChangeBtn()
     --换词按钮
     local changeBtn = ccui.Button:create('image/summarybossscene/hint_change_btn.png','image/summarybossscene/hint_change_btn_click.png')
     changeBtn:setPosition(s_DESIGN_WIDTH * 0.84,100)
-    self:addChild(changeBtn,2)
+    self:addChild(changeBtn,0)
+    self.changeBtn = changeBtn
     changeBtn:setScale(0)
     changeBtn:runAction(cc.EaseBackOut:create(cc.ScaleTo:create(0.5,1)))
     local function changeWord(sender,eventType)
@@ -410,13 +462,6 @@ function NewSummaryBossLayer:addChangeBtn()
                 self.hintChangeBtn.hintOver()
                 self.hintChangeBtn = nil
                 --return
-            end
-            if s_CURRENT_USER.bossTutorialStep < s_K12_summaryBossFailure then
-                if s_CURRENT_USER.bossTutorialStep == s_K12_summaryBossSuccess then
-                    s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossFailure + 1)
-                else
-                    s_CURRENT_USER:setBossTutorialStep(s_K12_summaryBossFailure)
-                end
             end
             if self.resetCount < self.maxCount then
                 self.wrongWord = self.wrongWord + 1
@@ -465,7 +510,21 @@ function NewSummaryBossLayer:gameOverFunc(win)
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     self.gameOver = true
     self.blink:stopAllActions()
+    if self.isTrying then
+        local StoryLayer = require('view.level.StoryLayer')
+        local storyLayer = StoryLayer.create(7)
+        s_SCENE:replaceGameLayer(storyLayer)
+        return
+    end
 	if win then
+        if self.tutorialStep >= 2 then
+            s_CURRENT_USER.needBossSlideTutorial = 1
+            saveUserToServer({['needBossSlideTutorial']=s_CURRENT_USER.needBossSlideTutorial})
+            if self.firstTimeToChange == false then
+                s_CURRENT_USER.needBossChangeWordTutorial = 1
+                saveUserToServer({['needBossChangeWordTutorial']=s_CURRENT_USER.needBossChangeWordTutorial})
+            end
+        end
         if self.unit.unitState == 0 then
             s_LocalDatabaseManager.addStudyWordsNum(self.maxCount)
             s_LocalDatabaseManager.addRightWord(self.rightWordList,self.unit.unitID)
