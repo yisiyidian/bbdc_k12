@@ -94,7 +94,7 @@ function FriendRender:initUI()
     fri_grade:setScaleX(1 / scale)
     fri_grade:setColor(cc.c3b(111,181,219))
     fri_grade:ignoreAnchorPointForPosition(false)
-    fri_grade:setAnchorPoint(1,0)
+    fri_grade:setAnchorPoint(1,1)
     fri_grade:setPosition(0.80 * btnsize.width,0.75 * btnsize.height)
     self.fri_grade = fri_grade
     button:addChild(fri_grade)
