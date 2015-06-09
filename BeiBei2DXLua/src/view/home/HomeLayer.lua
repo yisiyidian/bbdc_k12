@@ -146,7 +146,7 @@ function HomeLayer:ctor()
         mission_progress = MissionProgress.create(true,self)
     else
         mission_progress = MissionProgress.create()
-        mission_progress.animation()
+       -- mission_progress.animation()
     end
 
     if checkIn then
@@ -351,7 +351,7 @@ function HomeLayer:ctor()
     self.button_reward = button_reward
 
     if checkInDisplay then
-        self:showDataLayer(true)
+        --self:showDataLayer(true)
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     end
 
@@ -722,6 +722,7 @@ function HomeLayer:showDataLayerByItem(index)
     end)
 end
 
+--显示主页面下方的按钮
 function HomeLayer:showDataLayer(checkIn)
     self.button_data:setLocalZOrder(2)
     self.button_data:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-280)))))
