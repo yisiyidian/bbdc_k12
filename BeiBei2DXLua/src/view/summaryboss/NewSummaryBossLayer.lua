@@ -118,6 +118,7 @@ function NewSummaryBossLayer:initStageInfo(unit)
         self.isTrying = true
         self.oldUnit = nil
         self.unit = nil
+        s_CURRENT_USER:setGuideStep(s_guide_step_tryBoss)
     end
     --是否是重玩
     self.isReplay = true
@@ -349,6 +350,7 @@ function NewSummaryBossLayer:initMat(visible)
     mat.success = function(stack)
         if self.tutorialStep < 2 then
             self.tutorialStep = self.tutorialStep + 1
+            s_CURRENT_USER:setGuideStep(self.tutorialStep + 13)
         end
         --self:initGuideInfo()
         self.changeBtnTime = 0
