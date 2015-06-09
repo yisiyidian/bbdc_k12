@@ -350,7 +350,9 @@ function NewSummaryBossLayer:initMat(visible)
     mat.success = function(stack)
         if self.tutorialStep < 2 then
             self.tutorialStep = self.tutorialStep + 1
-            s_CURRENT_USER:setGuideStep(self.tutorialStep + 13)
+            if not self.isTrying then
+                s_CURRENT_USER:setGuideStep(self.tutorialStep + 13)
+            end
         end
         --self:initGuideInfo()
         self.changeBtnTime = 0
