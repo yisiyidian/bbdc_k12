@@ -34,7 +34,7 @@ RegisterAccountView.STEP_6 = 6	--登陆
 RegisterAccountView.STEP_7 = 7	--修改密码
 RegisterAccountView.STEP_8 = 8	--密码找回
 
-RegisterAccountView.STEP_9 = 9   
+RegisterAccountView.STEP_9 = 9
 RegisterAccountView.STEP_10 = 10 
 RegisterAccountView.STEP_11 = 11
 
@@ -42,6 +42,8 @@ RegisterAccountView.STEP_11 = 11
 function RegisterAccountView:ctor(step)
 	self:init(step)
 	self.debug = false
+	self.uistack = {} --UI的栈,里边保存UI流程序号,UI显示的参数  Android返回键用
+	self.curBtn = nil --当前的输入按钮 
 end
 
 function RegisterAccountView:showErrorIcon()
@@ -89,11 +91,11 @@ function RegisterAccountView:init(step)
 	self.btnReturn = btnReturn
 	self:addChild(btnReturn)
 	--tip 注册可以和更多好友一起背单词
-	local tip = cc.Label:createWithSystemFont("注册可以和更多好友一起背单词","",26)
-	tip:setTextColor(cc.c3b(118,123,124))
-	tip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 60)
-	self.tip = tip
-	self:addChild(tip)
+	-- local tip = cc.Label:createWithSystemFont("注册可以和更多好友一起背单词","",26)
+	-- tip:setTextColor(cc.c3b(118,123,124))
+	-- tip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 60)
+	-- self.tip = tip
+	-- self:addChild(tip)
 	--alert tip 提示文本 提示应该输入什么
 	local alertTip = cc.Label:createWithSystemFont(" ","",26)
 	alertTip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 100)
@@ -147,7 +149,7 @@ function RegisterAccountView:goStep(step,...)
 	end
 end
 
---------------------------------UI-------------------
+--------------------------------UI-------------------输入手机号码-------------------------------------------------------------------------------------------------------
 --image/login/white_shurukuang_zhuce.png
 --image/signup/shuru_bbchildren_white.png
 --image/login/sl_username.png
@@ -156,20 +158,12 @@ end
 --显示输入手机号码的界面
 function RegisterAccountView:showInputPhoneNumber()
 	--手机号码输入
-	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入您的手机号",nil,nil,nil,nil,11)
-	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入您的手机号",handler(self,self.ProcessInput),nil,nil,nil,11)
+	inputNode:setPosition(0.5 * s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.8 - 200)
 	self:addChild(inputNode)
 	self.inputNode = inputNode
 	inputNode:openIME()
 	self.views[#self.views+1] = inputNode
-
-	local btnPhoneNumberOK = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnPhoneNumberOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 330)
-	btnPhoneNumberOK:addTouchEventListener(handler(self, self.onTouchPhoneNumberOK))
-	btnPhoneNumberOK:setTitleText("下一步")
-	btnPhoneNumberOK:setTitleFontSize(36)
-	self:addChild(btnPhoneNumberOK)
-	self.views[#self.views+1] = btnPhoneNumberOK
 
 	self.alertTip:setString("输入您的手机号码")
 	self.title:setString("登陆/注册")
@@ -178,10 +172,9 @@ function RegisterAccountView:showInputPhoneNumber()
 	self.btnReturn:setTouchEnabled(false)
 
 	--其他登陆方式
-	-- login_50s_send.png 是临时资源  要替换成全部透明的图片
+	--login_50s_send.png 是临时资源  要替换成全部透明的图片
 	local btnOtherLogin = ccui.Button:create("image/login/login_50s_send.png")
 	btnOtherLogin:setPosition(0.8 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
-	-- btnOtherLogin:addTouchEventListener(handler(self, self.onRetrySMSTouch))
 	btnOtherLogin:setTitleColor(cc.c3b(153,168,181))
 	btnOtherLogin:setTitleText("其他登陆方式")
 	btnOtherLogin:setTitleFontSize(20)
@@ -192,7 +185,6 @@ function RegisterAccountView:showInputPhoneNumber()
 	--游客登陆
 	local btnGuestLogin = ccui.Button:create("image/login/login_50s_send.png")
 	btnGuestLogin:setPosition(0.2 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
-	-- btnGuestLogin:addTouchEventListener(handler(self, self.onRetrySMSTouch))
 	btnGuestLogin:setTitleColor(cc.c3b(153,168,181))
 	btnGuestLogin:setTitleText("游客登陆")
 	btnGuestLogin:setTitleFontSize(20)
@@ -201,6 +193,16 @@ function RegisterAccountView:showInputPhoneNumber()
 	self.btnGuestLogin = btnGuestLogin
 	self.views[#self.views+1] = btnGuestLogin
 
+	--下一步的按钮
+	local btnPhoneNumberOK = ccui.Button:create("image/shop/button_back2.png")
+	btnPhoneNumberOK:setPosition(0.8 * s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.8 - 200)
+	btnPhoneNumberOK:addTouchEventListener(handler(self, self.onTouchPhoneNumberOK))
+	self.btnPhoneNumberOK = btnPhoneNumberOK
+	self.btnPhoneNumberOK:setVisible(false)
+	self.btnPhoneNumberOK:setTouchEnabled(false)
+	self.curBtn = self.btnPhoneNumberOK --绑定到curBtn
+	self.views[#self.views+1] = btnPhoneNumberOK
+	self:addChild(btnPhoneNumberOK)
 end
 
 --电话号码输入OK
@@ -235,14 +237,40 @@ end
 --验证手机号码回调
 function RegisterAccountView:onVerifyPhoneNumberBack(exist,error)
 	if exist then
-		s_TIPS_LAYER:showSmallWithOneButton("该手机号码已被注册！")
-  		-- s_TIPS_LAYER:showSmallWithOneButton(error.description)
+		-- s_TIPS_LAYER:showSmallWithOneButton("该手机号码已被注册！")
+		-- 1、
+		-- 已被注册的手机号码 未验证的 要验证
+		-- 验证之后 直接通过手机号码 + 默认密码登陆
+		-- 2、
+		-- 已注册 已验证的手机号码,调用短信验证码登陆
+		-- 此后的登陆,通过手机号码 + 默认密码登陆
 	else
-		self:requestSMSCode(self.phoneNumber)
-		self.curStep = self.curStep + 1
-		self:goStep(self.curStep,60) --60秒
+		--不存在的话 直接走注册逻辑
+
+		--[[
+			self:requestSMSCode(self.phoneNumber)
+			self.curStep = self.curStep + 1
+			self:goStep(self.curStep,60) --60秒
+		]]
 	end
 end
+
+--处理输入事件
+--text 文本
+--length 长度
+function RegisterAccountView:ProcessInput(text,length,maxlength)
+	if maxlength == length then
+		self.btnPhoneNumberOK:setVisible(true)
+		self.btnPhoneNumberOK:setTouchEnabled(true)
+	else
+		self.btnPhoneNumberOK:setVisible(false)
+		self.btnPhoneNumberOK:setTouchEnabled(false)
+	end
+end
+--------------------------------UI-------------------输入手机号码 结束-------------------------------------------------------------------------------------------------------
+
+
+--------------------------------UI-------------------输入验证码-------------------------------------------------------------------------------------------------------------
 
 --显示输入验证码的界面
 function RegisterAccountView:showInputSmsCode(args)
@@ -555,7 +583,7 @@ end
 --显示登陆界面
 function RegisterAccountView:showLoginView( ... )
 	self.title:setString("登 录")
-	self.tip:setString("登录可以和更多好友一起背单词")
+	-- self.tip:setString("登录可以和更多好友一起背单词")
 
 	local inputNodeID = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入手机号",nil,nil,nil,false,11)
 	inputNodeID:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 170)
