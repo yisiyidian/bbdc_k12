@@ -39,6 +39,22 @@ function BookLayer.create(education)
     backButton:setPosition((s_RIGHT_X - s_LEFT_X) / 2 - 238, 1073)
     backButton:addTouchEventListener(click_back)
     backColor:addChild(backButton)
+
+    --我的书
+    if s_CURRENT_USER.bookList ~= '' and education ~= 'mybook' then
+        local enterBookLayer = function (sender,eventType)
+            if eventType == ccui.TouchEventType.began then
+                playSound(s_sound_buttonEffect)   
+            elseif eventType == ccui.TouchEventType.ended then
+                s_CorePlayManager.enterBookLayer(sender:getName())
+            end
+        end
+        local mybookBtn = ccui.Button:create('image/book/k12/select_grade_mybook_button.png','image/book/k12/select_grade_mybook_button_click.png')
+        mybookBtn:setPosition((s_RIGHT_X - s_LEFT_X) /2 +200,1073)
+        backColor:addChild(mybookBtn)
+        mybookBtn:setName('mybook') 
+        mybookBtn:addTouchEventListener(enterBookLayer)
+    end
     
     --whether bookKey == nil
     
@@ -47,24 +63,40 @@ function BookLayer.create(education)
     -- else
     --    backButton:setVisible(true)
     -- end
+    local grade = split(education,'_')
+    if grade[1] == 'primary' or grade[1] == 'junior' or grade[1] == 'senior' then
     
-    local hint = cc.Label:createWithSystemFont("所有的教材都是人教版教材","",24)
-    hint:setPosition((s_RIGHT_X - s_LEFT_X)/2,1073)
-    hint:setColor(cc.c4b(66,66,62,255))
-    backColor:addChild(hint) 
+        local hint = cc.Label:createWithSystemFont("所有的教材都是人教版教材","",24)
+        hint:setPosition((s_RIGHT_X - s_LEFT_X)/2 - 40,1073)
+        hint:setColor(cc.c4b(66,66,62,255))
+        backColor:addChild(hint) 
+    end
     --local name_array = {}
     --local key_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
-    local grade = split(education,'_')
+    
+    local rect_table = {'senior_1','senior_2','senior_3','senior_4','senior_5','senior_6','senior_7','senior_8','senior_9','senior_10','senior_11'
+                      ,'cet4','cet6','pro4','pro8','gse'
+                      ,'gre','gmat','sat','toefl','ielts'}
     if grade[1] == 'kwekwe' then
         grade[1] = 'primary'
+    elseif grade[1] == 'cet4' or grade[1] == 'cet6' or grade[1] == 'pro4' or grade[1] == 'pro8' or grade[1] == 'gse' then
+        grade[1] = 'college'
+    elseif grade[1] == 'gre' or grade[1] == 'gmat' or grade[1] == 'sat' or grade[1] == 'toefl' or grade[1] == 'ielts' then
+        grade[1] = 'more'
     end
     local key_array = {}
     if grade[1] == 'primary' then
         key_array = {'kwekwe','primary_1','primary_2','primary_3','primary_4','primary_5','primary_6','primary_7','primary_8'}
     elseif grade[1] == 'junior' then
         key_array = {'junior_1','junior_2','junior_3','junior_4','junior_5'}
-    else
+    elseif grade[1] == 'senior' then
         key_array = {'senior_1','senior_2','senior_3','senior_4','senior_5','senior_6','senior_7','senior_8','senior_9','senior_10','senior_11'}
+    elseif grade[1] == 'college' then
+        key_array = {'cet4','cet6','pro4','pro8','gse'}
+    elseif grade[1] == 'more' then
+        key_array = {'gre','gmat','sat','toefl','ielts'}
+    else 
+        key_array = split(s_CURRENT_USER.bookList,'|')
     end
     --local key_array = g_BOOKKEYS
     -- for i = 1, #key_array do
@@ -92,6 +124,7 @@ function BookLayer.create(education)
                 end
                 --print("s_CURRENT_USER.bookKey2"..bookKey)
                 s_CURRENT_USER.bookKey = key
+                s_CURRENT_USER:addBookList(key)
                 saveUserToServer({['bookKey']=s_CURRENT_USER.bookKey})
                 AnalyticsBook(key)
                 AnalyticsFirst(ANALYTICS_FIRST_BOOK, key)
@@ -106,7 +139,7 @@ function BookLayer.create(education)
         end
         table.insert(func_array, click)
     
-        local smallBack = ccui.Button:create("image/book/"..grade[1].."/K12_choose_book_"..key_array[i]..".png", "", "")
+        local smallBack = ccui.Button:create("image/book/book/K12_choose_book_"..key_array[i]..".png", "", "")
         smallBack:setTouchEnabled(true)
         smallBack:setScale9Enabled(true)
 
@@ -115,7 +148,14 @@ function BookLayer.create(education)
 
         if key == s_CURRENT_USER.bookKey then
             local shine
-            if grade[1]== 'senior' then
+            local flag = true
+            for i  =1,#rect_table do
+                if key == rect_table[i] then
+                    flag = false
+                    break
+                end
+            end
+            if not flag then
                 shine = cc.Sprite:create('image/book/choose_book_using_now.png')
                 shine:setPosition(smallBack:getContentSize().width / 2 - 7,smallBack:getContentSize().height / 2)
             else
@@ -209,6 +249,9 @@ function BookLayer.create(education)
     listView:setPosition(s_LEFT_X,0)
     layer:addChild(listView)
     local count = math.ceil(bookCount / 2 + 0.5)
+    if count < 3 then
+        listView:setBounceEnabled(false)
+    end
     for i = 1, count do 
         local shelf = cc.Sprite:create('image/book/bookshelf_choose_book_button.png')
         shelf:ignoreAnchorPointForPosition(false)
@@ -226,7 +269,7 @@ function BookLayer.create(education)
             custom_item:addChild(layer.book[i])
             
             local flower 
-            if grade[1] == 'senior' then
+            if grade[1] == 'senior' or grade[1] == 'college' or grade[1] == 'more' then
                 flower = cc.Sprite:create('image/book/flower_choose_book.png')
             else
                 flower = cc.Sprite:create('image/book/K12_choose_book__monkey_toy.png')

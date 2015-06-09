@@ -126,6 +126,29 @@ function DataUser:ctor()
     self.bossTutorialStep                  = 0
     -- 是否是过出现boss换词引导
     self.isFirstBossGuide                  = 0
+
+    --已选过的书
+    self.bookList                          = ''
+end
+
+function DataUser:addBookList(bookKey)
+    local list = split(self.bookList,'|')
+    if #list < 1 or list[1] == '' then
+        self.bookList = bookKey
+    else
+        for i = 1,#list do
+            if list[i] == bookKey then
+                table.remove(list,i)
+                --break
+            end
+        end
+        self.bookList = bookKey
+        for i = 1,#list do
+            self.bookList = self.bookList..'|'..list[i]
+        end
+    end
+
+    saveUserToServer({['bookList']=self.bookList})
 end
 
 function DataUser:setSummaryStep(step)

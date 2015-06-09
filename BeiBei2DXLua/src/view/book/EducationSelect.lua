@@ -75,19 +75,45 @@ function EducationSelect:ctor()
         end
     end
 
-    local education = {'primary','junior','senior'}
-    local titleArray = {'小学','初中','高中'}
-    for i = 1,#education do
-    	local bookBtn = ccui.Button:create('image/book/k12/K12_choose_book_'..education[i]..'_school_button.png','image/book/k12/K12_choose_book_'..education[i]..'_school_button_press.png')
-    	bookBtn:setPosition((s_RIGHT_X - s_LEFT_X) / 2,s_DESIGN_HEIGHT / 2 + (2 - i) * 240 + 50)
+    local education = {'primary','junior','senior','college','more','mybook'}
+    local titleArray = {'小学','初中','高中','大学','更多','我的书'}
+    for i = 1,4 do
+    	local bookBtn = ccui.Button:create('image/book/k12/select_grade_button.png','image/book/k12/select_grade_button_click.png')
+        local y = -200
+        if i <= 2 then
+            y = 100
+        end
+        local x = -120
+        if i % 2 == 0 then
+            x = 120
+        end
+    	bookBtn:setPosition((s_RIGHT_X - s_LEFT_X) /2 +x,s_DESIGN_HEIGHT / 2 +y +30)
     	background:addChild(bookBtn)
     	bookBtn:setName(education[i])
 
+        local icon = cc.Sprite:create('image/book/k12/select_grade_'..education[i]..'_school.png')
+        icon:setPosition(bookBtn:getPositionX(),bookBtn:getPositionY() + 150)
+        background:addChild(icon)
+        
 		local title = cc.Label:createWithSystemFont(titleArray[i],'',34)
-        title:setPosition(bookBtn:getContentSize().width*0.35,bookBtn:getContentSize().height*0.4)
+        title:setPosition(bookBtn:getContentSize().width*0.5,bookBtn:getContentSize().height*0.5)
         bookBtn:addChild(title)   
 
         bookBtn:addTouchEventListener(enterBookLayer) 	
+    end
+    --更多书籍的按钮
+    local bookBtn = ccui.Button:create('image/book/k12/select_grade_more_button.png','image/book/k12/select_grade_more_button_click.png')
+    bookBtn:setPosition((s_RIGHT_X - s_LEFT_X) /2 +120,s_DESIGN_HEIGHT / 2 -280)
+    background:addChild(bookBtn)
+    bookBtn:setName(education[5]) 
+    bookBtn:addTouchEventListener(enterBookLayer)
+    --我的书
+    if s_CURRENT_USER.bookList ~= '' then
+        local mybookBtn = ccui.Button:create('image/book/k12/select_grade_mybook_button.png','image/book/k12/select_grade_mybook_button_click.png')
+        mybookBtn:setPosition((s_RIGHT_X - s_LEFT_X) /2 +200,1073)
+        background:addChild(mybookBtn)
+        mybookBtn:setName('mybook') 
+        mybookBtn:addTouchEventListener(enterBookLayer)
     end
     --弹出注册帐号
     --TODO 这块的流程太乱 需整理
