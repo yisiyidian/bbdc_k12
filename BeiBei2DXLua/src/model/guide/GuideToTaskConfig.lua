@@ -14,8 +14,8 @@ GuideToTaskConfig.data = {
 	{["guideToTask_id"] = 2,	boxPos=cc.p(s_DESIGN_WIDTH / 2,600)		,isOpen=true	,scaleTo = 2	,guideId = 14	,light = true}, 	
 	{["guideToTask_id"] = 3,	boxPos=cc.p(s_RIGHT_X-180 ,180)			,isOpen=false	,scaleTo = 1.15	,guideId = 15	,light = false},
 	{["guideToTask_id"] = 4,	boxPos=cc.p(s_RIGHT_X-180 ,180)			,isOpen=false	,scaleTo = 1.12	,guideId = 16	,light = false},
-	{["guideToTask_id"] = 5,	boxPos=cc.p(s_RIGHT_X-180 ,180)			,isOpen=false	,scaleTo = 1.1	,guideId = 18	,light = false},
-	{["guideToTask_id"] = 6,	boxPos=cc.p(s_RIGHT_X-180 ,180)			,isOpen=false	,scaleTo = 1.08	,guideId = 19	,light = false},
+	{["guideToTask_id"] = 5,	boxPos=cc.p(s_RIGHT_X-180 ,180)			,isOpen=false	,scaleTo = 1.1	,guideId = 17	,light = false},
+	{["guideToTask_id"] = 6,	boxPos=cc.p(s_RIGHT_X-180 ,180)			,isOpen=false	,scaleTo = 1.08	,guideId = 18	,light = false},
 	{["guideToTask_id"] = 7,	boxPos=cc.p(s_RIGHT_X-180 ,180)			,isOpen=false	,scaleTo = 1.03	},
 }
 

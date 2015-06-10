@@ -91,6 +91,7 @@ function GuideToTaskView:initUI()
 
     local showBeanNumber = cc.Label:createWithSystemFont("X 10","",30)
     showBeanNumber:setScale(1.5)
+    showBeanNumber:setColor(cc.c4b(0,0,0,255))
     showBeanNumber:setPosition(cc.p(self.pop:getContentSize().width * 0.75,self.pop:getContentSize().height *0.3))
     self.showBeanNumber = showBeanNumber
     self.pop:addChild(self.showBeanNumber)
