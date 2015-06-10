@@ -63,6 +63,8 @@ function GuideView:resetView()
 		self.back:setTexture('image/guide/xiaoguan_tanchu_duihuakuang2.png')
 	elseif self.color == "sp1" then
 		self.back:setTexture('image/guide/sp1.png')
+	elseif self.color == "sp2" then
+		self.back:setTexture('image/guide/sp2.png')
 	else
 		return
 	end
@@ -83,6 +85,11 @@ function GuideView:resetView()
 	    local action2 = cc.EaseBackOut:create(action1)
 	    self.back:runAction(action2)
 	    self.label:setPosition(cc.p(self.back:getContentSize().width*0.6,self.back:getContentSize().height *0.75))
+	elseif self.color == "sp2" then
+		local action1 = cc.MoveTo:create(0.5,self.pos)
+	    local action2 = cc.EaseBackOut:create(action1)
+	    self.back:runAction(action2)
+	    self.label:setPosition(cc.p(self.back:getContentSize().width*0.65,self.back:getContentSize().height *0.45))
 	end
 
 	if self.bbName ~= nil then

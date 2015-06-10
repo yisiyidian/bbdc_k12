@@ -3,7 +3,6 @@
 -- by 侯琪
 -- 2015年06月05日16:25:15
 local GuideToTaskConfig = require("model/guide/GuideToTaskConfig.lua")
-local GuideToTaskRender = require("view/guide/GuideToTaskRender.lua")
 local GuideToTaskView = class("GuideToTaskView",function ()
 	local layer = cc.Layer:create()
 	return layer
@@ -38,6 +37,25 @@ function GuideToTaskView:initUI()
     self.backColor:addChild(self.back)
     -- 暗色背景
 
+    local light1 = cc.Sprite:create("image/guide/light.png")
+	light1:ignoreAnchorPointForPosition(false)
+	light1:setAnchorPoint(0.5,0.5)
+	light1:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /2)
+	light1:setVisible(false)
+	self.light1 = light1
+	self.backColor:addChild(self.light1)
+
+	local light2 = cc.Sprite:create("image/guide/light.png")
+	light2:ignoreAnchorPointForPosition(false)
+	light2:setAnchorPoint(0.5,0.5)
+	light2:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /2)
+	light2:setVisible(false)
+	self.light2 = light2
+	self.backColor:addChild(self.light2)
+
+	self.light1:runAction(cc.RepeatForever:create(cc.RotateBy:create(2,360)))
+	self.light2:runAction(cc.RepeatForever:create(cc.RotateBy:create(2,-360)))
+
     -- 箱子里的纸张
     local pape = cc.Sprite:create("image/guide/yindao_baoxiang_paper.png")
     pape:setScale(0)
@@ -48,7 +66,7 @@ function GuideToTaskView:initUI()
     self.backColor:addChild(self.pape)
 
     -- 箱子拟人的对话框
-    local pop = cc.Sprite:create("image/alter/tanchu_board_small_white.png")
+    local pop = cc.Sprite:create("image/guide/yindao_background_yellow3.png")
     pop:setScale(0)
     pop:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /2)
     pop:ignoreAnchorPointForPosition(false)
@@ -58,12 +76,24 @@ function GuideToTaskView:initUI()
 
     -- 对话框里的内容
     local con = cc.Label:createWithSystemFont("","",30)
-    con:setPosition(cc.p(self.pop:getContentSize().width / 2,self.pop:getContentSize().height /2))
+    con:setPosition(cc.p(self.pop:getContentSize().width / 2,self.pop:getContentSize().height *0.65))
     con:setColor(cc.c4b(0,0,0,255))
     con:ignoreAnchorPointForPosition(false)
     con:setAnchorPoint(0.5,0.5)
     self.con = con
     self.pop:addChild(self.con)
+
+    local showBean = cc.Sprite:create("image/loginreward/bean.png")
+    showBean:setScale(1.5)
+    showBean:setPosition(cc.p(self.pop:getContentSize().width / 2,self.pop:getContentSize().height *0.3))
+    self.showBean = showBean
+    self.pop:addChild(self.showBean)
+
+    local showBeanNumber = cc.Label:createWithSystemFont("X 10","",30)
+    showBeanNumber:setScale(1.5)
+    showBeanNumber:setPosition(cc.p(self.pop:getContentSize().width * 0.75,self.pop:getContentSize().height *0.3))
+    self.showBeanNumber = showBeanNumber
+    self.pop:addChild(self.showBeanNumber)
 
 	-- 临时图层，用于放置引导label
 	local layer = cc.Layer:create()
@@ -100,6 +130,7 @@ function GuideToTaskView:resetView()
 	local isOpen = false
 	local scaleTo = 1
 	local showIndex = 0
+	local light = false
 	table.foreach(GuideToTaskConfig.data, 
 		function(i, v)  
 			if v.guideToTask_id == self.index then 
@@ -108,12 +139,14 @@ function GuideToTaskView:resetView()
 				boxPos = v.boxPos 
 				scaleTo = v.scaleTo
 				showIndex = v.guideId
+				light = v.light
 			end 
 		end)
 	self.showIndex = showIndex
 	self.scaleTo = scaleTo
 	self.isOpen = isOpen
 	self.boxPos = boxPos
+	self.light = light
 
 	-- 根据数据改变ui
 	self:resetLock()
@@ -121,6 +154,7 @@ function GuideToTaskView:resetView()
 	self:resetBox()
 	self:resetPage()
 	self:resetPopup()
+	self:resetLight()
 	self:resetGuideStep()
 
 	-- 结束引导
@@ -147,17 +181,33 @@ function GuideToTaskView:resetLock()
 	self:runAction(cc.Sequence:create(action1,action2))
 end
 
+function GuideToTaskView:resetLight()
+	local action1 = cc.DelayTime:create(0.3)
+	local action2 = cc.CallFunc:create(function ()
+		if self.light == true then
+			self.light1:setVisible(true)
+			self.light2:setVisible(true)
+		else
+			self.light1:setVisible(false)
+			self.light2:setVisible(false)	
+		end
+	end)
+	self:runAction(cc.Sequence:create(action1,action2))
+end
+
 -- 重置对话框
 function GuideToTaskView:resetPopup()
 	local action1 = cc.DelayTime:create(0.3)
 	local action2 = cc.CallFunc:create(function ()
 		if self.index == 5 then
-			local action1 = cc.Place:create(cc.p(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT * 0.35))
+			local action1 = cc.Place:create(cc.p(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT * 0.45))
 			local action2 = cc.ScaleTo:create(0.1,1)
 			local action = cc.Sequence:create(action1,action2)
 			self.pop:runAction(action)
-			self.con:setString("善良的勇者，感谢你从怪物的手中救了我\n这是我给你的报酬，请收下吧")
+			self.con:setString("善良的勇者\n感谢你从怪物的手中救了我\n这是我给你的报酬\n请收下吧")
 		elseif self.index == 6 then
+			self.showBean:removeFromParent()
+			self.showBeanNumber:removeFromParent()
 			self.con:setString("千万不要小看这些豆子\n在这个世界里\n你用这些豆子可以买到任何东西\n想要获得更多豆子\n就快点帮我做事吧")
 		elseif self.index == 7 then
 			self.con:setString("来，交给你一个伟大的任务\n（点击我查看任务）")
@@ -176,13 +226,7 @@ function GuideToTaskView:resetPage()
 			local action = cc.Sequence:create(action1,action2)
 			self.pape:runAction(action)
 		elseif self.index == 4 then
-			local action1 = cc.ScaleTo:create(0.1,1)
-			local action2 = cc.MoveBy:create(0.1,cc.p(0, -40))
-			local action3 = cc.CallFunc:create(function ()
-				self.page:setTexture()
-			end)
-			local action = cc.Sequence:create(action1,action2,action3)
-			self.pape:runAction(action)
+			self.pape:setTexture("image/guide/popup.png")
 		elseif self.index == 5 then
 			local action1 = cc.ScaleTo:create(0.1,0)
 			local action2 = cc.MoveTo:create(0.1,cc.p(self.boxPos))
