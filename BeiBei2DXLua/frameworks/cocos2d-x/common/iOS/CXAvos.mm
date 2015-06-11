@@ -161,6 +161,42 @@ void CXAvos::verifySMSCode(const char *phoneNumber, const char *smsCode, CXLUAFU
     }];
 }
 
+
+//-----------验证手机号码--------请求服务器发来验证码---------------------
+void CXAvos::requestVerifyPhoneNumber(const char *phoneNumber){
+    [AVUser requestMobilePhoneVerify:[NSString stringWithUTF8String:phoneNumber] withBlock:^(BOOL succeeded, NSError *error) {
+        //do nothing
+    }];
+}
+
+
+/**获取手机登陆的验证码*/
+//void requestLoginSMS(const char* phoneNumber);
+/**使用SMS Code登陆*/
+//void loginWithSMS(const char* phoneNumber,const char* smsCode,CXLUAFUNC mHandler);
+/**获取手机登陆的验证码*/
+void CXAvos::requestLoginSMS(const char *phoneNumber){
+    [AVUser requestLoginSmsCode:[NSString stringWithUTF8String:phoneNumber] withBlock:^(BOOL succeeded, NSError *error) {
+        //do nothing
+    }];
+}
+
+/**使用SMS Code登陆*/
+void CXAvos::loginWithSMS(const char *phoneNumber, const char *smsCode, CXLUAFUNC mHandler){
+    mLuaHandlerId_ls = mHandler;
+    [AVUser logInWithMobilePhoneNumberInBackground:[NSString stringWithUTF8String:phoneNumber] smsCode:[NSString stringWithUTF8String:smsCode] block:^(AVUser *user, NSError *error) {
+        invokeLuaCallBackFunction_ls(user ? AVUserToJsonStr(user).UTF8String : nullptr, error ? error.localizedDescription.UTF8String : nullptr, error ? (int)error.code : 0);
+    }];
+}
+
+
+void CXAvos::verifyPhoneNumber(const char *phoneNumber , const char *smsCode, CXLUAFUNC mHandler){
+    mLuaHandlerId_vp = mHandler;
+    [AVUser verifyMobilePhone:[NSString stringWithUTF8String:smsCode] withBlock:^(BOOL succeeded, NSError *error) {
+        invokeLuaCallBackFunction_vp(error?error.localizedDescription.UTF8String:nullptr, error?(int)error.code:0);
+    }];
+}
+
 void CXAvos::changePwd(const char* username,const char *oldPwd, const char *newPwd, CXLUAFUNC nHandler){
     mLuaHandlerId_cp = nHandler;
     [[AVUser currentUser] updatePassword:[NSString stringWithUTF8String:oldPwd] newPassword:[NSString stringWithUTF8String:newPwd] block:^(id object, NSError *error) {

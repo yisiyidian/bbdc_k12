@@ -47,6 +47,8 @@ function getLocalSeconds()
 end
 
 function parseServerDataToClientData(serverdata, userdata)
+    print("DataClassBase parseServerDataToClientData")
+    dump(serverdata)
     if serverdata == nil or userdata == nil then return end
     
     for key, value in pairs(userdata) do
@@ -68,6 +70,7 @@ function parseServerDataToClientData(serverdata, userdata)
     if userdata['userId'] ~= nil and type(userdata['userId']) == 'string' and string.len(userdata['userId']) <= 0 then
         userdata['userId'] = s_CURRENT_USER.objectId
     end
+    dump(userdata)
 end
 
 function parseLocalDBDataToClientData(localdb, userdata)

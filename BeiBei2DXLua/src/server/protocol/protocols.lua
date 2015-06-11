@@ -81,7 +81,7 @@ function isPhoneNumberExist(phoneNumber,callback)
 
     --没出错则返回结果，出错之后则返回错误信息
     local function cb(result,error)
-        local result = (error == nil) and result.datas.count > 0 or nil
+        local result = (error == nil) and result.datas or nil
         if callback then
             callback(result,error)
         end

@@ -11,122 +11,6 @@
 
 
 
-int lua_cx_common_CXAvos_logInByQQAuthData(lua_State* tolua_S)
-{
-    int argc = 0;
-    CXAvos* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_logInByQQAuthData'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 4) 
-    {
-        const char* arg0;
-        const char* arg1;
-        const char* arg2;
-        CXLUAFUNC arg3;
-
-        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:logInByQQAuthData"); arg0 = arg0_tmp.c_str();
-
-        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:logInByQQAuthData"); arg1 = arg1_tmp.c_str();
-
-        std::string arg2_tmp; ok &= luaval_to_std_string(tolua_S, 4, &arg2_tmp, "CXAvos:logInByQQAuthData"); arg2 = arg2_tmp.c_str();
-
-        arg3 = (  toluafix_ref_function(tolua_S,5,0));
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_logInByQQAuthData'", nullptr);
-            return 0;
-        }
-        cobj->logInByQQAuthData(arg0, arg1, arg2, arg3);
-        return 0;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:logInByQQAuthData",argc, 4);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_logInByQQAuthData'.",&tolua_err);
-#endif
-
-    return 0;
-}
-int lua_cx_common_CXAvos_invokeLuaCallbackFunction_dl(lua_State* tolua_S)
-{
-    int argc = 0;
-    CXAvos* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_dl'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 4) 
-    {
-        const char* arg0;
-        const char* arg1;
-        const char* arg2;
-        bool arg3;
-
-        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:invokeLuaCallbackFunction_dl"); arg0 = arg0_tmp.c_str();
-
-        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:invokeLuaCallbackFunction_dl"); arg1 = arg1_tmp.c_str();
-
-        std::string arg2_tmp; ok &= luaval_to_std_string(tolua_S, 4, &arg2_tmp, "CXAvos:invokeLuaCallbackFunction_dl"); arg2 = arg2_tmp.c_str();
-
-        ok &= luaval_to_boolean(tolua_S, 5,&arg3, "CXAvos:invokeLuaCallbackFunction_dl");
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_dl'", nullptr);
-            return 0;
-        }
-        cobj->invokeLuaCallbackFunction_dl(arg0, arg1, arg2, arg3);
-        return 0;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:invokeLuaCallbackFunction_dl",argc, 4);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_dl'.",&tolua_err);
-#endif
-
-    return 0;
-}
 int lua_cx_common_CXAvos_invokeLuaCallbackFunction_su(lua_State* tolua_S)
 {
     int argc = 0;
@@ -286,61 +170,6 @@ int lua_cx_common_CXAvos_verifySMSCode(lua_State* tolua_S)
 
     return 0;
 }
-int lua_cx_common_CXAvos_signUp(lua_State* tolua_S)
-{
-    int argc = 0;
-    CXAvos* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_signUp'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 3) 
-    {
-        const char* arg0;
-        const char* arg1;
-        CXLUAFUNC arg2;
-
-        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:signUp"); arg0 = arg0_tmp.c_str();
-
-        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:signUp"); arg1 = arg1_tmp.c_str();
-
-        arg2 = (  toluafix_ref_function(tolua_S,4,0));
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_signUp'", nullptr);
-            return 0;
-        }
-        cobj->signUp(arg0, arg1, arg2);
-        return 0;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:signUp",argc, 3);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_signUp'.",&tolua_err);
-#endif
-
-    return 0;
-}
 int lua_cx_common_CXAvos_downloadFile(lua_State* tolua_S)
 {
     int argc = 0;
@@ -396,6 +225,458 @@ int lua_cx_common_CXAvos_downloadFile(lua_State* tolua_S)
 
     return 0;
 }
+int lua_cx_common_CXAvos_invokeLuaCallbackFunction_logInByQQ(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_logInByQQ'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 5) 
+    {
+        const char* arg0;
+        const char* arg1;
+        const char* arg2;
+        const char* arg3;
+        int arg4;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:invokeLuaCallbackFunction_logInByQQ"); arg0 = arg0_tmp.c_str();
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:invokeLuaCallbackFunction_logInByQQ"); arg1 = arg1_tmp.c_str();
+
+        std::string arg2_tmp; ok &= luaval_to_std_string(tolua_S, 4, &arg2_tmp, "CXAvos:invokeLuaCallbackFunction_logInByQQ"); arg2 = arg2_tmp.c_str();
+
+        std::string arg3_tmp; ok &= luaval_to_std_string(tolua_S, 5, &arg3_tmp, "CXAvos:invokeLuaCallbackFunction_logInByQQ"); arg3 = arg3_tmp.c_str();
+
+        ok &= luaval_to_int32(tolua_S, 6,(int *)&arg4, "CXAvos:invokeLuaCallbackFunction_logInByQQ");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_logInByQQ'", nullptr);
+            return 0;
+        }
+        cobj->invokeLuaCallbackFunction_logInByQQ(arg0, arg1, arg2, arg3, arg4);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:invokeLuaCallbackFunction_logInByQQ",argc, 5);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_logInByQQ'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_downloadWordSoundFiles(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_downloadWordSoundFiles'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 4) 
+    {
+        const char* arg0;
+        const char* arg1;
+        const char* arg2;
+        const char* arg3;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:downloadWordSoundFiles"); arg0 = arg0_tmp.c_str();
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:downloadWordSoundFiles"); arg1 = arg1_tmp.c_str();
+
+        std::string arg2_tmp; ok &= luaval_to_std_string(tolua_S, 4, &arg2_tmp, "CXAvos:downloadWordSoundFiles"); arg2 = arg2_tmp.c_str();
+
+        std::string arg3_tmp; ok &= luaval_to_std_string(tolua_S, 5, &arg3_tmp, "CXAvos:downloadWordSoundFiles"); arg3 = arg3_tmp.c_str();
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_downloadWordSoundFiles'", nullptr);
+            return 0;
+        }
+        cobj->downloadWordSoundFiles(arg0, arg1, arg2, arg3);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:downloadWordSoundFiles",argc, 4);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_downloadWordSoundFiles'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_logIn(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_logIn'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 3) 
+    {
+        const char* arg0;
+        const char* arg1;
+        CXLUAFUNC arg2;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:logIn"); arg0 = arg0_tmp.c_str();
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:logIn"); arg1 = arg1_tmp.c_str();
+
+        arg2 = (  toluafix_ref_function(tolua_S,4,0));
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_logIn'", nullptr);
+            return 0;
+        }
+        cobj->logIn(arg0, arg1, arg2);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:logIn",argc, 3);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_logIn'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_invokeLuaCallbackFunction_li(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_li'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 3) 
+    {
+        const char* arg0;
+        const char* arg1;
+        int arg2;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:invokeLuaCallbackFunction_li"); arg0 = arg0_tmp.c_str();
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:invokeLuaCallbackFunction_li"); arg1 = arg1_tmp.c_str();
+
+        ok &= luaval_to_int32(tolua_S, 4,(int *)&arg2, "CXAvos:invokeLuaCallbackFunction_li");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_li'", nullptr);
+            return 0;
+        }
+        cobj->invokeLuaCallbackFunction_li(arg0, arg1, arg2);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:invokeLuaCallbackFunction_li",argc, 3);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_li'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_loginWithSMS(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_loginWithSMS'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 3) 
+    {
+        const char* arg0;
+        const char* arg1;
+        CXLUAFUNC arg2;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:loginWithSMS"); arg0 = arg0_tmp.c_str();
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:loginWithSMS"); arg1 = arg1_tmp.c_str();
+
+        arg2 = (  toluafix_ref_function(tolua_S,4,0));
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_loginWithSMS'", nullptr);
+            return 0;
+        }
+        cobj->loginWithSMS(arg0, arg1, arg2);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:loginWithSMS",argc, 3);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_loginWithSMS'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_logInByQQAuthData(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_logInByQQAuthData'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 4) 
+    {
+        const char* arg0;
+        const char* arg1;
+        const char* arg2;
+        CXLUAFUNC arg3;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:logInByQQAuthData"); arg0 = arg0_tmp.c_str();
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:logInByQQAuthData"); arg1 = arg1_tmp.c_str();
+
+        std::string arg2_tmp; ok &= luaval_to_std_string(tolua_S, 4, &arg2_tmp, "CXAvos:logInByQQAuthData"); arg2 = arg2_tmp.c_str();
+
+        arg3 = (  toluafix_ref_function(tolua_S,5,0));
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_logInByQQAuthData'", nullptr);
+            return 0;
+        }
+        cobj->logInByQQAuthData(arg0, arg1, arg2, arg3);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:logInByQQAuthData",argc, 4);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_logInByQQAuthData'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_invokeLuaCallbackFunction_dl(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_dl'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 4) 
+    {
+        const char* arg0;
+        const char* arg1;
+        const char* arg2;
+        bool arg3;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:invokeLuaCallbackFunction_dl"); arg0 = arg0_tmp.c_str();
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:invokeLuaCallbackFunction_dl"); arg1 = arg1_tmp.c_str();
+
+        std::string arg2_tmp; ok &= luaval_to_std_string(tolua_S, 4, &arg2_tmp, "CXAvos:invokeLuaCallbackFunction_dl"); arg2 = arg2_tmp.c_str();
+
+        ok &= luaval_to_boolean(tolua_S, 5,&arg3, "CXAvos:invokeLuaCallbackFunction_dl");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_dl'", nullptr);
+            return 0;
+        }
+        cobj->invokeLuaCallbackFunction_dl(arg0, arg1, arg2, arg3);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:invokeLuaCallbackFunction_dl",argc, 4);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_dl'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_invokeLuaCallBackFunction_vp(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_invokeLuaCallBackFunction_vp'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 2) 
+    {
+        const char* arg0;
+        int arg1;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:invokeLuaCallBackFunction_vp"); arg0 = arg0_tmp.c_str();
+
+        ok &= luaval_to_int32(tolua_S, 3,(int *)&arg1, "CXAvos:invokeLuaCallBackFunction_vp");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_invokeLuaCallBackFunction_vp'", nullptr);
+            return 0;
+        }
+        cobj->invokeLuaCallBackFunction_vp(arg0, arg1);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:invokeLuaCallBackFunction_vp",argc, 2);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_invokeLuaCallBackFunction_vp'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_cx_common_CXAvos_logInByQQ(lua_State* tolua_S)
 {
     int argc = 0;
@@ -441,6 +722,110 @@ int lua_cx_common_CXAvos_logInByQQ(lua_State* tolua_S)
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
     tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_logInByQQ'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_requestVerifyPhoneNumber(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_requestVerifyPhoneNumber'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        const char* arg0;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:requestVerifyPhoneNumber"); arg0 = arg0_tmp.c_str();
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_requestVerifyPhoneNumber'", nullptr);
+            return 0;
+        }
+        cobj->requestVerifyPhoneNumber(arg0);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:requestVerifyPhoneNumber",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_requestVerifyPhoneNumber'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_verifyPhoneNumber(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_verifyPhoneNumber'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 3) 
+    {
+        const char* arg0;
+        const char* arg1;
+        CXLUAFUNC arg2;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:verifyPhoneNumber"); arg0 = arg0_tmp.c_str();
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:verifyPhoneNumber"); arg1 = arg1_tmp.c_str();
+
+        arg2 = (  toluafix_ref_function(tolua_S,4,0));
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_verifyPhoneNumber'", nullptr);
+            return 0;
+        }
+        cobj->verifyPhoneNumber(arg0, arg1, arg2);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:verifyPhoneNumber",argc, 3);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_verifyPhoneNumber'.",&tolua_err);
 #endif
 
     return 0;
@@ -558,116 +943,6 @@ int lua_cx_common_CXAvos_logInByPhoneNumber(lua_State* tolua_S)
 
     return 0;
 }
-int lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp(lua_State* tolua_S)
-{
-    int argc = 0;
-    CXAvos* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 2) 
-    {
-        const char* arg0;
-        int arg1;
-
-        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:invokeLuaCallbackFunction_cp"); arg0 = arg0_tmp.c_str();
-
-        ok &= luaval_to_int32(tolua_S, 3,(int *)&arg1, "CXAvos:invokeLuaCallbackFunction_cp");
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp'", nullptr);
-            return 0;
-        }
-        cobj->invokeLuaCallbackFunction_cp(arg0, arg1);
-        return 0;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:invokeLuaCallbackFunction_cp",argc, 2);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp'.",&tolua_err);
-#endif
-
-    return 0;
-}
-int lua_cx_common_CXAvos_downloadWordSoundFiles(lua_State* tolua_S)
-{
-    int argc = 0;
-    CXAvos* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_downloadWordSoundFiles'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 4) 
-    {
-        const char* arg0;
-        const char* arg1;
-        const char* arg2;
-        const char* arg3;
-
-        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:downloadWordSoundFiles"); arg0 = arg0_tmp.c_str();
-
-        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:downloadWordSoundFiles"); arg1 = arg1_tmp.c_str();
-
-        std::string arg2_tmp; ok &= luaval_to_std_string(tolua_S, 4, &arg2_tmp, "CXAvos:downloadWordSoundFiles"); arg2 = arg2_tmp.c_str();
-
-        std::string arg3_tmp; ok &= luaval_to_std_string(tolua_S, 5, &arg3_tmp, "CXAvos:downloadWordSoundFiles"); arg3 = arg3_tmp.c_str();
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_downloadWordSoundFiles'", nullptr);
-            return 0;
-        }
-        cobj->downloadWordSoundFiles(arg0, arg1, arg2, arg3);
-        return 0;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:downloadWordSoundFiles",argc, 4);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_downloadWordSoundFiles'.",&tolua_err);
-#endif
-
-    return 0;
-}
 int lua_cx_common_CXAvos_downloadConfigFiles(lua_State* tolua_S)
 {
     int argc = 0;
@@ -720,223 +995,6 @@ int lua_cx_common_CXAvos_downloadConfigFiles(lua_State* tolua_S)
 
     return 0;
 }
-int lua_cx_common_CXAvos_logOut(lua_State* tolua_S)
-{
-    int argc = 0;
-    CXAvos* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_logOut'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 0) 
-    {
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_logOut'", nullptr);
-            return 0;
-        }
-        cobj->logOut();
-        return 0;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:logOut",argc, 0);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_logOut'.",&tolua_err);
-#endif
-
-    return 0;
-}
-int lua_cx_common_CXAvos_logIn(lua_State* tolua_S)
-{
-    int argc = 0;
-    CXAvos* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_logIn'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 3) 
-    {
-        const char* arg0;
-        const char* arg1;
-        CXLUAFUNC arg2;
-
-        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:logIn"); arg0 = arg0_tmp.c_str();
-
-        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:logIn"); arg1 = arg1_tmp.c_str();
-
-        arg2 = (  toluafix_ref_function(tolua_S,4,0));
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_logIn'", nullptr);
-            return 0;
-        }
-        cobj->logIn(arg0, arg1, arg2);
-        return 0;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:logIn",argc, 3);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_logIn'.",&tolua_err);
-#endif
-
-    return 0;
-}
-int lua_cx_common_CXAvos_invokeLuaCallbackFunction_li(lua_State* tolua_S)
-{
-    int argc = 0;
-    CXAvos* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_li'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 3) 
-    {
-        const char* arg0;
-        const char* arg1;
-        int arg2;
-
-        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:invokeLuaCallbackFunction_li"); arg0 = arg0_tmp.c_str();
-
-        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:invokeLuaCallbackFunction_li"); arg1 = arg1_tmp.c_str();
-
-        ok &= luaval_to_int32(tolua_S, 4,(int *)&arg2, "CXAvos:invokeLuaCallbackFunction_li");
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_li'", nullptr);
-            return 0;
-        }
-        cobj->invokeLuaCallbackFunction_li(arg0, arg1, arg2);
-        return 0;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:invokeLuaCallbackFunction_li",argc, 3);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_li'.",&tolua_err);
-#endif
-
-    return 0;
-}
-int lua_cx_common_CXAvos_invokeLuaCallbackFunction_logInByQQ(lua_State* tolua_S)
-{
-    int argc = 0;
-    CXAvos* cobj = nullptr;
-    bool ok  = true;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_Error tolua_err;
-#endif
-
-
-#if COCOS2D_DEBUG >= 1
-    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
-#endif
-
-    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
-
-#if COCOS2D_DEBUG >= 1
-    if (!cobj) 
-    {
-        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_logInByQQ'", nullptr);
-        return 0;
-    }
-#endif
-
-    argc = lua_gettop(tolua_S)-1;
-    if (argc == 5) 
-    {
-        const char* arg0;
-        const char* arg1;
-        const char* arg2;
-        const char* arg3;
-        int arg4;
-
-        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:invokeLuaCallbackFunction_logInByQQ"); arg0 = arg0_tmp.c_str();
-
-        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:invokeLuaCallbackFunction_logInByQQ"); arg1 = arg1_tmp.c_str();
-
-        std::string arg2_tmp; ok &= luaval_to_std_string(tolua_S, 4, &arg2_tmp, "CXAvos:invokeLuaCallbackFunction_logInByQQ"); arg2 = arg2_tmp.c_str();
-
-        std::string arg3_tmp; ok &= luaval_to_std_string(tolua_S, 5, &arg3_tmp, "CXAvos:invokeLuaCallbackFunction_logInByQQ"); arg3 = arg3_tmp.c_str();
-
-        ok &= luaval_to_int32(tolua_S, 6,(int *)&arg4, "CXAvos:invokeLuaCallbackFunction_logInByQQ");
-        if(!ok)
-        {
-            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_logInByQQ'", nullptr);
-            return 0;
-        }
-        cobj->invokeLuaCallbackFunction_logInByQQ(arg0, arg1, arg2, arg3, arg4);
-        return 0;
-    }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:invokeLuaCallbackFunction_logInByQQ",argc, 5);
-    return 0;
-
-#if COCOS2D_DEBUG >= 1
-    tolua_lerror:
-    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_logInByQQ'.",&tolua_err);
-#endif
-
-    return 0;
-}
 int lua_cx_common_CXAvos_initTencentQQ(lua_State* tolua_S)
 {
     int argc = 0;
@@ -985,6 +1043,263 @@ int lua_cx_common_CXAvos_initTencentQQ(lua_State* tolua_S)
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
     tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_initTencentQQ'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_invokeLuaCallBackFunction_ls(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_invokeLuaCallBackFunction_ls'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 3) 
+    {
+        const char* arg0;
+        const char* arg1;
+        int arg2;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:invokeLuaCallBackFunction_ls"); arg0 = arg0_tmp.c_str();
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:invokeLuaCallBackFunction_ls"); arg1 = arg1_tmp.c_str();
+
+        ok &= luaval_to_int32(tolua_S, 4,(int *)&arg2, "CXAvos:invokeLuaCallBackFunction_ls");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_invokeLuaCallBackFunction_ls'", nullptr);
+            return 0;
+        }
+        cobj->invokeLuaCallBackFunction_ls(arg0, arg1, arg2);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:invokeLuaCallBackFunction_ls",argc, 3);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_invokeLuaCallBackFunction_ls'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_signUp(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_signUp'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 3) 
+    {
+        const char* arg0;
+        const char* arg1;
+        CXLUAFUNC arg2;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:signUp"); arg0 = arg0_tmp.c_str();
+
+        std::string arg1_tmp; ok &= luaval_to_std_string(tolua_S, 3, &arg1_tmp, "CXAvos:signUp"); arg1 = arg1_tmp.c_str();
+
+        arg2 = (  toluafix_ref_function(tolua_S,4,0));
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_signUp'", nullptr);
+            return 0;
+        }
+        cobj->signUp(arg0, arg1, arg2);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:signUp",argc, 3);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_signUp'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 2) 
+    {
+        const char* arg0;
+        int arg1;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:invokeLuaCallbackFunction_cp"); arg0 = arg0_tmp.c_str();
+
+        ok &= luaval_to_int32(tolua_S, 3,(int *)&arg1, "CXAvos:invokeLuaCallbackFunction_cp");
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp'", nullptr);
+            return 0;
+        }
+        cobj->invokeLuaCallbackFunction_cp(arg0, arg1);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:invokeLuaCallbackFunction_cp",argc, 2);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_logOut(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_logOut'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_logOut'", nullptr);
+            return 0;
+        }
+        cobj->logOut();
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:logOut",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_logOut'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_cx_common_CXAvos_requestLoginSMS(lua_State* tolua_S)
+{
+    int argc = 0;
+    CXAvos* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"CXAvos",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (CXAvos*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_cx_common_CXAvos_requestLoginSMS'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        const char* arg0;
+
+        std::string arg0_tmp; ok &= luaval_to_std_string(tolua_S, 2, &arg0_tmp, "CXAvos:requestLoginSMS"); arg0 = arg0_tmp.c_str();
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_cx_common_CXAvos_requestLoginSMS'", nullptr);
+            return 0;
+        }
+        cobj->requestLoginSMS(arg0);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "CXAvos:requestLoginSMS",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_cx_common_CXAvos_requestLoginSMS'.",&tolua_err);
 #endif
 
     return 0;
@@ -1087,24 +1402,30 @@ int lua_register_cx_common_CXAvos(lua_State* tolua_S)
     tolua_cclass(tolua_S,"CXAvos","CXAvos","cc.Ref",nullptr);
 
     tolua_beginmodule(tolua_S,"CXAvos");
-        tolua_function(tolua_S,"logInByQQAuthData",lua_cx_common_CXAvos_logInByQQAuthData);
-        tolua_function(tolua_S,"invokeLuaCallbackFunction_dl",lua_cx_common_CXAvos_invokeLuaCallbackFunction_dl);
         tolua_function(tolua_S,"invokeLuaCallbackFunction_su",lua_cx_common_CXAvos_invokeLuaCallbackFunction_su);
         tolua_function(tolua_S,"requestSMSCode",lua_cx_common_CXAvos_requestSMSCode);
         tolua_function(tolua_S,"verifySMSCode",lua_cx_common_CXAvos_verifySMSCode);
-        tolua_function(tolua_S,"signUp",lua_cx_common_CXAvos_signUp);
         tolua_function(tolua_S,"downloadFile",lua_cx_common_CXAvos_downloadFile);
-        tolua_function(tolua_S,"logInByQQ",lua_cx_common_CXAvos_logInByQQ);
-        tolua_function(tolua_S,"changePwd",lua_cx_common_CXAvos_changePwd);
-        tolua_function(tolua_S,"logInByPhoneNumber",lua_cx_common_CXAvos_logInByPhoneNumber);
-        tolua_function(tolua_S,"invokeLuaCallbackFunction_cp",lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp);
+        tolua_function(tolua_S,"invokeLuaCallbackFunction_logInByQQ",lua_cx_common_CXAvos_invokeLuaCallbackFunction_logInByQQ);
         tolua_function(tolua_S,"downloadWordSoundFiles",lua_cx_common_CXAvos_downloadWordSoundFiles);
-        tolua_function(tolua_S,"downloadConfigFiles",lua_cx_common_CXAvos_downloadConfigFiles);
-        tolua_function(tolua_S,"logOut",lua_cx_common_CXAvos_logOut);
         tolua_function(tolua_S,"logIn",lua_cx_common_CXAvos_logIn);
         tolua_function(tolua_S,"invokeLuaCallbackFunction_li",lua_cx_common_CXAvos_invokeLuaCallbackFunction_li);
-        tolua_function(tolua_S,"invokeLuaCallbackFunction_logInByQQ",lua_cx_common_CXAvos_invokeLuaCallbackFunction_logInByQQ);
+        tolua_function(tolua_S,"loginWithSMS",lua_cx_common_CXAvos_loginWithSMS);
+        tolua_function(tolua_S,"logInByQQAuthData",lua_cx_common_CXAvos_logInByQQAuthData);
+        tolua_function(tolua_S,"invokeLuaCallbackFunction_dl",lua_cx_common_CXAvos_invokeLuaCallbackFunction_dl);
+        tolua_function(tolua_S,"invokeLuaCallBackFunction_vp",lua_cx_common_CXAvos_invokeLuaCallBackFunction_vp);
+        tolua_function(tolua_S,"logInByQQ",lua_cx_common_CXAvos_logInByQQ);
+        tolua_function(tolua_S,"requestVerifyPhoneNumber",lua_cx_common_CXAvos_requestVerifyPhoneNumber);
+        tolua_function(tolua_S,"verifyPhoneNumber",lua_cx_common_CXAvos_verifyPhoneNumber);
+        tolua_function(tolua_S,"changePwd",lua_cx_common_CXAvos_changePwd);
+        tolua_function(tolua_S,"logInByPhoneNumber",lua_cx_common_CXAvos_logInByPhoneNumber);
+        tolua_function(tolua_S,"downloadConfigFiles",lua_cx_common_CXAvos_downloadConfigFiles);
         tolua_function(tolua_S,"initTencentQQ",lua_cx_common_CXAvos_initTencentQQ);
+        tolua_function(tolua_S,"invokeLuaCallBackFunction_ls",lua_cx_common_CXAvos_invokeLuaCallBackFunction_ls);
+        tolua_function(tolua_S,"signUp",lua_cx_common_CXAvos_signUp);
+        tolua_function(tolua_S,"invokeLuaCallbackFunction_cp",lua_cx_common_CXAvos_invokeLuaCallbackFunction_cp);
+        tolua_function(tolua_S,"logOut",lua_cx_common_CXAvos_logOut);
+        tolua_function(tolua_S,"requestLoginSMS",lua_cx_common_CXAvos_requestLoginSMS);
         tolua_function(tolua_S,"invokeLuaCallBackFunction_vc",lua_cx_common_CXAvos_invokeLuaCallBackFunction_vc);
         tolua_function(tolua_S,"getInstance", lua_cx_common_CXAvos_getInstance);
     tolua_endmodule(tolua_S);

@@ -34,8 +34,8 @@ RegisterAccountView.STEP_6 = 6	--登陆
 RegisterAccountView.STEP_7 = 7	--修改密码
 RegisterAccountView.STEP_8 = 8	--密码找回
 
-RegisterAccountView.STEP_9 = 9
-RegisterAccountView.STEP_10 = 10 
+RegisterAccountView.STEP_9 = 9    --新登陆 输入密码
+RegisterAccountView.STEP_10 = 10  --
 RegisterAccountView.STEP_11 = 11
 
 --构造
@@ -133,7 +133,7 @@ function RegisterAccountView:goStep(step,...)
 	if step == RegisterAccountView.STEP_1 then
 		self:showInputPhoneNumber(args)-----------------注册：输入手机号
 	elseif step == RegisterAccountView.STEP_2 then
-		self:showInputSmsCode(args)---------------------注册：输入短信验证码
+		self:showInputSmsCode(args,"verify")---------------------注册：输入短信验证码 验证手机号码有效性  登陆进入游戏完成之后 再弹出验证
 	elseif step == RegisterAccountView.STEP_3 then
 		self:showChooseSex(args)------------------------注册：选择性别
 	elseif step == RegisterAccountView.STEP_4 then
@@ -146,6 +146,10 @@ function RegisterAccountView:goStep(step,...)
 		self:showModifyPwdView(args)--------------------修改密码
 	elseif step == RegisterAccountView.STEP_8 then
 		self:showModifyPwdBySMSCode(args)---------------重置密码
+	elseif step == RegisterAccountView.STEP_9 then
+		self:showInputSmsCode(args,"smslogin")---------------------登陆：输入短信验证码 用短信验证码登陆
+	elseif step == RegisterAccountView.STEP_10 then
+
 	end
 end
 
@@ -158,7 +162,7 @@ end
 --显示输入手机号码的界面
 function RegisterAccountView:showInputPhoneNumber()
 	--手机号码输入
-	local inputNode = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入您的手机号",handler(self,self.ProcessInput),nil,nil,nil,11)
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入您的手机号",handler(self,self.ProcessPhoneInput),nil,nil,nil,11)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.8 - 200)
 	self:addChild(inputNode)
 	self.inputNode = inputNode
@@ -192,8 +196,7 @@ function RegisterAccountView:showInputPhoneNumber()
 	self:addChild(btnGuestLogin)
 	self.btnGuestLogin = btnGuestLogin
 	self.views[#self.views+1] = btnGuestLogin
-
-	--下一步的按钮
+	--下一步按钮  三角的
 	local btnPhoneNumberOK = ccui.Button:create("image/shop/button_back2.png")
 	btnPhoneNumberOK:setPosition(0.8 * s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.8 - 200)
 	btnPhoneNumberOK:addTouchEventListener(handler(self, self.onTouchPhoneNumberOK))
@@ -235,14 +238,31 @@ function RegisterAccountView:verifyPhoneNumber(phoneNumber)
 	isPhoneNumberExist(phoneNumber, handler(self, self.onVerifyPhoneNumberBack))
 end
 --验证手机号码回调
-function RegisterAccountView:onVerifyPhoneNumberBack(exist,error)
-	if exist then
+function RegisterAccountView:onVerifyPhoneNumberBack(data,error)
+	dump(data,"查询手机号码返回")
+	if data.count > 0 then
+		if not data.verify then
+			--  已被注册的手机号码 未验证的 要验证
+			--	转到输入密码的界面
+			--	让用户输入密码 登陆
+			self.curStep = RegisterAccountView.STEP_6 --输入密码的界面
+			self:goStep(self.curStep,self.phoneNumber)
+		else
+			-- 已注册 已验证的手机号码,调用短信验证码登陆
+			-- 转到输入登陆验证码的界面
+			if not self.debug then
+				self:requestLoginSMSCode(self.phoneNumber)
+			end
+			self.curStep = RegisterAccountView.STEP_9
+			self:goStep(self.curStep)
+		end 
 		-- s_TIPS_LAYER:showSmallWithOneButton("该手机号码已被注册！")
 		-- 1、
 		-- 已被注册的手机号码 未验证的 要验证
 		-- 验证之后 直接通过手机号码 + 默认密码登陆
 		-- 2、
 		-- 已注册 已验证的手机号码,调用短信验证码登陆
+
 		-- 此后的登陆,通过手机号码 + 默认密码登陆
 	else
 		--不存在的话 直接走注册逻辑
@@ -258,7 +278,7 @@ end
 --处理输入事件
 --text 文本
 --length 长度
-function RegisterAccountView:ProcessInput(text,length,maxlength)
+function RegisterAccountView:ProcessPhoneInput(text,length,maxlength)
 	if maxlength == length then
 		self.btnPhoneNumberOK:setVisible(true)
 		self.btnPhoneNumberOK:setTouchEnabled(true)
@@ -270,25 +290,29 @@ end
 --------------------------------UI-------------------输入手机号码 结束-------------------------------------------------------------------------------------------------------
 
 
+
 --------------------------------UI-------------------输入验证码-------------------------------------------------------------------------------------------------------------
 
---显示输入验证码的界面
-function RegisterAccountView:showInputSmsCode(args)
+--显示输入验证码的界面 RegisterAccountView.STEP_9 RegisterAccountView.STEP_2
+function RegisterAccountView:showInputSmsCode(args,type)
 	local countDown = args and tonumber(args[1]) or 0
 	print("countDown:"..countDown)
 
-	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入验证码",nil,nil,nil,nil,11)
-	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
+	self.smsMode = type--verify 验证手机号码有效性 , smslogin SMSCode登陆
+
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入验证码",handler(self, self.processSMSInput),nil,nil,nil,6)
+	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 200)
 	self:addChild(inputNode)
 	self.inputNode = inputNode
 	inputNode:openIME()
 	self.views[#self.views+1] = inputNode
-
-	local btnSMSCodeOK = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnSMSCodeOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 330)
+	
+	local btnSMSCodeOK = ccui.Button:create("image/shop/button_back2.png")
+	btnSMSCodeOK:setPosition(0.8 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 200)
 	btnSMSCodeOK:addTouchEventListener(handler(self, self.onTouchSMSCodeOK))
-	btnSMSCodeOK:setTitleText("下一步")
 	btnSMSCodeOK:setTitleFontSize(36)
+	self.btnSMSCodeOK = btnSMSCodeOK
+	self.btnSMSCodeOK:setVisible(false)
 	self:addChild(btnSMSCodeOK)
 	self.views[#self.views+1] = btnSMSCodeOK
 	--重试按钮 点击重新请求验证码 间隔60S
@@ -308,6 +332,16 @@ function RegisterAccountView:showInputSmsCode(args)
 		self:startSMSTick(countDown)
 	end
 	self.alertTip:setString("输入验证码")
+end
+
+function RegisterAccountView:processSMSInput(text,length,maxlength)
+	if maxlength <= length then
+		self.btnSMSCodeOK:setVisible(true)
+		self.btnSMSCodeOK:setTouchEnabled(true)
+	else
+		self.btnSMSCodeOK:setVisible(false)
+		self.btnSMSCodeOK:setTouchEnabled(false)
+	end
 end
 
 --开始倒计时
@@ -372,8 +406,16 @@ function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
         	return
         end
 		--向服务器请求验证 验证码
+		-- verify 验证手机号码有效性 , smslogin SMSCode登陆
 		if not self.debug then
-			self:verifySMSCode(self.phoneNumber,self.SMSCode)
+			if self.smsMode == "verify" then
+				--请求验证 【验证手机号】 的验证码
+				self:verifySMSCode(self.phoneNumber,self.SMSCode)
+			else
+				-- self:smslogin
+				--TODO 请求手机+验证码 登陆
+				self:loginWithSMS(self.phoneNumber,self.SMSCode)
+			end
 		else
 			self.curStep = self.curStep + 1
 			self:goStep(self.curStep)
@@ -492,7 +534,7 @@ end
 
 --显示输入昵称
 function RegisterAccountView:showInputNickName()
-	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入昵称",nil,nil,nil,nil,8)
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入昵称",nil,nil,nil,nil,8)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputNode)
 	self.inputNode = inputNode
@@ -530,14 +572,14 @@ end
 
 --显示输入密码的界面
 function RegisterAccountView:showInputPwd()
-	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请设置密码",nil,nil,nil,true,11)
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请设置密码",nil,nil,nil,true,11)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputNode)
 	self.inputNode = inputNode
 	inputNode:openIME()
 	self.views[#self.views+1] = inputNode
 	
-	local inputNodeV = InputNode.new("image/signup/shuru_bbchildren_white.png","请确认密码",nil,nil,nil,true,11)
+	local inputNodeV = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请确认密码",nil,nil,nil,true,11)
 	inputNodeV:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 330)
 	self:addChild(inputNodeV)
 	self.inputNodeV = inputNodeV
@@ -581,28 +623,36 @@ function RegisterAccountView:onTouchRegister(sender,eventType)
 end
 
 --显示登陆界面
-function RegisterAccountView:showLoginView( ... )
+function RegisterAccountView:showLoginView(args)
+	local phoneNumber = ""
+	if args ~= nil and #args > 0 then
+		phoneNumber = args[1]
+	end
 	self.title:setString("登 录")
-	-- self.tip:setString("登录可以和更多好友一起背单词")
-
-	local inputNodeID = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入手机号",nil,nil,nil,false,11)
-	inputNodeID:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 170)
+	local inputNodeID = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入手机号",nil,nil,nil,false,11)
+	inputNodeID:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 200)
 	self:addChild(inputNodeID)
 	self.inputNodeID = inputNodeID
-	inputNodeID:openIME()
 	self.views[#self.views+1] = inputNodeID
-	
-	local inputNodePwd = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入密码",nil,nil,nil,true,11)
-	inputNodePwd:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 300)
+
+	if phoneNumber ~= "" then
+		self.inputNodeID:setText(phoneNumber)
+		self.inputNodeID:setEnabled(false)
+	end
+	--输入按钮
+	local inputNodePwd = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入密码",handler(self,self.ProceInputPwd),nil,nil,true,11,6)
+	inputNodePwd:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 300)
 	self:addChild(inputNodePwd)
 	self.inputNodePwd = inputNodePwd
+	inputNodePwd:openIME()
 	self.views[#self.views+1] = inputNodePwd
-
-	local btnLogin = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnLogin:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 430)
+	--登陆按钮
+	local btnLogin = ccui.Button:create("image/shop/button_back2.png")
+	btnLogin:setPosition(0.8 * s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.8  - 300)
 	btnLogin:addTouchEventListener(handler(self, self.onLoginTouch))
-	btnLogin:setTitleText("登 录")
 	btnLogin:setTitleFontSize(36)
+	btnLogin:setVisible(false)
+	self.btnLogin = btnLogin
 	self:addChild(btnLogin)
 	self.views[#self.views+1] = btnLogin
 end
@@ -627,7 +677,7 @@ function RegisterAccountView:onLoginTouch(sender,eventType)
 	--区分类型 然后走两个不同的登录接口
 	if string.find(id,"^1[3|4|6|5|8][0-9]%d%d%d%d%d%d%d%d$") then
 		--手机号码登陆
-		s_O2OController.logInOnline(id, pwd,true)
+		s_O2OController.logInOnline(id, pwd, true)
 	else
 		--username登陆
 		if validateUsername(id) == false then
@@ -639,6 +689,18 @@ function RegisterAccountView:onLoginTouch(sender,eventType)
 	end
 end
 
+--输入帐号密码
+function RegisterAccountView:ProceInputPwd(text,length,maxlength)
+	if maxlength <= length then
+		self.btnLogin:setVisible(true)
+		self.btnLogin:setTouchEnabled(true)
+	else
+		self.btnLogin:setVisible(false)
+		self.btnLogin:setTouchEnabled(false)
+	end
+end
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --显示修改密码界面
 function RegisterAccountView:showModifyPwdView( ... )
 	
@@ -662,12 +724,12 @@ function RegisterAccountView:requestSMSCode(phoneNumber)
 	end
 end
 
---验证手机验证码
+--验证手机
 function RegisterAccountView:verifySMSCode(phoneNumber,smsCode)
-	print("验证手机验证码："..phoneNumber.." code:"..smsCode)
+	print("验证手机号码 验证码："..phoneNumber.." code:"..smsCode)
 	showProgressHUD('', true)
 	if not self.debug then
-		cx.CXAvos:getInstance():verifySMSCode(phoneNumber, smsCode,handler(self, self.onVerifySMSCodeCallBack))
+		cx.CXAvos:getInstance():verifyPhoneNumber(phoneNumber, smsCode,handler(self, self.onVerifySMSCodeCallBack))
 	end
 end
 --验证手机验证码  返回回调
@@ -679,10 +741,50 @@ function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 	if errorCode~= 0 then
 		s_TIPS_LAYER:showSmallWithOneButton(error)
 	else
-		self.curStep = self.curStep + 1
-		self:goStep(self.curStep)
+		print("self.smsMode:"..self.smsMode)
+		
+		if self.smsMode == "verify" then
+			print("CCCCCCCCCCCCCCCC")
+			cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
+			s_CURRENT_USER.mobilePhoneVerified = true --通过验证
+			s_TIPS_LAYER:showSmallWithOneButton("手机号码验证成功！",function ()
+				s_SCENE:removeAllPopups()
+			end)
+			-- self.curStep = self.curStep + 1
+			-- self:goStep(self.curStep)
+		elseif self.smsMode == "smslogin" then
+			-- TODO直接登陆了
+			print("BBBBBBBBBBBBBBBBB")
+		end
 	end
 end
+
+--请求 验证登陆 的验证码 
+function RegisterAccountView:requestLoginSMSCode(phoneNumber)
+	print("请求登陆的验证码")
+	if not self.debug then
+		cx.CXAvos:getInstance():requestLoginSMS(phoneNumber);
+	end
+end
+--验证手机号码是否有效
+function RegisterAccountView:requestVerifySMSCode(phoneNumber)
+	print("请求验证手机的验证码")
+	if not self.debug then
+		cx.CXAvos:getInstance():requestVerifyPhoneNumber(phoneNumber);
+	end
+end
+--通过短信验证码登陆
+function RegisterAccountView:loginWithSMS(phoneNumber,smsCode)
+	print("短信验证码登陆:"..phoneNumber.." "..smsCode)
+	cx.CXAvos:getInstance():loginWithSMS(phoneNumber,smsCode,handler(self, self.loginWithSMSCallBack))
+end
+
+function RegisterAccountView:loginWithSMSCallBack()
+	-- body
+end
+
+
+-------------------------------------------------------------------------
 
 --开始注册
 --phoneNumber 	就是手机号码

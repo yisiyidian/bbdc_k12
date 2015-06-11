@@ -152,9 +152,15 @@ end
 function O2OController.logInByQQAuthData()
     O2OController.startLoadingData(USER_START_TYPE_QQ_AUTHDATA, nil, nil) 
 end
+--通过手机号码+验证码登陆
+function O2OController.logInBySMSCode(phoneNumber, smsCode)
+   O2OController.startLoadingData(USER_START_TYPE_OLD, phoneNumber, smsCode, false,true)
+end
 
 --登陆
-function O2OController.startLoadingData(userStartType, username, password,isPhoneNumber)
+--isPhoneNumber  是否是手机号码登陆
+--isSmsCode      是否是手机验证码登陆
+function O2OController.startLoadingData(userStartType, username, password,isPhoneNumber,isSmsCode)
     LOGTIME('O2OController.startLoadingData')
     local tmpUser = DataUser.create()
     local hasUserInLocalDB = false
@@ -232,8 +238,11 @@ function O2OController.startLoadingData(userStartType, username, password,isPhon
             s_UserBaseServer.signUp(username, password, onResponse)
         else
             if isPhoneNumber then
-                --手机号码登陆
+                --手机号码登陆 username手机号
                 s_UserBaseServer.loginByPhoneNumber(username, password, onResponse)
+            elseif isSmsCode then
+                --username 手机号, password 短信验证码
+                s_UserBaseServer.loginBySMSCode(username, password, onResponse)
             else
                 s_UserBaseServer.logIn(username, password, onResponse)
             end
@@ -331,8 +340,8 @@ function O2OController.getUserDatasOnline()
                         LOGTIME('syncMission')   --获取任务数据
                         O2OController.syncMission(function()
                                 LOGTIME('enterHomeLayer')
-                                s_CorePlayManager.enterHomeLayer()
                                 s_SCENE:removeAllPopups()
+                                s_CorePlayManager.enterHomeLayer()
                                 -- O2OController.getBulletinBoard()
                                 s_CURRENT_USER.dataDailyUsing:reset() 
                         end)

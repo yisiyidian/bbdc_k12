@@ -237,7 +237,7 @@ function CorePlayManager.enterHomeLayer()
     -- s_SCENE:replaceGameLayer(dramaLayer)
     local homeLayer = HomeLayer.create()
     s_SCENE:replaceGameLayer(homeLayer)
-
+    homeLayer:fuckSMS()
 end
 
 function CorePlayManager.enterLevelLayer()

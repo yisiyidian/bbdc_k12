@@ -17,23 +17,24 @@ InputNode.type_teachername = "teachername"
 --height  高
 --isPwd   密码格式
 --maxLength 最大长度
-
-function InputNode:ctor(backgroundImage,backgroundImageOver,placeHolder,callback,width,height,isPwd,maxLength)
+--minLength 最小长度 eq 输入密码时,最小密码位数是6位,输入6位即点亮输入框
+function InputNode:ctor(backgroundImage,backgroundImageOver,placeHolder,callback,width,height,isPwd,maxLength,minLength)
     if backgroundImage then
-        self:init(backgroundImage,backgroundImageOver,placeHolder,callback,width,height,isPwd,maxLength)
+        self:init(backgroundImage,backgroundImageOver,placeHolder,callback,width,height,isPwd,maxLength,minLength)
     end
 end
 
 --初始化
 --backgroundImage   背景图片
 --placeHolder       文本占位符
-function InputNode:init(backgroundImage,backgroundImageOver,placeHolder,callback,width,height,isPwd,maxLength)
+function InputNode:init(backgroundImage,backgroundImageOver,placeHolder,callback,width,height,isPwd,maxLength,minLength)
     self.width = width or 450    --宽 默认450
     self.height = height or 80    --高 默认80
     self.isPwd = isPwd or false  --是否密码格式  默认false
     self.callback = callback
     self.placeHolder = placeHolder
     self.maxLength = maxLength
+    self.minLength = minLength or 0
 
     self.backgroundImage = backgroundImage
     self.backgroundImageOver = backgroundImageOver
@@ -121,18 +122,26 @@ end
 function InputNode:processInput()
     local text = self.textField:getString()
     print("string.len(text):"..string.len(text))
+    print("self.minLength:"..self.minLength)
     if string.len(text) == self.maxLength then
         if self.callback ~= nil then 
             self.callback(text,string.len(text),self.maxLength)
         end
+        self.cursor:setVisible(false)
         self.backImage:setTexture(self.backgroundImageOver)
     else
+        if self.minLength ~= 0 then
+            if string.len(text) >= self.minLength then
+                if self.callback ~= nil then 
+                    self.callback(text,string.len(text),self.minLength)
+                end
+                self.backImage:setTexture(self.backgroundImageOver)        
+                return
+            end
+        end
+        self.cursor:setVisible(true)
         self.backImage:setTexture(self.backgroundImage)
     end
-
-
-    -- self.backgroundImage = backgroundImage
-    -- self.backgroundImageOver = backgroundImageOver
 end
 
 
@@ -158,6 +167,17 @@ end
 --设置最大文本输入长度
 function InputNode:setMaxLength(len)
     self.textField:setMaxLength(len)
+end
+
+--设置文本
+function InputNode:setText(text)
+    self.textField:setString(text)
+    self:processInput()
+end
+
+--设置是否响应触摸时间
+function InputNode:setEnabled(enable)
+    self.textField:setTouchEnabled(enable)
 end
 
 return InputNode

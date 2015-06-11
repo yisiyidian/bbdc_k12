@@ -290,7 +290,8 @@ function AppScene:removeAllPopups()
     local action1 = cc.FadeOut:create(0.2)
 
     --移除所有的弹出面板
-    -- print("AppScene:removeAllPopups()")
+    print(debug.traceback())
+    print("AppScene:removeAllPopups()")
 
     --怎么能这么写！！！！
     if self.popupLayer.backColor ~= nil and not tolua.isnull(self.popupLayer.backColor) then

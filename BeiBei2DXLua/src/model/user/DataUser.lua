@@ -47,6 +47,7 @@ function DataUser:ctor()
 
     self.password                          = ''
     self.mobilePhoneNumber                 = ''
+    self.mobilePhoneVerified               = false
     self.sessionToken                      = ''
     self.usertype                          = USER_TYPE_GUEST
     self.channelId                         = ''

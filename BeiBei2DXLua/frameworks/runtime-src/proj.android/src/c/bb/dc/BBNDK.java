@@ -859,6 +859,8 @@ public class BBNDK {
 	public static native void invokeLuaCallbackFunctionLI(String objectjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionVC(String error,int errorcode);
 	public static native void invokeLuaCallbackFunctionCP(String error,int errorcode);//修改密码
+	public static native void invokeLuaCallbackFunctionVP(String error,int errorcode);//验证手机号码 返回 verifyPhone
+	public static native void invokeLuaCallbackFunctionLS(String objectjson, String error, int errorcode);//用验证码 登陆
 	public static native void invokeLuaCallbackFunctionLIQQ(String objectjson, String qqjson, String authjson, String error, int errorcode);
 	public static native void invokeLuaCallbackFunctionCallAVCloudFunction(long cppObjPtr, String jsons, String errorjson);
 	public static native void invokeLuaCallbackFunctionGetBulletinBoard(long cppObjPtr, int index, String content_top, String content, String error);

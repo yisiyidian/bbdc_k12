@@ -142,6 +142,14 @@ function UserBaseServer.logInByQQAuthData(openid, access_token, expires_in, onRe
         end
     )
 end
+--通过SMS短信验证码登陆
+function UserBaseServer.loginBySMSCode(phoneNumber,smsCode,onResponse)
+    s_CURRENT_USER.mobilePhoneNumber = phoneNumber
+    cx.CXAvos:getInstance():loginWithSMS(phoneNumber, smsCode, function (objectjson, e, code)
+        dump(objectjson,"SMS登陆返回数据")
+        onResponse_signUp_logIn(false, objectjson, e, code, onResponse)
+    end) 
+end
 
 
 -- function UserBaseServer.changePa( ... )

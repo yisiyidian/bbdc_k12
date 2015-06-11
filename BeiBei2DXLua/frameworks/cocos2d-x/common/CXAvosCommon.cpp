@@ -112,6 +112,36 @@ void CXAvos::invokeLuaCallbackFunction_cp(const char* error,int errorCode){
     }
 }
 
+/**
+ * 验证手机号码有效性  的回调
+ */
+void CXAvos::invokeLuaCallBackFunction_vp(const char* error,int errorCode){
+    if(mLuaHandlerId_vp > 0){
+        auto engine = LuaEngine::getInstance();
+        LuaStack* stack = engine->getLuaStack();
+        stack->pushString(error);
+        stack->pushInt(errorCode);
+        stack->executeFunctionByHandler(mLuaHandlerId_vp, 2);
+        stack->clean();
+    }
+}
+
+/**
+ * 通过手机号码+验证码登陆回调
+ */
+void CXAvos::invokeLuaCallBackFunction_ls(const char* objectjson, const char* error, int errorcode){
+    if (mLuaHandlerId_ls > 0) {
+        auto engine = LuaEngine::getInstance();
+        LuaStack* stack = engine->getLuaStack();
+        stack->pushString(objectjson);
+        stack->pushString(error);
+        stack->pushInt(errorcode);
+        stack->executeFunctionByHandler(mLuaHandlerId_ls, 3);
+        stack->clean();
+    }
+}
+
+
 void CXAvos::invokeLuaCallbackFunction_logInByQQ(const char* objectjson, const char* qqjson, const char* authjson, const char* error, int errorcode) {
     if (mLuaHandlerId_logInByQQ > 0) {
         auto engine = LuaEngine::getInstance();
