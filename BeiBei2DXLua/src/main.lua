@@ -50,8 +50,6 @@ local function main()
     cc.FileUtils:getInstance():addSearchPath("res/sound/words/")
     cc.FileUtils:getInstance():addSearchPath(cc.FileUtils:getInstance():getWritablePath())
     require("cocos.init")
-    require("mobdebug").start()
-
     require("mobdebug").start() --start zerobrain debugging
 
     local HotUpdateController = require("hu.HotUpdateController")

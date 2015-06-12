@@ -1,6 +1,5 @@
 require("cocos.init")
 
-local BigAlter = require("view.alter.BigAlter")
 local SmallAlter = require("view.alter.SmallAlter")
 local SmallAlterWithOneButton = require("view.alter.SmallAlterWithOneButton")
 local OfflineTip = require('view.offlinetip.OfflineTip')

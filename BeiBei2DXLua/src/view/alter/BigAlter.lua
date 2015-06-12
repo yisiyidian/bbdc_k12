@@ -1,5 +1,8 @@
 require("common.global")
 
+-- ##################################
+-- 没用到！！！！！！！！！！！！！！！！！
+-- ##################################
 local BigAlter = class("BigAlter", function()
     return cc.Layer:create()
 end)

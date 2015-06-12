@@ -1,7 +1,5 @@
 require("common.global")
 
-local BigAlter      = require("view.alter.BigAlter")
-local SmallAlter    = require("view.alter.SmallAlter")
 local InputNode     = require("view.login.InputNode")
 
 local RegisterPopup = class("RegisterPopup", function()

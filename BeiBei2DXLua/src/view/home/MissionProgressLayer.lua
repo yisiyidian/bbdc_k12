@@ -27,7 +27,8 @@ function MissionProgressLayer.create(share,homelayer)
     local layer = MissionProgressLayer.new()
     
     layer.stopListener = false
-    
+
+    -- 按钮上方标题
     local label = cc.Sprite:create("image/homescene/missionprogress/label.png")
     label:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2 + 220)
     layer:addChild(label)
@@ -40,8 +41,6 @@ function MissionProgressLayer.create(share,homelayer)
         sender:runAction(cc.FadeOut:create(0.5))
         playSound(s_sound_buttonEffect)
         MissionProgressLayer.getNotContainedInLocalDatas(function ()
-            s_CURRENT_USER:generateSummaryBossList()
-            s_CURRENT_USER:generateChestList()
             s_CURRENT_USER:updateDataToServer()
 
             AnalyticsEnterLevelLayerBtn()
@@ -58,6 +57,7 @@ function MissionProgressLayer.create(share,homelayer)
                 schedule:unscheduleScriptEntry(schedule.schedulerEntry)
             end
 
+            -- 更新引导步骤
             if s_CURRENT_USER.guideStep < s_guide_step_enterStory1 then
                 s_CURRENT_USER:setGuideStep(s_guide_step_enterStory1)
                 s_CorePlayManager.enterStoryLayer()
@@ -67,11 +67,14 @@ function MissionProgressLayer.create(share,homelayer)
         end)
     end
 
+    -- 按钮
     local backProgress = ccui.Button:create("image/homescene/missionprogress/button.png","image/homescene/missionprogress/button.png","image/homescene/missionprogress/button.png")
     backProgress:setPosition(bigWidth/2, s_DESIGN_HEIGHT/2 - 40)
     backProgress:addTouchEventListener(enterGame)
     layer:addChild(backProgress)
     
+
+    -- 按钮动画
     local swelling = cc.ScaleTo:create(0.12,1.08)
     local swellingRevese = cc.ScaleTo:create(0.12,1)
     local delay = cc.DelayTime:create(1)

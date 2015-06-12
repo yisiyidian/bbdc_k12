@@ -1,8 +1,6 @@
 require("cocos.init")
 require("common.global")
 
-local BigAlter = require("view.alter.BigAlter")
-
 local BookLayer = class("BookLayer", function ()
     return cc.Layer:create()
 end)
