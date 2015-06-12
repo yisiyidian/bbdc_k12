@@ -108,6 +108,8 @@ function HintWord:ctor(word,target,firstTime)
                 self:removeFromParent()
             end)
             wordBoard:runAction(cc.Sequence:create(action2,pause,action3,action4))
+        else
+            self.hintOver()
         end
     end
 

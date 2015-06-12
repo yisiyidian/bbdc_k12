@@ -65,6 +65,7 @@ function NewSummaryBossLayer:secondWordTutorial()
     --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     self.mat.forceFail()
     self.gamePaused = true
+    self.changeBtnTime = 0
     --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     local curtain = require('view.summaryboss.Curtain').create()
     self:addChild(curtain,2)
@@ -87,6 +88,7 @@ function NewSummaryBossLayer:secondWordTutorial()
         --self.girl:setLocalZOrder(0)
         curtain:removeFromParent()
         self.tutorialStep = self.tutorialStep + 1
+        self.gamePaused = false
     end
 end
 --换词引导
@@ -98,6 +100,7 @@ function NewSummaryBossLayer:changeWordTutorial()
     self.hintChangeBtn = hintBoard
     
     hintBoard.hintOver = function (  )
+        self.firstTimeToChange = false
         hintBoard:removeFromParent()
         self.gamePaused = false
         self.changeBtn:setLocalZOrder(0)
@@ -354,9 +357,9 @@ function NewSummaryBossLayer:initMat(visible)
     mat.success = function(stack)
         if self.tutorialStep < 2 then
             self.tutorialStep = self.tutorialStep + 1
-            if not self.isTrying then
-                s_CURRENT_USER:setGuideStep(self.tutorialStep + 13)
-            end
+            -- if not self.isTrying then
+            --     s_CURRENT_USER:setGuideStep(self.tutorialStep + 13)
+            -- end
         end
         --self:initGuideInfo()
         self.changeBtnTime = 0
