@@ -1,6 +1,8 @@
 require("common.global")
 local Button                = require("view.button.longButtonInStudy")
-
+-- ##################################
+-- 没用到！！！！！！！！！！！！！！！！！
+-- ##################################
 local AlterI = class("AlterI", function()
     return cc.Layer:create()
 end)

@@ -1,5 +1,8 @@
 require("cocos.init")
 require("common.global")
+-- ##################################
+-- 没用到！！！！！！！！！！！！！！！！！
+-- ##################################
 
 local DramaLayer = class("DramaLayer", function()
 	return cc.Layer:create()
