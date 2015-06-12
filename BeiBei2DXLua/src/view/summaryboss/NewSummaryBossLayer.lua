@@ -62,12 +62,14 @@ function NewSummaryBossLayer:ctor(unit)
 end
 --第二次划词引导
 function NewSummaryBossLayer:secondWordTutorial()
+    --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+    self.mat.forceFail()
     self.gamePaused = true
     --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     local curtain = require('view.summaryboss.Curtain').create()
     self:addChild(curtain,2)
     self.boss:setLocalZOrder(3)
-    local hint = cc.Sprite:create('image/guide/yindao_background_xiaoguan.png')
+    local hint = cc.Sprite:create('image/guide/yindao_background_boss.png')
     hint:setPosition(curtain:getContentSize().width / 2 - 50 , 870)
     curtain:addChild(hint)
     local label = cc.Label:createWithSystemFont('怪兽抓到贝贝就完蛋了！','',36)
@@ -78,11 +80,13 @@ function NewSummaryBossLayer:secondWordTutorial()
     cc.Director:getInstance():getActionManager():pauseTarget(self.boss)
     curtain.remove = function()
         --s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+        --self.gamePaused = false
         self.invisibleMat:setVisible(true)
         self.mat:setVisible(false)
         self.boss:setLocalZOrder(0)
         --self.girl:setLocalZOrder(0)
         curtain:removeFromParent()
+        self.tutorialStep = self.tutorialStep + 1
     end
 end
 --换词引导
@@ -532,6 +536,9 @@ function NewSummaryBossLayer:gameOverFunc(win)
     end
 	if win then
         if self.tutorialStep >= 2 then
+            if s_CURRENT_USER.guideStep < s_guide_step_second then
+                s_CURRENT_USER:setGuideStep(s_guide_step_second)
+            end
             s_CURRENT_USER.needBossSlideTutorial = 1
             saveUserToServer({['needBossSlideTutorial']=s_CURRENT_USER.needBossSlideTutorial})
             if self.firstTimeToChange == false then

@@ -22,6 +22,8 @@ function Crab:ctor(word,isTrying)
     if isTrying then
         self.ccbcrab['meaningSmall']:setString(word)
         self.ccbcrab['meaningBig']:setString(word)
+        self.ccbcrab['meaningSmall']:setScale(1.5)
+        self.ccbcrab['meaningBig']:setScale(1.5)
     else
         self.ccbcrab['meaningSmall']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall)
         self.ccbcrab['meaningBig']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall)

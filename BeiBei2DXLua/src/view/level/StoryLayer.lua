@@ -220,14 +220,14 @@ function StoryLayer:addIntroduction7()
 	local drama = sp.SkeletonAnimation:create("spine/tutorial/story/jieshao_6.json","spine/tutorial/story/jieshao_6.atlas",1)
 	drama:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
 	drama:setAnchorPoint(0.5, 0.5)
-	drama:addAnimation(0, 'animation', true)
+	drama:addAnimation(0, 'animation', false)
 	drama:setName("drama7")
 	self:addChild(drama)
 	if s_CURRENT_USER.guideStep < s_guide_step_enterStory5 then
         s_CURRENT_USER:setGuideStep(s_guide_step_enterStory5)
     end
 	-- TODO
-	self:callFuncWithDelay(2, function()
+	self:callFuncWithDelay(5, function()
 		self:directStory(7)
 	end)
 end

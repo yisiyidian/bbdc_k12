@@ -9,8 +9,12 @@ function longButtonInStudy.create(size,color,text)
 
     local textureFront = "image/button/"..size..color.."front.png"
     local textureBack =  "image/button/"..size..color.."back.png"
+    if size == "giveup" then
+        textureFront = "image/button/giveupfront.png"
+        textureBack = "image/button/giveupback.png"
+    end
 
-    if size == "giveup" or size == "addtime" then
+    if size == "addtime" then
         textureBack = "image/button/"..color.."back.png"
     end
 
