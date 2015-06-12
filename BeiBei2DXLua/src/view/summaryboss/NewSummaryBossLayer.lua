@@ -562,6 +562,15 @@ function NewSummaryBossLayer:gameOverFunc(win)
         self.boss:fly()
 		self.girl:setAnimation("win")
 	else
+        local timeout = cc.Sprite:create('image/summarybossscene/lose/timeover_h5_zongjieboss.png')
+        timeout:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 3 / 2)
+        self:addChild(timeout,100)
+        timeout:runAction(cc.Sequence:create(cc.EaseBackOut:create(cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)))
+                                            ,cc.DelayTime:create(1.0)
+                                            ,cc.EaseBackIn:create(cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 3 / 2)))
+                                            ,cc.CallFunc:create(function (  )
+                                                timeout:removeFromParent()
+                                            end)))
 		self.girl:setAnimation("lose")
 	end
 	--游戏结束界面

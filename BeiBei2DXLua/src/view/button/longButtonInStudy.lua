@@ -9,13 +9,14 @@ function longButtonInStudy.create(size,color,text)
 
     local textureFront = "image/button/"..size..color.."front.png"
     local textureBack =  "image/button/"..size..color.."back.png"
-    if size == "giveup" then
-        textureFront = "image/button/giveupfront.png"
-        textureBack = "image/button/giveupback.png"
+    if size == "giveup" or size == "again" then
+        textureFront = "image/summarybossscene/lose/button_presssed_xxgtc_small.png"
+        textureBack = "image/summarybossscene/lose/button_unpresssed_xxgtc_small.png"
     end
 
-    if size == "addtime" then
-        textureBack = "image/button/"..color.."back.png"
+    if size == "addTime" then
+        textureBack = "image/summarybossscene/lose/button_unpresssed_xxgtc.png"
+        textureFront = "image/summarybossscene/lose/button_presssed_xxgtc.png"
     end
 
     local button_back = cc.Sprite:create(textureBack)
