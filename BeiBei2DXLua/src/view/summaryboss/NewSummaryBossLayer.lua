@@ -332,9 +332,9 @@ function NewSummaryBossLayer:initMat(visible)
 	local mat = require("view.summaryboss.Mat").create(self,self.tutorialStep < 1 or (visible ~= nil and not visible) or (self.isTrying and self.wordList[1][1] == 'apple'),"coconut_dark")
     mat:setPosition(s_DESIGN_WIDTH/2, 150)
     self:addChild(mat,1)
-    if self.tutorialStep == 0 then
-        cc.Director:getInstance():getActionManager():pauseTarget(self.boss)
-    end
+    -- if self.tutorialStep == 0 then
+    --     cc.Director:getInstance():getActionManager():pauseTarget(self.boss)
+    -- end
     if visible ~= nil and not visible then
         self.invisibleMat = mat
         mat:setVisible(false)
