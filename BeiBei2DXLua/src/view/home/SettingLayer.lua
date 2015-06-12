@@ -186,7 +186,7 @@ function SettingLayer:onInfoTouch(sender,eventType)
 		if  online == false then
 	        self.homeLayer.offlineTipHome.setTrue(OfflineTipForHome_ImproveInformation)
 	    else
-	        local regiserView = RegisterAccountView.new()
+	        local regiserView = RegisterAccountView.new("canclose")
 	        s_SCENE:popup(regiserView)
 	        --回调关闭函数 用来更新界面
 	        regiserView.close = handler(self, self.closeCallBack)

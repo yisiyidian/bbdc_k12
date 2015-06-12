@@ -9,19 +9,15 @@
 
 --self.debug = true 开启调试模式，调试模式不会向手机发送验证码，手机号码和验证码随便输入
 
---输入框封装
-local InputNode = require("view.login.InputNode")
-local MissionConfig          = require("model.mission.MissionConfig") --任务的配置数据
+
+local InputNode 		= require("view.login.InputNode") --输入框封装
+local MissionConfig 	= require("model.mission.MissionConfig") --任务的配置数据
 
 local RegisterAccountView = class("RegisterAccountView",function()
-	-- local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
 	local layer = cc.Layer:create()
 	layerHoldTouch(layer)
 	return layer
 end)
-
---标志
--- IconShow = false
 
 --首次登陆执行的流程
 RegisterAccountView.STEP_1 = 1 	--输入手机号
@@ -39,11 +35,16 @@ RegisterAccountView.STEP_10 = 10  --
 RegisterAccountView.STEP_11 = 11
 
 --构造
-function RegisterAccountView:ctor(step)
-	self:init(step)
+function RegisterAccountView:ctor(step,canclose)
 	self.debug = false
 	self.uistack = {} --UI的栈,里边保存UI流程序号,UI显示的参数  Android返回键用
-	self.curBtn = nil --当前的输入按钮 
+	self.curBtn = nil --当前的输入按钮
+	if step ~= "canclose" then
+  		self:init(step,canclose)
+  	else
+  		self.canclose = true
+      	self:init()
+  	end
 end
 
 function RegisterAccountView:showErrorIcon()
@@ -64,7 +65,7 @@ function RegisterAccountView:hideErrorICON()
 end
 
 --初始化各个view
-function RegisterAccountView:init(step)
+function RegisterAccountView:init(step,args)
 	self.views = {}
 	self.curStep = step or 1 --step 默认是1
 	self.phoneNumber = ""
@@ -103,7 +104,7 @@ function RegisterAccountView:init(step)
 	self.alertTip = alertTip
 	self:addChild(alertTip)
 	--进入第一步
-	self:goStep(self.curStep)
+	self:goStep(self.curStep,args)
 end
 
 --返回按钮点击
@@ -113,20 +114,31 @@ function RegisterAccountView:onReturnClick(sender,eventType)
 	end
 	--在HomeLayer里赋值的close函数 临时函数
 	--返回introlayer 或者结束登陆 修改密码流程
-	if self.curStep == RegisterAccountView.STEP_1 or self.curStep > RegisterAccountView.STEP_5 then
-		print("从注册界面返回")
+	--从栈里弹出来上一步的参数
+	local cmd = self.uistack[#self.uistack - 1]
+	if cmd then
+    self.uistack[#self.uistack] = nil
+		self.uistack[#self.uistack] = nil
+		self.curStep 	= cmd[1]
+		local data 		= cmd[2]
+    if type(data) == "table" and #data == 0 then
+      data = nil
+    end
+		self:goStep(self.curStep,data)
+	else
 		sender:setEnabled(false)
 		self:endRegister()
-	else
-		self.curStep = self.curStep - 1
-		self:goStep(self.curStep)
 	end
+	-- end
 end
 
 --前往第几步
 --step 步骤索引
 function RegisterAccountView:goStep(step,...)
 	local args = {...}
+
+	self.uistack[#self.uistack + 1] = {step,args} --参数入栈
+
 	self:resetView()
 	self.alertTip:setString("")
 	--处理UI切换
@@ -172,28 +184,31 @@ function RegisterAccountView:showInputPhoneNumber()
 	self.alertTip:setString("输入您的手机号码")
 	self.title:setString("登陆/注册")
 	--让返回按钮不可点
-	self.btnReturn:setVisible(false)
-	self.btnReturn:setTouchEnabled(false)
-
+	if self.canclose then
+		self.btnReturn:setVisible(true)
+		self.btnReturn:setTouchEnabled(true)
+  else
+    self.btnReturn:setVisible(false)
+ 		self.btnReturn:setTouchEnabled(false)
+	end
 	--其他登陆方式
 	--login_50s_send.png 是临时资源  要替换成全部透明的图片
-	local btnOtherLogin = ccui.Button:create("image/login/login_50s_send.png")
+	local btnOtherLogin = ccui.Button:create("image/login/blank_btn.png")
 	btnOtherLogin:setPosition(0.8 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
 	btnOtherLogin:setTitleColor(cc.c3b(153,168,181))
 	btnOtherLogin:setTitleText("其他登陆方式")
 	btnOtherLogin:setTitleFontSize(20)
-	-- btnOtherLogin:setTouchEnabled(true)
 	btnOtherLogin:addTouchEventListener(handler(self, self.onOtherLogin))
 	self:addChild(btnOtherLogin)
 	self.btnOtherLogin = btnOtherLogin
 	self.views[#self.views+1] = btnOtherLogin
 	--游客登陆
-	local btnGuestLogin = ccui.Button:create("image/login/login_50s_send.png")
+	local btnGuestLogin = ccui.Button:create("image/login/blank_btn.png")
 	btnGuestLogin:setPosition(0.2 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
 	btnGuestLogin:setTitleColor(cc.c3b(153,168,181))
 	btnGuestLogin:setTitleText("游客登陆")
 	btnGuestLogin:setTitleFontSize(20)
-	-- btnGuestLogin:setTouchEnabled(false)
+	btnGuestLogin:addTouchEventListener(handler(self, self.onGuestLogin))
 	self:addChild(btnGuestLogin)
 	self.btnGuestLogin = btnGuestLogin
 	self.views[#self.views+1] = btnGuestLogin
@@ -217,6 +232,15 @@ function RegisterAccountView:onOtherLogin(sender,eventType)
 	---直接转到帐号密码登陆界面
 	self.curStep = RegisterAccountView.STEP_6
 	self:goStep(self.curStep)
+end
+
+function RegisterAccountView:onGuestLogin(sender,eventType)
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+	print("其他登陆方式")
+	cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
+	s_SCENE:removeAllPopups()
 end
 
 --电话号码输入OK
@@ -423,8 +447,7 @@ function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
 				--请求验证 【验证手机号】 的验证码
 				self:verifySMSCode(self.phoneNumber,self.SMSCode)
 			else
-				-- self:smslogin
-				--TODO 请求手机+验证码 登陆
+				--请求手机+验证码 登陆
 				self:loginWithSMS(self.phoneNumber,self.SMSCode)
 			end
 		else
@@ -639,10 +662,15 @@ function RegisterAccountView:showLoginView(args)
 	if args ~= nil and #args > 0 then
 		phoneNumber = args[1]
 	end
+	--显示返回按钮
+	self.btnReturn:setVisible(true)
+	self.btnReturn:setTouchEnabled(true)
+
 	self.title:setString("登 录")
 	local inputNodeID = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入手机号",nil,nil,nil,false,11)
 	inputNodeID:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 200)
 	self:addChild(inputNodeID)
+	inputNodeID:openIME()
 	self.inputNodeID = inputNodeID
 	self.views[#self.views+1] = inputNodeID
 
@@ -655,7 +683,7 @@ function RegisterAccountView:showLoginView(args)
 	inputNodePwd:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 300)
 	self:addChild(inputNodePwd)
 	self.inputNodePwd = inputNodePwd
-	inputNodePwd:openIME()
+	-- inputNodePwd:openIME()
 	self.views[#self.views+1] = inputNodePwd
 	--登陆按钮
 	local btnLogin = ccui.Button:create("image/shop/button_back2.png")

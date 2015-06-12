@@ -55,7 +55,8 @@ function InputNode:init(backgroundImage,backgroundImageOver,placeHolder,callback
     self.textField:setTouchAreaEnabled(true)
     self.textField:setFontSize(34)
     self.textField:setMaxLengthEnabled(true)
-    self.textField:setPlaceHolderColor(cc.c3b(153,168,181))
+    -- self.textField:setPlaceHolderColor(cc.c3b(153,168,181))
+    self.textField:setPlaceHolderColor(cc.c3b(255,255,255))
     self.textField:setTextColor(cc.c4b(0,0,0,255))
     self.textField:setPlaceHolder(placeHolder)--占位文本
     --设置长度限制
@@ -81,6 +82,7 @@ function InputNode:init(backgroundImage,backgroundImageOver,placeHolder,callback
     cursor:setPosition(0,34)
     cursor:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.FadeIn:create(0.5),cc.FadeOut:create(0.5))))
     self.cursor = cursor
+    cursor:setVisible(false)
     self:addChild(cursor)
     
     local update = function(dt)
@@ -103,12 +105,12 @@ function InputNode:onTextEvent(sender,eventType)
 
     if eventType == ccui.TextFiledEventType.attach_with_ime then
         print("ccui.TextFiledEventType.attach_with_ime")
-        self.textField:setPlaceHolder("")
+        --self.textField:setPlaceHolder("")
         self.cursor:setVisible(true)
     elseif eventType == ccui.TextFiledEventType.detach_with_ime then
         print("ccui.TextFiledEventType.detach_with_ime")
         self.textField:setPlaceHolder(self.placeHolder)
-        -- self.cursor:setVisible(false)
+        self.cursor:setVisible(false)
     elseif eventType == ccui.TextFiledEventType.insert_text then
         print("ccui.TextFiledEventType.insert_text")
         self.cursor:setVisible(true)
