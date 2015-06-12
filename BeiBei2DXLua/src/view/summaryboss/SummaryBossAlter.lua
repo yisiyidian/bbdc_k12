@@ -305,7 +305,7 @@ function SummaryBossAlter:win1(entrance)
         s_isCheckInAnimationDisplayed = false
     end
 
-    if not hasCheckedIn and entrance == ENTRANCE_NORMAL then
+    if not hasCheckedIn and self.bossLayer.oldUnit == nil then
         local missionCompleteCircle = require('view.MissionCompleteCircle').create()
         s_HUD_LAYER:addChild(missionCompleteCircle,1000,'missionCompleteCircle')
         self:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.CallFunc:create(function ()
@@ -382,7 +382,7 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     --     rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
     --     button:addChild(rewardNumber)
     -- end
-    if hasCheckedIn or not self.entrance then
+    if hasCheckedIn or self.bossLayer.oldUnit ~= nil then
         --print('self:addWinLabel(win_back)')
         self:addWinLabel(win_back)
     else
@@ -405,20 +405,24 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
 end
 
 function SummaryBossAlter:addWinLabel(win_back)
-    local shareBtn = ccui.Button:create('image/share/share_click.png')
-    shareBtn:setScale9Enabled(true)
-    shareBtn:setPosition(s_DESIGN_WIDTH * 0.8,80)
-    self:addChild(shareBtn)
-    local function onShare(sender,eventType)
-        if eventType == ccui.TouchEventType.ended then
-            local wordList = self.bossLayer.unit.wrongWordList[1]
-            for i = 2,#self.bossLayer.unit.wrongWordList do
-                wordList = wordList..'|'..self.bossLayer.unit.wrongWordList[i]
-            end
-            cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.html?time='..self.bossLayer.totalTime..'&wordlist='..wordList, '', '贝贝单词－根本停不下来')
-        end
+    if self.bossLayer.useTime < 90 then
+        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     end
-    shareBtn:addTouchEventListener(onShare)
+
+    -- local shareBtn = ccui.Button:create('image/share/share_click.png')
+    -- shareBtn:setScale9Enabled(true)
+    -- shareBtn:setPosition(s_DESIGN_WIDTH * 0.8,80)
+    -- self:addChild(shareBtn)
+    -- local function onShare(sender,eventType)
+    --     if eventType == ccui.TouchEventType.ended then
+    --         local wordList = self.bossLayer.unit.wrongWordList[1]
+    --         for i = 2,#self.bossLayer.unit.wrongWordList do
+    --             wordList = wordList..'|'..self.bossLayer.unit.wrongWordList[i]
+    --         end
+    --         cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.html?time='..self.bossLayer.totalTime..'&wordlist='..wordList, '', '贝贝单词－根本停不下来')
+    --     end
+    -- end
+    -- shareBtn:addTouchEventListener(onShare)
 
     local beans = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
     beans:setPosition(s_RIGHT_X -100, s_DESIGN_HEIGHT-70)
@@ -522,6 +526,16 @@ function SummaryBossAlter:addWinLabel(win_back)
                     local action3 = cc.ScaleTo:create(0.3,0)
                     local action4 = cc.CallFunc:create(function (  )
                         been_number:setString(s_CURRENT_USER:getBeans() - 3 + i)
+                        if i == 3 then
+                            if self.bossLayer.useTime < 90 then
+                                local wordList = self.bossLayer.unit.wrongWordList[1]
+                                 for i = 2,#self.bossLayer.unit.wrongWordList do
+                                     wordList = wordList..'|'..self.bossLayer.unit.wrongWordList[i]
+                                 end
+                                local shareBoard = require('view.summaryboss.ShareBoard').create(self.bossLayer.useTime,wordList)
+                                s_SCENE.popupLayer:addChild(shareBoard)
+                            end
+                        end
                     end,{})
                     local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')
                     bean:setPosition(bean_back[i]:getPositionX(),bean_back[i]:getPositionY() + 10)
@@ -529,9 +543,20 @@ function SummaryBossAlter:addWinLabel(win_back)
                     bean:setVisible(false)
                     bean:runAction(cc.Sequence:create(cc.DelayTime:create(1.2),cc.Show:create()))
                     bean:runAction(cc.Sequence:create(action1,cc.Sequence:create(action2,action3),action4))
+                    
+                    
                 end
+            else
+               if self.bossLayer.useTime < 90 then
+                    local wordList = self.bossLayer.unit.wrongWordList[1]
+                     for i = 2,#self.bossLayer.unit.wrongWordList do
+                         wordList = wordList..'|'..self.bossLayer.unit.wrongWordList[i]
+                     end
+                    local shareBoard = require('view.summaryboss.ShareBoard').create(self.bossLayer.useTime,wordList)
+                    s_SCENE.popupLayer:addChild(shareBoard)
+                end 
             end
-            --print('count time = '..os.clock() - time1)
+            
             self:unscheduleUpdate()
 
         end

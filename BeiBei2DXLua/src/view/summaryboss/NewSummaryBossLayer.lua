@@ -439,8 +439,12 @@ function NewSummaryBossLayer:gameOverFunc(win)
             s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - self.wrongWord)
          --   print(self.maxCount - self.wrongWord)
         elseif self.unit.unitState == 4 then
+            local list = self.unit.wrongWordList[1]
+             for i = 2,#self.unit.wrongWordList do
+                 list = list..'|'..self.unit.wrongWordList[i]
+             end
             s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - #split(self.rightWordList,'|'))
-            s_LocalDatabaseManager.addRightWord(self.unit.wrongWordList,self.unit.unitID)
+            s_LocalDatabaseManager.addRightWord(list,self.unit.unitID)
         end
         self.boss:fly()
 		self.girl:setAnimation("win")
