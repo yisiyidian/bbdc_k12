@@ -453,7 +453,6 @@ function ChapterLayer:addBackToHome()
             local IntroLayer = require("view.home.HomeLayer")
             local introLayer = IntroLayer.create()  
             s_SCENE:replaceGameLayer(introLayer)
-            introLayer
         end
     end
     -- return to homepage button

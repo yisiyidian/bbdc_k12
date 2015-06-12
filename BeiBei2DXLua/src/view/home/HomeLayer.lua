@@ -425,7 +425,7 @@ end
 function HomeLayer:fuckSMS()
     --如果判断这B没有验证手机 强制这B去验证
     if smsVerify == nil then
-        smsVerify = false
+        smsVerify = s_CURRENT_USER.mobilePhoneVerified
     end
     if not smsVerify then
         smsVerify = true

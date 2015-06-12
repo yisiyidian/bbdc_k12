@@ -153,14 +153,14 @@ function O2OController.logInByQQAuthData()
     O2OController.startLoadingData(USER_START_TYPE_QQ_AUTHDATA, nil, nil) 
 end
 --通过手机号码+验证码登陆
-function O2OController.logInBySMSCode(phoneNumber, smsCode)
-   O2OController.startLoadingData(USER_START_TYPE_OLD, phoneNumber, smsCode, false,true)
+function O2OController.logInBySMSCode(phoneNumber, smsCode ,callback)
+   O2OController.startLoadingData(USER_START_TYPE_OLD, phoneNumber, smsCode, false,true,callback)
 end
 
 --登陆
 --isPhoneNumber  是否是手机号码登陆
 --isSmsCode      是否是手机验证码登陆
-function O2OController.startLoadingData(userStartType, username, password,isPhoneNumber,isSmsCode)
+function O2OController.startLoadingData(userStartType, username, password,isPhoneNumber,isSmsCode,callback)
     LOGTIME('O2OController.startLoadingData')
     local tmpUser = DataUser.create()
     local hasUserInLocalDB = false
@@ -195,11 +195,16 @@ function O2OController.startLoadingData(userStartType, username, password,isPhon
             else
                 onErrorNeedRestartAppHappend(e .. '\n username: ' .. tostring(username))
             end
+            -- s_SCENE:removeAllPopups()
+
             hideProgressHUD()
         else -- no error
             --没报错的情况下 走这里
             if hasUserInLocalDB and tmpUser.objectId ~= '' and tmpUser.username == username and tmpUser.updatedAt > s_CURRENT_USER.updatedAt then
                 isLocalNewerThenServer = true
+            end
+            if callback ~= nil then --RegisterAccountView里重置密码回调 loginWithSMSCallBack
+                callback(e, code)
             end
             print("isLocalNewerThenServer:"..tostring(isLocalNewerThenServer))
             if isLocalNewerThenServer then
@@ -559,5 +564,23 @@ function O2OController.syncMission(onCompleted)
 end
 
 ----------------------------------------------------------------------------------------------------------------
+--重置密码
+function O2OController.resetPassword(onCompleted)
+    if not s_SERVER.isNetworkConnectedWhenInited() or not s_SERVER.isNetworkConnectedNow() or not s_SERVER.hasSessionToken() then 
+        if onCompleted then 
+            onCompleted()
+        end
+        return
+    end
+    print("重置登陆密码..")
+    -- local missionData = s_MissionManager:getMissionData()
+    resetPassword(function ()
+        s_CURRENT_USER.password = PASSWORD
+        s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER, nil, s_CURRENT_USER.username)
+        if onCompleted then 
+            onCompleted()
+        end
+    end)
+end
 
 return O2OController

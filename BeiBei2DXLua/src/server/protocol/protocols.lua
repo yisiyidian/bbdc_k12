@@ -568,4 +568,30 @@ function saveUserToServer(dataTable, callback)
     saveToServer(userdata, cb)
 end
 
+--重置密码
+function resetPassword(callback)
+    if not (s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()) then
+        if callback then callback(nil, nil) end
+        return
+    end
+
+    local api = 'resetpassword'
+    local serverRequestType = math['or'](SERVER_REQUEST_TYPE_CLIENT_ENCODE, SERVER_REQUEST_TYPE_CLIENT_DECODE)
+
+    local function cb(result, error)
+        if error == nil then
+            if result.datas ~= nil then
+                --回调给s_MissionManager处理数据
+                s_CURRENT_USER.password = PASSWORD --重置密码
+            end
+            if callback then callback(result.datas, nil) end
+        else
+            if callback then callback(nil, error) end
+        end
+    end
+    -- --数据推送到服务器上去
+    local protocol = ProtocolBase.create(api, serverRequestType, {['mobilePhoneNumber'] = s_CURRENT_USER.mobilePhoneNumber}, cb)
+    protocol:request()
+end
+
 

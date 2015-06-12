@@ -57,11 +57,7 @@ function DataUser:ctor()
     self.tutorialStep                      = 0 
     self.tutorialSmallStep                 = 0 
     self.isSoundAm                         = 1 
---    self.reviewBossTutorialStep            = 0 
     self.bookKey                           = ''
-
---    self.energyLastCoolDownTime            = -1 
---    self.energyCount                       = s_energyMaxCount
 
     self.wordsCount                        = 0 
     self.masterCount                       = 0 
@@ -75,12 +71,7 @@ function DataUser:ctor()
     self.seenFansCount                     = 0
 
     self.currentWordsIndex                 = 0 
---    self.currentChapterKey                 = ''
-    --self.currentSelectedChapterKey         = ''
---    self.currentLevelKey                   = ''
-    --self.currentSelectedLevelKey           = ''
 
---    self.stars                             = 0 
 
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
@@ -89,10 +80,6 @@ function DataUser:ctor()
 
 
     self.needToUnlockNextChapter           = 0
-
-
---    self.needToUnlockNextChapter           = 0
-
 
 --    self.levels                            = {}
     self.logInDatas                        = {}
@@ -105,11 +92,6 @@ function DataUser:ctor()
     self.timeAdjust                        = 0
     self.failTime                          = 0
     self.winCombo                          = 0
-
---    self.lastUpdateSummaryBossTime         = 0
---    self.summaryBossList                   = ''
---    self.chestList                         = ''
---    self.lastUpdateChestTime               = 0
     
     -- function lock
     self.lockFunction                      = 8
@@ -185,115 +167,15 @@ function DataUser:subtractBeans(count)
 end
 
 function DataUser:generateChestList()
---    --print("###########start generate chest########")
---    local timePass = os.time() - s_CURRENT_USER.lastUpdateChestTime
-----    print('osTime:'..os.time())
-----    print('lastUpdate:'..s_CURRENT_USER.lastUpdateChestTime)
---    if timePass >= 3600 * 24 * 2 then   -- two days
---        s_CURRENT_USER.lastUpdateChestTime = os.time()
---        local currentIndex = s_CURRENT_USER.levelInfo:getBookCurrentLevelIndex()
---        if currentIndex == 0 then
---            return 
---        end
---        local chest1 = math.random(0, currentIndex - 1) + 0
---        local chest2 = math.random(0, currentIndex - 1) + 0
-----        print('chest1:'..chest1)
-----        print('chest2:'..chest2)
-----        while (chest2 - chest1) == 0 do
-----            print('chest1:'..chest1)
-----            print('chest2:'..chest2)
-----            chest2 = math.random(0, currentIndex - 1)
-----            print('diff'..(chest2-chest1)..'###')
-----        end
---        self.chestList = chest1..'|'..chest2
-----        self.chestList = '0'
-----        print('chestList:'..self.chestList)
---    end
 end
 
 function DataUser:generateSummaryBossList() 
-
---    local updateTime = self.levelInfo:getUpdateBossTime(self.bookKey)
---    --print('!!!!updatetime:'..os.date('%x',updateTime))
---    local list = self.levelInfo:getBossList(self.bookKey)
---    local isSameDate = (os.date('%x',updateTime) == os.date('%x',os.time()))
---    local summaryBossList = split(list,'|')
---    if list == '' then
---        summaryBossList = {}
---    end
---    local index = self.levelInfo:getBookCurrentLevelIndex()
---    if index == 0 then
---        return
---    end
---    
---    if (not isSameDate) and #summaryBossList < 3 and index - #summaryBossList > 0 then
---        updateTime = os.time()
---        --print('currentIndex:'..index)
---        if #summaryBossList == 0 then
---            list = tostring(math.random(0,index - 1)) 
---        else
---            local id = math.random(1,index - 1 - #summaryBossList)
---            for i = 1,#summaryBossList do
---                if summaryBossList[i] == '' then
---                    break
---                end
---                if id - summaryBossList[i] < 0 then
---                    table.insert(summaryBossList,i,tostring(id))
---                    break
---                else
---                    id = id + 1
---                end
---            end
---            if summaryBossList[#summaryBossList] ~= '' and id - summaryBossList[#summaryBossList] > 0 then
---                table.insert(summaryBossList,#summaryBossList + 1,tostring(id))
---            end
---            self.summaryBossList = summaryBossList[1]
---            for i = 2,#summaryBossList do
---                list = list..'|'..summaryBossList[i]
---            end
---        end
---   
---        self.levelInfo:updateBossList(self.bookKey,list)
---        
---    end
---    self.levelInfo:updateTime(self.bookKey,os.time())
---    self.levelInfo:sysData()
-    --print("summaryBossList:"..self.summaryBossList.."lastUpdate:"..os.date('%x',self.lastUpdateSummaryBossTime))
 end
 
 function DataUser:removeChest(index)
-
---    local list = split(self.chestList,'|')
---    local tempList = ''
---    print_lua_table(list)
---    for i = 1, #list do 
---        if list[i] - index ~= 0 then
---            if tempList == '' then
---                tempList = list[i]
---            else
---                tempList = tempList..'|'..list[i]
---            end
---        end
---    end
---    self.chestList = tempList
-
 end
 
 function DataUser:removeSummaryBoss(index)
---    local bosslist = self.levelInfo:getBossList(self.bookKey)
---    local list = split(bosslist,'|')
---    local tempList = ''
---    for i = 1, #list do 
---        if list[i] - index ~= 0 then
---            if tempList == '' then
---                tempList = list[i]
---            else
---                tempList = tempList..'|'..list[i]
---            end
---        end
---    end
---    self.levelInfo:updateBossList(self.bookKey, tempList)
---    self.levelInfo:sysData()
 end
 
 function DataUser:getNameForDisplay()
@@ -316,17 +198,6 @@ function DataUser:parseServerData(data)
         end
     end
 end
-
--- function DataUser:parseServerDataEverydayInfo(results)
---     local DataDailyCheckIn = require('model.user.DataEverydayInfo')
---    self.logInDatas = {}
---    for i, v in ipairs(results) do
---        local data = DataEverydayInfo.create()
---        parseServerDataToClientData(v, data)
---        self.logInDatas[i] = data
---        print_lua_table(data)
---    end 
--- end
 
 function DataUser:parseServerDataLevelInfo(results)
     for i, v in ipairs(results) do

@@ -182,7 +182,8 @@ function RegisterAccountView:showInputPhoneNumber()
 	btnOtherLogin:setTitleColor(cc.c3b(153,168,181))
 	btnOtherLogin:setTitleText("其他登陆方式")
 	btnOtherLogin:setTitleFontSize(20)
-	btnOtherLogin:setTouchEnabled(false)
+	-- btnOtherLogin:setTouchEnabled(true)
+	btnOtherLogin:addTouchEventListener(handler(self, self.onOtherLogin))
 	self:addChild(btnOtherLogin)
 	self.btnOtherLogin = btnOtherLogin
 	self.views[#self.views+1] = btnOtherLogin
@@ -192,7 +193,7 @@ function RegisterAccountView:showInputPhoneNumber()
 	btnGuestLogin:setTitleColor(cc.c3b(153,168,181))
 	btnGuestLogin:setTitleText("游客登陆")
 	btnGuestLogin:setTitleFontSize(20)
-	btnGuestLogin:setTouchEnabled(false)
+	-- btnGuestLogin:setTouchEnabled(false)
 	self:addChild(btnGuestLogin)
 	self.btnGuestLogin = btnGuestLogin
 	self.views[#self.views+1] = btnGuestLogin
@@ -206,6 +207,16 @@ function RegisterAccountView:showInputPhoneNumber()
 	self.curBtn = self.btnPhoneNumberOK --绑定到curBtn
 	self.views[#self.views+1] = btnPhoneNumberOK
 	self:addChild(btnPhoneNumberOK)
+end
+
+function RegisterAccountView:onOtherLogin(sender,eventType)
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+	print("其他登陆方式")
+	---直接转到帐号密码登陆界面
+	self.curStep = RegisterAccountView.STEP_6
+	self:goStep(self.curStep)
 end
 
 --电话号码输入OK
@@ -748,10 +759,10 @@ function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 			cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
 			s_CURRENT_USER.mobilePhoneVerified = true --通过验证
 			s_TIPS_LAYER:showSmallWithOneButton("手机号码验证成功！",function ()
+				--TODO 重置密码
+				s_O2OController.resetPassword(handler(self,self.onResetPwdCallBack))
 				s_SCENE:removeAllPopups()
 			end)
-			-- self.curStep = self.curStep + 1
-			-- self:goStep(self.curStep)
 		elseif self.smsMode == "smslogin" then
 			-- TODO直接登陆了
 			print("BBBBBBBBBBBBBBBBB")
@@ -776,11 +787,25 @@ end
 --通过短信验证码登陆
 function RegisterAccountView:loginWithSMS(phoneNumber,smsCode)
 	print("短信验证码登陆:"..phoneNumber.." "..smsCode)
-	cx.CXAvos:getInstance():loginWithSMS(phoneNumber,smsCode,handler(self, self.loginWithSMSCallBack))
+	-- cx.CXAvos:getInstance():loginWithSMS(phoneNumber,smsCode,handler(self, self.loginWithSMSCallBack))
+	-- cx.CXAvos:getInstance():loginWithSMS(phoneNumber,smsCode,handler(self, self.loginWithSMSCallBack))
+	s_O2OController.logInBySMSCode(phoneNumber,smsCode,handler(self, self.loginWithSMSCallBack))
 end
 
-function RegisterAccountView:loginWithSMSCallBack()
-	-- body
+function RegisterAccountView:loginWithSMSCallBack(error,errorCode)
+	if error ~= nil then
+		s_TIPS_LAYER:showSmallWithOneButton(error)
+	else
+		--请求重置密码
+		s_O2OController.resetPassword(handler(self,self.onResetPwdCallBack))
+	end
+end
+
+--重置密码回调
+function RegisterAccountView:onResetPwdCallBack()
+	--重置密码成功
+	print("重置密码成功！")
+	self:endRegister()
 end
 
 

@@ -45,6 +45,11 @@ NSString* AVUserToJsonStr(AVUser* user) {
     if (user.createdAt) json[@"createdAt"] = @([user.createdAt timeIntervalSince1970]);
     if (user.createdAt) json[@"updatedAt"] = user.updatedAt ? @([user.updatedAt timeIntervalSince1970]) : json[@"createdAt"];
     if (user.mobilePhoneNumber) json[@"mobilePhoneNumber"] = user.mobilePhoneNumber;
+    if (user.mobilePhoneVerified){
+        NSNumber *boolNumber = [NSNumber numberWithBool:user.mobilePhoneVerified];
+        json[@"mobilePhoneVerified"] = boolNumber;
+    }
+    
     for (NSString* key in user.allKeys) {
         id obj = [user objectForKey:key];
         if (obj && [obj isKindOfClass:[NSString class]]) {
