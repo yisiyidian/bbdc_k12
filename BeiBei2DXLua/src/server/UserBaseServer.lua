@@ -332,7 +332,7 @@ function UserBaseServer.updateLoginInfo(username, password, phoneNumber,onRespon
             if error ~= nil then
                 --手机号码已存在
                 onResponse(s_CURRENT_USER.username,password,s_CURRENT_USER.mobilePhoneNumber,error.description,error.code)
-            elseif not exist then
+            elseif exist.count == 0 then
                 if s_CURRENT_USER.nickName ~= nickName then
                     saveUserToServer({["nickName"]=nickName,["mobilePhoneNumber"]=phoneNumber,['sex']=sex}, function(datas,error)
                         if error ~= nil then

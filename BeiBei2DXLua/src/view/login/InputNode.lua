@@ -182,6 +182,11 @@ function InputNode:setEnabled(enable)
     self.textField:setTouchEnabled(enable)
 end
 
+function InputNode:setPlaceHolderColor()
+    self.textField:setPlaceHolderColor(cc.c3b(153,168,181))
+    -- self.textField:setPlaceHolderColor(cc.c3b(255,255,255))
+end
+
 return InputNode
 
 

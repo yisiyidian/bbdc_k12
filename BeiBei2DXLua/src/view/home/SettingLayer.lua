@@ -183,7 +183,7 @@ function SettingLayer:onInfoTouch(sender,eventType)
 	else
 		--如果当前用户是游客 则显示注册帐号
 		local online = s_SERVER.isNetworkConnectedNow() and s_SERVER.hasSessionToken()
-		if  online == false then
+		if online == false then
 	        self.homeLayer.offlineTipHome.setTrue(OfflineTipForHome_ImproveInformation)
 	    else
 	        local regiserView = RegisterAccountView.new("canclose")
