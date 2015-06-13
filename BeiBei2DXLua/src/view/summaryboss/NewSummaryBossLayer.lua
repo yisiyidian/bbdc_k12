@@ -481,7 +481,6 @@ function NewSummaryBossLayer:addChangeBtn()
         if eventType == ccui.TouchEventType.ended then
             playWordSound(self.wordList[1][4])
             if self.hintChangeBtn ~= nil then
-                self.hintChangeBtn.hintOver()
                 self.hintChangeBtn = nil
                 --return
             end

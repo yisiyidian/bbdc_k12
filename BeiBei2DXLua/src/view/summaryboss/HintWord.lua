@@ -87,7 +87,6 @@ function HintWord:ctor(word,target,firstTime)
             wordBoard:stopAllActions()
             --self:removeFromParent()
             self.hintOver()
-            self:removeFromParent()
             return
         end
         if word ~= '' then
