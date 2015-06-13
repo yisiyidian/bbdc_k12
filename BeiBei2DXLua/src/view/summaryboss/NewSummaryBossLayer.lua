@@ -45,8 +45,7 @@ function NewSummaryBossLayer:ctor(unit)
                 if self.changeBtnTime > self.totalTime / 2 then
                     self:secondWordTutorial()
                 end
-            end
-            if self.tutorialStep >= 2 then
+            elseif self.tutorialStep >= 2 then
                 self.changeBtnTime = self.changeBtnTime + delta
                 --两次划词引导结束后，判断是否需要换词引导
                 if self.changeBtnTime > self.totalTime / 2 and self.firstTimeToChange then
@@ -87,8 +86,6 @@ function NewSummaryBossLayer:secondWordTutorial()
         self.boss:setLocalZOrder(0)
         --self.girl:setLocalZOrder(0)
         curtain:removeFromParent()
-        self.tutorialStep = self.tutorialStep + 1
-        self.gamePaused = false
     end
 end
 --换词引导
@@ -355,6 +352,10 @@ function NewSummaryBossLayer:initMat(visible)
     end
     --划对单词后
     mat.success = function(stack)
+        if self.tutorialStep == 1 then
+            self.tutorialStep = self.tutorialStep + 1
+            self.gamePaused = false
+        end
         if self.tutorialStep < 2 then
             self.tutorialStep = self.tutorialStep + 1
             -- if not self.isTrying then
