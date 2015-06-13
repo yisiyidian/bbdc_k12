@@ -47,7 +47,7 @@ function SummaryBossAlter.create(bossLayer,win,entrance)
         if not bossLayer.useItem and s_CURRENT_USER:getBeans() >= 0 then
             layer:lose(entrance)
         else
-            layer:lose2(entrance)
+            layer:lose(entrance)
         end
         -- boss失败的后的标志，非凡用
         s_game_fail_state = 1
@@ -99,7 +99,7 @@ function SummaryBossAlter:lose(entrance)
     end
     --打点
     --add board
-    self.loseBoard = cc.Sprite:create("image/summarybossscene/background_zjboss_tanchu.png")
+    self.loseBoard = cc.Sprite:create("image/summarybossscene/lose/green_background_xuanxiaoguantqanchu.png")
     self.loseBoard:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.3)
     self.loseBoard:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5))))
     self:addChild(self.loseBoard)
@@ -113,45 +113,42 @@ function SummaryBossAlter:lose(entrance)
     been_number:setPosition(beans:getContentSize().width * 0.65 , beans:getContentSize().height/2)
     beans:addChild(been_number)
 
-    local boss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
-    boss:setAnimation(0,'animation',false)
-    boss:addAnimation(0,'jianxiao',true)
-    boss:setPosition(self.loseBoard:getContentSize().width / 4,self.loseBoard:getContentSize().height / 3)
+    local boss = sp.SkeletonAnimation:create("spine/summaryboss/lose/failed_boss_doubiban.json","spine/summaryboss/lose/failed_boss_doubiban.atlas",1)
+    boss:setAnimation(0,'animation',true)
+    boss:setPosition(self.loseBoard:getContentSize().width / 2,self.loseBoard:getContentSize().height / 2 - 30)
     self.loseBoard:addChild(boss)
 
-    local label = cc.Label:createWithSystemFont("贝贝被怪兽抓住了！",'',40)
+    local label = cc.Label:createWithSystemFont("失败！",'',40)
     label:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
-    label:setPosition(self.loseBoard:getContentSize().width / 2,self.loseBoard:getContentSize().height * 0.75)
-    label:setColor(cc.c4b(52,177,241,255))
+    label:setPosition(self.loseBoard:getContentSize().width / 2 + 15,self.loseBoard:getContentSize().height * 0.95)
+    -- label:setColor(cc.c4b(52,177,241,255))
     self.loseBoard:addChild(label)
 
-    local giveup = Button.create("giveup","blue","放弃挑战")
-    giveup:setPosition(self.loseBoard:getContentSize().width / 2 + 10,self.loseBoard:getContentSize().height * 0.18 + 2)
-    self.loseBoard:addChild(giveup)
+    local word = cc.Label:createWithSystemFont(self.bossLayer.wordList[1][4],'',40)
+    word:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
+    word:setPosition(self.loseBoard:getContentSize().width / 2,self.loseBoard:getContentSize().height * 0.85 + 10)
+    -- label:setColor(cc.c4b(52,177,241,255))
+    self.loseBoard:addChild(word)
 
-    local function button_giveup_func()
-        playSound(s_sound_buttonEffect)
-        self:lose2(entrance)
-    end
+    local meaning = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getWordInfoFromWordName(self.bossLayer.wordList[1][4]).wordMeaningSmall,'',40)
+    meaning:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
+    meaning:setPosition(self.loseBoard:getContentSize().width / 2,self.loseBoard:getContentSize().height * 0.8 - 10)
+    -- label:setColor(cc.c4b(52,177,241,255))
+    self.loseBoard:addChild(meaning)
 
-    giveup.func = function ()
-        button_giveup_func()
-    end
-
-    boss:setPosition(self.loseBoard:getContentSize().width / 4,self.loseBoard:getContentSize().height * 0.4)
-    local buyTimeBtn = Button.create("addtime","blue","立刻复活")
-    buyTimeBtn:setPosition(self.loseBoard:getContentSize().width / 2,self.loseBoard:getContentSize().height * 0.3 + 15)
+    local buyTimeBtn = Button.create("addTime","blue","10     立刻复活!")
+    buyTimeBtn:setPosition(self.loseBoard:getContentSize().width / 2,self.loseBoard:getContentSize().height * 0.12)
     self.loseBoard:addChild(buyTimeBtn)
 
     local been_button = cc.Sprite:create("image/shop/been.png")
     been_button:setScale(0.8)
-    been_button:setPosition(buyTimeBtn.button_front:getContentSize().width * 0.8, buyTimeBtn.button_front:getContentSize().height/2)
+    been_button:setPosition(buyTimeBtn.button_front:getContentSize().width * 0.24, buyTimeBtn.button_front:getContentSize().height/2)
     buyTimeBtn.button_front:addChild(been_button)
 
-    local rewardNumber = cc.Label:createWithSystemFont(10,"",24)
-    rewardNumber:enableOutline(cc.c4b(255,255,255,255),1)
-    rewardNumber:setPosition(buyTimeBtn.button_front:getContentSize().width * 0.9,buyTimeBtn.button_front:getContentSize().height * 0.5)
-    buyTimeBtn.button_front:addChild(rewardNumber)
+    -- local rewardNumber = cc.Label:createWithSystemFont(10,"",24)
+    -- rewardNumber:enableOutline(cc.c4b(255,255,255,255),1)
+    -- rewardNumber:setPosition(buyTimeBtn.button_front:getContentSize().width * 0.2,buyTimeBtn.button_front:getContentSize().height * 0.5)
+    -- buyTimeBtn.button_front:addChild(rewardNumber)
 
 
 
@@ -183,11 +180,45 @@ function SummaryBossAlter:lose(entrance)
     end
 
     onAndroidKeyPressed(self, function ()
-        self:lose2(entrance)
+        s_CorePlayManager.leaveSummaryModel(false)
+        s_CorePlayManager.enterLevelLayer() 
+        cc.SimpleAudioEngine:getInstance():stopAllEffects()
     end, function ()
 
     end)
 
+    local continue = Button.create("giveup","blue","返回学习")
+    continue:setPosition(self.loseBoard:getContentSize().width / 2 - 130,self.loseBoard:getContentSize().height * 0.25)
+    self.loseBoard:addChild(continue)
+
+    local function backToLevelScene()
+        s_CorePlayManager.leaveSummaryModel(false)
+        s_CorePlayManager.enterLevelLayer() 
+        cc.SimpleAudioEngine:getInstance():stopAllEffects()
+        playSound(s_sound_buttonEffect)
+    end
+
+    continue.func = function ()
+        backToLevelScene()
+    end
+
+    local again = Button.create("again","blue","再来一次")
+    again:setPosition(self.loseBoard:getContentSize().width / 2 + 130,self.loseBoard:getContentSize().height * 0.25)
+    self.loseBoard:addChild(again)
+
+    local function challengeAgain()
+        local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
+        local summaryBossLayer = SummaryBossLayer.create(self.bossLayer.oldUnit)
+        s_SCENE:replaceGameLayer(summaryBossLayer) 
+
+        cc.SimpleAudioEngine:getInstance():stopAllEffects()
+        playSound(s_sound_buttonEffect)
+        AnalyticsSummaryBossResult('again')
+    end
+
+    again.func = function ()
+        challengeAgain()
+    end
 
 end
 
@@ -210,89 +241,6 @@ function SummaryBossAlter:addTime()
     boss.bossBack()
     
     self:removeFromParent()
-end
-
-function SummaryBossAlter:lose2(entrance)
-    if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
-        s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
-        s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_lose)
-    end
-
-    playMusic(s_sound_fail,true)
-
-    self.loseBoard2 = cc.Sprite:create(string.format("image/summarybossscene/summaryboss_board_1.png"))
-    self.loseBoard2:setPosition(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5)
-    if self.loseBoard ~= nil then
-        self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
-    end
-    self.loseBoard2:runAction(cc.Sequence:create(cc.DelayTime:create(0.3),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 0.5)))))
-    self:addChild(self.loseBoard2)
-
-    local boss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
-    boss:setAnimation(0,'animation',false)
-    boss:addAnimation(0,'jianxiao',true)
-    boss:setPosition(self.loseBoard2:getContentSize().width / 4,self.loseBoard2:getContentSize().height * 0.22)
-    self.loseBoard2:addChild(boss)
-
-    local label = cc.Label:createWithSystemFont("挑战失败！",'',40)
-    label:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
-    label:setPosition(self.loseBoard2:getContentSize().width / 2,self.loseBoard2:getContentSize().height * 0.64)
-    label:setColor(cc.c4b(251.0, 39.0, 10.0, 255))
-    self.loseBoard2:addChild(label)
-
-    local label1 = cc.Label:createWithSystemFont(string.format("还需要找出%d个单词！\n做好准备再来",#self.wordList),'',40)
-    label1:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
-    label1:setPosition(self.loseBoard2:getContentSize().width / 2,self.loseBoard2:getContentSize().height * 0.55)
-    label1:setColor(cc.c4b(52,177,241,255))
-    self.loseBoard2:addChild(label1)
-
-    local head = cc.Sprite:create("image/summarybossscene/summaryboss_lose_head.png")
-    head:setPosition(self.loseBoard2:getContentSize().width / 2,self.loseBoard2:getContentSize().height * 0.75)
-    self.loseBoard2:addChild(head)
-
-    local continue = Button.create("small","blue","返回学习")
-    continue:setPosition(self.loseBoard2:getContentSize().width / 2 - 130,self.loseBoard2:getContentSize().height * 0.15)
-    self.loseBoard2:addChild(continue)
-
-    local function backToLevelScene()
-        s_CorePlayManager.leaveSummaryModel(false)
-        s_CorePlayManager.enterLevelLayer() 
-        cc.SimpleAudioEngine:getInstance():stopAllEffects()
-        playSound(s_sound_buttonEffect)
-    end
-
-    continue.func = function ()
-        backToLevelScene()
-    end
-
-    local again = Button.create("small","blue","再来一次")
-    again:setPosition(self.loseBoard2:getContentSize().width / 2 + 130,self.loseBoard2:getContentSize().height * 0.15)
-    self.loseBoard2:addChild(again)
-
-    local function challengeAgain()
-        local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
-        local summaryBossLayer = SummaryBossLayer.create(self.bossLayer.oldUnit)
-        s_SCENE:replaceGameLayer(summaryBossLayer) 
-
-        cc.SimpleAudioEngine:getInstance():stopAllEffects()
-        playSound(s_sound_buttonEffect)
-        AnalyticsSummaryBossResult('again')
-    end
-
-    again.func = function ()
-        challengeAgain()
-    end
-
-
-
-    onAndroidKeyPressed(self, function ()
-        s_CorePlayManager.leaveSummaryModel(false)
-        s_CorePlayManager.enterLevelLayer() 
-        cc.SimpleAudioEngine:getInstance():stopAllEffects()
-    end, function ()
-
-    end)
-
 end
 
 function SummaryBossAlter:win1(entrance)

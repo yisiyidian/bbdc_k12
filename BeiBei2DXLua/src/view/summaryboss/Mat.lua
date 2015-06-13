@@ -235,7 +235,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
             point:ignoreAnchorPointForPosition(false)
             point:setAnchorPoint(0.5,0.5)
             point:setVisible(false)
-            main:addChild(point)
+            main:addChild(point,1)
 
             table.insert(pointList,point)
 
@@ -300,7 +300,10 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     
     if isNewPlayerModel == true then
         s_SCENE:callFuncWithDelay(1.2,function (  )
-            
+            if bosslayer.tutorialStep == 0 then
+                cc.Director:getInstance():getActionManager():pauseTarget(bosslayer.boss)
+            end
+                    
             local hintBoard = cc.Sprite:create('image/guide/yindao_background_yellow.png')
             hintBoard:setPosition(0.5 * s_DESIGN_WIDTH,0.72 * s_DESIGN_HEIGHT - 180)
             main:addChild(hintBoard,1)

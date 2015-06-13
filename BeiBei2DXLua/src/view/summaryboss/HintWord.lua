@@ -19,6 +19,7 @@ function HintWord:ctor(word,target,firstTime)
     local curtain = cc.LayerColor:create(cc.c4b(0,0,0,150),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
     self:addChild(curtain)
     curtain:setPosition(s_LEFT_X,0)
+    self.isPaused = false
     local wordBoard
     if word ~= '' then
         --出现中英对照
@@ -41,15 +42,17 @@ function HintWord:ctor(word,target,firstTime)
         --title:setScale(1.5)
         self:addChild(title)
         
-        -- if firstTime then
-        --     local tutorial_text = cc.Sprite:create('image/guide/yindao_background_yellow.png')
-        --     tutorial_text:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 0.8)
-        --     self:addChild(tutorial_text,120)
-        --     local text = cc.Label:createWithSystemFont('这个词一会儿还会再出现的哦！','',28)
-        --     text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
-        --     text:setColor(cc.c3b(0,0,0))
-        --     tutorial_text:addChild(text)
-        -- end
+        if firstTime then
+            local tutorial_text = cc.Sprite:create('image/guide/yindao_background_yellow.png')
+            tutorial_text:setPosition(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 0.5)
+            self:addChild(tutorial_text)
+            local text = cc.Label:createWithSystemFont('这个词一会儿还会再出现的哦！','',28)
+            text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
+            text:setColor(cc.c3b(0,0,0))
+            tutorial_text:addChild(text)
+            tutorial_text:setVisible(false)
+            tutorial_text:runAction(cc.Sequence:create(cc.DelayTime:create(0.3),cc.Show:create()))
+        end
 
         wordBoard:runAction(cc.EaseBackOut:create(cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT))))
     else
@@ -80,15 +83,33 @@ function HintWord:ctor(word,target,firstTime)
     end
 
     local onTouchEnded = function(touch, event)
-        if word ~= '' then
+        if self.isPaused then
+            wordBoard:stopAllActions()
+            --self:removeFromParent()
             self.hintOver()
+            self:removeFromParent()
+            return
+        end
+        if word ~= '' then
+            
             director:getActionManager():resumeTarget(target)
             local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT/2*3))
             local action2 = cc.EaseBackIn:create(action1)
-            local action3 = cc.CallFunc:create(function()
+            local delaytime = 0
+            if firstTime then
+                delaytime = 3
+            end
+            local pause = cc.CallFunc:create(function (  )
+                self.isPaused = true
+            end)
+            local action3 = cc.DelayTime:create(delaytime)
+            local action4 = cc.CallFunc:create(function()
+                self.hintOver()
                 self:removeFromParent()
             end)
-            wordBoard:runAction(cc.Sequence:create(action2,action3))
+            wordBoard:runAction(cc.Sequence:create(action2,pause,action3,action4))
+        else
+            self.hintOver()
         end
     end
 

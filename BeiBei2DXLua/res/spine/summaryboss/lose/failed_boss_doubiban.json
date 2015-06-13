@@ -1,0 +1,88 @@
+{
+"skeleton": { "hash": "Rk3wyx2wAEffKh6rRB7D9pGwruw", "spine": "2.1.27", "width": 336.45, "height": 307, "images": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "length": 41.74, "x": 4.99, "y": 95.26, "rotation": -81.49 }
+],
+"slots": [
+	{ "name": "shoubi4", "bone": "root", "attachment": "shoubi2" },
+	{ "name": "shoubi3", "bone": "root", "attachment": "shoubi2" },
+	{ "name": "shoubi2", "bone": "root", "attachment": "shoubi1" },
+	{ "name": "shoubi1", "bone": "root", "attachment": "shoubi1" },
+	{ "name": "boss", "bone": "root", "attachment": "boss" },
+	{ "name": "shetou", "bone": "bone", "attachment": "shetou" }
+],
+"skins": {
+	"default": {
+		"boss": {
+			"boss": { "x": 23.61, "y": 39.35, "width": 320, "height": 307 }
+		},
+		"shetou": {
+			"shetou": { "x": 17.3, "y": -0.1, "rotation": 81.49, "width": 30, "height": 41 }
+		},
+		"shoubi1": {
+			"shoubi1": { "x": 117.49, "y": 69.6, "width": 63, "height": 158 }
+		},
+		"shoubi2": {
+			"shoubi1": { "x": -121.34, "y": 69.6, "scaleX": -1, "width": 63, "height": 158 }
+		},
+		"shoubi3": {
+			"shoubi2": { "x": 114.08, "y": 68, "width": 64, "height": 154 }
+		},
+		"shoubi4": {
+			"shoubi2": { "x": -118.78, "y": 69.11, "scaleX": -1, "width": 64, "height": 154 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"shoubi1": {
+				"attachment": [
+					{ "time": 0, "name": "shoubi1" },
+					{ "time": 0.1666, "name": null },
+					{ "time": 0.3333, "name": "shoubi1" }
+				]
+			},
+			"shoubi2": {
+				"attachment": [
+					{ "time": 0, "name": "shoubi1" },
+					{ "time": 0.1666, "name": null },
+					{ "time": 0.3333, "name": "shoubi1" }
+				]
+			},
+			"shoubi3": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.1666, "name": "shoubi2" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"shoubi4": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.1666, "name": "shoubi2" },
+					{ "time": 0.3333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": -21.92 },
+					{ "time": 0.1666, "angle": 28.41 },
+					{ "time": 0.3333, "angle": -21.92 }
+				],
+				"translate": [
+					{ "time": 0, "x": -7.91, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.1666, "x": 1.294, "y": 1 },
+					{ "time": 0.3333, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

@@ -65,6 +65,7 @@ function NewSummaryBossLayer:secondWordTutorial()
     --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     self.mat.forceFail()
     self.gamePaused = true
+    self.changeBtnTime = 0
     --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     local curtain = require('view.summaryboss.Curtain').create()
     self:addChild(curtain,2)
@@ -87,6 +88,7 @@ function NewSummaryBossLayer:secondWordTutorial()
         --self.girl:setLocalZOrder(0)
         curtain:removeFromParent()
         self.tutorialStep = self.tutorialStep + 1
+        self.gamePaused = false
     end
 end
 --换词引导
@@ -98,6 +100,7 @@ function NewSummaryBossLayer:changeWordTutorial()
     self.hintChangeBtn = hintBoard
     
     hintBoard.hintOver = function (  )
+        self.firstTimeToChange = false
         hintBoard:removeFromParent()
         self.gamePaused = false
         self.changeBtn:setLocalZOrder(0)
@@ -332,9 +335,9 @@ function NewSummaryBossLayer:initMat(visible)
 	local mat = require("view.summaryboss.Mat").create(self,self.tutorialStep < 1 or (visible ~= nil and not visible) or (self.isTrying and self.wordList[1][1] == 'apple'),"coconut_dark")
     mat:setPosition(s_DESIGN_WIDTH/2, 150)
     self:addChild(mat,1)
-    if self.tutorialStep == 0 then
-        cc.Director:getInstance():getActionManager():pauseTarget(self.boss)
-    end
+    -- if self.tutorialStep == 0 then
+    --     cc.Director:getInstance():getActionManager():pauseTarget(self.boss)
+    -- end
     if visible ~= nil and not visible then
         self.invisibleMat = mat
         mat:setVisible(false)
@@ -354,9 +357,9 @@ function NewSummaryBossLayer:initMat(visible)
     mat.success = function(stack)
         if self.tutorialStep < 2 then
             self.tutorialStep = self.tutorialStep + 1
-            if not self.isTrying then
-                s_CURRENT_USER:setGuideStep(self.tutorialStep + 13)
-            end
+            -- if not self.isTrying then
+            --     s_CURRENT_USER:setGuideStep(self.tutorialStep + 13)
+            -- end
         end
         --self:initGuideInfo()
         self.changeBtnTime = 0
@@ -562,6 +565,15 @@ function NewSummaryBossLayer:gameOverFunc(win)
         self.boss:fly()
 		self.girl:setAnimation("win")
 	else
+        local timeout = cc.Sprite:create('image/summarybossscene/lose/timeover_h5_zongjieboss.png')
+        timeout:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 3 / 2)
+        self:addChild(timeout,100)
+        timeout:runAction(cc.Sequence:create(cc.EaseBackOut:create(cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)))
+                                            ,cc.DelayTime:create(1.0)
+                                            ,cc.EaseBackIn:create(cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 3 / 2)))
+                                            ,cc.CallFunc:create(function (  )
+                                                timeout:removeFromParent()
+                                            end)))
 		self.girl:setAnimation("lose")
 	end
 	--游戏结束界面
