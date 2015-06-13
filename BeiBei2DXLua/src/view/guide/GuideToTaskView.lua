@@ -194,7 +194,8 @@ function GuideToTaskView:resetView()
 	if self.index == 7 then
 		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 		self:removeFromParent()
-		s_CorePlayManager.enterLevelLayer()
+		s_CURRENT_USER.showTaskLayer = 1   
+		s_CorePlayManager.enterLevelLayer()          
 		return
 	end
 	self.index = self.index + 1

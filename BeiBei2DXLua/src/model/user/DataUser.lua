@@ -131,6 +131,8 @@ function DataUser:ctor()
     self.guideStep                         = 0 
     -- 显示设置页面的标志
     self.showSettingLayer                  = 0
+    -- 显示任务面板标志
+    self.showTaskLayer                     = 0
 end
 -- 设置引导步骤
 function DataUser:setGuideStep(step)

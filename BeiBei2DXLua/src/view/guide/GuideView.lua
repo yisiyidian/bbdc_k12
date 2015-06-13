@@ -52,7 +52,7 @@ function GuideView:resetView()
 	self.pos = pos
 	self.color = color
 	self.bbName = bbName
-	-- self.len = string.len(self.content)
+	self.len = string.len(self.content)
 	self.label:setString(self.content)
 	
 	-- local currentLabel = ""
@@ -63,9 +63,16 @@ function GuideView:resetView()
 	-- 	if time > 0.2 then
 	-- 		time = 0
 	-- 		if i <= self.len then
-	-- 			currentLabel = string.sub(self.content,1,i)
-	-- 			i = i + 1
-	-- 			self.label:setString(currentLabel)
+	-- 			local char = string.byte(self.content, i)
+	-- 			if char >= 128 then
+	-- 				currentLabel = currentLabel..string.sub(self.content,i,i+2) 
+	-- 				i = i + 3
+	-- 			else
+	-- 				currentLabel = currentLabel..string.sub(self.content,i,i) 
+	-- 				i = i + 1
+	-- 			end
+	-- 			self.label:setString(currentLabel)	
+	-- 			print(currentLabel)
 	-- 		else
 	-- 			self:unscheduleUpdate()
 	-- 		end

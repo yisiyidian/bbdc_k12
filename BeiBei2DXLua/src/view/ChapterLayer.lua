@@ -121,7 +121,7 @@ function ChapterLayer:ctor()
 
     -- 添加引导
     if s_CURRENT_USER.guideStep <= s_guide_step_enterStory5 then
-        local backColor = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
+        local backColor = cc.LayerColor:create(cc.c4b(0,0,0,100), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
         backColor:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /2)
         backColor:ignoreAnchorPointForPosition(false)
         backColor:setAnchorPoint(0.5,0.5)
@@ -130,7 +130,6 @@ function ChapterLayer:ctor()
 
         local back = ccui.Layout:create()
         back:setContentSize(s_DESIGN_WIDTH ,s_DESIGN_HEIGHT)
-        back:setColor(cc.c4b(0,0,0,100))
         back:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /2)
         back:ignoreAnchorPointForPosition(false)
         back:setAnchorPoint(0.5,0.5)
@@ -142,7 +141,7 @@ function ChapterLayer:ctor()
         summaryboss:setPosition(310,720)
         summaryboss:setAnchorPoint(1,1)
         summaryboss:addAnimation(0, 'jianxiao', true)
-        summaryboss:setScale(0.85)
+        summaryboss:setScale(0.9)
         self.backColor:addChild(summaryboss)
         s_CURRENT_USER:setGuideStep(s_guide_step_enterLevel) 
     else
@@ -151,12 +150,22 @@ function ChapterLayer:ctor()
     end
     -- 添加引导
     print("now guide is "..s_CURRENT_USER.guideStep)
-    -- if s_CURRENT_USER.guideStep == s_guide_step_second then
+    if s_CURRENT_USER.guideStep == s_guide_step_second then
         local GuideToTaskView = require("view.guide.GuideToTaskView")
         local guideToTaskView = GuideToTaskView.create()
         self:addChild(guideToTaskView,3)
         s_CURRENT_USER:setGuideStep(s_guide_step_bag1) 
-    -- end
+    end
+    if s_CURRENT_USER.showTaskLayer == 1 then
+        self.boxButton:stopAllActions()
+        self.boxButton:setBright(false)
+        self.boxButton:setTouchEnabled(false)
+        local taskview = TaskView.new(handler(self,self.callBox),handler(self, self.updateBean))
+        s_SCENE:popup(taskview)
+        s_CURRENT_USER.showTaskLayer = 0  
+    end  
+
+
 end
 
 function ChapterLayer:touchFunc()
