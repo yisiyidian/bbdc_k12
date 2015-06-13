@@ -92,7 +92,7 @@ end
 function NewSummaryBossLayer:changeWordTutorial()
     self.gamePaused = true
     self.changeBtn:setLocalZOrder(2)
-    local hintBoard = require("view.summaryboss.HintWord").create('',self.boss,self.firstTimeToChange)
+    local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1][4],self.boss,self.firstTimeToChange)
     self:addChild(hintBoard,1)
     self.hintChangeBtn = hintBoard
     

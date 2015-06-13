@@ -262,6 +262,7 @@ function GuideToTaskView:resetPage()
 					self:resetView()
 					self.beans:setVisible(true)
 					self.beanCountLabel:setString(self.beanCountLabel:getString()+10)
+					s_CURRENT_USER:addBeans(10)
 				end)
 				self:runAction(cc.Sequence:create(action1,action2))
 			end
