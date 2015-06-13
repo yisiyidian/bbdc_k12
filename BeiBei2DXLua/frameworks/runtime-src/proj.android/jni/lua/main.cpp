@@ -106,7 +106,7 @@ extern "C"
     void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionLS(JNIEnv *env, jobject thisz,jstring objectjson, jstring error, jint errorcode){
         const char *nativeString_objectjson = objectjson ? env->GetStringUTFChars(objectjson, 0) : 0;
 		const char *nativeString_error = error ? env->GetStringUTFChars(error, 0) : 0;
-		CXAvos::getInstance()->invokeLuaCallbackFunction_ls(nativeString_objectjson, nativeString_error, errorcode);
+		CXAvos::getInstance()->invokeLuaCallBackFunction_ls(nativeString_objectjson, nativeString_error, errorcode);
 		if (objectjson) env->ReleaseStringUTFChars(objectjson, nativeString_objectjson);
 		if (error) env->ReleaseStringUTFChars(error, nativeString_error);
     }
@@ -129,7 +129,7 @@ extern "C"
     void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionVP(JNIEnv *env, jstring error, jint errorcode)
     {
        const char *nativeString_error = error ? env->GetStringUTFChars(error, 0) : 0;
-       CXAvos::getInstance()->invokeLuaCallbackFunction_vp(nativeString_error,errorcode);
+       CXAvos::getInstance()->invokeLuaCallBackFunction_vp(nativeString_error,errorcode);
 
        if(error) env->ReleaseStringUTFChars(error,nativeString_error);
     }
