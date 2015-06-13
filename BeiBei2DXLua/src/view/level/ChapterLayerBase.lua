@@ -10,6 +10,7 @@ s_chapter0_base_height = 3014
 s_chapter_layer_width = 854
 
 local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
+local GuideView = require ("view.guide.GuideView")
 
 local ChapterLayerBase = class('ChapterLayerBase',function() 
     return ccui.Widget:create()

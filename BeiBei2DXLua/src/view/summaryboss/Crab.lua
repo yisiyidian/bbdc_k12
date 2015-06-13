@@ -5,12 +5,12 @@ local Crab = class("Crab",function ()
 	return cc.Node:create()
 end)
 
-function Crab.create(word)
-	local node = Crab.new(word)
+function Crab.create(word,isTrying)
+	local node = Crab.new(word,isTrying)
 	return node
 end
 
-function Crab:ctor(word)
+function Crab:ctor(word,isTrying)
 	local proxy = cc.CCBProxy:create()
     self.ccb = {}
     self.ccbcrab = {} 
@@ -19,9 +19,11 @@ function Crab:ctor(word)
     self.crab = CCBReaderLoad("ccb/crab1.ccbi", proxy, self.ccbcrab,self.ccb)
     self.crab:setPosition(s_DESIGN_WIDTH * 0.5, -s_DESIGN_HEIGHT * 0.1)
     self:addChild(self.crab)
-    if s_CURRENT_USER.bossTutorialStep < s_K12_summaryBoss then
+    if isTrying then
         self.ccbcrab['meaningSmall']:setString(word)
         self.ccbcrab['meaningBig']:setString(word)
+        self.ccbcrab['meaningSmall']:setScale(1.5)
+        self.ccbcrab['meaningBig']:setScale(1.5)
     else
         self.ccbcrab['meaningSmall']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall)
         self.ccbcrab['meaningBig']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall)

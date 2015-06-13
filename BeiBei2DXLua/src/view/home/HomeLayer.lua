@@ -5,8 +5,9 @@ require("common.global")
 --
 
 -- local AlterI = require("view.alter.AlterI")
-
+local GuideView = require ("view.guide.GuideView")
 local SettingLayer = require("view.home.SettingLayer") --设置界面
+
 local MissionProgress = require("view.home.MissionProgressLayer") --中间的原型开始按钮
 local OfflineTipHome = require("view.offlinetip.OfflineTipForHome")
 local OfflineTipFriend = require("view.offlinetip.OfflineTipForFriend")
@@ -125,29 +126,25 @@ function HomeLayer:ctor()
     self.offlineTipFriend = offlineTipFriend
     self:addChild(offlineTipHome,2)
     self:addChild(offlineTipFriend,2)
-    --设置界面
-    local setting_back = SettingLayer.new(self)
-    setting_back:setPosition(0, s_DESIGN_HEIGHT/2)
-    setting_back:updateView()
-    self.setting_back = setting_back
-    backColor:addChild(setting_back)
+    -- --设置界面
+    -- local setting_back = SettingLayer.new(self)
+    -- setting_back:setPosition(0, s_DESIGN_HEIGHT/2)
+    -- setting_back:updateView()
+    -- self.setting_back = setting_back
+    -- backColor:addChild(setting_back)
     --任务开始按钮
     local mission_progress = nil
     --是否打卡
     local checkIn = s_CURRENT_USER.logInDatas[#s_CURRENT_USER.logInDatas]:isCheckIn(os.time(),s_CURRENT_USER.bookKey)
     local checkInDisplay = checkIn and not s_isCheckInAnimationDisplayed --s_isCheckInAnimationDisplayed 在global.lua里
     if checkInDisplay then
-        --打卡
-        if s_HUD_LAYER:getChildByName('missionComplete') ~= nil then
-            s_HUD_LAYER:getChildByName('missionComplete'):setVisible(true)
-        end
+        -- --打卡
+        -- if s_HUD_LAYER:getChildByName('missionComplete') ~= nil then
+        --     s_HUD_LAYER:getChildByName('missionComplete'):setVisible(true)
+        -- end
         s_isCheckInAnimationDisplayed = true
-        mission_progress = MissionProgress.create(true,self)
-    else
-        mission_progress = MissionProgress.create()
-        mission_progress.animation()
     end
-
+    mission_progress = MissionProgress.create()
     if checkIn then
         --触发打卡任务
         s_MissionManager:updateMission(MissionConfig.MISSION_DAKA,1,false)
@@ -157,7 +154,13 @@ function HomeLayer:ctor()
     backColor:addChild(mission_progress,1,'mission_progress')
 
     --下载音频的按钮
-    local downloadSoundButton = DownloadSoundButton.create(top)
+    local status = cx.CXNetworkStatus:getInstance():start()
+    if status == NETWORK_STATUS_WIFI and s_CURRENT_USER.guideStep < s_guide_step_enterLevel then
+        local downloadSoundButton = DownloadSoundButton.create(top,false)
+    else
+        local downloadSoundButton = DownloadSoundButton.create(top,true)
+    end
+
 
     --正在学习 文本
     local name = cc.Sprite:create('image/homescene/BBDC_word_title.png')
@@ -244,7 +247,7 @@ function HomeLayer:ctor()
     button_data = cc.Sprite:create("image/homescene/main_bottom.png")
     button_data:setAnchorPoint(0.5,0)
     button_data:setPosition(bigWidth/2, 0)
-    backColor:addChild(button_data)
+    backColor:addChild(button_data,3)
     self.dataButton = button_data
     self.button_data = button_data
 
@@ -254,7 +257,7 @@ function HomeLayer:ctor()
     data_back:setPosition(button_data:getContentSize().width/2, 0)
     self.dataBack = data_back
     self.data_back = data_back
-    button_data:addChild(data_back,2)
+    button_data:addChild(data_back,3)
     
     local bottom = cc.LayerColor:create(cc.c4b(255,255,255,255), button_data:getContentSize().width, 100)
     bottom:setAnchorPoint(0.5,1)
@@ -346,13 +349,7 @@ function HomeLayer:ctor()
     playMusic(s_sound_First_Noel_pluto,true)  --播放音乐
     self.button_setting = button_setting
     self.button_sound = downloadSoundButton
-    self.button_enter = mission_progress
     self.button_reward = button_reward
-
-    if checkInDisplay then
-        self:showDataLayer(true)
-        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-    end
 
    for i=1,5 do
         if math.floor(s_LocalDatabaseManager.isBuy() / math.pow(10,i-1)) == 1 then
@@ -380,12 +377,30 @@ function HomeLayer:ctor()
         end
     end
 
+    -- 添加引导
+    if s_CURRENT_USER.guideStep == s_guide_step_selectBook then
+        s_CorePlayManager.enterGuideScene(3,backColor)
+        s_CURRENT_USER:setGuideStep(s_guide_step_enterHome) 
+
+        button_friend:setTouchEnabled(false)
+        button_reward:setTouchEnabled(false)
+        button_setting:setTouchEnabled(false)
+        button_shop:setTouchEnabled(false)
+    else
+        s_CURRENT_USER:setGuideStep(s_guide_step_bag7) 
+    end
+
+    if s_CURRENT_USER.showSettingLayer == 1 then
+        local SettingLayer = require("view.home.SettingLayer")
+        local settinglayer = SettingLayer.new()
+        s_SCENE:popup(settinglayer)
+    end
+    s_CURRENT_USER.showSettingLayer = 0
+
     onAndroidKeyPressed(self, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()
         if self.viewIndex == 2 and #isPopup == 0 then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
-            mission_progress.stopListener = false
 
             self.viewIndex = 1
 
@@ -394,7 +409,7 @@ function HomeLayer:ctor()
 
             local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            self.setting_back:runAction(cc.Sequence:create(action2, action3))
+            --self.setting_back:runAction(cc.Sequence:create(action2, action3))
 
         elseif self.isDataShow == true and #isPopup == 0 then
             self.isDataShow = false
@@ -450,7 +465,7 @@ function HomeLayer:onTouchMoved(touch, event)
                     self.personalInfoLayer = personalInfoLayer
                     self.personalInfoLayer:setPosition(-s_LEFT_X,0)
                     --personalInfoLayer:setPosition(-s_LEFT_X,0)
-                    self.data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
+                    self.data_back:addChild(personalInfoLayer,3,'PersonalInfo') 
                 end)
             end)
             return
@@ -474,7 +489,6 @@ function HomeLayer:onTouchMoved(touch, event)
     if now_x + moveLength < start_x and not self.isDataShow then
         if self.viewIndex == 2 then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            self.mission_progress.stopListener = false
             self.viewIndex = 1
 
             local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
@@ -482,7 +496,7 @@ function HomeLayer:onTouchMoved(touch, event)
 
             local action2 = cc.DelayTime:create(0.5)
             local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            self.setting_back:runAction(cc.Sequence:create(action2, action3))
+            --self.setting_back:runAction(cc.Sequence:create(action2, action3))
         end
     end
 end
@@ -492,20 +506,20 @@ function HomeLayer:onTouchEnded(touch,event)
     local start_y = self.start_y
     
     local location = self:convertToNodeSpace(touch:getLocation())
-    if not cc.rectContainsPoint(self.setting_back:getBoundingBox(),location) and self.viewIndex == 2 then
-        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+    -- if not cc.rectContainsPoint(self.setting_back:getBoundingBox(),location) and self.viewIndex == 2 then
+    --     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 
-        self.mission_progress.stopListener = false
+    --     self.mission_progress.stopListener = false
 
-        self.viewIndex = 1
+    --     self.viewIndex = 1
 
-        local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-        self.backColor:runAction(action1)
+    --     local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
+    --     self.backColor:runAction(action1)
 
-        local action2 = cc.DelayTime:create(0.5)
-        local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-        self.setting_back:runAction(cc.Sequence:create(action2, action3))
-    end
+    --     local action2 = cc.DelayTime:create(0.5)
+    --     local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+    --     self.setting_back:runAction(cc.Sequence:create(action2, action3))
+    -- end
     if not self.isDataShow then
         if math.abs(location.y - start_y) > 10 or math.abs(location.x - start_x) > 10 then
             return
@@ -523,7 +537,7 @@ function HomeLayer:onTouchEnded(touch,event)
                 PersonalInfo.getNotContainedInLocalDatas(function ()
                     local personalInfoLayer = PersonalInfo.create()
                     personalInfoLayer:setPosition(-s_LEFT_X,0)
-                    self.data_back:addChild(personalInfoLayer,1,'PersonalInfo')
+                    self.data_back:addChild(personalInfoLayer,3,'PersonalInfo')
                 end) 
             end) 
         end
@@ -544,6 +558,9 @@ end
 
 --好友按钮 处理触摸
 function HomeLayer:onBtnFriendTouch(sender,eventType)
+    if s_CURRENT_USER.guideStep <= s_guide_step_enterHome then
+        return
+    end
     if eventType == ccui.TouchEventType.began then
         AnalyticsFriendBtn()
         playSound(s_sound_buttonEffect)
@@ -623,29 +640,33 @@ function HomeLayer:onBtnSettingTouch(sender,eventType)
             self.offlineTipHome.setFalse()
             self.offlineTipFriend.setFalse()
         end
+        local SettingLayer = require("view.home.SettingLayer")
+        local settinglayer = SettingLayer.new()
+        --SetLayerRender:updateView()
+        s_SCENE:popup(settinglayer)
 
-        if self.viewIndex == 1 then
-            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            self.mission_progress.stopListener = true
-            self.viewIndex = 2
-            local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH / 2 + self.offset,s_DESIGN_HEIGHT/2))
-            self.backColor:runAction(action1)
+        -- if self.viewIndex == 1 then
+            -- s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            -- self.mission_progress.stopListener = true
+            -- self.viewIndex = 2
+            -- local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH / 2 + self.offset,s_DESIGN_HEIGHT/2))
+            -- self.backColor:runAction(action1)
 
-            local action2 = cc.DelayTime:create(0.5)
-            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            self.setting_back:runAction(cc.Sequence:create(action2, action3))
+            -- local action2 = cc.DelayTime:create(0.5)
+            -- local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+            -- self.setting_back:runAction(cc.Sequence:create(action2, action3))
             --offline tip
-        else
-            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            self.mission_progress.stopListener = false
-            self.viewIndex = 1
-            local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-            self.backColor:runAction(action1)
+        -- else
+            -- s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            -- self.mission_progress.stopListener = false
+            -- self.viewIndex = 1
+            -- local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
+            -- self.backColor:runAction(action1)
 
-            local action2 = cc.DelayTime:create(0.5)
-            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            self.setting_back:runAction(cc.Sequence:create(action2, action3))
-        end 
+            -- local action2 = cc.DelayTime:create(0.5)
+            -- local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
+            -- self.setting_back:runAction(cc.Sequence:create(action2, action3))
+        -- end 
     end
 end
 
@@ -668,11 +689,10 @@ function HomeLayer:changeViewToFriendOrShop(destination)
     self.backColor:removeChildByName('redHint')
     if self.viewIndex == 2 then
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-        self.mission_progress.stopListener = false
         self.viewIndex = 1
         local action2 = cc.DelayTime:create(0.5)
         local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-        self.setting_back:runAction(cc.Sequence:create(action2, action3))
+        --self.setting_back:runAction(cc.Sequence:create(action2, action3))
     end
     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
        local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2 - bigWidth,s_DESIGN_HEIGHT/2))
@@ -707,11 +727,12 @@ function HomeLayer:showDataLayerByItem(index)
         PersonalInfo.getNotContainedInLocalDatas(function ()
             local personalInfoLayer = PersonalInfo.create(false,self,index)
             personalInfoLayer:setPosition(-s_LEFT_X,0)
-            self.data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
+            self.data_back:addChild(personalInfoLayer,3,'PersonalInfo') 
         end)
     end)
 end
 
+--显示主页面下方的按钮
 function HomeLayer:showDataLayer(checkIn)
     self.button_data:setLocalZOrder(2)
     self.button_data:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, s_DESIGN_HEIGHT-280)))))
@@ -720,13 +741,12 @@ function HomeLayer:showDataLayer(checkIn)
         PersonalInfo.getNotContainedInLocalDatas(function ()
             local personalInfoLayer = PersonalInfo.create(true,self)
             personalInfoLayer:setPosition(-s_LEFT_X,0)
-            self.data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
+            self.data_back:addChild(personalInfoLayer,3,'PersonalInfo') 
         end)
     end)
 end
 
 function HomeLayer:hideDataLayer()
-    self.button_enter.animation()
     local action1 = cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH / 2 + s_DESIGN_OFFSET_WIDTH, 0))
     local action2 = cc.CallFunc:create(function()
         self.button_data:setLocalZOrder(0)
@@ -751,7 +771,6 @@ function HomeLayer:setButtonEnabled(enabled)
     self.button_shop:setEnabled(enabled)
     self.button_setting:setEnabled(enabled)
     self.button_sound:setEnabled(enabled)
-    self.button_enter:setEnabled(enabled)
     self.button_reward:setEnabled(enabled)
 end
 

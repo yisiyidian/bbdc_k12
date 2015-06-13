@@ -1,12 +1,9 @@
 require("cocos.init")
 require("common.global")
 
-local BigAlter = require("view.alter.BigAlter")
-
 local BookLayer = class("BookLayer", function ()
     return cc.Layer:create()
 end)
-
 
 function BookLayer.create(education)
     s_CURRENT_USER:setSummaryStep(s_summary_selectBook) 
@@ -129,9 +126,10 @@ function BookLayer.create(education)
                 AnalyticsBook(key)
                 AnalyticsFirst(ANALYTICS_FIRST_BOOK, key)
                 
+                s_CURRENT_USER.showSettingLayer = 0
                 s_CorePlayManager.enterHomeLayer()
                 -- s_O2OController.getBulletinBoard()
-            
+
                 playSound(s_sound_buttonEffect)   
 
                 if IS_DEVELOPMENT_MODE then s_WordDictionaryDatabase.nextframe = WDD_NEXTFRAME_STATE__RM_LOAD end
@@ -372,6 +370,11 @@ function BookLayer.create(education)
     layer:scheduleUpdateWithPriorityLua(update, 0)
 
     --layer:popupAccountBind()
+    -- 添加引导
+    if s_CURRENT_USER.guideStep == s_guide_step_selectGrade then
+        s_CorePlayManager.enterGuideScene(2,layer)
+        s_CURRENT_USER:setGuideStep(s_guide_step_selectBook) 
+    end
 
     return layer
 end

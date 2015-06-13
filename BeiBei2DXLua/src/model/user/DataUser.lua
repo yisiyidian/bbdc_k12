@@ -124,9 +124,16 @@ function DataUser:ctor()
     self.k12SmallStep                      = 0
     self.summaryStep                       = 0
     self.bossTutorialStep                  = 0
+    self.needBossSlideTutorial             = 0 -- 划词引导
+    self.needBossChangeWordTutorial        = 0 -- 换词引导
     -- 是否是过出现boss换词引导
     self.isFirstBossGuide                  = 0
 
+    self.guideStep                         = 0 
+    -- 显示设置页面的标志
+    self.showSettingLayer                  = 0
+    -- 显示任务面板标志
+    self.showTaskLayer                     = 0
     --已选过的书
     self.bookList                          = ''
 end
@@ -151,6 +158,14 @@ function DataUser:addBookList(bookKey)
     saveUserToServer({['bookList']=self.bookList})
 end
 
+-- 设置引导步骤
+function DataUser:setGuideStep(step)
+    if self.guideStep < step then
+        self.guideStep = step
+        saveUserToServer({['guideStep']=self.guideStep})
+    end
+end
+
 function DataUser:setSummaryStep(step)
     if self.summaryStep < step then
         self.summaryStep = step
@@ -165,7 +180,6 @@ function DataUser:setBossTutorialStep(step)
         saveUserToServer({['bossTutorialStep']=self.bossTutorialStep})
     end
 end
-
 function DataUser:getLockFunctionState(productId)
     local lockFunction = self.lockFunction
     for i = 1, productId - 1 do

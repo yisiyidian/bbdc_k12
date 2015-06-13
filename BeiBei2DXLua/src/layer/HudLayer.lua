@@ -1,8 +1,5 @@
 require("cocos.init")
 
-local SmallAlter = require("view.alter.SmallAlter")
-
-
 local HudLayer = class("HudLayer", function ()
     return cc.Layer:create()
 end)

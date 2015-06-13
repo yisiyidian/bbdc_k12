@@ -5,7 +5,6 @@ IntroLayer = require("view.login.IntroLayer")
 
 --选择年级  小学 初中 高中
 --
-
 local EducationSelect = class("EducationSelect", function ()
     return cc.Layer:create()
 end)
@@ -19,6 +18,7 @@ function EducationSelect:ctor()
     if s_CURRENT_USER.k12SmallStep < s_K12_selectGrade then
         s_CURRENT_USER:setK12SmallStep(s_K12_selectGrade)
     end
+
     -- 打点
 	local background = cc.LayerColor:create(cc.c4b(200,240,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
 	background:ignoreAnchorPointForPosition(false)
@@ -51,18 +51,9 @@ function EducationSelect:ctor()
     hint:setPosition((s_RIGHT_X - s_LEFT_X)/2,1073)
     hint:setColor(cc.c4b(66,66,62,255))
     background:addChild(hint) 
+    backBtn:setVisible(false)
     -- if have not selected any book
-    if s_CURRENT_USER.bookKey == '' then 
-        backBtn:setVisible(false)
-        --黄色椭圆
-        local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
-        tutorial_text:setPosition((s_RIGHT_X - s_LEFT_X)/2, 1073)
-        background:addChild(tutorial_text,120)
-        --请选择合适你的书籍
-        local text = cc.Label:createWithSystemFont(s_DataManager.getTextWithIndex(TEXT__TUTORIAL_BOOK_SELECT),'',28)
-        text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
-        text:setColor(cc.c3b(0,0,0))
-        tutorial_text:addChild(text)
+    if s_CURRENT_USER.bookKey == '' or s_CURRENT_USER.bookKey == nil then 
     else
         backBtn:setVisible(true)
     end
@@ -125,7 +116,15 @@ function EducationSelect:ctor()
     else
         s_SCENE:removeAllPopups()
     end
+
+    -- 添加引导
+    if s_CURRENT_USER.guideStep == 0 then
+        s_CorePlayManager.enterGuideScene(1,self)
+        s_CURRENT_USER:setGuideStep(s_guide_step_selectGrade) 
+    end
 end
+
+
 
 
 --弹出注册帐号的界面

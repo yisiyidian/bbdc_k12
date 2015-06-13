@@ -117,8 +117,60 @@ function ChapterLayer:ctor()
     self:checkUnlockLevel()
     self:addBackToHome()    --返回按钮      左上
     self:addBeansUI()       --贝贝豆图标    右上
-    self:addTaskBOX()       --放置任务的宝箱
+    self:addTaskBOX()
 
+    -- 添加引导
+    if s_CURRENT_USER.guideStep <= s_guide_step_enterStory5 then
+        local backColor = cc.LayerColor:create(cc.c4b(0,0,0,100), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
+        backColor:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /2)
+        backColor:ignoreAnchorPointForPosition(false)
+        backColor:setAnchorPoint(0.5,0.5)
+        self.backColor = backColor
+        self:addChild(self.backColor)
+
+        local back = ccui.Layout:create()
+        back:setContentSize(s_DESIGN_WIDTH ,s_DESIGN_HEIGHT)
+        back:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /2)
+        back:ignoreAnchorPointForPosition(false)
+        back:setAnchorPoint(0.5,0.5)
+        self.back = back
+        self.backColor:addChild(self.back)
+        self.back:addTouchEventListener(handler(self,self.touchFunc))   
+        s_CorePlayManager.enterGuideScene(5,self.backColor)
+        local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
+        summaryboss:setPosition(310,725)
+        summaryboss:setAnchorPoint(1,1)
+        summaryboss:addAnimation(0, 'jianxiao', true)
+        summaryboss:setScale(0.9)
+        self.backColor:addChild(summaryboss)
+        s_CURRENT_USER:setGuideStep(s_guide_step_enterLevel) 
+    elseif s_CURRENT_USER.guideStep <= s_guide_step_bag5 then
+        self.boxButton:setVisible(false)
+    end
+    -- 添加引导
+    print("now guide is "..s_CURRENT_USER.guideStep)
+    if s_CURRENT_USER.guideStep == s_guide_step_second then
+        local GuideToTaskView = require("view.guide.GuideToTaskView")
+        local guideToTaskView = GuideToTaskView.create()
+        self:addChild(guideToTaskView,3)
+        s_CURRENT_USER:setGuideStep(s_guide_step_bag1) 
+    end
+    if s_CURRENT_USER.showTaskLayer == 1 then
+        self.boxButton:stopAllActions()
+        self.boxButton:setBright(false)
+        self.boxButton:setTouchEnabled(false)
+        local taskview = TaskView.new(handler(self,self.callBox),handler(self, self.updateBean))
+        s_SCENE:popup(taskview)
+        s_CURRENT_USER.showTaskLayer = 0  
+    end  
+
+
+end
+
+function ChapterLayer:touchFunc()
+    local LevelProgressPopup = require("view.islandPopup.LevelProgressPopup")
+    local levelProgressPopup = LevelProgressPopup.create("0")
+    s_SCENE:popup(levelProgressPopup)
 end
 
 -- 检查是否有任务（如复习boss)
@@ -461,8 +513,7 @@ function ChapterLayer:addBackToHome()
     homeButton:ignoreAnchorPointForPosition(false)
     homeButton:setAnchorPoint(0,1)
     homeButton:setPosition(s_LEFT_X + 30  , s_DESIGN_HEIGHT - 32 )
-    homeButton:setLocalZOrder(1)
-    self:addChild(homeButton,200)
+    self:addChild(homeButton)
     
     onAndroidKeyPressed(self, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()
@@ -475,20 +526,19 @@ end
 
 --任务按钮  宝箱样式
 function ChapterLayer:addTaskBOX()
-    local boxButton = ccui.Button:create("image/islandPopup/close.png","","image/islandPopup/open.png")
+    local boxButton = ccui.Button:create("image/islandPopup/baoxiang_close.png","","image/islandPopup/baoxiang_open.png")
     boxButton:addTouchEventListener(handler(self,self.onTaskBoxTouch))
     boxButton:setAnchorPoint(0.5,0.5)
     boxButton:ignoreAnchorPointForPosition(false)
     boxButton:setPosition(s_RIGHT_X-180 ,180)
     boxButton:setTouchEnabled(true)
-    self:addChild(boxButton,200)
+    self:addChild(boxButton)
     boxButton:setBright(true)
     self.boxButton = boxButton
 
     s_MissionManager:setCanCompleteCallBack(handler(self,self.updataBoxState))
 
     self:updataBoxState()
-
 end
 
 --更新宝箱状态  在任务界面TaskView里回调
@@ -502,22 +552,23 @@ function ChapterLayer:updataBoxState()
             if self.boxButton ~= nil and not tolua.isnull(self.boxButton) then
                 --宝箱晃动
                 self.boxButton:stopAllActions()
-                
-                local action1 = cc.MoveBy:create(0.05,cc.p(5,0))
+                local action1 = cc.MoveBy:create(0.1,cc.p(10,0))
                 local action2 = action1:reverse()
-                local action3 = cc.RepeatForever:create(cc.Sequence:create(action1, action2))
-                self.boxButton:runAction(action3)
+                local action4 = cc.DelayTime:create(1)
+                local action6 = cc.Sequence:create(action1,action2)
+                --local action3 = cc.RepeatForever:create(cc.Sequence:create(action1, action2))
+                local action3 = cc.Sequence:create(action6,action6,action6,action4)
+                local action5 = cc.RepeatForever:create(action3)
+                self.boxButton:runAction(action5)
                 break
             end
         end
     end
-
     if canComCount == 0 then
         if self.boxButton ~= nil and not tolua.isnull(self.boxButton) then
             self.boxButton:stopAllActions()
         end
     end
-
 end
 
 --关闭宝箱
@@ -559,13 +610,13 @@ end
 function ChapterLayer:addBeansUI()
     self.beans = cc.Sprite:create('image/chapter/chapter0/background_been_white.png')
     self.beans:setPosition(s_RIGHT_X-100, s_DESIGN_HEIGHT-70)
-    self:addChild(self.beans,150) 
+    self:addChild(self.beans) 
     self.beanCount = s_CURRENT_USER:getBeans()
     self.beanCountLabel = cc.Label:createWithSystemFont(self.beanCount,'',24)
     self.beanCountLabel:setColor(cc.c4b(0,0,0,255))
     self.beanCountLabel:ignoreAnchorPointForPosition(false)
     self.beanCountLabel:setPosition(self.beans:getContentSize().width * 0.65 , self.beans:getContentSize().height/2)
-    self.beans:addChild(self.beanCountLabel,10)
+    self.beans:addChild(self.beanCountLabel)
 end
 
 -- function ChapterLayer:shakeBeansUI(beansIncrement)

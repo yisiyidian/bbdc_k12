@@ -1,12 +1,5 @@
 require("common.global")
 
-
---local LoginAlter = require("view.login.LoginAlter")
-
-local BigAlter      = require("view.alter.BigAlter")
-local SmallAlter    = require("view.alter.SmallAlter")
-
-
 local VisitorRegister = class("VisitorRegister", function()
     return cc.Layer:create()
 end)

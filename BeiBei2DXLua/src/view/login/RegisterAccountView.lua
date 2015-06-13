@@ -111,6 +111,8 @@ function RegisterAccountView:onReturnClick(sender,eventType)
 		print("从注册界面返回")
 		sender:setEnabled(false)
 		self:endRegister()
+		s_CURRENT_USER.showSettingLayer = 1
+		s_CorePlayManager.enterHomeLayer()
 	else
 		self.curStep = self.curStep - 1
 		self:goStep(self.curStep)

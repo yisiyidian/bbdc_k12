@@ -9,9 +9,14 @@ function longButtonInStudy.create(size,color,text)
 
     local textureFront = "image/button/"..size..color.."front.png"
     local textureBack =  "image/button/"..size..color.."back.png"
+    if size == "giveup" or size == "again" then
+        textureFront = "image/summarybossscene/lose/button_presssed_xxgtc_small.png"
+        textureBack = "image/summarybossscene/lose/button_unpresssed_xxgtc_small.png"
+    end
 
-    if size == "giveup" or size == "addtime" then
-        textureBack = "image/button/"..color.."back.png"
+    if size == "addTime" then
+        textureBack = "image/summarybossscene/lose/button_unpresssed_xxgtc.png"
+        textureFront = "image/summarybossscene/lose/button_presssed_xxgtc.png"
     end
 
     local button_back = cc.Sprite:create(textureBack)
@@ -33,7 +38,8 @@ function longButtonInStudy.create(size,color,text)
         label:ignoreAnchorPointForPosition(false)
         label:setAnchorPoint(0.5,0.5)
         label:setColor(cc.c4b(255,255,255,255))
-        button_back.button_front:addChild(label)
+        button_back.label = label
+        button_back.button_front:addChild(button_back.label)
     end
 
     local function onTouchBegan(touch, event)

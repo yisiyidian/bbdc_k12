@@ -52,6 +52,21 @@ function WordCardView:initUI()
 	self.returnButton = returnButton
 	self.returnButton:setPosition(75,backPopupHeight - 65)
 	self.backPopup:addChild(self.returnButton)
+
+	-- 添加引导
+	local delayTime = cc.DelayTime:create(3)
+	local action = cc.CallFunc:create(function ()
+		if s_CURRENT_USER.guideStep == s_guide_step_enterPopup and self.returnButton ~= nil then
+	        s_CorePlayManager.enterGuideScene(7,self)
+	        s_CURRENT_USER:setGuideStep(s_guide_step_enterCard) 
+
+	        local guideFingerView = require("view.guide.GuideFingerView").create()
+	        guideFingerView:setPosition(self.returnButton:getContentSize().width,-20)
+	        self.returnButton:addChild(guideFingerView,2)
+    	end
+    end)
+	self:runAction(cc.Sequence:create(delayTime,action))
+
 	--渲染列表
 	self:resetView()
 

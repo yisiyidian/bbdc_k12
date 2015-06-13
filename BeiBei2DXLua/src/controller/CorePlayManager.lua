@@ -5,7 +5,6 @@ local HomeLayer              = require("view.home.HomeLayer")
 local BookLayer              = require("view.book.BookLayer")
 local EducationLayer         = require("view.book.EducationSelect")
 local DownloadLayer          = require("view.book.DownloadLayer")
-local WordListLayer          = require("view.wordlist.WordList")
 local FriendLayer            = require("view.friend.FriendLayer") 
 
 
@@ -240,6 +239,12 @@ function CorePlayManager.enterHomeLayer()
 
 end
 
+function CorePlayManager.enterStoryLayer()
+    local StoryLayer = require('view.level.StoryLayer')
+    local storyLayer = StoryLayer.create(1)
+    s_SCENE:replaceGameLayer(storyLayer)
+end
+
 function CorePlayManager.enterLevelLayer()
     local ChapterLayer = require('view.ChapterLayer')
     local chapterLayer = ChapterLayer.create()
@@ -262,14 +267,15 @@ function CorePlayManager.enterDownloadLayer(bookKey)
     s_SCENE:replaceGameLayer(downloadLayer)
 end
 
-function CorePlayManager.enterWordListLayer()
-    local wordListlayer = WordListLayer.create()
-    s_SCENE:replaceGameLayer(wordListlayer)
-end
-
 function CorePlayManager.enterFriendLayer()
     local friendLayer = FriendLayer.create()
     s_SCENE:replaceGameLayer(friendLayer)
+end
+
+function CorePlayManager.enterGuideScene(index,parent)
+    local GuideView = require ("view.guide.GuideView")
+    local guideView = GuideView.create(index)
+    parent:addChild(guideView,2)
 end
 
 function CorePlayManager.initTotalUnitPlay()

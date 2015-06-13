@@ -23,7 +23,7 @@ local function initDownloadState(bookKey)
     return downloadState
 end
 
-function DownloadSoundButton.create(parentNode)
+function DownloadSoundButton.create(parentNode,bool)
     local postion = cc.p(parentNode:getContentSize().width/2,parentNode:getContentSize().height * 0.3)
     local isOffline = s_SERVER.isNetworkConnectedNow()
     local bookKey = s_CURRENT_USER.bookKey
@@ -59,11 +59,13 @@ function DownloadSoundButton.create(parentNode)
     local button_download_clicked
     local button_offline_clicked = function(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
-            local popupOffline = require("popup.PopupSoundOfflineDownload").create()
-            local parent = parentNode:getParent()
-            popupOffline:setPosition(parent:getContentSize().width/2,parent:getContentSize().height+800)
-            parent:addChild(popupOffline,100)
-            popupOffline:runMoveInAction()   
+            if bool == true then
+                local popupOffline = require("popup.PopupSoundOfflineDownload").create()
+                local parent = parentNode:getParent()
+                popupOffline:setPosition(parent:getContentSize().width/2,parent:getContentSize().height+800)
+                parent:addChild(popupOffline,100)
+                popupOffline:runMoveInAction()   
+            end
         end
     end
     local updateFailedState = function()
@@ -76,12 +78,14 @@ function DownloadSoundButton.create(parentNode)
             button_back:setEnabled(true)
             button_back:setBright(true)
             button_back:addTouchEventListener(button_download_clicked)
-            local popupFailed = require("popup.PopupSoundDownloadFailed").create()
-            local parent = parentNode:getParent()
-            popupFailed:setPosition(parent:getContentSize().width/2,parent:getContentSize().height+800)
-            parent:addChild(popupFailed,100)
-            popupFailed:runMoveInAction()   
-            downloadState = "NOTBEGIN"        
+            if bool == true then
+                local popupFailed = require("popup.PopupSoundDownloadFailed").create()
+                local parent = parentNode:getParent()
+                popupFailed:setPosition(parent:getContentSize().width/2,parent:getContentSize().height+800)
+                parent:addChild(popupFailed,100)
+                popupFailed:runMoveInAction()   
+                downloadState = "NOTBEGIN"    
+            end    
         end            
     end
 
@@ -139,12 +143,13 @@ function DownloadSoundButton.create(parentNode)
     local updateSuccessState =function()
         if SoundsDownloadingInstance[bookKey] ~= nil then
             SoundsDownloadingInstance[bookKey]=nil
-            
-            local popupSuccess = require("popup.PopupSoundDownloadSuccess").create()
-            local parent = parentNode:getParent()
-            popupSuccess:setPosition(parent:getContentSize().width/2,parent:getContentSize().height+800)
-            parent:addChild(popupSuccess,100)
-            popupSuccess:runMoveInAction()
+            if bool == true then
+                local popupSuccess = require("popup.PopupSoundDownloadSuccess").create()
+                local parent = parentNode:getParent()
+                popupSuccess:setPosition(parent:getContentSize().width/2,parent:getContentSize().height+800)
+                parent:addChild(popupSuccess,100)
+                popupSuccess:runMoveInAction()
+            end
         end
 
         s_MissionManager:updateMission(MissionConfig.MISSION_AUDIO)
@@ -241,6 +246,15 @@ function DownloadSoundButton.create(parentNode)
     parentNode:addChild(button)
     parentNode:addChild(label)
     parentNode:addChild(label_percent)
+
+    if bool == false then
+        local downloadSC = require("view.book.DownloadSoundController").create(bookKey)
+        downloadSC:beginSoundDownloadUpdate()
+        button_back:setVisible(false)
+        button:setVisible(false)
+        label:setVisible(false)
+        label_percent:setVisible(false)
+    end
 
     return button
 end

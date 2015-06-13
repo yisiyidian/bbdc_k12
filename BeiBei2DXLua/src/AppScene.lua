@@ -118,6 +118,52 @@ s_summary_enterSecondPopup = 13
 s_summary_enterSecondLevel = 14
 
 -- define review boss tutorial
+-- 新手引导步骤 v213
+-- 选择教育程度
+s_guide_step_selectGrade = 1
+-- 选择课本
+s_guide_step_selectBook = 2
+-- 进入主页面
+s_guide_step_enterHome = 3
+-- 进入情景页
+s_guide_step_enterStory1 = 4
+s_guide_step_enterStory2 = 5
+s_guide_step_enterStory3 = 6
+s_guide_step_enterStory4 = 7
+-- 尝试boss玩法
+s_guide_step_tryBoss = 8
+s_guide_step_enterStory5 = 9
+-- 情景结束
+-- 进入选小关
+s_guide_step_enterLevel = 10
+-- 进入弹出面板
+s_guide_step_enterPopup = 11
+-- 进入单词卡片
+s_guide_step_enterCard = 12
+-- 返回到弹出面板
+s_guide_step_returnPopup = 13
+-- boss第一个词
+s_guide_step_first = 14
+-- boss第二个词
+s_guide_step_second = 15
+-- 宝箱引导1
+s_guide_step_bag1 = 16
+-- 宝箱引导2
+s_guide_step_bag2 = 17
+-- 宝箱引导3
+s_guide_step_bag3 = 18
+-- 宝箱引导4
+s_guide_step_bag4 = 19
+-- 宝箱引导5
+s_guide_step_bag5 = 20
+-- 宝箱引导6
+s_guide_step_bag6 = 21
+-- 宝箱引导7
+s_guide_step_bag7 = 22
+
+
+-- 引导结束
+s_guide_step_over = 100
 
 local AppScene = class("AppScene", function()
     return cc.Scene:create()
