@@ -93,9 +93,10 @@ function BookLayer.create(education)
                 AnalyticsBook(key)
                 AnalyticsFirst(ANALYTICS_FIRST_BOOK, key)
                 
+                s_CURRENT_USER.showSettingLayer = 0
                 s_CorePlayManager.enterHomeLayer()
                 -- s_O2OController.getBulletinBoard()
-            
+
                 playSound(s_sound_buttonEffect)   
 
                 if IS_DEVELOPMENT_MODE then s_WordDictionaryDatabase.nextframe = WDD_NEXTFRAME_STATE__RM_LOAD end

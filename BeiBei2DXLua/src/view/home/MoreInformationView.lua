@@ -177,6 +177,8 @@ function MoreInfomationView:onReturnClick(sender, eventType)
 	if self.close ~= nil then
 		self.close()
 	end
+	s_CURRENT_USER.showSettingLayer = 1
+	s_CorePlayManager.enterHomeLayer()
 	s_SCENE:removeAllPopups()
 end
 

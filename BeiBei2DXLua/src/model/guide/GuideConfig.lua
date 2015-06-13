@@ -8,8 +8,8 @@
 local GuideConfig = {}
 
 GuideConfig.data = {
-	{["guide_id"] = 1,	pos=cc.p(s_DESIGN_WIDTH / 2,1070)	,desc="请选择合适你的年级"					,color="white"			}, 			
-	{["guide_id"] = 2,	pos=cc.p(s_DESIGN_WIDTH / 2,1050)	,desc="请选择合适你的书籍"					,color="white"			}, 	
+	{["guide_id"] = 1,	pos=cc.p(s_DESIGN_WIDTH *0.6,1050)	,desc="请选择合适你的年级"					,color="white"			}, 			
+	{["guide_id"] = 2,	pos=cc.p(s_DESIGN_WIDTH *0.6,1050)	,desc="请选择合适你的书籍"					,color="white"			}, 	
 	{["guide_id"] = 3,	pos=cc.p(s_DESIGN_WIDTH / 2,200)	,desc="点击上方按钮进入游戏"				,color="yellow"			},
 	{["guide_id"] = 4,	pos=cc.p(s_DESIGN_WIDTH / 2,1000)	,desc="boss过来啦，快划词"				,color="yellow"			},
 	{["guide_id"] = 5,	pos=cc.p(s_DESIGN_WIDTH / 2,600)	,desc="是时候来一场真正的战斗了"			,color="yellow"			,bb="bb"},
@@ -23,9 +23,9 @@ GuideConfig.data = {
 	{["guide_id"] = 13,	pos=cc.p(s_DESIGN_WIDTH / 2,600)	,desc="打败boss竟然掉落一个宝箱"			,color="yellow"			,bb="bb3"},
 	{["guide_id"] = 14,	pos=cc.p(s_DESIGN_WIDTH / 2,200)	,desc="打开宝箱就掉出\n一张纸，坑爹"		,color="sp1"},
 	{["guide_id"] = 15,	pos=cc.p(s_DESIGN_WIDTH / 2,200)	,desc="这不就是我刚才\n做的事情吗"         	,color="sp2"},
-	{["guide_id"] = 16,	pos=cc.p(s_DESIGN_WIDTH / 2,800)	,desc="说好的超级多的钱呢，混蛋"			,color="yellow"			,bb="bb4"},
-	{["guide_id"] = 17,	pos=cc.p(s_DESIGN_WIDTH / 2,800)	,desc="给我豆子有什么用啊，我要钱"			,color="yellow"			,bb="bb5"},
-	{["guide_id"] = 18,	pos=cc.p(s_DESIGN_WIDTH / 2,800)	,desc="好啊好啊，伟大神马的最喜欢了"		,color="yellow"			,bb="bb6"},
+	{["guide_id"] = 16,	pos=cc.p(s_DESIGN_WIDTH / 2,800)	,desc="说好的超级多的钱呢"			,color="yellow"			,bb="bb4"},
+	{["guide_id"] = 17,	pos=cc.p(s_DESIGN_WIDTH / 2,800)	,desc="这么拼，才给我10个豆子？"			,color="yellow"			,bb="bb5"},
+	{["guide_id"] = 18,	pos=cc.p(s_DESIGN_WIDTH / 2,800)	,desc="太好了，我最喜欢新挑战了！"		,color="yellow"			,bb="bb6"},
 }
 
 return GuideConfig

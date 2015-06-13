@@ -155,6 +155,10 @@ function HomeLayer:ctor()
 
     --下载音频的按钮
     local downloadSoundButton = DownloadSoundButton.create(top)
+    local status = cx.CXNetworkStatus:getInstance():start()
+    if status == NETWORK_STATUS_WIFI then
+
+    end
 
     --正在学习 文本
     local name = cc.Sprite:create('image/homescene/BBDC_word_title.png')
@@ -241,7 +245,7 @@ function HomeLayer:ctor()
     button_data = cc.Sprite:create("image/homescene/main_bottom.png")
     button_data:setAnchorPoint(0.5,0)
     button_data:setPosition(bigWidth/2, 0)
-    backColor:addChild(button_data)
+    backColor:addChild(button_data,3)
     self.dataButton = button_data
     self.button_data = button_data
 
@@ -251,7 +255,7 @@ function HomeLayer:ctor()
     data_back:setPosition(button_data:getContentSize().width/2, 0)
     self.dataBack = data_back
     self.data_back = data_back
-    button_data:addChild(data_back,2)
+    button_data:addChild(data_back,3)
     
     local bottom = cc.LayerColor:create(cc.c4b(255,255,255,255), button_data:getContentSize().width, 100)
     bottom:setAnchorPoint(0.5,1)
@@ -370,9 +374,10 @@ function HomeLayer:ctor()
             s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
         end
     end
+
     -- 添加引导
     if s_CURRENT_USER.guideStep == s_guide_step_selectBook then
-        s_CorePlayManager.enterGuideScene(3,self)
+        s_CorePlayManager.enterGuideScene(3,backColor)
         s_CURRENT_USER:setGuideStep(s_guide_step_enterHome) 
 
         button_friend:setTouchEnabled(false)
@@ -380,6 +385,13 @@ function HomeLayer:ctor()
         button_setting:setTouchEnabled(false)
         button_shop:setTouchEnabled(false)
     end
+
+    if s_CURRENT_USER.showSettingLayer == 1 then
+        local SettingLayer = require("view.home.SettingLayer")
+        local settinglayer = SettingLayer.new()
+        s_SCENE:popup(settinglayer)
+    end
+    s_CURRENT_USER.showSettingLayer = 0
 
     onAndroidKeyPressed(self, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()
@@ -449,7 +461,7 @@ function HomeLayer:onTouchMoved(touch, event)
                     self.personalInfoLayer = personalInfoLayer
                     self.personalInfoLayer:setPosition(-s_LEFT_X,0)
                     --personalInfoLayer:setPosition(-s_LEFT_X,0)
-                    self.data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
+                    self.data_back:addChild(personalInfoLayer,3,'PersonalInfo') 
                 end)
             end)
             return
@@ -521,7 +533,7 @@ function HomeLayer:onTouchEnded(touch,event)
                 PersonalInfo.getNotContainedInLocalDatas(function ()
                     local personalInfoLayer = PersonalInfo.create()
                     personalInfoLayer:setPosition(-s_LEFT_X,0)
-                    self.data_back:addChild(personalInfoLayer,1,'PersonalInfo')
+                    self.data_back:addChild(personalInfoLayer,3,'PersonalInfo')
                 end) 
             end) 
         end
@@ -711,7 +723,7 @@ function HomeLayer:showDataLayerByItem(index)
         PersonalInfo.getNotContainedInLocalDatas(function ()
             local personalInfoLayer = PersonalInfo.create(false,self,index)
             personalInfoLayer:setPosition(-s_LEFT_X,0)
-            self.data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
+            self.data_back:addChild(personalInfoLayer,3,'PersonalInfo') 
         end)
     end)
 end
@@ -725,7 +737,7 @@ function HomeLayer:showDataLayer(checkIn)
         PersonalInfo.getNotContainedInLocalDatas(function ()
             local personalInfoLayer = PersonalInfo.create(true,self)
             personalInfoLayer:setPosition(-s_LEFT_X,0)
-            self.data_back:addChild(personalInfoLayer,1,'PersonalInfo') 
+            self.data_back:addChild(personalInfoLayer,3,'PersonalInfo') 
         end)
     end)
 end

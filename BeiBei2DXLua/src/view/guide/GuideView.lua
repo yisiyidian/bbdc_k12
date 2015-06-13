@@ -2,6 +2,7 @@
 -- 引导功能显示label
 -- by 侯琪
 -- 2015年06月05日11:27:18
+
 local GuideConfig = require ("model/guide/GuideConfig.lua")
 local GuideView = class("GuideView",function ()
 	local layer = cc.Layer:create()
@@ -51,7 +52,31 @@ function GuideView:resetView()
 	self.pos = pos
 	self.color = color
 	self.bbName = bbName
-	self.label:setString(content)
+	-- self.len = string.len(self.content)
+	self.label:setString(self.content)
+	
+	-- local currentLabel = ""
+	-- local i = 1
+	-- local time = 0
+	-- local function update(delta)
+	-- 	time = time + delta
+	-- 	if time > 0.2 then
+	-- 		time = 0
+	-- 		if i <= self.len then
+	-- 			currentLabel = string.sub(self.content,1,i)
+	-- 			i = i + 1
+	-- 			self.label:setString(currentLabel)
+	-- 		else
+	-- 			self:unscheduleUpdate()
+	-- 		end
+	-- 	end
+ --    end
+ --    self:scheduleUpdateWithPriorityLua(update, 0) 
+
+	if self.pos.y < s_DESIGN_HEIGHT /2 then
+		self.back:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT *(-0.6))
+	end
+
 
 	if self.color == "white" then
 		self.back:setTexture('image/guide/yindao_background_white.png')
@@ -70,6 +95,7 @@ function GuideView:resetView()
 	end
 
     self.label:setPosition(cc.p(self.back:getContentSize().width/2,self.back:getContentSize().height/2))
+    self.label:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
     if self.color == "white" or self.color == "yellow" then
 		local action1 = cc.MoveTo:create(0.5,self.pos)
 	    local action2 = cc.EaseBackOut:create(action1)

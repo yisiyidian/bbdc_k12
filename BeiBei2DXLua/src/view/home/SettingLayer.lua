@@ -51,14 +51,14 @@ function SettingLayer:initUI()
     self.headlogo = headlogo
     --姓名文本
     local labelname = cc.Label:createWithSystemFont(s_CURRENT_USER:getNameForDisplay(),"",36)
-    labelname:setPosition(width/2,height - 100)    
+    labelname:setPosition(width*0.43,height - 100)    
     labelname:setColor(cc.c4b(0,0,0,255))
     labelname:setAnchorPoint(0, 0)
     backGround:addChild(labelname)
     self.labelname = labelname
     --正在学习的文本
     local labellearn = cc.Label:createWithSystemFont('正在学习词汇',"",24)
-    labellearn:setPosition(width/2-60,height-140)
+    labellearn:setPosition(width*0.43,height - 110)
     labellearn:setColor(cc.c4b(0,0,0,255))
     labellearn:setAnchorPoint(0, 1)
     backGround:addChild(labellearn)
@@ -85,7 +85,7 @@ function SettingLayer:initUI()
     followButton:setPosition(width/2-80,140)
     backGround:addChild(followButton)
     local deco = cc.Sprite:create("image/homescene/attention_beibei1.png")
-    deco:setPosition(width-100,100)
+    deco:setPosition(width-110,90)
     backGround:addChild(deco, 10)
     local text = cc.Label:createWithSystemFont("关注贝贝","",36)
     text:setColor(cc.c4b(255,255,255,255))
@@ -153,13 +153,13 @@ function SettingLayer:updateView()
         --图标
         logo = cc.Sprite:create("image/homescene/setup_"..self.logo_name[k]..".png")
         --logo:setPosition(size.width - self.offset + 120, size.height / 2)
-        logo:setPosition(100, size.height / 2)
+        logo:setPosition(self.backGround:getContentSize().width/2 - 130, size.height / 2)
         btn:addChild(logo)
         --文本
         label = cc.Label:createWithSystemFont(self.label_name[k],"",32)
         label:setColor(cc.c4b(0,0,0,255))
         label:setAnchorPoint(0, 0.5)
-        label:setPosition(200, size.height / 2)
+        label:setPosition(220, size.height / 2)
         btn:addChild(label)
 
         --分割线
@@ -197,6 +197,7 @@ function SettingLayer:onChangeBookTouch(sender,eventType)
 	s_SCENE:removeAllPopups()
 	--选书
 	s_CorePlayManager.enterBookLayer(s_CURRENT_USER.bookKey)
+    s_CURRENT_USER.showSettingLayer = 1
 end
 
 --完善信息或者 查看信息  触摸事件

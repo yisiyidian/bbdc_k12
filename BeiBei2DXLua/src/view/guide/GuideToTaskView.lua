@@ -68,23 +68,25 @@ function GuideToTaskView:initUI()
     -- 箱子拟人的对话框
     local pop = cc.Sprite:create("image/guide/yindao_background_yellow3.png")
     pop:setScale(0)
-    pop:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /2)
+    pop:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /(-2))
     pop:ignoreAnchorPointForPosition(false)
     pop:setAnchorPoint(0.5,0.5)
     self.pop = pop
     self.backColor:addChild(self.pop)
 
     -- 对话框里的内容
-    local con = cc.Label:createWithSystemFont("","",30)
+    local con = cc.Label:createWithSystemFont("","",34)
     con:setPosition(cc.p(self.pop:getContentSize().width / 2,self.pop:getContentSize().height *0.65))
     con:setColor(cc.c4b(0,0,0,255))
     con:ignoreAnchorPointForPosition(false)
     con:setAnchorPoint(0.5,0.5)
     self.con = con
     self.pop:addChild(self.con)
+    self.con:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
+    self.con:setDimensions(self.pop:getContentSize().width *0.8,0)
 
-    local showBean = cc.Sprite:create("image/loginreward/bean.png")
-    showBean:setScale(1.5)
+    local showBean = cc.Sprite:create("image/summarybossscene/been_complete_studys.png")
+    showBean:setScale(0.75)
     showBean:setPosition(cc.p(self.pop:getContentSize().width / 2,self.pop:getContentSize().height *0.3))
     self.showBean = showBean
     self.pop:addChild(self.showBean)
@@ -101,13 +103,36 @@ function GuideToTaskView:initUI()
 	self.layer = layer
 	self.backColor:addChild(self.layer)
 
+	self.beans = cc.Sprite:create('image/chapter/chapter0/background_been_white.png')
+    self.beans:setPosition(s_RIGHT_X-100, s_DESIGN_HEIGHT-70)
+    self:addChild(self.beans) 
+    self.beans:setVisible(false)
+    self.beanCount = s_CURRENT_USER:getBeans()
+    self.beanCountLabel = cc.Label:createWithSystemFont(self.beanCount,'',24)
+    self.beanCountLabel:setColor(cc.c4b(0,0,0,255))
+    self.beanCountLabel:ignoreAnchorPointForPosition(false)
+    self.beanCountLabel:setPosition(self.beans:getContentSize().width * 0.65 , self.beans:getContentSize().height/2)
+    self.beans:addChild(self.beanCountLabel)
+
 	-- 箱子
    	local box = cc.Sprite:create("image/islandPopup/close.png")
-   	box:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT *1.5)
+   	box:setPosition(s_RIGHT_X-220,800)
    	box:ignoreAnchorPointForPosition(false)
     box:setAnchorPoint(0.5,0.5)
+    box:setScale(0)
     self.box = box
     self.back:addChild(self.box)
+
+    local con2 = cc.Label:createWithSystemFont("(点击宝箱领取任务)","",34)
+    con2:setPosition(cc.p(self.pop:getContentSize().width / 2,self.pop:getContentSize().height *0.3))
+    con2:setColor(cc.c4b(0,0,0,255))
+    con2:ignoreAnchorPointForPosition(false)
+    con2:setAnchorPoint(0.5,0.5)
+    con2:setVisible(false)
+    self.con2 = con2
+    self.pop:addChild(self.con2)
+    self.con2:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
+    self.con2:setDimensions(self.pop:getContentSize().width *0.8,0)
 
 	self.back:setTouchEnabled(true)
 	-- 背景的触摸事件
@@ -125,13 +150,19 @@ end
 
 function GuideToTaskView:resetView()
 	-- 初始化数据
+	self.con:setString("")
+	if self.guideView ~= nil then
+		self.guideView.label:setString("")
+	end
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	self.layer:removeAllChildren()
+	s_SCENE:removeAllPopups()
 	local boxPos = cc.p(0,0)
 	local isOpen = false
 	local scaleTo = 1
 	local showIndex = 0
 	local light = false
+	local labelTime = 1
 	table.foreach(GuideToTaskConfig.data, 
 		function(i, v)  
 			if v.guideToTask_id == self.index then 
@@ -141,6 +172,7 @@ function GuideToTaskView:resetView()
 				scaleTo = v.scaleTo
 				showIndex = v.guideId
 				light = v.light
+				labelTime = v.labelTime
 			end 
 		end)
 	self.showIndex = showIndex
@@ -148,20 +180,21 @@ function GuideToTaskView:resetView()
 	self.isOpen = isOpen
 	self.boxPos = boxPos
 	self.light = light
+	self.labelTime = labelTime
 
 	-- 根据数据改变ui
 	self:resetLock()
-	self:resetLabel()
 	self:resetBox()
 	self:resetPage()
 	self:resetPopup()
 	self:resetLight()
 	self:resetGuideStep()
-
+	self:resetLabel(self.labelTime)
 	-- 结束引导
 	if self.index == 7 then
 		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 		self:removeFromParent()
+		s_CorePlayManager.enterLevelLayer()
 		return
 	end
 	self.index = self.index + 1
@@ -175,7 +208,7 @@ end
 
 -- 加入锁屏
 function GuideToTaskView:resetLock()
-	local action1 = cc.DelayTime:create(0.3)
+	local action1 = cc.DelayTime:create(4)
 	local action2 = cc.CallFunc:create(function ()
 		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 	end)
@@ -198,20 +231,42 @@ end
 
 -- 重置对话框
 function GuideToTaskView:resetPopup()
-	local action1 = cc.DelayTime:create(0.3)
+	local time = 2
+	if self.index >= 6 then
+		time = 0
+	end
+	local action1 = cc.DelayTime:create(time)
 	local action2 = cc.CallFunc:create(function ()
 		if self.index == 5 then
-			local action1 = cc.Place:create(cc.p(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT * 0.45))
+			local action1 = cc.MoveTo:create(0.1,cc.p(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT * 0.45))
 			local action2 = cc.ScaleTo:create(0.1,1)
 			local action = cc.Sequence:create(action1,action2)
 			self.pop:runAction(action)
-			self.con:setString("善良的勇者\n感谢你从怪物的手中救了我\n这是我给你的报酬\n请收下吧")
+			self.con:setString("善良的勇者,感谢你从怪物的手中救了我,这是我给你的报酬,请收下吧")
+			self.beans:setVisible(true)
+
+			local action3 = cc.DelayTime:create(3)
+			local action4 = cc.MoveTo:create(0.4,cc.p(s_RIGHT_X-100, s_DESIGN_HEIGHT-70))
+			local action5 = cc.ScaleTo:create(0.01,0)
+			self.showBean:runAction(cc.Sequence:create(action3,action4,action5))
+
+			local action8 = cc.DelayTime:create(3.1)
+			local action9 = cc.CallFunc:create(function ()
+				self.showBeanNumber:removeFromParent()
+				end)
+			self.showBean:runAction(cc.Sequence:create(action8,action9))
+
+			local action6 = cc.DelayTime:create(3.5)
+			local action7 = cc.CallFunc:create(function ()
+				s_CURRENT_USER:addBeans(10)
+				self.beanCountLabel:setString(self.beanCountLabel:getString() + 10)
+				self.showBean:removeFromParent()
+				end)
+			self:runAction(cc.Sequence:create(action6,action7))
 		elseif self.index == 6 then
-			self.showBean:removeFromParent()
-			self.showBeanNumber:removeFromParent()
-			self.con:setString("千万不要小看这些豆子\n在这个世界里\n你用这些豆子可以买到任何东西\n想要获得更多豆子\n就快点帮我做事吧")
+			self.con:setString("千万不要小看贝贝豆,有了它,你就能买到各种东西")
 		elseif self.index == 7 then
-			self.con:setString("来，交给你一个伟大的任务\n（点击我查看任务）")
+			self.con:setString("\n每天我都会发布一批神秘任务,如果你够勇敢，就能获得更多贝贝豆\n")
 		end
 	end)
 	self:runAction(cc.Sequence:create(action1,action2))
@@ -219,47 +274,105 @@ end
 
 -- 重置箱子纸张
 function GuideToTaskView:resetPage()
-	local action1 = cc.DelayTime:create(0.3)
-	local action2 = cc.CallFunc:create(function ()
-		if self.index == 3 then
-			local action1 = cc.Place:create(cc.p(self.boxPos.x,self.boxPos.y + 100))
-			local action2 = cc.ScaleTo:create(0.1,1)
-			local action = cc.Sequence:create(action1,action2)
-			self.pape:runAction(action)
-		elseif self.index == 4 then
-			self.pape:setTexture("image/guide/popup.png")
-		elseif self.index == 5 then
-			local action1 = cc.ScaleTo:create(0.1,0)
-			local action2 = cc.MoveTo:create(0.1,cc.p(self.boxPos))
-			local action = cc.Spawn:create(action1,action2)
-			self.pape:runAction(action)
-		end
-	end)
-	self:runAction(cc.Sequence:create(action1,action2))
+	local actionList = {}
+	local action1 = cc.DelayTime:create(0.6)
+	table.insert(actionList,action1)
+
+	if self.index == 2 then
+		local action1 = cc.Place:create(cc.p(self.boxPos.x,self.boxPos.y + 100))
+		local action2 = cc.ScaleTo:create(0.1,1)
+		local action = cc.Sequence:create(action1,action2)
+		table.insert(actionList,action)
+	elseif self.index == 3 then
+		local action1 = cc.ScaleTo:create(0.3,3)
+		local action2 = cc.CallFunc:create(function ()
+			self.pape:setVisible(false)
+			local GuidePopup = require("view.guide.GuidePopup")
+			local guidePopup = GuidePopup.create()
+			s_SCENE:popup(guidePopup)
+			s_SCENE.popupLayer.backColor:removeFromParent()
+			guidePopup.ButtonClick = function ()
+				self:resetView()
+			end
+		end)
+		local action = cc.Sequence:create(action1,action2)
+		table.insert(actionList,action)
+	elseif self.index == 4 then
+		local action = cc.CallFunc:create(function ()
+			s_SCENE:removeAllPopups()
+		end)
+		table.insert(actionList,action)
+	end
+
+	self.pape:runAction(cc.Sequence:create(actionList))
 end
 
 -- 重置引导Label
-function GuideToTaskView:resetLabel()
-	local action1 = cc.DelayTime:create(0.3)
-	local action2 = cc.CallFunc:create(function ()
-		s_CorePlayManager.enterGuideScene(self.showIndex,self.layer) 
-	end)
-	self:runAction(cc.Sequence:create(action1,action2))
+function GuideToTaskView:resetLabel(time)
+	if time == nil then
+		return
+	end
+	if self.showIndex <= 15 then
+		local action1 = cc.DelayTime:create(time)
+		local action2 = cc.CallFunc:create(function ()
+			if self.showIndex == 15 then
+				return
+			end
+			s_CorePlayManager.enterGuideScene(self.showIndex,self.layer) 
+		end)
+		self:runAction(cc.Sequence:create(action1,action2))
+	else
+		if self.showIndex == 16 then
+		    local GuideView = require ("view.guide.GuideView")
+		    self.guideView = GuideView.create(16)
+		    self.backColor:addChild(self.guideView,2)
+		elseif self.showIndex == 17 then
+			self.guideView.label:setString("这么拼，才给我10个豆子？")
+			self.guideView.bb:setTexture('image/guide/bb5.png')		
+		elseif self.showIndex == 18 then
+			local action1 = cc.DelayTime:create(3.5)
+			local action2 = cc.CallFunc:create(function ()
+					self.guideView.label:setString("太好了，我最喜欢新挑战了！")
+					self.con2:setVisible(true)
+					self.guideView.bb:setTexture('image/guide/bb6.png')
+			        local guideFingerView = require("view.guide.GuideFingerView").create()
+			        guideFingerView:setPosition(self.box:getContentSize().width *0.8,0)
+			        self.box:addChild(guideFingerView,3)
+				end)
+			self:runAction(cc.Sequence:create(action1,action2))
+
+		end
+	end
 end
 
 -- 重置箱子
 function GuideToTaskView:resetBox()
-	local action1 = cc.ScaleTo:create(0.3,self.scaleTo)
-	local action2 = cc.MoveTo:create(0.3,self.boxPos)
-	local action = cc.Spawn:create(action1,action2)
-	local action3 = cc.CallFunc:create(function ()
+	local actionList = {}
+	local action1 = cc.ScaleTo:create(0.4,self.scaleTo)
+	local action2 = cc.EaseBackOut:create(action1)
+	local action3 = cc.MoveTo:create(0.4,self.boxPos)
+	local action10 = cc.Spawn:create(action2,action3)
+	table.insert(actionList,action10)
+
+	if self.isOpen == true then
+		local action1 = cc.MoveBy:create(0.1,cc.p(10,0))
+        local action2 = action1:reverse()
+        local action11 = cc.Sequence:create(action1,action2)
+		table.insert(actionList,action11)
+		table.insert(actionList,action11)
+	end
+
+	local action4 = cc.CallFunc:create(function () 
 		if self.isOpen == true then
 			self.box:setTexture('image/islandPopup/open.png')
 		elseif self.isOpen == false then
 			self.box:setTexture('image/islandPopup/close.png')
+		else
+			self.box:setTexture('image/islandPopup/baoxiang_close.png')
 		end
 	end)
-	self.box:runAction(cc.Sequence:create(action,action3))
+	table.insert(actionList,action4)
+	self.box:runAction(cc.Sequence:create(actionList))
 end
 
 return GuideToTaskView

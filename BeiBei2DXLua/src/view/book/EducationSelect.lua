@@ -53,16 +53,6 @@ function EducationSelect:ctor()
     background:addChild(hint) 
     -- if have not selected any book
     if s_CURRENT_USER.bookKey == '' then 
-        backBtn:setVisible(false)
-        --黄色椭圆
-        local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
-        tutorial_text:setPosition((s_RIGHT_X - s_LEFT_X)/2, 1073)
-        background:addChild(tutorial_text,120)
-        --请选择合适你的书籍
-        local text = cc.Label:createWithSystemFont(s_DataManager.getTextWithIndex(TEXT__TUTORIAL_BOOK_SELECT),'',28)
-        text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
-        text:setColor(cc.c3b(0,0,0))
-        tutorial_text:addChild(text)
     else
         backBtn:setVisible(true)
     end

@@ -37,7 +37,8 @@ function longButtonInStudy.create(size,color,text)
         label:ignoreAnchorPointForPosition(false)
         label:setAnchorPoint(0.5,0.5)
         label:setColor(cc.c4b(255,255,255,255))
-        button_back.button_front:addChild(label)
+        button_back.label = label
+        button_back.button_front:addChild(button_back.label)
     end
 
     local function onTouchBegan(touch, event)

@@ -72,7 +72,7 @@ end
 
 function LevelProgressPopup:createSummary(index)
     --加入按钮
-    local go_button = Button.create("long","blue","GO") 
+    local go_button = Button.create("small","blue","GO") 
     go_button:setPosition(self.background:getContentSize().width * 0.5 - 2, self.background:getContentSize().height * 0.13)
 
     local close_Click = function(sender, eventType)
@@ -158,6 +158,12 @@ function LevelProgressPopup:createSummary(index)
         button_func()
     end
     self.background:addChild(go_button)
+    if s_CURRENT_USER.guideStep <= s_guide_step_enterLevel then  
+        go_button.button_front:setOpacity(120)
+        go_button.label:setOpacity(120)
+        go_button:setOpacity(20)
+    end
+
 
     if s_CURRENT_USER.guideStep <= s_guide_step_enterCard and s_CURRENT_USER.guideStep > s_guide_step_enterLevel then
         local guideFingerView = require("view.guide.GuideFingerView").create()

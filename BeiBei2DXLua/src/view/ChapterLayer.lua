@@ -117,21 +117,52 @@ function ChapterLayer:ctor()
     self:checkUnlockLevel()
     self:addBackToHome()    --返回按钮      左上
     self:addBeansUI()       --贝贝豆图标    右上
-    self:addTaskBOX()       --放置任务的宝箱
+    
 
     -- 添加引导
     if s_CURRENT_USER.guideStep <= s_guide_step_enterStory5 then
-        s_CorePlayManager.enterGuideScene(5,self)
+        local backColor = cc.LayerColor:create(cc.c4b(0,0,0,150), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
+        backColor:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /2)
+        backColor:ignoreAnchorPointForPosition(false)
+        backColor:setAnchorPoint(0.5,0.5)
+        self.backColor = backColor
+        self:addChild(self.backColor)
+
+        local back = ccui.Layout:create()
+        back:setContentSize(s_DESIGN_WIDTH ,s_DESIGN_HEIGHT)
+        back:setColor(cc.c4b(0,0,0,100))
+        back:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /2)
+        back:ignoreAnchorPointForPosition(false)
+        back:setAnchorPoint(0.5,0.5)
+        self.back = back
+        self.backColor:addChild(self.back)
+        self.back:addTouchEventListener(handler(self,self.touchFunc))   
+        s_CorePlayManager.enterGuideScene(5,self.backColor)
+        local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
+        summaryboss:setPosition(310,720)
+        summaryboss:setAnchorPoint(1,1)
+        summaryboss:addAnimation(0, 'jianxiao', true)
+        summaryboss:setScale(0.85)
+        self.backColor:addChild(summaryboss)
         s_CURRENT_USER:setGuideStep(s_guide_step_enterLevel) 
+    else
+        -- 第一次引导时隐藏宝箱
+        self:addTaskBOX()       --放置任务的宝箱
     end
     -- 添加引导
     print("now guide is "..s_CURRENT_USER.guideStep)
-    if s_CURRENT_USER.guideStep == s_guide_step_second then
+    -- if s_CURRENT_USER.guideStep == s_guide_step_second then
         local GuideToTaskView = require("view.guide.GuideToTaskView")
         local guideToTaskView = GuideToTaskView.create()
-        self:addChild(guideToTaskView)
+        self:addChild(guideToTaskView,3)
         s_CURRENT_USER:setGuideStep(s_guide_step_bag1) 
-    end
+    -- end
+end
+
+function ChapterLayer:touchFunc()
+    local LevelProgressPopup = require("view.islandPopup.LevelProgressPopup")
+    local levelProgressPopup = LevelProgressPopup.create("0")
+    s_SCENE:popup(levelProgressPopup)
 end
 
 -- 检查是否有任务（如复习boss)
@@ -494,7 +525,6 @@ function ChapterLayer:addBackToHome()
     homeButton:ignoreAnchorPointForPosition(false)
     homeButton:setAnchorPoint(0,1)
     homeButton:setPosition(s_LEFT_X + 30  , s_DESIGN_HEIGHT - 32 )
-    homeButton:setLocalZOrder(1)
     self:addChild(homeButton)
     
     onAndroidKeyPressed(self, function ()
@@ -592,13 +622,13 @@ end
 function ChapterLayer:addBeansUI()
     self.beans = cc.Sprite:create('image/chapter/chapter0/background_been_white.png')
     self.beans:setPosition(s_RIGHT_X-100, s_DESIGN_HEIGHT-70)
-    self:addChild(self.beans,150) 
+    self:addChild(self.beans) 
     self.beanCount = s_CURRENT_USER:getBeans()
     self.beanCountLabel = cc.Label:createWithSystemFont(self.beanCount,'',24)
     self.beanCountLabel:setColor(cc.c4b(0,0,0,255))
     self.beanCountLabel:ignoreAnchorPointForPosition(false)
     self.beanCountLabel:setPosition(self.beans:getContentSize().width * 0.65 , self.beans:getContentSize().height/2)
-    self.beans:addChild(self.beanCountLabel,10)
+    self.beans:addChild(self.beanCountLabel)
 end
 
 -- function ChapterLayer:shakeBeansUI(beansIncrement)

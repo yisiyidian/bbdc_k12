@@ -129,6 +129,8 @@ function DataUser:ctor()
     self.isFirstBossGuide                  = 0
 
     self.guideStep                         = 0 
+    -- 显示设置页面的标志
+    self.showSettingLayer                  = 0
 end
 -- 设置引导步骤
 function DataUser:setGuideStep(step)
