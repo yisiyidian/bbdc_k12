@@ -117,7 +117,7 @@ function ChapterLayer:ctor()
     self:checkUnlockLevel()
     self:addBackToHome()    --返回按钮      左上
     self:addBeansUI()       --贝贝豆图标    右上
-    
+    self:addTaskBOX()
 
     -- 添加引导
     if s_CURRENT_USER.guideStep <= s_guide_step_enterStory5 then
@@ -144,9 +144,8 @@ function ChapterLayer:ctor()
         summaryboss:setScale(0.9)
         self.backColor:addChild(summaryboss)
         s_CURRENT_USER:setGuideStep(s_guide_step_enterLevel) 
-    elseif s_CURRENT_USER.guideStep >= s_guide_step_bag6 then
-        -- 第一次引导时隐藏宝箱
-        self:addTaskBOX()       --放置任务的宝箱
+    elseif s_CURRENT_USER.guideStep <= s_guide_step_bag5 then
+        self.boxButton:setVisible(false)
     end
     -- 添加引导
     print("now guide is "..s_CURRENT_USER.guideStep)

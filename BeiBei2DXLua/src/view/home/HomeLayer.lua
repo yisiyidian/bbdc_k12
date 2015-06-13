@@ -154,11 +154,13 @@ function HomeLayer:ctor()
     backColor:addChild(mission_progress,1,'mission_progress')
 
     --下载音频的按钮
-    local downloadSoundButton = DownloadSoundButton.create(top)
     local status = cx.CXNetworkStatus:getInstance():start()
-    if status == NETWORK_STATUS_WIFI then
-
+    if status == NETWORK_STATUS_WIFI and s_CURRENT_USER.guideStep < s_guide_step_enterLevel then
+        local downloadSoundButton = DownloadSoundButton.create(top,false)
+    else
+        local downloadSoundButton = DownloadSoundButton.create(top,true)
     end
+
 
     --正在学习 文本
     local name = cc.Sprite:create('image/homescene/BBDC_word_title.png')
@@ -384,6 +386,8 @@ function HomeLayer:ctor()
         button_reward:setTouchEnabled(false)
         button_setting:setTouchEnabled(false)
         button_shop:setTouchEnabled(false)
+    else
+        s_CURRENT_USER:setGuideStep(s_guide_step_bag7) 
     end
 
     if s_CURRENT_USER.showSettingLayer == 1 then
