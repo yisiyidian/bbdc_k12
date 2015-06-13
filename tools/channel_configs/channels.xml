@@ -3,7 +3,7 @@
 <configs>
 
     <channel name="iOS" 
-        packageName="com.beibei.wordmaster.k12"
+        packageName="com.beibei.wordmaster"
 
         leanCloudAppName="K12"
         leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
@@ -27,7 +27,7 @@
 <channel name="----------------------------------------------------------------" />
 
     <channel name="DEBUG" 
-        packageName="com.beibei.wordmaster.k12"
+        packageName="com.beibei.wordmaster"
 
         leanCloudAppName="K12_test"
         leanCloudAppID="sda0nhbk4hs8h4dsqopr8a2p7orssj06e1qu5ju4lo40ej2z"
@@ -51,7 +51,7 @@
 <channel name="anysdk ----------------------------------------------------------------" />
 
     <channel name="anysdk" 
-        packageName="com.beibei.wordmaster.k12"
+        packageName="com.beibei.wordmaster"
 
         leanCloudAppName="K12"
         leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
@@ -73,7 +73,7 @@
         umengAppKey="5498fc3afd98c56b4200075d"/>
     
     <channel name="xiaomi" 
-        packageName="com.beibei.wordmaster.k12"
+        packageName="com.beibei.wordmaster"
 
         leanCloudAppName="K12"
         leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
@@ -95,7 +95,7 @@
         umengAppKey="5498fc3afd98c56b4200075d"/>
 
     <channel name="wdj" 
-        packageName="com.beibei.wordmaster.k12"
+        packageName="com.beibei.wordmaster"
 
         leanCloudAppName="K12"
         leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
@@ -117,7 +117,7 @@
         umengAppKey="549a5eb9fd98c5b2ac00144e"/>
 
     <channel name="anzhi" 
-        packageName="com.beibei.wordmaster.k12"
+        packageName="com.beibei.wordmaster"
 
         leanCloudAppName="K12"
         leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
@@ -139,7 +139,7 @@
         umengAppKey="549a5eb9fd98c5b2ac00144e"/>
 
     <channel name="meizu" 
-        packageName="com.beibei.wordmaster.k12"
+        packageName="com.beibei.wordmaster"
 
         leanCloudAppName="K12"
         leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
@@ -161,7 +161,7 @@
         umengAppKey="549a5eb9fd98c5b2ac00144e"/>
 
     <channel name="huawei" 
-        packageName="com.beibei.wordmaster.k12"
+        packageName="com.beibei.wordmaster"
 
         leanCloudAppName="K12"
         leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
@@ -183,7 +183,7 @@
         umengAppKey="549a5eb9fd98c5b2ac00144e"/>
 
     <channel name="baidu" 
-        packageName="com.beibei.wordmaster.k12"
+        packageName="com.beibei.wordmaster"
 
         leanCloudAppName="K12"
         leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
@@ -205,7 +205,7 @@
         umengAppKey="549a5eb9fd98c5b2ac00144e"/>
         
     <channel name="jifeng" 
-        packageName="com.beibei.wordmaster.k12"
+        packageName="com.beibei.wordmaster"
 
         leanCloudAppName="K12"
         leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
@@ -229,7 +229,7 @@
 <channel name="360 jiagu ----------------------------------------------------------------" />
     
     <channel name="360qihu" 
-        packageName="com.beibei.wordmaster.k12.qihu"
+        packageName="com.beibei.wordmaster.qihu"
 
         leanCloudAppName="K12"
         leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
@@ -251,7 +251,7 @@
         umengAppKey="549a5eb9fd98c5b2ac00144e"/>
 
     <channel name="openQQ" 
-        packageName="com.beibei.wordmaster.k12.tencentmyapp"
+        packageName="com.beibei.wordmaster.tencentmyapp"
 
         leanCloudAppName="K12"
         leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
@@ -275,7 +275,7 @@
 <channel name="others ----------------------------------------------------------------" />
 
     <channel name="others" 
-        packageName="com.beibei.wordmaster.k12"
+        packageName="com.beibei.wordmaster"
 
         leanCloudAppName="K12"
         leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
