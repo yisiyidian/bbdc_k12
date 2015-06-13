@@ -112,7 +112,8 @@ function EducationSelect:ctor()
     --如果是直接登陆的用户没有选书 则走else
     --如果是游客登录或者注册 就走if
     if s_CURRENT_USER.usertype ~= USER_TYPE_BIND then
-        self:popupAccountBind()
+        --self:popupAccountBind()
+        s_SCENE:removeAllPopups()
     else
         s_SCENE:removeAllPopups()
     end

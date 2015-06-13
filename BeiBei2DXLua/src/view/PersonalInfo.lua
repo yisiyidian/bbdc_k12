@@ -53,7 +53,7 @@ function PersonalInfo:ctor()
     local moved = false
     local start_y = nil
     local colorArray = {cc.c4b(56,182,236,255),cc.c4b(238,75,74,255 ),cc.c4b(251,166,24,255 ),cc.c4b(128,172,20,255 )}
-    local titleArray = {'单词掌握统计','单词学习日增长','登陆贝贝天数','学习效率统计'}
+    local titleArray = {'登陆贝贝天数','单词掌握统计','单词学习日增长','学习效率统计'}
     self.intro_array = {}
     local target = {}
 
@@ -102,27 +102,31 @@ function PersonalInfo:ctor()
         layout:addChild(share)
         local title_here = titleArray[5 - i]
         local title
-        if s_CURRENT_USER:getLockFunctionState(6 - i) ~= UNLOCK then
-            title_here = titleArray[5 - i].."被锁住了!"
+        local j = 6 - i
+        if i == 2 or i == 4 then
+            j = i
+        end
+        if s_CURRENT_USER:getLockFunctionState(j) ~= UNLOCK then
+            title_here = titleArray[j-1].."被锁住了!"
             
             
             local ShopPanel = require('view.shop.ShopPanel')
-            local shopPanel = ShopPanel.create(6-i)
+            local shopPanel = ShopPanel.create(j)
             shopPanel:setPosition((s_RIGHT_X - s_LEFT_X)/2, 0)
             layout:addChild(shopPanel)
             
             shopPanel.feedback = function()
                 local curPage = pageView:getCurPageIndex()
                 share:setVisible(true)
-                title:setString(titleArray[5 - i])
+                title:setString(titleArray[j-1])
                 title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height + 30)
-                if curPage == 3 then
+                if curPage == 1 then
                     self:PLVM()
                     AnalyticsDataCenterPage('PLVM')
                 elseif curPage == 2 then
                     self:PLVI()
                     AnalyticsDataCenterPage('PLVI')
-                elseif curPage == 1 then
+                elseif curPage == 3 then
                     self:login()
                     AnalyticsDataCenterPage('LOGIN')
                 elseif curPage == 0 then
@@ -135,12 +139,12 @@ function PersonalInfo:ctor()
         end
         title = cc.Label:createWithSystemFont(title_here,'',36)
         --title:enableOutline(colorArray[5- i],1)
-        if s_CURRENT_USER:getLockFunctionState(6 - i) ~= UNLOCK then
+        if s_CURRENT_USER:getLockFunctionState(j) ~= UNLOCK then
             title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height - 15)
         else
             title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height + 30)
         end
-        title:setColor(colorArray[5 - i])
+        title:setColor(colorArray[j-1])
         layout:addChild(title)
 
         
@@ -175,9 +179,9 @@ function PersonalInfo:ctor()
             name:setColor(cc.c3b(92,130,140))
             top:addChild(name)
 
-            local title = cc.Label:createWithSystemFont(titleArray[5 - i],'',36)
+            local title = cc.Label:createWithSystemFont(titleArray[j-1],'',36)
             title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height + 30)
-            title:setColor(colorArray[5 - i])
+            title:setColor(colorArray[j-1])
             intro:addChild(title)
             target[i]:begin()
             intro:visit()
@@ -216,9 +220,9 @@ function PersonalInfo:ctor()
         
         local curPage = pageView:getCurPageIndex()
         if self.checkIn ~= nil and self.checkIn then
-            if curPage ~= 1 then
-                pageView:scrollToPage(1)
-            end
+            -- if curPage ~= 1 then
+            --     pageView:scrollToPage(1)
+            -- end
         end
         if self.targetIndex ~= nil then
             pageView:scrollToPage(self.targetIndex)
@@ -229,14 +233,19 @@ function PersonalInfo:ctor()
                 self.intro_array[curPage+1]:removeAllChildren()
             end
             lastPage = curPage
-            if s_CURRENT_USER:getLockFunctionState(5 - curPage) == UNLOCK then
-                if curPage == 3 then
+            local k = 5 - curPage
+            if curPage == 1 or curPage == 3 then
+                k = 1 + curPage
+            end
+            --print('curPage',curPage)
+            if s_CURRENT_USER:getLockFunctionState(k) == UNLOCK then
+                if curPage == 1 then
                     self:PLVM()
                     AnalyticsDataCenterPage('PLVM')
                 elseif curPage == 2 then
                     self:PLVI()
                     AnalyticsDataCenterPage('PLVI')
-                elseif curPage == 1 then
+                elseif curPage == 3 then
                     self:login()
                     AnalyticsDataCenterPage('LOGIN')
                 elseif curPage == 0 then
@@ -258,7 +267,7 @@ function PersonalInfo:PLVM()
     local learnPercent = tolearnCount / s_DataManager.books[s_CURRENT_USER.bookKey].words
     local masterPercent = toMasterCount / s_DataManager.books[s_CURRENT_USER.bookKey].words
     
-    local back = self.intro_array[4]
+    local back = self.intro_array[2]
     local circleBack = cc.Sprite:create('image/PersonalInfo/PLVM/shuju_circle_white.png')
     circleBack:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.42 * s_DESIGN_HEIGHT - 40)
     back:addChild(circleBack)
@@ -622,7 +631,7 @@ function PersonalInfo:PLVI()
 end
 
 function PersonalInfo:login()
-    local back = self.intro_array[2]
+    local back = self.intro_array[4]
     local loginData = s_CURRENT_USER.logInDatas
     --local loginData_array = {{0,1,1,0,1,1,1},{2,2,1,0,1,0,0}}
     local loginData_array = {}
