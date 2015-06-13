@@ -144,7 +144,7 @@ function ChapterLayer:ctor()
         summaryboss:setScale(0.9)
         self.backColor:addChild(summaryboss)
         s_CURRENT_USER:setGuideStep(s_guide_step_enterLevel) 
-    else
+    elseif s_CURRENT_USER.guideStep >= s_guide_step_bag6 then
         -- 第一次引导时隐藏宝箱
         self:addTaskBOX()       --放置任务的宝箱
     end

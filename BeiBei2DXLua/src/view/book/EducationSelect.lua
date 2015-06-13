@@ -51,8 +51,9 @@ function EducationSelect:ctor()
     hint:setPosition((s_RIGHT_X - s_LEFT_X)/2,1073)
     hint:setColor(cc.c4b(66,66,62,255))
     background:addChild(hint) 
+    backBtn:setVisible(false)
     -- if have not selected any book
-    if s_CURRENT_USER.bookKey == '' then 
+    if s_CURRENT_USER.bookKey == '' or s_CURRENT_USER.bookKey == nil then 
     else
         backBtn:setVisible(true)
     end
