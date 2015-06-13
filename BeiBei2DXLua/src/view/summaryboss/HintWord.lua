@@ -87,7 +87,9 @@ function HintWord:ctor(word,target,firstTime)
             wordBoard:stopAllActions()
             --self:removeFromParent()
             self.hintOver()
-            self:removeFromParent()
+            if not tolua.isnull(self) then
+                self:removeFromParent()
+            end
             return
         end
         if word ~= '' then
@@ -105,7 +107,9 @@ function HintWord:ctor(word,target,firstTime)
             local action3 = cc.DelayTime:create(delaytime)
             local action4 = cc.CallFunc:create(function()
                 self.hintOver()
-                self:removeFromParent()
+                if not tolua.isnull(self) then
+                    self:removeFromParent()
+                end
             end)
             wordBoard:runAction(cc.Sequence:create(action2,pause,action3,action4))
         else
