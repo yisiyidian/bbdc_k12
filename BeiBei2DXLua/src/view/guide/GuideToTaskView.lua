@@ -191,7 +191,7 @@ function GuideToTaskView:resetView()
 	self:resetGuideStep()
 	self:resetLabel(self.labelTime)
 	-- 结束引导
-	if self.index == 7 then
+	if self.index == 6 then
 		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 		self:removeFromParent()
 		s_CURRENT_USER.showTaskLayer = 1   
@@ -232,11 +232,7 @@ end
 
 -- 重置对话框
 function GuideToTaskView:resetPopup()
-	local time = 2
-	if self.index >= 6 then
-		time = 0
-	end
-	local action1 = cc.DelayTime:create(time)
+	local action1 = cc.DelayTime:create(0)
 	local action2 = cc.CallFunc:create(function ()
 		if self.index == 5 then
 			local action1 = cc.MoveTo:create(0.1,cc.p(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT * 0.45))
@@ -265,8 +261,6 @@ function GuideToTaskView:resetPopup()
 				end)
 			self:runAction(cc.Sequence:create(action6,action7))
 		elseif self.index == 6 then
-			self.con:setString("千万不要小看贝贝豆,有了它,你就能买到各种东西")
-		elseif self.index == 7 then
 			self.con:setString("\n每天我都会发布一批神秘任务,如果你够勇敢，就能获得更多贝贝豆\n")
 		end
 	end)
@@ -322,27 +316,6 @@ function GuideToTaskView:resetLabel(time)
 			s_CorePlayManager.enterGuideScene(self.showIndex,self.layer) 
 		end)
 		self:runAction(cc.Sequence:create(action1,action2))
-	else
-		if self.showIndex == 16 then
-		    local GuideView = require ("view.guide.GuideView")
-		    self.guideView = GuideView.create(16)
-		    self.backColor:addChild(self.guideView,2)
-		elseif self.showIndex == 17 then
-			self.guideView.label:setString("这么拼，才给我10个豆子？")
-			self.guideView.bb:setTexture('image/guide/bb5.png')		
-		elseif self.showIndex == 18 then
-			local action1 = cc.DelayTime:create(3.5)
-			local action2 = cc.CallFunc:create(function ()
-					self.guideView.label:setString("太好了，我最喜欢新挑战了！")
-					self.con2:setVisible(true)
-					self.guideView.bb:setTexture('image/guide/bb6.png')
-			        local guideFingerView = require("view.guide.GuideFingerView").create()
-			        guideFingerView:setPosition(self.box:getContentSize().width *0.8,0)
-			        self.box:addChild(guideFingerView,3)
-				end)
-			self:runAction(cc.Sequence:create(action1,action2))
-
-		end
 	end
 end
 

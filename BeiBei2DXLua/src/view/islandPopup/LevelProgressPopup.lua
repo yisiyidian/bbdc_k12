@@ -72,7 +72,7 @@ end
 
 function LevelProgressPopup:createSummary(index)
     --加入按钮
-    local go_button = Button.create("small","blue","GO") 
+    local go_button = Button.create("middle","blue","GO") 
     go_button:setPosition(self.background:getContentSize().width * 0.5 - 2, self.background:getContentSize().height * 0.13)
 
     local close_Click = function(sender, eventType)
