@@ -22,6 +22,29 @@ function GuidePopup:initUI()
     back:setAnchorPoint(0.5,0.5)
     self.back = back
     self:addChild(self.back)
+
+    local showBean = cc.Sprite:create("image/summarybossscene/been_complete_studys.png")
+    showBean:setScale(0.5)
+    showBean:setPosition(cc.p(self.back:getContentSize().width / 2,self.back:getContentSize().height *0.25))
+    self.showBean = showBean
+    self.back:addChild(self.showBean) 
+
+    local showBeanNumber = cc.Label:createWithSystemFont("X 10","",30)
+    showBeanNumber:setColor(cc.c4b(0,0,0,255))
+    showBeanNumber:setPosition(cc.p(self.back:getContentSize().width * 0.6,self.back:getContentSize().height *0.25))
+    self.showBeanNumber = showBeanNumber
+    self.back:addChild(self.showBeanNumber)
+
+    self.beans = cc.Sprite:create('image/chapter/chapter0/background_been_white.png')
+    self.beans:setPosition(s_RIGHT_X-100, s_DESIGN_HEIGHT-70)
+    self:addChild(self.beans) 
+
+    self.beanCount = s_CURRENT_USER:getBeans()
+    self.beanCountLabel = cc.Label:createWithSystemFont(self.beanCount,'',24)
+    self.beanCountLabel:setColor(cc.c4b(0,0,0,255))
+    self.beanCountLabel:ignoreAnchorPointForPosition(false)
+    self.beanCountLabel:setPosition(self.beans:getContentSize().width * 0.65 , self.beans:getContentSize().height/2)
+    self.beans:addChild(self.beanCountLabel)
     
     self.ButtonClick = function ()    end
 
@@ -42,10 +65,6 @@ function GuidePopup:initUI()
     self:runButtonAction()
     self:runSignAction()
     self:runFingerAction()
-
-    local GuideView = require ("view.guide.GuideView")
-    local guideView = GuideView.create(15)
-    self:addChild(guideView)
 end
 
 function GuidePopup:runFingerAction()

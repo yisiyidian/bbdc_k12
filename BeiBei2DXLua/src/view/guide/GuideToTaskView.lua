@@ -85,19 +85,6 @@ function GuideToTaskView:initUI()
     self.con:setAlignment(cc.TEXT_ALIGNMENT_CENTER)
     self.con:setDimensions(self.pop:getContentSize().width *0.8,0)
 
-    local showBean = cc.Sprite:create("image/summarybossscene/been_complete_studys.png")
-    showBean:setScale(0.75)
-    showBean:setPosition(cc.p(self.pop:getContentSize().width / 2,self.pop:getContentSize().height *0.3))
-    self.showBean = showBean
-    self.pop:addChild(self.showBean)
-
-    local showBeanNumber = cc.Label:createWithSystemFont("X 10","",30)
-    showBeanNumber:setScale(1.5)
-    showBeanNumber:setColor(cc.c4b(0,0,0,255))
-    showBeanNumber:setPosition(cc.p(self.pop:getContentSize().width * 0.75,self.pop:getContentSize().height *0.3))
-    self.showBeanNumber = showBeanNumber
-    self.pop:addChild(self.showBeanNumber)
-
 	-- 临时图层，用于放置引导label
 	local layer = cc.Layer:create()
 	self.layer = layer
@@ -106,7 +93,7 @@ function GuideToTaskView:initUI()
 	self.beans = cc.Sprite:create('image/chapter/chapter0/background_been_white.png')
     self.beans:setPosition(s_RIGHT_X-100, s_DESIGN_HEIGHT-70)
     self:addChild(self.beans) 
-    self.beans:setVisible(false)
+	self.beans:setVisible(false)
     self.beanCount = s_CURRENT_USER:getBeans()
     self.beanCountLabel = cc.Label:createWithSystemFont(self.beanCount,'',24)
     self.beanCountLabel:setColor(cc.c4b(0,0,0,255))
@@ -239,27 +226,7 @@ function GuideToTaskView:resetPopup()
 			local action2 = cc.ScaleTo:create(0.1,1)
 			local action = cc.Sequence:create(action1,action2)
 			self.pop:runAction(action)
-			self.con:setString("善良的勇者,感谢你从怪物的手中救了我,这是我给你的报酬,请收下吧")
-			self.beans:setVisible(true)
-
-			local action3 = cc.DelayTime:create(3)
-			local action4 = cc.MoveTo:create(0.4,cc.p(s_RIGHT_X-100, s_DESIGN_HEIGHT-70))
-			local action5 = cc.ScaleTo:create(0.01,0)
-			self.showBean:runAction(cc.Sequence:create(action3,action4,action5))
-
-			local action8 = cc.DelayTime:create(3.1)
-			local action9 = cc.CallFunc:create(function ()
-				self.showBeanNumber:removeFromParent()
-				end)
-			self.showBean:runAction(cc.Sequence:create(action8,action9))
-
-			local action6 = cc.DelayTime:create(3.5)
-			local action7 = cc.CallFunc:create(function ()
-				s_CURRENT_USER:addBeans(10)
-				self.beanCountLabel:setString(self.beanCountLabel:getString() + 10)
-				self.showBean:removeFromParent()
-				end)
-			self:runAction(cc.Sequence:create(action6,action7))
+			self.con:setString("善良的勇者,感谢你从怪物的手中救了我,这是我给你的报酬")
 		elseif self.index == 6 then
 			self.con:setString("\n每天我都会发布一批神秘任务,如果你够勇敢，就能获得更多贝贝豆\n")
 		end
@@ -287,7 +254,16 @@ function GuideToTaskView:resetPage()
 			s_SCENE:popup(guidePopup)
 			s_SCENE.popupLayer.backColor:removeFromParent()
 			guidePopup.ButtonClick = function ()
-				self:resetView()
+				guidePopup.showBean:runAction(cc.MoveTo:create(0.2,cc.p(s_RIGHT_X-100, s_DESIGN_HEIGHT-70)))
+				guidePopup.showBeanNumber:removeFromParent()
+				guidePopup.beanCountLabel:setString(guidePopup.beanCountLabel:getString()+10)
+				local action1 = cc.DelayTime:create(0.3)
+				local action2 = cc.CallFunc:create(function ()
+					self:resetView()
+					self.beans:setVisible(true)
+					self.beanCountLabel:setString(self.beanCountLabel:getString()+10)
+				end)
+				self:runAction(cc.Sequence:create(action1,action2))
 			end
 		end)
 		local action = cc.Sequence:create(action1,action2)
@@ -307,12 +283,9 @@ function GuideToTaskView:resetLabel(time)
 	if time == nil then
 		return
 	end
-	if self.showIndex <= 15 then
+	if self.showIndex <= 13 then
 		local action1 = cc.DelayTime:create(time)
 		local action2 = cc.CallFunc:create(function ()
-			if self.showIndex == 15 then
-				return
-			end
 			s_CorePlayManager.enterGuideScene(self.showIndex,self.layer) 
 		end)
 		self:runAction(cc.Sequence:create(action1,action2))
