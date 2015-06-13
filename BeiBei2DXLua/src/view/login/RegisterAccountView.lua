@@ -36,6 +36,7 @@ function RegisterAccountView:ctor(step,canclose)
 	self.debug = false
 	self.uistack = {} --UI的栈,里边保存UI流程序号,UI显示的参数  Android返回键用
 	self.curBtn = nil --当前的输入按钮
+	self.phoneNumber = ""
 	if step ~= "canclose" then
   		self:init(step,canclose)
   	else
@@ -157,8 +158,6 @@ function RegisterAccountView:goStep(step,...)
 		self:showModifyPwdBySMSCode(args)---------------重置密码
 	elseif step == RegisterAccountView.STEP_9 then
 		self:showInputSmsCode(args,"smslogin")---------------------登陆：输入短信验证码 用短信验证码登陆
-	elseif step == RegisterAccountView.STEP_10 then
-
 	end
 end
 
@@ -256,8 +255,8 @@ function RegisterAccountView:onTouchPhoneNumberOK(sender,eventType)
 			self:verifyPhoneNumber(phoneNumber)
 		else
 			--跳转到输入验证码的界面 直接跳过去
-			self.curStep = self.curStep + 1
-			self:goStep(self.curStep,60) --60秒
+			self.curStep = RegisterAccountView.STEP_2
+			self:goStep(self.curStep) --60秒
 		end
 	else
 		--不是手机号码
@@ -326,7 +325,7 @@ end
 
 --显示输入验证码的界面 RegisterAccountView.STEP_9 RegisterAccountView.STEP_2
 function RegisterAccountView:showInputSmsCode(args,type)
-	local countDown = args and tonumber(args[1]) or 0
+	local countDown = 50
 	print("countDown:"..countDown)
 
 	self.smsMode = type--verify 验证手机号码有效性 , smslogin SMSCode登陆
@@ -418,7 +417,17 @@ function RegisterAccountView:onRetrySMSTouch(sender,eventType)
 	end
 
 	if not self.debug then
-		self:requestSMSCode(self.phoneNumber)
+		--区分验证码的格式
+		if self.smsMode == "verify" then
+			-- self:requestSMSCode(self.phoneNumber)
+			if self.phoneNumber == "" then
+				self.phoneNumber = s_CURRENT_USER.mobilePhoneNumber
+			end
+			self:requestVerifySMSCode(self.phoneNumber)
+		else
+			self:requestLoginSMSCode(self.phoneNumber)
+		end
+
 	end
 
 	self:startSMSTick(50)
@@ -852,7 +861,7 @@ function RegisterAccountView:requestLoginSMSCode(phoneNumber)
 		cx.CXAvos:getInstance():requestLoginSMS(phoneNumber);
 	end
 end
---验证手机号码是否有效
+--验证手机号码是否有效  HomeLayer调用到
 function RegisterAccountView:requestVerifySMSCode(phoneNumber)
 	print("请求验证手机的验证码")
 	if not self.debug then
