@@ -405,7 +405,7 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
 end
 
 function SummaryBossAlter:addWinLabel(win_back)
-    if self.bossLayer.useTime < 90 then
+    if self.bossLayer.useTime < 0 then
         s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     end
 
@@ -527,7 +527,7 @@ function SummaryBossAlter:addWinLabel(win_back)
                     local action4 = cc.CallFunc:create(function (  )
                         been_number:setString(s_CURRENT_USER:getBeans() - 3 + i)
                         if i == 3 then
-                            if self.bossLayer.useTime < 90 then
+                            if self.bossLayer.useTime < 0 then
                                 local wordList = self.bossLayer.unit.wrongWordList[1]
                                  for i = 2,#self.bossLayer.unit.wrongWordList do
                                      wordList = wordList..'|'..self.bossLayer.unit.wrongWordList[i]
