@@ -170,6 +170,60 @@ void CXAvos::changePwd(const char* username,const char* oldPwd,const char* newPw
     }
 }
 
+/**
+ * 使用SMS验证码登陆
+ * @param phoneNumber [description]
+ * @param smsCode     [description]
+ * @param mHandler    [description]
+ */
+void CXAvos::loginWithSMS(const char* phoneNumber,const char* smsCode,CXLUAFUNC mHandler){
+    mLuaHandlerId_ls = mHandler;
+    cocos2d::JniMethodInfo t;
+    if(cocos2d::JniHelper::getStaticMethodInfo(t,JAVA_PKG,"loginWithSMS","((Ljava/lang/String;Ljava/lang/String;)V)")){
+        jstring stringArg_phoneNumber = t.env->NewStringUTF(phoneNumber);
+        jstring stringArg_smsCode = t.env->NewStringUTF(smsCode);
+
+        t.env->CallStaticVoidMethod(t.classID,t.methodID,stringArg_phoneNumber,stringArg_smsCode);
+        t.env->DeleteLocalRef(stringArg_phoneNumber);
+        t.env->DeleteLocalRef(stringArg_smsCode);
+        t.env->DeleteLocalRef(t.classID);
+    }
+}
+
+void CXAvos::requestVerifyPhoneNumber(const char* phoneNumber){
+    cocos2d::JniMethodInfo t;
+    if(cocos2d::JniHelper::getStaticMethodInfo(t,JAVA_PKG,"requestVerifyPhoneNumber","((Ljava/lang/String;)V)")){
+        jstring stringArg_phoneNumber = t.env->NewStringUTF(phoneNumber);
+        
+        t.env->CallStaticVoidMethod(t.classID,t.methodID,stringArg_phoneNumber);
+        t.env->DeleteLocalRef(stringArg_phoneNumber);
+        t.env->DeleteLocalRef(t.classID);
+    }
+}
+
+void CXAvos::verifyPhoneNumber(const char* phoneNumber,const char* smsCode,CXLUAFUNC mHandler){
+    mLuaHandlerId_vp = mHandler;
+    cocos2d::JniMethodInfo t;
+    if(cocos2d::JniHelper::getStaticMethodInfo(t,JAVA_PKG,"verifyPhoneNumber","((Ljava/lang/String;Ljava/lang/String;)V)")){
+        jstring stringArg_phoneNumber = t.env->NewStringUTF(phoneNumber);
+        jstring stringArg_smsCode = t.env->NewStringUTF(smsCode);
+        t.env->CallStaticVoidMethod(t.classID,t.methodID,stringArg_phoneNumber);
+        t.env->DeleteLocalRef(stringArg_phoneNumber);
+        t.env->DeleteLocalRef(stringArg_smsCode);
+        t.env->DeleteLocalRef(t.classID);
+    }
+}
+
+void CXAvos::requestLoginSMS(const char* phoneNumber){
+    cocos2d::JniMethodInfo t;
+    if(cocos2d::JniHelper::getStaticMethodInfo(t,JAVA_PKG,"requestLoginSMS","((Ljava/lang/String;)V)")){
+        jstring stringArg_phoneNumber = t.env->NewStringUTF(phoneNumber);
+        
+        t.env->CallStaticVoidMethod(t.classID,t.methodID,stringArg_phoneNumber);
+        t.env->DeleteLocalRef(stringArg_phoneNumber);
+        t.env->DeleteLocalRef(t.classID);
+    }
+}
 
 void CXAvos::initTencentQQ(const char* appId, const char* appKey) {
     cocos2d::JniMethodInfo t;

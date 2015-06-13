@@ -58,6 +58,7 @@ import com.avos.avoscloud.GetCallback;
 import com.avos.avoscloud.GetDataCallback;
 import com.avos.avoscloud.GetFileCallback;
 import com.avos.avoscloud.LogInCallback;
+import com.avos.avoscloud.RequestMobileCodeCallback;
 import com.avos.avoscloud.LogUtil.log;
 import com.avos.avoscloud.ProgressCallback;
 import com.avos.avoscloud.SaveCallback;
@@ -397,6 +398,57 @@ public class BBNDK {
 				invokeLuaCallbackFunctionCP(error,errorCode);
 			}
 		});
+	}
+	
+	public static void loginWithSMS(String phoneNumber,String smsCode){
+		AVUser.loginBySMSCodeInBackground(phoneNumber, smsCode, new LogInCallback<AVUser>(){
+		  @Override
+	      public void done(AVUser user, AVException e) {
+			  if (e == null) {
+				  	onLoginWithSMS(AVUserToJsonStr(user), null, 0);
+		        } else {
+		        	onLoginWithSMS(null, e.getLocalizedMessage(), e.getCode());
+		        }
+	      }
+		});
+	}
+	
+	public static void onLoginWithSMS(final String objectjson, final String error, final int errorcode){
+		((Cocos2dxActivity)(_instance)).runOnGLThread(new Runnable() {
+			@Override
+			public void run() {
+				invokeLuaCallbackFunctionLS(objectjson, error, errorcode);
+			}
+			
+		});
+	}
+	
+	public static void requestVerifyPhoneNumber(String phoneNumber){
+		try {
+			AVUser.requestLoginSmsCode(phoneNumber);
+		} catch (AVException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	//
+	public static void verifyPhoneNumber(String phoneNumber,String smsCode){
+		AVUser.requestMobilePhoneVerifyInBackground(phoneNumber, new RequestMobileCodeCallback() {
+			@Override
+			public void done(AVException e) {
+				invokeLuaCallbackFunctionVP(e.getLocalizedMessage(), e.getCode());
+			}
+		});
+	}
+	
+	public static void requestLoginSMS(String phoneNumber){
+		try {
+			AVUser.requestLoginSmsCode(phoneNumber);
+		} catch (AVException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	
