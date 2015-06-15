@@ -10,12 +10,13 @@
 --	本书学习完成时，累积登陆任务未完成，仍然可以继续任务直到任务完成
 --	累计登陆天数奖励的贝贝豆数量 等于 累计登陆的天数
 -- 二、随机任务
---    	1、普通任务  可能会重复出现
--- 		神秘任务
--- 		打卡
--- 		趁热打铁连续答对3-8词
--- 		分享
--- 		完成一次总结BOSS
+--		(普通任务已经被废弃掉了)
+--    	1、普通任务  可能会重复出现 （废弃）
+-- 		神秘任务 （废弃）
+-- 		打卡 （废弃）
+-- 		趁热打铁连续答对3-8词 （废弃）
+-- 		分享 （废弃）
+-- 		完成一次总结BOSS （废弃）
 
 --		2、特殊任务
 --		完善信息
@@ -24,6 +25,11 @@
 -- 		解锁数据1 解锁数据2 解锁数据4
 --		解锁VIP
 
+-- 		3、每日任务
+--		每天3次,从已经通关的关卡中选出3个(可重复),限定条件有如下3种情况
+--			1、时间限定 在x秒内通关unit(2)关卡,时间为本关单词的长度*1.2
+--			2、不使用提示通关过关卡
+--			3、不限定条件  通关就行
 
 local MissionManager = class("MissionManager")
 
@@ -33,7 +39,6 @@ local DataMission    = require("model.user.DataMission")
 function MissionManager:ctor()
 	self.taskNum = 6 		--随机任务数量
 	self.missionData = nil  --任务数据
-
 end
 
 --获取当前的任务列表 --View层调用
@@ -251,6 +256,7 @@ function MissionManager:generalTasks()
 		-- ts_task 和 js_task 是任务生成的后备列表
 		local ts_task = {} 		--特殊任务  配置  MissionConfig.randomMission 的项,例如 {["mission_id"] = "2-1",["type"] = 2,["condition"]= {1},["bean"]=0}, --完善信息
 		local js_task = {} 		--解锁任务  配置
+		local gk_task = {}      --每日关卡  配置
 		--临时变量
 		local id      = nil  	--任务ID
 		local m_type  = nil 	--任务类型
@@ -259,11 +265,13 @@ function MissionManager:generalTasks()
 			id = v.mission_id
 			m_type = string.sub(id,1,1)
 			if m_type == "1" then
-				result[#result + 1] = v --普通任务 直接入选
+				result[#result + 1] = v --普通任务 直接入选(已废弃)
 			elseif m_type == "2" then
 				ts_task[#ts_task + 1] = v
 			elseif m_type == "3" then
 				js_task[#js_task + 1] = v
+			elseif m_type == "4" then
+				gk_task[#gk_task + 1] = v
 			end
 		end
 		--获取table长度--------------------------------------
@@ -324,6 +332,7 @@ function MissionManager:generalTasks()
 		local tlen = 6 - #result  --可以抽取的任务数量
 		local hasLockMission = false  --已经有解锁任务了  解锁任务只能领取一个
 		
+		--[[
 		for i=1,tlen do
 			local temp_type = math.random(100) --先random 决定是特殊任务还是解锁任务
 			if temp_type < 50 or hasLockMission then --特殊任务
@@ -346,10 +355,33 @@ function MissionManager:generalTasks()
 				end
 			end
 		end
-		--TEST 
+		]]
+
+		--TODO 每日关卡任务
+		-- 首先要查询到 当前书籍的完成情况
+		-- gk_task
+
+		--最多1个特殊任务
+		local ts_index = math.random(tnum(ts_task))
+		if ts_index > 0 then
+			result[#result + 1] = tget(ts_task,ts_index)
+		end
+		--最多1个解锁任务
+		local minprice = 0
+		local js_index = 0
+		for k,v in pairs(js_task) do
+			if v.cost < minprice or minprice == 0 then
+				minprice = v.cost
+				js_index = k
+			end
+		end
+		if js_index > 0 then
+			result[#result + 1] = tget(js_task,js_index)
+		end
+
 		--result[#result + 1] = {["mission_id"] = "2-2",["type"] = 2,["condition"]= {1,3,5,10,20},["bean"]=0}
 		--result 生成的任务列表
-		local mission_str 			= "" --- 1-1_0_0_1_1|2-2_0_0_1_1|3-1_1_2_2_1 任务ID_任务状态_任务条件_任务总条件_任务游标
+		local mission_str 			= "" -- 1-1_0_0_1_1|2-2_0_0_1_1|3-1_1_2_2_1 任务ID_任务状态_任务条件_任务总条件_任务游标
 		local temp_mission_str  	= ""
 		local condition 			= "" 
 		for k,v in pairs(result) do
@@ -364,7 +396,7 @@ function MissionManager:generalTasks()
 						hit = true
 						--计算正确的游标
 						--任务状态 如果是已领取,则把游标定位到下一个系列任务
-						--TODO 如果是已完成，未领取状态，是不是要优先加入任务列表？？？TODO
+						--如果是已完成，未领取状态，是不是要优先加入任务列表
 						-- vv[5] 任务游标 -- vv[2] 任务状态 0未完成  1完成  2已领取
 						if vv[2] == "0" and vv[2] == "1" then--游标不变
 							temp_mission_str = temp_mission_str.."_0_0_"..condition[vv[4]].."_"..vv[5] --_0_0_ 是状态_当前完成度

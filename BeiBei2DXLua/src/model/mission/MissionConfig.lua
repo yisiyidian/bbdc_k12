@@ -15,10 +15,10 @@ local MissionConfig = {}
 MissionConfig.randomMission = {
 	--普通任务
 	-- {["mission_id"] = "1-1",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次神秘任务"}, --神秘任务
-	{["mission_id"] = "1-2",["type"] = 1,["condition"]= {1},["bean"]=10,desc="打卡"}, 			--打卡
+	-- {["mission_id"] = "1-2",["type"] = 1,["condition"]= {1},["bean"]=10,desc="打卡"}, 			--打卡
 	-- {["mission_id"] = "1-3",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次趁热打铁"}, --趁热打铁
-	{["mission_id"] = "1-4",["type"] = 1,["condition"]= {1},["bean"]=10,desc="分享你的成绩"}, 	--分享（分享你的成绩）
-	{["mission_id"] = "1-5",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次总结BOSS"}, --完成一次总结BOSS
+	-- {["mission_id"] = "1-4",["type"] = 1,["condition"]= {1},["bean"]=10,desc="分享你的成绩"}, 	--分享（分享你的成绩）
+	-- {["mission_id"] = "1-5",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次总结BOSS"}, --完成一次总结BOSS
 	-- 特殊任务
 	{["mission_id"] = "2-1",["type"] = 2,["condition"]= {1},["bean"]=10,desc="完善个人信息"}, 	--完善信息
 	{["mission_id"] = "2-2",["type"] = 2,["condition"]= {1,3,5,10,20},["bean"]=10,desc="拥有%s个好友：%s/%s"},	--拥有X个好友
@@ -28,6 +28,10 @@ MissionConfig.randomMission = {
 	{["mission_id"] = "3-2",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据2",cost=100}, 		--解锁数据2
 	{["mission_id"] = "3-3",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据4",cost=300}, 		--解锁数据4
 	{["mission_id"] = "3-4",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁VIP",cost=300}, 		--解锁VIP
+	--每日任务
+	{["mission_id"] = "4-1",["type"] = 4,["condition"]= {1},["bean"]=10,desc="在%s内通过%s关卡"}, 	--时间限定
+	{["mission_id"] = "4-2",["type"] = 4,["condition"]= {1},["bean"]=10,desc="不使用提示通过%s关卡"},	--次数限定
+	{["mission_id"] = "4-3",["type"] = 4,["condition"]= {1},["bean"]=10,desc="通过一次%s关卡"}, 		--无限定条件
 }
 
 MissionConfig.MISSION_SHENMI 	= "1-1" --神秘任务
