@@ -603,8 +603,11 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         end
 
         local length_gap = 50.0
-
-        local length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
+        local length = 0
+        if lastTouchLocation ~= nil then
+            length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
+        end
+        -- local length = math.sqrt((location.x - lastTouchLocation.x)^2+(location.y - lastTouchLocation.y)^2)
         if length <= length_gap then
             fakeTouchMoved(location)
         else
