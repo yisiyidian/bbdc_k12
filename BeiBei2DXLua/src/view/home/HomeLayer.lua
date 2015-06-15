@@ -770,7 +770,9 @@ function HomeLayer:setButtonEnabled(enabled)
     self.button_friend:setEnabled(enabled)
     self.button_shop:setEnabled(enabled)
     self.button_setting:setEnabled(enabled)
-    self.button_sound:setEnabled(enabled)
+    if self.button_sound ~= nil and not tolua.isnull(self.button_sound) then
+        self.button_sound:setEnabled(enabled)
+    end
     self.button_reward:setEnabled(enabled)
 end
 
