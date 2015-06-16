@@ -357,10 +357,29 @@ function MissionManager:generalTasks()
 		end
 		]]
 
-		--TODO 每日关卡任务
+		-- TODO 每日关卡任务
 		-- 首先要查询到 当前书籍的完成情况
 		-- gk_task
+		local bossList = s_LocalDatabaseManager.getAllUnitInfo() --把关卡的数据查询出来
 
+		local canFightBoss = {} --可以打的关卡
+		for bosskey,boss in pairs(bossList) do
+			if boss.unitState ~= 0 then
+				canFightBoss[#canFightBoss + 1] = boss.unitID
+			end
+		end
+		if #canFightBoss == 0 then
+			local bo = bossList[1]
+      if bo then
+        canFightBoss[#canFightBoss + 1] = bo.unitID
+      else
+        canFightBoss[#canFightBoss + 1] = 1
+      end
+		end
+		--每日关卡任务配置
+		for key,gktask in pairs(gk_task) do
+			result[#result + 1] = gktask
+		end
 		--最多1个特殊任务
 		local ts_index = math.random(tnum(ts_task))
 		if ts_index > 0 then
@@ -387,8 +406,18 @@ function MissionManager:generalTasks()
 		for k,v in pairs(result) do
 			temp_mission_str = v.mission_id
 			condition = v.condition
-			if #condition == 1 then
+			if #condition == 1 and v.type ~= 4 then  --但条件 但是非每日关卡任务
 				temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1"
+			elseif v.type == 4 then
+				local bookKey = s_CURRENT_USER.bookKey
+				if bookKey ~= "" then
+					-- 生成每日关卡数据 需要在获取任务列表的接口 特殊处理一下,如果没有每日关卡任务  则添加上每日关卡任务
+					-- bookKey 的下划线要替换掉,替换成#号,否则会冲突
+					local newbookKey = string.gsub(bookKey,"_","#")
+					local unitID = canFightBoss[math.random(#canFightBoss)]
+					-- local unitId = 随机一个unitid
+					temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1_"..newbookKey.."_"..unitID
+				end
 			else
 				local hit = false --命中
 				for kk,vv in pairs(temp_series_missions) do --系列任务的列表
@@ -595,12 +624,12 @@ function MissionManager:updateRandomMissionId()
 	local needRecalc = true --是否需要重新计算 当前任务ID
 	
 	for k,v in pairs(taskList) do
-		if v[2] == "0" then
+		if v[2] == "0" then --任务状态 为未完成
 			undoTask[#undoTask + 1] = v
 		end
 		--如果当前激活的任务 如果是已完成 未领取的情况,不会刷新任务
 		if curTaskId == v[1] and (v[2] == "1") then
-			needRecalc = false
+			needRecalc = false --
 			break
 		end
 	end
