@@ -244,8 +244,30 @@ function SummaryBossAlter:addTime()
 end
 
 function SummaryBossAlter:win1(entrance)
-    --完成总结BOSS
-    s_MissionManager:updateMission(MissionConfig.MISSION_ZJBOSS, 1, false)
+
+    print("书籍",s_CURRENT_USER.bookKey)
+    print("单元",self.bossLayer.unit.unitID)
+
+    local missiondata = {}
+    missiondata[1] = s_CURRENT_USER.bookKey       --书籍
+    missiondata[2] = self.bossLayer.unit.unitID   --单元
+
+    -- --完成总结BOSS
+    -- s_MissionManager:updateMission(MissionConfig.MISSION_ZJBOSS, missionData,1, false)
+
+    --打完总结boss
+    --判断是否达到任务所要求时间
+    if self.bossLayer.useTime <= self.bossLayer.totalBlood/2*1.2 then
+        s_MissionManager:updateMission(MissionConfig.MISSION_ZJBOSS, missiondata,1, false)
+    end
+    --判断是否使用了提示按钮
+    if self.bossLayer.hintChangeBtn == nil then
+        s_MissionManager:updateMission(MissionConfig.MISSION_ZJBOSS, missiondata,1, false)
+    end
+
+    --直接触发通关当前关卡任务
+    s_MissionManager:updateMission(MissionConfig.MISSION_ZJBOSS, missiondata,1, false)
+
 
     if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
         s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
