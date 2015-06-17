@@ -83,8 +83,12 @@ function MissionManager:updateMission(missionId,missionsData,addData,callBack)
 	if addData == nil then
 		addData = true
 	end
-  
-	print("更新任务:"..missionId.." 条件:"..missionsData.." 类型:"..tostring(addData))
+	-- print(type(missionsData))
+  	if type(missionsData) == "number" then
+		print("更新任务:"..missionId.." 条件:"..missionsData.." 类型:"..tostring(addData))
+	else
+		print("更新任务:"..missionId.." 条件:"..missionsData[1].." "..missionsData[2].." 类型:"..tostring(addData))
+	end
 
 	local tb = self:strToTable(self.missionData.taskList)
 	local re = false
@@ -209,7 +213,6 @@ function MissionManager:completeMission(taskId,index,callBack)
 			end
 			--特殊任务 要保存进度 确保不会重复出现
 			if onceTaskComplete then
-				-- local comTable = self:strToTable(self.missionData.taskCompleteList)
 				local comTable = string.split(self.missionData.taskCompleteList,"|")
 				comTable[#comTable + 1] = taskId
 				local restr = ""
@@ -396,7 +399,12 @@ function MissionManager:generalTasks()
 		if #canFightBoss == 0 then
 			local bo = bossList[1]
 			if bo then
-				local costTime = #bo.wrongWordList * 1.2
+				local costTime = 0--#bo.wrongWordList * 1.2
+				local chars = 0 --字母数量
+				for k,v in pairs(bo.wrongWordList) do
+					chars = chars + #v
+				end
+				costTime = chars * 1.2
 				canFightBoss[#canFightBoss + 1] = {unitID = bo.unitID,costTime = costTime}
 			else
 				canFightBoss[#canFightBoss + 1] = {unitID = 1,costTime = 20}
@@ -725,7 +733,13 @@ function MissionManager:getCurRandomTaskData()
 		if #canFightBoss == 0 then
 			local bo = bossList[1]
 			if bo then
-				local costTime = #bo.wrongWordList * 1.2
+				-- local costTime = #bo.wrongWordList * 1.2
+				local costTime = 0--#bo.wrongWordList * 1.2
+				local chars = 0 --字母数量
+				for k,v in pairs(bo.wrongWordList) do
+					chars = chars + #v
+				end
+				costTime = chars * 1.2
 				canFightBoss[#canFightBoss + 1] = {unitID = bo.unitID,costTime = costTime}
 			else
 				canFightBoss[#canFightBoss + 1] = {unitID = 1,costTime = 20}

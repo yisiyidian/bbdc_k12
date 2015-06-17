@@ -160,8 +160,10 @@ function TaskView:setData(data)
 	self.nowCount 	= data[3] --任务条件
 	self.totalCount = data[4] --任务总条件
 	self.index 		= data[5] --系列任务的游标
-
-	--更新界面
+	self.bookKey 	= data[6] --书籍的key (可选)
+	self.unitID     = data[7] --单元的ID  (可选)
+	self.costTime   = data[8] --限定时间  (限定的时间)
+ 	--更新界面
 	self:updateView()
 end
 
@@ -183,18 +185,22 @@ function TaskView:updateView()
 		self.taskTarget:setString(loginNum)
 	--不是累计登陆任务
 	else
-		local unit = s_LocalDatabaseManager.getAllUnitInfo()[1].unitID
 		self.beanNum:setString(config.bean)
+		local unit = "Unit"
+		local unitName = string.split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(self.unitID)],'_')
+		unit = unit..unitName[1]
+		if #unitName == 2 then
+			unit = unit.."("..unitName[2]..")"
+		end
 		--根据TaskID判断是什么任务
 		if self.taskID == "4-1" then 
-			self.taskTarget:setString(string.format(config.desc,10,unit))
+			self.taskTarget:setString(string.format(config.desc,self.costTime,unit))
 		elseif self.taskID == "4-2" then 
 			self.taskTarget:setString(string.format(config.desc,unit))
 		elseif self.taskID == "4-3" then
 			self.taskTarget:setString(string.format(config.desc,unit))
 		else
 			--修改应该获得的贝贝豆数量
-			--self.beanNum:setString(config.bean)
 			self.taskTarget:setString(string.format(config.desc,self.totalCount,self.nowCount,self.totalCount))
 		end
 	end

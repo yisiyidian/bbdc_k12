@@ -29,7 +29,7 @@ MissionConfig.randomMission = {
 	{["mission_id"] = "3-3",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据4",cost=300}, 		--解锁数据4
 	{["mission_id"] = "3-4",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁VIP",cost=300}, 		--解锁VIP
 	--每日任务
-	{["mission_id"] = "4-1",["type"] = 4,["condition"]= {1},["bean"]=10,desc="在%s内通过%s关卡"}, 	--时间限定
+	{["mission_id"] = "4-1",["type"] = 4,["condition"]= {1},["bean"]=10,desc="在%s秒内通过%s关卡"}, 	--时间限定
 	{["mission_id"] = "4-2",["type"] = 4,["condition"]= {1},["bean"]=10,desc="不使用提示通过%s关卡"},	--次数限定
 	{["mission_id"] = "4-3",["type"] = 4,["condition"]= {1},["bean"]=10,desc="通过一次%s关卡"}, 		--无限定条件
 }
