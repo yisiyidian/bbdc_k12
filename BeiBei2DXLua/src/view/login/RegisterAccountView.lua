@@ -707,7 +707,7 @@ end
 
 --android 返回键
 function RegisterAccountView:onBackTouch()
-	self:onReturnClick(nil,ccui.TouchEventType.ended)
+	self:onReturnClick(self.btnReturn,ccui.TouchEventType.ended)
 end
 
 return RegisterAccountView
