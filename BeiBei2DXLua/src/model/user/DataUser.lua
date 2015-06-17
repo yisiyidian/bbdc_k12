@@ -163,6 +163,7 @@ function DataUser:setGuideStep(step)
     if self.guideStep < step then
         self.guideStep = step
         saveUserToServer({['guideStep']=self.guideStep})
+        AnalyticsFinalStep(step)
     end
 end
 

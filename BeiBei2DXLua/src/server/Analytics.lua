@@ -44,6 +44,10 @@ function AnalyticsSummaryStep(step)
     print('Analytics', getAnalyticsPrefix() .. 'TutorialSummaryStep', tostring(step)); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialSummaryStep', tostring(step))
 end
 
+-- 终极版本打点
+function AnalyticsFinalStep(step)
+    print('Analytics', getAnalyticsPrefix() .. 'TutorialFinalStep', tostring(step)); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'TutorialFinalStep', tostring(step))
+end
 ----------------------------------------------------------------------------------------
 -- 每日打卡引导
 function AnalyticsDailyCheckIn(day)
