@@ -1,4 +1,4 @@
---帐号注册界面
+\--帐号注册界面
 --玩家首次登陆的时候会触发显示
 --在个人信息界面也会触发
 
@@ -38,6 +38,9 @@ RegisterAccountView.STEP_8 = 8	--密码找回
 function RegisterAccountView:ctor(step)
 	self:init(step)
 	self.debug = false
+	onAndroidKeyPressed(self,handler(self, self.onBackTouch),function ()
+		-- body
+	end)
 end
 
 function RegisterAccountView:showErrorIcon()
@@ -698,6 +701,11 @@ function RegisterAccountView:resetView()
 	end
 
 	self.views = {}
+end
+
+--android 返回键
+function RegisterAccountView:onBackTouch()
+	self:onReturnClick(nil,ccui.TouchEventType.ended)
 end
 
 return RegisterAccountView
