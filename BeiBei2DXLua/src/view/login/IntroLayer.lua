@@ -50,7 +50,7 @@ function IntroLayer.create(directOnLogin)
         if eventType == ccui.TouchEventType.ended then
             s_SCENE:removeAllPopups() 
             playSound(s_sound_buttonEffect)
-            s_O2OController.signUpWithRandomUserName()
+            -- s_O2OController.signUpWithRandomUserName()
         end
     end
 
