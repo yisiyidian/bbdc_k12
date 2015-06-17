@@ -128,14 +128,6 @@ function ChapterLayer:ctor()
         self.backColor = backColor
         self:addChild(self.backColor)
 
-        local back = ccui.Layout:create()
-        back:setContentSize(s_DESIGN_WIDTH ,s_DESIGN_HEIGHT)
-        back:setPosition(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT /2)
-        back:ignoreAnchorPointForPosition(false)
-        back:setAnchorPoint(0.5,0.5)
-        self.back = back
-        self.backColor:addChild(self.back)
-        self.back:addTouchEventListener(handler(self,self.touchFunc))   
         s_CorePlayManager.enterGuideScene(5,self.backColor)
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
         summaryboss:setPosition(310,725)
@@ -144,6 +136,25 @@ function ChapterLayer:ctor()
         summaryboss:setScale(0.9)
         self.backColor:addChild(summaryboss)
         s_CURRENT_USER:setGuideStep(s_guide_step_enterLevel) 
+
+
+        local onTouchBegan = function(touch, event)
+            self:touchFunc()
+        end    
+        
+        local onTouchMoved = function(touch, event)
+        end
+        
+        local onTouchEnded = function(touch, event)
+        end
+        
+        local listener = cc.EventListenerTouchOneByOne:create()
+        listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+        listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
+        listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+        local eventDispatcher = self.backColor:getEventDispatcher()
+        eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self.backColor)
+        listener:setSwallowTouches(true)
     elseif s_CURRENT_USER.guideStep <= s_guide_step_bag5 then
         self.boxButton:setVisible(false)
     end
