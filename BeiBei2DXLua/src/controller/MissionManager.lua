@@ -104,14 +104,23 @@ function MissionManager:updateMission(missionId,missionsData,addData,callBack)
 				end
 			else
 				--关卡任务
-				local bookKey = missionsData.bookKey
+				local bookKey = string.gsub(missionsData.bookKey,"_","#") 
 				local unitID  = missionsData.unitID
-
+				local costTime = missionData.costTime
 				if v[6] == bookKey and v[7] == tostring(unitID) then
-					hit = true
-					v[3] = "1" --条件满足
-					v[2] = "1" --状态改为未领取
-					re = true
+					if missionId == "4-1" then
+						if tonumber(v[8]) >= costTime then
+							hit = true
+							v[3] = "1" --条件满足
+							v[2] = "1" --状态改为未领取
+							re = true	
+						end
+					else
+						hit = true
+						v[3] = "1" --条件满足
+						v[2] = "1" --状态改为未领取
+						re = true
+					end
 				end
 			end
 		end
@@ -387,9 +396,10 @@ function MissionManager:generalTasks()
 		if #canFightBoss == 0 then
 			local bo = bossList[1]
 			if bo then
-				canFightBoss[#canFightBoss + 1] = bo.unitID
+				local costTime = #bo.wrongWordList * 1.2
+				canFightBoss[#canFightBoss + 1] = {unitID = bo.unitID,costTime = costTime}
 			else
-				canFightBoss[#canFightBoss + 1] = 1
+				canFightBoss[#canFightBoss + 1] = {unitID = 1,costTime = 20}
 			end
 		end
 		--每日关卡任务配置
@@ -430,9 +440,13 @@ function MissionManager:generalTasks()
 					-- 生成每日关卡数据 需要在获取任务列表的接口 特殊处理一下,如果没有每日关卡任务  则添加上每日关卡任务
 					-- bookKey 的下划线要替换掉,替换成#号,否则会冲突
 					local newbookKey = string.gsub(bookKey,"_","#")
-					local unitID = canFightBoss[math.random(#canFightBoss)]
+					local unit = canFightBoss[math.random(#canFightBoss)]
 					-- local unitId = 随机一个unitid
-					temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1_"..newbookKey.."_"..unitID
+					if temp_mission_str == "4-1" then
+						temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1_"..newbookKey.."_"..unit.unitID.."_"..unit.costTime
+					else
+						temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1_"..newbookKey.."_"..unit.unitID
+					end
 				else
 					temp_mission_str = ""
 				end
@@ -711,9 +725,10 @@ function MissionManager:getCurRandomTaskData()
 		if #canFightBoss == 0 then
 			local bo = bossList[1]
 			if bo then
-				canFightBoss[#canFightBoss + 1] = bo.unitID
+				local costTime = #bo.wrongWordList * 1.2
+				canFightBoss[#canFightBoss + 1] = {unitID = bo.unitID,costTime = costTime}
 			else
-				canFightBoss[#canFightBoss + 1] = 1
+				canFightBoss[#canFightBoss + 1] = {unitID = 1,costTime = 20}
 			end
 		end
 		--每日关卡任务配置
@@ -730,9 +745,13 @@ function MissionManager:getCurRandomTaskData()
 				-- 生成每日关卡数据 需要在获取任务列表的接口 特殊处理一下,如果没有每日关卡任务  则添加上每日关卡任务
 				-- bookKey 的下划线要替换掉,替换成#号,否则会冲突
 				local newbookKey = string.gsub(bookKey,"_","#")
-				local unitID = canFightBoss[math.random(#canFightBoss)]
+				local unit = canFightBoss[math.random(#canFightBoss)]
 				-- local unitId = 随机一个unitid
-				temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1_"..newbookKey.."_"..unitID
+				if temp_mission_str == "4-1" then
+					temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1_"..newbookKey.."_"..unit.unitID.."_"..unit.costTime
+				else
+					temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1_"..newbookKey.."_"..unit.unitID
+				end
 			end
       
 			if temp_mission_str ~= "" then
