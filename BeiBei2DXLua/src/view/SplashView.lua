@@ -1,4 +1,4 @@
-
+-- Android的载入界面在这里
 local SplashView = class("SplashView", function()
     return cc.Layer:create()
 end)
