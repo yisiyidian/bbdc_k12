@@ -15,6 +15,7 @@ local MissionConfig          = require("model.mission.MissionConfig") --任务�
 
 local RegisterAccountView = class("RegisterAccountView",function()
 	-- local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
+  print(debug.traceback())
 	local layer = cc.Layer:create()
 	layerHoldTouch(layer)
 	return layer
@@ -116,9 +117,9 @@ function RegisterAccountView:onReturnClick(sender,eventType)
 		sender:setEnabled(false)
 		self:endRegister()
 		s_CURRENT_USER.showSettingLayer = 1
-		if s_CorePlayManager ~= nil then
-			s_CorePlayManager.enterHomeLayer()
-		end
+		-- if self.close == nil then
+		-- 	s_CorePlayManager.enterHomeLayer()
+		-- end
 	else
 		self.curStep = self.curStep - 1
 		self:goStep(self.curStep)
