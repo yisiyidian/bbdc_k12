@@ -62,6 +62,8 @@ function HomeLayer.create()
     if s_CURRENT_USER.k12SmallStep < s_K12_enterHomeLayer then
         s_CURRENT_USER:setK12SmallStep(s_K12_enterHomeLayer)
     end
+
+    s_CURRENT_USER:setSummaryStep(s_summary_enterHomeLayer)
     -- 打点
     -- data begin
     print("s_CURRENT_USER.bookKey:"..s_CURRENT_USER.bookKey)

@@ -28,6 +28,7 @@ function LevelProgressPopup:ctor(index)
     print_lua_table(self.unit)
     -- 界面初始化
     self:initUI()
+    s_CURRENT_USER:setSummaryStep(s_summary_enterFirstPopup)
 end
 
 function LevelProgressPopup:initUI()
@@ -111,6 +112,7 @@ function LevelProgressPopup:createSummary(index)
 
             showProgressHUD('', true)
             --print('replay island')
+            s_CURRENT_USER:setSummaryStep(s_summary_enterFirstLevel)
             local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
             local summaryBossLayer = SummaryBossLayer.create(self.unit)
             s_SCENE:replaceGameLayer(summaryBossLayer) 
