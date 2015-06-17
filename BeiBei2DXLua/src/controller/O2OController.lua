@@ -128,7 +128,7 @@ function O2OController.onAssetsManagerCompleted()
         -- IntroLayer
         local introLayer = IntroLayer.create(false)
         s_SCENE:replaceGameLayer(introLayer)
-        -- s_O2OController.signUpWithRandomUserName()
+        s_O2OController.signUpWithRandomUserName()
     end
 end
 
