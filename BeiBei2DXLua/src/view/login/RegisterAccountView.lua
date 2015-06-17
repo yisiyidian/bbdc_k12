@@ -59,9 +59,9 @@ end
 
 --初始化各个view
 function RegisterAccountView:init(step)
-	AnalyticsSummaryStep(step)
 	self.views = {}
 	self.curStep = step or 1
+	AnalyticsSummaryStep(self.curStep)
 	self.phoneNumber = ""
 	local bigWidth = s_DESIGN_WIDTH + 2 * s_DESIGN_OFFSET_WIDTH
     local bigHeight = 1.0*s_DESIGN_HEIGHT
