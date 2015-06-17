@@ -112,7 +112,9 @@ function RegisterAccountView:onReturnClick(sender,eventType)
 		sender:setEnabled(false)
 		self:endRegister()
 		s_CURRENT_USER.showSettingLayer = 1
-		s_CorePlayManager.enterHomeLayer()
+		if s_CorePlayManager ~= nil then
+			s_CorePlayManager.enterHomeLayer()
+		end
 	else
 		self.curStep = self.curStep - 1
 		self:goStep(self.curStep)
