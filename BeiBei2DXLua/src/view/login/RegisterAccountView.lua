@@ -59,6 +59,7 @@ end
 
 --初始化各个view
 function RegisterAccountView:init(step)
+	AnalyticsSummaryStep(step)
 	self.views = {}
 	self.curStep = step or 1
 	self.phoneNumber = ""

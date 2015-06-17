@@ -51,6 +51,7 @@ function IntroLayer.create(directOnLogin)
             s_SCENE:removeAllPopups() 
             playSound(s_sound_buttonEffect)
             s_O2OController.signUpWithRandomUserName()
+            s_CURRENT_USER:setSummaryStep(s_summary_selectGrade)
         end
     end
 
