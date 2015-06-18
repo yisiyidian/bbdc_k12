@@ -129,7 +129,7 @@ end
 --今日任务全部完成
 function TaskView:TodayTaskComplete()
 	local label1 = cc.Label:createWithSystemFont("今天干的不错,","",30)
-	label1:setPosition(self.background:getContentSize().width/2,self.background:getContentSize().height/4+80)
+	label1:setPosition(self.background:getContentSize().width/2,self.background:getContentSize().height/2)
 	label1:setAnchorPoint(0.5,0.5)
 	label1:setTextColor(cc.c3b(0,0,0))
 	label1:setVisible(false)
@@ -137,7 +137,7 @@ function TaskView:TodayTaskComplete()
 	self.label1 = label1
 
 	local label2 = cc.Label:createWithSystemFont("明天还有更多的任务等着你~","",30)
-	label2:setPosition(self.background:getContentSize().width/2,self.background:getContentSize().height/4+10)
+	label2:setPosition(self.background:getContentSize().width/2,self.background:getContentSize().height/2)
 	label2:setAnchorPoint(0.5,0.5)
 	label2:setTextColor(cc.c3b(0,0,0))
 	label2:setVisible(false)
