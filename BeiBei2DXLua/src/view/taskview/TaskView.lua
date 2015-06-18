@@ -55,24 +55,24 @@ function TaskView:initUI()
 	self.boss = boss
 
 	--添加按钮（去完成任务）
-	local taskGoButton = ccui.Button:create("image/guide/taskButton.png")
+	local taskGoButton = ccui.Button:create("image/guide/taskButton.png","image/guide/anniuxia.png","image/guide/taskButton.png")
 	taskGoButton:setAnchorPoint(0.5,0.5)
 	taskGoButton:setPosition(bgWidth/2,100)
 	self.background:addChild(taskGoButton)
 	taskGoButton:addTouchEventListener(handler(self,self.clickGoTaskButton))
-	taskGoButton:setTitleText("去做任务")
-	taskGoButton:setTitleFontSize(20)
+	taskGoButton:setTitleText("去完成任务")
+	taskGoButton:setTitleFontSize(40)
 	taskGoButton:setVisible(true)
 	self.taskGoButton = taskGoButton
 
 	--添加按钮（领取奖励）
-	local taskRewardButton = ccui.Button:create("image/guide/taskButton.png")
+	local taskRewardButton = ccui.Button:create("image/guide/taskButton.png","image/guide/anniuxia.png","image/guide/taskButton.png")
 	taskRewardButton:setAnchorPoint(0.5,0.5)
 	taskRewardButton:setPosition(bgWidth/2,80)
 	self.background:addChild(taskRewardButton)
 	taskRewardButton:addTouchEventListener(handler(self,self.getRewardTaskButton))
 	taskRewardButton:setTitleText("领取奖励")
-	taskRewardButton:setTitleFontSize(20)
+	taskRewardButton:setTitleFontSize(40)
 	taskRewardButton:setVisible(false)
 	self.taskRewardButton = taskRewardButton
 
@@ -207,6 +207,9 @@ function TaskView:updateView()
 		--累计登陆的天数
 		local loginNum = "目标: ".."累计登陆"..self.totalCount.."天"
 		self.taskTarget:setString(loginNum)
+		--修改boss图片
+		self.boss:setTexture("image/guide/taskBoss.png")
+		self.boss:setScale(0.2)
 	--不是累计登陆任务
 	else
 		local labelBeanNum = "X "..config.bean
