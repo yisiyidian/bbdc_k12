@@ -46,10 +46,10 @@ function TaskView:initUI()
 	self.taskDay = taskDay
 
 	--添加boss
-	local boss = cc.Sprite:create("image/guide/taskBoss.png")
+	local boss = cc.Sprite:create("image/guide/boss.png")
 	boss:setPosition(bgWidth/2,bgHeight/2+60)
 	boss:setAnchorPoint(0.5,0.5)
-	boss:setScale(0.2)
+	--boss:setScale(0.2)
 	boss:ignoreAnchorPointForPosition(false)
 	self.background:addChild(boss)
 	self.boss = boss
@@ -208,8 +208,7 @@ function TaskView:updateView()
 		local loginNum = "目标: ".."累计登陆"..self.totalCount.."天"
 		self.taskTarget:setString(loginNum)
 		--修改boss图片
-		self.boss:setTexture("image/guide/taskBoss.png")
-		self.boss:setScale(0.2)
+		self.boss:setTexture("image/guide/loginReward.png")
 	--不是累计登陆任务
 	else
 		local labelBeanNum = "X "..config.bean
