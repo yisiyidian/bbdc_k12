@@ -132,6 +132,7 @@ function RegisterAccountView:goStep(step,...)
 	local args = {...}
 	self:resetView()
 	self.alertTip:setString("")
+	AnalyticsSummaryStep(step)
 	--处理UI切换
 	if step == RegisterAccountView.STEP_1 then
 		self:showInputPhoneNumber(args)-----------------注册：输入手机号

@@ -53,17 +53,10 @@ function HomeLayer.create()
         s_LocalDatabaseManager.initUnitInfo(1)
     end
 
-    -- add tutorial step
-    if s_CURRENT_USER.tutorialStep == s_tutorial_home then
-        s_CURRENT_USER:setTutorialStep(s_tutorial_home+1) --1 -> 2
-        -- print('tutorial_step:'..s_CURRENT_USER.tutorial_step)
+    if s_CURRENT_USER.summaryStep < s_summary_enterHomeLayer then
+        s_CURRENT_USER:setSummaryStep(s_summary_enterHomeLayer)
+        AnalyticsSummaryStep(s_summary_enterHomeLayer)
     end
-
-    if s_CURRENT_USER.k12SmallStep < s_K12_enterHomeLayer then
-        s_CURRENT_USER:setK12SmallStep(s_K12_enterHomeLayer)
-    end
-
-    s_CURRENT_USER:setSummaryStep(s_summary_enterHomeLayer)
     -- 打点
     -- data begin
     print("s_CURRENT_USER.bookKey:"..s_CURRENT_USER.bookKey)

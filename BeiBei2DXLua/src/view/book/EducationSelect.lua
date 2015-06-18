@@ -15,8 +15,9 @@ function EducationSelect.create()
 end
 
 function EducationSelect:ctor()
-    if s_CURRENT_USER.k12SmallStep < s_K12_selectGrade then
-        s_CURRENT_USER:setK12SmallStep(s_K12_selectGrade)
+    AnalyticsSummaryStep(s_summary_selectGrade)
+    if s_CURRENT_USER.summaryStep < s_summary_selectGrade then
+        s_CURRENT_USER:setSummaryStep(s_summary_selectGrade)
     end
 
     -- 打点

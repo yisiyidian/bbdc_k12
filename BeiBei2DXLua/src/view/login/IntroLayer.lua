@@ -50,7 +50,6 @@ function IntroLayer.create(directOnLogin)
         if eventType == ccui.TouchEventType.ended then
             s_SCENE:removeAllPopups() 
             playSound(s_sound_buttonEffect)
-            s_CURRENT_USER:setSummaryStep(s_summary_selectGrade)
         end
     end
 

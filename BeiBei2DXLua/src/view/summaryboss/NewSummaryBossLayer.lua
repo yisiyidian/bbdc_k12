@@ -12,10 +12,12 @@ end
 
 function NewSummaryBossLayer:ctor(unit)
 
-    if s_CURRENT_USER.summaryStep == s_summary_enterFirstPopup then
-        s_CURRENT_USER:setSummaryStep(s_summary_enterFirstLevel) 
-    elseif s_CURRENT_USER.summaryStep == s_summary_enterSecondPopup then
-        s_CURRENT_USER:setSummaryStep(s_summary_enterSecondLevel) 
+    if s_CURRENT_USER.summaryStep < s_summary_enterFirstLevel then
+        s_CURRENT_USER:setSummaryStep(s_summary_enterFirstLevel)
+        AnalyticsSummaryStep(s_summary_enterFirstLevel)
+    elseif s_CURRENT_USER.summaryStep < s_summary_enterSecondLevel then
+        s_CURRENT_USER:setSummaryStep(s_summary_enterSecondLevel)
+        AnalyticsSummaryStep(s_summary_enterSecondLevel)
     end
     --s_SCENE:removeAllPopups()
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -310,7 +312,10 @@ function NewSummaryBossLayer:initBoss()
     		if self.currentBlood > 0 then
                 -- self.isLose = true
                 self:gameOverFunc(false)   
-                s_CURRENT_USER:setSummaryStep(s_summary_failFirstLevel) 
+                if s_CURRENT_USER.summaryStep < s_summary_failFirstLevel then
+                    s_CURRENT_USER:setSummaryStep(s_summary_failFirstLevel)
+                    AnalyticsSummaryStep(s_summary_failFirstLevel)
+                end
             end
     	end
     end
@@ -364,7 +369,10 @@ function NewSummaryBossLayer:initMat(visible)
         end
         --self:initGuideInfo()
         self.changeBtnTime = 0
-        s_CURRENT_USER:setSummaryStep(s_summary_doFirstWord) 
+        if s_CURRENT_USER.summaryStep < s_summary_doFirstWord then
+            s_CURRENT_USER:setSummaryStep(s_summary_doFirstWord)
+            AnalyticsSummaryStep(s_summary_doFirstWord)
+        end
         if self.gameOver then return end
         playWordSound(self.wordList[1][4])
         self.boss:stopAllActions()
@@ -428,7 +436,10 @@ function NewSummaryBossLayer:initMat(visible)
                 self:resetMat()
             else
                 self:gameOverFunc(true)
-                s_CURRENT_USER:setSummaryStep(s_summary_successFirstLevel) 
+                if s_CURRENT_USER.summaryStep < s_summary_successFirstLevel then
+                    s_CURRENT_USER:setSummaryStep(s_summary_successFirstLevel)
+                    AnalyticsSummaryStep(s_summary_successFirstLevel)
+                end
             end
         end)
 	end

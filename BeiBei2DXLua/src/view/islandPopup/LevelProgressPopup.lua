@@ -17,9 +17,15 @@ end
 function LevelProgressPopup:ctor(index)
     self.index = index
     if tonumber(index) == 0 then
-        s_CURRENT_USER:setSummaryStep(s_summary_enterFirstPopup) 
+        if s_CURRENT_USER.summaryStep < s_summary_enterFirstPopup then
+            s_CURRENT_USER:setSummaryStep(s_summary_enterFirstPopup)
+            AnalyticsSummaryStep(s_summary_enterFirstPopup)
+        end
     elseif tonumber(index) == 1 then
-        s_CURRENT_USER:setSummaryStep(s_summary_enterSecondPopup) 
+        if s_CURRENT_USER.summaryStep < s_summary_enterSecondPopup then
+            s_CURRENT_USER:setSummaryStep(s_summary_enterSecondPopup)
+            AnalyticsSummaryStep(s_summary_enterSecondPopup)
+        end
     end
 
     self.islandIndex = tonumber(index) + 1
@@ -112,7 +118,6 @@ function LevelProgressPopup:createSummary(index)
 
             showProgressHUD('', true)
             --print('replay island')
-            s_CURRENT_USER:setSummaryStep(s_summary_enterFirstLevel)
             local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
             local summaryBossLayer = SummaryBossLayer.create(self.unit)
             s_SCENE:replaceGameLayer(summaryBossLayer) 
