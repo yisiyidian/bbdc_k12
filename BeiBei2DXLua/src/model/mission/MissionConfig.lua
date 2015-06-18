@@ -20,18 +20,18 @@ MissionConfig.randomMission = {
 	-- {["mission_id"] = "1-4",["type"] = 1,["condition"]= {1},["bean"]=10,desc="分享你的成绩"}, 	--分享（分享你的成绩）
 	-- {["mission_id"] = "1-5",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次总结BOSS"}, --完成一次总结BOSS
 	-- 特殊任务
-	{["mission_id"] = "2-1",["type"] = 2,["condition"]= {1},["bean"]=10,desc="完善个人信息"}, 	--完善信息
-	{["mission_id"] = "2-2",["type"] = 2,["condition"]= {1,3,5,10,20},["bean"]=10,desc="拥有%s个好友：%s/%s"},	--拥有X个好友
-	{["mission_id"] = "2-3",["type"] = 2,["condition"]= {1},["bean"]=10,desc="下载音频"}, 		--下载音频
+	{["mission_id"] = "2-1",["type"] = 2,["condition"]= {1},["bean"]=10,desc="完善个人信息",picture = "image/guide/taskBoss.png"}, 	--完善信息
+	{["mission_id"] = "2-2",["type"] = 2,["condition"]= {1,3,5,10,20},["bean"]=10,desc="拥有%s个好友：%s/%s",picture = "image/guide/taskBoss.png"},	--拥有X个好友
+	{["mission_id"] = "2-3",["type"] = 2,["condition"]= {1},["bean"]=10,desc="下载音频",picture = "image/guide/taskBoss.png"}, 		--下载音频
 	--特殊任务中的解锁任务
-	{["mission_id"] = "3-1",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据1",cost=10}, 		--解锁数据1
-	{["mission_id"] = "3-2",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据2",cost=100}, 		--解锁数据2
-	{["mission_id"] = "3-3",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据4",cost=300}, 		--解锁数据4
-	{["mission_id"] = "3-4",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁VIP",cost=300}, 		--解锁VIP
+	{["mission_id"] = "3-1",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据1",cost=10,picture = "image/guide/taskBoss.png"}, 		--解锁数据1
+	{["mission_id"] = "3-2",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据2",cost=100,picture = "image/guide/taskBoss.png"}, 		--解锁数据2
+	{["mission_id"] = "3-3",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据4",cost=300,picture = "image/guide/taskBoss.png"}, 		--解锁数据4
+	{["mission_id"] = "3-4",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁VIP",cost=300,picture = "image/guide/taskBoss.png"}, 		--解锁VIP
 	--每日任务
-	{["mission_id"] = "4-1",["type"] = 4,["condition"]= {1},["bean"]=10,desc="在%s秒内通过%s关卡"}, 	--时间限定
-	{["mission_id"] = "4-2",["type"] = 4,["condition"]= {1},["bean"]=10,desc="不使用提示通过%s关卡"},	--次数限定
-	{["mission_id"] = "4-3",["type"] = 4,["condition"]= {1},["bean"]=10,desc="通过一次%s关卡"}, 		--无限定条件
+	{["mission_id"] = "4-1",["type"] = 4,["condition"]= {1},["bean"]=10,desc="在%s秒内通过%s关卡",picture = "image/guide/taskBoss.png"}, 	--时间限定
+	{["mission_id"] = "4-2",["type"] = 4,["condition"]= {1},["bean"]=10,desc="不使用提示通过%s关卡",picture = "image/guide/taskBoss.png"},	--次数限定
+	{["mission_id"] = "4-3",["type"] = 4,["condition"]= {1},["bean"]=10,desc="通过一次%s关卡",picture = "image/guide/taskBoss.png"}, 		--无限定条件
 }
 
 MissionConfig.MISSION_SHENMI 	= "1-1" --神秘任务
