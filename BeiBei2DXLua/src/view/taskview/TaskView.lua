@@ -205,7 +205,7 @@ function TaskView:updateView()
 		self.beanNum:setString(totalCount)
 
 		--累计登陆的天数
-		local loginNum = "累计登陆"..self.totalCount.."天"
+		local loginNum = "目标: ".."累计登陆"..self.totalCount.."天"
 		self.taskTarget:setString(loginNum)
 	--不是累计登陆任务
 	else
@@ -359,13 +359,13 @@ function TaskView:getRewardTaskButton(sender,eventType)
     local action5 = cc.CallFunc:create(handler(self,releaseBean))
     local beanCreate = function(self)
     	self:createBean()
-    	self:resetView()
+    	--self:resetView()
     end
     local action6 = cc.CallFunc:create(handler(self,beanCreate))
     local action7 = cc.CallFunc:create(handler(self,viewReset))
-    self.beanNum:runAction(cc.Sequence:create(action4,action2,action5,action6,action7))
+    self.beanNum:runAction(cc.Sequence:create(action4,action2,action5,action6))
 
-	--self:resetView()
+	self:resetView()
 end
 
 return TaskView
