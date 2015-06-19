@@ -48,6 +48,9 @@ MissionConfig.MISSION_DATA1 	= "3-1" --解锁数据1
 MissionConfig.MISSION_DATA2 	= "3-2" --解锁数据2	
 MissionConfig.MISSION_DATA3 	= "3-3" --解锁数据4
 MissionConfig.MISSION_VIP 		= "3-4" --解锁VIP 	
+MissionConfig.MISSION_TIME      = "4-1" --时间限定
+MissionConfig.MISSION_TIMES     = "4-2" --次数限定
+MissionConfig.MISSION_NOTHING   = "4-3" --无限定条件
 
 --累计登陆的任务类型
 MissionConfig.MISSION_LOGIN  	= "MISSION_LOGIN"

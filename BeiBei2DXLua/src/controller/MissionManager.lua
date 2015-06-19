@@ -108,9 +108,13 @@ function MissionManager:updateMission(missionId,missionsData,addData,callBack)
 				end
 			else
 				--关卡任务
-				local bookKey = string.gsub(missionsData.bookKey,"_","#") 
-				local unitID  = missionsData.unitID
-				local costTime = missionData.costTime
+				--local bookKey = string.gsub(missionsData.bookKey,"_","#") 
+				--local bookKey = string.gsub(s_CURRENT_USER.bookKey,"_","#") 
+				--local unitID  = missionsData.unitID
+				--local costTime = missionData.costTime
+				local bookKey = string.gsub(s_CURRENT_USER.bookKey,"_","#") 
+				local unitID  = missionsData[2]
+				local costTime = missionsData[3]
 				if v[6] == bookKey and v[7] == tostring(unitID) then
 					if missionId == "4-1" then
 						if tonumber(v[8]) >= costTime then

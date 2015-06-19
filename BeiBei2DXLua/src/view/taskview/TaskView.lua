@@ -214,23 +214,32 @@ function TaskView:updateView()
 		local labelBeanNum = "X "..config.bean
 		--self.beanNum:setString(config.bean)
 		self.beanNum:setString(labelBeanNum)
-		local unit = "Unit"
-		local unitName = string.split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(self.unitID)],'_')
-		unit = unit..unitName[1]
-		if #unitName == 2 then
-			unit = unit.."("..unitName[2]..")"
+		-- local unit = "Unit"
+		-- local unitName = string.split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(self.unitID)],'_')
+		-- unit = unit..unitName[1]
+		-- if #unitName == 2 then
+		-- 	unit = unit.."("..unitName[2]..")"
+		-- end
+		if string.sub(self.taskID,1,1) == "4" then -- 4开头
+			local unit = "Unit"
+			self.unit = unit
+			local unitName = string.split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(self.unitID)],'_')
+			self.unit = self.unit..unitName[1]
+			if #unitName == 2 then
+				self.unit = self.unit.."("..unitName[2]..")"
+			end
 		end
 		--根据TaskID判断是什么任务
 		if self.taskID == "4-1" then 
-			local temp = "目标: "..string.format(config.desc,self.costTime,unit)
+			local temp = "目标: "..string.format(config.desc,self.costTime,self.unit)
 			self.taskTarget:setString(temp)
 			--self.taskTarget:setString(string.format(config.desc,self.costTime,unit))
 		elseif self.taskID == "4-2" then 
-			local temp = "目标: "..string.format(config.desc,unit)
+			local temp = "目标: "..string.format(config.desc,self.unit)
 			self.taskTarget:setString(temp)
 			--self.taskTarget:setString(string.format(config.desc,unit))
 		elseif self.taskID == "4-3" then
-			local temp = "目标: "..string.format(config.desc,unit)
+			local temp = "目标: "..string.format(config.desc,self.unit)
 			self.taskTarget:setString(temp)
 			--self.taskTarget:setString(string.format(config.desc,unit))
 		else
@@ -260,7 +269,7 @@ function TaskView:updateView()
 		self:runActionSign()
 	else
 		self.taskGoButton:setVisible(true)
-		self.taskGoButton:setVisible(true)
+		self.taskGoButton:setTouchEnabled(true)
 		self.taskRewardButton:setVisible(false)
 		self.taskRewardButton:setTouchEnabled(false)
 		self.sign:setVisible(false)
