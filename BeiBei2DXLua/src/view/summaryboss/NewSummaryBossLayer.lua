@@ -370,7 +370,7 @@ function NewSummaryBossLayer:initMat(visible)
         end
         --self:initGuideInfo()
         self.changeBtnTime = 0
-        if s_CURRENT_USER.summaryStep < s_summary_doFirstWord then
+        if s_CURRENT_USER.summaryStep < s_summary_doFirstWord and self.isTrying ~= true then
             s_CURRENT_USER:setSummaryStep(s_summary_doFirstWord)
             AnalyticsSummaryStep(s_summary_doFirstWord)
         end
@@ -426,7 +426,11 @@ function NewSummaryBossLayer:initMat(visible)
             end,{})
             bullet:runAction(cc.Sequence:create(delay,hit,attacked,hide))
         end
-        --更换mat
+        --更换mat                
+        if s_CURRENT_USER.summaryStep < s_summary_successFirstLevel and self.isTrying ~= true then
+            s_CURRENT_USER:setSummaryStep(s_summary_successFirstLevel)
+            AnalyticsSummaryStep(s_summary_successFirstLevel)
+        end
         s_SCENE:callFuncWithDelay(0.2 *math.pow(#stack,0.8) + 0.5,function ()
             --print('self.currentBlood',self.currentBlood)
             if self.currentBlood > 0 then
@@ -437,10 +441,6 @@ function NewSummaryBossLayer:initMat(visible)
                 self:resetMat()
             else
                 self:gameOverFunc(true)
-                if s_CURRENT_USER.summaryStep < s_summary_successFirstLevel then
-                    s_CURRENT_USER:setSummaryStep(s_summary_successFirstLevel)
-                    AnalyticsSummaryStep(s_summary_successFirstLevel)
-                end
             end
         end)
 	end

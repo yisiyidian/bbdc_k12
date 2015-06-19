@@ -23,7 +23,7 @@ local function button_qq_clicked(sender, eventType)
 end
 
 function IntroLayer.create(directOnLogin)    
-    if s_CURRENT_USER.summaryStep == 0 then
+    if s_CURRENT_USER.summaryStep == 9 then
         AnalyticsSummaryStep(s_summary_enterApp)
     end
     local layer = IntroLayer.new()
@@ -87,7 +87,7 @@ function IntroLayer.create(directOnLogin)
                 offlineTip.setTrue()
             else
                 playSound(s_sound_buttonEffect)
-                if s_CURRENT_USER.summaryStep == 0 then
+                if s_CURRENT_USER.summaryStep == 9 then
                     AnalyticsSummaryStep(s_summary_login)
                 end
                 --弹出RegisterAccountView的登陆界面  RegisterAccountView.STEP_6 就是登陆
