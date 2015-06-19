@@ -132,10 +132,9 @@ function RegisterAccountView:goStep(step,...)
 	local args = {...}
 	self:resetView()
 	self.alertTip:setString("")
-    if s_CURRENT_USER.summaryStep == s_summary_selectGrade then
-    	if step <= 5 then
-        	AnalyticsSummaryStep(step + 2)
-        end
+    if s_CURRENT_USER.summaryStep < step+2 then  
+        s_CURRENT_USER:setSummaryStep(step + 2)
+        AnalyticsSummaryStep(step + 2)
     end
 	--处理UI切换
 	if step == RegisterAccountView.STEP_1 then

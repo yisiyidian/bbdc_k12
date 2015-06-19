@@ -13,12 +13,6 @@ end
 function NewSummaryBossLayer:ctor(unit)
     if unit == 0 then
         AnalyticsSummaryStep(s_summary_enterTryGame)
-    elseif s_CURRENT_USER.summaryStep < s_summary_enterFirstLevel then
-        s_CURRENT_USER:setSummaryStep(s_summary_enterFirstLevel)
-        AnalyticsSummaryStep(s_summary_enterFirstLevel)
-    elseif s_CURRENT_USER.summaryStep < s_summary_enterSecondLevel then
-        s_CURRENT_USER:setSummaryStep(s_summary_enterSecondLevel)
-        AnalyticsSummaryStep(s_summary_enterSecondLevel)
     end
     --s_SCENE:removeAllPopups()
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()

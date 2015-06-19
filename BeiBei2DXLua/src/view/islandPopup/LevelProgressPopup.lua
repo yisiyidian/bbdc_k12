@@ -109,6 +109,14 @@ function LevelProgressPopup:createSummary(index)
             return
         end
 
+        if s_CURRENT_USER.summaryStep < s_summary_enterFirstLevel and tonumber(self.index) == 0 then
+            s_CURRENT_USER:setSummaryStep(s_summary_enterFirstLevel)
+            AnalyticsSummaryStep(s_summary_enterFirstLevel)
+        elseif s_CURRENT_USER.summaryStep < s_summary_enterSecondLevel and tonumber(self.index) == 1 then
+            s_CURRENT_USER:setSummaryStep(s_summary_enterSecondLevel)
+            AnalyticsSummaryStep(s_summary_enterSecondLevel)
+        end
+
         local bossList = s_LocalDatabaseManager.getAllUnitInfo()
         local maxID = s_LocalDatabaseManager.getMaxUnitID()
         if self.unit.coolingDay > 0 or self.unit.unitState >= 5 then

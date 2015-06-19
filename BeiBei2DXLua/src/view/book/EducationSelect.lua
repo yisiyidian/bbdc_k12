@@ -14,14 +14,7 @@ function EducationSelect.create()
 	return layer
 end
 
-function EducationSelect:ctor()
-    if s_CURRENT_USER.summaryStep < s_summary_selectGrade then
-        s_CURRENT_USER:setSummaryStep(s_summary_selectGrade)
-    end   
-    if s_CURRENT_USER.summaryStep == 9 then
-        AnalyticsSummaryStep(s_summary_selectGrade)
-    end
-
+function EducationSelect:ctor()   
     -- 打点
 	local background = cc.LayerColor:create(cc.c4b(200,240,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
 	background:ignoreAnchorPointForPosition(false)
@@ -65,6 +58,10 @@ function EducationSelect:ctor()
     	if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)   
         elseif eventType == ccui.TouchEventType.ended then
+            if s_CURRENT_USER.summaryStep < s_summary_selectGrade then
+                s_CURRENT_USER:setSummaryStep(s_summary_selectGrade)
+                AnalyticsSummaryStep(s_summary_selectGrade)
+            end
             s_CorePlayManager.enterBookLayer(sender:getName())
         end
     end
