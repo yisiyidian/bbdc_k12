@@ -87,26 +87,27 @@ s_K12_end = 100
 
 -- 畅玩版
 
-s_summary_register1 = 1
-s_summary_register2 = 2
-s_summary_register3 = 3
-s_summary_register4 = 4
-s_summary_register5 = 5
-s_summary_register6 = 6
-s_summary_register7 = 7
+s_summary_enterApp = 1
+s_summary_login = 2
+s_summary_phonenumber = 3
+s_summary_phonepass = 4
+s_summary_sex = 5
+s_summary_anothername = 6
+s_summary_password = 7
 s_summary_register8 = 8
 
 s_summary_selectGrade = 9
 s_summary_selectBook = 10
 s_summary_enterHomeLayer = 11
-s_summary_enterLevelLayer = 12
-s_summary_enterFirstPopup = 13
-s_summary_enterFirstLevel = 14
-s_summary_doFirstWord = 15
-s_summary_successFirstLevel = 16
-s_summary_failFirstLevel = 17
-s_summary_enterSecondPopup = 18
-s_summary_enterSecondLevel = 19
+s_summary_enterTryGame = 12
+s_summary_enterLevelLayer = 13
+s_summary_enterFirstPopup = 14
+s_summary_enterFirstLevel = 15
+s_summary_doFirstWord = 16
+s_summary_successFirstLevel = 17
+s_summary_failFirstLevel = 18
+s_summary_enterSecondPopup = 19
+s_summary_enterSecondLevel = 20
 
 -- define review boss tutorial
 -- 新手引导步骤 v213

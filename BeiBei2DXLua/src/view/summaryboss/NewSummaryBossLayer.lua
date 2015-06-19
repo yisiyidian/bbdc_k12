@@ -11,8 +11,9 @@ function NewSummaryBossLayer.create(unit)
 end
 
 function NewSummaryBossLayer:ctor(unit)
-
-    if s_CURRENT_USER.summaryStep < s_summary_enterFirstLevel then
+    if unit == 0 then
+        AnalyticsSummaryStep(s_summary_enterTryGame)
+    elseif s_CURRENT_USER.summaryStep < s_summary_enterFirstLevel then
         s_CURRENT_USER:setSummaryStep(s_summary_enterFirstLevel)
         AnalyticsSummaryStep(s_summary_enterFirstLevel)
     elseif s_CURRENT_USER.summaryStep < s_summary_enterSecondLevel then

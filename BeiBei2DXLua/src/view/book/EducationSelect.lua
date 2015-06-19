@@ -15,7 +15,9 @@ function EducationSelect.create()
 end
 
 function EducationSelect:ctor()
-    AnalyticsSummaryStep(s_summary_selectGrade)
+    if s_CURRENT_USER.summaryStep == 0 then
+        AnalyticsSummaryStep(s_summary_selectGrade)
+    end
     if s_CURRENT_USER.summaryStep < s_summary_selectGrade then
         s_CURRENT_USER:setSummaryStep(s_summary_selectGrade)
     end

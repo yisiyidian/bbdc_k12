@@ -65,7 +65,7 @@ end
 function RegisterAccountView:init(step)
 	self.views = {}
 	self.curStep = step or 1
-	AnalyticsSummaryStep(self.curStep)
+
 	self.phoneNumber = ""
 	local bigWidth = s_DESIGN_WIDTH + 2 * s_DESIGN_OFFSET_WIDTH
     local bigHeight = 1.0*s_DESIGN_HEIGHT
@@ -132,7 +132,11 @@ function RegisterAccountView:goStep(step,...)
 	local args = {...}
 	self:resetView()
 	self.alertTip:setString("")
-	AnalyticsSummaryStep(step)
+    if s_CURRENT_USER.summaryStep == s_summary_selectGrade then
+    	if step <= 5 then
+        	AnalyticsSummaryStep(step + 2)
+        end
+    end
 	--处理UI切换
 	if step == RegisterAccountView.STEP_1 then
 		self:showInputPhoneNumber(args)-----------------注册：输入手机号
