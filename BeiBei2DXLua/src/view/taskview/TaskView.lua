@@ -129,7 +129,7 @@ end
 --今日任务全部完成
 function TaskView:TodayTaskComplete()
 	local label1 = cc.Label:createWithSystemFont("今天干的不错,","",30)
-	label1:setPosition(self.background:getContentSize().width/2,self.background:getContentSize().height/2)
+	label1:setPosition(self.background:getContentSize().width/2,self.background:getContentSize().height/2 + 60)
 	label1:setAnchorPoint(0.5,0.5)
 	label1:setTextColor(cc.c3b(0,0,0))
 	label1:setVisible(false)
@@ -150,9 +150,23 @@ function TaskView:resetView()
 
 	--获取任务列表
 	self.missionList = s_MissionManager:getMissionList()
+	if self.missionList[1][1] == 0 then 
+		self.label1:setVisible(true)
+		self.label2:setVisible(true)
+		self.boss:setVisible(false)
+		self.taskGoButton:setVisible(false)
+		self.taskRewardButton:setVisible(false)
+		self.taskTarget:setVisible(false)
+		self.taskReward:setVisible(false)
+		self.beanImg:setVisible(false)
+		self.beanNum:setVisible(false)
+		return
+	else
 	dump(self.missionList,"任务列表")
+
 	--绑定数据
 	self:setData(self.missionList[1])
+	end
 end
 
 
@@ -194,6 +208,17 @@ end
 
 
 function TaskView:updateView()
+
+	-- --判断任务是否全部完成
+	-- if self.taskID == 0 then
+	-- 	self.label1:setVisible(true)
+	-- 	self.label2:setVisible(true)
+	-- 	self.boss:setVisible(false)
+	-- 	self.taskGoButton:setVisible(false)
+	-- 	self.taskRewardButton:setVisible(false)
+	-- 	self.taskTarget:setVisible(false)
+	-- 	self.taskReward:setVisible(false)
+	-- end
 
 	--获取任务配置  根据指定的任务ID
 	local config = s_MissionManager:getRandomMissionConfig(self.taskID)
@@ -274,18 +299,6 @@ function TaskView:updateView()
 		self.taskRewardButton:setTouchEnabled(false)
 		self.sign:setVisible(false)
 	end
-
-	--判断任务是否全部完成
-	if self.index == 0 then
-		self.label1:setVisible(true)
-		self.label2:setVisible(true)
-		self.boss:setVisible(false)
-		self.taskGoButton:setVisible(false)
-		self.taskRewardButton:setVisible(false)
-		self.taskTarget:setVisible(false)
-		self.taskReward:setVisible(false)
-	end
-
 end
 
 --关闭按钮点击
@@ -318,7 +331,7 @@ end
 function TaskView:runActionSign()
 	local action0 = cc.DelayTime:create(1)
 	local action1 = cc.ScaleTo:create(0.5,1)
-	local action2 = cc.MoveBy:create(0.5,cc.p(0,40))
+	local action2 = cc.MoveBy:create(0.5,cc.p(0,0))
     local action3 = cc.FadeIn:create(0.5)
 	local action4 = cc.EaseSineIn:create(action1)
 	local action5 = cc.EaseSineIn:create(action2)
