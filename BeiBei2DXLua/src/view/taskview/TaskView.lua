@@ -316,14 +316,25 @@ function TaskView:runActionSign()
 	self.sign:runAction(cc.Sequence:create(action0,cc.Spawn:create(action3,action4,action5)))
 end
 
---TODO:去做任务按钮点击
+--去做任务按钮点击
 function TaskView:clickGoTaskButton(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
-
 	--跳转到对应的界面
-
+	local taskId = self.taskID
+	if taskId == "2-1" then --完善个人信息
+		s_CorePlayManager.enterSettingView()
+	elseif taskId == "2-2" then --好友界面
+		s_CorePlayManager.enterFriendView()
+	elseif taskId == "2-3" then --下载音频
+		s_CorePlayManager.enterHomeLayer()
+	elseif string.sub(taskId,1,1) == "3" then --TODO 3开头 去解锁
+		s_CorePlayManager.enterShopView()
+	elseif string.sub(taskId,1,1) == "4" then --TODO 4开头 去打关卡
+		self:CloseClick(nil,ccui.TouchEventType.ended)
+	end
+	
 end
 
 --TODO:领取奖励按钮点击

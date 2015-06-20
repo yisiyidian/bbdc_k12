@@ -236,8 +236,17 @@ function CorePlayManager.enterHomeLayer()
     -- s_SCENE:replaceGameLayer(dramaLayer)
     local homeLayer = HomeLayer.create()
     s_SCENE:replaceGameLayer(homeLayer)
+end
+
+--进入完善信息界面
+function CorePlayManager.enterMoreInfomationView()
+    
+end
+
+function CorePlayManager.enter()
 
 end
+
 
 function CorePlayManager.enterStoryLayer()
     local StoryLayer = require('view.level.StoryLayer')
@@ -271,6 +280,25 @@ function CorePlayManager.enterFriendLayer()
     local friendLayer = FriendLayer.create()
     s_SCENE:replaceGameLayer(friendLayer)
 end
+
+function CorePlayManager.enterFriendView()
+    local homeLayer = HomeLayer.create()
+    s_SCENE:replaceGameLayer(homeLayer)
+    homeLayer:showFriendView()
+end
+
+function CorePlayManager.enterSettingView()
+    local homeLayer = HomeLayer.create()
+    s_SCENE:replaceGameLayer(homeLayer)
+    homeLayer:showSettingView()
+end
+
+function CorePlayManager.enterShopView()
+    local homeLayer = HomeLayer.create()
+    s_SCENE:replaceGameLayer(homeLayer)
+    homeLayer:changeViewToFriendOrShop("ShopLayer")
+end
+
 
 function CorePlayManager.enterGuideScene(index,parent)
     local GuideView = require ("view.guide.GuideView")
