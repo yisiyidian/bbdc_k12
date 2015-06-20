@@ -393,7 +393,13 @@ function MissionManager:generalTasks()
 		local canFightBoss = {} --可以打的关卡
 		for bosskey,boss in pairs(bossList) do
 			if boss.unitState ~= 0 then
-				canFightBoss[#canFightBoss + 1] = boss.unitID
+				local costTime = 0--#bo.wrongWordList * 1.2
+				local chars = 0 --字母数量
+				for k,v in pairs(boss.wrongWordList) do
+					chars = chars + #v
+				end
+				costTime = chars * 1.2
+				canFightBoss[#canFightBoss + 1] = {unitID = boss.unitID,costTime = costTime}
 			end
 		end
 		if #canFightBoss == 0 then
@@ -727,7 +733,14 @@ function MissionManager:getCurRandomTaskData()
 		local canFightBoss = {} --可以打的关卡
 		for bosskey,boss in pairs(bossList) do
 			if boss.unitState ~= 0 then
-				canFightBoss[#canFightBoss + 1] = boss.unitID
+				local costTime = 0--#bo.wrongWordList * 1.2
+				local chars = 0 --字母数量
+				for k,v in pairs(boss.wrongWordList) do
+					chars = chars + #v
+				end
+				costTime = chars * 1.2
+				canFightBoss[#canFightBoss + 1] = {unitID = boss.unitID,costTime = costTime}
+				-- canFightBoss[#canFightBoss + 1] = boss.unitID
 			end
 		end
 		if #canFightBoss == 0 then
