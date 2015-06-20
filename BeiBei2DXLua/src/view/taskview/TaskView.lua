@@ -341,6 +341,12 @@ function TaskView:clickGoTaskButton(sender,eventType)
 	elseif string.sub(taskId,1,1) == "3" then --TODO 3开头 去解锁
 		s_CorePlayManager.enterShopView()
 	elseif string.sub(taskId,1,1) == "4" then --TODO 4开头 去打关卡
+		local unitID = tonumber(self.unitID)
+		if unitID == 1 then
+			s_CorePlayManager.chapterLayer.listView:scrollToTop(1,false)
+		else
+			s_CorePlayManager.chapterLayer:scrollLevelLayer(unitID,1);
+		end
 		self:CloseClick(nil,ccui.TouchEventType.ended)
 	end
 	

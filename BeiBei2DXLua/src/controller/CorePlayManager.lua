@@ -257,6 +257,7 @@ end
 function CorePlayManager.enterLevelLayer()
     local ChapterLayer = require('view.ChapterLayer')
     local chapterLayer = ChapterLayer.create()
+    CorePlayManager.chapterLayer = chapterLayer
     s_SCENE:replaceGameLayer(chapterLayer)
 end
 
