@@ -87,6 +87,7 @@ public:
     virtual void setFont(const char* pFontName, int fontSize);
     virtual void setFontColor(const Color3B& color);
     virtual void setPlaceholderFont(const char* pFontName, int fontSize);
+    virtual void setPlaceholderFontSize(int fontSize);
     virtual void setPlaceholderFontColor(const Color3B& color);
     virtual void setInputMode(EditBox::InputMode inputMode);
     virtual void setInputFlag(EditBox::InputFlag inputFlag);

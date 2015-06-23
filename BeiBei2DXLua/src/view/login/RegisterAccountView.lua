@@ -170,8 +170,10 @@ end
 --显示输入手机号码的界面
 function RegisterAccountView:showInputPhoneNumber()
 	--手机号码输入
-	local inputNode = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入您的手机号",handler(self,self.ProcessPhoneInput),nil,nil,nil,11)
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入手机号",handler(self,self.ProcessPhoneInput),nil,nil,nil,11)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.8 - 200)
+	-- inputNode:setNumberMode(true)
+	inputNode:setInputMode(cc.EDITBOX_INPUT_MODE_PHONENUMBER)
 	self:addChild(inputNode)
 	self.inputNode = inputNode
 	inputNode:openIME()
@@ -309,12 +311,14 @@ end
 --text 文本
 --length 长度
 function RegisterAccountView:ProcessPhoneInput(text,length,maxlength)
-	if maxlength == length then
-		self.btnPhoneNumberOK:setVisible(true)
-		self.btnPhoneNumberOK:setTouchEnabled(true)
-	else
-		self.btnPhoneNumberOK:setVisible(false)
-		self.btnPhoneNumberOK:setTouchEnabled(false)
+	if not tolua.isnull(self.btnPhoneNumberOK) then
+		if maxlength == length then
+			self.btnPhoneNumberOK:setVisible(true)
+			self.btnPhoneNumberOK:setTouchEnabled(true)
+		else
+			self.btnPhoneNumberOK:setVisible(false)
+			self.btnPhoneNumberOK:setTouchEnabled(false)
+		end
 	end
 end
 --------------------------------UI-------------------输入手机号码 结束-------------------------------------------------------------------------------------------------------
@@ -365,12 +369,14 @@ function RegisterAccountView:showInputSmsCode(args,type)
 end
 
 function RegisterAccountView:processSMSInput(text,length,maxlength)
-	if maxlength <= length then
-		self.btnSMSCodeOK:setVisible(true)
-		self.btnSMSCodeOK:setTouchEnabled(true)
-	else
-		self.btnSMSCodeOK:setVisible(false)
-		self.btnSMSCodeOK:setTouchEnabled(false)
+	if not tolua.isnull(self.btnSMSCodeOK) then
+		if maxlength <= length then
+			self.btnSMSCodeOK:setVisible(true)
+			self.btnSMSCodeOK:setTouchEnabled(true)
+		else
+			self.btnSMSCodeOK:setVisible(false)
+			self.btnSMSCodeOK:setTouchEnabled(false)
+		end
 	end
 end
 
@@ -635,7 +641,9 @@ function RegisterAccountView:showInputNickName()
 end
 
 function RegisterAccountView:processInputName()
-	self.btnNickName:setVisible(true)
+	if not tolua.isnull(self.btnNickName) then
+		self.btnNickName:setVisible(true)
+	end
 end
 
 --昵称按钮触摸事件
@@ -726,20 +734,14 @@ function RegisterAccountView:showLoginView(args)
 	local inputNodeID = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入手机号",nil,nil,nil,false,11)
 	inputNodeID:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 200)
 	self:addChild(inputNodeID)
-	inputNodeID:openIME()
 	self.inputNodeID = inputNodeID
 	self.views[#self.views+1] = inputNodeID
 
-	if phoneNumber ~= "" then
-		self.inputNodeID:setText(phoneNumber)
-		self.inputNodeID:setEnabled(false)
-	end
-	--输入按钮
+	--输入密码
 	local inputNodePwd = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入密码",handler(self,self.ProceInputPwd),nil,nil,true,11,6)
 	inputNodePwd:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 300)
 	self:addChild(inputNodePwd)
 	self.inputNodePwd = inputNodePwd
-	-- inputNodePwd:openIME()
 	self.views[#self.views+1] = inputNodePwd
 	--登陆按钮
 	local btnLogin = ccui.Button:create("image/shop/button_back2.png")
@@ -750,6 +752,15 @@ function RegisterAccountView:showLoginView(args)
 	self.btnLogin = btnLogin
 	self:addChild(btnLogin)
 	self.views[#self.views+1] = btnLogin
+	
+	if phoneNumber ~= "" then
+		self.inputNodeID:setText(phoneNumber)
+		self.inputNodeID:setEnabled(false)
+		self.inputNodeID:setVisible(false)
+		inputNodePwd:openIME()
+	else
+		inputNodeID:openIME()
+	end
 end
 
 --登陆按钮点击事件
@@ -837,9 +848,7 @@ function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 		s_TIPS_LAYER:showSmallWithOneButton(error)
 	else
 		print("self.smsMode:"..self.smsMode)
-		
 		if self.smsMode == "verify" then
-			print("CCCCCCCCCCCCCCCC")
 			cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
 			s_CURRENT_USER.mobilePhoneVerified = true --通过验证
 			s_TIPS_LAYER:showSmallWithOneButton("手机号码验证成功！",function ()
