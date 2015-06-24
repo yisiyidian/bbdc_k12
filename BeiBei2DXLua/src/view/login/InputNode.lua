@@ -139,7 +139,9 @@ end
 -- end
 
 function InputNode:editBoxTextEventHandle(strEventName,pSender)
-    self:processInput()
+    if not tolua.isnull(self) then
+        self:processInput()
+    end
     local edit = pSender
     local strFmt 
     if strEventName == "began" then
@@ -228,7 +230,7 @@ function InputNode:setEnabled(enable)
 end
 
 function InputNode:setPlaceHolderColor()
-    self.textField:setPlaceHolderColor(cc.c3b(153,168,181))
+    self.textField:setPlaceholderFontColor(cc.c3b(153,168,181))
     -- self.textField:setPlaceHolderColor(cc.c3b(255,255,255))
 end
 
