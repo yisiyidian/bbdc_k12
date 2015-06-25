@@ -414,30 +414,24 @@ function HomeLayer:ctor()
 
     end)
 
-    
-
-
-    
     cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
 end
 
-
 function HomeLayer:fuckSMS()
-    --如果判断这B没有验证手机 强制这B去验证
+    --如果判断没有验证手机 强制去验证
+    --
     if smsVerify == nil then
         smsVerify = s_CURRENT_USER.mobilePhoneVerified
     end
     if not smsVerify then
         smsVerify = true
         if s_CURRENT_USER.mobilePhoneNumber ~= "" and not s_CURRENT_USER.mobilePhoneVerified then
-            print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
             local fuckSMSView = RegisterAccountView.new(RegisterAccountView.STEP_2)
             s_SCENE:popup(fuckSMSView)
             fuckSMSView:requestVerifySMSCode(s_CURRENT_USER.mobilePhoneNumber)
         end
     end
 end
-
 
 --触摸开始
 function HomeLayer:onTouchBegan(touch, event)    

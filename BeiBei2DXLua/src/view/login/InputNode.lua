@@ -7,7 +7,6 @@ InputNode.type_username = 'username'
 InputNode.type_pwd = 'pwd'
 InputNode.type_teachername = "teachername"
 
-
 --构造
 --backgroundImage 未输入完成的背景
 --backgroundImageOver 输入完成后的背景

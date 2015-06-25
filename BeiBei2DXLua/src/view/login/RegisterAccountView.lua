@@ -21,7 +21,9 @@ RegisterAccountView.STEP_6 = 6	--登陆
 RegisterAccountView.STEP_7 = 7	--修改密码
 RegisterAccountView.STEP_8 = 8	--密码找回
 
-RegisterAccountView.STEP_9 = 9    --新登陆 输入密码
+RegisterAccountView.STEP_9 = 9  --新登陆 输入密码
+
+RegisterAccountView.PWD = 'bbdc123#'
 
 function RegisterAccountView:ctor(step,canclose)
 	self.debug = false
@@ -106,7 +108,7 @@ function RegisterAccountView:goStep(step,...)
 	if step == RegisterAccountView.STEP_1 then
 		self:showInputPhoneNumber(args)-----------------注册：输入手机号
 	elseif step == RegisterAccountView.STEP_2 then
-		self:showInputSmsCode(args,"verify")---------------------注册：输入短信验证码 验证手机号码有效性  登陆进入游戏完成之后 再弹出验证
+		self:showInputSmsCode(args,"verify")------------注册：输入短信验证码 验证手机号码有效性  登陆进入游戏完成之后 再弹出验证
 	elseif step == RegisterAccountView.STEP_3 then
 		self:showChooseSex(args)------------------------注册：选择性别
 	elseif step == RegisterAccountView.STEP_4 then
@@ -306,14 +308,19 @@ function RegisterAccountView:onVerifyPhoneNumberBack(data,error)
 			self:goStep(self.curStep)
 		end 
 	else
-		--不存在的话 直接走注册逻辑
+		--不存在的话 直接进游戏  进游戏之后 再选性别、昵称、验证码
 		--1、选择性别
 		--2、昵称
 		--3、班级 (已删掉)
 		--4、登陆进入 输入验证码
+
+		self:register(self.phoneNumber,RegisterAccountView.PWD,"Guest",0)
+		
+		--[[
 		self.curStep = RegisterAccountView.STEP_3  --选择性别
 		self.direction = "left"
 		self:goStep(self.curStep)
+		]]
 	end
 end
 
@@ -342,6 +349,7 @@ function RegisterAccountView:showInputSmsCode(args,type)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 200)
 	self:addChild(inputNode)
 	self.inputNode = inputNode
+	inputNode:setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC)
 	inputNode:openIME()
 	self.views[#self.views+1] = inputNode
 	
@@ -576,6 +584,9 @@ function RegisterAccountView:onTouchNickNameOK(sender,eventType)
 	self.nickName = nickName
 	--开始注册 注册完了 验证手机号码
 	local pwd = 'bbdc123#'
+	if self.smsMode == "verify" then
+		self.smsMode = ""
+	end
 	self:register(self.phoneNumber,pwd,self.nickName,self.sex)
 end
 --显示输入密码的界面 RegisterAccountView.STEP_5
@@ -747,10 +758,13 @@ function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 			s_CURRENT_USER.mobilePhoneVerified = true --通过验证
 			s_TIPS_LAYER:showSmallWithOneButton("手机号码验证成功！",function ()
 				s_O2OController.resetPassword(handler(self,self.onResetPwdCallBack))--重置密码
-				s_SCENE:removeAllPopups()
+				--去选择性别
+				self.curStep = RegisterAccountView.STEP_3
+				self:goStep(self.curStep)
+				--s_SCENE:removeAllPopups()
 			end)
 		elseif self.smsMode == "smslogin" then
-			print("BBBBBBBBBBBBBBBBB")--do nothing
+			-- print("BBBBBBBBBBBBBBBBB")--do nothing
 		end
 	end
 end
@@ -797,8 +811,8 @@ end
 function RegisterAccountView:register(phoneNumber,pwd,nickName,sex)
 	print("电话号码:"..phoneNumber)
 	print("密码:"..pwd)
-	print("昵称:"..nickName)
-	print("性别:"..sex)
+	print("昵称:"..tostring(nickName))
+	print("性别:"..tostring(sex))
 	print("请求注册....")
 	showProgressHUD('', true)
 	--更新登陆信息
@@ -836,17 +850,18 @@ function RegisterAccountView:endRegister(state)
 		self.scheduler = nil
 		self.schedulerID = nil
 	end
-
-	if state then
-		s_SCENE:removeAllPopups()
-		s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
-	else
-		if self.close ~= nil then
-			print("回调close")
-			self.close()
-		else
+	if self.smsMode ~= "verify" then
+		if state then
 			s_SCENE:removeAllPopups()
-			print("s_SCENE:removeAllPopups")
+			s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
+		else
+			if self.close ~= nil then
+				print("回调close")
+				self.close()
+			else
+				s_SCENE:removeAllPopups()
+				print("s_SCENE:removeAllPopups")
+			end
 		end
 	end
 end
