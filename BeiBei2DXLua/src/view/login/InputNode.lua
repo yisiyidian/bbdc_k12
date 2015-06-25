@@ -47,38 +47,12 @@ function InputNode:init(backgroundImage,backgroundImageOver,placeHolder,callback
     self.backImage = backImage
     self:addChild(backImage)
     --输入框
-
-    --[[
-    self.textField = ccui.TextField:create()
-    self.textField:ignoreAnchorPointForPosition(false)
-    self.textField:setAnchorPoint(0.5,0.5)
-    self.textField:setTouchSize(backImage:getContentSize())
-    self.textField:setTouchAreaEnabled(true)
-    self.textField:setFontSize(34)
-    self.textField:setMaxLengthEnabled(true)
-    self.textField:setPlaceHolderColor(cc.c3b(255,255,255))
-    self.textField:setTextColor(cc.c4b(0,0,0,255))
-    self.textField:setPlaceHolder(placeHolder)--占位文本
-    ]]
-
-
-
-
     local sizeBg = backImage:getContentSize()
     self.textField = ccui.EditBox:create(cc.size(sizeBg.width - 90,sizeBg.height),"image/login/blank_btn.png")
-    -- self.textField = cc.EditBox:create(cc.size(editBoxSize.width, editBoxSize.height), cc.Scale9Sprite:create("extensions/yellow_edit.png"))
-    -- self.textField:setPosition(cc.p(visibleOrigin.x+visibleSize.width/2, visibleOrigin.y+visibleSize.height/4))
     self.textField:setAnchorPoint(cc.p(0.5, 0.5))
     self.textField:setFontColor(cc.c3b(0,0,0))
-    -- self.textField:setPlaceholderFont(".HelveticaNeueInterface-Regular",20)
-    -- self.textField:setPlaceholderFontName("MSYH")
-    -- self.textField:setPlaceholderFontSize(20)
     self.textField:setPlaceHolder(self.placeHolder)
     self.textField:registerScriptEditBoxHandler(handler(self,self.editBoxTextEventHandle))
-    -- newLayer:addChild(EditEmail)   
-    -- newLayer:setPosition(cc.p(10, 20))
-
-
     --设置长度限制
     local tlen = maxLength or 10
     if self.isPwd then
@@ -94,49 +68,10 @@ function InputNode:init(backgroundImage,backgroundImageOver,placeHolder,callback
     end
 
     self.textField:setPosition(cc.p(backImage:getContentSize().width / 2, backImage:getContentSize().height / 2))
-    -- self.textField:addEventListener(handler(self,self.onTextEvent))
     backImage:addChild(self.textField)
-    --光标
-    --[[
-    local cursor = cc.Label:createWithSystemFont("|","",34)
-    cursor:setColor(cc.c4b(0,0,0,255))
-    cursor:setPosition(0,34)
-    cursor:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.FadeIn:create(0.5),cc.FadeOut:create(0.5))))
-    self.cursor = cursor
-    cursor:setVisible(false)
-    self:addChild(cursor)
-    
-    local update = function(dt)
-        if self.textField:getText() == "" then
-            cursor:setPosition(self.width / 2 - self.textField:getContentSize().width/2 - 2, self.height/2)
-        else
-            cursor:setPosition(self.width / 2 + self.textField:getContentSize().width/2 + 2, self.height/2)
-        end
-    end
-    self:scheduleUpdateWithPriorityLua(update, 0)
-    ]]
 end
 
 --文本框事件处理
--- function InputNode:onTextEvent(sender,eventType)
---     self:processInput()
-
---     if eventType == ccui.TextFiledEventType.attach_with_ime then
---         print("ccui.TextFiledEventType.attach_with_ime")
---         self.cursor:setVisible(true)
---     elseif eventType == ccui.TextFiledEventType.detach_with_ime then
---         print("ccui.TextFiledEventType.detach_with_ime")
---         self.textField:setPlaceHolder(self.placeHolder)
---         self.cursor:setVisible(false)
---     elseif eventType == ccui.TextFiledEventType.insert_text then
---         print("ccui.TextFiledEventType.insert_text")
---         self.cursor:setVisible(true)
---     elseif eventType == ccui.TextFiledEventType.delete_backward then
---         print("ccui.TextFiledEventType.delete_backward")
---         self.cursor:setVisible(true)
---     end
--- end
-
 function InputNode:editBoxTextEventHandle(strEventName,pSender)
     if not tolua.isnull(self) then
         self:processInput()
@@ -167,7 +102,6 @@ function InputNode:processInput()
         if self.callback ~= nil then 
             self.callback(text,string.len(text),self.maxLength)
         end
-        -- self.textField:setTextFon
         self.backImage:setTexture(self.backgroundImageOver)
     else
         if self.minLength ~= 0 then
@@ -189,14 +123,6 @@ end
 
 --开关键盘
 function InputNode:openIME()
-    -- self.textField:getVirtualRenderer():attachWithIME()
-    -- cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
-    -- if self.bMode then
-    --     -- print("弹出软键盘")
-    --     -- local parent = self:getParent()
-    --     -- parent:addChild(self.keyboard)
-    -- else
-    -- end
     self.textField:touchDownAction(self.textField,ccui.TouchEventType.ended)
 end
 
@@ -230,7 +156,6 @@ end
 
 function InputNode:setPlaceHolderColor()
     self.textField:setPlaceholderFontColor(cc.c3b(153,168,181))
-    -- self.textField:setPlaceHolderColor(cc.c3b(255,255,255))
 end
 
 
