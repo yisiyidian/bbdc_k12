@@ -155,6 +155,8 @@ local function _declaration()
     s_CorePlayManager = nil
     --任务管理器
     s_MissionManager = reloadModule("controller.MissionManager").new()
+    --战斗管理器
+    s_BattleManager = reloadModule("playmodel.battle.BattleManager").new()
 end
 
 --start.lua里的start() 会调用这个函数
