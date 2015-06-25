@@ -12,6 +12,7 @@ end
 
 function CocoView:ctor()
 	self.touchState = false
+	self.pos = cc.p(0,0)
 	self.letter = "a"
 	self.color1 = false
 	self.color2 = false
@@ -29,6 +30,8 @@ function CocoView:initUI()
     CocoSprite:setAncherPoint(0.5,0.5)
     self.CocoSprite = CocoSprite
     self:addChild(self.CocoSprite)
+
+    
 
     
 end

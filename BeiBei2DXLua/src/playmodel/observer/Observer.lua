@@ -1,5 +1,5 @@
 -- 观察者
-local ObserverController = require("view.observer.ObserverController")
+local ObserverController = require("playmodel.observer.ObserverController")
 local Observer = class("Observer")
 
 function Observer:ctor()
