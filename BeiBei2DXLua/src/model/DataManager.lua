@@ -5,8 +5,8 @@ local s_USE_XXTEA = true
 
 ---------------------------------------------------------------------------
 -- DO NOT modify these below
-g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36'}
-g_BOOKKEYS = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
+g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38'}
+g_BOOKKEYS = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
         ,'cet4','cet6','pro4','pro8','gse'
@@ -123,7 +123,7 @@ end
 -- K12 book word   books[book][unit] = {wordlist} 
 function DataManager.loadK12Books()
     local bookUnitWord = {}
-        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
+        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
         ,'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'pro4', 'pro8', 'sat', 'toefl'}
@@ -183,7 +183,7 @@ end
 -- return unit name   books[book][unit] = 'unitName'  3/   3-1
 function DataManager.loadUnitName()
     local bookUnitName = {}
-        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
+        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
         ,'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'pro4', 'pro8', 'sat', 'toefl'}
@@ -239,7 +239,7 @@ end
 -- return book[bookKey] = {wordList}
 function DataManager.loadK12BookWords()
     local bookWord = {}
-        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe'
+        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
         ,'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'pro4', 'pro8', 'sat', 'toefl'}
