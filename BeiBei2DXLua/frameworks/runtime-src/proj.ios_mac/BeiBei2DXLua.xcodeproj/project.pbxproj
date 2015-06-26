@@ -842,7 +842,7 @@
 				F293B3C415EB7BE500256477 /* Sources */,
 				F293B3C515EB7BE500256477 /* Frameworks */,
 				F293B3C615EB7BE500256477 /* Resources */,
-				3EC988201966433500A45E0E /* ShellScript */,
+				3EC988201966433500A45E0E /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -983,13 +983,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3EC988201966433500A45E0E /* ShellScript */ = {
+		3EC988201966433500A45E0E /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1321,8 +1322,8 @@
 					"-ObjC",
 					"-fobjc-arc",
 				);
-				PROVISIONING_PROFILE = "b3766bb0-c662-4665-b301-def564a0ced4";
-				"PROVISIONING_PROFILE[sdk=*]" = "b3766bb0-c662-4665-b301-def564a0ced4";
+				PROVISIONING_PROFILE = "c1ad443d-f391-48c3-b83f-f0df61571b87";
+				"PROVISIONING_PROFILE[sdk=*]" = "c1ad443d-f391-48c3-b83f-f0df61571b87";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../cocos2d-x/cocos/platform/ios";
