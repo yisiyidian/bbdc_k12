@@ -31,9 +31,11 @@ function CocoView:initUI()
     self.CocoSprite = CocoSprite
     self:addChild(self.CocoSprite)
 
-    
-
-    
+    local label = cc.Label:createWithSystemFont("","",25)
+    label:ignoreAnchorPointForPosition(false)
+    label:setAncherPoint(0.5,0.5)
+    self.label = label
+    self:addChild(self.label)
 end
 
 return CocoView
