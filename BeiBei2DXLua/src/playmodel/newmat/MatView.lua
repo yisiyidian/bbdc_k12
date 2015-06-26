@@ -72,7 +72,6 @@ function MatView:touchFunc()
         		end
         	end
         end
-        return true
     end
 
     -- 触摸结束，进行判断
