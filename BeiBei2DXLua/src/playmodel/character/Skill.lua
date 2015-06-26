@@ -1,5 +1,5 @@
 local Skill = class("Skill")
-local SkillConfig = require('playmodel.pet.SkillConfig')
+local SkillConfig = require('playmodel.character.SkillConfig')
 
 function Skill:initWithID(id,source)
 	--技能ID
