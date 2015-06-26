@@ -266,9 +266,9 @@ void EditBox::setPlaceholderFontName(const char* pFontName)
 void EditBox::setPlaceholderFontSize(int fontSize)
 {
     _placeholderFontSize = fontSize;
-    if (_editBoxImpl != nullptr)
+    if (_editBoxImpl != nullptr && _placeholderFontName.length() > 0)
     {
-        _editBoxImpl->setPlaceholderFontSize(fontSize);
+      _editBoxImpl->setPlaceholderFont(_placeholderFontName.c_str(), fontSize);
     }
 }
 
