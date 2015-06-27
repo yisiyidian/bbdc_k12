@@ -1,11 +1,12 @@
+require("playmodel.battle.Notification")
+
 local BattleView = class('BattleView',function (  )
 	return cc.Layer:create()
 end)
 
 function BattleView:ctor()
-	s_BattleManager:register()
 	--初始化
-	s_BattleManager:initBattle()
+	s_BattleManager:battleBegan()
 	--创建boss
 	s_BattleManager:createBoss({'1','1','1'})
 	--创建pet
@@ -19,9 +20,16 @@ end
 function BattleView:initUI()
 
 	--local back = cc.Sprite:create()
-	local currentBoss = self.currentBoss.ui
-	currentBoss:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.9)
-	self:addChild(currentBoss)
+	local boss = s_BattleManager.bossList
+	for i = 1,#boss do
+		if s_BattleManager.currentBossIndex == i then
+			boss[i].ui:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.9)
+			self:addChild(boss[i].ui)
+		else
+			boss[i].ui:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.9 + 400)
+			self:addChild(boss[i].ui)
+		end
+	end
 
 	local pet = s_BattleManager.petList
 	for i = 1,#pet do
@@ -35,17 +43,16 @@ end
 
 function BattleView:touchFunc()
 	local function onTouchBegan(touch, event)
-
+		print('onTouchBegan')
         return true
     end
 
     local function onTouchEnded(touch, event)
-
+    	s_BattleManager:sendNotification(ATTACK,{})
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()
     listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
-    listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )
     listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
     local eventDispatcher = self:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
