@@ -3,9 +3,6 @@ require("common.global")
 
 --HomeLayer 主界面
 --
-
--- local AlterI = require("view.alter.AlterI")
-
 local SettingLayer = require("view.home.SettingLayer") --设置界面
 local MissionProgress = require("view.home.MissionProgressLayer") --中间的原型开始按钮
 local OfflineTipHome = require("view.offlinetip.OfflineTipForHome")
@@ -420,15 +417,20 @@ end
 function HomeLayer:fuckSMS()
     --如果判断没有验证手机 强制去验证
     --
+    print(debug.traceback())
     if smsVerify == nil then
         smsVerify = s_CURRENT_USER.mobilePhoneVerified
     end
     if not smsVerify then
-        smsVerify = true
         if s_CURRENT_USER.mobilePhoneNumber ~= "" and not s_CURRENT_USER.mobilePhoneVerified then
+            smsVerify = true
             local fuckSMSView = RegisterAccountView.new(RegisterAccountView.STEP_2)
             s_SCENE:popup(fuckSMSView)
             fuckSMSView:requestVerifySMSCode(s_CURRENT_USER.mobilePhoneNumber)
+        elseif s_CURRENT_USER.mobilePhoneNumber == "" then
+            local inpoutPhoneView = RegisterAccountView.new(RegisterAccountView.STEP_11)
+            s_SCENE:popup(inpoutPhoneView)
+            -- inpoutPhoneView:requestVerifySMSCode(s_CURRENT_USER.mobilePhoneNumber)
         end
     end
 end

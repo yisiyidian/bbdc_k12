@@ -110,7 +110,7 @@ function EducationSelect:popupAccountBind()
     -- s_SCENE:popup(introLayer)
     -- 
     --直接进登陆了
-    local layer = RegisterAccountView.new()
+    local layer = RegisterAccountView.new(RegisterAccountView.STEP_10)
     s_SCENE:popup(layer)
 end
 

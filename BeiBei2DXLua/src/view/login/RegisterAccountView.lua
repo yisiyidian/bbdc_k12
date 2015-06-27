@@ -23,6 +23,10 @@ RegisterAccountView.STEP_8 = 8	--密码找回
 
 RegisterAccountView.STEP_9 = 9  --新登陆 输入密码
 
+RegisterAccountView.STEP_10 = 10 --选择登陆方式的界面 有注册和登陆2个按钮
+
+RegisterAccountView.STEP_11 = 11 --进入游戏之后 输入手机号    验证手机号码
+
 RegisterAccountView.PWD = 'bbdc123#'
 
 function RegisterAccountView:ctor(step,canclose)
@@ -31,8 +35,11 @@ function RegisterAccountView:ctor(step,canclose)
 	self.uistack = {} --UI的栈,里边保存UI流程序号,UI显示的参数  Android返回键用
 	self.curBtn = nil --当前的输入按钮
 	self.phoneNumber = ""
-	if step ~= "canclose" then
+	if step ~= "canclose" and step ~= RegisterAccountView.STEP_10 then
   		self:init(step,canclose)
+  	elseif step == RegisterAccountView.STEP_10 then
+  		--显示选择登陆方式界面
+  		self:showIntroView()
   	else
   		self.canclose = true
       	self:init()
@@ -40,6 +47,7 @@ function RegisterAccountView:ctor(step,canclose)
 end
 
 function RegisterAccountView:init(step,args)
+	self.inited = true
 	self.views = {}
 	self.curStep = step or 1 --step 默认是1
 	self.phoneNumber = ""
@@ -98,6 +106,10 @@ end
 --前往指定步骤
 --step 步骤索引
 function RegisterAccountView:goStep(step,...)
+	if not self.inited then  --初始化UI
+		self:init(step,...)
+		return
+	end
 	local args = {...}
 	self.uistack[#self.uistack + 1] = {step,args} --参数入栈
 	--处理老的UI
@@ -123,6 +135,10 @@ function RegisterAccountView:goStep(step,...)
 		self:showModifyPwdBySMSCode(args)---------------重置密码
 	elseif step == RegisterAccountView.STEP_9 then
 		self:showInputSmsCode(args,"smslogin")---------------------登陆：输入短信验证码 用短信验证码登陆
+	elseif step == RegisterAccountView.STEP_10 then
+		self:showIntroView()
+	elseif step == RegisterAccountView.STEP_11 then
+		self:showInputPhoneNumber(args,"logined_verify") --登陆之后 验证手机号码
 	end
 	--处理新的UI 从外部移入
 	self:moveIn(self.direction)
@@ -187,7 +203,8 @@ end
 
 --------------------------------UI-------------------输入手机号码-------------------------------------------------------------------------------------------------------
 --显示输入手机号码的界面
-function RegisterAccountView:showInputPhoneNumber()
+function RegisterAccountView:showInputPhoneNumber(args,type)
+	self.processType = type
 	--手机号码输入
 	local inputNode = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入手机号",handler(self,self.ProcessPhoneInput),nil,nil,nil,11)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.8 - 200)
@@ -206,26 +223,28 @@ function RegisterAccountView:showInputPhoneNumber()
     	self.btnReturn:setVisible(false)
  		self.btnReturn:setTouchEnabled(false)
 	end
-	--其他登陆方式
-	local btnOtherLogin = ccui.Button:create("image/login/blank_btn.png")
-	btnOtherLogin:setPosition(0.8 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
-	btnOtherLogin:setTitleColor(cc.c3b(153,168,181))
-	btnOtherLogin:setTitleText("其他登陆方式")
-	btnOtherLogin:setTitleFontSize(20)
-	btnOtherLogin:addTouchEventListener(handler(self, self.onOtherLogin))
-	self:addChild(btnOtherLogin)
-	self.btnOtherLogin = btnOtherLogin
-	self.views[#self.views+1] = btnOtherLogin
-	--游客登陆
-	local btnGuestLogin = ccui.Button:create("image/login/blank_btn.png")
-	btnGuestLogin:setPosition(0.2 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
-	btnGuestLogin:setTitleColor(cc.c3b(153,168,181))
-	btnGuestLogin:setTitleText("游客登陆")
-	btnGuestLogin:setTitleFontSize(20)
-	btnGuestLogin:addTouchEventListener(handler(self, self.onGuestLogin))
-	self:addChild(btnGuestLogin)
-	self.btnGuestLogin = btnGuestLogin
-	self.views[#self.views+1] = btnGuestLogin
+	if self.processType ~= "logined_verify" then
+		--其他登陆方式
+		local btnOtherLogin = ccui.Button:create("image/login/blank_btn.png")
+		btnOtherLogin:setPosition(0.8 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
+		btnOtherLogin:setTitleColor(cc.c3b(153,168,181))
+		btnOtherLogin:setTitleText("其他登陆方式")
+		btnOtherLogin:setTitleFontSize(20)
+		btnOtherLogin:addTouchEventListener(handler(self, self.onOtherLogin))
+		self:addChild(btnOtherLogin)
+		self.btnOtherLogin = btnOtherLogin
+		self.views[#self.views+1] = btnOtherLogin
+		--游客登陆
+		local btnGuestLogin = ccui.Button:create("image/login/blank_btn.png")
+		btnGuestLogin:setPosition(0.2 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
+		btnGuestLogin:setTitleColor(cc.c3b(153,168,181))
+		btnGuestLogin:setTitleText("游客登陆")
+		btnGuestLogin:setTitleFontSize(20)
+		btnGuestLogin:addTouchEventListener(handler(self, self.onGuestLogin))
+		self:addChild(btnGuestLogin)
+		self.btnGuestLogin = btnGuestLogin
+		self.views[#self.views+1] = btnGuestLogin
+	end
 	--下一步按钮  三角的
 	local btnPhoneNumberOK = ccui.Button:create("image/shop/button_back2.png")
 	btnPhoneNumberOK:setPosition(0.8 * s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.8 - 200)
@@ -306,7 +325,13 @@ function RegisterAccountView:onVerifyPhoneNumberBack(data,error)
 			self.curStep = RegisterAccountView.STEP_9
 			self.direction = "left"
 			self:goStep(self.curStep)
-		end 
+		end
+	elseif self.processType == "logined_verify" then
+		--登陆之后的验证
+		if not self.nickName then
+			self.nickName = "Guest"
+		end
+		self:register(self.phoneNumber,RegisterAccountView.PWD,self.nickName,0)		
 	else
 		--不存在的话 直接进游戏  进游戏之后 再选性别、昵称、验证码
 		--1、选择性别
@@ -409,6 +434,10 @@ end
 
 --倒计时调用
 function RegisterAccountView:SMSCodeTick()
+	if not self.countDown then
+		-- self.scheduler:unscheduleScriptEntry(self.schedulerID)
+		return
+	end
 	self.countDown = self.countDown - 1
 	if self.countDown == 0 then
 		self.scheduler:unscheduleScriptEntry(self.schedulerID)
@@ -717,8 +746,68 @@ function RegisterAccountView:ProceInputPwd(text,length,maxlength)
 	end
 end
 
+------显示选择登陆方式的界面sterAccountView.STEP_10----------------------------------------------------------------------------------------------------------------------
+function RegisterAccountView:showIntroView()
+	self.inited = false
+	--浅蓝色背景
+	local bigWidth = s_DESIGN_WIDTH + 2 * s_DESIGN_OFFSET_WIDTH
+    local bigHeight = 1.0 * s_DESIGN_HEIGHT
+	local initColor = cc.LayerColor:create(cc.c4b(220,233,239,255), bigWidth, s_DESIGN_HEIGHT)
+    initColor:setAnchorPoint(0.5,0.5)
+    initColor:ignoreAnchorPointForPosition(false)  
+    initColor:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+    initColor:setTouchEnabled(false)
+    self:addChild(initColor)
+
+	--显示贝贝的LOGO  显示2个按钮
+	local splogo = cc.Sprite:create("image/login/icon.png")
+	splogo:setAnchorPoint(0.5,0.5)
+	splogo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.75)
+	self:addChild(splogo)
+
+	local spslogan = cc.Sprite:create("image/login/slogan.png")
+	spslogan:setAnchorPoint(0.5,0.5)
+	spslogan:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.55)
+	self:addChild(spslogan)
+
+	local btnRegister = ccui.Button:create("image/login/button_on.png","image/login/button_down.png")
+	btnRegister:setAnchorPoint(0.5,0.5)
+	btnRegister:setTitleFontSize(30)
+	btnRegister:addTouchEventListener(handler(self, self.onIntroRegisterTouch))
+	btnRegister:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.40)
+	btnRegister:setTitleText("开始使用")
+	self:addChild(btnRegister)
+
+	local btnLogin = ccui.Button:create("image/login/button_on.png","image/login/button_down.png")
+	btnLogin:setAnchorPoint(0.5,0.5)
+	btnLogin:setTitleFontSize(30)
+	btnLogin:addTouchEventListener(handler(self, self.onIntroLoginTouch))
+	btnLogin:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.30)
+	btnLogin:setTitleText("登陆")
+	self:addChild(btnLogin)
+end
+
+function RegisterAccountView:onIntroLoginTouch( sender,eventType)
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+	print("进入登陆")
+	self.curStep = RegisterAccountView.STEP_1
+	self:goStep(self.curStep)
+end
+
+function RegisterAccountView:onIntroRegisterTouch( sender,eventType )
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+	print("进入注册  选性别")
+	self.curStep = RegisterAccountView.STEP_3
+	self:goStep(self.curStep)
+end
+
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
---TODO 显示修改密码界面
+--显示修改密码界面
 function RegisterAccountView:showModifyPwdView( ... )
 end
 --显示密码找回界面
@@ -759,9 +848,9 @@ function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 			s_TIPS_LAYER:showSmallWithOneButton("手机号码验证成功！",function ()
 				s_O2OController.resetPassword(handler(self,self.onResetPwdCallBack))--重置密码
 				--去选择性别
-				self.curStep = RegisterAccountView.STEP_3
-				self:goStep(self.curStep)
-				--s_SCENE:removeAllPopups()
+				-- self.curStep = RegisterAccountView.STEP_3
+				-- self:goStep(self.curStep)
+				s_SCENE:removeAllPopups()
 			end)
 		elseif self.smsMode == "smslogin" then
 			-- print("BBBBBBBBBBBBBBBBB")--do nothing

@@ -84,7 +84,7 @@ function IntroLayer.create(directOnLogin)
                 playSound(s_sound_buttonEffect)
 
                 --弹出RegisterAccountView的登陆界面  RegisterAccountView.STEP_6 就是登陆
-                local loginView = RegisterAccountView.new(RegisterAccountView.STEP_6)
+                local loginView = RegisterAccountView.new(RegisterAccountView.STEP_10)
                 loginView.close = function ()
                     local introLayer = IntroLayer.create()
                     s_SCENE:popup(introLayer)

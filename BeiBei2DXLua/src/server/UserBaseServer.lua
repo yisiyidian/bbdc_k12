@@ -326,27 +326,37 @@ function UserBaseServer.updateLoginInfo(username, password, phoneNumber,onRespon
         end
     end
 
-    if s_CURRENT_USER.mobilePhoneNumber ~= phoneNumber then
+    if s_CURRENT_USER.mobilePhoneNumber ~= phoneNumber or phoneNumber == "" then
         --判断手机号是否已存在
-        isPhoneNumberExist(phoneNumber,function (exist,error)
-            if error ~= nil then
-                --手机号码已存在
-                onResponse(s_CURRENT_USER.username,password,s_CURRENT_USER.mobilePhoneNumber,error.description,error.code)
-            elseif exist.count == 0 then
-                if s_CURRENT_USER.nickName ~= nickName then
-                    saveUserToServer({["nickName"]=nickName,["mobilePhoneNumber"]=phoneNumber,['sex']=sex}, function(datas,error)
-                        if error ~= nil then
-                            onResponse(s_CURRENT_USER.username,s_CURRENT_USER.password,phoneNumber,error.description,error.code)
-                        else
-                            s_CURRENT_USER.nickName = nickName
-                            s_CURRENT_USER.mobilePhoneNumber = phoneNumber
-                            s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER,s_CURRENT_USER.userId,s_CURRENT_USER.username)
-                            nameAndPhoneComplete(password)
-                        end
-                    end)
+        if phoneNumber ~= "" then
+            isPhoneNumberExist(phoneNumber,function (exist,error)
+                if error ~= nil then
+                    --手机号码已存在
+                    onResponse(s_CURRENT_USER.username,password,s_CURRENT_USER.mobilePhoneNumber,error.description,error.code)
+                elseif exist.count == 0 then
+                        saveUserToServer({["nickName"]=nickName,["mobilePhoneNumber"]=phoneNumber,['sex']=sex}, function(datas,error)
+                            if error ~= nil then
+                                onResponse(s_CURRENT_USER.username,s_CURRENT_USER.password,phoneNumber,error.description,error.code)
+                            else
+                                s_CURRENT_USER.nickName = nickName
+                                s_CURRENT_USER.mobilePhoneNumber = phoneNumber
+                                s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER,s_CURRENT_USER.userId,s_CURRENT_USER.username)
+                                nameAndPhoneComplete(password)
+                            end
+                        end)
+                end            
+            end)
+        else
+            saveUserToServer({["nickName"]=nickName,['sex']=sex}, function(datas,error)
+                if error ~= nil then
+                    onResponse(s_CURRENT_USER.username,s_CURRENT_USER.password,phoneNumber,error.description,error.code)
+                else
+                    s_CURRENT_USER.nickName = nickName
+                    s_LocalDatabaseManager.saveDataClassObject(s_CURRENT_USER,s_CURRENT_USER.userId,s_CURRENT_USER.username)
+                    nameAndPhoneComplete(password)
                 end
-            end            
-        end)
+            end)
+        end
     else
         --手机号码已绑定
         print("s_CURRENT_USER.mobilePhoneNumber:"..s_CURRENT_USER.mobilePhoneNumber)
