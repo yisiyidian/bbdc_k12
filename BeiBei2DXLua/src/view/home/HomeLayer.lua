@@ -424,14 +424,18 @@ function HomeLayer:fuckSMS()
     end
     if not smsVerify then
         if s_CURRENT_USER.mobilePhoneNumber ~= "" and not s_CURRENT_USER.mobilePhoneVerified then
-            smsVerify = true
-            local fuckSMSView = RegisterAccountView.new(RegisterAccountView.STEP_2)
-            s_SCENE:popup(fuckSMSView)
-            fuckSMSView:requestVerifySMSCode(s_CURRENT_USER.mobilePhoneNumber)
+
+            s_SCENE:callFuncWithDelay(1, function ()
+                smsVerify = true
+                local fuckSMSView = RegisterAccountView.new(RegisterAccountView.STEP_2)
+                s_SCENE:popup(fuckSMSView)
+                fuckSMSView:requestVerifySMSCode(s_CURRENT_USER.mobilePhoneNumber)
+            end)
+            
+
         elseif s_CURRENT_USER.mobilePhoneNumber == "" then
             local inpoutPhoneView = RegisterAccountView.new(RegisterAccountView.STEP_11)
             s_SCENE:popup(inpoutPhoneView)
-            -- inpoutPhoneView:requestVerifySMSCode(s_CURRENT_USER.mobilePhoneNumber)
         end
     end
 end

@@ -253,6 +253,8 @@ function RegisterAccountView:showInputPhoneNumber(args,type)
 
 	if args[1] == "fromIntro" then
 		self.title:setString("登陆")
+		self.btnReturn:setVisible(true)
+		self.btnReturn:setTouchEnabled(true)
 	end
 
 	--下一步按钮  三角的
@@ -922,6 +924,7 @@ function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 			s_SCENE:callFuncWithDelay(1,function()
 			s_TIPS_LAYER:showSmallWithOneButton("手机号码验证成功！",function ()
 				s_O2OController.resetPassword(handler(self,self.onResetPwdCallBack))--重置密码
+				cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
 				--去选择性别
 				-- self.curStep = RegisterAccountView.STEP_3
 				-- self:goStep(self.curStep)
@@ -1035,6 +1038,15 @@ function RegisterAccountView:endRegister(state)
 				print("s_SCENE:removeAllPopups")
 			end
 		end
+		return
+	end
+
+	if self.processType == "logined_verify" then
+		self.smsMode = "verify"
+		self:requestVerifySMSCode(self.phoneNumber)
+		self.curStep = RegisterAccountView.STEP_2
+		self.direction = "right"
+		self:goStep(self.curStep)
 	end
 end
 
