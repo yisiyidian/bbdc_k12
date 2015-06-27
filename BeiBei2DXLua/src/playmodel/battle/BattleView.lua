@@ -6,9 +6,10 @@ function BattleView:ctor()
 	s_BattleManager:register()
 	--初始化
 	s_BattleManager:initBattle()
-	--创建boss
+	--创建boss boss编号
 	s_BattleManager:createBoss({'1','1','1'})
-	--创建pet
+
+	--创建pet pet编号
 	s_BattleManager:createPet({'2','3','4'})
 	--绘制UI
 	self:initUI()
