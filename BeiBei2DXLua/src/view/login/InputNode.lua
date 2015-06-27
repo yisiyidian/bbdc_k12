@@ -55,9 +55,8 @@ function InputNode:init(backgroundImage,backgroundImageOver,placeHolder,callback
     self.textField:setTouchAreaEnabled(true)
     self.textField:setFontSize(34)
     self.textField:setMaxLengthEnabled(true)
-    -- self.textField:setPlaceHolderColor(cc.c3b(153,168,181))
-    self.textField:setPlaceHolderColor(cc.c3b(255,255,255))
-    self.textField:setTextColor(cc.c4b(0,0,0,255))
+    self.textField:setPlaceHolderColor(cc.c3b(111,111,111))
+    self.textField:setTextColor(cc.c4b(255,255,255,255))
     self.textField:setPlaceHolder(placeHolder)--占位文本
     --设置长度限制
     local tlen = maxLength or 10
@@ -98,9 +97,6 @@ end
 
 --文本框事件处理
 function InputNode:onTextEvent(sender,eventType)
-    -- if self.callback ~= nil then 
-    --     self.callback(sender, eventType) 
-    -- end
     self:processInput()
 
     if eventType == ccui.TextFiledEventType.attach_with_ime then
@@ -131,21 +127,26 @@ function InputNode:processInput()
         end
         self.cursor:setVisible(false)
         self.backImage:setTexture(self.backgroundImageOver)
+        self.textField:setTextColor(cc.c4b(111,111,111,255))
     else
         if self.minLength ~= 0 then
             if string.len(text) >= self.minLength then
                 if self.callback ~= nil then 
                     self.callback(text,string.len(text),self.minLength)
                 end
-                self.backImage:setTexture(self.backgroundImageOver)        
+                self.backImage:setTexture(self.backgroundImageOver)       
+                self.textField:setTextColor(cc.c4b(111,111,111,255))
                 return
             end
         end
+        if self.callback ~= nil then 
+            self.callback(text,string.len(text),self.maxLength)
+        end
         self.cursor:setVisible(true)
         self.backImage:setTexture(self.backgroundImage)
+        self.textField:setTextColor(cc.c4b(255,255,255,255))
     end
 end
-
 
 --开关键盘
 function InputNode:openIME()
@@ -184,6 +185,7 @@ end
 
 function InputNode:setPlaceHolderColor()
     self.textField:setPlaceHolderColor(cc.c3b(153,168,181))
+    -- self.textField:setTextColor(cc.c4b(111,111,111,255))
     -- self.textField:setPlaceHolderColor(cc.c3b(255,255,255))
 end
 
@@ -191,12 +193,5 @@ function InputNode:setInputMode(xx)
     -- body
 end
 
-
 return InputNode
-
-
-
-
-
-
 

@@ -40,6 +40,7 @@ function RegisterAccountView:ctor(step,canclose)
   	elseif step == RegisterAccountView.STEP_10 then
   		--显示选择登陆方式界面
   		self:showIntroView()
+		self.uistack[#self.uistack + 1] = {step,{}} --参数入栈
   	else
   		self.canclose = true
       	self:init()
@@ -89,15 +90,19 @@ function RegisterAccountView:onReturnClick(sender,eventType)
 	--从栈里弹出来上一步的参数
 	local cmd = self.uistack[#self.uistack - 1]
 	if cmd then
-    self.uistack[#self.uistack] = nil
+    	self.uistack[#self.uistack] = nil
 		self.uistack[#self.uistack] = nil
 		self.curStep 	= cmd[1]
 		local data 		= cmd[2]
-    if type(data) == "table" and #data == 0 then
-      	data = nil
-    end
+	    if type(data) == "table" and #data == 0 then
+	      	data = nil
+	    end
     	self.direction = "right"
 		self:goStep(self.curStep,data)
+	elseif self.curStep == RegisterAccountView.STEP_2 and self.smsMode == "verify" then
+		self.direction = "right"
+		self.curStep = RegisterAccountView.STEP_11
+		self:goStep(self.curStep,{})
 	else
 		sender:setEnabled(false)
 		self:endRegister()
@@ -245,9 +250,15 @@ function RegisterAccountView:showInputPhoneNumber(args,type)
 		self.btnGuestLogin = btnGuestLogin
 		self.views[#self.views+1] = btnGuestLogin
 	end
+
+	if args[1] == "fromIntro" then
+		self.title:setString("登陆")
+	end
+
 	--下一步按钮  三角的
 	local btnPhoneNumberOK = ccui.Button:create("image/shop/button_back2.png")
 	btnPhoneNumberOK:setPosition(0.8 * s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.8 - 200)
+	btnPhoneNumberOK:setScaleX(-1)
 	btnPhoneNumberOK:addTouchEventListener(handler(self, self.onTouchPhoneNumberOK))
 	self.btnPhoneNumberOK = btnPhoneNumberOK
 	self.btnPhoneNumberOK:setVisible(false)
@@ -264,6 +275,7 @@ function RegisterAccountView:onOtherLogin(sender,eventType)
 	print("其他登陆方式")---直接转到帐号密码登陆界面
 	self.curStep = RegisterAccountView.STEP_6
 	self.direction = "left"
+	self.canclose = true
 	self:goStep(self.curStep)
 end
 
@@ -309,20 +321,28 @@ function RegisterAccountView:onVerifyPhoneNumberBack(data,error)
 		-- 2、
 		-- 已注册 已验证的手机号码,调用短信验证码登陆
 		-- 此后的登陆,通过手机号码 + 默认密码登陆
-		if not data.verify then
+		if not data.verify and self.smsMode ~= "verify" then
 			--  已被注册的手机号码 未验证的 要验证
 			--	转到输入密码的界面
 			--	让用户输入密码 登陆
+			
 			self.curStep = RegisterAccountView.STEP_6 --输入密码的界面
 			self.direction = "left"
 			self:goStep(self.curStep,self.phoneNumber)
+		
 		else
 			-- 已注册 已验证的手机号码,调用短信验证码登陆
 			-- 转到输入登陆验证码的界面
 			if not self.debug then
-				self:requestLoginSMSCode(self.phoneNumber)
+				if self.smsMode == "verify" then
+					self:requestVerifySMSCode(self.phoneNumber)
+					self.curStep = RegisterAccountView.STEP_2
+				else
+					self:requestLoginSMSCode(self.phoneNumber)
+					self.curStep = RegisterAccountView.STEP_9
+				end
 			end
-			self.curStep = RegisterAccountView.STEP_9
+			
 			self.direction = "left"
 			self:goStep(self.curStep)
 		end
@@ -338,9 +358,9 @@ function RegisterAccountView:onVerifyPhoneNumberBack(data,error)
 		--2、昵称
 		--3、班级 (已删掉)
 		--4、登陆进入 输入验证码
-
-		self:register(self.phoneNumber,RegisterAccountView.PWD,"Guest",0)
-		
+    
+	    --self:register(self.phoneNumber,RegisterAccountView.PWD,"Guest",0)
+		s_TIPS_LAYER:showSmallWithOneButton("该手机号未经注册，请检查您是否输入有误")
 		--[[
 		self.curStep = RegisterAccountView.STEP_3  --选择性别
 		self.direction = "left"
@@ -381,6 +401,7 @@ function RegisterAccountView:showInputSmsCode(args,type)
 	local btnSMSCodeOK = ccui.Button:create("image/shop/button_back2.png")
 	btnSMSCodeOK:setPosition(0.8 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 200)
 	btnSMSCodeOK:addTouchEventListener(handler(self, self.onTouchSMSCodeOK))
+	btnSMSCodeOK:setScaleX(-1)
 	btnSMSCodeOK:setTitleFontSize(36)
 	self.btnSMSCodeOK = btnSMSCodeOK
 	self.btnSMSCodeOK:setVisible(false)
@@ -398,6 +419,11 @@ function RegisterAccountView:showInputSmsCode(args,type)
 	self.btnRetry = btnRetry
 	self.views[#self.views+1] = btnRetry
 
+	if self.smsMode == "verify" then
+		self.btnReturn:setTouchEnabled(true) --禁用返回按钮
+		self.btnReturn:setVisible(true)
+	end
+	
 	if countDown ~= 0 then
 		--倒计时 请求验证码
 		self:startSMSTick(countDown)
@@ -510,11 +536,17 @@ end
 
 --显示选择性别的界面
 function RegisterAccountView:showChooseSex()
-	self.btnReturn:setTouchEnabled(false) --禁用返回按钮
-	self.btnReturn:setVisible(false)
+	-- self.btnReturn:setTouchEnabled(false) --禁用返回按钮
+	-- self.btnReturn:setVisible(false)
 
 	self.alertTip:setString("你是男孩还是女孩？")
 	self.title:setString("完善信息")
+
+	local txtStep = cc.Label:createWithSystemFont("1/2","",26)
+	txtStep:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 50)
+	txtStep:setTextColor(cc.c3b(110,182,240))
+	self:addChild(txtStep)
+	self.views[#self.views+1] = txtStep
 
 	local btnGirl = ccui.Button:create("image/login/button_boygirl_zhuce.png")
 	btnGirl:setPosition(0.5 * s_DESIGN_WIDTH + 100,s_DESIGN_HEIGHT*0.6 - 50)
@@ -563,15 +595,24 @@ function RegisterAccountView:showInputNickName()
 	local girlImg = "image/PersonalInfo/hj_personal_avatar.png"
 	local boyImg = "image/PersonalInfo/boy_head.png"
 	local headImg = nil
+	local tipsex = ""
 	if self.sex == 0 then
+		tipsex = "girl"
 		headImg = cc.Sprite:create(girlImg)	
 	else
+		tipsex = "boy"
 		headImg = cc.Sprite:create(boyImg)
 	end
 	headImg:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self.headImg = headImg
 	self.views[#self.views + 1] = headImg
 	self:addChild(headImg)
+
+	local txtStep = cc.Label:createWithSystemFont("2/2","",26)
+	txtStep:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 50)
+	txtStep:setTextColor(cc.c3b(110,182,240))
+	self:addChild(txtStep)
+	self.views[#self.views+1] = txtStep
 
 	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","image/signup/shuru_bbchildren_white.png","请输入昵称",handler(self, self.processInputName),nil,nil,nil,8,1)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.75 - 200)
@@ -584,12 +625,19 @@ function RegisterAccountView:showInputNickName()
 	local btnNickName = ccui.Button:create("image/shop/button_back2.png")
 	btnNickName:setPosition(0.8 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.75 - 200)
 	btnNickName:addTouchEventListener(handler(self, self.onTouchNickNameOK))
+	btnNickName:setScale(-1)
 	self:addChild(btnNickName)
 	btnNickName:setVisible(false)
 	self.btnNickName = btnNickName
 	self.views[#self.views + 1] = btnNickName
 
-	self.alertTip:setString("hi 这就是你在贝贝里的头像")
+	local alertTip = cc.Label:createWithSystemFont("输入真实姓名，小伙伴更容易找到你","",26)
+	alertTip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.75 - 130)
+	alertTip:setTextColor(cc.c3b(140, 139, 139))
+	self:addChild(alertTip)
+	self.views[#self.views + 1] = alertTip
+
+	self.alertTip:setString("hi!"..tipsex.."! 这就是你在贝贝里的头像")
 end
 
 function RegisterAccountView:processInputName()
@@ -690,6 +738,7 @@ function RegisterAccountView:showLoginView(args)
 	local btnLogin = ccui.Button:create("image/shop/button_back2.png")
 	btnLogin:setPosition(0.8 * s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.8  - 300)
 	btnLogin:addTouchEventListener(handler(self, self.onLoginTouch))
+	btnLogin:setScaleX(-1)
 	btnLogin:setTitleFontSize(36)
 	btnLogin:setVisible(false)
 	self.btnLogin = btnLogin
@@ -749,6 +798,12 @@ end
 ------显示选择登陆方式的界面sterAccountView.STEP_10----------------------------------------------------------------------------------------------------------------------
 function RegisterAccountView:showIntroView()
 	self.inited = false
+	if not tolua.isnull(self.btnReturn) then
+		self.btnReturn:setVisible(false)
+ 		self.btnReturn:setTouchEnabled(false)
+ 	end
+
+ 	self.introviews = {}
 	--浅蓝色背景
 	local bigWidth = s_DESIGN_WIDTH + 2 * s_DESIGN_OFFSET_WIDTH
     local bigHeight = 1.0 * s_DESIGN_HEIGHT
@@ -758,17 +813,20 @@ function RegisterAccountView:showIntroView()
     initColor:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
     initColor:setTouchEnabled(false)
     self:addChild(initColor)
+    self.introviews[#self.introviews + 1] = initColor
 
 	--显示贝贝的LOGO  显示2个按钮
 	local splogo = cc.Sprite:create("image/login/icon.png")
 	splogo:setAnchorPoint(0.5,0.5)
 	splogo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.75)
 	self:addChild(splogo)
+	self.introviews[#self.introviews + 1] = splogo
 
 	local spslogan = cc.Sprite:create("image/login/slogan.png")
 	spslogan:setAnchorPoint(0.5,0.5)
 	spslogan:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.55)
 	self:addChild(spslogan)
+	self.introviews[#self.introviews + 1] = spslogan
 
 	local btnRegister = ccui.Button:create("image/login/button_on.png","image/login/button_down.png")
 	btnRegister:setAnchorPoint(0.5,0.5)
@@ -777,6 +835,7 @@ function RegisterAccountView:showIntroView()
 	btnRegister:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.40)
 	btnRegister:setTitleText("开始使用")
 	self:addChild(btnRegister)
+	self.introviews[#self.introviews + 1] = btnRegister
 
 	local btnLogin = ccui.Button:create("image/login/button_on.png","image/login/button_down.png")
 	btnLogin:setAnchorPoint(0.5,0.5)
@@ -785,24 +844,32 @@ function RegisterAccountView:showIntroView()
 	btnLogin:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.30)
 	btnLogin:setTitleText("登陆")
 	self:addChild(btnLogin)
+	self.introviews[#self.introviews + 1] = btnLogin
 end
 
 function RegisterAccountView:onIntroLoginTouch( sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
+	
+	for k,v in pairs(self.introviews) do
+		v:removeFromParent()
+	end
 	print("进入登陆")
 	self.curStep = RegisterAccountView.STEP_1
-	self:goStep(self.curStep)
+	self:goStep(self.curStep,"fromIntro")
 end
 
 function RegisterAccountView:onIntroRegisterTouch( sender,eventType )
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
+	for k,v in pairs(self.introviews) do
+		v:removeFromParent()
+	end
 	print("进入注册  选性别")
 	self.curStep = RegisterAccountView.STEP_3
-	self:goStep(self.curStep)
+	self:goStep(self.curStep,"fromIntro")
 end
 
 

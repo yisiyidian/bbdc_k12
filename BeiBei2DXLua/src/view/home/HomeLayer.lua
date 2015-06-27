@@ -416,8 +416,9 @@ end
 
 function HomeLayer:fuckSMS()
     --如果判断没有验证手机 强制去验证
-    --
-    print(debug.traceback())
+    if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
+        return
+    end
     if smsVerify == nil then
         smsVerify = s_CURRENT_USER.mobilePhoneVerified
     end
