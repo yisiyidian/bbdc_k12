@@ -22,6 +22,7 @@ function MatView:ctor()
 	self:initUI()
 	-- 注册观察者
 	MatController:register()
+	MatController.MatView = self
 	for k,v in pairs(self.word) do
 		table.insert(MatController.word,v)
 	end
@@ -39,6 +40,12 @@ function MatView:initUI()
 	self:addChild(self.back)
 	-- 布景
 
+
+	self:resetUI()
+	self:touchFunc()
+end
+
+function MatView:resetUI()
 	for i=1,5 do
 		local temp = {}
 		self.coco[#self.coco +1] = temp 
@@ -46,12 +53,10 @@ function MatView:initUI()
 			local cocoView = CocoView.create()
 			self.coco[i][j] = cocoView 
 			self.back:addChild(self.coco[i][j])
-			self.coco[i][j]:setPosition(cc.p(i * 120 - 60 ,j * 120))
+			self.coco[i][j]:setPosition(cc.p(i * 120 -60,j * 120))
 			-- 加入砖块
 		end
 	end
-
-	self:touchFunc()
 end
 
 function MatView:touchFunc()
@@ -72,7 +77,7 @@ function MatView:touchFunc()
         local location = self.back:convertToNodeSpace(touch:getLocation())
         for i = 1,5 do
         	for j=1,5 do
-        		if cc.rectContainsPoint(self.coco[i][j].CocoSprite:getBoundingBox(),location) then
+        		if cc.rectContainsPoint(self.coco[i][j]:getBoundingBox(),location) then
         			MatController:updateArr(cc.p(i,j),self.coco[i][j])
         		end
         	end
@@ -81,7 +86,7 @@ function MatView:touchFunc()
 
     -- 触摸结束，进行判断
     local function onTouchEnded(touch, event)
-    	-- MatController.judgeFunc()
+    	MatController.judgeFunc()
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()
