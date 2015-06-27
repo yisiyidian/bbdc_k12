@@ -358,9 +358,12 @@ function RegisterAccountView:onVerifyPhoneNumberBack(data,error)
 		--2、昵称
 		--3、班级 (已删掉)
 		--4、登陆进入 输入验证码
-    
-	    --self:register(self.phoneNumber,RegisterAccountView.PWD,"Guest",0)
-		s_TIPS_LAYER:showSmallWithOneButton("该手机号未经注册，请检查您是否输入有误")
+    	
+    	if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
+	    	self:register(self.phoneNumber,RegisterAccountView.PWD,"Guest",0)
+	    else
+			s_TIPS_LAYER:showSmallWithOneButton("该手机号未经注册，请检查您是否输入有误")
+		end
 		--[[
 		self.curStep = RegisterAccountView.STEP_3  --选择性别
 		self.direction = "left"
@@ -490,7 +493,7 @@ function RegisterAccountView:onRetrySMSTouch(sender,eventType)
 	end
 	if not self.debug then
 		if self.smsMode == "verify" then --区分验证码的格式
-			if self.phoneNumber == "" then
+			if self.phoneNumber == "" or not self.phoneNumber then
 				self.phoneNumber = s_CURRENT_USER.mobilePhoneNumber
 			end
 			self:requestVerifySMSCode(self.phoneNumber)
@@ -750,6 +753,8 @@ function RegisterAccountView:showLoginView(args)
 		self.inputNodeID:setEnabled(false)
 		self.inputNodeID:setVisible(false)
 		inputNodePwd:openIME()
+		inputNodePwd:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 250)
+		btnLogin:setPosition(0.8 * s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.8  - 250)
 	else
 		inputNodeID:openIME()
 	end
@@ -912,6 +917,9 @@ function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 		if self.smsMode == "verify" then
 			cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
 			s_CURRENT_USER.mobilePhoneVerified = true --通过验证
+
+			--延迟1秒弹出
+			s_SCENE:callFuncWithDelay(1,function()
 			s_TIPS_LAYER:showSmallWithOneButton("手机号码验证成功！",function ()
 				s_O2OController.resetPassword(handler(self,self.onResetPwdCallBack))--重置密码
 				--去选择性别
@@ -919,6 +927,8 @@ function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 				-- self:goStep(self.curStep)
 				s_SCENE:removeAllPopups()
 			end)
+			end)
+
 		elseif self.smsMode == "smslogin" then
 			-- print("BBBBBBBBBBBBBBBBB")--do nothing
 		end
@@ -935,6 +945,10 @@ end
 --验证手机号码是否有效  HomeLayer调用到
 function RegisterAccountView:requestVerifySMSCode(phoneNumber)
 	print("请求验证手机的验证码")
+	print("phoneNumber:"..phoneNumber)
+	print("mobilePhoneNumber:"..s_CURRENT_USER.mobilePhoneNumber)
+	print("self.phoneNumber"..self.phoneNumber)
+	self.phoneNumber = phoneNumber
 	if not self.debug then
 		cx.CXAvos:getInstance():requestVerifyPhoneNumber(phoneNumber);
 	end
@@ -958,7 +972,9 @@ end
 function RegisterAccountView:onResetPwdCallBack()
 	--重置密码成功
 	print("重置密码成功！")
-	self:endRegister()
+	if not tolua.isnull(self) then
+		self:endRegister()
+	end
 end
 --开始注册
 --phoneNumber 	就是手机号码

@@ -117,7 +117,7 @@ extern "C"
      * @param error      [错误信息]
      * @param errorcode  [错误号]
      */
-    void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionCP(JNIEnv *env, jstring error, jint errorcode)
+    void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionCP(JNIEnv *env,jobject thisz, jstring error, jint errorcode)
     {
         const char *nativeString_error = error ? env->GetStringUTFChars(error, 0) : 0;
         CXAvos::getInstance()->invokeLuaCallbackFunction_cp(nativeString_error,errorcode);
@@ -126,7 +126,7 @@ extern "C"
     }    
 
 
-    void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionVP(JNIEnv *env, jstring error, jint errorcode)
+    void Java_c_bb_dc_BBNDK_invokeLuaCallbackFunctionVP(JNIEnv *env,jobject thisz, jstring error, jint errorcode)
     {
        const char *nativeString_error = error ? env->GetStringUTFChars(error, 0) : 0;
        CXAvos::getInstance()->invokeLuaCallBackFunction_vp(nativeString_error,errorcode);

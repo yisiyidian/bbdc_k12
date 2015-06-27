@@ -1,4 +1,3 @@
-require("common.global")
 
 local SmallAlterWithOneButton = class("SmallAlterWithOneButton", function()
     return cc.Layer:create()
@@ -9,13 +8,6 @@ function SmallAlterWithOneButton.create(info, btnMsg)
     main:setContentSize(s_DESIGN_WIDTH,s_DESIGN_HEIGHT)
     main:setAnchorPoint(0.5,0.5)
     main:ignoreAnchorPointForPosition(false)
-
-    main.affirm = function()
-    end
-
-    main.close = function()
-        main:removeFromParent()
-    end
 
     local back = cc.Sprite:create("image/alter/tanchu_board_small_white.png")
     back:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3)
@@ -37,6 +29,12 @@ function SmallAlterWithOneButton.create(info, btnMsg)
         back:runAction(cc.Sequence:create(action2,cc.CallFunc:create(function()main.affirm()end)))
     end
 
+    main.affirm = function()
+    end
+
+    main.close = function()
+        main:removeFromParent()
+    end
 
     local button_ok_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then

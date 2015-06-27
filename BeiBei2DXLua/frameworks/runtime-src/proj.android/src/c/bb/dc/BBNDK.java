@@ -425,7 +425,8 @@ public class BBNDK {
 	
 	public static void requestVerifyPhoneNumber(String phoneNumber){
 		try {
-			AVUser.requestLoginSmsCode(phoneNumber);
+//			AVUser.requestLoginSmsCode(phoneNumber);
+			AVUser.requestMobilePhoneVerify(phoneNumber);
 		} catch (AVException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -433,11 +434,17 @@ public class BBNDK {
 	}
 	
 	//
-	public static void verifyPhoneNumber(String phoneNumber,String smsCode){
-		AVUser.requestMobilePhoneVerifyInBackground(phoneNumber, new RequestMobileCodeCallback() {
+	public static void verifyPhoneNumber(final String phoneNumber,final String smsCode){
+		AVUser.verifyMobilePhoneInBackground(smsCode, new AVMobilePhoneVerifyCallback() {
 			@Override
 			public void done(AVException e) {
-				invokeLuaCallbackFunctionVP(e.getLocalizedMessage(), e.getCode());
+				if(e==null){
+					invokeLuaCallbackFunctionVP("", 0);
+				}else{
+					Log.d("verifyPhoneNumber","Verify:"+e.getLocalizedMessage());
+					String err = e.getLocalizedMessage();
+					invokeLuaCallbackFunctionVP(err, e.getCode());
+				}
 			}
 		});
 	}

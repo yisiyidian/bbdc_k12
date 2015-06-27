@@ -81,7 +81,7 @@ function InputNode:init(backgroundImage,backgroundImageOver,placeHolder,callback
     cursor:setPosition(0,34)
     cursor:runAction(cc.RepeatForever:create(cc.Sequence:create(cc.FadeIn:create(0.5),cc.FadeOut:create(0.5))))
     self.cursor = cursor
-    cursor:setVisible(false)
+    -- cursor:setVisible(false)
     self:addChild(cursor)
     
     local update = function(dt)
