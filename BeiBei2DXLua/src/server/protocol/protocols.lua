@@ -86,17 +86,25 @@ function isPhoneNumberExist(phoneNumber,callback)
             callback(result,error)
         end
     end
-    --TODO 解开注释
     local protocol = ProtocolBase.create(api,serverRequestType,{["mobilePhoneNumber"]=phoneNumber},cb)
     protocol:request()
-    --TODO 注释
-    -- local re = {}
-    -- re.datas = {}
-    -- re.datas.count = 0
-    -- cb(re,nil)
 end
 
+function reSetPhoneNumber(phoneNumber,callback)
+   local api = "resetphonenumber"
+    local serverRequestType = SERVER_REQUEST_TYPE_NORMAL
 
+    --没出错则返回结果，出错之后则返回错误信息
+    local function cb(result,error)
+        local result = (error == nil) and result.datas or nil
+        if callback then
+            callback(result,error)
+        end
+    end
+    
+    local protocol = ProtocolBase.create(api,serverRequestType,{["mobilePhoneNumber"]=phoneNumber}, cb)
+    protocol:request() 
+end
 
 -- localDBUser is newer than serverUser
 -- callback(updatedAt, error)
