@@ -13,9 +13,13 @@ function Pet:listNotify()
 end
 
 function Pet:handleNotification(notify,data)
-    --data {xxx=xxx,xxxdd=xxxdd}
     if notify == ATTACK then
-		s_BattleManager:addPetToSkillList(self)
+    	for k,v in pairs(data.id) do
+    		if v == self.id then
+				s_BattleManager:addPetToSkillList(self)
+				break
+			end
+		end
     else
 
     end

@@ -1,4 +1,5 @@
 require("playmodel.battle.Notification")
+require('playmodel.battle.ActionManager')
 local Pet = require("playmodel.character.Pet")
 
 local Boss = class("Boss", Pet)
@@ -25,6 +26,7 @@ function Boss:loseBlood(blood)
 	if self.blood < 0 then
 		self.blood = 0
 	end
+	self.ui:runAction(bossAction())
 end
 
 -- function Boss:addBuff(buff)

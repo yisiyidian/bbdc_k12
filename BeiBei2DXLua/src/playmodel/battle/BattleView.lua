@@ -10,7 +10,7 @@ function BattleView:ctor()
 	--创建boss
 	s_BattleManager:createBoss({'1','1','1'})
 	--创建pet
-	s_BattleManager:createPet({'2','3','4','2','3'})
+	s_BattleManager:createPet({'2','3','4','5','6'})
 	--绘制UI
 	self:initUI()
 
@@ -53,8 +53,9 @@ function BattleView:touchFunc()
     end
 
     local function onTouchEnded(touch, event)
-    	s_BattleManager:setPetCountToReleaseSkill(3)
-    	s_BattleManager:sendNotification(ATTACK,{})
+    	local list = {'3','4','2'}
+    	s_BattleManager:setPetCountToReleaseSkill(#list)
+    	s_BattleManager:sendNotification(ATTACK,{id = list})
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()

@@ -31,4 +31,8 @@ function petActionToReleaseSkill()
 	return cc.Sequence:create(cc.ScaleTo:create(0.5,1.2),cc.ScaleTo:create(0.5,1))
 end
 
+function bossAction()
+	return cc.Sequence:create(cc.ScaleTo:create(0.5,1.2),cc.ScaleTo:create(0.5,1))
+end
+
 return ActionManager
