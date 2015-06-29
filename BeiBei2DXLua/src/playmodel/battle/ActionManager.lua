@@ -25,7 +25,10 @@ function ActionManager:changeBossAction(callback)
 		s_BattleManager.bossList[s_BattleManager.currentBossIndex + 1].ui:runAction(cc.Sequence:create(cc.MoveBy:create(0.5,cc.p(0,-400)),cc.CallFunc:create(callback)))
 	end)))
 																	  	
-	
+end
+
+function petActionToReleaseSkill()
+	return cc.Sequence:create(cc.ScaleTo:create(0.5,1.2),cc.ScaleTo:create(0.5,1))
 end
 
 return ActionManager

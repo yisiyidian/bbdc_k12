@@ -26,6 +26,8 @@ function BattleManager:initInfo()
 	self.attack = 0
 	self.bossList = {}
 	self.petList = {}
+	self.skillList = {}
+	self.skillCount = 0
 	self.currentBossIndex = 0
 	self.currentBoss = nil
 end
@@ -73,6 +75,28 @@ function BattleManager:getTargetBySkillType(skillType)
 	end
 end
 --释放技能
+function BattleManager:realseSkillInList()
+	for i = #self.skillList,1,-1 do
+		--self.skillList[i].action = self.actionManager:petActionToReleaseSkill()
+		self.skillList[i].cb = function ()
+			if i < #self.skillList then
+				self.skillList[i + 1]:releaseSkill()
+			else
+				self:releaseSkillEnded()
+			end
+		end
+	end
+	self.skillList[1]:releaseSkill()
+end
+
+function BattleManager:releaseSkillEnded()
+	self.skillList = {}
+	self.skillCount = 0
+	if self.bossList[self.currentBossIndex].blood <= 0 then
+		self:changeNextBoss()
+	end
+end
+
 function BattleManager:releaseSkill(skill)
 
 	local targets = skill.targets
@@ -94,6 +118,7 @@ end
 function BattleManager:changeNextBoss()
 	-- body
 	if s_BattleManager.currentBossIndex == #self.bossList then
+		self:battleOver()
 		return
 	end
 	self.actionManager:changeBossAction(function()
@@ -102,6 +127,16 @@ function BattleManager:changeNextBoss()
 	end)
 	
 end
+--将要发动技能的宠物加入列表，用于依次发动
+function BattleManager:addPetToSkillList(pet)
+	table.insert(self.skillList,pet)
+	if #self.skillList == self.skillCount then
+		self:realseSkillInList()
+	end
+end
 
+function BattleManager:setPetCountToReleaseSkill(count)
+	self.skillCount = count
+end
 
 return BattleManager

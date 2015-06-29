@@ -10,7 +10,7 @@ function BattleView:ctor()
 	--创建boss
 	s_BattleManager:createBoss({'1','1','1'})
 	--创建pet
-	s_BattleManager:createPet({'2','3','4'})
+	s_BattleManager:createPet({'2','3','4','2','3'})
 	--绘制UI
 	self:initUI()
 
@@ -18,6 +18,11 @@ function BattleView:ctor()
 end
 
 function BattleView:initUI()
+
+	--背景
+	local background = cc.Sprite:create('image/playmodel/background.png')
+	background:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2)
+	self:addChild(background)
 
 	--local back = cc.Sprite:create()
 	local boss = s_BattleManager.bossList
@@ -33,7 +38,7 @@ function BattleView:initUI()
 
 	local pet = s_BattleManager.petList
 	for i = 1,#pet do
-		pet[i].ui:setPosition(s_DESIGN_WIDTH * (5.5 - i) / 5,s_DESIGN_HEIGHT * 0.7)
+		pet[i].ui:setPosition(s_DESIGN_WIDTH * (5.5 - i) / 5,s_DESIGN_HEIGHT * 0.75)
 		self:addChild(pet[i].ui)
 	end
 	--点击事件
@@ -48,6 +53,7 @@ function BattleView:touchFunc()
     end
 
     local function onTouchEnded(touch, event)
+    	s_BattleManager:setPetCountToReleaseSkill(3)
     	s_BattleManager:sendNotification(ATTACK,{})
     end
 
