@@ -27,6 +27,8 @@ RegisterAccountView.STEP_10 = 10 --选择登陆方式的界面 有注册和登�
 
 RegisterAccountView.STEP_11 = 11 --进入游戏之后 输入手机号    验证手机号码
 
+RegisterAccountView.STEP_12 = 12 --游客登陆之后  完善信息 输入手机号码
+
 RegisterAccountView.PWD = 'bbdc123#'
 
 function RegisterAccountView:ctor(step,canclose)
@@ -144,6 +146,8 @@ function RegisterAccountView:goStep(step,...)
 		self:showIntroView()
 	elseif step == RegisterAccountView.STEP_11 then
 		self:showInputPhoneNumber(args,"logined_verify") --登陆之后 验证手机号码
+	elseif step == RegisterAccountView.STEP_12 then
+		self:showInputPhoneNumber(args,"guest_register")
 	end
 	--处理新的UI 从外部移入
 	self:moveIn(self.direction)
@@ -285,7 +289,7 @@ function RegisterAccountView:onGuestLogin(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
-	print("其他登陆方式")
+	print("游客登录")
 	cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
 	s_SCENE:removeAllPopups()
 end
@@ -298,7 +302,8 @@ function RegisterAccountView:onTouchPhoneNumberOK(sender,eventType)
 	if string.find(phoneNumber,"^1[3|4|5|8][0-9]%d%d%d%d%d%d%d%d$") then  --是手机号码
 		self.phoneNumber = phoneNumber
 		if not self.debug then
-			self:verifyPhoneNumber(phoneNumber)--查询手机号码是否存在
+			self:verifyPhoneNumber(phoneNumber)--麻痹需求又改了 手机号不用查重了----  查询手机号码是否存在
+
 		else
 			self.curStep = RegisterAccountView.STEP_2--跳转到输入验证码的界面 直接跳过去
 			self.direction = "left"
@@ -351,9 +356,10 @@ function RegisterAccountView:onVerifyPhoneNumberBack(data,error)
 	elseif self.processType == "logined_verify" then
 		--登陆之后的验证
 		if not self.nickName then
-			self.nickName = "Guest"
+			self.nickName = s_CURRENT_USER.nickName
+			self.sex = s_CURRENT_USER.sex
 		end
-		self:register(self.phoneNumber,RegisterAccountView.PWD,self.nickName,0)		
+		self:register(self.phoneNumber,RegisterAccountView.PWD,self.nickName,self.sex)
 	else
 		--不存在的话 直接进游戏  进游戏之后 再选性别、昵称、验证码
 		--1、选择性别
@@ -361,11 +367,15 @@ function RegisterAccountView:onVerifyPhoneNumberBack(data,error)
 		--3、班级 (已删掉)
 		--4、登陆进入 输入验证码
     	
-    	if s_CURRENT_USER.usertype == USER_TYPE_GUEST then
+
+    	if s_CURRENT_USER.usertype == USER_TYPE_GUEST and self.processType == "guest_register" then --游客登陆之后  完善信息会走这里
 	    	self:register(self.phoneNumber,RegisterAccountView.PWD,"Guest",0)
 	    else
-			s_TIPS_LAYER:showSmallWithOneButton("该手机号未经注册，请检查您是否输入有误")
+			s_TIPS_LAYER:showSmallWithOneButton("该手机号未经注册，请检查您是否输入有误")--
 		end
+
+
+		
 		--[[
 		self.curStep = RegisterAccountView.STEP_3  --选择性别
 		self.direction = "left"
@@ -852,7 +862,7 @@ function RegisterAccountView:showIntroView()
 	btnLogin:setTitleFontSize(30)
 	btnLogin:addTouchEventListener(handler(self, self.onIntroLoginTouch))
 	btnLogin:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.30)
-	btnLogin:setTitleText("登陆")
+	btnLogin:setTitleText("试玩一下")
 	self:addChild(btnLogin)
 	self.introviews[#self.introviews + 1] = btnLogin
 end
@@ -862,12 +872,14 @@ function RegisterAccountView:onIntroLoginTouch( sender,eventType)
 		return
 	end
 	
-	for k,v in pairs(self.introviews) do
-		v:removeFromParent()
-	end
-	print("进入登陆")
-	self.curStep = RegisterAccountView.STEP_1
-	self:goStep(self.curStep,"fromIntro")
+	-- for k,v in pairs(self.introviews) do
+	-- 	v:removeFromParent()
+	-- end
+	print("游客登陆")
+	cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
+	s_SCENE:removeAllPopups()
+	-- self.curStep = RegisterAccountView.STEP_1
+	-- self:goStep(self.curStep,"fromIntro")
 end
 
 function RegisterAccountView:onIntroRegisterTouch( sender,eventType )
@@ -925,7 +937,7 @@ function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 
 			--延迟1秒弹出
 			s_SCENE:callFuncWithDelay(1,function()
-			s_TIPS_LAYER:showSmallWithOneButton("手机号码验证成功！",function ()
+			s_TIPS_LAYER:showSmallWithOneButton("注册成功！",function ()
 				s_O2OController.resetPassword(handler(self,self.onResetPwdCallBack))--重置密码
 				cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
 				--去选择性别

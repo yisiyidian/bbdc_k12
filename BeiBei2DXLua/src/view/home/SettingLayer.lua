@@ -188,6 +188,7 @@ function SettingLayer:onInfoTouch(sender,eventType)
 	    else
 	        local regiserView = RegisterAccountView.new("canclose")
 	        s_SCENE:popup(regiserView)
+            regiserView:goStep(RegisterAccountView.STEP_11)
 	        --回调关闭函数 用来更新界面
 	        regiserView.close = handler(self, self.closeCallBack)
 	    end
