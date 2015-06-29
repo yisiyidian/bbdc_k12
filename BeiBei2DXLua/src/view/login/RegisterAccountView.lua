@@ -730,12 +730,14 @@ function RegisterAccountView:showLoginView(args)
 	self.title:setString("登 录")
 	local inputNodeID = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入手机号",nil,nil,nil,false,11)
 	inputNodeID:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 200)
+	inputNodeID:setName("inputNodeID")
 	self:addChild(inputNodeID)
 	self.inputNodeID = inputNodeID
 	self.views[#self.views+1] = inputNodeID
 	--输入密码
 	local inputNodePwd = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入密码",handler(self,self.ProceInputPwd),nil,nil,true,11,6)
 	inputNodePwd:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 300)
+	inputNodePwd:setName("inputNodePwd")
 	self:addChild(inputNodePwd)
 	self.inputNodePwd = inputNodePwd
 	self.views[#self.views+1] = inputNodePwd
@@ -759,6 +761,7 @@ function RegisterAccountView:showLoginView(args)
 		btnLogin:setPosition(0.8 * s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.8  - 250)
 	else
 		inputNodeID:openIME()
+		inputNodePwd:closeIME()
 	end
 end
 

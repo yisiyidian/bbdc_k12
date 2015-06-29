@@ -100,18 +100,18 @@ function InputNode:onTextEvent(sender,eventType)
     self:processInput()
 
     if eventType == ccui.TextFiledEventType.attach_with_ime then
-        print("ccui.TextFiledEventType.attach_with_ime")
+        print("ccui.TextFiledEventType.attach_with_ime"..self:getName())
         --self.textField:setPlaceHolder("")
         self.cursor:setVisible(true)
     elseif eventType == ccui.TextFiledEventType.detach_with_ime then
-        print("ccui.TextFiledEventType.detach_with_ime")
+        print("ccui.TextFiledEventType.detach_with_ime"..self:getName())
         self.textField:setPlaceHolder(self.placeHolder)
         self.cursor:setVisible(false)
     elseif eventType == ccui.TextFiledEventType.insert_text then
-        print("ccui.TextFiledEventType.insert_text")
+        print("ccui.TextFiledEventType.insert_text"..self:getName())
         self.cursor:setVisible(true)
     elseif eventType == ccui.TextFiledEventType.delete_backward then
-        print("ccui.TextFiledEventType.delete_backward")
+        print("ccui.TextFiledEventType.delete_backward"..self:getName())
         self.cursor:setVisible(true)
     end
 end
@@ -151,12 +151,14 @@ end
 --开关键盘
 function InputNode:openIME()
     -- self.textField:getVirtualRenderer():attachWithIME()
-    -- cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
+    cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(true)
+
     self.textField:attachWithIME()
+    self.cursor:setVisible(true)
 end
 
 function InputNode:closeIME()
-    -- self.textField:closeIME()
+   self.cursor:setVisible(false)
 end
 
 function InputNode:getText()
