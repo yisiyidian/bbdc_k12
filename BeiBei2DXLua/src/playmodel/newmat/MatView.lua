@@ -22,6 +22,7 @@ function MatView:ctor()
 	self:initUI()
 	-- 注册观察者
 	MatController:register()
+	MatController.MatView = self
 	for k,v in pairs(self.word) do
 		table.insert(MatController.word,v)
 	end
@@ -34,16 +35,25 @@ function MatView:initUI()
 	local back = cc.Sprite:create()
 	back:setPosition(cc.p(0,0))
 	back:ignoreAnchorPointForPosition(false)
-	back:setAncherPoint(0.5,0.5)
+	back:setAnchorPoint(0.5,0.5)
 	self.back = back 
 	self:addChild(self.back)
 	-- 布景
 
+
+	self:resetUI()
+	self:touchFunc()
+end
+
+function MatView:resetUI()
 	for i=1,5 do
+		local temp = {}
+		self.coco[#self.coco +1] = temp 
 		for j=1,5 do
 			local cocoView = CocoView.create()
 			self.coco[i][j] = cocoView 
 			self.back:addChild(self.coco[i][j])
+			self.coco[i][j]:setPosition(cc.p(i * 120 -60,j * 120))
 			-- 加入砖块
 		end
 	end
@@ -53,10 +63,10 @@ function MatView:touchFunc()
 	-- 触摸砖块，更新控制器的字母序列
 	local function onTouchBegan(touch, event)
         local location = self.back:convertToNodeSpace(touch:getLocation())
-        for i = 1,5 then
+        for i = 1,5 do
         	for j=1,5 do
         		if cc.rectContainsPoint(self.coco[i][j]:getBoundingBox(),location) then
-        			MatController:updateArr(cc.p[i][j])
+        			MatController:updateArr(cc.p(i,j),self.coco[i][j])
         		end
         	end
         end
@@ -65,14 +75,13 @@ function MatView:touchFunc()
 
     local function onTouchMoved(touch, event)
         local location = self.back:convertToNodeSpace(touch:getLocation())
-        for i = 1,5 then
+        for i = 1,5 do
         	for j=1,5 do
         		if cc.rectContainsPoint(self.coco[i][j]:getBoundingBox(),location) then
-        			MatController:updateArr(cc.p[i][j])
+        			MatController:updateArr(cc.p(i,j),self.coco[i][j])
         		end
         	end
         end
-        return true
     end
 
     -- 触摸结束，进行判断
