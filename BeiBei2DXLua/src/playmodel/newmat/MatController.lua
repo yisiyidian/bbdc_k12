@@ -36,10 +36,10 @@ function MatController:updateArr(p,coco)
 	end
 	for k,v in pairs(MatController.arr) do
 		if MatController.arr[k].x == p.x and MatController.arr[k].y == p.y then
-			print("已经存在该元素")
+			-- print("已经存在该元素")
 			exist = true
 			if k == #MatController.arr - 1 then	
-				print("去掉最后的一个元素")
+				-- print("去掉最后的一个元素")
 				for i=1,10 do
 					if i > p.y then
 						MatController.MatView.coco[p.x][i].drop = MatController.MatView.coco[p.x][i].drop - 1
@@ -54,14 +54,14 @@ function MatController:updateArr(p,coco)
 	end
 
 	if exist == false and p.x >= 1 and p.x <= 5 and p.y >= 1 and p.y <= 5 then
-		print("在矩阵里")
+		-- print("在矩阵里")
 		if #MatController.arr > 0 and self:countDistance(MatController.arr[#MatController.arr],p) ~= 1 then
-			print("间隔不为1，不加入")
+			-- print("间隔不为1，不加入")
 			return
 		end
 		MatController.arr[#MatController.arr + 1] = p
 		MatController.currentCoco[#MatController.currentCoco + 1] = coco
-		print("加入队列")
+		-- print("加入队列")
 
 		for i=1,10 do
 			if i > p.y then
@@ -84,18 +84,23 @@ function MatController:judgeFunc()
 	if #MatController.currentCoco == 0 then
 		return 
 	end
-	local temp = ""
+	local temp = ""	
+	local attackList = {}
 	for k,v in pairs(MatController.currentCoco) do
 		temp = temp..MatController.currentCoco[k].letter
+		table.insert(attackList,MatController.currentCoco[k].color)
 	end
 
+
+
 	if temp == MatController.word[MatController.index] then
-		print("划词正确")
+		-- print("划词正确")
 		print("这个词是"..temp)
-		MatController:sendNotification("right",{})
+		MatController:sendNotification("right",attackList)
+		print_lua_table(attackList)
 		print("congratulation!!!!!!!!!!!!!!!")
 	else
-		print("划错了")
+		-- print("划错了")
 		print("要划的词是"..MatController.word[MatController.index])
 		print("你划的词是"..temp)
 	end

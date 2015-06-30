@@ -60,6 +60,7 @@ function MatView:resetUI()
 			self.back:addChild(self.coco[i][j])
 			self.coco[i][j]:setPosition(cc.p(i * 120 -40,j * 120))	 
 			self.coco[i][j].letter = string.char(math.random(100,120))
+			self.coco[i][j].color = math.random(1,1000)
 			self.coco[i][j]:resetView()
 			if j > 5 then
 				self.coco[i][j]:setVisible(false)

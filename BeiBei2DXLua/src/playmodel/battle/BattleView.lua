@@ -41,9 +41,9 @@ function BattleView:initUI()
 		pet[i].ui:setPosition(s_DESIGN_WIDTH * (5.5 - i) / 5,s_DESIGN_HEIGHT * 0.75)
 		self:addChild(pet[i].ui)
 	end
-	--点击事件
-    self:touchFunc()
 
+    local MatView = require("playmodel.newmat.MatView").create()
+	self:addChild(MatView)
 end
 
 function BattleView:touchFunc()
