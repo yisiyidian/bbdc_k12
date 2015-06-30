@@ -46,18 +46,48 @@ function MatView:initUI()
 end
 
 function MatView:resetUI()
+	if self.coco ~= nil then
+		self.back:removeAllChildren()
+		self.coco = {}
+	end
+	math.randomseed(os.time())
 	for i=1,5 do
 		local temp = {}
 		self.coco[#self.coco +1] = temp 
-		for j=1,5 do
+		for j=1,10 do
 			local cocoView = CocoView.create()
 			self.coco[i][j] = cocoView 
 			self.back:addChild(self.coco[i][j])
-			self.coco[i][j]:setPosition(cc.p(i * 120 -60,j * 120))
+			self.coco[i][j]:setPosition(cc.p(i * 120 -40,j * 120))	 
+			self.coco[i][j].letter = string.char(math.random(100,120))
+			self.coco[i][j]:resetView()
+			if j > 5 then
+				self.coco[i][j]:setVisible(false)
+			end
 			-- 加入砖块
 		end
 	end
 end
+
+function MatView:dropFunc()
+	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+	for i=1,5 do
+		for j=1,10 do
+			if self.coco[i][j]:getPositionY() - 120 * self.coco[i][j].drop <= self.coco[i][5]:getPositionY() then
+				self.coco[i][j]:setVisible(true)
+			end
+			self.coco[i][j]:runAction(cc.MoveBy:create(0.4,cc.p(0,-120 * self.coco[i][j].drop)))
+		end
+	end
+
+	local delay = cc.DelayTime:create(0.5)
+	self:runAction(cc.Sequence:create(delay,cc.CallFunc:create(self.resetUI)))
+
+	local delay = cc.DelayTime:create(0.6)
+	self:runAction(cc.Sequence:create(delay,cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)))
+
+end
+
 
 function MatView:touchFunc()
 	-- 触摸砖块，更新控制器的字母序列

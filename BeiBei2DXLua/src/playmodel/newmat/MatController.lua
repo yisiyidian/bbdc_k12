@@ -39,8 +39,14 @@ function MatController:updateArr(p,coco)
 			print("已经存在该元素")
 			exist = true
 			if k == #MatController.arr - 1 then	
-				MatController.currentCoco[#MatController.currentCoco].CocoSprite:setColor(cc.c4b(255,255,255,255))
 				print("去掉最后的一个元素")
+				for i=1,10 do
+					if i > p.y then
+						MatController.MatView.coco[p.x][i].drop = MatController.MatView.coco[p.x][i].drop - 1
+					end
+				end
+				MatController.currentCoco[#MatController.currentCoco].touchState = 1
+				MatController.currentCoco[#MatController.currentCoco]:resetView()
 				table.remove(MatController.arr,#MatController.arr)
 				table.remove(MatController.currentCoco,#MatController.currentCoco)
 			end
@@ -55,40 +61,62 @@ function MatController:updateArr(p,coco)
 		end
 		MatController.arr[#MatController.arr + 1] = p
 		MatController.currentCoco[#MatController.currentCoco + 1] = coco
-		MatController.currentCoco[#MatController.currentCoco].CocoSprite:setColor(cc.c4b(0,0,0,255))
 		print("加入队列")
+
+		for i=1,10 do
+			if i > p.y then
+				MatController.MatView.coco[p.x][i].drop = MatController.MatView.coco[p.x][i].drop + 1
+			end
+		end
+	end
+
+	for k,v in pairs(MatController.arr) do
+		if k == #MatController.arr then
+			MatController.currentCoco[k].touchState = 2
+		else
+			MatController.currentCoco[k].touchState = 3
+		end	
+		MatController.currentCoco[k]:resetView()
 	end
 end
 
 function MatController:judgeFunc()
+	if #MatController.currentCoco == 0 then
+		return 
+	end
 	local temp = ""
 	for k,v in pairs(MatController.currentCoco) do
 		temp = temp..MatController.currentCoco[k].letter
 	end
+
 	if temp == MatController.word[MatController.index] then
 		print("划词正确")
 		print("这个词是"..temp)
 		MatController:sendNotification("right",{})
-
 		print("congratulation!!!!!!!!!!!!!!!")
-		return true
 	else
 		print("划错了")
 		print("要划的词是"..MatController.word[MatController.index])
 		print("你划的词是"..temp)
-		for k,v in pairs(MatController.currentCoco) do
-			MatController.currentCoco[k].CocoSprite:setColor(cc.c4b(255,255,255,255))
-		end
-		MatController.currentCoco = {}
-		MatController.arr = {}
-		return false
 	end
+
+	for k,v in pairs(MatController.currentCoco) do
+		MatController.currentCoco[k]:runAction(cc.MoveBy:create(0.4,cc.p(0,-800)))
+		MatController.currentCoco[k]:runAction(cc.RotateBy:create(0.4,math.random(360,720)))
+	end
+
+	MatController.MatView:dropFunc()
+	MatController.arr = {}
+	MatController.word = {"a"}
+	MatController.index = 1
+	MatController.totalindex = 0
+	MatController.currentCoco = {}
 end
 
 function MatController:handleNotification(notify,data)
 	if notify == "right" then
 		print("处理消息right")
-		MatController.MatView:resetUI()
+		-- MatController.MatView:resetUI()
 	end
 end
 
