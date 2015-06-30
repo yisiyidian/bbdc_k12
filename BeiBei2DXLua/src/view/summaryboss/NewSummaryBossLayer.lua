@@ -13,6 +13,7 @@ end
 function NewSummaryBossLayer:ctor(unit)
     if unit == 0 then
         AnalyticsSummaryStep(s_summary_enterTryGame)
+        self.newguid = true
     end
     --s_SCENE:removeAllPopups()
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()

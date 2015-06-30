@@ -102,9 +102,11 @@ function MissionManager:updateMission(missionId,missionsData,addData,callBack)
 				else
 					v[3] = tostring(missionsData) --当前完成度  直接赋值
 				end
-				if v[3] >= v[4] then --如果当前任务条件和 任务总条件匹配,则标记为已完成
-					v[2] = "1" --标记为已完成 未领取
-					re = true
+				if v[2] == "0" then --未完成
+					if v[3] >= v[4] then --如果当前任务条件和 任务总条件匹配,则标记为已完成
+						v[2] = "1" --标记为已完成 未领取
+						re = true
+					end
 				end
 			else
 				--关卡任务

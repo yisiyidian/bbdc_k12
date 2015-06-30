@@ -263,20 +263,22 @@ function SummaryBossAlter:win1(entrance)
 
     --完成总结BOSS
     --打完总结boss
-    --判断是否达到任务所要求时间
-    if self.bossLayer.useTime <= self.bossLayer.totalBlood/2*2 then
-        s_MissionManager:updateMission(MissionConfig.MISSION_TIME, missiondata, 1, false)
-        print(self.bossLayer.useTime,"用时")
-    end
-    --判断是否使用了提示按钮
-    if self.bossLayer.ishited == nil then
-        s_MissionManager:updateMission(MissionConfig.MISSION_TIMES, missiondata, 1, false)
-    end
 
-    --直接触发通关当前关卡任务
-    s_MissionManager:updateMission(MissionConfig.MISSION_NOTHING, missiondata, 1, false)
-    print("触发当前关卡任务")
+    if not self.newguid then
+        --判断是否达到任务所要求时间
+        if self.bossLayer.useTime <= self.bossLayer.totalBlood/2*2 then
+            s_MissionManager:updateMission(MissionConfig.MISSION_TIME, missiondata, 1, false)
+            print(self.bossLayer.useTime,"用时")
+        end
+        --判断是否使用了提示按钮
+        if self.bossLayer.ishited == nil then
+            s_MissionManager:updateMission(MissionConfig.MISSION_TIMES, missiondata, 1, false)
+        end
 
+        --直接触发通关当前关卡任务
+        s_MissionManager:updateMission(MissionConfig.MISSION_NOTHING, missiondata, 1, false)
+        print("触发当前关卡任务")
+    end
 
     if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
         s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
