@@ -6,6 +6,8 @@ ObserverController.observerArr = {}
 function ObserverController.register(observer)
 	--TODO
 	local notifyArr = observer:listNotify()
+	print("########")
+	print(#notifyArr)
 	local tempObsArr = nil
 	for k,v in pairs(notifyArr) do
 		-- (v,observer)
@@ -53,6 +55,7 @@ function ObserverController.unregister(observer)
 	end	
 end
 function ObserverController.sendNotification(notify,data)
+
 	local tempArr = ObserverController.observerArr[notify]
 	if not tempArr then
 		return

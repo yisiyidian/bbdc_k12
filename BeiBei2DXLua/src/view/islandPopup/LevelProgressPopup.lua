@@ -142,31 +142,31 @@ function LevelProgressPopup:createSummary(index)
         end    
 
         if taskIndex == -2 then     
-            showProgressHUD('', true)    
-            s_CorePlayManager.initTotalUnitPlay() -- 之前没有boss
+            --showProgressHUD('', true)    
+            s_BattleManager:enterBattleView() -- 之前没有boss
             s_SCENE:removeAllPopups()  
-        elseif taskIndex == self.islandIndex then
-            showProgressHUD('', true) 
-            s_CorePlayManager.initTotalUnitPlay() -- 按顺序打第一个boss
+        else--if taskIndex == self.islandIndex then
+            --showProgressHUD('', true) 
+            s_BattleManager:enterBattleView() -- 按顺序打第一个boss
             s_SCENE:removeAllPopups()  
-        else
-            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch() --锁定触摸
-            local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
-            tutorial_text:setPosition(s_DESIGN_WIDTH / 2, 300)
-            self:addChild(tutorial_text,520)
-            local text = cc.Label:createWithSystemFont('请先打败前面的boss','',28)
-            text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
-            text:setColor(cc.c3b(0,0,0))
-            tutorial_text:addChild(text)
-            local action1 = cc.FadeOut:create(1.5)
-            local action1_1 = cc.MoveBy:create(1.5, cc.p(0, 100))
-            local action1_2 = cc.Spawn:create(action1,action1_1)
-            tutorial_text:runAction(action1_2)
-            local action2 = cc.FadeOut:create(1.5)
-            local action3 = cc.CallFunc:create(function ()
-                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-            end)
-            text:runAction(cc.Sequence:create(action2,action3))
+        -- else
+        --     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch() --锁定触摸
+        --     local tutorial_text = cc.Sprite:create('image/tutorial/tutorial_text.png')
+        --     tutorial_text:setPosition(s_DESIGN_WIDTH / 2, 300)
+        --     self:addChild(tutorial_text,520)
+        --     local text = cc.Label:createWithSystemFont('请先打败前面的boss','',28)
+        --     text:setPosition(tutorial_text:getContentSize().width/2,tutorial_text:getContentSize().height/2)
+        --     text:setColor(cc.c3b(0,0,0))
+        --     tutorial_text:addChild(text)
+        --     local action1 = cc.FadeOut:create(1.5)
+        --     local action1_1 = cc.MoveBy:create(1.5, cc.p(0, 100))
+        --     local action1_2 = cc.Spawn:create(action1,action1_1)
+        --     tutorial_text:runAction(action1_2)
+        --     local action2 = cc.FadeOut:create(1.5)
+        --     local action3 = cc.CallFunc:create(function ()
+        --         s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+        --     end)
+        --     text:runAction(cc.Sequence:create(action2,action3))
         end 
     end
     go_button.func = function ()
