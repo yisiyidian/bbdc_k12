@@ -150,7 +150,8 @@ function HomeLayer:ctor()
 
     --下载音频的按钮
     local status = cx.CXNetworkStatus:getInstance():start()
-    if status == NETWORK_STATUS_WIFI and s_CURRENT_USER.guideStep < s_guide_step_enterLevel then
+
+    if status == NETWORK_STATUS_WIFI and string.find(s_CURRENT_USER.bookList,"|") == nil then
         local downloadSoundButton = DownloadSoundButton.create(top,false)
     else
         local downloadSoundButton = DownloadSoundButton.create(top,true)
@@ -382,7 +383,7 @@ function HomeLayer:ctor()
         button_setting:setTouchEnabled(false)
         button_shop:setTouchEnabled(false)
     else
-        s_CURRENT_USER:setGuideStep(s_guide_step_bag7) 
+        s_CURRENT_USER:setGuideStep(s_guide_step_bag6) 
     end
 
     if s_CURRENT_USER.showSettingLayer == 1 then
