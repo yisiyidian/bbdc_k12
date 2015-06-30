@@ -264,7 +264,7 @@ function SummaryBossAlter:win1(entrance)
     --完成总结BOSS
     --打完总结boss
 
-    if not self.newguid then
+    if not self.bossLayer.newguid then
         --判断是否达到任务所要求时间
         if self.bossLayer.useTime <= self.bossLayer.totalBlood/2*2 then
             s_MissionManager:updateMission(MissionConfig.MISSION_TIME, missiondata, 1, false)

@@ -13,7 +13,6 @@ end
 function NewSummaryBossLayer:ctor(unit)
     if unit == 0 then
         AnalyticsSummaryStep(s_summary_enterTryGame)
-        self.newguid = true
     end
     --s_SCENE:removeAllPopups()
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -160,6 +159,8 @@ function NewSummaryBossLayer:initStageInfo(unit)
     self.tutorialStep = 0
     if s_CURRENT_USER.needBossSlideTutorial == 1 then
         self.tutorialStep = 2
+    else
+        self.newguid = true
     end
 end
 

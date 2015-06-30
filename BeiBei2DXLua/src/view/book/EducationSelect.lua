@@ -126,9 +126,12 @@ end
 
 
 function EducationSelect:doguidStep()
-    if s_CURRENT_USER.guideStep == 0 then
-        s_CorePlayManager.enterGuideScene(1,self)
-        s_CURRENT_USER:setGuideStep(s_guide_step_selectGrade) 
+    
+    if s_CURRENT_USER.usertype ~= USER_TYPE_BIND then
+        if s_CURRENT_USER.guideStep == 0 then
+            s_CorePlayManager.enterGuideScene(1,self)
+            s_CURRENT_USER:setGuideStep(s_guide_step_selectGrade) 
+        end
     end
 end
 
