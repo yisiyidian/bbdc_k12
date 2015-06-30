@@ -13,14 +13,12 @@ function CocoView.create()
 end
 
 function CocoView:ctor()
+	math.randomseed(tostring(os.time()):reverse():sub(1, 6))
 	self.touchState = false
 	self.pos = cc.p(0,0)
-	self.letter = "a"
-	self.color1 = false
-	self.color2 = false
-	self.color3 = false
-	self.color4 = false
-	self.color5 = false
+	self.letter = self:getRandomLetter()
+	self.color = ""
+
 
 	self:initUI()
 end
@@ -50,6 +48,10 @@ function CocoView:resetView()
 	self:setContentSize(contentsizeX,contentsizeY)
 	self.CocoSprite:setPosition(contentsizeX/2,contentsizeY/2)
 	self.label:setString(self.letter)
+end
+
+function CocoView:getRandomLetter()
+	return string.char(math.random(97,123))
 end
 
 return CocoView

@@ -6,6 +6,7 @@ local MatController = class("MatController",Observer)
 MatController.arr = {}
 MatController.word = {"a"}
 MatController.index = 1
+MatController.totalindex = 0
 MatController.currentCoco = {}
 
 function MatController:countDistance(p1,p2)
@@ -14,6 +15,16 @@ end
 
 function MatController:listNotify()
 	return {"right"}
+end
+
+-- 重置当前序号
+function MatController:resetIndex()
+	if MatController.index < MatController.totalindex then
+		MatController.index = MatController.index + 1
+		return false
+	elseif MatController.index == MatController.totalindex then 
+		return true
+	end
 end
 
 -- 划的字母加入队列
