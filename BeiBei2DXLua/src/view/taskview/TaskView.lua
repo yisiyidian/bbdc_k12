@@ -389,7 +389,6 @@ function TaskView:getRewardTaskButton(sender,eventType)
     local action2 = cc.ScaleTo:create(0.1,0)
     local release = function(self)
     	self.beanImg:removeFromParent()
-    	--s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     	if self.beanCallBack ~= nil then 
     		self.beanCallBack()
     	end
@@ -405,6 +404,7 @@ function TaskView:getRewardTaskButton(sender,eventType)
     	self.beanNum:removeFromParent()
     	self.beanNum = nil
     	self:createBean()
+    	self:resetView()
     end
     local action5 = cc.CallFunc:create(handler(self,releaseBean))
     -- local beanCreate = function(self)
@@ -415,7 +415,6 @@ function TaskView:getRewardTaskButton(sender,eventType)
     -- self.beanNum:setVisible(false)
     local action22 = cc.ScaleTo:create(0.1,0)
     self.beanNum:runAction(cc.Sequence:create(action4,action22,action5))
-	self:resetView()
 end
 
 return TaskView
