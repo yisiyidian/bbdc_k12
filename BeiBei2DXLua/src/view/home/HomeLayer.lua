@@ -583,7 +583,11 @@ function HomeLayer:showFriendView()
         --TODO fix self
         item_popup.update = handler(self,function(...)
             if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                self:updateSettingLayer()
+                if not tolua.isnull(self) then
+                    if self.updateSettingLayer ~= nil then
+                        self:updateSettingLayer()
+                    end
+                end
             end
         end)
     end
