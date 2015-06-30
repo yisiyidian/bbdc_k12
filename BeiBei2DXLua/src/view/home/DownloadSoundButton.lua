@@ -143,7 +143,7 @@ function DownloadSoundButton.create(parentNode,bool)
     local updateSuccessState =function()
         if SoundsDownloadingInstance[bookKey] ~= nil then
             SoundsDownloadingInstance[bookKey]=nil
-            if bool == true then
+            if bool == true or string.find(s_CURRENT_USER.bookList,"|") ~= nil then
                 local popupSuccess = require("popup.PopupSoundDownloadSuccess").create()
                 local parent = parentNode:getParent()
                 popupSuccess:setPosition(parent:getContentSize().width/2,parent:getContentSize().height+800)
