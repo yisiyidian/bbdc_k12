@@ -431,8 +431,10 @@ end
 function RegisterAccountView:ProcessPhoneInput(text,length,maxlength)
 	if not tolua.isnull(self.btnPhoneNumberOK) then
 		if maxlength == length then
-			self.btnPhoneNumberOK:setVisible(true)
-			self.btnPhoneNumberOK:setTouchEnabled(true)
+			if not self.btnPhoneNumberOK:isVisible() then
+				self.btnPhoneNumberOK:setVisible(true)
+				self.btnPhoneNumberOK:setTouchEnabled(true)
+			end
 		else
 			self.btnPhoneNumberOK:setVisible(false)
 			self.btnPhoneNumberOK:setTouchEnabled(false)
@@ -600,8 +602,12 @@ function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
 		end
 	else
 		--验证码无效
-		s_TIPS_LAYER:showSmallWithOneButton("请输入有效的验证码！")
+		s_TIPS_LAYER:showSmallWithOneButton("请输入有效的验证码！",handle(self,self.resetSMSInputNode))
 	end
+end
+
+function RegisterAccountView:resetSMSInputNode()
+	self.inputNode:setText("")
 end
 
 --显示选择性别的界面
@@ -708,9 +714,16 @@ function RegisterAccountView:showInputNickName()
 	self.alertTip:setString("hi!"..tipsex.."! 这就是你在贝贝里的头像")
 end
 
-function RegisterAccountView:processInputName()
+function RegisterAccountView:processInputName(text,length,maxlength)
 	if not tolua.isnull(self.btnNickName) then
-		self.btnNickName:setVisible(true)
+		if text ~= "" then
+			self.btnNickName:setVisible(true)
+			self.btnNickName:setTouchEnabled(true)
+		else
+			self.btnNickName:setVisible(false)
+			self.btnNickName:setTouchEnabled(false)
+		end
+		-- self.btnNickName:setVisible(true)
 	end
 end
 
@@ -960,7 +973,7 @@ function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 	hideProgressHUD(true)
 	print("验证手机验证码回调："..tostring(error).." ,"..errorCode)
 	if errorCode ~= 0 then
-		s_TIPS_LAYER:showSmallWithOneButton(error)
+		s_TIPS_LAYER:showSmallWithOneButton("验证码错误",handler(self, self.resetSMSInputNode))
 	else
 		--重置手机号码
 		reSetPhoneNumber(self.phoneNumber,handler(self, self.resetPhoneNumberCallBack))
