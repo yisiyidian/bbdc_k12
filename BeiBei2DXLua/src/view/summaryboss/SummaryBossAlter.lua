@@ -162,12 +162,20 @@ function SummaryBossAlter:lose(entrance)
             self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
             s_SCENE:callFuncWithDelay(0.3,function (  )
                 -- body
-                self:getChildByName('background'):runAction(cc.FadeOut:create(1.0))
-                boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(distance , s_DESIGN_HEIGHT * 0.75 + 20)),cc.CallFunc:create(function (  )
-                    -- body
-                    self:removeChildByName('background')
-                    self:addTime()
-                end)))
+                if self and not tolua.isnull(self) then
+                    local bg = self:getChildByName('background')
+                    if bg then
+                       bg:runAction(cc.FadeOut:create(1.0)) 
+                    end
+                end
+                -- self:getChildByName('background'):runAction(cc.FadeOut:create(1.0))
+                if boss and not tolua.isnull(boss) then
+                    boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(distance , s_DESIGN_HEIGHT * 0.75 + 20)),cc.CallFunc:create(function (  )
+                        -- body
+                        self:removeChildByName('background')
+                        self:addTime()
+                    end)))
+                end
             end)
         else
             local shopErrorAlter = require("view.shop.ShopErrorAlter").create()

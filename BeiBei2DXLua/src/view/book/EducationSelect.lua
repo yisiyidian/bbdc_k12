@@ -1,7 +1,5 @@
-require("cocos.init")
-require("common.global")
 
-IntroLayer = require("view.login.IntroLayer")
+local RegisterAccountView = require("view.login.RegisterAccountView")
 
 --选择年级  小学 初中 高中
 --
@@ -14,11 +12,7 @@ function EducationSelect.create()
 	return layer
 end
 
-function EducationSelect:ctor()
-    if s_CURRENT_USER.k12SmallStep < s_K12_selectGrade then
-        s_CURRENT_USER:setK12SmallStep(s_K12_selectGrade)
-    end
-
+function EducationSelect:ctor()   
     -- 打点
 	local background = cc.LayerColor:create(cc.c4b(200,240,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
 	background:ignoreAnchorPointForPosition(false)
@@ -62,6 +56,10 @@ function EducationSelect:ctor()
     	if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)   
         elseif eventType == ccui.TouchEventType.ended then
+            if s_CURRENT_USER.summaryStep < s_summary_selectGrade then
+                s_CURRENT_USER:setSummaryStep(s_summary_selectGrade)
+                AnalyticsSummaryStep(s_summary_selectGrade)
+            end
             s_CorePlayManager.enterBookLayer(sender:getName())
         end
     end
@@ -112,8 +110,8 @@ function EducationSelect:ctor()
     --如果是直接登陆的用户没有选书 则走else
     --如果是游客登录或者注册 就走if
     if s_CURRENT_USER.usertype ~= USER_TYPE_BIND then
-        --self:popupAccountBind()
-        s_SCENE:removeAllPopups()
+        self:popupAccountBind()
+        -- s_SCENE:removeAllPopups()
     else
         s_SCENE:removeAllPopups()
     end
@@ -132,7 +130,7 @@ end
 function EducationSelect:popupAccountBind()
     if s_CURRENT_USER.tutorialStep > s_tutorial_book_select or s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then return end
     --
-    local introLayer = IntroLayer.create()
+    local introLayer = RegisterAccountView.new(RegisterAccountView.STEP_10)
     s_SCENE:popup(introLayer)
 end
 

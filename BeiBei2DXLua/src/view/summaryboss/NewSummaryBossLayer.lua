@@ -11,11 +11,8 @@ function NewSummaryBossLayer.create(unit)
 end
 
 function NewSummaryBossLayer:ctor(unit)
-
-    if s_CURRENT_USER.summaryStep == s_summary_enterFirstPopup then
-        s_CURRENT_USER:setSummaryStep(s_summary_enterFirstLevel) 
-    elseif s_CURRENT_USER.summaryStep == s_summary_enterSecondPopup then
-        s_CURRENT_USER:setSummaryStep(s_summary_enterSecondLevel) 
+    if unit == 0 then
+        AnalyticsSummaryStep(s_summary_enterTryGame)
     end
     --s_SCENE:removeAllPopups()
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -310,7 +307,10 @@ function NewSummaryBossLayer:initBoss()
     		if self.currentBlood > 0 then
                 -- self.isLose = true
                 self:gameOverFunc(false)   
-                s_CURRENT_USER:setSummaryStep(s_summary_failFirstLevel) 
+                if s_CURRENT_USER.summaryStep < s_summary_failFirstLevel then
+                    s_CURRENT_USER:setSummaryStep(s_summary_failFirstLevel)
+                    AnalyticsSummaryStep(s_summary_failFirstLevel)
+                end
             end
     	end
     end
@@ -364,7 +364,10 @@ function NewSummaryBossLayer:initMat(visible)
         end
         --self:initGuideInfo()
         self.changeBtnTime = 0
-        s_CURRENT_USER:setSummaryStep(s_summary_doFirstWord) 
+        if s_CURRENT_USER.summaryStep < s_summary_doFirstWord and self.isTrying ~= true then
+            s_CURRENT_USER:setSummaryStep(s_summary_doFirstWord)
+            AnalyticsSummaryStep(s_summary_doFirstWord)
+        end
         if self.gameOver then return end
         playWordSound(self.wordList[1][4])
         self.boss:stopAllActions()
@@ -417,7 +420,11 @@ function NewSummaryBossLayer:initMat(visible)
             end,{})
             bullet:runAction(cc.Sequence:create(delay,hit,attacked,hide))
         end
-        --更换mat
+        --更换mat                
+        if s_CURRENT_USER.summaryStep < s_summary_successFirstLevel and self.isTrying ~= true then
+            s_CURRENT_USER:setSummaryStep(s_summary_successFirstLevel)
+            AnalyticsSummaryStep(s_summary_successFirstLevel)
+        end
         s_SCENE:callFuncWithDelay(0.2 *math.pow(#stack,0.8) + 0.5,function ()
             --print('self.currentBlood',self.currentBlood)
             if self.currentBlood > 0 then
@@ -428,7 +435,6 @@ function NewSummaryBossLayer:initMat(visible)
                 self:resetMat()
             else
                 self:gameOverFunc(true)
-                s_CURRENT_USER:setSummaryStep(s_summary_successFirstLevel) 
             end
         end)
 	end

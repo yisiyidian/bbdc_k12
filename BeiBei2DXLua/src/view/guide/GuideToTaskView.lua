@@ -255,7 +255,9 @@ function GuideToTaskView:resetPage()
 			s_SCENE.popupLayer.backColor:removeFromParent()
 			guidePopup.ButtonClick = function ()
 				guidePopup.showBean:runAction(cc.MoveTo:create(0.2,cc.p(s_RIGHT_X-100, s_DESIGN_HEIGHT-70)))
-				guidePopup.showBeanNumber:removeFromParent()
+				if guidePopup.showBeanNumber and not tolua.isnull(guidePopup.showBeanNumber) then
+					guidePopup.showBeanNumber:removeFromParent()
+				end
 				guidePopup.beanCountLabel:setString(guidePopup.beanCountLabel:getString()+10)
 				local action1 = cc.DelayTime:create(0.3)
 				local action2 = cc.CallFunc:create(function ()

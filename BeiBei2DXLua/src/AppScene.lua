@@ -87,35 +87,27 @@ s_K12_end = 100
 
 -- 畅玩版
 
--- 1.注册1
--- 2.注册2
--- 3.注册3
--- 4.选年级
--- 5.选书
--- 6.主界面
--- 7.选小关
--- 8.打开选小关弹出面板
--- 9.进入第一关
--- 10.完成第一个词划词
--- 11.第一关胜利
--- 12.第一关失败
--- 13.打开第二关选小关弹出面板
--- 14.进入第二关
+s_summary_enterApp = 1
+s_summary_login = 2
+s_summary_phonenumber = 3
+s_summary_phonepass = 4
+s_summary_sex = 5
+s_summary_anothername = 6
+s_summary_password = 7
+s_summary_register8 = 8
 
-s_summary_inputUserName = 1
-s_summary_inputUserPassWord = 2
-s_summary_inputTeacherName = 3
-s_summary_selectGrade = 4
-s_summary_selectBook = 5
-s_summary_enterHomeLayer = 6
-s_summary_enterLevelLayer = 7
-s_summary_enterFirstPopup = 8
-s_summary_enterFirstLevel = 9
-s_summary_doFirstWord = 10
-s_summary_successFirstLevel = 11
-s_summary_failFirstLevel = 12
-s_summary_enterSecondPopup = 13
-s_summary_enterSecondLevel = 14
+s_summary_selectGrade = 9
+s_summary_selectBook = 10
+s_summary_enterHomeLayer = 11
+s_summary_enterTryGame = 12
+s_summary_enterLevelLayer = 13
+s_summary_enterFirstPopup = 14
+s_summary_enterFirstLevel = 15
+s_summary_doFirstWord = 16
+s_summary_successFirstLevel = 17
+s_summary_failFirstLevel = 18
+s_summary_enterSecondPopup = 19
+s_summary_enterSecondLevel = 20
 
 -- define review boss tutorial
 -- 新手引导步骤 v213
@@ -390,7 +382,9 @@ function applicationWillEnterForeground()
 end
 
 function applicationDidEnterBackgroundLua()
-    Analytics_applicationDidEnterBackground( s_SCENE.currentGameLayerName )
+    if s_SCENE ~= nil then
+        Analytics_applicationDidEnterBackground( s_SCENE.currentGameLayerName )
+    end
 end
 
 function AppScene:checkInAnimation()

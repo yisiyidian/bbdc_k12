@@ -125,9 +125,9 @@ function O2OController.onAssetsManagerCompleted()
         local introLayer = IntroLayer.create(true)
         s_SCENE:replaceGameLayer(introLayer)
     else
-        -- remove IntroLayer
-        -- local introLayer = IntroLayer.create(false)
-        -- s_SCENE:replaceGameLayer(introLayer)
+        -- IntroLayer
+        local introLayer = IntroLayer.create(false)
+        s_SCENE:replaceGameLayer(introLayer)
         s_O2OController.signUpWithRandomUserName()
     end
 end
@@ -262,11 +262,14 @@ function O2OController.signUpWithRandomUserName()
             if error then
                 s_TIPS_LAYER:showSmall(error.message)
                 hideProgressHUD()
+                print("error")
             elseif not exist then -- not exist the user name
                 s_CURRENT_USER.usertype = USER_TYPE_GUEST
                 O2OController.signUpOnline(randomUserName, PASSWORD)
                 AnalyticsSignUp_Guest()
+                print("not exist")
             else -- exist the user name
+                print("exist")
                 O2OController.signUpWithRandomUserName()
             end
         end)

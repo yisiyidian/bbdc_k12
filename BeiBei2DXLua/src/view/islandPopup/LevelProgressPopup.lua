@@ -17,9 +17,15 @@ end
 function LevelProgressPopup:ctor(index)
     self.index = index
     if tonumber(index) == 0 then
-        s_CURRENT_USER:setSummaryStep(s_summary_enterFirstPopup) 
+        if s_CURRENT_USER.summaryStep < s_summary_enterFirstPopup then
+            s_CURRENT_USER:setSummaryStep(s_summary_enterFirstPopup)
+            AnalyticsSummaryStep(s_summary_enterFirstPopup)
+        end
     elseif tonumber(index) == 1 then
-        s_CURRENT_USER:setSummaryStep(s_summary_enterSecondPopup) 
+        if s_CURRENT_USER.summaryStep < s_summary_enterSecondPopup then
+            s_CURRENT_USER:setSummaryStep(s_summary_enterSecondPopup)
+            AnalyticsSummaryStep(s_summary_enterSecondPopup)
+        end
     end
 
     self.islandIndex = tonumber(index) + 1
@@ -28,6 +34,7 @@ function LevelProgressPopup:ctor(index)
     print_lua_table(self.unit)
     -- 界面初始化
     self:initUI()
+    s_CURRENT_USER:setSummaryStep(s_summary_enterFirstPopup)
 end
 
 function LevelProgressPopup:initUI()
@@ -100,6 +107,14 @@ function LevelProgressPopup:createSummary(index)
                 smallAlter:removeFromParent()
             end
             return
+        end
+
+        if s_CURRENT_USER.summaryStep < s_summary_enterFirstLevel and tonumber(self.index) == 0 then
+            s_CURRENT_USER:setSummaryStep(s_summary_enterFirstLevel)
+            AnalyticsSummaryStep(s_summary_enterFirstLevel)
+        elseif s_CURRENT_USER.summaryStep < s_summary_enterSecondLevel and tonumber(self.index) == 1 then
+            s_CURRENT_USER:setSummaryStep(s_summary_enterSecondLevel)
+            AnalyticsSummaryStep(s_summary_enterSecondLevel)
         end
 
         local bossList = s_LocalDatabaseManager.getAllUnitInfo()

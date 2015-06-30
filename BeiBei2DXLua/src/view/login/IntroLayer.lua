@@ -22,7 +22,12 @@ local function button_qq_clicked(sender, eventType)
     end
 end
 
-function IntroLayer.create(directOnLogin)    
+function IntroLayer.create(directOnLogin)  
+    if s_CURRENT_USER.summaryStep == 0 then  
+        s_CURRENT_USER:setSummaryStep(s_summary_enterApp)
+        AnalyticsSummaryStep(s_summary_enterApp)
+    end
+
     local layer = IntroLayer.new()
 
     local offlineTip
@@ -84,7 +89,11 @@ function IntroLayer.create(directOnLogin)
                 offlineTip.setTrue()
             else
                 playSound(s_sound_buttonEffect)
-
+                if s_CURRENT_USER.summaryStep == s_summary_enterApp then  
+                    s_CURRENT_USER:setSummaryStep(s_summary_login)
+                    AnalyticsSummaryStep(s_summary_login)
+                end
+                    
                 --弹出RegisterAccountView的登陆界面  RegisterAccountView.STEP_6 就是登陆
                 local loginView = RegisterAccountView.new(RegisterAccountView.STEP_6)
                 loginView.close = function ()
