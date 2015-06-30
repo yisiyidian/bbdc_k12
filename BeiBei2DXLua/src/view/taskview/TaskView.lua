@@ -343,6 +343,7 @@ function TaskView:clickGoTaskButton(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
+	self:CloseClick(nil,ccui.TouchEventType.ended)
 	--跳转到对应的界面
 	local taskId = self.taskID
 	if taskId == "2-1" then --完善个人信息
@@ -351,18 +352,16 @@ function TaskView:clickGoTaskButton(sender,eventType)
 		s_CorePlayManager.enterFriendView()
 	elseif taskId == "2-3" then --下载音频
 		s_CorePlayManager.enterHomeLayer()
-	elseif string.sub(taskId,1,1) == "3" then --TODO 3开头 去解锁
+	elseif string.sub(taskId,1,1) == "3" then --3开头 去解锁
 		s_CorePlayManager.enterShopView()
-	elseif string.sub(taskId,1,1) == "4" then --TODO 4开头 去打关卡
+	elseif string.sub(taskId,1,1) == "4" then --4开头 去打关卡
 		local unitID = tonumber(self.unitID)
 		if unitID == 1 then
 			s_CorePlayManager.chapterLayer.listView:scrollToTop(1,false)
 		else
 			s_CorePlayManager.chapterLayer:scrollLevelLayer(unitID,1);
 		end
-		self:CloseClick(nil,ccui.TouchEventType.ended)
 	end
-	
 end
 
 --TODO:领取奖励按钮点击

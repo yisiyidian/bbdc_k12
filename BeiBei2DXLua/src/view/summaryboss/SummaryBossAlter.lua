@@ -263,7 +263,7 @@ function SummaryBossAlter:win1(entrance)
         print(self.bossLayer.useTime,"用时")
     end
     --判断是否使用了提示按钮
-    if self.bossLayer.hintChangeBtn == nil then
+    if self.bossLayer.ishited == nil then
         s_MissionManager:updateMission(MissionConfig.MISSION_TIMES, missiondata, 1, false)
     end
 
