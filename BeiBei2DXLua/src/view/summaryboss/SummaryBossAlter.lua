@@ -261,9 +261,7 @@ function SummaryBossAlter:win1(entrance)
     missiondata[2] = self.bossLayer.unit.unitID   --单元
     missiondata[3] = self.bossLayer.useTime       --用时
 
-    -- --完成总结BOSS
-    -- s_MissionManager:updateMission(MissionConfig.MISSION_ZJBOSS, missionData,1, false)
-
+    --完成总结BOSS
     --打完总结boss
     --判断是否达到任务所要求时间
     if self.bossLayer.useTime <= self.bossLayer.totalBlood/2*2 then

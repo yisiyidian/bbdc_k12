@@ -33,10 +33,6 @@ function TaskView:initUI()
     
     local bgWidth = background:getContentSize().width
 	local bgHeight = background:getContentSize().height
-
-	-- local sx = (s_DESIGN_WIDTH - bgWidth)/2
-	-- local sy = (s_DESIGN_HEIGHT - bgHeight)/2
-	-- self:setPosition(sx,sy)
 	--添加文本（每日任务）
 	local taskDay = cc.Label:createWithSystemFont("每日任务","",40)
 	taskDay:setPosition(bgWidth/2,bgHeight-60)
@@ -44,16 +40,13 @@ function TaskView:initUI()
 	taskDay:setTextColor(cc.c3b(255,255,255))
 	self.background:addChild(taskDay)
 	self.taskDay = taskDay
-
 	--添加boss
 	local boss = cc.Sprite:create("image/guide/boss.png")
 	boss:setPosition(bgWidth/2,bgHeight/2+60)
 	boss:setAnchorPoint(0.5,0.5)
-	--boss:setScale(0.2)
 	boss:ignoreAnchorPointForPosition(false)
 	self.background:addChild(boss)
 	self.boss = boss
-
 	--添加按钮（去完成任务）
 	local taskGoButton = ccui.Button:create("image/guide/taskButton.png","image/guide/anniuxia.png","image/guide/taskButton.png")
 	taskGoButton:setAnchorPoint(0.5,0.5)
@@ -64,7 +57,6 @@ function TaskView:initUI()
 	taskGoButton:setTitleFontSize(40)
 	taskGoButton:setVisible(true)
 	self.taskGoButton = taskGoButton
-
 	--添加按钮（领取奖励）
 	local taskRewardButton = ccui.Button:create("image/guide/taskButton.png","image/guide/anniuxia.png","image/guide/taskButton.png")
 	taskRewardButton:setAnchorPoint(0.5,0.5)
@@ -122,7 +114,6 @@ function TaskView:initUI()
 	--今日任务全部完成
 	self:TodayTaskComplete()
 
-	--渲染列表
 	self:resetView()
 end
 
@@ -143,14 +134,13 @@ function TaskView:TodayTaskComplete()
 	label2:setVisible(false)
 	self.background:addChild(label2)
 	self.label2 = label2
-
 end
 
 function TaskView:resetView()
-
 	--获取任务列表
 	self.missionList = s_MissionManager:getMissionList()
-	if self.missionList[1][1] == 0 then 
+	if self.missionList[1][1] == 0 then
+		--全部任务已完成
 		self.label1:setVisible(true)
 		self.label2:setVisible(true)
 		self.boss:setVisible(false)
@@ -158,14 +148,23 @@ function TaskView:resetView()
 		self.taskRewardButton:setVisible(false)
 		self.taskTarget:setVisible(false)
 		self.taskReward:setVisible(false)
-		self.beanImg:setVisible(false)
-		self.beanNum:setVisible(false)
+		if not tolua.isnull(self.beanImg) then
+			self.beanImg:setVisible(false)
+		end
+		if not tolua.isnull(self.beanNum) then
+			self.beanNum:setVisible(false)
+		end
+		if not tolua.isnull(self.sign) then
+			self.sign:setVisible(false)
+		end
+		-- self.beanNum:setVisible(false)
+		-- self.sign:setVisible(false)
 		return
 	else
-	dump(self.missionList,"任务列表")
+		dump(self.missionList,"任务列表")
 
-	--绑定数据
-	self:setData(self.missionList[1])
+		--绑定数据
+		self:setData(self.missionList[1])
 	end
 end
 
@@ -185,24 +184,29 @@ function TaskView:setData(data)
 end
 
 function TaskView:createBean()
-	--贝贝豆图标
-	local beanImg = nil 
-	if beanImg == nil then
-		beanImg = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
-		beanImg:setAnchorPoint(0.5,0.5)
-		beanImg:setPosition(self.background:getContentSize().width/2-10,self.background:getContentSize().height/4 + 10)
-		self.background:addChild(beanImg)
-		self.beanImg = beanImg
+	self.missionList = s_MissionManager:getMissionList()
+	if self.missionList[1][1] == 0 then
+		return
 	end
+	--贝贝豆图标
+	if not self.beanImg or tolua.isnull(self.beanImg) then
+		self.beanImg = cc.Sprite:create("image/newreviewboss/beibeidou2.png")
+		self.beanImg:setAnchorPoint(0.5,0.5)
+		self.beanImg:setPosition(self.background:getContentSize().width/2-10,self.background:getContentSize().height/4 + 10)
+		self.background:addChild(self.beanImg)
+	else
+		self.beanImg:setVisible(true)
+	end
+	-- self.beanImg = beanImg
 	--贝贝豆后面添加数量文字
-	local beanNum = nil 
-	if beanNum == nil then
-		beanNum = cc.Label:createWithSystemFont("X 10","",30)
-		beanNum:setPosition(self.background:getContentSize().width/2+40,self.background:getContentSize().height/4 + 10)
-		beanNum:setAnchorPoint(0.5,0.5)
-		beanNum:setTextColor(cc.c3b(0,0,0))
-		self.background:addChild(beanNum)
-		self.beanNum = beanNum
+	if not self.beanNum or tolua.isnull(self.beanNum) then
+		self.beanNum = cc.Label:createWithSystemFont("X 10","",30)
+		self.beanNum:setPosition(self.background:getContentSize().width/2+40,self.background:getContentSize().height/4 + 10)
+		self.beanNum:setAnchorPoint(0.5,0.5)
+		self.beanNum:setTextColor(cc.c3b(0,0,0))
+		self.background:addChild(self.beanNum)
+	else
+		self.beanNum:setVisible(true)
 	end
 end
 
@@ -376,6 +380,9 @@ function TaskView:getRewardTaskButton(sender,eventType)
 		print("完成任务失败")
 		return
 	end
+
+	self:createBean()
+
 	--执行贝贝豆飞上去动画(加上贝贝豆数量也飞上去)
 	--图标
 	local action1 = cc.MoveTo:create(0.3,cc.p(s_RIGHT_X-140 - self:getPositionX(), s_DESIGN_HEIGHT-70 - self:getPositionY()))
@@ -389,22 +396,25 @@ function TaskView:getRewardTaskButton(sender,eventType)
     end
     --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     local action3 = cc.CallFunc:create(handler(self,release))
+    -- self.beanImg:setVisible(true)
     self.beanImg:runAction(cc.Sequence:create(action1,action2,action3)) 
 
     --贝贝豆数量
     local action4 = cc.MoveTo:create(0.3,cc.p(s_RIGHT_X-100 - self:getPositionX(), s_DESIGN_HEIGHT-70 - self:getPositionY()))
     local releaseBean = function (self)
     	self.beanNum:removeFromParent()
+    	self.beanNum = nil
+    	self:createBean()
     end
     local action5 = cc.CallFunc:create(handler(self,releaseBean))
-    local beanCreate = function(self)
-    	self:createBean()
+    -- local beanCreate = function(self)
     	--self:resetView()
-    end
-    local action6 = cc.CallFunc:create(handler(self,beanCreate))
-    local action7 = cc.CallFunc:create(handler(self,viewReset))
-    self.beanNum:runAction(cc.Sequence:create(action4,action2,action5,action6))
-
+    -- end
+    -- local action6 = cc.CallFunc:create(handler(self,beanCreate))
+    -- local action7 = cc.CallFunc:create(handler(self,viewReset))
+    -- self.beanNum:setVisible(false)
+    local action22 = cc.ScaleTo:create(0.1,0)
+    self.beanNum:runAction(cc.Sequence:create(action4,action22,action5))
 	self:resetView()
 end
 

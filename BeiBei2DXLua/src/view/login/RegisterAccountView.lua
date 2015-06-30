@@ -608,6 +608,7 @@ end
 
 function RegisterAccountView:resetSMSInputNode()
 	self.inputNode:setText("")
+	self.inputNode:openIME()
 end
 
 --显示选择性别的界面
