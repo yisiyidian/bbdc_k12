@@ -22,7 +22,10 @@ function MatView:ctor()
 	self:initUI()
 	-- 注册观察者
 	MatController:register()
+	-- 控制器和视图建立联系
 	MatController.MatView = self
+
+	-- 初始化划词题目
 	for k,v in pairs(self.word) do
 		table.insert(MatController.word,v)
 	end
@@ -40,17 +43,21 @@ function MatView:initUI()
 	self:addChild(self.back)
 	-- 布景
 
-
+	-- ui填充
 	self:resetUI()
+	-- 触摸事件
 	self:touchFunc()
 end
 
 function MatView:resetUI()
+	-- 重置
 	if self.coco ~= nil then
 		self.back:removeAllChildren()
 		self.coco = {}
 	end
 	math.randomseed(os.time())
+
+	-- 砖块初始化
 	for i=1,5 do
 		local temp = {}
 		self.coco[#self.coco +1] = temp 
@@ -71,6 +78,7 @@ function MatView:resetUI()
 end
 
 function MatView:dropFunc()
+	-- 掉落事件
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	for i=1,5 do
 		for j=1,10 do
@@ -81,9 +89,11 @@ function MatView:dropFunc()
 		end
 	end
 
+	-- 重置ui
 	local delay = cc.DelayTime:create(0.5)
 	self:runAction(cc.Sequence:create(delay,cc.CallFunc:create(self.resetUI)))
 
+	-- 解锁
 	local delay = cc.DelayTime:create(0.6)
 	self:runAction(cc.Sequence:create(delay,cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)))
 
