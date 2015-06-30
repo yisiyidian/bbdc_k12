@@ -41,8 +41,8 @@ function MatController:updateArr(p,coco)
 			if k == #MatController.arr - 1 then	
 				-- print("去掉最后的一个元素")
 				for i=1,10 do
-					if i > p.y then
-						MatController.MatView.coco[p.x][i].drop = MatController.MatView.coco[p.x][i].drop - 1
+					if i > MatController.arr[#MatController.arr].y then
+						MatController.MatView.coco[MatController.arr[#MatController.arr].x][i].drop = MatController.MatView.coco[MatController.arr[#MatController.arr].x][i].drop - 1
 					end
 				end
 				MatController.currentCoco[#MatController.currentCoco].touchState = 1
@@ -88,22 +88,22 @@ function MatController:judgeFunc()
 	local attackList = {}
 	for k,v in pairs(MatController.currentCoco) do
 		temp = temp..MatController.currentCoco[k].letter
-		table.insert(attackList,MatController.currentCoco[k].color)
+		table.insert(attackList,MatController.currentCoco[k].color%5)
 	end
 
 
 
-	if temp == MatController.word[MatController.index] then
+	-- if temp == MatController.word[MatController.index] then
 		-- print("划词正确")
 		print("这个词是"..temp)
 		MatController:sendNotification("right",attackList)
 		print_lua_table(attackList)
-		print("congratulation!!!!!!!!!!!!!!!")
-	else
-		-- print("划错了")
-		print("要划的词是"..MatController.word[MatController.index])
-		print("你划的词是"..temp)
-	end
+	-- 	print("congratulation!!!!!!!!!!!!!!!")
+	-- else
+	-- 	-- print("划错了")
+	-- 	print("要划的词是"..MatController.word[MatController.index])
+	-- 	print("你划的词是"..temp)
+	-- end
 
 	for k,v in pairs(MatController.currentCoco) do
 		MatController.currentCoco[k]:runAction(cc.MoveBy:create(0.4,cc.p(0,-800)))
