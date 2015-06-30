@@ -155,8 +155,6 @@ function ChapterLayer:ctor()
         local eventDispatcher = self.backColor:getEventDispatcher()
         eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self.backColor)
         listener:setSwallowTouches(true)
-    elseif s_CURRENT_USER.guideStep <= s_guide_step_bag5 then
-        self.boxButton:setVisible(false)
     end
     -- 添加引导
     print("now guide is "..s_CURRENT_USER.guideStep)
@@ -554,7 +552,7 @@ end
 
 --更新宝箱状态  在任务界面TaskView里回调
 function ChapterLayer:updataBoxState()
-
+    
     local missionlist = s_MissionManager:getMissionList()
     local canComCount = 0
     for k,v in pairs(missionlist) do
@@ -579,6 +577,9 @@ function ChapterLayer:updataBoxState()
         if self.boxButton ~= nil and not tolua.isnull(self.boxButton) then
             self.boxButton:stopAllActions()
         end
+    end
+    if s_CURRENT_USER.guideStep < s_guide_step_bag6 and self.boxButton ~= nil and not tolua.isnull(self.boxButton)then
+        self.boxButton:setVisible(false)
     end
 end
 
