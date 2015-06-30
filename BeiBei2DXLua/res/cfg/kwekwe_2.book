@@ -377,7 +377,7 @@ orange|10
 piano|10
 violin|10
 guitar|10
-handbells|10
+handbell|10
 drum|10
 saxophone|10
 trumpet|10
@@ -453,13 +453,16 @@ dancer|12
 teacher|12
 astronaut|12
 police|12
-president writer|12
+president|12
+writer|12
 professor|12
 singer|12
 beggar|12
 player|12
-businessman lawyer|12
-fireman actress|12
+businessman|12
+lawyer|12
+fireman|12
+actress|12
 in the future|12
 life|12
 speak|12
@@ -650,7 +653,8 @@ October|17
 fall down|17
 above|17
 fall over|17
-begin turn|17
+begin|17
+turn|17
 like ... more|17
 yellow|17
 often|17
