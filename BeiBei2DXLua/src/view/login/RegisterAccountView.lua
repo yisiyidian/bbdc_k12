@@ -1051,6 +1051,10 @@ function RegisterAccountView:endRegister(state)
 	if state then
 		s_SCENE:removeAllPopups()
 		s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
+		if self.close ~= nil then
+			print("回调close")
+			self.close()
+		end
 	else
 		if self.close ~= nil then
 			print("回调close")

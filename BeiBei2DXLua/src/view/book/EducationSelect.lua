@@ -111,7 +111,7 @@ function EducationSelect:ctor()
     --如果是游客登录或者注册 就走if
     if s_CURRENT_USER.usertype ~= USER_TYPE_BIND then
         self:popupAccountBind()
-        -- s_SCENE:removeAllPopups()
+        return
     else
         s_SCENE:removeAllPopups()
     end
@@ -124,6 +124,14 @@ function EducationSelect:ctor()
 end
 
 
+-- function EducationSelect:doguidStep()
+--     if s_CURRENT_USER.guideStep == 0 then
+--         s_CorePlayManager.enterGuideScene(1,self)
+--         s_CURRENT_USER:setGuideStep(s_guide_step_selectGrade) 
+--     end
+-- end
+
+
 
 
 --弹出注册帐号的界面
@@ -132,6 +140,7 @@ function EducationSelect:popupAccountBind()
     --
     local introLayer = RegisterAccountView.new(RegisterAccountView.STEP_10)
     s_SCENE:popup(introLayer)
+    -- introLayer.close = handler(self,self.doguidStep)
 end
 
 return EducationSelect
