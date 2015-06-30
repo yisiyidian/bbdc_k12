@@ -112,22 +112,24 @@ function MissionManager:updateMission(missionId,missionsData,addData,callBack)
 				--local bookKey = string.gsub(s_CURRENT_USER.bookKey,"_","#") 
 				--local unitID  = missionsData.unitID
 				--local costTime = missionData.costTime
-				local bookKey = string.gsub(s_CURRENT_USER.bookKey,"_","#") 
-				local unitID  = missionsData[2]
-				local costTime = missionsData[3]
-				if v[6] == bookKey and v[7] == tostring(unitID) then
-					if missionId == "4-1" then
-						if tonumber(v[8]) >= costTime then
+				if missionId == self.missionData.curTaskId then
+					local bookKey = string.gsub(s_CURRENT_USER.bookKey,"_","#") 
+					local unitID  = missionsData[2]
+					local costTime = missionsData[3]
+					if v[6] == bookKey and v[7] == tostring(unitID) then
+						if missionId == "4-1" then
+							if tonumber(v[8]) >= costTime then
+								hit = true
+								v[3] = "1" --条件满足
+								v[2] = "1" --状态改为未领取
+								re = true	
+							end
+						else
 							hit = true
 							v[3] = "1" --条件满足
 							v[2] = "1" --状态改为未领取
-							re = true	
+							re = true
 						end
-					else
-						hit = true
-						v[3] = "1" --条件满足
-						v[2] = "1" --状态改为未领取
-						re = true
 					end
 				end
 			end
