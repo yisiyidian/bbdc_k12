@@ -127,8 +127,9 @@ function MatController:judgeFunc()
 		MatController.currentCoco[k]:runAction(cc.RotateBy:create(0.4,math.random(360,720)))
 	end
 
-	重置所有的序列
+	-- 下滑动作
 	MatController.MatView:dropFunc()
+	-- 重置所有的序列
 	MatController.arr = {}
 	MatController.word = {"a"}
 	MatController.index = 1
