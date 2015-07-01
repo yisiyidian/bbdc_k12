@@ -89,7 +89,14 @@ function MatController:updateArr(p,coco)
 			MatController.currentCoco[k].touchState = 3
 		end	
 		MatController.currentCoco[k]:resetView()
+	end		
+
+	local temp = ""	
+	for k,v in pairs(MatController.currentCoco) do
+		-- 已经加入的所有字母
+		temp = temp..MatController.currentCoco[k].letter
 	end
+	MatController.MatView:resetWordLabel(temp)
 end
 
 -- 判断事件

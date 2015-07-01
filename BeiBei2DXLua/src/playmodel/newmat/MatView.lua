@@ -20,6 +20,7 @@ function MatView:ctor()
 
 	-- 初始化ui
 	self:initUI()
+
 	-- 注册观察者
 	MatController:register()
 	-- 控制器和视图建立联系
@@ -43,11 +44,52 @@ function MatView:initUI()
 	self:addChild(self.back)
 	-- 布景
 
+	-- 划词显示
+	local wordsprite = ccui.Scale9Sprite:create("image/playmodel/changeWordButton_upside.png")
+	wordsprite:setPosition(cc.p(s_DESIGN_WIDTH /2,770))
+	wordsprite:setAnchorPoint(0.5,0.5)
+	self.wordsprite = wordsprite
+	self:addChild(self.wordsprite)
+
+	local wordlabel = cc.Label:createWithSystemFont("","",25)
+    wordlabel:ignoreAnchorPointForPosition(false)
+    wordlabel:setAnchorPoint(0.5,0.5)
+    wordlabel:setColor(cc.c4b(0,0,0,255))
+    self.wordlabel = wordlabel
+    self.wordsprite:addChild(self.wordlabel)
+
+    local chinesesprite = ccui.Scale9Sprite:create("image/playmodel/changeWordButton_downside.png")
+	chinesesprite:setPosition(cc.p(s_DESIGN_WIDTH /2,700))
+	chinesesprite:setAnchorPoint(0.5,0.5)
+	self.chinesesprite = chinesesprite
+	self:addChild(self.chinesesprite)
+
+	local chineselabel = cc.Label:createWithSystemFont("","",25)
+    chineselabel:ignoreAnchorPointForPosition(false)
+    chineselabel:setAnchorPoint(0.5,0.5)
+    chineselabel:setColor(cc.c4b(0,0,0,255))
+    self.chineselabel = chineselabel
+    self.chinesesprite:addChild(self.chineselabel)
+	
 	-- ui填充
 	self:resetUI()
+	self:resetWordLabel("")
 	-- 触摸事件
 	self:touchFunc()
 end
+
+function MatView:resetWordLabel(string)
+	local len = string.len(string)
+	if len == 0 or string == "" then
+		self.wordsprite:setVisible(false)
+	else
+		self.wordsprite:setContentSize((len+1) * 18 + 60 ,63)
+	end
+
+	self.wordlabel:setString(string)
+	self.wordlabel:setPosition(self.wordsprite:getContentSize().width/2,self.wordsprite:getContentSize().height/2)
+end
+
 
 function MatView:resetUI()
 	-- 重置
