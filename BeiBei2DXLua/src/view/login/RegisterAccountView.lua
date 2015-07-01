@@ -35,78 +35,91 @@ RegisterAccountView.STEP_6 = 6	--登陆
 RegisterAccountView.STEP_7 = 7	--修改密码
 RegisterAccountView.STEP_8 = 8	--密码找回
 
+
+RegisterAccountView.STEP_9 = 9  --新登陆 输入密码
+
+RegisterAccountView.STEP_10 = 10 --选择登陆方式的界面 有注册和登陆2个按钮
+RegisterAccountView.STEP_11 = 11 --进入游戏之后 输入手机号    验证手机号码
+RegisterAccountView.STEP_12 = 12 --游客登陆之后  完善信息 输入手机号码
+
+RegisterAccountView.PWD = 'bbdc123#'
 --构造
 function RegisterAccountView:ctor(step)
-	self:init(step)
+	-- self:init(step)
 	self.debug = false
+	self.direction = ""--"left" "right" 移动方向
+	self.uistack = {} --UI的栈,里边保存UI流程序号,UI显示的参数  Android返回键用
+	self.curBtn = nil --当前的输入按钮
+	self.phoneNumber = ""
+	if step ~= "canclose" and step ~= RegisterAccountView.STEP_10 then
+  		self:init(step,canclose)
+  	elseif step == RegisterAccountView.STEP_10 then
+  		--显示选择登陆方式界面
+  		self:showIntroView()
+		self.uistack[#self.uistack + 1] = {step,{}} --参数入栈
+  	else
+  		self.canclose = true
+      	self:init()
+  	end
+
 	onAndroidKeyPressed(self,handler(self, self.onBackTouch),function ()
 		-- body
 	end)
 end
 
-function RegisterAccountView:showErrorIcon()
-	if self.errorIcon == nil then
-		local errorIcon = cc.Sprite:create("image/login/error_zhuce.png")
-		errorIcon:setPosition(0.5 * s_DESIGN_WIDTH - 100,s_DESIGN_HEIGHT * 0.9 - 90)
-		self:addChild(errorIcon)
-		self.errorIcon = errorIcon
-	else
-		self.errorIcon:setVisible(true)
-	end
-end
-
-function RegisterAccountView:hideErrorICON()
-	if self.errorIcon then
-		self.errorIcon:setVisible(false)
-	end
-end
-
 --初始化各个view
 function RegisterAccountView:init(step)
+	print("RegisterAccountView:init")
+	self.inited = true
 	self.views = {}
 	self.curStep = step or 1
 
 	self.phoneNumber = ""
 	local bigWidth = s_DESIGN_WIDTH + 2 * s_DESIGN_OFFSET_WIDTH
     local bigHeight = 1.0*s_DESIGN_HEIGHT
-	local initColor = cc.LayerColor:create(cc.c4b(220,233,239,255), bigWidth, s_DESIGN_HEIGHT)
-    initColor:setAnchorPoint(0.5,0.5)
-    initColor:ignoreAnchorPointForPosition(false)  
-    initColor:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-    initColor:setTouchEnabled(false)
-    self:addChild(initColor)
+    if tolua.isnull(self.initColor) then
+		local initColor = cc.LayerColor:create(cc.c4b(220,233,239,255), bigWidth, s_DESIGN_HEIGHT)
+	    initColor:setAnchorPoint(0.5,0.5)
+	    initColor:ignoreAnchorPointForPosition(false)  
+	    initColor:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+	    initColor:setTouchEnabled(false)
+	    self.initColor = initColor
+	    self:addChild(initColor)
+	
+		--初始化UI
+		--标题 “注册”
+		local title = cc.Label:createWithSystemFont("注 册","",60)
+		title:setTextColor(cc.c3b(110,182,240))
+		title:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9)
+		self.title = title
+		self:addChild(title)
+		--返回按钮
 
-	--初始化UI
-	--标题 “注册”
-	local title = cc.Label:createWithSystemFont("注 册","",60)
-	title:setTextColor(cc.c3b(110,182,240))
-	title:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9)
-	self.title = title
-	self:addChild(title)
-	--返回按钮
-	local btnReturn = ccui.Button:create("image/shop/button_back2.png")
-	btnReturn:setPosition(0.1*s_DESIGN_WIDTH,0.93*s_DESIGN_HEIGHT)
-	btnReturn:addTouchEventListener(handler(self, self.onReturnClick))
-	self.btnReturn = btnReturn
-	self:addChild(btnReturn)
-	--tip 注册可以和更多好友一起背单词
-	local tip = cc.Label:createWithSystemFont("注册可以和更多好友一起背单词","",26)
-	tip:setTextColor(cc.c3b(118,123,124))
-	tip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 60)
-	self.tip = tip
-	self:addChild(tip)
-	--alert tip 提示文本 提示应该输入什么
-	local alertTip = cc.Label:createWithSystemFont(" ","",26)
-	alertTip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 100)
-	alertTip:setTextColor(cc.c3b(140, 139, 139))
-	self.alertTip = alertTip
-	self:addChild(alertTip)
+		local btnReturn = ccui.Button:create("image/shop/button_back2.png")
+		btnReturn:setPosition(0.1*s_DESIGN_WIDTH,0.93*s_DESIGN_HEIGHT)
+		btnReturn:addTouchEventListener(handler(self, self.onReturnClick))
+		self.btnReturn = btnReturn
+		self:addChild(btnReturn)
+		--tip 注册可以和更多好友一起背单词
+		-- local tip = cc.Label:createWithSystemFont("注册可以和更多好友一起背单词","",26)
+		-- tip:setTextColor(cc.c3b(118,123,124))
+		-- tip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 60)
+		-- self.tip = tip
+		-- self:addChild(tip)
+		--alert tip 提示文本 提示应该输入什么
+		local alertTip = cc.Label:createWithSystemFont(" ","",26)
+		alertTip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 100)
+		alertTip:setTextColor(cc.c3b(140, 139, 139))
+		self.alertTip = alertTip
+		self:addChild(alertTip)
+	end
 	--进入第一步
 	self:goStep(self.curStep)
 end
 
 --返回按钮点击
 function RegisterAccountView:onReturnClick(sender,eventType)
+	--[[
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
@@ -124,11 +137,39 @@ function RegisterAccountView:onReturnClick(sender,eventType)
 		self.curStep = self.curStep - 1
 		self:goStep(self.curStep)
 	end
+	]]
+
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+	sender:setTouchEnabled(false)
+	--返回introlayer 或者结束登陆 修改密码流程
+	--从栈里弹出来上一步的参数
+	local cmd = self.uistack[#self.uistack - 1]
+	if cmd then
+    	self.uistack[#self.uistack] = nil
+		self.uistack[#self.uistack] = nil
+		self.curStep 	= cmd[1]
+		local data 		= cmd[2]
+	    if type(data) == "table" and #data == 0 then
+	      	data = nil
+	    end
+    	self.direction = "right"
+		self:goStep(self.curStep,data)
+	elseif self.curStep == RegisterAccountView.STEP_2 and self.smsMode == "verify" then
+		self.direction = "right"
+		self.curStep = RegisterAccountView.STEP_11
+		self:goStep(self.curStep,{})
+	else
+		sender:setEnabled(false)
+		self:endRegister()
+	end
 end
 
 --前往第几步
 --step 步骤索引
 function RegisterAccountView:goStep(step,...)
+	--[[
 	local args = {...}
 	self:resetView()
 	self.alertTip:setString("")
@@ -154,16 +195,101 @@ function RegisterAccountView:goStep(step,...)
 	elseif step == RegisterAccountView.STEP_8 then
 		self:showModifyPwdBySMSCode(args)---------------重置密码
 	end
+	]]
+	if not self.inited then  --初始化UI
+		self:init(step,...)
+		return
+	end
+	local args = {...}
+	self.uistack[#self.uistack + 1] = {step,args} --参数入栈
+	--处理老的UI
+	self:moveOut(self.direction)
+	
+	self.alertTip:setString("")
+	--处理UI切换
+	if step == RegisterAccountView.STEP_1 then
+		self:showInputPhoneNumber(args)-----------------注册：输入手机号
+	elseif step == RegisterAccountView.STEP_2 then
+		self:showInputSmsCode(args,"verify")------------注册：输入短信验证码 验证手机号码有效性  登陆进入游戏完成之后 再弹出验证
+	elseif step == RegisterAccountView.STEP_3 then
+		self:showChooseSex(args)------------------------注册：选择性别
+	elseif step == RegisterAccountView.STEP_4 then
+		self:showInputNickName(args)--------------------注册：输入昵称
+	elseif step == RegisterAccountView.STEP_5 then
+		self:showInputPwd(args)-------------------------注册：输入密码
+	elseif step == RegisterAccountView.STEP_6 then
+		self:showLoginView(args)------------------------登陆界面
+	elseif step == RegisterAccountView.STEP_7 then
+		self:showModifyPwdView(args)--------------------修改密码
+	elseif step == RegisterAccountView.STEP_8 then
+		self:showModifyPwdBySMSCode(args)---------------重置密码
+	elseif step == RegisterAccountView.STEP_9 then
+		self:showInputSmsCode(args,"smslogin")---------------------登陆：输入短信验证码 用短信验证码登陆
+	elseif step == RegisterAccountView.STEP_10 then
+		self:showIntroView()
+	elseif step == RegisterAccountView.STEP_11 then
+		self:showInputPhoneNumber(args,"logined_verify") --登陆之后 验证手机号码
+	elseif step == RegisterAccountView.STEP_12 then
+		self:showInputPhoneNumber(args,"guest_register")
+	end
+	--处理新的UI 从外部移入
+	self:moveIn(self.direction)
 end
 
---------------------------------UI-------------------
---image/login/white_shurukuang_zhuce.png
---image/signup/shuru_bbchildren_white.png
---image/login/sl_username.png
---image/login/sl_password.png
+--把当前的view 从中间移出去
+--direction  方向  left right
+function RegisterAccountView:moveOut(direction)
+	local detx = 0 --偏移量
+	if direction == "left" then
+		detx =  -s_DESIGN_WIDTH
+	elseif direction == "right" then
+		detx =  s_DESIGN_WIDTH
+	end
 
+	for key,view in pairs(self.views) do
+		if detx ~= 0 then
+			local posx,posy = view:getPosition()
+			local newPos =  cc.p(posx + detx,posy)
+			local moveto = cc.MoveTo:create(0.3,newPos)
+			local callback = cc.CallFunc:create(function()
+	            view:removeFromParent()
+	        end)
+	        view:runAction(cc.Sequence:create(moveto,callback))
+    	else
+    		view:removeFromParent()
+    	end
+	end
+	self.views = {}
+end
+--从两侧移进来
+--direction  方向  left right
+function RegisterAccountView:moveIn(direction)
+	local detx = 0 --偏移量
+	if direction == "left" then
+		detx =  s_DESIGN_WIDTH
+	elseif direction == "right" then
+		detx =  -s_DESIGN_WIDTH
+	end
+
+	for key,view in pairs(self.views) do
+		if detx ~= 0 then
+			local posx,posy = view:getPosition()
+			local newPos =  cc.p(posx + detx,posy)
+			view:setPosition(newPos.x,newPos.y)
+			local moveto = cc.MoveTo:create(0.3,cc.p(posx,posy))
+			local callback = cc.CallFunc:create(function()
+	            
+	        end)
+	        view:runAction(cc.Sequence:create(moveto,callback))
+    	else
+    		
+    	end
+	end
+end
+-----------------UI-----------------------------
 --显示输入手机号码的界面
 function RegisterAccountView:showInputPhoneNumber()
+	--[[
 	--手机号码输入
 	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入您的手机号",nil,nil,nil,nil,11)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
@@ -182,6 +308,73 @@ function RegisterAccountView:showInputPhoneNumber()
 	self.views[#self.views+1] = btnPhoneNumberOK
 
 	self.alertTip:setString("输入手机号码")
+	]]
+
+	self.processType = type
+	--手机号码输入
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入手机号",handler(self,self.ProcessPhoneInput),nil,nil,nil,11)
+	inputNode:setPosition(0.5 * s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.8 - 200)
+	inputNode:setInputMode(cc.EDITBOX_INPUT_MODE_PHONENUMBER)
+	self:addChild(inputNode)
+	self.inputNode = inputNode
+	inputNode:openIME()
+	self.views[#self.views+1] = inputNode
+	self.alertTip:setString("输入您的手机号码")
+	self.title:setString("注册")
+	--让返回按钮不可点
+	--[[
+	if self.canclose then
+		self.btnReturn:setVisible(true)
+		self.btnReturn:setTouchEnabled(true)
+  	else
+    	self.btnReturn:setVisible(false)
+ 		self.btnReturn:setTouchEnabled(false)
+	end
+	]]
+	--[[
+	if self.processType ~= "logined_verify" then
+		--其他登陆方式
+		local btnOtherLogin = ccui.Button:create("image/login/blank_btn.png")
+		btnOtherLogin:setPosition(0.8 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
+		btnOtherLogin:setTitleColor(cc.c3b(153,168,181))
+		btnOtherLogin:setTitleText("其他登陆方式")
+		btnOtherLogin:setTitleFontSize(20)
+		btnOtherLogin:addTouchEventListener(handler(self, self.onOtherLogin))
+		self:addChild(btnOtherLogin)
+		self.btnOtherLogin = btnOtherLogin
+		self.views[#self.views+1] = btnOtherLogin
+		--游客登陆
+		local btnGuestLogin = ccui.Button:create("image/login/blank_btn.png")
+		btnGuestLogin:setPosition(0.2 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
+		btnGuestLogin:setTitleColor(cc.c3b(153,168,181))
+		btnGuestLogin:setTitleText("游客登陆")
+		btnGuestLogin:setTitleFontSize(20)
+		btnGuestLogin:addTouchEventListener(handler(self, self.onGuestLogin))
+		self:addChild(btnGuestLogin)
+		self.btnGuestLogin = btnGuestLogin
+		self.views[#self.views+1] = btnGuestLogin
+	end
+
+	if args[1] == "fromIntro" then
+		self.title:setString("登陆")
+		self.btnReturn:setVisible(true)
+		self.btnReturn:setTouchEnabled(true)
+	end
+	]]
+
+	self.btnReturn:setVisible(true)
+	self.btnReturn:setTouchEnabled(true)
+	--下一步按钮  三角的
+	local btnPhoneNumberOK = ccui.Button:create("image/shop/button_back2.png")
+	btnPhoneNumberOK:setPosition(0.8 * s_DESIGN_WIDTH, s_DESIGN_HEIGHT * 0.8 - 200)
+	btnPhoneNumberOK:setScaleX(-1)
+	btnPhoneNumberOK:addTouchEventListener(handler(self, self.onTouchPhoneNumberOK))
+	self.btnPhoneNumberOK = btnPhoneNumberOK
+	self.btnPhoneNumberOK:setVisible(false)
+	self.btnPhoneNumberOK:setTouchEnabled(false)
+	self.curBtn = self.btnPhoneNumberOK --绑定到curBtn
+	self.views[#self.views+1] = btnPhoneNumberOK
+	self:addChild(btnPhoneNumberOK)
 end
 
 --电话号码输入OK
@@ -189,6 +382,7 @@ function RegisterAccountView:onTouchPhoneNumberOK(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
+	sender:setTouchEnabled(false)
 	-- 验证手机号码^1[3|4|5|8][0-9]%d%d%d%d%d%d%d%d$
 	local phoneNumber = self.inputNode:getText()
 	if string.find(phoneNumber,"^1[3|4|5|8][0-9]%d%d%d%d%d%d%d%d$") then
@@ -196,12 +390,16 @@ function RegisterAccountView:onTouchPhoneNumberOK(sender,eventType)
 		self.phoneNumber = phoneNumber
 		
 		if not self.debug then
-			--查询手机号码是否存在
-			self:verifyPhoneNumber(phoneNumber)
+			--直接请求验证码  与账号无关的短信验证
+			self:requestSMSCode(self.phoneNumber)
+			self.direction = "left"
+			self.curStep = RegisterAccountView.STEP_2
+			self:goStep(self.curStep)
 		else
-			--跳转到输入验证码的界面 直接跳过去
-			self.curStep = self.curStep + 1
-			self:goStep(self.curStep,60) --60秒
+			-- 跳转到输入验证码的界面 直接跳过去
+			self.direction = "left"
+			self.curStep = RegisterAccountView.STEP_2
+			self:goStep(self.curStep)
 		end
 	else
 		--不是手机号码
@@ -210,26 +408,45 @@ function RegisterAccountView:onTouchPhoneNumberOK(sender,eventType)
 end
 
 --验证手机号码是否有效
-function RegisterAccountView:verifyPhoneNumber(phoneNumber)
-	isPhoneNumberExist(phoneNumber, handler(self, self.onVerifyPhoneNumberBack))
+function RegisterAccountView:resetPhoneNumber(phoneNumber)
+	-- isPhoneNumberExist(phoneNumber, handler(self, self.onVerifyPhoneNumberBack))
+	reSetPhoneNumber(phoneNumber, handler(self, self.onVerifyPhoneNumberBack))
 end
 --验证手机号码回调
-function RegisterAccountView:onVerifyPhoneNumberBack(exist,error)
-	if exist then
-		s_TIPS_LAYER:showSmallWithOneButton("该手机号码已被注册！")
-  		-- s_TIPS_LAYER:showSmallWithOneButton(error.description)
+function RegisterAccountView:onResetPhoneNumberBack(exist,error)
+	if error then
+		s_TIPS_LAYER:showSmallWithOneButton("")
 	else
-		self:requestSMSCode(self.phoneNumber)
-		self.curStep = self.curStep + 1
-		self:goStep(self.curStep,60) --60秒
+		-- self:requestSMSCode(self.phoneNumber)
+		-- self.curStep = self.curStep + 1
+		-- self:goStep(self.curStep,60) --60秒
+	end
+
+end
+
+
+--处理输入事件
+--text 文本
+--length 长度
+function RegisterAccountView:ProcessPhoneInput(text,length,maxlength)
+	if not tolua.isnull(self.btnPhoneNumberOK) then
+		if maxlength == length then
+			if not self.btnPhoneNumberOK:isVisible() then
+				self.btnPhoneNumberOK:setVisible(true)
+				self.btnPhoneNumberOK:setTouchEnabled(true)
+			end
+		else
+			self.btnPhoneNumberOK:setVisible(false)
+			self.btnPhoneNumberOK:setTouchEnabled(false)
+		end
 	end
 end
 
 --显示输入验证码的界面
-function RegisterAccountView:showInputSmsCode(args)
-	local countDown = args and tonumber(args[1]) or 0
+function RegisterAccountView:showInputSmsCode(args,type)
+	local countDown = 50
 	print("countDown:"..countDown)
-
+	--[[
 	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入验证码",nil,nil,nil,nil,11)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputNode)
@@ -261,6 +478,60 @@ function RegisterAccountView:showInputSmsCode(args)
 		self:startSMSTick(countDown)
 	end
 	self.alertTip:setString("输入验证码")
+	]]
+	self.smsMode = type--verify 验证手机号码有效性 , smslogin SMSCode登陆
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_gray.png","image/signup/shuru_bbchildren_white.png","请输入验证码",handler(self, self.processSMSInput),nil,nil,nil,6)
+	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 200)
+	self:addChild(inputNode)
+	self.inputNode = inputNode
+	inputNode:setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC)
+	inputNode:openIME()
+	self.views[#self.views+1] = inputNode
+	
+	local btnSMSCodeOK = ccui.Button:create("image/shop/button_back2.png")
+	btnSMSCodeOK:setPosition(0.8 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.8 - 200)
+	btnSMSCodeOK:addTouchEventListener(handler(self, self.onTouchSMSCodeOK))
+	btnSMSCodeOK:setScaleX(-1)
+	btnSMSCodeOK:setTitleFontSize(36)
+	self.btnSMSCodeOK = btnSMSCodeOK
+	self.btnSMSCodeOK:setVisible(false)
+	self:addChild(btnSMSCodeOK)
+	self.views[#self.views+1] = btnSMSCodeOK
+	--重试按钮 点击重新请求验证码 间隔60S
+	local btnRetry = ccui.Button:create("image/login/login_50s_send.png")
+	btnRetry:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 460)
+	btnRetry:addTouchEventListener(handler(self, self.onRetrySMSTouch))
+	btnRetry:setTitleColor(cc.c3b(153,168,181))
+	btnRetry:setTitleText("60秒重新发送")
+	btnRetry:setTitleFontSize(36)
+	btnRetry:setTouchEnabled(false)
+	self:addChild(btnRetry)
+	self.btnRetry = btnRetry
+	self.views[#self.views+1] = btnRetry
+
+	if self.smsMode == "verify" then
+		self.btnReturn:setTouchEnabled(true) --禁用返回按钮
+		self.btnReturn:setVisible(true)
+	end
+	
+	if countDown ~= 0 then
+		--倒计时 请求验证码
+		self:startSMSTick(countDown)
+	end
+	self.alertTip:setString("输入验证码")
+
+end
+
+function RegisterAccountView:processSMSInput(text,length,maxlength)
+	if not tolua.isnull(self.btnSMSCodeOK) then
+		if maxlength <= length then
+			self.btnSMSCodeOK:setVisible(true)
+			self.btnSMSCodeOK:setTouchEnabled(true)
+		else
+			self.btnSMSCodeOK:setVisible(false)
+			self.btnSMSCodeOK:setTouchEnabled(false)
+		end
+	end
 end
 
 --开始倒计时
@@ -304,11 +575,9 @@ function RegisterAccountView:onRetrySMSTouch(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
-
 	if not self.debug then
 		self:requestSMSCode(self.phoneNumber)
 	end
-
 	self:startSMSTick(50)
 end
 
@@ -333,101 +602,46 @@ function RegisterAccountView:onTouchSMSCodeOK(sender,eventType)
 		end
 	else
 		--验证码无效
-		s_TIPS_LAYER:showSmallWithOneButton("请输入有效的验证码！")
+		s_TIPS_LAYER:showSmallWithOneButton("请输入有效的验证码！",handle(self,self.resetSMSInputNode))
 	end
+end
+
+function RegisterAccountView:resetSMSInputNode()
+	self.inputNode:setText("")
+	self.inputNode:openIME()
 end
 
 --显示选择性别的界面
 function RegisterAccountView:showChooseSex()
 	self.btnReturn:setTouchEnabled(false) --禁用返回按钮
 	self.btnReturn:setVisible(false)
+	
+	self.alertTip:setString("你是男孩还是女孩？")
+	self.title:setString("完善信息")
 
-	self.alertTip:setString("")
-	local girlImg = "image/PersonalInfo/hj_personal_avatar.png"
-	local boyImg = "image/PersonalInfo/boy_head.png"
+	local txtStep = cc.Label:createWithSystemFont("1/2","",26)
+	txtStep:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 50)
+	txtStep:setTextColor(cc.c3b(110,182,240))
+	self:addChild(txtStep)
+	self.views[#self.views+1] = txtStep
 
-	local headImg = cc.Sprite:create(girlImg)
-	--local headImg = cc.Sprite:create("image/homescene/setup_head.png")
-	headImg:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
-	self.headImg = headImg
-	self.views[#self.views + 1] = headImg
-	self:addChild(headImg)
-	--checkbox回调
-	local chkCallBack = function (self,sender,eventType)
-		local checkName = sender:getName()
-		local state = eventType == 0 or false
-		print("eventType:"..eventType)
-		if eventType == ccui.CheckBoxEventType.selected then
-			print("eventType:"..eventType)
-		elseif eventType == ccui.CheckBoxEventType.unselected then
-			print("eventType:"..eventType)
-		end
-		print("checkName:"..checkName)
-		if checkName == "Male" and state then
-			print("禁用自己："..checkName)
-			self.headImg:setTexture(boyImg)
-			self.checkBoxMale:setTouchEnabled(false) --禁用自己
-			self.checkBoxFeMale:setTouchEnabled(true) --启用另外一个
-			self.checkBoxFeMale:setSelected(false)
-		elseif checkName == "Female" and state then
-			self.headImg:setTexture(girlImg)
-			self.checkBoxMale:setTouchEnabled(true) --启用另外一个
-			self.checkBoxFeMale:setTouchEnabled(false) --禁用自己
-			self.checkBoxMale:setSelected(false)
-		end
-	end
+	local btnGirl = ccui.Button:create("image/login/button_boygirl_zhuce.png")
+	btnGirl:setPosition(0.5 * s_DESIGN_WIDTH + 100,s_DESIGN_HEIGHT*0.6 - 50)
+	btnGirl:addTouchEventListener(handler(self,self.onTouchSexOK))
+	btnGirl:setName("btnGirl")
+	btnGirl:setTitleText("♀ 女")
+	btnGirl:setTitleFontSize(30)
+	self:addChild(btnGirl)
+	self.views[#self.views+1] = btnGirl
 
-	--性别复选框 男
-	local checkBoxMale = ccui.CheckBox:create()
-	checkBoxMale:setTouchEnabled(true)
-	checkBoxMale:setName("Male")
-	checkBoxMale:loadTextures(
-		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal
-		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal press
-		"image/login/button_boygirl_zhuce.png",--normal active
-		"image/login/button_boygirl_gray_zhuce_unpressed.png",-- normal disable
-		"image/login/button_boygirl_gray_zhuce_unpressed.png"--active disable
-		)
-	checkBoxMale:addEventListener(handler(self, chkCallBack))
-	checkBoxMale:setPosition(0.5 * s_DESIGN_WIDTH - 100,s_DESIGN_HEIGHT*0.6 - 50)
-	checkBoxMale:setSelected(false)	--默认选中
-	self.checkBoxMale = checkBoxMale
-	self:addChild(checkBoxMale)
-	self.views[#self.views+1] = checkBoxMale
-
-	local labelMan = cc.Label:createWithSystemFont("♂ 男","",30)
-	labelMan:setPosition(checkBoxMale:getContentSize().width/2,checkBoxMale:getContentSize().height/2)
-	checkBoxMale:addChild(labelMan)
-	--女
-	local checkBoxFeMale = ccui.CheckBox:create()
-	checkBoxFeMale:setTouchEnabled(false)
-	checkBoxFeMale:setName("Female")
-	checkBoxFeMale:loadTextures(
-		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal
-		"image/login/button_boygirl_gray_zhuce_unpressed.png",--normal press
-		"image/login/button_boygirl_zhuce.png",--normal active
-		"image/login/button_boygirl_gray_zhuce_unpressed.png",-- normal disable
-		"image/login/button_boygirl_gray_zhuce_unpressed.png"--active disable
-		)
-	checkBoxFeMale:addEventListener(handler(self, chkCallBack))
-	checkBoxFeMale:setPosition(0.5 * s_DESIGN_WIDTH + 100,s_DESIGN_HEIGHT*0.6 - 50)
-	checkBoxFeMale:setSelected(true)
-	self.checkBoxFeMale = checkBoxFeMale
-	self:addChild(checkBoxFeMale)
-	self.views[#self.views+1] = checkBoxFeMale
-
-	local labelWomen = cc.Label:createWithSystemFont("♀ 女","",30)
-	labelWomen:setPosition(checkBoxFeMale:getContentSize().width/2,checkBoxFeMale:getContentSize().height/2)
-	checkBoxFeMale:addChild(labelWomen)
-
-	local btnSexOK = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnSexOK:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.6 - 180)
-	btnSexOK:addTouchEventListener(handler(self, self.onTouchSexOK))
-	btnSexOK:setTitleText("下一步")
-	btnSexOK:setTitleFontSize(36)
-	self:addChild(btnSexOK)
-	self.views[#self.views+1] = btnSexOK
-
+	local btnBoy = ccui.Button:create("image/login/button_boygirl_zhuce.png")
+	btnBoy:setPosition(0.5 * s_DESIGN_WIDTH - 100,s_DESIGN_HEIGHT*0.6 - 50)
+	btnBoy:addTouchEventListener(handler(self,self.onTouchSexOK))
+	btnBoy:setName("btnBoy")
+	btnBoy:setTitleText("♂ 男")
+	btnBoy:setTitleFontSize(30)
+	self.views[#self.views+1] = btnBoy
+	self:addChild(btnBoy)
 	cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
 end
 
@@ -435,32 +649,83 @@ end
 function RegisterAccountView:onTouchSexOK(sender,eventType)
 	self.btnReturn:setTouchEnabled(true) --启用返回按钮
 	self.btnReturn:setVisible(true)
+	sender:setTouchEnabled(false)
 	--获取性别 女0  男1
-	self.sex = self.checkBoxFeMale:isSelected() and 0 or 1
+	local btnName = sender:getName()
+	if btnName == "btnGirl" then
+		self.sex = 0
+	else
+		self.sex = 1
+	end
 	print("sex:"..self.sex)
 	s_CURRENT_USER.sex = self.sex
-	self.curStep = self.curStep + 1
+	--第四步  输入昵称
+	self.curStep = RegisterAccountView.STEP_4
+	self.direction = "left"
 	self:goStep(self.curStep)
 end
 
 --显示输入昵称
 function RegisterAccountView:showInputNickName()
-	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入昵称",nil,nil,nil,nil,8)
-	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
+	local girlImg = "image/PersonalInfo/hj_personal_avatar.png"
+	local boyImg = "image/PersonalInfo/boy_head.png"
+	local headImg = nil
+	local tipsex = ""
+	if self.sex == 0 then
+		tipsex = "girl"
+		headImg = cc.Sprite:create(girlImg)	
+	else
+		tipsex = "boy"
+		headImg = cc.Sprite:create(boyImg)
+	end
+	headImg:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
+	self.headImg = headImg
+	self.views[#self.views + 1] = headImg
+	self:addChild(headImg)
+
+	local txtStep = cc.Label:createWithSystemFont("2/2","",26)
+	txtStep:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.9 - 50)
+	txtStep:setTextColor(cc.c3b(110,182,240))
+	self:addChild(txtStep)
+	self.views[#self.views+1] = txtStep
+
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","image/signup/shuru_bbchildren_white.png","请输入昵称",handler(self, self.processInputName),nil,nil,nil,8,1)
+	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.75 - 200)
+	inputNode:setPlaceHolderColor()
 	self:addChild(inputNode)
 	self.inputNode = inputNode
 	inputNode:openIME()
 	self.views[#self.views+1] = inputNode
-
-	local btnNickName = ccui.Button:create("image/login/button_next_unpressed_zhuce.png")
-	btnNickName:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 330)
+	--确定昵称按钮
+	local btnNickName = ccui.Button:create("image/shop/button_back2.png")
+	btnNickName:setPosition(0.8 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.75 - 200)
 	btnNickName:addTouchEventListener(handler(self, self.onTouchNickNameOK))
-	btnNickName:setTitleText("下一步")
-	btnNickName:setTitleFontSize(36)
+	btnNickName:setScale(-1)
 	self:addChild(btnNickName)
-	self.views[#self.views+1] = btnNickName
+	btnNickName:setVisible(false)
+	self.btnNickName = btnNickName
+	self.views[#self.views + 1] = btnNickName
 
-	self.alertTip:setString("输入昵称")
+	local alertTip = cc.Label:createWithSystemFont("输入真实姓名，小伙伴更容易找到你","",26)
+	alertTip:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT * 0.75 - 130)
+	alertTip:setTextColor(cc.c3b(140, 139, 139))
+	self:addChild(alertTip)
+	self.views[#self.views + 1] = alertTip
+
+	self.alertTip:setString("hi!"..tipsex.."! 这就是你在贝贝里的头像")
+end
+
+function RegisterAccountView:processInputName(text,length,maxlength)
+	if not tolua.isnull(self.btnNickName) then
+		if text ~= "" then
+			self.btnNickName:setVisible(true)
+			self.btnNickName:setTouchEnabled(true)
+		else
+			self.btnNickName:setVisible(false)
+			self.btnNickName:setTouchEnabled(false)
+		end
+		-- self.btnNickName:setVisible(true)
+	end
 end
 
 --昵称按钮触摸事件
@@ -477,8 +742,11 @@ function RegisterAccountView:onTouchNickNameOK(sender,eventType)
 
 	--昵称合法
 	self.nickName =  nickName
-	self.curStep = self.curStep + 1
-	self:goStep(self.curStep)
+
+	-- self.curStep = self.curStep + 1
+	-- self:goStep(self.curStep)
+	-- 注册
+	self:register(self.phoneNumber,RegisterAccountView.PWD,self.nickName,self.sex)
 end
 
 --显示输入密码的界面
@@ -604,6 +872,83 @@ function RegisterAccountView:showModifyPwdBySMSCode( ... )
 	
 end
 
+------显示选择登陆方式的界面sterAccountView.STEP_10----------------------------------------------------------------------------------------------------------------------
+function RegisterAccountView:showIntroView()
+	self.inited = false
+	if not tolua.isnull(self.btnReturn) then
+		self.btnReturn:setVisible(false)
+ 		self.btnReturn:setTouchEnabled(false)
+ 	end
+
+ 	self.introviews = {}
+	--浅蓝色背景
+	local bigWidth = s_DESIGN_WIDTH + 2 * s_DESIGN_OFFSET_WIDTH
+    local bigHeight = 1.0 * s_DESIGN_HEIGHT
+	local initColor = cc.LayerColor:create(cc.c4b(220,233,239,255), bigWidth, s_DESIGN_HEIGHT)
+    initColor:setAnchorPoint(0.5,0.5)
+    initColor:ignoreAnchorPointForPosition(false)  
+    initColor:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+    initColor:setTouchEnabled(false)
+    self:addChild(initColor)
+    self.introviews[#self.introviews + 1] = initColor
+
+	--显示贝贝的LOGO  显示2个按钮
+	local splogo = cc.Sprite:create("image/login/icon.png")
+	splogo:setAnchorPoint(0.5,0.5)
+	splogo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.75)
+	self:addChild(splogo)
+	self.introviews[#self.introviews + 1] = splogo
+
+	local spslogan = cc.Sprite:create("image/login/slogan.png")
+	spslogan:setAnchorPoint(0.5,0.5)
+	spslogan:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.55)
+	self:addChild(spslogan)
+	self.introviews[#self.introviews + 1] = spslogan
+
+	local btnRegister = ccui.Button:create("image/login/button_on.png","image/login/button_down.png")
+	btnRegister:setAnchorPoint(0.5,0.5)
+	btnRegister:setTitleFontSize(30)
+	btnRegister:addTouchEventListener(handler(self, self.onIntroRegisterTouch))
+	btnRegister:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.40)
+	btnRegister:setTitleText("开始使用")
+	self:addChild(btnRegister)
+	self.introviews[#self.introviews + 1] = btnRegister
+
+	local btnLogin = ccui.Button:create("image/login/button_on.png","image/login/button_down.png")
+	btnLogin:setAnchorPoint(0.5,0.5)
+	btnLogin:setTitleFontSize(30)
+	btnLogin:addTouchEventListener(handler(self, self.onIntroLoginTouch))
+	btnLogin:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.30)
+	btnLogin:setTitleText("试玩一下")
+	self:addChild(btnLogin)
+	self.introviews[#self.introviews + 1] = btnLogin
+end
+
+function RegisterAccountView:onIntroLoginTouch( sender,eventType)
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+	print("游客登陆")
+	sender:setTouchEnabled(false)
+	cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
+	s_SCENE:removeAllPopups()
+	self:endRegister()
+end
+
+function RegisterAccountView:onIntroRegisterTouch( sender,eventType )
+	if eventType ~= ccui.TouchEventType.ended then
+		return
+	end
+	sender:setTouchEnabled(false)
+	for k,v in pairs(self.introviews) do
+		v:removeFromParent()
+	end
+	print("进入注册  输入手机号码")
+	self.curStep = RegisterAccountView.STEP_1
+	self:goStep(self.curStep)
+end
+
+
 --------------------------------API-------------------
 
 --请求手机验证码
@@ -629,13 +974,31 @@ end
 function RegisterAccountView:onVerifySMSCodeCallBack(error,errorCode)
 	hideProgressHUD(true)
 	print("验证手机验证码回调："..tostring(error).." ,"..errorCode)
-	if errorCode~= 0 then
-		s_TIPS_LAYER:showSmallWithOneButton(error)
+	if errorCode ~= 0 then
+		s_TIPS_LAYER:showSmallWithOneButton("验证码错误",handler(self, self.resetSMSInputNode))
 	else
+		--重置手机号码
+		reSetPhoneNumber(self.phoneNumber,handler(self, self.resetPhoneNumberCallBack))
+		--[[
 		self.curStep = self.curStep + 1
 		self:goStep(self.curStep)
+		]]
 	end
 end
+
+
+function RegisterAccountView:resetPhoneNumberCallBack(exist,err)
+	if err then
+		print("resetPhoneNumberCallBack"..tostring(err))
+	else
+		-- 选择性别  输入姓名
+		self.direction = "left"
+		self.curStep = RegisterAccountView.STEP_3
+		self:goStep(self.curStep)
+		-- self:register(self.phoneNumber,RegisterAccountView.PWD)
+	end
+end
+
 
 --开始注册
 --phoneNumber 	就是手机号码
@@ -689,6 +1052,10 @@ function RegisterAccountView:endRegister(state)
 	if state then
 		s_SCENE:removeAllPopups()
 		s_O2OController.logInOnline(s_CURRENT_USER.username, s_CURRENT_USER.password)
+		if self.close ~= nil then
+			print("回调close")
+			self.close()
+		end
 	else
 		if self.close ~= nil then
 			print("回调close")

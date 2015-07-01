@@ -15,19 +15,23 @@ local MissionConfig = {}
 MissionConfig.randomMission = {
 	--普通任务
 	-- {["mission_id"] = "1-1",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次神秘任务"}, --神秘任务
-	{["mission_id"] = "1-2",["type"] = 1,["condition"]= {1},["bean"]=10,desc="打卡"}, 			--打卡
+	-- {["mission_id"] = "1-2",["type"] = 1,["condition"]= {1},["bean"]=10,desc="打卡"}, 			--打卡
 	-- {["mission_id"] = "1-3",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次趁热打铁"}, --趁热打铁
-	{["mission_id"] = "1-4",["type"] = 1,["condition"]= {1},["bean"]=10,desc="分享你的成绩"}, 	--分享（分享你的成绩）
-	{["mission_id"] = "1-5",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次总结BOSS"}, --完成一次总结BOSS
+	-- {["mission_id"] = "1-4",["type"] = 1,["condition"]= {1},["bean"]=10,desc="分享你的成绩"}, 	--分享（分享你的成绩）
+	-- {["mission_id"] = "1-5",["type"] = 1,["condition"]= {1},["bean"]=10,desc="完成一次总结BOSS"}, --完成一次总结BOSS
 	-- 特殊任务
-	{["mission_id"] = "2-1",["type"] = 2,["condition"]= {1},["bean"]=10,desc="完善个人信息"}, 	--完善信息
-	{["mission_id"] = "2-2",["type"] = 2,["condition"]= {1,3,5,10,20},["bean"]=10,desc="拥有%s个好友：%s/%s"},	--拥有X个好友
-	{["mission_id"] = "2-3",["type"] = 2,["condition"]= {1},["bean"]=10,desc="下载音频"}, 		--下载音频
+	{["mission_id"] = "2-1",["type"] = 2,["condition"]= {1},["bean"]=10,desc="完善个人信息",picture = "image/guide/information.png"}, 	--完善信息
+	{["mission_id"] = "2-2",["type"] = 2,["condition"]= {1,3,5,10,20},["bean"]=10,desc="拥有%s个好友：%s/%s",picture = "image/guide/friends.png"},	--拥有X个好友
+	{["mission_id"] = "2-3",["type"] = 2,["condition"]= {1},["bean"]=10,desc="下载音频",picture = "image/guide/loadAudio.png"}, 		--下载音频
 	--特殊任务中的解锁任务
-	{["mission_id"] = "3-1",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据1",cost=10}, 		--解锁数据1
-	{["mission_id"] = "3-2",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据2",cost=100}, 		--解锁数据2
-	{["mission_id"] = "3-3",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据4",cost=300}, 		--解锁数据4
-	{["mission_id"] = "3-4",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁VIP",cost=300}, 		--解锁VIP
+	{["mission_id"] = "3-1",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据1",cost=10,picture = "image/guide/shuju1_ice_instore.png"}, 		--解锁数据1
+	{["mission_id"] = "3-2",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据2",cost=100,picture = "image/guide/shuju2_ice_instore.png"}, 		--解锁数据2
+	{["mission_id"] = "3-3",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁数据4",cost=300,picture = "image/guide/shuju4_ice_instore.png"}, 		--解锁数据4
+	{["mission_id"] = "3-4",["type"] = 3,["condition"]= {1},["bean"]=10,desc="解锁VIP",cost=300,picture = "image/guide/vipmenpiao.png"}, 		--解锁VIP
+	--每日任务
+	{["mission_id"] = "4-1",["type"] = 4,["condition"]= {1},["bean"]=10,desc="在%s秒内通过%s关卡",picture = "image/guide/timeRes.png"}, 	--时间限定
+	{["mission_id"] = "4-2",["type"] = 4,["condition"]= {1},["bean"]=10,desc="不使用提示通过%s关卡",picture = "image/guide/promptRes.png"},	--次数限定
+	{["mission_id"] = "4-3",["type"] = 4,["condition"]= {1},["bean"]=10,desc="通过一次%s关卡",picture = "image/guide/boss.png"}, 		--无限定条件
 }
 
 MissionConfig.MISSION_SHENMI 	= "1-1" --神秘任务
@@ -41,9 +45,12 @@ MissionConfig.MISSION_FRIEND 	= "2-2" --拥有X好友
 MissionConfig.MISSION_AUDIO 	= "2-3" --下载音频
 
 MissionConfig.MISSION_DATA1 	= "3-1" --解锁数据1	
-MissionConfig.MISSION_DATA2 	= "3-2" --解锁数据2	
+MissionConfig.MISSION_DATA2 	= "3-2" --解锁数据2
 MissionConfig.MISSION_DATA3 	= "3-3" --解锁数据4
 MissionConfig.MISSION_VIP 		= "3-4" --解锁VIP 	
+MissionConfig.MISSION_TIME      = "4-1" --时间限定
+MissionConfig.MISSION_TIMES     = "4-2" --次数限定
+MissionConfig.MISSION_NOTHING   = "4-3" --无限定条件
 
 --累计登陆的任务类型
 MissionConfig.MISSION_LOGIN  	= "MISSION_LOGIN"

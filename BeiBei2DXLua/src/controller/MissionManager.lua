@@ -10,12 +10,13 @@
 --	本书学习完成时，累积登陆任务未完成，仍然可以继续任务直到任务完成
 --	累计登陆天数奖励的贝贝豆数量 等于 累计登陆的天数
 -- 二、随机任务
---    	1、普通任务  可能会重复出现
--- 		神秘任务
--- 		打卡
--- 		趁热打铁连续答对3-8词
--- 		分享
--- 		完成一次总结BOSS
+--		(普通任务已经被废弃掉了)
+--    	1、普通任务  可能会重复出现 （废弃）
+-- 		神秘任务 （废弃）
+-- 		打卡 （废弃）
+-- 		趁热打铁连续答对3-8词 （废弃）
+-- 		分享 （废弃）
+-- 		完成一次总结BOSS （废弃）
 
 --		2、特殊任务
 --		完善信息
@@ -24,6 +25,11 @@
 -- 		解锁数据1 解锁数据2 解锁数据4
 --		解锁VIP
 
+-- 		3、每日任务
+--		每天3次,从已经通关的关卡中选出3个(可重复),限定条件有如下3种情况
+--			1、时间限定 在x秒内通关unit(2)关卡,时间为本关单词的长度*1.2
+--			2、不使用提示通关过关卡
+--			3、不限定条件  通关就行
 
 local MissionManager = class("MissionManager")
 
@@ -33,7 +39,6 @@ local DataMission    = require("model.user.DataMission")
 function MissionManager:ctor()
 	self.taskNum = 6 		--随机任务数量
 	self.missionData = nil  --任务数据
-
 end
 
 --获取当前的任务列表 --View层调用
@@ -60,7 +65,12 @@ function MissionManager:getMissionList()
 	loginTask[5] = loginTaskData[1]				--任务游标
 	--获取指定任务的状态
 	local randomTask = self:getCurRandomTaskData()
-	return {loginTask,randomTask}
+	if status == "1" then
+		return {loginTask}
+	else
+		return {randomTask}
+	end
+	-- return {loginTask,randomTask}
 end
 
 -- 更新任务状态------------------------------------------------------------------外部调用-----------更新任务状态---
@@ -73,23 +83,57 @@ function MissionManager:updateMission(missionId,missionsData,addData,callBack)
 	if addData == nil then
 		addData = true
 	end
-  
-	print("更新任务:"..missionId.." 条件:"..missionsData.." 类型:"..tostring(addData))
+	-- print(type(missionsData))
+  	if type(missionsData) == "number" then
+		print("更新任务:"..missionId.." 条件:"..missionsData.." 类型:"..tostring(addData))
+	else
+		print("更新任务:"..missionId.." 条件:"..missionsData[1].." "..missionsData[2].." 类型:"..tostring(addData))
+	end
 
 	local tb = self:strToTable(self.missionData.taskList)
 	local re = false
 	local hit = false --命中 更新的任务在任务列表中存在,需要同步任务数据,如果不存在 则无需同步
 	for k,v in pairs(tb) do
 		if v[1] == missionId then
-			hit = true
-			if addData then
-				v[3] = tostring(tonumber(v[3]) + missionsData) --默认条件+1
+			if #v == 5 then --非关卡任务
+				hit = true
+				if addData then
+					v[3] = tostring(tonumber(v[3]) + missionsData) --默认条件+1
+				else
+					v[3] = tostring(missionsData) --当前完成度  直接赋值
+				end
+				if v[2] == "0" then --未完成
+					if v[3] >= v[4] then --如果当前任务条件和 任务总条件匹配,则标记为已完成
+						v[2] = "1" --标记为已完成 未领取
+						re = true
+					end
+				end
 			else
-				v[3] = tostring(missionsData) --当前完成度  直接赋值
-			end
-			if v[3] >= v[4] then --如果当前任务条件和 任务总条件匹配,则标记为已完成
-				v[2] = "1" --标记为已完成 未领取
-				re = true
+				--关卡任务
+				--local bookKey = string.gsub(missionsData.bookKey,"_","#") 
+				--local bookKey = string.gsub(s_CURRENT_USER.bookKey,"_","#") 
+				--local unitID  = missionsData.unitID
+				--local costTime = missionData.costTime
+				if missionId == self.missionData.curTaskId then
+					local bookKey = string.gsub(s_CURRENT_USER.bookKey,"_","#") 
+					local unitID  = missionsData[2]
+					local costTime = missionsData[3]
+					if v[6] == bookKey and v[7] == tostring(unitID) then
+						if missionId == "4-1" then
+							if tonumber(v[8]) >= costTime then
+								hit = true
+								v[3] = "1" --条件满足
+								v[2] = "1" --状态改为未领取
+								re = true	
+							end
+						else
+							hit = true
+							v[3] = "1" --条件满足
+							v[2] = "1" --状态改为未领取
+							re = true
+						end
+					end
+				end
 			end
 		end
 	end
@@ -177,7 +221,6 @@ function MissionManager:completeMission(taskId,index,callBack)
 			end
 			--特殊任务 要保存进度 确保不会重复出现
 			if onceTaskComplete then
-				-- local comTable = self:strToTable(self.missionData.taskCompleteList)
 				local comTable = string.split(self.missionData.taskCompleteList,"|")
 				comTable[#comTable + 1] = taskId
 				local restr = ""
@@ -207,8 +250,6 @@ end
 function MissionManager:setCanCompleteCallBack(canCompleteCallBack)
 	self.canCompleteCallBack = canCompleteCallBack   --宝箱回调
 end
-
-
 
 --------------------------------------------------------------------------------------------------------------------
 --根据ID 获取指定任务的配置
@@ -251,6 +292,7 @@ function MissionManager:generalTasks()
 		-- ts_task 和 js_task 是任务生成的后备列表
 		local ts_task = {} 		--特殊任务  配置  MissionConfig.randomMission 的项,例如 {["mission_id"] = "2-1",["type"] = 2,["condition"]= {1},["bean"]=0}, --完善信息
 		local js_task = {} 		--解锁任务  配置
+		local gk_task = {}      --每日关卡  配置
 		--临时变量
 		local id      = nil  	--任务ID
 		local m_type  = nil 	--任务类型
@@ -259,11 +301,13 @@ function MissionManager:generalTasks()
 			id = v.mission_id
 			m_type = string.sub(id,1,1)
 			if m_type == "1" then
-				result[#result + 1] = v --普通任务 直接入选
+				result[#result + 1] = v --普通任务 直接入选(已废弃)
 			elseif m_type == "2" then
 				ts_task[#ts_task + 1] = v
 			elseif m_type == "3" then
 				js_task[#js_task + 1] = v
+			elseif m_type == "4" then
+				gk_task[#gk_task + 1] = v
 			end
 		end
 		--获取table长度--------------------------------------
@@ -324,6 +368,7 @@ function MissionManager:generalTasks()
 		local tlen = 6 - #result  --可以抽取的任务数量
 		local hasLockMission = false  --已经有解锁任务了  解锁任务只能领取一个
 		
+		--[[
 		for i=1,tlen do
 			local temp_type = math.random(100) --先random 决定是特殊任务还是解锁任务
 			if temp_type < 50 or hasLockMission then --特殊任务
@@ -346,17 +391,87 @@ function MissionManager:generalTasks()
 				end
 			end
 		end
-		--TEST 
+		]]
+
+		-- TODO 每日关卡任务
+		-- 首先要查询到 当前书籍的完成情况
+		-- gk_task
+		local bossList = s_LocalDatabaseManager.getAllUnitInfo() --把关卡的数据查询出来
+
+		local canFightBoss = {} --可以打的关卡
+		for bosskey,boss in pairs(bossList) do
+			if boss.unitState ~= 0 then
+				local costTime = 0--#bo.wrongWordList * 1.2
+				local chars = 0 --字母数量
+				for k,v in pairs(boss.wrongWordList) do
+					chars = chars + #v
+				end
+				costTime = chars * 1.2
+				canFightBoss[#canFightBoss + 1] = {unitID = boss.unitID,costTime = costTime}
+			end
+		end
+		if #canFightBoss == 0 then
+			local bo = bossList[1]
+			if bo then
+				local costTime = 0--#bo.wrongWordList * 1.2
+				local chars = 0 --字母数量
+				for k,v in pairs(bo.wrongWordList) do
+					chars = chars + #v
+				end
+				costTime = chars * 1.2
+				canFightBoss[#canFightBoss + 1] = {unitID = bo.unitID,costTime = costTime}
+			else
+				canFightBoss[#canFightBoss + 1] = {unitID = 1,costTime = 20}
+			end
+		end
+		--每日关卡任务配置
+		for key,gktask in pairs(gk_task) do
+			result[#result + 1] = gktask
+		end
+		--最多1个特殊任务
+		local ts_index = math.random(tnum(ts_task))
+		if ts_index > 0 then
+			result[#result + 1] = tget(ts_task,ts_index)
+		end
+		--最多1个解锁任务
+		local minprice = 0
+		local js_index = 0
+		for k,v in pairs(js_task) do
+			if v.cost < minprice or minprice == 0 then
+				minprice = v.cost
+				js_index = k
+			end
+		end
+		if js_index > 0 then
+			result[#result + 1] = tget(js_task,js_index)
+		end
+
 		--result[#result + 1] = {["mission_id"] = "2-2",["type"] = 2,["condition"]= {1,3,5,10,20},["bean"]=0}
 		--result 生成的任务列表
-		local mission_str 			= "" --- 1-1_0_0_1_1|2-2_0_0_1_1|3-1_1_2_2_1 任务ID_任务状态_任务条件_任务总条件_任务游标
+		local mission_str 			= "" -- 1-1_0_0_1_1|2-2_0_0_1_1|3-1_1_2_2_1 任务ID_任务状态_任务条件_任务总条件_任务游标
 		local temp_mission_str  	= ""
 		local condition 			= "" 
 		for k,v in pairs(result) do
 			temp_mission_str = v.mission_id
 			condition = v.condition
-			if #condition == 1 then
+			if #condition == 1 and v.type ~= 4 then  --但条件 但是非每日关卡任务
 				temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1"
+			elseif v.type == 4 then
+				local bookKey = s_CURRENT_USER.bookKey
+				if bookKey ~= "" then
+					-- 生成每日关卡数据 需要在获取任务列表的接口 特殊处理一下,如果没有每日关卡任务  则添加上每日关卡任务
+					-- bookKey 的下划线要替换掉,替换成#号,否则会冲突
+					local newbookKey = string.gsub(bookKey,"_","#")
+					local unit = canFightBoss[math.random(#canFightBoss)]
+					-- local unitId = 随机一个unitid
+					if temp_mission_str == "4-1" then
+						temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1_"..newbookKey.."_"..unit.unitID.."_"..unit.costTime
+					else
+						temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1_"..newbookKey.."_"..unit.unitID
+					end
+				else
+					temp_mission_str = ""
+				end
 			else
 				local hit = false --命中
 				for kk,vv in pairs(temp_series_missions) do --系列任务的列表
@@ -364,7 +479,7 @@ function MissionManager:generalTasks()
 						hit = true
 						--计算正确的游标
 						--任务状态 如果是已领取,则把游标定位到下一个系列任务
-						--TODO 如果是已完成，未领取状态，是不是要优先加入任务列表？？？TODO
+						--如果是已完成，未领取状态，是不是要优先加入任务列表
 						-- vv[5] 任务游标 -- vv[2] 任务状态 0未完成  1完成  2已领取
 						if vv[2] == "0" and vv[2] == "1" then--游标不变
 							temp_mission_str = temp_mission_str.."_0_0_"..condition[vv[4]].."_"..vv[5] --_0_0_ 是状态_当前完成度
@@ -557,30 +672,33 @@ end
 
 --更新随机任务的ID
 function MissionManager:updateRandomMissionId()
+
 	local curTaskId = self.missionData.curTaskId --完成某个随机任务、然后更新
 	local taskList  = self:strToTable(self.missionData.taskList)
 	local undoTask = {} --未完成的任务
-	local needRecalc = true --是否需要重新计算 当前任务ID
-	
+	-- local needRecalc = true --是否需要重新计算 当前任务ID
+	 
 	for k,v in pairs(taskList) do
-		if v[2] == "0" then
+		if v[2] ~= "2" then --任务状态 为未完成
 			undoTask[#undoTask + 1] = v
-		end
-		--如果当前激活的任务 如果是已完成 未领取的情况,不会刷新任务
-		if curTaskId == v[1] and (v[2] == "1") then
-			needRecalc = false
 			break
 		end
+		--如果当前激活的任务 如果是已完成 未领取的情况,不会刷新任务
+		-- if curTaskId == v[1] and (v[2] == "1") then
+		-- 	needRecalc = false --
+		-- 	break
+		-- end
 	end
-	if not needRecalc then
-		return 
-	end
+	-- if not needRecalc then
+	-- 	return 
+	-- end
 	if #undoTask == 0 then
 		self.missionData.curTaskId = "" --任务都做完了
 		return
 	end
 	--重新指定激活任务的ID
-	local randomTaskId = undoTask[math.random(#undoTask)][1]
+	local randomTaskId = undoTask[1][1]
+
 	self.missionData.curTaskId = randomTaskId
 	print("重新生成激活任务结束："..self.missionData.curTaskId)
 end
@@ -589,6 +707,106 @@ function MissionManager:getCurRandomTaskData()
 	print("self.missionData.curTaskId:"..self.missionData.curTaskId)
 	local curTaskId = self.missionData.curTaskId --完成某个随机任务、然后更新
 	local taskList  = self:strToTable(self.missionData.taskList)
+	--验证是否有每日关卡任务
+	local hasGK = false --是否有每日关卡任务
+	local bookKey = s_CURRENT_USER.bookKey
+	for taskkey,gktask in pairs(taskList) do
+		if #gktask > 5 then
+			hasGK = true
+			break
+		end
+	end
+
+	local taskresult_str = ""
+	if not hasGK and bookKey ~= "" then
+		--生成每日关卡任务
+		local bossList = s_LocalDatabaseManager.getAllUnitInfo() --把关卡的数据查询出来
+
+		local result = {} 	 --生成结果
+		local tasksConfig =  MissionConfig.randomMission
+			
+		local gk_task = {}      --每日关卡  配置
+		--临时变量
+		local id      = nil  	--任务ID
+		local m_type  = nil 	--任务类型
+		--分类任务
+		for _,v in pairs(tasksConfig) do
+			id = v.mission_id
+			m_type = string.sub(id,1,1)
+			if m_type == "4" then
+				gk_task[#gk_task + 1] = v
+			end
+		end
+
+		local canFightBoss = {} --可以打的关卡
+		for bosskey,boss in pairs(bossList) do
+			if boss.unitState ~= 0 then
+				local costTime = 0--#bo.wrongWordList * 1.2
+				local chars = 0 --字母数量
+				for k,v in pairs(boss.wrongWordList) do
+					chars = chars + #v
+				end
+				costTime = chars * 1.2
+				canFightBoss[#canFightBoss + 1] = {unitID = boss.unitID,costTime = costTime}
+				-- canFightBoss[#canFightBoss + 1] = boss.unitID
+			end
+		end
+		if #canFightBoss == 0 then
+			local bo = bossList[1]
+			if bo then
+				-- local costTime = #bo.wrongWordList * 1.2
+				local costTime = 0--#bo.wrongWordList * 1.2
+				local chars = 0 --字母数量
+				for k,v in pairs(bo.wrongWordList) do
+					chars = chars + #v
+				end
+				costTime = chars * 1.2
+				canFightBoss[#canFightBoss + 1] = {unitID = bo.unitID,costTime = costTime}
+			else
+				canFightBoss[#canFightBoss + 1] = {unitID = 1,costTime = 20}
+			end
+		end
+		--每日关卡任务配置
+		for key,gktask in pairs(gk_task) do
+			result[#result + 1] = gktask
+		end
+
+		local temp_mission_str = ""
+    	local condition = ""
+		for k,v in pairs(result) do
+			temp_mission_str = v.mission_id
+       		condition = v.condition
+			if bookKey ~= "" then
+				-- 生成每日关卡数据 需要在获取任务列表的接口 特殊处理一下,如果没有每日关卡任务  则添加上每日关卡任务
+				-- bookKey 的下划线要替换掉,替换成#号,否则会冲突
+				local newbookKey = string.gsub(bookKey,"_","#")
+				local unit = canFightBoss[math.random(#canFightBoss)]
+				-- local unitId = 随机一个unitid
+				if temp_mission_str == "4-1" then
+					temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1_"..newbookKey.."_"..unit.unitID.."_"..unit.costTime
+				else
+					temp_mission_str = temp_mission_str.."_0_0_"..condition[1].."_1_"..newbookKey.."_"..unit.unitID
+				end
+			end
+      
+			if temp_mission_str ~= "" then
+			    if taskresult_str == "" then
+			      taskresult_str =  temp_mission_str
+			    else
+			      taskresult_str = taskresult_str.."|"..temp_mission_str
+			    end
+			end
+		end
+	end
+
+	if taskresult_str ~= "" then
+		self.missionData.taskList = taskresult_str.."|"..self.missionData.taskList
+		taskList = self:strToTable(self.missionData.taskList)
+		self:updateRandomMissionId()
+		self:saveTaskToLocal()
+		s_O2OController.syncMission() --同步数据 到服务器
+	end
+
 	for k,v in pairs(taskList) do
 		if v[1] == curTaskId then
 			return v --返回要查询的任务数据

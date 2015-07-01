@@ -583,7 +583,11 @@ function HomeLayer:showFriendView()
         --TODO fix self
         item_popup.update = handler(self,function(...)
             if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                self:updateSettingLayer()
+                if not tolua.isnull(self) then
+                    if self.updateSettingLayer ~= nil then
+                        self:updateSettingLayer()
+                    end
+                end
             end
         end)
     end
@@ -636,10 +640,11 @@ function HomeLayer:onBtnSettingTouch(sender,eventType)
             self.offlineTipHome.setFalse()
             self.offlineTipFriend.setFalse()
         end
-        local SettingLayer = require("view.home.SettingLayer")
-        local settinglayer = SettingLayer.new()
-        --SetLayerRender:updateView()
-        s_SCENE:popup(settinglayer)
+
+        self:showSettingView()
+        -- local SettingLayer = require("view.home.SettingLayer")
+        -- local settinglayer = SettingLayer.new()
+        -- s_SCENE:popup(settinglayer)
 
         -- if self.viewIndex == 1 then
             -- s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -664,6 +669,12 @@ function HomeLayer:onBtnSettingTouch(sender,eventType)
             -- self.setting_back:runAction(cc.Sequence:create(action2, action3))
         -- end 
     end
+end
+
+function HomeLayer:showSettingView()
+    local SettingLayer = require("view.home.SettingLayer")
+    local settinglayer = SettingLayer.new()
+    s_SCENE:popup(settinglayer)
 end
 
 --切换到好友界面或者商店界面

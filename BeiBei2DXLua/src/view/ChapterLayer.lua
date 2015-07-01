@@ -586,9 +586,11 @@ end
 --关闭宝箱
 function ChapterLayer:callBox()
     --改变按钮点击状态
-    self.boxButton:setBright(true)
-    self:updataBoxState()
-    self.boxButton:setTouchEnabled(true)
+    if not tolua.isnull(self.boxButton) then
+        self.boxButton:setBright(true)
+        self:updataBoxState()
+        self.boxButton:setTouchEnabled(true)
+    end
 end
 
 --更新贝贝豆数量 在任务界面TaskView里回调

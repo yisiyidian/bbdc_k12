@@ -159,6 +159,8 @@ function NewSummaryBossLayer:initStageInfo(unit)
     self.tutorialStep = 0
     if s_CURRENT_USER.needBossSlideTutorial == 1 then
         self.tutorialStep = 2
+    else
+        self.newguid = true
     end
 end
 
@@ -486,6 +488,7 @@ function NewSummaryBossLayer:addChangeBtn()
     local function changeWord(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
             playWordSound(self.wordList[1][4])
+            self.ishited = true
             if self.hintChangeBtn ~= nil and self.hintChangeBtn.hintOver ~= nil then
                 self.hintChangeBtn.hintOver()
                 self.hintChangeBtn = nil
