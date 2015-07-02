@@ -79,15 +79,15 @@ function BattleManager:battleBegan()
 	self:register()
 	self:initInfo()
 	self.gameBegan = true
-	local function update(delta)
-		if self.gameBegan and not self.gameEnded and not self.gameEnded then
-			self.currentTime = self.currentTime + delta
-			if self.currentTime > self.totalTime then
-				self:battleEnded()
-			end
-		end
-	end
-	self:scheduleUpdateWithPriorityLua(update,0)
+	-- local function update(delta)
+	-- 	if self.gameBegan and not self.gameEnded and not self.gameEnded then
+	-- 		self.currentTime = self.currentTime + delta
+	-- 		if self.currentTime > self.totalTime then
+	-- 			self:battleEnded()
+	-- 		end
+	-- 	end
+	-- end
+	-- self:scheduleUpdateWithPriorityLua(update,0)
 end
 --战斗结束
 function BattleManager:battleEnded()

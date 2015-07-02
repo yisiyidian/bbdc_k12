@@ -9,13 +9,22 @@ PathController.length = 0
 
 function PathController:getPath(length)
 	PathController.length = length
-	math.randomseed(os.time)
+	math.randomseed(os.time())
 	local randomNum = math.random(1,1000)
 	PathController.path = PathConfig.data[randomNum % #PathConfig.data + 1]
-
+		print_lua_table(PathController.path)
+		print("cutPath")
 	PathController:cutPath()
+		print_lua_table(PathController.path)
+				print("toCoordinate")
 	PathController:toCoordinate()
+		print_lua_table(PathController.path)
+						print("rotate")
 	PathController:rotate()
+		print_lua_table(PathController.path)
+						print("symmetry")
+	PathController:symmetry()
+		print_lua_table(PathController.path)
 	return PathController.path
 end
 
@@ -48,6 +57,9 @@ function PathController:rotate()
 		PathController.path[k].y = PathController.path[k].y - 3
 	end
 	local randomNum = math.random(1,1000)%4
+	print("~~~~~~~~~~~~~~~~~~~~~")
+	print((randomNum + 1) * 90)
+
 	for k,v in pairs(PathController.path) do
 		if randomNum == 0 then
 			PathController.path[k].x = PathController.path[k].y
