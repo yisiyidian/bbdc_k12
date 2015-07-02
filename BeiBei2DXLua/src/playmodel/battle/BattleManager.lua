@@ -31,6 +31,46 @@ function BattleManager:initInfo()
 	self.currentBossIndex = 0
 	self.currentBoss = nil
 end
+-- --清空state
+-- function BattleManager:clearState()
+-- 	--游戏是否暂停
+-- 	self.gamePaused = false
+-- 	--游戏是否开始
+-- 	self.gameBegan = false
+-- 	--游戏是否结束
+-- 	self.gameEnded = false
+-- 	--总步数
+-- 	self.totalStep = 0
+-- 	--当前步数
+-- 	self.currentStep = 0
+-- 	--总时间
+-- 	self.totalTime = 0
+-- 	--当前时间
+-- 	self.currentTime = 0
+-- end
+--初始化state
+function BattleManager:initState(time,step,collect,wordList)
+	--游戏是否暂停
+	self.gamePaused = false
+	--游戏是否开始
+	self.gameBegan = false
+	--游戏是否结束
+	self.gameEnded = false
+	--限制步数
+	self.totalStep = step
+	--当前步数
+	self.currentStep = 0
+	--限制时间
+	self.totalTime = time
+	--当前时间
+	self.currentTime = 0
+	--单词列表
+	self.wordList = wordList
+	--任务目标的收集数
+	self.totalCollect = collect
+	--当前收集数
+	self.currentCollect = 0
+end
 --进入战斗场景
 function BattleManager:enterBattleView()
 	local battleView = require("playmodel.battle.BattleView").new()
@@ -40,11 +80,38 @@ end
 function BattleManager:battleBegan()
 	self:register()
 	self:initInfo()
+	self.gameBegan = true
+	local function update(delta)
+		if self.gameBegan and not self.gameEnded and not self.gameEnded then
+			self.currentTime = self.currentTime + delta
+			if self.currentTime > self.totalTime then
+				self:battleEnded()
+			end
+		end
+	end
+	self:scheduleUpdateWithPriorityLua(update,0)
 end
 --战斗结束
 function BattleManager:battleEnded()
 	self:unregister()
 	self:initInfo()
+	self.gameEnded = true
+	self:unscheduleUpdate()
+end
+--更新步数和收集数
+function BattleManager:addStepWithCollect(collect)
+	self.currentStep = self.currentStep + 1
+	if self.currentStep == self.totalStep then
+		self:battleEnded()
+	end
+	self.currentCollect = self.currentCollect + collect
+	if self.currentCollect == self.totalCollect then
+		if self.currentBossIndex == -1 then
+			self:battleEnded()
+		else
+			
+		end
+	end
 end
 --创建boss
 function BattleManager:createBoss(idList)
@@ -118,7 +185,11 @@ end
 function BattleManager:changeNextBoss()
 	-- body
 	if s_BattleManager.currentBossIndex == #self.bossList then
-		self:battleOver()
+		if self.currentCollect >= self.totalCollect then
+			self:battleEnded()
+		else 
+			self.currentBossIndex = -1
+		end
 		return
 	end
 	self.actionManager:changeBossAction(function()
