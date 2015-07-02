@@ -54,7 +54,6 @@ function BattleView:touchFunc()
 
     local function onTouchEnded(touch, event)
     	local list = {'3','4','2'}
-    	s_BattleManager:setPetCountToReleaseSkill(#list)
     	s_BattleManager:sendNotification(ATTACK,{id = list})
     end
 
