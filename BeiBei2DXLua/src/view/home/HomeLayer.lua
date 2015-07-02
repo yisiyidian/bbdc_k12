@@ -351,7 +351,7 @@ function HomeLayer:ctor()
         if math.floor(s_LocalDatabaseManager.isBuy() / math.pow(10,i-1)) == 1 then
             if i == 1 then
                 self:friendButtonFunc()
-            elseif i == 2 then
+            elseif i == 4 then
                 self.isDataShow = true 
                 self:showDataLayerByItem(3)
                 s_SCENE:removeAllPopups()
@@ -359,7 +359,7 @@ function HomeLayer:ctor()
                 self.isDataShow = true 
                 self:showDataLayerByItem(2)
                 s_SCENE:removeAllPopups()
-            elseif i == 4 then
+            elseif i == 2 then
                 self.isDataShow = true 
                 self:showDataLayerByItem(1)
                 s_SCENE:removeAllPopups()
