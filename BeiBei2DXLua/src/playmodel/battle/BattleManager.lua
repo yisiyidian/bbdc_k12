@@ -26,8 +26,6 @@ function BattleManager:initInfo()
 	self.attack = 0
 	self.bossList = {}
 	self.petList = {}
-	self.skillList = {}
-	self.skillCount = 0
 	self.currentBossIndex = 0
 	self.currentBoss = nil
 end
@@ -160,8 +158,6 @@ function BattleManager:realseSkillInList()
 end
 
 function BattleManager:releaseSkillEnded()
-	self.skillList = {}
-	self.skillCount = 0
 	if self.bossList[self.currentBossIndex].blood <= 0 then
 		self:changeNextBoss()
 	end
@@ -190,7 +186,7 @@ function BattleManager:changeNextBoss()
 	if s_BattleManager.currentBossIndex == #self.bossList then
 		if self.currentCollect >= self.totalCollect then
 			self:battleEnded()
-		else 
+		else  
 			self.currentBossIndex = -1
 		end
 		return
@@ -200,17 +196,6 @@ function BattleManager:changeNextBoss()
 		self.currentBoss = self.bossList[currentBossIndex]
 	end)
 	
-end
---将要发动技能的宠物加入列表，用于依次发动
-function BattleManager:addPetToSkillList(pet)
-	table.insert(self.skillList,pet)
-	if #self.skillList == self.skillCount then
-		self:realseSkillInList()
-	end
-end
-
-function BattleManager:setPetCountToReleaseSkill(count)
-	self.skillCount = count
 end
 
 return BattleManager

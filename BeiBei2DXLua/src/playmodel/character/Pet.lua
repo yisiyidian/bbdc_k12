@@ -16,7 +16,7 @@ function Pet:handleNotification(notify,data)
     if notify == ATTACK then
     	for k,v in pairs(data.id) do
     		if v == self.id then
-				s_BattleManager:addPetToSkillList(self)
+				self:releaseSkill()
 				break
 			end
 		end
