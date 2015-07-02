@@ -105,15 +105,15 @@ function PathController:symmetry()
 	for k,v in pairs(PathController.path) do
 		if randomNum == 0 then
 			PathController.path[k].x = PathController.path[k].y
-			PathController.path[k].y = -PathController.path[k].x 
+			PathController.path[k].y = PathController.path[k].x 
 		elseif randomNum == 1 then
-			PathController.path[k].x = -PathController.path[k].x
+			PathController.path[k].x = PathController.path[k].x
 			PathController.path[k].y = -PathController.path[k].y
 		elseif randomNum == 2 then
 			PathController.path[k].x = -PathController.path[k].y
-			PathController.path[k].y = PathController.path[k].x
+			PathController.path[k].y = -PathController.path[k].x
 		elseif randomNum == 3 then
-			PathController.path[k].x = PathController.path[k].x
+			PathController.path[k].x = -PathController.path[k].x
 			PathController.path[k].y = PathController.path[k].y
 		end
 	end
