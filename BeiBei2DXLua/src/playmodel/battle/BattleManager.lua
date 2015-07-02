@@ -143,6 +143,9 @@ function BattleManager:getTargetBySkillType(skillType)
 end
 --释放技能
 function BattleManager:realseSkillInList()
+	if #self.skillList == 0 then 
+		self:releaseSkillEnded()
+	end
 	for i = #self.skillList,1,-1 do
 		--self.skillList[i].action = self.actionManager:petActionToReleaseSkill()
 		self.skillList[i].cb = function ()
