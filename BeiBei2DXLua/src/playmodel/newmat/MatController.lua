@@ -6,7 +6,7 @@ local MatController = class("MatController",Observer)
 -- 位置序列，cc.p(1,1)
 MatController.arr = {}
 -- 字母序列
-MatController.word = {"a"}
+MatController.word = {"apple"}
 -- 当前是第几个词
 MatController.index = 1
 -- 总共几个词
@@ -138,7 +138,7 @@ function MatController:judgeFunc()
 	MatController.MatView:dropFunc()
 	-- 重置所有的序列
 	MatController.arr = {}
-	MatController.word = {"a"}
+	MatController.word = {"apple"}
 	MatController.index = 1
 	MatController.totalindex = 0
 	MatController.currentCoco = {}

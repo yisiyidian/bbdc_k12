@@ -1,5 +1,6 @@
 -- 矩阵
 local CocoView = require("playmodel.newmat.CocoView")
+local PathController = require("playmodel.newmat.PathController")
 local MatController = require("playmodel.newmat.MatController")
 local MatView = class("MatView",function ()
 	local layer = cc.Layer:create()
@@ -15,9 +16,9 @@ function MatView:ctor()
 	-- 每个砖块大小
 	self.coco = {}
 	-- 砖块容器
-	self.word = {}
+	self.word = {"apple"}
 	-- 当前关卡的词汇
-
+	self.path = {}
 	-- 初始化ui
 	self:initUI()
 
@@ -25,6 +26,7 @@ function MatView:ctor()
 	MatController:register()
 	-- 控制器和视图建立联系
 	MatController.MatView = self
+	MatController.word = {"apple"}
 
 	-- 初始化划词题目
 	for k,v in pairs(self.word) do
@@ -117,6 +119,16 @@ function MatView:resetUI()
 			-- 加入砖块
 		end
 	end
+
+	local length = string.len(MatController.word[1])
+	self.path = PathController:getPath(length)
+	for k,v in pairs(self.path) do
+		self.coco[self.path[k].x][self.path[k].y].letter = string.sub(MatController.word[1],k,k) 
+		self.coco[self.path[k].x][self.path[k].y]:resetView()
+		print_lua_table(self.path[k])
+		print(string.sub(MatController.word[1],k,k))
+	end
+	print(MatController.word[1])
 end
 
 function MatView:dropFunc()
