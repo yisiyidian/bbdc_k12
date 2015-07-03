@@ -111,7 +111,7 @@ function MatController:judgeFunc()
 		-- 已经加入的所有字母
 		temp = temp..MatController.currentCoco[k].letter
 		-- 保存颜色
-		attackList[MatController.currentCoco[k].color%5] = attackList[MatController.currentCoco[k].color%5] + 1
+		attackList[MatController.currentCoco[k].color+1] = attackList[MatController.currentCoco[k].color+1] + 1
 	end
 
 

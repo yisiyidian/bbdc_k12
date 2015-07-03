@@ -8,23 +8,27 @@ PathController.length = 0
 
 
 function PathController:getPath(length)
+	for i=1,#PathConfig.data do
+		print("检验资料"..i.."中")
+		PathController:checkError(PathConfig.data[i])
+	end
+	
 	PathController.length = length
 	math.randomseed(os.time())
 	local randomNum = math.random(1,1000)
 	PathController.path = PathConfig.data[randomNum % #PathConfig.data + 1]
-	-- print_lua_table(PathController.path)
-	-- print("cutPath")
+	print_lua_table(PathController.path)
+	print("cutPath")
 	PathController:cutPath()
-	-- print_lua_table(PathController.path)
-	-- print("toCoordinate")
+	print_lua_table(PathController.path)
+	print("toCoordinate")
 	PathController:toCoordinate()
-	-- print_lua_table(PathController.path)
-	-- print("rotate")
+	print_lua_table(PathController.path)
+	print("rotate")
 	PathController:rotate()
-	-- print_lua_table(PathController.path)
-	-- print("symmetry")
+	print_lua_table(PathController.path)
+	print("symmetry")
 	PathController:symmetry()
-	-- print_lua_table(PathController.path)
 	return PathController.path
 end
 
@@ -141,6 +145,55 @@ function PathController:symmetry()
 		temp[k].y = temp[k].y + 3
 	end
 	PathController.path = temp
+end
+
+function PathController:getPath2()
+	local halfLength = math.floor(PathController.length/2)
+	if halfLength == 0 then
+		return {}
+	end
+	local mat = {
+	{0,0,0,0,0,},
+	{0,0,0,0,0,},
+	{0,0,0,0,0,},
+	{0,0,0,0,0,},
+	{0,0,0,0,0,},
+	}
+
+	for i=1,#PathConfig.data do
+	 	local x = math.floor(PathConfig.data /10)
+	 	local y = math.floor(PathConfig.data %10)
+	 	mat[x][y] = 1
+	end 
+
+	print_lua_table(mat)
+end
+
+function PathController:checkError(data)
+	local k = 0
+	local mat = {
+	{0,0,0,0,0,},
+	{0,0,0,0,0,},
+	{0,0,0,0,0,},
+	{0,0,0,0,0,},
+	{0,0,0,0,0,},
+	}
+
+	for i=1,#data do
+	 	local x = math.floor(data[i] /10)
+	 	local y = math.floor(data[i] %10)
+	 	mat[x][y] = 1
+	end 
+
+	for i=1,5 do
+		for j=1,5 do
+			k = k + mat[i][j]
+		end
+	end
+
+	if k ~= 25 then
+		print("资料有误")
+	end
 end
 
 return PathController

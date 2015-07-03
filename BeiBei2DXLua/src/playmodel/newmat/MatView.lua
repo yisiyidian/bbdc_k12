@@ -111,7 +111,7 @@ function MatView:resetUI()
 			self.back:addChild(self.coco[i][j])
 			self.coco[i][j]:setPosition(cc.p(i * 120 -40,j * 120))	 
 			self.coco[i][j].letter = string.char(math.random(100,120))
-			self.coco[i][j].color = math.random(1,1000)
+			self.coco[i][j].color = math.random(1,1000)%5
 			self.coco[i][j]:resetView()
 			if j > 5 then
 				self.coco[i][j]:setVisible(false)
@@ -125,15 +125,7 @@ function MatView:resetUI()
 	for k,v in pairs(self.path) do
 		self.coco[self.path[k].x][self.path[k].y].letter = string.sub(MatController.word[1],k,k) 
 		self.coco[self.path[k].x][self.path[k].y]:resetView()
-		print_lua_table(self.path[k])
-		print(string.sub(MatController.word[1],k,k))
-	end
-	self.path = PathController:getPath(length)
-	for k,v in pairs(self.path) do
-		self.coco[self.path[k].x][self.path[k].y].letter = string.sub(MatController.word[1],k,k) 
-		self.coco[self.path[k].x][self.path[k].y]:resetView()
-		print_lua_table(self.path[k])
-		print(string.sub(MatController.word[1],k,k))
+		print(string.sub(MatController.word[1],k,k)..self.path[k].x..self.path[k].y)
 	end
 	print(MatController.word[1])
 end
