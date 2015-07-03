@@ -73,6 +73,7 @@ end
 function BattleManager:enterBattleView()
 	local battleView = require("playmodel.battle.BattleView").new()
 	s_SCENE:replaceGameLayer(battleView)
+	self:initState(100,20,10,{'apple','apple'})
 end
 --战斗开始
 function BattleManager:battleBegan()
