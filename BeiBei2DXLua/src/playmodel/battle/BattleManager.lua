@@ -181,15 +181,22 @@ end
 
 function BattleManager:changeNextBoss()
 	-- body
-	if s_BattleManager.currentBossIndex == #self.bossList then
+	if self.currentBossIndex == -1 then
 		if self.currentCollect >= self.totalCollect then
 			self:battleEnded()
-		else  
-			self.currentBossIndex = -1
 		end
 		return
 	end
 	if self.bossList[self.currentBossIndex].blood <= 0 then
+		if s_BattleManager.currentBossIndex == #self.bossList then
+			if self.currentCollect >= self.totalCollect then
+				self:battleEnded()
+			else  
+				self.currentBossIndex = -1
+			end
+			return
+		end
+	
 		self.actionManager:changeBossAction(function()
 			s_BattleManager.currentBossIndex = s_BattleManager.currentBossIndex + 1
 			self.currentBoss = self.bossList[currentBossIndex]
