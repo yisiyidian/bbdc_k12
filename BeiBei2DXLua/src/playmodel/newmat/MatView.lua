@@ -128,6 +128,13 @@ function MatView:resetUI()
 		print_lua_table(self.path[k])
 		print(string.sub(MatController.word[1],k,k))
 	end
+	self.path = PathController:getPath(length)
+	for k,v in pairs(self.path) do
+		self.coco[self.path[k].x][self.path[k].y].letter = string.sub(MatController.word[1],k,k) 
+		self.coco[self.path[k].x][self.path[k].y]:resetView()
+		print_lua_table(self.path[k])
+		print(string.sub(MatController.word[1],k,k))
+	end
 	print(MatController.word[1])
 end
 

@@ -106,12 +106,12 @@ function MatController:judgeFunc()
 		return 
 	end
 	local temp = ""	
-	local attackList = {}
+	local attackList = {0,0,0,0,0}
 	for k,v in pairs(MatController.currentCoco) do
 		-- 已经加入的所有字母
 		temp = temp..MatController.currentCoco[k].letter
 		-- 保存颜色
-		table.insert(attackList,MatController.currentCoco[k].color%5)
+		attackList[MatController.currentCoco[k].color%5] = attackList[MatController.currentCoco[k].color%5] + 1
 	end
 
 
