@@ -158,9 +158,7 @@ function BattleManager:realseSkillInList()
 end
 
 function BattleManager:releaseSkillEnded()
-	if self.bossList[self.currentBossIndex].blood <= 0 then
-		self:changeNextBoss()
-	end
+	self:changeNextBoss()
 end
 
 function BattleManager:releaseSkill(skill)
@@ -191,10 +189,12 @@ function BattleManager:changeNextBoss()
 		end
 		return
 	end
-	self.actionManager:changeBossAction(function()
-		s_BattleManager.currentBossIndex = s_BattleManager.currentBossIndex + 1
-		self.currentBoss = self.bossList[currentBossIndex]
-	end)
+	if self.bossList[self.currentBossIndex].blood <= 0 then
+		self.actionManager:changeBossAction(function()
+			s_BattleManager.currentBossIndex = s_BattleManager.currentBossIndex + 1
+			self.currentBoss = self.bossList[currentBossIndex]
+		end)
+	end
 	
 end
 

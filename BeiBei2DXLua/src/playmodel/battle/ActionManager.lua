@@ -22,7 +22,11 @@ end
 function ActionManager:changeBossAction(callback)
 	--当前boss移出，下一个boss进入
 	s_BattleManager.bossList[s_BattleManager.currentBossIndex].ui:runAction(cc.Sequence:create(cc.MoveBy:create(0.5,cc.p(0,400)),cc.CallFunc:create(function (  )
-		s_BattleManager.bossList[s_BattleManager.currentBossIndex + 1].ui:runAction(cc.Sequence:create(cc.MoveBy:create(0.5,cc.p(0,-400)),cc.CallFunc:create(callback)))
+		if s_BattleManager.currentBossIndex < #s_BattleManager.bossList then
+			s_BattleManager.bossList[s_BattleManager.currentBossIndex + 1].ui:runAction(cc.Sequence:create(cc.MoveBy:create(0.5,cc.p(0,-400)),cc.CallFunc:create(callback)))
+		else
+			
+		end
 	end)))
 																	  	
 end

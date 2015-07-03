@@ -1,1 +1,2 @@
 ATTACK = 'ATTACK'
+RIGHT = 'right'

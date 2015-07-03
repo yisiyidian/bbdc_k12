@@ -6,15 +6,18 @@ local Boss = class("Boss", Pet)
 
 function Boss:listNotify()
     return {
-    	ATTACK
+    	ATTACK,
+    	RIGHT
     }
 end
 
 function Boss:handleNotification(notify,data)
 	-- print(2)
  --    --data {xxx=xxx,xxxdd=xxxdd}
-    if notify == ATTACK and #data.id > 0 then
+    if notify == RIGHT then
+    	if self.ui:getPositionY() < s_DESIGN_HEIGHT then
     	self:attackEnded()
+    	end
     end
 
 end

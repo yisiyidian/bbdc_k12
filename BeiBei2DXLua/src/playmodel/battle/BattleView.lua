@@ -54,21 +54,21 @@ function BattleView:initUI()
 end
 
 function BattleView:touchFunc()
-	local function onTouchBegan(touch, event)
-		print('onTouchBegan')
-        return true
-    end
+	-- local function onTouchBegan(touch, event)
+	-- 	print('onTouchBegan')
+ --        return true
+ --    end
 
-    local function onTouchEnded(touch, event)
-    	local list = {'3','4','2'}
-    	s_BattleManager:sendNotification(ATTACK,{id = list})
-    end
+ --    local function onTouchEnded(touch, event)
+ --    	-- local list = {'3','4','2'}
+ --    	-- s_BattleManager:sendNotification(ATTACK,{id = list})
+ --    end
 
-    local listener = cc.EventListenerTouchOneByOne:create()
-    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
-    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
-    local eventDispatcher = self:getEventDispatcher()
-    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
+ --    local listener = cc.EventListenerTouchOneByOne:create()
+ --    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+ --    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+ --    local eventDispatcher = self:getEventDispatcher()
+ --    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
 end
 
 return BattleView

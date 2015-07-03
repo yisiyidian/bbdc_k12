@@ -8,17 +8,15 @@ local Pet = class("Pet", Observer)
 
 function Pet:listNotify()
     return {
-        ATTACK
+        ATTACK,
+        RIGHT
     }
 end
 
 function Pet:handleNotification(notify,data)
-    if notify == ATTACK then
-    	for k,v in pairs(data.id) do
-    		if v == self.id then
-				self:releaseSkill()
-				break
-			end
+    if notify == RIGHT then
+		if data[self.colorIndex] > 0 then
+			self:releaseSkill()
 		end
     else
 
@@ -29,6 +27,7 @@ function Pet:ctor(id)
 	--self:register()
 	self.id = id
 	self.config = CharacterConfig[id]
+	self.colorIndex = self.config.colorIndex
 	self.skillID = self.config.skillID
 	self.blood = self.config.blood
 	self.buff = 1.0
