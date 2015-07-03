@@ -1,6 +1,7 @@
 -- 矩阵
 local CocoView = require("playmodel.newmat.CocoView")
 local PathController = require("playmodel.newmat.PathController")
+local AlternatePathController = require("playmodel.newmat.AlternatePathController")
 local MatController = require("playmodel.newmat.MatController")
 local MatView = class("MatView",function ()
 	local layer = cc.Layer:create()
@@ -19,6 +20,7 @@ function MatView:ctor()
 	self.word = {"apple"}
 	-- 当前关卡的词汇
 	self.path = {}
+	self.path2 = {}
 	-- 初始化ui
 	self:initUI()
 
@@ -121,13 +123,32 @@ function MatView:resetUI()
 	end
 
 	local length = string.len(MatController.word[1])
+	math.randomseed(os.time())
+	local random = math.random(1,2)
 	self.path = PathController:getPath(length)
+	local temp = {}
+	if random == 2 then
+		for k,v in pairs(self.path) do
+		 	local tempP = cc.p(0,0)
+		 	tempP.x = self.path[#self.path - k + 1].x
+		 	tempP.y = self.path[#self.path - k + 1].y
+		 	temp[#temp +1] = tempP
+		 end 
+		self.path = temp
+	end
+
 	for k,v in pairs(self.path) do
 		self.coco[self.path[k].x][self.path[k].y].letter = string.sub(MatController.word[1],k,k) 
 		self.coco[self.path[k].x][self.path[k].y]:resetView()
 		print(string.sub(MatController.word[1],k,k)..self.path[k].x..self.path[k].y)
 	end
 	print(MatController.word[1])
+	self.path2 = AlternatePathController:getPath(self.path)
+	for k,v in pairs(self.path2) do
+		self.coco[self.path2[k].x][self.path2[k].y].letter = string.sub(MatController.word[1],k,k) 
+		self.coco[self.path2[k].x][self.path2[k].y]:resetView()
+		print(string.sub(MatController.word[1],k,k)..self.path2[k].x..self.path2[k].y)
+	end
 end
 
 function MatView:dropFunc()
