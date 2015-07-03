@@ -1,2033 +1,2033 @@
-1	trek	1_1	1
-1	bachelor	1_1	1
-1	locality	1_1	1
-2	eminent	2_1	1
-2	aircraft	2_1	1
-2	wretched	2_1	1
-2	agitation	2_1	1
-2	propriety	2_1	1
-2	exceed	2_1	1
-2	intellect	2_1	1
-2	flicker	2_1	1
-2	aggressive	2_1	1
-2	familiarity	2_1	1
-3	economical	3_1	1
-3	escalator	3_1	1
-3	muscular	3_1	1
-3	obsess	3_1	1
-3	courier	3_1	1
-3	farewell	3_1	1
-3	punctual	3_1	1
-3	export	3_1	1
-3	consult	3_1	1
-3	emotion	3_1	1
-4	expedition	4_1	1
-4	myriad	4_1	1
-4	ratio	4_1	1
-4	deprive	4_1	1
-4	privacy	4_1	1
-4	whatever	4_1	1
-4	disdain	4_1	1
-4	reproach	4_1	1
-4	activate	4_1	1
-4	overflow	4_1	1
-5	genial	5_1	1
-5	captive	5_1	1
-5	elevator	5_1	1
-5	acquisition	5_1	1
-5	alchemy	5_1	1
-5	ingenuous	5_1	1
-5	gender	5_1	1
-5	mentality	5_1	1
-5	subliminal	5_1	1
-5	glacier	5_1	1
-6	assorted	6_1	1
-6	linen	6_1	1
-6	ascribe	6_1	1
-6	federation	6_1	1
-6	deviance	6_1	1
-6	quote	6_1	1
-6	indemnity	6_1	1
-6	tide	6_1	1
-6	choke	6_1	1
-6	conserve	6_1	1
-7	exceptional	7_1	1
-7	catching	7_1	1
-7	womb	7_1	1
-7	spectacle	7_1	1
-7	elevate	7_1	1
-7	antecedent	7_1	1
-7	depletion	7_1	1
-7	adept	7_1	1
-7	aerial	7_1	1
-7	contention	7_1	1
-8	revenue	8_1	1
-8	intermediate	8_1	1
-8	disposable	8_1	1
-8	etiquette	8_1	1
-8	perplex	8_1	1
-8	topmost	8_1	1
-8	probe	8_1	1
-8	caution	8_1	1
-8	asterisk	8_1	1
-8	deviate	8_1	1
-9	percussion	9_1	1
-9	elusive	9_1	1
-9	candidate	9_1	1
-9	sketch	9_1	1
-9	raw	9_1	1
-9	mingle	9_1	1
-9	glitter	9_1	1
-9	outlet	9_1	1
-9	prescribe	9_1	1
-9	cosset	9_1	1
-10	towel	10_1	1
-10	variety	10_1	1
-10	alliance	10_1	1
-10	expend	10_1	1
-10	rave	10_1	1
-10	wholesome	10_1	1
-10	meteoric	10_1	1
-10	vegetarian	10_1	1
-10	seismic	10_1	1
-10	sequence	10_1	1
-11	brisk	11_1	1
-11	mischief	11_1	1
-11	fringe	11_1	1
-11	territory	11_1	1
-11	porpoise	11_1	1
-11	comprise	11_1	1
-11	scapegoat	11_1	1
-11	periphery	11_1	1
-11	harassment	11_1	1
-11	inhabitant	11_1	1
-12	intricate	12_1	1
-12	destine	12_1	1
-12	observatory	12_1	1
-12	commute	12_1	1
-12	infectious	12_1	1
-12	jagged	12_1	1
-12	piecemeal	12_1	1
-12	wrestle	12_1	1
-12	forecast	12_1	1
-12	commuter	12_1	1
-13	propagate	13_1	1
-13	solitary	13_1	1
-13	metabolism	13_1	1
-13	discard	13_1	1
-13	asylum	13_1	1
-13	controversial	13_1	1
-13	pinpoint	13_1	1
-13	freak	13_1	1
-13	tumble	13_1	1
-13	square	13_1	1
-14	mushroom	14_1	1
-14	slot	14_1	1
-14	fleeting	14_1	1
-14	bore	14_1	1
-14	journal	14_1	1
-14	rehearse	14_1	1
-14	perspective	14_1	1
-14	defer	14_1	1
-14	starve	14_1	1
-14	discern	14_1	1
-15	tally	15_1	1
-15	chamber	15_1	1
-15	pessimism	15_1	1
-15	metallic	15_1	1
-15	lagoon	15_1	1
-15	surrender	15_1	1
-15	fascinating	15_1	1
-15	boycott	15_1	1
-15	allowance	15_1	1
-15	clockwise	15_1	1
-16	prominent	16_1	1
-16	cohesion	16_1	1
-16	sphinx	16_1	1
-16	agreement	16_1	1
-16	untold	16_1	1
-16	incur	16_1	1
-16	obscure	16_1	1
-16	compensate	16_1	1
-16	trend	16_1	1
-16	reverent	16_1	1
-17	entry	17_1	1
-17	extravagant	17_1	1
-17	questionnaire	17_1	1
-17	tenacious	17_1	1
-17	restore	17_1	1
-17	solidarity	17_1	1
-17	sponge	17_1	1
-17	flourish	17_1	1
-17	scholarship	17_1	1
-17	pastry	17_1	1
-18	swear	18_1	1
-18	pageant	18_1	1
-18	incentive	18_1	1
-18	transit	18_1	1
-18	conscience	18_1	1
-18	herculean	18_1	1
-18	reserve	18_1	1
-18	aerosol	18_1	1
-18	granite	18_1	1
-18	neutral	18_1	1
-19	interval	19_1	1
-19	source	19_1	1
-19	publicity	19_1	1
-19	signpost	19_1	1
-19	impede	19_1	1
-19	barrier	19_1	1
-19	flabby	19_1	1
-19	commotion	19_1	1
-19	knob	19_1	1
-19	bizarre	19_1	1
-20	contaminate	20_1	1
-20	cuff	20_1	1
-20	gallery	20_1	1
-20	rigid	20_1	1
-20	herb	20_1	1
-20	liable	20_1	1
-20	skeleton	20_1	1
-20	subdue	20_1	1
-20	cunning	20_1	1
-20	haste	20_1	1
-21	taboo	21_1	1
-21	tract	21_1	1
-21	mercurial	21_1	1
-21	request	21_1	1
-21	salvage	21_1	1
-21	economic	21_1	1
-21	trivial	21_1	1
-21	noxious	21_1	1
-21	tick	21_1	1
-21	pier	21_1	1
-22	nickname	22_1	1
-22	varied	22_1	1
-22	literature	22_1	1
-22	quiver	22_1	1
-22	engage	22_1	1
-22	triple	22_1	1
-22	pinch	22_1	1
-22	deteriorate	22_1	1
-22	sham	22_1	1
-22	sore	22_1	1
-23	deduct	23_1	1
-23	durable	23_1	1
-23	subtract	23_1	1
-23	rouse	23_1	1
-23	declaration	23_1	1
-23	dignity	23_1	1
-23	axis	23_1	1
-23	decode	23_1	1
-23	benzene	23_1	1
-23	downtown	23_1	1
-24	deviation	24_1	1
-24	blunt	24_1	1
-24	commitment	24_1	1
-24	maximum	24_1	1
-24	numb	24_1	1
-24	specialize	24_1	1
-24	secular	24_1	1
-24	purchase	24_1	1
-24	maneuver	24_1	1
-24	undertake	24_1	1
-25	turbine	25_1	1
-25	whence	25_1	1
-25	cafeteria	25_1	1
-25	appropriate	25_1	1
-25	bonus	25_1	1
-25	adjacent	25_1	1
-25	potter	25_1	1
-25	amphibian	25_1	1
-25	engross	25_1	1
-25	intelligible	25_1	1
-26	temperament	26_1	1
-26	fragrance	26_1	1
-26	prophecy	26_1	1
-26	irrigation	26_1	1
-26	conversely	26_1	1
-26	elegant	26_1	1
-26	chief	26_1	1
-26	rough	26_1	1
-26	permit	26_1	1
-26	summon	26_1	1
-27	tuition	27_1	1
-27	acquaint	27_1	1
-27	realm	27_1	1
-27	microbe	27_1	1
-27	perverse	27_1	1
-27	accordance	27_1	1
-27	wrought	27_1	1
-27	content	27_1	1
-27	fastidious	27_1	1
-27	buckle	27_1	1
-28	hinder	28_1	1
-28	exclude	28_1	1
-28	contradiction	28_1	1
-28	salmon	28_1	1
-28	gravitation	28_1	1
-28	chunk	28_1	1
-28	average	28_1	1
-28	congested	28_1	1
-28	peak	28_1	1
-28	compass	28_1	1
-29	horizon	29_1	1
-29	suspect	29_1	1
-29	hail	29_1	1
-29	remittance	29_1	1
-29	outrageous	29_1	1
-29	textile	29_1	1
-29	cosmopolitan	29_1	1
-29	galaxy	29_1	1
-29	reclaim	29_1	1
-29	gimmick	29_1	1
-30	consent	30_1	1
-30	stuff	30_1	1
-30	ubiquitous	30_1	1
-30	morbid	30_1	1
-30	rear	30_1	1
-30	interior	30_1	1
-30	plunder	30_1	1
-30	utterly	30_1	1
-30	onus	30_1	1
-30	tenable	30_1	1
-31	privilege	31_1	1
-31	administrative	31_1	1
-31	inmate	31_1	1
-31	nomad	31_1	1
-31	madden	31_1	1
-31	distil	31_1	1
-31	reputable	31_1	1
-31	radar	31_1	1
-31	exile	31_1	1
-31	tamper	31_1	1
-32	solidify	32_1	1
-32	precise	32_1	1
-32	bounty	32_1	1
-32	slogan	32_1	1
-32	confluence	32_1	1
-32	radius	32_1	1
-32	brake	32_1	1
-32	tonic	32_1	1
-32	arithmetic	32_1	1
-32	vibration	32_1	1
-33	fellowship	33_1	1
-33	batter	33_1	1
-33	accounting	33_1	1
-33	bamboo	33_1	1
-33	deplete	33_1	1
-33	supersede	33_1	1
-33	moreover	33_1	1
-33	infertile	33_1	1
-33	abridge	33_1	1
-33	adverbial	33_1	1
-34	pester	34_1	1
-34	toad	34_1	1
-34	amaze	34_1	1
-34	elbow	34_1	1
-34	naive	34_1	1
-34	accomplishment	34_1	1
-34	petal	34_1	1
-34	tournament	34_1	1
-34	pathological	34_1	1
-34	lethal	34_1	1
-35	reef	35_1	1
-35	thereby	35_1	1
-35	magnetic	35_1	1
-35	ludicrous	35_1	1
-35	subtle	35_1	1
-35	explicit	35_1	1
-35	tuberculosis	35_1	1
-35	necessitate	35_1	1
-35	verify	35_1	1
-35	intonation	35_1	1
-36	mandate	36_1	1
-36	incongruous	36_1	1
-36	bumper	36_1	1
-36	cute	36_1	1
-36	random	36_1	1
-36	traction	36_1	1
-36	complex	36_1	1
-36	dreary	36_1	1
-36	verge	36_1	1
-36	prolific	36_1	1
-37	react	37_1	1
-37	utter	37_1	1
-37	ballet	37_1	1
-37	enthusiastic	37_1	1
-37	considerate	37_1	1
-37	slippery	37_1	1
-37	corresponding	37_1	1
-37	telling	37_1	1
-37	bursar	37_1	1
-37	intersection	37_1	1
-38	mucous	38_1	1
-38	naval	38_1	1
-38	parachute	38_1	1
-38	permeate	38_1	1
-38	aptitude	38_1	1
-38	subtitle	38_1	1
-38	reflect	38_1	1
-38	patio	38_1	1
-38	tutorial	38_1	1
-38	shear	38_1	1
-39	foremost	39_1	1
-39	inattention	39_1	1
-39	tough	39_1	1
-39	perspire	39_1	1
-39	studio	39_1	1
-39	knot	39_1	1
-39	badge	39_1	1
-39	luxury	39_1	1
-39	recommend	39_1	1
-39	frown	39_1	1
-40	badminton	40_1	1
-40	crack	40_1	1
-40	prostrate	40_1	1
-40	otherwise	40_1	1
-40	squirt	40_1	1
-40	chill	40_1	1
-40	mole	40_1	1
-40	exterminate	40_1	1
-40	complexion	40_1	1
-40	plaintive	40_1	1
-41	cabinet	41_1	1
-41	fiction	41_1	1
-41	aroma	41_1	1
-41	phenomenon	41_1	1
-41	deadly	41_1	1
-41	mercy	41_1	1
-41	skip	41_1	1
-41	neglect	41_1	1
-41	prey	41_1	1
-41	intermittent	41_1	1
-42	suspense	42_1	1
-42	venerable	42_1	1
-42	luxurious	42_1	1
-42	intensify	42_1	1
-42	thunder	42_1	1
-42	friction	42_1	1
-42	glimmer	42_1	1
-42	partake	42_1	1
-42	strenuous	42_1	1
-42	occasional	42_1	1
-43	considerable	43_1	1
-43	aid	43_1	1
-43	intervene	43_1	1
-43	compound	43_1	1
-43	ecology	43_1	1
-43	melodious	43_1	1
-43	outcry	43_1	1
-43	behalf	43_1	1
-43	loan	43_1	1
-43	bribe	43_1	1
-44	mighty	44_1	1
-44	mutual	44_1	1
-44	informative	44_1	1
-44	collision	44_1	1
-44	furrow	44_1	1
-44	inevitable	44_1	1
-44	ego	44_1	1
-44	errand	44_1	1
-44	tempo	44_1	1
-44	nuance	44_1	1
-45	nitrogen	45_1	1
-45	budget	45_1	1
-45	glutinous	45_1	1
-45	jellyfish	45_1	1
-45	detract	45_1	1
-45	metallurgy	45_1	1
-45	smother	45_1	1
-45	doom	45_1	1
-45	plantation	45_1	1
-45	constabulary	45_1	1
-46	payroll	46_1	1
-46	voluptuous	46_1	1
-46	tag	46_1	1
-46	layout	46_1	1
-46	chic	46_1	1
-46	quash	46_1	1
-46	trail	46_1	1
-46	deck	46_1	1
-46	concentric	46_1	1
-46	cultural	46_1	1
-47	obvious	47_1	1
-47	cell	47_1	1
-47	assured	47_1	1
-47	incidentally	47_1	1
-47	strip	47_1	1
-47	contest	47_1	1
-47	dub	47_1	1
-47	quest	47_1	1
-47	err	47_1	1
-47	layman	47_1	1
-48	revive	48_1	1
-48	equipment	48_1	1
-48	deliberate	48_1	1
-48	devise	48_1	1
-48	collaboration	48_1	1
-48	femur	48_1	1
-48	superb	48_1	1
-48	supplement	48_1	1
-48	appreciate	48_1	1
-48	margin	48_1	1
-49	crooked	49_1	1
-49	reign	49_1	1
-49	laborious	49_1	1
-49	voluntary	49_1	1
-49	ownership	49_1	1
-49	terrify	49_1	1
-49	rhetoric	49_1	1
-49	mythology	49_1	1
-49	swift	49_1	1
-49	chaos	49_1	1
-50	finicky	50_1	1
-50	paranoia	50_1	1
-50	furnish	50_1	1
-50	idle	50_1	1
-50	intimate	50_1	1
-50	wreathe	50_1	1
-50	carp	50_1	1
-50	diagnose	50_1	1
-50	explosive	50_1	1
-50	posthumous	50_1	1
-51	imprison	51_1	1
-51	escort	51_1	1
-51	drought	51_1	1
-51	prostitute	51_1	1
-51	dramatic	51_1	1
-51	oar	51_1	1
-51	temporary	51_1	1
-51	sole	51_1	1
-51	liquor	51_1	1
-51	fade	51_1	1
-52	attendance	52_1	1
-52	crust	52_1	1
-52	monopoly	52_1	1
-52	article	52_1	1
-52	grim	52_1	1
-52	outdated	52_1	1
-52	mansion	52_1	1
-52	dominate	52_1	1
-52	souvenir	52_1	1
-52	fathom	52_1	1
-53	affix	53_1	1
-53	precarious	53_1	1
-53	autonomous	53_1	1
-53	rendezvous	53_1	1
-53	hilarious	53_1	1
-53	immigrant	53_1	1
-53	dole	53_1	1
-53	downfall	53_1	1
-53	yearn	53_1	1
-53	numerate	53_1	1
-54	retort	54_1	1
-54	homogeneous	54_1	1
-54	alleviate	54_1	1
-54	overhear	54_1	1
-54	conceive	54_1	1
-54	solvent	54_1	1
-54	confirm	54_1	1
-54	cardinal	54_1	1
-54	pertain	54_1	1
-54	manifold	54_1	1
-55	engagement	55_1	1
-55	monotonous	55_1	1
-55	redeem	55_1	1
-55	fling	55_1	1
-55	harass	55_1	1
-55	missile	55_1	1
-55	lurk	55_1	1
-55	census	55_1	1
-55	magnificent	55_1	1
-55	defraud	55_1	1
-56	assert	56_1	1
-56	alluvial	56_1	1
-56	indefinite	56_1	1
-56	fickle	56_1	1
-56	perimeter	56_1	1
-56	scheme	56_1	1
-56	spatial	56_1	1
-56	pyrite	56_1	1
-56	notorious	56_1	1
-56	enterprise	56_1	1
-57	shutter	57_1	1
-57	sue	57_1	1
-57	metaphor	57_1	1
-57	detain	57_1	1
-57	crisp	57_1	1
-57	foible	57_1	1
-57	inertia	57_1	1
-57	essential	57_1	1
-57	ranking	57_1	1
-57	concerted	57_1	1
-58	prosperous	58_1	1
-58	scout	58_1	1
-58	languid	58_1	1
-58	disreputable	58_1	1
-58	messy	58_1	1
-58	potion	58_1	1
-58	weave	58_1	1
-58	excerpt	58_1	1
-58	slit	58_1	1
-58	legend	58_1	1
-59	chromosome	59_1	1
-59	slab	59_1	1
-59	congestion	59_1	1
-59	groove	59_1	1
-59	soothe	59_1	1
-59	gloss	59_1	1
-59	minority	59_1	1
-59	inherit	59_1	1
-59	devastating	59_1	1
-59	jail	59_1	1
-60	preoperative	60_1	1
-60	pry	60_1	1
-60	string	60_1	1
-60	claim	60_1	1
-60	bump	60_1	1
-60	detergent	60_1	1
-60	revelation	60_1	1
-60	incredible	60_1	1
-60	resource	60_1	1
-60	graveyard	60_1	1
-61	deplore	61_1	1
-61	chord	61_1	1
-61	compile	61_1	1
-61	shaft	61_1	1
-61	decimal	61_1	1
-61	fairly	61_1	1
-61	taxation	61_1	1
-61	heighten	61_1	1
-61	institution	61_1	1
-61	burrow	61_1	1
-62	meagre	62_1	1
-62	dearth	62_1	1
-62	upgrade	62_1	1
-62	automatic	62_1	1
-62	vary	62_1	1
-62	ramification	62_1	1
-62	oust	62_1	1
-62	masterpiece	62_1	1
-62	charter	62_1	1
-62	regardless	62_1	1
-63	shrewd	63_1	1
-63	valid	63_1	1
-63	insure	63_1	1
-63	tar	63_1	1
-63	hub	63_1	1
-63	harbour	63_1	1
-63	absorb	63_1	1
-63	strain	63_1	1
-63	hence	63_1	1
-63	fantastic	63_1	1
-64	gleam	64_1	1
-64	inference	64_1	1
-64	discharge	64_1	1
-64	plaster	64_1	1
-64	arthritis	64_1	1
-64	amuse	64_1	1
-64	gradual	64_1	1
-64	cruise	64_1	1
-64	bitter	64_1	1
-64	objective	64_1	1
-65	convene	65_1	1
-65	uprising	65_1	1
-65	flaw	65_1	1
-65	normalize	65_1	1
-65	procure	65_1	1
-65	integral	65_1	1
-65	oblique	65_1	1
-65	denomination	65_1	1
-65	quality	65_1	1
-65	wedge	65_1	1
-66	potent	66_1	1
-66	entity	66_1	1
-66	employment	66_1	1
-66	decorate	66_1	1
-66	gasp	66_1	1
-66	mirage	66_1	1
-66	trample	66_1	1
-66	coherent	66_1	1
-66	gaunt	66_1	1
-66	vehement	66_1	1
-67	sexual	67_1	1
-67	innards	67_1	1
-67	alienate	67_1	1
-67	prosecute	67_1	1
-67	roar	67_1	1
-67	sluggish	67_1	1
-67	misgiving	67_1	1
-67	outdo	67_1	1
-67	enrol	67_1	1
-67	relate	67_1	1
-68	curriculum	68_1	1
-68	conduct	68_1	1
-68	mandatory	68_1	1
-68	fortnight	68_1	1
-68	strategic	68_1	1
-68	septic	68_1	1
-68	thirst	68_1	1
-68	dessert	68_1	1
-68	generate	68_1	1
-68	abbreviate	68_1	1
-69	rupture	69_1	1
-69	maternal	69_1	1
-69	ethnic	69_1	1
-69	architecture	69_1	1
-69	convey	69_1	1
-69	spiral	69_1	1
-69	notch	69_1	1
-69	thumb	69_1	1
-69	modify	69_1	1
-69	outfit	69_1	1
-70	steadfast	70_1	1
-70	disguise	70_1	1
-70	martial	70_1	1
-70	cue	70_1	1
-70	barbecue	70_1	1
-70	illustration	70_1	1
-70	unthinkable	70_1	1
-70	pygmy	70_1	1
-70	allot	70_1	1
-70	flap	70_1	1
-71	terminal	71_1	1
-71	botany	71_1	1
-71	volunteer	71_1	1
-71	deform	71_1	1
-71	deflect	71_1	1
-71	protein	71_1	1
-71	prescription	71_1	1
-71	confusion	71_1	1
-71	pimple	71_1	1
-71	incinerator	71_1	1
-72	ascent	72_1	1
-72	optimism	72_1	1
-72	percentage	72_1	1
-72	indicator	72_1	1
-72	bulletin	72_1	1
-72	periodical	72_1	1
-72	resentment	72_1	1
-72	expire	72_1	1
-72	ephemeral	72_1	1
-72	fleet	72_1	1
-73	harangue	73_1	1
-73	outset	73_1	1
-73	trainee	73_1	1
-73	ignition	73_1	1
-73	defile	73_1	1
-73	toneless	73_1	1
-73	segregate	73_1	1
-73	interpreter	73_1	1
-73	devote	73_1	1
-73	flow	73_1	1
-74	symphony	74_1	1
-74	shelve	74_1	1
-74	retain	74_1	1
-74	zeal	74_1	1
-74	limb	74_1	1
-74	illiterate	74_1	1
-74	detrimental	74_1	1
-74	leap	74_1	1
-74	defiance	74_1	1
-74	divert	74_1	1
-75	transform	75_1	1
-75	adjoin	75_1	1
-75	consciousness	75_1	1
-75	ripen	75_1	1
-75	contemporary	75_1	1
-75	decipher	75_1	1
-75	parade	75_1	1
-75	sewage	75_1	1
-75	swamp	75_1	1
-75	conjunction	75_1	1
-76	scrap	76_1	1
-76	circumstance	76_1	1
-76	asthma	76_1	1
-76	highlight	76_1	1
-76	predecessor	76_1	1
-76	butterfly	76_1	1
-76	disentangle	76_1	1
-76	desert	76_1	1
-76	proclaim	76_1	1
-76	apt	76_1	1
-77	dismiss	77_1	1
-77	scalpel	77_1	1
-77	vindicate	77_1	1
-77	underwrite	77_1	1
-77	impressive	77_1	1
-77	harmony	77_1	1
-77	sparkle	77_1	1
-77	scratch	77_1	1
-77	infant	77_1	1
-77	fare	77_1	1
-78	deduce	78_1	1
-78	prejudice	78_1	1
-78	jumble	78_1	1
-78	bare	78_1	1
-78	superstructure	78_1	1
-78	tranquility	78_1	1
-78	counselor	78_1	1
-78	influx	78_1	1
-78	worthwhile	78_1	1
-78	elsewhere	78_1	1
-79	ritual	79_1	1
-79	grieve	79_1	1
-79	plateau	79_1	1
-79	entertainment	79_1	1
-79	aesthetic	79_1	1
-79	surgery	79_1	1
-79	affluent	79_1	1
-79	version	79_1	1
-79	cellulose	79_1	1
-79	reveal	79_1	1
-80	anyhow	80_1	1
-80	significant	80_1	1
-80	calibrate	80_1	1
-80	route	80_1	1
-80	elicit	80_1	1
-80	forensic	80_1	1
-80	dangle	80_1	1
-80	sicken	80_1	1
-80	oath	80_1	1
-80	spit	80_1	1
-81	reconsider	81_1	1
-81	formality	81_1	1
-81	seminar	81_1	1
-81	rejoice	81_1	1
-81	ketchup	81_1	1
-81	quaint	81_1	1
-81	withstand	81_1	1
-81	resign	81_1	1
-81	masquerade	81_1	1
-81	sake	81_1	1
-82	eject	82_1	1
-82	rehabilitate	82_1	1
-82	skew	82_1	1
-82	cereal	82_1	1
-82	vaccine	82_1	1
-82	onlooker	82_1	1
-82	thermal	82_1	1
-82	pulp	82_1	1
-82	amid	82_1	1
-82	lenient	82_1	1
-83	sentiment	83_1	1
-83	fusion	83_1	1
-83	climactic	83_1	1
-83	pathos	83_1	1
-83	vortex	83_1	1
-83	overweight	83_1	1
-83	motel	83_1	1
-83	guardian	83_1	1
-83	inestimable	83_1	1
-83	embryo	83_1	1
-84	ability	84_1	1
-84	ethereal	84_1	1
-84	polish	84_1	1
-84	ostentation	84_1	1
-84	register	84_1	1
-84	oncoming	84_1	1
-84	poise	84_1	1
-84	dart	84_1	1
-84	esteem	84_1	1
-84	entrepreneur	84_1	1
-85	odour	85_1	1
-85	inexorable	85_1	1
-85	pastime	85_1	1
-85	comment	85_1	1
-85	inquiry	85_1	1
-85	evict	85_1	1
-85	aspirin	85_1	1
-85	prefabricate	85_1	1
-85	extent	85_1	1
-85	smooth	85_1	1
-86	preparatory	86_1	1
-86	adhere	86_1	1
-86	agenda	86_1	1
-86	explosion	86_1	1
-86	murmur	86_1	1
-86	volcano	86_1	1
-86	sway	86_1	1
-86	inaugurate	86_1	1
-86	module	86_1	1
-86	inhabit	86_1	1
-87	attach	87_1	1
-87	accomplish	87_1	1
-87	equity	87_1	1
-87	reshuffle	87_1	1
-87	wage	87_1	1
-87	equitable	87_1	1
-87	occupational	87_1	1
-87	cavity	87_1	1
-87	mock	87_1	1
-87	mischance	87_1	1
-88	upright	88_1	1
-88	coastal	88_1	1
-88	continuity	88_1	1
-88	aspiration	88_1	1
-88	solar	88_1	1
-88	cassette	88_1	1
-88	versatile	88_1	1
-88	hearing	88_1	1
-88	deceive	88_1	1
-88	confer	88_1	1
-89	jelly	89_1	1
-89	mystify	89_1	1
-89	dubious	89_1	1
-89	function	89_1	1
-89	formidable	89_1	1
-89	trumpet	89_1	1
-89	bust	89_1	1
-89	fanatic	89_1	1
-89	wander	89_1	1
-89	versus	89_1	1
-90	infection	90_1	1
-90	invigilate	90_1	1
-90	obligate	90_1	1
-90	drawback	90_1	1
-90	tremendous	90_1	1
-90	bald	90_1	1
-90	creation	90_1	1
-90	rectify	90_1	1
-90	accuse	90_1	1
-90	monologue	90_1	1
-91	spacious	91_1	1
-91	consultant	91_1	1
-91	sturdy	91_1	1
-91	exceedingly	91_1	1
-91	rescue	91_1	1
-91	boost	91_1	1
-91	trustworthy	91_1	1
-91	surcharge	91_1	1
-91	obscene	91_1	1
-91	migrate	91_1	1
-92	superstition	92_1	1
-92	invoice	92_1	1
-92	drainage	92_1	1
-92	bilateral	92_1	1
-92	tongue	92_1	1
-92	legislate	92_1	1
-92	perfume	92_1	1
-92	pendulum	92_1	1
-92	notional	92_1	1
-92	boast	92_1	1
-93	research	93_1	1
-93	prototype	93_1	1
-93	idiot	93_1	1
-93	diplomatic	93_1	1
-93	nylon	93_1	1
-93	hound	93_1	1
-93	domestic	93_1	1
-93	emit	93_1	1
-93	impulse	93_1	1
-93	susceptible	93_1	1
-94	creep	94_1	1
-94	influence	94_1	1
-94	insight	94_1	1
-94	hemisphere	94_1	1
-94	grin	94_1	1
-94	centrifugal	94_1	1
-94	tempt	94_1	1
-94	carpentry	94_1	1
-94	migrant	94_1	1
-94	orientate	94_1	1
-95	reel	95_1	1
-95	advocate	95_1	1
-95	warrior	95_1	1
-95	latter	95_1	1
-95	coed	95_1	1
-95	resilient	95_1	1
-95	mineral	95_1	1
-95	downpour	95_1	1
-95	aquatic	95_1	1
-95	hive	95_1	1
-96	pointed	96_1	1
-96	voucher	96_1	1
-96	vicious	96_1	1
-96	prompt	96_1	1
-96	plight	96_1	1
-96	precedence	96_1	1
-96	foam	96_1	1
-96	furnace	96_1	1
-96	cartography	96_1	1
-96	inflation	96_1	1
-97	nominee	97_1	1
-97	mode	97_1	1
-97	cosmos	97_1	1
-97	minister	97_1	1
-97	discreet	97_1	1
-97	designate	97_1	1
-97	trace	97_1	1
-97	nostril	97_1	1
-97	applicant	97_1	1
-97	forfeit	97_1	1
-98	fragile	98_1	1
-98	degenerate	98_1	1
-98	conservative	98_1	1
-98	jerk	98_1	1
-98	scrutiny	98_1	1
-98	trench	98_1	1
-98	coerce	98_1	1
-98	chapel	98_1	1
-98	argument	98_1	1
-98	tunnel	98_1	1
-99	preserve	99_1	1
-99	cosmic	99_1	1
-99	dawn	99_1	1
-99	component	99_1	1
-99	categorize	99_1	1
-99	layoff	99_1	1
-99	violate	99_1	1
-99	problematic	99_1	1
-99	prehistoric	99_1	1
-99	dismay	99_1	1
-100	whiting	100_1	1
-100	superficial	100_1	1
-100	savage	100_1	1
-100	allude	100_1	1
-100	corrode	100_1	1
-100	landscape	100_1	1
-100	paralysis	100_1	1
-100	maize	100_1	1
-100	scurry	100_1	1
-100	organism	100_1	1
-101	vat	101_1	1
-101	cyclic	101_1	1
-101	queue	101_1	1
-101	excavate	101_1	1
-101	helmet	101_1	1
-101	invert	101_1	1
-101	zoology	101_1	1
-101	translucent	101_1	1
-101	tacit	101_1	1
-101	spark	101_1	1
-102	insolent	102_1	1
-102	ungainly	102_1	1
-102	submission	102_1	1
-102	philosophy	102_1	1
-102	declare	102_1	1
-102	embankment	102_1	1
-102	exclusively	102_1	1
-102	expenditure	102_1	1
-102	assemble	102_1	1
-102	estimate	102_1	1
-103	flame	103_1	1
-103	masculinity	103_1	1
-103	clash	103_1	1
-103	gene	103_1	1
-103	boutique	103_1	1
-103	coincidence	103_1	1
-103	technical	103_1	1
-103	stock	103_1	1
-103	dock	103_1	1
-103	campaign	103_1	1
-104	incline	104_1	1
-104	bruise	104_1	1
-104	vast	104_1	1
-104	timber	104_1	1
-104	hardware	104_1	1
-104	renew	104_1	1
-104	tangle	104_1	1
-104	recreation	104_1	1
-104	audience	104_1	1
-104	uphold	104_1	1
-105	depress	105_1	1
-105	pliable	105_1	1
-105	terror	105_1	1
-105	ingot	105_1	1
-105	handcuff	105_1	1
-105	drastic	105_1	1
-105	carbohydrate	105_1	1
-105	suspension	105_1	1
-105	abound	105_1	1
-105	sterilize	105_1	1
-106	novelty	106_1	1
-106	suitcase	106_1	1
-106	border	106_1	1
-106	ceramic	106_1	1
-106	wasp	106_1	1
-106	tolerable	106_1	1
-106	thyroid	106_1	1
-106	caustic	106_1	1
-106	assurance	106_1	1
-106	profit	106_1	1
-107	sting	107_1	1
-107	ferry	107_1	1
-107	emphasize	107_1	1
-107	hurdle	107_1	1
-107	ovation	107_1	1
-107	sled	107_1	1
-107	infirmary	107_1	1
-107	magnate	107_1	1
-107	thigh	107_1	1
-107	meticulous	107_1	1
-108	render	108_1	1
-108	multiple	108_1	1
-108	pacify	108_1	1
-108	lapse	108_1	1
-108	refreshing	108_1	1
-108	migratory	108_1	1
-108	topsoil	108_1	1
-108	opt	108_1	1
-108	brittle	108_1	1
-108	worship	108_1	1
-109	participant	109_1	1
-109	avert	109_1	1
-109	medieval	109_1	1
-109	heed	109_1	1
-109	proposal	109_1	1
-109	massacre	109_1	1
-109	criticism	109_1	1
-109	snowbound	109_1	1
-109	grit	109_1	1
-109	tile	109_1	1
-110	electronics	110_1	1
-110	professional	110_1	1
-110	extreme	110_1	1
-110	comedy	110_1	1
-110	perceive	110_1	1
-110	antiquated	110_1	1
-110	municipal	110_1	1
-110	irritate	110_1	1
-110	pellet	110_1	1
-110	hubbub	110_1	1
-111	buffalo	111_1	1
-111	warehouse	111_1	1
-111	dolphin	111_1	1
-111	cumbersome	111_1	1
-111	compatible	111_1	1
-111	hurl	111_1	1
-111	standing	111_1	1
-111	attractive	111_1	1
-111	historian	111_1	1
-111	selection	111_1	1
-112	advent	112_1	1
-112	spokesman	112_1	1
-112	modulate	112_1	1
-112	ventilation	112_1	1
-112	tilt	112_1	1
-112	poke	112_1	1
-112	exhaust	112_1	1
-112	lament	112_1	1
-112	innocuous	112_1	1
-112	veto	112_1	1
-113	slag	113_1	1
-113	gratuity	113_1	1
-113	equivocal	113_1	1
-113	deflate	113_1	1
-113	tame	113_1	1
-113	implicit	113_1	1
-113	consistent	113_1	1
-113	evolution	113_1	1
-113	diverge	113_1	1
-113	conform	113_1	1
-114	consist	114_1	1
-114	microcosm	114_1	1
-114	exclusive	114_1	1
-114	dread	114_1	1
-114	telex	114_1	1
-114	stoop	114_1	1
-114	wilderness	114_1	1
-114	piety	114_1	1
-114	scatter	114_1	1
-114	tangible	114_1	1
-115	latent	115_1	1
-115	deluge	115_1	1
-115	martyr	115_1	1
-115	justify	115_1	1
-115	concede	115_1	1
-115	recruit	115_1	1
-115	profane	115_1	1
-115	might	115_1	1
-115	stereotype	115_1	1
-115	stitch	115_1	1
-116	reference	116_1	1
-116	horticulture	116_1	1
-116	amateur	116_1	1
-116	ozone	116_1	1
-116	manifestation	116_1	1
-116	prerequisite	116_1	1
-116	summary	116_1	1
-116	parallel	116_1	1
-116	enclose	116_1	1
-116	fraught	116_1	1
-117	beverage	117_1	1
-117	curl	117_1	1
-117	concession	117_1	1
-117	supposition	117_1	1
-117	vacuum	117_1	1
-117	behave	117_1	1
-117	elite	117_1	1
-117	undergraduate	117_1	1
-117	discrete	117_1	1
-117	bucket	117_1	1
-118	fountain	118_1	1
-118	illuminate	118_1	1
-118	precinct	118_1	1
-118	cellular	118_1	1
-118	ornament	118_1	1
-118	allocate	118_1	1
-118	bloc	118_1	1
-118	bolt	118_1	1
-118	exception	118_1	1
-118	jungle	118_1	1
-119	explanatory	119_1	1
-119	inextricable	119_1	1
-119	starfish	119_1	1
-119	exhale	119_1	1
-119	viable	119_1	1
-119	psychology	119_1	1
-119	arena	119_1	1
-119	doubtful	119_1	1
-119	proficient	119_1	1
-119	apparatus	119_1	1
-120	premise	120_1	1
-120	interpretation	120_1	1
-120	trophy	120_1	1
-120	ample	120_1	1
-120	cognitive	120_1	1
-120	synthesis	120_1	1
-120	likewise	120_1	1
-120	pump	120_1	1
-120	provoke	120_1	1
-120	stern	120_1	1
-121	manipulate	121_1	1
-121	magnet	121_1	1
-121	mosaic	121_1	1
-121	audible	121_1	1
-121	crumple	121_1	1
-121	doctrine	121_1	1
-121	facilitate	121_1	1
-121	despise	121_1	1
-121	division	121_1	1
-121	shamble	121_1	1
-122	neat	122_1	1
-122	startle	122_1	1
-122	snatch	122_1	1
-122	haul	122_1	1
-122	utilize	122_1	1
-122	identity	122_1	1
-122	tackle	122_1	1
-122	indignant	122_1	1
-122	mediocre	122_1	1
-122	dense	122_1	1
-123	protract	123_1	1
-123	summit	123_1	1
-123	elastic	123_1	1
-123	recede	123_1	1
-123	fierce	123_1	1
-123	fancy	123_1	1
-123	tremor	123_1	1
-123	nozzle	123_1	1
-123	advertise	123_1	1
-123	nautical	123_1	1
-124	manure	124_1	1
-124	differentiate	124_1	1
-124	military	124_1	1
-124	resonant	124_1	1
-124	evacuate	124_1	1
-124	virtual	124_1	1
-124	outweigh	124_1	1
-124	profuse	124_1	1
-124	trespass	124_1	1
-124	rip	124_1	1
-125	repel	125_1	1
-125	persuade	125_1	1
-125	intensive	125_1	1
-125	voltage	125_1	1
-125	consumption	125_1	1
-125	livestock	125_1	1
-125	dilemma	125_1	1
-125	equilibrium	125_1	1
-125	toil	125_1	1
-125	concrete	125_1	1
-126	abandon	126_1	1
-126	quarry	126_1	1
-126	revolt	126_1	1
-126	trick	126_1	1
-126	optic	126_1	1
-126	survival	126_1	1
-126	scant	126_1	1
-126	semester	126_1	1
-126	memorandum	126_1	1
-126	mishap	126_1	1
-127	delicate	127_1	1
-127	squash	127_1	1
-127	reinforce	127_1	1
-127	wax	127_1	1
-127	marble	127_1	1
-127	diction	127_1	1
-127	invisible	127_1	1
-127	pollinate	127_1	1
-127	cluster	127_1	1
-127	triangle	127_1	1
-128	weld	128_1	1
-128	dingy	128_1	1
-128	regarding	128_1	1
-128	calamity	128_1	1
-128	junction	128_1	1
-128	condense	128_1	1
-128	inland	128_1	1
-128	condolence	128_1	1
-128	generality	128_1	1
-128	apparent	128_1	1
-129	dorsal	129_1	1
-129	breed	129_1	1
-129	ravage	129_1	1
-129	bankruptcy	129_1	1
-129	enclosure	129_1	1
-129	quarantine	129_1	1
-129	silt	129_1	1
-129	spray	129_1	1
-129	hysterical	129_1	1
-129	allegation	129_1	1
-130	pant	130_1	1
-130	exaggerate	130_1	1
-130	recipe	130_1	1
-130	canvas	130_1	1
-130	stationer	130_1	1
-130	setting	130_1	1
-130	oriental	130_1	1
-130	reassure	130_1	1
-130	magistrate	130_1	1
-130	shack	130_1	1
-131	authoritative	131_1	1
-131	pit	131_1	1
-131	conceal	131_1	1
-131	oxidize	131_1	1
-131	blunder	131_1	1
-131	bubble	131_1	1
-131	climax	131_1	1
-131	beneficial	131_1	1
-131	observe	131_1	1
-131	fauna	131_1	1
-132	draft	132_1	1
-132	idiom	132_1	1
-132	magnanimous	132_1	1
-132	envision	132_1	1
-132	turbulent	132_1	1
-132	texture	132_1	1
-132	pounce	132_1	1
-132	comparable	132_1	1
-132	context	132_1	1
-132	junk	132_1	1
-133	inert	133_1	1
-133	leaflet	133_1	1
-133	unilateral	133_1	1
-133	shanty	133_1	1
-133	shell	133_1	1
-133	plank	133_1	1
-133	bronze	133_1	1
-133	genocide	133_1	1
-133	monarchy	133_1	1
-133	aware	133_1	1
-134	stretch	134_1	1
-134	edition	134_1	1
-134	absurd	134_1	1
-134	addict	134_1	1
-134	log	134_1	1
-134	extol	134_1	1
-134	husky	134_1	1
-134	competence	134_1	1
-134	peculiar	134_1	1
-134	alight	134_1	1
-135	hallmark	135_1	1
-135	picturesque	135_1	1
-135	hydrogen	135_1	1
-135	coward	135_1	1
-135	breeze	135_1	1
-135	rectangle	135_1	1
-135	energetic	135_1	1
-135	commonplace	135_1	1
-135	scroll	135_1	1
-135	diagnosis	135_1	1
-136	sacred	136_1	1
-136	fatal	136_1	1
-136	resolution	136_1	1
-136	millennium	136_1	1
-136	gossip	136_1	1
-136	sustenance	136_1	1
-136	crown	136_1	1
-136	arrogant	136_1	1
-136	ingredient	136_1	1
-136	velocity	136_1	1
-137	invalid	137_1	1
-137	relapse	137_1	1
-137	isle	137_1	1
-137	analysis	137_1	1
-137	wary	137_1	1
-137	profile	137_1	1
-137	civilian	137_1	1
-137	phosphorus	137_1	1
-137	panel	137_1	1
-137	synthetic	137_1	1
-138	hump	138_1	1
-138	anxiety	138_1	1
-138	huddle	138_1	1
-138	rift	138_1	1
-138	correspondence	138_1	1
-138	croissant	138_1	1
-138	flake	138_1	1
-138	refrain	138_1	1
-138	sparse	138_1	1
-138	barge	138_1	1
-139	valley	139_1	1
-139	fluctuate	139_1	1
-139	secluded	139_1	1
-139	apologetic	139_1	1
-139	pilgrim	139_1	1
-139	cumulative	139_1	1
-139	resort	139_1	1
-139	lump	139_1	1
-139	assess	139_1	1
-139	spur	139_1	1
-140	protocol	140_1	1
-140	prosecution	140_1	1
-140	jolt	140_1	1
-140	cripple	140_1	1
-140	swing	140_1	1
-140	propel	140_1	1
-140	fend	140_1	1
-140	limp	140_1	1
-140	removal	140_1	1
-140	ambitious	140_1	1
-141	arboreal	141_1	1
-141	righteous	141_1	1
-141	modest	141_1	1
-141	compose	141_1	1
-141	chip	141_1	1
-141	weed	141_1	1
-141	unravel	141_1	1
-141	clamor	141_1	1
-141	herd	141_1	1
-141	morality	141_1	1
-142	torment	142_1	1
-142	troupe	142_1	1
-142	warranty	142_1	1
-142	asset	142_1	1
-142	trunk	142_1	1
-142	ignite	142_1	1
-142	transitive	142_1	1
-142	synonym	142_1	1
-142	historic	142_1	1
-142	saddle	142_1	1
-143	lack	143_1	1
-143	diversity	143_1	1
-143	various	143_1	1
-143	yoke	143_1	1
-143	penury	143_1	1
-143	psychiatry	143_1	1
-143	offset	143_1	1
-143	anguish	143_1	1
-143	dreadful	143_1	1
-143	imitate	143_1	1
-144	organ	144_1	1
-144	float	144_1	1
-144	appraise	144_1	1
-144	malaria	144_1	1
-144	hitherto	144_1	1
-144	hasty	144_1	1
-144	update	144_1	1
-144	falsify	144_1	1
-144	threshold	144_1	1
-144	legal	144_1	1
-145	discipline	145_1	1
-145	flexible	145_1	1
-145	decoration	145_1	1
-145	practically	145_1	1
-145	mask	145_1	1
-145	hostile	145_1	1
-145	magnitude	145_1	1
-145	jury	145_1	1
-145	impose	145_1	1
-145	forum	145_1	1
-146	congregate	146_1	1
-146	ammonia	146_1	1
-146	bait	146_1	1
-146	affiliate	146_1	1
-146	intact	146_1	1
-146	chat	146_1	1
-146	intractable	146_1	1
-146	gracious	146_1	1
-146	sectional	146_1	1
-146	anatomy	146_1	1
-147	relinquish	147_1	1
-147	forerunner	147_1	1
-147	decay	147_1	1
-147	delicious	147_1	1
-147	accurate	147_1	1
-147	plume	147_1	1
-147	prevalent	147_1	1
-147	demography	147_1	1
-147	barber	147_1	1
-147	loth	147_1	1
-148	adopt	148_1	1
-148	apparel	148_1	1
-148	imaginative	148_1	1
-148	gale	148_1	1
-148	prolong	148_1	1
-148	steer	148_1	1
-148	corporation	148_1	1
-148	tentative	148_1	1
-148	vent	148_1	1
-148	bustle	148_1	1
-149	nightmare	149_1	1
-149	cynic	149_1	1
-149	inclination	149_1	1
-149	surpass	149_1	1
-149	surmount	149_1	1
-149	lobby	149_1	1
-149	charity	149_1	1
-149	liability	149_1	1
-149	pursuit	149_1	1
-149	misrepresent	149_1	1
-150	piggyback	150_1	1
-150	impair	150_1	1
-150	tube	150_1	1
-150	imperial	150_1	1
-150	limitation	150_1	1
-150	roam	150_1	1
-150	enrich	150_1	1
-150	composite	150_1	1
-150	prospectus	150_1	1
-150	release	150_1	1
-151	counsel	151_1	1
-151	commentate	151_1	1
-151	factual	151_1	1
-151	exponent	151_1	1
-151	assault	151_1	1
-151	drowsy	151_1	1
-151	venerate	151_1	1
-151	proxy	151_1	1
-151	loath	151_1	1
-151	duly	151_1	1
-152	stammer	152_1	1
-152	flip	152_1	1
-152	solo	152_1	1
-152	anticlockwise	152_1	1
-152	vow	152_1	1
-152	glimpse	152_1	1
-152	pregnant	152_1	1
-152	inapt	152_1	1
-152	intense	152_1	1
-152	lens	152_1	1
-153	predictable	153_1	1
-153	pressure	153_1	1
-153	curb	153_1	1
-153	cramp	153_1	1
-153	coverage	153_1	1
-153	loll	153_1	1
-153	bug	153_1	1
-153	deny	153_1	1
-153	relay	153_1	1
-153	erratic	153_1	1
-154	practicable	154_1	1
-154	harness	154_1	1
-154	approve	154_1	1
-154	macaque	154_1	1
-154	lace	154_1	1
-154	formation	154_1	1
-154	waver	154_1	1
-154	relief	154_1	1
-154	void	154_1	1
-154	blink	154_1	1
-155	pedal	155_1	1
-155	transparent	155_1	1
-155	garment	155_1	1
-155	invariably	155_1	1
-155	excel	155_1	1
-155	memento	155_1	1
-155	section	155_1	1
-155	cellar	155_1	1
-155	minor	155_1	1
-155	impetuous	155_1	1
-156	succinct	156_1	1
-156	conflict	156_1	1
-156	canal	156_1	1
-156	aspire	156_1	1
-156	enroll	156_1	1
-156	overrun	156_1	1
-156	protest	156_1	1
-156	imposing	156_1	1
-156	breach	156_1	1
-156	comic	156_1	1
-157	naked	157_1	1
-157	priority	157_1	1
-157	parody	157_1	1
-157	unlikely	157_1	1
-157	gang	157_1	1
-157	hinge	157_1	1
-157	maniac	157_1	1
-157	immediate	157_1	1
-157	lottery	157_1	1
-157	slope	157_1	1
-158	quantitative	158_1	1
-158	diesel	158_1	1
-158	certify	158_1	1
-158	larynx	158_1	1
-158	expertise	158_1	1
-158	colonial	158_1	1
-158	disorder	158_1	1
-158	festivity	158_1	1
-158	combustion	158_1	1
-158	glycerin	158_1	1
-159	thesaurus	159_1	1
-159	remarkable	159_1	1
-159	attorney	159_1	1
-159	referendum	159_1	1
-159	bibliography	159_1	1
-159	polar	159_1	1
-159	bookkeeper	159_1	1
-159	awesome	159_1	1
-159	displace	159_1	1
-159	clam	159_1	1
-160	visa	160_1	1
-160	phobia	160_1	1
-160	fulfil	160_1	1
-160	account	160_1	1
-160	dual	160_1	1
-160	transplant	160_1	1
-160	eternal	160_1	1
-160	depart	160_1	1
-160	conducive	160_1	1
-160	port	160_1	1
-161	stale	161_1	1
-161	sprawl	161_1	1
-161	epidemic	161_1	1
-161	grope	161_1	1
-161	helicopter	161_1	1
-161	dwelling	161_1	1
-161	amend	161_1	1
-161	motivate	161_1	1
-161	resolve	161_1	1
-161	partisan	161_1	1
-162	blur	162_1	1
-162	infest	162_1	1
-162	expel	162_1	1
-162	pungent	162_1	1
-162	bundle	162_1	1
-162	antibiotic	162_1	1
-162	represent	162_1	1
-162	trim	162_1	1
-162	incite	162_1	1
-162	host	162_1	1
-163	brink	163_1	1
-163	negative	163_1	1
-163	reverse	163_1	1
-163	handsome	163_1	1
-163	weird	163_1	1
-163	former	163_1	1
-163	hectare	163_1	1
-163	fabric	163_1	1
-163	effective	163_1	1
-163	cherish	163_1	1
-164	ceremony	164_1	1
-164	scrape	164_1	1
-164	commend	164_1	1
-164	pamper	164_1	1
-164	prestigious	164_1	1
-164	intimidate	164_1	1
-164	infinity	164_1	1
-164	sociable	164_1	1
-164	revenge	164_1	1
-164	oasis	164_1	1
-165	emigrate	165_1	1
-165	spontaneous	165_1	1
-165	curve	165_1	1
-165	spicy	165_1	1
-165	suite	165_1	1
-165	propose	165_1	1
-165	lateral	165_1	1
-165	subsidy	165_1	1
-165	clutch	165_1	1
-165	making	165_1	1
-166	casual	166_1	1
-166	vocational	166_1	1
-166	manual	166_1	1
-166	respiration	166_1	1
-166	expansion	166_1	1
-166	ideology	166_1	1
-166	whirlwind	166_1	1
-166	mist	166_1	1
-166	audit	166_1	1
-166	precisely	166_1	1
-167	consolation	167_1	1
-167	tertiary	167_1	1
-167	envisage	167_1	1
-167	indulge	167_1	1
-167	alien	167_1	1
-167	corporate	167_1	1
-167	ponder	167_1	1
-167	conspiracy	167_1	1
-167	unfold	167_1	1
-167	obstacle	167_1	1
-168	palpitate	168_1	1
-168	levy	168_1	1
-168	tricky	168_1	1
-168	scar	168_1	1
-168	penetrate	168_1	1
-168	insolvent	168_1	1
-168	laudable	168_1	1
-168	escalate	168_1	1
-168	lukewarm	168_1	1
-168	expose	168_1	1
-169	propaganda	169_1	1
-169	facet	169_1	1
-169	evaluate	169_1	1
-169	dilate	169_1	1
-169	convert	169_1	1
-169	estate	169_1	1
-169	metric	169_1	1
-169	mammal	169_1	1
-169	ruinous	169_1	1
-169	partition	169_1	1
-170	appreciable	170_1	1
-170	foundation	170_1	1
-170	prologue	170_1	1
-170	ostensible	170_1	1
-170	scale	170_1	1
-170	elementary	170_1	1
-170	whip	170_1	1
-170	mechanism	170_1	1
-170	ripple	170_1	1
-170	gown	170_1	1
-171	singular	171_1	1
-171	clatter	171_1	1
-171	phase	171_1	1
-171	unicorn	171_1	1
-171	accuracy	171_1	1
-171	exhilarate	171_1	1
-171	dip	171_1	1
-171	torrent	171_1	1
-171	clamp	171_1	1
-171	bathe	171_1	1
-172	sporadic	172_1	1
-172	pin	172_1	1
-172	immune	172_1	1
-172	squeal	172_1	1
-172	occur	172_1	1
-172	signature	172_1	1
-172	plot	172_1	1
-172	vogue	172_1	1
-172	idiosyncrasy	172_1	1
-172	sprout	172_1	1
-173	restorative	173_1	1
-173	mobilize	173_1	1
-173	eddy	173_1	1
-173	personnel	173_1	1
-173	intercontinental	173_1	1
-173	currency	173_1	1
-173	slander	173_1	1
-173	bronchitis	173_1	1
-173	credible	173_1	1
-173	bitumen	173_1	1
-174	erase	174_1	1
-174	bind	174_1	1
-174	fuel	174_1	1
-174	ardent	174_1	1
-174	multitude	174_1	1
-174	terrain	174_1	1
-174	fuss	174_1	1
-174	plausible	174_1	1
-174	affirmative	174_1	1
-174	echo	174_1	1
-175	overt	175_1	1
-175	detriment	175_1	1
-175	portray	175_1	1
-175	poliomyelitis	175_1	1
-175	catalyst	175_1	1
-175	equator	175_1	1
-175	alongside	175_1	1
-175	hedge	175_1	1
-175	recital	175_1	1
-175	optical	175_1	1
-176	revert	176_1	1
-176	wean	176_1	1
-176	erroneous	176_1	1
-176	dedicated	176_1	1
-176	luminous	176_1	1
-176	turbot	176_1	1
-176	unify	176_1	1
-176	nationality	176_1	1
-176	wicked	176_1	1
-176	patron	176_1	1
-177	pierce	177_1	1
-177	descent	177_1	1
-177	overthrow	177_1	1
-177	patent	177_1	1
-177	outskirts	177_1	1
-177	synchronize	177_1	1
-177	physician	177_1	1
-177	endanger	177_1	1
-177	customary	177_1	1
-177	admission	177_1	1
-178	colossal	178_1	1
-178	encounter	178_1	1
-178	alpine	178_1	1
-178	inject	178_1	1
-178	ultraviolet	178_1	1
-178	censor	178_1	1
-178	nominal	178_1	1
-178	cease	178_1	1
-178	soot	178_1	1
-178	massive	178_1	1
-179	fraction	179_1	1
-179	incipient	179_1	1
-179	readily	179_1	1
-179	sanity	179_1	1
-179	commonwealth	179_1	1
-179	deem	179_1	1
-179	hereditary	179_1	1
-179	torture	179_1	1
-179	fermentation	179_1	1
-179	transfer	179_1	1
-180	distraction	180_1	1
-180	affection	180_1	1
-180	potluck	180_1	1
-180	terse	180_1	1
-180	negotiable	180_1	1
-180	conquer	180_1	1
-180	outlying	180_1	1
-180	target	180_1	1
-180	mechanic	180_1	1
-180	malignant	180_1	1
-181	athlete	181_1	1
-181	poll	181_1	1
-181	resultant	181_1	1
-181	avail	181_1	1
-181	stimulus	181_1	1
-181	rack	181_1	1
-181	waggon	181_1	1
-181	nevertheless	181_1	1
-181	shepherd	181_1	1
-181	drift	181_1	1
-182	abnormal	182_1	1
-182	buoyant	182_1	1
-182	offend	182_1	1
-182	ramble	182_1	1
-182	cling	182_1	1
-182	platypus	182_1	1
-182	stationary	182_1	1
-182	delight	182_1	1
-182	involve	182_1	1
-182	undergo	182_1	1
-183	deficit	183_1	1
-183	miracle	183_1	1
-183	deposit	183_1	1
-183	classic	183_1	1
-183	secondary	183_1	1
-183	beloved	183_1	1
-183	entitle	183_1	1
-183	pharmacy	183_1	1
-183	auction	183_1	1
-183	regeneration	183_1	1
-184	slack	184_1	1
-184	consequence	184_1	1
-184	culminate	184_1	1
-184	safeguard	184_1	1
-184	wrap	184_1	1
-184	commissioner	184_1	1
-184	proceed	184_1	1
-184	haven	184_1	1
-184	trait	184_1	1
-184	ultimately	184_1	1
-185	soluble	185_1	1
-185	precipice	185_1	1
-185	precipitate	185_1	1
-185	clip	185_1	1
-185	molecule	185_1	1
-185	orientation	185_1	1
-185	comet	185_1	1
-185	gape	185_1	1
-185	clarity	185_1	1
-185	crystal	185_1	1
-186	occasion	186_1	1
-186	gesture	186_1	1
-186	typhoon	186_1	1
-186	affirm	186_1	1
-186	install	186_1	1
-186	multilateral	186_1	1
-186	endorse	186_1	1
-186	portion	186_1	1
-186	tissue	186_1	1
-186	mangrove	186_1	1
-187	bowel	187_1	1
-187	orbit	187_1	1
-187	technician	187_1	1
-187	bleed	187_1	1
-187	recline	187_1	1
-187	refinement	187_1	1
-187	preach	187_1	1
-187	thoughtful	187_1	1
-187	dissolve	187_1	1
-187	deter	187_1	1
-188	granary	188_1	1
-188	humdrum	188_1	1
-188	diminish	188_1	1
-188	midst	188_1	1
-188	medication	188_1	1
-188	surplus	188_1	1
-188	seclude	188_1	1
-188	flatter	188_1	1
-188	arable	188_1	1
-188	multifarious	188_1	1
-189	acquaintance	189_1	1
-189	refugee	189_1	1
-189	undulate	189_1	1
-189	amalgamate	189_1	1
-189	ease	189_1	1
-189	outcome	189_1	1
-189	commercial	189_1	1
-189	diagram	189_1	1
-189	counterpart	189_1	1
-189	petty	189_1	1
-190	coarse	190_1	1
-190	positive	190_1	1
-190	leafy	190_1	1
-190	condemn	190_1	1
-190	ferocious	190_1	1
-190	vital	190_1	1
-190	delectable	190_1	1
-190	respiratory	190_1	1
-190	forge	190_1	1
-190	hamper	190_1	1
-191	punctuation	191_1	1
-191	decent	191_1	1
-191	eucalyptus	191_1	1
-191	decrease	191_1	1
-191	vomit	191_1	1
-191	dynasty	191_1	1
-191	acknowledge	191_1	1
-191	grease	191_1	1
-191	sufficient	191_1	1
-191	disable	191_1	1
-192	strategy	192_1	1
-192	tarnish	192_1	1
-192	ransom	192_1	1
-192	negligible	192_1	1
-192	induce	192_1	1
-192	notoriety	192_1	1
-192	chant	192_1	1
-192	endure	192_1	1
-192	breadwinner	192_1	1
-192	flu	192_1	1
-193	fluid	193_1	1
-193	configuration	193_1	1
-193	halibut	193_1	1
-193	infinite	193_1	1
-193	oblivious	193_1	1
-193	insoluble	193_1	1
-193	caravan	193_1	1
-193	intend	193_1	1
-193	pharaoh	193_1	1
-193	plumb	193_1	1
-194	scorn	194_1	1
-194	spoil	194_1	1
-194	portable	194_1	1
-194	unconditional	194_1	1
-194	grate	194_1	1
-194	interact	194_1	1
-194	statue	194_1	1
-194	redistribute	194_1	1
-194	misfortune	194_1	1
-194	blaze	194_1	1
-195	perturb	195_1	1
-195	consecutive	195_1	1
-195	novice	195_1	1
-195	cannon	195_1	1
-195	pave	195_1	1
-195	bet	195_1	1
-195	vacant	195_1	1
-195	biodegradable	195_1	1
-195	cancel	195_1	1
-195	thrust	195_1	1
-196	chime	196_1	1
-196	gravity	196_1	1
-196	status	196_1	1
-196	tuck	196_1	1
-196	tariff	196_1	1
-196	consolidate	196_1	1
-196	rally	196_1	1
-196	remainder	196_1	1
-196	virus	196_1	1
-196	affect	196_1	1
-197	urbane	197_1	1
-197	achieve	197_1	1
-197	arduous	197_1	1
-197	coupon	197_1	1
-197	ideal	197_1	1
-197	logic	197_1	1
-197	saturate	197_1	1
-197	perish	197_1	1
-197	bent	197_1	1
-197	opening	197_1	1
-198	violent	198_1	1
-198	mildew	198_1	1
-198	fundamental	198_1	1
-198	crevice	198_1	1
-198	perception	198_1	1
-198	melody	198_1	1
-198	via	198_1	1
-198	antagonism	198_1	1
-198	periscope	198_1	1
-198	bungalow	198_1	1
-199	outstrip	199_1	1
-199	jeopardise	199_1	1
-199	fragment	199_1	1
-199	disrupt	199_1	1
-199	frugal	199_1	1
-199	abet	199_1	1
-199	cathedral	199_1	1
-199	permissible	199_1	1
-199	exorbitant	199_1	1
-199	ambassador	199_1	1
-200	microfilm	200_1	1
-200	contrast	200_1	1
-200	refusal	200_1	1
-200	reimburse	200_1	1
-200	dialect	200_1	1
-200	doubtless	200_1	1
-200	rumour	200_1	1
-200	clue	200_1	1
-200	microwave	200_1	1
-200	octagon	200_1	1
-201	identification	201_1	1
-201	brash	201_1	1
-201	nausea	201_1	1
-201	determination	201_1	1
-201	tedious	201_1	1
-201	strew	201_1	1
-201	meditate	201_1	1
-201	array	201_1	1
-201	apprehension	201_1	1
-201	odd	201_1	1
-202	intake	202_1	1
-202	persuasive	202_1	1
-202	hover	202_1	1
-202	appliance	202_1	1
-202	dividend	202_1	1
-202	allegiance	202_1	1
-202	curse	202_1	1
-202	agriculture	202_1	1
-202	repertoire	202_1	1
-202	exuberant	202_1	1
-203	execute	203_1	1
-203	stewardship	203_1	1
-203	afflict	203_1	1
-203	surgeon	203_1	1
-203	council	203_1	1
-203	wield	203_1	1
-203	fortify	203_1	1
-203	convention	203_1	1
-203	heave	203_1	1
-203	imminent	203_1	1
-204	splint	204_1	1
-204	elapse	204_1	1
-204	judicial	204_1	1
-204	basis	204_1	1
-204	blossom	204_1	1
-204	equation	204_1	1
-204	extend	204_1	1
-204	buck	204_1	1
-204	access	204_1	1
-204	bulge	204_1	1
+1	trek	1_1	1	vt.艰苦跋涉(行军)
+1	bachelor	1_1	1	n.单身汉
+1	locality	1_1	1	n.地区
+2	eminent	2_1	1	adj.卓越的
+2	aircraft	2_1	1	n.飞机
+2	wretched	2_1	1	adj.可怜的
+2	agitation	2_1	1	n.激动
+2	propriety	2_1	1	n.适当
+2	exceed	2_1	1	vt.超过
+2	intellect	2_1	1	n.智力
+2	flicker	2_1	1	n.闪烁
+2	aggressive	2_1	1	adj.侵略性的
+2	familiarity	2_1	1	n.熟悉
+3	economical	3_1	1	adj.节俭的
+3	escalator	3_1	1	n.自动扶梯
+3	muscular	3_1	1	adj.肌肉的
+3	obsess	3_1	1	vt.使(某人)牵挂
+3	courier	3_1	1	n.送快信的
+3	farewell	3_1	1	n.告别
+3	punctual	3_1	1	adj.严守时刻的
+3	export	3_1	1	vt.出口
+3	consult	3_1	1	v.向...请教
+3	emotion	3_1	1	n.情感
+4	expedition	4_1	1	n.远征
+4	myriad	4_1	1	adj.无数的
+4	ratio	4_1	1	n.比
+4	deprive	4_1	1	vt.剥夺
+4	privacy	4_1	1	n.隐私
+4	whatever	4_1	1	pron.&conj.无论什么
+4	disdain	4_1	1	n.轻蔑
+4	reproach	4_1	1	n.责备
+4	activate	4_1	1	v.刺激
+4	overflow	4_1	1	n.溢值
+5	genial	5_1	1	adj.和蔼的
+5	captive	5_1	1	n.俘虏
+5	elevator	5_1	1	n.电梯
+5	acquisition	5_1	1	n.获得
+5	alchemy	5_1	1	n.炼金术
+5	ingenuous	5_1	1	adj.坦白的
+5	gender	5_1	1	n.性别
+5	mentality	5_1	1	n.精神力
+5	subliminal	5_1	1	adj.下意识的
+5	glacier	5_1	1	n.冰川
+6	assorted	6_1	1	adj.配合的
+6	linen	6_1	1	n.亚麻布
+6	ascribe	6_1	1	v.归因于
+6	federation	6_1	1	n.联邦
+6	deviance	6_1	1	n.异常
+6	quote	6_1	1	n.引用
+6	indemnity	6_1	1	n.保证
+6	tide	6_1	1	n.潮
+6	choke	6_1	1	vi.窒息
+6	conserve	6_1	1	n.蜜饯
+7	exceptional	7_1	1	adj.例外的
+7	catching	7_1	1	adj.易传染的
+7	womb	7_1	1	n.子宫
+7	spectacle	7_1	1	n.值得看的东西
+7	elevate	7_1	1	vt.举起
+7	antecedent	7_1	1	n.前情
+7	depletion	7_1	1	n.消耗
+7	adept	7_1	1	adj.熟练的
+7	aerial	7_1	1	adj.空中的
+7	contention	7_1	1	n.争论
+8	revenue	8_1	1	n.总收入
+8	intermediate	8_1	1	adj.中级的
+8	disposable	8_1	1	adj.用完即可丢弃的
+8	etiquette	8_1	1	n.礼仪
+8	perplex	8_1	1	v.使...困惑
+8	topmost	8_1	1	adj.最高的
+8	probe	8_1	1	n.探针
+8	caution	8_1	1	n.慎重
+8	asterisk	8_1	1	n.星号(*)
+8	deviate	8_1	1	vt.使偏离
+9	percussion	9_1	1	n.打击乐器
+9	elusive	9_1	1	adj.难懂的
+9	candidate	9_1	1	n.候选人
+9	sketch	9_1	1	n.素描
+9	raw	9_1	1	adj.生的
+9	mingle	9_1	1	vt.混合
+9	glitter	9_1	1	n.灿烂
+9	outlet	9_1	1	n.出口
+9	prescribe	9_1	1	vi.规定
+9	cosset	9_1	1	n.亲手饲养的小动物
+10	towel	10_1	1	n.毛巾
+10	variety	10_1	1	n.多样
+10	alliance	10_1	1	n.结盟
+10	expend	10_1	1	v.花费
+10	rave	10_1	1	n.狂吼
+10	wholesome	10_1	1	adj.有益健康的
+10	meteoric	10_1	1	adj.流星的
+10	vegetarian	10_1	1	n.素食者
+10	seismic	10_1	1	adj.地震的
+10	sequence	10_1	1	n.序列
+11	brisk	11_1	1	adj.敏锐的
+11	mischief	11_1	1	n.损害
+11	fringe	11_1	1	n.流苏
+11	territory	11_1	1	n.领土
+11	porpoise	11_1	1	n.海豚
+11	comprise	11_1	1	vt.包含
+11	scapegoat	11_1	1	n.替罪的羔羊
+11	periphery	11_1	1	n.周边
+11	harassment	11_1	1	n.烦扰
+11	inhabitant	11_1	1	n.居民
+12	intricate	12_1	1	adj.复杂的
+12	destine	12_1	1	v.注定
+12	observatory	12_1	1	n.天文台
+12	commute	12_1	1	vi.交换
+12	infectious	12_1	1	adj.传染的
+12	jagged	12_1	1	adj.锯齿状的
+12	piecemeal	12_1	1	adv.一件一件
+12	wrestle	12_1	1	v.摔角
+12	forecast	12_1	1	vt.&vi.预测
+12	commuter	12_1	1	n.通勤者
+13	propagate	13_1	1	vt.&vi.繁殖
+13	solitary	13_1	1	adj.孤独的
+13	metabolism	13_1	1	n.新陈代谢
+13	discard	13_1	1	n.丢牌
+13	asylum	13_1	1	n.收容所
+13	controversial	13_1	1	adj.引起争论的
+13	pinpoint	13_1	1	n.极小之物
+13	freak	13_1	1	n.怪人
+13	tumble	13_1	1	n.跌倒
+13	square	13_1	1	n.正方形
+14	mushroom	14_1	1	n.蘑菇
+14	slot	14_1	1	n.插槽
+14	fleeting	14_1	1	adj.飞逝的(疾驰的
+14	bore	14_1	1	vbl.忍受(动词bear的过去式)
+14	journal	14_1	1	n.杂志
+14	rehearse	14_1	1	vt.排演
+14	perspective	14_1	1	n.透视
+14	defer	14_1	1	vt.延期
+14	starve	14_1	1	v.使饿死
+14	discern	14_1	1	vt.&vi.辨别
+15	tally	15_1	1	n.计数器
+15	chamber	15_1	1	n.房间
+15	pessimism	15_1	1	n.悲观
+15	metallic	15_1	1	adj.金属的
+15	lagoon	15_1	1	n.泻湖(污泥贮留池
+15	surrender	15_1	1	vt.&vi.投降
+15	fascinating	15_1	1	adj.迷人的
+15	boycott	15_1	1	vt.抵制（贸易）
+15	allowance	15_1	1	n.津贴
+15	clockwise	15_1	1	adj.顺时针方向的
+16	prominent	16_1	1	adj.突出的
+16	cohesion	16_1	1	n.凝聚力
+16	sphinx	16_1	1	n.狮身人面像
+16	agreement	16_1	1	n.同意
+16	untold	16_1	1	adj.数不清的(没有说到的)
+16	incur	16_1	1	v.招致
+16	obscure	16_1	1	adj.微暗的
+16	compensate	16_1	1	vt.&vi.偿还
+16	trend	16_1	1	n.趋势
+16	reverent	16_1	1	adj.恭敬的
+17	entry	17_1	1	n.进入
+17	extravagant	17_1	1	adj.奢侈的
+17	questionnaire	17_1	1	n.调查表
+17	tenacious	17_1	1	adj.紧粘不放的
+17	restore	17_1	1	vt.恢复
+17	solidarity	17_1	1	n.团结
+17	sponge	17_1	1	n.海绵
+17	flourish	17_1	1	vi.繁荣
+17	scholarship	17_1	1	n.奖学金
+17	pastry	17_1	1	n.面粉糕饼
+18	swear	18_1	1	vt.&vi.发誓
+18	pageant	18_1	1	n.盛会
+18	incentive	18_1	1	adj.刺激的
+18	transit	18_1	1	n.经过
+18	conscience	18_1	1	n.良心
+18	herculean	18_1	1	adj.力大无比的
+18	reserve	18_1	1	vt.保留
+18	aerosol	18_1	1	n.喷雾剂
+18	granite	18_1	1	n.花岗岩
+18	neutral	18_1	1	adj.中立的
+19	interval	19_1	1	n.间隔
+19	source	19_1	1	n.来源
+19	publicity	19_1	1	n.公众的注意
+19	signpost	19_1	1	n.招牌柱
+19	impede	19_1	1	v.妨碍
+19	barrier	19_1	1	n.界线
+19	flabby	19_1	1	adj.软弱的
+19	commotion	19_1	1	n.骚动
+19	knob	19_1	1	n.把手
+19	bizarre	19_1	1	adj.奇异的
+20	contaminate	20_1	1	vt.弄脏
+20	cuff	20_1	1	n.袖口
+20	gallery	20_1	1	n.美术馆
+20	rigid	20_1	1	adj.僵硬的
+20	herb	20_1	1	n.药草
+20	liable	20_1	1	adj.有义务的
+20	skeleton	20_1	1	n.骨架
+20	subdue	20_1	1	v.使服从
+20	cunning	20_1	1	adj.狡猾的
+20	haste	20_1	1	n.匆忙
+21	taboo	21_1	1	n.禁忌
+21	tract	21_1	1	n.广阔的土地
+21	mercurial	21_1	1	n.水银剂
+21	request	21_1	1	n.要求
+21	salvage	21_1	1	n.救捞
+21	economic	21_1	1	adj.经济学的
+21	trivial	21_1	1	adj.琐碎的
+21	noxious	21_1	1	adj.有害的
+21	tick	21_1	1	vt.滴答声
+21	pier	21_1	1	n.码头
+22	nickname	22_1	1	n.绰号
+22	varied	22_1	1	adj.各种各样的
+22	literature	22_1	1	n.文学
+22	quiver	22_1	1	v.颤抖
+22	engage	22_1	1	v.从事
+22	triple	22_1	1	adj.三倍的
+22	pinch	22_1	1	n.捏
+22	deteriorate	22_1	1	vt.(使)恶化
+22	sham	22_1	1	n.假
+22	sore	22_1	1	adj.疼痛的
+23	deduct	23_1	1	vt.扣除
+23	durable	23_1	1	adj.耐用持久的
+23	subtract	23_1	1	vi.减少
+23	rouse	23_1	1	v.唤醒
+23	declaration	23_1	1	n.宣布
+23	dignity	23_1	1	n.尊严
+23	axis	23_1	1	n.轴
+23	decode	23_1	1	v.解码
+23	benzene	23_1	1	n.[化]苯
+23	downtown	23_1	1	n.市中心区
+24	deviation	24_1	1	n.偏差数
+24	blunt	24_1	1	adj.迟钝的
+24	commitment	24_1	1	n.承诺
+24	maximum	24_1	1	n.最大量
+24	numb	24_1	1	adj.麻木的
+24	specialize	24_1	1	vi.专门从事
+24	secular	24_1	1	n.牧师
+24	purchase	24_1	1	n.购买
+24	maneuver	24_1	1	n.演习
+24	undertake	24_1	1	vt.从事
+25	turbine	25_1	1	n.涡轮
+25	whence	25_1	1	adv.出于什么原因(从哪里)
+25	cafeteria	25_1	1	n.自助餐厅
+25	appropriate	25_1	1	adj.适当的
+25	bonus	25_1	1	n.红利
+25	adjacent	25_1	1	adj.毗连的
+25	potter	25_1	1	n.陶工
+25	amphibian	25_1	1	adj.两栖类的
+25	engross	25_1	1	v.使全神贯注
+25	intelligible	25_1	1	adj.可理解的
+26	temperament	26_1	1	n.气质
+26	fragrance	26_1	1	n.香味
+26	prophecy	26_1	1	n.预言
+26	irrigation	26_1	1	n.灌溉
+26	conversely	26_1	1	adv.相反地
+26	elegant	26_1	1	adj.优雅的
+26	chief	26_1	1	adj.首席的
+26	rough	26_1	1	adj.粗糙的
+26	permit	26_1	1	n.许可证
+26	summon	26_1	1	vt.召唤
+27	tuition	27_1	1	n.学费
+27	acquaint	27_1	1	vt.使...熟知
+27	realm	27_1	1	n.王国
+27	microbe	27_1	1	n.微生物
+27	perverse	27_1	1	adj.乖张的
+27	accordance	27_1	1	n.一致
+27	wrought	27_1	1	adj.锤炼的
+27	content	27_1	1	n.内容
+27	fastidious	27_1	1	adj.难取悦的
+27	buckle	27_1	1	n.皮带扣
+28	hinder	28_1	1	adj.后面的
+28	exclude	28_1	1	vt.排除
+28	contradiction	28_1	1	n.反驳
+28	salmon	28_1	1	adj.橙红色的
+28	gravitation	28_1	1	n.[物]万有引力
+28	chunk	28_1	1	n.厚块（片）
+28	average	28_1	1	adj.平均的
+28	congested	28_1	1	adj.拥挤的
+28	peak	28_1	1	n.山顶
+28	compass	28_1	1	n.指南针
+29	horizon	29_1	1	n.地平线
+29	suspect	29_1	1	vt.怀疑
+29	hail	29_1	1	n.冰雹
+29	remittance	29_1	1	n.汇款
+29	outrageous	29_1	1	adj.暴虐的
+29	textile	29_1	1	adj.纺织的
+29	cosmopolitan	29_1	1	adj.世界性的
+29	galaxy	29_1	1	n.银河
+29	reclaim	29_1	1	v.收回
+29	gimmick	29_1	1	n.暗机关
+30	consent	30_1	1	n.同意
+30	stuff	30_1	1	n.材料
+30	ubiquitous	30_1	1	adj.到处存在的
+30	morbid	30_1	1	adj.病态的
+30	rear	30_1	1	n.后面
+30	interior	30_1	1	adj.内部的
+30	plunder	30_1	1	v.掠夺
+30	utterly	30_1	1	adv.完全
+30	onus	30_1	1	n.负担
+30	tenable	30_1	1	adj.站得住脚的
+31	privilege	31_1	1	n.特权
+31	administrative	31_1	1	adj.行政的
+31	inmate	31_1	1	n.同住者
+31	nomad	31_1	1	n.游牧民族
+31	madden	31_1	1	v.使发狂
+31	distil	31_1	1	v.蒸馏
+31	reputable	31_1	1	adj.受好评的
+31	radar	31_1	1	n.雷达
+31	exile	31_1	1	n.放逐
+31	tamper	31_1	1	v.干预
+32	solidify	32_1	1	vt.使牢固
+32	precise	32_1	1	adj.精确的
+32	bounty	32_1	1	n.慷慨
+32	slogan	32_1	1	n.标语
+32	confluence	32_1	1	n.合流
+32	radius	32_1	1	n.半径
+32	brake	32_1	1	vi.刹车
+32	tonic	32_1	1	n.补药
+32	arithmetic	32_1	1	n.算术
+32	vibration	32_1	1	n.震动
+33	fellowship	33_1	1	n.友谊
+33	batter	33_1	1	n.面糊
+33	accounting	33_1	1	n.会计
+33	bamboo	33_1	1	n.竹
+33	deplete	33_1	1	vt.耗尽
+33	supersede	33_1	1	vt.取代
+33	moreover	33_1	1	adv.再者
+33	infertile	33_1	1	adj.贫瘠的
+33	abridge	33_1	1	vt.删节
+33	adverbial	33_1	1	adj.副词的
+34	pester	34_1	1	v.使烦恼
+34	toad	34_1	1	n.蟾蜍
+34	amaze	34_1	1	v.使吃惊
+34	elbow	34_1	1	n.手肘
+34	naive	34_1	1	adj.天真的
+34	accomplishment	34_1	1	n.成就
+34	petal	34_1	1	n.花瓣
+34	tournament	34_1	1	n.比赛
+34	pathological	34_1	1	adj.病理学的
+34	lethal	34_1	1	adj.致命的
+35	reef	35_1	1	n.暗礁
+35	thereby	35_1	1	adv.因此
+35	magnetic	35_1	1	adj.有磁性的
+35	ludicrous	35_1	1	adj.荒谬的
+35	subtle	35_1	1	adj.微妙的
+35	explicit	35_1	1	adj.明确的
+35	tuberculosis	35_1	1	n.肺结核
+35	necessitate	35_1	1	v.迫使
+35	verify	35_1	1	v.核实
+35	intonation	35_1	1	n.语调
+36	mandate	36_1	1	n.命令
+36	incongruous	36_1	1	adj.不协调的
+36	bumper	36_1	1	n.缓冲挡
+36	cute	36_1	1	adj.可爱的
+36	random	36_1	1	adj.任意的
+36	traction	36_1	1	n.拖
+36	complex	36_1	1	adj.复杂的
+36	dreary	36_1	1	adj.沉闷的
+36	verge	36_1	1	n.边缘
+36	prolific	36_1	1	adj.多产的
+37	react	37_1	1	vt.作出反应
+37	utter	37_1	1	adj.全然的
+37	ballet	37_1	1	n.芭蕾舞
+37	enthusiastic	37_1	1	adj.热情的
+37	considerate	37_1	1	adj.考虑周到的
+37	slippery	37_1	1	adj.滑的
+37	corresponding	37_1	1	adj.相应的
+37	telling	37_1	1	adj.显著的
+37	bursar	37_1	1	n.会计
+37	intersection	37_1	1	n.交集
+38	mucous	38_1	1	adj.黏液的
+38	naval	38_1	1	adj.海军的
+38	parachute	38_1	1	n.降落伞
+38	permeate	38_1	1	v.弥漫
+38	aptitude	38_1	1	n.才能
+38	subtitle	38_1	1	n.副题(书本中的)
+38	reflect	38_1	1	v.反映
+38	patio	38_1	1	n.天井(庭院)
+38	tutorial	38_1	1	n.个别指导
+38	shear	38_1	1	n.修剪
+39	foremost	39_1	1	adj.最重要的
+39	inattention	39_1	1	n.不注意
+39	tough	39_1	1	adj.强硬的
+39	perspire	39_1	1	v.出汗
+39	studio	39_1	1	n.工作场所
+39	knot	39_1	1	n.结
+39	badge	39_1	1	n.徽章
+39	luxury	39_1	1	n.奢侈
+39	recommend	39_1	1	vt.建议
+39	frown	39_1	1	n.皱眉
+40	badminton	40_1	1	n.羽毛球
+40	crack	40_1	1	vt.使破裂
+40	prostrate	40_1	1	adj.拜倒的
+40	otherwise	40_1	1	adv.否则
+40	squirt	40_1	1	v.喷出
+40	chill	40_1	1	n.寒冷
+40	mole	40_1	1	n.痣
+40	exterminate	40_1	1	vt.扑灭
+40	complexion	40_1	1	n.外观
+40	plaintive	40_1	1	adj.悲哀的
+41	cabinet	41_1	1	n.橱柜
+41	fiction	41_1	1	n.小说
+41	aroma	41_1	1	n.浓香
+41	phenomenon	41_1	1	n.现象
+41	deadly	41_1	1	adj.致命的
+41	mercy	41_1	1	n.怜悯
+41	skip	41_1	1	n.跳跃
+41	neglect	41_1	1	vt.忽视
+41	prey	41_1	1	n.被掠食者
+41	intermittent	41_1	1	adj.间歇的
+42	suspense	42_1	1	n.悬念
+42	venerable	42_1	1	adj.庄严的
+42	luxurious	42_1	1	adj.奢侈的
+42	intensify	42_1	1	vt.增强
+42	thunder	42_1	1	n.雷电
+42	friction	42_1	1	n.摩擦
+42	glimmer	42_1	1	n.一丝光线
+42	partake	42_1	1	vi.分担
+42	strenuous	42_1	1	adj.紧张的
+42	occasional	42_1	1	adj.偶然的
+43	considerable	43_1	1	adj.相当大的
+43	aid	43_1	1	n.帮助
+43	intervene	43_1	1	vi.插入
+43	compound	43_1	1	n.混合物
+43	ecology	43_1	1	n.生态学
+43	melodious	43_1	1	adj.旋律美妙的
+43	outcry	43_1	1	n.强烈抗议
+43	behalf	43_1	1	n.代表
+43	loan	43_1	1	n.贷款
+43	bribe	43_1	1	n.贿赂
+44	mighty	44_1	1	adj.强有力的
+44	mutual	44_1	1	adj.共同的
+44	informative	44_1	1	adj.情报的
+44	collision	44_1	1	n.碰撞
+44	furrow	44_1	1	n.犁沟
+44	inevitable	44_1	1	adj.不可避免的
+44	ego	44_1	1	n.自我
+44	errand	44_1	1	n.差使
+44	tempo	44_1	1	n.拍子
+44	nuance	44_1	1	n.(声音、感觉、外貌或意义等方面的)细微差别
+45	nitrogen	45_1	1	n.氮
+45	budget	45_1	1	n.预算
+45	glutinous	45_1	1	adj.粘性的
+45	jellyfish	45_1	1	n.水母
+45	detract	45_1	1	vi.减损
+45	metallurgy	45_1	1	n.冶金学
+45	smother	45_1	1	v.使...喘不过气
+45	doom	45_1	1	n.命运
+45	plantation	45_1	1	n.种植园
+45	constabulary	45_1	1	adj.警察的
+46	payroll	46_1	1	n.工资单
+46	voluptuous	46_1	1	adj.激起性欲的
+46	tag	46_1	1	n.标签
+46	layout	46_1	1	n.布局
+46	chic	46_1	1	n.别致的款式
+46	quash	46_1	1	v.压碎
+46	trail	46_1	1	n.踪迹
+46	deck	46_1	1	n.甲板
+46	concentric	46_1	1	adj.同中心的
+46	cultural	46_1	1	adj.文化的
+47	obvious	47_1	1	adj.明显的
+47	cell	47_1	1	n.细胞
+47	assured	47_1	1	adj.保障的
+47	incidentally	47_1	1	adv.偶然地
+47	strip	47_1	1	vi.剥光
+47	contest	47_1	1	n.竞赛
+47	dub	47_1	1	v.配音
+47	quest	47_1	1	n.探索
+47	err	47_1	1	v.犯错
+47	layman	47_1	1	n.门外汉
+48	revive	48_1	1	vt.使重生
+48	equipment	48_1	1	n.设备
+48	deliberate	48_1	1	adj.故意的
+48	devise	48_1	1	vt.设计
+48	collaboration	48_1	1	n.合作
+48	femur	48_1	1	n.大腿骨
+48	superb	48_1	1	adj.极好的
+48	supplement	48_1	1	n.补充物
+48	appreciate	48_1	1	vt.欣赏
+48	margin	48_1	1	n.差额
+49	crooked	49_1	1	adj.弯曲的
+49	reign	49_1	1	n.执政
+49	laborious	49_1	1	adj.艰苦的
+49	voluntary	49_1	1	adj.自愿的
+49	ownership	49_1	1	n.所有权
+49	terrify	49_1	1	v.使害怕
+49	rhetoric	49_1	1	n.修辞
+49	mythology	49_1	1	n.神话
+49	swift	49_1	1	adj.快的
+49	chaos	49_1	1	n.混乱
+50	finicky	50_1	1	adj.苛求的(过分讲究的
+50	paranoia	50_1	1	n.[心]妄想狂
+50	furnish	50_1	1	vt.布置
+50	idle	50_1	1	adj.闲散的
+50	intimate	50_1	1	adj.亲密的
+50	wreathe	50_1	1	v.环绕
+50	carp	50_1	1	n.鲤鱼
+50	diagnose	50_1	1	v.诊断
+50	explosive	50_1	1	adj.爆炸(性)的
+50	posthumous	50_1	1	adj.死后的
+51	imprison	51_1	1	v.使...下狱
+51	escort	51_1	1	n.护送者
+51	drought	51_1	1	n.干旱
+51	prostitute	51_1	1	n.娼妓
+51	dramatic	51_1	1	adj.戏剧性的
+51	oar	51_1	1	n.桨
+51	temporary	51_1	1	adj.暂时的
+51	sole	51_1	1	adj.唯一的
+51	liquor	51_1	1	n.酒
+51	fade	51_1	1	vi.褪色
+52	attendance	52_1	1	n.出席
+52	crust	52_1	1	n.外壳
+52	monopoly	52_1	1	n.垄断
+52	article	52_1	1	n.文章
+52	grim	52_1	1	adj.冷酷的
+52	outdated	52_1	1	adj.旧式的
+52	mansion	52_1	1	n.大厦
+52	dominate	52_1	1	v.支配
+52	souvenir	52_1	1	n.纪念品
+52	fathom	52_1	1	n.测量深度
+53	affix	53_1	1	v.使...附于
+53	precarious	53_1	1	adj.不确定的
+53	autonomous	53_1	1	adj.自治的
+53	rendezvous	53_1	1	n.约会
+53	hilarious	53_1	1	adj.欢闹的
+53	immigrant	53_1	1	n.移民
+53	dole	53_1	1	n.施舍品
+53	downfall	53_1	1	n.垮台
+53	yearn	53_1	1	v.渴望
+53	numerate	53_1	1	vt.数
+54	retort	54_1	1	v.反驳
+54	homogeneous	54_1	1	adj.同种的
+54	alleviate	54_1	1	vt.减轻
+54	overhear	54_1	1	v.无意中听到
+54	conceive	54_1	1	vt.&vi.构思
+54	solvent	54_1	1	n.溶剂
+54	confirm	54_1	1	v.确定
+54	cardinal	54_1	1	n.红衣主教
+54	pertain	54_1	1	vi.从属
+54	manifold	54_1	1	adj.多种的
+55	engagement	55_1	1	n.诺言
+55	monotonous	55_1	1	adj.单调的
+55	redeem	55_1	1	vt.赎回
+55	fling	55_1	1	n.投掷
+55	harass	55_1	1	v.使...困扰
+55	missile	55_1	1	n.导弹
+55	lurk	55_1	1	n.潜伏
+55	census	55_1	1	n.户口普查
+55	magnificent	55_1	1	adj.壮丽的
+55	defraud	55_1	1	vt.欺骗
+56	assert	56_1	1	vt.主张
+56	alluvial	56_1	1	adj.[地质]冲积的
+56	indefinite	56_1	1	adj.模糊的
+56	fickle	56_1	1	adj.变幻无常的
+56	perimeter	56_1	1	n.周长
+56	scheme	56_1	1	n.方案
+56	spatial	56_1	1	adj.空间的
+56	pyrite	56_1	1	n.黄铁矿
+56	notorious	56_1	1	adj.臭名昭著的
+56	enterprise	56_1	1	n.企业
+57	shutter	57_1	1	n.快门
+57	sue	57_1	1	vt.控告
+57	metaphor	57_1	1	n.隐喻
+57	detain	57_1	1	vt.扣留
+57	crisp	57_1	1	adj.脆的
+57	foible	57_1	1	n.小缺点
+57	inertia	57_1	1	n.惯性
+57	essential	57_1	1	adj.必要的
+57	ranking	57_1	1	n.名次
+57	concerted	57_1	1	adj.商议好的
+58	prosperous	58_1	1	adj.繁荣的
+58	scout	58_1	1	n.童子军
+58	languid	58_1	1	adj.不活泼的
+58	disreputable	58_1	1	adj.声名狼籍的
+58	messy	58_1	1	adj.散乱的
+58	potion	58_1	1	n.一服
+58	weave	58_1	1	v.编织
+58	excerpt	58_1	1	n.摘录
+58	slit	58_1	1	n.裂缝
+58	legend	58_1	1	n.传说
+59	chromosome	59_1	1	n.染色体
+59	slab	59_1	1	n.平板
+59	congestion	59_1	1	n.混杂
+59	groove	59_1	1	n.凹槽
+59	soothe	59_1	1	v.缓和
+59	gloss	59_1	1	n.光彩
+59	minority	59_1	1	n.少数
+59	inherit	59_1	1	vi.继承
+59	devastating	59_1	1	adj.毁灭性的
+59	jail	59_1	1	n.监牢
+60	preoperative	60_1	1	adj.操作前的(外科手术前的)
+60	pry	60_1	1	v.打听
+60	string	60_1	1	n.线
+60	claim	60_1	1	vt.要求
+60	bump	60_1	1	n.撞击
+60	detergent	60_1	1	n.清洁剂
+60	revelation	60_1	1	n.揭露
+60	incredible	60_1	1	adj.难以置信的
+60	resource	60_1	1	n.资源
+60	graveyard	60_1	1	n.墓地
+61	deplore	61_1	1	vt.悲叹
+61	chord	61_1	1	n.弦
+61	compile	61_1	1	v.编译
+61	shaft	61_1	1	n.轴
+61	decimal	61_1	1	adj.十进位的
+61	fairly	61_1	1	adj.相当地
+61	taxation	61_1	1	n.课税
+61	heighten	61_1	1	v.增高
+61	institution	61_1	1	n.机构
+61	burrow	61_1	1	n.(兔子等)所掘的地洞
+62	meagre	62_1	1	adj.微薄的
+62	dearth	62_1	1	n.缺乏
+62	upgrade	62_1	1	vt.提高
+62	automatic	62_1	1	adj.自动的
+62	vary	62_1	1	vt.改变
+62	ramification	62_1	1	n.分枝
+62	oust	62_1	1	v.逐出
+62	masterpiece	62_1	1	n.杰作
+62	charter	62_1	1	n.特许(状)
+62	regardless	62_1	1	adv.不顾
+63	shrewd	63_1	1	adj.精明的
+63	valid	63_1	1	adj.有效的
+63	insure	63_1	1	vt.保险
+63	tar	63_1	1	n.焦油
+63	hub	63_1	1	n.毂
+63	harbour	63_1	1	n.海港
+63	absorb	63_1	1	v.吸收
+63	strain	63_1	1	n.张力
+63	hence	63_1	1	adv.因此
+63	fantastic	63_1	1	adj.极好的
+64	gleam	64_1	1	n.微弱的闪光
+64	inference	64_1	1	n.推理
+64	discharge	64_1	1	vt.&vi.放出
+64	plaster	64_1	1	n.石膏
+64	arthritis	64_1	1	n.关节炎
+64	amuse	64_1	1	v.娱乐
+64	gradual	64_1	1	adj.逐渐的
+64	cruise	64_1	1	n.巡航
+64	bitter	64_1	1	adj.苦的
+64	objective	64_1	1	adj.客观的
+65	convene	65_1	1	v.集合
+65	uprising	65_1	1	n.起义
+65	flaw	65_1	1	n.缺点
+65	normalize	65_1	1	v.使常态化
+65	procure	65_1	1	vt.获得
+65	integral	65_1	1	adj.完整的
+65	oblique	65_1	1	adj.间接的
+65	denomination	65_1	1	n.名称
+65	quality	65_1	1	n.品质
+65	wedge	65_1	1	n.楔子
+66	potent	66_1	1	adj.强有力的
+66	entity	66_1	1	n.存在
+66	employment	66_1	1	n.雇用
+66	decorate	66_1	1	vt.装饰
+66	gasp	66_1	1	n.喘气
+66	mirage	66_1	1	n.海市蜃楼
+66	trample	66_1	1	n.踩踏
+66	coherent	66_1	1	adj.连贯的
+66	gaunt	66_1	1	adj.憔悴的
+66	vehement	66_1	1	adj.激烈的
+67	sexual	67_1	1	adj.性的
+67	innards	67_1	1	n.内部结构
+67	alienate	67_1	1	v.使...疏远
+67	prosecute	67_1	1	vt.对...提起公诉
+67	roar	67_1	1	n.吼
+67	sluggish	67_1	1	adj.懒惰的
+67	misgiving	67_1	1	n.疑虑
+67	outdo	67_1	1	vt.超过
+67	enrol	67_1	1	vt.登记
+67	relate	67_1	1	vt.&vi.（把…）联系起来
+68	curriculum	68_1	1	n.课程
+68	conduct	68_1	1	n.行为
+68	mandatory	68_1	1	adj.强制性的
+68	fortnight	68_1	1	n.两星期
+68	strategic	68_1	1	adj.战略的
+68	septic	68_1	1	adj.腐败的
+68	thirst	68_1	1	v.渴望
+68	dessert	68_1	1	n.甜食
+68	generate	68_1	1	vt.产生
+68	abbreviate	68_1	1	vt.缩写
+69	rupture	69_1	1	v.使破裂
+69	maternal	69_1	1	adj.母亲的
+69	ethnic	69_1	1	adj.民族的
+69	architecture	69_1	1	n.建筑学
+69	convey	69_1	1	vt.传达
+69	spiral	69_1	1	n.旋涡
+69	notch	69_1	1	n.刻痕
+69	thumb	69_1	1	n.拇指
+69	modify	69_1	1	vt.修改
+69	outfit	69_1	1	n.用具
+70	steadfast	70_1	1	adj.坚定的
+70	disguise	70_1	1	vt.假装
+70	martial	70_1	1	adj.军事的
+70	cue	70_1	1	n.线索
+70	barbecue	70_1	1	n.烤肉
+70	illustration	70_1	1	n.插图
+70	unthinkable	70_1	1	adj.不能想的
+70	pygmy	70_1	1	n.矮人
+70	allot	70_1	1	vt.分配
+70	flap	70_1	1	n.拍打
+71	terminal	71_1	1	n.终点
+71	botany	71_1	1	n.植物学
+71	volunteer	71_1	1	n.志愿者
+71	deform	71_1	1	v.使...残缺
+71	deflect	71_1	1	vt.使转向
+71	protein	71_1	1	adj.蛋白质的
+71	prescription	71_1	1	n.药方
+71	confusion	71_1	1	n.混乱
+71	pimple	71_1	1	n.丘疹
+71	incinerator	71_1	1	n.焚烧炉
+72	ascent	72_1	1	n.上升
+72	optimism	72_1	1	n.&adj.乐观
+72	percentage	72_1	1	n.百分率
+72	indicator	72_1	1	n.指示器
+72	bulletin	72_1	1	n.公示
+72	periodical	72_1	1	n.期刊
+72	resentment	72_1	1	n.怨恨
+72	expire	72_1	1	vi.期满
+72	ephemeral	72_1	1	adj.朝生暮死的
+72	fleet	72_1	1	n.船队
+73	harangue	73_1	1	n.长篇演说
+73	outset	73_1	1	n.开始
+73	trainee	73_1	1	n.练习生
+73	ignition	73_1	1	n.点火
+73	defile	73_1	1	vt.弄脏
+73	toneless	73_1	1	adj.单调的
+73	segregate	73_1	1	adj.分离的
+73	interpreter	73_1	1	n.译员
+73	devote	73_1	1	vt.投入于
+73	flow	73_1	1	vi.流
+74	symphony	74_1	1	n.交响乐
+74	shelve	74_1	1	vt.搁置
+74	retain	74_1	1	vt.保持
+74	zeal	74_1	1	n.热情
+74	limb	74_1	1	n.树枝
+74	illiterate	74_1	1	adj.文盲的
+74	detrimental	74_1	1	adj.有害的
+74	leap	74_1	1	n.跳跃
+74	defiance	74_1	1	n.蔑视
+74	divert	74_1	1	vt.转移
+75	transform	75_1	1	vt.转换
+75	adjoin	75_1	1	v.邻接
+75	consciousness	75_1	1	n.意识
+75	ripen	75_1	1	v.(使)成熟
+75	contemporary	75_1	1	n.同时代的人
+75	decipher	75_1	1	vt.译解
+75	parade	75_1	1	n.游行
+75	sewage	75_1	1	n.脏水
+75	swamp	75_1	1	n.沼泽
+75	conjunction	75_1	1	n.连词
+76	scrap	76_1	1	n.小片
+76	circumstance	76_1	1	n.环境
+76	asthma	76_1	1	n.哮喘
+76	highlight	76_1	1	n.加亮区
+76	predecessor	76_1	1	n.前辈
+76	butterfly	76_1	1	n.蝴蝶
+76	disentangle	76_1	1	v.解开
+76	desert	76_1	1	n.沙漠
+76	proclaim	76_1	1	vt.正式宣布
+76	apt	76_1	1	adj.恰当的
+77	dismiss	77_1	1	vt.开除
+77	scalpel	77_1	1	n.外科手术刀
+77	vindicate	77_1	1	vt.维护
+77	underwrite	77_1	1	vt.写在...下面
+77	impressive	77_1	1	adj.给人深刻印象的
+77	harmony	77_1	1	n.和睦
+77	sparkle	77_1	1	n.闪耀
+77	scratch	77_1	1	vt.&vi.抓
+77	infant	77_1	1	n.婴儿
+77	fare	77_1	1	n.费用
+78	deduce	78_1	1	vt.演绎
+78	prejudice	78_1	1	n.偏见
+78	jumble	78_1	1	vi.掺杂
+78	bare	78_1	1	adj.赤裸的
+78	superstructure	78_1	1	n.上层建筑
+78	tranquility	78_1	1	n.宁静
+78	counselor	78_1	1	n.顾问
+78	influx	78_1	1	n.流入
+78	worthwhile	78_1	1	adj.值得(做)的
+78	elsewhere	78_1	1	adv.在别处
+79	ritual	79_1	1	n.仪式
+79	grieve	79_1	1	v.使...悲伤
+79	plateau	79_1	1	n.高原;平稳;稳定状态
+79	entertainment	79_1	1	n.娱乐
+79	aesthetic	79_1	1	adj.美学的
+79	surgery	79_1	1	n.外科手术
+79	affluent	79_1	1	adj.富裕的
+79	version	79_1	1	n.版本
+79	cellulose	79_1	1	n.纤维素
+79	reveal	79_1	1	vt.显示
+80	anyhow	80_1	1	adv.无论如何
+80	significant	80_1	1	adj.有意义的
+80	calibrate	80_1	1	v.测定口径
+80	route	80_1	1	n.路线
+80	elicit	80_1	1	vt.引出
+80	forensic	80_1	1	adj.法院的
+80	dangle	80_1	1	v.摇晃地悬挂着
+80	sicken	80_1	1	v.患病
+80	oath	80_1	1	n.誓言
+80	spit	80_1	1	v.唾吐
+81	reconsider	81_1	1	v.重新考虑
+81	formality	81_1	1	n.礼节
+81	seminar	81_1	1	n.(大学的)研究班
+81	rejoice	81_1	1	v.使...欢喜
+81	ketchup	81_1	1	n.蕃茄酱
+81	quaint	81_1	1	adj.古雅的
+81	withstand	81_1	1	vt.对抗
+81	resign	81_1	1	vi.辞职
+81	masquerade	81_1	1	n.化妆舞会
+81	sake	81_1	1	n.缘故
+82	eject	82_1	1	vt.喷出
+82	rehabilitate	82_1	1	vt.使恢复
+82	skew	82_1	1	adj.斜交的(不对称的
+82	cereal	82_1	1	adj.谷类(的)
+82	vaccine	82_1	1	n.疫苗
+82	onlooker	82_1	1	n.旁观者
+82	thermal	82_1	1	adj.热的
+82	pulp	82_1	1	n.果肉
+82	amid	82_1	1	prep.在其间
+82	lenient	82_1	1	adj.宽大的
+83	sentiment	83_1	1	n.感情
+83	fusion	83_1	1	n.融合物
+83	climactic	83_1	1	adj.高潮的
+83	pathos	83_1	1	n.感伤
+83	vortex	83_1	1	n.漩涡
+83	overweight	83_1	1	adj.超重的
+83	motel	83_1	1	n.汽车旅馆
+83	guardian	83_1	1	n.保护人
+83	inestimable	83_1	1	adj.无价的
+83	embryo	83_1	1	n.胚胎
+84	ability	84_1	1	n.才能
+84	ethereal	84_1	1	adj.轻巧的
+84	polish	84_1	1	n.磨光
+84	ostentation	84_1	1	n.卖弄
+84	register	84_1	1	v.登记
+84	oncoming	84_1	1	adj.接近的
+84	poise	84_1	1	n.平衡
+84	dart	84_1	1	n.飞镖
+84	esteem	84_1	1	n.尊敬
+84	entrepreneur	84_1	1	n.企业家
+85	odour	85_1	1	n.气味
+85	inexorable	85_1	1	adj.不为所动的
+85	pastime	85_1	1	n.消遣
+85	comment	85_1	1	n.评论
+85	inquiry	85_1	1	n.打听
+85	evict	85_1	1	v.驱逐
+85	aspirin	85_1	1	n.阿斯匹林
+85	prefabricate	85_1	1	vt.预先建造组合
+85	extent	85_1	1	n.成都
+85	smooth	85_1	1	adj.平稳的
+86	preparatory	86_1	1	adj.预备的
+86	adhere	86_1	1	vi.坚守于
+86	agenda	86_1	1	n.议事日程
+86	explosion	86_1	1	n.爆炸
+86	murmur	86_1	1	n.低语
+86	volcano	86_1	1	n.火山
+86	sway	86_1	1	n.摇摆
+86	inaugurate	86_1	1	v.举行就职典礼
+86	module	86_1	1	n.[计算机]模块
+86	inhabit	86_1	1	v.居住于
+87	attach	87_1	1	v.附上
+87	accomplish	87_1	1	vt.完成
+87	equity	87_1	1	n.权益
+87	reshuffle	87_1	1	vt.再洗牌
+87	wage	87_1	1	n.薪水
+87	equitable	87_1	1	adj.公平的
+87	occupational	87_1	1	adj.职业的
+87	cavity	87_1	1	n.洞
+87	mock	87_1	1	n.嘲笑
+87	mischance	87_1	1	n.不幸
+88	upright	88_1	1	adj.正直的
+88	coastal	88_1	1	adj.海岸的
+88	continuity	88_1	1	n.连续性
+88	aspiration	88_1	1	n.热望
+88	solar	88_1	1	adj.太阳的
+88	cassette	88_1	1	n.匣子
+88	versatile	88_1	1	adj.多才多艺的
+88	hearing	88_1	1	n.听力
+88	deceive	88_1	1	vt.欺骗
+88	confer	88_1	1	vi.商讨
+89	jelly	89_1	1	n.果冻
+89	mystify	89_1	1	v.神秘化
+89	dubious	89_1	1	adj.可疑的
+89	function	89_1	1	n.功能
+89	formidable	89_1	1	adj.强大的
+89	trumpet	89_1	1	n.喇叭
+89	bust	89_1	1	n.胸围
+89	fanatic	89_1	1	adj.狂热的
+89	wander	89_1	1	vt.闲逛走过
+89	versus	89_1	1	adj.对抗
+90	infection	90_1	1	n.传染
+90	invigilate	90_1	1	v.监考
+90	obligate	90_1	1	v.使负义务
+90	drawback	90_1	1	n.不利点
+90	tremendous	90_1	1	adj.巨大的
+90	bald	90_1	1	adj.秃头的
+90	creation	90_1	1	n.创造
+90	rectify	90_1	1	vt.订正
+90	accuse	90_1	1	vt.控告
+90	monologue	90_1	1	n.独白
+91	spacious	91_1	1	adj.广阔的
+91	consultant	91_1	1	n.顾问
+91	sturdy	91_1	1	adj.强健的
+91	exceedingly	91_1	1	adv.非常(极其
+91	rescue	91_1	1	n.援救
+91	boost	91_1	1	n.推进
+91	trustworthy	91_1	1	adj.可信赖的
+91	surcharge	91_1	1	n.装载过多
+91	obscene	91_1	1	adj.淫秽的
+91	migrate	91_1	1	v.迁移
+92	superstition	92_1	1	n.迷信
+92	invoice	92_1	1	n.发票
+92	drainage	92_1	1	v.排水
+92	bilateral	92_1	1	adj.双边的
+92	tongue	92_1	1	n.舌头
+92	legislate	92_1	1	vi.制定法律
+92	perfume	92_1	1	n.香水
+92	pendulum	92_1	1	n.摆
+92	notional	92_1	1	adj.虚的
+92	boast	92_1	1	n.吹牛
+93	research	93_1	1	n.调查
+93	prototype	93_1	1	n.原型
+93	idiot	93_1	1	n.白痴
+93	diplomatic	93_1	1	adj.外交的
+93	nylon	93_1	1	n.尼龙
+93	hound	93_1	1	n.猎狗
+93	domestic	93_1	1	adj.国内的
+93	emit	93_1	1	v.发出
+93	impulse	93_1	1	n.冲动
+93	susceptible	93_1	1	n.易受影响者
+94	creep	94_1	1	vi.爬
+94	influence	94_1	1	vt.影响
+94	insight	94_1	1	n.洞察力
+94	hemisphere	94_1	1	n.半球
+94	grin	94_1	1	n.露齿笑
+94	centrifugal	94_1	1	adj.离心的
+94	tempt	94_1	1	v.诱惑
+94	carpentry	94_1	1	n.木工手艺
+94	migrant	94_1	1	n.移居者
+94	orientate	94_1	1	vt.给...定位
+95	reel	95_1	1	n.卷筒
+95	advocate	95_1	1	vt.提倡
+95	warrior	95_1	1	n.勇士
+95	latter	95_1	1	adj.后面的
+95	coed	95_1	1	n.男女同校的女生
+95	resilient	95_1	1	adj.有弹力的
+95	mineral	95_1	1	adj.矿物的
+95	downpour	95_1	1	n.倾盆大雨
+95	aquatic	95_1	1	n.水生动物
+95	hive	95_1	1	n.蜂房
+96	pointed	96_1	1	adj.尖的
+96	voucher	96_1	1	n.证人
+96	vicious	96_1	1	adj.恶毒的
+96	prompt	96_1	1	adj.迅速的
+96	plight	96_1	1	n.困境
+96	precedence	96_1	1	n.优先
+96	foam	96_1	1	n.泡沫
+96	furnace	96_1	1	n.炉子
+96	cartography	96_1	1	n.地图制作
+96	inflation	96_1	1	n.膨胀
+97	nominee	97_1	1	n.被提名的人
+97	mode	97_1	1	n.方式
+97	cosmos	97_1	1	n.宇宙
+97	minister	97_1	1	n.部长
+97	discreet	97_1	1	adj.谨慎的
+97	designate	97_1	1	adj.指定的
+97	trace	97_1	1	n.痕迹
+97	nostril	97_1	1	n.鼻孔
+97	applicant	97_1	1	n.申请人
+97	forfeit	97_1	1	n.没收物
+98	fragile	98_1	1	adj.易碎的
+98	degenerate	98_1	1	adj.堕落的
+98	conservative	98_1	1	adj.保守的
+98	jerk	98_1	1	n.性情古怪的人
+98	scrutiny	98_1	1	n.研究(推敲)
+98	trench	98_1	1	n.沟
+98	coerce	98_1	1	vt.强制
+98	chapel	98_1	1	n.小礼拜堂
+98	argument	98_1	1	n.争论
+98	tunnel	98_1	1	n.隧道
+99	preserve	99_1	1	vt.保护
+99	cosmic	99_1	1	adj.宇宙的
+99	dawn	99_1	1	n.破晓
+99	component	99_1	1	n.元件
+99	categorize	99_1	1	vt.分类
+99	layoff	99_1	1	n.临时解雇
+99	violate	99_1	1	vt.违犯
+99	problematic	99_1	1	adj.问题的
+99	prehistoric	99_1	1	adj.史前的
+99	dismay	99_1	1	n.沮丧
+100	whiting	100_1	1	n.白粉
+100	superficial	100_1	1	adj.表面的
+100	savage	100_1	1	adj.野性的
+100	allude	100_1	1	vi.暗示
+100	corrode	100_1	1	v.使腐蚀
+100	landscape	100_1	1	n.风景
+100	paralysis	100_1	1	n.瘫痪
+100	maize	100_1	1	n.玉米
+100	scurry	100_1	1	vt.快跑(飞散)
+100	organism	100_1	1	n.生物体
+101	vat	101_1	1	n.增值税
+101	cyclic	101_1	1	adj.循环的
+101	queue	101_1	1	n.行列
+101	excavate	101_1	1	v.挖掘
+101	helmet	101_1	1	n.头盔
+101	invert	101_1	1	v.使反向;使倒置
+101	zoology	101_1	1	n.动物学
+101	translucent	101_1	1	adj.半透明的
+101	tacit	101_1	1	adj.心照不宣的
+101	spark	101_1	1	n.火花
+102	insolent	102_1	1	adj.粗野的
+102	ungainly	102_1	1	adj.笨拙的
+102	submission	102_1	1	n.服从
+102	philosophy	102_1	1	n.哲学
+102	declare	102_1	1	vt.&vi.宣布
+102	embankment	102_1	1	n.堤防
+102	exclusively	102_1	1	adv.排他地
+102	expenditure	102_1	1	n.(时间、劳力、金钱等)支出
+102	assemble	102_1	1	vt.聚集
+102	estimate	102_1	1	n.估计
+103	flame	103_1	1	n.火焰
+103	masculinity	103_1	1	n.男性
+103	clash	103_1	1	n.冲突
+103	gene	103_1	1	n.基因
+103	boutique	103_1	1	n.专卖流行衣服的小商店
+103	coincidence	103_1	1	n.巧合
+103	technical	103_1	1	adj.技术的
+103	stock	103_1	1	n.股份
+103	dock	103_1	1	n.码头
+103	campaign	103_1	1	n.战役;运动
+104	incline	104_1	1	v.倾斜
+104	bruise	104_1	1	n.瘀青
+104	vast	104_1	1	adj.广阔的
+104	timber	104_1	1	n.木材
+104	hardware	104_1	1	n.(计算机)硬件
+104	renew	104_1	1	vt.使更新
+104	tangle	104_1	1	n.缠结
+104	recreation	104_1	1	n.消遣
+104	audience	104_1	1	n.听众
+104	uphold	104_1	1	v.支撑
+105	depress	105_1	1	vt.使...沮丧
+105	pliable	105_1	1	adj.易曲折的
+105	terror	105_1	1	n.恐怖
+105	ingot	105_1	1	n.[冶金]锭
+105	handcuff	105_1	1	n.手拷
+105	drastic	105_1	1	adj.激烈的
+105	carbohydrate	105_1	1	n.碳水化合物
+105	suspension	105_1	1	n.悬挂
+105	abound	105_1	1	v.富于
+105	sterilize	105_1	1	vt.使不育
+106	novelty	106_1	1	n.新奇
+106	suitcase	106_1	1	n.手提箱
+106	border	106_1	1	n.边缘
+106	ceramic	106_1	1	adj.陶器的
+106	wasp	106_1	1	n.黄蜂
+106	tolerable	106_1	1	adj.可容忍的
+106	thyroid	106_1	1	n.甲状腺
+106	caustic	106_1	1	adj.腐蚀性的
+106	assurance	106_1	1	n.保证
+106	profit	106_1	1	n.利润
+107	sting	107_1	1	n.刺痛
+107	ferry	107_1	1	n.渡船
+107	emphasize	107_1	1	v.强调
+107	hurdle	107_1	1	n.栏干
+107	ovation	107_1	1	n.热烈欢迎
+107	sled	107_1	1	n.雪撬
+107	infirmary	107_1	1	n.医务室
+107	magnate	107_1	1	n.大资本家
+107	thigh	107_1	1	n.大腿
+107	meticulous	107_1	1	adj.一丝不苟的
+108	render	108_1	1	vt.使成为
+108	multiple	108_1	1	adj.许多
+108	pacify	108_1	1	vt.使...平静
+108	lapse	108_1	1	n.过失
+108	refreshing	108_1	1	adj.使清爽的
+108	migratory	108_1	1	adj.迁移的
+108	topsoil	108_1	1	n.表层土
+108	opt	108_1	1	vi.选择
+108	brittle	108_1	1	adj.易碎的
+108	worship	108_1	1	n.崇拜
+109	participant	109_1	1	n.参加者
+109	avert	109_1	1	vt.转开
+109	medieval	109_1	1	adj.中世纪的
+109	heed	109_1	1	n.注意
+109	proposal	109_1	1	n.提议
+109	massacre	109_1	1	n.大屠杀
+109	criticism	109_1	1	n.批评
+109	snowbound	109_1	1	adj.被雪封住的(被雪围住的
+109	grit	109_1	1	n.砂砾
+109	tile	109_1	1	n.砖瓦
+110	electronics	110_1	1	n.电子学
+110	professional	110_1	1	adj.职业(上)的
+110	extreme	110_1	1	adj.极度的
+110	comedy	110_1	1	n.喜剧
+110	perceive	110_1	1	v.察觉
+110	antiquated	110_1	1	adj.陈旧的
+110	municipal	110_1	1	adj.市的
+110	irritate	110_1	1	vt.&vi.激怒
+110	pellet	110_1	1	n.小球
+110	hubbub	110_1	1	n.嘈杂
+111	buffalo	111_1	1	n.水牛
+111	warehouse	111_1	1	n.仓库
+111	dolphin	111_1	1	n.海豚
+111	cumbersome	111_1	1	adj.笨重的
+111	compatible	111_1	1	adj.能共处的
+111	hurl	111_1	1	v.用力投掷
+111	standing	111_1	1	adj.直立的
+111	attractive	111_1	1	adj.有吸引力的
+111	historian	111_1	1	n.历史学家
+111	selection	111_1	1	n.选择
+112	advent	112_1	1	n.出现
+112	spokesman	112_1	1	n.发言人
+112	modulate	112_1	1	v.调整
+112	ventilation	112_1	1	n.通风处
+112	tilt	112_1	1	vi.倾斜
+112	poke	112_1	1	n.刺
+112	exhaust	112_1	1	v.耗尽
+112	lament	112_1	1	n.悲叹
+112	innocuous	112_1	1	adj.无害的
+112	veto	112_1	1	n.否决权
+113	slag	113_1	1	n.熔渣
+113	gratuity	113_1	1	n.赠物
+113	equivocal	113_1	1	adj.意义不明确的
+113	deflate	113_1	1	v.放气
+113	tame	113_1	1	adj.温顺的
+113	implicit	113_1	1	adj.暗示的
+113	consistent	113_1	1	adj.始终如一的
+113	evolution	113_1	1	n.进化
+113	diverge	113_1	1	v.分歧
+113	conform	113_1	1	vt.使一致
+114	consist	114_1	1	vi.组成
+114	microcosm	114_1	1	n.小宇宙
+114	exclusive	114_1	1	adj.独占的
+114	dread	114_1	1	n.恐惧
+114	telex	114_1	1	n.电传
+114	stoop	114_1	1	n.佝偻
+114	wilderness	114_1	1	n.荒野
+114	piety	114_1	1	n.虔诚
+114	scatter	114_1	1	n.散布
+114	tangible	114_1	1	adj.有形的
+115	latent	115_1	1	adj.潜伏的
+115	deluge	115_1	1	n.大洪水
+115	martyr	115_1	1	n.烈士
+115	justify	115_1	1	vt.替...辩护
+115	concede	115_1	1	vt.承认
+115	recruit	115_1	1	n.招聘
+115	profane	115_1	1	vt.亵渎
+115	might	115_1	1	aux.可能
+115	stereotype	115_1	1	n.铅版
+115	stitch	115_1	1	n.一针
+116	reference	116_1	1	n.参考
+116	horticulture	116_1	1	n.园艺学
+116	amateur	116_1	1	adj.业余(爱好者)的
+116	ozone	116_1	1	n.臭氧
+116	manifestation	116_1	1	n.显示
+116	prerequisite	116_1	1	n.先决条件
+116	summary	116_1	1	n.摘要
+116	parallel	116_1	1	adj.平行的
+116	enclose	116_1	1	vt.围绕
+116	fraught	116_1	1	adj.充满(不愉快事物）的
+117	beverage	117_1	1	n.饮料
+117	curl	117_1	1	n.卷曲
+117	concession	117_1	1	n.让步
+117	supposition	117_1	1	n.想像
+117	vacuum	117_1	1	n.真空
+117	behave	117_1	1	vt.&vi.举止
+117	elite	117_1	1	n.精华
+117	undergraduate	117_1	1	n.大学生
+117	discrete	117_1	1	adj.不连续的离散的
+117	bucket	117_1	1	n.水桶
+118	fountain	118_1	1	n.喷泉
+118	illuminate	118_1	1	vt.照明
+118	precinct	118_1	1	n.选区
+118	cellular	118_1	1	adj.细胞的
+118	ornament	118_1	1	n.装饰
+118	allocate	118_1	1	v.分派
+118	bloc	118_1	1	n.集团
+118	bolt	118_1	1	n.门闩
+118	exception	118_1	1	n.例外
+118	jungle	118_1	1	n.丛林
+119	explanatory	119_1	1	adj.说明的
+119	inextricable	119_1	1	adj.解不开的
+119	starfish	119_1	1	n.海星
+119	exhale	119_1	1	v.呼气
+119	viable	119_1	1	adj.能生存的
+119	psychology	119_1	1	n.心理学
+119	arena	119_1	1	n.竞技场
+119	doubtful	119_1	1	adj.可疑的
+119	proficient	119_1	1	adj.熟练的
+119	apparatus	119_1	1	n.装置
+120	premise	120_1	1	n.前提
+120	interpretation	120_1	1	n.解释
+120	trophy	120_1	1	n.奖品
+120	ample	120_1	1	adj.充足的
+120	cognitive	120_1	1	adj.认知的
+120	synthesis	120_1	1	n.合成
+120	likewise	120_1	1	adv.同样地
+120	pump	120_1	1	n.抽水机
+120	provoke	120_1	1	vt.激怒
+120	stern	120_1	1	adj.严厉的
+121	manipulate	121_1	1	v.操纵
+121	magnet	121_1	1	n.磁体
+121	mosaic	121_1	1	n.马赛克
+121	audible	121_1	1	adj.听得见的
+121	crumple	121_1	1	v.（使)起皱
+121	doctrine	121_1	1	n.教义
+121	facilitate	121_1	1	vt.促进
+121	despise	121_1	1	vt.轻视
+121	division	121_1	1	n.区分
+121	shamble	121_1	1	vi.蹒跚地走
+122	neat	122_1	1	adj.整洁的
+122	startle	122_1	1	n.惊愕
+122	snatch	122_1	1	n.抢夺
+122	haul	122_1	1	n.拖
+122	utilize	122_1	1	vt.利用
+122	identity	122_1	1	n.身份
+122	tackle	122_1	1	n.工具
+122	indignant	122_1	1	adj.愤慨的
+122	mediocre	122_1	1	adj.平庸的
+122	dense	122_1	1	adj.不易看透的
+123	protract	123_1	1	vt.延长
+123	summit	123_1	1	n.顶点;最高阶层
+123	elastic	123_1	1	adj.有弹性的
+123	recede	123_1	1	vi.后退
+123	fierce	123_1	1	adj.猛烈的
+123	fancy	123_1	1	n.想像力
+123	tremor	123_1	1	n.震动
+123	nozzle	123_1	1	n.喷嘴
+123	advertise	123_1	1	vi.登广告
+123	nautical	123_1	1	adj.海上的
+124	manure	124_1	1	n.肥料
+124	differentiate	124_1	1	vt.识别
+124	military	124_1	1	adj.军事的
+124	resonant	124_1	1	adj.共鸣的
+124	evacuate	124_1	1	vt.&vi.疏散
+124	virtual	124_1	1	adj.虚拟的
+124	outweigh	124_1	1	v.比...为重
+124	profuse	124_1	1	adj.丰富的
+124	trespass	124_1	1	n.非法侵入
+124	rip	124_1	1	n.拉裂
+125	repel	125_1	1	v.逐退
+125	persuade	125_1	1	vt.劝说
+125	intensive	125_1	1	adj.强烈的
+125	voltage	125_1	1	n.电压
+125	consumption	125_1	1	n.消费
+125	livestock	125_1	1	n.家畜
+125	dilemma	125_1	1	n.困境
+125	equilibrium	125_1	1	n.平衡
+125	toil	125_1	1	n.辛苦
+125	concrete	125_1	1	n.水泥
+126	abandon	126_1	1	vt.遗弃
+126	quarry	126_1	1	n.采石场
+126	revolt	126_1	1	vi.叛乱
+126	trick	126_1	1	n.把戏
+126	optic	126_1	1	adj.光的(视觉的)
+126	survival	126_1	1	n.生存
+126	scant	126_1	1	adj.不充分的
+126	semester	126_1	1	n.学期
+126	memorandum	126_1	1	n.备忘录
+126	mishap	126_1	1	n.不幸之事
+127	delicate	127_1	1	adj.细致优雅的
+127	squash	127_1	1	n.壁球
+127	reinforce	127_1	1	v.加强
+127	wax	127_1	1	n.蜡
+127	marble	127_1	1	adj.大理石的
+127	diction	127_1	1	n.措辞
+127	invisible	127_1	1	adj.看不见的
+127	pollinate	127_1	1	v.给...授粉
+127	cluster	127_1	1	n.串
+127	triangle	127_1	1	n.三角(形)
+128	weld	128_1	1	n.焊接
+128	dingy	128_1	1	adj.昏暗的
+128	regarding	128_1	1	prep.关于
+128	calamity	128_1	1	n.灾难
+128	junction	128_1	1	n.联接
+128	condense	128_1	1	v.浓缩
+128	inland	128_1	1	adj.内陆的
+128	condolence	128_1	1	n.引
+128	generality	128_1	1	n.一般性
+128	apparent	128_1	1	adj.明显的
+129	dorsal	129_1	1	adj.(动物）背的
+129	breed	129_1	1	vt.繁殖
+129	ravage	129_1	1	n.破坏
+129	bankruptcy	129_1	1	n.破产
+129	enclosure	129_1	1	n.附件
+129	quarantine	129_1	1	n.四十天
+129	silt	129_1	1	n.淤泥
+129	spray	129_1	1	vt.&vi.喷雾
+129	hysterical	129_1	1	adj.歇斯底里的
+129	allegation	129_1	1	n.断言
+130	pant	130_1	1	n.喘气
+130	exaggerate	130_1	1	vt.&vi.夸大
+130	recipe	130_1	1	n.食谱
+130	canvas	130_1	1	n.帆布
+130	stationer	130_1	1	n.文具商
+130	setting	130_1	1	n.环境
+130	oriental	130_1	1	adj.东方(人)的
+130	reassure	130_1	1	v.使...安心
+130	magistrate	130_1	1	n.地方法官
+130	shack	130_1	1	n.棚房
+131	authoritative	131_1	1	adj.权威性的
+131	pit	131_1	1	n.深坑
+131	conceal	131_1	1	vt.隐藏
+131	oxidize	131_1	1	v.氧化
+131	blunder	131_1	1	n.大错
+131	bubble	131_1	1	n.泡沫
+131	climax	131_1	1	n.高潮
+131	beneficial	131_1	1	adj.有益的
+131	observe	131_1	1	v.观察
+131	fauna	131_1	1	n.（某地区或某时期的）所有动物
+132	draft	132_1	1	n.草稿
+132	idiom	132_1	1	n.成语
+132	magnanimous	132_1	1	adj.度量大的
+132	envision	132_1	1	n.预想
+132	turbulent	132_1	1	adj.狂暴的
+132	texture	132_1	1	n.(材料等的)结构
+132	pounce	132_1	1	n.猛扑
+132	comparable	132_1	1	adj.可比较的
+132	context	132_1	1	n.上下文
+132	junk	132_1	1	n.垃圾
+133	inert	133_1	1	adj.惰性的
+133	leaflet	133_1	1	n.小叶
+133	unilateral	133_1	1	adj.单方面的
+133	shanty	133_1	1	n.简陋小屋
+133	shell	133_1	1	n.贝壳
+133	plank	133_1	1	n.厚板
+133	bronze	133_1	1	adj.青铜色的
+133	genocide	133_1	1	n.种族灭绝
+133	monarchy	133_1	1	n.君主政体
+133	aware	133_1	1	adj.意识到的
+134	stretch	134_1	1	n.伸展
+134	edition	134_1	1	n.版
+134	absurd	134_1	1	adj.荒唐的
+134	addict	134_1	1	vt.使...耽溺
+134	log	134_1	1	n.圆木
+134	extol	134_1	1	vt.颂扬
+134	husky	134_1	1	adj.声音沙哑的
+134	competence	134_1	1	n.能力
+134	peculiar	134_1	1	adj.奇怪的
+134	alight	134_1	1	vi.落下
+135	hallmark	135_1	1	n.纯度检验证明
+135	picturesque	135_1	1	adj.如画的
+135	hydrogen	135_1	1	n.氢
+135	coward	135_1	1	n.懦夫
+135	breeze	135_1	1	n.微风
+135	rectangle	135_1	1	n.长方形
+135	energetic	135_1	1	adj.精力旺盛的
+135	commonplace	135_1	1	adj.平凡的
+135	scroll	135_1	1	n.卷轴
+135	diagnosis	135_1	1	n.诊断
+136	sacred	136_1	1	adj.神圣的
+136	fatal	136_1	1	adj.致命的
+136	resolution	136_1	1	n.决心
+136	millennium	136_1	1	n.一千年
+136	gossip	136_1	1	n.闲聊
+136	sustenance	136_1	1	n.维持生计
+136	crown	136_1	1	n.王冠
+136	arrogant	136_1	1	adj.傲慢的
+136	ingredient	136_1	1	n.成分
+136	velocity	136_1	1	n.速度
+137	invalid	137_1	1	adj.无效的
+137	relapse	137_1	1	n.复旧
+137	isle	137_1	1	n.岛
+137	analysis	137_1	1	n.分析
+137	wary	137_1	1	adj.小心的
+137	profile	137_1	1	n.轮廓
+137	civilian	137_1	1	n.平民
+137	phosphorus	137_1	1	n.磷
+137	panel	137_1	1	n.镶板
+137	synthetic	137_1	1	adj.综合的
+138	hump	138_1	1	n.驼背
+138	anxiety	138_1	1	n.焦虑
+138	huddle	138_1	1	n.杂乱一团
+138	rift	138_1	1	n.裂口
+138	correspondence	138_1	1	n.通信
+138	croissant	138_1	1	n.牛角包
+138	flake	138_1	1	n.薄片
+138	refrain	138_1	1	n.重复
+138	sparse	138_1	1	adj.稀少的
+138	barge	138_1	1	n.驳船
+139	valley	139_1	1	n.山谷
+139	fluctuate	139_1	1	vi.变动
+139	secluded	139_1	1	adj.隐蔽的
+139	apologetic	139_1	1	adj.道歉的
+139	pilgrim	139_1	1	n.朝圣者
+139	cumulative	139_1	1	adj.累积的
+139	resort	139_1	1	n.(渡假)胜地
+139	lump	139_1	1	n.团
+139	assess	139_1	1	v.估定
+139	spur	139_1	1	n.马刺
+140	protocol	140_1	1	n.草案
+140	prosecution	140_1	1	n.实行
+140	jolt	140_1	1	n.震摇
+140	cripple	140_1	1	n.跛者
+140	swing	140_1	1	n.摇摆
+140	propel	140_1	1	v.推进
+140	fend	140_1	1	v.照料
+140	limp	140_1	1	n.跛行
+140	removal	140_1	1	n.移动
+140	ambitious	140_1	1	adj.有雄心的
+141	arboreal	141_1	1	adj.树木的
+141	righteous	141_1	1	adj.公正的
+141	modest	141_1	1	adj.谦虚的
+141	compose	141_1	1	vt.组成
+141	chip	141_1	1	n.薄片
+141	weed	141_1	1	n.杂草
+141	unravel	141_1	1	v.阐明
+141	clamor	141_1	1	n.喧闹
+141	herd	141_1	1	n.兽群
+141	morality	141_1	1	n.道德
+142	torment	142_1	1	n.苦痛
+142	troupe	142_1	1	n.（演出的）一团
+142	warranty	142_1	1	n.担保
+142	asset	142_1	1	n.资产
+142	trunk	142_1	1	n.树干
+142	ignite	142_1	1	vi.着火
+142	transitive	142_1	1	adj.传递的
+142	synonym	142_1	1	n.同义词
+142	historic	142_1	1	adj.有历史意义的
+142	saddle	142_1	1	n.鞍
+143	lack	143_1	1	vt.缺乏
+143	diversity	143_1	1	n.多样化
+143	various	143_1	1	adj.各种各样的
+143	yoke	143_1	1	n.轭
+143	penury	143_1	1	n.贫穷
+143	psychiatry	143_1	1	n.精神病学
+143	offset	143_1	1	n.抵销
+143	anguish	143_1	1	n.苦闷
+143	dreadful	143_1	1	adj.可怕的
+143	imitate	143_1	1	v.模仿
+144	organ	144_1	1	n.器官
+144	float	144_1	1	n.漂流物
+144	appraise	144_1	1	vt.评价
+144	malaria	144_1	1	n.疟疾
+144	hitherto	144_1	1	adv.到目前为止
+144	hasty	144_1	1	adj.匆匆的
+144	update	144_1	1	vt.&vi.更新
+144	falsify	144_1	1	vt.伪造
+144	threshold	144_1	1	n.极限
+144	legal	144_1	1	adj.法律的
+145	discipline	145_1	1	n.纪律
+145	flexible	145_1	1	adj.灵活的
+145	decoration	145_1	1	n.装饰
+145	practically	145_1	1	adj.实际地
+145	mask	145_1	1	n.假面具
+145	hostile	145_1	1	adj.怀敌意的
+145	magnitude	145_1	1	n.巨大
+145	jury	145_1	1	n.[法]陪审团
+145	impose	145_1	1	vt.强加
+145	forum	145_1	1	n.论坛
+146	congregate	146_1	1	vt.使集合
+146	ammonia	146_1	1	n.氨水
+146	bait	146_1	1	n.饵
+146	affiliate	146_1	1	n.联号
+146	intact	146_1	1	adj.尚未被人碰过的
+146	chat	146_1	1	vt.&vi.谈天
+146	intractable	146_1	1	adj.不听话的
+146	gracious	146_1	1	adj.亲切的
+146	sectional	146_1	1	adj.各部分组成的
+146	anatomy	146_1	1	n.解剖学
+147	relinquish	147_1	1	v.放弃
+147	forerunner	147_1	1	n.先驱
+147	decay	147_1	1	n.衰退
+147	delicious	147_1	1	adj.可口的
+147	accurate	147_1	1	adj.准确的
+147	plume	147_1	1	n.羽毛
+147	prevalent	147_1	1	adj.流行的
+147	demography	147_1	1	n.人口统计学
+147	barber	147_1	1	n.理发师
+147	loth	147_1	1	adj.不愿意的
+148	adopt	148_1	1	v.采用
+148	apparel	148_1	1	n.衣服
+148	imaginative	148_1	1	adj.富于想象力的
+148	gale	148_1	1	n.狂风
+148	prolong	148_1	1	vt.延长
+148	steer	148_1	1	v.引导
+148	corporation	148_1	1	n.公司
+148	tentative	148_1	1	n.试验
+148	vent	148_1	1	n.排气口
+148	bustle	148_1	1	v.奔忙
+149	nightmare	149_1	1	n.恶梦
+149	cynic	149_1	1	n.愤世嫉俗者
+149	inclination	149_1	1	n.倾向
+149	surpass	149_1	1	vt.超越
+149	surmount	149_1	1	vt.克服
+149	lobby	149_1	1	n.大厅
+149	charity	149_1	1	n.仁慈
+149	liability	149_1	1	n.责任
+149	pursuit	149_1	1	n.追求
+149	misrepresent	149_1	1	vt.误称(把...颠倒黑白
+150	piggyback	150_1	1	adv.&adj.在肩(背)上
+150	impair	150_1	1	vt.损害
+150	tube	150_1	1	n.管
+150	imperial	150_1	1	adj.帝国(王)的
+150	limitation	150_1	1	n.限制
+150	roam	150_1	1	vi.漫游
+150	enrich	150_1	1	vt.使富足
+150	composite	150_1	1	adj.合成的
+150	prospectus	150_1	1	n.创立计划书
+150	release	150_1	1	n.释放
+151	counsel	151_1	1	n.法律顾问
+151	commentate	151_1	1	vi.作实况报道
+151	factual	151_1	1	adj.事实的
+151	exponent	151_1	1	n.拥护者
+151	assault	151_1	1	n.攻击
+151	drowsy	151_1	1	adj.昏昏欲睡的
+151	venerate	151_1	1	vt.尊敬
+151	proxy	151_1	1	n.代理
+151	loath	151_1	1	adj.不愿意的
+151	duly	151_1	1	adv.的确
+152	stammer	152_1	1	n.结巴
+152	flip	152_1	1	vi.翻转
+152	solo	152_1	1	n.独奏
+152	anticlockwise	152_1	1	adj.逆时针转的
+152	vow	152_1	1	n.誓约
+152	glimpse	152_1	1	n.一瞥
+152	pregnant	152_1	1	adj.怀孕的
+152	inapt	152_1	1	adj.不适当的
+152	intense	152_1	1	adj.强烈的
+152	lens	152_1	1	n.镜头
+153	predictable	153_1	1	adj.可预言的
+153	pressure	153_1	1	n.压力
+153	curb	153_1	1	n.抑制
+153	cramp	153_1	1	n.抽筋
+153	coverage	153_1	1	n.涉及范围(如保险范围或储备金额)
+153	loll	153_1	1	v.懒洋洋地呆着、坐着或站着（常指倚着某物）
+153	bug	153_1	1	n.小虫
+153	deny	153_1	1	vt.否认
+153	relay	153_1	1	vt.中继
+153	erratic	153_1	1	adj.无确定路线
+154	practicable	154_1	1	adj.可实行的
+154	harness	154_1	1	n.马具
+154	approve	154_1	1	vt.批准
+154	macaque	154_1	1	n.短尾猿
+154	lace	154_1	1	n.饰带
+154	formation	154_1	1	n.构造
+154	waver	154_1	1	n.动摇
+154	relief	154_1	1	n.宽慰
+154	void	154_1	1	n.空虚
+154	blink	154_1	1	vi.眨眼
+155	pedal	155_1	1	n.踏板
+155	transparent	155_1	1	adj.透明的
+155	garment	155_1	1	n.衣服
+155	invariably	155_1	1	adv.不变化地
+155	excel	155_1	1	vt.超过
+155	memento	155_1	1	n.纪念品
+155	section	155_1	1	n.部分
+155	cellar	155_1	1	n.地窖
+155	minor	155_1	1	adj.次要的
+155	impetuous	155_1	1	adj.冲动的
+156	succinct	156_1	1	adj.简洁的
+156	conflict	156_1	1	n.冲突
+156	canal	156_1	1	n.运河
+156	aspire	156_1	1	vi.渴望
+156	enroll	156_1	1	vt.&vi.登记
+156	overrun	156_1	1	v.蔓延
+156	protest	156_1	1	n.抗议
+156	imposing	156_1	1	adj.令人难忘的
+156	breach	156_1	1	n.裂口
+156	comic	156_1	1	n.连环图画
+157	naked	157_1	1	adj.裸体的
+157	priority	157_1	1	n.优先权
+157	parody	157_1	1	n.打油诗文
+157	unlikely	157_1	1	adj.不大可能发生的
+157	gang	157_1	1	n.队
+157	hinge	157_1	1	n.铰链
+157	maniac	157_1	1	n.疯子
+157	immediate	157_1	1	adj.立即的
+157	lottery	157_1	1	n.彩票
+157	slope	157_1	1	n.倾斜
+158	quantitative	158_1	1	adj.数量的
+158	diesel	158_1	1	n.柴油机
+158	certify	158_1	1	vt.证明
+158	larynx	158_1	1	n.喉
+158	expertise	158_1	1	n.专家的意见
+158	colonial	158_1	1	adj.殖民地的
+158	disorder	158_1	1	n.杂乱
+158	festivity	158_1	1	n.欢宴
+158	combustion	158_1	1	n.燃烧
+158	glycerin	158_1	1	n.甘油
+159	thesaurus	159_1	1	n.辞典
+159	remarkable	159_1	1	adj.显著的
+159	attorney	159_1	1	n.(辩护)律师
+159	referendum	159_1	1	n.公民投票
+159	bibliography	159_1	1	n.(有关某一专题的)书目
+159	polar	159_1	1	adj.两极的
+159	bookkeeper	159_1	1	n.簿记员;记帐员
+159	awesome	159_1	1	adj.令人惊叹的
+159	displace	159_1	1	v.移置
+159	clam	159_1	1	n.蛤
+160	visa	160_1	1	n.签证
+160	phobia	160_1	1	n.恐怖病
+160	fulfil	160_1	1	v.实践
+160	account	160_1	1	n.账
+160	dual	160_1	1	adj.双重的
+160	transplant	160_1	1	vt.移居
+160	eternal	160_1	1	adj.永久的
+160	depart	160_1	1	vt.离开
+160	conducive	160_1	1	adj.有助于...的
+160	port	160_1	1	n.港口
+161	stale	161_1	1	adj.不新鲜的
+161	sprawl	161_1	1	vi.躺卧(蔓延)
+161	epidemic	161_1	1	n.传染病
+161	grope	161_1	1	v.(暗中)摸索
+161	helicopter	161_1	1	n.直升飞机
+161	dwelling	161_1	1	n.住处
+161	amend	161_1	1	vt.修正
+161	motivate	161_1	1	v.刺激
+161	resolve	161_1	1	n.决定之事
+161	partisan	161_1	1	adj.效忠的
+162	blur	162_1	1	vt.&vi.使...模糊
+162	infest	162_1	1	v.骚扰
+162	expel	162_1	1	vt.驱逐
+162	pungent	162_1	1	adj.苦痛的
+162	bundle	162_1	1	n.捆
+162	antibiotic	162_1	1	adj.抗菌的
+162	represent	162_1	1	vt.表现
+162	trim	162_1	1	n.整齐
+162	incite	162_1	1	v.煽动
+162	host	162_1	1	v.主办
+163	brink	163_1	1	n.边缘
+163	negative	163_1	1	adj.否定的
+163	reverse	163_1	1	v.颠倒
+163	handsome	163_1	1	adj.英俊的
+163	weird	163_1	1	adj.怪异的
+163	former	163_1	1	adj.以前的
+163	hectare	163_1	1	n.公顷
+163	fabric	163_1	1	n.织物
+163	effective	163_1	1	adj.有效的
+163	cherish	163_1	1	vt.珍爱
+164	ceremony	164_1	1	n.典礼
+164	scrape	164_1	1	n.刮掉
+164	commend	164_1	1	vt.推荐
+164	pamper	164_1	1	v.放纵
+164	prestigious	164_1	1	adj.享有声望的
+164	intimidate	164_1	1	vt.威胁
+164	infinity	164_1	1	n.无限
+164	sociable	164_1	1	adj.好交际的
+164	revenge	164_1	1	n.报仇
+164	oasis	164_1	1	n.绿洲
+165	emigrate	165_1	1	v.移居
+165	spontaneous	165_1	1	adj.自发的
+165	curve	165_1	1	n.曲线
+165	spicy	165_1	1	adj.芳香的(辛辣的)
+165	suite	165_1	1	n.随员
+165	propose	165_1	1	v.向...提议
+165	lateral	165_1	1	adj.侧面的
+165	subsidy	165_1	1	n.补助金
+165	clutch	165_1	1	n.爪子
+165	making	165_1	1	n.制成
+166	casual	166_1	1	adj.偶然的
+166	vocational	166_1	1	adj.职业的
+166	manual	166_1	1	adj.手工的
+166	respiration	166_1	1	n.呼吸
+166	expansion	166_1	1	n.扩大
+166	ideology	166_1	1	n.观念学
+166	whirlwind	166_1	1	n.旋风
+166	mist	166_1	1	n.雾
+166	audit	166_1	1	n.查帐
+166	precisely	166_1	1	adv.精确地
+167	consolation	167_1	1	n.安慰
+167	tertiary	167_1	1	adj.第三的
+167	envisage	167_1	1	vt.面对
+167	indulge	167_1	1	vt.纵情于
+167	alien	167_1	1	n.外星人
+167	corporate	167_1	1	adj.公司的
+167	ponder	167_1	1	vt.&vi.沉思
+167	conspiracy	167_1	1	n.阴谋
+167	unfold	167_1	1	v.展开
+167	obstacle	167_1	1	n.障碍
+168	palpitate	168_1	1	vi.悸动
+168	levy	168_1	1	n.征税
+168	tricky	168_1	1	adj.狡猾的
+168	scar	168_1	1	n.疤痕
+168	penetrate	168_1	1	vt.&vi.穿透
+168	insolvent	168_1	1	adj.无力偿还的
+168	laudable	168_1	1	adj.值得称赞的
+168	escalate	168_1	1	vt.扩大
+168	lukewarm	168_1	1	adj.微温的
+168	expose	168_1	1	vt.暴露
+169	propaganda	169_1	1	n.宣传
+169	facet	169_1	1	n.小平面
+169	evaluate	169_1	1	vt.评估
+169	dilate	169_1	1	vt.使扩大
+169	convert	169_1	1	v.使转变
+169	estate	169_1	1	n.房地产经纪人
+169	metric	169_1	1	adj.公制的
+169	mammal	169_1	1	n.哺乳动物
+169	ruinous	169_1	1	adj.破坏性的
+169	partition	169_1	1	n.分割
+170	appreciable	170_1	1	adj.可感知的
+170	foundation	170_1	1	n.基础
+170	prologue	170_1	1	n.序言
+170	ostensible	170_1	1	adj.表面的
+170	scale	170_1	1	n.鳞
+170	elementary	170_1	1	adj.基本的
+170	whip	170_1	1	n.鞭子
+170	mechanism	170_1	1	n.机制
+170	ripple	170_1	1	n.涟波
+170	gown	170_1	1	n.长袍
+171	singular	171_1	1	adj.非凡的
+171	clatter	171_1	1	n.卡搭声
+171	phase	171_1	1	n.相
+171	unicorn	171_1	1	n.(传说中的)独角兽
+171	accuracy	171_1	1	n.准确(性)
+171	exhilarate	171_1	1	vt.使高兴
+171	dip	171_1	1	n.游;下降
+171	torrent	171_1	1	n.激流
+171	clamp	171_1	1	n.螺丝钳
+171	bathe	171_1	1	v.沐浴
+172	sporadic	172_1	1	adj.不定时发生的
+172	pin	172_1	1	n.大头针
+172	immune	172_1	1	adj.免疫的
+172	squeal	172_1	1	n.长而尖的叫声vi.发出长声尖叫;告密
+172	occur	172_1	1	vi.发生
+172	signature	172_1	1	n.签署
+172	plot	172_1	1	n.情节梗概
+172	vogue	172_1	1	n.时尚
+172	idiosyncrasy	172_1	1	n.特质
+172	sprout	172_1	1	n.芽
+173	restorative	173_1	1	adj.恢复健康的
+173	mobilize	173_1	1	v.动员
+173	eddy	173_1	1	n.逆流
+173	personnel	173_1	1	n.全体员工
+173	intercontinental	173_1	1	adj.大陆间的
+173	currency	173_1	1	n.货币
+173	slander	173_1	1	n.中伤
+173	bronchitis	173_1	1	n.支气管炎
+173	credible	173_1	1	adj.可信的
+173	bitumen	173_1	1	n.沥青
+174	erase	174_1	1	v.抹去
+174	bind	174_1	1	vt.绑
+174	fuel	174_1	1	n.燃料
+174	ardent	174_1	1	adj.热心的
+174	multitude	174_1	1	n.多数
+174	terrain	174_1	1	n.地带
+174	fuss	174_1	1	n.大惊小怪
+174	plausible	174_1	1	adj.似真实的
+174	affirmative	174_1	1	adj.肯定的
+174	echo	174_1	1	n.回声
+175	overt	175_1	1	adj.公开的
+175	detriment	175_1	1	n.损伤
+175	portray	175_1	1	v.描写
+175	poliomyelitis	175_1	1	n.脊髓灰质炎
+175	catalyst	175_1	1	n.催化剂
+175	equator	175_1	1	n.赤道
+175	alongside	175_1	1	adv.在旁边
+175	hedge	175_1	1	n.树篱
+175	recital	175_1	1	n.背诵
+175	optical	175_1	1	adj.眼睛的
+176	revert	176_1	1	vi.恢复
+176	wean	176_1	1	v.断奶
+176	erroneous	176_1	1	adj.错误的
+176	dedicated	176_1	1	adj.专注的
+176	luminous	176_1	1	adj.发光的
+176	turbot	176_1	1	n.比目鱼之类
+176	unify	176_1	1	v.统一
+176	nationality	176_1	1	n.国籍
+176	wicked	176_1	1	adj.坏的
+176	patron	176_1	1	n.赞助人
+177	pierce	177_1	1	v.刺穿
+177	descent	177_1	1	n.下落
+177	overthrow	177_1	1	v.推翻
+177	patent	177_1	1	n.专利权
+177	outskirts	177_1	1	n.郊区
+177	synchronize	177_1	1	v.使同时
+177	physician	177_1	1	n.内科医生
+177	endanger	177_1	1	vt.危及
+177	customary	177_1	1	adj.习惯的
+177	admission	177_1	1	n.许可
+178	colossal	178_1	1	adj.巨大的
+178	encounter	178_1	1	vt.&vi.遭遇
+178	alpine	178_1	1	adj.高山的
+178	inject	178_1	1	v.注射
+178	ultraviolet	178_1	1	adj.紫外线的
+178	censor	178_1	1	n.检查员
+178	nominal	178_1	1	adj.名义上的
+178	cease	178_1	1	n.停止
+178	soot	178_1	1	n.煤烟
+178	massive	178_1	1	adj.巨大的
+179	fraction	179_1	1	n.分数
+179	incipient	179_1	1	adj.起初的
+179	readily	179_1	1	adv.不迟疑地
+179	sanity	179_1	1	n.神智健全
+179	commonwealth	179_1	1	n.共和国
+179	deem	179_1	1	v.认为
+179	hereditary	179_1	1	adj.世袭的
+179	torture	179_1	1	n.拷问
+179	fermentation	179_1	1	n.发酵
+179	transfer	179_1	1	v.转移
+180	distraction	180_1	1	n.娱乐
+180	affection	180_1	1	n.慈爱
+180	potluck	180_1	1	n.便饭
+180	terse	180_1	1	adj.简洁的
+180	negotiable	180_1	1	adj.可磋商的
+180	conquer	180_1	1	vt.征服
+180	outlying	180_1	1	adj.远离中心的
+180	target	180_1	1	n.（服务的）对象
+180	mechanic	180_1	1	adj.手工的
+180	malignant	180_1	1	adj.有恶意的
+181	athlete	181_1	1	n.运动员
+181	poll	181_1	1	n.投票
+181	resultant	181_1	1	adj.作为结果的
+181	avail	181_1	1	n.益处
+181	stimulus	181_1	1	n.刺激
+181	rack	181_1	1	n.(行李)架
+181	waggon	181_1	1	n.（铁路）货车车厢
+181	nevertheless	181_1	1	conj.然而
+181	shepherd	181_1	1	n.牧羊者
+181	drift	181_1	1	n.漂移
+182	abnormal	182_1	1	adj.反常的
+182	buoyant	182_1	1	adj.有浮力的
+182	offend	182_1	1	vt.犯罪
+182	ramble	182_1	1	v.漫步
+182	cling	182_1	1	n.紧抓
+182	platypus	182_1	1	n.鸭嘴兽
+182	stationary	182_1	1	adj.不动的(稳定的)
+182	delight	182_1	1	n.快乐
+182	involve	182_1	1	vt.包含
+182	undergo	182_1	1	vt.遭受
+183	deficit	183_1	1	n.赤字
+183	miracle	183_1	1	n.奇迹
+183	deposit	183_1	1	vt.存放
+183	classic	183_1	1	adj.古典的
+183	secondary	183_1	1	adj.中级的
+183	beloved	183_1	1	adj.心爱的
+183	entitle	183_1	1	v.取名为
+183	pharmacy	183_1	1	n.药房
+183	auction	183_1	1	n.拍卖
+183	regeneration	183_1	1	n.再生
+184	slack	184_1	1	n.松弛的部分
+184	consequence	184_1	1	n.结果
+184	culminate	184_1	1	v.达到顶点或高潮
+184	safeguard	184_1	1	n.保卫
+184	wrap	184_1	1	vt.包
+184	commissioner	184_1	1	n.委员
+184	proceed	184_1	1	vi.继续进行
+184	haven	184_1	1	n.港口
+184	trait	184_1	1	n.特征
+184	ultimately	184_1	1	adv.最后
+185	soluble	185_1	1	adj.可溶解的
+185	precipice	185_1	1	n.断崖
+185	precipitate	185_1	1	vt.使...陷入
+185	clip	185_1	1	n.夹子
+185	molecule	185_1	1	n.分子
+185	orientation	185_1	1	n.信仰
+185	comet	185_1	1	n.彗星
+185	gape	185_1	1	n.裂口
+185	clarity	185_1	1	n.清楚
+185	crystal	185_1	1	n.水晶
+186	occasion	186_1	1	n.场合
+186	gesture	186_1	1	n.手势
+186	typhoon	186_1	1	n.台风
+186	affirm	186_1	1	vt.证实
+186	install	186_1	1	v.安装
+186	multilateral	186_1	1	adj.多边的
+186	endorse	186_1	1	vt.支持
+186	portion	186_1	1	n.部分
+186	tissue	186_1	1	n.(动、植物的)组织
+186	mangrove	186_1	1	n.红树
+187	bowel	187_1	1	n.肠
+187	orbit	187_1	1	n.轨迹
+187	technician	187_1	1	n.技术员
+187	bleed	187_1	1	vi.流血
+187	recline	187_1	1	v.靠在
+187	refinement	187_1	1	n.精致
+187	preach	187_1	1	vi.传道
+187	thoughtful	187_1	1	adj.深思的
+187	dissolve	187_1	1	vi.溶解
+187	deter	187_1	1	v.制止
+188	granary	188_1	1	n.谷仓
+188	humdrum	188_1	1	adj.单调的
+188	diminish	188_1	1	vt.减少
+188	midst	188_1	1	n.中间
+188	medication	188_1	1	n.药物治疗
+188	surplus	188_1	1	adj.多余的
+188	seclude	188_1	1	vt.隔离(隔绝)
+188	flatter	188_1	1	vt.&vi.阿谀奉承
+188	arable	188_1	1	adj.可耕的
+188	multifarious	188_1	1	adj.多种的
+189	acquaintance	189_1	1	n.熟人
+189	refugee	189_1	1	n.难民
+189	undulate	189_1	1	adj.波动的
+189	amalgamate	189_1	1	v.合并
+189	ease	189_1	1	n.安乐
+189	outcome	189_1	1	n.结果
+189	commercial	189_1	1	adj.商业的
+189	diagram	189_1	1	n.图表
+189	counterpart	189_1	1	n.职位（或作用）相当的人
+189	petty	189_1	1	adj.琐碎的
+190	coarse	190_1	1	adj.粗糙的
+190	positive	190_1	1	adj.积极的
+190	leafy	190_1	1	adj.叶茂盛的
+190	condemn	190_1	1	vt.判刑
+190	ferocious	190_1	1	adj.残忍的
+190	vital	190_1	1	adj.至关重要的
+190	delectable	190_1	1	adj.快乐的
+190	respiratory	190_1	1	adj.呼吸的
+190	forge	190_1	1	n.熔炉
+190	hamper	190_1	1	n.食盒
+191	punctuation	191_1	1	n.强调
+191	decent	191_1	1	adj.有分寸的
+191	eucalyptus	191_1	1	n.桉树
+191	decrease	191_1	1	vt.&vi.减少
+191	vomit	191_1	1	vt.&vi.吐出
+191	dynasty	191_1	1	n.朝代
+191	acknowledge	191_1	1	vt.承认
+191	grease	191_1	1	n.兽脂
+191	sufficient	191_1	1	adj.充足的
+191	disable	191_1	1	v.使...失去能力
+192	strategy	192_1	1	n.战略
+192	tarnish	192_1	1	n.晦暗
+192	ransom	192_1	1	n.赎金
+192	negligible	192_1	1	adj.可以忽略的
+192	induce	192_1	1	vt.引诱
+192	notoriety	192_1	1	n.臭名昭著
+192	chant	192_1	1	n.圣歌
+192	endure	192_1	1	vt.忍耐
+192	breadwinner	192_1	1	n.养家糊口的人
+192	flu	192_1	1	n.流行性感冒
+193	fluid	193_1	1	adj.流畅优美的
+193	configuration	193_1	1	n.结构
+193	halibut	193_1	1	n.大比目鱼
+193	infinite	193_1	1	adj.无限的
+193	oblivious	193_1	1	adj.遗忘的
+193	insoluble	193_1	1	adj.[化]不能溶解的
+193	caravan	193_1	1	n.（穿越沙漠的）旅行队
+193	intend	193_1	1	v.打算
+193	pharaoh	193_1	1	n.法老
+193	plumb	193_1	1	n.铅锤
+194	scorn	194_1	1	v.轻蔑
+194	spoil	194_1	1	v.溺爱
+194	portable	194_1	1	adj.手提式的
+194	unconditional	194_1	1	adj.无条件的
+194	grate	194_1	1	n.栅
+194	interact	194_1	1	vi.相互作用
+194	statue	194_1	1	n.塑像
+194	redistribute	194_1	1	vt.重新分配
+194	misfortune	194_1	1	n.不幸
+194	blaze	194_1	1	vi.发光
+195	perturb	195_1	1	v.扰乱
+195	consecutive	195_1	1	adj.连续的
+195	novice	195_1	1	n.新手
+195	cannon	195_1	1	n.大炮
+195	pave	195_1	1	v.铺设
+195	bet	195_1	1	n.打赌
+195	vacant	195_1	1	adj.空的
+195	biodegradable	195_1	1	adj.生物所能分解的
+195	cancel	195_1	1	vt.取消
+195	thrust	195_1	1	n.推力
+196	chime	196_1	1	n.鸣
+196	gravity	196_1	1	n.地心引力
+196	status	196_1	1	n.状态
+196	tuck	196_1	1	n.缝摺
+196	tariff	196_1	1	n.关税
+196	consolidate	196_1	1	v.巩固
+196	rally	196_1	1	n.集会
+196	remainder	196_1	1	n.剩余物
+196	virus	196_1	1	n.病毒
+196	affect	196_1	1	vt.影响
+197	urbane	197_1	1	adj.温文尔雅的
+197	achieve	197_1	1	vt.达到
+197	arduous	197_1	1	adj.费力的
+197	coupon	197_1	1	n.试样
+197	ideal	197_1	1	adj.理想的
+197	logic	197_1	1	n.逻辑(学)
+197	saturate	197_1	1	v.使渗透
+197	perish	197_1	1	vt.毁减
+197	bent	197_1	1	bend的过去式和过去分词
+197	opening	197_1	1	n.开始
+198	violent	198_1	1	adj.暴力的
+198	mildew	198_1	1	n.霉病
+198	fundamental	198_1	1	adj.基本的
+198	crevice	198_1	1	n.(岩石、墙等)裂缝
+198	perception	198_1	1	n.感知
+198	melody	198_1	1	n.旋律
+198	via	198_1	1	prep.经由
+198	antagonism	198_1	1	n.对抗
+198	periscope	198_1	1	n.潜望镜
+198	bungalow	198_1	1	n.(有凉台的)平房
+199	outstrip	199_1	1	v.超过
+199	jeopardise	199_1	1	vt.使...遭遇危险
+199	fragment	199_1	1	n.碎片
+199	disrupt	199_1	1	adj.分裂的
+199	frugal	199_1	1	adj.节俭的
+199	abet	199_1	1	v.教唆
+199	cathedral	199_1	1	n.大教堂
+199	permissible	199_1	1	adj.可允许的
+199	exorbitant	199_1	1	adj.(价格等)过高的
+199	ambassador	199_1	1	n.大使
+200	microfilm	200_1	1	n.缩影胶片
+200	contrast	200_1	1	n.对比
+200	refusal	200_1	1	n.拒绝
+200	reimburse	200_1	1	vt.偿还
+200	dialect	200_1	1	n.方言
+200	doubtless	200_1	1	adj.无疑的
+200	rumour	200_1	1	n.谣言
+200	clue	200_1	1	n.线索
+200	microwave	200_1	1	n.微波
+200	octagon	200_1	1	n.八边形
+201	identification	201_1	1	n.身份的证明
+201	brash	201_1	1	adj.性急的
+201	nausea	201_1	1	n.反胃
+201	determination	201_1	1	n.(正式)决定
+201	tedious	201_1	1	adj.沉闷的
+201	strew	201_1	1	vt.散播
+201	meditate	201_1	1	v.想
+201	array	201_1	1	n.数组
+201	apprehension	201_1	1	n.理解
+201	odd	201_1	1	adj.古怪的
+202	intake	202_1	1	n.入口
+202	persuasive	202_1	1	adj.有说服力的
+202	hover	202_1	1	vi.盘旋
+202	appliance	202_1	1	n.器具
+202	dividend	202_1	1	n.红利
+202	allegiance	202_1	1	n.忠诚
+202	curse	202_1	1	n.诅咒
+202	agriculture	202_1	1	n.农业
+202	repertoire	202_1	1	n.(准备好演出的)节目
+202	exuberant	202_1	1	adj.繁茂的
+203	execute	203_1	1	vt.执行
+203	stewardship	203_1	1	n.管理工作
+203	afflict	203_1	1	vt.使苦恼
+203	surgeon	203_1	1	n.外科医生
+203	council	203_1	1	n.理事会
+203	wield	203_1	1	vt.行使
+203	fortify	203_1	1	vt.强化
+203	convention	203_1	1	n.会议
+203	heave	203_1	1	n.举
+203	imminent	203_1	1	adj.逼近的
+204	splint	204_1	1	n.薄木片
+204	elapse	204_1	1	v.逝去
+204	judicial	204_1	1	adj.法庭的
+204	basis	204_1	1	n.基础
+204	blossom	204_1	1	n.花
+204	equation	204_1	1	n.相等
+204	extend	204_1	1	v.扩充
+204	buck	204_1	1	n.钱
+204	access	204_1	1	vt.进入
+204	bulge	204_1	1	n.膨胀

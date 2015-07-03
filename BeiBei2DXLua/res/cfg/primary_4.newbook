@@ -1,71 +1,71 @@
-1	computer	1_1	1
-1	fan	1_1	1
-1	is	1_1	1
-1	your	1_1	1
-1	picture	1_1	1
-1	yes	1_1	1
-1	board	1_1	1
-1	this	1_1	1
-1	that	1_1	1
-1	light	1_1	1
-1	my	1_1	1
-1	floor	1_1	1
-1	it	1_1	1
-2	class	2_1	2
-2	one	2_1	2
-2	five	2_1	2
-2	nine	2_1	2
-2	for	2_1	2
-2	music	2_1	2
-2	two	2_1	2
-2	six	2_1	2
-2	ten	2_1	2
-3	math	2_2	2
-3	four	2_2	2
-3	eight	2_2	2
-3	time	2_2	2
-3	math	2_2	2
-3	three	2_2	2
-3	seven	2_2	2
-3	what	2_2	2
-4	jacket	3_1	1
-4	skirt	3_1	1
-4	blue	3_1	1
-4	green	3_1	1
-4	no	3_1	1
-4	dress	3_1	1
-4	red	3_1	1
-4	yellow	3_1	1
-4	white	3_1	1
-4	not	3_1	1
-5	warm	4_1	1
-5	cool	4_1	1
-5	snowy	4_1	1
-5	cold	4_1	1
-5	today	4_1	1
-5	play	4_1	1
-5	football	4_1	1
-5	sunny	4_1	1
-6	big	5_1	1
-6	long	5_1	1
-6	banana	5_1	1
-6	orange	5_1	1
-6	are	5_1	1
-6	small	5_1	1
-6	short	5_1	1
-6	pear	5_1	1
-6	watermelon	5_1	1
-6	they	5_1	1
-6	apple	5_1	1
-7	horse	6_1	1
-7	cat	6_1	1
-7	duck	6_1	1
-7	eleven	6_1	1
-7	thirteen	6_1	1
-7	twenty	6_1	1
-7	rabbit	6_1	1
-7	dog	6_1	1
-7	twelve	6_1	1
-7	fifteen	6_1	1
-7	pig	6_1	1
-7	there	6_1	1
+1	computer	1_1	1	n.计算机
+1	fan	1_1	1	n.风扇
+1	is	1_1	1	是
+1	your	1_1	1	pron.你的
+1	picture	1_1	1	n.图画
+1	yes	1_1	1	adj.是的
+1	board	1_1	1	n.木板
+1	this	1_1	1	adj.&pron.这
+1	that	1_1	1	pron.那
+1	light	1_1	1	n.光
+1	my	1_1	1	adj.我的
+1	floor	1_1	1	n.地板
+1	it	1_1	1	pron.它
+2	class	2_1	2	n.班级
+2	one	2_1	2	n.一
+2	five	2_1	2	num.五
+2	nine	2_1	2	num.&n.九
+2	for	2_1	2	prep.为
+2	music	2_1	2	n.音乐
+2	two	2_1	2	num.二
+2	six	2_1	2	n.六
+2	ten	2_1	2	num.十
+3	math	2_2	2	n.数学
+3	four	2_2	2	num.四
+3	eight	2_2	2	num.八
+3	time	2_2	2	n.时间
+3	math	2_2	2	n.数学
+3	three	2_2	2	num.三
+3	seven	2_2	2	num.七
+3	what	2_2	2	pron.什么
+4	jacket	3_1	1	n.短上衣
+4	skirt	3_1	1	n.裙子
+4	blue	3_1	1	adj.蓝色的
+4	green	3_1	1	adj.绿色的
+4	no	3_1	1	n.不
+4	dress	3_1	1	n.连衣裙
+4	red	3_1	1	adj.红色的
+4	yellow	3_1	1	adj.黄色的
+4	white	3_1	1	adj.白色的
+4	not	3_1	1	adv.不
+5	warm	4_1	1	adj.暖和的
+5	cool	4_1	1	adj.凉的
+5	snowy	4_1	1	adj.多雪的
+5	cold	4_1	1	adj.冷的
+5	today	4_1	1	n.&adv.今天
+5	play	4_1	1	n.游戏
+5	football	4_1	1	n.足球
+5	sunny	4_1	1	adj.阳光充足的
+6	big	5_1	1	adj.大的
+6	long	5_1	1	adj.长的
+6	banana	5_1	1	n.香蕉
+6	orange	5_1	1	adj.橙色的
+6	are	5_1	1	vi.是
+6	small	5_1	1	adj.小的
+6	short	5_1	1	adj.短的
+6	pear	5_1	1	n.梨(树)
+6	watermelon	5_1	1	n.西瓜
+6	they	5_1	1	pron.他们
+6	apple	5_1	1	n.苹果
+7	horse	6_1	1	n.马
+7	cat	6_1	1	n.猫
+7	duck	6_1	1	n.鸭
+7	eleven	6_1	1	num.十一
+7	thirteen	6_1	1	num.十三
+7	twenty	6_1	1	adj.二十
+7	rabbit	6_1	1	n.兔子
+7	dog	6_1	1	n.狗
+7	twelve	6_1	1	adj.十二
+7	fifteen	6_1	1	num.十五
+7	pig	6_1	1	n.猪
+7	there	6_1	1	adv.在那里
