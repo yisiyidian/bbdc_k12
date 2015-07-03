@@ -67,6 +67,42 @@
               "music":"8.2M"
               },
               {
+              "key": "houhai_stage0",
+              "name": "厚海INTRO",
+              "words": 521,
+              "music":"8.2M"
+              },
+              {
+              "key": "houhai_stage1",
+              "name": "厚海1级",
+              "words": 673,
+              "music":"8.2M"
+              },
+              {
+              "key": "houhai_stage2",
+              "name": "厚海2级",
+              "words": 734,
+              "music":"8.2M"
+              },
+              {
+              "key": "houhai_stage3",
+              "name": "厚海3级",
+              "words": 1014,
+              "music":"8.2M"
+              },
+              {
+              "key": "houhai_stage4",
+              "name": "厚海4级",
+              "words": 1374,
+              "music":"8.2M"
+              },
+              {
+              "key": "houhai_stage5",
+              "name": "厚海5级",
+              "words": 1576,
+              "music":"8.2M"
+              },
+              {
               "key": "junior_1",
               "name": "初一（上）",
               "words": 305,

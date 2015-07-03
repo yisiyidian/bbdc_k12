@@ -73,8 +73,9 @@ function BookLayer.create(education)
     
     local rect_table = {'senior_1','senior_2','senior_3','senior_4','senior_5','senior_6','senior_7','senior_8','senior_9','senior_10','senior_11'
                       ,'cet4','cet6','pro4','pro8','gse'
-                      ,'gre','gmat','sat','toefl','ielts'}
-    if grade[1] == 'kwekwe' then
+                      ,'gre','gmat','sat','toefl','ielts'
+                      ,'houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'}
+    if grade[1] == 'kwekwe' or grade[1] == 'houhai' then
         grade[1] = 'more'
     elseif grade[1] == 'cet4' or grade[1] == 'cet6' or grade[1] == 'pro4' or grade[1] == 'pro8' or grade[1] == 'gse' then
         grade[1] = 'college'
@@ -91,7 +92,7 @@ function BookLayer.create(education)
     elseif grade[1] == 'college' then
         key_array = {'cet4','cet6','pro4','pro8','gse'}
     elseif grade[1] == 'more' then
-        key_array = {'gre','gmat','sat','toefl','ielts','kwekwe','kwekwe_2','kwekwe_3'}
+        key_array = {'gre','gmat','sat','toefl','ielts','kwekwe','kwekwe_2','kwekwe_3','houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'}
     else 
         key_array = split(s_CURRENT_USER.bookList,'|')
     end
