@@ -42,8 +42,15 @@ function BattleView:initUI()
 		self:addChild(pet[i].ui)
 	end
 
+	local function update(delta)
+		s_BattleManager:updateTime(delta)
+	end
+	self:scheduleUpdateWithPriorityLua(update,0)
+
     local MatView = require("playmodel.newmat.MatView").create()
 	self:addChild(MatView)
+
+
 end
 
 function BattleView:touchFunc()
