@@ -147,28 +147,6 @@ function PathController:symmetry()
 	PathController.path = temp
 end
 
-function PathController:getPath2()
-	local halfLength = math.floor(PathController.length/2)
-	if halfLength == 0 then
-		return {}
-	end
-	local mat = {
-	{0,0,0,0,0,},
-	{0,0,0,0,0,},
-	{0,0,0,0,0,},
-	{0,0,0,0,0,},
-	{0,0,0,0,0,},
-	}
-
-	for i=1,#PathConfig.data do
-	 	local x = math.floor(PathConfig.data /10)
-	 	local y = math.floor(PathConfig.data %10)
-	 	mat[x][y] = 1
-	end 
-
-	print_lua_table(mat)
-end
-
 function PathController:checkError(data)
 	local k = 0
 	local mat = {
