@@ -24,11 +24,21 @@ function AlternatePathController:getPath(path)
 	 	AlternatePathController.mat[AlternatePathController.originalpath[i].x][AlternatePathController.originalpath[i].y] = 1
 	end 
 
-	AlternatePathController:getRandomPath()
+	AlternatePathController:getRotatePath()
 end
 
-function AlternatePathController:getRandomPath()
+function AlternatePathController:getRotatePath()
+	local temp = {}
+	local rotateX = AlternatePathController.originalpath[AlternatePathController.halfLength + 1].x
+	local rotateY = AlternatePathController.originalpath[AlternatePathController.halfLength + 1].y
 	for i=1,AlternatePathController.halfLength do
-		print(i)
+		temp[#temp + 1] = AlternatePathController.originalpath[i]
+	end
+	for i=1,temp do
+		local tempP = cc.p(0,0)
+		temp[i].x = temp[i].x - rotateX
+		temp[i].y = temp[i].y - rotateY
+
+
 	end
 end
