@@ -8,6 +8,11 @@ PathController.length = 0
 
 
 function PathController:getPath(length)
+	for i=1,#PathConfig.data do
+		print("检验资料"..i.."中")
+		PathController:checkError(PathConfig.data[i])
+	end
+	
 	PathController.length = length
 	math.randomseed(os.time())
 	local randomNum = math.random(1,1000)
@@ -19,11 +24,8 @@ function PathController:getPath(length)
 	-- print("toCoordinate")
 	PathController:toCoordinate()
 	-- print_lua_table(PathController.path)
-	-- print("rotate")
-	PathController:rotate()
-	-- print_lua_table(PathController.path)
-	-- print("symmetry")
-	PathController:symmetry()
+	-- print("rotate & symmetry")
+	PathController:rotateAndSymmetry()
 	-- print_lua_table(PathController.path)
 	return PathController.path
 end
@@ -51,9 +53,8 @@ function PathController:toCoordinate()
 	PathController.path = temp
 end
 
-function PathController:rotate()
-	local randomNum = math.random(1,1000)%4
-	-- print("旋转"..(randomNum + 1)*90 )
+function PathController:rotateAndSymmetry()
+	local randomNum = math.random(1,1000)%8
 	local tempP = cc.p(0,0)
 	local temp = {}
 	for k,v in pairs(PathController.path) do
@@ -67,27 +68,43 @@ function PathController:rotate()
 		if randomNum == 0 then
 			tempP.x = temp[k].x
 			tempP.y = temp[k].y
-			temp[k].x = tempP.y
-			temp[k].y = -tempP.x
-		-- 旋转90
+			temp[k].x = tempP.x
+			temp[k].y = tempP.y
 		elseif randomNum == 1 then
 			tempP.x = temp[k].x
 			tempP.y = temp[k].y
 			temp[k].x = -tempP.x
-			temp[k].y = -tempP.y
-		-- 旋转180
+			temp[k].y = tempP.y
 		elseif randomNum == 2 then
+			tempP.x = temp[k].x
+			tempP.y = temp[k].y
+			temp[k].x = tempP.x
+			temp[k].y = -tempP.y
+		elseif randomNum == 3 then
+			tempP.x = temp[k].x
+			tempP.y = temp[k].y			
+			temp[k].x = -tempP.x
+			temp[k].y = -tempP.y
+		elseif randomNum == 4 then
+			tempP.x = temp[k].x
+			tempP.y = temp[k].y
+			temp[k].x = tempP.y
+			temp[k].y = tempP.x
+		elseif randomNum == 5 then
 			tempP.x = temp[k].x
 			tempP.y = temp[k].y
 			temp[k].x = -tempP.y
 			temp[k].y = tempP.x
-		-- 旋转270
-		elseif randomNum == 3 then
+		elseif randomNum == 6 then
+			tempP.x = temp[k].x
+			tempP.y = temp[k].y
+			temp[k].x = tempP.y
+			temp[k].y = -tempP.x
+		elseif randomNum == 7 then
 			tempP.x = temp[k].x
 			tempP.y = temp[k].y			
-			temp[k].x = tempP.x		
-			temp[k].y = tempP.y
-			-- 旋转360
+			temp[k].x = -tempP.y
+			temp[k].y = -tempP.x
 		end
 	end
 	for k,v in pairs(PathController.path) do
@@ -97,50 +114,34 @@ function PathController:rotate()
 	PathController.path = temp
 end
 
-function PathController:symmetry()
-	local randomNum = math.random(1,1000)%4
-	-- print("对称"..(randomNum + 1)*45 )
-	local temp = {}
-	local tempP = cc.p(0,0)
-	for k,v in pairs(PathController.path) do
-		temp[#temp + 1] = PathController.path[k]
-	end
-	for k,v in pairs(temp) do
-		temp[k].x = temp[k].x - 3
-		temp[k].y = temp[k].y - 3
+
+function PathController:checkError(data)
+	local k = 0
+	local mat = {
+	{0,0,0,0,0,},
+	{0,0,0,0,0,},
+	{0,0,0,0,0,},
+	{0,0,0,0,0,},
+	{0,0,0,0,0,},
+	}
+
+	for i=1,#data do
+	 	local x = math.floor(data[i] /10)
+	 	local y = math.floor(data[i] %10)
+	 	mat[x][y] = 1
 	end 
-	for k,v in pairs(temp) do
-		if randomNum == 0 then
-			tempP.x = temp[k].x
-			tempP.y = temp[k].y
-			temp[k].x = tempP.y
-			temp[k].y = tempP.x 
-		-- 45对称
-		elseif randomNum == 1 then
-			tempP.x = temp[k].x
-			tempP.y = temp[k].y
-			temp[k].x = -tempP.x
-			temp[k].y = tempP.y
-		-- 90对称
-		elseif randomNum == 2 then
-			tempP.x = temp[k].x
-			tempP.y = temp[k].y
-			temp[k].x = -tempP.y
-			temp[k].y = -tempP.x
-		-- 135对称
-		elseif randomNum == 3 then
-			tempP.x = temp[k].x
-			tempP.y = temp[k].y
-			temp[k].x = tempP.x
-			temp[k].y = -tempP.y
-			-- 180对称	
+
+	for i=1,5 do
+		for j=1,5 do
+			k = k + mat[i][j]
 		end
 	end
-	for k,v in pairs(PathController.path) do
-		temp[k].x = temp[k].x + 3
-		temp[k].y = temp[k].y + 3
+
+	if k ~= 25 then
+		print("资料有误")
+	else
+		print("并没有什么问题")
 	end
-	PathController.path = temp
 end
 
 return PathController
