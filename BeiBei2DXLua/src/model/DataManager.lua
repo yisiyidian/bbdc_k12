@@ -157,7 +157,7 @@ function DataManager.loadK12Books()
                                 -- print(bookUnitWord[bookName[i]][unit_word[1]])
                             end
                         else
-                            flag = 1
+                            --flag = 1
                             if unit_word[1] + flag - current_unit ~= 0 then
                                 bookUnitWord[bookName[i]][''..(unit_word[1]+flag)] = unit_word[2]
                                 current_unit = unit_word[1]+flag
@@ -213,10 +213,10 @@ function DataManager.loadUnitName()
                     if unit_word[1] - 1 == 0 then
                         first_count = first_count + 1
                         if first_count < 4 then
-                            bookUnitName[bookName[i]][unit_word[1]] = '1_1'
+                            bookUnitName[bookName[i]][unit_word[1]] = unit_word[3]
                         else
-                            flag = 1
-                            bookUnitName[bookName[i]][''..(unit_word[1]+flag)] = '1_2'
+                            --flag = 1
+                            bookUnitName[bookName[i]][''..(unit_word[1]+flag)] = unit_word[3]
                         end
                         current_unit = unit_word[1]
                     elseif unit_word[1]+flag - current_unit ~= 0 then
