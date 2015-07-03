@@ -1,211 +1,211 @@
-1	cultural	1_1	4
-1	relic	1_1	4
-1	rare	1_1	4
-1	valuable	1_1	4
-1	survive	1_1	4
-1	vase	1_1	4
-1	dynasty	1_1	4
-1	ivory	1_1	4
-1	dragon	1_1	4
-1	amber	1_1	4
-1	amaze	1_1	4
-2	amazing	1_2	4
-2	select	1_2	4
-2	honey	1_2	4
-2	design	1_2	4
-2	fancy	1_2	4
-2	style	1_2	4
-2	decorate	1_2	4
-2	jewel	1_2	4
-2	artist	1_2	4
-2	belong	1_2	4
-2	troop	1_2	4
-3	reception	1_3	4
-3	remove	1_3	4
-3	wooden	1_3	4
-3	doubt	1_3	4
-3	mystery	1_3	4
-3	former	1_3	4
-3	worth	1_3	4
-3	rebuild	1_3	4
-3	local	1_3	4
-3	apart	1_3	4
-3	painting	1_3	4
-4	castle	1_4	4
-4	trial	1_4	4
-4	eyewitness	1_4	4
-4	evidence	1_4	4
-4	explode	1_4	4
-4	entrance	1_4	4
-4	sailor	1_4	4
-4	sink	1_4	4
-4	maid	1_4	4
-4	informal	1_4	4
-4	debate	1_4	4
-5	ancient	2_1	4
-5	compete	2_1	4
-5	competitor	2_1	4
-5	medal	2_1	4
-5	mascot	2_1	4
-5	magical	2_1	4
-5	volunteer	2_1	4
-5	regular	2_1	4
-5	basis	2_1	4
-5	athlete	2_1	4
-6	admit	2_2	4
-6	slave	2_2	4
-6	nowadays	2_2	4
-6	gymnastics	2_2	4
-6	athletics	2_2	4
-6	stadium	2_2	4
-6	host	2_2	4
-6	responsibility	2_2	4
-6	olive	2_2	4
-6	wreath	2_2	4
-7	replace	2_3	4
-7	motto	2_3	4
-7	swift	2_3	4
-7	similarity	2_3	4
-7	charge	2_3	4
-7	physical	2_3	4
-7	fine	2_3	4
-7	poster	2_3	4
-7	advertise	2_3	4
-7	princess	2_3	4
-8	glory	2_4	4
-8	bargain	2_4	4
-8	prince	2_4	4
-8	hopeless	2_4	4
-8	foolish	2_4	4
-8	goddess	2_4	4
-8	pain	2_4	4
-8	deserve	2_4	4
-8	striker	2_4	4
-9	calculate	3_1	4
-9	calculate	3_1	4
-9	universal	3_1	4
-9	simplify	3_1	4
-9	sum	3_1	4
-9	operator	3_1	4
-9	logical	3_1	4
-9	technology	3_1	4
-9	revolution	3_1	4
-9	artificial	3_1	4
-9	intelligence	3_1	4
-10	intelligent	3_2	4
-10	solve	3_2	4
-10	mathematical	3_2	4
-10	reality	3_2	4
-10	personal	3_2	4
-10	personally	3_2	4
-10	tube	3_2	4
-10	transistor	3_2	4
-10	chip	3_2	4
-10	total	3_2	4
-10	totally	3_2	4
-11	network	3_3	4
-11	web	3_3	4
-11	application	3_3	4
-11	finance	3_3	4
-11	mobile	3_3	4
-11	rocket	3_3	4
-11	explore	3_3	4
-11	anyhow	3_3	4
-11	goal	3_3	4
-11	virus	3_3	4
-11	signal	3_3	4
-12	type	3_4	4
-12	coach	3_4	4
-12	arise	3_4	4
-12	electronic	3_4	4
-12	appearance	3_4	4
-12	character	3_4	4
-12	mop	3_4	4
-12	naughty	3_4	4
-12	niece	3_4	4
-12	spoil	3_4	4
-13	wildlife	4_1	4
-13	protection	4_1	4
-13	wild	4_1	4
-13	habitat	4_1	4
-13	threaten	4_1	4
-13	decrease	4_1	4
-13	endanger	4_1	4
-13	loss	4_1	4
-13	reserve	4_1	4
-13	hunt	4_1	4
-13	zone	4_1	4
-14	carpet	4_2	4
-14	respond	4_2	4
-14	distant	4_2	4
-14	fur	4_2	4
-14	antelope	4_2	4
-14	relief	4_2	4
-14	laughter	4_2	4
-14	mercy	4_2	4
-14	certain	4_2	4
-14	importance	4_2	4
-14	rub	4_2	4
-15	mosquito	4_3	4
-15	insect	4_3	4
-15	contain	4_3	4
-15	powerful	4_3	4
-15	affect	4_3	4
-15	attention	4_3	4
-15	appreciate	4_3	4
-15	succeed	4_3	4
-15	secure	4_3	4
-15	income	4_3	4
-15	harm	4_3	4
-16	bite	4_4	4
-16	extinction	4_4	4
-16	dinosaur	4_4	4
-16	county	4_4	4
-16	inspect	4_4	4
-16	unexpected	4_4	4
-16	incident	4_4	4
-16	dust	4_4	4
-16	disappearance	4_4	4
-16	fierce	4_4	4
-16	ending	4_4	4
-17	classical	5_1	4
-17	roll	5_1	4
-17	orchestra	5_1	4
-17	rap	5_1	4
-17	folk	5_1	4
-17	jazz	5_1	4
-17	choral	5_1	4
-17	musician	5_1	4
-17	pretend	5_1	4
-17	attach	5_1	4
-18	form	5_2	4
-18	fame	5_2	4
-18	earn	5_2	4
-18	extra	5_2	4
-18	instrument	5_2	4
-18	perform	5_2	4
-18	performance	5_2	4
-18	cash	5_2	4
-18	studio	5_2	4
-18	millionaire	5_2	4
-19	actor	5_3	4
-19	rely	5_3	4
-19	broadcast	5_3	4
-19	humorous	5_3	4
-19	familiar	5_3	4
-19	reunite	5_3	4
-19	attractive	5_3	4
-19	addition	5_3	4
-19	excitement	5_3	4
-19	ballad	5_3	4
-20	overnight	5_4	4
-20	dip	5_4	4
-20	tadpole	5_4	4
-20	lily	5_4	4
-20	confident	5_4	4
-20	brief	5_4	4
-20	devotion	5_4	4
-20	invitation	5_4	4
-20	beard	5_4	4
-20	sensitive	5_4	4
-20	painful	5_4	4
+1	cultural	1_1	4	adj.文化的
+1	relic	1_1	4	n.神圣的遗物
+1	rare	1_1	4	adj.稀罕的
+1	valuable	1_1	4	adj.贵重的
+1	survive	1_1	4	vt.生存
+1	vase	1_1	4	n.花瓶
+1	dynasty	1_1	4	n.朝代
+1	ivory	1_1	4	n.象牙
+1	dragon	1_1	4	n.龙
+1	amber	1_1	4	n.琥珀色
+1	amaze	1_1	4	v.使吃惊
+2	amazing	1_2	4	adj.令人惊异的
+2	select	1_2	4	adj.精选的
+2	honey	1_2	4	n.蜂蜜
+2	design	1_2	4	vt.&vi.设计
+2	fancy	1_2	4	n.想像力
+2	style	1_2	4	n.风格
+2	decorate	1_2	4	vt.装饰
+2	jewel	1_2	4	n.宝石
+2	artist	1_2	4	n.艺术家
+2	belong	1_2	4	vi.属于
+2	troop	1_2	4	n.群
+3	reception	1_3	4	n.接待
+3	remove	1_3	4	vt.除去
+3	wooden	1_3	4	adj.木制的
+3	doubt	1_3	4	n.怀疑
+3	mystery	1_3	4	n.神秘
+3	former	1_3	4	adj.以前的
+3	worth	1_3	4	adj.值得的
+3	rebuild	1_3	4	v.重建
+3	local	1_3	4	adj.当地的
+3	apart	1_3	4	adv.分别地
+3	painting	1_3	4	n.水彩画
+4	castle	1_4	4	n.城堡
+4	trial	1_4	4	n.试验
+4	eyewitness	1_4	4	n.目击者
+4	evidence	1_4	4	n.证据
+4	explode	1_4	4	vt.爆炸
+4	entrance	1_4	4	n.入口
+4	sailor	1_4	4	n.海员
+4	sink	1_4	4	n.接收端
+4	maid	1_4	4	n.女仆
+4	informal	1_4	4	adj.非正式的
+4	debate	1_4	4	n.辩论
+5	ancient	2_1	4	adj.古老的
+5	compete	2_1	4	v.竞争
+5	competitor	2_1	4	n.竞争者
+5	medal	2_1	4	n.奖章
+5	mascot	2_1	4	n.福神
+5	magical	2_1	4	adj.神奇的
+5	volunteer	2_1	4	n.志愿者
+5	regular	2_1	4	adj.有规律的
+5	basis	2_1	4	n.基础
+5	athlete	2_1	4	n.运动员
+6	admit	2_2	4	vt.&vi.承认
+6	slave	2_2	4	n.奴隶
+6	nowadays	2_2	4	adv.现今
+6	gymnastics	2_2	4	n.&adj.体操
+6	athletics	2_2	4	n.体育运动
+6	stadium	2_2	4	n.露天体育场
+6	host	2_2	4	v.主办
+6	responsibility	2_2	4	n.责任
+6	olive	2_2	4	n.橄榄
+6	wreath	2_2	4	n.花环
+7	replace	2_3	4	vt.取代
+7	motto	2_3	4	n.座右铭
+7	swift	2_3	4	adj.快的
+7	similarity	2_3	4	n.相似
+7	charge	2_3	4	n.费用
+7	physical	2_3	4	adj.身体的
+7	fine	2_3	4	adj.美好的
+7	poster	2_3	4	n.海报
+7	advertise	2_3	4	vi.登广告
+7	princess	2_3	4	n.公主
+8	glory	2_4	4	n.光荣
+8	bargain	2_4	4	vi.议价
+8	prince	2_4	4	n.王子
+8	hopeless	2_4	4	adj.没有希望的
+8	foolish	2_4	4	adj.愚蠢的
+8	goddess	2_4	4	n.女神
+8	pain	2_4	4	n.痛苦
+8	deserve	2_4	4	vt.值得
+8	striker	2_4	4	n.罢工者
+9	calculate	3_1	4	vt.计算
+9	calculate	3_1	4	vt.计算
+9	universal	3_1	4	adj.普遍的
+9	simplify	3_1	4	v.简化
+9	sum	3_1	4	n.总数(计)
+9	operator	3_1	4	n.操作员
+9	logical	3_1	4	adj.符合逻辑的
+9	technology	3_1	4	n.技术
+9	revolution	3_1	4	n.革命
+9	artificial	3_1	4	adj.人造的
+9	intelligence	3_1	4	n.智力
+10	intelligent	3_2	4	adj.聪明的
+10	solve	3_2	4	v.解答(难题)
+10	mathematical	3_2	4	adj.数学的
+10	reality	3_2	4	n.现实
+10	personal	3_2	4	adj.私人的
+10	personally	3_2	4	adv.亲自地
+10	tube	3_2	4	n.管
+10	transistor	3_2	4	n.晶体管
+10	chip	3_2	4	n.薄片
+10	total	3_2	4	adj.总计的（金额等）
+10	totally	3_2	4	adv.完全
+11	network	3_3	4	n.网络
+11	web	3_3	4	n.网
+11	application	3_3	4	n.应用
+11	finance	3_3	4	n.财政
+11	mobile	3_3	4	adj.可移动的
+11	rocket	3_3	4	n.火箭
+11	explore	3_3	4	vt.&vi.探索
+11	anyhow	3_3	4	adv.无论如何
+11	goal	3_3	4	n.目标
+11	virus	3_3	4	n.病毒
+11	signal	3_3	4	n.信号
+12	type	3_4	4	n.类型
+12	coach	3_4	4	n.教练
+12	arise	3_4	4	vi.上升
+12	electronic	3_4	4	adj.电子的
+12	appearance	3_4	4	n.外表
+12	character	3_4	4	n.个性
+12	mop	3_4	4	n.拖把
+12	naughty	3_4	4	adj.顽皮的
+12	niece	3_4	4	n.侄女
+12	spoil	3_4	4	v.溺爱
+13	wildlife	4_1	4	n.野生动物
+13	protection	4_1	4	n.保护
+13	wild	4_1	4	adj.野生的
+13	habitat	4_1	4	n.(动植物的)产地
+13	threaten	4_1	4	vt.&vi.威胁
+13	decrease	4_1	4	vt.&vi.减少
+13	endanger	4_1	4	vt.危及
+13	loss	4_1	4	n.丧失
+13	reserve	4_1	4	vt.保留
+13	hunt	4_1	4	v.狩猎
+13	zone	4_1	4	n.地域
+14	carpet	4_2	4	n.地毯
+14	respond	4_2	4	vi.&vt.回复
+14	distant	4_2	4	adj.遥远的
+14	fur	4_2	4	n.毛皮服饰
+14	antelope	4_2	4	n.羚羊
+14	relief	4_2	4	n.宽慰
+14	laughter	4_2	4	n.笑
+14	mercy	4_2	4	n.怜悯
+14	certain	4_2	4	adj.一定的
+14	importance	4_2	4	n.重要
+14	rub	4_2	4	vt.擦
+15	mosquito	4_3	4	n.蚊子
+15	insect	4_3	4	n.昆虫
+15	contain	4_3	4	vt.包含
+15	powerful	4_3	4	adj.强有力的
+15	affect	4_3	4	vt.影响
+15	attention	4_3	4	n.注意(力)
+15	appreciate	4_3	4	vt.欣赏
+15	succeed	4_3	4	vt.成功
+15	secure	4_3	4	adj.安全的
+15	income	4_3	4	n.收入
+15	harm	4_3	4	n.伤害
+16	bite	4_4	4	n.咬
+16	extinction	4_4	4	n.消失
+16	dinosaur	4_4	4	n.恐龙
+16	county	4_4	4	n.郡
+16	inspect	4_4	4	vt.调查
+16	unexpected	4_4	4	adj.想不到的
+16	incident	4_4	4	n.事件
+16	dust	4_4	4	n.灰尘
+16	disappearance	4_4	4	n.消失
+16	fierce	4_4	4	adj.猛烈的
+16	ending	4_4	4	n.结尾
+17	classical	5_1	4	adj.古典的
+17	roll	5_1	4	vi.翻滚
+17	orchestra	5_1	4	n.管弦乐队
+17	rap	5_1	4	n.轻敲
+17	folk	5_1	4	adj.民间的
+17	jazz	5_1	4	n.爵士乐
+17	choral	5_1	4	adj.合唱队的
+17	musician	5_1	4	n.音乐家
+17	pretend	5_1	4	vt.&vi.假装
+17	attach	5_1	4	v.附上
+18	form	5_2	4	n.形式
+18	fame	5_2	4	n.名声
+18	earn	5_2	4	vt.赚得
+18	extra	5_2	4	adj.额外的
+18	instrument	5_2	4	n.仪器
+18	perform	5_2	4	v.执行
+18	performance	5_2	4	n.表演
+18	cash	5_2	4	n.现金
+18	studio	5_2	4	n.工作场所
+18	millionaire	5_2	4	n.百万富翁
+19	actor	5_3	4	n.男演员
+19	rely	5_3	4	v.倚赖
+19	broadcast	5_3	4	n.广播
+19	humorous	5_3	4	adj.幽默的
+19	familiar	5_3	4	adj.熟悉的
+19	reunite	5_3	4	v.再结合
+19	attractive	5_3	4	adj.有吸引力的
+19	addition	5_3	4	n.增加
+19	excitement	5_3	4	n.激动
+19	ballad	5_3	4	n.歌谣
+20	overnight	5_4	4	n.前晚
+20	dip	5_4	4	n.游;下降
+20	tadpole	5_4	4	n.蝌蚪
+20	lily	5_4	4	n.百合花
+20	confident	5_4	4	adj.自信的
+20	brief	5_4	4	adj.简短的
+20	devotion	5_4	4	n.虔诚
+20	invitation	5_4	4	n.邀请
+20	beard	5_4	4	n.胡须
+20	sensitive	5_4	4	adj.敏感的
+20	painful	5_4	4	adj.痛苦的

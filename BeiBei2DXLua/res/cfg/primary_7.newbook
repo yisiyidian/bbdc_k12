@@ -1,75 +1,75 @@
-1	by	1_1	1
-1	bus	1_1	1
-1	foot	1_1	1
-1	train	1_1	1
-1	bike	1_1	1
-1	how	1_1	1
-1	traffic	1_1	1
-1	light	1_1	1
-1	rule	1_1	1
-1	wait	1_1	1
-1	stop	1_1	1
-1	get	1_1	1
-1	usually	1_1	1
-1	sometimes	1_1	1
-2	library	2_1	2
-2	hospital	2_1	2
-2	bookstore	2_1	2
-2	please	2_1	2
-2	turn	2_1	2
-2	straight	2_1	2
-2	post	2_1	2
-2	cinema	2_1	2
-3	where	2_2	2
-3	next	2_2	2
-3	right	2_2	2
-3	then	2_2	2
-3	cinema	2_2	2
-3	office	2_2	2
-3	left	2_2	2
-3	hospital	2_2	2
-4	next	3_1	1
-4	evening	3_1	1
-4	comic	3_1	1
-4	post	3_1	1
-4	newspaper	3_1	1
-4	week	3_1	1
-4	book	3_1	1
-4	card	3_1	1
-4	buy	3_1	1
-4	afternoon	3_1	1
-4	bookstore	3_1	1
-4	weekend	3_1	1
-4	comic	3_1	1
-5	hobby	4_1	1
-5	dive	4_1	1
-5	play	4_1	1
-5	make	4_1	1
-5	collect	4_1	1
-5	violin	4_1	1
-5	ride	4_1	1
-5	stamp	4_1	1
-5	teach	4_1	1
-5	hobby	4_1	1
-6	singer	5_1	1
-6	actor	5_1	1
-6	artist	5_1	1
-6	engineer	5_1	1
-6	policeman	5_1	1
-6	accountant	5_1	1
-6	writer	5_1	1
-6	actress	5_1	1
-6	reporter	5_1	1
-6	where	5_1	1
-6	work	5_1	1
-7	rain	6_1	1
-7	sun	6_1	1
-7	come	6_1	1
-7	soil	6_1	1
-7	plant	6_1	1
-7	should	6_1	1
-7	from	6_1	1
-7	stream	6_1	1
-7	cloud	6_1	1
-7	seed	6_1	1
-7	sprout	6_1	1
+1	by	1_1	1	prep.被
+1	bus	1_1	1	n.公共汽车
+1	foot	1_1	1	n.脚
+1	train	1_1	1	n.火车
+1	bike	1_1	1	n.脚踏车
+1	how	1_1	1	adv.如何
+1	traffic	1_1	1	n.交通
+1	light	1_1	1	n.光
+1	rule	1_1	1	n.规则
+1	wait	1_1	1	vt.&vi.等候
+1	stop	1_1	1	v.停止
+1	get	1_1	1	vt.获得
+1	usually	1_1	1	adv.通常
+1	sometimes	1_1	1	adv.有时
+2	library	2_1	2	n.图书馆
+2	hospital	2_1	2	n.医院
+2	bookstore	2_1	2	n.书店
+2	please	2_1	2	int.请
+2	turn	2_1	2	vt.&vi.使转动
+2	straight	2_1	2	adj.直的
+2	post	2_1	2	n.邮件
+2	cinema	2_1	2	n.电影院
+3	where	2_2	2	adv.哪里
+3	next	2_2	2	adj.紧接在后的
+3	right	2_2	2	adj.正确的
+3	then	2_2	2	adv.然后
+3	cinema	2_2	2	n.电影院
+3	office	2_2	2	n.办公室
+3	left	2_2	2	adj.左边的
+3	hospital	2_2	2	n.医院
+4	next	3_1	1	adj.紧接在后的
+4	evening	3_1	1	n.晚上
+4	comic	3_1	1	n.连环图画
+4	post	3_1	1	n.邮件
+4	newspaper	3_1	1	n.报纸
+4	week	3_1	1	n.星期
+4	book	3_1	1	n.书
+4	card	3_1	1	n.卡片
+4	buy	3_1	1	vt.买
+4	afternoon	3_1	1	n.下午
+4	bookstore	3_1	1	n.书店
+4	weekend	3_1	1	n.周末
+4	comic	3_1	1	n.连环图画
+5	hobby	4_1	1	n.业余爱好
+5	dive	4_1	1	n.潜水
+5	play	4_1	1	n.游戏
+5	make	4_1	1	vt.做
+5	collect	4_1	1	vt.收集
+5	violin	4_1	1	n.小提琴
+5	ride	4_1	1	vt.&vi.骑
+5	stamp	4_1	1	n.邮票
+5	teach	4_1	1	vt.教
+5	hobby	4_1	1	n.业余爱好
+6	singer	5_1	1	n.歌手
+6	actor	5_1	1	n.男演员
+6	artist	5_1	1	n.艺术家
+6	engineer	5_1	1	n.工程师
+6	policeman	5_1	1	n.警察
+6	accountant	5_1	1	n.会计人员
+6	writer	5_1	1	n.作者
+6	actress	5_1	1	n.女演员
+6	reporter	5_1	1	n.记者
+6	where	5_1	1	adv.哪里
+6	work	5_1	1	n.工作
+7	rain	6_1	1	n.雨(水)
+7	sun	6_1	1	n.太阳
+7	come	6_1	1	vi.来
+7	soil	6_1	1	n.土地
+7	plant	6_1	1	n.植物
+7	should	6_1	1	verbauxiliary.应该
+7	from	6_1	1	prep.从
+7	stream	6_1	1	n.(人,车,气)流
+7	cloud	6_1	1	n.云
+7	seed	6_1	1	n.种子
+7	sprout	6_1	1	n.芽

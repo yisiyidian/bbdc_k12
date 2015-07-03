@@ -1,265 +1,265 @@
-1	disabled	1_1	6
-1	hearing	1_1	6
-1	eyesight	1_1	6
-1	syndrome	1_1	6
-1	lap	1_1	6
-1	ambition	1_1	6
-1	ambitious	1_1	6
-1	dictation	1_1	6
-1	noisy	1_1	6
-2	suitable	1_2	6
-2	entry	1_2	6
-2	beneficial	1_2	6
-2	clumsy	1_2	6
-2	bump	1_2	6
-2	outgoing	1_2	6
-2	adapt	1_2	6
-2	bench	1_2	6
-2	microscope	1_2	6
-3	absence	1_3	6
-3	fellow	1_3	6
-3	annoy	1_3	6
-3	annoyance	1_3	6
-3	firm	1_3	6
-3	software	1_3	6
-3	parrot	1_3	6
-3	tank	1_3	6
-3	tortoise	1_3	6
-4	psychology	1_4	6
-4	encouragement	1_4	6
-4	conduct	1_4	6
-4	mainstream	1_4	6
-4	politics	1_4	6
-4	abolish	1_4	6
-4	abolition	1_4	6
-4	resign	1_4	6
-4	slavery	1_4	6
-5	literature	1_5	6
-5	companion	1_5	6
-5	assistance	1_5	6
-5	congratulate	1_5	6
-5	congratulation	1_5	6
-5	bowling	1_5	6
-5	graduation	1_5	6
-5	certificate	1_5	6
-5	architect	1_5	6
-5	access	1_5	6
-6	accessible	1_6	6
-6	handy	1_6	6
-6	impair	1_6	6
-6	basement	1_6	6
-6	outwards	1_6	6
-6	exit	1_6	6
-6	approval	1_6	6
-6	dignity	1_6	6
-6	profit	1_6	6
-6	community	1_6	6
-7	household	2_1	5
-7	fiction	2_1	5
-7	desire	2_1	5
-7	satisfaction	2_1	5
-7	bonus	2_1	5
-7	alarm	2_1	5
-7	apron	2_1	5
-7	sympathy	2_1	5
-7	overweight	2_1	5
-7	elegant	2_1	5
-8	pile	2_2	5
-8	scan	2_2	5
-8	absurd	2_2	5
-8	haircut	2_2	5
-8	makeup	2_2	5
-8	accompany	2_2	5
-8	cushion	2_2	5
-8	necklace	2_2	5
-8	clerk	2_2	5
-8	counter	2_2	5
-9	awful	2_3	5
-9	affair	2_3	5
-9	armchair	2_3	5
-9	declare	2_3	5
-9	cuisine	2_3	5
-9	envy	2_3	5
-9	digital	2_3	5
-9	state	2_3	5
-9	aside	2_3	5
-9	grand	2_3	5
-10	alphabetical	2_4	5
-10	receiver	2_4	5
-10	affection	2_4	5
-10	bound	2_4	5
-10	biography	2_4	5
-10	holy	2_4	5
-10	imagination	2_4	5
-10	staff	2_4	5
-10	navy	2_4	5
-10	junior	2_4	5
-11	talent	2_5	5
-11	chapter	2_5	5
-11	empire	2_5	5
-11	theoretical	2_5	5
-11	framework	2_5	5
-11	thinking	2_5	5
-11	divorce	2_5	5
-11	obey	2_5	5
-11	disobey	2_5	5
-11	assessment	2_5	5
-12	aquarium	3_1	6
-12	anecdote	3_1	6
-12	annual	3_1	6
-12	migration	3_1	6
-12	witness	3_1	6
-12	accommodation	3_1	6
-12	shore	3_1	6
-12	offshore	3_1	6
-12	opposite	3_1	6
-13	yell	3_2	6
-13	pause	3_2	6
-13	oar	3_2	6
-13	telescope	3_2	6
-13	dive	3_2	6
-13	flee	3_2	6
-13	drag	3_2	6
-13	depth	3_2	6
-13	meantime	3_2	6
-14	lip	3_3	6
-14	overboard	3_3	6
-14	urge	3_3	6
-14	abandon	3_3	6
-14	shark	3_3	6
-14	relationship	3_3	6
-14	conservation	3_3	6
-14	iceberg	3_3	6
-14	jog	3_3	6
-15	seaside	3_4	6
-15	net	3_4	6
-15	target	3_4	6
-15	tide	3_4	6
-15	dimension	3_4	6
-15	reflect	3_4	6
-15	pure	3_4	6
-15	cell	3_4	6
-15	aware	3_4	6
-16	vivid	3_5	6
-16	neat	3_5	6
-16	seaweed	3_5	6
-16	narrow	3_5	6
-16	flashlight	3_5	6
-16	suck	3_5	6
-16	turtle	3_5	6
-16	sharp	3_5	6
-16	tasty	3_5	6
-16	giant	3_5	6
-17	grey	3_6	6
-17	scare	3_6	6
-17	shallow	3_6	6
-17	steep	3_6	6
-17	boundary	3_6	6
-17	awesome	3_6	6
-17	leap	3_6	6
-17	seal	3_6	6
-17	refund	3_6	6
-17	pension	3_6	6
-18	airmail	4_1	6
-18	fortnight	4_1	6
-18	roof	4_1	6
-18	muddy	4_1	6
-18	textbook	4_1	6
-18	concept	4_1	6
-18	bucket	4_1	6
-18	weekly	4_1	6
-18	bubble	4_1	6
-18	relevant	4_1	6
-19	remote	4_2	6
-19	ridge	4_2	6
-19	weed	4_2	6
-19	hut	4_2	6
-19	rectangle	4_2	6
-19	rectangular	4_2	6
-19	adjust	4_2	6
-19	platform	4_2	6
-19	broom	4_2	6
-19	tin	4_2	6
-20	jar	4_3	6
-20	sniff	4_3	6
-20	participate	4_3	6
-20	interpreter	4_3	6
-20	grill	4_3	6
-20	evil	4_3	6
-20	otherwise	4_3	6
-20	privilege	4_3	6
-20	paperwork	4_3	6
-20	arrangement	4_3	6
-21	toast	4_4	6
-21	comb	4_4	6
-21	astronaut	4_4	6
-21	angle	4_4	6
-21	donate	4_4	6
-21	voluntary	4_4	6
-21	purchase	4_4	6
-21	anniversary	4_4	6
-21	seed	4_4	6
-22	seedling	4_5	6
-22	vaccination	4_5	6
-22	loan	4_5	6
-22	sew	4_5	6
-22	supplement	4_5	6
-22	ox	4_5	6
-22	plough	4_5	6
-22	trunk	4_5	6
-22	tractor	4_5	6
-23	click	4_6	6
-23	economic	4_6	6
-23	political	4_6	6
-23	distribute	4_6	6
-23	distribution	4_6	6
-23	financial	4_6	6
-23	security	4_6	6
-23	operate	4_6	6
-23	clinic	4_6	6
-24	motherland	5_1	5
-24	visa	5_1	5
-24	queue	5_1	5
-24	cafeteria	5_1	5
-24	lecture	5_1	5
-24	qualification	5_1	5
-24	preparation	5_1	5
-24	recommend	5_1	5
-24	shopkeeper	5_1	5
-25	idiom	5_2	5
-25	comfort	5_2	5
-25	substitute	5_2	5
-25	academic	5_2	5
-25	requirement	5_2	5
-25	essay	5_2	5
-25	tutor	5_2	5
-25	revise	5_2	5
-25	revision	5_2	5
-26	draft	5_3	5
-26	numb	5_3	5
-26	acknowledge	5_3	5
-26	contradict	5_3	5
-26	autonomous	5_3	5
-26	occupy	5_3	5
-26	enterprise	5_3	5
-26	apology	5_3	5
-26	seminar	5_3	5
-27	videophone	5_4	5
-27	bachelor	5_4	5
-27	routine	5_4	5
-27	minibus	5_4	5
-27	optional	5_4	5
-27	cage	5_4	5
-27	bark	5_4	5
-27	battery	5_4	5
-27	site	5_4	5
-28	drill	5_5	5
-28	agent	5_5	5
-28	geographical	5_5	5
-28	parallel	5_5	5
-28	abundant	5_5	5
-28	govern	5_5	5
-28	destination	5_5	5
-28	inn	5_5	5
-28	hike	5_5	5
-28	tomb	5_5	5
+1	disabled	1_1	6	adj.残废的
+1	hearing	1_1	6	n.听力
+1	eyesight	1_1	6	n.视力
+1	syndrome	1_1	6	n.综合征
+1	lap	1_1	6	n.一周
+1	ambition	1_1	6	n.雄心
+1	ambitious	1_1	6	adj.有雄心的
+1	dictation	1_1	6	n.听写
+1	noisy	1_1	6	adj.喧闹的
+2	suitable	1_2	6	adj.合适的
+2	entry	1_2	6	n.进入
+2	beneficial	1_2	6	adj.有益的
+2	clumsy	1_2	6	adj.笨拙的
+2	bump	1_2	6	n.撞击
+2	outgoing	1_2	6	adj.对人友好的
+2	adapt	1_2	6	vi.适应
+2	bench	1_2	6	n.长凳
+2	microscope	1_2	6	n.显微镜
+3	absence	1_3	6	n.缺席
+3	fellow	1_3	6	n.朋友
+3	annoy	1_3	6	vt.&vi.使...苦恼
+3	annoyance	1_3	6	n.烦恼
+3	firm	1_3	6	n.公司
+3	software	1_3	6	n.软件
+3	parrot	1_3	6	n.鹦鹉
+3	tank	1_3	6	n.水槽
+3	tortoise	1_3	6	n.龟
+4	psychology	1_4	6	n.心理学
+4	encouragement	1_4	6	n.鼓励
+4	conduct	1_4	6	n.行为
+4	mainstream	1_4	6	n.主流
+4	politics	1_4	6	n.政治
+4	abolish	1_4	6	vt.废止
+4	abolition	1_4	6	n.废除
+4	resign	1_4	6	vi.辞职
+4	slavery	1_4	6	n.奴役
+5	literature	1_5	6	n.文学
+5	companion	1_5	6	n.同伴
+5	assistance	1_5	6	n.帮助
+5	congratulate	1_5	6	vt.祝贺
+5	congratulation	1_5	6	n.祝贺
+5	bowling	1_5	6	n.保龄球
+5	graduation	1_5	6	n.毕业
+5	certificate	1_5	6	n.证(明)书
+5	architect	1_5	6	n.建筑师
+5	access	1_5	6	vt.进入
+6	accessible	1_6	6	adj.易接近的
+6	handy	1_6	6	adj.方便的
+6	impair	1_6	6	vt.损害
+6	basement	1_6	6	n.根基
+6	outwards	1_6	6	adv.向外
+6	exit	1_6	6	n.出口
+6	approval	1_6	6	n.批准
+6	dignity	1_6	6	n.尊严
+6	profit	1_6	6	n.利润
+6	community	1_6	6	n.社区
+7	household	2_1	5	adj.家庭的
+7	fiction	2_1	5	n.小说
+7	desire	2_1	5	n.渴望
+7	satisfaction	2_1	5	n.满意
+7	bonus	2_1	5	n.红利
+7	alarm	2_1	5	n.警报
+7	apron	2_1	5	n.围裙
+7	sympathy	2_1	5	n.同情
+7	overweight	2_1	5	adj.超重的
+7	elegant	2_1	5	adj.优雅的
+8	pile	2_2	5	n.堆
+8	scan	2_2	5	n.扫描
+8	absurd	2_2	5	adj.荒唐的
+8	haircut	2_2	5	n.理发
+8	makeup	2_2	5	n.组成
+8	accompany	2_2	5	vt.陪伴
+8	cushion	2_2	5	n.垫子
+8	necklace	2_2	5	n.项链
+8	clerk	2_2	5	n.职员
+8	counter	2_2	5	n.计算器
+9	awful	2_3	5	adj.可怕的
+9	affair	2_3	5	n.事件
+9	armchair	2_3	5	n.扶手椅
+9	declare	2_3	5	vt.&vi.宣布
+9	cuisine	2_3	5	n.烹饪
+9	envy	2_3	5	vt.&vi.嫉妒
+9	digital	2_3	5	adj.数字的
+9	state	2_3	5	n.州
+9	aside	2_3	5	adv.在一边
+9	grand	2_3	5	adj.宏伟的
+10	alphabetical	2_4	5	adj.按字母表顺序的
+10	receiver	2_4	5	n.接收器
+10	affection	2_4	5	n.慈爱
+10	bound	2_4	5	n.界限
+10	biography	2_4	5	n.传记
+10	holy	2_4	5	adj.神圣的
+10	imagination	2_4	5	n.想象
+10	staff	2_4	5	n.全体职员
+10	navy	2_4	5	n.海军
+10	junior	2_4	5	adj.初级的
+11	talent	2_5	5	n.才能
+11	chapter	2_5	5	n.章
+11	empire	2_5	5	n.帝国
+11	theoretical	2_5	5	adj.理论上的
+11	framework	2_5	5	n.结构
+11	thinking	2_5	5	n.思考
+11	divorce	2_5	5	n.离婚
+11	obey	2_5	5	vt.&vi.服从
+11	disobey	2_5	5	vi.违反
+11	assessment	2_5	5	n.评估
+12	aquarium	3_1	6	n.水族馆
+12	anecdote	3_1	6	n.轶事
+12	annual	3_1	6	adj.每年的
+12	migration	3_1	6	n.移民
+12	witness	3_1	6	n.目击者
+12	accommodation	3_1	6	n.膳宿
+12	shore	3_1	6	n.岸
+12	offshore	3_1	6	adj.海面的
+12	opposite	3_1	6	adj.相对的
+13	yell	3_2	6	vt.&vi.大叫
+13	pause	3_2	6	n.暂停
+13	oar	3_2	6	n.桨
+13	telescope	3_2	6	n.望远镜
+13	dive	3_2	6	n.潜水
+13	flee	3_2	6	vi.逃跑
+13	drag	3_2	6	v.拖拉
+13	depth	3_2	6	n.深度
+13	meantime	3_2	6	adv.与此同时
+14	lip	3_3	6	n.嘴唇
+14	overboard	3_3	6	adv.自船上落下
+14	urge	3_3	6	vt.催促
+14	abandon	3_3	6	vt.遗弃
+14	shark	3_3	6	n.鲨鱼
+14	relationship	3_3	6	n.关系
+14	conservation	3_3	6	n.保存
+14	iceberg	3_3	6	n.冰山
+14	jog	3_3	6	n.轻推
+15	seaside	3_4	6	adj.海边(的)
+15	net	3_4	6	n.网
+15	target	3_4	6	n.（服务的）对象
+15	tide	3_4	6	n.潮
+15	dimension	3_4	6	n.尺寸
+15	reflect	3_4	6	v.反映
+15	pure	3_4	6	adj.纯的
+15	cell	3_4	6	n.细胞
+15	aware	3_4	6	adj.意识到的
+16	vivid	3_5	6	adj.生动的
+16	neat	3_5	6	adj.整洁的
+16	seaweed	3_5	6	n.海草
+16	narrow	3_5	6	adj.狭窄的
+16	flashlight	3_5	6	n.手电筒
+16	suck	3_5	6	v.吸
+16	turtle	3_5	6	n.海龟
+16	sharp	3_5	6	adj.锋利的
+16	tasty	3_5	6	adj.好吃的
+16	giant	3_5	6	adj.巨大的
+17	grey	3_6	6	adj.灰色的
+17	scare	3_6	6	vt.惊
+17	shallow	3_6	6	adj.浅的
+17	steep	3_6	6	adj.险峻的
+17	boundary	3_6	6	n.边界
+17	awesome	3_6	6	adj.令人惊叹的
+17	leap	3_6	6	n.跳跃
+17	seal	3_6	6	n.印章
+17	refund	3_6	6	n.偿还
+17	pension	3_6	6	n.退休金
+18	airmail	4_1	6	n.航空邮件
+18	fortnight	4_1	6	n.两星期
+18	roof	4_1	6	n.屋顶
+18	muddy	4_1	6	adj.泥泞的
+18	textbook	4_1	6	n.教科书
+18	concept	4_1	6	n.概念
+18	bucket	4_1	6	n.水桶
+18	weekly	4_1	6	n.周刊
+18	bubble	4_1	6	n.泡沫
+18	relevant	4_1	6	adj.相关的
+19	remote	4_2	6	adj.遥远的
+19	ridge	4_2	6	n.脊
+19	weed	4_2	6	n.杂草
+19	hut	4_2	6	n.小屋
+19	rectangle	4_2	6	n.长方形
+19	rectangular	4_2	6	adj.矩形的
+19	adjust	4_2	6	vt.调整
+19	platform	4_2	6	n.平台
+19	broom	4_2	6	n.扫帚
+19	tin	4_2	6	n.锡
+20	jar	4_3	6	n.广口瓶
+20	sniff	4_3	6	n.以鼻吸气
+20	participate	4_3	6	vi.参加某事
+20	interpreter	4_3	6	n.译员
+20	grill	4_3	6	n.烤架
+20	evil	4_3	6	adj.邪恶的
+20	otherwise	4_3	6	adv.否则
+20	privilege	4_3	6	n.特权
+20	paperwork	4_3	6	n.文书工作
+20	arrangement	4_3	6	n.安排
+21	toast	4_4	6	n.烤(土司)面包
+21	comb	4_4	6	n.梳子
+21	astronaut	4_4	6	n.宇航员
+21	angle	4_4	6	n.角(度)
+21	donate	4_4	6	vt.捐赠
+21	voluntary	4_4	6	adj.自愿的
+21	purchase	4_4	6	n.购买
+21	anniversary	4_4	6	n.周年纪念(日)
+21	seed	4_4	6	n.种子
+22	seedling	4_5	6	n.幼苗
+22	vaccination	4_5	6	n.接种疫苗
+22	loan	4_5	6	n.贷款
+22	sew	4_5	6	vt.缝纫
+22	supplement	4_5	6	n.补充物
+22	ox	4_5	6	n.公牛
+22	plough	4_5	6	n.犁
+22	trunk	4_5	6	n.树干
+22	tractor	4_5	6	n.拖拉机
+23	click	4_6	6	n.点击
+23	economic	4_6	6	adj.经济学的
+23	political	4_6	6	adj.政治的
+23	distribute	4_6	6	vt.&vi.分布
+23	distribution	4_6	6	n.分配
+23	financial	4_6	6	adj.金融的
+23	security	4_6	6	n.安全
+23	operate	4_6	6	vi.操作
+23	clinic	4_6	6	n.诊所
+24	motherland	5_1	5	n.祖国
+24	visa	5_1	5	n.签证
+24	queue	5_1	5	n.行列
+24	cafeteria	5_1	5	n.自助餐厅
+24	lecture	5_1	5	n.演讲
+24	qualification	5_1	5	n.资格
+24	preparation	5_1	5	n.准备
+24	recommend	5_1	5	vt.建议
+24	shopkeeper	5_1	5	n.店主
+25	idiom	5_2	5	n.成语
+25	comfort	5_2	5	n.舒适
+25	substitute	5_2	5	n.代替者
+25	academic	5_2	5	adj.学术性的
+25	requirement	5_2	5	n.要求
+25	essay	5_2	5	n.论文
+25	tutor	5_2	5	n.家庭教师
+25	revise	5_2	5	n.校订
+25	revision	5_2	5	n.校订
+26	draft	5_3	5	n.草稿
+26	numb	5_3	5	adj.麻木的
+26	acknowledge	5_3	5	vt.承认
+26	contradict	5_3	5	vt.反驳
+26	autonomous	5_3	5	adj.自治的
+26	occupy	5_3	5	vt.占领
+26	enterprise	5_3	5	n.企业
+26	apology	5_3	5	n.道歉
+26	seminar	5_3	5	n.(大学的)研究班
+27	videophone	5_4	5	n.可视电话
+27	bachelor	5_4	5	n.单身汉
+27	routine	5_4	5	n.例行公事
+27	minibus	5_4	5	n.小型公共汽车
+27	optional	5_4	5	adj.可以任选的
+27	cage	5_4	5	n.笼子
+27	bark	5_4	5	n.狗叫
+27	battery	5_4	5	n.电池
+27	site	5_4	5	n.现场
+28	drill	5_5	5	n.钻孔机
+28	agent	5_5	5	n.代理人
+28	geographical	5_5	5	adj.地理的
+28	parallel	5_5	5	adj.平行的
+28	abundant	5_5	5	adj.丰富的
+28	govern	5_5	5	vt.统治
+28	destination	5_5	5	n.目的地
+28	inn	5_5	5	n.客栈
+28	hike	5_5	5	n.徒步旅行
+28	tomb	5_5	5	n.坟墓

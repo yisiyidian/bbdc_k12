@@ -1,247 +1,247 @@
-1	lunge	1_1	5
-1	approximate	1_1	5
-1	conventional	1_1	5
-1	laughter	1_1	5
-1	reality	1_1	5
-1	tough	1_1	5
-1	vomit	1_1	5
-1	unfit	1_1	5
-1	fascinate	1_1	5
-2	meditation	1_2	5
-2	marathon	1_2	5
-2	urge	1_2	5
-2	accomplish	1_2	5
-2	motivation	1_2	5
-2	devotion	1_2	5
-2	soul	1_2	5
-2	sacred	1_2	5
-2	deed	1_2	5
-3	conception	1_3	5
-3	tact	1_3	5
-3	regret	1_3	5
-3	repentance	1_3	5
-3	wisdom	1_3	5
-3	virtue	1_3	5
-3	noble	1_3	5
-3	doom	1_3	5
-3	bid	1_3	5
-4	juggle	1_4	5
-4	amateur	1_4	5
-4	champion	1_4	5
-4	therefore	1_4	5
-4	economics	1_4	5
-4	entire	1_4	5
-4	attain	1_4	5
-4	profile	1_4	5
-4	courageous	1_4	5
-4	appreciate	1_4	5
-5	appreciation	1_5	5
-5	accountant	1_5	5
-5	receptionist	1_5	5
-5	lawyer	1_5	5
-5	scarf	1_5	5
-5	zip	1_5	5
-5	underwear	1_5	5
-5	overcoat	1_5	5
-5	salary	1_5	5
-5	wage	1_5	5
-6	latitude	2_1	6
-6	voyage	2_1	6
-6	mercy	2_1	6
-6	encyclopedia	2_1	6
-6	alongside	2_1	6
-6	exploration	2_1	6
-6	celestial	2_1	6
-6	pole	2_1	6
-6	equator	2_1	6
-6	horizon	2_1	6
-7	overhead	2_2	6
-7	nowhere	2_2	6
-7	offshore	2_2	6
-7	outward	2_2	6
-7	tide	2_2	6
-7	secure	2_2	6
-7	knot	2_2	6
-7	log	2_2	6
-7	nautical	2_2	6
-7	random	2_2	6
-8	awkward	2_3	6
-8	reference	2_3	6
-8	precise	2_3	6
-8	simplify	2_3	6
-8	portable	2_3	6
-8	shortcoming	2_3	6
-8	update	2_3	6
-8	tendency	2_3	6
-8	reliable	2_3	6
-8	swoop	2_3	6
-9	parcel	2_4	6
-9	peck	2_4	6
-9	cliff	2_4	6
-9	expedition	2_4	6
-9	compulsory	2_4	6
-9	reform	2_4	6
-9	survival	2_4	6
-9	incident	2_4	6
-9	departure	2_4	6
-10	crew	2_5	6
-10	deposit	2_5	6
-10	dilemma	2_5	6
-10	drawback	2_5	6
-10	dusk	2_5	6
-10	routine	2_5	6
-10	reckon	2_5	6
-10	starvation	2_5	6
-10	psychology	2_5	6
-11	gradual	2_6	6
-11	gradually	2_6	6
-11	foresee	2_6	6
-11	thirst	2_6	6
-11	tear	2_6	6
-11	hardship	2_6	6
-11	jaw	2_6	6
-11	roar	2_6	6
-11	background	2_6	6
-12	associate	3_1	5
-12	barrier	3_1	5
-12	brochure	3_1	5
-12	commonwealth	3_1	5
-12	ecology	3_1	5
-12	autonomous	3_1	5
-12	federal	3_1	5
-12	defence	3_1	5
-12	policy	3_1	5
-12	tax	3_1	5
-13	taxation	3_2	5
-13	nation	3_2	5
-13	citizen	3_2	5
-13	citizenship	3_2	5
-13	celebration	3_2	5
-13	tolerate	3_2	5
-13	tolerance	3_2	5
-13	migrant	3_2	5
-13	homeland	3_2	5
-13	via	3_2	5
-14	superb	3_3	5
-14	rust	3_3	5
-14	rusty	3_3	5
-14	tropical	3_3	5
-14	timetable	3_3	5
-14	heritage	3_3	5
-14	aboriginal	3_3	5
-14	fortnight	3_3	5
-14	reservation	3_3	5
-14	highway	3_3	5
-15	cradle	3_4	5
-15	rainfall	3_4	5
-15	agriculture	3_4	5
-15	bachelor	3_4	5
-15	correspond	3_4	5
-15	owe	3_4	5
-15	enclosure	3_4	5
-15	authority	3_4	5
-15	desperate	3_4	5
-15	shrink	3_4	5
-15	barbecue	3_4	5
-16	wind	3_5	5
-16	limb	3_5	5
-16	venom	3_5	5
-16	venomous	3_5	5
-16	paralyze	3_5	5
-16	sickness	3_5	5
-16	recover	3_5	5
-16	funnel	3_5	5
-16	amongst	3_5	5
-16	vinegar	3_5	5
-16	unconscious	3_5	5
-17	pollinate	4_1	4
-17	courtyard	4_1	4
-17	balcony	4_1	4
-17	exotic	4_1	4
-17	distant	4_1	4
-17	goods	4_1	4
-17	scale	4_1	4
-17	conflict	4_1	4
-17	missionary	4_1	4
-17	anchor	4_1	4
-17	tight	4_1	4
-18	tightly	4_2	4
-18	seal	4_2	4
-18	container	4_2	4
-18	restriction	4_2	4
-18	fluency	4_2	4
-18	shave	4_2	4
-18	thunderstorm	4_2	4
-18	dove	4_2	4
-18	lower	4_2	4
-18	beard	4_2	4
-18	ripe	4_2	4
-19	irrigation	4_3	4
-19	weed	4_3	4
-19	spear	4_3	4
-19	string	4_3	4
-19	spade	4_3	4
-19	postpone	4_3	4
-19	pyramid	4_3	4
-19	monument	4_3	4
-19	rot	4_3	4
-19	evolve	4_3	4
-19	evolution	4_3	4
-20	nectar	4_4	4
-20	attach	4_4	4
-20	typical	4_4	4
-20	petal	4_4	4
-20	tube	4_4	4
-20	delicate	4_4	4
-20	fragrant	4_4	4
-20	odour	4_4	4
-20	dull	4_4	4
-20	musty	4_4	4
-21	casual	5_1	5
-21	garment	5_1	5
-21	advert	5_1	5
-21	inform	5_1	5
-21	association	5_1	5
-21	target	5_1	5
-21	basis	5_1	5
-21	technique	5_1	5
-21	lane	5_1	5
-21	feature	5_1	5
-22	conscience	5_2	5
-22	worthy	5_2	5
-22	corporation	5_2	5
-22	budget	5_2	5
-22	expense	5_2	5
-22	broadcast	5_2	5
-22	rely	5_2	5
-22	visual	5_2	5
-22	generate	5_2	5
-22	response	5_2	5
-23	refresh	5_3	5
-23	partly	5_3	5
-23	murder	5_3	5
-23	suitcase	5_3	5
-23	sheet	5_3	5
-23	actress	5_3	5
-23	typist	5_3	5
-23	spokesman	5_3	5
-23	fluent	5_3	5
-23	hostess	5_3	5
-24	invitation	5_4	5
-24	appoint	5_4	5
-24	chairman	5_4	5
-24	raise	5_4	5
-24	dial	5_4	5
-24	operator	5_4	5
-24	litre	5_4	5
-24	mature	5_4	5
-24	fashion	5_4	5
-25	misleading	5_5	5
-25	alcoholic	5_5	5
-25	tobacco	5_5	5
-25	ban	5_5	5
-25	immoral	5_5	5
-25	decent	5_5	5
-25	beware	5_5	5
-25	consumer	5_5	5
-25	trustworthy	5_5	5
+1	lunge	1_1	5	v.突进
+1	approximate	1_1	5	adj.大约的
+1	conventional	1_1	5	adj.普通的
+1	laughter	1_1	5	n.笑
+1	reality	1_1	5	n.现实
+1	tough	1_1	5	adj.强硬的
+1	vomit	1_1	5	vt.&vi.吐出
+1	unfit	1_1	5	adj.不合适的
+1	fascinate	1_1	5	vt.使...入迷
+2	meditation	1_2	5	n.沉思
+2	marathon	1_2	5	n.马拉松
+2	urge	1_2	5	vt.催促
+2	accomplish	1_2	5	vt.完成
+2	motivation	1_2	5	n.动机
+2	devotion	1_2	5	n.虔诚
+2	soul	1_2	5	n.灵魂
+2	sacred	1_2	5	adj.神圣的
+2	deed	1_2	5	n.事迹
+3	conception	1_3	5	n.概念
+3	tact	1_3	5	n.机智
+3	regret	1_3	5	n.遗憾
+3	repentance	1_3	5	n.后悔
+3	wisdom	1_3	5	n.智慧
+3	virtue	1_3	5	n.美德
+3	noble	1_3	5	adj.高尚的
+3	doom	1_3	5	n.命运
+3	bid	1_3	5	n.出价
+4	juggle	1_4	5	vt.变戏法
+4	amateur	1_4	5	adj.业余(爱好者)的
+4	champion	1_4	5	n.冠军
+4	therefore	1_4	5	adv.因此
+4	economics	1_4	5	n.经济学
+4	entire	1_4	5	adj.全部的
+4	attain	1_4	5	vt.&vi.达到
+4	profile	1_4	5	n.轮廓
+4	courageous	1_4	5	adj.勇敢的
+4	appreciate	1_4	5	vt.欣赏
+5	appreciation	1_5	5	n.赏识
+5	accountant	1_5	5	n.会计人员
+5	receptionist	1_5	5	n.接待员
+5	lawyer	1_5	5	n.律师
+5	scarf	1_5	5	n.围巾
+5	zip	1_5	5	n.拉链
+5	underwear	1_5	5	n.内衣
+5	overcoat	1_5	5	n.外套
+5	salary	1_5	5	n.薪水
+5	wage	1_5	5	n.薪水
+6	latitude	2_1	6	n.纬度
+6	voyage	2_1	6	n.航行
+6	mercy	2_1	6	n.怜悯
+6	encyclopedia	2_1	6	n.百科全书
+6	alongside	2_1	6	adv.在旁边
+6	exploration	2_1	6	n.探险
+6	celestial	2_1	6	adj.天上的
+6	pole	2_1	6	n.极(点)
+6	equator	2_1	6	n.赤道
+6	horizon	2_1	6	n.地平线
+7	overhead	2_2	6	n.经常开支
+7	nowhere	2_2	6	adv.任何地方都不
+7	offshore	2_2	6	adj.海面的
+7	outward	2_2	6	adj.向外的
+7	tide	2_2	6	n.潮
+7	secure	2_2	6	adj.安全的
+7	knot	2_2	6	n.结
+7	log	2_2	6	n.圆木
+7	nautical	2_2	6	adj.海上的
+7	random	2_2	6	adj.任意的
+8	awkward	2_3	6	adj.笨拙的
+8	reference	2_3	6	n.参考
+8	precise	2_3	6	adj.精确的
+8	simplify	2_3	6	v.简化
+8	portable	2_3	6	adj.手提式的
+8	shortcoming	2_3	6	n.短处
+8	update	2_3	6	vt.&vi.更新
+8	tendency	2_3	6	n.趋势
+8	reliable	2_3	6	adj.可靠的
+8	swoop	2_3	6	n.俯冲
+9	parcel	2_4	6	n.包裹
+9	peck	2_4	6	v.啄
+9	cliff	2_4	6	n.悬崖
+9	expedition	2_4	6	n.远征
+9	compulsory	2_4	6	adj.被强制的
+9	reform	2_4	6	n.改革
+9	survival	2_4	6	n.生存
+9	incident	2_4	6	n.事件
+9	departure	2_4	6	n.离开
+10	crew	2_5	6	n.全体船员
+10	deposit	2_5	6	vt.存放
+10	dilemma	2_5	6	n.困境
+10	drawback	2_5	6	n.不利点
+10	dusk	2_5	6	n.黄昏
+10	routine	2_5	6	n.例行公事
+10	reckon	2_5	6	vt.计算
+10	starvation	2_5	6	n.饿死
+10	psychology	2_5	6	n.心理学
+11	gradual	2_6	6	adj.逐渐的
+11	gradually	2_6	6	adv.逐渐地
+11	foresee	2_6	6	v.预见
+11	thirst	2_6	6	v.渴望
+11	tear	2_6	6	n.眼泪
+11	hardship	2_6	6	n.艰难
+11	jaw	2_6	6	n.颚
+11	roar	2_6	6	n.吼
+11	background	2_6	6	n.背景
+12	associate	3_1	5	vt.（使）发生联系
+12	barrier	3_1	5	n.界线
+12	brochure	3_1	5	n.小册子
+12	commonwealth	3_1	5	n.共和国
+12	ecology	3_1	5	n.生态学
+12	autonomous	3_1	5	adj.自治的
+12	federal	3_1	5	adj.联邦的
+12	defence	3_1	5	n.防务
+12	policy	3_1	5	n.政策
+12	tax	3_1	5	n.税
+13	taxation	3_2	5	n.课税
+13	nation	3_2	5	n.国家
+13	citizen	3_2	5	n.公民
+13	citizenship	3_2	5	n.国籍
+13	celebration	3_2	5	n.典礼
+13	tolerate	3_2	5	v.忍受
+13	tolerance	3_2	5	n.忍耐力
+13	migrant	3_2	5	n.移居者
+13	homeland	3_2	5	n.祖国
+13	via	3_2	5	prep.经由
+14	superb	3_3	5	adj.极好的
+14	rust	3_3	5	n.铁
+14	rusty	3_3	5	adj.生锈的
+14	tropical	3_3	5	adj.热带的
+14	timetable	3_3	5	n.时间表
+14	heritage	3_3	5	n.遗产
+14	aboriginal	3_3	5	adj.原始的
+14	fortnight	3_3	5	n.两星期
+14	reservation	3_3	5	n.预定
+14	highway	3_3	5	n.公路
+15	cradle	3_4	5	n.摇篮
+15	rainfall	3_4	5	n.降雨
+15	agriculture	3_4	5	n.农业
+15	bachelor	3_4	5	n.单身汉
+15	correspond	3_4	5	vi.符合
+15	owe	3_4	5	v.欠
+15	enclosure	3_4	5	n.附件
+15	authority	3_4	5	n.权威
+15	desperate	3_4	5	adj.绝望的
+15	shrink	3_4	5	n.收缩
+15	barbecue	3_4	5	n.烤肉
+16	wind	3_5	5	n.风
+16	limb	3_5	5	n.树枝
+16	venom	3_5	5	n.毒液
+16	venomous	3_5	5	adj.恶意的
+16	paralyze	3_5	5	vt.使...瘫痪
+16	sickness	3_5	5	n.疾病
+16	recover	3_5	5	vt.恢复
+16	funnel	3_5	5	n.漏斗
+16	amongst	3_5	5	prep.在...之中
+16	vinegar	3_5	5	n.醋
+16	unconscious	3_5	5	adj.失去知觉的
+17	pollinate	4_1	4	v.给...授粉
+17	courtyard	4_1	4	n.庭院
+17	balcony	4_1	4	n.阳台
+17	exotic	4_1	4	adj.异国的
+17	distant	4_1	4	adj.遥远的
+17	goods	4_1	4	n.货物
+17	scale	4_1	4	n.鳞
+17	conflict	4_1	4	n.冲突
+17	missionary	4_1	4	n.传教士
+17	anchor	4_1	4	n.铁锚
+17	tight	4_1	4	adj.紧的
+18	tightly	4_2	4	adv.紧紧地
+18	seal	4_2	4	n.印章
+18	container	4_2	4	n.容器
+18	restriction	4_2	4	n.限制
+18	fluency	4_2	4	n.流利
+18	shave	4_2	4	n.修面
+18	thunderstorm	4_2	4	n.雷暴雨(大雷雨)
+18	dove	4_2	4	n.鸽子
+18	lower	4_2	4	v.降低
+18	beard	4_2	4	n.胡须
+18	ripe	4_2	4	adj.成熟的
+19	irrigation	4_3	4	n.灌溉
+19	weed	4_3	4	n.杂草
+19	spear	4_3	4	n.矛(正负电子对撞机)
+19	string	4_3	4	n.线
+19	spade	4_3	4	n.铲子
+19	postpone	4_3	4	v.延期
+19	pyramid	4_3	4	n.金字塔
+19	monument	4_3	4	n.纪念碑
+19	rot	4_3	4	n.腐烂
+19	evolve	4_3	4	vt.&vi.进展
+19	evolution	4_3	4	n.进化
+20	nectar	4_4	4	n.花蜜
+20	attach	4_4	4	v.附上
+20	typical	4_4	4	adj.典型的
+20	petal	4_4	4	n.花瓣
+20	tube	4_4	4	n.管
+20	delicate	4_4	4	adj.细致优雅的
+20	fragrant	4_4	4	adj.芬香的
+20	odour	4_4	4	n.气味
+20	dull	4_4	4	adj.呆滞的
+20	musty	4_4	4	adj.发霉的
+21	casual	5_1	5	adj.偶然的
+21	garment	5_1	5	n.衣服
+21	advert	5_1	5	n.广告
+21	inform	5_1	5	vt.通知
+21	association	5_1	5	n.联合
+21	target	5_1	5	n.（服务的）对象
+21	basis	5_1	5	n.基础
+21	technique	5_1	5	n.技术
+21	lane	5_1	5	n.小路
+21	feature	5_1	5	n.特征
+22	conscience	5_2	5	n.良心
+22	worthy	5_2	5	adj.有价值的
+22	corporation	5_2	5	n.公司
+22	budget	5_2	5	n.预算
+22	expense	5_2	5	n.消费
+22	broadcast	5_2	5	n.广播
+22	rely	5_2	5	v.倚赖
+22	visual	5_2	5	adj.视觉的
+22	generate	5_2	5	vt.产生
+22	response	5_2	5	n.回答
+23	refresh	5_3	5	vt.&vi.使...生气蓬勃
+23	partly	5_3	5	adv.部分地
+23	murder	5_3	5	vt.谋杀
+23	suitcase	5_3	5	n.手提箱
+23	sheet	5_3	5	n.片
+23	actress	5_3	5	n.女演员
+23	typist	5_3	5	n.打字员
+23	spokesman	5_3	5	n.发言人
+23	fluent	5_3	5	adj.流利的
+23	hostess	5_3	5	n.女主人
+24	invitation	5_4	5	n.邀请
+24	appoint	5_4	5	vt.任命
+24	chairman	5_4	5	n.主席
+24	raise	5_4	5	vt.升起
+24	dial	5_4	5	vi.拨号
+24	operator	5_4	5	n.操作员
+24	litre	5_4	5	n.公升（=liter）
+24	mature	5_4	5	adj.成熟的
+24	fashion	5_4	5	n.流行
+25	misleading	5_5	5	adj.使入误解的
+25	alcoholic	5_5	5	adj.酒精的
+25	tobacco	5_5	5	n.烟草
+25	ban	5_5	5	v.禁止
+25	immoral	5_5	5	adj.不道德的
+25	decent	5_5	5	adj.有分寸的
+25	beware	5_5	5	v.小心
+25	consumer	5_5	5	n.消费者
+25	trustworthy	5_5	5	adj.可信赖的
