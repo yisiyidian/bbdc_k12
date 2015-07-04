@@ -5,10 +5,6 @@ function ActionManager:listNotify()
 	return {}
 end
 
-function ActionManager:sendNotification(notify,data)
-	--ObserverController.sendNotification(notify,data)
-end
-
 --override
 function ActionManager:handleNotification(notify,data)
 	-- if notify == XXXX then
@@ -37,6 +33,10 @@ end
 
 function bossAction()
 	return cc.Sequence:create(cc.ScaleTo:create(0.5,1.2),cc.ScaleTo:create(0.5,1))
+end
+
+function bossAttackedAnimation(target)
+	target:setAnimation(0,'a3',false)
 end
 
 return ActionManager

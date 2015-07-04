@@ -10,7 +10,7 @@ function BattleView:ctor()
 	--创建boss
 	s_BattleManager:createBoss({'1','1','1'})
 	--创建pet
-	s_BattleManager:createPet({'2','3','4','5','6'})
+	s_BattleManager:createPet({'2','3','4','5','5'})
 	--绘制UI
 	self:initUI()
 
@@ -28,10 +28,10 @@ function BattleView:initUI()
 	local boss = s_BattleManager.bossList
 	for i = 1,#boss do
 		if s_BattleManager.currentBossIndex == i then
-			boss[i].ui:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.9)
+			boss[i].ui:setPosition(s_DESIGN_WIDTH / 2 - 100,s_DESIGN_HEIGHT * 0.8)
 			self:addChild(boss[i].ui)
 		else
-			boss[i].ui:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.9 + 400)
+			boss[i].ui:setPosition(s_DESIGN_WIDTH / 2 - 100,s_DESIGN_HEIGHT * 0.8 + 400)
 			self:addChild(boss[i].ui)
 		end
 	end

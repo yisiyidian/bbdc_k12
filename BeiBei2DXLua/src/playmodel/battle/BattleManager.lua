@@ -161,7 +161,7 @@ function BattleManager:releaseSkillEnded()
 	self:changeNextBoss()
 end
 
-function BattleManager:releaseSkill(skill)
+function BattleManager:releaseSkill(skill,count)
 
 	local targets = skill.targets
 	local source = skill.source
@@ -169,11 +169,11 @@ function BattleManager:releaseSkill(skill)
 		if skill.skillType == 'attack' then
 			print('attack')
 			--boss被攻击
-			v:loseBlood(skill.attack)
+			v:loseBlood(skill.attack * count)
 		elseif skill.skillType == 'buff' then
 			print('buff')
 			--增加攻击
-			v.buff = v.buff + skill.buff
+			v.buff = v.buff + skill.buff * count
 		end
 	end
 

@@ -16,7 +16,7 @@ end
 function Pet:handleNotification(notify,data)
     if notify == RIGHT then
 		if data[self.colorIndex] > 0 then
-			self:releaseSkill()
+			self:releaseSkill(data[self.colorIndex])
 		end
     else
 
@@ -34,6 +34,10 @@ function Pet:ctor(id)
 	self.ui = self:createUI(self.config.file)
 	self.action = nil
 	self.cb = function() end
+	--一轮攻击中总共要被攻击的次数
+	self.totalAttackCount = 0
+	--一轮攻击中已经被攻击的次数
+	self.attackCount = 0
 end
 
 function Pet:createUI(file)
@@ -42,10 +46,10 @@ function Pet:createUI(file)
 end
 
 
-function Pet:releaseSkill()
+function Pet:releaseSkill(count)
 	local skill = require("playmodel.character.Skill").new()
 	skill:initWithID(''..self.skillID,self)
-	skill:release()
+	skill:release(count)
 	self.action = petActionToReleaseSkill()
 	self.ui:runAction(cc.Sequence:create(self.action,cc.CallFunc:create(function (  )
 		self.cb()
