@@ -488,7 +488,11 @@ function NewSummaryBossLayer:resetMat()
 end
 
 function NewSummaryBossLayer:initCrab()
-    local crab = require("view.summaryboss.Crab").create(self.wordList[1][4],self.isTrying,self.unit.unitID)
+    local id = 0
+    if self.unit ~= nil then
+        id = self.unit.unitID
+    end
+    local crab = require("view.summaryboss.Crab").create(self.wordList[1][4],self.isTrying,id)
     self:addChild(crab,1)
     self.crab = crab
     -- s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
