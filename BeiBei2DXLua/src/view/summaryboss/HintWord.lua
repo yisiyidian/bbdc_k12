@@ -4,12 +4,12 @@ local HintWord = class ("HintWord",function ()
     return cc.Layer:create()
 end)
 
-function HintWord.create(word,target,firstTime)
-    local layer = HintWord.new(word,target,firstTime)
+function HintWord.create(word,target,firstTime,unitID)
+    local layer = HintWord.new(word,target,firstTime,unitID)
     return layer
 end
 
-function HintWord:ctor(word,target,firstTime)
+function HintWord:ctor(word,target,firstTime,unitID)
     self.hintOver = function() end
 
     local director = cc.Director:getInstance()
@@ -32,7 +32,7 @@ function HintWord:ctor(word,target,firstTime)
         wordBoard:addChild(word_en)
         word_en:setColor(cc.c3b(0,0,0))
 
-        local word_cn = cc.Label:createWithSystemFont(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall,'',40)
+        local word_cn = cc.Label:createWithSystemFont(s_BookUnitWordMeaning[s_CURRENT_USER.bookKey][tostring(unitID)][word],'',40)
         word_cn:setPosition(wordBoard:getContentSize().width / 2,wordBoard:getContentSize().height * 1 / 4)
         wordBoard:addChild(word_cn)
         word_cn:setColor(cc.c3b(0,0,0))

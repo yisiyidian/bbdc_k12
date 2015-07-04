@@ -5,12 +5,12 @@ local Crab = class("Crab",function ()
 	return cc.Node:create()
 end)
 
-function Crab.create(word,isTrying)
-	local node = Crab.new(word,isTrying)
+function Crab.create(word,isTrying,unitID)
+	local node = Crab.new(word,isTrying,unitID)
 	return node
 end
 
-function Crab:ctor(word,isTrying)
+function Crab:ctor(word,isTrying,unitID)
 	local proxy = cc.CCBProxy:create()
     self.ccb = {}
     self.ccbcrab = {} 
@@ -26,7 +26,7 @@ function Crab:ctor(word,isTrying)
         self.ccbcrab['meaningBig']:setScale(1.5)
     else
         self.ccbcrab['meaningSmall']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall)
-        self.ccbcrab['meaningBig']:setString(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall)
+        self.ccbcrab['meaningBig']:setString(s_BookUnitWordMeaning[s_CURRENT_USER.bookKey][tostring(unitID)][word])
     end
     self:big()
     self:moveIn()

@@ -89,7 +89,7 @@ end
 function NewSummaryBossLayer:changeWordTutorial()
     self.gamePaused = true
     self.changeBtn:setLocalZOrder(2)
-    local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1][4],self.boss,self.firstTimeToChange)
+    local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1][4],self.boss,self.firstTimeToChange,self.unit.unitID)
     self:addChild(hintBoard,1)
     self.hintChangeBtn = hintBoard
     
@@ -488,7 +488,7 @@ function NewSummaryBossLayer:resetMat()
 end
 
 function NewSummaryBossLayer:initCrab()
-    local crab = require("view.summaryboss.Crab").create(self.wordList[1][4],self.isTrying)
+    local crab = require("view.summaryboss.Crab").create(self.wordList[1][4],self.isTrying,self.unit.unitID)
     self:addChild(crab,1)
     self.crab = crab
     -- s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
@@ -523,7 +523,7 @@ function NewSummaryBossLayer:addChangeBtn()
             end
             
             self.gamePaused = true
-            local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1][4],self.boss,self.firstTimeToChange)
+            local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1][4],self.boss,self.firstTimeToChange,self.unit.unitID)
             s_SCENE.popupLayer:addChild(hintBoard)
             
             hintBoard.hintOver = function (  )
