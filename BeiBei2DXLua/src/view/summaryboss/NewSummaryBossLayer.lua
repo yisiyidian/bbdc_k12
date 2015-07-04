@@ -191,7 +191,7 @@ function NewSummaryBossLayer:initWordList()
         wordList[i][2] = ''
         if #list > 1 then
             for j = 2,#list do
-                wordList[i][2] = wordList[i][2]..' '..list[j]
+              wordList[i][2] = wordList[i][2]..' '..list[j]
             end  
         else
             wordList[i][2] = ''
