@@ -1,724 +1,723 @@
-1	knife	1_1	8
-1	stone	1_1	8
-1	hurt	1_1	8
-1	mother	1_1	8
-1	father	1_1	8
-2	with	1_2	8
-2	ourselves	1_2	8
-2	her	1_2	8
-2	my	1_2	8
-2	arm	1_2	8
-3	English	1_3	8
-3	Chinese	1_3	8
-3	math	1_3	8
-3	science	1_3	8
-3	music	1_3	8
-4	physics	1_4	8
-4	art	1_4	8
-4	chemistry	1_4	8
-4	polity	1_4	8
-4	geography	1_4	8
-5	PE	1_5	8
-5	history	1_5	8
-5	favorite	1_5	8
-5	subject	1_5	8
-5	interesting	1_5	8
-6	boring	1_6	8
-6	because	1_6	8
-6	friend	1_6	8
-6	grade	1_6	8
-6	be|good|at	1_6	8
-7	novel	1_7	8
-7	play	1_7	8
-7	difficult	1_7	8
-7	learn	1_7	8
-7	study	1_7	8
-7	like|...|best	1_7	8
-8	useful	1_8	8
-8	but	1_8	8
-8	still	1_8	8
-8	they	1_8	8
-8	game	1_8	8
-8	try|one's|best	1_8	8
-9	city	2_1	8
-9	shop	2_1	8
-9	week	2_1	8
-9	thing	2_1	8
-9	walk|along	2_1	8
-10	this	2_2	8
-10	often	2_2	8
-10	bank	2_2	8
-10	every|day	2_2	8
-10	by|plane	2_2	8
-11	by|subway	2_3	8
-11	by|bike	2_3	8
-11	by|car	2_3	8
-11	by|bus	2_3	8
-11	on|foot	2_3	8
-12	by|train	2_4	8
-12	by|taxi	2_4	8
-12	by|boat	2_4	8
-12	by|tricycle	2_4	8
-12	by|motorcycle	2_4	8
-13	weekend	2_5	8
-13	by|ship	2_5	8
-13	live|near	2_5	8
-13	what|about	2_5	8
-13	be|far|away|from	2_5	8
-14	be	2_6	8
-14	than	2_6	8
-14	fast	2_6	8
-14	health	2_6	8
-14	be|good|for	2_6	8
-15	think	2_7	8
-15	which	2_7	8
-15	why	2_7	8
-15	because	2_7	8
-15	our	2_7	8
-16	his	2_8	8
-16	they	2_8	8
-16	he	2_8	8
-16	how	2_8	8
-16	school	2_8	8
-17	table	3_1	9
-17	food	3_1	9
-17	cup	3_1	9
-17	milk	3_1	9
-17	floor	3_1	9
-18	smell	3_2	9
-18	lily	3_2	9
-18	voice	3_2	9
-18	rose	3_2	9
-18	many	3_2	9
-19	like	3_3	9
-19	some	3_3	9
-19	sweet	3_3	9
-19	cut	3_3	9
-19	put	3_3	9
-20	add	3_4	9
-20	heat	3_4	9
-20	boil	3_4	9
-20	crack	3_4	9
-20	mix	3_4	9
-21	serve	3_5	9
-21	wash	3_5	9
-21	stir-fry	3_5	9
-21	chop	3_5	9
-21	cook	3_5	9
-22	dishes	3_6	9
-22	first	3_6	9
-22	next	3_6	9
-22	then	3_6	9
-22	finally	3_6	9
-23	today	3_7	9
-23	minute	3_7	9
-23	more	3_7	9
-23	tell	3_7	9
-23	in|the|world	3_7	9
-24	for	3_8	9
-24	tomatoes	3_8	9
-24	them	3_8	9
-24	bowl	3_8	9
-24	soy|sauce	3_8	9
-25	sugar	3_9	9
-25	oil	3_9	9
-25	wok	3_9	9
-25	how	3_9	9
-25	everyone	3_9	9
-26	bathroom	4_1	8
-26	run	4_1	8
-26	hot	4_1	8
-26	baby	4_1	8
-26	bought	4_1	8
-27	yesterday	4_2	8
-27	please	4_2	8
-27	for	4_2	8
-27	that	4_2	8
-27	Bath	4_2	8
-28	tall	4_3	8
-28	short	4_3	8
-28	young	4_3	8
-28	old	4_3	8
-28	fat	4_3	8
-29	thin	4_4	8
-29	handsome	4_4	8
-29	ugly	4_4	8
-29	big	4_4	8
-29	small	4_4	8
-30	busy	4_5	8
-30	free	4_5	8
-30	lazy	4_5	8
-30	diligent	4_5	8
-30	strong	4_5	8
-31	weak	4_6	8
-31	Miss	4_6	8
-31	teacher	4_6	8
-31	blond	4_6	8
-31	curly	4_6	8
-32	stay	4_7	8
-32	children	4_7	8
-32	love	4_7	8
-32	give	4_7	8
-32	sing	4_7	8
-33	dance	4_8	8
-33	us	4_8	8
-33	from|...|to	4_8	8
-33	after|school	4_8	8
-33	play|...|with	4_8	8
-34	handsome	5_1	8
-34	beautiful	5_1	8
-34	dinner	5_1	8
-34	mother	5_1	8
-34	very	5_1	8
-35	cheap	5_2	8
-35	expensive	5_2	8
-35	sometimes	5_2	8
-35	cook	5_2	8
-35	grandfather	5_2	8
-36	grandmother	5_3	8
-36	mother	5_3	8
-36	father	5_3	8
-36	daughter	5_3	8
-36	father|in|law	5_3	8
-37	son	5_4	8
-37	uncle	5_4	8
-37	aunt	5_4	8
-37	cousin	5_4	8
-37	grandson	5_4	8
-38	granddaughter	5_5	8
-38	husband	5_5	8
-38	wife	5_5	8
-38	stepson	5_5	8
-38	housewife	5_5	8
-39	famous	5_6	8
-39	hospital	5_6	8
-39	years|old	5_6	8
-39	work|hard	5_6	8
-39	from|...|to	5_6	8
-40	too	5_7	8
-40	doctor	5_7	8
-40	family	5_7	8
-40	love	5_7	8
-40	play|chess	5_7	8
-41	name	5_8	8
-41	people	5_8	8
-41	naughty	5_8	8
-41	listen|to|music	5_8	8
-41	primary|school	5_8	8
-42	farmer	6_1	8
-42	worker	6_1	8
-42	rich	6_1	8
-42	poor	6_1	8
-42	be|doing	6_1	8
-43	twenty	6_2	8
-43	farm	6_2	8
-43	pen	6_2	8
-43	there|be	6_2	8
-43	live|on	6_2	8
-44	blackboard	6_3	8
-44	eraser	6_3	8
-44	pencil-box	6_3	8
-44	ruler	6_3	8
-44	triangle	6_3	8
-45	pencil	6_4	8
-45	sharpener	6_4	8
-45	penknife	6_4	8
-45	whiteout	6_4	8
-45	schoolbag	6_4	8
-46	glue	6_5	8
-46	notebook	6_5	8
-46	watercolors	6_5	8
-46	crayon	6_5	8
-46	chalk	6_5	8
-47	tidy	6_6	8
-47	untidy	6_6	8
-47	under	6_6	8
-47	where	6_6	8
-47	but	6_6	8
-48	sofa	6_7	8
-48	room	6_7	8
-48	bookshelf	6_7	8
-48	chair	6_7	8
-49	who	6_8	8
-49	ask	6_8	8
-49	everywhere	6_8	8
-49	always	6_8	8
-50	bowl	7_1	9
-50	penguin	7_1	9
-50	bird	7_1	9
-50	fly	7_1	9
-50	sky	7_1	9
-51	can't	7_2	9
-51	her	7_2	9
-51	fly	7_2	9
-51	spring	7_2	9
-51	there|be	7_2	9
-52	summer	7_3	9
-52	autumn	7_3	9
-52	winter	7_3	9
-52	cold	7_3	9
-52	warm	7_3	9
-53	cool	7_4	9
-53	hot	7_4	9
-53	snowy	7_4	9
-53	windy	7_4	9
-53	cloudy	7_4	9
-54	sunny	7_5	9
-54	rainy	7_5	9
-54	wet	7_5	9
-54	dry	7_5	9
-54	thunder	7_5	9
-55	bare	7_6	9
-55	season	7_6	9
-55	year	7_6	9
-55	it	7_6	9
-55	part|of	7_6	9
-56	follow	7_7	9
-56	become	7_7	9
-56	get	7_7	9
-56	bloom	7_7	9
-56	dark	7_7	9
-57	grow	7_8	9
-57	plant	7_8	9
-57	late	7_8	9
-57	lose	7_8	9
-57	not|...|until	7_8	9
-58	leaves	7_9	9
-58	place	7_9	9
-58	early	7_9	9
-58	in|the|evening	7_9	9
-59	milk	8_1	8
-59	glass	8_1	8
-59	yummy	8_1	8
-59	pebble	8_1	8
-59	river	8_1	8
-60	floor	8_2	8
-60	lake	8_2	8
-60	broke	8_2	8
-60	bought	8_2	8
-60	a|sheet|of	8_2	8
-61	yesterday	8_3	8
-61	very	8_3	8
-61	glass	8_3	8
-61	peach	8_3	8
-61	kiwifruit	8_3	8
-62	pear	8_4	8
-62	orange	8_4	8
-62	litchi	8_4	8
-62	strawberry	8_4	8
-62	banana	8_4	8
-63	grape	8_5	8
-63	coconut	8_5	8
-63	watermelon	8_5	8
-63	mangosteen	8_5	8
-63	apple	8_5	8
-64	durian	8_6	8
-64	pineapple	8_6	8
-64	pomelo	8_6	8
-64	sugarcane	8_6	8
-64	important	8_6	8
-65	healthy	8_7	8
-65	food	8_7	8
-65	have	8_7	8
-65	remember	8_7	8
-65	want|to|be	8_7	8
-66	vegetable	8_8	8
-66	grow	8_8	8
-66	saying	8_8	8
-66	be|good|for	8_8	8
-66	too|much	8_8	8
-66	keep|...|away	8_8	8
-67	pants	9_1	7
-67	kite	9_1	7
-67	happy	9_1	7
-67	angry	9_1	7
-67	cake	9_1	7
-68	make	9_2	7
-68	badminton	9_2	7
-68	basketball	9_2	7
-68	football	9_2	7
-68	ping-pong	9_2	7
-69	volleyball	9_3	7
-69	golf	9_3	7
-69	tennis	9_3	7
-69	hockey	9_3	7
-69	rugby	9_3	7
-70	baseball	9_4	7
-70	bowling	9_4	7
-70	billiards	9_4	7
-70	favorite	9_4	7
-70	sport	9_4	7
-71	usually	9_5	7
-71	clear	9_5	7
-71	bright	9_5	7
-71	evening	9_5	7
-71	Asian|games	9_5	7
-72	because	9_6	7
-72	outside	9_6	7
-72	super	9_6	7
-72	player	9_6	7
-72	won	9_6	7
-73	first	9_7	7
-73	prize	9_7	7
-73	China	9_7	7
-73	famous	9_7	7
-73	work|hard	9_7	7
-73	in|the|future	9_7	7
-74	fruit	10_1	7
-74	sweet	10_1	7
-74	food	10_1	7
-74	orange	10_1	7
-74	the|cup|of	10_1	7
-75	favorite	10_2	7
-75	need	10_2	7
-75	tasty	10_2	7
-75	color	10_2	7
-75	orange	10_2	7
-76	piano	10_3	7
-76	violin	10_3	7
-76	guitar	10_3	7
-76	handbell	10_3	7
-76	drum	10_3	7
-77	saxophone	10_4	7
-77	trumpet	10_4	7
-77	trombone	10_4	7
-77	bass	10_4	7
-77	accordion	10_4	7
-78	flute	10_5	7
-78	school	10_5	7
-78	concert	10_5	7
-78	start	10_5	7
-78	Chinese|zither	10_5	7
-79	piano	10_6	7
-79	group	10_6	7
-79	violin	10_6	7
-79	Sarah	10_6	7
-79	Cathy	10_6	7
-79	o'clock	10_6	7
-80	they	10_7	7
-80	rock	10_7	7
-80	when	10_7	7
-80	fun	10_7	7
-80	hold	10_7	7
-80	Friday	10_7	7
-81	bamboo	11_1	7
-81	sport	11_1	7
-81	basketball	11_1	7
-81	a|basket|of	11_1	7
-81	made|of	11_1	7
-82	plastic	11_2	7
-82	want	11_2	7
-82	favorite	11_2	7
-82	basket	11_2	7
-82	made|from	11_2	7
-83	stadium	11_3	7
-83	hospital	11_3	7
-83	cinema	11_3	7
-83	library	11_3	7
-83	department|store	11_3	7
-84	zoo	11_4	7
-84	museum	11_4	7
-84	gallery	11_4	7
-84	gas|station	11_4	7
-84	bus|station	11_4	7
-85	mall	11_5	7
-85	natatorium	11_5	7
-85	school	11_5	7
-85	concert	11_5	7
-85	hotel	11_5	7
-86	today	11_6	7
-86	weekend	11_6	7
-86	plan	11_6	7
-86	pencil-case	11_6	7
-86	will	11_6	7
-86	department|store	11_6	7
-87	square	11_7	7
-87	gallery	11_7	7
-87	there	11_7	7
-87	be|going|to	11_7	7
-87	an|art|show	11_7	7
-87	fly|a|kite	11_7	7
-88	fox	12_1	8
-88	animal	12_1	8
-88	math|problem	12_1	8
-88	fat|man	12_1	8
-88	Chinese|problem	12_1	8
-89	that	12_2	8
-89	favorite	12_2	8
-89	fox	12_2	8
-89	detective	12_2	8
-89	a|kind|of	12_2	8
-90	doctor	12_3	8
-90	dancer	12_3	8
-90	teacher	12_3	8
-90	astronaut	12_3	8
-90	police	12_3	8
-91	professor	12_4	8
-91	singer	12_4	8
-91	beggar	12_4	8
-91	player	12_4	8
-91	president	12_4	8
-91	writer	12_4	8
-92	life	12_5	8
-92	speak	12_5	8
-92	businessman	12_5	8
-92	lawyer	12_5	8
-92	fireman	12_5	8
-92	actress	12_5	8
-92	in|the|future	12_5	8
-93	now	12_6	8
-93	detective	12_6	8
-93	famous	12_6	8
-93	early	12_6	8
-93	have|to	12_6	8
-94	language	12_7	8
-94	spaceship	12_7	8
-94	take|buses	12_7	8
-94	get|up	12_7	8
-94	be|far|from	12_7	8
-95	dream	12_8	8
-95	hope	12_8	8
-95	all	12_8	8
-95	come|true	12_8	8
-95	as|...|as	12_8	8
-96	telephone	13_1	8
-96	Miss	13_1	8
-96	America	13_1	8
-96	washroom	13_1	8
-96	broken	13_1	8
-97	need	13_2	8
-97	mine	13_2	8
-97	phone	13_2	8
-97	be|from	13_2	8
-97	come|from	13_2	8
-98	crocodile	13_3	8
-98	ostrich	13_3	8
-98	penguin	13_3	8
-98	lizard	13_3	8
-98	dragonfly	13_3	8
-99	hippo	13_4	8
-99	zebra	13_4	8
-99	whale	13_4	8
-99	butterfly	13_4	8
-99	shark	13_4	8
-100	panda	13_5	8
-100	giraffe	13_5	8
-100	elephant	13_5	8
-100	rabbit	13_5	8
-100	cow	13_5	8
-101	donkey	13_6	8
-101	tomorrow	13_6	8
-101	first	13_6	8
-101	next	13_6	8
-101	then	13_6	8
-102	last	13_7	8
-102	mammal	13_7	8
-102	world	13_7	8
-102	largest	13_7	8
-102	kinds|of	13_7	8
-103	reptile	13_8	8
-103	favorite	13_8	8
-103	exciting	13_8	8
-103	know	13_8	8
-103	will	13_8	8
-104	bookmark	14_1	9
-104	table	14_1	9
-104	black	14_1	9
-104	check	14_1	9
-104	phone|number	14_1	9
-105	may	14_2	9
-105	keep	14_2	9
-105	book	14_2	9
-105	hand|in	14_2	9
-105	a|list|of	14_2	9
-106	sweet	14_3	9
-106	sour	14_3	9
-106	fresh	14_3	9
-106	stale	14_3	9
-106	soft	14_3	9
-107	hard	14_4	9
-107	low	14_4	9
-107	high	14_4	9
-107	difficult	14_4	9
-107	easy	14_4	9
-108	quick	14_5	9
-108	slow	14_5	9
-108	expensive	14_5	9
-108	cheap	14_5	9
-108	clever	14_5	9
-109	stupid	14_6	9
-109	rise	14_6	9
-109	light	14_6	9
-109	in|the|east	14_6	9
-109	send|...|into	14_6	9
-110	tell	14_7	9
-110	hill	14_7	9
-110	it|is|time|to|...	14_7	9
-110	get|up	14_7	9
-110	shine|over	14_7	9
-111	sometimes	14_8	9
-111	thick	14_8	9
-111	hide|...|behind	14_8	9
-111	high|up	14_8	9
-111	at|noon	14_8	9
-112	earth	14_9	9
-112	traveler	14_9	9
-112	never	14_9	9
-112	it|seems|that	14_9	9
-112	in|fact	14_9	9
-112	all|the|time	14_9	9
-113	boy	15_1	8
-113	building	15_1	8
-113	new	15_1	8
-113	large|build	15_1	8
-113	medium|build	15_1	8
-114	mine	15_2	8
-114	who	15_2	8
-114	build	15_2	8
-114	January	15_2	8
-114	last|year	15_2	8
-115	February	15_3	8
-115	March	15_3	8
-115	April	15_3	8
-115	May	15_3	8
-115	June	15_3	8
-116	July	15_4	8
-116	August	15_4	8
-116	September	15_4	8
-116	October	15_4	8
-116	November	15_4	8
-117	December	15_5	8
-117	protect	15_5	8
-117	camera	15_5	8
-117	around	15_5	8
-117	be|like	15_5	8
-118	if	15_6	8
-118	them	15_6	8
-118	hurt	15_6	8
-118	how	15_6	8
-118	take|care|of	15_6	8
-119	sunny	15_7	8
-119	wear	15_7	8
-119	sunglasses	15_7	8
-119	shouldn't	15_7	8
-119	had|better	15_7	8
-120	light	15_8	8
-120	dark	15_8	8
-120	either	15_8	8
-120	everything	15_8	8
-120	too|close	15_8	8
-121	student	16_1	8
-121	hotel	16_1	8
-121	teacher	16_1	8
-121	tallest	16_1	8
-121	be|late|for	16_1	8
-122	grade	16_2	8
-122	don't	16_2	8
-122	class	16_2	8
-122	potato	16_2	8
-122	tomato	16_2	8
-123	cucumber	16_3	8
-123	bean	16_3	8
-123	cabbage	16_3	8
-123	eggplant	16_3	8
-123	garlic	16_3	8
-124	pea	16_4	8
-124	pepper	16_4	8
-124	ginger	16_4	8
-124	onion	16_4	8
-124	lotus|root	16_4	8
-125	broccoli	16_5	8
-125	carrot	16_5	8
-125	turnip	16_5	8
-125	spinach	16_5	8
-125	the|Spring|Festival	16_5	8
-126	call	16_6	8
-126	before	16_6	8
-126	people	16_6	8
-126	clean	16_6	8
-126	Chinese|New|Year	16_6	8
-127	whole	16_7	8
-127	dinner	16_7	8
-127	be|busy|doing	16_7	8
-127	stay|up|to|late	16_7	8
-127	each|other	16_7	8
-128	visit	16_8	8
-128	welcome	16_8	8
-128	clothes	16_8	8
-128	New|Year's|Eve	16_8	8
-129	leaf	17_1	6
-129	summer	17_1	6
-129	rainbow	17_1	6
-129	October	17_1	6
-129	fall|down	17_1	6
-130	above	17_2	6
-130	yellow	17_2	6
-130	fall|over	17_2	6
-130	begin	17_2	6
-130	turn	17_2	6
-130	like|...|more	17_2	6
-131	often	17_3	6
-131	fall	17_3	6
-131	fourth	17_3	6
-131	largest	17_3	6
-131	the|USA	17_3	6
-132	country	17_4	6
-132	Russia	17_4	6
-132	Canada	17_4	6
-132	China	17_4	6
-132	in|the|world	17_4	6
-133	capital	17_5	6
-133	quiet	17_5	6
-133	city	17_5	6
-133	Washington|D.C.	17_5	6
-133	in|the|east|of	17_5	6
-134	population	17_6	6
-134	than	17_6	6
-134	but	17_6	6
-134	a|part|of	17_6	6
-134	Statue|of|Liberty	17_6	6
-134	Manhattan|Island	17_6	6
-135	student	18_1	9
-135	coffee	18_1	9
-135	milk	18_1	9
-135	music	18_1	9
-135	a|bottle|of	18_1	9
-136	friend	18_2	9
-136	gave	18_2	9
-136	math	18_2	9
-136	gift	18_2	9
-136	Monday	18_2	9
-137	Tuesday	18_3	9
-137	Wednesday	18_3	9
-137	Thursday	18_3	9
-137	Friday	18_3	9
-137	Saturday	18_3	9
-138	Sunday	18_4	9
-138	day	18_4	9
-138	week	18_4	9
-138	weekend	18_4	9
-138	month	18_4	9
-139	year	18_5	9
-139	how	18_5	9
-139	improve	18_5	9
-139	find	18_5	9
-139	hard	18_5	9
-140	study	18_6	9
-140	our	18_6	9
-140	when	18_6	9
-140	began	18_6	9
-140	in|this|way	18_6	9
-141	mistake	18_7	9
-141	difficult	18_7	9
-141	without	18_7	9
-141	at|first	18_7	9
-141	keep|a|diary	18_7	9
-142	practice	18_8	9
-142	usually	18_8	9
-142	story	18_8	9
-142	library	18_8	9
-142	after|school	18_8	9
-143	little	18_9	9
-143	always	18_9	9
-143	through	18_9	9
-143	correct	18_9	9
+1	knife	1_1	5	n.刀
+1	stone	1_1	5	n.石头
+1	hurt	1_1	5	vt.伤害
+2	mother	1_2	5	n.母亲
+2	father	1_2	5	n.父亲
+2	with	1_2	5	prep.和...一起
+2	ourselves	1_2	5	pron.我们自己
+2	her	1_2	5	pron.她的
+2	my	1_2	5	adj.我的
+2	arm	1_2	5	n.手臂
+2	English	1_2	5	n. 英语
+2	Chinese	1_2	5	n. 中文
+2	math	1_2	5	n.数学
+3	science	1_3	5	n.科学
+3	music	1_3	5	n.音乐
+3	physics	1_3	5	n.物理学
+3	art	1_3	5	n.艺术
+3	chemistry	1_3	5	n.化学
+3	polity	1_3	5	n.政府制度
+3	geography	1_3	5	n.地理
+3	PE	1_3	5	abbr. 体育课
+3	history	1_3	5	n.历史
+3	favorite	1_3	5	adj.喜爱的
+4	subject	1_4	5	n.主题
+4	interesting	1_4	5	adj.有趣的
+4	boring	1_4	5	adj.令人厌烦的
+4	because	1_4	5	conj.因为
+4	friend	1_4	5	n.朋友
+4	grade	1_4	5	n. 年级
+4	be good at	1_4	5	擅长做…
+4	novel	1_4	5	n.小说
+4	play	1_4	5	n.游戏
+4	difficult	1_4	5	adj.困难的
+5	learn	1_5	5	vt.学习
+5	study	1_5	5	vi.学习
+5	like ... best	1_5	5	最喜欢
+5	useful	1_5	5	adj.有用的
+5	but	1_5	5	conj.但是
+5	still	1_5	5	adj.静止的
+5	they	1_5	5	pron.他们
+5	game	1_5	5	n.游戏
+5	try one's best	1_5	5	尽力
+6	city	2_1	4	n.城市
+6	shop	2_1	4	n.商店
+6	week	2_1	4	n.星期
+6	thing	2_1	4	n.东西
+6	walk along	2_1	4	沿着…走
+6	this	2_1	4	adj.&pron.这
+6	often	2_1	4	adv.经常
+6	bank	2_1	4	n.银行
+6	every day	2_1	4	每天
+6	by plane	2_1	4	乘飞机
+7	by subway	2_2	4	乘坐地铁
+7	by bike	2_2	4	骑自行车
+7	by car	2_2	4	乘汽车
+7	by bus	2_2	4	乘公共汽车
+7	on foot	2_2	4	步行
+7	by train	2_2	4	乘火车
+7	by taxi	2_2	4	坐计程车
+7	by boat	2_2	4	乘船
+7	by tricycle	2_2	4	骑三轮车
+7	by motorcycle	2_2	4	骑摩托车
+8	weekend	2_3	4	n.周末
+8	by ship	2_3	4	坐轮船
+8	live near	2_3	4	住在…附近
+8	what about	2_3	4	…怎么样
+8	be far away from	2_3	4	远离
+8	be	2_3	4	prep.是
+8	than	2_3	4	conj.比（用于比较级）
+8	fast	2_3	4	adj.快的
+8	health	2_3	4	n.健康
+8	be good for	2_3	4	有益于
+9	think	2_4	4	vt.想
+9	which	2_4	4	pron.哪一个
+9	why	2_4	4	adv.为什么
+9	because	2_4	4	conj.因为
+9	our	2_4	4	pron.我们的
+9	his	2_4	4	pron.他的
+9	they	2_4	4	pron.他们
+9	he	2_4	4	pron.他
+9	how	2_4	4	adv.如何
+9	school	2_4	4	n.学校
+10	table	3_1	5	n. 桌子
+10	food	3_1	5	n.食物
+10	cup	3_1	5	n.杯子
+10	milk	3_1	5	n.奶
+10	floor	3_1	5	n.地板
+10	smell	3_1	5	vt.闻
+10	lily	3_1	5	n.百合花
+10	voice	3_1	5	n.声音
+10	rose	3_1	5	n.玫瑰
+11	many	3_2	5	n.许多
+11	like	3_2	5	vt.&vi.喜欢
+11	some	3_2	5	adj.一些
+11	sweet	3_2	5	adj.甜(蜜)的
+11	cut	3_2	5	vt.切割
+11	put	3_2	5	vt. 放
+11	add	3_2	5	vt.&vi.增加
+11	heat	3_2	5	n.热
+11	boil	3_2	5	v.沸腾
+12	crack	3_3	5	vt.使破裂
+12	mix	3_3	5	vt.&vi.混合
+12	serve	3_3	5	v.服务
+12	wash	3_3	5	v.洗
+12	stir-fry	3_3	5	用旺火炒
+12	chop	3_3	5	n.厚肉片
+12	cook	3_3	5	vi.烧菜
+12	dishes	3_3	5	n. 菜肴
+12	first	3_3	5	adv.首先
+13	next	3_4	5	adj.紧接在后的
+13	then	3_4	5	adv.然后
+13	finally	3_4	5	adv.最后
+13	today	3_4	5	n.&adv.今天
+13	minute	3_4	5	n.分钟
+13	more	3_4	5	adv.更
+13	tell	3_4	5	vt.告诉
+13	in the world	3_4	5	在世界上
+13	for	3_4	5	prep.为
+14	tomatoes	3_5	5	n. 蕃茄（复数）
+14	them	3_5	5	pron.他(她
+14	bowl	3_5	5	n.碗
+14	soy sauce	3_5	5	酱
+14	sugar	3_5	5	n.糖
+14	oil	3_5	5	n.油
+14	wok	3_5	5	n. 锅
+14	how	3_5	5	adv.如何
+14	everyone	3_5	5	pron.每人
+15	bathroom	4_1	4	n.浴室
+15	run	4_1	4	vi.跑
+15	hot	4_1	4	adj.热的
+15	baby	4_1	4	n.婴儿
+15	bought	4_1	4	v. 买（过去式）
+15	yesterday	4_1	4	n.&adv.昨天
+15	please	4_1	4	int.请
+15	for	4_1	4	prep.为
+15	that	4_1	4	pron.那
+15	Bath	4_1	4	n.洗澡
+16	tall	4_2	4	adj.高的
+16	short	4_2	4	adj.短的
+16	young	4_2	4	adj.年轻的
+16	old	4_2	4	adj.老的
+16	fat	4_2	4	adj.肥胖的
+16	thin	4_2	4	adj.瘦的
+16	handsome	4_2	4	adj.英俊的
+16	ugly	4_2	4	adj.丑陋的
+16	big	4_2	4	adj.大的
+16	small	4_2	4	adj.小的
+17	busy	4_3	4	adj.忙的
+17	free	4_3	4	adj.自由的
+17	lazy	4_3	4	adj.懒惰的
+17	diligent	4_3	4	adj.勤奋的
+17	strong	4_3	4	adj.强壮的
+17	weak	4_3	4	adj.虚弱的
+17	Miss	4_3	4	v.思念
+17	teacher	4_3	4	n.教师
+17	blond	4_3	4	adj.金发的
+17	curly	4_3	4	adj.卷曲的
+18	stay	4_4	4	n.停留
+18	children	4_4	4	n.儿童(复数）
+18	love	4_4	4	vt.&vi.爱
+18	give	4_4	4	vt.&vi.给予
+18	sing	4_4	4	vt.唱
+18	dance	4_4	4	vi.跳舞
+18	us	4_4	4	pron.我们(we的宾格)
+18	from ... to	4_4	4	从…到…
+18	after school	4_4	4	放学后
+18	play ... with	4_4	4	和…一起玩…
+19	handsome	5_1	4	adj.英俊的
+19	beautiful	5_1	4	adj.美丽的
+19	dinner	5_1	4	n.主餐
+19	mother	5_1	4	n.母亲
+19	very	5_1	4	adv.非常
+19	cheap	5_1	4	adj.便宜的
+19	expensive	5_1	4	adj.使文明
+19	sometimes	5_1	4	adv.有时
+19	cook	5_1	4	vi.烧菜
+19	grandfather	5_1	4	n.(外)祖父
+20	grandmother	5_2	4	n.(外)祖母
+20	mother	5_2	4	n.母亲
+20	father	5_2	4	n.父亲
+20	daughter	5_2	4	n.女儿
+20	father in law	5_2	4	岳父
+20	son	5_2	4	n.儿子
+20	uncle	5_2	4	n.叔
+20	aunt	5_2	4	n.姨
+20	cousin	5_2	4	n.堂(或表)兄弟(姐妹)
+20	grandson	5_2	4	n.孙子
+21	granddaughter	5_3	4	n.孙女
+21	husband	5_3	4	n.丈夫
+21	wife	5_3	4	n.妻子
+21	stepson	5_3	4	n. 继子
+21	housewife	5_3	4	n.家庭主妇
+21	famous	5_3	4	adj.著名的
+21	hospital	5_3	4	n.医院
+21	years old	5_3	4	…岁
+21	work hard	5_3	4	辛勤工作
+21	from ... to	5_3	4	从…到…
+22	too	5_4	4	adj.太
+22	doctor	5_4	4	n.医生
+22	family	5_4	4	n.家庭主妇
+22	love	5_4	4	vt.&vi.爱
+22	play chess	5_4	4	下棋
+22	name	5_4	4	n.名字
+22	people	5_4	4	n.人们
+22	naughty	5_4	4	adj.顽皮的
+22	listen to music	5_4	4	听音乐
+22	primary school	5_4	4	小学
+23	farmer	6_1	4	n.农夫
+23	worker	6_1	4	n.工人
+23	rich	6_1	4	adj.富有的
+23	poor	6_1	4	adj.贫穷的
+23	be doing	6_1	4	表达当时的行动
+23	twenty	6_1	4	adj.二十
+23	farm	6_1	4	n.农场
+23	pen	6_1	4	n.钢笔
+23	there be	6_1	4	有（句型）
+23	live on	6_1	4	靠...生活
+24	blackboard	6_2	4	n.黑板
+24	eraser	6_2	4	n.橡皮擦
+24	pencil-box	6_2	4	铅笔盒
+24	ruler	6_2	4	n.尺子
+24	triangle	6_2	4	n.三角(形)
+24	pencil	6_2	4	n.铅笔
+24	sharpener	6_2	4	n. 卷笔刀
+24	penknife	6_2	4	n. 小刀
+24	whiteout	6_2	4	n. 临时性失明
+24	schoolbag	6_2	4	n. 书包
+25	glue	6_3	4	n.胶
+25	notebook	6_3	4	n.笔记本
+25	watercolors	6_3	4	n. 水彩颜料
+25	crayon	6_3	4	n.蜡笔
+25	chalk	6_3	4	n.粉笔
+25	tidy	6_3	4	adj.整洁的
+25	untidy	6_3	4	adj. 凌乱的
+25	under	6_3	4	prep.在...下
+25	where	6_3	4	adv.哪里
+26	but	6_4	4	conj.但是
+26	sofa	6_4	4	n.沙发
+26	room	6_4	4	n.房间
+26	bookshelf	6_4	4	n.书架
+26	chair	6_4	4	n.椅子
+26	who	6_4	4	pron.谁
+26	ask	6_4	4	vt.询问
+26	everywhere	6_4	4	adv.到处
+26	always	6_4	4	adv.总是
+27	bowl	7_1	4	n.碗
+27	penguin	7_1	4	n.企鹅
+27	bird	7_1	4	n.鸟
+27	fly	7_1	4	vt.&vi.飞
+27	sky	7_1	4	n.天空
+27	can't	7_1	4	v. 不能
+27	her	7_1	4	pron.她的
+27	fly	7_1	4	vt.&vi.飞
+27	spring	7_1	4	n.春天
+27	there be	7_1	4	有（句型）
+27	summer	7_1	4	n.夏天
+28	autumn	7_2	4	n.秋季
+28	winter	7_2	4	n.冬天
+28	cold	7_2	4	adj.冷的
+28	warm	7_2	4	adj.暖和的
+28	cool	7_2	4	adj.凉的
+28	hot	7_2	4	adj.热的
+28	snowy	7_2	4	adj.多雪的
+28	windy	7_2	4	adj.有风的
+28	cloudy	7_2	4	adj.多云的
+28	sunny	7_2	4	adj.阳光充足的
+28	rainy	7_2	4	adj.多雨的
+29	wet	7_3	4	adj.湿的
+29	dry	7_3	4	adj.干的
+29	thunder	7_3	4	n.雷电
+29	bare	7_3	4	adj.赤裸的
+29	season	7_3	4	n.季节
+29	year	7_3	4	n.年
+29	it	7_3	4	pron.它
+29	part of	7_3	4	部分的
+29	follow	7_3	4	vt.跟随
+29	become	7_3	4	vt.变得
+29	get	7_3	4	vt.获得
+30	bloom	7_4	4	n.花
+30	dark	7_4	4	adj.黑暗的
+30	grow	7_4	4	vt.&vi.生长
+30	plant	7_4	4	n.植物
+30	late	7_4	4	adj.迟的
+30	lose	7_4	4	vt.遗失
+30	not ... until	7_4	4	直到…才
+30	leaves	7_4	4	n. 树叶
+30	place	7_4	4	n.地方
+30	early	7_4	4	adv.&adj.早
+30	in the evening	7_4	4	在晚上
+31	milk	8_1	4	n.奶
+31	glass	8_1	4	n.玻璃
+31	yummy	8_1	4	adj.美味的
+31	pebble	8_1	4	n.鹅卵石
+31	river	8_1	4	n.河
+31	floor	8_1	4	n.地板
+31	lake	8_1	4	n.湖
+31	broke	8_1	4	adj.一文不名的
+31	bought	8_1	4	v. 买（过去式）
+31	a sheet of	8_1	4	一张
+32	yesterday	8_2	4	n.&adv.昨天
+32	very	8_2	4	adv.非常
+32	glass	8_2	4	n.玻璃
+32	peach	8_2	4	n.桃子
+32	kiwifruit	8_2	4	n. 猕猴桃
+32	pear	8_2	4	n.梨(树)
+32	orange	8_2	4	adj.橙色的
+32	litchi	8_2	4	n. 荔枝
+32	strawberry	8_2	4	n.草莓
+32	banana	8_2	4	n.香蕉
+33	grape	8_3	4	n.葡萄
+33	coconut	8_3	4	n.椰子
+33	watermelon	8_3	4	n.西瓜
+33	mangosteen	8_3	4	n. 山竹果
+33	apple	8_3	4	n.苹果
+33	durian	8_3	4	n. 榴莲果
+33	pineapple	8_3	4	n.菠萝
+33	pomelo	8_3	4	n. 柚子
+33	sugarcane	8_3	4	n.甘蔗
+33	important	8_3	4	adj.重要的
+34	healthy	8_4	4	adj.健康的
+34	food	8_4	4	n.食物
+34	have	8_4	4	v.有
+34	remember	8_4	4	vt.&vi.记得
+34	want to be	8_4	4	想成为
+34	vegetable	8_4	4	adj.蔬菜的
+34	grow	8_4	4	vt.&vi.生长
+34	saying	8_4	4	n. 谚语
+34	be good for	8_4	4	有益于
+34	too much	8_4	4	太多
+34	keep ... away	8_4	4	远离…
+35	pants	9_1	4	n. 裤子
+35	kite	9_1	4	n.风筝
+35	happy	9_1	4	adj.快乐的
+35	angry	9_1	4	adj.生气的
+35	cake	9_1	4	n.蛋糕
+35	make	9_1	4	vt.做
+35	badminton	9_1	4	n.羽毛球
+35	basketball	9_1	4	n.篮球
+35	football	9_1	4	n.足球
+36	ping-pong	9_2	4	乒乓球
+36	volleyball	9_2	4	n.排球
+36	golf	9_2	4	n.高尔夫球
+36	tennis	9_2	4	n.网球
+36	hockey	9_2	4	n.曲棍球
+36	rugby	9_2	4	n.橄榄球
+36	baseball	9_2	4	n.棒球
+36	bowling	9_2	4	n.保龄球
+36	billiards	9_2	4	n. 台球
+37	favorite	9_3	4	adj.喜爱的
+37	sport	9_3	4	n.运动
+37	usually	9_3	4	adv.通常
+37	clear	9_3	4	adj.清楚的
+37	bright	9_3	4	adj.明亮的
+37	evening	9_3	4	n.晚上
+37	Asian games	9_3	4	亚运会
+37	because	9_3	4	conj.因为
+37	outside	9_3	4	adv.在外面
+38	super	9_4	4	adj. 特级的
+38	player	9_4	4	n.比赛者
+38	won	9_4	4	vt. 赢得（过去式）
+38	first	9_4	4	adv.首先
+38	prize	9_4	4	n.奖品
+38	China	9_4	4	n.瓷器
+38	famous	9_4	4	adj.著名的
+38	work hard	9_4	4	辛勤工作
+38	in the future	9_4	4	在将来
+39	fruit	10_1	4	n.水果
+39	sweet	10_1	4	adj.甜(蜜)的
+39	food	10_1	4	n.食物
+39	orange	10_1	4	adj.橙色的
+39	the cup of	10_1	4	这杯…
+39	favorite	10_1	4	adj.喜爱的
+39	need	10_1	4	v.需要
+39	tasty	10_1	4	adj.好吃的
+39	color	10_1	4	n.颜色
+40	orange	10_2	4	adj.橙色的
+40	piano	10_2	4	n.钢琴
+40	violin	10_2	4	n.小提琴
+40	guitar	10_2	4	n.吉他
+40	handbell	10_2	4	n. 手摇铃
+40	drum	10_2	4	n.鼓
+40	saxophone	10_2	4	n. 萨克斯管
+40	trumpet	10_2	4	n.喇叭
+40	trombone	10_2	4	n.长号
+41	bass	10_3	4	adj. 低音的
+41	accordion	10_3	4	n.手风琴
+41	flute	10_3	4	n.长笛
+41	school	10_3	4	n.学校
+41	concert	10_3	4	n.音乐会
+41	start	10_3	4	n.开始
+41	Chinese zither	10_3	4	古筝
+41	piano	10_3	4	n.钢琴
+41	group	10_3	4	n.组
+42	violin	10_4	4	n.小提琴
+42	Sarah	10_4	4	n. 莎拉
+42	Cathy	10_4	4	n. 凯茜
+42	o'clock	10_4	4	adv.…点钟
+42	they	10_4	4	pron.他们
+42	rock	10_4	4	n.岩石
+42	when	10_4	4	conj.在…时
+42	fun	10_4	4	n.乐趣
+42	hold	10_4	4	vt.拿住
+42	Friday	10_4	4	n. 星期五
+43	bamboo	11_1	4	n.竹
+43	sport	11_1	4	n.运动
+43	basketball	11_1	4	n.篮球
+43	a basket of	11_1	4	一篮
+43	made of	11_1	4	由…组成
+43	plastic	11_1	4	adj.塑料的
+43	want	11_1	4	vi.要
+43	favorite	11_1	4	adj.喜爱的
+43	basket	11_1	4	n.篮
+44	made from	11_2	4	由…制造
+44	stadium	11_2	4	n.露天体育场
+44	hospital	11_2	4	n.医院
+44	cinema	11_2	4	n.电影院
+44	library	11_2	4	n.图书馆
+44	department store	11_2	4	百货公司
+44	zoo	11_2	4	n.动物园
+44	museum	11_2	4	n.博物馆
+44	gallery	11_2	4	n.美术馆
+45	gas station	11_3	4	加油站
+45	bus station	11_3	4	公交车站
+45	mall	11_3	4	n.购物商场
+45	natatorium	11_3	4	n. 游泳池
+45	school	11_3	4	n.学校
+45	concert	11_3	4	n.音乐会
+45	hotel	11_3	4	n.旅馆
+45	today	11_3	4	n.&adv.今天
+45	weekend	11_3	4	n.周末
+46	plan	11_4	4	n.计划
+46	pencil-case	11_4	4	铅笔盒
+46	will	11_4	4	aux.将
+46	department store	11_4	4	百货公司
+46	square	11_4	4	n.正方形
+46	gallery	11_4	4	n.美术馆
+46	there	11_4	4	adv.在那里
+46	be going to	11_4	4	将要
+46	an art show	11_4	4	一个美术展
+46	fly a kite	11_4	4	放风筝
+47	fox	12_1	4	n.狐狸
+47	animal	12_1	4	n.动物
+47	math problem	12_1	4	数学题
+47	fat man	12_1	4	胖人
+47	Chinese problem	12_1	4	语文问题
+47	that	12_1	4	pron.那
+47	favorite	12_1	4	adj.喜爱的
+47	fox	12_1	4	n.狐狸
+47	detective	12_1	4	adj.侦探的
+47	a kind of	12_1	4	一种
+47	doctor	12_1	4	n.医生
+48	dancer	12_2	4	n. 舞蹈家
+48	teacher	12_2	4	n.教师
+48	astronaut	12_2	4	n.宇航员
+48	police	12_2	4	n.警察
+48	professor	12_2	4	n.教授
+48	singer	12_2	4	n.歌手
+48	beggar	12_2	4	n.乞丐
+48	player	12_2	4	n.比赛者
+48	president	12_2	4	n.(国家)总统
+48	writer	12_2	4	n.作者
+48	life	12_2	4	n.生活
+49	speak	12_3	4	vt.说
+49	businessman	12_3	4	n.商人
+49	lawyer	12_3	4	n.律师
+49	fireman	12_3	4	n.消防队员
+49	actress	12_3	4	n.女演员
+49	in the future	12_3	4	在将来
+49	now	12_3	4	n.现在
+49	detective	12_3	4	adj.侦探的
+49	famous	12_3	4	adj.著名的
+49	early	12_3	4	adv.&adj.早
+49	have to	12_3	4	不得不
+50	language	12_4	4	n. 语言
+50	spaceship	12_4	4	n.宇宙飞船
+50	take buses	12_4	4	坐公交车
+50	get up	12_4	4	起床
+50	be far from	12_4	4	距…很远
+50	dream	12_4	4	n.梦
+50	hope	12_4	4	n.希望
+50	all	12_4	4	adj.所有的
+50	come true	12_4	4	成为现实
+50	as ... as	12_4	4	跟…一样…
+51	telephone	13_1	4	n.电话
+51	Miss	13_1	4	v.思念
+51	America	13_1	4	n. 美国
+51	washroom	13_1	4	n. 河马
+51	broken	13_1	4	adj.坏掉的
+51	need	13_1	4	v.需要
+51	mine	13_1	4	pron.我的（东西）
+51	phone	13_1	4	n.电话
+51	be from	13_1	4	来自于
+51	come from	13_1	4	来自
+52	crocodile	13_2	4	n.鳄鱼
+52	ostrich	13_2	4	n.鸵鸟
+52	penguin	13_2	4	n.企鹅
+52	lizard	13_2	4	n.蜥蜴
+52	dragonfly	13_2	4	n.蜻蜓
+52	hippo	13_2	4	n. 河马
+52	zebra	13_2	4	n.斑马
+52	whale	13_2	4	n.鲸
+52	butterfly	13_2	4	n.蝴蝶
+52	shark	13_2	4	n.鲨鱼
+53	panda	13_3	4	n.熊猫
+53	giraffe	13_3	4	n.长颈鹿
+53	elephant	13_3	4	n.大象
+53	rabbit	13_3	4	n.兔子
+53	cow	13_3	4	n.母牛
+53	donkey	13_3	4	n.驴子
+53	tomorrow	13_3	4	adv.明天
+53	first	13_3	4	adv.首先
+53	next	13_3	4	adj.紧接在后的
+53	then	13_3	4	adv.然后
+54	last	13_4	4	adj.最后的
+54	mammal	13_4	4	n.哺乳动物
+54	world	13_4	4	n.世界(人)
+54	largest	13_4	4	adj. 最大的
+54	kinds of	13_4	4	各种各样的
+54	reptile	13_4	4	adj.爬虫类的
+54	favorite	13_4	4	adj.喜爱的
+54	exciting	13_4	4	adj.令人兴奋的
+54	know	13_4	4	vt.&vi.知道
+54	will	13_4	4	aux.将
+55	bookmark	14_1	5	n.书签
+55	table	14_1	5	n. 桌子
+55	black	14_1	5	adj.黑（色）的
+55	check	14_1	5	vt.检查
+55	phone number	14_1	5	电话号码
+55	may	14_1	5	aux. 可能
+55	keep	14_1	5	vt.保持
+55	book	14_1	5	n.书
+55	hand in	14_1	5	交上
+56	a list of	14_2	5	一列
+56	sweet	14_2	5	adj.甜(蜜)的
+56	sour	14_2	5	adj.酸的
+56	fresh	14_2	5	adj.新鲜的
+56	stale	14_2	5	adj.不新鲜的
+56	soft	14_2	5	adj.柔软的
+56	hard	14_2	5	adj.坚硬的
+56	low	14_2	5	adj.低的
+56	high	14_2	5	adj.高的
+57	difficult	14_3	5	adj.困难的
+57	easy	14_3	5	adj.容易的
+57	quick	14_3	5	adj.快的
+57	slow	14_3	5	adj.慢的
+57	expensive	14_3	5	adj.使文明
+57	cheap	14_3	5	adj.便宜的
+57	clever	14_3	5	adj.聪明的
+57	stupid	14_3	5	adj.愚蠢的
+57	rise	14_3	5	v.升起
+58	light	14_4	5	n.光
+58	in the east	14_4	5	在东方
+58	send ... into	14_4	5	把…送进
+58	tell	14_4	5	vt.告诉
+58	hill	14_4	5	n.小山
+58	it is time to ...	14_4	5	是…的时候了
+58	get up	14_4	5	起床
+58	shine over	14_4	5	照耀着
+58	sometimes	14_4	5	adv.有时
+59	thick	14_5	5	adj.厚的
+59	high up	14_5	5	在高处
+59	at noon	14_5	5	在中午
+59	earth	14_5	5	n.地球
+59	traveler	14_5	5	n. 旅行者
+59	never	14_5	5	adv.从不
+59	it seems that	14_5	5	似乎
+59	in fact	14_5	5	实际上
+59	all the time	14_5	5	始终
+60	boy	15_1	4	n.男孩
+60	building	15_1	4	n.建筑物
+60	new	15_1	4	adj.新的
+60	large build	15_1	4	身材魁梧
+60	medium build	15_1	4	中等身材
+60	mine	15_1	4	pron.我的（东西）
+60	who	15_1	4	pron.谁
+60	build	15_1	4	vt.&vi.建造
+60	January	15_1	4	n. 一月
+60	last year	15_1	4	去年
+61	February	15_2	4	n. 二月
+61	March	15_2	4	vi.行军
+61	April	15_2	4	n. 四月
+61	May	15_2	4	aux. 可能
+61	June	15_2	4	n. 六月
+61	July	15_2	4	n. 七月
+61	August	15_2	4	n.八月(大写时）
+61	September	15_2	4	n. 九月
+61	October	15_2	4	n. 十月
+61	November	15_2	4	n. 十一月
+62	December	15_3	4	n. 十二月
+62	protect	15_3	4	vt. 保护
+62	camera	15_3	4	n.照相机
+62	around	15_3	4	prep.在...附近
+62	be like	15_3	4	像…
+62	if	15_3	4	conj.如果
+62	them	15_3	4	pron.他(她
+62	hurt	15_3	4	vt.伤害
+62	how	15_3	4	adv.如何
+62	take care of	15_3	4	照顾
+63	sunny	15_4	4	adj.阳光充足的
+63	wear	15_4	4	vt.穿著
+63	sunglasses	15_4	4	n. 太阳镜
+63	shouldn't	15_4	4	abbr.不应该
+63	had better	15_4	4	最好
+63	light	15_4	4	n.光
+63	dark	15_4	4	adj.黑暗的
+63	either	15_4	4	pron.任一的
+63	everything	15_4	4	pron.每件事
+63	too close	15_4	4	靠太近
+64	student	16_1	4	n.学生
+64	hotel	16_1	4	n.旅馆
+64	teacher	16_1	4	n.教师
+64	tallest	16_1	4	adj.高的( 最高级 )
+64	be late for	16_1	4	因……而迟到
+64	grade	16_1	4	n. 年级
+64	don't	16_1	4	aux. 表示否定
+64	class	16_1	4	n.班级
+64	potato	16_1	4	n.马铃薯
+64	tomato	16_1	4	n.西红柿
+65	cucumber	16_2	4	n.黄瓜
+65	bean	16_2	4	n.豆
+65	cabbage	16_2	4	n.卷心菜
+65	eggplant	16_2	4	n.茄子
+65	garlic	16_2	4	n.大蒜
+65	pea	16_2	4	n.豌豆
+65	pepper	16_2	4	n.胡椒粉
+65	ginger	16_2	4	n.姜
+65	onion	16_2	4	n.洋葱
+65	lotus root	16_2	4	莲藕
+66	broccoli	16_3	4	n.绿菜花
+66	carrot	16_3	4	n.胡萝卜
+66	turnip	16_3	4	n.萝卜
+66	spinach	16_3	4	n.菠菜
+66	the Spring Festival	16_3	4	春节
+66	call	16_3	4	v.打电话
+66	before	16_3	4	prep.在…之前
+66	people	16_3	4	n.人们
+66	clean	16_3	4	adj.干净的
+66	Chinese New Year	16_3	4	春节
+67	whole	16_4	4	adj.整个的
+67	dinner	16_4	4	n.主餐
+67	be busy doing	16_4	4	忙着做某事
+67	stay up to late	16_4	4	熬夜
+67	each other	16_4	4	彼此
+67	visit	16_4	4	n.访问
+67	welcome	16_4	4	vt.欢迎
+67	clothes	16_4	4	n.衣服
+67	New Year's Eve	16_4	4	除夕
+68	leaf	17_1	3	n.树叶
+68	summer	17_1	3	n.夏天
+68	rainbow	17_1	3	n.彩虹
+68	October	17_1	3	n. 十月
+68	fall down	17_1	3	跌倒
+68	above	17_1	3	adj.上面的
+68	yellow	17_1	3	adj.黄色的
+68	fall over	17_1	3	摔倒
+68	begin	17_1	3	vt.&vi.开始
+68	turn	17_1	3	vt.&vi.使转动
+68	like ... more	17_1	3	更喜欢
+69	often	17_2	3	adv.经常
+69	fall	17_2	3	v.落下
+69	fourth	17_2	3	n.第四
+69	largest	17_2	3	adj. 最大的
+69	the USA	17_2	3	美利坚合众国
+69	country	17_2	3	n.国家
+69	Russia	17_2	3	n. 俄罗斯
+69	Canada	17_2	3	n. 加拿大
+69	China	17_2	3	n.瓷器
+69	in the world	17_2	3	在世界上
+69	capital	17_2	3	n.首都
+70	quiet	17_3	3	adj.安静的
+70	city	17_3	3	n.城市
+70	Washington D.C.	17_3	3	华盛顿
+70	in the east of	17_3	3	在…东部
+70	population	17_3	3	n.人口
+70	than	17_3	3	conj.比（用于比较级）
+70	but	17_3	3	conj.但是
+70	a part of	17_3	3	一部分
+70	Statue of Liberty	17_3	3	自由女神
+70	Manhattan Island	17_3	3	曼哈顿岛
+71	student	18_1	4	n.学生
+71	coffee	18_1	4	n.咖啡
+71	milk	18_1	4	n.奶
+71	music	18_1	4	n.音乐
+71	a bottle of	18_1	4	一瓶
+71	friend	18_1	4	n.朋友
+71	gave	18_1	4	v.给(过去式）
+71	math	18_1	4	n.数学
+71	gift	18_1	4	n.礼物
+71	Monday	18_1	4	n. 星期一
+71	Tuesday	18_1	4	n. 星期二
+72	Wednesday	18_2	4	n. 星期三
+72	Thursday	18_2	4	n. 星期四
+72	Friday	18_2	4	n. 星期五
+72	Saturday	18_2	4	n. 星期六
+72	Sunday	18_2	4	n. 星期日
+72	day	18_2	4	n.一天
+72	week	18_2	4	n.星期
+72	weekend	18_2	4	n.周末
+72	month	18_2	4	n.月
+72	year	18_2	4	n.年
+72	how	18_2	4	adv.如何
+73	improve	18_3	4	vt.改进
+73	find	18_3	4	vt.&vi.发现
+73	hard	18_3	4	adj.坚硬的
+73	study	18_3	4	vi.学习
+73	our	18_3	4	pron.我们的
+73	when	18_3	4	conj.在…时
+73	began	18_3	4	v. 开始
+73	in this way	18_3	4	用这种方法
+73	mistake	18_3	4	n.错误
+73	difficult	18_3	4	adj.困难的
+73	without	18_3	4	prep.没有
+74	at first	18_4	4	起先
+74	keep a diary	18_4	4	习惯地记日记
+74	practice	18_4	4	n.练习
+74	usually	18_4	4	adv.通常
+74	story	18_4	4	n.故事
+74	library	18_4	4	n.图书馆
+74	after school	18_4	4	放学后
+74	little	18_4	4	adj.小的
+74	always	18_4	4	adv.总是
+74	through	18_4	4	prep.穿过
+74	correct	18_4	4	adj.正确的

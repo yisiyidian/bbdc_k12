@@ -1,1014 +1,1013 @@
-1	abroad	1A_1	6
-1	across	1A_1	6
-1	admire	1A_1	6
-1	amount	1A_1	6
-1	annually	1A_1	6
-1	association	1A_1	6
-1	athlete	1A_1	6
-1	brand	1A_1	6
-1	championship	1A_1	6
-2	coach	1A_2	6
-2	cooperation	1A_2	6
-2	cricket	1A_2	6
-2	crowd	1A_2	6
-2	data	1A_2	6
-2	deal	1A_2	6
-2	decade	1A_2	6
-2	domestic	1A_2	6
-2	dominate	1A_2	6
-3	enormous	1A_3	6
-3	enthusiasm	1A_3	6
-3	evolution	1A_3	6
-3	evolve	1A_3	6
-3	govern	1A_3	6
-3	hockey	1A_3	6
-3	immigrant	1A_3	6
-3	import	1A_3	6
-3	intense	1A_3	6
-4	join	1A_4	6
-4	lack	1A_4	6
-4	match	1A_4	6
-4	million	1A_4	6
-4	nickname	1A_4	6
-4	official	1A_4	6
-4	originate	1A_4	6
-4	participate	1A_4	6
-4	Passion	1A_4	6
-5	Planet	1A_5	6
-5	popularity	1A_5	6
-5	professional	1A_5	6
-5	prominent	1A_5	6
-5	promote	1A_5	6
-5	prospect	1A_5	6
-5	quarter	1A_5	6
-5	recent	1A_5	6
-5	recognition	1A_5	6
-6	recognized	1A_6	6
-6	regular	1A_6	6
-6	rugby	1A_6	6
-6	satellite	1A_6	6
-6	succeed	1A_6	6
-6	talent	1A_6	6
-6	tough	1A_6	6
-6	tournament	1A_6	6
-6	traditional	1A_6	6
-6	version	1A_6	6
-7	champion	1B_1	6
-7	combination	1B_1	6
-7	adjust	1B_1	6
-7	altitude	1B_1	6
-7	amount	1B_1	6
-7	anxiety	1B_1	6
-7	approve	1B_1	6
-7	athlete	1B_1	6
-7	attribute	1B_1	6
-7	automatic	1B_1	6
-8	average	1B_2	6
-8	award	1B_2	6
-8	background	1B_2	6
-8	capable	1B_2	6
-8	champion	1B_2	6
-8	characteristics	1B_2	6
-8	compliment	1B_2	6
-8	contain	1B_2	6
-8	crowd	1B_2	6
-8	differentiate	1B_2	6
-9	dive	1B_3	6
-9	efficiently	1B_3	6
-9	elite	1B_3	6
-9	enhance	1B_3	6
-9	environmental	1B_3	6
-9	fatigue	1B_3	6
-9	fiber	1B_3	6
-9	generate	1B_3	6
-9	genetic	1B_3	6
-9	gymnast	1B_3	6
-10	handle	1B_4	6
-10	height	1B_4	6
-10	hemoglobin	1B_4	6
-10	involved	1B_4	6
-10	lactate	1B_4	6
-10	landing	1B_4	6
-10	load	1B_4	6
-10	maintain	1B_4	6
-10	marathon	1B_4	6
-11	medal	1B_5	6
-11	motion	1B_5	6
-11	muscle	1B_5	6
-11	muscular	1B_5	6
-11	Olympics	1B_5	6
-11	Otherwise	1B_5	6
-11	oxygen	1B_5	6
-11	physical	1B_5	6
-11	pressure	1B_5	6
-12	psychologically	1B_6	6
-12	psychologist	1B_6	6
-12	require	1B_6	6
-12	requirement	1B_6	6
-12	skeletal	1B_6	6
-12	splash	1B_6	6
-12	suffer	1B_6	6
-12	transfer	1B_6	6
-12	weightlifter	1B_6	6
-13	alter	2A_1	6
-13	annual	2A_1	6
-13	anthropologist	2A_1	6
-13	associate	2A_1	6
-13	attractive	2A_1	6
-13	awareness	2A_1	6
-13	biologist	2A_1	6
-13	care	2A_1	6
-13	conform	2A_1	6
-14	continent	2A_2	6
-14	continue	2A_2	6
-14	cosmetic	2A_2	6
-14	decorate	2A_2	6
-14	devote	2A_2	6
-14	diagram	2A_2	6
-14	dieting	2A_2	6
-14	Egyptian	2A_2	6
-14	enigma	2A_2	6
-15	equal	2A_3	6
-15	exactly	2A_3	6
-15	feature	2A_3	6
-15	fundamental	2A_3	6
-15	fundamental	2A_3	6
-15	gender	2A_3	6
-15	gene	2A_3	6
-15	genetic	2A_3	6
-15	global	2A_3	6
-16	gym	2A_4	6
-16	hung	2A_4	6
-16	least	2A_4	6
-16	makeup	2A_4	6
-16	mate	2A_4	6
-16	nail	2A_4	6
-16	narrow	2A_4	6
-16	native	2A_4	6
-16	nobleman	2A_4	6
-17	notion	2A_5	6
-17	perceive	2A_5	6
-17	photograph	2A_5	6
-17	plastic	2A_5	6
-17	predominantly	2A_5	6
-17	preference	2A_5	6
-17	proportions	2A_5	6
-17	psychologist	2A_5	6
-17	regard	2A_5	6
-17	resemble	2A_5	6
-18	search	2A_6	6
-18	series	2A_6	6
-18	strength	2A_6	6
-18	subjective	2A_6	6
-18	surgeon	2A_6	6
-18	symbol	2A_6	6
-18	trait	2A_6	6
-18	unconsciously	2A_6	6
-18	uniform	2A_6	6
-18	waist	2A_6	6
-19	ability	2B_1	4
-19	attempt	2B_1	4
-19	aware	2B_1	4
-19	beach	2B_1	4
-19	bravery	2B_1	4
-19	captivity	2B_1	4
-19	character	2B_1	4
-19	chemical	2B_1	4
-19	community	2B_1	4
-19	criminal	2B_1	4
-19	crucial	2B_1	4
-20	degree	2B_2	4
-20	denote	2B_2	4
-20	desirable	2B_2	4
-20	determine	2B_2	4
-20	exceed	2B_2	4
-20	explosion	2B_2	4
-20	external	2B_2	4
-20	facial	2B_2	4
-20	fade	2B_2	4
-20	fashion	2B_2	4
-20	function	2B_2	4
-21	fundamental	2B_3	4
-21	gender	2B_3	4
-21	gorilla	2B_3	4
-21	identify	2B_3	4
-21	indicate	2B_3	4
-21	infection	2B_3	4
-21	instance	2B_3	4
-21	leisure	2B_3	4
-21	mark	2B_3	4
-21	mature	2B_3	4
-21	packed	2B_3	4
-22	permanent	2B_4	4
-22	precious	2B_4	4
-22	Primary	2B_4	4
-22	prior	2B_4	4
-22	protective	2B_4	4
-22	revenue	2B_4	4
-22	salon	2B_4	4
-22	shortage	2B_4	4
-22	status	2B_4	4
-22	toward	2B_4	4
-22	variety	2B_4	4
-23	accommodate	3A_1	4
-23	appeal	3A_1	4
-23	approach	3A_1	4
-23	associate	3A_1	4
-23	automatically	3A_1	4
-23	boost	3A_1	4
-23	companion	3A_1	4
-23	complex	3A_1	4
-23	crowd	3A_1	4
-23	decorate	3A_1	4
-24	dramatically	3A_2	4
-24	eliminate	3A_2	4
-24	endangered	3A_2	4
-24	ensure	3A_2	4
-24	exceed	3A_2	4
-24	fund	3A_2	4
-24	genetic	3A_2	4
-24	gorilla	3A_2	4
-24	habitat	3A_2	4
-24	hide	3A_2	4
-25	loose	3A_3	4
-25	mature	3A_3	4
-25	offset	3A_3	4
-25	outnumber	3A_3	4
-25	permanent	3A_3	4
-25	popularity	3A_3	4
-25	precious	3A_3	4
-25	protection	3A_3	4
-25	province	3A_3	4
-25	release	3A_3	4
-26	rely	3A_4	4
-26	reserve	3A_4	4
-26	restore	3A_4	4
-26	revenue	3A_4	4
-26	scarcity	3A_4	4
-26	shortage	3A_4	4
-26	stalk	3A_4	4
-26	survival	3A_4	4
-26	tail	3A_4	4
-26	technique	3A_4	4
-26	zoological	3A_4	4
-27	yarn	3B_1	5
-27	wool	3B_1	5
-27	trend	3B_1	5
-27	secretive	3B_1	5
-27	rug	3B_1	5
-27	reward	3B_1	5
-27	review	3B_1	5
-27	reverse	3B_1	5
-27	remote	3B_1	5
-28	rarely	3B_2	5
-28	promise	3B_2	5
-28	project	3B_2	5
-28	preserve	3B_2	5
-28	poverty	3B_2	5
-28	operate	3B_2	5
-28	neighbor	3B_2	5
-28	Mongolia	3B_2	5
-28	livestock	3B_2	5
-29	leopard	3B_3	5
-29	landscape	3B_3	5
-29	introduction	3B_3	5
-29	independent	3B_3	5
-29	incentive	3B_3	5
-29	herd	3B_3	5
-29	fur	3B_3	5
-29	fortune	3B_3	5
-29	extinction	3B_3	5
-30	exchange	3B_4	5
-30	estimate	3B_4	5
-30	enforce	3B_4	5
-30	endanger	3B_4	5
-30	elusive	3B_4	5
-30	elevate	3B_4	5
-30	drag	3B_4	5
-30	desperate	3B_4	5
-30	decorative	3B_4	5
-30	current	3B_4	5
-31	convince	3B_5	5
-31	continue	3B_5	5
-31	conservationist	3B_5	5
-31	conflict	3B_5	5
-31	conduct	3B_5	5
-31	bonus	3B_5	5
-31	available	3B_5	5
-31	address	3B_5	5
-31	addition	3B_5	5
-31	abroad	3B_5	5
-32	abandon	4A_1	5
-32	ancestor	4A_1	5
-32	appease	4A_1	5
-32	associate	4A_1	5
-32	attempt	4A_1	5
-32	concern	4A_1	5
-32	creator	4A_1	5
-32	dawn	4A_1	5
-32	deliver	4A_1	5
-33	destination	4A_2	5
-33	destruction	4A_2	5
-33	disaster	4A_2	5
-33	enormous	4A_2	5
-33	ensure	4A_2	5
-33	erupt	4A_2	5
-33	eruption	4A_2	5
-33	escape	4A_2	5
-33	exhausted	4A_2	5
-34	expand	4A_3	5
-34	explode	4A_3	5
-34	hike	4A_3	5
-34	holy	4A_3	5
-34	inevitable	4A_3	5
-34	institute	4A_3	5
-34	meantime	4A_3	5
-34	monitor	4A_3	5
-34	mount	4A_3	5
-35	occur	4A_4	5
-35	passage	4A_4	5
-35	predict	4A_4	5
-35	religion	4A_4	5
-35	respect	4A_4	5
-35	rite	4A_4	5
-35	scared	4A_4	5
-35	save	4A_4	5
-35	separate	4A_4	5
-36	settled	4A_5	5
-36	signaling	4A_5	5
-36	spread	4A_5	5
-36	strength	4A_5	5
-36	summit	4A_5	5
-36	symptom	4A_5	5
-36	volcano	4A_5	5
-36	volcanologist	4A_5	5
-36	witness	4A_5	5
-37	affect	4B_1	4
-37	approximately	4B_1	4
-37	article	4B_1	4
-37	claim	4B_1	4
-37	clue	4B_1	4
-37	crack	4B_1	4
-37	crust	4B_1	4
-37	destruction	4B_1	4
-37	detect	4B_1	4
-37	disappoint	4B_1	4
-37	disaster	4B_1	4
-38	displace	4B_2	4
-38	drill	4B_2	4
-38	edge	4B_2	4
-38	expand	4B_2	4
-38	explode	4B_2	4
-38	explosion	4B_2	4
-38	fault	4B_2	4
-38	forecast	4B_2	4
-38	generate	4B_2	4
-38	identical	4B_2	4
-38	Instead	4B_2	4
-39	institute	4B_3	4
-39	journal	4B_3	4
-39	laboratory	4B_3	4
-39	lack	4B_3	4
-39	preceding	4B_3	4
-39	precise	4B_3	4
-39	predict	4B_3	4
-39	prediction	4B_3	4
-39	prevent	4B_3	4
-39	prior	4B_3	4
-39	punch	4B_3	4
-40	random	4B_4	4
-40	review	4B_4	4
-40	schedule	4B_4	4
-40	slightly	4B_4	4
-40	strain	4B_4	4
-40	swing	4B_4	4
-40	theory	4B_4	4
-40	track	4B_4	4
-40	understand	4B_4	4
-40	zone	4B_4	4
-41	pursuit	5A_1	5
-41	multicultural	5A_1	5
-41	bodybuilder	5A_1	5
-41	exploration	5A_1	5
-41	eager	5A_1	5
-41	ultimate	5A_1	5
-41	coastline	5A_1	5
-41	Atlantic	5A_1	5
-41	intermarry	5A_1	5
-41	distinctive	5A_1	5
-42	cuisine	5A_2	5
-42	magnificent	5A_2	5
-42	moonlight	5A_2	5
-42	destination	5A_2	5
-42	prohibit	5A_2	5
-42	beach	5A_2	5
-42	dozen	5A_2	5
-42	explorer	5A_2	5
-42	daylight	5A_2	5
-42	Heritage	5A_2	5
-43	marine	5A_3	5
-43	hint	5A_3	5
-43	occasionally	5A_3	5
-43	wonder	5A_3	5
-43	region	5A_3	5
-43	slip	5A_3	5
-43	senior	5A_3	5
-43	roll	5A_3	5
-43	rank	5A_3	5
-43	varied	5A_3	5
-44	vibrant	5A_4	5
-44	stretch	5A_4	5
-44	breeze	5A_4	5
-44	silver	5A_4	5
-44	row	5A_4	5
-44	curve	5A_4	5
-44	handful	5A_4	5
-44	attract	5A_4	5
-44	spoil	5A_4	5
-44	isolate	5A_4	5
-45	amazing	5A_5	5
-45	diverse	5A_5	5
-45	prison	5A_5	5
-45	regard	5A_5	5
-45	balance	5A_5	5
-45	pale	5A_5	5
-45	turtle	5A_5	5
-45	formation	5A_5	5
-45	imagine	5A_5	5
-46	gallery	5B_1	4
-46	mild	5B_1	4
-46	visible	5B_1	4
-46	spectacular	5B_1	4
-46	vast	5B_1	4
-46	tension	5B_1	4
-46	cure	5B_1	4
-46	vehicle	5B_1	4
-46	trace	5B_1	4
-46	turtle	5B_1	4
-47	chilly	5B_2	4
-47	bookstore	5B_2	4
-47	migrate	5B_2	4
-47	evident	5B_2	4
-47	fossil	5B_2	4
-47	glacier	5B_2	4
-47	impressive	5B_2	4
-47	inner	5B_2	4
-47	lighting	5B_2	4
-47	lava	5B_2	4
-48	literally	5B_3	4
-48	layer	5B_3	4
-48	parliament	5B_3	4
-48	rainbow	5B_3	4
-48	thermal	5B_3	4
-48	springs	5B_3	4
-48	stylish	5B_3	4
-48	situated	5B_3	4
-48	scenery	5B_3	4
-48	convert	5B_3	4
-49	architecture	5B_4	4
-49	aurora	5B_4	4
-49	release	5B_4	4
-49	steam	5B_4	4
-49	accessible	5B_4	4
-49	adventure	5B_4	4
-49	monster	5B_4	4
-49	dramatic	5B_4	4
-49	stony	5B_4	4
-49	frequent	5B_4	4
-50	colleague	6A_1	3
-50	domain	6A_1	3
-50	healing	6A_1	3
-50	monument	6A_1	3
-50	pottery	6A_1	3
-50	Plain	6A_1	3
-50	unearth	6A_1	3
-50	inspire	6A_1	3
-50	artifact	6A_1	3
-50	circular	6A_1	3
-50	symbol	6A_1	3
-51	harden	6A_2	3
-51	addition	6A_2	3
-51	deposit	6A_2	3
-51	puzzle	6A_2	3
-51	giant	6A_2	3
-51	belief	6A_2	3
-51	cure	6A_2	3
-51	whereas	6A_2	3
-51	clay	6A_2	3
-51	team	6A_2	3
-51	abandon	6A_2	3
-52	solve	6A_3	3
-52	archeologist	6A_3	3
-52	definitive	6A_3	3
-52	mystery	6A_3	3
-52	evidence	6A_3	3
-52	cite	6A_3	3
-52	grave	6A_3	3
-52	solstice	6A_3	3
-52	avenue	6A_3	3
-52	trace	6A_3	3
-52	transport	6A_3	3
-52	motive	6A_3	3
-53	fossil	6B_1	3
-53	involve	6B_1	3
-53	precede	6B_1	3
-53	adapt	6B_1	3
-53	contrary	6B_1	3
-53	unique	6B_1	3
-53	skeleton	6B_1	3
-53	abnormally	6B_1	3
-53	shrink	6B_1	3
-53	predator	6B_1	3
-54	minimize	6B_2	3
-54	characteristic	6B_2	3
-54	continent	6B_2	3
-54	consumption	6B_2	3
-54	cousin	6B_2	3
-54	evolve	6B_2	3
-54	Immediate	6B_2	3
-54	intelligence	6B_2	3
-54	major	6B_2	3
-54	nevertheless	6B_2	3
-55	astonishing	6B_3	3
-55	inspection	6B_3	3
-55	analyze	6B_3	3
-55	determine	6B_3	3
-55	chimpanzee	6B_3	3
-55	suffer	6B_3	3
-55	apparently	6B_3	3
-55	extinct	6B_3	3
-55	amazing	6B_3	3
-56	pain	7A_1	5
-56	burn	7A_1	5
-56	dependence	7A_1	5
-56	stimulant	7A_1	5
-56	abuse	7A_1	5
-56	severe	7A_1	5
-56	contradictory	7A_1	5
-56	fluctuate	7A_1	5
-56	facilitate	7A_1	5
-57	moderate	7A_2	5
-57	furthermore	7A_2	5
-57	temporary	7A_2	5
-57	awake	7A_2	5
-57	chew	7A_2	5
-57	current	7A_2	5
-57	contain	7A_2	5
-57	characteristic	7A_2	5
-57	emotionally	7A_2	5
-58	function	7A_3	5
-58	instance	7A_3	5
-58	infection,	7A_3	5
-58	proof	7A_3	5
-58	negative	7A_3	5
-58	soda	7A_3	5
-58	reliever	7A_3	5
-58	typical	7A_3	5
-58	therefore	7A_3	5
-59	rarely	7A_4	5
-59	universal	7A_4	5
-59	pilot	7A_4	5
-59	mood	7A_4	5
-59	ritual	7A_4	5
-59	ceremony	7A_4	5
-59	consume	7A_4	5
-59	expert	7A_4	5
-59	adequate	7A_4	5
-59	attribute	7A_4	5
-60	regular	7A_5	5
-60	exhibit	7A_5	5
-60	general	7A_5	5
-60	opinion	7A_5	5
-60	mental	7A_5	5
-60	fatigue	7A_5	5
-60	moderation	7A_5	5
-60	burst	7A_5	5
-60	injury	7A_5	5
-60	taste	7A_5	5
-61	ideal	7B_1	6
-61	addiction	7B_1	6
-61	advocate	7B_1	6
-61	alternative	7B_1	6
-61	available	7B_1	6
-61	aware	7B_1	6
-61	batteries	7B_1	6
-61	blow	7B_1	6
-61	calm	7B_1	6
-62	capacity	7B_2	6
-62	challenge	7B_2	6
-62	combination	7B_2	6
-62	constantly	7B_2	6
-62	construction	7B_2	6
-62	continuous	7B_2	6
-62	convert	7B_2	6
-62	current	7B_2	6
-62	decline	7B_2	6
-63	descend	7B_3	6
-63	dispose	7B_3	6
-63	distant	7B_3	6
-63	due	7B_3	6
-63	eliminate	7B_3	6
-63	emission	7B_3	6
-63	equivalent	7B_3	6
-63	finite	7B_3	6
-63	fossil	7B_3	6
-64	fuel	7B_4	6
-64	generate	7B_4	6
-64	guarantee	7B_4	6
-64	incentive	7B_4	6
-64	inflammation	7B_4	6
-64	initially	7B_4	6
-64	instance	7B_4	6
-64	issue	7B_4	6
-64	landscape	7B_4	6
-65	megawatt	7B_5	6
-65	nuclear	7B_5	6
-65	operate	7B_5	6
-65	oppose	7B_5	6
-65	panel	7B_5	6
-65	primarily	7B_5	6
-65	process	7B_5	6
-65	protesting	7B_5	6
-65	solar	7B_5	6
-65	solution	7B_5	6
-66	steep	7B_6	6
-66	storage	7B_6	6
-66	substitute	7B_6	6
-66	supply	7B_6	6
-66	surplus	7B_6	6
-66	tower	7B_6	6
-66	turbine	7B_6	6
-66	utilize	7B_6	6
-66	vast	7B_6	6
-66	waste	7B_6	6
-67	accompany	8A_1	4
-67	accord	8A_1	4
-67	accumulate	8A_1	4
-67	across	8A_1	4
-67	architecture	8A_1	4
-67	capture	8A_1	4
-67	coincide	8A_1	4
-67	command	8A_1	4
-67	commodity	8A_1	4
-68	comparison	8A_2	4
-68	customs	8A_2	4
-68	depart	8A_2	4
-68	diplomacy	8A_2	4
-68	diversity	8A_2	4
-68	engaging	8A_2	4
-68	fascinate	8A_2	4
-68	fleet	8A_2	4
-68	Imperial	8A_2	4
-69	legend	8A_3	4
-69	legendary	8A_3	4
-69	merchant	8A_3	4
-69	migrate	8A_3	4
-69	military	8A_3	4
-69	personal	8A_3	4
-69	recreate	8A_3	4
-69	scarcely	8A_3	4
-69	scholar	8A_3	4
-70	soldier	8A_4	4
-70	storm	8A_4	4
-70	subsequent	8A_4	4
-70	terminate	8A_4	4
-70	translation	8A_4	4
-70	ultimately	8A_4	4
-70	via	8A_4	4
-70	voyage	8A_4	4
-71	weather	8B_1	4
-71	violent	8B_1	4
-71	terrible	8B_1	4
-71	tale	8B_1	4
-71	struggle	8B_1	4
-71	selection	8B_1	4
-71	sail	8B_1	4
-71	replenish	8B_1	4
-71	refuse	8B_1	4
-72	progress	8B_2	4
-72	precious	8B_2	4
-72	on	8B_2	4
-72	Muslim	8B_2	4
-72	mosque	8B_2	4
-72	ministry	8B_2	4
-72	medieval	8B_2	4
-72	legacy	8B_2	4
-72	leather	8B_2	4
-73	generous	8B_3	4
-73	gem	8B_3	4
-73	expedition	8B_3	4
-73	escape	8B_3	4
-73	endangered	8B_3	4
-73	diplomacy	8B_3	4
-73	derive	8B_3	4
-73	department	8B_3	4
-73	decorate	8B_3	4
-74	crew	8B_4	4
-74	confusion	8B_4	4
-74	comprise	8B_4	4
-74	claimed	8B_4	4
-74	chance	8B_4	4
-74	capsize	8B_4	4
-74	Buddha	8B_4	4
-74	brief	8B_4	4
-74	adventure	8B_4	4
-74	accelerate	8B_4	4
-75	accidentally	9A_1	3
-75	aircraft	9A_1	3
-75	altitude	9A_1	3
-75	avalanche	9A_1	3
-75	blanket	9A_1	3
-75	board	9A_1	3
-75	crucial	9A_1	3
-75	departure	9A_1	3
-75	endure	9A_1	3
-75	exhaust	9A_1	3
-75	humanity	9A_1	3
-76	imagine	9A_2	3
-76	mild	9A_2	3
-76	ordeal	9A_2	3
-76	pants	9A_2	3
-76	peak	9A_2	3
-76	plastic	9A_2	3
-76	promise	9A_2	3
-76	rational	9A_2	3
-76	rescue	9A_2	3
-76	reviewed	9A_2	3
-76	ridge	9A_2	3
-77	sew	9A_3	3
-77	solution	9A_3	3
-77	steady	9A_3	3
-77	stream	9A_3	3
-77	survival	9A_3	3
-77	sustain	9A_3	3
-77	tough	9A_3	3
-77	tragedy	9A_3	3
-77	urgent	9A_3	3
-77	volunteer	9A_3	3
-78	wire	9B_1	3
-78	wage	9B_1	3
-78	tragic	9B_1	3
-78	tragedy	9B_1	3
-78	terror	9B_1	3
-78	stable	9B_1	3
-78	refugee	9B_1	3
-78	receive	9B_1	3
-78	posters	9B_1	3
-78	portrait	9B_1	3
-78	photograph	9B_1	3
-79	pause	9B_2	3
-79	particularly	9B_2	3
-79	ordeal	9B_2	3
-79	mobilize	9B_2	3
-79	mission	9B_2	3
-79	mercy	9B_2	3
-79	locate	9B_2	3
-79	hardship	9B_2	3
-79	flee	9B_2	3
-79	fate	9B_2	3
-79	fame	9B_2	3
-80	explosion	9B_3	3
-80	crowd	9B_3	3
-80	convince	9B_3	3
-80	clinic	9B_3	3
-80	camp	9B_3	3
-80	border	9B_3	3
-80	bomb	9B_3	3
-80	avalanche	9B_3	3
-80	attempt	9B_3	3
-80	across	9B_3	3
-81	ability	10A_1	4
-81	accessible	10A_1	4
-81	accomplish	10A_1	4
-81	affect	10A_1	4
-81	alter	10A_1	4
-81	automatically	10A_1	4
-81	calmer	10A_1	4
-81	consciously	10A_1	4
-81	consciousness	10A_1	4
-81	correspond	10A_1	4
-81	cortex	10A_1	4
-82	define	10A_2	4
-82	emotion	10A_2	4
-82	emotional	10A_2	4
-82	entity	10A_2	4
-82	exhibit	10A_2	4
-82	facial	10A_2	4
-82	flexible	10A_2	4
-82	functional	10A_2	4
-82	infection	10A_2	4
-82	mature.	10A_2	4
-82	mental	10A_2	4
-83	negative	10A_3	4
-83	neuron	10A_3	4
-83	occurs	10A_3	4
-83	perceive	10A_3	4
-83	perception	10A_3	4
-83	perspective	10A_3	4
-83	positive	10A_3	4
-83	Prefrontal	10A_3	4
-83	presume	10A_3	4
-83	psychologist	10A_3	4
-83	recall	10A_3	4
-84	reinforce	10A_4	4
-84	retain	10A_4	4
-84	reverse	10A_4	4
-84	Self-awareness	10A_4	4
-84	transform	10A_4	4
-84	underlying	10A_4	4
-84	visualize	10A_4	4
-84	volunteer	10A_4	4
-84	welfare	10A_4	4
-84	wipe	10A_4	4
-85	ability	10B_1	5
-85	abstract	10B_1	5
-85	acknowledge	10B_1	5
-85	adjust	10B_1	5
-85	advanced	10B_1	5
-85	attribute	10B_1	5
-85	capable	10B_1	5
-85	captivity	10B_1	5
-85	chimpanzee	10B_1	5
-85	cognition	10B_1	5
-86	cognitive	10B_2	5
-86	communicate	10B_2	5
-86	concept	10B_2	5
-86	convey	10B_2	5
-86	creativity	10B_2	5
-86	disgust	10B_2	5
-86	dismiss	10B_2	5
-86	enclose	10B_2	5
-86	evolution	10B_2	5
-86	extraordinary	10B_2	5
-87	extraordinary	10B_3	5
-87	flock	10B_3	5
-87	genetically	10B_3	5
-87	humble	10B_3	5
-87	imitate	10B_3	5
-87	imitate	10B_3	5
-87	imitation	10B_3	5
-87	laboratory	10B_3	5
-87	logical	10B_3	5
-87	mammal	10B_3	5
-88	master	10B_4	5
-88	mental	10B_4	5
-88	monitor	10B_4	5
-88	novel	10B_4	5
-88	Octopuses	10B_4	5
-88	parrot	10B_4	5
-88	possess	10B_4	5
-88	primate	10B_4	5
-88	primitive	10B_4	5
-89	pronounce	10B_5	5
-89	react	10B_5	5
-89	reason	10B_5	5
-89	represent	10B_5	5
-89	reproduce	10B_5	5
-89	reveal	10B_5	5
-89	simulate	10B_5	5
-89	spit	10B_5	5
-89	staff	10B_5	5
-90	visible	11A_1	4
-90	synthetic	11A_1	4
-90	symbolize	11A_1	4
-90	substance	11A_1	4
-90	stability	11A_1	4
-90	reminder	11A_1	4
-90	refrigerator	11A_1	4
-90	primitive	11A_1	4
-90	primate	11A_1	4
-90	politics	11A_1	4
-91	plates	11A_2	4
-91	passive	11A_2	4
-91	package	11A_2	4
-91	neutral	11A_2	4
-91	mourn	11A_2	4
-91	mineral	11A_2	4
-91	manufacture	11A_2	4
-91	inhibition	11A_2	4
-91	highlight	11A_2	4
-91	grinding	11A_2	4
-92	extract	11A_3	4
-92	exception	11A_3	4
-92	embarrass	11A_3	4
-92	Eastern	11A_3	4
-92	dye	11A_3	4
-92	dominance	11A_3	4
-92	depress	11A_3	4
-92	debate	11A_3	4
-92	convey	11A_3	4
-92	container	11A_3	4
-93	command	11A_4	4
-93	ceiling	11A_4	4
-93	caution	11A_4	4
-93	bold	11A_4	4
-93	attribute	11A_4	4
-93	attract	11A_4	4
-93	appetizing	11A_4	4
-93	aggressive	11A_4	4
-93	aggression	11A_4	4
-93	accelerate	11A_4	4
-93	inhibit	11A_4	4
-94	wander	11B_1	3
-94	synthetic	11B_1	3
-94	subsidy	11B_1	3
-94	subsidize	11B_1	3
-94	stomach	11B_1	3
-94	stimulant	11B_1	3
-94	sensitive	11B_1	3
-94	sensible	11B_1	3
-94	retreat	11B_1	3
-94	resist	11B_1	3
-94	recovery	11B_1	3
-95	purchase	11B_2	3
-95	principles	11B_2	3
-95	portrait	11B_2	3
-95	necessity	11B_2	3
-95	materialism	11B_2	3
-95	masterpiece	11B_2	3
-95	manic	11B_2	3
-95	innovative	11B_2	3
-95	inhibit	11B_2	3
-95	greed	11B_2	3
-95	emphasize	11B_2	3
-96	earlobe	11B_3	3
-96	dye	11B_3	3
-96	depression	11B_3	3
-96	decline	11B_3	3
-96	combine	11B_3	3
-96	classic	11B_3	3
-96	brush	11B_3	3
-96	breaking	11B_3	3
-96	bold	11B_3	3
-96	boarding	11B_3	3
-96	appreciate	11B_3	3
-97	marble	12A_1	4
-97	adapt	12A_1	4
-97	allocate	12A_1	4
-97	application	12A_1	4
-97	bond	12A_1	4
-97	cell	12A_1	4
-97	concentration	12A_1	4
-97	containing	12A_1	4
-97	detect	12A_1	4
-97	diagnose	12A_1	4
-98	disturbing	12A_2	4
-98	dot	12A_2	4
-98	expose	12A_2	4
-98	extensive	12A_2	4
-98	faint	12A_2	4
-98	ineffective	12A_2	4
-98	inject	12A_2	4
-98	insert	12A_2	4
-98	instance	12A_2	4
-98	intense	12A_2	4
-99	laser	12A_3	4
-99	locate	12A_3	4
-99	marble	12A_3	4
-99	meanwhile	12A_3	4
-99	microscopic	12A_3	4
-99	multiply	12A_3	4
-99	nanotechnology	12A_3	4
-99	particle	12A_3	4
-99	particular	12A_3	4
-99	potential	12A_3	4
-100	prefix	12A_4	4
-100	priority	12A_4	4
-100	quantum	12A_4	4
-100	radical	12A_4	4
-100	resistant	12A_4	4
-100	shrink	12A_4	4
-100	split	12A_4	4
-100	stage	12A_4	4
-100	thorough	12A_4	4
-100	tumor	12A_4	4
-101	virus	12B_1	3
-101	violent	12B_1	3
-101	victim	12B_1	3
-101	veterinarian	12B_1	3
-101	vaccine	12B_1	3
-101	transmit	12B_1	3
-101	targets	12B_1	3
-101	swell	12B_1	3
-101	stable	12B_1	3
-101	scratch	12B_1	3
-102	root	12B_2	3
-102	racehorse	12B_2	3
-102	poisonous	12B_2	3
-102	originated	12B_2	3
-102	labeled	12B_2	3
-102	insect	12B_2	3
-102	Infectious	12B_2	3
-102	infect	12B_2	3
-102	incidence	12B_2	3
-102	impact	12B_2	3
-103	immune	12B_3	3
-103	habitat	12B_3	3
-103	fever	12B_3	3
-103	emergency	12B_3	3
-103	conservative	12B_3	3
-103	bat	12B_3	3
-103	assistant	12B_3	3
-103	affect	12B_3	3
-103	accustom	12B_3	3
-103	destruction	12B_3	3
+1	abroad	1A_1	6	adj.在国外
+1	across	1A_1	6	prep.穿过
+1	admire	1A_1	6	vt.钦佩
+2	amount	1A_2	6	n.数量
+2	annually	1A_2	6	adv.每年
+2	association	1A_2	6	n.联合
+2	athlete	1A_2	6	n.运动员
+2	brand	1A_2	6	n.牌子
+2	championship	1A_2	6	n.锦标赛
+2	coach	1A_2	6	n.教练
+2	cooperation	1A_2	6	n.合作
+2	cricket	1A_2	6	n.板球
+2	crowd	1A_2	6	n.人群
+3	data	1A_3	6	n.(datum的复数)数据
+3	deal	1A_3	6	v.处理
+3	decade	1A_3	6	n.十年
+3	domestic	1A_3	6	adj.国内的
+3	dominate	1A_3	6	v.支配
+3	enormous	1A_3	6	adj.巨大的
+3	enthusiasm	1A_3	6	v.&n.热情
+3	evolution	1A_3	6	n.进化
+3	evolve	1A_3	6	vt.&vi.进展
+3	govern	1A_3	6	vt.统治
+4	hockey	1A_4	6	n.曲棍球
+4	immigrant	1A_4	6	n.移民
+4	import	1A_4	6	n.进口
+4	intense	1A_4	6	adj.强烈的
+4	join	1A_4	6	v.参加
+4	lack	1A_4	6	vt.缺乏
+4	match	1A_4	6	n.比赛
+4	million	1A_4	6	n.百万
+4	nickname	1A_4	6	n.绰号
+4	official	1A_4	6	adj.官方的
+5	originate	1A_5	6	vt.发起
+5	participate	1A_5	6	vi.参加某事
+5	Passion	1A_5	6	n.激情
+5	Planet	1A_5	6	n.行星
+5	popularity	1A_5	6	n.流行
+5	professional	1A_5	6	adj.职业(上)的
+5	prominent	1A_5	6	adj.突出的
+5	promote	1A_5	6	vt. 促进
+5	prospect	1A_5	6	n.展望
+5	quarter	1A_5	6	n.四分之一
+5	recent	1A_5	6	adj.近来的
+6	recognition	1A_6	6	n.认出
+6	recognized	1A_6	6	adj. 公认的（过去分词）
+6	regular	1A_6	6	adj.有规律的
+6	rugby	1A_6	6	n.橄榄球
+6	satellite	1A_6	6	n.卫星
+6	succeed	1A_6	6	vt.成功
+6	talent	1A_6	6	n.才能
+6	tough	1A_6	6	adj.强硬的
+6	tournament	1A_6	6	n.比赛
+6	traditional	1A_6	6	adj.传统的
+6	version	1A_6	6	n.版本
+7	champion	1B_1	6	n.冠军
+7	combination	1B_1	6	n.结合
+7	adjust	1B_1	6	vt.调整
+7	altitude	1B_1	6	n.高度
+7	amount	1B_1	6	n.数量
+7	anxiety	1B_1	6	n.焦虑
+7	approve	1B_1	6	vt.批准
+7	athlete	1B_1	6	n.运动员
+7	attribute	1B_1	6	n.属性
+7	automatic	1B_1	6	adj.自动的
+8	average	1B_2	6	adj.平均的
+8	award	1B_2	6	vt.授予
+8	background	1B_2	6	n.背景
+8	capable	1B_2	6	adj.有能力的
+8	champion	1B_2	6	n.冠军
+8	characteristics	1B_2	6	n. 特性（复数）
+8	compliment	1B_2	6	n.称赞
+8	contain	1B_2	6	vt.包含
+8	crowd	1B_2	6	n.人群
+8	differentiate	1B_2	6	vt.识别
+9	dive	1B_3	6	n.潜水
+9	efficiently	1B_3	6	adv. 有效地
+9	elite	1B_3	6	n.精华
+9	enhance	1B_3	6	vt.提高
+9	environmental	1B_3	6	adj.环境的
+9	fatigue	1B_3	6	n.疲乏
+9	fiber	1B_3	6	n.纤维(物质)
+9	generate	1B_3	6	vt.产生
+9	genetic	1B_3	6	adj.基因的
+9	gymnast	1B_3	6	n.体操运动员
+10	handle	1B_4	6	vt.处理
+10	height	1B_4	6	n.高度
+10	hemoglobin	1B_4	6	n.血红蛋白
+10	involved	1B_4	6	adj. 有关的（过去分词）
+10	lactate	1B_4	6	vi. 分泌乳汁
+10	landing	1B_4	6	n.着陆
+10	load	1B_4	6	n.负荷
+10	maintain	1B_4	6	vt.维持;维修
+10	marathon	1B_4	6	n.马拉松
+11	medal	1B_5	6	n.奖章
+11	motion	1B_5	6	n.运动
+11	muscle	1B_5	6	n.肌肉
+11	muscular	1B_5	6	adj.肌肉的
+11	Olympics	1B_5	6	n. 奥林匹克运动会
+11	Otherwise	1B_5	6	adv.否则
+11	oxygen	1B_5	6	n.氧
+11	physical	1B_5	6	adj.身体的
+11	pressure	1B_5	6	n.压力
+12	psychologically	1B_6	6	adv. 心理上地
+12	psychologist	1B_6	6	n. 心理学家
+12	require	1B_6	6	v.需要
+12	requirement	1B_6	6	n.要求
+12	skeletal	1B_6	6	adj. 骨骼的
+12	splash	1B_6	6	n.飞溅的水
+12	suffer	1B_6	6	vt.遭受
+12	transfer	1B_6	6	v.转移
+12	weightlifter	1B_6	6	n.举重运动员
+13	alter	2A_1	6	v.改变
+13	annual	2A_1	6	adj.每年的
+13	anthropologist	2A_1	6	n.人类学家
+13	associate	2A_1	6	vt.（使）发生联系
+13	attractive	2A_1	6	adj.有吸引力的
+13	awareness	2A_1	6	n. 意识
+13	biologist	2A_1	6	n.生物学家
+13	care	2A_1	6	n.小心
+13	conform	2A_1	6	vt.使一致
+14	continent	2A_2	6	n.大陆
+14	continue	2A_2	6	vt.&vi.继续
+14	cosmetic	2A_2	6	n.化妆品
+14	decorate	2A_2	6	vt.装饰
+14	devote	2A_2	6	vt.投入于
+14	diagram	2A_2	6	n.图表
+14	dieting	2A_2	6	n. 节食
+14	Egyptian	2A_2	6	adj. 埃及的
+14	enigma	2A_2	6	n.费解的事情
+15	equal	2A_3	6	adj.相等的
+15	exactly	2A_3	6	adv.准确地
+15	feature	2A_3	6	n.特征
+15	fundamental	2A_3	6	adj.基本的
+15	fundamental	2A_3	6	adj.基本的
+15	gender	2A_3	6	n.性别
+15	gene	2A_3	6	n.基因
+15	genetic	2A_3	6	adj.基因的
+15	global	2A_3	6	adj.全球性的
+16	gym	2A_4	6	n.健身房
+16	hung	2A_4	6	v. 悬挂（过去分词）
+16	least	2A_4	6	adj.最少的
+16	makeup	2A_4	6	n.组成
+16	mate	2A_4	6	n.配偶
+16	nail	2A_4	6	n.钉子
+16	narrow	2A_4	6	adj.狭窄的
+16	native	2A_4	6	adj.本土的
+16	nobleman	2A_4	6	n.贵族
+17	notion	2A_5	6	n.观念
+17	perceive	2A_5	6	v.察觉
+17	photograph	2A_5	6	n.相片
+17	plastic	2A_5	6	adj.塑料的
+17	predominantly	2A_5	6	adv. 主要地
+17	preference	2A_5	6	n.偏爱
+17	proportions	2A_5	6	n. [数] 比例
+17	psychologist	2A_5	6	n. 心理学家
+17	regard	2A_5	6	vt.认为
+17	resemble	2A_5	6	v.像
+18	search	2A_6	6	v.搜寻
+18	series	2A_6	6	n. 系列
+18	strength	2A_6	6	n.力量
+18	subjective	2A_6	6	adj.主观的
+18	surgeon	2A_6	6	n.外科医生
+18	symbol	2A_6	6	n.符号
+18	trait	2A_6	6	n.特征
+18	unconsciously	2A_6	6	adv. 不知不觉
+18	uniform	2A_6	6	n.制服
+18	waist	2A_6	6	n.腰
+19	ability	2B_1	4	n.才能
+19	attempt	2B_1	4	vt.尝试
+19	aware	2B_1	4	adj.意识到的
+19	beach	2B_1	4	n.海滩
+19	bravery	2B_1	4	n.勇敢
+19	captivity	2B_1	4	n.囚禁
+19	character	2B_1	4	n.个性
+19	chemical	2B_1	4	adj.化学的
+19	community	2B_1	4	n.社区
+19	criminal	2B_1	4	adj.犯罪的
+19	crucial	2B_1	4	adj.关键的
+20	degree	2B_2	4	n.度数
+20	denote	2B_2	4	vt.象征
+20	desirable	2B_2	4	adj.值得有的
+20	determine	2B_2	4	vt.决定
+20	exceed	2B_2	4	vt.超过
+20	explosion	2B_2	4	n.爆炸
+20	external	2B_2	4	n.外部
+20	facial	2B_2	4	adj.面部的
+20	fade	2B_2	4	vi.褪色
+20	fashion	2B_2	4	n.流行
+20	function	2B_2	4	n.功能
+21	fundamental	2B_3	4	adj.基本的
+21	gender	2B_3	4	n.性别
+21	gorilla	2B_3	4	n.大猩猩
+21	identify	2B_3	4	vt.识别
+21	indicate	2B_3	4	v.表明
+21	infection	2B_3	4	n.传染
+21	instance	2B_3	4	n.例子
+21	leisure	2B_3	4	n.闲暇
+21	mark	2B_3	4	n.标记
+21	mature	2B_3	4	adj.成熟的
+21	packed	2B_3	4	adj. 充满…的
+22	permanent	2B_4	4	adj.永久的
+22	precious	2B_4	4	adj.宝贵的
+22	Primary	2B_4	4	adj.主要的
+22	prior	2B_4	4	adj.在先的
+22	protective	2B_4	4	adj.保护的
+22	revenue	2B_4	4	n.总收入
+22	salon	2B_4	4	n.沙龙
+22	shortage	2B_4	4	n.不足
+22	status	2B_4	4	n.状态
+22	toward	2B_4	4	prep.朝
+22	variety	2B_4	4	n.多样
+23	accommodate	3A_1	4	vi.使自己适应
+23	appeal	3A_1	4	v.呼吁
+23	approach	3A_1	4	v.接近
+23	associate	3A_1	4	vt.（使）发生联系
+23	automatically	3A_1	4	adv. 自动地
+23	boost	3A_1	4	n.推进
+23	companion	3A_1	4	n.同伴
+23	complex	3A_1	4	adj.复杂的
+23	crowd	3A_1	4	n.人群
+23	decorate	3A_1	4	vt.装饰
+24	dramatically	3A_2	4	adv. 戏剧地
+24	eliminate	3A_2	4	v.除去
+24	endangered	3A_2	4	adj.（生命等）有危险的
+24	ensure	3A_2	4	vt.保证
+24	exceed	3A_2	4	vt.超过
+24	fund	3A_2	4	n.基金
+24	genetic	3A_2	4	adj.基因的
+24	gorilla	3A_2	4	n.大猩猩
+24	habitat	3A_2	4	n.(动植物的)产地
+24	hide	3A_2	4	vt.隐藏
+25	loose	3A_3	4	adj.宽松的
+25	mature	3A_3	4	adj.成熟的
+25	offset	3A_3	4	n.抵销
+25	outnumber	3A_3	4	vt.数量上超过
+25	permanent	3A_3	4	adj.永久的
+25	popularity	3A_3	4	n.流行
+25	precious	3A_3	4	adj.宝贵的
+25	protection	3A_3	4	n.保护
+25	province	3A_3	4	n.省
+25	release	3A_3	4	n.释放
+26	rely	3A_4	4	v.倚赖
+26	reserve	3A_4	4	vt.保留
+26	restore	3A_4	4	vt.恢复
+26	revenue	3A_4	4	n.总收入
+26	scarcity	3A_4	4	n.缺乏
+26	shortage	3A_4	4	n.不足
+26	stalk	3A_4	4	n.茎
+26	survival	3A_4	4	n.生存
+26	tail	3A_4	4	n.尾部
+26	technique	3A_4	4	n.技术
+26	zoological	3A_4	4	adj. 动物学的
+27	yarn	3B_1	5	n. 纱线
+27	wool	3B_1	5	n.毛线
+27	trend	3B_1	5	n.趋势
+27	secretive	3B_1	5	adj.秘密的
+27	rug	3B_1	5	n.毯子
+27	reward	3B_1	5	vt.奖赏
+27	review	3B_1	5	vt.温习
+27	reverse	3B_1	5	v.颠倒
+27	remote	3B_1	5	adj.遥远的
+28	rarely	3B_2	5	adv.很少
+28	promise	3B_2	5	v.允诺
+28	project	3B_2	5	n.工程
+28	preserve	3B_2	5	vt.保护
+28	poverty	3B_2	5	n.贫穷
+28	operate	3B_2	5	vi.操作
+28	neighbor	3B_2	5	n.邻居
+28	Mongolia	3B_2	5	n. 蒙古
+28	livestock	3B_2	5	n.家畜
+29	leopard	3B_3	5	n.豹
+29	landscape	3B_3	5	n.风景
+29	introduction	3B_3	5	n.介绍
+29	independent	3B_3	5	adj.独立的
+29	incentive	3B_3	5	adj.刺激的
+29	herd	3B_3	5	n.兽群
+29	fur	3B_3	5	n.毛皮服饰
+29	fortune	3B_3	5	n.运气
+29	extinction	3B_3	5	n.消失
+30	exchange	3B_4	5	vt.&vi.交换
+30	estimate	3B_4	5	n.估计
+30	enforce	3B_4	5	vt.加强
+30	endanger	3B_4	5	vt.危及
+30	elusive	3B_4	5	adj.难懂的
+30	elevate	3B_4	5	vt.举起
+30	drag	3B_4	5	v.拖拉
+30	desperate	3B_4	5	adj.绝望的
+30	decorative	3B_4	5	adj.装饰的
+30	current	3B_4	5	adj.现在的
+31	convince	3B_5	5	vt.说服
+31	continue	3B_5	5	vt.&vi.继续
+31	conservationist	3B_5	5	n.自然资源保护论者
+31	conflict	3B_5	5	n.冲突
+31	conduct	3B_5	5	n.行为
+31	bonus	3B_5	5	n.红利
+31	available	3B_5	5	adj.可用的
+31	address	3B_5	5	n.地址
+31	addition	3B_5	5	n.增加
+31	abroad	3B_5	5	adj.在国外
+32	abandon	4A_1	5	vt.遗弃
+32	ancestor	4A_1	5	n.祖先
+32	appease	4A_1	5	v.安抚
+32	associate	4A_1	5	vt.（使）发生联系
+32	attempt	4A_1	5	vt.尝试
+32	concern	4A_1	5	vt.关心
+32	creator	4A_1	5	n.创造者
+32	dawn	4A_1	5	n.破晓
+32	deliver	4A_1	5	vt.发表
+33	destination	4A_2	5	n.目的地
+33	destruction	4A_2	5	n.破坏
+33	disaster	4A_2	5	n.灾难
+33	enormous	4A_2	5	adj.巨大的
+33	ensure	4A_2	5	vt.保证
+33	erupt	4A_2	5	v.爆发
+33	eruption	4A_2	5	n.爆发
+33	escape	4A_2	5	vt.&vi.逃脱
+33	exhausted	4A_2	5	adj.用完的
+34	expand	4A_3	5	vt.增加
+34	explode	4A_3	5	vt.爆炸
+34	hike	4A_3	5	n.徒步旅行
+34	holy	4A_3	5	adj.神圣的
+34	inevitable	4A_3	5	adj.不可避免的
+34	institute	4A_3	5	n.研究所
+34	meantime	4A_3	5	adv.与此同时
+34	monitor	4A_3	5	n.班长
+34	mount	4A_3	5	n.山峰
+35	occur	4A_4	5	vi.发生
+35	passage	4A_4	5	n.通道
+35	predict	4A_4	5	v.预知
+35	religion	4A_4	5	n.宗教;宗教信仰
+35	respect	4A_4	5	vt.尊重
+35	rite	4A_4	5	n.仪式
+35	scared	4A_4	5	adj.害怕的
+35	save	4A_4	5	vt.节省
+35	separate	4A_4	5	v.分开
+36	settled	4A_5	5	adj.固定的
+36	signaling	4A_5	5	n. 发信号
+36	spread	4A_5	5	v.传布
+36	strength	4A_5	5	n.力量
+36	summit	4A_5	5	n.顶点;最高阶层
+36	symptom	4A_5	5	n.症状
+36	volcano	4A_5	5	n.火山
+36	volcanologist	4A_5	5	n.火山学家
+36	witness	4A_5	5	n.目击者
+37	affect	4B_1	4	vt.影响
+37	approximately	4B_1	4	adv. 大约
+37	article	4B_1	4	n.文章
+37	claim	4B_1	4	vt.要求
+37	clue	4B_1	4	n.线索
+37	crack	4B_1	4	vt.使破裂
+37	crust	4B_1	4	n.外壳
+37	destruction	4B_1	4	n.破坏
+37	detect	4B_1	4	vt.检测
+37	disappoint	4B_1	4	vt.&vi.使...失望
+37	disaster	4B_1	4	n.灾难
+38	displace	4B_2	4	v.移置
+38	drill	4B_2	4	n.钻孔机
+38	edge	4B_2	4	n.边
+38	expand	4B_2	4	vt.增加
+38	explode	4B_2	4	vt.爆炸
+38	explosion	4B_2	4	n.爆炸
+38	fault	4B_2	4	n.故障
+38	forecast	4B_2	4	vt.&vi.预测
+38	generate	4B_2	4	vt.产生
+38	identical	4B_2	4	adj.相同的
+38	Instead	4B_2	4	adv.代替
+39	institute	4B_3	4	n.研究所
+39	journal	4B_3	4	n.杂志
+39	laboratory	4B_3	4	n.实验室
+39	lack	4B_3	4	vt.缺乏
+39	preceding	4B_3	4	adj.在前的
+39	precise	4B_3	4	adj.精确的
+39	predict	4B_3	4	v.预知
+39	prediction	4B_3	4	n.预言
+39	prevent	4B_3	4	v.防止
+39	prior	4B_3	4	adj.在先的
+39	punch	4B_3	4	n.打洞器
+40	random	4B_4	4	adj.任意的
+40	review	4B_4	4	vt.温习
+40	schedule	4B_4	4	n.时间表
+40	slightly	4B_4	4	adv.些微地
+40	strain	4B_4	4	n.张力
+40	swing	4B_4	4	n.摇摆
+40	theory	4B_4	4	n.理论
+40	track	4B_4	4	n.小路
+40	understand	4B_4	4	vt.理解
+40	zone	4B_4	4	n.地域
+41	pursuit	5A_1	5	n.追求
+41	multicultural	5A_1	5	adj. 多种文化的
+41	bodybuilder	5A_1	5	n. 健美运动者
+41	exploration	5A_1	5	n.探险
+41	eager	5A_1	5	adj.渴望的
+41	ultimate	5A_1	5	n.终极
+41	coastline	5A_1	5	n.海岸线
+41	Atlantic	5A_1	5	n. 大西洋
+41	intermarry	5A_1	5	vi. 通婚
+41	distinctive	5A_1	5	adj.有特色的
+42	cuisine	5A_2	5	n.烹饪
+42	magnificent	5A_2	5	adj.壮丽的
+42	moonlight	5A_2	5	adj. 月夜的
+42	destination	5A_2	5	n.目的地
+42	prohibit	5A_2	5	v.禁止
+42	beach	5A_2	5	n.海滩
+42	dozen	5A_2	5	n.(一)打
+42	explorer	5A_2	5	n.探测者
+42	daylight	5A_2	5	n.日光
+42	Heritage	5A_2	5	n.遗产
+43	marine	5A_3	5	n.(海军)士兵或军官
+43	hint	5A_3	5	n.暗示
+43	occasionally	5A_3	5	adv.偶尔地
+43	wonder	5A_3	5	n.奇迹
+43	region	5A_3	5	n.地区
+43	slip	5A_3	5	vi.滑
+43	senior	5A_3	5	adj.高级的
+43	roll	5A_3	5	vi.翻滚
+43	rank	5A_3	5	n.排名
+43	varied	5A_3	5	adj.各种各样的
+44	vibrant	5A_4	5	adj.震颤的
+44	stretch	5A_4	5	n.伸展
+44	breeze	5A_4	5	n.微风
+44	silver	5A_4	5	adj.银色的
+44	row	5A_4	5	n. 行
+44	curve	5A_4	5	n.曲线
+44	handful	5A_4	5	n.少数
+44	attract	5A_4	5	v.吸引
+44	spoil	5A_4	5	v.溺爱
+44	isolate	5A_4	5	adj.孤立的
+45	amazing	5A_5	5	adj.令人惊异的
+45	diverse	5A_5	5	adj.多种多样的
+45	prison	5A_5	5	n.监狱
+45	regard	5A_5	5	vt.认为
+45	balance	5A_5	5	n.平衡
+45	pale	5A_5	5	adj.苍白的
+45	turtle	5A_5	5	n.海龟
+45	formation	5A_5	5	n.构造
+45	imagine	5A_5	5	vt.想像
+46	gallery	5B_1	4	n.美术馆
+46	mild	5B_1	4	adj.温和的
+46	visible	5B_1	4	adj.可见的
+46	spectacular	5B_1	4	adj.壮观的
+46	vast	5B_1	4	adj.广阔的
+46	tension	5B_1	4	n.紧张
+46	cure	5B_1	4	vt.&vi.治疗
+46	vehicle	5B_1	4	n.车辆
+46	trace	5B_1	4	n.痕迹
+46	turtle	5B_1	4	n.海龟
+47	chilly	5B_2	4	adj.寒冷的
+47	bookstore	5B_2	4	n.书店
+47	migrate	5B_2	4	v.迁移
+47	evident	5B_2	4	adj.明显的
+47	fossil	5B_2	4	adj.化石的
+47	glacier	5B_2	4	n.冰川
+47	impressive	5B_2	4	adj.给人深刻印象的
+47	inner	5B_2	4	adj.内部的
+47	lighting	5B_2	4	n. 照明设备
+47	lava	5B_2	4	n.熔岩
+48	literally	5B_3	4	adv.按照字面上地
+48	layer	5B_3	4	n.层
+48	parliament	5B_3	4	n.议会
+48	rainbow	5B_3	4	n.彩虹
+48	thermal	5B_3	4	adj.热的
+48	springs	5B_3	4	n. 斯普林斯
+48	stylish	5B_3	4	adj.流行的
+48	situated	5B_3	4	adj.位于
+48	scenery	5B_3	4	n.风景
+48	convert	5B_3	4	v.使转变
+49	architecture	5B_4	4	n.建筑学
+49	aurora	5B_4	4	n.曙光
+49	release	5B_4	4	n.释放
+49	steam	5B_4	4	n.蒸气
+49	accessible	5B_4	4	adj.易接近的
+49	adventure	5B_4	4	n.冒险
+49	monster	5B_4	4	n.怪物
+49	dramatic	5B_4	4	adj.戏剧性的
+49	stony	5B_4	4	adj.石头的(石质的)
+49	frequent	5B_4	4	adj.经常的
+50	colleague	6A_1	3	n.同事
+50	domain	6A_1	3	n.领域
+50	healing	6A_1	3	n.康复
+50	monument	6A_1	3	n.纪念碑
+50	pottery	6A_1	3	n.陶器
+50	Plain	6A_1	3	n.平原
+50	unearth	6A_1	3	vt.发掘
+50	inspire	6A_1	3	vt.激发
+50	artifact	6A_1	3	n.人工制品(制造物
+50	circular	6A_1	3	adj.循环的
+50	symbol	6A_1	3	n.符号
+51	harden	6A_2	3	v.变硬
+51	addition	6A_2	3	n.增加
+51	deposit	6A_2	3	vt.存放
+51	puzzle	6A_2	3	n.难题
+51	giant	6A_2	3	adj.巨大的
+51	belief	6A_2	3	n.相信
+51	cure	6A_2	3	vt.&vi.治疗
+51	whereas	6A_2	3	conj.&adv.然而
+51	clay	6A_2	3	n.粘土
+51	team	6A_2	3	n.队
+51	abandon	6A_2	3	vt.遗弃
+52	solve	6A_3	3	v.解答(难题)
+52	archeologist	6A_3	3	n. 考古学家
+52	definitive	6A_3	3	adj.决定性的
+52	mystery	6A_3	3	n.神秘
+52	evidence	6A_3	3	n.证据
+52	cite	6A_3	3	vt.引用
+52	grave	6A_3	3	adj.重大的
+52	solstice	6A_3	3	n.至
+52	avenue	6A_3	3	n.大街
+52	trace	6A_3	3	n.痕迹
+52	transport	6A_3	3	n.运输、运输工具
+52	motive	6A_3	3	adj.发动的
+53	fossil	6B_1	3	adj.化石的
+53	involve	6B_1	3	vt.包含
+53	precede	6B_1	3	vt.&vi.在...之前
+53	adapt	6B_1	3	vi.适应
+53	contrary	6B_1	3	adj.相反的
+53	unique	6B_1	3	adj.独一无二的
+53	skeleton	6B_1	3	n.骨架
+53	abnormally	6B_1	3	adv. 反常地
+53	shrink	6B_1	3	n.收缩
+53	predator	6B_1	3	n.食肉动物
+54	minimize	6B_2	3	v.将...减到最少
+54	characteristic	6B_2	3	n.特征
+54	continent	6B_2	3	n.大陆
+54	consumption	6B_2	3	n.消费
+54	cousin	6B_2	3	n.堂(或表)兄弟(姐妹)
+54	evolve	6B_2	3	vt.&vi.进展
+54	Immediate	6B_2	3	adj.立即的
+54	intelligence	6B_2	3	n.智力
+54	major	6B_2	3	adj.主要的
+54	nevertheless	6B_2	3	conj.然而
+55	astonishing	6B_3	3	adj.惊人的
+55	inspection	6B_3	3	n.检查
+55	analyze	6B_3	3	v.分析
+55	determine	6B_3	3	vt.决定
+55	chimpanzee	6B_3	3	n.黑猩猩
+55	suffer	6B_3	3	vt.遭受
+55	apparently	6B_3	3	adv. 显然地
+55	extinct	6B_3	3	adj.灭绝的
+55	amazing	6B_3	3	adj.令人惊异的
+56	pain	7A_1	5	n.痛苦
+56	burn	7A_1	5	vt.&vi.燃烧
+56	dependence	7A_1	5	n.依赖
+56	stimulant	7A_1	5	n.兴奋剂
+56	abuse	7A_1	5	v.滥用
+56	severe	7A_1	5	adj.严重的
+56	contradictory	7A_1	5	adj.反驳的
+56	fluctuate	7A_1	5	vi.变动
+56	facilitate	7A_1	5	vt.促进
+57	moderate	7A_2	5	adj.适度的
+57	furthermore	7A_2	5	adv.而且
+57	temporary	7A_2	5	adj.暂时的
+57	awake	7A_2	5	adj.醒着的
+57	chew	7A_2	5	vt.咀嚼
+57	current	7A_2	5	adj.现在的
+57	contain	7A_2	5	vt.包含
+57	characteristic	7A_2	5	n.特征
+57	emotionally	7A_2	5	adv. 感情上
+58	function	7A_3	5	n.功能
+58	instance	7A_3	5	n.例子
+58	infection	7A_3	5	n.传染
+58	proof	7A_3	5	n.证明
+58	negative	7A_3	5	adj.否定的
+58	soda	7A_3	5	n.汽水
+58	reliever	7A_3	5	n.救济者
+58	typical	7A_3	5	adj.典型的
+58	therefore	7A_3	5	adv.因此
+59	rarely	7A_4	5	adv.很少
+59	universal	7A_4	5	adj.普遍的
+59	pilot	7A_4	5	n.飞行员
+59	mood	7A_4	5	n.心情
+59	ritual	7A_4	5	n.仪式
+59	ceremony	7A_4	5	n.典礼
+59	consume	7A_4	5	vt.消耗
+59	expert	7A_4	5	n.专家
+59	adequate	7A_4	5	adj.充足的
+59	attribute	7A_4	5	n.属性
+60	regular	7A_5	5	adj.有规律的
+60	exhibit	7A_5	5	vt.展览
+60	general	7A_5	5	adj.一般的
+60	opinion	7A_5	5	n.看法
+60	mental	7A_5	5	adj.精神的
+60	fatigue	7A_5	5	n.疲乏
+60	moderation	7A_5	5	n. 适度
+60	burst	7A_5	5	n.破裂
+60	injury	7A_5	5	n.损害
+60	taste	7A_5	5	vi.品尝
+61	ideal	7B_1	6	adj.理想的
+61	addiction	7B_1	6	n.耽溺
+61	advocate	7B_1	6	vt.提倡
+61	alternative	7B_1	6	adj.两者择一的
+61	available	7B_1	6	adj.可用的
+61	aware	7B_1	6	adj.意识到的
+61	batteries	7B_1	6	n.电池( 复数 )
+61	blow	7B_1	6	vt.&vi.吹
+61	calm	7B_1	6	adj.冷静的
+62	capacity	7B_2	6	n.能力
+62	challenge	7B_2	6	n.挑战
+62	combination	7B_2	6	n.结合
+62	constantly	7B_2	6	adv.不断地
+62	construction	7B_2	6	n.建设
+62	continuous	7B_2	6	adj.连续的
+62	convert	7B_2	6	v.使转变
+62	current	7B_2	6	adj.现在的
+62	decline	7B_2	6	v.降低
+63	descend	7B_3	6	vt.&vi.降
+63	dispose	7B_3	6	vt.倾向于
+63	distant	7B_3	6	adj.遥远的
+63	due	7B_3	6	n.应有的
+63	eliminate	7B_3	6	v.除去
+63	emission	7B_3	6	n.发射
+63	equivalent	7B_3	6	adj.等价的
+63	finite	7B_3	6	adj.有限的
+63	fossil	7B_3	6	adj.化石的
+64	fuel	7B_4	6	n.燃料
+64	generate	7B_4	6	vt.产生
+64	guarantee	7B_4	6	vt.保证
+64	incentive	7B_4	6	adj.刺激的
+64	inflammation	7B_4	6	n.发炎
+64	initially	7B_4	6	adv.最初
+64	instance	7B_4	6	n.例子
+64	issue	7B_4	6	n.问题
+64	landscape	7B_4	6	n.风景
+65	megawatt	7B_5	6	n. 兆瓦特
+65	nuclear	7B_5	6	adj.原子核的
+65	operate	7B_5	6	vi.操作
+65	oppose	7B_5	6	vt.反对
+65	panel	7B_5	6	n.镶板
+65	primarily	7B_5	6	adv.首先
+65	process	7B_5	6	n.过程
+65	protesting	7B_5	6	v.抗议（ 现在分词 )
+65	solar	7B_5	6	adj.太阳的
+65	solution	7B_5	6	n.解决办法
+66	steep	7B_6	6	adj.险峻的
+66	storage	7B_6	6	n.储藏
+66	substitute	7B_6	6	n.代替者
+66	supply	7B_6	6	vt.供给
+66	surplus	7B_6	6	adj.多余的
+66	tower	7B_6	6	n.塔
+66	turbine	7B_6	6	n.涡轮
+66	utilize	7B_6	6	vt.利用
+66	vast	7B_6	6	adj.广阔的
+66	waste	7B_6	6	vt.浪费
+67	accompany	8A_1	4	vt.陪伴
+67	accord	8A_1	4	n.一致
+67	accumulate	8A_1	4	vt.积聚
+67	across	8A_1	4	prep.穿过
+67	architecture	8A_1	4	n.建筑学
+67	capture	8A_1	4	n.抓取
+67	coincide	8A_1	4	v.与...一致
+67	command	8A_1	4	n.命令
+67	commodity	8A_1	4	n.商品
+68	comparison	8A_2	4	n.比较
+68	customs	8A_2	4	n. 海关
+68	depart	8A_2	4	vt.离开
+68	diplomacy	8A_2	4	n.外交
+68	diversity	8A_2	4	n.多样化
+68	engaging	8A_2	4	adj.动人的
+68	fascinate	8A_2	4	vt.使...入迷
+68	fleet	8A_2	4	n.船队
+68	Imperial	8A_2	4	adj.帝国(王)的
+69	legend	8A_3	4	n.传说
+69	legendary	8A_3	4	adj.传说的
+69	merchant	8A_3	4	n. 商人
+69	migrate	8A_3	4	v.迁移
+69	military	8A_3	4	adj.军事的
+69	personal	8A_3	4	adj.私人的
+69	recreate	8A_3	4	vi. 娱乐
+69	scarcely	8A_3	4	adv.几乎不
+69	scholar	8A_3	4	n.学者
+70	soldier	8A_4	4	n.士兵
+70	storm	8A_4	4	n.暴风雨
+70	subsequent	8A_4	4	adj.随后的
+70	terminate	8A_4	4	vt.终止
+70	translation	8A_4	4	n.翻译
+70	ultimately	8A_4	4	adv.最后
+70	via	8A_4	4	prep.经由
+70	voyage	8A_4	4	n.航行
+71	weather	8B_1	4	n.天气
+71	violent	8B_1	4	adj.暴力的
+71	terrible	8B_1	4	adj.糟糕的
+71	tale	8B_1	4	n.叙述
+71	struggle	8B_1	4	v.奋斗
+71	selection	8B_1	4	n.选择
+71	sail	8B_1	4	vt.乘船航行
+71	replenish	8B_1	4	vt.补充
+71	refuse	8B_1	4	vt.&vi.拒绝
+72	progress	8B_2	4	n.进步
+72	precious	8B_2	4	adj.宝贵的
+72	on	8B_2	4	prep.在...之上
+72	Muslim	8B_2	4	n. 穆斯林
+72	mosque	8B_2	4	n.清真寺
+72	ministry	8B_2	4	n.(政府的)部
+72	medieval	8B_2	4	adj.中世纪的
+72	legacy	8B_2	4	n.祖先传下来之物
+72	leather	8B_2	4	adj.皮革制的
+73	generous	8B_3	4	adj.慷慨的
+73	gem	8B_3	4	n.宝石
+73	expedition	8B_3	4	n.远征
+73	escape	8B_3	4	vt.&vi.逃脱
+73	endangered	8B_3	4	adj.（生命等）有危险的
+73	diplomacy	8B_3	4	n.外交
+73	derive	8B_3	4	v.得自
+73	department	8B_3	4	n.部
+73	decorate	8B_3	4	vt.装饰
+74	crew	8B_4	4	n.全体船员
+74	confusion	8B_4	4	n.混乱
+74	comprise	8B_4	4	vt.包含
+74	claimed	8B_4	4	v.要求( 过去分词 )
+74	chance	8B_4	4	n.机会
+74	capsize	8B_4	4	vt. 倾覆（特指船）
+74	Buddha	8B_4	4	n. 佛陀
+74	brief	8B_4	4	adj.简短的
+74	adventure	8B_4	4	n.冒险
+74	accelerate	8B_4	4	vt.加速
+75	accidentally	9A_1	3	adv. 意外地
+75	aircraft	9A_1	3	n.飞机
+75	altitude	9A_1	3	n.高度
+75	avalanche	9A_1	3	n.雪崩
+75	blanket	9A_1	3	n.毛毯
+75	board	9A_1	3	n.木板
+75	crucial	9A_1	3	adj.关键的
+75	departure	9A_1	3	n.离开
+75	endure	9A_1	3	vt.忍耐
+75	exhaust	9A_1	3	v.耗尽
+75	humanity	9A_1	3	n.人类人性
+76	imagine	9A_2	3	vt.想像
+76	mild	9A_2	3	adj.温和的
+76	ordeal	9A_2	3	n.严酷的考验
+76	pants	9A_2	3	n. 裤子
+76	peak	9A_2	3	n.山顶
+76	plastic	9A_2	3	adj.塑料的
+76	promise	9A_2	3	v.允诺
+76	rational	9A_2	3	adj.合理的
+76	rescue	9A_2	3	n.援救
+76	reviewed	9A_2	3	v.复查( 过去分词 )
+76	ridge	9A_2	3	n.脊
+77	sew	9A_3	3	vt.缝纫
+77	solution	9A_3	3	n.解决办法
+77	steady	9A_3	3	adj.稳定的
+77	stream	9A_3	3	n.(人,车,气)流
+77	survival	9A_3	3	n.生存
+77	sustain	9A_3	3	vt.承受
+77	tough	9A_3	3	adj.强硬的
+77	tragedy	9A_3	3	n.悲剧
+77	urgent	9A_3	3	adj.急迫的
+77	volunteer	9A_3	3	n.志愿者
+78	wire	9B_1	3	n.电线
+78	wage	9B_1	3	n.薪水
+78	tragic	9B_1	3	adj.悲剧的
+78	tragedy	9B_1	3	n.悲剧
+78	terror	9B_1	3	n.恐怖
+78	stable	9B_1	3	adj.稳定的
+78	refugee	9B_1	3	n.难民
+78	receive	9B_1	3	vt.收到
+78	posters	9B_1	3	n.招贴
+78	portrait	9B_1	3	n.肖像
+78	photograph	9B_1	3	n.相片
+79	pause	9B_2	3	n.暂停
+79	particularly	9B_2	3	adv.尤其
+79	ordeal	9B_2	3	n.严酷的考验
+79	mobilize	9B_2	3	v.动员
+79	mission	9B_2	3	n.任务
+79	mercy	9B_2	3	n.怜悯
+79	locate	9B_2	3	vt.位于
+79	hardship	9B_2	3	n.艰难
+79	flee	9B_2	3	vi.逃跑
+79	fate	9B_2	3	n.命运
+79	fame	9B_2	3	n.名声
+80	explosion	9B_3	3	n.爆炸
+80	crowd	9B_3	3	n.人群
+80	convince	9B_3	3	vt.说服
+80	clinic	9B_3	3	n.诊所
+80	camp	9B_3	3	n.露营
+80	border	9B_3	3	n.边缘
+80	bomb	9B_3	3	n.炸弹
+80	avalanche	9B_3	3	n.雪崩
+80	attempt	9B_3	3	vt.尝试
+80	across	9B_3	3	prep.穿过
+81	ability	10A_1	4	n.才能
+81	accessible	10A_1	4	adj.易接近的
+81	accomplish	10A_1	4	vt.完成
+81	affect	10A_1	4	vt.影响
+81	alter	10A_1	4	v.改变
+81	automatically	10A_1	4	adv. 自动地
+81	calmer	10A_1	4	adj.（水面）平静的( 比较级 )
+81	consciously	10A_1	4	adv. 自觉地
+81	consciousness	10A_1	4	n.意识
+81	correspond	10A_1	4	vi.符合
+81	cortex	10A_1	4	n.外皮
+82	define	10A_2	4	vt.定义
+82	emotion	10A_2	4	n.情感
+82	emotional	10A_2	4	adj.感情的
+82	entity	10A_2	4	n.存在
+82	exhibit	10A_2	4	vt.展览
+82	facial	10A_2	4	adj.面部的
+82	flexible	10A_2	4	adj.灵活的
+82	functional	10A_2	4	adj.功能的
+82	infection	10A_2	4	n.传染
+82	mature	10A_2	4	adj.成熟的
+82	mental	10A_2	4	adj.精神的
+83	negative	10A_3	4	adj.否定的
+83	neuron	10A_3	4	n.神经元
+83	occurs	10A_3	4	v.发生( 第三人称单数 )
+83	perceive	10A_3	4	v.察觉
+83	perception	10A_3	4	n.感知
+83	perspective	10A_3	4	n.透视
+83	positive	10A_3	4	adj.积极的
+83	Prefrontal	10A_3	4	adj. [解剖] 前额的
+83	presume	10A_3	4	vt.姑且认定
+83	psychologist	10A_3	4	n. 心理学家
+83	recall	10A_3	4	n.回忆
+84	reinforce	10A_4	4	v.加强
+84	retain	10A_4	4	vt.保持
+84	reverse	10A_4	4	v.颠倒
+84	Self-awareness	10A_4	4	自我意识
+84	transform	10A_4	4	vt.转换
+84	underlying	10A_4	4	adj.在下面的
+84	visualize	10A_4	4	v.使...看得见
+84	volunteer	10A_4	4	n.志愿者
+84	welfare	10A_4	4	n.福利
+84	wipe	10A_4	4	n.擦拭
+85	ability	10B_1	5	n.才能
+85	abstract	10B_1	5	n.摘要
+85	acknowledge	10B_1	5	vt.承认
+85	adjust	10B_1	5	vt.调整
+85	advanced	10B_1	5	adj. 先进的
+85	attribute	10B_1	5	n.属性
+85	capable	10B_1	5	adj.有能力的
+85	captivity	10B_1	5	n.囚禁
+85	chimpanzee	10B_1	5	n.黑猩猩
+86	cognition	10B_2	5	n. 认识
+86	cognitive	10B_2	5	adj.认知的
+86	communicate	10B_2	5	vi.交流
+86	concept	10B_2	5	n.概念
+86	convey	10B_2	5	vt.传达
+86	creativity	10B_2	5	n. 创造力
+86	disgust	10B_2	5	n.厌恶
+86	dismiss	10B_2	5	vt.开除
+86	enclose	10B_2	5	vt.围绕
+87	evolution	10B_3	5	n.进化
+87	extraordinary	10B_3	5	adj.非凡的
+87	extraordinary	10B_3	5	adj.非凡的
+87	flock	10B_3	5	n.一群
+87	genetically	10B_3	5	adv. 从遗传学角度
+87	humble	10B_3	5	adj.卑下的
+87	imitate	10B_3	5	v.模仿
+87	imitate	10B_3	5	v.模仿
+87	imitation	10B_3	5	n.模仿
+88	laboratory	10B_4	5	n.实验室
+88	logical	10B_4	5	adj.符合逻辑的
+88	mammal	10B_4	5	n.哺乳动物
+88	master	10B_4	5	n.主人
+88	mental	10B_4	5	adj.精神的
+88	monitor	10B_4	5	n.班长
+88	novel	10B_4	5	n.小说
+88	parrot	10B_4	5	n.鹦鹉
+88	possess	10B_4	5	v.持有
+88	primate	10B_4	5	n.灵长目动物
+89	primitive	10B_5	5	adj.原始的
+89	pronounce	10B_5	5	vt.&vi.发音
+89	react	10B_5	5	vt.作出反应
+89	reason	10B_5	5	n.理由
+89	represent	10B_5	5	vt.表现
+89	reproduce	10B_5	5	v.再生
+89	reveal	10B_5	5	vt.显示
+89	simulate	10B_5	5	v.假装
+89	spit	10B_5	5	v.唾吐
+89	staff	10B_5	5	n.全体职员
+90	visible	11A_1	4	adj.可见的
+90	synthetic	11A_1	4	adj.综合的
+90	symbolize	11A_1	4	v.象征
+90	substance	11A_1	4	n.物质
+90	stability	11A_1	4	n.稳定性
+90	reminder	11A_1	4	n.提醒的人
+90	refrigerator	11A_1	4	n.冰箱
+90	primitive	11A_1	4	adj.原始的
+90	primate	11A_1	4	n.灵长目动物
+90	politics	11A_1	4	n.政治
+91	plates	11A_2	4	n. 盘子（复数）
+91	passive	11A_2	4	adj.被动的
+91	package	11A_2	4	n.包裹
+91	neutral	11A_2	4	adj.中立的
+91	mourn	11A_2	4	v.哀悼
+91	mineral	11A_2	4	adj.矿物的
+91	manufacture	11A_2	4	vt.制造
+91	inhibition	11A_2	4	n.禁止
+91	highlight	11A_2	4	n.加亮区
+91	grinding	11A_2	4	adj. 磨的
+92	extract	11A_3	4	n.榨出物
+92	exception	11A_3	4	n.例外
+92	embarrass	11A_3	4	vt.使...困窘
+92	Eastern	11A_3	4	adj.东方的
+92	dye	11A_3	4	n.染料
+92	dominance	11A_3	4	n. 优势
+92	depress	11A_3	4	vt.使...沮丧
+92	debate	11A_3	4	n.辩论
+92	convey	11A_3	4	vt.传达
+92	container	11A_3	4	n.容器
+93	command	11A_4	4	n.命令
+93	ceiling	11A_4	4	n.天花板
+93	caution	11A_4	4	n.慎重
+93	bold	11A_4	4	adj.大胆的
+93	attribute	11A_4	4	n.属性
+93	attract	11A_4	4	v.吸引
+93	appetizing	11A_4	4	adj.开胃的
+93	aggressive	11A_4	4	adj.侵略性的
+93	aggression	11A_4	4	n.进攻
+93	accelerate	11A_4	4	vt.加速
+93	inhibit	11A_4	4	vt.&vi.禁止
+94	wander	11B_1	3	vt.闲逛走过
+94	synthetic	11B_1	3	adj.综合的
+94	subsidy	11B_1	3	n.补助金
+94	subsidize	11B_1	3	v.给与补助金
+94	stomach	11B_1	3	n.胃
+94	stimulant	11B_1	3	n.兴奋剂
+94	sensitive	11B_1	3	adj.敏感的
+94	sensible	11B_1	3	adj.可察觉的
+94	retreat	11B_1	3	n.休息寓所
+94	resist	11B_1	3	v.抵抗
+94	recovery	11B_1	3	n.恢复
+95	purchase	11B_2	3	n.购买
+95	principles	11B_2	3	n. 原则（复数）
+95	portrait	11B_2	3	n.肖像
+95	necessity	11B_2	3	n.需要
+95	materialism	11B_2	3	n.唯物主义
+95	masterpiece	11B_2	3	n.杰作
+95	manic	11B_2	3	adj.狂躁的
+95	innovative	11B_2	3	adj.革新的
+95	inhibit	11B_2	3	vt.&vi.禁止
+95	greed	11B_2	3	n.贪心
+95	emphasize	11B_2	3	v.强调
+96	earlobe	11B_3	3	n. 耳垂
+96	dye	11B_3	3	n.染料
+96	depression	11B_3	3	n.沮丧
+96	decline	11B_3	3	v.降低
+96	combine	11B_3	3	vi.结合
+96	classic	11B_3	3	adj.古典的
+96	brush	11B_3	3	n.刷子
+96	breaking	11B_3	3	n. 破坏
+96	bold	11B_3	3	adj.大胆的
+96	boarding	11B_3	3	n. 木板
+96	appreciate	11B_3	3	vt.欣赏
+97	marble	12A_1	4	adj.大理石的
+97	adapt	12A_1	4	vi.适应
+97	allocate	12A_1	4	v.分派
+97	application	12A_1	4	n.应用
+97	bond	12A_1	4	n.结合
+97	cell	12A_1	4	n.细胞
+97	concentration	12A_1	4	n.集中
+97	containing	12A_1	4	v.控制( 现在分词 )
+97	detect	12A_1	4	vt.检测
+97	diagnose	12A_1	4	v.诊断
+98	disturbing	12A_2	4	adj.烦扰的
+98	dot	12A_2	4	n.小圆点
+98	expose	12A_2	4	vt.暴露
+98	extensive	12A_2	4	adj.广泛的
+98	faint	12A_2	4	n.昏厥
+98	ineffective	12A_2	4	adj. 无效的
+98	inject	12A_2	4	v.注射
+98	insert	12A_2	4	vt.&vi.插入
+98	instance	12A_2	4	n.例子
+98	intense	12A_2	4	adj.强烈的
+99	laser	12A_3	4	n.激光
+99	locate	12A_3	4	vt.位于
+99	marble	12A_3	4	adj.大理石的
+99	meanwhile	12A_3	4	adv.同时
+99	microscopic	12A_3	4	adj.显微镜的
+99	multiply	12A_3	4	vt.乘
+99	nanotechnology	12A_3	4	n. 纳米技术
+99	particle	12A_3	4	n.微粒
+99	particular	12A_3	4	n.个别项目
+99	potential	12A_3	4	adj.潜在的
+100	prefix	12A_4	4	n. 前缀
+100	priority	12A_4	4	n.优先权
+100	quantum	12A_4	4	n.分配量
+100	radical	12A_4	4	n.激进份子
+100	resistant	12A_4	4	adj.抵抗的
+100	shrink	12A_4	4	n.收缩
+100	split	12A_4	4	v.分离
+100	stage	12A_4	4	n.阶段
+100	thorough	12A_4	4	adj.彻底的
+100	tumor	12A_4	4	n. 肿瘤
+101	virus	12B_1	3	n.病毒
+101	violent	12B_1	3	adj.暴力的
+101	victim	12B_1	3	n.受害者
+101	veterinarian	12B_1	3	n. [兽医] 兽医
+101	vaccine	12B_1	3	n.疫苗
+101	transmit	12B_1	3	vt.传输
+101	targets	12B_1	3	n. 目标（复数）
+101	swell	12B_1	3	n.增大
+101	stable	12B_1	3	adj.稳定的
+101	scratch	12B_1	3	vt.&vi.抓
+102	root	12B_2	3	n.根
+102	racehorse	12B_2	3	n. 比赛用马
+102	poisonous	12B_2	3	adj.有毒的
+102	originated	12B_2	3	v.起源于
+102	labeled	12B_2	3	adj. 有标签的
+102	insect	12B_2	3	n.昆虫
+102	Infectious	12B_2	3	adj.传染的
+102	infect	12B_2	3	vt.传染
+102	incidence	12B_2	3	n.发生(率)
+102	impact	12B_2	3	n.冲击(力)
+103	immune	12B_3	3	adj.免疫的
+103	habitat	12B_3	3	n.(动植物的)产地
+103	fever	12B_3	3	n.发烧
+103	emergency	12B_3	3	n.紧急情况
+103	conservative	12B_3	3	adj.保守的
+103	bat	12B_3	3	n.蝙蝠
+103	assistant	12B_3	3	n.助手助理
+103	affect	12B_3	3	vt.影响
+103	accustom	12B_3	3	v.使...习惯
+103	destruction	12B_3	3	n.破坏

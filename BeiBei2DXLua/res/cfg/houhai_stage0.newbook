@@ -1,521 +1,521 @@
-1	mystery	1A_1	2
-1	purpose	1A_1	2
-1	research	1A_1	2
-1	area	1A_1	2
-1	image	1A_1	2
-1	disk-shaped	1A_1	2
-1	strange	1A_1	2
-1	unusual	1A_1	2
-1	absolutely	1A_1	2
-1	air|force	1A_1	2
-2	saucer	1A_2	2
-2	alien	1A_2	2
-2	real	1A_2	2
-2	giant	1A_2	2
-2	fatal	1A_2	2
-2	mutual	1A_2	2
-2	pilot	1A_2	2
-2	space	1A_2	2
-2	shape	1A_2	2
-2	secret	1A_2	2
-3	island	1B_1	2
-3	Atlantic	1B_1	2
-3	wealthy	1B_1	2
-3	canal	1B_1	2
-3	center	1B_1	2
-3	design	1B_1	2
-3	greedy	1B_1	2
-3	earthquake	1B_1	2
-3	sink	1B_1	2
-3	throughout	1B_1	2
-3	natural	1B_1	2
-3	man-made	1B_1	2
-4	simply	1B_2	2
-4	evil	1B_2	2
-4	publish	1B_2	2
-4	explorer	1B_2	2
-4	evidence	1B_2	2
-4	erupt	1B_2	2
-4	fold	1B_2	2
-4	temple	1B_2	2
-4	remain	1B_2	2
-4	mystery	1B_2	2
-4	solid|evidence	1B_2	2
-5	grain	2A_1	2
-5	dough	2A_1	2
-5	ingredient	2A_1	2
-5	cover	2A_1	2
-5	various	2A_1	2
-5	develop	2A_1	2
-5	standard	2A_1	2
-5	European	2A_1	2
-5	poisonous	2A_1	2
-5	step	2A_1	2
-5	stone|age	2A_1	2
-5	up|to	2A_1	2
-6	slice	2A_2	2
-6	bake	2A_2	2
-6	combination	2A_2	2
-6	herb	2A_2	2
-6	flat	2A_2	2
-6	plate	2A_2	2
-6	popular	2A_2	2
-6	spices	2A_2	2
-6	second	2A_2	2
-6	tomato	2A_2	2
-6	thought	2A_2	2
-7	Chili	2B_1	3
-7	heat	2B_1	3
-7	cause	2B_1	3
-7	curry	2B_1	3
-7	painful	2B_1	3
-7	breathe	2B_1	3
-7	calorie	2B_1	3
-7	capsaicin	2B_1	3
-7	lose|weight	2B_1	3
-8	measure	2B_2	3
-8	spicy	2B_2	3
-8	produce	2B_2	3
-8	munch	2B_2	3
-8	barely	2B_2	3
-8	contain	2B_2	3
-8	even	2B_2	3
-8	break|a|record	2B_2	3
-8	to|be|honest	2B_2	3
-9	fairly	2B_3	3
-9	flu	2B_3	3
-9	notice	2B_3	3
-9	lava	2B_3	3
-9	pepper	2B_3	3
-9	region	2B_3	3
-9	soup	2B_3	3
-9	million	2B_3	3
-10	remember	3A_1	2
-10	wrestle	3A_1	2
-10	grizzly	3A_1	2
-10	train	3A_1	2
-10	cub	3A_1	2
-10	sound	3A_1	2
-10	bite	3A_1	2
-10	smart	3A_1	2
-10	apologize	3A_1	2
-11	understand	3A_2	2
-11	fee	3A_2	2
-11	value	3A_2	2
-11	care	3A_2	2
-11	adult	3A_2	2
-11	benefit	3A_2	2
-11	seem	3A_2	2
-11	adventure	3A_2	2
-12	save	3B_1	2
-12	director	3B_1	2
-12	explain	3B_1	2
-12	media	3B_1	2
-12	adventure	3B_1	2
-12	machine	3B_1	2
-12	series	3B_1	2
-12	follow	3B_1	2
-12	screen	3B_1	2
-12	various	3B_1	2
-12	studio	3B_1	2
-13	complex	3B_2	2
-13	surround	3B_2	2
-13	virtual	3B_2	2
-13	imagination	3B_2	2
-13	poisonous	3B_2	2
-13	comic	3B_2	2
-13	base	3B_2	2
-13	magical	3B_2	2
-13	animate	3B_2	2
-13	prize	3B_2	2
-13	travel	3B_2	2
-14	passenger	4A_1	2
-14	sink	4A_1	2
-14	beneath	4A_1	2
-14	lifelong	4A_1	2
-14	reminder	4A_1	2
-14	submarine	4A_1	2
-14	death	4A_1	2
-14	image	4A_1	2
-14	condition	4A_1	2
-14	item	4A_1	2
-14	jewelry	4A_1	2
-14	safe	4A_1	2
-15	rob	4A_2	2
-15	grave	4A_2	2
-15	technology	4A_2	2
-15	protection	4A_2	2
-15	computer	4A_2	2
-15	crawling	4A_2	2
-15	crossing	4A_2	2
-15	lamp	4A_2	2
-15	least	4A_2	2
-15	shipwreck	4A_2	2
-15	as|long|as	4A_2	2
-16	strike	4B_1	2
-16	lightning	4B_1	2
-16	hole	4B_1	2
-16	bottom	4B_1	2
-16	buildup	4B_1	2
-16	hit	4B_1	2
-16	ensure	4B_1	2
-16	thunderstorm	4B_1	2
-16	thunder	4B_1	2
-16	blow|off	4B_1	2
-16	electric|charge	4B_1	2
-17	likely	4B_2	2
-17	fortunately	4B_2	2
-17	chance	4B_2	2
-17	lunar	4B_2	2
-17	strike	4B_2	2
-17	second	4B_2	2
-17	glass	4B_2	2
-17	weather	4B_2	2
-17	thunder	4B_2	2
-17	chance	4B_2	2
-17	rule	4B_2	2
-18	global	5A_1	2
-18	contract	5A_1	2
-18	international	5A_1	2
-18	join	5A_1	2
-18	available	5A_1	2
-18	attention	5A_1	2
-18	modern	5A_1	2
-18	truly	5A_1	2
-18	team	5A_1	2
-19	victory	5A_2	2
-19	manager	5A_2	2
-19	several	5A_2	2
-19	foreign	5A_2	2
-19	percent	5A_2	2
-19	pastime	5A_2	2
-19	media	5A_2	2
-19	professional	5A_2	2
-20	mention	5B_1	2
-20	historic	5B_1	2
-20	crowd	5B_1	2
-20	activity	5B_1	2
-20	generally	5B_1	2
-20	summit	5B_1	2
-20	leader	5B_1	2
-20	hike	5B_1	2
-20	introduce	5B_1	2
-20	backpack	5B_1	2
-20	provide	5B_1	2
-20	couple	5B_1	2
-21	share	5B_2	2
-21	arrive	5B_2	2
-21	admire	5B_2	2
-21	view	5B_2	2
-21	mount	5B_2	2
-21	identity	5B_2	2
-21	municipal	5B_2	2
-21	luxury	5B_2	2
-21	plate	5B_2	2
-21	traditional	5B_2	2
-21	down	5B_2	2
-21	continue	5B_2	2
-22	statue	6A_1	2
-22	represent	6A_1	2
-22	clearly	6A_1	2
-22	identity	6A_1	2
-22	Sacagawea	6A_1	2
-22	tribe	6A_1	2
-22	mapmaker	6A_1	2
-22	land	6A_1	2
-22	expedition	6A_1	2
-22	knowledge	6A_1	2
-23	trade	6A_2	2
-23	site	6A_2	2
-23	village	6A_2	2
-23	native	6A_2	2
-23	saved	6A_2	2
-23	storm	6A_2	2
-23	tip	6A_2	2
-23	across	6A_2	2
-23	make|peace	6A_2	2
-24	lizard	6B_1	2
-24	kangaroo	6B_1	2
-24	eel	6B_1	2
-24	wombat	6B_1	2
-24	thirsty	6B_1	2
-24	meeting	6B_1	2
-24	discuss	6B_1	2
-24	idea	6B_1	2
-25	else	6B_2	2
-25	patiently	6B_2	2
-25	bored	6B_2	2
-25	rise	6B_2	2
-25	normally	6B_2	2
-25	flood	6B_2	2
-25	legend	6B_2	2
-26	error	7A_1	2
-26	relate	7A_1	2
-26	vision	7A_1	2
-26	illusion	7A_1	2
-26	personal	7A_1	2
-26	compare	7A_1	2
-26	confuse	7A_1	2
-26	therefore	7A_1	2
-26	vase	7A_1	2
-26	mind	7A_1	2
-26	optical|illusion	7A_1	2
-27	choose	7A_2	2
-27	straightforward	7A_2	2
-27	sight	7A_2	2
-27	contain	7A_2	2
-27	dot	7A_2	2
-27	illusion	7A_2	2
-27	measure	7A_2	2
-27	image	7A_2	2
-27	personal	7A_2	2
-27	seem	7A_2	2
-27	square	7A_2	2
-28	thought	7B_1	2
-28	emotion	7B_1	2
-28	sensation	7B_1	2
-28	perception	7B_1	2
-28	contain	7B_1	2
-28	stage	7B_1	2
-28	depend	7B_1	2
-28	individual	7B_1	2
-28	while	7B_1	2
-28	whether|or|not	7B_1	2
-28	figure|out	7B_1	2
-29	embarrassing	7B_2	2
-29	event	7B_2	2
-29	period	7B_2	2
-29	pressure	7B_2	2
-29	major	7B_2	2
-29	prepare	7B_2	2
-29	community	7B_2	2
-29	limb	7B_2	2
-29	original	7B_2	2
-29	patch	7B_2	2
-29	deal|with	7B_2	2
-30	penguin	8A_1	2
-30	Antarctica	8A_1	2
-30	hatch	8A_1	2
-30	colony	8A_1	2
-30	community	8A_1	2
-30	scar	8A_1	2
-30	lay	8A_1	2
-30	raise	8A_1	2
-30	special	8A_1	2
-30	brood	8A_1	2
-30	patch	8A_1	2
-31	freeze	8A_2	2
-31	environment	8A_2	2
-31	almost	8A_2	2
-31	catch	8A_2	2
-31	necessary	8A_2	2
-31	enter	8A_2	2
-31	female	8A_2	2
-31	trip	8A_2	2
-31	male	8A_2	2
-31	raise	8A_2	2
-31	special	8A_2	2
-32	anger	8B_1	3
-32	boredom	8B_1	3
-32	confusion	8B_1	3
-32	fear	8B_1	3
-32	relationship	8B_1	3
-32	emotion	8B_1	3
-32	similar	8B_1	3
-32	sense	8B_1	3
-32	obvious	8B_1	3
-33	disappointed	8B_2	3
-33	behavior	8B_2	3
-33	function	8B_2	3
-33	hilarious	8B_2	3
-33	situation	8B_2	3
-33	psychologist	8B_2	3
-33	record	8B_2	3
-33	laugh|at	8B_2	3
-33	according|to	8B_2	3
-34	assess	8B_3	3
-34	respond	8B_3	3
-34	positively	8B_3	3
-34	response	8B_3	3
-34	parrot	8B_3	3
-34	instruct	8B_3	3
-34	incredible	8B_3	3
-34	positions	8B_3	3
-34	clue	8B_3	3
-34	similar	8B_3	3
-35	empire	9A_1	3
-35	religious	9A_1	3
-35	commander	9A_1	3
-35	trap	9A_1	3
-35	demand	9A_1	3
-35	amount	9A_1	3
-35	receive	9A_1	3
-35	at|war|with	9A_1	3
-35	make|a|deal	9A_1	3
-36	murder	9A_2	3
-36	cave	9A_2	3
-36	account	9A_2	3
-36	instruction	9A_2	3
-36	describe	9A_2	3
-36	incredible	9A_2	3
-36	remove	9A_2	3
-36	jewelry	9A_2	3
-36	fall|in|love|with	9A_2	3
-37	disappear	9A_3	3
-37	afterwards	9A_3	3
-37	author	9A_3	3
-37	silver	9A_3	3
-37	comparison	9A_3	3
-37	soldier	9A_3	3
-37	legend	9A_3	3
-37	secret	9A_3	3
-37	treasure	9A_3	3
-38	deposit	9B_1	2
-38	polish	9B_1	2
-38	quality	9B_1	2
-38	material	9B_1	2
-38	expensive	9B_1	2
-38	execute	9B_1	2
-38	link	9B_1	2
-38	financial	9B_1	2
-38	millionaire	9B_1	2
-39	opportunity	9B_2	2
-39	mailman	9B_2	2
-39	present	9B_2	2
-39	suppose	9B_2	2
-39	curse	9B_2	2
-39	reject	9B_2	2
-39	accept	9B_2	2
-39	victim	9B_2	2
-39	truth	9B_2	2
-40	lecture	10A_1	3
-40	impala	10A_1	3
-40	warthog	10A_1	3
-40	staff	10A_1	3
-40	principle	10A_1	3
-40	local	10A_1	3
-40	trough	10A_1	3
-40	apply|to	10A_1	3
-41	calculate	10A_2	3
-41	drought	10A_2	3
-41	project	10A_2	3
-41	consist	10A_2	3
-41	aim	10A_2	3
-41	motto	10A_2	3
-41	board	10A_2	3
-41	calculate	10A_2	3
-42	champion	10A_3	3
-42	debate	10A_3	3
-42	director	10A_3	3
-42	giraffe	10A_3	3
-42	mathematic	10A_3	3
-42	conservation	10A_3	3
-42	recent	10A_3	3
-42	planet	10A_3	3
-42	subjects	10A_3	3
-43	create	10B_1	2
-43	edit	10B_1	2
-43	article	10B_1	2
-43	document	10B_1	2
-43	connect	10B_1	2
-43	literacy	10B_1	2
-43	ability	10B_1	2
-43	collaborate	10B_1	2
-43	forum	10B_1	2
-43	digital	10B_1	2
-44	core	10B_2	2
-44	practice	10B_2	2
-44	skill	10B_2	2
-44	strength	10B_2	2
-44	collaboration	10B_2	2
-44	instead	10B_2	2
-44	media	10B_2	2
-44	opportunity	10B_2	2
-44	simply	10B_2	2
-45	frozen	11A_1	2
-45	reindeer	11A_1	2
-45	herder	11A_1	2
-45	lean	11A_1	2
-45	overall	11A_1	2
-45	perfect	11A_1	2
-45	analysis	11A_1	2
-45	detailed	11A_1	2
-45	ongoing	11A_1	2
-45	sequence	11A_1	2
-45	lead	11A_1	2
-46	beach	11A_2	2
-46	characteristic	11A_2	2
-46	fossil	11A_2	2
-46	grab	11A_2	2
-46	imaginary	11A_2	2
-46	mammoth	11A_2	2
-46	lead	11A_2	2
-46	mud	11A_2	2
-46	imagine	11A_2	2
-46	die|out	11A_2	2
-47	predator	11B_1	3
-47	prey	11B_1	3
-47	fin	11B_1	3
-47	imaginary	11B_1	3
-47	creature	11B_1	3
-47	indeed	11B_1	3
-47	model	11B_1	3
-47	characteristic	11B_1	3
-48	unusual	11B_2	3
-48	lizard	11B_2	3
-48	probably	11B_2	3
-48	prime	11B_2	3
-48	function	11B_2	3
-48	set	11B_2	3
-48	paleontologist	11B_2	3
-48	grab	11B_2	3
-49	crush	11B_3	3
-49	portion	11B_3	3
-49	defense	11B_3	3
-49	neck	11B_3	3
-49	toward	11B_3	3
-49	monster	11B_3	3
-49	fossil	11B_3	3
-49	understand	11B_3	3
-49	across	11B_3	3
-50	aid	12A_1	2
-50	dangerous	12A_1	2
-50	criminal	12A_1	2
-50	industry	12A_1	2
-50	whereas	12A_1	2
-50	operate	12A_1	2
-50	alternative	12A_1	2
-50	vehicle	12A_1	2
-50	rough	12A_1	2
-50	sign	12A_1	2
-51	single	12A_2	2
-51	upside-down	12A_2	2
-51	ceiling	12A_2	2
-51	exist	12A_2	2
-51	emotion	12A_2	2
-51	snake	12A_2	2
-51	soccer	12A_2	2
-51	score	12A_2	2
-51	sticky	12A_2	2
-52	firm	12B_1	2
-52	medical	12B_1	2
-52	nanotechnology	12B_1	2
-52	treatment	12B_1	2
-52	cell	12B_1	2
-52	programme	12B_1	2
-52	pattern	12B_1	2
-52	label	12B_1	2
-52	drive	12B_1	2
-52	sleeve	12B_1	2
-52	surroundings	12B_1	2
-53	network	12B_2	2
-53	prediction	12B_2	2
-53	succeed	12B_2	2
-53	futurist	12B_2	2
-53	replace	12B_2	2
-53	contain	12B_2	2
-53	succeed	12B_2	2
-53	chip	12B_2	2
-53	grocery	12B_2	2
-53	kitchen	12B_2	2
-53	particles	12B_2	2
+1	mystery	1A_1	3	n.神秘
+1	purpose	1A_1	3	n.目的
+1	research	1A_1	3	n.调查
+2	area	1A_2	3	n.地区
+2	image	1A_2	3	n.图像
+2	disk-shaped	1A_2	3	圆盘形状的
+2	strange	1A_2	3	adj.奇怪的
+2	unusual	1A_2	3	adj.不平常的
+2	absolutely	1A_2	3	adv.绝对地
+2	air force	1A_2	3	空军
+2	saucer	1A_2	3	n.茶托
+2	alien	1A_2	3	n.外星人
+3	real	1A_3	3	adj.实际的
+3	giant	1A_3	3	adj.巨大的
+3	fatal	1A_3	3	adj.致命的
+3	mutual	1A_3	3	adj.共同的
+3	pilot	1A_3	3	n.飞行员
+3	space	1A_3	3	n.空间
+3	shape	1A_3	3	n.形状
+3	secret	1A_3	3	n.秘密
+4	island	1B_1	2	n.岛
+4	Atlantic	1B_1	2	n. 大西洋
+4	wealthy	1B_1	2	adj.富有的
+4	canal	1B_1	2	n.运河
+4	center	1B_1	2	n.中心
+4	design	1B_1	2	vt.&vi.设计
+4	greedy	1B_1	2	adj.贪婪的
+4	earthquake	1B_1	2	n.地震
+4	sink	1B_1	2	n.接收端
+4	throughout	1B_1	2	adv.到处
+4	natural	1B_1	2	adj.自然的
+4	man-made	1B_1	2	人造的
+5	simply	1B_2	2	adv.&adj.简单地
+5	evil	1B_2	2	adj.邪恶的
+5	publish	1B_2	2	vt.出版
+5	explorer	1B_2	2	n.探测者
+5	evidence	1B_2	2	n.证据
+5	erupt	1B_2	2	v.爆发
+5	fold	1B_2	2	vt.折叠
+5	temple	1B_2	2	n.庙宇
+5	remain	1B_2	2	v.保持
+5	mystery	1B_2	2	n.神秘
+5	solid evidence	1B_2	2	证据确凿
+6	grain	2A_1	2	n.谷物
+6	dough	2A_1	2	n.生面团
+6	ingredient	2A_1	2	n.成分
+6	cover	2A_1	2	v.覆盖
+6	various	2A_1	2	adj.各种各样的
+6	develop	2A_1	2	vt.发展
+6	standard	2A_1	2	n.标准
+6	European	2A_1	2	adj. 欧洲的
+6	poisonous	2A_1	2	adj.有毒的
+6	step	2A_1	2	n.步骤
+6	stone age	2A_1	2	石器时代
+6	up to	2A_1	2	一直到
+7	slice	2A_2	2	n.薄的切片
+7	bake	2A_2	2	vt.烘焙
+7	combination	2A_2	2	n.结合
+7	herb	2A_2	2	n.药草
+7	flat	2A_2	2	adj.平坦的
+7	plate	2A_2	2	n.盘
+7	popular	2A_2	2	adj.流行的
+7	spices	2A_2	2	n.香味料
+7	second	2A_2	2	n.第二
+7	tomato	2A_2	2	n.西红柿
+7	thought	2A_2	2	n.思想
+8	Chili	2B_1	3	n. 红辣椒
+8	heat	2B_1	3	n.热
+8	cause	2B_1	3	vt.引起
+8	curry	2B_1	3	n.咖哩粉
+8	painful	2B_1	3	adj.痛苦的
+8	breathe	2B_1	3	vi.呼吸
+8	calorie	2B_1	3	n.卡路里(热量单位)
+8	capsaicin	2B_1	3	n. [生化] 辣椒素
+8	lose weight	2B_1	3	减肥
+9	measure	2B_2	3	n.措施
+9	spicy	2B_2	3	adj.芳香的(辛辣的)
+9	produce	2B_2	3	vt.生产
+9	munch	2B_2	3	v.大声咀嚼
+9	barely	2B_2	3	adv.勉强
+9	contain	2B_2	3	vt.包含
+9	even	2B_2	3	adv.甚至
+9	break a record	2B_2	3	打破记录
+9	to be honest	2B_2	3	老实说
+10	fairly	2B_3	3	adj.相当地
+10	flu	2B_3	3	n.流行性感冒
+10	notice	2B_3	3	n.注意
+10	lava	2B_3	3	n.熔岩
+10	pepper	2B_3	3	n.胡椒粉
+10	region	2B_3	3	n.地区
+10	soup	2B_3	3	n.汤
+10	million	2B_3	3	n.百万
+11	remember	3A_1	2	vt.&vi.记得
+11	wrestle	3A_1	2	v.摔角
+11	grizzly	3A_1	2	adj. 灰色的
+11	train	3A_1	2	n.火车
+11	cub	3A_1	2	n.幼兽
+11	sound	3A_1	2	n.声音渐增
+11	bite	3A_1	2	n.咬
+11	smart	3A_1	2	adj.聪明的
+11	apologize	3A_1	2	v.道歉
+12	understand	3A_2	2	vt.理解
+12	fee	3A_2	2	n.费用
+12	value	3A_2	2	n.价值
+12	care	3A_2	2	n.小心
+12	adult	3A_2	2	adj.成年的
+12	benefit	3A_2	2	n.利益
+12	seem	3A_2	2	vi.像是
+12	adventure	3A_2	2	n.冒险
+13	save	3B_1	2	vt.节省
+13	director	3B_1	2	n.导演
+13	explain	3B_1	2	vt.&vi.解释
+13	media	3B_1	2	n.(复数)媒体
+13	adventure	3B_1	2	n.冒险
+13	machine	3B_1	2	n.机器
+13	series	3B_1	2	n. 系列
+13	follow	3B_1	2	vt.跟随
+13	screen	3B_1	2	n.屏幕
+13	various	3B_1	2	adj.各种各样的
+13	studio	3B_1	2	n.工作场所
+14	complex	3B_2	2	adj.复杂的
+14	surround	3B_2	2	vt.包围
+14	virtual	3B_2	2	adj.虚拟的
+14	imagination	3B_2	2	n.想象
+14	poisonous	3B_2	2	adj.有毒的
+14	comic	3B_2	2	n.连环图画
+14	base	3B_2	2	n.基底
+14	magical	3B_2	2	adj.神奇的
+14	animate	3B_2	2	v.使...有生气
+14	prize	3B_2	2	n.奖品
+14	travel	3B_2	2	n.旅行
+15	passenger	4A_1	2	n.乘客
+15	sink	4A_1	2	n.接收端
+15	beneath	4A_1	2	adv.在下方
+15	lifelong	4A_1	2	adj. 终身的
+15	reminder	4A_1	2	n.提醒的人
+15	submarine	4A_1	2	n.潜水艇
+15	death	4A_1	2	n.死
+15	image	4A_1	2	n.图像
+15	condition	4A_1	2	n.情况
+15	item	4A_1	2	n.项目
+15	jewelry	4A_1	2	n.珠宝
+15	safe	4A_1	2	adj.安全的
+16	rob	4A_2	2	v.抢劫
+16	grave	4A_2	2	adj.重大的
+16	technology	4A_2	2	n.技术
+16	protection	4A_2	2	n.保护
+16	computer	4A_2	2	n.计算机
+16	crawling	4A_2	2	n.爬行
+16	crossing	4A_2	2	n.人行横道
+16	lamp	4A_2	2	n.灯
+16	least	4A_2	2	adj.最少的
+16	shipwreck	4A_2	2	n.遇难船
+16	as long as	4A_2	2	只要
+17	strike	4B_1	2	v.打
+17	lightning	4B_1	2	n.闪电
+17	hole	4B_1	2	n.洞
+17	bottom	4B_1	2	n.底部
+17	buildup	4B_1	2	n. 增强
+17	hit	4B_1	2	n.打(击)
+17	ensure	4B_1	2	vt.保证
+17	thunderstorm	4B_1	2	n.雷暴雨(大雷雨)
+17	thunder	4B_1	2	n.雷电
+17	blow off	4B_1	2	放出
+17	electric charge	4B_1	2	电荷
+18	likely	4B_2	2	adj.可能的
+18	fortunately	4B_2	2	adv.幸运地
+18	chance	4B_2	2	n.机会
+18	lunar	4B_2	2	adj.月亮的
+18	strike	4B_2	2	v.打
+18	second	4B_2	2	n.第二
+18	glass	4B_2	2	n.玻璃
+18	weather	4B_2	2	n.天气
+18	thunder	4B_2	2	n.雷电
+18	chance	4B_2	2	n.机会
+18	rule	4B_2	2	n.规则
+19	global	5A_1	2	adj.全球性的
+19	contract	5A_1	2	n.合约
+19	international	5A_1	2	adj.国际的
+19	join	5A_1	2	v.参加
+19	available	5A_1	2	adj.可用的
+19	attention	5A_1	2	n.注意(力)
+19	modern	5A_1	2	adj.现代的
+19	truly	5A_1	2	adv.真实地
+19	team	5A_1	2	n.队
+20	victory	5A_2	2	n.胜利
+20	manager	5A_2	2	n.经理
+20	several	5A_2	2	adj.几个
+20	foreign	5A_2	2	adj.外国的
+20	percent	5A_2	2	adj.&adv.百分之一
+20	pastime	5A_2	2	n.消遣
+20	media	5A_2	2	n.(复数)媒体
+20	professional	5A_2	2	adj.职业(上)的
+21	mention	5B_1	2	vt.提到
+21	historic	5B_1	2	adj.有历史意义的
+21	crowd	5B_1	2	n.人群
+21	activity	5B_1	2	n.活动
+21	generally	5B_1	2	adv.一般地
+21	summit	5B_1	2	n.顶点;最高阶层
+21	leader	5B_1	2	n.领袖
+21	hike	5B_1	2	n.徒步旅行
+21	introduce	5B_1	2	vt.介绍
+21	backpack	5B_1	2	n.双肩背包
+21	provide	5B_1	2	vi.提供
+21	couple	5B_1	2	n.对
+22	share	5B_2	2	vt.分享
+22	arrive	5B_2	2	vi.到达
+22	admire	5B_2	2	vt.钦佩
+22	view	5B_2	2	n.视野
+22	mount	5B_2	2	n.山峰
+22	identity	5B_2	2	n.身份
+22	municipal	5B_2	2	adj.市的
+22	luxury	5B_2	2	n.奢侈
+22	plate	5B_2	2	n.盘
+22	traditional	5B_2	2	adj.传统的
+22	down	5B_2	2	adj.向下的
+22	continue	5B_2	2	vt.&vi.继续
+23	statue	6A_1	2	n.塑像
+23	represent	6A_1	2	vt.表现
+23	clearly	6A_1	2	adv.清楚地
+23	identity	6A_1	2	n.身份
+23	Sacagawea	6A_1	2	n.[人名] 萨卡加维亚
+23	tribe	6A_1	2	n.部落
+23	mapmaker	6A_1	2	n.地图制作者
+23	land	6A_1	2	n.陆地
+23	expedition	6A_1	2	n.远征
+23	knowledge	6A_1	2	n.知识
+24	trade	6A_2	2	n.贸易
+24	site	6A_2	2	n.现场
+24	village	6A_2	2	n.村庄
+24	native	6A_2	2	adj.本土的
+24	saved	6A_2	2	v.拯救( 过去分词 )
+24	storm	6A_2	2	n.暴风雨
+24	tip	6A_2	2	n.小费
+24	across	6A_2	2	prep.穿过
+24	make peace	6A_2	2	讲和
+25	lizard	6B_1	2	n.蜥蜴
+25	kangaroo	6B_1	2	n.袋鼠
+25	eel	6B_1	2	n. 鳗鱼
+25	wombat	6B_1	2	n. [脊椎] 袋熊
+25	thirsty	6B_1	2	adj.口渴的
+25	meeting	6B_1	2	n.会议
+25	discuss	6B_1	2	vt.讨论
+25	idea	6B_1	2	n.主意
+26	else	6B_2	2	adj.别的
+26	patiently	6B_2	2	adv. 耐心地
+26	bored	6B_2	2	adj. 无聊的
+26	rise	6B_2	2	v.升起
+26	normally	6B_2	2	adv.正常地
+26	flood	6B_2	2	n.洪水
+26	legend	6B_2	2	n.传说
+27	error	7A_1	2	n.错误
+27	relate	7A_1	2	vt.&vi.（把…）联系起来
+27	vision	7A_1	2	n.视觉
+27	illusion	7A_1	2	n.幻觉
+27	personal	7A_1	2	adj.私人的
+27	compare	7A_1	2	vt.&vi.比较
+27	confuse	7A_1	2	vt.困惑
+27	therefore	7A_1	2	adv.因此
+27	vase	7A_1	2	n.花瓶
+27	mind	7A_1	2	n.思想
+27	optical illusion	7A_1	2	视错觉
+28	choose	7A_2	2	vt.&vi.选择
+28	straightforward	7A_2	2	adj.笔直的
+28	sight	7A_2	2	n.景观
+28	contain	7A_2	2	vt.包含
+28	dot	7A_2	2	n.小圆点
+28	illusion	7A_2	2	n.幻觉
+28	measure	7A_2	2	n.措施
+28	image	7A_2	2	n.图像
+28	personal	7A_2	2	adj.私人的
+28	seem	7A_2	2	vi.像是
+28	square	7A_2	2	n.正方形
+29	thought	7B_1	2	n.思想
+29	emotion	7B_1	2	n.情感
+29	sensation	7B_1	2	n.感觉
+29	perception	7B_1	2	n.感知
+29	contain	7B_1	2	vt.包含
+29	stage	7B_1	2	n.阶段
+29	depend	7B_1	2	vi.依靠
+29	individual	7B_1	2	adj.个人的
+29	while	7B_1	2	conj.当...的时候
+29	whether or not	7B_1	2	不论
+29	figure out	7B_1	2	解决
+30	embarrassing	7B_2	2	adj. 使人尴尬的
+30	event	7B_2	2	n.大事
+30	period	7B_2	2	n.时期
+30	pressure	7B_2	2	n.压力
+30	major	7B_2	2	adj.主要的
+30	prepare	7B_2	2	vt.准备
+30	community	7B_2	2	n.社区
+30	limb	7B_2	2	n.树枝
+30	original	7B_2	2	adj.最初的
+30	patch	7B_2	2	n.补绽
+30	deal with	7B_2	2	处理
+31	penguin	8A_1	2	n.企鹅
+31	Antarctica	8A_1	2	n. 南极洲
+31	hatch	8A_1	2	n.孵化
+31	colony	8A_1	2	n.殖民地居民
+31	community	8A_1	2	n.社区
+31	scar	8A_1	2	n.疤痕
+31	lay	8A_1	2	vt.放置
+31	raise	8A_1	2	vt.升起
+31	special	8A_1	2	adj.特别的
+31	brood	8A_1	2	n.窝
+31	patch	8A_1	2	n.补绽
+32	freeze	8A_2	2	v.冻结
+32	environment	8A_2	2	n.环境
+32	almost	8A_2	2	adv.几乎
+32	catch	8A_2	2	vt.抓住
+32	necessary	8A_2	2	adj.必需的
+32	enter	8A_2	2	vi.进入
+32	female	8A_2	2	n.女子
+32	trip	8A_2	2	n.旅行
+32	male	8A_2	2	adj.男性的
+32	raise	8A_2	2	vt.升起
+32	special	8A_2	2	adj.特别的
+33	anger	8B_1	3	n.忿怒
+33	boredom	8B_1	3	n.厌烦
+33	confusion	8B_1	3	n.混乱
+33	fear	8B_1	3	vt.害怕
+33	relationship	8B_1	3	n.关系
+33	emotion	8B_1	3	n.情感
+33	similar	8B_1	3	adj.相似的
+33	sense	8B_1	3	n.感觉
+33	obvious	8B_1	3	adj.明显的
+34	disappointed	8B_2	3	adj.失望的
+34	behavior	8B_2	3	n.行为
+34	function	8B_2	3	n.功能
+34	hilarious	8B_2	3	adj.欢闹的
+34	situation	8B_2	3	n.状况
+34	psychologist	8B_2	3	n. 心理学家
+34	record	8B_2	3	n.记录
+34	laugh at	8B_2	3	嘲笑
+34	according to	8B_2	3	根据
+35	assess	8B_3	3	v.估定
+35	respond	8B_3	3	vi.&vt.回复
+35	positively	8B_3	3	adv. 肯定地
+35	response	8B_3	3	n.回答
+35	parrot	8B_3	3	n.鹦鹉
+35	instruct	8B_3	3	v.指导
+35	incredible	8B_3	3	adj.难以置信的
+35	positions	8B_3	3	n. [水运] 位置（复数）
+35	clue	8B_3	3	n.线索
+35	similar	8B_3	3	adj.相似的
+36	empire	9A_1	3	n.帝国
+36	religious	9A_1	3	adj.宗教的
+36	commander	9A_1	3	n.司令官
+36	trap	9A_1	3	n.圈套
+36	demand	9A_1	3	v.需要
+36	amount	9A_1	3	n.数量
+36	receive	9A_1	3	vt.收到
+36	at war with	9A_1	3	作战
+36	make a deal	9A_1	3	成交
+37	murder	9A_2	3	vt.谋杀
+37	cave	9A_2	3	n.山洞
+37	account	9A_2	3	n.账
+37	instruction	9A_2	3	n.指令
+37	describe	9A_2	3	vt.描述
+37	incredible	9A_2	3	adj.难以置信的
+37	remove	9A_2	3	vt.除去
+37	jewelry	9A_2	3	n.珠宝
+37	fall in love with	9A_2	3	爱上
+38	disappear	9A_3	3	vi.消失
+38	afterwards	9A_3	3	adv. 后来
+38	author	9A_3	3	n.作者
+38	silver	9A_3	3	adj.银色的
+38	comparison	9A_3	3	n.比较
+38	soldier	9A_3	3	n.士兵
+38	legend	9A_3	3	n.传说
+38	secret	9A_3	3	n.秘密
+38	treasure	9A_3	3	n.宝物
+39	deposit	9B_1	2	vt.存放
+39	polish	9B_1	2	n.磨光
+39	quality	9B_1	2	n.品质
+39	material	9B_1	2	n.材料
+39	expensive	9B_1	2	adj.使文明
+39	execute	9B_1	2	vt.执行
+39	link	9B_1	2	vt.&vi.连接
+39	financial	9B_1	2	adj.金融的
+39	millionaire	9B_1	2	n.百万富翁
+40	opportunity	9B_2	2	n.机会
+40	mailman	9B_2	2	n. 邮差
+40	present	9B_2	2	n.礼物
+40	suppose	9B_2	2	vt.假定
+40	curse	9B_2	2	n.诅咒
+40	reject	9B_2	2	v.拒绝
+40	accept	9B_2	2	vt.接受
+40	victim	9B_2	2	n.受害者
+40	truth	9B_2	2	n.事实
+41	lecture	10A_1	3	n.演讲
+41	impala	10A_1	3	n. 黑斑羚
+41	warthog	10A_1	3	n. 疣猪
+41	staff	10A_1	3	n.全体职员
+41	principle	10A_1	3	n.原则
+41	local	10A_1	3	adj.当地的
+41	trough	10A_1	3	n.木钵
+41	apply to	10A_1	3	适用于
+42	calculate	10A_2	3	vt.计算
+42	drought	10A_2	3	n.干旱
+42	project	10A_2	3	n.工程
+42	consist	10A_2	3	vi.组成
+42	aim	10A_2	3	n.目标
+42	motto	10A_2	3	n.座右铭
+42	board	10A_2	3	n.木板
+42	calculate	10A_2	3	vt.计算
+43	champion	10A_3	3	n.冠军
+43	debate	10A_3	3	n.辩论
+43	director	10A_3	3	n.导演
+43	giraffe	10A_3	3	n.长颈鹿
+43	mathematic	10A_3	3	adj. 数学的
+43	conservation	10A_3	3	n.保存
+43	recent	10A_3	3	adj.近来的
+43	planet	10A_3	3	n.行星
+43	subjects	10A_3	3	n. 学科（复数）
+44	create	10B_1	2	vt.创造
+44	edit	10B_1	2	vt.编辑
+44	article	10B_1	2	n.文章
+44	document	10B_1	2	n.文件
+44	connect	10B_1	2	vt.连接
+44	literacy	10B_1	2	n.读写能力
+44	ability	10B_1	2	n.才能
+44	collaborate	10B_1	2	vi.合作
+44	forum	10B_1	2	n.论坛
+44	digital	10B_1	2	adj.数字的
+45	core	10B_2	2	n. 核心
+45	practice	10B_2	2	n.练习
+45	skill	10B_2	2	n.技能
+45	strength	10B_2	2	n.力量
+45	collaboration	10B_2	2	n.合作
+45	instead	10B_2	2	adv.代替
+45	media	10B_2	2	n.(复数)媒体
+45	opportunity	10B_2	2	n.机会
+45	simply	10B_2	2	adv.&adj.简单地
+46	frozen	11A_1	2	adj. 冻结的（过去分词）
+46	reindeer	11A_1	2	n.驯鹿
+46	herder	11A_1	2	n.牧人
+46	lean	11A_1	2	n.瘦肉
+46	overall	11A_1	2	adj.全部的
+46	perfect	11A_1	2	adj.完美的
+46	analysis	11A_1	2	n.分析
+46	detailed	11A_1	2	adj. 详细的（过去分词）
+46	ongoing	11A_1	2	adj.前进的
+46	sequence	11A_1	2	n.序列
+46	lead	11A_1	2	v.带领
+47	beach	11A_2	2	n.海滩
+47	characteristic	11A_2	2	n.特征
+47	fossil	11A_2	2	adj.化石的
+47	grab	11A_2	2	vt.&vi.抓取
+47	imaginary	11A_2	2	adj.想象的
+47	mammoth	11A_2	2	n.长毛象
+47	lead	11A_2	2	v.带领
+47	mud	11A_2	2	n.泥
+47	imagine	11A_2	2	vt.想像
+47	die out	11A_2	2	灭绝
+48	predator	11B_1	3	n.食肉动物
+48	prey	11B_1	3	n.被掠食者
+48	fin	11B_1	3	n.翅
+48	imaginary	11B_1	3	adj.想象的
+48	creature	11B_1	3	n.生物
+48	indeed	11B_1	3	adv.的确
+48	model	11B_1	3	n.模型
+48	characteristic	11B_1	3	n.特征
+49	unusual	11B_2	3	adj.不平常的
+49	lizard	11B_2	3	n.蜥蜴
+49	probably	11B_2	3	adv.或许
+49	prime	11B_2	3	adj.首要的
+49	function	11B_2	3	n.功能
+49	set	11B_2	3	v.设定
+49	paleontologist	11B_2	3	n. 古生物学者
+49	grab	11B_2	3	vt.&vi.抓取
+50	crush	11B_3	3	n.压碎
+50	portion	11B_3	3	n.部分
+50	defense	11B_3	3	n.防卫
+50	neck	11B_3	3	n.脖子
+50	toward	11B_3	3	prep.朝
+50	monster	11B_3	3	n.怪物
+50	fossil	11B_3	3	adj.化石的
+50	understand	11B_3	3	vt.理解
+50	across	11B_3	3	prep.穿过
+51	aid	12A_1	2	n.帮助
+51	dangerous	12A_1	2	adj.危险的
+51	criminal	12A_1	2	adj.犯罪的
+51	industry	12A_1	2	n.工业
+51	whereas	12A_1	2	conj.&adv.然而
+51	operate	12A_1	2	vi.操作
+51	alternative	12A_1	2	adj.两者择一的
+51	vehicle	12A_1	2	n.车辆
+51	rough	12A_1	2	adj.粗糙的
+51	sign	12A_1	2	n.标志
+52	single	12A_2	2	adj.单身的
+52	upside-down	12A_2	2	颠倒的
+52	ceiling	12A_2	2	n.天花板
+52	exist	12A_2	2	v.存在
+52	emotion	12A_2	2	n.情感
+52	snake	12A_2	2	n.蛇
+52	soccer	12A_2	2	n.英式足球
+52	score	12A_2	2	n.得分
+52	sticky	12A_2	2	adj.粘的
+53	firm	12B_1	2	n.公司
+53	medical	12B_1	2	adj.医疗的
+53	nanotechnology	12B_1	2	n. 纳米技术
+53	treatment	12B_1	2	n.治疗
+53	cell	12B_1	2	n.细胞
+53	programme	12B_1	2	n. 计划
+53	pattern	12B_1	2	n.图案
+53	label	12B_1	2	n.标签
+53	drive	12B_1	2	v.开车
+53	sleeve	12B_1	2	n.袖子
+53	surroundings	12B_1	2	n. 环境
+54	network	12B_2	2	n.网络
+54	prediction	12B_2	2	n.预言
+54	succeed	12B_2	2	vt.成功
+54	futurist	12B_2	2	n. 未来主义者
+54	replace	12B_2	2	vt.取代
+54	contain	12B_2	2	vt.包含
+54	succeed	12B_2	2	vt.成功
+54	chip	12B_2	2	n.薄片
+54	grocery	12B_2	2	n.杂货店
+54	kitchen	12B_2	2	n.厨房
+54	particles	12B_2	2	n. 微粒

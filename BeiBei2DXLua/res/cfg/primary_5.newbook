@@ -1,11 +1,11 @@
 1	young	1_1	2	adj.年轻的
 1	tall	1_1	2	adj.高的
 1	kind	1_1	2	adj.仁慈的
-1	short	1_1	2	adj.短的
-1	strict	1_1	2	adj.严格的
-1	active	1_1	2	adj.积极的
-1	very	1_1	2	adv.非常
-1	funny	1_1	2	adj.滑稽的
+2	short	1_2	2	adj.短的
+2	strict	1_2	2	adj.严格的
+2	active	1_2	2	adj.积极的
+2	very	1_2	2	adv.非常
+2	funny	1_2	2	adj.滑稽的
 2	strong	1_2	2	adj.强壮的
 2	old	1_2	2	adj.老的
 2	thin	1_2	2	adj.瘦的

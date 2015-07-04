@@ -1,631 +1,630 @@
-1	cat	1_1	15
-1	has	1_1	15
-1	black	1_1	15
-1	hat	1_1	15
-1	egg	1_1	15
-2	in	1_2	15
-2	my	1_2	15
-2	dish	1_2	15
-2	Fox	1_2	15
-2	box	1_2	15
-3	duck	1_3	15
-3	hug	1_3	15
-3	candy	1_3	15
-3	hat	1_3	15
-3	backpack	1_3	15
-4	gas	1_4	15
-4	flag	1_4	15
-4	fat	1_4	15
-4	crab	1_4	15
-4	lamp	1_4	15
-5	bed	1_5	15
-5	left	1_5	15
-5	bell	1_5	15
-5	empty	1_5	15
-5	fresh	1_5	15
-6	text	1_6	15
-6	mess	1_6	15
-6	net	1_6	15
-6	fish	1_6	15
-6	pink	1_6	15
-7	swim	1_7	15
-7	milk	1_7	15
-7	sink	1_7	15
-7	ship	1_7	15
-7	gift	1_7	15
-8	fill	1_8	15
-8	dog	1_8	15
-8	sock	1_8	15
-8	stop	1_8	15
-8	golf	1_8	15
-9	clock	1_9	15
-9	box	1_9	15
-9	fog	1_9	15
-9	shop	1_9	15
-9	duck	1_9	15
-10	bus	1_10	15
-10	umbrella	1_10	15
-10	jump	1_10	15
-10	bug	1_10	15
-10	sun	1_10	15
-11	puppy	1_11	15
-11	cup	1_11	15
-11	jeep	1_11	15
-11	next|to	1_11	15
-11	sheep	1_11	15
-12	queen	1_12	15
-12	and	1_12	15
-12	the	1_12	15
-12	king	1_12	15
-12	vest	1_12	15
-13	an	1_13	15
-13	ugly	1_13	15
-13	photo	1_13	15
-13	take	1_13	15
-13	cage	1_13	15
-14	on	1_14	15
-14	bridge	1_14	15
-14	catch	1_14	15
-14	rat	1_14	15
-14	tree	1_14	15
-15	one	1_15	15
-15	two	1_15	15
-15	three	1_15	15
-15	dress	1_15	15
-15	beautiful	1_15	15
-16	cake	2_1	11
-16	make	2_1	11
-16	sheep	2_1	11
-16	give	2_1	11
-16	me	2_1	11
-17	wool	2_2	11
-17	bike	2_2	11
-17	ride	2_2	11
-17	smoke	2_2	11
-17	cute	2_2	11
-18	pupil	2_3	11
-18	like	2_3	11
-18	mule	2_3	11
-18	cake	2_3	11
-18	snake	2_3	11
-19	table	2_4	11
-19	skate	2_4	11
-19	lake	2_4	11
-19	grade	2_4	11
-19	tape	2_4	11
-20	gate	2_5	11
-20	need	2_5	11
-20	bee	2_5	11
-20	beef	2_5	11
-20	sleep	2_5	11
-21	sweet	2_6	11
-21	tree	2_6	11
-21	cheese	2_6	11
-21	queen	2_6	11
-21	bike	2_6	11
-22	kite	2_7	11
-22	time	2_7	11
-22	ride	2_7	11
-22	pie	2_7	11
-22	write	2_7	11
-23	knife	2_8	11
-23	smile	2_8	11
-23	nose	2_8	11
-23	rose	2_8	11
-23	stone	2_8	11
-24	bone	2_9	11
-24	phone	2_9	11
-24	hole	2_9	11
-24	hope	2_9	11
-24	pose	2_9	11
-25	fuse	2_10	11
-25	huge	2_10	11
-25	mule	2_10	11
-25	cube	2_10	11
-26	use	2_11	11
-26	cute	2_11	11
-26	tube	2_11	11
-26	drum	2_11	11
-27	fat	3_1	3
-27	there|is	3_1	3
-27	has	3_1	3
-27	black	3_1	3
-27	hat	3_1	3
-28	cake	3_2	3
-28	bake	3_2	3
-28	mum	3_2	3
-28	be|going|to	3_2	3
-28	eat	3_2	3
-29	bag	3_3	3
-29	What	3_3	3
-29	color	3_3	3
-29	Who	3_3	3
-30	thin	4_1	3
-30	fat	4_1	3
-30	what	4_1	3
-30	bee	4_1	3
-30	pity	4_1	3
-31	bell	4_2	3
-31	bad	4_2	3
-31	has	4_2	3
-31	get	4_2	3
-31	want	4_2	3
-32	no	4_3	3
-32	he	4_3	3
-32	red	4_3	3
-32	be|like	4_3	3
-32	matter	4_3	3
-33	white	5_1	2
-33	kite	5_1	2
-33	fly	5_1	2
-33	high	5_1	2
-33	sky	5_1	2
-33	when	5_1	2
-34	see	5_2	2
-34	so	5_2	2
-34	wish	5_2	2
-34	could	5_2	2
-34	best	5_2	2
-35	street	6_1	4
-35	strong	6_1	4
-35	stamp	6_1	4
-35	stop	6_1	4
-35	squib	6_1	4
-35	squirrel	6_1	4
-36	squid	6_2	4
-36	ski	6_2	4
-36	skirt	6_2	4
-36	stand	6_2	4
-36	speak	6_2	4
-36	spoon	6_2	4
-37	many	6_3	4
-37	thing	6_3	4
-37	room	6_3	4
-37	phone	6_3	4
-37	where	6_3	4
-38	clock	6_4	4
-38	desk	6_4	4
-38	sock	6_4	4
-38	floor	6_4	4
-38	Know	6_4	4
-39	cute	7_1	2
-39	puppy	7_1	2
-39	Amy	7_1	2
-39	made	7_1	2
-39	home	7_1	2
-39	place	7_1	2
-40	didn't	7_2	2
-40	for	7_2	2
-40	him	7_2	2
-40	but	7_2	2
-40	it	7_2	2
-40	she	7_2	2
-41	farmer	8_1	11
-41	dig	8_1	11
-41	worms	8_1	11
-41	silk	8_1	11
-41	nurse	8_1	11
-42	hand	8_2	11
-42	purse	8_2	11
-42	book	8_2	11
-42	read	8_2	11
-42	mouse	8_2	11
-43	house	8_3	11
-43	bear	8_3	11
-43	sit	8_3	11
-43	chair	8_3	11
-43	card	8_3	11
-44	smart	8_4	11
-44	shark	8_4	11
-44	partner	8_4	11
-44	farm	8_4	11
-44	scarf	8_4	11
-45	star	8_5	11
-45	market	8_5	11
-45	gorge	8_5	11
-45	porch	8_5	11
-45	pork	8_5	11
-46	shorts	8_6	11
-46	sport	8_6	11
-46	torch	8_6	11
-46	forty	8_6	11
-46	north	8_6	11
-47	goose	8_7	11
-47	smooth	8_7	11
-47	book	8_7	11
-47	spoon	8_7	11
-47	cook	8_7	11
-48	room	8_8	11
-48	pool	8_8	11
-48	food	8_8	11
-48	tooth	8_8	11
-48	moon|cake	8_8	11
-49	igloo	8_9	11
-49	cookie	8_9	11
-49	hurt	8_9	11
-49	nurse	8_9	11
-49	burger	8_9	11
-50	purple	8_10	11
-50	wear	8_10	11
-50	bear	8_10	11
-50	pear	8_10	11
-50	airplane	8_10	11
-50	house	8_10	11
-51	hair	8_11	11
-51	chair	8_11	11
-51	stair	8_11	11
-51	mouse	8_11	11
-51	couch	8_11	11
-51	south	8_11	11
-52	new	9_1	2
-52	drive	9_1	2
-52	star	9_1	2
-52	sit	9_1	2
-52	wave	9_1	2
-52	arm	9_1	2
-53	can	9_2	2
-53	farm	9_2	2
-53	park	9_2	2
-53	near	9_2	2
-53	five	9_2	2
-53	How|many	9_2	2
-54	diligent	10_1	4
-54	nurse	10_1	4
-54	cook	10_1	4
-54	very|much	10_1	4
-54	from|to	10_1	4
-55	work|hard	10_2	4
-55	dinner	10_2	4
-55	love	10_2	4
-55	for	10_2	4
-55	us	10_2	4
-56	every|day	10_3	4
-56	from	10_3	4
-56	Monday	10_3	4
-56	Friday	10_3	4
-57	her	10_4	4
-57	think|of	10_4	4
-57	your	10_4	4
-57	mum	10_4	4
-58	living|room	11_1	1
-58	some	11_1	1
-58	chair	11_1	1
-58	couch	11_1	1
-58	sleep	11_1	1
-58	bed	11_1	1
-58	and	11_1	1
-58	what	11_1	1
-58	blouse	11_1	1
-59	deer	12_1	9
-59	drink	12_1	9
-59	beer	12_1	9
-59	boy	12_1	9
-59	play|with	12_1	9
-60	toy	12_2	9
-60	rain	12_2	9
-60	way	12_2	9
-60	this	12_2	9
-60	color	12_2	9
-61	bird	12_3	9
-61	grey	12_3	9
-61	eight	12_3	9
-61	pull	12_3	9
-61	sleigh	12_3	9
-62	ear	12_4	9
-62	dear	12_4	9
-62	cheer	12_4	9
-62	beer|belly	12_4	9
-62	year	12_4	9
-63	tear	12_5	9
-63	joy	12_5	9
-63	noise	12_5	9
-63	voice	12_5	9
-63	boil	12_5	9
-64	enjoy	12_6	9
-64	choice	12_6	9
-64	snail	12_6	9
-64	email	12_6	9
-64	tail	12_6	9
-65	train	12_7	9
-65	straight	12_7	9
-65	railway	12_7	9
-65	subway	12_7	9
-65	playmate	12_7	9
-66	pain	12_8	9
-66	May	12_8	9
-66	stay	12_8	9
-66	play	12_8	9
-66	way	12_8	9
-66	eight	12_8	9
-67	afraid	12_9	9
-67	say	12_9	9
-67	weight	12_9	9
-67	eighteen	12_9	9
-67	eighty	12_9	9
-67	sleigh	12_9	9
-68	wasp	13_1	2
-68	back	13_1	2
-68	deer	13_1	2
-68	stung	13_1	2
-68	said	13_1	2
-68	angry	13_1	2
-69	kick	13_2	2
-69	helpless	13_2	2
-69	beg	13_2	2
-69	stop	13_2	2
-69	but	13_2	2
-70	umbrella	14_1	1
-70	put|on	14_1	1
-70	share|with	14_1	1
-70	take	14_1	1
-70	hard	14_1	1
-70	morning	14_1	1
-70	raincoat	14_1	1
-70	want	14_1	1
-70	great	14_1	1
-71	draw	15_1	9
-71	saw	15_1	9
-71	Light	15_1	9
-71	turn|on	15_1	9
-71	goat	15_1	9
-72	row	15_2	9
-72	take|a|shower	15_2	9
-72	ball	15_2	9
-72	play	15_2	9
-72	straw	15_2	9
-73	strawberry	15_3	9
-73	hawk	15_3	9
-73	lighter	15_3	9
-73	night	15_3	9
-73	coat	15_3	9
-74	soap	15_4	9
-74	road	15_4	9
-74	window	15_4	9
-74	snow	15_4	9
-74	know	15_4	9
-75	elbow	15_5	9
-75	grow	15_5	9
-75	throw	15_5	9
-75	yellow	15_5	9
-75	show	15_5	9
-76	arrow	15_6	9
-76	bow	15_6	9
-76	low	15_6	9
-76	shower	15_6	9
-76	flower	15_6	9
-77	brown	15_7	9
-77	cow	15_7	9
-77	how	15_7	9
-77	down	15_7	9
-77	owl	15_7	9
-78	football	15_8	9
-78	basketball	15_8	9
-78	tall	15_8	9
-78	wallet	15_8	9
-79	small	15_9	9
-79	daughter	15_9	9
-79	walk	15_9	9
-79	wall	15_9	9
-80	box	16_1	2
-80	night	16_1	2
-80	saw	16_1	2
-80	window	16_1	2
-80	made	16_1	2
-81	grey	16_2	2
-81	door	16_2	2
-81	told	16_2	2
-81	woof	16_2	2
-81	went	16_2	2
-82	walk|along	17_1	2
-82	road	17_1	2
-82	suddenly	17_1	2
-82	leaf	17_1	2
-82	the|top|of	17_1	2
-82	before	17_1	2
-83	blow	17_2	2
-83	interesting	17_2	2
-83	his	17_2	2
-83	head	17_2	2
-83	thing	17_2	2
-83	happen	17_2	2
-84	a|pair|of	18_1	4
-84	hobby	18_1	4
-84	straight	18_1	4
-84	glasses	18_1	4
-84	like|best	18_1	4
-85	also	18_2	4
-85	brown	18_2	4
-85	wear	18_2	4
-85	eye	18_2	4
-85	they	18_2	4
-86	are	18_3	4
-86	short	18_3	4
-86	hair	18_3	4
-86	can	18_3	4
-87	sing	18_4	4
-87	dance	18_4	4
-87	English	18_4	4
-87	name	18_4	4
-88	make|friends	19_1	3
-88	America	19_1	3
-88	learn|from	19_1	3
-88	lesson	19_1	3
-88	term	19_1	3
-88	PE	19_1	3
-89	all	19_2	3
-89	hope	19_2	3
-89	soon	19_2	3
-89	sister	19_2	3
-89	speak	19_2	3
-89	well	19_2	3
-90	them	19_3	3
-90	Chinese	19_3	3
-90	six	19_3	3
-90	week	19_3	3
-90	only	19_3	3
-91	city	20_1	3
-91	village	20_1	3
-91	building	20_1	3
-91	nature|park	20_1	3
-91	bridge	20_1	3
-92	at|the|weekend	20_2	3
-92	mountain	20_2	3
-92	air	20_2	3
-92	teacher	20_2	3
-92	live	20_2	3
-93	family	20_3	3
-93	forest	20_3	3
-93	river	20_3	3
-93	water	20_3	3
-93	clean	20_3	3
-93	fresh	20_3	3
-94	apple	21_1	30
-94	saddle	21_1	30
-94	straddle	21_1	30
-94	gaggle	21_1	30
-94	draggle	21_1	30
-95	dabble	21_2	30
-95	gabble	21_2	30
-95	rabble	21_2	30
-95	battle	21_2	30
-95	hackle	21_2	30
-96	rattle	21_3	30
-96	gamble	21_3	30
-96	ramble	21_3	30
-96	shamble	21_3	30
-96	hassle	21_3	30
-97	cattle	21_4	30
-97	crackle	21_4	30
-97	tackle	21_4	30
-97	shackle	21_4	30
-97	cackle	21_4	30
-98	chattel	21_5	30
-98	middle	21_5	30
-98	single	21_5	30
-98	little	21_5	30
-98	jingle	21_5	30
-99	rabbit	21_6	30
-99	vanish	21_6	30
-99	banish	21_6	30
-99	Spanish	21_6	30
-99	lavish	21_6	30
-100	ravish	21_7	30
-100	radish	21_7	30
-100	blandish	21_7	30
-100	famish	21_7	30
-100	tragic	21_7	30
-101	traffic	21_8	30
-101	candid	21_8	30
-101	caliber	21_8	30
-101	rapid	21_8	30
-101	valid	21_8	30
-102	finish	21_9	30
-102	tacit	21_9	30
-102	gravity	21_9	30
-102	gravid	21_9	30
-102	habit	21_9	30
-103	charity	21_10	30
-103	family	21_10	30
-103	plastic	21_10	30
-103	sandwich	21_10	30
-103	magic	21_10	30
-104	letter	21_11	30
-104	teller	21_11	30
-104	seller	21_11	30
-104	setter	21_11	30
-104	peddler	21_11	30
-105	ledger	21_12	30
-105	nether	21_12	30
-105	dresser	21_12	30
-105	beggar	21_12	30
-105	dredger	21_12	30
-106	leper	21_13	30
-106	lever	21_13	30
-106	ever	21_13	30
-106	sector	21_13	30
-106	pecker	21_13	30
-107	pepper	21_14	30
-107	pester	21_14	30
-107	cellar	21_14	30
-107	nectar	21_14	30
-107	creditor	21_14	30
-108	dweller	21_15	30
-108	better	21_15	30
-108	member	21_15	30
-108	never	21_15	30
-108	clever	21_15	30
-109	lollipop	21_16	30
-109	profit	21_16	30
-109	solid	21_16	30
-109	vomit	21_16	30
-109	gossip	21_16	30
-110	topic	21_17	30
-110	toxic	21_17	30
-110	frolic	21_17	30
-110	boxer	21_17	30
-110	rocker	21_17	30
-111	copier	21_18	30
-111	bother	21_18	30
-111	copter	21_18	30
-111	dodger	21_18	30
-111	monitor	21_18	30
-112	monster	21_19	30
-112	locker	21_19	30
-112	mottle	21_19	30
-112	bobble	21_19	30
-112	toddle	21_19	30
-113	model	21_20	30
-113	comic	21_20	30
-113	soccer	21_20	30
-113	bottle	21_20	30
-113	body	21_20	30
-114	puppy	21_21	30
-114	ruffle	21_21	30
-114	muffle	21_21	30
-114	scuffle	21_21	30
-114	struggle	21_21	30
-115	snuggle	21_22	30
-115	grumble	21_22	30
-115	slugger	21_22	30
-115	butter	21_22	30
-115	shutter	21_22	30
-116	stutter	21_23	30
-116	sputter	21_23	30
-116	supper	21_23	30
-116	hubby	21_23	30
-116	stubby	21_23	30
-117	grubby	21_24	30
-117	dummy	21_24	30
-117	yummy	21_24	30
-117	sunny	21_24	30
-117	bunny	21_24	30
-118	rugby	21_25	30
-118	puzzle	21_25	30
-118	number	21_25	30
-118	lucky	21_25	30
-118	ugly	21_25	30
-119	practice	21_26	30
-119	brandy	21_26	30
-119	candy	21_26	30
-119	story	21_26	30
-119	celery	21_26	30
-120	carrot	21_27	30
-120	eggplant	21_27	30
-120	tennis	21_27	30
-120	tiger	21_27	30
-120	robot	21_27	30
-121	donkey	21_28	30
-121	different	21_28	30
-121	study	21_28	30
-121	Internet	21_28	30
-121	message	21_28	30
-122	sister	21_29	30
-122	think	21_29	30
-122	thunder	21_29	30
-122	merry	21_29	30
-122	thing	21_29	30
-123	hurry	21_30	30
-123	hunter	21_30	30
-123	hospital	21_30	30
-123	handicraft	21_30	30
-123	happy	21_30	30
+1	cat	1_1	8	n.猫
+1	has	1_1	8	v. 有
+1	black	1_1	8	adj.黑（色）的
+2	hat	1_2	8	n.帽子
+2	egg	1_2	8	n.蛋
+2	in	1_2	8	prep.在...之内
+2	my	1_2	8	adj.我的
+2	dish	1_2	8	n.盘碟
+2	Fox	1_2	8	n.狐狸
+2	box	1_2	8	n.盒子
+2	duck	1_2	8	n.鸭
+2	hug	1_2	8	v.拥抱
+2	candy	1_2	8	n.糖果
+3	hat	1_3	8	n.帽子
+3	backpack	1_3	8	n.双肩背包
+3	gas	1_3	8	n.气体
+3	flag	1_3	8	n.旗子
+3	fat	1_3	8	adj.肥胖的
+3	crab	1_3	8	n.蟹
+3	lamp	1_3	8	n.灯
+3	bed	1_3	8	n.床
+3	left	1_3	8	adj.左边的
+3	bell	1_3	8	n.铃
+4	empty	1_4	8	adj.空的
+4	fresh	1_4	8	adj.新鲜的
+4	text	1_4	8	n.文本
+4	mess	1_4	8	n.乱七八糟
+4	net	1_4	8	n.网
+4	fish	1_4	8	n.鱼
+4	pink	1_4	8	adj.粉红色的
+4	swim	1_4	8	v.游泳
+4	milk	1_4	8	n.奶
+4	sink	1_4	8	n.接收端
+5	ship	1_5	8	n.船
+5	gift	1_5	8	n.礼物
+5	fill	1_5	8	vt.装满
+5	dog	1_5	8	n.狗
+5	sock	1_5	8	n.短袜
+5	stop	1_5	8	v.停止
+5	golf	1_5	8	n.高尔夫球
+5	clock	1_5	8	n.时钟
+5	box	1_5	8	n.盒子
+5	fog	1_5	8	n.雾
+6	shop	1_6	8	n.商店
+6	duck	1_6	8	n.鸭
+6	bus	1_6	8	n.公共汽车
+6	umbrella	1_6	8	n.伞
+6	jump	1_6	8	n.跳跃
+6	bug	1_6	8	n.小虫
+6	sun	1_6	8	n.太阳
+6	puppy	1_6	8	n.小狗
+6	cup	1_6	8	n.杯子
+6	jeep	1_6	8	n.吉普车
+7	next to	1_7	8	旁边
+7	sheep	1_7	8	n.羊
+7	queen	1_7	8	n.女王
+7	and	1_7	8	conj.和
+7	the	1_7	8	art.这(那)
+7	king	1_7	8	n.国王
+7	vest	1_7	8	n.马甲
+7	an	1_7	8	art.一个
+7	ugly	1_7	8	adj.丑陋的
+7	photo	1_7	8	n.照片
+7	take	1_7	8	vt.拿
+8	cage	1_8	8	n.笼子
+8	on	1_8	8	prep.在...之上
+8	bridge	1_8	8	n.桥
+8	catch	1_8	8	vt.抓住
+8	rat	1_8	8	n.鼠
+8	tree	1_8	8	n.树
+8	one	1_8	8	n.一
+8	two	1_8	8	num.二
+8	three	1_8	8	num.三
+8	dress	1_8	8	n.连衣裙
+8	beautiful	1_8	8	adj.美丽的
+9	cake	2_1	5	n.蛋糕
+9	make	2_1	5	vt.做
+9	sheep	2_1	5	n.羊
+9	give	2_1	5	vt.&vi.给予
+9	me	2_1	5	pron.我(宾格)
+9	wool	2_1	5	n.毛线
+9	bike	2_1	5	n.脚踏车
+9	ride	2_1	5	vt.&vi.骑
+9	smoke	2_1	5	v.吸烟
+9	cute	2_1	5	adj.可爱的
+9	pupil	2_1	5	n.小学生
+10	like	2_2	5	vt.&vi.喜欢
+10	mule	2_2	5	n.骡子
+10	cake	2_2	5	n.蛋糕
+10	snake	2_2	5	n.蛇
+10	table	2_2	5	n. 桌子
+10	skate	2_2	5	v.滑冰
+10	lake	2_2	5	n.湖
+10	grade	2_2	5	n. 年级
+10	tape	2_2	5	n.录像带
+10	gate	2_2	5	n.大门
+10	need	2_2	5	v.需要
+11	bee	2_3	5	n.蜜蜂
+11	beef	2_3	5	n.牛肉
+11	sleep	2_3	5	v.睡觉
+11	sweet	2_3	5	adj.甜(蜜)的
+11	tree	2_3	5	n.树
+11	cheese	2_3	5	n.奶酪
+11	queen	2_3	5	n.女王
+11	bike	2_3	5	n.脚踏车
+11	kite	2_3	5	n.风筝
+11	time	2_3	5	n.时间
+11	ride	2_3	5	vt.&vi.骑
+12	pie	2_4	5	n.馅饼
+12	write	2_4	5	v.写
+12	knife	2_4	5	n.刀
+12	smile	2_4	5	n.微笑
+12	nose	2_4	5	n.鼻子
+12	rose	2_4	5	n.玫瑰
+12	stone	2_4	5	n.石头
+12	bone	2_4	5	n.骨
+12	phone	2_4	5	n.电话
+12	hole	2_4	5	n.洞
+13	hope	2_5	5	n.希望
+13	pose	2_5	5	n.姿势
+13	fuse	2_5	5	n.保险丝
+13	huge	2_5	5	adj.巨大的
+13	mule	2_5	5	n.骡子
+13	cube	2_5	5	n.立方体
+13	use	2_5	5	n.运用
+13	cute	2_5	5	adj.可爱的
+13	tube	2_5	5	n.管
+13	drum	2_5	5	n.鼓
+14	fat	3_1	1	adj.肥胖的
+14	there is	3_1	1	有
+14	has	3_1	1	v. 有
+14	black	3_1	1	adj.黑（色）的
+14	hat	3_1	1	n.帽子
+14	cake	3_1	1	n.蛋糕
+14	bake	3_1	1	vt.烘焙
+14	mum	3_1	1	n.妈妈
+14	be going to	3_1	1	将要
+14	eat	3_1	1	vt.吃
+14	bag	3_1	1	n.包
+14	What	3_1	1	pron.什么
+14	color	3_1	1	n.颜色
+14	Who	3_1	1	pron.谁
+15	thin	4_1	2	adj.瘦的
+15	fat	4_1	2	adj.肥胖的
+15	what	4_1	2	pron.什么
+15	bee	4_1	2	n.蜜蜂
+15	pity	4_1	2	n.同情
+15	bell	4_1	2	n.铃
+15	bad	4_1	2	adj.坏的
+15	has	4_1	2	v. 有
+16	get	4_2	2	vt.获得
+16	want	4_2	2	vi.要
+16	no	4_2	2	n.不
+16	he	4_2	2	pron.他
+16	red	4_2	2	adj.红色的
+16	be like	4_2	2	像…
+16	matter	4_2	2	n.事件
+17	white	5_1	1	adj.白色的
+17	kite	5_1	1	n.风筝
+17	fly	5_1	1	vt.&vi.飞
+17	high	5_1	1	adj.高的
+17	sky	5_1	1	n.天空
+17	when	5_1	1	conj.在…时
+17	see	5_1	1	vt.看见
+17	so	5_1	1	conj.所以
+17	wish	5_1	1	n.愿望
+17	could	5_1	1	aux.“can”的过去式
+17	best	5_1	1	adj.最好的
+18	street	6_1	2	n.街道
+18	strong	6_1	2	adj.强壮的
+18	stamp	6_1	2	n.邮票
+18	stop	6_1	2	v.停止
+18	squib	6_1	2	n.爆竹
+18	squirrel	6_1	2	n.松鼠
+18	squid	6_1	2	n.鱿鱼
+18	ski	6_1	2	vt.&vi.滑雪
+18	skirt	6_1	2	n.裙子
+18	stand	6_1	2	n.站立
+18	speak	6_1	2	vt.说
+19	spoon	6_2	2	n. 匙
+19	many	6_2	2	n.许多
+19	thing	6_2	2	n.东西
+19	room	6_2	2	n.房间
+19	phone	6_2	2	n.电话
+19	where	6_2	2	adv.哪里
+19	clock	6_2	2	n.时钟
+19	desk	6_2	2	n.书桌
+19	sock	6_2	2	n.短袜
+19	floor	6_2	2	n.地板
+19	Know	6_2	2	vt.&vi.知道
+20	cute	7_1	1	adj.可爱的
+20	puppy	7_1	1	n.小狗
+20	Amy	7_1	1	艾米
+20	made	7_1	1	v.使（过去式）
+20	home	7_1	1	n.家
+20	place	7_1	1	n.地方
+20	didn't	7_1	1	v.没
+20	for	7_1	1	prep.为
+20	him	7_1	1	pron.他(宾格)
+20	but	7_1	1	conj.但是
+20	it	7_1	1	pron.它
+20	she	7_1	1	pron.她
+21	farmer	8_1	6	n.农夫
+21	dig	8_1	6	v.挖
+21	worms	8_1	6	n.蠕虫(复数）
+21	silk	8_1	6	adj.丝的
+21	nurse	8_1	6	n.护士
+21	hand	8_1	6	n.手
+21	purse	8_1	6	n.钱包
+21	book	8_1	6	n.书
+21	read	8_1	6	vt.&vi.阅读
+21	mouse	8_1	6	n.老鼠
+22	house	8_2	6	n.房子
+22	bear	8_2	6	n.熊
+22	sit	8_2	6	vt.坐
+22	chair	8_2	6	n.椅子
+22	card	8_2	6	n.卡片
+22	smart	8_2	6	adj.聪明的
+22	shark	8_2	6	n.鲨鱼
+22	partner	8_2	6	n.搭档
+22	farm	8_2	6	n.农场
+22	scarf	8_2	6	n.围巾
+23	star	8_3	6	n.星
+23	market	8_3	6	n.市场
+23	gorge	8_3	6	n.峡谷
+23	porch	8_3	6	n.门廊
+23	pork	8_3	6	n.猪肉
+23	shorts	8_3	6	n.短裤
+23	sport	8_3	6	n.运动
+23	torch	8_3	6	n.火炬
+23	forty	8_3	6	num.&adj.四十
+23	north	8_3	6	adj.北
+24	goose	8_4	6	n.鹅
+24	smooth	8_4	6	adj.平稳的
+24	book	8_4	6	n.书
+24	spoon	8_4	6	n. 匙
+24	cook	8_4	6	vi.烧菜
+24	room	8_4	6	n.房间
+24	pool	8_4	6	n.水塘(池)
+24	food	8_4	6	n.食物
+24	tooth	8_4	6	n.牙齿
+25	moon cake	8_5	6	n.月饼
+25	igloo	8_5	6	n.雪屋
+25	cookie	8_5	6	n.饼干
+25	hurt	8_5	6	vt.伤害
+25	nurse	8_5	6	n.护士
+25	burger	8_5	6	n.汉堡
+25	purple	8_5	6	adj.紫色的
+25	wear	8_5	6	vt.穿著
+25	bear	8_5	6	n.熊
+26	pear	8_6	6	n.梨(树)
+26	airplane	8_6	6	n.飞机
+26	house	8_6	6	n.房子
+26	hair	8_6	6	n.头发
+26	chair	8_6	6	n.椅子
+26	stair	8_6	6	n.楼梯
+26	mouse	8_6	6	n.老鼠
+26	couch	8_6	6	n.长椅
+26	south	8_6	6	n.南
+27	new	9_1	1	adj.新的
+27	drive	9_1	1	v.开车
+27	star	9_1	1	n.星
+27	sit	9_1	1	vt.坐
+27	wave	9_1	1	n.波
+27	arm	9_1	1	n.手臂
+27	can	9_1	1	aux.能
+27	farm	9_1	1	n.农场
+27	park	9_1	1	n.公园
+27	near	9_1	1	prep.靠近
+27	five	9_1	1	num.五
+27	How many	9_1	1	多少
+28	diligent	10_1	2	adj.勤奋的
+28	nurse	10_1	2	n.护士
+28	cook	10_1	2	vi.烧菜
+28	very much	10_1	2	很多
+28	work hard	10_1	2	辛勤工作
+28	dinner	10_1	2	n.主餐
+28	love	10_1	2	vt.&vi.爱
+28	for	10_1	2	prep.为
+28	us	10_1	2	pron.我们(we的宾格)
+29	every day	10_2	2	每天
+29	from	10_2	2	prep.从
+29	Monday	10_2	2	n. 星期一
+29	Friday	10_2	2	n. 星期五
+29	her	10_2	2	pron.她的
+29	think of	10_2	2	认为
+29	your	10_2	2	pron.你的
+29	mum	10_2	2	n.妈妈
+30	living room	11_1	1	起居室
+30	some	11_1	1	adj.一些
+30	chair	11_1	1	n.椅子
+30	couch	11_1	1	n.长椅
+30	sleep	11_1	1	v.睡觉
+30	bed	11_1	1	n.床
+30	and	11_1	1	conj.和
+30	what	11_1	1	pron.什么
+30	blouse	11_1	1	n.女衬衫
+31	deer	12_1	5	n.鹿
+31	drink	12_1	5	n.饮料
+31	beer	12_1	5	n.啤酒
+31	boy	12_1	5	n.男孩
+31	play with	12_1	5	玩
+31	toy	12_1	5	n.玩具
+31	rain	12_1	5	n.雨(水)
+31	way	12_1	5	n.道路
+31	this	12_1	5	adj.&pron.这
+32	color	12_2	5	n.颜色
+32	bird	12_2	5	n.鸟
+32	grey	12_2	5	adj.灰色的
+32	eight	12_2	5	num.八
+32	pull	12_2	5	n.拉
+32	sleigh	12_2	5	n.雪橇
+32	ear	12_2	5	n.耳朵
+32	dear	12_2	5	adj.亲爱的
+32	cheer	12_2	5	n.欢呼
+33	beer belly	12_3	5	啤酒肚
+33	year	12_3	5	n.年
+33	tear	12_3	5	n.眼泪
+33	joy	12_3	5	n.欢乐
+33	noise	12_3	5	n.噪声
+33	voice	12_3	5	n.声音
+33	boil	12_3	5	v.沸腾
+33	enjoy	12_3	5	vt.&vi.享受
+33	choice	12_3	5	n.选择
+34	snail	12_4	5	n.蜗牛
+34	email	12_4	5	n.电子邮件
+34	tail	12_4	5	n.尾部
+34	train	12_4	5	n.火车
+34	straight	12_4	5	adj.直的
+34	railway	12_4	5	n.铁路
+34	subway	12_4	5	n.地铁
+34	playmate	12_4	5	n.玩伴
+34	pain	12_4	5	n.痛苦
+34	May	12_4	5	aux. 可能
+35	stay	12_5	5	n.停留
+35	play	12_5	5	n.游戏
+35	way	12_5	5	n.道路
+35	eight	12_5	5	num.八
+35	afraid	12_5	5	adj.害怕的
+35	say	12_5	5	vt.说
+35	weight	12_5	5	n.重量
+35	eighteen	12_5	5	num.十八
+35	eighty	12_5	5	num.&adj.八十
+35	sleigh	12_5	5	n.雪橇
+36	wasp	13_1	1	n.黄蜂
+36	back	13_1	1	adv.向后地
+36	deer	13_1	1	n.鹿
+36	stung	13_1	1	v.刺（过去式）
+36	said	13_1	1	v. 说（过去式）
+36	angry	13_1	1	adj.生气的
+36	kick	13_1	1	vt.踢
+36	helpless	13_1	1	adj.无助的
+36	beg	13_1	1	vt.乞讨
+36	stop	13_1	1	v.停止
+36	but	13_1	1	conj.但是
+37	umbrella	14_1	1	n.伞
+37	put on	14_1	1	穿上
+37	share with	14_1	1	分享
+37	take	14_1	1	vt.拿
+37	hard	14_1	1	adj.坚硬的
+37	morning	14_1	1	n.早晨
+37	raincoat	14_1	1	n.雨衣
+37	want	14_1	1	vi.要
+37	great	14_1	1	adj.伟大的
+38	draw	15_1	4	v.画
+38	saw	15_1	4	vt.&vi.用锯子锯
+38	Light	15_1	4	n.光
+38	turn on	15_1	4	打开
+38	goat	15_1	4	n.山羊
+38	row	15_1	4	n. 行
+38	take a shower	15_1	4	洗淋浴
+38	ball	15_1	4	n.球
+38	play	15_1	4	n.游戏
+38	straw	15_1	4	n.稻草
+38	strawberry	15_1	4	n.草莓
+39	hawk	15_2	4	n.鹰
+39	lighter	15_2	4	n.打火机
+39	night	15_2	4	n.夜晚
+39	coat	15_2	4	n.外套
+39	soap	15_2	4	n.肥皂
+39	road	15_2	4	n.路
+39	window	15_2	4	n.窗户
+39	snow	15_2	4	n.雪
+39	know	15_2	4	vt.&vi.知道
+39	elbow	15_2	4	n.手肘
+39	grow	15_2	4	vt.&vi.生长
+40	throw	15_3	4	n.投
+40	yellow	15_3	4	adj.黄色的
+40	show	15_3	4	v.展现
+40	arrow	15_3	4	n.箭
+40	bow	15_3	4	n.弓
+40	low	15_3	4	adj.低的
+40	shower	15_3	4	vi.淋浴
+40	flower	15_3	4	n.花
+40	brown	15_3	4	adj.棕色的
+40	cow	15_3	4	n.母牛
+40	how	15_3	4	adv.如何
+41	down	15_4	4	adj.向下的
+41	owl	15_4	4	n.猫头鹰
+41	football	15_4	4	n.足球
+41	basketball	15_4	4	n.篮球
+41	tall	15_4	4	adj.高的
+41	wallet	15_4	4	n.皮夹
+41	small	15_4	4	adj.小的
+41	daughter	15_4	4	n.女儿
+41	walk	15_4	4	vi.走路
+41	wall	15_4	4	n.墙壁
+42	box	16_1	1	n.盒子
+42	night	16_1	1	n.夜晚
+42	saw	16_1	1	vt.&vi.用锯子锯
+42	window	16_1	1	n.窗户
+42	made	16_1	1	v.使（过去式）
+42	grey	16_1	1	adj.灰色的
+42	door	16_1	1	n.门
+42	told	16_1	1	v. 告诉（过去式）
+42	woof	16_1	1	n.纬
+42	went	16_1	1	v. 去（过去式）
+43	walk along	17_1	1	沿着…走
+43	road	17_1	1	n.路
+43	suddenly	17_1	1	adv.突然地
+43	leaf	17_1	1	n.树叶
+43	the top of	17_1	1	的顶部
+43	before	17_1	1	prep.在…之前
+43	blow	17_1	1	vt.&vi.吹
+43	interesting	17_1	1	adj.有趣的
+43	his	17_1	1	pron.他的
+43	head	17_1	1	n.头脑
+43	thing	17_1	1	n.东西
+43	happen	17_1	1	vi.发生
+44	a pair of	18_1	2	一对
+44	hobby	18_1	2	n.业余爱好
+44	straight	18_1	2	adj.直的
+44	glasses	18_1	2	n.玻璃杯（复数）
+44	like best	18_1	2	像最好的
+44	also	18_1	2	adv.也
+44	brown	18_1	2	adj.棕色的
+44	wear	18_1	2	vt.穿著
+44	eye	18_1	2	n.眼睛
+45	they	18_2	2	pron.他们
+45	are	18_2	2	vi.是
+45	short	18_2	2	adj.短的
+45	hair	18_2	2	n.头发
+45	can	18_2	2	aux.能
+45	sing	18_2	2	vt.唱
+45	dance	18_2	2	vi.跳舞
+45	English	18_2	2	n. 英语
+45	name	18_2	2	n.名字
+46	make friends	19_1	2	交朋友
+46	America	19_1	2	n. 美国
+46	learn from	19_1	2	学习
+46	lesson	19_1	2	n.课
+46	term	19_1	2	n.学期
+46	PE	19_1	2	abbr. 体育课
+46	all	19_1	2	adj.所有的
+46	hope	19_1	2	n.希望
+46	soon	19_1	2	adv.不久
+47	sister	19_2	2	n.姐妹
+47	speak	19_2	2	vt.说
+47	well	19_2	2	adv.很好地
+47	them	19_2	2	pron.他(她
+47	Chinese	19_2	2	n. 中文
+47	six	19_2	2	n.六
+47	week	19_2	2	n.星期
+47	only	19_2	2	adv.仅仅
+48	city	20_1	2	n.城市
+48	village	20_1	2	n.村庄
+48	building	20_1	2	n.建筑物
+48	nature park	20_1	2	n.自然公园
+48	bridge	20_1	2	n.桥
+48	at the weekend	20_1	2	在周末
+48	mountain	20_1	2	n.山
+48	air	20_1	2	n.空气
+49	teacher	20_2	2	n.教师
+49	live	20_2	2	v.活
+49	family	20_2	2	n.家庭主妇
+49	forest	20_2	2	n.森林
+49	river	20_2	2	n.河
+49	water	20_2	2	n.水
+49	clean	20_2	2	adj.干净的
+49	fresh	20_2	2	adj.新鲜的
+50	apple	21_1	15	n.苹果
+50	saddle	21_1	15	n.鞍
+50	straddle	21_1	15	n.跨坐
+50	gaggle	21_1	15	n.鹅群
+50	draggle	21_1	15	v.落后
+50	dabble	21_1	15	v.喷洒
+50	gabble	21_1	15	v.七嘴八嘴地说
+50	rabble	21_1	15	n.乌合之众
+50	battle	21_1	15	n.战斗
+50	hackle	21_1	15	v.梳理
+51	rattle	21_2	15	vi.嘎嘎作响
+51	gamble	21_2	15	v.赌博
+51	ramble	21_2	15	v.漫步
+51	shamble	21_2	15	vi.蹒跚地走
+51	hassle	21_2	15	n.激战
+51	cattle	21_2	15	n.牛
+51	crackle	21_2	15	n.裂纹
+51	tackle	21_2	15	n.工具
+51	shackle	21_2	15	n.桎梏
+51	cackle	21_2	15	n.咯咯叫
+52	chattel	21_3	15	n.动产
+52	middle	21_3	15	n.中部
+52	single	21_3	15	adj.单身的
+52	little	21_3	15	adj.小的
+52	jingle	21_3	15	n.叮当声
+52	rabbit	21_3	15	n.兔子
+52	vanish	21_3	15	vi.消失
+52	banish	21_3	15	vt.驱逐
+52	Spanish	21_3	15	n.西班牙
+52	lavish	21_3	15	adj.大方的
+53	ravish	21_4	15	v.抢夺
+53	radish	21_4	15	n.萝卜
+53	blandish	21_4	15	vt.讨好
+53	famish	21_4	15	v.（使）挨饿
+53	tragic	21_4	15	adj.悲剧的
+53	traffic	21_4	15	n.交通
+53	candid	21_4	15	adj.率直的
+53	caliber	21_4	15	n.口径
+53	rapid	21_4	15	adj.迅速的
+53	valid	21_4	15	adj.有效的
+54	finish	21_5	15	vi.完成
+54	tacit	21_5	15	adj.心照不宣的
+54	gravity	21_5	15	n.地心引力
+54	gravid	21_5	15	adj.妊娠
+54	habit	21_5	15	n.习惯
+54	charity	21_5	15	n.仁慈
+54	family	21_5	15	n.家庭主妇
+54	plastic	21_5	15	adj.塑料的
+54	sandwich	21_5	15	n.三明治
+54	magic	21_5	15	n.魔术
+55	letter	21_6	15	n.信
+55	teller	21_6	15	n.出纳员
+55	seller	21_6	15	n.售货者
+55	setter	21_6	15	n.二传手
+55	peddler	21_6	15	n.小贩
+55	ledger	21_6	15	n.总帐
+55	nether	21_6	15	adj.下面的
+55	dresser	21_6	15	n.化妆台
+55	beggar	21_6	15	n.乞丐
+55	dredger	21_6	15	n.挖泥船
+56	leper	21_7	15	n.麻风病人
+56	lever	21_7	15	n.杠杆
+56	ever	21_7	15	adv.曾经
+56	sector	21_7	15	n.扇形
+56	pecker	21_7	15	n.啄木鸟
+56	pepper	21_7	15	n.胡椒粉
+56	pester	21_7	15	v.使烦恼
+56	cellar	21_7	15	n.地窖
+56	nectar	21_7	15	n.花蜜
+56	creditor	21_7	15	n.债权人
+57	dweller	21_8	15	n.居民
+57	better	21_8	15	adj.较好的
+57	member	21_8	15	n.成员
+57	never	21_8	15	adv.从不
+57	clever	21_8	15	adj.聪明的
+57	lollipop	21_8	15	n.棒棒糖
+57	profit	21_8	15	n.利润
+57	solid	21_8	15	adj.固体的
+57	vomit	21_8	15	vt.&vi.吐出
+57	gossip	21_8	15	n.闲聊
+58	topic	21_9	15	n.主题
+58	toxic	21_9	15	adj.有毒的
+58	frolic	21_9	15	vi.嬉戏
+58	boxer	21_9	15	n.拳击手
+58	rocker	21_9	15	n.摇杆
+58	copier	21_9	15	n.复印机
+58	bother	21_9	15	vt.烦扰
+58	copter	21_9	15	n.直升机
+58	dodger	21_9	15	道奇
+58	monitor	21_9	15	n.班长
+59	monster	21_10	15	n.怪物
+59	locker	21_10	15	n.柜
+59	mottle	21_10	15	adj.斑驳
+59	bobble	21_10	15	n.泡泡龙
+59	toddle	21_10	15	v.蹒跚
+59	model	21_10	15	n.模型
+59	comic	21_10	15	n.连环图画
+59	soccer	21_10	15	n.英式足球
+59	bottle	21_10	15	n.瓶子
+59	body	21_10	15	n.身体
+60	puppy	21_11	15	n.小狗
+60	ruffle	21_11	15	n.绉褶
+60	muffle	21_11	15	n.低沉的声音
+60	scuffle	21_11	15	vi.混战
+60	struggle	21_11	15	v.奋斗
+60	snuggle	21_11	15	v.依偎
+60	grumble	21_11	15	v.发牢骚
+60	slugger	21_11	15	n.猛男
+60	butter	21_11	15	n.黄油
+60	shutter	21_11	15	n.快门
+61	stutter	21_12	15	v.口吃
+61	sputter	21_12	15	v.溅射
+61	supper	21_12	15	n.晚餐
+61	hubby	21_12	15	n.老公
+61	stubby	21_12	15	adj.断株一般的
+61	grubby	21_12	15	adj.肮脏的
+61	dummy	21_12	15	adj.假的
+61	yummy	21_12	15	adj.美味的
+61	sunny	21_12	15	adj.阳光充足的
+61	bunny	21_12	15	n.兔子
+62	rugby	21_13	15	n.橄榄球
+62	puzzle	21_13	15	n.难题
+62	number	21_13	15	n.数字
+62	lucky	21_13	15	adj.幸运的
+62	ugly	21_13	15	adj.丑陋的
+62	practice	21_13	15	n.练习
+62	brandy	21_13	15	n.白兰地酒
+62	candy	21_13	15	n.糖果
+62	story	21_13	15	n.故事
+62	celery	21_13	15	n.芹菜
+63	carrot	21_14	15	n.胡萝卜
+63	eggplant	21_14	15	n.茄子
+63	tennis	21_14	15	n.网球
+63	tiger	21_14	15	n.老虎
+63	robot	21_14	15	n.机器人
+63	donkey	21_14	15	n.驴子
+63	different	21_14	15	adj.不同的
+63	study	21_14	15	vi.学习
+63	Internet	21_14	15	n.因特网
+63	message	21_14	15	n.消息
+64	sister	21_15	15	n.姐妹
+64	think	21_15	15	vt.想
+64	thunder	21_15	15	n.雷电
+64	merry	21_15	15	adj.欢乐的
+64	thing	21_15	15	n.东西
+64	hurry	21_15	15	n.骚乱
+64	hunter	21_15	15	n.猎人
+64	hospital	21_15	15	n.医院
+64	handicraft	21_15	15	n.手工艺
+64	happy	21_15	15	adj.快乐的

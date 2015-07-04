@@ -296,13 +296,29 @@ function ChapterLayerBase:plotDecoration()
                 end
 
                 unitText:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2+10)
-                lock:addChild(unitText, 130)
-
+                if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
+                and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
+                and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
+                and s_CURRENT_USER.bookKey ~= 'ielts' then
+                    lock:addChild(unitText, 130)
+                end
                 if #unitName == 1 then
-                    local number = cc.Label:createWithSystemFont(''..unitName[1],'',35)
-                    number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-20)
-                    number:setColor(cc.c3b(164, 125, 46))
-                    lock:addChild(number, 130)
+                    if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
+                    and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
+                    and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
+                    and s_CURRENT_USER.bookKey ~= 'ielts' then
+                        local number = cc.Label:createWithSystemFont(''..unitName[1],'',35)
+                        number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-20)
+                        number:setColor(cc.c3b(164, 125, 46))
+                        lock:addChild(number, 130)
+                    else
+                        local number = cc.Label:createWithSystemFont(''..unitName[1],'',43)
+                        number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2)
+                        number:setColor(cc.c3b(164, 125, 46))
+                        lock:addChild(number, 130)
+                    end
+                    
+                    
                 else
                     if s_CURRENT_USER.bookKey == 'kwekwe' and #unitName > 1 and unitName[1] - 21 == 0 then
                     -- if true then
@@ -352,16 +368,32 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
             unitText = cc.Sprite:create('image/chapter/realword.png')
         end
         unitText:setPosition(levelPosition.x-5, levelPosition.y + 35)
-        self:addChild(unitText, 130)
-        
+
+        if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
+            and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
+            and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
+            and s_CURRENT_USER.bookKey ~= 'ielts' then
+            self:addChild(unitText, 130)
+        end
         -- test 
         -- local unitName = split("3",'_')
+        print('unitName:'..#unitName)
+        print_lua_table(unitName)
         if #unitName == 1 then
             local number = ccui.TextBMFont:create()
             number:setFntFile('font/number_inclined.fnt')
             number:setString(unitName[1])
             number:setScale(0.85)
-            number:setPosition(levelPosition.x-5, levelPosition.y-10)
+
+            if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
+                and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
+                and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
+                and s_CURRENT_USER.bookKey ~= 'ielts' then
+                    number:setPosition(levelPosition.x-5, levelPosition.y-13)
+            else
+                number:setPosition(levelPosition.x-5, levelPosition.y)
+            end
+            -- number:setPosition(levelPosition.x-5, levelPosition.y-10)
             self:addChild(number,130)
         else
             -- local tag = cc.Label:createWithSystemFont('( )','',38)
@@ -375,7 +407,16 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
                 number2:setFntFile('font/number_inclined.fnt')
                 number2:setString(unitName[2])
                 number2:setScale(0.8)
-                number2:setPosition(levelPosition.x, levelPosition.y-13)
+
+                if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
+                and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
+                and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
+                and s_CURRENT_USER.bookKey ~= 'ielts' then
+                    number2:setPosition(levelPosition.x, levelPosition.y-13)
+                else
+                    number2:setPosition(levelPosition.x, levelPosition.y)
+                end
+                
                 self:addChild(number2,130)
             else
                 local number1 = ccui.TextBMFont:create()
