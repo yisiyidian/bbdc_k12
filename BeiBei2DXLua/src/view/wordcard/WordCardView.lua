@@ -85,7 +85,7 @@ function WordCardView:resetView()
 	-- 显示的单词
 	self.meaningList = {}
 	for i=1,#self.wordList do
-		local temp = s_LocalDatabaseManager.getWordInfoFromWordName(self.wordList[i]).wordMeaningSmall
+		local temp = s_BookUnitWordMeaning[s_CURRENT_USER.bookKey][tostring(self.islandIndex)][self.wordList[i]]
 		self.meaningList[#self.meaningList + 1] = temp
 	end
 	-- 显示的释义

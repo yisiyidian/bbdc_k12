@@ -184,11 +184,11 @@ function DataManager.loadK12Books()
                     -- table.insert(bookUnitWord[bookName[i]][unit_word[1]], unit_word[2])
                 end
             end
-            print(bookName[i]..'\t'..(word_count-1))
+            -- print(bookName[i]..'\t'..(word_count-1))
             -- print_lua_table(bookUnitWord[bookName[i]])
         end
-    print('----------test word meaning----------')
-    print_lua_table(bookWordMeaning)
+    -- print('----------test word meaning----------')
+    -- print_lua_table(bookWordMeaning)
     return bookUnitWord,bookWordMeaning
 end
 
