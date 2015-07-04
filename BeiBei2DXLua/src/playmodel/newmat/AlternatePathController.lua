@@ -1,16 +1,28 @@
+-- 由于个人水平有限，这个控制器不一定能生成第二条路径
+-- by侯琪
+-- 另一条路径的控制器
 local AlternatePathController = class("AlternatePathController")
 
+-- 初始路径，这里载入的是第一条路径控制器生成的结果
 AlternatePathController.originalpath = {}
+
+-- 结果路径，这里生成最后的结果
 AlternatePathController.alternatepath = {}
 
+-- 获取路径
 function AlternatePathController:getPath(path)
+	-- 初始化原始路径
 	AlternatePathController.originalpath = path
+	-- 初始化结果路径
 	AlternatePathController.alternatepath = {}
 	-- print("初始序列1")
 	-- print_lua_table(AlternatePathController.originalpath)
 
+	-- 获取路径的长度
 	local length = #AlternatePathController.originalpath
+	-- 路径只取一半
 	AlternatePathController.halfLength = math.floor(length/2)
+	
 	if AlternatePathController.halfLength == 0 or AlternatePathController.halfLength >= 8 then
 		return {}
 	end
