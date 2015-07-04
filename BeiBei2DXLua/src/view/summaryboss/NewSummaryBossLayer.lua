@@ -179,10 +179,10 @@ function NewSummaryBossLayer:initWordList()
     end
     print_lua_table(self.unit.wrongWordList)
     for i = 1,#self.unit.wrongWordList do
-        local list = split(self.unit.wrongWordList[i],'|')
+        local list = split(self.unit.wrongWordList[i],' ')
         print_lua_table(list)
         wordList[i] = {}
-        --wordList[i][1]表示这个词组的第一个单词，如果不是词组则取单词本身，【2】表示词组剩余部分,[3]表示词组以空格分隔，【4】表示词组以|分隔
+        --wordList[i][1]表示这个词组的第一个单词，如果不是词组则取单词本身，【2】表示词组剩余部分,[3]表示词组以空格分隔，【4】表示词组以 分隔
         local temp = split(list[1],'-')
         wordList[i][1] = temp[1]
 
