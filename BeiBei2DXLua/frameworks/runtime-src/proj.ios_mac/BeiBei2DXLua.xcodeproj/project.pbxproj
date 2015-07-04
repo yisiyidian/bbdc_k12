@@ -1285,8 +1285,8 @@
 					"-ObjC",
 					"-fobjc-arc",
 				);
-				PROVISIONING_PROFILE = "949140dc-e6df-4c03-a3c4-a2bfb456d65b";
-				"PROVISIONING_PROFILE[sdk=*]" = "ff40c5cb-db2b-4b96-a496-9d6da6a21705";
+				PROVISIONING_PROFILE = "844e77e5-bba6-406d-bb56-e2b464e8f984";
+				"PROVISIONING_PROFILE[sdk=*]" = "844e77e5-bba6-406d-bb56-e2b464e8f984";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../cocos2d-x/cocos/platform/ios";
@@ -1321,8 +1321,8 @@
 					"-ObjC",
 					"-fobjc-arc",
 				);
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=*]" = "60e26f9e-2393-4699-b377-e0df64389ef7";
+				PROVISIONING_PROFILE = "b3766bb0-c662-4665-b301-def564a0ced4";
+				"PROVISIONING_PROFILE[sdk=*]" = "b3766bb0-c662-4665-b301-def564a0ced4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../cocos2d-x/cocos/platform/ios";

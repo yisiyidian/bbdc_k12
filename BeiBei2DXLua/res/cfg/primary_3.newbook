@@ -1,121 +1,121 @@
-1	window	1_1	3
-1	board	1_1	3
-1	light	1_1	3
-1	picture	1_1	3
-1	door	1_1	3
-1	floor	1_1	3
-1	classroom	1_1	3
-1	many	1_1	3
-2	our	1_2	3
-2	classmate	1_2	3
-2	fan	1_2	3
-2	wall	1_2	3
-2	seat	1_2	3
-2	near	1_2	3
-2	what	1_2	3
-2	in	1_2	3
-3	have	1_3	3
-3	new	1_3	3
-3	go	1_3	3
-3	where	1_3	3
-3	computer	1_3	3
-3	you	1_3	3
-3	see	1_3	3
-3	me	1_3	3
-3	the	1_3	3
-4	pencil	2_1	1
-4	fifty	2_1	1
-4	fat	2_1	1
-4	notebook	2_1	1
-4	heavy	2_1	1
-4	sorry	2_1	1
-5	strong	3_1	2
-5	thin	3_1	2
-5	quiet	3_1	2
-5	his	3_1	2
-5	like	3_1	2
-5	he	3_1	2
-5	student	3_1	2
-5	science	3_1	2
-5	her	3_1	2
-5	painting	3_1	2
-6	photo	3_2	2
-6	right	3_2	2
-6	girl	3_2	2
-6	name	3_2	2
-6	teacher	3_2	2
-6	music	3_2	2
-6	she	3_2	2
-6	boy	3_2	2
-6	friend	3_2	2
-7	study	4_1	3
-7	bedroom	4_1	3
-7	kitchen	4_1	3
-7	fish	4_1	3
-7	bathroom	4_1	3
-7	home	4_1	3
-7	school	4_1	3
-7	classroom	4_1	3
-7	bed	4_1	3
-8	fridge	4_2	3
-8	they	4_2	3
-8	key	4_2	3
-8	please	4_2	3
-8	no	4_2	3
-8	desk	4_2	3
-8	chair	4_2	3
-8	hey	4_2	3
-8	room	4_2	3
-9	phone	4_3	3
-9	sofa	4_3	3
-9	look	4_3	3
-9	open	4_3	3
-9	on	4_3	3
-9	shelf	4_3	3
-9	door	4_3	3
-9	bed	4_3	3
-10	rice	5_1	3
-10	vegetable	5_1	3
-10	have	5_1	3
-10	wait	5_1	3
-10	milk	5_1	3
-10	water	5_1	3
-10	for	5_1	3
-10	dinner	5_1	3
-10	plate	5_1	3
-11	help	5_2	3
-11	ready	5_2	3
-11	help	5_2	3
-11	show	5_2	3
-11	food	5_2	3
-11	chicken	5_2	3
-11	fish	5_2	3
-11	soup	5_2	3
-11	beef	5_2	3
-12	egg	5_3	3
-12	hungry	5_3	3
-12	bread	5_3	3
-12	knife	5_3	3
-12	fork	5_3	3
-12	pass	5_3	3
-12	try	5_3	3
-12	use	5_3	3
-12	yummy	5_3	3
-13	family	6_1	2
-13	uncle	6_1	2
-13	baby	6_1	2
-13	member	6_1	2
-13	only	6_1	2
-13	puppy	6_1	2
-13	come	6_1	2
-13	sister	6_1	2
-13	driver	6_1	2
-14	farmer	6_2	2
-14	look	6_2	2
-14	aunt	6_2	2
-14	people	6_2	2
-14	who	6_2	2
-14	brother	6_2	2
-14	doctor	6_2	2
-14	nurse	6_2	2
-14	young	6_2	2
+1	window	1_1	3	n.窗户
+1	board	1_1	3	n.木板
+1	light	1_1	3	n.光
+1	picture	1_1	3	n.图画
+1	door	1_1	3	n.门
+1	floor	1_1	3	n.地板
+1	classroom	1_1	3	n.教室
+1	many	1_1	3	n.许多
+2	our	1_2	3	pron.我们的
+2	classmate	1_2	3	n.同班同学
+2	fan	1_2	3	n.风扇
+2	wall	1_2	3	n.墙壁
+2	seat	1_2	3	n.位子
+2	near	1_2	3	prep.靠近
+2	what	1_2	3	pron.什么
+2	in	1_2	3	prep.在...之内
+3	have	1_3	3	v.有
+3	new	1_3	3	adj.新的
+3	go	1_3	3	vi.去
+3	where	1_3	3	adv.哪里
+3	computer	1_3	3	n.计算机
+3	you	1_3	3	pron.你
+3	see	1_3	3	vt.看见
+3	me	1_3	3	pron.我(宾格)
+3	the	1_3	3	art.这(那)
+4	pencil	2_1	1	n.铅笔
+4	fifty	2_1	1	num.五十
+4	fat	2_1	1	adj.肥胖的
+4	notebook	2_1	1	n.笔记本
+4	heavy	2_1	1	adj.重的
+4	sorry	2_1	1	adj.对不起的
+5	strong	3_1	2	adj.强壮的
+5	thin	3_1	2	adj.瘦的
+5	quiet	3_1	2	adj.安静的
+5	his	3_1	2	pron.他的
+5	like	3_1	2	vt.&vi.喜欢
+5	he	3_1	2	pron.他
+5	student	3_1	2	n.学生
+5	science	3_1	2	n.科学
+5	her	3_1	2	pron.她的
+5	painting	3_1	2	n.水彩画
+6	photo	3_2	2	n.照片
+6	right	3_2	2	adj.正确的
+6	girl	3_2	2	n.女孩
+6	name	3_2	2	n.名字
+6	teacher	3_2	2	n.教师
+6	music	3_2	2	n.音乐
+6	she	3_2	2	pron.她
+6	boy	3_2	2	n.男孩
+6	friend	3_2	2	n.朋友
+7	study	4_1	3	vi.学习
+7	bedroom	4_1	3	n.卧室
+7	kitchen	4_1	3	n.厨房
+7	fish	4_1	3	n.鱼
+7	bathroom	4_1	3	n.浴室
+7	home	4_1	3	n.家
+7	school	4_1	3	n.学校
+7	classroom	4_1	3	n.教室
+7	bed	4_1	3	n.床
+8	fridge	4_2	3	n.电冰箱
+8	they	4_2	3	pron.他们
+8	key	4_2	3	n.钥匙
+8	please	4_2	3	int.请
+8	no	4_2	3	n.不
+8	desk	4_2	3	n.书桌
+8	chair	4_2	3	n.椅子
+8	hey	4_2	3	int.嗨
+8	room	4_2	3	n.房间
+9	phone	4_3	3	n.电话
+9	sofa	4_3	3	n.沙发
+9	look	4_3	3	n.看
+9	open	4_3	3	vt.打开
+9	on	4_3	3	prep.在...之上
+9	shelf	4_3	3	n.架子
+9	door	4_3	3	n.门
+9	bed	4_3	3	n.床
+10	rice	5_1	3	n.米
+10	vegetable	5_1	3	adj.蔬菜的
+10	have	5_1	3	v.有
+10	wait	5_1	3	vt.&vi.等候
+10	milk	5_1	3	n.奶
+10	water	5_1	3	n.水
+10	for	5_1	3	prep.为
+10	dinner	5_1	3	n.主餐
+10	plate	5_1	3	n.盘
+11	help	5_2	3	vt.&vi.帮助
+11	ready	5_2	3	adj.准备好的
+11	help	5_2	3	vt.&vi.帮助
+11	show	5_2	3	v.展现
+11	food	5_2	3	n.食物
+11	chicken	5_2	3	n.鸡
+11	fish	5_2	3	n.鱼
+11	soup	5_2	3	n.汤
+11	beef	5_2	3	n.牛肉
+12	egg	5_3	3	n.蛋
+12	hungry	5_3	3	adj.饥饿的
+12	bread	5_3	3	n.面包
+12	knife	5_3	3	n.刀
+12	fork	5_3	3	n.叉
+12	pass	5_3	3	vt.&vi.通过
+12	try	5_3	3	n.尝试
+12	use	5_3	3	n.运用
+12	yummy	5_3	3	adj.美味的
+13	family	6_1	2	n.家庭主妇
+13	uncle	6_1	2	n.叔
+13	baby	6_1	2	n.婴儿
+13	member	6_1	2	n.成员
+13	only	6_1	2	adv.仅仅
+13	puppy	6_1	2	n.小狗
+13	come	6_1	2	vi.来
+13	sister	6_1	2	n.姐妹
+13	driver	6_1	2	n.驾驶员
+14	farmer	6_2	2	n.农夫
+14	look	6_2	2	n.看
+14	aunt	6_2	2	n.姨
+14	people	6_2	2	n.人们
+14	who	6_2	2	pron.谁
+14	brother	6_2	2	n.兄弟
+14	doctor	6_2	2	n.医生
+14	nurse	6_2	2	n.护士
+14	young	6_2	2	adj.年轻的

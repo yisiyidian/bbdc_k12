@@ -73,9 +73,10 @@ function BookLayer.create(education)
     
     local rect_table = {'senior_1','senior_2','senior_3','senior_4','senior_5','senior_6','senior_7','senior_8','senior_9','senior_10','senior_11'
                       ,'cet4','cet6','pro4','pro8','gse'
-                      ,'gre','gmat','sat','toefl','ielts'}
-    if grade[1] == 'kwekwe' then
-        grade[1] = 'primary'
+                      ,'gre','gmat','sat','toefl','ielts'
+                      ,'houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'}
+    if grade[1] == 'kwekwe' or grade[1] == 'houhai' then
+        grade[1] = 'more'
     elseif grade[1] == 'cet4' or grade[1] == 'cet6' or grade[1] == 'pro4' or grade[1] == 'pro8' or grade[1] == 'gse' then
         grade[1] = 'college'
     elseif grade[1] == 'gre' or grade[1] == 'gmat' or grade[1] == 'sat' or grade[1] == 'toefl' or grade[1] == 'ielts' then
@@ -83,7 +84,7 @@ function BookLayer.create(education)
     end
     local key_array = {}
     if grade[1] == 'primary' then
-        key_array = {'kwekwe','primary_1','primary_2','primary_3','primary_4','primary_5','primary_6','primary_7','primary_8'}
+        key_array = {'primary_1','primary_2','primary_3','primary_4','primary_5','primary_6','primary_7','primary_8'}
     elseif grade[1] == 'junior' then
         key_array = {'junior_1','junior_2','junior_3','junior_4','junior_5'}
     elseif grade[1] == 'senior' then
@@ -91,7 +92,7 @@ function BookLayer.create(education)
     elseif grade[1] == 'college' then
         key_array = {'cet4','cet6','pro4','pro8','gse'}
     elseif grade[1] == 'more' then
-        key_array = {'gre','gmat','sat','toefl','ielts'}
+        key_array = {'gre','gmat','sat','toefl','ielts','kwekwe','kwekwe_2','kwekwe_3','houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'}
     else 
         key_array = split(s_CURRENT_USER.bookList,'|')
     end

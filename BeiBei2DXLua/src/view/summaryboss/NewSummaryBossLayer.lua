@@ -13,12 +13,6 @@ end
 function NewSummaryBossLayer:ctor(unit)
     if unit == 0 then
         AnalyticsSummaryStep(s_summary_enterTryGame)
-    elseif s_CURRENT_USER.summaryStep < s_summary_enterFirstLevel then
-        s_CURRENT_USER:setSummaryStep(s_summary_enterFirstLevel)
-        AnalyticsSummaryStep(s_summary_enterFirstLevel)
-    elseif s_CURRENT_USER.summaryStep < s_summary_enterSecondLevel then
-        s_CURRENT_USER:setSummaryStep(s_summary_enterSecondLevel)
-        AnalyticsSummaryStep(s_summary_enterSecondLevel)
     end
     --s_SCENE:removeAllPopups()
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -165,6 +159,8 @@ function NewSummaryBossLayer:initStageInfo(unit)
     self.tutorialStep = 0
     if s_CURRENT_USER.needBossSlideTutorial == 1 then
         self.tutorialStep = 2
+    else
+        self.newguid = true
     end
 end
 
@@ -187,15 +183,38 @@ function NewSummaryBossLayer:initWordList()
         print_lua_table(list)
         wordList[i] = {}
         --wordList[i][1]表示这个词组的第一个单词，如果不是词组则取单词本身，【2】表示词组剩余部分,[3]表示词组以空格分隔，【4】表示词组以|分隔
-        wordList[i][1] = list[1]
-        wordList[i][2] = ''
-        if #list > 1 then
-            for j = 2,#list do
-              wordList[i][2] = wordList[i][2]..' '..list[j]
-            end  
+        local temp = split(list[1],'-')
+        wordList[i][1] = temp[1]
+
+        if temp[1] == self.unit.wrongWordList[i] then 
+            -- 这是单词
+            wordList[i][1] = temp[1]
+            wordList[i][2] = ""
+        elseif temp[1] == list[1] then
+            -- 词组，不带－
+            wordList[i][1] = temp[1]
+            wordList[i][2] = ""
+            for k,v in pairs(list) do
+                if k >= 2 then
+                    wordList[i][2] = " ".. wordList[i][2]..list[k]
+                end
+            end
         else
-            wordList[i][2] = ''
+            -- 词组，带－
+            wordList[i][1] = temp[1]
+            wordList[i][2] = ""
+            for k,v in pairs(temp) do
+                if k >= 2 then
+                    wordList[i][2] = "-".. wordList[i][2]..temp[k]
+                end
+            end
+            for k,v in pairs(list) do
+                if k >= 2 then
+                    wordList[i][2] = " ".. wordList[i][2]..list[k]
+                end
+            end
         end
+
         wordList[i][3] = wordList[i][1]..wordList[i][2]
         wordList[i][4] = self.unit.wrongWordList[i]
         list = nil
@@ -370,7 +389,7 @@ function NewSummaryBossLayer:initMat(visible)
         end
         --self:initGuideInfo()
         self.changeBtnTime = 0
-        if s_CURRENT_USER.summaryStep < s_summary_doFirstWord then
+        if s_CURRENT_USER.summaryStep < s_summary_doFirstWord and self.isTrying ~= true then
             s_CURRENT_USER:setSummaryStep(s_summary_doFirstWord)
             AnalyticsSummaryStep(s_summary_doFirstWord)
         end
@@ -426,7 +445,11 @@ function NewSummaryBossLayer:initMat(visible)
             end,{})
             bullet:runAction(cc.Sequence:create(delay,hit,attacked,hide))
         end
-        --更换mat
+        --更换mat                
+        if s_CURRENT_USER.summaryStep < s_summary_successFirstLevel and self.isTrying ~= true then
+            s_CURRENT_USER:setSummaryStep(s_summary_successFirstLevel)
+            AnalyticsSummaryStep(s_summary_successFirstLevel)
+        end
         s_SCENE:callFuncWithDelay(0.2 *math.pow(#stack,0.8) + 0.5,function ()
             --print('self.currentBlood',self.currentBlood)
             if self.currentBlood > 0 then
@@ -437,10 +460,6 @@ function NewSummaryBossLayer:initMat(visible)
                 self:resetMat()
             else
                 self:gameOverFunc(true)
-                if s_CURRENT_USER.summaryStep < s_summary_successFirstLevel then
-                    s_CURRENT_USER:setSummaryStep(s_summary_successFirstLevel)
-                    AnalyticsSummaryStep(s_summary_successFirstLevel)
-                end
             end
         end)
 	end
@@ -492,6 +511,7 @@ function NewSummaryBossLayer:addChangeBtn()
     local function changeWord(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
             playWordSound(self.wordList[1][4])
+            self.ishited = true
             if self.hintChangeBtn ~= nil and self.hintChangeBtn.hintOver ~= nil then
                 self.hintChangeBtn.hintOver()
                 self.hintChangeBtn = nil

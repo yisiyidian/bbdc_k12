@@ -171,6 +171,9 @@ function DownloadSoundController:beginSoundDownloadUpdate()
     end
     
     self.am = self:initAssetsManagerByBookType(storagePath)
+    if self.am == nil then
+        return
+    end
     self.am:retain()
     
     print("Booksound storagePath is "..storagePath)

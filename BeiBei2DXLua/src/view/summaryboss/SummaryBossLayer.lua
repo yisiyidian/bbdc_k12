@@ -538,7 +538,7 @@ function SummaryBossLayer.create(wordList,type,entrance)
         end
 
         -- error handle
-        if lastTouchLocation == nil then 
+        if lastTouchLocation == nil then
             saveLuaErrorToServer('view/summaryboss/SummaryBossLayer.luac; lastTouchLocation is nil;')
             lastTouchLocation = location 
         end

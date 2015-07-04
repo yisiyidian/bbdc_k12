@@ -1,64 +1,64 @@
-1	pen	1_1	1
-1	pencil	1_1	1
-1	ruler	1_1	1
-1	eraser	1_1	1
-1	crayon	1_1	1
-1	bag	1_1	1
-1	school	1_1	1
-2	head	2_1	1
-2	face	2_1	1
-2	nose	2_1	1
-2	mouth	2_1	1
-2	eye	2_1	1
-2	ear	2_1	1
-2	arm	2_1	1
-2	finger	2_1	1
-2	leg	2_1	1
-2	foot	2_1	1
-2	body	2_1	1
-3	red	3_1	1
-3	yellow	3_1	1
-3	green	3_1	1
-3	blue	3_1	1
-3	purple	3_1	1
-3	white	3_1	1
-3	black	3_1	1
-3	pink	3_1	1
-3	brown	3_1	1
-4	cat	4_1	1
-4	dog	4_1	1
-4	monkey	4_1	1
-4	panda	4_1	1
-4	rabbit	4_1	1
-4	duck	4_1	1
-4	pig	4_1	1
-4	bird	4_1	1
-4	bear	4_1	1
-4	elephant	4_1	1
-4	mouse	4_1	1
-4	squirrel	4_1	1
-5	cake	5_1	1
-5	hamburger	5_1	1
-5	milk	5_1	1
-5	coffee	5_1	1
-5	chicken	5_1	1
-5	bread	5_1	1
-5	juice	5_1	1
-5	water	5_1	1
-5	tea	5_1	1
-6	one	6_1	2
-6	five	6_1	2
-6	nine	6_1	2
-6	doll	6_1	2
-6	two	6_1	2
-6	six	6_1	2
-6	ten	6_1	2
-6	boat	6_1	2
-7	kite	6_2	2
-7	balloon	6_2	2
-7	three	6_2	2
-7	seven	6_2	2
-7	car	6_2	2
-7	ball	6_2	2
-7	four	6_2	2
-7	eight	6_2	2
+1	pen	1_1	1	n.钢笔
+1	pencil	1_1	1	n.铅笔
+1	ruler	1_1	1	n.尺子
+1	eraser	1_1	1	n.橡皮擦
+1	crayon	1_1	1	n.蜡笔
+1	bag	1_1	1	n.包
+1	school	1_1	1	n.学校
+2	head	2_1	1	n.头脑
+2	face	2_1	1	n.脸
+2	nose	2_1	1	n.鼻子
+2	mouth	2_1	1	n.嘴
+2	eye	2_1	1	n.眼睛
+2	ear	2_1	1	n.耳朵
+2	arm	2_1	1	n.手臂
+2	finger	2_1	1	n.手指
+2	leg	2_1	1	n.腿
+2	foot	2_1	1	n.脚
+2	body	2_1	1	n.身体
+3	red	3_1	1	adj.红色的
+3	yellow	3_1	1	adj.黄色的
+3	green	3_1	1	adj.绿色的
+3	blue	3_1	1	adj.蓝色的
+3	purple	3_1	1	adj.紫色的
+3	white	3_1	1	adj.白色的
+3	black	3_1	1	adj.黑（色）的
+3	pink	3_1	1	adj.粉红色的
+3	brown	3_1	1	adj.棕色的
+4	cat	4_1	1	n.猫
+4	dog	4_1	1	n.狗
+4	monkey	4_1	1	n.猴子
+4	panda	4_1	1	n.熊猫
+4	rabbit	4_1	1	n.兔子
+4	duck	4_1	1	n.鸭
+4	pig	4_1	1	n.猪
+4	bird	4_1	1	n.鸟
+4	bear	4_1	1	n.熊
+4	elephant	4_1	1	n.大象
+4	mouse	4_1	1	n.老鼠
+4	squirrel	4_1	1	n.松鼠
+5	cake	5_1	1	n.蛋糕
+5	hamburger	5_1	1	n.汉堡包
+5	milk	5_1	1	n.奶
+5	coffee	5_1	1	n.咖啡
+5	chicken	5_1	1	n.鸡
+5	bread	5_1	1	n.面包
+5	juice	5_1	1	n.果汁
+5	water	5_1	1	n.水
+5	tea	5_1	1	n.茶
+6	one	6_1	2	n.一
+6	five	6_1	2	num.五
+6	nine	6_1	2	num.&n.九
+6	doll	6_1	2	n.玩具娃娃
+6	two	6_1	2	num.二
+6	six	6_1	2	n.六
+6	ten	6_1	2	num.十
+6	boat	6_1	2	n.船
+7	kite	6_2	2	n.风筝
+7	balloon	6_2	2	n.气球
+7	three	6_2	2	num.三
+7	seven	6_2	2	num.七
+7	car	6_2	2	n.小汽车
+7	ball	6_2	2	n.球
+7	four	6_2	2	num.四
+7	eight	6_2	2	num.八

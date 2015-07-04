@@ -382,7 +382,9 @@ function applicationWillEnterForeground()
 end
 
 function applicationDidEnterBackgroundLua()
-    Analytics_applicationDidEnterBackground( s_SCENE.currentGameLayerName )
+    if s_SCENE ~= nil then
+        Analytics_applicationDidEnterBackground( s_SCENE.currentGameLayerName )
+    end
 end
 
 function AppScene:checkInAnimation()

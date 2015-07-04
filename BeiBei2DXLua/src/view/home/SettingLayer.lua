@@ -16,7 +16,7 @@ end)
 function SettingLayer:ctor(homeLayer)
 --function SettingLayer:ctor()
   self.homeLayer = homeLayer --HomeLayer的引用
- 	self.logo_name = {"book","information","logout"}
+ 	self.logo_name = {"book","information"}
  	self.btns = {} --列表按钮集合
  	self.offset = 500
 	self:initUI()
@@ -121,11 +121,11 @@ function SettingLayer:updateView()
     if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
     	--非游客登录
         -- self.username = s_CURRENT_USER:getNameForDisplay()
-        self.label_name = {"选择书籍","查看个人信息","切换帐号"}
+        self.label_name = {"选择书籍","查看个人信息"}
     else
     	--游客登录
 	    -- self.username = "游客"
-   		self.label_name = {"选择书籍","完善个人信息","切换帐号"}
+   		self.label_name = {"选择书籍","完善个人信息"}
     end
     --清空列表
     for _,b in pairs(self.btns) do
@@ -270,7 +270,7 @@ function SettingLayer:onFollowTouch( sender,eventType )
     closeButton:addTouchEventListener(close_button_clicked)
     back:addChild(closeButton)
 
-    local label2 = cc.Label:createWithSystemFont("V2.1.4","",25)
+    local label2 = cc.Label:createWithSystemFont("V2.1.3","",25)
     label2:setColor(cc.c4b(36,61,78,255))
     label2:setPosition(back:getContentSize().width/2+45, back:getContentSize().height/2+75)
     info:addChild(label2)

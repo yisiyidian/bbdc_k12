@@ -150,7 +150,8 @@ function HomeLayer:ctor()
 
     --下载音频的按钮
     local status = cx.CXNetworkStatus:getInstance():start()
-    if status == NETWORK_STATUS_WIFI and s_CURRENT_USER.guideStep < s_guide_step_enterLevel then
+
+    if status == NETWORK_STATUS_WIFI and string.find(s_CURRENT_USER.bookList,"|") == nil then
         local downloadSoundButton = DownloadSoundButton.create(top,false)
     else
         local downloadSoundButton = DownloadSoundButton.create(top,true)
@@ -350,7 +351,7 @@ function HomeLayer:ctor()
         if math.floor(s_LocalDatabaseManager.isBuy() / math.pow(10,i-1)) == 1 then
             if i == 1 then
                 self:friendButtonFunc()
-            elseif i == 2 then
+            elseif i == 4 then
                 self.isDataShow = true 
                 self:showDataLayerByItem(3)
                 s_SCENE:removeAllPopups()
@@ -358,7 +359,7 @@ function HomeLayer:ctor()
                 self.isDataShow = true 
                 self:showDataLayerByItem(2)
                 s_SCENE:removeAllPopups()
-            elseif i == 4 then
+            elseif i == 2 then
                 self.isDataShow = true 
                 self:showDataLayerByItem(1)
                 s_SCENE:removeAllPopups()
@@ -382,7 +383,7 @@ function HomeLayer:ctor()
         button_setting:setTouchEnabled(false)
         button_shop:setTouchEnabled(false)
     else
-        s_CURRENT_USER:setGuideStep(s_guide_step_bag7) 
+        s_CURRENT_USER:setGuideStep(s_guide_step_bag6) 
     end
 
     if s_CURRENT_USER.showSettingLayer == 1 then
@@ -582,7 +583,11 @@ function HomeLayer:showFriendView()
         --TODO fix self
         item_popup.update = handler(self,function(...)
             if s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then
-                self:updateSettingLayer()
+                if not tolua.isnull(self) then
+                    if self.updateSettingLayer ~= nil then
+                        self:updateSettingLayer()
+                    end
+                end
             end
         end)
     end
@@ -635,10 +640,11 @@ function HomeLayer:onBtnSettingTouch(sender,eventType)
             self.offlineTipHome.setFalse()
             self.offlineTipFriend.setFalse()
         end
-        local SettingLayer = require("view.home.SettingLayer")
-        local settinglayer = SettingLayer.new()
-        --SetLayerRender:updateView()
-        s_SCENE:popup(settinglayer)
+
+        self:showSettingView()
+        -- local SettingLayer = require("view.home.SettingLayer")
+        -- local settinglayer = SettingLayer.new()
+        -- s_SCENE:popup(settinglayer)
 
         -- if self.viewIndex == 1 then
             -- s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -663,6 +669,12 @@ function HomeLayer:onBtnSettingTouch(sender,eventType)
             -- self.setting_back:runAction(cc.Sequence:create(action2, action3))
         -- end 
     end
+end
+
+function HomeLayer:showSettingView()
+    local SettingLayer = require("view.home.SettingLayer")
+    local settinglayer = SettingLayer.new()
+    s_SCENE:popup(settinglayer)
 end
 
 --切换到好友界面或者商店界面

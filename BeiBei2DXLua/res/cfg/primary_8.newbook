@@ -1,19 +1,19 @@
-1	fever	1_1	1
-1	toothache	1_1	1
-1	headache	1_1	1
-1	sore	1_1	1
-1	throat	1_1	1
-1	cold	1_1	1
-1	matter	1_1	1
-2	tired	2_1	1
-2	angry	2_1	1
-2	nose	2_1	1
-2	excited	2_1	1
-2	happy	2_1	1
-2	sad	2_1	1
-3	last	3_1	1
-3	weekend	3_1	1
-3	hiking	3_1	1
-3	fishing	3_1	1
-4	learned	4_1	1
-4	saw	4_1	1
+1	fever	1_1	1	n.发烧
+1	toothache	1_1	1	n.牙痛
+1	headache	1_1	1	n.头痛
+1	sore	1_1	1	adj.疼痛的
+1	throat	1_1	1	n.喉咙
+1	cold	1_1	1	adj.冷的
+1	matter	1_1	1	n.事件
+2	tired	2_1	1	adj.疲劳的
+2	angry	2_1	1	adj.生气的
+2	nose	2_1	1	n.鼻子
+2	excited	2_1	1	adj.兴奋的
+2	happy	2_1	1	adj.快乐的
+2	sad	2_1	1	adj.悲哀的
+3	last	3_1	1	adj.最后的
+3	weekend	3_1	1	n.周末
+3	hiking	3_1	1	n.徒步旅行
+3	fishing	3_1	1	n.钓鱼
+4	learned	4_1	1	adj.有学问的
+4	saw	4_1	1	vt.&vi.用锯子锯

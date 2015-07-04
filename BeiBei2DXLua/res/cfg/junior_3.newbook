@@ -1,318 +1,318 @@
-1	anyone	1_1	4
-1	anywhere	1_1	4
-1	wonderful	1_1	4
-1	few	1_1	4
-1	most	1_1	4
-1	something	1_1	4
-1	nothing	1_1	4
-1	everyone	1_1	4
-1	myself	1_1	4
-2	yourself	1_2	4
-2	hen	1_2	4
-2	pig	1_2	4
-2	seem	1_2	4
-2	someone	1_2	4
-2	diary	1_2	4
-2	activity	1_2	4
-2	decide	1_2	4
-2	try	1_2	4
-3	bird	1_3	4
-3	bicycle	1_3	4
-3	building	1_3	4
-3	trader	1_3	4
-3	wonder	1_3	4
-3	difference	1_3	4
-3	top	1_3	4
-3	wait	1_3	4
-3	umbrella	1_3	4
-4	wet	1_4	4
-4	below	1_4	4
-4	enough	1_4	4
-4	hungry	1_4	4
-4	as	1_4	4
-4	hill	1_4	4
-4	duck	1_4	4
-4	dislike	1_4	4
-4	central	1_4	4
-4	park	1_4	4
-5	housework	2_1	3
-5	hardly	2_1	3
-5	ever	2_1	3
-5	once	2_1	3
-5	twice	2_1	3
-5	program	2_1	3
-5	full	2_1	3
-5	swing	2_1	3
-5	maybe	2_1	3
-5	least	2_1	3
-5	junk	2_1	3
-6	coffee	2_2	3
-6	health	2_2	3
-6	result	2_2	3
-6	percent	2_2	3
-6	online	2_2	3
-6	television	2_2	3
-6	although	2_2	3
-6	through	2_2	3
-6	mind	2_2	3
-6	body	2_2	3
-6	such	2_2	3
-7	together	2_3	3
-7	die	2_3	3
-7	writer	2_3	3
-7	dentist	2_3	3
-7	magazine	2_3	3
-7	however	2_3	3
-7	than	2_3	3
-7	almost	2_3	3
-7	none	2_3	3
-7	less	2_3	3
-7	point	2_3	3
-8	outgoing	3_1	3
-8	better	3_1	3
-8	loud	3_1	3
-8	quietly	3_1	3
-8	competition	3_1	3
-8	fantastic	3_1	3
-8	which	3_1	3
-8	clearly	3_1	3
-8	win	3_1	3
-8	though	3_1	3
-9	truly	3_2	3
-9	care	3_2	3
-9	serious	3_2	3
-9	mirror	3_2	3
-9	kid	3_2	3
-9	necessary	3_2	3
-9	both	3_2	3
-9	should	3_2	3
-9	reach	3_2	3
-9	hand	3_2	3
-10	touch	3_3	3
-10	heart	3_3	3
-10	fact	3_3	3
-10	break	3_3	3
-10	arm	3_3	3
-10	laugh	3_3	3
-10	share	3_3	3
-10	similar	3_3	3
-10	primary	3_3	3
-10	information	3_3	3
-11	theater	4_1	3
-11	comfortable	4_1	3
-11	screen	4_1	3
-11	close	4_1	3
-11	ticket	4_1	3
-11	worst	4_1	3
-11	worse	4_1	3
-11	song	4_1	3
-11	choose	4_1	3
-11	carefully	4_1	3
-12	reporter	4_2	3
-12	fresh	4_2	3
-12	service	4_2	3
-12	pretty	4_2	3
-12	menu	4_2	3
-12	act	4_2	3
-12	meal	4_2	3
-12	creative	4_2	3
-12	perform	4_2	3
-12	performer	4_2	3
-13	talent	4_3	3
-13	magician	4_3	3
-13	role	4_3	3
-13	winner	4_3	3
-13	prize	4_3	3
-13	everybody	4_3	3
-13	example	4_3	3
-13	poor	4_3	3
-13	seriously	4_3	3
-13	give	4_3	3
-14	sitcom	5_1	3
-14	news	5_1	3
-14	soap	5_1	3
-14	plan	5_1	3
-14	hope	5_1	3
-14	discussion	5_1	3
-14	stand	5_1	3
-14	happen	5_1	3
-14	expect	5_1	3
-14	joke	5_1	3
-15	comedy	5_2	3
-15	action	5_2	3
-15	cartoon	5_2	3
-15	culture	5_2	3
-15	famous	5_2	3
-15	appear	5_2	3
-15	become	5_2	3
-15	rich	5_2	3
-15	successful	5_2	3
-15	might	5_2	3
-16	main	5_3	3
-16	reason	5_3	3
-16	common	5_3	3
-16	film	5_3	3
-16	lose	5_3	3
-16	ready	5_3	3
-16	character	5_3	3
-16	simple	5_3	3
-16	army	5_3	3
-17	computer	6_1	3
-17	cook	6_1	3
-17	doctor	6_1	3
-17	engineer	6_1	3
-17	violinist	6_1	3
-17	driver	6_1	3
-17	pilot	6_1	3
-17	pianist	6_1	3
-17	scientist	6_1	3
-17	college	6_1	3
-17	education	6_1	3
-18	medicine	6_2	3
-18	university	6_2	3
-18	article	6_2	3
-18	send	6_2	3
-18	resolution	6_2	3
-18	team	6_2	3
-18	foreign	6_2	3
-18	able	6_2	3
-18	question	6_2	3
-18	meaning	6_2	3
-18	discuss	6_2	3
-19	promise	6_3	3
-19	beginning	6_3	3
-19	improve	6_3	3
-19	improvement	6_3	3
-19	physical	6_3	3
-19	themselves	6_3	3
-19	hobby	6_3	3
-19	weekly	6_3	3
-19	agree	6_3	3
-19	own	6_3	3
-19	personal	6_3	3
-19	relationship	6_3	3
-20	paper	7_1	4
-20	pollution	7_1	4
-20	pollute	7_1	4
-20	prediction	7_1	4
-20	future	7_1	4
-20	environment	7_1	4
-20	planet	7_1	4
-20	earth	7_1	4
-20	plant	7_1	4
-21	part	7_2	4
-21	peace	7_2	4
-21	sea	7_2	4
-21	sky	7_2	4
-21	astronaut	7_2	4
-21	apartment	7_2	4
-21	rocket	7_2	4
-21	space	7_2	4
-21	human	7_2	4
-22	servant	7_3	4
-22	dangerous	7_3	4
-22	already	7_3	4
-22	factory	7_3	4
-22	believe	7_3	4
-22	disagree	7_3	4
-22	even	7_3	4
-22	shape	7_3	4
-22	fall	7_3	4
-23	inside	7_4	4
-23	possible	7_4	4
-23	impossible	7_4	4
-23	side	7_4	4
-23	probably	7_4	4
-23	during	7_4	4
-23	holiday	7_4	4
-23	word	7_4	4
-24	shake	8_1	3
-24	peel	8_1	3
-24	pour	8_1	3
-24	yogurt	8_1	3
-24	honey	8_1	3
-24	watermelon	8_1	3
-24	pot	8_1	3
-24	add	8_1	3
-24	finally	8_1	3
-25	salt	8_2	3
-25	sugar	8_2	3
-25	cheese	8_2	3
-25	popcorn	8_2	3
-25	corn	8_2	3
-25	machine	8_2	3
-25	dig	8_2	3
-25	hole	8_2	3
-25	sandwich	8_2	3
-26	butter	8_3	3
-26	turkey	8_3	3
-26	lettuce	8_3	3
-26	piece	8_3	3
-26	traditional	8_3	3
-26	autumn	8_3	3
-26	celebrate	8_3	3
-26	mix	8_3	3
-27	pepper	9_1	4
-27	fill	9_1	4
-27	oven	9_1	4
-27	plate	9_1	4
-27	cover	9_1	4
-27	serve	9_1	4
-27	temperature	9_1	4
-27	prepare	9_1	4
-27	preparation	9_1	4
-28	flu	9_2	4
-28	available	9_2	4
-28	until	9_2	4
-28	hang	9_2	4
-28	catch	9_2	4
-28	invite	9_2	4
-28	invitation	9_2	4
-28	accept	9_2	4
-28	refuse	9_2	4
-29	weekday	9_3	4
-29	reply	9_3	4
-29	forward	9_3	4
-29	delete	9_3	4
-29	print	9_3	4
-29	sad	9_3	4
-29	goodbye	9_3	4
-29	glad	9_3	4
-29	glue	9_3	4
-30	without	9_4	4
-30	opening	9_4	4
-30	concert	9_4	4
-30	headmaster	9_4	4
-30	event	9_4	4
-30	guest	9_4	4
-30	calendar	9_4	4
-30	daytime	9_4	4
-31	meeting	10_1	3
-31	video	10_1	3
-31	organize	10_1	3
-31	chocolate	10_1	3
-31	upset	10_1	3
-31	taxi	10_1	3
-31	advice	10_1	3
-31	advise	10_1	3
-31	travel	10_1	3
-31	agent	10_1	3
-32	expert	10_2	3
-32	teenager	10_2	3
-32	normal	10_2	3
-32	unless	10_2	3
-32	certainly	10_2	3
-32	wallet	10_2	3
-32	mile	10_2	3
-32	angry	10_2	3
-32	understanding	10_2	3
-32	careless	10_2	3
-33	mistake	10_3	3
-33	himself	10_3	3
-33	careful	10_3	3
-33	solve	10_3	3
-33	step	10_3	3
-33	trust	10_3	3
-33	experience	10_3	3
-33	halfway	10_3	3
-33	else	10_3	3
+1	anyone	1_1	4	pron.任何人
+1	anywhere	1_1	4	adv.任何地方
+1	wonderful	1_1	4	adj.极好的
+1	few	1_1	4	adj.很少的
+1	most	1_1	4	adv.最
+1	something	1_1	4	pron.某事(物)
+1	nothing	1_1	4	pron.什么也没有
+1	everyone	1_1	4	pron.每人
+1	myself	1_1	4	pron.我自己
+2	yourself	1_2	4	pron.你(们)自己
+2	hen	1_2	4	n.母鸡
+2	pig	1_2	4	n.猪
+2	seem	1_2	4	vi.像是
+2	someone	1_2	4	pron.某人
+2	diary	1_2	4	n.日记
+2	activity	1_2	4	n.活动
+2	decide	1_2	4	vt.&vi.决定
+2	try	1_2	4	n.尝试
+3	bird	1_3	4	n.鸟
+3	bicycle	1_3	4	n.自行车
+3	building	1_3	4	n.建筑物
+3	trader	1_3	4	n.商人
+3	wonder	1_3	4	n.奇迹
+3	difference	1_3	4	n.差异
+3	top	1_3	4	n.顶端
+3	wait	1_3	4	vt.&vi.等候
+3	umbrella	1_3	4	n.伞
+4	wet	1_4	4	adj.湿的
+4	below	1_4	4	adv.在下面
+4	enough	1_4	4	adj.足够的
+4	hungry	1_4	4	adj.饥饿的
+4	as	1_4	4	adv.像
+4	hill	1_4	4	n.小山
+4	duck	1_4	4	n.鸭
+4	dislike	1_4	4	v.不喜欢
+4	central	1_4	4	adj.中心的
+4	park	1_4	4	n.公园
+5	housework	2_1	3	n.家务劳动
+5	hardly	2_1	3	adv.几乎不
+5	ever	2_1	3	adv.曾经
+5	once	2_1	3	adv.一次
+5	twice	2_1	3	adv.两次
+5	program	2_1	3	n.节目(单)
+5	full	2_1	3	adj.满的
+5	swing	2_1	3	n.摇摆
+5	maybe	2_1	3	adv.大概
+5	least	2_1	3	adj.最少的
+5	junk	2_1	3	n.垃圾
+6	coffee	2_2	3	n.咖啡
+6	health	2_2	3	n.健康
+6	result	2_2	3	n.结果
+6	percent	2_2	3	adj.&adv.百分之一
+6	online	2_2	3	n.在线
+6	television	2_2	3	n.电视
+6	although	2_2	3	conj.尽管
+6	through	2_2	3	prep.穿过
+6	mind	2_2	3	n.思想
+6	body	2_2	3	n.身体
+6	such	2_2	3	adj.如此的
+7	together	2_3	3	adv.一起
+7	die	2_3	3	v.死
+7	writer	2_3	3	n.作者
+7	dentist	2_3	3	n.牙科医生
+7	magazine	2_3	3	n.杂志
+7	however	2_3	3	adv.然而
+7	than	2_3	3	conj.比（用于比较级）
+7	almost	2_3	3	adv.几乎
+7	none	2_3	3	pron.没有人
+7	less	2_3	3	adj.更少的
+7	point	2_3	3	n.点
+8	outgoing	3_1	3	adj.对人友好的
+8	better	3_1	3	adj.较好的
+8	loud	3_1	3	adj.大声的
+8	quietly	3_1	3	adj.寂静地
+8	competition	3_1	3	n.比赛
+8	fantastic	3_1	3	adj.极好的
+8	which	3_1	3	pron.哪一个
+8	clearly	3_1	3	adv.清楚地
+8	win	3_1	3	vi.胜利
+8	though	3_1	3	conj.尽管
+9	truly	3_2	3	adv.真实地
+9	care	3_2	3	n.小心
+9	serious	3_2	3	adj.严肃的
+9	mirror	3_2	3	n.镜子
+9	kid	3_2	3	n.小孩
+9	necessary	3_2	3	adj.必需的
+9	both	3_2	3	pron.二者
+9	should	3_2	3	verbauxiliary.应该
+9	reach	3_2	3	vt.到达
+9	hand	3_2	3	n.手
+10	touch	3_3	3	vt.触摸
+10	heart	3_3	3	n.心
+10	fact	3_3	3	n.实际
+10	break	3_3	3	v.打破
+10	arm	3_3	3	n.手臂
+10	laugh	3_3	3	vt.&vi.笑
+10	share	3_3	3	vt.分享
+10	similar	3_3	3	adj.相似的
+10	primary	3_3	3	adj.主要的
+10	information	3_3	3	n.信息
+11	theater	4_1	3	n.剧场
+11	comfortable	4_1	3	adj.舒适的
+11	screen	4_1	3	n.屏幕
+11	close	4_1	3	vt.关
+11	ticket	4_1	3	n.票
+11	worst	4_1	3	adj.最坏的
+11	worse	4_1	3	adj.更坏的
+11	song	4_1	3	n.歌曲
+11	choose	4_1	3	vt.&vi.选择
+11	carefully	4_1	3	adv.小心地
+12	reporter	4_2	3	n.记者
+12	fresh	4_2	3	adj.新鲜的
+12	service	4_2	3	n.服务
+12	pretty	4_2	3	adj.漂亮的
+12	menu	4_2	3	n.菜单
+12	act	4_2	3	vi.行动
+12	meal	4_2	3	n.膳食
+12	creative	4_2	3	adj.创造性的
+12	perform	4_2	3	v.执行
+12	performer	4_2	3	n.表演者
+13	talent	4_3	3	n.才能
+13	magician	4_3	3	n.魔术师
+13	role	4_3	3	n.角色
+13	winner	4_3	3	n.获胜者
+13	prize	4_3	3	n.奖品
+13	everybody	4_3	3	pron.每人
+13	example	4_3	3	n.例子
+13	poor	4_3	3	adj.贫穷的
+13	seriously	4_3	3	adv.严重地
+13	give	4_3	3	vt.&vi.给予
+14	sitcom	5_1	3	n.情景喜剧
+14	news	5_1	3	n.新闻
+14	soap	5_1	3	n.肥皂
+14	plan	5_1	3	n.计划
+14	hope	5_1	3	n.希望
+14	discussion	5_1	3	n.讨论
+14	stand	5_1	3	n.站立
+14	happen	5_1	3	vi.发生
+14	expect	5_1	3	v.期待
+14	joke	5_1	3	n.笑话
+15	comedy	5_2	3	n.喜剧
+15	action	5_2	3	n.行为
+15	cartoon	5_2	3	n.动画片
+15	culture	5_2	3	n.文化
+15	famous	5_2	3	adj.著名的
+15	appear	5_2	3	vi.出现
+15	become	5_2	3	vt.变得
+15	rich	5_2	3	adj.富有的
+15	successful	5_2	3	adj.成功的
+15	might	5_2	3	aux.可能
+16	main	5_3	3	adj.主要的
+16	reason	5_3	3	n.理由
+16	common	5_3	3	adj.共同的
+16	film	5_3	3	n.电影
+16	lose	5_3	3	vt.遗失
+16	ready	5_3	3	adj.准备好的
+16	character	5_3	3	n.个性
+16	simple	5_3	3	adj.简单的
+16	army	5_3	3	n.军队
+17	computer	6_1	3	n.计算机
+17	cook	6_1	3	vi.烧菜
+17	doctor	6_1	3	n.医生
+17	engineer	6_1	3	n.工程师
+17	violinist	6_1	3	n.小提琴手
+17	driver	6_1	3	n.驾驶员
+17	pilot	6_1	3	n.飞行员
+17	pianist	6_1	3	n.钢琴家
+17	scientist	6_1	3	n.科学家
+17	college	6_1	3	n.学院
+17	education	6_1	3	n.教育
+18	medicine	6_2	3	n.药
+18	university	6_2	3	n.大学
+18	article	6_2	3	n.文章
+18	send	6_2	3	vt.寄
+18	resolution	6_2	3	n.决心
+18	team	6_2	3	n.队
+18	foreign	6_2	3	adj.外国的
+18	able	6_2	3	adj.能干的
+18	question	6_2	3	n.问题
+18	meaning	6_2	3	n.意义
+18	discuss	6_2	3	vt.讨论
+19	promise	6_3	3	v.允诺
+19	beginning	6_3	3	n.开始
+19	improve	6_3	3	vt.改进
+19	improvement	6_3	3	n.改进
+19	physical	6_3	3	adj.身体的
+19	themselves	6_3	3	pron.他(她,它)们自己
+19	hobby	6_3	3	n.业余爱好
+19	weekly	6_3	3	n.周刊
+19	agree	6_3	3	vt.同意
+19	own	6_3	3	adj.自己的
+19	personal	6_3	3	adj.私人的
+19	relationship	6_3	3	n.关系
+20	paper	7_1	4	n.纸
+20	pollution	7_1	4	n.污染
+20	pollute	7_1	4	v.弄脏
+20	prediction	7_1	4	n.预言
+20	future	7_1	4	n.未来
+20	environment	7_1	4	n.环境
+20	planet	7_1	4	n.行星
+20	earth	7_1	4	n.地球
+20	plant	7_1	4	n.植物
+21	part	7_2	4	n.部份
+21	peace	7_2	4	n.和平
+21	sea	7_2	4	n.海
+21	sky	7_2	4	n.天空
+21	astronaut	7_2	4	n.宇航员
+21	apartment	7_2	4	n.一套公寓房间
+21	rocket	7_2	4	n.火箭
+21	space	7_2	4	n.空间
+21	human	7_2	4	n.人
+22	servant	7_3	4	n.仆人
+22	dangerous	7_3	4	adj.危险的
+22	already	7_3	4	adv.已经
+22	factory	7_3	4	n.工厂
+22	believe	7_3	4	vi.&vt.相信
+22	disagree	7_3	4	v.不同意
+22	even	7_3	4	adv.甚至
+22	shape	7_3	4	n.形状
+22	fall	7_3	4	v.落下
+23	inside	7_4	4	prep.在...里面
+23	possible	7_4	4	adj.可能的
+23	impossible	7_4	4	adj.不可能的
+23	side	7_4	4	n.旁边
+23	probably	7_4	4	adv.或许
+23	during	7_4	4	prep.在...期间
+23	holiday	7_4	4	n.假期
+23	word	7_4	4	n.词
+24	shake	8_1	3	vi.摇晃
+24	peel	8_1	3	n.皮
+24	pour	8_1	3	vt.&vi.倾泻
+24	yogurt	8_1	3	n.酸奶酪
+24	honey	8_1	3	n.蜂蜜
+24	watermelon	8_1	3	n.西瓜
+24	pot	8_1	3	n.罐
+24	add	8_1	3	vt.&vi.增加
+24	finally	8_1	3	adv.最后
+25	salt	8_2	3	n.盐
+25	sugar	8_2	3	n.糖
+25	cheese	8_2	3	n.奶酪
+25	popcorn	8_2	3	n.爆米花
+25	corn	8_2	3	n.谷物
+25	machine	8_2	3	n.机器
+25	dig	8_2	3	v.挖
+25	hole	8_2	3	n.洞
+25	sandwich	8_2	3	n.三明治
+26	butter	8_3	3	n.黄油
+26	turkey	8_3	3	n.火鸡
+26	lettuce	8_3	3	n.[园艺]生菜
+26	piece	8_3	3	n.片
+26	traditional	8_3	3	adj.传统的
+26	autumn	8_3	3	n.秋季
+26	celebrate	8_3	3	vt.&vi.庆祝
+26	mix	8_3	3	vt.&vi.混合
+27	pepper	9_1	4	n.胡椒粉
+27	fill	9_1	4	vt.装满
+27	oven	9_1	4	n.烤炉
+27	plate	9_1	4	n.盘
+27	cover	9_1	4	v.覆盖
+27	serve	9_1	4	v.服务
+27	temperature	9_1	4	n.温度
+27	prepare	9_1	4	vt.准备
+27	preparation	9_1	4	n.准备
+28	flu	9_2	4	n.流行性感冒
+28	available	9_2	4	adj.可用的
+28	until	9_2	4	prep.直到...为止
+28	hang	9_2	4	vt.悬挂
+28	catch	9_2	4	vt.抓住
+28	invite	9_2	4	vt.邀请
+28	invitation	9_2	4	n.邀请
+28	accept	9_2	4	vt.接受
+28	refuse	9_2	4	vt.&vi.拒绝
+29	weekday	9_3	4	n.工作日
+29	reply	9_3	4	vt.&vi.&n.回答
+29	forward	9_3	4	adv.前进地
+29	delete	9_3	4	vt.删除
+29	print	9_3	4	vt.&vi.打印
+29	sad	9_3	4	adj.悲哀的
+29	goodbye	9_3	4	int.再见
+29	glad	9_3	4	adj.高兴的
+29	glue	9_3	4	n.胶
+30	without	9_4	4	prep.没有
+30	opening	9_4	4	n.开始
+30	concert	9_4	4	n.音乐会
+30	headmaster	9_4	4	n.(中小学的)校长
+30	event	9_4	4	n.大事
+30	guest	9_4	4	n.客人
+30	calendar	9_4	4	n.日历
+30	daytime	9_4	4	n.白天
+31	meeting	10_1	3	n.会议
+31	video	10_1	3	n.录像(机)
+31	organize	10_1	3	vi.组织起来
+31	chocolate	10_1	3	n.巧克力
+31	upset	10_1	3	adj.心烦的
+31	taxi	10_1	3	n.计程车
+31	advice	10_1	3	n.建议
+31	advise	10_1	3	vt.劝告
+31	travel	10_1	3	n.旅行
+31	agent	10_1	3	n.代理人
+32	expert	10_2	3	n.专家
+32	teenager	10_2	3	n.13岁到19岁的年轻人
+32	normal	10_2	3	adj.正常的
+32	unless	10_2	3	conj.除非
+32	certainly	10_2	3	adv.当然
+32	wallet	10_2	3	n.皮夹
+32	mile	10_2	3	n.英里
+32	angry	10_2	3	adj.生气的
+32	understanding	10_2	3	n.理解
+32	careless	10_2	3	adj.粗心的
+33	mistake	10_3	3	n.错误
+33	himself	10_3	3	pron.他自己
+33	careful	10_3	3	adj.小心的
+33	solve	10_3	3	v.解答(难题)
+33	step	10_3	3	n.步骤
+33	trust	10_3	3	vi.信任
+33	experience	10_3	3	n.经验
+33	halfway	10_3	3	adj.中途的
+33	else	10_3	3	adj.别的

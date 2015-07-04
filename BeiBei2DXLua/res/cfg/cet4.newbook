@@ -1,4223 +1,4223 @@
-1	quotation	1_1	1
-1	drama	1_1	1
-1	critical	1_1	1
-2	observer	2_1	1
-2	open	2_1	1
-2	progress	2_1	1
-2	entitle	2_1	1
-2	blank	2_1	1
-2	honourable	2_1	1
-2	single	2_1	1
-2	namely	2_1	1
-2	perfume	2_1	1
-2	matter	2_1	1
-3	lump	3_1	1
-3	thousand	3_1	1
-3	recorder	3_1	1
-3	great	3_1	1
-3	guest	3_1	1
-3	spy	3_1	1
-3	cousin	3_1	1
-3	ambulance	3_1	1
-3	hostess	3_1	1
-3	president	3_1	1
-4	road	4_1	1
-4	disease	4_1	1
-4	overhead	4_1	1
-4	heal	4_1	1
-4	sample	4_1	1
-4	arrive	4_1	1
-4	secretary	4_1	1
-4	union	4_1	1
-4	journey	4_1	1
-4	plane	4_1	1
-5	jealous	5_1	1
-5	twinkle	5_1	1
-5	surname	5_1	1
-5	curious	5_1	1
-5	okay	5_1	1
-5	likewise	5_1	1
-5	stumble	5_1	1
-5	happen	5_1	1
-5	both	5_1	1
-5	focus	5_1	1
-6	history	6_1	1
-6	molecule	6_1	1
-6	difference	6_1	1
-6	suit	6_1	1
-6	seaman	6_1	1
-6	reduce	6_1	1
-6	relax	6_1	1
-6	junior	6_1	1
-6	vigorous	6_1	1
-6	probable	6_1	1
-7	fair	7_1	1
-7	packet	7_1	1
-7	breadth	7_1	1
-7	sixty	7_1	1
-7	then	7_1	1
-7	narrow	7_1	1
-7	ordinary	7_1	1
-7	cost	7_1	1
-7	father	7_1	1
-7	subtract	7_1	1
-8	heel	8_1	1
-8	exciting	8_1	1
-8	aeroplane	8_1	1
-8	lifetime	8_1	1
-8	justify	8_1	1
-8	tube	8_1	1
-8	natural	8_1	1
-8	especially	8_1	1
-8	pocket	8_1	1
-8	atomic	8_1	1
-9	tree	9_1	1
-9	pint	9_1	1
-9	doctor	9_1	1
-9	remind	9_1	1
-9	confident	9_1	1
-9	barrel	9_1	1
-9	scan	9_1	1
-9	shut	9_1	1
-9	incident	9_1	1
-9	hence	9_1	1
-10	digest	10_1	1
-10	director	10_1	1
-10	comparative	10_1	1
-10	fence	10_1	1
-10	finance	10_1	1
-10	pluck	10_1	1
-10	microphone	10_1	1
-10	crude	10_1	1
-10	unwilling	10_1	1
-10	gentleman	10_1	1
-11	employer	11_1	1
-11	chemistry	11_1	1
-11	roller	11_1	1
-11	eliminate	11_1	1
-11	dusk	11_1	1
-11	driver	11_1	1
-11	oblige	11_1	1
-11	laugh	11_1	1
-11	review	11_1	1
-11	service	11_1	1
-12	pioneer	12_1	1
-12	rainy	12_1	1
-12	poem	12_1	1
-12	ill	12_1	1
-12	brim	12_1	1
-12	mask	12_1	1
-12	menu	12_1	1
-12	weekday	12_1	1
-12	examine	12_1	1
-12	crash	12_1	1
-13	unnecessary	13_1	1
-13	objection	13_1	1
-13	really	13_1	1
-13	grape	13_1	1
-13	region	13_1	1
-13	electronics	13_1	1
-13	worry	13_1	1
-13	height	13_1	1
-13	different	13_1	1
-13	infinite	13_1	1
-14	protection	14_1	1
-14	abandon	14_1	1
-14	respectful	14_1	1
-14	cheque	14_1	1
-14	slow	14_1	1
-14	clearly	14_1	1
-14	shortage	14_1	1
-14	yesterday	14_1	1
-14	sensible	14_1	1
-14	southern	14_1	1
-15	reliance	15_1	1
-15	twelve	15_1	1
-15	inner	15_1	1
-15	insert	15_1	1
-15	viewpoint	15_1	1
-15	silent	15_1	1
-15	costly	15_1	1
-15	whisky	15_1	1
-15	demonstrate	15_1	1
-15	possibility	15_1	1
-16	acquire	16_1	1
-16	stair	16_1	1
-16	think	16_1	1
-16	soldier	16_1	1
-16	probably	16_1	1
-16	cancel	16_1	1
-16	stripe	16_1	1
-16	mysterious	16_1	1
-16	rid	16_1	1
-16	household	16_1	1
-17	quality	17_1	1
-17	prove	17_1	1
-17	specialist	17_1	1
-17	eight	17_1	1
-17	widely	17_1	1
-17	diligent	17_1	1
-17	move	17_1	1
-17	fare	17_1	1
-17	grave	17_1	1
-17	nest	17_1	1
-18	disadvantage	18_1	1
-18	guess	18_1	1
-18	leisure	18_1	1
-18	across	18_1	1
-18	mechanics	18_1	1
-18	snow	18_1	1
-18	woollen	18_1	1
-18	wit	18_1	1
-18	accent	18_1	1
-18	absolutely	18_1	1
-19	romantic	19_1	1
-19	date	19_1	1
-19	succeed	19_1	1
-19	list	19_1	1
-19	lever	19_1	1
-19	sake	19_1	1
-19	basis	19_1	1
-19	apple	19_1	1
-19	singer	19_1	1
-19	fellow	19_1	1
-20	palm	20_1	1
-20	waiter	20_1	1
-20	oar	20_1	1
-20	dependent	20_1	1
-20	wealth	20_1	1
-20	pacific	20_1	1
-20	else	20_1	1
-20	procession	20_1	1
-20	cathedral	20_1	1
-20	existence	20_1	1
-21	tractor	21_1	1
-21	exterior	21_1	1
-21	devise	21_1	1
-21	eastern	21_1	1
-21	sixteen	21_1	1
-21	radiation	21_1	1
-21	castle	21_1	1
-21	executive	21_1	1
-21	later	21_1	1
-21	though	21_1	1
-22	stone	22_1	1
-22	emerge	22_1	1
-22	raise	22_1	1
-22	apart	22_1	1
-22	we	22_1	1
-22	leak	22_1	1
-22	queen	22_1	1
-22	intelligent	22_1	1
-22	paste	22_1	1
-22	desk	22_1	1
-23	heroine	23_1	1
-23	liable	23_1	1
-23	constant	23_1	1
-23	dead	23_1	1
-23	dormitory	23_1	1
-23	prosperous	23_1	1
-23	battery	23_1	1
-23	tape	23_1	1
-23	touch	23_1	1
-23	train	23_1	1
-24	shell	24_1	1
-24	indifferent	24_1	1
-24	unfair	24_1	1
-24	attractive	24_1	1
-24	department	24_1	1
-24	phase	24_1	1
-24	although	24_1	1
-24	length	24_1	1
-24	four	24_1	1
-24	broom	24_1	1
-25	lessen	25_1	1
-25	pad	25_1	1
-25	exhibition	25_1	1
-25	detect	25_1	1
-25	echo	25_1	1
-25	plenty	25_1	1
-25	help	25_1	1
-25	zero	25_1	1
-25	undertake	25_1	1
-25	nod	25_1	1
-26	where	26_1	1
-26	tray	26_1	1
-26	accuracy	26_1	1
-26	letter	26_1	1
-26	representative	26_1	1
-26	without	26_1	1
-26	pursue	26_1	1
-26	horror	26_1	1
-26	voluntary	26_1	1
-26	ripe	26_1	1
-27	poet	27_1	1
-27	drive	27_1	1
-27	stiff	27_1	1
-27	obviously	27_1	1
-27	pound	27_1	1
-27	capture	27_1	1
-27	them	27_1	1
-27	solve	27_1	1
-27	double	27_1	1
-27	cow	27_1	1
-28	capable	28_1	1
-28	switch	28_1	1
-28	powerful	28_1	1
-28	fit	28_1	1
-28	brick	28_1	1
-28	unit	28_1	1
-28	ability	28_1	1
-28	suspend	28_1	1
-28	mislead	28_1	1
-28	rotation	28_1	1
-29	reserve	29_1	1
-29	curl	29_1	1
-29	shall	29_1	1
-29	confidence	29_1	1
-29	diagram	29_1	1
-29	delight	29_1	1
-29	explore	29_1	1
-29	temple	29_1	1
-29	government	29_1	1
-29	sense	29_1	1
-30	grandson	30_1	1
-30	midnight	30_1	1
-30	dialog	30_1	1
-30	reliable	30_1	1
-30	magnificent	30_1	1
-30	fish	30_1	1
-30	interval	30_1	1
-30	restriction	30_1	1
-30	mutual	30_1	1
-30	dwelling	30_1	1
-31	standpoint	31_1	1
-31	external	31_1	1
-31	cover	31_1	1
-31	snowy	31_1	1
-31	equation	31_1	1
-31	field	31_1	1
-31	barber	31_1	1
-31	only	31_1	1
-31	party	31_1	1
-31	nerve	31_1	1
-32	zoo	32_1	1
-32	dress	32_1	1
-32	nephew	32_1	1
-32	international	32_1	1
-32	industry	32_1	1
-32	limb	32_1	1
-32	restrict	32_1	1
-32	organization	32_1	1
-32	tablet	32_1	1
-32	know	32_1	1
-33	submit	33_1	1
-33	vain	33_1	1
-33	moderate	33_1	1
-33	claw	33_1	1
-33	plantation	33_1	1
-33	round	33_1	1
-33	bus	33_1	1
-33	mosquito	33_1	1
-33	particularly	33_1	1
-33	curve	33_1	1
-34	dear	34_1	1
-34	visual	34_1	1
-34	robbery	34_1	1
-34	garage	34_1	1
-34	catch	34_1	1
-34	comprehension	34_1	1
-34	money	34_1	1
-34	vibrate	34_1	1
-34	lame	34_1	1
-34	mistake	34_1	1
-35	spade	35_1	1
-35	whenever	35_1	1
-35	outer	35_1	1
-35	lake	35_1	1
-35	subway	35_1	1
-35	republican	35_1	1
-35	ninth	35_1	1
-35	ripen	35_1	1
-35	hardly	35_1	1
-35	polish	35_1	1
-36	rabbit	36_1	1
-36	clarify	36_1	1
-36	heart	36_1	1
-36	careless	36_1	1
-36	occupation	36_1	1
-36	staff	36_1	1
-36	beauty	36_1	1
-36	indefinite	36_1	1
-36	grind	36_1	1
-36	bag	36_1	1
-37	academic	37_1	1
-37	wage	37_1	1
-37	technique	37_1	1
-37	distinguish	37_1	1
-37	paradise	37_1	1
-37	lavatory	37_1	1
-37	signal	37_1	1
-37	passport	37_1	1
-37	study	37_1	1
-37	board	37_1	1
-38	rational	38_1	1
-38	useful	38_1	1
-38	summarize	38_1	1
-38	specially	38_1	1
-38	numerous	38_1	1
-38	approach	38_1	1
-38	background	38_1	1
-38	command	38_1	1
-38	cement	38_1	1
-38	typewriter	38_1	1
-39	issue	39_1	1
-39	stove	39_1	1
-39	wheat	39_1	1
-39	bridge	39_1	1
-39	emperor	39_1	1
-39	found	39_1	1
-39	resistant	39_1	1
-39	coin	39_1	1
-39	deceit	39_1	1
-39	several	39_1	1
-40	meaning	40_1	1
-40	tough	40_1	1
-40	holy	40_1	1
-40	commercial	40_1	1
-40	behalf	40_1	1
-40	horsepower	40_1	1
-40	trend	40_1	1
-40	reasonable	40_1	1
-40	translation	40_1	1
-40	applicable	40_1	1
-41	you	41_1	1
-41	interfere	41_1	1
-41	exert	41_1	1
-41	luck	41_1	1
-41	story	41_1	1
-41	outline	41_1	1
-41	literature	41_1	1
-41	solemn	41_1	1
-41	text	41_1	1
-41	sound	41_1	1
-42	slippery	42_1	1
-42	fashionable	42_1	1
-42	minister	42_1	1
-42	separation	42_1	1
-42	pollution	42_1	1
-42	lick	42_1	1
-42	textile	42_1	1
-42	capacity	42_1	1
-42	consistent	42_1	1
-42	argue	42_1	1
-43	fortunate	43_1	1
-43	electric	43_1	1
-43	thrill	43_1	1
-43	laughter	43_1	1
-43	shadow	43_1	1
-43	power	43_1	1
-43	billion	43_1	1
-43	steal	43_1	1
-43	musician	43_1	1
-43	centimetre	43_1	1
-44	ownership	44_1	1
-44	yield	44_1	1
-44	mainland	44_1	1
-44	copper	44_1	1
-44	helmet	44_1	1
-44	probability	44_1	1
-44	excite	44_1	1
-44	usual	44_1	1
-44	general	44_1	1
-44	audience	44_1	1
-45	fortune	45_1	1
-45	canoe	45_1	1
-45	behave	45_1	1
-45	abundant	45_1	1
-45	underline	45_1	1
-45	semiconductor	45_1	1
-45	charming	45_1	1
-45	uncertain	45_1	1
-45	access	45_1	1
-45	garbage	45_1	1
-46	complete	46_1	1
-46	die	46_1	1
-46	horizontal	46_1	1
-46	defeat	46_1	1
-46	examination	46_1	1
-46	platform	46_1	1
-46	thirsty	46_1	1
-46	aboard	46_1	1
-46	bacteria	46_1	1
-46	robber	46_1	1
-47	seat	47_1	1
-47	radioactive	47_1	1
-47	grace	47_1	1
-47	model	47_1	1
-47	sugar	47_1	1
-47	blade	47_1	1
-47	guidance	47_1	1
-47	pin	47_1	1
-47	fold	47_1	1
-47	choice	47_1	1
-48	helicopter	48_1	1
-48	landlord	48_1	1
-48	class	48_1	1
-48	error	48_1	1
-48	picnic	48_1	1
-48	legend	48_1	1
-48	normally	48_1	1
-48	cucumber	48_1	1
-48	feather	48_1	1
-48	springtime	48_1	1
-49	isolate	49_1	1
-49	mushroom	49_1	1
-49	rain	49_1	1
-49	deepen	49_1	1
-49	rot	49_1	1
-49	wooden	49_1	1
-49	housewife	49_1	1
-49	coast	49_1	1
-49	grateful	49_1	1
-49	operational	49_1	1
-50	secret	50_1	1
-50	summer	50_1	1
-50	comparison	50_1	1
-50	state	50_1	1
-50	cool	50_1	1
-50	superficial	50_1	1
-50	terror	50_1	1
-50	husband	50_1	1
-50	shear	50_1	1
-50	main	50_1	1
-51	offer	51_1	1
-51	mathematical	51_1	1
-51	bother	51_1	1
-51	utmost	51_1	1
-51	equality	51_1	1
-51	typhoon	51_1	1
-51	timetable	51_1	1
-51	endless	51_1	1
-51	range	51_1	1
-51	law	51_1	1
-52	quote	52_1	1
-52	bureau	52_1	1
-52	miss	52_1	1
-52	hasty	52_1	1
-52	gas	52_1	1
-52	emotion	52_1	1
-52	line	52_1	1
-52	bank	52_1	1
-52	rely	52_1	1
-52	worthy	52_1	1
-53	harsh	53_1	1
-53	bruise	53_1	1
-53	mouth	53_1	1
-53	unfortunate	53_1	1
-53	discover	53_1	1
-53	canvas	53_1	1
-53	forbid	53_1	1
-53	compress	53_1	1
-53	force	53_1	1
-53	type	53_1	1
-54	greenhouse	54_1	1
-54	materialism	54_1	1
-54	consequence	54_1	1
-54	memorial	54_1	1
-54	commonly	54_1	1
-54	scream	54_1	1
-54	firm	54_1	1
-54	rail	54_1	1
-54	hobby	54_1	1
-54	verb	54_1	1
-55	exposure	55_1	1
-55	selection	55_1	1
-55	pit	55_1	1
-55	badly	55_1	1
-55	wreck	55_1	1
-55	mood	55_1	1
-55	regulation	55_1	1
-55	considerate	55_1	1
-55	modify	55_1	1
-55	immediately	55_1	1
-56	gate	56_1	1
-56	pleasant	56_1	1
-56	daily	56_1	1
-56	song	56_1	1
-56	imply	56_1	1
-56	easy	56_1	1
-56	odd	56_1	1
-56	space	56_1	1
-56	love	56_1	1
-56	soap	56_1	1
-57	loyalty	57_1	1
-57	borrow	57_1	1
-57	late	57_1	1
-57	utility	57_1	1
-57	action	57_1	1
-57	execute	57_1	1
-57	solar	57_1	1
-57	resolution	57_1	1
-57	strawberry	57_1	1
-57	suspect	57_1	1
-58	reach	58_1	1
-58	investigation	58_1	1
-58	arrival	58_1	1
-58	farmer	58_1	1
-58	salesman	58_1	1
-58	editor	58_1	1
-58	abuse	58_1	1
-58	boss	58_1	1
-58	expect	58_1	1
-58	expectation	58_1	1
-59	permission	59_1	1
-59	conquer	59_1	1
-59	steamer	59_1	1
-59	stroke	59_1	1
-59	toy	59_1	1
-59	death	59_1	1
-59	chase	59_1	1
-59	coal	59_1	1
-59	since	59_1	1
-59	tip	59_1	1
-60	cotton	60_1	1
-60	surgeon	60_1	1
-60	uncomfortable	60_1	1
-60	mystery	60_1	1
-60	address	60_1	1
-60	conductor	60_1	1
-60	bell	60_1	1
-60	previous	60_1	1
-60	tin	60_1	1
-60	optimistic	60_1	1
-61	conjunction	61_1	1
-61	darling	61_1	1
-61	purely	61_1	1
-61	behavior	61_1	1
-61	guilty	61_1	1
-61	debt	61_1	1
-61	gravity	61_1	1
-61	farm	61_1	1
-61	visitor	61_1	1
-61	direct	61_1	1
-62	layout	62_1	1
-62	manly	62_1	1
-62	shave	62_1	1
-62	chamber	62_1	1
-62	necessarily	62_1	1
-62	crew	62_1	1
-62	joy	62_1	1
-62	pond	62_1	1
-62	lime	62_1	1
-62	every	62_1	1
-63	mistress	63_1	1
-63	bench	63_1	1
-63	native	63_1	1
-63	haste	63_1	1
-63	routine	63_1	1
-63	bolt	63_1	1
-63	sacrifice	63_1	1
-63	cellar	63_1	1
-63	relevant	63_1	1
-63	container	63_1	1
-64	cord	64_1	1
-64	unsatisfactory	64_1	1
-64	appeal	64_1	1
-64	temptation	64_1	1
-64	wisdom	64_1	1
-64	actual	64_1	1
-64	notebook	64_1	1
-64	youth	64_1	1
-64	lace	64_1	1
-64	western	64_1	1
-65	wavelength	65_1	1
-65	fireman	65_1	1
-65	constitution	65_1	1
-65	mouthful	65_1	1
-65	humorous	65_1	1
-65	granddaughter	65_1	1
-65	stability	65_1	1
-65	motor	65_1	1
-65	user	65_1	1
-65	gather	65_1	1
-66	refrigerator	66_1	1
-66	sigh	66_1	1
-66	treasure	66_1	1
-66	alone	66_1	1
-66	completely	66_1	1
-66	division	66_1	1
-66	worthless	66_1	1
-66	afraid	66_1	1
-66	increasingly	66_1	1
-66	easily	66_1	1
-67	civil	67_1	1
-67	kiss	67_1	1
-67	petroleum	67_1	1
-67	van	67_1	1
-67	arrow	67_1	1
-67	value	67_1	1
-67	pea	67_1	1
-67	weary	67_1	1
-67	finally	67_1	1
-67	wake	67_1	1
-68	tall	68_1	1
-68	maths	68_1	1
-68	flash	68_1	1
-68	aside	68_1	1
-68	sour	68_1	1
-68	weekend	68_1	1
-68	reward	68_1	1
-68	lucky	68_1	1
-68	clue	68_1	1
-68	sympathy	68_1	1
-69	former	69_1	1
-69	hello	69_1	1
-69	swear	69_1	1
-69	unload	69_1	1
-69	shirt	69_1	1
-69	tedious	69_1	1
-69	receipt	69_1	1
-69	advertisement	69_1	1
-69	bottom	69_1	1
-69	instinct	69_1	1
-70	public	70_1	1
-70	learn	70_1	1
-70	chop	70_1	1
-70	educate	70_1	1
-70	member	70_1	1
-70	develop	70_1	1
-70	site	70_1	1
-70	venture	70_1	1
-70	birthday	70_1	1
-70	opening	70_1	1
-71	disable	71_1	1
-71	plentiful	71_1	1
-71	opera	71_1	1
-71	duty	71_1	1
-71	recommendation	71_1	1
-71	weaken	71_1	1
-71	equipment	71_1	1
-71	refine	71_1	1
-71	straw	71_1	1
-71	unsuitable	71_1	1
-72	weed	72_1	1
-72	building	72_1	1
-72	maintain	72_1	1
-72	institute	72_1	1
-72	amaze	72_1	1
-72	mutton	72_1	1
-72	standard	72_1	1
-72	cloak	72_1	1
-72	publication	72_1	1
-72	towel	72_1	1
-73	simplicity	73_1	1
-73	sponsor	73_1	1
-73	sympathetic	73_1	1
-73	creature	73_1	1
-73	terminal	73_1	1
-73	relatively	73_1	1
-73	percent	73_1	1
-73	mat	73_1	1
-73	glory	73_1	1
-73	suffer	73_1	1
-74	infect	74_1	1
-74	mud	74_1	1
-74	yell	74_1	1
-74	waterfall	74_1	1
-74	will	74_1	1
-74	amongst	74_1	1
-74	vocabulary	74_1	1
-74	impact	74_1	1
-74	nation	74_1	1
-74	recognize	74_1	1
-75	honeymoon	75_1	1
-75	vex	75_1	1
-75	collection	75_1	1
-75	inhabitant	75_1	1
-75	submarine	75_1	1
-75	slightly	75_1	1
-75	pity	75_1	1
-75	trifle	75_1	1
-75	sustain	75_1	1
-75	spit	75_1	1
-76	spur	76_1	1
-76	accustom	76_1	1
-76	burst	76_1	1
-76	pause	76_1	1
-76	log	76_1	1
-76	sixth	76_1	1
-76	rather	76_1	1
-76	reliability	76_1	1
-76	spacecraft	76_1	1
-76	wild	76_1	1
-77	inspect	77_1	1
-77	bundle	77_1	1
-77	head	77_1	1
-77	proportion	77_1	1
-77	present	77_1	1
-77	operator	77_1	1
-77	committee	77_1	1
-77	transformation	77_1	1
-77	forgive	77_1	1
-77	crisis	77_1	1
-78	interior	78_1	1
-78	fast	78_1	1
-78	change	78_1	1
-78	officer	78_1	1
-78	detection	78_1	1
-78	laboratory	78_1	1
-78	alarm	78_1	1
-78	insect	78_1	1
-78	formation	78_1	1
-78	honest	78_1	1
-79	another	79_1	1
-79	military	79_1	1
-79	pronounce	79_1	1
-79	below	79_1	1
-79	furniture	79_1	1
-79	current	79_1	1
-79	something	79_1	1
-79	lonely	79_1	1
-79	headache	79_1	1
-79	saw	79_1	1
-80	attack	80_1	1
-80	circulate	80_1	1
-80	personal	80_1	1
-80	campus	80_1	1
-80	fifty	80_1	1
-80	teacher	80_1	1
-80	turkey	80_1	1
-80	engage	80_1	1
-80	lodge	80_1	1
-80	six	80_1	1
-81	property	81_1	1
-81	elevator	81_1	1
-81	transformer	81_1	1
-81	register	81_1	1
-81	observe	81_1	1
-81	few	81_1	1
-81	distinction	81_1	1
-81	she	81_1	1
-81	proclaim	81_1	1
-81	location	81_1	1
-82	stand	82_1	1
-82	porter	82_1	1
-82	edition	82_1	1
-82	information	82_1	1
-82	drown	82_1	1
-82	means	82_1	1
-82	cultivate	82_1	1
-82	relate	82_1	1
-82	nasty	82_1	1
-82	intentional	82_1	1
-83	coat	83_1	1
-83	vehicle	83_1	1
-83	minus	83_1	1
-83	protective	83_1	1
-83	introduce	83_1	1
-83	faculty	83_1	1
-83	rude	83_1	1
-83	shriek	83_1	1
-83	attract	83_1	1
-83	link	83_1	1
-84	exhaust	84_1	1
-84	shed	84_1	1
-84	trade	84_1	1
-84	cash	84_1	1
-84	production	84_1	1
-84	thus	84_1	1
-84	nice	84_1	1
-84	exit	84_1	1
-84	definite	84_1	1
-84	challenge	84_1	1
-85	awake	85_1	1
-85	electricity	85_1	1
-85	cafe	85_1	1
-85	cease	85_1	1
-85	taxi	85_1	1
-85	knowledge	85_1	1
-85	holiday	85_1	1
-85	accidental	85_1	1
-85	moan	85_1	1
-85	chief	85_1	1
-86	earth	86_1	1
-86	suburb	86_1	1
-86	glare	86_1	1
-86	message	86_1	1
-86	policeman	86_1	1
-86	voltage	86_1	1
-86	tremendous	86_1	1
-86	grant	86_1	1
-86	pie	86_1	1
-86	rainbow	86_1	1
-87	pattern	87_1	1
-87	autumn	87_1	1
-87	front	87_1	1
-87	pepper	87_1	1
-87	drag	87_1	1
-87	whole	87_1	1
-87	sometime	87_1	1
-87	shrink	87_1	1
-87	fuel	87_1	1
-87	earthquake	87_1	1
-88	potato	88_1	1
-88	brisk	88_1	1
-88	ash	88_1	1
-88	defend	88_1	1
-88	resign	88_1	1
-88	fist	88_1	1
-88	pail	88_1	1
-88	pick	88_1	1
-88	tone	88_1	1
-88	century	88_1	1
-89	baby	89_1	1
-89	further	89_1	1
-89	determination	89_1	1
-89	fund	89_1	1
-89	heir	89_1	1
-89	dull	89_1	1
-89	ghost	89_1	1
-89	carrier	89_1	1
-89	slogan	89_1	1
-89	bend	89_1	1
-90	twin	90_1	1
-90	prize	90_1	1
-90	flow	90_1	1
-90	goods	90_1	1
-90	hard	90_1	1
-90	substantial	90_1	1
-90	accumulate	90_1	1
-90	victorious	90_1	1
-90	colleague	90_1	1
-90	enough	90_1	1
-91	exceed	91_1	1
-91	bloom	91_1	1
-91	emotional	91_1	1
-91	fate	91_1	1
-91	achieve	91_1	1
-91	warmth	91_1	1
-91	tolerate	91_1	1
-91	elaborate	91_1	1
-91	wait	91_1	1
-91	characteristic	91_1	1
-92	divide	92_1	1
-92	ball	92_1	1
-92	flare	92_1	1
-92	point	92_1	1
-92	suppose	92_1	1
-92	yellow	92_1	1
-92	motivate	92_1	1
-92	butter	92_1	1
-92	brave	92_1	1
-92	invasion	92_1	1
-93	thunder	93_1	1
-93	economic	93_1	1
-93	sticky	93_1	1
-93	dust	93_1	1
-93	tidy	93_1	1
-93	receive	93_1	1
-93	acid	93_1	1
-93	piece	93_1	1
-93	acquaintance	93_1	1
-93	pan	93_1	1
-94	effort	94_1	1
-94	feature	94_1	1
-94	art	94_1	1
-94	smile	94_1	1
-94	reform	94_1	1
-94	ray	94_1	1
-94	gross	94_1	1
-94	teaching	94_1	1
-94	betray	94_1	1
-94	plural	94_1	1
-95	angel	95_1	1
-95	thereby	95_1	1
-95	reason	95_1	1
-95	lower	95_1	1
-95	expert	95_1	1
-95	crane	95_1	1
-95	somebody	95_1	1
-95	brush	95_1	1
-95	identical	95_1	1
-95	imprison	95_1	1
-96	forest	96_1	1
-96	silver	96_1	1
-96	feeble	96_1	1
-96	roughly	96_1	1
-96	unhappy	96_1	1
-96	ugly	96_1	1
-96	policy	96_1	1
-96	electronic	96_1	1
-96	grandfather	96_1	1
-96	physics	96_1	1
-97	fashion	97_1	1
-97	weep	97_1	1
-97	shower	97_1	1
-97	correction	97_1	1
-97	adverb	97_1	1
-97	sponge	97_1	1
-97	grandmother	97_1	1
-97	saucer	97_1	1
-97	climb	97_1	1
-97	path	97_1	1
-98	danger	98_1	1
-98	textbook	98_1	1
-98	quick	98_1	1
-98	size	98_1	1
-98	concept	98_1	1
-98	indispensable	98_1	1
-98	earn	98_1	1
-98	blue	98_1	1
-98	arrangement	98_1	1
-98	salt	98_1	1
-99	triangle	99_1	1
-99	oak	99_1	1
-99	unkind	99_1	1
-99	newspaper	99_1	1
-99	statue	99_1	1
-99	lieutenant	99_1	1
-99	madam	99_1	1
-99	cause	99_1	1
-99	grammar	99_1	1
-99	warm	99_1	1
-100	description	100_1	1
-100	shot	100_1	1
-100	sort	100_1	1
-100	friction	100_1	1
-100	laundry	100_1	1
-100	wreath	100_1	1
-100	gardener	100_1	1
-100	sharply	100_1	1
-100	liquid	100_1	1
-100	pardon	100_1	1
-101	commission	101_1	1
-101	collision	101_1	1
-101	ticket	101_1	1
-101	wicked	101_1	1
-101	signature	101_1	1
-101	reign	101_1	1
-101	least	101_1	1
-101	arise	101_1	1
-101	priest	101_1	1
-101	harm	101_1	1
-102	carrot	102_1	1
-102	knock	102_1	1
-102	haircut	102_1	1
-102	throne	102_1	1
-102	conversation	102_1	1
-102	file	102_1	1
-102	control	102_1	1
-102	deposit	102_1	1
-102	cube	102_1	1
-102	complicate	102_1	1
-103	furnace	103_1	1
-103	auto	103_1	1
-103	premier	103_1	1
-103	end	103_1	1
-103	deduce	103_1	1
-103	perspective	103_1	1
-103	folk	103_1	1
-103	breast	103_1	1
-103	ratio	103_1	1
-103	fabric	103_1	1
-104	philosophy	104_1	1
-104	importance	104_1	1
-104	acre	104_1	1
-104	ornament	104_1	1
-104	everywhere	104_1	1
-104	fasten	104_1	1
-104	hen	104_1	1
-104	minimum	104_1	1
-104	turbulent	104_1	1
-104	drawing	104_1	1
-105	correspond	105_1	1
-105	realm	105_1	1
-105	blind	105_1	1
-105	ready	105_1	1
-105	up	105_1	1
-105	increase	105_1	1
-105	verify	105_1	1
-105	pudding	105_1	1
-105	appropriate	105_1	1
-105	linen	105_1	1
-106	when	106_1	1
-106	simply	106_1	1
-106	gallon	106_1	1
-106	hurt	106_1	1
-106	following	106_1	1
-106	hint	106_1	1
-106	press	106_1	1
-106	pine	106_1	1
-106	cinema	106_1	1
-106	pierce	106_1	1
-107	handle	107_1	1
-107	harvest	107_1	1
-107	club	107_1	1
-107	black	107_1	1
-107	giant	107_1	1
-107	beast	107_1	1
-107	fix	107_1	1
-107	side	107_1	1
-107	combine	107_1	1
-107	submerge	107_1	1
-108	source	108_1	1
-108	hateful	108_1	1
-108	congratulation	108_1	1
-108	physical	108_1	1
-108	breathe	108_1	1
-108	whom	108_1	1
-108	lorry	108_1	1
-108	lately	108_1	1
-108	crystal	108_1	1
-108	process	108_1	1
-109	sightseeing	109_1	1
-109	economy	109_1	1
-109	corner	109_1	1
-109	radius	109_1	1
-109	flesh	109_1	1
-109	preference	109_1	1
-109	square	109_1	1
-109	convert	109_1	1
-109	marine	109_1	1
-109	glow	109_1	1
-110	maximum	110_1	1
-110	immigrant	110_1	1
-110	cafeteria	110_1	1
-110	craft	110_1	1
-110	skill	110_1	1
-110	heating	110_1	1
-110	might	110_1	1
-110	image	110_1	1
-110	transfer	110_1	1
-110	form	110_1	1
-111	prime	111_1	1
-111	right	111_1	1
-111	grey	111_1	1
-111	bean	111_1	1
-111	impression	111_1	1
-111	theoretical	111_1	1
-111	jury	111_1	1
-111	bicycle	111_1	1
-111	page	111_1	1
-111	protein	111_1	1
-112	bit	112_1	1
-112	lip	112_1	1
-112	horse	112_1	1
-112	dive	112_1	1
-112	wool	112_1	1
-112	spin	112_1	1
-112	attraction	112_1	1
-112	receiver	112_1	1
-112	shop	112_1	1
-112	chill	112_1	1
-113	bleed	113_1	1
-113	elastic	113_1	1
-113	rehearsal	113_1	1
-113	uncle	113_1	1
-113	gaze	113_1	1
-113	shoot	113_1	1
-113	glitter	113_1	1
-113	quite	113_1	1
-113	situation	113_1	1
-113	classify	113_1	1
-114	dream	114_1	1
-114	hardware	114_1	1
-114	eleventh	114_1	1
-114	vitamin	114_1	1
-114	disgust	114_1	1
-114	tense	114_1	1
-114	freeze	114_1	1
-114	compel	114_1	1
-114	claim	114_1	1
-114	their	114_1	1
-115	voyage	115_1	1
-115	passion	115_1	1
-115	naughty	115_1	1
-115	family	115_1	1
-115	hungry	115_1	1
-115	name	115_1	1
-115	column	115_1	1
-115	knee	115_1	1
-115	gray	115_1	1
-115	sincere	115_1	1
-116	removal	116_1	1
-116	together	116_1	1
-116	bubble	116_1	1
-116	valid	116_1	1
-116	south	116_1	1
-116	headquarters	116_1	1
-116	hunt	116_1	1
-116	repeat	116_1	1
-116	muscle	116_1	1
-116	conclusion	116_1	1
-117	little	117_1	1
-117	tutor	117_1	1
-117	elder	117_1	1
-117	angle	117_1	1
-117	territory	117_1	1
-117	absence	117_1	1
-117	needless	117_1	1
-117	ensure	117_1	1
-117	hook	117_1	1
-117	champion	117_1	1
-118	associate	118_1	1
-118	violet	118_1	1
-118	around	118_1	1
-118	violent	118_1	1
-118	humble	118_1	1
-118	unstable	118_1	1
-118	roof	118_1	1
-118	glorious	118_1	1
-118	reduction	118_1	1
-118	banner	118_1	1
-119	friendly	119_1	1
-119	dim	119_1	1
-119	extension	119_1	1
-119	monitor	119_1	1
-119	librarian	119_1	1
-119	amplify	119_1	1
-119	decrease	119_1	1
-119	assess	119_1	1
-119	invisible	119_1	1
-119	perfect	119_1	1
-120	battle	120_1	1
-120	horizon	120_1	1
-120	stadium	120_1	1
-120	tissue	120_1	1
-120	festival	120_1	1
-120	occasionally	120_1	1
-120	palace	120_1	1
-120	fruit	120_1	1
-120	runner	120_1	1
-120	not	120_1	1
-121	deny	121_1	1
-121	factor	121_1	1
-121	age	121_1	1
-121	fertilizer	121_1	1
-121	apartment	121_1	1
-121	swan	121_1	1
-121	widow	121_1	1
-121	significance	121_1	1
-121	mourn	121_1	1
-121	plot	121_1	1
-122	whitewash	122_1	1
-122	retire	122_1	1
-122	pupil	122_1	1
-122	slender	122_1	1
-122	worker	122_1	1
-122	central	122_1	1
-122	detail	122_1	1
-122	inspire	122_1	1
-122	install	122_1	1
-122	thrive	122_1	1
-123	delicate	123_1	1
-123	damage	123_1	1
-123	dying	123_1	1
-123	transform	123_1	1
-123	criticize	123_1	1
-123	balloon	123_1	1
-123	leading	123_1	1
-123	outstanding	123_1	1
-123	attend	123_1	1
-123	diamond	123_1	1
-124	weight	124_1	1
-124	possible	124_1	1
-124	slip	124_1	1
-124	manager	124_1	1
-124	correct	124_1	1
-124	camel	124_1	1
-124	respect	124_1	1
-124	toe	124_1	1
-124	project	124_1	1
-124	resist	124_1	1
-125	faulty	125_1	1
-125	swim	125_1	1
-125	cliff	125_1	1
-125	orderly	125_1	1
-125	seal	125_1	1
-125	proper	125_1	1
-125	waken	125_1	1
-125	handsome	125_1	1
-125	fall	125_1	1
-125	stewardess	125_1	1
-126	anybody	126_1	1
-126	repetition	126_1	1
-126	beat	126_1	1
-126	support	126_1	1
-126	past	126_1	1
-126	envy	126_1	1
-126	rank	126_1	1
-126	recognition	126_1	1
-126	splash	126_1	1
-126	airplane	126_1	1
-127	cassette	127_1	1
-127	disk	127_1	1
-127	against	127_1	1
-127	pebble	127_1	1
-127	fight	127_1	1
-127	intense	127_1	1
-127	poison	127_1	1
-127	anticipate	127_1	1
-127	blast	127_1	1
-127	trick	127_1	1
-128	thirdly	128_1	1
-128	slam	128_1	1
-128	murderer	128_1	1
-128	thread	128_1	1
-128	avoid	128_1	1
-128	comfortable	128_1	1
-128	popular	128_1	1
-128	reproduce	128_1	1
-128	separately	128_1	1
-128	brood	128_1	1
-129	iron	129_1	1
-129	clumsy	129_1	1
-129	bill	129_1	1
-129	gasoline	129_1	1
-129	seaport	129_1	1
-129	pension	129_1	1
-129	independence	129_1	1
-129	powder	129_1	1
-129	spell	129_1	1
-129	organ	129_1	1
-130	attempt	130_1	1
-130	prince	130_1	1
-130	bury	130_1	1
-130	statement	130_1	1
-130	cheat	130_1	1
-130	performance	130_1	1
-130	as	130_1	1
-130	temper	130_1	1
-130	primary	130_1	1
-130	derive	130_1	1
-131	chemist	131_1	1
-131	angry	131_1	1
-131	novel	131_1	1
-131	spill	131_1	1
-131	hare	131_1	1
-131	resolve	131_1	1
-131	nationality	131_1	1
-131	irregular	131_1	1
-131	appear	131_1	1
-131	grand	131_1	1
-132	ambition	132_1	1
-132	question	132_1	1
-132	niece	132_1	1
-132	dread	132_1	1
-132	jet	132_1	1
-132	wipe	132_1	1
-132	plant	132_1	1
-132	undergraduate	132_1	1
-132	geometry	132_1	1
-132	lane	132_1	1
-133	imaginary	133_1	1
-133	heat	133_1	1
-133	odour	133_1	1
-133	march	133_1	1
-133	sequence	133_1	1
-133	seventy	133_1	1
-133	honesty	133_1	1
-133	tub	133_1	1
-133	frame	133_1	1
-133	automation	133_1	1
-134	sick	134_1	1
-134	hardship	134_1	1
-134	steel	134_1	1
-134	extensive	134_1	1
-134	gasp	134_1	1
-134	criticism	134_1	1
-134	naked	134_1	1
-134	male	134_1	1
-134	alloy	134_1	1
-134	impossible	134_1	1
-135	retell	135_1	1
-135	respectively	135_1	1
-135	interpreter	135_1	1
-135	precaution	135_1	1
-135	absorb	135_1	1
-135	apparent	135_1	1
-135	accordingly	135_1	1
-135	band	135_1	1
-135	saving	135_1	1
-135	railway	135_1	1
-136	agriculture	136_1	1
-136	team	136_1	1
-136	chairman	136_1	1
-136	inspection	136_1	1
-136	rifle	136_1	1
-136	gracious	136_1	1
-136	supplement	136_1	1
-136	glad	136_1	1
-136	lag	136_1	1
-136	rotten	136_1	1
-137	incline	137_1	1
-137	insure	137_1	1
-137	opinion	137_1	1
-137	severely	137_1	1
-137	disagree	137_1	1
-137	soon	137_1	1
-137	uneasy	137_1	1
-137	neglect	137_1	1
-137	captain	137_1	1
-137	democratic	137_1	1
-138	equal	138_1	1
-138	suck	138_1	1
-138	hospital	138_1	1
-138	inherit	138_1	1
-138	greedy	138_1	1
-138	worship	138_1	1
-138	meantime	138_1	1
-138	impose	138_1	1
-138	refusal	138_1	1
-138	second	138_1	1
-139	ring	139_1	1
-139	county	139_1	1
-139	illustration	139_1	1
-139	youthful	139_1	1
-139	fridge	139_1	1
-139	import	139_1	1
-139	talent	139_1	1
-139	ache	139_1	1
-139	cent	139_1	1
-139	outdoors	139_1	1
-140	quicken	140_1	1
-140	snake	140_1	1
-140	cruel	140_1	1
-140	conservation	140_1	1
-140	multiple	140_1	1
-140	primitive	140_1	1
-140	jolly	140_1	1
-140	thank	140_1	1
-140	commit	140_1	1
-140	artist	140_1	1
-141	blanket	141_1	1
-141	differ	141_1	1
-141	donkey	141_1	1
-141	sufficient	141_1	1
-141	rice	141_1	1
-141	prefer	141_1	1
-141	lack	141_1	1
-141	boast	141_1	1
-141	problem	141_1	1
-141	feasible	141_1	1
-142	arouse	142_1	1
-142	wrap	142_1	1
-142	bay	142_1	1
-142	lemon	142_1	1
-142	evolution	142_1	1
-142	august	142_1	1
-142	oneself	142_1	1
-142	delay	142_1	1
-142	simplify	142_1	1
-142	naval	142_1	1
-143	string	143_1	1
-143	nap	143_1	1
-143	tick	143_1	1
-143	grocery	143_1	1
-143	temperature	143_1	1
-143	democracy	143_1	1
-143	miracle	143_1	1
-143	utter	143_1	1
-143	formal	143_1	1
-143	wonderful	143_1	1
-144	agent	144_1	1
-144	gallery	144_1	1
-144	lecture	144_1	1
-144	village	144_1	1
-144	bore	144_1	1
-144	beer	144_1	1
-144	extraordinary	144_1	1
-144	abnormal	144_1	1
-144	universal	144_1	1
-144	resource	144_1	1
-145	bond	145_1	1
-145	sister	145_1	1
-145	hang	145_1	1
-145	kill	145_1	1
-145	radar	145_1	1
-145	enormous	145_1	1
-145	construct	145_1	1
-145	refer	145_1	1
-145	connection	145_1	1
-145	psychological	145_1	1
-146	transmit	146_1	1
-146	delivery	146_1	1
-146	liner	146_1	1
-146	overlook	146_1	1
-146	moon	146_1	1
-146	fourteen	146_1	1
-146	lawyer	146_1	1
-146	adventure	146_1	1
-146	permit	146_1	1
-146	sacred	146_1	1
-147	cargo	147_1	1
-147	glance	147_1	1
-147	vessel	147_1	1
-147	precise	147_1	1
-147	blame	147_1	1
-147	upon	147_1	1
-147	rate	147_1	1
-147	comrade	147_1	1
-147	tomato	147_1	1
-147	communication	147_1	1
-148	pain	148_1	1
-148	maid	148_1	1
-148	depress	148_1	1
-148	hasten	148_1	1
-148	word	148_1	1
-148	colonel	148_1	1
-148	appearance	148_1	1
-148	deep	148_1	1
-148	role	148_1	1
-148	finger	148_1	1
-149	goat	149_1	1
-149	slight	149_1	1
-149	jewish	149_1	1
-149	council	149_1	1
-149	mad	149_1	1
-149	hay	149_1	1
-149	accustomed	149_1	1
-149	insult	149_1	1
-149	target	149_1	1
-149	fleet	149_1	1
-150	interpret	150_1	1
-150	belt	150_1	1
-150	virtue	150_1	1
-150	scholar	150_1	1
-150	substitute	150_1	1
-150	soak	150_1	1
-150	reaction	150_1	1
-150	seller	150_1	1
-150	restrain	150_1	1
-150	management	150_1	1
-151	blackboard	151_1	1
-151	noisy	151_1	1
-151	personnel	151_1	1
-151	requirement	151_1	1
-151	stimulate	151_1	1
-151	myself	151_1	1
-151	assist	151_1	1
-151	annual	151_1	1
-151	umbrella	151_1	1
-151	robot	151_1	1
-152	butterfly	152_1	1
-152	tyre	152_1	1
-152	court	152_1	1
-152	joyful	152_1	1
-152	experience	152_1	1
-152	kingdom	152_1	1
-152	outward	152_1	1
-152	continent	152_1	1
-152	permanently	152_1	1
-152	effect	152_1	1
-153	bone	153_1	1
-153	flour	153_1	1
-153	attention	153_1	1
-153	moisture	153_1	1
-153	long	153_1	1
-153	mere	153_1	1
-153	spontaneous	153_1	1
-153	transport	153_1	1
-153	week	153_1	1
-153	downstairs	153_1	1
-154	extent	154_1	1
-154	ever	154_1	1
-154	stop	154_1	1
-154	sandy	154_1	1
-154	soluble	154_1	1
-154	marble	154_1	1
-154	home	154_1	1
-154	tempt	154_1	1
-154	nevertheless	154_1	1
-154	pipeline	154_1	1
-155	during	155_1	1
-155	leader	155_1	1
-155	alternative	155_1	1
-155	send	155_1	1
-155	threaten	155_1	1
-155	witness	155_1	1
-155	however	155_1	1
-155	fifth	155_1	1
-155	task	155_1	1
-155	rib	155_1	1
-156	steam	156_1	1
-156	arithmetic	156_1	1
-156	gap	156_1	1
-156	zealous	156_1	1
-156	margin	156_1	1
-156	investment	156_1	1
-156	price	156_1	1
-156	mend	156_1	1
-156	dip	156_1	1
-156	porridge	156_1	1
-157	reporter	157_1	1
-157	wedding	157_1	1
-157	pill	157_1	1
-157	exceedingly	157_1	1
-157	guard	157_1	1
-157	reveal	157_1	1
-157	load	157_1	1
-157	mechanical	157_1	1
-157	emit	157_1	1
-157	banana	157_1	1
-158	fraction	158_1	1
-158	adjective	158_1	1
-158	expand	158_1	1
-158	stomach	158_1	1
-158	pronoun	158_1	1
-158	workshop	158_1	1
-158	social	158_1	1
-158	scold	158_1	1
-158	tortoise	158_1	1
-158	preferable	158_1	1
-159	nonsense	159_1	1
-159	upstairs	159_1	1
-159	total	159_1	1
-159	ashamed	159_1	1
-159	important	159_1	1
-159	metric	159_1	1
-159	boil	159_1	1
-159	possession	159_1	1
-159	build	159_1	1
-159	exploit	159_1	1
-160	attain	160_1	1
-160	radish	160_1	1
-160	speech	160_1	1
-160	guide	160_1	1
-160	leather	160_1	1
-160	discourage	160_1	1
-160	fond	160_1	1
-160	silk	160_1	1
-160	traitor	160_1	1
-160	drift	160_1	1
-161	stock	161_1	1
-161	destruction	161_1	1
-161	downward	161_1	1
-161	nitrogen	161_1	1
-161	domestic	161_1	1
-161	post	161_1	1
-161	freedom	161_1	1
-161	major	161_1	1
-161	pale	161_1	1
-161	exception	161_1	1
-162	express	162_1	1
-162	pile	162_1	1
-162	setting	162_1	1
-162	rub	162_1	1
-162	aloud	162_1	1
-162	gay	162_1	1
-162	inevitable	162_1	1
-162	difficulty	162_1	1
-162	tremble	162_1	1
-162	eighty	162_1	1
-163	thickness	163_1	1
-163	secure	163_1	1
-163	wrist	163_1	1
-163	pave	163_1	1
-163	famous	163_1	1
-163	population	163_1	1
-163	mother	163_1	1
-163	swing	163_1	1
-163	our	163_1	1
-163	water	163_1	1
-164	literary	164_1	1
-164	weather	164_1	1
-164	jewel	164_1	1
-164	classification	164_1	1
-164	advice	164_1	1
-164	stain	164_1	1
-164	eighteen	164_1	1
-164	barrier	164_1	1
-164	cupboard	164_1	1
-164	real	164_1	1
-165	rubber	165_1	1
-165	lie	165_1	1
-165	limited	165_1	1
-165	innocent	165_1	1
-165	bind	165_1	1
-165	rack	165_1	1
-165	tuck	165_1	1
-165	rumour	165_1	1
-165	immediate	165_1	1
-165	punish	165_1	1
-166	apologize	166_1	1
-166	conservative	166_1	1
-166	have	166_1	1
-166	raid	166_1	1
-166	fluent	166_1	1
-166	conquest	166_1	1
-166	hide	166_1	1
-166	universe	166_1	1
-166	minor	166_1	1
-166	ten	166_1	1
-167	apology	167_1	1
-167	its	167_1	1
-167	actually	167_1	1
-167	attentive	167_1	1
-167	wireless	167_1	1
-167	sure	167_1	1
-167	assign	167_1	1
-167	enthusiasm	167_1	1
-167	outlook	167_1	1
-167	telegram	167_1	1
-168	communism	168_1	1
-168	laser	168_1	1
-168	quiz	168_1	1
-168	magic	168_1	1
-168	house	168_1	1
-168	overtime	168_1	1
-168	recover	168_1	1
-168	tie	168_1	1
-168	measurement	168_1	1
-168	ocean	168_1	1
-169	wax	169_1	1
-169	drop	169_1	1
-169	consult	169_1	1
-169	pinch	169_1	1
-169	bath	169_1	1
-169	vinegar	169_1	1
-169	owl	169_1	1
-169	servant	169_1	1
-169	invade	169_1	1
-169	circumference	169_1	1
-170	intimate	170_1	1
-170	while	170_1	1
-170	cage	170_1	1
-170	reproach	170_1	1
-170	star	170_1	1
-170	music	170_1	1
-170	progressive	170_1	1
-170	parliament	170_1	1
-170	network	170_1	1
-170	scorn	170_1	1
-171	relief	171_1	1
-171	conference	171_1	1
-171	title	171_1	1
-171	chalk	171_1	1
-171	gunpowder	171_1	1
-171	arm	171_1	1
-171	ear	171_1	1
-171	luggage	171_1	1
-171	riddle	171_1	1
-171	release	171_1	1
-172	leg	172_1	1
-172	crown	172_1	1
-172	metal	172_1	1
-172	moreover	172_1	1
-172	interaction	172_1	1
-172	extreme	172_1	1
-172	pulse	172_1	1
-172	establishment	172_1	1
-172	peculiar	172_1	1
-172	knob	172_1	1
-173	satisfaction	173_1	1
-173	nearby	173_1	1
-173	course	173_1	1
-173	particle	173_1	1
-173	ruler	173_1	1
-173	drink	173_1	1
-173	overall	173_1	1
-173	computer	173_1	1
-173	lightly	173_1	1
-173	grass	173_1	1
-174	out	174_1	1
-174	be	174_1	1
-174	urgent	174_1	1
-174	mayor	174_1	1
-174	gang	174_1	1
-174	trouble	174_1	1
-174	settle	174_1	1
-174	remember	174_1	1
-174	enable	174_1	1
-174	fun	174_1	1
-175	night	175_1	1
-175	mathematics	175_1	1
-175	memory	175_1	1
-175	nowadays	175_1	1
-175	rarely	175_1	1
-175	compute	175_1	1
-175	term	175_1	1
-175	middle	175_1	1
-175	academy	175_1	1
-175	satisfactory	175_1	1
-176	socialism	176_1	1
-176	dislike	176_1	1
-176	grain	176_1	1
-176	swift	176_1	1
-176	safe	176_1	1
-176	tale	176_1	1
-176	brow	176_1	1
-176	conscience	176_1	1
-176	patch	176_1	1
-176	curiosity	176_1	1
-177	circuit	177_1	1
-177	north	177_1	1
-177	pretty	177_1	1
-177	via	177_1	1
-177	frown	177_1	1
-177	anxious	177_1	1
-177	shame	177_1	1
-177	necessary	177_1	1
-177	advise	177_1	1
-177	determine	177_1	1
-178	count	178_1	1
-178	wire	178_1	1
-178	unlike	178_1	1
-178	attach	178_1	1
-178	useless	178_1	1
-178	aural	178_1	1
-178	recollect	178_1	1
-178	recite	178_1	1
-178	add	178_1	1
-178	hedge	178_1	1
-179	radio	179_1	1
-179	deceive	179_1	1
-179	contradiction	179_1	1
-179	tower	179_1	1
-179	character	179_1	1
-179	promising	179_1	1
-179	describe	179_1	1
-179	parcel	179_1	1
-179	occurrence	179_1	1
-179	mountain	179_1	1
-180	employee	180_1	1
-180	area	180_1	1
-180	spelling	180_1	1
-180	passive	180_1	1
-180	senior	180_1	1
-180	tooth	180_1	1
-180	chin	180_1	1
-180	tool	180_1	1
-180	parallel	180_1	1
-180	success	180_1	1
-181	contribute	181_1	1
-181	responsible	181_1	1
-181	specific	181_1	1
-181	observation	181_1	1
-181	fourth	181_1	1
-181	hers	181_1	1
-181	bird	181_1	1
-181	historical	181_1	1
-181	missing	181_1	1
-181	cooperate	181_1	1
-182	torch	182_1	1
-182	volume	182_1	1
-182	boot	182_1	1
-182	decent	182_1	1
-182	tomorrow	182_1	1
-182	compete	182_1	1
-182	announce	182_1	1
-182	compose	182_1	1
-182	brook	182_1	1
-182	preserve	182_1	1
-183	spectacle	183_1	1
-183	ditch	183_1	1
-183	shift	183_1	1
-183	mode	183_1	1
-183	excessive	183_1	1
-183	certainty	183_1	1
-183	satellite	183_1	1
-183	tourist	183_1	1
-183	floor	183_1	1
-183	significant	183_1	1
-184	free	184_1	1
-184	throng	184_1	1
-184	industrialize	184_1	1
-184	golf	184_1	1
-184	distance	184_1	1
-184	picture	184_1	1
-184	opposite	184_1	1
-184	classical	184_1	1
-184	princess	184_1	1
-184	seek	184_1	1
-185	mineral	185_1	1
-185	writer	185_1	1
-185	consumption	185_1	1
-185	request	185_1	1
-185	stitch	185_1	1
-185	return	185_1	1
-185	bathroom	185_1	1
-185	trunk	185_1	1
-185	cast	185_1	1
-185	survive	185_1	1
-186	phrase	186_1	1
-186	mess	186_1	1
-186	enclose	186_1	1
-186	possibly	186_1	1
-186	pigeon	186_1	1
-186	telegraph	186_1	1
-186	altogether	186_1	1
-186	reject	186_1	1
-186	label	186_1	1
-186	culture	186_1	1
-187	spray	187_1	1
-187	punch	187_1	1
-187	mine	187_1	1
-187	used	187_1	1
-187	ounce	187_1	1
-187	footstep	187_1	1
-187	concrete	187_1	1
-187	drunk	187_1	1
-187	rope	187_1	1
-187	grocer	187_1	1
-188	torrent	188_1	1
-188	mind	188_1	1
-188	income	188_1	1
-188	daylight	188_1	1
-188	medal	188_1	1
-188	certain	188_1	1
-188	nuclear	188_1	1
-188	harmful	188_1	1
-188	otherwise	188_1	1
-188	anyway	188_1	1
-189	practice	189_1	1
-189	knit	189_1	1
-189	sorrow	189_1	1
-189	draft	189_1	1
-189	chair	189_1	1
-189	outdoor	189_1	1
-189	rural	189_1	1
-189	sew	189_1	1
-189	liquor	189_1	1
-189	involve	189_1	1
-190	joke	190_1	1
-190	influence	190_1	1
-190	reference	190_1	1
-190	hurry	190_1	1
-190	sleep	190_1	1
-190	best	190_1	1
-190	portion	190_1	1
-190	limit	190_1	1
-190	painting	190_1	1
-190	serve	190_1	1
-191	part	191_1	1
-191	strong	191_1	1
-191	impatient	191_1	1
-191	lady	191_1	1
-191	instruct	191_1	1
-191	suggestion	191_1	1
-191	elephant	191_1	1
-191	preposition	191_1	1
-191	sweater	191_1	1
-191	pure	191_1	1
-192	position	192_1	1
-192	wave	192_1	1
-192	vote	192_1	1
-192	despise	192_1	1
-192	should	192_1	1
-192	prompt	192_1	1
-192	stool	192_1	1
-192	disorder	192_1	1
-192	stormy	192_1	1
-192	flock	192_1	1
-193	aim	193_1	1
-193	primarily	193_1	1
-193	preceding	193_1	1
-193	idea	193_1	1
-193	nowhere	193_1	1
-193	exclusively	193_1	1
-193	nor	193_1	1
-193	walk	193_1	1
-193	get	193_1	1
-193	radioactivity	193_1	1
-194	once	194_1	1
-194	miserable	194_1	1
-194	convey	194_1	1
-194	behind	194_1	1
-194	anywhere	194_1	1
-194	defence	194_1	1
-194	habit	194_1	1
-194	sink	194_1	1
-194	liberal	194_1	1
-194	onion	194_1	1
-195	handful	195_1	1
-195	friendship	195_1	1
-195	peace	195_1	1
-195	anchor	195_1	1
-195	stern	195_1	1
-195	partly	195_1	1
-195	available	195_1	1
-195	bright	195_1	1
-195	strengthen	195_1	1
-195	strap	195_1	1
-196	meter	196_1	1
-196	bark	196_1	1
-196	headline	196_1	1
-196	yearly	196_1	1
-196	catalog	196_1	1
-196	opportunity	196_1	1
-196	tire	196_1	1
-196	nylon	196_1	1
-196	stem	196_1	1
-196	wholly	196_1	1
-197	survey	197_1	1
-197	mission	197_1	1
-197	pretend	197_1	1
-197	retain	197_1	1
-197	beneficial	197_1	1
-197	dismiss	197_1	1
-197	provision	197_1	1
-197	limitation	197_1	1
-197	whisper	197_1	1
-197	noise	197_1	1
-198	directly	198_1	1
-198	awfully	198_1	1
-198	strictly	198_1	1
-198	election	198_1	1
-198	architecture	198_1	1
-198	tame	198_1	1
-198	shoe	198_1	1
-198	blossom	198_1	1
-198	discard	198_1	1
-198	street	198_1	1
-199	sly	199_1	1
-199	basketball	199_1	1
-199	stay	199_1	1
-199	inside	199_1	1
-199	immense	199_1	1
-199	volcano	199_1	1
-199	brittle	199_1	1
-199	cattle	199_1	1
-199	penny	199_1	1
-199	cabinet	199_1	1
-200	establish	200_1	1
-200	gum	200_1	1
-200	basic	200_1	1
-200	quarterly	200_1	1
-200	seize	200_1	1
-200	aid	200_1	1
-200	foreigner	200_1	1
-200	ship	200_1	1
-200	desperate	200_1	1
-200	playground	200_1	1
-201	arbitrary	201_1	1
-201	substance	201_1	1
-201	govern	201_1	1
-201	soil	201_1	1
-201	supreme	201_1	1
-201	hell	201_1	1
-201	herself	201_1	1
-201	smooth	201_1	1
-201	companion	201_1	1
-201	pronunciation	201_1	1
-202	stuff	202_1	1
-202	host	202_1	1
-202	either	202_1	1
-202	vanish	202_1	1
-202	net	202_1	1
-202	human	202_1	1
-202	practically	202_1	1
-202	the	202_1	1
-202	velvet	202_1	1
-202	greatly	202_1	1
-203	disclose	203_1	1
-203	shelter	203_1	1
-203	print	203_1	1
-203	vivid	203_1	1
-203	cure	203_1	1
-203	alike	203_1	1
-203	specialize	203_1	1
-203	account	203_1	1
-203	germ	203_1	1
-203	dirty	203_1	1
-204	remarkable	204_1	1
-204	struggle	204_1	1
-204	vital	204_1	1
-204	theory	204_1	1
-204	invest	204_1	1
-204	negative	204_1	1
-204	accord	204_1	1
-204	much	204_1	1
-204	screw	204_1	1
-204	book	204_1	1
-205	dense	205_1	1
-205	rat	205_1	1
-205	customer	205_1	1
-205	calculation	205_1	1
-205	aggressive	205_1	1
-205	surgery	205_1	1
-205	block	205_1	1
-205	score	205_1	1
-205	shortly	205_1	1
-205	draw	205_1	1
-206	colony	206_1	1
-206	commerce	206_1	1
-206	citizen	206_1	1
-206	experimental	206_1	1
-206	scarce	206_1	1
-206	development	206_1	1
-206	nursery	206_1	1
-206	wall	206_1	1
-206	kick	206_1	1
-206	cheer	206_1	1
-207	clean	207_1	1
-207	readily	207_1	1
-207	nose	207_1	1
-207	eventually	207_1	1
-207	neutral	207_1	1
-207	hill	207_1	1
-207	ankle	207_1	1
-207	vacuum	207_1	1
-207	circular	207_1	1
-207	fur	207_1	1
-208	place	208_1	1
-208	explosion	208_1	1
-208	garden	208_1	1
-208	career	208_1	1
-208	sentence	208_1	1
-208	whip	208_1	1
-208	sauce	208_1	1
-208	league	208_1	1
-208	accommodate	208_1	1
-208	pray	208_1	1
-209	him	209_1	1
-209	extend	209_1	1
-209	alter	209_1	1
-209	stranger	209_1	1
-209	amuse	209_1	1
-209	coward	209_1	1
-209	milk	209_1	1
-209	neighbourhood	209_1	1
-209	gentle	209_1	1
-209	trumpet	209_1	1
-210	sail	210_1	1
-210	engineering	210_1	1
-210	presence	210_1	1
-210	previously	210_1	1
-210	bathe	210_1	1
-210	begin	210_1	1
-210	green	210_1	1
-210	search	210_1	1
-210	wherever	210_1	1
-210	button	210_1	1
-211	suddenly	211_1	1
-211	heading	211_1	1
-211	training	211_1	1
-211	produce	211_1	1
-211	surface	211_1	1
-211	brother	211_1	1
-211	energy	211_1	1
-211	civilization	211_1	1
-211	typist	211_1	1
-211	health	211_1	1
-212	district	212_1	1
-212	exhibit	212_1	1
-212	dew	212_1	1
-212	entertain	212_1	1
-212	scale	212_1	1
-212	occasional	212_1	1
-212	butcher	212_1	1
-212	displease	212_1	1
-212	drum	212_1	1
-212	afternoon	212_1	1
-213	mass	213_1	1
-213	cheek	213_1	1
-213	booth	213_1	1
-213	perceive	213_1	1
-213	rug	213_1	1
-213	awkward	213_1	1
-213	aluminium	213_1	1
-213	cheap	213_1	1
-213	twentieth	213_1	1
-213	tiger	213_1	1
-214	veil	214_1	1
-214	burden	214_1	1
-214	explosive	214_1	1
-214	rapidly	214_1	1
-214	insist	214_1	1
-214	tumble	214_1	1
-214	slavery	214_1	1
-214	warn	214_1	1
-214	forward	214_1	1
-214	able	214_1	1
-215	conclude	215_1	1
-215	duck	215_1	1
-215	overcoat	215_1	1
-215	synthetic	215_1	1
-215	curse	215_1	1
-215	thick	215_1	1
-215	trip	215_1	1
-215	grieve	215_1	1
-215	material	215_1	1
-215	rest	215_1	1
-216	shortcoming	216_1	1
-216	definitely	216_1	1
-216	application	216_1	1
-216	ore	216_1	1
-216	masterpiece	216_1	1
-216	influential	216_1	1
-216	transportation	216_1	1
-216	calculate	216_1	1
-216	civilize	216_1	1
-216	basket	216_1	1
-217	to	217_1	1
-217	data	217_1	1
-217	pull	217_1	1
-217	supermarket	217_1	1
-217	tolerance	217_1	1
-217	judgement	217_1	1
-217	condition	217_1	1
-217	large	217_1	1
-217	answer	217_1	1
-217	prospect	217_1	1
-218	rich	218_1	1
-218	despite	218_1	1
-218	along	218_1	1
-218	sadness	218_1	1
-218	special	218_1	1
-218	worth	218_1	1
-218	waterproof	218_1	1
-218	shopkeeper	218_1	1
-218	broadcast	218_1	1
-218	oppress	218_1	1
-219	army	219_1	1
-219	safety	219_1	1
-219	gratitude	219_1	1
-219	born	219_1	1
-219	reed	219_1	1
-219	code	219_1	1
-219	melon	219_1	1
-219	deal	219_1	1
-219	hazard	219_1	1
-219	left	219_1	1
-220	reap	220_1	1
-220	celebrate	220_1	1
-220	cake	220_1	1
-220	listen	220_1	1
-220	body	220_1	1
-220	artistic	220_1	1
-220	exaggerate	220_1	1
-220	inward	220_1	1
-220	rage	220_1	1
-220	concerning	220_1	1
-221	recent	221_1	1
-221	competition	221_1	1
-221	durable	221_1	1
-221	marriage	221_1	1
-221	tenant	221_1	1
-221	tight	221_1	1
-221	consent	221_1	1
-221	unable	221_1	1
-221	diameter	221_1	1
-221	purify	221_1	1
-222	understanding	222_1	1
-222	third	222_1	1
-222	interrupt	222_1	1
-222	waist	222_1	1
-222	boundary	222_1	1
-222	result	222_1	1
-222	smoothly	222_1	1
-222	optional	222_1	1
-222	calendar	222_1	1
-222	impressive	222_1	1
-223	channel	223_1	1
-223	fever	223_1	1
-223	ought	223_1	1
-223	puppet	223_1	1
-223	rocket	223_1	1
-223	hunger	223_1	1
-223	remark	223_1	1
-223	governor	223_1	1
-223	spend	223_1	1
-223	affect	223_1	1
-224	withdraw	224_1	1
-224	machine	224_1	1
-224	soda	224_1	1
-224	blood	224_1	1
-224	scarcely	224_1	1
-224	classmate	224_1	1
-224	fire	224_1	1
-224	hair	224_1	1
-224	ax	224_1	1
-224	parade	224_1	1
-225	static	225_1	1
-225	upper	225_1	1
-225	solely	225_1	1
-225	emergency	225_1	1
-225	private	225_1	1
-225	strict	225_1	1
-225	somewhere	225_1	1
-225	injure	225_1	1
-225	devote	225_1	1
-225	bottle	225_1	1
-226	crush	226_1	1
-226	scene	226_1	1
-226	illustrate	226_1	1
-226	perfectly	226_1	1
-226	fatal	226_1	1
-226	singular	226_1	1
-226	emphasize	226_1	1
-226	discussion	226_1	1
-226	noun	226_1	1
-226	notice	226_1	1
-227	scratch	227_1	1
-227	pace	227_1	1
-227	bear	227_1	1
-227	unity	227_1	1
-227	radiate	227_1	1
-227	contain	227_1	1
-227	choose	227_1	1
-227	pole	227_1	1
-227	chimney	227_1	1
-227	artificial	227_1	1
-228	close	228_1	1
-228	childish	228_1	1
-228	dash	228_1	1
-228	whatever	228_1	1
-228	rear	228_1	1
-228	instead	228_1	1
-228	truly	228_1	1
-228	distribute	228_1	1
-228	magnet	228_1	1
-228	equivalent	228_1	1
-229	density	229_1	1
-229	ultimate	229_1	1
-229	relationship	229_1	1
-229	scare	229_1	1
-229	guarantee	229_1	1
-229	sack	229_1	1
-229	panda	229_1	1
-229	step	229_1	1
-229	basically	229_1	1
-229	spaceship	229_1	1
-230	faith	230_1	1
-230	assistant	230_1	1
-230	specify	230_1	1
-230	award	230_1	1
-230	landing	230_1	1
-230	willing	230_1	1
-230	clay	230_1	1
-230	cloudy	230_1	1
-230	condense	230_1	1
-230	mutter	230_1	1
-231	reading	231_1	1
-231	peep	231_1	1
-231	strip	231_1	1
-231	midst	231_1	1
-231	curtain	231_1	1
-231	response	231_1	1
-231	upward	231_1	1
-231	pot	231_1	1
-231	quarrel	231_1	1
-231	fifteen	231_1	1
-232	store	232_1	1
-232	volleyball	232_1	1
-232	attribute	232_1	1
-232	education	232_1	1
-232	murder	232_1	1
-232	bough	232_1	1
-232	tennis	232_1	1
-232	river	232_1	1
-232	enlarge	232_1	1
-232	dial	232_1	1
-233	frontier	233_1	1
-233	jump	233_1	1
-233	acceptance	233_1	1
-233	approximate	233_1	1
-233	reality	233_1	1
-233	foundation	233_1	1
-233	obtain	233_1	1
-233	clothing	233_1	1
-233	hillside	233_1	1
-233	worst	233_1	1
-234	oil	234_1	1
-234	regard	234_1	1
-234	injury	234_1	1
-234	furnish	234_1	1
-234	declare	234_1	1
-234	incorrect	234_1	1
-234	emphasis	234_1	1
-234	accompany	234_1	1
-234	oral	234_1	1
-234	decay	234_1	1
-235	mild	235_1	1
-235	fulfil	235_1	1
-235	turnip	235_1	1
-235	create	235_1	1
-235	carry	235_1	1
-235	loudspeaker	235_1	1
-235	dose	235_1	1
-235	wealthy	235_1	1
-235	girl	235_1	1
-235	cunning	235_1	1
-236	deliver	236_1	1
-236	rob	236_1	1
-236	politics	236_1	1
-236	specimen	236_1	1
-236	kitchen	236_1	1
-236	fetch	236_1	1
-236	westward	236_1	1
-236	carriage	236_1	1
-236	vase	236_1	1
-236	knot	236_1	1
-237	transistor	237_1	1
-237	turbine	237_1	1
-237	insurance	237_1	1
-237	intensive	237_1	1
-237	generous	237_1	1
-237	wonder	237_1	1
-237	twist	237_1	1
-237	design	237_1	1
-237	symbol	237_1	1
-237	belong	237_1	1
-238	react	238_1	1
-238	that	238_1	1
-238	growth	238_1	1
-238	repair	238_1	1
-238	device	238_1	1
-238	stake	238_1	1
-238	comfort	238_1	1
-238	prominent	238_1	1
-238	tender	238_1	1
-238	careful	238_1	1
-239	original	239_1	1
-239	connect	239_1	1
-239	raw	239_1	1
-239	revolution	239_1	1
-239	flourish	239_1	1
-239	anxiety	239_1	1
-239	dimension	239_1	1
-239	complain	239_1	1
-239	player	239_1	1
-239	expansion	239_1	1
-240	until	240_1	1
-240	white	240_1	1
-240	delicious	240_1	1
-240	individual	240_1	1
-240	horn	240_1	1
-240	pump	240_1	1
-240	expense	240_1	1
-240	neither	240_1	1
-240	violin	240_1	1
-240	beyond	240_1	1
-241	pop	241_1	1
-241	doubtless	241_1	1
-241	reservoir	241_1	1
-241	poetry	241_1	1
-241	silly	241_1	1
-241	underneath	241_1	1
-241	shade	241_1	1
-241	scope	241_1	1
-241	sober	241_1	1
-241	disaster	241_1	1
-242	function	242_1	1
-242	pane	242_1	1
-242	faint	242_1	1
-242	bake	242_1	1
-242	rapid	242_1	1
-242	normal	242_1	1
-242	tropical	242_1	1
-242	film	242_1	1
-242	beginner	242_1	1
-242	abroad	242_1	1
-243	game	243_1	1
-243	bowl	243_1	1
-243	kindness	243_1	1
-243	weigh	243_1	1
-243	voice	243_1	1
-243	storm	243_1	1
-243	racial	243_1	1
-243	full	243_1	1
-243	association	243_1	1
-243	victim	243_1	1
-244	additional	244_1	1
-244	fruitful	244_1	1
-244	introduction	244_1	1
-244	proportional	244_1	1
-244	typical	244_1	1
-244	sin	244_1	1
-244	noble	244_1	1
-244	conversely	244_1	1
-244	speed	244_1	1
-244	group	244_1	1
-245	meeting	245_1	1
-245	branch	245_1	1
-245	nuisance	245_1	1
-245	aspect	245_1	1
-245	prejudice	245_1	1
-245	hollow	245_1	1
-245	compromise	245_1	1
-245	hall	245_1	1
-245	technician	245_1	1
-245	fierce	245_1	1
-246	foremost	246_1	1
-246	grammatical	246_1	1
-246	sport	246_1	1
-246	medicine	246_1	1
-246	living	246_1	1
-246	defect	246_1	1
-246	compass	246_1	1
-246	funeral	246_1	1
-246	proceed	246_1	1
-246	unusual	246_1	1
-247	loud	247_1	1
-247	microscope	247_1	1
-247	starve	247_1	1
-247	live	247_1	1
-247	fundamental	247_1	1
-247	concentrate	247_1	1
-247	weakness	247_1	1
-247	discuss	247_1	1
-247	outlet	247_1	1
-247	custom	247_1	1
-248	than	248_1	1
-248	hawk	248_1	1
-248	obvious	248_1	1
-248	regularly	248_1	1
-248	passenger	248_1	1
-248	purity	248_1	1
-248	vest	248_1	1
-248	teenager	248_1	1
-248	room	248_1	1
-248	biscuit	248_1	1
-249	backward	249_1	1
-249	inch	249_1	1
-249	ice	249_1	1
-249	courage	249_1	1
-249	tune	249_1	1
-249	largely	249_1	1
-249	excuse	249_1	1
-249	wear	249_1	1
-249	event	249_1	1
-249	microcomputer	249_1	1
-250	earnest	250_1	1
-250	hydrogen	250_1	1
-250	self	250_1	1
-250	consideration	250_1	1
-250	skilled	250_1	1
-250	cross	250_1	1
-250	responsibility	250_1	1
-250	candle	250_1	1
-250	successful	250_1	1
-250	withstand	250_1	1
-251	welcome	251_1	1
-251	deed	251_1	1
-251	cabbage	251_1	1
-251	option	251_1	1
-251	competent	251_1	1
-251	adapt	251_1	1
-251	kilogram	251_1	1
-251	partial	251_1	1
-251	balance	251_1	1
-251	preliminary	251_1	1
-252	eagle	252_1	1
-252	surrender	252_1	1
-252	salute	252_1	1
-252	financial	252_1	1
-252	simple	252_1	1
-252	tongue	252_1	1
-252	overcome	252_1	1
-252	afford	252_1	1
-252	sit	252_1	1
-252	transparent	252_1	1
-253	whichever	253_1	1
-253	optical	253_1	1
-253	spear	253_1	1
-253	play	253_1	1
-253	dish	253_1	1
-253	ultimately	253_1	1
-253	benefit	253_1	1
-253	troublesome	253_1	1
-253	flood	253_1	1
-253	everyone	253_1	1
-254	hear	254_1	1
-254	sum	254_1	1
-254	bitterly	254_1	1
-254	liver	254_1	1
-254	port	254_1	1
-254	hesitate	254_1	1
-254	surprise	254_1	1
-254	entrance	254_1	1
-254	lovely	254_1	1
-254	exam	254_1	1
-255	properly	255_1	1
-255	shape	255_1	1
-255	origin	255_1	1
-255	spark	255_1	1
-255	handwriting	255_1	1
-255	elimination	255_1	1
-255	graceful	255_1	1
-255	lay	255_1	1
-255	industrial	255_1	1
-255	repent	255_1	1
-256	empire	256_1	1
-256	casual	256_1	1
-256	decorate	256_1	1
-256	knife	256_1	1
-256	freely	256_1	1
-256	fox	256_1	1
-256	gaseous	256_1	1
-256	section	256_1	1
-256	library	256_1	1
-256	thin	256_1	1
-257	ignorant	257_1	1
-257	amount	257_1	1
-257	locate	257_1	1
-257	proud	257_1	1
-257	status	257_1	1
-257	treaty	257_1	1
-257	local	257_1	1
-257	crowd	257_1	1
-257	resident	257_1	1
-257	research	257_1	1
-258	postpone	258_1	1
-258	confuse	258_1	1
-258	rigid	258_1	1
-258	but	258_1	1
-258	terrible	258_1	1
-258	bite	258_1	1
-258	ant	258_1	1
-258	ribbon	258_1	1
-258	foolish	258_1	1
-258	destination	258_1	1
-259	use	259_1	1
-259	country	259_1	1
-259	wood	259_1	1
-259	frighten	259_1	1
-259	telescope	259_1	1
-259	nature	259_1	1
-259	kneel	259_1	1
-259	item	259_1	1
-259	thermometer	259_1	1
-259	layer	259_1	1
-260	skin	260_1	1
-260	variable	260_1	1
-260	learning	260_1	1
-260	authority	260_1	1
-260	sign	260_1	1
-260	internal	260_1	1
-260	separate	260_1	1
-260	religious	260_1	1
-260	bounce	260_1	1
-260	veteran	260_1	1
-261	scissors	261_1	1
-261	berry	261_1	1
-261	canteen	261_1	1
-261	collect	261_1	1
-261	traditional	261_1	1
-261	pear	261_1	1
-261	wrong	261_1	1
-261	disguise	261_1	1
-261	upwards	261_1	1
-261	loss	261_1	1
-262	lightning	262_1	1
-262	dare	262_1	1
-262	undertaking	262_1	1
-262	or	262_1	1
-262	lot	262_1	1
-262	surely	262_1	1
-262	beam	262_1	1
-262	aunt	262_1	1
-262	exchange	262_1	1
-262	stoop	262_1	1
-263	sob	263_1	1
-263	lens	263_1	1
-263	consider	263_1	1
-263	loop	263_1	1
-263	lunch	263_1	1
-263	motive	263_1	1
-263	queue	263_1	1
-263	vast	263_1	1
-263	illness	263_1	1
-263	itself	263_1	1
-264	violence	264_1	1
-264	diary	264_1	1
-264	scar	264_1	1
-264	purse	264_1	1
-264	meadow	264_1	1
-264	visit	264_1	1
-264	mechanic	264_1	1
-264	half	264_1	1
-264	publish	264_1	1
-264	disappear	264_1	1
-265	employment	265_1	1
-265	protest	265_1	1
-265	pencil	265_1	1
-265	luxury	265_1	1
-265	organize	265_1	1
-265	semester	265_1	1
-265	instance	265_1	1
-265	unconscious	265_1	1
-265	addition	265_1	1
-265	anger	265_1	1
-266	heroic	266_1	1
-266	bargain	266_1	1
-266	dissatisfy	266_1	1
-266	razor	266_1	1
-266	remedy	266_1	1
-266	weld	266_1	1
-266	condemn	266_1	1
-266	interview	266_1	1
-266	soup	266_1	1
-266	rush	266_1	1
-267	captive	267_1	1
-267	forehead	267_1	1
-267	map	267_1	1
-267	secondary	267_1	1
-267	institution	267_1	1
-267	they	267_1	1
-267	shine	267_1	1
-267	he	267_1	1
-267	order	267_1	1
-267	technical	267_1	1
-268	stab	268_1	1
-268	stick	268_1	1
-268	rescue	268_1	1
-268	slipper	268_1	1
-268	piano	268_1	1
-268	invent	268_1	1
-268	loose	268_1	1
-268	bucket	268_1	1
-268	owner	268_1	1
-268	view	268_1	1
-269	bunch	269_1	1
-269	manner	269_1	1
-269	sharp	269_1	1
-269	dispute	269_1	1
-269	color	269_1	1
-269	college	269_1	1
-269	jail	269_1	1
-269	cycle	269_1	1
-269	fact	269_1	1
-269	fibre	269_1	1
-270	pig	270_1	1
-270	discipline	270_1	1
-270	congress	270_1	1
-270	resistance	270_1	1
-270	vacation	270_1	1
-270	trail	270_1	1
-270	slave	270_1	1
-270	winner	270_1	1
-270	share	270_1	1
-270	broken	270_1	1
-271	gown	271_1	1
-271	inquire	271_1	1
-271	short	271_1	1
-271	skillful	271_1	1
-271	pass	271_1	1
-271	resemble	271_1	1
-271	base	271_1	1
-271	lion	271_1	1
-271	poor	271_1	1
-271	genius	271_1	1
-272	football	272_1	1
-272	pitch	272_1	1
-272	strange	272_1	1
-272	utilize	272_1	1
-272	basin	272_1	1
-272	headmaster	272_1	1
-272	yawn	272_1	1
-272	transmission	272_1	1
-272	shallow	272_1	1
-272	spread	272_1	1
-273	heaven	273_1	1
-273	upset	273_1	1
-273	lid	273_1	1
-273	park	273_1	1
-273	persist	273_1	1
-273	postage	273_1	1
-273	jazz	273_1	1
-273	cubic	273_1	1
-273	insufficient	273_1	1
-273	cable	273_1	1
-274	edge	274_1	1
-274	shiver	274_1	1
-274	shilling	274_1	1
-274	solid	274_1	1
-274	vanity	274_1	1
-274	charity	274_1	1
-274	crop	274_1	1
-274	naturally	274_1	1
-274	sing	274_1	1
-274	three	274_1	1
-275	female	275_1	1
-275	read	275_1	1
-275	professional	275_1	1
-275	indirect	275_1	1
-275	treason	275_1	1
-275	therefore	275_1	1
-275	miner	275_1	1
-275	pack	275_1	1
-275	brighten	275_1	1
-275	sleepy	275_1	1
-276	chemical	276_1	1
-276	elect	276_1	1
-276	fountain	276_1	1
-276	plus	276_1	1
-276	pearl	276_1	1
-276	university	276_1	1
-276	traffic	276_1	1
-276	seven	276_1	1
-276	more	276_1	1
-276	throw	276_1	1
-277	joint	277_1	1
-277	check	277_1	1
-277	landlady	277_1	1
-277	hatch	277_1	1
-277	believe	277_1	1
-277	acceptable	277_1	1
-277	brake	277_1	1
-277	pursuit	277_1	1
-277	considerable	277_1	1
-277	invite	277_1	1
-278	missile	278_1	1
-278	countryside	278_1	1
-278	logic	278_1	1
-278	apply	278_1	1
-278	twice	278_1	1
-278	destroy	278_1	1
-278	vague	278_1	1
-278	gently	278_1	1
-278	talk	278_1	1
-278	convenience	278_1	1
-279	entry	279_1	1
-279	explanation	279_1	1
-279	erect	279_1	1
-279	postman	279_1	1
-279	tank	279_1	1
-279	system	279_1	1
-279	medical	279_1	1
-279	cannon	279_1	1
-279	tendency	279_1	1
-279	sickness	279_1	1
-280	strongly	280_1	1
-280	wide	280_1	1
-280	gulf	280_1	1
-280	pastime	280_1	1
-280	unfortunately	280_1	1
-280	at	280_1	1
-280	cancer	280_1	1
-280	medium	280_1	1
-280	variety	280_1	1
-280	trust	280_1	1
-281	meanwhile	281_1	1
-281	weapon	281_1	1
-281	encounter	281_1	1
-281	closely	281_1	1
-281	race	281_1	1
-281	trap	281_1	1
-281	weekly	281_1	1
-281	loaf	281_1	1
-281	moment	281_1	1
-281	idle	281_1	1
-282	statesman	282_1	1
-282	salary	282_1	1
-282	bomb	282_1	1
-282	please	282_1	1
-282	greet	282_1	1
-282	strength	282_1	1
-282	sweet	282_1	1
-282	triumph	282_1	1
-282	eighth	282_1	1
-282	small	282_1	1
-283	truck	283_1	1
-283	unite	283_1	1
-283	serious	283_1	1
-283	squirrel	283_1	1
-283	prior	283_1	1
-283	photographic	283_1	1
-283	badminton	283_1	1
-283	upright	283_1	1
-283	inefficient	283_1	1
-283	allow	283_1	1
-284	expensive	284_1	1
-284	atmospheric	284_1	1
-284	pipe	284_1	1
-284	do	284_1	1
-284	conceal	284_1	1
-284	patient	284_1	1
-284	accommodation	284_1	1
-284	candidate	284_1	1
-284	ancestor	284_1	1
-284	aircraft	284_1	1
-285	shepherd	285_1	1
-285	office	285_1	1
-285	waste	285_1	1
-285	canal	285_1	1
-285	lighten	285_1	1
-285	religion	285_1	1
-285	staircase	285_1	1
-285	agony	285_1	1
-285	harden	285_1	1
-285	sell	285_1	1
-286	improve	286_1	1
-286	predict	286_1	1
-286	treat	286_1	1
-286	beautiful	286_1	1
-286	unjust	286_1	1
-286	town	286_1	1
-286	similarly	286_1	1
-286	tunnel	286_1	1
-286	thorn	286_1	1
-286	truth	286_1	1
-287	travel	287_1	1
-287	away	287_1	1
-287	tax	287_1	1
-287	harness	287_1	1
-287	elementary	287_1	1
-287	stir	287_1	1
-287	sight	287_1	1
-287	rejoice	287_1	1
-287	if	287_1	1
-287	await	287_1	1
-288	robe	288_1	1
-288	ridge	288_1	1
-288	timber	288_1	1
-288	show	288_1	1
-288	next	288_1	1
-288	biology	288_1	1
-288	ending	288_1	1
-288	comment	288_1	1
-288	departure	288_1	1
-288	reputation	288_1	1
-289	replace	289_1	1
-289	confusion	289_1	1
-289	fog	289_1	1
-289	gold	289_1	1
-289	airport	289_1	1
-289	mile	289_1	1
-289	cap	289_1	1
-289	breakfast	289_1	1
-289	ceremony	289_1	1
-289	cream	289_1	1
-290	baggage	290_1	1
-290	whirl	290_1	1
-290	credit	290_1	1
-290	velocity	290_1	1
-290	organism	290_1	1
-290	purchase	290_1	1
-290	axis	290_1	1
-290	brief	290_1	1
-290	yourself	290_1	1
-290	shy	290_1	1
-291	science	291_1	1
-291	embrace	291_1	1
-291	auxiliary	291_1	1
-291	corridor	291_1	1
-291	jar	291_1	1
-291	grip	291_1	1
-291	depend	291_1	1
-291	vine	291_1	1
-291	omit	291_1	1
-291	swamp	291_1	1
-292	chest	292_1	1
-292	athlete	292_1	1
-292	alphabet	292_1	1
-292	food	292_1	1
-292	selfish	292_1	1
-292	many	292_1	1
-292	represent	292_1	1
-292	tram	292_1	1
-292	schedule	292_1	1
-292	dock	292_1	1
-293	beg	293_1	1
-293	cope	293_1	1
-293	seed	293_1	1
-293	succession	293_1	1
-293	herd	293_1	1
-293	sleeve	293_1	1
-293	planet	293_1	1
-293	rebellion	293_1	1
-293	imagine	293_1	1
-293	corn	293_1	1
-294	uncover	294_1	1
-294	delegation	294_1	1
-294	often	294_1	1
-294	coffee	294_1	1
-294	ski	294_1	1
-294	window	294_1	1
-294	structural	294_1	1
-294	community	294_1	1
-294	prohibit	294_1	1
-294	embarrass	294_1	1
-295	restless	295_1	1
-295	church	295_1	1
-295	desirable	295_1	1
-295	extra	295_1	1
-295	privilege	295_1	1
-295	positive	295_1	1
-295	similar	295_1	1
-295	glide	295_1	1
-295	motion	295_1	1
-295	marry	295_1	1
-296	generate	296_1	1
-296	export	296_1	1
-296	opponent	296_1	1
-296	restaurant	296_1	1
-296	outwards	296_1	1
-296	rise	296_1	1
-296	exclaim	296_1	1
-296	light	296_1	1
-296	zone	296_1	1
-296	dirt	296_1	1
-297	occupy	297_1	1
-297	jaw	297_1	1
-297	style	297_1	1
-297	proof	297_1	1
-297	rod	297_1	1
-297	legal	297_1	1
-297	aware	297_1	1
-297	factory	297_1	1
-297	remove	297_1	1
-297	component	297_1	1
-298	zebra	298_1	1
-298	tag	298_1	1
-298	reflection	298_1	1
-298	fill	298_1	1
-298	lamb	298_1	1
-298	poisonous	298_1	1
-298	clock	298_1	1
-298	crazy	298_1	1
-298	among	298_1	1
-298	hotel	298_1	1
-299	latter	299_1	1
-299	poverty	299_1	1
-299	consciousness	299_1	1
-299	blow	299_1	1
-299	recovery	299_1	1
-299	turning	299_1	1
-299	monkey	299_1	1
-299	feed	299_1	1
-299	solution	299_1	1
-299	misunderstand	299_1	1
-300	concentration	300_1	1
-300	abstract	300_1	1
-300	harbour	300_1	1
-300	sunshine	300_1	1
-300	alcohol	300_1	1
-300	quilt	300_1	1
-300	vibration	300_1	1
-300	flat	300_1	1
-300	trace	300_1	1
-300	concert	300_1	1
-301	enjoy	301_1	1
-301	bronze	301_1	1
-301	renew	301_1	1
-301	thorough	301_1	1
-301	slice	301_1	1
-301	evil	301_1	1
-301	tear	301_1	1
-301	drug	301_1	1
-301	wing	301_1	1
-301	by	301_1	1
-302	contact	302_1	1
-302	virtually	302_1	1
-302	accomplish	302_1	1
-302	victory	302_1	1
-302	rust	302_1	1
-302	shelf	302_1	1
-302	approve	302_1	1
-302	scenery	302_1	1
-302	brown	302_1	1
-302	restraint	302_1	1
-303	fry	303_1	1
-303	usage	303_1	1
-303	two	303_1	1
-303	scientific	303_1	1
-303	beloved	303_1	1
-303	coarse	303_1	1
-303	investigate	303_1	1
-303	let	303_1	1
-303	ox	303_1	1
-303	clerk	303_1	1
-304	wife	304_1	1
-304	enforce	304_1	1
-304	broad	304_1	1
-304	needle	304_1	1
-304	better	304_1	1
-304	select	304_1	1
-304	operation	304_1	1
-304	sway	304_1	1
-304	sunrise	304_1	1
-304	plaster	304_1	1
-305	heavily	305_1	1
-305	intention	305_1	1
-305	track	305_1	1
-305	storage	305_1	1
-305	spirit	305_1	1
-305	communist	305_1	1
-305	smoke	305_1	1
-305	choke	305_1	1
-305	tribe	305_1	1
-305	tiny	305_1	1
-306	prescribe	306_1	1
-306	vegetable	306_1	1
-306	refuge	306_1	1
-306	northern	306_1	1
-306	atmosphere	306_1	1
-306	cock	306_1	1
-306	other	306_1	1
-306	profit	306_1	1
-306	comprehensive	306_1	1
-306	mount	306_1	1
-307	journalist	307_1	1
-307	inferior	307_1	1
-307	onto	307_1	1
-307	vice	307_1	1
-307	creative	307_1	1
-307	labour	307_1	1
-307	test	307_1	1
-307	input	307_1	1
-307	hostile	307_1	1
-307	seriously	307_1	1
-308	wish	308_1	1
-308	absolute	308_1	1
-308	such	308_1	1
-308	mobile	308_1	1
-308	document	308_1	1
-308	nineteen	308_1	1
-308	due	308_1	1
-308	flight	308_1	1
-308	phone	308_1	1
-308	accuse	308_1	1
-309	musical	309_1	1
-309	flower	309_1	1
-309	deer	309_1	1
-309	west	309_1	1
-309	gymnasium	309_1	1
-309	saint	309_1	1
-309	bud	309_1	1
-309	rubbish	309_1	1
-309	till	309_1	1
-309	taste	309_1	1
-310	camp	310_1	1
-310	charge	310_1	1
-310	paper	310_1	1
-310	mirror	310_1	1
-310	nurse	310_1	1
-310	spider	310_1	1
-310	panel	310_1	1
-310	electron	310_1	1
-310	program	310_1	1
-310	worthwhile	310_1	1
-311	thirst	311_1	1
-311	no	311_1	1
-311	worse	311_1	1
-311	hopeful	311_1	1
-311	married	311_1	1
-311	worm	311_1	1
-311	glove	311_1	1
-311	pavement	311_1	1
-311	stupid	311_1	1
-311	critic	311_1	1
-312	revise	312_1	1
-312	interpretation	312_1	1
-312	continue	312_1	1
-312	future	312_1	1
-312	evaporate	312_1	1
-312	patience	312_1	1
-312	cook	312_1	1
-312	dozen	312_1	1
-312	waggon	312_1	1
-312	generation	312_1	1
-313	feedback	313_1	1
-313	philosopher	313_1	1
-313	royal	313_1	1
-313	cripple	313_1	1
-313	dialect	313_1	1
-313	habitual	313_1	1
-313	construction	313_1	1
-313	quantity	313_1	1
-313	appetite	313_1	1
-313	chocolate	313_1	1
-314	invention	314_1	1
-314	straight	314_1	1
-314	steer	314_1	1
-314	unknown	314_1	1
-314	workman	314_1	1
-314	visible	314_1	1
-314	copy	314_1	1
-314	harmony	314_1	1
-314	spot	314_1	1
-314	author	314_1	1
-315	roll	315_1	1
-315	fluid	315_1	1
-315	carbon	315_1	1
-315	everyday	315_1	1
-315	blend	315_1	1
-315	relation	315_1	1
-315	halt	315_1	1
-315	praise	315_1	1
-315	climate	315_1	1
-315	contempt	315_1	1
-316	roast	316_1	1
-316	pork	316_1	1
-316	ceiling	316_1	1
-316	interruption	316_1	1
-316	feast	316_1	1
-316	relative	316_1	1
-316	newly	316_1	1
-316	evident	316_1	1
-316	loyal	316_1	1
-316	escape	316_1	1
-317	distinct	317_1	1
-317	efficient	317_1	1
-317	peaceful	317_1	1
-317	whoever	317_1	1
-317	sale	317_1	1
-317	tonight	317_1	1
-317	owe	317_1	1
-317	bulb	317_1	1
-317	instantly	317_1	1
-317	hole	317_1	1
-318	bet	318_1	1
-318	liberate	318_1	1
-318	accelerate	318_1	1
-318	snowstorm	318_1	1
-318	keyboard	318_1	1
-318	doubtful	318_1	1
-318	gradually	318_1	1
-318	near	318_1	1
-318	adult	318_1	1
-318	sweat	318_1	1
-319	safely	319_1	1
-319	conventional	319_1	1
-319	resignation	319_1	1
-319	instant	319_1	1
-319	complex	319_1	1
-319	require	319_1	1
-319	mix	319_1	1
-319	provided	319_1	1
-319	principal	319_1	1
-319	punishment	319_1	1
-320	cloth	320_1	1
-320	continuous	320_1	1
-320	assemble	320_1	1
-320	promise	320_1	1
-320	quarter	320_1	1
-320	cart	320_1	1
-320	fine	320_1	1
-320	gift	320_1	1
-320	version	320_1	1
-320	recommend	320_1	1
-321	sad	321_1	1
-321	advantage	321_1	1
-321	initial	321_1	1
-321	framework	321_1	1
-321	grasp	321_1	1
-321	remain	321_1	1
-321	evaluate	321_1	1
-321	own	321_1	1
-321	fail	321_1	1
-321	strategy	321_1	1
-322	commander	322_1	1
-322	composition	322_1	1
-322	dynamic	322_1	1
-322	automatic	322_1	1
-322	tragedy	322_1	1
-322	island	322_1	1
-322	endure	322_1	1
-322	regret	322_1	1
-322	still	322_1	1
-322	adjust	322_1	1
-323	furthermore	323_1	1
-323	depart	323_1	1
-323	dangerous	323_1	1
-323	output	323_1	1
-323	seldom	323_1	1
-323	split	323_1	1
-323	understand	323_1	1
-323	enthusiastic	323_1	1
-323	soft	323_1	1
-323	asleep	323_1	1
-324	acceleration	324_1	1
-324	watch	324_1	1
-324	forty	324_1	1
-324	highly	324_1	1
-324	session	324_1	1
-324	monthly	324_1	1
-324	tenth	324_1	1
-324	person	324_1	1
-324	lesson	324_1	1
-324	would	324_1	1
-325	match	325_1	1
-325	agency	325_1	1
-325	keen	325_1	1
-325	glimpse	325_1	1
-325	millimetre	325_1	1
-325	sadly	325_1	1
-325	queer	325_1	1
-325	daughter	325_1	1
-325	mill	325_1	1
-325	ours	325_1	1
-326	engineer	326_1	1
-326	movement	326_1	1
-326	painful	326_1	1
-326	unpleasant	326_1	1
-326	administration	326_1	1
-326	cell	326_1	1
-326	fairly	326_1	1
-326	finding	326_1	1
-326	sex	326_1	1
-326	precision	326_1	1
-327	satisfy	327_1	1
-327	indicate	327_1	1
-327	lumber	327_1	1
-327	forecast	327_1	1
-327	suitable	327_1	1
-327	rock	327_1	1
-327	oppose	327_1	1
-327	graph	327_1	1
-327	favourable	327_1	1
-327	golden	327_1	1
-328	report	328_1	1
-328	pink	328_1	1
-328	subsequent	328_1	1
-328	finish	328_1	1
-328	sharpen	328_1	1
-328	helpful	328_1	1
-328	ink	328_1	1
-328	cabin	328_1	1
-328	skate	328_1	1
-328	contest	328_1	1
-329	drill	329_1	1
-329	troop	329_1	1
-329	beggar	329_1	1
-329	overtake	329_1	1
-329	loosen	329_1	1
-329	merry	329_1	1
-329	navy	329_1	1
-329	skirt	329_1	1
-329	card	329_1	1
-329	wash	329_1	1
-330	slit	330_1	1
-330	pour	330_1	1
-330	keeper	330_1	1
-330	particular	330_1	1
-330	reluctant	330_1	1
-330	profession	330_1	1
-330	lantern	330_1	1
-330	depth	330_1	1
-330	affair	330_1	1
-330	smell	330_1	1
-331	stress	331_1	1
-331	seem	331_1	1
-331	neck	331_1	1
-331	relativity	331_1	1
-331	faithful	331_1	1
-331	necklace	331_1	1
-331	interest	331_1	1
-331	objective	331_1	1
-331	convince	331_1	1
-331	impress	331_1	1
-332	above	332_1	1
-332	vary	332_1	1
-332	pressure	332_1	1
-332	plough	332_1	1
-332	being	332_1	1
-332	improvement	332_1	1
-332	whose	332_1	1
-332	stage	332_1	1
-332	land	332_1	1
-332	vertical	332_1	1
-333	handkerchief	333_1	1
-333	steep	333_1	1
-333	mostly	333_1	1
-333	hour	333_1	1
-333	fresh	333_1	1
-333	ninety	333_1	1
-333	portable	333_1	1
-333	lawn	333_1	1
-333	approval	333_1	1
-333	circle	333_1	1
-334	wise	334_1	1
-334	master	334_1	1
-334	mankind	334_1	1
-334	surround	334_1	1
-334	dot	334_1	1
-334	greeting	334_1	1
-334	unless	334_1	1
-334	friend	334_1	1
-334	elsewhere	334_1	1
-334	summary	334_1	1
-335	steady	335_1	1
-335	mouse	335_1	1
-335	purple	335_1	1
-335	ruin	335_1	1
-335	activity	335_1	1
-335	sore	335_1	1
-335	indoors	335_1	1
-335	nobody	335_1	1
-335	intensity	335_1	1
-335	sole	335_1	1
-336	startle	336_1	1
-336	weave	336_1	1
-336	indication	336_1	1
-336	minority	336_1	1
-336	physician	336_1	1
-336	far	336_1	1
-336	chart	336_1	1
-336	accurate	336_1	1
-336	dance	336_1	1
-336	ancient	336_1	1
-337	infant	337_1	1
-337	station	337_1	1
-337	border	337_1	1
-337	identify	337_1	1
-337	topic	337_1	1
-337	spoil	337_1	1
-337	pilot	337_1	1
-337	huge	337_1	1
-337	occasion	337_1	1
-337	smog	337_1	1
-338	toilet	338_1	1
-338	funny	338_1	1
-338	root	338_1	1
-338	perform	338_1	1
-338	eyesight	338_1	1
-338	dam	338_1	1
-338	residence	338_1	1
-338	cave	338_1	1
-338	minute	338_1	1
-338	shoulder	338_1	1
-339	clear	339_1	1
-339	electrical	339_1	1
-339	contrary	339_1	1
-339	hammer	339_1	1
-339	method	339_1	1
-339	frequently	339_1	1
-339	diverse	339_1	1
-339	province	339_1	1
-339	everybody	339_1	1
-339	sympathize	339_1	1
-340	revenge	340_1	1
-340	saddle	340_1	1
-340	writing	340_1	1
-340	bound	340_1	1
-340	dorm	340_1	1
-340	prepare	340_1	1
-340	provide	340_1	1
-340	dispose	340_1	1
-340	none	340_1	1
-340	argument	340_1	1
-341	beach	341_1	1
-341	imagination	341_1	1
-341	thirty	341_1	1
-341	liberty	341_1	1
-341	us	341_1	1
-341	dissolve	341_1	1
-341	trial	341_1	1
-341	comprise	341_1	1
-341	rent	341_1	1
-341	whistle	341_1	1
-342	face	342_1	1
-342	content	342_1	1
-342	unexpected	342_1	1
-342	sausage	342_1	1
-342	underground	342_1	1
-342	drain	342_1	1
-342	ignore	342_1	1
-342	coil	342_1	1
-342	shock	342_1	1
-342	uniform	342_1	1
-343	fearful	343_1	1
-343	toss	343_1	1
-343	inhabit	343_1	1
-343	rag	343_1	1
-343	slide	343_1	1
-343	revolutionary	343_1	1
-343	logical	343_1	1
-343	decade	343_1	1
-343	meet	343_1	1
-343	vision	343_1	1
-344	anyhow	344_1	1
-344	portrait	344_1	1
-344	translate	344_1	1
-344	hit	344_1	1
-344	professor	344_1	1
-344	hire	344_1	1
-344	petrol	344_1	1
-344	bike	344_1	1
-344	equip	344_1	1
-344	appliance	344_1	1
-345	debate	345_1	1
-345	altitude	345_1	1
-345	soccer	345_1	1
-345	modern	345_1	1
-345	flexible	345_1	1
-345	proposal	345_1	1
-345	sprinkle	345_1	1
-345	sheet	345_1	1
-345	crust	345_1	1
-345	realize	345_1	1
-346	installation	346_1	1
-346	valley	346_1	1
-346	calculator	346_1	1
-346	dictation	346_1	1
-346	mental	346_1	1
-346	maintenance	346_1	1
-346	exactly	346_1	1
-346	attitude	346_1	1
-346	fortunately	346_1	1
-346	season	346_1	1
-347	spare	347_1	1
-347	occur	347_1	1
-347	king	347_1	1
-347	successive	347_1	1
-347	thought	347_1	1
-347	definition	347_1	1
-347	yard	347_1	1
-347	divorce	347_1	1
-347	reinforce	347_1	1
-347	mute	347_1	1
-348	freight	348_1	1
-348	brilliant	348_1	1
-348	regular	348_1	1
-348	doubt	348_1	1
-348	hatred	348_1	1
-348	treatment	348_1	1
-348	first	348_1	1
-348	invitation	348_1	1
-348	conflict	348_1	1
-348	federal	348_1	1
-349	formula	349_1	1
-349	soul	349_1	1
-349	twenty	349_1	1
-349	clasp	349_1	1
-349	drawer	349_1	1
-349	majority	349_1	1
-349	acute	349_1	1
-349	mug	349_1	1
-349	wine	349_1	1
-349	admit	349_1	1
-350	threat	350_1	1
-350	lap	350_1	1
-350	pistol	350_1	1
-350	effective	350_1	1
-350	foreign	350_1	1
-350	slowly	350_1	1
-350	reflect	350_1	1
-350	cough	350_1	1
-350	painter	350_1	1
-350	overnight	350_1	1
-351	consume	351_1	1
-351	physicist	351_1	1
-351	complaint	351_1	1
-351	mist	351_1	1
-351	sunny	351_1	1
-351	campaign	351_1	1
-351	various	351_1	1
-351	subject	351_1	1
-351	ride	351_1	1
-351	peel	351_1	1
-352	fork	352_1	1
-352	reply	352_1	1
-352	dumb	352_1	1
-352	discovery	352_1	1
-352	chess	352_1	1
-352	outset	352_1	1
-352	nervous	352_1	1
-352	scientist	352_1	1
-352	perhaps	352_1	1
-352	chapter	352_1	1
-353	record	353_1	1
-353	political	353_1	1
-353	exact	353_1	1
-353	mate	353_1	1
-353	essential	353_1	1
-353	multiply	353_1	1
-353	each	353_1	1
-353	down	353_1	1
-353	procedure	353_1	1
-353	illegal	353_1	1
-354	gun	354_1	1
-354	undergo	354_1	1
-354	pair	354_1	1
-354	experiment	354_1	1
-354	swallow	354_1	1
-354	scholarship	354_1	1
-354	quart	354_1	1
-354	rein	354_1	1
-354	museum	354_1	1
-354	potential	354_1	1
-355	camera	355_1	1
-355	contract	355_1	1
-355	retreat	355_1	1
-355	frequent	355_1	1
-355	manufacture	355_1	1
-355	meal	355_1	1
-355	evidence	355_1	1
-355	journal	355_1	1
-355	offend	355_1	1
-355	kilometre	355_1	1
-356	rider	356_1	1
-356	correspondent	356_1	1
-356	passage	356_1	1
-356	about	356_1	1
-356	stable	356_1	1
-356	famine	356_1	1
-356	hat	356_1	1
-356	atom	356_1	1
-356	puff	356_1	1
-356	rotary	356_1	1
-357	graduate	357_1	1
-357	crime	357_1	1
-357	participate	357_1	1
-357	alive	357_1	1
-357	jungle	357_1	1
-357	within	357_1	1
-357	almost	357_1	1
-357	dig	357_1	1
-357	fancy	357_1	1
-357	collapse	357_1	1
-358	circumstance	358_1	1
-358	speak	358_1	1
-358	decision	358_1	1
-358	save	358_1	1
-358	company	358_1	1
-358	prayer	358_1	1
-358	agree	358_1	1
-358	corporation	358_1	1
-358	complicated	358_1	1
-358	brand	358_1	1
-359	drought	359_1	1
-359	refute	359_1	1
-359	bulk	359_1	1
-359	preparation	359_1	1
-359	even	359_1	1
-359	except	359_1	1
-359	swell	359_1	1
-359	article	359_1	1
-359	pessimistic	359_1	1
-359	certainly	359_1	1
-360	eleven	360_1	1
-360	instruction	360_1	1
-360	infer	360_1	1
-360	peninsula	360_1	1
-360	hand	360_1	1
-360	telephone	360_1	1
-360	melt	360_1	1
-360	sophisticated	360_1	1
-360	globe	360_1	1
-360	common	360_1	1
-361	anyone	361_1	1
-361	duration	361_1	1
-361	regardless	361_1	1
-361	roar	361_1	1
-361	brandy	361_1	1
-361	northeast	361_1	1
-361	economical	361_1	1
-361	quiet	361_1	1
-361	nail	361_1	1
-361	throat	361_1	1
-362	fortnight	362_1	1
-362	neat	362_1	1
-362	rusty	362_1	1
-362	liberation	362_1	1
-362	drip	362_1	1
-362	undo	362_1	1
-362	chew	362_1	1
-362	partially	362_1	1
-362	dramatic	362_1	1
-362	exercise	362_1	1
-363	farewell	363_1	1
-363	sword	363_1	1
-363	burn	363_1	1
-363	life	363_1	1
-363	deadly	363_1	1
-363	pillar	363_1	1
-363	five	363_1	1
-363	sparkle	363_1	1
-363	midday	363_1	1
-363	prevent	363_1	1
-364	carve	364_1	1
-364	video	364_1	1
-364	suggest	364_1	1
-364	hate	364_1	1
-364	fee	364_1	1
-364	beard	364_1	1
-364	stretch	364_1	1
-364	orange	364_1	1
-364	arrange	364_1	1
-364	glue	364_1	1
-365	could	365_1	1
-365	shampoo	365_1	1
-365	orchestra	365_1	1
-365	flush	365_1	1
-365	theirs	365_1	1
-365	scarf	365_1	1
-365	idiom	365_1	1
-365	crawl	365_1	1
-365	young	365_1	1
-365	porch	365_1	1
-366	explain	366_1	1
-366	skim	366_1	1
-366	sensitive	366_1	1
-366	include	366_1	1
-366	strain	366_1	1
-366	groan	366_1	1
-366	package	366_1	1
-366	thrust	366_1	1
-366	sorry	366_1	1
-366	scout	366_1	1
-367	intelligence	367_1	1
-367	actor	367_1	1
-367	degree	367_1	1
-367	announcer	367_1	1
-367	rival	367_1	1
-367	assume	367_1	1
-367	lung	367_1	1
-367	adopt	367_1	1
-367	already	367_1	1
-367	breath	367_1	1
-368	example	368_1	1
-368	barn	368_1	1
-368	gloomy	368_1	1
-368	leaf	368_1	1
-368	national	368_1	1
-368	digital	368_1	1
-368	bee	368_1	1
-368	render	368_1	1
-368	revolt	368_1	1
-368	hero	368_1	1
-369	technology	369_1	1
-369	persuade	369_1	1
-369	stack	369_1	1
-369	familiar	369_1	1
-369	practical	369_1	1
-369	twelfth	369_1	1
-369	direction	369_1	1
-369	volt	369_1	1
-369	arrest	369_1	1
-369	meat	369_1	1
-370	all	370_1	1
-370	prisoner	370_1	1
-370	sparrow	370_1	1
-370	lock	370_1	1
-370	trim	370_1	1
-370	pant	370_1	1
-370	beginning	370_1	1
-370	penetrate	370_1	1
-370	shout	370_1	1
-370	partner	370_1	1
-371	desert	371_1	1
-371	punctual	371_1	1
-371	sportsman	371_1	1
-371	obstacle	371_1	1
-371	monument	371_1	1
-371	zeal	371_1	1
-371	nine	371_1	1
-371	clap	371_1	1
-371	door	371_1	1
-371	chance	371_1	1
-372	clothe	372_1	1
-372	temporary	372_1	1
-372	refresh	372_1	1
-372	goodness	372_1	1
-372	navigation	372_1	1
-372	encourage	372_1	1
-372	polite	372_1	1
-372	appoint	372_1	1
-372	liar	372_1	1
-372	independent	372_1	1
-373	teach	373_1	1
-373	sand	373_1	1
-373	lend	373_1	1
-373	fable	373_1	1
-373	confirm	373_1	1
-373	analyse	373_1	1
-373	happy	373_1	1
-373	refreshment	373_1	1
-373	unusually	373_1	1
-373	assure	373_1	1
-374	risk	374_1	1
-374	excursion	374_1	1
-374	sea	374_1	1
-374	fool	374_1	1
-374	compile	374_1	1
-374	ton	374_1	1
-374	crow	374_1	1
-374	sailor	374_1	1
-374	mean	374_1	1
-374	cheerful	374_1	1
-375	kite	375_1	1
-375	hopeless	375_1	1
-375	screen	375_1	1
-375	eye	375_1	1
-375	airline	375_1	1
-375	regarding	375_1	1
-375	stamp	375_1	1
-375	brain	375_1	1
-375	thirteen	375_1	1
-375	distribution	375_1	1
-376	sketch	376_1	1
-376	goose	376_1	1
-376	nearly	376_1	1
-376	eager	376_1	1
-376	forth	376_1	1
-376	jacket	376_1	1
-376	someone	376_1	1
-376	despair	376_1	1
-376	east	376_1	1
-376	must	376_1	1
-377	unlikely	377_1	1
-377	paragraph	377_1	1
-377	million	377_1	1
-377	generator	377_1	1
-377	pollute	377_1	1
-377	chicken	377_1	1
-377	month	377_1	1
-377	terrific	377_1	1
-377	forever	377_1	1
-377	scent	377_1	1
-378	measure	378_1	1
-378	relieve	378_1	1
-378	noticeable	378_1	1
-378	explode	378_1	1
-378	mature	378_1	1
-378	couple	378_1	1
-378	pillow	378_1	1
-378	mercy	378_1	1
-378	repeatedly	378_1	1
-378	care	378_1	1
-379	hamburger	379_1	1
-379	oh	379_1	1
-379	mainly	379_1	1
-379	glass	379_1	1
-379	stale	379_1	1
-379	index	379_1	1
-379	facility	379_1	1
-379	shield	379_1	1
-379	implication	379_1	1
-379	paw	379_1	1
-380	apparatus	380_1	1
-380	consist	380_1	1
-380	before	380_1	1
-380	merit	380_1	1
-380	seventh	380_1	1
-380	justice	380_1	1
-380	noon	380_1	1
-380	wheel	380_1	1
-380	criminal	380_1	1
-380	tent	380_1	1
-381	lively	381_1	1
-381	child	381_1	1
-381	percentage	381_1	1
-381	convention	381_1	1
-381	average	381_1	1
-381	goal	381_1	1
-381	damp	381_1	1
-381	supply	381_1	1
-381	combination	381_1	1
-381	lean	381_1	1
-382	thumb	382_1	1
-382	tail	382_1	1
-382	liter	382_1	1
-382	pleasure	382_1	1
-382	act	382_1	1
-382	thief	382_1	1
-382	wind	382_1	1
-382	continual	382_1	1
-382	distress	382_1	1
-382	lamp	382_1	1
-383	rhythm	383_1	1
-383	beside	383_1	1
-383	jam	383_1	1
-383	distant	383_1	1
-383	pay	383_1	1
-383	besides	383_1	1
-383	mail	383_1	1
-383	suspicion	383_1	1
-383	crack	383_1	1
-383	judge	383_1	1
-384	recently	384_1	1
-384	throughout	384_1	1
-384	contemporary	384_1	1
-384	stiffen	384_1	1
-384	bitter	384_1	1
-384	display	384_1	1
-384	reverse	384_1	1
-384	hope	384_1	1
-384	strike	384_1	1
-384	dump	384_1	1
-385	cold	385_1	1
-385	candy	385_1	1
-385	winter	385_1	1
-385	rough	385_1	1
-385	from	385_1	1
-385	brass	385_1	1
-385	cordial	385_1	1
-385	pool	385_1	1
-385	engine	385_1	1
-385	dollar	385_1	1
-386	congratulate	386_1	1
-386	bold	386_1	1
-386	yours	386_1	1
-386	era	386_1	1
-386	furious	386_1	1
-386	scrape	386_1	1
-386	shake	386_1	1
-386	radium	386_1	1
-386	launch	386_1	1
-386	deck	386_1	1
-387	settlement	387_1	1
-387	license	387_1	1
-387	fade	387_1	1
-387	enter	387_1	1
-387	excess	387_1	1
-387	bristle	387_1	1
-387	period	387_1	1
-387	senate	387_1	1
-387	collective	387_1	1
-387	bat	387_1	1
-388	there	388_1	1
-388	interesting	388_1	1
-388	awful	388_1	1
-388	pet	388_1	1
-388	entire	388_1	1
-388	disturb	388_1	1
-388	respond	388_1	1
-388	animal	388_1	1
-388	slope	388_1	1
-388	lazy	388_1	1
-389	cloud	389_1	1
-389	tobacco	389_1	1
-389	orbit	389_1	1
-389	very	389_1	1
-389	demand	389_1	1
-389	counter	389_1	1
-389	breeze	389_1	1
-389	smart	389_1	1
-389	stocking	389_1	1
-389	number	389_1	1
-390	somehow	390_1	1
-390	restore	390_1	1
-390	bare	390_1	1
-390	concern	390_1	1
-390	farther	390_1	1
-390	hundred	390_1	1
-390	bang	390_1	1
-390	mark	390_1	1
-390	heap	390_1	1
-390	shady	390_1	1
-391	plain	391_1	1
-391	weak	391_1	1
-391	sunlight	391_1	1
-391	astronaut	391_1	1
-391	sunset	391_1	1
-391	peach	391_1	1
-391	maybe	391_1	1
-391	sting	391_1	1
-391	necessity	391_1	1
-391	coach	391_1	1
-392	police	392_1	1
-392	fragment	392_1	1
-392	salad	392_1	1
-392	admission	392_1	1
-392	comb	392_1	1
-392	frequency	392_1	1
-392	ministry	392_1	1
-392	lover	392_1	1
-392	note	392_1	1
-392	enemy	392_1	1
-393	ampere	393_1	1
-393	also	393_1	1
-393	childhood	393_1	1
-393	contrast	393_1	1
-393	ease	393_1	1
-393	injection	393_1	1
-393	structure	393_1	1
-393	busy	393_1	1
-393	business	393_1	1
-393	somewhat	393_1	1
-394	bullet	394_1	1
-394	deaf	394_1	1
-394	delete	394_1	1
-394	market	394_1	1
-394	dictate	394_1	1
-394	likely	394_1	1
-394	start	394_1	1
-394	moist	394_1	1
-394	plan	394_1	1
-394	creep	394_1	1
-395	birth	395_1	1
-395	failure	395_1	1
-395	fisherman	395_1	1
-395	afterward	395_1	1
-395	break	395_1	1
-395	brute	395_1	1
-395	chain	395_1	1
-395	route	395_1	1
-395	exclude	395_1	1
-395	fan	395_1	1
-396	actress	396_1	1
-396	blaze	396_1	1
-396	seventeen	396_1	1
-396	security	396_1	1
-396	tour	396_1	1
-396	manufacturer	396_1	1
-396	define	396_1	1
-396	element	396_1	1
-396	timid	396_1	1
-396	plate	396_1	1
-397	geography	397_1	1
-397	precious	397_1	1
-397	hold	397_1	1
-397	widen	397_1	1
-397	flag	397_1	1
-397	tend	397_1	1
-397	beneath	397_1	1
-397	descend	397_1	1
-397	bread	397_1	1
-397	softly	397_1	1
-398	intend	398_1	1
-398	cottage	398_1	1
-398	speaker	398_1	1
-398	humid	398_1	1
-398	beef	398_1	1
-398	boat	398_1	1
-398	silence	398_1	1
-398	fiction	398_1	1
-398	assignment	398_1	1
-398	product	398_1	1
-399	sock	399_1	1
-399	confess	399_1	1
-399	measurable	399_1	1
-399	instrument	399_1	1
-399	leadership	399_1	1
-399	favourite	399_1	1
-399	stare	399_1	1
-399	dictionary	399_1	1
-399	difficult	399_1	1
-399	ahead	399_1	1
-400	bull	400_1	1
-400	achievement	400_1	1
-400	desire	400_1	1
-400	clever	400_1	1
-400	environment	400_1	1
-400	imitate	400_1	1
-400	outcome	400_1	1
-400	squeeze	400_1	1
-400	bush	400_1	1
-400	mortal	400_1	1
-401	indignant	401_1	1
-401	scatter	401_1	1
-401	inquiry	401_1	1
-401	frog	401_1	1
-401	annoy	401_1	1
-401	regulate	401_1	1
-401	tomb	401_1	1
-401	become	401_1	1
-401	efficiency	401_1	1
-401	refuse	401_1	1
-402	sweep	402_1	1
-402	belief	402_1	1
-402	foot	402_1	1
-402	capital	402_1	1
-402	rake	402_1	1
-402	last	402_1	1
-402	extremely	402_1	1
-402	elbow	402_1	1
-402	empty	402_1	1
-402	toast	402_1	1
-403	level	403_1	1
-403	movie	403_1	1
-403	disappoint	403_1	1
-403	final	403_1	1
-403	follow	403_1	1
-403	statistical	403_1	1
-403	socialist	403_1	1
-403	again	403_1	1
-403	communicate	403_1	1
-403	gesture	403_1	1
-404	sphere	404_1	1
-404	parent	404_1	1
-404	ideal	404_1	1
-404	moral	404_1	1
-404	centigrade	404_1	1
-404	variation	404_1	1
-404	mention	404_1	1
-404	prevail	404_1	1
-404	active	404_1	1
-404	republic	404_1	1
-405	purpose	405_1	1
-405	today	405_1	1
-405	shore	405_1	1
-405	oriental	405_1	1
-405	stony	405_1	1
-405	agreement	405_1	1
-405	sheep	405_1	1
-405	mixture	405_1	1
-405	dawn	405_1	1
-405	productive	405_1	1
-406	ladder	406_1	1
-406	bosom	406_1	1
-406	convenient	406_1	1
-406	propose	406_1	1
-406	advance	406_1	1
-406	rebel	406_1	1
-406	compound	406_1	1
-406	superior	406_1	1
-406	heavy	406_1	1
-406	permanent	406_1	1
-407	scheme	407_1	1
-407	sudden	407_1	1
-407	dark	407_1	1
-407	join	407_1	1
-407	presently	407_1	1
-407	lest	407_1	1
-407	per	407_1	1
-407	nucleus	407_1	1
-407	highway	407_1	1
-407	decide	407_1	1
-408	reception	408_1	1
-408	manage	408_1	1
-408	appreciate	408_1	1
-408	accident	408_1	1
-408	deserve	408_1	1
-408	grow	408_1	1
-408	rare	408_1	1
-408	lose	408_1	1
-408	war	408_1	1
-408	for	408_1	1
-409	oven	409_1	1
-409	organic	409_1	1
-409	merely	409_1	1
-409	magnetic	409_1	1
-409	accordance	409_1	1
-409	lord	409_1	1
-409	valuable	409_1	1
-409	wolf	409_1	1
-409	respective	409_1	1
-409	fame	409_1	1
-410	kettle	410_1	1
-410	possess	410_1	1
-410	push	410_1	1
-410	thoughtful	410_1	1
-410	rouse	410_1	1
-410	railroad	410_1	1
-410	magazine	410_1	1
-410	splendid	410_1	1
-410	assembly	410_1	1
-410	object	410_1	1
-411	severe	411_1	1
-411	phenomenon	411_1	1
-411	ground	411_1	1
-411	avenue	411_1	1
-411	affection	411_1	1
-411	healthy	411_1	1
-411	cricket	411_1	1
-411	torture	411_1	1
-411	rule	411_1	1
-411	plastic	411_1	1
-412	swarm	412_1	1
-412	honey	412_1	1
-412	cushion	412_1	1
-412	essay	412_1	1
-412	carpet	412_1	1
-412	outside	412_1	1
-412	unique	412_1	1
-412	evolve	412_1	1
-412	indeed	412_1	1
-412	manual	412_1	1
-413	whether	413_1	1
-413	welfare	413_1	1
-413	advisable	413_1	1
-413	kind	413_1	1
-413	hut	413_1	1
-413	operate	413_1	1
-413	write	413_1	1
-413	compare	413_1	1
-413	intermediate	413_1	1
-413	expose	413_1	1
-414	conduct	414_1	1
-414	obey	414_1	1
-414	inexpensive	414_1	1
-414	sandwich	414_1	1
-414	prosperity	414_1	1
-414	estimate	414_1	1
-414	float	414_1	1
-414	daring	414_1	1
-414	classroom	414_1	1
-414	television	414_1	1
-415	wander	415_1	1
-415	official	415_1	1
-415	juice	415_1	1
-415	generally	415_1	1
-415	discharge	415_1	1
-415	cheese	415_1	1
-415	turn	415_1	1
-415	tradition	415_1	1
-415	cherry	415_1	1
-415	rose	415_1	1
-416	lift	416_1	1
-416	society	416_1	1
-416	envelope	416_1	1
-416	case	416_1	1
-416	muddy	416_1	1
-416	himself	416_1	1
-416	filter	416_1	1
-416	feeling	416_1	1
-416	supper	416_1	1
-416	resort	416_1	1
-417	conversion	417_1	1
-417	dragon	417_1	1
-417	tuition	417_1	1
-417	pat	417_1	1
-417	inn	417_1	1
-417	tan	417_1	1
-417	slum	417_1	1
-417	city	417_1	1
-417	stream	417_1	1
-417	vacant	417_1	1
-418	dye	418_1	1
-418	peasant	418_1	1
-418	forget	418_1	1
-418	astonish	418_1	1
-418	prison	418_1	1
-418	inform	418_1	1
-418	fatigue	418_1	1
-418	breed	418_1	1
-418	messenger	418_1	1
-418	puzzle	418_1	1
-419	payment	419_1	1
-419	orphan	419_1	1
-419	genuine	419_1	1
-419	surprising	419_1	1
-419	unbearable	419_1	1
-419	peak	419_1	1
-419	lead	419_1	1
-419	ad	419_1	1
-419	flame	419_1	1
-419	disposal	419_1	1
-420	admire	420_1	1
-420	urge	420_1	1
-420	pride	420_1	1
-420	automobile	420_1	1
-420	analysis	420_1	1
-420	leap	420_1	1
-420	widespread	420_1	1
-420	reel	420_1	1
-420	listener	420_1	1
-420	quit	420_1	1
-421	principle	421_1	1
-421	photograph	421_1	1
-421	reader	421_1	1
-421	exist	421_1	1
-421	accept	421_1	1
-421	dinner	421_1	1
-421	gain	421_1	1
-421	qualify	421_1	1
-421	helpless	421_1	1
-421	kid	421_1	1
-422	modest	422_1	1
-422	tide	422_1	1
-422	fault	422_1	1
-422	loan	422_1	1
-422	nut	422_1	1
-422	fear	422_1	1
-422	politician	422_1	1
-422	inventor	422_1	1
-422	gradual	422_1	1
-422	certificate	422_1	1
-423	shopping	423_1	1
-423	excellent	423_1	1
-423	consequently	423_1	1
-423	racket	423_1	1
-423	frost	423_1	1
-423	learned	423_1	1
-423	remote	423_1	1
-423	corresponding	423_1	1
-423	bless	423_1	1
-423	paint	423_1	1
+1	quotation	1_1	1	n.引语
+1	drama	1_1	1	n.戏剧
+1	critical	1_1	1	adj.批评的
+2	observer	2_1	1	n.观察者
+2	open	2_1	1	vt.打开
+2	progress	2_1	1	n.进步
+2	entitle	2_1	1	v.取名为
+2	blank	2_1	1	adj.空白的
+2	honourable	2_1	1	adj.荣誉的
+2	single	2_1	1	adj.单身的
+2	namely	2_1	1	adv.即
+2	perfume	2_1	1	n.香水
+2	matter	2_1	1	n.事件
+3	lump	3_1	1	n.团
+3	thousand	3_1	1	adj.千
+3	recorder	3_1	1	n.记录员
+3	great	3_1	1	adj.伟大的
+3	guest	3_1	1	n.客人
+3	spy	3_1	1	n.间谍
+3	cousin	3_1	1	n.堂(或表)兄弟(姐妹)
+3	ambulance	3_1	1	n.救护车
+3	hostess	3_1	1	n.女主人
+3	president	3_1	1	n.(国家)总统
+4	road	4_1	1	n.路
+4	disease	4_1	1	n.疾病
+4	overhead	4_1	1	n.经常开支
+4	heal	4_1	1	vt.痊愈
+4	sample	4_1	1	n.样品
+4	arrive	4_1	1	vi.到达
+4	secretary	4_1	1	n.秘书
+4	union	4_1	1	n.联盟
+4	journey	4_1	1	n.旅程
+4	plane	4_1	1	n.飞机
+5	jealous	5_1	1	adj.妒忌的
+5	twinkle	5_1	1	n.闪烁
+5	surname	5_1	1	n.姓
+5	curious	5_1	1	adj.好奇的
+5	okay	5_1	1	n.认可
+5	likewise	5_1	1	adv.同样地
+5	stumble	5_1	1	n.绊倒
+5	happen	5_1	1	vi.发生
+5	both	5_1	1	pron.二者
+5	focus	5_1	1	v.集中
+6	history	6_1	1	n.历史
+6	molecule	6_1	1	n.分子
+6	difference	6_1	1	n.差异
+6	suit	6_1	1	v.适合
+6	seaman	6_1	1	n.海员
+6	reduce	6_1	1	vt.换算
+6	relax	6_1	1	vi.放松
+6	junior	6_1	1	adj.初级的
+6	vigorous	6_1	1	adj.精力充沛的
+6	probable	6_1	1	adj.很可能的
+7	fair	7_1	1	adj.公平的
+7	packet	7_1	1	n.储存器
+7	breadth	7_1	1	n.宽度
+7	sixty	7_1	1	n.六十
+7	then	7_1	1	adv.然后
+7	narrow	7_1	1	adj.狭窄的
+7	ordinary	7_1	1	adj.普通的
+7	cost	7_1	1	vi.花费
+7	father	7_1	1	n.父亲
+7	subtract	7_1	1	vi.减少
+8	heel	8_1	1	n.脚后跟
+8	exciting	8_1	1	adj.令人兴奋的
+8	aeroplane	8_1	1	n.飞机
+8	lifetime	8_1	1	n.一生
+8	justify	8_1	1	vt.替...辩护
+8	tube	8_1	1	n.管
+8	natural	8_1	1	adj.自然的
+8	especially	8_1	1	adv.特别
+8	pocket	8_1	1	n.口袋
+8	atomic	8_1	1	adj.原子的
+9	tree	9_1	1	n.树
+9	pint	9_1	1	n.品脱
+9	doctor	9_1	1	n.医生
+9	remind	9_1	1	v.提醒
+9	confident	9_1	1	adj.自信的
+9	barrel	9_1	1	n.桶
+9	scan	9_1	1	n.扫描
+9	shut	9_1	1	adj.关闭的
+9	incident	9_1	1	n.事件
+9	hence	9_1	1	adv.因此
+10	digest	10_1	1	vt.消化
+10	director	10_1	1	n.导演
+10	comparative	10_1	1	adj.比较的
+10	fence	10_1	1	n.围墙
+10	finance	10_1	1	n.财政
+10	pluck	10_1	1	n.勇气
+10	microphone	10_1	1	n.麦克风
+10	crude	10_1	1	adj.粗鲁的
+10	unwilling	10_1	1	adj.不愿意的
+10	gentleman	10_1	1	n.绅士
+11	employer	11_1	1	n.雇主
+11	chemistry	11_1	1	n.化学
+11	roller	11_1	1	n.滚筒
+11	eliminate	11_1	1	v.除去
+11	dusk	11_1	1	n.黄昏
+11	driver	11_1	1	n.驾驶员
+11	oblige	11_1	1	vt.强制
+11	laugh	11_1	1	vt.&vi.笑
+11	review	11_1	1	vt.温习
+11	service	11_1	1	n.服务
+12	pioneer	12_1	1	n.先锋
+12	rainy	12_1	1	adj.多雨的
+12	poem	12_1	1	n.诗
+12	ill	12_1	1	adj.有病的
+12	brim	12_1	1	n.边
+12	mask	12_1	1	n.假面具
+12	menu	12_1	1	n.菜单
+12	weekday	12_1	1	n.工作日
+12	examine	12_1	1	vt.检查
+12	crash	12_1	1	v.撞碎
+13	unnecessary	13_1	1	adj.不必要的
+13	objection	13_1	1	n.反对
+13	really	13_1	1	adv.真正地
+13	grape	13_1	1	n.葡萄
+13	region	13_1	1	n.地区
+13	electronics	13_1	1	n.电子学
+13	worry	13_1	1	n.烦恼
+13	height	13_1	1	n.高度
+13	different	13_1	1	adj.不同的
+13	infinite	13_1	1	adj.无限的
+14	protection	14_1	1	n.保护
+14	abandon	14_1	1	vt.遗弃
+14	respectful	14_1	1	adj.表示尊敬的
+14	cheque	14_1	1	n.支票
+14	slow	14_1	1	adj.慢的
+14	clearly	14_1	1	adv.清楚地
+14	shortage	14_1	1	n.不足
+14	yesterday	14_1	1	n.&adv.昨天
+14	sensible	14_1	1	adj.可察觉的
+14	southern	14_1	1	adj.南方的
+15	reliance	15_1	1	n.信赖
+15	twelve	15_1	1	adj.十二
+15	inner	15_1	1	adj.内部的
+15	insert	15_1	1	vt.&vi.插入
+15	viewpoint	15_1	1	n.观点
+15	silent	15_1	1	adj.安静的
+15	costly	15_1	1	adj.昂贵的
+15	whisky	15_1	1	n.威士忌酒
+15	demonstrate	15_1	1	vt.演示
+15	possibility	15_1	1	n.可能性
+16	acquire	16_1	1	vt.占有
+16	stair	16_1	1	n.楼梯
+16	think	16_1	1	vt.想
+16	soldier	16_1	1	n.士兵
+16	probably	16_1	1	adv.或许
+16	cancel	16_1	1	vt.取消
+16	stripe	16_1	1	n.条纹
+16	mysterious	16_1	1	adj.神秘的
+16	rid	16_1	1	vt.免除
+16	household	16_1	1	adj.家庭的
+17	quality	17_1	1	n.品质
+17	prove	17_1	1	v.证明
+17	specialist	17_1	1	n.专家
+17	eight	17_1	1	num.八
+17	widely	17_1	1	adj.广泛的
+17	diligent	17_1	1	adj.勤奋的
+17	move	17_1	1	vt.&vi.移动
+17	fare	17_1	1	n.费用
+17	grave	17_1	1	adj.重大的
+17	nest	17_1	1	n.巢
+18	disadvantage	18_1	1	n.不利
+18	guess	18_1	1	n.猜测
+18	leisure	18_1	1	n.闲暇
+18	across	18_1	1	prep.穿过
+18	mechanics	18_1	1	n.力学
+18	snow	18_1	1	n.雪
+18	woollen	18_1	1	adj.羊毛制的
+18	wit	18_1	1	n.才智
+18	accent	18_1	1	n.重音
+18	absolutely	18_1	1	adv.绝对地
+19	romantic	19_1	1	adj.浪漫的
+19	date	19_1	1	n.日期
+19	succeed	19_1	1	vt.成功
+19	list	19_1	1	n.清单
+19	lever	19_1	1	n.杠杆
+19	sake	19_1	1	n.缘故
+19	basis	19_1	1	n.基础
+19	apple	19_1	1	n.苹果
+19	singer	19_1	1	n.歌手
+19	fellow	19_1	1	n.朋友
+20	palm	20_1	1	n.手掌
+20	waiter	20_1	1	n.侍者
+20	oar	20_1	1	n.桨
+20	dependent	20_1	1	adj.附属的
+20	wealth	20_1	1	n.财富
+20	pacific	20_1	1	adj.太平洋的
+20	else	20_1	1	adj.别的
+20	procession	20_1	1	n.队伍
+20	cathedral	20_1	1	n.大教堂
+20	existence	20_1	1	n.存在
+21	tractor	21_1	1	n.拖拉机
+21	exterior	21_1	1	n.外部
+21	devise	21_1	1	vt.设计
+21	eastern	21_1	1	adj.东方的
+21	sixteen	21_1	1	num.十六
+21	radiation	21_1	1	n.辐射
+21	castle	21_1	1	n.城堡
+21	executive	21_1	1	adj.执行的
+21	later	21_1	1	adj.后面的
+21	though	21_1	1	conj.尽管
+22	stone	22_1	1	n.石头
+22	emerge	22_1	1	vi.浮现
+22	raise	22_1	1	vt.升起
+22	apart	22_1	1	adv.分别地
+22	we	22_1	1	pron.我们
+22	leak	22_1	1	v.漏
+22	queen	22_1	1	n.女王
+22	intelligent	22_1	1	adj.聪明的
+22	paste	22_1	1	v.粘贴
+22	desk	22_1	1	n.书桌
+23	heroine	23_1	1	adj.英雄式的
+23	liable	23_1	1	adj.有义务的
+23	constant	23_1	1	adj.不变的
+23	dead	23_1	1	adj.死的
+23	dormitory	23_1	1	n.(集体)宿舍
+23	prosperous	23_1	1	adj.繁荣的
+23	battery	23_1	1	n.电池
+23	tape	23_1	1	n.录像带
+23	touch	23_1	1	vt.触摸
+23	train	23_1	1	n.火车
+24	shell	24_1	1	n.贝壳
+24	indifferent	24_1	1	adj.漠不关心的
+24	unfair	24_1	1	adj.不公平的
+24	attractive	24_1	1	adj.有吸引力的
+24	department	24_1	1	n.部
+24	phase	24_1	1	n.相
+24	although	24_1	1	conj.尽管
+24	length	24_1	1	n.长度
+24	four	24_1	1	num.四
+24	broom	24_1	1	n.扫帚
+25	lessen	25_1	1	v.减少
+25	pad	25_1	1	n.填补
+25	exhibition	25_1	1	n.展览
+25	detect	25_1	1	vt.检测
+25	echo	25_1	1	n.回声
+25	plenty	25_1	1	n.充足
+25	help	25_1	1	vt.&vi.帮助
+25	zero	25_1	1	num.&n.零
+25	undertake	25_1	1	vt.从事
+25	nod	25_1	1	n.点头
+26	where	26_1	1	adv.哪里
+26	tray	26_1	1	n.盘
+26	accuracy	26_1	1	n.准确(性)
+26	letter	26_1	1	n.信
+26	representative	26_1	1	adj.代表性的
+26	without	26_1	1	prep.没有
+26	pursue	26_1	1	v.追求
+26	horror	26_1	1	n.恐怖
+26	voluntary	26_1	1	adj.自愿的
+26	ripe	26_1	1	adj.成熟的
+27	poet	27_1	1	n.诗人
+27	drive	27_1	1	v.开车
+27	stiff	27_1	1	adj.坚硬的
+27	obviously	27_1	1	adv.显然地
+27	pound	27_1	1	n.英镑
+27	capture	27_1	1	n.抓取
+27	them	27_1	1	pron.他(她
+27	solve	27_1	1	v.解答(难题)
+27	double	27_1	1	n.两倍
+27	cow	27_1	1	n.母牛
+28	capable	28_1	1	adj.有能力的
+28	switch	28_1	1	n.开关
+28	powerful	28_1	1	adj.强有力的
+28	fit	28_1	1	v.适合
+28	brick	28_1	1	n.砖
+28	unit	28_1	1	n.单位
+28	ability	28_1	1	n.才能
+28	suspend	28_1	1	v.暂停
+28	mislead	28_1	1	vt.误导
+28	rotation	28_1	1	n.旋转
+29	reserve	29_1	1	vt.保留
+29	curl	29_1	1	n.卷曲
+29	shall	29_1	1	vt.将要
+29	confidence	29_1	1	n.信心
+29	diagram	29_1	1	n.图表
+29	delight	29_1	1	n.快乐
+29	explore	29_1	1	vt.&vi.探索
+29	temple	29_1	1	n.庙宇
+29	government	29_1	1	n.政府
+29	sense	29_1	1	n.感觉
+30	grandson	30_1	1	n.孙子
+30	midnight	30_1	1	n.午夜
+30	dialog	30_1	1	n.对话
+30	reliable	30_1	1	adj.可靠的
+30	magnificent	30_1	1	adj.壮丽的
+30	fish	30_1	1	n.鱼
+30	interval	30_1	1	n.间隔
+30	restriction	30_1	1	n.限制
+30	mutual	30_1	1	adj.共同的
+30	dwelling	30_1	1	n.住处
+31	standpoint	31_1	1	n.立场
+31	external	31_1	1	n.外部
+31	cover	31_1	1	v.覆盖
+31	snowy	31_1	1	adj.多雪的
+31	equation	31_1	1	n.相等
+31	field	31_1	1	n.场地
+31	barber	31_1	1	n.理发师
+31	only	31_1	1	adv.仅仅
+31	party	31_1	1	n.社交聚会
+31	nerve	31_1	1	n.神经(生物)
+32	zoo	32_1	1	n.动物园
+32	dress	32_1	1	n.连衣裙
+32	nephew	32_1	1	n.侄子
+32	international	32_1	1	adj.国际的
+32	industry	32_1	1	n.工业
+32	limb	32_1	1	n.树枝
+32	restrict	32_1	1	v.限制
+32	organization	32_1	1	n.组织
+32	tablet	32_1	1	n.药片
+32	know	32_1	1	vt.&vi.知道
+33	submit	33_1	1	vt.呈送
+33	vain	33_1	1	adj.徒然的
+33	moderate	33_1	1	adj.适度的
+33	claw	33_1	1	n.爪
+33	plantation	33_1	1	n.种植园
+33	round	33_1	1	n.圆
+33	bus	33_1	1	n.公共汽车
+33	mosquito	33_1	1	n.蚊子
+33	particularly	33_1	1	adv.尤其
+33	curve	33_1	1	n.曲线
+34	dear	34_1	1	adj.亲爱的
+34	visual	34_1	1	adj.视觉的
+34	robbery	34_1	1	n.抢劫
+34	garage	34_1	1	n.车库
+34	catch	34_1	1	vt.抓住
+34	comprehension	34_1	1	n.理解(力)
+34	money	34_1	1	n.钱
+34	vibrate	34_1	1	vt.(使)振动
+34	lame	34_1	1	adj.跛足的
+34	mistake	34_1	1	n.错误
+35	spade	35_1	1	n.铲子
+35	whenever	35_1	1	adv.无论何时
+35	outer	35_1	1	adj.外部的
+35	lake	35_1	1	n.湖
+35	subway	35_1	1	n.地铁
+35	republican	35_1	1	adj.共和国的
+35	ninth	35_1	1	adj.第九
+35	ripen	35_1	1	v.(使)成熟
+35	hardly	35_1	1	adv.几乎不
+35	polish	35_1	1	n.磨光
+36	rabbit	36_1	1	n.兔子
+36	clarify	36_1	1	vt.澄清
+36	heart	36_1	1	n.心
+36	careless	36_1	1	adj.粗心的
+36	occupation	36_1	1	n.职业
+36	staff	36_1	1	n.全体职员
+36	beauty	36_1	1	n.美
+36	indefinite	36_1	1	adj.模糊的
+36	grind	36_1	1	n.磨
+36	bag	36_1	1	n.包
+37	academic	37_1	1	adj.学术性的
+37	wage	37_1	1	n.薪水
+37	technique	37_1	1	n.技术
+37	distinguish	37_1	1	vt.区别
+37	paradise	37_1	1	n.天堂
+37	lavatory	37_1	1	n.盥洗室
+37	signal	37_1	1	n.信号
+37	passport	37_1	1	n.护照
+37	study	37_1	1	vi.学习
+37	board	37_1	1	n.木板
+38	rational	38_1	1	adj.合理的
+38	useful	38_1	1	adj.有用的
+38	summarize	38_1	1	vt.&vi.概述
+38	specially	38_1	1	adv.特别地
+38	numerous	38_1	1	adj.为数众多的
+38	approach	38_1	1	v.接近
+38	background	38_1	1	n.背景
+38	command	38_1	1	n.命令
+38	cement	38_1	1	n.水泥
+38	typewriter	38_1	1	n.打字机
+39	issue	39_1	1	n.问题
+39	stove	39_1	1	n.炉子
+39	wheat	39_1	1	n.小麦
+39	bridge	39_1	1	n.桥
+39	emperor	39_1	1	n.皇帝
+39	found	39_1	1	vt.创办
+39	resistant	39_1	1	adj.抵抗的
+39	coin	39_1	1	n.硬币
+39	deceit	39_1	1	n.欺骗
+39	several	39_1	1	adj.几个
+40	meaning	40_1	1	n.意义
+40	tough	40_1	1	adj.强硬的
+40	holy	40_1	1	adj.神圣的
+40	commercial	40_1	1	adj.商业的
+40	behalf	40_1	1	n.代表
+40	horsepower	40_1	1	n.马力(功率单位)
+40	trend	40_1	1	n.趋势
+40	reasonable	40_1	1	adj.合理的
+40	translation	40_1	1	n.翻译
+40	applicable	40_1	1	adj.合适的
+41	you	41_1	1	pron.你
+41	interfere	41_1	1	vi.妨碍
+41	exert	41_1	1	vt.运用
+41	luck	41_1	1	n.运气
+41	story	41_1	1	n.故事
+41	outline	41_1	1	n.大纲
+41	literature	41_1	1	n.文学
+41	solemn	41_1	1	adj.庄严的
+41	text	41_1	1	n.文本
+41	sound	41_1	1	n.声音渐增
+42	slippery	42_1	1	adj.滑的
+42	fashionable	42_1	1	adj.流行的
+42	minister	42_1	1	n.部长
+42	separation	42_1	1	n.分离
+42	pollution	42_1	1	n.污染
+42	lick	42_1	1	n.舔
+42	textile	42_1	1	adj.纺织的
+42	capacity	42_1	1	n.能力
+42	consistent	42_1	1	adj.始终如一的
+42	argue	42_1	1	vt.争论
+43	fortunate	43_1	1	adj.幸运的
+43	electric	43_1	1	adj.电的
+43	thrill	43_1	1	n.震颤
+43	laughter	43_1	1	n.笑
+43	shadow	43_1	1	n.阴影
+43	power	43_1	1	n.力量
+43	billion	43_1	1	n.十亿
+43	steal	43_1	1	vt.偷
+43	musician	43_1	1	n.音乐家
+43	centimetre	43_1	1	n.厘米
+44	ownership	44_1	1	n.所有权
+44	yield	44_1	1	n.生产量
+44	mainland	44_1	1	n.大陆
+44	copper	44_1	1	adj.(紫)铜色的
+44	helmet	44_1	1	n.头盔
+44	probability	44_1	1	n.可能性
+44	excite	44_1	1	v.刺激
+44	usual	44_1	1	adj.通常的
+44	general	44_1	1	adj.一般的
+44	audience	44_1	1	n.听众
+45	fortune	45_1	1	n.运气
+45	canoe	45_1	1	n.独木舟
+45	behave	45_1	1	vt.&vi.举止
+45	abundant	45_1	1	adj.丰富的
+45	underline	45_1	1	v.在...下面划线
+45	semiconductor	45_1	1	n.半导体
+45	charming	45_1	1	adj.迷人的
+45	uncertain	45_1	1	adj.不确定的
+45	access	45_1	1	vt.进入
+45	garbage	45_1	1	n.垃圾
+46	complete	46_1	1	vt.完成
+46	die	46_1	1	v.死
+46	horizontal	46_1	1	adj.水平的
+46	defeat	46_1	1	vt.击败
+46	examination	46_1	1	n.考试
+46	platform	46_1	1	n.平台
+46	thirsty	46_1	1	adj.口渴的
+46	aboard	46_1	1	adv.在船上
+46	bacteria	46_1	1	n.(复数)细菌
+46	robber	46_1	1	n.盗贼
+47	seat	47_1	1	n.位子
+47	radioactive	47_1	1	adj.放射性的
+47	grace	47_1	1	n.优雅
+47	model	47_1	1	n.模型
+47	sugar	47_1	1	n.糖
+47	blade	47_1	1	n.刀锋
+47	guidance	47_1	1	n.引导
+47	pin	47_1	1	n.大头针
+47	fold	47_1	1	vt.折叠
+47	choice	47_1	1	n.选择
+48	helicopter	48_1	1	n.直升飞机
+48	landlord	48_1	1	n.房东
+48	class	48_1	1	n.班级
+48	error	48_1	1	n.错误
+48	picnic	48_1	1	n.野餐
+48	legend	48_1	1	n.传说
+48	normally	48_1	1	adv.正常地
+48	cucumber	48_1	1	n.黄瓜
+48	feather	48_1	1	n.羽毛
+48	springtime	48_1	1	n.春季
+49	isolate	49_1	1	adj.孤立的
+49	mushroom	49_1	1	n.蘑菇
+49	rain	49_1	1	n.雨(水)
+49	deepen	49_1	1	vt.使...加深
+49	rot	49_1	1	n.腐烂
+49	wooden	49_1	1	adj.木制的
+49	housewife	49_1	1	n.家庭主妇
+49	coast	49_1	1	n.海岸
+49	grateful	49_1	1	adj.感激的
+49	operational	49_1	1	adj.操作的
+50	secret	50_1	1	n.秘密
+50	summer	50_1	1	n.夏天
+50	comparison	50_1	1	n.比较
+50	state	50_1	1	n.州
+50	cool	50_1	1	adj.凉的
+50	superficial	50_1	1	adj.表面的
+50	terror	50_1	1	n.恐怖
+50	husband	50_1	1	n.丈夫
+50	shear	50_1	1	n.修剪
+50	main	50_1	1	adj.主要的
+51	offer	51_1	1	n.提供
+51	mathematical	51_1	1	adj.数学的
+51	bother	51_1	1	vt.烦扰
+51	utmost	51_1	1	adj.极度的
+51	equality	51_1	1	n.同等
+51	typhoon	51_1	1	n.台风
+51	timetable	51_1	1	n.时间表
+51	endless	51_1	1	adj.无止境的
+51	range	51_1	1	n.范围
+51	law	51_1	1	n.法规
+52	quote	52_1	1	n.引用
+52	bureau	52_1	1	n.局
+52	miss	52_1	1	v.思念
+52	hasty	52_1	1	adj.匆匆的
+52	gas	52_1	1	n.气体
+52	emotion	52_1	1	n.情感
+52	line	52_1	1	n.行
+52	bank	52_1	1	n.银行
+52	rely	52_1	1	v.倚赖
+52	worthy	52_1	1	adj.有价值的
+53	harsh	53_1	1	adj.粗糙的
+53	bruise	53_1	1	n.瘀青
+53	mouth	53_1	1	n.嘴
+53	unfortunate	53_1	1	adj.不幸的
+53	discover	53_1	1	vt.&vi.发现
+53	canvas	53_1	1	n.帆布
+53	forbid	53_1	1	vt.禁止
+53	compress	53_1	1	vt.压缩
+53	force	53_1	1	n.力量
+53	type	53_1	1	n.类型
+54	greenhouse	54_1	1	n.温室
+54	materialism	54_1	1	n.唯物主义
+54	consequence	54_1	1	n.结果
+54	memorial	54_1	1	n.纪念碑(堂)
+54	commonly	54_1	1	adv.一般地
+54	scream	54_1	1	v.尖叫
+54	firm	54_1	1	n.公司
+54	rail	54_1	1	n.栏杆
+54	hobby	54_1	1	n.业余爱好
+54	verb	54_1	1	n.动词
+55	exposure	55_1	1	n.面临（困难）
+55	selection	55_1	1	n.选择
+55	pit	55_1	1	n.深坑
+55	badly	55_1	1	adv.严重地
+55	wreck	55_1	1	n.失事
+55	mood	55_1	1	n.心情
+55	regulation	55_1	1	n.规则
+55	considerate	55_1	1	adj.考虑周到的
+55	modify	55_1	1	vt.修改
+55	immediately	55_1	1	adv.立即
+56	gate	56_1	1	n.大门
+56	pleasant	56_1	1	adj.令人愉快的
+56	daily	56_1	1	adj.每日的
+56	song	56_1	1	n.歌曲
+56	imply	56_1	1	vt.暗示
+56	easy	56_1	1	adj.容易的
+56	odd	56_1	1	adj.古怪的
+56	space	56_1	1	n.空间
+56	love	56_1	1	vt.&vi.爱
+56	soap	56_1	1	n.肥皂
+57	loyalty	57_1	1	n.忠诚
+57	borrow	57_1	1	v.借
+57	late	57_1	1	adj.迟的
+57	utility	57_1	1	n.效用
+57	action	57_1	1	n.行为
+57	execute	57_1	1	vt.执行
+57	solar	57_1	1	adj.太阳的
+57	resolution	57_1	1	n.决心
+57	strawberry	57_1	1	n.草莓
+57	suspect	57_1	1	vt.怀疑
+58	reach	58_1	1	vt.到达
+58	investigation	58_1	1	n.调查
+58	arrival	58_1	1	n.到达
+58	farmer	58_1	1	n.农夫
+58	salesman	58_1	1	n.销售人员
+58	editor	58_1	1	n.编辑
+58	abuse	58_1	1	v.滥用
+58	boss	58_1	1	n.老板
+58	expect	58_1	1	v.期待
+58	expectation	58_1	1	n.期待
+59	permission	59_1	1	n.同意
+59	conquer	59_1	1	vt.征服
+59	steamer	59_1	1	n.汽船
+59	stroke	59_1	1	n.中风
+59	toy	59_1	1	n.玩具
+59	death	59_1	1	n.死
+59	chase	59_1	1	n.追求
+59	coal	59_1	1	n.煤
+59	since	59_1	1	conj.自从
+59	tip	59_1	1	n.小费
+60	cotton	60_1	1	n.棉花
+60	surgeon	60_1	1	n.外科医生
+60	uncomfortable	60_1	1	adj.不舒服的
+60	mystery	60_1	1	n.神秘
+60	address	60_1	1	n.地址
+60	conductor	60_1	1	n.售票员
+60	bell	60_1	1	n.铃
+60	previous	60_1	1	adj.以前的
+60	tin	60_1	1	n.锡
+60	optimistic	60_1	1	adj.乐观的
+61	conjunction	61_1	1	n.连词
+61	darling	61_1	1	n.亲爱的
+61	purely	61_1	1	adv.纯粹地
+61	behavior	61_1	1	n.行为
+61	guilty	61_1	1	adj.有罪的
+61	debt	61_1	1	n.债务
+61	gravity	61_1	1	n.地心引力
+61	farm	61_1	1	n.农场
+61	visitor	61_1	1	n.参观者
+61	direct	61_1	1	adj.直接的
+62	layout	62_1	1	n.布局
+62	manly	62_1	1	adj.像男人的
+62	shave	62_1	1	n.修面
+62	chamber	62_1	1	n.房间
+62	necessarily	62_1	1	adv.必然地
+62	crew	62_1	1	n.全体船员
+62	joy	62_1	1	n.欢乐
+62	pond	62_1	1	n.池塘
+62	lime	62_1	1	n.石灰
+62	every	62_1	1	adj.每
+63	mistress	63_1	1	n.主妇
+63	bench	63_1	1	n.长凳
+63	native	63_1	1	adj.本土的
+63	haste	63_1	1	n.匆忙
+63	routine	63_1	1	n.例行公事
+63	bolt	63_1	1	n.门闩
+63	sacrifice	63_1	1	n.牺牲
+63	cellar	63_1	1	n.地窖
+63	relevant	63_1	1	adj.相关的
+63	container	63_1	1	n.容器
+64	cord	64_1	1	n.绳索
+64	unsatisfactory	64_1	1	adj.不能令人满意的
+64	appeal	64_1	1	v.呼吁
+64	temptation	64_1	1	n.诱惑
+64	wisdom	64_1	1	n.智慧
+64	actual	64_1	1	adj.实际的
+64	notebook	64_1	1	n.笔记本
+64	youth	64_1	1	n.年轻人
+64	lace	64_1	1	n.饰带
+64	western	64_1	1	n.西方人
+65	wavelength	65_1	1	n.波长
+65	fireman	65_1	1	n.消防队员
+65	constitution	65_1	1	n.组织
+65	mouthful	65_1	1	n.满口
+65	humorous	65_1	1	adj.幽默的
+65	granddaughter	65_1	1	n.孙女
+65	stability	65_1	1	n.稳定性
+65	motor	65_1	1	n.马达
+65	user	65_1	1	n.用户
+65	gather	65_1	1	vt.收集
+66	refrigerator	66_1	1	n.冰箱
+66	sigh	66_1	1	vt.叹息
+66	treasure	66_1	1	n.宝物
+66	alone	66_1	1	adj.单独的
+66	completely	66_1	1	adv.完全地
+66	division	66_1	1	n.区分
+66	worthless	66_1	1	adj.无价值的
+66	afraid	66_1	1	adj.害怕的
+66	increasingly	66_1	1	adv.逐渐地
+66	easily	66_1	1	adj.容易地
+67	civil	67_1	1	adj.国内的
+67	kiss	67_1	1	vt.接吻
+67	petroleum	67_1	1	n.石油
+67	van	67_1	1	n.货车
+67	arrow	67_1	1	n.箭
+67	value	67_1	1	n.价值
+67	pea	67_1	1	n.豌豆
+67	weary	67_1	1	adj.疲倦的
+67	finally	67_1	1	adv.最后
+67	wake	67_1	1	vi.醒
+68	tall	68_1	1	adj.高的
+68	maths	68_1	1	n.数学
+68	flash	68_1	1	n.闪光
+68	aside	68_1	1	adv.在一边
+68	sour	68_1	1	adj.酸的
+68	weekend	68_1	1	n.周末
+68	reward	68_1	1	vt.奖赏
+68	lucky	68_1	1	adj.幸运的
+68	clue	68_1	1	n.线索
+68	sympathy	68_1	1	n.同情
+69	former	69_1	1	adj.以前的
+69	hello	69_1	1	int.（见面打招呼或打电话用语）喂
+69	swear	69_1	1	vt.&vi.发誓
+69	unload	69_1	1	vt.卸下
+69	shirt	69_1	1	n.衬衫
+69	tedious	69_1	1	adj.沉闷的
+69	receipt	69_1	1	n.收据
+69	advertisement	69_1	1	n.&adv.广告
+69	bottom	69_1	1	n.底部
+69	instinct	69_1	1	n.本能
+70	public	70_1	1	adj.公开的
+70	learn	70_1	1	vt.学习
+70	chop	70_1	1	n.厚肉片
+70	educate	70_1	1	v.教育
+70	member	70_1	1	n.成员
+70	develop	70_1	1	vt.发展
+70	site	70_1	1	n.现场
+70	venture	70_1	1	n.冒险
+70	birthday	70_1	1	n.生日
+70	opening	70_1	1	n.开始
+71	disable	71_1	1	v.使...失去能力
+71	plentiful	71_1	1	adj.丰富的
+71	opera	71_1	1	n.歌剧
+71	duty	71_1	1	n.义务
+71	recommendation	71_1	1	n.推荐
+71	weaken	71_1	1	v.使...弱
+71	equipment	71_1	1	n.设备
+71	refine	71_1	1	vt.精炼
+71	straw	71_1	1	n.稻草
+71	unsuitable	71_1	1	adj.不适宜的
+72	weed	72_1	1	n.杂草
+72	building	72_1	1	n.建筑物
+72	maintain	72_1	1	vt.维持;维修
+72	institute	72_1	1	n.研究所
+72	amaze	72_1	1	v.使吃惊
+72	mutton	72_1	1	n.羊肉
+72	standard	72_1	1	n.标准
+72	cloak	72_1	1	n.斗蓬
+72	publication	72_1	1	n.出版
+72	towel	72_1	1	n.毛巾
+73	simplicity	73_1	1	n.单纯
+73	sponsor	73_1	1	n.赞助者
+73	sympathetic	73_1	1	adj.同情的
+73	creature	73_1	1	n.生物
+73	terminal	73_1	1	n.终点
+73	relatively	73_1	1	adv.比较地
+73	percent	73_1	1	adj.&adv.百分之一
+73	mat	73_1	1	n.垫
+73	glory	73_1	1	n.光荣
+73	suffer	73_1	1	vt.遭受
+74	infect	74_1	1	vt.传染
+74	mud	74_1	1	n.泥
+74	yell	74_1	1	vt.&vi.大叫
+74	waterfall	74_1	1	n.瀑布
+74	will	74_1	1	aux.将
+74	amongst	74_1	1	prep.在...之中
+74	vocabulary	74_1	1	n.词汇
+74	impact	74_1	1	n.冲击(力)
+74	nation	74_1	1	n.国家
+74	recognize	74_1	1	vt.认出
+75	honeymoon	75_1	1	n.蜜月
+75	vex	75_1	1	vt.恼怒
+75	collection	75_1	1	n.收藏品
+75	inhabitant	75_1	1	n.居民
+75	submarine	75_1	1	n.潜水艇
+75	slightly	75_1	1	adv.些微地
+75	pity	75_1	1	n.同情
+75	trifle	75_1	1	n.琐事
+75	sustain	75_1	1	vt.承受
+75	spit	75_1	1	v.唾吐
+76	spur	76_1	1	n.马刺
+76	accustom	76_1	1	v.使...习惯
+76	burst	76_1	1	n.破裂
+76	pause	76_1	1	n.暂停
+76	log	76_1	1	n.圆木
+76	sixth	76_1	1	n.六分之一
+76	rather	76_1	1	adv.宁可
+76	reliability	76_1	1	n.可靠性
+76	spacecraft	76_1	1	n.宇宙飞船
+76	wild	76_1	1	adj.野生的
+77	inspect	77_1	1	vt.调查
+77	bundle	77_1	1	n.捆
+77	head	77_1	1	n.头脑
+77	proportion	77_1	1	n.比例
+77	present	77_1	1	n.礼物
+77	operator	77_1	1	n.操作员
+77	committee	77_1	1	n.委员会
+77	transformation	77_1	1	n.转型
+77	forgive	77_1	1	vt.&vi.原谅
+77	crisis	77_1	1	n.危机
+78	interior	78_1	1	adj.内部的
+78	fast	78_1	1	adj.快的
+78	change	78_1	1	v.改变
+78	officer	78_1	1	n.官员
+78	detection	78_1	1	n.察觉
+78	laboratory	78_1	1	n.实验室
+78	alarm	78_1	1	n.警报
+78	insect	78_1	1	n.昆虫
+78	formation	78_1	1	n.构造
+78	honest	78_1	1	adj.诚实的
+79	another	79_1	1	adj.另一
+79	military	79_1	1	adj.军事的
+79	pronounce	79_1	1	vt.&vi.发音
+79	below	79_1	1	adv.在下面
+79	furniture	79_1	1	n.家具
+79	current	79_1	1	adj.现在的
+79	something	79_1	1	pron.某事(物)
+79	lonely	79_1	1	adj.孤独的
+79	headache	79_1	1	n.头痛
+79	saw	79_1	1	vt.&vi.用锯子锯
+80	attack	80_1	1	vt.&vi.攻击
+80	circulate	80_1	1	vi.流通
+80	personal	80_1	1	adj.私人的
+80	campus	80_1	1	n.(大学)校园
+80	fifty	80_1	1	num.五十
+80	teacher	80_1	1	n.教师
+80	turkey	80_1	1	n.火鸡
+80	engage	80_1	1	v.从事
+80	lodge	80_1	1	n.旅馆
+80	six	80_1	1	n.六
+81	property	81_1	1	n.财产
+81	elevator	81_1	1	n.电梯
+81	transformer	81_1	1	n.变压器
+81	register	81_1	1	v.登记
+81	observe	81_1	1	v.观察
+81	few	81_1	1	adj.很少的
+81	distinction	81_1	1	n.区别;卓越;殊荣
+81	she	81_1	1	pron.她
+81	proclaim	81_1	1	vt.正式宣布
+81	location	81_1	1	n.地点
+82	stand	82_1	1	n.站立
+82	porter	82_1	1	n.搬运工
+82	edition	82_1	1	n.版
+82	information	82_1	1	n.信息
+82	drown	82_1	1	vt.淹死
+82	means	82_1	1	n.方法
+82	cultivate	82_1	1	vt.培养
+82	relate	82_1	1	vt.&vi.（把…）联系起来
+82	nasty	82_1	1	adj.污秽的
+82	intentional	82_1	1	adj.故意的
+83	coat	83_1	1	n.外套
+83	vehicle	83_1	1	n.车辆
+83	minus	83_1	1	prep.减去
+83	protective	83_1	1	adj.保护的
+83	introduce	83_1	1	vt.介绍
+83	faculty	83_1	1	n.（大学的）系
+83	rude	83_1	1	adj.粗鲁的
+83	shriek	83_1	1	n.尖叫
+83	attract	83_1	1	v.吸引
+83	link	83_1	1	vt.&vi.连接
+84	exhaust	84_1	1	v.耗尽
+84	shed	84_1	1	n.车棚
+84	trade	84_1	1	n.贸易
+84	cash	84_1	1	n.现金
+84	production	84_1	1	n.生产
+84	thus	84_1	1	adv.从而
+84	nice	84_1	1	adj.美好的
+84	exit	84_1	1	n.出口
+84	definite	84_1	1	adj.明确的
+84	challenge	84_1	1	n.挑战
+85	awake	85_1	1	adj.醒着的
+85	electricity	85_1	1	n.电力
+85	cafe	85_1	1	n.咖啡馆
+85	cease	85_1	1	n.停止
+85	taxi	85_1	1	n.计程车
+85	knowledge	85_1	1	n.知识
+85	holiday	85_1	1	n.假期
+85	accidental	85_1	1	adj.意外的
+85	moan	85_1	1	n.呻吟声
+85	chief	85_1	1	adj.首席的
+86	earth	86_1	1	n.地球
+86	suburb	86_1	1	n.郊区
+86	glare	86_1	1	n.闪耀光
+86	message	86_1	1	n.消息
+86	policeman	86_1	1	n.警察
+86	voltage	86_1	1	n.电压
+86	tremendous	86_1	1	adj.巨大的
+86	grant	86_1	1	vt.承认
+86	pie	86_1	1	n.馅饼
+86	rainbow	86_1	1	n.彩虹
+87	pattern	87_1	1	n.图案
+87	autumn	87_1	1	n.秋季
+87	front	87_1	1	n.前面
+87	pepper	87_1	1	n.胡椒粉
+87	drag	87_1	1	v.拖拉
+87	whole	87_1	1	adj.整个的
+87	sometime	87_1	1	adj.某一时间
+87	shrink	87_1	1	n.收缩
+87	fuel	87_1	1	n.燃料
+87	earthquake	87_1	1	n.地震
+88	potato	88_1	1	n.马铃薯
+88	brisk	88_1	1	adj.敏锐的
+88	ash	88_1	1	n.灰
+88	defend	88_1	1	vt.&vi.防护
+88	resign	88_1	1	vi.辞职
+88	fist	88_1	1	n.拳头
+88	pail	88_1	1	n.提桶
+88	pick	88_1	1	vt.挑选
+88	tone	88_1	1	n.音调
+88	century	88_1	1	n.世纪
+89	baby	89_1	1	n.婴儿
+89	further	89_1	1	adj.更远的
+89	determination	89_1	1	n.(正式)决定
+89	fund	89_1	1	n.基金
+89	heir	89_1	1	n.继承人
+89	dull	89_1	1	adj.呆滞的
+89	ghost	89_1	1	n.鬼
+89	carrier	89_1	1	n.运送者
+89	slogan	89_1	1	n.标语
+89	bend	89_1	1	v.弯曲
+90	twin	90_1	1	n.孪生儿之一
+90	prize	90_1	1	n.奖品
+90	flow	90_1	1	vi.流
+90	goods	90_1	1	n.货物
+90	hard	90_1	1	adj.坚硬的
+90	substantial	90_1	1	adj.实质上的
+90	accumulate	90_1	1	vt.积聚
+90	victorious	90_1	1	adj.胜利的
+90	colleague	90_1	1	n.同事
+90	enough	90_1	1	adj.足够的
+91	exceed	91_1	1	vt.超过
+91	bloom	91_1	1	n.花
+91	emotional	91_1	1	adj.感情的
+91	fate	91_1	1	n.命运
+91	achieve	91_1	1	vt.达到
+91	warmth	91_1	1	n.暖和
+91	tolerate	91_1	1	v.忍受
+91	elaborate	91_1	1	adj.精细的
+91	wait	91_1	1	vt.&vi.等候
+91	characteristic	91_1	1	n.特征
+92	divide	92_1	1	vt.&vi.分
+92	ball	92_1	1	n.球
+92	flare	92_1	1	n.闪光
+92	point	92_1	1	n.点
+92	suppose	92_1	1	vt.假定
+92	yellow	92_1	1	adj.黄色的
+92	motivate	92_1	1	v.刺激
+92	butter	92_1	1	n.黄油
+92	brave	92_1	1	adj.勇敢的
+92	invasion	92_1	1	n.侵入
+93	thunder	93_1	1	n.雷电
+93	economic	93_1	1	adj.经济学的
+93	sticky	93_1	1	adj.粘的
+93	dust	93_1	1	n.灰尘
+93	tidy	93_1	1	adj.整洁的
+93	receive	93_1	1	vt.收到
+93	acid	93_1	1	adj.酸的
+93	piece	93_1	1	n.片
+93	acquaintance	93_1	1	n.熟人
+93	pan	93_1	1	n.平底锅
+94	effort	94_1	1	n.努力
+94	feature	94_1	1	n.特征
+94	art	94_1	1	n.艺术
+94	smile	94_1	1	n.微笑
+94	reform	94_1	1	n.改革
+94	ray	94_1	1	n.光线
+94	gross	94_1	1	n.总量
+94	teaching	94_1	1	n.教学
+94	betray	94_1	1	vt.背叛
+94	plural	94_1	1	adj.复数的
+95	angel	95_1	1	n.天使
+95	thereby	95_1	1	adv.因此
+95	reason	95_1	1	n.理由
+95	lower	95_1	1	v.降低
+95	expert	95_1	1	n.专家
+95	crane	95_1	1	n.鹤
+95	somebody	95_1	1	pron.某人
+95	brush	95_1	1	n.刷子
+95	identical	95_1	1	adj.相同的
+95	imprison	95_1	1	v.使...下狱
+96	forest	96_1	1	n.森林
+96	silver	96_1	1	adj.银色的
+96	feeble	96_1	1	adj.虚弱的
+96	roughly	96_1	1	adv.概略地
+96	unhappy	96_1	1	adj.不快乐的
+96	ugly	96_1	1	adj.丑陋的
+96	policy	96_1	1	n.政策
+96	electronic	96_1	1	adj.电子的
+96	grandfather	96_1	1	n.(外)祖父
+96	physics	96_1	1	n.物理学
+97	fashion	97_1	1	n.流行
+97	weep	97_1	1	n.悲叹
+97	shower	97_1	1	vi.淋浴
+97	correction	97_1	1	n.订正
+97	adverb	97_1	1	n.副词
+97	sponge	97_1	1	n.海绵
+97	grandmother	97_1	1	n.(外)祖母
+97	saucer	97_1	1	n.茶托
+97	climb	97_1	1	vt.&vi.攀登
+97	path	97_1	1	n.小路
+98	danger	98_1	1	n.危险
+98	textbook	98_1	1	n.教科书
+98	quick	98_1	1	adj.快的
+98	size	98_1	1	n.尺寸
+98	concept	98_1	1	n.概念
+98	indispensable	98_1	1	adj.不可缺少的
+98	earn	98_1	1	vt.赚得
+98	blue	98_1	1	adj.蓝色的
+98	arrangement	98_1	1	n.安排
+98	salt	98_1	1	n.盐
+99	triangle	99_1	1	n.三角(形)
+99	oak	99_1	1	n.橡树
+99	unkind	99_1	1	adj.不和善的
+99	newspaper	99_1	1	n.报纸
+99	statue	99_1	1	n.塑像
+99	lieutenant	99_1	1	n.中尉
+99	madam	99_1	1	n.夫人
+99	cause	99_1	1	vt.引起
+99	grammar	99_1	1	n.语法
+99	warm	99_1	1	adj.暖和的
+100	description	100_1	1	n.描写
+100	shot	100_1	1	n.射击
+100	sort	100_1	1	n.种类
+100	friction	100_1	1	n.摩擦
+100	laundry	100_1	1	n.洗衣店
+100	wreath	100_1	1	n.花环
+100	gardener	100_1	1	n.园丁
+100	sharply	100_1	1	adv.锐利地
+100	liquid	100_1	1	n.液体
+100	pardon	100_1	1	n.原谅
+101	commission	101_1	1	n.委任(状)
+101	collision	101_1	1	n.碰撞
+101	ticket	101_1	1	n.票
+101	wicked	101_1	1	adj.坏的
+101	signature	101_1	1	n.签署
+101	reign	101_1	1	n.执政
+101	least	101_1	1	adj.最少的
+101	arise	101_1	1	vi.上升
+101	priest	101_1	1	n.教士
+101	harm	101_1	1	n.伤害
+102	carrot	102_1	1	n.胡萝卜
+102	knock	102_1	1	n.敲
+102	haircut	102_1	1	n.理发
+102	throne	102_1	1	n.王座
+102	conversation	102_1	1	n.会话
+102	file	102_1	1	n.档案
+102	control	102_1	1	n.控制
+102	deposit	102_1	1	vt.存放
+102	cube	102_1	1	n.立方体
+102	complicate	102_1	1	vt.弄复杂
+103	furnace	103_1	1	n.炉子
+103	auto	103_1	1	pref.自动的
+103	premier	103_1	1	n.总理
+103	end	103_1	1	vt.&vi.结束
+103	deduce	103_1	1	vt.演绎
+103	perspective	103_1	1	n.透视
+103	folk	103_1	1	adj.民间的
+103	breast	103_1	1	n.胸脯
+103	ratio	103_1	1	n.比
+103	fabric	103_1	1	n.织物
+104	philosophy	104_1	1	n.哲学
+104	importance	104_1	1	n.重要
+104	acre	104_1	1	n.英亩
+104	ornament	104_1	1	n.装饰
+104	everywhere	104_1	1	adv.到处
+104	fasten	104_1	1	vt.拴紧
+104	hen	104_1	1	n.母鸡
+104	minimum	104_1	1	adj.最小的
+104	turbulent	104_1	1	adj.狂暴的
+104	drawing	104_1	1	n.图画
+105	correspond	105_1	1	vi.符合
+105	realm	105_1	1	n.王国
+105	blind	105_1	1	adj.瞎的
+105	ready	105_1	1	adj.准备好的
+105	up	105_1	1	adv.向上
+105	increase	105_1	1	v.增加
+105	verify	105_1	1	v.核实
+105	pudding	105_1	1	n.布丁
+105	appropriate	105_1	1	adj.适当的
+105	linen	105_1	1	n.亚麻布
+106	when	106_1	1	conj.在…时
+106	simply	106_1	1	adv.&adj.简单地
+106	gallon	106_1	1	n.加仑(容量单位)
+106	hurt	106_1	1	vt.伤害
+106	following	106_1	1	adj.下列的
+106	hint	106_1	1	n.暗示
+106	press	106_1	1	vt.压
+106	pine	106_1	1	n.松树
+106	cinema	106_1	1	n.电影院
+106	pierce	106_1	1	v.刺穿
+107	handle	107_1	1	vt.处理
+107	harvest	107_1	1	n.收获(期)
+107	club	107_1	1	n.俱乐部
+107	black	107_1	1	adj.黑（色）的
+107	giant	107_1	1	adj.巨大的
+107	beast	107_1	1	n.畜牲
+107	fix	107_1	1	vt.&vi.修理
+107	side	107_1	1	n.旁边
+107	combine	107_1	1	vi.结合
+107	submerge	107_1	1	vt.使浸没
+108	source	108_1	1	n.来源
+108	hateful	108_1	1	adj.憎恨的
+108	congratulation	108_1	1	n.祝贺
+108	physical	108_1	1	adj.身体的
+108	breathe	108_1	1	vi.呼吸
+108	whom	108_1	1	pron.[宾格]谁
+108	lorry	108_1	1	n.卡车
+108	lately	108_1	1	adv.最近
+108	crystal	108_1	1	n.水晶
+108	process	108_1	1	n.过程
+109	sightseeing	109_1	1	n.观光
+109	economy	109_1	1	n.经济
+109	corner	109_1	1	n.角落
+109	radius	109_1	1	n.半径
+109	flesh	109_1	1	n.肉(体)
+109	preference	109_1	1	n.偏爱
+109	square	109_1	1	n.正方形
+109	convert	109_1	1	v.使转变
+109	marine	109_1	1	n.(海军)士兵或军官
+109	glow	109_1	1	n.赤热
+110	maximum	110_1	1	n.最大量
+110	immigrant	110_1	1	n.移民
+110	cafeteria	110_1	1	n.自助餐厅
+110	craft	110_1	1	n.工艺
+110	skill	110_1	1	n.技能
+110	heating	110_1	1	n.加热
+110	might	110_1	1	aux.可能
+110	image	110_1	1	n.图像
+110	transfer	110_1	1	v.转移
+110	form	110_1	1	n.形式
+111	prime	111_1	1	adj.首要的
+111	right	111_1	1	adj.正确的
+111	grey	111_1	1	adj.灰色的
+111	bean	111_1	1	n.豆
+111	impression	111_1	1	n.印象
+111	theoretical	111_1	1	adj.理论上的
+111	jury	111_1	1	n.[法]陪审团
+111	bicycle	111_1	1	n.自行车
+111	page	111_1	1	n.页
+111	protein	111_1	1	adj.蛋白质的
+112	bit	112_1	1	n.一点儿
+112	lip	112_1	1	n.嘴唇
+112	horse	112_1	1	n.马
+112	dive	112_1	1	n.潜水
+112	wool	112_1	1	n.毛线
+112	spin	112_1	1	v.旋转
+112	attraction	112_1	1	n.吸引
+112	receiver	112_1	1	n.接收器
+112	shop	112_1	1	n.商店
+112	chill	112_1	1	n.寒冷
+113	bleed	113_1	1	vi.流血
+113	elastic	113_1	1	adj.有弹性的
+113	rehearsal	113_1	1	n.排练
+113	uncle	113_1	1	n.叔
+113	gaze	113_1	1	n.凝视
+113	shoot	113_1	1	vt.射击
+113	glitter	113_1	1	n.灿烂
+113	quite	113_1	1	adv.很
+113	situation	113_1	1	n.状况
+113	classify	113_1	1	v.分类
+114	dream	114_1	1	n.梦
+114	hardware	114_1	1	n.(计算机)硬件
+114	eleventh	114_1	1	n.第十一
+114	vitamin	114_1	1	n.维生素
+114	disgust	114_1	1	n.厌恶
+114	tense	114_1	1	adj.紧张的
+114	freeze	114_1	1	v.冻结
+114	compel	114_1	1	v.强迫
+114	claim	114_1	1	vt.要求
+114	their	114_1	1	adj.他们的
+115	voyage	115_1	1	n.航行
+115	passion	115_1	1	n.激情
+115	naughty	115_1	1	adj.顽皮的
+115	family	115_1	1	n.家庭主妇
+115	hungry	115_1	1	adj.饥饿的
+115	name	115_1	1	n.名字
+115	column	115_1	1	n.列
+115	knee	115_1	1	n.膝盖
+115	gray	115_1	1	n.灰色
+115	sincere	115_1	1	adj.真诚的
+116	removal	116_1	1	n.移动
+116	together	116_1	1	adv.一起
+116	bubble	116_1	1	n.泡沫
+116	valid	116_1	1	adj.有效的
+116	south	116_1	1	n.南
+116	headquarters	116_1	1	n.司令部
+116	hunt	116_1	1	v.狩猎
+116	repeat	116_1	1	n.重复
+116	muscle	116_1	1	n.肌肉
+116	conclusion	116_1	1	n.结论
+117	little	117_1	1	adj.小的
+117	tutor	117_1	1	n.家庭教师
+117	elder	117_1	1	adj.年龄较大的
+117	angle	117_1	1	n.角(度)
+117	territory	117_1	1	n.领土
+117	absence	117_1	1	n.缺席
+117	needless	117_1	1	adj.不需要的
+117	ensure	117_1	1	vt.保证
+117	hook	117_1	1	n.钩子
+117	champion	117_1	1	n.冠军
+118	associate	118_1	1	vt.（使）发生联系
+118	violet	118_1	1	n.紫罗兰
+118	around	118_1	1	prep.在...附近
+118	violent	118_1	1	adj.暴力的
+118	humble	118_1	1	adj.卑下的
+118	unstable	118_1	1	adj.不稳定的
+118	roof	118_1	1	n.屋顶
+118	glorious	118_1	1	adj.光荣的
+118	reduction	118_1	1	n.减少
+118	banner	118_1	1	n.旗帜
+119	friendly	119_1	1	adj.友好的
+119	dim	119_1	1	adj.暗淡的
+119	extension	119_1	1	n.延长
+119	monitor	119_1	1	n.班长
+119	librarian	119_1	1	n.图书管理员
+119	amplify	119_1	1	v.扩大
+119	decrease	119_1	1	vt.&vi.减少
+119	assess	119_1	1	v.估定
+119	invisible	119_1	1	adj.看不见的
+119	perfect	119_1	1	adj.完美的
+120	battle	120_1	1	n.战斗
+120	horizon	120_1	1	n.地平线
+120	stadium	120_1	1	n.露天体育场
+120	tissue	120_1	1	n.(动、植物的)组织
+120	festival	120_1	1	n.节日
+120	occasionally	120_1	1	adv.偶尔地
+120	palace	120_1	1	n.宫殿
+120	fruit	120_1	1	n.水果
+120	runner	120_1	1	n.赛跑的人
+120	not	120_1	1	adv.不
+121	deny	121_1	1	vt.否认
+121	factor	121_1	1	n.因素
+121	age	121_1	1	n.年龄
+121	fertilizer	121_1	1	n.肥料
+121	apartment	121_1	1	n.一套公寓房间
+121	swan	121_1	1	n.天鹅
+121	widow	121_1	1	n.寡妇
+121	significance	121_1	1	n.意义
+121	mourn	121_1	1	v.哀悼
+121	plot	121_1	1	n.情节梗概
+122	whitewash	122_1	1	n.白色涂料
+122	retire	122_1	1	n.退休
+122	pupil	122_1	1	n.小学生
+122	slender	122_1	1	adj.细长的
+122	worker	122_1	1	n.工人
+122	central	122_1	1	adj.中心的
+122	detail	122_1	1	n.细节
+122	inspire	122_1	1	vt.激发
+122	install	122_1	1	v.安装
+122	thrive	122_1	1	vi.兴旺
+123	delicate	123_1	1	adj.细致优雅的
+123	damage	123_1	1	n.损坏
+123	dying	123_1	1	adj.垂死的
+123	transform	123_1	1	vt.转换
+123	criticize	123_1	1	vt.批评
+123	balloon	123_1	1	n.气球
+123	leading	123_1	1	adj.领导的
+123	outstanding	123_1	1	adj.突出的
+123	attend	123_1	1	vt.参加
+123	diamond	123_1	1	n.钻石
+124	weight	124_1	1	n.重量
+124	possible	124_1	1	adj.可能的
+124	slip	124_1	1	vi.滑
+124	manager	124_1	1	n.经理
+124	correct	124_1	1	adj.正确的
+124	camel	124_1	1	n.骆驼
+124	respect	124_1	1	vt.尊重
+124	toe	124_1	1	n.脚趾
+124	project	124_1	1	n.工程
+124	resist	124_1	1	v.抵抗
+125	faulty	125_1	1	adj.有错误的
+125	swim	125_1	1	v.游泳
+125	cliff	125_1	1	n.悬崖
+125	orderly	125_1	1	adj.有秩序的
+125	seal	125_1	1	n.印章
+125	proper	125_1	1	adj.适当的
+125	waken	125_1	1	v.唤醒
+125	handsome	125_1	1	adj.英俊的
+125	fall	125_1	1	v.落下
+125	stewardess	125_1	1	n.空中小姐
+126	anybody	126_1	1	pron.任何人
+126	repetition	126_1	1	n.重复
+126	beat	126_1	1	vt.&vi.打
+126	support	126_1	1	n.支持
+126	past	126_1	1	n.过去
+126	envy	126_1	1	vt.&vi.嫉妒
+126	rank	126_1	1	n.排名
+126	recognition	126_1	1	n.认出
+126	splash	126_1	1	n.飞溅的水
+126	airplane	126_1	1	n.飞机
+127	cassette	127_1	1	n.匣子
+127	disk	127_1	1	n.圆盘
+127	against	127_1	1	prep.反对
+127	pebble	127_1	1	n.鹅卵石
+127	fight	127_1	1	n.打架
+127	intense	127_1	1	adj.强烈的
+127	poison	127_1	1	n.毒药
+127	anticipate	127_1	1	vt.预期
+127	blast	127_1	1	n.爆破
+127	trick	127_1	1	n.把戏
+128	thirdly	128_1	1	adv.第三
+128	slam	128_1	1	n.砰然声
+128	murderer	128_1	1	n.杀人犯
+128	thread	128_1	1	n.线
+128	avoid	128_1	1	v.避免
+128	comfortable	128_1	1	adj.舒适的
+128	popular	128_1	1	adj.流行的
+128	reproduce	128_1	1	v.再生
+128	separately	128_1	1	adv.分别地
+128	brood	128_1	1	n.窝
+129	iron	129_1	1	n.铁
+129	clumsy	129_1	1	adj.笨拙的
+129	bill	129_1	1	n.账单
+129	gasoline	129_1	1	n.汽油
+129	seaport	129_1	1	n.海港
+129	pension	129_1	1	n.退休金
+129	independence	129_1	1	n.独立
+129	powder	129_1	1	n.粉
+129	spell	129_1	1	v.拼写
+129	organ	129_1	1	n.器官
+130	attempt	130_1	1	vt.尝试
+130	prince	130_1	1	n.王子
+130	bury	130_1	1	vt.埋葬
+130	statement	130_1	1	n.陈述
+130	cheat	130_1	1	vt.&vi.欺骗
+130	performance	130_1	1	n.表演
+130	as	130_1	1	adv.像
+130	temper	130_1	1	n.脾气
+130	primary	130_1	1	adj.主要的
+130	derive	130_1	1	v.得自
+131	chemist	131_1	1	n.化学家
+131	angry	131_1	1	adj.生气的
+131	novel	131_1	1	n.小说
+131	spill	131_1	1	v.溢出
+131	hare	131_1	1	n.野兔
+131	resolve	131_1	1	n.决定之事
+131	nationality	131_1	1	n.国籍
+131	irregular	131_1	1	adj.不规则的
+131	appear	131_1	1	vi.出现
+131	grand	131_1	1	adj.宏伟的
+132	ambition	132_1	1	n.雄心
+132	question	132_1	1	n.问题
+132	niece	132_1	1	n.侄女
+132	dread	132_1	1	n.恐惧
+132	jet	132_1	1	n.喷气式飞机
+132	wipe	132_1	1	n.擦拭
+132	plant	132_1	1	n.植物
+132	undergraduate	132_1	1	n.大学生
+132	geometry	132_1	1	n.几何
+132	lane	132_1	1	n.小路
+133	imaginary	133_1	1	adj.想象的
+133	heat	133_1	1	n.热
+133	odour	133_1	1	n.气味
+133	march	133_1	1	vi.行军
+133	sequence	133_1	1	n.序列
+133	seventy	133_1	1	num.七十
+133	honesty	133_1	1	n.诚实
+133	tub	133_1	1	n.桶
+133	frame	133_1	1	n.框
+133	automation	133_1	1	n.自动化
+134	sick	134_1	1	adj.恶心的
+134	hardship	134_1	1	n.艰难
+134	steel	134_1	1	n.钢
+134	extensive	134_1	1	adj.广泛的
+134	gasp	134_1	1	n.喘气
+134	criticism	134_1	1	n.批评
+134	naked	134_1	1	adj.裸体的
+134	male	134_1	1	adj.男性的
+134	alloy	134_1	1	n.合金
+134	impossible	134_1	1	adj.不可能的
+135	retell	135_1	1	v.复述
+135	respectively	135_1	1	adv.各自地
+135	interpreter	135_1	1	n.译员
+135	precaution	135_1	1	n.预防
+135	absorb	135_1	1	v.吸收
+135	apparent	135_1	1	adj.明显的
+135	accordingly	135_1	1	adv.因此
+135	band	135_1	1	n.带;箍
+135	saving	135_1	1	n.节约
+135	railway	135_1	1	n.铁路
+136	agriculture	136_1	1	n.农业
+136	team	136_1	1	n.队
+136	chairman	136_1	1	n.主席
+136	inspection	136_1	1	n.检查
+136	rifle	136_1	1	n.步枪
+136	gracious	136_1	1	adj.亲切的
+136	supplement	136_1	1	n.补充物
+136	glad	136_1	1	adj.高兴的
+136	lag	136_1	1	n.落后
+136	rotten	136_1	1	adj.腐烂的
+137	incline	137_1	1	v.倾斜
+137	insure	137_1	1	vt.保险
+137	opinion	137_1	1	n.看法
+137	severely	137_1	1	adv.严重地
+137	disagree	137_1	1	v.不同意
+137	soon	137_1	1	adv.不久
+137	uneasy	137_1	1	adj.不自在的
+137	neglect	137_1	1	vt.忽视
+137	captain	137_1	1	n.船长
+137	democratic	137_1	1	adj.民主的
+138	equal	138_1	1	adj.相等的
+138	suck	138_1	1	v.吸
+138	hospital	138_1	1	n.医院
+138	inherit	138_1	1	vi.继承
+138	greedy	138_1	1	adj.贪婪的
+138	worship	138_1	1	n.崇拜
+138	meantime	138_1	1	adv.与此同时
+138	impose	138_1	1	vt.强加
+138	refusal	138_1	1	n.拒绝
+138	second	138_1	1	n.第二
+139	ring	139_1	1	n.环
+139	county	139_1	1	n.郡
+139	illustration	139_1	1	n.插图
+139	youthful	139_1	1	adj.年轻的
+139	fridge	139_1	1	n.电冰箱
+139	import	139_1	1	n.进口
+139	talent	139_1	1	n.才能
+139	ache	139_1	1	n.痛
+139	cent	139_1	1	n.分
+139	outdoors	139_1	1	adv.在户外地
+140	quicken	140_1	1	vt.使加快
+140	snake	140_1	1	n.蛇
+140	cruel	140_1	1	adj.残酷的
+140	conservation	140_1	1	n.保存
+140	multiple	140_1	1	adj.许多
+140	primitive	140_1	1	adj.原始的
+140	jolly	140_1	1	adj.愉快的
+140	thank	140_1	1	vt.谢谢
+140	commit	140_1	1	v.委托(托付)
+140	artist	140_1	1	n.艺术家
+141	blanket	141_1	1	n.毛毯
+141	differ	141_1	1	vi.不一致
+141	donkey	141_1	1	n.驴子
+141	sufficient	141_1	1	adj.充足的
+141	rice	141_1	1	n.米
+141	prefer	141_1	1	vt.更喜欢
+141	lack	141_1	1	vt.缺乏
+141	boast	141_1	1	n.吹牛
+141	problem	141_1	1	n.问题
+141	feasible	141_1	1	adj.可行的
+142	arouse	142_1	1	vt.唤醒
+142	wrap	142_1	1	vt.包
+142	bay	142_1	1	adj.红棕色
+142	lemon	142_1	1	n.柠檬
+142	evolution	142_1	1	n.进化
+142	august	142_1	1	n.八月(大写时）
+142	oneself	142_1	1	pron.自己
+142	delay	142_1	1	n.耽搁
+142	simplify	142_1	1	v.简化
+142	naval	142_1	1	adj.海军的
+143	string	143_1	1	n.线
+143	nap	143_1	1	n.小睡
+143	tick	143_1	1	vt.滴答声
+143	grocery	143_1	1	n.杂货店
+143	temperature	143_1	1	n.温度
+143	democracy	143_1	1	n.民主
+143	miracle	143_1	1	n.奇迹
+143	utter	143_1	1	adj.全然的
+143	formal	143_1	1	adj.正式的
+143	wonderful	143_1	1	adj.极好的
+144	agent	144_1	1	n.代理人
+144	gallery	144_1	1	n.美术馆
+144	lecture	144_1	1	n.演讲
+144	village	144_1	1	n.村庄
+144	bore	144_1	1	vbl.忍受(动词bear的过去式)
+144	beer	144_1	1	n.啤酒
+144	extraordinary	144_1	1	adj.非凡的
+144	abnormal	144_1	1	adj.反常的
+144	universal	144_1	1	adj.普遍的
+144	resource	144_1	1	n.资源
+145	bond	145_1	1	n.结合
+145	sister	145_1	1	n.姐妹
+145	hang	145_1	1	vt.悬挂
+145	kill	145_1	1	v.杀
+145	radar	145_1	1	n.雷达
+145	enormous	145_1	1	adj.巨大的
+145	construct	145_1	1	vt.构造
+145	refer	145_1	1	vi.参考
+145	connection	145_1	1	n.联系
+145	psychological	145_1	1	adj.心理(学)的
+146	transmit	146_1	1	vt.传输
+146	delivery	146_1	1	n.递送
+146	liner	146_1	1	n.班机
+146	overlook	146_1	1	v.俯看
+146	moon	146_1	1	n.月亮
+146	fourteen	146_1	1	num.十四
+146	lawyer	146_1	1	n.律师
+146	adventure	146_1	1	n.冒险
+146	permit	146_1	1	n.许可证
+146	sacred	146_1	1	adj.神圣的
+147	cargo	147_1	1	n.船货
+147	glance	147_1	1	vi.一瞥
+147	vessel	147_1	1	n.船
+147	precise	147_1	1	adj.精确的
+147	blame	147_1	1	vt.责备
+147	upon	147_1	1	prep.在...上
+147	rate	147_1	1	n.比率
+147	comrade	147_1	1	n.同志
+147	tomato	147_1	1	n.西红柿
+147	communication	147_1	1	n.沟通
+148	pain	148_1	1	n.痛苦
+148	maid	148_1	1	n.女仆
+148	depress	148_1	1	vt.使...沮丧
+148	hasten	148_1	1	v.催促
+148	word	148_1	1	n.词
+148	colonel	148_1	1	n.上校
+148	appearance	148_1	1	n.外表
+148	deep	148_1	1	adj.深的
+148	role	148_1	1	n.角色
+148	finger	148_1	1	n.手指
+149	goat	149_1	1	n.山羊
+149	slight	149_1	1	adj.轻微的
+149	jewish	149_1	1	adj.犹太人的
+149	council	149_1	1	n.理事会
+149	mad	149_1	1	adj.发疯的
+149	hay	149_1	1	n.干草
+149	accustomed	149_1	1	adj.习惯了的
+149	insult	149_1	1	vt.侮辱
+149	target	149_1	1	n.（服务的）对象
+149	fleet	149_1	1	n.船队
+150	interpret	150_1	1	v.解释
+150	belt	150_1	1	n.带(状物)
+150	virtue	150_1	1	n.美德
+150	scholar	150_1	1	n.学者
+150	substitute	150_1	1	n.代替者
+150	soak	150_1	1	n.浸
+150	reaction	150_1	1	n.反应
+150	seller	150_1	1	n.售货者
+150	restrain	150_1	1	vt.抑制
+150	management	150_1	1	n.管理(层)
+151	blackboard	151_1	1	n.黑板
+151	noisy	151_1	1	adj.喧闹的
+151	personnel	151_1	1	n.全体员工
+151	requirement	151_1	1	n.要求
+151	stimulate	151_1	1	vt.刺激
+151	myself	151_1	1	pron.我自己
+151	assist	151_1	1	vt.协助
+151	annual	151_1	1	adj.每年的
+151	umbrella	151_1	1	n.伞
+151	robot	151_1	1	n.机器人
+152	butterfly	152_1	1	n.蝴蝶
+152	tyre	152_1	1	n.轮胎
+152	court	152_1	1	n.法院
+152	joyful	152_1	1	adj.欢喜的
+152	experience	152_1	1	n.经验
+152	kingdom	152_1	1	n.王国
+152	outward	152_1	1	adj.向外的
+152	continent	152_1	1	n.大陆
+152	permanently	152_1	1	adv.永久地
+152	effect	152_1	1	n.效果
+153	bone	153_1	1	n.骨
+153	flour	153_1	1	n.面粉
+153	attention	153_1	1	n.注意(力)
+153	moisture	153_1	1	n.潮湿
+153	long	153_1	1	adj.长的
+153	mere	153_1	1	adj.仅仅的
+153	spontaneous	153_1	1	adj.自发的
+153	transport	153_1	1	n.运输、运输工具
+153	week	153_1	1	n.星期
+153	downstairs	153_1	1	adj.楼下的
+154	extent	154_1	1	n.成都
+154	ever	154_1	1	adv.曾经
+154	stop	154_1	1	v.停止
+154	sandy	154_1	1	adj.沙的
+154	soluble	154_1	1	adj.可溶解的
+154	marble	154_1	1	adj.大理石的
+154	home	154_1	1	n.家
+154	tempt	154_1	1	v.诱惑
+154	nevertheless	154_1	1	conj.然而
+154	pipeline	154_1	1	n.管道
+155	during	155_1	1	prep.在...期间
+155	leader	155_1	1	n.领袖
+155	alternative	155_1	1	adj.两者择一的
+155	send	155_1	1	vt.寄
+155	threaten	155_1	1	vt.&vi.威胁
+155	witness	155_1	1	n.目击者
+155	however	155_1	1	adv.然而
+155	fifth	155_1	1	num.第五
+155	task	155_1	1	n.任务
+155	rib	155_1	1	n.肋骨
+156	steam	156_1	1	n.蒸气
+156	arithmetic	156_1	1	n.算术
+156	gap	156_1	1	n.(意见、个性等的)差异
+156	zealous	156_1	1	adj.热心的
+156	margin	156_1	1	n.差额
+156	investment	156_1	1	n.投资
+156	price	156_1	1	n.价格
+156	mend	156_1	1	n.修补
+156	dip	156_1	1	n.游;下降
+156	porridge	156_1	1	n.粥
+157	reporter	157_1	1	n.记者
+157	wedding	157_1	1	n.婚礼
+157	pill	157_1	1	n.药丸
+157	exceedingly	157_1	1	adv.非常(极其
+157	guard	157_1	1	vt.&vi.保卫
+157	reveal	157_1	1	vt.显示
+157	load	157_1	1	n.负荷
+157	mechanical	157_1	1	adj.机械的
+157	emit	157_1	1	v.发出
+157	banana	157_1	1	n.香蕉
+158	fraction	158_1	1	n.分数
+158	adjective	158_1	1	n.形容词
+158	expand	158_1	1	vt.增加
+158	stomach	158_1	1	n.胃
+158	pronoun	158_1	1	n.代词
+158	workshop	158_1	1	n.车间
+158	social	158_1	1	adj.社会的
+158	scold	158_1	1	v.责骂
+158	tortoise	158_1	1	n.龟
+158	preferable	158_1	1	adj.更好的
+159	nonsense	159_1	1	n.无意义的事
+159	upstairs	159_1	1	adj.楼上的
+159	total	159_1	1	adj.总计的（金额等）
+159	ashamed	159_1	1	adj.感到惭愧
+159	important	159_1	1	adj.重要的
+159	metric	159_1	1	adj.公制的
+159	boil	159_1	1	v.沸腾
+159	possession	159_1	1	n.所有
+159	build	159_1	1	vt.&vi.建造
+159	exploit	159_1	1	n.功绩
+160	attain	160_1	1	vt.&vi.达到
+160	radish	160_1	1	n.萝卜
+160	speech	160_1	1	n.演讲
+160	guide	160_1	1	vt.指导
+160	leather	160_1	1	adj.皮革制的
+160	discourage	160_1	1	vt.使气馁
+160	fond	160_1	1	adj.喜欢的
+160	silk	160_1	1	adj.丝的
+160	traitor	160_1	1	n.叛徒
+160	drift	160_1	1	n.漂移
+161	stock	161_1	1	n.股份
+161	destruction	161_1	1	n.破坏
+161	downward	161_1	1	adj.向下的
+161	nitrogen	161_1	1	n.氮
+161	domestic	161_1	1	adj.国内的
+161	post	161_1	1	n.邮件
+161	freedom	161_1	1	n.自由
+161	major	161_1	1	adj.主要的
+161	pale	161_1	1	adj.苍白的
+161	exception	161_1	1	n.例外
+162	express	162_1	1	vt.表达
+162	pile	162_1	1	n.堆
+162	setting	162_1	1	n.环境
+162	rub	162_1	1	vt.擦
+162	aloud	162_1	1	adv.出声地
+162	gay	162_1	1	n.同性恋
+162	inevitable	162_1	1	adj.不可避免的
+162	difficulty	162_1	1	n.困难
+162	tremble	162_1	1	n.战悚
+162	eighty	162_1	1	num.&adj.八十
+163	thickness	163_1	1	n.厚度
+163	secure	163_1	1	adj.安全的
+163	wrist	163_1	1	n.腕
+163	pave	163_1	1	v.铺设
+163	famous	163_1	1	adj.著名的
+163	population	163_1	1	n.人口
+163	mother	163_1	1	n.母亲
+163	swing	163_1	1	n.摇摆
+163	our	163_1	1	pron.我们的
+163	water	163_1	1	n.水
+164	literary	164_1	1	adj.文学的
+164	weather	164_1	1	n.天气
+164	jewel	164_1	1	n.宝石
+164	classification	164_1	1	n.分类
+164	advice	164_1	1	n.建议
+164	stain	164_1	1	n.污染
+164	eighteen	164_1	1	num.十八
+164	barrier	164_1	1	n.界线
+164	cupboard	164_1	1	n.碗橱
+164	real	164_1	1	adj.实际的
+165	rubber	165_1	1	adj.橡胶的
+165	lie	165_1	1	n.谎言
+165	limited	165_1	1	adj.有限的
+165	innocent	165_1	1	adj.无罪的
+165	bind	165_1	1	vt.绑
+165	rack	165_1	1	n.(行李)架
+165	tuck	165_1	1	n.缝摺
+165	rumour	165_1	1	n.谣言
+165	immediate	165_1	1	adj.立即的
+165	punish	165_1	1	v.惩罚
+166	apologize	166_1	1	v.道歉
+166	conservative	166_1	1	adj.保守的
+166	have	166_1	1	v.有
+166	raid	166_1	1	n.袭击
+166	fluent	166_1	1	adj.流利的
+166	conquest	166_1	1	n.征服
+166	hide	166_1	1	vt.隐藏
+166	universe	166_1	1	n.宇宙
+166	minor	166_1	1	adj.次要的
+166	ten	166_1	1	num.十
+167	apology	167_1	1	n.道歉
+167	its	167_1	1	pron.（it的所有格)它的
+167	actually	167_1	1	adv.实际上
+167	attentive	167_1	1	adj.注意的
+167	wireless	167_1	1	adj.无线的
+167	sure	167_1	1	adv.当然
+167	assign	167_1	1	v.分配
+167	enthusiasm	167_1	1	v.&n.热情
+167	outlook	167_1	1	n.观点
+167	telegram	167_1	1	n.电报
+168	communism	168_1	1	n.共产主义
+168	laser	168_1	1	n.激光
+168	quiz	168_1	1	n.随堂测验
+168	magic	168_1	1	n.魔术
+168	house	168_1	1	n.房子
+168	overtime	168_1	1	n.加班时间(加班加点费)
+168	recover	168_1	1	vt.恢复
+168	tie	168_1	1	vt.系
+168	measurement	168_1	1	n.测量
+168	ocean	168_1	1	n.海洋
+169	wax	169_1	1	n.蜡
+169	drop	169_1	1	n.滴
+169	consult	169_1	1	v.向...请教
+169	pinch	169_1	1	n.捏
+169	bath	169_1	1	n.洗澡
+169	vinegar	169_1	1	n.醋
+169	owl	169_1	1	n.猫头鹰
+169	servant	169_1	1	n.仆人
+169	invade	169_1	1	vt.侵略
+169	circumference	169_1	1	n.圆周
+170	intimate	170_1	1	adj.亲密的
+170	while	170_1	1	conj.当...的时候
+170	cage	170_1	1	n.笼子
+170	reproach	170_1	1	n.责备
+170	star	170_1	1	n.星
+170	music	170_1	1	n.音乐
+170	progressive	170_1	1	adj.前进的
+170	parliament	170_1	1	n.议会
+170	network	170_1	1	n.网络
+170	scorn	170_1	1	v.轻蔑
+171	relief	171_1	1	n.宽慰
+171	conference	171_1	1	n.会议
+171	title	171_1	1	n.头衔
+171	chalk	171_1	1	n.粉笔
+171	gunpowder	171_1	1	n.火药
+171	arm	171_1	1	n.手臂
+171	ear	171_1	1	n.耳朵
+171	luggage	171_1	1	n.行李
+171	riddle	171_1	1	n.谜
+171	release	171_1	1	n.释放
+172	leg	172_1	1	n.腿
+172	crown	172_1	1	n.王冠
+172	metal	172_1	1	n.金属
+172	moreover	172_1	1	adv.再者
+172	interaction	172_1	1	n.相互作用
+172	extreme	172_1	1	adj.极度的
+172	pulse	172_1	1	n.脉搏
+172	establishment	172_1	1	n.确立
+172	peculiar	172_1	1	adj.奇怪的
+172	knob	172_1	1	n.把手
+173	satisfaction	173_1	1	n.满意
+173	nearby	173_1	1	adj.附近的
+173	course	173_1	1	n.课程
+173	particle	173_1	1	n.微粒
+173	ruler	173_1	1	n.尺子
+173	drink	173_1	1	n.饮料
+173	overall	173_1	1	adj.全部的
+173	computer	173_1	1	n.计算机
+173	lightly	173_1	1	adv.轻轻地
+173	grass	173_1	1	n.草
+174	out	174_1	1	adj.外面的
+174	be	174_1	1	prep.是
+174	urgent	174_1	1	adj.急迫的
+174	mayor	174_1	1	n.市长
+174	gang	174_1	1	n.队
+174	trouble	174_1	1	n.困扰
+174	settle	174_1	1	vt.解决
+174	remember	174_1	1	vt.&vi.记得
+174	enable	174_1	1	vt.使...能够
+174	fun	174_1	1	n.乐趣
+175	night	175_1	1	n.夜晚
+175	mathematics	175_1	1	n.数学
+175	memory	175_1	1	n.记忆
+175	nowadays	175_1	1	adv.现今
+175	rarely	175_1	1	adv.很少
+175	compute	175_1	1	vt.计算
+175	term	175_1	1	n.学期
+175	middle	175_1	1	n.中部
+175	academy	175_1	1	n.学院
+175	satisfactory	175_1	1	adj.令人满意的
+176	socialism	176_1	1	n.社会主义
+176	dislike	176_1	1	v.不喜欢
+176	grain	176_1	1	n.谷物
+176	swift	176_1	1	adj.快的
+176	safe	176_1	1	adj.安全的
+176	tale	176_1	1	n.叙述
+176	brow	176_1	1	n.眉毛
+176	conscience	176_1	1	n.良心
+176	patch	176_1	1	n.补绽
+176	curiosity	176_1	1	n.好奇
+177	circuit	177_1	1	n.电路
+177	north	177_1	1	adj.北
+177	pretty	177_1	1	adj.漂亮的
+177	via	177_1	1	prep.经由
+177	frown	177_1	1	n.皱眉
+177	anxious	177_1	1	adj.焦急的
+177	shame	177_1	1	n.羞愧
+177	necessary	177_1	1	adj.必需的
+177	advise	177_1	1	vt.劝告
+177	determine	177_1	1	vt.决定
+178	count	178_1	1	v.计算
+178	wire	178_1	1	n.电线
+178	unlike	178_1	1	prep.不像
+178	attach	178_1	1	v.附上
+178	useless	178_1	1	adj.无用的
+178	aural	178_1	1	adj.耳的
+178	recollect	178_1	1	v.回忆
+178	recite	178_1	1	vt.背诵
+178	add	178_1	1	vt.&vi.增加
+178	hedge	178_1	1	n.树篱
+179	radio	179_1	1	n.收音机
+179	deceive	179_1	1	vt.欺骗
+179	contradiction	179_1	1	n.反驳
+179	tower	179_1	1	n.塔
+179	character	179_1	1	n.个性
+179	promising	179_1	1	adj.有希望的
+179	describe	179_1	1	vt.描述
+179	parcel	179_1	1	n.包裹
+179	occurrence	179_1	1	n.发生
+179	mountain	179_1	1	n.山
+180	employee	180_1	1	n.雇员
+180	area	180_1	1	n.地区
+180	spelling	180_1	1	n.拼法
+180	passive	180_1	1	adj.被动的
+180	senior	180_1	1	adj.高级的
+180	tooth	180_1	1	n.牙齿
+180	chin	180_1	1	n.下巴
+180	tool	180_1	1	n.工具
+180	parallel	180_1	1	adj.平行的
+180	success	180_1	1	n.成功
+181	contribute	181_1	1	vi.贡献
+181	responsible	181_1	1	adj.负责的
+181	specific	181_1	1	adj.特殊的
+181	observation	181_1	1	n.观察
+181	fourth	181_1	1	n.第四
+181	hers	181_1	1	pron.她的（宾格）
+181	bird	181_1	1	n.鸟
+181	historical	181_1	1	adj.与历史有关的
+181	missing	181_1	1	adj.缺掉的
+181	cooperate	181_1	1	vi.合作
+182	torch	182_1	1	n.火炬
+182	volume	182_1	1	n.体积
+182	boot	182_1	1	n.靴子
+182	decent	182_1	1	adj.有分寸的
+182	tomorrow	182_1	1	adv.明天
+182	compete	182_1	1	v.竞争
+182	announce	182_1	1	vt.宣布
+182	compose	182_1	1	vt.组成
+182	brook	182_1	1	n.小河
+182	preserve	182_1	1	vt.保护
+183	spectacle	183_1	1	n.值得看的东西
+183	ditch	183_1	1	n.沟渠
+183	shift	183_1	1	n.交换
+183	mode	183_1	1	n.方式
+183	excessive	183_1	1	adj.过多的
+183	certainty	183_1	1	n.确定
+183	satellite	183_1	1	n.卫星
+183	tourist	183_1	1	n.旅游者
+183	floor	183_1	1	n.地板
+183	significant	183_1	1	adj.有意义的
+184	free	184_1	1	adj.自由的
+184	throng	184_1	1	n.群众
+184	industrialize	184_1	1	v.(使)工业化
+184	golf	184_1	1	n.高尔夫球
+184	distance	184_1	1	n.距离
+184	picture	184_1	1	n.图画
+184	opposite	184_1	1	adj.相对的
+184	classical	184_1	1	adj.古典的
+184	princess	184_1	1	n.公主
+184	seek	184_1	1	n.找寻
+185	mineral	185_1	1	adj.矿物的
+185	writer	185_1	1	n.作者
+185	consumption	185_1	1	n.消费
+185	request	185_1	1	n.要求
+185	stitch	185_1	1	n.一针
+185	return	185_1	1	vt.&vi.返回
+185	bathroom	185_1	1	n.浴室
+185	trunk	185_1	1	n.树干
+185	cast	185_1	1	v.投
+185	survive	185_1	1	vt.生存
+186	phrase	186_1	1	n.短语
+186	mess	186_1	1	n.乱七八糟
+186	enclose	186_1	1	vt.围绕
+186	possibly	186_1	1	adv.可能地
+186	pigeon	186_1	1	n.鸽子
+186	telegraph	186_1	1	n.电报
+186	altogether	186_1	1	adv.总共
+186	reject	186_1	1	v.拒绝
+186	label	186_1	1	n.标签
+186	culture	186_1	1	n.文化
+187	spray	187_1	1	vt.&vi.喷雾
+187	punch	187_1	1	n.打洞器
+187	mine	187_1	1	pron.我的（东西）
+187	used	187_1	1	adj.使用过的
+187	ounce	187_1	1	n.盎司
+187	footstep	187_1	1	n.脚步
+187	concrete	187_1	1	n.水泥
+187	drunk	187_1	1	adj.喝醉了的
+187	rope	187_1	1	n.绳
+187	grocer	187_1	1	n.食品杂货商
+188	torrent	188_1	1	n.激流
+188	mind	188_1	1	n.思想
+188	income	188_1	1	n.收入
+188	daylight	188_1	1	n.日光
+188	medal	188_1	1	n.奖章
+188	certain	188_1	1	adj.一定的
+188	nuclear	188_1	1	adj.原子核的
+188	harmful	188_1	1	adj.有害的
+188	otherwise	188_1	1	adv.否则
+188	anyway	188_1	1	adv.不管怎样
+189	practice	189_1	1	n.练习
+189	knit	189_1	1	vt.编织
+189	sorrow	189_1	1	n.悲伤
+189	draft	189_1	1	n.草稿
+189	chair	189_1	1	n.椅子
+189	outdoor	189_1	1	adj.户外的
+189	rural	189_1	1	adj.农村的
+189	sew	189_1	1	vt.缝纫
+189	liquor	189_1	1	n.酒
+189	involve	189_1	1	vt.包含
+190	joke	190_1	1	n.笑话
+190	influence	190_1	1	vt.影响
+190	reference	190_1	1	n.参考
+190	hurry	190_1	1	n.骚乱
+190	sleep	190_1	1	v.睡觉
+190	best	190_1	1	adj.最好的
+190	portion	190_1	1	n.部分
+190	limit	190_1	1	n.极限
+190	painting	190_1	1	n.水彩画
+190	serve	190_1	1	v.服务
+191	part	191_1	1	n.部份
+191	strong	191_1	1	adj.强壮的
+191	impatient	191_1	1	adj.不耐烦的
+191	lady	191_1	1	n.女士
+191	instruct	191_1	1	v.指导
+191	suggestion	191_1	1	n.建议
+191	elephant	191_1	1	n.大象
+191	preposition	191_1	1	n.介词
+191	sweater	191_1	1	n.毛衣
+191	pure	191_1	1	adj.纯的
+192	position	192_1	1	n.位置
+192	wave	192_1	1	n.波
+192	vote	192_1	1	v.投票
+192	despise	192_1	1	vt.轻视
+192	should	192_1	1	verbauxiliary.应该
+192	prompt	192_1	1	adj.迅速的
+192	stool	192_1	1	n.凳子
+192	disorder	192_1	1	n.杂乱
+192	stormy	192_1	1	adj.暴风雨的
+192	flock	192_1	1	n.一群
+193	aim	193_1	1	n.目标
+193	primarily	193_1	1	adv.首先
+193	preceding	193_1	1	adj.在前的
+193	idea	193_1	1	n.主意
+193	nowhere	193_1	1	adv.任何地方都不
+193	exclusively	193_1	1	adv.排他地
+193	nor	193_1	1	conj.&adv.也不
+193	walk	193_1	1	vi.走路
+193	get	193_1	1	vt.获得
+193	radioactivity	193_1	1	n.放射性
+194	once	194_1	1	adv.一次
+194	miserable	194_1	1	adj.悲惨的
+194	convey	194_1	1	vt.传达
+194	behind	194_1	1	adv.在后面
+194	anywhere	194_1	1	adv.任何地方
+194	defence	194_1	1	n.防务
+194	habit	194_1	1	n.习惯
+194	sink	194_1	1	n.接收端
+194	liberal	194_1	1	adj.自由的
+194	onion	194_1	1	n.洋葱
+195	handful	195_1	1	n.少数
+195	friendship	195_1	1	n.友谊
+195	peace	195_1	1	n.和平
+195	anchor	195_1	1	n.铁锚
+195	stern	195_1	1	adj.严厉的
+195	partly	195_1	1	adv.部分地
+195	available	195_1	1	adj.可用的
+195	bright	195_1	1	adj.明亮的
+195	strengthen	195_1	1	vt.&vi.加强
+195	strap	195_1	1	n.绳
+196	meter	196_1	1	n.公尺
+196	bark	196_1	1	n.狗叫
+196	headline	196_1	1	n.大字标题
+196	yearly	196_1	1	adj.每年的
+196	catalog	196_1	1	n.目录
+196	opportunity	196_1	1	n.机会
+196	tire	196_1	1	n.轮胎.金属圈
+196	nylon	196_1	1	n.尼龙
+196	stem	196_1	1	n.茎
+196	wholly	196_1	1	adv.完全地
+197	survey	197_1	1	n.调查
+197	mission	197_1	1	n.任务
+197	pretend	197_1	1	vt.&vi.假装
+197	retain	197_1	1	vt.保持
+197	beneficial	197_1	1	adj.有益的
+197	dismiss	197_1	1	vt.开除
+197	provision	197_1	1	n.规定
+197	limitation	197_1	1	n.限制
+197	whisper	197_1	1	vt.低声说
+197	noise	197_1	1	n.噪声
+198	directly	198_1	1	adv.直接地
+198	awfully	198_1	1	adv.可怕地
+198	strictly	198_1	1	adv.严格地
+198	election	198_1	1	n.选举
+198	architecture	198_1	1	n.建筑学
+198	tame	198_1	1	adj.温顺的
+198	shoe	198_1	1	n.鞋
+198	blossom	198_1	1	n.花
+198	discard	198_1	1	n.丢牌
+198	street	198_1	1	n.街道
+199	sly	199_1	1	adj.狡猾的
+199	basketball	199_1	1	n.篮球
+199	stay	199_1	1	n.停留
+199	inside	199_1	1	prep.在...里面
+199	immense	199_1	1	adj.巨大的
+199	volcano	199_1	1	n.火山
+199	brittle	199_1	1	adj.易碎的
+199	cattle	199_1	1	n.牛
+199	penny	199_1	1	n.便士
+199	cabinet	199_1	1	n.橱柜
+200	establish	200_1	1	v.建立
+200	gum	200_1	1	n.树胶
+200	basic	200_1	1	adj.基本的
+200	quarterly	200_1	1	adj.季度的
+200	seize	200_1	1	vt.抓住
+200	aid	200_1	1	n.帮助
+200	foreigner	200_1	1	n.外国人
+200	ship	200_1	1	n.船
+200	desperate	200_1	1	adj.绝望的
+200	playground	200_1	1	n.&adj.操场
+201	arbitrary	201_1	1	adj.任意的
+201	substance	201_1	1	n.物质
+201	govern	201_1	1	vt.统治
+201	soil	201_1	1	n.土地
+201	supreme	201_1	1	adj.最高的
+201	hell	201_1	1	n.地狱
+201	herself	201_1	1	pron.她自己
+201	smooth	201_1	1	adj.平稳的
+201	companion	201_1	1	n.同伴
+201	pronunciation	201_1	1	n.发音
+202	stuff	202_1	1	n.材料
+202	host	202_1	1	v.主办
+202	either	202_1	1	pron.任一的
+202	vanish	202_1	1	vi.消失
+202	net	202_1	1	n.网
+202	human	202_1	1	n.人
+202	practically	202_1	1	adj.实际地
+202	the	202_1	1	art.这(那)
+202	velvet	202_1	1	n.天鹅绒
+202	greatly	202_1	1	adv.很
+203	disclose	203_1	1	vt.揭露
+203	shelter	203_1	1	n.庇护所
+203	print	203_1	1	vt.&vi.打印
+203	vivid	203_1	1	adj.生动的
+203	cure	203_1	1	vt.&vi.治疗
+203	alike	203_1	1	adj.相似的
+203	specialize	203_1	1	vi.专门从事
+203	account	203_1	1	n.账
+203	germ	203_1	1	n.微生物
+203	dirty	203_1	1	adj.肮脏的
+204	remarkable	204_1	1	adj.显著的
+204	struggle	204_1	1	v.奋斗
+204	vital	204_1	1	adj.至关重要的
+204	theory	204_1	1	n.理论
+204	invest	204_1	1	vt.&vi.投资
+204	negative	204_1	1	adj.否定的
+204	accord	204_1	1	n.一致
+204	much	204_1	1	adj.许多的
+204	screw	204_1	1	n.螺丝钉
+204	book	204_1	1	n.书
+205	dense	205_1	1	adj.不易看透的
+205	rat	205_1	1	n.鼠
+205	customer	205_1	1	n.顾客
+205	calculation	205_1	1	n.计算
+205	aggressive	205_1	1	adj.侵略性的
+205	surgery	205_1	1	n.外科手术
+205	block	205_1	1	n.块
+205	score	205_1	1	n.得分
+205	shortly	205_1	1	adv.立刻
+205	draw	205_1	1	v.画
+206	colony	206_1	1	n.殖民地居民
+206	commerce	206_1	1	n.贸易
+206	citizen	206_1	1	n.公民
+206	experimental	206_1	1	adj.实验(性)的
+206	scarce	206_1	1	adj.稀少的
+206	development	206_1	1	n.发展
+206	nursery	206_1	1	n.托儿所
+206	wall	206_1	1	n.墙壁
+206	kick	206_1	1	vt.踢
+206	cheer	206_1	1	n.欢呼
+207	clean	207_1	1	adj.干净的
+207	readily	207_1	1	adv.不迟疑地
+207	nose	207_1	1	n.鼻子
+207	eventually	207_1	1	adv.终于
+207	neutral	207_1	1	adj.中立的
+207	hill	207_1	1	n.小山
+207	ankle	207_1	1	n.踝
+207	vacuum	207_1	1	n.真空
+207	circular	207_1	1	adj.循环的
+207	fur	207_1	1	n.毛皮服饰
+208	place	208_1	1	n.地方
+208	explosion	208_1	1	n.爆炸
+208	garden	208_1	1	n.花园
+208	career	208_1	1	n.事业
+208	sentence	208_1	1	n.句子
+208	whip	208_1	1	n.鞭子
+208	sauce	208_1	1	n.调味汁
+208	league	208_1	1	n.联盟
+208	accommodate	208_1	1	vi.使自己适应
+208	pray	208_1	1	vt.&vi.祈祷
+209	him	209_1	1	pron.他(宾格)
+209	extend	209_1	1	v.扩充
+209	alter	209_1	1	v.改变
+209	stranger	209_1	1	n.陌生人
+209	amuse	209_1	1	v.娱乐
+209	coward	209_1	1	n.懦夫
+209	milk	209_1	1	n.奶
+209	neighbourhood	209_1	1	n.邻近
+209	gentle	209_1	1	adj.温和的
+209	trumpet	209_1	1	n.喇叭
+210	sail	210_1	1	vt.乘船航行
+210	engineering	210_1	1	n.工程(学)
+210	presence	210_1	1	n.出席
+210	previously	210_1	1	adv.以前(预先)
+210	bathe	210_1	1	v.沐浴
+210	begin	210_1	1	vt.&vi.开始
+210	green	210_1	1	adj.绿色的
+210	search	210_1	1	v.搜寻
+210	wherever	210_1	1	adv.无论什么地方
+210	button	210_1	1	n.钮扣
+211	suddenly	211_1	1	adv.突然地
+211	heading	211_1	1	n.标题
+211	training	211_1	1	n.训练
+211	produce	211_1	1	vt.生产
+211	surface	211_1	1	n.表面
+211	brother	211_1	1	n.兄弟
+211	energy	211_1	1	n.能量
+211	civilization	211_1	1	n.文明
+211	typist	211_1	1	n.打字员
+211	health	211_1	1	n.健康
+212	district	212_1	1	n.区
+212	exhibit	212_1	1	vt.展览
+212	dew	212_1	1	n.露水
+212	entertain	212_1	1	vt.&vi.娱乐
+212	scale	212_1	1	n.鳞
+212	occasional	212_1	1	adj.偶然的
+212	butcher	212_1	1	n.屠夫
+212	displease	212_1	1	v.使...不快
+212	drum	212_1	1	n.鼓
+212	afternoon	212_1	1	n.下午
+213	mass	213_1	1	n.块
+213	cheek	213_1	1	n.脸颊
+213	booth	213_1	1	n.电话亭
+213	perceive	213_1	1	v.察觉
+213	rug	213_1	1	n.毯子
+213	awkward	213_1	1	adj.笨拙的
+213	aluminium	213_1	1	n.铝
+213	cheap	213_1	1	adj.便宜的
+213	twentieth	213_1	1	n.二十分之一
+213	tiger	213_1	1	n.老虎
+214	veil	214_1	1	n.面纱
+214	burden	214_1	1	n.负担
+214	explosive	214_1	1	adj.爆炸(性)的
+214	rapidly	214_1	1	adv.迅速地
+214	insist	214_1	1	vt.坚持
+214	tumble	214_1	1	n.跌倒
+214	slavery	214_1	1	n.奴役
+214	warn	214_1	1	vt.警告
+214	forward	214_1	1	adv.前进地
+214	able	214_1	1	adj.能干的
+215	conclude	215_1	1	vt.得出结论
+215	duck	215_1	1	n.鸭
+215	overcoat	215_1	1	n.外套
+215	synthetic	215_1	1	adj.综合的
+215	curse	215_1	1	n.诅咒
+215	thick	215_1	1	adj.厚的
+215	trip	215_1	1	n.旅行
+215	grieve	215_1	1	v.使...悲伤
+215	material	215_1	1	n.材料
+215	rest	215_1	1	vt.&vi.（使）休息
+216	shortcoming	216_1	1	n.短处
+216	definitely	216_1	1	adj.明确地
+216	application	216_1	1	n.应用
+216	ore	216_1	1	n.矿
+216	masterpiece	216_1	1	n.杰作
+216	influential	216_1	1	adj.有影响的
+216	transportation	216_1	1	n.运输
+216	calculate	216_1	1	vt.计算
+216	civilize	216_1	1	vt.使开化
+216	basket	216_1	1	n.篮
+217	to	217_1	1	prep.(表示方向)到
+217	data	217_1	1	n.(datum的复数)数据
+217	pull	217_1	1	n.拉
+217	supermarket	217_1	1	n.超级市场
+217	tolerance	217_1	1	n.忍耐力
+217	judgement	217_1	1	n.判断
+217	condition	217_1	1	n.情况
+217	large	217_1	1	adj.大的
+217	answer	217_1	1	vt.&vi.答复
+217	prospect	217_1	1	n.展望
+218	rich	218_1	1	adj.富有的
+218	despite	218_1	1	prep.尽管
+218	along	218_1	1	prep.沿着
+218	sadness	218_1	1	n.悲哀
+218	special	218_1	1	adj.特别的
+218	worth	218_1	1	adj.值得的
+218	waterproof	218_1	1	adj.防水的
+218	shopkeeper	218_1	1	n.店主
+218	broadcast	218_1	1	n.广播
+218	oppress	218_1	1	v.使(心情等)沉重
+219	army	219_1	1	n.军队
+219	safety	219_1	1	n.安全
+219	gratitude	219_1	1	n.感谢的心情
+219	born	219_1	1	vt.bear的过去分词
+219	reed	219_1	1	n.芦苇
+219	code	219_1	1	n.码
+219	melon	219_1	1	n.甜瓜
+219	deal	219_1	1	v.处理
+219	hazard	219_1	1	n.冒险
+219	left	219_1	1	adj.左边的
+220	reap	220_1	1	vt.收割
+220	celebrate	220_1	1	vt.&vi.庆祝
+220	cake	220_1	1	n.蛋糕
+220	listen	220_1	1	v.听
+220	body	220_1	1	n.身体
+220	artistic	220_1	1	adj.艺术的
+220	exaggerate	220_1	1	vt.&vi.夸大
+220	inward	220_1	1	adj.内心的
+220	rage	220_1	1	n.愤怒
+220	concerning	220_1	1	prep.关于
+221	recent	221_1	1	adj.近来的
+221	competition	221_1	1	n.比赛
+221	durable	221_1	1	adj.耐用持久的
+221	marriage	221_1	1	n.婚姻
+221	tenant	221_1	1	n.房客
+221	tight	221_1	1	adj.紧的
+221	consent	221_1	1	n.同意
+221	unable	221_1	1	adj.不能的
+221	diameter	221_1	1	n.直径
+221	purify	221_1	1	v.(使）净化
+222	understanding	222_1	1	n.理解
+222	third	222_1	1	adj.第三(的)
+222	interrupt	222_1	1	vt.打断
+222	waist	222_1	1	n.腰
+222	boundary	222_1	1	n.边界
+222	result	222_1	1	n.结果
+222	smoothly	222_1	1	adv.平滑地
+222	optional	222_1	1	adj.可以任选的
+222	calendar	222_1	1	n.日历
+222	impressive	222_1	1	adj.给人深刻印象的
+223	channel	223_1	1	n.通道
+223	fever	223_1	1	n.发烧
+223	ought	223_1	1	conj.应该
+223	puppet	223_1	1	n.木偶
+223	rocket	223_1	1	n.火箭
+223	hunger	223_1	1	n.饥饿
+223	remark	223_1	1	n.备注
+223	governor	223_1	1	n.统治者
+223	spend	223_1	1	v.花费
+223	affect	223_1	1	vt.影响
+224	withdraw	224_1	1	vt.撤回
+224	machine	224_1	1	n.机器
+224	soda	224_1	1	n.汽水
+224	blood	224_1	1	n.血
+224	scarcely	224_1	1	adv.几乎不
+224	classmate	224_1	1	n.同班同学
+224	fire	224_1	1	n.火
+224	hair	224_1	1	n.头发
+224	ax	224_1	1	n.斧子
+224	parade	224_1	1	n.游行
+225	static	225_1	1	adj.静态的
+225	upper	225_1	1	adj.上部的
+225	solely	225_1	1	adv.独自地
+225	emergency	225_1	1	n.紧急情况
+225	private	225_1	1	adj.私人的
+225	strict	225_1	1	adj.严格的
+225	somewhere	225_1	1	adv.在某处
+225	injure	225_1	1	v.伤害
+225	devote	225_1	1	vt.投入于
+225	bottle	225_1	1	n.瓶子
+226	crush	226_1	1	n.压碎
+226	scene	226_1	1	n.现场
+226	illustrate	226_1	1	vt.举例说明
+226	perfectly	226_1	1	adv.完全地
+226	fatal	226_1	1	adj.致命的
+226	singular	226_1	1	adj.非凡的
+226	emphasize	226_1	1	v.强调
+226	discussion	226_1	1	n.讨论
+226	noun	226_1	1	n.名词
+226	notice	226_1	1	n.注意
+227	scratch	227_1	1	vt.&vi.抓
+227	pace	227_1	1	n.速度
+227	bear	227_1	1	n.熊
+227	unity	227_1	1	n.团结
+227	radiate	227_1	1	v.放射
+227	contain	227_1	1	vt.包含
+227	choose	227_1	1	vt.&vi.选择
+227	pole	227_1	1	n.极(点)
+227	chimney	227_1	1	n.烟囱
+227	artificial	227_1	1	adj.人造的
+228	close	228_1	1	vt.关
+228	childish	228_1	1	adj.孩子气的
+228	dash	228_1	1	n.冲撞
+228	whatever	228_1	1	pron.&conj.无论什么
+228	rear	228_1	1	n.后面
+228	instead	228_1	1	adv.代替
+228	truly	228_1	1	adv.真实地
+228	distribute	228_1	1	vt.&vi.分布
+228	magnet	228_1	1	n.磁体
+228	equivalent	228_1	1	adj.等价的
+229	density	229_1	1	n.密集
+229	ultimate	229_1	1	n.终极
+229	relationship	229_1	1	n.关系
+229	scare	229_1	1	vt.惊
+229	guarantee	229_1	1	vt.保证
+229	sack	229_1	1	n.袋子
+229	panda	229_1	1	n.熊猫
+229	step	229_1	1	n.步骤
+229	basically	229_1	1	adv.基本上
+229	spaceship	229_1	1	n.宇宙飞船
+230	faith	230_1	1	n.信任
+230	assistant	230_1	1	n.助手助理
+230	specify	230_1	1	vt.明确说明
+230	award	230_1	1	vt.授予
+230	landing	230_1	1	n.着陆
+230	willing	230_1	1	adj.愿意的
+230	clay	230_1	1	n.粘土
+230	cloudy	230_1	1	adj.多云的
+230	condense	230_1	1	v.浓缩
+230	mutter	230_1	1	n.喃喃低语
+231	reading	231_1	1	n.阅读
+231	peep	231_1	1	n.瞥见
+231	strip	231_1	1	vi.剥光
+231	midst	231_1	1	n.中间
+231	curtain	231_1	1	n.窗帘
+231	response	231_1	1	n.回答
+231	upward	231_1	1	adj.向上的
+231	pot	231_1	1	n.罐
+231	quarrel	231_1	1	n.吵架
+231	fifteen	231_1	1	num.十五
+232	store	232_1	1	n.商店
+232	volleyball	232_1	1	n.排球
+232	attribute	232_1	1	n.属性
+232	education	232_1	1	n.教育
+232	murder	232_1	1	vt.谋杀
+232	bough	232_1	1	n.大树枝
+232	tennis	232_1	1	n.网球
+232	river	232_1	1	n.河
+232	enlarge	232_1	1	v.扩大
+232	dial	232_1	1	vi.拨号
+233	frontier	233_1	1	n.边界
+233	jump	233_1	1	n.跳跃
+233	acceptance	233_1	1	n.接受（礼物、邀请、建议等）
+233	approximate	233_1	1	adj.大约的
+233	reality	233_1	1	n.现实
+233	foundation	233_1	1	n.基础
+233	obtain	233_1	1	vt.获得
+233	clothing	233_1	1	n.(总称)衣服
+233	hillside	233_1	1	n.(小山)山腰
+233	worst	233_1	1	adj.最坏的
+234	oil	234_1	1	n.油
+234	regard	234_1	1	vt.认为
+234	injury	234_1	1	n.损害
+234	furnish	234_1	1	vt.布置
+234	declare	234_1	1	vt.&vi.宣布
+234	incorrect	234_1	1	adj.不正确的
+234	emphasis	234_1	1	n.强调
+234	accompany	234_1	1	vt.陪伴
+234	oral	234_1	1	adj.口头的
+234	decay	234_1	1	n.衰退
+235	mild	235_1	1	adj.温和的
+235	fulfil	235_1	1	v.实践
+235	turnip	235_1	1	n.萝卜
+235	create	235_1	1	vt.创造
+235	carry	235_1	1	v.携带
+235	loudspeaker	235_1	1	n.扬声器
+235	dose	235_1	1	n.剂量
+235	wealthy	235_1	1	adj.富有的
+235	girl	235_1	1	n.女孩
+235	cunning	235_1	1	adj.狡猾的
+236	deliver	236_1	1	vt.发表
+236	rob	236_1	1	v.抢劫
+236	politics	236_1	1	n.政治
+236	specimen	236_1	1	n.样本
+236	kitchen	236_1	1	n.厨房
+236	fetch	236_1	1	vt.取来
+236	westward	236_1	1	adv.向西
+236	carriage	236_1	1	n.四轮马车
+236	vase	236_1	1	n.花瓶
+236	knot	236_1	1	n.结
+237	transistor	237_1	1	n.晶体管
+237	turbine	237_1	1	n.涡轮
+237	insurance	237_1	1	n.保险
+237	intensive	237_1	1	adj.强烈的
+237	generous	237_1	1	adj.慷慨的
+237	wonder	237_1	1	n.奇迹
+237	twist	237_1	1	n.卷曲物
+237	design	237_1	1	vt.&vi.设计
+237	symbol	237_1	1	n.符号
+237	belong	237_1	1	vi.属于
+238	react	238_1	1	vt.作出反应
+238	that	238_1	1	pron.那
+238	growth	238_1	1	n.生长
+238	repair	238_1	1	vi.去v.修理
+238	device	238_1	1	n.装置
+238	stake	238_1	1	n.木桩
+238	comfort	238_1	1	n.舒适
+238	prominent	238_1	1	adj.突出的
+238	tender	238_1	1	adj.温和的
+238	careful	238_1	1	adj.小心的
+239	original	239_1	1	adj.最初的
+239	connect	239_1	1	vt.连接
+239	raw	239_1	1	adj.生的
+239	revolution	239_1	1	n.革命
+239	flourish	239_1	1	vi.繁荣
+239	anxiety	239_1	1	n.焦虑
+239	dimension	239_1	1	n.尺寸
+239	complain	239_1	1	vi.抱怨
+239	player	239_1	1	n.比赛者
+239	expansion	239_1	1	n.扩大
+240	until	240_1	1	prep.直到...为止
+240	white	240_1	1	adj.白色的
+240	delicious	240_1	1	adj.可口的
+240	individual	240_1	1	adj.个人的
+240	horn	240_1	1	n.喇叭
+240	pump	240_1	1	n.抽水机
+240	expense	240_1	1	n.消费
+240	neither	240_1	1	adj.皆不
+240	violin	240_1	1	n.小提琴
+240	beyond	240_1	1	prep.超出
+241	pop	241_1	1	adj.流行的
+241	doubtless	241_1	1	adj.无疑的
+241	reservoir	241_1	1	n.水库
+241	poetry	241_1	1	n.诗歌
+241	silly	241_1	1	adj.愚蠢的
+241	underneath	241_1	1	adv.在下面
+241	shade	241_1	1	n.荫凉处
+241	scope	241_1	1	n.范围
+241	sober	241_1	1	adj.清醒的
+241	disaster	241_1	1	n.灾难
+242	function	242_1	1	n.功能
+242	pane	242_1	1	n.窗玻璃
+242	faint	242_1	1	n.昏厥
+242	bake	242_1	1	vt.烘焙
+242	rapid	242_1	1	adj.迅速的
+242	normal	242_1	1	adj.正常的
+242	tropical	242_1	1	adj.热带的
+242	film	242_1	1	n.电影
+242	beginner	242_1	1	n.初学者
+242	abroad	242_1	1	adj.在国外
+243	game	243_1	1	n.游戏
+243	bowl	243_1	1	n.碗
+243	kindness	243_1	1	n.仁慈
+243	weigh	243_1	1	vt.秤重量
+243	voice	243_1	1	n.声音
+243	storm	243_1	1	n.暴风雨
+243	racial	243_1	1	adj.种族的
+243	full	243_1	1	adj.满的
+243	association	243_1	1	n.联合
+243	victim	243_1	1	n.受害者
+244	additional	244_1	1	adj.附加的
+244	fruitful	244_1	1	adj.多产的
+244	introduction	244_1	1	n.介绍
+244	proportional	244_1	1	adj.成比例的
+244	typical	244_1	1	adj.典型的
+244	sin	244_1	1	n.罪
+244	noble	244_1	1	adj.高尚的
+244	conversely	244_1	1	adv.相反地
+244	speed	244_1	1	n.速度
+244	group	244_1	1	n.组
+245	meeting	245_1	1	n.会议
+245	branch	245_1	1	n.分支
+245	nuisance	245_1	1	n.讨厌的东西
+245	aspect	245_1	1	n.方面
+245	prejudice	245_1	1	n.偏见
+245	hollow	245_1	1	n.洞
+245	compromise	245_1	1	n.妥协
+245	hall	245_1	1	n.大厅
+245	technician	245_1	1	n.技术员
+245	fierce	245_1	1	adj.猛烈的
+246	foremost	246_1	1	adj.最重要的
+246	grammatical	246_1	1	adj.语法的
+246	sport	246_1	1	n.运动
+246	medicine	246_1	1	n.药
+246	living	246_1	1	adj.活着的
+246	defect	246_1	1	n.缺点
+246	compass	246_1	1	n.指南针
+246	funeral	246_1	1	n.葬礼
+246	proceed	246_1	1	vi.继续进行
+246	unusual	246_1	1	adj.不平常的
+247	loud	247_1	1	adj.大声的
+247	microscope	247_1	1	n.显微镜
+247	starve	247_1	1	v.使饿死
+247	live	247_1	1	v.活
+247	fundamental	247_1	1	adj.基本的
+247	concentrate	247_1	1	vt.&vi.专心于
+247	weakness	247_1	1	n.软弱
+247	discuss	247_1	1	vt.讨论
+247	outlet	247_1	1	n.出口
+247	custom	247_1	1	n.习惯
+248	than	248_1	1	conj.比（用于比较级）
+248	hawk	248_1	1	n.鹰
+248	obvious	248_1	1	adj.明显的
+248	regularly	248_1	1	adv.定期地
+248	passenger	248_1	1	n.乘客
+248	purity	248_1	1	n.纯净
+248	vest	248_1	1	n.马甲
+248	teenager	248_1	1	n.13岁到19岁的年轻人
+248	room	248_1	1	n.房间
+248	biscuit	248_1	1	n.饼干
+249	backward	249_1	1	adj.向后的
+249	inch	249_1	1	n.英寸
+249	ice	249_1	1	n.冰
+249	courage	249_1	1	n.勇气
+249	tune	249_1	1	n.旋律
+249	largely	249_1	1	adv.大部分
+249	excuse	249_1	1	n.借口
+249	wear	249_1	1	vt.穿著
+249	event	249_1	1	n.大事
+249	microcomputer	249_1	1	n.微电脑
+250	earnest	250_1	1	adj.认真的
+250	hydrogen	250_1	1	n.氢
+250	self	250_1	1	n.自我
+250	consideration	250_1	1	n.考虑
+250	skilled	250_1	1	adj.有技能的
+250	cross	250_1	1	v.交叉
+250	responsibility	250_1	1	n.责任
+250	candle	250_1	1	n.蜡烛
+250	successful	250_1	1	adj.成功的
+250	withstand	250_1	1	vt.对抗
+251	welcome	251_1	1	vt.欢迎
+251	deed	251_1	1	n.事迹
+251	cabbage	251_1	1	n.卷心菜
+251	option	251_1	1	n.选项
+251	competent	251_1	1	adj.有能力的
+251	adapt	251_1	1	vi.适应
+251	kilogram	251_1	1	n.千克
+251	partial	251_1	1	adj.部分的
+251	balance	251_1	1	n.平衡
+251	preliminary	251_1	1	n.初步行动
+252	eagle	252_1	1	n.鹰
+252	surrender	252_1	1	vt.&vi.投降
+252	salute	252_1	1	v.行礼
+252	financial	252_1	1	adj.金融的
+252	simple	252_1	1	adj.简单的
+252	tongue	252_1	1	n.舌头
+252	overcome	252_1	1	vt.客服
+252	afford	252_1	1	vt.提供
+252	sit	252_1	1	vt.坐
+252	transparent	252_1	1	adj.透明的
+253	whichever	253_1	1	adj.无论哪个
+253	optical	253_1	1	adj.眼睛的
+253	spear	253_1	1	n.矛(正负电子对撞机)
+253	play	253_1	1	n.游戏
+253	dish	253_1	1	n.盘碟
+253	ultimately	253_1	1	adv.最后
+253	benefit	253_1	1	n.利益
+253	troublesome	253_1	1	adj.令人烦恼的
+253	flood	253_1	1	n.洪水
+253	everyone	253_1	1	pron.每人
+254	hear	254_1	1	vt.&vi.听到
+254	sum	254_1	1	n.总数(计)
+254	bitterly	254_1	1	adv.怨恨地
+254	liver	254_1	1	n.肝脏
+254	port	254_1	1	n.港口
+254	hesitate	254_1	1	vi.犹豫
+254	surprise	254_1	1	vt.&vi.使惊奇
+254	entrance	254_1	1	n.入口
+254	lovely	254_1	1	adj.可爱的
+254	exam	254_1	1	n.考试
+255	properly	255_1	1	adv.适当地
+255	shape	255_1	1	n.形状
+255	origin	255_1	1	n.起源
+255	spark	255_1	1	n.火花
+255	handwriting	255_1	1	n.笔迹
+255	elimination	255_1	1	n.除去
+255	graceful	255_1	1	adj.优雅的
+255	lay	255_1	1	vt.放置
+255	industrial	255_1	1	adj.工业的
+255	repent	255_1	1	v.后悔
+256	empire	256_1	1	n.帝国
+256	casual	256_1	1	adj.偶然的
+256	decorate	256_1	1	vt.装饰
+256	knife	256_1	1	n.刀
+256	freely	256_1	1	adv.自由地
+256	fox	256_1	1	n.狐狸
+256	gaseous	256_1	1	adj.气体的
+256	section	256_1	1	n.部分
+256	library	256_1	1	n.图书馆
+256	thin	256_1	1	adj.瘦的
+257	ignorant	257_1	1	adj.无知的
+257	amount	257_1	1	n.数量
+257	locate	257_1	1	vt.位于
+257	proud	257_1	1	adj.骄傲的
+257	status	257_1	1	n.状态
+257	treaty	257_1	1	n.条约
+257	local	257_1	1	adj.当地的
+257	crowd	257_1	1	n.人群
+257	resident	257_1	1	adj.居住的
+257	research	257_1	1	n.调查
+258	postpone	258_1	1	v.延期
+258	confuse	258_1	1	vt.困惑
+258	rigid	258_1	1	adj.僵硬的
+258	but	258_1	1	conj.但是
+258	terrible	258_1	1	adj.糟糕的
+258	bite	258_1	1	n.咬
+258	ant	258_1	1	n.蚂蚁
+258	ribbon	258_1	1	n.缎带
+258	foolish	258_1	1	adj.愚蠢的
+258	destination	258_1	1	n.目的地
+259	use	259_1	1	n.运用
+259	country	259_1	1	n.国家
+259	wood	259_1	1	n.木材
+259	frighten	259_1	1	v.使惊吓
+259	telescope	259_1	1	n.望远镜
+259	nature	259_1	1	n.自然
+259	kneel	259_1	1	v.跪
+259	item	259_1	1	n.项目
+259	thermometer	259_1	1	n.温度计
+259	layer	259_1	1	n.层
+260	skin	260_1	1	n.皮
+260	variable	260_1	1	n.变量
+260	learning	260_1	1	n.学问
+260	authority	260_1	1	n.权威
+260	sign	260_1	1	n.标志
+260	internal	260_1	1	adj.内在的
+260	separate	260_1	1	v.分开
+260	religious	260_1	1	adj.宗教的
+260	bounce	260_1	1	n.跳
+260	veteran	260_1	1	n.老兵
+261	scissors	261_1	1	n.剪刀
+261	berry	261_1	1	n.浆果
+261	canteen	261_1	1	n.食堂
+261	collect	261_1	1	vt.收集
+261	traditional	261_1	1	adj.传统的
+261	pear	261_1	1	n.梨(树)
+261	wrong	261_1	1	adj.错误的
+261	disguise	261_1	1	vt.假装
+261	upwards	261_1	1	adv.往上
+261	loss	261_1	1	n.丧失
+262	lightning	262_1	1	n.闪电
+262	dare	262_1	1	vi.敢
+262	undertaking	262_1	1	n.事业
+262	or	262_1	1	conj.或者
+262	lot	262_1	1	adv.很
+262	surely	262_1	1	adv.的确地
+262	beam	262_1	1	n.光线
+262	aunt	262_1	1	n.姨
+262	exchange	262_1	1	vt.&vi.交换
+262	stoop	262_1	1	n.佝偻
+263	sob	263_1	1	n.&v.呜咽
+263	lens	263_1	1	n.镜头
+263	consider	263_1	1	vt.考虑
+263	loop	263_1	1	n.环
+263	lunch	263_1	1	n.午餐
+263	motive	263_1	1	adj.发动的
+263	queue	263_1	1	n.行列
+263	vast	263_1	1	adj.广阔的
+263	illness	263_1	1	n.病
+263	itself	263_1	1	pron.它自己
+264	violence	264_1	1	n.暴力
+264	diary	264_1	1	n.日记
+264	scar	264_1	1	n.疤痕
+264	purse	264_1	1	n.钱包
+264	meadow	264_1	1	n.草地
+264	visit	264_1	1	n.访问
+264	mechanic	264_1	1	adj.手工的
+264	half	264_1	1	adj.一半的
+264	publish	264_1	1	vt.出版
+264	disappear	264_1	1	vi.消失
+265	employment	265_1	1	n.雇用
+265	protest	265_1	1	n.抗议
+265	pencil	265_1	1	n.铅笔
+265	luxury	265_1	1	n.奢侈
+265	organize	265_1	1	vi.组织起来
+265	semester	265_1	1	n.学期
+265	instance	265_1	1	n.例子
+265	unconscious	265_1	1	adj.失去知觉的
+265	addition	265_1	1	n.增加
+265	anger	265_1	1	n.忿怒
+266	heroic	266_1	1	adj.英雄的
+266	bargain	266_1	1	vi.议价
+266	dissatisfy	266_1	1	v.使感觉不满
+266	razor	266_1	1	n.剃刀
+266	remedy	266_1	1	n.补救
+266	weld	266_1	1	n.焊接
+266	condemn	266_1	1	vt.判刑
+266	interview	266_1	1	vi.采访
+266	soup	266_1	1	n.汤
+266	rush	266_1	1	vi.（使）急速行进
+267	captive	267_1	1	n.俘虏
+267	forehead	267_1	1	n.额
+267	map	267_1	1	n.地图
+267	secondary	267_1	1	adj.中级的
+267	institution	267_1	1	n.机构
+267	they	267_1	1	pron.他们
+267	shine	267_1	1	vi.发光
+267	he	267_1	1	pron.他
+267	order	267_1	1	n.命令
+267	technical	267_1	1	adj.技术的
+268	stab	268_1	1	n.刺
+268	stick	268_1	1	vt.&vi.粘贴
+268	rescue	268_1	1	n.援救
+268	slipper	268_1	1	n.拖鞋
+268	piano	268_1	1	n.钢琴
+268	invent	268_1	1	v.发明
+268	loose	268_1	1	adj.宽松的
+268	bucket	268_1	1	n.水桶
+268	owner	268_1	1	n.物主
+268	view	268_1	1	n.视野
+269	bunch	269_1	1	n.一串
+269	manner	269_1	1	n.方式
+269	sharp	269_1	1	adj.锋利的
+269	dispute	269_1	1	n.争论;争吵
+269	color	269_1	1	n.颜色
+269	college	269_1	1	n.学院
+269	jail	269_1	1	n.监牢
+269	cycle	269_1	1	n.循环
+269	fact	269_1	1	n.实际
+269	fibre	269_1	1	n.纤维
+270	pig	270_1	1	n.猪
+270	discipline	270_1	1	n.纪律
+270	congress	270_1	1	n.国会
+270	resistance	270_1	1	n.抵抗力
+270	vacation	270_1	1	n.假期
+270	trail	270_1	1	n.踪迹
+270	slave	270_1	1	n.奴隶
+270	winner	270_1	1	n.获胜者
+270	share	270_1	1	vt.分享
+270	broken	270_1	1	adj.坏掉的
+271	gown	271_1	1	n.长袍
+271	inquire	271_1	1	vt.询问
+271	short	271_1	1	adj.短的
+271	skillful	271_1	1	adj.熟练的
+271	pass	271_1	1	vt.&vi.通过
+271	resemble	271_1	1	v.像
+271	base	271_1	1	n.基底
+271	lion	271_1	1	n.狮子
+271	poor	271_1	1	adj.贫穷的
+271	genius	271_1	1	n.天才
+272	football	272_1	1	n.足球
+272	pitch	272_1	1	n.音高
+272	strange	272_1	1	adj.奇怪的
+272	utilize	272_1	1	vt.利用
+272	basin	272_1	1	n.脸盆
+272	headmaster	272_1	1	n.(中小学的)校长
+272	yawn	272_1	1	n.呵欠
+272	transmission	272_1	1	n.传输
+272	shallow	272_1	1	adj.浅的
+272	spread	272_1	1	v.传布
+273	heaven	273_1	1	n.天堂
+273	upset	273_1	1	adj.心烦的
+273	lid	273_1	1	n.盖
+273	park	273_1	1	n.公园
+273	persist	273_1	1	vi.坚持
+273	postage	273_1	1	n.邮费
+273	jazz	273_1	1	n.爵士乐
+273	cubic	273_1	1	adj.立方体的
+273	insufficient	273_1	1	adj.不足的
+273	cable	273_1	1	n.电缆
+274	edge	274_1	1	n.边
+274	shiver	274_1	1	vt.颤动(碎裂)
+274	shilling	274_1	1	n.先令
+274	solid	274_1	1	adj.固体的
+274	vanity	274_1	1	n.虚荣心
+274	charity	274_1	1	n.仁慈
+274	crop	274_1	1	n.庄稼
+274	naturally	274_1	1	adv.自然地
+274	sing	274_1	1	vt.唱
+274	three	274_1	1	num.三
+275	female	275_1	1	n.女子
+275	read	275_1	1	vt.&vi.阅读
+275	professional	275_1	1	adj.职业(上)的
+275	indirect	275_1	1	adj.间接的
+275	treason	275_1	1	n.叛逆
+275	therefore	275_1	1	adv.因此
+275	miner	275_1	1	n.矿工
+275	pack	275_1	1	n.包裹
+275	brighten	275_1	1	vt.使变亮
+275	sleepy	275_1	1	adj.欲睡的
+276	chemical	276_1	1	adj.化学的
+276	elect	276_1	1	v.选举
+276	fountain	276_1	1	n.喷泉
+276	plus	276_1	1	prep.（表示运算）加
+276	pearl	276_1	1	n.珍珠
+276	university	276_1	1	n.大学
+276	traffic	276_1	1	n.交通
+276	seven	276_1	1	num.七
+276	more	276_1	1	adv.更
+276	throw	276_1	1	n.投
+277	joint	277_1	1	adj.联合的
+277	check	277_1	1	vt.检查
+277	landlady	277_1	1	n.女房东
+277	hatch	277_1	1	n.孵化
+277	believe	277_1	1	vi.&vt.相信
+277	acceptable	277_1	1	adj.合意的
+277	brake	277_1	1	vi.刹车
+277	pursuit	277_1	1	n.追求
+277	considerable	277_1	1	adj.相当大的
+277	invite	277_1	1	vt.邀请
+278	missile	278_1	1	n.导弹
+278	countryside	278_1	1	n.乡下
+278	logic	278_1	1	n.逻辑(学)
+278	apply	278_1	1	vt.应用
+278	twice	278_1	1	adv.两次
+278	destroy	278_1	1	vt.&vi.破坏
+278	vague	278_1	1	adj.模糊的
+278	gently	278_1	1	adv.轻轻地
+278	talk	278_1	1	n.谈话
+278	convenience	278_1	1	n.适宜
+279	entry	279_1	1	n.进入
+279	explanation	279_1	1	n.解释
+279	erect	279_1	1	adj.直立的
+279	postman	279_1	1	n.邮递员
+279	tank	279_1	1	n.水槽
+279	system	279_1	1	n.系统
+279	medical	279_1	1	adj.医疗的
+279	cannon	279_1	1	n.大炮
+279	tendency	279_1	1	n.趋势
+279	sickness	279_1	1	n.疾病
+280	strongly	280_1	1	adv.强有力地
+280	wide	280_1	1	adj.广泛的
+280	gulf	280_1	1	n.海湾
+280	pastime	280_1	1	n.消遣
+280	unfortunately	280_1	1	adv.不幸地
+280	at	280_1	1	prep.在
+280	cancer	280_1	1	n.癌
+280	medium	280_1	1	n.媒体
+280	variety	280_1	1	n.多样
+280	trust	280_1	1	vi.信任
+281	meanwhile	281_1	1	adv.同时
+281	weapon	281_1	1	n.武器
+281	encounter	281_1	1	vt.&vi.遭遇
+281	closely	281_1	1	adv.紧密地
+281	race	281_1	1	n.赛跑
+281	trap	281_1	1	n.圈套
+281	weekly	281_1	1	n.周刊
+281	loaf	281_1	1	n.条
+281	moment	281_1	1	n.片刻
+281	idle	281_1	1	adj.闲散的
+282	statesman	282_1	1	n.政治家
+282	salary	282_1	1	n.薪水
+282	bomb	282_1	1	n.炸弹
+282	please	282_1	1	int.请
+282	greet	282_1	1	vt.问候
+282	strength	282_1	1	n.力量
+282	sweet	282_1	1	adj.甜(蜜)的
+282	triumph	282_1	1	n.凯旋
+282	eighth	282_1	1	n.八分之一
+282	small	282_1	1	adj.小的
+283	truck	283_1	1	n.卡车
+283	unite	283_1	1	v.联合
+283	serious	283_1	1	adj.严肃的
+283	squirrel	283_1	1	n.松鼠
+283	prior	283_1	1	adj.在先的
+283	photographic	283_1	1	adj.摄影的
+283	badminton	283_1	1	n.羽毛球
+283	upright	283_1	1	adj.正直的
+283	inefficient	283_1	1	adj.无效率的
+283	allow	283_1	1	vt.允许
+284	expensive	284_1	1	adj.使文明
+284	atmospheric	284_1	1	adj.大气的
+284	pipe	284_1	1	n.管
+284	do	284_1	1	v.做
+284	conceal	284_1	1	vt.隐藏
+284	patient	284_1	1	n.病人
+284	accommodation	284_1	1	n.膳宿
+284	candidate	284_1	1	n.候选人
+284	ancestor	284_1	1	n.祖先
+284	aircraft	284_1	1	n.飞机
+285	shepherd	285_1	1	n.牧羊者
+285	office	285_1	1	n.办公室
+285	waste	285_1	1	vt.浪费
+285	canal	285_1	1	n.运河
+285	lighten	285_1	1	v.点亮
+285	religion	285_1	1	n.宗教;宗教信仰
+285	staircase	285_1	1	n.楼梯
+285	agony	285_1	1	n.(极度的)痛苦
+285	harden	285_1	1	v.变硬
+285	sell	285_1	1	vi.卖
+286	improve	286_1	1	vt.改进
+286	predict	286_1	1	v.预知
+286	treat	286_1	1	v.对待
+286	beautiful	286_1	1	adj.美丽的
+286	unjust	286_1	1	adj.不公平的
+286	town	286_1	1	n.城镇
+286	similarly	286_1	1	adv.相似地
+286	tunnel	286_1	1	n.隧道
+286	thorn	286_1	1	n.刺
+286	truth	286_1	1	n.事实
+287	travel	287_1	1	n.旅行
+287	away	287_1	1	adv.远离
+287	tax	287_1	1	n.税
+287	harness	287_1	1	n.马具
+287	elementary	287_1	1	adj.基本的
+287	stir	287_1	1	n.感动
+287	sight	287_1	1	n.景观
+287	rejoice	287_1	1	v.使...欢喜
+287	if	287_1	1	conj.如果
+287	await	287_1	1	vt.等候
+288	robe	288_1	1	n.长袍
+288	ridge	288_1	1	n.脊
+288	timber	288_1	1	n.木材
+288	show	288_1	1	v.展现
+288	next	288_1	1	adj.紧接在后的
+288	biology	288_1	1	n.生物学
+288	ending	288_1	1	n.结尾
+288	comment	288_1	1	n.评论
+288	departure	288_1	1	n.离开
+288	reputation	288_1	1	n.声誉
+289	replace	289_1	1	vt.取代
+289	confusion	289_1	1	n.混乱
+289	fog	289_1	1	n.雾
+289	gold	289_1	1	adj.金色的
+289	airport	289_1	1	n.机场
+289	mile	289_1	1	n.英里
+289	cap	289_1	1	n.帽子
+289	breakfast	289_1	1	n.早餐
+289	ceremony	289_1	1	n.典礼
+289	cream	289_1	1	n.乳霜
+290	baggage	290_1	1	n.行李
+290	whirl	290_1	1	v.使...旋转
+290	credit	290_1	1	n.信用
+290	velocity	290_1	1	n.速度
+290	organism	290_1	1	n.生物体
+290	purchase	290_1	1	n.购买
+290	axis	290_1	1	n.轴
+290	brief	290_1	1	adj.简短的
+290	yourself	290_1	1	pron.你(们)自己
+290	shy	290_1	1	adj.害羞的
+291	science	291_1	1	n.科学
+291	embrace	291_1	1	n.拥抱
+291	auxiliary	291_1	1	n.帮助者
+291	corridor	291_1	1	n.走廊
+291	jar	291_1	1	n.广口瓶
+291	grip	291_1	1	n.紧握
+291	depend	291_1	1	vi.依靠
+291	vine	291_1	1	n.攀爬植物
+291	omit	291_1	1	vt.省略
+291	swamp	291_1	1	n.沼泽
+292	chest	292_1	1	n.胸
+292	athlete	292_1	1	n.运动员
+292	alphabet	292_1	1	n.字母表
+292	food	292_1	1	n.食物
+292	selfish	292_1	1	adj.自私的
+292	many	292_1	1	n.许多
+292	represent	292_1	1	vt.表现
+292	tram	292_1	1	n.（英）有轨电车
+292	schedule	292_1	1	n.时间表
+292	dock	292_1	1	n.码头
+293	beg	293_1	1	vt.乞讨
+293	cope	293_1	1	v.竞争
+293	seed	293_1	1	n.种子
+293	succession	293_1	1	n.连续
+293	herd	293_1	1	n.兽群
+293	sleeve	293_1	1	n.袖子
+293	planet	293_1	1	n.行星
+293	rebellion	293_1	1	n.叛乱
+293	imagine	293_1	1	vt.想像
+293	corn	293_1	1	n.谷物
+294	uncover	294_1	1	vt.揭开
+294	delegation	294_1	1	n.代表团
+294	often	294_1	1	adv.经常
+294	coffee	294_1	1	n.咖啡
+294	ski	294_1	1	vt.&vi.滑雪
+294	window	294_1	1	n.窗户
+294	structural	294_1	1	adj.结构的
+294	community	294_1	1	n.社区
+294	prohibit	294_1	1	v.禁止
+294	embarrass	294_1	1	vt.使...困窘
+295	restless	295_1	1	adj.不安宁的
+295	church	295_1	1	n.教堂
+295	desirable	295_1	1	adj.值得有的
+295	extra	295_1	1	adj.额外的
+295	privilege	295_1	1	n.特权
+295	positive	295_1	1	adj.积极的
+295	similar	295_1	1	adj.相似的
+295	glide	295_1	1	n.滑动
+295	motion	295_1	1	n.运动
+295	marry	295_1	1	vt.&vi.结婚
+296	generate	296_1	1	vt.产生
+296	export	296_1	1	vt.出口
+296	opponent	296_1	1	n.对手
+296	restaurant	296_1	1	n.餐馆
+296	outwards	296_1	1	adv.向外
+296	rise	296_1	1	v.升起
+296	exclaim	296_1	1	v.大叫
+296	light	296_1	1	n.光
+296	zone	296_1	1	n.地域
+296	dirt	296_1	1	n.污垢
+297	occupy	297_1	1	vt.占领
+297	jaw	297_1	1	n.颚
+297	style	297_1	1	n.风格
+297	proof	297_1	1	n.证明
+297	rod	297_1	1	n.杆
+297	legal	297_1	1	adj.法律的
+297	aware	297_1	1	adj.意识到的
+297	factory	297_1	1	n.工厂
+297	remove	297_1	1	vt.除去
+297	component	297_1	1	n.元件
+298	zebra	298_1	1	n.斑马
+298	tag	298_1	1	n.标签
+298	reflection	298_1	1	n.反映
+298	fill	298_1	1	vt.装满
+298	lamb	298_1	1	n.羔羊
+298	poisonous	298_1	1	adj.有毒的
+298	clock	298_1	1	n.时钟
+298	crazy	298_1	1	adj.疯狂的
+298	among	298_1	1	prep.在...之中
+298	hotel	298_1	1	n.旅馆
+299	latter	299_1	1	adj.后面的
+299	poverty	299_1	1	n.贫穷
+299	consciousness	299_1	1	n.意识
+299	blow	299_1	1	vt.&vi.吹
+299	recovery	299_1	1	n.恢复
+299	turning	299_1	1	n.旋转
+299	monkey	299_1	1	n.猴子
+299	feed	299_1	1	vt.喂
+299	solution	299_1	1	n.解决办法
+299	misunderstand	299_1	1	v.误解
+300	concentration	300_1	1	n.集中
+300	abstract	300_1	1	n.摘要
+300	harbour	300_1	1	n.海港
+300	sunshine	300_1	1	n.阳光
+300	alcohol	300_1	1	n.酒精
+300	quilt	300_1	1	n.被子
+300	vibration	300_1	1	n.震动
+300	flat	300_1	1	adj.平坦的
+300	trace	300_1	1	n.痕迹
+300	concert	300_1	1	n.音乐会
+301	enjoy	301_1	1	vt.&vi.享受
+301	bronze	301_1	1	adj.青铜色的
+301	renew	301_1	1	vt.使更新
+301	thorough	301_1	1	adj.彻底的
+301	slice	301_1	1	n.薄的切片
+301	evil	301_1	1	adj.邪恶的
+301	tear	301_1	1	n.眼泪
+301	drug	301_1	1	n.药
+301	wing	301_1	1	n.翅膀
+301	by	301_1	1	prep.被
+302	contact	302_1	1	v.(与)联系
+302	virtually	302_1	1	adv.几乎
+302	accomplish	302_1	1	vt.完成
+302	victory	302_1	1	n.胜利
+302	rust	302_1	1	n.铁
+302	shelf	302_1	1	n.架子
+302	approve	302_1	1	vt.批准
+302	scenery	302_1	1	n.风景
+302	brown	302_1	1	adj.棕色的
+302	restraint	302_1	1	n.抑制
+303	fry	303_1	1	vt.油炸
+303	usage	303_1	1	n.用法
+303	two	303_1	1	num.二
+303	scientific	303_1	1	adj.科学的
+303	beloved	303_1	1	adj.心爱的
+303	coarse	303_1	1	adj.粗糙的
+303	investigate	303_1	1	vt.&vi.调查
+303	let	303_1	1	vt.让
+303	ox	303_1	1	n.公牛
+303	clerk	303_1	1	n.职员
+304	wife	304_1	1	n.妻子
+304	enforce	304_1	1	vt.加强
+304	broad	304_1	1	adj.宽阔的
+304	needle	304_1	1	n.针
+304	better	304_1	1	adj.较好的
+304	select	304_1	1	adj.精选的
+304	operation	304_1	1	n.手术
+304	sway	304_1	1	n.摇摆
+304	sunrise	304_1	1	n.日出
+304	plaster	304_1	1	n.石膏
+305	heavily	305_1	1	adv.很重地
+305	intention	305_1	1	n.意图
+305	track	305_1	1	n.小路
+305	storage	305_1	1	n.储藏
+305	spirit	305_1	1	n.精神
+305	communist	305_1	1	adj.共产主义的
+305	smoke	305_1	1	v.吸烟
+305	choke	305_1	1	vi.窒息
+305	tribe	305_1	1	n.部落
+305	tiny	305_1	1	adj.极小的
+306	prescribe	306_1	1	vi.规定
+306	vegetable	306_1	1	adj.蔬菜的
+306	refuge	306_1	1	n.避难(处)
+306	northern	306_1	1	adj.北部的
+306	atmosphere	306_1	1	n.大气
+306	cock	306_1	1	n.公鸡
+306	other	306_1	1	adj.别的
+306	profit	306_1	1	n.利润
+306	comprehensive	306_1	1	adj.综合的
+306	mount	306_1	1	n.山峰
+307	journalist	307_1	1	n.记者
+307	inferior	307_1	1	adj.次等的
+307	onto	307_1	1	prep.到...上
+307	vice	307_1	1	prep.副
+307	creative	307_1	1	adj.创造性的
+307	labour	307_1	1	n.劳动
+307	test	307_1	1	n.测试
+307	input	307_1	1	n.输入
+307	hostile	307_1	1	adj.怀敌意的
+307	seriously	307_1	1	adv.严重地
+308	wish	308_1	1	n.愿望
+308	absolute	308_1	1	adj.绝对的
+308	such	308_1	1	adj.如此的
+308	mobile	308_1	1	adj.可移动的
+308	document	308_1	1	n.文件
+308	nineteen	308_1	1	num.十九
+308	due	308_1	1	n.应有的
+308	flight	308_1	1	n.（物体的）飞行
+308	phone	308_1	1	n.电话
+308	accuse	308_1	1	vt.控告
+309	musical	309_1	1	adj.音乐的
+309	flower	309_1	1	n.花
+309	deer	309_1	1	n.鹿
+309	west	309_1	1	adj.西方的
+309	gymnasium	309_1	1	n.体育馆
+309	saint	309_1	1	n.圣人
+309	bud	309_1	1	n.芽
+309	rubbish	309_1	1	n.垃圾
+309	till	309_1	1	conj.直到(...为止)
+309	taste	309_1	1	vi.品尝
+310	camp	310_1	1	n.露营
+310	charge	310_1	1	n.费用
+310	paper	310_1	1	n.纸
+310	mirror	310_1	1	n.镜子
+310	nurse	310_1	1	n.护士
+310	spider	310_1	1	n.蜘蛛
+310	panel	310_1	1	n.镶板
+310	electron	310_1	1	n.电子
+310	program	310_1	1	n.节目(单)
+310	worthwhile	310_1	1	adj.值得(做)的
+311	thirst	311_1	1	v.渴望
+311	no	311_1	1	n.不
+311	worse	311_1	1	adj.更坏的
+311	hopeful	311_1	1	adj.有希望的
+311	married	311_1	1	adj.已婚的
+311	worm	311_1	1	n.虫
+311	glove	311_1	1	n.手套
+311	pavement	311_1	1	n.人行道
+311	stupid	311_1	1	adj.愚蠢的
+311	critic	311_1	1	n.批评家
+312	revise	312_1	1	n.校订
+312	interpretation	312_1	1	n.解释
+312	continue	312_1	1	vt.&vi.继续
+312	future	312_1	1	n.未来
+312	evaporate	312_1	1	v.蒸发
+312	patience	312_1	1	n.耐心
+312	cook	312_1	1	vi.烧菜
+312	dozen	312_1	1	n.(一)打
+312	waggon	312_1	1	n.（铁路）货车车厢
+312	generation	312_1	1	n.代
+313	feedback	313_1	1	n.反馈
+313	philosopher	313_1	1	n.哲学家
+313	royal	313_1	1	adj.王室的
+313	cripple	313_1	1	n.跛者
+313	dialect	313_1	1	n.方言
+313	habitual	313_1	1	adj.惯常的
+313	construction	313_1	1	n.建设
+313	quantity	313_1	1	n.量
+313	appetite	313_1	1	n.胃口
+313	chocolate	313_1	1	n.巧克力
+314	invention	314_1	1	n.发明
+314	straight	314_1	1	adj.直的
+314	steer	314_1	1	v.引导
+314	unknown	314_1	1	adj.未知的
+314	workman	314_1	1	n.工人
+314	visible	314_1	1	adj.可见的
+314	copy	314_1	1	vt.&vi.复制
+314	harmony	314_1	1	n.和睦
+314	spot	314_1	1	n.地点
+314	author	314_1	1	n.作者
+315	roll	315_1	1	vi.翻滚
+315	fluid	315_1	1	adj.流畅优美的
+315	carbon	315_1	1	n.碳
+315	everyday	315_1	1	adj.每天的
+315	blend	315_1	1	vt.&vi.混合
+315	relation	315_1	1	n.关系
+315	halt	315_1	1	adj.瘸的
+315	praise	315_1	1	vt.称赞
+315	climate	315_1	1	n.气候
+315	contempt	315_1	1	n.轻视
+316	roast	316_1	1	n.烤肉
+316	pork	316_1	1	n.猪肉
+316	ceiling	316_1	1	n.天花板
+316	interruption	316_1	1	n.打岔
+316	feast	316_1	1	n.宴会
+316	relative	316_1	1	adj.相对的
+316	newly	316_1	1	adv.崭新
+316	evident	316_1	1	adj.明显的
+316	loyal	316_1	1	adj.忠诚的
+316	escape	316_1	1	vt.&vi.逃脱
+317	distinct	317_1	1	adj.(from)独特的
+317	efficient	317_1	1	adj.效率高的
+317	peaceful	317_1	1	adj.安宁的
+317	whoever	317_1	1	adv.无论是谁
+317	sale	317_1	1	n.销售(量)
+317	tonight	317_1	1	n.&adv.今晚
+317	owe	317_1	1	v.欠
+317	bulb	317_1	1	n.电灯泡
+317	instantly	317_1	1	adv.立即地
+317	hole	317_1	1	n.洞
+318	bet	318_1	1	n.打赌
+318	liberate	318_1	1	v.解放
+318	accelerate	318_1	1	vt.加速
+318	snowstorm	318_1	1	n.暴风雪
+318	keyboard	318_1	1	n.键盘
+318	doubtful	318_1	1	adj.可疑的
+318	gradually	318_1	1	adv.逐渐地
+318	near	318_1	1	prep.靠近
+318	adult	318_1	1	adj.成年的
+318	sweat	318_1	1	n.汗
+319	safely	319_1	1	adv.安全地
+319	conventional	319_1	1	adj.普通的
+319	resignation	319_1	1	n.辞职
+319	instant	319_1	1	adj.立即的
+319	complex	319_1	1	adj.复杂的
+319	require	319_1	1	v.需要
+319	mix	319_1	1	vt.&vi.混合
+319	provided	319_1	1	conj.假如
+319	principal	319_1	1	adj.主要的
+319	punishment	319_1	1	n.惩罚
+320	cloth	320_1	1	n.布料
+320	continuous	320_1	1	adj.连续的
+320	assemble	320_1	1	vt.聚集
+320	promise	320_1	1	v.允诺
+320	quarter	320_1	1	n.四分之一
+320	cart	320_1	1	n.（二轮或四轮）运货马车
+320	fine	320_1	1	adj.美好的
+320	gift	320_1	1	n.礼物
+320	version	320_1	1	n.版本
+320	recommend	320_1	1	vt.建议
+321	sad	321_1	1	adj.悲哀的
+321	advantage	321_1	1	n.优势
+321	initial	321_1	1	adj.最初的
+321	framework	321_1	1	n.结构
+321	grasp	321_1	1	n.把握
+321	remain	321_1	1	v.保持
+321	evaluate	321_1	1	vt.评估
+321	own	321_1	1	adj.自己的
+321	fail	321_1	1	vi.失败
+321	strategy	321_1	1	n.战略
+322	commander	322_1	1	n.司令官
+322	composition	322_1	1	n.作文
+322	dynamic	322_1	1	adj.动态的
+322	automatic	322_1	1	adj.自动的
+322	tragedy	322_1	1	n.悲剧
+322	island	322_1	1	n.岛
+322	endure	322_1	1	vt.忍耐
+322	regret	322_1	1	n.遗憾
+322	still	322_1	1	adj.静止的
+322	adjust	322_1	1	vt.调整
+323	furthermore	323_1	1	adv.而且
+323	depart	323_1	1	vt.离开
+323	dangerous	323_1	1	adj.危险的
+323	output	323_1	1	n.产量
+323	seldom	323_1	1	adv.很少
+323	split	323_1	1	v.分离
+323	understand	323_1	1	vt.理解
+323	enthusiastic	323_1	1	adj.热情的
+323	soft	323_1	1	adj.柔软的
+323	asleep	323_1	1	adj.睡着的
+324	acceleration	324_1	1	n.加速
+324	watch	324_1	1	n.手表
+324	forty	324_1	1	num.&adj.四十
+324	highly	324_1	1	adv.高度地
+324	session	324_1	1	n.会议
+324	monthly	324_1	1	adj.每月的
+324	tenth	324_1	1	n.第十
+324	person	324_1	1	n.人
+324	lesson	324_1	1	n.课
+324	would	324_1	1	aux.将
+325	match	325_1	1	n.比赛
+325	agency	325_1	1	n.机构
+325	keen	325_1	1	adj.敏锐的
+325	glimpse	325_1	1	n.一瞥
+325	millimetre	325_1	1	n.毫米
+325	sadly	325_1	1	adv.悲痛地
+325	queer	325_1	1	n.同性恋者
+325	daughter	325_1	1	n.女儿
+325	mill	325_1	1	n.磨粉机
+325	ours	325_1	1	pron.我们的
+326	engineer	326_1	1	n.工程师
+326	movement	326_1	1	n.活动
+326	painful	326_1	1	adj.痛苦的
+326	unpleasant	326_1	1	adj.使人不愉快的
+326	administration	326_1	1	n.行政
+326	cell	326_1	1	n.细胞
+326	fairly	326_1	1	adj.相当地
+326	finding	326_1	1	n.发现
+326	sex	326_1	1	n.性
+326	precision	326_1	1	n.精确
+327	satisfy	327_1	1	vt.使...满意
+327	indicate	327_1	1	v.表明
+327	lumber	327_1	1	n.木材
+327	forecast	327_1	1	vt.&vi.预测
+327	suitable	327_1	1	adj.合适的
+327	rock	327_1	1	n.岩石
+327	oppose	327_1	1	vt.反对
+327	graph	327_1	1	n.图表
+327	favourable	327_1	1	adj.有用的
+327	golden	327_1	1	adj.金(黄)色的
+328	report	328_1	1	vt.报告
+328	pink	328_1	1	adj.粉红色的
+328	subsequent	328_1	1	adj.随后的
+328	finish	328_1	1	vi.完成
+328	sharpen	328_1	1	v.使...尖锐
+328	helpful	328_1	1	adj.有帮助的
+328	ink	328_1	1	n.墨水
+328	cabin	328_1	1	n.船舱
+328	skate	328_1	1	v.滑冰
+328	contest	328_1	1	n.竞赛
+329	drill	329_1	1	n.钻孔机
+329	troop	329_1	1	n.群
+329	beggar	329_1	1	n.乞丐
+329	overtake	329_1	1	v.赶上
+329	loosen	329_1	1	vt.放松
+329	merry	329_1	1	adj.欢乐的
+329	navy	329_1	1	n.海军
+329	skirt	329_1	1	n.裙子
+329	card	329_1	1	n.卡片
+329	wash	329_1	1	v.洗
+330	slit	330_1	1	n.裂缝
+330	pour	330_1	1	vt.&vi.倾泻
+330	keeper	330_1	1	n.保管人
+330	particular	330_1	1	n.个别项目
+330	reluctant	330_1	1	adj.不情愿的
+330	profession	330_1	1	n.职业
+330	lantern	330_1	1	n.灯笼
+330	depth	330_1	1	n.深度
+330	affair	330_1	1	n.事件
+330	smell	330_1	1	vt.闻
+331	stress	331_1	1	n.压力
+331	seem	331_1	1	vi.像是
+331	neck	331_1	1	n.脖子
+331	relativity	331_1	1	n.相对性
+331	faithful	331_1	1	adj.如实的
+331	necklace	331_1	1	n.项链
+331	interest	331_1	1	n.兴趣
+331	objective	331_1	1	adj.客观的
+331	convince	331_1	1	vt.说服
+331	impress	331_1	1	vt.使...有印象
+332	above	332_1	1	adj.上面的
+332	vary	332_1	1	vt.改变
+332	pressure	332_1	1	n.压力
+332	plough	332_1	1	n.犁
+332	being	332_1	1	n.存在
+332	improvement	332_1	1	n.改进
+332	whose	332_1	1	pron.谁的
+332	stage	332_1	1	n.阶段
+332	land	332_1	1	n.陆地
+332	vertical	332_1	1	adj.垂直的
+333	handkerchief	333_1	1	n.手帕
+333	steep	333_1	1	adj.险峻的
+333	mostly	333_1	1	adv.大概
+333	hour	333_1	1	n.小时
+333	fresh	333_1	1	adj.新鲜的
+333	ninety	333_1	1	num.&n.九十
+333	portable	333_1	1	adj.手提式的
+333	lawn	333_1	1	n.草地
+333	approval	333_1	1	n.批准
+333	circle	333_1	1	n.圆周
+334	wise	334_1	1	adj.明智的
+334	master	334_1	1	n.主人
+334	mankind	334_1	1	n.人类
+334	surround	334_1	1	vt.包围
+334	dot	334_1	1	n.小圆点
+334	greeting	334_1	1	n.问候
+334	unless	334_1	1	conj.除非
+334	friend	334_1	1	n.朋友
+334	elsewhere	334_1	1	adv.在别处
+334	summary	334_1	1	n.摘要
+335	steady	335_1	1	adj.稳定的
+335	mouse	335_1	1	n.老鼠
+335	purple	335_1	1	adj.紫色的
+335	ruin	335_1	1	n.(pl.)废墟
+335	activity	335_1	1	n.活动
+335	sore	335_1	1	adj.疼痛的
+335	indoors	335_1	1	adv.在户内
+335	nobody	335_1	1	pron.没有人
+335	intensity	335_1	1	n.强度
+335	sole	335_1	1	adj.唯一的
+336	startle	336_1	1	n.惊愕
+336	weave	336_1	1	v.编织
+336	indication	336_1	1	n.象征
+336	minority	336_1	1	n.少数
+336	physician	336_1	1	n.内科医生
+336	far	336_1	1	adv.&adj.远的(地)
+336	chart	336_1	1	n.图表
+336	accurate	336_1	1	adj.准确的
+336	dance	336_1	1	vi.跳舞
+336	ancient	336_1	1	adj.古老的
+337	infant	337_1	1	n.婴儿
+337	station	337_1	1	n.车(站)
+337	border	337_1	1	n.边缘
+337	identify	337_1	1	vt.识别
+337	topic	337_1	1	n.主题
+337	spoil	337_1	1	v.溺爱
+337	pilot	337_1	1	n.飞行员
+337	huge	337_1	1	adj.巨大的
+337	occasion	337_1	1	n.场合
+337	smog	337_1	1	n.烟雾
+338	toilet	338_1	1	n.厕所
+338	funny	338_1	1	adj.滑稽的
+338	root	338_1	1	n.根
+338	perform	338_1	1	v.执行
+338	eyesight	338_1	1	n.视力
+338	dam	338_1	1	n.水坝
+338	residence	338_1	1	n.住处
+338	cave	338_1	1	n.山洞
+338	minute	338_1	1	n.分钟
+338	shoulder	338_1	1	n.肩膀
+339	clear	339_1	1	adj.清楚的
+339	electrical	339_1	1	adj.电的
+339	contrary	339_1	1	adj.相反的
+339	hammer	339_1	1	n.锤
+339	method	339_1	1	n.方法
+339	frequently	339_1	1	adv.经常地
+339	diverse	339_1	1	adj.多种多样的
+339	province	339_1	1	n.省
+339	everybody	339_1	1	pron.每人
+339	sympathize	339_1	1	v.同情
+340	revenge	340_1	1	n.报仇
+340	saddle	340_1	1	n.鞍
+340	writing	340_1	1	n.著述
+340	bound	340_1	1	n.界限
+340	dorm	340_1	1	n.(集体)宿舍
+340	prepare	340_1	1	vt.准备
+340	provide	340_1	1	vi.提供
+340	dispose	340_1	1	vt.倾向于
+340	none	340_1	1	pron.没有人
+340	argument	340_1	1	n.争论
+341	beach	341_1	1	n.海滩
+341	imagination	341_1	1	n.想象
+341	thirty	341_1	1	num.三十
+341	liberty	341_1	1	n.自由
+341	us	341_1	1	pron.我们(we的宾格)
+341	dissolve	341_1	1	vi.溶解
+341	trial	341_1	1	n.试验
+341	comprise	341_1	1	vt.包含
+341	rent	341_1	1	v.租
+341	whistle	341_1	1	n.口哨
+342	face	342_1	1	n.脸
+342	content	342_1	1	n.内容
+342	unexpected	342_1	1	adj.想不到的
+342	sausage	342_1	1	n.香肠
+342	underground	342_1	1	adj.地下的
+342	drain	342_1	1	n.下水道
+342	ignore	342_1	1	vt.忽视
+342	coil	342_1	1	n.卷
+342	shock	342_1	1	vt.&vi.震动
+342	uniform	342_1	1	n.制服
+343	fearful	343_1	1	adj.可怕的
+343	toss	343_1	1	n.投掷
+343	inhabit	343_1	1	v.居住于
+343	rag	343_1	1	n.破布
+343	slide	343_1	1	n.滑
+343	revolutionary	343_1	1	adj.革命的
+343	logical	343_1	1	adj.符合逻辑的
+343	decade	343_1	1	n.十年
+343	meet	343_1	1	vt.遇见
+343	vision	343_1	1	n.视觉
+344	anyhow	344_1	1	adv.无论如何
+344	portrait	344_1	1	n.肖像
+344	translate	344_1	1	vt.翻译
+344	hit	344_1	1	n.打(击)
+344	professor	344_1	1	n.教授
+344	hire	344_1	1	vt.聘用
+344	petrol	344_1	1	n.汽油
+344	bike	344_1	1	n.脚踏车
+344	equip	344_1	1	v.装备
+344	appliance	344_1	1	n.器具
+345	debate	345_1	1	n.辩论
+345	altitude	345_1	1	n.高度
+345	soccer	345_1	1	n.英式足球
+345	modern	345_1	1	adj.现代的
+345	flexible	345_1	1	adj.灵活的
+345	proposal	345_1	1	n.提议
+345	sprinkle	345_1	1	v.洒
+345	sheet	345_1	1	n.片
+345	crust	345_1	1	n.外壳
+345	realize	345_1	1	vt.实现
+346	installation	346_1	1	n.安装
+346	valley	346_1	1	n.山谷
+346	calculator	346_1	1	n.计算器
+346	dictation	346_1	1	n.听写
+346	mental	346_1	1	adj.精神的
+346	maintenance	346_1	1	n.维护
+346	exactly	346_1	1	adv.准确地
+346	attitude	346_1	1	n.态度
+346	fortunately	346_1	1	adv.幸运地
+346	season	346_1	1	n.季节
+347	spare	347_1	1	adj.备用的
+347	occur	347_1	1	vi.发生
+347	king	347_1	1	n.国王
+347	successive	347_1	1	adj.接连的
+347	thought	347_1	1	n.思想
+347	definition	347_1	1	n.定义
+347	yard	347_1	1	n.庭院
+347	divorce	347_1	1	n.离婚
+347	reinforce	347_1	1	v.加强
+347	mute	347_1	1	n.哑子
+348	freight	348_1	1	n.船货
+348	brilliant	348_1	1	adj.杰出的
+348	regular	348_1	1	adj.有规律的
+348	doubt	348_1	1	n.怀疑
+348	hatred	348_1	1	n.憎恶
+348	treatment	348_1	1	n.治疗
+348	first	348_1	1	adv.首先
+348	invitation	348_1	1	n.邀请
+348	conflict	348_1	1	n.冲突
+348	federal	348_1	1	adj.联邦的
+349	formula	349_1	1	n.公式
+349	soul	349_1	1	n.灵魂
+349	twenty	349_1	1	adj.二十
+349	clasp	349_1	1	n.扣子
+349	drawer	349_1	1	n.抽屉
+349	majority	349_1	1	n.多数
+349	acute	349_1	1	adj.敏锐的
+349	mug	349_1	1	n.杯
+349	wine	349_1	1	n.酒
+349	admit	349_1	1	vt.&vi.承认
+350	threat	350_1	1	n.威胁
+350	lap	350_1	1	n.一周
+350	pistol	350_1	1	n.手枪
+350	effective	350_1	1	adj.有效的
+350	foreign	350_1	1	adj.外国的
+350	slowly	350_1	1	adj.慢慢地
+350	reflect	350_1	1	v.反映
+350	cough	350_1	1	n.咳嗽
+350	painter	350_1	1	n.画家
+350	overnight	350_1	1	n.前晚
+351	consume	351_1	1	vt.消耗
+351	physicist	351_1	1	n.物理学家
+351	complaint	351_1	1	n.抱怨
+351	mist	351_1	1	n.雾
+351	sunny	351_1	1	adj.阳光充足的
+351	campaign	351_1	1	n.战役;运动
+351	various	351_1	1	adj.各种各样的
+351	subject	351_1	1	n.主题
+351	ride	351_1	1	vt.&vi.骑
+351	peel	351_1	1	n.皮
+352	fork	352_1	1	n.叉
+352	reply	352_1	1	vt.&vi.&n.回答
+352	dumb	352_1	1	adj.无言的
+352	discovery	352_1	1	n.发现
+352	chess	352_1	1	n.国际象棋
+352	outset	352_1	1	n.开始
+352	nervous	352_1	1	adj.紧张的
+352	scientist	352_1	1	n.科学家
+352	perhaps	352_1	1	adv.也许
+352	chapter	352_1	1	n.章
+353	record	353_1	1	n.记录
+353	political	353_1	1	adj.政治的
+353	exact	353_1	1	adj.精确的
+353	mate	353_1	1	n.配偶
+353	essential	353_1	1	adj.必要的
+353	multiply	353_1	1	vt.乘
+353	each	353_1	1	adj.每个
+353	down	353_1	1	adj.向下的
+353	procedure	353_1	1	n.程序
+353	illegal	353_1	1	adj.不合法的
+354	gun	354_1	1	n.枪
+354	undergo	354_1	1	vt.遭受
+354	pair	354_1	1	n.双
+354	experiment	354_1	1	n.实验
+354	swallow	354_1	1	n.燕子
+354	scholarship	354_1	1	n.奖学金
+354	quart	354_1	1	n.夸脱（容量单位）
+354	rein	354_1	1	n.缰绳
+354	museum	354_1	1	n.博物馆
+354	potential	354_1	1	adj.潜在的
+355	camera	355_1	1	n.照相机
+355	contract	355_1	1	n.合约
+355	retreat	355_1	1	n.休息寓所
+355	frequent	355_1	1	adj.经常的
+355	manufacture	355_1	1	vt.制造
+355	meal	355_1	1	n.膳食
+355	evidence	355_1	1	n.证据
+355	journal	355_1	1	n.杂志
+355	offend	355_1	1	vt.犯罪
+355	kilometre	355_1	1	n.公里
+356	rider	356_1	1	n.骑士
+356	correspondent	356_1	1	n.通讯记者
+356	passage	356_1	1	n.通道
+356	about	356_1	1	prep.关于
+356	stable	356_1	1	adj.稳定的
+356	famine	356_1	1	n.饥荒
+356	hat	356_1	1	n.帽子
+356	atom	356_1	1	n.原子
+356	puff	356_1	1	n.一阵喷烟
+356	rotary	356_1	1	adj.旋转的
+357	graduate	357_1	1	vt.毕业
+357	crime	357_1	1	n.犯罪
+357	participate	357_1	1	vi.参加某事
+357	alive	357_1	1	adj.活着的
+357	jungle	357_1	1	n.丛林
+357	within	357_1	1	adv.在内
+357	almost	357_1	1	adv.几乎
+357	dig	357_1	1	v.挖
+357	fancy	357_1	1	n.想像力
+357	collapse	357_1	1	n.崩溃
+358	circumstance	358_1	1	n.环境
+358	speak	358_1	1	vt.说
+358	decision	358_1	1	n.决定
+358	save	358_1	1	vt.节省
+358	company	358_1	1	n.公司
+358	prayer	358_1	1	n.祈祷
+358	agree	358_1	1	vt.同意
+358	corporation	358_1	1	n.公司
+358	complicated	358_1	1	adj.复杂的
+358	brand	358_1	1	n.牌子
+359	drought	359_1	1	n.干旱
+359	refute	359_1	1	vt.驳斥
+359	bulk	359_1	1	n.大部分
+359	preparation	359_1	1	n.准备
+359	even	359_1	1	adv.甚至
+359	except	359_1	1	vt.除
+359	swell	359_1	1	n.增大
+359	article	359_1	1	n.文章
+359	pessimistic	359_1	1	adj.悲观的
+359	certainly	359_1	1	adv.当然
+360	eleven	360_1	1	num.十一
+360	instruction	360_1	1	n.指令
+360	infer	360_1	1	vt.推断
+360	peninsula	360_1	1	n.半岛
+360	hand	360_1	1	n.手
+360	telephone	360_1	1	n.电话
+360	melt	360_1	1	vt.&vi.熔化
+360	sophisticated	360_1	1	adj.复杂的
+360	globe	360_1	1	n.地球
+360	common	360_1	1	adj.共同的
+361	anyone	361_1	1	pron.任何人
+361	duration	361_1	1	n.持续时间
+361	regardless	361_1	1	adv.不顾
+361	roar	361_1	1	n.吼
+361	brandy	361_1	1	n.白兰地酒
+361	northeast	361_1	1	n.东北
+361	economical	361_1	1	adj.节俭的
+361	quiet	361_1	1	adj.安静的
+361	nail	361_1	1	n.钉子
+361	throat	361_1	1	n.喉咙
+362	fortnight	362_1	1	n.两星期
+362	neat	362_1	1	adj.整洁的
+362	rusty	362_1	1	adj.生锈的
+362	liberation	362_1	1	n.解放
+362	drip	362_1	1	n.滴
+362	undo	362_1	1	v.解开
+362	chew	362_1	1	vt.咀嚼
+362	partially	362_1	1	adv.部份地
+362	dramatic	362_1	1	adj.戏剧性的
+362	exercise	362_1	1	n.练习
+363	farewell	363_1	1	n.告别
+363	sword	363_1	1	n.剑
+363	burn	363_1	1	vt.&vi.燃烧
+363	life	363_1	1	n.生活
+363	deadly	363_1	1	adj.致命的
+363	pillar	363_1	1	n.柱子
+363	five	363_1	1	num.五
+363	sparkle	363_1	1	n.闪耀
+363	midday	363_1	1	n.正午
+363	prevent	363_1	1	v.防止
+364	carve	364_1	1	vt.&vi.雕刻
+364	video	364_1	1	n.录像(机)
+364	suggest	364_1	1	vt.建议
+364	hate	364_1	1	vt.憎恨
+364	fee	364_1	1	n.费用
+364	beard	364_1	1	n.胡须
+364	stretch	364_1	1	n.伸展
+364	orange	364_1	1	adj.橙色的
+364	arrange	364_1	1	vt.安排
+364	glue	364_1	1	n.胶
+365	could	365_1	1	aux.“can”的过去式
+365	shampoo	365_1	1	n.洗发剂
+365	orchestra	365_1	1	n.管弦乐队
+365	flush	365_1	1	n.流溢
+365	theirs	365_1	1	pron.他(她,它)们的
+365	scarf	365_1	1	n.围巾
+365	idiom	365_1	1	n.成语
+365	crawl	365_1	1	vi.爬行
+365	young	365_1	1	adj.年轻的
+365	porch	365_1	1	n.门廊
+366	explain	366_1	1	vt.&vi.解释
+366	skim	366_1	1	vt.撇去浮沫
+366	sensitive	366_1	1	adj.敏感的
+366	include	366_1	1	v.包括
+366	strain	366_1	1	n.张力
+366	groan	366_1	1	v.呻吟
+366	package	366_1	1	n.包裹
+366	thrust	366_1	1	n.推力
+366	sorry	366_1	1	adj.对不起的
+366	scout	366_1	1	n.童子军
+367	intelligence	367_1	1	n.智力
+367	actor	367_1	1	n.男演员
+367	degree	367_1	1	n.度数
+367	announcer	367_1	1	n.广播员
+367	rival	367_1	1	n.对手
+367	assume	367_1	1	vt.假定
+367	lung	367_1	1	n.肺
+367	adopt	367_1	1	v.采用
+367	already	367_1	1	adv.已经
+367	breath	367_1	1	n.呼吸
+368	example	368_1	1	n.例子
+368	barn	368_1	1	n.谷仓
+368	gloomy	368_1	1	adj.阴沉的
+368	leaf	368_1	1	n.树叶
+368	national	368_1	1	adj.国家的
+368	digital	368_1	1	adj.数字的
+368	bee	368_1	1	n.蜜蜂
+368	render	368_1	1	vt.使成为
+368	revolt	368_1	1	vi.叛乱
+368	hero	368_1	1	n.英雄
+369	technology	369_1	1	n.技术
+369	persuade	369_1	1	vt.劝说
+369	stack	369_1	1	n.堆叠
+369	familiar	369_1	1	adj.熟悉的
+369	practical	369_1	1	adj.实际的
+369	twelfth	369_1	1	adj.第十二的
+369	direction	369_1	1	n.方向
+369	volt	369_1	1	n.伏特(电压单位)
+369	arrest	369_1	1	n.逮捕
+369	meat	369_1	1	n.肉
+370	all	370_1	1	adj.所有的
+370	prisoner	370_1	1	n.囚犯
+370	sparrow	370_1	1	n.麻雀
+370	lock	370_1	1	n.锁
+370	trim	370_1	1	n.整齐
+370	pant	370_1	1	n.喘气
+370	beginning	370_1	1	n.开始
+370	penetrate	370_1	1	vt.&vi.穿透
+370	shout	370_1	1	n.呼喊
+370	partner	370_1	1	n.搭档
+371	desert	371_1	1	n.沙漠
+371	punctual	371_1	1	adj.严守时刻的
+371	sportsman	371_1	1	n.运动员
+371	obstacle	371_1	1	n.障碍
+371	monument	371_1	1	n.纪念碑
+371	zeal	371_1	1	n.热情
+371	nine	371_1	1	num.&n.九
+371	clap	371_1	1	vt.鼓掌
+371	door	371_1	1	n.门
+371	chance	371_1	1	n.机会
+372	clothe	372_1	1	vt.穿上
+372	temporary	372_1	1	adj.暂时的
+372	refresh	372_1	1	vt.&vi.使...生气蓬勃
+372	goodness	372_1	1	n.善良
+372	navigation	372_1	1	n.航行
+372	encourage	372_1	1	v.鼓励
+372	polite	372_1	1	adj.有礼貌的
+372	appoint	372_1	1	vt.任命
+372	liar	372_1	1	n.说谎者
+372	independent	372_1	1	adj.独立的
+373	teach	373_1	1	vt.教
+373	sand	373_1	1	n.砂
+373	lend	373_1	1	vt.借
+373	fable	373_1	1	n.寓言
+373	confirm	373_1	1	v.确定
+373	analyse	373_1	1	vt.分析
+373	happy	373_1	1	adj.快乐的
+373	refreshment	373_1	1	n.恢复
+373	unusually	373_1	1	adv.异乎寻常地
+373	assure	373_1	1	vt.保证
+374	risk	374_1	1	n.危险
+374	excursion	374_1	1	n.远足
+374	sea	374_1	1	n.海
+374	fool	374_1	1	n.愚人
+374	compile	374_1	1	v.编译
+374	ton	374_1	1	n.吨
+374	crow	374_1	1	n.啼叫
+374	sailor	374_1	1	n.海员
+374	mean	374_1	1	v.意味
+374	cheerful	374_1	1	adj.高兴的
+375	kite	375_1	1	n.风筝
+375	hopeless	375_1	1	adj.没有希望的
+375	screen	375_1	1	n.屏幕
+375	eye	375_1	1	n.眼睛
+375	airline	375_1	1	n.(飞机的)航线
+375	regarding	375_1	1	prep.关于
+375	stamp	375_1	1	n.邮票
+375	brain	375_1	1	n.脑
+375	thirteen	375_1	1	num.十三
+375	distribution	375_1	1	n.分配
+376	sketch	376_1	1	n.素描
+376	goose	376_1	1	n.鹅
+376	nearly	376_1	1	adv.几乎
+376	eager	376_1	1	adj.渴望的
+376	forth	376_1	1	adv.向前
+376	jacket	376_1	1	n.短上衣
+376	someone	376_1	1	pron.某人
+376	despair	376_1	1	n.绝望
+376	east	376_1	1	n.东
+376	must	376_1	1	aux.必须
+377	unlikely	377_1	1	adj.不大可能发生的
+377	paragraph	377_1	1	n.段落
+377	million	377_1	1	n.百万
+377	generator	377_1	1	n.发电机
+377	pollute	377_1	1	v.弄脏
+377	chicken	377_1	1	n.鸡
+377	month	377_1	1	n.月
+377	terrific	377_1	1	adj.极好的
+377	forever	377_1	1	adv.永远
+377	scent	377_1	1	n.气味
+378	measure	378_1	1	n.措施
+378	relieve	378_1	1	vt.减轻
+378	noticeable	378_1	1	adj.显而易见的
+378	explode	378_1	1	vt.爆炸
+378	mature	378_1	1	adj.成熟的
+378	couple	378_1	1	n.对
+378	pillow	378_1	1	n.枕头
+378	mercy	378_1	1	n.怜悯
+378	repeatedly	378_1	1	adv.重复地
+378	care	378_1	1	n.小心
+379	hamburger	379_1	1	n.汉堡包
+379	oh	379_1	1	int.啊呀
+379	mainly	379_1	1	adv.主要地
+379	glass	379_1	1	n.玻璃
+379	stale	379_1	1	adj.不新鲜的
+379	index	379_1	1	n.索引
+379	facility	379_1	1	n.设备
+379	shield	379_1	1	n.盾
+379	implication	379_1	1	n.暗示
+379	paw	379_1	1	n.手掌
+380	apparatus	380_1	1	n.装置
+380	consist	380_1	1	vi.组成
+380	before	380_1	1	prep.在…之前
+380	merit	380_1	1	n.优点
+380	seventh	380_1	1	n.第七
+380	justice	380_1	1	n.正义
+380	noon	380_1	1	n.正午
+380	wheel	380_1	1	n.轮子
+380	criminal	380_1	1	adj.犯罪的
+380	tent	380_1	1	n.帐篷
+381	lively	381_1	1	adj.活泼的
+381	child	381_1	1	n.小孩
+381	percentage	381_1	1	n.百分率
+381	convention	381_1	1	n.会议
+381	average	381_1	1	adj.平均的
+381	goal	381_1	1	n.目标
+381	damp	381_1	1	n.毒气
+381	supply	381_1	1	vt.供给
+381	combination	381_1	1	n.结合
+381	lean	381_1	1	n.瘦肉
+382	thumb	382_1	1	n.拇指
+382	tail	382_1	1	n.尾部
+382	liter	382_1	1	n.升
+382	pleasure	382_1	1	n.高兴
+382	act	382_1	1	vi.行动
+382	thief	382_1	1	n.贼
+382	wind	382_1	1	n.风
+382	continual	382_1	1	adj.不断的
+382	distress	382_1	1	n.苦恼
+382	lamp	382_1	1	n.灯
+383	rhythm	383_1	1	n.节奏
+383	beside	383_1	1	prep.在...旁边
+383	jam	383_1	1	n.果酱
+383	distant	383_1	1	adj.遥远的
+383	pay	383_1	1	vt.支付
+383	besides	383_1	1	prep.除...之外
+383	mail	383_1	1	n.邮件
+383	suspicion	383_1	1	n.猜疑
+383	crack	383_1	1	vt.使破裂
+383	judge	383_1	1	vt.&vi.评判
+384	recently	384_1	1	adv.最近
+384	throughout	384_1	1	adv.到处
+384	contemporary	384_1	1	n.同时代的人
+384	stiffen	384_1	1	v.使...坚硬
+384	bitter	384_1	1	adj.苦的
+384	display	384_1	1	n.显示
+384	reverse	384_1	1	v.颠倒
+384	hope	384_1	1	n.希望
+384	strike	384_1	1	v.打
+384	dump	384_1	1	n.丢弃
+385	cold	385_1	1	adj.冷的
+385	candy	385_1	1	n.糖果
+385	winter	385_1	1	n.冬天
+385	rough	385_1	1	adj.粗糙的
+385	from	385_1	1	prep.从
+385	brass	385_1	1	n.黄铜(制品)
+385	cordial	385_1	1	n.兴奋剂
+385	pool	385_1	1	n.水塘(池)
+385	engine	385_1	1	n.发动机
+385	dollar	385_1	1	n.美元
+386	congratulate	386_1	1	vt.祝贺
+386	bold	386_1	1	adj.大胆的
+386	yours	386_1	1	pron.你的
+386	era	386_1	1	n.纪元
+386	furious	386_1	1	adj.狂怒的
+386	scrape	386_1	1	n.刮掉
+386	shake	386_1	1	vi.摇晃
+386	radium	386_1	1	n.[化]镭
+386	launch	386_1	1	n.&v.发射
+386	deck	386_1	1	n.甲板
+387	settlement	387_1	1	n.[建]沉降
+387	license	387_1	1	n.许可证
+387	fade	387_1	1	vi.褪色
+387	enter	387_1	1	vi.进入
+387	excess	387_1	1	adj.过量的
+387	bristle	387_1	1	n.刚毛
+387	period	387_1	1	n.时期
+387	senate	387_1	1	n.参议院
+387	collective	387_1	1	adj.集体的
+387	bat	387_1	1	n.蝙蝠
+388	there	388_1	1	adv.在那里
+388	interesting	388_1	1	adj.有趣的
+388	awful	388_1	1	adj.可怕的
+388	pet	388_1	1	n.宠物
+388	entire	388_1	1	adj.全部的
+388	disturb	388_1	1	vt.&vi.扰乱
+388	respond	388_1	1	vi.&vt.回复
+388	animal	388_1	1	n.动物
+388	slope	388_1	1	n.倾斜
+388	lazy	388_1	1	adj.懒惰的
+389	cloud	389_1	1	n.云
+389	tobacco	389_1	1	n.烟草
+389	orbit	389_1	1	n.轨迹
+389	very	389_1	1	adv.非常
+389	demand	389_1	1	v.需要
+389	counter	389_1	1	n.计算器
+389	breeze	389_1	1	n.微风
+389	smart	389_1	1	adj.聪明的
+389	stocking	389_1	1	n.长袜
+389	number	389_1	1	n.数字
+390	somehow	390_1	1	adv.不知怎么地
+390	restore	390_1	1	vt.恢复
+390	bare	390_1	1	adj.赤裸的
+390	concern	390_1	1	vt.关心
+390	farther	390_1	1	adj.更远的
+390	hundred	390_1	1	n.百
+390	bang	390_1	1	n.重击
+390	mark	390_1	1	n.标记
+390	heap	390_1	1	n.堆
+390	shady	390_1	1	adj.荫凉的
+391	plain	391_1	1	n.平原
+391	weak	391_1	1	adj.虚弱的
+391	sunlight	391_1	1	n.日光
+391	astronaut	391_1	1	n.宇航员
+391	sunset	391_1	1	n.日落
+391	peach	391_1	1	n.桃子
+391	maybe	391_1	1	adv.大概
+391	sting	391_1	1	n.刺痛
+391	necessity	391_1	1	n.需要
+391	coach	391_1	1	n.教练
+392	police	392_1	1	n.警察
+392	fragment	392_1	1	n.碎片
+392	salad	392_1	1	n.色拉
+392	admission	392_1	1	n.许可
+392	comb	392_1	1	n.梳子
+392	frequency	392_1	1	n.&adj.频繁
+392	ministry	392_1	1	n.(政府的)部
+392	lover	392_1	1	n.爱好者
+392	note	392_1	1	n.笔记
+392	enemy	392_1	1	n.敌人
+393	ampere	393_1	1	n.[电]安培
+393	also	393_1	1	adv.也
+393	childhood	393_1	1	n.童年
+393	contrast	393_1	1	n.对比
+393	ease	393_1	1	n.安乐
+393	injection	393_1	1	n.注射
+393	structure	393_1	1	n.结构
+393	busy	393_1	1	adj.忙的
+393	business	393_1	1	n.商业
+393	somewhat	393_1	1	adv.稍微
+394	bullet	394_1	1	n.子弹
+394	deaf	394_1	1	adj.聋的
+394	delete	394_1	1	vt.删除
+394	market	394_1	1	n.市场
+394	dictate	394_1	1	vi.听写
+394	likely	394_1	1	adj.可能的
+394	start	394_1	1	n.开始
+394	moist	394_1	1	adj.潮湿的
+394	plan	394_1	1	n.计划
+394	creep	394_1	1	vi.爬
+395	birth	395_1	1	n.出生
+395	failure	395_1	1	n.失败
+395	fisherman	395_1	1	n.渔夫
+395	afterward	395_1	1	adv.后来
+395	break	395_1	1	v.打破
+395	brute	395_1	1	n.畜生
+395	chain	395_1	1	n.链
+395	route	395_1	1	n.路线
+395	exclude	395_1	1	vt.排除
+395	fan	395_1	1	n.风扇
+396	actress	396_1	1	n.女演员
+396	blaze	396_1	1	vi.发光
+396	seventeen	396_1	1	num.十七
+396	security	396_1	1	n.安全
+396	tour	396_1	1	n.旅游
+396	manufacturer	396_1	1	n.制造商
+396	define	396_1	1	vt.定义
+396	element	396_1	1	n.元素
+396	timid	396_1	1	adj.胆怯的
+396	plate	396_1	1	n.盘
+397	geography	397_1	1	n.地理
+397	precious	397_1	1	adj.宝贵的
+397	hold	397_1	1	vt.拿住
+397	widen	397_1	1	vt.弄宽
+397	flag	397_1	1	n.旗子
+397	tend	397_1	1	vi.倾向（于）
+397	beneath	397_1	1	adv.在下方
+397	descend	397_1	1	vt.&vi.降
+397	bread	397_1	1	n.面包
+397	softly	397_1	1	adv.柔和地
+398	intend	398_1	1	v.打算
+398	cottage	398_1	1	n.村舍
+398	speaker	398_1	1	n.说话者
+398	humid	398_1	1	adj.潮湿的
+398	beef	398_1	1	n.牛肉
+398	boat	398_1	1	n.船
+398	silence	398_1	1	n.沉默
+398	fiction	398_1	1	n.小说
+398	assignment	398_1	1	n.分配
+398	product	398_1	1	n.产品
+399	sock	399_1	1	n.短袜
+399	confess	399_1	1	v.承认
+399	measurable	399_1	1	adj.可测量的
+399	instrument	399_1	1	n.仪器
+399	leadership	399_1	1	n.领导
+399	favourite	399_1	1	adj.特别喜爱的
+399	stare	399_1	1	vt.凝视
+399	dictionary	399_1	1	n.词典
+399	difficult	399_1	1	adj.困难的
+399	ahead	399_1	1	adv.向前地
+400	bull	400_1	1	adj.大型的
+400	achievement	400_1	1	n.成就
+400	desire	400_1	1	n.渴望
+400	clever	400_1	1	adj.聪明的
+400	environment	400_1	1	n.环境
+400	imitate	400_1	1	v.模仿
+400	outcome	400_1	1	n.结果
+400	squeeze	400_1	1	vt.挤压
+400	bush	400_1	1	n.灌木(丛)
+400	mortal	400_1	1	adj.致命的
+401	indignant	401_1	1	adj.愤慨的
+401	scatter	401_1	1	n.散布
+401	inquiry	401_1	1	n.打听
+401	frog	401_1	1	n.蛙
+401	annoy	401_1	1	vt.&vi.使...苦恼
+401	regulate	401_1	1	v.有系统的管理
+401	tomb	401_1	1	n.坟墓
+401	become	401_1	1	vt.变得
+401	efficiency	401_1	1	n.效率
+401	refuse	401_1	1	vt.&vi.拒绝
+402	sweep	402_1	1	vt.扫
+402	belief	402_1	1	n.相信
+402	foot	402_1	1	n.脚
+402	capital	402_1	1	n.首都
+402	rake	402_1	1	n.耙子
+402	last	402_1	1	adj.最后的
+402	extremely	402_1	1	adv.极其
+402	elbow	402_1	1	n.手肘
+402	empty	402_1	1	adj.空的
+402	toast	402_1	1	n.烤(土司)面包
+403	level	403_1	1	n.水平
+403	movie	403_1	1	n.电影
+403	disappoint	403_1	1	vt.&vi.使...失望
+403	final	403_1	1	adj.最后的
+403	follow	403_1	1	vt.跟随
+403	statistical	403_1	1	adj.统计的
+403	socialist	403_1	1	adj.社会主义的
+403	again	403_1	1	adv.又
+403	communicate	403_1	1	vi.交流
+403	gesture	403_1	1	n.手势
+404	sphere	404_1	1	adj.球体的
+404	parent	404_1	1	n.父母
+404	ideal	404_1	1	adj.理想的
+404	moral	404_1	1	adj.道德(上)的
+404	centigrade	404_1	1	adj.摄氏的
+404	variation	404_1	1	n.变化
+404	mention	404_1	1	vt.提到
+404	prevail	404_1	1	vi.获胜
+404	active	404_1	1	adj.积极的
+404	republic	404_1	1	n.共和国
+405	purpose	405_1	1	n.目的
+405	today	405_1	1	n.&adv.今天
+405	shore	405_1	1	n.岸
+405	oriental	405_1	1	adj.东方(人)的
+405	stony	405_1	1	adj.石头的(石质的)
+405	agreement	405_1	1	n.同意
+405	sheep	405_1	1	n.羊
+405	mixture	405_1	1	n.混合物
+405	dawn	405_1	1	n.破晓
+405	productive	405_1	1	adj.能生产的
+406	ladder	406_1	1	n.梯子
+406	bosom	406_1	1	n.胸
+406	convenient	406_1	1	adj.方便的
+406	propose	406_1	1	v.向...提议
+406	advance	406_1	1	n.前进
+406	rebel	406_1	1	n.叛徒
+406	compound	406_1	1	n.混合物
+406	superior	406_1	1	adj.优越的
+406	heavy	406_1	1	adj.重的
+406	permanent	406_1	1	adj.永久的
+407	scheme	407_1	1	n.方案
+407	sudden	407_1	1	n.突然
+407	dark	407_1	1	adj.黑暗的
+407	join	407_1	1	v.参加
+407	presently	407_1	1	adv.目前
+407	lest	407_1	1	conj.惟恐
+407	per	407_1	1	prep.每
+407	nucleus	407_1	1	n.核
+407	highway	407_1	1	n.公路
+407	decide	407_1	1	vt.&vi.决定
+408	reception	408_1	1	n.接待
+408	manage	408_1	1	vt.管理
+408	appreciate	408_1	1	vt.欣赏
+408	accident	408_1	1	n.事故
+408	deserve	408_1	1	vt.值得
+408	grow	408_1	1	vt.&vi.生长
+408	rare	408_1	1	adj.稀罕的
+408	lose	408_1	1	vt.遗失
+408	war	408_1	1	n.战争
+408	for	408_1	1	prep.为
+409	oven	409_1	1	n.烤炉
+409	organic	409_1	1	adj.器官的
+409	merely	409_1	1	adv.仅仅
+409	magnetic	409_1	1	adj.有磁性的
+409	accordance	409_1	1	n.一致
+409	lord	409_1	1	int.主
+409	valuable	409_1	1	adj.贵重的
+409	wolf	409_1	1	n.狼
+409	respective	409_1	1	adj.各自的
+409	fame	409_1	1	n.名声
+410	kettle	410_1	1	n.水壶
+410	possess	410_1	1	v.持有
+410	push	410_1	1	n.推
+410	thoughtful	410_1	1	adj.深思的
+410	rouse	410_1	1	v.唤醒
+410	railroad	410_1	1	n.铁路
+410	magazine	410_1	1	n.杂志
+410	splendid	410_1	1	adj.极好的
+410	assembly	410_1	1	n.集合
+410	object	410_1	1	n.物体
+411	severe	411_1	1	adj.严重的
+411	phenomenon	411_1	1	n.现象
+411	ground	411_1	1	n.地面
+411	avenue	411_1	1	n.大街
+411	affection	411_1	1	n.慈爱
+411	healthy	411_1	1	adj.健康的
+411	cricket	411_1	1	n.板球
+411	torture	411_1	1	n.拷问
+411	rule	411_1	1	n.规则
+411	plastic	411_1	1	adj.塑料的
+412	swarm	412_1	1	n.蜂窝
+412	honey	412_1	1	n.蜂蜜
+412	cushion	412_1	1	n.垫子
+412	essay	412_1	1	n.论文
+412	carpet	412_1	1	n.地毯
+412	outside	412_1	1	adv.在外面
+412	unique	412_1	1	adj.独一无二的
+412	evolve	412_1	1	vt.&vi.进展
+412	indeed	412_1	1	adv.的确
+412	manual	412_1	1	adj.手工的
+413	whether	413_1	1	conj.&adv.是否
+413	welfare	413_1	1	n.福利
+413	advisable	413_1	1	adj.明智的
+413	kind	413_1	1	adj.仁慈的
+413	hut	413_1	1	n.小屋
+413	operate	413_1	1	vi.操作
+413	write	413_1	1	v.写
+413	compare	413_1	1	vt.&vi.比较
+413	intermediate	413_1	1	adj.中级的
+413	expose	413_1	1	vt.暴露
+414	conduct	414_1	1	n.行为
+414	obey	414_1	1	vt.&vi.服从
+414	inexpensive	414_1	1	adj.花费不多的
+414	sandwich	414_1	1	n.三明治
+414	prosperity	414_1	1	n.繁荣
+414	estimate	414_1	1	n.估计
+414	float	414_1	1	n.漂流物
+414	daring	414_1	1	adj.大胆的
+414	classroom	414_1	1	n.教室
+414	television	414_1	1	n.电视
+415	wander	415_1	1	vt.闲逛走过
+415	official	415_1	1	adj.官方的
+415	juice	415_1	1	n.果汁
+415	generally	415_1	1	adv.一般地
+415	discharge	415_1	1	vt.&vi.放出
+415	cheese	415_1	1	n.奶酪
+415	turn	415_1	1	vt.&vi.使转动
+415	tradition	415_1	1	n.传统
+415	cherry	415_1	1	n.樱桃(树)
+415	rose	415_1	1	n.玫瑰
+416	lift	416_1	1	vt.抬起
+416	society	416_1	1	n.社会
+416	envelope	416_1	1	n.信封
+416	case	416_1	1	n.案例
+416	muddy	416_1	1	adj.泥泞的
+416	himself	416_1	1	pron.他自己
+416	filter	416_1	1	n.滤波器
+416	feeling	416_1	1	n.感觉
+416	supper	416_1	1	n.晚餐
+416	resort	416_1	1	n.(渡假)胜地
+417	conversion	417_1	1	n.转变
+417	dragon	417_1	1	n.龙
+417	tuition	417_1	1	n.学费
+417	pat	417_1	1	n.轻拍
+417	inn	417_1	1	n.客栈
+417	tan	417_1	1	n.鞣制革
+417	slum	417_1	1	n.贫民窟
+417	city	417_1	1	n.城市
+417	stream	417_1	1	n.(人,车,气)流
+417	vacant	417_1	1	adj.空的
+418	dye	418_1	1	n.染料
+418	peasant	418_1	1	n.农民
+418	forget	418_1	1	vt.&vi.忘记
+418	astonish	418_1	1	v.使...惊讶
+418	prison	418_1	1	n.监狱
+418	inform	418_1	1	vt.通知
+418	fatigue	418_1	1	n.疲乏
+418	breed	418_1	1	vt.繁殖
+418	messenger	418_1	1	n.报信者
+418	puzzle	418_1	1	n.难题
+419	payment	419_1	1	n.支付
+419	orphan	419_1	1	n.孤儿
+419	genuine	419_1	1	adj.真正的
+419	surprising	419_1	1	adj.令人惊讶的
+419	unbearable	419_1	1	adj.无法忍受的
+419	peak	419_1	1	n.山顶
+419	lead	419_1	1	v.带领
+419	ad	419_1	1	abbr.(advertisement的缩写)广告
+419	flame	419_1	1	n.火焰
+419	disposal	419_1	1	n.处理
+420	admire	420_1	1	vt.钦佩
+420	urge	420_1	1	vt.催促
+420	pride	420_1	1	n.自豪
+420	automobile	420_1	1	n.汽车
+420	analysis	420_1	1	n.分析
+420	leap	420_1	1	n.跳跃
+420	widespread	420_1	1	adj.分布(或散布)广的
+420	reel	420_1	1	n.卷筒
+420	listener	420_1	1	n.听者
+420	quit	420_1	1	v.离开
+421	principle	421_1	1	n.原则
+421	photograph	421_1	1	n.相片
+421	reader	421_1	1	n.读者
+421	exist	421_1	1	v.存在
+421	accept	421_1	1	vt.接受
+421	dinner	421_1	1	n.主餐
+421	gain	421_1	1	n.增益
+421	qualify	421_1	1	vt.取得资格
+421	helpless	421_1	1	adj.无助的
+421	kid	421_1	1	n.小孩
+422	modest	422_1	1	adj.谦虚的
+422	tide	422_1	1	n.潮
+422	fault	422_1	1	n.故障
+422	loan	422_1	1	n.贷款
+422	nut	422_1	1	n.坚果
+422	fear	422_1	1	vt.害怕
+422	politician	422_1	1	n.政治家
+422	inventor	422_1	1	n.发明家
+422	gradual	422_1	1	adj.逐渐的
+422	certificate	422_1	1	n.证(明)书
+423	shopping	423_1	1	n.购物
+423	excellent	423_1	1	adj.极好的
+423	consequently	423_1	1	adv.所以
+423	racket	423_1	1	n.球拍
+423	frost	423_1	1	n.霜
+423	learned	423_1	1	adj.有学问的
+423	remote	423_1	1	adj.遥远的
+423	corresponding	423_1	1	adj.相应的
+423	bless	423_1	1	vt.赐福
+423	paint	423_1	1	n.油漆

@@ -1,506 +1,506 @@
-1	vocabulary	1_1	4
-1	aloud	1_1	4
-1	pronunciation	1_1	4
-1	pronounce	1_1	4
-1	specific	1_1	4
-1	memorize	1_1	4
-1	grammar	1_1	4
-1	frustrate	1_1	4
-1	quickly	1_1	4
-1	add	1_1	4
-1	spoken	1_1	4
-2	slowly	1_2	4
-2	mistake	1_2	4
-2	comma	1_2	4
-2	challenge	1_2	4
-2	solution	1_2	4
-2	realize	1_2	4
-2	matter	1_2	4
-2	afraid	1_2	4
-2	complete	1_2	4
-2	secret	1_2	4
-2	term	1_2	4
-3	impress	1_3	4
-3	trouble	1_3	4
-3	fast	1_3	4
-3	soft	1_3	4
-3	essay	1_3	4
-3	deal	1_3	4
-3	unless	1_3	4
-3	unfair	1_3	4
-3	solve	1_3	4
-3	regard	1_3	4
-4	duty	1_4	4
-4	easily	1_4	4
-4	influence	1_4	4
-4	friendship	1_4	4
-4	lose	1_4	4
-4	disagreement	1_4	4
-4	development	1_4	4
-4	adult	1_4	4
-4	face	1_4	4
-4	soldier	1_4	4
-5	airplane	2_1	2
-5	terrify	2_1	2
-5	on	2_1	2
-5	insect	2_1	2
-5	candy	2_1	2
-5	chew	2_1	2
-5	gum	2_1	2
-5	chat	2_1	2
-5	daily	2_1	2
-6	comic	2_2	2
-6	death	2_2	2
-6	cause	2_2	2
-6	himself	2_2	2
-6	patient	2_2	2
-6	exactly	2_2	2
-6	attention	2_2	2
-6	waste	2_2	2
-7	pierce	3_1	2
-7	license	3_1	2
-7	silly	3_1	2
-7	earring	3_1	2
-7	concentrate	3_1	2
-7	study	3_1	2
-7	design	3_1	2
-7	present	3_1	2
-7	opportunity	3_1	2
-7	volunteer	3_1	2
-7	local	3_1	2
-7	experience	3_1	2
-8	member	3_2	2
-8	mess	3_2	2
-8	sleepy	3_2	2
-8	reply	3_2	2
-8	newsletter	3_2	2
-8	obey	3_2	2
-8	achieve	3_2	2
-8	race	3_2	2
-8	realistic	3_2	2
-8	importance	3_2	2
-8	succeed	3_2	2
-8	point	3_2	2
-9	million	4_1	3
-9	medical	4_1	3
-9	research	4_1	3
-9	tie	4_1	3
-9	worry	4_1	3
-9	energetic	4_1	3
-9	confident	4_1	3
-9	permission	4_1	3
-9	herself	4_1	3
-9	bother	4_1	3
-9	annoy	4_1	3
-10	fairly	4_2	3
-10	plenty	4_2	3
-10	circle	4_2	3
-10	listener	4_2	3
-10	represent	4_2	3
-10	rest	4_2	3
-10	aid	4_2	3
-10	nearby	4_2	3
-10	shelf	4_2	3
-10	cover	4_2	3
-10	press	4_2	3
-11	deep	4_3	3
-11	downstairs	4_3	3
-11	correct	4_3	3
-11	burn	4_3	3
-11	knee	4_3	3
-11	pain	4_3	3
-11	hurt	4_3	3
-11	offer	4_3	3
-11	refuse	4_3	3
-11	helpful	4_3	3
-11	treat	4_3	3
-12	belong	5_1	4
-12	author	5_1	4
-12	picnic	5_1	4
-12	possibly	5_1	4
-12	drop	5_1	4
-12	symphony	5_1	4
-12	optometrist	5_1	4
-12	crucial	5_1	4
-12	final	5_1	4
-13	anxious	5_2	4
-13	owner	5_2	4
-13	chase	5_2	4
-13	sky	5_2	4
-13	helicopter	5_2	4
-13	creature	5_2	4
-13	catch	5_2	4
-13	unhappy	5_2	4
-13	extremely	5_2	4
-14	interview	5_3	4
-14	noise	5_3	4
-14	wind	5_3	4
-14	neighbor	5_3	4
-14	footstep	5_3	4
-14	garbage	5_3	4
-14	mystery	5_3	4
-14	director	5_3	4
-14	monkey	5_3	4
-15	escape	5_4	4
-15	smell	5_4	4
-15	finger	5_4	4
-15	lift	5_4	4
-15	stone	5_4	4
-15	ant	5_4	4
-15	ocean	5_4	4
-15	pretend	5_4	4
-15	attempt	5_4	4
-15	net	5_4	4
-16	prefer	6_1	5
-16	lyric	6_1	5
-16	gentle	6_1	5
-16	dislike	6_1	5
-16	heart	6_1	5
-16	string	6_1	5
-16	sink	6_1	5
-16	fisherman	6_1	5
-16	latest	6_1	5
-17	entertainment	6_2	5
-17	feature	6_2	5
-17	photograph	6_2	5
-17	photographer	6_2	5
-17	photography	6_2	5
-17	display	6_2	5
-17	interest	6_2	5
-17	class	6_2	5
-17	whatever	6_2	5
-18	miss	6_3	5
-18	suggest	6_3	5
-18	energy	6_3	5
-18	okay	6_3	5
-18	con	6_3	5
-18	honest	6_3	5
-18	course	6_3	5
-18	suit	6_3	5
-18	expect	6_3	5
-19	sweet	6_4	5
-19	taste	6_4	5
-19	actually	6_4	5
-19	fry	6_4	5
-19	main	6_4	5
-19	mainly	6_4	5
-19	itself	6_4	5
-19	laboratory	6_4	5
-19	type	6_4	5
-20	cancer	6_5	5
-20	barbecue	6_5	5
-20	increase	6_5	5
-20	risk	6_5	5
-20	biscuit	6_5	5
-20	exclamation	6_5	5
-20	contraction	6_5	5
-20	tasty	6_5	5
-20	vegetarian	6_5	5
-20	shock	6_5	5
-21	peaceful	7_1	3
-21	fascinating	7_1	3
-21	trek	7_1	3
-21	jungle	7_1	3
-21	fall	7_1	3
-21	spot	7_1	3
-21	spotlight	7_1	3
-21	consider	7_1	3
-21	lively	7_1	3
-21	sight	7_1	3
-21	tower	7_1	3
-22	cathedral	7_2	3
-22	church	7_2	3
-22	convenient	7_2	3
-22	understand	7_2	3
-22	general	7_2	3
-22	wine	7_2	3
-22	translate	7_2	3
-22	translator	7_2	3
-22	pack	7_2	3
-22	light	7_2	3
-22	eastern	7_2	3
-23	provide	7_3	3
-23	firm	7_3	3
-23	sail	7_3	3
-23	finding	7_3	3
-23	continue	7_3	3
-23	report	7_3	3
-23	willing	7_3	3
-23	dream	7_3	3
-23	conclusion	7_3	3
-23	attitude	7_3	3
-24	hunger	8_1	3
-24	sign	8_1	3
-24	advertisement	8_1	3
-24	set	8_1	3
-24	establish	8_1	3
-24	major	8_1	3
-24	commitment	8_1	3
-24	elementary	8_1	3
-24	coach	8_1	3
-24	fix	8_1	3
-24	repair	8_1	3
-25	similar	8_2	3
-25	strategy	8_2	3
-25	website	8_2	3
-25	disabled	8_2	3
-25	organization	8_2	3
-25	fill	8_2	3
-25	pleasure	8_2	3
-25	blind	8_2	3
-25	deaf	8_2	3
-25	unable	8_2	3
-25	imagine	8_2	3
-26	shut	8_3	3
-26	carry	8_3	3
-26	specially	8_3	3
-26	fetch	8_3	3
-26	support	8_3	3
-26	appreciate	8_3	3
-26	donate	8_3	3
-26	donation	8_3	3
-26	pronoun	8_3	3
-26	adverb	8_3	3
-26	preposition	8_3	3
-26	conjunction	8_3	3
-27	invent	9_1	5
-27	calculator	9_1	5
-27	scoop	9_1	5
-27	adjustable	9_1	5
-27	heel	9_1	5
-27	battery	9_1	5
-27	operate	9_1	5
-27	slipper	9_1	5
-27	heat	9_1	5
-27	bulb	9_1	5
-27	microwave	9_1	5
-28	salty	9_2	5
-28	sour	9_2	5
-28	chef	9_2	5
-28	sprinkle	9_2	5
-28	beverage	9_2	5
-28	ancient	9_2	5
-28	legend	9_2	5
-28	bush	9_2	5
-28	remain	9_2	5
-28	notice	9_2	5
-28	produce	9_2	5
-29	pleasant	9_3	5
-29	mixture	9_3	5
-29	pie	9_3	5
-29	bakery	9_3	5
-29	throw	9_3	5
-29	taste	9_3	5
-29	lemon	9_3	5
-29	cookie	9_3	5
-29	century	9_3	5
-29	rank	9_3	5
-29	active	9_3	5
-30	indoors	9_4	5
-30	create	9_4	5
-30	wooden	9_4	5
-30	knock	9_4	5
-30	divide	9_4	5
-30	aim	9_4	5
-30	basket	9_4	5
-30	metal	9_4	5
-30	hoop	9_4	5
-30	shoot	9_4	5
-31	below	9_5	5
-31	guide	9_5	5
-31	towards	9_5	5
-31	court	9_5	5
-31	develop	9_5	5
-31	popularity	9_5	5
-31	rise	9_5	5
-31	worldwide	9_5	5
-31	association	9_5	5
-31	equipment	9_5	5
-32	rush	10_1	2
-32	lock	10_1	2
-32	relative	10_1	2
-32	fool	10_1	2
-32	costume	10_1	2
-32	empty	10_1	2
-32	exhausted	10_1	2
-32	announce	10_1	2
-32	convincing	10_1	2
-33	panic	10_2	2
-33	authority	10_2	2
-33	reveal	10_2	2
-33	hoax	10_2	2
-33	flee	10_2	2
-33	farmer	10_2	2
-33	marry	10_2	2
-33	thrill	10_2	2
-33	ending	10_2	2
-34	shampoo	11_1	2
-34	drugstore	11_1	2
-34	department	11_1	2
-34	escalator	11_1	2
-34	magic	11_1	2
-34	fresh	11_1	2
-34	block	11_1	2
-34	oak	11_1	2
-34	slide	11_1	2
-34	clown	11_1	2
-34	staff	11_1	2
-35	market	11_2	2
-35	lend	11_2	2
-35	park	11_2	2
-35	direct	11_2	2
-35	order	11_2	2
-35	wonder	11_2	2
-35	lead	11_2	2
-35	trouble	11_2	2
-35	offend	11_2	2
-35	certain	11_2	2
-35	structure	11_2	2
-36	shake	12_1	4
-36	custom	12_1	4
-36	kiss	12_1	4
-36	relaxed	12_1	4
-36	land	12_1	4
-36	towards	12_1	4
-36	greet	12_1	4
-36	wipe	12_1	4
-36	napkin	12_1	4
-36	stick	12_1	4
-36	rude	12_1	4
-37	point	12_2	4
-37	manner	12_2	4
-37	fork	12_2	4
-37	full	12_2	4
-37	lap	12_2	4
-37	elbow	12_2	4
-37	gradually	12_2	4
-37	particular	12_2	4
-37	knife	12_2	4
-37	crowd	12_2	4
-37	rubbish	12_2	4
-38	seek	12_3	4
-38	online	12_3	4
-38	type	12_3	4
-38	mostly	12_3	4
-38	abbreviation	12_3	4
-38	form	12_3	4
-38	phrase	12_3	4
-38	combine	12_3	4
-38	symbol	12_3	4
-38	punctuation	12_3	4
-38	mark	12_3	4
-39	colon	12_4	4
-39	bracket	12_4	4
-39	beside	12_4	4
-39	riddle	12_4	4
-39	experiment	12_4	4
-39	proper	12_4	4
-39	pleased	12_4	4
-39	queue	12_4	4
-39	normally	12_4	4
-39	whose	12_4	4
-40	lagoon	13_1	3
-40	scientific	13_1	3
-40	therefore	13_1	3
-40	pink	13_1	3
-40	hard	13_1	3
-40	serve	13_1	3
-40	fair	13_1	3
-40	campaign	13_1	3
-40	endangered	13_1	3
-40	slogan	13_1	3
-41	mysterious	13_2	3
-41	shiny	13_2	3
-41	skin	13_2	3
-41	product	13_2	3
-41	lookout	13_2	3
-41	beauty	13_2	3
-41	toothpaste	13_2	3
-41	aim	13_2	3
-41	instance	13_2	3
-41	list	13_2	3
-42	misleading	13_3	3
-42	truth	13_3	3
-42	tense	13_3	3
-42	purple	13_3	3
-42	purse	13_3	3
-42	guilty	13_3	3
-42	taste	13_3	3
-42	thought	13_3	3
-42	count	13_3	3
-43	suit	14_1	3
-43	suitcase	14_1	3
-43	towel	14_1	3
-43	water	14_1	3
-43	refrigerator	14_1	3
-43	garage	14_1	3
-43	chop	14_1	3
-43	wood	14_1	3
-43	light	14_1	3
-43	well	14_1	3
-44	farm	14_2	3
-44	anyway	14_2	3
-44	award	14_2	3
-44	wave	14_2	3
-44	scene	14_2	3
-44	hit	14_2	3
-44	appear	14_2	3
-44	lead	14_2	3
-44	poem	14_2	3
-44	cupboard	14_2	3
-45	turn	14_3	3
-45	mail	14_3	3
-45	ancestor	14_3	3
-45	root	14_3	3
-45	overseas	14_3	3
-45	homeland	14_3	3
-45	government	14_3	3
-45	southern	14_3	3
-45	strongly	14_3	3
-45	purpose	14_3	3
-45	step	14_3	3
-46	furry	15_1	5
-46	enormous	15_1	5
-46	aggressive	15_1	5
-46	gray	15_1	5
-46	spotted	15_1	5
-46	kangaroo	15_1	5
-46	chimpanzee	15_1	5
-46	cheetah	15_1	5
-46	mangrove	15_1	5
-47	swamp	15_2	5
-47	habitat	15_2	5
-47	aquatic	15_2	5
-47	feed	15_2	5
-47	underwater	15_2	5
-47	vegetation	15_2	5
-47	weigh	15_2	5
-47	pound	15_2	5
-47	suitable	15_2	5
-48	tiny	15_3	5
-48	cage	15_3	5
-48	disgusted	15_3	5
-48	educate	15_3	5
-48	urge	15_3	5
-48	recycle	15_3	5
-48	stuff	15_3	5
-48	pull	15_3	5
-48	glue	15_3	5
-49	roof	15_4	5
-49	discard	15_4	5
-49	tile	15_4	5
-49	fence	15_4	5
-49	can	15_4	5
-49	recently	15_4	5
-49	planet	15_4	5
-49	society	15_4	5
-49	president	15_4	5
-50	inspiration	15_5	5
-50	spare	15_5	5
-50	model	15_5	5
-50	material	15_5	5
-50	business	15_5	5
-50	plastic	15_5	5
-50	certainly	15_5	5
-50	proud	15_5	5
-50	flag	15_5	5
+1	vocabulary	1_1	4	n.词汇
+1	aloud	1_1	4	adv.出声地
+1	pronunciation	1_1	4	n.发音
+1	pronounce	1_1	4	vt.&vi.发音
+1	specific	1_1	4	adj.特殊的
+1	memorize	1_1	4	v.记住
+1	grammar	1_1	4	n.语法
+1	frustrate	1_1	4	vt.挫败
+1	quickly	1_1	4	adv.快
+1	add	1_1	4	vt.&vi.增加
+1	spoken	1_1	4	adj.口头的
+2	slowly	1_2	4	adj.慢慢地
+2	mistake	1_2	4	n.错误
+2	comma	1_2	4	n.逗号
+2	challenge	1_2	4	n.挑战
+2	solution	1_2	4	n.解决办法
+2	realize	1_2	4	vt.实现
+2	matter	1_2	4	n.事件
+2	afraid	1_2	4	adj.害怕的
+2	complete	1_2	4	vt.完成
+2	secret	1_2	4	n.秘密
+2	term	1_2	4	n.学期
+3	impress	1_3	4	vt.使...有印象
+3	trouble	1_3	4	n.困扰
+3	fast	1_3	4	adj.快的
+3	soft	1_3	4	adj.柔软的
+3	essay	1_3	4	n.论文
+3	deal	1_3	4	v.处理
+3	unless	1_3	4	conj.除非
+3	unfair	1_3	4	adj.不公平的
+3	solve	1_3	4	v.解答(难题)
+3	regard	1_3	4	vt.认为
+4	duty	1_4	4	n.义务
+4	easily	1_4	4	adj.容易地
+4	influence	1_4	4	vt.影响
+4	friendship	1_4	4	n.友谊
+4	lose	1_4	4	vt.遗失
+4	disagreement	1_4	4	n.不合
+4	development	1_4	4	n.发展
+4	adult	1_4	4	adj.成年的
+4	face	1_4	4	n.脸
+4	soldier	1_4	4	n.士兵
+5	airplane	2_1	2	n.飞机
+5	terrify	2_1	2	v.使害怕
+5	on	2_1	2	prep.在...之上
+5	insect	2_1	2	n.昆虫
+5	candy	2_1	2	n.糖果
+5	chew	2_1	2	vt.咀嚼
+5	gum	2_1	2	n.树胶
+5	chat	2_1	2	vt.&vi.谈天
+5	daily	2_1	2	adj.每日的
+6	comic	2_2	2	n.连环图画
+6	death	2_2	2	n.死
+6	cause	2_2	2	vt.引起
+6	himself	2_2	2	pron.他自己
+6	patient	2_2	2	n.病人
+6	exactly	2_2	2	adv.准确地
+6	attention	2_2	2	n.注意(力)
+6	waste	2_2	2	vt.浪费
+7	pierce	3_1	2	v.刺穿
+7	license	3_1	2	n.许可证
+7	silly	3_1	2	adj.愚蠢的
+7	earring	3_1	2	n.耳环
+7	concentrate	3_1	2	vt.&vi.专心于
+7	study	3_1	2	vi.学习
+7	design	3_1	2	vt.&vi.设计
+7	present	3_1	2	n.礼物
+7	opportunity	3_1	2	n.机会
+7	volunteer	3_1	2	n.志愿者
+7	local	3_1	2	adj.当地的
+7	experience	3_1	2	n.经验
+8	member	3_2	2	n.成员
+8	mess	3_2	2	n.乱七八糟
+8	sleepy	3_2	2	adj.欲睡的
+8	reply	3_2	2	vt.&vi.&n.回答
+8	newsletter	3_2	2	n.时事通讯
+8	obey	3_2	2	vt.&vi.服从
+8	achieve	3_2	2	vt.达到
+8	race	3_2	2	n.赛跑
+8	realistic	3_2	2	adj.现实的
+8	importance	3_2	2	n.重要
+8	succeed	3_2	2	vt.成功
+8	point	3_2	2	n.点
+9	million	4_1	3	n.百万
+9	medical	4_1	3	adj.医疗的
+9	research	4_1	3	n.调查
+9	tie	4_1	3	vt.系
+9	worry	4_1	3	n.烦恼
+9	energetic	4_1	3	adj.精力旺盛的
+9	confident	4_1	3	adj.自信的
+9	permission	4_1	3	n.同意
+9	herself	4_1	3	pron.她自己
+9	bother	4_1	3	vt.烦扰
+9	annoy	4_1	3	vt.&vi.使...苦恼
+10	fairly	4_2	3	adj.相当地
+10	plenty	4_2	3	n.充足
+10	circle	4_2	3	n.圆周
+10	listener	4_2	3	n.听者
+10	represent	4_2	3	vt.表现
+10	rest	4_2	3	vt.&vi.（使）休息
+10	aid	4_2	3	n.帮助
+10	nearby	4_2	3	adj.附近的
+10	shelf	4_2	3	n.架子
+10	cover	4_2	3	v.覆盖
+10	press	4_2	3	vt.压
+11	deep	4_3	3	adj.深的
+11	downstairs	4_3	3	adj.楼下的
+11	correct	4_3	3	adj.正确的
+11	burn	4_3	3	vt.&vi.燃烧
+11	knee	4_3	3	n.膝盖
+11	pain	4_3	3	n.痛苦
+11	hurt	4_3	3	vt.伤害
+11	offer	4_3	3	n.提供
+11	refuse	4_3	3	vt.&vi.拒绝
+11	helpful	4_3	3	adj.有帮助的
+11	treat	4_3	3	v.对待
+12	belong	5_1	4	vi.属于
+12	author	5_1	4	n.作者
+12	picnic	5_1	4	n.野餐
+12	possibly	5_1	4	adv.可能地
+12	drop	5_1	4	n.滴
+12	symphony	5_1	4	n.交响乐
+12	optometrist	5_1	4	n.验光师
+12	crucial	5_1	4	adj.关键的
+12	final	5_1	4	adj.最后的
+13	anxious	5_2	4	adj.焦急的
+13	owner	5_2	4	n.物主
+13	chase	5_2	4	n.追求
+13	sky	5_2	4	n.天空
+13	helicopter	5_2	4	n.直升飞机
+13	creature	5_2	4	n.生物
+13	catch	5_2	4	vt.抓住
+13	unhappy	5_2	4	adj.不快乐的
+13	extremely	5_2	4	adv.极其
+14	interview	5_3	4	vi.采访
+14	noise	5_3	4	n.噪声
+14	wind	5_3	4	n.风
+14	neighbor	5_3	4	n.邻居
+14	footstep	5_3	4	n.脚步
+14	garbage	5_3	4	n.垃圾
+14	mystery	5_3	4	n.神秘
+14	director	5_3	4	n.导演
+14	monkey	5_3	4	n.猴子
+15	escape	5_4	4	vt.&vi.逃脱
+15	smell	5_4	4	vt.闻
+15	finger	5_4	4	n.手指
+15	lift	5_4	4	vt.抬起
+15	stone	5_4	4	n.石头
+15	ant	5_4	4	n.蚂蚁
+15	ocean	5_4	4	n.海洋
+15	pretend	5_4	4	vt.&vi.假装
+15	attempt	5_4	4	vt.尝试
+15	net	5_4	4	n.网
+16	prefer	6_1	5	vt.更喜欢
+16	lyric	6_1	5	adj.抒情的
+16	gentle	6_1	5	adj.温和的
+16	dislike	6_1	5	v.不喜欢
+16	heart	6_1	5	n.心
+16	string	6_1	5	n.线
+16	sink	6_1	5	n.接收端
+16	fisherman	6_1	5	n.渔夫
+16	latest	6_1	5	adj.最新的
+17	entertainment	6_2	5	n.娱乐
+17	feature	6_2	5	n.特征
+17	photograph	6_2	5	n.相片
+17	photographer	6_2	5	n.摄影师
+17	photography	6_2	5	n.摄影术
+17	display	6_2	5	n.显示
+17	interest	6_2	5	n.兴趣
+17	class	6_2	5	n.班级
+17	whatever	6_2	5	pron.&conj.无论什么
+18	miss	6_3	5	v.思念
+18	suggest	6_3	5	vt.建议
+18	energy	6_3	5	n.能量
+18	okay	6_3	5	n.认可
+18	con	6_3	5	n.反对论点
+18	honest	6_3	5	adj.诚实的
+18	course	6_3	5	n.课程
+18	suit	6_3	5	v.适合
+18	expect	6_3	5	v.期待
+19	sweet	6_4	5	adj.甜(蜜)的
+19	taste	6_4	5	vi.品尝
+19	actually	6_4	5	adv.实际上
+19	fry	6_4	5	vt.油炸
+19	main	6_4	5	adj.主要的
+19	mainly	6_4	5	adv.主要地
+19	itself	6_4	5	pron.它自己
+19	laboratory	6_4	5	n.实验室
+19	type	6_4	5	n.类型
+20	cancer	6_5	5	n.癌
+20	barbecue	6_5	5	n.烤肉
+20	increase	6_5	5	v.增加
+20	risk	6_5	5	n.危险
+20	biscuit	6_5	5	n.饼干
+20	exclamation	6_5	5	n.惊呼
+20	contraction	6_5	5	n.收缩
+20	tasty	6_5	5	adj.好吃的
+20	vegetarian	6_5	5	n.素食者
+20	shock	6_5	5	vt.&vi.震动
+21	peaceful	7_1	3	adj.安宁的
+21	fascinating	7_1	3	adj.迷人的
+21	trek	7_1	3	vt.艰苦跋涉(行军)
+21	jungle	7_1	3	n.丛林
+21	fall	7_1	3	v.落下
+21	spot	7_1	3	n.地点
+21	spotlight	7_1	3	n.照明灯
+21	consider	7_1	3	vt.考虑
+21	lively	7_1	3	adj.活泼的
+21	sight	7_1	3	n.景观
+21	tower	7_1	3	n.塔
+22	cathedral	7_2	3	n.大教堂
+22	church	7_2	3	n.教堂
+22	convenient	7_2	3	adj.方便的
+22	understand	7_2	3	vt.理解
+22	general	7_2	3	adj.一般的
+22	wine	7_2	3	n.酒
+22	translate	7_2	3	vt.翻译
+22	translator	7_2	3	n.翻译者
+22	pack	7_2	3	n.包裹
+22	light	7_2	3	n.光
+22	eastern	7_2	3	adj.东方的
+23	provide	7_3	3	vi.提供
+23	firm	7_3	3	n.公司
+23	sail	7_3	3	vt.乘船航行
+23	finding	7_3	3	n.发现
+23	continue	7_3	3	vt.&vi.继续
+23	report	7_3	3	vt.报告
+23	willing	7_3	3	adj.愿意的
+23	dream	7_3	3	n.梦
+23	conclusion	7_3	3	n.结论
+23	attitude	7_3	3	n.态度
+24	hunger	8_1	3	n.饥饿
+24	sign	8_1	3	n.标志
+24	advertisement	8_1	3	n.&adv.广告
+24	set	8_1	3	v.设定
+24	establish	8_1	3	v.建立
+24	major	8_1	3	adj.主要的
+24	commitment	8_1	3	n.承诺
+24	elementary	8_1	3	adj.基本的
+24	coach	8_1	3	n.教练
+24	fix	8_1	3	vt.&vi.修理
+24	repair	8_1	3	vi.去v.修理
+25	similar	8_2	3	adj.相似的
+25	strategy	8_2	3	n.战略
+25	website	8_2	3	n.网站
+25	disabled	8_2	3	adj.残废的
+25	organization	8_2	3	n.组织
+25	fill	8_2	3	vt.装满
+25	pleasure	8_2	3	n.高兴
+25	blind	8_2	3	adj.瞎的
+25	deaf	8_2	3	adj.聋的
+25	unable	8_2	3	adj.不能的
+25	imagine	8_2	3	vt.想像
+26	shut	8_3	3	adj.关闭的
+26	carry	8_3	3	v.携带
+26	specially	8_3	3	adv.特别地
+26	fetch	8_3	3	vt.取来
+26	support	8_3	3	n.支持
+26	appreciate	8_3	3	vt.欣赏
+26	donate	8_3	3	vt.捐赠
+26	donation	8_3	3	n.捐赠物
+26	pronoun	8_3	3	n.代词
+26	adverb	8_3	3	n.副词
+26	preposition	8_3	3	n.介词
+26	conjunction	8_3	3	n.连词
+27	invent	9_1	5	v.发明
+27	calculator	9_1	5	n.计算器
+27	scoop	9_1	5	n.铲子
+27	adjustable	9_1	5	adj.可调整的
+27	heel	9_1	5	n.脚后跟
+27	battery	9_1	5	n.电池
+27	operate	9_1	5	vi.操作
+27	slipper	9_1	5	n.拖鞋
+27	heat	9_1	5	n.热
+27	bulb	9_1	5	n.电灯泡
+27	microwave	9_1	5	n.微波
+28	salty	9_2	5	adj.咸的
+28	sour	9_2	5	adj.酸的
+28	chef	9_2	5	n.厨师
+28	sprinkle	9_2	5	v.洒
+28	beverage	9_2	5	n.饮料
+28	ancient	9_2	5	adj.古老的
+28	legend	9_2	5	n.传说
+28	bush	9_2	5	n.灌木(丛)
+28	remain	9_2	5	v.保持
+28	notice	9_2	5	n.注意
+28	produce	9_2	5	vt.生产
+29	pleasant	9_3	5	adj.令人愉快的
+29	mixture	9_3	5	n.混合物
+29	pie	9_3	5	n.馅饼
+29	bakery	9_3	5	n.面包店
+29	throw	9_3	5	n.投
+29	taste	9_3	5	vi.品尝
+29	lemon	9_3	5	n.柠檬
+29	cookie	9_3	5	n.饼干
+29	century	9_3	5	n.世纪
+29	rank	9_3	5	n.排名
+29	active	9_3	5	adj.积极的
+30	indoors	9_4	5	adv.在户内
+30	create	9_4	5	vt.创造
+30	wooden	9_4	5	adj.木制的
+30	knock	9_4	5	n.敲
+30	divide	9_4	5	vt.&vi.分
+30	aim	9_4	5	n.目标
+30	basket	9_4	5	n.篮
+30	metal	9_4	5	n.金属
+30	hoop	9_4	5	n.箍
+30	shoot	9_4	5	vt.射击
+31	below	9_5	5	adv.在下面
+31	guide	9_5	5	vt.指导
+31	towards	9_5	5	prep.朝
+31	court	9_5	5	n.法院
+31	develop	9_5	5	vt.发展
+31	popularity	9_5	5	n.流行
+31	rise	9_5	5	v.升起
+31	worldwide	9_5	5	adj.全世界的
+31	association	9_5	5	n.联合
+31	equipment	9_5	5	n.设备
+32	rush	10_1	2	vi.（使）急速行进
+32	lock	10_1	2	n.锁
+32	relative	10_1	2	adj.相对的
+32	fool	10_1	2	n.愚人
+32	costume	10_1	2	n.服装
+32	empty	10_1	2	adj.空的
+32	exhausted	10_1	2	adj.用完的
+32	announce	10_1	2	vt.宣布
+32	convincing	10_1	2	adj.使人信服的
+33	panic	10_2	2	n.恐慌
+33	authority	10_2	2	n.权威
+33	reveal	10_2	2	vt.显示
+33	hoax	10_2	2	v.欺骗
+33	flee	10_2	2	vi.逃跑
+33	farmer	10_2	2	n.农夫
+33	marry	10_2	2	vt.&vi.结婚
+33	thrill	10_2	2	n.震颤
+33	ending	10_2	2	n.结尾
+34	shampoo	11_1	2	n.洗发剂
+34	drugstore	11_1	2	n.药房
+34	department	11_1	2	n.部
+34	escalator	11_1	2	n.自动扶梯
+34	magic	11_1	2	n.魔术
+34	fresh	11_1	2	adj.新鲜的
+34	block	11_1	2	n.块
+34	oak	11_1	2	n.橡树
+34	slide	11_1	2	n.滑
+34	clown	11_1	2	n.小丑
+34	staff	11_1	2	n.全体职员
+35	market	11_2	2	n.市场
+35	lend	11_2	2	vt.借
+35	park	11_2	2	n.公园
+35	direct	11_2	2	adj.直接的
+35	order	11_2	2	n.命令
+35	wonder	11_2	2	n.奇迹
+35	lead	11_2	2	v.带领
+35	trouble	11_2	2	n.困扰
+35	offend	11_2	2	vt.犯罪
+35	certain	11_2	2	adj.一定的
+35	structure	11_2	2	n.结构
+36	shake	12_1	4	vi.摇晃
+36	custom	12_1	4	n.习惯
+36	kiss	12_1	4	vt.接吻
+36	relaxed	12_1	4	adj.放松的
+36	land	12_1	4	n.陆地
+36	towards	12_1	4	prep.朝
+36	greet	12_1	4	vt.问候
+36	wipe	12_1	4	n.擦拭
+36	napkin	12_1	4	n.餐巾
+36	stick	12_1	4	vt.&vi.粘贴
+36	rude	12_1	4	adj.粗鲁的
+37	point	12_2	4	n.点
+37	manner	12_2	4	n.方式
+37	fork	12_2	4	n.叉
+37	full	12_2	4	adj.满的
+37	lap	12_2	4	n.一周
+37	elbow	12_2	4	n.手肘
+37	gradually	12_2	4	adv.逐渐地
+37	particular	12_2	4	n.个别项目
+37	knife	12_2	4	n.刀
+37	crowd	12_2	4	n.人群
+37	rubbish	12_2	4	n.垃圾
+38	seek	12_3	4	n.找寻
+38	online	12_3	4	n.在线
+38	type	12_3	4	n.类型
+38	mostly	12_3	4	adv.大概
+38	abbreviation	12_3	4	n.缩写
+38	form	12_3	4	n.形式
+38	phrase	12_3	4	n.短语
+38	combine	12_3	4	vi.结合
+38	symbol	12_3	4	n.符号
+38	punctuation	12_3	4	n.强调
+38	mark	12_3	4	n.标记
+39	colon	12_4	4	n.冒号
+39	bracket	12_4	4	n.支架
+39	beside	12_4	4	prep.在...旁边
+39	riddle	12_4	4	n.谜
+39	experiment	12_4	4	n.实验
+39	proper	12_4	4	adj.适当的
+39	pleased	12_4	4	adj.高兴的
+39	queue	12_4	4	n.行列
+39	normally	12_4	4	adv.正常地
+39	whose	12_4	4	pron.谁的
+40	lagoon	13_1	3	n.泻湖(污泥贮留池
+40	scientific	13_1	3	adj.科学的
+40	therefore	13_1	3	adv.因此
+40	pink	13_1	3	adj.粉红色的
+40	hard	13_1	3	adj.坚硬的
+40	serve	13_1	3	v.服务
+40	fair	13_1	3	adj.公平的
+40	campaign	13_1	3	n.战役;运动
+40	endangered	13_1	3	adj.（生命等）有危险的
+40	slogan	13_1	3	n.标语
+41	mysterious	13_2	3	adj.神秘的
+41	shiny	13_2	3	adj.有光泽的
+41	skin	13_2	3	n.皮
+41	product	13_2	3	n.产品
+41	lookout	13_2	3	n.注意
+41	beauty	13_2	3	n.美
+41	toothpaste	13_2	3	n.牙膏
+41	aim	13_2	3	n.目标
+41	instance	13_2	3	n.例子
+41	list	13_2	3	n.清单
+42	misleading	13_3	3	adj.使入误解的
+42	truth	13_3	3	n.事实
+42	tense	13_3	3	adj.紧张的
+42	purple	13_3	3	adj.紫色的
+42	purse	13_3	3	n.钱包
+42	guilty	13_3	3	adj.有罪的
+42	taste	13_3	3	vi.品尝
+42	thought	13_3	3	n.思想
+42	count	13_3	3	v.计算
+43	suit	14_1	3	v.适合
+43	suitcase	14_1	3	n.手提箱
+43	towel	14_1	3	n.毛巾
+43	water	14_1	3	n.水
+43	refrigerator	14_1	3	n.冰箱
+43	garage	14_1	3	n.车库
+43	chop	14_1	3	n.厚肉片
+43	wood	14_1	3	n.木材
+43	light	14_1	3	n.光
+43	well	14_1	3	adv.很好地
+44	farm	14_2	3	n.农场
+44	anyway	14_2	3	adv.不管怎样
+44	award	14_2	3	vt.授予
+44	wave	14_2	3	n.波
+44	scene	14_2	3	n.现场
+44	hit	14_2	3	n.打(击)
+44	appear	14_2	3	vi.出现
+44	lead	14_2	3	v.带领
+44	poem	14_2	3	n.诗
+44	cupboard	14_2	3	n.碗橱
+45	turn	14_3	3	vt.&vi.使转动
+45	mail	14_3	3	n.邮件
+45	ancestor	14_3	3	n.祖先
+45	root	14_3	3	n.根
+45	overseas	14_3	3	adj.海外的
+45	homeland	14_3	3	n.祖国
+45	government	14_3	3	n.政府
+45	southern	14_3	3	adj.南方的
+45	strongly	14_3	3	adv.强有力地
+45	purpose	14_3	3	n.目的
+45	step	14_3	3	n.步骤
+46	furry	15_1	5	adj.毛皮的
+46	enormous	15_1	5	adj.巨大的
+46	aggressive	15_1	5	adj.侵略性的
+46	gray	15_1	5	n.灰色
+46	spotted	15_1	5	adj.有斑点的
+46	kangaroo	15_1	5	n.袋鼠
+46	chimpanzee	15_1	5	n.黑猩猩
+46	cheetah	15_1	5	n.猎豹
+46	mangrove	15_1	5	n.红树
+47	swamp	15_2	5	n.沼泽
+47	habitat	15_2	5	n.(动植物的)产地
+47	aquatic	15_2	5	n.水生动物
+47	feed	15_2	5	vt.喂
+47	underwater	15_2	5	adj.水下的
+47	vegetation	15_2	5	n.植物
+47	weigh	15_2	5	vt.秤重量
+47	pound	15_2	5	n.英镑
+47	suitable	15_2	5	adj.合适的
+48	tiny	15_3	5	adj.极小的
+48	cage	15_3	5	n.笼子
+48	disgusted	15_3	5	adj.厌恶的
+48	educate	15_3	5	v.教育
+48	urge	15_3	5	vt.催促
+48	recycle	15_3	5	vt.使再循环
+48	stuff	15_3	5	n.材料
+48	pull	15_3	5	n.拉
+48	glue	15_3	5	n.胶
+49	roof	15_4	5	n.屋顶
+49	discard	15_4	5	n.丢牌
+49	tile	15_4	5	n.砖瓦
+49	fence	15_4	5	n.围墙
+49	can	15_4	5	aux.能
+49	recently	15_4	5	adv.最近
+49	planet	15_4	5	n.行星
+49	society	15_4	5	n.社会
+49	president	15_4	5	n.(国家)总统
+50	inspiration	15_5	5	n.灵感
+50	spare	15_5	5	adj.备用的
+50	model	15_5	5	n.模型
+50	material	15_5	5	n.材料
+50	business	15_5	5	n.商业
+50	plastic	15_5	5	adj.塑料的
+50	certainly	15_5	5	adv.当然
+50	proud	15_5	5	adj.骄傲的
+50	flag	15_5	5	n.旗子

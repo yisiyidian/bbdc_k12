@@ -1,7 +1,5 @@
-require("cocos.init")
-require("common.global")
 
-IntroLayer = require("view.login.IntroLayer")
+local RegisterAccountView = require("view.login.RegisterAccountView")
 
 --选择年级  小学 初中 高中
 --
@@ -14,14 +12,7 @@ function EducationSelect.create()
 	return layer
 end
 
-function EducationSelect:ctor()
-    if s_CURRENT_USER.summaryStep == 0 then
-        AnalyticsSummaryStep(s_summary_selectGrade)
-    end
-    if s_CURRENT_USER.summaryStep < s_summary_selectGrade then
-        s_CURRENT_USER:setSummaryStep(s_summary_selectGrade)
-    end
-
+function EducationSelect:ctor()   
     -- 打点
 	local background = cc.LayerColor:create(cc.c4b(200,240,255,255),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
 	background:ignoreAnchorPointForPosition(false)
@@ -65,6 +56,10 @@ function EducationSelect:ctor()
     	if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)   
         elseif eventType == ccui.TouchEventType.ended then
+            if s_CURRENT_USER.summaryStep < s_summary_selectGrade then
+                s_CURRENT_USER:setSummaryStep(s_summary_selectGrade)
+                AnalyticsSummaryStep(s_summary_selectGrade)
+            end
             s_CorePlayManager.enterBookLayer(sender:getName())
         end
     end
@@ -115,8 +110,9 @@ function EducationSelect:ctor()
     --如果是直接登陆的用户没有选书 则走else
     --如果是游客登录或者注册 就走if
     if s_CURRENT_USER.usertype ~= USER_TYPE_BIND then
+        s_CURRENT_USER.guideStep = 0
         self:popupAccountBind()
-        -- s_SCENE:removeAllPopups()
+        return
     else
         s_SCENE:removeAllPopups()
     end
@@ -129,14 +125,26 @@ function EducationSelect:ctor()
 end
 
 
+function EducationSelect:doguidStep()
+    
+    if s_CURRENT_USER.usertype ~= USER_TYPE_BIND then
+        if s_CURRENT_USER.guideStep == 0 then
+            s_CorePlayManager.enterGuideScene(1,self)
+            s_CURRENT_USER:setGuideStep(s_guide_step_selectGrade) 
+        end
+    end
+end
+
+
 
 
 --弹出注册帐号的界面
 function EducationSelect:popupAccountBind()
     if s_CURRENT_USER.tutorialStep > s_tutorial_book_select or s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then return end
     --
-    local introLayer = IntroLayer.create()
+    local introLayer = RegisterAccountView.new(RegisterAccountView.STEP_10)
     s_SCENE:popup(introLayer)
+    introLayer.close = handler(self,self.doguidStep)
 end
 
 return EducationSelect
