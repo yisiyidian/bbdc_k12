@@ -28,7 +28,7 @@ function AlternatePathController:getPath(path)
 	end
 
 	-- 矩阵工具，初始化原始路径时，对应位置填充1
-	生成新的分支时，判断分支上的每一个点是不是在原有的矩阵上已经是1了
+	-- 生成新的分支时，判断分支上的每一个点是不是在原有的矩阵上已经是1了
 	-- 如果是，该路径作废
 	AlternatePathController.mat = {
 	{0,0,0,0,0,},
