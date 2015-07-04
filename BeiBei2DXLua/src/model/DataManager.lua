@@ -213,7 +213,12 @@ function DataManager.loadUnitName()
                     if unit_word[1] - 1 == 0 then
                         first_count = first_count + 1
                         if first_count < 4 then
-                            bookUnitName[bookName[i]][unit_word[1]] = unit_word[3]
+                            if unit_word[4] - 1 == 0 then
+                                unit_name = split(unit_word[3],'_')
+                                bookUnitName[bookName[i]][unit_word[1]] = unit_name[1]
+                            else
+                                bookUnitName[bookName[i]][unit_word[1]] = unit_word[3]
+                            end
                         else
                             --flag = 1
                             bookUnitName[bookName[i]][''..(unit_word[1]+flag)] = unit_word[3]
