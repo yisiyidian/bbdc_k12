@@ -147,8 +147,11 @@ function DataManager.loadK12Books()
                 word_count = word_count + 1
                 if lines[j] ~= "" then
                     -- print(lines[j])
-                    unit_word = split(lines[j],"\t")
-                    bookWordMeaning[bookName[i]][unit_word[2]] = unit_word[5]
+                    unit_word = split(lines[j],"\t") 
+                    if bookWordMeaning[bookName[i]][unit_word[1]] == nil then
+                        bookWordMeaning[bookName[i]][unit_word[1]] = {}
+                    end
+                    bookWordMeaning[bookName[i]][unit_word[1]][unit_word[2]] = unit_word[5]
                     if unit_word[1] - 1 == 0 then
                         first_count = first_count + 1
                         if first_count < 4 then
