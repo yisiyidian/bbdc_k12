@@ -122,9 +122,13 @@ function MatView:resetUI()
 		end
 	end
 
+	-- 获取参数
 	local length = string.len(MatController.word[1])
 	math.randomseed(os.time())
+
+	-- 是否反向
 	local random = math.random(1,2)
+	-- 获取第一条路径
 	self.path = PathController:getPath(length)
 	local temp = {}
 	if random == 2 then
@@ -137,17 +141,22 @@ function MatView:resetUI()
 		self.path = temp
 	end
 
+	-- 重新绘制砖块
 	for k,v in pairs(self.path) do
 		self.coco[self.path[k].x][self.path[k].y].letter = string.sub(MatController.word[1],k,k) 
 		self.coco[self.path[k].x][self.path[k].y]:resetView()
-		print(string.sub(MatController.word[1],k,k)..self.path[k].x..self.path[k].y)
+		-- print(string.sub(MatController.word[1],k,k)..self.path[k].x..self.path[k].y)
 	end
-	print(MatController.word[1])
+	-- print(MatController.word[1])
+
+	-- 获取第二条路径
 	self.path2 = AlternatePathController:getPath(self.path)
+
+	-- 重新绘制砖块
 	for k,v in pairs(self.path2) do
 		self.coco[self.path2[k].x][self.path2[k].y].letter = string.sub(MatController.word[1],k,k) 
 		self.coco[self.path2[k].x][self.path2[k].y]:resetView()
-		print(string.sub(MatController.word[1],k,k)..self.path2[k].x..self.path2[k].y)
+		-- print(string.sub(MatController.word[1],k,k)..self.path2[k].x..self.path2[k].y)
 	end
 end
 
