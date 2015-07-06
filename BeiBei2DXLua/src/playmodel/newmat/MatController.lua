@@ -122,7 +122,7 @@ function MatController:judgeFunc()
 		-- print("划错了")
 		print("要划的词是"..MatController.word[MatController.index])
 		print("你划的词是"..temp)
-		-- 复原动作
+		-- 复原砖块状态
 		for i = 1,5 do
 			for j=1,10 do
 				MatController.MatView.coco[i][j].drop = 0
@@ -132,8 +132,7 @@ function MatController:judgeFunc()
 		end
 	end
 
-
-
+	-- 搞笑的代码
 	if MatController.index == 99 then
         local SmallAlterWithOneButton = require("view.alter.SmallAlterWithOneButton")
         local smallAlter = SmallAlterWithOneButton.create("已经累了吧！稍微休息一下吧。")
@@ -151,6 +150,7 @@ function MatController:judgeFunc()
 	MatController.currentCoco = {}
 end
 
+-- 扩充一关的单词
 function MatController:createWordGroup(list)
 	local temp = {}
 	for k,v in pairs(list) do
@@ -163,6 +163,7 @@ function MatController:createWordGroup(list)
 	return temp
 end
 
+-- 处理观察者消息
 function MatController:handleNotification(notify,data)
 	if notify == "right" then
 		print("处理消息right")
@@ -170,6 +171,7 @@ function MatController:handleNotification(notify,data)
 	end
 end
 
+-- 换词逻辑
 function MatController:changeFunc()
 	if #MatController.currentCoco ~= 0 then
 		return 
