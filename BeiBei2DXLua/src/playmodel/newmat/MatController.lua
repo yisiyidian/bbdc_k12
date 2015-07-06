@@ -104,23 +104,35 @@ function MatController:judgeFunc()
 
 
 
-	-- if temp == MatController.word[MatController.index] then
+	if temp == MatController.word[MatController.index] then
 		-- print("划词正确")
-		print("这个词是"..temp)
+		-- print("这个词是"..temp)
 		MatController:sendNotification("right",attackList)
-		print_lua_table(attackList)
-	-- 	print("congratulation!!!!!!!!!!!!!!!")
-	-- else
-	-- 	-- print("划错了")
-	-- 	print("要划的词是"..MatController.word[MatController.index])
-	-- 	print("你划的词是"..temp)
-	-- end
-
-	-- 下滑动作
-	for k,v in pairs(MatController.currentCoco) do
-		MatController.currentCoco[k]:runAction(cc.MoveBy:create(0.4,cc.p(0,-800)))
-		MatController.currentCoco[k]:runAction(cc.RotateBy:create(0.4,math.random(360,720)))
+		-- print_lua_table(attackList)
+		-- print("congratulation!!!!!!!!!!!!!!!")
+		-- 下滑动作
+		MatController.MatView:dropFunc()
+		MatController.index = MatController.index + 1
+		-- 下滑动作
+		for k,v in pairs(MatController.currentCoco) do
+			MatController.currentCoco[k]:runAction(cc.MoveBy:create(0.4,cc.p(0,-800)))
+			MatController.currentCoco[k]:runAction(cc.RotateBy:create(0.4,math.random(360,720)))
+		end
+	else
+		-- print("划错了")
+		print("要划的词是"..MatController.word[MatController.index])
+		print("你划的词是"..temp)
+		-- 复原动作
+		for i = 1,5 do
+			for j=1,10 do
+				MatController.MatView.coco[i][j].drop = 0
+				MatController.MatView.coco[i][j].touchState = 1
+				MatController.MatView.coco[i][j]:resetView()	
+			end
+		end
 	end
+
+
 
 	if MatController.index == 99 then
         local SmallAlterWithOneButton = require("view.alter.SmallAlterWithOneButton")
@@ -134,11 +146,8 @@ function MatController:judgeFunc()
         return
 	end
 
-	-- 下滑动作
-	MatController.MatView:dropFunc()
 	-- 重置所有的序列
 	MatController.arr = {}
-	MatController.index = MatController.index + 1
 	MatController.currentCoco = {}
 end
 

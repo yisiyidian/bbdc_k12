@@ -1,46 +1,49 @@
 -- require("cocos.init")
 -- require("common.global")
-
+-- ##########################################################
+-- 重构中
 local  longButtonInStudy = class("longButtonInStudy", function ()
     return cc.Sprite:create()
 end)
 
-function longButtonInStudy.create(size,color,text)
+function longButtonInStudy:ctor(backTexture,front,moveLength,text)
+    self.backTexture = backTexture
+    self.frontTexture = frontTexture
+    self.moveLength = moveLength
+    self.text = text
 
-    local textureFront = "image/button/"..size..color.."front.png"
-    local textureBack =  "image/button/"..size..color.."back.png"
-    if size == "giveup" or size == "again" then
-        textureFront = "image/summarybossscene/lose/button_presssed_xxgtc_small.png"
-        textureBack = "image/summarybossscene/lose/button_unpresssed_xxgtc_small.png"
-    end
+    self:initUI()
+end
 
-    if size == "addTime" then
-        textureBack = "image/summarybossscene/lose/button_unpresssed_xxgtc.png"
-        textureFront = "image/summarybossscene/lose/button_presssed_xxgtc.png"
-    end
-
-    local button_back = cc.Sprite:create(textureBack)
+function longButtonInStudy:initUI()
+    local button_back = cc.Sprite:create()
     button_back:ignoreAnchorPointForPosition(false)
     button_back:setAnchorPoint(0.5,0.5)
+    self.button_back = button_back
+
+    self.func = function ()
+        
+    end
+end
+
+
 
     button_back.func = function ()
     end
 
-    button_back.button_front = cc.Sprite:create(textureFront)
+    button_back.button_front = cc.Sprite:create()
     button_back.button_front:ignoreAnchorPointForPosition(false)
     button_back.button_front:setAnchorPoint(0.5,0.5)
     button_back.button_front:setPosition(button_back:getContentSize().width / 2,button_back:getContentSize().height / 2 + 9)
     button_back:addChild(button_back.button_front)
 
-    if text ~= nil then
-        local label = cc.Label:createWithSystemFont(text,"",30)
-        label:setPosition(button_back.button_front:getContentSize().width / 2, button_back.button_front:getContentSize().height / 2)
-        label:ignoreAnchorPointForPosition(false)
-        label:setAnchorPoint(0.5,0.5)
-        label:setColor(cc.c4b(255,255,255,255))
-        button_back.label = label
-        button_back.button_front:addChild(button_back.label)
-    end
+    local label = cc.Label:createWithSystemFont(text,"",30)
+    label:setPosition(button_back.button_front:getContentSize().width / 2, button_back.button_front:getContentSize().height / 2)
+    label:ignoreAnchorPointForPosition(false)
+    label:setAnchorPoint(0.5,0.5)
+    label:setColor(cc.c4b(255,255,255,255))
+    button_back.label = label
+    button_back.button_front:addChild(button_back.label)
 
     local function onTouchBegan(touch, event)
         local location = button_back:convertToNodeSpace(touch:getLocation())
@@ -66,6 +69,10 @@ function longButtonInStudy.create(size,color,text)
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, button_back)
 
     return button_back
+end
+
+function longButtonInStudy:reset()
+    setTexture
 end
 
 return longButtonInStudy

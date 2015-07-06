@@ -23,19 +23,15 @@ function MatView:ctor()
 	-- 当前关卡的词汇
 	self.path = {}
 	self.path2 = {}
-	-- 初始化ui
-	self:initUI()
 
 	-- 注册观察者
 	MatController:register()
 	-- 控制器和视图建立联系
 	MatController.MatView = self
-	MatController.word = MatController.createWordGroup(self.word)
+	MatController.word = MatController:createWordGroup(self.word)
 
-	-- 初始化划词题目
-	for k,v in pairs(self.word) do
-		table.insert(MatController.word,v)
-	end
+	-- 初始化ui
+	self:initUI()
 end
 
 function MatView:initUI()
