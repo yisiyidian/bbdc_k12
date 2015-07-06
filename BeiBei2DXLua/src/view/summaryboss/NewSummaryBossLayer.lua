@@ -98,6 +98,8 @@ function NewSummaryBossLayer:changeWordTutorial()
         hintBoard:removeFromParent()
         self.gamePaused = false
         self.changeBtn:setLocalZOrder(0)
+        table.insert(self.wordList,self.wordList[1])
+        self:resetMat()
     end
 end
 
