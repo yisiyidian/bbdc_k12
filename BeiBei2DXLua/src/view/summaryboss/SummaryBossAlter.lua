@@ -195,7 +195,7 @@ function SummaryBossAlter:lose(entrance)
 
     end)
 
-    local continue = Button.create("giveup","blue","返回学习")
+    local continue = Button.create("image/button/giveupblueback.png","image/button/giveupbluefront.png",9,"返回学习")
     continue:setPosition(self.loseBoard:getContentSize().width / 2 - 130,self.loseBoard:getContentSize().height * 0.25)
     self.loseBoard:addChild(continue)
 
@@ -210,7 +210,7 @@ function SummaryBossAlter:lose(entrance)
         backToLevelScene()
     end
 
-    local again = Button.create("again","blue","再来一次")
+    local again = Button.create("image/button/againblueback.png","image/button/againbluefront.png",9,"再来一次")
     again:setPosition(self.loseBoard:getContentSize().width / 2 + 130,self.loseBoard:getContentSize().height * 0.25)
     self.loseBoard:addChild(again)
 
@@ -323,7 +323,7 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
         end  
     end
 
-    local button = Button.create("long","blue","完成")
+    local button = Button.create("image/button/longblueback.png","image/button/longbluefront.png",9,"完成")
     button:setPosition(s_DESIGN_WIDTH / 2 ,80)
     self:addChild(button)
     button.func = function ()

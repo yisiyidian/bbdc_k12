@@ -118,7 +118,7 @@ function ShopAlter.create(itemId, location)
             main.sure()
         end
 
-        button_sure = Button.create("middle","blue",s_DataManager.product[itemId].productValue.."贝贝豆购买") 
+        button_sure = Button.create("image/button/middleblueback.png","image/button/middlebluefront.png",9,s_DataManager.product[itemId].productValue.."贝贝豆购买") 
         button_sure:setPosition(maxWidth/2,100)
         button_sure.func = function ()
             button_func()
@@ -141,7 +141,7 @@ function ShopAlter.create(itemId, location)
             main.go()
         end
 
-        button_sure = Button.create("middle","blue","去看一看") 
+        button_sure = Button.create("image/button/middleblueback.png","image/button/middlebluefront.png",9,"去看一看") 
         button_sure:setPosition(maxWidth/2,100)
         button_sure.func = function ()
             button_func()

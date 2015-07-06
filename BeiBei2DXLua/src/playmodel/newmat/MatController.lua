@@ -170,6 +170,14 @@ function MatController:handleNotification(notify,data)
 	end
 end
 
+function MatController:changeFunc()
+	if #MatController.currentCoco ~= 0 then
+		return 
+	end
+	MatController.MatView:dropFunc()
+	MatController.index = MatController.index + 1
+end
+
 
 
 return MatController

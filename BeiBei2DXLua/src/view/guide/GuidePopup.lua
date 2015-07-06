@@ -48,7 +48,7 @@ function GuidePopup:initUI()
     
     self.ButtonClick = function ()    end
 
-    local button = Button.create("middle","blue","领取奖励")
+    local button = Button.create("image/button/middleblueback.png","image/button/middlebluefront.png",9,"领取奖励")
     button:setPosition(self.back:getContentSize().width/2 ,100)
     button.func = function ()if self.ButtonClick ~= nil then self.ButtonClick() end end
     button:setScale(0)

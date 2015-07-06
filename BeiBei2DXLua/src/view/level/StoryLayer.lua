@@ -202,7 +202,7 @@ function StoryLayer:addIntroduction6()
 	-- self:callFuncWithDelay(2.5, function()
 	-- 	self:directStory(6)
 	-- end)
-	local button = require("view.button.longButtonInStudy").create("giveup","blue","试玩")
+	local button = require("view.button.longButtonInStudy").create("image/button/giveupblueback.png","image/button/giveupbluefront.png",9,"试玩")
 	button:setPosition(0,-s_DESIGN_HEIGHT / 2.6)
 	drama:addChild(button)
 

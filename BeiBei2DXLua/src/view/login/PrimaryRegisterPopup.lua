@@ -45,7 +45,7 @@ function PrimaryRegisterPopup:ctor()
             print("hello "..teacher_text.."teacher,I'm "..name_text.."and my password is "..password_text)
         end
 
-        local teacherButton = Button.create("long","blue","完成")
+        local teacherButton = Button.create("image/button/longblueback.png","image/button/longbluefront.png",9,"完成")
         teacherButton.func = function ()
             teacherButton_func()
         end
@@ -74,7 +74,7 @@ function PrimaryRegisterPopup:ctor()
             passwordButton:removeFromParent()
         end
 
-        passwordButton = Button.create("long","blue","下一步")
+        passwordButton = Button.create("image/button/longblueback.png","image/button/longbluefront.png",9,"下一步")
         passwordButton.func = function ()
             passwordButton_func()
         end
@@ -102,7 +102,7 @@ function PrimaryRegisterPopup:ctor()
             nameButton:removeFromParent()
         end
 
-        nameButton = Button.create("long","blue","下一步")
+        nameButton = Button.create("image/button/longblueback.png","image/button/longbluefront.png",9,"下一步")
         nameButton.func = function ()
             nameButton_func()
         end

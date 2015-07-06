@@ -3,6 +3,7 @@ local CocoView = require("playmodel.newmat.CocoView")
 local PathController = require("playmodel.newmat.PathController")
 local AlternatePathController = require("playmodel.newmat.AlternatePathController")
 local MatController = require("playmodel.newmat.MatController")
+local longButtonInStudy = require("view.button.longButtonInStudy")
 local MatView = class("MatView",function ()
 	local layer = cc.Layer:create()
 	return layer
@@ -72,7 +73,18 @@ function MatView:initUI()
     chineselabel:setColor(cc.c4b(0,0,0,255))
     self.chineselabel = chineselabel
     self.chinesesprite:addChild(self.chineselabel)
-	
+
+    local changeButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,"")
+	changeButton:setPosition(cc.p(s_DESIGN_WIDTH *0.8,700))
+    changeButton:ignoreAnchorPointForPosition(false)
+    changeButton:setAnchorPoint(0.5,0.5)
+	self.changeButton = changeButton
+	self:addChild(self.changeButton)
+
+	self.changeButton.func = function ()
+		MatController:changeFunc()
+	end
+
 	-- ui填充
 	self:resetUI()
 	self:resetWordLabel("")
@@ -109,6 +121,7 @@ function MatView:resetChineseLabel(string)
 end
 
 function MatView:resetUI()
+	self.changeButton.label:setString(MatController.index.."/"..MatController.index)
 	-- 重置
 	if self.coco ~= nil then
 		self.back:removeAllChildren()

@@ -58,7 +58,7 @@ function ShopErrorAlter.create()
         s_CorePlayManager.enterLevelLayer()
     end
 
-    button_sure = Button.create("middle","blue","赚取贝贝豆") 
+    button_sure = Button.create("image/button/middleblueback.png","image/button/middlebluefront.png",9,"赚取贝贝豆") 
     button_sure:setPosition(maxWidth/2,100)
     button_sure.func = function ()
         button_func()

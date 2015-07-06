@@ -53,7 +53,7 @@ function ShopPanel.create(itemId)
         main.sure()
     end
 
-    button_sure = Button.create("middle","blue",s_DataManager.product[itemId].productValue.."贝贝豆购买") 
+    button_sure = Button.create("image/button/middleblueback.png","image/button/middlebluefront.png",9,s_DataManager.product[itemId].productValue.."贝贝豆购买") 
     button_sure:setPosition(maxWidth/2,240)
     button_sure.func = function ()
         button_func()
