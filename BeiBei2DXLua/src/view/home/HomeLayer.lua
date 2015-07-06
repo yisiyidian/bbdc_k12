@@ -419,7 +419,14 @@ function HomeLayer:ctor()
             button_data:runAction(cc.Sequence:create(action1, action2))
 
         elseif self.isDataShow == false and  self.viewIndex == 1 and #isPopup == 0 then
-            cx.CXUtils:getInstance():shutDownApp()
+            local SmallAlter = require("view.alter.SmallAlter")
+            local smallAlter = SmallAlterWithOneButton.create("要跟贝贝说再见了吗？")
+            smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+            s_SCENE.popupLayer:addChild(smallAlter)
+            smallAlter.affirm = function ()
+                cx.CXUtils:getInstance():shutDownApp()
+            end
+
         end
     end, function ()
 
