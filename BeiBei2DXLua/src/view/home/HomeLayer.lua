@@ -33,6 +33,18 @@ local list = {}
 
 function HomeLayer.create()
 
+    -- 测试代码 直接跳过所有引导
+    -- 打包时注销
+    -- ＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃
+    if BUILD_TARGET == BUILD_TARGET_DEBUG then
+        s_CURRENT_USER:setGuideStep(s_guide_step_bag7) 
+        print("测试代码未注销")
+        print("测试代码未注销")    
+        print("测试代码未注销")   
+    end 
+    -- ＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃
+
+
     if s_CURRENT_USER:getLockFunctionState(1) == 0 then
         s_CURRENT_USER:unlockFunctionState(1)
     end

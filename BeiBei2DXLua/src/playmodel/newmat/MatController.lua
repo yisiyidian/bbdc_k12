@@ -6,11 +6,9 @@ local MatController = class("MatController",Observer)
 -- 位置序列，cc.p(1,1)
 MatController.arr = {}
 -- 字母序列
-MatController.word = {"apple"}
+MatController.word = {}
 -- 当前是第几个词
 MatController.index = 1
--- 总共几个词
-MatController.totalindex = 0
 -- 砖块元素序列，cocoview
 MatController.currentCoco = {}
 
@@ -22,16 +20,6 @@ end
 -- 注册事件
 function MatController:listNotify()
 	return {"right"}
-end
-
--- 重置当前序号
-function MatController:resetIndex()
-	if MatController.index < MatController.totalindex then
-		MatController.index = MatController.index + 1
-		return false
-	elseif MatController.index == MatController.totalindex then 
-		return true
-	end
 end
 
 -- 划的字母加入队列
@@ -134,14 +122,36 @@ function MatController:judgeFunc()
 		MatController.currentCoco[k]:runAction(cc.RotateBy:create(0.4,math.random(360,720)))
 	end
 
+	if MatController.index == 99 then
+        local SmallAlterWithOneButton = require("view.alter.SmallAlterWithOneButton")
+        local smallAlter = SmallAlterWithOneButton.create("已经累了吧！稍微休息一下吧。")
+        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+        s_SCENE:popup(smallAlter)
+        smallAlter.affirm = function ()
+        	s_SCENE:removeAllPopups()
+            s_CorePlayManager.enterLevelLayer()
+        end
+        return
+	end
+
 	-- 下滑动作
 	MatController.MatView:dropFunc()
 	-- 重置所有的序列
 	MatController.arr = {}
-	MatController.word = {"apple"}
-	MatController.index = 1
-	MatController.totalindex = 0
+	MatController.index = MatController.index + 1
 	MatController.currentCoco = {}
+end
+
+function MatController:createWordGroup(list)
+	local temp = {}
+	for k,v in pairs(list) do
+		temp[#temp + 1] = list[k]
+	end
+	math.randomseed(os.time())
+	for i = 1,100 do
+		temp[#temp + 1] = list[math.random(1,#list)]
+	end 
+	return temp
 end
 
 function MatController:handleNotification(notify,data)

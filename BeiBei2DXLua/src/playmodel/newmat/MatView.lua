@@ -17,7 +17,9 @@ function MatView:ctor()
 	-- 每个砖块大小
 	self.coco = {}
 	-- 砖块容器
-	self.word = {"apple"}
+
+	-- 这个地方开始调用每个小岛的单词
+	self.word = {"apple",}
 	-- 当前关卡的词汇
 	self.path = {}
 	self.path2 = {}
@@ -28,7 +30,7 @@ function MatView:ctor()
 	MatController:register()
 	-- 控制器和视图建立联系
 	MatController.MatView = self
-	MatController.word = {"apple"}
+	MatController.word = MatController.createWordGroup(self.word)
 
 	-- 初始化划词题目
 	for k,v in pairs(self.word) do
@@ -82,11 +84,13 @@ function MatView:initUI()
 	self:touchFunc()
 end
 
+-- 重置英文划词
 function MatView:resetWordLabel(string)
 	local len = string.len(string)
 	if len == 0 or string == "" then
 		self.wordsprite:setVisible(false)
 	else
+		self.wordsprite:setVisible(true)
 		self.wordsprite:setContentSize((len+1) * 18 + 60 ,63)
 	end
 
@@ -94,6 +98,19 @@ function MatView:resetWordLabel(string)
 	self.wordlabel:setPosition(self.wordsprite:getContentSize().width/2,self.wordsprite:getContentSize().height/2)
 end
 
+-- 重置汉语意思
+function MatView:resetChineseLabel(string)
+	local len = string.len(string)
+	if len == 0 or string == "" then
+		self.chinesesprite:setVisible(false)
+	else
+		self.chinesesprite:setVisible(true)
+		self.chinesesprite:setContentSize((len+1) * 18 + 60 ,63)
+	end
+
+	self.chineselabel:setString(string)
+	self.chineselabel:setPosition(self.chinesesprite:getContentSize().width/2,self.chinesesprite:getContentSize().height/2)
+end
 
 function MatView:resetUI()
 	-- 重置
@@ -123,7 +140,7 @@ function MatView:resetUI()
 	end
 
 	-- 获取参数
-	local length = string.len(MatController.word[1])
+	local length = string.len(MatController.word[MatController.index])
 	math.randomseed(os.time())
 
 	-- 是否反向
@@ -143,7 +160,7 @@ function MatView:resetUI()
 
 	-- 重新绘制砖块
 	for k,v in pairs(self.path) do
-		self.coco[self.path[k].x][self.path[k].y].letter = string.sub(MatController.word[1],k,k) 
+		self.coco[self.path[k].x][self.path[k].y].letter = string.sub(MatController.word[MatController.index],k,k) 
 		self.coco[self.path[k].x][self.path[k].y]:resetView()
 		-- print(string.sub(MatController.word[1],k,k)..self.path[k].x..self.path[k].y)
 	end
@@ -154,7 +171,7 @@ function MatView:resetUI()
 
 	-- 重新绘制砖块
 	for k,v in pairs(self.path2) do
-		self.coco[self.path2[k].x][self.path2[k].y].letter = string.sub(MatController.word[1],k,k) 
+		self.coco[self.path2[k].x][self.path2[k].y].letter = string.sub(MatController.word[MatController.index],k,k) 
 		self.coco[self.path2[k].x][self.path2[k].y]:resetView()
 		-- print(string.sub(MatController.word[1],k,k)..self.path2[k].x..self.path2[k].y)
 	end
