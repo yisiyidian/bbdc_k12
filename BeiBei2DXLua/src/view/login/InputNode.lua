@@ -56,7 +56,7 @@ function InputNode:init(backgroundImage,backgroundImageOver,placeHolder,callback
     self.textField:setFontSize(34)
     self.textField:setMaxLengthEnabled(true)
     self.textField:setPlaceHolderColor(cc.c3b(111,111,111))
-    self.textField:setTextColor(cc.c4b(255,255,255,255))
+    self.textField:setTextColor(cc.c4b(0,0,0,255))
     self.textField:setPlaceHolder(placeHolder)--占位文本
     --设置长度限制
     local tlen = maxLength or 10
@@ -144,7 +144,7 @@ function InputNode:processInput()
         end
         self.cursor:setVisible(true)
         self.backImage:setTexture(self.backgroundImage)
-        self.textField:setTextColor(cc.c4b(255,255,255,255))
+        self.textField:setTextColor(cc.c4b(0,0,0,255))
     end
 end
 

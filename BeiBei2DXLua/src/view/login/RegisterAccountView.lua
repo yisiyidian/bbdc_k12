@@ -62,7 +62,15 @@ function RegisterAccountView:ctor(step)
       	self:init()
   	end
 
-	onAndroidKeyPressed(self,handler(self, self.onBackTouch),function ()
+  	-- 如果是输入性别界面，安卓返回键无作用
+	onAndroidKeyPressed(self,function ()
+		if self.curStep == RegisterAccountView.STEP_3 then
+			return
+		else
+			handler(self, self.onBackTouch)
+		end
+	end,
+	function ()
 		-- body
 	end)
 end
@@ -99,7 +107,7 @@ function RegisterAccountView:init(step)
 		btnReturn:setPosition(0.1*s_DESIGN_WIDTH,0.93*s_DESIGN_HEIGHT)
 		btnReturn:addTouchEventListener(handler(self, self.onReturnClick))
 		self.btnReturn = btnReturn
-		self:addChild(btnReturn)
+		self:addChild(self.btnReturn)
 		--tip 注册可以和更多好友一起背单词
 		-- local tip = cc.Label:createWithSystemFont("注册可以和更多好友一起背单词","",26)
 		-- tip:setTextColor(cc.c3b(118,123,124))

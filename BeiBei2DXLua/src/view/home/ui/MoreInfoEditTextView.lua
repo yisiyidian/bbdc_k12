@@ -30,7 +30,7 @@ function MoreInfoEditTextView:initUI()
 	self.btnReturn:setPosition(s_DESIGN_WIDTH*0.1,s_DESIGN_HEIGHT*0.9)
 	self:addChild(self.btnReturn)
 	--输入框
-	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入",nil,nil,nil,nil,11)
+	local inputNode = InputNode.new("image/signup/shuru_bbchildren_white.png","请输入",nil,nil,nil,nil,nil,11)
 	inputNode:setPosition(0.5 * s_DESIGN_WIDTH,s_DESIGN_HEIGHT*0.9 - 200)
 	self:addChild(inputNode)
 	self.inputNode = inputNode

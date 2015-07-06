@@ -159,6 +159,31 @@ function DownloadSoundController:initAssetsManagerByBookType(storagePath)
     elseif self.bookkey == "kwekwe" then
         SoundsDownloadingInstance["kwekwe"] = self
         return cc.AssetsManagerEx:create("manifest/book_sound_kwekwe.manifest",storagePath)
+    elseif self.bookkey == "kwekwe_2" then
+        SoundsDownloadingInstance["kwekwe_2"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_kwekwe_2.manifest",storagePath)
+    elseif self.bookkey == "kwekwe_3" then
+        SoundsDownloadingInstance["kwekwe_3"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_kwekwe_3.manifest",storagePath)
+    -- 后海教育
+    elseif self.bookkey == "houhai_stage0" then
+        SoundsDownloadingInstance["houhai_stage0"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_houhai_stage0.manifest",storagePath)
+    elseif self.bookkey == "houhai_stage1" then
+        SoundsDownloadingInstance["houhai_stage1"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_houhai_stage1.manifest",storagePath)
+    elseif self.bookkey == "houhai_stage2" then
+        SoundsDownloadingInstance["houhai_stage2"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_houhai_stage2.manifest",storagePath)
+    elseif self.bookkey == "houhai_stage3" then
+        SoundsDownloadingInstance["houhai_stage3"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_houhai_stage3.manifest",storagePath)
+    elseif self.bookkey == "houhai_stage4" then
+        SoundsDownloadingInstance["houhai_stage4"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_houhai_stage4.manifest",storagePath)
+    elseif self.bookkey == "houhai_stage5" then
+        SoundsDownloadingInstance["houhai_stage5"] = self
+        return cc.AssetsManagerEx:create("manifest/book_sound_houhai_stage5.manifest",storagePath)
     end
 end
 
