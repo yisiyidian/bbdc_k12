@@ -196,7 +196,7 @@ end
 
 -- 加入锁屏
 function GuideToTaskView:resetLock()
-	local action1 = cc.DelayTime:create(4)
+	local action1 = cc.DelayTime:create(2)
 	local action2 = cc.CallFunc:create(function ()
 		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 	end)
