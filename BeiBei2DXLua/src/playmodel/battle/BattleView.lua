@@ -10,7 +10,7 @@ function BattleView:ctor()
 	--创建boss
 	s_BattleManager:createBoss({'1','1','1'})
 	--创建pet
-	s_BattleManager:createPet({'2','3','4','5','5'})
+	s_BattleManager:createPet({'2','3','4','5','6'})
 	--绘制UI
 	self:initUI()
 
