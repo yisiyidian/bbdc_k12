@@ -19,7 +19,7 @@ end
 
 -- 注册事件
 function MatController:listNotify()
-	return {"right"}
+	return {"RIGHT"}
 end
 
 -- 划的字母加入队列

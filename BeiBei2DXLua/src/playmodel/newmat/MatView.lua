@@ -48,7 +48,7 @@ function MatView:initUI()
 	-- 布景
 
 	-- 划词显示
-	local wordsprite = ccui.Scale9Sprite:create("image/mat/circle.png")
+	local wordsprite = ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(28.499,0,28.501,74))
 	wordsprite:setPosition(cc.p(s_DESIGN_WIDTH /2,770))
 	wordsprite:setAnchorPoint(0.5,0.5)
 	self.wordsprite = wordsprite
@@ -61,7 +61,7 @@ function MatView:initUI()
     self.wordlabel = wordlabel
     self.wordsprite:addChild(self.wordlabel)
 
-    local chinesesprite = ccui.Scale9Sprite:create("image/playmodel/chinesedisplay.png")
+    local chinesesprite = ccui.Scale9Sprite:create("image/playmodel/chinesedisplay.png",cc.rect(0,0,235,60),cc.rect(110,0,120,60))
 	chinesesprite:setPosition(cc.p(s_DESIGN_WIDTH /2,700))
 	chinesesprite:setAnchorPoint(0.5,0.5)
 	self.chinesesprite = chinesesprite

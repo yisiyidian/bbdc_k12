@@ -1,2 +1,2 @@
 ATTACK = 'ATTACK'
-RIGHT = 'right'
+RIGHT = 'RIGHT'
