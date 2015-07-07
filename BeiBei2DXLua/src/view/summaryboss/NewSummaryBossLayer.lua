@@ -99,6 +99,9 @@ function NewSummaryBossLayer:changeWordTutorial()
         self.gamePaused = false
         self.changeBtn:setLocalZOrder(0)
         table.insert(self.wordList,self.wordList[1])
+        if #self.wordList > 1 then
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+        end
         self:resetMat()
     end
 end
