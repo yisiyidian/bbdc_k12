@@ -68,7 +68,7 @@ function BattleManager:initState(time,step,collect,wordList,stageType)
 	self.totalCollect = collect
 	--当前收集数
 	self.currentCollect = 0
-	--关卡类型
+	--关卡类型(限制时间或步数)
 	self.stageType = stageType
 end
 --进入战斗场景
@@ -95,6 +95,10 @@ function BattleManager:battleEnded(win)
 end
 --更新时间
 function BattleManager:updateTime(delta)
+	--TODO
+	if self.stageType == 'step' then
+		return
+	end
 	if self.gameBegan and not self.gameEnded and not self.gameEnded then
 		self.currentTime = self.currentTime + delta
 		if self.currentTime > self.totalTime then
@@ -104,9 +108,11 @@ function BattleManager:updateTime(delta)
 end
 --更新步数和收集数
 function BattleManager:addStepWithCollect(collect)
-	self.currentStep = self.currentStep + 1
-	if self.currentStep == self.totalStep then
-		self:battleEnded(false)
+	if self.stageType == 'step' then
+		self.currentStep = self.currentStep + 1
+		if self.currentStep == self.totalStep then
+			self:battleEnded(false)
+		end
 	end
 	self.currentCollect = self.currentCollect + collect
 	if self.currentCollect == self.totalCollect then
