@@ -1,640 +1,640 @@
-1	e-mail	1_1	5	电子邮件
-1	address	1_1	5	n.地址
-1	home	1_1	5	n.家
-2	website	1_2	5	n.网站
-2	e-mail address	1_2	5	电子邮件地址
-2	book	1_2	5	n.书
-2	shop	1_2	5	n.商店
-2	shelf	1_2	5	n.架子
-2	home address	1_2	5	家庭住址
-2	website address	1_2	5	网址
-2	mark	1_2	5	n.标记
-2	bookshop	1_2	5	n. 书店
-2	bookshelf	1_2	5	n.书架
-3	bookmark	1_3	5	n.书签
-3	address book	1_3	5	通讯簿
-3	librarian	1_3	5	n.图书管理员
-3	naughty	1_3	5	adj.顽皮的
-3	little	1_3	5	adj.小的
-3	now	1_3	5	n.现在
-3	snack bar	1_3	5	小吃店
-3	has	1_3	5	v. 有
-3	mouth	1_3	5	n.嘴
-3	hospital	1_3	5	n.医院
-4	write	1_4	5	v.写
-4	borrow ... from	1_4	5	从…借来…
-4	want	1_4	5	vi.要
-4	lesson	1_4	5	n.课
-4	nurse	1_4	5	n.护士
-4	take ... to	1_4	5	带…到…
-4	ask ... to	1_4	5	让…去…
-4	cry	1_4	5	n.哭
-4	injection	1_4	5	n.注射
-5	better	1_5	5	adj.较好的
-5	feel	1_5	5	vt.感觉
-5	give ... to	1_5	5	把…给…
-5	term	1_5	5	n.学期
-5	when	1_5	5	conj.在…时
-5	angrily	1_5	5	adv. 愤怒地
-5	make	1_5	5	vt.做
-5	should	1_5	5	verbauxiliary.应该
-5	after a while	1_5	5	过了一会儿
-6	arm	2_1	4	n.手臂
-6	chair	2_1	4	n.椅子
-6	left	2_1	4	adj.左边的
-6	armchair	2_1	4	n.扶手椅
-6	right	2_1	4	adj.正确的
-6	candy	2_1	4	n.糖果
-6	man	2_1	4	n.男人
-6	ass	2_1	4	n.驴
-6	left arm	2_1	4	左臂
-6	right arm	2_1	4	右臂
-7	floss	2_2	4	n. 牙线
-7	candyfloss	2_2	4	n. 棉花糖
-7	candy man	2_2	4	卖糖果的人
-7	candy ass	2_2	4	胆小鬼
-7	arm candy	2_2	4	漂亮女人
-7	represent	2_2	4	vt.表现
-7	unpleasant	2_2	4	adj.使人不愉快的
-7	mood	2_2	4	n.心情
-7	change	2_2	4	v.改变
-7	anger	2_2	4	n.忿怒
-8	fear	2_3	4	vt.害怕
-8	ourselves	2_3	4	pron.我们自己
-8	choose	2_3	4	vt.&vi.选择
-8	show	2_3	4	v.展现
-8	find	2_3	4	vt.&vi.发现
-8	life	2_3	4	n.生活
-8	unhappy	2_3	4	adj.不快乐的
-8	coward	2_3	4	n.懦夫
-8	choice	2_3	4	n.选择
-8	at the moment	2_3	4	此刻
-9	than	2_4	4	conj.比（用于比较级）
-9	room	2_4	4	n.房间
-9	same	2_4	4	adj.同样的
-9	even though	2_4	4	即使
-9	colour	2_4	4	n. 颜色
-9	if	2_4	4	conj.如果
-9	temperature	2_4	4	n.温度
-9	affect	2_4	4	vt.影响
-9	possible	2_4	4	adj.可能的
-9	own	2_4	4	adj.自己的
-10	talk	3_1	4	n.谈话
-10	baby	3_1	4	n.婴儿
-10	face	3_1	4	n.脸
-10	finger	3_1	4	n.手指
-10	baby talk	3_1	4	儿语
-10	blue	3_1	4	adj.蓝色的
-10	berry	3_1	4	n.浆果
-10	whale	3_1	4	n.鲸
-10	baby face	3_1	4	娃娃脸
-11	baby finger	3_2	4	小拇指
-11	tooth	3_2	4	n.牙齿
-11	blueberry	3_2	4	n. 蓝莓
-11	blue whale	3_2	4	蓝鲸
-11	baby blue	3_2	4	淡蓝色
-11	scene	3_2	4	n.现场
-11	accident	3_2	4	n.事故
-11	people	3_2	4	n.人们
-11	gather	3_2	4	vt.收集
-12	around	3_3	4	prep.在...附近
-12	close	3_3	4	vt.关
-12	laugh	3_3	4	vt.&vi.笑
-12	shout	3_3	4	n.呼喊
-12	so	3_3	4	conj.所以
-12	surprised	3_3	4	adj. 出人意料的
-12	way	3_3	4	n.道路
-12	hear	3_3	4	vt.&vi.听到
-12	road	3_3	4	n.路
-13	make	3_4	4	vt.做
-13	lie	3_4	4	n.谎言
-13	film	3_4	4	n.电影
-13	anyone	3_4	4	pron.任何人
-13	get out of way	3_4	4	让开
-13	be eager to do sth.	3_4	4	渴望做
-13	make way for	3_4	4	为…开路
-13	one day	3_4	4	有一天
-14	sleep	4_1	4	v.睡觉
-14	beauty	4_1	4	n.美
-14	contest	4_1	4	n.竞赛
-14	mark	4_1	4	n.标记
-14	beauty sleep	4_1	4	小睡
-14	flower	4_1	4	n.花
-14	shop	4_1	4	n.商店
-14	drug	4_1	4	n.药
-14	beauty contest	4_1	4	选美比赛
-14	beauty mark	4_1	4	美人痣
-15	keeper	4_2	4	n.保管人
-15	shopkeeper	4_2	4	n.店主
-15	flower shop	4_2	4	花店
-15	drug shop	4_2	4	药店
-15	beauty shop	4_2	4	美容院
-15	mouse	4_2	4	n.老鼠
-15	rat	4_2	4	n.鼠
-15	let	4_2	4	vt.让
-15	trap	4_2	4	n.圈套
-15	mousetrap	4_2	4	n. 捕鼠器
-16	doorbell	4_3	4	n. 门铃
-16	ring	4_3	4	n.环
-16	knee	4_3	4	n.膝盖
-16	floor	4_3	4	n.地板
-16	come out	4_3	4	出现
-16	fifth	4_3	4	num.第五
-16	says	4_3	4	v. 说（第三人称单数）
-16	don't	4_3	4	aux. 表示否定
-16	nice	4_3	4	adj.美好的
-16	come up to	4_3	4	达到
-17	for	4_4	4	prep.为
-17	there	4_4	4	adv.在那里
-17	catch	4_4	4	vt.抓住
-17	paw	4_4	4	n.手掌
-17	one of	4_4	4	其中之一
-17	have	4_4	4	v.有
-17	clever	4_4	4	adj.聪明的
-17	too	4_4	4	adj.太
-17	also	4_4	4	adv.也
-18	body	5_1	3	n.身体
-18	language	5_1	3	n. 语言
-18	clock	5_1	3	n.时钟
-18	bag	5_1	3	n.包
-18	body language	5_1	3	身体语言
-18	double	5_1	3	n.两倍
-18	room	5_1	3	n.房间
-18	chin	5_1	3	n.下巴
-18	body clock	5_1	3	生物钟
-18	body bag	5_1	3	运尸袋
-18	time	5_1	3	n.时间
-19	double room	5_2	3	双人房
-19	double chin	5_2	3	双下巴
-19	double time	5_2	3	双倍工资
-19	body double	5_2	3	替身演员
-19	must	5_2	3	aux.必须
-19	when	5_2	3	conj.在…时
-19	England	5_2	3	n. 英格兰
-19	street	5_2	3	n.街道
-19	careful	5_2	3	adj.小心的
-19	because	5_2	3	conj.因为
-19	drive	5_2	3	v.开车
-20	traffic	5_3	3	n.交通
-20	before	5_3	3	prep.在…之前
-20	work	5_3	3	n.工作
-20	cross	5_3	3	v.交叉
-20	on the left	5_3	3	在左边
-20	come from	5_3	3	来自
-20	on the right	5_3	3	在右边
-20	the same as	5_3	3	与…一致
-20	in the morning	5_3	3	在清晨
-20	in the evening	5_3	3	在晚上
-21	car	6_1	4	n.小汽车
-21	wash	6_1	4	v.洗
-21	seat	6_1	4	n.位子
-21	port	6_1	4	n.港口
-21	car wash	6_1	4	洗车处
-21	carport	6_1	4	n. 车库
-21	sick	6_1	4	adj.恶心的
-21	bed	6_1	4	n.床
-21	bag	6_1	4	n.包
-21	car seat	6_1	4	车辆座椅
-22	leave	6_2	4	v.离开
-22	carsick	6_2	4	adj. 晕车的
-22	sick bed	6_2	4	病床
-22	sick bag	6_2	4	清洁袋
-22	sick leave	6_2	4	病假
-22	walk	6_2	4	vi.走路
-22	forest	6_2	4	n.森林
-22	hungry	6_2	4	adj.饥饿的
-22	thirsty	6_2	4	adj.口渴的
-22	bite	6_2	4	n.咬
-23	catch	6_3	4	vt.抓住
-23	begin	6_3	4	vt.&vi.开始
-23	fight	6_3	4	n.打架
-23	keep away	6_3	4	防范
-23	run after	6_3	4	追求
-23	paw	6_3	4	n.手掌
-23	hit	6_3	4	n.打(击)
-23	back	6_3	4	adv.向后地
-23	remember	6_3	4	vt.&vi.记得
-23	neither ... nor	6_3	4	既不…也不…
-24	around	6_4	4	prep.在...附近
-24	win	6_4	4	vi.胜利
-24	now	6_4	4	n.现在
-24	back	6_4	4	adv.向后地
-24	at the same time	6_4	4	同时
-24	its	6_4	4	pron.（it的所有格)它的
-24	both	6_4	4	pron.二者
-24	tired	6_4	4	adj.疲劳的
-24	with	6_4	4	prep.和...一起
-25	fat	7_1	3	adj.肥胖的
-25	cat	7_1	3	n.猫
-25	walk	7_1	3	vi.走路
-25	fight	7_1	3	n.打架
-25	fat cat	7_1	3	有钱有势的人
-25	catwalk	7_1	3	n. 猫步
-25	catfight	7_1	3	n. 激烈的争辩
-25	fish	7_1	3	n.鱼
-25	farm	7_1	3	n.农场
-25	hook	7_1	3	n.钩子
-25	wife	7_1	3	n.妻子
-26	fishwife	7_2	3	n. 卖鱼妇
-26	catfish	7_2	3	n. 鲶鱼
-26	fish farm	7_2	3	养鱼场
-26	fish hook	7_2	3	钓鱼钩
-26	shoes	7_2	3	n. 鞋子（复数）
-26	how	7_2	3	adv.如何
-26	dirty	7_2	3	adj.肮脏的
-26	look at	7_2	3	看
-26	one day	7_2	3	有一天
-26	must	7_2	3	aux.必须
-26	clean	7_2	3	adj.干净的
-27	them	7_3	3	pron.他(她
-27	only	7_3	3	adv.仅仅
-27	yesterday	7_3	3	n.&adv.昨天
-27	again	7_3	3	adv.又
-27	tomorrow	7_3	3	adv.明天
-27	all right	7_3	3	好
-27	come back	7_3	3	回来
-27	something	7_3	3	pron.某事(物)
-27	hungry	7_3	3	adj.饥饿的
-27	breakfast	7_3	3	n.早餐
-27	lunch	7_3	3	n.午餐
-28	day	8_1	3	n.一天
-28	school	8_1	3	n.学校
-28	job	8_1	3	n.工作
-28	dream	8_1	3	n.梦
-28	day school	8_1	3	走读学校
-28	daydream	8_1	3	n. 白日梦
-28	boy	8_1	3	n.男孩
-28	friend	8_1	3	n.朋友
-28	cow	8_1	3	n.母牛
-28	day job	8_1	3	全日性工作
-28	band	8_1	3	n.带;箍
-29	boyfriend	8_2	3	n. 男朋友
-29	cowboy	8_2	3	n.牛仔
-29	boy band	8_2	3	男子乐团
-29	day boy	8_2	3	走读生
-29	people	8_2	3	n.人们
-29	little	8_2	3	adj.小的
-29	all	8_2	3	adj.所有的
-29	buy	8_2	3	vt.买
-29	get on	8_2	3	上车
-29	conductor	8_2	3	n.售票员
-29	give	8_2	3	vt.&vi.给予
-30	ticket	8_3	3	n.票
-30	zoo	8_3	3	n.动物园
-30	answer	8_3	3	vt.&vi.答复
-30	laugh	8_3	3	vt.&vi.笑
-30	face	8_3	3	n.脸
-30	another	8_3	3	adj.另一
-30	find	8_3	3	vt.&vi.发现
-30	at last	8_3	3	最后
-30	daughter	8_3	3	n.女儿
-30	story	8_3	3	n.故事
-30	happen	8_3	3	vi.发生
-30	in front of	8_3	3	在…前面
-31	dog	9_1	3	n.狗
-31	biscuit	9_1	3	n.饼干
-31	police	9_1	3	n.警察
-31	sheep	9_1	3	n.羊
-31	dog biscuit	9_1	3	狗食饼干
-31	sheepdog	9_1	3	n. 牧羊犬
-31	birth	9_1	3	n.出生
-31	day	9_1	3	n.一天
-31	all	9_1	3	adj.所有的
-31	police dog	9_1	3	警犬
-31	birthday	9_1	3	n.生日
-32	dooms-day	9_2	3	世界末日
-32	all day	9_2	3	整天
-32	dog days	9_2	3	三伏天
-32	goat	9_2	3	n.山羊
-32	fresh	9_2	3	adj.新鲜的
-32	grass	9_2	3	n.草
-32	little	9_2	3	adj.小的
-32	forest	9_2	3	n.森林
-32	wolf	9_2	3	n.狼
-32	hungry	9_2	3	adj.饥饿的
-32	food	9_2	3	n.食物
-33	favourite	9_3	3	adj.特别喜爱的
-33	if	9_3	3	conj.如果
-33	afraid	9_3	3	adj.害怕的
-33	think	9_3	3	vt.想
-33	pretend to	9_3	3	假装
-33	be poisoned	9_3	3	被毒害
-33	think	9_3	3	vt.想
-33	go away	9_3	3	走开
-33	go on doing sth.	9_3	3	继续做
-33	at last	9_3	3	最后
-34	eye	10_1	4	n.眼睛
-34	brow	10_1	4	n.眉毛
-34	lid	10_1	4	n.盖
-34	lash	10_1	4	n.鞭子
-34	eyebrow	10_1	4	n.眉毛
-34	eyelid	10_1	4	n.眼皮
-34	eyelash	10_1	4	n. 睫毛
-34	tooth	10_1	4	n.牙齿
-34	pick	10_1	4	vt.挑选
-35	brush	10_2	4	n.刷子
-35	paste	10_2	4	v.粘贴
-35	toothpick	10_2	4	n. 牙签
-35	toothbrush	10_2	4	n.牙刷
-35	toothpaste	10_2	4	n.牙膏
-35	eye teeth	10_2	4	上尖牙
-35	lunch	10_2	4	n.午餐
-35	children	10_2	4	n.儿童(复数）
-35	note	10_2	4	n.笔记
-36	at the head of	10_3	4	在…的前面
-36	at the end of	10_3	4	在……尽头
-36	only	10_3	4	adv.仅仅
-36	dining room	10_3	4	餐厅
-36	a pile of	10_3	4	一堆
-36	line up	10_3	4	整队
-36	post on	10_3	4	把…张贴在…上
-36	other	10_3	4	adj.别的
-36	large	10_3	4	adj.大的
-37	chocolate	10_4	4	n.巧克力
-37	cookies	10_4	4	n. 饼干
-37	take out	10_4	4	取出
-37	watch	10_4	4	n.手表
-37	god	10_4	4	n. 神
-37	insect	10_4	4	n.昆虫
-37	a piece of	10_4	4	一块
-37	for a while	10_4	4	暂时
-38	fresh	11_1	4	adj.新鲜的
-38	air	11_1	4	n.空气
-38	vegetable	11_1	4	adj.蔬菜的
-38	water	11_1	4	n.水
-38	fresh air	11_1	4	新鲜空气
-38	freshwater	11_1	4	n. 淡水
-38	lay	11_1	4	vt.放置
-38	man	11_1	4	n.男人
-38	post	11_1	4	n.邮件
-38	fresh vegetable	11_1	4	生鲜蔬菜
-39	wood	11_2	4	n.木材
-39	layman	11_2	4	n.门外汉
-39	postman	11_2	4	n.邮递员
-39	woodman	11_2	4	n. 樵夫
-39	freshman	11_2	4	n. 新手
-39	western	11_2	4	n.西方人
-39	wear	11_2	4	vt.穿著
-39	clothes	11_2	4	n.衣服
-39	country	11_2	4	n.国家
-39	so	11_2	4	conj.所以
-40	same	11_3	4	adj.同样的
-40	them	11_3	4	pron.他(她
-40	hair	11_3	4	n.头发
-40	tell	11_3	4	vt.告诉
-40	it is hard to	11_3	4	做…很难
-40	chair	11_3	4	n.椅子
-40	pool	11_3	4	n.水塘(池)
-40	near	11_3	4	prep.靠近
-40	person	11_3	4	n.人
-40	whether ... or	11_3	4	是否
-41	beside	11_4	4	prep.在...旁边
-41	answer	11_4	4	vt.&vi.答复
-41	daughter	11_4	4	n.女儿
-41	say	11_4	4	vt.说
-41	her	11_4	4	pron.她的
-41	know	11_4	4	vt.&vi.知道
-41	confuse	11_4	4	vt.困惑
-41	wrong	11_4	4	adj.错误的
-41	China	11_4	4	n.瓷器
-41	the USA	11_4	4	美利坚合众国
-42	fruit	12_1	3	n.水果
-42	shop	12_1	3	n.商店
-42	salad	12_1	3	n.色拉
-42	fly	12_1	3	vt.&vi.飞
-42	fruit shop	12_1	3	水果店
-42	birthday	12_1	3	n.生日
-42	cake	12_1	3	n.蛋糕
-42	moon	12_1	3	n.月亮
-42	fruit salad	12_1	3	水果沙拉
-42	fruit fly	12_1	3	果蝇
-43	pan	12_2	3	n.平底锅
-43	pancake	12_2	3	n.薄煎饼
-43	birthday cake	12_2	3	生日蛋糕
-43	fruit cake	12_2	3	水果蛋糕
-43	together	12_2	3	adv.一起
-43	airplane	12_2	3	n.飞机
-43	journey	12_2	3	n.旅程
-43	farmer	12_2	3	n.农夫
-43	for a while	12_2	3	暂时
-43	something	12_2	3	pron.某事(物)
-44	let	12_3	3	vt.让
-44	pass	12_3	3	vt.&vi.通过
-44	fair	12_3	3	adj.公平的
-44	each other	12_3	3	彼此
-44	riddle	12_3	3	n.谜
-44	pay	12_3	3	vt.支付
-44	have to	12_3	3	不得不
-44	the answer to ...	12_3	3	…的答案
-44	think about	12_3	3	考虑
-45	mad	13_1	4	adj.发疯的
-45	man	13_1	4	n.男人
-45	wind	13_1	4	n.风
-45	woman	13_1	4	n.女人
-45	madman	13_1	4	n. 疯子
-45	madwoman	13_1	4	n. 疯女
-45	green	13_1	4	adj.绿色的
-45	house	13_1	4	n.房子
-45	wife	13_1	4	n.妻子
-46	mad wind	13_2	4	狂风
-46	opera	13_2	4	n.歌剧
-46	greenhouse	13_2	4	n.温室
-46	housewife	13_2	4	n.家庭主妇
-46	madhouse	13_2	4	n. 精神病院
-46	opera house	13_2	4	歌剧院
-46	earth	13_2	4	n.地球
-46	moon	13_2	4	n.月亮
-46	round	13_2	4	n.圆
-47	star	13_3	4	n.星
-47	in the day time	13_3	4	白天
-47	light	13_3	4	n.光
-47	heat	13_3	4	n.热
-47	itself	13_3	4	pron.它自己
-47	without	13_3	4	prep.没有
-47	plant	13_3	4	n.植物
-47	either	13_3	4	pron.任一的
-47	satellite	13_3	4	n.卫星
-48	nothing	13_4	4	pron.什么也没有
-48	neighbor	13_4	4	n.邻居
-48	all the time	13_4	4	始终
-48	us	13_4	4	pron.我们(we的宾格)
-48	and so on	13_4	4	诸如此类
-48	get on well with	13_4	4	与……相处融洽
-48	give out	13_4	4	用尽
-48	traffic light	13_4	4	红绿灯
-49	sea	14_1	4	n.海
-49	cow	14_1	4	n.母牛
-49	horse	14_1	4	n.马
-49	lion	14_1	4	n.狮子
-49	sea cow	14_1	4	海牛
-49	dog	14_1	4	n.狗
-49	biscuit	14_1	4	n.饼干
-49	police	14_1	4	n.警察
-49	sea horse	14_1	4	海马
-50	sea lion	14_2	4	海狮
-50	sheep	14_2	4	n.羊
-50	sheepdog	14_2	4	n. 牧羊犬
-50	dog biscuit	14_2	4	狗食饼干
-50	police dog	14_2	4	警犬
-50	sea dog	14_2	4	海豹
-50	went	14_2	4	v. 去（过去式）
-50	bought	14_2	4	v. 买（过去式）
-50	years old	14_2	4	…岁
-51	one day	14_3	4	有一天
-51	the first time	14_3	4	第一次
-51	ticket	14_3	4	n.票
-51	minute	14_3	4	n.分钟
-51	first	14_3	4	adv.首先
-51	second	14_3	4	n.第二
-51	came out	14_3	4	出来
-51	third	14_3	4	adj.第三(的)
-51	another	14_3	4	adj.另一
-52	the ticket office	14_4	4	售票处
-52	how many	14_4	4	多少
-52	how much	14_4	4	多少
-52	piece	14_4	4	n.片
-52	meet	14_4	4	vt.遇见
-52	cinema	14_4	4	n.电影院
-52	tear ... to	14_4	4	把…撕成...
-52	at the door	14_4	4	在门边
-53	post	15_1	4	n.邮件
-53	box	15_1	4	n.盒子
-53	code	15_1	4	n.码
-53	office	15_1	4	n.办公室
-53	postbox	15_1	4	n. 邮箱
-53	postcode	15_1	4	n. 邮政编码
-53	red	15_1	4	adj.红色的
-53	card	15_1	4	n.卡片
-53	score	15_1	4	n.得分
-53	post office	15_1	4	邮局
-54	bank	15_2	4	n.银行
-54	scorecard	15_2	4	n. 记分卡
-54	postcard	15_2	4	n.明信片
-54	red card	15_2	4	红牌
-54	bank card	15_2	4	银行信用卡
-54	honest	15_2	4	adj.诚实的
-54	widow	15_2	4	n.寡妇
-54	businessman	15_2	4	n.商人
-54	saw	15_2	4	vt.&vi.用锯子锯
-54	were	15_2	4	v. 是（过去式）
-55	poor	15_3	4	adj.贫穷的
-55	said	15_3	4	v. 说（过去式）
-55	save	15_3	4	vt.节省
-55	sat down	15_3	4	坐下
-55	a piece of	15_3	4	一块
-55	took	15_3	4	v. 拿（过去式）
-55	wrote	15_3	4	v. 写（过去式）
-55	gave	15_3	4	v.给(过去式）
-55	heard	15_3	4	v. 听到（过去式）
-56	instead of	15_4	4	代替
-56	amazed	15_4	4	adj. 惊奇的
-56	was	15_4	4	be的过去式（第一人称）
-56	so much	15_4	4	这么
-56	make a mistake	15_4	4	犯错误
-56	check	15_4	4	vt.检查
-56	once more	15_4	4	再一次
-56	asked for	15_4	4	要求得到
-56	be rewarded	15_4	4	被奖赏
-57	ring	16_1	3	n.环
-57	tone	16_1	3	n.音调
-57	wedding	16_1	3	n.婚礼
-57	ear	16_1	3	n.耳朵
-57	ring tone	16_1	3	电话铃音
-57	earring	16_1	3	n.耳环
-57	baby	16_1	3	n.婴儿
-57	finger	16_1	3	n.手指
-57	middle	16_1	3	n.中部
-57	wedding ring	16_1	3	结婚戒指
-58	print	16_2	3	vt.&vi.打印
-58	fingerprint	16_2	3	n.指纹
-58	baby finger	16_2	3	小拇指
-58	middle finger	16_2	3	中指
-58	ring finger	16_2	3	无名指
-58	answer	16_2	3	vt.&vi.答复
-58	drive	16_2	3	v.开车
-58	look for	16_2	3	寻找
-58	on the side of	16_2	3	站在…一边
-58	get into	16_2	3	进入
-59	mile	16_3	3	n.英里
-59	come to	16_3	3	共计
-59	the way to	16_3	3	通向…的路
-59	turn around	16_3	3	转向反方向
-59	go back	16_3	3	回去
-59	hotel	16_3	3	n.旅馆
-59	repair	16_3	3	vi.去v.修理
-59	in front of	16_3	3	在…前面
-59	something wrong with	16_3	3	…出了毛病
-59	be doing	16_3	3	表达当时的行动
-60	rest	17_1	4	vt.&vi.（使）休息
-60	house	17_1	4	n.房子
-60	room	17_1	4	n.房间
-60	cure	17_1	4	vt.&vi.治疗
-60	rest house	17_1	4	招待所
-60	restroom	17_1	4	n. 厕所
-60	boy	17_1	4	n.男孩
-60	home	17_1	4	n.家
-60	work	17_1	4	n.工作
-61	rest cure	17_2	4	静养疗法
-61	address	17_2	4	n.地址
-61	homework	17_2	4	n.家庭作业
-61	home boy	17_2	4	老乡
-61	home address	17_2	4	家庭住址
-61	shake heads	17_2	4	摇头
-61	Indian	17_2	4	adj. 印度的
-61	other	17_2	4	adj.别的
-61	meaning	17_2	4	n.意义
-62	talk to	17_3	4	与…谈话
-62	trouble	17_3	4	n.困扰
-62	or	17_3	4	conj.或者
-62	hired	17_3	4	v. 雇用（过去式）
-62	foreign officer	17_3	4	外交官
-62	on business	17_3	4	出差
-62	told	17_3	4	v. 告诉（过去式）
-62	repeated	17_3	4	adj. 再三的
-62	send ... to	17_3	4	把…送到…
-63	at once	17_4	4	马上
-63	at last	17_4	4	最后
-63	order	17_4	4	n.命令
-63	shout	17_4	4	n.呼喊
-63	refuse	17_4	4	vt.&vi.拒绝
-63	how dare	17_4	4	怎么敢…
-63	in a loud voice	17_4	4	大声地
-63	thought about	17_4	4	想到
-63	for a while	17_4	4	暂时
-64	black	18_1	4	adj.黑（色）的
-64	tea	18_1	4	n.茶
-64	leaf	18_1	4	n.树叶
-64	pot	18_1	4	n.罐
-64	black tea	18_1	4	红茶
-64	teapot	18_1	4	n.茶壶
-64	bottle	18_1	4	n.瓶子
-64	party	18_1	4	n.社交聚会
-64	dinner	18_1	4	n.主餐
-65	tea leaf	18_2	4	茶叶
-65	birthday	18_2	4	n.生日
-65	bottle party	18_2	4	自带瓶酒的宴会
-65	dinner party	18_2	4	宴会
-65	birthday party	18_2	4	生日宴会
-65	tea party	18_2	4	茶话会
-65	wrong	18_2	4	adj.错误的
-65	thick	18_2	4	adj.厚的
-65	thin	18_2	4	adj.瘦的
-66	sole	18_3	4	adj.唯一的
-66	went out	18_3	4	出去
-66	felt	18_3	4	n.毛毯
-66	uncomfortable	18_3	4	adj.不舒服的
-66	was	18_3	4	be的过去式（第一人称）
-66	higher	18_3	4	adj.高
-66	one ... the other	18_3	4	一个…另一个…
-66	strange	18_3	4	adj.奇怪的
-66	found	18_3	4	vt.创办
-67	true	18_4	4	adj.真实的
-67	looked down	18_4	4	看不起
-67	in a short while	18_4	4	不久
-67	the same as	18_4	4	与…一致
-67	wife	18_4	4	n.妻子
-67	wore	18_4	4	n.穿着
-67	careful	18_4	4	adj.小心的
-67	careless	18_4	4	adj.粗心的
-67	caught	18_4	4	v.抓住(过去式）
-67	change	18_4	4	v.改变
+1	e-mail	1_1	9	电子邮件
+1	address	1_1	9	n.地址
+1	home	1_1	9	n.家
+2	website	1_2	9	n.网站
+2	e-mail address	1_2	9	电子邮件地址
+2	book	1_2	9	n.书
+2	shop	1_2	9	n.商店
+2	shelf	1_2	9	n.架子
+3	home address	1_3	9	家庭住址
+3	website address	1_3	9	网址
+3	mark	1_3	9	n.标记
+3	bookshop	1_3	9	n. 书店
+3	bookshelf	1_3	9	n.书架
+4	bookmark	1_4	9	n.书签
+4	address book	1_4	9	通讯簿
+4	librarian	1_4	9	n.图书管理员
+4	naughty	1_4	9	adj.顽皮的
+4	little	1_4	9	adj.小的
+5	now	1_5	9	n.现在
+5	snack bar	1_5	9	小吃店
+5	has	1_5	9	v. 有
+5	mouth	1_5	9	n.嘴
+5	hospital	1_5	9	n.医院
+6	write	1_6	9	v.写
+6	borrow ... from	1_6	9	从…借来…
+6	want	1_6	9	vi.要
+6	lesson	1_6	9	n.课
+6	nurse	1_6	9	n.护士
+7	take ... to	1_7	9	带…到…
+7	ask ... to	1_7	9	让…去…
+7	cry	1_7	9	n.哭
+7	injection	1_7	9	n.注射
+7	better	1_7	9	adj.较好的
+8	feel	1_8	9	vt.感觉
+8	give ... to	1_8	9	把…给…
+8	term	1_8	9	n.学期
+8	when	1_8	9	conj.在…时
+9	angrily	1_9	9	adv. 愤怒地
+9	make	1_9	9	vt.做
+9	should	1_9	9	verbauxiliary.应该
+9	after a while	1_9	9	过了一会儿
+10	arm	2_1	8	n.手臂
+10	chair	2_1	8	n.椅子
+10	left	2_1	8	adj.左边的
+10	armchair	2_1	8	n.扶手椅
+10	right	2_1	8	adj.正确的
+11	candy	2_2	8	n.糖果
+11	man	2_2	8	n.男人
+11	ass	2_2	8	n.驴
+11	left arm	2_2	8	左臂
+11	right arm	2_2	8	右臂
+12	floss	2_3	8	n. 牙线
+12	candyfloss	2_3	8	n. 棉花糖
+12	candy man	2_3	8	卖糖果的人
+12	candy ass	2_3	8	胆小鬼
+12	arm candy	2_3	8	漂亮女人
+13	represent	2_4	8	vt.表现
+13	unpleasant	2_4	8	adj.使人不愉快的
+13	mood	2_4	8	n.心情
+13	change	2_4	8	v.改变
+13	anger	2_4	8	n.忿怒
+14	fear	2_5	8	vt.害怕
+14	ourselves	2_5	8	pron.我们自己
+14	choose	2_5	8	vt.&vi.选择
+14	show	2_5	8	v.展现
+14	find	2_5	8	vt.&vi.发现
+15	life	2_6	8	n.生活
+15	unhappy	2_6	8	adj.不快乐的
+15	coward	2_6	8	n.懦夫
+15	choice	2_6	8	n.选择
+15	at the moment	2_6	8	此刻
+16	than	2_7	8	conj.比（用于比较级）
+16	room	2_7	8	n.房间
+16	same	2_7	8	adj.同样的
+16	even though	2_7	8	即使
+16	colour	2_7	8	n. 颜色
+17	if	2_8	8	conj.如果
+17	temperature	2_8	8	n.温度
+17	affect	2_8	8	vt.影响
+17	possible	2_8	8	adj.可能的
+17	own	2_8	8	adj.自己的
+18	talk	3_1	7	n.谈话
+18	baby	3_1	7	n.婴儿
+18	face	3_1	7	n.脸
+18	finger	3_1	7	n.手指
+18	baby talk	3_1	7	儿语
+19	blue	3_2	7	adj.蓝色的
+19	berry	3_2	7	n.浆果
+19	whale	3_2	7	n.鲸
+19	baby face	3_2	7	娃娃脸
+19	baby finger	3_2	7	小拇指
+20	tooth	3_3	7	n.牙齿
+20	blueberry	3_3	7	n. 蓝莓
+20	blue whale	3_3	7	蓝鲸
+20	baby blue	3_3	7	淡蓝色
+20	scene	3_3	7	n.现场
+21	accident	3_4	7	n.事故
+21	people	3_4	7	n.人们
+21	gather	3_4	7	vt.收集
+21	around	3_4	7	prep.在...附近
+21	close	3_4	7	vt.关
+22	laugh	3_5	7	vt.&vi.笑
+22	shout	3_5	7	n.呼喊
+22	so	3_5	7	conj.所以
+22	surprised	3_5	7	adj. 出人意料的
+22	way	3_5	7	n.道路
+23	hear	3_6	7	vt.&vi.听到
+23	road	3_6	7	n.路
+23	make	3_6	7	vt.做
+23	lie	3_6	7	n.谎言
+23	film	3_6	7	n.电影
+24	anyone	3_7	7	pron.任何人
+24	get out of way	3_7	7	让开
+24	be eager to do sth.	3_7	7	渴望做
+24	make way for	3_7	7	为…开路
+24	one day	3_7	7	有一天
+25	sleep	4_1	8	v.睡觉
+25	beauty	4_1	8	n.美
+25	contest	4_1	8	n.竞赛
+25	mark	4_1	8	n.标记
+25	beauty sleep	4_1	8	小睡
+26	flower	4_2	8	n.花
+26	shop	4_2	8	n.商店
+26	drug	4_2	8	n.药
+26	beauty contest	4_2	8	选美比赛
+26	beauty mark	4_2	8	美人痣
+27	keeper	4_3	8	n.保管人
+27	shopkeeper	4_3	8	n.店主
+27	flower shop	4_3	8	花店
+27	drug shop	4_3	8	药店
+27	beauty shop	4_3	8	美容院
+28	mouse	4_4	8	n.老鼠
+28	rat	4_4	8	n.鼠
+28	let	4_4	8	vt.让
+28	trap	4_4	8	n.圈套
+28	mousetrap	4_4	8	n. 捕鼠器
+29	doorbell	4_5	8	n. 门铃
+29	ring	4_5	8	n.环
+29	knee	4_5	8	n.膝盖
+29	floor	4_5	8	n.地板
+29	come out	4_5	8	出现
+30	fifth	4_6	8	num.第五
+30	says	4_6	8	v. 说（第三人称单数）
+30	don't	4_6	8	aux. 表示否定
+30	nice	4_6	8	adj.美好的
+30	come up to	4_6	8	达到
+31	for	4_7	8	prep.为
+31	there	4_7	8	adv.在那里
+31	catch	4_7	8	vt.抓住
+31	paw	4_7	8	n.手掌
+31	one of	4_7	8	其中之一
+32	have	4_8	8	v.有
+32	clever	4_8	8	adj.聪明的
+32	too	4_8	8	adj.太
+32	also	4_8	8	adv.也
+33	body	5_1	6	n.身体
+33	language	5_1	6	n. 语言
+33	clock	5_1	6	n.时钟
+33	bag	5_1	6	n.包
+33	body language	5_1	6	身体语言
+34	double	5_2	6	n.两倍
+34	room	5_2	6	n.房间
+34	chin	5_2	6	n.下巴
+34	body clock	5_2	6	生物钟
+34	body bag	5_2	6	运尸袋
+35	time	5_3	6	n.时间
+35	double room	5_3	6	双人房
+35	double chin	5_3	6	双下巴
+35	double time	5_3	6	双倍工资
+35	body double	5_3	6	替身演员
+36	must	5_4	6	aux.必须
+36	when	5_4	6	conj.在…时
+36	England	5_4	6	n. 英格兰
+36	street	5_4	6	n.街道
+36	careful	5_4	6	adj.小心的
+37	because	5_5	6	conj.因为
+37	drive	5_5	6	v.开车
+37	traffic	5_5	6	n.交通
+37	before	5_5	6	prep.在…之前
+37	work	5_5	6	n.工作
+37	cross	5_5	6	v.交叉
+38	on the left	5_6	6	在左边
+38	come from	5_6	6	来自
+38	on the right	5_6	6	在右边
+38	the same as	5_6	6	与…一致
+38	in the morning	5_6	6	在清晨
+38	in the evening	5_6	6	在晚上
+39	car	6_1	8	n.小汽车
+39	wash	6_1	8	v.洗
+39	seat	6_1	8	n.位子
+39	port	6_1	8	n.港口
+39	car wash	6_1	8	洗车处
+40	carport	6_2	8	n. 车库
+40	sick	6_2	8	adj.恶心的
+40	bed	6_2	8	n.床
+40	bag	6_2	8	n.包
+40	car seat	6_2	8	车辆座椅
+41	leave	6_3	8	v.离开
+41	carsick	6_3	8	adj. 晕车的
+41	sick bed	6_3	8	病床
+41	sick bag	6_3	8	清洁袋
+41	sick leave	6_3	8	病假
+42	walk	6_4	8	vi.走路
+42	forest	6_4	8	n.森林
+42	hungry	6_4	8	adj.饥饿的
+42	thirsty	6_4	8	adj.口渴的
+42	bite	6_4	8	n.咬
+43	catch	6_5	8	vt.抓住
+43	begin	6_5	8	vt.&vi.开始
+43	fight	6_5	8	n.打架
+43	keep away	6_5	8	防范
+43	run after	6_5	8	追求
+44	paw	6_6	8	n.手掌
+44	hit	6_6	8	n.打(击)
+44	back	6_6	8	adv.向后地
+44	remember	6_6	8	vt.&vi.记得
+44	neither ... nor	6_6	8	既不…也不…
+45	around	6_7	8	prep.在...附近
+45	win	6_7	8	vi.胜利
+45	now	6_7	8	n.现在
+45	back	6_7	8	adv.向后地
+45	at the same time	6_7	8	同时
+46	its	6_8	8	pron.（it的所有格)它的
+46	both	6_8	8	pron.二者
+46	tired	6_8	8	adj.疲劳的
+46	with	6_8	8	prep.和...一起
+47	fat	7_1	7	adj.肥胖的
+47	cat	7_1	7	n.猫
+47	walk	7_1	7	vi.走路
+47	fight	7_1	7	n.打架
+47	fat cat	7_1	7	有钱有势的人
+48	catwalk	7_2	7	n. 猫步
+48	catfight	7_2	7	n. 激烈的争辩
+48	fish	7_2	7	n.鱼
+48	farm	7_2	7	n.农场
+48	hook	7_2	7	n.钩子
+49	wife	7_3	7	n.妻子
+49	fishwife	7_3	7	n. 卖鱼妇
+49	catfish	7_3	7	n. 鲶鱼
+49	fish farm	7_3	7	养鱼场
+49	fish hook	7_3	7	钓鱼钩
+50	shoes	7_4	7	n. 鞋子（复数）
+50	how	7_4	7	adv.如何
+50	dirty	7_4	7	adj.肮脏的
+50	look at	7_4	7	看
+50	one day	7_4	7	有一天
+51	must	7_5	7	aux.必须
+51	clean	7_5	7	adj.干净的
+51	them	7_5	7	pron.他(她
+51	only	7_5	7	adv.仅仅
+51	yesterday	7_5	7	n.&adv.昨天
+52	again	7_6	7	adv.又
+52	tomorrow	7_6	7	adv.明天
+52	all right	7_6	7	好
+52	come back	7_6	7	回来
+53	something	7_7	7	pron.某事(物)
+53	hungry	7_7	7	adj.饥饿的
+53	breakfast	7_7	7	n.早餐
+53	lunch	7_7	7	n.午餐
+54	day	8_1	7	n.一天
+54	school	8_1	7	n.学校
+54	job	8_1	7	n.工作
+54	dream	8_1	7	n.梦
+54	day school	8_1	7	走读学校
+55	daydream	8_2	7	n. 白日梦
+55	boy	8_2	7	n.男孩
+55	friend	8_2	7	n.朋友
+55	cow	8_2	7	n.母牛
+55	day job	8_2	7	全日性工作
+56	band	8_3	7	n.带;箍
+56	boyfriend	8_3	7	n. 男朋友
+56	cowboy	8_3	7	n.牛仔
+56	boy band	8_3	7	男子乐团
+56	day boy	8_3	7	走读生
+57	people	8_4	7	n.人们
+57	little	8_4	7	adj.小的
+57	all	8_4	7	adj.所有的
+57	buy	8_4	7	vt.买
+57	get on	8_4	7	上车
+58	conductor	8_5	7	n.售票员
+58	give	8_5	7	vt.&vi.给予
+58	ticket	8_5	7	n.票
+58	zoo	8_5	7	n.动物园
+58	answer	8_5	7	vt.&vi.答复
+59	laugh	8_6	7	vt.&vi.笑
+59	face	8_6	7	n.脸
+59	another	8_6	7	adj.另一
+59	find	8_6	7	vt.&vi.发现
+59	at last	8_6	7	最后
+60	daughter	8_7	7	n.女儿
+60	story	8_7	7	n.故事
+60	happen	8_7	7	vi.发生
+60	in front of	8_7	7	在…前面
+61	dog	9_1	6	n.狗
+61	biscuit	9_1	6	n.饼干
+61	police	9_1	6	n.警察
+61	sheep	9_1	6	n.羊
+61	dog biscuit	9_1	6	狗食饼干
+62	sheepdog	9_2	6	n. 牧羊犬
+62	birth	9_2	6	n.出生
+62	day	9_2	6	n.一天
+62	all	9_2	6	adj.所有的
+62	police dog	9_2	6	警犬
+63	birthday	9_3	6	n.生日
+63	dooms-day	9_3	6	世界末日
+63	all day	9_3	6	整天
+63	dog days	9_3	6	三伏天
+63	goat	9_3	6	n.山羊
+64	fresh	9_4	6	adj.新鲜的
+64	grass	9_4	6	n.草
+64	little	9_4	6	adj.小的
+64	forest	9_4	6	n.森林
+64	wolf	9_4	6	n.狼
+65	hungry	9_5	6	adj.饥饿的
+65	food	9_5	6	n.食物
+65	favourite	9_5	6	adj.特别喜爱的
+65	if	9_5	6	conj.如果
+65	afraid	9_5	6	adj.害怕的
+65	think	9_5	6	vt.想
+66	pretend to	9_6	6	假装
+66	be poisoned	9_6	6	被毒害
+66	think	9_6	6	vt.想
+66	go away	9_6	6	走开
+66	go on doing sth.	9_6	6	继续做
+66	at last	9_6	6	最后
+67	eye	10_1	7	n.眼睛
+67	brow	10_1	7	n.眉毛
+67	lid	10_1	7	n.盖
+67	lash	10_1	7	n.鞭子
+67	eyebrow	10_1	7	n.眉毛
+68	eyelid	10_2	7	n.眼皮
+68	eyelash	10_2	7	n. 睫毛
+68	tooth	10_2	7	n.牙齿
+68	pick	10_2	7	vt.挑选
+68	brush	10_2	7	n.刷子
+69	paste	10_3	7	v.粘贴
+69	toothpick	10_3	7	n. 牙签
+69	toothbrush	10_3	7	n.牙刷
+69	toothpaste	10_3	7	n.牙膏
+69	eye teeth	10_3	7	上尖牙
+70	lunch	10_4	7	n.午餐
+70	children	10_4	7	n.儿童(复数）
+70	note	10_4	7	n.笔记
+70	at the head of	10_4	7	在…的前面
+70	at the end of	10_4	7	在……尽头
+71	only	10_5	7	adv.仅仅
+71	dining room	10_5	7	餐厅
+71	a pile of	10_5	7	一堆
+71	line up	10_5	7	整队
+71	post on	10_5	7	把…张贴在…上
+72	other	10_6	7	adj.别的
+72	large	10_6	7	adj.大的
+72	chocolate	10_6	7	n.巧克力
+72	cookies	10_6	7	n. 饼干
+72	take out	10_6	7	取出
+73	watch	10_7	7	n.手表
+73	god	10_7	7	n. 神
+73	insect	10_7	7	n.昆虫
+73	a piece of	10_7	7	一块
+73	for a while	10_7	7	暂时
+74	fresh	11_1	8	adj.新鲜的
+74	air	11_1	8	n.空气
+74	vegetable	11_1	8	adj.蔬菜的
+74	water	11_1	8	n.水
+74	fresh air	11_1	8	新鲜空气
+75	freshwater	11_2	8	n. 淡水
+75	lay	11_2	8	vt.放置
+75	man	11_2	8	n.男人
+75	post	11_2	8	n.邮件
+75	fresh vegetable	11_2	8	生鲜蔬菜
+76	wood	11_3	8	n.木材
+76	layman	11_3	8	n.门外汉
+76	postman	11_3	8	n.邮递员
+76	woodman	11_3	8	n. 樵夫
+76	freshman	11_3	8	n. 新手
+77	western	11_4	8	n.西方人
+77	wear	11_4	8	vt.穿著
+77	clothes	11_4	8	n.衣服
+77	country	11_4	8	n.国家
+77	so	11_4	8	conj.所以
+78	same	11_5	8	adj.同样的
+78	them	11_5	8	pron.他(她
+78	hair	11_5	8	n.头发
+78	tell	11_5	8	vt.告诉
+78	it is hard to	11_5	8	做…很难
+79	chair	11_6	8	n.椅子
+79	pool	11_6	8	n.水塘(池)
+79	near	11_6	8	prep.靠近
+79	person	11_6	8	n.人
+79	whether ... or	11_6	8	是否
+80	beside	11_7	8	prep.在...旁边
+80	answer	11_7	8	vt.&vi.答复
+80	daughter	11_7	8	n.女儿
+80	say	11_7	8	vt.说
+80	her	11_7	8	pron.她的
+81	know	11_8	8	vt.&vi.知道
+81	confuse	11_8	8	vt.困惑
+81	wrong	11_8	8	adj.错误的
+81	China	11_8	8	n.瓷器
+81	the USA	11_8	8	美利坚合众国
+82	fruit	12_1	6	n.水果
+82	shop	12_1	6	n.商店
+82	salad	12_1	6	n.色拉
+82	fly	12_1	6	vt.&vi.飞
+82	fruit shop	12_1	6	水果店
+83	birthday	12_2	6	n.生日
+83	cake	12_2	6	n.蛋糕
+83	moon	12_2	6	n.月亮
+83	fruit salad	12_2	6	水果沙拉
+83	fruit fly	12_2	6	果蝇
+84	pan	12_3	6	n.平底锅
+84	pancake	12_3	6	n.薄煎饼
+84	birthday cake	12_3	6	生日蛋糕
+84	fruit cake	12_3	6	水果蛋糕
+84	together	12_3	6	adv.一起
+85	airplane	12_4	6	n.飞机
+85	journey	12_4	6	n.旅程
+85	farmer	12_4	6	n.农夫
+85	for a while	12_4	6	暂时
+85	something	12_4	6	pron.某事(物)
+86	let	12_5	6	vt.让
+86	pass	12_5	6	vt.&vi.通过
+86	fair	12_5	6	adj.公平的
+86	each other	12_5	6	彼此
+86	riddle	12_5	6	n.谜
+87	pay	12_6	6	vt.支付
+87	have to	12_6	6	不得不
+87	the answer to ...	12_6	6	…的答案
+87	think about	12_6	6	考虑
+88	mad	13_1	7	adj.发疯的
+88	man	13_1	7	n.男人
+88	wind	13_1	7	n.风
+88	woman	13_1	7	n.女人
+88	madman	13_1	7	n. 疯子
+89	madwoman	13_2	7	n. 疯女
+89	green	13_2	7	adj.绿色的
+89	house	13_2	7	n.房子
+89	wife	13_2	7	n.妻子
+89	mad wind	13_2	7	狂风
+90	opera	13_3	7	n.歌剧
+90	greenhouse	13_3	7	n.温室
+90	housewife	13_3	7	n.家庭主妇
+90	madhouse	13_3	7	n. 精神病院
+90	opera house	13_3	7	歌剧院
+91	earth	13_4	7	n.地球
+91	moon	13_4	7	n.月亮
+91	round	13_4	7	n.圆
+91	star	13_4	7	n.星
+91	in the day time	13_4	7	白天
+92	light	13_5	7	n.光
+92	heat	13_5	7	n.热
+92	itself	13_5	7	pron.它自己
+92	without	13_5	7	prep.没有
+92	plant	13_5	7	n.植物
+93	either	13_6	7	pron.任一的
+93	satellite	13_6	7	n.卫星
+93	nothing	13_6	7	pron.什么也没有
+93	neighbor	13_6	7	n.邻居
+93	all the time	13_6	7	始终
+94	us	13_7	7	pron.我们(we的宾格)
+94	and so on	13_7	7	诸如此类
+94	get on well with	13_7	7	与……相处融洽
+94	give out	13_7	7	用尽
+94	traffic light	13_7	7	红绿灯
+95	sea	14_1	7	n.海
+95	cow	14_1	7	n.母牛
+95	horse	14_1	7	n.马
+95	lion	14_1	7	n.狮子
+95	sea cow	14_1	7	海牛
+96	dog	14_2	7	n.狗
+96	biscuit	14_2	7	n.饼干
+96	police	14_2	7	n.警察
+96	sea horse	14_2	7	海马
+96	sea lion	14_2	7	海狮
+97	sheep	14_3	7	n.羊
+97	sheepdog	14_3	7	n. 牧羊犬
+97	dog biscuit	14_3	7	狗食饼干
+97	police dog	14_3	7	警犬
+97	sea dog	14_3	7	海豹
+98	went	14_4	7	v. 去（过去式）
+98	bought	14_4	7	v. 买（过去式）
+98	years old	14_4	7	…岁
+98	one day	14_4	7	有一天
+98	the first time	14_4	7	第一次
+99	ticket	14_5	7	n.票
+99	minute	14_5	7	n.分钟
+99	first	14_5	7	adv.首先
+99	second	14_5	7	n.第二
+99	came out	14_5	7	出来
+100	third	14_6	7	adj.第三(的)
+100	another	14_6	7	adj.另一
+100	the ticket office	14_6	7	售票处
+100	how many	14_6	7	多少
+100	how much	14_6	7	多少
+101	piece	14_7	7	n.片
+101	meet	14_7	7	vt.遇见
+101	cinema	14_7	7	n.电影院
+101	tear ... to	14_7	7	把…撕成...
+101	at the door	14_7	7	在门边
+102	post	15_1	8	n.邮件
+102	box	15_1	8	n.盒子
+102	code	15_1	8	n.码
+102	office	15_1	8	n.办公室
+102	postbox	15_1	8	n. 邮箱
+103	postcode	15_2	8	n. 邮政编码
+103	red	15_2	8	adj.红色的
+103	card	15_2	8	n.卡片
+103	score	15_2	8	n.得分
+103	post office	15_2	8	邮局
+104	bank	15_3	8	n.银行
+104	scorecard	15_3	8	n. 记分卡
+104	postcard	15_3	8	n.明信片
+104	red card	15_3	8	红牌
+104	bank card	15_3	8	银行信用卡
+105	honest	15_4	8	adj.诚实的
+105	widow	15_4	8	n.寡妇
+105	businessman	15_4	8	n.商人
+105	saw	15_4	8	vt.&vi.用锯子锯
+105	were	15_4	8	v. 是（过去式）
+106	poor	15_5	8	adj.贫穷的
+106	said	15_5	8	v. 说（过去式）
+106	save	15_5	8	vt.节省
+106	sat down	15_5	8	坐下
+106	a piece of	15_5	8	一块
+107	took	15_6	8	v. 拿（过去式）
+107	wrote	15_6	8	v. 写（过去式）
+107	gave	15_6	8	v.给(过去式）
+107	heard	15_6	8	v. 听到（过去式）
+107	instead of	15_6	8	代替
+108	amazed	15_7	8	adj. 惊奇的
+108	was	15_7	8	be的过去式（第一人称）
+108	so much	15_7	8	这么
+108	make a mistake	15_7	8	犯错误
+109	check	15_8	8	vt.检查
+109	once more	15_8	8	再一次
+109	asked for	15_8	8	要求得到
+109	be rewarded	15_8	8	被奖赏
+110	ring	16_1	6	n.环
+110	tone	16_1	6	n.音调
+110	wedding	16_1	6	n.婚礼
+110	ear	16_1	6	n.耳朵
+110	ring tone	16_1	6	电话铃音
+111	earring	16_2	6	n.耳环
+111	baby	16_2	6	n.婴儿
+111	finger	16_2	6	n.手指
+111	middle	16_2	6	n.中部
+111	wedding ring	16_2	6	结婚戒指
+112	print	16_3	6	vt.&vi.打印
+112	fingerprint	16_3	6	n.指纹
+112	baby finger	16_3	6	小拇指
+112	middle finger	16_3	6	中指
+112	ring finger	16_3	6	无名指
+113	answer	16_4	6	vt.&vi.答复
+113	drive	16_4	6	v.开车
+113	look for	16_4	6	寻找
+113	on the side of	16_4	6	站在…一边
+113	get into	16_4	6	进入
+114	mile	16_5	6	n.英里
+114	come to	16_5	6	共计
+114	the way to	16_5	6	通向…的路
+114	turn around	16_5	6	转向反方向
+114	go back	16_5	6	回去
+115	hotel	16_6	6	n.旅馆
+115	repair	16_6	6	vi.去v.修理
+115	in front of	16_6	6	在…前面
+115	something wrong with	16_6	6	…出了毛病
+115	be doing	16_6	6	表达当时的行动
+116	rest	17_1	7	vt.&vi.（使）休息
+116	house	17_1	7	n.房子
+116	room	17_1	7	n.房间
+116	cure	17_1	7	vt.&vi.治疗
+116	rest house	17_1	7	招待所
+117	restroom	17_2	7	n. 厕所
+117	boy	17_2	7	n.男孩
+117	home	17_2	7	n.家
+117	work	17_2	7	n.工作
+117	rest cure	17_2	7	静养疗法
+118	address	17_3	7	n.地址
+118	homework	17_3	7	n.家庭作业
+118	home boy	17_3	7	老乡
+118	home address	17_3	7	家庭住址
+118	shake heads	17_3	7	摇头
+119	Indian	17_4	7	adj. 印度的
+119	other	17_4	7	adj.别的
+119	meaning	17_4	7	n.意义
+119	talk to	17_4	7	与…谈话
+119	trouble	17_4	7	n.困扰
+120	or	17_5	7	conj.或者
+120	hired	17_5	7	v. 雇用（过去式）
+120	foreign officer	17_5	7	外交官
+120	on business	17_5	7	出差
+120	told	17_5	7	v. 告诉（过去式）
+121	repeated	17_6	7	adj. 再三的
+121	send ... to	17_6	7	把…送到…
+121	at once	17_6	7	马上
+121	at last	17_6	7	最后
+121	order	17_6	7	n.命令
+122	shout	17_7	7	n.呼喊
+122	refuse	17_7	7	vt.&vi.拒绝
+122	how dare	17_7	7	怎么敢…
+122	in a loud voice	17_7	7	大声地
+122	thought about	17_7	7	想到
+122	for a while	17_7	7	暂时
+123	black	18_1	7	adj.黑（色）的
+123	tea	18_1	7	n.茶
+123	leaf	18_1	7	n.树叶
+123	pot	18_1	7	n.罐
+123	black tea	18_1	7	红茶
+124	teapot	18_2	7	n.茶壶
+124	bottle	18_2	7	n.瓶子
+124	party	18_2	7	n.社交聚会
+124	dinner	18_2	7	n.主餐
+124	tea leaf	18_2	7	茶叶
+125	birthday	18_3	7	n.生日
+125	bottle party	18_3	7	自带瓶酒的宴会
+125	dinner party	18_3	7	宴会
+125	birthday party	18_3	7	生日宴会
+125	tea party	18_3	7	茶话会
+126	wrong	18_4	7	adj.错误的
+126	thick	18_4	7	adj.厚的
+126	thin	18_4	7	adj.瘦的
+126	sole	18_4	7	adj.唯一的
+126	went out	18_4	7	出去
+127	felt	18_5	7	n.毛毯
+127	uncomfortable	18_5	7	adj.不舒服的
+127	was	18_5	7	be的过去式（第一人称）
+127	higher	18_5	7	adj.高
+127	one ... the other	18_5	7	一个…另一个…
+128	strange	18_6	7	adj.奇怪的
+128	found	18_6	7	vt.创办
+128	true	18_6	7	adj.真实的
+128	looked down	18_6	7	看不起
+128	in a short while	18_6	7	不久
+128	the same as	18_6	7	与…一致
+129	wife	18_7	7	n.妻子
+129	wore	18_7	7	n.穿着
+129	careful	18_7	7	adj.小心的
+129	careless	18_7	7	adj.粗心的
+129	caught	18_7	7	v.抓住(过去式）
+129	change	18_7	7	v.改变
