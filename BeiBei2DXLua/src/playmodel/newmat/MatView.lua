@@ -75,7 +75,7 @@ function MatView:initUI()
     self.chinesesprite:addChild(self.chineselabel)
 
     local changeButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,"")
-	changeButton:setPosition(cc.p(s_DESIGN_WIDTH *0.8,700))
+	changeButton:setPosition(cc.p(s_DESIGN_WIDTH *0.9,700))
     changeButton:ignoreAnchorPointForPosition(false)
     changeButton:setAnchorPoint(0.5,0.5)
 	self.changeButton = changeButton
