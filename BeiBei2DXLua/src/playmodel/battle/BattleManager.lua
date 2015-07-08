@@ -90,8 +90,8 @@ function BattleManager:battleEnded(win)
 	-- self:initInfo()
 	self.gameEnded = true
 	self.win = win
-	local gameEndPopup = require(...).new()
-	self.view:addChild(gameEndPopup)
+	-- local gameEndPopup = require(...).new()
+	-- self.view:addChild(gameEndPopup)
 end
 --更新时间
 function BattleManager:updateTime(delta)
