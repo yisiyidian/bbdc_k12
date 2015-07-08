@@ -143,11 +143,11 @@ function LevelProgressPopup:createSummary(index)
 
         if taskIndex == -2 then     
             --showProgressHUD('', true)    
-            s_BattleManager:enterBattleView() -- 之前没有boss
+            s_BattleManager:enterBattleView(self.unit) -- 之前没有boss
             s_SCENE:removeAllPopups()  
         else--if taskIndex == self.islandIndex then
             --showProgressHUD('', true) 
-            s_BattleManager:enterBattleView() -- 按顺序打第一个boss
+            s_BattleManager:enterBattleView(self.unit) -- 按顺序打第一个boss
             s_SCENE:removeAllPopups()  
         -- else
         --     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch() --锁定触摸

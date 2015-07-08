@@ -20,7 +20,7 @@ function MatView:ctor()
 	-- 砖块容器
 
 	-- 这个地方开始调用每个小岛的单词
-	self.word = {"apple",}
+	self.word = s_BattleManager.wordList
 	-- 当前关卡的词汇
 	self.path = {}
 	self.path2 = {}

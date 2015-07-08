@@ -4,14 +4,14 @@ local EndPopup = class ("EndPopup",function ()
 	return cc.Layer:create()
 end)
 
-local function EndPopup:ctor(type)
+function EndPopup:ctor(type)
 	self.islandIndex = islandIndex
 	self.type = type
 
 	self:initUI()
 end
 
-local function EndPopup:initUI()
+function EndPopup:initUI()
 	-- 背景面板
 	local back = cc.Sprite:create()
 	back:setPosition(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2)
