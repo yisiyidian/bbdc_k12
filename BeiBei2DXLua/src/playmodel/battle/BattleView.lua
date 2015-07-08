@@ -49,6 +49,29 @@ function BattleView:initUI()
 
     local MatView = require("playmodel.newmat.MatView").create()
 	self:addChild(MatView)
+	--暂停按钮
+	s_SCENE.popupLayer.layerpaused = false 
+    local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
+    pauseBtn:ignoreAnchorPointForPosition(false)
+    pauseBtn:setAnchorPoint(1,1)
+    s_SCENE.popupLayer.pauseBtn = pauseBtn
+    self:addChild(pauseBtn,1)
+    pauseBtn:setPosition(, s_DESIGN_HEIGHT)
+
+    local function pauseScene(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+           s_BattleManager:createPausePopup()
+        --button sound
+            playSound(s_sound_buttonEffect)
+        end
+    end
+    pauseBtn:addTouchEventListener(pauseScene)
+
+    onAndroidKeyPressed(pauseBtn, function ()
+        s_BattleManager:createPausePopup()
+    end, function ()
+
+    end)
 
 
 end

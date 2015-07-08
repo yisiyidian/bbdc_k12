@@ -70,6 +70,8 @@ function BattleManager:initState(time,step,collect,wordList,stageType)
 	self.currentCollect = 0
 	--关卡类型(限制时间或步数)
 	self.stageType = stageType
+	--各种资源数量
+	self.petSource = {0,0,0,0,0}
 end
 --进入战斗场景
 function BattleManager:enterBattleView()
@@ -216,5 +218,15 @@ function BattleManager:changeNextBoss()
 	end
 	
 end
+function BattleManager:createPausePopup()
+        if self.gameEnded or self.gameEnded or s_SCENE.popupLayer.layerpaused then
+            return
+        end
+        local pauseLayer = require("view.Pause").create()
+        pauseLayer:setPosition(s_LEFT_X, 0)
+        s_SCENE.popupLayer:addBackground()
+        s_SCENE.popupLayer:addChild(pauseLayer)
+        s_SCENE.popupLayer.listener:setSwallowTouches(true)
+    end
 
 return BattleManager
