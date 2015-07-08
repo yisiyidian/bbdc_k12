@@ -114,6 +114,7 @@ function LocalDataBaseManager.getWordInfoFromWordName(word)
           print("s_WordDictionaryDatabase.allwords nil:"..word)
         end
         print("IS_DEVELOPMENT_MODE:"..tostring(IS_DEVELOPMENT_MODE))
+        word = string.gsub(word,"%.%.%.","_")
         if not IS_DEVELOPMENT_MODE and raw == nil then
             local tword =  require('model.words.' .. word)
             if tword == nil then

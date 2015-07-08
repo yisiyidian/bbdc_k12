@@ -211,7 +211,7 @@ function M.getUnitInfo(unitID)
         --         startIndex  = row.lastWordIndex + 1
         --     end
         -- end
-        print(debug.traceback())
+        -- print(debug.traceback())
         local hash = {}
         unit.wrongWordList  = s_BookUnitWord[bookKey][''..unitID]
         print('rightWordList',unit.rightWordList)

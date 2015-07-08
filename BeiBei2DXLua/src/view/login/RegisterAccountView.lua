@@ -15,7 +15,7 @@ local MissionConfig          = require("model.mission.MissionConfig") --任务�
 
 local RegisterAccountView = class("RegisterAccountView",function()
 	-- local layer = cc.LayerColor:create(cc.c4b(220,233,239,255),s_RIGHT_X - s_LEFT_X , s_DESIGN_HEIGHT)
-  print(debug.traceback())
+  -- print(debug.traceback())
 	local layer = cc.Layer:create()
 	layerHoldTouch(layer)
 	return layer

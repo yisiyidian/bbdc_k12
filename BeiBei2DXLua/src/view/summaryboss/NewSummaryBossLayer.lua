@@ -46,6 +46,7 @@ function NewSummaryBossLayer:ctor(unit)
                 self.changeBtnTime = self.changeBtnTime + delta
                 --两次划词引导结束后，判断是否需要换词引导
                 if self.changeBtnTime > self.totalTime / 2 and self.firstTimeToChange then
+                    self.mat.forceFail()
                     self.changeBtnTime = - 10000
                     self:changeWordTutorial()
                 end
@@ -185,7 +186,7 @@ function NewSummaryBossLayer:initWordList()
     print_lua_table(self.unit.wrongWordList)
     for i = 1,#self.unit.wrongWordList do
         local list = split(self.unit.wrongWordList[i],' ')
-        print_lua_table(list)
+        -- print_lua_table(list)
         wordList[i] = {}
         --wordList[i][1]表示这个词组的第一个单词，如果不是词组则取单词本身，【2】表示词组剩余部分,[3]表示词组以空格分隔，【4】表示词组以 分隔
         local temp = split(list[1],'-')
@@ -497,6 +498,7 @@ function NewSummaryBossLayer:initCrab()
     if self.unit ~= nil then
         id = self.unit.unitID
     end
+    -- print_lua_table(self.wordList)
     local crab = require("view.summaryboss.Crab").create(self.wordList[1][4],self.isTrying,id)
     self:addChild(crab,1)
     self.crab = crab

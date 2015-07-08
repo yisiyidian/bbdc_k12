@@ -3,7 +3,7 @@ local Manager = s_LocalDatabaseManager
 local M = {}
 
 function M.getUserDataFromLocalDB(objectOfDataClass, usertype)
-    print(debug.traceback())
+    -- print(debug.traceback())
     local lastLogIn = 0
     local data = nil
     print("SELECT * FROM " .. objectOfDataClass.className)
