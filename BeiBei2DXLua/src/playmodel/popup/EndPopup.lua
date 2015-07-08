@@ -128,35 +128,35 @@ function EndPopup:resetUI()
         self.exerciseBtn:removeFromParent()
     end
     local exerciseBtn = WordView.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","playmodel/endpopup/longButton_shadow.png",9,"训练场")
-    exerciseBtn:setPosition(100 , self.back:getContentSize().height * 0.4)
+    exerciseBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.4)
     self.exerciseBtn = exerciseBtn
     self.back:addChild(self.exerciseBtn)
     self.exerciseBtn.func = function ()
 
     end
 
+    if self.addChanceBtn ~= nil then
+        self.addChanceBtn:removeFromParent()
+    end
+    local addChanceBtn = WordView.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","playmodel/endpopup/longButton_shadow.png",9,"训练场")
+    addChanceBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.3)
+    self.addChanceBtn = addChanceBtn
+    self.back:addChild(self.addChanceBtn)
+    self.addChanceBtn.func = function ()
+        self.callBack()
+    end
 
+    if self.restartBtn ~= nil then
+        self.restartBtn:removeFromParent()
+    end
+    local restartBtn = WordView.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","playmodel/endpopup/longButton_shadow.png",9,"训练场")
+    restartBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.2)
+    self.restartBtn = restartBtn
+    self.back:addChild(self.restartBtn)
+    self.restartBtn.func = function ()
+
+    end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 return EndPopup
