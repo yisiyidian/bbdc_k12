@@ -47,7 +47,7 @@ end
 -- 	self.currentTime = 0
 -- end
 --初始化state
-function BattleManager:initState(time,step,collect,wordList)
+function BattleManager:initState(time,step,collect,wordList,stageType)
 	--游戏是否暂停
 	self.gamePaused = false
 	--游戏是否开始
@@ -68,12 +68,15 @@ function BattleManager:initState(time,step,collect,wordList)
 	self.totalCollect = collect
 	--当前收集数
 	self.currentCollect = 0
+	--关卡类型(限制时间或步数)
+	self.stageType = stageType
 end
 --进入战斗场景
 function BattleManager:enterBattleView()
 	local battleView = require("playmodel.battle.BattleView").new()
 	s_SCENE:replaceGameLayer(battleView)
-	self:initState(100,20,10,{'apple','apple'})
+	self.view = battleView
+	self:initState(100,20,10,{'apple','apple'},'step')
 end
 --战斗开始
 function BattleManager:battleBegan()
@@ -82,30 +85,39 @@ function BattleManager:battleBegan()
 	self.gameBegan = true
 end
 --战斗结束
-function BattleManager:battleEnded()
-	self:unregister()
-	self:initInfo()
+function BattleManager:battleEnded(win)
+	-- self:unregister()
+	-- self:initInfo()
 	self.gameEnded = true
+	self.win = win
+	local gameEndPopup = require(...).new()
+	self.view:addChild(gameEndPopup)
 end
 --更新时间
 function BattleManager:updateTime(delta)
+	--TODO
+	if self.stageType == 'step' then
+		return
+	end
 	if self.gameBegan and not self.gameEnded and not self.gameEnded then
 		self.currentTime = self.currentTime + delta
 		if self.currentTime > self.totalTime then
-			self:battleEnded()
+			self:battleEnded(false)
 		end
 	end
 end
 --更新步数和收集数
 function BattleManager:addStepWithCollect(collect)
-	self.currentStep = self.currentStep + 1
-	if self.currentStep == self.totalStep then
-		self:battleEnded()
+	if self.stageType == 'step' then
+		self.currentStep = self.currentStep + 1
+		if self.currentStep == self.totalStep then
+			self:battleEnded(false)
+		end
 	end
 	self.currentCollect = self.currentCollect + collect
 	if self.currentCollect == self.totalCollect then
 		if self.currentBossIndex == -1 then
-			self:battleEnded()
+			self:battleEnded(true)
 		else
 			
 		end
@@ -183,14 +195,14 @@ function BattleManager:changeNextBoss()
 	-- body
 	if self.currentBossIndex == -1 then
 		if self.currentCollect >= self.totalCollect then
-			self:battleEnded()
+			self:battleEnded(true)
 		end
 		return
 	end
 	if self.bossList[self.currentBossIndex].blood <= 0 then
 		if s_BattleManager.currentBossIndex == #self.bossList then
 			if self.currentCollect >= self.totalCollect then
-				self:battleEnded()
+				self:battleEnded(true)
 			else  
 				self.currentBossIndex = -1
 			end
