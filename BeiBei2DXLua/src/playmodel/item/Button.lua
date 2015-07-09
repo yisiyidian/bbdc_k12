@@ -56,13 +56,13 @@ end
 function Button:resetUI()
     self.button_back:setTexture(self.backTexture)
     self.button_front:setTexture(self.frontTexture)
-    self.shadowTexture:setTexture(self.shadowTexture)
+    self.button_shadow:setTexture(self.shadowTexture)
     self.label:setString(self.text)
 
     self.button_front:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2 + self.moveLength)
     self.label:setPosition(self.button_front:getContentSize().width / 2,self.button_front:getContentSize().height / 2)
 
-    self.shadowTexture:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2 - self.moveLength)
+    self.button_shadow:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2 - self.moveLength)
 
     self:touchFunc()
 end
@@ -73,14 +73,14 @@ function Button:touchFunc()
         if cc.rectContainsPoint(self.button_front:getBoundingBox(),location) then
             playSound(s_sound_buttonEffect)  
             self.button_front:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2)
-            self.shadowTexture:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2)
+            self.button_shadow:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2)
         end
         return true
     end
 
     local function onTouchEnded(touch, event)            
         self.button_front:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2 + self.moveLength)
-        self.shadowTexture:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2 - self.moveLength)
+        self.button_shadow:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2 - self.moveLength)
         local location = self.button_back:convertToNodeSpace(touch:getLocation())
         if cc.rectContainsPoint(self.button_front:getBoundingBox(),location) then 
            self.func()
