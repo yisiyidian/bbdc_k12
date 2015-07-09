@@ -2,11 +2,11 @@
 local ItemView = require("playmodel.item.ItemView")
 local WordView = require("playmodel.item.WordView")
 local Button = require("playmodel.item.Button")
-local EndPopup = class ("EndPopup",function ()
+local FailPopup = class ("FailPopup",function ()
 	return cc.Layer:create()
 end)
 
-function EndPopup:ctor(islandIndex,type,itemList,wordList)
+function FailPopup:ctor(islandIndex,type,itemList,wordList)
 	self.islandIndex = islandIndex
 	self.type = type
     self.itemList = itemList
@@ -15,7 +15,7 @@ function EndPopup:ctor(islandIndex,type,itemList,wordList)
 	self:initUI()
 end
 
-function EndPopup:initUI()
+function FailPopup:initUI()
 	-- 背景面板
 	local back = cc.Sprite:create()
 	back:setPosition(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2)
@@ -73,9 +73,17 @@ function EndPopup:initUI()
     end
 
     self:resetUI()
+
+    local closeBtn = Button.new("image/playmodel/endpopup/closeButton_2.png","image/playmodel/endpopup/closeButton_1.png","playmodel/endpopup/closeButton_shadow.png",9,"")
+    closeBtn:setPosition(self.back:getContentSize().width * 0.9 , self.back:getContentSize().height * 0.9)
+    self.closeBtn = closeBtn
+    self.back:addChild(self.closeBtn)
+    self.closeBtn.func = function ()
+        s_SCENE:removeAllPopups()
+    end
 end
 
-function EndPopup:resetUI()
+function FailPopup:resetUI()
     self.back:setTexture("image/playmodel/endpopup/broad.png")
 
     self.titleSprite:setTexture("image/playmodel/endpopup/title.png")
@@ -86,7 +94,7 @@ function EndPopup:resetUI()
 
     if self.type == "time" then
         self.titleLabel:setString("时间用完了")
-    elseif self.type == "move" then
+    elseif self.type == "step" then
         self.titleLabel:setString("机会用完了")
     end
 
@@ -148,7 +156,7 @@ function EndPopup:resetUI()
     local text = ""
     if self.type == "time" then
         text = "时间用完了"
-    elseif self.type == "move" then
+    elseif self.type == "step" then
         text = "机会用完了"
     end
 
@@ -172,8 +180,8 @@ function EndPopup:resetUI()
     self.restartBtn.func = function ()
 
     end
-    self.addChanceBtn:addSprite("image/playmodel/endpopup/heart01.png")
+    self.restartBtn:addSprite("image/playmodel/endpopup/heart01.png")
 end
 
 
-return EndPopup
+return FailPopup

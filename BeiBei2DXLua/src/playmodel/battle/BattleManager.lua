@@ -119,7 +119,7 @@ function BattleManager:battleEnded(win)
 	else 
 		print('lose')
 	end
-	local gameEndPopup = require('playmodel.popup.EndPopup').new(self.stageType)
+	local gameEndPopup = require('playmodel.popup.EndPopup').new(self.unit,self.stageType)
 	self.view:addChild(gameEndPopup)
 end
 --更新时间

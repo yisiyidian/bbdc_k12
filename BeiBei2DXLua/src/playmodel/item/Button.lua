@@ -41,7 +41,7 @@ function Button:initUI()
     button_shadow:ignoreAnchorPointForPosition(false)
     button_shadow:setAnchorPoint(0.5,0.5)
     self.button_shadow = button_shadow
-    self.button_back:addChild(self.button_shadow)
+    self.button_back:addChild(self.button_shadow,-1)
 
     local label = cc.Label:createWithSystemFont("","",30)
     label:ignoreAnchorPointForPosition(false)
@@ -81,6 +81,7 @@ function Button:addSprite(texture,text)
         label:ignoreAnchorPointForPosition(false)
         label:setAnchorPoint(0.5,0.5)
         label:setColor(cc.c4b(255,255,255,255))
+        label:setPosition(Sprite:getContentSize().width * 0.5,Sprite:getContentSize().height * 0.5)
         Sprite:addChild(label)
     end
 

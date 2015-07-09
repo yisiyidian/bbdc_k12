@@ -84,7 +84,7 @@ function MissionProgressLayer.create(share,homelayer)
     --     if eventType ~= ccui.TouchEventType.ended then
     --         return
     --     end
-    --     local layer = require("playmodel.popup.EndPopup").new(1,1)
+    --     local layer = require("playmodel.popup.SuccessPopup").new(1,1)
     --     s_SCENE:replaceGameLayer(layer)
     -- end
 
