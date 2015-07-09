@@ -75,7 +75,7 @@ function MatView:initUI()
     self.chineselabel = chineselabel
     self.chinesesprite:addChild(self.chineselabel)
 
-    local changeButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,"")
+    local changeButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,"换词")
 	changeButton:setPosition(cc.p(s_DESIGN_WIDTH *0.9,700))
     changeButton:ignoreAnchorPointForPosition(false)
     changeButton:setAnchorPoint(0.5,0.5)
@@ -122,7 +122,7 @@ function MatView:resetChineseLabel(string)
 end
 
 function MatView:resetUI()
-	self.changeButton.label:setString(MatController.index.."/"..MatController.index)
+	-- self.changeButton.label:setString(MatController.index)
 	-- 重置
 	if self.coco ~= nil then
 		self.back:removeAllChildren()
@@ -185,17 +185,35 @@ function MatView:resetUI()
 		self.coco[self.path2[k].x][self.path2[k].y]:resetView()
 		-- print(string.sub(MatController.word[1],k,k)..self.path2[k].x..self.path2[k].y)
 	end
+	local word = MatController.word[MatController.index]
+	self:resetChineseLabel(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall)
 end
 
-function MatView:dropFunc()
+function MatView:dropFunc(callback)
 	-- 掉落事件
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	for i=1,5 do
 		for j=1,10 do
-			if self.coco[i][j]:touchState ~= 1 then
-				if self.coco[i][j]:color == 0 then
-					-- i * 120 -40,j * 120
+			if self.coco[i][j].touchState ~= 1 then
+				local point = cc.Sprite:create("image/playmodel/point.png")
+				point:setPosition(i * 120 -40,j * 120)
+				local color = self.coco[i][j].color
+				if color == 0 then
+					point:setColor(cc.c4b(105,202,18,255))
+				elseif color == 1 then
+					point:setColor(cc.c4b(255,64,0,255))
+				elseif color  == 2 then
+					point:setColor(cc.c4b(255,228,0,255))
+				elseif color  == 3 then
+					point:setColor(cc.c4b(61,191,243,255))
+				elseif color  == 4 then
+					point:setColor(cc.c4b(255,145,1,255))
 				end
+				self.back:addChild(point)
+
+				local px,py
+				px,py = s_BattleManager.petList[color + 1].ui:getPosition()
+				point:runAction(cc.MoveTo:create(0.4,cc.p(px,py)))
 			end
 		end
 	end
@@ -208,6 +226,11 @@ function MatView:dropFunc()
 			self.coco[i][j]:runAction(cc.MoveBy:create(0.4,cc.p(0,-120 * self.coco[i][j].drop)))
 		end
 	end
+
+	local delay = cc.DelayTime:create(0.4)
+	self:runAction(cc.Sequence:create(delay,cc.CallFunc:create(function ()
+		if callback ~= nil then callback() end
+	end)))
 
 	-- 重置ui
 	local delay = cc.DelayTime:create(0.5)

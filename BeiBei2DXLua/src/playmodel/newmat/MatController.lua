@@ -120,11 +120,14 @@ function MatController:judgeFunc()
 	if temp == MatController.word[MatController.index] then
 		-- print("划词正确")
 		-- print("这个词是"..temp)
-		MatController:sendNotification("right",attackList)
+		function MatController:callback()
+			MatController:sendNotification("right",attackList)
+		end
+
 		-- print_lua_table(attackList)
 		-- print("congratulation!!!!!!!!!!!!!!!")
 		-- 下滑动作
-		MatController.MatView:dropFunc()
+		MatController.MatView:dropFunc(MatController.callback)
 		MatController.index = MatController.index + 1
 		-- 下滑动作
 		for k,v in pairs(MatController.currentCoco) do
