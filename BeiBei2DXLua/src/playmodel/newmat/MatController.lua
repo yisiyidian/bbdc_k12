@@ -192,6 +192,7 @@ function MatController:changeFunc()
 	if #MatController.currentCoco ~= 0 then
 		return 
 	end
+	s_BattleManager:addStepWithCollect(0)
 	MatController.MatView:dropFunc()
 	MatController.index = MatController.index + 1
 end
