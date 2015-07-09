@@ -634,8 +634,10 @@ function HomeLayer:onBtnShopTouch(sender,eventType)
         return
     end
 
-    AnalyticsShopBtn()
-    self:changeViewToFriendOrShop("ShopLayer")
+    -- AnalyticsShopBtn()
+    -- self:changeViewToFriendOrShop("ShopLayer")
+    local petLayer = require("view.pet.PetLayer").create()
+    s_SCENE:replaceGameLayer(petLayer)
 end
 
 --设置按钮 触摸事件
