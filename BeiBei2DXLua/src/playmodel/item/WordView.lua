@@ -8,11 +8,13 @@ function WordView:ctor(list,height)
 	self.height = height
 	self.wordList = {}
 	self.numList = {}
-
+	print(self.list)
+	print("~~~~~~~~~~~~~~")
 	self:initUI()
 end
 
 function WordView:initUI()
+	print(self.list)
 	for k,v in pairs(self.list) do
 		self:createItem()
 	end

@@ -119,6 +119,7 @@ function EndPopup:resetUI()
     if self.wordView ~= nil then
         self.wordView:removeFromParent()
     end
+
     local wordView = WordView.new(self.wordList,200)
     wordView:setPosition(100 , self.back:getContentSize().height * 0.4)
     self.wordView = wordView
