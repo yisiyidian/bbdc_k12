@@ -124,11 +124,12 @@ function LevelProgressPopup:createSummary(index)
             -- print('user unit:'..self.unit.unitID)
             s_game_fail_level_index = self.unit.unitID - 1
 
-            showProgressHUD('', true)
+            --showProgressHUD('', true)
             --print('replay island')
-            local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
-            local summaryBossLayer = SummaryBossLayer.create(self.unit)
-            s_SCENE:replaceGameLayer(summaryBossLayer) 
+            -- local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
+            -- local summaryBossLayer = SummaryBossLayer.create(self.unit)
+            -- s_SCENE:replaceGameLayer(summaryBossLayer) 
+            s_BattleManager:enterBattleView(self.unit)
             s_SCENE:removeAllPopups()  
             return
         end
@@ -143,11 +144,11 @@ function LevelProgressPopup:createSummary(index)
 
         if taskIndex == -2 then     
             --showProgressHUD('', true)    
-            s_BattleManager:enterBattleView(self.unit) -- 之前没有boss
+            s_CorePlayManager.initTotalUnitPlay() -- 之前没有boss
             s_SCENE:removeAllPopups()  
         else--if taskIndex == self.islandIndex then
             --showProgressHUD('', true) 
-            s_BattleManager:enterBattleView(self.unit) -- 按顺序打第一个boss
+            s_CorePlayManager.initTotalUnitPlay() -- 按顺序打第一个boss
             s_SCENE:removeAllPopups()  
         -- else
         --     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch() --锁定触摸

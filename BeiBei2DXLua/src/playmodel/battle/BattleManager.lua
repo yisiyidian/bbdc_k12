@@ -70,7 +70,7 @@ end
 function BattleManager:leaveBattleView()
 	self:unregister()
 	self:sendNotification('UNREGISTER')
-	s_CorePlayManager.leaveSummaryModel(self.win)
+	s_CorePlayManager.leaveSummaryModel(self.win and self.unit.coolingDay == 0)
     s_CorePlayManager.enterLevelLayer() 
 end
 --重新挑战
@@ -103,19 +103,21 @@ function BattleManager:battleEnded(win)
 	self.win = win
 	if win then
 		print('win')
-		-- if self.unit.unitState == 0 then
-  --           s_LocalDatabaseManager.addStudyWordsNum(#self.wordList)
-  --           s_LocalDatabaseManager.addRightWord(self.rightWordList,self.unit.unitID)
-  --           s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - self.wrongWord)
-  --        --   print(self.maxCount - self.wrongWord)
-  --       elseif self.unit.unitState == 4 then
-  --           local list = self.unit.wrongWordList[1]
-  --            for i = 2,#self.unit.wrongWordList do
-  --                list = list..'||'..self.unit.wrongWordList[i]
-  --            end
-  --           s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - #split(self.rightWordList,'||'))
-  --           s_LocalDatabaseManager.addRightWord(list,self.unit.unitID)
-  --       end
+		-- self:leaveBattleView()
+		-- return
+		if self.unit.unitState == 0 then
+            s_LocalDatabaseManager.addStudyWordsNum(#self.wordList)
+            -- s_LocalDatabaseManager.addRightWord(self.rightWordList,self.unit.unitID)
+            -- s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - self.wrongWord)
+         --   print(self.maxCount - self.wrongWord)
+        elseif self.unit.unitState == 4 then
+            -- local list = self.unit.wrongWordList[1]
+            --  for i = 2,#self.unit.wrongWordList do
+            --      list = list..'||'..self.unit.wrongWordList[i]
+            --  end
+            s_LocalDatabaseManager.addGraspWordsNum(#self.wordList)
+            -- s_LocalDatabaseManager.addRightWord(list,self.unit.unitID)
+        end
 	else 
 		print('lose')
 	end
