@@ -84,6 +84,9 @@ function EndPopup:initUI()
     self.showEggLabel = showEggLabel
     self.back:addChild(self.showEggLabel)
 
+    --点击事件
+    self:touchFunc()
+
     -- 加行动机会，加时间限制
     local addChanceButton = ccui.Button:create()
 
@@ -103,6 +106,23 @@ function EndPopup:initUI()
     -- 分享
     local shareButton = ccui.Button:create()
 
+end
+
+function EndPopup:touchFunc()
+    local function onTouchBegan(touch, event)
+        return true
+    end
+
+    local function onTouchEnded(touch, event)
+
+    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = self:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
+    listener:setSwallowTouches(true)
 end
 
 return EndPopup
