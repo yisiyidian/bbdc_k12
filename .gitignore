@@ -8,7 +8,7 @@ xcuserdata
 *.xcbkptlist
 
 *.pyc
-*.luac
+
 
 build/*
 DerivedData/*
