@@ -1,4 +1,5 @@
 -- 矩阵控制器
+require("playmodel.battle.Notification")
 local ObserverController = require("playmodel.observer.ObserverController")
 local Observer = require("playmodel.observer.Observer")
 local MatController = class("MatController",Observer)
@@ -30,7 +31,8 @@ end
 
 -- 注册事件
 function MatController:listNotify()
-	return {"RIGHT"}
+	return {RIGHT,
+			UNREGISTER}
 end
 
 -- 划的字母加入队列
@@ -180,6 +182,8 @@ function MatController:handleNotification(notify,data)
 	if notify == "right" then
 		print("处理消息right")
 		-- MatController.MatView:resetUI()
+	elseif notify == UNREGISTER then
+    	self:unregister()
 	end
 end
 

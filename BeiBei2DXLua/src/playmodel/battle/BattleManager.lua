@@ -29,23 +29,6 @@ function BattleManager:initInfo()
 	self.currentBossIndex = 0
 	self.currentBoss = nil
 end
--- --清空state
--- function BattleManager:clearState()
--- 	--游戏是否暂停
--- 	self.gamePaused = false
--- 	--游戏是否开始
--- 	self.gameBegan = false
--- 	--游戏是否结束
--- 	self.gameEnded = false
--- 	--总步数
--- 	self.totalStep = 0
--- 	--当前步数
--- 	self.currentStep = 0
--- 	--总时间
--- 	self.totalTime = 0
--- 	--当前时间
--- 	self.currentTime = 0
--- end
 --初始化state
 function BattleManager:initState(time,step,collect,wordList,stageType)
 	--游戏是否开始
@@ -72,6 +55,8 @@ function BattleManager:initState(time,step,collect,wordList,stageType)
 	self.stageType = stageType
 	--各种资源数量
 	self.petSource = {0,0,0,0,0}
+	--是否获胜
+	self.win = false
 end
 --进入战斗场景
 function BattleManager:enterBattleView(unit)
@@ -79,8 +64,30 @@ function BattleManager:enterBattleView(unit)
 	local battleView = require("playmodel.battle.BattleView").new()
 	s_SCENE:replaceGameLayer(battleView)
 	self.view = battleView
-	print("33333333333333333333333333333")
-	
+	self.unit = unit
+end
+--离开战斗场景
+function BattleManager:leaveBattleView()
+	self:unregister()
+	self:sendNotification('UNREGISTER')
+	s_CorePlayManager.leaveSummaryModel(self.win)
+    s_CorePlayManager.enterLevelLayer() 
+end
+--重新挑战
+function BattleManager:restartBattle()
+	local unit = self.unit
+	self:unregister()
+	self:sendNotification('UNREGISTER')
+	self:enterBattleView(unit)
+end
+--复活
+function BattleManager:oneMoreChance()
+	self.gameEnded = false
+	if self.stageType == 'step' then
+		self.currentStep = self.currentStep - 5
+	else
+		self.currentTime = self.currentTime - 30
+	end
 end
 --战斗开始
 function BattleManager:battleBegan()
@@ -96,6 +103,19 @@ function BattleManager:battleEnded(win)
 	self.win = win
 	if win then
 		print('win')
+		-- if self.unit.unitState == 0 then
+  --           s_LocalDatabaseManager.addStudyWordsNum(#self.wordList)
+  --           s_LocalDatabaseManager.addRightWord(self.rightWordList,self.unit.unitID)
+  --           s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - self.wrongWord)
+  --        --   print(self.maxCount - self.wrongWord)
+  --       elseif self.unit.unitState == 4 then
+  --           local list = self.unit.wrongWordList[1]
+  --            for i = 2,#self.unit.wrongWordList do
+  --                list = list..'||'..self.unit.wrongWordList[i]
+  --            end
+  --           s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - #split(self.rightWordList,'||'))
+  --           s_LocalDatabaseManager.addRightWord(list,self.unit.unitID)
+  --       end
 	else 
 		print('lose')
 	end
@@ -228,14 +248,14 @@ function BattleManager:changeNextBoss()
 	
 end
 function BattleManager:createPausePopup()
-        if self.gameEnded or s_SCENE.popupLayer.layerpaused then
-            return
-        end
-        local pauseLayer = require("view.Pause").create()
-        pauseLayer:setPosition(s_LEFT_X, 0)
-        s_SCENE.popupLayer:addBackground()
-        s_SCENE.popupLayer:addChild(pauseLayer)
-        s_SCENE.popupLayer.listener:setSwallowTouches(true)
+    if s_SCENE.popupLayer.layerpaused then
+        return
     end
+    local pauseLayer = require("view.Pause").create()
+    pauseLayer:setPosition(s_LEFT_X, 0)
+    s_SCENE.popupLayer:addBackground()
+    s_SCENE.popupLayer:addChild(pauseLayer)
+    s_SCENE.popupLayer.listener:setSwallowTouches(true)
+end
 
 return BattleManager
