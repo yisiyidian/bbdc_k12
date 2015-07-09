@@ -27,6 +27,7 @@ function MatView:ctor()
 
 	-- 注册观察者
 	MatController:register()
+	MatController:reset()
 	-- 控制器和视图建立联系
 	MatController.MatView = self
 	MatController.word = MatController:createWordGroup(self.word)
