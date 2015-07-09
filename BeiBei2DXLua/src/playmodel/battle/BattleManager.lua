@@ -79,8 +79,15 @@ function BattleManager:enterBattleView(unit)
 	local battleView = require("playmodel.battle.BattleView").new()
 	s_SCENE:replaceGameLayer(battleView)
 	self.view = battleView
-	print("33333333333333333333333333333")
-	
+	self.unit = unit
+end
+--离开战斗场景
+function BattleManager:leaveBattleView()
+	self:unregister()
+	self:initInfo()
+	self:sendNotification('UNREGISTER')
+	s_CorePlayManager.leaveSummaryModel(self.win)
+    s_CorePlayManager.enterLevelLayer() 
 end
 --战斗开始
 function BattleManager:battleBegan()
@@ -96,6 +103,19 @@ function BattleManager:battleEnded(win)
 	self.win = win
 	if win then
 		print('win')
+		-- if self.unit.unitState == 0 then
+  --           s_LocalDatabaseManager.addStudyWordsNum(#self.wordList)
+  --           s_LocalDatabaseManager.addRightWord(self.rightWordList,self.unit.unitID)
+  --           s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - self.wrongWord)
+  --        --   print(self.maxCount - self.wrongWord)
+  --       elseif self.unit.unitState == 4 then
+  --           local list = self.unit.wrongWordList[1]
+  --            for i = 2,#self.unit.wrongWordList do
+  --                list = list..'||'..self.unit.wrongWordList[i]
+  --            end
+  --           s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - #split(self.rightWordList,'||'))
+  --           s_LocalDatabaseManager.addRightWord(list,self.unit.unitID)
+  --       end
 	else 
 		print('lose')
 	end
@@ -228,7 +248,7 @@ function BattleManager:changeNextBoss()
 	
 end
 function BattleManager:createPausePopup()
-        if self.gameEnded or s_SCENE.popupLayer.layerpaused then
+        if s_SCENE.popupLayer.layerpaused then
             return
         end
         local pauseLayer = require("view.Pause").create()

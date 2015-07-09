@@ -12,6 +12,11 @@ function EndPopup:ctor(type)
 end
 
 function EndPopup:initUI()
+    --阴影遮罩
+    local shadow = cc.LayerColor:create(cc.c4b(0,0,0,150),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
+    shadow:setPosition(s_LEFT_X,0)
+    self:addChild(shadow)
+
 	-- 背景面板
 	local back = cc.Sprite:create()
 	back:setPosition(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2)
@@ -114,7 +119,7 @@ function EndPopup:touchFunc()
     end
 
     local function onTouchEnded(touch, event)
-
+        s_BattleManager:leaveBattleView()
     end
 
     local listener = cc.EventListenerTouchOneByOne:create()

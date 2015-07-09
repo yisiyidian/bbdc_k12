@@ -7,7 +7,8 @@ local Boss = class("Boss", Pet)
 function Boss:listNotify()
     return {
     	ATTACK,
-    	RIGHT
+    	RIGHT,
+    	UNREGISTER
     }
 end
 
@@ -15,6 +16,9 @@ function Boss:handleNotification(notify,data)
 	-- print(2)
  --    --data {xxx=xxx,xxxdd=xxxdd}
     if notify == RIGHT then
+    	if self.ui == nil then
+    		print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    	end
     	if self.ui:getPositionY() < s_DESIGN_HEIGHT and self.totalAttackCount == 0 then
     		self.totalAttackCount = data[1] + data[2] + data[3] + data[4] + data[5]
   			s_BattleManager:addStepWithCollect(self.totalAttackCount)
@@ -24,6 +28,8 @@ function Boss:handleNotification(notify,data)
     		end
     		--print('self.totalAttackCount',self.totalAttackCount)
     	end
+    elseif notify == UNREGISTER then
+    	self:unregister()
     end
 
 
@@ -40,6 +46,7 @@ function Boss:loseBlood(blood)
 end
 
 function Boss:createUI(file)
+	print('createUI')
 	local ui = sp.SkeletonAnimation:create(file..".json",file..".atlas",1)
     ui:setAnimation(0,'a2',true)
     return ui

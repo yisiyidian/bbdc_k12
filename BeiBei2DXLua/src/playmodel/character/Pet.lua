@@ -9,7 +9,8 @@ local Pet = class("Pet", Observer)
 function Pet:listNotify()
     return {
         ATTACK,
-        RIGHT
+        RIGHT,
+        UNREGISTER
     }
 end
 
@@ -19,8 +20,8 @@ function Pet:handleNotification(notify,data)
 			s_BattleManager.petSource[self.colorIndex] = s_BattleManager.petSource[self.colorIndex] + data[self.colorIndex] 
 			self:releaseSkill(data[self.colorIndex])
 		end
-    else
-
+    elseif notify == UNREGISTER then
+    	self:unregister()
     end
 end
 
@@ -39,6 +40,9 @@ function Pet:ctor(id)
 	self.totalAttackCount = 0
 	--一轮攻击中已经被攻击的次数
 	self.attackCount = 0
+	if self.ui ~= nil then
+		print(self.ui:getPositionY(),'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+	end
 end
 
 function Pet:createUI(file)
