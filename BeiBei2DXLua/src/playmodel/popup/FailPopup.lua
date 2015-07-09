@@ -74,7 +74,7 @@ function FailPopup:initUI()
 
     self:resetUI()
 
-    local closeBtn = Button.new("image/playmodel/endpopup/closeButton_2.png","image/playmodel/endpopup/closeButton_1.png","playmodel/endpopup/closeButton_shadow.png",9,"")
+    local closeBtn = Button.new("image/playmodel/endpopup/closeButton_2.png","image/playmodel/endpopup/closeButton_1.png","image/playmodel/endpopup/closeButton_shadow.png",9,"")
     closeBtn:setPosition(self.back:getContentSize().width * 0.9 , self.back:getContentSize().height * 0.9)
     self.closeBtn = closeBtn
     self.back:addChild(self.closeBtn)
@@ -142,7 +142,7 @@ function FailPopup:resetUI()
     if self.exerciseBtn ~= nil then
         self.exerciseBtn:removeFromParent()
     end
-    local exerciseBtn = Button.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","playmodel/endpopup/longButton_shadow.png",9,"训练场")
+    local exerciseBtn = Button.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,"训练场")
     exerciseBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.35)
     self.exerciseBtn = exerciseBtn
     self.back:addChild(self.exerciseBtn)
@@ -161,7 +161,7 @@ function FailPopup:resetUI()
         text = "机会用完了"
     end
 
-    local addChanceBtn = Button.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","playmodel/endpopup/longButton_shadow.png",9,text)
+    local addChanceBtn = Button.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,text)
     addChanceBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.22)
     self.addChanceBtn = addChanceBtn
     self.back:addChild(self.addChanceBtn)
@@ -176,7 +176,7 @@ function FailPopup:resetUI()
     if self.restartBtn ~= nil then
         self.restartBtn:removeFromParent()
     end
-    local restartBtn = Button.new("image/playmodel/endpopup/redButton_1.png","image/playmodel/endpopup/redButton_2.png","playmodel/endpopup/longButton_shadow.png",9,"重新开始")
+    local restartBtn = Button.new("image/playmodel/endpopup/redButton_1.png","image/playmodel/endpopup/redButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,"重新开始")
     restartBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.09)
     self.restartBtn = restartBtn
     self.back:addChild(self.restartBtn)

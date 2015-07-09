@@ -41,7 +41,7 @@ function Button:initUI()
     button_shadow:ignoreAnchorPointForPosition(false)
     button_shadow:setAnchorPoint(0.5,0.5)
     self.button_shadow = button_shadow
-    self.button_back:addChild(self.button_shadow,-1)
+    self.button_front:addChild(self.button_shadow,-1)
 
     local label = cc.Label:createWithSystemFont("","",30)
     label:ignoreAnchorPointForPosition(false)
