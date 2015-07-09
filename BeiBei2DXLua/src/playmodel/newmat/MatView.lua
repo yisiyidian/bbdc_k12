@@ -192,6 +192,16 @@ function MatView:dropFunc()
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	for i=1,5 do
 		for j=1,10 do
+			if self.coco[i][j]:touchState ~= 1 then
+				if self.coco[i][j]:color == 0 then
+					-- i * 120 -40,j * 120
+				end
+			end
+		end
+	end
+
+	for i=1,5 do
+		for j=1,10 do
 			if self.coco[i][j]:getPositionY() - 120 * self.coco[i][j].drop <= self.coco[i][5]:getPositionY() then
 				self.coco[i][j]:setVisible(true)
 			end
