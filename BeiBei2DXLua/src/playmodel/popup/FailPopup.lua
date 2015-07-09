@@ -80,6 +80,7 @@ function FailPopup:initUI()
     self.back:addChild(self.closeBtn)
     self.closeBtn.func = function ()
         s_SCENE:removeAllPopups()
+        s_BattleManager:leaveBattleView()
     end
 end
 
@@ -166,6 +167,8 @@ function FailPopup:resetUI()
     self.back:addChild(self.addChanceBtn)
     self.addChanceBtn.func = function ()
         self.callBack()
+        s_SCENE:removeAllPopups()
+        s_BattleManager:oneMoreChance()
     end
 
     self.addChanceBtn:addSprite("image/playmodel/endpopup/Diamond.png",10)
@@ -178,7 +181,8 @@ function FailPopup:resetUI()
     self.restartBtn = restartBtn
     self.back:addChild(self.restartBtn)
     self.restartBtn.func = function ()
-
+        s_SCENE:removeAllPopups()
+        s_BattleManager:restartBattle()
     end
     self.restartBtn:addSprite("image/playmodel/endpopup/heart01.png")
 end

@@ -34,7 +34,7 @@ function Skill:setTrack(count)
 	end
 	for i = 1, #self.targets do
 		for j = 1,count do
-			local effect = cc.Sprite:create(self.effectFile)
+			local effect = cc.Sprite:create(self.source.skillFile)
 			effect:setScale(0.3)
 			effect:setPosition(self.source.ui:getContentSize().width / 2,self.source.ui:getContentSize().height / 2)
 			self.source.ui:addChild(effect,-1)

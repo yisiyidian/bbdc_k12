@@ -118,11 +118,13 @@ function BattleManager:battleEnded(win)
             s_LocalDatabaseManager.addGraspWordsNum(#self.wordList)
             -- s_LocalDatabaseManager.addRightWord(list,self.unit.unitID)
         end
+        local gameEndPopup = require('playmodel.popup.SuccessPopup').new(self.unit.unitID,self.stageType)
+		s_SCENE:popup(gameEndPopup)
 	else 
 		print('lose')
+		local gameEndPopup = require('playmodel.popup.FailPopup').new(self.unit.unitID,self.stageType)
+		s_SCENE:popup(gameEndPopup)
 	end
-	local gameEndPopup = require('playmodel.popup.EndPopup').new(self.unit,self.stageType)
-	self.view:addChild(gameEndPopup)
 end
 --更新时间
 function BattleManager:updateTime(delta)
