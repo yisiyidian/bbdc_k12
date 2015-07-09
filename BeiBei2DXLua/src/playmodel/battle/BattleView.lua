@@ -49,26 +49,66 @@ function BattleView:initUI()
 
     local MatView = require("playmodel.newmat.MatView").create()
 	self:addChild(MatView)
+	--显示关卡信息
+	self:showStageInfo()
+	--暂停按钮
+	s_SCENE.popupLayer.layerpaused = false 
+    local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
+    pauseBtn:ignoreAnchorPointForPosition(false)
+    pauseBtn:setAnchorPoint(1,1)
+    s_SCENE.popupLayer.pauseBtn = pauseBtn
+    self:addChild(pauseBtn,1)
+    pauseBtn:setPosition(s_RIGHT_X, s_DESIGN_HEIGHT)
+
+    local function pauseScene(sender,eventType)
+        if eventType == ccui.TouchEventType.ended then
+           s_BattleManager:createPausePopup()
+        --button sound
+            playSound(s_sound_buttonEffect)
+        end
+    end
+    pauseBtn:addTouchEventListener(pauseScene)
+
+    onAndroidKeyPressed(pauseBtn, function ()
+        s_BattleManager:createPausePopup()
+    end, function ()
+
+    end)
 
 
 end
 
-function BattleView:touchFunc()
-	-- local function onTouchBegan(touch, event)
-	-- 	print('onTouchBegan')
- --        return true
- --    end
+function BattleView:showStageInfo()
+	local back = cc.LayerColor:create(cc.c4b(255,255,255,150),200,100)
+	back:setPosition(0,950)
+	self:addChild(back)
+	local label_boss = cc.Label:createWithSystemFont('boss:'..(s_BattleManager.currentBossIndex - 1)..'/'..#s_BattleManager.bossList,'',28)
+	label_boss:setColor(cc.c3b(0,0,0))
+	label_boss:setPosition(back:getContentSize().width / 2,80)
+	back:addChild(label_boss)
 
- --    local function onTouchEnded(touch, event)
- --    	-- local list = {'3','4','2'}
- --    	-- s_BattleManager:sendNotification(ATTACK,{id = list})
- --    end
+	local label_collect = cc.Label:createWithSystemFont('collection:'..s_BattleManager.currentCollect..'/'..s_BattleManager.totalCollect,'',28)
+	label_collect:setColor(cc.c3b(0,0,0))
+	label_collect:setPosition(back:getContentSize().width / 2,50)
+	back:addChild(label_collect)
 
- --    local listener = cc.EventListenerTouchOneByOne:create()
- --    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
- --    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
- --    local eventDispatcher = self:getEventDispatcher()
- --    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
+	local label_time = cc.Label:createWithSystemFont('','',28)
+	label_time:setColor(cc.c3b(0,0,0))
+	label_time:setPosition(back:getContentSize().width / 2,20)
+	back:addChild(label_time)
+
+	local function update(delta)
+		label_boss:setString('boss:'..(s_BattleManager.currentBossIndex - 1)..'/'..#s_BattleManager.bossList)
+		label_collect:setString('collection:'..s_BattleManager.currentCollect..'/'..s_BattleManager.totalCollect)
+		if s_BattleManager.stageType == 'time' then
+			local time = s_BattleManager.totalTime - s_BattleManager.currentTime
+			label_time:setString('time left:'..math.floor(time / 60)..':'..math.floor(time % 60))
+		else
+			label_time:setString('step:'..s_BattleManager.currentStep..'/'..s_BattleManager.totalStep)
+		end
+	end
+
+	back:scheduleUpdateWithPriorityLua(update,0)
 end
 
 return BattleView

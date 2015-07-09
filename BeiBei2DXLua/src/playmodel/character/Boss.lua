@@ -17,6 +17,7 @@ function Boss:handleNotification(notify,data)
     if notify == RIGHT then
     	if self.ui:getPositionY() < s_DESIGN_HEIGHT and self.totalAttackCount == 0 then
     		self.totalAttackCount = data[1] + data[2] + data[3] + data[4] + data[5]
+  			s_BattleManager:addStepWithCollect(self.totalAttackCount)
     		--没有形成攻击，直接进行结束判定
     		if self.totalAttackCount == 0 then
     			self:attackEnded()

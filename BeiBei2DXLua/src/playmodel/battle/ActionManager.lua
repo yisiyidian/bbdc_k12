@@ -32,7 +32,7 @@ function petActionToReleaseSkill()
 end
 
 function bossAction()
-	return cc.Sequence:create(cc.ScaleTo:create(0.5,1.2),cc.ScaleTo:create(0.5,1))
+	return nil
 end
 
 function bossAttackedAnimation(target)

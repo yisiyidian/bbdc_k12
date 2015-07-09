@@ -48,8 +48,6 @@ end
 -- end
 --初始化state
 function BattleManager:initState(time,step,collect,wordList,stageType)
-	--游戏是否暂停
-	self.gamePaused = false
 	--游戏是否开始
 	self.gameBegan = false
 	--游戏是否结束
@@ -64,19 +62,25 @@ function BattleManager:initState(time,step,collect,wordList,stageType)
 	self.currentTime = 0
 	--单词列表
 	self.wordList = wordList
+	print("33333333333333333333333333333")
+	print_lua_table(self.wordList)
 	--任务目标的收集数
 	self.totalCollect = collect
 	--当前收集数
 	self.currentCollect = 0
 	--关卡类型(限制时间或步数)
 	self.stageType = stageType
+	--各种资源数量
+	self.petSource = {0,0,0,0,0}
 end
 --进入战斗场景
-function BattleManager:enterBattleView()
+function BattleManager:enterBattleView(unit)
+	self:initState(100,10,20,unit.wrongWordList,'step')
 	local battleView = require("playmodel.battle.BattleView").new()
 	s_SCENE:replaceGameLayer(battleView)
 	self.view = battleView
-	self:initState(100,20,10,{'apple','apple'},'step')
+	print("33333333333333333333333333333")
+	
 end
 --战斗开始
 function BattleManager:battleBegan()
@@ -90,8 +94,13 @@ function BattleManager:battleEnded(win)
 	-- self:initInfo()
 	self.gameEnded = true
 	self.win = win
-	-- local gameEndPopup = require(...).new()
-	-- self.view:addChild(gameEndPopup)
+	if win then
+		print('win')
+	else 
+		print('lose')
+	end
+	local gameEndPopup = require('playmodel.popup.EndPopup').new(self.stageType)
+	self.view:addChild(gameEndPopup)
 end
 --更新时间
 function BattleManager:updateTime(delta)
@@ -99,7 +108,7 @@ function BattleManager:updateTime(delta)
 	if self.stageType == 'step' then
 		return
 	end
-	if self.gameBegan and not self.gameEnded and not self.gameEnded then
+	if self.gameBegan and not self.gameEnded and not s_SCENE.popupLayer.layerpaused then
 		self.currentTime = self.currentTime + delta
 		if self.currentTime > self.totalTime then
 			self:battleEnded(false)
@@ -110,13 +119,14 @@ end
 function BattleManager:addStepWithCollect(collect)
 	if self.stageType == 'step' then
 		self.currentStep = self.currentStep + 1
+		print(self.currentStep)
 		if self.currentStep == self.totalStep then
 			self:battleEnded(false)
 		end
 	end
 	self.currentCollect = self.currentCollect + collect
 	if self.currentCollect == self.totalCollect then
-		if self.currentBossIndex == -1 then
+		if self.currentBossIndex > #self.bossList then
 			self:battleEnded(true)
 		else
 			
@@ -193,28 +203,39 @@ end
 
 function BattleManager:changeNextBoss()
 	-- body
-	if self.currentBossIndex == -1 then
+	if self.currentBossIndex > #self.bossList then
 		if self.currentCollect >= self.totalCollect then
 			self:battleEnded(true)
 		end
 		return
 	end
 	if self.bossList[self.currentBossIndex].blood <= 0 then
-		if s_BattleManager.currentBossIndex == #self.bossList then
+		if self.currentBossIndex == #self.bossList then
 			if self.currentCollect >= self.totalCollect then
 				self:battleEnded(true)
-			else  
-				self.currentBossIndex = -1
+				return
 			end
-			return
 		end
 	
 		self.actionManager:changeBossAction(function()
 			s_BattleManager.currentBossIndex = s_BattleManager.currentBossIndex + 1
+			if self.currentBossIndex > #self.bossList then
+				return
+			end
 			self.currentBoss = self.bossList[currentBossIndex]
 		end)
 	end
 	
 end
+function BattleManager:createPausePopup()
+        if self.gameEnded or s_SCENE.popupLayer.layerpaused then
+            return
+        end
+        local pauseLayer = require("view.Pause").create()
+        pauseLayer:setPosition(s_LEFT_X, 0)
+        s_SCENE.popupLayer:addBackground()
+        s_SCENE.popupLayer:addChild(pauseLayer)
+        s_SCENE.popupLayer.listener:setSwallowTouches(true)
+    end
 
 return BattleManager

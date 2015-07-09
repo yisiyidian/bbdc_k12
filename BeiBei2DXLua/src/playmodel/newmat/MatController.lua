@@ -130,6 +130,7 @@ function MatController:judgeFunc()
 			MatController.currentCoco[k]:runAction(cc.RotateBy:create(0.4,math.random(360,720)))
 		end
 	else
+		s_BattleManager:addStepWithCollect(0)
 		-- print("划错了")
 		print("要划的词是"..MatController.word[MatController.index])
 		print("你划的词是"..temp)

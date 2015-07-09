@@ -16,6 +16,7 @@ end
 function Pet:handleNotification(notify,data)
     if notify == RIGHT then
 		if data[self.colorIndex] > 0 then
+			s_BattleManager.petSource[self.colorIndex] = s_BattleManager.petSource[self.colorIndex] + data[self.colorIndex] 
 			self:releaseSkill(data[self.colorIndex])
 		end
     else
