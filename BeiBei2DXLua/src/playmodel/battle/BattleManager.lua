@@ -45,8 +45,6 @@ function BattleManager:initState(time,step,collect,wordList,stageType)
 	self.currentTime = 0
 	--单词列表
 	self.wordList = wordList
-	print("33333333333333333333333333333")
-	print_lua_table(self.wordList)
 	--任务目标的收集数
 	self.totalCollect = collect
 	--当前收集数
@@ -60,7 +58,11 @@ function BattleManager:initState(time,step,collect,wordList,stageType)
 end
 --进入战斗场景
 function BattleManager:enterBattleView(unit)
-	self:initState(100,10,20,unit.wrongWordList,'step')
+	if unit.unitID % 2 == 1 then
+		self:initState(100,10,20,unit.wrongWordList,'step')
+	else
+		self:initState(100,10,20,unit.wrongWordList,'time')
+	end
 	local battleView = require("playmodel.battle.BattleView").new()
 	s_SCENE:replaceGameLayer(battleView)
 	self.view = battleView
@@ -118,11 +120,13 @@ function BattleManager:battleEnded(win)
             s_LocalDatabaseManager.addGraspWordsNum(#self.wordList)
             -- s_LocalDatabaseManager.addRightWord(list,self.unit.unitID)
         end
+        local gameEndPopup = require('playmodel.popup.SuccessPopup').new(self.unit.unitID,self.stageType)
+		s_SCENE:popup(gameEndPopup)
 	else 
 		print('lose')
+		local gameEndPopup = require('playmodel.popup.FailPopup').new(self.unit.unitID,self.stageType)
+		s_SCENE:popup(gameEndPopup)
 	end
-	local gameEndPopup = require('playmodel.popup.EndPopup').new(self.unit,self.stageType)
-	self.view:addChild(gameEndPopup)
 end
 --更新时间
 function BattleManager:updateTime(delta)
@@ -150,8 +154,6 @@ function BattleManager:addStepWithCollect(collect)
 	if self.currentCollect == self.totalCollect then
 		if self.currentBossIndex > #self.bossList then
 			self:battleEnded(true)
-		else
-			
 		end
 	end
 end

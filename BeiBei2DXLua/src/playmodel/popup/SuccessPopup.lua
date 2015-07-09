@@ -93,6 +93,7 @@ function SuccessPopup:initUI()
     self.back:addChild(self.closeBtn)
     self.closeBtn.func = function ()
         s_SCENE:removeAllPopups()
+        s_BattleManager:leaveBattleView()
     end
 end
 

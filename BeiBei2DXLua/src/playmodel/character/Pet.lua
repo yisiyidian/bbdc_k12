@@ -33,6 +33,7 @@ function Pet:ctor(id)
 	self.skillID = self.config.skillID
 	self.blood = self.config.blood
 	self.buff = 1.0
+	self.skillFile = self.config.skillFile
 	self.ui = self:createUI(self.config.file)
 	self.action = nil
 	self.cb = function() end
