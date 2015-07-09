@@ -41,7 +41,7 @@ function Button:initUI()
     button_shadow:ignoreAnchorPointForPosition(false)
     button_shadow:setAnchorPoint(0.5,0.5)
     self.button_shadow = button_shadow
-    self.button_back:addChild(self.button_shadow,-1)
+    self.button_back:addChild(self.button_shadow)
 
     local label = cc.Label:createWithSystemFont("","",30)
     label:ignoreAnchorPointForPosition(false)
@@ -56,15 +56,34 @@ end
 function Button:resetUI()
     self.button_back:setTexture(self.backTexture)
     self.button_front:setTexture(self.frontTexture)
-    self.shadowTexture:setTexture(self.shadowTexture)
+    self.button_shadow:setTexture(self.shadowTexture)
     self.label:setString(self.text)
 
     self.button_front:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2 + self.moveLength)
     self.label:setPosition(self.button_front:getContentSize().width / 2,self.button_front:getContentSize().height / 2)
 
-    self.shadowTexture:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2 - self.moveLength)
+    self.button_shadow:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2 - 2 * self.moveLength)
 
     self:touchFunc()
+end
+
+function Button:addSprite(texture,text)
+    if texture == nil then
+        return
+    end
+
+    local Sprite = cc.Sprite:create(texture)
+    Sprite:setPosition(self.button_front:getContentSize().width * 0.75,self.button_front:getContentSize().height * 0.5)
+    self.button_front:addChild(Sprite)
+
+    if text ~= nil then
+        local label = cc.Label:createWithSystemFont(text,"",30)
+        label:ignoreAnchorPointForPosition(false)
+        label:setAnchorPoint(0.5,0.5)
+        label:setColor(cc.c4b(255,255,255,255))
+        Sprite:addChild(label)
+    end
+
 end
 
 function Button:touchFunc()
@@ -73,14 +92,14 @@ function Button:touchFunc()
         if cc.rectContainsPoint(self.button_front:getBoundingBox(),location) then
             playSound(s_sound_buttonEffect)  
             self.button_front:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2)
-            self.shadowTexture:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2)
+            self.button_shadow:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2)
         end
         return true
     end
 
     local function onTouchEnded(touch, event)            
         self.button_front:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2 + self.moveLength)
-        self.shadowTexture:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2 - self.moveLength)
+        self.button_shadow:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2 - 2 * self.moveLength)
         local location = self.button_back:convertToNodeSpace(touch:getLocation())
         if cc.rectContainsPoint(self.button_front:getBoundingBox(),location) then 
            self.func()

@@ -80,18 +80,18 @@ function MissionProgressLayer.create(share,homelayer)
     backProgress:runAction(action)
 
 
-    local buttonFunc = function (sender,eventType)
-        if eventType ~= ccui.TouchEventType.ended then
-            return
-        end
-        local layer = require("playmodel.popup.EndPopup").new(1,1)
-        s_SCENE:replaceGameLayer(layer)
-    end
+    -- local buttonFunc = function (sender,eventType)
+    --     if eventType ~= ccui.TouchEventType.ended then
+    --         return
+    --     end
+    --     local layer = require("playmodel.popup.EndPopup").new(1,1)
+    --     s_SCENE:replaceGameLayer(layer)
+    -- end
 
-    local Button = ccui.Button:create("image/islandPopup/task_closebutton.png")
-    Button:addTouchEventListener(buttonFunc)
-    Button:setPosition(600,300)
-    layer:addChild(Button)
+    -- local Button = ccui.Button:create("image/islandPopup/task_closebutton.png")
+    -- Button:addTouchEventListener(buttonFunc)
+    -- Button:setPosition(600,300)
+    -- layer:addChild(Button)
 
     return layer
 end

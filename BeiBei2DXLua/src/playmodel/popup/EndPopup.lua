@@ -84,7 +84,12 @@ function EndPopup:resetUI()
     self.islandIndexLabel:setString("unit 1-1")
     self.islandIndexLabel:setPosition(self.titleSprite:getContentSize().width/ 2 , self.titleSprite:getContentSize().height * 0.7)
 
-    self.titleLabel:setString("time is up")
+    if self.type == "time" then
+        self.titleLabel:setString("时间用完了")
+    elseif self.type == "move" then
+        self.titleLabel:setString("机会用完了")
+    end
+
     self.titleLabel:setPosition(self.titleSprite:getContentSize().width/ 2 , self.titleSprite:getContentSize().height * 0.3)
 
     self.unfinishLabel:setString("任务目标未完成")
@@ -128,8 +133,8 @@ function EndPopup:resetUI()
     if self.exerciseBtn ~= nil then
         self.exerciseBtn:removeFromParent()
     end
-    local exerciseBtn = WordView.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","playmodel/endpopup/longButton_shadow.png",9,"训练场")
-    exerciseBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.4)
+    local exerciseBtn = Button.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","playmodel/endpopup/longButton_shadow.png",9,"训练场")
+    exerciseBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.35)
     self.exerciseBtn = exerciseBtn
     self.back:addChild(self.exerciseBtn)
     self.exerciseBtn.func = function ()
@@ -139,24 +144,35 @@ function EndPopup:resetUI()
     if self.addChanceBtn ~= nil then
         self.addChanceBtn:removeFromParent()
     end
-    local addChanceBtn = WordView.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","playmodel/endpopup/longButton_shadow.png",9,"训练场")
-    addChanceBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.3)
+
+    local text = ""
+    if self.type == "time" then
+        text = "时间用完了"
+    elseif self.type == "move" then
+        text = "机会用完了"
+    end
+
+    local addChanceBtn = Button.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","playmodel/endpopup/longButton_shadow.png",9,text)
+    addChanceBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.22)
     self.addChanceBtn = addChanceBtn
     self.back:addChild(self.addChanceBtn)
     self.addChanceBtn.func = function ()
         self.callBack()
     end
 
+    self.addChanceBtn:addSprite("image/playmodel/endpopup/Diamond.png",10)
+
     if self.restartBtn ~= nil then
         self.restartBtn:removeFromParent()
     end
-    local restartBtn = WordView.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","playmodel/endpopup/longButton_shadow.png",9,"训练场")
-    restartBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.2)
+    local restartBtn = Button.new("image/playmodel/endpopup/redButton_1.png","image/playmodel/endpopup/redButton_2.png","playmodel/endpopup/longButton_shadow.png",9,"重新开始")
+    restartBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.09)
     self.restartBtn = restartBtn
     self.back:addChild(self.restartBtn)
     self.restartBtn.func = function ()
 
     end
+    self.addChanceBtn:addSprite("image/playmodel/endpopup/heart01.png")
 end
 
 
