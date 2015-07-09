@@ -13,6 +13,17 @@ MatController.index = 1
 -- 砖块元素序列，cocoview
 MatController.currentCoco = {}
 
+function MatController:reset()
+	-- 位置序列，cc.p(1,1)
+	MatController.arr = {}
+	-- 字母序列
+	MatController.word = {}
+	-- 当前是第几个词
+	MatController.index = 1
+	-- 砖块元素序列，cocoview
+	MatController.currentCoco = {}
+end
+
 -- 计算距离
 function MatController:countDistance(p1,p2)
 	return math.sqrt((p1.x - p2.x)*(p1.x - p2.x) + (p1.y - p2.y)*(p1.y - p2.y))
