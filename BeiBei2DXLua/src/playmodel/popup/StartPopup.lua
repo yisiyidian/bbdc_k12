@@ -1,5 +1,6 @@
 -- 开始面板
 local Button = require("playmodel.item.Button")
+local ItemView = require("playmodel.item.ItemView")
 local StartPopup = class ("StartPopup",function ()
 	return cc.Layer:create()
 end)
@@ -63,6 +64,13 @@ function StartPopup:initUI()
     limitLabel:setColor(cc.c4b(0,0,0,255))
     self.limitLabel = limitLabel
     self.back:addChild(self.limitLabel)
+
+    local timeOrStep = cc.Label:createWithSystemFont("","",25)
+    timeOrStep:ignoreAnchorPointForPosition(false)
+    timeOrStep:setAnchorPoint(0.5,0.5)
+    timeOrStep:setColor(cc.c4b(0,0,0,255))
+    self.timeOrStep = timeOrStep
+    self.back:addChild(self.timeOrStep)
 
     local line1 = cc.Sprite:create() 
     line1:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
@@ -129,10 +137,57 @@ function StartPopup:resetUI()
         self.back:addChild(sprite)
     end
 
+
+    self.line1:setTexture("image/playmodel/endpopup/line.png")
+    self.line1:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.65)
+
+    self.missionLabel:setString("关卡目标")
+    self.missionLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.6)
+
+    self.itemList = {
+    {"boss","3"},
+    {"red","20"},
+}
+    
+    if self.itemView ~= nil then
+        self.itemView:removeFromParent()
+    end
+    local itemView = ItemView.new(self.itemList,self.back:getContentSize().width)
+    itemView:setPosition(0 , self.back:getContentSize().height * 0.5)
+    self.itemView = itemView
+    self.back:addChild(self.itemView)
+
+    self.line2:setTexture("image/playmodel/endpopup/line.png")
+    self.line2:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.45)
+
+
+    self.missionLabel:setString("关卡限制")
+    self.missionLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.4)
+
+    local string = ""
+    if self.type == "time" then
+        string = "10步"
+    elseif self.type == "step" then
+        string = "100秒"
+    end
+
+    self.timeOrStep:setString(string)
+    self.timeOrStep:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.3)
+
+    if self.exerciseBtn ~= nil then
+        self.exerciseBtn:removeFromParent()
+    end
+    local exerciseBtn = Button.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,"训练场")
+    exerciseBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.2)
+    self.exerciseBtn = exerciseBtn
+    self.back:addChild(self.exerciseBtn)
+    self.exerciseBtn.func = function ()
+
+    end
     if self.startBtn ~= nil then
         self.startBtn:removeFromParent()
     end
-    local startBtn = Button.new("image/playmodel/endpopup/redButton_1.png","image/playmodel/endpopup/redButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,"重新开始")
+    local startBtn = Button.new("image/playmodel/endpopup/redButton_1.png","image/playmodel/endpopup/redButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,"开始挑战")
     startBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.09)
     self.startBtn = startBtn
     self.back:addChild(self.startBtn)
