@@ -152,7 +152,7 @@ function StartPopup:resetUI()
 
     self.itemList = {
     {"boss","3"},
-    {"red","20"},
+    {"red",''..s_BattleManager.totalCollect},
 }
     
     if self.itemView ~= nil then
@@ -172,9 +172,9 @@ function StartPopup:resetUI()
 
     local string = ""
     if self.type == "step" then
-        string = "10步"
+        string = s_BattleManager.totalStep.."步"
     elseif self.type == "time" then
-        string = "100秒"
+        string = s_BattleManager.totalTime.."秒"
     end
 
     self.timeOrStep:setString(string)
