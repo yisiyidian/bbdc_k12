@@ -1,3 +1,5 @@
+-- 备用类
+-- 很有可能要去掉
 
 local WordView = class("WordView",function ()
 	return cc.Layer:create()

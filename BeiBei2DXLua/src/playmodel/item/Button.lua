@@ -2,6 +2,10 @@
 -- 这种按钮有少量立体效果
 -- 按下去，按钮上层和文字会下移,阴影上移
 -- 松开后，复原
+
+-- 按钮按下去不触发事件
+-- 松开手，按钮状态还原
+
 local  Button = class("Button", function ()
     return cc.Sprite:create()
 end)
@@ -67,6 +71,7 @@ function Button:resetUI()
     self:touchFunc()
 end
 
+-- 给按钮右侧加精灵，文字
 function Button:addSprite(texture,text)
     if texture == nil then
         return
@@ -87,6 +92,7 @@ function Button:addSprite(texture,text)
 
 end
 
+-- 按钮的触摸事件
 function Button:touchFunc()
     local function onTouchBegan(touch, event)
         local location = self.button_back:convertToNodeSpace(touch:getLocation())

@@ -1,3 +1,9 @@
+-- 备用类
+-- 很有可能要去掉
+
+
+
+
 local ItemView = class("ItemView",function ()
 	return cc.Layer:create()
 end)
