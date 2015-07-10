@@ -4,9 +4,15 @@ local StartPopup = class ("StartPopup",function ()
 	return cc.Layer:create()
 end)
 
-function StartPopup:ctor(islandIndex,type)
+function StartPopup:ctor(islandIndex)
 	self.islandIndex = islandIndex
-	self.type = type
+    self.unit = s_LocalDatabaseManager.getUnitInfo(self.islandIndex)
+    if self.unit.unitID % 2 == 1 then
+        s_BattleManager:initState(100,10,20,self.unit.wrongWordList,'step')
+    else
+        s_BattleManager:initState(100,10,20,self.unit.wrongWordList,'time')
+    end
+	self.type = s_BattleManager.stageType
 
 	self:initUI()
 end
@@ -137,7 +143,32 @@ function StartPopup:resetUI()
     self.startBtn = startBtn
     self.back:addChild(self.startBtn)
     self.startBtn.func = function ()
+        local bossList = s_LocalDatabaseManager.getAllUnitInfo()
+        local maxID = s_LocalDatabaseManager.getMaxUnitID()
+        if self.unit.coolingDay > 0 or self.unit.unitState >= 5 then
+            -- 记录用户点击的关卡号
+            s_game_fail_level_index = self.unit.unitID - 1
+            s_BattleManager:enterBattleView(self.unit)
+            s_SCENE:removeAllPopups()  
+            return
+        end
+        s_CorePlayManager.initTotalUnitPlay()
+        s_SCENE:removeAllPopups()  
+        -- local taskIndex = -2
 
+        -- for bossID, bossInfo in pairs(bossList) do
+        --     if bossInfo["coolingDay"] == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 5 < 0 then
+        --         taskIndex = bossID
+        --     end
+        -- end    
+
+        -- if taskIndex == -2 then      
+        --     s_CorePlayManager.initTotalUnitPlay() -- 之前没有boss
+        --     s_SCENE:removeAllPopups()  
+        -- else
+        --     s_CorePlayManager.initTotalUnitPlay() -- 按顺序打第一个boss
+        --     s_SCENE:removeAllPopups()  
+        -- end 
     end
     self.startBtn:addSprite("image/playmodel/endpopup/heart01.png")
 

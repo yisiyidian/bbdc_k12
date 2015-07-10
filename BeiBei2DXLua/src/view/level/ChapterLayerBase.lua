@@ -229,9 +229,9 @@ end
 -- playAnimation: 是否播放动画
 function ChapterLayerBase:addPopup(levelIndex,playAnimation)
     print("ChapterLayerBase:addPopup(levelIndex,playAnimation)"..tostring(playAnimation))
-    local LevelProgressPopup = require("view.islandPopup.LevelProgressPopup")
-    local levelProgressPopup = LevelProgressPopup.create(levelIndex,playAnimation)
-    s_SCENE:popup(levelProgressPopup)
+    local StartPopup = require("playmodel.popup.StartPopup")
+    local startPopup = StartPopup.new(levelIndex + 1)
+    s_SCENE:popup(startPopup)
 end
 
 -- 为关卡上添加装饰品（如章鱼boss，恐龙boss)

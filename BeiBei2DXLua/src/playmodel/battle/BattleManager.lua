@@ -58,11 +58,11 @@ function BattleManager:initState(time,step,collect,wordList,stageType)
 end
 --进入战斗场景
 function BattleManager:enterBattleView(unit)
-	if unit.unitID % 2 == 1 then
-		self:initState(100,10,20,unit.wrongWordList,'step')
-	else
-		self:initState(100,10,20,unit.wrongWordList,'time')
-	end
+	-- if unit.unitID % 2 == 1 then
+	-- 	self:initState(100,10,20,unit.wrongWordList,'step')
+	-- else
+	-- 	self:initState(100,10,20,unit.wrongWordList,'time')
+	-- end
 	local battleView = require("playmodel.battle.BattleView").new()
 	s_SCENE:replaceGameLayer(battleView)
 	self.view = battleView
