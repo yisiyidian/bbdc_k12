@@ -171,9 +171,9 @@ function StartPopup:resetUI()
     self.missionLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.4)
 
     local string = ""
-    if self.type == "time" then
+    if self.type == "step" then
         string = "10步"
-    elseif self.type == "step" then
+    elseif self.type == "time" then
         string = "100秒"
     end
 
