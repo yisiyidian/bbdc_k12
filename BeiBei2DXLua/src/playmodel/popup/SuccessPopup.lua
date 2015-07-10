@@ -172,14 +172,14 @@ function SuccessPopup:resetUI()
 
     end
 
-    if self.restartBtn ~= nil then
-        self.restartBtn:removeFromParent()
+    if self.shareBtn ~= nil then
+        self.shareBtn:removeFromParent()
     end
-    local restartBtn = Button.new("image/playmodel/endpopup/redButton_1.png","image/playmodel/endpopup/redButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,"重新开始")
-    restartBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.09)
-    self.restartBtn = restartBtn
-    self.back:addChild(self.restartBtn)
-    self.restartBtn.func = function ()
+    local shareBtn = Button.new("image/playmodel/endpopup/redButton_1.png","image/playmodel/endpopup/redButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,"分享")
+    shareBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.09)
+    self.shareBtn = shareBtn
+    self.back:addChild(self.shareBtn)
+    self.shareBtn.func = function ()
 
     end
 end

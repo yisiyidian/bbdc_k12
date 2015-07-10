@@ -1,10 +1,10 @@
 -- 开始面板
-
+local Button = require("playmodel.item.Button")
 local StartPopup = class ("StartPopup",function ()
 	return cc.Layer:create()
 end)
 
-function StartPopup:ctor(type)
+function StartPopup:ctor(islandIndex,type)
 	self.islandIndex = islandIndex
 	self.type = type
 
@@ -51,18 +51,18 @@ function StartPopup:initUI()
     self.back:addChild(self.petLabel)
 
     local missionLabel = cc.Label:createWithSystemFont("","",25)
-    rewardLabel:ignoreAnchorPointForPosition(false)
-    rewardLabel:setAnchorPoint(0.5,0.5)
-    rewardLabel:setColor(cc.c4b(0,0,0,255))
-    self.rewardLabel = rewardLabel
-    self.back:addChild(self.rewardLabel)
+    missionLabel:ignoreAnchorPointForPosition(false)
+    missionLabel:setAnchorPoint(0.5,0.5)
+    missionLabel:setColor(cc.c4b(0,0,0,255))
+    self.missionLabel = missionLabel
+    self.back:addChild(self.missionLabel)
 
     local limitLabel = cc.Label:createWithSystemFont("","",25)
-    eggLabel:ignoreAnchorPointForPosition(false)
-    eggLabel:setAnchorPoint(0.5,0.5)
-    eggLabel:setColor(cc.c4b(0,0,0,255))
-    self.eggLabel = eggLabel
-    self.back:addChild(self.eggLabel)
+    limitLabel:ignoreAnchorPointForPosition(false)
+    limitLabel:setAnchorPoint(0.5,0.5)
+    limitLabel:setColor(cc.c4b(0,0,0,255))
+    self.limitLabel = limitLabel
+    self.back:addChild(self.limitLabel)
 
     local line1 = cc.Sprite:create() 
     line1:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
@@ -91,7 +91,7 @@ function StartPopup:initUI()
     end
 end
 
-function StartPopup:initUI()
+function StartPopup:resetUI()
     self.back:setTexture("image/playmodel/endpopup/broad.png")
 
     self.titleSprite:setTexture("image/playmodel/endpopup/title.png")
@@ -111,7 +111,36 @@ function StartPopup:initUI()
     self.petLabel:setString("我的阵容")
     self.petLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.8)
 
-    
+    for i=1,5 do
+        local texture = ""
+        if i == 1 then
+            texture = "image/playmodel/endpopup/orangePet.png"
+        elseif i == 2 then
+            texture = "image/playmodel/endpopup/redPet.png"
+        elseif i == 3 then   
+            texture = "image/playmodel/endpopup/yellowPet.png"    
+        elseif i == 4 then
+            texture = "image/playmodel/endpopup/greenPet.png"
+        elseif i == 5 then   
+            texture = "image/playmodel/endpopup/bluePet.png" 
+        end
+        local sprite = cc.Sprite:create(texture)
+        sprite:setPosition(self.back:getContentSize().width / 6 * i,self.back:getContentSize().height * 0.7)
+        self.back:addChild(sprite)
+    end
+
+    if self.startBtn ~= nil then
+        self.startBtn:removeFromParent()
+    end
+    local startBtn = Button.new("image/playmodel/endpopup/redButton_1.png","image/playmodel/endpopup/redButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,"重新开始")
+    startBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.09)
+    self.startBtn = startBtn
+    self.back:addChild(self.startBtn)
+    self.startBtn.func = function ()
+
+    end
+    self.startBtn:addSprite("image/playmodel/endpopup/heart01.png")
+
 end
 
 return StartPopup

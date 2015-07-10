@@ -54,10 +54,10 @@ function PetView:resetUI()
 			self.petList[k]:setTexture("image/playmodel/endpopup/bluePet.png")
 			self.itemList[k]:setTexture("image/playmodel/endpopup/blueball.png")
 		elseif self.list[k][1] == "yellow" then
-			self.petList[k]:setTexture("image/playmodel/endpopup/orangePet.png")
+			self.petList[k]:setTexture("image/playmodel/endpopup/yellowPet.png")
 			self.itemList[k]:setTexture("image/playmodel/endpopup/yellowball.png")
 		elseif self.list[k][1] == "orange" then	
-			self.petList[k]:setTexture("image/playmodel/endpopup/yellowPet.png")
+			self.petList[k]:setTexture("image/playmodel/endpopup/orangePet.png")
 			self.itemList[k]:setTexture("image/playmodel/endpopup/orangeball.png")				
 		end
 		self.itemList[k]:setScale(0.5)
