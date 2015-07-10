@@ -80,10 +80,10 @@ function BattleManager:restartBattle()
 	local unit = self.unit
 	self:unregister()
 	self:sendNotification('UNREGISTER')
-	if self.unit.unitID % 2 == 1 then
-        s_BattleManager:initState(100,10,20,self.unit.wrongWordList,'step')
+	if unit.unitID % 2 == 1 then
+        s_BattleManager:initState(100,10,20,unit.wrongWordList,'step')
     else
-        s_BattleManager:initState(100,10,20,self.unit.wrongWordList,'time')
+        s_BattleManager:initState(100,10,20,unit.wrongWordList,'time')
     end
 	self:enterBattleView(unit)
 end
