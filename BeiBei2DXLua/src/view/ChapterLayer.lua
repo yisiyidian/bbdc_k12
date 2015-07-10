@@ -73,7 +73,7 @@ function ChapterLayer:ctor()
                 end
             end
         elseif evenType == ccui.ScrollviewEventType.scrolling then
-
+            
         end
     end 
     self.listView = ccui.ListView:create()

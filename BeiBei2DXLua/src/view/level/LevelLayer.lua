@@ -17,9 +17,14 @@ function LevelLayer:ctor()
 	-- 存储全局信息
 	self.info = {}
 	-- 初始化属性
-	self:setAnchorPoint(0.5,0)
+	self:setAnchorPoint(0,0)
+	self:setContentSize(level_item_width, s_DESIGN_HEIGHT)
 	-- 创建关卡层
 	self:createLevelView()
+	-- 测试
+	-- local LevelItem = require('view.level.LevelItem')
+ --    local newItem = LevelItem.create(1)
+ --    self:addChild(newItem,5)
 end
 
 -- 创建关卡层，关卡UI，逻辑
@@ -27,7 +32,6 @@ function LevelLayer:createLevelView()
 	local LevelListView = require('view.level.LevelListView')
 	self.info['levelListView'] = LevelListView.create()
     self:addChild(self.info['levelListView'])
-
 end
 
 

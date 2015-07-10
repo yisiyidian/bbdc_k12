@@ -274,6 +274,7 @@ function LocalDataBaseManager.initUnitInfo(unitID)
 end
 
 function LocalDataBaseManager.getBookMaxUnitID(bookKey)
+    print('============getMaxUnit========')
     return localdatabase_unitWord.getBookMaxUnitID(bookKey)
 end
 

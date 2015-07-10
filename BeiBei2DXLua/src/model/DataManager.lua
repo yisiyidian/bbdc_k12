@@ -585,13 +585,15 @@ end
 ----- level (or screen) config info ----------------------------------------------------------
 function DataManager.loadScreenConfig()
     local screenConfig = {}
-        local filepath = "config/level.config"
-        local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
-        local lines = split(content, "\n")
-        for j = 1, #lines do
-            local config = split(lines[j],'\t')
-            table.insert(screenConfig[config[1]],table.concat(config,'\t',2))
+    local filepath = "config/level.config"
+    local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
+    local lines = split(content, "\n")
+    for j = 1, #lines do
+        local config = split(lines[j],'\t')
+        if screenConfig[config[1]] == nil then
+            screenConfig[config[1]] = {}
         end
+        table.insert(screenConfig[config[1]],table.concat(config,'\t',2))
     end
     return screenConfig
     

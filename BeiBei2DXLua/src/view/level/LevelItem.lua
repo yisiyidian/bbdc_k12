@@ -22,8 +22,14 @@ function LevelItem:ctor(screenId)
 	-- 初始化item的属性
 	self:setContentSize(level_item_width,level_item_height)  
     self:setName('screen'..screenId)  
-    self:setAnchorPoint(0.5,0)
-    self:setPosition(cc.p((s_RIGHT_X-s_LEFT_X) / 2, 0))
+    self:setAnchorPoint(0,0)
+    -- self:setAnchorPoint(0.5,0)
+    -- self:setPosition(cc.p((s_RIGHT_X-s_LEFT_X) / 2, 0))
+
+    local fullWidth = level_item_width
+    self:setContentSize(fullWidth, s_DESIGN_HEIGHT) 
+    self:setPosition(cc.p((s_DESIGN_WIDTH - fullWidth) / 2, 0))
+
 	-- 初始化screen的关卡信息
 	self.info['startLevelId'], self.info['endLevelId'] = self:getLevelIdRange()
 	-- 初始化UI
@@ -45,7 +51,7 @@ function LevelItem:initUIFromConfig()
 end
 
 -- 获取该Item存储的levelId 范围
-function levelItem:getLevelIdRange()
+function LevelItem:getLevelIdRange()
 	local bookMaxLevelId = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey) -- 从1开始
 	local startLevelId, endLevelId
 	if self.info['screenId'] - 1 == 0 then
@@ -65,11 +71,13 @@ end
 function LevelItem:createObjectForResource(config)
 	local element
 	local config_info = split(config, '\t')
+	--print('config_info:'..config)
 	-- 初始化element的属性
-	if config_info[6] == 'decoration' then -- 装饰品，Sprite
-		element = cc.Sprite:create(config_info[7])
+	if config_info[5] == 'decoration' then -- 装饰品，Sprite
+		--print('Decoration')
+		element = cc.Sprite:create(config_info[6])
 		element:setName(config_info[1])
-	elseif config_info[6] == 'island' then -- 岛屿
+	elseif config_info[5] == 'island' then -- 岛屿
 		local function touchEvent(sender,eventType) -- 点击岛屿响应事件
 	        if eventType == ccui.TouchEventType.ended then
 	            print('LevelItem:levelbutton '..sender:getName()..' touched...')                
@@ -88,11 +96,12 @@ function LevelItem:createObjectForResource(config)
 		local curLevelId = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey) -- 从1开始
 
 		if levelId <= curLevelId then  -- 该关卡已经解锁
-			element = ccui.Button:create(config_info[7],config[7],config[7])
+			element = ccui.Button:create(config_info[6],config[6],config[6])
 		elseif levelId <= self.info['endLevelId'] then -- 该关卡尚未解锁
-			element = ccui.Button:create(config_info[8],config[8],config[8])
+			element = ccui.Button:create(config_info[7],config[7],config[7])
 		else --已经完成该书籍的学习
 			-- TODO something
+			return
 		end
 		element:setScale9Enabled(true)
 		element:addTouchEventListener(touchEvent)
@@ -100,9 +109,9 @@ function LevelItem:createObjectForResource(config)
 	end
 	local location = split(config_info[3],'|')
 	element:setPosition(cc.p(tonumber(location[1]),tonumber(location[2])))
-	local anchor = split(config_inf[4], '|')
+	local anchor = split(config_info[2], '|')
 	element:setAnchorPoint(cc.p(tonumber(anchor[1]),tonumber(anchor[2])))
-    self:addChild(element, tonumber(config_info[5]))
+   	self:addChild(element, tonumber(config_info[4]))
 end
 
 
