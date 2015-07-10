@@ -110,8 +110,9 @@ function StartPopup:resetUI()
 
     self.titleSprite:setTexture("image/playmodel/endpopup/title.png")
     self.titleSprite:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
-
-    self.islandIndexLabel:setString("unit 1-1")
+    
+    local titleString = string.gsub('Unit '..s_BookUnitName[s_CURRENT_USER.bookKey][''..tonumber(self.islandIndex)],"_","-")
+    self.islandIndexLabel:setString(titleString)
     self.islandIndexLabel:setPosition(self.titleSprite:getContentSize().width/ 2 , self.titleSprite:getContentSize().height * 0.7)
     
     if self.type == "time" then
