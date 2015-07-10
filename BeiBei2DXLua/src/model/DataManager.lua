@@ -267,7 +267,7 @@ function DataManager.loadK12BookWords()
         }
         for i = 1, #bookName do
             bookWord[bookName[i]] = {}
-            local filepath = "cfg/" .. bookName[i] .. ".book"
+            local filepath = "cfg/" .. bookName[i] .. ".newbook"
             local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
             local lines = split(content, "\n")
             -- local current_unit = 0
@@ -582,5 +582,19 @@ function DataManager.loadBean()
         table.insert(DataManager.bean, p)
     end
 end
-
+----- level (or screen) config info ----------------------------------------------------------
+function DataManager.loadScreenConfig()
+    local screenConfig = {}
+        local filepath = "config/level.config"
+        local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
+        local lines = split(content, "\n")
+        for j = 1, #lines do
+            local config = split(lines[j],'\t')
+            table.insert(screenConfig[config[1]],table.concat(config,'\t',2))
+        end
+    end
+    return screenConfig
+    
+    
+end
 return DataManager

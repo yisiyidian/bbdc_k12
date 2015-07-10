@@ -525,7 +525,7 @@ function M.getBookMaxUnitID(bookKey)
             maxID = unitID + 0
         end
     end
-    print('maxID:'..maxID)
+    --print('maxID:'..maxID)
     return maxID
 end
 

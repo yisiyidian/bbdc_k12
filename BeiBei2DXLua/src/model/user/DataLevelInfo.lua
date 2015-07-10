@@ -2,6 +2,7 @@ require("cocos.init")
 require("common.global")
 
 --记录每本书的进度
+--每本书从1开始编号关卡
 
 local DataClassBase = require('model.user.DataClassBase')
 
@@ -20,7 +21,7 @@ function DataLevelInfo:ctor()
     self.className = 'DataLevelInfo'
 
     for i, v in ipairs(g_BOOKS) do
-        self[DataLevelInfo.BOOKKEY .. v] = 0
+        self[DataLevelInfo.BOOKKEY .. v] = 1  -- 从1开始编号
     end
 end
 
@@ -50,13 +51,13 @@ function DataLevelInfo:getLevelInfo(bookKey)
             return self[DataLevelInfo.BOOKKEY .. g_BOOKS[i]]
         end
     end
-    return 0
+    return 1
 end
 
 function DataLevelInfo:computeCurrentProgress()
     -- local tmp = self:getLevelInfo(s_CURRENT_USER.bookKey)
     -- return tmp + 1
-    return s_LocalDatabaseManager.getMaxUnitID() - 1
+    return s_LocalDatabaseManager.getMaxUnitID()
 end
 
 function DataLevelInfo:getDataFromLocalDB()

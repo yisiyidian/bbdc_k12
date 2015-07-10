@@ -255,10 +255,15 @@ function CorePlayManager.enterStoryLayer()
 end
 
 function CorePlayManager.enterLevelLayer()
-    local ChapterLayer = require('view.ChapterLayer')
-    local chapterLayer = ChapterLayer.create()
-    CorePlayManager.chapterLayer = chapterLayer
-    s_SCENE:replaceGameLayer(chapterLayer)
+    -- local ChapterLayer = require('view.ChapterLayer')
+    -- local chapterLayer = ChapterLayer.create()
+    -- CorePlayManager.chapterLayer = chapterLayer
+    -- s_SCENE:replaceGameLayer(chapterLayer)
+
+    -- test new level
+    local LevelLayer = require('view.level.LevelLayer')
+    local levelLayer = LevelLayer.create()
+    s_SCENE:replaceGameLayer(levelLayer)
 end
 
 function CorePlayManager.enterBookLayer(education)

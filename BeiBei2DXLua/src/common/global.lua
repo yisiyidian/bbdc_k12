@@ -31,6 +31,10 @@ local function _initConstant()
     -- boss失败的后的标志，非凡用
     s_game_fail_state                       = 0  -- 挑战是否失败
     s_game_fail_level_index                 = 0  -- 挑战失败时所选择的关卡
+
+    -- 关卡界面：每屏的高度和宽度
+    level_item_width=854
+    level_item_height=1136
     
     
     --常用资源
