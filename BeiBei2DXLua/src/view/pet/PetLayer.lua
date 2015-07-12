@@ -9,7 +9,7 @@ function PetLayer.create()
     local bigWidth = s_DESIGN_WIDTH + 2*s_DESIGN_OFFSET_WIDTH
     local bigHeight = 1.0*s_DESIGN_HEIGHT
 
-    local initColor = cc.LayerColor:create(cc.c4b(248,247,235,255), bigWidth, s_DESIGN_HEIGHT)
+    local initColor = cc.LayerColor:create(cc.c4b(172,220,238,255), bigWidth, s_DESIGN_HEIGHT)
     initColor:setAnchorPoint(0.5,0.5)
     initColor:ignoreAnchorPointForPosition(false)  
     initColor:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
@@ -25,7 +25,7 @@ function PetLayer.create()
     scrollView:setPosition(cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
     layer:addChild(scrollView)
 
-    local backColor = cc.LayerColor:create(cc.c4b(248,247,235,255), bigWidth, bigHeight)
+    local backColor = cc.LayerColor:create(cc.c4b(172,220,238,255), bigWidth, bigHeight)
     backColor:setAnchorPoint(0.5,0.5)
     backColor:ignoreAnchorPointForPosition(false)  
     backColor:setPosition(bigWidth/2, bigHeight/2)
@@ -61,6 +61,56 @@ function PetLayer.create()
     been_number:setColor(cc.c4b(0,0,0,255))
     been_number:setPosition(beans:getContentSize().width * 0.65 , beans:getContentSize().height/2)
     beans:addChild(been_number)
+
+
+    local button_left_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+
+        end
+    end
+
+    local button_left = ccui.Button:create("image/pet/pet_house/turnleft.png","image/pet/pet_house/turnleft_buttondown.png","")
+    button_left:setPosition(50, s_DESIGN_HEIGHT/2)
+    button_left:addTouchEventListener(button_left_clicked)
+    layer:addChild(button_left) 
+
+    local button_right_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+
+        end
+    end
+
+    local button_right = ccui.Button:create("image/pet/pet_house/turnright.png","image/pet/pet_house/turnright_buttondown.png","")
+    button_right:setPosition(s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT/2)
+    button_right:addTouchEventListener(button_right_clicked)
+    layer:addChild(button_right) 
+
+
+    for i = 0, 1 do
+        for j = 0, 1 do
+            local petBack = cc.Sprite:create("image/pet/pet_house/blueCard.png")
+            petBack:setPosition(s_DESIGN_WIDTH/2 - 120 + 240*i, s_DESIGN_HEIGHT/2-190+380*j)
+            layer:addChild(petBack)
+
+            local attrBall = cc.Sprite:create("image/pet/pet_house/blueball_normal.png")
+            attrBall:setPosition(60, petBack:getContentSize().height-60)
+            petBack:addChild(attrBall)
+
+            local petStar = cc.Sprite:create("image/pet/pet_house/star.png")
+            petStar:setPosition(petBack:getContentSize().width-70, petBack:getContentSize().height-60)
+            petBack:addChild(petStar)
+
+            local pet = cc.Sprite:create("image/pet/pet_detail/bluepet/jienigui-1.png")
+            pet:setPosition(petBack:getContentSize().width/2, petBack:getContentSize().height/2)
+            pet:setScale(0.6)
+            petBack:addChild(pet)
+
+            local petDesc = cc.Label:createWithSystemFont("Lv. 1 妙蛙种子","",28)
+            petDesc:setPosition(petBack:getContentSize().width/2,60)
+            petBack:addChild(petDesc)
+        end
+    end
+
 
     return layer
 end
