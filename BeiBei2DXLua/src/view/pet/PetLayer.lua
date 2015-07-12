@@ -1,3 +1,12 @@
+    -- local beans = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
+    -- beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
+    -- layer:addChild(beans)
+
+    -- local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
+    -- been_number:setColor(cc.c4b(0,0,0,255))
+    -- been_number:setPosition(beans:getContentSize().width * 0.65 , beans:getContentSize().height/2)
+    -- beans:addChild(been_number)
+
 
 local PetLayer = class("PetLayer", function()
     return cc.Layer:create()
@@ -31,59 +40,21 @@ function PetLayer.create()
     backColor:setPosition(bigWidth/2, bigHeight/2)
     scrollView:addChild(backColor)
 
-    local back_head = cc.ProgressTimer:create(cc.Sprite:create("image/shop/headback.png"))
-    back_head:setAnchorPoint(0.5, 1)
-    back_head:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT)
-    back_head:setType(cc.PROGRESS_TIMER_TYPE_BAR)
-    back_head:setMidpoint(cc.p(0.5, 0))
-    back_head:setBarChangeRate(cc.p(1, 0))
-    back_head:setPercentage((s_RIGHT_X - s_LEFT_X) / back_head:getContentSize().width * 100)
-    layer:addChild(back_head)
-
     local button_back_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
-           -- layer.backToHome()
             local homeLayer = require("view.home.HomeLayer").create()
             s_SCENE:replaceGameLayer(homeLayer)
         end
     end
 
-    local button_back = ccui.Button:create("image/shop/button_back.png","image/shop/button_back.png","")
-    button_back:setPosition(50, s_DESIGN_HEIGHT-50)
+    local button_back = ccui.Button:create("image/pet/pet_house/homePageButton.png","","")
+    button_back:setPosition(s_DESIGN_WIDTH-50, 50)
     button_back:addTouchEventListener(button_back_clicked)
     layer:addChild(button_back) 
 
-    local beans = cc.Sprite:create("image/chapter/chapter0/background_been_white.png")
-    beans:setPosition(s_DESIGN_WIDTH-s_LEFT_X-100, s_DESIGN_HEIGHT-70)
-    layer:addChild(beans)
-
-    local been_number = cc.Label:createWithSystemFont(s_CURRENT_USER:getBeans(),'',24)
-    been_number:setColor(cc.c4b(0,0,0,255))
-    been_number:setPosition(beans:getContentSize().width * 0.65 , beans:getContentSize().height/2)
-    beans:addChild(been_number)
 
 
-    local button_left_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
 
-        end
-    end
-
-    local button_left = ccui.Button:create("image/pet/pet_house/turnleft.png","image/pet/pet_house/turnleft_buttondown.png","")
-    button_left:setPosition(50, s_DESIGN_HEIGHT/2)
-    button_left:addTouchEventListener(button_left_clicked)
-    layer:addChild(button_left) 
-
-    local button_right_clicked = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-
-        end
-    end
-
-    local button_right = ccui.Button:create("image/pet/pet_house/turnright.png","image/pet/pet_house/turnright_buttondown.png","")
-    button_right:setPosition(s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT/2)
-    button_right:addTouchEventListener(button_right_clicked)
-    layer:addChild(button_right) 
 
 
     for i = 0, 1 do
@@ -111,6 +82,53 @@ function PetLayer.create()
         end
     end
 
+
+    local pageIndex = 1
+    local attrList = {"blue","green","red","orange","yellow"}
+    attrBallList = {}
+    for i, v in pairs(attrList) do
+        if i == pageIndex then
+            local attrBall = cc.Sprite:create("image/pet/pet_house/"..v.."ball_selected.png")
+            attrBall:setPosition(s_DESIGN_WIDTH/2-210+70*i, 60)
+            layer:addChild(attrBall)
+            table.insert(attrBallList, attrBall)
+        else
+            local attrBall = cc.Sprite:create("image/pet/pet_house/"..v.."ball_normal.png")
+            attrBall:setPosition(s_DESIGN_WIDTH/2-210+70*i, 60)
+            layer:addChild(attrBall)
+            table.insert(attrBallList, attrBall)
+        end
+    end
+
+    local button_left_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            if pageIndex - 1 >= 1 then
+                attrBallList[pageIndex]:setTexture("image/pet/pet_house/"..attrList[pageIndex].."ball_normal.png")
+                pageIndex = pageIndex - 1
+                attrBallList[pageIndex]:setTexture("image/pet/pet_house/"..attrList[pageIndex].."ball_selected.png")
+            end
+        end
+    end
+
+    local button_left = ccui.Button:create("image/pet/pet_house/turnleft.png","image/pet/pet_house/turnleft_buttondown.png","")
+    button_left:setPosition(50, s_DESIGN_HEIGHT/2)
+    button_left:addTouchEventListener(button_left_clicked)
+    layer:addChild(button_left) 
+
+    local button_right_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            if pageIndex + 1 <= 5 then
+                attrBallList[pageIndex]:setTexture("image/pet/pet_house/"..attrList[pageIndex].."ball_normal.png")
+                pageIndex = pageIndex + 1
+                attrBallList[pageIndex]:setTexture("image/pet/pet_house/"..attrList[pageIndex].."ball_selected.png")
+            end
+        end
+    end
+
+    local button_right = ccui.Button:create("image/pet/pet_house/turnright.png","image/pet/pet_house/turnright_buttondown.png","")
+    button_right:setPosition(s_DESIGN_WIDTH-50, s_DESIGN_HEIGHT/2)
+    button_right:addTouchEventListener(button_right_clicked)
+    layer:addChild(button_right) 
 
     return layer
 end
