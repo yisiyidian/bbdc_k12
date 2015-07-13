@@ -1,4 +1,8 @@
 
+
+local PetCfg = require("view.pet.PetCfg")
+local LocalPetCfg = require("view.pet.LocalPetCfg")
+
 local PetAlter = class("PetAlter", function()
     return cc.Layer:create()
 end)
@@ -19,10 +23,6 @@ function PetAlter.create(petID)
     local maxWidth = back:getContentSize().width
     local maxHeight = back:getContentSize().height
 
-    local pet = cc.Sprite:create("image/pet/pet_detail/"..petID.."_1.png")
-    pet:setPosition(maxWidth/2, maxHeight/2)
-    back:addChild(pet)
-
     local button_close_clicked = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
             local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT * 1.5))
@@ -34,10 +34,73 @@ function PetAlter.create(petID)
         end
     end
 
-    button_close = ccui.Button:create("image/pet/pet_alter/closeButton_1.png","image/pet/pet_alter/closeButton_2.png","")
+    local button_close = ccui.Button:create("image/pet/pet_alter/closeButton_1.png","image/pet/pet_alter/closeButton_2.png","")
     button_close:setPosition(maxWidth-80,maxHeight-80)
     button_close:addTouchEventListener(button_close_clicked)
     back:addChild(button_close)
+
+    local petDesc = cc.Label:createWithSystemFont("Lv"..LocalPetCfg[petID]["level"].." "..PetCfg[petID.."_1"]["name"],"",28)
+    petDesc:setColor(cc.c4b(0,0,0,255))
+    petDesc:setPosition(maxWidth/2,maxHeight-80)
+    back:addChild(petDesc)
+
+    local pet = cc.Sprite:create("image/pet/pet_detail/"..petID.."_1.png")
+    pet:setPosition(maxWidth/2, maxHeight/2+200)
+    back:addChild(pet)
+
+    local lineUp = cc.Sprite:create("image/pet/pet_alter/line.png")
+    lineUp:setPosition(maxWidth/2, maxHeight/2-100)
+    back:addChild(lineUp)
+
+    
+        local info11 = cc.Label:createWithSystemFont("当前","",30)
+        info11:setColor(cc.c4b(0,0,0,255))
+        info11:setPosition(maxWidth/2-80,maxHeight/2-120)
+        back:addChild(info11)
+
+        local info12 = cc.Label:createWithSystemFont("攻击力:200","",28)
+        info12:setColor(cc.c4b(0,0,0,255))
+        info12:setPosition(maxWidth/2-80,maxHeight/2-160)
+        back:addChild(info12)
+
+        local info13 = cc.Label:createWithSystemFont("特殊技能:无","",28)
+        info13:setColor(cc.c4b(0,0,0,255))
+        info13:setPosition(maxWidth/2-80,maxHeight/2-200)
+        back:addChild(info13)
+
+        local info21 = cc.Label:createWithSystemFont("当前","",30)
+        info21:setColor(cc.c4b(0,0,0,255))
+        info21:setPosition(maxWidth/2+80,maxHeight/2-120)
+        back:addChild(info21)
+
+        local info22 = cc.Label:createWithSystemFont("攻击力:200","",28)
+        info22:setColor(cc.c4b(0,0,0,255))
+        info22:setPosition(maxWidth/2+80,maxHeight/2-160)
+        back:addChild(info22)
+
+        local info23 = cc.Label:createWithSystemFont("特殊技能:无","",28)
+        info23:setColor(cc.c4b(0,0,0,255))
+        info23:setPosition(maxWidth/2+80,maxHeight/2-200)
+        back:addChild(info23)
+
+    local lineDown = cc.Sprite:create("image/pet/pet_alter/line.png")
+    lineDown:setPosition(maxWidth/2, maxHeight/2-300)
+    back:addChild(lineDown)
+
+    local board = cc.Sprite:create("image/pet/pet_alter/sourceboard.png")
+    board:setPosition(maxWidth/2, 100)
+    back:addChild(board)
+
+    local button_levelup_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+
+        end
+    end
+
+    local button_levelup = ccui.Button:create("image/pet/pet_alter/blueButton_1.png","image/pet/pet_alter/blueButton_2.png","")
+    button_levelup:setPosition(maxWidth/2,80)
+    button_levelup:addTouchEventListener(button_levelup_clicked)
+    back:addChild(button_levelup)
 
     -- touch lock
     local onTouchBegan = function(touch, event)        

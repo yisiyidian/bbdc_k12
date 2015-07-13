@@ -18,6 +18,8 @@
     -- layer:addChild(scrollView)
 
 local PetAlter = require("view.pet.PetAlter")
+local PetCfg = require("view.pet.PetCfg")
+local LocalPetCfg = require("view.pet.LocalPetCfg")
 
 local PetLayer = class("PetLayer", function()
     return cc.Layer:create()
@@ -54,7 +56,7 @@ function PetLayer.create()
                 local petIndex = row*2+col+1
                 if petIndex <= attrCnt[page+1] then
                     local petBack = cc.Sprite:create("image/pet/pet_house/"..attrList[page+1].."card.png")
-                    petBack:setPosition(bigWidth/2 - 120 + 240*row, s_DESIGN_HEIGHT/2 + 190 - 380*col)
+                    petBack:setPosition(bigWidth/2 - 120 + 240*col, s_DESIGN_HEIGHT/2 + 190 - 380*row)
                     backColor:addChild(petBack)
                     table.insert(oneAttrPetList, petBack)
 
@@ -71,7 +73,8 @@ function PetLayer.create()
                     pet:setScale(0.6)
                     petBack:addChild(pet)
 
-                    local petDesc = cc.Label:createWithSystemFont("Lv. 1 妙蛙种子","",28)
+                    local petID = attrList[page+1].."_"..petIndex
+                    local petDesc = cc.Label:createWithSystemFont("Lv"..LocalPetCfg[petID]["level"].." "..PetCfg[petID.."_1"]["name"],"",28)
                     petDesc:setPosition(petBack:getContentSize().width/2,60)
                     petBack:addChild(petDesc)
                 end
