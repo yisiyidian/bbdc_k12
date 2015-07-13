@@ -17,6 +17,7 @@
     -- scrollView:setPosition(cc.p(bigWidth/2, s_DESIGN_HEIGHT/2))
     -- layer:addChild(scrollView)
 
+local PetAlter = require("view.pet.PetAlter")
 
 local PetLayer = class("PetLayer", function()
     return cc.Layer:create()
@@ -38,7 +39,8 @@ function PetLayer.create()
     table.insert(colorList, cc.c4b(246,215,175,255))
     table.insert(colorList, cc.c4b(246,242,175,255))
 
-    pageList = {}
+    local pageList = {}
+    local petList = {}
     for page = 0, 4 do
         local backColor = cc.LayerColor:create(colorList[page+1], bigWidth, s_DESIGN_HEIGHT)
         backColor:setAnchorPoint(0.5,0.5)
@@ -46,6 +48,7 @@ function PetLayer.create()
         backColor:setPosition(s_DESIGN_WIDTH/2+bigWidth*page, s_DESIGN_HEIGHT/2)
         layer:addChild(backColor)
         table.insert(pageList, backColor)
+        local oneAttrPetList = {}
         for row = 0, 1 do
             for col = 0, 1 do
                 local petIndex = row*2+col+1
@@ -53,6 +56,7 @@ function PetLayer.create()
                     local petBack = cc.Sprite:create("image/pet/pet_house/"..attrList[page+1].."card.png")
                     petBack:setPosition(bigWidth/2 - 120 + 240*row, s_DESIGN_HEIGHT/2 + 190 - 380*col)
                     backColor:addChild(petBack)
+                    table.insert(oneAttrPetList, petBack)
 
                     local attrBall = cc.Sprite:create("image/pet/pet_house/blueball_normal.png")
                     attrBall:setPosition(60, petBack:getContentSize().height-60)
@@ -62,7 +66,7 @@ function PetLayer.create()
                     petStar:setPosition(petBack:getContentSize().width-70, petBack:getContentSize().height-60)
                     petBack:addChild(petStar)
 
-                    local pet = cc.Sprite:create("image/pet/pet_detail/"..attrList[page+1].."pet/"..attrList[page+1].."_"..petIndex.."_1.png")
+                    local pet = cc.Sprite:create("image/pet/pet_detail/"..attrList[page+1].."_"..petIndex.."_1.png")
                     pet:setPosition(petBack:getContentSize().width/2, petBack:getContentSize().height/2)
                     pet:setScale(0.6)
                     petBack:addChild(pet)
@@ -73,10 +77,11 @@ function PetLayer.create()
                 end
             end
         end
+        table.insert(petList, oneAttrPetList)
     end
 
 
-    attrBallList = {}
+    local attrBallList = {}
     for i, v in pairs(attrList) do
         if i == pageIndex then
             local attrBall = cc.Sprite:create("image/pet/pet_house/"..v.."ball_selected.png")
@@ -143,6 +148,40 @@ function PetLayer.create()
     button_back:setPosition(s_DESIGN_WIDTH-50, 50)
     button_back:addTouchEventListener(button_back_clicked)
     layer:addChild(button_back) 
+
+
+    local onTouchBegan = function(touch, event)        
+        return true
+    end
+
+    local onTouchEnded = function(touch, event)
+        for index1 = 1, #petList do
+            for index2 = 1, #petList[index1] do 
+                local location = petList[index1][index2]:convertToNodeSpace(touch:getLocation())
+                local size = petList[index1][index2]:getBoundingBox()
+                if cc.rectContainsPoint({x=0,y=0,width=size.width,height=size.height}, location) then
+                    local petAlter = PetAlter.create(attrList[index1].."_"..index2)
+                    layer:addChild(petAlter)
+                end
+            end
+        end
+        -- local location = main:convertToNodeSpace(touch:getLocation())
+        -- if not cc.rectContainsPoint(back:getBoundingBox(),location) then
+        --     local action1 = cc.MoveTo:create(0.5,cc.p(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2*3))
+        --     local action2 = cc.EaseBackIn:create(action1)
+        --     local remove = cc.CallFunc:create(function()
+        --         main:removeFromParent()
+        --     end)
+        --     back:runAction(cc.Sequence:create(action2,remove))
+        -- end
+    end
+
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(true)
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = layer:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)
 
     return layer
 end
