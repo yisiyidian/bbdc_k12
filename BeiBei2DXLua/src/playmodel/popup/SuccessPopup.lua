@@ -5,7 +5,7 @@ local Button = require("playmodel.item.Button")
 local SuccessPopup = class ("SuccessPopup",function ()
 	return cc.Layer:create()
 end)
-
+-- 没什么写的
 function SuccessPopup:ctor(islandIndex,type,itemList)
 	self.islandIndex = islandIndex
 	self.type = type

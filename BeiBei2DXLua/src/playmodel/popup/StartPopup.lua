@@ -4,20 +4,27 @@ local ItemView = require("playmodel.item.ItemView")
 local StartPopup = class ("StartPopup",function ()
 	return cc.Layer:create()
 end)
-
+-- 开始面板 
+-- 参数 小岛序号
 function StartPopup:ctor(islandIndex)
 	self.islandIndex = islandIndex
+    -- 初始化关卡信息 词库等
     self.unit = s_LocalDatabaseManager.getUnitInfo(self.islandIndex)
+    -- 初始化 关卡目标等
+    -- ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
+    -- 这里改
     if self.unit.unitID % 2 == 1 then
         s_BattleManager:initState(100,10,20,self.unit.wrongWordList,'step')
     else
         s_BattleManager:initState(100,10,20,self.unit.wrongWordList,'time')
     end
+    -- 目前的关卡类型
 	self.type = s_BattleManager.stageType
 
 	self:initUI()
 end
 
+-- 初始化ui
 function StartPopup:initUI()
     -- 背景面板
     local back = cc.Sprite:create()
@@ -27,7 +34,7 @@ function StartPopup:initUI()
     self.back = back
     self:addChild(self.back)
 
-    -- 小岛序号
+    -- 序号背景
     local titleSprite = cc.Sprite:create() 
     titleSprite:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
     titleSprite:ignoreAnchorPointForPosition(false)
@@ -35,6 +42,7 @@ function StartPopup:initUI()
     self.titleSprite = titleSprite
     self.back:addChild(self.titleSprite)
 
+    -- 小岛的序号
     local islandIndexLabel = cc.Label:createWithSystemFont("","",25)
     islandIndexLabel:ignoreAnchorPointForPosition(false)
     islandIndexLabel:setAnchorPoint(0.5,0.5)
@@ -50,6 +58,7 @@ function StartPopup:initUI()
     self.titleLabel = titleLabel
     self.titleSprite:addChild(self.titleLabel)
 
+    -- 宠物配置
     local petLabel = cc.Label:createWithSystemFont("","",25)
     petLabel:ignoreAnchorPointForPosition(false)
     petLabel:setAnchorPoint(0.5,0.5)
@@ -57,6 +66,7 @@ function StartPopup:initUI()
     self.petLabel = petLabel
     self.back:addChild(self.petLabel)
 
+    -- 任务目标
     local missionLabel = cc.Label:createWithSystemFont("","",25)
     missionLabel:ignoreAnchorPointForPosition(false)
     missionLabel:setAnchorPoint(0.5,0.5)
@@ -64,6 +74,7 @@ function StartPopup:initUI()
     self.missionLabel = missionLabel
     self.back:addChild(self.missionLabel)
 
+    -- 关卡限制
     local limitLabel = cc.Label:createWithSystemFont("","",25)
     limitLabel:ignoreAnchorPointForPosition(false)
     limitLabel:setAnchorPoint(0.5,0.5)
@@ -71,6 +82,7 @@ function StartPopup:initUI()
     self.limitLabel = limitLabel
     self.back:addChild(self.limitLabel)
 
+    -- 显示倒计时或倒数步数   
     local timeOrStep = cc.Label:createWithSystemFont("","",25)
     timeOrStep:ignoreAnchorPointForPosition(false)
     timeOrStep:setAnchorPoint(0.5,0.5)
@@ -78,6 +90,8 @@ function StartPopup:initUI()
     self.timeOrStep = timeOrStep
     self.back:addChild(self.timeOrStep)
 
+
+    -- 分割线
     local line1 = cc.Sprite:create() 
     line1:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
     line1:ignoreAnchorPointForPosition(false)
@@ -92,7 +106,7 @@ function StartPopup:initUI()
     self.line2 = line2
     self.back:addChild(self.line2)
 
-
+    -- 重置UI
     self:resetUI()
 
     local closeBtn = Button.new("image/playmodel/endpopup/closeButton_2.png","image/playmodel/endpopup/closeButton_1.png","image/playmodel/endpopup/closeButton_shadow.png",9,"")
@@ -126,6 +140,9 @@ function StartPopup:resetUI()
     self.petLabel:setString("我的阵容")
     self.petLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.8)
 
+    -- ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
+    -- 这里少做了宠物配置更改，以及纪录宠物小队的配置
+    -- ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
     for i=1,5 do
         local texture = ""
         if i == 1 then
@@ -151,6 +168,8 @@ function StartPopup:resetUI()
     self.missionLabel:setString("关卡目标")
     self.missionLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.6)
 
+    -- 关卡目标
+    -- 最多3种
     self.itemList = {
     {"boss","3"},
     {"red",''..s_BattleManager.totalCollect},
@@ -198,6 +217,16 @@ function StartPopup:resetUI()
     startBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.09)
     self.startBtn = startBtn
     self.back:addChild(self.startBtn)
+
+
+    -- 这里的逻辑
+    -- ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+    -- 每个关卡有5种状态 1 5 6 7 8
+    -- 1为第一次进入当前关卡
+    -- 5678为4次复习
+    -- 内容上一模一样
+    -- boss隔日生成
+
     self.startBtn.func = function ()
         local bossList = s_LocalDatabaseManager.getAllUnitInfo()
         local maxID = s_LocalDatabaseManager.getMaxUnitID()

@@ -197,8 +197,8 @@ end
 
 -- 处理观察者消息
 function MatController:handleNotification(notify,data)
-	if notify == "right" then
-		print("处理消息right")
+	if notify == "RIGHT" then
+		print("处理消息RIGHT")
 		-- MatController.MatView:resetUI()
 	elseif notify == UNREGISTER then
     	self:unregister()

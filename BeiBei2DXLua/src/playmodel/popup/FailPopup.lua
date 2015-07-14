@@ -1,3 +1,9 @@
+-- 失败面板
+
+-- 暂时只是一个静态面板
+
+-- 只写了重玩，加道具玩 其他功能待定
+
 -- 根据通关条件不同，显示不同的结束面板
 local ItemView = require("playmodel.item.ItemView")
 local WordView = require("playmodel.item.WordView")
@@ -5,6 +11,9 @@ local Button = require("playmodel.item.Button")
 local FailPopup = class ("FailPopup",function ()
 	return cc.Layer:create()
 end)
+
+-- 失败面板
+-- 参数 小岛序号 类型 收集元素的情况 错词的列表
 
 function FailPopup:ctor(islandIndex,type,itemList,wordList)
 	self.islandIndex = islandIndex
@@ -15,6 +24,8 @@ function FailPopup:ctor(islandIndex,type,itemList,wordList)
 	self:initUI()
 end
 
+
+-- 初始化ui
 function FailPopup:initUI()
 	-- 背景面板
 	local back = cc.Sprite:create()
@@ -24,7 +35,7 @@ function FailPopup:initUI()
     self.back = back
     self:addChild(self.back)
 
-    -- 小岛序号
+    -- 上部显示编号的精灵
     local titleSprite = cc.Sprite:create() 
     titleSprite:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
     titleSprite:ignoreAnchorPointForPosition(false)
@@ -32,6 +43,7 @@ function FailPopup:initUI()
     self.titleSprite = titleSprite
     self.back:addChild(self.titleSprite)
 
+    -- 小岛序号
     local islandIndexLabel = cc.Label:createWithSystemFont("","",25)
     islandIndexLabel:ignoreAnchorPointForPosition(false)
     islandIndexLabel:setAnchorPoint(0.5,0.5)
@@ -47,6 +59,7 @@ function FailPopup:initUI()
     self.titleLabel = titleLabel
     self.titleSprite:addChild(self.titleLabel)
 
+    -- 失败了
     local unfinishLabel = cc.Label:createWithSystemFont("","",25)
     unfinishLabel:ignoreAnchorPointForPosition(false)
     unfinishLabel:setAnchorPoint(0.5,0.5)
@@ -54,6 +67,7 @@ function FailPopup:initUI()
     self.unfinishLabel = unfinishLabel
     self.back:addChild(self.unfinishLabel)
 
+    -- 词错了
     local unknowLabel = cc.Label:createWithSystemFont("","",25)
     unknowLabel:ignoreAnchorPointForPosition(false)
     unknowLabel:setAnchorPoint(0.5,0.5)
@@ -61,6 +75,7 @@ function FailPopup:initUI()
     self.unknowLabel = unknowLabel
     self.back:addChild(self.unknowLabel)
 
+    -- 分割线
     local line = cc.Sprite:create() 
     line:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
     line:ignoreAnchorPointForPosition(false)
@@ -74,6 +89,7 @@ function FailPopup:initUI()
 
     self:resetUI()
 
+    -- 关闭按钮
     local closeBtn = Button.new("image/playmodel/endpopup/closeButton_2.png","image/playmodel/endpopup/closeButton_1.png","image/playmodel/endpopup/closeButton_shadow.png",9,"")
     closeBtn:setPosition(self.back:getContentSize().width * 0.9 , self.back:getContentSize().height * 0.9)
     self.closeBtn = closeBtn
@@ -90,10 +106,12 @@ function FailPopup:resetUI()
     self.titleSprite:setTexture("image/playmodel/endpopup/title.png")
     self.titleSprite:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
 
+    -- 小岛编号 1-1
     local titleString = string.gsub('Unit '..s_BookUnitName[s_CURRENT_USER.bookKey][''..tonumber(self.islandIndex)],"_","-")
     self.islandIndexLabel:setString(titleString)
     self.islandIndexLabel:setPosition(self.titleSprite:getContentSize().width/ 2 , self.titleSprite:getContentSize().height * 0.7)
 
+    -- 目前的类型 限制划词的步数 限制关卡的时间
     if self.type == "time" then
         self.titleLabel:setString("时间用完了")
     elseif self.type == "step" then
@@ -105,6 +123,7 @@ function FailPopup:resetUI()
     self.unfinishLabel:setString("任务目标未完成")
     self.unfinishLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.8)
 
+    -- 目前最多只会显示3种
     self.itemList = {
     {"boss","1/2"},
     {"dimamond","1/2"},
@@ -125,6 +144,7 @@ function FailPopup:resetUI()
     self.unknowLabel:setString("不会的单词")
     self.unknowLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.6)
 
+    -- 目前最多只会显示3个
     self.wordList = {
     {"dimamond",3},
     {"dimamond",3},
