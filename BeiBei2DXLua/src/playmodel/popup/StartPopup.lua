@@ -168,8 +168,8 @@ function StartPopup:resetUI()
     self.line2:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.45)
 
 
-    self.missionLabel:setString("关卡限制")
-    self.missionLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.4)
+    self.limitLabel:setString("关卡限制")
+    self.limitLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.4)
 
     local string = ""
     if self.type == "step" then

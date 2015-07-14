@@ -17,7 +17,7 @@ function CocoView:ctor()
 	self.touchState = 1
 	-- 字母
 	self.letter = ""
-	-- 红0 绿1 黄2 蓝3 橙4 白5
+	-- 红0 绿1 黄2 蓝3 橙4 
 	-- 按下为特殊色
 	self.color = 0
 	-- 元素下滑的长度 暂时一格60
@@ -68,18 +68,16 @@ function CocoView:resetView()
 	self.downSprite:setPosition(contentsizeX/2,contentsizeY/2)
 	self.colorPoint:setTexture("image/playmodel/point.png")
 
-	if self.color % 6 == 0 then
+	if self.color % 5 == 0 then
 		self.colorPoint:setColor(cc.c4b(105,202,18,255))
-	elseif self.color % 6 == 1 then
+	elseif self.color % 5 == 1 then
 		self.colorPoint:setColor(cc.c4b(255,64,0,255))
-	elseif self.color % 6 == 2 then
+	elseif self.color % 5 == 2 then
 		self.colorPoint:setColor(cc.c4b(255,228,0,255))
-	elseif self.color % 6 == 3 then
+	elseif self.color % 5 == 3 then
 		self.colorPoint:setColor(cc.c4b(61,191,243,255))
-	elseif self.color % 6 == 4 then
+	elseif self.color % 5 == 4 then
 		self.colorPoint:setColor(cc.c4b(255,145,1,255))
-	elseif self.color % 6 == 5 then
-		self.colorPoint:setColor(cc.c4b(255,255,255,255))
 	end	
 
 	if self.touchState == 1 then 

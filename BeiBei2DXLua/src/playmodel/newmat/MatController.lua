@@ -112,10 +112,23 @@ function MatController:judgeFunc()
 		-- 已经加入的所有字母
 		temp = temp..MatController.currentCoco[k].letter
 		-- 保存颜色
-		if MatController.currentCoco[k].color <= 5 then
-			attackList[MatController.currentCoco[k].color+1] = attackList[MatController.currentCoco[k].color+1] + 1
+		attackList[MatController.currentCoco[k].color+1] = attackList[MatController.currentCoco[k].color+1] + 1
+	end
+
+	for i=1,5 do
+		for j=1,10 do
+			MatController.MatView.mat[i][j] = MatController.MatView.coco[i][j].color
 		end
 	end
+
+	for i=1,5 do
+		for j=1,10 do
+			local drop = MatController.MatView.coco[i][j].drop
+			if drop ~= 0 then
+				MatController.MatView.mat[i][j - drop] = MatController.MatView.mat[i][j]
+			end
+		end
+	end	
 
 
 
@@ -184,7 +197,7 @@ end
 
 -- 处理观察者消息
 function MatController:handleNotification(notify,data)
-	if notify == RIGHT then
+	if notify == "right" then
 		print("处理消息right")
 		-- MatController.MatView:resetUI()
 	elseif notify == UNREGISTER then

@@ -24,6 +24,7 @@ function MatView:ctor()
 	-- 当前关卡的词汇
 	self.path = {}
 	self.path2 = {}
+	self.mat = {{5,5,5,5,5,5,5,5,5,5},{5,5,5,5,5,5,5,5,5,5},{5,5,5,5,5,5,5,5,5,5},{5,5,5,5,5,5,5,5,5,5},{5,5,5,5,5,5,5,5,5,5},}
 
 	-- 注册观察者
 	MatController:register()
@@ -32,16 +33,9 @@ function MatView:ctor()
 	MatController.MatView = self
 	MatController.word = MatController:createWordGroup(self.word)
 
-	self.mat = {
-	{5,5,5,5,5,},
-	{5,5,5,5,5,},
-	{5,5,5,5,5,},
-	{5,5,5,5,5,},
-	{5,5,5,5,5,},
-	}
-
 	-- 初始化ui
 	self:initUI()
+
 end
 
 function MatView:initUI()
@@ -148,26 +142,16 @@ function MatView:resetUI()
 			self.back:addChild(self.coco[i][j])
 			self.coco[i][j]:setPosition(cc.p(i * 120 -40,j * 120))	 
 			self.coco[i][j].letter = string.char(math.random(100,120))
-			if self.mat[i][j] ~= 5 then
-				self.coco[i][j].color = self.mat[i][j]
-			else
+			if self.mat[i][j] == 5 then
 				self.coco[i][j].color = math.random(1,1000)%5
-			end
-			if j > 5 then
-				self.coco[i][j]:setVisible(false)
-				self.coco[i][j].color = 5
+			else
+				self.coco[i][j].color = self.mat[i][j]
 			end
 			self.coco[i][j]:resetView()
-			-- 加入砖块
-		end
-	end
-
-	for i=1,5 do
-		for j=1,5 do
-			if self.mat[i][j] ~= 5 then
-				self.coco[i][j].color = self.mat[i][j]
-				self.coco[i][j]:resetView()
+			if j > 5 then
+				self.coco[i][j]:setVisible(false)
 			end
+			-- 加入砖块
 		end
 	end
 
@@ -236,10 +220,6 @@ function MatView:dropFunc(callback)
 				local px,py
 				px,py = s_BattleManager.petList[color + 1].ui:getPosition()
 				point:runAction(cc.MoveTo:create(0.4,cc.p(px,py)))
-
-				self.mat[i][j] = 5
-			else
-				self.mat[i][j] = self.coco[i][j].color
 			end
 		end
 	end

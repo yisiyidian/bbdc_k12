@@ -94,7 +94,8 @@ function AlternatePathController:getRandomPath(randomNum,len)
 	-- print("point"..rotateX..rotateY)
 	-- print_lua_table(temp)
 
-	-- 旋转镜像操作
+	-- 旋转景象操作
+	-- 在5*5的矩阵中，一个点的对应点一共有8个
 	for i=1,#temp do
 		local tempP = cc.p(0,0)
 		temp[i].x = temp[i].x - rotateX

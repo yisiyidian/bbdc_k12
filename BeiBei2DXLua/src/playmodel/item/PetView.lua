@@ -1,6 +1,3 @@
--- 备用类
--- 很有可能要去掉
-
 local PetView = class("PetView",function ()
 	return cc.Layer:create()
 	end)
