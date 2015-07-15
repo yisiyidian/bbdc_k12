@@ -38,8 +38,8 @@ local function main()
     
     cc.Director:getInstance():setDisplayStats(false)
 
-    app_version_debug   = 215000
-    app_version_release = 215000
+    app_version_debug   = 217000
+    app_version_release = 217000
 
     g_userName = nil
     g_userPassword = nil
