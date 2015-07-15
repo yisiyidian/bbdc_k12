@@ -115,12 +115,14 @@ function MatController:judgeFunc()
 		attackList[MatController.currentCoco[k].color+1] = attackList[MatController.currentCoco[k].color+1] + 1
 	end
 
+	-- 存储矩阵的颜色信息
 	for i=1,5 do
 		for j=1,10 do
 			MatController.MatView.mat[i][j] = MatController.MatView.coco[i][j].color
 		end
 	end
 
+	-- 存储矩阵掉落后的颜色信息
 	for i=1,5 do
 		for j=1,10 do
 			local drop = MatController.MatView.coco[i][j].drop
@@ -133,6 +135,8 @@ function MatController:judgeFunc()
 
 
 	if temp == MatController.word[MatController.index] then
+		-- 播放单词声音
+		playWordSound(temp)
 		-- print("划词正确")
 		-- print("这个词是"..temp)
 		function MatController:callback()
@@ -153,7 +157,7 @@ function MatController:judgeFunc()
 		s_BattleManager:addStepWithCollect(0)
 		-- print("划错了")
 		print("要划的词是"..MatController.word[MatController.index])
-		print("你划的词是"..temp)
+		-- print("你划的词是"..temp)
 		-- 复原砖块状态
 		for i = 1,5 do
 			for j=1,10 do

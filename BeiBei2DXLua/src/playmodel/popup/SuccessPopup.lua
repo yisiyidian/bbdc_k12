@@ -5,7 +5,8 @@ local Button = require("playmodel.item.Button")
 local SuccessPopup = class ("SuccessPopup",function ()
 	return cc.Layer:create()
 end)
--- 没什么写的
+-- 成功的面板
+-- 参数 小岛序号 任务类型 收集元素列表
 function SuccessPopup:ctor(islandIndex,type,itemList)
 	self.islandIndex = islandIndex
 	self.type = type
@@ -14,6 +15,7 @@ function SuccessPopup:ctor(islandIndex,type,itemList)
 	self:initUI()
 end
 
+-- 初始化ui
 function SuccessPopup:initUI()
 	-- 背景面板
 	local back = cc.Sprite:create()
@@ -23,7 +25,7 @@ function SuccessPopup:initUI()
     self.back = back
     self:addChild(self.back)
 
-    -- 小岛序号
+    -- 序号背景
     local titleSprite = cc.Sprite:create() 
     titleSprite:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
     titleSprite:ignoreAnchorPointForPosition(false)
@@ -31,6 +33,7 @@ function SuccessPopup:initUI()
     self.titleSprite = titleSprite
     self.back:addChild(self.titleSprite)
 
+    -- 小岛序号
     local islandIndexLabel = cc.Label:createWithSystemFont("","",25)
     islandIndexLabel:ignoreAnchorPointForPosition(false)
     islandIndexLabel:setAnchorPoint(0.5,0.5)
@@ -46,6 +49,7 @@ function SuccessPopup:initUI()
     self.titleLabel = titleLabel
     self.titleSprite:addChild(self.titleLabel)
 
+    -- 宠物配置
     local petLabel = cc.Label:createWithSystemFont("","",25)
     petLabel:ignoreAnchorPointForPosition(false)
     petLabel:setAnchorPoint(0.5,0.5)
@@ -53,6 +57,7 @@ function SuccessPopup:initUI()
     self.petLabel = petLabel
     self.back:addChild(self.petLabel)
 
+    -- 获得奖励
     local rewardLabel = cc.Label:createWithSystemFont("","",25)
     rewardLabel:ignoreAnchorPointForPosition(false)
     rewardLabel:setAnchorPoint(0.5,0.5)
@@ -60,6 +65,7 @@ function SuccessPopup:initUI()
     self.rewardLabel = rewardLabel
     self.back:addChild(self.rewardLabel)
 
+    -- 宠物蛋
     local eggLabel = cc.Label:createWithSystemFont("","",25)
     eggLabel:ignoreAnchorPointForPosition(false)
     eggLabel:setAnchorPoint(0.5,0.5)
@@ -67,6 +73,7 @@ function SuccessPopup:initUI()
     self.eggLabel = eggLabel
     self.back:addChild(self.eggLabel)
 
+    -- 分割线
     local line1 = cc.Sprite:create() 
     line1:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
     line1:ignoreAnchorPointForPosition(false)
@@ -85,6 +92,7 @@ function SuccessPopup:initUI()
     self.callBack = function ()
     end
 
+    -- 重置ui
     self:resetUI()
 
     local closeBtn = Button.new("image/playmodel/endpopup/closeButton_2.png","image/playmodel/endpopup/closeButton_1.png","image/playmodel/endpopup/closeButton_shadow.png",9,"")
@@ -96,7 +104,7 @@ function SuccessPopup:initUI()
         s_BattleManager:leaveBattleView()
     end
 end
-
+    
 function SuccessPopup:resetUI()
     self.back:setTexture("image/playmodel/endpopup/broad.png")
 
@@ -110,6 +118,9 @@ function SuccessPopup:resetUI()
     self.titleLabel:setString("通关")
     self.titleLabel:setPosition(self.titleSprite:getContentSize().width/ 2 , self.titleSprite:getContentSize().height * 0.3)
 
+    -- 我的阵容
+    -- ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～ 
+    -- 需要更改
     self.petLabel:setString("我的阵容")
     self.petLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.8)
 
@@ -133,6 +144,10 @@ function SuccessPopup:resetUI()
     self.rewardLabel:setString("关卡奖励")
     self.rewardLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.6)
 
+
+    -- 获得奖励
+    -- ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+    -- 需要更改
     self.rewardList = {
     {"dimamond","1"},
     {"dimamond","1"},
@@ -154,6 +169,10 @@ function SuccessPopup:resetUI()
     self.eggLabel:setString("额外奖励")
     self.eggLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.45)
 
+    -- 获得奖励
+    -- ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+    -- 需要更改
+    
     for i=1,3 do
         local petSprite = cc.Sprite:create("image/playmodel/endpopup/egg1.png")
         petSprite:setPosition(self.back:getContentSize().width * 0.25 * i , self.back:getContentSize().height * 0.35)
