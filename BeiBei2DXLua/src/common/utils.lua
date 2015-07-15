@@ -513,3 +513,38 @@ function touchBackgroundClosePopup(layer,popup,closeFunc)
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)  
 end
 
+-- 字符串长度计算 
+-- 不是计算字符的多少
+-- 计算显示的字符的长度
+-- fijlrt长度为1
+-- abcdeghknopqsuvxyz长度为2
+-- mw的长度为3
+-- 符号的长度为2
+-- 汉子的长度为4
+-- 待优化
+
+function countLength(text)
+    local length = string.len(text)
+    if length == 0 then
+        return 0
+    end
+    local temp = 0
+    for i=1,length do
+        local number =  string.byte(string.sub(text,i,i))
+
+        if number == 102 or number == 105 or number == 106 or number == 108 or number == 114 or number == 116 then
+            temp = temp + 1
+        elseif number == 109 or number == 119 then
+            temp = temp + 3
+        elseif number <= 127 then
+            temp = temp + 2
+        elseif number >= 128 and number <= 193 then
+            temp = temp + 2
+            i= i + 2
+        else 
+            temp = temp + 2
+        end
+    end
+    return temp
+end
+

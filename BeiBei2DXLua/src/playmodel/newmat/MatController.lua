@@ -97,7 +97,7 @@ function MatController:updateArr(p,coco)
 		-- 已经加入的所有字母
 		temp = temp..MatController.currentCoco[k].letter
 	end
-	MatController.MatView:resetWordLabel(temp)
+	MatController.MatView:resetWordLabel(temp..MatController.word[MatController.index][2])
 end
 
 -- 判断事件
@@ -134,13 +134,13 @@ function MatController:judgeFunc()
 
 
 
-	if temp == MatController.word[MatController.index] then
+	if temp == MatController.word[MatController.index][1] then
 		-- 播放单词声音
 		playWordSound(temp)
 		-- print("划词正确")
 		-- print("这个词是"..temp)
 		function MatController:callback()
-			MatController:sendNotification("right",attackList)
+			MatController:sendNotification("RIGHT",attackList)
 		end
 
 		-- print_lua_table(attackList)
@@ -156,7 +156,7 @@ function MatController:judgeFunc()
 	else
 		s_BattleManager:addStepWithCollect(0)
 		-- print("划错了")
-		print("要划的词是"..MatController.word[MatController.index])
+		print("要划的词是"..MatController.word[MatController.index][3])
 		-- print("你划的词是"..temp)
 		-- 复原砖块状态
 		for i = 1,5 do
@@ -187,14 +187,58 @@ function MatController:judgeFunc()
 end
 
 -- 扩充一关的单词
-function MatController:createWordGroup(list)
+function MatController:createWordGroup(originalList)
+
+	local wordList = {}
+
+	for i = 1,#originalList do
+	    local list = split(originalList[i],' ')
+	    -- print_lua_table(list)
+	    wordList[i] = {}
+	    --wordList[i][1]表示这个词组的第一个单词，如果不是词组则取单词本身，【2】表示词组剩余部分,[3]表示词组以空格分隔，【4】表示词组以 分隔
+	    local temp = split(list[1],'-')
+	    wordList[i][1] = temp[1]
+
+	    if temp[1] == originalList[i] then 
+	        -- 这是单词
+	        wordList[i][1] = temp[1]
+	        wordList[i][2] = ""
+	    elseif temp[1] == list[1] then
+	        -- 词组，不带－
+	        wordList[i][1] = temp[1]
+	        wordList[i][2] = ""
+	        for k,v in pairs(list) do
+	            if k >= 2 then
+	                wordList[i][2] = " ".. wordList[i][2]..list[k]
+	            end
+	        end
+	    else
+	        -- 词组，带－
+	        wordList[i][1] = temp[1]
+	        wordList[i][2] = ""
+	        for k,v in pairs(temp) do
+	            if k >= 2 then
+	                wordList[i][2] = "-".. wordList[i][2]..temp[k]
+	            end
+	        end
+	        for k,v in pairs(list) do
+	            if k >= 2 then
+	                wordList[i][2] = " ".. wordList[i][2]..list[k]
+	            end
+	        end
+	    end
+
+	    wordList[i][3] = originalList[i]
+	    list = nil
+	end
+
 	local temp = {}
-	for k,v in pairs(list) do
-		temp[#temp + 1] = list[k]
+	for k,v in pairs(wordList) do
+		temp[#temp + 1] = wordList[k]
 	end
 	math.randomseed(os.time())
 	for i = 1,100 do
-		temp[#temp + 1] = list[math.random(1,#list)]
+		temp[#temp + 1] = wordList[math.random(1,#wordList)]
 	end 
 	return temp
 end

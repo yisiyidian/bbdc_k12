@@ -46,7 +46,7 @@ function CocoView:initUI()
     self.colorPoint = colorPoint
     self.upSprite:addChild(self.colorPoint)
     -- 字母
-    local label = cc.Label:createWithSystemFont("","",25)
+    local label = cc.Label:createWithSystemFont("","",35)
     label:ignoreAnchorPointForPosition(false)
     label:setAnchorPoint(0.5,0.5)
     label:setColor(cc.c4b(0,0,0,255))

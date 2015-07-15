@@ -51,7 +51,7 @@ function MatView:initUI()
 	-- 布景
 
 	-- 划词显示
-	local wordsprite = ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(28.499,0,28.501,74))
+	local wordsprite = ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(27.49,0,27.51,74))
 	wordsprite:setPosition(cc.p(s_DESIGN_WIDTH /2,770))
 	wordsprite:setAnchorPoint(0.5,0.5)
 	self.wordsprite = wordsprite
@@ -64,7 +64,7 @@ function MatView:initUI()
     self.wordlabel = wordlabel
     self.wordsprite:addChild(self.wordlabel)
 
-    local chinesesprite = ccui.Scale9Sprite:create("image/playmodel/chinesedisplay.png",cc.rect(0,0,235,60),cc.rect(110,0,120,60))
+    local chinesesprite = ccui.Scale9Sprite:create("image/playmodel/chinesedisplay.png",cc.rect(0,0,235,60),cc.rect(105.49,0,105.51,60))
 	chinesesprite:setPosition(cc.p(s_DESIGN_WIDTH /2,700))
 	chinesesprite:setAnchorPoint(0.5,0.5)
 	self.chinesesprite = chinesesprite
@@ -97,12 +97,13 @@ end
 
 -- 重置英文划词
 function MatView:resetWordLabel(string)
+	local length = countLength(string)
 	local len = string.len(string)
 	if len == 0 or string == "" then
 		self.wordsprite:setVisible(false)
 	else
 		self.wordsprite:setVisible(true)
-		self.wordsprite:setContentSize((len+1) * 18 + 60 ,63)
+		self.wordsprite:setContentSize(length * 7 + 60 ,74)
 	end
 
 	self.wordlabel:setString(string)
@@ -111,12 +112,13 @@ end
 
 -- 重置汉语意思
 function MatView:resetChineseLabel(string)
+	local length = countLength(string)
 	local len = string.len(string)
 	if len == 0 or string == "" then
 		self.chinesesprite:setVisible(false)
 	else
 		self.chinesesprite:setVisible(true)
-		self.chinesesprite:setContentSize((len+1) * 18 + 60 ,63)
+		self.chinesesprite:setContentSize(length * 7 + 60 ,60)
 	end
 
 	self.chineselabel:setString(string)
@@ -156,7 +158,7 @@ function MatView:resetUI()
 	end
 
 	-- 获取参数
-	local length = string.len(MatController.word[MatController.index])
+	local length = string.len(MatController.word[MatController.index][1])
 	math.randomseed(os.time())
 
 	-- 是否反向
@@ -176,7 +178,7 @@ function MatView:resetUI()
 
 	-- 重新绘制砖块
 	for k,v in pairs(self.path) do
-		self.coco[self.path[k].x][self.path[k].y].letter = string.sub(MatController.word[MatController.index],k,k) 
+		self.coco[self.path[k].x][self.path[k].y].letter = string.sub(MatController.word[MatController.index][1],k,k) 
 		self.coco[self.path[k].x][self.path[k].y]:resetView()
 		-- print(string.sub(MatController.word[1],k,k)..self.path[k].x..self.path[k].y)
 	end
@@ -187,11 +189,11 @@ function MatView:resetUI()
 
 	-- 重新绘制砖块
 	for k,v in pairs(self.path2) do
-		self.coco[self.path2[k].x][self.path2[k].y].letter = string.sub(MatController.word[MatController.index],k,k) 
+		self.coco[self.path2[k].x][self.path2[k].y].letter = string.sub(MatController.word[MatController.index][1],k,k) 
 		self.coco[self.path2[k].x][self.path2[k].y]:resetView()
 		-- print(string.sub(MatController.word[1],k,k)..self.path2[k].x..self.path2[k].y)
 	end
-	local word = MatController.word[MatController.index]
+	local word = MatController.word[MatController.index][3]
 	self:resetChineseLabel(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall)
 end
 
