@@ -13,6 +13,15 @@ MatController.index = 1
 -- 砖块元素序列，cocoview
 MatController.currentCoco = {}
 
+local slideCoco = {}
+slideCoco[1] = s_sound_slideCoconut
+slideCoco[2] = s_sound_slideCoconut1
+slideCoco[3] = s_sound_slideCoconut2
+slideCoco[4] = s_sound_slideCoconut3
+slideCoco[5] = s_sound_slideCoconut4
+slideCoco[6] = s_sound_slideCoconut5
+slideCoco[7] = s_sound_slideCoconut6
+
 function MatController:reset()
 	-- 位置序列，cc.p(1,1)
 	MatController.arr = {}
@@ -60,6 +69,13 @@ function MatController:updateArr(p,coco)
 				-- 移除元素
 				table.remove(MatController.arr,#MatController.arr)
 				table.remove(MatController.currentCoco,#MatController.currentCoco)
+
+				-- 播放点击砖块的音效
+				if #MatController.arr >= 7 then
+					playSound(slideCoco[7])
+				else
+					playSound(slideCoco[#MatController.arr])
+				end
 			end
 		end
 	end
@@ -72,6 +88,13 @@ function MatController:updateArr(p,coco)
 		end
 		MatController.arr[#MatController.arr + 1] = p
 		MatController.currentCoco[#MatController.currentCoco + 1] = coco
+
+		-- 播放点击砖块的音效
+		if #MatController.arr >= 7 then
+			playSound(slideCoco[7])
+		else
+			playSound(slideCoco[#MatController.arr])
+		end
 		-- print("加入队列")
 
 		-- 该元素上方所有的元素下滑距离加一
@@ -154,6 +177,8 @@ function MatController:judgeFunc()
 			MatController.currentCoco[k]:runAction(cc.RotateBy:create(0.4,math.random(360,720)))
 		end
 	else
+		-- 播放划错的音效
+		playSound(s_sound_learn_false)
 		s_BattleManager:addStepWithCollect(0)
 		-- print("划错了")
 		print("要划的词是"..MatController.word[MatController.index][3])

@@ -75,7 +75,8 @@ function BattleView:initUI()
 
     end)
 
-
+    -- 播放背景音乐	
+    playMusic(s_sound_Get_Outside,true)
 end
 
 function BattleView:showStageInfo()

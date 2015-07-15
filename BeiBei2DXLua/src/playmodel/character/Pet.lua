@@ -19,6 +19,10 @@ function Pet:handleNotification(notify,data)
 		if data[self.colorIndex] > 0 then
 			s_BattleManager.petSource[self.colorIndex] = s_BattleManager.petSource[self.colorIndex] + data[self.colorIndex] 
 			self:releaseSkill(data[self.colorIndex])
+			-- 给宠物汇集能量的音效
+			-- ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
+			-- 暂用
+			playSound(s_sound_buttonEffect)
 		end
     elseif notify == UNREGISTER then
     	self:unregister()
@@ -59,6 +63,8 @@ function Pet:releaseSkill(count)
 	self.action = petActionToReleaseSkill()
 	self.ui:runAction(cc.Sequence:create(self.action,cc.CallFunc:create(function (  )
 		self.cb()
+		-- 攻击boss的音效
+		playSound(s_sound_FightBoss)
 	end)))
 end
 
