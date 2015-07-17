@@ -179,7 +179,17 @@ function PersonalInfo:ctor()
             name:setColor(cc.c3b(92,130,140))
             top:addChild(name)
 
-            local title = cc.Label:createWithSystemFont(titleArray[j-1],'',36)
+            --调换了个人信息第一页和第三页的位置
+            local temp = 0 
+            if j-1 == 3 then
+                temp = 1
+            elseif j-1 == 1 then
+                temp = 3
+            else
+                temp = j-1
+            end
+
+            local title = cc.Label:createWithSystemFont(titleArray[temp],'',36)
             title:setPosition(0.5 * s_DESIGN_WIDTH - s_LEFT_X,0.9 * intro:getContentSize().height + 30)
             title:setColor(colorArray[j-1])
             intro:addChild(title)
