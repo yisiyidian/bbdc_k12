@@ -81,11 +81,55 @@ function MatView:initUI()
 	changeButton:setPosition(cc.p(s_DESIGN_WIDTH *0.9,700))
     changeButton:ignoreAnchorPointForPosition(false)
     changeButton:setAnchorPoint(0.5,0.5)
+    changeButton.color = cc.c4b(0,0,0,255)
+    changeButton:resetUI()
 	self.changeButton = changeButton
 	self:addChild(self.changeButton)
 
+
 	self.changeButton.func = function ()
 		MatController:changeFunc()
+	end
+
+	local tipButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,"提示")
+	tipButton:setPosition(cc.p(s_DESIGN_WIDTH *0.1,700))
+    tipButton:ignoreAnchorPointForPosition(false)
+    tipButton:setAnchorPoint(0.5,0.5)
+    tipButton.color = cc.c4b(0,0,0,255)
+    tipButton:resetUI()
+	self.tipButton = tipButton
+	self:addChild(self.tipButton)
+
+	self.tipButton.func = function ()
+		self:letterTip()
+	end
+
+	local changeLabel = ""
+	if s_CURRENT_USER.isSoundAm == 0 then
+		changeLabel = "英"
+	else
+		changeLabel = "美"
+	end
+
+	local amButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,changeLabel)
+	amButton:setPosition(cc.p(s_DESIGN_WIDTH *0.1,1075))
+    amButton:ignoreAnchorPointForPosition(false)
+    amButton:setAnchorPoint(0.5,0.5)
+    amButton.color = cc.c4b(0,0,0,255)
+    amButton:resetUI()
+	self.amButton = amButton
+	self:addChild(self.amButton)
+
+	self.amButton.func = function ()
+		s_CURRENT_USER.isSoundAm = 1 - s_CURRENT_USER.isSoundAm	
+		saveUserToServer({['isSoundAm']=s_CURRENT_USER.isSoundAm})
+		if s_CURRENT_USER.isSoundAm == 0 then
+			changeLabel = "英"
+		else
+			changeLabel = "美"
+		end
+		self.amButton.text = changeLabel
+		self.amButton:resetUI()
 	end
 
 	-- ui填充
@@ -195,6 +239,47 @@ function MatView:resetUI()
 	end
 	local word = MatController.word[MatController.index][3]
 	self:resetChineseLabel(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall)
+
+	self:letterTip()
+	self:runAct()
+
+end
+
+function MatView:runAct()
+	for i=1,5 do
+		for j=1,5 do
+			local t1 = cc.DelayTime:create(0.2*i/5)
+			local r1 = cc.RotateBy:create(0.2*j/5,30)
+			local r2 = cc.RotateBy:create(0.2*j/5,-60)
+			local r3 = cc.RotateBy:create(0.2*j/5,30)
+			self.coco[i][j]:runAction(cc.Sequence:create(r1,r2,r3))
+		end
+	end
+end
+
+function MatView:letterTip()
+	-- 首字母提示
+	for i=1,5 do
+		for j=1,5 do
+			if self.coco[i][j].letter == string.sub(MatController.word[MatController.index][1],1,1) then
+				self.coco[i][j].touchState = 2
+			end
+			self.coco[i][j]:resetView()
+		end
+	end
+
+	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+	local delayAction =  cc.DelayTime:create(1)
+	local runAction = cc.CallFunc:create(function ( ... )
+		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+		for i=1,5 do
+			for j=1,5 do
+				self.coco[i][j].touchState = 1
+				self.coco[i][j]:resetView()
+			end
+		end
+	end)
+	self:runAction(cc.Sequence:create(delayAction,runAction))
 end
 
 function MatView:dropFunc(callback)

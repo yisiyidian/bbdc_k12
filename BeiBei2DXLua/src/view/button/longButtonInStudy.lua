@@ -18,7 +18,7 @@ function longButtonInStudy:ctor(backTexture,frontTexture,moveLength,text)
     self.frontTexture = frontTexture
     self.moveLength = moveLength
     self.text = text
-
+    self.color = cc.c4b(255,255,255,255)
     self:initUI()
 end
 
@@ -46,6 +46,8 @@ function longButtonInStudy:initUI()
     self.button_front:addChild(self.label)
 
     self:resetUI()
+
+    self:touchFunc()
 end
 
 function longButtonInStudy:resetUI()
@@ -55,8 +57,7 @@ function longButtonInStudy:resetUI()
 
     self.button_front:setPosition(self.button_back:getContentSize().width / 2,self.button_back:getContentSize().height / 2 + self.moveLength)
     self.label:setPosition(self.button_front:getContentSize().width / 2,self.button_front:getContentSize().height / 2)
-
-    self:touchFunc()
+    self.label:setColor(self.color)
 end
 
 function longButtonInStudy:touchFunc()
