@@ -39,17 +39,32 @@ end
 function Boss:loseBlood(blood)
 	-- body
 	self.blood = self.blood - blood
-	print('boss blood',self.blood)
-	if self.blood < 0 then
-		self.blood = 0
-	end
-	
+	print('boss blood',self.blood) 
+
+    if self.blood < 0 then
+        self.blood = 0
+    end
+
+    self.showblood:setPercentage(100 * self.blood / 100)
 end
 
 function Boss:createUI(file)
 	print('createUI')
+
 	local ui = sp.SkeletonAnimation:create(file..".json",file..".atlas",1)
     ui:setAnimation(0,'a2',true)
+
+    local bloodBack = cc.Sprite:create("image/summarybossscene/summaryboss_blood_back.png")
+    bloodBack:setPosition(100,50)
+    ui:addChild(bloodBack)
+    self.showblood = cc.ProgressTimer:create(cc.Sprite:create("image/summarybossscene/jindutiao.png"))
+    self.showblood:setPosition(100,50)
+    self.showblood:setType(cc.PROGRESS_TIMER_TYPE_BAR)
+    self.showblood:setMidpoint(cc.p(0,0))
+    self.showblood:setBarChangeRate(cc.p(1,0))
+    self.showblood:setPercentage(100)
+    ui:addChild(self.showblood) 
+
     return ui
 end
 

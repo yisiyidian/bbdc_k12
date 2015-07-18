@@ -211,11 +211,11 @@ function M.getUnitInfo(unitID)
         --         startIndex  = row.lastWordIndex + 1
         --     end
         -- end
-        print(debug.traceback())
+        -- print(debug.traceback())
         local hash = {}
         unit.wrongWordList  = s_BookUnitWord[bookKey][''..unitID]
-        print('rightWordList',unit.rightWordList)
-         print('wrongWordList',unit.wrongWordList)
+        -- print('rightWordList',unit.rightWordList)
+        --  print('wrongWordList',unit.wrongWordList)
         unit.wrongWordList = split(unit.wrongWordList, "||")
          
         if  unit.rightWordList == '' then
