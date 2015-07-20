@@ -1267,6 +1267,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: abby yi (9363QVK9E9)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1290,6 +1291,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "12d3a8dc-dada-4fa4-ae87-d7d6c3e6aae3";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../.. $(SRCROOT)/../../.. $(SRCROOT)/../../../base $(SRCROOT)/../../../3d $(SRCROOT)/../../../2d $(SRCROOT)/../../../deprecated $(SRCROOT)/../../../physics $(SRCROOT)/../../../math/kazmath $(SRCROOT)/../../../2d/platform $(SRCROOT)/../../../audio/include $(SRCROOT)/../../../editor-support $(SRCROOT)/../../../editor-support/spine $(SRCROOT)/../../../editor-support/cocostudio $(SRCROOT)/../../../editor-support/cocosbuilder $(SRCROOT)/../../../ui $(SRCROOT)/../../../storage $(SRCROOT)/../../../../extensions $(SRCROOT)/../../../../external $(SRCROOT)/../../../../external/chipmunk/include/chipmunk $(SRCROOT)/../../../../external/lua $(SRCROOT)/../../../../external/lua/luajit/include $(SRCROOT)/../../../../external/lua/tolua $(SRCROOT)/../../../editor-support/cocostudio/ActionTimeline";
@@ -1304,6 +1306,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: abby yi (9363QVK9E9)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
@@ -1323,6 +1326,7 @@
 				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "12d3a8dc-dada-4fa4-ae87-d7d6c3e6aae3";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../.. $(SRCROOT)/../../.. $(SRCROOT)/../../../base $(SRCROOT)/../../../3d $(SRCROOT)/../../../2d $(SRCROOT)/../../../deprecated $(SRCROOT)/../../../physics $(SRCROOT)/../../../math/kazmath $(SRCROOT)/../../../2d/platform $(SRCROOT)/../../../audio/include $(SRCROOT)/../../../editor-support $(SRCROOT)/../../../editor-support/spine $(SRCROOT)/../../../editor-support/cocostudio $(SRCROOT)/../../../editor-support/cocosbuilder $(SRCROOT)/../../../ui $(SRCROOT)/../../../storage $(SRCROOT)/../../../../extensions $(SRCROOT)/../../../../external $(SRCROOT)/../../../../external/chipmunk/include/chipmunk $(SRCROOT)/../../../../external/lua $(SRCROOT)/../../../../external/lua/luajit/include $(SRCROOT)/../../../../external/lua/tolua $(SRCROOT)/../../../editor-support/cocostudio/ActionTimeline";
