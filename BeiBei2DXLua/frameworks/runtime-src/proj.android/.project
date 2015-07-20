@@ -30,4 +30,11 @@
 		<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>java</name>
+			<type>2</type>
+			<location>/Users/tianweilande/work/bbdc/bbdc_k12/BeiBei2DXLua/frameworks/cocos2d-x/cocos/platform/android/java</location>
+		</link>
+	</linkedResources>
 </projectDescription>
