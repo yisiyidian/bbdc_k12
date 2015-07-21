@@ -111,12 +111,16 @@ function BattleManager:battleEnded(win)
 	-- self:initInfo()
 	self.gameEnded = true
 	self.win = win
-	if win then
+	if win then            
+
+		s_CURRENT_USER:addBeans(3) --获取贝贝豆
+		saveUserToServer({[DataUser.BEANSKEY] = s_CURRENT_USER[DataUser.BEANSKEY]}) --同步到
 		print('win')
 		-- self:leaveBattleView()
 		-- return
 		if self.unit.unitState == 0 then
             s_LocalDatabaseManager.addStudyWordsNum(#self.wordList)
+
             -- s_LocalDatabaseManager.addRightWord(self.rightWordList,self.unit.unitID)
             -- s_LocalDatabaseManager.addGraspWordsNum(self.maxCount - self.wrongWord)
          --   print(self.maxCount - self.wrongWord)
