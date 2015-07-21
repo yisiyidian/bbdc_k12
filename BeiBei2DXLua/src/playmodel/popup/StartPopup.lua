@@ -14,9 +14,9 @@ function StartPopup:ctor(islandIndex)
     -- ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
     -- 这里改
     if self.unit.unitID % 2 == 1 then
-        s_BattleManager:initState(100,10,20,self.unit.wrongWordList,'step')
+        s_BattleManager:initState(100,10,10,20,self.unit.wrongWordList,'step')
     else
-        s_BattleManager:initState(100,10,20,self.unit.wrongWordList,'time')
+        s_BattleManager:initState(100,10,10,20,self.unit.wrongWordList,'time')
     end
     -- 目前的关卡类型
 	self.type = s_BattleManager.stageType

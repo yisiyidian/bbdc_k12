@@ -80,26 +80,31 @@ function BattleView:initUI()
 end
 
 function BattleView:showStageInfo()
-	local back = cc.LayerColor:create(cc.c4b(255,255,255,150),200,100)
+	local back = cc.LayerColor:create(cc.c4b(255,255,255,150),200,110)
 	back:setPosition(0,950)
 	self:addChild(back)
 	local label_boss = cc.Label:createWithSystemFont('boss:'..(s_BattleManager.currentBossIndex - 1)..'/'..#s_BattleManager.bossList,'',28)
 	label_boss:setColor(cc.c3b(0,0,0))
-	label_boss:setPosition(back:getContentSize().width / 2,80)
+	label_boss:setPosition(back:getContentSize().width / 2,100)
 	back:addChild(label_boss)
 
 	local label_collect = cc.Label:createWithSystemFont('collection:','',28)
 	label_collect:setColor(cc.c3b(0,0,0))
-	label_collect:setPosition(back:getContentSize().width / 2,50)
+	label_collect:setPosition(back:getContentSize().width / 2,70)
 	back:addChild(label_collect)
 
 	local label_time = cc.Label:createWithSystemFont('','',28)
 	label_time:setColor(cc.c3b(0,0,0))
-	label_time:setPosition(back:getContentSize().width / 2,20)
+	label_time:setPosition(back:getContentSize().width / 2,40)
 	back:addChild(label_time)
 
+	local label_wordCount = cc.Label:createWithSystemFont('','',28)
+	label_wordCount:setColor(cc.c3b(0,0,0))
+	label_wordCount:setPosition(back:getContentSize().width / 2,10)
+	back:addChild(label_wordCount)
 	local function update(delta)
 		label_boss:setString('boss:'..(s_BattleManager.currentBossIndex - 1)..'/'..#s_BattleManager.bossList)
+		label_wordCount:setString('wordCount:'..s_BattleManager.currentWordCount..'/'..s_BattleManager.totalWordCount)
 		label_collect:setString('collection:'..s_BattleManager.currentCollect[1]..s_BattleManager.currentCollect[2]..s_BattleManager.currentCollect[3]..s_BattleManager.currentCollect[4]..s_BattleManager.currentCollect[5])
 		if s_BattleManager.stageType == 'time' then
 			local time = s_BattleManager.totalTime - s_BattleManager.currentTime

@@ -301,7 +301,7 @@ end
 
 --检测单词是否划够
 function BattleManager:checkWordCount()
-	if self.totalWordCount == self.currentWordCount then
+	if self.totalWordCount <= self.currentWordCount then
 		return true
 	end
 	return false

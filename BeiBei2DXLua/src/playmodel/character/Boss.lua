@@ -29,7 +29,7 @@ function Boss:handleNotification(notify,data)
     		--print('self.totalAttackCount',self.totalAttackCount)
     	end
     elseif notify == UNREGISTER then
-    	－－print(UNREGISTER)
+    	--print(UNREGISTER)
     	self:unregister()
     end
 
