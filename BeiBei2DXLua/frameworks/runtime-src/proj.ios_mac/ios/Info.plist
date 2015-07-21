@@ -116,8 +116,6 @@
 		<true/>
 		<key>opengles-1</key>
 		<true/>
-		<key>arm64</key>
-		<true/>
 	</dict>
 	<key>UIStatusBarHidden</key>
 	<true/>
