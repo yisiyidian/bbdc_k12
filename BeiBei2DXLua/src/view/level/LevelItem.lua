@@ -52,7 +52,9 @@ end
 
 -- 获取该Item存储的levelId 范围
 function LevelItem:getLevelIdRange()
+	--print('ID range:start max')
 	local bookMaxLevelId = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey) -- 从1开始
+	--print('ID range:end max')
 	local startLevelId, endLevelId
 	if self.info['screenId'] - 1 == 0 then
 		startLevelId = 1
@@ -66,6 +68,7 @@ function LevelItem:getLevelIdRange()
 	end
 	return startLevelId, endLevelId
 end
+
 
 -- 读取配置，为每个资源实例化对象
 function LevelItem:createObjectForResource(config)

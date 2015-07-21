@@ -392,8 +392,6 @@ end
 
 function M.getAllUnitInfo()
     local unitList = {}
-
-
     -- local bookMaxID = M.getBookMaxUnitID(s_CURRENT_USER.bookKey)
     -- print('test book max ID:'..bookMaxID)
     -- local unitID = 1
@@ -519,6 +517,7 @@ function M.getBookMaxUnitID(bookKey)
     -- print('getBookmaxunit')
     -- print('bookKey:'..bookKey)
     -- print_lua_table(s_BookUnitWord[bookKey])
+    --print('======in getbookmaxunitId======')
     local maxID = 1
     for unitID, unitWord in pairs(s_BookUnitWord[bookKey]) do
         if unitID - maxID > 0 then
@@ -526,6 +525,7 @@ function M.getBookMaxUnitID(bookKey)
         end
     end
     --print('maxID:'..maxID)
+    --print('=========out getBookMaxUnitID==========')
     return maxID
 end
 

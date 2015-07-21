@@ -36,6 +36,9 @@ function LevelListView:ctor()
    	--self:setAnchorPoint(0.5,0)
    	self:setContentSize(level_item_width, s_DESIGN_HEIGHT)
    	print('Active Screen :'..self.info['preScreenId']..','..self.info['curScreenId']..','..self.info['nextScreenId'])
+    -- 锁定添加滚动Item
+    self.info['levelItemLock'] = 0  -- 当为1时，不更新pre,cur,next，只更新item
+
     -- 添加活跃屏Item
     if self.info['preScreenId'] ~= self.info['curScreenId'] then -- 避免第一屏和当前屏重复
     	self:addLevelItem(self.info['preScreenId'],0)
@@ -44,8 +47,10 @@ function LevelListView:ctor()
     if self.info['nextScreenId'] ~= self.info['curScreenId'] then  --避免最后一屏和当前屏重复
     	self:addLevelItem(self.info['nextScreenId'],0)
     end
+    -- self:scrollToPercentVertical()
     --更新视图
-    self:refreshView()
+    self:requestRefreshView()
+    --self.info['levelItemLock'] = 0
 
 end
 
@@ -65,6 +70,28 @@ function LevelListView:scrollToScreen(screenId)
 
 end
 
+-- 延时调用方法
+function LevelListView:callFuncWithDelay(delay, func) 
+    local delayAction = cc.DelayTime:create(delay)
+    local callAction = cc.CallFunc:create(func)
+    local sequence = cc.Sequence:create(delayAction, callAction)
+    self:runAction(sequence)   
+end
+
+-- 更新内部滚动高度
+function LevelListView:updateInnerContainerSize()
+	print('========In function updateInnerContainerSize============')
+	local items = self:getItems()
+	local width = 0.0
+	local height = 0.0
+	for k, v in pairs(items) do
+		width = v:getContentSize().width
+		height = v:getContentSize().height + height
+	end
+	self:setInnerContainerSize(cc.size(width,height))
+	--self:scrollToPercentVertical(45,0,false)
+end
+
 --添加滚动监听函数
 -- 动态加载新屏的资源，删除旧屏资源
 function LevelListView:addScrollListener()
@@ -80,7 +107,7 @@ function LevelListView:addScrollListener()
 	    	-- 计算当前滚动到第几屏
 	    	local innerPositionY = self:getInnerContainer():getPositionY()
 	    	local innerHeight = self:getInnerContainer():getContentSize().height
-	    	--print('innerHeight:'..innerHeight..',positionY:'..inner:getPositionY())
+	    	print('innerHeight:'..innerHeight..',positionY:'..innerPositionY)
 
 	    	local realY = innerHeight - level_item_height + innerPositionY
 	    	-- 四舍五入
@@ -91,39 +118,56 @@ function LevelListView:addScrollListener()
 	    	else 
 	    		curScreenId = math.floor(realY / level_item_height) + 1
 	    	end
-	    	print('curScreenId:'..curScreenId..',self.curScreenId:'..self.info['curScreenId'])
-	    	if self.info['curScreenId'] ~= curScreenId then  -- 动态加载新屏资源，消除旧屏资源
-	    		if self.info['curScreenId'] - curScreenId == 1 then  -- 向上滚动
-	    			self.info['curScreenId'] = curScreenId
-	    			-- 尝试在头部添加新的Item
-	    			self.info['preScreenId'] = curScreenId - 1
-	    			if self.info['preScreenId'] >= 1 then -- 没有到达顶部
-	    				self:addLevelItem(self.info['preScreenId'],1)
-	    			else --到达顶部
-	    				self.info['preScreenId'] = 1
-	    			end
-	    			-- 尝试删除尾部的item
-	    			if self.info['nextScreenId'] == curScreenId + 2 then
-	    				self:removeLevelItem(0)
-	    				self.info['nextScreenId'] = curScreenId + 1
-	    			end
-	    		elseif curScreenId - self.info['curScreenId'] == 1 then -- 向上滚动
+	    	print('curScreenId:'..curScreenId..',self.cur:'..self.info['curScreenId']..','..'pre:'..self.info['preScreenId']..',next:'..self.info['nextScreenId'])
+	    	print('levelItemLock:'..self.info['levelItemLock'])
+	    	if self.info['curScreenId'] ~= curScreenId and self.info['levelItemLock'] ~= 1 then  -- 动态加载新屏资源，消除旧屏资源
+	    		self.info['levelItemLock'] = 1
+	    		print('########'..(self.info['curScreenId'] - curScreenId))
+	    		-- if self.info['curScreenId'] - curScreenId == 1 then  -- 向上滚动
+	    		-- 	self.info['curScreenId'] = curScreenId
+	    		-- 	-- 尝试在头部添加新的Item
+	    		-- 	self.info['preScreenId'] = curScreenId - 1
+	    		-- 	if self.info['preScreenId'] >= 1 then -- 没有到达顶部
+	    		-- 		self:addLevelItem(self.info['preScreenId'],1)
+	    		-- 	else --到达顶部
+	    		-- 		self.info['preScreenId'] = 1
+	    		-- 	end
+	    		-- 	-- 尝试删除尾部的item
+		    	-- 	if self.info['nextScreenId'] == curScreenId + 2 then
+		    	-- 		self.info['nextScreenId'] = curScreenId + 1
+	    		-- 		self:callFuncWithDelay(0.2,function()
+		    	-- 			self:removeLevelItem(0)
+		    	-- 		end)
+	    		-- 	end
+	    			--更新视图
+    				--self:requestRefreshView()
+	    		if curScreenId - self.info['curScreenId'] == 1 then -- 向上滚动
 	    			-- 尝试在尾部添加新的item
 	    			self.info['curScreenId'] = curScreenId
 	    			self.info['nextScreenId'] = curScreenId + 1
+	    			print('add new item in bottom:'..self.info['curScreenId']..','..self.info['nextScreenId'])
 	    			if self.info['nextScreenId'] <= self.info['maxScreenId'] then --没有到达尾部
 	    				self:addLevelItem(self.info['nextScreenId'],0)
+	    				--self:addLevelItem(4,0)
 	    			else -- 到达尾部
 	    				self.info['nextScreenId'] = self.info['maxScreenId']
 	    			end
 
-	    			-- 尝试删除头部旧的item
-	    			if self.info['preScreenId'] == self.info['curScreenId'] - 2 then
-	    				self:removeLevelItem(1)
-	    				self.info['preScreenId'] = self.info['curScreenId'] - 1
-	    			end
-
+	    			-- -- 尝试删除头部旧的item
+	    			-- if self.info['preScreenId'] == self.info['curScreenId'] - 2 then
+	    			-- 	self:callFuncWithDelay(0.2,function()
+	    			-- 	self:removeLevelItem(1)
+	    			-- 	end)
+	    			-- 	self.info['preScreenId'] = self.info['curScreenId'] - 1
+	    			-- end
+	 				--更新视图
+    				--self:updateInnerContainerSize()
 	    		end
+	    		self:callFuncWithDelay(0.3,function()
+	    			print('=======set item lock 0')
+					self.info['levelItemLock'] = 0
+	    		end)
+	    		--self.info['levelItemLock'] = 0
 	    	end
    			--print('Position:'..inner:getPositionX()..inner:getPositionY())
 
@@ -136,7 +180,11 @@ end
 -- 添加新的LevelItem
 -- @param topOrBottom 决定插入在头部或者插入尾部, top:1, bottom:0
 function LevelListView:addLevelItem(screenId,topOrBottom)
-	print('In function addLevelItem')
+	if topOrBottom == 1 then
+		print('=====In function addLevelItem:screen'..screenId..'from top')
+	else
+		print('=====In function addLevelItem:screen'..screenId..'from bottom')
+	end
 	local LevelItem = require('view.level.LevelItem')
     local newItem = LevelItem.create(screenId)
    	if topOrBottom == 1 then
@@ -145,20 +193,26 @@ function LevelListView:addLevelItem(screenId,topOrBottom)
     	self:pushBackCustomItem(newItem)
     end
     --更新视图
-    --self:refreshView()
+    self:refreshView()
+   	--self:updateInnerContainerSize()
 end
 
 --删除旧的LevelItem
 -- @param topOrBottom 决定删除头部或者删除尾部, top:1, bottom:0
 function LevelListView:removeLevelItem(topOrBottom)
-	print('In function removeLevelItem')
+	if topOrBottom == 1 then 
+		print('=====In function removeLevelItem from top')
+	else
+		print('=====In function removeLevelItem from bottom')
+	end
 	if topOrBottom == 1 then -- 向下滚动，删除头部
 		self:removeItem(0)
 	else
 		self:removeLastItem()
 	end
 	--更新视图
-	--self:refreshView()
+	self:refreshView()
+	--self:updateInnerContainerSize()
 end
 
 
@@ -192,7 +246,7 @@ function LevelListView:getCurScreenIdRange()
 		nextScreenId = totalScreenCount
 	end
 
-	print('ActiveScreenId'..preScreenId..','..curScreenId..','..nextScreenId)
+	print('ActiveScreenId'..preScreenId..','..curScreenId..','..nextScreenId..','..totalScreenCount)
 	return preScreenId,curScreenId,nextScreenId
 end
 

@@ -43,8 +43,8 @@ function DataLevelInfo:getBookCurrentLevelIndex()
 end
 
 function DataLevelInfo:getLevelInfo(bookKey)
-    print_lua_table(g_BOOKKEYS)
-    print_lua_table(g_BOOKS)
+    --print_lua_table(g_BOOKKEYS)
+    --print_lua_table(g_BOOKS)
 
     for i, v in ipairs(g_BOOKKEYS) do
         if v == bookKey then
