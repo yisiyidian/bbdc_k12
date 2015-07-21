@@ -171,8 +171,8 @@ function StartPopup:resetUI()
     -- 关卡目标
     -- 最多3种
     self.itemList = {
-    {"boss","3"},
-    {"red",''..s_BattleManager.totalCollect},
+    -- {"boss","3"},
+    -- {"red",''..s_BattleManager.totalCollect},
 }
     
     if self.itemView ~= nil then

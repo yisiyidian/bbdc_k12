@@ -179,7 +179,7 @@ function MatController:judgeFunc()
 	else
 		-- 播放划错的音效
 		playSound(s_sound_learn_false)
-		s_BattleManager:addStepWithCollect(0)
+		s_BattleManager:addStepWithCollect({0,0,0,0,0})
 		-- print("划错了")
 		print("要划的词是"..MatController.word[MatController.index][3])
 		-- print("你划的词是"..temp)
@@ -283,7 +283,7 @@ function MatController:changeFunc()
 	if #MatController.currentCoco ~= 0 then
 		return 
 	end
-	s_BattleManager:addStepWithCollect(0)
+	s_BattleManager:addStepWithCollect({0,0,0,0,0})
 	MatController.MatView:dropFunc()
 	MatController.index = MatController.index + 1
 end

@@ -88,7 +88,7 @@ function BattleView:showStageInfo()
 	label_boss:setPosition(back:getContentSize().width / 2,80)
 	back:addChild(label_boss)
 
-	local label_collect = cc.Label:createWithSystemFont('collection:'..s_BattleManager.currentCollect..'/'..s_BattleManager.totalCollect,'',28)
+	local label_collect = cc.Label:createWithSystemFont('collection:','',28)
 	label_collect:setColor(cc.c3b(0,0,0))
 	label_collect:setPosition(back:getContentSize().width / 2,50)
 	back:addChild(label_collect)
@@ -100,7 +100,7 @@ function BattleView:showStageInfo()
 
 	local function update(delta)
 		label_boss:setString('boss:'..(s_BattleManager.currentBossIndex - 1)..'/'..#s_BattleManager.bossList)
-		label_collect:setString('collection:'..s_BattleManager.currentCollect..'/'..s_BattleManager.totalCollect)
+		label_collect:setString('collection:'..s_BattleManager.currentCollect[1]..s_BattleManager.currentCollect[2]..s_BattleManager.currentCollect[3]..s_BattleManager.currentCollect[4]..s_BattleManager.currentCollect[5])
 		if s_BattleManager.stageType == 'time' then
 			local time = s_BattleManager.totalTime - s_BattleManager.currentTime
 			label_time:setString('time left:'..math.floor(time / 60)..':'..math.floor(time % 60))

@@ -7,13 +7,14 @@ local Pet = require('playmodel.character.Pet')
 local ActionManager = require('playmodel.battle.ActionManager')
 
 function BattleManager:listNotify()
-	return {ATTACK}
+	return {ATTACK,RIGHT}
 end
 
 --override
 function BattleManager:handleNotification(notify,data)
-	-- if notify == XXXX then
-	-- end
+	if notify == RIGHT then
+		self:addStepWithCollect(data)
+	end
 end
 
 function BattleManager:ctor()
@@ -46,9 +47,9 @@ function BattleManager:initState(time,step,collect,wordList,stageType)
 	--单词列表
 	self.wordList = wordList
 	--任务目标的收集数
-	self.totalCollect = collect
+	self.totalCollect = {1,1,1,1,1}
 	--当前收集数
-	self.currentCollect = 0
+	self.currentCollect = {0,0,0,0,0}
 	--关卡类型(限制时间或步数)
 	self.stageType = stageType
 	--各种资源数量
@@ -157,12 +158,18 @@ function BattleManager:addStepWithCollect(collect)
 			self:battleEnded(false)
 		end
 	end
-	self.currentCollect = self.currentCollect + collect
-	if self.currentCollect == self.totalCollect then
-		if self.currentBossIndex > #self.bossList then
-			self:battleEnded(true)
+	-- 收集列表 update
+	for i=1,5 do
+		self.currentCollect[i] = self.currentCollect[i] + collect[i] 
+	end	
+	print_lua_table(self.currentCollect)
+	for i=1,5 do
+		if self.currentCollect[i] < self.totalCollect[i] then
+			return
 		end
 	end
+	-- check whether succeed
+	self:checkEnd()
 end
 --创建boss
 function BattleManager:createBoss(idList)
@@ -233,30 +240,16 @@ function BattleManager:releaseSkill(skill,count)
 end
 
 function BattleManager:changeNextBoss()
-	-- body
-	if self.currentBossIndex > #self.bossList then
-		if self.currentCollect >= self.totalCollect then
-			self:battleEnded(true)
-		end
-		return
-	end
 	if self.bossList[self.currentBossIndex].blood <= 0 then
-		if self.currentBossIndex == #self.bossList then
-			if self.currentCollect >= self.totalCollect then
-				self:battleEnded(true)
-				return
-			end
-		end
-	
 		self.actionManager:changeBossAction(function()
 			s_BattleManager.currentBossIndex = s_BattleManager.currentBossIndex + 1
-			if self.currentBossIndex > #self.bossList then
-				return
+			if self.currentBossIndex <= #self.bossList then
+				self.currentBoss = self.bossList[currentBossIndex]
 			end
-			self.currentBoss = self.bossList[currentBossIndex]
 		end)
 	end
 	
+	self:checkEnd()
 end
 function BattleManager:createPausePopup()
     if s_SCENE.popupLayer.layerpaused then
@@ -267,6 +260,31 @@ function BattleManager:createPausePopup()
     s_SCENE.popupLayer:addBackground()
     s_SCENE.popupLayer:addChild(pauseLayer)
     s_SCENE.popupLayer.listener:setSwallowTouches(true)
+end
+
+-- 检测是否成功
+function BattleManager:checkEnd()
+	if self:checkBoss() == true and self:checkCollect() == true then
+		self:battleEnded(true)
+	end
+end
+
+-- 检测收集的元素是否足够
+function BattleManager:checkCollect()
+	for i=1,5 do
+		if self.currentCollect[i] < self.totalCollect[i] then
+			return false
+		end
+	end
+	return true
+end
+
+-- 检测boss是否全部打败
+function BattleManager:checkBoss()
+	if self.currentBossIndex == #self.bossList and self.bossList[self.currentBossIndex].blood <= 0 then
+		return true
+	end
+	return false
 end
 
 return BattleManager
