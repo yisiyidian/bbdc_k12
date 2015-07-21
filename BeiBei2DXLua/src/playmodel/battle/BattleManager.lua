@@ -31,7 +31,7 @@ function BattleManager:initInfo()
 	self.currentBoss = nil
 end
 --初始化state
-function BattleManager:initState(time,step,collect,wordList,stageType)
+function BattleManager:initState(time,step,wordCount,collect,wordList,stageType)
 	--游戏是否开始
 	self.gameBegan = false
 	--游戏是否结束
@@ -46,6 +46,10 @@ function BattleManager:initState(time,step,collect,wordList,stageType)
 	self.currentTime = 0
 	--单词列表
 	self.wordList = wordList
+	--任务目标的划对单词数
+	self.totalWordCount = wordCount
+	--当前划对单词数
+	self.currentWordCount = 0
 	--任务目标的收集数
 	self.totalCollect = {1,1,1,1,1}
 	--当前收集数
@@ -84,9 +88,9 @@ function BattleManager:restartBattle()
 	-- ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
 	-- 这里改
 	if unit.unitID % 2 == 1 then
-        s_BattleManager:initState(100,10,20,unit.wrongWordList,'step')
+        s_BattleManager:initState(100,10,10,20,unit.wrongWordList,'step')
     else
-        s_BattleManager:initState(100,10,20,unit.wrongWordList,'time')
+        s_BattleManager:initState(100,10,10,20,unit.wrongWordList,'time')
     end
 	self:enterBattleView(unit)
 end
@@ -170,6 +174,10 @@ function BattleManager:addStepWithCollect(collect)
 	end
 	-- check whether succeed
 	self:checkEnd()
+end
+--更新划词数
+function BattleManager:addWordCount()
+	self.currentWordCount = self.currentWordCount + 1
 end
 --创建boss
 function BattleManager:createBoss(idList)
@@ -264,7 +272,7 @@ end
 
 -- 检测是否成功
 function BattleManager:checkEnd()
-	if self:checkBoss() == true and self:checkCollect() == true then
+	if self:checkBoss() and self:checkCollect() and self:checkWordCount() then
 		self:battleEnded(true)
 	end
 end
@@ -282,6 +290,14 @@ end
 -- 检测boss是否全部打败
 function BattleManager:checkBoss()
 	if self.currentBossIndex == #self.bossList and self.bossList[self.currentBossIndex].blood <= 0 then
+		return true
+	end
+	return false
+end
+
+--检测单词是否划够
+function BattleManager:checkWordCount()
+	if self.totalWordCount == self.currentWordCount then
 		return true
 	end
 	return false

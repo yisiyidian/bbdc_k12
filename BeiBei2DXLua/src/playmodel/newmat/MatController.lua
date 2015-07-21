@@ -162,6 +162,7 @@ function MatController:judgeFunc()
 		playWordSound(temp)
 		-- print("划词正确")
 		-- print("这个词是"..temp)
+		s_BattleManager:addWordCount()
 		function MatController:callback()
 			MatController:sendNotification("RIGHT",attackList)
 		end
