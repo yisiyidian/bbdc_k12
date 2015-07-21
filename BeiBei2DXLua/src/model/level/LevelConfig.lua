@@ -14,30 +14,33 @@
 
 -- date 2015.7.21
 -- by wing
+LevelConfig.STEP = 1
+LevelConfig.TIME = 2
+
 local LevelConfig = {}
 
 LevelConfig.BossCongfig = {
-	[1] = 20,
-	[2] = 30,
-	[3] = 40,
+	[1] = 100,
+	[2] = 100,
+	[3] = 100,
 }
 
 LevelConfig.WordCongfig = {
-	[1] = 3,
-	[2] = 6,
-	[3] = 9,
+	[1] = 10,
+	[2] = 10,
+	[3] = 10,
 }
 
 LevelConfig.PointConfig = {
-	[1] = {0,0,0,0,20},
-	[2] = {0,0,0,0,20},
-	[3] = {0,0,0,0,20},
+	[1] = {2,2,2,2,2},
+	[2] = {2,2,2,2,2},
+	[3] = {2,2,2,2,2},
 }
 
 LevelConfig.LimitComfig = {
-	[1] = {1,90},
-	[2] = {2,20},
-	[3] = {1,90},
+	[1] = {LevelConfig.STEP,10},
+	[2] = {LevelConfig.TIME,100},
+	[3] = {LevelConfig.STEP,10},
 }
 
 LevelConfig.RewardConfig = {
