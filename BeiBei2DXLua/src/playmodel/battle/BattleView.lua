@@ -110,7 +110,7 @@ function BattleView:showStageInfo()
 			local time = s_BattleManager.totalTime - s_BattleManager.currentTime
 			label_time:setString('time left:'..math.floor(time / 60)..':'..math.floor(time % 60))
 		else
-			label_time:setString('step:'..s_BattleManager.currentStep..'/'..s_BattleManager.totalStep)
+			label_time:setString('step:'..(s_BattleManager.totalStep - s_BattleManager.currentStep))
 		end
 	end
 

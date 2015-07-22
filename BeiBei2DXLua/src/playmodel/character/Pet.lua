@@ -1,5 +1,5 @@
 require("playmodel.battle.Notification")
-require('playmodel.battle.ActionManager')
+local ActionManager = require('playmodel.battle.ActionManager')
 
 local Observer = require("playmodel.observer.Observer")
 local CharacterConfig = require('playmodel.character.CharacterConfig')
@@ -60,7 +60,7 @@ function Pet:releaseSkill(count)
 	local skill = require("playmodel.character.Skill").new()
 	skill:initWithID(''..self.skillID,self)
 	skill:release(count)
-	self.action = petActionToReleaseSkill()
+	self.action = ActionManager:petActionToReleaseSkill()
 	self.ui:runAction(cc.Sequence:create(self.action,cc.CallFunc:create(function (  )
 		self.cb()
 		-- 攻击boss的音效

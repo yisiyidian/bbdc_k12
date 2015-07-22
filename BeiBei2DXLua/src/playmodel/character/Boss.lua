@@ -1,5 +1,5 @@
 require("playmodel.battle.Notification")
-require('playmodel.battle.ActionManager')
+local ActionManager = require('playmodel.battle.ActionManager')
 local Pet = require("playmodel.character.Pet")
 
 local Boss = class("Boss", Pet)
@@ -69,7 +69,7 @@ function Boss:createUI(file)
 end
 
 function Boss:attackEnded()
-	self.ui:runAction(cc.Sequence:create(bossAction(),cc.CallFunc:create(function (  )
+	self.ui:runAction(cc.Sequence:create(ActionManager:bossAction(),cc.CallFunc:create(function (  )
 		s_BattleManager:releaseSkillEnded()
 	end)))
 end
