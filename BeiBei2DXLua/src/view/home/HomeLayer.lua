@@ -350,7 +350,7 @@ function HomeLayer:ctor()
    for i=1,5 do
         if math.floor(s_LocalDatabaseManager.isBuy() / math.pow(10,i-1)) == 1 then
             if i == 1 then
-                self:friendButtonFunc()
+                self:changeViewToFriendOrShop("FriendLayer")
             elseif i == 4 then
                 self.isDataShow = true 
                 self:showDataLayerByItem(3)
@@ -686,6 +686,7 @@ end
 
 --切换到好友界面或者商店界面
 function HomeLayer:changeViewToFriendOrShop(destination)
+    s_SCENE:removeAllPopups()
     local DestinationLayer = nil
     if destination == "ShopLayer" then
         DestinationLayer = require("view.shop."..destination)
