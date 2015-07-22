@@ -5,6 +5,7 @@ local BattleManager = class('BattleManager',Observer)
 local Boss = require('playmodel.character.Boss')
 local Pet = require('playmodel.character.Pet')
 local ActionManager = require('playmodel.battle.ActionManager')
+local LevelConfig = require('model.level.LevelConfig')
 
 function BattleManager:listNotify()
 	return {ATTACK,RIGHT}
@@ -31,31 +32,32 @@ function BattleManager:initInfo()
 	self.currentBoss = nil
 end
 --初始化state
-function BattleManager:initState(time,step,wordCount,collect,wordList,stageType)
+function BattleManager:initState(wordList,index)
+	self.index = index%2 + 1
 	--游戏是否开始
 	self.gameBegan = false
 	--游戏是否结束
 	self.gameEnded = false
 	--限制步数
-	self.totalStep = step
+	self.totalStep = LevelConfig.LimitComfig[self.index][2]
 	--当前步数
 	self.currentStep = 0
 	--限制时间
-	self.totalTime = time
+	self.totalTime = LevelConfig.LimitComfig[self.index][2]
 	--当前时间
 	self.currentTime = 0
 	--单词列表
 	self.wordList = wordList
 	--任务目标的划对单词数
-	self.totalWordCount = wordCount
+	self.totalWordCount = LevelConfig.WordCongfig[self.index]
 	--当前划对单词数
 	self.currentWordCount = 0
 	--任务目标的收集数
-	self.totalCollect = {1,1,1,1,1}
+	self.totalCollect = LevelConfig.PointConfig[self.index]
 	--当前收集数
 	self.currentCollect = {0,0,0,0,0}
 	--关卡类型(限制时间或步数)
-	self.stageType = stageType
+	self.stageType = LevelConfig.LimitComfig[self.index][1]
 	--各种资源数量
 	self.petSource = {0,0,0,0,0}
 	--是否获胜
@@ -63,11 +65,6 @@ function BattleManager:initState(time,step,wordCount,collect,wordList,stageType)
 end
 --进入战斗场景
 function BattleManager:enterBattleView(unit)
-	-- if unit.unitID % 2 == 1 then
-	-- 	self:initState(100,10,20,unit.wrongWordList,'step')
-	-- else
-	-- 	self:initState(100,10,20,unit.wrongWordList,'time')
-	-- end
 	local battleView = require("playmodel.battle.BattleView").new()
 	s_SCENE:replaceGameLayer(battleView)
 	self.view = battleView
@@ -85,13 +82,7 @@ function BattleManager:restartBattle()
 	local unit = self.unit
 	self:unregister()
 	self:sendNotification('UNREGISTER')
-	-- ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
-	-- 这里改
-	if unit.unitID % 2 == 1 then
-        s_BattleManager:initState(100,10,10,20,unit.wrongWordList,'step')
-    else
-        s_BattleManager:initState(100,10,10,20,unit.wrongWordList,'time')
-    end
+    s_BattleManager:initState(unit.wrongWordList,unit.unitID)
 	self:enterBattleView(unit)
 end
 --复活

@@ -10,14 +10,9 @@ function StartPopup:ctor(islandIndex)
 	self.islandIndex = islandIndex
     -- 初始化关卡信息 词库等
     self.unit = s_LocalDatabaseManager.getUnitInfo(self.islandIndex)
-    -- 初始化 关卡目标等
-    -- ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
-    -- 这里改
-    if self.unit.unitID % 2 == 1 then
-        s_BattleManager:initState(100,10,10,20,self.unit.wrongWordList,'step')
-    else
-        s_BattleManager:initState(100,10,10,20,self.unit.wrongWordList,'time')
-    end
+    -- 初始化 关卡目标
+    print_lua_table(self.unit)
+    s_BattleManager:initState(self.unit.wrongWordList,self.unit.unitID)
     -- 目前的关卡类型
 	self.type = s_BattleManager.stageType
 

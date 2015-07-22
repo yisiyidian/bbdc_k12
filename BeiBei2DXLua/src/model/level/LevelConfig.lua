@@ -14,10 +14,11 @@
 
 -- date 2015.7.21
 -- by wing
-LevelConfig.STEP = 1
-LevelConfig.TIME = 2
 
 local LevelConfig = {}
+
+LevelConfig.STEP = 'step'
+LevelConfig.TIME = 'time'
 
 LevelConfig.BossCongfig = {
 	[1] = 100,
@@ -32,9 +33,9 @@ LevelConfig.WordCongfig = {
 }
 
 LevelConfig.PointConfig = {
-	[1] = {2,2,2,2,2},
-	[2] = {2,2,2,2,2},
-	[3] = {2,2,2,2,2},
+	[1] = {1,1,1,1,1},
+	[2] = {1,1,1,1,1},
+	[3] = {1,1,1,1,1},
 }
 
 LevelConfig.LimitComfig = {
