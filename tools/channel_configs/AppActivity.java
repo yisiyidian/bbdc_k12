@@ -27,9 +27,12 @@ THE SOFTWARE.
 package com.beibei.wordmaster;
 
 import java.util.ArrayList;
+import java.util.Properties;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;  
+
+
 
 // import android.app.AlertDialog;
 import android.content.Context;
@@ -49,6 +52,9 @@ import c.bb.dc.BBNDK;
 import com.anysdk.framework.PluginWrapper;
 import com.avos.avoscloud.AVAnalytics;
 import com.umeng.analytics.MobclickAgent;
+import com.tencent.stat.MtaSDkException;
+import com.tencent.stat.StatConfig;
+import com.tencent.stat.StatService;
 
 // The name of .so is specified in AndroidMenifest.xml. NativityActivity will load it automatically for you.
 // You can use "System.loadLibrary()" to load other .so files.
@@ -106,7 +112,32 @@ public class AppActivity extends Cocos2dxActivity {
 //			}
 //		}
 		BBNDK.setHostIPAdress( getHostIpAddress() );
+		
+		
+		
+//		tencent 统计
+		StatConfig.setEnableStatService(true);
+		String appkey = "Aqc1103783596";
+		// 初始化并启动MTA
+		// 第三方SDK必须按以下代码初始化MTA，其中appkey为规定的格式或MTA分配的代码。
+		// 其它普通的app可自行选择是否调用
+		try {
+			// 第三个参数必须为：com.tencent.stat.common.StatConstants.VERSION
+			StatService.startStatService(this, appkey,
+					com.tencent.stat.common.StatConstants.VERSION);
+		} catch (MtaSDkException e) {
+			// MTA初始化失败
+		}
+		
+		StatService.trackCustomEvent(this, "onLaunch");
+//		StatConfig.setMaxStoreEventCount(10000);
+//		Properties prop = new Properties();
+//		prop.setProperty("device",StatConfig.getMid(this) );
+//		StatService.trackCustomKVEvent(this,"1", prop);
+//		tencent 统计
+
 	}
+	
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data){
