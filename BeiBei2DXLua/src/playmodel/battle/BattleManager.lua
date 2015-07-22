@@ -39,17 +39,17 @@ function BattleManager:initState(wordList,index)
 	--游戏是否结束
 	self.gameEnded = false
 	--限制步数
-	self.totalStep = LevelConfig.LimitComfig[self.index][2]
+	self.totalStep = LevelConfig.LimitConfig[self.index][2]
 	--当前步数
 	self.currentStep = 0
 	--限制时间
-	self.totalTime = LevelConfig.LimitComfig[self.index][2]
+	self.totalTime = LevelConfig.LimitConfig[self.index][2]
 	--当前时间
 	self.currentTime = 0
 	--单词列表
 	self.wordList = wordList
 	--任务目标的划对单词数
-	self.totalWordCount = LevelConfig.WordCongfig[self.index]
+	self.totalWordCount = LevelConfig.WordConfig[self.index]
 	--当前划对单词数
 	self.currentWordCount = 0
 	--任务目标的收集数
@@ -57,7 +57,7 @@ function BattleManager:initState(wordList,index)
 	--当前收集数
 	self.currentCollect = {0,0,0,0,0}
 	--关卡类型(限制时间或步数)
-	self.stageType = LevelConfig.LimitComfig[self.index][1]
+	self.stageType = LevelConfig.LimitConfig[self.index][1]
 	--各种资源数量
 	self.petSource = {0,0,0,0,0}
 	--是否获胜
@@ -99,6 +99,10 @@ function BattleManager:battleBegan()
 	self:register()
 	self:initInfo()
 	self.gameBegan = true
+	--创建boss
+	self:createBoss(LevelConfig.BossConfig[self.index])
+	--创建pet
+	self:createPet({'2','3','4','5','6'})
 end
 --战斗结束
 function BattleManager:battleEnded(win)

@@ -20,13 +20,13 @@ local LevelConfig = {}
 LevelConfig.STEP = 'step'
 LevelConfig.TIME = 'time'
 
-LevelConfig.BossCongfig = {
-	[1] = 100,
-	[2] = 100,
-	[3] = 100,
+LevelConfig.BossConfig = {
+	[1] = {"1", "1", "1",},
+	[2] = {"1", "1", "1",},
+	[3] = {"1", "1", "1",},
 }
 
-LevelConfig.WordCongfig = {
+LevelConfig.WordConfig = {
 	[1] = 10,
 	[2] = 10,
 	[3] = 10,
@@ -38,7 +38,7 @@ LevelConfig.PointConfig = {
 	[3] = {1,1,1,1,1},
 }
 
-LevelConfig.LimitComfig = {
+LevelConfig.LimitConfig = {
 	[1] = {LevelConfig.STEP,10},
 	[2] = {LevelConfig.TIME,100},
 	[3] = {LevelConfig.STEP,10},
