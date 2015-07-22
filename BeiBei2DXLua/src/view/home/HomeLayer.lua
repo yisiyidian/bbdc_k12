@@ -350,7 +350,7 @@ function HomeLayer:ctor()
    for i=1,5 do
         if math.floor(s_LocalDatabaseManager.isBuy() / math.pow(10,i-1)) == 1 then
             if i == 1 then
-                self:changeViewToFriendOrShop("FriendLayer")
+                self:showFriendView()
             elseif i == 4 then
                 self.isDataShow = true 
                 self:showDataLayerByItem(3)
