@@ -1,5 +1,5 @@
 -- 动作管理器，继承观察者
--- 尽管没用到
+
 local Observer = require("playmodel.observer.Observer")
 local ActionManager = class('ActionManager',Observer)
 
