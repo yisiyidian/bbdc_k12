@@ -83,7 +83,7 @@ function DataUser:ctor()
 
     self.bulletinBoardTime                 = 0 
     self.bulletinBoardMask                 = 0
-    self[DataUser.BEANSKEY]                = BEANS_PREFIX .. '300' .. BEANS_SUBFIX
+    self[DataUser.BEANSKEY]                = BEANS_PREFIX .. '1000' .. BEANS_SUBFIX
     self.newStudyRightLayerMask            = 0
 
 
