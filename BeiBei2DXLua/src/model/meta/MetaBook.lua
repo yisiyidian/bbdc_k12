@@ -6,7 +6,8 @@ end)
 function MetaBook.create(key,
                         name,
                         words,
-                        music)
+                        music,
+                        type)
 
     local obj = MetaBook.new()
 
@@ -14,6 +15,7 @@ function MetaBook.create(key,
     obj.name = name
     obj.words = words
     obj.music = music
+    obj.type = type
     
     return obj
 end

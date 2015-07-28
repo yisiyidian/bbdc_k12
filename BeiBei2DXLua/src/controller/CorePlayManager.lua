@@ -262,7 +262,11 @@ function CorePlayManager.enterLevelLayer()
 end
 
 function CorePlayManager.enterBookLayer(education)
-    local bookLayer = BookLayer.create(education)
+    local e = education
+    if e ~= 'primary' and e ~= 'senior' and e ~= 'junior' and e ~= 'college' and e ~= 'more' and e ~= 'mybook' then
+        e = s_DataManager.books[education].type
+    end
+    local bookLayer = BookLayer.create(e)
     s_SCENE:replaceGameLayer(bookLayer)
 end
 
