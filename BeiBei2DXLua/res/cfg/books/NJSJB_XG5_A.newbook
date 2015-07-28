@@ -1,0 +1,146 @@
+1	bear	Unit 1_1	3	n.熊	1
+1	forest	Unit 1_1	3	n.森林	1
+1	there	Unit 1_1	3	adv.&n.（与be连用）某处有	1
+2	house	Unit 1_2	3	n.房子	1
+2	soup	Unit 1_2	3	n.汤	1
+2	just right	Unit 1_2	3	正合适	1
+2	room	Unit 1_2	3	n.房间	1
+2	hard	Unit 1_2	3	adj.硬的	1
+2	soft	Unit 1_2	3	adj.柔软的	1
+2	afraid	Unit 1_2	3	adj.害怕的	1
+2	in front of	Unit 1_2	3	在...前面	1
+3	her	Unit 1_3	3	pron.她	1
+3	Help	Unit 1_3	3	vt.救命啊	1
+3	beside	Unit 1_3	3	prep.在...旁边	1
+3	between	Unit 1_3	3	adv.在...中间	1
+3	really	Unit 1_3	3	adv.真的	1
+3	then	Unit 1_3	3	adv.然后	1
+3	find	Unit 1_3	3	vt.发现	1
+3	their	Unit 1_3	3	pron.他们的	1
+4	student	Unit 2_1	1	n.学生	1
+4	show ... around	Unit 2_1	1	带...参观	1
+4	classroom	Unit 2_1	1	n.教室	1
+4	second	Unit 2_1	1	n.&adj.第二	1
+4	floor	Unit 2_1	1	n.楼层	1
+4	computer	Unit 2_1	1	n.电脑	1
+4	third	Unit 2_1	1	n.&adj.第三	1
+4	first	Unit 2_1	1	n.&ad.第一	1
+4	swing	Unit 2_1	1	n.秋千	1
+4	push	Unit 2_1	1	n.推	1
+4	heavy	Unit 2_1	1	adj.重的	1
+4	stop	Unit 2_1	1	v.停止	1
+4	high	Unit 2_1	1	adj.高的	1
+4	great	Unit 2_1	1	adj.极大的	1
+5	one ... the other ...	Unit 3_1	1	一个...，另一个...	1
+5	body	Unit 3_1	1	n.身体	1
+5	no	Unit 3_1	1	adv.没有	1
+5	leg	Unit 3_1	1	n.腿	1
+5	nor	Unit 3_1	1	adv.也不	1
+5	arm	Unit 3_1	1	n.手臂	1
+5	wing	Unit 3_1	1	n.翅膀	1
+5	foot	Unit 3_1	1	n.脚	1
+5	give	Unit 3_1	1	vt.给	1
+5	rabbit	Unit 3_1	1	n.兔子	1
+5	finger	Unit 3_1	1	n.手指	1
+6	hobby	Unit 4_1	2	n.业余爱好	1
+6	be good at	Unit 4_1	2	擅长于	1
+6	with	Unit 4_1	2	prep.与...一起	1
+6	also	Unit 4_1	2	adv.也	1
+6	read	Unit 4_1	2	vt.阅读	1
+6	story	Unit 4_1	2	n.故事	1
+6	a lot of	Unit 4_1	2	很多	1
+6	play the piano	Unit 4_1	2	弹钢琴	1
+6	dance	Unit 4_1	2	vi.跳舞	1
+7	watch films	Unit 4_2	2	看电影	1
+7	sing	Unit 4_2	2	vt.唱歌	1
+7	both	Unit 4_2	2	pron.两个都	1
+7	group	Unit 4_2	2	n.组	1
+7	idea	Unit 4_2	2	n.主意	1
+7	ice	Unit 4_2	2	n.冰	1
+7	hole	Unit 4_2	2	n.洞	1
+7	Look out	Unit 4_2	2	当心	1
+7	wet	Unit 4_2	2	adj.湿的	1
+8	teacher	Unit 5_1	2	n.老师	1
+8	teach	Unit 5_1	2	vt.教	1
+8	writer	Unit 5_1	2	n.作家	1
+8	write	Unit 5_1	2	v.写	1
+8	work	Unit 5_1	2	n.工作	1
+8	at home	Unit 5_1	2	在家	1
+8	doctor	Unit 5_1	2	n.医生	1
+8	help	Unit 5_1	2	vt.帮助	1
+8	sick	Unit 5_1	2	adj.生病的	1
+9	people	Unit 5_2	2	n.人们	1
+9	factory	Unit 5_2	2	n.工厂	1
+9	worker	Unit 5_2	2	n.工人	1
+9	cook	Unit 5_2	2	n.厨师	1
+9	driver	Unit 5_2	2	n.司机	1
+9	farmer	Unit 5_2	2	n.农民	1
+9	nurse	Unit 5_2	2	n.护士	1
+9	policeman	Unit 5_2	2	n.警察	1
+10	e-friend	Unit 6_1	2	n.网友	1
+10	Wait a minute	Unit 6_1	2	等一会儿	1
+10	send	Unit 6_1	2	vt.发出	1
+10	email	Unit 6_1	2	n.电子邮件	1
+10	to	Unit 6_1	2	prep.给	1
+10	live	Unit 6_1	2	v.居住	1
+10	UK	Unit 6_1	2	n.英国	1
+10	... years old	Unit 6_1	2	...岁	1
+10	study	Unit 6_1	2	vi.学习	1
+10	Australia	Unit 6_1	2	n.澳大利亚	1
+11	Canada	Unit 6_2	2	n.加拿大	1
+11	China	Unit 6_2	2	n.中国	1
+11	US	Unit 6_2	2	n.美国	1
+11	go fishing	Unit 6_2	2	去钓鱼	1
+11	tomorrow	Unit 6_2	2	n.&adv.明天	1
+11	fishing	Unit 6_2	2	n.钓鱼	1
+11	Don't worry	Unit 6_2	2	别担心	1
+11	sit	Unit 6_2	2	v.坐	1
+11	by ...	Unit 6_2	2	在...旁边	1
+11	wait	Unit 6_2	2	v.等待	1
+12	at weekends	Unit 7_1	2	周末	1
+12	visit	Unit 7_1	2	n.&v.拜访	1
+12	grandparent	Unit 7_1	2	n.祖父母	1
+12	play with	Unit 7_1	2	和...一起玩	1
+12	very much	Unit 7_1	2	非常	1
+12	often	Unit 7_1	2	adv.经常	1
+12	chat	Unit 7_1	2	n.&vt.聊天	1
+12	Internet	Unit 7_1	2	n.互联网	1
+13	always	Unit 7_2	2	adv.总是	1
+13	sometimes	Unit 7_2	2	adv.有时	1
+13	go to the cinema	Unit 7_2	2	去看电影	1
+13	there	Unit 7_2	2	adv.那里	1
+13	a lot	Unit 7_2	2	很多	1
+13	come out	Unit 7_2	2	出来	1
+13	get out	Unit 7_2	2	出来	1
+14	Christmas	Unit 8_1	3	n.圣诞节	1
+14	buy	Unit 8_1	3	vt.买	1
+14	present	Unit 8_1	3	n.礼物	1
+14	Christmas tree	Unit 8_1	3	圣诞树	1
+14	Father Christmas	Unit 8_1	3	圣诞老人	1
+14	next	Unit 8_1	3	adv.接着	1
+14	put	Unit 8_1	3	vt.放	1
+14	pretty	Unit 8_1	3	adj.好看的	1
+14	thing	Unit 8_1	3	n.物品	1
+14	look	Unit 8_1	3	n.看起来	1
+14	Christmas Eve	Unit 8_1	3	圣诞夜	1
+15	stocking	Unit 8_2	3	n.长统袜	1
+15	wait for	Unit 8_2	3	等候	1
+15	finally	Unit 8_2	3	adv.最后	1
+15	Christmas Day	Unit 8_2	3	圣诞节	1
+15	early	Unit 8_2	3	adv.早早地	1
+15	turkey	Unit 8_2	3	n.火鸡	1
+15	pudding	Unit 8_2	3	n.布丁	1
+15	all	Unit 8_2	3	n.&pron.全都	1
+15	have a good time	Unit 8_2	3	过得愉快	1
+15	card	Unit 8_2	3	n.卡片	1
+15	children	Unit 8_2	3	n.孩子	1
+16	fold	Unit 8_3	3	vt.折叠	1
+16	message	Unit 8_3	3	n.信息	1
+16	Merry Christmas	Unit 8_3	3	圣诞快乐	1
+16	song	Unit 8_3	3	n.歌曲	1
+16	What's wrong with ...	Unit 8_3	3	...怎么了？	1
+16	him	Unit 8_3	3	pron.他	1
+16	us	Unit 8_3	3	pron.我们	1
+16	letter	Unit 8_3	3	n.信	1
+16	storybook	Unit 8_3	3	n.故事书	1
+16	after	Unit 8_3	3	conj.在...以后	1

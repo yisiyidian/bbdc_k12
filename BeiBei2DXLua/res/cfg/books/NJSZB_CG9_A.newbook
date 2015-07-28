@@ -1,0 +1,254 @@
+1	golden	unit 1_1	4	adj.金的	1
+1	crown	unit 1_1	4	n.王冠	0
+1	Olympics	unit 1_1	4	n.奥运会	1
+2	agreement	unit 1_2	4	n.同意	1
+2	confirmation	unit 1_2	4	n.证实	0
+2	pot	unit 1_2	4	n.罐	1
+2	doubt	unit 1_2	4	v.不能肯定	1
+2	real	unit 1_2	4	adj.真的	1
+2	truth	unit 1_2	4	n.真相	1
+2	seem	unit 1_2	4	vi.好像	1
+2	solve	unit 1_2	4	v.解决	1
+2	fill	unit 1_2	4	vt.装满	1
+3	bowl	unit 1_3	4	n.碗	1
+3	displace	unit 1_3	4	v.取代	0
+3	less	unit 1_3	4	adj.更少的	1
+3	metal	unit 1_3	4	n.金属	1
+3	certain	unit 1_3	4	adj.确定的	1
+3	prison	unit 1_3	4	n.监狱	1
+3	boxing	unit 1_3	4	拳击	1
+3	racing	unit 1_3	4	赛马	1
+3	wrestling	unit 1_3	4	n.摔跤运动	0
+4	hit	unit 1_4	4	v.击	1
+4	brave	unit 1_4	4	adj.勇敢的	1
+4	punctuation	unit 1_4	4	n.标点符号	0
+4	correct	unit 1_4	4	adj.准确无误的	1
+4	mistake	unit 1_4	4	n.错误	1
+4	be happy with	unit 1_4	4	满意的	1
+4	fill ... with ...	unit 1_4	4	用...把...装满	1
+4	run over	unit 1_4	4	溢出	1
+4	send ... to prison	unit 1_4	4	把...关进监狱	1
+4	make sure	unit 1_4	4	确保	1
+5	mind	unit 2_1	4	n.聪明人	1
+5	astronomer	unit 2_1	4	n.天文学家	1
+5	genius	unit 2_1	4	n.天才	0
+5	consider	unit 2_1	4	vt.认为	1
+5	sense	unit 2_1	4	n.理解力	1
+5	humour	unit 2_1	4	n.幽默	1
+5	invitation	unit 2_1	4	n.邀请	1
+5	theory	unit 2_1	4	n.学说	0
+5	university	unit 2_1	4	n.大学	1
+6	pleasure	unit 2_2	4	n.乐事	1
+6	avoid	unit 2_2	4	v.避免	1
+6	lecture	unit 2_2	4	n.讲座	1
+6	tonight	unit 2_2	4	adv.在今夜	1
+6	audience	unit 2_2	4	n.观众	1
+6	trust	unit 2_2	4	vi.信任	1
+6	seat	unit 2_2	4	n.座位	1
+6	applause	unit 2_2	4	v.鼓掌	0
+6	pale	unit 2_2	4	adj.苍白的	1
+7	achievement	unit 2_3	4	n.成就	1
+7	universe	unit 2_3	4	n.宇宙	1
+7	philosopher	unit 2_3	4	n.哲学家	0
+7	obey	unit 2_3	4	vt.服从	1
+7	reduce	unit 2_3	4	vt.减少	1
+7	exactly	unit 2_3	4	adv.精确地	1
+7	action	unit 2_3	4	n.情节	1
+7	sense of humour	unit 2_3	4	幽默感	1
+7	let ... down	unit 2_3	4	使失望	1
+8	by heart	unit 2_4	4	单凭记忆	1
+8	take a seat	unit 2_4	4	坐下	1
+8	without difficulty	unit 2_4	4	轻而易举	1
+8	join in	unit 2_4	4	参加	1
+8	have no idea	unit 2_4	4	丝毫不知道	1
+8	be in trouble	unit 2_4	4	处于困境	1
+8	play a joke on sb.	unit 2_4	4	跟某人开玩笑	1
+8	turning point	unit 2_4	4	转折点	1
+8	a series of	unit 2_4	4	一系列	1
+9	meal	unit 3_1	3	n.一顿饭	1
+9	share	unit 3_1	3	vt.分享	1
+9	decision	unit 3_1	3	n.决定	1
+9	possessions	unit 3_1	3	n.个人财产	0
+9	expect	unit 3_1	3	v.指望	1
+9	abroad	unit 3_1	3	adv.在国外	1
+9	business	unit 3_1	3	n.商务	1
+9	personal	unit 3_1	3	adj.个人的	1
+10	set	unit 3_2	3	v.确定	1
+10	daughter	unit 3_2	3	n.女儿	1
+10	mind	unit 3_2	3	v.介意	1
+10	fashionable	unit 3_2	3	adj.流行的	0
+10	fashion	unit 3_2	3	n.流行款式	0
+10	out of date	unit 3_2	3	过时的	1
+10	iron	unit 3_2	3	v.熨	1
+10	event	unit 3_2	3	n.公开活动	1
+11	suppose	unit 3_3	3	vt.认为	1
+11	either	unit 3_3	3	conj.也	1
+11	relationship	unit 3_3	3	n.关系	1
+11	invite	unit 3_3	3	vt.邀请	1
+11	cost	unit 3_3	3	vi.价钱为	1
+11	type	unit 3_3	3	n.类型	1
+11	help with	unit 3_3	3	帮着做	1
+11	be on business	unit 3_3	3	出差	1
+11	have no interest in	unit 3_3	3	对...没有兴趣	1
+12	online	unit 4_1	3	adj.在线的	0
+12	model	unit 4_1	3	n.模特儿	1
+12	diet	unit 4_1	3	v.规定饮食	1
+12	though	unit 4_1	3	conj.虽然	1
+12	awful	unit 4_1	3	adj.很坏的	1
+12	regret	unit 4_1	3	n.懊悔	1
+12	ashamed	unit 4_1	3	adj.惭愧	1
+12	situation	unit 4_1	3	n.情况	1
+12	braces	unit 4_1	3	n.牙箍	0
+12	hate	unit 4_1	3	vt.厌恶	1
+13	advantage	unit 4_2	3	n.优势	1
+13	embarrassed	unit 4_2	3	adj.尴尬的	1
+13	suggest	unit 4_2	3	vt.建议	1
+13	mad	unit 4_2	3	adj.很生气	1
+13	mess	unit 4_2	3	n.杂乱	1
+13	annoying	unit 4_2	3	adj.使恼怒的	1
+13	fail	unit 4_2	3	vi.不及格	1
+13	careless	unit 4_2	3	adj.粗心造成的	1
+13	comment	unit 4_2	3	n.评论	1
+13	request	unit 4_2	3	n.要求	0
+14	polite	unit 4_3	3	adj.有礼貌的	1
+14	none	unit 4_3	3	pron.没有一个	1
+14	exam	unit 4_3	3	n.考试	1
+14	be on a diet	unit 4_3	3	节食	1
+14	laugh at	unit 4_3	3	嘲笑	1
+14	feel ashamed of	unit 4_3	3	对...感到羞愧	1
+14	drive sb mad	unit 4_3	3	让某人受不了	1
+14	make a mess	unit 4_3	3	搞得一塌糊涂	1
+14	out of place	unit 4_3	3	格格不入	1
+14	none of one's business	unit 4_3	3	与某人无关	1
+14	hear from	unit 4_3	3	收到某人的信件	1
+15	praise	unit 5_1	3	vt.赞扬	1
+15	view	unit 5_1	3	n.看	1
+15	script	unit 5_1	3	n.广播稿	0
+15	director	unit 5_1	3	n.导演	1
+15	make-up	unit 5_1	3	n.化妆	1
+15	artist	unit 5_1	3	n.艺术家	1
+15	studio	unit 5_1	3	n.演播室	1
+15	contestant	unit 5_1	3	n.比赛者	0
+15	upon	unit 5_1	3	prep.在...上	1
+15	among	unit 5_1	3	prep.在...中	1
+16	onto	unit 5_2	3	prep.朝...上	1
+16	forward	unit 5_2	3	adv.向前	1
+16	second	unit 5_2	3	n.秒	1
+16	relaxed	unit 5_2	3	adj.放松的	1
+16	ahead of	unit 5_2	3	领先	1
+16	beat	unit 5_2	3	vt.打败	1
+16	still	unit 5_2	3	adj.平静的	1
+16	single	unit 5_2	3	adj.单个的	1
+16	victory	unit 5_2	3	n.胜利	1
+16	England	unit 5_2	3	英格兰	1
+17	lucky	unit 5_3	3	adj.幸运的	1
+17	news	unit 5_3	3	n.新闻报道	1
+17	survey	unit 5_3	3	n.民意调查	1
+17	floor plan	unit 5_3	3	楼层平面图	1
+17	talent show	unit 5_3	3	达人秀	1
+17	pass out	unit 5_3	3	昏迷	1
+17	keep still	unit 5_3	3	保持不动	1
+17	emergency exit	unit 5_3	3	紧急出口	1
+17	on weekdays	unit 5_3	3	在工作日	1
+18	preference	unit 6_1	4	n.偏爱	0
+18	review	unit 6_1	4	vt.评价	1
+18	bean	unit 6_1	4	n.豆	1
+18	beef	unit 6_1	4	n.牛肉	1
+18	product	unit 6_1	4	n.产品	1
+18	protein	unit 6_1	4	n.蛋白质	0
+18	hamburger	unit 6_1	4	n.汉堡包	1
+18	cola	unit 6_1	4	n.一杯可乐	0
+18	sandwich	unit 6_1	4	n.三明治	1
+18	salad	unit 6_1	4	n.色拉	1
+19	medical	unit 6_2	4	adj.医疗的	1
+19	fat	unit 6_2	4	n.脂肪	1
+19	sugar	unit 6_2	4	n.食糖	1
+19	state	unit 6_2	4	v.说明	1
+19	necessary	unit 6_2	4	adj.必需的	1
+19	research	unit 6_2	4	n.研究	1
+19	plenty	unit 6_2	4	n.大量	1
+19	usual	unit 6_2	4	adj.通常的	1
+19	coffee	unit 6_2	4	n.咖啡	1
+19	treat	unit 6_2	4	v.买	1
+20	customer	unit 6_3	4	n.顾客	1
+20	title	unit 6_3	4	n.标题	1
+20	serve	unit 6_3	4	v.提供	1
+20	pound	unit 6_3	4	n.英镑	1
+20	pie	unit 6_3	4	n.果馅饼	1
+20	chip	unit 6_3	4	n.炸薯条	0
+20	service	unit 6_3	4	n.服务	1
+20	seat	unit 6_3	4	vt.就座	1
+20	a balanced diet	unit 6_3	4	均衡饮食	1
+20	dairy product	unit 6_3	4	乳制品	1
+21	stay away from	unit 6_4	4	离开	1
+21	fried food	unit 6_4	4	油炸食品	1
+21	soft drink	unit 6_4	4	软饮料	1
+21	medical examination	unit 6_4	4	体检	1
+21	lose weight	unit 6_4	4	减肥	1
+21	plenty of	unit 6_4	4	大量	1
+21	in general	unit 6_4	4	通常	1
+21	treat oneself to sth.	unit 6_4	4	给自己买某物	1
+21	be prepared to do sth.	unit 6_4	4	愿意做某事	1
+22	adventure	unit 7_1	4	n.冒险经历	1
+22	novel	unit 7_1	4	n.小说	1
+22	frog	unit 7_1	4	n.蛙	1
+22	congratulations	unit 7_1	4	n.祝贺	1
+22	sympathy	unit 7_1	4	n.同情	0
+22	steamboat	unit 7_1	4	n.汽船	1
+22	steam	unit 7_1	4	n.蒸汽动力	1
+22	writer	unit 7_1	4	n.作家	1
+22	humorous	unit 7_1	4	adj.滑稽有趣的	1
+23	fence	unit 7_2	4	n.栅栏	1
+23	task	unit 7_2	4	n.任务	1
+23	yard	unit 7_2	4	n.码（长度单位）	1
+23	board	unit 7_2	4	n.木板	1
+23	survey	unit 7_2	4	v.查看	1
+23	progress	unit 7_2	4	n.进展	1
+23	rest	unit 7_2	4	n.休息时间	1
+23	pity	unit 7_2	4	n.遗憾	1
+23	silence	unit 7_2	4	n.沉默	1
+24	while	unit 7_3	4	n.一段时间	1
+24	careful	unit 7_3	4	adj.小心	1
+24	deal	unit 7_3	4	v.交易	1
+24	coat	unit 7_3	4	n.涂料层	1
+24	celebrated	unit 7_3	4	adj.著名的	1
+24	lead	unit 7_3	4	v.铅	1
+24	plot	unit 7_3	4	n.故事情节	0
+24	lazy	unit 7_3	4	adj.懒惰的	1
+24	pretend	unit 7_3	4	vt.假装	1
+25	have a rest	unit 7_4	4	休息一下	1
+25	think of	unit 7_4	4	想像到	1
+25	come along	unit 7_4	4	出现	1
+25	what a pity	unit 7_4	4	真可惜	1
+25	go on doing	unit 7_4	4	不停地做	1
+25	in silence	unit 7_4	4	沉默地	1
+25	after a while	unit 7_4	4	过了一会儿	1
+25	turn sth over	unit 7_4	4	使翻转	1
+25	trick sb into doing sth.	unit 7_4	4	诱使某人做某事	1
+26	gift	unit 8_1	3	n.礼物	1
+26	graduation	unit 8_1	3	n.毕业典礼	1
+26	cent	unit 8_1	3	n.分	1
+26	count	unit 8_1	3	v.计算总数	1
+26	afford	unit 8_1	3	vt.买得起	1
+26	present	unit 8_1	3	n.礼物	1
+26	knee	unit 8_1	3	n.膝	1
+26	sign	unit 8_1	3	n.招牌	1
+26	goods	unit 8_1	3	n.商品	0
+27	search	unit 8_2	3	v.搜寻	1
+27	chain	unit 8_2	3	n.链子	1
+27	bill	unit 8_2	3	n.账单	1
+27	step	unit 8_2	3	n.脚步声	1
+27	draw	unit 8_2	3	v.掏出	1
+27	set	unit 8_2	3	n.一套	1
+27	comb	unit 8_2	3	n.发插，梳子	1
+27	accuse	unit 8_2	3	vt.控告	1
+27	America	unit 8_2	3	n.美洲	1
+28	wife	unit 8_3	3	n.妻子	1
+28	album	unit 8_3	3	n.相册	0
+28	note	unit 8_3	3	n.笔记	1
+28	look for	unit 8_3	3	寻找	1
+28	at last	unit 8_3	3	终于	1
+28	fix ... on	unit 8_3	3	集中...于	1
+28	hold out	unit 8_3	3	递出	1
+28	be accused of ...	unit 8_3	3	被控告...	1
+28	under the name of ...	unit 8_3	3	用...名字	1

@@ -1,0 +1,264 @@
+1	native	unit 1 Topic 1_1	3	adj.本地的	1
+1	have any idea	unit 1 Topic 1_1	3	了解	1
+1	nearly	unit 1 Topic 1_1	3	adv.几乎	1
+2	abroad	unit 1 Topic 1_2	3	adj.在国外	1
+2	command	unit 1 Topic 1_2	3	n.&v.命令	0
+2	have a good command of	unit 1 Topic 1_2	3	掌握	0
+2	communication	unit 1 Topic 1_2	3	n.交际	1
+2	official	unit 1 Topic 1_2	3	adj.官方的	1
+2	widely	unit 1 Topic 1_2	3	adj.广泛地	1
+2	united	unit 1 Topic 1_2	3	adj.联合的	1
+2	nation	unit 1 Topic 1_2	3	n.国家	1
+2	the United Nations	unit 1 Topic 1_2	3	联合国	1
+2	addition	unit 1 Topic 1_2	3	n.增加	0
+3	in addition	unit 1 Topic 1_3	3	另外	0
+3	trade	unit 1 Topic 1_3	3	n.贸易	1
+3	conference	unit 1 Topic 1_3	3	n.会议	1
+3	brief	unit 1 Topic 1_3	3	adj.简短的	1
+3	in brief	unit 1 Topic 1_3	3	简而言之	1
+3	England	unit 1 Topic 1_3	3	n.英格兰	1
+3	present	unit 1 Topic 1_3	3	n.现在的	1
+3	USA	unit 1 Topic 1_3	3	n.美国	1
+3	African	unit 1 Topic 1_3	3	adj.非洲的	1
+3	to begin with	unit 1 Topic 1_3	3	首先	1
+4	learner	unit 1 Topic 2_1	3	学习者	1
+4	either ... or	unit 1 Topic 2_1	3	不是 ... 就是	1
+4	opportunity	unit 1 Topic 2_1	3	n.机会	1
+4	take every opportunity	unit 1 Topic 2_1	3	抓住每一个机会	1
+4	skill	unit 1 Topic 2_1	3	n.技能	1
+4	perfect	unit 1 Topic 2_1	3	adj.完美的	1
+4	keep a diary	unit 1 Topic 2_1	3	记日记	1
+4	improve	unit 1 Topic 2_1	3	vt.改进	1
+4	spare	unit 1 Topic 2_1	3	adj.空闲的	1
+4	what's more	unit 1 Topic 2_1	3	更重要的是	1
+5	provide	unit 1 Topic 2_2	3	vi.供给	1
+5	provide ... with ...	unit 1 Topic 2_2	3	为某人提供某物	1
+5	environment	unit 1 Topic 2_2	3	n.环境	1
+5	enjoyable	unit 1 Topic 2_2	3	adj.有乐趣的	1
+5	rewarding	unit 1 Topic 2_2	3	adj.有益的	0
+5	writer	unit 1 Topic 2_2	3	n.作家	1
+5	go for	unit 1 Topic 2_2	3	去做某事	1
+5	helpful	unit 1 Topic 2_2	3	adj.有用的	1
+5	method	unit 1 Topic 2_2	3	n.方法	1
+5	complain	unit 1 Topic 2_2	3	vi.抱怨	1
+6	contact	unit 1 Topic 2_3	3	v.联系	1
+6	get into the habit of	unit 1 Topic 2_3	3	养成 ... 的习惯	1
+6	get used to	unit 1 Topic 2_3	3	渐渐习惯于	1
+6	translate	unit 1 Topic 2_3	3	vt.翻译	1
+6	translate from ... into ...	unit 1 Topic 2_3	3	从 ... 翻译成 ...	1
+6	correctly	unit 1 Topic 2_3	3	adv.正确地	1
+6	train	unit 1 Topic 2_3	3	n.训练	1
+6	routine	unit 1 Topic 2_3	3	n.日常工作	1
+6	grammar	unit 1 Topic 2_3	3	n.语法	0
+6	explain	unit 1 Topic 2_3	3	vt.&n.解释	1
+7	chief	unit 2 Topic 1_1	3	adj.主要的	1
+7	editor	unit 2 Topic 1_1	3	n.编辑	0
+7	publish	unit 2 Topic 1_1	3	vt.出版	1
+7	focus	unit 2 Topic 1_1	3	v.&n.聚焦	0
+7	focus on	unit 2 Topic 1_1	3	集中在	0
+7	set the ball rolling	unit 2 Topic 1_1	3	开始行动	0
+7	suggest	unit 2 Topic 1_1	3	vt.建议	1
+7	decision	unit 2 Topic 1_1	3	n.决定	1
+7	unless	unit 2 Topic 1_1	3	conj.除非	1
+8	preside	unit 2 Topic 1_2	3	v.主持	0
+8	preside over	unit 2 Topic 1_2	3	主持	0
+8	section	unit 2 Topic 1_2	3	n.栏目	1
+8	reporter	unit 2 Topic 1_2	3	n.记者	1
+8	latest	unit 2 Topic 1_2	3	adj.最新的	1
+8	exchange programme	unit 2 Topic 1_2	3	交流项目	1
+8	advertisement	unit 2 Topic 1_2	3	n.广告	1
+8	volunteer	unit 2 Topic 1_2	3	n.志愿者	0
+8	a must	unit 2 Topic 1_2	3	必要条件	1
+9	candidate	unit 2 Topic 1_3	3	n.候选人	1
+9	sense	unit 2 Topic 1_3	3	n.感觉	1
+9	responsibility	unit 2 Topic 1_3	3	n.责任	0
+9	a sense of responsibility	unit 2 Topic 1_3	3	责任感	0
+9	involve	unit 2 Topic 1_3	3	vt.包括	1
+9	rewrite	unit 2 Topic 1_3	3	n.重写	1
+9	take a photo	unit 2 Topic 1_3	3	拍照	1
+9	detail	unit 2 Topic 1_3	3	n.细节	1
+9	offer	unit 2 Topic 1_3	3	n.&v.提供	1
+10	fine	unit 2 Topic 2_1	3	adj.罚金	0
+10	pay a fine	unit 2 Topic 2_1	3	付罚金	0
+10	renew	unit 2 Topic 2_1	3	vt.更新	0
+10	librarian	unit 2 Topic 2_1	3	n.图书馆管理员	1
+10	title	unit 2 Topic 2_1	3	n.标题	1
+10	loan	unit 2 Topic 2_1	3	n.&v.暂借	0
+10	on loan	unit 2 Topic 2_1	3	暂借的	0
+10	at most	unit 2 Topic 2_1	3	至多	1
+10	recall	unit 2 Topic 2_1	3	v.回忆	1
+10	due	unit 2 Topic 2_1	3	adj.期满的	1
+11	call number	unit 2 Topic 2_2	3	图书编目号码	1
+11	fill	unit 2 Topic 2_2	3	vt.装满	1
+11	fill in	unit 2 Topic 2_2	3	填充	1
+11	form	unit 2 Topic 2_2	3	n.&vt.形状	1
+11	in time	unit 2 Topic 2_2	3	按时	1
+11	so that	unit 2 Topic 2_2	3	为使	1
+11	at a time	unit 2 Topic 2_2	3	每次	1
+11	case	unit 2 Topic 2_2	3	n.事例	1
+11	in that case	unit 2 Topic 2_2	3	既然如此	1
+11	otherwise	unit 2 Topic 2_2	3	adv.否则	0
+12	field	unit 2 Topic 2_3	3	n.田地	1
+12	field trip	unit 2 Topic 2_3	3	实地考察旅行	1
+12	collection	unit 2 Topic 2_3	3	n.收集	1
+12	store	unit 2 Topic 2_3	3	n.储存	1
+12	user	unit 2 Topic 2_3	3	n.用户	1
+12	lover	unit 2 Topic 2_3	3	n.爱好者	1
+12	musician	unit 2 Topic 2_3	3	n.音乐家	0
+12	entertainment	unit 2 Topic 2_3	3	n.娱乐	0
+12	as well as	unit 2 Topic 2_3	3	除 ... 之外	0
+12	no matter what	unit 2 Topic 2_3	3	不管什么	1
+13	homepage	unit 2 Topic 3_1	3	n.主页	0
+13	consist	unit 2 Topic 3_1	3	vi.组成	1
+13	consist of	unit 2 Topic 3_1	3	由 ... 组成	1
+13	basic	unit 2 Topic 3_1	3	adj.基础的	1
+13	chemistry	unit 2 Topic 3_1	3	n.化学	1
+13	social	unit 2 Topic 3_1	3	adj.社会的	1
+13	social science	unit 2 Topic 3_1	3	社会科学	1
+13	life science	unit 2 Topic 3_1	3	生命科学	1
+13	fine arts	unit 2 Topic 3_1	3	美术	0
+13	achieve	unit 2 Topic 3_1	3	vt.取得	1
+14	educational	unit 2 Topic 3_2	3	adj.教育的	1
+14	quality	unit 2 Topic 3_2	3	n.质量	1
+14	as	unit 2 Topic 3_2	3	adv.因为	1
+14	home and abroad	unit 2 Topic 3_2	3	国内外	1
+14	staff	unit 2 Topic 3_2	3	n.全体教职工	1
+14	experienced	unit 2 Topic 3_2	3	有经验的	1
+14	gain	unit 2 Topic 3_2	3	v.获得	1
+14	ability	unit 2 Topic 3_2	3	n.能力	1
+14	state	unit 2 Topic 3_2	3	n.国家	1
+14	the United States	unit 2 Topic 3_2	3	美利坚合众国	1
+15	education	unit 2 Topic 3_3	3	n.教育	1
+15	required	unit 2 Topic 3_3	3	规定的	1
+15	go to college	unit 2 Topic 3_3	3	上大学	1
+15	go on	unit 2 Topic 3_3	3	继续	1
+15	test	unit 2 Topic 3_3	3	n.试验	1
+15	state school	unit 2 Topic 3_3	3	州立学校	0
+15	public school	unit 2 Topic 3_3	3	公立学校	0
+15	private	unit 2 Topic 3_3	3	adj.私人的	1
+15	share	unit 2 Topic 3_3	3	vt.分享	1
+15	freely	unit 2 Topic 3_3	3	adv.自由地	1
+15	one another	unit 2 Topic 3_3	3	互相	1
+16	leisure	unit 3 Topic 1_1	3	n.闲暇	0
+16	heroic	unit 3 Topic 1_1	3	adj.英雄的	0
+16	deed	unit 3 Topic 1_1	3	n.事迹	0
+16	war	unit 3 Topic 1_1	3	n.战争	1
+16	be on	unit 3 Topic 1_1	3	上演	1
+16	director	unit 3 Topic 1_1	3	n.导演	1
+16	star	unit 3 Topic 1_1	3	n.&v.明星	1
+16	comedy	unit 3 Topic 1_1	3	n.喜剧	0
+17	thriller	unit 3 Topic 1_2	3	n.惊险读物	0
+17	animated	unit 3 Topic 1_2	3	adj.栩栩如生的	0
+17	none	unit 3 Topic 1_2	3	pron.没有一个	1
+17	feature	unit 3 Topic 1_2	3	n.特点	1
+17	article	unit 3 Topic 1_2	3	n.文章	1
+17	edit	unit 3 Topic 1_2	3	vt.编辑	0
+17	adventure	unit 3 Topic 1_2	3	n.冒险	0
+17	action	unit 3 Topic 1_2	3	n.行动	1
+18	couple	unit 3 Topic 1_3	3	n.对	0
+18	a couple of	unit 3 Topic 1_3	3	几个	0
+18	silent	unit 3 Topic 1_3	3	adj.沉默的	1
+18	effect	unit 3 Topic 1_3	3	n.效果	1
+18	special effect	unit 3 Topic 1_3	3	特技	0
+18	screen	unit 3 Topic 1_3	3	n.屏	1
+18	character	unit 3 Topic 1_3	3	n.角色	1
+18	real	unit 3 Topic 1_3	3	adj.真正的	1
+18	frightening	unit 3 Topic 1_3	3	adj.令人惊恐的	1
+19	moonlight	unit 3 Topic 2_1	2	n.月光	1
+19	sonata	unit 3 Topic 2_1	2	n.奏呜曲	0
+19	instrument	unit 3 Topic 2_1	2	n.仪器	1
+19	musical instrument	unit 3 Topic 2_1	2	乐器	1
+19	accordion	unit 3 Topic 2_1	2	n.手风琴	0
+19	erhu	unit 3 Topic 2_1	2	n.二胡	0
+19	drum	unit 3 Topic 2_1	2	n.鼓	1
+19	flute	unit 3 Topic 2_1	2	n.长笛	1
+19	suddenly	unit 3 Topic 2_1	2	adv.突然地	1
+19	outside	unit 3 Topic 2_1	2	adv.在外面	1
+19	wish	unit 3 Topic 2_1	2	n.&v.希望	1
+19	afford	unit 3 Topic 2_1	2	vt.买得起	1
+20	forget	unit 3 Topic 2_2	2	vt.忘记	1
+20	candle	unit 3 Topic 2_2	2	n.蜡烛	1
+20	to one's surprise	unit 3 Topic 2_2	2	使某人惊奇的是	1
+20	through	unit 3 Topic 2_2	2	prep.通过	1
+20	look	unit 3 Topic 2_2	2	n.查阅	1
+20	lose oneself	unit 3 Topic 2_2	2	沉浸	1
+20	crazy	unit 3 Topic 2_2	2	adj.疯狂的	1
+20	copy	unit 3 Topic 2_2	2	vt.抄写	1
+20	teenage	unit 3 Topic 2_2	2	青少年的	0
+20	old-fashioned	unit 3 Topic 2_2	2	adj.过时的	0
+20	influence	unit 3 Topic 2_2	2	vt.影响	1
+20	combine	unit 3 Topic 2_2	2	vt.结合	1
+21	sign	unit 3 Topic 3_1	3	n.签名	1
+21	sign up for	unit 3 Topic 3_1	3	报名参加	1
+21	brochure	unit 3 Topic 3_1	3	n.小册子	0
+21	teenager	unit 3 Topic 3_1	3	n.青少年	0
+21	aged	unit 3 Topic 3_1	3	adj.老年人的	1
+21	real life experiences	unit 3 Topic 3_1	3	真实生活经历	1
+21	tuition	unit 3 Topic 3_1	3	n.学费	1
+21	rather	unit 3 Topic 3_1	3	adv.宁可	1
+22	would rather	unit 3 Topic 3_2	3	宁可	1
+22	give up	unit 3 Topic 3_2	3	放弃	1
+22	per	unit 3 Topic 3_2	3	prep.每	1
+22	design	unit 3 Topic 3_2	3	vt.设计	1
+22	confident	unit 3 Topic 3_2	3	adj.自信的	1
+22	teamwork	unit 3 Topic 3_2	3	n.协作	1
+22	advanced	unit 3 Topic 3_2	3	adj.先进的	0
+22	government	unit 3 Topic 3_2	3	n.政府	1
+23	run	unit 3 Topic 3_3	3	vi.经营	1
+23	fund	unit 3 Topic 3_3	3	n.基金	1
+23	aim	unit 3 Topic 3_3	3	n.目标	1
+23	expense	unit 3 Topic 3_3	3	n.费用	1
+23	hike	unit 3 Topic 3_3	3	n.徒步旅行	0
+23	help out with	unit 3 Topic 3_3	3	帮助解决难题	1
+23	chore	unit 3 Topic 3_3	3	n.家庭杂务	1
+23	wait on	unit 3 Topic 3_3	3	服侍	1
+23	host family	unit 3 Topic 3_3	3	寄宿家庭	1
+24	growth	unit 4 Topic 1_1	3	n.增长	1
+24	overcrowding	unit 4 Topic 1_1	3	过度拥挤	0
+24	aging	unit 4 Topic 1_1	3	变老	0
+24	birthrate	unit 4 Topic 1_1	3	n.出生率	0
+24	double	unit 4 Topic 1_1	3	n.&adj.两倍	1
+24	be faced with	unit 4 Topic 1_1	3	面临	1
+24	on average	unit 4 Topic 1_1	3	按平均值	1
+24	solve	unit 4 Topic 1_1	3	v.解决	0
+25	Africa	unit 4 Topic 1_2	3	n.非洲	1
+25	therefore	unit 4 Topic 1_2	3	adv.因此	1
+25	rapid	unit 4 Topic 1_2	3	adj.快的	1
+25	crowded	unit 4 Topic 1_2	3	adj.拥挤的	1
+25	polluted	unit 4 Topic 1_2	3	adj.受污染的	1
+25	cause	unit 4 Topic 1_2	3	vt.引起	1
+25	terrible	unit 4 Topic 1_2	3	adj.可怕的	1
+25	throw away	unit 4 Topic 1_2	3	扔掉	1
+26	recycle	unit 4 Topic 1_3	3	vt.再循环	0
+26	plastic	unit 4 Topic 1_3	3	adj.塑料	1
+26	pollute	unit 4 Topic 1_3	3	v.污染	1
+26	pollution	unit 4 Topic 1_3	3	n.污染	1
+26	coal	unit 4 Topic 1_3	3	n.煤	1
+26	use up	unit 4 Topic 1_3	3	耗尽	1
+26	some day	unit 4 Topic 1_3	3	总有一天	1
+26	available	unit 4 Topic 1_3	3	adj.可获得的	1
+26	produce	unit 4 Topic 1_3	3	vt.生产	1
+27	realize	unit 4 Topic 2_1	2	vt.实现	1
+27	nor	unit 4 Topic 2_1	2	conj.也不	1
+27	litter	unit 4 Topic 2_1	2	n.&v.乱扔	0
+27	electricity	unit 4 Topic 2_1	2	n.电	1
+27	consumer	unit 4 Topic 2_1	2	n.消费者	1
+27	green consumer	unit 4 Topic 2_1	2	绿色消费者	1
+27	take action	unit 4 Topic 2_1	2	采取行动	1
+27	get rid of	unit 4 Topic 2_1	2	丢弃	0
+27	increase	unit 4 Topic 2_1	2	v.增长	1
+27	rapidly	unit 4 Topic 2_1	2	adv.快地	1
+27	level	unit 4 Topic 2_1	2	n.水平	1
+27	human	unit 4 Topic 2_1	2	n.&adj.人	1
+28	sort	unit 4 Topic 2_2	2	n.种类	1
+28	reuse	unit 4 Topic 2_2	2	v.再使用	0
+28	refuse	unit 4 Topic 2_2	2	vt.拒绝	1
+28	goods	unit 4 Topic 2_2	2	n.货物	1
+28	man	unit 4 Topic 2_2	2	n.人类	1
+28	burn	unit 4 Topic 2_2	2	vt.燃烧	1
+28	oil	unit 4 Topic 2_2	2	n.油	1
+28	blanket	unit 4 Topic 2_2	2	n.毯子	1
+28	escape	unit 4 Topic 2_2	2	vt.逃跑	1
+28	climate	unit 4 Topic 2_2	2	n.气候	1
+28	damage	unit 4 Topic 2_2	2	n.损害	1
+28	because of	unit 4 Topic 2_2	2	因为	1

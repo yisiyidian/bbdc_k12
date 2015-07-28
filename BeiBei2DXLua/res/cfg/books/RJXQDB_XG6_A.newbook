@@ -1,0 +1,102 @@
+1	morning tea	Unit 1_1	3	早茶	1
+1	soup	Unit 1_1	3	n.汤	1
+1	garden	Unit 1_1	3	n.花园	1
+2	the Potala Palace	Unit 1_2	3	布达拉宫	1
+2	the Summer Palace	Unit 1_2	3	颐和园	1
+2	the Terracotta Army	Unit 1_2	3	兵马俑	1
+2	vacation	Unit 1_2	3	n.假期	1
+2	taste	Unit 1_2	3	vi.品尝	1
+2	map	Unit 1_2	3	n.地图	1
+2	north	Unit 1_2	3	n.北	1
+2	south	Unit 1_2	3	n.南	1
+2	east	Unit 1_2	3	n.东	1
+2	west	Unit 1_2	3	n.西	1
+3	famous	Unit 1_3	3	adj.著名的	1
+3	temple	Unit 1_3	3	n.寺	1
+3	around	Unit 1_3	3	prep.围绕	0
+3	the Yangtze River	Unit 1_3	3	长江	0
+3	foggy	Unit 1_3	3	adj.有雾的	0
+3	spicy	Unit 1_3	3	adj.辣的	0
+3	silk	Unit 1_3	3	n.丝绸	0
+3	forest	Unit 1_3	3	n.树林	0
+3	stone	Unit 1_3	3	n.石头	0
+4	London	Unit 2_1	2	n.伦敦	1
+4	Toronto	Unit 2_1	2	n.多伦多	1
+4	Sydney	Unit 2_1	2	n.悉尼	1
+4	Washington D.C.	Unit 2_1	2	华盛顿	1
+4	the British Museum	Unit 2_1	2	大英博物馆	1
+4	the CN Tower	Unit 2_1	2	加拿大国家电视塔	1
+4	kangaroo	Unit 2_1	2	n.袋鼠	1
+4	the Opera House	Unit 2_1	2	歌剧院	1
+4	the White House	Unit 2_1	2	白宫	1
+5	clock	Unit 2_2	2	n.时钟	1
+5	speak	Unit 2_2	2	vt.说	1
+5	French	Unit 2_2	2	n.法语	1
+5	Tower Bridge	Unit 2_2	2	塔桥	0
+5	the London Eye	Unit 2_2	2	伦敦眼	0
+5	hiking	Unit 2_2	2	n.远足	0
+5	sunrise	Unit 2_2	2	n.日出	0
+5	president	Unit 2_2	2	n.总统	0
+6	reptile	Unit 3_1	2	n.爬行动物	1
+6	bird	Unit 3_1	2	n.鸟	1
+6	fish	Unit 3_1	2	n.鱼	1
+6	mammal	Unit 3_1	2	n.哺乳动物	1
+6	insect	Unit 3_1	2	n.昆虫	1
+6	penguin	Unit 3_1	2	n.企鹅	1
+6	shark	Unit 3_1	2	n.鲨鱼	1
+6	whale	Unit 3_1	2	n.鲸	1
+6	kind	Unit 3_1	2	n.种类	1
+7	metre	Unit 3_2	2	n.米	0
+7	spend	Unit 3_2	2	v.花费	0
+7	trunk	Unit 3_2	2	n.象鼻	0
+7	peanut	Unit 3_2	2	n.花生	0
+7	fan	Unit 3_2	2	n.扇子	0
+7	tusk	Unit 3_2	2	n.长牙	0
+7	Africa	Unit 3_2	2	n.非洲	0
+7	Asia	Unit 3_2	2	n.亚洲	0
+7	smart	Unit 3_2	2	adj.聪明的	0
+8	scared	Unit 4_1	2	adj.害怕的	1
+8	worried	Unit 4_1	2	adj.担心的	1
+8	angry	Unit 4_1	2	adj.生气的	1
+8	proud	Unit 4_1	2	adj.骄傲的	1
+8	sad	Unit 4_1	2	adj.难过的	1
+8	excited	Unit 4_1	2	adj.激动的	1
+8	happy	Unit 4_1	2	adj.高兴的	1
+8	ill	Unit 4_1	2	n.有病	1
+9	win	Unit 4_2	2	vi.获胜	1
+9	race	Unit 4_2	2	v.赛跑	1
+9	find	Unit 4_2	2	vt.发现	1
+9	cry	Unit 4_2	2	v.哭	1
+9	because	Unit 4_2	2	conj因为	1
+9	test	Unit 4_2	2	n.&v.测验	1
+9	competition	Unit 4_2	2	n.竞赛	0
+9	hurt	Unit 4_2	2	vt.弄伤	0
+10	inventor	Unit 5_1	2	n.发明家	1
+10	artist	Unit 5_1	2	n.艺术家	1
+10	scientist	Unit 5_1	2	n.科学家	1
+10	poet	Unit 5_1	2	n.诗人	1
+10	writer	Unit 5_1	2	n.作家	1
+10	American	Unit 5_1	2	n.&adj.美国（人）的	1
+10	French	Unit 5_1	2	n.&adj.法国（人）的	1
+10	Danish	Unit 5_1	2	n.&adj.丹麦（人）的	1
+10	poem	Unit 5_1	2	n.诗	1
+11	paint	Unit 5_2	2	v.用颜料画	1
+11	invention	Unit 5_2	2	n.发明	1
+11	invent	Unit 5_2	2	v.发明	1
+11	study	Unit 5_2	2	vi.学习	1
+11	story	Unit 5_2	2	n.故事	1
+11	university	Unit 5_2	2	n.大学	0
+11	deaf	Unit 5_2	2	adj.聋的	0
+11	blind	Unit 5_2	2	adj.失明的	0
+11	fall	Unit 5_2	2	v.落下	0
+12	dumpling	Unit 6_1	1	n.饺子	1
+12	fan	Unit 6_1	1	n.爱好者	1
+12	ice lantern	Unit 6_1	1	冰灯	1
+12	bring	Unit 6_1	1	vt.带来	1
+12	be afraid of	Unit 6_1	1	害怕	1
+12	hear	Unit 6_1	1	vt.听到	1
+12	pen pal	Unit 6_1	1	笔友	0
+12	broken	Unit 6_1	1	adj.损坏了的	0
+12	pity	Unit 6_1	1	n.遗憾	0
+12	prize	Unit 6_1	1	n.奖	0
+12	look forward to	Unit 6_1	1	盼望	0

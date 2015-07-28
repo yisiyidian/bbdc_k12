@@ -1,0 +1,130 @@
+1	old	Unit1_1	3	adj.老的	1
+1	young	Unit1_1	3	adj.年轻的	1
+1	funny	Unit1_1	3	adj.滑稽的	1
+2	kind	Unit1_2	3	adj.慈祥的	1
+2	strict	Unit1_2	3	adj.要求严格的	1
+2	polite	Unit1_2	3	adj.有礼貌的	1
+2	hard-working	Unit1_2	3	adj.工作努力的	1
+2	helpful	Unit1_2	3	adj.有用的	1
+2	clever	Unit1_2	3	adj.聪明的	1
+2	shy	Unit1_2	3	adj.害羞的	1
+2	know	Unit1_2	3	vt.知道	0
+3	our	Unit1_3	3	pron.我们的	0
+3	Ms	Unit1_3	3	abbr.女士	0
+3	will	Unit1_3	3	aux.将要	0
+3	sometimes	Unit1_3	3	adv.有时	0
+3	robot	Unit1_3	3	n.机器人	0
+3	him	Unit1_3	3	pron.（宾格）他	0
+3	speak	Unit1_3	3	vt.说（某种语言）	0
+3	finish	Unit1_3	3	vi.完成	0
+4	Monday	Unit2_1	3	n.星期一	1
+4	Tuesday	Unit2_1	3	n.星期二	1
+4	Wednesday	Unit2_1	3	n.星期三	1
+4	Thursday	Unit2_1	3	n.星期四	1
+4	Friday	Unit2_1	3	n.星期五	1
+4	Saturday	Unit2_1	3	n.星期六	1
+4	Sunday	Unit2_1	3	n.星期日	1
+4	weekend	Unit2_1	3	n.周末	1
+4	wash	Unit2_1	3	vt.洗	1
+5	wash my clothes	Unit2_2	3	洗我的衣服	1
+5	watch	Unit2_2	3	n.看	1
+5	do	Unit2_2	3	v.做	1
+5	do homework	Unit2_2	3	做作业	1
+5	read	Unit2_2	3	vt.读	1
+5	read books	Unit2_2	3	看书	1
+5	play	Unit2_2	3	vt.玩	1
+5	play football	Unit2_2	3	踢足球	1
+5	cooking	Unit2_2	3	n.烹饪	0
+6	often	Unit2_3	3	adv.时常	0
+6	park	Unit2_3	3	n.公园	0
+6	tired	Unit2_3	3	adj.疲倦的	0
+6	sport	Unit2_3	3	n.体育运动	0
+6	play sports	Unit2_3	3	做体育运动	0
+6	should	Unit2_3	3	aux.应该	0
+6	every	Unit2_3	3	adj.每一个	0
+6	day	Unit2_3	3	n.一天	0
+6	schedule	Unit2_3	3	n.工作计划	0
+7	sandwich	Unit3_1	2	n.三明治	1
+7	salad	Unit3_1	2	n.蔬菜沙拉	1
+7	hamburger	Unit3_1	2	n.汉堡包	1
+7	ice cream	Unit3_1	2	冰淇淋	1
+7	tea	Unit3_1	2	n.茶	1
+7	fresh	Unit3_1	2	adj.新鲜的	1
+7	healthy	Unit3_1	2	adj.健康的	1
+7	delicious	Unit3_1	2	adj.美味的	1
+8	hot	Unit3_2	2	adj.辣的	1
+8	sweet	Unit3_2	2	adj.甜的	1
+8	drink	Unit3_2	2	vt.喝	0
+8	thirsty	Unit3_2	2	adj.渴的	0
+8	favourite	Unit3_2	2	adj.特别喜爱的	0
+8	food	Unit3_2	2	n.食物	0
+8	Dear	Unit3_2	2	adj.亲爱的	0
+8	onion	Unit3_2	2	n.洋葱	0
+9	sing	Unit4_1	3	vt.唱	1
+9	song	Unit4_1	3	n.歌曲	1
+9	sing English songs	Unit4_1	3	唱英文歌曲	1
+9	play the pipa	Unit4_1	3	弹琵琶	1
+9	kung fu	Unit4_1	3	n.功夫	1
+9	do kung fu	Unit4_1	3	练武术	1
+9	dance	Unit4_1	3	n.&v.跳舞	1
+9	draw	Unit4_1	3	v.画	1
+9	cartoon	Unit4_1	3	n.漫画	1
+10	draw cartoons	Unit4_2	3	画漫画	1
+10	cook	Unit4_2	3	vi.烹调	1
+10	swim	Unit4_2	3	v.游泳	1
+10	play basketball	Unit4_2	3	打篮球	1
+10	ping-pong	Unit4_2	3	n.乒乓球	1
+10	play ping-pong	Unit4_2	3	打乒乓球	1
+10	speak English	Unit4_2	3	说英语	1
+10	we'll	Unit4_2	3	我们将要	0
+10	party	Unit4_2	3	n.派对	0
+11	next	Unit4_3	3	adj.下一个的	0
+11	wonderful	Unit4_3	3	adj.极好的	0
+11	learn	Unit4_3	3	vt.学	0
+11	any	Unit4_3	3	adj.任何的	0
+11	problem	Unit4_3	3	n.问题	0
+11	no problem	Unit4_3	3	没问题	0
+11	want	Unit4_3	3	vi.要	0
+11	send	Unit4_3	3	vt.发送	0
+11	email	Unit4_3	3	n.电子邮件	0
+11	at	Unit4_3	3	prep.后面接邮件地址	0
+12	clock	Unit5_1	3	n.时钟	1
+12	plant	Unit5_1	3	n.植物	1
+12	bottle	Unit5_1	3	n.瓶子	1
+12	water bottle	Unit5_1	3	水瓶	1
+12	bike	Unit5_1	3	n.自行车	1
+12	photo	Unit5_1	3	n.照片	1
+12	front	Unit5_1	3	n.正面	1
+12	in front of	Unit5_1	3	在...前面	1
+13	between	Unit5_2	3	prep. 在...中间	1
+13	above	Unit5_2	3	prep.在...上面	1
+13	beside	Unit5_2	3	prep.在旁边	1
+13	behind	Unit5_2	3	prep.在...的后面	1
+13	there	Unit5_2	3	adv.表示存在或发生	0
+13	grandparent	Unit5_2	3	n.祖父母	0
+13	their	Unit5_2	3	pron. 他们的	0
+13	house	Unit5_2	3	n.房屋	0
+14	lot	Unit5_3	3	pron. 大量	0
+14	lots of	Unit5_3	3	大量	0
+14	flower	Unit5_3	3	n.花	0
+14	move	Unit5_3	3	vt.搬家	0
+14	dirty	Unit5_3	3	adj.肮脏的	0
+14	everywhere	Unit5_3	3	adv.处处	0
+14	mouse	Unit5_3	3	n.老鼠	0
+14	live	Unit5_3	3	v.住	0
+14	nature	Unit5_3	3	n.大自然	0
+15	forest	Unit6_1	2	n.森林	1
+15	river	Unit6_1	2	n.河	1
+15	lake	Unit6_1	2	n.湖	1
+15	mountain	Unit6_1	2	n.高山	1
+15	hill	Unit6_1	2	n.山丘	1
+15	tree	Unit6_1	2	n.树	1
+15	bridge	Unit6_1	2	n.桥	1
+15	building	Unit6_1	2	n.建筑物	1
+16	village	Unit6_2	2	n.村庄	1
+16	house	Unit6_2	2	n.房屋	1
+16	boating	Unit6_2	2	v.&n.划船（现在分词）	0
+16	go boating	Unit6_2	2	去划船	0
+16	aren't	Unit6_2	2	不是	0
+16	rabbit	Unit6_2	2	n.兔	0
+16	high	Unit6_2	2	adj.高的	0

@@ -1,0 +1,223 @@
+1	person	unit 1_1	3	n.人	1
+1	cheerful	unit 1_1	3	adj.高兴的	1
+1	hard-working	unit 1_1	3	adj.工作努力的	1
+2	patient	unit 1_2	3	adj.耐心的	1
+2	smart	unit 1_2	3	adj.聪明的	1
+2	probably	unit 1_2	3	adv.很可能	1
+2	forget	unit 1_2	3	vt.忘记	1
+2	smell	unit 1_2	3	n.气味	1
+2	care	unit 1_2	3	n.&v.照顾	1
+2	miss	unit 1_2	3	v.想念	1
+2	joke	unit 1_2	3	n.玩笑	1
+2	laugh	unit 1_2	3	vt.笑	1
+2	remain	unit 1_2	3	v.保持不变	1
+2	strict	unit 1_2	3	adj.严格的	1
+2	encourage	unit 1_2	3	v.鼓励	1
+3	support	unit 1_3	3	n.支持	1
+3	successful	unit 1_3	3	adj.获得成功的	1
+3	member	unit 1_3	3	n.成员	1
+3	paragraph	unit 1_3	3	n.段落	1
+3	as well	unit 1_3	3	也	1
+3	take care of	unit 1_3	3	照顾	1
+3	tell jokes	unit 1_3	3	讲笑话	1
+3	make fun of	unit 1_3	3	取笑	1
+3	be strict about	unit 1_3	3	对...要求严格	1
+3	give up	unit 1_3	3	放弃	1
+3	go to work	unit 1_3	3	上班	1
+3	all day and all night	unit 1_3	3	夜以继日	1
+4	France	unit 2_1	3	n.法国	1
+4	French	unit 2_1	3	adj.法国的	1
+4	flag	unit 2_1	3	n.旗帜	1
+4	wine	unit 2_1	3	n.葡萄酒	1
+4	tick	unit 2_1	3	vt.标记号	1
+4	possible	unit 2_1	3	adj.可能的	1
+4	Europe	unit 2_1	3	n.欧洲	1
+4	store	unit 2_1	3	n.百货商店	1
+4	vineyard	unit 2_1	3	n.葡萄园	0
+4	excellent	unit 2_1	3	adj.优秀的	1
+5	south	unit 2_2	3	n.南方	1
+5	lie	unit 2_2	3	v.位于	1
+5	coast	unit 2_2	3	n.海岸	1
+5	perfect	unit 2_2	3	adj.完美的	1
+5	prefer	unit 2_2	3	vt.更喜欢	1
+5	ski	unit 2_2	3	vt.滑雪	1
+5	tower	unit 2_2	3	n.塔	1
+5	finish	unit 2_2	3	vi.完成	1
+5	lift	unit 2_2	3	n.电梯	1
+5	step	unit 2_2	3	n.台阶	1
+6	stairs	unit 2_3	3	n.楼梯	1
+6	receiver	unit 2_3	3	n.接收者	1
+6	date	unit 2_3	3	n.日期	1
+6	greeting	unit 2_3	3	n.问候	1
+6	address	unit 2_3	3	n.地址	1
+6	be famous for	unit 2_3	3	以...而闻名	1
+6	department store	unit 2_3	3	百货商店	1
+6	prefer to	unit 2_3	3	更喜欢	1
+6	go on holiday	unit 2_3	3	去度假	1
+6	go sightseeing	unit 2_3	3	去观光	1
+7	blind	unit 3_1	3	adj.失明的	1
+7	radio	unit 3_1	3	n.无线电广播	1
+7	programme	unit 3_1	3	n.节目	1
+7	helpful	unit 3_1	3	adj.有帮助的	1
+7	rescue	unit 3_1	3	n.&v.营救	0
+7	mean	unit 3_1	3	v.表示...的意思	1
+7	receptionist	unit 3_1	3	n.接待员	0
+7	allow	unit 3_1	3	vt.允许进入	1
+7	pet	unit 3_1	3	n.宠物	1
+7	anywhere	unit 3_1	3	adv.任何地方	1
+8	apologize	unit 3_2	3	v.道歉	1
+8	lead	unit 3_2	3	v.带领	1
+8	bark	unit 3_2	3	n.&v.吠叫	1
+8	wake	unit 3_2	3	vi.醒来	1
+8	towel	unit 3_2	3	n.手巾	1
+8	bottom	unit 3_2	3	n.底部	1
+8	finally	unit 3_2	3	adv.最后	1
+8	airport	unit 3_2	3	n.机场	1
+8	appear	unit 3_2	3	vi.出现	1
+8	act	unit 3_2	3	vi.扮演	1
+9	climb	unit 3_3	3	vt.攀登	1
+9	dark	unit 3_3	3	adj.黑暗的	1
+9	nothing	unit 3_3	3	pron.没有什么	1
+9	arrive at	unit 3_3	3	到达	1
+9	by oneself	unit 3_3	3	独自	1
+9	lead to	unit 3_3	3	带着到...	1
+9	fall asleep	unit 3_3	3	入睡	1
+9	wake up	unit 3_3	3	醒来	1
+9	get down	unit 3_3	3	蹲下	1
+9	fire engine	unit 3_3	3	消防车	1
+10	save	unit 4_1	3	vt.拯救	1
+10	pine	unit 4_1	3	n.松树	1
+10	discuss	unit 4_1	3	vt.讨论	1
+10	branch	unit 4_1	3	n.树枝	1
+10	root	unit 4_1	3	n.根	0
+10	fight	unit 4_1	3	v.与...作斗争	1
+10	against	unit 4_1	3	prep.反对	1
+10	example	unit 4_1	3	n.例子	1
+10	harmful	unit 4_1	3	adj.有害的	1
+10	gas	unit 4_1	3	n.气体	1
+11	produce	unit 4_2	3	vt.产生	1
+11	oxygen	unit 4_2	3	n.氧气	1
+11	major	unit 4_2	3	adj.主要的	1
+11	convenient	unit 4_2	3	adj.方便的	1
+11	furniture	unit 4_2	3	n.家具	1
+11	imagine	unit 4_2	3	vt.想象	1
+11	disease	unit 4_2	3	n.疾病	1
+11	dig	unit 4_2	3	v.挖	1
+11	hole	unit 4_2	3	n.洞	1
+11	carry	unit 4_2	3	v.搬	1
+12	container	unit 4_3	3	n.容器	0
+12	take in	unit 4_3	3	吸收	1
+12	come from	unit 4_3	3	来自	1
+12	for example	unit 4_3	3	例如	1
+12	in fact	unit 4_3	3	确切地说	1
+12	look around	unit 4_3	3	环顾四周	1
+12	be made of	unit 4_3	3	由...制成	1
+12	millions of	unit 4_3	3	数以百万计的	1
+12	be good for	unit 4_3	3	有好处	1
+13	drop	unit 5_1	3	n&v.掉下	1
+13	journey	unit 5_1	3	n.旅行	1
+13	quantity	unit 5_1	3	n.数量	1
+13	experiment	unit 5_1	3	n.实验	1
+13	fresh	unit 5_1	3	adj.淡的	1
+13	salt	unit 5_1	3	n.盐	1
+13	on	unit 5_1	3	adj.(表正在使用中）	1
+13	voice	unit 5_1	3	n.说话声	1
+13	reservoir	unit 5_1	3	n.水库	0
+13	add	unit 5_1	3	vt.增加	1
+14	chemical	unit 5_2	3	n.化学品	1
+14	through	unit 5_2	3	prep.通过	1
+14	pipe	unit 5_2	3	n.管道	1
+14	valuable	unit 5_2	3	adj.宝贵的	1
+14	bit	unit 5_2	3	n.有点	1
+14	bank	unit 5_2	3	n.银行	1
+14	change	unit 5_2	3	n.找给的零钱	1
+14	return	unit 5_2	3	vt.归还	1
+14	vapour	unit 5_2	3	n.蒸气	0
+14	form	unit 5_2	3	v.形成	1
+15	stir	unit 5_3	3	v.搅拌	0
+15	continue	unit 5_3	3	vt.继续	1
+15	crystal	unit 5_3	3	n.结晶	0
+15	turn off	unit 5_3	3	关掉	1
+15	add ... to ...	unit 5_3	3	把...加入...	1
+15	a bit	unit 5_3	3	有点	1
+15	part of	unit 5_3	3	...的一部分	1
+15	pocket money	unit 5_3	3	零花钱	1
+15	be made up of	unit 5_3	3	由...组成	1
+15	dry up	unit 5_3	3	干涸	1
+16	electricity	unit 6_1	3	n.电	1
+16	conversation	unit 6_1	3	n.谈话	1
+16	identify	unit 6_1	3	vt.认出	0
+16	rule	unit 6_1	3	n.规则	1
+16	anyone	unit 6_1	3	pron.任何人	1
+16	reply	unit 6_1	3	v.&n.回答	1
+16	foolish	unit 6_1	3	adj.愚蠢的	1
+16	wire	unit 6_1	3	n.电线	1
+16	connect	unit 6_1	3	vt.连接	1
+17	cable	unit 6_2	3	n.电缆	0
+17	moment	unit 6_2	3	n.瞬间	1
+17	battery	unit 6_2	3	n.电池	1
+17	cooker	unit 6_2	3	n.厨灶	1
+17	fridge	unit 6_2	3	n.冰箱	1
+17	bulb	unit 6_2	3	n.电灯泡	0
+17	lock	unit 6_2	3	v.锁上	1
+17	test	unit 6_2	3	n.&v.测试	1
+17	tidy	unit 6_2	3	vt.使整洁	1
+18	touch	unit 6_3	3	vt.触摸	1
+18	a packet of	unit 6_3	3	一袋	1
+18	in a way	unit 6_3	3	在某种程度上	1
+18	be connected to	unit 6_3	3	连接到	1
+18	power station	unit 6_3	3	发电站	1
+18	washing machine	unit 6_3	3	洗衣机	1
+18	switch off	unit 6_3	3	关	1
+18	tidy up	unit 6_3	3	收拾妥	1
+18	air conditioner	unit 6_3	3	空调	1
+19	poem	unit 7_1	3	n.诗歌	1
+19	ordinary	unit 7_1	3	adj.平凡的	1
+19	feeling	unit 7_1	3	n.感觉	1
+19	order	unit 7_1	3	n.&v.命令	1
+19	advice	unit 7_1	3	n.建议	1
+19	aloud	unit 7_1	3	adv.大声地	1
+19	group	unit 7_1	3	n.组	1
+19	agree	unit 7_1	3	vt.同意	1
+19	disagree	unit 7_1	3	v.不同意	1
+20	rhyme	unit 7_2	3	n.押韵词	0
+20	complete	unit 7_2	3	adj.完整的	1
+20	well	unit 7_2	3	n.井	1
+20	shower	unit 7_2	3	vi.&n.淋浴	1
+20	site	unit 7_2	3	n.建筑工地	0
+20	narrow	unit 7_2	3	adj.狭窄的	1
+20	height	unit 7_2	3	n.高度	1
+20	superman	unit 7_2	3	n.超人	1
+20	seller	unit 7_2	3	n.卖方	1
+21	smile	unit 7_3	3	n.&v.微笑	1
+21	rush	unit 7_3	3	vi.迅速移动	1
+21	crowd	unit 7_3	3	n.人群	1
+21	not at all	unit 7_3	3	一点也不	1
+21	be worried about	unit 7_3	3	为...担忧	1
+21	newspaper stand	unit 7_3	3	报摊	1
+21	rush out	unit 7_3	3	冲出去	1
+21	a crowd of	unit 7_3	3	一群	1
+22	career	unit 8_1	2	n.事业	1
+22	planet	unit 8_1	2	n.行星	1
+22	satellite	unit 8_1	2	n.卫星	1
+22	velvet	unit 8_1	2	n.丝绒	0
+22	diamond	unit 8_1	2	n.钻石	1
+22	shoot	unit 8_1	2	vt.射	1
+22	host	unit 8_1	2	v.主持	1
+22	knowledge	unit 8_1	2	n.知识	1
+22	lively	unit 8_1	2	adj.生动的	1
+22	last	unit 8_1	2	v.持续	1
+22	actually	unit 8_1	2	adv.事实上	0
+22	anybody	unit 8_1	2	pron.任何人	1
+23	achieve	unit 8_2	2	vt.达到	1
+23	sail	unit 8_2	2	vt.驾船航行	1
+23	decide	unit 8_2	2	vt.决定	1
+23	train	unit 8_2	2	n.训练	1
+23	alone	unit 8_2	2	adj.&adv.独自	1
+23	in the future	unit 8_2	2	将来	1
+23	used to	unit 8_2	2	曾经	1
+23	go outside	unit 8_2	2	外出	1
+23	look like	unit 8_2	2	看起来像...	1
+23	more and more	unit 8_2	2	越来越多	1
+23	grow up	unit 8_2	2	长大	1
+23	go sailing	unit 8_2	2	去进行帆船运动	1

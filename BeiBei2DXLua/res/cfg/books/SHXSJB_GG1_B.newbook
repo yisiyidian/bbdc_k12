@@ -1,0 +1,478 @@
+1	determine	Unit 1_1	6	vt.决定	1
+1	rail	Unit 1_1	6	n.铁路	1
+1	efficient	Unit 1_1	6	adj.能胜任的，有效率的	1
+2	journey	Unit 1_2	6	n.长途旅行	1
+2	sleeper	Unit 1_2	6	n.卧铺	0
+2	seaport	Unit 1_2	6	n.海港	1
+2	inland	Unit 1_2	6	adj.内地的	0
+2	waterway	Unit 1_2	6	n.水路	0
+2	historic	Unit 1_2	6	adj.历史上著名的	1
+2	site	Unit 1_2	6	n.场所	1
+2	limited	Unit 1_2	6	adj.有限的	1
+2	regional	Unit 1_2	6	adj.地区的	1
+2	safety	Unit 1_2	6	n.安全	1
+2	decade	Unit 1_2	6	n.十年	1
+3	destination	Unit 1_3	6	n.目的地	1
+3	highway	Unit 1_3	6	n.公路	1
+3	state	Unit 1_3	6	n.陈述	1
+3	inexpensive	Unit 1_3	6	adj.不贵的	1
+3	depart	Unit 1_3	6	vi.离开	1
+3	cycle	Unit 1_3	6	n.骑自行车	1
+3	steep	Unit 1_3	6	adj.陡峭的	1
+3	native	Unit 1_3	6	adj.本地的	1
+3	generally speaking	Unit 1_3	6	一般而言	1
+3	depend on	Unit 1_3	6	依赖	1
+3	the Three Gorges	Unit 1_3	6	长江三峡	1
+4	on schedule	Unit 1_4	6	按时	1
+4	agency	Unit 1_4	6	n.代理处	1
+4	option	Unit 1_4	6	n.选择	0
+4	sort	Unit 1_4	6	n.将...分类	0
+4	province	Unit 1_4	6	n.省	1
+4	exhibit	Unit 1_4	6	vt.展览品	0
+4	shopping mall	Unit 1_4	6	大型购物商场	1
+4	sort out	Unit 1_4	6	挑出	1
+4	one-way ticket	Unit 1_4	6	单程票	1
+4	round trip	Unit 1_4	6	往返旅行	1
+4	tour guide	Unit 1_4	6	导游	1
+5	brochure	Unit 1_5	6	n.手册	0
+5	duration	Unit 1_5	6	n.期间	0
+5	approx	Unit 1_5	6	abbr.（缩写形式）大约	0
+5	spectacular	Unit 1_5	6	adj.壮观的	0
+5	outing	Unit 1_5	6	n.远足	1
+5	marine	Unit 1_5	6	n.海的	1
+5	habitat	Unit 1_5	6	n.栖息地	0
+5	darling	Unit 1_5	6	n.心爱的	1
+5	permanent	Unit 1_5	6	adj.永久的	1
+5	shark	Unit 1_5	6	n.鲨鱼	0
+6	aquarium	Unit 1_6	6	n.水族馆	0
+6	mysterious	Unit 1_6	6	adj.神秘的	1
+6	surround	Unit 1_6	6	vt.围绕	1
+6	entertaining	Unit 1_6	6	adj.使人愉快的	1
+6	jewelry	Unit 1_6	6	n.珠宝	1
+6	feature	Unit 1_6	6	n.特征	1
+6	workshop	Unit 1_6	6	n.车间	1
+6	arrange	Unit 1_6	6	vt.安排	1
+6	coach	Unit 1_6	6	n.长途汽车	1
+6	within arm's reach	Unit 1_6	6	伸手可及的	1
+7	locate	Unit 2_1	5	vt.位于	1
+7	magnificent	Unit 2_1	5	adj.壮丽的	1
+7	storey	Unit 2_1	5	n.楼层	1
+7	spot	Unit 2_1	5	n.地点	1
+7	instant	Unit 2_1	5	adj.立刻的	1
+7	unique	Unit 2_1	5	adj.独一无二的	1
+7	lifetime	Unit 2_1	5	n.一生	1
+7	climb	Unit 2_1	5	vt.爬	1
+7	belongings	Unit 2_1	5	n.财产	1
+7	organizer	Unit 2_1	5	n.组织者	1
+7	belt	Unit 2_1	5	n.皮带	1
+8	ladder	Unit 2_2	5	n.梯子	1
+8	expectation	Unit 2_2	5	n.期望	1
+8	arch	Unit 2_2	5	n.拱廊	0
+8	fiercely	Unit 2_2	5	adv.猛烈地	1
+8	approach	Unit 2_2	5	v.&n.走近	1
+8	direction	Unit 2_2	5	n.方向	1
+8	skyline	Unit 2_2	5	n.空中轮廓线	0
+8	speed by	Unit 2_2	5	很快地过去	1
+8	come into view	Unit 2_2	5	映入眼帘	1
+8	a bird's eye view	Unit 2_2	5	鸟瞰	1
+8	in all directions	Unit 2_2	5	向四面八方...	1
+9	in an instant	Unit 2_3	5	立刻	1
+9	Sydney	Unit 2_3	5	n.悉尼	0
+9	romance	Unit 2_3	5	n.浪漫	0
+9	merchant	Unit 2_3	5	n.商人	1
+9	collection	Unit 2_3	5	n.收藏品	1
+9	cafe	Unit 2_3	5	n.咖啡馆	1
+9	beach	Unit 2_3	5	n.海滨	1
+9	mountainous	Unit 2_3	5	adj.多山的	0
+9	hike	Unit 2_3	5	n.远足	0
+9	beyond	Unit 2_3	5	prep.超出...范围	1
+9	high-rise	Unit 2_3	5	n.高层大楼	1
+10	treat	Unit 2_4	5	v.对待	1
+10	intention	Unit 2_4	5	n.意图	1
+10	fall in love with	Unit 2_4	5	爱上	1
+10	beyond words	Unit 2_4	5	无法用言词形容	1
+10	advertising	Unit 2_4	5	n.广告	0
+10	campaign	Unit 2_4	5	n.竞选运动	1
+10	rightly	Unit 2_4	5	adv.有道理地	1
+10	greet	Unit 2_4	5	vt.问候	1
+10	rental	Unit 2_4	5	n.租赁	0
+10	bureau	Unit 2_4	5	n.局	1
+10	Thai	Unit 2_4	5	n.泰国人	0
+11	appreciate	Unit 2_5	5	vt.&n.赏识	1
+11	rank	Unit 2_5	5	n.把...分等级	1
+11	shopkeeper	Unit 2_5	5	n.店主	1
+11	rude	Unit 2_5	5	adj.无礼的	1
+11	nationality	Unit 2_5	5	n.民族	1
+11	courteous	Unit 2_5	5	adj.有礼貌的	0
+11	giggle	Unit 2_5	5	v.咯咯地笑	0
+11	similarly	Unit 2_5	5	adv.同样地	1
+11	have something to do with ...	Unit 2_5	5	与...有关	1
+11	point out	Unit 2_5	5	指出	1
+12	offend	Unit 3_1	6	vt.冒犯	1
+12	avoid	Unit 3_1	6	vt.避免	1
+12	waitress	Unit 3_1	6	n.女服务生	1
+12	attempt	Unit 3_1	6	vt.试图	1
+12	emphasis	Unit 3_1	6	n.强调	1
+12	gender	Unit 3_1	6	n.性别	1
+12	attendant	Unit 3_1	6	n.服务员	1
+12	stewardess	Unit 3_1	6	n.女乘务员	0
+12	occupy	Unit 3_1	6	vt.担任	1
+13	chairman	Unit 3_2	6	n.主席	1
+13	chairperson	Unit 3_2	6	n.主席	0
+13	singular	Unit 3_2	6	adj.单数的	0
+13	pronoun	Unit 3_2	6	n.代词	0
+13	create	Unit 3_2	6	vt.创造	1
+13	fairly	Unit 3_2	6	adj.公正地	1
+13	plural	Unit 3_2	6	adj.复数的	0
+13	structure	Unit 3_2	6	n.结构	1
+13	handicapped	Unit 3_2	6	adj.残废的	0
+14	imply	Unit 3_3	6	vt.暗示	1
+14	helpless	Unit 3_3	6	adj.没用的，无助的	1
+14	respectful	Unit 3_3	6	adj.表示尊敬的	1
+14	fair	Unit 3_3	6	adj.公平的	1
+14	put emphasis on	Unit 3_3	6	强调	1
+14	flight attendant	Unit 3_3	6	飞机上的空中服务员	1
+14	singular pronoun	Unit 3_3	6	单数代词	1
+14	change with the times	Unit 3_3	6	随时代变化而改变	1
+14	workplace	Unit 3_3	6	n.工作场所	1
+15	neighbourhood	Unit 3_4	6	n.街坊	1
+15	simply	Unit 3_4	6	adv.仅	1
+15	out-of-date	Unit 3_4	6	adj.不合时宜的	1
+15	out of style	Unit 3_4	6	不再流行	1
+15	bear in mind	Unit 3_4	6	记住	1
+15	pen pal	Unit 3_4	6	笔友	1
+15	pronunciation	Unit 3_4	6	n.发音	1
+15	intonation	Unit 3_4	6	n.音调	0
+15	handle	Unit 3_4	6	vt.掌握	1
+16	communication	Unit 3_5	6	n.交流	1
+16	ad	Unit 3_5	6	abbr.广告	1
+16	shortcut	Unit 3_5	6	n.捷径	0
+16	master	Unit 3_5	6	n.掌握	1
+16	recipe	Unit 3_5	6	n.秘方	0
+16	fluency	Unit 3_5	6	n.流利	1
+16	signpost	Unit 3_5	6	n.清楚地表明	0
+16	club	Unit 3_5	6	n.社团	1
+16	expose	Unit 3_5	6	vt.使接触	1
+16	broadcast	Unit 3_5	6	n.节目	1
+17	context	Unit 3_6	6	n.环境	1
+17	input	Unit 3_6	6	n.输入信息	1
+17	cultivate	Unit 3_6	6	vt.培养	1
+17	appropriate	Unit 3_6	6	adj.合适的	1
+17	useless	Unit 3_6	6	adj.无用的	1
+17	pointless	Unit 3_6	6	adj.无意义的	1
+17	cure-all	Unit 3_6	6	n.万灵药	0
+17	effect	Unit 3_6	6	n.作用	1
+17	quite a few	Unit 3_6	6	很多	1
+17	have an effect on	Unit 3_6	6	对...起作用	1
+18	block	Unit 4_1	5	n.&vt.街区	1
+18	driveway	Unit 4_1	5	n.私人车道	1
+18	lean	Unit 4_1	5	n.倾身	1
+18	back	Unit 4_1	5	adv.使后退	1
+18	signal	Unit 4_1	5	n.信号	1
+18	arouse	Unit 4_1	5	vt.唤起	1
+18	shift	Unit 4_1	5	n.转移	1
+18	reaction	Unit 4_1	5	n.反应	1
+18	content	Unit 4_1	5	n.内容	1
+18	yawn	Unit 4_1	5	n.打呵欠	1
+19	doze	Unit 4_2	5	v.&n.打瞌睡	0
+19	honour	Unit 4_2	5	n.荣誉	1
+19	clue	Unit 4_2	5	n.线索	1
+19	attentively	Unit 4_2	5	adv.聚精会神地	0
+19	obstacle	Unit 4_2	5	n.障碍	0
+19	pull into	Unit 4_2	5	到站	1
+19	go down well	Unit 4_2	5	被接受	1
+19	in a low voice	Unit 4_2	5	低声	1
+19	the worst	Unit 4_2	5	最糟的部分	1
+19	go down	Unit 4_2	5	下沉	1
+20	call for	Unit 4_3	5	需要	1
+20	be clear of	Unit 4_3	5	清除了...的	1
+20	convey	Unit 4_3	5	vt.传达	0
+20	dishonest	Unit 4_3	5	adj.不诚实的	1
+20	confidence	Unit 4_3	5	n.自信	1
+20	status	Unit 4_3	5	n.地位	0
+20	impolite	Unit 4_3	5	adj.无礼的	1
+20	elder	Unit 4_3	5	adj.年龄较大的	1
+20	performance	Unit 4_3	5	n.演出	1
+20	delighted	Unit 4_3	5	adj.高兴的	1
+21	goodness	Unit 4_4	5	int.天哪	0
+21	incredible	Unit 4_4	5	adj.难以置信的	1
+21	complicated	Unit 4_4	5	adj.复杂的	0
+21	move	Unit 4_4	5	vt.移动位置	1
+21	posture	Unit 4_4	5	n.姿势	0
+21	unsure	Unit 4_4	5	adj.无把握的	1
+21	space	Unit 4_4	5	n.空间	1
+21	shy	Unit 4_4	5	adj.害羞的	1
+21	concept	Unit 4_4	5	n.观念	1
+21	constantly	Unit 4_4	5	adv.时常地	1
+22	bump	Unit 4_5	5	n.碰	1
+22	aware	Unit 4_5	5	adj.知道的	1
+22	body language	Unit 4_5	5	身势语	1
+22	put one's finger on	Unit 4_5	5	准确地证明或指出	1
+22	sell somebody out	Unit 4_5	5	背叛	1
+22	believe it or not	Unit 4_5	5	信不信由你	1
+22	bump into	Unit 4_5	5	无意中遇到	1
+22	become aware of	Unit 4_5	5	意识到	1
+22	in doubt	Unit 4_5	5	怀疑的	1
+23	conductor	Unit 5_1	7	n.指挥	1
+23	cello	Unit 5_1	7	n.大提琴	0
+23	composition	Unit 5_1	7	n.写作	0
+23	orchestra	Unit 5_1	7	n.管弦乐队	0
+23	quit	Unit 5_1	7	v.放弃	1
+23	thus	Unit 5_1	7	adv.因此	1
+23	leap	Unit 5_1	7	n.跳	1
+23	passionate	Unit 5_1	7	adj.热情的	1
+23	interpretation	Unit 5_1	7	n.演奏	0
+23	score	Unit 5_1	7	n.乐谱	1
+24	recall	Unit 5_2	7	vt.&n.回忆	1
+24	note	Unit 5_2	7	n.音符	0
+24	loyalty	Unit 5_2	7	n.忠诚	1
+24	rehearsal	Unit 5_2	7	n.排练	0
+24	stamp	Unit 5_2	7	n.跺	0
+24	snap	Unit 5_2	7	v.突然折断	0
+24	baton	Unit 5_2	7	n.乐队用指挥杖	0
+24	tear	Unit 5_2	7	n.扯破	1
+24	passage	Unit 5_2	7	n.一段	1
+24	handkerchief	Unit 5_2	7	n.手帕	1
+25	float	Unit 5_3	7	n.浮动	1
+25	interpret	Unit 5_3	7	v.演奏	1
+25	demand	Unit 5_3	7	v.要求	1
+25	weep	Unit 5_3	7	n.哭泣	1
+25	slap	Unit 5_3	7	n.掌击	0
+25	anti-	Unit 5_3	7	pref.(前缀)“反”	1
+25	fascist	Unit 5_3	7	n.法西斯主义的	0
+25	anthem	Unit 5_3	7	n.颂歌	0
+25	ban	Unit 5_3	7	vt.&n.禁止	1
+25	Jewish	Unit 5_3	7	adj.犹太人的	0
+26	musician	Unit 5_4	7	n.音乐家	1
+26	with the highest honours	Unit 5_4	7	成绩优秀	1
+26	at very short notice	Unit 5_4	7	提前很短时间通知	1
+26	without the help of	Unit 5_4	7	不依赖	1
+26	tear ... to pieces	Unit 5_4	7	把...撕成碎片	1
+26	at a loss	Unit 5_4	7	不知所措	1
+26	think hard	Unit 5_4	7	努力思考	1
+26	throw ... into the air	Unit 5_4	7	把...抛向空中	1
+26	spare somebody from	Unit 5_4	7	使某人免于...	1
+26	symphony	Unit 5_4	7	n.交响乐	0
+27	soloist	Unit 5_5	7	n.独奏者	0
+27	sonata	Unit 5_5	7	n.奏鸣曲	0
+27	rock and roll	Unit 5_5	7	摇滚乐	0
+27	tune	Unit 5_5	7	n.曲调	1
+27	frankly speaking	Unit 5_5	7	坦率地说	1
+27	talk somebody into doing something	Unit 5_5	7	劝服某人做某事	1
+27	the other day	Unit 5_5	7	不久前某一天	1
+27	second to none	Unit 5_5	7	首屈一指的	1
+27	can't stand	Unit 5_5	7	无法忍受	1
+28	journalist	Unit 5_6	7	n.新闻记者	1
+28	pianist	Unit 5_6	7	n.钢琴家	1
+28	romantic	Unit 5_6	7	adj.富于浪漫色彩的	1
+28	slip	Unit 5_6	7	vi.滑落	1
+28	competitive	Unit 5_6	7	adj.好竞争的	1
+28	aggressive	Unit 5_6	7	adj.有进取精神的	1
+28	oriented	Unit 5_6	7	adj.以...为方向的	0
+28	miserable	Unit 5_6	7	adj.痛苦的	1
+28	sweaty	Unit 5_6	7	adj.满身是汗的	0
+29	boredom	Unit 5_7	7	n.无聊；厌倦	0
+29	folk	Unit 5_7	7	n.民族	1
+29	awake	Unit 5_7	7	adj.清醒的	1
+29	meanwhile	Unit 5_7	7	adv.同时	1
+29	slip through one's fingers	Unit 5_7	7	被错过	1
+29	get straight A's	Unit 5_7	7	得全优	1
+29	not for long	Unit 5_7	7	不久	1
+29	bow tie	Unit 5_7	7	蝶形领结	1
+29	The Grand Theatre	Unit 5_7	7	大剧院	0
+30	stunt	Unit 6_1	7	n.特技	0
+30	explode	Unit 6_1	7	v.爆炸	0
+30	hurricane	Unit 6_1	7	n.飓风	1
+30	director	Unit 6_1	7	n.导演	0
+30	risk	Unit 6_1	7	n.冒险	1
+30	exception	Unit 6_1	7	n.例外	1
+30	phenomenon	Unit 6_1	7	n.现象	1
+30	individual	Unit 6_1	7	adj.个人	1
+30	brand	Unit 6_1	7	n.品牌	1
+30	dramatic	Unit 6_1	7	adj.戏剧性的	1
+31	martial	Unit 6_2	7	adj.武术的	0
+31	endurance	Unit 6_2	7	n.忍耐	0
+31	miracle	Unit 6_2	7	n.奇迹	1
+31	heroism	Unit 6_2	7	n.英雄行为	0
+31	numerous	Unit 6_2	7	adj.众多的	0
+31	injury	Unit 6_2	7	n.伤害	1
+31	dangerous	Unit 6_2	7	adj.危险的	1
+31	inevitable	Unit 6_2	7	adj.不可避免的	0
+31	instance	Unit 6_2	7	n.事例	1
+31	admit	Unit 6_2	7	vt.承认	1
+32	unconscious	Unit 6_3	7	adj.失去知觉的	0
+32	absolutely	Unit 6_3	7	adv.绝对地	1
+32	brag	Unit 6_3	7	n.自夸	1
+32	sweep up	Unit 6_3	7	打扫	1
+32	action movie	Unit 6_3	7	动作片	1
+32	make a living	Unit 6_3	7	谋生	1
+32	on behalf of	Unit 6_3	7	为某人的利益	1
+32	big name	Unit 6_3	7	名流	1
+32	martial arts	Unit 6_3	7	武术	1
+32	for instance	Unit 6_3	7	例如	1
+33	there be no need to do something	Unit 6_4	7	没有做...的必要	1
+33	brag about	Unit 6_4	7	为...吹嘘	1
+33	talk show	Unit 6_4	7	脱口秀	1
+33	take the fall	Unit 6_4	7	代人受罪	1
+33	IQ	Unit 6_4	7	智商	0
+33	adventure	Unit 6_4	7	n.激动人心的经历	1
+33	pastime	Unit 6_4	7	n.消遣	0
+33	relaxation	Unit 6_4	7	n.放松	0
+33	album	Unit 6_4	7	n.唱片	1
+33	stereo	Unit 6_4	7	adj.立体声音响	1
+34	horror	Unit 6_5	7	n.令人恐怖的事物	1
+34	comedy	Unit 6_5	7	n.喜剧	1
+34	mystery	Unit 6_5	7	n.推理小说	0
+34	preference	Unit 6_5	7	n.偏爱的事物	0
+34	landscape	Unit 6_5	7	n.陆上风景	1
+34	creature	Unit 6_5	7	n.生物	1
+34	image	Unit 6_5	7	n.影像	1
+34	creation	Unit 6_5	7	n.创造物	0
+34	release	Unit 6_5	7	n.发行	1
+35	limitation	Unit 6_6	7	n.限制	0
+35	lifelike	Unit 6_6	7	adj.栩栩如生的	0
+35	somehow	Unit 6_6	7	adv.由于某种原因	1
+35	acting	Unit 6_6	7	n.演技	1
+35	inspiring	Unit 6_6	7	adj.激励人心的	1
+35	magic	Unit 6_6	7	n.魔力	1
+35	initial	Unit 6_6	7	adj.最初的	1
+35	trilogy	Unit 6_6	7	n.三部曲	0
+35	effectively	Unit 6_6	7	adv.有效地	1
+36	emotion	Unit 6_7	7	n.情感	1
+36	gifted	Unit 6_7	7	adj.有天赋的	0
+36	box office	Unit 6_7	7	票房	1
+36	line of work	Unit 6_7	7	行业	1
+36	Viet Nam	Unit 6_7	7	越南	0
+36	Broken Arrow	Unit 6_7	7	《断剑》	0
+36	Hollywood	Unit 6_7	7	好莱坞	0
+36	Final Fantasy	Unit 6_7	7	《最终幻想》	0
+36	The Lord of the Rings	Unit 6_7	7	《指环王》	0
+37	newsstand	Unit 7_1	7	n.报摊	1
+37	happening	Unit 7_1	7	n.事件	1
+37	index	Unit 7_1	7	n.索引	1
+37	headline	Unit 7_1	7	n.标题	1
+37	informative	Unit 7_1	7	adj.提供大量消息的	1
+37	eye-catching	Unit 7_1	7	adj.引人注目的	1
+37	tempt	Unit 7_1	7	v.吸引	1
+37	obvious	Unit 7_1	7	adj.明显的	1
+37	emphasise	Unit 7_1	7	v.强调	1
+37	tend	Unit 7_1	7	vi.倾向	1
+38	value	Unit 7_2	7	n.价值	1
+38	standard	Unit 7_2	7	n.标准	1
+38	unity	Unit 7_2	7	n.统一	1
+38	lead	Unit 7_2	7	v.头条新闻	1
+38	prime	Unit 7_2	7	adj.主要的	1
+38	position	Unit 7_2	7	n.位置	1
+38	heading	Unit 7_2	7	n.标题	1
+38	width	Unit 7_2	7	n.宽度	1
+38	bold	Unit 7_2	7	adj.粗笔画的	1
+38	sensational	Unit 7_2	7	adj.引起轰动的	1
+39	shock	Unit 7_3	7	vt.震惊	1
+39	reputation	Unit 7_3	7	n.名誉	1
+39	front page	Unit 7_3	7	头版	1
+39	catch one's eye	Unit 7_3	7	引起某人注意	1
+39	in brief	Unit 7_3	7	简言之	1
+39	aim at	Unit 7_3	7	以...为目的	1
+39	the top left-hand corner	Unit 7_3	7	左上角	1
+39	puzzle	Unit 7_3	7	n.猜谜	1
+39	amusing	Unit 7_3	7	adj.有趣的	1
+39	classify	Unit 7_3	7	v.将...分类	0
+40	category	Unit 7_4	7	n.种类	0
+40	crash	Unit 7_4	7	v.事故	1
+40	survivor	Unit 7_4	7	n.幸存者	1
+40	clone	Unit 7_4	7	v.克隆	1
+40	reproduce	Unit 7_4	7	v.繁殖	0
+40	cell	Unit 7_4	7	n.细胞	1
+40	react	Unit 7_4	7	vt.反应	1
+40	negatively	Unit 7_4	7	adv.消极地	1
+40	dreadful	Unit 7_4	7	adj.糟透的	1
+40	disbelief	Unit 7_4	7	v.不信	0
+41	indifferently	Unit 7_5	7	adv.漠不关心地	0
+41	applaud	Unit 7_5	7	vi.喝彩	0
+41	vote	Unit 7_5	7	v.投票	1
+41	ballot	Unit 7_5	7	n.投票	0
+41	distant	Unit 7_5	7	adj.远的	1
+41	eliminate	Unit 7_5	7	v.淘汰	0
+41	contract	Unit 7_5	7	n.契约	1
+41	bid	Unit 7_5	7	n.努力争取；出价	0
+41	host	Unit 7_5	7	v.做东	1
+41	pour	Unit 7_5	7	vt.涌流	1
+41	chant	Unit 7_5	7	n.反复地说	0
+42	boulevard	Unit 7_6	7	n.大马路	0
+42	avenue	Unit 7_6	7	n.大街	0
+42	blow	Unit 7_6	7	vt.吹奏	1
+42	horn	Unit 7_6	7	n.喇叭	1
+42	cram	Unit 7_6	7	v.把...塞满	0
+42	print media	Unit 7_6	7	印刷媒体	1
+42	electronic media	Unit 7_6	7	电子媒体	1
+42	on the hour	Unit 7_6	7	准点	1
+42	in disbelief	Unit 7_6	7	怀疑	1
+42	in the first round	Unit 7_6	7	第一轮	1
+42	light up	Unit 7_6	7	照亮	1
+43	burst into	Unit 7_7	7	突然发作	1
+43	be alive with	Unit 7_7	7	充满	1
+43	at the top of one's voice	Unit 7_7	7	尽全力提高嗓门	1
+43	The Times	Unit 7_7	7	《泰晤士报》	0
+43	The New York Times	Unit 7_7	7	《纽约时报》	0
+43	Newsweek	Unit 7_7	7	n.《新闻周刊》	0
+43	Time	Unit 7_7	7	n.《时代》	0
+43	Moscow	Unit 7_7	7	n.莫斯科	0
+43	IOC	Unit 7_7	7	国际奥委会（首字母缩写）	0
+43	The China Millennium Monument	Unit 7_7	7	中华世纪坛	0
+43	Chang'an Boulevard	Unit 7_7	7	长安街	0
+44	bonus	Unit 8_1	6	n.奖金	1
+44	cozy	Unit 8_1	6	adj.舒适的	1
+44	bargain	Unit 8_1	6	vi.便宜货	1
+44	subscribe	Unit 8_1	6	vt.订阅	1
+44	midnight	Unit 8_1	6	n.午夜	1
+44	extra	Unit 8_1	6	adj.额外的	1
+44	atlas	Unit 8_1	6	n.地图集	1
+44	enclose	Unit 8_1	6	vt.附寄	1
+44	subscription	Unit 8_1	6	n.订阅费	1
+45	handy	Unit 8_2	6	adj.便利的	1
+45	postage	Unit 8_2	6	n.邮资	1
+45	tremendous	Unit 8_2	6	adj.巨大的	1
+45	microscope	Unit 8_2	6	n.显微镜	1
+45	easy chair	Unit 8_2	6	安乐椅	1
+45	soap drama	Unit 8_2	6	肥皂剧	1
+45	have something at one's fingertips	Unit 8_2	6	精通	1
+45	in that case	Unit 8_2	6	如果那样	1
+45	editor	Unit 8_2	6	n.编辑	0
+46	advisable	Unit 8_3	6	adj.可取的	0
+46	column	Unit 8_3	6	n.专栏	1
+46	glance	Unit 8_3	6	vi.一瞥	1
+46	cater	Unit 8_3	6	vi.满足需要	0
+46	inform	Unit 8_3	6	vt.通知	1
+46	current	Unit 8_3	6	adj.当前的	1
+46	care for	Unit 8_3	6	喜欢	1
+46	be popular with	Unit 8_3	6	受欢迎	1
+46	every other week	Unit 8_3	6	每隔一周	1
+47	take out	Unit 8_4	6	获得	1
+47	glance at	Unit 8_4	6	扫视	1
+47	cater for	Unit 8_4	6	为...提供所需	1
+47	well-educated	Unit 8_4	6	adi.受过良好教育的	1
+47	dry	Unit 8_4	6	adj.枯燥乏味的	1
+47	dull	Unit 8_4	6	adj.乏味的	1
+47	publication	Unit 8_4	6	n.出版物	0
+47	significance	Unit 8_4	6	n.重要性	0
+47	visual	Unit 8_4	6	n.视觉资料	0
+48	educate	Unit 8_5	6	v.教育	1
+48	entertain	Unit 8_5	6	vt.使娱乐	1
+48	flourish	Unit 8_5	6	vi.繁荣	0
+48	empire	Unit 8_5	6	n.帝国	1
+48	employ	Unit 8_5	6	v.雇佣	1
+48	atmosphere	Unit 8_5	6	n.气氛	1
+48	compete	Unit 8_5	6	v.竞争	1
+48	profit	Unit 8_5	6	n.利润	1
+48	pleasing	Unit 8_5	6	adj.令人愉快的	1
+48	witness	Unit 8_5	6	n.目击	1
+49	pressure	Unit 8_6	6	n.压力	1
+49	hardship	Unit 8_6	6	n.艰难	1
+49	versatile	Unit 8_6	6	adj.多功能的	0
+49	expressive	Unit 8_6	6	adj.表达的	0
+49	the general public	Unit 8_6	6	公众	1
+49	no fewer than	Unit 8_6	6	不少于	1
+49	to name just a few	Unit 8_6	6	仅举数例	1
+49	Ladies' Home Journal	Unit 8_6	6	《妇女家庭杂志》	0
+49	Vogue	Unit 8_6	6	n.《时尚》杂志	0
+49	Life	Unit 8_6	6	n.《生活》杂志	0

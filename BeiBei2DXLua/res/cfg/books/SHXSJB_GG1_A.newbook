@@ -1,0 +1,488 @@
+1	introduction	Unit 1_1	6	n.介绍	1
+1	professional	Unit 1_1	6	adj.专业的	1
+1	institution	Unit 1_1	6	n.机构	0
+2	gain	Unit 1_2	6	n.&v获得	1
+2	impact	Unit 1_2	6	n.影响	1
+2	surgeon	Unit 1_2	6	n.外科医生	0
+2	organ	Unit 1_2	6	n.器官	0
+2	patient	Unit 1_2	6	n.病人	1
+2	file	Unit 1_2	6	n.档案	1
+2	cabinet	Unit 1_2	6	n.储藏柜	1
+2	traditionally	Unit 1_2	6	adv.传统上	1
+2	fashion	Unit 1_2	6	n.时装	1
+3	model	Unit 1_3	6	n.时装模特	1
+3	style	Unit 1_3	6	n.款式	1
+3	hairstyle	Unit 1_3	6	n.发型	1
+3	trend	Unit 1_3	6	n.时髦	1
+3	all walks of life	Unit 1_3	6	各行各业	1
+3	try one's best	Unit 1_3	6	尽最大努力	1
+3	be involved in	Unit 1_3	6	参与	1
+3	all through one's life	Unit 1_3	6	一生	1
+3	file cabinet	Unit 1_3	6	档案柜	1
+4	bellboy	Unit 1_4	6	n.青年男服务员	0
+4	suitcase	Unit 1_4	6	n.手提箱	0
+4	tip	Unit 1_4	6	n.&v.小费	1
+4	chef	Unit 1_4	6	n.厨师	0
+4	greengrocer	Unit 1_4	6	n.蔬菜水果商	0
+4	tiring	Unit 1_4	6	adj.令人疲劳的	1
+4	demanding	Unit 1_4	6	adj.要求高的	0
+4	rewarding	Unit 1_4	6	adj.值得做的	0
+4	meaningful	Unit 1_4	6	adj.有意义的	0
+5	challenging	Unit 1_5	6	adj.具有挑战性的	0
+5	salary	Unit 1_5	6	n.薪金	1
+5	check in	Unit 1_5	6	签到	1
+5	graduate	Unit 1_5	6	vt.毕业生	1
+5	course	Unit 1_5	6	n.课程	1
+5	career	Unit 1_5	6	n.事业	1
+5	disagree	Unit 1_5	6	vi.不同意	1
+5	partner	Unit 1_5	6	n.合伙人	1
+5	management	Unit 1_5	6	n.管理	1
+5	biology	Unit 1_5	6	n.生物学	1
+6	grateful	Unit 1_6	6	adj.感谢的	1
+6	composer	Unit 1_6	6	n.作曲家	1
+6	swan	Unit 1_6	6	n.天鹅	1
+6	decision	Unit 1_6	6	n.决定	1
+6	successful	Unit 1_6	6	adj.成功的	1
+6	practise medicine	Unit 1_6	6	行医	1
+6	even though	Unit 1_6	6	虽然	1
+6	take an interest in	Unit 1_6	6	对...产生兴趣	1
+6	make a decision	Unit 1_6	6	作决定	1
+6	Swan Lake	Unit 1_6	6	《天鹅湖》	0
+7	sculptor	Unit 2_1	5	n.雕刻家	0
+7	craftsman	Unit 2_1	5	n.手艺人	1
+7	workshop	Unit 2_1	5	n.作坊	1
+7	leading	Unit 2_1	5	adj.最重要的	1
+7	sculpture	Unit 2_1	5	n.雕刻艺术	1
+7	satisfied	Unit 2_1	5	adj.满意的	1
+7	generally	Unit 2_1	5	adv.普遍地	1
+7	regard	Unit 2_1	5	vt.把...看作	1
+7	outstanding	Unit 2_1	5	adj.杰出的	1
+7	ceiling	Unit 2_1	5	n.天花板	1
+7	chapel	Unit 2_1	5	n.小教堂	0
+8	upward	Unit 2_2	5	adj.向上	1
+8	fascination	Unit 2_2	5	n.迷人的事物	1
+8	overseas	Unit 2_2	5	adj.在海外	1
+8	masterpiece	Unit 2_2	5	n.杰作	1
+8	at an early age	Unit 2_2	5	年纪还小时	1
+8	by the time	Unit 2_2	5	到...之前	1
+8	regard as	Unit 2_2	5	看作	1
+8	turn down	Unit 2_2	5	回绝	1
+8	shut up somebody	Unit 2_2	5	把某人隔离	1
+8	go through	Unit 2_2	5	经历	1
+8	lie on one's back	Unit 2_2	5	仰卧	1
+9	a great number of	Unit 2_3	5	许多	1
+9	can't help but do something	Unit 2_3	5	忍不住做某事	1
+9	schooling	Unit 2_3	5	n.学校教育	0
+9	impatient	Unit 2_3	5	adj.不耐烦的	0
+9	conduct	Unit 2_3	5	n.指挥	0
+9	absent-minded	Unit 2_3	5	adj.心不在焉的	0
+9	totally	Unit 2_3	5	adv.完全地	1
+9	deaf	Unit 2_3	5	adj.耳聋的	1
+9	creative	Unit 2_3	5	adj.创造性的	1
+9	ambitious	Unit 2_3	5	adj.有抱负的	0
+9	modest	Unit 2_3	5	adj.谦虚的	1
+10	selfless	Unit 2_4	5	adj.无私的	0
+10	heroic	Unit 2_4	5	adj.英勇的	0
+10	deed	Unit 2_4	5	n.行动	0
+10	well-built	Unit 2_4	5	adj.体格健壮的	0
+10	X-ray	Unit 2_4	5	n.X射线	1
+10	technician	Unit 2_4	5	n.技师	1
+10	develop	Unit 2_4	5	vt.冲印	1
+10	film	Unit 2_4	5	n.胶片	1
+10	equip	Unit 2_4	5	vt.配备	1
+10	remove	Unit 2_4	5	vt.移动	1
+10	plate	Unit 2_4	5	n.金属板	0
+11	feed	Unit 2_5	5	vt.逐渐放入	1
+11	orderly	Unit 2_5	5	adj.有序的	1
+11	tricky	Unit 2_5	5	adj.难处理的	1
+11	measure	Unit 2_5	5	n.测量	1
+11	edge	Unit 2_5	5	n.边	1
+11	trust	Unit 2_5	5	vi.信任	1
+11	capable	Unit 2_5	5	adj.能干的	1
+11	handicapped	Unit 2_5	5	adj.身体有缺陷的	0
+11	except for	Unit 2_5	5	除了	1
+11	keep something in order	Unit 2_5	5	使某物有序	1
+12	perfect	Unit 3_1	7	adj.最恰当的	1
+12	tongue-tied	Unit 3_1	7	adj.张口结舌的	1
+12	utter	Unit 3_1	7	adj.讲	0
+12	shame	Unit 3_1	7	n.羞耻	1
+12	tip	Unit 3_1	7	n.建议	1
+12	starter	Unit 3_1	7	n.第一道菜	0
+12	attention	Unit 3_1	7	n.注意	1
+12	chat	Unit 3_1	7	vt.闲聊	1
+12	facial	Unit 3_1	7	adj.面部的	1
+12	expression	Unit 3_1	7	n.表情	1
+13	cue	Unit 3_2	7	n.提示	0
+13	stare	Unit 3_2	7	vt.凝视	1
+13	positive	Unit 3_2	7	adj.积极的	1
+13	indicate	Unit 3_2	7	vt.表明	1
+13	topic	Unit 3_2	7	n.话题	1
+13	universal	Unit 3_2	7	adj.普遍的	1
+13	share	Unit 3_2	7	vt.分享	1
+13	launch	Unit 3_2	7	n.发动	1
+13	religion	Unit 3_2	7	n.宗教信仰	1
+13	flow	Unit 3_2	7	vi.流畅	1
+14	naturally	Unit 3_3	7	adv.自然地	1
+14	open-ended	Unit 3_3	7	adj.无限制的	0
+14	comment	Unit 3_3	7	n.意见	1
+14	attentively	Unit 3_3	7	adv.专心地	1
+14	track	Unit 3_3	7	n.方向	1
+14	think to oneself	Unit 3_3	7	心里想	1
+14	what a shame	Unit 3_3	7	真遗憾	1
+14	small talk	Unit 3_3	7	闲谈	1
+14	feel like doing something	Unit 3_3	7	想要做...	1
+14	what if	Unit 3_3	7	如果...将会怎么样	1
+15	launch into	Unit 3_4	7	突然开始...	1
+15	stick to	Unit 3_4	7	紧扣（主题)	1
+15	on the right track	Unit 3_4	7	做对了	1
+15	subway	Unit 3_4	7	n.地下铁路	1
+15	technical	Unit 3_4	7	adj.技术的	1
+15	leisure	Unit 3_4	7	n.空闲	1
+15	somewhat	Unit 3_4	7	adv.有点儿	1
+15	marriage	Unit 3_4	7	n.婚姻	1
+15	political	Unit 3_4	7	adj.政治的	0
+15	religious	Unit 3_4	7	adj.宗教的	0
+16	belief	Unit 3_5	7	n.信仰	1
+16	financial	Unit 3_5	7	adj.金融的	0
+16	critical	Unit 3_5	7	adj.评判性的	0
+16	behavior	Unit 3_5	7	n.举止	0
+16	personal	Unit 3_5	7	adj.私人的	1
+16	normal	Unit 3_5	7	adj.正常的	1
+16	appointment	Unit 3_5	7	n.约定	1
+16	dentist	Unit 3_5	7	n.牙医	1
+16	make an appointment	Unit 3_5	7	与某人约会	1
+16	put off an appointment	Unit 3_5	7	推迟约会	1
+17	call off an appointment	Unit 3_6	7	取消约会	1
+17	cancel an appointment	Unit 3_6	7	取消约会	0
+17	keep an appointment	Unit 3_6	7	守约	1
+17	social	Unit 3_6	7	adj.社交的	1
+17	guilty	Unit 3_6	7	adj.羞愧的	1
+17	oversight	Unit 3_6	7	n.疏忽	0
+17	ruin	Unit 3_6	7	n.完全毁掉	1
+17	relationship	Unit 3_6	7	n.关系	1
+17	psychologist	Unit 3_6	7	n.心理学家	1
+17	owe	Unit 3_6	7	v.亏欠	0
+18	amount	Unit 3_7	7	n.数量	1
+18	schedule	Unit 3_7	7	n.计划表	1
+18	forgetful	Unit 3_7	7	adj.健忘的	1
+18	meaning	Unit 3_7	7	n.意义	1
+18	regret	Unit 3_7	7	n.惋惜	1
+18	respond	Unit 3_7	7	vi.回复	1
+18	deadline	Unit 3_7	7	n.最后期限	1
+18	show up	Unit 3_7	7	到场	1
+18	lead to	Unit 3_7	7	导致	1
+18	without regard to	Unit 3_7	7	不考虑	1
+19	kingdom	Unit 4_1	6	n.王国	1
+19	vary	Unit 4_1	6	vt.变化	1
+19	Christian	Unit 4_1	6	n.基督徒	1
+19	Christ	Unit 4_1	6	n.基督	0
+19	bun	Unit 4_1	6	n.小圆面包	0
+19	toast	Unit 4_1	6	n.烤	1
+19	major	Unit 4_1	6	adj.主要的	1
+19	decoration	Unit 4_1	6	n.装饰物	1
+19	goose	Unit 4_1	6	n.鹅	1
+19	pudding	Unit 4_1	6	n.布丁	1
+20	specialty	Unit 4_2	6	n.特色食品	0
+20	fireplace	Unit 4_2	6	n.壁炉	0
+20	disappointed	Unit 4_2	6	adj.失望的	1
+20	fall on	Unit 4_2	6	在	1
+20	sit down to ...	Unit 4_2	6	开始进行...	1
+20	round off	Unit 4_2	6	使...圆满结束	1
+20	be connected with	Unit 4_2	6	与...有关	1
+20	have several weeks off	Unit 4_2	6	放几星期的假	1
+20	United Kingdom	Unit 4_2	6	联合王国	0
+20	Easter	Unit 4_2	6	复活节	0
+21	Good Friday	Unit 4_3	6	受难节	0
+21	Bank Holiday	Unit 4_3	6	银行假日	0
+21	Christmas Eve	Unit 4_3	6	圣诞前夜	0
+21	Boxing Day	Unit 4_3	6	节礼日	0
+21	settler	Unit 4_3	6	n.移居者	0
+21	Indian	Unit 4_3	6	n.印第安人	0
+21	cracker	Unit 4_3	6	n.爆竹	0
+21	particular	Unit 4_3	6	n.特定的	1
+21	packet	Unit 4_3	6	n.小纸包	1
+21	reunion	Unit 4_3	6	n.重聚	0
+22	specialize	Unit 4_4	6	vi.专门从事	0
+22	feast	Unit 4_4	6	n.盛宴	0
+22	prosperous	Unit 4_4	6	adj.繁荣的	0
+22	family reunion	Unit 4_4	6	家庭团聚	1
+22	occasion	Unit 4_4	6	n.时刻	1
+22	solar	Unit 4_4	6	adj.太阳的	1
+22	calendar	Unit 4_4	6	n.日历	1
+22	renew	Unit 4_4	6	vt.使更新	1
+22	disappointment	Unit 4_4	6	n.令人失望的人或物	1
+22	fortune	Unit 4_4	6	n.运气	1
+23	challenge	Unit 4_5	6	n.挑战	1
+23	theme	Unit 4_5	6	n.主题	1
+23	midnight	Unit 4_5	6	n.子夜	1
+23	symbolize	Unit 4_5	6	vt.象征	0
+23	Mexican	Unit 4_5	6	n.墨西哥人	0
+23	misfortune	Unit 4_5	6	n.不幸	1
+23	view	Unit 4_5	6	n.看待	1
+23	giant	Unit 4_5	6	adj.巨大的	1
+23	silver	Unit 4_5	6	adj.银制的	1
+23	lower	Unit 4_5	6	adj.&v.降下	0
+23	stroke	Unit 4_5	6	n.一次鸣响	1
+24	annual	Unit 4_6	6	adj.一年一度的	1
+24	parade	Unit 4_6	6	n.游行	1
+24	spectator	Unit 4_6	6	n.观看者	1
+24	enormous	Unit 4_6	6	adj.巨大的	1
+24	balloon	Unit 4_6	6	n.气球	1
+24	a big deal	Unit 4_6	6	重要的事情	1
+24	keep away	Unit 4_6	6	使...远离	1
+24	let off	Unit 4_6	6	使点燃	1
+24	count down	Unit 4_6	6	倒记时	1
+24	at the stroke of midnight	Unit 4_6	6	午夜钟声最后一响时	1
+24	turn over a new leaf	Unit 4_6	6	翻开新的一页	1
+25	shepherd	Unit 5_1	6	n.牧羊人	0
+25	sunshine	Unit 5_1	6	n.阳光	1
+25	sheepdog	Unit 5_1	6	n.牧羊犬	0
+25	flock	Unit 5_1	6	n.羊群，鸟群	1
+25	scene	Unit 5_1	6	n.场景	1
+25	raise	Unit 5_1	6	vt.饲养；加薪	1
+25	pull	Unit 5_1	6	n.拉	1
+25	cart	Unit 5_1	6	n.二轮客车或货车	1
+25	breed	Unit 5_1	6	vt.培育	1
+25	scent	Unit 5_1	6	n.动物的气味	1
+25	sense	Unit 5_1	6	n.感觉	1
+26	apart	Unit 5_2	6	adv.分开	1
+26	sharp	Unit 5_2	6	adj.敏锐的	1
+26	detective	Unit 5_2	6	adj.侦探	1
+26	couple	Unit 5_2	6	n.一对夫妇	1
+26	infect	Unit 5_2	6	vt.传染	1
+26	rabies	Unit 5_2	6	n.狂犬病	0
+26	stage	Unit 5_2	6	n.舞台	1
+26	symptom	Unit 5_2	6	n.症状	1
+26	shortly	Unit 5_2	6	adv.不久	1
+26	work as	Unit 5_2	6	充当	1
+26	smell out	Unit 5_2	6	嗅出	1
+27	in addition to	Unit 5_3	6	除...之外	1
+27	in a way	Unit 5_3	6	在某种程度上	1
+27	keep someone company	Unit 5_3	6	和...做伴	1
+27	sense of smell	Unit 5_3	6	嗅觉	1
+27	tell something apart	Unit 5_3	6	把...区分开来	1
+27	get over	Unit 5_3	6	成功地应付	1
+27	in the depths of winter	Unit 5_3	6	隆冬	1
+27	pass on	Unit 5_3	6	把...传给	1
+27	guard against	Unit 5_3	6	防止...发生	1
+27	shelter	Unit 5_3	6	n.避难所	0
+27	unfortunately	Unit 5_3	6	adv.不幸地	0
+28	cute	Unit 5_4	6	adj.逗人喜爱的	1
+28	tank	Unit 5_4	6	n.大容器	0
+28	tail	Unit 5_4	6	n.尾巴	1
+28	cage	Unit 5_4	6	n.笼子	1
+28	bark	Unit 5_4	6	n.吠	1
+28	loyal	Unit 5_4	6	adj.忠贞的	1
+28	companion	Unit 5_4	6	n.伴侣	1
+28	rat	Unit 5_4	6	n.大老鼠	1
+28	lively	Unit 5_4	6	adj.活泼的	1
+28	mouse	Unit 5_4	6	n.小老鼠	1
+29	rabbit	Unit 5_5	6	n.兔	1
+29	doorstep	Unit 5_5	6	n.门阶	1
+29	parrot	Unit 5_5	6	n.鹦鹉	0
+29	stair	Unit 5_5	6	n.楼梯	1
+29	stumble	Unit 5_5	6	n.绊倒	1
+29	bunch	Unit 5_5	6	n.一束	0
+29	sweater	Unit 5_5	6	n.毛线衣	1
+29	crowd	Unit 5_5	6	n.人群	1
+29	package	Unit 5_5	6	n.包裹	1
+29	liver	Unit 5_5	6	n.肝脏	1
+30	wag	Unit 5_6	6	vt.摇	1
+30	take turns	Unit 5_6	6	轮流	1
+30	after a while	Unit 5_6	6	过了一会	1
+30	all of a sudden	Unit 5_6	6	突然	1
+30	might as well	Unit 5_6	6	还是...为好	1
+30	carry on	Unit 5_6	6	吵吵闹闹	1
+30	knock into	Unit 5_6	6	不期而遇	1
+30	let out a cry	Unit 5_6	6	发出哭声	1
+30	make one's way	Unit 5_6	6	朝...前进	1
+30	breathe	Unit 5_6	6	vi.呼吸	1
+31	comic	Unit 6_1	6	n.好笑的	1
+31	strip	Unit 6_1	6	vi.连环漫画	1
+31	attract	Unit 6_1	6	v.引起对...的兴趣	1
+31	cartoonist	Unit 6_1	6	n.漫画画家	0
+31	expand	Unit 6_1	6	vt.使变大	1
+31	drawing	Unit 6_1	6	n.图画	1
+31	humorous	Unit 6_1	6	adj.幽默的	1
+31	aspect	Unit 6_1	6	n.方面	1
+31	punishment	Unit 6_1	6	n.惩罚	1
+31	thought	Unit 6_1	6	n.思考	1
+31	addition	Unit 6_1	6	n.加	1
+32	amused	Unit 6_2	6	adj.开心的	1
+32	pastime	Unit 6_2	6	n.消遣	1
+32	improvement	Unit 6_2	6	n.改良	1
+32	printing	Unit 6_2	6	n.印刷术	1
+32	technique	Unit 6_2	6	n.技巧	1
+32	range	Unit 6_2	6	n.（在范围内）变化	1
+32	fancy	Unit 6_2	6	n.品种稀奇的	1
+32	superhero	Unit 6_2	6	n.超级英雄	0
+32	imagination	Unit 6_2	6	n.想像力	1
+32	sort	Unit 6_2	6	n.种类	1
+32	justice	Unit 6_2	6	n.正义	1
+33	sympathy	Unit 6_3	6	n.同情	1
+33	digital	Unit 6_3	6	adj.数字的	1
+33	put ... into words	Unit 6_3	6	用文字来表达...	1
+33	other than	Unit 6_3	6	不同于	1
+33	come into being	Unit 6_3	6	出现	1
+33	a set of	Unit 6_3	6	一组	1
+33	out of the question	Unit 6_3	6	不可能	1
+33	for the moment	Unit 6_3	6	暂时	1
+33	can't help doing something	Unit 6_3	6	忍不住做某事	1
+33	food for thought	Unit 6_3	6	引人深思的事物	1
+33	people of all ages	Unit 6_3	6	各年龄层次的人	1
+34	bring somebody to justice	Unit 6_4	6	将某人缉拿归案	1
+34	give way to	Unit 6_4	6	让位于...	1
+34	object	Unit 6_4	6	n.东西	0
+34	basement	Unit 6_4	6	n.地下室	0
+34	merely	Unit 6_4	6	adv.仅仅	0
+34	meaningless	Unit 6_4	6	adj.无意义的	0
+34	fault	Unit 6_4	6	n.缺点	1
+34	warm-hearted	Unit 6_4	6	adj.热心的	0
+34	good-natured	Unit 6_4	6	adj.性情温和的	0
+34	make sense	Unit 6_4	6	有意义	1
+35	as a matter of fact	Unit 6_5	6	实际上	1
+35	find fault with	Unit 6_5	6	吹毛求疵	1
+35	illustrator	Unit 6_5	6	n.插图画家	0
+35	well-known	Unit 6_5	6	adj.众所周知的	1
+35	critic	Unit 6_5	6	n.评论家	0
+35	upper	Unit 6_5	6	adj.较上的	1
+35	detail	Unit 6_5	6	n.细节	1
+35	mood	Unit 6_5	6	n.心情	1
+35	contrast	Unit 6_5	6	n.差异	1
+35	vividly	Unit 6_5	6	adv.清楚地	1
+36	spank	Unit 6_6	6	vt.打屁股	0
+36	spare	Unit 6_6	6	adj.饶恕	1
+36	naughty	Unit 6_6	6	adj.调皮的	1
+36	entirely	Unit 6_6	6	adv.完全地	1
+36	hammer	Unit 6_6	6	n.榔头	1
+36	breakable	Unit 6_6	6	adj.易破碎的	1
+36	speak highly of	Unit 6_6	6	对...评价很高	1
+36	in a sharp contrast	Unit 6_6	6	对比鲜明	1
+36	draw near	Unit 6_6	6	时间	1
+36	within one's reach	Unit 6_6	6	伸手可及的范围内	1
+37	metropolis	Unit 7_1	5	n.大城市	1
+37	prediction	Unit 7_1	5	n.预言	1
+37	partly	Unit 7_1	5	adv.部分地	1
+37	cultural	Unit 7_1	5	adj.文化的	1
+37	headquarters	Unit 7_1	5	n.总部	1
+37	skyscraper	Unit 7_1	5	n.摩天大楼	0
+37	slum	Unit 7_1	5	n.贫民区	0
+37	pace	Unit 7_1	5	n.速度	1
+37	fascinate	Unit 7_1	5	vt.使着迷	1
+38	carriage	Unit 7_2	5	n.旧式四轮载客马车	1
+38	sight	Unit 7_2	5	n.景物	1
+38	double-decker	Unit 7_2	5	n.双层公共汽车	0
+38	concern	Unit 7_2	5	vt.担心	1
+38	art galleries	Unit 7_2	5	美术馆	1
+38	pace of life	Unit 7_2	5	生活节奏	1
+38	change for the better	Unit 7_2	5	变好	1
+38	the World Trade Center	Unit 7_2	5	世界贸易中心	0
+38	air-conditioned	Unit 7_2	5	adj.装有空调的	0
+39	comfortable	Unit 7_3	5	adj.舒适的	1
+39	terrific	Unit 7_3	5	adj.极好的	1
+39	streetcar	Unit 7_3	5	n.有轨电车	0
+39	crossroads	Unit 7_3	5	n.十字路口	1
+39	elevated	Unit 7_3	5	adj.架高的	0
+39	zebra	Unit 7_3	5	n.斑马	0
+39	crossing	Unit 7_3	5	n.人行横道	0
+39	flyover	Unit 7_3	5	n.立交桥	0
+39	sidewalk	Unit 7_3	5	n.人行道	0
+40	underpass	Unit 7_4	5	n.地下过街道	0
+40	scenery	Unit 7_4	5	n.自然景色	1
+40	rush hour	Unit 7_4	5	交通高峰时间	1
+40	a variety of	Unit 7_4	5	各种各样的	1
+40	cable car	Unit 7_4	5	缆车	1
+40	elevated railway	Unit 7_4	5	高架铁路	1
+40	capsule	Unit 7_4	5	n.小盒子	0
+40	item	Unit 7_4	5	n.一样东西	1
+40	seal	Unit 7_4	5	n.把...密封	1
+40	steel	Unit 7_4	5	n.钢	1
+41	appoint	Unit 7_5	5	vt.约定；任命	1
+41	descendant	Unit 7_5	5	n.后代	0
+41	dozen	Unit 7_5	5	n.一打	1
+41	address	Unit 7_5	5	n.写上姓名和地址	1
+41	resident	Unit 7_5	5	adj.居民	1
+41	scan	Unit 7_5	5	n.扫描	1
+41	website	Unit 7_5	5	n.网站	1
+41	treasure	Unit 7_5	5	n.珍宝	1
+41	dozens of	Unit 7_5	5	许多	1
+41	feel close to somebody	Unit 7_5	5	觉得和...很亲近	1
+42	Internet	Unit 8_1	8	n.因特网	1
+42	nationwide	Unit 8_1	8	adj.全国性的	1
+42	focus	Unit 8_1	8	v.&n.集中注意力于...	1
+42	communications	Unit 8_1	8	n.通讯手段	1
+42	foundation	Unit 8_1	8	n.基础	1
+42	struggle	Unit 8_1	8	v.&n.作出努力	1
+42	proposal	Unit 8_1	8	n.提议	1
+42	revise	Unit 8_1	8	n.修改	1
+42	browser	Unit 8_1	8	n.浏览器	1
+42	demonstrate	Unit 8_1	8	vt.示范	1
+43	function	Unit 8_2	8	n.运行	1
+43	create	Unit 8_2	8	vt.发明	1
+43	pleasing	Unit 8_2	8	adj.令人愉悦的	1
+43	click	Unit 8_2	8	n.点击	1
+43	simplify	Unit 8_2	8	vt.使简化	1
+43	process	Unit 8_2	8	n.步骤	1
+43	surf	Unit 8_2	8	n.冲浪	1
+43	lifestyle	Unit 8_2	8	n.生活方式	1
+43	browse	Unit 8_2	8	vt.浏览	1
+43	online	Unit 8_2	8	n.在互联网上	1
+44	worldwide	Unit 8_3	8	adj.全世界的	1
+44	cyber	Unit 8_3	8	adj.与电脑有关的	0
+44	instantly	Unit 8_3	8	adv.立即	1
+44	satellite	Unit 8_3	8	n.人造卫星	1
+44	coin	Unit 8_3	8	n.创造	0
+44	a nationwide network	Unit 8_3	8	全国性的网络	1
+44	lay the foundation for	Unit 8_3	8	为...打下基础	1
+44	result in	Unit 8_3	8	导致	1
+44	in search of	Unit 8_3	8	查找	1
+44	up to date	Unit 8_3	8	到目前的	1
+45	cyber cafe	Unit 8_4	8	网吧	1
+45	Mosaic	Unit 8_4	8	n.网页浏览器名	0
+45	Netscape	Unit 8_4	8	n.美国网景公司	0
+45	the Global Village	Unit 8_4	8	地球村	0
+45	era	Unit 8_4	8	n.年代	0
+45	intelligent	Unit 8_4	8	adj.聪明的	1
+45	worm	Unit 8_4	8	n.蠕虫	1
+45	defense	Unit 8_4	8	n.防御	0
+45	valuable	Unit 8_4	8	adj.重要的	1
+45	leak	Unit 8_4	8	v.泄露	0
+46	target	Unit 8_5	8	n.目标	0
+46	loss	Unit 8_5	8	n.损失	1
+46	further	Unit 8_5	8	adj.进一步	1
+46	account	Unit 8_5	8	n.账户	1
+46	arrest	Unit 8_5	8	n.逮捕	1
+46	reliable	Unit 8_5	8	adj.可靠的	0
+46	monitor	Unit 8_5	8	n.显示器	0
+46	keyboard	Unit 8_5	8	n.键盘	1
+46	modem	Unit 8_5	8	n.调制解调器	0
+46	CD-ROM	Unit 8_5	8	只读光盘存储器	0
+47	download	Unit 8_6	8	v.下载	1
+47	top secret	Unit 8_6	8	绝密	1
+47	leak out	Unit 8_6	8	泄露	1
+47	boot up	Unit 8_6	8	启动	1
+47	log on	Unit 8_6	8	进入系统	1
+47	log off	Unit 8_6	8	退出系统	0
+47	hack	Unit 8_6	8	v.私自盗用、改变他人电脑中的信息	0
+47	advance	Unit 8_6	8	n.推进	1
+47	appearance	Unit 8_6	8	n.出现	1
+47	advanced	Unit 8_6	8	adj.先进的	1
+48	perform	Unit 8_7	8	v.做	1
+48	calculation	Unit 8_7	8	n.运算	1
+48	surpass	Unit 8_7	8	vt.超过	0
+48	endless	Unit 8_7	8	adj.无尽的	1
+48	benefit	Unit 8_7	8	n.有益于	1
+48	data	Unit 8_7	8	n.数据	1
+48	typical	Unit 8_7	8	adj.典型的	1
+48	hacker	Unit 8_7	8	n.黑客	0
+48	password	Unit 8_7	8	n.密码	1
+48	guesswork	Unit 8_7	8	v.猜测	0
+49	simply	Unit 8_8	8	adv.仅仅	1
+49	possibility	Unit 8_8	8	n.可能性	1
+49	commit	Unit 8_8	8	vt.犯(罪)	1
+49	expert	Unit 8_8	8	n.专家	1
+49	evil	Unit 8_8	8	adj.极坏的	1
+49	commit crimes	Unit 8_8	8	犯罪	1
+49	up to	Unit 8_8	8	多达...(数目)	1
+49	gain entry to	Unit 8_8	8	参与	1
+49	large sums of money	Unit 8_8	8	大笔钱款	1

@@ -1,0 +1,209 @@
+1	phantom	Unit 1_1	5	n.幽灵	0
+1	opera	Unit 1_1	5	n.歌剧	1
+1	opera house	Unit 1_1	5	歌剧院	1
+2	beneath	Unit 1_2	5	prep.在...下面	1
+2	mask	Unit 1_2	5	n.面具	1
+2	force	Unit 1_2	5	vt.强迫	1
+2	wander	Unit 1_2	5	vi.流浪	1
+2	monster	Unit 1_2	5	n.怪物	1
+2	fall in love with	Unit 1_2	5	爱上	1
+2	role	Unit 1_2	5	n.角色	1
+2	kidnap	Unit 1_2	5	v.绑架	1
+2	audience	Unit 1_2	5	n.观众	1
+3	rescue	Unit 1_3	5	n.&v.营救	1
+3	capture	Unit 1_3	5	n.抓住	1
+3	pull off	Unit 1_3	5	撕下	1
+3	be shocked at	Unit 1_3	5	对...感到震惊	1
+3	feel sorry about	Unit 1_3	5	感到不幸	1
+3	suffering	Unit 1_3	5	n.痛苦	1
+3	release	Unit 1_3	5	n.&vt.释放	1
+3	burst in	Unit 1_3	5	闯进	1
+3	concert hall	Unit 1_3	5	音乐厅	1
+4	lift	Unit 1_4	5	vt.提升	1
+4	tonne	Unit 1_4	5	n.公吨	1
+4	originally	Unit 1_4	5	起初	1
+4	musician	Unit 1_4	5	n.音乐家	1
+4	cellist	Unit 1_4	5	n.大提琴演奏者	0
+4	violinist	Unit 1_4	5	n.小提琴演奏者	1
+4	elevated	Unit 1_4	5	adj.高出地面的	1
+4	elevated road	Unit 1_4	5	高架道路	1
+4	drown out	Unit 1_4	5	压过	1
+5	machinery	Unit 1_5	5	n.机器	1
+5	rail	Unit 1_5	5	n.铁轨	1
+5	restore	Unit 1_5	5	vt.使复原	1
+5	seat	Unit 1_5	5	vt.可坐...人	1
+5	orchestra	Unit 1_5	5	n.管弦乐队	1
+5	the British Royal Philharmonic Orchestra	Unit 1_5	5	英国皇家爱乐乐团	1
+5	charm	Unit 1_5	5	n.魅力	1
+5	bring back to life	Unit 1_5	5	使...恢复生气	1
+6	regard ... as	Unit 2_1	4	把...视为	1
+6	genius	Unit 2_1	4	n.天才	1
+6	attempt	Unit 2_1	4	vt.&n.尝试	1
+6	workings	Unit 2_1	4	n.（复数）运作方式	1
+6	universe	Unit 2_1	4	n.宇宙	1
+6	lead to	Unit 2_1	4	导致	1
+6	nuclear	Unit 2_1	4	adj.原子核的	1
+6	nuclear energy	Unit 2_1	4	核能	1
+6	gift	Unit 2_1	4	n.天赋	1
+6	curiosity	Unit 2_1	4	n.好奇心	1
+7	sense of humour	Unit 2_2	4	幽默感	1
+7	reputation	Unit 2_2	4	n.名声	1
+7	theory	Unit 2_2	4	n.理论	1
+7	distant	Unit 2_2	4	adj.遥远的	1
+7	let ... down	Unit 2_2	4	使...失望	1
+7	guide	Unit 2_2	4	vt.&n.指引；向导	1
+7	platform	Unit 2_2	4	n.讲台	1
+7	perfectly	Unit 2_2	4	adv.完美地	1
+7	applause	Unit 2_2	4	n.鼓掌	1
+7	complex	Unit 2_2	4	adj.复杂的	1
+8	offer	Unit 2_3	4	n.主动提出	1
+8	property	Unit 2_3	4	n.财产	1
+8	worth	Unit 2_3	4	adj.值...钱	1
+8	original	Unit 2_3	4	adj.原来的	1
+8	spread	Unit 2_3	4	v.传播	1
+8	award	Unit 2_3	4	vt.授予	1
+8	honour	Unit 2_3	4	vt.&n.给予奖励	1
+8	discovery	Unit 2_3	4	n.被发现的事物	1
+8	physiology	Unit 2_3	4	n.生理学	0
+9	outstanding	Unit 2_4	4	adj.杰出的	1
+9	literature	Unit 2_4	4	n.文学	1
+9	present	Unit 2_4	4	vt.颁发	1
+9	anniversary	Unit 2_4	4	n.周年纪念日	1
+9	award	Unit 2_4	4	vt.&n.奖	1
+9	ceremony	Unit 2_4	4	n.仪式	1
+9	diploma	Unit 2_4	4	n.证书	1
+9	medal	Unit 2_4	4	n.奖章	1
+9	banquet	Unit 2_4	4	n.宴会	1
+10	water lily	Unit 3_1	4	睡莲	1
+10	pad	Unit 3_1	4	n.浮叶	1
+10	float	Unit 3_1	4	v.漂浮	1
+10	pond	Unit 3_1	4	n.池塘	1
+10	Victoria lily	Unit 3_1	4	王莲	0
+10	centimetre	Unit 3_1	4	n.厘米	1
+10	flower	Unit 3_1	4	n.开花	1
+10	lotus	Unit 3_1	4	n.荷花	0
+10	relative	Unit 3_1	4	adj.&n.相关事物	1
+10	root	Unit 3_1	4	n.根	1
+11	serve	Unit 3_2	4	v.提供	1
+11	banyan tree	Unit 3_2	4	榕树	1
+11	branch	Unit 3_2	4	n.树枝	1
+11	bark	Unit 3_2	4	n.树皮	1
+11	trunk	Unit 3_2	4	n.树干	1
+11	separate	Unit 3_2	4	adj.不同的	1
+11	enormous	Unit 3_2	4	adj.巨大的	1
+11	pitch	Unit 3_2	4	n.场地	1
+11	speak of	Unit 3_2	4	提起	1
+11	gingko tree	Unit 3_2	4	银杏树	0
+12	longevity	Unit 3_3	4	n.长寿	0
+12	bristlecone pine tree	Unit 3_3	4	狐尾松树	0
+12	in the air	Unit 3_3	4	可感觉到的	1
+12	gardening	Unit 3_3	4	n.园艺	1
+12	decorate	Unit 3_3	4	vt.装饰	1
+12	jasmine	Unit 3_3	4	n.茉莉	0
+12	bush	Unit 3_3	4	n.灌木	1
+12	vine	Unit 3_3	4	n.藤本植物	0
+12	frame	Unit 3_3	4	n.支架	1
+12	blossom	Unit 3_3	4	n.花	1
+13	ignore	Unit 3_4	4	vt.忽视	1
+13	Yulan magnolia	Unit 3_4	4	玉兰	0
+13	litter	Unit 3_4	4	v.使遍布	1
+13	ideal	Unit 3_4	4	adj.理想的	1
+13	moist	Unit 3_4	4	adj.潮湿的	1
+13	golden	Unit 3_4	4	adj.金色的	1
+13	cactus	Unit 3_4	4	n.仙人掌	0
+13	tolerate	Unit 3_4	4	v.忍受	1
+13	centigrade	Unit 3_4	4	adj.&n.摄氏的	0
+14	creature	Unit 4_1	3	n.生物	1
+14	view	Unit 4_1	3	n.观点	1
+14	shelter	Unit 4_1	3	n.遮蔽物	1
+14	tent	Unit 4_1	3	n.帐篷	1
+14	survive	Unit 4_1	3	v.存活	1
+14	emerge	Unit 4_1	3	vi.出现	1
+14	pest	Unit 4_1	3	n.害虫	1
+14	bored	Unit 4_1	3	adj.厌倦的	1
+14	elastic	Unit 4_1	3	adj.有弹性的	0
+14	property	Unit 4_1	3	n.性质	1
+14	artificial	Unit 4_1	3	adj.人工的	1
+15	bulletproof	Unit 4_2	3	adj.防弹的	1
+15	vest	Unit 4_2	3	n.背心	1
+15	nasty	Unit 4_2	3	adj.令人厌恶的	1
+15	bite	Unit 4_2	3	n.咬伤	1
+15	rarely	Unit 4_2	3	adv.罕有	1
+15	poison	Unit 4_2	3	n.毒药	1
+15	treat	Unit 4_2	3	v.医治	1
+15	disorder	Unit 4_2	3	n.紊乱	1
+15	get one's point	Unit 4_2	3	明白某人的意思	1
+15	have ... in common	Unit 4_2	3	与...有共同之处	1
+15	hibernate	Unit 4_2	3	vi.冬眠	0
+16	occur	Unit 4_3	3	vi.发生	1
+16	continuously	Unit 4_3	3	adv.不断地	1
+16	absence	Unit 4_3	3	n.不存在	1
+16	upside down	Unit 4_3	3	底朝上	1
+16	pulse	Unit 4_3	3	n.脉搏	1
+16	rate	Unit 4_3	3	n.比率	1
+16	amphibian	Unit 4_3	3	adj.两栖动物	0
+16	stir	Unit 4_3	3	n.动	1
+16	disturb	Unit 4_3	3	vt.打扰	1
+16	den	Unit 4_3	3	n.兽穴	0
+17	accidentally	Unit 5_1	3	adv.意外地	1
+17	smash	Unit 5_1	3	vt.打破	1
+17	miss	Unit 5_1	3	vt.错过	1
+17	temporarily	Unit 5_1	3	adj.暂时地	1
+17	guilty	Unit 5_1	3	adj.有内疚感的	1
+17	conscience	Unit 5_1	3	n.良心	1
+17	tough	Unit 5_1	3	adj.强悍的	1
+17	guy	Unit 5_1	3	n.家伙	0
+17	tease	Unit 5_1	3	v.戏弄	0
+17	bully	Unit 5_1	3	n.欺侮	0
+17	behaviour	Unit 5_1	3	n.行为	1
+18	at this point	Unit 5_2	3	在这个时候	1
+18	regret	Unit 5_2	3	n.&vt.后悔	1
+18	violence	Unit 5_2	3	n.暴力	1
+18	checkout	Unit 5_2	3	n.付款台	1
+18	note	Unit 5_2	3	n.纸币	1
+18	purchase	Unit 5_2	3	n.购买的东西	1
+18	grumble	Unit 5_2	3	v.咕哝	1
+18	error	Unit 5_2	3	n.错误	1
+18	bark	Unit 5_2	3	n.厉声发出	0
+18	queue	Unit 5_2	3	n.队	1
+18	mean to	Unit 5_2	3	成心要	1
+19	on the other hand	Unit 5_3	3	另一方面	1
+19	counsellor	Unit 5_3	3	n.顾问	1
+19	hesitate	Unit 5_3	3	vi.犹豫	1
+19	case	Unit 5_3	3	n.具体情况	1
+19	persuade	Unit 5_3	3	vt.说服	1
+19	contact	Unit 5_3	3	vt.&n.联络	1
+19	transport	Unit 5_3	3	n.交通运输	1
+19	watch for	Unit 5_3	3	观察等待	1
+19	hurt	Unit 5_3	3	vt.伤害	1
+19	suffer	Unit 5_3	3	v.受苦	1
+20	commercial	Unit 6_1	3	n.&adj.广告	1
+20	consumer	Unit 6_1	3	n.消费者	1
+20	estimate	Unit 6_1	3	vt.估计	1
+20	typical	Unit 6_1	3	adj.典型的	1
+20	actor	Unit 6_1	3	n.演员	1
+20	identify with	Unit 6_1	3	与...产生共鸣	1
+20	advertiser	Unit 6_1	3	n.广告商	0
+20	educator	Unit 6_1	3	n.教育工作者	1
+20	materialistic	Unit 6_1	3	adj.物质享乐主义的	0
+20	survey	Unit 6_1	3	n.民意调查	1
+21	possessions	Unit 6_2	3	n.（复数）个人财产	1
+21	take action	Unit 6_2	3	采取行动	1
+21	ban	Unit 6_2	3	v.禁止	1
+21	inferior	Unit 6_2	3	adj.较差的	1
+21	with reference to	Unit 6_2	3	关于	1
+21	illegal	Unit 6_2	3	adj.非法的	1
+21	salary	Unit 6_2	3	n.工资	1
+21	furthermore	Unit 6_2	3	adv.此外	1
+21	best-selling	Unit 6_2	3	adj.畅销的	1
+21	association	Unit 6_2	3	n.协会	1
+22	sponsor	Unit 6_3	3	n.赞助	1
+22	secondary	Unit 6_3	3	adj.中等教育的	1
+22	handle	Unit 6_3	3	vt.处理	1
+22	savings	Unit 6_3	3	n.（复数）积蓄	1
+22	management	Unit 6_3	3	n.管理	1
+22	budget	Unit 6_3	3	n.制定预算	1
+22	household	Unit 6_3	3	adj.家庭的	1
+22	expenses	Unit 6_3	3	n.（复数）开支	1
+22	invest	Unit 6_3	3	vt.投资	1
+22	interest	Unit 6_3	3	n.利息	1

@@ -1,0 +1,87 @@
+1	thirteen	Unit1_1	2	num.13	1
+1	fourteen	Unit1_1	2	num.14	1
+1	fifteen	Unit1_1	2	num.15	1
+2	sixteen	Unit1_2	2	num.16	1
+2	seventeen	Unit1_2	2	num.17	1
+2	eighteen	Unit1_2	2	num.18	1
+2	nineteen	Unit1_2	2	num.19	1
+2	plus	Unit1_2	2	prep.加	1
+2	minus	Unit1_2	2	prep.减	1
+2	how much	Unit1_2	2	多少	1
+3	twenty	Unit2_1	1	num.20	1
+3	thirty	Unit2_1	1	num.30	1
+3	forty	Unit2_1	1	num.40	1
+3	fifty	Unit2_1	1	num.50	1
+3	school bag	Unit2_1	1	书包	1
+3	late	Unit2_1	1	adj.迟的	1
+4	class teacher	Unit3_1	1	班主任	1
+4	headmaster	Unit3_1	1	n.校长	1
+4	monitor	Unit3_1	1	n.班长	1
+4	friend	Unit3_1	1	n.朋友	1
+5	Barbie Doll	Unit4_1	1	芭比娃娃	1
+5	teddy bear	Unit4_1	1	泰迪熊	1
+5	picture book	Unit4_1	1	图画书	1
+5	storybook	Unit4_1	1	n.故事书	1
+5	take a walk	Unit4_1	1	散步	1
+5	give	Unit4_1	1	vt.给...	1
+5	me	Unit4_1	1	pron.我	1
+5	please	Unit4_1	1	int.请	1
+6	sandwich	Unit5_1	1	n.三明治	1
+6	bread	Unit5_1	1	n.面包	1
+6	noodle	Unit5_1	1	n.面条	1
+6	hamburger	Unit5_1	1	n.汉堡包	1
+6	huge	Unit5_1	1	adj.巨大的	1
+6	want	Unit5_1	1	vi.想要	1
+6	ice-cream	Unit5_1	1	n.冰淇淋	1
+7	Sunday	Unit6_1	1	n.星期天	1
+7	Monday	Unit6_1	1	n.星期一	1
+7	Tuesday	Unit6_1	1	n.星期二	1
+7	Wednesday	Unit6_1	1	n.星期三	1
+7	Thursday	Unit6_1	1	n.星期四	1
+7	Friday	Unit6_1	1	n.星期五	1
+7	Saturday	Unit6_1	1	n.星期六	1
+7	today	Unit6_1	1	n.今天	1
+8	shout	Unit7_1	1	v.喊	1
+8	feed	Unit7_1	1	vt.喂	1
+8	paint	Unit7_1	1	v.刷	1
+8	touch	Unit7_1	1	vt.碰	1
+8	excuse	Unit7_1	1	v.原谅	1
+8	smoke	Unit7_1	1	v.吸烟	1
+8	sign	Unit7_1	1	n.标记	1
+8	don't	Unit7_1	1	不要...	1
+9	towel	Unit8_1	1	n.毛巾	1
+9	soap	Unit8_1	1	n.肥皂	1
+9	tooth-brush	Unit8_1	1	n.牙刷	1
+9	tooth-paste	Unit8_1	1	n.牙膏	1
+10	grape	Unit9_1	1	n.葡萄	1
+10	date	Unit9_1	1	n.枣子	1
+10	melon	Unit9_1	1	n.瓜	1
+10	lemon	Unit9_1	1	n.柠檬	1
+10	run	Unit9_1	1	vi.赛跑	1
+10	have a race	Unit9_1	1	赛跑	1
+10	ready	Unit9_1	1	adj.预备	1
+10	winner	Unit9_1	1	n.胜者	1
+10	run	Unit9_1	1	vi.跑	1
+11	grapefruit	Unit10_1	1	n.葡萄柚	1
+11	plum	Unit10_1	1	n.李子	1
+11	lichee	Unit10_1	1	n.荔枝	1
+11	strawberry	Unit10_1	1	n.草莓	1
+11	mango	Unit10_1	1	n.芒果	1
+11	side	Unit10_1	1	n.边	1
+11	pull	Unit10_1	1	v.拉	1
+11	team	Unit10_1	1	n.小队	1
+12	ant	Unit11_1	1	n.蚂蚁	1
+12	spider	Unit11_1	1	n.蜘蛛	1
+12	butterfly	Unit11_1	1	n.蝴蝶	1
+12	dragonfly	Unit11_1	1	n.蜻蜓	1
+12	help	Unit11_1	1	vt.帮助	1
+12	fly	Unit11_1	1	vt.飞	1
+12	cockroach	Unit11_1	1	n.蟑螂	1
+12	have	Unit11_1	1	v.有	1
+13	shark	Unit12_1	1	n.鲨鱼	1
+13	whale	Unit12_1	1	n.鲸	1
+13	seal	Unit12_1	1	n.海豹	1
+13	dolphin	Unit12_1	1	n.海豚	1
+13	sea horse	Unit12_1	1	n.海马	1
+13	their	Unit12_1	1	pron.他们的	1
+13	there are	Unit12_1	1	有（表存在的句型）	1

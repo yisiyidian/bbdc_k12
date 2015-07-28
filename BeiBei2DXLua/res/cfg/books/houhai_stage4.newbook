@@ -1,0 +1,1373 @@
+1	contagious	1A_1	8	adj.传染性的	1
+1	chubby	1A_1	8	adj.圆胖的	1
+1	creeping	1A_1	8	adj. 爬行的（现在分词）	1
+2	current	1A_2	8	adj.现在的	1
+2	bucket	1A_2	8	n.水桶	1
+2	complaint	1A_2	8	n.抱怨	1
+2	character	1A_2	8	n.个性	1
+2	embrace	1A_2	8	n.拥抱	1
+2	manner	1A_2	8	n.方式	1
+2	magnificent	1A_2	8	adj.壮丽的	1
+2	Incense	1A_2	8	n.香	1
+2	navigate	1A_2	8	vi.航行	1
+3	observed	1A_3	8	adj. 观察的	1
+3	overlapping	1A_3	8	adj. 重叠	1
+3	offspring	1A_3	8	n.子孙	1
+3	Pine	1A_3	8	n.松树	1
+3	statue	1A_3	8	n.塑像	1
+3	submarine	1A_3	8	n.潜水艇	1
+3	tunnels	1A_3	8	n.隧道	1
+3	triple	1A_3	8	adj.三倍的	1
+3	stroke	1A_3	8	n.中风	1
+4	string	1A_4	8	n.线	1
+4	retrieve	1A_4	8	vt.恢复	1
+4	turtles	1A_4	8	n. 乌龟（复数）	1
+4	remote	1A_4	8	adj.遥远的	1
+4	vista	1A_4	8	n.街景	1
+4	unpredictable	1A_4	8	adj.不可预知的	1
+4	poet	1A_4	8	n.诗人	1
+4	soul	1A_4	8	n.灵魂	1
+4	extracts	1A_4	8	vt.摘录	1
+5	masterpiece	1A_5	8	n.杰作	1
+5	narrow	1A_5	8	adj.狭窄的	1
+5	spirit	1A_5	8	n.精神	1
+5	stomach	1A_5	8	n.胃	1
+5	navigate	1A_5	8	vi.航行	1
+5	resemble	1A_5	8	v.像	1
+5	declare	1A_5	8	vt.&vi.宣布	1
+5	concrete	1A_5	8	n.水泥	1
+5	piled	1A_5	8	adj. 有细毛的（过去分词）	1
+6	embrace	1A_6	8	n.拥抱	1
+6	offspring	1A_6	8	n.子孙	1
+6	cliff	1A_6	8	n.悬崖	1
+6	retain	1A_6	8	vt.保持	1
+6	necklace	1A_6	8	n.项链	1
+6	retrieve	1A_6	8	vt.恢复	1
+6	modest	1A_6	8	adj.谦虚的	1
+6	artistic	1A_6	8	adj.艺术的	1
+6	spiritual	1A_6	8	n. 圣歌	1
+7	philosopher	1A_7	8	n.哲学家	1
+7	commence	1A_7	8	vt.&vi.开始	1
+7	embrace	1A_7	8	n.拥抱	1
+7	flee	1A_7	8	vi.逃跑	1
+7	navigate	1A_7	8	vi.航行	1
+7	overlap	1A_7	8	n.重叠	1
+7	resemble	1A_7	8	v.像	1
+7	contagious	1A_7	8	adj.传染性的	1
+7	ferry	1A_7	8	n.渡船	1
+7	retrieve	1A_7	8	vt.恢复	1
+8	philosopher	1A_8	8	n.哲学家	1
+8	shrine	1A_8	8	n.圣地	1
+8	chubby	1A_8	8	adj.圆胖的	1
+8	vista	1A_8	8	n.街景	1
+8	creep	1A_8	8	vi.爬	1
+8	caress	1A_8	8	n.爱抚	1
+8	offspring	1A_8	8	n.子孙	1
+8	perilous	1A_8	8	adj.危险的	1
+8	gravestone	1A_8	8	n. 墓碑	1
+8	quirky	1A_8	8	adj. 古怪的	1
+9	ideal	1B_1	5	adj.理想的	1
+9	route	1B_1	5	n.路线	1
+9	glare	1B_1	5	n.闪耀光	1
+9	obsessed	1B_1	5	adj. 着迷的	1
+9	passion	1B_1	5	n.激情	1
+9	motivate	1B_1	5	v.刺激	1
+9	fluent	1B_1	5	adj.流利的	1
+9	amateur	1B_1	5	adj.业余(爱好者)的	1
+9	anticipate	1B_1	5	vt.预期	1
+9	concentrate	1B_1	5	vt.&vi.专心于	1
+10	erupt	1B_2	5	v.爆发	1
+10	crater	1B_2	5	n.弹坑	1
+10	fume	1B_2	5	n.臭气	1
+10	glacier	1B_2	5	n.冰川	1
+10	arrest	1B_2	5	n.逮捕	1
+10	framing	1B_2	5	n. 框架	1
+10	improvisation	1B_2	5	n. 即兴创作	1
+10	swift	1B_2	5	adj.快的	1
+10	caretaker	1B_2	5	n. 看管者	1
+10	craft	1B_2	5	n.工艺	1
+11	caption	1B_3	5	n.说明文字	1
+11	care	1B_3	5	n.小心	1
+11	compile	1B_3	5	v.编译	1
+11	essentially	1B_3	5	adv.本质上	1
+11	economic	1B_3	5	adj.经济学的	1
+11	glare	1B_3	5	n.闪耀光	1
+11	improvise	1B_3	5	v.即席写作	1
+11	obsessed	1B_3	5	adj. 着迷的	1
+11	photography	1B_3	5	n.摄影术	1
+11	professional	1B_3	5	adj.职业(上)的	1
+12	property	1B_4	5	n.财产	1
+12	passion	1B_4	5	n.激情	1
+12	obsessed	1B_4	5	adj. 着迷的	1
+12	renew	1B_4	5	vt.使更新	1
+12	tough	1B_4	5	adj.强硬的	1
+12	swift	1B_4	5	adj.快的	1
+12	visual	1B_4	5	adj.视觉的	1
+12	avoid	1B_4	5	v.避免	1
+12	amateur	1B_4	5	adj.业余(爱好者)的	1
+13	obsessed	1B_5	5	adj. 着迷的	1
+13	visual	1B_5	5	adj.视觉的	1
+13	arrested	1B_5	5	adj. 逮捕的（过去分词）	1
+13	translation	1B_5	5	n.翻译	1
+13	mention	1B_5	5	vt.提到	1
+13	anticipate	1B_5	5	vt.预期	1
+13	improvise	1B_5	5	v.即席写作	1
+13	motivation	1B_5	5	n.动机	1
+13	passion	1B_5	5	n.激情	1
+14	inherent	2A_1	7	adj.内在的	1
+14	trigger	2A_1	7	n.触发器	1
+14	mutual	2A_1	7	adj.共同的	1
+14	norm	2A_1	7	n.标准	1
+14	abundant	2A_1	7	adj.丰富的	1
+14	inclination	2A_1	7	n.倾向	1
+14	romance	2A_1	7	n.浪漫史	1
+14	recruit	2A_1	7	n.招聘	1
+14	defiance	2A_1	7	n.蔑视	1
+14	affection	2A_1	7	n.慈爱	1
+15	anthropology	2A_2	7	n.人类学	1
+15	The	2A_2	7	art.这(那)	1
+15	prehistoric	2A_2	7	adj.史前的	1
+15	insult	2A_2	7	vt.侮辱	1
+15	psychiatry	2A_2	7	n.精神病学	1
+15	immune	2A_2	7	adj.免疫的	1
+15	sweat	2A_2	7	n.汗	1
+15	biochemistry	2A_2	7	n. 生物化学	1
+15	lovesick	2A_2	7	adj. 害相思病的	1
+15	infancy	2A_2	7	n.婴儿期	1
+16	constant	2A_3	7	adj.不变的	1
+16	break	2A_3	7	v.打破	1
+16	groom	2A_3	7	n.马夫	1
+16	hypothesize	2A_3	7	v.假设	1
+16	genetic	2A_3	7	adj.基因的	1
+16	fascinated	2A_3	7	adj. 着迷的（过去分词）	1
+16	hormone	2A_3	7	n.荷尔蒙	1
+16	measure	2A_3	7	n.措施	1
+16	insult	2A_3	7	vt.侮辱	1
+16	inclination	2A_3	7	n.倾向	1
+17	mate	2A_4	7	n.配偶	1
+17	immune	2A_4	7	adj.免疫的	1
+17	infancy	2A_4	7	n.婴儿期	1
+17	infant	2A_4	7	n.婴儿	1
+17	mutual	2A_4	7	adj.共同的	1
+17	prehistoric	2A_4	7	adj.史前的	1
+17	offensive	2A_4	7	n.进攻	1
+17	overwhelming	2A_4	7	adj. 压倒性的	1
+17	neutral	2A_4	7	adj.中立的	1
+17	passion	2A_4	7	n.激情	1
+18	practical	2A_5	7	adj.实际的	1
+18	promotes	2A_5	7	vt.促进	1
+18	patient	2A_5	7	n.病人	1
+18	romantic	2A_5	7	adj.浪漫的	1
+18	survey	2A_5	7	n.调查	1
+18	ratio	2A_5	7	n.比	1
+18	therefore	2A_5	7	adv.因此	1
+18	rugged	2A_5	7	adj.高低不平的	1
+18	sound	2A_5	7	n.声音渐增	1
+18	recruit	2A_5	7	n.招聘	1
+18	reward	2A_5	7	vt.奖赏	1
+19	trigger	2A_6	7	n.触发器	1
+19	universal	2A_6	7	adj.普遍的	1
+19	romance	2A_6	7	n.浪漫史	1
+19	survey	2A_6	7	n.调查	1
+19	offensive	2A_6	7	n.进攻	1
+19	affection	2A_6	7	n.慈爱	1
+19	inclination	2A_6	7	n.倾向	1
+19	inherent	2A_6	7	adj.内在的	1
+19	hypothesis	2A_6	7	n.假设	1
+19	immune	2A_6	7	adj.免疫的	1
+19	overwhelming	2A_6	7	adj. 压倒性的	1
+20	recruit	2A_7	7	n.招聘	1
+20	neutral	2A_7	7	adj.中立的	1
+20	fascinated	2A_7	7	adj. 着迷的（过去分词）	1
+20	reward	2A_7	7	vt.奖赏	1
+20	attention	2A_7	7	n.注意(力)	1
+20	infant	2A_7	7	n.婴儿	1
+20	bond	2A_7	7	n.结合	1
+20	decline	2A_7	7	v.降低	1
+20	hormone	2A_7	7	n.荷尔蒙	1
+20	trigger	2A_7	7	n.触发器	1
+20	magnetic	2A_7	7	adj.有磁性的	1
+21	dense	2B_1	6	adj.不易看透的	1
+21	absurd	2B_1	6	adj.荒唐的	1
+21	prominent	2B_1	6	adj.突出的	1
+21	species	2B_1	6	n. [生物] 物种	1
+21	undergo	2B_1	6	vt.遭受	1
+21	evoke	2B_1	6	vt.唤起	1
+21	harsh	2B_1	6	adj.粗糙的	1
+21	ritual	2B_1	6	n.仪式	1
+21	noble	2B_1	6	adj.高尚的	1
+21	bounce	2B_1	6	n.跳	1
+22	ballerina	2B_2	6	n.芭蕾舞女演员	1
+22	flap	2B_2	6	n.拍打	1
+22	contradiction	2B_2	6	n.反驳	1
+22	predator	2B_2	6	n.食肉动物	1
+22	swamp	2B_2	6	n.沼泽	1
+22	warrior	2B_2	6	n.勇士	1
+22	breed	2B_2	6	vt.繁殖	1
+22	logging	2B_2	6	n. 记录	1
+22	mining	2B_2	6	n. 矿业	1
+22	yam	2B_2	6	n. 薯蓣	1
+23	vine	2B_3	6	n.攀爬植物	1
+23	costume	2B_3	6	n.服装	1
+23	blues	2B_3	6	n.布鲁斯音乐	1
+23	brilliantly	2B_3	6	adv. 灿烂地	1
+23	comparison	2B_3	6	n.比较	1
+23	conservationist	2B_3	6	n.自然资源保护论者	1
+23	counterpart	2B_3	6	n.职位（或作用）相当的人	1
+23	humid	2B_3	6	adj.潮湿的	1
+23	flap	2B_3	6	n.拍打	1
+23	favored	2B_3	6	adj. 有利的	1
+24	humid	2B_4	6	adj.潮湿的	1
+24	habitat	2B_4	6	n.(动植物的)产地	1
+24	isolate	2B_4	6	adj.孤立的	1
+24	noticeable	2B_4	6	adj.显而易见的	1
+24	predator	2B_4	6	n.食肉动物	1
+24	perfect	2B_4	6	adj.完美的	1
+24	permit	2B_4	6	n.许可证	1
+24	prospecting	2B_4	6	n. 探矿	1
+24	worthy	2B_4	6	adj.有价值的	1
+24	sharply	2B_4	6	adv.锐利地	1
+25	specialize	2B_5	6	vi.专门从事	1
+25	swamp	2B_5	6	n.沼泽	1
+25	strategy	2B_5	6	n.战略	1
+25	unique	2B_5	6	adj.独一无二的	1
+25	version	2B_5	6	n.版本	1
+25	varied	2B_5	6	adj.各种各样的	1
+25	audience	2B_5	6	n.听众	1
+25	absurd	2B_5	6	adj.荒唐的	1
+25	costume	2B_5	6	n.服装	1
+25	version	2B_5	6	n.版本	1
+26	flap	2B_6	6	n.拍打	1
+26	undergone	2B_6	6	vt.经历	1
+26	swamp	2B_6	6	n.沼泽	1
+26	barrier	2B_6	6	n.界线	1
+26	distinct	2B_6	6	adj.(from)独特的	1
+26	isolate	2B_6	6	adj.孤立的	1
+26	evoke	2B_6	6	vt.唤起	1
+26	capture	2B_6	6	n.抓取	1
+26	welfare	2B_6	6	n.福利	1
+27	contamination	3A_1	7	n.污染	1
+27	nationwide	3A_1	7	adj.全国性的	1
+27	integral	3A_1	7	adj.完整的	1
+27	compulsory	3A_1	7	adj.被强制的	1
+27	diligent	3A_1	7	adj.勤奋的	1
+27	confine	3A_1	7	n. 界限	1
+27	digestive	3A_1	7	adj.消化的	1
+27	feasible	3A_1	7	adj.可行的	1
+27	optimistic	3A_1	7	adj.乐观的	1
+27	virulent	3A_1	7	adj.有毒的	1
+28	outbreak	3A_2	7	n.爆发	1
+28	foodborne	3A_2	7	adj. 食物传染的	1
+28	compelling	3A_2	7	adj.强制的	1
+28	colon	3A_2	7	n.冒号	1
+28	epidemiologist	3A_2	7	n. 流行病学家	1
+28	recall	3A_2	7	n.回忆	1
+28	sanitary	3A_2	7	adj. 卫生的	1
+28	flock	3A_2	7	n.一群	1
+28	contaminate	3A_2	7	vt.弄脏	1
+28	blame	3A_2	7	vt.责备	1
+29	board	3A_3	7	n.木板	1
+29	contamination	3A_3	7	n.污染	1
+29	computer	3A_3	7	n.计算机	1
+29	code	3A_3	7	n.码	1
+29	digestion	3A_3	7	n.消化	1
+29	efficiency	3A_3	7	n.效率	1
+29	determine	3A_3	7	vt.决定	1
+29	eliminate	3A_3	7	v.除去	1
+29	diligently	3A_3	7	adv. 勤奋地	1
+29	hide	3A_3	7	vt.隐藏	1
+30	facility	3A_4	7	n.设备	1
+30	flock	3A_4	7	n.一群	1
+30	feasible	3A_4	7	adj.可行的	1
+30	integral	3A_4	7	adj.完整的	1
+30	multiply	3A_4	7	vt.乘	1
+30	incident	3A_4	7	n.事件	1
+30	locally	3A_4	7	adv.地方性地	1
+30	lettuce	3A_4	7	n.[园艺]生菜	1
+30	outbreak	3A_4	7	n.爆发	1
+30	otherwise	3A_4	7	adv.否则	1
+31	noted	3A_5	7	adj.著名的	1
+31	priority	3A_5	7	n.优先权	1
+31	packed	3A_5	7	adj. 充满…的	1
+31	optimistic	3A_5	7	adj.乐观的	1
+31	pioneers	3A_5	7	n. 先锋（复数）	1
+31	widespread	3A_5	7	adj.分布(或散布)广的	1
+31	raw	3A_5	7	adj.生的	1
+31	retail	3A_5	7	n.零售	1
+31	tube	3A_5	7	n.管	1
+31	sponge	3A_5	7	n.海绵	1
+32	trends	3A_6	7	n. 动态	1
+32	solely	3A_6	7	adv.独自地	1
+32	recall	3A_6	7	n.回忆	1
+32	virtually	3A_6	7	adv.几乎	1
+32	bacteria	3A_6	7	n.(复数)细菌	1
+32	outbreak	3A_6	7	n.爆发	1
+32	integral	3A_6	7	adj.完整的	1
+32	intestine	3A_6	7	adj.国内的	1
+32	sponge	3A_6	7	n.海绵	1
+32	towel	3A_6	7	n.毛巾	1
+33	confine	3A_7	7	n. 界限	1
+33	prevent	3A_7	7	v.防止	1
+33	poisoning	3A_7	7	n. 中毒	1
+33	previous	3A_7	7	adj.以前的	1
+33	flock	3A_7	7	n.一群	1
+33	nationwide	3A_7	7	adj.全国性的	1
+33	occurrence	3A_7	7	n.发生	1
+33	eliminate	3A_7	7	v.除去	1
+33	feasible	3A_7	7	adj.可行的	1
+33	ultraviolet	3A_7	7	adj.紫外线的	1
+34	allergy	3B_1	6	n.敏感症	1
+34	conventional	3B_1	6	adj.普通的	1
+34	diminish	3B_1	6	vt.减少	1
+34	revolution	3B_1	6	n.革命	1
+34	nutrition	3B_1	6	n.营养	1
+34	pest	3B_1	6	n.害虫	1
+34	gene	3B_1	6	n.基因	1
+34	skeptic	3B_1	6	n.怀疑者	1
+34	notwithstanding	3B_1	6	adv.虽然	1
+34	trait	3B_1	6	n.特征	1
+34	inch	3B_1	6	n.英寸	1
+35	foot	3B_2	6	n.脚	1
+35	weed	3B_2	6	n.杂草	1
+35	implicate	3B_2	6	vt.纠缠(使...绕住	1
+35	protein	3B_2	6	adj.蛋白质的	1
+35	host	3B_2	6	v.主办	1
+35	pesticide	3B_2	6	n.杀虫剂	1
+35	malnourished	3B_2	6	adj. 营养不良的	1
+35	deficiency	3B_2	6	n.缺乏	1
+35	beta-carotene	3B_2	6	β-胡萝卜素	1
+35	benefit	3B_2	6	n.利益	1
+35	characteristic	3B_2	6	n.特征	1
+36	cousin	3B_3	6	n.堂(或表)兄弟(姐妹)	1
+36	crime	3B_3	6	n.犯罪	1
+36	claim	3B_3	6	vt.要求	1
+36	brand	3B_3	6	n.牌子	1
+36	compromise	3B_3	6	n.妥协	1
+36	dramatically	3B_3	6	adv. 戏剧地	1
+36	deficiency	3B_3	6	n.缺乏	1
+36	exaggerate	3B_3	6	vt.&vi.夸大	1
+36	diminish	3B_3	6	vt.减少	1
+36	insert	3B_3	6	vt.&vi.插入	1
+36	inherit	3B_3	6	vi.继承	1
+37	lower	3B_4	6	v.降低	1
+37	nutritional	3B_4	6	adj.营养的	1
+37	notwithstanding	3B_4	6	adv.虽然	1
+37	organism	3B_4	6	n.生物体	1
+37	protein	3B_4	6	adj.蛋白质的	1
+37	pesticide	3B_4	6	n.杀虫剂	1
+37	nutritional	3B_4	6	adj.营养的	1
+37	pest	3B_4	6	n.害虫	1
+37	weeds	3B_4	6	n. 野草（复数）	1
+37	salmon	3B_4	6	adj.橙红色的	1
+38	revolution	3B_5	6	n.革命	1
+38	rushed	3B_5	6	adj. 匆忙的	1
+38	so-called	3B_5	6	所谓的	1
+38	soybean	3B_5	6	n.大豆	1
+38	tendency	3B_5	6	n.趋势	1
+38	suited	3B_5	6	adj.适合的	1
+38	shortage	3B_5	6	n.不足	1
+38	solution	3B_5	6	n.解决办法	1
+38	rewards	3B_5	6	n. [劳经] 奖励（复数）	1
+38	urgent	3B_5	6	adj.急迫的	1
+39	alteration	3B_6	6	n.改变	1
+39	conventional	3B_6	6	adj.普通的	1
+39	inserted	3B_6	6	adj. 插入的	1
+39	weeds	3B_6	6	n. 野草（复数）	1
+39	allergic	3B_6	6	adj.过敏的	1
+39	argue	3B_6	6	vt.争论	1
+39	alternative	3B_6	6	adj.两者择一的	1
+39	protein	3B_6	6	adj.蛋白质的	1
+39	avoid	3B_6	6	v.避免	1
+39	outweigh	3B_6	6	v.比...为重	1
+40	colleague	4A_1	6	n.同事	1
+40	device	4A_1	6	n.装置	1
+40	gap	4A_1	6	n.(意见、个性等的)差异	1
+40	vital	4A_1	6	adj.至关重要的	1
+40	gradual	4A_1	6	adj.逐渐的	1
+40	insight	4A_1	6	n.洞察力	1
+40	nonetheless	4A_1	6	adv.尽管如此(仍然)	1
+40	reproduce	4A_1	6	v.再生	1
+40	riddle	4A_1	6	n.谜	1
+40	vertical	4A_1	6	adj.垂直的	1
+41	drenched	4A_2	6	adj.湿透的	1
+41	biological	4A_2	6	adj. 生物的	1
+41	amber	4A_2	6	n.琥珀色	1
+41	pragmatism	4A_2	6	n. 实用主义	1
+41	utility	4A_2	6	n.效用	1
+41	termite	4A_2	6	n.白蚁	1
+41	architect	4A_2	6	n.建筑师	1
+41	proboscis	4A_2	6	n. 鼻子	1
+41	surveillance	4A_2	6	n.监视	1
+41	replicate	4A_2	6	vt.&vi.折叠	1
+42	colleague	4A_3	6	n.同事	1
+42	combination	4A_3	6	n.结合	1
+42	brilliant	4A_3	6	adj.杰出的	1
+42	evolutionary	4A_3	6	adj.发展的	1
+42	exclaime	4A_3	6	v.大叫	1
+42	drenched	4A_3	6	adj.湿透的	1
+42	essence	4A_3	6	n.本质	1
+42	device	4A_3	6	n.装置	1
+42	experimental	4A_3	6	adj.实验(性)的	1
+42	enthusiasm	4A_3	6	v.&n.热情	1
+43	efficient	4A_4	6	adj.效率高的	1
+43	downward	4A_4	6	adj.向下的	1
+43	fascinate	4A_4	6	vt.使...入迷	1
+43	humidity	4A_4	6	n.湿度	1
+43	gradually	4A_4	6	adv.逐渐地	1
+43	inspire	4A_4	6	vt.激发	1
+43	insight	4A_4	6	n.洞察力	1
+43	mosquito	4A_4	6	n.蚊子	1
+43	military	4A_4	6	adj.军事的	1
+43	lizard	4A_4	6	n.蜥蜴	1
+44	phase	4A_5	6	n.相	1
+44	precisely	4A_5	6	adv.精确地	1
+44	promising	4A_5	6	adj.有希望的	1
+44	observed	4A_5	6	adj. 观察的	1
+44	panel	4A_5	6	n.镶板	1
+44	project	4A_5	6	n.工程	1
+44	nest	4A_5	6	n.巢	1
+44	Nonetheless	4A_5	6	adv.尽管如此(仍然)	1
+44	riddle	4A_5	6	n.谜	1
+44	sufficient	4A_5	6	adj.充足的	1
+44	replicate	4A_5	6	vt.&vi.折叠	1
+45	termites	4A_6	6	n. 白蚁类	1
+45	replicate	4A_6	6	vt.&vi.折叠	1
+45	vital	4A_6	6	adj.至关重要的	1
+45	utility	4A_6	6	n.效用	1
+45	vertical	4A_6	6	adj.垂直的	1
+45	thorny	4A_6	6	adj.多刺的	1
+45	lizard	4A_6	6	n.蜥蜴	1
+45	whale	4A_6	6	n.鲸	1
+45	complicated	4A_6	6	adj.复杂的	1
+45	applications	4A_6	6	n. 应用（复数）	1
+45	complex	4A_6	6	adj.复杂的	1
+46	fantasy	4B_1	7	n.幻想	1
+46	foresee	4B_1	7	v.预见	1
+46	forthcoming	4B_1	7	adj.即将到来的	1
+46	rigid	4B_1	7	adj.僵硬的	1
+46	suspend	4B_1	7	v.暂停	1
+46	thereby	4B_1	7	adv.因此	1
+46	fraction	4B_1	7	n.分数	1
+46	gravity	4B_1	7	n.地心引力	1
+46	military	4B_1	7	adj.军事的	1
+46	portable	4B_1	7	adj.手提式的	1
+47	textile	4B_2	7	adj.纺织的	1
+47	fiber	4B_2	7	n.纤维(物质)	1
+47	vibrate	4B_2	7	vt.(使)振动	1
+47	soluble	4B_2	7	adj.可溶解的	1
+47	orbit	4B_2	7	n.轨迹	1
+47	sensor	4B_2	7	n.传感器	1
+47	hangar	4B_2	7	n.飞机库	1
+47	beat	4B_2	7	vt.&vi.打	1
+47	command	4B_2	7	n.命令	1
+47	charter	4B_2	7	n.特许(状)	1
+48	effectively	4B_3	7	adv. 有效地	1
+48	executive	4B_3	7	adj.执行的	1
+48	dissolve	4B_3	7	vi.溶解	1
+48	element	4B_3	7	n.元素	1
+48	dimension	4B_3	7	n.尺寸	1
+48	director	4B_3	7	n.导演	1
+48	diameter	4B_3	7	n.直径	1
+48	essentially	4B_3	7	adv.本质上	1
+48	fashion	4B_3	7	n.流行	1
+48	fraction	4B_3	7	n.分数	1
+49	gravity	4B_4	7	n.地心引力	1
+49	fiction	4B_4	7	n.小说	1
+49	instrument	4B_4	7	n.仪器	1
+49	proof	4B_4	7	n.证明	1
+49	orbit	4B_4	7	n.轨迹	1
+49	passive	4B_4	7	adj.被动的	1
+49	outfit	4B_4	7	n.用具	1
+49	portable	4B_4	7	adj.手提式的	1
+49	alternative	4B_4	7	adj.两者择一的	1
+49	applications	4B_4	7	n. 应用（复数）	1
+50	adjust	4B_5	7	vt.调整	1
+50	appliance	4B_5	7	n.器具	1
+50	weaver	4B_5	7	n.织布者	1
+50	wool	4B_5	7	n.毛线	1
+50	wearable	4B_5	7	adj. 可穿用的	1
+50	wearer	4B_5	7	n. 佩带者	1
+50	technologically	4B_5	7	adv. 科技地	1
+50	suspended	4B_5	7	adj. 悬浮的	1
+50	subway	4B_5	7	n.地铁	1
+50	textile	4B_5	7	adj.纺织的	1
+51	synthetic	4B_6	7	adj.综合的	1
+51	spill	4B_6	7	v.溢出	1
+51	soluble	4B_6	7	adj.可溶解的	1
+51	thereby	4B_6	7	adv.因此	1
+51	ratio	4B_6	7	n.比	1
+51	replace	4B_6	7	vt.取代	1
+51	rigid	4B_6	7	adj.僵硬的	1
+51	vibrations	4B_6	7	n. [力] 振动（复数）	1
+51	uniform	4B_6	7	n.制服	1
+52	vibrate	4B_7	7	vt.(使)振动	1
+52	absorb	4B_7	7	v.吸收	1
+52	artificial	4B_7	7	adj.人造的	1
+52	innovation	4B_7	7	n.创新	1
+52	conservative	4B_7	7	adj.保守的	1
+52	military	4B_7	7	adj.军事的	1
+52	fraction	4B_7	7	n.分数	1
+52	beam	4B_7	7	n.光线	1
+52	astonishing	4B_7	7	adj.惊人的	1
+53	bury	5A_1	5	vt.埋葬	1
+53	conquer	5A_1	5	vt.征服	1
+53	descendant	5A_1	5	n.子孙	1
+53	bulk	5A_1	5	n.大部分	1
+53	mainland	5A_1	5	n.大陆	1
+53	immense	5A_1	5	adj.巨大的	1
+53	refine	5A_1	5	vt.精炼	1
+53	scatter	5A_1	5	n.散布	1
+53	vanish	5A_1	5	vi.消失	1
+54	proof	5A_2	5	n.证明	1
+54	conquest	5A_2	5	n.征服	1
+54	campfire	5A_2	5	n. 营火	1
+54	artifact	5A_2	5	n.人工制品(制造物	1
+54	geneticist	5A_2	5	n. 遗传学者	1
+54	stall	5A_2	5	n.货摊	1
+54	imperceptible	5A_2	5	adj.不能感知的	1
+54	archeology	5A_2	5	n. 考古学	1
+54	indigenous	5A_2	5	adj.该土地所固有的	1
+55	herd	5A_3	5	n.兽群	1
+55	countless	5A_3	5	adj.无数的	1
+55	chromosome	5A_3	5	n.染色体	1
+55	compare	5A_3	5	vt.&vi.比较	1
+55	calculate	5A_3	5	vt.计算	1
+55	beach	5A_3	5	n.海滩	1
+55	chain	5A_3	5	n.链	1
+55	expand	5A_3	5	vt.增加	1
+55	descent	5A_3	5	n.下落	1
+56	identical	5A_4	5	adj.相同的	1
+56	individual	5A_4	5	adj.个人的	1
+56	indigenous	5A_4	5	adj.该土地所固有的	1
+56	immense	5A_4	5	adj.巨大的	1
+56	ornament	5A_4	5	n.装饰	1
+56	Peninsula	5A_4	5	n.半岛	1
+56	outline	5A_4	5	n.大纲	1
+56	refined	5A_4	5	adj.精炼的	1
+56	trace	5A_4	5	n.痕迹	1
+57	vanished	5A_5	5	n. 销声匿迹	1
+57	virtually	5A_5	5	adv.几乎	1
+57	ancestor	5A_5	5	n.祖先	1
+57	refined	5A_5	5	adj.精炼的	1
+57	bulk	5A_5	5	n.大部分	1
+57	ancestor	5A_5	5	n.祖先	1
+57	temporarily	5A_5	5	adj.临时的	1
+57	analyze	5A_5	5	v.分析	1
+57	outline	5A_5	5	n.大纲	1
+57	artifacts	5A_5	5	n. 史前古器物	1
+58	analogous	5B_1	5	adj.类似的	1
+58	boundary	5B_1	5	n.边界	1
+58	conceivable	5B_1	5	adj. 可想象的	1
+58	disrupt	5B_1	5	adj.分裂的	1
+58	intact	5B_1	5	adj.尚未被人碰过的	1
+58	interval	5B_1	5	n.间隔	1
+58	outdo	5B_1	5	vt.超过	1
+58	stretch	5B_1	5	n.伸展	1
+58	stubborn	5B_1	5	adj.顽固的	1
+58	revere	5B_1	5	v.尊敬	1
+59	carnival	5B_2	5	n.嘉年华会	1
+59	canoe	5B_2	5	n.独木舟	1
+59	feat	5B_2	5	n.功绩	1
+59	expand	5B_2	5	vt.增加	1
+59	oral	5B_2	5	adj.口头的	1
+59	archipelago	5B_2	5	n.群岛	1
+59	twig	5B_2	5	n.小枝	1
+59	atoll	5B_2	5	n. [海洋] 环礁	1
+59	horizon	5B_2	5	n.地平线	1
+59	barbecue	5B_2	5	n.烤肉	1
+60	canoe	5B_3	5	n.独木舟	1
+60	colonize	5B_3	5	v.殖民	1
+60	champion	5B_3	5	n.冠军	1
+60	conceivable	5B_3	5	adj. 可想象的	1
+60	bush	5B_3	5	n.灌木(丛)	1
+60	expansion	5B_3	5	n.扩大	1
+60	due	5B_3	5	n.应有的	1
+60	heritage	5B_3	5	n.遗产	1
+60	former	5B_3	5	adj.以前的	1
+60	feat	5B_3	5	n.功绩	1
+61	horizon	5B_4	5	n.地平线	1
+61	interval	5B_4	5	n.间隔	1
+61	intact	5B_4	5	adj.尚未被人碰过的	1
+61	insight	5B_4	5	n.洞察力	1
+61	oral	5B_4	5	adj.口头的	1
+61	navigate	5B_4	5	vi.航行	1
+61	phenomenon	5B_4	5	n.现象	1
+61	spectators	5B_4	5	n. 观众（复数）	1
+61	revere	5B_4	5	v.尊敬	1
+61	shore	5B_4	5	n.岸	1
+61	stretch	5B_4	5	n.伸展	1
+62	stubborn	5B_5	5	adj.顽固的	1
+62	reveal	5B_5	5	vt.显示	1
+62	reverse	5B_5	5	v.颠倒	1
+62	voyager	5B_5	5	n.航海者	1
+62	heritage	5B_5	5	n.遗产	1
+62	accomplished	5B_5	5	adj.娴熟的	1
+62	admire	5B_5	5	vt.钦佩	1
+62	twig	5B_5	5	n.小枝	1
+62	frequent	5B_5	5	adj.经常的	1
+62	blowing	5B_5	5	n. 吹（现在分词）	1
+62	horizon	5B_5	5	n.地平线	1
+63	adjacent	6A_1	6	adj.毗连的	1
+63	authentic	6A_1	6	adj.可靠的	1
+63	supplement	6A_1	6	n.补充物	1
+63	confront	6A_1	6	vt.面临	1
+63	devastate	6A_1	6	vt.毁坏	1
+63	found	6A_1	6	vt.创办	1
+63	fraud	6A_1	6	n.骗子	1
+63	harmony	6A_1	6	n.和睦	1
+63	secluded	6A_1	6	adj.隐蔽的	1
+63	taunt	6A_1	6	n.辱骂	1
+64	nun	6A_2	6	n.尼姑	1
+64	trial	6A_2	6	n.试验	1
+64	speculate	6A_2	6	vt.推测	1
+64	cricket	6A_2	6	n.板球	1
+64	clash	6A_2	6	n.冲突	1
+64	prosecute	6A_2	6	vt.对...提起公诉	1
+64	plantation	6A_2	6	n.种植园	1
+64	chainsaw	6A_2	6	vt. 肢解	1
+64	community	6A_2	6	n.社区	1
+64	court	6A_2	6	n.法院	1
+65	crime	6A_3	6	n.犯罪	1
+65	base	6A_3	6	n.基底	1
+65	consideration	6A_3	6	n.考虑	1
+65	ecosystem	6A_3	6	n.生态系统	1
+65	destruction	6A_3	6	n.破坏	1
+65	ecology	6A_3	6	n.生态学	1
+65	drawer	6A_3	6	n.抽屉	1
+65	devastate	6A_3	6	vt.毁坏	1
+65	enforce	6A_3	6	vt.加强	1
+65	guilty	6A_3	6	adj.有罪的	1
+66	fake	6A_4	6	vt.伪造	1
+66	fraud	6A_4	6	n.骗子	1
+66	governor	6A_4	6	n.统治者	1
+66	feasible	6A_4	6	adj.可行的	1
+66	ignore	6A_4	6	vt.忽视	1
+66	justice	6A_4	6	n.正义	1
+66	plot	6A_4	6	n.情节梗概	1
+66	obtain	6A_4	6	vt.获得	1
+66	previous	6A_4	6	adj.以前的	1
+66	prosecute	6A_4	6	vt.对...提起公诉	1
+67	plantation	6A_5	6	n.种植园	1
+67	portray	6A_5	6	v.描写	1
+67	adjacent	6A_5	6	adj.毗连的	1
+67	permit	6A_5	6	n.许可证	1
+67	widespread	6A_5	6	adj.分布(或散布)广的	1
+67	rancher	6A_5	6	n.大牧场工人	1
+67	speculate	6A_5	6	vt.推测	1
+67	stocks	6A_5	6	n. [金融] 股票（复数）	1
+67	rainfall	6A_5	6	n.降雨	1
+67	recruit	6A_5	6	n.招聘	1
+68	sustainable	6A_6	6	adj. 可以持续的	1
+68	restrict	6A_6	6	v.限制	1
+68	radically	6A_6	6	adv.根本地	1
+68	supplement	6A_6	6	n.补充物	1
+68	sustainable	6A_6	6	adj. 可以持续的	1
+68	undertake	6A_6	6	vt.从事	1
+68	confront	6A_6	6	vt.面临	1
+68	atmosphere	6A_6	6	n.大气	1
+68	authentic	6A_6	6	adj.可靠的	1
+68	announced	6A_6	6	宣布的	1
+68	percentage	6A_6	6	n.百分率	1
+69	abolish	6B_1	5	vt.废止	1
+69	agitate	6B_1	5	vt.搅动	1
+69	chaos	6B_1	5	n.混乱	1
+69	collapse	6B_1	5	n.崩溃	1
+69	compile	6B_1	5	v.编译	1
+69	evade	6B_1	5	v.规避	1
+69	genuine	6B_1	5	adj.真正的	1
+69	instinct	6B_1	5	n.本能	1
+69	weapon	6B_1	5	n.武器	1
+69	withdraw	6B_1	5	vt.撤回	1
+70	mischievous	6B_2	5	adj.调皮的	1
+70	stab	6B_2	5	n.刺	1
+70	tusk	6B_2	5	n.牙	1
+70	zoology	6B_2	5	n.动物学	1
+70	bush	6B_2	5	n.灌木(丛)	1
+70	ivory	6B_2	5	n.象牙	1
+70	NGO	6B_2	5	abbr.非政府组织	1
+70	slaughter	6B_2	5	n.残杀	1
+70	collar	6B_2	5	n. 衣领	1
+70	continent	6B_2	5	n.大陆	1
+71	compile	6B_3	5	v.编译	1
+71	collapse	6B_3	5	n.崩溃	1
+71	band	6B_3	5	n.带;箍	1
+71	conceal	6B_3	5	vt.隐藏	1
+71	band	6B_3	5	n.带;箍	1
+71	cautiously	6B_3	5	adv. 慎重地	1
+71	evade	6B_3	5	v.规避	1
+71	genuine	6B_3	5	adj.真正的	1
+71	figure	6B_3	5	n. 数字	1
+71	funding	6B_3	5	n. 提供资金	1
+72	magnificent	6B_4	5	adj.壮丽的	1
+72	mischievous	6B_4	5	adj.调皮的	1
+72	instinct	6B_4	5	n.本能	1
+72	ivory	6B_4	5	n.象牙	1
+72	immensely	6B_4	5	adv. 极大地	1
+72	leather	6B_4	5	adj.皮革制的	1
+72	policy	6B_4	5	n.政策	1
+72	withdraw	6B_4	5	vt.撤回	1
+72	sunset	6B_4	5	n.日落	1
+72	retrieve	6B_4	5	vt.恢复	1
+72	suppose	6B_4	5	vt.假定	1
+73	unpredictable	6B_5	5	adj.不可预知的	1
+73	volunteer	6B_5	5	n.志愿者	1
+73	violent	6B_5	5	adj.暴力的	1
+73	reserve	6B_5	5	vt.保留	1
+73	camp	6B_5	5	n.露营	1
+73	agitation	6B_5	5	n.激动	1
+73	spatial	6B_5	5	adj.空间的	1
+73	automatic	6B_5	5	adj.自动的	1
+73	interaction	6B_5	5	n.相互作用	1
+73	chaos	6B_5	5	n.混乱	1
+73	acquire	6B_5	5	vt.占有	1
+74	exotic	7A_1	5	adj.异国的	1
+74	prejudice	7A_1	5	n.偏见	1
+74	overseas	7A_1	5	adj.海外的	1
+74	theme	7A_1	5	n.主题	1
+74	plot	7A_1	5	n.情节梗概	1
+74	folk	7A_1	5	adj.民间的	1
+74	rustic	7A_1	5	n.乡下人	1
+74	bet	7A_1	5	n.打赌	1
+74	online	7A_1	5	n.在线	1
+74	bald	7A_1	5	adj.秃头的	1
+75	swirl	7A_2	5	n.漩涡	1
+75	hectare	7A_2	5	n.公顷	1
+75	mansion	7A_2	5	n.大厦	1
+75	set	7A_2	5	v.设定	1
+75	wholesome	7A_2	5	adj.有益健康的	1
+75	heroine	7A_2	5	adj.英雄式的	1
+75	expatriate	7A_2	5	n.移居外国者	1
+75	CEO	7A_2	5	abbr. 首席执行官	1
+75	portrayal	7A_2	5	n.描绘	1
+75	BBC	7A_2	5	abbr. 英国广播公司	1
+76	exotic	7A_3	5	adj.异国的	1
+76	humid	7A_3	5	adj.潮湿的	1
+76	glamorous	7A_3	5	adj.富有魅力的	1
+76	fantasy	7A_3	5	n.幻想	1
+76	mansion	7A_3	5	n.大厦	1
+76	prefer	7A_3	5	vt.更喜欢	1
+76	overseas	7A_3	5	adj.海外的	1
+76	opportunity	7A_3	5	n.机会	1
+76	prominent	7A_3	5	adj.突出的	1
+76	portrayal	7A_3	5	n.描绘	1
+77	prejudice	7A_4	5	n.偏见	1
+77	poverty	7A_4	5	n.贫穷	1
+77	politics	7A_4	5	n.政治	1
+77	wonderland	7A_4	5	n. 奇境	1
+77	wholesome	7A_4	5	adj.有益健康的	1
+77	swirl	7A_4	5	n.漩涡	1
+77	rustic	7A_4	5	n.乡下人	1
+77	references	7A_4	5	n. [图情] 参考文献（复数）	1
+77	urban	7A_4	5	adj.城市的	1
+78	decorated	7A_5	5	adj. 装饰的	1
+78	romance	7A_5	5	n.浪漫史	1
+78	audience	7A_5	5	n.听众	1
+78	appeal	7A_5	5	v.呼吁	1
+78	rural	7A_5	5	adj.农村的	1
+78	mention	7A_5	5	vt.提到	1
+78	religion	7A_5	5	n.宗教;宗教信仰	1
+78	poverty	7A_5	5	n.贫穷	1
+78	broadcast	7A_5	5	n.广播	1
+79	chronic	7B_1	6	adj.长期的	1
+79	enrich	7B_1	6	vt.使富足	1
+79	frivolous	7B_1	6	adj.轻佻的	1
+79	grieve	7B_1	6	v.使...悲伤	1
+79	inhabitant	7B_1	6	n.居民	1
+79	likewise	7B_1	6	adv.同样地	1
+79	odd	7B_1	6	adj.古怪的	1
+79	practitioner	7B_1	6	n.从业者	1
+79	prosperous	7B_1	6	adj.繁荣的	1
+79	rhythm	7B_1	6	n.节奏	1
+80	prosperity	7B_2	6	n.繁荣	1
+80	marble	7B_2	6	adj.大理石的	1
+80	pomade	7B_2	6	vt. 涂以润发油	1
+80	racy	7B_2	6	adj. 生动的	1
+80	lament	7B_2	6	n.悲叹	1
+80	lyrics	7B_2	6	n. 歌词（复数）	1
+80	exhale	7B_2	6	v.呼气	1
+80	mourn	7B_2	6	v.哀悼	1
+80	classic	7B_2	6	adj.古典的	1
+80	composer	7B_2	6	n.创作者（尤指乐曲的）	1
+81	brilliant	7B_3	6	adj.杰出的	1
+81	composer	7B_3	6	n.创作者（尤指乐曲的）	1
+81	classical	7B_3	6	adj.古典的	1
+81	casually	7B_3	6	adv. 随便地	1
+81	evoke	7B_3	6	vt.唤起	1
+81	expressive	7B_3	6	adj.表达的	1
+81	enrich	7B_3	6	vt.使富足	1
+81	Unemployment	7B_3	6	n.失业	1
+81	frivolous	7B_3	6	adj.轻佻的	1
+81	fix	7B_3	6	vt.&vi.修理	1
+82	gentle	7B_4	6	adj.温和的	1
+82	marble	7B_4	6	adj.大理石的	1
+82	instruct	7B_4	6	v.指导	1
+82	inhabit	7B_4	6	v.居住于	1
+82	melodic	7B_4	6	adj.旋律优美的	1
+82	incorporate	7B_4	6	vi.合并	1
+82	musician	7B_4	6	n.音乐家	1
+82	likewise	7B_4	6	adv.同样地	1
+82	lament	7B_4	6	n.悲叹	1
+83	lyrics	7B_5	6	n. 歌词（复数）	1
+83	odd	7B_5	6	adj.古怪的	1
+83	prosperous	7B_5	6	adj.繁荣的	1
+83	orchestra	7B_5	6	n.管弦乐队	1
+83	sneakers	7B_5	6	n. 胶底运动鞋（复数）	1
+83	session	7B_5	6	n.会议	1
+83	unique	7B_5	6	adj.独一无二的	1
+83	leather	7B_5	6	adj.皮革制的	1
+83	abuse	7B_5	6	v.滥用	1
+84	belong	7B_6	6	vi.属于	1
+84	struggled	7B_6	6	vbl. 奋斗	1
+84	coincide	7B_6	6	v.与...一致	1
+84	shut	7B_6	6	adj.关闭的	1
+84	roll	7B_6	6	vi.翻滚	1
+84	disappointment	7B_6	6	n.失望	1
+84	antique	7B_6	6	adj.古代的	1
+84	afford	7B_6	6	vt.提供	1
+84	practitioner	7B_6	6	n.从业者	1
+85	symptom	8A_1	5	n.症状	1
+85	cease	8A_1	5	n.停止	1
+85	inconclusive	8A_1	5	adj.非决定性	1
+85	proponent	8A_1	5	n.建议者	1
+85	dispute	8A_1	5	n.争论;争吵	1
+85	compelling	8A_1	5	adj.强制的	1
+85	grand	8A_1	5	adj.宏伟的	1
+85	massive	8A_1	5	adj.巨大的	1
+85	relentless	8A_1	5	adj.无情的	1
+86	revenge	8A_2	5	n.报仇	1
+86	autopsy	8A_2	5	n.验尸	1
+86	ulcer	8A_2	5	n.&adj.溃疡	1
+86	toxicologist	8A_2	5	n. 毒理学家	1
+86	royalist	8A_2	5	n. 保皇主义者	1
+86	immunologist	8A_2	5	n. 免疫学者	1
+86	once	8A_2	5	adv.一次	1
+86	preeminent	8A_2	5	adj.卓越的	1
+86	aristocrat	8A_2	5	n.贵族	1
+87	Hold	8A_3	5	vt.拿住	1
+87	contained	8A_3	5	adj. 泰然自若的	1
+87	base	8A_3	5	n.基底	1
+87	beat	8A_3	5	vt.&vi.打	1
+87	cellar	8A_3	5	n.地窖	1
+87	court	8A_3	5	n.法院	1
+87	dispute	8A_3	5	n.争论;争吵	1
+87	discount	8A_3	5	n.折扣	1
+87	entertainment	8A_3	5	n.娱乐	1
+88	fair	8A_4	5	adj.公平的	1
+88	Invalid	8A_4	5	adj.无效的	1
+88	intentionally	8A_4	5	adv. 故意地	1
+88	proponent	8A_4	5	n.建议者	1
+88	preeminent	8A_4	5	adj.卓越的	1
+88	wiper	8A_4	5	n. 擦拭之物	1
+88	notwithstanding	8A_4	5	adv.虽然	1
+88	practitioner	8A_4	5	n.从业者	1
+88	deliberate	8A_4	5	adj.故意的	1
+89	convinced	8A_5	5	adj.信服的	1
+89	amateur	8A_5	5	adj.业余(爱好者)的	1
+89	battle	8A_5	5	n.战斗	1
+89	hypothesis	8A_5	5	n.假设	1
+89	massive	8A_5	5	adj.巨大的	1
+89	admit	8A_5	5	vt.&vi.承认	1
+89	symptom	8A_5	5	n.症状	1
+89	cellar	8A_5	5	n.地窖	1
+89	unlikely	8A_5	5	adj.不大可能发生的	1
+90	relay	8B_1	6	vt.中继	1
+90	commit	8B_1	6	v.委托(托付)	1
+90	install	8B_1	6	v.安装	1
+90	oppose	8B_1	6	vt.反对	1
+90	alert	8B_1	6	adj.警觉的	1
+90	regulate	8B_1	6	v.有系统的管理	1
+90	spy	8B_1	6	n.间谍	1
+90	ethical	8B_1	6	adj. 伦理的	1
+90	deter	8B_1	6	v.制止	1
+90	assure	8B_1	6	vt.保证	1
+91	come	8B_2	6	vi.来	1
+91	sociologist	8B_2	6	n. 社会学家	1
+91	negligible	8B_2	6	adj.可以忽略的	1
+91	CPR	8B_2	6	abbr. 心肺复苏术	1
+91	Pro	8B_2	6	adv. 赞成地	1
+91	referendum	8B_2	6	n.公民投票	1
+91	premise	8B_2	6	n.前提	1
+91	be	8B_2	6	prep.是	1
+91	constantly	8B_2	6	adv.不断地	1
+91	colleague	8B_2	6	n.同事	1
+92	crime	8B_3	6	n.犯罪	1
+92	consciousness	8B_3	6	n.意识	1
+92	commit	8B_3	6	v.委托(托付)	1
+92	beating	8B_3	6	n. 打	1
+92	community	8B_3	6	n.社区	1
+92	bloom	8B_3	6	n.花	1
+92	evade	8B_3	6	v.规避	1
+92	enforce	8B_3	6	vt.加强	1
+92	empower	8B_3	6	vt.授与权力	1
+92	favor	8B_3	6	n.偏爱	1
+93	install	8B_4	6	v.安装	1
+93	monitor	8B_4	6	n.班长	1
+93	lack	8B_4	6	vt.缺乏	1
+93	novel	8B_4	6	n.小说	1
+93	negligible	8B_4	6	adj.可以忽略的	1
+93	notwithstanding	8B_4	6	adv.虽然	1
+93	oppose	8B_4	6	vt.反对	1
+93	stadiums	8B_4	6	n. 体育馆	1
+93	regulate	8B_4	6	v.有系统的管理	1
+93	sustained	8B_4	6	adj.持久的	1
+94	vehicle	8B_5	6	n.车辆	1
+94	visible	8B_5	6	adj.可见的	1
+94	legal	8B_5	6	adj.法律的	1
+94	phrase	8B_5	6	n.短语	1
+94	presence	8B_5	6	n.出席	1
+94	regulate	8B_5	6	v.有系统的管理	1
+94	detect	8B_5	6	vt.检测	1
+94	installing	8B_5	6	n. 安装	1
+94	assume	8B_5	6	vt.假定	1
+94	recognition	8B_5	6	n.认出	1
+95	accused	8B_6	6	adj. 被控告的	1
+95	activate	8B_6	6	v.刺激	1
+95	approve	8B_6	6	vt.批准	1
+95	permanent	8B_6	6	adj.永久的	1
+95	debate	8B_6	6	n.辩论	1
+95	access	8B_6	6	vt.进入	1
+95	assure	8B_6	6	vt.保证	1
+95	advertise	8B_6	6	vi.登广告	1
+95	temporarily	8B_6	6	adj.临时的	1
+95	broadcast	8B_6	6	n.广播	1
+96	discipline	9A_1	6	n.纪律	1
+96	elegant	9A_1	6	adj.优雅的	1
+96	extent	9A_1	6	n.成都	1
+96	fierce	9A_1	6	adj.猛烈的	1
+96	infuriate	9A_1	6	adj.狂怒的	1
+96	numerous	9A_1	6	adj.为数众多的	1
+96	quotation	9A_1	6	n.引语	1
+96	reputation	9A_1	6	n.声誉	1
+96	seize	9A_1	6	vt.抓住	1
+96	utterly	9A_1	6	adv.完全	1
+96	misfortune	9A_1	6	n.不幸	1
+97	troop	9A_2	6	n.群	1
+97	artisan	9A_2	6	n.工匠	1
+97	surrender	9A_2	6	vt.&vi.投降	1
+97	weep	9A_2	6	n.悲叹	1
+97	chronicler	9A_2	6	n. 记录者	1
+97	resolute	9A_2	6	adj.坚决的	1
+97	epitaph	9A_2	6	n.墓志铭	1
+97	civilian	9A_2	6	n.平民	1
+97	beaten	9A_2	6	adj. 被打败了的	1
+97	balance	9A_2	6	n.平衡	1
+97	chronicler	9A_2	6	n. 记录者	1
+98	critically	9A_3	6	adv. 精密地	1
+98	consciously	9A_3	6	adv. 自觉地	1
+98	brilliant	9A_3	6	adj.杰出的	1
+98	execute	9A_3	6	vt.执行	1
+98	elegant	9A_3	6	adj.优雅的	1
+98	enhancement	9A_3	6	n. 增加	1
+98	fierce	9A_3	6	adj.猛烈的	1
+98	fortune	9A_3	6	n.运气	1
+98	mercy	9A_3	6	n.怜悯	1
+98	myth	9A_3	6	n.神话	1
+98	interpret	9A_3	6	v.解释	1
+99	literary	9A_4	6	adj.文学的	1
+99	occasional	9A_4	6	adj.偶然的	1
+99	poetic	9A_4	6	adj.诗的	1
+99	rival	9A_4	6	n.对手	1
+99	surrender	9A_4	6	vt.&vi.投降	1
+99	shield	9A_4	6	n.盾	1
+99	ruthless	9A_4	6	adj.残忍的	1
+99	reputation	9A_4	6	n.声誉	1
+99	quotation	9A_4	6	n.引语	1
+99	script	9A_4	6	n.脚本	1
+100	territory	9A_5	6	n.领土	1
+100	resolute	9A_5	6	adj.坚决的	1
+100	simply	9A_5	6	adv.&adj.简单地	1
+100	vast	9A_5	6	adj.广阔的	1
+100	floodplain	9A_5	6	n.洪泛区	1
+100	artisan	9A_5	6	n.工匠	1
+100	approach	9A_5	6	v.接近	1
+100	inhabitant	9A_5	6	n.居民	1
+100	civilian	9A_5	6	n.平民	1
+100	disciplined	9A_5	6	adj.遵守纪律的	1
+101	brick	9A_6	6	n.砖	1
+101	burst	9A_6	6	n.破裂	1
+101	attribute	9A_6	6	n.属性	1
+101	possessions	9A_6	6	n. [经] 财产	1
+101	quotation	9A_6	6	n.引语	1
+101	interpreted	9A_6	6	v. 解释	1
+101	appetite	9A_6	6	n.胃口	1
+101	burial	9A_6	6	n.埋葬	1
+101	genius	9A_6	6	n.天才	1
+101	argue	9A_6	6	vt.争论	1
+102	personality	9B_1	5	n.个性	1
+102	charm	9B_1	5	n.魅力	1
+102	insult	9B_1	5	vt.侮辱	1
+102	ambition	9B_1	5	n.雄心	1
+102	moderation	9B_1	5	n. 适度	1
+102	reform	9B_1	5	n.改革	1
+102	Institution	9B_1	5	n.机构	1
+102	industriously	9B_1	5	adv. 勤奋地	1
+102	tsar	9B_1	5	n. 沙皇	1
+102	throne	9B_1	5	n.王座	1
+103	fate	9B_2	5	n.命运	1
+103	rebellion	9B_2	5	n.叛乱	1
+103	reign	9B_2	5	n.执政	1
+103	inoculation	9B_2	5	n. [医] 接种	1
+103	nobility	9B_2	5	n.贵族	1
+103	vulnerable	9B_2	5	adj.易受伤害的	1
+103	stroke	9B_2	5	n.中风	1
+103	legacy	9B_2	5	n.祖先传下来之物	1
+103	care	9B_2	5	n.小心	1
+103	coronation	9B_2	5	n.加冕礼	1
+104	characterize	9B_3	5	vt.表示...的典型	1
+104	cavern	9B_3	5	n.大洞穴	1
+104	breaking	9B_3	5	n. 破坏	1
+104	chromosome	9B_3	5	n.染色体	1
+104	empress	9B_3	5	n. 皇后	1
+104	diligent	9B_3	5	adj.勤奋的	1
+104	estate	9B_3	5	n.房地产经纪人	1
+104	distorted	9B_3	5	adj. 歪曲的	1
+104	disappointment	9B_3	5	n.失望	1
+104	insult	9B_3	5	vt.侮辱	1
+105	incident	9B_4	5	n.事件	1
+105	keen	9B_4	5	adj.敏锐的	1
+105	portrait	9B_4	5	n.肖像	1
+105	personality	9B_4	5	n.个性	1
+105	strike	9B_4	5	v.打	1
+105	sustained	9B_4	5	adj.持久的	1
+105	reign	9B_4	5	n.执政	1
+105	shame	9B_4	5	n.羞愧	1
+105	violent	9B_4	5	adj.暴力的	1
+105	vulnerable	9B_4	5	adj.易受伤害的	1
+106	controversial	9B_5	5	adj.引起争论的	1
+106	ambition	9B_5	5	n.雄心	1
+106	abroad	9B_5	5	adj.在国外	1
+106	agreeable	9B_5	5	adj.愉快的	1
+106	avoid	9B_5	5	v.避免	1
+106	moderation	9B_5	5	n. 适度	1
+106	attempt	9B_5	5	vt.尝试	1
+106	admission	9B_5	5	n.许可	1
+106	academy	9B_5	5	n.学院	1
+106	affection	9B_5	5	n.慈爱	1
+106	aspect	9B_5	5	n.方面	1
+107	awesome	10A_1	6	adj.令人惊叹的	1
+107	coherent	10A_1	6	adj.连贯的	1
+107	collide	10A_1	6	vi.碰撞	1
+107	foundation	10A_1	6	n.基础	1
+107	intellectual	10A_1	6	adj. 智力的	1
+107	intriguing	10A_1	6	adj.吸引人的	1
+107	overtake	10A_1	6	v.赶上	1
+107	prudent	10A_1	6	adj.谨慎的	1
+107	scenario	10A_1	6	n.情节梗概	1
+107	unleash	10A_1	6	v.解开...的皮带	1
+108	magnet	10A_2	6	n.磁体	1
+108	particle	10A_2	6	n.微粒	1
+108	beam	10A_2	6	n.光线	1
+108	physicist	10A_2	6	n.物理学家	1
+108	cynic	10A_2	6	n.愤世嫉俗者	1
+108	humankind	10A_2	6	n. 人类（总称）	1
+108	obliterate	10A_2	6	v.涂去	1
+108	completion	10A_2	6	n.完成	1
+108	coherent	10A_2	6	adj.连贯的	1
+108	collapse	10A_2	6	n.崩溃	1
+109	curiosity	10A_3	6	n.好奇	1
+109	diameter	10A_3	6	n.直径	1
+109	drain	10A_3	6	n.下水道	1
+109	electron	10A_3	6	n.电子	1
+109	existence	10A_3	6	n.存在	1
+109	experimental	10A_3	6	adj.实验(性)的	1
+109	figure	10A_3	6	n. 数字	1
+109	fundamental	10A_3	6	adj.基本的	1
+109	magnet	10A_3	6	n.磁体	1
+109	pipes	10A_3	6	n. 管线（复数）	1
+110	neutrons	10A_4	6	n. [核] 中子（复数）	1
+110	prudent	10A_4	6	adj.谨慎的	1
+110	nightmare	10A_4	6	n.恶梦	1
+110	obliterate	10A_4	6	v.涂去	1
+110	observatory	10A_4	6	n.天文台	1
+110	relief	10A_4	6	n.宽慰	1
+110	smoothly	10A_4	6	adv.平滑地	1
+110	steer	10A_4	6	v.引导	1
+110	universe	10A_4	6	n.宇宙	1
+110	complicated	10A_4	6	adj.复杂的	1
+111	particles	10A_5	6	n. 微粒	1
+111	collide	10A_5	6	vi.碰撞	1
+111	analyze	10A_5	6	v.分析	1
+111	complicated	10A_5	6	adj.复杂的	1
+111	beam	10A_5	6	n.光线	1
+111	launch	10A_5	6	n.&v.发射	1
+111	explode	10A_5	6	vt.爆炸	1
+111	derived	10A_5	6	adj. 导出的	1
+111	clue	10A_5	6	n.线索	1
+111	miniature	10A_5	6	n.缩图	1
+112	dense	10A_6	6	adj.不易看透的	1
+112	absurd	10A_6	6	adj.荒唐的	1
+112	applications	10A_6	6	n. 应用（复数）	1
+112	fundamental	10A_6	6	adj.基本的	1
+112	mechanisms	10A_6	6	n. 机制（复数）	1
+112	orbit	10A_6	6	n.轨迹	1
+112	astronomical	10A_6	6	adj.天文学的	1
+112	atoms	10A_6	6	n. [物] 原子（复数）	1
+112	electron	10A_6	6	n.电子	1
+113	former	10B_1	5	adj.以前的	1
+113	deflect	10B_1	5	vt.使转向	1
+113	atmosphere	10B_1	5	n.大气	1
+113	drawback	10B_1	5	n.不利点	1
+113	spectacular	10B_1	5	adj.壮观的	1
+113	pose	10B_1	5	n.姿势	1
+113	catastrophe	10B_1	5	n.大灾难	1
+113	dilemma	10B_1	5	n.困境	1
+113	engage	10B_1	5	v.从事	1
+113	motor	10B_1	5	n.马达	1
+113	observatory	10B_1	5	n.天文台	1
+114	asteroid	10B_2	5	n.小游星	1
+114	astronomer	10B_2	5	n.天文学家	1
+114	meteorite	10B_2	5	n.陨石	1
+114	comet	10B_2	5	n.彗星	1
+114	shift	10B_2	5	n.交换	1
+114	cancel	10B_2	5	vt.取消	1
+114	tow	10B_2	5	n.拖	1
+114	calculated	10B_2	5	adj. 计算出的	1
+114	catastrophe	10B_2	5	n.大灾难	1
+114	claim	10B_2	5	vt.要求	1
+114	bruised	10B_2	5	adj. 青肿的	1
+115	crater	10B_3	5	n.弹坑	1
+115	catastrophe	10B_3	5	n.大灾难	1
+115	cancel	10B_3	5	vt.取消	1
+115	currently	10B_3	5	adv.现在	1
+115	cancel	10B_3	5	vt.取消	1
+115	bunch	10B_3	5	n.一串	1
+115	dilemma	10B_3	5	n.困境	1
+115	employ	10B_3	5	vt. 使用	1
+115	drawback	10B_3	5	n.不利点	1
+115	humanity	10B_3	5	n.人类人性	1
+115	former	10B_3	5	adj.以前的	1
+116	meteorite	10B_4	5	n.陨石	1
+116	meteor	10B_4	5	n.流星	1
+116	incoming	10B_4	5	adj. 进来的	1
+116	motor	10B_4	5	n.马达	1
+116	landslide	10B_4	5	n.山崩	1
+116	proposal	10B_4	5	n.提议	1
+116	pose	10B_4	5	n.姿势	1
+116	theoretical	10B_4	5	adj.理论上的	1
+116	spectacular	10B_4	5	adj.壮观的	1
+116	spacecraft	10B_4	5	n.宇宙飞船	1
+117	observatory	10B_5	5	n.天文台	1
+117	atmosphere	10B_5	5	n.大气	1
+117	observatory	10B_5	5	n.天文台	1
+117	asteroids	10B_5	5	n. [天] 小行星（复数）	1
+117	comet	10B_5	5	n.彗星	1
+117	anticipate	10B_5	5	vt.预期	1
+117	dilemma	10B_5	5	n.困境	1
+117	shift	10B_5	5	n.交换	1
+117	nuclear	10B_5	5	adj.原子核的	1
+117	merely	10B_5	5	adv.仅仅	1
+118	dam	11A_1	6	n.水坝	1
+118	dedicate	11A_1	6	vt.献出	1
+118	discern	11A_1	6	vt.&vi.辨别	1
+118	divert	11A_1	6	vt.转移	1
+118	inherit	11A_1	6	vi.继承	1
+118	whereby	11A_1	6	adv.借此	1
+118	leak	11A_1	6	v.漏	1
+118	replenish	11A_1	6	vt.补充	1
+118	surpass	11A_1	6	vt.超越	1
+118	willing	11A_1	6	adj.愿意的	1
+119	fondly	11A_2	6	adv. 天真地	1
+119	wetland	11A_2	6	n. 湿地	1
+119	well	11A_2	6	adv.很好地	1
+119	household	11A_2	6	adj.家庭的	1
+119	interject	11A_2	6	v.插话	1
+119	reservoir	11A_2	6	n.水库	1
+119	rife	11A_2	6	adj.流行的	1
+119	plumbing	11A_2	6	n.管道装置	1
+119	desalinate	11A_2	6	vt. 除去…中的盐分	1
+119	bubble	11A_2	6	n.泡沫	1
+120	consumption	11A_3	6	n.消费	1
+120	conservationist	11A_3	6	n.自然资源保护论者	1
+120	community	11A_3	6	n.社区	1
+120	catastrophe	11A_3	6	n.大灾难	1
+120	breaking	11A_3	6	n. 破坏	1
+120	claim	11A_3	6	vt.要求	1
+120	crew	11A_3	6	n.全体船员	1
+120	arrange	11A_3	6	vt.安排	1
+120	divert	11A_3	6	vt.转移	1
+120	disposal	11A_3	6	n.处理	1
+121	discern	11A_4	6	vt.&vi.辨别	1
+121	household	11A_4	6	adj.家庭的	1
+121	innovative	11A_4	6	adj.革新的	1
+121	interrupt	11A_4	6	vt.打断	1
+121	inherit	11A_4	6	vi.继承	1
+121	install	11A_4	6	v.安装	1
+121	implement	11A_4	6	n.工具	1
+121	leak	11A_4	6	v.漏	1
+121	literally	11A_4	6	adv.按照字面上地	1
+121	pumping	11A_4	6	n. [机] 抽吸	1
+122	proper	11A_5	6	adj.适当的	1
+122	Precious	11A_5	6	adj.宝贵的	1
+122	poverty	11A_5	6	n.贫穷	1
+122	whereby	11A_5	6	adv.借此	1
+122	surpass	11A_5	6	vt.超越	1
+122	replenished	11A_5	6	adj. 装满的	1
+122	reservoir	11A_5	6	n.水库	1
+122	sustainable	11A_5	6	adj. 可以持续的	1
+122	simply	11A_5	6	adv.&adj.简单地	1
+123	shower	11A_6	6	vi.淋浴	1
+123	vital	11A_6	6	adj.至关重要的	1
+123	dilemma	11A_6	6	n.困境	1
+123	confront	11A_6	6	vt.面临	1
+123	burst	11A_6	6	n.破裂	1
+123	dam	11A_6	6	n.水坝	1
+123	apartment	11A_6	6	n.一套公寓房间	1
+123	assured	11A_6	6	adj.保障的	1
+123	afford	11A_6	6	vt.提供	1
+124	hazardous	11B_1	5	adj.危险的	1
+124	discard	11B_1	5	n.丢牌	1
+124	pile	11B_1	5	n.堆	1
+124	substance	11B_1	5	n.物质	1
+124	notify	11B_1	5	v.通知	1
+124	infrastructure	11B_1	5	n.下部构造	1
+124	colossal	11B_1	5	adj.巨大的	1
+124	distressing	11B_1	5	adj. 使痛苦的	1
+124	modify	11B_1	5	vt.修改	1
+125	obsolete	11B_2	5	adj.已废弃的	1
+125	waste	11B_2	5	vt.浪费	1
+125	scrap	11B_2	5	n.小片	1
+125	smash	11B_2	5	v.粉碎	1
+125	lagoon	11B_2	5	n.泻湖(污泥贮留池	1
+125	landfill	11B_2	5	n.垃圾堆	1
+125	component	11B_2	5	n.元件	1
+125	ambient	11B_2	5	adj.周围的	1
+125	cell	11B_2	5	n.细胞	1
+126	bundle	11B_3	5	n.捆	1
+126	calm	11B_3	5	adj.冷静的	1
+126	contamination	11B_3	5	n.污染	1
+126	computer	11B_3	5	n.计算机	1
+126	discard	11B_3	5	n.丢牌	1
+126	domestic	11B_3	5	adj.国内的	1
+126	distressing	11B_3	5	adj. 使痛苦的	1
+126	garbage	11B_3	5	n.垃圾	1
+126	fraction	11B_3	5	n.分数	1
+127	monitor	11B_4	5	n.班长	1
+127	mercury	11B_4	5	n.水银	1
+127	infrastructure	11B_4	5	n.下部构造	1
+127	loads	11B_4	5	n.负荷	1
+127	obsolete	11B_4	5	adj.已废弃的	1
+127	notify	11B_4	5	v.通知	1
+127	output	11B_4	5	n.产量	1
+127	proportions	11B_4	5	n. [数] 比例	1
+127	toxic	11B_4	5	adj.有毒的	1
+128	significant	11B_5	5	adj.有意义的	1
+128	trash	11B_5	5	n.废物	1
+128	revealing	11B_5	5	adj. 透露真情的	1
+128	recycled	11B_5	5	n. 再生纸	1
+128	automobile	11B_5	5	n.汽车	1
+128	awesome	11B_5	5	adj.令人惊叹的	1
+128	component	11B_5	5	n.元件	1
+128	disposal	11B_5	5	n.处理	1
+128	ambient	11B_5	5	adj.周围的	1
+129	compatible	12A_1	5	adj.能共处的	1
+129	booming	12A_1	5	adj. 兴旺的	1
+129	assemble	12A_1	5	vt.聚集	1
+129	democracy	12A_1	5	n.民主	1
+129	designate	12A_1	5	adj.指定的	1
+129	erode	12A_1	5	vt.腐蚀	1
+129	exploit	12A_1	5	n.功绩	1
+129	minimal	12A_1	5	adj.最低限度的	1
+129	rural	12A_1	5	adj.农村的	1
+129	sacred	12A_1	5	adj.神圣的	1
+129	note	12A_1	5	n.笔记	1
+130	pilgrim	12A_2	5	n.朝圣者	1
+130	monk	12A_2	5	n.僧侣	1
+130	spin	12A_2	5	v.旋转	1
+130	chalet	12A_2	5	n. 瑞士山中的牧人小屋	1
+130	paradise	12A_2	5	n.天堂	1
+130	illiteracy	12A_2	5	n.文盲	1
+130	infant	12A_2	5	n.婴儿	1
+130	monastery	12A_2	5	n.修道院	1
+130	feature	12A_2	5	n.特征	1
+130	westernized	12A_2	5	adj. 西方化的	1
+130	chants	12A_2	5	n.圣歌	1
+131	clinic	12A_3	5	n.诊所	1
+131	compatible	12A_3	5	adj.能共处的	1
+131	benefit	12A_3	5	n.利益	1
+131	contest	12A_3	5	n.竞赛	1
+131	designated	12A_3	5	adj. 指定的	1
+131	dictate	12A_3	5	vi.听写	1
+131	encounter	12A_3	5	vt.&vi.遭遇	1
+131	distributed	12A_3	5	adj. 分布式的	1
+131	Gross	12A_3	5	n.总量	1
+131	frivolous	12A_3	5	adj.轻佻的	1
+131	Flash	12A_3	5	n.闪光	1
+132	intriguing	12A_4	5	adj.吸引人的	1
+132	infant	12A_4	5	n.婴儿	1
+132	mortality	12A_4	5	n.必死的命运	1
+132	minimal	12A_4	5	adj.最低限度的	1
+132	invasion	12A_4	5	n.侵入	1
+132	kingdom	12A_4	5	n.王国	1
+132	trumpet	12A_4	5	n.喇叭	1
+132	ritual	12A_4	5	n.仪式	1
+132	spinning	12A_4	5	adj.纺织品的	1
+132	rhythm	12A_4	5	n.节奏	1
+133	spins	12A_5	5	n. [物] 旋转（复数）	1
+133	spectacular	12A_5	5	adj.壮观的	1
+133	temporary	12A_5	5	adj.暂时的	1
+133	stubborn	12A_5	5	adj.顽固的	1
+133	skeptical	12A_5	5	adj.怀疑的	1
+133	rural	12A_5	5	adj.农村的	1
+133	sustainable	12A_5	5	adj. 可以持续的	1
+133	themes	12A_5	5	n. 主题（复数）	1
+133	attempt	12A_5	5	vt.尝试	1
+133	controversial	12A_5	5	adj.引起争论的	1
+134	Inherit	12B_1	6	vi.继承	1
+134	formula	12B_1	6	n.公式	1
+134	fund	12B_1	6	n.基金	1
+134	norm	12B_1	6	n.标准	1
+134	tickle	12B_1	6	v.胳肢	1
+134	industrious	12B_1	6	adj.勤劳的	1
+134	lifestyle	12B_1	6	n. 生活方式	1
+134	guideline	12B_1	6	n.指引	1
+134	longevity	12B_1	6	n.长寿	1
+134	lean	12B_1	6	n.瘦肉	1
+135	relieve	12B_2	6	vt.减轻	1
+135	forbid	12B_2	6	vt.禁止	1
+135	discourage	12B_2	6	vt.使气馁	1
+135	privilege	12B_2	6	n.特权	1
+135	relief	12B_2	6	n.宽慰	1
+135	slaughter	12B_2	6	n.残杀	1
+135	Cadillac	12B_2	6	n.卡迪拉克	1
+135	compelling	12B_2	6	adj.强制的	1
+135	disability	12B_2	6	n. 残疾	1
+135	soy milk	12B_2	6	豆奶	1
+136	consume	12B_3	6	vt.消耗	1
+136	suntanned	12B_3	6	adj. 给太阳晒黑的	1
+136	centenarian	12B_3	6	adj. 百岁或逾百岁以上的	1
+136	barefoot	12B_3	6	adj. 赤脚的	1
+136	commitment	12B_3	6	n.承诺	1
+136	compare	12B_3	6	vt.&vi.比较	1
+136	brand	12B_3	6	n.牌子	1
+136	conserve	12B_3	6	n.蜜饯	1
+136	exceptional	12B_3	6	adj.例外的	1
+136	discourage	12B_3	6	vt.使气馁	1
+137	dispute	12B_4	6	n.争论;争吵	1
+137	formula	12B_4	6	n.公式	1
+137	guideline	12B_4	6	n.指引	1
+137	favor	12B_4	6	n.偏爱	1
+137	habit	12B_4	6	n.习惯	1
+137	glare	12B_4	6	n.闪耀光	1
+137	fold	12B_4	6	vt.折叠	1
+137	inherit	12B_4	6	vi.继承	1
+137	mountainous	12B_4	6	adj.多山的	1
+137	item	12B_4	6	n.项目	1
+138	inviting	12B_5	6	adj.吸引人的	1
+138	Ironically	12B_5	6	adv. 讽刺地	1
+138	mutual	12B_5	6	adj.共同的	1
+138	longevity	12B_5	6	n.长寿	1
+138	Nutrition	12B_5	6	n.营养	1
+138	proponent	12B_5	6	n.建议者	1
+138	pure	12B_5	6	adj.纯的	1
+138	privilege	12B_5	6	n.特权	1
+138	perfume	12B_5	6	n.香水	1
+138	philosophy	12B_5	6	n.哲学	1
+139	wrapped	12B_6	6	adj. 有包装的	1
+139	tickle	12B_6	6	v.胳肢	1
+139	slices	12B_6	6	n. 切片（复数）	1
+139	region	12B_6	6	n.地区	1
+139	trait	12B_6	6	n.特征	1
+139	relieve	12B_6	6	vt.减轻	1
+139	steering	12B_6	6	n. 操纵	1
+139	sweep	12B_6	6	vt.扫	1
+139	vault	12B_6	6	n.窖	1

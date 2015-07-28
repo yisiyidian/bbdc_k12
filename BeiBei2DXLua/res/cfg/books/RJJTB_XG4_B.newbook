@@ -1,0 +1,126 @@
+1	home	Unit 1_1	3	n.家	1
+1	bed	Unit 1_1	3	n.床	1
+1	bedroom	Unit 1_1	3	n.卧室	0
+2	desk	Unit 1_2	3	n.课桌	1
+2	chair	Unit 1_2	3	n.椅子	1
+2	living room	Unit 1_2	3	起居室	0
+2	TV	Unit 1_2	3	abbr.电视	1
+2	sofa	Unit 1_2	3	n.沙发	0
+2	armchair	Unit 1_2	3	n.扶手椅	0
+2	ball	Unit 1_2	3	n.球	1
+2	kite	Unit 1_2	3	n.风筝	1
+2	kitchen	Unit 1_2	3	n.厨房	0
+3	fridge	Unit 1_3	3	n.冰箱	0
+3	table	Unit 1_3	3	n.桌子	1
+3	study	Unit 1_3	3	n.书房	1
+3	computer	Unit 1_3	3	n.电脑	1
+3	picture	Unit 1_3	3	n.图片	0
+3	bathroom	Unit 1_3	3	n.浴室	0
+3	DVD player	Unit 1_3	3	DVD播放机	0
+3	clock	Unit 1_3	3	n.时钟	1
+4	twenty one	Unit 2_1	3	二十一	0
+4	twenty two	Unit 2_1	3	二十二	0
+4	twenty three	Unit 2_1	3	二十三	0
+4	twenty four	Unit 2_1	3	二十四	0
+4	twenty five	Unit 2_1	3	二十五	0
+4	twenty six	Unit 2_1	3	二十六	0
+4	twenty seven	Unit 2_1	3	二十七	0
+4	twenty eight	Unit 2_1	3	二十八	0
+4	twenty nine	Unit 2_1	3	二十九	0
+5	eleven	Unit 2_2	3	num.十一	1
+5	twelve	Unit 2_2	3	adj.十二	1
+5	thirty	Unit 2_2	3	num.三十	0
+5	forty	Unit 2_2	3	num.四十	0
+5	boy	Unit 2_2	3	n.男孩	1
+5	girl	Unit 2_2	3	n.女孩	1
+5	fifty	Unit 2_2	3	num.五十	0
+5	sixty	Unit 2_2	3	num.六十	0
+5	teacher	Unit 2_2	3	n.教师	1
+6	school	Unit 2_3	3	n.学校	1
+6	seventy	Unit 2_3	3	num.七十	0
+6	eighty	Unit 2_3	3	num.八十	0
+6	bag	Unit 2_3	3	n.书包	1
+6	book	Unit 2_3	3	n.书	1
+6	ninety	Unit 2_3	3	num.九十	0
+6	one hundred	Unit 2_3	3	一百	0
+6	pen	Unit 2_3	3	n.钢笔	1
+6	pencil	Unit 2_3	3	n.铅笔	1
+7	maths	Unit 3_1	2	n.数学	1
+7	PE	Unit 3_1	2	n.体育	1
+7	Chinese	Unit 3_1	2	n.英语	1
+7	English	Unit 3_1	2	n.中文	1
+7	music	Unit 3_1	2	n.音乐	1
+7	art	Unit 3_1	2	n.美术	1
+7	subject	Unit 3_1	2	n.学科	0
+7	science	Unit 3_1	2	n.科学	1
+7	lesson	Unit 3_1	2	n.课	1
+7	drama	Unit 3_1	2	n.戏剧	0
+8	listen	Unit 3_2	2	v.听	1
+8	do	Unit 3_2	2	v.做	0
+8	speak	Unit 3_2	2	v.说	1
+8	listen and do	Unit 3_2	2	听听做做	0
+8	speak and sing	Unit 3_2	2	说说唱唱	0
+8	play and act	Unit 3_2	2	玩玩演演	0
+8	sing	Unit 3_2	2	vt.唱歌	0
+8	play	Unit 3_2	2	v.&n.玩	0
+8	act	Unit 3_2	2	vi.表演	0
+9	week	Unit 4_1	1	n.周	1
+9	day	Unit 4_1	1	n.天	1
+9	Sunday	Unit 4_1	1	n.星期日	1
+9	today	Unit 4_1	1	n.今天	1
+9	Monday	Unit 4_1	1	n.星期一	1
+9	Tuesday	Unit 4_1	1	n.星期二	1
+9	Wednesday	Unit 4_1	1	n.星期三	1
+9	Thursday	Unit 4_1	1	n.星期四	1
+9	Friday	Unit 4_1	1	n.星期五	1
+9	Saturday	Unit 4_1	1	n.星期六	1
+9	weekend	Unit 4_1	1	n.周末	0
+9	park	Unit 4_1	1	n.公园	0
+9	theme park	Unit 4_1	1	主题公园	0
+10	picnic	Unit 5_1	3	n.野餐	0
+10	sausage	Unit 5_1	3	n.香肠	0
+10	bread	Unit 5_1	3	n.面包	1
+10	cake	Unit 5_1	3	n.蛋糕	1
+10	lunch	Unit 5_1	3	n.午餐	0
+10	pork	Unit 5_1	3	n.猪肉	0
+10	beef	Unit 5_1	3	n.牛肉	0
+10	rice	Unit 5_1	3	n.米饭	1
+10	chicken	Unit 5_1	3	n.鸡肉	1
+11	sing	Unit 5_2	3	vt.唱歌	1
+11	dance	Unit 5_2	3	vi.跳舞	1
+11	paint	Unit 5_2	3	v.&n.绘画	0
+11	draw	Unit 5_2	3	vt.画	1
+11	read	Unit 5_2	3	vt.读	1
+11	watch	Unit 5_2	3	vt.仔细看	1
+11	play	Unit 5_2	3	v.&n.玩	1
+11	read a book	Unit 5_2	3	看书	0
+11	watch TV	Unit 5_2	3	看电视	0
+12	play computer games	Unit 5_3	3	玩电脑游戏	0
+12	game	Unit 5_3	3	n.游戏	0
+12	do	Unit 5_3	3	v.做	1
+12	go	Unit 5_3	3	vi.去	1
+12	shop	Unit 5_3	3	v.&n.购物	0
+12	go shopping	Unit 5_3	3	去购物	0
+12	swim	Unit 5_3	3	v.&n.游泳	1
+12	go swimming	Unit 5_3	3	去游泳	0
+12	fish	Unit 5_3	3	n.鱼	0
+12	go fishing	Unit 5_3	3	去钓鱼	0
+13	zoo	Unit 6_1	2	n.动物园	1
+13	farm	Unit 6_1	2	n.农场	1
+13	giraffe	Unit 6_1	2	n.长颈鹿	0
+13	camel	Unit 6_1	2	n.骆驼	0
+13	monkey	Unit 6_1	2	n.猴子	1
+13	panda	Unit 6_1	2	n.熊猫	1
+13	bear	Unit 6_1	2	n.熊	1
+13	seal	Unit 6_1	2	n.海豹	0
+13	dolphin	Unit 6_1	2	n.海豚	0
+13	hippo	Unit 6_1	2	n.河马	0
+14	tiger	Unit 6_2	2	n.老虎	1
+14	cat	Unit 6_2	2	n.猫	1
+14	dog	Unit 6_2	2	n.狗	1
+14	horse	Unit 6_2	2	n.马	1
+14	cow	Unit 6_2	2	n.奶牛	1
+14	sheep	Unit 6_2	2	n.绵阳	1
+14	goat	Unit 6_2	2	n.山羊	0
+14	duck	Unit 6_2	2	n.鸭子	1
+14	pig	Unit 6_2	2	n.猪	1

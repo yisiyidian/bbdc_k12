@@ -1,0 +1,344 @@
+1	characteristic	Unit 1_1	7	n.特征	1
+1	radium	Unit 1_1	7	n.镭	1
+1	painter	Unit 1_1	7	n.画家	1
+2	put forward	Unit 1_2	7	提出	1
+2	scientific	Unit 1_2	7	adj.科学的	1
+2	conclude	Unit 1_2	7	vt.结束	1
+2	conclusion	Unit 1_2	7	n.结论	1
+2	draw a conclusion	Unit 1_2	7	提出结论	1
+2	analyse	Unit 1_2	7	vt.分析	1
+2	infect	Unit 1_2	7	vt.传染	0
+2	infectious	Unit 1_2	7	adj.传染的	0
+2	cholera	Unit 1_2	7	n.霍乱	0
+2	defeat	Unit 1_2	7	vt.打败	1
+2	expert	Unit 1_2	7	n.熟练的；专家	1
+3	attend	Unit 1_3	7	vt.照顾	1
+3	physician	Unit 1_3	7	n.医生	1
+3	expose	Unit 1_3	7	vt.暴露	1
+3	expose ... to	Unit 1_3	7	使显露	1
+3	deadly	Unit 1_3	7	adj.致命的	1
+3	cure	Unit 1_3	7	vt.治愈	1
+3	outbreak	Unit 1_3	7	n.爆发	1
+3	challenge	Unit 1_3	7	n.挑战	1
+3	victim	Unit 1_3	7	n.受害者	1
+3	absorb	Unit 1_3	7	vt.吸收	1
+3	suspect	Unit 1_3	7	vt.怀疑	1
+4	enquiry	Unit 1_4	7	n.询问	1
+4	neighbourhood	Unit 1_4	7	n.附近	1
+4	severe	Unit 1_4	7	adj.严重的	1
+4	clue	Unit 1_4	7	n.线索	1
+4	pump	Unit 1_4	7	n.泵	1
+4	Cambridge	Unit 1_4	7	n.剑桥大街	1
+4	foresee	Unit 1_4	7	vt.预见	1
+4	investigate	Unit 1_4	7	vt.调查	1
+4	investigation	Unit 1_4	7	n.调查	0
+4	blame	Unit 1_4	7	vt.责备	1
+4	pollute	Unit 1_4	7	vt.污染	1
+5	handle	Unit 1_5	7	vt.柄	1
+5	germ	Unit 1_5	7	n.微生物	1
+5	link	Unit 1_5	7	vt.连接	1
+5	link ... to ...	Unit 1_5	7	联系起来	1
+5	announce	Unit 1_5	7	vt.宣布	1
+5	certainty	Unit 1_5	7	n.确信	1
+5	instruct	Unit 1_5	7	v.命令	1
+5	responsible	Unit 1_5	7	adj.有责任的	1
+5	construct	Unit 1_5	7	vt.建设	1
+5	construction	Unit 1_5	7	n.建设	1
+6	contribute	Unit 1_6	7	vi.捐献	1
+6	apart from	Unit 1_6	7	除...之外	1
+6	firework	Unit 1_6	7	n.烟火	1
+6	chart	Unit 1_6	7	n.图表	1
+6	creative	Unit 1_6	7	adj.有创造力的	1
+6	co-operative	Unit 1_6	7	adj.合作的	1
+6	positive	Unit 1_6	7	adj.积极的	1
+6	be strict with ...	Unit 1_6	7	对...严格的	1
+6	revolutionary	Unit 1_6	7	adj.革命的	0
+6	movement	Unit 1_6	7	n.移动	1
+7	make sense	Unit 1_7	7	讲得通	1
+7	backward	Unit 1_7	7	adj.向后地	1
+7	loop	Unit 1_7	7	n.圈	0
+7	privately	Unit 1_7	7	adv.私下地	0
+7	spin	Unit 1_7	7	v.使旋转	1
+7	brightness	Unit 1_7	7	n.明亮	0
+7	enthusiastic	Unit 1_7	7	adj.热情的	1
+7	cautious	Unit 1_7	7	adj.小心的	1
+7	reject	Unit 1_7	7	vt.&n.拒绝	1
+7	universe	Unit 1_7	7	n.宇宙	1
+8	unite	Unit 2_1	7	v.联合	1
+8	kingdom	Unit 2_1	7	n.王国	1
+8	consist	Unit 2_1	7	vi.组成	1
+8	consist of	Unit 2_1	7	由...组成	1
+8	province	Unit 2_1	7	n.省	1
+8	divide ... into	Unit 2_1	7	把...分成	1
+8	Wales	Unit 2_1	7	n.威尔士	0
+8	Scotland	Unit 2_1	7	n.苏格兰	0
+8	Northern Ireland	Unit 2_1	7	北爱尔兰	0
+8	clarify	Unit 2_1	7	vt.澄清	1
+9	accomplish	Unit 2_2	7	vt.完成	1
+9	conflict	Unit 2_2	7	n.矛盾	1
+9	unwilling	Unit 2_2	7	adj.不愿意	1
+9	break away from	Unit 2_2	7	挣脱	1
+9	union	Unit 2_2	7	n.联合	1
+9	the Union Jack	Unit 2_2	7	英国国旗	0
+9	credit	Unit 2_2	7	n.信用；学分	1
+9	to one's credit	Unit 2_2	7	为...带来荣誉	1
+9	currency	Unit 2_2	7	n.货币	1
+9	institution	Unit 2_2	7	n.制度	1
+10	educational	Unit 2_3	7	adj.教育的	0
+10	convenience	Unit 2_3	7	n.便利	1
+10	rough	Unit 2_3	7	adj.粗糙的	1
+10	roughly	Unit 2_3	7	adv.粗略地	1
+10	Midlands	Unit 2_3	7	n.英格兰中部	0
+10	nationwide	Unit 2_3	7	adj.全国性的	1
+10	attract	Unit 2_3	7	v.吸引	1
+10	historical	Unit 2_3	7	adj.历史的	0
+10	architecture	Unit 2_3	7	n.建筑学	1
+10	Roman	Unit 2_3	7	n.&adj.古罗马人	0
+11	collection	Unit 2_4	7	n.收藏品	1
+11	administration	Unit 2_4	7	n.管理	1
+11	port	Unit 2_4	7	n.港口	1
+11	Anglo-Saxon	Unit 2_4	7	n.盎格鲁-撒克逊	0
+11	Viking	Unit 2_4	7	n.北欧海盗	0
+11	countryside	Unit 2_4	7	n.乡下	1
+11	enjoyable	Unit 2_4	7	adj.愉快的	1
+11	leave out	Unit 2_4	7	省去	1
+11	opportunity	Unit 2_4	7	n.机会	0
+11	description	Unit 2_4	7	n.描写	1
+12	furnished	Unit 2_5	7	adj.带家具的	1
+12	fax	Unit 2_5	7	n.&vt.传真	1
+12	possibility	Unit 2_5	7	n.可能性	1
+12	plus	Unit 2_5	7	prep.加上	1
+12	quarrel	Unit 2_5	7	n.争吵	1
+12	alike	Unit 2_5	7	adj.类似的	1
+12	take the place of	Unit 2_5	7	代替	1
+12	break down	Unit 2_5	7	机器损坏	1
+12	arrange	Unit 2_5	7	vt.安排	1
+12	wedding	Unit 2_5	7	n.婚礼	1
+13	fold	Unit 2_6	7	vt.折叠	1
+13	sightseeing	Unit 2_6	7	n.观光	1
+13	delight	Unit 2_6	7	n.快乐	1
+13	royal	Unit 2_6	7	adj.王室的	1
+13	uniform	Unit 2_6	7	n.制服	1
+13	splendid	Unit 2_6	7	adj.壮丽的	1
+13	statue	Unit 2_6	7	n.塑像	1
+13	Buckingham	Unit 2_6	7	n.白金汉宫	0
+13	longitude	Unit 2_6	7	n.经线	0
+14	imaginary	Unit 2_7	7	adj.想象的	0
+14	navigation	Unit 2_7	7	n.导航	0
+14	communism	Unit 2_7	7	n.共产主义	1
+14	original	Unit 2_7	7	adj.最初的	0
+14	thrill	Unit 2_7	7	n.使激动	1
+14	pot	Unit 2_7	7	n.罐	1
+14	error	Unit 2_7	7	n.错误	1
+14	tense	Unit 2_7	7	adj.时态	1
+14	consistent	Unit 2_7	7	adj.一致的	1
+15	aspect	Unit 3_1	7	n.方面	1
+15	impression	Unit 3_1	7	n.印象	1
+15	take up	Unit 3_1	7	拿起	1
+15	constant	Unit 3_1	7	adj.时常的	1
+15	constantly	Unit 3_1	7	adv.不断地	1
+15	jet	Unit 3_1	7	n.喷气式飞机	1
+15	jet lag	Unit 3_1	7	飞行时差	0
+15	flashback	Unit 3_1	7	n.闪回	0
+15	previous	Unit 3_1	7	adj.以前的	1
+15	uncertain	Unit 3_1	7	adj.不确切的	1
+15	guide	Unit 3_1	7	vt.指导	1
+16	tablet	Unit 3_2	7	n.药片	1
+16	expertise	Unit 3_2	7	n.专家意见	0
+16	capsule	Unit 3_2	7	n.太空舱	1
+16	steward	Unit 3_2	7	n.乘务员	1
+16	stewardess	Unit 3_2	7	n.女乘务员	1
+16	opening	Unit 3_2	7	n.开口	1
+16	sideways	Unit 3_2	7	adv.往一侧	1
+16	surroundings	Unit 3_2	7	n.环境	1
+16	surrounding	Unit 3_2	7	adj.周围的	1
+16	tolerate	Unit 3_2	7	v.容忍	1
+16	combination	Unit 3_2	7	n.结合	0
+17	lack	Unit 3_3	7	vt.缺乏	1
+17	adjustment	Unit 3_3	7	n.调整	1
+17	mask	Unit 3_3	7	n.面具	1
+17	be back on one's feet	Unit 3_3	7	困境后恢复	1
+17	hover	Unit 3_3	7	vi.盘旋	0
+17	carriage	Unit 3_3	7	n.运输工具	1
+17	press	Unit 3_3	7	vt.按	1
+17	fasten	Unit 3_3	7	vt.系牢	1
+17	belt	Unit 3_3	7	n.腰带	1
+17	safety belt	Unit 3_3	7	安全带	1
+17	lose sight of ...	Unit 3_3	7	看不见...	1
+18	sweep up	Unit 3_4	7	打扫	1
+18	flash	Unit 3_4	7	n.闪光	1
+18	switch	Unit 3_4	7	n.开关	1
+18	timetable	Unit 3_4	7	n.时间表	1
+18	exhausted	Unit 3_4	7	adj.筋疲力尽的	0
+18	slide into	Unit 3_4	7	悄悄溜进	1
+18	optimistic	Unit 3_4	7	adj.乐观的	1
+18	pessimistic	Unit 3_4	7	adj.悲观的	0
+18	speed up	Unit 3_4	7	加速	1
+18	pedal	Unit 3_4	7	n.踏板	0
+18	alien	Unit 3_4	7	n.外星人	0
+19	mud	Unit 3_5	7	n.泥	1
+19	desert	Unit 3_5	7	n.沙漠	1
+19	enormous	Unit 3_5	7	adj.巨大的	0
+19	imitate	Unit 3_5	7	vt.模仿	0
+19	moveable	Unit 3_5	7	adj.可移动的	0
+19	citizen	Unit 3_5	7	n.公民	1
+19	typist	Unit 3_5	7	n.打字员	1
+19	typewriter	Unit 3_5	7	n.打字机	1
+19	postage	Unit 3_5	7	n.邮资	1
+19	postcode	Unit 3_5	7	n.邮政编码	1
+20	button	Unit 3_6	7	n.钮锃	1
+20	instant	Unit 3_6	7	adj.瞬间	1
+20	receiver	Unit 3_6	7	n.接受者	1
+20	efficiency	Unit 3_6	7	n.效率	0
+20	efficient	Unit 3_6	7	adj.效率高的	0
+20	ribbon	Unit 3_6	7	n.丝带	0
+20	dustbin	Unit 3_6	7	n.垃圾箱	1
+20	dispose	Unit 3_6	7	vt.布置	0
+20	disposal	Unit 3_6	7	n.清除	0
+20	ecology	Unit 3_6	7	n.生态	1
+21	greedy	Unit 3_7	7	adj.贪吃的	1
+21	swallow	Unit 3_7	7	n.吞下	1
+21	material	Unit 3_7	7	n.原料	1
+21	recycle	Unit 3_7	7	vt.回收利用	1
+21	manufacture	Unit 3_7	7	vt.大量生产	0
+21	goods	Unit 3_7	7	n.货物	1
+21	etc	Unit 3_7	7	adv.诸如此类	0
+21	representative	Unit 3_7	7	adj.代表	1
+21	settlement	Unit 3_7	7	n.定居	1
+21	motivation	Unit 3_7	7	n.动机	1
+22	journalist	Unit 4_1	6	n.记者	1
+22	involve	Unit 4_1	6	vt.牵涉	0
+22	editor	Unit 4_1	6	n.编辑	1
+22	photograph	Unit 4_1	6	n.&v.照片	1
+22	photographer	Unit 4_1	6	n.摄影师	1
+22	photography	Unit 4_1	6	n.摄影	0
+22	unforgettable	Unit 4_1	6	adj.难忘的	0
+22	assignment	Unit 4_1	6	n.任务	0
+22	delighted	Unit 4_1	6	adj.快乐的	1
+22	admirable	Unit 4_1	6	adj.值得赞扬的	1
+22	unusual	Unit 4_1	6	adj.不同寻常的	1
+23	assist	Unit 4_2	6	vt.帮助	1
+23	assistant	Unit 4_2	6	n.助手	1
+23	submit	Unit 4_2	6	vt.递交	1
+23	profession	Unit 4_2	6	n.职业	1
+23	professional	Unit 4_2	6	adj.专业的	1
+23	colleague	Unit 4_2	6	n.同事	1
+23	eager	Unit 4_2	6	adj.渴望的	1
+23	concentrate	Unit 4_2	6	vt.集中	1
+23	concentrate on	Unit 4_2	6	集中	1
+23	amateur	Unit 4_2	6	adj.业余爱好者	1
+23	update	Unit 4_2	6	vt.更新	1
+24	acquire	Unit 4_3	6	vt.获得	1
+24	assess	Unit 4_3	6	vt.评估	1
+24	inform	Unit 4_3	6	vt.告知	1
+24	deadline	Unit 4_3	6	n.最后期限	1
+24	interviewee	Unit 4_3	6	n.参加面试者	0
+24	meanwhile	Unit 4_3	6	adv.其间	1
+24	depend on	Unit 4_3	6	依靠	1
+24	case	Unit 4_3	6	n.情况；案例	1
+24	accuse	Unit 4_3	6	vt.指责	1
+24	accuse ... of	Unit 4_3	6	因...指责...	1
+24	accusation	Unit 4_3	6	n.指责	0
+25	deliberately	Unit 4_4	6	adv.故意地	1
+25	so as to do sth	Unit 4_4	6	为了...	1
+25	deny	Unit 4_4	6	vt.否认	0
+25	sceptical	Unit 4_4	6	adj.怀疑的	1
+25	guilty	Unit 4_4	6	adj.犯罪的	1
+25	dilemma	Unit 4_4	6	n.困境	1
+25	demand	Unit 4_4	6	v.&n.需求	1
+25	demanding	Unit 4_4	6	adj.要求很高的	0
+25	publish	Unit 4_4	6	vt.出版	1
+25	scoop	Unit 4_4	6	n.抢先的新闻	0
+25	section	Unit 4_4	6	n.部分	1
+26	concise	Unit 4_5	6	adj.简明的	0
+26	imaginative	Unit 4_5	6	adj.有想象力的	0
+26	technical	Unit 4_5	6	adj.技术的	1
+26	technically	Unit 4_5	6	adv.技术上	1
+26	thorough	Unit 4_5	6	adj.彻底的	1
+26	gifted	Unit 4_5	6	adj.有天赋的	1
+26	idiomatic	Unit 4_5	6	adj.惯用的	0
+26	housewife	Unit 4_5	6	n.家庭主妇	1
+26	crime	Unit 4_5	6	n.罪行	1
+26	edition	Unit 4_5	6	n.版	1
+27	ahead of	Unit 4_6	6	在...前面	1
+27	department	Unit 4_6	6	n.部门	1
+27	accurate	Unit 4_6	6	adj.精确的	1
+27	senior	Unit 4_6	6	adj.年长的	1
+27	polish	Unit 4_6	6	n.&v.擦亮	1
+27	chief	Unit 4_6	6	adj.主要的	1
+27	approve	Unit 4_6	6	v.赞成	1
+27	process	Unit 4_6	6	n.加工	1
+27	negative	Unit 4_6	6	adj.否定	0
+27	appointment	Unit 4_6	6	约会；任命	1
+28	aid	Unit 5_1	7	n.帮助	1
+28	first aid	Unit 5_1	7	急救	1
+28	temporary	Unit 5_1	7	adj.暂时的	1
+28	fall ill	Unit 5_1	7	生病	1
+28	injury	Unit 5_1	7	n.损伤	1
+28	bleed	Unit 5_1	7	vi.流血	1
+28	nosebleed	Unit 5_1	7	n.鼻出血	0
+28	sprain	Unit 5_1	7	vt.&n.扭伤	0
+28	sprained	Unit 5_1	7	adj.扭伤的	0
+28	ankle	Unit 5_1	7	n.踝	1
+29	choke	Unit 5_2	7	vi.噎住	1
+29	cupboard	Unit 5_2	7	n.橱柜	1
+29	skin	Unit 5_2	7	n.皮	1
+29	essential	Unit 5_2	7	adj.最重要的	0
+29	organ	Unit 5_2	7	n.器官	1
+29	layer	Unit 5_2	7	n.层	0
+29	barrier	Unit 5_2	7	n.屏障	1
+29	poison	Unit 5_2	7	n.毒药	1
+29	ray	Unit 5_2	7	n.光线	1
+29	complex	Unit 5_2	7	adj.复杂的	1
+30	variety	Unit 5_3	7	n.多样性	1
+30	liquid	Unit 5_3	7	n.液体	1
+30	radiation	Unit 5_3	7	n.辐射	1
+30	mild	Unit 5_3	7	adj.轻微的	1
+30	mildly	Unit 5_3	7	adv.轻微地	1
+30	pan	Unit 5_3	7	n.平底锅	1
+30	stove	Unit 5_3	7	n.炉子	1
+30	heal	Unit 5_3	7	vt.康复	0
+30	tissue	Unit 5_3	7	n.组织	1
+30	electric shock	Unit 5_3	7	触电	1
+31	swell	Unit 5_4	7	n.膨胀	1
+31	swollen	Unit 5_4	7	adj.肿胀的	1
+31	blister	Unit 5_4	7	n.水泡	0
+31	watery	Unit 5_4	7	adj.水的	0
+31	char	Unit 5_4	7	n.烧焦	0
+31	nerve	Unit 5_4	7	n.神经	0
+31	scissors	Unit 5_4	7	n.剪刀	1
+31	unbearable	Unit 5_4	7	adj.难以忍受的	1
+31	basin	Unit 5_4	7	n.盆	1
+31	squeeze	Unit 5_4	7	vt.榨	1
+32	squeeze out	Unit 5_5	7	榨出	1
+32	over and over again	Unit 5_5	7	反复	1
+32	bandage	Unit 5_5	7	n.绷	1
+32	in place	Unit 5_5	7	在适当位置	1
+32	ointment	Unit 5_5	7	n.药膏	0
+32	infection	Unit 5_5	7	n.传染	0
+32	vital	Unit 5_5	7	adj.至关重要的	1
+32	symptom	Unit 5_5	7	n.症状	1
+32	label	Unit 5_5	7	n.加标签	0
+32	kettle	Unit 5_5	7	n.水壶	1
+33	pour	Unit 5_6	7	vt.倒	1
+33	wrist	Unit 5_6	7	n.手腕	1
+33	damp	Unit 5_6	7	n.潮湿的	1
+33	sleeve	Unit 5_6	7	n.袖子	1
+33	blouse	Unit 5_6	7	n.女衬衫	1
+33	tight	Unit 5_6	7	adj.牢的	1
+33	tightly	Unit 5_6	7	adv.紧地	1
+33	firm	Unit 5_6	7	n.稳定有力的	1
+33	firmly	Unit 5_6	7	adv.坚固地	1
+33	throat	Unit 5_6	7	n.咽喉	1
+33	ceremony	Unit 5_6	7	n.典礼	1
+34	bravery	Unit 5_7	7	n.勇敢	1
+34	stab	Unit 5_7	7	n.刺	1
+34	a number of	Unit 5_7	7	若干	1
+34	put one's hands on	Unit 5_7	7	找到	1
+34	treat	Unit 5_7	7	v.&n.治疗；招待	1
+34	apply	Unit 5_7	7	v.应用；申请	1
+34	pressure	Unit 5_7	7	n.压力	1
+34	ambulance	Unit 5_7	7	n.救护车	1
+34	scheme	Unit 5_7	7	n.方案	0
+34	make a difference	Unit 5_7	7	区别对待	1
+34	bruise	Unit 5_7	7	n.瘀伤	0

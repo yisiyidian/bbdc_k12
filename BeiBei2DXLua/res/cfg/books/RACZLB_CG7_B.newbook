@@ -1,0 +1,587 @@
+1	gate	Unit 5_1	18	n.大门	1
+1	the same to	Unit 5_1	18	对...也一样	0
+1	by	Unit 5_1	18	prep.乘	1
+2	underground	Unit 5_2	18	adj.地下铁道	1
+2	always	Unit 5_2	18	adv.	1
+2	come on	Unit 5_2	18	快点儿	0
+2	on foot	Unit 5_2	18	走路	0
+2	go to school	Unit 5_2	18	去上学	0
+2	plane	Unit 5_2	18	n.飞机	1
+2	train	Unit 5_2	18	n.火车	1
+2	ship	Unit 5_2	18	n.船	1
+2	boat	Unit 5_2	18	n.小船	1
+2	Ms.	Unit 5_2	18	abbr.女士	1
+3	grandmother	Unit 5_3	18	n.奶奶	1
+3	group	Unit 5_3	18	n.组	1
+3	weekday	Unit 5_3	18	n.平日	1
+3	early	Unit 5_3	18	adv.早地	1
+3	bird	Unit 5_3	18	n.鸟	1
+3	catch	Unit 5_3	18	vt.捉住	1
+3	worm	Unit 5_3	18	n.软体虫	0
+3	sometimes	Unit 5_3	18	adv.有时	1
+3	seldom	Unit 5_3	18	adv.很少	1
+3	walk	Unit 5_3	18	vi.&n.步行	1
+4	never	Unit 5_4	18	adv.决不	1
+4	ride	Unit 5_4	18	vt.骑	1
+4	park	Unit 5_4	18	n.公园	1
+4	homework	Unit 5_4	18	n.家庭作业	1
+4	do one's homework	Unit 5_4	18	做家庭作业	0
+4	watch	Unit 5_4	18	n.观看	1
+4	TV	Unit 5_4	18	addr.电视	1
+4	watch TV	Unit 5_4	18	看电视	0
+4	America	Unit 5_4	18	n.美国	1
+4	life	Unit 5_4	18	n.生活	1
+5	American	Unit 5_5	18	n.&adj.美国的	1
+5	or	Unit 5_5	18	conj.或者	1
+5	few	Unit 5_5	18	adj.&pron.很少的	1
+5	have lunch	Unit 5_5	18	吃午饭	0
+5	at school	Unit 5_5	18	在学校	0
+5	day	Unit 5_5	18	n.天	1
+5	rest	Unit 5_5	18	vt.&n.休息	1
+5	have a rest	Unit 5_5	18	休息	0
+5	play	Unit 5_5	18	n.玩	1
+5	basketball	Unit 5_5	18	n.篮球	1
+6	football	Unit 5_6	18	n.足球	0
+6	swim	Unit 5_6	18	v.游	1
+6	go swimming	Unit 5_6	18	去游泳	0
+6	and so on	Unit 5_6	18	...等等	0
+6	ball	Unit 5_6	18	n.球	1
+6	game	Unit 5_6	18	n.比赛	1
+6	more	Unit 5_6	18	adv.&adj.更	1
+6	talk	Unit 5_6	18	n.讲话	1
+6	listen	Unit 5_6	18	v.听	1
+6	listen to	Unit 5_6	18	听...	0
+7	music	Unit 5_7	18	n.音乐	1
+7	library	Unit 5_7	18	n.图书馆	1
+7	must	Unit 5_7	18	aux.必须	1
+7	first	Unit 5_7	18	adv.第一	1
+7	read	Unit 5_7	18	vt.读	1
+7	once	Unit 5_7	18	adv.&conj.一次	1
+7	week	Unit 5_7	18	n.星期	1
+7	twice	Unit 5_7	18	adv.两次	1
+7	every	Unit 5_7	18	adj.每一	1
+7	begin	Unit 5_7	18	vt.开始	1
+8	have classes	Unit 5_8	18	上课	0
+8	while	Unit 5_8	18	conj.&n.一会儿	1
+8	bed	Unit 5_8	18	n.床	1
+8	go to bed	Unit 5_8	18	睡觉	0
+8	make	Unit 5_8	18	vt.制造	1
+8	card	Unit 5_8	18	n.卡片	1
+8	boring	Unit 5_8	18	adj.乏味的	1
+8	soon	Unit 5_8	18	adv.很快	1
+8	run	Unit 5_8	18	vi.跑	1
+8	playground	Unit 5_8	18	n.操场	1
+9	dance	Unit 5_9	18	vi.跳舞	1
+9	gym	Unit 5_9	18	n.体育馆	1
+9	dormitory	Unit 5_9	18	n.学生宿舍	0
+9	sleep	Unit 5_9	18	v.睡觉	1
+9	clean	Unit 5_9	18	adj.弄干净	1
+9	lab	Unit 5_9	18	实验室	1
+9	computer	Unit 5_9	18	n.电脑	1
+9	room	Unit 5_9	18	n.房间	1
+9	hall	Unit 5_9	18	n.大厅	1
+9	dining hall	Unit 5_9	18	餐厅	0
+10	classroom	Unit 5_10	18	n.教室	1
+10	building	Unit 5_10	18	n.大楼	1
+10	swimming	Unit 5_10	18	n.游泳	1
+10	pool	Unit 5_10	18	n.水池	1
+10	borrow	Unit 5_10	18	v.借用	1
+10	a few	Unit 5_10	18	一些	0
+10	project	Unit 5_10	18	n.专题研究	0
+10	workbook	Unit 5_10	18	n.练习册	0
+10	course	Unit 5_10	18	n.过程	1
+10	of course	Unit 5_10	18	当然	0
+11	use	Unit 5_11	18	n.&v.使用	1
+11	better	Unit 5_11	18	adj.更好地	0
+11	look for	Unit 5_11	18	寻找	0
+11	shelf	Unit 5_11	18	n.架子	1
+11	keep	Unit 5_11	18	vt.保存	1
+11	return	Unit 5_11	18	vt.归还	1
+11	on time	Unit 5_11	18	准时	0
+11	pleasure	Unit 5_11	18	n.高兴	1
+11	post	Unit 5_11	18	n.&vt.邮件	1
+11	bye-bye	Unit 5_11	18	再见	1
+12	talk	Unit 5_12	18	n.&v.讲话	0
+12	another	Unit 5_12	18	adj.又一	1
+12	Lost and Found	Unit 5_12	18	失物招领处	0
+12	purse	Unit 5_12	18	n.钱包	1
+12	money	Unit 5_12	18	n.钱	1
+12	else	Unit 5_12	18	adj.别的	1
+12	picture	Unit 5_12	18	n.照片	1
+12	put	Unit 5_12	18	v.放	1
+12	put on	Unit 5_12	18	穿	0
+12	around	Unit 5_12	18	prep.&adv.在周围	1
+13	show sb around	Unit 5_13	18	领某人参观	0
+13	sit	Unit 5_13	18	vi.坐	1
+13	write	Unit 5_13	18	v.写	1
+13	aha	Unit 5_13	18	啊哈	0
+13	at the back of	Unit 5_13	18	在...的后面	0
+13	draw	Unit 5_13	18	v.绘画	1
+13	because	Unit 5_13	18	conj.因为	1
+13	Japanese	Unit 5_13	18	n&adj.日本人	1
+13	wonderful	Unit 5_13	18	adj.美妙的	1
+13	also	Unit 5_13	18	adv.也	1
+14	today	Unit 5_14	18	n.&adv.在今天	1
+14	Wednesday	Unit 5_14	18	n.星期三	1
+14	Monday	Unit 5_14	18	n.星期一	1
+14	physics	Unit 5_14	18	n.物理	1
+14	Tuesday	Unit 5_14	18	n.星期二	1
+14	geography	Unit 5_14	18	n.地理	1
+14	Thursday	Unit 5_14	18	n.星期四	1
+14	P.E.	Unit 5_14	18	n.体育	1
+14	Friday	Unit 5_14	18	n.星期五	1
+14	art	Unit 5_14	18	n.美术	1
+15	timetable	Unit 5_15	18	n.课表	0
+15	math	Unit 5_15	18	n.（美口语）数学	1
+15	science	Unit 5_15	18	n.科学	1
+15	history	Unit 5_15	18	n.历史	1
+15	biology	Unit 5_15	18	n.生物	0
+15	politics	Unit 5_15	18	n.政治	0
+15	meeting	Unit 5_15	18	n.会	1
+15	outdoor	Unit 5_15	18	adj.户外的	0
+15	activity	Unit 5_15	18	n.活动	1
+16	outdoor activity	Unit 5_16	18	户外活动	0
+16	lesson	Unit 5_16	18	n.课	1
+16	learn	Unit 5_16	18	vt.学	1
+16	easy	Unit 5_16	18	adj.容易的	1
+16	interesting	Unit 5_16	18	adj.有趣的	1
+16	difficult	Unit 5_16	18	adj.难的	1
+16	which	Unit 5_16	18	pron.那一个	1
+16	subject	Unit 5_16	18	n.学科	1
+16	best	Unit 5_16	18	adj.&adv.最好地	1
+17	story	Unit 5_17	18	n.故事	1
+17	friendly	Unit 5_17	18	adj.友好的	1
+17	other	Unit 5_17	18	adj.别的	1
+17	news	Unit 5_17	18	n.新闻	1
+17	attention	Unit 5_17	18	n.注意	1
+17	between	Unit 5_17	18	adv.在之间	1
+17	stamp	Unit 5_17	18	n.邮票	1
+17	collection	Unit 5_17	18	n.收集物	0
+17	world	Unit 5_17	18	n.世界	1
+18	Saturday	Unit 5_18	18	n.星期六	1
+18	from ... to ...	Unit 5_18	18	从...到...	0
+18	night	Unit 5_18	18	n.夜	1
+18	place	Unit 5_18	18	n.地点	1
+18	program	Unit 5_18	18	n.节目	1
+18	February	Unit 5_18	18	n.二月	1
+18	newspaper	Unit 5_18	18	n.报纸	1
+18	hard	Unit 5_18	18	adj&adv.努力的	1
+18	wish	Unit 5_18	18	n.&v.愿望	1
+19	garden	Unit 6_1	14	n.花园	1
+19	bedroom	Unit 6_1	14	n.卧室	1
+19	second	Unit 6_1	14	n.&adj.第二	1
+19	floor	Unit 6_1	14	n.层	1
+19	next to	Unit 6_1	14	在...近旁	0
+19	upstairs	Unit 6_1	14	adv.到楼上	1
+19	come in	Unit 6_1	14	进入	0
+19	kitchen	Unit 6_1	14	n.厨房	1
+19	dining room	Unit 6_1	14	餐厅	0
+19	living room	Unit 6_1	14	客厅	0
+20	bathroom	Unit 6_2	14	n.浴室	1
+20	front	Unit 6_2	14	n.前面的	1
+20	in front of	Unit 6_2	14	在...前面	0
+20	house	Unit 6_2	14	n.房子	1
+20	grandfather	Unit 6_2	14	n.爷爷	1
+20	behind	Unit 6_2	14	adv.在...后面	1
+20	door	Unit 6_2	14	n.门	1
+20	talk about	Unit 6_2	14	谈论	0
+20	near	Unit 6_2	14	prep.在...附近	1
+20	lamp	Unit 6_2	14	n.灯	1
+21	clock	Unit 6_3	14	n.钟	1
+21	under	Unit 6_3	14	prep.在...下面	1
+21	table	Unit 6_3	14	n.桌子	1
+21	key	Unit 6_3	14	n.钥匙	1
+21	away	Unit 6_3	14	adv.离开	1
+21	put away	Unit 6_3	14	将...收起	0
+21	thing	Unit 6_3	14	n.东西	1
+21	dad	Unit 6_3	14	n.爸爸	1
+21	window	Unit 6_3	14	n.窗户	1
+21	model	Unit 6_3	14	n.模型	1
+22	river	Unit 6_4	14	n.河	1
+22	center	Unit 6_4	14	n.中心	1
+22	in the center of	Unit 6_4	14	在...中心	0
+22	yard	Unit 6_4	14	n.院子	1
+22	beautiful	Unit 6_4	14	adj.美的	1
+22	flower	Unit 6_4	14	n.花	1
+22	large	Unit 6_4	14	adj.大的	1
+22	left	Unit 6_4	14	adj.&n.左	1
+22	people	Unit 6_4	14	n.人	1
+22	mirror	Unit 6_4	14	n.镜子	1
+23	drawer	Unit 6_5	14	n.抽屉	1
+23	chair	Unit 6_5	14	n.椅子	1
+23	keyboard	Unit 6_5	14	n.键盘	1
+23	pencil-box	Unit 6_5	14	n.铅笔盒	0
+23	townhouse	Unit 6_5	14	n.城市住宅	0
+23	farmhouse	Unit 6_5	14	n.农场住宅	0
+23	country	Unit 6_5	14	n.农村	1
+23	apartment	Unit 6_5	14	n.（美）楼中单元房	0
+23	rent	Unit 6_5	14	v.租用	0
+23	month	Unit 6_5	14	n.月	1
+24	Mrs	Unit 6_6	14	abbr.夫人	1
+24	furniture	Unit 6_6	14	n.家具	1
+24	quiet	Unit 6_6	14	adj.安静的	1
+24	per	Unit 6_6	14	prep.每	0
+24	neighbor	Unit 6_6	14	n.邻居	1
+24	store	Unit 6_6	14	n.商店	1
+24	bank	Unit 6_6	14	n.银行	1
+24	street	Unit 6_6	14	n.街	1
+24	corner	Unit 6_6	14	n.拐角	1
+24	post office	Unit 6_6	14	邮局	0
+25	bookstore	Unit 6_7	14	n.（美）书店	0
+25	museum	Unit 6_7	14	n.博物馆	1
+25	parking lot	Unit 6_7	14	停车场	0
+25	supermarket	Unit 6_7	14	n.超级市场	1
+25	station	Unit 6_7	14	n.车站	1
+25	mail	Unit 6_7	14	n.（美）邮寄	1
+25	restaurant	Unit 6_7	14	n.饭馆	1
+25	matter	Unit 6_7	14	n.问题	0
+25	hear	Unit 6_7	14	vt.听见	1
+25	piano	Unit 6_7	14	n.钢琴	1
+26	loud	Unit 6_8	14	adj.大声的	1
+26	really	Unit 6_8	14	adv.真正地	1
+26	loudly	Unit 6_8	14	adv.大声地	0
+26	reading room	Unit 6_8	14	阅览室	0
+26	end	Unit 6_8	14	vt.&n.末尾	1
+26	at the end of ...	Unit 6_8	14	在...的结尾/末端	0
+26	road	Unit 6_8	14	n.路	1
+26	community	Unit 6_8	14	n.社区	0
+26	child	Unit 6_8	14	n.儿童	1
+26	a lot of	Unit 6_8	14	许多	0
+27	close	Unit 6_9	14	vt.&adj.近	1
+27	close to	Unit 6_9	14	靠近	0
+27	far	Unit 6_9	14	adv.远的	1
+27	far from	Unit 6_9	14	远离	0
+27	service	Unit 6_9	14	n.服务	1
+27	area	Unit 6_9	14	n.地区	1
+27	stop	Unit 6_9	14	v.&n.停止	1
+27	fan	Unit 6_9	14	n.风扇	1
+27	line	Unit 6_9	14	n.电话线路	1
+27	bad	Unit 6_9	14	adj.坏的	1
+28	someone	Unit 6_10	14	pron.某一个人	1
+28	check	Unit 6_10	14	vt.检查	1
+28	right now	Unit 6_10	14	立即	0
+28	move	Unit 6_10	14	vt.移动	1
+28	countryside	Unit 6_10	14	n.乡下	1
+28	city	Unit 6_10	14	n.市	1
+28	noisy	Unit 6_10	14	adj.喧闹的	0
+28	traffic	Unit 6_10	14	n.交通	1
+28	cost	Unit 6_10	14	vi.费用	1
+28	miss	Unit 6_10	14	v.思念	1
+29	fresh	Unit 6_11	14	adj.新鲜的	1
+29	town	Unit 6_11	14	n.城镇	1
+29	bridge	Unit 6_11	14	n.桥	1
+29	along	Unit 6_11	14	prep.沿着	1
+29	turn	Unit 6_11	14	vt.转弯	1
+29	crossing	Unit 6_11	14	n.十字路口	0
+29	across	Unit 6_11	14	prep.横过	1
+29	meter	Unit 6_11	14	n.米	1
+29	across from	Unit 6_11	14	在对面	0
+29	Tsinghua University	Unit 6_11	14	清华大学	0
+29	Peking University	Unit 6_11	14	北京大学	0
+30	Haidian Theater	Unit 6_12	14	海淀剧院	0
+30	until	Unit 6_12	14	prep.直到...为止	1
+30	kilometer	Unit 6_12	14	n.千米	1
+30	should	Unit 6_12	14	aux.会	1
+30	change	Unit 6_12	14	v.更换	1
+30	sidewalk	Unit 6_12	14	n.（美）人行道	0
+30	public	Unit 6_12	14	adj.&n.公共的	1
+30	light	Unit 6_12	14	n&adj.灯	1
+30	crosswalk	Unit 6_12	14	n.行人穿越线	0
+30	straight	Unit 6_12	14	adv.&adj.一直地	0
+30	U-turn	Unit 6_12	14	n.U形转弯	0
+31	danger	Unit 6_13	14	n.危险	1
+31	safe	Unit 6_13	14	adj.安全的	1
+31	hurt	Unit 6_13	14	vt.伤害	1
+31	lose	Unit 6_13	14	vt.丢失	1
+31	accident	Unit 6_13	14	n.事故	1
+31	obey	Unit 6_13	14	vt.服从	0
+31	rule	Unit 6_13	14	n.规则	1
+31	sign	Unit 6_13	14	n.符号	0
+31	before	Unit 6_13	14	prep.在...之前	1
+31	cross	Unit 6_13	14	v.&n.穿过	1
+31	third	Unit 6_13	14	n.&adj.第三	1
+32	last	Unit 6_14	14	adv.&adj.最后地	1
+32	careful	Unit 6_14	14	adj.小心的	1
+32	skateboard	Unit 6_14	14	n.滑板	0
+32	ticket	Unit 6_14	14	n.罚款单	1
+32	speed	Unit 6_14	14	vt.&n.加速	1
+32	fast	Unit 6_14	14	adv.&adj.快地	1
+32	wait for	Unit 6_14	14	等候	0
+32	when	Unit 6_14	14	conj.&adv.什么时候	1
+32	late	Unit 6_14	14	adj.&adv.晚的	1
+32	be late for	Unit 6_14	14	迟到	0
+32	down	Unit 6_14	14	adv.沿着	1
+33	hill	Review of Units 5-6_1	1	n.小山	1
+33	certainly	Review of Units 5-6_1	1	adv.当然	0
+34	sport	Unit 7_1	27	n.体育运动	1
+34	was	Unit 7_1	27	v.（am，is的过去式）是	1
+34	born	Unit 7_1	27	vt.出生	1
+34	be born	Unit 7_1	27	出生于	0
+34	June	Unit 7_1	27	n.六月	1
+34	March	Unit 7_1	27	n.三月	1
+34	April	Unit 7_1	27	n.四月	1
+34	May	Unit 7_1	27	n.五月	1
+34	July	Unit 7_1	27	n.七月	1
+34	August	Unit 7_1	27	n.八月	1
+35	September	Unit 7_2	27	n.九月	1
+35	October	Unit 7_2	27	n.十月	1
+35	November	Unit 7_2	27	n.十一月	1
+35	December	Unit 7_2	27	n.十二月	1
+35	January	Unit 7_2	27	n.一月	1
+35	were	Unit 7_2	27	v.（are的过去式）是	1
+35	alone	Unit 7_2	27	adj.单独的	1
+35	thousand	Unit 7_2	27	n.千	1
+35	birthday	Unit 7_2	27	n.生日	1
+35	date	Unit 7_2	27	n.日期	1
+36	plan	Unit 7_3	27	n.计划	1
+36	celebrate	Unit 7_3	27	vt.庆祝	1
+36	party	Unit 7_3	27	n.聚会	1
+36	fifth	Unit 7_3	27	n.&num.第五	1
+36	sixth	Unit 7_3	27	n.&num.第六	1
+36	seventh	Unit 7_3	27	n.&num.第七	1
+36	eighth	Unit 7_3	27	n.&num.第八	1
+36	ninth	Unit 7_3	27	n.&num.第九	1
+36	tenth	Unit 7_3	27	n.&num.第十	1
+36	eleventh	Unit 7_3	27	n.&num.第十一	0
+37	twelfth	Unit 7_4	27	n.&num.第十二	1
+37	thirteenth	Unit 7_4	27	n.&num.第十三	0
+37	twentieth	Unit 7_4	27	n.&num.第二十	1
+37	present	Unit 7_4	27	n.礼物	1
+37	shape	Unit 7_4	27	n.&vt.形状	1
+37	circle	Unit 7_4	27	n.&vt.圆圈	1
+37	square	Unit 7_4	27	n.正方形	1
+37	triangle	Unit 7_4	27	n.三角形	0
+37	rectangle	Unit 7_4	27	n.长方形	0
+37	oval	Unit 7_4	27	n.&adj.椭圆	0
+38	centimeter	Unit 7_5	27	n.厘米	0
+38	football	Unit 7_5	27	n.足球	1
+38	special	Unit 7_5	27	adj.特别的	1
+38	candle	Unit 7_5	27	n.蜡烛	1
+38	surprise	Unit 7_5	27	n.&vt.惊奇	1
+38	do some cleaning	Unit 7_5	27	做扫除	0
+38	disco	Unit 7_5	27	n.迪斯科	0
+38	perform	Unit 7_5	27	v.表演	0
+38	ballet	Unit 7_5	27	n.芭蕾舞	0
+38	have a good time	Unit 7_5	27	玩得高兴	0
+39	parrot	Unit 7_6	27	n.鹦鹉	0
+39	smart	Unit 7_6	27	adj.聪明的	1
+39	count	Unit 7_6	27	v.数	1
+39	er	Unit 7_6	27	哦	0
+39	climb	Unit 7_6	27	vt.爬	1
+39	pig	Unit 7_6	27	n.猪	1
+39	ago	Unit 7_6	27	adv.以前	1
+39	ping-pong	Unit 7_6	27	n.乒乓球	1
+39	be good at	Unit 7_6	27	擅长于	0
+39	London	Unit 7_6	27	n.伦敦	1
+40	at the age of	Unit 7_7	27	在...岁时	0
+40	anything	Unit 7_7	27	pron.任何事	1
+40	word	Unit 7_7	27	n.单词	1
+40	mean	Unit 7_7	27	v.意思是	1
+40	recite	Unit 7_7	27	vt.背诵	1
+40	poem	Unit 7_7	27	n.诗	1
+40	magic	Unit 7_7	27	n.有魔力的	1
+40	trick	Unit 7_7	27	n.把戏	0
+40	enjoy	Unit 7_7	27	vt.喜欢	1
+40	himself	Unit 7_7	27	pron.他自己	1
+41	enjoy oneself	Unit 7_8	27	过得愉快	0
+41	kung fu	Unit 7_8	27	功夫	0
+41	yesterday	Unit 7_8	27	n.昨天	1
+41	ouch	Unit 7_8	27	哎哟	0
+41	fall	Unit 7_8	27	v.&n.倒	1
+41	wash	Unit 7_8	27	v.洗	1
+41	at once	Unit 7_8	27	立刻	0
+41	washroom	Unit 7_8	27	n.盥洗室	0
+41	happen	Unit 7_8	27	vi.发生	1
+41	stand	Unit 7_8	27	v.站	1
+42	stand up	Unit 7_9	27	站起	0
+42	come back	Unit 7_9	27	回来	0
+42	lie	Unit 7_9	27	n.说谎	1
+42	video	Unit 7_9	27	n.录像	1
+42	video game	Unit 7_9	27	电子游戏	0
+42	everyone	Unit 7_9	27	pron.每人	1
+42	truth	Unit 7_9	27	n.真相	1
+42	tell a lie	Unit 7_9	27	撒谎	0
+42	angry	Unit 7_9	27	adj.愤怒的	1
+42	each	Unit 7_9	27	adv.&adj.&pron.每人	1
+43	silent	Unit 7_10	27	adj.无声的	1
+43	blow	Unit 7_10	27	vt.吹	1
+43	blow out	Unit 7_10	27	被吹灭	0
+43	breath	Unit 7_10	27	n.呼吸	1
+43	sunny	Unit 7_10	27	adj.晴朗的	1
+43	delicious	Unit 7_10	27	adj.美味的	1
+43	musical	Unit 7_10	27	adj.音乐的	0
+43	funny	Unit 7_10	27	adj.有趣的	1
+43	weather	Unit 7_10	27	n.天气	1
+43	spring	Unit 7_10	27	n.春天	1
+44	warm	Unit 7_11	27	adj.暖和的	1
+44	season	Unit 7_11	27	n.季	1
+44	summer	Unit 7_11	27	n.夏天	1
+44	hot	Unit 7_11	27	adj.热的	1
+44	winter	Unit 7_11	27	n.冬天	1
+44	cold	Unit 7_11	27	adj.&n.冷的	1
+44	rain	Unit 7_11	27	n.下雨	1
+44	snow	Unit 7_11	27	n.下雪	1
+44	ground	Unit 7_11	27	n.地面	1
+44	rainy	Unit 7_11	27	adj.下雨的	1
+45	cloudy	Unit 7_12	27	adj.多云的	1
+45	snowy	Unit 7_12	27	adj.下雪的	1
+45	windy	Unit 7_12	27	adj.有风的	1
+45	foggy	Unit 7_12	27	adj.多雾的	0
+45	bright	Unit 7_12	27	adj.明亮的	1
+45	temperature	Unit 7_12	27	n.温度	1
+45	low	Unit 7_12	27	adj.低	1
+45	Toronto	Unit 7_12	27	n.多伦多	0
+45	Washington	Unit 7_12	27	n.华盛顿	0
+45	hometown	Unit 7_12	27	n.家乡	1
+46	if	Unit 7_13	27	conj.如果	1
+46	trip	Unit 7_13	27	n.旅行	1
+46	wear	Unit 7_13	27	vt.穿	1
+46	holiday	Unit 7_13	27	n.假日	1
+46	travel	Unit 7_13	27	n.旅行	0
+46	had better do sth.	Unit 7_13	27	最好做某事	0
+46	find out	Unit 7_13	27	发现	0
+46	umbrella	Unit 7_13	27	n.伞	1
+46	go out	Unit 7_13	27	出去	0
+46	Australia	Unit 7_13	27	n.澳大利亚	1
+47	remember	Unit 7_14	27	vt.记起	1
+47	most	Unit 7_14	27	adj.&adv.大部分的	1
+47	part	Unit 7_14	27	n.部分	1
+47	sun	Unit 7_14	27	n.太阳	1
+47	shine	Unit 7_14	27	vi.照耀	1
+47	brightly	Unit 7_14	27	adv.明亮地	0
+47	sunglasses	Unit 7_14	27	n.太阳眼镜	0
+47	shorts	Unit 7_14	27	n.短裤	1
+47	suddenly	Unit 7_14	27	adv.突然	1
+47	later on	Unit 7_14	27	后来	0
+48	be different from	Unit 7_15	27	与...不同	0
+48	passage	Unit 7_15	27	n.一节	1
+48	arrive	Unit 7_15	27	vi.到达	1
+48	take a walk	Unit 7_15	27	散步	0
+48	Beijing Opera	Unit 7_15	27	京剧	0
+48	right away	Unit 7_15	27	立即	0
+48	ourselves	Unit 7_15	27	pron.我们自己	1
+48	hope	Unit 7_15	27	n.&v.希望	1
+48	everything	Unit 7_15	27	pron.每件事	1
+48	come back to life	Unit 7_15	27	复苏	0
+49	come out	Unit 7_16	27	出来	0
+49	heavily	Unit 7_16	27	adv.大量	0
+49	harvest	Unit 7_16	27	n.收割	0
+49	busy	Unit 7_16	27	adj.忙的	1
+49	be busy doing sth.	Unit 7_16	27	忙于做某事	0
+49	leaf	Unit 7_16	27	n.叶	1
+49	wind	Unit 7_16	27	n.风	1
+49	strongly	Unit 7_16	27	adv.强烈地	0
+49	New York	Unit 7_16	27	n.纽约	0
+49	Sydney	Unit 7_16	27	n.悉尼	0
+50	report	Unit 7_17	27	vt.报道	1
+50	together	Unit 7_17	27	adv.一起	1
+50	get together	Unit 7_17	27	聚会	0
+50	interest	Unit 7_17	27	n.兴趣	1
+50	places of interest	Unit 7_17	27	名胜	0
+50	the United States	Unit 7_17	27	美国	0
+50	Germany	Unit 7_17	27	n.德国	0
+50	New Zealand	Unit 7_17	27	n.新西兰	0
+50	Brazil	Unit 7_17	27	n.巴西	0
+50	India	Unit 7_17	27	n.印度	0
+51	Thailand	Unit 7_18	27	n.泰国	0
+51	Indonesia	Unit 7_18	27	n.印度尼西亚	0
+51	anytime	Unit 7_18	27	adv.在任何时候	0
+51	all the year round	Unit 7_18	27	一年到头	0
+51	sound	Unit 7_18	27	vi.&n.听起来	1
+51	expensive	Unit 7_18	27	adj.昂贵的	1
+51	camera	Unit 7_18	27	n.照相机	1
+51	a pair of	Unit 7_18	27	一双	0
+51	tent	Unit 7_18	27	n.帐篷	1
+51	raincoat	Unit 7_18	27	n.雨衣	1
+52	storybook	Unit 7_19	27	n.儿童故事书	0
+52	custom	Unit 7_19	27	n.习俗	0
+52	enter	Unit 7_19	27	v.进入	1
+52	off	Unit 7_19	27	prep.离开	1
+52	take off	Unit 7_19	27	脱掉	0
+52	wet	Unit 7_19	27	adj.湿的	1
+52	point	Unit 7_19	27	v.&n.指	1
+52	point to	Unit 7_19	27	指向	0
+52	touch	Unit 7_19	27	vt.触摸	1
+52	Korea	Unit 7_19	27	n.韩国	0
+53	Italy	Unit 7_20	27	n.意大利	0
+53	finger	Unit 7_20	27	n.手指	1
+53	wrap	Unit 7_20	27	vt.包	0
+53	lucky	Unit 7_20	27	adj.运气好的	1
+53	lucky money	Unit 7_20	27	压岁钱	0
+53	paper	Unit 7_20	27	n.纸	1
+53	pass	Unit 7_20	27	vt.传	1
+53	during	Unit 7_20	27	prep.在...期间	1
+53	May Day	Unit 7_20	27	五一动节	0
+53	stay	Unit 7_20	27	n.待	1
+54	greeting	Unit 7_21	27	n.问候	1
+54	the day before yesterday	Unit 7_21	27	前天	0
+54	Chinatown	Unit 7_21	27	n.唐人街	0
+54	festival	Unit 7_21	27	n.节日	1
+54	Spring Festival	Unit 7_21	27	春节	0
+54	dumpling	Unit 7_21	27	n.饺子	1
+54	dragon	Unit 7_21	27	n.龙	0
+54	Christmas	Unit 7_21	27	n.圣诞节	1
+54	turkey	Unit 7_21	27	n.火鸡	0
+54	lantern	Unit 7_21	27	n.灯笼	0
+55	Lantern Festival	Unit 7_22	27	元宵节	0
+55	lunar	Unit 7_22	27	adj.月亮的	0
+55	sweet	Unit 7_22	27	adj.甜的	1
+55	luck	Unit 7_22	27	n.运气	1
+55	riddle	Unit 7_22	27	n.谜	1
+55	Thanksgiving	Unit 7_22	27	n.感恩节	0
+55	pumpkin	Unit 7_22	27	n.南瓜	0
+55	pie	Unit 7_22	27	n.甜馅饼	1
+55	eve	Unit 7_22	27	前夜	0
+55	not ... untill	Unit 7_22	27	直到...才	0
+56	midnight	Unit 7_23	27	n.午夜	0
+56	Easter	Unit 7_23	27	n.复活节	0
+56	Believe	Unit 7_23	27	vi.相信	1
+56	Christ	Unit 7_23	27	n.基督	0
+56	fool	Unit 7_23	27	n.傻子	0
+56	Mid-autumn	Unit 7_23	27	n.中秋节	0
+56	mooncake	Unit 7_23	27	n.月饼	0
+56	full	Unit 7_23	27	adj.满的	1
+56	moon	Unit 7_23	27	n.月亮	1
+56	important	Unit 7_23	27	adj.重要的	1
+57	prepare	Unit 7_24	27	vt.准备	1
+57	decorate	Unit 7_24	27	vt.装饰	0
+57	colorful	Unit 7_24	27	adj.颜色鲜艳的	0
+57	church	Unit 7_24	27	n.教堂	1
+57	put up	Unit 7_24	27	挂起	0
+57	stocking	Unit 7_24	27	n.长筒袜	0
+57	fireplace	Unit 7_24	27	n.壁炉	0
+57	open	Unit 7_24	27	vt.&adj.开	1
+57	Santa Claus	Unit 7_24	27	圣诞老人	0
+57	gift	Unit 7_24	27	n.礼品	1
+58	get-together	Unit 7_25	27	n.集会	0
+58	greet	Unit 7_25	27	vt.问候	0
+58	merry	Unit 7_25	27	adj.愉快的	0
+58	Spain	Unit 7_25	27	n.西班牙	0
+58	grape	Unit 7_25	27	n.葡萄	1
+58	Jewish	Unit 7_25	27	adj.犹太人的	0
+58	honey	Unit 7_25	27	n.蜂蜜	0
+58	event	Unit 7_25	27	n.事件	0
+58	start	Unit 7_25	27	n.开始	1
+58	whole	Unit 7_25	27	adj.整个的	1
+59	stay up	Unit 7_26	27	深夜不睡	0
+59	Halloween	Unit 7_26	27	n.万圣节前夕	0
+59	scary	Unit 7_26	27	adj.恐怖的	0
+59	ghost	Unit 7_26	27	n.鬼	0
+59	knock	Unit 7_26	27	n.&v.敲打	1
+59	knock on	Unit 7_26	27	敲	0
+59	shout	Unit 7_26	27	n.&v.喊	1
+59	treat	Unit 7_26	27	v.款待	0
+59	trick or treat	Unit 7_26	27	是请吃糖，还是想遭殃	0
+59	international	Unit 7_26	27	adj.国际的	1
+59	labor	Unit 7_26	27	n.劳动	1
+60	International Labor Day	Unit 7_27	27	国际劳动节	0
+60	Dragon Boat Festival	Unit 7_27	27	龙舟节	0
+60	hold	Unit 7_27	27	vt.举行	1
+60	race	Unit 7_27	27	n.竞赛	1
+60	national	Unit 7_27	27	adj.国家的	1
+60	National Day	Unit 7_27	27	国庆节	0
+60	the PRC	Unit 7_27	27	n.中华人民共和国	0
+60	capital	Unit 7_27	27	n.首都	1
+60	flag	Unit 7_27	27	n.旗	1
+60	burn	Unit 7_27	27	vt.燃	1
+60	god	Unit 7_27	27	n.神	1

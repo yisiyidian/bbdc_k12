@@ -1,0 +1,226 @@
+1	Asia	Unit 1_1	3	n.亚洲	1
+1	Japan	Unit 1_1	3	n.日本	0
+1	Tokyo	Unit 1_1	3	n.东京	0
+2	Thailand	Unit 1_2	3	n.泰国	0
+2	north-east	Unit 1_2	3	n.东北	1
+2	north-west	Unit 1_2	3	n.西北	1
+2	south-east	Unit 1_2	3	n.东南	1
+2	south-west	Unit 1_2	3	n.西南	1
+2	exhibition	Unit 1_2	3	n.展览会	1
+2	capital	Unit 1_2	3	n.首都	1
+2	kilometre	Unit 1_2	3	n.千米	1
+3	information	Unit 1_3	3	n.信息	1
+3	palace	Unit 1_3	3	n.宫殿	1
+3	tourist	Unit 1_3	3	n.游客	1
+3	million	Unit 1_3	3	num.百万	1
+3	building	Unit 1_3	3	n.建筑物	1
+3	huge	Unit 1_3	3	adj.巨大的	1
+3	famous	Unit 1_3	3	adj.著名的	1
+3	sushi	Unit 1_3	3	n.寿司	0
+4	airport	Unit 2_1	2	n.机场	1
+4	Los Angeles	Unit 2_1	2	洛杉矶	0
+4	suitcase	Unit 2_1	2	n.手提箱	0
+4	silk	Unit 2_1	2	n.丝绸	0
+4	before	Unit 2_1	2	prep.以前	1
+4	T-shirt	Unit 2_1	2	n.T恤衫	1
+4	several	Unit 2_1	2	pron.几个	1
+4	however	Unit 2_1	2	adv.然而	1
+4	pack	Unit 2_1	2	n.装（箱）	1
+4	flight	Unit 2_1	2	n.航班	1
+4	passenger	Unit 2_1	2	n.乘客	1
+4	departure	Unit 2_1	2	n.离开	1
+5	have to	Unit 2_2	2	不得不	1
+5	worry	Unit 2_2	2	v.&n.担心	1
+5	London	Unit 2_2	2	n.伦敦	0
+5	note	Unit 2_2	2	n.注释	1
+5	trolley	Unit 2_2	2	n.手推车	0
+5	passport	Unit 2_2	2	n.护照	1
+5	boarding card	Unit 2_2	2	登机牌	0
+5	name tag	Unit 2_2	2	姓名牌	0
+5	bring	Unit 2_2	2	vt.带来	1
+5	dollar	Unit 2_2	2	n.美元	1
+5	address	Unit 2_2	2	n.地址	1
+5	checklist	Unit 2_2	2	n.清单	1
+6	festival	Unit 3_1	2	n.节日	1
+6	race	Unit 3_1	2	n.&v.比赛	1
+6	something	Unit 3_1	2	pron.某事	1
+6	celebrate	Unit 3_1	2	vt.庆祝	1
+6	be born	Unit 3_1	2	出生	1
+6	ago	Unit 3_1	2	adv.以前	1
+6	country	Unit 3_1	2	n.国家	1
+6	very much	Unit 3_1	2	非常	1
+6	advice	Unit 3_1	2	n.劝告	1
+6	king	Unit 3_1	2	n.国王	1
+6	die	Unit 3_1	2	v.死亡	1
+6	later	Unit 3_1	2	adv.后来	1
+7	lose	Unit 3_2	2	vt.输掉	1
+7	battle	Unit 3_2	2	n.战役	1
+7	danger	Unit 3_2	2	n.危险	1
+7	in danger	Unit 3_2	2	处于危险中	1
+7	lunar	Unit 3_2	2	adj.农历的	0
+7	remember	Unit 3_2	2	vt.记得	1
+7	without	Unit 3_2	2	prep.没有	1
+7	moon cake	Unit 3_2	2	月饼	1
+7	pudding	Unit 3_2	2	n.甜食	0
+7	would rather	Unit 3_2	2	宁愿	1
+7	send	Unit 3_2	2	vt.发送	1
+8	indoor	Unit 4_1	2	adj.室内的	1
+8	outdoor	Unit 4_1	2	adj.室外的	1
+8	really	Unit 4_1	2	adv.真正地	1
+8	forget	Unit 4_1	2	vt.忘记	1
+8	puzzle	Unit 4_1	2	n.拼图	0
+8	playground	Unit 4_1	2	n.操场	1
+8	piano	Unit 4_1	2	n.钢琴	1
+8	model	Unit 4_1	2	n.模型	1
+8	health	Unit 4_1	2	n.健康	1
+8	problem	Unit 4_1	2	n.问题	1
+9	headache	Unit 4_2	2	n.头痛	1
+9	stomachache	Unit 4_2	2	n.胃痛	1
+9	toothache	Unit 4_2	2	n.牙痛	1
+9	cold	Unit 4_2	2	n.感冒	1
+9	fever	Unit 4_2	2	n.发烧	1
+9	sore	Unit 4_2	2	adj.疼痛的	1
+9	throat	Unit 4_2	2	n.咽喉	1
+9	once	Unit 4_2	2	adv.&n.一次	1
+9	practise	Unit 4_2	2	vt.练习	1
+9	housework	Unit 4_2	2	n.家务劳动	1
+10	possible	Unit 5_1	3	adj.可能	1
+10	future	Unit 5_1	3	n.未来	1
+10	in front of	Unit 5_1	3	在...前面	1
+10	magic	Unit 5_1	3	adj.有魔力的	0
+10	look for	Unit 5_1	3	寻找	1
+10	button	Unit 5_1	3	n.按钮	1
+10	press	Unit 5_1	3	vt.按压	1
+10	back	Unit 5_1	3	n.背面	1
+10	centimetre	Unit 5_1	3	n.厘米	0
+11	weigh	Unit 5_2	3	vt.称出重量	1
+11	kilogram	Unit 5_2	3	n.千克	0
+11	astronaut	Unit 5_2	3	n.宇航员	0
+11	good-looking	Unit 5_2	3	adj.好看的	1
+11	slim	Unit 5_2	3	adj.苗条的	0
+11	reporter	Unit 5_2	3	n.记者	1
+11	baker	Unit 5_2	3	n.面包师	1
+11	singer	Unit 5_2	3	n.歌手	1
+11	agree	Unit 5_2	3	v.同意	1
+12	be good at	Unit 5_3	3	擅长	1
+12	possibly	Unit 5_3	3	adv.可能地	1
+12	grow	Unit 5_3	3	vt.长大	1
+12	bakery	Unit 5_3	3	n.面包房	1
+12	a lot	Unit 5_3	3	许多	1
+12	report	Unit 5_3	3	vt.报告	1
+12	poor	Unit 5_3	3	adj.不擅长的	1
+12	be poor at	Unit 5_3	3	不擅长	1
+12	spacecraft	Unit 5_3	3	n.宇宙飞船	1
+12	come back	Unit 5_3	3	回来	1
+13	seasonal	Unit 6_1	1	adj.季节性的	1
+13	change	Unit 6_1	1	v.变化	1
+13	sleeve	Unit 6_1	1	n.袖子	0
+13	shorts	Unit 6_1	1	n.短裤	1
+13	notice	Unit 6_1	1	n.&v.通知	1
+13	belt	Unit 6_1	1	n.皮带	1
+13	blouse	Unit 6_1	1	n.女式衬衫	0
+13	skirt	Unit 6_1	1	n.女裙	1
+13	life	Unit 6_1	1	n.生活	1
+13	around	Unit 6_1	1	adv.到处	1
+13	air-conditioned	Unit 6_1	1	adj.有空调的	0
+13	canteen	Unit 6_1	1	n.食堂	0
+13	snowman	Unit 6_1	1	n.雪人	1
+14	double-decker	Unit 7_1	2	n.双层车	0
+14	fare	Unit 7_1	2	n.车费	1
+14	public	Unit 7_1	2	adj.公共的	1
+14	transportation	Unit 7_1	2	n.运输	1
+14	conductor	Unit 7_1	2	n.售票员	1
+14	nowadays	Unit 7_1	2	adv.现今	0
+14	instead	Unit 7_1	2	adv.代替	1
+14	single-decker	Unit 7_1	2	n.单层车	0
+14	most	Unit 7_1	2	adv.大多数	1
+14	none	Unit 7_1	2	pron.没有一个	1
+14	still	Unit 7_1	2	adj.仍然	1
+14	perhaps	Unit 7_1	2	adv.大概	1
+15	few	Unit 7_2	2	adj.很少的	1
+15	traffic jam	Unit 7_2	2	交通阻塞	1
+15	motorcycle	Unit 7_2	2	n.轻便摩托车	1
+15	flyover	Unit 7_2	2	n.立交桥	1
+15	railway	Unit 7_2	2	n.铁路	1
+15	pavement	Unit 7_2	2	n.人行道	0
+15	tunnel	Unit 7_2	2	n.隧道	1
+15	bridge	Unit 7_2	2	n.桥	1
+15	crossing	Unit 7_2	2	n.十字路口	1
+15	footbridge	Unit 7_2	2	n.人行桥	1
+15	poster	Unit 7_2	2	n.海报	1
+16	display	Unit 8_1	3	n.展示	1
+16	gentle	Unit 8_1	3	adj.温和的	1
+16	hold	Unit 8_1	3	vt.抓住	1
+16	raincoat	Unit 8_1	3	n.雨衣	1
+16	tightly	Unit 8_1	3	adv.紧紧地	1
+16	slightly	Unit 8_1	3	adv.轻微地	1
+16	pot	Unit 8_1	3	n.盆	1
+16	flat	Unit 8_1	3	n.一套房间	1
+16	move	Unit 8_1	3	vt.移动	1
+16	quickly	Unit 8_1	3	adv.快速地	1
+17	windsurf	Unit 8_2	3	n.进行帆板运动	0
+17	typhoon	Unit 8_2	3	n.台风	0
+17	sink	Unit 8_2	3	n.沉没	1
+17	cleaner	Unit 8_2	3	n.清洁工人	1
+17	happily	Unit 8_2	3	adv.愉快地	1
+17	at first	Unit 8_2	3	起先	1
+17	gently	Unit 8_2	3	adv.温和地	1
+17	slowly	Unit 8_2	3	adj.缓慢地	1
+17	suddenly	Unit 8_2	3	adv.突然	1
+17	immediately	Unit 8_2	3	adv.立即	1
+18	fiercely	Unit 8_3	3	adv.猛烈地	1
+18	pass	Unit 8_3	3	vt.行进	1
+18	carefully	Unit 8_3	3	adv.小心地	1
+18	slide show	Unit 8_3	3	幻灯片	1
+18	think about	Unit 8_3	3	思考	1
+18	happen	Unit 8_3	3	vi.发生	1
+18	object	Unit 8_3	3	n.物体	1
+18	outside	Unit 8_3	3	prep.在...外面	1
+18	wave	Unit 8_3	3	n.波浪	1
+18	inside	Unit 8_3	3	prep.在...里面	1
+18	shelter	Unit 8_3	3	n.遮蔽物	1
+19	starfish	Unit 9_1	2	n.海星	1
+19	sea horse	Unit 9_1	2	海马	1
+19	competition	Unit 9_1	2	n.比赛	1
+19	stream	Unit 9_1	2	n.溪流	1
+19	whale	Unit 9_1	2	n.鲸	0
+19	dolphin	Unit 9_1	2	n.海豚	0
+19	shark	Unit 9_1	2	n.鲨鱼	0
+19	intelligent	Unit 9_1	2	adj.聪明的	1
+19	fisherman	Unit 9_1	2	n.渔夫	1
+19	important	Unit 9_1	2	adj.重要的	1
+19	cover	Unit 9_1	2	v.覆盖	1
+20	Internet	Unit 9_2	2	n.互联网	1
+20	shower	Unit 9_2	2	vi.淋浴	1
+20	farmer	Unit 9_2	2	n.农夫	1
+20	crop	Unit 9_2	2	n.农作物	1
+20	dripping	Unit 9_2	2	adj.滴水的	0
+20	tap	Unit 9_2	2	n.龙头	1
+20	running	Unit 9_2	2	adj.流动的	1
+20	waste	Unit 9_2	2	vt.浪费	1
+20	fix	Unit 9_2	2	vt.修理	1
+20	turn off	Unit 9_2	2	关掉	1
+20	instead of	Unit 9_2	2	代替	1
+21	forest	Unit 10_1	2	n.森林	1
+21	hollow	Unit 10_1	2	n.洞	0
+21	area	Unit 10_1	2	n.地区	1
+21	provide	Unit 10_1	2	vi.供给	1
+21	insect	Unit 10_1	2	n.昆虫	0
+21	nest	Unit 10_1	2	n.窝	0
+21	build	Unit 10_1	2	vt.建造	1
+21	wood	Unit 10_1	2	n.木头	1
+21	cut down	Unit 10_1	2	砍倒	1
+21	furniture	Unit 10_1	2	n.家具	1
+21	clay	Unit 10_1	2	n.黏土	0
+21	wool	Unit 10_1	2	n.羊毛	1
+22	cotton	Unit 10_2	2	n.棉花	1
+22	plastic	Unit 10_2	2	n.塑料	1
+22	oil	Unit 10_2	2	n.油	1
+22	metal	Unit 10_2	2	n.金属	1
+22	ground	Unit 10_2	2	n.土地	1
+22	sand	Unit 10_2	2	n.沙	1
+22	chopstick	Unit 10_2	2	n.筷子	0
+22	material	Unit 10_2	2	n.材料	1
+22	be made of	Unit 10_2	2	由...制成的	1
+22	wooden	Unit 10_2	2	adj.木制的	1
+22	woollen	Unit 10_2	2	adj.羊毛的	1

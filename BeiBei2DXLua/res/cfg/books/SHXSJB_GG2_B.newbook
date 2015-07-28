@@ -1,0 +1,390 @@
+1	beaver	Unit 1_1	7	n.海狸	1
+1	dam	Unit 1_1	7	n.堤坝	0
+1	pond	Unit 1_1	7	n.池塘	1
+2	mud	Unit 1_2	7	n.泥	1
+2	historian	Unit 1_2	7	n.历史学家	1
+2	settlement	Unit 1_2	7	n.移民	1
+2	European	Unit 1_2	7	adj.欧洲的	1
+2	settler	Unit 1_2	7	n.移民	1
+2	skin	Unit 1_2	7	n.皮	1
+2	head	Unit 1_2	7	n.朝...前进	1
+2	territory	Unit 1_2	7	n.领土	1
+2	well-kept	Unit 1_2	7	adj.严守的	1
+3	secret	Unit 1_3	7	n.秘密	1
+3	tradesman	Unit 1_3	7	n.商人	1
+3	dishonest	Unit 1_3	7	adj.不诚实的	1
+3	squeal	Unit 1_3	7	n.长而尖的声音	0
+3	tricky	Unit 1_3	7	adj.狡猾的	1
+3	put value on	Unit 1_3	7	重视	1
+3	trading post	Unit 1_3	7	贸易站点	1
+3	exchange for	Unit 1_3	7	交换	1
+3	be sure of	Unit 1_3	7	对...有把握	1
+4	wrap up	Unit 1_4	7	包好	1
+4	boatman	Unit 1_4	7	船夫	1
+4	move	Unit 1_4	7	vt.行动	0
+4	salesman	Unit 1_4	7	n.销售员	1
+4	rainstorm	Unit 1_4	7	n.暴风雨	1
+4	string	Unit 1_4	7	n.一连串	1
+4	proverb	Unit 1_4	7	n.格言	1
+4	hatch	Unit 1_4	7	n.孵化	1
+4	spill	Unit 1_4	7	v.溢出	1
+5	character	Unit 1_5	7	n.人物	1
+5	angel	Unit 1_5	7	n.天使	0
+5	refer	Unit 1_5	7	vi.提到	1
+5	saying	Unit 1_5	7	n.谚语	1
+5	present	Unit 1_5	7	n.呈现	1
+5	rhyme	Unit 1_5	7	n.韵	1
+5	abstract	Unit 1_5	7	n.抽象的	1
+5	statement	Unit 1_5	7	n.叙述	1
+5	truth	Unit 1_5	7	n.真理	1
+6	neglect	Unit 1_6	7	vt.忽视	1
+6	youth	Unit 1_6	7	n.青春时期	1
+6	education	Unit 1_6	7	n.教育	1
+6	former	Unit 1_6	7	adj.前者的	1
+6	latter	Unit 1_6	7	adj.后者的	1
+6	agriculture	Unit 1_6	7	n.农业	1
+6	disuse	Unit 1_6	7	n.废弃	1
+6	assignment	Unit 1_6	7	n.分派的任务	1
+6	give birth to	Unit 1_6	7	使...产生	1
+7	make the first move	Unit 1_7	7	先采取行动	1
+7	a string of	Unit 1_7	7	一系列的	1
+7	in a ... manner	Unit 1_7	7	以...方式	1
+7	in the form of	Unit 1_7	7	以...的形式	1
+7	fall into	Unit 1_7	7	分为	1
+7	take the form of	Unit 1_7	7	以...的形式出现	1
+7	keep ... in mind	Unit 1_7	7	记住	1
+7	out of context	Unit 1_7	7	脱离上下文	1
+7	make a point	Unit 1_7	7	提出一个论点	1
+7	out of fashion	Unit 1_7	7	过时	1
+8	integration	Unit 2_1	3	n.结合	0
+8	verbal	Unit 2_1	3	adj.口头的	0
+8	nonverbal	Unit 2_1	3	adj.不用言辞表达的	0
+8	stance	Unit 2_1	3	n.姿势	0
+8	presentation	Unit 2_1	3	n.陈述	1
+8	delivery	Unit 2_1	3	n.送货	1
+8	unprofessional	Unit 2_1	3	adj.外行的	1
+8	distract	Unit 2_1	3	vt.使转移注意力	0
+8	expansive	Unit 2_1	3	adj.广阔的，扩张的	1
+8	expressive	Unit 2_1	3	adj.富于表现力的	0
+8	timing	Unit 2_1	3	n.时间的把握	1
+9	time	Unit 2_2	3	n.记录...所需时间	1
+9	play a part	Unit 2_2	3	扮演角色	1
+9	eye contact	Unit 2_2	3	目光接触	1
+9	make sure	Unit 2_2	3	确保	1
+9	in general	Unit 2_2	3	总之	1
+9	lose interest in	Unit 2_2	3	对...失去兴趣	1
+9	fall short of	Unit 2_2	3	缺少	1
+9	run over	Unit 2_2	3	超过	1
+9	kid	Unit 2_2	3	n.&v.开玩笑	1
+9	memorize	Unit 2_2	3	vt.记住熟记	1
+9	translator	Unit 2_2	3	n.翻译者	1
+10	indirect	Unit 2_3	3	adj.间接的	1
+10	roundabout	Unit 2_3	3	adj.拐弯抹角的	0
+10	address	Unit 2_3	3	n.讲话	1
+10	retain	Unit 2_3	3	vt.保持	1
+10	phonetic	Unit 2_3	3	adj.语音的	0
+10	impression	Unit 2_3	3	n.印象	1
+10	come up with	Unit 2_3	3	想出	1
+10	from then on	Unit 2_3	3	从那时开始	1
+10	for sb's sake	Unit 2_3	3	为了...的利益	1
+10	in the open air	Unit 2_3	3	在户外	1
+10	mess up	Unit 2_3	3	出错	1
+10	Gettysburg Address	Unit 2_3	3	《葛底斯堡演说》	0
+11	magnet	Unit 3_1	4	n.磁铁	1
+11	genuinely	Unit 3_1	4	adv.真诚地	1
+11	additional	Unit 3_1	4	adj.附加的	1
+11	approachable	Unit 3_1	4	adj.随和的	1
+11	natural	Unit 3_1	4	adj.表现自然的	1
+11	zero	Unit 3_1	4	num.把注意力集中于...	0
+11	burden	Unit 3_1	4	n.负担	1
+11	modesty	Unit 3_1	4	n.谦虚	1
+11	extremely	Unit 3_1	4	adv.极端地	1
+12	attractive	Unit 3_2	4	adj.有吸引力的	1
+12	compliment	Unit 3_2	4	n.恭维	0
+12	go for	Unit 3_2	4	支持	1
+12	feel at ease	Unit 3_2	4	感到很轻松	1
+12	zero in on	Unit 3_2	4	把注意力集中于...	1
+12	give and take	Unit 3_2	4	互相迁就	1
+12	light up	Unit 3_2	4	显得高兴	1
+12	tear down	Unit 3_2	4	贬低	1
+12	childhood	Unit 3_2	4	n.童年	1
+13	mushroom	Unit 3_3	4	n.蘑菇	1
+13	mean	Unit 3_3	4	adj.吝啬的	1
+13	westerner	Unit 3_3	4	n.西方人	1
+13	define	Unit 3_3	4	vt.给...下定义	1
+13	affection	Unit 3_3	4	n.友爱	0
+13	respect	Unit 3_3	4	vt.&n.尊重	1
+13	definition	Unit 3_3	4	n.定义	1
+13	mate	Unit 3_3	4	n.同学	1
+13	long-lasting	Unit 3_3	4	adj.长久的	1
+14	mobility	Unit 3_4	4	n.活动性	1
+14	short-term	Unit 3_4	4	adj.短期的	1
+14	friendliness	Unit 3_4	4	n.友好	1
+14	characterize	Unit 3_4	4	vt.以...为特征	0
+14	indication	Unit 3_4	4	n.指示	1
+14	in the woods	Unit 3_4	4	在树林里	1
+14	in the wild	Unit 3_4	4	处于野生状态	1
+14	base ... on	Unit 3_4	4	以...为基础	1
+14	hold true	Unit 3_4	4	适用	1
+14	in reality	Unit 3_4	4	实际上	1
+15	Swedish	Unit 4_1	5	n.&adj.瑞典语	1
+15	slide	Unit 4_1	5	n.滑动	1
+15	unfamiliar	Unit 4_1	5	adj.不熟悉的	1
+15	equivalent	Unit 4_1	5	adj.同等的	1
+15	cast	Unit 4_1	5	v.投射	1
+15	restless	Unit 4_1	5	adj.不能安宁的	0
+15	suspicion	Unit 4_1	5	n.疑心	1
+15	autograph	Unit 4_1	5	n.亲笔签名	0
+15	release	Unit 4_1	5	n.&vt.释放	1
+16	be fresh from	Unit 4_2	5	新从...来的	1
+16	take to	Unit 4_2	5	喜欢	1
+16	in passing	Unit 4_2	5	顺便	1
+16	finishing touch	Unit 4_2	5	最后的修饰	1
+16	cast a glance at	Unit 4_2	5	看一眼	1
+16	as though	Unit 4_2	5	好像	1
+16	in shock	Unit 4_2	5	吃惊地	1
+16	Sweden	Unit 4_2	5	瑞典	0
+16	seat	Unit 4_2	5	n.坐下	1
+17	study	Unit 4_3	5	n.书房	1
+17	torch	Unit 4_3	5	n.火把	0
+17	wheelchair	Unit 4_3	5	n.轮椅	0
+17	damage	Unit 4_3	5	n.&v.损伤	1
+17	endure	Unit 4_3	5	vt.忍受	1
+17	highlight	Unit 4_3	5	n.最精彩的部分	0
+17	gracious	Unit 4_3	5	adj.好心的	1
+17	chant	Unit 4_3	5	n.(反复地）唱等	0
+17	glory	Unit 4_3	5	n.光荣	0
+18	motion	Unit 4_4	5	n.运动	1
+18	historic	Unit 4_4	5	adj.有历史意义的	0
+18	last	Unit 4_4	5	adj.继续	1
+18	flame	Unit 4_4	5	n.火焰	1
+18	brotherhood	Unit 4_4	5	n.兄弟般的关系	0
+18	take ... as an example	Unit 4_4	5	以...为例	1
+18	fall apart	Unit 4_4	5	瓦解	1
+18	up and down	Unit 4_4	5	来来回回	1
+18	drop by	Unit 4_4	5	顺便访问	1
+19	come by	Unit 4_5	5	访问	1
+19	pass by	Unit 4_5	5	过去	1
+19	get in the way	Unit 4_5	5	妨碍	1
+19	brain damage	Unit 4_5	5	脑损伤	1
+19	many a	Unit 4_5	5	很多	1
+19	to the fullest	Unit 4_5	5	充分地	1
+19	starting point	Unit 4_5	5	起点	1
+19	line up	Unit 4_5	5	排队	1
+19	at the sight of	Unit 4_5	5	看到	1
+20	mathematics	Unit 5_1	6	n.数学	1
+20	polytechnic	Unit 5_1	6	adj.工艺教育的	0
+20	qualification	Unit 5_1	6	n.资格	1
+20	clerk	Unit 5_1	6	n.办事员	1
+20	gravity	Unit 5_1	6	n.引力	1
+20	explanation	Unit 5_1	6	n.解释	1
+20	puzzling	Unit 5_1	6	adj.令人迷惑的	1
+20	photoelectric	Unit 5_1	6	adj.光电的	0
+20	professor	Unit 5_1	6	n.教授	1
+20	relativity	Unit 5_1	6	n.相对性	0
+20	nuclear	Unit 5_1	6	adj.原子核的	1
+21	atomic	Unit 5_2	6	adj.原子的	1
+21	be fascinated by	Unit 5_2	6	对...着迷	1
+21	photoelectric effect	Unit 5_2	6	光电效应	1
+21	come to power	Unit 5_2	6	上台	1
+21	speak out against	Unit 5_2	6	直言不讳地反对	1
+21	in the course of	Unit 5_2	6	在...过程中	1
+21	nuclear power	Unit 5_2	6	核动力	1
+21	atomic bomb	Unit 5_2	6	原子弹	1
+21	apart from	Unit 5_2	6	除了	1
+21	take ... seriously	Unit 5_2	6	郑重对待	1
+21	pass away	Unit 5_2	6	去世	1
+22	leave behind	Unit 5_3	6	留下	1
+22	a wealth of	Unit 5_3	6	大量的	1
+22	Switzerland	Unit 5_3	6	n.瑞士	0
+22	Berlin	Unit 5_3	6	n.柏林	0
+22	Nazi	Unit 5_3	6	n.纳粹党员	0
+22	Theory of Relativity	Unit 5_3	6	相对论	0
+22	the First World War	Unit 5_3	6	第一次世界大战	0
+22	bright	Unit 5_3	6	adj.聪明的	1
+22	thoughtful	Unit 5_3	6	adj.认真思考的	1
+22	compass	Unit 5_3	6	n.指南针	1
+22	needle	Unit 5_3	6	n.指针	1
+23	unseen	Unit 5_4	6	adj.看不见的	1
+23	teens	Unit 5_4	6	n.少年时期	0
+23	hunger	Unit 5_4	6	n.饥饿	1
+23	printer	Unit 5_4	6	n.打印机	1
+23	personality	Unit 5_4	6	n.个性	0
+23	characteristic	Unit 5_4	6	n.特征	1
+23	ignorant	Unit 5_4	6	adj.无知的	0
+23	fossil	Unit 5_4	6	adj.化石	0
+23	voyage	Unit 5_4	6	n.旅行	1
+23	seasick	Unit 5_4	6	adj.晕船的	1
+23	ashore	Unit 5_4	6	adv.向岸边	0
+24	sample	Unit 5_5	6	n.标本	1
+24	beak	Unit 5_5	6	n.鸟嘴	1
+24	evolution	Unit 5_5	6	n.进化	1
+24	essay	Unit 5_5	6	n.短文	1
+24	origin	Unit 5_5	6	n.起源	1
+24	row	Unit 5_5	6	v.争论	1
+24	descent	Unit 5_5	6	n.出身	1
+24	ancestor	Unit 5_5	6	n.祖先	1
+24	prohibit	Unit 5_5	6	v.妨碍	1
+24	on board	Unit 5_5	6	在船、飞机等上	1
+25	change into	Unit 5_6	6	变成...	1
+25	natural selection	Unit 5_6	6	自然选择	1
+25	take up	Unit 5_6	6	从事	1
+25	the Polytechnic Institute	Unit 5_6	6	苏黎世理工大学	0
+25	Universal Printer	Unit 5_6	6	通用印刷机	0
+25	The Bible	Unit 5_6	6	《圣经》	0
+25	the South Pacific	Unit 5_6	6	南太平洋	0
+25	The Origin of Species	Unit 5_6	6	《物种起源》	0
+25	The Descent of Man	Unit 5_6	6	《人类的由来》	0
+25	The Theory of Evolution	Unit 5_6	6	进化论	0
+26	hybrid	Unit 6_1	6	n.杂种动植物	0
+26	peanut	Unit 6_1	6	n.花生	1
+26	shadow	Unit 6_1	6	n.暗处	1
+26	agricultural	Unit 6_1	6	adj.农业的	1
+26	yield	Unit 6_1	6	n.产量	1
+26	pioneering	Unit 6_1	6	adj.开创性的	0
+26	spread	Unit 6_1	6	v.铺开	1
+26	coverage	Unit 6_1	6	n.覆盖	1
+26	output	Unit 6_1	6	n.产量	1
+27	cultivation	Unit 6_2	6	n.栽培	1
+27	practical	Unit 6_2	6	adj.注重实际的	1
+27	popularize	Unit 6_2	6	v.推广	0
+27	eliminate	Unit 6_2	6	v.消除	1
+27	starvation	Unit 6_2	6	n.饥饿	1
+27	remaining	Unit 6_2	6	adj.其余的	1
+27	shortage	Unit 6_2	6	n.缺乏	0
+27	be born into	Unit 6_2	6	出生于	1
+27	devote oneself to	Unit 6_2	6	投身于	1
+28	come up with	Unit 6_3	6	想出	1
+28	a great many	Unit 6_3	6	很多	1
+28	care for	Unit 6_3	6	喜欢	1
+28	the Southwestern Agricultural College	Unit 6_3	6	西南农业学院	0
+28	FAO	Unit 6_3	6	联合国粮食及农业组织（缩写形式）	0
+28	unusual	Unit 6_3	6	adj.不一般的	1
+28	seaman	Unit 6_3	6	n.水手	1
+28	port	Unit 6_3	6	n.港口	1
+28	seaside	Unit 6_3	6	adj.海滨	1
+29	troublesome	Unit 6_4	6	adj.令人讨厌的	1
+29	sign	Unit 6_4	6	n.签名	1
+29	fame	Unit 6_4	6	n.名声	1
+29	inertia	Unit 6_4	6	n.惯性	0
+29	resistance	Unit 6_4	6	n.阻力	1
+29	transfer	Unit 6_4	6	v.转移	1
+29	whirl	Unit 6_4	6	v.迅速旋转	0
+29	sweeping	Unit 6_4	6	n.做大幅度弧线形运动的	1
+29	curve	Unit 6_4	6	n.曲线	1
+30	acceleration	Unit 6_5	6	n.加速	0
+30	formula	Unit 6_5	6	n.公式	1
+30	engineer	Unit 6_5	6	n.工程师	1
+30	jet	Unit 6_5	6	n.喷气式飞机	1
+30	fighter	Unit 6_5	6	n.战斗机	1
+30	carrier	Unit 6_5	6	n.运输舰	1
+30	restrain	Unit 6_5	6	vt.抑制	0
+30	unaccompanied	Unit 6_5	6	adj.无陪伴的	0
+30	precisely	Unit 6_5	6	adv.精确地	1
+31	exert	Unit 6_6	6	vt.施加压力	0
+31	frictionless	Unit 6_6	6	adj.没有摩擦力的	0
+31	oily	Unit 6_6	6	adj.似油的	1
+31	roller	Unit 6_6	6	n.滚筒	1
+31	skate	Unit 6_6	6	v.&n.旱冰鞋	1
+31	at rest	Unit 6_6	6	静止的	1
+31	act upon	Unit 6_6	6	作用于	1
+31	a jet fighter	Unit 6_6	6	喷气式战斗机	1
+31	an aircraft carrier	Unit 6_6	6	航空母舰	1
+31	roller skate	Unit 6_6	6	四轮旱冰鞋	1
+32	classic	Unit 7_1	5	adj.文学名著	1
+32	workhouse	Unit 7_1	5	n.济贫院	0
+32	board	Unit 7_1	5	n.登上	1
+32	management	Unit 7_1	5	n.管理人员	1
+32	onion	Unit 7_1	5	n.洋葱	1
+32	pot	Unit 7_1	5	n.锅	1
+32	assist	Unit 7_1	5	vt.帮助	0
+32	polish	Unit 7_1	5	n.&v.擦亮	1
+32	spoon	Unit 7_1	5	n.匙	1
+32	whisper	Unit 7_1	5	vt.低声说	1
+33	amazement	Unit 7_2	5	n.惊愕	0
+33	faint	Unit 7_2	5	n.暗淡的	1
+33	seize	Unit 7_2	5	vt.抓住	1
+33	alarm	Unit 7_2	5	n.惊慌	1
+33	reward	Unit 7_2	5	vt.&n.酬谢	1
+33	earn one's living	Unit 7_2	5	谋生	1
+33	in silence	Unit 7_2	5	安静地	1
+33	take one's place	Unit 7_2	5	就座	1
+33	aim a blow at	Unit 7_2	5	对准...一击	1
+33	rush into	Unit 7_2	5	冲进	1
+34	at the head of	Unit 7_3	5	在...的前面	1
+34	lock up	Unit 7_3	5	锁起来	1
+34	reporter	Unit 7_3	5	n.记者	1
+34	original	Unit 7_3	5	adj.原创作品	1
+34	novelist	Unit 7_3	5	n.小说家	1
+34	plot	Unit 7_3	5	n.情节	1
+34	hero	Unit 7_3	5	n.英雄	1
+34	best seller	Unit 7_3	5	畅销书	0
+34	vivid	Unit 7_3	5	adj.生动的	1
+34	touching	Unit 7_3	5	adj.动人的	0
+35	climax	Unit 7_4	5	n.高潮	0
+35	assign	Unit 7_4	5	v.布置	1
+35	level	Unit 7_4	5	n.水平	1
+35	uncover	Unit 7_4	5	vt.发现	1
+35	core	Unit 7_4	5	n.中心	0
+35	dip	Unit 7_4	5	n.浸	1
+35	toe	Unit 7_4	5	n.脚趾	1
+35	plunge	Unit 7_4	5	n.投入	1
+35	enlighten	Unit 7_4	5	v.启发	0
+35	put an end to	Unit 7_4	5	使...结束	1
+36	in the original	Unit 7_5	5	用原著语言的	1
+36	stand the test	Unit 7_5	5	经受考验	1
+36	account for	Unit 7_5	5	占	1
+36	make up	Unit 7_5	5	组成	1
+36	the Red Cross	Unit 7_5	5	红十字	0
+36	The Old Man and the Sea	Unit 7_5	5	《老人与海》	0
+36	A Tale of Two Cities	Unit 7_5	5	《双城记》	0
+36	the French Revolution	Unit 7_5	5	法国大革命	0
+36	Pickwick Papers	Unit 7_5	5	《匹克威克外传》	0
+37	fate	Unit 8_1	5	n.命运	1
+37	pauper	Unit 8_1	5	n.贫民	0
+37	terrified	Unit 8_1	5	adj.恐惧的	0
+37	sheriff	Unit 8_1	5	n.郡长	0
+37	majesty	Unit 8_1	5	n.陛下	0
+37	witchcraft	Unit 8_1	5	n.巫术	0
+37	confess	Unit 8_1	5	v.供认	1
+37	evident	Unit 8_1	5	adj.明显的	1
+37	homeless	Unit 8_1	5	n.无家可归的人	1
+37	disastrous	Unit 8_1	5	adj.灾难性的	1
+38	unexpressed	Unit 8_2	5	adj.未表现出来的	1
+38	accuse	Unit 8_2	5	vt.告发	1
+38	mistake ... for ...	Unit 8_2	5	把...误以为	1
+38	bring about	Unit 8_2	5	使发生	1
+38	have every reason to do something	Unit 8_2	5	完全有理由做...	1
+38	pull off	Unit 8_2	5	拿掉	1
+38	bend down	Unit 8_2	5	弯腰	1
+38	be gifted with	Unit 8_2	5	具有...的才华	1
+38	in ruins	Unit 8_2	5	成废墟	1
+38	in peace	Unit 8_2	5	平静地	1
+39	Wales	Unit 8_3	5	n.威尔士	0
+39	let	Unit 8_3	5	vt.出租	0
+39	nonsense	Unit 8_3	5	n.胡说	1
+39	fairy	Unit 8_3	5	n.小仙子	1
+39	tale	Unit 8_3	5	n.故事	1
+39	ugly	Unit 8_3	5	adj.丑陋的	1
+39	duckling	Unit 8_3	5	n.小鸭	0
+39	Russian	Unit 8_3	5	n.俄罗斯人	1
+39	celebrated	Unit 8_3	5	adj.著名的	1
+39	youthful	Unit 8_3	5	adj.青年人的	1
+40	humorist	Unit 8_4	5	n.幽默作家	1
+40	assault	Unit 8_4	5	n.突击	0
+40	governor	Unit 8_4	5	n.州长	1
+40	fictitious	Unit 8_4	5	adj.想象的	0
+40	rumor	Unit 8_4	5	n.谣言	0
+40	bribery	Unit 8_4	5	n.行贿或受贿的行为	0
+40	build up	Unit 8_4	5	逐步建立	1
+40	in debt	Unit 8_4	5	负债	1
+40	run for	Unit 8_4	5	竞选...	1
+41	be accused of	Unit 8_5	5	被指控...	1
+41	burst out	Unit 8_5	5	突然开始...	1
+41	see through	Unit 8_5	5	看穿	1
+41	a case in point	Unit 8_5	5	明显的例子	1
+41	The Ugly Duckling	Unit 8_5	5	《丑小鸭》	0
+41	The Celebrated Jumping Frog of Calaveras County	Unit 8_5	5	《加利维拉县有名的跳蛙》	0
+41	The Innocents Abroad	Unit 8_5	5	《傻瓜出国记》	0
+41	The Prince and the Pauper	Unit 8_5	5	《王子与贫民》	0
+41	Running for Governor	Unit 8_5	5	《竞选州长》	0

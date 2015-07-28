@@ -1,0 +1,148 @@
+1	library	Unit 1_1	3	n.图书馆	1
+1	borrow	Unit 1_1	3	v借	0
+1	borrow books	Unit 1_1	3	借书	0
+2	meeting room	Unit 1_2	3	会议室	0
+2	have a meeting	Unit 1_2	3	开会	0
+2	welcome	Unit 1_2	3	vt.欢迎	1
+2	meet	Unit 1_2	3	vt.相遇	1
+2	our	Unit 1_2	3	pron.我们的	1
+2	science lab	Unit 1_2	3	科学实验室	0
+2	sciense lesson	Unit 1_2	3	科学课	0
+2	language lab	Unit 1_2	3	语言实验室	0
+2	English lesson	Unit 1_2	3	英语课	0
+2	we	Unit 1_2	3	pron.我们	1
+2	have	Unit 1_2	3	v.有	1
+2	all	Unit 1_2	3	n.&pron.所有	1
+3	like	Unit 1_3	3	vt.喜欢	1
+3	very much	Unit 1_3	3	非常	1
+3	art club	Unit 1_3	3	美术俱乐部	0
+3	paint a picture	Unit 1_3	3	绘画	0
+3	music club	Unit 1_3	3	音乐俱乐部	0
+3	play the piano	Unit 1_3	3	弹钢琴	0
+3	many	Unit 1_3	3	adj.&pron许多	1
+3	music	Unit 1_3	3	n.音乐	1
+3	way	Unit 1_3	3	n.道路	1
+3	please	Unit 1_3	3	int.请	1
+3	also	Unit 1_3	3	adv.也	1
+4	toy train	Unit 2_1	3	玩具火车	0
+4	toy plane	Unit 2_1	3	玩具飞机	0
+4	toy ship	Unit 2_1	3	玩具轮船	0
+4	toy boat	Unit 2_1	3	玩具小船	0
+4	can	Unit 2_1	3	aux.能	1
+4	help	Unit 2_1	3	vt.帮助	1
+4	want	Unit 2_1	3	vt.想要	1
+4	toy	Unit 2_1	3	n.玩具	1
+5	train	Unit 2_2	3	n.火车	1
+5	plane	Unit 2_2	3	n.飞机	1
+5	ship	Unit 2_2	3	n.轮船	1
+5	boat	Unit 2_2	3	n.小船	1
+5	motorbike	Unit 2_2	3	n.摩托车	0
+5	jeep	Unit 2_2	3	n.吉普车	0
+5	coach	Unit 2_2	3	n.长途旅游车	0
+5	buy	Unit 2_2	3	vt.买	1
+6	bike	Unit 2_3	3	n.自行车	1
+6	car	Unit 2_3	3	n.小汽车	1
+6	bus	Unit 2_3	3	n.公共汽车	1
+6	taxi	Unit 2_3	3	n.出租车	1
+6	trousers	Unit 2_3	3	n.裤子	0
+6	short pants	Unit 2_3	3	短裤	1
+6	try	Unit 2_3	3	v.试	1
+6	coat	Unit 2_3	3	n.大衣	1
+6	clothes	Unit 2_3	3	n.衣服	1
+7	ask	Unit 3_1	3	vt.问	1
+7	answer	Unit 3_1	3	vt.&n.回答	1
+7	eat	Unit 3_1	3	vt.吃	1
+7	make	Unit 3_1	3	vt.制造	1
+7	think	Unit 3_1	3	vt.想	1
+7	late	Unit 3_1	3	adj.晚	1
+7	class	Unit 3_1	3	n.班	1
+7	school	Unit 3_1	3	n.学校	1
+7	question	Unit 3_1	3	n.问题	0
+7	actively	Unit 3_1	3	adv.积极地	0
+8	quiet	Unit 3_2	3	adj.安静的	0
+8	make noise	Unit 3_2	3	喧闹	0
+8	keep your room clean	Unit 3_2	3	保持房间整洁	0
+8	do housework	Unit 3_2	3	做家务	1
+8	read in bed	Unit 3_2	3	在床上看书	0
+8	go home late	Unit 3_2	3	晚回家	0
+8	go home	Unit 3_2	3	回家	1
+8	get up	Unit 3_2	3	起床	1
+8	go to bed	Unit 3_2	3	去睡觉	1
+8	help old people	Unit 3_2	3	帮助老人	0
+9	keep off the grass	Unit 3_3	3	不要进入草地	0
+9	take good care of young children	Unit 3_3	3	照看好儿童	0
+9	play on the street	Unit 3_3	3	在街道上玩耍	0
+9	pick flowers	Unit 3_3	3	摘花	0
+9	litter	Unit 3_3	3	vi乱丢杂物	0
+9	wait	Unit 3_3	3	v.等待	1
+9	take	Unit 3_3	3	vt.拿；乘坐	1
+9	young	Unit 3_3	3	adj.年轻的	1
+9	child	Unit 3_3	3	n.孩子	1
+9	children	Unit 3_3	3	n.孩子（复数)	0
+9	people	Unit 3_3	3	n.人	1
+10	have a bad cold	Unit 4_1	3	重感冒	0
+10	have a fever	Unit 4_1	3	发烧	0
+10	have a headache	Unit 4_1	3	头疼	0
+10	have a cough	Unit 4_1	3	咳嗽	0
+10	dear	Unit 4_1	3	adj.亲爱的	1
+10	ill	Unit 4_1	3	adj.有病的	1
+10	bad	Unit 4_1	3	adj.严重的	1
+10	afraid	Unit 4_1	3	adj.害怕	1
+10	worry	Unit 4_1	3	v.&n.担心	1
+11	have a toothache	Unit 4_2	3	牙疼	0
+11	have a stomachache	Unit 4_2	3	胃疼	0
+11	take some medicine	Unit 4_2	3	吃点儿药	0
+11	take a good rest	Unit 4_2	3	好好休息	0
+11	wrong	Unit 4_2	3	adj.错的	0
+11	with	Unit 4_2	3	prep和...一起	1
+11	head	Unit 4_2	3	n.头	1
+11	face	Unit 4_2	3	n.脸	1
+11	ear	Unit 4_2	3	n.耳朵	1
+12	arm	Unit 4_3	3	n.胳膊	1
+12	chocolate	Unit 4_3	3	n.巧克力	0
+12	dragon fruit	Unit 4_3	3	火龙果	0
+12	bring	Unit 4_3	3	vt.带来	1
+12	feel	Unit 4_3	3	v.感觉	1
+12	get-well card	Unit 4_3	3	康复卡	1
+12	here	Unit 4_3	3	adv.这里	1
+12	for	Unit 4_3	3	prep.为了...	1
+13	make a call	Unit 5_1	1	打电话	1
+13	write an email	Unit 5_1	1	写完电子邮件	1
+13	wash the clothes	Unit 5_1	1	洗衣服	1
+13	clean the room	Unit 5_1	1	打扫房间	1
+13	tell a story	Unit 5_1	1	讲故事	1
+13	sing a song	Unit 5_1	1	唱歌	1
+13	play the guitar	Unit 5_1	1	弹吉他	0
+13	play the violin	Unit 5_1	1	拉小提琴	0
+13	look at the picture	Unit 5_1	1	看图片	1
+13	talk about	Unit 5_1	1	谈论	1
+13	stand	Unit 5_1	1	v.&n.站立	1
+13	sit	Unit 5_1	1	v.坐	1
+13	cousin	Unit 5_1	1	n.表兄弟	1
+14	play footbal	Unit 6_1	3	踢足球	0
+14	play basketball	Unit 6_1	3	打篮球	0
+14	play volleyball	Unit 6_1	3	打排球	0
+14	watch the games	Unit 6_1	3	观看比赛	0
+14	watch	Unit 6_1	3	vt.观看	1
+14	game	Unit 6_1	3	n.比赛	1
+14	foot	Unit 6_1	3	n.脚	1
+14	feet	Unit 6_1	3	n.脚（复数）	0
+14	football	Unit 6_1	3	n.足球	1
+15	basketball	Unit 6_2	3	n.篮球	1
+15	playground	Unit 6_2	3	n.操场	1
+15	play badminton	Unit 6_2	3	打羽毛球	0
+15	play tennis	Unit 6_2	3	打网球	0
+15	play ping-pong	Unit 6_2	3	打乒乓球	0
+15	play baseball	Unit 6_2	3	打棒球	0
+15	Miss	Unit 6_2	3	n.小姐	1
+15	Ms	Unit 6_2	3	abbr.女士	1
+15	Mr	Unit 6_2	3	abbr.先生	1
+16	Mrs	Unit 6_3	3	abbr.太太	1
+16	favourite	Unit 6_3	3	adj.最喜欢的	1
+16	sport	Unit 6_3	3	n.运动	1
+16	do the high jump	Unit 6_3	3	跳高	0
+16	do the long jump	Unit 6_3	3	跳远	0
+16	run fast	Unit 6_3	3	跑得快	0
+16	run	Unit 6_3	3	vi.跑步	1
+16	high jump	Unit 6_3	3	跳高	1
+16	long jump	Unit 6_3	3	跳远	1

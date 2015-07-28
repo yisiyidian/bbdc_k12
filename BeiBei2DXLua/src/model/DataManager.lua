@@ -5,15 +5,29 @@ local s_USE_XXTEA = true
 
 ---------------------------------------------------------------------------
 -- DO NOT modify these below
-g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38'
-        ,'39','40','41','42','43','44'}
-g_BOOKKEYS = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
-        , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
-        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
-        ,'cet4','cet6','pro4','pro8','gse'
-        ,'gre','gmat','sat','toefl','ielts',
-        'houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'
-    }
+-- g_BOOKS    = {'1',    '2',    '3',    '4',   '5',   '6',     '7',      '8',     '9',       '10',   '11',   '12',  '13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38'
+--         ,'39','40','41','42','43','44'}
+-- g_BOOKKEYS = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
+--         , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
+--         , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
+--         ,'cet4','cet6','pro4','pro8','gse'
+--         ,'gre','gmat','sat','toefl','ielts',
+--         'houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'
+--     }
+function DataManager.loadBookName()
+    local bookName = {}
+    local bookCount = {}
+    local filepath = "cfg/books/book.keys"
+    local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
+    local lines = split(content, "\n")
+    for j = 1, #lines do
+        table.insert(bookName, lines[j])
+        table.insert(bookCount, j..'')
+    end
+    return bookName, bookCount
+end
+
+g_BOOKKEYS, g_BOOKS = DataManager.loadBookName() 
 
 s_BOOK_KEY_CET4     = g_BOOKKEYS[1] -- 'cet4'
 s_BOOK_KEY_CET6     = g_BOOKKEYS[2] -- 'cet6'
@@ -102,11 +116,14 @@ end
 
 -- word -------------------------------------------------------------------
 
+
+
 function DataManager.loadBookWords()
 
 
     local bookWord = {}
-    local bookName = {'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'middle', 'ncee', 'primary', 'pro4', 'pro8', 'sat', 'toefl'}
+    --local bookName = {'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'middle', 'ncee', 'primary', 'pro4', 'pro8', 'sat', 'toefl'}
+    local bookName = g_BOOKKEYS
     for i = 1, #bookName do
         bookWord[bookName[i]] = {}
         local filepath = "cfg/" .. bookName[i] .. ".book"
@@ -127,16 +144,19 @@ end
 function DataManager.loadK12Books()
     local bookUnitWord = {}
     local bookWordMeaning = {}
-        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
-        , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
-        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
-        ,'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'pro4', 'pro8', 'sat', 'toefl'
-        ,'houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'
-    }
+    --     local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
+    --     , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
+    --     , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
+    --     ,'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'pro4', 'pro8', 'sat', 'toefl'
+    --     ,'houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'
+    -- }
+    local bookName = g_BOOKKEYS
+    print('-----------finalbookname-------')
+    print_lua_table(bookName)
         for i = 1, #bookName do
             bookUnitWord[bookName[i]] = {}
             bookWordMeaning[bookName[i]] = {}
-            local filepath = "cfg/" .. bookName[i] .. ".newbook"
+            local filepath = "cfg/books/" .. bookName[i] .. ".newbook"
             local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
             local lines = split(content, "\n")
             local current_unit = 0
@@ -196,15 +216,16 @@ end
 -- return unit name   books[book][unit] = 'unitName'  3/   3-1
 function DataManager.loadUnitName()
     local bookUnitName = {}
-        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
-        , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
-        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
-        ,'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'pro4', 'pro8', 'sat', 'toefl'
-        ,'houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'
-        }
+        -- local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
+        -- , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
+        -- , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
+        -- ,'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'pro4', 'pro8', 'sat', 'toefl'
+        -- ,'houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'
+        -- }
+        local bookName = g_BOOKKEYS
         for i = 1, #bookName do
             bookUnitName[bookName[i]] = {}
-            local filepath = "cfg/" .. bookName[i] .. ".newbook"
+            local filepath = "cfg/books/" .. bookName[i] .. ".newbook"
             local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
             local lines = split(content, "\n")
             local current_unit = 0
@@ -259,15 +280,16 @@ end
 -- return book[bookKey] = {wordList}
 function DataManager.loadK12BookWords()
     local bookWord = {}
-        local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
-        , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
-        , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
-        ,'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'pro4', 'pro8', 'sat', 'toefl'
-        ,'houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'
-        }
+        -- local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
+        -- , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
+        -- , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
+        -- ,'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'pro4', 'pro8', 'sat', 'toefl'
+        -- ,'houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'
+        -- }
+        local bookName = g_BOOKKEYS
         for i = 1, #bookName do
             bookWord[bookName[i]] = {}
-            local filepath = "cfg/" .. bookName[i] .. ".book"
+            local filepath = "cfg/books/" .. bookName[i] .. ".newbook"
             local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
             local lines = split(content, "\n")
             -- local current_unit = 0

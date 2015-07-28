@@ -1,0 +1,393 @@
+1	construction	Unit 1_1	7	n.建筑	1
+1	exposition	Unit 1_1	7	n.博览会	0
+1	bolt	Unit 1_1	7	n.螺栓	0
+2	representative	Unit 1_2	7	adj.有代表性的	1
+2	pyramid	Unit 1_2	7	n.金字塔	1
+2	situate	Unit 1_2	7	vt.使坐落	1
+2	dominate	Unit 1_2	7	v.控制	1
+2	shell	Unit 1_2	7	n.壳	1
+2	imitate	Unit 1_2	7	vt.模仿	1
+2	surroundings	Unit 1_2	7	n.环境	1
+2	roofline	Unit 1_2	7	n.屋顶轮廓线	0
+2	resemble	Unit 1_2	7	vt.相似	1
+2	airplane	Unit 1_2	7	n.飞机	1
+2	unforgettable	Unit 1_2	7	adj.难忘的	1
+3	prominent	Unit 1_3	7	adj.杰出的	1
+3	Danish	Unit 1_3	7	n.丹麦语	1
+3	overlapping	Unit 1_3	7	adj.重叠的	0
+3	engineering	Unit 1_3	7	n.工程	1
+3	completion	Unit 1_3	7	n.完成	1
+3	interior	Unit 1_3	7	adj.内部的	0
+3	name ... after	Unit 1_3	7	以...的名字命名	1
+3	in celebration of	Unit 1_3	7	庆祝	1
+3	pull down	Unit 1_3	7	摧毁	1
+3	art centre	Unit 1_3	7	艺术中心	1
+3	be representative of	Unit 1_3	7	代表	1
+4	put ... into practice	Unit 1_4	7	实行	1
+4	under way	Unit 1_4	7	已开始并在进行中	1
+4	World Exposition	Unit 1_4	7	世界博览会	0
+4	monument	Unit 1_4	7	n.纪念像	1
+4	statue	Unit 1_4	7	n.雕塑	0
+4	liberty	Unit 1_4	7	n.自由	1
+4	carve	Unit 1_4	7	vt.雕刻	1
+4	rocky	Unit 1_4	7	adj.岩石的	1
+4	memorial	Unit 1_4	7	n.纪念碑	0
+4	acre	Unit 1_4	7	n.英亩	0
+4	musical	Unit 1_4	7	adj.音乐剧	1
+5	ballet	Unit 1_5	7	n.芭蕾	1
+5	hectare	Unit 1_5	7	n.公顷	0
+5	crystal	Unit 1_5	7	n.水晶	1
+5	Dutch	Unit 1_5	7	n.荷兰人	0
+5	tide	Unit 1_5	7	n.潮	1
+5	inlet	Unit 1_5	7	n.小河湾	0
+5	delta	Unit 1_5	7	n.三角洲	0
+5	southwestern	Unit 1_5	7	adj.西南方的	1
+5	propose	Unit 1_5	7	v.提议	1
+5	dam	Unit 1_5	7	n.筑坝	0
+5	drain	Unit 1_5	7	n.&v.流出	0
+6	violent	Unit 1_6	7	adj.猛烈的	1
+6	northern	Unit 1_6	7	adj.北方的	1
+6	shipping	Unit 1_6	7	n.海运	1
+6	sophisticated	Unit 1_6	7	adj.复杂的	1
+6	surge	Unit 1_6	7	n.汹涌	0
+6	barrier	Unit 1_6	7	n.障碍	1
+6	estuary	Unit 1_6	7	n.河口	0
+6	moveable	Unit 1_6	7	adj.可移动的	1
+6	concrete	Unit 1_6	7	n.混凝土	1
+6	pillar	Unit 1_6	7	n.柱子	0
+7	ton	Unit 1_7	7	n.吨	1
+7	journal	Unit 1_7	7	n.期刊	1
+7	unlike	Unit 1_7	7	prep.&adj.区别于	1
+7	civil	Unit 1_7	7	adj.公民的	1
+7	hold on to	Unit 1_7	7	保持	1
+7	sea level	Unit 1_7	7	海平面	1
+7	in times of	Unit 1_7	7	在...时期	1
+7	take ... measures	Unit 1_7	7	采取...措施	1
+7	civil engineering	Unit 1_7	7	土木工程	1
+7	Statue of Liberty	Unit 1_7	7	自由女神像	0
+8	discovery	Unit 2_1	8	n.发现	1
+8	devoted	Unit 2_1	8	adj.专注的	1
+8	ease	Unit 2_1	8	n.解除(痛苦）	1
+8	photographic	Unit 2_1	8	adj.摄影的	1
+8	hum	Unit 2_1	8	v.发出嗡嗡声	0
+8	electricity	Unit 2_1	8	n.电	1
+8	develop	Unit 2_1	8	vt.冲洗相片	1
+8	wrist	Unit 2_1	8	n.手腕	1
+8	date	Unit 2_1	8	n.写日记	1
+9	contribution	Unit 2_2	8	n.贡献	1
+9	physicist	Unit 2_2	8	n.物理学家	1
+9	patent	Unit 2_2	8	n.专利	1
+9	flaw	Unit 2_2	8	n.瑕疵	0
+9	barrel	Unit 2_2	8	n.枪管	1
+9	nondestructive	Unit 2_2	8	adj.非破坏性的	1
+9	commercial	Unit 2_2	8	adj.商业的	1
+9	inspection	Unit 2_2	8	n.检查	1
+9	application	Unit 2_2	8	n.应用	1
+10	medical	Unit 2_3	8	adj.医学的	1
+10	manufacture	Unit 2_3	8	vt.制造	1
+10	countless	Unit 2_3	8	adj.无数的	1
+10	warning	Unit 2_3	8	n.提醒	1
+10	lead	Unit 2_3	8	n.铅	1
+10	apron	Unit 2_3	8	n.围裙	0
+10	be concerned about	Unit 2_3	8	担心	1
+10	a photographic plate	Unit 2_3	8	感光片	1
+10	a wedding ring	Unit 2_3	8	结婚戒指	1
+11	scientific circle	Unit 2_4	8	科学界	1
+11	a hunting rifle	Unit 2_4	8	猎枪	1
+11	take ... for granted	Unit 2_4	8	视...为理所当然	1
+11	medical field	Unit 2_4	8	医学领域	1
+11	quality control	Unit 2_4	8	质量控制	1
+11	firm	Unit 2_4	8	n.&adj.坚定的	1
+11	speaker	Unit 2_4	8	n.扬声器	1
+11	multimedia	Unit 2_4	8	n.多媒体	0
+11	connection	Unit 2_4	8	n.连接	1
+12	dot	Unit 2_5	8	n.小圆点	1
+12	comparison	Unit 2_5	8	n.比较	1
+12	robot	Unit 2_5	8	n.机器人	1
+12	Israeli	Unit 2_5	8	adj.&n.以色列的	1
+12	revolutionary	Unit 2_5	8	adj.彻底改变的	1
+12	container	Unit 2_5	8	n.集装箱	1
+12	root	Unit 2_5	8	n.根	1
+12	tend	Unit 2_5	8	vi.照管	1
+12	robotic	Unit 2_5	8	adj.像机器人的	1
+13	fundamentally	Unit 2_6	8	adv.基本上	1
+13	oxygen	Unit 2_6	8	n.氧	1
+13	poisonous	Unit 2_6	8	adj.有毒的	1
+13	by-product	Unit 2_6	8	n.副产品	1
+13	germ	Unit 2_6	8	n.微生物	1
+13	organic	Unit 2_6	8	adj.有机的	0
+13	invention	Unit 2_6	8	n.发明	1
+13	lettuce	Unit 2_6	8	n.莴苣	0
+13	conventional	Unit 2_6	8	adj.传统的	1
+13	produce	Unit 2_6	8	vt.农产品	1
+14	disappearance	Unit 2_7	8	n.不见	1
+14	industrialize	Unit 2_7	8	v.使工业化	1
+14	exhaust	Unit 2_7	8	v.用尽	1
+14	strawberry	Unit 2_7	8	n.草莓	1
+14	transportable	Unit 2_7	8	adj.可运输的	1
+14	decline	Unit 2_7	8	v.&n.减少	1
+14	rapidly	Unit 2_7	8	adv.快速地	1
+14	look upon	Unit 2_7	8	看待	1
+14	with doubt	Unit 2_7	8	怀疑	1
+14	tune in	Unit 2_7	8	收听	1
+15	start up	Unit 2_8	8	开始	1
+15	in motion	Unit 2_8	8	运动	1
+15	in comparison with	Unit 2_8	8	与...相比	1
+15	a power source	Unit 2_8	8	能源	1
+15	a minimum supply of	Unit 2_8	8	最少的...供应	1
+15	lead to	Unit 2_8	8	导致	1
+15	industrialized countries	Unit 2_8	8	工业化国家	1
+15	meet the demand for	Unit 2_8	8	满足需要	1
+15	organic product	Unit 2_8	8	有机产品	1
+15	Israel	Unit 2_8	8	n.以色列	0
+16	idealism	Unit 3_1	7	n.理想主义	1
+16	diary	Unit 3_1	7	n.日记	1
+16	storehouse	Unit 3_1	7	n.仓库	0
+16	analyse	Unit 3_1	7	vt.分析	1
+16	total	Unit 3_1	7	adj.完全的	1
+16	adapt	Unit 3_1	7	vi.改编	1
+16	innermost	Unit 3_1	7	adj.最内部的	0
+16	ideal	Unit 3_1	7	adj.理想的	1
+16	smash	Unit 3_1	7	v.打碎	1
+16	impossible	Unit 3_1	7	adj.不可能的	1
+17	thunder	Unit 3_2	7	n.雷	1
+17	suffering	Unit 3_2	7	n.痛苦	1
+17	cruelty	Unit 3_2	7	n.残忍	1
+17	confusion	Unit 3_2	7	n.迷惑	1
+17	misery	Unit 3_2	7	n.巨大痛苦	1
+17	go into hiding	Unit 3_2	7	躲藏起来	1
+17	in fear of	Unit 3_2	7	为...提心吊胆	1
+17	come to one's aid	Unit 3_2	7	帮助某人	1
+17	hold one's ground	Unit 3_2	7	坚持立场	1
+17	weigh down	Unit 3_2	7	使感到焦虑	1
+18	the heavens	Unit 3_3	7	天空	1
+18	hold fast to	Unit 3_3	7	紧紧抓住	1
+18	viewpoint	Unit 3_3	7	n.观点	1
+18	civilization	Unit 3_3	7	n.文明状态	1
+18	pray	Unit 3_3	7	vt.祈祷	1
+18	gulf	Unit 3_3	7	n.海湾	1
+18	invade	Unit 3_3	7	vt.侵略	1
+18	senior	Unit 3_3	7	adj.年长的人	1
+18	pearl	Unit 3_3	7	n.珍珠	1
+18	prisoner	Unit 3_3	7	n.囚犯	1
+19	peaceful	Unit 3_4	7	adj.平静的	1
+19	teenager	Unit 3_4	7	n.青少年	1
+19	overnight	Unit 3_4	7	n.突然的	1
+19	manual	Unit 3_4	7	adj.手的	1
+19	inspiration	Unit 3_4	7	n.鼓舞	1
+19	educate	Unit 3_4	7	v.教育	1
+19	wander	Unit 3_4	7	vt.漫步	1
+19	throat	Unit 3_4	7	n.咽喉	1
+19	isolate	Unit 3_4	7	adj.隔离	1
+19	fortunate	Unit 3_4	7	adj.侥幸的	1
+20	reunite	Unit 3_5	7	v.重聚	1
+20	wrong	Unit 3_5	7	adj.&n.错误	1
+20	in case	Unit 3_5	7	以防	1
+20	food supply	Unit 3_5	7	食物供应	1
+20	a great deal of	Unit 3_5	7	大量的	1
+20	in the case of	Unit 3_5	7	就...来说	1
+20	declare war on	Unit 3_5	7	对...宣战	1
+20	prisoner of war	Unit 3_5	7	战俘	1
+20	be taken prisoner	Unit 3_5	7	活捉	1
+21	manual labour	Unit 3_6	7	体力劳动	1
+21	by hand	Unit 3_6	7	手工	1
+21	devote oneself to	Unit 3_6	7	专心致志于	1
+21	give one's life for	Unit 3_6	7	为...献出自己的生命	1
+21	run to one's aid	Unit 3_6	7	帮助某人	1
+21	at risk	Unit 3_6	7	在危险中	1
+21	material possessions	Unit 3_6	7	物质财富	1
+21	keep on doing	Unit 3_6	7	继续做	1
+21	Vietnam	Unit 3_6	7	n.越南	0
+22	Iraq	Unit 3_7	7	n.伊拉克	0
+22	Kuwait	Unit 3_7	7	n.科威特	0
+22	Soviet Union	Unit 3_7	7	苏联	0
+22	Berlin	Unit 3_7	7	n.柏林	0
+22	the Berlin Wall	Unit 3_7	7	柏林墙	0
+22	Pearl Harbour	Unit 3_7	7	珍珠港	0
+22	Indies	Unit 3_7	7	n.印度群岛	0
+22	Dutch East Indies	Unit 3_7	7	荷属东印度群岛	0
+22	Indonesia	Unit 3_7	7	n.印度尼西亚	0
+23	constructive	Unit 4_1	7	adj.建设性的	1
+23	robin	Unit 4_1	7	n.知更鸟	0
+23	dove	Unit 4_1	7	n.鸽	1
+23	snowflake	Unit 4_1	7	n.雪花	1
+23	trunk	Unit 4_1	7	n.树干	1
+23	regardless	Unit 4_1	7	adv.不管	1
+23	unto	Unit 4_1	7	prep.对	0
+23	philosophy	Unit 4_1	7	n.哲学	1
+23	resolve	Unit 4_1	7	n.解决	1
+23	conflict	Unit 4_1	7	n.冲突	1
+24	outlook	Unit 4_2	7	n.人生观	1
+24	caring	Unit 4_2	7	adj.关心的	1
+24	sensible	Unit 4_2	7	adj.判断力强的	1
+24	sincerely	Unit 4_2	7	adv.诚挚地	1
+24	make a difference	Unit 4_2	7	有很大的影响	1
+24	in that case	Unit 4_2	7	既然是那样	1
+24	break off	Unit 4_2	7	突然停止	1
+24	regardless of	Unit 4_2	7	不管	1
+24	philosophy of life	Unit 4_2	7	人生哲学	1
+24	be prepared to do something	Unit 4_2	7	有能力而且愿意做	1
+25	take on	Unit 4_3	7	同...较量	1
+25	Secretary General	Unit 4_3	7	秘书长	0
+25	majority	Unit 4_3	7	n.多数	1
+25	session	Unit 4_3	7	n.会议	0
+25	vice	Unit 4_3	7	prep.(前缀)副	1
+25	Polish	Unit 4_3	7	n.波兰的	1
+25	declaration	Unit 4_3	7	n.宣言	0
+25	philosopher	Unit 4_3	7	n.哲学家	1
+25	responsibility	Unit 4_3	7	n.责任	1
+25	anniversary	Unit 4_3	7	n.周年纪念日	1
+26	founder	Unit 4_4	7	n.创立者	1
+26	correspondent	Unit 4_4	7	n.报纸通讯员	1
+26	analysis	Unit 4_4	7	n.分析	1
+26	summary	Unit 4_4	7	n.摘要	1
+26	cooperation	Unit 4_4	7	n.合作	1
+26	charter	Unit 4_4	7	n.宪章	0
+26	existence	Unit 4_4	7	n.存在	1
+26	ratify	Unit 4_4	7	v.批准	0
+26	dignity	Unit 4_4	7	n.尊严	1
+26	well-being	Unit 4_4	7	n.健康	1
+27	interdependence	Unit 4_5	7	n.互相依赖	1
+27	poverty	Unit 4_5	7	n.贫穷	1
+27	illiteracy	Unit 4_5	7	n.文盲	0
+27	freedom	Unit 4_5	7	n.自由	1
+27	threaten	Unit 4_5	7	vt.威胁	1
+27	domestic	Unit 4_5	7	adj.本国的	1
+27	binding	Unit 4_5	7	n.有约束力的	0
+27	resolution	Unit 4_5	7	n.决议	1
+27	veto	Unit 4_5	7	n.否决权	0
+27	officer	Unit 4_5	7	n.官员	1
+28	secretariat	Unit 4_6	7	n.秘书处	0
+28	postage	Unit 4_6	7	n.邮费	1
+28	Spanish	Unit 4_6	7	adj.&n.西班牙的	1
+28	in session	Unit 4_6	7	开会	1
+28	in the field of	Unit 4_6	7	在...领域内	1
+28	nuclear arms	Unit 4_6	7	核武器	1
+28	in the long run	Unit 4_6	7	从长远的观点看	1
+28	stay tuned	Unit 4_6	7	继续收听	1
+28	come into existence	Unit 4_6	7	产生	1
+28	be equal to	Unit 4_6	7	等同于	1
+29	by peaceful means	Unit 4_7	7	通过和平方式	1
+29	veto power	Unit 4_7	7	否决权	1
+29	the General Assembly	Unit 4_7	7	联合国大会	0
+29	Member States	Unit 4_7	7	成员国	0
+29	Norway	Unit 4_7	7	n.挪威	0
+29	CNN	Unit 4_7	7	美国有线电视新闻网	0
+29	the United Nations Charter	Unit 4_7	7	联合国宪章	0
+29	United Nations Day	Unit 4_7	7	联合国日	0
+29	the United Nations Secretariat	Unit 4_7	7	联合国秘书处	0
+29	the United Nations Headquarters	Unit 4_7	7	联合国总部	0
+30	luncheon	Unit 5_1	6	n.午餐	0
+30	interval	Unit 5_1	6	n.间隔	1
+30	senator	Unit 5_1	6	n.参议员	0
+30	talkative	Unit 5_1	6	adj.爱说话的	1
+30	salmon	Unit 5_1	6	adj.鲑鱼	0
+30	mutton	Unit 5_1	6	n.羊肉	1
+30	chop	Unit 5_1	6	n.排骨肉	0
+30	champagne	Unit 5_1	6	n.香槟酒	0
+30	carelessly	Unit 5_1	6	adv.粗心地	1
+30	asparagus	Unit 5_1	6	n.芦笋	0
+31	tender	Unit 5_2	6	adj.嫩的	1
+31	juicy	Unit 5_2	6	adj.多汁的	0
+31	appetizing	Unit 5_2	6	adj.开胃的	0
+31	mouthful	Unit 5_2	6	n.一口	1
+31	panic	Unit 5_2	6	n.惊恐	1
+31	peach	Unit 5_2	6	n.桃	1
+31	blush	Unit 5_2	6	n.脸红	0
+31	tone	Unit 5_2	6	n.气氛	1
+31	snack	Unit 5_2	6	n.点心	1
+31	inadequate	Unit 5_2	6	adj.不充分的	1
+32	franc	Unit 5_3	6	n.法郎	0
+32	merrily	Unit 5_3	6	adv.愉快地	1
+32	catch sight of	Unit 5_3	6	看到	1
+32	keep body and soul together	Unit 5_3	6	仅能维持生活	1
+32	beyond one's means	Unit 5_3	6	超出某人的支付能力	1
+32	follow one's example	Unit 5_3	6	学某人的做法	1
+32	serve somebody right	Unit 5_3	6	罪有应得	1
+32	barely	Unit 5_3	6	adv.几乎不	1
+32	doorman	Unit 5_3	6	n.看门人	1
+32	cop	Unit 5_3	6	n.警察	0
+33	anthem	Unit 5_4	6	n.圣歌	0
+33	necklace	Unit 5_4	6	n.项链	1
+33	enduring	Unit 5_4	6	adj.持续的	1
+33	observer	Unit 5_4	6	n.遵从者	1
+33	poetry	Unit 5_4	6	n.诗歌	1
+33	academic	Unit 5_4	6	adj.学术的	1
+33	elementary	Unit 5_4	6	adj.初级的	1
+33	grade	Unit 5_4	6	v.按...排列	1
+33	readable	Unit 5_4	6	adj.易读的	1
+33	enjoyment	Unit 5_4	6	n.乐趣	1
+34	significance	Unit 5_5	6	n.意义	1
+34	instructive	Unit 5_5	6	adj.有益的	1
+34	basic	Unit 5_5	6	adj.基础的	1
+34	at the bottom of	Unit 5_5	6	在...底部	1
+34	keep oneself warm	Unit 5_5	6	保暖	1
+34	run after	Unit 5_5	6	追赶	1
+34	prize book	Unit 5_5	6	获奖书籍	1
+34	at best	Unit 5_5	6	最多	1
+34	compare ... with	Unit 5_5	6	与...比较	1
+34	touch upon	Unit 5_5	6	简单涉及	1
+34	subject matter	Unit 5_5	6	主题	1
+35	a series of	Unit 5_6	6	一系列的	1
+35	let somebody down	Unit 5_6	6	使失望	1
+35	from different aspects	Unit 5_6	6	从不同的方面	1
+35	After Twenty Years	Unit 5_6	6	《二十年以后》	0
+35	The Gift of the Magi	Unit 5_6	6	《麦琪的礼物》	0
+35	The Cop and the Anthem	Unit 5_6	6	《警察与赞美诗》	0
+35	The Last Leaf	Unit 5_6	6	《最后一片藤叶》	0
+35	The Necklace	Unit 5_6	6	《项链》	0
+35	Gone with the Wind	Unit 5_6	6	《飘》	0
+35	Guliver's Travels	Unit 5_6	6	《格列佛游记》	0
+35	Robinson Crusoe	Unit 5_6	6	《鲁滨逊漂流记》	0
+36	gentleman	Unit 6_1	5	n.绅士	1
+36	setting	Unit 6_1	5	n.背景	1
+36	narrator	Unit 6_1	5	n.讲述者	0
+36	bet	Unit 6_1	5	n.打赌	1
+36	charming	Unit 6_1	5	adj.迷人的	1
+36	whistle	Unit 6_1	5	n.汽笛	1
+36	fade	Unit 6_1	5	vi.渐显	1
+36	arrest	Unit 6_1	5	n.逮捕	1
+36	cell	Unit 6_1	5	n.(监狱）小房间	1
+36	breathlessly	Unit 6_1	5	adv.使人屏息地	1
+37	resemblance	Unit 6_2	5	n.相似	1
+37	robber	Unit 6_2	5	n.强盗	1
+37	withdraw	Unit 6_2	5	vt.退回	1
+37	monsieur	Unit 6_2	5	n.先生	0
+37	dash	Unit 6_2	5	n.&v.猛冲	1
+37	cab	Unit 6_2	5	n.出租车	0
+37	stiffly	Unit 6_2	5	adv.拘谨地	0
+37	make a bet	Unit 6_2	5	打赌	1
+37	fade in	Unit 6_2	5	（声音或画面)渐强	1
+37	in the name of	Unit 6_2	5	以...的名义	1
+38	place sb under arrest	Unit 6_3	5	逮捕	1
+38	be given to something	Unit 6_3	5	习惯于	1
+38	cheer sb up	Unit 6_3	5	鼓舞某人	1
+38	on top of the world	Unit 6_3	5	非常愉快或自豪	1
+38	become engaged to sb	Unit 6_3	5	与...订婚	1
+38	in pairs	Unit 6_3	5	成双地	1
+38	cub	Unit 6_3	5	n.幼兽	0
+38	delicate	Unit 6_3	5	adj.精致的	1
+38	crawl	Unit 6_3	5	vi.爬行	1
+38	antelope	Unit 6_3	5	n.羚羊	0
+39	costume	Unit 6_4	5	n.服装	0
+39	representation	Unit 6_4	5	n.表现	1
+39	interact	Unit 6_4	5	vi.互相配合	0
+39	appropriateness	Unit 6_4	5	n.合适	1
+39	accent	Unit 6_4	5	n.口音	0
+39	regional	Unit 6_4	5	adj.地方的	1
+39	dialect	Unit 6_4	5	n.方言	0
+39	idiomatic	Unit 6_4	5	adj.成语的	1
+39	background	Unit 6_4	5	n.背景	1
+39	spectacle	Unit 6_4	5	n.场面	1
+39	lighting	Unit 6_4	5	n.灯光	1
+40	actively	Unit 6_5	5	adv.积极地	1
+40	rewarding	Unit 6_5	5	adj.令人满意的	1
+40	circle of life	Unit 6_5	5	生命周期	1
+40	in the shadow	Unit 6_5	5	在阴影处	1
+40	get one's way	Unit 6_5	5	随心所欲	1
+40	be up to	Unit 6_5	5	忙于	1
+40	on the stage	Unit 6_5	5	在舞台上	1
+40	speak out	Unit 6_5	5	说出	1
+40	point of view	Unit 6_5	5	观点	1
+40	dramatic play	Unit 6_5	5	戏剧	1
+40	Peking Opera	Unit 6_5	5	京剧	0

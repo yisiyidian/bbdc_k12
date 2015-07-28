@@ -1,0 +1,182 @@
+1	relative	Unit 1_1	2	n.亲戚	1
+1	family tree	Unit 1_1	2	家谱	1
+1	granddaughter	Unit 1_1	2	n.孙女	1
+2	grandson	Unit 1_2	2	n.孙子	1
+2	only	Unit 1_2	2	adv.仅仅	1
+2	member	Unit 1_2	2	n.成员	1
+2	classmate	Unit 1_2	2	n.同班同学	0
+2	shop	Unit 1_2	2	n.购物	1
+2	go shopping	Unit 1_2	2	去购物	1
+2	else	Unit 1_2	2	adj.其他	1
+2	badminton	Unit 1_2	2	n.羽毛球	0
+2	cycle	Unit 1_2	2	n.骑自行车	1
+2	go cycling	Unit 1_2	2	去骑自行车	1
+3	almost	Unit 2_1	3	adv.几乎	1
+3	never	Unit 2_1	3	adv.从不	1
+3	other	Unit 2_1	3	adj.另外	1
+3	each other	Unit 2_1	3	互相	1
+3	friendly	Unit 2_1	3	adj.友好的	1
+3	kind	Unit 2_1	3	adj.友好的	1
+3	helpful	Unit 2_1	3	adj.有帮助的	1
+3	naughty	Unit 2_1	3	adj.淘气的	0
+3	lie	Unit 2_1	3	n.谎言	0
+4	ocean	Unit 2_2	3	n.海洋	1
+4	yet	Unit 2_2	3	adv.还	1
+4	already	Unit 2_2	3	adv.已经	1
+4	just	Unit 2_2	3	adv.刚才	1
+4	Earth	Unit 2_2	3	n.地球	1
+4	look after	Unit 2_2	3	照看	1
+4	environment	Unit 2_2	3	n.环境	1
+4	pollute	Unit 2_2	3	v.污染	1
+4	pollution	Unit 2_2	3	n.污染	1
+5	land	Unit 2_3	3	n.陆地	1
+5	keep	Unit 2_3	3	vt.保持	1
+5	pick up	Unit 2_3	3	捡起	1
+5	into	Unit 2_3	3	prep.到...里面	1
+5	rubbish bin	Unit 2_3	3	垃圾桶	0
+5	leave	Unit 2_3	3	v.留下	1
+5	promise	Unit 2_3	3	v.承诺	1
+5	discuss	Unit 2_3	3	vt.讨论	1
+5	reuse	Unit 2_3	3	v.再利用	1
+6	spend	Unit 3_1	2	v.度过	1
+6	island	Unit 3_1	2	n.岛屿	1
+6	bay	Unit 3_1	2	n.海湾	1
+6	dragon	Unit 3_1	2	n.龙	0
+6	weekend	Unit 3_1	2	n.周末	1
+6	seaside	Unit 3_1	2	adj.海边	1
+6	lucky	Unit 3_1	2	adj.好运的	1
+6	market	Unit 3_1	2	n.市场	1
+6	space	Unit 3_1	2	n.太空	1
+6	museum	Unit 3_1	2	n.博物馆	1
+6	activity	Unit 3_1	2	n.活动	1
+7	barbecue	Unit 3_2	2	n.烧烤	0
+7	kite	Unit 3_2	2	n.风筝	0
+7	sand castle	Unit 3_2	2	沙堡	1
+7	collect	Unit 3_2	2	vt.收集	1
+7	album	Unit 3_2	2	n.照片簿	1
+7	plan	Unit 3_2	2	n.计划	1
+7	shall	Unit 3_2	2	vt.将要	1
+7	o'clock	Unit 3_2	2	...点钟	1
+7	cost	Unit 3_2	2	vi.花费	1
+7	trip	Unit 3_2	2	n.旅行	1
+8	secretary	Unit 4_1	2	n.秘书	1
+8	bank	Unit 4_1	2	n.银行	1
+8	clerk	Unit 4_1	2	n.职员	0
+8	policewoman	Unit 4_1	2	n.女警察	1
+8	dentist	Unit 4_1	2	n.牙医	0
+8	pilot	Unit 4_1	2	n.飞行员	1
+8	fireman	Unit 4_1	2	n.消防员	1
+8	postman	Unit 4_1	2	n.邮递员	1
+8	shop assistant	Unit 4_1	2	店员	1
+9	person	Unit 4_2	2	n.人	1
+9	teach	Unit 4_2	2	vt.教	1
+9	put out	Unit 4_2	2	扑灭	1
+9	interview	Unit 4_2	2	vt.采访	1
+9	find out	Unit 4_2	2	查明	1
+9	if	Unit 4_2	2	conj.是否	1
+9	finish	Unit 4_2	2	vi.结束	1
+9	age	Unit 4_2	2	n.年龄	1
+10	programme	Unit 5_1	2	n.活动安排	1
+10	entrance	Unit 5_1	2	n.入口处	1
+10	choir	Unit 5_1	2	n.合唱队	0
+10	noticeboard	Unit 5_1	2	n.布告栏	1
+10	parent	Unit 5_1	2	n.父或母	1
+10	arrive	Unit 5_1	2	vi.到达	1
+10	first	Unit 5_1	2	adv.首先	1
+10	classroom	Unit 5_1	2	n.教室	1
+11	next	Unit 5_2	2	prep.紧接着	1
+11	project	Unit 5_2	2	n.习作项目	1
+11	craft	Unit 5_2	2	n.工艺	1
+11	club	Unit 5_2	2	n.俱乐部	1
+11	finally	Unit 5_2	2	adv.最后	1
+11	ground	Unit 5_2	2	n.地面	1
+11	invitation	Unit 5_2	2	n.请柬	1
+11	yesterday	Unit 5_2	2	n.&adv昨天	1
+12	travel	Unit 6_1	2	n.&v.行走	1
+12	about	Unit 6_1	2	prep.大约	1
+12	minute	Unit 6_1	2	n.分钟	1
+12	ferry	Unit 6_1	2	n.渡船	0
+12	hour	Unit 6_1	2	n.小时	1
+12	half an hour	Unit 6_1	2	半小时	1
+12	hotel	Unit 6_1	2	n.旅馆	1
+12	advertisement	Unit 6_1	2	n.广告	1
+12	board	Unit 6_1	2	n.板	1
+13	a few	Unit 6_2	2	几个	1
+13	a lot of	Unit 6_2	2	许多	1
+13	when	Unit 6_2	2	conj.当...时候	1
+13	light rail	Unit 6_2	2	轻轨	1
+13	department store	Unit 6_2	2	百货商店	1
+13	kindergarten	Unit 6_2	2	n.幼儿园	0
+13	housing estate	Unit 6_2	2	居民区	1
+13	temple	Unit 6_2	2	n.庙宇	1
+14	rule	Unit 7_1	1	n.规则	1
+14	wait for	Unit 7_1	1	等待	1
+14	loudly	Unit 7_1	1	adv.大声地	1
+14	mean	Unit 7_1	1	v.表示...的意思	1
+14	lift	Unit 7_1	1	vt.电梯	1
+14	escalator	Unit 7_1	1	n.自动扶梯	0
+14	on the left	Unit 7_1	1	在左边	1
+14	on the right	Unit 7_1	1	在右边	0
+14	centre	Unit 7_1	1	n.中心	1
+14	exit	Unit 7_1	1	n.出口	0
+14	upstairs	Unit 7_1	1	adv.在楼上	1
+14	middle	Unit 7_1	1	n.中央	1
+14	in the middle	Unit 7_1	1	在中央	1
+14	chase	Unit 7_1	1	n.追赶	1
+15	menu	Unit 8_1	2	n.菜单	0
+15	cabbage	Unit 8_1	2	n.卷心菜	1
+15	garlic	Unit 8_1	2	n.大蒜	0
+15	noodle	Unit 8_1	2	n.面条	0
+15	seafood	Unit 8_1	2	n.海鲜	1
+15	steam	Unit 8_1	2	v.蒸	1
+15	prawn	Unit 8_1	2	n.虾	0
+15	also	Unit 8_1	2	adv.也	1
+15	kind	Unit 8_1	2	adj.种类	1
+15	fry	Unit 8_1	2	vt.油炸	1
+16	bacon	Unit 8_2	2	n.咸肉	1
+16	boil	Unit 8_2	2	v.用沸水煮	1
+16	wing	Unit 8_2	2	n.翅膀	1
+16	stall	Unit 8_2	2	n.摊位	0
+16	section	Unit 8_2	2	n.部门	1
+16	frozen	Unit 8_2	2	adj.冰冻的	1
+16	dumpling	Unit 8_2	2	n.饺子	0
+16	packet	Unit 8_2	2	n.小包装	1
+16	bake	Unit 8_2	2	vt.烘烤	1
+16	hamburger	Unit 8_2	2	n.汉堡包	0
+17	fun	Unit 9_1	2	n.有趣的事	1
+17	cola	Unit 9_1	2	n.可乐	0
+17	spicy	Unit 9_1	2	adj.辛辣的	0
+17	nut	Unit 9_1	2	n.坚果	1
+17	lemon	Unit 9_1	2	n.柠檬	0
+17	snack	Unit 9_1	2	n.小吃	0
+17	salty	Unit 9_1	2	adj.咸的	1
+17	chilli	Unit 9_1	2	n.辣椒	0
+18	sour	Unit 9_2	2	adj.酸的	0
+18	bitter	Unit 9_2	2	adj.苦的	1
+18	tasty	Unit 9_2	2	adj.美味的	1
+18	delicious	Unit 9_2	2	adj.味道鲜美的	0
+18	spread	Unit 9_2	2	v.抹	1
+18	prepare	Unit 9_2	2	vt.使做好准备	1
+18	enough	Unit 9_2	2	adj.足够的	1
+19	healthy	Unit 10_1	2	adj.健康的	1
+19	eating	Unit 10_1	2	n.&v.吃	1
+19	diet	Unit 10_1	2	n.饮食	1
+19	pyramid	Unit 10_1	2	n.金字塔	1
+19	salt	Unit 10_1	2	n.盐	1
+19	yogurt	Unit 10_1	2	n.酸奶	0
+19	a little	Unit 10_1	2	少量	1
+19	plenty of	Unit 10_1	2	大量的	1
+19	fresh	Unit 10_1	2	adj.新鲜的	1
+19	unhealthy	Unit 10_1	2	adj.不健康的	1
+19	exercise	Unit 10_1	2	n.&v.活动	1
+20	countryside	Unit 10_2	2	n.乡村	1
+20	fit	Unit 10_2	2	adj.健康的	1
+20	stay	Unit 10_2	2	n.逗留	1
+20	porridge	Unit 10_2	2	n.粥	0
+20	than	Unit 10_2	2	conj.比	1
+20	as ... as	Unit 10_2	2	像...一样	1
+20	habit	Unit 10_2	2	n.习惯	1
+20	quiz	Unit 10_2	2	n.测试	0
+20	before	Unit 10_2	2	prep.在...之前	1
+20	should	Unit 10_2	2	aux.应该	1
+20	suggestion	Unit 10_2	2	n.建议	1

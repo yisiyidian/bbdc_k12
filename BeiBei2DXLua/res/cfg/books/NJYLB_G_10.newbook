@@ -1,0 +1,229 @@
+1	short-term	Unit1_1	7	adj.短期的	1
+1	long-term	Unit1_1	7	adj.长期的	1
+1	rainfall	Unit1_1	7	n.降雨	1
+2	Ethiopia	Unit1_2	7	n.埃塞俄比亚	1
+2	gravity	Unit1_2	7	n.重力	1
+2	headline	Unit1_2	7	n.大标题	1
+2	make the headlines	Unit1_2	7	成为重要新闻	1
+2	put pressure on sb to do sth	Unit1_2	7	促使	1
+2	politician	Unit1_2	7	n.从政者	1
+2	statesman	Unit1_2	7	n.政治家	1
+2	wrestle	Unit1_2	7	v.努力对付或解决	1
+2	dilemma	Unit1_2	7	n.窘境	1
+2	agency	Unit1_2	7	n.服务机构	1
+3	pregnant	Unit1_3	7	adj.怀孕的	1
+3	beyond	Unit1_3	7	prep.超出（...之外）	1
+3	beyond doubt	Unit1_3	7	毫无疑问	1
+3	at a crossroads	Unit1_3	7	处于关键时刻	1
+3	loaf	Unit1_3	7	n.一条（面包）	1
+3	permanent	Unit1_3	7	adj.永久的	1
+3	infrastructure	Unit1_3	7	n.基础建设	0
+3	irrigation	Unit1_3	7	n.灌溉	1
+3	framework	Unit1_3	7	n.框架	1
+3	enterprise	Unit1_3	7	n.企业	1
+4	housewife	Unit1_4	7	n.家庭主妇	1
+4	Nigeria	Unit1_4	7	n.尼日利亚	1
+4	problem-solving	Unit1_4	7	adj.解决问题	1
+4	work of art	Unit1_4	7	艺术品	1
+4	conventional	Unit1_4	7	adj.传统的	1
+4	water buffalo	Unit1_4	7	水牛	0
+4	ox	Unit1_4	7	n.牛	1
+4	tractor	Unit1_4	7	n.拖拉机	1
+4	dam	Unit1_4	7	n.水坝	1
+4	expense	Unit1_4	7	n.费用	1
+5	repay	Unit1_5	7	v.偿还	0
+5	repayment	Unit1_5	7	n.偿还债务	0
+5	catch up on	Unit1_5	7	补上	1
+5	weaken	Unit1_5	7	v.削弱	1
+5	moreover	Unit1_5	7	adv.此外	0
+5	squeeze	Unit1_5	7	vt.挤压	1
+5	fascinating	Unit1_5	7	adj.很有趣的	0
+5	fashion	Unit1_5	7	n.时尚	0
+5	fashionable	Unit1_5	7	adj.时尚的	0
+5	basement	Unit1_5	7	n.地下室	1
+6	creativity	Unit1_6	7	n.创造力	1
+6	catering	Unit1_6	7	n.餐饮服务	1
+6	alarm bell	Unit1_6	7	警钟	1
+6	adjustment	Unit1_6	7	n.调整	1
+6	sustainable	Unit1_6	7	adj.可持续的	0
+6	health care	Unit1_6	7	医疗（服务）	1
+6	housing	Unit1_6	7	n.住房	1
+6	put ... into practice	Unit1_6	7	把...付诸实践	1
+6	grandchild	Unit1_6	7	n.孙子	1
+6	deposit	Unit1_6	7	vt.沉积物	1
+7	oilfield	Unit1_7	7	n.油田	1
+7	on top of	Unit1_7	7	除...之外	1
+7	push for something	Unit1_7	7	迫切要求	1
+7	solar	Unit1_7	7	adj.太阳能的	1
+7	solar energy	Unit1_7	7	太阳能	1
+7	hydroelectricity	Unit1_7	7	n.水电	0
+7	flour	Unit1_7	7	n.面粉	1
+7	tentative	Unit1_7	7	n.暂定的	1
+7	hopefully	Unit1_7	7	adv.有望	1
+7	systematic	Unit1_7	7	adj.系统的	1
+8	edition	Unit2_1	7	n.版本	1
+8	be on the move	Unit2_1	7	迁移中	1
+8	the Midwest	Unit2_1	7	美国中西部	1
+8	retire	Unit2_1	7	n.退休	1
+8	pension	Unit2_1	7	n.养老金	1
+8	hurricane	Unit2_1	7	n.飓风	1
+8	tough	Unit2_1	7	adj.难熬的	1
+8	turn into	Unit2_1	7	变成	1
+8	slip	Unit2_1	7	vi.滑倒	1
+9	make sense	Unit2_2	7	有道理	1
+9	cater	Unit2_2	7	vi.提供饮食	1
+9	cater to ...	Unit2_2	7	迎合	1
+9	ambulance	Unit2_2	7	n.救护车	1
+9	bingo	Unit2_2	7	n.宾戈游戏	1
+9	herb	Unit2_2	7	n.芳草	1
+9	seagull	Unit2_2	7	n.海鸥	1
+9	boom	Unit2_2	7	n.&v.繁荣	1
+9	mobile	Unit2_2	7	adj.可移动的	1
+10	flexible	Unit2_3	7	adj.灵活的	1
+10	Oceania	Unit2_3	7	n.大洋洲	1
+10	inn	Unit2_3	7	n.小旅馆	1
+10	Midwestern	Unit2_3	7	n.美国中西部的	1
+10	one's own flesh and blood	Unit2_3	7	亲骨肉	1
+10	elect	Unit2_3	7	v.选举	1
+10	swap	Unit2_3	7	n.替换	1
+10	rent	Unit2_3	7	v.&n.租金	1
+10	accountant	Unit2_3	7	n.会计	1
+11	clerk	Unit2_4	7	n.售货员	1
+11	waitress	Unit2_4	7	n.女服务员	1
+11	privilege	Unit2_4	7	n.荣幸	1
+11	numb	Unit2_4	7	adj.失去知觉的	1
+11	physicist	Unit2_4	7	n.物理学家	1
+11	biologist	Unit2_4	7	n.生物学家	1
+11	botany	Unit2_4	7	n.植物学	1
+11	biochemistry	Unit2_4	7	n.生物化学	1
+11	analytical	Unit2_4	7	adj.分析的	1
+12	bungalow	Unit2_5	7	n.平房	1
+12	skateboard	Unit2_5	7	n.滑板	1
+12	telescope	Unit2_5	7	n.望远镜	1
+12	bakery	Unit2_5	7	n.面包房	1
+12	botanical	Unit2_5	7	adj.植物学的	1
+12	botanical garden	Unit2_5	7	植物园	1
+12	drain	Unit2_5	7	n.&v.消耗	0
+12	brain drain	Unit2_5	7	人才流失	1
+12	currency	Unit2_5	7	n.货币	1
+13	word of mouth	Unit2_6	7	口口相传	1
+13	Romany	Unit2_6	7	n.罗姆人	0
+13	clarify	Unit2_6	7	vt.阐明	1
+13	precise	Unit2_6	7	adj.准确的	1
+13	council	Unit2_6	7	n.理事会	0
+13	the council of Europe	Unit2_6	7	欧洲理事会	1
+13	Gypsy	Unit2_6	7	n.吉卜赛人	0
+13	fortune-telling	Unit2_6	7	n.算命	0
+13	shabby	Unit2_6	7	adj.破旧的	1
+13	thief	Unit2_6	7	n.贼	1
+14	rob	Unit2_7	7	v.抢劫	1
+14	collision	Unit2_7	7	n.冲突	1
+14	Norway	Unit2_7	7	n.挪威	1
+14	Switzerland	Unit2_7	7	n.瑞士	1
+14	gay	Unit2_7	7	n.同性恋者	1
+14	Jew	Unit2_7	7	n.犹太人	0
+14	Nazi	Unit2_7	7	n.纳粹党人	0
+14	controversial	Unit2_7	7	adj.有争议的	1
+14	at best	Unit2_7	7	充其量	1
+14	sympathy	Unit2_7	7	n.同情	1
+15	bathe	Unit3_1	5	v.洗澡	1
+15	abrupt	Unit3_1	5	adj.突然的	1
+15	weep	Unit3_1	5	n.&v.哭泣	1
+15	sideways	Unit3_1	5	adj.向某一边（侧）的	1
+15	HIV	Unit3_1	5	abbr.艾滋病病毒	0
+15	deadly	Unit3_1	5	adj.致命的	1
+15	outward	Unit3_1	5	adj.表面的	1
+15	immune	Unit3_1	5	adj.有免疫力的	0
+15	unprotected	Unit3_1	5	adj.未采取保护措施的	1
+15	breast	Unit3_1	5	n.乳房	1
+15	abortion	Unit3_1	5	n.堕胎	1
+16	mosquito	Unit3_2	5	n.蚊子	1
+16	sneeze	Unit3_2	5	n.喷嚏	1
+16	burst on the scene	Unit3_2	5	突然出现	1
+16	bid	Unit3_2	5	n.努力争取	1
+16	agenda	Unit3_2	5	n.工作计划表	1
+16	prescription	Unit3_2	5	n.处方（药）	1
+16	prescription medicine	Unit3_2	5	处方药	1
+16	prevention	Unit3_2	5	n.预防	1
+16	conclude	Unit3_2	5	vt.下结论	1
+16	discriminate	Unit3_2	5	vt.歧视	1
+16	weapon	Unit3_2	5	n.武器	0
+17	additional	Unit3_3	5	adj.额外的	1
+17	pain pill	Unit3_3	5	止疼药	1
+17	case study	Unit3_3	5	案例研究	1
+17	jog	Unit3_3	5	n.&v.慢跑	1
+17	over-the-counter medicine	Unit3_3	5	非处方药	1
+17	antibiotic	Unit3_3	5	n.&adj.抗生素	0
+17	drawer	Unit3_3	5	n.抽屉	1
+17	unconscious	Unit3_3	5	adj.无知觉的	1
+17	pan	Unit3_3	5	n.平底锅	1
+17	porridge	Unit3_3	5	n.粥	1
+17	super	Unit3_3	5	adj.超级的	1
+18	rebel	Unit3_4	5	v.&n.反抗	0
+18	reaction	Unit3_4	5	n.反应	1
+18	upper	Unit3_4	5	adj.地位较高的	1
+18	speed	Unit3_4	5	n.速度	1
+18	capsule	Unit3_4	5	n.胶囊	1
+18	appetite	Unit3_4	5	n.食欲	1
+18	nicotine	Unit3_4	5	n.尼古丁	0
+18	caffeine	Unit3_4	5	n.咖啡因	0
+18	cocoa	Unit3_4	5	n.热可可	1
+18	downer	Unit3_4	5	n.镇定剂	0
+18	artificial	Unit3_4	5	adj.人造的	1
+19	heroin	Unit3_5	5	n.海洛因	0
+19	downward	Unit3_5	5	adj.下降的	1
+19	slide	Unit3_5	5	v.滑动	1
+19	trap	Unit3_5	5	n.&v.陷阱	1
+19	suck	Unit3_5	5	v.抽吸	1
+19	over again	Unit3_5	5	重新	1
+19	wipe	Unit3_5	5	v.抹去	1
+19	wipe away	Unit3_5	5	消除	1
+19	stain	Unit3_5	5	n.污点	1
+19	abuser	Unit3_5	5	n.嗜毒者	1
+20	cybercrime	Unit4_1	5	n.网络犯罪	0
+20	theoretical	Unit4_1	5	adj.理论的	1
+20	involve	Unit4_1	5	vt.涉及	0
+20	download	Unit4_1	5	v.下载	1
+20	delete	Unit4_1	5	vt.删去	1
+20	file	Unit4_1	5	n.文件	1
+20	offensive	Unit4_1	5	adj.冒犯的	1
+20	hatred	Unit4_1	5	n.仇恨	1
+20	intellectual	Unit4_1	5	adj.智力的	0
+21	property	Unit4_2	5	n.财产	0
+21	intellectual property	Unit4_2	5	知识财产	1
+21	assess	Unit4_2	5	v.评估	1
+21	cheque	Unit4_2	5	n.支票	1
+21	bank account	Unit4_2	5	银行帐户	1
+21	ripe	Unit4_2	5	adj.成熟的	1
+21	firm	Unit4_2	5	n.&adj.公司；牢固的	1
+21	database	Unit4_2	5	n.数据库	1
+21	leak	Unit4_2	5	v.泄露	1
+22	confidential	Unit4_3	5	adj.机密的	1
+22	suspect	Unit4_3	5	vt.怀疑	1
+22	visa	Unit4_3	5	n.签证	1
+22	cooperation	Unit4_3	5	n.合作	1
+22	join forces	Unit4_3	5	（与...）合作	1
+22	draft	Unit4_3	5	n.起草	1
+22	negotiate	Unit4_3	5	vt.谈判	1
+22	applicant	Unit4_3	5	n.申请者	1
+22	penfriend	Unit4_3	5	n.笔友	1
+23	request	Unit4_4	5	n.要求	1
+23	considerate	Unit4_4	5	adj.体贴的	1
+23	cafeteria	Unit4_4	5	n.食堂	1
+23	conscience	Unit4_4	5	n.良心	1
+23	a guilty conscience	Unit4_4	5	内疚	1
+23	lid	Unit4_4	5	n.盖	1
+23	lame	Unit4_4	5	adj.无说服力的	1
+23	suspension	Unit4_4	5	n.暂令停学	1
+23	the World Intellectual Property Organization	Unit4_4	5	世界知识产权组织	1
+23	pirate	Unit4_4	5	n.盗版	0
+24	purse	Unit4_5	5	n.钱包	1
+24	smooth	Unit4_5	5	v.使光滑	1
+24	the World Trade Organization	Unit4_5	5	世界贸易组织	1
+24	put into effect	Unit4_5	5	实施	1
+24	luggage	Unit4_5	5	n.行李	1
+24	inspect	Unit4_5	5	vt.检查	1
+24	import	Unit4_5	5	n.&v.进口	1
+24	authentic	Unit4_5	5	adj.真实的	1
+24	certificate	Unit4_5	5	n.证书	1
+24	compensate	Unit4_5	5	vt.补偿	1

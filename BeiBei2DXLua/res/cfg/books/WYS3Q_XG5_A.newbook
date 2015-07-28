@@ -1,0 +1,152 @@
+1	met	Module 1_1	2	v.遇见（过去式）	1
+1	above	Module 1_1	2	prep.在...上方	0
+1	ground	Module 1_1	2	n.地面	0
+2	those	Module 1_2	2	pron.那些	1
+2	ice cream	Module 1_2	2	冰激凌	1
+2	us	Module 1_2	2	pron.（宾格）我们	1
+2	finish	Module 1_2	2	vi.吃完	0
+2	wait	Module 1_2	2	vt.等待	1
+2	hurry	Module 1_2	2	n.赶紧	0
+2	hurry up	Module 1_2	2	赶紧	0
+2	dropped	Module 1_2	2	vt.（过去式）使掉落	0
+2	send	Module 1_2	2	vt.发送	0
+2	email	Module 1_2	2	n.电子邮件	1
+2	ran	Module 1_2	2	v.（过去式）跑	1
+2	love	Module 1_2	2	n.爱	1
+3	list	Module 2_1	2	n.清单	0
+3	er	Module 2_1	2	int.哦	0
+3	need	Module 2_1	2	v需要	0
+3	first	Module 2_1	2	adv.第一	0
+3	can	Module 2_1	2	aux.可以	1
+3	lost	Module 2_1	2	adj.（过去式）丢失	0
+3	how much	Module 2_1	2	多少	0
+3	cheese	Module 2_1	2	n.奶酪	0
+4	any	Module 2_2	2	adj.一些(否定和疑问句中）	1
+4	use	Module 2_2	2	n.&v.使用	1
+4	over there	Module 2_2	2	在那边	0
+4	bottle	Module 2_2	2	n.瓶子	0
+4	half	Module 2_2	2	n.一半	1
+4	kilo	Module 2_2	2	n.千克	0
+4	a lot of	Module 2_2	2	许多的	0
+5	weekend	Module 3_1	2	n.周末	0
+5	place	Module 3_1	2	n.地方	1
+5	British	Module 3_1	2	adj.英国的	0
+5	museum	Module 3_1	2	n.博物馆	1
+5	how	Module 3_1	2	adv.如何	1
+5	best	Module 3_1	2	ad.最好	0
+5	took	Module 3_1	2	vt.（过去式）搭乘	1
+5	trip	Module 3_1	2	n.旅行	0
+5	along	Module 3_1	2	prep.沿着	0
+5	river	Module 3_1	2	n.河	1
+6	hour	Module 3_2	2	n.小时	1
+6	twenty	Module 3_2	2	num.二十	0
+6	minute	Module 3_2	2	n.分钟	1
+6	of	Module 3_2	2	prep.关于...的	1
+6	wall	Module 3_2	2	n.墙	0
+6	arrive	Module 3_2	2	vi.到达	0
+6	for	Module 3_2	2	prep.达	1
+6	mountain	Module 3_2	2	n.山	0
+6	with	Module 3_2	2	prep.拥有	1
+6	plant	Module 3_2	2	n.植物	1
+7	pair	Module 4_1	1	n.一套	0
+7	shorts	Module 4_1	1	n.短裤	1
+7	argue	Module 4_1	1	vt.争论	0
+7	matter	Module 4_1	1	n.问题	0
+7	What's the matter	Module 4_1	1	怎么啦？	0
+7	took	Module 4_1	1	vt.（过去式）拿	1
+7	wear	Module 4_1	1	vt.穿	1
+7	That's OK	Module 4_1	1	没关系	0
+7	sports	Module 4_1	1	adj.体育运动的	0
+7	hey	Module 4_1	1	int.嘿	0
+8	nineteen	Module 5_1	2	num.十九	0
+8	crayon	Module 5_1	2	n.蜡笔	1
+8	fifteen	Module 5_1	2	num.十五	0
+8	begin	Module 5_1	2	vt.开始	1
+8	give out	Module 5_1	2	分发	0
+8	all right	Module 5_1	2	好	0
+8	thirteen	Module 5_1	2	num.十三	0
+8	fourteen	Module 5_1	2	num.十四	0
+8	sixteen	Module 5_1	2	num.十六	0
+8	seventeen	Module 5_1	2	num.十七	0
+8	eighteen	Module 5_1	2	num.十八	0
+9	floor	Module 5_2	2	n.地面	1
+9	forty	Module 5_2	2	num.四十	0
+9	number	Module 5_2	2	n.数字	0
+9	thirty	Module 5_2	2	num.三十	0
+9	fifty	Module 5_2	2	num.五十	0
+9	sixty	Module 5_2	2	num.六十	0
+9	seventy	Module 5_2	2	num.七十	0
+9	eighty	Module 5_2	2	num.八十	0
+9	ninety	Module 5_2	2	num.九十	0
+9	happily	Module 5_2	2	adv.幸福地	1
+9	many	Module 5_2	2	adj.许多（加可数名词）	1
+10	well	Module 6_1	1	adv.好	1
+10	team	Module 6_1	1	n.运动队	0
+10	really	Module 6_1	1	adv.很	0
+10	good at	Module 6_1	1	擅长	0
+10	catch	Module 6_1	1	vt.抓住	0
+10	goalkeeper	Module 6_1	1	n.守门员	0
+10	think	Module 6_1	1	vt.想	1
+10	fantastic	Module 6_1	1	adj.极好的	0
+10	fan	Module 6_1	1	n.狂热仰慕者	1
+10	past	Module 6_1	1	n.过去	0
+10	swam	Module 6_1	1	vi.（过去式）游泳	1
+10	slow	Module 6_1	1	adj.慢的	1
+10	healthy	Module 6_1	1	adj.健康的	1
+11	a lot	Module 7_1	1	许多	0
+11	useful	Module 7_1	1	adj.有用的	0
+11	show	Module 7_1	1	n.节目	0
+11	presenter	Module 7_1	1	n.主持人	0
+11	blind	Module 7_1	1	adj.失明的	0
+11	deaf	Module 7_1	1	adj.失聪的	0
+11	hear	Module 7_1	1	vt.听到	1
+11	her	Module 7_1	1	pron.（宾格）她	1
+11	fire	Module 7_1	1	n.火灾	0
+11	firefighter	Module 7_1	1	n.消防队员	0
+11	hot dog	Module 7_1	1	热狗	0
+11	sausage	Module 7_1	1	n.香肠	0
+11	kind	Module 7_1	1	adj.友好的	1
+12	time	Module 8_1	2	n.时间	1
+12	school	Module 8_1	2	n.上课时间	1
+12	start	Module 8_1	2	n.开始	0
+12	past	Module 8_1	2	prep.晚于	0
+12	late	Module 8_1	2	adj.迟到的	1
+12	go to bed	Module 8_1	2	上床睡觉	0
+12	exercise	Module 8_1	2	n.锻炼	1
+12	playground	Module 8_1	2	n.操场	1
+12	before	Module 8_1	2	prep.在...之前	1
+13	join	Module 8_2	2	v.加入	0
+13	skipping rope	Module 8_2	2	跳绳	0
+13	coffee	Module 8_2	2	n.咖啡	0
+13	tea	Module 8_2	2	n.茶	1
+13	always	Module 8_2	2	adv.总是	1
+13	bell	Module 8_2	2	n.铃	0
+13	rang	Module 8_2	2	vi.鸣（过去式）	0
+13	into	Module 8_2	2	prep.进入...里面	0
+14	feel	Module 9_1	1	vt.感觉	1
+14	bored	Module 9_1	1	adj.厌烦的	0
+14	sad	Module 9_1	1	adj.伤心的	1
+14	woof	Module 9_1	1	n.狗吠声	0
+14	miss	Module 9_1	1	v.想念	0
+14	angry	Module 9_1	1	adj.生气的	1
+14	ill	Module 9_1	1	adj.有病的	1
+14	told	Module 9_1	1	vt.（过去式）告诉	1
+14	better	Module 9_1	1	adj.痊愈的	0
+14	farm	Module 9_1	1	n.农场	1
+14	tired	Module 9_1	1	adj.累的	1
+14	won	Module 9_1	1	vt.（过去式）赢	0
+14	ruler	Module 9_1	1	n.直尺	1
+14	smell	Module 9_1	1	vt.闻出	0
+15	kitchen	Module 10_1	1	n.厨房	1
+15	toilet	Module 10_1	1	n.厕所	1
+15	room	Module 10_1	1	n.房间	1
+15	living room	Module 10_1	1	起居室	0
+15	hide-and-seek	Module 10_1	1	n.捉迷藏	0
+15	now	Module 10_1	1	n.好	1
+15	last	Module 10_1	1	adj.最后	0
+15	hide	Module 10_1	1	vt.躲	0
+15	sofa	Module 10_1	1	n.沙发	0
+15	shout	Module 10_1	1	n.大叫	0
+15	grass	Module 10_1	1	n.草	1
+15	baby	Module 10_1	1	n.婴儿	1
+15	dangerous	Module 10_1	1	adj.危险的	0

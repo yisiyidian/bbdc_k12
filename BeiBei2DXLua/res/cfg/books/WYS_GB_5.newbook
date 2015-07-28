@@ -1,0 +1,299 @@
+1	have ... in common	Module 1_1	5	有...相同点	1
+1	linguist	Module 1_1	5	n.语言学家	1
+1	make a difference	Module 1_1	5	有影响	1
+2	accent	Module 1_2	5	n.口音	1
+2	obvious	Module 1_2	5	adj.显然的	1
+2	underground	Module 1_2	5	adj.（英）地铁	1
+2	subway	Module 1_2	5	n.（美）地铁	1
+2	get around	Module 1_2	5	四处走动	1
+2	flashlight	Module 1_2	5	n.（美）手电筒	1
+2	queue	Module 1_2	5	n.排队	1
+2	confusing	Module 1_2	5	adj.令人困惑的	1
+2	preposition	Module 1_2	5	n.介词	1
+2	compare	Module 1_2	5	vt.比较	1
+2	omit	Module 1_2	5	vt.省略	1
+3	variety	Module 1_3	5	n.种类	1
+3	differ	Module 1_3	5	vi.有不同	1
+3	settler	Module 1_3	5	n.移民	1
+3	be similar to	Module 1_3	5	与...相似	1
+3	remark	Module 1_3	5	n.评论	1
+3	variation	Module 1_3	5	n.变化	1
+3	have difficulty in doing ...	Module 1_3	5	做某事有困难	1
+3	steadily	Module 1_3	5	adv.稳定持续地	1
+3	satellite	Module 1_3	5	n.卫星	1
+3	flick	Module 1_3	5	n.轻打	1
+3	switch	Module 1_3	5	n.开关	1
+4	lead to	Module 1_4	5	引起	1
+4	structure	Module 1_4	5	n.结构	1
+4	rapidly	Module 1_4	5	adv.迅速地	1
+4	announcement	Module 1_4	5	n.声明	1
+4	linguistics	Module 1_4	5	n.语言学	1
+4	edition	Module 1_4	5	n.版本	1
+4	cute	Module 1_4	5	adj.逗人喜爱的	1
+4	add	Module 1_4	5	vt.增加	1
+4	in favour of	Module 1_4	5	同意	1
+4	present	Module 1_4	5	v.提出（观点等）	1
+5	refer to ... as ...	Module 1_5	5	称...为...	1
+5	attempt	Module 1_5	5	vt.努力	1
+5	simplify	Module 1_5	5	vt.简化	1
+5	combination	Module 1_5	5	n.组合	1
+5	thanks to	Module 1_5	5	幸亏	1
+5	distinctive	Module 1_5	5	adj.与众不同的	1
+5	look	Module 1_5	5	n.外观	1
+5	criticise	Module 1_5	5	v.批评	1
+5	standard	Module 1_5	5	adj.&n.标准的	1
+5	reference	Module 1_5	5	n.参考	1
+6	intellectual	Module 2_1	7	adj.智力的	1
+6	satisfying	Module 2_1	7	adj.令人满意的	1
+6	stressful	Module 2_1	7	adj.紧张的	1
+6	accountant	Module 2_1	7	n.会计	1
+6	barber	Module 2_1	7	n.理发师	1
+6	biochemist	Module 2_1	7	n.生物化学家	1
+6	electrician	Module 2_1	7	n.电工	1
+6	miner	Module 2_1	7	n.矿工	1
+6	volunteer	Module 2_1	7	n.志愿者	1
+6	offer	Module 2_1	7	v.&n.（主动）提出	1
+7	signal	Module 2_2	7	n.信号	1
+7	in particular	Module 2_2	7	尤其	1
+7	sheer	Module 2_2	7	adj.陡峭的	1
+7	on average	Module 2_2	7	平均	1
+7	in theory	Module 2_2	7	理论上	1
+7	in practice	Module 2_2	7	实际上	1
+7	respect	Module 2_2	7	vt.尊重	1
+7	toll	Module 2_2	7	n.伤亡人数	1
+7	bend	Module 2_2	7	v.弯曲处	1
+7	circular	Module 2_2	7	adj.圆形的	1
+8	direct	Module 2_3	7	v.指挥	1
+8	pass by	Module 2_3	7	经过	1
+8	take ... for granted	Module 2_3	7	以为...理所当然	1
+8	encounter	Module 2_3	7	vt.相遇	1
+8	profound	Module 2_3	7	adj.深刻的	1
+8	have an effect on	Module 2_3	7	对...产生影响	1
+8	mission	Module 2_3	7	n.任务	1
+8	qualified	Module 2_3	7	adj.合格的	1
+8	take up	Module 2_3	7	站好位置以备...	1
+8	vertical	Module 2_3	7	adj.垂直的	1
+9	take notice of	Module 2_4	7	注意到	1
+9	temporary	Module 2_4	7	adj.暂时的	1
+9	freezer	Module 2_4	7	n.冰箱	1
+9	freeze	Module 2_4	7	v.冻住	1
+9	contract	Module 2_4	7	n.合同	1
+9	earn	Module 2_4	7	vt.挣得	1
+9	permanent	Module 2_4	7	adj.长久的	1
+9	salary	Module 2_4	7	n.工资	1
+9	staff	Module 2_4	7	n.全体职员	1
+9	sign	Module 2_4	7	v.签字	1
+10	agent	Module 2_5	7	n.代理人	1
+10	analyst	Module 2_5	7	n.分析家	1
+10	apply	Module 2_5	7	vt.申请	1
+10	deduction	Module 2_5	7	n.推理	1
+10	organizational	Module 2_5	7	adj.组织的	1
+10	post	Module 2_5	7	n.职位	1
+10	chef	Module 2_5	7	n.厨师	1
+10	require	Module 2_5	7	v.需要	1
+10	renewable	Module 2_5	7	adj.可续签的	1
+10	essential	Module 2_5	7	adj.必不可少的	1
+11	model	Module 2_6	7	n.模特	1
+11	shot	Module 2_6	7	n.镜头	1
+11	in response to	Module 2_6	7	作为...的回应	1
+11	grateful	Module 2_6	7	adj.感激的	1
+11	available	Module 2_6	7	adj.可获得的	1
+11	database	Module 2_6	7	n.数据库	1
+11	demand	Module 2_6	7	v.要求	1
+11	bioinformatician	Module 2_6	7	n.生物信息学者	1
+11	traditional	Module 2_6	7	adj.传统的	1
+12	youngster	Module 2_7	7	n.年轻人	1
+12	suffer	Module 2_7	7	v.遭受痛苦	1
+12	pathologist	Module 2_7	7	n.病理学家	1
+12	individual	Module 2_7	7	n.&adj.个人	1
+12	fitness	Module 2_7	7	n.健康	1
+12	leisure	Module 2_7	7	n.休闲	1
+12	double	Module 2_7	7	n.加倍	1
+12	outgoing	Module 2_7	7	adj.外向的	1
+12	personality	Module 2_7	7	n.个性	1
+13	biography	Module 3_1	5	n.传记	1
+13	have connection with	Module 3_1	5	与...有联系	1
+13	terrified	Module 3_1	5	adj.非常害怕的	1
+13	feel in the mood for sth	Module 3_1	5	有意做某事	1
+13	solve	Module 3_1	5	v.解决	1
+13	account	Module 3_1	5	n.叙述	1
+13	run away	Module 3_1	5	逃跑	1
+13	detective	Module 3_1	5	adj.侦探	1
+13	pour	Module 3_1	5	vt.倾盆而下	1
+13	paddle	Module 3_1	5	n.用桨划	1
+14	panic	Module 3_2	5	n.恐慌	1
+14	curious	Module 3_2	5	adj.好奇的	1
+14	rope	Module 3_2	5	n.绳子	1
+14	crawl	Module 3_2	5	vi.爬行	1
+14	make up	Module 3_2	5	编造	1
+14	disturb	Module 3_2	5	vt.打扰	1
+14	romantic	Module 3_2	5	adj.浪漫的	1
+14	fiction	Module 3_2	5	n.虚构之事	1
+14	exception	Module 3_2	5	n.例外	1
+14	warn	Module 3_2	5	vt.警告	1
+15	shallow	Module 3_3	5	adj.浅的	1
+15	make one's fortune	Module 3_3	5	发财	1
+15	penny	Module 3_3	5	n.便士	1
+15	pilot	Module 3_3	5	n.领航员	1
+15	establish	Module 3_3	5	v.确立	1
+15	tie	Module 3_3	5	vt.绑	1
+15	play a trick on sb.	Module 3_3	5	捉弄某人	1
+15	set in	Module 3_3	5	设置背景	1
+15	murderer	Module 3_3	5	n.凶手	1
+15	companion	Module 3_3	5	n.同伴	1
+16	raft	Module 3_4	5	n.木排	1
+16	fantasy	Module 3_4	5	n.幻想	1
+16	shelter	Module 3_4	5	n.遮蔽物	1
+16	lie	Module 3_4	5	n.说谎	1
+16	beard	Module 3_4	5	n.胡须	1
+16	fright	Module 3_4	5	n.恐惧	1
+16	trunk	Module 3_4	5	n.树干	1
+16	outline	Module 3_4	5	n.轮廓	1
+16	comedy	Module 3_4	5	n.喜剧	1
+17	review	Module 3_5	5	n.评论	1
+17	resemble	Module 3_5	5	v.与...相似	1
+17	create	Module 3_5	5	vt.塑造	1
+17	adolescent	Module 3_5	5	adj.青少年	1
+17	determined	Module 3_5	5	adj.坚决的	1
+17	set off	Module 3_5	5	出发	1
+17	force	Module 3_5	5	v.强迫	1
+17	vivid	Module 3_5	5	adj.生动的	1
+17	reputation	Module 3_5	5	n.名誉	1
+18	carnival	Module 4_1	5	n.狂欢节	1
+18	ghost	Module 4_1	5	n.鬼	1
+18	hide	Module 4_1	5	vt.躲藏	1
+18	confusion	Module 4_1	5	n.混乱	1
+18	dress up	Module 4_1	5	装扮	1
+18	firearm	Module 4_1	5	n.火器	1
+18	empire	Module 4_1	5	n.帝国	1
+18	council	Module 4_1	5	n.地方议会	1
+18	wander	Module 4_1	5	vt.漫步	1
+18	elegant	Module 4_1	5	adj.优美的	1
+19	calendar	Module 4_2	5	n.日历	1
+19	bean	Module 4_2	5	n.豆子	1
+19	garlic	Module 4_2	5	n.大蒜	1
+19	onion	Module 4_2	5	n.洋葱	1
+19	Christian	Module 4_2	5	adj.基督教的	1
+19	costume	Module 4_2	5	n.服装	1
+19	extend	Module 4_2	5	v.延长	1
+19	pretend	Module 4_2	5	vt.假装	1
+19	come to an end	Module 4_2	5	完结	1
+19	memory	Module 4_2	5	n.记忆	1
+20	revive	Module 4_3	5	vt.复兴	1
+20	book	Module 4_3	5	v.预订	1
+20	magic	Module 4_3	5	n.魔力	1
+20	era	Module 4_3	5	n.时代	1
+20	dove	Module 4_3	5	n.鸽子	1
+20	flour	Module 4_3	5	n.面粉	1
+20	pea	Module 4_3	5	n.豌豆	1
+20	pork	Module 4_3	5	n.猪肉	1
+20	sausage	Module 4_3	5	n.香肠	1
+20	consist of	Module 4_3	5	由...组成	1
+21	herb	Module 4_4	5	n.药草	1
+21	ingredient	Module 4_4	5	n.原料	1
+21	multicultural	Module 4_4	5	adj.多文化的	1
+21	plantation	Module 4_4	5	n.农庄	1
+21	mark	Module 4_4	5	n.标志	1
+21	trade	Module 4_4	5	n.贸易	1
+21	transport	Module 4_4	5	n.运输	1
+21	freedom	Module 4_4	5	n.自由	1
+21	unite	Module 4_4	5	v.联合	1
+21	relaxing	Module 4_4	5	adj.使人放松的	1
+22	whistle	Module 4_5	5	n.哨子	1
+22	tasty	Module 4_5	5	adj.美味可口的	1
+22	parade	Module 4_5	5	n.游行	1
+22	landowner	Module 4_5	5	n.地主	1
+22	import	Module 4_5	5	n.进口	1
+22	master	Module 4_5	5	n.主人	1
+22	abolish	Module 4_5	5	vt.废除	1
+22	magnificent	Module 4_5	5	adj.华丽的	1
+22	celebration	Module 4_5	5	n.庆祝	1
+22	origin	Module 4_5	5	n.起源	1
+23	pitch	Module 5_1	4	n.球场	1
+23	tough	Module 5_1	4	adj.棘手的	1
+23	athletics	Module 5_1	4	n.田径运动	1
+23	bat	Module 5_1	4	n.球拍	1
+23	net	Module 5_1	4	n.网	1
+23	club	Module 5_1	4	n.高尔夫球棒	1
+23	ring	Module 5_1	4	n.拳击台	1
+23	stadium	Module 5_1	4	n.体育场	1
+23	track	Module 5_1	4	n.跑道	1
+23	tracksuit	Module 5_1	4	n.运动服	1
+23	trainer	Module 5_1	4	n.教练员	1
+24	retire	Module 5_2	4	n.退休	1
+24	designer	Module 5_2	4	n.设计师	1
+24	gymnast	Module 5_2	4	n.体操运动员	1
+24	slogan	Module 5_2	4	n.标语	1
+24	specific	Module 5_2	4	adj.具体的	1
+24	marathon	Module 5_2	4	n.马拉松	1
+24	score	Module 5_2	4	n.得分	1
+24	ministry	Module 5_2	4	n.政府的部	1
+24	final	Module 5_2	4	n.决赛	1
+24	champion	Module 5_2	4	n.冠军	1
+24	logo	Module 5_2	4	n.标识	1
+25	sportswear	Module 5_3	4	n.运动服装	1
+25	rugby	Module 5_3	4	n.橄榄球	1
+25	background	Module 5_3	4	n.背景	1
+25	brand	Module 5_3	4	n.商标	1
+25	symbol	Module 5_3	4	n.符号	1
+25	retirement	Module 5_3	4	n.退休	1
+25	perform	Module 5_3	4	v.表现	1
+25	on the increase	Module 5_3	4	正在增加	1
+25	advantage	Module 5_3	4	n.优势	1
+25	guarantee	Module 5_3	4	vt.保证	1
+26	purchase	Module 5_4	4	n.&v.购买	1
+26	quality	Module 5_4	4	n.品性	1
+26	ultimate	Module 5_4	4	n.最后的	1
+26	rise to one's feet	Module 5_4	4	站起身	1
+26	victory	Module 5_4	4	n.胜利	1
+26	dramatically	Module 5_4	4	adv.戏剧性地	1
+26	protest	Module 5_4	4	n.&v.抗议	1
+26	declare	Module 5_4	4	vt.宣布	1
+26	borough	Module 5_4	4	n.自治区	1
+26	competitor	Module 5_4	4	n.竞争者	1
+27	endanger	Module 6_1	5	vt.使...处于险境	1
+27	raid	Module 6_1	5	n.突击搜查	1
+27	habitat	Module 6_1	5	n.栖息地	1
+27	extinct	Module 6_1	5	adj.灭绝的	1
+27	struggle	Module 6_1	5	v.挣扎	1
+27	wildlife	Module 6_1	5	n.野生生物	1
+27	antelope	Module 6_1	5	n.羚羊	1
+27	battle	Module 6_1	5	n.战斗	1
+27	plateau	Module 6_1	5	n.高原	1
+28	ideal	Module 6_2	5	adj.理想的	1
+28	shawl	Module 6_2	5	n.披肩	1
+28	herd	Module 6_2	5	n.牧群	1
+28	worth	Module 6_2	5	adj.值...钱	1
+28	lay	Module 6_2	5	vt.产卵	1
+28	wonder	Module 6_2	5	n.奇迹	1
+28	insect	Module 6_2	5	n.昆虫	1
+28	be concerned about sth.	Module 6_2	5	关心某事	1
+28	ibis	Module 6_2	5	n.鹮	1
+29	feed on	Module 6_3	5	以...为食	1
+29	extinction	Module 6_3	5	n.灭绝	1
+29	stand for	Module 6_3	5	代表	1
+29	monitor	Module 6_3	5	v.监测	1
+29	set up	Module 6_3	5	建立	1
+29	spot	Module 6_3	5	n.现场	1
+29	dealer	Module 6_3	5	n.商人	1
+29	condition	Module 6_3	5	n.情况	1
+29	meanwhile	Module 6_3	5	adv.同时	1
+30	protect	Module 6_4	5	v.保护	1
+30	poacher	Module 6_4	5	n.盗猎者	1
+30	skin	Module 6_4	5	v.剥皮	1
+30	reserve	Module 6_4	5	n.保护区	1
+30	confiscate	Module 6_4	5	v.没收	1
+30	reptile	Module 6_4	5	n.爬行动物	1
+30	involve	Module 6_4	5	vt.涉及	1
+30	live	Module 6_4	5	adj.活的	1
+30	aim	Module 6_4	5	n.目标	1
+31	mammal	Module 6_5	5	n.哺乳动物	1
+31	bald	Module 6_5	5	adj.秃的	1
+31	whale	Module 6_5	5	n.鲸	1
+31	brink	Module 6_5	5	n.边缘	1
+31	initial	Module 6_5	5	n.首字母	1
+31	continent	Module 6_5	5	n.大陆	1
+31	focus	Module 6_5	5	v.焦点	1
+31	energy	Module 6_5	5	n.能源	1
+31	waste	Module 6_5	5	vt.浪费	1
+31	branch	Module 6_5	5	n.分支机构	1

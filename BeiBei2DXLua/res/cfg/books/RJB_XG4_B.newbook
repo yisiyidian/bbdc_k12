@@ -1,0 +1,104 @@
+1	first floor	Unit 1_1	2	一楼	1
+1	second floor	Unit 1_1	2	二楼	1
+1	teacher's office	Unit 1_1	2	教师办公室	1
+2	library	Unit 1_2	2	n.图书馆	1
+2	playground	Unit 1_2	2	n.操场	1
+2	computer room	Unit 1_2	2	计算机房	1
+2	art room	Unit 1_2	2	美术教师	1
+2	music room	Unit 1_2	2	音乐教室	1
+2	next to	Unit 1_2	2	紧邻	0
+2	homework	Unit 1_2	2	n.作业	0
+2	class	Unit 1_2	2	n.班	0
+2	forty	Unit 1_2	2	num.四十	0
+2	way	Unit 1_2	2	n.方向	0
+3	breakfast	Unit 2_1	2	n.早餐	1
+3	English class	Unit 2_1	2	英语课	1
+3	lunch	Unit 2_1	2	n.午餐	1
+3	music class	Unit 2_1	2	音乐课	1
+3	PE class	Unit 2_1	2	体育课	1
+3	dinner	Unit 2_1	2	n.正餐	1
+3	get up	Unit 2_1	2	起床	1
+3	go to school	Unit 2_1	2	去上学	1
+3	go home	Unit 2_1	2	回家	1
+4	go to bed	Unit 2_2	2	上床睡觉	1
+4	over	Unit 2_2	2	adv. 结束	0
+4	now	Unit 2_2	2	n.现在	0
+4	o'clock	Unit 2_2	2	...点钟	0
+4	kid	Unit 2_2	2	n.小孩	0
+4	thirty	Unit 2_2	2	num.三十	0
+4	hurry up	Unit 2_2	2	快点	0
+4	come on	Unit 2_2	2	快	0
+4	just a minute	Unit 2_2	2	稍等一会儿	0
+5	cold	Unit3_1	2	adj.寒冷的	1
+5	cool	Unit3_1	2	adj.凉的	1
+5	warm	Unit3_1	2	adj.温暖的	1
+5	hot	Unit3_1	2	adj.热的	1
+5	sunny	Unit3_1	2	adj.阳光充足的	1
+5	windy	Unit3_1	2	adj.多风的	1
+5	cloudy	Unit3_1	2	adj.多云的	1
+5	snowy	Unit3_1	2	adj.下雪的	1
+5	rainy	Unit3_1	2	adj.阴雨的	1
+5	outside	Unit3_1	2	adv.在户外	0
+5	be careful	Unit3_1	2	小心	0
+6	weather	Unit3_2	2	n.天气	0
+6	New York	Unit3_2	2	纽约	0
+6	ho wabout	Unit3_2	2	...怎么样？	0
+6	degree	Unit3_2	2	n.度	0
+6	world	Unit3_2	2	n.世界	0
+6	London	Unit3_2	2	n.伦敦	0
+6	Moscow	Unit3_2	2	n.莫斯科	0
+6	Singapore	Unit3_2	2	n.新加坡城	0
+6	Sydney	Unit3_2	2	n.悉尼	0
+6	fly	Unit3_2	2	vt.放（风筝）	0
+6	love	Unit3_2	2	n.爱你的	0
+7	tomato	Unit4_1	2	n.西红柿	1
+7	potato	Unit4_1	2	n.马铃薯	1
+7	green beans	Unit4_1	2	豆角	1
+7	carrot	Unit4_1	2	n.胡萝卜	1
+7	horse	Unit4_1	2	n.马	1
+7	cow	Unit4_1	2	n.母牛	1
+7	sheep	Unit4_1	2	n.羊	1
+7	hen	Unit4_1	2	n.母鸡	1
+8	these	Unit4_2	2	pron.这些	0
+8	yum	Unit4_2	2	int.味道好	0
+8	animal	Unit4_2	2	n.动物	0
+8	those	Unit4_2	2	pron.那些	0
+8	garden	Unit4_2	2	n.花园	0
+8	farm	Unit4_2	2	n.农场	0
+8	goat	Unit4_2	2	n.山羊	0
+8	eat	Unit4_2	2	vt.吃	0
+9	clothes	Unit5_1	2	n.衣服	1
+9	pants	Unit5_1	2	n.裤子	1
+9	hat	Unit5_1	2	n.帽子	1
+9	dress	Unit5_1	2	n.连衣裙	1
+9	skirt	Unit5_1	2	n.女裙	1
+9	coat	Unit5_1	2	n.外衣	1
+9	sweater	Unit5_1	2	n.毛衣	1
+9	sock	Unit5_1	2	n.短袜	1
+10	shorts	Unit5_2	2	n.短裤	1
+10	jacket	Unit5_2	2	n.夹克衫	1
+10	shirt	Unit5_2	2	n.衬衫	1
+10	yours	Unit5_2	2	pron.你的	0
+10	whose	Unit5_2	2	pron.谁的	0
+10	mine	Unit5_2	2	pron.我的	0
+10	pack	Unit5_2	2	v.收拾行李	0
+10	wait	Unit5_2	2	v.等待	0
+11	glove	Unit6_1	2	n.手套	1
+11	scarf	Unit6_1	2	n.围巾	1
+11	umbrella	Unit6_1	2	n.伞	1
+11	sunglasses	Unit6_1	2	n.太阳镜	1
+11	pretty	Unit6_1	2	adj.美观的	1
+11	expensive	Unit6_1	2	adj.昂贵的	1
+11	cheap	Unit6_1	2	adj.花钱少的	1
+11	nice	Unit6_1	2	adj.好的	1
+11	try on	Unit6_1	2	试穿	0
+11	size	Unit6_1	2	n.尺码	0
+12	of course	Unit6_2	2	当然	0
+12	too	Unit6_2	2	adv.太	0
+12	just	Unit6_2	2	adv.正好	0
+12	how much	Unit6_2	2	多少钱	0
+12	eighty	Unit6_2	2	num.八十	0
+12	dollar	Unit6_2	2	n.美元	0
+12	sale	Unit6_2	2	vt.特价销售	0
+12	more	Unit6_2	2	adj.更多的	0
+12	us	Unit6_2	2	pron.我们	0

@@ -1,0 +1,265 @@
+1	smell	Module 1_1	4	vt.&n.闻	1
+1	soft	Module 1_1	4	adj.软的	1
+1	sour	Module 1_1	4	adj.酸的	1
+2	cookie	Module 1_2	4	n.小甜饼	1
+2	mm	Module 1_2	4	abbr.呣	0
+2	pizza	Module 1_2	4	n.比萨饼	0
+2	lovely	Module 1_2	4	adj.可爱的	1
+2	done	Module 1_2	4	adj.做完的	1
+2	try	Module 1_2	4	n.&v.尝试	1
+2	have a try	Module 1_2	4	尝一尝	1
+2	pie	Module 1_2	4	n.馅饼	1
+2	sound	Module 1_2	4	vi.听起来	1
+2	sweet tooth	Module 1_2	4	对甜食的爱好	1
+3	salt	Module 1_3	4	n.盐	1
+3	jam	Module 1_3	4	n.果酱	1
+3	for	Module 1_3	4	prep.用于	2
+3	favourite	Module 1_3	4	n.最喜欢的人或事	2
+3	ear	Module 1_3	4	n.耳朵	2
+3	glasses	Module 1_3	4	眼镜	1
+3	jeans	Module 1_3	4	牛仔裤	1
+3	nervous	Module 1_3	4	adj.紧张的	1
+3	fair	Module 1_3	4	adj.（头发）金色的	1
+3	pretty	Module 1_3	4	adj.秀丽的	1
+4	proud	Module 1_4	4	adj.感到自豪的	1
+4	be proud of	Module 1_4	4	为...骄傲	1
+4	stranger	Module 1_4	4	n.陌生人	1
+4	message	Module 1_4	4	n.信息	1
+4	sb can't wait	Module 1_4	4	某人等不及了	1
+4	hobby	Module 1_4	4	n.业余爱好	1
+4	at school	Module 1_4	4	上学	1
+4	in	Module 1_4	4	prep.在...期间	2
+4	mark	Module 1_4	4	n.分数	1
+4	love	Module 1_4	4	vt.（信尾）爱你的...	1
+5	ever	Module 2_1	2	adv.从来	1
+5	enter	Module 2_1	2	vi.参加	1
+5	competition	Module 2_1	2	n.比赛	1
+5	prize	Module 2_1	2	n.奖品	1
+5	first prize	Module 2_1	2	一等奖	1
+5	dream	Module 2_1	2	n.&v.梦	1
+5	afford	Module 2_1	2	vt.买得起	1
+5	write about	Module 2_1	2	写作	1
+5	make up	Module 2_1	2	创作	1
+5	invite	Module 2_1	2	vt.邀请	1
+5	move	Module 2_1	2	vt.搬家	1
+5	send	Module 2_1	2	vt.派遣去	1
+6	Germany	Module 2_2	2	n.德国	1
+6	France	Module 2_2	2	n.法国	1
+6	tower	Module 2_2	2	n.塔	1
+6	ancient	Module 2_2	2	adj.古老的	1
+6	king	Module 2_2	2	n.国王	1
+6	queen	Module 2_2	2	n.女王	1
+6	Arabic	Module 2_2	2	n.阿拉伯语	0
+6	way	Module 2_2	2	n.方面	1
+6	mix	Module 2_2	2	vt.混合	1
+6	miss	Module 2_2	2	v.想念	1
+6	count	Module 2_2	2	v.数	1
+6	count down	Module 2_2	2	倒数	1
+7	earth	Module 3_1	3	n.地球	1
+7	moon	Module 3_1	3	n.月亮	2
+7	news	Module 3_1	3	n.新闻	1
+7	reach	Module 3_1	3	vt.到达	1
+7	planet	Module 3_1	3	n.行星	1
+7	yet	Module 3_1	3	adv.还	1
+7	just	Module 3_1	3	adv.刚才	1
+7	model	Module 3_1	3	n.模型	1
+7	spaceship	Module 3_1	3	n.航天器	1
+7	project	Module 3_1	3	n.项目	1
+8	no  problem	Module 3_2	3	没问题	1
+8	latest	Module 3_2	3	adj.最新的	1
+8	on	Module 3_2	3	prep.关于...	2
+8	discover	Module 3_2	3	vt.发现	1
+8	astronaut	Module 3_2	3	n.宇航员	1
+8	space travel	Module 3_2	3	航天旅行	1
+8	none	Module 3_2	3	pron.没有一人	1
+8	environment	Module 3_2	3	n.环境	1
+8	that	Module 3_2	3	pron.那个	2
+8	solar	Module 3_2	3	adj.太阳的	1
+9	system	Module 3_3	3	n.系统	1
+9	solar system	Module 3_3	3	太阳系	1
+9	group	Module 3_3	3	n.群	1
+9	galaxy	Module 3_3	3	n.星系	0
+9	universe	Module 3_3	3	n.宇宙	1
+9	light	Module 3_3	3	n.光线	2
+9	impossible	Module 3_3	3	adj.不可能的	1
+9	out	Module 3_3	3	adv.在远方	1
+9	communicate	Module 3_3	3	vi.联系	1
+10	cough	Module 4_1	3	n.咳嗽	1
+10	fever	Module 4_1	3	n.发烧	1
+10	headache	Module 4_1	3	n.头痛	1
+10	stomach	Module 4_1	3	n.腹部	1
+10	ache	Module 4_1	3	n.痛	1
+10	stomach ache	Module 4_1	3	胃痛	1
+10	ill	Module 4_1	3	adj.有病的	2
+10	this	Module 4_1	3	pron.这	2
+10	since	Module 4_1	3	conj.自...以来	1
+10	cold	Module 4_1	3	n.感冒	1
+10	catch a cold	Module 4_1	3	感冒	1
+11	take	Module 4_2	3	vt.测定	1
+11	take sb's temperature	Module 4_2	3	量某人的体温	1
+11	fast food	Module 4_2	3	快餐食品	1
+11	health	Module 4_2	3	n.健康	1
+11	well	Module 4_2	3	adv.健康的	2
+11	heart	Module 4_2	3	n.心	1
+11	active	Module 4_2	3	adj.积极的	1
+11	pet	Module 4_2	3	n.宠物	1
+11	member	Module 4_2	3	n.成员	1
+11	take part in	Module 4_2	3	参加	1
+11	condition	Module 4_2	3	n.状况	1
+12	in excellent condition	Module 4_3	3	健康状况很好	1
+12	sleepy	Module 4_3	3	adj.想睡的	1
+12	then	Module 4_3	3	adv.当时	2
+12	daily	Module 4_3	3	adj.每天的	1
+12	weak	Module 4_3	3	adj.弱的	1
+12	illness	Module 4_3	3	n.病	1
+12	exercise	Module 4_3	3	n.运动	1
+12	awful	Module 4_3	3	adj.极讨厌的	1
+12	feel awful	Module 4_3	3	感到不舒服	1
+12	all over	Module 4_3	3	浑身	1
+12	perhaps	Module 4_3	3	adv.可能	1
+13	cartoon	Module 5_1	3	n.漫画	1
+13	handsome	Module 5_1	3	adj.英俊的	1
+13	smart	Module 5_1	3	adj.机灵的	1
+13	sky	Module 5_1	3	n.天空	1
+13	fight	Module 5_1	3	v.战斗	1
+13	cool	Module 5_1	3	adj.酷的	2
+13	hero	Module 5_1	3	n.英雄	1
+13	humorous	Module 5_1	3	adj.幽默的	1
+13	can't help doing sth	Module 5_1	3	忍不住做某事	1
+13	laugh	Module 5_1	3	vt.笑	1
+14	lesson	Module 5_2	3	n.教训	2
+14	orange-and-white	Module 5_2	3	adj.橙白相间的	1
+14	ugly	Module 5_2	3	adj.难看的	1
+14	win the heart of sb	Module 5_2	3	赢得某人的心	1
+14	schoolbag	Module 5_2	3	n.书包	1
+14	lead	Module 5_2	3	v.领导	1
+14	clever	Module 5_2	3	adj.聪明的	2
+14	as	Module 5_2	3	adv.当...时	1
+14	mess	Module 5_2	3	n.凌乱	1
+14	heaven	Module 5_2	3	n.天堂	1
+15	expect	Module 5_3	3	v.期盼	1
+15	artist	Module 5_3	3	n.艺术家	1
+15	invent	Module 5_3	3	v.发明	1
+15	copy	Module 5_3	3	vt.一本	1
+15	black-and-white	Module 5_3	3	adj.黑白的	1
+15	own	Module 5_3	3	adj.自己的	1
+15	private	Module 5_3	3	adj.私人的	1
+15	create	Module 5_3	3	vt.创造	1
+15	satisfy	Module 5_3	3	vt.满足	1
+16	fan	Module 6_1	3	n.扇子	1
+16	stamp	Module 6_1	3	n.邮票	1
+16	tidy up	Module 6_1	3	使整齐	1
+16	shelf	Module 6_1	3	n.架子	1
+16	have a look	Module 6_1	3	看一看	1
+16	as	Module 6_1	3	prep.作为	1
+16	coin	Module 6_1	3	n.硬币	1
+16	note	Module 6_1	3	n.纸币	1
+17	pound	Module 6_2	3	n.英镑	1
+17	dollar	Module 6_2	3	n.美元	1
+17	must	Module 6_2	3	aux.一定	1
+17	valuable	Module 6_2	3	adj.值钱的	1
+17	with	Module 6_2	3	prep.用...	1
+17	value	Module 6_2	3	n.价值	1
+17	just	Module 6_2	3	adv.只是	1
+17	person	Module 6_2	3	n.人	1
+18	interest	Module 6_3	3	n.兴趣	1
+18	skill	Module 6_3	3	n.技能	1
+18	activity	Module 6_3	3	n.活动	1
+18	sailing	Module 6_3	3	n.航海	1
+18	come out	Module 6_3	3	出版	1
+18	result	Module 6_3	3	n.结果	1
+18	as a result	Module 6_3	3	结果	1
+18	pleasure	Module 6_3	3	n.愉悦	1
+18	success	Module 6_3	3	n.成功	1
+19	list	Module 7_1	3	n.名单	1
+19	make a list	Module 7_1	3	列清单	1
+19	crazy	Module 7_1	3	adj.发疯的	1
+19	at the end of	Module 7_1	3	在...的结尾	1
+19	shorts	Module 7_1	3	n.短裤	1
+19	trousers	Module 7_1	3	n.裤子	2
+19	sunglasses	Module 7_1	3	n.太阳镜	1
+19	homestay	Module 7_1	3	n.家庭寄宿	0
+19	weigh	Module 7_1	3	vt.重...	1
+19	total	Module 7_1	3	adj.全部的	1
+20	weight	Module 7_2	3	n.重量	1
+20	passport	Module 7_2	3	n.护照	1
+20	culture	Module 7_2	3	n.文化	1
+20	at the same time	Module 7_2	3	同时	1
+20	last	Module 7_2	3	v.持续	1
+20	depend	Module 7_2	3	vi.决定于	1
+20	depend on	Module 7_2	3	取决于	1
+20	provide	Module 7_2	3	vi.提供	1
+20	test	Module 7_2	3	n.&v.测验	1
+20	progress	Module 7_2	3	n.进步	1
+21	guest	Module 7_3	3	n.客人	1
+21	daily life	Module 7_3	3	日常生活	1
+21	form	Module 7_3	3	n.形成	1
+21	friendship	Module 7_3	3	n.友谊	1
+21	stay in touch with sb	Module 7_3	3	保持联系	1
+21	prefer	Module 7_3	3	vt.更喜爱	1
+21	certain	Module 7_3	3	adj.确定的	1
+21	fill	Module 7_3	3	vt.填满	1
+21	fill out	Module 7_3	3	填写	1
+22	hardly	Module 8_1	2	adv.几乎不	1
+22	take up	Module 8_1	2	占去	1
+22	point out	Module 8_1	2	指出	1
+22	sights	Module 8_1	2	n.风景	1
+22	thirsty	Module 8_1	2	adj.渴的	1
+22	at the top of	Module 8_1	2	在...的顶端	1
+22	waste	Module 8_1	2	vt.浪费	1
+22	square	Module 8_1	2	adj.平方的	1
+22	kilometre	Module 8_1	2	n.千米	1
+23	shape	Module 8_2	2	n.外形	1
+23	human	Module 8_2	2	n.人	1
+23	wake	Module 8_2	2	vi.醒来	1
+23	wake sb up	Module 8_2	2	唤醒某人	1
+23	somebody	Module 8_2	2	pron.某人	1
+23	about	Module 8_2	2	prep.向四周	1
+23	path	Module 8_2	2	n.小路	1
+23	pull	Module 8_2	2	v.拉	1
+23	freshwater	Module 8_2	2	adj.淡水的	0
+24	helpline	Module 9_1	3	n.服务热线	0
+24	separate	Module 9_1	3	v.使分开	1
+24	explain	Module 9_1	3	vt.解释	1
+24	mention	Module 9_1	3	vt.提及	1
+24	refuse	Module 9_1	3	vt.拒绝	1
+24	treat	Module 9_1	3	v.对待	1
+24	herself	Module 9_1	3	pron.她自己	1
+24	whether	Module 9_1	3	conj.是否	1
+24	lonely	Module 9_1	3	adj.孤独的	1
+25	regret	Module 9_2	3	n.懊悔	1
+25	patient	Module 9_2	3	adj.有耐心的	1
+25	introduce	Module 9_2	3	vt.介绍	1
+25	encourage	Module 9_2	3	v.鼓励	1
+25	join in	Module 9_2	3	参加	1
+25	no problem	Module 9_2	3	没什么	1
+25	silence	Module 9_2	3	n.寂静	1
+25	in silence	Module 9_2	3	安静地	1
+25	pass	Module 9_2	3	vt.经过	1
+26	bright	Module 9_3	3	adj.明亮的	1
+26	treasure	Module 9_3	3	n.珍宝	1
+26	day by day	Module 9_3	3	一天天地	1
+26	trust	Module 9_3	3	vi.信任	1
+26	include	Module 9_3	3	v.包括	1
+26	circle	Module 9_3	3	n.圈子	1
+26	stick	Module 9_3	3	vt.粘	1
+26	glue	Module 9_3	3	n.胶水	1
+26	suggestion	Module 9_3	3	n.提议	1
+27	director	Module 10_1	2	n.导演	1
+27	show	Module 10_1	2	v.引领	1
+27	around	Module 10_1	2	adv.到处	1
+27	show sb around	Module 10_1	2	带某人参观	1
+27	on air	Module 10_1	2	播出	1
+27	avoid	Module 10_1	2	v.避免	1
+27	background	Module 10_1	2	n.背景	1
+27	national	Module 10_1	2	adj.国家的	1
+27	international	Module 10_1	2	adj.国际的	1
+28	presenter	Module 10_2	2	n.主持人	0
+28	interview	Module 10_2	2	vi.&n.采访	1
+28	seem	Module 10_2	2	vi.看来	1
+28	listener	Module 10_2	2	n.听众	1
+28	in person	Module 10_2	2	亲自	1
+28	part-time	Module 10_2	2	adj.兼职的	1
+28	article	Module 10_2	2	n.文章	1
+28	studio	Module 10_2	2	n.录音室	1
+28	purpose	Module 10_2	2	n.意图	1

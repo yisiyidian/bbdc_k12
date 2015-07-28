@@ -1,0 +1,286 @@
+1	achievement	Unit 1_1	6	n.成就	1
+1	Quaker	Unit 1_1	6	n.教友派信徒	0
+1	welfare	Unit 1_1	6	n.福利	1
+2	project	Unit 1_2	6	n.项目	1
+2	institute	Unit 1_2	6	n.学院	1
+2	China Welfare Institute	Unit 1_2	6	福利基金会	0
+2	specialist	Unit 1_2	6	n.专家	1
+2	specialize	Unit 1_2	6	vi.专攻	0
+2	chimp	Unit 1_2	6	n.黑猩猩	0
+2	connection	Unit 1_2	6	n.连接	1
+2	human being	Unit 1_2	6	人类	1
+2	campaign	Unit 1_2	6	n.运动	1
+2	landmine	Unit 1_2	6	n.地雷	0
+3	organization	Unit 1_3	6	n.组织	1
+3	behave	Unit 1_3	6	vt.举动	1
+3	behaviour	Unit 1_3	6	n.行为	1
+3	shade	Unit 1_3	6	n.荫	1
+3	move off	Unit 1_3	6	离开	1
+3	worthwhile	Unit 1_3	6	adj.值得的	1
+3	nest	Unit 1_3	6	n.巢	1
+3	bond	Unit 1_3	6	n.联系	1
+3	observe	Unit 1_3	6	v.观察（动词）	1
+3	observation	Unit 1_3	6	n.观察（名词）	1
+4	childhood	Unit 1_4	6	n.童年	1
+4	outspoken	Unit 1_4	6	adj.直言的	1
+4	respect	Unit 1_4	6	vt.尊敬	1
+4	argue	Unit 1_4	6	vt.讨论	1
+4	argument	Unit 1_4	6	n.争论	1
+4	entertainment	Unit 1_4	6	n.款待	1
+4	lead a ... life	Unit 1_4	6	过...的生活	1
+4	crowd	Unit 1_4	6	n.人群	1
+4	crowd in	Unit 1_4	6	涌上心头	1
+4	inspire	Unit 1_4	6	vt.鼓舞	1
+5	inspiration	Unit 1_5	6	n.灵感	0
+5	support	Unit 1_5	6	n.支持	1
+5	look down upon	Unit 1_5	6	蔑视	1
+5	refer	Unit 1_5	6	vi.谈到	1
+5	refer to	Unit 1_5	6	查阅	1
+5	audience	Unit 1_5	6	n.观众	1
+5	by chance	Unit 1_5	6	碰巧	1
+5	come across	Unit 1_5	6	遇见	1
+5	career	Unit 1_5	6	n.事业	0
+5	rate	Unit 1_5	6	n.比率	1
+6	sickness	Unit 1_6	6	n.疾病	1
+6	intend	Unit 1_6	6	v.计划	1
+6	emergency	Unit 1_6	6	n.突发事件	1
+6	generation	Unit 1_6	6	n.一代	1
+6	determination	Unit 1_6	6	n.决心	0
+6	kindness	Unit 1_6	6	n.仁慈	1
+6	considerate	Unit 1_6	6	adj.考虑周到的	1
+6	consideration	Unit 1_6	6	n.考虑	1
+6	deliver	Unit 1_6	6	vt.递送；接生	1
+6	carry on	Unit 1_6	6	继续	1
+6	modest	Unit 1_6	6	adj.谦虚的	1
+7	statistic	Unit 2_1	6	n.数据	1
+7	sunburnt	Unit 2_1	6	adj.晒黑的	1
+7	struggle	Unit 2_1	6	v.斗争	1
+7	decade	Unit 2_1	6	n.十年	1
+7	super	Unit 2_1	6	adj.超级的	1
+7	hybrid	Unit 2_1	6	n.杂交的	0
+7	output	Unit 2_1	6	n.产量	1
+7	strain	Unit 2_1	6	n.品种	0
+7	crop	Unit 2_1	6	n.庄稼	1
+7	hunger	Unit 2_1	6	n.饥饿	1
+8	disturbing	Unit 2_2	6	adj.引起烦恼的	1
+8	expand	Unit 2_2	6	vt.使变大	1
+8	circulate	Unit 2_2	6	vi.循环	1
+8	Vietnam	Unit 2_2	6	n.越南	1
+8	thanks to	Unit 2_2	6	幸亏	1
+8	battle	Unit 2_2	6	n.战役	1
+8	rid	Unit 2_2	6	vt.摆脱	1
+8	rid ... of	Unit 2_2	6	摆脱	1
+8	be satisfied with	Unit 2_2	6	对...满意	1
+8	freedom	Unit 2_2	6	n.自由	1
+9	would rather	Unit 2_3	6	宁愿	1
+9	therefore	Unit 2_3	6	adv.因为	1
+9	equip	Unit 2_3	6	v.配备	1
+9	sorghum	Unit 2_3	6	n.高粱	0
+9	grain	Unit 2_3	6	n.谷物	1
+9	peanut	Unit 2_3	6	n.花生	0
+9	export	Unit 2_3	6	vt.输出	1
+9	nationality	Unit 2_3	6	n.国籍	1
+9	occupation	Unit 2_3	6	n.职业；占领	1
+9	personality	Unit 2_3	6	n.性格	0
+10	confuse	Unit 2_4	6	vt.使迷惑	1
+10	regret	Unit 2_4	6	n.&v.遗憾	1
+10	chemical	Unit 2_4	6	adj.化学的	1
+10	organic	Unit 2_4	6	adj.有机的	0
+10	fertile	Unit 2_4	6	adj.肥沃的	0
+10	fertilizer	Unit 2_4	6	n.肥料	0
+10	production	Unit 2_4	6	n.生产	1
+10	bacteria	Unit 2_4	6	n.细菌	1
+10	pest	Unit 2_4	6	n.害虫	1
+11	build up	Unit 2_5	6	逐渐增强；建立	1
+11	lead to	Unit 2_5	6	导致	1
+11	nutrition	Unit 2_5	6	n.营养滋养	1
+11	mineral	Unit 2_5	6	adj.矿物	1
+11	discovery	Unit 2_5	6	n.发现	1
+11	focus	Unit 2_5	6	v.焦点	1
+11	focus on	Unit 2_5	6	集中于	1
+11	soil	Unit 2_5	6	n.土壤	1
+11	reduce	Unit 2_5	6	vt.减少	1
+12	keep ... free from	Unit 2_6	6	使...免受	1
+12	soybean	Unit 2_6	6	n.大豆	0
+12	root	Unit 2_6	6	n.根	1
+12	skim	Unit 2_6	6	vt.浏览	1
+12	underline	Unit 2_6	6	v.画底线标出	1
+12	summary	Unit 2_6	6	n.总结	1
+12	comment	Unit 2_6	6	n.评论	1
+12	producer	Unit 2_6	6	n.生产者	0
+12	industrial	Unit 2_6	6	adj.工业的	0
+13	humour	Unit 3_1	7	n.幽默	1
+13	punchline	Unit 3_1	7	n.妙语	0
+13	verbal	Unit 3_1	7	adj.口头的	0
+13	nonverbal	Unit 3_1	7	adj.不用语言的	0
+13	mime	Unit 3_1	7	n.哑剧	0
+13	comedy	Unit 3_1	7	n.喜剧	1
+13	up to now	Unit 3_1	7	直到现在	1
+13	brighten	Unit 3_1	7	vt.使更愉快	0
+13	depressed	Unit 3_1	7	adj.忧愁的	0
+13	content	Unit 3_1	7	n.满足的	1
+14	be content with	Unit 3_2	7	对...满足	1
+14	performer	Unit 3_2	7	n.表演者	1
+14	astonish	Unit 3_2	7	vt.使惊诧	1
+14	astonishing	Unit 3_2	7	adj.令人惊讶的	1
+14	fortunate	Unit 3_2	7	adj.幸运的	1
+14	unfortunately	Unit 3_2	7	adv.不幸地	1
+14	badly off	Unit 3_2	7	穷的	1
+14	teens	Unit 3_2	7	n.十几岁	0
+14	ordinary	Unit 3_2	7	adj.平常的	1
+14	bored	Unit 3_2	7	adj.厌烦的	1
+15	subtle	Unit 3_3	7	adj.微妙的	0
+15	entertain	Unit 3_3	7	vt.使欢乐	1
+15	entertaining	Unit 3_3	7	adj.令人愉快的	0
+15	charming	Unit 3_3	7	adj.迷人的	0
+15	tramp	Unit 3_3	7	n.流浪汉	0
+15	throughout	Unit 3_3	7	adv.遍及	1
+15	homeless	Unit 3_3	7	adj.无家的	1
+15	moustache	Unit 3_3	7	n.小胡子	1
+15	worn	Unit 3_3	7	adj.用旧的	1
+15	worn-out	Unit 3_3	7	adj.磨破的	0
+16	stiffly	Unit 3_4	7	adv.僵硬地	0
+16	failure	Unit 3_4	7	n.失败	1
+16	optimism	Unit 3_4	7	n.乐观	0
+16	overcome	Unit 3_4	7	vt.克服	1
+16	underdog	Unit 3_4	7	n.失败者	0
+16	snowstorm	Unit 3_4	7	n.暴风雪	0
+16	leather	Unit 3_4	7	adj.皮革	1
+16	pick out	Unit 3_4	7	挑出	1
+16	lace	Unit 3_4	7	n.饰带	0
+16	cut off	Unit 3_4	7	切断	1
+17	chew	Unit 3_5	7	vt.嚼碎	1
+17	mouthful	Unit 3_5	7	n.一口	0
+17	enjoyment	Unit 3_5	7	n.享受	0
+17	convince	Unit 3_5	7	vt.使信服	1
+17	convincing	Unit 3_5	7	adj.令人信服的	1
+17	direct	Unit 3_5	7	adj.导演	1
+17	star in	Unit 3_5	7	担任主角	1
+17	Oscar	Unit 3_5	7	n.奥斯卡	0
+17	outstanding	Unit 3_5	7	adj.突出的	1
+17	Switzerland	Unit 3_5	7	n.瑞士	1
+18	confidence	Unit 3_6	7	n.信心	0
+18	costume	Unit 3_6	7	n.服装	0
+18	gesture	Unit 3_6	7	n.姿态	1
+18	particular	Unit 3_6	7	n.特殊的	1
+18	particularly	Unit 3_6	7	adv.特殊地	1
+18	occasion	Unit 3_6	7	n.时机；场合	1
+18	budget	Unit 3_6	7	n.预算	1
+18	actress	Unit 3_6	7	n.女演员	1
+18	slide	Unit 3_6	7	n.滑动	1
+18	amuse	Unit 3_6	7	v.使发笑	1
+18	amusing	Unit 3_6	7	adj.好笑的	0
+19	pancake	Unit 3_7	7	n.烙饼	1
+19	explanation	Unit 3_7	7	n.解释	1
+19	detective	Unit 3_7	7	adj.侦探	1
+19	mountainous	Unit 3_7	7	adj.多山的	1
+19	whisper	Unit 3_7	7	vt.耳语	1
+19	vast	Unit 3_7	7	adj.巨大的	1
+19	rhythm	Unit 3_7	7	n.节奏	0
+19	mess	Unit 3_7	7	n.脏或乱	1
+19	react	Unit 3_7	7	vt.作出反应	1
+19	porridge	Unit 3_7	7	n.粥	1
+19	drunk	Unit 3_7	7	adj.醉的	1
+20	statement	Unit 4_1	5	n.陈述	1
+20	greet	Unit 4_1	5	vt.迎接	1
+20	represent	Unit 4_1	5	vt.代表	1
+20	association	Unit 4_1	5	n.社团；联系	1
+20	dormitory	Unit 4_1	5	n.宿舍	1
+20	canteen	Unit 4_1	5	n.食堂	1
+20	flight	Unit 4_1	5	n.飞行	1
+20	curious	Unit 4_1	5	adj.好奇的	1
+20	curiously	Unit 4_1	5	adv.好奇地	1
+20	Colombia	Unit 4_1	5	n.哥伦比亚	1
+21	approach	Unit 4_2	5	v.接近	1
+21	cheek	Unit 4_2	5	n.面颊	1
+21	defend	Unit 4_2	5	vt.保护	1
+21	defend against	Unit 4_2	5	保卫...免受	1
+21	defence	Unit 4_2	5	n.防御	1
+21	major	Unit 4_2	5	adj.主要的	1
+21	misunderstand	Unit 4_2	5	v.误解（动词）	1
+21	misunderstanding	Unit 4_2	5	n.误解（名词）	1
+21	dash	Unit 4_2	5	n.猛冲	1
+21	adult	Unit 4_2	5	adj.&n.成人	1
+22	simply	Unit 4_3	5	adv.简单地	0
+22	Muslim	Unit 4_3	5	n.穆斯林	0
+22	spoken	Unit 4_3	5	adj.口语的	1
+22	unspoken	Unit 4_3	5	adj.未说出口的	1
+22	posture	Unit 4_3	5	n.姿态	0
+22	Spain	Unit 4_3	5	n.西班牙	1
+22	Italy	Unit 4_3	5	n.意大利	1
+22	likely	Unit 4_3	5	adj.可能的	1
+22	be likely to do	Unit 4_3	5	很可能...	1
+22	in general	Unit 4_3	5	总的来说	1
+23	crossroads	Unit 4_4	5	n.十字路口	1
+23	employee	Unit 4_4	5	n.雇员	0
+23	frown	Unit 4_4	5	n.皱眉	0
+23	misread	Unit 4_4	5	v.读错	0
+23	facial	Unit 4_4	5	adj.面部的	1
+23	function	Unit 4_4	5	n.作用	1
+23	ease	Unit 4_4	5	n.安逸	1
+23	at ease	Unit 4_4	5	舒适	1
+23	truly	Unit 4_4	5	adv.真实地	1
+23	false	Unit 4_4	5	adj.错误的	1
+24	anger	Unit 4_5	5	n.怒气	1
+24	lose face	Unit 4_5	5	丢脸	1
+24	turn one's back to	Unit 4_5	5	背对	1
+24	fist	Unit 4_5	5	n.拳头	1
+24	yawn	Unit 4_5	5	n.打呵欠	1
+24	respectful	Unit 4_5	5	adj.恭敬的	0
+24	subjective	Unit 4_5	5	adj.主观的	1
+24	hug	Unit 4_5	5	v.拥抱	1
+24	rank	Unit 4_5	5	n.等级	1
+24	cassette	Unit 4_5	5	n.磁带	1
+25	theme	Unit 5_1	5	n.主题	1
+25	central	Unit 5_1	5	adj.中心的	1
+25	Central Park	Unit 5_1	5	中央公园	0
+25	various	Unit 5_1	5	adj.不同的	1
+25	cartoon	Unit 5_1	5	n.漫画	1
+25	be famous for	Unit 5_1	5	以...闻名	1
+25	roller coaster	Unit 5_1	5	过山车	0
+25	whichever	Unit 5_1	5	adj.无论哪一个	1
+25	pirate	Unit 5_1	5	n.海盗	0
+25	fairy tale	Unit 5_1	5	神话故事	0
+25	fantasy	Unit 5_1	5	n.幻想	1
+26	amusement	Unit 5_2	5	n.消遣	1
+26	swing	Unit 5_2	5	n.秋千	1
+26	attraction	Unit 5_2	5	n.吸引力	1
+26	no wonder	Unit 5_2	5	难怪	1
+26	tourism	Unit 5_2	5	n.旅游业	1
+26	wherever	Unit 5_2	5	adv.无论何处	1
+26	unique	Unit 5_2	5	adj.仅有的	1
+26	carpenter	Unit 5_2	5	n.木匠	1
+26	craftsman	Unit 5_2	5	n.匠人	0
+26	engine	Unit 5_2	5	n.引擎	1
+26	bald	Unit 5_2	5	adj.秃头的	0
+27	preserve	Unit 5_3	5	vt.保存	1
+27	length	Unit 5_3	5	n.长度	1
+27	deed	Unit 5_3	5	n.行动	1
+27	knight	Unit 5_3	5	n.骑士	0
+27	be modeled after	Unit 5_3	5	根据...模仿	1
+27	sword	Unit 5_3	5	n.剑	1
+27	joust	Unit 5_3	5	n.骑马斗矛	0
+27	tournament	Unit 5_3	5	n.锦标赛	1
+27	settler	Unit 5_3	5	n.移民	1
+27	athletic	Unit 5_3	5	adj.运动的	1
+27	translator	Unit 5_3	5	n.译员	1
+28	minority	Unit 5_4	5	n.少数	1
+28	cloth	Unit 5_4	5	n.布	1
+28	jungle	Unit 5_4	5	n.丛林	1
+28	diver	Unit 5_4	5	n.潜水员	0
+28	creature	Unit 5_4	5	n.生物	1
+28	sunlight	Unit 5_4	5	n.阳光	1
+28	T-Rex	Unit 5_4	5	n.霸王龙	0
+28	advance	Unit 5_4	5	n.前进	1
+28	in advance	Unit 5_4	5	提前	1
+28	advanced	Unit 5_4	5	adj.高级的	1
+29	brand	Unit 5_5	5	n.商标	1
+29	get close to	Unit 5_5	5	接近	1
+29	come to life	Unit 5_5	5	活跃起来	1
+29	outing	Unit 5_5	5	n.外出	1
+29	admission	Unit 5_5	5	n.允许进入	1
+29	shuttle	Unit 5_5	5	n.往返汽车	1
+29	freeway	Unit 5_5	5	n.高速公路	1
+29	souvenir	Unit 5_5	5	n.纪念品	1
+29	sneaker	Unit 5_5	5	n.运动鞋	1
+29	brochure	Unit 5_5	5	n.小册子	1

@@ -1,0 +1,495 @@
+1	daily	Unit1_1	9	adj.日常的	1
+1	routine	Unit1_1	9	n.常规	1
+1	tooth	Unit1_1	9	n.牙齿	1
+2	get up	Unit1_2	9	起床	1
+2	go to bed	Unit1_2	9	上床睡觉	1
+2	sleep	Unit1_2	9	v.睡觉	1
+2	go to school	Unit1_2	9	去上学	1
+2	make one's bed	Unit1_2	9	整理床铺	1
+2	take a shower	Unit1_2	9	洗淋浴	1
+2	wash	Unit1_2	9	v.洗	1
+2	face	Unit1_2	9	n.脸	1
+2	after-school	Unit1_2	9	adj.课外的	1
+2	activity	Unit1_2	9	n.活动	1
+3	drum	Unit1_3	9	n.鼓	0
+3	never	Unit1_3	9	adv.从不	1
+3	alone	Unit1_3	9	adv.单独	1
+3	seldom	Unit1_3	9	adv.很少	1
+3	a lot of	Unit1_3	9	许多的	1
+3	always	Unit1_3	9	adv.总是	1
+3	news	Unit1_3	9	n.新闻	1
+3	sometimes	Unit1_3	9	adv.有时	1
+3	finish	Unit1_3	9	vi.完成	1
+3	early	Unit1_3	9	adv.早期的	1
+4	match	Unit1_4	9	n.比赛	1
+4	note	Unit1_4	9	n.笔记	1
+4	cinema	Unit1_4	9	n.电影院	1
+4	important	Unit1_4	9	adj.重要的	1
+4	fire	Unit1_4	9	n.火	1
+4	firefighter	Unit1_4	9	n.消防队员	1
+4	dangerous	Unit1_4	9	adj.危险的	1
+4	difficult	Unit1_4	9	adj.困难的	1
+4	easy	Unit1_4	9	adj.容易的	1
+4	interesting	Unit1_4	9	adj.有趣的	1
+5	safe	Unit1_5	9	adj.安全的	1
+5	training	Unit1_5	9	n.训练	1
+5	later	Unit1_5	9	adj.后来	1
+5	eat	Unit1_5	9	vt.吃	1
+5	because	Unit1_5	9	conj.因为	1
+5	not at all	Unit1_5	9	一点也不...	1
+5	rest	Unit1_5	9	vt.休息	1
+5	practise	Unit1_5	9	v.练习	1
+5	drive	Unit1_5	9	v.驾驶	1
+5	firefighting	Unit1_5	9	n.消防	1
+6	communicate	Unit1_6	9	v.交流	1
+6	free	Unit1_6	9	adj.随心所欲的	1
+6	if	Unit1_6	9	conj.如果	1
+6	or	Unit1_6	9	conj.或者	1
+6	someone	Unit1_6	9	pron.某人	1
+6	have to	Unit1_6	9	不得不	1
+6	try	Unit1_6	9	n.&v.尝试	1
+6	best	Unit1_6	9	adj.最好地	1
+6	try one's best	Unit1_6	9	尽某人最大努力	1
+7	keep	Unit1_7	9	vt.保持	1
+7	false	Unit1_7	9	adj.不正确的	0
+7	safety	Unit1_7	9	n.安全	1
+7	bicycle	Unit1_7	9	n.自行车	1
+7	walk	Unit1_7	9	vi.步行	1
+7	storm	Unit1_7	9	n.暴风雨	1
+7	travel	Unit1_7	9	n.旅行	1
+7	online	Unit1_7	9	adj.&adv.在线的	1
+7	during	Unit1_7	9	prep.在...期间	1
+8	bad	Unit1_8	9	adj.坏的	1
+8	lightning	Unit1_8	9	n.闪电	0
+8	stay	Unit1_8	9	n.&v.停留	1
+8	phone	Unit1_8	9	n.打电话	1
+8	kid	Unit1_8	9	n.小孩	1
+8	mean	Unit1_8	9	vt.意思是	1
+8	point	Unit1_8	9	n.观点	1
+8	have a point	Unit1_8	9	有道理	1
+8	address	Unit1_8	9	n.地址	1
+9	smoke	Unit1_9	9	v.&n.抽烟	1
+9	bath	Unit1_9	9	n.洗澡	0
+9	away	Unit1_9	9	adv.离开	1
+9	stay away from	Unit1_9	9	离开	1
+9	minute	Unit1_9	9	n.分钟	1
+9	need	Unit1_9	9	v.需要	1
+9	more	Unit1_9	9	adv.更多	1
+9	star	Unit1_9	9	n.星	1
+9	dress	Unit1_9	9	n.穿衣服	1
+10	violin	Unit2_1	6	n.小提琴	1
+10	chore	Unit2_1	6	n.家务活	0
+10	clean	Unit2_1	6	adj.干净的	1
+10	dust	Unit2_1	6	n.灰尘	0
+10	feed	Unit2_1	6	vt.喂养	1
+10	sweep	Unit2_1	6	vt.清扫	0
+10	floor	Unit2_1	6	n.地板	1
+10	rubbish	Unit2_1	6	n.垃圾	1
+10	water	Unit2_1	6	n.水	1
+10	busy	Unit2_1	6	adj.忙碌的	1
+11	cup	Unit2_2	6	n.杯子	1
+11	anything	Unit2_2	6	pron.任何事物	1
+11	worry	Unit2_2	6	n.&v.担心	1
+11	in a minute	Unit2_2	6	立即	1
+11	ring	Unit2_2	6	n.&v.给...打电话	1
+11	knock	Unit2_2	6	n.&v.敲	1
+11	candle	Unit2_2	6	n.蜡烛	1
+11	wonderful	Unit2_2	6	adj.精彩的	1
+11	dish	Unit2_2	6	n.盘	1
+11	nose	Unit2_2	6	n.鼻子	1
+12	communication	Unit2_3	6	n.交流	1
+12	tool	Unit2_3	6	n.工具	1
+12	instant	Unit2_3	6	adj.立即的	0
+12	message	Unit2_3	6	n.信息	1
+12	instant message	Unit2_3	6	即时信息	1
+12	text	Unit2_3	6	n.文本	1
+12	send	Unit2_3	6	vt.发送	1
+12	receive	Unit2_3	6	v.接到	1
+12	while	Unit2_3	6	conj.&n.在...期间	1
+12	for a while	Unit2_3	6	一会儿	1
+13	hey	Unit2_4	6	int.嘿	0
+13	slow	Unit2_4	6	adj.缓慢的	1
+13	just	Unit2_4	6	adv.正好	1
+13	website	Unit2_4	6	n.网站	1
+13	bank	Unit2_4	6	n.银行	1
+13	bus stop	Unit2_4	6	n.公共汽车站	1
+13	museum	Unit2_4	6	n.博物馆	1
+13	police	Unit2_4	6	n.警方	1
+13	station	Unit2_4	6	n.站	1
+13	police station	Unit2_4	6	n.警察局	1
+14	post	Unit2_5	6	n.邮政	1
+14	office	Unit2_5	6	n.办公室	1
+14	post office	Unit2_5	6	n.邮局	1
+14	train	Unit2_5	6	n.火车	1
+14	underground	Unit2_5	6	n.地铁	1
+14	way	Unit2_5	6	n.路	1
+14	excuse	Unit2_5	6	n.原谅	1
+14	cross	Unit2_5	6	v.穿越	1
+14	street	Unit2_5	6	n.大街	1
+15	road	Unit2_6	6	n.路	1
+15	corner	Unit2_6	6	n.角	1
+15	miss	Unit2_6	6	v.错过	1
+15	opposite	Unit2_6	6	adj.对面的	1
+15	across	Unit2_6	6	prep.横过	1
+15	coffee	Unit2_6	6	n.咖啡	1
+15	town	Unit2_6	6	n.镇	1
+15	square	Unit2_6	6	n.广场	1
+15	gym	Unit2_6	6	n.体育馆	0
+16	drink	Unit3_1	8	n.喝	1
+16	banana	Unit3_1	8	n.香蕉	1
+16	beef	Unit3_1	8	n.牛肉	1
+16	carrot	Unit3_1	8	n.胡萝卜	1
+16	chicken	Unit3_1	8	n.鸡肉	1
+16	grape	Unit3_1	8	n.葡萄	0
+16	ham	Unit3_1	8	n.火腿	0
+16	milk	Unit3_1	8	n.牛奶	1
+16	pear	Unit3_1	8	n.梨	1
+16	potato	Unit3_1	8	n.土豆	1
+17	tomato	Unit3_2	8	n.西红柿	1
+17	watermelon	Unit3_2	8	n.西瓜	1
+17	fruit	Unit3_2	8	n.水果	1
+17	vegetable	Unit3_2	8	n.蔬菜	1
+17	meat	Unit3_2	8	n.肉	1
+17	price	Unit3_2	8	n.价格	1
+17	weight	Unit3_2	8	n.重量	1
+17	cent	Unit3_2	8	n.分	1
+17	dollar	Unit3_2	8	n.美元	1
+17	pound	Unit3_2	8	n.英镑	1
+18	kilo	Unit3_3	8	n.千克	1
+18	bill	Unit3_3	8	n.账单	1
+18	change	Unit3_3	8	v.&n.改变	1
+18	south	Unit3_3	8	n.&adj.南方	1
+18	market	Unit3_3	8	n.市场	1
+18	unit	Unit3_3	8	n.单元	1
+18	unit price	Unit3_3	8	n.单价	1
+18	total	Unit3_3	8	adj.全部的	1
+18	fresh	Unit3_3	8	adj.新鲜的	1
+18	customer	Unit3_3	8	n.顾客	1
+19	money	Unit3_4	8	n.钱	1
+19	cost	Unit3_4	8	v.&n.费用	1
+19	any	Unit3_4	8	adj.任何的	1
+19	wallet	Unit3_4	8	n.钱包	1
+19	restaurant	Unit3_4	8	n.餐厅	1
+19	menu	Unit3_4	8	n.菜单	1
+19	item	Unit3_4	8	n.物品	0
+19	hamburger	Unit3_4	8	n.汉堡包	1
+19	hot dog	Unit3_4	8	n.热狗	1
+19	ice cream	Unit3_4	8	n.冰激凌	1
+20	salad	Unit3_5	8	n.沙拉	1
+20	sandwich	Unit3_5	8	n.三明治	1
+20	soup	Unit3_5	8	n.汤	1
+20	tea	Unit3_5	8	n.茶	1
+20	chocolate	Unit3_5	8	n.巧克力	1
+20	healthy	Unit3_5	8	adj.健康的	1
+20	may	Unit3_5	8	aux.可以	1
+20	order	Unit3_5	8	n.&v.顺序	1
+20	would	Unit3_5	8	aux.打算	1
+20	sir	Unit3_5	8	n.先生	1
+21	piece	Unit3_6	8	n.一片	1
+21	bowl	Unit3_6	8	n.一碗	1
+21	cone	Unit3_6	8	n.圆锥体	0
+21	bread	Unit3_6	8	n.面包	1
+21	butter	Unit3_6	8	n.黄油	0
+21	cheese	Unit3_6	8	n.奶酪	0
+21	cookie	Unit3_6	8	n.曲奇饼	1
+21	egg	Unit3_6	8	n.蛋	1
+21	noodle	Unit3_6	8	n.面条	1
+21	pancake	Unit3_6	8	n.烙饼	1
+22	rice	Unit3_7	8	n.米饭	1
+22	salt	Unit3_7	8	n.盐	1
+22	sugar	Unit3_7	8	n.糖	1
+22	thought	Unit3_7	8	n.想法	1
+22	food for thought	Unit3_7	8	引人深思的想法	1
+22	top	Unit3_7	8	n.顶端	1
+22	secret	Unit3_7	8	n.秘密	1
+22	kind	Unit3_7	8	adj.种类	1
+22	swimmer	Unit3_7	8	n.游泳者	1
+22	meal	Unit3_7	8	n.一顿饭	1
+23	different	Unit3_8	8	adj.不同的	1
+23	heavy	Unit3_8	8	adj.重的	1
+23	person	Unit3_8	8	n.人	1
+23	than	Unit3_8	8	conj.&prep.比	1
+23	snack	Unit3_8	8	n.小吃	0
+23	junk	Unit3_8	8	n.无价值的东西	0
+23	junk food	Unit3_8	8	垃圾食品	0
+23	report	Unit3_8	8	vt.报告	1
+23	most	Unit3_8	8	adv.大多数	1
+23	however	Unit3_8	8	adv.然而	1
+23	group	Unit3_8	8	n.组	1
+24	season	Unit4_1	10	n.季节	1
+24	weather	Unit4_1	10	n.天气	1
+24	autumn	Unit4_1	10	n.秋天	1
+24	spring	Unit4_1	10	n.春天	1
+24	summer	Unit4_1	10	n.夏天	1
+24	winter	Unit4_1	10	n.冬天	1
+24	cloudy	Unit4_1	10	adj.多云的	1
+24	cold	Unit4_1	10	adj.寒冷的	1
+24	rainy	Unit4_1	10	adj.下雨的	1
+24	snowy	Unit4_1	10	adj.下雪的	1
+25	sunny	Unit4_2	10	adj.晴朗的	1
+25	warm	Unit4_2	10	adj.温暖的	1
+25	windy	Unit4_2	10	adj.有风的	1
+25	month	Unit4_2	10	n.月份	1
+25	January	Unit4_2	10	n.一月	1
+25	February	Unit4_2	10	n.二月	1
+25	march	Unit4_2	10	vi.三月	1
+25	April	Unit4_2	10	n.四月	1
+25	may	Unit4_2	10	n.五月	1
+25	June	Unit4_2	10	n.六月	1
+26	August	Unit4_3	10	n.八月	1
+26	September	Unit4_3	10	n.九月	1
+26	October	Unit4_3	10	n.十月	1
+26	November	Unit4_3	10	n.十一月	1
+26	December	Unit4_3	10	n.十二月	1
+26	wear	Unit4_3	10	vt.穿	1
+26	overcoat	Unit4_3	10	n.长大衣	1
+26	glove	Unit4_3	10	n.手套	1
+26	scarf	Unit4_3	10	n.围巾	1
+26	snow	Unit4_3	10	n.雪	1
+27	tourist	Unit4_4	10	n.游客	1
+27	fly	Unit4_4	10	v.&n.飞行	1
+27	hard	Unit4_4	10	adj.&adv.艰难地	1
+27	T-shirt	Unit4_4	10	n.T恤衫	1
+27	shorts	Unit4_4	10	n.短裤	1
+27	skirt	Unit4_4	10	n.女裙	1
+27	palace	Unit4_4	10	n.王宫	1
+27	remember	Unit4_4	10	v.记得	1
+27	dry	Unit4_4	10	adj.&v.变干	1
+27	spend	Unit4_4	10	v.花费	1
+28	leaf	Unit4_5	10	n.叶子	1
+28	will	Unit4_5	10	aux.愿	1
+28	make sure	Unit4_5	10	确保	1
+28	trainer	Unit4_5	10	n.运动鞋	0
+28	comfortable	Unit4_5	10	adj.舒适的	1
+28	colourful	Unit4_5	10	adj.丰富多彩的	1
+28	around	Unit4_5	10	prep.围绕	1
+28	cloud	Unit4_5	10	n.云	1
+28	sun	Unit4_5	10	n.太阳	1
+28	wind	Unit4_5	10	n.风	1
+29	tomorrow	Unit4_6	10	adv.&n.明天	1
+29	sightseeing	Unit4_6	10	n.观光	0
+29	beach	Unit4_6	10	n.海滩	1
+29	visitor	Unit4_6	10	n.来访者	1
+29	holiday	Unit4_6	10	n.假期	1
+29	camp	Unit4_6	10	n.营地	1
+29	tour	Unit4_6	10	n.旅行	1
+29	learn	Unit4_6	10	vt.学习	1
+29	abroad	Unit4_6	10	adj.在国外	1
+30	eighth	Unit4_7	10	n.第八	1
+30	second	Unit4_7	10	n.第二	1
+30	fifth	Unit4_7	10	n.&adj.第五	1
+30	ninth	Unit4_7	10	adj.&n.第九	1
+30	guess	Unit4_7	10	n.&v.猜测	1
+30	exciting	Unit4_7	10	adj.令人激动的	1
+30	seventh	Unit4_7	10	n.&adj.第七	1
+30	beautiful	Unit4_7	10	adj.美丽的	1
+30	mountain	Unit4_7	10	n.高山	1
+31	clear	Unit4_8	10	adj.清楚的	1
+31	last	Unit4_8	10	adj.最近的	1
+31	trip	Unit4_8	10	n.旅行	1
+31	sea	Unit4_8	10	n.海	1
+31	penfriend	Unit4_8	10	n.笔友	1
+31	nest	Unit4_8	10	n.鸟巢	0
+31	tonight	Unit4_8	10	n.今晚	1
+31	rock	Unit4_8	10	n.岩石	1
+31	concert	Unit4_8	10	n.音乐会	1
+32	postcard	Unit4_9	10	n.明信片	1
+32	project	Unit4_9	10	n.项目	1
+32	party	Unit4_9	10	n.聚会	1
+32	example	Unit4_9	10	n.例子	1
+32	plan	Unit4_9	10	n.计划	1
+32	flower	Unit4_9	10	n.花	1
+32	village	Unit4_9	10	n.村庄	1
+32	fairytale	Unit4_9	10	n.童话	0
+32	enjoy	Unit4_9	10	vt.享受	1
+33	stone	Unit4_10	10	n.石头	1
+33	cave	Unit4_10	10	n.洞穴	0
+33	hiking	Unit4_10	10	n.远足	0
+33	island	Unit4_10	10	n.岛	1
+33	sand	Unit4_10	10	n.沙	1
+33	reason	Unit4_10	10	n.原因	1
+33	festival	Unit4_10	10	n.节日	1
+33	skate	Unit4_10	10	vi.&n.滑冰	1
+33	ski	Unit4_10	10	vt.滑雪	0
+34	primary	Unit5_1	10	adj.初级的	1
+34	primary school	Unit5_1	10	n.小学	1
+34	third	Unit5_1	10	adj.&n.第三	1
+34	sixth	Unit5_1	10	n.&adj.第六	1
+34	tenth	Unit5_1	10	n.&adj.第十	1
+34	cheap	Unit5_1	10	adj.便宜的	1
+34	close	Unit5_1	10	adj.&v.亲密的	1
+34	dirty	Unit5_1	10	adj.脏的	1
+34	expensive	Unit5_1	10	adj.昂贵的	1
+34	far	Unit5_1	10	adv.远的	1
+35	hometown	Unit5_2	10	n.家乡	1
+35	building	Unit5_2	10	n.建筑物	1
+35	neighbour	Unit5_2	10	n.邻居	1
+35	friendly	Unit5_2	10	adj.友好的	1
+35	still	Unit5_2	10	adj.&adv.仍然	1
+35	large	Unit5_2	10	adj.大的	1
+35	flat	Unit5_2	10	adj.公寓	0
+35	traffic	Unit5_2	10	n.交通	1
+35	either	Unit5_2	10	pron.也	1
+35	truck	Unit5_2	10	n.卡车	1
+36	yesterday	Unit5_3	10	n.昨天	1
+36	fast-food restaurant	Unit5_3	10	n.快餐店	1
+36	open	Unit5_3	10	vt.打开	1
+36	ago	Unit5_3	10	adv.以前	1
+36	centre	Unit5_3	10	n.中心	1
+36	candy	Unit5_3	10	n.糖果	1
+36	true	Unit5_3	10	adj.真正的	1
+36	feeling	Unit5_3	10	n.感觉	1
+36	afraid	Unit5_3	10	adj.害怕的	1
+36	angry	Unit5_3	10	adj.生气的	1
+37	excited	Unit5_4	10	adj.激动的	1
+37	nervous	Unit5_4	10	adj.紧张的	1
+37	sad	Unit5_4	10	adj.难过的	1
+37	story	Unit5_4	10	n.故事	1
+37	laugh	Unit5_4	10	vt.笑	1
+37	quiet	Unit5_4	10	adj.安静的	1
+37	Ms	Unit5_4	10	abbr.女士	1
+37	introduce	Unit5_4	10	vt.引见	1
+37	noisy	Unit5_4	10	adj.吵闹的	1
+37	smile	Unit5_4	10	n.微笑	1
+38	cry	Unit5_5	10	n.哭	1
+38	difference	Unit5_5	10	n.差别	1
+38	memory	Unit5_5	10	n.记忆	0
+38	loud	Unit5_5	10	adj.大声的	1
+38	forget	Unit5_5	10	vt.忘记	1
+38	another	Unit5_5	10	adj.别的	1
+38	slowly	Unit5_5	10	adv.缓慢地	1
+38	junior	Unit5_5	10	adj.初级的	0
+38	junior high school	Unit5_5	10	初级中学	1
+38	pay	Unit5_5	10	v.&n.付出	1
+39	attention	Unit5_6	10	n.注意	1
+39	pay attention	Unit5_6	10	注意	1
+39	graduate	Unit5_6	10	v.&n.毕业	0
+39	middle	Unit5_6	10	n.中间的	1
+39	anniversary	Unit5_6	10	n.周年纪念日	0
+39	writer	Unit5_6	10	n.作者	1
+39	proud	Unit5_6	10	adj.自豪的	1
+39	something	Unit5_6	10	pron.某事	1
+39	beginning	Unit5_6	10	n.开始	1
+40	at first	Unit5_7	10	起初	1
+40	test	Unit5_7	10	n.测验	1
+40	happen	Unit5_7	10	vi.发生	1
+40	trouble	Unit5_7	10	n.麻烦	1
+40	be in trouble	Unit5_7	10	处于麻烦之中	1
+40	respect	Unit5_7	10	vt.尊重	0
+40	heart	Unit5_7	10	n.心脏	1
+40	begin	Unit5_7	10	vt.开始	1
+40	hear	Unit5_7	10	vt.听见	1
+41	glad	Unit5_8	10	adj.高兴	1
+41	anyway	Unit5_8	10	adv.无论如何	1
+41	review	Unit5_8	10	vt.复习	1
+41	grade	Unit5_8	10	n.级别	1
+41	loudly	Unit5_8	10	adv.大声地	1
+41	poster	Unit5_8	10	n.海报	0
+41	buy	Unit5_8	10	vt.买	1
+41	experience	Unit5_8	10	n.经验	1
+41	speed	Unit5_8	10	n.速度	1
+42	recording	Unit5_9	10	n.录音	1
+42	understand	Unit5_9	10	v.懂	1
+42	perfect	Unit5_9	10	adj.完美的	1
+42	mistake	Unit5_9	10	n.错误	1
+42	suggestion	Unit5_9	10	n.建议	1
+42	catch	Unit5_9	10	vt.抓住	1
+42	key	Unit5_9	10	n.&adj.关键的	1
+42	main	Unit5_9	10	adj.主要的	1
+42	simple	Unit5_9	10	adj.简单的	1
+43	sentence	Unit5_10	10	n.句子	1
+43	meaning	Unit5_10	10	n.意思	1
+43	improve	Unit5_10	10	v.提高	0
+43	give up	Unit5_10	10	放弃	1
+43	general	Unit5_10	10	adj.普遍的	1
+43	quickly	Unit5_10	10	adv.迅速地	1
+43	look up	Unit5_10	10	查找	1
+43	clearly	Unit5_10	10	adv.清楚地	1
+43	follow	Unit5_10	10	vt.跟随	1
+44	animal	Unit6_1	7	n.动物	1
+44	kingdom	Unit6_1	7	n.王国	0
+44	cow	Unit6_1	7	n.奶牛	1
+44	duck	Unit6_1	7	n.鸭子	1
+44	elephant	Unit6_1	7	n.大象	1
+44	giraffe	Unit6_1	7	n.长颈鹿	1
+44	hen	Unit6_1	7	n.母鸡	1
+44	lion	Unit6_1	7	n.狮子	1
+44	monkey	Unit6_1	7	n.猴子	1
+44	panda	Unit6_1	7	n.熊猫	1
+45	penguin	Unit6_2	7	n.企鹅	0
+45	pig	Unit6_2	7	n.猪	1
+45	sheep	Unit6_2	7	n.羊	1
+45	tiger	Unit6_2	7	n.老虎	1
+45	farm	Unit6_2	7	n.农场	1
+45	wild	Unit6_2	7	adj.野生的	1
+45	rabbit	Unit6_2	7	n.兔子	1
+45	mouse	Unit6_2	7	n.老鼠	1
+45	snake	Unit6_2	7	n.蛇	1
+45	cute	Unit6_2	7	adj.可爱的	1
+46	helpful	Unit6_3	7	adj.有用的	1
+46	ugly	Unit6_3	7	adj.丑陋的	1
+46	useful	Unit6_3	7	adj.有用的	1
+46	blind	Unit6_3	7	adj.盲的	1
+46	scientist	Unit6_3	7	n.科学家	1
+46	body	Unit6_3	7	n.身体	1
+46	part	Unit6_3	7	n.部分	1
+46	ear	Unit6_3	7	n.耳朵	1
+46	eye	Unit6_3	7	n.眼睛	1
+46	head	Unit6_3	7	n.头	1
+47	neck	Unit6_4	7	n.脖子	1
+47	easily	Unit6_4	7	adv.容易地	1
+47	mile	Unit6_4	7	n.英里	1
+47	lay	Unit6_4	7	vt.下蛋	1
+47	still	Unit6_4	7	adj.静止的	1
+47	spread	Unit6_4	7	v.传播	1
+47	wide	Unit6_4	7	adj.宽的	1
+47	bend	Unit6_4	7	v.弯曲	0
+47	reach	Unit6_4	7	vt.到达	1
+47	ground	Unit6_4	7	n.地面	1
+48	fat	Unit6_5	7	adj.肥的	1
+48	horse	Unit6_5	7	n.马	1
+48	hold	Unit6_5	7	vt.抓住	1
+48	dear	Unit6_5	7	adj.亲爱的	1
+48	baby	Unit6_5	7	n.婴儿	1
+48	look after	Unit6_5	7	照顾	1
+48	even	Unit6_5	7	adv.甚至	1
+48	happily	Unit6_5	7	adv.快乐地	1
+48	grow	Unit6_5	7	vt.生长	1
+48	become	Unit6_5	7	vt.变成	1
+49	finally	Unit6_6	7	adv.最终	1
+49	few	Unit6_6	7	adj.很少	1
+49	a few	Unit6_6	7	有些	1
+49	suddenly	Unit6_6	7	adv.突然	1
+49	recognise	Unit6_6	7	v.意识到	0
+49	hurt	Unit6_6	7	vt.伤害	1
+49	hug	Unit6_6	7	v.&n.拥抱	0
+49	warmly	Unit6_6	7	adv.温暖地	1
+49	believe	Unit6_6	7	vi.相信	1
+49	leave	Unit6_6	7	v.离开	1
+50	freely	Unit6_7	7	adv.自由地	1
+50	feel	Unit6_7	7	vt.觉得	1
+50	climb	Unit6_7	7	vt.攀登	1
+50	huge	Unit6_7	7	adj.巨大的	1
+50	all the time	Unit6_7	7	一直	1
+50	parrot	Unit6_7	7	n.鹦鹉	0
+50	hungry	Unit6_7	7	adj.饥饿的	1
+50	koala	Unit6_7	7	n.考拉	0
+50	through	Unit6_7	7	prep.通过	1
+50	guide	Unit6_7	7	vt.&n.指导	1
+51	Hong Kong	Places and Names_1	2	n.香港	1
+51	London	Places and Names_1	2	n.伦敦	1
+51	UK	Places and Names_1	2	n.英国	1
+51	Arsenal	Places and Names_1	2	n.阿森纳	1
+51	Great Wall	Places and Names_1	2	n.长城	1
+51	Tian'anmen Square	Places and Names_1	2	n.天安门广场	1
+51	Summer Palace	Places and Names_1	2	n.颐和园	1
+51	Fragrant Hills Park	Places and Names_1	2	n.香山公园	1
+51	New York	Places and Names_1	2	n.纽约	1
+52	Sydney	Places and Names_2	2	n.悉尼	1
+52	Terracotta Warriors	Places and Names_2	2	n.兵马俑	1
+52	Palace Museum	Places and Names_2	2	n.故宫	1
+52	Bird's Nest	Places and Names_2	2	n.鸟巢	1
+52	Stone Forest	Places and Names_2	2	n.石林	1
+52	Heaven's Lake	Places and Names_2	2	n.天池	1
+52	Asia	Places and Names_2	2	n.亚洲	1
+52	Africa	Places and Names_2	2	n.非洲	1

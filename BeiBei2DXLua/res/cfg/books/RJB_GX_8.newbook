@@ -1,0 +1,402 @@
+1	California	Unit1_1	10	n.加利福尼亚（州）	1
+1	Californian	Unit1_1	10	n.&adj.加利福尼亚（州）人	0
+1	illustrate	Unit1_1	10	vt.说明	0
+2	distinct	Unit1_2	10	adj.清晰的	0
+2	distinction	Unit1_2	10	n.差别；区分；卓著	1
+2	immigrant	Unit1_2	10	n.移民	0
+2	live on	Unit1_2	10	继续存在	1
+2	strait	Unit1_2	10	n.海峡	1
+2	Bering	Unit1_2	10	白令海峡	0
+2	Arctic	Unit1_2	10	adj.北极的	1
+2	the  Arctic	Unit1_2	10	北极	1
+2	means	Unit1_2	10	n.手段	1
+2	by means of	Unit1_2	10	用......办法	1
+3	prehistoric	Unit1_3	10	adj.史前的	0
+3	majority	Unit1_3	10	n.大多数	1
+3	ministry	Unit1_3	10	n.（政府的）部	1
+3	Catholic	Unit1_3	10	adj.&n.天主教的	1
+3	Alaska	Unit1_3	10	n.阿拉斯加（州）	0
+3	San Francisco	Unit1_3	10	n.圣弗朗西斯科	0
+3	adventurer	Unit1_3	10	n.冒险家	0
+3	make  a life	Unit1_3	10	习惯于新的生活方式、工作等	1
+3	despite	Unit1_3	10	prep.尽管	0
+3	hardship	Unit1_3	10	n.苦难	1
+4	elect	Unit1_4	10	vt.选择	1
+4	federal	Unit1_4	10	adj.联邦制的	1
+4	rail	Unit1_4	10	n.扶手	1
+4	percentage	Unit1_4	10	n.百分比	1
+4	Los Angeles	Unit1_4	10	洛杉矶	0
+4	Italy	Unit1_4	10	n.意大利	1
+4	Italian	Unit1_4	10	n.&adj.意大利人	1
+4	Denmark	Unit1_4	10	n.丹麦	1
+4	keep up	Unit1_4	10	坚持	1
+4	Hollywood	Unit1_4	10	n.好莱坞；美国电影业	0
+5	boom	Unit1_5	10	n.&vi繁荣时期	1
+5	aircraft	Unit1_5	10	n.飞行器	1
+5	Cambodian	Unit1_5	10	n.柬埔寨人	0
+5	Korea	Unit1_5	10	n.韩国	1
+5	Korean	Unit1_5	10	n.&adj.韩国/朝鲜人	1
+5	Pakistan	Unit1_5	10	n.巴基斯坦	1
+5	Pakistani	Unit1_5	10	adj.&n.巴基斯坦（人）的	1
+5	immigrate	Unit1_5	10	vi.移入	0
+5	immigration	Unit1_5	10	n.移民	1
+5	racial	Unit1_5	10	adj.人种的	1
+6	crossing	Unit1_6	10	n.横渡	1
+6	vice	Unit1_6	10	n.&adj.代理；副职	1
+6	nephew	Unit1_6	10	n.侄子；外甥	1
+6	pole	Unit1_6	10	n.地极	1
+6	applicant	Unit1_6	10	n.申请人	1
+6	customs	Unit1_6	10	n.海关	1
+6	socialist	Unit1_6	10	n.&adj.社会主义者	1
+6	socialism	Unit1_6	10	n.社会主义	1
+6	occur	Unit1_6	10	vi.发生；出现	1
+6	cattle	Unit1_6	10	n.牛（总称）	1
+7	Hispanic	Unit1_7	10	n.（美）讲西班牙语的美国人	0
+7	indicate	Unit1_7	10	vt.指出	1
+7	back to back	Unit1_7	10	背靠背	1
+7	luggage	Unit1_7	10	n.行李	1
+7	shave	Unit1_7	10	vt.&vi.刮，剃	1
+7	cable	Unit1_7	10	n.缆绳	0
+7	cable car	Unit1_7	10	缆车	0
+7	tram	Unit1_7	10	n.（有轨）电车	1
+7	apparent	Unit1_7	10	adj.显而易见的	1
+7	apparently	Unit1_7	10	adv.显然地；显而易见地	1
+8	brake	Unit1_8	10	n.闸；刹车；制动器	1
+8	conductor	Unit1_8	10	n.（公车）售票员	1
+8	slip	Unit1_8	10	vi.&n.滑动；滑行；滑跤	1
+8	wharf	Unit1_8	10	n.码头	0
+8	bakery	Unit1_8	10	n.面包房；面包厂	1
+8	ferry	Unit1_8	10	n.&vt.渡船	1
+8	team up with	Unit1_8	10	与......合作或一起工作	1
+8	hire	Unit1_8	10	vt.&n.租用	1
+8	fascinating	Unit1_8	10	adj.迷人的	0
+9	mark out	Unit1_9	10	划线	1
+9	seagull	Unit1_9	10	n.海鸥	1
+9	take in	Unit1_9	10	包括；吸收	1
+9	angle	Unit1_9	10	n.角；角度	1
+9	a great many	Unit1_9	10	许多	1
+9	apply for	Unit1_9	10	申请	1
+9	nowhere	Unit1_9	10	adv.无处；到处都无	1
+9	miserable	Unit1_9	10	adj.痛苦的；悲惨的	0
+9	punishment	Unit1_9	10	n.处罚；惩罚	1
+10	justice	Unit1_10	10	n.公正；公平	1
+10	mourn	Unit1_10	10	vt.&vi.哀悼	1
+10	civil	Unit1_10	10	adj.公民的	1
+10	authority	Unit1_10	10	n.权威；权力	1
+10	reform	Unit1_10	10	vt.&vi.&n.改革；革新	1
+10	grasp	Unit1_10	10	vt.&n.抓住	1
+10	thoughtful	Unit1_10	10	adj.关切的	0
+10	thankful	Unit1_10	10	adj.感激的	1
+10	insert	Unit1_10	10	vt.插入；嵌入	1
+11	differ	Unit2_1	8	vi.不同；相异	1
+11	exact	Unit2_1	8	adj.精确的	1
+11	cutting	Unit2_1	8	n.剪枝	0
+11	twin	Unit2_1	8	n.&adj.双胞胎之一	1
+11	identical	Unit2_1	8	adj.同一的	1
+11	commercial	Unit2_1	8	adj.商业的	1
+11	straightforward	Unit2_1	8	adj.简单的	1
+11	complicated	Unit2_1	8	adj.复杂的	0
+11	undertake	Unit2_1	8	vt.着手	1
+11	pay off	Unit2_1	8	得到好结果	1
+12	breakthrough	Unit2_2	8	n.突破	1
+12	procedure	Unit2_2	8	n.程序	1
+12	nucleus	Unit2_2	8	n.原子核；中心	0
+12	somatic	Unit2_2	8	adj.躯体的	0
+12	embryo	Unit2_2	8	n.胚；胚胎；萌牙时期	0
+12	carrier	Unit2_2	8	n.携带者	1
+12	cast	Unit2_2	8	vt.扔	1
+12	cast down	Unit2_2	8	沮丧；不愉快	1
+12	altogether	Unit2_2	8	adv.总共；完全地	1
+12	arbitrary	Unit2_2	8	adj.任意的	1
+13	fate	Unit2_3	8	n.命运；天命	0
+13	correction	Unit2_3	8	n.改正	1
+13	object	Unit2_3	8	vi.反对；不赞成	1
+13	objection	Unit2_3	8	n.不赞成	1
+13	impact	Unit2_3	8	n.撞击	0
+13	medium	Unit2_3	8	n.媒介；手段；工具	1
+13	the media	Unit2_3	8	大众传播媒体	1
+13	obtain	Unit2_3	8	vt.获得；赢得	1
+13	attain	Unit2_3	8	vt.获得；到达	1
+13	moral	Unit2_3	8	adj.道德（上）的；伦理的	1
+14	conservative	Unit2_4	8	adj.保守的；守旧的	1
+14	forbid	Unit2_4	8	vt.禁止，不准	1
+14	accumulate	Unit2_4	8	vt.积累；聚保	1
+14	in favour of	Unit2_4	8	赞成；支持	1
+14	side road	Unit2_4	8	旁路；支线；岔道	1
+14	constitution	Unit2_4	8	n.宪法；章程	1
+14	compulsory	Unit2_4	8	adj.必须做的	1
+14	opera	Unit2_4	8	n.歌剧	1
+14	chorus	Unit2_4	8	n.合唱；合唱队	1
+14	loaf	Unit2_4	8	n.一条（面包）	1
+15	flour	Unit2_5	8	n.面粉	1
+15	owe	Unit2_5	8	vt.欠（账、钱、人情等）	1
+15	shortly	Unit2_5	8	adv.立刻；不久	1
+15	retire	Unit2_5	8	vi.退休；离开	1
+15	bother	Unit2_5	8	vt.&vi&n.打扰;操心；烦扰	1
+15	be bound to do	Unit2_5	8	一定或注定（做）......	1
+15	assumption	Unit2_5	8	n.假定；设想	1
+15	regulation	Unit2_5	8	n.规则	1
+15	nonsense	Unit2_5	8	n.胡说	0
+15	popularity	Unit2_5	8	n.受人喜爱；流行	0
+16	Jurassic Park	Unit2_6	8	侏罗纪公园	0
+16	strike	Unit2_6	8	vi.&vt.打；撞击	1
+16	strike...into one's heart	Unit2_6	8	使......刻骨铭心	1
+16	bison	Unit2_6	8	n.北美或欧洲野牛	0
+16	calf	Unit2_6	8	n.小牛；牛犊	0
+16	from time to time	Unit2_6	8	不时；偶尔	1
+16	bring back to life	Unit2_6	8	使复生	1
+16	initial	Unit2_6	8	adj.最初的	1
+16	vain	Unit2_6	8	adj.虚荣的	1
+16	in vain	Unit2_6	8	白费力气	1
+17	resist	Unit2_7	8	vt.抵抗；对抗	1
+17	drawback	Unit2_7	8	n.缺点；不利条件	1
+17	merely	Unit2_7	8	adv.仅；只；不过	1
+17	restore	Unit2_7	8	vt.恢复	0
+17	aurochs	Unit2_7	8	n.原牛	0
+17	decoration	Unit2_7	8	n.装饰	1
+17	unable	Unit2_7	8	adj.不能的；不会的	1
+17	great auk	Unit2_7	8	n.大海雀	0
+17	feather	Unit2_7	8	n.羽毛	1
+18	quagga	Unit2_8	8	n.白氏斑马	0
+18	fairly	Unit2_8	8	adv.公平地；相当地	0
+18	in good condition	Unit2_8	8	状况很好（坏）	1
+18	turkey	Unit2_8	8	n.火鸡	1
+18	dye	Unit2_8	8	vt.&n.给......染色	0
+18	claw	Unit2_8	8	n.爪；脚爪	1
+18	adore	Unit2_8	8	vt.崇拜	1
+18	hatch	Unit2_8	8	vt.&vi.孵出	1
+18	reasonable	Unit2_8	8	adj.合情理的	1
+19	amphibious	Unit3_1	8	adj.两栖（类）的	0
+19	patent	Unit3_1	8	n.专利证书	1
+19	call	Unit3_1	8	up给......打电话	1
+19	courtyard	Unit3_1	8	n.院子；庭院；天井	1
+19	now and then	Unit3_1	8	偶尔；有时	1
+19	walnut	Unit3_1	8	n.胡桃；胡桃木	1
+19	distinguish	Unit3_1	8	vi.&vt.显示......的差别	1
+19	merciful	Unit3_1	8	adj.宽大的	1
+19	product	Unit3_1	8	n.产品	1
+19	powder	Unit3_1	8	n.粉末；火药	1
+20	set about	Unit3_2	8	开始；着手	1
+20	perfume	Unit3_2	8	n.香水；香味	1
+20	stainless	Unit3_2	8	adj.无锈的	1
+20	jelly	Unit3_2	8	n.果冻；果冻状物	0
+20	cube	Unit3_2	8	n.立方体；立方	1
+20	cubic	Unit3_2	8	adj.立方的	1
+20	abrupt	Unit3_2	8	adj.突然的；意外的	1
+20	abruptly	Unit3_2	8	adv.突然地；唐突地	1
+20	convenient	Unit3_2	8	adj.便利的	1
+20	caution	Unit3_2	8	n.小心；谨慎	1
+21	expectation	Unit3_3	8	n.预料	1
+21	passive	Unit3_3	8	adj.被动的	1
+21	merry	Unit3_3	8	adj.愉快的；高兴的	1
+21	merrily	Unit3_3	8	adv.高兴地；愉快地	1
+21	seize	Unit3_3	8	vt.抓住；捉住；夺	1
+21	recognition	Unit3_3	8	n.认出	0
+21	criterion	Unit3_3	8	n.（评判的）标准	1
+21	claim	Unit3_3	8	n.&vt.要求	0
+21	valid	Unit3_3	8	adj.有效的	1
+21	file	Unit3_3	8	n.&vt.文件	1
+22	ripe	Unit3_4	8	adj.熟的；成熟的	1
+22	string	Unit3_4	8	n.线；绳子；一串	1
+22	glue	Unit3_4	8	n.&vt.胶	1
+22	rod	Unit3_4	8	n.杆；棒	0
+22	freezing	Unit3_4	8	adj.冰冻的；严寒的	1
+22	greengrocer	Unit3_4	8	n.果蔬商	1
+22	identification	Unit3_4	8	n.鉴定	1
+22	directory	Unit3_4	8	n.电话簿	1
+22	dial	Unit3_4	8	vt.拨（电话）	1
+22	rainfall	Unit3_4	8	n.降雨	1
+23	courtroom	Unit3_5	8	n.法庭；审判室	0
+23	innocent	Unit3_5	8	adj.清白的	1
+23	lantern	Unit3_5	8	n.灯笼；提灯	1
+23	bear	Unit3_5	8	vt.忍受	1
+23	jam	Unit3_5	8	n.堵塞	1
+23	microphone	Unit3_5	8	n.麦克风；话筒	0
+23	forehead	Unit3_5	8	n.额头	1
+23	beaten track	Unit3_5	8	被踩出来的路	1
+23	occasionally	Unit3_5	8	adv.偶然地；不时地	0
+23	dive into	Unit3_5	8	迅速把手伸入	1
+24	dynamic	Unit3_6	8	adj.充满活力的	1
+24	set out to do	Unit3_6	8	开始（做）	1
+24	multiple	Unit3_6	8	adj.&n.多种的	0
+24	dot	Unit3_6	8	n.&vt.点；小圆点	1
+24	tap	Unit3_6	8	vt.&n.轻打	1
+24	wire	Unit3_6	8	n.金属丝；电线	1
+24	straw	Unit3_6	8	n.稻草	1
+24	reproduce	Unit3_6	8	vt.复制	0
+24	current	Unit3_6	8	n.&adj.（水或气）流	1
+24	helicopter	Unit3_6	8	直升飞机	1
+25	triangle	Unit3_7	8	n.三角形	1
+25	tetrahedron	Unit3_7	8	n.四面体	0
+25	stable	Unit3_7	8	adj.稳固的	1
+25	invaluable	Unit3_7	8	adj.无价的	0
+25	associate	Unit3_7	8	vt.&n.联想	1
+25	practical	Unit3_7	8	adj.实际的	1
+25	refrigerator	Unit3_7	8	n.冰箱	1
+25	court	Unit3_7	8	n.法庭	1
+25	extension	Unit3_7	8	n.电话分机	1
+25	hang	Unit3_7	8	on不挂断	1
+26	out of order	Unit3_8	8	次序颠倒；发生故障	1
+26	get through	Unit3_8	8	设法联系上	1
+26	ring back	Unit3_8	8	回复电话	1
+26	ring off	Unit3_8	8	挂断电话	1
+26	version	Unit3_8	8	n.版本；译本	1
+26	competence	Unit3_8	8	n.能力	1
+26	competent	Unit3_8	8	n.能胜任的	0
+26	jeep	Unit3_8	8	n.吉普车	1
+26	personnel	Unit3_8	8	n.人力资源	1
+27	adaptation	Unit4_1	8	n.适应（性）	1
+27	classic	Unit4_1	8	adj.&n.经典的	1
+27	caption	Unit4_1	8	n.（图片上的）说明文字	1
+27	plot	Unit4_1	8	n.情节；阴谋	1
+27	professor	Unit4_1	8	n.教授	1
+27	colonel	Unit4_1	8	n.（陆军）上校	0
+27	fateful	Unit4_1	8	adj.重要的	0
+27	whistle	Unit4_1	8	vi.&n.吹口哨；发出汽笛声	1
+27	garment	Unit4_1	8	n.（一件）衣服	1
+27	woollen	Unit4_1	8	adj.毛纺的；纯毛的	1
+28	hesitate	Unit4_2	8	vi.犹豫；踌躇	1
+28	uncomfortable	Unit4_2	8	adj.不舒服的	1
+28	uncomfortably	Unit4_2	8	adv.不舒服的	1
+28	troublesome	Unit4_2	8	adj.带来麻烦的	1
+28	wallet	Unit4_2	8	n.皮夹；钱包	1
+28	thief	Unit4_2	8	n.小偷；贼	1
+28	handkerchief	Unit4_2	8	n.手帕；手绢；纸巾	1
+28	disguise	Unit4_2	8	vt.&n.伪装	0
+28	in disguise	Unit4_2	8	伪装（的）	0
+28	mistaken	Unit4_2	8	adj.（见解或判断上）错误的	1
+29	brilliant	Unit4_3	8	adj.光辉灿烂的	1
+29	classify	Unit4_3	8	vt.编排	1
+29	remark	Unit4_3	8	n.&vt.&vi.谈论	1
+29	betray	Unit4_3	8	vt.显露出（本来面目）	1
+29	upper	Unit4_3	8	adj.（位置或地位）较高的	1
+29	extraordinary	Unit4_3	8	adj.不同寻常的	1
+29	condemn	Unit4_3	8	vi.谴责	1
+29	gutter	Unit4_3	8	n.排水沟	0
+29	properly	Unit4_3	8	adv.适当地	1
+29	pass...off as ...	Unit4_3	8	（把某人）改变	1
+30	duchess	Unit4_4	8	n.公爵夫人；女公爵	0
+30	ambassador	Unit4_4	8	n.大使；使节	1
+30	acquaintance	Unit4_4	8	n.相识	1
+30	make one's acquaintance	Unit4_4	8	结识	1
+30	handful	Unit4_4	8	n.一把；少量	1
+30	amazement	Unit4_4	8	n.惊讶；惊愕	0
+30	in amazement	Unit4_4	8	震惊；惊讶	0
+30	fortune	Unit4_4	8	n.机会	1
+30	authentic	Unit4_4	8	adj.真实的	1
+30	generally speaking	Unit4_4	8	一般来说	1
+31	status	Unit4_5	8	n.身份	1
+31	superior	Unit4_5	8	adj.优秀的	1
+31	in terms of	Unit4_5	8	就......来说	1
+31	disapprove	Unit4_5	8	vt.&vi.不赞成	0
+31	rob	Unit4_5	8	vt.抢劫	1
+31	antique	Unit4_5	8	adj.&n.古时的	1
+31	musical	Unit4_5	8	adj.&n.音乐的	1
+31	stocking	Unit4_5	8	n.长袜	1
+31	believer	Unit4_5	8	n.信徒；教徒	0
+31	Buddhism	Unit4_5	8	n.佛教	1
+32	Buddhist	Unit4_6	8	n.&adj.佛教徒	0
+32	Buddha	Unit4_6	8	n.佛	0
+32	vowel	Unit4_6	8	n.元音；元音字母	0
+32	cookie	Unit4_6	8	n.饼干	1
+32	teapot	Unit4_6	8	n.茶壶	1
+32	cream	Unit4_6	8	n.奶油；面霜	1
+32	nail	Unit4_6	8	n.指甲；钉子	1
+32	show...in	Unit4_6	8	带或领......进来	1
+32	wax	Unit4_6	8	n.&vt.蜡	1
+32	disk	Unit4_6	8	n.磁盘	1
+33	wax disk	Unit4_7	8	旧式唱片	0
+33	shabby	Unit4_7	8	adj.破旧的	1
+33	shilling	Unit4_7	8	n.先令	0
+33	referee	Unit4_7	8	n.裁判员；仲裁者	1
+33	compromise	Unit4_7	8	n&vi.妥协；折衷	1
+33	horrible	Unit4_7	8	adj.可怕的；恐怖的	1
+33	laundry	Unit4_7	8	n.洗衣店	1
+33	bathtub	Unit4_7	8	n.浴缸；澡盆	1
+33	sob	Unit4_7	8	vi.&n.啜泣；抽噎	1
+33	waist	Unit4_7	8	n.腰	1
+34	vest	Unit4_8	8	n.背心；内衣	1
+34	disgusting	Unit4_8	8	adj.使人反感的	1
+34	once more	Unit4_8	8	再一次	1
+34	in need of	Unit4_8	8	需要	1
+34	heartily	Unit4_8	8	adv.尽情地	0
+34	overlook	Unit4_8	8	vt.俯视	1
+34	alphabet	Unit4_8	8	n.字母表	1
+34	effective	Unit4_8	8	adj.有效的	0
+34	fade	Unit4_8	8	vi.&vt.（使）褪色	1
+34	fade out	Unit4_8	8	（声音、画面）逐渐模糊	1
+35	identify	Unit5_1	8	vt.确认	0
+35	alternative	Unit5_1	8	n.&adj.可能的选择	1
+35	archaeology	Unit5_1	8	n.考古学	0
+35	archaeological	Unit5_1	8	adj.考古学的	0
+35	archaeologist	Unit5_1	8	n.考古学家	0
+35	starvation	Unit5_1	8	n.挨饿；饿死	1
+35	tentative	Unit5_1	8	adj.试探性的	1
+35	accuracy	Unit5_1	8	n.精确；准确	1
+35	excavate	Unit5_1	8	vt.挖掘；发掘	0
+36	excavation	Unit5_2	8	n.挖掘；发掘	0
+36	interrupt	Unit5_2	8	vt.&vi打断......讲话	1
+36	acute	Unit5_2	8	adj.有观察力的	1
+36	assume	Unit5_2	8	vt.假定；设想	1
+36	regardless	Unit5_2	8	adv.不管；不顾	1
+36	regardless of	Unit5_2	8	不管；不顾	1
+36	mat	Unit5_2	8	n.席子；垫子	1
+36	quilt	Unit5_2	8	n.被子；棉被	1
+36	beast	Unit5_2	8	n.野兽	1
+37	at most	Unit5_3	8	至多；最多	1
+37	centimetre	Unit5_3	8	n.厘米	1
+37	sharpen	Unit5_3	8	vi.&vt.清晰	1
+37	sharpener	Unit5_3	8	n.磨具；削具	1
+37	cut up	Unit5_3	8	切碎	1
+37	scrape	Unit5_3	8	vt.擦净；削平；磨光	0
+37	scraper	Unit5_3	8	n.刮刀；刮削器	0
+37	ample	Unit5_3	8	adj.足够的	1
+37	messy	Unit5_3	8	adj.凌乱的；脏的	1
+38	primitive	Unit5_4	8	adj.原始的	1
+38	bead	Unit5_4	8	n.小珠子；滴	0
+38	botany	Unit5_4	8	n.植物学	1
+38	botanical	Unit5_4	8	adj.植物学的	1
+38	analysis	Unit5_4	8	n.分析	1
+38	seashell	Unit5_4	8	n.海贝壳	1
+38	ripen	Unit5_4	8	vt.&vi.使......成熟；成熟	1
+38	category	Unit5_4	8	n.种类；类别；范畴	1
+38	significance	Unit5_4	8	n.意义	1
+39	somehow	Unit5_5	8	adv.以......方式	1
+39	systematic	Unit5_5	8	adj.有系统的	1
+39	spit	Unit5_5	8	vt.&vi.吐出（唾液、食物等）	1
+39	delete	Unit5_5	8	vt.删；删除	1
+39	album	Unit5_5	8	n.相册；集邮册；唱片	1
+39	scratch	Unit5_5	8	n.&vt.（刮、抓、划的）痕迹	1
+39	academy	Unit5_5	8	n.学院；学会	1
+39	receptionist	Unit5_5	8	n.接待员；招待员	1
+39	onion	Unit5_5	8	n.洋葱	1
+40	kindergarten	Unit5_6	8	n.幼儿园	1
+40	skateboard	Unit5_6	8	n.滑板	1
+40	fed up with	Unit5_6	8	受够了	1
+40	yogurt	Unit5_6	8	n.酸乳酷；酸奶	1
+40	radioactive	Unit5_6	8	adj.放射性的	1
+40	radioactivity	Unit5_6	8	n.放射性	1
+40	division	Unit5_6	8	n.分割；划分	1
+40	melon	Unit5_6	8	n.（各种）瓜	1
+40	wrinkle	Unit5_6	8	n.皱纹	1
+40	pulse	Unit5_6	8	vi.&n.强烈而有规律地跳动	1
+41	vein	Unit5_7	8	n.血管；静脉	0
+41	applaud	Unit5_7	8	vi.&vt.鼓掌欢迎；赞赏	1
+41	look ahead	Unit5_7	8	向前看	1
+41	howl	Unit5_7	8	vt.&vi.嗥叫；叫喊；吼叫	1
+41	accelerate	Unit5_7	8	vi.&vt.加速；促进	1
+41	spear	Unit5_7	8	n.矛；枪	1
+41	arrest	Unit5_7	8	vt.&n.逮捕；吸引	1
+41	dizzy	Unit5_7	8	adj.晕眩的	1
+41	eyebrow	Unit5_7	8	n.眉毛	0
+41	cheekbone	Unit5_7	8	n.颧骨	0
+42	arrowhead	Unit5_8	8	n.箭头	0
+42	axe	Unit5_8	8	n.斧；斧子	0
+42	hammer	Unit5_8	8	n.铁锤；锤子	1
+42	gay	Unit5_8	8	adj.快乐的；欢快的	1
+42	gaily	Unit5_8	8	adv.快乐地；轻松地	1
+42	skilful	Unit5_8	8	adj.有技巧的	1
+42	date back	Unit5_8	8	追溯到......	1
+42	punctuation	Unit5_8	8	n.标点符号	1
+42	worship	Unit5_8	8	vt.&vi.&n.崇拜；敬奉	0
+42	craftsmanship	Unit5_8	8	n.技艺	0
