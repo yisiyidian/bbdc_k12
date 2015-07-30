@@ -310,17 +310,20 @@ end
 -- book -------------------------------------------------------------------
 
 function DataManager.loadBooks()
-    local jsonObj = loadJsonFile(s_books)
-    local jsonArr = jsonObj['books']
+    --local jsonObj = loadJsonFile(s_books)
+    local jsonArr = require('view.book.BookList')
     local MetaBook = require("model.meta.MetaBook")
     DataManager.books = {}
+    DataManager.bookkeys = {}
     for i = 1, #jsonArr do 
         local data = jsonArr[i]
-        local book = MetaBook.create(data['key'],
-                                    data['name'],
-                                    data['words'],
-                                    data['music'])
-        DataManager.books[data['key']] = book
+        local book = MetaBook.create(data.key,
+                                    data.name,
+                                    data.word,
+                                    data.music,
+                                    data.type)
+        DataManager.books[data.key] = book
+        DataManager.bookkeys[i] = data.key
     end
 end
 

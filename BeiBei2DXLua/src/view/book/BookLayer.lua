@@ -60,39 +60,17 @@ function BookLayer.create(education)
     -- else
     --    backButton:setVisible(true)
     -- end
-    local grade = split(education,'_')
-    if grade[1] == 'primary' or grade[1] == 'junior' or grade[1] == 'senior' then
-    
-        local hint = cc.Label:createWithSystemFont("所有的教材都是人教版教材","",24)
-        hint:setPosition((s_RIGHT_X - s_LEFT_X)/2 - 40,1073)
-        hint:setColor(cc.c4b(66,66,62,255))
-        backColor:addChild(hint) 
-    end
     --local name_array = {}
     --local key_array = {'cet4','cet6','ncee','toefl','ielts','gre','gse','pro4','pro8','gmat','sat','middle','primary'}
     
-    local rect_table = {'senior_1','senior_2','senior_3','senior_4','senior_5','senior_6','senior_7','senior_8','senior_9','senior_10','senior_11'
-                      ,'cet4','cet6','pro4','pro8','gse'
-                      ,'gre','gmat','sat','toefl','ielts'
-                      ,'houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'}
-    if grade[1] == 'kwekwe' or grade[1] == 'houhai' then
-        grade[1] = 'more'
-    elseif grade[1] == 'cet4' or grade[1] == 'cet6' or grade[1] == 'pro4' or grade[1] == 'pro8' or grade[1] == 'gse' then
-        grade[1] = 'college'
-    elseif grade[1] == 'gre' or grade[1] == 'gmat' or grade[1] == 'sat' or grade[1] == 'toefl' or grade[1] == 'ielts' then
-        grade[1] = 'more'
-    end
+    local rect_table = {'kwekwe','kwekwe_2','kwekwe_3'}
     local key_array = {}
-    if grade[1] == 'primary' then
-        key_array = {'primary_1','primary_2','primary_3','primary_4','primary_5','primary_6','primary_7','primary_8'}
-    elseif grade[1] == 'junior' then
-        key_array = {'junior_1','junior_2','junior_3','junior_4','junior_5'}
-    elseif grade[1] == 'senior' then
-        key_array = {'senior_1','senior_2','senior_3','senior_4','senior_5','senior_6','senior_7','senior_8','senior_9','senior_10','senior_11'}
-    elseif grade[1] == 'college' then
-        key_array = {'cet4','cet6','pro4','pro8','gse'}
-    elseif grade[1] == 'more' then
-        key_array = {'gre','gmat','sat','toefl','ielts','kwekwe','kwekwe_2','kwekwe_3','houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'}
+    if education ~= 'mybook' then
+        for i = 1, #s_DataManager.bookkeys do
+            if s_DataManager.books[s_DataManager.bookkeys[i]].type == education then
+                key_array[#key_array + 1] = s_DataManager.bookkeys[i]
+            end
+        end
     else 
         key_array = split(s_CURRENT_USER.bookList,'|')
     end
@@ -137,8 +115,8 @@ function BookLayer.create(education)
             end
         end
         table.insert(func_array, click)
-    
-        local smallBack = ccui.Button:create("image/book/book/K12_choose_book_"..key_array[i]..".png", "", "")
+        local book_str = s_DataManager.books[key_array[i]].type
+        local smallBack = ccui.Button:create("image/book/grade/"..book_str.."/"..key_array[i]..".png", "", "")
         smallBack:setTouchEnabled(true)
         smallBack:setScale9Enabled(true)
 
@@ -147,10 +125,10 @@ function BookLayer.create(education)
 
         if key == s_CURRENT_USER.bookKey then
             local shine
-            local flag = true
+            local flag = false
             for i  =1,#rect_table do
                 if key == rect_table[i] then
-                    flag = false
+                    flag = true
                     break
                 end
             end
@@ -216,7 +194,7 @@ function BookLayer.create(education)
         local richElement2 = ccui.RichElementText:create(2,cc.c3b(255,255,255),255,string.format('%d',s_DataManager.books[key].words),'',22)                           
         richtext:pushBackElement(richElement2)               
         richtext:setPosition(smallBack:getContentSize().width *0.63, 
-            smallBack:getContentSize().height *0.2)
+            smallBack:getContentSize().height *0.1)
         smallBack:addChild(richtext) 
 
 
@@ -268,11 +246,11 @@ function BookLayer.create(education)
             custom_item:addChild(layer.book[i])
             
             local flower 
-            if grade[1] == 'senior' or grade[1] == 'college' or grade[1] == 'more' then
+            -- if grade[1] == 'senior' or grade[1] == 'college' or grade[1] == 'more' then
                 flower = cc.Sprite:create('image/book/flower_choose_book.png')
-            else
-                flower = cc.Sprite:create('image/book/K12_choose_book__monkey_toy.png')
-            end
+            -- else
+            --     flower = cc.Sprite:create('image/book/K12_choose_book__monkey_toy.png')
+            -- end
             flower:setAnchorPoint(0.5,0)
             flower:setPosition(0.75 * shelf:getContentSize().width,0.75 * shelf:getContentSize().height)
             shelf:addChild(flower)
