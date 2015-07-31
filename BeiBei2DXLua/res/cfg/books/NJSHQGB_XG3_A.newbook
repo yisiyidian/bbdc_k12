@@ -1,0 +1,250 @@
+1	a	Module1 Unit1_1	5	n.一；一个	0
+1	after	Module1 Unit1_1	5	conj.（时间）在...后	0
+1	afternoon	Module1 Unit1_1	5	n.下午	0
+2	and	Module1 Unit1_2	5	conj.和；与	0
+2	boy	Module1 Unit1_2	5	n.男孩	1
+2	cake	Module1 Unit1_2	5	n.蛋糕	0
+2	colour	Module1 Unit1_2	5	vt.给...涂色；颜色	0
+2	cut	Module1 Unit1_2	5	vt.剪；切	0
+2	dad	Module1 Unit1_2	5	n.爸爸	0
+2	draw	Module1 Unit1_2	5	v.画画	0
+2	evening	Module1 Unit1_2	5	n.傍晚	0
+2	fine	Module1 Unit1_2	5	adj.健康的	0
+2	girl	Module1 Unit1_2	5	n.女孩	1
+3	have	Module1 Unit1_3	5	v.有，拥有	0
+3	I	Module1 Unit1_3	5	pron.我	0
+3	in	Module1 Unit1_3	5	prep.在...里面	0
+3	Miss	Module1 Unit1_3	5	n.小姐	1
+3	morning	Module1 Unit1_3	5	n.早上；上午	0
+3	Mr	Module1 Unit1_3	5	abbr.先生	1
+3	Mrs	Module1 Unit1_3	5	abbr.太太	1
+3	mum	Module1 Unit1_3	5	n.妈妈	0
+3	new	Module1 Unit1_3	5	adj.新的	0
+3	night	Module1 Unit1_3	5	n.夜晚	0
+4	stick	Module1 Unit1_4	5	vt.粘贴	0
+4	table	Module1 Unit1_4	5	n.桌子	0
+4	teacher	Module1 Unit1_4	5	n.老师	0
+4	this	Module1 Unit1_4	5	adj.&prep.（介绍时用）这；这个	0
+4	today	Module1 Unit1_4	5	n.&adv.今天	1
+4	too	Module1 Unit1_4	5	adv.也	0
+4	very	Module1 Unit1_4	5	adv.很，非常	0
+4	we	Module1 Unit1_4	5	pron.我们	0
+4	well	Module1 Unit1_4	5	ad.好；对	0
+4	you	Module1 Unit1_4	5	pron.你	0
+5	Hello	Module1 Unit1_5	5	int.你好	0
+5	Hi	Module1 Unit1_5	5	int.嗨	0
+5	Good morning.	Module1 Unit1_5	5	早上好	0
+5	This is ...	Module1 Unit1_5	5	（表示介绍）这是...	0
+5	Good afternoon	Module1 Unit1_5	5	下午好	0
+5	Good evening	Module1 Unit1_5	5	晚上好	0
+5	Good night	Module1 Unit1_5	5	晚安	0
+5	How are you	Module1 Unit1_5	5	你好吗？	0
+5	Fine thanks	Module1 Unit1_5	5	很好，谢谢	0
+5	I'm fine too	Module1 Unit1_5	5	我也很好	0
+6	blackboard	Module1 Unit2_1	3	n.黑板	0
+6	book	Module1 Unit2_1	3	n.书	1
+6	card	Module1 Unit2_1	3	n.卡片	0
+6	classroom	Module1 Unit2_1	3	n.教室	1
+6	clean	Module1 Unit2_1	3	vt.把...擦干净；打扫	0
+6	close	Module1 Unit2_1	3	vt.关上	1
+6	door	Module1 Unit2_1	3	n.门	1
+6	fold	Module1 Unit2_1	3	vt.折叠	0
+6	get	Module1 Unit2_1	3	vt.拿	0
+7	hand	Module1 Unit2_2	3	n.手	0
+7	jam	Module1 Unit2_2	3	n.果酱	0
+7	look at	Module1 Unit2_2	3	看	0
+7	my	Module1 Unit2_2	3	pron.我的	0
+7	name	Module1 Unit2_2	3	n.名字	1
+7	open	Module1 Unit2_2	3	vt.打开	1
+7	please	Module1 Unit2_2	3	int.（表示客气，礼貌）请	0
+7	sit down	Module1 Unit2_2	3	坐下	1
+7	stand up	Module1 Unit2_2	3	起立	1
+8	the	Module1 Unit2_3	3	art.（表示特指）定冠词	0
+8	what	Module1 Unit2_3	3	pron.什么	0
+8	write	Module1 Unit2_3	3	v.写，写字	1
+8	yes	Module1 Unit2_3	3	adv.是的，对	0
+8	your	Module1 Unit2_3	3	pron.你的	0
+8	What's your name	Module1 Unit2_3	3	你叫什么名字？	0
+8	Thank you	Module1 Unit2_3	3	谢谢	0
+8	Ok	Module1 Unit2_3	3	adj.好的	0
+9	bird	Module1 Unit3_1	3	n.鸟	0
+9	birthday	Module1 Unit3_1	3	n.生日	0
+9	blow	Module1 Unit3_1	3	vt.吹	0
+9	eight	Module1 Unit3_1	3	num.八	1
+9	five	Module1 Unit3_1	3	num.五	1
+9	four	Module1 Unit3_1	3	num.四	1
+9	guess	Module1 Unit3_1	3	n.&v.猜	0
+9	he	Module1 Unit3_1	3	pron.他	0
+10	here	Module1 Unit3_2	3	adv.这里；在这里	0
+10	it	Module1 Unit3_2	3	pron.它	0
+10	nine	Module1 Unit3_2	3	num.九	1
+10	no	Module1 Unit3_2	3	adv.不是	0
+10	only	Module1 Unit3_2	3	adv.只，仅仅	0
+10	one	Module1 Unit3_2	3	num.一	1
+10	party	Module1 Unit3_2	3	n.聚会	0
+10	seven	Module1 Unit3_2	3	num.七	1
+11	she	Module1 Unit3_3	3	pron.她	0
+11	six	Module1 Unit3_3	3	num.六	1
+11	ten	Module1 Unit3_3	3	num.十	1
+11	three	Module1 Unit3_3	3	num.三	1
+11	two	Module1 Unit3_3	3	num.二	1
+11	yummy	Module1 Unit3_3	3	adj.美味的	0
+11	How old are you	Module1 Unit3_3	3	你几岁了？	0
+11	Happy birthday	Module1 Unit3_3	3	生日快乐	0
+11	Here you are	Module1 Unit3_3	3	给你	0
+12	baby	Module2 Unit1_1	1	n.婴儿	0
+12	but	Module2 Unit1_1	1	conj.但是	0
+12	can	Module2 Unit1_1	1	aux.能，能够	0
+12	fat	Module2 Unit1_1	1	adj.胖的	1
+12	football	Module2 Unit1_1	1	n.足球	0
+12	friend	Module2 Unit1_1	1	n.朋友	1
+12	pen	Module2 Unit1_1	1	n.钢笔	0
+12	play football	Module2 Unit1_1	1	踢足球	0
+12	ride	Module2 Unit1_1	1	vt.（骑）车	0
+12	short	Module2 Unit1_1	1	adj.矮的	1
+12	sing	Module2 Unit1_1	1	vt.唱歌	0
+12	swim	Module2 Unit1_1	1	v.游泳	0
+12	tall	Module2 Unit1_1	1	adj.高的	1
+12	thin	Module2 Unit1_1	1	adj.瘦的	1
+13	bicycle	Module2 Unit2_1	2	n.自行车	0
+13	brother	Module2 Unit2_1	2	n.哥；弟	1
+13	come in	Module2 Unit2_1	2	进来	0
+13	eat	Module2 Unit2_1	2	vt.吃	0
+13	family	Module2 Unit2_1	2	n.家庭	0
+13	father	Module2 Unit2_1	2	n.父亲	1
+13	good	Module2 Unit2_1	2	adj.好的	0
+13	grandfather	Module2 Unit2_1	2	n.（外）祖父；爷爷；外公	1
+13	grandmother	Module2 Unit2_1	2	n.（外）祖母；奶奶；外婆	1
+14	kite	Module2 Unit2_2	2	n.风筝	1
+14	like	Module2 Unit2_2	2	vt.喜欢	0
+14	look	Module2 Unit2_2	2	n.看	0
+14	me	Module2 Unit2_2	2	pron.我（宾格）	1
+14	mother	Module2 Unit2_2	2	n.母亲	1
+14	picture	Module2 Unit2_2	2	n.照片；图画	0
+14	sister	Module2 Unit2_2	2	n.姐；妹	1
+14	Please come in	Module2 Unit2_2	2	请进	0
+14	Nice to meet you	Module2 Unit2_2	2	很高兴认识你	0
+15	animal	Module2 Unit3_1	2	n.动物	0
+15	big	Module2 Unit3_1	2	adj.大的	1
+15	brown	Module2 Unit3_1	2	adj.&n.棕色（的）	0
+15	cat	Module2 Unit3_1	2	n.猫	1
+15	dog	Module2 Unit3_1	2	n.狗	1
+15	ear	Module2 Unit3_1	2	n.耳朵	1
+15	eye	Module2 Unit3_1	2	n.眼睛	1
+15	hair	Module2 Unit3_1	2	n.头发	1
+15	little	Module2 Unit3_1	2	adj.小的	0
+15	long	Module2 Unit3_1	2	adj.长的	1
+16	mouse	Module2 Unit3_2	2	n.老鼠	0
+16	mouth	Module2 Unit3_2	2	n.嘴巴；口	1
+16	nose	Module2 Unit3_2	2	n.鼻子	1
+16	pig	Module2 Unit3_2	2	n.猪	1
+16	pink	Module2 Unit3_2	2	adj.&n.粉红色（的）	1
+16	rabbit	Module2 Unit3_2	2	n.兔子	0
+16	red	Module2 Unit3_2	2	adj.&n.红色（的）	1
+16	small	Module2 Unit3_2	2	adj.小的	1
+16	tail	Module2 Unit3_2	2	n.尾巴	0
+17	dance	Module3 Unit1_1	2	vi.跳舞	0
+17	hall	Module3 Unit1_1	2	n.礼堂	1
+17	library	Module3 Unit1_1	2	n.图书馆	1
+17	nice	Module3 Unit1_1	2	adj.好看的；美好的	0
+17	our	Module3 Unit1_1	2	pron.我们的	0
+17	photo	Module3 Unit1_1	2	n.照片	0
+17	play basketball	Module3 Unit1_1	2	打篮球	0
+17	playground	Module3 Unit1_1	2	n.操场	0
+17	read	Module3 Unit1_1	2	vt.阅读	0
+18	rose	Module3 Unit1_2	2	n.玫瑰花	0
+18	school	Module3 Unit1_2	2	n.学校	1
+18	that	Module3 Unit1_2	2	pron.那，那个	0
+18	there	Module3 Unit1_2	2	adv.在那里	0
+18	toilet	Module3 Unit1_2	2	n.厕所	0
+18	where	Module3 Unit1_2	2	adv.（在）哪里	0
+18	I'm new here	Module3 Unit1_2	2	我是新来的	0
+18	You're welcome	Module3 Unit1_2	2	不客气	0
+19	an	Module3 Unit2_1	3	art.一，一个	0
+19	apple	Module3 Unit2_1	3	n.苹果	1
+19	at	Module3 Unit2_1	3	prep.在（某处）	0
+19	ball	Module3 Unit2_1	3	n.球	0
+19	banana	Module3 Unit2_1	3	n.香蕉	1
+19	buy	Module3 Unit2_1	3	vt.买	0
+19	go	Module3 Unit2_1	3	vi.去	0
+19	happy	Module3 Unit2_1	3	adj.快乐的	0
+19	how many	Module3 Unit2_1	3	多少（个）	0
+19	how much	Module3 Unit2_1	3	多少（钱）	0
+20	ice cream	Module3 Unit2_2	3	冰淇淋	0
+20	many	Module3 Unit2_2	3	n.许多的	0
+20	may	Module3 Unit2_2	3	aux.可以	0
+20	orange	Module3 Unit2_2	3	adj.橘子	1
+20	peach	Module3 Unit2_2	3	n.桃子	1
+20	put	Module3 Unit2_2	3	vt.放	0
+20	shop	Module3 Unit2_2	3	n.商店	0
+20	shopping list	Module3 Unit2_2	3	购物单	0
+20	some	Module3 Unit2_2	3	adj.&pron一些	0
+20	supermarket	Module3 Unit2_2	3	n.超市	0
+21	sure	Module3 Unit2_3	3	adv.（表示同意）当然	0
+21	to	Module3 Unit2_3	3	prep.到；去	0
+21	toy	Module3 Unit2_3	3	n.玩具	0
+21	wow	Module3 Unit2_3	3	int.（表示惊奇）哇，呀	0
+21	Can I help you	Module3 Unit2_3	3	您需要什么	0
+21	May I have ... please	Module3 Unit2_3	3	请给我...；我能要...吗？	0
+21	Sure	Module3 Unit2_3	3	int.当然可以	0
+21	How much	Module3 Unit2_3	3	多少钱？	0
+21	Goodbye	Module3 Unit2_3	3	int.再见	0
+21	Bye-bye	Module3 Unit2_3	3	int.再见	0
+21	Let's go	Module3 Unit2_3	3	我们走吧	0
+22	balloon	Module3 Unit3_1	1	n.气球	1
+22	black	Module3 Unit3_1	1	adj.&n.黑色（的）	1
+22	blue	Module3 Unit3_1	1	adj.&n.蓝色（的）	0
+22	boat	Module3 Unit3_1	1	n.小船	1
+22	colour	Module3 Unit3_1	1	n.颜色	0
+22	flower	Module3 Unit3_1	1	n.花	1
+22	green	Module3 Unit3_1	1	adj.&n.绿色的	1
+22	orange	Module3 Unit3_1	1	adj.&n.橙红色（的）；橘黄色的	1
+22	park	Module3 Unit3_1	1	n.公园	0
+22	pupil	Module3 Unit3_1	1	n.小学生	0
+22	see	Module3 Unit3_1	1	vt.看见	0
+22	tube	Module3 Unit3_1	1	n.试管	0
+22	white	Module3 Unit3_1	1	adj.&n.白色（的）	0
+22	yellow	Module3 Unit3_1	1	adj.&n.黄色（的）	1
+23	ant	Module4 Unit1_1	1	n.蚂蚁	1
+23	beautiful	Module4 Unit1_1	1	adj.漂亮的	1
+23	bee	Module4 Unit1_1	1	n.蜜蜂	1
+23	day	Module4 Unit1_1	1	n.一天，一日	0
+23	duck	Module4 Unit1_1	1	n.鸭子	1
+23	fly	Module4 Unit1_1	1	vt.飞	1
+23	insect	Module4 Unit1_1	1	n.昆虫	0
+23	ladybird	Module4 Unit1_1	1	n.瓢虫	1
+23	purple	Module4 Unit1_1	1	adj.紫色的	0
+23	sun	Module4 Unit1_1	1	n.太阳	0
+24	chick	Module4 Unit2_1	1	n.小鸡	1
+24	count	Module4 Unit2_1	1	v.数	0
+24	dream	Module4 Unit2_1	1	n.梦	0
+24	end	Module4 Unit2_1	1	vt.结束	0
+24	face	Module4 Unit2_1	1	n.脸；面孔	0
+24	gate	Module4 Unit2_1	1	n.大门	0
+24	hen	Module4 Unit2_1	1	n.母鸡	1
+24	hot	Module4 Unit2_1	1	adj.炎热的	0
+24	put on	Module4 Unit2_1	1	穿上	0
+24	shoe	Module4 Unit2_1	1	n.鞋子	0
+24	they	Module4 Unit2_1	1	pron.他们	0
+25	box	Module4 Unit3_1	2	n.盒子	0
+25	branch	Module4 Unit3_1	2	n.树枝	1
+25	bud	Module4 Unit3_1	2	n.芽	0
+25	cool	Module4 Unit3_1	2	adj.凉爽的	0
+25	feel	Module4 Unit3_1	2	vt.感觉	0
+25	grow	Module4 Unit3_1	2	vt.生长	0
+25	leaf	Module4 Unit3_1	2	n.叶子（单数）	1
+25	leaves	Module4 Unit3_1	2	n.叶子（单数）	1
+25	now	Module4 Unit3_1	2	n.现在	0
+25	plant	Module4 Unit3_1	2	n.植物	1
+25	rainy	Module4 Unit3_1	2	adj.下雨的	0
+26	root	Module4 Unit3_2	2	n.根	1
+26	sad	Module4 Unit3_2	2	adj.悲伤的	0
+26	seed	Module4 Unit3_2	2	n.种子	0
+26	short	Module4 Unit3_2	2	adj.短的	0
+26	sunflower	Module4 Unit3_2	2	n.太阳花	0
+26	sunny	Module4 Unit3_2	2	adj.晴朗的	0
+26	thin	Module4 Unit3_2	2	adj.细的	1
+26	trunk	Module4 Unit3_2	2	n.树干	1
+26	tune	Module4 Unit3_2	2	n.曲调	0
+26	warm	Module4 Unit3_2	2	adj.温暖的	0
+26	wet	Module4 Unit3_2	2	adj.湿的	0

@@ -1,0 +1,287 @@
+1	cultural	Unit 1_1	6	adj.文化的	0
+1	relic	Unit 1_1	6	n.遗物	0
+1	rare	Unit 1_1	6	adj.稀罕的	1
+2	valuable	Unit 1_2	6	adj.贵重的	1
+2	survive	Unit 1_2	6	vt.幸免	1
+2	vase	Unit 1_2	6	n.花瓶	1
+2	dynasty	Unit 1_2	6	n.朝代	1
+2	ivory	Unit 1_2	6	n.象牙	0
+2	dragon	Unit 1_2	6	n.龙	0
+2	amber	Unit 1_2	6	n.琥珀	0
+2	in search of	Unit 1_2	6	寻找	1
+2	amaze	Unit 1_2	6	vt.使吃惊	1
+2	amazing	Unit 1_2	6	adj.令人吃惊的	1
+3	select	Unit 1_3	6	adj.挑选	1
+3	honey	Unit 1_3	6	n.蜜	1
+3	design	Unit 1_3	6	vt.设计	1
+3	fancy	Unit 1_3	6	n.奇特的	1
+3	style	Unit 1_3	6	n.风格	1
+3	decorate	Unit 1_3	6	vt.装饰	1
+3	jewel	Unit 1_3	6	n.珠宝	1
+3	artist	Unit 1_3	6	n.艺术家	1
+3	belong	Unit 1_3	6	vi.属于	1
+3	belong to	Unit 1_3	6	属于	1
+4	in return	Unit 1_4	6	作为报答	1
+4	Czar	Unit 1_4	6	n.沙皇	0
+4	troop	Unit 1_4	6	n.群	1
+4	reception	Unit 1_4	6	n.接待	1
+4	at war	Unit 1_4	6	交战状态	1
+4	remove	Unit 1_4	6	vt.移动	1
+4	less than	Unit 1_4	6	少于	1
+4	wooden	Unit 1_4	6	adj.木制的	1
+4	doubt	Unit 1_4	6	n.怀疑	1
+4	mystery	Unit 1_4	6	n.神秘	0
+5	former	Unit 1_5	6	adj.以前的	1
+5	worth	Unit 1_5	6	adj.值得的	1
+5	rebuild	Unit 1_5	6	v.重建	0
+5	local	Unit 1_5	6	adj.本地的	1
+5	apart	Unit 1_5	6	adv.分离地	1
+5	take apart	Unit 1_5	6	拆开	1
+5	painting	Unit 1_5	6	n.绘画	1
+5	castle	Unit 1_5	6	n.城堡	1
+5	trial	Unit 1_5	6	n.审判	1
+5	eyewitness	Unit 1_5	6	n.目击者	0
+6	evidence	Unit 1_6	6	n.证据	1
+6	explode	Unit 1_6	6	vt.爆炸	1
+6	entrance	Unit 1_6	6	n.入口	1
+6	sailor	Unit 1_6	6	n.水手	1
+6	sink	Unit 1_6	6	n.下沉	1
+6	maid	Unit 1_6	6	n.少女	1
+6	Berlin	Unit 1_6	6	n.柏林	0
+6	think highly of	Unit 1_6	6	看重	1
+6	informal	Unit 1_6	6	adj.非正式的	1
+6	debate	Unit 1_6	6	n.辩论	1
+7	ancient	Unit 2_1	5	adj.古代的	1
+7	compete	Unit 2_1	5	v.比赛	1
+7	competitor	Unit 2_1	5	n.竞争者	1
+7	take part in	Unit 2_1	5	参加	1
+7	medal	Unit 2_1	5	n.奖章	1
+7	stand for	Unit 2_1	5	代表	1
+7	mascot	Unit 2_1	5	n.吉祥物	0
+7	Greece	Unit 2_1	5	n.希腊	1
+7	Greek	Unit 2_1	5	n.希腊的	1
+7	magical	Unit 2_1	5	adj.巫术的	1
+8	volunteer	Unit 2_2	5	n.志愿者	1
+8	homeland	Unit 2_2	5	n.祖国	1
+8	regular	Unit 2_2	5	adj.规则的	1
+8	basis	Unit 2_2	5	n.基础	1
+8	athlete	Unit 2_2	5	n.运动员	1
+8	admit	Unit 2_2	5	vt.容许	1
+8	slave	Unit 2_2	5	n.奴隶	1
+8	nowadays	Unit 2_2	5	adv.现今	1
+8	gymnastics	Unit 2_2	5	n.体操	1
+8	athletics	Unit 2_2	5	n.体育运动	0
+9	Stadium	Unit 2_3	5	n.体育场	1
+9	gymnasium	Unit 2_3	5	n.体育馆	1
+9	as well	Unit 2_3	5	也	1
+9	host	Unit 2_3	5	v.&n.做东	1
+9	responsibility	Unit 2_3	5	n.责任	1
+9	olive	Unit 2_3	5	n.橄榄树	0
+9	wreath	Unit 2_3	5	n.花圈	0
+9	replace	Unit 2_3	5	vt.取代	1
+9	motto	Unit 2_3	5	n.座右铭	1
+9	swift	Unit 2_3	5	adj.快的	1
+10	similarity	Unit 2_4	5	n.相似性	0
+10	Athens	Unit 2_4	5	n.雅典	0
+10	charge	Unit 2_4	5	n.收费	1
+10	in charge	Unit 2_4	5	主管	1
+10	physical	Unit 2_4	5	adj.物理的	1
+10	fine	Unit 2_4	5	adj.罚款	1
+10	poster	Unit 2_4	5	n.海报	1
+10	advertise	Unit 2_4	5	vi.做广告	1
+10	Atlanta	Unit 2_4	5	n.亚特兰大	0
+10	princess	Unit 2_4	5	n.公主	0
+11	glory	Unit 2_5	5	n.光荣	1
+11	bargain	Unit 2_5	5	vi.讨价还价	1
+11	prince	Unit 2_5	5	n.王子	0
+11	hopeless	Unit 2_5	5	adj.没有希望的	1
+11	foolish	Unit 2_5	5	adj.愚蠢的	1
+11	goddess	Unit 2_5	5	n.女神	0
+11	pain	Unit 2_5	5	n.疼痛	1
+11	one after another	Unit 2_5	5	陆续地	1
+11	deserve	Unit 2_5	5	vt.应受；值得	1
+11	striker	Unit 2_5	5	n.敲击者	0
+12	abacus	Unit 3_1	7	n.算盘	0
+12	calculator	Unit 3_1	7	n.计算器	0
+12	PC	Unit 3_1	7	个人电脑	0
+12	laptop	Unit 3_1	7	n.掌上电脑	0
+12	analytical	Unit 3_1	7	adj.分析的	0
+12	calculate	Unit 3_1	7	vt.计算	1
+12	universal	Unit 3_1	7	adj.普遍的	1
+12	simplify	Unit 3_1	7	v.简化	1
+12	sum	Unit 3_1	7	n.总数	1
+13	operator	Unit 3_2	7	n.操作员	1
+13	logical	Unit 3_2	7	adj.合逻辑的	1
+13	logically	Unit 3_2	7	adv.逻辑上	1
+13	technology	Unit 3_2	7	n.工艺	1
+13	technological	Unit 3_2	7	adj.科技的	1
+13	revolution	Unit 3_2	7	n.革命	1
+13	artificial	Unit 3_2	7	adj.人造的	1
+13	intelligence	Unit 3_2	7	n.智力	1
+13	intelligent	Unit 3_2	7	adj.智能的	1
+14	solve	Unit 3_3	7	v.解决	1
+14	mathematical	Unit 3_3	7	adj.数学的	0
+14	from ... on	Unit 3_3	7	从...时起	1
+14	reality	Unit 3_3	7	n.真实	1
+14	designer	Unit 3_3	7	n.设计师	0
+14	personal	Unit 3_3	7	adj.私人的	1
+14	personally	Unit 3_3	7	adv.就个人地	1
+14	tube	Unit 3_3	7	n.管	1
+14	transistor	Unit 3_3	7	n.晶体管	0
+15	chip	Unit 3_4	7	n.芯片	0
+15	as a result	Unit 3_4	7	结果	1
+15	total	Unit 3_4	7	adj.总的	1
+15	totally	Unit 3_4	7	adv.完全地	1
+15	so ... that ...	Unit 3_4	7	如此...以致于...	1
+15	network	Unit 3_4	7	n.网络	1
+15	web	Unit 3_4	7	n.网	1
+15	application	Unit 3_4	7	n.应用	1
+15	finance	Unit 3_4	7	n.金融	1
+16	mobile	Unit 3_5	7	adj.可移动的	1
+16	rocket	Unit 3_5	7	n.火箭	1
+16	explore	Unit 3_5	7	vt.探索	1
+16	Mars	Unit 3_5	7	n.火星	0
+16	anyhow	Unit 3_5	7	adv.无论如何	1
+16	goal	Unit 3_5	7	n.目标	1
+16	happiness	Unit 3_5	7	n.幸福	1
+16	human race	Unit 3_5	7	人类	1
+16	supporting	Unit 3_5	7	adj.支持的	0
+17	download	Unit 3_6	7	v.下载	1
+17	programmer	Unit 3_6	7	n.程序员	0
+17	virus	Unit 3_6	7	n.病毒	1
+17	android	Unit 3_6	7	n.机器人	0
+17	signal	Unit 3_6	7	n.&v.发信号	1
+17	teammate	Unit 3_6	7	n.同伴	0
+17	type	Unit 3_6	7	n.类型	1
+17	in a way	Unit 3_6	7	某种程度上	1
+17	coach	Unit 3_6	7	n.教练	1
+17	arise	Unit 3_6	7	vi.出现	1
+18	with the help of	Unit 3_7	7	在...帮助下	1
+18	electronic	Unit 3_7	7	adj.电子的	1
+18	appearance	Unit 3_7	7	n.外观	1
+18	character	Unit 3_7	7	n.性格	1
+18	mop	Unit 3_7	7	n.拖把	1
+18	deal with	Unit 3_7	7	处理	1
+18	watch over	Unit 3_7	7	看守	1
+18	naughty	Unit 3_7	7	adj.顽皮的	0
+18	niece	Unit 3_7	7	n.侄女	1
+18	spoil	Unit 3_7	7	v.宠坏	0
+19	wildlife	Unit 4_1	6	n.野生生物	1
+19	protection	Unit 4_1	6	n.保护	1
+19	wild	Unit 4_1	6	adj.野生的	1
+19	habitat	Unit 4_1	6	n.栖息地	0
+19	threaten	Unit 4_1	6	vt.恐吓	0
+19	decrease	Unit 4_1	6	vt.减少	1
+19	endanger	Unit 4_1	6	vt.危害	0
+19	die out	Unit 4_1	6	灭亡	1
+19	loss	Unit 4_1	6	n.损失	1
+19	reserve	Unit 4_1	6	vt.保护区	1
+20	hunt	Unit 4_2	6	v.打猎	1
+20	zone	Unit 4_2	6	n.地域	1
+20	in peace	Unit 4_2	6	和平地	1
+20	in danger of	Unit 4_2	6	在危险中	1
+20	species	Unit 4_2	6	n.种类	0
+20	carpet	Unit 4_2	6	n.地毯	1
+20	respond	Unit 4_2	6	vi.回答	1
+20	distant	Unit 4_2	6	adj.远的	1
+20	fur	Unit 4_2	6	n.毛皮	1
+20	antelope	Unit 4_2	6	n.羚羊	0
+21	relief	Unit 4_3	6	n.减轻	1
+21	in relief	Unit 4_3	6	如释重负	1
+21	laughter	Unit 4_3	6	n.笑	1
+21	burst into laughter	Unit 4_3	6	突然笑了	1
+21	mercy	Unit 4_3	6	n.仁慈	1
+21	certain	Unit 4_3	6	adj.确定的	1
+21	importance	Unit 4_3	6	n.重要	1
+21	rub	Unit 4_3	6	vt.擦	1
+21	protect ... from	Unit 4_3	6	保护...不受...	1
+21	mosquito	Unit 4_3	6	n.蚊子	1
+22	millipede	Unit 4_4	6	n.千足虫	0
+22	insect	Unit 4_4	6	n.昆虫	1
+22	contain	Unit 4_4	6	vt.容纳	1
+22	powerful	Unit 4_4	6	adj.强大的	1
+22	affect	Unit 4_4	6	vt.影响，侵袭	1
+22	attention	Unit 4_4	6	n.注意	1
+22	pay attention to	Unit 4_4	6	注意	1
+22	appreciate	Unit 4_4	6	vt.鉴赏；感激	1
+22	succeed	Unit 4_4	6	vt.成功	1
+22	rhino	Unit 4_4	6	n.犀牛	0
+23	secure	Unit 4_5	6	adj.安全的	1
+23	income	Unit 4_5	6	n.收入	1
+23	employ	Unit 4_5	6	n.雇佣，利用	1
+23	harm	Unit 4_5	6	n.损害	1
+23	Milu deer	Unit 4_5	6	麋鹿	0
+23	bite	Unit 4_5	6	n.&v.咬	1
+23	extinction	Unit 4_5	6	n.灭绝	0
+23	dinosaur	Unit 4_5	6	n.恐龙	1
+23	come into being	Unit 4_5	6	形成	1
+23	county	Unit 4_5	6	n.县	0
+24	inspect	Unit 4_6	6	vt.检查	1
+24	unexpected	Unit 4_6	6	adj.没料到的	0
+24	incident	Unit 4_6	6	n.事件	1
+24	dust	Unit 4_6	6	n.灰尘	1
+24	according to	Unit 4_6	6	按照	1
+24	disappearance	Unit 4_6	6	n.消失	0
+24	fierce	Unit 4_6	6	adj.凶猛的	1
+24	so that	Unit 4_6	6	以致于	1
+24	ending	Unit 4_6	6	n.结局	1
+24	faithfully	Unit 4_6	6	adv.忠诚地	0
+25	classical	Unit 5_1	6	adj.古典的	0
+25	roll	Unit 5_1	6	vi.滚动	1
+25	rock-and-roll	Unit 5_1	6	n.摇滚乐	0
+25	orchestra	Unit 5_1	6	n.管弦乐队	0
+25	rap	Unit 5_1	6	n.说唱乐	0
+25	folk	Unit 5_1	6	adj.民间的	1
+25	jazz	Unit 5_1	6	n.爵士音乐	1
+25	choral	Unit 5_1	6	adj.唱诗班的	0
+25	musician	Unit 5_1	6	n.音乐家	1
+25	dream of	Unit 5_1	6	梦见	1
+26	karaoke	Unit 5_2	6	n.卡拉OK	0
+26	pretend	Unit 5_2	6	vt.假装	1
+26	to be honest	Unit 5_2	6	说实在地	1
+26	attach	Unit 5_2	6	v.系上，附着	1
+26	attach ... to	Unit 5_2	6	附上	1
+26	form	Unit 5_2	6	n.形成	1
+26	fame	Unit 5_2	6	n.名声	0
+26	passer-by	Unit 5_2	6	n.过路人	1
+26	earn	Unit 5_2	6	vt.赚	1
+26	extra	Unit 5_2	6	adj.额外的	1
+27	instrument	Unit 5_3	6	n.工具；乐器	1
+27	perform	Unit 5_3	6	v.表演（动词）	1
+27	performance	Unit 5_3	6	n.表演（名词0	1
+27	pub	Unit 5_3	6	n.酒馆	1
+27	cash	Unit 5_3	6	n.现金	1
+27	in cash	Unit 5_3	6	用现金	1
+27	studio	Unit 5_3	6	n.工作室	1
+27	millionaire	Unit 5_3	6	n.百万富翁	1
+27	play jokes on	Unit 5_3	6	戏弄	1
+27	actor	Unit 5_3	6	n.男演员	1
+28	rely	Unit 5_4	6	v.依赖	1
+28	rely on	Unit 5_4	6	依赖	1
+28	broadcast	Unit 5_4	6	n.&v.广播	1
+28	humorous	Unit 5_4	6	adj.幽默的	1
+28	familiar	Unit 5_4	6	adj.熟悉的	1
+28	be familiar with	Unit 5_4	6	熟悉	1
+28	or so	Unit 5_4	6	大约	1
+28	break up	Unit 5_4	6	打碎	1
+28	reunite	Unit 5_4	6	v.再统一	0
+28	attractive	Unit 5_4	6	adj.吸引人的	1
+29	addition	Unit 5_5	6	n.加	1
+29	in addition	Unit 5_5	6	另外	1
+29	sort out	Unit 5_5	6	分类	1
+29	excitement	Unit 5_5	6	n.兴奋	0
+29	ballad	Unit 5_5	6	n.歌谣	0
+29	overnight	Unit 5_5	6	n.在晚上	0
+29	dip	Unit 5_5	6	n.浸	1
+29	tadpole	Unit 5_5	6	n.蝌蚪	0
+29	lily	Unit 5_5	6	n.百合	0
+29	confident	Unit 5_5	6	adj.自信的	1
+30	brief	Unit 5_6	6	adj.简短的	1
+30	briefly	Unit 5_6	6	adv.简要地	1
+30	devotion	Unit 5_6	6	n.投入	1
+30	afterwards	Unit 5_6	6	adv.然后	1
+30	invitation	Unit 5_6	6	n.邀请	1
+30	beard	Unit 5_6	6	n.胡须	1
+30	sensitive	Unit 5_6	6	adj.敏感的	1
+30	painful	Unit 5_6	6	adj.痛苦的	1
+30	above all	Unit 5_6	6	首先	1

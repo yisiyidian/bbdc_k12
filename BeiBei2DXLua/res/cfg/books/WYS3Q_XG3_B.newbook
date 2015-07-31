@@ -1,0 +1,159 @@
+1	song	Module 1_1	2	n.歌曲	1
+1	TV	Module 1_1	2	n.电视台	1
+1	favourite	Module 1_1	2	adj.最喜欢的	1
+2	colour	Module 1_2	2	n.颜色	1
+2	Here you are	Module 1_2	2	给你	0
+3	they	Module 2_1	2	pron.他们	1
+3	ther're	Module 2_1	2	他们是	0
+3	monkey	Module 2_1	2	n.猴子	1
+3	baby	Module 2_1	2	n.幼兽	1
+3	all	Module 2_1	2	n.每个	1
+3	zoo	Module 2_1	2	n.动物园	1
+3	tiger	Module 2_1	2	n.老虎	1
+3	lion	Module 2_1	2	n.狮子	0
+4	elephant	Module 2_2	2	n.大象	1
+4	fat	Module 2_2	2	adj.胖的	0
+4	man	Module 2_2	2	n.男人	1
+4	short	Module 2_2	2	adj.矮的	1
+4	tall	Module 2_2	2	adj.高的	1
+4	small	Module 2_2	2	adj.小的	1
+4	thin	Module 2_2	2	adj.瘦的	1
+4	big	Module 2_2	2	adj.大的	1
+5	like	Module 3_1	1	vt.喜欢	1
+5	football	Module 3_1	1	n.足球	1
+5	them	Module 3_1	1	pron.他们	1
+5	ouch	Module 3_1	1	int.哎哟	0
+5	basketball	Module 3_1	1	n.篮球	1
+5	table tennis	Module 3_1	1	乒乓球	0
+5	morning exercises	Module 3_1	1	早操	0
+5	ride	Module 3_1	1	vt.骑	0
+5	bike	Module 3_1	1	n.自行车	1
+5	swim	Module 3_1	1	v.游泳	1
+5	skip	Module 3_1	1	vi.跳绳	0
+6	meat	Module 4_1	2	n.肉	0
+6	pass	Module 4_1	2	vt.传递	0
+6	rice	Module 4_1	2	n.米饭	1
+6	mum	Module 4_1	2	n.妈妈	1
+6	noodles	Module 4_1	2	n.面条	1
+6	fish	Module 4_1	2	n.鱼	1
+6	but	Module 4_1	2	conj.但是	1
+6	milk	Module 4_1	2	n.牛奶	1
+7	mm	Module 4_2	2	abbr.呣	0
+7	does	Module 4_2	2	vt.do的第三人称单数形式	1
+7	orange	Module 4_2	2	adj.橙	1
+7	apple	Module 4_2	2	n.苹果	1
+7	banana	Module 4_2	2	n.香蕉	1
+7	pear	Module 4_2	2	n.梨	0
+7	doesn't	Module 4_2	2	不做(第三人称单数）	0
+8	goes	Module 5_1	2	vi.去（第三人称单数）	1
+8	go to school	Module 5_1	2	上学	0
+8	on	Module 5_1	2	prep.在...的时候（具体某天）	1
+8	Monday	Module 5_1	2	n.星期一	0
+8	play	Module 5_1	2	n.参加	1
+8	phone	Module 5_1	2	n.电话	0
+8	on the phone	Module 5_1	2	通电话	0
+8	with	Module 5_1	2	prep.与...在一起	1
+8	friend	Module 5_1	2	n.朋友	1
+8	at	Module 5_1	2	prep.在...	1
+8	home	Module 5_1	2	n.家	1
+9	at home	Module 5_2	2	在家	0
+9	who	Module 5_2	2	pron.谁	1
+9	only	Module 5_2	2	adv.只	0
+9	year	Module 5_2	2	n.年龄，年	1
+9	work	Module 5_2	2	n.工作地点	1
+9	go to work	Module 5_2	2	上班	0
+9	Saturday	Module 5_2	2	n.星期六	0
+9	shopping	Module 5_2	2	n.购物	0
+9	go shopping	Module 5_2	2	去购物	0
+9	dad	Module 5_2	2	n.爸爸	1
+10	do	Module 6_1	2	v.做	1
+10	Sunday	Module 6_1	2	vt.星期日	0
+10	swimming	Module 6_1	2	n.游泳	0
+10	go swimming	Module 6_1	2	去游泳	0
+10	eat	Module 6_1	2	vt.吃	1
+10	in	Module 6_1	2	prep.在...期间	1
+10	sleep	Module 6_1	2	v.睡觉	1
+10	watch	Module 6_1	2	n.观看	1
+10	TV	Module 6_1	2	n.电视节目	1
+10	watch TV	Module 6_1	2	看电视	0
+11	have	Module 6_2	2	v.进行	1
+11	class	Module 6_2	2	n.课	1
+11	today	Module 6_2	2	n.今天	1
+11	music	Module 6_2	2	n.音乐	1
+11	has	Module 6_2	2	vt.做，进行（第三人称单数）	1
+11	Chinese	Module 6_2	2	n.语文	1
+11	maths	Module 6_2	2	n.数学	1
+11	art	Module 6_2	2	n.美术	1
+11	PE	Module 6_2	2	n.体育	1
+11	science	Module 6_2	2	n.科学	1
+12	we	Module 7_1	2	pron.我们	1
+12	fly	Module 7_1	2	vt.放	1
+12	spring	Module 7_1	2	n.春天	1
+12	summer	Module 7_1	2	n.夏天	1
+12	season	Module 7_1	2	n.季节	1
+12	nice	Module 7_1	2	adj.迷人的	1
+12	warm	Module 7_1	2	adj.暖和的	1
+12	hot	Module 7_1	2	adj.热的	1
+12	autumn	Module 7_1	2	n.秋天	1
+12	cool	Module 7_1	2	adj.凉爽的	1
+13	winter	Module 7_2	2	n.冬天	1
+13	cold	Module 7_2	2	adj.寒冷的	1
+13	skating	Module 7_2	2	n.滑冰	0
+13	go skating	Module 7_2	2	去滑冰	0
+13	play	Module 7_2	2	n.玩	1
+13	snow	Module 7_2	2	n.雪	1
+13	rain	Module 7_2	2	n.雨	1
+13	sunny	Module 7_2	2	adj.晴朗的	1
+13	windy	Module 7_2	2	adj.有风的	1
+13	very	Module 7_2	2	adv.很	1
+14	toy	Module 8_1	1	n.玩具	1
+14	under	Module 8_1	1	prep.在...下面	1
+14	for	Module 8_1	1	prep.为	1
+14	box	Module 8_1	1	n.盒子	1
+14	behind	Module 8_1	1	adv.在...后面	1
+14	bedroom	Module 8_1	1	n.卧室	0
+14	flies	Module 8_1	1	v.放飞（第三人称单数）	1
+14	park	Module 8_1	1	n.公园	1
+14	lake	Module 8_1	1	n.湖	1
+14	tree	Module 8_1	1	n.树	1
+14	fishing	Module 8_1	1	n.捕鱼	0
+14	go fishing	Module 8_1	1	去钓鱼	0
+14	walk	Module 8_1	1	vi.行走	1
+15	have got	Module 9_1	2	有	0
+15	sweater	Module 9_1	2	n.毛线衫	1
+15	bed	Module 9_1	2	n.床	1
+15	line	Module 9_1	2	n.线	0
+15	about	Module 9_1	2	prep.关于	1
+15	animal	Module 9_1	2	n.动物	1
+15	sport	Module 9_1	2	n.运动	1
+15	haven't got	Module 9_1	2	没有	0
+16	dress	Module 9_2	2	n.连衣裙	1
+16	coat	Module 9_2	2	n.外套	1
+16	T-shirt	Module 9_2	2	n.T恤衫	0
+16	has got	Module 9_2	2	有（第三人称单数）	0
+16	hasn't got	Module 9_2	2	没有	0
+16	by	Module 9_2	2	prep.乘（交通工具）	1
+16	bus	Module 9_2	2	n.公共汽车	1
+16	car	Module 9_2	2	n.轿车	1
+17	hat	Module 10_1	2	n.帽子	0
+17	come	Module 10_1	2	vi.来	1
+17	back	Module 10_1	2	adv.回到	1
+17	come back	Module 10_1	2	回来	0
+17	clothes	Module 10_1	2	n.衣服	1
+17	open	Module 10_1	2	vt.打开	1
+17	let's	Module 10_1	2	让我们	0
+17	put on	Module 10_1	2	穿上	0
+17	funny	Module 10_1	2	adj.滑稽的	0
+17	party	Module 10_1	2	n.聚会	1
+17	OK	Module 10_1	2	adj.好的	0
+18	brown	Module 10_2	2	adj.褐色的	1
+18	trousers	Module 10_2	2	n.裤子	1
+18	orange	Module 10_2	2	adj.橙色的	1
+18	shirt	Module 10_2	2	n.衬衫	1
+18	look at	Module 10_2	2	看	0
+18	shoe	Module 10_2	2	n.鞋子	1
+18	can't	Module 10_2	2	不能	0
+18	turn	Module 10_2	2	vt.轮到的机会	1
+18	white	Module 10_2	2	adj.白色的	1
+18	photo	Module 10_2	2	n.照片	1
+18	skirt	Module 10_2	2	n.女裙	1

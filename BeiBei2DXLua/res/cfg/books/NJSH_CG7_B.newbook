@@ -1,0 +1,245 @@
+1	guide	Unit1_1	4	n.指南	1
+1	tour	Unit1_1	4	n.旅行	1
+1	take part in	Unit1_1	4	参加	1
+2	pigeon	Unit1_2	4	n.鸽子	0
+2	reason	Unit1_2	4	n.原因	1
+2	creek	Unit1_2	4	n.小溪	0
+2	bund	Unit1_2	4	n.堤岸	0
+2	grand	Unit1_2	4	adj.大	1
+2	theatre	Unit1_2	4	n.剧院	1
+2	botanical garden	Unit1_2	4	植物园	0
+2	oriental	Unit1_2	4	adj.东方的	0
+2	pearl	Unit1_2	4	n.珍珠	0
+3	century	Unit1_3	4	n.世纪	1
+3	technology	Unit1_3	4	n.科技	1
+3	sightseeing	Unit1_3	4	n.观光	1
+3	get on with	Unit1_3	4	进展	1
+3	be famouse for	Unit1_3	4	以...而著名	1
+3	view	Unit1_3	4	n.风景	1
+3	be known as	Unit1_3	4	被认为	1
+3	paradise	Unit1_3	4	n.天堂	0
+3	therefore	Unit1_3	4	adv.因此	1
+4	surprising	Unit1_4	4	adj.令人惊奇的	1
+4	district	Unit1_4	4	n.地区	1
+4	Maglev	Unit1_4	4	n.磁悬浮列车	0
+4	state	Unit1_4	4	adj.国家的	1
+4	resort	Unit1_4	4	n.度假胜地	0
+4	observatory	Unit1_4	4	n.天文台	0
+4	plaza	Unit1_4	4	n.购物中心	0
+4	cruise	Unit1_4	4	n.乘船游览	0
+4	floating	Unit1_4	4	adj.浮动的	1
+4	think of	Unit1_4	4	想出	1
+5	take a look	Unit2_1	2	看一看	1
+5	stupid	Unit2_1	2	adj.愚蠢的	1
+5	clown	Unit2_1	2	n.小丑	0
+5	action	Unit2_1	2	n.动作	1
+5	action film	Unit2_1	2	动作片	1
+5	robber	Unit2_1	2	n.盗贼	1
+5	hate	Unit2_1	2	vt.讨厌	1
+5	adventure	Unit2_1	2	n.冒险	0
+5	princess	Unit2_1	2	n.公主	1
+5	prince	Unit2_1	2	n.王子	1
+5	duration	Unit2_1	2	n.持续时间	1
+5	circus	Unit2_1	2	n.马戏团	0
+6	full of	Unit2_2	2	充满	1
+6	laughter	Unit2_2	2	n.笑声	1
+6	cowboy	Unit2_2	2	n.牛仔	1
+6	diary	Unit2_2	2	n.记事簿	1
+6	pay	Unit2_2	2	vt.付费	1
+6	pay for	Unit2_2	2	为...付钱	1
+6	altogether	Unit2_2	2	adv.总共	1
+6	price	Unit2_2	2	n.价格	1
+6	avenue	Unit2_2	2	n.大街	0
+6	lane	Unit2_2	2	n.小巷	1
+6	bookshop	Unit2_2	2	n.书店	1
+6	route	Unit2_2	2	n.路线	1
+7	since	Unit3_1	2	conj.&prep.自从	1
+7	quite	Unit3_1	2	adv.十分	1
+7	quite a few	Unit3_1	2	不少	1
+7	machine	Unit3_1	2	n.机器	1
+7	waiter	Unit3_1	2	n.侍者	1
+7	coach	Unit3_1	2	n.教练	1
+7	train	Unit3_1	2	n.&v.训练	1
+7	headmaster	Unit3_1	2	n.校长	0
+7	charge	Unit3_1	2	n.&v.掌管	1
+7	in charge of	Unit3_1	2	负责掌管	1
+8	field	Unit3_2	2	n.田地	1
+8	tell the time	Unit3_2	2	报时	1
+8	key	Unit3_2	2	n.钥匙	1
+8	ring	Unit3_2	2	n.小环	1
+8	key ring	Unit3_2	2	钥匙环	1
+8	cable	Unit3_2	2	n.缆绳	1
+8	cable car	Unit3_2	2	缆车	1
+8	fantastic	Unit3_2	2	adj.极好的	1
+8	have a good time	Unit3_2	2	过的愉快	1
+9	anything	Unit4_1	2	pron.任何东西	1
+9	jeans	Unit4_1	2	n.牛仔裤	0
+9	myself	Unit4_1	2	pron.我自己	1
+9	kid	Unit4_1	2	n.小孩	1
+9	fashion	Unit4_1	2	n.时尚	1
+9	super	Unit4_1	2	adj.超级的	1
+9	carpet	Unit4_1	2	n.地毯	1
+9	spot	Unit4_1	2	n.点	1
+9	sweater	Unit4_1	2	n.毛线衫	0
+9	V-neck	Unit4_1	2	n.V型领	1
+9	neck	Unit4_1	2	n.衣领	1
+10	checks	Unit4_2	2	n.格子	1
+10	stripe	Unit4_2	2	n.条纹	0
+10	try on	Unit4_2	2	试穿	1
+10	excuse	Unit4_2	2	n.原谅	1
+10	excuse me	Unit4_2	2	请原谅	1
+10	certainly	Unit4_2	2	adv.行	1
+10	changing room	Unit4_2	2	试衣间	1
+10	over there	Unit4_2	2	在那边	1
+10	loose	Unit4_2	2	adj.宽松的	1
+10	tight	Unit4_2	2	adj.紧的	1
+10	medium	Unit4_2	2	adj.中号的	1
+11	learn from	Unit5_1	2	向...学习	1
+11	wife	Unit5_1	2	n.妻子	1
+11	long ago	Unit5_1	2	很久以前	1
+11	hut	Unit5_1	2	n.小屋	0
+11	fairy	Unit5_1	2	n.小精灵	0
+11	hard-working	Unit5_1	2	adj.工作努力的	1
+11	although	Unit5_1	2	conj.虽然	1
+11	earn	Unit5_1	2	vt.挣钱	1
+11	gold	Unit5_1	2	n.黄金	1
+11	coin	Unit5_1	2	n.硬币	1
+11	comfortable	Unit5_1	2	adj.舒服的	1
+12	reply	Unit5_2	2	vt.&n.回答	1
+12	greedy	Unit5_2	2	adj.贪婪的	0
+12	happiness	Unit5_2	2	n.幸福	1
+12	forever	Unit5_2	2	adv.永远	0
+12	disappear	Unit5_2	2	vi.消失	1
+12	vote	Unit5_2	2	v.投票	1
+12	vote for	Unit5_2	2	投票	1
+12	give up	Unit5_2	2	放弃	1
+12	pocket	Unit5_2	2	n.口袋	1
+12	pocket money	Unit5_2	2	零花钱	1
+13	talk about	Unit6_1	1	讨论	1
+13	able	Unit6_1	1	adj.有能力的	1
+13	be able to	Unit6_1	1	能够	1
+13	planet	Unit6_1	1	n.行星	1
+13	space station	Unit6_1	1	航天站	1
+13	pill	Unit6_1	1	n.药片	1
+13	meal	Unit6_1	1	n.一顿饭	1
+13	hope	Unit6_1	1	n.期望	1
+13	secret	Unit6_1	1	n.秘密的	1
+13	sign	Unit6_1	1	v.签字	1
+13	seal	Unit6_1	1	n.密封	0
+13	everyone	Unit6_1	1	pron.每人	1
+14	poem	Unit7_1	2	n.诗	1
+14	end	Unit7_1	2	vt.结束	1
+14	temperature	Unit7_1	2	n.温度	1
+14	drop	Unit7_1	2	v.降低	1
+14	shiver	Unit7_1	2	vt.发抖	0
+14	blackboard	Unit7_1	2	n.黑板	1
+14	awful	Unit7_1	2	adj.糟糕的	1
+14	grasshopper	Unit7_1	2	n.蚱蜢	0
+14	ant	Unit7_1	2	n.蚂蚁	0
+15	lazy	Unit7_2	2	adj.懒惰的	0
+15	all the time	Unit7_2	2	一直	1
+15	silly	Unit7_2	2	adj.傻的	1
+15	at last	Unit7_2	2	最终	1
+15	everywhere	Unit7_2	2	adv.到处	1
+15	nothing	Unit7_2	2	pron.没有东西	1
+15	disappointed	Unit7_2	2	adj.失望的	1
+15	out of	Unit7_2	2	从...里出来	1
+15	sadly	Unit7_2	2	adv.伤心地	1
+16	enjoyable	Unit8_1	2	adj.有乐趣的	1
+16	ideal	Unit8_1	2	adj.理想的	0
+16	conduct	Unit8_1	2	v.组织	1
+16	modern	Unit8_1	2	adj.现代化的	1
+16	laboratory	Unit8_1	2	n.实验室	1
+16	experiment	Unit8_1	2	n.实验	1
+16	organize	Unit8_1	2	vi.组织	1
+16	impossible	Unit8_1	2	adj.不可能的	1
+16	necessary	Unit8_1	2	adj.必需的	1
+17	unnecessary	Unit8_2	2	adj.不需要的	1
+17	uninteresting	Unit8_2	2	无聊的	1
+17	yourselves	Unit8_2	2	你们自己	1
+17	ourselves	Unit8_2	2	pron.我们自己	1
+17	put up	Unit8_2	2	张贴	1
+17	themselves	Unit8_2	2	pron.他们自己	1
+17	clean up	Unit8_2	2	打扫干净	1
+17	herself	Unit8_2	2	pron.她自己	1
+17	himself	Unit8_2	2	pron.他自己	1
+18	paragraph	Unit9_1	3	n.段	1
+18	correct	Unit9_1	3	adj.正确的	1
+18	order	Unit9_1	3	n.顺序	1
+18	strength	Unit9_1	3	n.力量	1
+18	in the end	Unit9_1	3	最后	1
+18	proud	Unit9_1	3	adj.骄傲的	1
+18	show off	Unit9_1	3	炫耀	1
+18	brightly	Unit9_1	3	adv.明亮地	1
+18	sweat	Unit9_1	3	vi.出汗	0
+18	take off	Unit9_1	3	脱下	1
+19	stick	Unit9_2	3	n.&vt.棍	1
+19	coloured	Unit9_2	3	adj.有颜色的	1
+19	reel	Unit9_2	3	n.卷筒	0
+19	string	Unit9_2	3	n.线	1
+19	frame	Unit9_2	3	n.框架	1
+19	onto	Unit9_2	3	prep.向	1
+19	tie	Unit9_2	3	vt.系	1
+19	rise	Unit9_2	3	v.升起	1
+19	dive	Unit9_2	3	n.&vi.俯冲	0
+19	flap	Unit9_2	3	v.拍打	0
+20	sail	Unit9_3	3	vt.航行	1
+20	sailing boat	Unit9_3	3	帆船	1
+20	lean	Unit9_3	3	n.&v.倾斜	1
+20	speed	Unit9_3	3	n.&v.快速前行	1
+20	bow	Unit9_3	3	v.鞠躬	0
+20	sway	Unit9_3	3	v.&n.摆动	0
+20	among	Unit9_3	3	prep.在...中	1
+20	slide	Unit9_3	3	n.&v.滑动	1
+20	dimple	Unit9_3	3	n.酒窝	0
+21	iced	Unit10_1	2	adj.冰镇的	0
+21	punch	Unit10_1	2	n.潘趣酒	0
+21	ice cube	Unit10_1	2	小冰块	0
+21	form	Unit10_1	2	n.形式	1
+21	freeze	Unit10_1	2	v.结冰	1
+21	cool down	Unit10_1	2	变凉	1
+21	turn into	Unit10_1	2	转变成	1
+21	lid	Unit10_1	2	n.盖子	0
+21	second	Unit10_1	2	n.秒	1
+22	straw	Unit10_2	2	n.吸管	0
+22	toothpick	Unit10_2	2	n.牙签	0
+22	hole	Unit10_2	2	n.洞	1
+22	side	Unit10_2	2	n.边	1
+22	connect	Unit10_2	2	vt.连接	1
+22	allow	Unit10_2	2	vt.允许	1
+22	play with	Unit10_2	2	玩耍	1
+22	safety	Unit10_2	2	n.安全	1
+23	electricity	Unit11_1	3	n.电	1
+23	lightning	Unit11_1	3	n.闪电	1
+23	pylon	Unit11_1	3	n.电缆塔	1
+23	flash	Unit11_1	3	n.&v.闪光	1
+23	thunder	Unit11_1	3	n.雷	1
+23	crash	Unit11_1	3	v.发出巨响	1
+23	wire	Unit11_1	3	n.电线	1
+23	fright	Unit11_1	3	n.惊吓	1
+23	frightening	Unit11_1	3	adj.引起恐惧的	1
+23	carry	Unit11_1	3	v.支撑	1
+23	arm	Unit11_1	3	n.臂状物	1
+24	spire	Unit11_2	3	n.尖顶	1
+24	plug	Unit11_2	3	n.插座	1
+24	importance	Unit11_2	3	n.重要性	1
+24	microwave	Unit11_2	3	n.微波炉	1
+24	vaccum cleaner	Unit11_2	3	真空吸尘器	1
+24	printer	Unit11_2	3	n.打印机	1
+24	electrical	Unit11_2	3	adj.电的	1
+24	appliance	Unit11_2	3	n.电器	1
+24	air conditioner	Unit11_2	3	空调机	1
+24	electric	Unit11_2	3	adj.电的	1
+24	kettle	Unit11_2	3	n.水壶	1
+25	heater	Unit11_3	3	n.热水器	1
+25	cooker	Unit11_3	3	n.炉具	1
+25	iron	Unit11_3	3	n.&v.熨斗	1
+25	efficiently	Unit11_3	3	adv.效率高地	1
+25	transport	Unit11_3	3	n.交通工具	1
+25	trolleybus	Unit11_3	3	n.无轨电车	1
+25	express	Unit11_3	3	vt.特快列车	1
+25	operate	Unit11_3	3	vi.运转	1
+25	through	Unit11_3	3	prep.穿过	1
+25	mainly	Unit11_3	3	adv.大致	1
+25	as well	Unit11_3	3	也	1
+25	seat	Unit11_3	3	n.座位	1

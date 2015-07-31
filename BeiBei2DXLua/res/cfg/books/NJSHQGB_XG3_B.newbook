@@ -1,0 +1,189 @@
+1	aeroplane	Module1 Unit1_1	2	n.飞机	1
+1	bus	Module1 Unit1_1	2	n.公共汽车	1
+1	by	Module1 Unit1_1	2	prep.在...旁边	0
+2	car	Module1 Unit1_2	2	n.小汽车	1
+2	chair	Module1 Unit1_2	2	n.椅子	0
+2	children	Module1 Unit1_2	2	n.（复数）儿童	0
+2	else	Module1 Unit1_2	2	adj.其他的，别的	0
+2	hear	Module1 Unit1_2	2	vt.听见	0
+2	listen	Module1 Unit1_2	2	v.听	0
+2	ship	Module1 Unit1_2	2	n.（大）船；舰	1
+2	them	Module1 Unit1_2	2	pron.他们，它们（宾格）	0
+2	window	Module1 Unit1_2	2	n.窗户	0
+3	bag	Module1 Unit2_1	2	n.包	1
+3	bread	Module1 Unit2_1	2	n.面包	1
+3	do	Module1 Unit2_1	2	v.（助动词）	0
+3	does	Module1 Unit2_1	2	v.（助动词）	0
+3	food	Module1 Unit2_1	2	n.食物	0
+3	glass	Module1 Unit2_1	2	n.玻璃杯	1
+3	hard	Module1 Unit2_1	2	adj.硬的	0
+3	how	Module1 Unit2_1	2	adv.怎样；如何；多么	0
+3	hungry	Module1 Unit2_1	2	adj.饿的	0
+3	the Moon	Module1 Unit2_1	2	月亮，月球	0
+4	on	Module1 Unit2_2	2	prep.在...上	0
+4	pie	Module1 Unit2_2	2	n.果馅饼	0
+4	pineapple	Module1 Unit2_2	2	n.菠萝	1
+4	rough	Module1 Unit2_2	2	adj.粗糙的	0
+4	smooth	Module1 Unit2_2	2	adj.平滑的	0
+4	soft	Module1 Unit2_2	2	adj.柔软的	0
+4	touch	Module1 Unit2_2	2	vt.触摸，碰	0
+4	yuan	Module1 Unit2_2	2	n.（人民币）元	0
+4	How much	Module1 Unit2_2	2	多少钱？	0
+4	Me too	Module1 Unit2_2	2	我也是	0
+5	bitter	Module1 Unit3_1	1	adj.苦的	1
+5	coffee	Module1 Unit3_1	1	n.咖啡	1
+5	fruit	Module1 Unit3_1	1	n.水果	0
+5	help	Module1 Unit3_1	1	vt.帮助	0
+5	lemon	Module1 Unit3_1	1	n.柠檬	1
+5	salt	Module1 Unit3_1	1	n.盐	1
+5	salty	Module1 Unit3_1	1	adj.咸的	1
+5	smell	Module1 Unit3_1	1	vt.闻；有...气味	0
+5	sour	Module1 Unit3_1	1	adj.酸的	1
+5	sweet	Module1 Unit3_1	1	adj.糖果；甜的	1
+5	taste	Module1 Unit3_1	1	vi.尝；有...味道	0
+5	whale	Module1 Unit3_1	1	n.鲸鱼	0
+6	angry	Module2 Unit1_1	2	adj.生气的	0
+6	clever	Module2 Unit1_1	2	adj.聪明的	1
+6	clock	Module2 Unit1_1	2	n.钟	0
+6	elephant	Module2 Unit1_1	2	n.大象	0
+6	finally	Module2 Unit1_1	2	adv.最后；终于	0
+6	has	Module2 Unit1_1	2	vt.有，拥有（第三人称单数）	0
+6	hat	Module2 Unit1_1	2	n.帽子	1
+6	here	Module2 Unit1_1	2	adv.这里，在这里	0
+6	into	Module2 Unit1_1	2	prep.到...里面	0
+6	jump	Module2 Unit1_1	2	n.跳	0
+6	lion	Module2 Unit1_1	2	n.狮子	1
+7	monkey	Module2 Unit1_2	2	n.猴子	0
+7	panda	Module2 Unit1_2	2	n.熊猫	1
+7	so	Module2 Unit1_2	2	conj.那么；如此	0
+7	strong	Module2 Unit1_2	2	adj.强壮的	1
+7	summer	Module2 Unit1_2	2	n.夏天	0
+7	take	Module2 Unit1_2	2	vt.拿；获得	1
+7	take a rest	Module2 Unit1_2	2	休息	0
+7	tiger	Module2 Unit1_2	2	n.老虎	1
+7	tree	Module2 Unit1_2	2	n.树	1
+7	uncle	Module2 Unit1_2	2	n.叔，舅	0
+8	doll	Module2 Unit2_1	2	n.玩具娃娃	1
+8	fun	Module2 Unit2_1	2	n.乐趣	0
+8	lovely	Module2 Unit2_1	2	adj.可爱的	1
+8	play	Module2 Unit2_1	2	n.玩	0
+8	robot	Module2 Unit2_1	2	n.机器人	1
+8	rock	Module2 Unit2_1	2	n.岩石	0
+8	skateboard	Module2 Unit2_1	2	n.滑板	1
+8	super	Module2 Unit2_1	2	adj.超级的	0
+9	together	Module2 Unit2_2	2	adv.一起	0
+9	train	Module2 Unit2_2	2	n.火车	1
+9	walk	Module2 Unit2_2	2	vi.行走	0
+9	wall	Module2 Unit2_2	2	n.墙	0
+9	I'm sorry	Module2 Unit2_2	2	对不起	0
+9	Are you OK	Module2 Unit2_2	2	你还好吗？	0
+9	That's all right	Module2 Unit2_2	2	没关系	0
+10	English	Module2 Unit3_1	2	n.英语	0
+10	glass	Module2 Unit3_1	2	n.玻璃	1
+10	glove	Module2 Unit3_1	2	n.手套	1
+10	great	Module2 Unit3_1	2	adj.好极的	0
+10	his	Module2 Unit3_1	2	pron.他的	1
+10	horse	Module2 Unit3_1	2	n.马	0
+10	jacket	Module2 Unit3_1	2	n.夹克衫	1
+10	make	Module2 Unit3_1	2	vt.做	0
+10	pair	Module2 Unit3_1	2	n.一双；一对	1
+10	a pair of	Module2 Unit3_1	2	一双；一对	1
+11	scarf	Module2 Unit3_2	2	n.围巾	1
+11	sock	Module2 Unit3_2	2	n.短袜	1
+11	these	Module2 Unit3_2	2	pron.这些	0
+11	those	Module2 Unit3_2	2	pron.那些	0
+11	trousers	Module2 Unit3_2	2	n.裤子	0
+11	word	Module2 Unit3_2	2	n.单词	0
+11	zebra	Module2 Unit3_2	2	n.斑马	0
+11	I see	Module2 Unit3_2	2	我明白了	0
+11	May I have a try	Module2 Unit3_2	2	我可以试试吗？	0
+12	circle	Module3 Unit1_1	1	n.圆形	1
+12	home	Module3 Unit1_1	1	n.到家；在家；家	0
+12	house	Module3 Unit1_1	1	n.房子	1
+12	rectangle	Module3 Unit1_1	1	n.长方形，矩形	1
+12	shape	Module3 Unit1_1	1	n.形状	0
+12	square	Module3 Unit1_1	1	n.正方形	1
+12	star	Module3 Unit1_1	1	n.（五角）星形	1
+12	take off	Module3 Unit1_1	1	脱下（衣服）	0
+12	triangle	Module3 Unit1_1	1	n.三角形	1
+12	turn off	Module3 Unit1_1	1	关掉（开关等）	0
+13	autumn	Module3 Unit2_1	1	n.秋天	0
+13	busy	Module3 Unit2_1	1	adj.忙碌的	0
+13	cold	Module3 Unit2_1	1	adj.冷的	0
+13	grass	Module3 Unit2_1	1	n.草	0
+13	grasshopper	Module3 Unit2_1	1	n.蚱蜢	0
+13	mountain	Module3 Unit2_1	1	n.山	1
+13	outside	Module3 Unit2_1	1	adv.在外面	0
+13	river	Module3 Unit2_1	1	n.河流	1
+13	sea	Module3 Unit2_1	1	n.海	1
+13	sky	Module3 Unit2_1	1	n.天空	1
+13	sleep	Module3 Unit2_1	1	v.睡觉	0
+13	snow	Module3 Unit2_1	1	n.雪	0
+13	spring	Module3 Unit2_1	1	n.春天	0
+13	winter	Module3 Unit2_1	1	n.冬天	0
+14	beach	Module3 Unit3_1	1	n.海滩	0
+14	ice-skate	Module3 Unit3_1	1	v.滑冰	1
+14	park	Module3 Unit3_1	1	n.公园	1
+14	picnic	Module3 Unit3_1	1	n.野餐	1
+14	plant	Module3 Unit3_1	1	vt.种植	1
+14	sandcastle	Module3 Unit3_1	1	n.沙堡	0
+14	season	Module3 Unit3_1	1	n.季节	0
+14	ski	Module3 Unit3_1	1	vt.滑雪	1
+14	slowly	Module3 Unit3_1	1	adv.缓慢地	0
+15	arm	Module4 Unit1_1	1	n.手臂	1
+15	body	Module4 Unit1_1	1	n.身体，躯干	1
+15	easy	Module4 Unit1_1	1	adj.简单的，容易的	0
+15	finger	Module4 Unit1_1	1	n.手指	1
+15	foot	Module4 Unit1_1	1	n.脚（单数）	1
+15	feet	Module4 Unit1_1	1	n.脚（复数）	1
+15	funny	Module4 Unit1_1	1	adj.有趣的；滑稽的	1
+15	head	Module4 Unit1_1	1	n.头	1
+15	knee	Module4 Unit1_1	1	n.膝盖	1
+15	leg	Module4 Unit1_1	1	n.腿	1
+15	myself	Module4 Unit1_1	1	pron.我自己	0
+15	shoulder	Module4 Unit1_1	1	n.肩膀	1
+15	yourself	Module4 Unit1_1	1	pron.你自己	0
+15	Of course	Module4 Unit1_1	1	当然	0
+16	Children's Day	Module4 Unit2_1	3	儿童节	0
+16	China	Module4 Unit2_1	3	n.中国	0
+16	cinema	Module4 Unit2_1	3	n.电影院	1
+16	fifth	Module4 Unit2_1	3	n.&adj.第五	0
+16	first	Module4 Unit2_1	3	n.&adj.第一	0
+16	for	Module4 Unit2_1	3	prep.给；对；为	0
+16	fourteenth	Module4 Unit2_1	3	n.&adj.第十四	0
+16	January	Module4 Unit2_1	3	n.一月	0
+16	Japan	Module4 Unit2_1	3	n.日本	0
+17	July	Module4 Unit2_2	3	n.七月	0
+17	June	Module4 Unit2_2	3	n.六月	0
+17	March	Module4 Unit2_2	3	n.三月	0
+17	May	Module4 Unit2_2	3	n.五月	0
+17	October	Module4 Unit2_2	3	n.十月	0
+17	parent	Module4 Unit2_2	3	n.父亲（或母亲)	1
+17	photograph	Module4 Unit2_2	3	n.照片	1
+17	Saturday	Module4 Unit2_2	3	n.星期六	0
+17	second	Module4 Unit2_2	3	n.&adj.第二	0
+18	Singapore	Module4 Unit2_3	3	n.新加坡	0
+18	song	Module4 Unit2_3	3	n.歌曲	0
+18	take a photograph	Module4 Unit2_3	3	拍照	1
+18	Thailand	Module4 Unit2_3	3	n.泰国	0
+18	third	Module4 Unit2_3	3	n.&adj.第三	0
+18	the UK	Module4 Unit2_3	3	英国	0
+18	with	Module4 Unit2_3	3	prep.和...一起	0
+18	zoo	Module4 Unit2_3	3	n.动物园	1
+18	Happy Children's Day	Module4 Unit2_3	3	儿童节快乐	0
+18	Great	Module4 Unit2_3	3	adj.太棒了	0
+19	afraid	Module4 Unit3_1	2	adj.害怕的	0
+19	bad	Module4 Unit3_1	2	adj.坏的	0
+19	boil	Module4 Unit3_1	2	v.煮沸	0
+19	go away	Module4 Unit3_1	2	离开	0
+19	go fishing	Module4 Unit3_1	2	去钓鱼	0
+19	over there	Module4 Unit3_1	2	在那里	0
+19	own	Module4 Unit3_1	2	adj.自己的	0
+19	stop	Module4 Unit3_1	2	v.停止	0
+20	story	Module4 Unit3_2	2	n.故事	0
+20	time	Module4 Unit3_2	2	n.时间	0
+20	water	Module4 Unit3_2	2	n.水	0
+20	wolf	Module4 Unit3_2	2	n.狼	0
+20	Hooray	Module4 Unit3_2	2	int.好哇	0
+20	help	Module4 Unit3_2	2	v.救命	0
+20	Stop	Module4 Unit3_2	2	v.站住	0

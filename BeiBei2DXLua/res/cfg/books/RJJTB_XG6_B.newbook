@@ -1,0 +1,95 @@
+1	go to the beach	Unit 1_1	4	去沙滩	0
+1	enjoy sunbathing	Unit 1_1	4	享受日光浴	0
+1	enjoy the moon and the stars	Unit 1_1	4	看月亮和星星	0
+2	stay at home	Unit 1_2	4	呆在家里	0
+2	have a party	Unit 1_2	4	聚会	0
+2	enjoy Spring Festival	Unit 1_2	4	过春节	0
+2	by plane	Unit 1_2	4	乘飞机	1
+2	sun	Unit 1_2	4	n.太阳	1
+2	moon	Unit 1_2	4	n.月亮	1
+2	star	Unit 1_2	4	n.星星	1
+2	at night	Unit 1_2	4	在晚上	1
+2	at home	Unit 1_2	4	在家里	1
+2	listen to English	Unit 1_2	4	听英语	0
+3	speak English	Unit 1_3	4	讲英语	0
+3	read English	Unit 1_3	4	读英语	0
+3	write English	Unit 1_3	4	写英语	0
+3	talk in English	Unit 1_3	4	用英语交谈	0
+3	play in English	Unit 1_3	4	用英语玩游戏	0
+3	learn	Unit 1_3	4	vt.学习	1
+3	a lot of	Unit 1_3	4	很多	1
+3	word	Unit 1_3	4	n.词	1
+3	blackboard	Unit 1_3	4	n.黑板	1
+3	say	Unit 1_3	4	vt.说	1
+4	do tasks	Unit 1_4	4	做任务	0
+4	have an English party	Unit 1_4	4	举办英语聚会	0
+4	act in drama	Unit 1_4	4	表演戏剧	0
+4	learn from each other	Unit 1_4	4	互相学习	0
+4	subject	Unit 1_4	4	n.学科	1
+4	lesson	Unit 1_4	4	n.课	1
+4	but	Unit 1_4	4	conj.但是	1
+4	yesterday	Unit 1_4	4	n.昨天	1
+4	why	Unit 1_4	4	adv.为什么	1
+4	use	Unit 1_4	4	v.用	1
+5	bank	Unit 2_1	3	n.银行	0
+5	in front of	Unit 2_1	3	在...前面	0
+5	bookshop	Unit 2_1	3	n.书店	0
+5	behind	Unit 2_1	3	prep.在...后面	0
+5	hotel	Unit 2_1	3	n.宾馆	0
+5	clothes shop	Unit 2_1	3	服装店	0
+5	supermarket	Unit 2_1	3	n.超市	0
+5	across the road	Unit 2_1	3	在马路对面	0
+5	hospital	Unit 2_1	3	n.医院	0
+5	river	Unit 2_1	3	n.河流	1
+5	near	Unit 2_1	3	prep.在...附近	1
+6	beside	Unit 2_2	3	prep.在...旁边	1
+6	between	Unit 2_2	3	adj.在...中间	1
+6	healthy food	Unit 2_2	3	健康的食品	1
+6	vegetable	Unit 2_2	3	n.蔬菜	1
+6	go down this street	Unit 2_2	3	顺着这条街走	0
+6	turn right at the traffic lights	Unit 2_2	3	交通灯处右转	0
+6	cross the street	Unit 2_2	3	穿过马路	0
+6	street	Unit 2_2	3	n.街道	1
+6	turn right	Unit 2_2	3	右转	1
+6	turn left	Unit 2_2	3	左转	0
+6	on the right	Unit 2_2	3	在右边	1
+7	on the left	Unit 2_3	3	左边	0
+7	minute	Unit 2_3	3	n.分钟	1
+7	City Library	Unit 2_3	3	城市图书馆	0
+7	restaurant	Unit 2_3	3	n.饭店	0
+7	post office	Unit 2_3	3	邮局	0
+7	by bike	Unit 2_3	3	骑自行车	0
+7	by subway	Unit 2_3	3	乘地铁	0
+7	on foot	Unit 2_3	3	步行	0
+7	half an hour	Unit 2_3	3	半小时	1
+7	city	Unit 2_3	3	n.城市	1
+7	library	Unit 2_3	3	n.图书馆	1
+8	American	Unit 3_1	3	n.&adj.美国（人）的	0
+8	by plane	Unit 3_1	3	乘飞机	1
+8	by train	Unit 3_1	3	乘火车	0
+8	by ship	Unit 3_1	3	乘轮船	0
+8	travel	Unit 3_1	3	n.旅行	1
+8	know	Unit 3_1	3	vt.知道	1
+8	hear	Unit 3_1	3	vt.听见	1
+8	lake	Unit 3_1	3	n.湖泊	1
+8	the Ming Tombs	Unit 3_1	3	明十三陵	0
+8	the Temple of Heaven	Unit 3_1	3	天坛	0
+9	the Forbidden City	Unit 3_2	3	紫禁城	0
+9	Beihai Park	Unit 3_2	3	北海公园	0
+9	tomorrow	Unit 3_2	3	adv.&n.明天	1
+9	visit	Unit 3_2	3	n.&v.参观	1
+9	the Great Wall	Unit 3_2	3	长城	1
+9	them	Unit 3_2	3	pron.他们（宾格）	1
+9	Britain	Unit 3_2	3	n.英国	0
+9	Tower Bridge	Unit 3_2	3	伦敦塔桥	0
+9	Big Ben	Unit 3_2	3	大本钟	0
+9	Niagara Falls	Unit 3_2	3	尼亚加拉瀑布	0
+10	Canada	Unit 3_3	3	n.加拿大	0
+10	CN Tower	Unit 3_3	3	加拿大国家电视塔	0
+10	Austalia	Unit 3_3	3	n.澳大利亚	0
+10	Sydney Opera House	Unit 3_3	3	悉尼歌剧院	0
+10	Disneyland	Unit 3_3	3	n.迪士尼乐园	0
+10	want	Unit 3_3	3	vt.想	1
+10	see	Unit 3_3	3	vt.看见	1
+10	favourite	Unit 3_3	3	adj.最喜欢的	1
+10	place	Unit 3_3	3	n.位置	1

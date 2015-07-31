@@ -1,0 +1,234 @@
+1	carpenter	Unit1_1	6	n.木工	1
+1	suited	Unit1_1	6	adj.合适的	1
+1	career	Unit1_1	6	n.职业	0
+2	actually	Unit1_2	6	adv.实际上	1
+2	so-called	Unit1_2	6	adj.所谓的	1
+2	glamorous	Unit1_2	6	adj.有吸引力的	0
+2	cushion	Unit1_2	6	n.坐垫	1
+2	jet	Unit1_2	6	n.喷气式飞机	1
+2	baggage	Unit1_2	6	n.行李	1
+2	suitcase	Unit1_2	6	n.手提箱	1
+2	trunk	Unit1_2	6	n.树干	1
+2	waiter	Unit1_2	6	n.服务员	1
+2	grocer	Unit1_2	6	n.食品杂货商	1
+3	option	Unit1_3	6	n.选择	1
+3	lawyer	Unit1_3	6	n.律师	1
+3	well-paid	Unit1_3	6	adj.薪酬丰厚的	1
+3	canyon	Unit1_3	6	n.峡谷	0
+3	zone	Unit1_3	6	n.区域	1
+3	brewery	Unit1_3	6	n.啤酒厂	1
+3	litre	Unit1_3	6	n.升	1
+3	shopkeeper	Unit1_3	6	n.店主	1
+3	barber	Unit1_3	6	n.理发师	1
+3	barbershop	Unit1_3	6	n.理发店	1
+4	cleaner	Unit1_4	6	n.清洁工	1
+4	rat	Unit1_4	6	n.老鼠	1
+4	go about	Unit1_4	6	忙于某事	1
+4	salesgirl	Unit1_4	6	n.女店员	1
+4	cucumber	Unit1_4	6	n.黄瓜	0
+4	sly	Unit1_4	6	adj.狡猾的	0
+4	fox	Unit1_4	6	n.狐狸	1
+4	cast-iron	Unit1_4	6	adj.坚强的	1
+4	nerve	Unit1_4	6	n.神经	1
+4	martial	Unit1_4	6	adj.战争的	0
+5	martial art	Unit1_5	6	武术	1
+5	weed	Unit1_5	6	n.杂草	1
+5	spear	Unit1_5	6	n.矛	1
+5	magician	Unit1_5	6	n.魔术师	1
+5	bath	Unit1_5	6	n.洗澡	1
+5	bedding	Unit1_5	6	n.被褥	1
+5	bandage	Unit1_5	6	n.绷带	1
+5	ward	Unit1_5	6	n.病房	1
+5	creative	Unit1_5	6	adj.有创造力的	1
+5	self-confident	Unit1_5	6	adj.自信的	1
+5	artistic	Unit1_5	6	adj.艺术的	1
+6	realistic	Unit1_6	6	adj.现实的	0
+6	greengrocer	Unit1_6	6	n.果蔬商	1
+6	tailor	Unit1_6	6	n.裁缝	1
+6	investigative	Unit1_6	6	adj.探究性的	0
+6	pianist	Unit1_6	6	n.钢琴家	1
+6	violinist	Unit1_6	6	n.小提琴手	1
+6	librarian	Unit1_6	6	n.图书馆管理员	1
+6	stewardess	Unit1_6	6	n.女乘务员	1
+6	enterprising	Unit1_6	6	adj.有事业心的	1
+6	take pleasure in	Unit1_6	6	从...中获得乐趣	1
+6	typist	Unit1_6	6	n.打字员	1
+7	engineering	Unit2_1	5	n.工程	1
+7	covering	Unit2_1	5	n.覆盖物	1
+7	covering letter	Unit2_1	5	n.附信	1
+7	gap	Unit2_1	5	n.裂口	0
+7	gap year	Unit2_1	5	生活实践年	1
+7	session	Unit2_1	5	n.一段时间	1
+7	employer	Unit2_1	5	n.雇主	1
+7	employee	Unit2_1	5	n.雇工	1
+7	interviewer	Unit2_1	5	n.面试官	1
+7	off the top of one's head	Unit2_1	5	未多加思考地	1
+8	have butterflies in one's stomach	Unit2_2	5	心慌	1
+8	refresh	Unit2_2	5	vt.更新	1
+8	yawn	Unit2_2	5	n.打哈欠	1
+8	razor	Unit2_2	5	n.剃刀	1
+8	shaver	Unit2_2	5	n.电动剃须刀	1
+8	shave	Unit2_2	5	n.刮脸	1
+8	haircut	Unit2_2	5	n.理发	1
+8	conservative	Unit2_2	5	adj.保守的	1
+8	allowance	Unit2_2	5	n.津贴	1
+8	make allowance for	Unit2_2	5	考虑到	1
+9	roundabout	Unit2_3	5	adj.交通环岛	1
+9	parking	Unit2_3	5	n.停车位	1
+9	look sb in the eyes	Unit2_3	5	直视某人	1
+9	wag	Unit2_3	5	vt.摆动	1
+9	follow  up	Unit2_3	5	采取后继行动	1
+9	give sb the edge	Unit2_3	5	使某人略占优势	1
+9	punctuation	Unit2_3	5	n.标点符号	1
+9	as easy as pie	Unit2_3	5	十分容易	1
+9	management	Unit2_3	5	n.管理	1
+9	trainee	Unit2_3	5	n.受训者	1
+10	smartly	Unit2_4	5	adv.整洁地	1
+10	garage	Unit2_4	5	n.汽车修理厂	1
+10	relaxed	Unit2_4	5	adj.放松的	1
+10	team player	Unit2_4	5	善于与团队合作的成员	1
+10	response	Unit2_4	5	n.回答	1
+10	in response to	Unit2_4	5	作为对...的回应	1
+10	diploma	Unit2_4	5	n.毕业文凭	1
+10	videophone	Unit2_4	5	n.可视电话	1
+10	division	Unit2_4	5	n.（机构的）部门	1
+10	fluency	Unit2_4	5	n.流利	1
+11	CV	Unit2_5	5	abbr.简历	1
+11	ladder	Unit2_5	5	n.梯子	0
+11	Antarctic	Unit2_5	5	adj.南极	1
+11	fund	Unit2_5	5	n.基金	0
+11	Brazil	Unit2_5	5	n.巴西	1
+11	Amazon	Unit2_5	5	n.亚马孙河	1
+11	Ghana	Unit2_5	5	n.加纳	1
+11	cooker	Unit2_5	5	n.炉灶	1
+11	switch	Unit2_5	5	n.&v.转变	1
+11	nail	Unit2_5	5	n.钉子	1
+12	mayor	Unit3_1	7	n.市长	0
+12	improvement	Unit3_1	7	n.改进	1
+12	self-educated	Unit3_1	7	adj.自学的	1
+12	geometry	Unit3_1	7	n.几何学	1
+12	diagram	Unit3_1	7	n.图表	1
+12	circuit	Unit3_1	7	n.线路	1
+12	resign	Unit3_1	7	v.辞职	1
+12	pocket-sized	Unit3_1	7	adj.袖珍的	1
+12	pull out	Unit3_1	7	退出	1
+12	the last minute	Unit3_1	7	最后一刻	1
+13	put out	Unit3_2	7	公布	1
+13	take off	Unit3_2	7	快速成功	1
+13	calculator	Unit3_2	7	n.计算器	1
+13	amateur	Unit3_2	7	n.&adj.业余爱好者	1
+13	put together	Unit3_2	7	汇集	1
+13	receipt	Unit3_2	7	n.收据	1
+13	spectrum	Unit3_2	7	n.频谱	0
+13	motor	Unit3_2	7	n.发动机	1
+13	ridiculous	Unit3_2	7	adj.可笑的	1
+13	tire	Unit3_2	7	v.（使）疲劳	1
+14	tire of	Unit3_3	7	对...感到厌倦	1
+14	throw oneself into	Unit3_3	7	投身于	1
+14	fold	Unit3_3	7	vt.折叠	1
+14	fold up	Unit3_3	7	折叠	1
+14	cycle	Unit3_3	7	v.骑自行车	1
+14	will	Unit3_3	7	n.心愿	1
+14	plug	Unit3_3	7	v.插上	1
+14	graph	Unit3_3	7	n.曲线图	1
+14	economical	Unit3_3	7	adj.节约的	0
+14	be economical with the truth	Unit3_3	7	有所隐瞒	1
+15	sanitary	Unit3_4	7	adj.环境卫生的	0
+15	correctional	Unit3_4	7	adj.改造的	1
+15	facility	Unit3_4	7	n.设施	0
+15	correctional facility	Unit3_4	7	监狱	1
+15	downsize	Unit3_4	7	v.裁员	0
+15	body count	Unit3_4	7	死亡人数	1
+15	survivor	Unit3_4	7	n.幸存者	1
+15	unsure	Unit3_4	7	adj.没把握的	1
+15	reveal	Unit3_4	7	vt.揭示	0
+15	informer	Unit3_4	7	n.提供情报者	1
+16	offshore	Unit3_5	7	adj.海外的	1
+16	scratch	Unit3_5	7	vt.挠	1
+16	scratch the surface	Unit3_5	7	隔靴搔痒	1
+16	lounge	Unit3_5	7	n.休息室	1
+16	allergic	Unit3_5	7	adj.过敏的	1
+16	employment	Unit3_5	7	n.就业	1
+16	surplus	Unit3_5	7	adj.过剩的	1
+16	capital punishment	Unit3_5	7	死刑	1
+16	taxpayer	Unit3_5	7	n.纳税人	1
+16	pre-owned	Unit3_5	7	adj.二手的	1
+17	flexibility	Unit3_6	7	n.灵活性	1
+17	unemployed	Unit3_6	7	adj.失业的	1
+17	penalty	Unit3_6	7	n.惩罚	0
+17	death penalty	Unit3_6	7	死刑	1
+17	faith	Unit3_6	7	n.信心	1
+17	optional	Unit3_6	7	adj.可选的	1
+17	fibre	Unit3_6	7	n.纤维	1
+17	thirst	Unit3_6	7	n.渴望	1
+17	microscope	Unit3_6	7	n.显微镜	1
+17	drive	Unit3_6	7	v.干劲	1
+17	for the taking	Unit3_6	7	供自由取用	1
+18	bless	Unit3_7	7	vt.保佑	1
+18	nursery	Unit3_7	7	n.幼儿教育的	1
+18	nursery rhyme	Unit3_7	7	童谣	1
+18	porter	Unit3_7	7	n.行李员	1
+18	mop	Unit3_7	7	n.拖把	1
+18	jar	Unit3_7	7	n.罐子	1
+18	turkey	Unit3_7	7	n.火鸡	1
+18	brunch	Unit3_7	7	n.早午餐	1
+18	shrink	Unit3_7	7	n.&v.退缩	1
+18	shrink fromdoing sth	Unit3_7	7	回避	1
+18	dignity	Unit3_7	7	n.自尊	1
+19	archaeology	Unit4_1	6	n.考古学	0
+19	preview	Unit4_1	6	vt.预告	1
+19	numerous	Unit4_1	6	adj.众多的	1
+19	brochure	Unit4_1	6	n.资料册	1
+19	catalogue	Unit4_1	6	n.目录	1
+19	psychology	Unit4_1	6	n.心理学	1
+19	fry	Unit4_1	6	vt.油炸	1
+19	pepper	Unit4_1	6	n.胡椒粉	1
+19	steak	Unit4_1	6	n.牛排	1
+19	rice cooker	Unit4_1	6	电饭煲	1
+20	bean curd	Unit4_2	6	豆腐	1
+20	garlic	Unit4_2	6	n.大蒜	1
+20	microwave	Unit4_2	6	n.微波炉	1
+20	saucer	Unit4_2	6	n.茶碟	1
+20	Thermos	Unit4_2	6	n.保温瓶	1
+20	put sth away	Unit4_2	6	积蓄	1
+20	furnished	Unit4_2	6	adj.配备家具的	1
+20	basin	Unit4_2	6	n.脸盆	1
+20	hook	Unit4_2	6	n.挂钩	1
+20	millimetre	Unit4_2	6	n.毫米	1
+21	room-mate	Unit4_3	6	n.室友	1
+21	autonomy	Unit4_3	6	n.天文学	1
+21	mineral	Unit4_3	6	n.矿物质	1
+21	bat	Unit4_3	6	n.球棒	1
+21	dive	Unit4_3	6	n.跳水	1
+21	dive right in	Unit4_3	6	热切地开始做	1
+21	terrify	Unit4_3	6	v.使恐惧	1
+21	as for	Unit4_3	6	至于	1
+21	universe	Unit4_3	6	n.宇宙	1
+21	embassy	Unit4_3	6	n.大使馆	1
+22	allusion	Unit4_4	6	n.典故	1
+22	surprisingly	Unit4_4	6	adv.令人吃惊地	1
+22	den	Unit4_4	6	n.巢穴	0
+22	heel	Unit4_4	6	n.脚后跟	1
+22	mythology	Unit4_4	6	n.神话	0
+22	unbeatable	Unit4_4	6	adj.不可战胜的	1
+22	prophet	Unit4_4	6	n.先知	0
+22	overboard	Unit4_4	6	adv.从船上落下	0
+22	vomit	Unit4_4	6	vt.吐出	0
+23	Herculean	Unit4_5	6	adj.费力的	0
+23	a good Samaritan	Unit4_5	6	善良的人	0
+23	bang	Unit4_5	6	n.&v.猛敲	0
+23	aimless	Unit4_5	6	adj.盲目的	1
+23	land on one 's feet	Unit4_5	6	安然脱困	1
+23	atom	Unit4_5	6	n.原子	1
+23	nuclear	Unit4_5	6	adj.核能的	1
+23	missile	Unit4_5	6	n.导弹	1
+23	communism	Unit4_5	6	n.共产主义	1
+24	socialism	Unit4_6	6	n.社会主义	1
+24	socialist	Unit4_6	6	adj.社会主义的	1
+24	fountain	Unit4_6	6	n.喷水池	1
+24	currently	Unit4_6	6	adv.目前	0
+24	premier	Unit4_6	6	n.最重要的	1
+24	arch	Unit4_6	6	n.拱顶	1
+24	seminar	Unit4_6	6	n.研讨课	1
+24	sharpen	Unit4_6	6	v.（使）变锋利	1
+24	shuttle	Unit4_6	6	n.航天飞机	1

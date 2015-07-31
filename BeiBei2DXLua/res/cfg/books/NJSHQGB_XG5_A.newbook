@@ -1,0 +1,182 @@
+1	begin	Unit 1_1	2	vt.开始	1
+1	bring	Unit 1_1	2	vt.带来	1
+1	favourite	Unit 1_1	2	adj.最喜欢的	1
+2	fifth	Unit 1_2	2	n.&adj第五	1
+2	first	Unit 1_2	2	adv.首先	1
+2	invitation	Unit 1_2	2	n.请柬	0
+2	party	Unit 1_2	2	n.聚会	1
+2	present	Unit 1_2	2	n.礼物	0
+2	second	Unit 1_2	2	n.&adj第二	1
+2	sixth	Unit 1_2	2	n.&adj第六	1
+2	smart	Unit 1_2	2	adj.漂亮的	0
+2	third	Unit 1_2	2	n.&adj第三	1
+2	wear	Unit 1_2	2	vt.穿	1
+3	arrive at	Unit 2_1	2	到达	1
+3	by	Unit 2_1	2	prep.（表示方式）	1
+3	cross	Unit 2_1	2	v.穿过	1
+3	get off	Unit 2_1	2	从...下来	0
+3	go on an outing	Unit 2_1	2	外出游玩	0
+3	go shopping	Unit 2_1	2	去购物	1
+3	journey	Unit 2_1	2	n.旅行	0
+3	leave	Unit 2_1	2	v.离开	1
+3	live	Unit 2_1	2	v.居住	1
+4	on foot	Unit 2_2	2	步行	1
+4	pavement	Unit 2_2	2	n.人行道	1
+4	taxi	Unit 2_2	2	n.出租车	1
+4	traffic lights	Unit 2_2	2	交通信号灯	1
+4	train	Unit 2_2	2	n.火车	0
+4	underground	Unit 2_2	2	n.地铁	1
+4	underground station	Unit 2_2	2	地铁站	0
+4	zebra crossing	Unit 2_2	2	斑马线	1
+5	be afraid of	Unit 3_1	2	害怕	0
+5	dream	Unit 3_1	2	n.梦想	0
+5	farmer	Unit 3_1	2	n.农民	1
+5	fly	Unit 3_1	2	vt.驾驶	1
+5	be good at	Unit 3_1	2	擅长	0
+5	help	Unit 3_1	2	vt.帮助	1
+5	in the future	Unit 3_1	2	在将来	0
+5	lifeguard	Unit 3_1	2	n.救生员	0
+5	pilot	Unit 3_1	2	n.飞行员	1
+6	save	Unit 3_2	2	vt.救生员	0
+6	sell	Unit 3_2	2	vi.卖	0
+6	shop assistant	Unit 3_2	2	销售员	1
+6	sick	Unit 3_2	2	adj.生病的	1
+6	star	Unit 3_2	2	n.歌唱明星	0
+6	travel	Unit 3_2	2	n.&v.旅行	0
+6	traveller	Unit 3_2	2	n.旅行者	0
+6	worker	Unit 3_2	2	n.工人	1
+6	writer	Unit 3_2	2	n.作家	0
+7	crossing	Unit 4_1	1	n.十字路口	0
+7	Double Ninth cake	Unit 4_1	1	重阳糕	0
+7	grandchild	Unit 4_1	1	n.孙子	0
+7	have a cold	Unit 4_1	1	感冒	0
+7	hug	Unit 4_1	1	v.拥抱	0
+7	hunter	Unit 4_1	1	n.猎人	0
+7	the Internet	Unit 4_1	1	互联网	1
+7	Little Red Riding Hood	Unit 4_1	1	小红帽	0
+7	once	Unit 4_1	1	adv.一次	1
+7	play chess	Unit 4_1	1	下象棋	1
+7	rat-rat	Unit 4_1	1	n.吧嗒	0
+7	talk	Unit 4_1	1	n.谈话	1
+7	weekend	Unit 4_1	1	n.周末	1
+7	write an e-mail	Unit 4_1	1	写一封电子邮件	1
+8	all	Unit 5_1	1	n.&pron.所有	1
+8	both	Unit 5_1	1	pron.都	1
+8	class	Unit 5_1	1	n.班级	1
+8	different	Unit 5_1	1	adj.不同的	1
+8	each other	Unit 5_1	1	互相	1
+8	fifteenth	Unit 5_1	1	n.&adj.第十五	0
+8	half-time	Unit 5_1	1	n.中场休息	0
+8	match	Unit 5_1	1	n.比赛	1
+8	member	Unit 5_1	1	n.成员	0
+8	same	Unit 5_1	1	adj.相同的	1
+8	team	Unit 5_1	1	n.队	0
+8	together	Unit 5_1	1	adv.在一起	1
+9	a lot of	Unit 6_1	2	许多	1
+9	change	Unit 6_1	2	v.变化	0
+9	east	Unit 6_1	2	n.东方	1
+9	enough	Unit 6_1	2	adj.足够的	0
+9	face	Unit 6_1	2	n.朝	0
+9	be far from	Unit 6_1	2	离...远	0
+9	be happy with	Unit 6_1	2	对...满意	0
+9	miss	Unit 6_1	2	v.想念	0
+9	move	Unit 6_1	2	vt.搬迁	0
+9	north	Unit 6_1	2	adj.北方	1
+10	share	Unit 6_2	2	vt.共有	0
+10	south	Unit 6_2	2	n.向南	1
+10	study	Unit 6_2	2	vi.书房	1
+10	sunshine	Unit 6_2	2	n.阳光	0
+10	take	Unit 6_2	2	vt.需要...时间选	0
+10	through	Unit 6_2	2	prep.穿过	0
+10	twice	Unit 6_2	2	adv.两次	1
+10	west	Unit 6_2	2	n.&adv.向西	1
+10	wild goose	Unit 6_2	2	大雁	0
+11	along	Unit 7_1	1	prep.沿着	1
+11	bakery	Unit 7_1	1	n.面包店	1
+11	bank	Unit 7_1	1	n.银行	1
+11	cinema	Unit 7_1	1	n.电影院	1
+11	crocodile	Unit 7_1	1	n.鳄鱼	0
+11	hospital	Unit 7_1	1	n.医院	1
+11	hotel	Unit 7_1	1	n.旅馆	1
+11	lane	Unit 7_1	1	n.小巷	0
+11	left	Unit 7_1	1	adj.向左	0
+11	museum	Unit 7_1	1	n.博物馆	1
+11	right	Unit 7_1	1	adj.向右	0
+11	shark	Unit 7_1	1	n.鲨鱼	0
+11	turn	Unit 7_1	1	vt.转弯	1
+12	button	Unit 8_1	1	n.纽扣	1
+12	emperor	Unit 8_1	1	n.皇帝	0
+12	have nothing on	Unit 8_1	1	一丝不挂	0
+12	keep silent	Unit 8_1	1	保持沉默	0
+12	need	Unit 8_1	1	v.需要	1
+12	nod	Unit 8_1	1	n.点头	0
+12	pocket	Unit 8_1	1	n.衣袋	1
+12	put on	Unit 8_1	1	穿上	1
+12	try on	Unit 8_1	1	试穿	1
+12	zip	Unit 8_1	1	n.拉链	1
+13	best	Unit 9_1	2	adv.最好地	0
+13	better	Unit 9_1	2	adj.好转的	0
+13	cave	Unit 9_1	2	n.山洞	0
+13	cold	Unit 9_1	2	n.感冒	1
+13	cough	Unit 9_1	2	n.&v.咳嗽	1
+13	dentist	Unit 9_1	2	n.牙医	0
+13	either	Unit 9_1	2	conj.也	0
+13	fever	Unit 9_1	2	n.发烧	1
+13	have a rest	Unit 9_1	2	休息	0
+14	hide	Unit 9_2	2	vt.隐藏	0
+14	hurt	Unit 9_2	2	vt.受伤	0
+14	medicine	Unit 9_2	2	n.药	1
+14	pull ... out	Unit 9_2	2	把...拔下来	0
+14	secret	Unit 9_2	2	adj.秘密的	0
+14	soft drink	Unit 9_2	2	轻饮料	0
+14	toothache	Unit 9_2	2	n.牙痛	1
+14	toothless	Unit 9_2	2	adj.没有牙齿的	0
+14	well	Unit 9_2	2	adj.健康的	1
+15	boil	Unit 10_1	2	v.煮沸	1
+15	drink	Unit 10_1	2	v.喝	1
+15	fall down	Unit 10_1	2	落下	0
+15	finally	Unit 10_1	2	adv.最后	1
+15	into	Unit 10_1	2	prep.到...里面	0
+15	more	Unit 10_1	2	adv.更多	0
+15	next	Unit 10_1	2	adv.接下来	1
+15	part	Unit 10_1	2	n.部分	0
+15	pour	Unit 10_1	2	vt.倒出	1
+15	quickly	Unit 10_1	2	adv.快速地	1
+16	raindrop	Unit 10_2	2	n.雨滴	0
+16	report	Unit 10_2	2	vt.报告	0
+16	rise up	Unit 10_2	2	升起	0
+16	slowly	Unit 10_2	2	adv.慢慢地	1
+16	tea	Unit 10_2	2	n.茶	1
+16	teapot	Unit 10_2	2	n.茶壶	0
+16	the Three Gorges	Unit 10_2	2	三峡	0
+16	the Yangtze River	Unit 10_2	2	长江	0
+16	then	Unit 10_2	2	adv.然后	1
+16	toilet	Unit 10_2	2	n.厕所	0
+17	blow	Unit 11_1	1	vt.吹	1
+17	gently	Unit 11_1	1	adv.轻轻地	1
+17	happily	Unit 11_1	1	adv.高兴地	1
+17	heavily	Unit 11_1	1	adv.剧烈地	0
+17	heavy	Unit 11_1	1	adj.猛烈的	0
+17	hope	Unit 11_1	1	n.&v.希望	0
+17	be made of	Unit 11_1	1	由...做成	0
+17	softly	Unit 11_1	1	adv.轻轻地	0
+17	strongly	Unit 11_1	1	adv.强有力地	1
+17	wind-bell	Unit 11_1	1	n.风铃	0
+17	wood	Unit 11_1	1	n.木头	0
+18	bravely	Unit 12_1	2	adv.勇敢地	0
+18	burn	Unit 12_1	2	vt.燃烧	0
+18	campfire	Unit 12_1	2	n.营火	1
+18	careful	Unit 12_1	2	adj.小心的	1
+18	country	Unit 12_1	2	n.乡村	0
+18	die down	Unit 12_1	2	熄灭	0
+18	drop	Unit 12_1	2	n.使降落	0
+18	helicopter	Unit 12_1	2	n.直升飞机	0
+18	luckily	Unit 12_1	2	adv.幸运地	0
+19	must	Unit 12_2	2	aux.必须	0
+19	raw	Unit 12_2	2	adj.生的	0
+19	safety	Unit 12_2	2	n.安全	1
+19	sign	Unit 12_2	2	n.标牌	0
+19	smoke	Unit 12_2	2	v.吸烟	1
+19	start	Unit 12_2	2	n.&v.发生	1
+19	the Stone Age	Unit 12_2	2	石器时代	0
+19	throw ... away	Unit 12_2	2	把...扔掉	0

@@ -1,0 +1,454 @@
+1	good	Unit 1_1	14	adj.好的	1
+1	morning	Unit 1_1	14	n.早晨	1
+1	welcome	Unit 1_1	14	vt.&adj.欢迎	1
+2	to	Unit 1_2	14	prep.到	1
+2	China	Unit 1_2	14	n.中国	1
+2	thank	Unit 1_2	14	vt.谢谢	1
+2	you	Unit 1_2	14	pron.你	1
+2	hello	Unit 1_2	14	int.你好	1
+2	I	Unit 1_2	14	pron.我（主格）	1
+2	am	Unit 1_2	14	v.（我）是	1
+2	I'm	Unit 1_2	14	我是	0
+2	are	Unit 1_2	14	vi.（你、复数）是	1
+2	yes	Unit 1_2	14	adj.是	1
+3	no	Unit 1_3	14	n.没有	1
+3	not	Unit 1_3	14	adv.不	1
+3	oh	Unit 1_3	14	int.哦	0
+3	nice	Unit 1_3	14	adj.令人愉快的	1
+3	meet	Unit 1_3	14	vt.相识	1
+3	too	Unit 1_3	14	adj.也	1
+3	hi	Unit 1_3	14	int.喂	0
+3	Miss	Unit 1_3	14	abbr女士	0
+3	this	Unit 1_3	14	pron.这	1
+3	is	Unit 1_3	14	aux.（第三人称单数）是	1
+4	Mr.	Unit 1_4	14	abbr.先生	1
+4	see	Unit 1_4	14	vt.看见	1
+4	my	Unit 1_4	14	adj.我的	1
+4	mom	Unit 1_4	14	妈妈	1
+4	teacher	Unit 1_4	14	n.老师	1
+4	how	Unit 1_4	14	adv.怎样	1
+4	do	Unit 1_4	14	v.做	1
+4	afternoon	Unit 1_4	14	n.下午	1
+4	fine	Unit 1_4	14	adj.健康的	1
+4	goodbye	Unit 1_4	14	int.再见	1
+5	bye	Unit 1_5	14	（口）再见	1
+5	evening	Unit 1_5	14	n.晚上	1
+5	and	Unit 1_5	14	和	1
+5	OK	Unit 1_5	14	adj.（口）好	1
+5	later	Unit 1_5	14	adj.以后	0
+5	excuse	Unit 1_5	14	n.原谅	1
+5	me	Unit 1_5	14	pron.我（宾格）	1
+5	excuse me	Unit 1_5	14	劳驾	0
+5	what	Unit 1_5	14	pron.什么	1
+5	your	Unit 1_5	14	pron.你的	1
+6	name	Unit 1_6	14	n.名字	1
+6	where	Unit 1_6	14	adv.在哪里	1
+6	from	Unit 1_6	14	prep.从	1
+6	be from	Unit 1_6	14	来自	0
+6	Canada	Unit 1_6	14	n.加拿大	1
+6	the	Unit 1_6	14	art.这个	1
+6	the U.S.A.	Unit 1_6	14	n.美国	0
+6	she	Unit 1_6	14	pron.她	1
+6	he	Unit 1_6	14	pron.他	1
+6	isn't	Unit 1_6	14	（第三人称单数）不是	0
+7	Japan	Unit 1_7	14	n.日本	1
+7	we	Unit 1_7	14	pron.我们	1
+7	England	Unit 1_7	14	n.英格兰	1
+7	who	Unit 1_7	14	pron.谁	1
+7	they	Unit 1_7	14	pron.他们	1
+7	aren't	Unit 1_7	14	（你、复数）不是	1
+7	Cuba	Unit 1_7	14	n.古巴	0
+7	zero	Unit 1_7	14	num.零	1
+7	one	Unit 1_7	14	num.一	1
+7	two	Unit 1_7	14	num.二	1
+8	three	Unit 1_8	14	num.三	1
+8	four	Unit 1_8	14	num.四	1
+8	five	Unit 1_8	14	num.五	1
+8	six	Unit 1_8	14	num.六	1
+8	seven	Unit 1_8	14	num.七	1
+8	eight	Unit 1_8	14	num.八	1
+8	nine	Unit 1_8	14	num.九	1
+8	ten	Unit 1_8	14	num.十	1
+8	telephone	Unit 1_8	14	n.电话	1
+8	number	Unit 1_8	14	n.号码	1
+9	it	Unit 1_9	14	pron.它	1
+9	eleven	Unit 1_9	14	num.十一	1
+9	twelve	Unit 1_9	14	adj.十二	1
+9	thirteen	Unit 1_9	14	num.十三	1
+9	fourteen	Unit 1_9	14	num.十四	1
+9	fifteen	Unit 1_9	14	num.十五	1
+9	sixteen	Unit 1_9	14	num.十六	1
+9	seventeen	Unit 1_9	14	num.十七	1
+9	eighteen	Unit 1_9	14	num.十八	1
+9	nineteen	Unit 1_9	14	num.十九	1
+10	twenty	Unit 1_10	14	num.二十	1
+10	year	Unit 1_10	14	n.年	1
+10	old	Unit 1_10	14	adj.老的	1
+10	years old	Unit 1_10	14	...岁	0
+10	How old ...	Unit 1_10	14	...多少岁？	0
+10	class	Unit 1_10	14	n.班级	1
+10	in	Unit 1_10	14	prep.在...里	1
+10	grade	Unit 1_10	14	n.年级	1
+10	age	Unit 1_10	14	n.年龄	1
+10	that	Unit 1_10	14	pron.那	1
+11	English	Unit 1_11	14	n&adj.英语	1
+11	in English	Unit 1_11	14	用英语	0
+11	an	Unit 1_11	14	art.一（用在元音前）	1
+11	eraser	Unit 1_11	14	n.橡皮擦	1
+11	a	Unit 1_11	14	art.一（用在辅音前）	1
+11	map	Unit 1_11	14	n.地图	1
+11	spell	Unit 1_11	14	v.拼写	1
+11	can	Unit 1_11	14	aux.可能	1
+11	please	Unit 1_11	14	int.&vt.请	1
+11	pencil	Unit 1_11	14	n.铅笔	1
+12	apple	Unit 1_12	14	n.苹果	1
+12	double	Unit 1_12	14	n.&vt.两倍的	1
+12	toy	Unit 1_12	14	n.玩具	1
+12	wow	Unit 1_12	14	int.哇	0
+12	desk	Unit 1_12	14	n.书桌	1
+12	pen	Unit 1_12	14	n.钢笔	1
+12	ruler	Unit 1_12	14	n.尺子	1
+12	book	Unit 1_12	14	n.书	1
+12	car	Unit 1_12	14	n.矫车	1
+12	orange	Unit 1_12	14	n.&adj.橘子	1
+13	egg	Unit 1_13	14	n.蛋	1
+13	blackboard	Unit 1_13	14	n.黑板	1
+13	these	Unit 1_13	14	pron.这些	1
+13	those	Unit 1_13	14	pron.那些	1
+13	schoolbag	Unit 1_13	14	n.书包	1
+13	cake	Unit 1_13	14	n.蛋糕	1
+13	bus	Unit 1_13	14	n.公共汽车	1
+13	box	Unit 1_13	14	n.盒子	1
+13	now	Unit 1_13	14	n.现在	1
+13	school	Unit 1_13	14	n.学校	1
+14	her	Unit 1_14	14	pron.她的	1
+14	phone	Unit 1_14	14	n.电话	1
+14	his	Unit 1_14	14	pron.他的	1
+14	same	Unit 1_14	14	adj.同样的	1
+14	but	Unit 1_14	14	conj.但是	1
+14	friend	Unit 1_14	14	n.朋友	1
+14	ID number	Unit 1_14	14	n.身份证号码	0
+14	junior	Unit 1_14	14	adj.初级的	0
+14	high	Unit 1_14	14	adj.高的	1
+14	junior high school	Unit 1_14	14	初中	0
+15	guess	Unit 2_1	10	n.猜	1
+15	have	Unit 2_1	10	v.有	1
+15	small	Unit 2_1	10	adj.小的	1
+15	nose	Unit 2_1	10	n.鼻子	1
+15	has	Unit 2_1	10	有（第三人称单数）	1
+15	big	Unit 2_1	10	adj.大的	1
+15	eye	Unit 2_1	10	n.眼睛	1
+15	know	Unit 2_1	10	vt.知道	1
+15	right	Unit 2_1	10	adj.对的	1
+15	head	Unit 2_1	10	n.头	1
+16	face	Unit 2_2	10	n.脸	1
+16	hair	Unit 2_2	10	n.头发	1
+16	ear	Unit 2_2	10	n.耳朵	1
+16	mouth	Unit 2_2	10	n.嘴	1
+16	neck	Unit 2_2	10	n.颈	1
+16	round	Unit 2_2	10	adj.圆的	1
+16	long	Unit 2_2	10	adj.长的	1
+16	wide	Unit 2_2	10	adj.宽阔的	1
+16	girl	Unit 2_2	10	n.女孩	1
+16	boy	Unit 2_2	10	n.男孩	1
+17	short	Unit 2_3	10	adj.短的	1
+17	favorite	Unit 2_3	10	adj.最喜爱的	1
+17	movie	Unit 2_3	10	n.（美）电影	1
+17	star	Unit 2_3	10	n.星星	1
+17	Chinese	Unit 2_3	10	n&adj.中国人	1
+17	does	Unit 2_3	10	动词do的第三人称单数现在式	0
+17	doesn't	Unit 2_3	10	不（第三人称单数）	0
+17	again	Unit 2_3	10	adv.再	1
+17	look	Unit 2_3	10	n.看	1
+17	arm	Unit 2_3	10	n.胳膊	1
+18	hand	Unit 2_4	10	n.手	1
+18	leg	Unit 2_4	10	n.腿	1
+18	foot	Unit 2_4	10	n.脚	1
+18	come	Unit 2_4	10	vi.来	1
+18	come from	Unit 2_4	10	来自	0
+18	student	Unit 2_4	10	n.学生	1
+18	sister	Unit 2_4	10	n.姐	1
+18	different	Unit 2_4	10	adj.不同的	1
+18	knife	Unit 2_4	10	n.小刀	1
+18	don't	Unit 2_4	10	不	0
+19	both	Unit 2_5	10	pron.两者	1
+19	black	Unit 2_5	10	adj.黑色的	1
+19	blond	Unit 2_5	10	adj.金黄色的	0
+19	blue	Unit 2_5	10	adj.蓝色的	1
+19	color	Unit 2_5	10	n.颜色	1
+19	pink	Unit 2_5	10	n.&adj.粉色的	1
+19	red	Unit 2_5	10	n.&adj.红色的	1
+19	purple	Unit 2_5	10	n.&adj.紫色的	1
+19	brown	Unit 2_5	10	n.&adj.棕色的	1
+19	white	Unit 2_5	10	n.&adj.白色的	1
+20	gray	Unit 2_6	10	n.&adj.灰色的	1
+20	green	Unit 2_6	10	n.&adj.绿色的	1
+20	yellow	Unit 2_6	10	n.&adj.黄色的	1
+20	here	Unit 2_6	10	adv.在这里	1
+20	give	Unit 2_6	10	vt.给	1
+20	give...to...	Unit 2_6	10	把...给...	0
+20	letter	Unit 2_6	10	n.信	1
+20	sorry	Unit 2_6	10	adj.对不起	1
+20	like	Unit 2_6	10	prep.&vt.像	1
+20	look like	Unit 2_6	10	看起来像...	0
+21	tall	Unit 2_7	10	adj.高的	1
+21	will	Unit 2_7	10	aux.会	1
+21	I'll	Unit 2_7	10	我会	0
+21	young	Unit 2_7	10	adj.年轻的	1
+21	man	Unit 2_7	10	n.人	1
+21	woman	Unit 2_7	10	n.妇女	1
+21	snowman	Unit 2_7	10	n.雪人	0
+21	T-shirt	Unit 2_7	10	n.T恤	1
+21	shoe	Unit 2_7	10	n.鞋	1
+21	cap	Unit 2_7	10	n.帽子	1
+22	coat	Unit 2_8	10	n.外套	1
+22	skirt	Unit 2_8	10	n.短裙	1
+22	pants	Unit 2_8	10	n.（pl.)长裤	0
+22	dress	Unit 2_8	10	n.连衣裙	1
+22	at	Unit 2_8	10	prep.在	1
+22	look at	Unit 2_8	10	看着	0
+22	photo	Unit 2_8	10	n.照片	1
+22	strong	Unit 2_8	10	adj.强壮的	1
+22	cool	Unit 2_8	10	adj.凉爽的	1
+22	mine	Unit 2_8	10	pron.我的	1
+23	whose	Unit 2_9	10	pron.谁的	1
+23	bike	Unit 2_9	10	n.自行车	1
+23	cat	Unit 2_9	10	n.猫	1
+23	hers	Unit 2_9	10	pron.她的	0
+23	our	Unit 2_9	10	pron.我们的（形容词性物主代词）	1
+23	ours	Unit 2_9	10	pron.我们的（名词性物主代词）	0
+23	banana	Unit 2_9	10	n.香蕉	1
+23	their	Unit 2_9	10	pron.他/她/它们的（形容词性物主代词）	1
+23	theirs	Unit 2_9	10	pron.他/她/它们的（名词性物主代词）	0
+23	yours	Unit 2_9	10	pron.你的；你们的（名词性物主代词）	0
+23	baby	Unit 2_9	10	n.婴儿	1
+24	bag	Unit 2_10	10	n.书包	1
+24	shirt	Unit 2_10	10	n.衬衫	1
+24	jacket	Unit 2_10	10	n.夹克衫	1
+24	think	Unit 2_10	10	vt.想	1
+24	new	Unit 2_10	10	adj.新的	1
+24	classmate	Unit 2_10	10	n.同班同学	1
+24	clothes	Unit 2_10	10	n.（pl.）衣服	1
+24	find	Unit 2_10	10	vt.找到	1
+24	help	Unit 2_10	10	vt.帮助	1
+24	us	Unit 2_10	10	pron.我们	1
+24	him	Unit 2_10	10	pron.他	1
+25	could	Unit 3_1	12	aux.可以	1
+25	tell	Unit 3_1	12	vt.告诉	1
+25	sure	Unit 3_1	12	adv.当然	1
+25	pen pal	Unit 3_1	12	n.笔友	0
+25	speak	Unit 3_1	12	vt.讲	1
+25	some	Unit 3_1	12	pron.&adj.一些	1
+25	poor	Unit 3_1	12	adj.不好的	1
+25	with	Unit 3_1	12	prep.关于	1
+25	help sb with sth	Unit 3_1	12	帮助某人做某事	0
+25	problem	Unit 3_1	12	n.问题	1
+26	pet	Unit 3_2	12	n.宠物	1
+26	often	Unit 3_2	12	adv.经常	1
+26	want	Unit 3_2	12	vi.想	1
+26	live	Unit 3_2	12	v.居住	1
+26	say	Unit 3_2	12	vt.说	1
+26	visit	Unit 3_2	12	n.访问	1
+26	great	Unit 3_2	12	adj.伟大的	1
+26	wall	Unit 3_2	12	n.墙	1
+26	the Great Wall	Unit 3_2	12	长城	0
+26	many	Unit 3_2	12	n.许多的	1
+27	lot	Unit 3_3	12	adv.许多	1
+27	a lot	Unit 3_3	12	很	0
+27	all	Unit 3_3	12	adj.&n.所有	1
+27	not...at all	Unit 3_3	12	一点也不	0
+27	so	Unit 3_3	12	conj.因此	1
+27	study	Unit 3_3	12	vi.学习	1
+27	each other	Unit 3_3	12	互相	0
+27	little	Unit 3_3	12	adj.一点儿	1
+27	a little	Unit 3_3	12	一点点	0
+27	them	Unit 3_3	12	pron.他/她/它们	1
+28	very	Unit 3_4	12	adv.很	1
+28	much	Unit 3_4	12	adj.更加	1
+28	very much	Unit 3_4	12	非常	0
+28	home	Unit 3_4	12	n.家	1
+28	at home	Unit 3_4	12	在家	0
+28	its	Unit 3_4	12	pron.它的	1
+28	dog	Unit 3_4	12	n.狗	1
+28	any	Unit 3_4	12	adj.一些	1
+28	of	Unit 3_4	12	prep....的	1
+28	kid	Unit 3_4	12	n.（口）小孩子	1
+29	glad	Unit 3_5	12	adj.高兴的	1
+29	seat	Unit 3_5	12	n.座位	1
+29	have a seat	Unit 3_5	12	就座	0
+29	mother	Unit 3_5	12	n.母亲	1
+29	father	Unit 3_5	12	n.父亲	1
+29	doctor	Unit 3_5	12	n.医生	1
+29	parent	Unit 3_5	12	n.父亲或母亲	1
+29	office	Unit 3_5	12	n.办公室	1
+29	worker	Unit 3_5	12	n.工人	1
+29	driver	Unit 3_5	12	n.司机	1
+30	farmer	Unit 3_6	12	n.农民	1
+30	cook	Unit 3_6	12	vi.厨师	1
+30	nurse	Unit 3_6	12	n.护士	1
+30	work	Unit 3_6	12	v.&n.工作	1
+30	hospital	Unit 3_6	12	n.医院	1
+30	on	Unit 3_6	12	prep.在...上	1
+30	farm	Unit 3_6	12	n.农场	1
+30	on a farm	Unit 3_6	12	在农场	0
+30	drive	Unit 3_6	12	v.驾驶	1
+30	family	Unit 3_6	12	n.家庭	1
+31	aunt	Unit 3_7	12	n.姨母	1
+31	uncle	Unit 3_7	12	n.叔	1
+31	brother	Unit 3_7	12	n.兄	1
+31	sofa	Unit 3_7	12	n.长沙发	1
+31	grandparent	Unit 3_7	12	n.祖父	1
+31	cousin	Unit 3_7	12	n.堂姐妹	1
+31	daughter	Unit 3_7	12	n.女儿	1
+31	tree	Unit 3_7	12	n.树	1
+31	family tree	Unit 3_7	12	家谱	0
+31	son	Unit 3_7	12	n.儿子	1
+32	happy	Unit 3_8	12	adj.快乐的	1
+32	teach	Unit 3_8	12	vt.教书	1
+32	only	Unit 3_8	12	adv.仅仅	1
+32	cute	Unit 3_8	12	adj.逗人喜爱的	0
+32	after	Unit 3_8	12	conj.在...之后	1
+32	look after	Unit 3_8	12	照看	0
+32	yourself	Unit 3_8	12	pron.你自己	1
+32	help oneself to	Unit 3_8	12	请随便吃点	0
+32	would	Unit 3_8	12	aux.将会	1
+32	fish	Unit 3_8	12	n.鱼	1
+33	chicken	Unit 3_9	12	n.鸡	1
+33	about	Unit 3_9	12	prep.关于	1
+33	What about ...	Unit 3_9	12	...怎么样？	0
+33	rice	Unit 3_9	12	n.米饭	1
+33	all right	Unit 3_9	12	行了	0
+33	drink	Unit 3_9	12	n.喝	1
+33	juice	Unit 3_9	12	n.果汁	1
+33	milk	Unit 3_9	12	n.牛奶	1
+33	for	Unit 3_9	12	prep.对...来说	1
+33	idea	Unit 3_9	12	n.主意	1
+33	good idea	Unit 3_9	12	好主意	0
+34	water	Unit 3_10	12	n.水	1
+34	vegetable	Unit 3_10	12	n.蔬菜	1
+34	bread	Unit 3_10	12	n.面包	1
+34	hamburger	Unit 3_10	12	n.汉堡包	1
+34	usually	Unit 3_10	12	adv.通常地	1
+34	breakfast	Unit 3_10	12	n.早餐	1
+34	lunch	Unit 3_10	12	n.午餐	1
+34	supper	Unit 3_10	12	n.晚餐	1
+34	food	Unit 3_10	12	n.食物	1
+34	may	Unit 3_10	12	aux.可以	1
+34	take	Unit 3_10	12	v.拿	1
+35	order	Unit 3_11	12	n.顺序	1
+35	take one's order	Unit 3_11	12	记下顾客点的饭菜	0
+35	sir	Unit 3_11	12	n.先生	1
+35	something	Unit 3_11	12	pron.某事	1
+35	glass	Unit 3_11	12	n.杯	1
+35	a glass of	Unit 3_11	12	一杯	1
+35	wait	Unit 3_11	12	vt.等	1
+35	moment	Unit 3_11	12	n.片刻	1
+35	wait a moment	Unit 3_11	12	等一会儿	0
+35	well	Unit 3_11	12	adv.好	1
+35	eat	Unit 3_11	12	vt.吃	1
+36	out	Unit 3_12	12	adj.不在里面	1
+36	eat out	Unit 3_12	12	下馆子	1
+36	dinner	Unit 3_12	12	n.正餐	1
+36	have dinner	Unit 3_12	12	吃饭	0
+36	why	Unit 3_12	12	adv.为什么	1
+36	Why not ...	Unit 3_12	12	为什么不...？	0
+36	here you are	Unit 3_12	12	给你	0
+36	dear	Unit 3_12	12	adj.亲爱的	1
+36	kind	Unit 3_12	12	adj.善良的	1
+36	such as	Unit 3_12	12	例如	0
+36	be	Unit 3_12	12	prep.是	1
+37	shop	Unit 4_1	10	n.商店	1
+37	madam	Unit 4_1	10	n.夫人	1
+37	buy	Unit 4_1	10	vt.买	1
+37	over	Unit 4_1	10	prep.穿过	1
+37	there	Unit 4_1	10	adv.在那里	1
+37	over there	Unit 4_1	10	在那边	0
+37	try	Unit 4_1	10	n.试	1
+37	try on	Unit 4_1	10	试穿	0
+37	How much ...	Unit 4_1	10	...多少钱？	1
+37	seventy	Unit 4_1	10	num.七十	1
+38	thirty	Unit 4_2	10	num.三十	1
+38	forty	Unit 4_2	10	num.四十	1
+38	fifty	Unit 4_2	10	num.五十	1
+38	sixty	Unit 4_2	10	num.六十	1
+38	eighty	Unit 4_2	10	num.八十	1
+38	ninety	Unit 4_2	10	num.九十	1
+38	hundred	Unit 4_2	10	num.百	1
+38	just	Unit 4_2	10	adv.仅仅	1
+38	pair	Unit 4_2	10	n.一对	1
+38	think of	Unit 4_2	10	认为	0
+39	How about ...	Unit 4_3	10	...怎么样？	0
+39	mm	Unit 4_3	10	abbr.嗯	0
+39	think about	Unit 4_3	10	考虑	0
+39	do some shopping	Unit 4_3	10	购物	0
+39	need	Unit 4_3	10	v.需要	1
+39	kilo	Unit 4_3	10	n.千克	1
+39	salt	Unit 4_3	10	n.盐	1
+39	How many ...	Unit 4_3	10	多少...？	0
+39	bottle	Unit 4_3	10	n.瓶子	1
+39	heavy	Unit 4_3	10	adj.重的	1
+40	worry	Unit 4_4	10	n.烦恼	1
+40	fat	Unit 4_4	10	adj.肥胖的	1
+40	mouse	Unit 4_4	10	n.鼠	1
+40	meow	Unit 4_4	10	n&vi.猫叫声	0
+40	rabbit	Unit 4_4	10	n.兔	1
+40	ant	Unit 4_4	10	n.蚂蚁	1
+40	er	Unit 4_4	10	哦	0
+40	free	Unit 4_4	10	adj.空闲的	1
+40	be free	Unit 4_4	10	空闲	0
+40	Sunday	Unit 4_4	10	n.星期日	1
+41	up	Unit 4_5	10	adv.向上	1
+41	go	Unit 4_5	10	vi.去	1
+41	West Hill	Unit 4_5	10	西山	0
+41	picnic	Unit 4_5	10	n.野餐	1
+41	love	Unit 4_5	10	vt.爱	1
+41	call	Unit 4_5	10	v.打电话给...	1
+41	forget	Unit 4_5	10	vt.忘记	1
+41	bring	Unit 4_5	10	vt.拿来	1
+41	guitar	Unit 4_5	10	n.吉他	1
+41	tomorrow	Unit 4_5	10	adv.明天	1
+42	go shopping	Unit 4_6	10	去购物	1
+42	sing	Unit 4_6	10	vt.唱	1
+42	song	Unit 4_6	10	n.歌	1
+42	can't	Unit 4_6	10	can的否定形式	0
+42	have to	Unit 4_6	10	不得不	0
+42	fun	Unit 4_6	10	n.有趣的事	1
+42	fly	Unit 4_6	10	vt.飞行	1
+42	kite	Unit 4_6	10	n.风筝	1
+42	fly a kite	Unit 4_6	10	放风筝	0
+43	afraid	Unit 4_7	10	adj.担心的	1
+43	time	Unit 4_7	10	n.时间	1
+43	carry	Unit 4_7	10	v.携带	1
+43	bow-wow	Unit 4_7	10	狗汪汪叫声	0
+43	speak to	Unit 4_7	10	和...说话	1
+43	ask	Unit 4_7	10	vt.请求	1
+43	back	Unit 4_7	10	adv.往后	1
+43	call ... back	Unit 4_7	10	给...回电话	0
+43	have a picnic	Unit 4_7	10	野餐	0
+44	zoo	Unit 4_8	10	n.动物园	1
+44	panda	Unit 4_8	10	n.熊猫	1
+44	monkey	Unit 4_8	10	n.猴子	1
+44	lion	Unit 4_8	10	n.狮子	1
+44	tiger	Unit 4_8	10	n.老虎	1
+44	elephant	Unit 4_8	10	n.象	1
+44	o'clock	Unit 4_8	10	...点钟	0
+44	past	Unit 4_8	10	prep.&n.过	1
+44	quarter	Unit 4_8	10	n.一刻钟	1
+45	half	Unit 4_9	10	adj.一半	1
+45	show	Unit 4_9	10	v.演出	1
+45	a.m.	Unit 4_9	10	abbr.上午	0
+45	clever	Unit 4_9	10	adj.聪明的	1
+45	animal	Unit 4_9	10	n.动物	1
+45	hour	Unit 4_9	10	n.小时	1
+45	It's time to ...	Unit 4_9	10	是...的时间	0
+45	go home	Unit 4_9	10	回家	0
+45	next	Unit 4_9	10	adj.&adv.下一个的	1
+46	next time	Unit 4_10	10	下次	0
+46	get	Unit 4_10	10	vt.得到	1
+46	get up	Unit 4_10	10	起床	0
+46	have breakfast	Unit 4_10	10	吃早饭	0
+46	p.m.	Unit 4_10	10	abbr.下午	0
+46	way	Unit 4_10	10	n.路	1
+46	on one's way home	Unit 4_10	10	在某人回家的路上	0
+46	wrong	Unit 4_10	10	adj.错误的	1
+46	meat	Unit 4_10	10	n.肉	1

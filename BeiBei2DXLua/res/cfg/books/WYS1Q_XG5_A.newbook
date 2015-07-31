@@ -1,0 +1,78 @@
+1	for	Module 1_1	2	prep.达	1
+1	different	Module 1_1	2	adj.不同的	0
+1	bench	Module 1_1	2	n.长凳	0
+2	then	Module 1_2	2	conj.那么	1
+2	playground	Module 1_2	2	n.操场	1
+3	heavy	Module 2_1	1	adj.重的	1
+3	let	Module 2_1	1	vt.让	1
+3	sell	Module 2_1	1	vi.卖	0
+3	sometimes	Module 2_1	1	adv.有时	1
+4	Halloween	Module 3_1	1	n.万圣节前夕	0
+4	trick or treat	Module 3_1	1	不请吃就捣蛋	0
+4	give	Module 3_1	1	vt.给	1
+4	festival	Module 3_1	1	n.节日	0
+4	scary	Module 3_1	1	adj.吓人的	0
+4	mask	Module 3_1	1	n.面具	0
+4	neighbour	Module 3_1	1	n.邻居	0
+4	night	Module 3_1	1	n.夜晚	1
+4	Easter	Module 3_1	1	n.复活节	0
+4	chick	Module 3_1	1	n.小鸡	0
+4	chocolate	Module 3_1	1	n.巧克力	0
+5	stories	Module 4_1	1	n.故事(复数）	1
+5	invitation	Module 4_1	1	n.请帖	0
+5	tidy up	Module 4_1	1	收拾	0
+5	November	Module 4_1	1	n.十一月	0
+5	from	Module 4_1	1	prep.从...起	1
+5	to	Module 4_1	1	prep.直到	1
+5	reply	Module 4_1	1	vt.&n.回答	0
+6	mine	Module 5_1	1	pron.我的	0
+6	whose	Module 5_1	1	pron.谁的	1
+6	yours	Module 5_1	1	pron.你的	0
+6	hers	Module 5_1	1	pron.她的	0
+6	both	Module 5_1	1	pron.两...	0
+6	wet	Module 5_1	1	adj.湿的	0
+6	That's OK	Module 5_1	1	没关系	0
+6	take away	Module 5_1	1	移走	0
+6	worker	Module 5_1	1	n.工人	1
+6	still	Module 5_1	1	adv.还	0
+7	well	Module 6_1	1	adv.好	1
+7	high	Module 6_1	1	adj.高的	1
+7	true	Module 6_1	1	adj.真实的	0
+7	got	Module 6_1	1	vt.得到（过去式）	1
+7	eighty	Module 6_1	1	num.八十	0
+7	point	Module 6_1	1	n.分数	0
+7	fan	Module 6_1	1	n.狂热爱好者	1
+7	seventy	Module 6_1	1	num.七十	0
+7	sixty	Module 6_1	1	num.六十	0
+8	useful	Module 7_1	1	adj.有用的	0
+8	show	Module 7_1	1	n.节目	0
+8	presenter	Module 7_1	1	n.主持人	0
+8	blind	Module 7_1	1	adj.失明的	0
+8	could	Module 7_1	1	aux.能（过去式）	1
+8	speak	Module 7_1	1	vt.说	1
+8	fire	Module 7_1	1	n.火灾	0
+8	inside	Module 7_1	1	prep.在...里面	0
+8	firefighter	Module 7_1	1	n.消防队员	0
+8	couldn't	Module 7_1	1	不能（过去式）	0
+9	often	Module 8_1	1	adv.经常	1
+9	around	Module 8_1	1	prep.围绕	0
+9	start	Module 8_1	1	n.&v.开始	0
+9	line	Module 8_1	1	n.行	0
+9	half	Module 8_1	1	n.一半	1
+9	past	Module 8_1	1	prep.晚于	0
+9	miss	Module 8_1	1	v.想念	0
+9	study	Module 8_1	1	vi.学习	1
+9	open	Module 8_1	1	adj.开着的	1
+9	wall	Module 8_1	1	n.墙	0
+9	have fun	Module 8_1	1	玩得开心	0
+9	break	Module 8_1	1	v.课间休息	0
+10	nothing	Module 9_1	1	pron.没有事情	0
+10	think	Module 9_1	1	vt.思考	1
+10	drank	Module 9_1	1	vt.喝（过去式）	1
+11	should	Module 10_1	1	aux.应该	0
+11	go to bed	Module 10_1	1	上床睡觉	0
+11	shouldn't	Module 10_1	1	不应该	0
+11	take down	Module 10_1	1	取下	0
+11	clean	Module 10_1	1	adj.干净的	1
+11	rule	Module 10_1	1	n.规则	0
+11	kind	Module 10_1	1	adj.友好的	1

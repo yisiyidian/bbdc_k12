@@ -1,0 +1,124 @@
+1	juggler	Unit1_1	3	n.杂技演员	1
+1	does	Unit1_1	3	vt.做（do的第三人称单数）	1
+1	here	Unit1_1	3	adv.这里	1
+2	juggle	Unit1_2	3	v.杂耍	1
+2	Get help	Unit1_2	3	寻求帮助	1
+2	go	Unit1_2	3	vi.去	1
+2	quickly	Unit1_2	3	adv.快地；迅速地	1
+2	telephone	Unit1_2	3	n.电话	1
+2	call	Unit1_2	3	v.叫	1
+2	ambulance	Unit1_2	3	n.救护车	1
+2	vet	Unit1_2	3	n.兽医	1
+2	doctor	Unit1_2	3	n.医生	1
+2	hurt	Unit1_2	3	v.受伤	1
+2	him	Unit1_2	3	pron.他	1
+2	of course	Unit1_2	3	当然	1
+3	worry	Unit1_3	3	n.担心	1
+3	have a look	Unit1_3	3	看一看	1
+3	alright	Unit1_3	3	adj.健康的	1
+3	do	Unit1_3	3	v.做	1
+3	go home	Unit1_3	3	回家	1
+3	farmer	Unit1_3	3	n.农民	1
+3	policeman	Unit1_3	3	n.警察	1
+3	nurse	Unit1_3	3	n.护士	1
+3	pilot	Unit1_3	3	n.飞行员	1
+3	dancer	Unit1_3	3	n.舞蹈演员	1
+3	student	Unit1_3	3	n.学生	1
+3	teach	Unit1_3	3	vt.教	1
+4	a lot	Unit2_1	2	非常	1
+4	wear	Unit2_1	2	vt.穿	1
+4	glasses	Unit2_1	2	n.眼镜	1
+4	come	Unit2_1	2	vi.来	1
+4	know	Unit2_1	2	vt.知道	1
+4	so	Unit2_1	2	conj.那么	1
+4	cute	Unit2_1	2	adj.可爱的	1
+4	rabbit	Unit2_1	2	n.兔	1
+4	great	Unit2_1	2	adj.伟大的	1
+4	leopard	Unit2_1	2	n.豹	1
+4	tiger	Unit2_1	2	n.虎	1
+5	lion	Unit2_2	2	n.狮子	1
+5	donkey	Unit2_2	2	n.驴	1
+5	fox	Unit2_2	2	n.狐狸	1
+5	panda	Unit2_2	2	n.熊猫	1
+5	squirrel	Unit2_2	2	n.松鼠	1
+5	sheep	Unit2_2	2	n.绵羊	1
+5	goat	Unit2_2	2	n.山羊	1
+5	frog	Unit2_2	2	n.青蛙	1
+5	monkey	Unit2_2	2	n.猴子	1
+5	horse	Unit2_2	2	n.马	1
+5	feather	Unit2_2	2	n.羽毛	1
+6	too	Unit3_1	4	adv.太	1
+6	expensive	Unit3_1	4	adj.贵	1
+6	in	Unit3_1	4	adv.进入	1
+6	skirt	Unit3_1	4	n.裙子	1
+6	clothes	Unit3_1	4	n.衣服	1
+6	cheap	Unit3_1	4	adj.便宜	1
+6	any	Unit3_1	4	adj.任何的	1
+6	shoes	Unit3_1	4	n.鞋	1
+6	only	Unit3_1	4	adv.仅仅	1
+7	trousers	Unit3_2	4	n.长裤	1
+7	smaller	Unit3_2	4	adj.较小的	1
+7	shorts	Unit3_2	4	n.短裤	1
+7	right	Unit3_2	4	adj.合适	1
+7	size	Unit3_2	4	n.尺寸	1
+7	medium	Unit3_2	4	adj.中等的	1
+7	socks	Unit3_2	4	n.袜子	1
+7	pajamas	Unit3_2	4	n.睡衣	1
+7	tie	Unit3_2	4	n.领带	1
+8	shirt	Unit3_3	4	n.衬衫	1
+8	dress	Unit3_3	4	n.连衣裙	1
+8	sweater	Unit3_3	4	n.毛衣	1
+8	coat	Unit3_3	4	n.外套	1
+8	jeans	Unit3_3	4	n.牛仔裤	1
+8	large	Unit3_3	4	adj.大的	1
+8	thirty	Unit3_3	4	num.三十	1
+8	forty	Unit3_3	4	num.四十	1
+8	fifty	Unit3_3	4	num.五十	1
+9	sixty	Unit3_4	4	num.六十	1
+9	seventy	Unit3_4	4	num.七十	1
+9	eighty	Unit3_4	4	num.八十	1
+9	ninety	Unit3_4	4	num.九十	1
+9	wheel	Unit3_4	4	n.车轮	1
+9	whale	Unit3_4	4	n.鲸鱼	1
+9	wheat	Unit3_4	4	n.麦子	1
+9	whistle	Unit3_4	4	n.口哨	1
+10	where	Unit4_1	2	pron.&adv.哪里	1
+10	on	Unit4_1	2	prep.在...上面	1
+10	rock	Unit4_1	2	n.岩石	1
+10	under	Unit4_1	2	prep.在...下面	1
+10	in	Unit4_1	2	prep.在...里面	1
+10	behind	Unit4_1	2	adv.在...后面	1
+10	in front of	Unit4_1	2	在...前面	1
+10	look for	Unit4_1	2	寻找	1
+10	sad	Unit4_1	2	adj.难过的	1
+11	ground	Unit4_2	2	n.地面	1
+11	next to	Unit4_2	2	在...旁边	1
+11	bed	Unit4_2	2	n.床	1
+11	desk	Unit4_2	2	n.课桌	1
+11	sofa	Unit4_2	2	n.沙发	1
+11	chair	Unit4_2	2	n.椅子	1
+11	floor	Unit4_2	2	n.地板	1
+11	farm	Unit4_2	2	n.农场	1
+11	shark	Unit4_2	2	n.鲨鱼	1
+12	map	Unit5_1	2	n.地图	1
+12	town	Unit5_1	2	n.城镇	1
+12	supermarket	Unit5_1	2	n.超市	1
+12	near	Unit5_1	2	prep.附近	1
+12	train station	Unit5_1	2	火车站	1
+12	park	Unit5_1	2	n.公园	1
+12	movie theater	Unit5_1	2	电影院	1
+12	swimming pool	Unit5_1	2	游泳池	1
+12	between	Unit5_1	2	prep.在之间	1
+12	turn	Unit5_1	2	vt.转	1
+13	left	Unit5_2	2	n.左	1
+13	right	Unit5_2	2	n.右	1
+13	toilet	Unit5_2	2	n.卫生间	1
+13	bus stop	Unit5_2	2	汽车站	1
+13	post office	Unit5_2	2	邮局	1
+13	hospital	Unit5_2	2	n.医院	1
+13	police station	Unit5_2	2	警察局	1
+13	library	Unit5_2	2	n.图书馆	1
+13	bank	Unit5_2	2	n.银行	1
+13	fire station	Unit5_2	2	消防站	1
+14	dangerous	Unit6_1	1	adj.危险的	1
+14	still	Unit6_1	1	conj.&adv.依然	1

@@ -1,0 +1,111 @@
+1	weather	Module 1_1	2	n.天气	1
+1	like	Module 1_1	2	prep.像	1
+1	What's the weather like	Module 1_1	2	天气怎么样？	0
+2	sunny	Module 1_2	2	adj.阳光充足的	1
+2	windy	Module 1_2	2	adj.有风的	1
+2	take	Module 1_2	2	vt.带	1
+2	cap	Module 1_2	2	n.帽子	1
+2	sofa	Module 1_2	2	n.沙发	0
+2	street	Module 1_2	2	n.街道	1
+2	rain	Module 1_2	2	vi.下雨	1
+2	snow	Module 1_2	2	vi.下雪	1
+2	ski	Module 1_2	2	v.滑雪	0
+3	radio	Module 2_1	1	n.收音机	0
+3	photo	Module 2_1	1	n.照片	1
+3	newspaper	Module 2_1	1	n.报纸	0
+3	little	Module 2_1	1	adj.年幼的	1
+3	camera	Module 2_1	1	n.照相机	0
+3	smile	Module 2_1	1	n.&v.微笑	0
+3	draw	Module 2_1	1	v.绘画	1
+3	picture	Module 2_1	1	n.图画	1
+3	write	Module 2_1	1	v.写	1
+3	letter	Module 2_1	1	n.信	0
+3	colour	Module 2_1	1	vt.给...着色	1
+4	tidy	Module 3_1	1	v.整理	0
+4	room	Module 3_1	1	n.房间	1
+4	do	Module 3_1	1	v.做	1
+4	homework	Module 3_1	1	n.家庭作业	0
+4	sleep	Module 3_1	1	v.睡觉	1
+4	secret	Module 3_1	1	n.秘密	0
+4	card	Module 3_1	1	n.贺卡	1
+4	flower	Module 3_1	1	n.花	1
+4	science	Module 3_1	1	n.科学	1
+4	today	Module 3_1	1	n.今天	1
+5	call	Module 4_1	1	v.打电话	1
+5	noise	Module 4_1	1	n.声音	0
+5	drink	Module 4_1	1	n.喝	1
+5	talk	Module 4_1	1	n.&v.说话	1
+5	stone	Module 4_1	1	n.石子	0
+5	five-stones	Module 4_1	1	n.五石游戏	0
+5	behind	Module 4_1	1	adv.在...后面	1
+5	hide	Module 4_1	1	vt.躲藏	0
+5	seek	Module 4_1	1	n.寻找	0
+5	hide-and-seek	Module 4_1	1	n.捉迷藏	0
+6	skip	Module 5_1	1	n.跳绳	0
+6	hurry up	Module 5_1	1	赶快	0
+6	late	Module 5_1	1	adj.晚的	1
+6	sad	Module 5_1	1	adj.伤心的	1
+6	no	Module 5_1	1	n.没有	1
+6	those	Module 5_1	1	pron.那些	1
+6	clap	Module 5_1	1	vt.拍手	0
+6	game	Module 5_1	1	n.游戏	1
+6	calpping game	Module 5_1	1	拍手游戏	0
+6	well	Module 5_1	1	adv.噢，好	1
+6	kid	Module 5_1	1	n.小孩	1
+6	catch	Module 5_1	1	vt.抓	0
+6	of course	Module 5_1	1	当然	0
+7	usually	Module 6_1	1	adv.通常地	0
+7	us	Module 6_1	1	pron.我们	1
+7	ride	Module 6_1	1	vt.骑	0
+7	thing	Module 6_1	1	n.事情	0
+7	ill	Module 6_1	1	adj.有病的	1
+7	cook	Module 6_1	1	vi.做饭	1
+7	her	Module 6_1	1	pron.她	1
+7	go shopping	Module 6_1	1	去购物	0
+7	kitchen	Module 6_1	1	n.厨房	1
+8	Children's Day	Module 7_1	1	儿童节	0
+8	TV	Module 7_1	1	abbr.电视台	1
+8	play	Module 7_1	1	v.演出	1
+8	say	Module 7_1	1	vt.念	1
+8	poem	Module 7_1	1	n.诗	0
+8	dragon	Module 7_1	1	n.龙	0
+8	dragon dance	Module 7_1	1	舞龙	0
+8	picnic	Module 7_1	1	n.野餐	0
+8	family	Module 7_1	1	n.家	1
+8	beach	Module 7_1	1	n.海滩	0
+9	hill	Module 8_1	1	n.小山	0
+9	past	Module 8_1	1	adv.&prep.经过	0
+9	station	Module 8_1	1	n.车站	0
+9	hospital	Module 8_1	1	n.医院	1
+9	stop	Module 8_1	1	v.&n.停止	1
+9	turn	Module 8_1	1	vt.转向	1
+9	around	Module 8_1	1	adv.到另一面	0
+9	turn around	Module 8_1	1	转身	0
+9	ground	Module 8_1	1	n.地面	0
+9	again	Module 8_1	1	adv.又一次	1
+9	jump	Module 8_1	1	n.跳跃	1
+9	back	Module 8_1	1	adv.回到	1
+9	come back	Module 8_1	1	回来	0
+10	left	Module 9_1	1	ad.向左；左边的	1
+10	turn left	Module 9_1	1	向左转	0
+10	right	Module 9_1	1	ad.向右；右边的	1
+10	turn right	Module 9_1	1	向右转	0
+10	road	Module 9_1	1	n.道路	0
+10	excuse me	Module 9_1	1	劳驾	0
+10	straight	Module 9_1	1	adv.直地	0
+10	go straight on	Module 9_1	1	直着走	0
+10	lost	Module 9_1	1	adj.迷路的	0
+10	out	Module 9_1	1	adv.向外	0
+10	factory	Module 9_1	1	n.工厂	0
+11	next to	Module 10_1	1	接近	0
+11	cousin	Module 10_1	1	n.堂兄弟姐妹	1
+11	supermarket	Module 10_1	1	n.超市	1
+11	wrong	Module 10_1	1	adj.不正确的	1
+11	way	Module 10_1	1	n.道路	1
+11	turn back	Module 10_1	1	往回走	0
+11	front	Module 10_1	1	n.前面	0
+11	in front of	Module 10_1	1	在...的前面	0
+11	well	Module 10_1	1	adv.完全地	1
+11	taxi	Module 10_1	1	n.出租车	1
+11	Mrs	Module 10_1	1	abbr.太太	1
+11	cinema	Module 10_1	1	n.电影院	1

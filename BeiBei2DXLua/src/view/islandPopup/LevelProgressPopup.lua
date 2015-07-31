@@ -58,7 +58,8 @@ function LevelProgressPopup:initUI()
     monsters:addAnimation(0, 'animation', true)
 
     --加入title
-    local titleString = string.gsub('Unit '..s_BookUnitName[s_CURRENT_USER.bookKey][''..tonumber(self.index) + 1],"_","-")
+    --local titleString = string.gsub('Unit '..s_BookUnitName[s_CURRENT_USER.bookKey][''..tonumber(self.index) + 1],"_","-")
+    local titleString = string.gsub(s_BookUnitName[s_CURRENT_USER.bookKey][''..tonumber(self.index) + 1],"_","-")
     local title = cc.Label:createWithSystemFont(titleString,"",50)
     title:setPosition(self.background:getContentSize().width/2, self.background:getContentSize().height - 75)
     title:setColor(cc.c3b(255,255,255))

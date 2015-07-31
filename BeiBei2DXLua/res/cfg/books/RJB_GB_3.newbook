@@ -1,0 +1,341 @@
+1	take place	Unit 1_1	9	发生	1
+1	beauty	Unit 1_1	9	n.美	1
+1	harvest	Unit 1_1	9	n.&v.收获	1
+2	celebration	Unit 1_2	9	n.庆祝	1
+2	hunter	Unit 1_2	9	n.狩猎者	1
+2	starve	Unit 1_2	9	v.使饿死	1
+2	origin	Unit 1_2	9	n.起源	1
+2	religious	Unit 1_2	9	adj.宗教上的	1
+2	seasonal	Unit 1_2	9	adj.季节的	0
+2	ancestor	Unit 1_2	9	n.祖先	1
+2	grave	Unit 1_2	9	adj.坟墓	1
+2	incense	Unit 1_2	9	n.熏香	1
+2	in memory of	Unit 1_2	9	纪念	1
+3	Mexico	Unit 1_3	9	n.墨西哥	1
+3	feast	Unit 1_3	9	n.节日	1
+3	skull	Unit 1_3	9	n.头脑	0
+3	bone	Unit 1_3	9	n.骨	1
+3	Halloween	Unit 1_3	9	万圣节前夕	0
+3	belief	Unit 1_3	9	n.信任	1
+3	dress up	Unit 1_3	9	穿上盛装	1
+3	trick	Unit 1_3	9	n.诡计	1
+3	play a trick on	Unit 1_3	9	搞恶作剧	1
+3	poet	Unit 1_3	9	n.诗人	1
+4	Columbus Day	Unit 1_4	9	哥伦布日	0
+4	arrival	Unit 1_4	9	n.到来	1
+4	Christopher Columbus	Unit 1_4	9	克利斯朵夫•哥伦布	0
+4	gain	Unit 1_4	9	n.获得	1
+4	independence	Unit 1_4	9	n.独立	1
+4	independent	Unit 1_4	9	adj.独立的	1
+4	gather	Unit 1_4	9	vt.搜集	1
+4	agriculture	Unit 1_4	9	n.农业	1
+4	agricultural	Unit 1_4	9	adj.农业的	1
+4	award	Unit 1_4	9	vt.奖	1
+5	produce	Unit 1_5	9	vt.（农）产品	0
+5	rooster	Unit 1_5	9	n.雄禽	1
+5	admire	Unit 1_5	9	vt.赞美	1
+5	energetic	Unit 1_5	9	adj.精力充沛的	1
+5	look forward to	Unit 1_5	9	期望	1
+5	carnival	Unit 1_5	9	n.狂欢节	0
+5	lunar	Unit 1_5	9	adj.月的	0
+5	Easter	Unit 1_5	9	n.复活节	1
+5	parade	Unit 1_5	9	n.游行	0
+5	day and night	Unit 1_5	9	日夜	1
+6	clothing	Unit 1_6	9	n.衣服	1
+6	Christian	Unit 1_6	9	n.基督徒	1
+6	Jesus	Unit 1_6	9	n.耶稣	1
+6	cherry	Unit 1_6	9	n.樱桃	1
+6	blossom	Unit 1_6	9	n.花	1
+6	as though	Unit 1_6	9	好像	1
+6	have fun with	Unit 1_6	9	玩得开心	1
+6	custom	Unit 1_6	9	n.习惯	1
+6	worldwide	Unit 1_6	9	adj.遍及世界的	1
+7	rosebud	Unit 1_7	9	n.玫瑰花蕾	0
+7	fool	Unit 1_7	9	n.愚人	1
+7	necessity	Unit 1_7	9	n.必要性	1
+7	permission	Unit 1_7	9	n.许可	1
+7	prediction	Unit 1_7	9	n.预言	1
+7	fashion	Unit 1_7	9	n.样子	1
+7	parking	Unit 1_7	9	n.停放	1
+7	parking lot	Unit 1_7	9	停车场	1
+7	Valentine's Day	Unit 1_7	9	情人节	0
+8	turn up	Unit 1_8	9	出现	1
+8	keep one's word	Unit 1_8	9	守信用	1
+8	hold one's breath	Unit 1_8	9	屏息	1
+8	apologize	Unit 1_8	9	v.道歉	1
+8	drown	Unit 1_8	9	vt.淹没	1
+8	sadness	Unit 1_8	9	n.悲伤	1
+8	obvious	Unit 1_8	9	adj.明显的	1
+8	wipe	Unit 1_8	9	n.擦	1
+8	weave	Unit 1_8	9	v.编织	1
+9	herd	Unit 1_9	9	n.牧群	1
+9	the Milky Way	Unit 1_9	9	银河	1
+9	magpie	Unit 1_9	9	n.喜鹊	1
+9	weep	Unit 1_9	9	n.哭泣	1
+9	announcer	Unit 1_9	9	n.广播员	0
+9	set off	Unit 1_9	9	出发	1
+9	remind	Unit 1_9	9	v.提醒	1
+9	remind ... of ...	Unit 1_9	9	使...想起...	1
+9	forgive	Unit 1_9	9	vt.原谅	1
+10	diet	Unit 2_1	7	n.&v.日常饮食	1
+10	spaghetti	Unit 2_1	7	n.意大利面	1
+10	nut	Unit 2_1	7	n.坚果	1
+10	muscle	Unit 2_1	7	n.肌肉	1
+10	protective	Unit 2_1	7	adj.保护的	1
+10	bean	Unit 2_1	7	n.豆	1
+10	pea	Unit 2_1	7	n.豌豆	1
+10	cucumber	Unit 2_1	7	n.黄瓜	1
+10	eggplant	Unit 2_1	7	n.茄子	1
+10	pepper	Unit 2_1	7	n.辣椒	1
+11	mushroom	Unit 2_2	7	n.蘑菇	1
+11	peach	Unit 2_2	7	n.桃子	1
+11	lemon	Unit 2_2	7	n.柠檬	1
+11	balance	Unit 2_2	7	n.平衡	1
+11	balanced diet	Unit 2_2	7	平衡膳食	1
+11	barbecue	Unit 2_2	7	n.烧烤	1
+11	mutton	Unit 2_2	7	n.羊肉	1
+11	kebab	Unit 2_2	7	n.印度烤羊肉串	0
+11	roast	Unit 2_2	7	n.&v.&adj.烤制的	1
+11	stir	Unit 2_2	7	n.摇动	1
+12	fry	Unit 2_3	7	vt.油煎	1
+12	stir-fry	Unit 2_3	7	v.用旺火炒	1
+12	ought	Unit 2_3	7	aux.应当	1
+12	ought to	Unit 2_3	7	应当	1
+12	bacon	Unit 2_3	7	n.熏咸肉	1
+12	cola	Unit 2_3	7	n.可乐	1
+12	sugary	Unit 2_3	7	含糖的	1
+12	sign	Unit 2_3	7	n.牌示	1
+12	lose weight	Unit 2_3	7	减肥	1
+12	slim	Unit 2_3	7	adj.&v.变细	1
+13	curiosity	Unit 2_4	7	n.好奇心	1
+13	hostess	Unit 2_4	7	n.女主人	1
+13	raw	Unit 2_4	7	adj.生的	1
+13	vinegar	Unit 2_4	7	n.醋	1
+13	get away with	Unit 2_4	7	被放过	1
+13	lie	Unit 2_4	7	n.谎话	1
+13	tell a lie	Unit 2_4	7	说谎	1
+13	customer	Unit 2_4	7	n.顾客	1
+13	discount	Unit 2_4	7	n.折扣	1
+13	win ... back	Unit 2_4	7	赢回	1
+14	weakness	Unit 2_5	7	n.缺点	1
+14	strength	Unit 2_5	7	n.强项	1
+14	consult	Unit 2_5	7	v.咨询	1
+14	fibre	Unit 2_5	7	n.纤维	1
+14	digest	Unit 2_5	7	vt.消化	1
+14	poisonous	Unit 2_5	7	adj.有毒的	0
+14	carrot	Unit 2_5	7	n.胡萝卜	1
+14	scurvy	Unit 2_5	7	n.坏血病	0
+14	rickets	Unit 2_5	7	n.佝偻病	0
+14	obesity	Unit 2_5	7	n.过度肥胖	0
+15	vitamin	Unit 2_6	7	n.维生素	0
+15	protein	Unit 2_6	7	adj.蛋白质	0
+15	earn one's living	Unit 2_6	7	谋生	1
+15	debt	Unit 2_6	7	n.债	1
+15	in debt	Unit 2_6	7	欠债	1
+15	glare	Unit 2_6	7	n.怒目而视	1
+15	spy	Unit 2_6	7	n.&v.窥探	1
+15	spy on	Unit 2_6	7	暗中监视	1
+15	limit	Unit 2_6	7	n.限制	1
+15	limited	Unit 2_6	7	adj.有限的	1
+16	benefit	Unit 2_7	7	n.利益	1
+16	breast	Unit 2_7	7	n.胸部	1
+16	garlic	Unit 2_7	7	n.大蒜	1
+16	sigh	Unit 2_7	7	vt.叹息	1
+16	combine	Unit 2_7	7	vi.联合	1
+16	cut down	Unit 2_7	7	削减；砍倒	1
+16	before long	Unit 2_7	7	不久以后	1
+16	put on weight	Unit 2_7	7	增加体重	1
+16	cooperation	Unit 2_7	7	n.合作	0
+16	ingredient	Unit 2_7	7	n.材料	0
+16	flavour	Unit 2_7	7	n.味道,气味	0
+17	birthplace	Unit 3_1	6	n.出生地	1
+17	Florida	Unit 3_1	6	n.佛罗里达	0
+17	bring up	Unit 3_1	6	抚养	1
+17	novel	Unit 3_1	6	n.小说	1
+17	boyhood	Unit 3_1	6	n.少年时代	0
+17	adventure	Unit 3_1	6	n.奇遇	1
+17	phrase	Unit 3_1	6	n.短语	1
+17	fathom	Unit 3_1	6	n.长度单位	0
+17	author	Unit 3_1	6	n.著者	1
+18	scene	Unit 3_2	6	n.现场	1
+18	narrator	Unit 3_2	6	n.讲述者	0
+18	bet	Unit 3_2	6	n.&v.打赌	0
+18	make a bet	Unit 3_2	6	打赌	0
+18	penniless	Unit 3_2	6	贫困的	0
+18	wander	Unit 3_2	6	v.漫游	1
+18	pavement	Unit 3_2	6	n.人行道	1
+18	businessman	Unit 3_2	6	n.商人	1
+18	permit	Unit 3_2	6	n.许可	1
+19	ahead	Unit 3_3	6	adv.在前	1
+19	go ahead	Unit 3_3	6	前进；往下说	1
+19	by accident	Unit 3_3	6	偶然	1
+19	bay	Unit 3_3	6	adj.海湾	1
+19	stare	Unit 3_3	6	vt.凝视	1
+19	stare at	Unit 3_3	6	盯着看	1
+19	nightfall	Unit 3_3	6	n.黄昏	0
+19	fault	Unit 3_3	6	n.过错	1
+19	spot	Unit 3_3	6	n.发现；污点	1
+20	passage	Unit 3_4	6	n.通道	1
+20	unpaid	Unit 3_4	6	adj.未付款的	0
+20	account	Unit 3_4	6	n.认为	1
+20	account for	Unit 3_4	6	解释了	1
+20	embassy	Unit 3_4	6	n.大使馆	1
+20	seek	Unit 3_4	6	n.寻找	1
+20	patience	Unit 3_4	6	n.耐性	1
+20	contrary	Unit 3_4	6	adj.反面	1
+20	on the contrary	Unit 3_4	6	与此相反	1
+21	charity	Unit 3_5	6	n.慈善	0
+21	envelope	Unit 3_5	6	n.信封	1
+21	unbelievable	Unit 3_5	6	adj.难以置信的	1
+21	steak	Unit 3_5	6	n.牛排	1
+21	pineapple	Unit 3_5	6	n.菠萝	1
+21	dessert	Unit 3_5	6	n.甜点	1
+21	amount	Unit 3_5	6	n.数量	1
+21	take a chance	Unit 3_5	6	冒险	1
+21	rude	Unit 3_5	6	adj.粗鲁的	1
+21	manner	Unit 3_5	6	n.礼貌	1
+22	scream	Unit 3_6	6	v.尖声叫	1
+22	genuine	Unit 3_6	6	adj.真的	1
+22	issue	Unit 3_6	6	n.发行	0
+22	fake	Unit 3_6	6	vt.假货	0
+22	rag	Unit 3_6	6	n.破布	1
+22	in rags	Unit 3_6	6	衣衫褴褛	1
+22	indeed	Unit 3_6	6	adv.真正地	1
+22	as for	Unit 3_6	6	关于	1
+22	bow	Unit 3_6	6	v.鞠躬	1
+22	barber	Unit 3_6	6	n.理发师	1
+23	astronomy	Unit 4_1	7	n.天文学	1
+23	astronomer	Unit 4_1	7	n.天文学家	0
+23	solar	Unit 4_1	7	adj.太阳的	0
+23	system	Unit 4_1	7	n.系统	1
+23	solar system	Unit 4_1	7	太阳系	1
+23	religion	Unit 4_1	7	n.宗教	1
+23	theory	Unit 4_1	7	n.学说	1
+23	Big Bang	Unit 4_1	7	大爆炸	0
+23	atom	Unit 4_1	7	n.原子	1
+23	billion	Unit 4_1	7	n.<美>十亿	1
+24	globe	Unit 4_2	7	n.球体	1
+24	global	Unit 4_2	7	adj.全球性的	0
+24	violent	Unit 4_2	7	adj.猛烈的	1
+24	in time	Unit 4_2	7	及时	1
+24	carbon	Unit 4_2	7	n.碳	1
+24	dioxide	Unit 4_2	7	n.二氧化物	1
+24	carbon dioxide	Unit 4_2	7	二氧化碳	1
+24	nitrogen	Unit 4_2	7	n.氮	0
+24	vapour	Unit 4_2	7	n.蒸气	0
+24	atmosphere	Unit 4_2	7	n.大气层	1
+25	unlike	Unit 4_3	7	prep.&adj.不同	1
+25	fundamental	Unit 4_3	7	adj.基本的	1
+25	presence	Unit 4_3	7	n.出席	0
+25	dissolve	Unit 4_3	7	vi.溶解	0
+25	harmful	Unit 4_3	7	adj.有害的	1
+25	acid	Unit 4_3	7	adj.酸	1
+25	chain	Unit 4_3	7	n.链子	1
+25	reaction	Unit 4_3	7	n.反应	0
+25	multiply	Unit 4_3	7	vt.乘	1
+25	oxygen	Unit 4_3	7	n.氧	1
+26	shellfish	Unit 4_4	7	n.水生有壳动物	0
+26	amphibian	Unit 4_4	7	adj.两栖动物	0
+26	reptile	Unit 4_4	7	adj.爬行动物	0
+26	lay eggs	Unit 4_4	7	下蛋	1
+26	dinosaur	Unit 4_4	7	n.恐龙	0
+26	exist	Unit 4_4	7	v.存在	1
+26	mammal	Unit 4_4	7	n.哺乳动物	0
+26	give birth to	Unit 4_4	7	产生	1
+26	thus	Unit 4_4	7	adv.&conj.因此	1
+26	in one's turn	Unit 4_4	7	轮到某人	1
+27	prevent ... from	Unit 4_5	7	阻止	1
+27	puzzle	Unit 4_5	7	n.&v.谜	1
+27	biology	Unit 4_5	7	n.生物学	1
+27	biologist	Unit 4_5	7	n.生物学家	1
+27	gravity	Unit 4_5	7	n.万有引力	1
+27	satellite	Unit 4_5	7	n.卫星	1
+27	gentle	Unit 4_5	7	adj.温和的	1
+27	geologist	Unit 4_5	7	n.地质学家	0
+27	physicist	Unit 4_5	7	n.物理学家	1
+27	block out	Unit 4_5	7	挡住	1
+28	extinct	Unit 4_6	7	adj.灭绝的	0
+28	climate	Unit 4_6	7	n.气候	1
+28	comet	Unit 4_6	7	n.慧星	0
+28	crash	Unit 4_6	7	v.碰撞	1
+28	Albert Einstein	Unit 4_6	7	陈尔伯特•爱因斯坦	0
+28	Stephen Hawking	Unit 4_6	7	斯蒂芬•霍金	0
+28	spaceship	Unit 4_6	7	n.宇宙飞船	1
+28	pull	Unit 4_6	7	n.&v.拉	1
+28	lessen	Unit 4_6	7	v.减少	0
+29	cheer up	Unit 4_7	7	感到高兴	1
+29	float	Unit 4_7	7	n.&v.浮动	1
+29	weightlessly	Unit 4_7	7	adv.失重地	0
+29	cabin	Unit 4_7	7	n.小屋	0
+29	now that	Unit 4_7	7	既然	1
+29	get the hang of	Unit 4_7	7	熟悉	0
+29	break out	Unit 4_7	7	突发	1
+29	exhaust	Unit 4_7	7	v.用尽	0
+29	watch out for	Unit 4_7	7	当心	1
+30	multicultural	Unit 5_1	7	adj.多种文化的	0
+30	quiz	Unit 5_1	7	n.测验	1
+30	Canadian	Unit 5_1	7	n.加拿大人	1
+30	beaver	Unit 5_1	7	n.海狸	0
+30	grizzly	Unit 5_1	7	n.灰熊	0
+30	polar	Unit 5_1	7	adj.极地的	0
+30	penguin	Unit 5_1	7	n.企鹅	0
+30	prime	Unit 5_1	7	adj.首要的	0
+30	minister	Unit 5_1	7	n.大臣	1
+30	prime minister	Unit 5_1	7	首相	1
+31	governor	Unit 5_2	7	n.州长	0
+31	rather than	Unit 5_2	7	与其	1
+31	continent	Unit 5_2	7	n.洲	1
+31	baggage	Unit 5_2	7	n.行李	1
+31	chat	Unit 5_2	7	vt.聊天	1
+31	scenery	Unit 5_2	7	n.（总称）自然风景	1
+31	eastward	Unit 5_2	7	adj.向东	1
+31	westward	Unit 5_2	7	adv.向西	1
+31	upward	Unit 5_2	7	adj.向上	1
+31	surround	Unit 5_2	7	vt.包围	1
+32	the Rocky Mountains	Unit 5_3	7	落基山脉	0
+32	harbor	Unit 5_3	7	n.海港	1
+32	measure	Unit 5_3	7	n.测量	1
+32	aboard	Unit 5_3	7	adv.在船上	1
+32	settle down	Unit 5_3	7	定居	1
+32	manage to do	Unit 5_3	7	设法做	1
+32	catch sight of	Unit 5_3	7	看见	1
+32	eagle	Unit 5_3	7	n.鹰	1
+32	stampede	Unit 5_3	7	n.赛马会	0
+32	cowboy	Unit 5_3	7	n.牛仔	0
+33	have a gift for	Unit 5_4	7	有天赋	1
+33	within	Unit 5_4	7	adv.在...之内	1
+33	border	Unit 5_4	7	n.边界	1
+33	slight	Unit 5_4	7	adj.轻微的	1
+33	slightly	Unit 5_4	7	adv.稍稍	1
+33	acre	Unit 5_4	7	n.英亩	1
+33	urban	Unit 5_4	7	adj.城市的	1
+33	location	Unit 5_4	7	n.位置	0
+33	topic	Unit 5_4	7	n.话题	1
+33	mix	Unit 5_4	7	v.&n.混合	1
+34	mixture	Unit 5_5	7	n.混合（名词）	1
+34	bush	Unit 5_5	7	n.灌木	1
+34	maple	Unit 5_5	7	n.枫	1
+34	frost	Unit 5_5	7	n.霜	1
+34	confirm	Unit 5_5	7	v.证实	1
+34	wealthy	Unit 5_5	7	adj.富有的	1
+34	distance	Unit 5_5	7	n.距离	1
+34	in the distance	Unit 5_5	7	在远处	1
+34	mist	Unit 5_5	7	n.薄雾	1
+35	misty	Unit 5_6	7	adj.有雾的	1
+35	schoolmate	Unit 5_6	7	n.同学	1
+35	booth	Unit 5_6	7	n.公用电话	1
+35	downtown	Unit 5_6	7	n.市区的	1
+35	pearl	Unit 5_6	7	n.珍珠	0
+35	Cantonese	Unit 5_6	7	n.广东人	0
+35	approximately	Unit 5_6	7	adv.接近	1
+35	dawn	Unit 5_6	7	n.黎明	1
+35	workplace	Unit 5_6	7	n.工作场所	0
+36	buffet	Unit 5_7	7	n.自助餐	1
+36	broad	Unit 5_7	7	adj.宽阔的	1
+36	nearby	Unit 5_7	7	adj.&adv.&prep.在附近	1
+36	tradition	Unit 5_7	7	n.传统	1
+36	terrify	Unit 5_7	7	v.使恐怖	1
+36	terrified	Unit 5_7	7	adj.恐惧的	1
+36	pleased	Unit 5_7	7	adj.欣喜的	1
+36	impress	Unit 5_7	7	vt.使铭记	1
+36	impressive	Unit 5_7	7	adj.给人印象的	1

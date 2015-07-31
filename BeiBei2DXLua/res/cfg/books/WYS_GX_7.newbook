@@ -1,0 +1,528 @@
+1	dream team	Module 1_1	13	梦之队	1
+1	star	Module 1_1	13	n.明星	1
+1	forward	Module 1_1	13	n.前锋	1
+2	defend	Module 1_2	13	v.防守	1
+2	guard	Module 1_2	13	n.后卫	1
+2	referee	Module 1_2	13	n.裁判	1
+2	hoop	Module 1_2	13	n.圈	1
+2	court	Module 1_2	13	n.球场	1
+2	slam dunk	Module 1_2	13	n.扣篮	1
+2	association	Module 1_2	13	n.协会	1
+2	league	Module 1_2	13	n.联赛	1
+2	top-class	Module 1_2	13	adj.最优秀的	1
+2	talented	Module 1_2	13	adj.有天资的	1
+3	professional	Module 1_3	13	n.职业球员	1
+3	complicated	Module 1_3	13	adj.复杂的	1
+3	hold	Module 1_3	13	v.保持	1
+3	consecutive	Module 1_3	13	adj.连续的	1
+3	title	Module 1_3	13	n.冠军	1
+3	centre	Module 1_3	13	n.中锋	1
+3	scorer	Module 1_3	13	n.运动员	1
+3	valued	Module 1_3	13	adj.有价值的	1
+3	in the history of	Module 1_3	13	在...历史上	1
+3	grow up	Module 1_3	13	成长	1
+4	attend	Module 1_4	13	v.上(学)	1
+4	with an average of	Module 1_4	13	平均为...	1
+4	average	Module 1_4	13	n.平均数	1
+4	per	Module 1_4	13	prep.每	1
+4	gold medal	Module 1_4	13	金牌	1
+4	motivation	Module 1_4	13	n.动力	1
+4	tie	Module 1_4	13	n.平局	1
+4	steak	Module 1_4	13	n.牛排	1
+4	alongside	Module 1_4	13	prep.靠着	1
+4	awesome	Module 1_4	13	adj.了不起的	1
+5	shipyard	Module 1_5	13	n.造船厂	1
+5	various	Module 1_5	13	adj.各种各样的	1
+5	entire	Module 1_5	13	adj.全部的	1
+5	immediate	Module 1_5	13	adj.立刻的	1
+5	There's no doubt that ...	Module 1_5	13	毫无疑问	1
+5	deserve	Module 1_5	13	v.应得	1
+5	outstanding	Module 1_5	13	adj.杰出的	1
+5	generation	Module 1_5	13	n.一代人	1
+5	popularity	Module 1_5	13	n.流行	1
+5	live	Module 1_5	13	adv.现场直播地	1
+6	commentary	Module 1_6	13	n.解说	1
+6	half	Module 1_6	13	n.比赛的半场	1
+6	overtime	Module 1_6	13	n.加时赛	1
+6	coach	Module 1_6	13	n.教练	1
+6	commentator	Module 1_6	13	n.解说员	1
+6	rely	Module 1_6	13	v.信任	1
+6	stamina	Module 1_6	13	n.持久力	1
+6	quarter	Module 1_6	13	n.篮球赛的一节	1
+6	selfish	Module 1_6	13	adj.自私的	1
+6	all the time	Module 1_6	13	一直	1
+7	nature	Module 1_7	13	n.性格	1
+7	instant	Module 1_7	13	adj.立刻的	1
+7	hit	Module 1_7	13	n.热门人物	1
+7	nationwide	Module 1_7	13	adj.全国各地的	1
+7	if necessary	Module 1_7	13	如果有必要的话	1
+7	be rude to	Module 1_7	13	对...粗鲁	1
+7	dominate	Module 1_7	13	v.支配	1
+7	be used to	Module 1_7	13	习惯于	1
+7	draw sb's attention to	Module 1_7	13	引起某人注意	1
+7	wrestling	Module 1_7	13	n.摔跤	1
+8	boxing	Module 1_8	13	n.拳击	1
+8	upwards	Module 1_8	13	adv.向上地	1
+8	angle	Module 1_8	13	n.角	1
+8	collision	Module 1_8	13	n.碰撞	1
+8	parallel	Module 1_8	13	adj.平行的	1
+8	adequate	Module 1_8	13	adj.适当的	1
+8	sock	Module 1_8	13	n.短袜	1
+8	sneaker	Module 1_8	13	n.胶底运动鞋	1
+8	absorb	Module 1_8	13	v.消减	1
+8	bound	Module 1_8	13	v.跳跃	1
+9	vest	Module 1_9	13	n.内衣背心	1
+9	abrupt	Module 1_9	13	adj.突出的	1
+9	horizontal	Module 1_9	13	adj.水平的	1
+9	accelerate	Module 1_9	13	v.加快	1
+9	bounce	Module 1_9	13	n.反弹	1
+9	tournament	Module 1_9	13	n.锦标赛	1
+9	interval	Module 1_9	13	n.中场休息	1
+9	appoint	Module 1_9	13	v.任命	1
+9	typical	Module 1_9	13	adj.典型的	1
+10	slim	Module 1_10	13	adj.苗条的	1
+10	stout	Module 1_10	13	adj.胖的	1
+10	belly	Module 1_10	13	n.肚子	1
+10	obtain	Module 1_10	13	v.获得	1
+10	circuit	Module 1_10	13	n.环形	1
+10	boundary	Module 1_10	13	n.界限	1
+10	controversial	Module 1_10	13	adj.有争议的	1
+10	aside	Module 1_10	13	adv.靠一边	1
+10	dip	Module 1_10	13	v.下降	1
+11	commit	Module 1_11	13	v.犯错误	1
+11	foul	Module 1_11	13	n.犯规动作	1
+11	suspension	Module 1_11	13	n.暂停	1
+11	penalty	Module 1_11	13	n.处罚	1
+11	take possession of	Module 1_11	13	占有	1
+11	howl	Module 1_11	13	v.不停地嚎哭	1
+11	bleed	Module 1_11	13	v.出血	1
+11	cheek	Module 1_11	13	n.脸颊	1
+11	pulse	Module 1_11	13	n.脉搏	1
+12	confirm	Module 1_12	13	v.进一步确定	1
+12	dizzy	Module 1_12	13	adj.头晕目眩的	1
+12	bandage	Module 1_12	13	n.绷带	1
+12	blanket	Module 1_12	13	n.毯子	1
+12	ambulance	Module 1_12	13	n.救护车	1
+12	considerate	Module 1_12	13	adj.体谅的	1
+12	apologise	Module 1_12	13	v.道歉	1
+12	sniff	Module 1_12	13	v.吸气	1
+12	weep	Module 1_12	13	v.哭泣	1
+13	frustration	Module 1_13	13	n.挫折	1
+13	teamwork	Module 1_13	13	n.合作	1
+13	scar	Module 1_13	13	n.伤疤	1
+13	oval	Module 1_13	13	adj.卵形的	1
+13	gymnasium	Module 1_13	13	n.体育馆	1
+13	pole	Module 1_13	13	n.杆	1
+13	basis	Module 1_13	13	n.基础	1
+13	be based on	Module 1_13	13	以...为基础	1
+13	version	Module 1_13	13	n.变体	1
+14	highlight	Module 2_1	9	n.最重要的部分	1
+14	chart	Module 2_1	9	n.图	1
+14	prom	Module 2_1	9	n.（美）高中舞会	0
+14	peer	Module 2_1	9	n.同龄人	1
+14	mediator	Module 2_1	9	n.调解员	1
+14	forever	Module 2_1	9	adv.永远	1
+14	look back at	Module 2_1	9	回顾	1
+14	settle	Module 2_1	9	v.解决	1
+14	have fun	Module 2_1	9	玩得开心	1
+14	competitive	Module 2_1	9	adj.好强的	1
+15	elect	Module 2_2	9	v.选举	1
+15	suit	Module 2_2	9	v.合适	1
+15	rent	Module 2_2	9	v.短期租用	1
+15	It's a great pity that ...	Module 2_2	9	很可惜...	1
+15	dinner jacket	Module 2_2	9	男子晚礼服上装	0
+15	enormous	Module 2_2	9	adj.巨大的	1
+15	slogan	Module 2_2	9	n.口号	1
+15	attract	Module 2_2	9	v.吸引	1
+15	photography	Module 2_2	9	n.摄影	1
+15	keen	Module 2_2	9	adj.渴望的	1
+16	issue	Module 2_3	9	n.问题	1
+16	as far as I'm concerned	Module 2_3	9	就我而言	1
+16	in my view	Module 2_3	9	我认为	1
+16	after-school	Module 2_3	9	adj.校外的	1
+16	consider	Module 2_3	9	v.认为	1
+16	be considered as	Module 2_3	9	被看作	1
+16	develop	Module 2_3	9	v.发展	1
+16	activity	Module 2_3	9	n.活动	1
+16	ability	Module 2_3	9	n.能力	1
+16	outdoor	Module 2_3	9	adj.户外的	1
+17	water skiing	Module 2_4	9	滑水运动	1
+17	be likely to do	Module 2_4	9	有可能	1
+17	tradition	Module 2_4	9	n.传统	1
+17	boarding	Module 2_4	9	adj.提供食宿的	1
+17	nursery	Module 2_4	9	n.托儿所	1
+17	recite	Module 2_4	9	v.背诵	1
+17	alphabet	Module 2_4	9	n.字母表	1
+17	institution	Module 2_4	9	n.机构	1
+17	sew	Module 2_4	9	v.缝	1
+17	woollen	Module 2_4	9	adj.羊毛制的	1
+18	suitcase	Module 2_5	9	n.手提箱	1
+18	luggage	Module 2_5	9	n.行李	1
+18	innocent	Module 2_5	9	adj.天真无邪的	1
+18	pillow	Module 2_5	9	n.枕头	1
+18	quilt	Module 2_5	9	n.被子	1
+18	worn	Module 2_5	9	adj.陈旧的	1
+18	armchair	Module 2_5	9	n.扶手椅	1
+18	shabby	Module 2_5	9	adj.破旧的	1
+18	cushion	Module 2_5	9	n.垫子	1
+18	kettle	Module 2_5	9	n.水壶	1
+19	decoration	Module 2_6	9	n.装饰物	1
+19	curtain	Module 2_6	9	n.窗帘	1
+19	washroom	Module 2_6	9	n.厕所	1
+19	basin	Module 2_6	9	n.洗脸盆	1
+19	bathtub	Module 2_6	9	n.浴缸	1
+19	sob	Module 2_6	9	v.啜泣	1
+19	arithmetic	Module 2_6	9	n.算术	1
+19	multiply	Module 2_6	9	v.乘	1
+19	algebra	Module 2_6	9	n.代数	1
+19	geometry	Module 2_6	9	n.几何学	1
+20	concept	Module 2_7	9	n.概念	1
+20	cubic	Module 2_7	9	adj.立方的	1
+20	acre	Module 2_7	9	n.英亩	1
+20	gram	Module 2_7	9	n.克	1
+20	dynamic	Module 2_7	9	adj.精力充沛的	1
+20	bachelor	Module 2_7	9	n.未婚男子	1
+20	botanical	Module 2_7	9	adj.植物学的	1
+20	microscope	Module 2_7	9	n.显微镜	1
+20	regulation	Module 2_7	9	n.规章	1
+20	punctual	Module 2_7	9	adj.准时的	1
+21	T-shirt	Module 2_8	9	n.T恤	1
+21	weekday	Module 2_8	9	n.工作日	1
+21	Catholic	Module 2_8	9	n.天主教徒	0
+21	irritate	Module 2_8	9	v.使人烦躁	1
+21	upset	Module 2_8	9	v.使心烦意乱	1
+21	polish	Module 2_8	9	v.擦光	1
+21	zipper	Module 2_8	9	n.拉链	1
+21	button	Module 2_8	9	n.纽扣	1
+21	mailbox	Module 2_8	9	n.邮箱	1
+21	mummy	Module 2_8	9	n.（儿语）妈咪	1
+22	airmail	Module 2_9	9	n.航空邮件	1
+22	fortnight	Module 2_9	9	n.两星期	1
+22	certificate	Module 2_9	9	n.文凭	1
+22	scholarship	Module 2_9	9	n.奖学金	1
+22	cheerleading	Module 2_9	9	n.当拉拉队队员	1
+22	cheerleader	Module 2_9	9	n.拉拉队队员	1
+22	cheer	Module 2_9	9	v.欢呼	1
+22	squad	Module 2_9	9	n.拉拉队	1
+22	pompom	Module 2_9	9	n.彩色塑料线球	1
+22	routine	Module 2_9	9	n.一套固定舞步	1
+22	course	Module 2_9	9	n.课程	1
+23	novelist	Module 3_1	8	n.小说家	1
+23	scene	Module 3_1	8	n.场景	1
+23	cruel	Module 3_1	8	adj.冷酷的	1
+23	feed	Module 3_1	8	v.喂养	1
+23	pot	Module 3_1	8	n.锅	1
+23	warden	Module 3_1	8	n.管理员	1
+23	serve	Module 3_1	8	v.端上	1
+23	eager	Module 3_1	8	adj.热切的	1
+23	appetite	Module 3_1	8	n.胃口	1
+23	whisper	Module 3_1	8	v.低声地说	1
+24	nudge	Module 3_2	8	v.推开	1
+24	desperate	Module 3_2	8	adj.绝望的	1
+24	healthy	Module 3_2	8	adj.健康的	1
+24	in astonishment	Module 3_2	8	惊讶地	1
+24	support	Module 3_2	8	n.支撑物	1
+24	in a ... voice	Module 3_2	8	用...声音	1
+24	no sooner ... than ...	Module 3_2	8	刚一...就	1
+24	seize	Module 3_2	8	v.抓住	1
+24	hang	Module 3_2	8	v.绞死	1
+24	lock	Module 3_2	8	v.用锁锁	1
+25	workhouse	Module 3_3	8	n.济贫院	0
+25	reward	Module 3_3	8	n.酬谢	1
+25	scream	Module 3_3	8	v.尖叫	1
+25	collar	Module 3_3	8	n.衣领	1
+25	rough	Module 3_3	8	adj.多暴力的	1
+25	drag	Module 3_3	8	v.拖	1
+25	naughty	Module 3_3	8	adj.淘气的	1
+25	rascal	Module 3_3	8	n.恶棍	1
+25	orphan	Module 3_3	8	n.孤儿	1
+25	convict	Module 3_3	8	n.囚犯	1
+26	escape	Module 3_4	8	v.逃跑	1
+26	prison	Module 3_4	8	n.监狱	1
+26	wedding	Module 3_4	8	n.婚礼	1
+26	intend	Module 3_4	8	v.打算	1
+26	illegally	Module 3_4	8	adv.违法地	1
+26	repay	Module 3_4	8	v.报答	1
+26	cast	Module 3_4	8	n.演员阵容	1
+26	distribute	Module 3_4	8	v.分发	1
+26	chapter	Module 3_4	8	n.章节	1
+26	filthy	Module 3_4	8	adj.十分肮脏的	1
+27	sparrow	Module 3_5	8	n.麻雀	1
+27	seagull	Module 3_5	8	n.海鸥	1
+27	pipe	Module 3_5	8	n.管道	1
+27	smog	Module 3_5	8	n.烟雾	1
+27	choke	Module 3_5	8	v.使窒息	1
+27	swallow	Module 3_5	8	v.吞下	1
+27	rag	Module 3_5	8	n.旧布	1
+27	dustbin	Module 3_5	8	n.垃圾箱	1
+27	attain	Module 3_5	8	v.获得	1
+27	nutrition	Module 3_5	8	n.营养（作用）	1
+28	starvation	Module 3_6	8	n.挨饿	1
+28	welfare	Module 3_6	8	n.幸福	1
+28	concern	Module 3_6	8	n.关心	1
+28	taxpayer	Module 3_6	8	n.纳税人	1
+28	compass	Module 3_6	8	n.指南针	1
+28	anchor	Module 3_6	8	n.锚	1
+28	inn	Module 3_6	8	n.小酒馆	1
+28	carrier	Module 3_6	8	n.运输工具	1
+28	accumulate	Module 3_6	8	v.积累	1
+28	corporation	Module 3_6	8	n.公司	1
+29	navy	Module 3_7	8	n.海军	1
+29	pile	Module 3_7	8	n.堆	1
+29	paperwork	Module 3_7	8	n.资料	1
+29	trial	Module 3_7	8	n.审判	1
+29	pump	Module 3_7	8	n.泵	1
+29	fountain	Module 3_7	8	n.喷泉	1
+29	pub	Module 3_7	8	n.酒馆	1
+29	maid	Module 3_7	8	n.女仆	1
+29	bunch	Module 3_7	8	n.一束	1
+30	mistress	Module 3_8	8	n.女主人	1
+30	accomplish	Module 3_8	8	v.完成	1
+30	ambassador	Module 3_8	8	n.大使	1
+30	humble	Module 3_8	8	adj.低下的	1
+30	pedestrian	Module 3_8	8	n.行人	1
+30	lantern	Module 3_8	8	n.灯笼	1
+30	mourn	Module 3_8	8	v.悼念	1
+30	a huge amount of	Module 3_8	8	大量的	1
+30	bring sth to the attention of sb	Module 3_8	8	使某人关注某事	1
+31	soul music	Module 4_1	9	灵乐	1
+31	blues	Module 4_1	9	n.布鲁斯音乐	0
+31	harmonica	Module 4_1	9	n.口琴	1
+31	sophisticated	Module 4_1	9	adj.复杂的	1
+31	rhythmic	Module 4_1	9	adj.有节奏的	1
+31	rhythm	Module 4_1	9	n.节律	1
+31	gospel	Module 4_1	9	n.福音音乐	1
+31	improvisation	Module 4_1	9	n.即席演奏	1
+31	syncopation	Module 4_1	9	n.切分音	0
+31	DJ	Module 4_1	9	abbr.音乐唱片节目主持人	1
+32	hip hop	Module 4_2	9	嬉蹦乐	0
+32	graffiti	Module 4_2	9	n.涂鸦	1
+32	microphone	Module 4_2	9	n.麦克风	1
+32	percussion	Module 4_2	9	n.打击乐器	1
+32	rap	Module 4_2	9	n.说唱乐	1
+32	reggae	Module 4_2	9	n.雷盖	0
+32	turntable	Module 4_2	9	n.唱机的转盘	1
+32	movement	Module 4_2	9	n.运动	1
+32	MC-ing	Module 4_2	9	n.司仪	1
+32	technique	Module 4_2	9	n.技巧	1
+33	technology	Module 4_3	9	n.科技（总称）	1
+33	Jamaica	Module 4_3	9	n.牙买加	1
+33	side by side	Module 4_3	9	并排	1
+33	improvise	Module 4_3	9	v.即兴演奏	1
+33	vocal	Module 4_3	9	adj.发音的嗓音的	1
+33	approach	Module 4_3	9	n.方法	1
+33	be bored with	Module 4_3	9	厌烦	1
+33	disco	Module 4_3	9	n.迪斯科	0
+33	decline	Module 4_3	9	n.衰退	1
+33	take advantage of	Module 4_3	9	利用	1
+34	backing track	Module 4_4	9	伴奏曲	1
+34	rapper	Module 4_4	9	n.说唱乐歌手	1
+34	emerge	Module 4_4	9	v.出现	1
+34	rather than	Module 4_4	9	而不是	1
+34	touch	Module 4_4	9	v.触动	1
+34	trumpet	Module 4_4	9	n.小号	1
+34	in order	Module 4_4	9	有序地	1
+34	try out	Module 4_4	9	尝试	1
+34	arise	Module 4_4	9	v.呈现	1
+34	offshore	Module 4_4	9	adv.向海	1
+35	boom	Module 4_5	9	v.繁荣	1
+35	friction	Module 4_5	9	n.不合	1
+35	harmony	Module 4_5	9	n.融洽	1
+35	virtue	Module 4_5	9	n.美德	1
+35	be blessed with	Module 4_5	9	有幸	1
+35	conventional	Module 4_5	9	adj.按惯例的	1
+35	fancy	Module 4_5	9	adj.新潮的	1
+35	blouse	Module 4_5	9	n.女士宽松短衫	1
+35	slacks	Module 4_5	9	n.宽松长裤	1
+35	neat	Module 4_5	9	adj.整齐的	1
+36	mom	Module 4_6	9	n.妈妈	1
+36	consensus	Module 4_6	9	n.共同意见	1
+36	makeover	Module 4_6	9	n.改头换面	1
+36	budget	Module 4_6	9	v.制定预算	1
+36	cheque	Module 4_6	9	n.支票	1
+36	consultant	Module 4_6	9	n.顾问	1
+36	vain	Module 4_6	9	adj.自负的	1
+36	bonus	Module 4_6	9	n.没有预料到的好事	1
+36	DVD	Module 4_6	9	abbr.数码录像光碟	1
+37	pace	Module 4_7	9	n.速度	1
+37	tight	Module 4_7	9	adj.严格的	1
+37	schedule	Module 4_7	9	n.计划表	1
+37	spokeswoman	Module 4_7	9	n.女发言人	1
+37	deadline	Module 4_7	9	n.截止时间	1
+37	otherwise	Module 4_7	9	adv.否则	1
+37	come out	Module 4_7	9	出版	1
+37	allowance	Module 4_7	9	n.津贴	1
+37	far from	Module 4_7	9	完全不	1
+38	part-time	Module 4_8	9	adj.部分时间的	1
+38	devote	Module 4_8	9	v.为...付出	1
+38	be devoted to	Module 4_8	9	对...专一	1
+38	swap	Module 4_8	9	v.交换	1
+38	super	Module 4_8	9	adj.极好的	1
+38	yell	Module 4_8	9	v.叫喊	1
+38	beg	Module 4_8	9	v.请求	1
+38	beg for	Module 4_8	9	乞求	1
+38	pension	Module 4_8	9	n.养老金	1
+39	quit	Module 4_9	9	v.离开	1
+39	refreshing	Module 4_9	9	adj.令人耳目一新的	1
+39	pioneer	Module 4_9	9	n.先锋	1
+39	solo	Module 4_9	9	n.独奏	1
+39	satchel	Module 4_9	9	n.书包	1
+39	make an impression on sb	Module 4_9	9	给某人留下印象	1
+39	protest	Module 4_9	9	n.抗议	1
+39	migrant	Module 4_9	9	n.移民	1
+39	humorous	Module 4_9	9	adj.幽默的	1
+40	ethnic	Module 5_1	7	adj.种族的	1
+40	minority	Module 5_1	7	n.少数民族	1
+40	rainforest	Module 5_1	7	n.热带雨林	1
+40	diverse	Module 5_1	7	adj.完全不同的	1
+40	native	Module 5_1	7	adj.出生地的	1
+40	nation	Module 5_1	7	n.国家	1
+40	national	Module 5_1	7	adj.国家的	1
+40	bright-coloured	Module 5_1	7	adj.颜色鲜艳的	1
+40	belt	Module 5_1	7	n.腰带	1
+40	varied	Module 5_1	7	adj.各种各样的	1
+40	maze	Module 5_1	7	n.迷宫	1
+41	cobbled	Module 5_2	7	adj.铺鹅卵石的	1
+41	run	Module 5_2	7	v.控制	1
+41	inherit	Module 5_2	7	v.继承	1
+41	property	Module 5_2	7	n.财产	1
+41	custom	Module 5_2	7	n.风俗	1
+41	apron	Module 5_2	7	n.围裙	1
+41	hieroglyphic	Module 5_2	7	adj.象形文字的	1
+41	in use	Module 5_2	7	在使用	1
+41	hatch	Module 5_2	7	v.孵化	1
+41	pineapple	Module 5_2	7	n.菠萝	1
+41	bucket	Module 5_2	7	n.桶	1
+42	splash	Module 5_3	7	v.溅落	1
+42	apparently	Module 5_3	7	adv.看起来	1
+42	has a population of	Module 5_3	7	有...人口	1
+42	crop	Module 5_3	7	n.庄稼	1
+42	opera	Module 5_3	7	n.歌剧	1
+42	maize	Module 5_3	7	n.玉米	1
+42	farm	Module 5_3	7	v.种植	1
+42	fish	Module 5_3	7	v.捕鱼	1
+42	script	Module 5_3	7	n.书写字母	1
+42	ouch	Module 5_3	7	int.哎呦	1
+42	hammer	Module 5_3	7	n.榔头	1
+43	foolish	Module 5_4	7	adj.愚蠢的	1
+43	lame	Module 5_4	7	adj.瘸的	1
+43	hop	Module 5_4	7	v.单足蹦跳	1
+43	tyre	Module 5_4	7	n.轮胎	1
+43	firm	Module 5_4	7	adj.牢固的	1
+43	jungle	Module 5_4	7	n.热带丛林	1
+43	soul	Module 5_4	7	n.人	1
+43	in the distance	Module 5_4	7	在远处	1
+43	ox	Module 5_4	7	n.阉牛	1
+43	spear	Module 5_4	7	n.矛	1
+43	garment	Module 5_4	7	n.衣服	1
+44	sleeve	Module 5_5	7	n.袖子	1
+44	necklace	Module 5_5	7	n.项链	1
+44	jewellery	Module 5_5	7	n.珠宝	1
+44	set off	Module 5_5	7	出发	1
+44	arch	Module 5_5	7	n.弓状物	1
+44	rigid	Module 5_5	7	adj.僵硬的	1
+44	framework	Module 5_5	7	n.构架	1
+44	fasten	Module 5_5	7	v.系牢	1
+44	loose	Module 5_5	7	adj.稀松的	1
+44	fibre	Module 5_5	7	n.纤维质	1
+45	corn	Module 5_6	7	n.谷物	1
+45	spade	Module 5_6	7	n.铲	1
+45	tool	Module 5_6	7	n.工具	1
+45	chick	Module 5_6	7	n.小鸟	1
+45	rooster	Module 5_6	7	n.公鸡	1
+45	fold	Module 5_6	7	v.折叠	1
+45	adjust	Module 5_6	7	v.适应	1
+45	furnish	Module 5_6	7	v.配备家具	1
+45	mat	Module 5_6	7	n.地垫	1
+45	teapot	Module 5_6	7	n.茶壶	1
+46	bare	Module 5_7	7	adj.赤裸的	1
+46	waist	Module 5_7	7	n.腰	1
+46	widow	Module 5_7	7	n.寡妇	1
+46	nephew	Module 5_7	7	n.侄子	1
+46	garage	Module 5_7	7	n.汽车修理厂	1
+46	awkward	Module 5_7	7	adj.尴尬的	1
+46	pierce	Module 5_7	7	v.被突然听到	1
+46	rainbow	Module 5_7	7	n.彩虹	1
+46	aborigine	Module 5_7	7	n.土著居民	0
+46	gatherer	Module 5_7	7	n.采集者	1
+47	venue	Module 6_1	8	n.会场	1
+47	preserve	Module 6_1	8	v.保护	1
+47	agreement	Module 6_1	8	n.协议	1
+47	invest	Module 6_1	8	v.投资	1
+47	divert	Module 6_1	8	v.使改道	1
+47	prehistoric	Module 6_1	8	adj.史前的	1
+47	remains	Module 6_1	8	n.遗迹	1
+47	archaeologist	Module 6_1	8	n.考古学家	1
+47	primitive	Module 6_1	8	adj.原始的	1
+47	skull	Module 6_1	8	n.头颅	1
+48	item	Module 6_2	8	n.件	1
+48	existence	Module 6_2	8	n.存在	1
+48	relation	Module 6_2	8	n.亲属	1
+48	limestone	Module 6_2	8	n.石灰石	1
+48	span	Module 6_2	8	n.时距	1
+48	fossil	Module 6_2	8	n.化石	1
+48	beast	Module 6_2	8	n.野兽	1
+48	sharpen	Module 6_2	8	v.使变锋利	1
+48	excavation	Module 6_2	8	n.发掘	1
+48	list	Module 6_2	8	v.把...列表	1
+49	evolution	Module 6_3	8	n.进化	1
+49	exposure	Module 6_3	8	n.暴露	1
+49	weed	Module 6_3	8	n.野草	1
+49	cement	Module 6_3	8	n.水泥	1
+49	contribute	Module 6_3	8	v.促成	1
+49	maintain	Module 6_3	8	n.保持	1
+49	endangered	Module 6_3	8	adj.濒危的	1
+49	recommend	Module 6_3	8	v.建议	1
+49	awareness	Module 6_3	8	n.意识	1
+49	propose	Module 6_3	8	v.建议	1
+50	fund	Module 6_4	8	n.基金	1
+50	assistance	Module 6_4	8	n.帮助	1
+50	precious	Module 6_4	8	adj.宝贵的	1
+50	of vital importance	Module 6_4	8	至关重要	1
+50	catastrophe	Module 6_4	8	n.毁灭性的大灾难	1
+50	estimate	Module 6_4	8	n.估计	1
+50	length	Module 6_4	8	n.长度	1
+50	request	Module 6_4	8	n.请求	1
+50	apart from	Module 6_4	8	除...之外	1
+50	waterproof	Module 6_4	8	adj.防水的	1
+51	marvelous	Module 6_5	8	adj.极好的	1
+51	imperial	Module 6_5	8	adj.皇帝的	1
+51	tangible	Module 6_5	8	adj.有形的	1
+51	intangible	Module 6_5	8	adj.无形的	1
+51	delegate	Module 6_5	8	n.代表	1
+51	monument	Module 6_5	8	n.纪念碑	1
+51	inhabitant	Module 6_5	8	n.居民	1
+51	mankind	Module 6_5	8	n.人类	1
+51	directory	Module 6_5	8	n.名录	1
+51	bid	Module 6_5	8	n.投标	1
+52	enlarge	Module 6_6	8	v.使增大	1
+52	discrimination	Module 6_6	8	n.歧视	1
+52	go through	Module 6_6	8	获准	1
+52	practitioner	Module 6_6	8	n.从业人员	1
+52	advocate	Module 6_6	8	v.主张	1
+52	status	Module 6_6	8	n.法律地位	1
+52	virus	Module 6_6	8	n.病毒	1
+52	malaria	Module 6_6	8	n.疟疾	1
+52	compromise	Module 6_6	8	n.折中	1
+52	remind sb of sth	Module 6_6	8	使某人想起...	1
+53	seminar	Module 6_7	8	n.讨论课	1
+53	symbolic ambassador	Module 6_7	8	形象大使	1
+53	epic	Module 6_7	8	n.史诗	1
+53	agenda	Module 6_7	8	n.待办	1
+53	mercy	Module 6_7	8	n.任凭...的摆布	1
+53	at the mercy of ...	Module 6_7	8	受...支配	1
+53	undertake	Module 6_7	8	v.许诺做某事	1
+53	absence	Module 6_7	8	n.缺乏	1
+53	subjective	Module 6_7	8	adj.主观的	1
+53	diplomacy	Module 6_7	8	n.外交	1
+54	thorough	Module 6_8	8	adj.彻底的	1
+54	bureaucratic	Module 6_8	8	adj.官僚的	1
+54	in return	Module 6_8	8	反过来	1
+54	autonomy	Module 6_8	8	n.自治	1
+54	federal	Module 6_8	8	adj.联邦政府的	1
+54	guidance	Module 6_8	8	n.指导	1
+54	ignore	Module 6_8	8	v.忽视	1
+54	Hispanic	Module 6_8	8	adj.与说西班牙语国家有关的	0
+54	honour	Module 6_8	8	v.给予荣誉	1
+54	be honoured for	Module 6_8	8	因...而受到尊敬	1
+54	journalism	Module 6_8	8	n.新闻业	1

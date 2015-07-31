@@ -76,9 +76,9 @@ function ShopLayer.create()
         backColor:addChild(shelf) 
     end
 
-    for i = 1, productNum do
-        local x = s_DESIGN_WIDTH/2+150*(1-2*(i%2))
-        local y = bigHeight - height*(math.floor((i-1)/2))-435
+    for i = 2, productNum do
+        local x = s_DESIGN_WIDTH/2+150*(1-2*((i-1)%2))
+        local y = bigHeight - height*(math.floor((i-2)/2))-435
         
         local item_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then

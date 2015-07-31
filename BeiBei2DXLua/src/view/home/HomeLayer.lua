@@ -170,7 +170,7 @@ function HomeLayer:ctor()
     --设置按钮
     local button_setting = ccui.Button:create("image/homescene/home_page_function_bg1.png",'',"")
     button_setting:setScale9Enabled(true)
-    button_setting:setPosition(bigWidth / 2 - 166, 200)
+    button_setting:setPosition(bigWidth / 2 - 111, 200)
     button_setting:setRotation(180)
     button_setting:addTouchEventListener(handler(self, self.onBtnSettingTouch))
     backColor:addChild(button_setting)
@@ -185,22 +185,22 @@ function HomeLayer:ctor()
 
     if SHOP_LOCKED == 0 then
         button_shop = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
-        button_shop:setPosition(bigWidth / 2 + 1, 200)
+        button_shop:setPosition(bigWidth / 2, 200)
         icon_shop = cc.Sprite:create('image/homescene/home_page_store.png')
     else
         button_shop = ccui.Button:create("image/homescene/home_page_function_locked_bg1.png","","")
-        button_shop:setPosition(bigWidth / 2 + 0.5, 200)
+        button_shop:setPosition(bigWidth / 2, 200)
         local cover = cc.Sprite:create('image/homescene/home_page_function_locked_cover1.png')
         cover:setPosition(button_shop:getContentSize().width / 2,button_shop:getContentSize().height / 2)
         button_shop:addChild(cover)
         local lock = cc.Sprite:create('image/homescene/home_page_function_lock.png')
         lock:setAnchorPoint(1,0)
-        lock:setPosition(button_friend:getContentSize().width,button_friend:getContentSize().height * 0)
+        lock:setPosition(button_shop:getContentSize().width,button_shop:getContentSize().height * 0)
         button_shop:addChild(lock)
         icon_shop = cc.Sprite:create('image/homescene/home_page_store_locked.png')
     end
     button_shop:setScale9Enabled(true)
-    button_shop:setAnchorPoint(0,0.5)
+    button_shop:setAnchorPoint(0.5,0.5)
     --商店ICON
     icon_shop:setPosition(button_shop:getContentSize().width / 2,button_shop:getContentSize().height / 2)
     button_shop:addChild(icon_shop)
@@ -214,11 +214,11 @@ function HomeLayer:ctor()
     local icon_reward = nil
     if REWARD_LOCKED == 0 then
         button_reward = ccui.Button:create("image/homescene/home_page_function_bg1.png","","")
-        button_reward:setPosition(bigWidth / 2 + 166, 200)
+        button_reward:setPosition(bigWidth / 2 + 111, 200)
         icon_reward = cc.Sprite:create('image/homescene/home_page_medal.png')
     else
         button_reward = ccui.Button:create("image/homescene/home_page_function_locked_bg2.png","","")
-        button_reward:setPosition(bigWidth / 2 + 166, 200)
+        button_reward:setPosition(bigWidth / 2 + 111, 200)
         local cover = cc.Sprite:create('image/homescene/home_page_function_locked_cover2.png')
         cover:setPosition(button_reward:getContentSize().width / 2,button_reward:getContentSize().height / 2)
         button_reward:addChild(cover)
@@ -266,56 +266,56 @@ function HomeLayer:ctor()
     button_data:addChild(data_name,0)
 
     --好友按钮
-    local button_friend = nil
-    local icon_friend = nil
-    if s_CURRENT_USER:getLockFunctionState(1) == 1 then
-        button_friend = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
-        button_friend:setPosition(bigWidth / 2 - 1, 200)
-        icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
-    else
-        button_friend = ccui.Button:create("image/homescene/home_page_function_locked_bg1.png","","")
-        button_friend:setPosition(bigWidth / 2 - 0.5, 200)
-        local cover = cc.Sprite:create('image/homescene/home_page_function_locked_cover1.png')
-        cover:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
-        button_friend:addChild(cover)
-        local lock = cc.Sprite:create('image/homescene/home_page_function_lock.png')
-        lock:setAnchorPoint(1,0)
-        lock:setPosition(button_friend:getContentSize().width,button_friend:getContentSize().height * 0)
-        button_friend:addChild(lock)
-        icon_friend = cc.Sprite:create('image/homescene/home_page_friends_locked.png')
-    end
-    button_friend:setScale9Enabled(true)
-    button_friend:setAnchorPoint(1,0.5)
-    button_friend:addTouchEventListener(handler(self, self.onBtnFriendTouch))
-    backColor:addChild(button_friend)   
-    icon_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
-    button_friend:addChild(icon_friend)
-    self.button_friend = button_friend
-    button_friend:scheduleUpdateWithPriorityLua(handler(self,self.updateFriendButton),0)
+    -- local button_friend = nil
+    -- local icon_friend = nil
+    -- if s_CURRENT_USER:getLockFunctionState(1) == 1 then
+    --     button_friend = ccui.Button:create("image/homescene/home_page_function_bg2.png","","")
+    --     button_friend:setPosition(bigWidth / 2 - 1, 200)
+    --     icon_friend = cc.Sprite:create('image/homescene/home_page_friends.png')
+    -- else
+    --     button_friend = ccui.Button:create("image/homescene/home_page_function_locked_bg1.png","","")
+    --     button_friend:setPosition(bigWidth / 2 - 0.5, 200)
+    --     local cover = cc.Sprite:create('image/homescene/home_page_function_locked_cover1.png')
+    --     cover:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
+    --     button_friend:addChild(cover)
+    --     local lock = cc.Sprite:create('image/homescene/home_page_function_lock.png')
+    --     lock:setAnchorPoint(1,0)
+    --     lock:setPosition(button_friend:getContentSize().width,button_friend:getContentSize().height * 0)
+    --     button_friend:addChild(lock)
+    --     icon_friend = cc.Sprite:create('image/homescene/home_page_friends_locked.png')
+    -- end
+    -- button_friend:setScale9Enabled(true)
+    -- button_friend:setAnchorPoint(1,0.5)
+    -- button_friend:addTouchEventListener(handler(self, self.onBtnFriendTouch))
+    -- backColor:addChild(button_friend)   
+    -- icon_friend:setPosition(button_friend:getContentSize().width / 2,button_friend:getContentSize().height / 2)
+    -- button_friend:addChild(icon_friend)
+    -- self.button_friend = button_friend
+    -- button_friend:scheduleUpdateWithPriorityLua(handler(self,self.updateFriendButton),0)
     --获取好友
-    s_UserBaseServer.getFolloweesOfCurrentUser(handler(self,
-        function (s,api,result)
-            s_UserBaseServer.getFollowersOfCurrentUser(handler(s,
-                function (s,api, result)     
-                    s_CURRENT_USER:getFriendsInfo()
-                    if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
-                        local redHint = cc.Sprite:create('image/friend/fri_infor.png')
-                        local posx,posy = s.button_friend:getPosition()
-                        local size = s.button_friend:getContentSize()
-                        redHint:setPosition(posx - size.width * 0.2, posy + size.height * 0.4)
-                        backColor:addChild(redHint,1,"redHint")
-                        local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
-                        num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
-                        redHint:addChild(num)
-                    end
-                end,
-                function (api, code, message, description)             
-                end
-            ))
-        end,
-        function (api, code, message, description)
-        end
-    ))
+    -- s_UserBaseServer.getFolloweesOfCurrentUser(handler(self,
+    --     function (s,api,result)
+    --         s_UserBaseServer.getFollowersOfCurrentUser(handler(s,
+    --             function (s,api, result)     
+    --                 s_CURRENT_USER:getFriendsInfo()
+    --                 if s_CURRENT_USER.seenFansCount < s_CURRENT_USER.fansCount then
+    --                     local redHint = cc.Sprite:create('image/friend/fri_infor.png')
+    --                     local posx,posy = s.button_friend:getPosition()
+    --                     local size = s.button_friend:getContentSize()
+    --                     redHint:setPosition(posx - size.width * 0.2, posy + size.height * 0.4)
+    --                     backColor:addChild(redHint,1,"redHint")
+    --                     local num = cc.Label:createWithSystemFont(string.format('%d',s_CURRENT_USER.fansCount - s_CURRENT_USER.seenFansCount),'',28)
+    --                     num:setPosition(redHint:getContentSize().width / 2,redHint:getContentSize().height / 2)
+    --                     redHint:addChild(num)
+    --                 end
+    --             end,
+    --             function (api, code, message, description)             
+    --             end
+    --         ))
+    --     end,
+    --     function (api, code, message, description)
+    --     end
+    -- ))
     
     --商品解锁任务触发 start
     local productNum = #s_DataManager.product
@@ -378,7 +378,7 @@ function HomeLayer:ctor()
         s_CorePlayManager.enterGuideScene(3,backColor)
         s_CURRENT_USER:setGuideStep(s_guide_step_enterHome) 
 
-        button_friend:setTouchEnabled(false)
+        -- button_friend:setTouchEnabled(false)
         button_reward:setTouchEnabled(false)
         button_setting:setTouchEnabled(false)
         button_shop:setTouchEnabled(false)
@@ -782,7 +782,7 @@ function HomeLayer:showShareCheckIn()
 end
 
 function HomeLayer:setButtonEnabled(enabled)
-    self.button_friend:setEnabled(enabled)
+    -- self.button_friend:setEnabled(enabled)
     self.button_shop:setEnabled(enabled)
     self.button_setting:setEnabled(enabled)
     if self.button_sound ~= nil and not tolua.isnull(self.button_sound) then

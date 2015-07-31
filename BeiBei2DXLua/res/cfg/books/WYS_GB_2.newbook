@@ -1,0 +1,236 @@
+1	diet	Module 1_1	5	n.饮食	1
+1	fat	Module 1_1	5	adj.脂肪	1
+1	fit	Module 1_1	5	v.健康的	1
+2	flu	Module 1_2	5	n.流行性感冒	1
+2	rare	Module 1_2	5	adj.稀少的	1
+2	toothache	Module 1_2	5	n.牙痛	1
+2	unhealthy	Module 1_2	5	adj.不健康的	1
+2	wealthy	Module 1_2	5	adj.富裕的	1
+2	rarely	Module 1_2	5	adv.稀少地	1
+2	proverb	Module 1_2	5	n.谚语	1
+2	anxious	Module 1_2	5	adj.焦虑的	1
+2	captain	Module 1_2	5	n.队长	1
+3	injure	Module 1_3	5	v.伤害	1
+3	injury	Module 1_3	5	n.伤害	1
+3	pain	Module 1_3	5	n.疼痛	1
+3	painful	Module 1_3	5	adj.疼痛的	1
+3	normal	Module 1_3	5	adj.正常的	1
+3	lifestyle	Module 1_3	5	n.生活方式	1
+3	head	Module 1_3	5	n.朝...方向前进	1
+3	eye	Module 1_3	5	n.注视	1
+3	overweight	Module 1_3	5	adj.太胖的	1
+4	lung	Module 1_4	5	n.肺	1
+4	throat	Module 1_4	5	n.喉咙	1
+4	breathe	Module 1_4	5	vi.呼吸	1
+4	pneumonia	Module 1_4	5	n.肺炎	1
+4	prescription	Module 1_4	5	n.处方	1
+4	symptom	Module 1_4	5	n.症状	1
+4	X-ray	Module 1_4	5	n.X光	1
+4	awful	Module 1_4	5	adj.可怕的	1
+4	insurance	Module 1_4	5	n.保险	1
+5	questionnaire	Module 1_5	5	n.问卷	1
+5	be connected with	Module 1_5	5	与...有联系	1
+5	take exercise	Module 1_5	5	锻炼	1
+5	be crazy about	Module 1_5	5	迷恋	1
+5	have a temperature	Module 1_5	5	发烧	1
+5	lie down	Module 1_5	5	躺下	1
+5	begin with	Module 1_5	5	以...开始	1
+5	put ... into ...	Module 1_5	5	将...投入...	1
+5	become ill	Module 1_5	5	生病	1
+6	drug	Module 2_1	4	n.毒品	1
+6	bronchitis	Module 2_1	4	n.支气管炎	1
+6	cancer	Module 2_1	4	n.癌症	1
+6	cigarette	Module 2_1	4	n.香烟	1
+6	tobacco	Module 2_1	4	n.烟草	1
+6	addictive	Module 2_1	4	adj.上瘾的	1
+6	cannabis	Module 2_1	4	n.大麻	1
+6	cocaine	Module 2_1	4	n.可卡因	1
+6	danger	Module 2_1	4	n.危险	1
+6	addict	Module 2_1	4	vt.上瘾的人	1
+6	inject	Module 2_1	4	v.注射	1
+7	needle	Module 2_2	4	n.针	1
+7	powerful	Module 2_2	4	adj.有力的	1
+7	reduce	Module 2_2	4	vt.减少	1
+7	nearby	Module 2_2	4	adj.附近的	1
+7	burglary	Module 2_2	4	n.盗窃	1
+7	crime	Module 2_2	4	n.罪行	1
+7	criminal	Module 2_2	4	adj.罪犯	1
+7	connection	Module 2_2	4	n.联系	1
+7	illegal	Module 2_2	4	adj.违法的	1
+7	ratio	Module 2_2	4	n.比	1
+7	shoplifting	Module 2_2	4	n.偷窃商品的行为	1
+8	treatment	Module 2_3	4	n.治疗	1
+8	likely	Module 2_3	4	adj.可能的	1
+8	adult	Module 2_3	4	adj.成人	1
+8	disagree	Module 2_3	4	v.不同意	1
+8	ban	Module 2_3	4	v.禁止	1
+8	horrible	Module 2_3	4	adj.令人不快的	1
+8	affect	Module 2_3	4	vt.影响	1
+8	participant	Module 2_3	4	n.参与者	1
+8	recognise	Module 2_3	4	v.认识	1
+8	leaflet	Module 2_3	4	n.传单	1
+8	distraction	Module 2_3	4	n.分心	1
+9	jogging	Module 2_4	4	n.慢跑	1
+9	gymnastic	Module 2_4	4	adj.体操的	1
+9	related to	Module 2_4	4	有关系的	1
+9	break into	Module 2_4	4	破门而入	1
+9	belong to	Module 2_4	4	属于	1
+9	become addicted to	Module 2_4	4	对...上瘾	1
+9	take one's advice	Module 2_4	4	听某人的意见	1
+9	in order to	Module 2_4	4	为了...	1
+9	so as to	Module 2_4	4	为了...	1
+9	give up	Module 2_4	4	戒除	1
+10	audience	Module 3_1	4	n.听众	1
+10	choir	Module 3_1	4	n.唱诗班	1
+10	classical	Module 3_1	4	adj.古典音乐	1
+10	composer	Module 3_1	4	n.作曲家	1
+10	conductor	Module 3_1	4	n.指挥	1
+10	jazz	Module 3_1	4	n.爵士乐	1
+10	musician	Module 3_1	4	n.音乐家	1
+10	orchestra	Module 3_1	4	n.管弦乐队	1
+10	saxophone	Module 3_1	4	n.萨克斯管	1
+11	court	Module 3_2	4	n.宫廷	1
+11	director	Module 3_2	4	n.指挥	1
+11	genius	Module 3_2	4	n.天才	1
+11	lose	Module 3_2	4	vt.失去	1
+11	musical	Module 3_2	4	adj.音乐的	1
+11	peasant	Module 3_2	4	n.农民	1
+11	symphony	Module 3_2	4	n.交响乐	1
+11	talent	Module 3_2	4	n.天分	1
+11	Austria	Module 3_2	4	n.奥地利	1
+12	Austrian	Module 3_3	4	adj.奥地利的	1
+12	prince	Module 3_3	4	n.王子	1
+12	compose	Module 3_3	4	vt.作曲	1
+12	tour	Module 3_3	4	n.巡回演出	1
+12	album	Module 3_3	4	n.专辑	1
+12	ballad	Module 3_3	4	n.民谣	1
+12	band	Module 3_3	4	n.乐队	1
+12	catchy	Module 3_3	4	adj.动人的	1
+12	complex	Module 3_3	4	adj.复杂的	1
+13	influence	Module 3_4	4	vt.影响	1
+13	lyrics	Module 3_4	4	n.歌词	1
+13	solo	Module 3_4	4	n.独奏的	1
+13	tune	Module 3_4	4	n.曲调	1
+13	record	Module 3_4	4	n.录音	1
+13	lecturer	Module 3_4	4	n.讲师	1
+13	mix	Module 3_4	4	vt.使混合	1
+13	be impressed with	Module 3_4	4	留下深刻印象	1
+13	spilt up	Module 3_4	4	分裂	1
+13	make a note of	Module 3_4	4	记录	1
+14	like	Module 4_1	4	vt.爱好	1
+14	dislike	Module 4_1	4	v.憎恶	1
+14	artist	Module 4_1	4	n.艺术家	1
+14	colourful	Module 4_1	4	adj.彩色的	1
+14	contemporary	Module 4_1	4	n.当代的	1
+14	delightful	Module 4_1	4	adj.令人愉快的	1
+14	drawing	Module 4_1	4	n.图画	1
+14	paint	Module 4_1	4	n.绘画	1
+14	painter	Module 4_1	4	n.画家	1
+15	painting	Module 4_2	4	n.绘画	1
+15	scene	Module 4_2	4	n.景色	1
+15	traditional	Module 4_2	4	adj.传统的	1
+15	alive	Module 4_2	4	adj.有活力的	1
+15	aspect	Module 4_2	4	n.方面	1
+15	imitate	Module 4_2	4	v.模仿	1
+15	observe	Module 4_2	4	v.观察	1
+15	reality	Module 4_2	4	n.现实	1
+15	style	Module 4_2	4	n.风格	1
+16	adopt	Module 4_3	4	v.采纳	1
+16	aim	Module 4_3	4	n.以...为目标	1
+16	stand	Module 4_3	4	n.忍受	1
+16	unusual	Module 4_3	4	adj.不寻常的	1
+16	exhibition	Module 4_3	4	n.展览	1
+16	expression	Module 4_3	4	n.表现	1
+16	landscape	Module 4_3	4	n.风景画	1
+16	portrait	Module 4_3	4	n.肖像	1
+16	realise	Module 4_3	4	v.意识到	1
+17	realistic	Module 4_4	4	adj.现实主义的	1
+17	watercolour	Module 4_4	4	n.水彩画	1
+17	destroy	Module 4_4	4	vt.破坏	1
+17	get tired of	Module 4_4	4	对...厌烦	1
+17	be font of	Module 4_4	4	喜欢	1
+17	tell by	Module 4_4	4	从...可以看出	1
+17	put off	Module 4_4	4	推迟；	1
+17	take turns	Module 4_4	4	轮流	1
+17	a series of	Module 4_4	4	一系列的	1
+18	headline	Module 5_1	5	n.标题	1
+18	photograph	Module 5_1	5	n.照片	1
+18	celebrity	Module 5_1	5	n.名人	1
+18	economy	Module 5_1	5	n.经济	1
+18	politics	Module 5_1	5	n.政治	1
+18	photographer	Module 5_1	5	n.摄影师	1
+18	cosmonaut	Module 5_1	5	n.宇航员	1
+18	navigator	Module 5_1	5	n.领航员	1
+18	taikonaut	Module 5_1	5	n.太空人	1
+19	universe	Module 5_2	5	n.宇宙	1
+19	sailor	Module 5_2	5	n.船员	1
+19	orbit	Module 5_2	5	n.轨道	1
+19	capsule	Module 5_2	5	n.太空舱	1
+19	flight	Module 5_2	5	n.飞行	1
+19	congratulation	Module 5_2	5	n.祝贺	1
+19	aboard	Module 5_2	5	adv.在船上	1
+19	welcome	Module 5_2	5	vt.欢迎	1
+19	historical	Module 5_2	5	adj.历史性的	1
+20	achievement	Module 5_3	5	n.成就	1
+20	replace	Module 5_3	5	vt.代替	1
+20	alien	Module 5_3	5	n.外星人	1
+20	amateur	Module 5_3	5	adj.业余的	1
+20	astronomer	Module 5_3	5	n.天文学家	1
+20	autograph	Module 5_3	5	n.亲笔签名	1
+20	delighted	Module 5_3	5	adj.高兴的	1
+20	fan	Module 5_3	5	n.（电影等的）迷	1
+20	spaceship	Module 5_3	5	n.宇宙飞船	1
+21	telescope	Module 5_4	5	n.望远镜	1
+21	actor	Module 5_4	5	n.演员	1
+21	backstage	Module 5_4	5	adv.在后台	1
+21	part	Module 5_4	5	n.角色	1
+21	politician	Module 5_4	5	n.政治家	1
+21	belief	Module 5_4	5	n.信念	1
+21	disbelief	Module 5_4	5	n.不信	1
+21	evidence	Module 5_4	5	n.证据	1
+21	cultural	Module 5_4	5	adj.文化的	1
+22	financial	Module 5_5	5	adj.金融的	1
+22	review	Module 5_5	5	vt.评论	1
+22	royal	Module 5_5	5	adj.皇家的	1
+22	found	Module 5_5	5	vt.创立	1
+22	produce	Module 5_5	5	vt.创作	1
+22	in total	Module 5_5	5	总共；合计	1
+22	now that	Module 5_5	5	既然	1
+22	believe in	Module 5_5	5	相信	1
+22	be similar to	Module 5_5	5	和...相似	1
+23	poster	Module 6_1	4	n.海报	1
+23	thriller	Module 6_1	4	n.刺激的电影	1
+23	comedy	Module 6_1	4	n.喜剧	1
+23	sword	Module 6_1	4	n.剑	1
+23	actress	Module 6_1	4	n.女演员	1
+23	character	Module 6_1	4	n.角色	1
+23	female	Module 6_1	4	n.女的	1
+23	male	Module 6_1	4	adj.男的	1
+23	masterpiece	Module 6_1	4	n.杰作	1
+24	fiance	Module 6_2	4	n.未婚夫	1
+24	rooftop	Module 6_2	4	n.屋顶	1
+24	leap	Module 6_2	4	n.跳跃	1
+24	graceful	Module 6_2	4	adj.优美的	1
+24	interest	Module 6_2	4	n.使感兴趣	1
+24	brave	Module 6_2	4	adj.勇敢的	1
+24	moving	Module 6_2	4	adj.感人的	1
+24	occasionally	Module 6_2	4	adv.有时	1
+24	ad	Module 6_2	4	abbr.广告	1
+25	argue	Module 6_3	4	vt.争论	1
+25	channel	Module 6_3	4	n.频道	1
+25	entertaining	Module 6_3	4	adj.有趣的	1
+25	telly	Module 6_3	4	n.（非正式）电视	1
+25	drama	Module 6_3	4	n.戏剧	1
+25	plot	Module 6_3	4	n.情节	1
+25	setting	Module 6_3	4	n.背景	1
+25	shark	Module 6_3	4	n.鲨鱼	1
+25	section	Module 6_3	4	n.部分	1
+26	come out	Module 6_4	4	出现	1
+26	fall in love with	Module 6_4	4	爱上（表动作）	1
+26	be in love with	Module 6_4	4	爱上（表状态）	1
+26	play a part	Module 6_4	4	扮演角色	1
+26	to one's surprise	Module 6_4	4	令某人吃惊的是	1
+26	in surprise	Module 6_4	4	吃惊地	1
+26	care about	Module 6_4	4	关心	1
+26	every now and then	Module 6_4	4	有时；	1
+26	at the age of ...	Module 6_4	4	在...岁时	1

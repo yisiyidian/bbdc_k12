@@ -1,0 +1,156 @@
+1	get up	Unit 1_1	4	起床	0
+1	have breakfast	Unit 1_1	4	吃早餐	0
+1	go to school	Unit 1_1	4	去上学	0
+2	School begins	Unit 1_2	4	开始上课	0
+2	have lunch	Unit 1_2	4	吃午饭	0
+2	School is over	Unit 1_2	4	放学	0
+2	go home	Unit 1_2	4	回家	0
+2	have dinner	Unit 1_2	4	吃晚饭	0
+2	watch TV	Unit 1_2	4	看电视	0
+2	go to bed	Unit 1_2	4	睡觉	0
+2	breakfast	Unit 1_2	4	n.早餐	1
+2	lunch	Unit 1_2	4	n.午餐	1
+3	dinner	Unit 1_3	4	n.晚餐	1
+3	cook breakfast	Unit 1_3	4	做早餐	0
+3	teach English	Unit 1_3	4	教英语	0
+3	take a walk	Unit 1_3	4	散步	0
+3	read stories	Unit 1_3	4	读故事	0
+3	walk	Unit 1_3	4	v.走	1
+3	every	Unit 1_3	4	adj.每一个	1
+3	morning	Unit 1_3	4	n.早晨	1
+3	afternoon	Unit 1_3	4	n.下午	1
+4	evening	Unit 1_4	4	n.晚上	1
+4	see a film	Unit 1_4	4	看电影	0
+4	play the piano	Unit 1_4	4	弹钢琴	0
+4	clean the window	Unit 1_4	4	擦窗户	1
+4	clean the door	Unit 1_4	4	擦门	1
+4	clean the floor	Unit 1_4	4	擦地板	1
+4	often	Unit 1_4	4	adv.时常	1
+4	easy	Unit 1_4	4	adj.容易	1
+4	difficult	Unit 1_4	4	adj.困难	1
+5	collect toy cars	Unit 2_1	3	收集玩具汽车	0
+5	collect stamps	Unit 2_1	3	收集邮票	0
+5	collect maps	Unit 2_1	3	收集地图	0
+5	collect piuture cards	Unit 2_1	3	收集图片	0
+5	open	Unit 2_1	3	vt.打开	1
+5	hobby	Unit 2_1	3	n.爱好	1
+5	map	Unit 2_1	3	n.地图	1
+5	box	Unit 2_1	3	n.盒子	1
+5	colour	Unit 2_1	3	n.颜色	1
+6	go fishing	Unit 2_2	3	去钓鱼	0
+6	plant flowers	Unit 2_2	3	种花	0
+6	cook meals	Unit 2_2	3	做饭	0
+6	dad	Unit 2_2	3	n.爸爸	1
+6	mum	Unit 2_2	3	n.妈妈	1
+6	plant	Unit 2_2	3	n.植物	1
+6	flower	Unit 2_2	3	n.花	1
+6	drink	Unit 2_2	3	vt.喝	1
+6	tea	Unit 2_2	3	n.茶	1
+7	play computer games	Unit 2_3	3	玩电脑游戏	0
+7	make dolls	Unit 2_3	3	做布娃娃	0
+7	take photos	Unit 2_3	3	照相	0
+7	photo	Unit 2_3	3	n.照片	1
+7	kid	Unit 2_3	3	n.小孩	1
+7	baby	Unit 2_3	3	n.婴儿	1
+7	hungry	Unit 2_3	3	adj.饿的	1
+7	cry	Unit 2_3	3	n.哭	1
+8	invite your friends to your party	Unit 3_1	3	邀请朋友参加聚会	0
+8	celebrate your birthday with your friends	Unit 3_1	3	与朋友庆祝生日	0
+8	give a birthday card to your friend	Unit 3_1	3	向朋友赠送生日贺卡	0
+8	time	Unit 3_1	3	n.时间	1
+8	after	Unit 3_1	3	conj.在...之后	1
+8	then	Unit 3_1	3	n.那时	1
+8	me	Unit 3_1	3	pron.我（宾格）	1
+8	bye	Unit 3_1	3	int.再见	1
+8	star-shaped cake	Unit 3_1	3	星形蛋糕	0
+9	heart-shaped ckae	Unit 3_2	3	心形蛋糕	0
+9	jelly	Unit 3_2	3	n.果冻	0
+9	fruit pie	Unit 3_2	3	水果派	0
+9	kind	Unit 3_2	3	n.种类	1
+9	chocolate	Unit 3_2	3	n.巧克力	1
+9	ice cream	Unit 3_2	3	冰激凌	1
+9	candy	Unit 3_2	3	n.糖果	1
+9	sure	Unit 3_2	3	adv.当然	1
+9	light the candles	Unit 3_2	3	点蜡烛	0
+10	sing the birthday song	Unit 3_3	3	唱生日歌	0
+10	make a wish	Unit 3_3	3	许愿	0
+10	blow out the candles	Unit 3_3	3	吹蜡烛	0
+10	cut the cake	Unit 3_3	3	切蛋糕	0
+10	eat the cake	Unit 3_3	3	吃蛋糕	0
+10	here	Unit 3_3	3	adv.在这里	1
+10	for	Unit 3_3	3	prep.为了	1
+10	light	Unit 3_3	3	n.点燃	1
+11	the first month of the year	Unit 4_1	3	一年里的第一个月	0
+11	the second month of the year	Unit 4_1	3	一年里的第二个月	0
+11	New Year's Day	Unit 4_1	3	元旦	0
+11	Spring Festival	Unit 4_1	3	春节	0
+11	January	Unit 4_1	3	n.一月	1
+11	February	Unit 4_1	3	n.二月	1
+11	back	Unit 4_1	3	adv.后面	1
+11	their	Unit 4_1	3	adj.他们的	1
+11	the third month of the year	Unit 4_1	3	一年里的第三个月	0
+12	the fourth month of the year	Unit 4_2	3	一年里的第四个月	0
+12	Tree Planting Day	Unit 4_2	3	植树节	0
+12	Easter	Unit 4_2	3	n.复活节	0
+12	March	Unit 4_2	3	n.三月	1
+12	April	Unit 4_2	3	n.四月	1
+12	tree	Unit 4_2	3	n.树木	1
+12	grass	Unit 4_2	3	n.草地	1
+12	stop	Unit 4_2	3	v.停止	1
+12	egg	Unit 4_2	3	n.蛋	1
+13	the fifth month of the year	Unit 4_3	3	一年里的第五个月	0
+13	the sixth month of the year	Unit 4_3	3	一年里的第六个月	0
+13	Labour Day	Unit 4_3	3	劳动节	0
+13	May	Unit 4_3	3	n.五月	1
+13	June	Unit 4_3	3	n.六月	1
+13	Mother's Day	Unit 4_3	3	母亲节	1
+13	Father's Day	Unit 4_3	3	父亲节	1
+13	Children's Day	Unit 4_3	3	儿童节	1
+14	the seventh month of the year	Unit 5_1	2	一年里的第七个月	0
+14	the eighth month of the year	Unit 5_1	2	一年里的第八个月	0
+14	the Party's birthday	Unit 5_1	2	党的生日	0
+14	Army Day	Unit 5_1	2	建军节	0
+14	July	Unit 5_1	2	n.七月	1
+14	August	Unit 5_1	2	n.八月	1
+14	month	Unit 5_1	2	n.月	1
+14	year	Unit 5_1	2	n.年	1
+14	the ninth month of the year	Unit 5_1	2	一年里的第九个月	0
+14	the tenth month of the year	Unit 5_1	2	一年里的第十个月	0
+15	National Day	Unit 5_2	2	国庆节	0
+15	September	Unit 5_2	2	n.九月	1
+15	October	Unit 5_2	2	n.十月	1
+15	Teacher's Day	Unit 5_2	2	教师节	1
+15	the eleventh month of the year	Unit 5_2	2	一年里的第十一个月	0
+15	the twelfth month of the year	Unit 5_2	2	一年里的第十二个月	0
+15	Thanksgiving	Unit 5_2	2	n.感恩节	0
+15	Christmas	Unit 5_2	2	n.圣诞节	0
+15	November	Unit 5_2	2	n.十一月	1
+15	December	Unit 5_2	2	n.十二月	1
+16	farm the land	Unit 6_1	3	种田	0
+16	go on spring outings	Unit 6_1	3	去春游	0
+16	fly kites	Unit 6_1	3	放风筝	0
+16	season	Unit 6_1	3	n.季节	1
+16	spring	Unit 6_1	3	n.春天	1
+16	little	Unit 6_1	3	adv.一点	1
+16	green	Unit 6_1	3	adj.绿色	1
+16	bird	Unit 6_1	3	n.鸟	1
+16	fly	Unit 6_1	3	vi.飞	1
+17	go on a trip	Unit 6_2	3	去旅游	0
+17	go to a summer camp	Unit 6_2	3	去夏令营	0
+17	have summer holidays	Unit 6_2	3	过暑假	0
+17	begin	Unit 6_2	3	vt.开始	1
+17	close	Unit 6_2	3	vt.关闭	1
+17	summer	Unit 6_2	3	n.夏天	1
+17	weather	Unit 6_2	3	n.天气	1
+17	heavy	Unit 6_2	3	adj.重的	1
+17	rain	Unit 6_2	3	vi.下雨	1
+18	pick apples	Unit 6_3	3	摘苹果	0
+18	cut rice	Unit 6_3	3	割稻子	0
+18	make a snowman	Unit 6_3	3	堆雪人	0
+18	sweep the snow	Unit 6_3	3	扫雪	0
+18	autumn	Unit 6_3	3	n.秋天	1
+18	yellow	Unit 6_3	3	adj.黄色的	1
+18	brown	Unit 6_3	3	adj.棕色的	1
+18	white	Unit 6_3	3	adj.白色的	1
+18	winter	Unit 6_3	3	n.冬天	1
+18	snowman	Unit 6_3	3	n.雪人	1

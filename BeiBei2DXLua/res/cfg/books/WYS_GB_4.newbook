@@ -1,0 +1,302 @@
+1	brick	Module 1_1	6	n.砖	1
+1	concrete	Module 1_1	6	n.混凝土	1
+1	mud	Module 1_1	6	n.泥	1
+2	alternative	Module 1_2	6	adj.供选择的	1
+2	crime	Module 1_2	6	n.罪	1
+2	for sure	Module 1_2	6	肯定地	1
+2	prediction	Module 1_2	6	n.预测	1
+2	risky	Module 1_2	6	adj.冒险的	1
+2	resource	Module 1_2	6	n.资源	1
+2	run out	Module 1_2	6	用完了	1
+2	material	Module 1_2	6	n.材料	1
+2	rely	Module 1_2	6	v.依赖	1
+2	rely on	Module 1_2	6	依靠	1
+3	solar	Module 1_3	6	adj.太阳的	1
+3	urban	Module 1_3	6	adj.都市的	1
+3	get rid of	Module 1_3	6	除掉	1
+3	load	Module 1_3	6	n.装载	1
+3	landfill	Module 1_3	6	n.垃圾填埋地	1
+3	arrest	Module 1_3	6	n.逮捕	1
+3	criminal	Module 1_3	6	adj.罪犯	1
+3	fire	Module 1_3	6	n.开火	1
+3	limit	Module 1_3	6	n.范围限制	1
+3	outdoors	Module 1_3	6	adv.户外	1
+4	online	Module 1_4	6	n.联机地	1
+4	catalogue	Module 1_4	6	n.目录	1
+4	command	Module 1_4	6	n.命令	1
+4	recreation	Module 1_4	6	n.娱乐	1
+4	bowling	Module 1_4	6	n.保龄球	1
+4	softball	Module 1_4	6	n.垒球	1
+4	charge	Module 1_4	6	n.费用	1
+4	free of charge	Module 1_4	6	免费	1
+4	power	Module 1_4	6	n.供给动力	1
+4	flick	Module 1_4	6	n.轻打	1
+5	switch	Module 1_5	6	n.开关	1
+5	surgery	Module 1_5	6	n.外科手术	1
+5	telesurgery	Module 1_5	6	n.远距离手术	1
+5	outpatient	Module 1_5	6	n.门诊病人	1
+5	clinic	Module 1_5	6	n.诊所	1
+5	disability	Module 1_5	6	n.伤残	1
+5	attach	Module 1_5	6	v.连接	1
+5	spaceport	Module 1_5	6	n.宇航基地	1
+5	use up	Module 1_5	6	用完	1
+5	look out	Module 1_5	6	小心	1
+6	optimistic	Module 1_6	6	adj.乐观的	1
+6	dishwasher	Module 1_6	6	n.洗碟机	1
+6	definitely	Module 1_6	6	adj.无疑地	1
+6	eventually	Module 1_6	6	adv.最后	1
+6	for a start	Module 1_6	6	首先	1
+6	on the way out	Module 1_6	6	即将被淘汰	1
+6	colony	Module 1_6	6	n.殖民地	1
+6	predict	Module 1_6	6	v.预言	1
+6	shape	Module 1_6	6	n.造成...形状	1
+6	pad	Module 1_6	6	n.动物的脚	1
+6	doormat	Module 1_6	6	n.门前擦鞋垫	1
+7	trolleybus	Module 2_1	4	n.电车	1
+7	be connected to	Module 2_1	4	与...相连	1
+7	wire	Module 2_1	4	n.电线	1
+7	suburban	Module 2_1	4	adj.郊区的	1
+7	get stuck in	Module 2_1	4	被困在...	1
+7	in no time	Module 2_1	4	马上	1
+7	display	Module 2_1	4	n.展示	1
+7	cab	Module 2_1	4	n.出租汽车	1
+7	permit	Module 2_1	4	n.许可证	1
+8	receipt	Module 2_2	4	n.收据	1
+8	get around	Module 2_2	4	到处旅行	1
+8	fare	Module 2_2	4	n.车费	1
+8	air-conditioned	Module 2_2	4	adj.带空调的	1
+8	limit	Module 2_2	4	n.限制	1
+8	destination	Module 2_2	4	n.目的地	1
+8	impressive	Module 2_2	4	adj.给人印象深刻的	1
+8	route	Module 2_2	4	n.路线	1
+8	double-decker	Module 2_2	4	n.双层公共汽车	1
+9	provide	Module 2_3	4	vi.提供	1
+9	under construction	Module 2_3	4	正在建设之中	1
+9	convenient	Module 2_3	4	adj.方便的	1
+9	pedal	Module 2_3	4	n.骑车	1
+9	tricycle	Module 2_3	4	n.三轮脚踏车	1
+9	single	Module 2_3	4	adj.单程票	1
+9	return	Module 2_3	4	vt.往返票	1
+9	explore	Module 2_3	4	vt.探索	1
+9	roadwork	Module 2_3	4	n.道路施工	1
+10	switch off	Module 2_4	4	关上	1
+10	keep cool	Module 2_4	4	保持冷静	1
+10	blow	Module 2_4	4	vt.吹响	1
+10	horn	Module 2_4	4	n.喇叭	1
+10	react	Module 2_4	4	vt.反应	1
+10	solution	Module 2_4	4	n.解决方式	1
+10	mood	Module 2_4	4	n.心情	1
+10	no way	Module 2_4	4	没门儿	1
+10	congestion	Module 2_4	4	n.拥塞	1
+10	registration	Module 2_4	4	n.登记	1
+11	communication	Module 3_1	7	n.交流	1
+11	communicate	Module 3_1	7	vi.交流	1
+11	unconscious	Module 3_1	7	adj.无意识的	1
+11	vary	Module 3_1	7	vt.变化	1
+11	on guard	Module 3_1	7	警惕	1
+11	formal	Module 3_1	7	adj.正式的	1
+11	aggressive	Module 3_1	7	adj.攻击的	1
+11	traditionally	Module 3_1	7	adv.传统地	1
+11	weapon	Module 3_1	7	n.武器	1
+12	gesture	Module 3_2	7	n.姿势	1
+12	threatening	Module 3_2	7	adj.恐吓的	1
+12	deal	Module 3_2	7	v.协议	1
+12	make a deal	Module 3_2	7	达成协议	1
+12	involve	Module 3_2	7	vt.包括	1
+12	slightly	Module 3_2	7	adv.轻微地	1
+12	Muslim	Module 3_2	7	n.穆斯林	1
+12	salaam	Module 3_2	7	n.额手礼	1
+12	forehead	Module 3_2	7	n.前额	1
+13	Hindu	Module 3_3	7	n.印度人	1
+13	bow	Module 3_3	7	v.鞠躬	1
+13	informal	Module 3_3	7	adj.非正式的	1
+13	youth	Module 3_3	7	n.年轻人	1
+13	hold up	Module 3_3	7	举起	1
+13	palm	Module 3_3	7	n.手掌	1
+13	spread	Module 3_3	7	v.张开	1
+13	slap	Module 3_3	7	n.掌击	1
+13	give away	Module 3_3	7	暴露	1
+14	mind reader	Module 3_4	7	看透别人心思的人	1
+14	conscious	Module 3_4	7	adj.意识到的	1
+14	ankle	Module 3_4	7	n.脚踝	1
+14	eyebrow	Module 3_4	7	n.眉毛	1
+14	lip	Module 3_4	7	n.嘴唇	1
+14	wrist	Module 3_4	7	n.手腕	1
+14	bend	Module 3_4	7	v.弯下腰	1
+14	hug	Module 3_4	7	v.紧抱	1
+14	stare	Module 3_4	7	vt.凝视	1
+15	wipe	Module 3_5	7	n.擦	1
+15	lift up	Module 3_5	7	举起	1
+15	up and down	Module 3_5	7	一上一下地	1
+15	religion	Module 3_5	7	n.宗教	1
+15	host	Module 3_5	7	n.主人	1
+15	by accident	Module 3_5	7	偶然地	1
+15	toast	Module 3_5	7	n.&v.祝酒	1
+15	sip	Module 3_5	7	n.一抿之量	1
+15	blank	Module 3_5	7	adj.空白的	1
+16	panic	Module 3_6	7	n.恐慌	1
+16	rude	Module 3_6	7	adj.粗鲁的	1
+16	say hello to	Module 3_6	7	向...问好	1
+16	switch on	Module 3_6	7	打开	1
+16	invitation	Module 3_6	7	n.邀请	1
+16	request	Module 3_6	7	n.请求	1
+16	RSVP	Module 3_6	7	请答复	1
+16	favour	Module 3_6	7	n.恩惠	1
+16	live	Module 3_6	7	v.现场的	1
+16	performance	Module 3_6	7	n.表演	1
+17	performer	Module 3_7	7	n.表演者	1
+17	classical	Module 3_7	7	adj.古典的	1
+17	applause	Module 3_7	7	n.掌声	1
+17	judgement	Module 3_7	7	n.判断	1
+17	prolong	Module 3_7	7	vt.延长	1
+17	equality	Module 3_7	7	n.平等	1
+17	handclap	Module 3_7	7	n.拍手	1
+17	social	Module 3_7	7	adj.社会的	1
+17	infectious	Module 3_7	7	adj.有感染性的	1
+17	funeral	Module 3_7	7	n.葬礼	1
+18	biochemistry	Module 4_1	6	n.生物化学	1
+18	biology	Module 4_1	6	n.生物学	1
+18	botany	Module 4_1	6	n.植物学	1
+18	genetics	Module 4_1	6	n.遗传学	1
+18	zoology	Module 4_1	6	n.动物学	1
+18	staple	Module 4_1	6	n.主要的	1
+18	producer	Module 4_1	6	n.生产者	1
+18	leading	Module 4_1	6	adj.主要的	1
+18	figure	Module 4_1	6	n.人物	1
+19	bring up	Module 4_2	6	培养	1
+19	educate	Module 4_2	6	v.教育	1
+19	nickname	Module 4_2	6	n.绰号	1
+19	agriculture	Module 4_2	6	n.农业	1
+19	breeding	Module 4_2	6	n.培育	1
+19	species	Module 4_2	6	n.物种	1
+19	yield	Module 4_2	6	n.产量	1
+19	original	Module 4_2	6	adj.原来的	1
+19	publish	Module 4_2	6	vt.出版	1
+20	sterile	Module 4_3	6	adj.不孕育的	1
+20	breakthrough	Module 4_3	6	n.突破	1
+20	support	Module 4_3	6	n.支持	1
+20	as a result of	Module 4_3	6	作为...的结果	1
+20	production	Module 4_3	6	n.产量	1
+20	convert	Module 4_3	6	v.改变	1
+20	cash crop	Module 4_3	6	经济作物	1
+20	export	Module 4_3	6	vt.出口	1
+20	hybrid	Module 4_3	6	n.杂交种	1
+21	agricultural	Module 4_4	6	adj.农业的	1
+21	replace	Module 4_4	6	vt.取代	1
+21	quantity	Module 4_4	6	n.数量	1
+21	quality	Module 4_4	6	n.质量	1
+21	be known for	Module 4_4	6	因...而出名	1
+21	best-seller	Module 4_4	6	n.畅销书	1
+21	cosmology	Module 4_4	6	n.宇宙论	1
+21	diagnose	Module 4_4	6	v.诊断	1
+21	motor neurone disease	Module 4_4	6	运动神经元病	1
+22	victim	Module 4_5	6	n.受害者	1
+22	brilliant	Module 4_5	6	adj.聪颖的	1
+22	career	Module 4_5	6	n.生涯	1
+22	brief	Module 4_5	6	adj.简短的	1
+22	partly	Module 4_5	6	adv.部分地	1
+22	physical	Module 4_5	6	adj.身体的	1
+22	graduate	Module 4_5	6	vt.毕业	1
+22	personal	Module 4_5	6	adj.个人的	1
+22	relativity	Module 4_5	6	n.相对论	1
+22	earn one's living	Module 4_5	6	谋生	1
+23	come to power	Module 4_6	6	掌权	1
+23	rocket	Module 4_6	6	n.火箭	1
+23	millennium	Module 4_6	6	n.千年	1
+23	gunpowder	Module 4_6	6	n.火药	1
+23	explosion	Module 4_6	6	n.爆炸	1
+23	explode	Module 4_6	6	vt.爆炸	1
+23	escape	Module 4_6	6	vt.逃跑	1
+23	arrow	Module 4_6	6	n.箭	1
+23	straight	Module 4_6	6	adj.直的	1
+23	clear	Module 4_6	6	adj.烟雾消散	1
+24	cave	Module 5_1	5	n.洞	1
+24	peak	Module 5_1	5	n.山顶	1
+24	plain	Module 5_1	5	n.平原	1
+24	plateau	Module 5_1	5	n.高原	1
+24	shore	Module 5_1	5	n.海岸	1
+24	slope	Module 5_1	5	n.斜坡	1
+24	valley	Module 5_1	5	n.山谷	1
+24	wood	Module 5_1	5	n.木材	1
+24	flat	Module 5_1	5	adj.平坦的	1
+25	at the edge of	Module 5_2	5	在...的边缘	1
+25	surround	Module 5_2	5	vt.围绕	1
+25	colleague	Module 5_2	5	n.同事	1
+25	downstream	Module 5_2	5	adj.向下游	1
+25	goods	Module 5_2	5	n.货物	1
+25	trade	Module 5_2	5	v.&n.做生意	1
+25	temple	Module 5_2	5	n.寺庙	1
+25	dock	Module 5_2	5	n.码头	1
+25	hilly	Module 5_2	5	adj.多山的	1
+26	raft	Module 5_3	5	n.木筏	1
+26	narrow	Module 5_3	5	adj.变狭窄	1
+26	at least	Module 5_3	5	至少	1
+26	detour	Module 5_3	5	n.迂路	1
+26	legend	Module 5_3	5	n.传奇	1
+26	be heavy with	Module 5_3	5	有大量的...	1
+26	deck	Module 5_3	5	n.甲板	1
+26	distant	Module 5_3	5	adj.遥远的	1
+26	exploit	Module 5_3	5	n.开发	1
+27	in the distance	Module 5_4	5	远处的	1
+27	cruise	Module 5_4	5	n.漫游	1
+27	cabin	Module 5_4	5	n.船舱	1
+27	forbid	Module 5_4	5	vt.禁止	1
+27	lounge	Module 5_4	5	n.休息室	1
+27	mountainous	Module 5_4	5	adj.多山的	1
+27	immense	Module 5_4	5	adj.极大的	1
+27	fertile	Module 5_4	5	adj.肥沃的	1
+27	remote	Module 5_4	5	adj.遥远的	1
+28	steep	Module 5_5	5	adj.陡峭的	1
+28	varied	Module 5_5	5	adj.多变化的	1
+28	spot	Module 5_5	5	n.地点	1
+28	rip off	Module 5_5	5	敲竹杠	1
+28	get a kick out of	Module 5_5	5	从...中得到乐趣	1
+28	view	Module 5_5	5	n.视野	1
+28	pin	Module 5_5	5	n.别针	1
+28	naturally	Module 5_5	5	adv.自然地	1
+28	torch	Module 5_5	5	n.手电筒	1
+29	monster	Module 6_1	5	n.怪物	1
+29	attack	Module 6_1	5	vt.袭击	1
+29	footprint	Module 6_1	5	n.脚印	1
+29	hairy	Module 6_1	5	adj.多毛的	1
+29	frightening	Module 6_1	5	adj.吓人的	1
+29	creature	Module 6_1	5	n.生物	1
+29	grey	Module 6_1	5	adj.灰色的	1
+29	claw	Module 6_1	5	n.爪	1
+29	exist	Module 6_1	5	v.存在	1
+30	sharp	Module 6_2	5	adj.锋利的	1
+30	nail	Module 6_2	5	n.指甲	1
+30	journal	Module 6_2	5	n.杂志	1
+30	sighting	Module 6_2	5	n.（珍奇动物等的）目击	1
+30	seal	Module 6_2	5	n.海豹	1
+30	mysterious	Module 6_2	5	adj.神秘的	1
+30	claim	Module 6_2	5	vt.声称	1
+30	surface	Module 6_2	5	n.表面	1
+30	horn	Module 6_2	5	n.角	1
+31	dive	Module 6_3	5	n.潜水	1
+31	calm	Module 6_3	5	adj.平静的	1
+31	sceptical	Module 6_3	5	adj.怀疑的	1
+31	unlikely	Module 6_3	5	adj.不可能的	1
+31	volcanic	Module 6_3	5	adj.火山的	1
+31	cover	Module 6_3	5	v.占地	1
+31	adapt	Module 6_3	5	vi.适应	1
+31	disappear	Module 6_3	5	vi.不见	1
+31	extinct	Module 6_3	5	adj.绝种的	1
+32	evolve	Module 6_4	5	vt.进化	1
+32	die out	Module 6_4	5	灭绝	1
+32	throw light on	Module 6_4	5	帮助弄清楚	1
+32	come straight to the point	Module 6_4	5	谈正题	1
+32	fierce	Module 6_4	5	adj.凶猛的	1
+32	destruction	Module 6_4	5	n.毁坏	1
+32	generous	Module 6_4	5	adj.大方的	1
+32	unpredictable	Module 6_4	5	adj.变化莫测的	1
+32	emperor	Module 6_4	5	n.皇帝	1
+33	robe	Module 6_5	5	n.长袍	1
+33	reputation	Module 6_5	5	n.名誉	1
+33	border	Module 6_5	5	n.边境	1
+33	positive	Module 6_5	5	adj.正面的	1
+33	indicate	Module 6_5	5	v.暗示	1
+33	identity	Module 6_5	5	n.身份	1
+33	due to	Module 6_5	5	由于	1
+33	myth	Module 6_5	5	n.神话	1
+33	fortune	Module 6_5	5	n.运气	1

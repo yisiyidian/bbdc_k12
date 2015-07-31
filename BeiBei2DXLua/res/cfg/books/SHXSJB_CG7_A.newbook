@@ -1,0 +1,299 @@
+1	choose	unit 1 Topic 1_1	4	vt.选择	1
+1	flat	unit 1 Topic 1_1	4	adj.一套房间	1
+1	kitchen	unit 1 Topic 1_1	4	n.厨房	1
+2	location	unit 1 Topic 1_2	4	n.位置	1
+2	centre	unit 1 Topic 1_2	4	n.中心	1
+2	town	unit 1 Topic 1_2	4	n.城镇	1
+2	in the centre of town	unit 1 Topic 1_2	4	在市中心	1
+2	suburb	unit 1 Topic 1_2	4	n.近郊住宅区	0
+2	in the suburbs	unit 1 Topic 1_2	4	在郊区	0
+2	dining room	unit 1 Topic 1_2	4	餐厅	0
+2	square	unit 1 Topic 1_2	4	n.平方	1
+2	metre	unit 1 Topic 1_2	4	n.米	1
+2	public	unit 1 Topic 1_2	4	adj.公共的	1
+3	public transport	unit 1 Topic 1_3	4	公共交通	1
+3	high-rise	unit 1 Topic 1_3	4	多层建筑	1
+3	face	unit 1 Topic 1_3	4	vt.&n.面向	1
+3	agree	unit 1 Topic 1_3	4	vt.同意	1
+3	agree with ...	unit 1 Topic 1_3	4	与某人保持一致看法	1
+3	should	unit 1 Topic 1_3	4	应当	1
+3	mall	unit 1 Topic 1_3	4	n.商业区	0
+3	shopping mall	unit 1 Topic 1_3	4	购物中心	0
+3	matter	unit 1 Topic 1_3	4	n.麻烦事	1
+3	opinion	unit 1 Topic 1_3	4	n.观点	1
+4	move	unit 1 Topic 1_4	4	vt.搬动	1
+4	survey	unit 1 Topic 1_4	4	n.调查	0
+4	condition	unit 1 Topic 1_4	4	n.情况	0
+4	conduct	unit 1 Topic 1_4	4	n.进行	0
+4	conduct a survey	unit 1 Topic 1_4	4	进行一次调查	0
+4	result	unit 1 Topic 1_4	4	n.结果	0
+4	estate	unit 1 Topic 1_4	4	n.房地产	1
+4	housing estate	unit 1 Topic 1_4	4	住宅区	1
+4	pack	unit 1 Topic 1_4	4	n.把 ... 打包	0
+4	stick	unit 1 Topic 1_4	4	vt.粘住	0
+5	swimming	unit 1 Topic 2_1	2	游泳	1
+5	pool	unit 1 Topic 2_1	2	n.池塘	1
+5	swimming pool	unit 1 Topic 2_1	2	游泳池	1
+5	space	unit 1 Topic 2_1	2	n.空间	1
+5	open space	unit 1 Topic 2_1	2	开阔地区	1
+5	used to	unit 1 Topic 2_1	2	过去常常	1
+5	facility	unit 1 Topic 2_1	2	n.设备	0
+5	house-warming party	unit 1 Topic 2_1	2	乔迁之喜庆祝会	0
+5	certainly	unit 1 Topic 2_1	2	adv.无疑地	1
+6	province	unit 1 Topic 2_2	2	n.省	1
+6	country	unit 1 Topic 2_2	2	n.国家	1
+6	air	unit 1 Topic 2_2	2	n.空气	1
+6	fresh	unit 1 Topic 2_2	2	adj.新鲜的	1
+6	clear	unit 1 Topic 2_2	2	adj.清澈的	1
+6	change	unit 1 Topic 2_2	2	v.变化	1
+6	almost	unit 1 Topic 2_2	2	adv.几乎	1
+6	lose	unit 1 Topic 2_2	2	vt.失去	1
+6	lose one's way	unit 1 Topic 2_2	2	迷路	1
+7	plant	unit 1 Topic 3_1	2	n.植	1
+7	Tree Planting Day	unit 1 Topic 3_1	2	植树节	1
+7	wonderful	unit 1 Topic 3_1	2	adj.极好的	1
+7	look after	unit 1 Topic 3_1	2	照看	1
+7	set out	unit 1 Topic 3_1	2	出发	1
+7	dig	unit 1 Topic 3_1	2	v.挖	1
+7	hole	unit 1 Topic 3_1	2	n.洞	1
+7	enough	unit 1 Topic 3_1	2	adj.&adv.足够的	1
+7	knock	unit 1 Topic 3_1	2	n.敲	1
+7	strong	unit 1 Topic 3_1	2	adj.坚固的	1
+7	stick	unit 1 Topic 3_1	2	vt.棒	1
+7	earth	unit 1 Topic 3_1	2	n.泥土	1
+8	step	unit 1 Topic 3_2	2	n.踩	1
+8	several	unit 1 Topic 3_2	2	adj.几个的	1
+8	tie	unit 1 Topic 3_2	2	vt.系	1
+8	top	unit 1 Topic 3_2	2	n.顶端	1
+8	water	unit 1 Topic 3_2	2	n.浇水	1
+8	tool	unit 1 Topic 3_2	2	n.工具	1
+8	build	unit 1 Topic 3_2	2	vt.建造	1
+8	do a project on ...	unit 1 Topic 3_2	2	做 ... 课题	1
+8	air conditioner	unit 1 Topic 3_2	2	空调机	0
+8	wood	unit 1 Topic 3_2	2	n.木材	1
+8	cut down	unit 1 Topic 3_2	2	砍倒	1
+8	sir	unit 1 Topic 3_2	2	n.先生	1
+9	national	unit 2 Topic 1_1	4	adj.国家的	1
+9	national holiday	unit 2 Topic 1_1	4	国定假日	1
+9	decorate	unit 2 Topic 1_1	4	vt.装饰	1
+9	balloon	unit 2 Topic 1_1	4	n.气球	0
+9	national flag	unit 2 Topic 1_1	4	国旗	1
+9	sightseeing	unit 2 Topic 1_1	4	n.&adj.观光	1
+9	go sightseeing	unit 2 Topic 1_1	4	去观光	1
+9	celebrate	unit 2 Topic 1_1	4	vt.庆祝	1
+9	call on	unit 2 Topic 1_1	4	拜访	1
+10	relative	unit 2 Topic 1_2	4	n.亲戚	0
+10	firework	unit 2 Topic 1_2	4	n.爆竹	0
+10	fireworks display	unit 2 Topic 1_2	4	烟火表演	0
+10	gala	unit 2 Topic 1_2	4	n.欢庆	0
+10	National Day	unit 2 Topic 1_2	4	国庆节	1
+10	anyway	unit 2 Topic 1_2	4	adv.不管怎样	1
+10	else	unit 2 Topic 1_2	4	adj.&其他的	1
+10	member	unit 2 Topic 1_2	4	n.成员	1
+10	get together	unit 2 Topic 1_2	4	召集	0
+11	accept	unit 2 Topic 1_3	4	vt.接受	1
+11	invitation	unit 2 Topic 1_3	4	n.请帖	1
+11	plan	unit 2 Topic 1_3	4	n.&v.计划	1
+11	decline	unit 2 Topic 1_3	4	v.拒绝	0
+11	youth	unit 2 Topic 1_3	4	n.青年	1
+11	Youth Day	unit 2 Topic 1_3	4	青年节	0
+11	army	unit 2 Topic 1_3	4	n.军队	1
+11	Army Day	unit 2 Topic 1_3	4	建军节	0
+11	found	unit 2 Topic 1_3	4	vt.成立	0
+12	rise	unit 2 Topic 1_4	4	v.升起	1
+12	ever since then	unit 2 Topic 1_4	4	从那时候起	1
+12	develop	unit 2 Topic 1_4	4	vt.发展	1
+12	rich	unit 2 Topic 1_4	4	adj.富的	1
+12	life	unit 2 Topic 1_4	4	n.生活	1
+12	hold	unit 2 Topic 1_4	4	vt.举行	1
+12	smiling	unit 2 Topic 1_4	4	adj.微笑的	1
+12	everywhere	unit 2 Topic 1_4	4	adv.到处	1
+13	festival	unit 2 Topic 2_1	4	n.节日	1
+13	mid-autumn	unit 2 Topic 2_1	4	中秋	1
+13	Mid-autumn Festival	unit 2 Topic 2_1	4	中秋节	1
+13	dragon	unit 2 Topic 2_1	4	n.龙	0
+13	Dragon Boat Festival	unit 2 Topic 2_1	4	端午节	0
+13	lantern	unit 2 Topic 2_1	4	n.灯笼	0
+13	Lantern Festival	unit 2 Topic 2_1	4	元宵节	0
+13	Spring Festival	unit 2 Topic 2_1	4	春节	1
+13	Qing Ming Festival	unit 2 Topic 2_1	4	清明节	0
+13	traditional	unit 2 Topic 2_1	4	adj.传统的	1
+14	moon cake	unit 2 Topic 2_2	4	月饼	1
+14	dragon boat race	unit 2 Topic 2_2	4	赛龙舟	0
+14	lantern display	unit 2 Topic 2_2	4	灯展	0
+14	set off	unit 2 Topic 2_2	4	使爆炸	1
+14	firecracker	unit 2 Topic 2_2	4	n.爆竹	0
+14	set off firecrackers	unit 2 Topic 2_2	4	放鞭炮	0
+14	rice dumpling	unit 2 Topic 2_2	4	粽子	0
+14	sweep	unit 2 Topic 2_2	4	vt.扫	0
+14	tomb	unit 2 Topic 2_2	4	n.坟墓	0
+14	sweep tombs	unit 2 Topic 2_2	4	扫墓	0
+15	something	unit 2 Topic 2_3	4	pron.某物	1
+15	carry	unit 2 Topic 2_3	4	v.携带	1
+15	lunar	unit 2 Topic 2_3	4	adj.月的	0
+15	the Chinese Lunar Year	unit 2 Topic 2_3	4	中国农历年	0
+15	eve	unit 2 Topic 2_3	4	前夜	1
+15	New Year's Eve	unit 2 Topic 2_3	4	除夕夜	1
+15	celebration	unit 2 Topic 2_3	4	n.庆祝活动	1
+15	reason	unit 2 Topic 2_3	4	n.理由	1
+15	remember	unit 2 Topic 2_3	4	vt.记得	1
+16	dead	unit 2 Topic 2_4	4	adj.死的	1
+16	the dead	unit 2 Topic 2_4	4	已故的人	1
+16	honour	unit 2 Topic 2_4	4	敬意	1
+16	poet	unit 2 Topic 2_4	4	n.诗人	1
+16	cleaning	unit 2 Topic 2_4	4	打扫	1
+16	lucky	unit 2 Topic 2_4	4	adj.好运的	1
+16	lucky money	unit 2 Topic 2_4	4	压岁钱	1
+16	strike	unit 2 Topic 2_4	4	v.打击	1
+16	text message	unit 2 Topic 2_4	4	短信	0
+17	Christmas	unit 2 Topic 3_1	3	圣诞节	1
+17	Father Christmas	unit 2 Topic 3_1	3	圣诞老人	1
+17	discount	unit 2 Topic 3_1	3	n.折扣	0
+17	try	unit 2 Topic 3_1	3	n.&v.尝试	1
+17	try on	unit 2 Topic 3_1	3	试穿	1
+17	merry	unit 2 Topic 3_1	3	adj.快乐的	1
+17	Merry Christmas	unit 2 Topic 3_1	3	圣诞快乐	1
+17	changing room	unit 2 Topic 3_1	3	试衣室	1
+17	dollar	unit 2 Topic 3_1	3	n.美元	1
+18	percent	unit 2 Topic 3_2	3	adj.百分之一	1
+18	off	unit 2 Topic 3_2	3	prep.减掉	1
+18	assistant	unit 2 Topic 3_2	3	n.助手	1
+18	shop assistant	unit 2 Topic 3_2	3	店员	1
+18	customer	unit 2 Topic 3_2	3	n.顾客	1
+18	size	unit 2 Topic 3_2	3	n.大小	1
+18	size small	unit 2 Topic 3_2	3	小号	1
+18	medium	unit 2 Topic 3_2	3	adj.中间的	1
+18	size medium	unit 2 Topic 3_2	3	中号	1
+19	fit	unit 2 Topic 3_3	3	v.合适	1
+19	give ... a discount	unit 2 Topic 3_3	3	给某人打折	0
+19	carol	unit 2 Topic 3_3	3	n.颂歌	0
+19	part	unit 2 Topic 3_3	3	n.部分	1
+19	trousers	unit 2 Topic 3_3	3	n.裤子	1
+19	host	unit 2 Topic 3_3	3	v.主人	1
+19	hostess	unit 2 Topic 3_3	3	n.女主人	0
+19	and so on	unit 2 Topic 3_3	3	等等	1
+19	hang	unit 2 Topic 3_3	3	vt.悬挂	1
+19	go to bed	unit 2 Topic 3_3	3	睡觉	1
+20	summer holidays	unit 3 Topic 1_1	3	暑假	1
+20	study trip	unit 3 Topic 1_1	3	学习旅游	1
+20	leave for	unit 3 Topic 1_1	3	出发去某地	1
+20	weekday	unit 3 Topic 1_1	3	n.工作日	1
+20	attend	unit 3 Topic 1_1	3	vt.出席	1
+20	attend a class	unit 3 Topic 1_1	3	上课	1
+20	package	unit 3 Topic 1_1	3	n.包裹	0
+20	tour	unit 3 Topic 1_1	3	n.旅游	1
+20	package tour	unit 3 Topic 1_1	3	一揽子旅游	0
+21	mine	unit 3 Topic 1_2	3	pron.我的所有物	1
+21	yours	unit 3 Topic 1_2	3	pron.你的所有物	1
+21	on weekdays	unit 3 Topic 1_2	3	在工作日	1
+21	at weekends	unit 3 Topic 1_2	3	在周末	1
+21	sightseeing bus	unit 3 Topic 1_2	3	旅游车	1
+21	cost	unit 3 Topic 1_2	3	vi.价值为	1
+21	RMB	unit 3 Topic 1_2	3	n.人民币	0
+21	ours	unit 3 Topic 1_2	3	pron.我们的所有物	1
+21	his	unit 3 Topic 1_2	3	pron.他的所有物	1
+22	theirs	unit 3 Topic 1_3	3	pron.他们的所有物	1
+22	hers	unit 3 Topic 1_3	3	pron.她的所有物	1
+22	its	unit 3 Topic 1_3	3	pron.它的所有物	1
+22	camping trip	unit 3 Topic 1_3	3	野营	1
+22	Japan	unit 3 Topic 1_3	3	n.日本	1
+22	famous	unit 3 Topic 1_3	3	adj.著名的	1
+22	historical	unit 3 Topic 1_3	3	adj.历史的	0
+22	place of historical interest	unit 3 Topic 1_3	3	名胜古迹	0
+23	book	unit 3 Topic 2_1	2	n.预订	1
+23	agency	unit 3 Topic 2_1	2	n.代理处	1
+23	travel agency	unit 3 Topic 2_1	2	旅行社	1
+23	agent	unit 3 Topic 2_1	2	n.代理人	1
+23	tourist	unit 3 Topic 2_1	2	n.游客	1
+23	departure	unit 3 Topic 2_1	2	n.出发	0
+23	departure date	unit 3 Topic 2_1	2	出发日期	0
+23	admission	unit 3 Topic 2_1	2	n.准许进入	0
+23	ticket	unit 3 Topic 2_1	2	n.票	1
+23	admission ticket	unit 3 Topic 2_1	2	入场券	0
+23	palace	unit 3 Topic 2_1	2	n.宫	1
+24	Palace Museum	unit 3 Topic 2_2	2	故宫博物院	1
+24	a four-day trip	unit 3 Topic 2_2	2	四日游	1
+24	include	unit 3 Topic 2_2	2	v.包括	1
+24	hotel	unit 3 Topic 2_2	2	n.旅馆	1
+24	three-star hotel	unit 3 Topic 2_2	2	三星级宾馆	1
+24	arrive	unit 3 Topic 2_2	2	vi.到达	1
+24	lake	unit 3 Topic 2_2	2	n.湖	1
+24	far	unit 3 Topic 2_2	2	adj.远的	1
+24	ancient	unit 3 Topic 2_2	2	adj.古代的	1
+24	history	unit 3 Topic 2_2	2	n.历史	1
+24	exactly	unit 3 Topic 2_2	2	adv.精确地	1
+25	guide	unit 3 Topic 3_1	2	vt.导游	1
+25	tourist's guide	unit 3 Topic 3_1	2	导游图	1
+25	airport	unit 3 Topic 3_1	2	n.机场	1
+25	railway	unit 3 Topic 3_1	2	n.铁路	1
+25	station	unit 3 Topic 3_1	2	n.车站	1
+25	railway station	unit 3 Topic 3_1	2	火车站	1
+25	maglev	unit 3 Topic 3_1	2	悬磁浮列车	0
+25	attraction	unit 3 Topic 3_1	2	n.有吸引力的事物或人	0
+25	tourist attraction	unit 3 Topic 3_1	2	旅游胜地	0
+25	attractive	unit 3 Topic 3_1	2	adj.有吸引力的	1
+25	hope	unit 3 Topic 3_1	2	n.&v.希望	1
+26	southeast	unit 3 Topic 3_2	2	东南	1
+26	southwest	unit 3 Topic 3_2	2	西南	1
+26	island	unit 3 Topic 3_2	2	n.岛	1
+26	stone	unit 3 Topic 3_2	2	n.石头	1
+26	forest	unit 3 Topic 3_2	2	n.林区	1
+26	postcard	unit 3 Topic 3_2	2	n.明信片	1
+26	safe	unit 3 Topic 3_2	2	adj.安全的	1
+26	safe and sound	unit 3 Topic 3_2	2	安然无恙	0
+26	friendly	unit 3 Topic 3_2	2	adj.友好的	1
+26	style	unit 3 Topic 3_2	2	n.式样	0
+26	everything	unit 3 Topic 3_2	2	pron.每样东西	1
+27	Snow White	unit 4 Topic 1_1	3	白雪公主	1
+27	dwarf	unit 4 Topic 1_1	3	n.矮子	0
+27	magic	unit 4 Topic 1_1	3	n.魔法	0
+27	mirror	unit 4 Topic 1_1	3	n.镜子	1
+27	stepmother	unit 4 Topic 1_1	3	n.后母	0
+27	die	unit 4 Topic 1_1	3	vi.死	1
+27	huntsman	unit 4 Topic 1_1	3	n.猎人	0
+27	kill	unit 4 Topic 1_1	3	vt.杀死	1
+27	instead	unit 4 Topic 1_1	3	adv.反而	1
+27	alone	unit 4 Topic 1_1	3	adj.单独地	1
+27	on and on	unit 4 Topic 1_1	3	继续不断的	0
+28	at last	unit 4 Topic 1_2	3	最后	1
+28	master	unit 4 Topic 1_2	3	n.主人	0
+28	tidy	unit 4 Topic 1_2	3	adj.整洁的	0
+28	one after another	unit 4 Topic 1_2	3	一个接一个地	1
+28	someone	unit 4 Topic 1_2	3	pron.某人	1
+28	wake	unit 4 Topic 1_2	3	vi.醒	1
+28	wake up	unit 4 Topic 1_2	3	醒来	1
+28	from then on	unit 4 Topic 1_2	3	从那时起	1
+28	already	unit 4 Topic 1_2	3	adv.已经	1
+28	yet	unit 4 Topic 1_2	3	adv.还	1
+28	bored	unit 4 Topic 1_2	3	adj.无聊的	1
+29	picture story-book	unit 4 Topic 1_3	3	小人书	0
+29	finish	unit 4 Topic 1_3	3	vi.&vt.结束	1
+29	bite	unit 4 Topic 1_3	3	n.咬	0
+29	at once	unit 4 Topic 1_3	3	立刻	1
+29	cry	unit 4 Topic 1_3	3	n.叫	1
+29	later	unit 4 Topic 1_3	3	adj.&adv.较晚的	1
+29	prince	unit 4 Topic 1_3	3	n.王子	1
+29	happen to	unit 4 Topic 1_3	3	碰巧	1
+29	such	unit 4 Topic 1_3	3	adj.这样的	1
+29	decide	unit 4 Topic 1_3	3	vt.决定	1
+30	fable	unit 4 Topic 2_1	2	n.寓言	1
+30	detective	unit 4 Topic 2_1	2	adj.侦探的	1
+30	detective story	unit 4 Topic 2_1	2	侦探小说	1
+30	science fiction	unit 4 Topic 2_1	2	科幻小说	0
+30	since	unit 4 Topic 2_1	2	conj.从 ... 以来	1
+30	recently	unit 4 Topic 2_1	2	adv.最近	1
+30	cool	unit 4 Topic 2_1	2	adj.凉的	1
+30	power	unit 4 Topic 2_1	2	n.力	1
+30	childhood	unit 4 Topic 2_1	2	n.童年	0
+30	novel	unit 4 Topic 2_1	2	n.小说	1
+30	popular	unit 4 Topic 2_1	2	adj.大众化的	1
+31	popular science	unit 4 Topic 2_2	2	大众科学	1
+31	moving	unit 4 Topic 2_2	2	adj.动人的	1
+31	author	unit 4 Topic 2_2	2	n.著作者	1
+31	horrible	unit 4 Topic 2_2	2	adj.令人恐惧的	0
+31	hard	unit 4 Topic 2_2	2	adj.&adv.困难的	1
+31	true	unit 4 Topic 2_2	2	adj.真的	1
+31	enemy	unit 4 Topic 2_2	2	n.敌人	1
+31	steal	unit 4 Topic 2_2	2	vt.偷盗	1
+31	manage	unit 4 Topic 2_2	2	vt.管理	1
+31	save	unit 4 Topic 2_2	2	vt.拯救	1

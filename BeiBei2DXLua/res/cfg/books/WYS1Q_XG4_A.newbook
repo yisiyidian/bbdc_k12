@@ -1,0 +1,114 @@
+1	dear	Module 1_1	2	adj.亲爱的	1
+1	well	Module 1_1	2	adj.健康的	1
+1	of	Module 1_1	2	prep....的	1
+2	soon	Module 1_2	2	adv.不久	0
+2	tell	Module 1_2	2	vt.告诉	1
+2	love	Module 1_2	2	vt.爱	1
+3	skirt	Module 2_1	1	n.短裙	1
+3	clean	Module 2_1	1	vt.打扫	1
+3	finish	Module 2_1	1	vi.完成	0
+3	dirty	Module 2_1	1	adj.脏的	1
+3	paint	Module 2_1	1	n.绘画	0
+3	Mr	Module 2_1	1	abbr.先生	1
+3	phone	Module 2_1	1	v.打电话	0
+4	didn't	Module 3_1	1	（过去式）不做	0
+4	National Day	Module 3_1	1	国庆节	0
+4	stay	Module 3_1	1	n.&v.停留	0
+4	what	Module 3_1	1	pron.多么	1
+4	boring	Module 3_1	1	adj.无聊的	0
+4	day	Module 3_1	1	n.一天	1
+5	invent	Module 4_1	1	v.发明	0
+5	paper	Module 4_1	1	n.纸	0
+5	important	Module 4_1	1	adj.重要的	0
+5	printing	Module 4_1	1	n.印刷术	0
+5	print	Module 4_1	1	vt.印刷	0
+5	right	Module 4_1	1	adj.正确的	1
+5	between	Module 4_1	1	prep.在...之间	1
+5	bicycle	Module 4_1	1	n.自行车	1
+5	mouse	Module 4_1	1	n.老鼠	0
+5	beside	Module 4_1	1	prep.在...旁边	1
+5	man	Module 4_1	1	n.男人	1
+6	went	Module 5_1	3	vi.去（过去式）	1
+6	saw	Module 5_1	3	vt.看见（过去式）	1
+6	trip	Module 5_1	3	n.旅行	0
+6	took	Module 5_1	3	vt.需要花费（过去式）	1
+6	fifty	Module 5_1	3	num.五十	0
+6	minute	Module 5_1	3	n.分钟	1
+6	top	Module 5_1	3	n.顶部	0
+6	mountain	Module 5_1	3	n.山	0
+7	ate	Module 5_2	3	vt.吃（过去式）	1
+7	candy	Module 5_2	3	n.糖果	1
+7	plant	Module 5_2	3	n.植物	1
+7	had	Module 5_2	3	vt.度过（过去式）	1
+7	have a good time	Module 5_2	3	过得愉快	0
+7	bought	Module 5_2	3	vt.买（过去式）	1
+7	wore	Module 5_2	3	vt.穿（过去式）	1
+7	go on a trip	Module 5_2	3	去旅游	0
+8	ice	Module 5_3	3	n.冰	0
+8	at first	Module 5_3	3	起初	0
+8	fell	Module 5_3	3	vi.掉下（过去式）	0
+8	fall over	Module 5_3	3	摔倒	0
+8	hurt	Module 5_3	3	vt.是受伤	0
+8	a lot	Module 5_3	3	在很大程度上	0
+8	able	Module 5_3	3	adj.聪明能干的	0
+8	be able to	Module 5_3	3	能够	0
+8	skate	Module 5_3	3	v.滑冰	0
+9	become	Module 6_1	2	vt.变成	0
+9	gold	Module 6_1	2	n.金子	0
+9	ago	Module 6_1	2	adv.以前	0
+9	long ago	Module 6_1	2	很久以前	0
+9	magic	Module 6_1	2	n.有魔力的	0
+9	paintbrush	Module 6_1	2	n.画笔	0
+9	woman	Module 6_1	2	n.女性	1
+9	became	Module 6_1	2	vt.变成（过去式）	0
+9	real	Module 6_1	2	adj.真实的	0
+10	bad	Module 6_2	2	adj.坏的	1
+10	took	Module 6_2	2	vt.拿走（过去式）	1
+10	away	Module 6_2	2	adv.离去	0
+10	leaves	Module 6_2	2	n.树叶（复数）	0
+10	only	Module 6_2	2	adv.只	0
+10	painting	Module 6_2	2	n.画	0
+10	angry	Module 6_2	2	adj.生气的	1
+10	said	Module 6_2	2	vt.说（过去式）	1
+11	doll	Module 7_1	1	n.玩偶	0
+11	matter	Module 7_1	1	n.事情	0
+11	lost	Module 7_1	1	vt.丢失（过去式）	0
+11	found	Module 7_1	1	vt.发现	1
+11	key	Module 7_1	1	n.钥匙	0
+11	look for	Module 7_1	1	寻找	0
+12	when	Module 8_1	1	adv.&pron.什么时候	1
+12	came	Module 8_1	1	vi.来	1
+12	competition	Module 8_1	1	n.比赛	0
+12	won	Module 8_1	1	vt.赢（过去式）	0
+12	gold	Module 8_1	1	adj.金制的	0
+12	cup	Module 8_1	1	n.奖杯	0
+12	flute	Module 8_1	1	n.长笛	0
+12	practice	Module 8_1	1	n.&v.练习	0
+12	took	Module 8_1	1	vt.拍摄（过去式）	1
+12	look	Module 8_1	1	v.看上去...	1
+12	a lot	Module 8_1	1	经常	0
+13	happen	Module 9_1	1	vi.发生	0
+13	fall off	Module 9_1	1	从...跌落	0
+13	bike ride	Module 9_1	1	骑自行车	0
+13	thirsty	Module 9_1	1	adj.渴的	0
+13	water	Module 9_1	1	n.水	1
+13	watermelon	Module 9_1	1	n.西瓜	0
+13	carried	Module 9_1	1	vt.拿（过去式）	0
+13	bump	Module 9_1	1	v.碰	0
+13	hurt	Module 9_1	1	vt.使受伤	0
+13	knee	Module 9_1	1	n.膝盖	0
+13	cut	Module 9_1	1	vt.切（过去式）	0
+13	finger	Module 9_1	1	n.手指	0
+14	early	Module 10_1	1	adv.早	1
+14	every	Module 10_1	1	adj.每个	1
+14	during	Module 10_1	1	prep.在...期间	0
+14	computer game	Module 10_1	1	计算机游戏	0
+14	take	Module 10_1	1	vt.服药	1
+14	medicine	Module 10_1	1	n.药	0
+14	a lot of	Module 10_1	1	许多的	0
+14	exercise	Module 10_1	1	n.锻炼	1
+14	healthy	Module 10_1	1	adj.健康的	1
+14	juice	Module 10_1	1	n.果汁	1
+14	before	Module 10_1	1	prep.在...之前	1
+14	after	Module 10_1	1	prep.在...之后	1
+14	toilet	Module 10_1	1	n.厕所	1

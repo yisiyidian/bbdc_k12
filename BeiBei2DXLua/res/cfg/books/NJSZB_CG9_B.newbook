@@ -1,0 +1,189 @@
+1	voyage	unit 1_1	4	n.航行	1
+1	repetition	unit 1_1	4	n.重复	1
+1	American	unit 1_1	4	adj.美洲的	1
+2	continent	unit 1_2	4	n.大陆	1
+2	route	unit 1_2	4	n.路线	0
+2	discovery	unit 1_2	4	n.发现	1
+2	rise	unit 1_2	4	v.变得更加成功	1
+2	official	unit 1_2	4	adj.官员	1
+2	develop	unit 1_2	4	vt.增强	1
+2	relation	unit 1_2	4	n.关系	1
+2	trade	unit 1_2	4	n.贸易	1
+2	foreign	unit 1_2	4	adj.外国的	1
+2	fleet	unit 1_2	4	n.船队	0
+3	Africa	unit 1_3	4	n.非洲	1
+3	nowhere	unit 1_3	4	adv.无处	1
+3	silk	unit 1_3	4	n.丝织物	1
+3	giraffe	unit 1_3	4	n.长颈鹿	1
+3	besides	unit 1_3	4	prep.除...之外（还）	1
+3	development	unit 1_3	4	n.发展	1
+3	region	unit 1_3	4	n.地区	0
+3	pioneer	unit 1_3	4	n.先锋	1
+3	people	unit 1_3	4	n.民族	1
+3	wealth	unit 1_3	4	n.财富	1
+4	spread	unit 1_4	4	v.传播	1
+4	open up	unit 1_4	4	开辟	1
+4	go on a trip	unit 1_4	4	去旅行	1
+4	set up	unit 1_4	4	建立	1
+4	set sail	unit 1_4	4	起航	1
+4	be known	unit 1_4	4	被称为	1
+4	as well as	unit 1_4	4	也	1
+4	lead to	unit 1_4	4	导致	1
+4	compare ... with ...	unit 1_4	4	把...与...对比	1
+5	culture shock	unit 2_1	3	文化冲击	1
+5	camp	unit 2_1	3	n.度假营	1
+5	firework	unit 2_1	3	n.烟火	0
+5	turkey	unit 2_1	3	n.火鸡	0
+5	international	unit 2_1	3	adj.国际的	1
+5	admit	unit 2_1	3	vt.承认	1
+5	spare	unit 2_1	3	adj.空闲的	1
+5	degree	unit 2_1	3	n.程度	1
+5	fail	unit 2_1	3	vi.失败	1
+5	manage	unit 2_1	3	vt.完成	1
+6	idiom	unit 2_2	3	n.习语	1
+6	everyday	unit 2_2	3	adj.每天的	1
+6	uniform	unit 2_2	3	n.校服	1
+6	whatever	unit 2_2	3	pron.任何事物	1
+6	pink	unit 2_2	3	adj.粉红色的	1
+6	purple	unit 2_2	3	adj.紫色的	1
+6	anyway	unit 2_2	3	adv.无论如何	1
+6	especially	unit 2_2	3	adv.尤其	1
+6	baseball	unit 2_2	3	n.棒球运动	1
+6	education	unit 2_2	3	n.有教益的经历	1
+7	state	unit 2_3	3	n.州	1
+7	national	unit 2_3	3	adj.国家的	1
+7	president	unit 2_3	3	n.总统	1
+7	vacation	unit 2_3	3	n.假期	1
+7	schedule	unit 2_3	3	n.日程安排	1
+7	set off	unit 2_3	3	使爆炸	1
+7	take off	unit 2_3	3	脱下	1
+7	in one's spare time	unit 2_3	3	在某人的空闲时间里	1
+7	to a certain degree	unit 2_3	3	在某神程度上	1
+7	get used to	unit 2_3	3	习惯于	1
+7	under the weather	unit 2_3	3	略有不适	1
+8	concern	unit 3_1	3	vt.担心	1
+8	atmosphere	unit 3_1	3	n.大气层	1
+8	temperature	unit 3_1	3	n.温度	1
+8	consumer	unit 3_1	3	n.消费者	0
+8	guess	unit 3_1	3	n.&v.猜测	1
+8	green	unit 3_1	3	adj.环境保护的	1
+8	lifeless	unit 3_1	3	adj.无生命的	1
+8	fuel	unit 3_1	3	n.燃料	1
+8	coal	unit 3_1	3	n.煤	1
+8	result	unit 3_1	3	n.结果	1
+8	increase	unit 3_1	3	v.增长	1
+9	sea level	unit 3_2	3	海平面	1
+9	destroy	unit 3_2	3	vt.摧毁	1
+9	nature	unit 3_2	3	n.自然界	1
+9	surface	unit 3_2	3	n.表面	1
+9	soil	unit 3_2	3	n.土壤	1
+9	flood	unit 3_2	3	n.洪水	1
+9	habit	unit 3_2	3	n.习惯	1
+9	proper	unit 3_2	3	adj.正确的	1
+9	friendly	unit 3_2	3	adj.无害的	1
+9	recycle	unit 3_2	3	vt.回收利用	1
+9	purpose	unit 3_2	3	n.目的	1
+10	solution	unit 3_3	3	n.解决办法	1
+10	government	unit 3_3	3	n.政府	1
+10	role model	unit 3_3	3	楷模	1
+10	greenhouse effect	unit 3_3	3	温室效应	1
+10	in danger	unit 3_3	3	在危险中	1
+10	as a result of	unit 3_3	3	由于	1
+10	result in	unit 3_3	3	造成	1
+10	mountains of	unit 3_3	3	许多	1
+10	take action	unit 3_3	3	采取行动	1
+10	make a difference	unit 3_3	3	有作用	1
+10	act as	unit 3_3	3	充当	1
+11	asteroid	unit 4_1	3	n.小行星	0
+11	typhoon	unit 4_1	3	n.台风	0
+11	earthquake	unit 4_1	3	n.地震	1
+11	melt	unit 4_1	3	vt.熔化	0
+11	flood	unit 4_1	3	vt.灌满水	1
+11	badly	unit 4_1	3	adv.严重地	1
+11	alive	unit 4_1	3	adj.活着	1
+11	pool	unit 4_1	3	n.水塘	1
+11	object	unit 4_1	3	n.物体	1
+11	coach	unit 4_1	3	n.长途汽车	1
+11	pass	unit 4_1	3	vt.通过	1
+12	line	unit 4_2	3	n.电话线路	1
+12	dead	unit 4_2	3	adj.不运行的	1
+12	boss	unit 4_2	3	n.老板	1
+12	deaf	unit 4_2	3	adj.聋的	1
+12	stare	unit 4_2	3	vt.盯着看	1
+12	screen	unit 4_2	3	n.屏幕	1
+12	notice	unit 4_2	3	v.注意到	1
+12	awake	unit 4_2	3	vt.使醒来	1
+12	immediately	unit 4_2	3	adv.立即	1
+12	missing	unit 4_2	3	adj.失踪的	1
+12	fellow	unit 4_2	3	adj.同类的	1
+13	natural disaster	unit 4_3	3	自然灾害	1
+13	pass by	unit 4_3	3	通过	1
+13	stick with	unit 4_3	3	坚持	1
+13	sit around	unit 4_3	3	无所事事地消磨时间	1
+13	have no time to do	unit 4_3	3	不愿为...花时间	1
+13	fall on deaf ears	unit 4_3	3	不被理睬	1
+13	stare at	unit 4_3	3	盯着看	1
+13	in surprise	unit 4_3	3	惊讶地	1
+13	for now	unit 4_3	3	暂时	1
+13	survival kit	unit 4_3	3	救生包	1
+14	announcement	unit 5_1	3	n.通告	1
+14	passport	unit 5_1	3	n.护照	1
+14	the Pacific	unit 5_1	3	n.太平洋	1
+14	Canada	unit 5_1	3	n.加拿大	1
+14	resort	unit 5_1	3	n.旅游胜地	0
+14	Canadian	unit 5_1	3	adj.加拿大的	1
+14	slope	unit 5_1	3	n.斜坡	0
+14	opposite	unit 5_1	3	prep.与...相对	1
+14	glove	unit 5_1	3	n.手套	1
+14	couple	unit 5_1	3	n.夫妻	1
+15	gentle	unit 5_2	3	adj.平缓的	1
+15	honest	unit 5_2	3	adj.坦诚的	1
+15	rope	unit 5_2	3	n.绳索	1
+15	rapid	unit 5_2	3	adj.迅速的	1
+15	over	unit 5_2	3	adv.结束	1
+15	shame	unit 5_2	3	n.令人惋惜的事	1
+15	fee	unit 5_2	3	n.费用	1
+15	enter	unit 5_2	3	vi.报名参加	1
+15	semi-final	unit 5_2	3	n.半决赛	0
+15	final	unit 5_2	3	n.决赛	1
+16	badminton	unit 5_3	3	n.羽毛球运动	1
+16	stress	unit 5_3	3	n.紧张	1
+16	be dying to do sth.	unit 5_3	3	渴望做某事	1
+16	check in	unit 5_3	3	登记	1
+16	can't wait to do sth.	unit 5_3	3	迫不及待想做某事	1
+16	to be honest	unit 5_3	3	说实在的	1
+16	fall over	unit 5_3	3	被...绊倒	1
+16	keep one's balance	unit 5_3	3	保持平衡	1
+16	build up	unit 5_3	3	建立	1
+17	conduct	unit 6_1	3	n.实施	1
+17	lifestyle	unit 6_1	3	n.生活方式	0
+17	quarrel	unit 6_1	3	n.&vi.争吵	1
+17	focus	unit 6_1	3	v.集中于	1
+17	peer	unit 6_1	3	n.同龄人	0
+17	pressure	unit 6_1	3	n.压力	1
+17	whether	unit 6_1	3	conj.是否	1
+17	risk	unit 6_1	3	n.风险	1
+17	guard	unit 6_1	3	vt.&n.守卫	1
+17	positive	unit 6_1	3	adj.积极乐观的	0
+17	cancel	unit 6_1	3	vt.取消	1
+18	bright	unit 6_2	3	adj.有希望的	1
+18	force	unit 6_2	3	v.强迫	1
+18	concert	unit 6_2	3	n.音乐会	1
+18	private	unit 6_2	3	adj.私人的	1
+18	silent	unit 6_2	3	adj.沉默的	1
+18	musical instrument	unit 6_2	3	乐器	1
+18	enemy	unit 6_2	3	n.危害物	1
+18	regular	unit 6_2	3	adj.有规律的	1
+18	cheer	unit 6_2	3	n.鼓励	1
+18	low	unit 6_2	3	adj.沮丧的	1
+18	eyesight	unit 6_2	3	n.视力	1
+19	dentist	unit 6_3	3	n.牙科医生	1
+19	recovery	unit 6_3	3	n.恢复	1
+19	deal with	unit 6_3	3	处理	1
+19	guard against	unit 6_3	3	防止	1
+19	cancel out	unit 6_3	3	抵消	1
+19	look on the bright side	unit 6_3	3	持乐观的态度	1
+19	take up	unit 6_3	3	学着做	1
+19	be busy with	unit 6_3	3	忙于做...	1
+19	leave ... behind	unit 6_3	3	把...抛在后面	1
+19	cheer ... up	unit 6_3	3	使变得更高兴	1

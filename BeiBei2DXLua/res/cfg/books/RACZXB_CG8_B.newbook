@@ -1,0 +1,428 @@
+1	invite	unit 5 Topic 1_1	3	vt.&n.邀请	1
+1	disappointed	unit 5 Topic 1_1	3	adj.失望的	0
+1	film	unit 5 Topic 1_1	3	n.电影	1
+2	smell	unit 5 Topic 1_2	3	vt.&n.闻	1
+2	seem	unit 5 Topic 1_2	3	vi.好像	1
+2	opera	unit 5 Topic 1_2	3	n.歌剧	0
+2	excite	unit 5 Topic 1_2	3	v.使激动	0
+2	care for	unit 5 Topic 1_2	3	照顾	0
+2	lonely	unit 5 Topic 1_2	3	adj.孤独的	1
+2	lively	unit 5 Topic 1_2	3	adj.充满生气的	1
+2	cheer up	unit 5 Topic 1_2	3	使振作起来	0
+2	almost	unit 5 Topic 1_2	3	adv.几乎	1
+2	mainly	unit 5 Topic 1_2	3	adv.主要地	0
+3	role	unit 5 Topic 1_3	3	n.角色	1
+3	facial	unit 5 Topic 1_3	3	adj.面部的	0
+3	painting	unit 5 Topic 1_3	3	n.油画	0
+3	gesture	unit 5 Topic 1_3	3	n.姿势	0
+3	frightened	unit 5 Topic 1_3	3	adj.惊吓的	0
+3	worried	unit 5 Topic 1_3	3	adj.担心的	0
+3	in the end	unit 5 Topic 1_3	3	最后	0
+3	interested	unit 5 Topic 1_3	3	adj.感兴趣的	0
+3	upset	unit 5 Topic 1_3	3	adj.心烦的	0
+4	exam	unit 5 Topic 2_1	3	n.考试	1
+4	strict	unit 5 Topic 2_1	3	adj.严格的	1
+4	be strict with	unit 5 Topic 2_1	3	对...严格要求	0
+4	shy	unit 5 Topic 2_1	3	adj.害羞的	1
+4	take it easy	unit 5 Topic 2_1	3	别紧张	0
+4	fail	unit 5 Topic 2_1	3	vi.失败	1
+4	someone	unit 5 Topic 2_1	3	pron.某人	1
+4	feeling	unit 5 Topic 2_1	3	n.感觉	1
+4	joke	unit 5 Topic 2_1	3	n.&vi.笑话	1
+4	by the way	unit 5 Topic 2_1	3	顺便提一下	0
+5	yeah	unit 5 Topic 2_2	3	（口）是	0
+5	usual	unit 5 Topic 2_2	3	adj.通常的	1
+5	as usual	unit 5 Topic 2_2	3	像往常一样	0
+5	either	unit 5 Topic 2_2	3	pron.也	1
+5	accept	unit 5 Topic 2_2	3	vt.接受	1
+5	lovely	unit 5 Topic 2_2	3	adj.可爱的	1
+5	helpful	unit 5 Topic 2_2	3	adj.有用的	1
+5	international	unit 5 Topic 2_2	3	adj.国际的	1
+5	useless	unit 5 Topic 2_2	3	adj.无用的	0
+5	deal	unit 5 Topic 2_2	3	v.处理	1
+6	deal with	unit 5 Topic 2_3	3	处理	0
+6	elder	unit 5 Topic 2_3	3	adj.年长的	1
+6	refuse	unit 5 Topic 2_3	3	vt.拒绝	1
+6	sadness	unit 5 Topic 2_3	3	n.忧伤	0
+6	anyone	unit 5 Topic 2_3	3	pron.任何人	1
+6	unfair	unit 5 Topic 2_3	3	adj.不公平的	0
+6	though	unit 5 Topic 2_3	3	conj.&adv.虽然	1
+6	even though	unit 5 Topic 2_3	3	即使	0
+6	not ... any longer	unit 5 Topic 2_3	3	不再	0
+7	test	unit 5 Topic 3_1	3	n.测试	1
+7	nervous	unit 5 Topic 3_1	3	adj.焦虑的	1
+7	speech	unit 5 Topic 3_1	3	n.演讲	1
+7	CD	unit 5 Topic 3_1	3	n.光盘	0
+7	relaxed	unit 5 Topic 3_1	3	adj.冷静的	0
+7	rich	unit 5 Topic 3_1	3	adj.丰富的	1
+7	sick	unit 5 Topic 3_1	3	adj.生病的	1
+7	affect	unit 5 Topic 3_1	3	vt.影响	0
+7	confident	unit 5 Topic 3_1	3	adj.自信的	0
+7	mood	unit 5 Topic 3_1	3	n.心情	0
+8	proud	unit 5 Topic 3_2	3	adj.自豪的	1
+8	be proud of	unit 5 Topic 3_2	3	骄傲	0
+8	anyway	unit 5 Topic 3_2	3	adv.尽管	1
+8	ready	unit 5 Topic 3_2	3	adj.准备好的	1
+8	passport	unit 5 Topic 3_2	3	n.护照	1
+8	boss	unit 5 Topic 3_2	3	n.老板	1
+8	grandson	unit 5 Topic 3_2	3	n.孙子	1
+8	environment	unit 5 Topic 3_2	3	n.坏境	1
+8	especially	unit 5 Topic 3_2	3	adv.尤其	1
+8	fill	unit 5 Topic 3_2	3	vt.充满	1
+9	fill with sth	unit 5 Topic 3_3	3	使充满	0
+9	trouble	unit 5 Topic 3_3	3	n.困难	1
+9	loud	unit 5 Topic 3_3	3	adj.大声的	1
+9	noise	unit 5 Topic 3_3	3	n.噪音	1
+9	spirit	unit 5 Topic 3_3	3	n.精神	1
+9	silent	unit 5 Topic 3_3	3	adj.不说话的	1
+9	think over	unit 5 Topic 3_3	3	仔细考虑	0
+9	decision	unit 5 Topic 3_3	3	n.决定	1
+9	make a decision	unit 5 Topic 3_3	3	作决定	0
+9	sense	unit 5 Topic 3_3	3	n.感觉	1
+9	relaxing	unit 5 Topic 3_3	3	adj.轻松的	0
+10	fantastic	review of unit 5_1	1	adj.极好的	1
+10	disappointment	review of unit 5_1	1	n.失望	0
+10	soft	review of unit 5_1	1	adj.轻柔的	1
+10	be in trouble	review of unit 5_1	1	有麻烦	0
+10	fear	review of unit 5_1	1	n.&v.害怕	1
+10	difficulty	review of unit 5_1	1	n.困难	1
+11	field	unit 6 Topic 1_1	3	n.田野	1
+11	proper	unit 6 Topic 1_1	3	adj.恰当的	1
+11	mount	unit 6 Topic 1_1	3	n.山	0
+11	vehicle	unit 6 Topic 1_1	3	n.交通工具	0
+11	airline	unit 6 Topic 1_1	3	n.航空公司	0
+11	price	unit 6 Topic 1_1	3	n.价格	1
+11	total	unit 6 Topic 1_1	3	adj.总的	1
+11	partner	unit 6 Topic 1_1	3	n.搭档	0
+11	sleeper	unit 6 Topic 1_1	3	n.卧铺列车	0
+12	pay	unit 6 Topic 1_2	3	vt.付费	1
+12	hotel	unit 6 Topic 1_2	3	n.宾馆	1
+12	fridge	unit 6 Topic 1_2	3	n.冰箱	1
+12	air conditioner	unit 6 Topic 1_2	3	n.空调	0
+12	standard	unit 6 Topic 1_2	3	n.&adj.标准的	1
+12	single	unit 6 Topic 1_2	3	adj.单一的	1
+12	condition	unit 6 Topic 1_2	3	n.条件	1
+12	comfortable	unit 6 Topic 1_2	3	adj.舒服的	1
+12	raise	unit 6 Topic 1_2	3	vt.筹集	1
+13	king	unit 6 Topic 1_3	3	n.国王	1
+13	queen	unit 6 Topic 1_3	3	n.女王	1
+13	common	unit 6 Topic 1_3	3	adj.普通的	1
+13	Canadian	unit 6 Topic 1_3	3	n&adj.加拿大的	1
+13	dollar	unit 6 Topic 1_3	3	n.美元	1
+13	somebody	unit 6 Topic 1_3	3	pron.某人	1
+13	forward	unit 6 Topic 1_3	3	adv.向前	0
+13	hear from	unit 6 Topic 1_3	3	收到某人来信	0
+13	top	unit 6 Topic 1_3	3	n.顶部	1
+14	receive	unit 6 Topic 2_1	4	vt.收到	1
+14	postcard	unit 6 Topic 2_1	4	n.明信片	1
+14	vacation	unit 6 Topic 2_1	4	n.假期	1
+14	on vacation	unit 6 Topic 2_1	4	度假	0
+14	explore	unit 6 Topic 2_1	4	vt.探究	0
+14	camp	unit 6 Topic 2_1	4	n.野营	1
+14	work out	unit 6 Topic 2_1	4	算出	0
+14	seaside	unit 6 Topic 2_1	4	adj.海边	0
+14	north	unit 6 Topic 2_1	4	n.北方	1
+14	east	unit 6 Topic 2_1	4	n.&adj.&adv.东方	1
+15	west	unit 6 Topic 2_2	4	n.&adj.&adv.西方	1
+15	monument	unit 6 Topic 2_2	4	n.纪念碑	0
+15	rostrum	unit 6 Topic 2_2	4	n.指挥台	0
+15	chairman	unit 6 Topic 2_2	4	n.主席	0
+15	announce	unit 6 Topic 2_2	4	vt.宣布	0
+15	found	unit 6 Topic 2_2	4	vt.建立	0
+15	republic	unit 6 Topic 2_2	4	n.共和国	0
+15	meaningful	unit 6 Topic 2_2	4	adj.重要的	0
+15	wait	unit 6 Topic 2_2	4	vt.等	1
+15	memorial	unit 6 Topic 2_2	4	n.纪念的	0
+16	northwest	unit 6 Topic 2_3	4	n.西北方	0
+16	northeast	unit 6 Topic 2_3	4	n.东北方	0
+16	southeast	unit 6 Topic 2_3	4	n.东南方	0
+16	bicycle	unit 6 Topic 2_3	4	n.自行车	1
+16	be full of	unit 6 Topic 2_3	4	满的	0
+16	crowd	unit 6 Topic 2_3	4	n.人群	0
+16	tour	unit 6 Topic 2_3	4	n.旅游	1
+16	space	unit 6 Topic 2_3	4	n.空间	1
+16	push	unit 6 Topic 2_3	4	v.&n.推	1
+17	direction	unit 6 Topic 2_4	4	n.方向	1
+17	step	unit 6 Topic 2_4	4	n.脚步	1
+17	slowly	unit 6 Topic 2_4	4	adv.缓慢地	0
+17	beside	unit 6 Topic 2_4	4	prep.在...旁边	1
+17	sadly	unit 6 Topic 2_4	4	adv.悲伤的	0
+17	as soon as	unit 6 Topic 2_4	4	一...就...	0
+17	experience	unit 6 Topic 2_4	4	n.经历	1
+17	everywhere	unit 6 Topic 2_4	4	adv.到处	1
+17	Thank goodness	unit 6 Topic 2_4	4	谢天谢地	0
+18	passenger	unit 6 Topic 3_1	4	n.乘客	1
+18	crazy	unit 6 Topic 3_1	4	adj.疯狂的	1
+18	anywhere	unit 6 Topic 3_1	4	adv.任何地方	1
+18	pollution	unit 6 Topic 3_1	4	n.污染	1
+18	advantage	unit 6 Topic 3_1	4	n.优点，优势	1
+18	disagree	unit 6 Topic 3_1	4	v.不同意	0
+18	disagree with sb	unit 6 Topic 3_1	4	不同意	0
+18	rider	unit 6 Topic 3_1	4	n.骑	0
+18	careless	unit 6 Topic 3_1	4	adj.不小心的	1
+19	helmet	unit 6 Topic 3_2	4	n.头盔	0
+19	light-colored	unit 6 Topic 3_2	4	adj.浅色的	0
+19	pay attention to	unit 6 Topic 3_2	4	注意	0
+19	signal	unit 6 Topic 3_2	4	n.信号	0
+19	safety	unit 6 Topic 3_2	4	n.安全	1
+19	truck	unit 6 Topic 3_2	4	n.卡车	1
+19	notice	unit 6 Topic 3_2	4	v.&n.注意到	1
+19	reflector	unit 6 Topic 3_2	4	n.反光玻璃	0
+19	case	unit 6 Topic 3_2	4	n.情况	0
+20	in case of	unit 6 Topic 3_3	4	如果	0
+20	aid	unit 6 Topic 3_3	4	n.帮助	0
+20	first aid	unit 6 Topic 3_3	4	急救	0
+20	injury	unit 6 Topic 3_3	4	n.伤害	0
+20	in a word	unit 6 Topic 3_3	4	简言之	0
+20	look out	unit 6 Topic 3_3	4	小心	0
+20	stream	unit 6 Topic 3_3	4	n.溪	0
+20	empty	unit 6 Topic 3_3	4	adj.空的	1
+20	Asia	unit 6 Topic 3_3	4	n.亚洲	1
+21	altitude	unit 6 Topic 3_4	4	n.海拔	0
+21	among	unit 6 Topic 3_4	4	prep.在...中	1
+21	France	unit 6 Topic 3_4	4	n.法国	1
+21	mile	unit 6 Topic 3_4	4	n.英里	1
+21	stage	unit 6 Topic 3_4	4	n.阶段	0
+21	central	unit 6 Topic 3_4	4	adj.中心的	1
+21	winner	unit 6 Topic 3_4	4	n.优胜者	1
+21	cyclist	unit 6 Topic 3_4	4	n.骑自行车的人	0
+21	motorcycle	unit 6 Topic 3_4	4	n.摩托车	0
+21	broken	unit 6 Topic 3_4	4	adj.破损的	0
+22	explain	review of unit 5-6_1	1	vt.解释	1
+22	pedestrian	review of unit 5-6_1	1	n.行人	0
+22	Europe	review of unit 5-6_1	1	n.欧洲	1
+22	French	review of unit 5-6_1	1	n&adj.法国的	1
+22	town	review of unit 5-6_1	1	n.市镇	1
+22	village	review of unit 5-6_1	1	n.村庄	1
+22	death	review of unit 5-6_1	1	n.死亡	0
+22	sharp	review of unit 5-6_1	1	adj.锋利的	0
+22	slow	review of unit 5-6_1	1	adj.&v.缓慢的	1
+22	slow down	review of unit 5-6_1	1	减速	0
+22	opposite	review of unit 5-6_1	1	adj.相反的	1
+22	rush	review of unit 5-6_1	1	vi.冲	1
+23	task	unit 7 Topic 1_1	3	n.任务	1
+23	poster	unit 7 Topic 1_1	3	n.招贴画	0
+23	touch	unit 7 Topic 1_1	3	vt.&n.触	1
+23	get in touch with	unit 7 Topic 1_1	3	与...取得联系	0
+23	try one's best	unit 7 Topic 1_1	3	尽最大的努力	0
+23	success	unit 7 Topic 1_1	3	n.成功	1
+23	imagine	unit 7 Topic 1_1	3	vt.想象	1
+23	soup	unit 7 Topic 1_1	3	n.汤	1
+23	cheese	unit 7 Topic 1_1	3	n.奶酪	0
+23	cookie	unit 7 Topic 1_1	3	n.曲奇饼干	1
+23	pancake	unit 7 Topic 1_1	3	n.薄煎饼	1
+24	set	unit 7 Topic 1_2	3	v.放	1
+24	set the table	unit 7 Topic 1_2	3	摆放餐具	0
+24	blind	unit 7 Topic 1_2	3	adj.瞎的	1
+24	western	unit 7 Topic 1_2	3	adj.西方的	1
+24	Greek	unit 7 Topic 1_2	3	n&adj.希腊的	0
+24	Indian	unit 7 Topic 1_2	3	n&adj.印度人的	1
+24	curry	unit 7 Topic 1_2	3	n.咖喱食品	0
+24	fried	unit 7 Topic 1_2	3	adj.油炸的	0
+24	sushi	unit 7 Topic 1_2	3	n.寿司	0
+24	Italian	unit 7 Topic 1_2	3	n&adj.意大利人的	0
+24	African	unit 7 Topic 1_2	3	n&adj.非洲的	1
+25	Russian	unit 7 Topic 1_3	3	n&adj.俄国的	1
+25	address	unit 7 Topic 1_3	3	n.住址	1
+25	regret	unit 7 Topic 1_3	3	n.&v.感到遗憾	1
+25	gather	unit 7 Topic 1_3	3	vt.召集	0
+25	group	unit 7 Topic 1_3	3	n.组	1
+25	member	unit 7 Topic 1_3	3	n.成员	1
+25	roof	unit 7 Topic 1_3	3	n.屋顶	0
+25	birthplace	unit 7 Topic 1_3	3	n.出生时的住宅	0
+25	former	unit 7 Topic 1_3	3	adj.以前的	0
+25	purpose	unit 7 Topic 1_3	3	n.目的	1
+25	in order to	unit 7 Topic 1_3	3	为了	0
+25	come true	unit 7 Topic 1_3	3	变为现实	0
+26	finely	unit 7 Topic 2_1	5	adv.微小地	0
+26	oil	unit 7 Topic 2_1	5	n.油	1
+26	pan	unit 7 Topic 2_1	5	n.平底锅	0
+26	lightly	unit 7 Topic 2_1	5	adv.轻微地	0
+26	add	unit 7 Topic 2_1	5	vt.增加	1
+26	fry	unit 7 Topic 2_1	5	vt.用油煎	0
+26	ingredient	unit 7 Topic 2_1	5	n.成分	0
+26	pot	unit 7 Topic 2_1	5	n.锅	0
+26	cooker	unit 7 Topic 2_1	5	n.炊具	0
+27	pork	unit 7 Topic 2_2	5	n.猪肉	0
+27	cut up	unit 7 Topic 2_2	5	切碎	0
+27	harm	unit 7 Topic 2_2	5	n.火腿	0
+27	onion	unit 7 Topic 2_2	5	n.洋葱	0
+27	noodle	unit 7 Topic 2_2	5	n.面条	1
+27	bowl	unit 7 Topic 2_2	5	n.碗	1
+27	junk food	unit 7 Topic 2_2	5	垃圾食品	0
+27	quick	unit 7 Topic 2_2	5	adj.快的	1
+27	healthily	unit 7 Topic 2_2	5	adv.健康地	0
+28	snack	unit 7 Topic 2_3	5	n.小吃	0
+28	butter	unit 7 Topic 2_3	5	n.黄油	0
+28	pear	unit 7 Topic 2_3	5	n.梨	1
+28	piece	unit 7 Topic 2_3	5	n.一块	1
+28	slurp	unit 7 Topic 2_3	5	v.发出啧啧的声音	0
+28	impolite	unit 7 Topic 2_3	5	adj.不礼貌的	0
+28	noisily	unit 7 Topic 2_3	5	adv.吵闹地	0
+28	polite	unit 7 Topic 2_3	5	adj.有礼貌的	1
+28	formal	unit 7 Topic 2_3	5	adj.正式的	0
+29	manner	unit 7 Topic 2_4	5	n.方式；举止；态度	0
+29	table manner	unit 7 Topic 2_4	5	餐桌礼节	0
+29	napkin	unit 7 Topic 2_4	5	n.餐巾	0
+29	lap	unit 7 Topic 2_4	5	n.膝部	0
+29	fork	unit 7 Topic 2_4	5	n.叉	1
+29	dish	unit 7 Topic 2_4	5	n.菜肴	1
+29	eat up	unit 7 Topic 2_4	5	吃光	0
+29	quietly	unit 7 Topic 2_4	5	adj.安静地	0
+29	drink to	unit 7 Topic 2_4	5	为...干杯	0
+30	dine	unit 7 Topic 2_5	5	v.进餐	0
+30	elbow	unit 7 Topic 2_5	5	n.肘	0
+30	spoon	unit 7 Topic 2_5	5	n.匙	1
+30	chopstick	unit 7 Topic 2_5	5	n.筷子	1
+30	finger	unit 7 Topic 2_5	5	n.手指	1
+30	southern	unit 7 Topic 2_5	5	adj.南方的	1
+30	seafood	unit 7 Topic 2_5	5	n.海鲜	0
+30	pick	unit 7 Topic 2_5	5	vt.采	1
+30	pick up	unit 7 Topic 2_5	5	捡起	0
+30	sausage	unit 7 Topic 2_5	5	n.香肠	0
+31	lady	unit 7 Topic 3_1	3	n.女士	1
+31	gentleman	unit 7 Topic 3_1	3	n.绅士	1
+31	sale	unit 7 Topic 3_1	3	n.&v.卖	1
+31	for sale	unit 7 Topic 3_1	3	供出售	0
+31	guest	unit 7 Topic 3_1	3	n.客人	1
+31	kind-hearted	unit 7 Topic 3_1	3	adj.好心的	0
+31	menu	unit 7 Topic 3_1	3	n.菜单	1
+31	beer	unit 7 Topic 3_1	3	n.啤酒	0
+31	bill	unit 7 Topic 3_1	3	n.账单	1
+31	corn	unit 7 Topic 3_1	3	n.谷物	1
+32	salad	unit 7 Topic 3_2	3	n.蔬菜沙拉	1
+32	lemon	unit 7 Topic 3_2	3	n.柠檬	1
+32	tofu	unit 7 Topic 3_2	3	n.豆腐	0
+32	main course	unit 7 Topic 3_2	3	主菜	0
+32	bean	unit 7 Topic 3_2	3	n.豆	1
+32	carrot	unit 7 Topic 3_2	3	n.胡萝卜	1
+32	dessert	unit 7 Topic 3_2	3	n.甜食	0
+32	wine	unit 7 Topic 3_2	3	n.酒	0
+32	seat	unit 7 Topic 3_2	3	n.座位	1
+32	have a seat	unit 7 Topic 3_2	3	请坐	0
+33	job	unit 7 Topic 3_3	3	n.工作	1
+33	worth	unit 7 Topic 3_3	3	adj.值得...的	1
+33	effort	unit 7 Topic 3_3	3	n.努力	0
+33	successfully	unit 7 Topic 3_3	3	adv.成功地	0
+33	steak	unit 7 Topic 3_3	3	n.牛排	0
+33	neatly	unit 7 Topic 3_3	3	adv.整洁地	0
+33	regularly	unit 7 Topic 3_3	3	adv.有规律地	0
+33	diet	unit 7 Topic 3_3	3	n.日常饮食	0
+33	in short	unit 7 Topic 3_3	3	总之	0
+33	not only ... but also ...	unit 7 Topic 3_3	3	不仅...而且...	0
+33	conclusion	unit 7 Topic 3_3	3	n.结论	0
+34	education	review of unit 7_1	1	n.教育	1
+34	develop	review of unit 7_1	1	vt.使成长	1
+34	lamb	review of unit 7_1	1	n.羊羔肉	0
+34	dislike	review of unit 7_1	1	v.不喜欢	0
+34	cola	review of unit 7_1	1	n.可乐饮料	0
+35	costume	unit 8 Topic 1_1	5	n.服装	0
+35	smooth	unit 8 Topic 1_1	5	adj.平坦的	1
+35	so ... that ...	unit 8 Topic 1_1	5	如此...以至于...	0
+35	cotton	unit 8 Topic 1_1	5	n.棉布制的	0
+35	silk	unit 8 Topic 1_1	5	n.丝	1
+35	fashion	unit 8 Topic 1_1	5	n.时尚	0
+35	handbag	unit 8 Topic 1_1	5	n.女用皮包	1
+35	afford	unit 8 Topic 1_1	5	vt.买得起	1
+35	tie	unit 8 Topic 1_1	5	vt.领带	1
+36	sweater	unit 8 Topic 1_2	5	n.厚运动衫	1
+36	scarf	unit 8 Topic 1_2	5	n.围巾	1
+36	jeans	unit 8 Topic 1_2	5	n.牛仔裤	0
+36	blouse	unit 8 Topic 1_2	5	n.短上衣	1
+36	section	unit 8 Topic 1_2	5	n.部门	0
+36	sock	unit 8 Topic 1_2	5	n.短袜	1
+36	pocket	unit 8 Topic 1_2	5	n.口袋	1
+36	windbreaker	unit 8 Topic 1_2	5	n.风衣	0
+36	size	unit 8 Topic 1_2	5	n.尺寸	1
+37	leather	unit 8 Topic 1_3	5	adj.皮质的	0
+37	pretty	unit 8 Topic 1_3	5	adj.漂亮的	1
+37	handsome	unit 8 Topic 1_3	5	adj.英俊的	1
+37	congratulation	unit 8 Topic 1_3	5	n.祝贺	0
+37	own	unit 8 Topic 1_3	5	adj.&v.自己的	1
+37	succeed	unit 8 Topic 1_3	5	vt.达到目的	1
+37	suitable	unit 8 Topic 1_3	5	adj.合适的	0
+37	customer	unit 8 Topic 1_3	5	n.顾客	1
+37	simple	unit 8 Topic 1_3	5	adj.简单的	1
+38	style	unit 8 Topic 1_4	5	n.样式	0
+38	contrast	unit 8 Topic 1_4	5	n.&v.对比	0
+38	fancy	unit 8 Topic 1_4	5	n.绚丽的	0
+38	design	unit 8 Topic 1_4	5	vt.&n.设计	0
+38	broad	unit 8 Topic 1_4	5	adj.宽阔的	0
+38	waist	unit 8 Topic 1_4	5	n.腰	0
+38	cold-colored	unit 8 Topic 1_4	5	adj.冷色调的	0
+38	slim	unit 8 Topic 1_4	5	adj.苗条的	0
+38	business	unit 8 Topic 1_4	5	n.生意	1
+39	skin	unit 8 Topic 1_5	5	n.皮	0
+39	material	unit 8 Topic 1_5	5	n.材料	0
+39	uniform	unit 8 Topic 1_5	5	n.制服	0
+39	kimono	unit 8 Topic 1_5	5	n.和服	0
+39	sportswear	unit 8 Topic 1_5	5	n.运动服装	0
+39	easy-going	unit 8 Topic 1_5	5	adj.随和的	0
+39	saying	unit 8 Topic 1_5	5	n.俗话	0
+39	function	unit 8 Topic 1_5	5	n.作用	0
+39	discuss	unit 8 Topic 1_5	5	vt.讨论	1
+39	meaning	unit 8 Topic 1_5	5	n.意思	1
+40	depend	unit 8 Topic 2_1	4	vi.决定于	1
+40	depend on	unit 8 Topic 2_1	4	取决于	0
+40	discipline	unit 8 Topic 2_1	4	n.纪律	0
+40	survey	unit 8 Topic 2_1	4	n.&v.调查	1
+40	interview	unit 8 Topic 2_1	4	vi.&n.采访	1
+40	plain	unit 8 Topic 2_1	4	n.普通的	0
+40	plain clothes	unit 8 Topic 2_1	4	便衣	0
+40	carry out	unit 8 Topic 2_1	4	执行	0
+40	gatekeeper	unit 8 Topic 2_1	4	n.门卫	0
+40	suit	unit 8 Topic 2_1	4	v.&n.套装	0
+41	attendant	unit 8 Topic 2_2	4	n.服务员	0
+41	take off	unit 8 Topic 2_2	4	脱下	0
+41	enter	unit 8 Topic 2_2	4	vi.进去	1
+41	knee	unit 8 Topic 2_2	4	n.膝盖	1
+41	occasion	unit 8 Topic 2_2	4	n.特别的事情	0
+41	correctly	unit 8 Topic 2_2	4	adv.正确地	0
+41	text	unit 8 Topic 2_2	4	n.正文	1
+41	reason	unit 8 Topic 2_2	4	n.原因	1
+41	firefighter	unit 8 Topic 2_2	4	n.消防人员	0
+41	heat	unit 8 Topic 2_2	4	n.&vt.热	1
+42	ceiling	unit 8 Topic 2_3	4	n.天花板	0
+42	soldier	unit 8 Topic 2_3	4	n.士兵	0
+42	official	unit 8 Topic 2_3	4	adj.官员	0
+42	airport	unit 8 Topic 2_3	4	n.航空站	1
+42	officer	unit 8 Topic 2_3	4	n.警官	1
+42	patient	unit 8 Topic 2_3	4	n.&adj.病人	1
+42	spread	unit 8 Topic 2_3	4	v.传播	1
+42	daily	unit 8 Topic 2_3	4	adj.每日的	1
+42	opinion	unit 8 Topic 2_3	4	n.意见	0
+43	in one's opinion	unit 8 Topic 2_4	4	在某人看来	0
+43	greatly	unit 8 Topic 2_4	4	adv.非常	0
+43	northern	unit 8 Topic 2_4	4	adj.北方的	1
+43	casual	unit 8 Topic 2_4	4	adj.随便的	0
+43	beautifully	unit 8 Topic 2_4	4	adv.漂亮地	0
+43	boot	unit 8 Topic 2_4	4	n.靴	0
+43	as well as	unit 8 Topic 2_4	4	除...之外	0
+43	similar	unit 8 Topic 2_4	4	adj.类似的	1
+43	dressing	unit 8 Topic 2_4	4	n.穿戴	0
+44	catwalk	unit 8 Topic 3_1	2	n.T形台	0
+44	cheongsam	unit 8 Topic 3_1	2	n.旗袍	0
+44	traditional	unit 8 Topic 3_1	2	adj.传统的	1
+44	minority	unit 8 Topic 3_1	2	n.少数	0
+44	Tibetan	unit 8 Topic 3_1	2	n&adj.西藏人的	0
+44	Korean	unit 8 Topic 3_1	2	n&adj.韩国人的	0
+44	decoration	unit 8 Topic 3_1	2	n.装饰	0
+44	knot	unit 8 Topic 3_1	2	n.结	0
+44	dynasty	unit 8 Topic 3_1	2	n.王朝	0
+44	from then on	unit 8 Topic 3_1	2	从那时起	0
+44	Asian	unit 8 Topic 3_1	2	n&adj.亚洲的	1
+44	personal	unit 8 Topic 3_1	2	adj.个人的	1
+45	attractive	unit 8 Topic 3_2	2	adj.迷人的	0
+45	western-style	unit 8 Topic 3_2	2	adj.西方款式的	0
+45	express	unit 8 Topic 3_2	2	vt.表达	1
+45	Mongolian	unit 8 Topic 3_2	2	n.蒙古人	0
+45	above	unit 8 Topic 3_2	2	prep.&adv.在...上面	1
+45	list	unit 8 Topic 3_2	2	n.&v.列清单	1
+45	well-known	unit 8 Topic 3_2	2	adj.众所周知的	0
+45	item	unit 8 Topic 3_2	2	n.项目	0
+45	choice	unit 8 Topic 3_2	2	n.选择	1
+45	marriage	unit 8 Topic 3_2	2	n.结婚	0
+45	celebration	unit 8 Topic 3_2	2	n.庆祝	0
+46	saleswoman	review of unit 7-8_1	1	n.女售货员	0
+46	mix	review of unit 7-8_1	1	vt.混合	1
+46	as a result	review of unit 7-8_1	1	作为结果	0

@@ -1,0 +1,206 @@
+1	agent	Unit1_1	3	n.代理人	1
+1	ancient	Unit1_1	3	adj.古老的	1
+1	another	Unit1_1	3	adj.另一	1
+2	at the end of August	Unit1_2	3	在（八月）底	1
+2	brick	Unit1_2	3	n.砖	1
+2	brochure	Unit1_2	3	n.资料手册	1
+2	expensive	Unit1_2	3	adj.昂贵的	0
+2	history	Unit1_2	3	n.历史	1
+2	holiday	Unit1_2	3	n.假期	1
+2	interest	Unit1_2	3	n.兴趣	1
+2	invite	Unit1_2	3	vt.&n.邀请	1
+3	mountain	Unit1_3	3	n.高山	1
+3	national	Unit1_3	3	adj.国家的	1
+3	raise	Unit1_3	3	vt.举起	1
+3	soon	Unit1_3	3	adv.不久	1
+3	stone	Unit1_3	3	n.石头	1
+3	swan	Unit1_3	3	n.天鹅	0
+3	talk	Unit1_3	3	v.与...谈话	1
+3	wonderful	Unit1_3	3	adj.精彩的	1
+4	as	Unit2_1	3	prep.作为	1
+4	basket	Unit2_1	3	n.篮子	1
+4	blanket	Unit2_1	3	n.毯子	0
+4	blind	Unit2_1	3	adj.瞎的	1
+4	booklet	Unit2_1	3	n.小册子	0
+4	care	Unit2_1	3	n.&v.照顾	1
+4	cave	Unit2_1	3	n.山洞	1
+4	chew	Unit2_1	3	vt.咀嚼	0
+4	clinic	Unit2_1	3	n.诊所	0
+5	cruelty	Unit2_2	3	n.残忍	1
+5	guard	Unit2_2	3	vt.&n.保卫	1
+5	hunt	Unit2_2	3	v.猎杀	1
+5	lovely	Unit2_2	3	adj.可爱的	1
+5	missing	Unit2_2	3	adj.失踪的	1
+5	officer	Unit2_2	3	n.官员	1
+5	police	Unit2_2	3	n.警方	1
+5	prefer	Unit2_2	3	vt.更喜欢	1
+5	prevention	Unit2_2	3	n.预防	1
+6	puppy	Unit2_3	3	n.小狗	0
+6	safely	Unit2_3	3	adv.安全地	1
+6	society	Unit2_3	3	n.社会	1
+6	someone	Unit2_3	3	pron.某人	1
+6	special	Unit2_3	3	adj.特别的	1
+6	take care of	Unit2_3	3	照顾	1
+6	thief	Unit2_3	3	n.小偷	0
+6	thirsty	Unit2_3	3	adj.口渴的	0
+6	unkind	Unit2_3	3	adj.不友善的	1
+6	vet	Unit2_3	3	n.兽医	0
+7	Australia	Unit3_1	2	n.澳大利亚	1
+7	Australian	Unit3_1	2	n&adj.澳大利亚（人）的	1
+7	Britain	Unit3_1	2	n.英国	0
+7	British	Unit3_1	2	n&adj.英国（人）的	0
+7	Canada	Unit3_1	2	n.加拿大	1
+7	Canadian	Unit3_1	2	n&adj.加拿大（人）的	1
+7	crowded	Unit3_1	2	adj.拥挤的	1
+7	example	Unit3_1	2	n.例子	1
+7	for example	Unit3_1	2	例如	1
+7	foreigner	Unit3_1	2	n.外国人	1
+7	India	Unit3_1	2	n.印度	0
+8	Indian	Unit3_2	2	n&adj.印度（人）的	1
+8	international	Unit3_2	2	adj.国际的	1
+8	Japanese	Unit3_2	2	n&adj.日本（人）的	0
+8	junior	Unit3_2	2	adj.初级的	1
+8	magazine	Unit3_2	2	n.杂志	1
+8	male	Unit3_2	2	adj.男性	1
+8	nationality	Unit3_2	2	n.国籍	1
+8	penfriend	Unit3_2	2	n.笔友	1
+8	sex	Unit3_2	2	n.性别	1
+8	Toronto	Unit3_2	2	n.多伦多	0
+8	yourself	Unit3_2	2	pron.你自己	1
+9	accident	Unit4_1	3	n.(交通）事故	1
+9	ambulance	Unit4_1	3	n.救护车	0
+9	architect	Unit4_1	3	n.建筑师	1
+9	arm	Unit4_1	3	n.手臂	1
+9	block	Unit4_1	3	n.一栋楼房	1
+9	both ... and ...	Unit4_1	3	两个都	1
+9	broken	Unit4_1	3	adj.破损的	1
+9	carry	Unit4_1	3	v.搬	1
+9	catch	Unit4_1	3	vt.着火	1
+10	company	Unit4_2	3	n.公司	1
+10	construction	Unit4_2	3	n.建筑	1
+10	deliver	Unit4_2	3	vt.递送	1
+10	engine	Unit4_2	3	n.发动机	1
+10	fire	Unit4_2	3	n.消防车	1
+10	hurt	Unit4_2	3	adj.受伤的	1
+10	knock down	Unit4_2	3	撞倒	1
+10	manager	Unit4_2	3	n.经理	1
+10	meeting	Unit4_2	3	n.会议	1
+11	motorcyclist	Unit4_3	3	n.骑摩托车的人	1
+11	neighbour	Unit4_3	3	n.邻居	1
+11	parcel	Unit4_3	3	n.包裹	0
+11	removal	Unit4_3	3	n.搬迁	1
+11	rescue	Unit4_3	3	n.&v. 营救	1
+11	run	Unit4_3	3	vi.逃跑	1
+11	scene	Unit4_3	3	n.现场	0
+11	take	Unit4_3	3	vt.记笔记	1
+11	towards	Unit4_3	3	prep.朝着	1
+11	type	Unit4_3	3	n.打字	1
+12	agency	Unit5_1	2	n.代理机构	1
+12	armchair	Unit5_1	2	n.扶手椅	1
+12	balcony	Unit5_1	2	n.阳台	0
+12	bathroom	Unit5_1	2	n.浴室	1
+12	bedroom	Unit5_1	2	n.卧室	1
+12	choose	Unit5_1	2	vt.选择	1
+12	cupboard	Unit5_1	2	n.橱柜	1
+12	estate	Unit5_1	2	n.地产	1
+12	helper	Unit5_1	2	n.帮手	1
+12	living room	Unit5_1	2	客厅	1
+12	matter	Unit5_1	2	n.事情	1
+13	next	Unit5_2	2	adj.在...近旁	1
+13	opposite	Unit5_2	2	prep.与...相对	1
+13	rug	Unit5_2	2	n.小地毯	0
+13	set	Unit5_2	2	n.电视机	1
+13	sofa	Unit5_2	2	n.长沙发	0
+13	suburb	Unit5_2	2	n.郊区	0
+13	sunshine	Unit5_2	2	n.阳光	1
+13	tidy	Unit5_2	2	adj.整洁的	0
+13	tidy up	Unit5_2	2	使...整洁	0
+13	untidy	Unit5_2	2	adj.不整洁的	0
+13	wardrobe	Unit5_2	2	n.衣柜	0
+14	bottom	Unit6_1	2	n.底部	1
+14	church	Unit6_1	2	n.教堂	1
+14	convenient	Unit6_1	2	adj.方便的	1
+14	exciting	Unit6_1	2	adj.令人激动的	1
+14	financial	Unit6_1	2	adj.金融的	1
+14	fountain	Unit6_1	2	n.喷泉	0
+14	glove	Unit6_1	2	n.手套	0
+14	neighbourhood	Unit6_1	2	n.街区	1
+15	noisy	Unit6_2	2	adj.喧闹的	1
+15	peaceful	Unit6_2	2	adj.和平的	1
+15	pleasant	Unit6_2	2	adj.令人愉快的	1
+15	relaxing	Unit6_2	2	adj.轻松的	1
+15	statue	Unit6_2	2	n.雕塑	0
+15	steep	Unit6_2	2	adj.陡的	0
+15	step	Unit6_2	2	n.台阶	1
+15	storybook	Unit6_2	2	n.儿童故事书	1
+16	camp	Unit7_1	2	n.宿营	1
+16	dice	Unit7_1	2	n.骰子	0
+16	direction	Unit7_1	2	n.方向	1
+16	go camping	Unit7_1	2	去野营	1
+16	hike	Unit7_1	2	n.远足	0
+16	instruction	Unit7_1	2	n.说明用法	1
+16	land	Unit7_1	2	v.降落	1
+16	luck	Unit7_1	2	n.运气	1
+17	miss	Unit7_2	2	v.错过	1
+17	player	Unit7_2	2	n.游戏者	1
+17	roll	Unit7_2	2	vi.滚动	0
+17	silence	Unit7_2	2	n.沉默	1
+17	take turns	Unit7_2	2	轮流	1
+17	useful	Unit7_2	2	adj.有用的	1
+17	warning	Unit7_2	2	n.警告	1
+18	at least	Unit8_1	1	至少	1
+18	bar	Unit8_1	1	n.条	1
+18	cartoon	Unit8_1	1	n.动画片	1
+18	crisp	Unit8_1	1	n.炸薯片	0
+18	DVD	Unit8_1	1	n.数码影碟	0
+18	last	Unit8_1	1	adj.上一个的	1
+18	lemonade	Unit8_1	1	n.柠檬水	0
+18	neither	Unit8_1	1	conj.也不	1
+18	not ... any longer	Unit8_1	1	不再	1
+18	outing	Unit8_1	1	n.郊游	0
+18	regularly	Unit8_1	1	adv.有规律地	1
+18	sheet	Unit8_1	1	n.一张纸	1
+18	used to	Unit8_1	1	过去经常	1
+18	war	Unit8_1	1	n.战争	1
+19	add	Unit9_1	2	vt.添加	1
+19	baking tray	Unit9_1	2	烤盘	0
+19	dough	Unit9_1	2	n.生面团	0
+19	firstly	Unit9_1	2	adv.首先	1
+19	flour	Unit9_1	2	n.面粉	1
+19	hear from	Unit9_1	2	接到...的信、电话等	1
+19	homeless	Unit9_1	2	adj.无家可归的	1
+19	millilitre	Unit9_1	2	n.毫升	0
+19	mixture	Unit9_1	2	n.混合物	1
+19	Of course	Unit9_1	2	当然	1
+19	oven	Unit9_1	2	n.烤箱	1
+20	pie	Unit9_2	2	n.果馅饼	1
+20	pour	Unit9_2	2	vt.倒出	1
+20	raisin	Unit9_2	2	n.葡萄干	0
+20	scone	Unit9_2	2	n.（英）烤饼	0
+20	secondly	Unit9_2	2	adv.第二	1
+20	self-raising flour	Unit9_2	2	自发面粉	0
+20	sincerely	Unit9_2	2	adv.真诚地	1
+20	sprinkle	Unit9_2	2	v.撒	1
+20	Thai	Unit9_2	2	n.泰国人	0
+20	wide	Unit9_2	2	adj.宽阔的；广泛的	1
+21	add to ...	Unit10_1	2	加上	1
+21	balloon	Unit10_1	2	n.气球	1
+21	battery	Unit10_1	2	n.电池	1
+21	beat	Unit10_1	2	vt.打	1
+21	charcoal	Unit10_1	2	n.木炭	0
+21	chess	Unit10_1	2	n.象棋	0
+21	decorate	Unit10_1	2	vt.装饰	1
+21	everybody	Unit10_1	2	pron.每人	1
+21	fork	Unit10_1	2	n.叉子	0
+21	forward	Unit10_1	2	adv.向前	1
+21	icing	Unit10_1	2	n.糖霜	0
+22	ingredient	Unit10_2	2	n.原料	1
+22	karaoke	Unit10_2	2	n.卡拉OK	0
+22	look forward to	Unit10_2	2	盼望	1
+22	pity	Unit10_2	2	n.怜悯	0
+22	powder	Unit10_2	2	n.细面	0
+22	sound	Unit10_2	2	vi.听起来	1
+22	soya milk	Unit10_2	2	豆奶	0
+22	spring roll	Unit10_2	2	春卷	1
+22	stir	Unit10_2	2	n.搅动	1
+22	thirdly	Unit10_2	2	adv.第三	1

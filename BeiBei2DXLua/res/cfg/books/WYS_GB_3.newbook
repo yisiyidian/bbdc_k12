@@ -1,0 +1,237 @@
+1	across	Module 1_1	4	prep.横过	1
+1	boot	Module 1_1	4	n.长统靴	1
+1	continental	Module 1_1	4	adj.大陆的	1
+2	face	Module 1_2	4	n.面向	1
+2	range	Module 1_2	4	n.山脉	1
+2	landmark	Module 1_2	4	n.标志性建筑	1
+2	gallery	Module 1_2	4	n.美术馆	1
+2	situated	Module 1_2	4	adj.坐落于...的	1
+2	symbol	Module 1_2	4	n.象征	1
+2	located	Module 1_2	4	adj.位于	1
+2	architect	Module 1_2	4	n.建筑师	1
+2	project	Module 1_2	4	n.项目	1
+2	sculpture	Module 1_2	4	n.雕刻	1
+3	birthplace	Module 1_3	4	n.发源地	1
+3	civilisation	Module 1_3	4	n.文明	1
+3	ancient	Module 1_3	4	adj.古代的	1
+3	opposite	Module 1_3	4	adj.在...对面	1
+3	sign	Module 1_3	4	n.签署	1
+3	agreement	Module 1_3	4	n.协议	1
+3	whereabouts	Module 1_3	4	adv.在哪里	1
+3	govern	Module 1_3	4	vt.统治	1
+3	head	Module 1_3	4	n.领袖	1
+3	representative	Module 1_3	4	adj.代表	1
+4	parliament	Module 1_4	4	n.国会	1
+4	region	Module 1_4	4	n.地区	1
+4	geographical	Module 1_4	4	adj.地理的	1
+4	feature	Module 1_4	4	n.特点	1
+4	product	Module 1_4	4	n.产品	1
+4	because of	Module 1_4	4	因为；由于	1
+4	be known as	Module 1_4	4	作为...而出名	1
+4	ever since	Module 1_4	4	自从...一直	1
+4	in terms of	Module 1_4	4	据...	1
+4	on the other hand	Module 1_4	4	另一方面	1
+4	little by little	Module 1_4	4	一点点地	1
+5	hunger	Module 2_1	3	n.饥饿	1
+5	income	Module 2_1	3	n.收入	1
+5	poverty	Module 2_1	3	n.贫穷	1
+5	human	Module 2_1	3	n.人	1
+5	development	Module 2_1	3	n.发展	1
+5	index	Module 2_1	3	n.指数	1
+5	measure	Module 2_1	3	n.测定	1
+5	goal	Module 2_1	3	n.目标	1
+5	expectancy	Module 2_1	3	n.预期数额	1
+5	position	Module 2_1	3	n.位置	1
+5	educate	Module 2_1	3	v.教育	1
+6	figure	Module 2_2	3	n.数字	1
+6	household	Module 2_2	3	adj.一家人	1
+6	homeless	Module 2_2	3	adj.无家可归的	1
+6	charity	Module 2_2	3	n.慈善团体	1
+6	crowded	Module 2_2	3	adj.拥挤的	1
+6	freeway	Module 2_2	3	n.高速公路	1
+6	inhabitant	Module 2_2	3	n.居民	1
+6	similarity	Module 2_2	3	n.类似	1
+6	unfortunate	Module 2_2	3	adj.不幸的	1
+6	location	Module 2_2	3	n.位置	1
+6	tourism	Module 2_2	3	n.旅游业	1
+7	transport	Module 2_3	3	n.交通工具	1
+7	industrial	Module 2_3	3	adj.工业的	1
+7	polluted	Module 2_3	3	adj.受到污染的	1
+7	smart	Module 2_3	3	adj.时髦的	1
+7	vast	Module 2_3	3	adj.巨大的	1
+7	entertainment	Module 2_3	3	n.娱乐	1
+7	exchange	Module 2_3	3	vt.交换	1
+7	at the top of	Module 2_3	3	在...顶端	1
+7	at the bottom of	Module 2_3	3	在...底部	1
+7	make efforts	Module 2_3	3	努力	1
+7	be connected with	Module 2_3	3	与...有联系	1
+7	be closed to	Module 2_3	3	接近	1
+8	disaster	Module 3_1	5	n.灾难	1
+8	flood	Module 3_1	5	n.洪水	1
+8	hurricane	Module 3_1	5	n.飓风	1
+8	lightning	Module 3_1	5	n.闪电	1
+8	thunderstorm	Module 3_1	5	n.雷暴	1
+8	tornado	Module 3_1	5	n.龙卷风	1
+8	column	Module 3_1	5	n.柱状物	1
+8	experience	Module 3_1	5	n.经历	1
+8	cause	Module 3_1	5	vt.引起	1
+8	current	Module 3_1	5	adj.海流	1
+8	latitude	Module 3_1	5	n.纬度	1
+9	furniture	Module 3_2	5	n.家具	1
+9	bury	Module 3_2	5	vt.埋葬	1
+9	feather	Module 3_2	5	n.羽毛	1
+9	fur	Module 3_2	5	n.毛皮	1
+9	occur	Module 3_2	5	vi.发生	1
+9	tropical	Module 3_2	5	adj.热带的	1
+9	equator	Module 3_2	5	n.赤道	1
+9	rotating	Module 3_2	5	adj.旋转的	1
+9	violent	Module 3_2	5	adj.猛烈的	1
+9	wave	Module 3_2	5	n.波浪	1
+9	strike	Module 3_2	5	v.袭击	1
+10	cemetery	Module 3_3	5	n.墓地	1
+10	coffin	Module 3_3	5	n.棺材	1
+10	ruin	Module 3_3	5	n.毁坏	1
+10	ash	Module 3_3	5	n.灰	1
+10	erupt	Module 3_3	5	v.爆发	1
+10	lava	Module 3_3	5	n.熔岩	1
+10	tidal	Module 3_3	5	adj.受潮水影响的	1
+10	volcano	Module 3_3	5	n.火山	1
+10	previous	Module 3_3	5	adj.以前的	1
+10	eruption	Module 3_3	5	n.爆发	1
+10	possibility	Module 3_3	5	n.可能性	1
+11	earthquake	Module 3_4	5	n.地震	1
+11	terrifying	Module 3_4	5	adj.吓人的	1
+11	luckily	Module 3_4	5	adv.幸运地	1
+11	thankfully	Module 3_4	5	adv.感激地	1
+11	hopefully	Module 3_4	5	adv.满怀希望地	1
+11	sadly	Module 3_4	5	adv.伤心地	1
+11	fortunately	Module 3_4	5	adv.幸运地	1
+11	warning	Module 3_4	5	n.警告	1
+11	worldwide	Module 3_4	5	adj.全世界的	1
+11	active	Module 3_4	5	adj.积极的	1
+12	damage	Module 3_5	5	n.损失	1
+12	pick up	Module 3_5	5	卷起	1
+12	take off	Module 3_5	5	去掉	1
+12	on average	Module 3_5	5	平均起来	1
+12	end up	Module 3_5	5	结果为...	1
+12	set fire to	Module 3_5	5	放火（焚烧）...	1
+12	catch fire	Module 3_5	5	着火	1
+12	put out	Module 3_5	5	扑灭（火）	1
+12	take place	Module 3_5	5	发生	1
+12	in all	Module 3_5	5	总共；总计	1
+13	sandstorm	Module 4_1	4	n.沙尘暴	1
+13	frightening	Module 4_1	4	adj.吓人的	1
+13	inland	Module 4_1	4	adj.内陆的	1
+13	mass	Module 4_1	4	n.大量的	1
+13	campaign	Module 4_1	4	n.战役	1
+13	dune	Module 4_1	4	n.沙丘	1
+13	desertification	Module 4_1	4	n.沙漠化	1
+13	process	Module 4_1	4	n.进程	1
+13	citizen	Module 4_1	4	n.公民	1
+13	dust	Module 4_1	4	n.沙尘	1
+13	forecast	Module 4_1	4	vt.预报	1
+14	strength	Module 4_2	4	n.力量	1
+14	cycle	Module 4_2	4	n.骑自行车	1
+14	mask	Module 4_2	4	n.面罩	1
+14	atmosphere	Module 4_2	4	n.大气	1
+14	carbon	Module 4_2	4	n.碳	1
+14	dioxide	Module 4_2	4	n.二氧化物	1
+14	chemical	Module 4_2	4	adj.化学药品	1
+14	environment	Module 4_2	4	n.环境	1
+14	garbage	Module 4_2	4	n.废料	1
+14	melt	Module 4_2	4	vt.融化	1
+14	pollution	Module 4_2	4	n.污染	1
+15	recycle	Module 4_3	4	vt.重新利用	1
+15	coastal	Module 4_3	4	adj.沿海的	1
+15	concerned	Module 4_3	4	adj.关心的	1
+15	evidence	Module 4_3	4	n.根据	1
+15	major	Module 4_3	4	adj.主要的	1
+15	urgent	Module 4_3	4	adj.紧急的	1
+15	pollute	Module 4_3	4	v.污染	1
+15	complain	Module 4_3	4	vi.抱怨	1
+15	nutshell	Module 4_3	4	n.坚果壳	1
+15	scary	Module 4_3	4	adj.恐怖的	1
+16	absolutely	Module 4_4	4	adv.绝对地	1
+16	protection	Module 4_4	4	n.保护	1
+16	cut down	Module 4_4	4	砍倒	1
+16	be caught in	Module 4_4	4	突然遭遇（风暴等）	1
+16	one after another	Module 4_4	4	一个接一个地	1
+16	have a bad effect on	Module 4_4	4	对...有坏影响	1
+16	take in	Module 4_4	4	吸收	1
+16	give out	Module 4_4	4	放出；发出	1
+16	in a nutshell	Module 4_4	4	简言之；概括地讲	1
+16	look through	Module 4_4	4	浏览	1
+17	equal	Module 5_1	4	adj.平等的	1
+17	importance	Module 5_1	4	n.重要	1
+17	philosopher	Module 5_1	4	n.哲学家	1
+17	philosophy	Module 5_1	4	n.哲学	1
+17	teaching	Module 5_1	4	n.教导	1
+17	thinker	Module 5_1	4	n.思想家	1
+17	kindness	Module 5_1	4	n.善良	1
+17	order	Module 5_1	4	n.秩序	1
+17	principle	Module 5_1	4	n.原则	1
+18	position	Module 5_2	4	n.职位	1
+18	stress	Module 5_2	4	n.强调	1
+18	resign	Module 5_2	4	vi.辞职	1
+18	adviser	Module 5_2	4	n.顾问	1
+18	influential	Module 5_2	4	adj.有影响的	1
+18	love	Module 5_2	4	vt.仁爱	1
+18	honesty	Module 5_2	4	n.诚实	1
+18	justice	Module 5_2	4	n.公正	1
+18	bark	Module 5_2	4	n.树皮	1
+19	contribution	Module 5_3	4	n.贡献	1
+19	invent	Module 5_3	4	v.发明	1
+19	leather	Module 5_3	4	adj.皮革	1
+19	monk	Module 5_3	4	n.和尚	1
+19	soft	Module 5_3	4	adj.柔软的	1
+19	category	Module 5_3	4	n.范畴	1
+19	sutra	Module 5_3	4	n.佛经	1
+19	inventor	Module 5_3	4	n.发明家	1
+19	argument	Module 5_3	4	n.争论	1
+20	freedom	Module 5_4	4	n.自由	1
+20	fuel	Module 5_4	4	n.燃料	1
+20	condition	Module 5_4	4	n.状况	1
+20	be at war with	Module 5_4	4	与...交战	1
+20	bring up	Module 5_4	4	养育	1
+20	become interested in	Module 5_4	4	对...感兴趣	1
+20	be proud of	Module 5_4	4	为...自豪	1
+20	in conclusion	Module 5_4	4	总之	1
+20	for the first time	Module 5_4	4	第一次	1
+21	bulletin	Module 6_1	4	n.小型报刊	1
+21	canal	Module 6_1	4	n.运河	1
+21	civil	Module 6_1	4	adj.民用的	1
+21	cliff	Module 6_1	4	n.悬崖	1
+21	dam	Module 6_1	4	n.坝	1
+21	engineering	Module 6_1	4	n.工程	1
+21	gorge	Module 6_1	4	n.峡谷	1
+21	hydro-electric	Module 6_1	4	adj.水力发电的	1
+21	reservoir	Module 6_1	4	n.水库	1
+21	structure	Module 6_1	4	n.结构	1
+22	terminal	Module 6_2	4	n.终点站	1
+22	date	Module 6_2	4	n.始于(某时期）	1
+22	accommodate	Module 6_2	4	vi.容纳（乘客等）	1
+22	carving	Module 6_2	4	n.雕刻	1
+22	construction	Module 6_2	4	n.建造	1
+22	relic	Module 6_2	4	n.遗迹	1
+22	site	Module 6_2	4	n.场所	1
+22	Buddhist	Module 6_2	4	n.佛教徒	1
+22	generate	Module 6_2	4	vt.发（电）	1
+22	harness	Module 6_2	4	n.利用	1
+23	historical	Module 6_3	4	adj.历史的	1
+23	narrow	Module 6_3	4	adj.狭窄的	1
+23	poem	Module 6_3	4	n.诗	1
+23	submerge	Module 6_3	4	vt.淹没	1
+23	global	Module 6_3	4	adj.全球的	1
+23	watchtower	Module 6_3	4	n.望台	1
+23	remove	Module 6_3	4	vt.迁移	1
+23	freezing	Module 6_3	4	adj.冰冷的	1
+23	ridiculous	Module 6_3	4	adj.荒唐的	1
+24	enormous	Module 6_4	4	adj.巨大的	1
+24	observatory	Module 6_4	4	n.观察台	1
+24	foggy	Module 6_4	4	adj.有浓雾的	1
+24	crash	Module 6_4	4	v.（飞机）失事	1
+24	date from	Module 6_4	4	起源于	1
+24	hold back	Module 6_4	4	阻止	1
+24	come true	Module 6_4	4	（梦想等）变成现实	1
+24	make sense	Module 6_4	4	有意义	1
+24	bring an end to	Module 6_4	4	结束；终止	1

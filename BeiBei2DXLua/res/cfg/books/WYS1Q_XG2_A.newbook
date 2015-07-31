@@ -1,0 +1,116 @@
+1	song	Module 1_1	2	n.歌曲	1
+1	come on	Module 1_1	2	加油	0
+1	team	Module 1_1	2	n.球队	0
+3	meat	Module 2_1	1	n.肉	0
+3	noodles	Module 2_1	1	n.面条	1
+3	rice	Module 2_1	1	n.米饭	1
+3	sweets	Module 2_1	1	n.糖果	0
+3	children	Module 2_1	1	n.孩子们	1
+3	ginger	Module 2_1	1	n.姜	0
+3	nice	Module 2_1	1	adj.好的	1
+3	mm	Module 2_1	1	abbr.呣	0
+3	onion	Module 2_1	1	n.洋葱	0
+3	ice cream	Module 2_1	1	冰淇淋	1
+4	banana	Module 3_1	1	n.香蕉	1
+4	apple	Module 3_1	1	n.苹果	1
+4	milk	Module 3_1	1	n.奶	1
+4	orange	Module 3_1	1	n.柑橘	1
+4	fruit	Module 3_1	1	n.水果	1
+4	milkshake	Module 3_1	1	n.奶昔	0
+4	Here you are	Module 3_1	1	给你	0
+4	everything	Module 3_1	1	pron.每件事	0
+4	tomato	Module 3_1	1	n.番茄	1
+4	really	Module 3_1	1	adv.很	0
+4	their	Module 3_1	1	pron.他们的	1
+4	favourite	Module 3_1	1	n.最喜欢的事物	1
+5	T-shirt	Module 4_1	1	n.T恤衫	0
+5	here's	Module 4_1	1	这是	0
+5	hm	Module 4_1	1	int.嗯	0
+5	dress	Module 4_1	1	n.连衣裙	1
+5	too	Module 4_1	1	adv.太...	1
+5	one	Module 4_1	1	num.一个	0
+5	doesn't	Module 4_1	1	不（做）	0
+5	trousers	Module 4_1	1	n.裤子	1
+5	party	Module 4_1	1	n.聚会	1
+6	get up	Module 5_1	1	起床	0
+6	poster	Module 5_1	1	n.海报	0
+6	go to school	Module 5_1	1	去上学	0
+6	have	Module 5_1	1	v.吃	1
+6	lunch	Module 5_1	1	n.午餐	1
+6	have lunch	Module 5_1	1	吃午餐	0
+6	home	Module 5_1	1	n.家	1
+6	go home	Module 5_1	1	回家	0
+6	watch	Module 5_1	1	v.观看	1
+6	TV	Module 5_1	1	n.电视	1
+6	watch TV	Module 5_1	1	看电视	0
+7	on	Module 6_1	1	prep.在...的时候（某天）	1
+7	Sunday	Module 6_1	1	n.星期日	0
+7	park	Module 6_1	1	n.公园	1
+7	great	Module 6_1	1	adj.太好了	1
+7	goal	Module 6_1	1	n.&v.进球	0
+7	hooray	Module 6_1	1	int.好哇	0
+7	live	Module 6_1	1	v.居住	1
+7	moon	Module 6_1	1	n.月亮	1
+7	sky	Module 6_1	1	n.天	0
+7	city	Module 6_1	1	n.城市	1
+8	how	Moulde 7_1	2	adv.怎样	1
+8	train	Moulde 7_1	2	n.火车	1
+8	chug	Moulde 7_1	2	vi.发出咔嚓声	0
+8	bus	Moulde 7_1	2	n.公共汽车	1
+8	beep	Moulde 7_1	2	n.嘟嘟声	0
+8	by	Moulde 7_1	2	prep.乘	1
+8	walk	Moulde 7_1	2	vi.步行	1
+8	How about ...	Moulde 7_1	2	...怎么样？	0
+8	goes	Moulde 7_1	2	vi.去	1
+8	work	Moulde 7_1	2	n.工作地点	1
+9	go to work	Moulde 7_2	2	去上班	1
+9	bike	Moulde 7_2	2	n.自行车	1
+9	with	Moulde 7_2	2	prep.与...在一起	1
+9	run	Moulde 7_2	2	vi.跑	1
+9	holiday	Moulde 7_2	2	n.假期	1
+9	on holiday	Moulde 7_2	2	度假	0
+9	then	Moulde 7_2	2	adv.然后	1
+9	ship	Moulde 7_2	2	n.轮船	1
+9	plane	Moulde 7_2	2	n.飞机	1
+9	love	Moulde 7_2	2	vt.喜爱	1
+10	watch	Module 8_1	1	vt.观看（第三人称单数）	1
+10	weekend	Module 8_1	1	n.周末	0
+10	read	Module 8_1	1	vt.阅读	1
+10	come	Module 8_1	1	vi.来	1
+10	play	Module 8_1	1	v.演奏	1
+10	piano	Module 8_1	1	n.钢琴	0
+10	music	Module 8_1	1	n.音乐	1
+10	listen	Module 8_1	1	v.听	1
+10	listen to	Module 8_1	1	听...	0
+10	CD	Module 8_1	1	n.激光唱片	0
+10	drum	Module 8_1	1	n.鼓	0
+11	winter	Module 9_1	2	n.冬天	1
+11	fly	Module 9_1	2	vt.放飞	1
+11	in	Module 9_1	2	prep.在...期间	1
+11	spring	Module 9_1	2	n.春天	1
+11	summer	Module 9_1	2	n.夏天	1
+11	autumn	Module 9_1	2	n.秋天	1
+11	skating	Module 9_1	2	n.滑冰	0
+11	go skating	Module 9_1	2	去滑冰	0
+11	warm	Module 9_1	2	adj.温暖的	1
+12	wear	Module 9_2	2	vt.穿	1
+12	jacket	Module 9_2	2	n.夹克	0
+12	sunglasses	Module 9_2	2	太阳镜	0
+12	cool	Module 9_2	2	adj.凉爽的	1
+12	sweater	Module 9_2	2	n.毛线衫	1
+12	glove	Module 9_2	2	n.手套	0
+12	cold	Module 9_2	2	adj.寒冷的	1
+12	coat	Module 9_2	2	n.外套	1
+13	year	Module 10_1	1	n.年	1
+13	Happy New Year	Module 10_1	1	新年快乐！	0
+13	come in	Module 10_1	1	进来	0
+13	present	Module 10_1	1	n.礼物	0
+13	dumpling	Module 10_1	1	n.水饺	0
+13	eat	Module 10_1	1	vt.吃	1
+13	Chinese	Module 10_1	1	adj.中国的	1
+13	hair	Module 10_1	1	n.头发	1
+13	firecracker	Module 10_1	1	n.鞭炮	0
+13	have	Module 10_1	1	v.有	1
+13	Christmas	Module 10_1	1	n.圣诞节	0
+13	wish	Module 10_1	1	n.&v.祝	0
+13	dinner	Module 10_1	1	n.正餐	1

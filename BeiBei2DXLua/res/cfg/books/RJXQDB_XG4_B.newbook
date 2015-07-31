@@ -1,0 +1,87 @@
+1	across from	Unit 1_1	3	对面	1
+1	next to	Unit 1_1	3	紧邻	1
+1	between	Unit 1_1	3	adv.在...之间	1
+2	restaurant	Unit 1_2	3	n.餐馆	1
+2	post office	Unit 1_2	3	邮局	1
+2	bank	Unit 1_2	3	n.银行	1
+2	grocery	Unit 1_2	3	n.食品杂货店	1
+2	turn left	Unit 1_2	3	向左转	1
+2	turn right	Unit 1_2	3	向右转	0
+2	go straight	Unit 1_2	3	直行	1
+2	crossroads	Unit 1_2	3	n.十字路口	1
+2	neighbourhood	Unit 1_2	3	n.街坊	1
+2	send	Unit 1_2	3	vt.发送	0
+2	get	Unit 1_2	3	vt.得到	0
+3	money	Unit 1_3	3	n.钱	0
+3	get to	Unit 1_3	3	到达	0
+3	before	Unit 1_3	3	prep.在...之前	0
+3	leave	Unit 1_3	3	v.离开	0
+3	toy	Unit 1_3	3	n.玩具	0
+3	hospital	Unit 1_3	3	n.医院	0
+3	bookshop	Unit 1_3	3	n.书店	0
+3	school	Unit 1_3	3	n.学校	0
+3	supermarket	Unit 1_3	3	n.超市	0
+3	ball	Unit 1_3	3	n.球	0
+4	city	Unit 2_1	2	n.城市	1
+4	street	Unit 2_1	2	n.街道	1
+4	sports center	Unit 2_1	2	体育中心	1
+4	hotel	Unit 2_1	2	n.宾馆	1
+4	square	Unit 2_1	2	n.广场	1
+4	buy toys	Unit 2_1	2	买玩具	1
+4	see a film	Unit 2_1	2	看电影	1
+4	go boating	Unit 2_1	2	去划船	1
+4	busy	Unit 2_1	2	adj.忙碌的	0
+4	station	Unit 2_1	2	n.站	0
+5	place	Unit 2_2	2	n.地方	0
+5	thing	Unit 2_2	2	n.事物	0
+5	stay	Unit 2_2	2	n.停留	0
+5	star	Unit 2_2	2	n.星	0
+5	king	Unit 2_2	2	n.国王	0
+5	central	Unit 2_2	2	adj.中心的	0
+5	take photos	Unit 2_2	2	照相	0
+5	museum	Unit 2_2	2	n.博物馆	0
+5	dream	Unit 2_2	2	n.梦	0
+6	sea	Unit 3_1	1	n.大海	1
+6	ski	Unit 3_1	1	vt.滑雪	1
+6	eat seafood	Unit 3_1	1	吃海鲜	1
+6	visit the Mogao Caves	Unit 3_1	1	参观莫高窟	1
+6	West Lake	Unit 3_1	1	西湖	1
+6	row a boat	Unit 3_1	1	划船	1
+6	the Great Wall	Unit 3_1	1	长城	1
+6	take photos	Unit 3_1	1	照相	1
+6	summer vacations	Unit 3_1	1	暑假	0
+6	travel	Unit 3_1	1	n.旅游	0
+7	reading	Unit 4_1	1	n.读书	1
+7	skateboarding	Unit 4_1	1	n.玩滑板	1
+7	singing	Unit 4_1	1	n.唱歌	1
+7	dancing	Unit 4_1	1	n.跳舞	1
+7	doing jigsaw puzzles	Unit 4_1	1	拼拼图	1
+7	making models	Unit 4_1	1	制作模型	1
+7	collecting erasers	Unit 4_1	1	收集橡皮	1
+7	different	Unit 4_1	1	adj.不同的	1
+7	hobby	Unit 4_1	1	n.爱好	1
+7	stamp	Unit 4_1	1	n.邮票	0
+7	catch	Unit 4_1	1	vt.抓住	0
+8	go for a picnic	Unit 5_1	1	去野餐	1
+8	play the violin	Unit 5_1	1	拉小提琴	1
+8	go skating	Unit 5_1	1	去滑冰	1
+8	go camping	Unit 5_1	1	去野营	1
+8	do the housework	Unit 5_1	1	做家务	1
+8	free	Unit 5_1	1	adj.空闲的	1
+8	never	Unit 5_1	1	adv.从不	1
+8	once a week	Unit 5_1	1	一周一次	1
+8	twice a week	Unit 5_1	1	一周两次	1
+8	three times a week	Unit 5_1	1	一周三次	1
+9	Canada	Unit 6_1	1	n.加拿大	1
+9	Australia	Unit 6_1	1	n.澳大利亚	1
+9	the UK	Unit 6_1	1	英国	1
+9	thr USA	Unit 6_1	1	美国	1
+9	China	Unit 6_1	1	n.中国	1
+9	koala	Unit 6_1	1	n.考拉	1
+9	maple leaves	Unit 6_1	1	枫叶	1
+9	Big Ben	Unit 6_1	1	大本钟	1
+9	Disneyland	Unit 6_1	1	n.迪斯尼乐园	1
+9	campfire	Unit 6_1	1	n.篝火	0
+9	cute	Unit 6_1	1	adj.可爱的	0
+9	country	Unit 6_1	1	n.国家	0
+9	pretty	Unit 6_1	1	adj.漂亮的	0

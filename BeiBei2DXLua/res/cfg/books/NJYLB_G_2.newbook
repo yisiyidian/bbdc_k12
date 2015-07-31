@@ -1,0 +1,207 @@
+1	tale	Unit 1_1	8	n.故事	1
+1	unexplained	Unit 1_1	8	adj.无法解释的	1
+1	puzzled	Unit 1_1	8	adj.困惑的	1
+2	step up	Unit 1_2	8	加紧	1
+2	incident	Unit 1_2	8	n.发生的事情	1
+2	due to	Unit 1_2	8	由于	1
+2	alien	Unit 1_2	8	n.&adj.外星人的	0
+2	disappear	Unit 1_2	8	vi.消失	1
+2	witness	Unit 1_2	8	n.目击者	1
+2	spaceship	Unit 1_2	8	n.宇宙飞船	1
+2	creature	Unit 1_2	8	n.动物	1
+2	flash	Unit 1_2	8	n.闪光	1
+2	UFO	Unit 1_2	8	不明飞行物	0
+3	assume	Unit 1_3	8	vt.假定	1
+3	construction	Unit 1_3	8	n.施工	1
+3	occur	Unit 1_3	8	vi.发生	1
+3	show up	Unit 1_3	8	出现	1
+3	aboard	Unit 1_3	8	adv.在(轮船、飞机、火车)上	1
+3	possibility	Unit 1_3	8	n.可能性	1
+3	detective	Unit 1_3	8	n.侦探	1
+3	take charge of	Unit 1_3	8	负责	1
+3	case	Unit 1_3	8	n.案子	1
+3	journalist	Unit 1_3	8	n.记者	1
+4	make up	Unit 1_4	8	编造	1
+4	amazing	Unit 1_4	8	adj.令人惊奇的	1
+4	evidence	Unit 1_4	8	n.证据	1
+4	injury	Unit 1_4	8	n.伤害	1
+4	dismiss	Unit 1_4	8	vt.不予考虑	1
+4	look into	Unit 1_4	8	调查	1
+4	laughter	Unit 1_4	8	n.笑声	1
+4	schoolboy	Unit 1_4	8	n.男生	1
+4	astronomer	Unit 1_4	8	n.天文学家	1
+4	enthusiastic	Unit 1_4	8	adj.热情的	1
+5	base	Unit 1_5	8	n.底部	1
+5	exist	Unit 1_5	8	v.存在	1
+5	mystery	Unit 1_5	8	n.神秘	0
+5	comic strip	Unit 1_5	8	连环漫画	0
+5	questionnaire	Unit 1_5	8	n.调查问卷	1
+5	tick	Unit 1_5	8	vt.标记号	1
+5	statement	Unit 1_5	8	n.陈述	1
+5	disagree	Unit 1_5	8	vi.不同意	1
+5	appropriate	Unit 1_5	8	adj.适当的	1
+5	blank	Unit 1_5	8	adj.空白处	1
+6	humour	Unit 1_6	8	n.幽默	1
+6	discount	Unit 1_6	8	n.折扣	1
+6	table tennis	Unit 1_6	8	乒乓球运动	1
+6	badminton	Unit 1_6	8	n.羽毛球	1
+6	organize	Unit 1_6	8	vt.组织	1
+6	tournament	Unit 1_6	8	n.联赛	1
+6	award	Unit 1_6	8	vt.奖	1
+6	Yeti	Unit 1_6	8	n.雪人	0
+6	Bigfoot	Unit 1_6	8	n.北美野人	0
+6	Wild Man of Shennongjia	Unit 1_6	8	神农架野人	1
+7	hairy	Unit 1_7	8	adj.多毛的	1
+7	human being	Unit 1_7	8	人	1
+7	attack	Unit 1_7	8	vt.&n.攻击	1
+7	villager	Unit 1_7	8	n.村民	1
+7	fur	Unit 1_7	8	n.皮毛	1
+7	track	Unit 1_7	8	n.足迹	1
+7	centimetre	Unit 1_7	8	n.厘米	1
+7	length	Unit 1_7	8	n.长度	1
+7	examine	Unit 1_7	8	vt.检查	1
+7	north-west	Unit 1_7	8	n.西北	1
+8	dozen	Unit 1_8	8	n.一打	1
+8	reserve	Unit 1_8	8	vt.储备	1
+8	strength	Unit 1_8	8	n.力量	1
+8	belong	Unit 1_8	8	vi.适应	1
+8	belong to	Unit 1_8	8	属于	1
+8	existence	Unit 1_8	8	n.存在	1
+8	convince	Unit 1_8	8	vt.使确信	1
+8	link	Unit 1_8	8	vt.&n.关联	1
+8	ancestor	Unit 1_8	8	n.祖先	1
+8	make one's way to	Unit 1_8	8	前往	1
+8	survive	Unit 1_8	8	v.生存	1
+9	adventure	Unit 2_1	7	n.冒险	1
+9	arrange	Unit 2_1	7	v.安排	1
+9	extraordinary	Unit 2_1	7	adj.不同寻常的	1
+9	flight	Unit 2_1	7	n.航班	1
+9	camel	Unit 2_1	7	n.骆驼	1
+9	desert	Unit 2_1	7	n.&vt.沙漠；抛弃	1
+9	dusty	Unit 2_1	7	adj.尘土飞扬的	1
+9	shade	Unit 2_1	7	n.阴凉处	1
+9	brilliant	Unit 2_1	7	adj.明亮的	1
+9	flashlight	Unit 2_1	7	n.手电筒	1
+10	altogether	Unit 2_2	7	adv.总共	1
+10	uncomfortable	Unit 2_2	7	adj.不舒服的	1
+10	rough	Unit 2_2	7	adj.粗糙的	1
+10	white-water rafting	Unit 2_2	7	白狼漂流	0
+10	helmet	Unit 2_2	7	n.头盔	1
+10	life jacket	Unit 2_2	7	救生衣	1
+10	protection	Unit 2_2	7	n.保护	1
+10	in case	Unit 2_2	7	万一	1
+10	backpack	Unit 2_2	7	n.背包	0
+10	advance	Unit 2_2	7	v.前进	1
+11	in advance	Unit 2_3	7	提前	1
+11	supply	Unit 2_3	7	vt.提供	1
+11	wildlife	Unit 2_3	7	n.野生动物	1
+11	photograph	Unit 2_3	7	n.照片	1
+11	defence	Unit 2_3	7	n.防御	1
+11	scare	Unit 2_3	7	vt.惊吓	1
+11	up close	Unit 2_3	7	靠近地	1
+11	mount	Unit 2_3	7	n.山	0
+11	tiring	Unit 2_3	7	adj.让人疲劳的	1
+11	atmosphere	Unit 2_3	7	n.空气	1
+12	African	Unit 2_4	7	adj.非洲的	1
+12	afterward	Unit 2_4	7	adv.后来	1
+12	sleeve	Unit 2_4	7	n.袖子	1
+12	cheek	Unit 2_4	7	n.脸颊	1
+12	tourism	Unit 2_4	7	n.旅游业	1
+12	schedule	Unit 2_4	7	n.计划	1
+12	crane	Unit 2_4	7	n.鹤	0
+12	explore	Unit 2_4	7	vt.探索	1
+12	sunrise	Unit 2_4	7	n.日出	1
+12	view	Unit 2_4	7	n.&v.观点；观看	1
+13	heaven	Unit 2_5	7	n.天堂	1
+13	mountaintop	Unit 2_5	7	n.山顶	1
+13	temple	Unit 2_5	7	n.寺院	1
+13	bury	Unit 2_5	7	vt.埋葬	1
+13	destination	Unit 2_5	7	n.目的地	1
+13	cage	Unit 2_5	7	n.笼子	1
+13	beauty	Unit 2_5	7	n.美	1
+13	south-west	Unit 2_5	7	n.西南方	1
+13	highway	Unit 2_5	7	n.公路	1
+13	classic	Unit 2_5	7	adj.经典的	1
+14	novel	Unit 2_6	7	n.小说	1
+14	Kingdom	Unit 2_6	7	n.王国	1
+14	steep	Unit 2_6	7	adj.陡峭的	1
+14	forever	Unit 2_6	7	adv.永远地	1
+14	officially	Unit 2_6	7	adv.官方地	1
+14	spot	Unit 2_6	7	n.地点	1
+14	tourist spot	Unit 2_6	7	旅游点	1
+14	publish	Unit 2_6	7	vt.出版	1
+14	announce	Unit 2_6	7	vt.发表	1
+14	tower	Unit 2_6	7	n.塔	1
+15	sunshine	Unit 2_7	7	n.阳光	1
+15	reflect	Unit 2_7	7	v.反射	1
+15	diamond	Unit 2_7	7	n.钻石	1
+15	cattle	Unit 2_7	7	n.牛	1
+15	wander	Unit 2_7	7	vt.漫游	1
+15	surrounding	Unit 2_7	7	adj.周围的	1
+15	harmony	Unit 2_7	7	n.和谐	1
+15	endless	Unit 2_7	7	adj.无限的	1
+15	mild	Unit 2_7	7	adj.平和的	1
+16	curse	Unit 3_1	6	n.诅咒	0
+16	mummy	Unit 3_1	6	n.木乃伊	0
+16	explorer	Unit 3_1	6	n.探险家	1
+16	curious	Unit 3_1	6	adj.好奇的	1
+16	set sail	Unit 3_1	6	启航	1
+16	tomb	Unit 3_1	6	n.坟墓	1
+16	Egyptian	Unit 3_1	6	adj.埃及的	1
+16	fortune	Unit 3_1	6	n.财富	1
+16	jewel	Unit 3_1	6	n.宝石	0
+16	preserve	Unit 3_1	6	vt.保存	1
+16	valley	Unit 3_1	6	n.山谷	1
+17	lord	Unit 3_2	6	n.勋爵	0
+17	come across	Unit 3_2	6	遇见	1
+17	entrance	Unit 3_2	6	n.入口	1
+17	content	Unit 3_2	6	n.内容	1
+17	punishment	Unit 3_2	6	n.惩罚	1
+17	scientific	Unit 3_2	6	adj.科学的	1
+17	virus	Unit 3_2	6	n.病毒	1
+17	disturb	Unit 3_2	6	vt.打扰	1
+17	breathe	Unit 3_2	6	vi.呼吸	1
+17	result in	Unit 3_2	6	导致	1
+17	clothing	Unit 3_2	6	n.衣物	1
+18	riddle	Unit 3_3	6	n.谜	1
+18	labour	Unit 3_3	6	n.劳动	1
+18	whichever	Unit 3_3	6	adj.无论哪个	1
+18	airplane	Unit 3_3	6	n.飞机	1
+18	signal	Unit 3_3	6	n.信号	1
+18	captain	Unit 3_3	6	n.船长	1
+18	warning	Unit 3_3	6	n.警告	1
+18	iceberg	Unit 3_3	6	n.冰山	0
+18	widespread	Unit 3_3	6	adj.广泛的	1
+18	requirement	Unit 3_3	6	n.要求	1
+18	inspire	Unit 3_3	6	vt.启迪	1
+19	sex	Unit 3_4	6	n.性别	1
+19	female	Unit 3_4	6	n.&adj.女性(的）	1
+19	nationality	Unit 3_4	6	n.国籍	1
+19	native	Unit 3_4	6	adj.本地的	1
+19	outgoing	Unit 3_4	6	adj.外向的	1
+19	gorilla	Unit 3_4	6	n.大猩猩	0
+19	data	Unit 3_4	6	n.数据	1
+19	companion	Unit 3_4	6	n.伴侣	1
+19	rare	Unit 3_4	6	adj.稀有的	1
+19	discourage	Unit 3_4	6	vt.使灰心	1
+19	devotion	Unit 3_4	6	n.奉献	1
+20	PhD	Unit 3_5	6	abbr.博士学位	0
+20	murder	Unit 3_5	6	vt.&n.谋杀	1
+20	various	Unit 3_5	6	adj.各种各样的	1
+20	organization	Unit 3_5	6	n.组织	1
+20	voyage	Unit 3_5	6	n.航行	1
+20	orbit	Unit 3_5	6	n.&v.轨道	1
+20	astronaut	Unit 3_5	6	n.宇航员	1
+20	north-east	Unit 3_5	6	n.东北	1
+20	desire	Unit 3_5	6	n.欲望	1
+20	apply	Unit 3_5	6	v.申请；应用	1
+21	candidate	Unit 3_6	6	n.候选人	1
+21	survival	Unit 3_6	6	n.幸存	1
+21	rocket	Unit 3_6	6	n.火箭	1
+21	status	Unit 3_6	6	n.地位	1
+21	superior	Unit 3_6	6	n.&adj.上级;更高的	1
+21	be in control of	Unit 3_6	6	掌管	1
+21	quality	Unit 3_6	6	n.品质	1
+21	optimistic	Unit 3_6	6	adj.乐观的	1
+21	indeed	Unit 3_6	6	adv.的确	1
+21	look up to	Unit 3_6	6	敬佩	1

@@ -1,0 +1,43 @@
+1	father	Unit 1_1	2	n.父亲	1
+1	mother	Unit 1_1	2	n.母亲	1
+1	brother	Unit 1_1	2	n.兄弟	1
+2	sister	Unit 1_2	2	n.姐妹	1
+3	a doctor	Unit 2_1	1	一位医生	1
+3	a nurse	Unit 2_1	1	一位护士	1
+3	a worker	Unit 2_1	1	一位工人	1
+3	a cook	Unit 2_1	1	一位厨师	1
+4	sun	Unit 3_1	1	n.太阳	1
+4	moon	Unit 3_1	1	n.月亮	1
+4	star	Unit 3_1	1	n.星星	1
+4	big	Unit 3_1	1	adj.大的	1
+4	small	Unit 3_1	1	adj.小的	1
+4	bright	Unit 3_1	1	adj.明亮的	1
+5	a window	Unit 4_1	1	一扇窗户	1
+5	a desk	Unit 4_1	1	一个办公桌	1
+5	a sofa	Unit 4_1	1	一个沙发	1
+5	a table	Unit 4_1	1	一张桌子	1
+5	a chair	Unit 4_1	1	一把椅子	1
+6	a carrot	Unit 5_1	1	一个胡萝卜	1
+6	a bean	Unit 5_1	1	一个豆角	1
+6	a tomato	Unit 5_1	1	一个西红柿	1
+6	a potato	Unit 5_1	1	一个马铃薯	1
+7	an ant	Unit 6_1	1	一只蚂蚁	1
+7	a butterfly	Unit 6_1	1	一只蝴蝶	1
+7	a flower	Unit 6_1	1	一朵花	1
+7	a tree	Unit 6_1	1	一棵树	1
+8	a pie	Unit 7_1	1	一个馅饼	1
+8	a cake	Unit 7_1	1	一个蛋糕	1
+8	a hamburger	Unit 7_1	1	一个汉堡	1
+8	a hot dog	Unit 7_1	1	一个热狗	1
+9	bread	Unit 8_1	1	n.面包	1
+9	rice	Unit 8_1	1	n.大米	1
+9	milk	Unit 8_1	1	n.牛奶	1
+9	juice	Unit 8_1	1	n.果汁	1
+10	a gift	Unit 9_1	1	一份礼物	1
+10	a bell	Unit 9_1	1	一个铃铛	1
+10	a chocolate	Unit 9_1	1	一块巧克力	1
+10	a sweet	Unit 9_1	1	一颗糖果	1
+11	a coat	Unit 10_1	1	一件外套	1
+11	a sweater	Unit 10_1	1	一件毛衣	1
+11	a T-shirt	Unit 10_1	1	一件体恤	1
+11	a skirt	Unit 10_1	1	一条裙子	1

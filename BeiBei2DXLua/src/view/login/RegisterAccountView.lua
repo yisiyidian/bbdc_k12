@@ -913,21 +913,22 @@ function RegisterAccountView:showIntroView()
 	self:addChild(spslogan)
 	self.introviews[#self.introviews + 1] = spslogan
 
-	local btnRegister = ccui.Button:create("image/login/button_on.png","image/login/button_down.png")
-	btnRegister:setAnchorPoint(0.5,0.5)
-	btnRegister:setTitleFontSize(30)
-	btnRegister:addTouchEventListener(handler(self, self.onIntroRegisterTouch))
-	btnRegister:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.40)
-	btnRegister:setTitleText("开始使用")
-	self:addChild(btnRegister)
-	self.introviews[#self.introviews + 1] = btnRegister
+	-- local btnRegister = ccui.Button:create("image/login/button_on.png","image/login/button_down.png")
+	-- btnRegister:setAnchorPoint(0.5,0.5)
+	-- btnRegister:setTitleFontSize(30)
+	-- btnRegister:addTouchEventListener(handler(self, self.onIntroRegisterTouch))
+	-- btnRegister:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.40)
+	-- btnRegister:setTitleText("开始使用")
+	-- self:addChild(btnRegister)
+	-- self.introviews[#self.introviews + 1] = btnRegister
 
 	local btnLogin = ccui.Button:create("image/login/button_on.png","image/login/button_down.png")
 	btnLogin:setAnchorPoint(0.5,0.5)
 	btnLogin:setTitleFontSize(30)
 	btnLogin:addTouchEventListener(handler(self, self.onIntroLoginTouch))
 	btnLogin:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.30)
-	btnLogin:setTitleText("试玩一下")
+	-- btnLogin:setTitleText("试玩一下")
+	btnLogin:setTitleText("开始游戏")
 	self:addChild(btnLogin)
 	self.introviews[#self.introviews + 1] = btnLogin
 end
