@@ -136,11 +136,11 @@ function LevelProgressPopup:createSummary(index)
 
         local taskIndex = -2
 
-        for bossID, bossInfo in pairs(bossList) do
-            if bossInfo["coolingDay"] == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 5 < 0 then
-                taskIndex = bossID
-            end
-        end    
+        -- for bossID, bossInfo in pairs(bossList) do
+        --     if bossInfo["coolingDay"] == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 5 < 0 then
+        --         taskIndex = bossID
+        --     end
+        -- end    
 
         if taskIndex == -2 then     
             showProgressHUD('', true)    
