@@ -1,11 +1,11 @@
 1	time	Unit 1_1	2	n.时间	1
 1	o'clock	Unit 1_1	2	...点钟	0
 1	nice	Unit 1_1	2	adj.令人愉快的	1
-3	when	Unit 2_1	1	conj.什么时候	1
-3	five	Unit 2_1	1	num.五	1
+2	when	Unit 2_1	1	conj.什么时候	1
+2	five	Unit 2_1	1	num.五	1
 3	thirty	Unit 2_1	1	num.三十	1
 3	home	Unit 2_1	1	n.家	1
-4	fifty	Unit 3_1	1	num.五十	1
+3	fifty	Unit 3_1	1	num.五十	1
 4	nine	Unit 3_1	1	num.九	1
 4	twenty	Unit 3_1	1	num.二十	1
 4	sleep	Unit 3_1	1	v.睡觉	1
