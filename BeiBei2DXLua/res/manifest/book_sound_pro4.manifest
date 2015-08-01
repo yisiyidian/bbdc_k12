@@ -1,17 +1,17 @@
-{ 
+{
 	"packageUrl" : "http://123.56.84.196/BookSoundBag/",
-	"remoteManifestUrl" : "http://123.56.84.196/BookSoundBag/book_sound_pro4_server.manifest", 
-	"remoteVersionUrl" : "http://123.56.84.196/BookSoundBag/book_sound_pro4_version.manifest", 
-	"version" : "1.6.0.0", 
-	"engineVersion" : "3.3 rc2", 
-	"assets" : {	
+	"remoteManifestUrl" : "http://123.56.84.196/BookSoundBag/book_sound_pro4_server.manifest",
+	"remoteVersionUrl" : "http://123.56.84.196/BookSoundBag/book_sound_pro4_version.manifest",
+	"version" : "1.9.9",
+	"engineVersion" : "3.3 rc2",
+	"assets" : {
 		"pro4.zip" : {
-			"md5" : "ac817a2dfc6c7b1d4ec251b962e1d4ce",
+			"md5" : "",
 			"compressed" : true
 		}
-	}, 
+	},
 
 	"searchPaths" : [
-	
-    ] 
+
+	]
 }

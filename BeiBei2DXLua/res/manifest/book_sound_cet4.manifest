@@ -1,17 +1,17 @@
-{ 
-	"packageUrl" : "http://123.56.84.196/BookSoundBag2.0.0/",
-	"remoteManifestUrl" : "http://123.56.84.196/BookSoundBag2.0.0/book_sound_cet4_server.manifest", 
-	"remoteVersionUrl" : "http://123.56.84.196/BookSoundBag2.0.0/book_sound_cet4_version.manifest", 
-	"version" : "1.9.9", 
-	"engineVersion" : "3.3 rc2", 
-	"assets" : {	
+{
+	"packageUrl" : "http://123.56.84.196/BookSoundBag/",
+	"remoteManifestUrl" : "http://123.56.84.196/BookSoundBag/book_sound_cet4_server.manifest",
+	"remoteVersionUrl" : "http://123.56.84.196/BookSoundBag/book_sound_cet4_version.manifest",
+	"version" : "1.9.9",
+	"engineVersion" : "3.3 rc2",
+	"assets" : {
 		"cet4.zip" : {
-			"md5" : ".",
+			"md5" : "",
 			"compressed" : true
 		}
-	}, 
+	},
 
 	"searchPaths" : [
-	
-    ] 
+
+	]
 }

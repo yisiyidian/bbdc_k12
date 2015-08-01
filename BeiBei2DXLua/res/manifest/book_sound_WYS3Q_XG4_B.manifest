@@ -1,0 +1,17 @@
+{
+	"packageUrl" : "http://123.56.84.196/BookSoundBag/",
+	"remoteManifestUrl" : "http://123.56.84.196/BookSoundBag/book_sound_WYS3Q_XG4_B_server.manifest",
+	"remoteVersionUrl" : "http://123.56.84.196/BookSoundBag/book_sound_WYS3Q_XG4_B_version.manifest",
+	"version" : "1.9.9",
+	"engineVersion" : "3.3 rc2",
+	"assets" : {
+		"WYS3Q_XG4_B.zip" : {
+			"md5" : "",
+			"compressed" : true
+		}
+	},
+
+	"searchPaths" : [
+
+	]
+}
