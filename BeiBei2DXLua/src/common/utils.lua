@@ -513,3 +513,25 @@ function touchBackgroundClosePopup(layer,popup,closeFunc)
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, layer)  
 end
 
+-- 判断是词组还是单词
+function isWord(word)
+    if #word == 0 then
+        return false
+    end
+    local wordTable = {}
+    for i=1,#word do
+        table.insert(wordTable,string.sub(word,i,i))
+    end
+    for i=1,#word do
+        local num = string.byte(wordTable[i])
+        if num < 65 or (num > 90 and num < 97 ) or num > 122 then
+            return false
+        end
+    end
+    return true
+    -- print(string.byte("A").."A") 65
+    -- print(string.byte("Z").."Z") 90
+    -- print(string.byte("a").."a") 97
+    -- print(string.byte("z").."z") 122
+end
+

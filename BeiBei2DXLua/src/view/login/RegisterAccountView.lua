@@ -941,6 +941,7 @@ function RegisterAccountView:onIntroLoginTouch( sender,eventType)
 	sender:setTouchEnabled(false)
 	cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
 	s_SCENE:removeAllPopups()
+	-- s_O2OController.signUpWithRandomUserName()
 	self:endRegister()
 end
 
