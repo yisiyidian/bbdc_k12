@@ -150,9 +150,9 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
 
 
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 and bossInfo["unitState"] - 5 < 0 then
-            currentTaskBossIndex = bossID - 1
-        end
+        -- if bossInfo["coolingDay"] + 0 == 0 and currentTaskBossIndex == -1 and bossInfo["unitState"] - 5 < 0 then
+        --     currentTaskBossIndex = bossID - 1
+        -- end
         print('bossID:'..bossID..','..levelIndex)
         if bossID - (levelIndex + 1) == 0 then
             levelState = bossInfo["unitState"] 
@@ -181,8 +181,8 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     --     -- self:addChild(deco, 130)
     -- else
     -- if false then
-    if levelState == 0 or (levelState >= 1 and levelState <= 4 and levelIndex == currentTaskBossIndex) then
-        
+    --if levelState == 0 or (levelState >= 1 and levelState <= 4 and levelIndex == currentTaskBossIndex) then
+    if levelState == 0 then
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
         summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
         summaryboss:setAnchorPoint(1,1)
@@ -282,62 +282,44 @@ function ChapterLayerBase:plotDecoration()
                 lockIsland:setPosition(levelPosition)
                 lock:setPosition(levelPosition)
 
-                print('s_book:')
-                print_lua_table(s_BookUnitName[s_CURRENT_USER.bookKey])
-                local unitName = split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(levelIndex+1)],'_')
+                -- print('s_book:')
+                -- print_lua_table(s_BookUnitName[s_CURRENT_USER.bookKey])
+                -- local unitName = split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(levelIndex+1)],'_')
 
                 -- test
                 -- local unitName = split('21_3','_')
                 -- add text
-                local unitText = cc.Sprite:create('image/chapter/chapter0/unit_black.png')
-                -- if true then
-                if s_CURRENT_USER.bookKey == 'kwekwe' and #unitName > 1 and unitName[1] - 21 == 0 then
-                    unitText = cc.Sprite:create('image/chapter/realwordlock.png')
-                end
+                -- local unitText = cc.Sprite:create('image/chapter/chapter0/unit_black.png')
+                -- -- if true then
+                -- if s_CURRENT_USER.bookKey == 'kwekwe' and #unitName > 1 and unitName[1] - 21 == 0 then
+                --     unitText = cc.Sprite:create('image/chapter/realwordlock.png')
+                -- end
 
-                unitText:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2+10)
-                if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
-                and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
-                and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
-                and s_CURRENT_USER.bookKey ~= 'ielts' then
-                    lock:addChild(unitText, 130)
-                end
-                if #unitName == 1 then
-                    if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
-                    and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
-                    and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
-                    and s_CURRENT_USER.bookKey ~= 'ielts' then
-                        local number = cc.Label:createWithSystemFont(''..unitName[1],'',35)
-                        number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-20)
-                        number:setColor(cc.c3b(164, 125, 46))
-                        lock:addChild(number, 130)
-                    else
-                        local number = cc.Label:createWithSystemFont(''..unitName[1],'',43)
+                -- unitText:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2+10)
+                -- if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
+                -- and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
+                -- and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
+                -- and s_CURRENT_USER.bookKey ~= 'ielts' then
+                --     lock:addChild(unitText, 130)
+                -- -- end
+                -- if #unitName == 1 then
+                    -- if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
+                    -- and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
+                    -- and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
+                    -- and s_CURRENT_USER.bookKey ~= 'ielts' then
+                    --     local number = cc.Label:createWithSystemFont(''..unitName[1],'',35)
+                    --     number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-20)
+                    --     number:setColor(cc.c3b(164, 125, 46))
+                    --     lock:addChild(number, 130)
+                    -- else
+                        local number = cc.Label:createWithSystemFont(''..levelIndex+1,'',43)
                         number:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2)
                         number:setColor(cc.c3b(164, 125, 46))
                         lock:addChild(number, 130)
-                    end
+                --     end
                     
                     
-                else
-                    if s_CURRENT_USER.bookKey == 'kwekwe' and #unitName > 1 and unitName[1] - 21 == 0 then
-                    -- if true then
-                        local number2 = cc.Label:createWithSystemFont(unitName[2],'',35)
-                        number2:setPosition(lock:getContentSize().width/2, lock:getContentSize().height/2-20)
-                        number2:setColor(cc.c3b(164, 125, 46))
-                        lock:addChild(number2, 130)
-                    else
-                        local number = cc.Label:createWithSystemFont(''..unitName[1],'',35)
-                        number:setPosition(lock:getContentSize().width/2-5, lock:getContentSize().height/2-20)
-                        number:setColor(cc.c3b(164, 125, 46))
-                        lock:addChild(number, 130)
-                        local number2 = cc.Label:createWithSystemFont('('..unitName[2]..')','',23)
-                        -- local number2 = cc.Label:createWithSystemFont(unitName[2],'',23)
-                        number2:setPosition(lock:getContentSize().width/2+23, lock:getContentSize().height/2-22)
-                        number2:setColor(cc.c3b(164, 125, 46))
-                        lock:addChild(number2, 130)
-                    end
-                end
+                -- end
 
                 self:addChild(lock,130)
                 self:addChild(lockIsland,120)
@@ -361,87 +343,86 @@ function ChapterLayerBase:plotLevelNumber(levelKey)
 --        self:addChild(start, 130)
 --    else
         -- print_lua_table(s_BookUnitName[s_CURRENT_USER.bookKey])
-        local unitName = split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(levelIndex+1)],'_')
-        local unitText = cc.Sprite:create('image/chapter/chapter0/unit.png')
-        -- if true then 
-        if s_CURRENT_USER.bookKey == 'kwekwe' and #unitName > 1 and unitName[1] - 21 == 0 then
-            unitText = cc.Sprite:create('image/chapter/realword.png')
-        end
-        unitText:setPosition(levelPosition.x-5, levelPosition.y + 35)
+        -- local unitName = split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(levelIndex+1)],'_')
+        -- local unitText = cc.Sprite:create('image/chapter/chapter0/unit.png')
+        -- -- if true then 
+        -- if s_CURRENT_USER.bookKey == 'kwekwe' and #unitName > 1 and unitName[1] - 21 == 0 then
+        --     unitText = cc.Sprite:create('image/chapter/realword.png')
+        -- end
+        -- unitText:setPosition(levelPosition.x-5, levelPosition.y + 35)
 
-        if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
-            and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
-            and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
-            and s_CURRENT_USER.bookKey ~= 'ielts' then
-            self:addChild(unitText, 130)
-        end
+        -- if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
+        --     and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
+        --     and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
+        --     and s_CURRENT_USER.bookKey ~= 'ielts' then
+        --     self:addChild(unitText, 130)
+        -- end
         -- test 
         -- local unitName = split("3",'_')
-        print('unitName:'..#unitName)
-        print_lua_table(unitName)
-        if #unitName == 1 then
+        -- print('unitName:'..#unitName)
+        -- print_lua_table(unitName)
+        --if #unitName == 1 then
             local number = ccui.TextBMFont:create()
             number:setFntFile('font/number_inclined.fnt')
-            number:setString(unitName[1])
+            number:setString(levelIndex+1)
             number:setScale(0.85)
 
-            if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
-                and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
-                and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
-                and s_CURRENT_USER.bookKey ~= 'ielts' then
-                    number:setPosition(levelPosition.x-5, levelPosition.y-13)
-            else
+            -- if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
+            --     and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
+            --     and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
+            --     and s_CURRENT_USER.bookKey ~= 'ielts' then
+            --         number:setPosition(levelPosition.x-5, levelPosition.y-13)
+            -- else
                 number:setPosition(levelPosition.x-5, levelPosition.y)
-            end
+            --end
             -- number:setPosition(levelPosition.x-5, levelPosition.y-10)
             self:addChild(number,130)
-        else
+        -- else
             -- local tag = cc.Label:createWithSystemFont('( )','',38)
             -- tag:setPosition(levelPosition.x+10, levelPosition.y - 20)
             -- tag:setColor(cc.c3b(255, 255, 255))
             -- self:addChild(tag, 130)
 
             -- if true then
-            if s_CURRENT_USER.bookKey == 'kwekwe' and #unitName > 1 and unitName[1] - 21 == 0 then
-                local number2 = ccui.TextBMFont:create()
-                number2:setFntFile('font/number_inclined.fnt')
-                number2:setString(unitName[2])
-                number2:setScale(0.8)
+            --if s_CURRENT_USER.bookKey == 'kwekwe' and #unitName > 1 and unitName[1] - 21 == 0 then
+            -- local number2 = ccui.TextBMFont:create()
+            -- number2:setFntFile('font/number_inclined.fnt')
+            -- number2:setString(levelIndex+1)
+            -- number2:setScale(0.8)
 
-                if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
-                and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
-                and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
-                and s_CURRENT_USER.bookKey ~= 'ielts' then
-                    number2:setPosition(levelPosition.x, levelPosition.y-13)
-                else
-                    number2:setPosition(levelPosition.x, levelPosition.y)
-                end
+            --     -- if s_CURRENT_USER.bookKey ~= 'cet4' and s_CURRENT_USER.bookKey ~= 'cet6' and s_CURRENT_USER.bookKey ~= 'pro4'
+            --     -- and s_CURRENT_USER.bookKey ~= 'pro8' and s_CURRENT_USER.bookKey ~= 'gse' and s_CURRENT_USER.bookKey ~= 'gre'
+            --     -- and s_CURRENT_USER.bookKey ~= 'gmat' and s_CURRENT_USER.bookKey ~= 'sat' and s_CURRENT_USER.bookKey ~= 'toefl'
+            --     -- and s_CURRENT_USER.bookKey ~= 'ielts' then
+            --     --     number2:setPosition(levelPosition.x, levelPosition.y-13)
+            --     -- else
+            -- number2:setPosition(levelPosition.x, levelPosition.y)
                 
-                self:addChild(number2,130)
-            else
-                local number1 = ccui.TextBMFont:create()
-                number1:setFntFile('font/number_inclined.fnt')
-                --number:setColor(cc.c3b(56,26,23))
-                number1:setString(unitName[1])
-                number1:setScale(0.8)
-                number1:setPosition(levelPosition.x-25, levelPosition.y-10)
-                self:addChild(number1,130)
-                local number2 = ccui.TextBMFont:create()
-                number2:setFntFile('font/number_inclined.fnt')
-                number2:setString(unitName[2])
-                number2:setScale(0.55)
-                number2:setPosition(levelPosition.x+20, levelPosition.y-18)
-                self:addChild(number2,130)
-                local leftBracket = cc.Sprite:create('image/chapter/leftBracket.png')
-                leftBracket:setScale(0.4)
-                leftBracket:setPosition(levelPosition.x+5, levelPosition.y-23)
-                local rightBracket = cc.Sprite:create('image/chapter/rightBracket.png')
-                rightBracket:setPosition(levelPosition.x+35, levelPosition.y-23)
-                rightBracket:setScale(0.4)
-                self:addChild(leftBracket,130)
-                self:addChild(rightBracket,130)
-            end
-        end
+            -- self:addChild(number2,130)
+            -- else
+            --     local number1 = ccui.TextBMFont:create()
+            --     number1:setFntFile('font/number_inclined.fnt')
+            --     --number:setColor(cc.c3b(56,26,23))
+            --     number1:setString(unitName[1])
+            --     number1:setScale(0.8)
+            --     number1:setPosition(levelPosition.x-25, levelPosition.y-10)
+            --     self:addChild(number1,130)
+            --     local number2 = ccui.TextBMFont:create()
+            --     number2:setFntFile('font/number_inclined.fnt')
+            --     number2:setString(unitName[2])
+            --     number2:setScale(0.55)
+            --     number2:setPosition(levelPosition.x+20, levelPosition.y-18)
+            --     self:addChild(number2,130)
+            --     local leftBracket = cc.Sprite:create('image/chapter/leftBracket.png')
+            --     leftBracket:setScale(0.4)
+            --     leftBracket:setPosition(levelPosition.x+5, levelPosition.y-23)
+            --     local rightBracket = cc.Sprite:create('image/chapter/rightBracket.png')
+            --     rightBracket:setPosition(levelPosition.x+35, levelPosition.y-23)
+            --     rightBracket:setScale(0.4)
+            --     self:addChild(leftBracket,130)
+            --     self:addChild(rightBracket,130)
+            -- end
+       -- end
 --    end
 
  

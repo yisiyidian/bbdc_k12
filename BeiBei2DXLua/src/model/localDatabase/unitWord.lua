@@ -154,6 +154,8 @@ function M.getMaxUnit()
     for row in Manager.database:nrows("SELECT * FROM DataUnit WHERE "..condition.." ORDER BY unitID DESC LIMIT 1 ;") do
         maxUnit = row
     end
+    --print('MAXUNIT:')
+    --print_lua_table(maxUnit)
 
     return maxUnit
 end
@@ -213,6 +215,9 @@ function M.getUnitInfo(unitID)
         -- end
         -- print(debug.traceback())
         local hash = {}
+        print('UNItID:'..unitID)
+        print('BookKEy:'..bookKey)
+        print_lua_table(s_BookUnitWord[bookKey])
         unit.wrongWordList  = s_BookUnitWord[bookKey][''..unitID]
         print('rightWordList',unit.rightWordList)
          print('wrongWordList',unit.wrongWordList)
