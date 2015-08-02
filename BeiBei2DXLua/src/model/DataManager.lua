@@ -134,6 +134,7 @@ function DataManager.loadBookWords()
                 table.insert(bookWord[bookName[i]], lines[j])
             end
         end
+        DataManager.books[bookName[i]].word = #lines
     end
     return bookWord
     
@@ -152,7 +153,7 @@ function DataManager.loadK12Books()
     -- }
     local bookName = g_BOOKKEYS
     print('-----------finalbookname-------')
-    print_lua_table(bookName)
+    -- print_lua_table(bookName)
         for i = 1, #bookName do
             bookUnitWord[bookName[i]] = {}
             bookWordMeaning[bookName[i]] = {}
@@ -310,6 +311,7 @@ end
 -- book -------------------------------------------------------------------
 
 function DataManager.loadBooks()
+    local time = os.clock()
     --local jsonObj = loadJsonFile(s_books)
     local jsonArr = require('view.book.BookList')
     local MetaBook = require("model.meta.MetaBook")
@@ -317,14 +319,18 @@ function DataManager.loadBooks()
     DataManager.bookkeys = {}
     for i = 1, #jsonArr do 
         local data = jsonArr[i]
+        local filepath = "cfg/books/" .. data.key .. ".newbook"
+        local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
+        local lines = split(content, "\n")
         local book = MetaBook.create(data.key,
                                     data.name,
-                                    data.word,
+                                    #lines,
                                     data.music,
                                     data.type)
         DataManager.books[data.key] = book
         DataManager.bookkeys[i] = data.key
     end
+    print('load book time',os.clock() - time)
 end
 
 -- function DataManager.loadPrimaryBooks()
