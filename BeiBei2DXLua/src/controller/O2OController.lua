@@ -359,7 +359,7 @@ function O2OController.loadConfigs()
     -- s_BookWord = s_DataManager.loadBookWords()
     -- TODO load K12 books
     time = os.clock()
-    s_BookWord = s_DataManager.loadK12BookWords()
+    -- s_BookWord = s_DataManager.loadK12BookWords()
     print('load bookword time',os.clock() - time)
     time = os.clock()
     s_BookUnitWord, s_BookUnitWordMeaning = s_DataManager.loadK12Books()
