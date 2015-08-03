@@ -11,7 +11,7 @@ function M.getUserDataFromLocalDB(objectOfDataClass, usertype)
         print ('getUserDataFromLocalDB result:')
         
         local rowTime = row.updatedAt
-        if rowTime < 0 then
+        if rowTime <= 0 then
             rowTime = row.createdAt 
         end
 
