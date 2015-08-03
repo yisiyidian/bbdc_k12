@@ -91,10 +91,12 @@ function NewSummaryBossLayer:changeWordTutorial()
     self.gamePaused = true
     self.changeBtn:setLocalZOrder(2)
     local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1][4],self.boss,self.firstTimeToChange,self.unit.unitID)
-    self:addChild(hintBoard,1)
+    self:addChild(hintBoard,5)
     self.hintChangeBtn = hintBoard
     
     hintBoard.hintOver = function (  )
+        s_CURRENT_USER.needBossChangeWordTutorial = 1
+        saveUserToServer({['needBossChangeWordTutorial']=s_CURRENT_USER.needBossChangeWordTutorial})
         self.firstTimeToChange = false
         hintBoard:removeFromParent()
         self.gamePaused = false
@@ -150,7 +152,7 @@ function NewSummaryBossLayer:initStageInfo(unit)
     self.changeBtnTime = 0
     self.hintChangeBtn = nil
     --是否首次换词
-    self.firstTimeToChange = s_CURRENT_USER.needBossChangeWordTutorial == 0
+    self.firstTimeToChange = (s_CURRENT_USER.needBossChangeWordTutorial == 0)
     print('firstTimeToChange',tostring(self.firstTimeToChange))
     --椰子的行列数
     self.mat_length = 4
