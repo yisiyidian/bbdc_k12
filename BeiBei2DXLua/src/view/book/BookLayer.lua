@@ -104,7 +104,7 @@ function BookLayer.create(education)
                 saveUserToServer({['bookKey']=s_CURRENT_USER.bookKey})
                 AnalyticsBook(key)
                 AnalyticsFirst(ANALYTICS_FIRST_BOOK, key)
-                
+
                 s_CURRENT_USER.showSettingLayer = 0
                 s_CorePlayManager.enterHomeLayer()
                 -- s_O2OController.getBulletinBoard()
@@ -214,8 +214,10 @@ function BookLayer.create(education)
         --         -- s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_book_select+1)
         --     end
         -- end
-        layer.book[i] = smallBack
-        
+        if string.find(key_array[i],"primary") ~= nil or string.find(key_array[i],"senior") ~= nil or string.find(key_array[i],"junior") ~= nil then
+        else
+            layer.book[i] = smallBack
+        end
     end
 
     local listView = ccui.ListView:create()
@@ -225,7 +227,7 @@ function BookLayer.create(education)
     listView:setContentSize(cc.size(s_RIGHT_X - s_LEFT_X,0.85 * s_DESIGN_HEIGHT))
     listView:setPosition(s_LEFT_X,0)
     layer:addChild(listView)
-    local count = math.ceil(bookCount / 2 + 0.5)
+    local count = math.ceil(#layer.book / 2 + 0.5)
     if count < 3 then
         listView:setBounceEnabled(false)
     end
