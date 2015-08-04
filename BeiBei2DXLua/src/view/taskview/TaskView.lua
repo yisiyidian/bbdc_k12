@@ -255,7 +255,7 @@ function TaskView:updateView()
 			local unit = "Unit"
 			self.unit = unit
 			local unitName = string.split(s_BookUnitName[s_CURRENT_USER.bookKey][''..(self.unitID)],'_')
-			self.unit = self.unit..unitName[1]
+			self.unit = unitName[1]
 			if #unitName == 2 then
 				self.unit = self.unit.."("..unitName[2]..")"
 			end
