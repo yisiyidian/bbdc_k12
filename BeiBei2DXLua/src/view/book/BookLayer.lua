@@ -101,9 +101,14 @@ function BookLayer.create(education)
                 --print("s_CURRENT_USER.bookKey2"..bookKey)
                 s_CURRENT_USER.bookKey = key
                 s_CURRENT_USER:addBookList(key)
+
                 saveUserToServer({['bookKey']=s_CURRENT_USER.bookKey})
                 AnalyticsBook(key)
                 AnalyticsFirst(ANALYTICS_FIRST_BOOK, key)
+
+                -- 选择书籍后加载对应的配置信息
+                s_BookUnitWord, s_BookUnitWordMeaning, s_BookUnitName = s_DataManager.loadK12Books(key)
+
                 
                 s_CURRENT_USER.showSettingLayer = 0
                 s_CorePlayManager.enterHomeLayer()

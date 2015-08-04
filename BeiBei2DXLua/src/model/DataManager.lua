@@ -28,6 +28,7 @@ function DataManager.loadBookName()
 end
 
 g_BOOKKEYS, g_BOOKS = DataManager.loadBookName() 
+--DataManager.bookkeys = g_BOOKKEYS
 
 s_BOOK_KEY_CET4     = g_BOOKKEYS[1] -- 'cet4'
 s_BOOK_KEY_CET6     = g_BOOKKEYS[2] -- 'cet6'
@@ -118,44 +119,51 @@ end
 
 
 
-function DataManager.loadBookWords()
+-- function DataManager.loadBookWords()
 
 
-    local bookWord = {}
-    --local bookName = {'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'middle', 'ncee', 'primary', 'pro4', 'pro8', 'sat', 'toefl'}
-    local bookName = g_BOOKKEYS
-    for i = 1, #bookName do
-        bookWord[bookName[i]] = {}
-        local filepath = "cfg/" .. bookName[i] .. ".book"
-        local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
-        local lines = split(content, "\n")
-        for j = 1, #lines do
-            if lines[j] ~= "" then
-                table.insert(bookWord[bookName[i]], lines[j])
-            end
-        end
-        DataManager.books[bookName[i]].word = #lines
-    end
-    return bookWord
+--     local bookWord = {}
+--     --local bookName = {'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'middle', 'ncee', 'primary', 'pro4', 'pro8', 'sat', 'toefl'}
+--     local bookName = g_BOOKKEYS
+--     for i = 1, #bookName do
+--         bookWord[bookName[i]] = {}
+--         local filepath = "cfg/" .. bookName[i] .. ".book"
+--         local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
+--         local lines = split(content, "\n")
+--         for j = 1, #lines do
+--             if lines[j] ~= "" then
+--                 table.insert(bookWord[bookName[i]], lines[j])
+--             end
+--         end
+--         DataManager.books[bookName[i]].word = #lines
+--     end
+--     return bookWord
     
     
-end
+-- end
 
 -- K12 book word   books[book][unit] = {wordlist} 
-function DataManager.loadK12Books()
+function DataManager.loadK12Books(bookKey)
     local bookUnitWord = {}
     local bookWordMeaning = {}
+    local bookUnitName = {}
     --     local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
     --     , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
     --     , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
     --     ,'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'pro4', 'pro8', 'sat', 'toefl'
     --     ,'houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'
     -- }
-    local bookName = g_BOOKKEYS
+    --local bookName = g_BOOKKEYS
+    local bookName = {}
+    if bookKey ~= nil then
+        table.insert(bookName, bookKey)
+    end
     print('-----------finalbookname-------')
+    print('loadK12Books(bookKey:'..bookKey..')')
     -- print_lua_table(bookName)
         for i = 1, #bookName do
             bookUnitWord[bookName[i]] = {}
+            bookUnitName[bookName[i]] = {}
             bookWordMeaning[bookName[i]] = {}
             local filepath = "cfg/books/" .. bookName[i] .. ".newbook"
             local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
@@ -179,12 +187,16 @@ function DataManager.loadK12Books()
                             if unit_word[1] - current_unit ~= 0 then
                                 bookUnitWord[bookName[i]][unit_word[1]] = unit_word[2]
                                 current_unit = unit_word[1]
+                                unit_name = split(unit_word[3],'_')
+                                bookUnitName[bookName[i]][unit_word[1]] = unit_name[1]
                             else
                                 bookUnitWord[bookName[i]][unit_word[1]] = bookUnitWord[bookName[i]][unit_word[1]]..'||'..unit_word[2]
+                                bookUnitName[bookName[i]][unit_word[1]] = unit_word[3]
                                 -- print(bookUnitWord[bookName[i]][unit_word[1]])
                             end
                         else
                             --flag = 1
+                            bookUnitName[bookName[i]][''..(unit_word[1]+flag)] = unit_word[3]
                             if unit_word[1] + flag - current_unit ~= 0 then
                                 bookUnitWord[bookName[i]][''..(unit_word[1]+flag)] = unit_word[2]
                                 current_unit = unit_word[1]+flag
@@ -197,6 +209,14 @@ function DataManager.loadK12Books()
                         if unit_word[1]+flag - current_unit ~= 0 then
                             bookUnitWord[bookName[i]][''..(unit_word[1]+flag)] = unit_word[2]
                             current_unit = unit_word[1]+flag
+
+                            if unit_word[4] - 1 == 0 then   -- only one subunit
+                                unit_name = split(unit_word[3],'_')
+                                bookUnitName[bookName[i]][''..(unit_word[1]+flag)] = unit_name[1]
+                            else
+                                bookUnitName[bookName[i]][''..(unit_word[1]+flag)] = unit_word[3]
+                            end
+
                         else
                             -- print(''..(unit_word[1]+1))
                             bookUnitWord[bookName[i]][''..(unit_word[1]+flag)] = bookUnitWord[bookName[i]][''..(unit_word[1]+flag)]..'||'..unit_word[2]
@@ -210,7 +230,7 @@ function DataManager.loadK12Books()
         end
     -- print('----------test word meaning----------')
     -- print_lua_table(bookWordMeaning)
-    return bookUnitWord,bookWordMeaning
+    return bookUnitWord,bookWordMeaning,bookUnitName
 end
 
 
@@ -279,34 +299,34 @@ end
 
 
 -- return book[bookKey] = {wordList}
-function DataManager.loadK12BookWords()
-    local bookWord = {}
-        -- local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
-        -- , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
-        -- , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
-        -- ,'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'pro4', 'pro8', 'sat', 'toefl'
-        -- ,'houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'
-        -- }
-        local bookName = g_BOOKKEYS
-        for i = 1, #bookName do
-            bookWord[bookName[i]] = {}
-            local filepath = "cfg/books/" .. bookName[i] .. ".newbook"
-            local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
-            local lines = split(content, "\n")
-            -- local current_unit = 0
-            -- local word_count = 0
-            for j = 1, #lines do
-                -- word_count = word_count + 1
-                if lines[j] ~= "" then
-                    unit_word = split(lines[j],"\t")
-                    table.insert(bookWord[bookName[i]], unit_word[2])
-                end
-            end
-            -- print('load book word')
-            -- print_lua_table(bookWord[bookName[i]])
-        end
-    return bookWord
-end
+-- function DataManager.loadK12BookWords()
+--     local bookWord = {}
+--         -- local bookName = {'primary_1', 'primary_2', 'primary_3', 'primary_4', 'primary_5', 'primary_6', 'primary_7', 'primary_8','kwekwe','kwekwe_2','kwekwe_3'
+--         -- , 'junior_1', 'junior_2', 'junior_3', 'junior_4', 'junior_5', 'senior_1', 'senior_2', 'senior_3', 'senior_4'
+--         -- , 'senior_5', 'senior_6', 'senior_7', 'senior_8', 'senior_9', 'senior_10', 'senior_11'
+--         -- ,'cet4', 'cet6', 'gmat', 'gre', 'gse', 'ielts', 'pro4', 'pro8', 'sat', 'toefl'
+--         -- ,'houhai_stage0','houhai_stage1','houhai_stage2','houhai_stage3','houhai_stage4','houhai_stage5'
+--         -- }
+--         local bookName = g_BOOKKEYS
+--         for i = 1, #bookName do
+--             bookWord[bookName[i]] = {}
+--             local filepath = "cfg/books/" .. bookName[i] .. ".newbook"
+--             local content = cc.FileUtils:getInstance():getStringFromFile(filepath)
+--             local lines = split(content, "\n")
+--             -- local current_unit = 0
+--             -- local word_count = 0
+--             for j = 1, #lines do
+--                 -- word_count = word_count + 1
+--                 if lines[j] ~= "" then
+--                     unit_word = split(lines[j],"\t")
+--                     table.insert(bookWord[bookName[i]], unit_word[2])
+--                 end
+--             end
+--             -- print('load book word')
+--             -- print_lua_table(bookWord[bookName[i]])
+--         end
+--     return bookWord
+-- end
 
 -- book -------------------------------------------------------------------
 
