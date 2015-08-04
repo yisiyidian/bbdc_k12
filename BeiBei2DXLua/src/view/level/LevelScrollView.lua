@@ -33,6 +33,11 @@ function LevelScrollView:ctor()
     self:addBottomBounce()
 end
 
+-- 滚动时动态更新ScorllView
+function LevelScrollView:refreshScrollView()
+	
+end
+
 -- 初始化ScrollView的Items
 function LevelScrollView:initScrollView()
 	print('curScreenId:'..self.info['curScreenId'])
