@@ -77,6 +77,8 @@ function TaskView:initUI()
 	-- self.target = target
 
 	local taskTarget = cc.Label:createWithSystemFont("123","",30)
+	taskTarget:setWidth(400)
+	taskTarget:setLineBreakWithoutSpace(true)
 	taskTarget:setPosition(bgWidth/2,bgHeight/4 + 80)
 	taskTarget:setAnchorPoint(0.5,0.5)
 	taskTarget:setTextColor(cc.c3b(0,0,0))
