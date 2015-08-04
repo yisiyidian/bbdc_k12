@@ -164,7 +164,7 @@ function LevelListView:addScrollListener()
     				--self:updateInnerContainerSize()
 	    		end
 	    		self:callFuncWithDelay(0.3,function()
-	    			print('=======set item lock 0')
+	    			--print('=======set item lock 0')
 					self.info['levelItemLock'] = 0
 	    		end)
 	    		--self.info['levelItemLock'] = 0
@@ -235,7 +235,7 @@ function LevelListView:getCurScreenIdRange()
 	if curLevelId <= 4 then  -- 第一屏只有4关（保证不被浮动层按钮挡住岛屿）
 		curScreenId = 1
 	else  
-		curScreenId = 1 + math.ceil((bookMaxLevelId - 4) / 5)
+		curScreenId = 1 + math.ceil((curLevelId - 4) / 5)
 	end
 	preScreenId = curScreenId - 1
 	if preScreenId < 1 then

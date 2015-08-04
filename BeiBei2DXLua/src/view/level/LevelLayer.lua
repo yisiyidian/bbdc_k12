@@ -29,7 +29,8 @@ end
 
 -- 创建关卡层，关卡UI，逻辑
 function LevelLayer:createLevelView()
-	local LevelListView = require('view.level.LevelListView')
+	--local LevelListView = require('view.level.LevelListView')
+	local LevelListView = require('view.level.LevelScrollView')
 	self.info['levelListView'] = LevelListView.create()
     self:addChild(self.info['levelListView'])
 end
