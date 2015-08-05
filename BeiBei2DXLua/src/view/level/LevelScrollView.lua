@@ -15,10 +15,11 @@ end
 function LevelScrollView:ctor()
 	-- 存储全局的一些信息
 	self.info = {}
+	self.scrollTopLock = false  -- 用于控制滚动到上方时是否添加新的LevelItem
 	-- 记录当前书最多和当前screenID
 	self.info['maxScreenId'] = self:getBookMaxScreenID()
 	--self.info['activeScreenId'] = self:getBookActiveScreenID()
-	self.info['activeScreenId'] = 2 -- test
+	self.info['activeScreenId'] = 3 -- test
 	self.info['curScreenId'] = self.info['activeScreenId']  -- 记录当前显示在屏幕中的 cur screen Id
 	-- 初始化添加当前Item 和 云层
 	self:initScrollView()
@@ -42,35 +43,36 @@ end
 function LevelScrollView:initScrollView()
 	print('curScreenId:'..self.info['curScreenId'])
 	local LevelItem = require('view.level.LevelItem')
-    self.info['curScreen'] = LevelItem.create(self.info['curScreenId'])
-    self.info['curScreen']:setPosition(cc.p((s_DESIGN_WIDTH - level_item_width) / 2, 0))
-    self:addChild(self.info['curScreen'])
+    self.info['screen'..self.info['curScreenId']] = LevelItem.create(self.info['curScreenId'])
+    self.info['screen'..self.info['curScreenId']]:setPosition(cc.p((s_DESIGN_WIDTH - level_item_width) / 2, 0))
+    self:addChild(self.info['screen'..self.info['curScreenId']])
     local screenCount = 1
     if self.info['curScreenId'] == 1 then -- 第一屏
 	    -- 判断当前屏下方是否显示下一屏
 	    if self.info['curScreenId'] < self.info['maxScreenId'] then
 	    	self.info['nextScreenId'] = self.info['curScreenId'] + 1
-	    	self.info['nextScreen'] = LevelItem.create(self.info['nextScreenId'])
-	    	self.info['nextScreen']:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, 0))
-	    	self.info['curScreen']:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, s_DESIGN_HEIGHT))
-	    	self:addChild(self.info['nextScreen'])
+	    	self.info['screen'..self.info['nextScreenId']] = LevelItem.create(self.info['nextScreenId'])
+	    	self.info['screen'..self.info['nextScreenId']]:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, 0))
+	    	self.info['screen'..self.info['curScreenId']]:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, s_DESIGN_HEIGHT))
+	    	self:addChild(self.info['screen'..self.info['curScreenId']])
 	    	screenCount = 2
 	    end
 	else
 		-- 添加上一屏
 		self.info['preScreenId'] = self.info['curScreenId'] - 1
-    	self.info['preScreen'] = LevelItem.create(self.info['preScreenId'])
-    	self.info['preScreen']:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, 2*s_DESIGN_HEIGHT))
-    	self.info['curScreen']:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, s_DESIGN_HEIGHT))
-    	self:addChild(self.info['preScreen'])
+    	self.info['screen'..self.info['preScreenId']] = LevelItem.create(self.info['preScreenId'])
+    	self.info['screen'..self.info['preScreenId']]:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, s_DESIGN_HEIGHT))
+    	self.info['screen'..self.info['curScreenId']]:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, 0))
+    	self:addChild(self.info['screen'..self.info['preScreenId']])
     	screenCount = 2
-    	-- 判断当前屏下方是否显示下一屏
-	    if self.info['curScreenId'] < self.info['maxScreenId'] then
+    	-- 判断当前屏下方是否显示下一屏 (每两屏一次云层)
+	    if self.info['curScreenId'] < self.info['maxScreenId'] and self.info['curScreenId'] % 2 == 1 then
 	    	self.info['nextScreenId'] = self.info['curScreenId'] + 1
-	    	self.info['nextScreen'] = LevelItem.create(self.info['nextScreenId'])
-	    	self.info['nextScreen']:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, 0))
-	    	self.info['curScreen']:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, s_DESIGN_HEIGHT))
-	    	self:addChild(self.info['nextScreen'])
+	    	self.info['screen'..self.info['nextScreenId']] = LevelItem.create(self.info['nextScreenId'])
+	    	self.info['screen'..self.info['nextScreenId']]:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, 0))
+	    	self.info['screen'..self.info['curScreenId']]:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, s_DESIGN_HEIGHT))
+	    	self.info['screen'..self.info['preScreenId']]:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, 2*s_DESIGN_HEIGHT))
+	    	self:addChild(self.info['screen'..self.info['nextScreenId']])
 	    	screenCount = 3
 	    end
 	end
@@ -81,21 +83,27 @@ function LevelScrollView:initScrollView()
     -- self:addChild(self.info['nextScreen'])
     -- self.info['nextScreen']:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width)/2, s_DESIGN_HEIGHT))
     self:setInnerContainerSize(cc.size(level_item_width, screenCount * s_DESIGN_HEIGHT))
+    if screenCount == 2 then
+		self:scrollToPercentVertical(100,0,false)
+	else
+		self:scrollToPercentVertical(100,0,false)
+	end
 end
 
 -- 添加底层云层和下一个关卡的Bounce层 （云层每两屏出现一次）
 function LevelScrollView:addBottomBounce()
+	print('add bottom bounce:'..self.info['activeScreenId'])
 	if (self.info['activeScreenId'] % 2 == 0 and self.info['activeScreenId'] < self.info['maxScreenId'])
 		or (self.info['activeScreenId'] % 2 == 1 and self.info['activeScreenId'] + 1 < self.info['maxScreenId']) then  -- 存在云层后面的关卡
 		local cloud1 = cc.Sprite:create('image/level/cloud_1.png')
 		cloud1:setPosition(150, 0)
-		self:addChild(cloud1)
+		self:addChild(cloud1,100)
 		local cloud2 = cc.Sprite:create('image/level/cloud_2.png')
 		cloud2:setPosition(400, 0)
-		self:addChild(cloud2)
+		self:addChild(cloud2,100)
 		local cloud3 = cc.Sprite:create('image/level/cloud_3.png')
 		cloud3:setPosition(650, 0)
-		self:addChild(cloud3)
+		self:addChild(cloud3,100)
 		
 		if self.info['activeScreenId'] % 2 == 0 then
 			self.info['bottomScreenId'] = self.info['activeScreenId'] + 1
@@ -103,9 +111,10 @@ function LevelScrollView:addBottomBounce()
 			self.info['bottomScreenId'] = self.info['activeScreenId'] + 2
 		end
 		local LevelItem = require('view.level.LevelItem')
-   		self.info['bottomScreen'] = LevelItem.create(self.info['bottomScreenId'])
-    	self.info['bottomScreen']:setPosition(cc.p((s_DESIGN_WIDTH - level_item_width) / 2, -s_DESIGN_HEIGHT))
-    	self:addChild(self.info['bottomScreen'])
+		local screenKey = 'screen'..self.info['bottomScreenId']
+   		self.info[screenKey] = LevelItem.create(self.info['bottomScreenId'])
+    	self.info[screenKey]:setPosition(cc.p((s_DESIGN_WIDTH - level_item_width) / 2, -s_DESIGN_HEIGHT))
+    	self:addChild(self.info[screenKey])
 	end
 end
 
@@ -148,6 +157,24 @@ function LevelScrollView:addScrollListener()
 		    		curScreenId = math.floor(realY / level_item_height) + 1
 		    	end
 		    	print('curScreenId:'..curScreenId..',realY:'..realY)
+		    	if curScreenId == 2 then  -- 到达从上数第2个屏时，检查是否需要在第一屏前加载新的一屏
+		    		if self.info['preScreenId'] ~= nil and self.info['preScreenId'] > 1 then -- top screen前还可以添加screen
+				    	if not self.scrollTopLock then
+				    		self.scrollTopLock = true
+				    		local LevelItem = require('view.level.LevelItem')
+				    		self.info['screenCount'] = self.info['screenCount'] + 1
+							self.info['preScreenId'] = self.info['preScreenId'] - 1
+					    	self.info['screen'..self.info['preScreenId']] = LevelItem.create(self.info['preScreenId'])
+					    	self.info['screen'..self.info['preScreenId']]:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, (self.info['screenCount']-1)*s_DESIGN_HEIGHT))
+					    	self:addChild(self.info['screen'..self.info['preScreenId']])
+
+							self:setInnerContainerSize(cc.size(level_item_width, self.info['screenCount'] * s_DESIGN_HEIGHT))
+							self:callFuncWithDelay(2.0, function()
+			                    scrollTopLock = false
+			                end)
+						end
+					end
+				end
 	    	end
 	    end
 	end
@@ -164,6 +191,14 @@ function LevelScrollView:getBookActiveScreenID()
 		activeScreenId = 1 + math.ceil((curLevelId - 4) / 5)
 	end
 	return activeScreenId
+end
+
+-- 延时调用方法
+function LevelScrollView:callFuncWithDelay(delay, func) 
+    local delayAction = cc.DelayTime:create(delay)
+    local callAction = cc.CallFunc:create(func)
+    local sequence = cc.Sequence:create(delayAction, callAction)
+    self:runAction(sequence)   
 end
 
 -- 获取当前书籍最大的ScreenID
