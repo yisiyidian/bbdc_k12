@@ -66,21 +66,12 @@ end
 -- 找不到音频时，从http://123.56.84.196/allsounds/获取音频下载地址
 function getWordSoundFilePath(word)
     local filename = getWordSoundFileName(word)
-    
     local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename)
     local wordPath = cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey 
-    local name1 = string.gsub(filename,"|","_")
-    local name2 = string.gsub(filename,"%s","_")
     if cc.FileUtils:getInstance():isFileExist(localPath) then
         print("getWordSoundFilePath localPath Y :" .. localPath)
         return localPath
     elseif cc.FileUtils:getInstance():isFileExist("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..filename) then
-        print("getWordSoundFilePath localPath Y :" .. wordPath)
-        return wordPath
-    elseif cc.FileUtils:getInstance():isFileExist("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..name1) then
-        print("getWordSoundFilePath localPath Y :" .. wordPath)
-        return wordPath
-    elseif cc.FileUtils:getInstance():isFileExist("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..name2) then
         print("getWordSoundFilePath localPath Y :" .. wordPath)
         return wordPath
     else
@@ -109,31 +100,37 @@ PLAY_WORD_SOUND_UNKNOWN = 'PLAY_WORD_SOUND_UNKNOWN'
 -- 播放单词声音
 function playWordSound(word)
     if db.isSoundOn() then
-        local wordPath = cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey
-
-        local filename = getWordSoundFileName(word)
-        local name1 = string.gsub(filename,"|","_")
-        local name2 = string.gsub(filename,"%s","_")
-                
-        if cc.FileUtils:getInstance():isFileExist(filename) then
-            print ('playWordSound Y : ' .. filename)
-            cc.SimpleAudioEngine:getInstance():playEffect(filename, false)
-            return PLAY_WORD_SOUND_YES
-        elseif cc.FileUtils:getInstance():isFileExist("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..filename) then
-            print ('playWordSound Y : ' .. filename)
-            cc.SimpleAudioEngine:getInstance():playEffect("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..filename, false)
-            return PLAY_WORD_SOUND_YES
-        elseif cc.FileUtils:getInstance():isFileExist("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..name1) then
-            print ('playWordSound Y : ' .. filename)
-            cc.SimpleAudioEngine:getInstance():playEffect("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..name1, false)
-            return PLAY_WORD_SOUND_YES
-        elseif cc.FileUtils:getInstance():isFileExist("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..name2) then
-            print ('playWordSound Y : ' .. filename)
-            cc.SimpleAudioEngine:getInstance():playEffect("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..name2, false)
-            return PLAY_WORD_SOUND_YES
+        if isWord(word) then
+            local wordPath = cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey
+            local filename = getWordSoundFileName(word)
+            if cc.FileUtils:getInstance():isFileExist(filename) then
+                print ('playWordSound Y : ' .. filename)
+                cc.SimpleAudioEngine:getInstance():playEffect(filename, false)
+                return PLAY_WORD_SOUND_YES
+            elseif cc.FileUtils:getInstance():isFileExist("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..filename) then
+                print ('playWordSound Y : ' .. filename)
+                cc.SimpleAudioEngine:getInstance():playEffect("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..filename, false)
+                return PLAY_WORD_SOUND_YES
+            else
+                print ('playWordSound N : ' .. filename)
+                return PLAY_WORD_SOUND_NO
+            end
         else
-            print ('playWordSound N : ' .. filename)
-            return PLAY_WORD_SOUND_NO
+            local wordPath = cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey
+            word = string.gsub(word," ","_")
+            local filename = getWordSoundFileName(word)
+            if cc.FileUtils:getInstance():isFileExist(filename) then
+                print ('playWordSound Y : ' .. filename)
+                cc.SimpleAudioEngine:getInstance():playEffect(filename, false)
+                return PLAY_WORD_SOUND_YES
+            elseif cc.FileUtils:getInstance():isFileExist("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..filename) then
+                print ('playWordSound Y : ' .. filename)
+                cc.SimpleAudioEngine:getInstance():playEffect("BookSounds".."/"..s_CURRENT_USER.bookKey.."/"..s_CURRENT_USER.bookKey.."/"..filename, false)
+                return PLAY_WORD_SOUND_YES
+            else
+                print ('playWordSound N : ' .. filename)
+                return PLAY_WORD_SOUND_NO
+            end
         end
     end
     return PLAY_WORD_SOUND_UNKNOWN
