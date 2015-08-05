@@ -113,7 +113,7 @@ function SettingLayer:updateView()
     end
     --更新学习状态
     local bookName = s_DataManager.books[s_CURRENT_USER.bookKey].name
-    self.labellearn:setString("正在学习"..bookName.."词汇")
+    self.labellearn:setString(bookName.."词汇")
     --更新姓名
     self.labelname:setString(s_CURRENT_USER:getNameForDisplay())
 
