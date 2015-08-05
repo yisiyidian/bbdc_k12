@@ -2,7 +2,7 @@
 	"packageUrl" : "http://123.56.84.196/BookSoundBag/",
 	"remoteManifestUrl" : "http://123.56.84.196/BookSoundBag/book_sound_houhai_stage5_server.manifest",
 	"remoteVersionUrl" : "http://123.56.84.196/BookSoundBag/book_sound_houhai_stage5_version.manifest",
-	"version" : "1.9.9",
+	"version" : "1.9.8",
 	"engineVersion" : "3.3 rc2",
 	"assets" : {
 		"houhai_stage5.zip" : {

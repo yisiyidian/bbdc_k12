@@ -50,8 +50,12 @@ function BookLayer:getAllBookForEducation()
     local key_array = {}
     if self.education ~= 'mybook' then
         for i = 1, #s_DataManager.bookkeys do
-            if s_DataManager.books[s_DataManager.bookkeys[i]].type == self.education then
-                key_array[#key_array + 1] = s_DataManager.bookkeys[i]
+            if string.find(s_DataManager.books[s_DataManager.bookkeys[i]].key,"primary") == nil and 
+                string.find(s_DataManager.books[s_DataManager.bookkeys[i]].key,"senior") == nil and 
+                string.find(s_DataManager.books[s_DataManager.bookkeys[i]].key,"junior") == nil then
+                if s_DataManager.books[s_DataManager.bookkeys[i]].type == self.education then
+                    key_array[#key_array + 1] = s_DataManager.bookkeys[i]
+                end
             end
         end
     else 

@@ -90,7 +90,7 @@ function DownloadSoundButton.create(parentNode,bool)
     end
 
     local updateOfflineState = function()
-
+        print ()
         local currentNetwork = s_SERVER.isNetworkConnectedNow()
 
         if currentNetwork == true and isOffline == false then
@@ -162,9 +162,7 @@ function DownloadSoundButton.create(parentNode,bool)
     --update function
     local timeToCheckNetwork = 0
     local update = function(dt)
-
         if isOffline == true then
-
             if SoundsDownloadingInstance[bookKey]~=nil then
                 downloadState = SoundsDownloadingInstance[bookKey].downloadState
             end

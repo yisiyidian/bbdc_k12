@@ -267,11 +267,11 @@ end
 
 -- 判断音频是否存在
 function checkIfDownloadSoundsExist(bookkey)
-    local storagePath = cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..bookkey.."/"..bookkey
+    local storagePath1 = cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..bookkey
+    local storagePath2 = cc.FileUtils:getInstance():getWritablePath().."BookSounds".."/"..bookkey.."/"..bookkey
+    print("The path of: "..storagePath1.."is ",cc.FileUtils:getInstance():isFileExist(storagePath1) )
 
-    print("The path of: "..storagePath.."is ",cc.FileUtils:getInstance():isFileExist(storagePath) )
-
-    return  cc.FileUtils:getInstance():isFileExist(storagePath)
+    return  cc.FileUtils:getInstance():isFileExist(storagePath1) or cc.FileUtils:getInstance():isFileExist(storagePath2)
 end
 
 -- 返回日期信息
