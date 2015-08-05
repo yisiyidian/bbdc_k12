@@ -87,6 +87,8 @@ function LevelItem:createObjectForResource(config)
 		--print('Decoration')
 		element = cc.Sprite:create(config_info[6])
 		element:setName(config_info[1])
+	elseif config_info[5] == 'cloud' then 
+		return
 	elseif config_info[5] == 'island' then -- 岛屿
 		local function touchEvent1(sender,eventType) -- 点击已解锁岛屿响应事件
 	        if eventType == ccui.TouchEventType.ended then
@@ -153,7 +155,7 @@ function LevelItem:createObjectForResource(config)
             print('LEVELID:'..levelId)
             self.info['lock'..levelId] = ccui.Scale9Sprite:create('image/chapter/chapter0/unit_lock.png')
             self.info['lock'..levelId]:setName('lock'..levelId)
-            self.info['lock'..levelId]:setPosition(cc.p(tonumber(location[1])+80,tonumber(location[2])-60))
+            self.info['lock'..levelId]:setPosition(cc.p(tonumber(location[1])-10,tonumber(location[2])+3))
             self:addChild(self.info['lock'..levelId],100)
             print('lockName:'..self.info['lock'..levelId]:getName())
 			local number = ccui.TextBMFont:create()

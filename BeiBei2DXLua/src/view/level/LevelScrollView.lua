@@ -95,15 +95,20 @@ function LevelScrollView:addBottomBounce()
 	print('add bottom bounce:'..self.info['activeScreenId'])
 	if (self.info['activeScreenId'] % 2 == 0 and self.info['activeScreenId'] < self.info['maxScreenId'])
 		or (self.info['activeScreenId'] % 2 == 1 and self.info['activeScreenId'] + 1 < self.info['maxScreenId']) then  -- 存在云层后面的关卡
-		local cloud1 = cc.Sprite:create('image/level/cloud_1.png')
-		cloud1:setPosition(150, 0)
-		self:addChild(cloud1,100)
-		local cloud2 = cc.Sprite:create('image/level/cloud_2.png')
-		cloud2:setPosition(400, 0)
-		self:addChild(cloud2,100)
-		local cloud3 = cc.Sprite:create('image/level/cloud_3.png')
-		cloud3:setPosition(650, 0)
-		self:addChild(cloud3,100)
+		-- local cloud1 = cc.Sprite:create('image/level/cloud_1.png')
+		-- cloud1:setPosition(150, 0)
+		-- self:addChild(cloud1,100)
+		-- local cloud2 = cc.Sprite:create('image/level/cloud_2.png')
+		-- cloud2:setPosition(400, 0)
+		-- self:addChild(cloud2,100)
+		-- local cloud3 = cc.Sprite:create('image/level/cloud_3.png')
+		-- cloud3:setPosition(650, 0)
+		-- self:addChild(cloud3,100)
+
+		-- 添加云层显示
+		for k, v in pairs(s_screenConfig['2']) do 
+			self:createObjectForResource(v)
+		end
 		
 		if self.info['activeScreenId'] % 2 == 0 then
 			self.info['bottomScreenId'] = self.info['activeScreenId'] + 1
@@ -212,6 +217,24 @@ function LevelScrollView:getBookMaxScreenID()
 		totalScreenCount = 1 + math.ceil((bookMaxLevelId - 4) / 5)
 	end
 	return totalScreenCount
+end
+
+-- 读取配置，为每个资源实例化对象
+function LevelScrollView:createObjectForResource(config)
+	local element
+	local config_info = split(config, '\t')
+	local location = split(config_info[3],'|')
+	--print('config_info:'..config)
+	-- 初始化element的属性
+	if config_info[5] == 'cloud' then -- 云层
+		--print('Decoration')
+		element = cc.Sprite:create(config_info[6])
+		element:setName(config_info[1])
+		element:setPosition(cc.p(tonumber(location[1]),tonumber(location[2])))
+		local anchor = split(config_info[2], '|')
+		element:setAnchorPoint(cc.p(tonumber(anchor[1]),tonumber(anchor[2])))
+	   	self:addChild(element, tonumber(config_info[4]))
+	end
 end
 
 return LevelScrollView
