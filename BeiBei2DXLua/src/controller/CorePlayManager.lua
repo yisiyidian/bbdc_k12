@@ -321,24 +321,24 @@ function CorePlayManager.initTotalUnitPlay()
     end
     local unitList = s_LocalDatabaseManager.getAllUnitInfo()
     -- print('all unit list size:'..#unitList)
-
-    CorePlayManager.currentUnitID = nil
-    for i = 1, #unitList do
-        local unit = unitList[i]
-        if unit.unitState >= 1 and unit.unitState <= 4 then
-            if unit.coolingDay == 0 then
-                CorePlayManager.currentUnitID = unit.unitID
-                break
-            else
-                -- pass
-            end
-        elseif unit.unitState >= 5 then
-            -- pass
-        else
-            CorePlayManager.currentUnitID = unit.unitID
-            break
-        end
-    end
+    print_lua_table(unitList)
+    CorePlayManager.currentUnitID = #unitList
+    -- for i = 1, #unitList do
+    --     local unit = unitList[i]
+    --     if unit.unitState >= 1 and unit.unitState <= 4 then
+    --         if unit.coolingDay == 0 then
+    --             CorePlayManager.currentUnitID = unit.unitID
+    --             break
+    --         else
+    --             -- pass
+    --         end
+    --     elseif unit.unitState >= 5 then
+    --         -- pass
+    --     else
+    --         CorePlayManager.currentUnitID = unit.unitID
+    --         break
+    --     end
+    -- end
 
     if CorePlayManager.currentUnitID == nil then
         -- pass all
