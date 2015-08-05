@@ -90,7 +90,6 @@ function DownloadSoundButton.create(parentNode,bool)
     end
 
     local updateOfflineState = function()
-        print ()
         local currentNetwork = s_SERVER.isNetworkConnectedNow()
 
         if currentNetwork == true and isOffline == false then
