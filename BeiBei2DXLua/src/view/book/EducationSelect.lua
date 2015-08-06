@@ -56,6 +56,9 @@ function EducationSelect:ctor()
     	if eventType == ccui.TouchEventType.began then
             playSound(s_sound_buttonEffect)   
         elseif eventType == ccui.TouchEventType.ended then
+            if s_CURRENT_USER.tutorialStep == s_tutorial_grade_select then
+                s_CURRENT_USER:setTutorialStep(s_tutorial_book_select)
+            end
             if s_CURRENT_USER.summaryStep < s_summary_selectGrade then
                 s_CURRENT_USER:setSummaryStep(s_summary_selectGrade)
                 AnalyticsSummaryStep(s_summary_selectGrade)
@@ -152,7 +155,7 @@ end
 
 --弹出注册帐号的界面
 function EducationSelect:popupAccountBind()
-    if s_CURRENT_USER.tutorialStep > s_tutorial_book_select or s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then return end
+    if s_CURRENT_USER.tutorialStep > s_tutorial_grade_select or s_CURRENT_USER.usertype ~= USER_TYPE_GUEST then return end
     --
     local introLayer = RegisterAccountView.new(RegisterAccountView.STEP_10)
     s_SCENE:popup(introLayer)

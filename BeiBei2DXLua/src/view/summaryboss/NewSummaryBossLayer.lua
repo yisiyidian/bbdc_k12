@@ -230,6 +230,7 @@ function NewSummaryBossLayer:initWordList()
 
     --第一关时间加倍
     local timeConfig = {2,1.8,1.6,1.4,1.2}
+    self.timeConfig = timeConfig
 
     if self.unit.unitID <= #timeConfig then
         self.totalTime = self.totalTime * timeConfig[self.unit.unitID]
@@ -375,7 +376,10 @@ function NewSummaryBossLayer:initMat(visible)
     mat:setPosition(s_DESIGN_WIDTH/2, 150)
     self:addChild(mat,1)
     --总时间
-    self.totalTime = 4 * #self.wordList[1][1] + 4
+        print('----------------')
+    print('boss word',self.wordList[1][1])
+    print('----------------') 
+    self.totalTime = (4 * #self.wordList[1][1] + 4) * self.timeConfig[self.unit.unitID]
     --剩余时间
     self.leftTime = self.totalTime
     -- if self.tutorialStep == 0 then
@@ -477,6 +481,10 @@ function NewSummaryBossLayer:initMat(visible)
                 if self.girl.isAfraid then
                     playMusic(s_sound_Get_Outside)
                 end
+                table.remove(self.wordList,1)
+                self.totalTime = (4 * #self.wordList[1][1] + 4) * self.timeConfig[self.unit.unitID]
+                --剩余时间
+                self.leftTime = self.totalTime
                 self.boss:goBack(self.totalTime)
                 self:resetMat()
             else
@@ -496,7 +504,7 @@ function NewSummaryBossLayer:resetMat()
         end
         self.mat = nil
         self.invisibleMat = nil
-        table.remove(self.wordList,1)
+        
         self:initMat()
         if self.tutorialStep == 1 then
             self:initMat(false)
