@@ -499,9 +499,8 @@ function touchBackgroundClosePopup(layer,popup,closeFunc)
         local location = layer:convertToNodeSpace(touch:getLocation())
         if not cc.rectContainsPoint(popup:getBoundingBox(),location) then
             if closeFunc ~= nil then closeFunc() end
-            print("ClosePopup")
         else
-            print("nothing happen")
+
         end
     end
     

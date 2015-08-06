@@ -80,14 +80,16 @@ function EducationSelect:ctor()
     	background:addChild(bookBtn)
     	bookBtn:setName(education[i])
 
-        local icon = cc.Sprite:create('image/book/k12/select_grade_'..education[i]..'_school.png')
+        local icon = ccui.Button:create('image/book/k12/select_grade_'..education[i]..'_school.png','image/book/k12/select_grade_'..education[i]..'_school.png')
         icon:setPosition(bookBtn:getPositionX(),bookBtn:getPositionY() + 150)
+        icon:setName(education[i])
         background:addChild(icon)
         
 		local title = cc.Label:createWithSystemFont(titleArray[i],'',34)
         title:setPosition(bookBtn:getContentSize().width*0.5,bookBtn:getContentSize().height*0.5)
         bookBtn:addChild(title)   
 
+        icon:addTouchEventListener(enterBookLayer)  
         bookBtn:addTouchEventListener(enterBookLayer) 	
     end
     --更多书籍的按钮

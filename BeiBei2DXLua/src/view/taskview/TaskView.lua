@@ -117,6 +117,8 @@ function TaskView:initUI()
 	self:TodayTaskComplete()
 
 	self:resetView()
+
+	
 end
 
 --今日任务全部完成

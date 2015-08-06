@@ -66,7 +66,7 @@ function ShareBottom:ctor()
 	local weixin_button = ccui.Button:create('image/share/share_weichat.png','')
 	weixin_button:setScale9Enabled(true)
 	weixin_button:setPosition(0.5 * (s_RIGHT_X - s_LEFT_X) + 5,0.55 * bottom:getContentSize().height)
-	bottom:addChild(weixin_button)
+	-- bottom:addChild(weixin_button)
 	addTitle(weixin_button,'朋友圈',0.45)
 	if not IS_SNS_WEIXIN_SHARE_AVAILABLE then
 		weixin_button:setVisible(false)

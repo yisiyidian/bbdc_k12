@@ -229,9 +229,12 @@ function NewSummaryBossLayer:initWordList()
     end
 
     --第一关时间加倍
-    if self.unit.unitID == 1 then
-        self.totalTime = self.totalTime * 2
+    local timeConfig = {2,1.8,1.6,1.4,1.2}
+
+    if self.unit.unitID <= #timeConfig then
+        self.totalTime = self.totalTime * timeConfig[self.unit.unitID]
     end
+
     -- 打乱取词
     for i = 1, #wordList do
         local randomIndex = math.random(1,#wordList)

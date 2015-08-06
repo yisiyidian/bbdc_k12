@@ -9,6 +9,7 @@ function PopupSoundDownloadSuccess.create()
     
     local layer = PopupSoundDownloadSuccess.new()
     local bookkey = s_CURRENT_USER.bookKey
+    local bookName = s_DataManager.books[s_CURRENT_USER.bookKey].name
 
     --add background
     layer:createBackground("image/soundLoadingBar/popup.png")
@@ -23,7 +24,7 @@ function PopupSoundDownloadSuccess.create()
     layer:addConfirmButton("image/soundLoadingBar/confirm_button.png","image/soundLoadingBar/confirm_button_press.png","知道了")
     
     --add title
-    layer:addTitle(bookkey.."完成下载")
+    layer:addTitle(bookName.."完成下载")
     
     --add description
     layer:addDescription("赞，你可以听见单词声音了")
@@ -134,8 +135,8 @@ end
 function PopupSoundDownloadSuccess:runMoveInAction()
     
     local parentNode = self:getParent() 
-    local action1 = cc.MoveTo:create(0.3,cc.p(parentNode:getContentSize().width/2,s_DESIGN_HEIGHT/2-50))
-    local action2 = cc.MoveTo:create(0.2,cc.p(parentNode:getContentSize().width/2,s_DESIGN_HEIGHT/2))
+    local action1 = cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2-50))
+    local action2 = cc.MoveTo:create(0.2,cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
 
     self:runAction(cc.Sequence:create(action1,action2))
 end
@@ -143,7 +144,7 @@ end
 function PopupSoundDownloadSuccess:runMoveOutAction()
 
     local releaseSelf = function()
-        self:removeFromParent()
+        s_SCENE:removeAllPopups()
     end
     
     local parentNode = self:getParent() 

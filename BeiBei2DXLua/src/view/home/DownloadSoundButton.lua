@@ -61,10 +61,7 @@ function DownloadSoundButton.create(parentNode,bool)
         if eventType == ccui.TouchEventType.ended then
             if bool == true then
                 local popupOffline = require("popup.PopupSoundOfflineDownload").create()
-                local parent = parentNode:getParent()
-                popupOffline:setPosition(parent:getContentSize().width/2,parent:getContentSize().height+800)
-                parent:addChild(popupOffline,100)
-                popupOffline:runMoveInAction()   
+                button:popup(popupOffline)  
             end
         end
     end
@@ -80,10 +77,7 @@ function DownloadSoundButton.create(parentNode,bool)
             button_back:addTouchEventListener(button_download_clicked)
             if bool == true then
                 local popupFailed = require("popup.PopupSoundDownloadFailed").create()
-                local parent = parentNode:getParent()
-                popupFailed:setPosition(parent:getContentSize().width/2,parent:getContentSize().height+800)
-                parent:addChild(popupFailed,100)
-                popupFailed:runMoveInAction()   
+                button:popup(popupFailed)   
                 downloadState = "NOTBEGIN"    
             end    
         end            
@@ -144,10 +138,7 @@ function DownloadSoundButton.create(parentNode,bool)
             SoundsDownloadingInstance[bookKey]=nil
             if bool == true or string.find(s_CURRENT_USER.bookList,"|") ~= nil then
                 local popupSuccess = require("popup.PopupSoundDownloadSuccess").create()
-                local parent = parentNode:getParent()
-                popupSuccess:setPosition(parent:getContentSize().width/2,parent:getContentSize().height+800)
-                parent:addChild(popupSuccess,100)
-                popupSuccess:runMoveInAction()
+                button:popup(popupSuccess) 
             end
         end
 
@@ -258,6 +249,12 @@ end
 
 function DownloadSoundButton:setEnabled(enabled)
     self.button_back:setEnabled(enabled)
+end
+
+function DownloadSoundButton:popup(popup)
+    popup:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT+800)
+    s_SCENE.popupLayer:addChild(popup)
+    popup:runMoveInAction()
 end
 
 return DownloadSoundButton

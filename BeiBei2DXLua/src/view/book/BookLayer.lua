@@ -256,17 +256,17 @@ function BookLayer:createTimer()
 
         time = time + delta
 
-        local beginIndex = math.floor(count * percent) - 4
-        if beginIndex <= 1 then
-            beginIndex = 1
-        end
-        local endIndex = math.ceil(count * percent) + 4
-        if endIndex >= count then
-            endIndex = count
-        end
-        if time > 0.1 then
+        if time > 0.5 then        
+            local beginIndex = math.floor(count * (1-percent)) - 4
+            if beginIndex <= 1 then
+                beginIndex = 1
+            end
+            local endIndex = math.ceil(count * (1-percent)) + 4
+            if endIndex >= count then
+                endIndex = count
+            end
             for i=1,count do
-                if self.shelf[i] == nil and (i>= beginIndex or i<=endIndex) then
+                if self.shelf[i] == nil and i>= beginIndex and i<=endIndex then
                     self:addShelf(i)
                 end 
             end

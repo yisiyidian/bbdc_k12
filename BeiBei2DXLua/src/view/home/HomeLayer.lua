@@ -422,11 +422,12 @@ function HomeLayer:ctor()
             local SmallAlter = require("view.alter.SmallAlter")
             local smallAlter = SmallAlter.create("要跟贝贝说再见了吗？")
             smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-            s_SCENE.popupLayer:addChild(smallAlter)
+            s_SCENE:popup(smallAlter)
             smallAlter.affirm = function ()
                 cx.CXUtils:getInstance():shutDownApp()
             end
-
+        elseif #isPopup ~= 0 then
+            s_SCENE:removeAllPopups()
         end
     end, function ()
 
@@ -649,32 +650,6 @@ function HomeLayer:onBtnSettingTouch(sender,eventType)
         end
 
         self:showSettingView()
-        -- local SettingLayer = require("view.home.SettingLayer")
-        -- local settinglayer = SettingLayer.new()
-        -- s_SCENE:popup(settinglayer)
-
-        -- if self.viewIndex == 1 then
-            -- s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            -- self.mission_progress.stopListener = true
-            -- self.viewIndex = 2
-            -- local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH / 2 + self.offset,s_DESIGN_HEIGHT/2))
-            -- self.backColor:runAction(action1)
-
-            -- local action2 = cc.DelayTime:create(0.5)
-            -- local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            -- self.setting_back:runAction(cc.Sequence:create(action2, action3))
-            --offline tip
-        -- else
-            -- s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            -- self.mission_progress.stopListener = false
-            -- self.viewIndex = 1
-            -- local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-            -- self.backColor:runAction(action1)
-
-            -- local action2 = cc.DelayTime:create(0.5)
-            -- local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            -- self.setting_back:runAction(cc.Sequence:create(action2, action3))
-        -- end 
     end
 end
 

@@ -106,11 +106,7 @@ function ChapterLayer:ctor()
     else
         self:scrollLevelLayer(progress, 0)
     end
-    -- if progress - 0 == 0 then
-    --     self:scrollLevelLayer(progress, 0)
-    -- else
-    --     self:scrollLevelLayer(progress+1,0)
-    -- end
+
 
     self:addBottomBounce()
     -- check unlock level
@@ -173,7 +169,12 @@ function ChapterLayer:ctor()
         s_CURRENT_USER.showTaskLayer = 0  
     end  
 
-
+    onAndroidKeyPressed(self,function ()
+        local isPopup = s_SCENE.popupLayer:getChildren()
+        if #isPopup ~= 0 then
+            s_SCENE:removeAllPopups()
+        end
+    end, function ()end)
 end
 
 function ChapterLayer:touchFunc()
