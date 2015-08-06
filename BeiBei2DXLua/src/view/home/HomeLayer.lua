@@ -48,8 +48,7 @@ function HomeLayer.create()
 
     -- init first unit
     local maxID = s_LocalDatabaseManager.getMaxUnitID()
-    if maxID == 0 then -- empty
-        -- print('####test init unit info')
+    if maxID == 0 then 
         s_LocalDatabaseManager.initUnitInfo(1)
     end
 
@@ -61,9 +60,6 @@ function HomeLayer.create()
     -- data begin
     print("s_CURRENT_USER.bookKey:"..s_CURRENT_USER.bookKey)
 
-    -- local bookName          = s_DataManager.books[s_CURRENT_USER.bookKey].name
-    -- local bookWordCount     = s_DataManager.books[s_CURRENT_USER.bookKey].words
-    -- data end
 
     s_SCENE.touchEventBlockLayer.unlockTouch()
 

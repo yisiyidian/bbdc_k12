@@ -301,10 +301,9 @@ function SummaryBossAlter:win1(entrance)
     --     end,{})))
     -- else
     self:win2(entrance,hasCheckedIn)
-    -- if entrance == ENTRANCE_NORMAL and self.needToAddBean then
-    --     s_CorePlayManager.leaveSummaryModel(true)
-    -- end
-    -- end
+    if entrance == ENTRANCE_NORMAL and self.needToAddBean then
+        s_CorePlayManager.leaveSummaryModel(true)
+    end
 end
 
 function SummaryBossAlter:win2(entrance,hasCheckedIn)
