@@ -108,9 +108,17 @@ function EducationSelect:ctor()
     end
     --弹出注册帐号
     --TODO 这块的流程太乱 需整理
+  
+    onAndroidKeyPressed(self,function ( ... )
+        s_CorePlayManager.enterHomeLayer()
+    end,function ( ... )
+        -- body
+    end)  
     
     --如果是直接登陆的用户没有选书 则走else
     --如果是游客登录或者注册 就走if
+
+
     if s_CURRENT_USER.usertype ~= USER_TYPE_BIND then
         s_CURRENT_USER.guideStep = 0
         self:popupAccountBind()
@@ -126,11 +134,6 @@ function EducationSelect:ctor()
     end
 
 
-    onAndroidKeyPressed(self,function ( ... )
-        s_CorePlayManager.enterHomeLayer()
-    end,function ( ... )
-        -- body
-    end)
 end
 
 
