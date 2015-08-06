@@ -223,17 +223,11 @@ function CorePlayManager.leaveSummaryModel(state)
     -- CorePlayManager.enterLevelLayer()
 end
 
-
--- function CorePlayManager.enterIntroLayer()
---     local IntroLayer = IntroLayer.create(false)
---     s_SCENE:replaceGameLayer(IntroLayer)
--- end
-
 function CorePlayManager.enterHomeLayer()
+    if s_CURRENT_USER.bookKey == '' or s_CURRENT_USER.bookKey == nil then 
+        return
+    end
 
-    -- local DramaLayer = require("view.home.DramaLayer")
-    -- local dramaLayer = DramaLayer.create()
-    -- s_SCENE:replaceGameLayer(dramaLayer)
     local homeLayer = HomeLayer.create()
     s_SCENE:replaceGameLayer(homeLayer)
 end

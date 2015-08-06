@@ -168,13 +168,6 @@ function ChapterLayer:ctor()
         s_SCENE:popup(taskview)
         s_CURRENT_USER.showTaskLayer = 0  
     end  
-
-    onAndroidKeyPressed(self,function ()
-        local isPopup = s_SCENE.popupLayer:getChildren()
-        if #isPopup ~= 0 then
-            s_SCENE:removeAllPopups()
-        end
-    end, function ()end)
 end
 
 function ChapterLayer:touchFunc()

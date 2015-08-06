@@ -118,7 +118,30 @@ function TaskView:initUI()
 
 	self:resetView()
 
-	
+	onAndroidKeyPressed(self,function ()
+        local isPopup = s_SCENE.popupLayer:getChildren()
+        if #isPopup ~= 0 then
+			self:closeFunc()
+        end
+    end, function ()end)
+end
+
+function TaskView:closeFunc()
+	self.closeButton:setTouchEnabled(false)
+
+	local action1 = cc.FadeOut:create(0.5)
+	local action2 = cc.ScaleTo:create(0.5,0)
+	local action3 = cc.MoveTo:create(0.5,cc.p(s_RIGHT_X - 500, -400))
+	local action4 = cc.CallFunc:create(function ()
+									    s_SCENE:removeAllPopups()
+										end,{})
+	local action5 = cc.Spawn:create(action1,action2,action3)
+	local action6 = cc.CallFunc:create(function ()
+		if self.callBox ~= nil then
+			self.callBox()
+		end
+	end)
+	self:runAction(cc.Sequence:create(action5,action4,action6))            
 end
 
 --今日任务全部完成
@@ -315,25 +338,7 @@ function TaskView:CloseClick(sender,eventType)
 		return
 	end
 	
-	self.closeButton:setTouchEnabled(false)
-
-	local action1 = cc.FadeOut:create(0.5)
-	local action2 = cc.ScaleTo:create(0.5,0)
-	local action3 = cc.MoveTo:create(0.5,cc.p(s_RIGHT_X - 500, -400))
-	local action4 = cc.CallFunc:create(function ()
-									    s_SCENE:removeAllPopups()
-									    -- s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-										end,{})
-	local action5 = cc.Spawn:create(action1,action2,action3)
-	-- --关闭宝箱
-	local action6 = cc.CallFunc:create(function ()
-		if self.callBox ~= nil then
-			self.callBox()
-		end
-	end)
-	self:runAction(cc.Sequence:create(action5,action4,action6))
-	-- --开启触摸
-	-- s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+	self:closeFunc()
 end
 
 function TaskView:runActionSign()

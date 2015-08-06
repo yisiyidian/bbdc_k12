@@ -16,7 +16,7 @@ function SmallAlter.create(info)
     end
 
     main.close = function()
-        main:removeFromParent()
+        -- main:removeFromParent()
     end
 
     local back = cc.Sprite:create("image/alter/tanchu_board_small_white.png")
