@@ -379,7 +379,7 @@ function NewSummaryBossLayer:initMat(visible)
         print('----------------')
     print('boss word',self.wordList[1][1])
     print('----------------') 
-    self.totalTime = (4 * #self.wordList[1][1] + 4) * self.timeConfig[self.unit.unitID]
+    self.totalTime = (4 * #self.wordList[1][1] + 10) * self.timeConfig[self.unit.unitID]
     --剩余时间
     self.leftTime = self.totalTime
     -- if self.tutorialStep == 0 then
@@ -482,7 +482,7 @@ function NewSummaryBossLayer:initMat(visible)
                     playMusic(s_sound_Get_Outside)
                 end
                 table.remove(self.wordList,1)
-                self.totalTime = (4 * #self.wordList[1][1] + 4) * self.timeConfig[self.unit.unitID]
+                self.totalTime = (4 * #self.wordList[1][1] + 10) * self.timeConfig[self.unit.unitID]
                 --剩余时间
                 self.leftTime = self.totalTime
                 self.boss:goBack(self.totalTime)
