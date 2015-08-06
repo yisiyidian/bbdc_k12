@@ -161,7 +161,7 @@ function HomeLayer:ctor()
     backColor:addChild(name)
 
     local currentBook = cc.Label:createWithSystemFont("正在学习："..s_DataManager.books[s_CURRENT_USER.bookKey].name,"",22)
-    currentBook:setPosition(bigWidth/2, s_DESIGN_HEIGHT-140)
+    currentBook:setPosition(bigWidth/2 + 50, s_DESIGN_HEIGHT-140)
     currentBook:setColor(cc.c4b(255,255,255,255))
     backColor:addChild(currentBook)
     --设置按钮

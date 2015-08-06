@@ -37,6 +37,9 @@ function Boss:setBlood(currentBlood,totalBlood)
 end
 
 function Boss:goForward(time)
+    print('----------------')
+    print('boss time',time)
+    print('----------------')    
 	local bossAction = {}
     for i = 1, 10 do
         local stop = cc.DelayTime:create(time / 10 * 0.8)
