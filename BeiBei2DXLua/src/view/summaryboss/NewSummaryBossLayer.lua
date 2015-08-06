@@ -300,13 +300,19 @@ function NewSummaryBossLayer:initBackground()
     end
     pauseBtn:addTouchEventListener(pauseScene)
 
-    onAndroidKeyPressed(pauseBtn, function ()
-        if not self.gamePaused then 
-            createPausePopup()
-        end
-    end, function ()
+    s_SCENE:callFuncWithDelay(2,function ()
+        onAndroidKeyPressed(pauseBtn, function ()
+            local isPopup = s_SCENE.popupLayer:getChildren()
+            if #isPopup == 0 then
+                if not self.gamePaused then 
+                    createPausePopup()
+                end
+            end
+        end, function ()
 
+        end)
     end)
+
 	--添加girl
 	local girl = require("view.summaryboss.Girl").create()
 	girl:setPosition(s_DESIGN_WIDTH * 0.05, s_DESIGN_HEIGHT * 0.76)
@@ -545,6 +551,15 @@ function NewSummaryBossLayer:addChangeBtn()
             self.gamePaused = true
             local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1][4],self.boss,self.firstTimeToChange,self.unit.unitID)
             s_SCENE.popupLayer:addChild(hintBoard)
+
+            onAndroidKeyPressed(hintBoard, function ()
+                local isPopup = s_SCENE.popupLayer:getChildren()
+                if #isPopup == 0 then
+                    hintBoard.hintOver()
+                end
+            end, function ()
+
+            end)
             
             hintBoard.hintOver = function (  )
                 self.firstTimeToChange = false

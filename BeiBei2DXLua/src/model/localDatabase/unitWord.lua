@@ -442,6 +442,10 @@ function M.initUnitInfo(unitID)
 end
 
 function M.updateUnitState(unitID)
+    if unitID == nil then
+        return 
+    end
+    
     local userId    = s_CURRENT_USER.objectId
     local bookKey   = s_CURRENT_USER.bookKey
     local username  = s_CURRENT_USER.username

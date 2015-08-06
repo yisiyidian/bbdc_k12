@@ -332,6 +332,14 @@ function BookLayer:init()
         s_CURRENT_USER:setGuideStep(s_guide_step_selectBook) 
     end
 
+    onAndroidKeyPressed(self,function ( ... )
+        if s_CURRENT_USER.bookKey ~= '' and s_CURRENT_USER.bookKey ~= nil then 
+            s_CorePlayManager.enterEducationLayer()
+        end
+    end,function ( ... )
+        -- body
+    end)
+
 end
 
 

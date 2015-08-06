@@ -32,10 +32,11 @@ local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 local list = {}
 
 function HomeLayer.create()
-
+    -- 解锁个人信息页面
     if s_CURRENT_USER:getLockFunctionState(1) == 0 then
         s_CURRENT_USER:unlockFunctionState(1)
     end
+
     -- task
     local todayTotalBossNum     = s_LocalDatabaseManager:getTodayTotalBossNum()
     local todayRemainBossNum    = s_LocalDatabaseManager:getTodayRemainBossNum()
@@ -71,7 +72,7 @@ end
 --构造函数
 function HomeLayer:ctor()
     self.offset = 500
-    self.viewIndex = 1
+    self.view = "home"
 
     self.moveLength = 100
     self.moved = false
@@ -391,18 +392,8 @@ function HomeLayer:ctor()
 
     onAndroidKeyPressed(self, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()
-        if self.viewIndex == 2 and #isPopup == 0 then
-            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
-            self.viewIndex = 1
-
-            local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-            backColor:runAction(action1)
-
-            local action2 = cc.DelayTime:create(0.5)
-            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            --self.setting_back:runAction(cc.Sequence:create(action2, action3))
-
+        if self.view ~= "home" and #isPopup == 0 then
+            self.view = "home"
         elseif self.isDataShow == true and #isPopup == 0 then
             self.isDataShow = false
             self:setButtonEnabled(true)
@@ -414,13 +405,16 @@ function HomeLayer:ctor()
             end)
             button_data:runAction(cc.Sequence:create(action1, action2))
 
-        elseif self.isDataShow == false and  self.viewIndex == 1 and #isPopup == 0 then
+        elseif self.isDataShow == false and  self.view == "home" and #isPopup == 0 then
             local SmallAlter = require("view.alter.SmallAlter")
             local smallAlter = SmallAlter.create("要跟贝贝说再见了吗？")
             smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
             s_SCENE:popup(smallAlter)
             smallAlter.affirm = function ()
                 cx.CXUtils:getInstance():shutDownApp()
+            end
+            smallAlter.close = function ()
+                s_SCENE:removeAllPopups()
             end
         elseif #isPopup ~= 0 then
             s_SCENE:removeAllPopups()
@@ -453,7 +447,7 @@ function HomeLayer:onTouchMoved(touch, event)
     local moveLength = self.moveLength
     
     if start_y < 0.1 * s_DESIGN_HEIGHT and start_x > s_DESIGN_WIDTH * 0.0 and start_x < s_DESIGN_WIDTH * 2.0 then
-        if now_y - moveLength > start_y and not self.isDataShow and self.viewIndex == 1 then         
+        if now_y - moveLength > start_y and not self.isDataShow and self.view == "home" then         
             self.isDataShow = true
             self:setButtonEnabled(false)
             self.button_data:setLocalZOrder(2)
@@ -472,7 +466,7 @@ function HomeLayer:onTouchMoved(touch, event)
         end
     end
     if start_y > s_DESIGN_HEIGHT - 280 and start_x > s_DESIGN_WIDTH * 0.0 and start_x < s_DESIGN_WIDTH * 2.0 then
-        if now_y + moveLength < start_y and self.isDataShow and self.viewIndex == 1 then
+        if now_y + moveLength < start_y and self.isDataShow and self.view == "home" then
             self.isDataShow = false
             self:setButtonEnabled(true)
             local action1 = cc.MoveTo:create(0.3,cc.p(bigWidth/2, 0))
@@ -487,16 +481,12 @@ function HomeLayer:onTouchMoved(touch, event)
     end
 
     if now_x + moveLength < start_x and not self.isDataShow then
-        if self.viewIndex == 2 then
+        if self.view ~= "home" then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-            self.viewIndex = 1
+            self.view = "home"
 
             local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
             self.backColor:runAction(action1)
-
-            local action2 = cc.DelayTime:create(0.5)
-            local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            --self.setting_back:runAction(cc.Sequence:create(action2, action3))
         end
     end
 end
@@ -506,24 +496,10 @@ function HomeLayer:onTouchEnded(touch,event)
     local start_y = self.start_y
     
     local location = self:convertToNodeSpace(touch:getLocation())
-    -- if not cc.rectContainsPoint(self.setting_back:getBoundingBox(),location) and self.viewIndex == 2 then
-    --     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-
-    --     self.mission_progress.stopListener = false
-
-    --     self.viewIndex = 1
-
-    --     local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2))
-    --     self.backColor:runAction(action1)
-
-    --     local action2 = cc.DelayTime:create(0.5)
-    --     local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-    --     self.setting_back:runAction(cc.Sequence:create(action2, action3))
-    -- end
     if not self.isDataShow then
         if math.abs(location.y - start_y) > 10 or math.abs(location.x - start_x) > 10 then
             return
-        elseif self.viewIndex == 1 and location.y < 0.1 * s_DESIGN_HEIGHT then
+        elseif self.view == "home" and location.y < 0.1 * s_DESIGN_HEIGHT then
             self.isDataShow = true
             self:setButtonEnabled(false)
             self.button_data:setLocalZOrder(2)
@@ -661,8 +637,10 @@ function HomeLayer:changeViewToFriendOrShop(destination)
     local DestinationLayer = nil
     if destination == "ShopLayer" then
         DestinationLayer = require("view.shop."..destination)
+        self.view = "shop"
     elseif destination == "FriendLayer" then
         DestinationLayer = require("view.friend."..destination)
+        self.view = "friend"
     else
         return
     end
@@ -673,13 +651,7 @@ function HomeLayer:changeViewToFriendOrShop(destination)
     destinationLayer:setAnchorPoint(0,0.5)
     destinationLayer:setPosition(s_RIGHT_X, s_DESIGN_HEIGHT/2)
     self.backColor:removeChildByName('redHint')
-    if self.viewIndex == 2 then
-        s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-        self.viewIndex = 1
-        local action2 = cc.DelayTime:create(0.5)
-        local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-        --self.setting_back:runAction(cc.Sequence:create(action2, action3))
-    end
+
     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
        local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2 - bigWidth,s_DESIGN_HEIGHT/2))
     self.backColor:runAction(action1)
