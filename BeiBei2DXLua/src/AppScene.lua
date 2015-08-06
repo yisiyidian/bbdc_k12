@@ -26,13 +26,14 @@ s_review_boss_game_state = 'reviewBossGameState'
 s_summary_boss_game_state = 'summaryBossGameState'
 
 -- define tutorial state
-s_tutorial_book_select = 0
-s_tutorial_home = 1
-s_tutorial_level_select = 2
-s_tutorial_study = 3
-s_tutorial_review_boss = 4
-s_tutorial_summary_boss = 5
-s_tutorial_complete = 6
+s_tutorial_grade_select = 0
+s_tutorial_book_select = 1
+s_tutorial_home = 2
+s_tutorial_level_select = 3
+s_tutorial_study = 4
+s_tutorial_review_boss = 5
+s_tutorial_summary_boss = 6
+s_tutorial_complete = 7
 -- define small tutorial state
 s_smalltutorial_book_select = 0
 s_smalltutorial_home = 1 
