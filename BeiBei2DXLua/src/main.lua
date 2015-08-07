@@ -34,7 +34,11 @@ local function main()
     collectgarbage("setpause", 100)
     collectgarbage("setstepmul", 5000)
 
-    
+    -- addSkipBackupAttributeToItemAtPath
+    local soundStoreDirInIOS = cc.FileUtils:getInstance():getWritablePath().."BookSounds"
+    local customClass = CustomClass:create()
+    local result = customClass:addSkipBackupAttributeToItemAtPath(soundStoreDirInIOS)
+    print("addSkipBackupAttributeToItemAtPath msg is : " .. result)
     
     cc.Director:getInstance():setDisplayStats(false)
 

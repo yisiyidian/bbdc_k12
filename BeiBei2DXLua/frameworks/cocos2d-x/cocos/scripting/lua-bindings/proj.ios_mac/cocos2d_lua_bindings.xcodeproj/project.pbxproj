@@ -280,6 +280,10 @@
 		66E529651A38672A00D1FBB1 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 66E529521A38672A00D1FBB1 /* sqlite3.c */; };
 		66E529661A38672A00D1FBB1 /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 66E529531A38672A00D1FBB1 /* sqlite3.h */; };
 		66E529671A38672A00D1FBB1 /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 66E529531A38672A00D1FBB1 /* sqlite3.h */; };
+		848E4D5F1B73522000F273F7 /* lua_cocos2dx_custom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 848E4D5D1B73522000F273F7 /* lua_cocos2dx_custom.cpp */; };
+		848E4D601B73522000F273F7 /* lua_cocos2dx_custom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 848E4D5D1B73522000F273F7 /* lua_cocos2dx_custom.cpp */; };
+		848E4D611B73522000F273F7 /* lua_cocos2dx_custom.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 848E4D5E1B73522000F273F7 /* lua_cocos2dx_custom.hpp */; };
+		848E4D621B73522000F273F7 /* lua_cocos2dx_custom.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 848E4D5E1B73522000F273F7 /* lua_cocos2dx_custom.hpp */; };
 		F4FE0D5719ECD00100B8B12B /* luasocket_scripts.c in Sources */ = {isa = PBXBuildFile; fileRef = F4FE0D5519ECD00100B8B12B /* luasocket_scripts.c */; };
 		F4FE0D5819ECD00100B8B12B /* luasocket_scripts.c in Sources */ = {isa = PBXBuildFile; fileRef = F4FE0D5519ECD00100B8B12B /* luasocket_scripts.c */; };
 		F4FE0D5919ECD00100B8B12B /* luasocket_scripts.h in Headers */ = {isa = PBXBuildFile; fileRef = F4FE0D5619ECD00100B8B12B /* luasocket_scripts.h */; };
@@ -454,6 +458,8 @@
 		66E529511A38672A00D1FBB1 /* lsqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lsqlite3.h; sourceTree = "<group>"; };
 		66E529521A38672A00D1FBB1 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
 		66E529531A38672A00D1FBB1 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
+		848E4D5D1B73522000F273F7 /* lua_cocos2dx_custom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_custom.cpp; sourceTree = "<group>"; };
+		848E4D5E1B73522000F273F7 /* lua_cocos2dx_custom.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_custom.hpp; sourceTree = "<group>"; };
 		C0D9BAFA1974D30000EC35BB /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = ../../../../external/lua/lua/prebuilt/ios/liblua.a; sourceTree = "<group>"; };
 		F4FE0D5519ECD00100B8B12B /* luasocket_scripts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = luasocket_scripts.c; sourceTree = "<group>"; };
 		F4FE0D5619ECD00100B8B12B /* luasocket_scripts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luasocket_scripts.h; sourceTree = "<group>"; };
@@ -622,6 +628,8 @@
 		1AACE74818BC45C200215002 /* auto */ = {
 			isa = PBXGroup;
 			children = (
+				848E4D5D1B73522000F273F7 /* lua_cocos2dx_custom.cpp */,
+				848E4D5E1B73522000F273F7 /* lua_cocos2dx_custom.hpp */,
 				66E5292C1A382F3100D1FBB1 /* lua_cx_common.cpp */,
 				66E5292D1A382F3100D1FBB1 /* lua_cx_common.hpp */,
 				159552381A25E1C5001E9FC9 /* lua_cocos2dx_csloader_auto.cpp */,
@@ -928,6 +936,7 @@
 				F4FE0D7019ECD02400B8B12B /* LuaNodeManager.h in Headers */,
 				F4FE0D6819ECD02400B8B12B /* lua_cocos2dx_quick_manual.hpp in Headers */,
 				15C1C2D8198749BC00A46ACC /* lua_cocos2dx_manual.hpp in Headers */,
+				848E4D611B73522000F273F7 /* lua_cocos2dx_custom.hpp in Headers */,
 				155C7E0819A71C7B00F08B25 /* lua_cocos2dx_extension_manual.h in Headers */,
 				155C7E1819A71CB300F08B25 /* lua_xml_http_request.h in Headers */,
 				155C7DFC19A71C5300F08B25 /* lua_cocos2dx_coco_studio_manual.hpp in Headers */,
@@ -1005,6 +1014,7 @@
 				F4FE0D6919ECD02400B8B12B /* lua_cocos2dx_quick_manual.hpp in Headers */,
 				15EFA62F198B3220000C57D3 /* lua_cocos2dx_physics_manual.hpp in Headers */,
 				155C7E0919A71C8500F08B25 /* lua_cocos2dx_extension_manual.h in Headers */,
+				848E4D621B73522000F273F7 /* lua_cocos2dx_custom.hpp in Headers */,
 				155C7E1919A71CB500F08B25 /* lua_xml_http_request.h in Headers */,
 				155C7DFD19A71C5400F08B25 /* lua_cocos2dx_coco_studio_manual.hpp in Headers */,
 				15EFA630198B3220000C57D3 /* LuaScriptHandlerMgr.h in Headers */,
@@ -1142,6 +1152,7 @@
 				15415AB519A71A53004F1E71 /* io.c in Sources */,
 				66E529601A38672A00D1FBB1 /* lsqlite3.c in Sources */,
 				15C1C2CE1987498B00A46ACC /* LuaOpengl.cpp in Sources */,
+				848E4D5F1B73522000F273F7 /* lua_cocos2dx_custom.cpp in Sources */,
 				566F015F19B5EB0F00FCA620 /* CustomGUIReader.cpp in Sources */,
 				15415AC119A71A53004F1E71 /* options.c in Sources */,
 				150906F019D556C5002C4D97 /* lua_cocos2dx_audioengine_auto.cpp in Sources */,
@@ -1226,6 +1237,7 @@
 				155C7DEA19A71BDA00F08B25 /* lua_cocos2dx_3d_auto.cpp in Sources */,
 				66E529611A38672A00D1FBB1 /* lsqlite3.c in Sources */,
 				66E5292F1A382F3100D1FBB1 /* lua_cx_common.cpp in Sources */,
+				848E4D601B73522000F273F7 /* lua_cocos2dx_custom.cpp in Sources */,
 				566F016019B5EB0F00FCA620 /* CustomGUIReader.cpp in Sources */,
 				155C7DF119A71C2300F08B25 /* lua_cocos2dx_studio_auto.cpp in Sources */,
 				3E2BDB0519C5E5FE0055CDCD /* lua_cocos2dx_audioengine_auto.cpp in Sources */,
@@ -1353,7 +1365,7 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../../../external/lua/luajit/prebuilt/mac";
 				PRODUCT_NAME = "libluacocos2d Mac";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/mac $(SRCROOT)/../../../../external/glfw3/include/mac";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/mac $(SRCROOT)/../../../../external/glfw3/include/mac $(SRCROOT)/../../../my";
 			};
 			name = Debug;
 		};
@@ -1376,7 +1388,7 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../../../external/lua/luajit/prebuilt/mac";
 				PRODUCT_NAME = "libluacocos2d Mac";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/mac $(SRCROOT)/../../../../external/glfw3/include/mac";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/mac $(SRCROOT)/../../../../external/glfw3/include/mac $(SRCROOT)/../../../my";
 			};
 			name = Release;
 		};

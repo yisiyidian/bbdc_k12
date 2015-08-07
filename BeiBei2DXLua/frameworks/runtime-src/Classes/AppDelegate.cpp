@@ -7,6 +7,7 @@
 #include "ConfigParser.h"
 #include "lua_module_register.h"
 #include "lua_cx_common.hpp"
+#include "lua_cocos2dx_custom.hpp"
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 #include "anysdkbindings.h"
@@ -87,6 +88,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     auto state = stack->getLuaState();
     lua_getglobal(state, "_G");
     register_all_cx_common(state);
+    register_all_cocos2dx_custom(state);
     lua_pop(state, 1);
     
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
