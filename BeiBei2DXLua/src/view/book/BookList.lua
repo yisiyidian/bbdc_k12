@@ -1,3 +1,6 @@
+-- 时间 2015年08月07日11:19:21
+-- 书籍的排序有问题，待修正
+
 local list  = {}
 
 list[1]  = {key  = 'BICBSKGB_XG2_A',name  ='北京版课改-二年级上册',word  = 1000, music  = '10M',type  = 'primary'}

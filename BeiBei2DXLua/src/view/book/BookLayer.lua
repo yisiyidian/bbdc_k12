@@ -1,3 +1,6 @@
+-- 选书页面
+-- 时间 2015年08月07日13:02:18 
+-- by wing
 require("cocos.init")
 require("common.global")
 
@@ -5,21 +8,34 @@ local BookLayer = class("BookLayer", function ()
     return cc.Layer:create()
 end)
 
+-- 参数 教育程度 书的配置文件 booklist.lua
 function BookLayer.create(education)
     local layer = BookLayer.new(education)
     return layer
 end
 
 function BookLayer:ctor(education)
+    -- 教育程度
     self.education =    education
+    -- 书籍配置
+    self.key_array = {}
+    -- listview 每一层的容器
     self.layout = {}
+    -- 每一层的书架 和self.layout里的容器一一对应
     self.shelf = {}
+    -- 所有的书籍 
+    -- 第一层书架只放一本 居中 
+    -- 之后每一层两本书
     self.book = {}
+    -- 更新新手引导的步骤
     self:setAnalytics()
 
+    -- 初始化
     self:init()
 end
 
+
+-- 更新新手引导的步骤
 function BookLayer:setAnalytics()
     if s_CURRENT_USER.summaryStep < s_summary_selectBook then
         s_CURRENT_USER:setSummaryStep(s_summary_selectBook)
@@ -27,6 +43,7 @@ function BookLayer:setAnalytics()
     end
 end
 
+-- 进入教育程度选择界面
 function BookLayer:enterEducationLayer(sender, eventType)
     if eventType == ccui.TouchEventType.ended then
         s_CorePlayManager.enterEducationLayer()
@@ -34,6 +51,7 @@ function BookLayer:enterEducationLayer(sender, eventType)
     end
 end
 
+-- 进入“我的书”
 function BookLayer:enterMyBookLayer(sender, eventType)
     if s_CURRENT_USER.bookList == '' or self.education == 'mybook' then
         return
@@ -46,6 +64,8 @@ function BookLayer:enterMyBookLayer(sender, eventType)
     end
 end
 
+-- 获得所有书的配置
+-- 其中 如果发现 以前版本的 小学，初中，高中的书籍，忽略他们 
 function BookLayer:getAllBookForEducation()
     local key_array = {}
     if self.education ~= 'mybook' then
@@ -64,6 +84,7 @@ function BookLayer:getAllBookForEducation()
     self.key_array = key_array
 end
 
+-- 选书逻辑
 function BookLayer:selectBook(sender, eventType)
     local bookIndex = 1
     bookIndex = string.gsub(sender:getName(),"book","")
@@ -90,6 +111,7 @@ function BookLayer:selectBook(sender, eventType)
     end
 end
 
+-- 加载书
 function BookLayer:addBook(index)
     if index > #self.key_array then
         return
@@ -199,6 +221,7 @@ function BookLayer:resetBook(index)
     sprite:addChild(richtext) 
 end
 
+-- 加载书架
 function BookLayer:addShelf(shelfIndex)
     local layout = self.layout[shelfIndex]
     local shelf = cc.Sprite:create('image/book/bookshelf_choose_book_button.png')
@@ -220,6 +243,7 @@ function BookLayer:addShelf(shelfIndex)
     end
 end
 
+-- 创建计时器 用于控制滚动条
 function BookLayer:createTimer()
     local count = math.ceil(#self.key_array / 2 + 0.5)
     local percent = 0.85 / (#self.key_array * 0.28)
@@ -306,7 +330,6 @@ function BookLayer:init()
     end 
 
     self:getAllBookForEducation()
-
 
     local listView = ccui.ListView:create()
     listView:setDirection(ccui.ScrollViewDir.vertical)

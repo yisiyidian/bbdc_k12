@@ -1,4 +1,17 @@
 --热更新控制器
+-- 热更新机制
+-- 比较本地的版本号和服务器的版本号
+-- 不一样的时候会用服务器的代码替换本地的代码
+
+
+--  动态更新步骤                 
+--  先打包生成最新代码和资源             
+    -- 运行工具102或者103
+--  计算最新的动态更新配置          
+    -- DynamicUpdate.py 修改版本号并运行      
+    -- 生成的资源位置（tmp_assets）  
+--  先登录服务器创建对应的目录，提交 DynamicUpload.py                 
+
 local HotUpdateController = {}
 
 local storagePath = cc.FileUtils:getInstance():getWritablePath() .. "AssetsManager"

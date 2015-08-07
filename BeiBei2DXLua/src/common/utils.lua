@@ -490,6 +490,7 @@ function layerHoldTouch(layer)
 end
 
 -- 弹出面板，触摸黑底关闭面板
+-- 参数 背景层 弹出面板 关闭函数
 function touchBackgroundClosePopup(layer,popup,closeFunc)
     local onTouchBegan = function(touch, event)
         return true  
