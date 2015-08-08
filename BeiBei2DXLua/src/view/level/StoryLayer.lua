@@ -210,6 +210,8 @@ function StoryLayer:addIntroduction6()
 		if s_CURRENT_USER.guideStep < s_guide_step_tryBoss then
         	s_CURRENT_USER:setGuideStep(s_guide_step_tryBoss)
     	end
+    	s_CURRENT_USER.finishTrying = true
+    	saveUserToServer({['finishTrying']=s_CURRENT_USER.finishTrying})
 		local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
         local summaryBossLayer = SummaryBossLayer.create(0)
         s_SCENE:replaceGameLayer(summaryBossLayer) 

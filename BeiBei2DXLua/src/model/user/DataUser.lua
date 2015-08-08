@@ -136,6 +136,7 @@ function DataUser:ctor()
     self.showTaskLayer                     = 0
     --已选过的书
     self.bookList                          = ''
+    self.finishTrying                      = false
 end
 
 function DataUser:addBookList(bookKey)
