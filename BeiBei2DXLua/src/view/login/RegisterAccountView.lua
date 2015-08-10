@@ -892,26 +892,25 @@ function RegisterAccountView:showIntroView()
 	--浅蓝色背景
 	local bigWidth = s_DESIGN_WIDTH + 2 * s_DESIGN_OFFSET_WIDTH
     local bigHeight = 1.0 * s_DESIGN_HEIGHT
-	local initColor = cc.LayerColor:create(cc.c4b(220,233,239,255), bigWidth, s_DESIGN_HEIGHT)
+	local initColor = cc.Sprite:create("image/login/bg.png")
     initColor:setAnchorPoint(0.5,0.5)
     initColor:ignoreAnchorPointForPosition(false)  
     initColor:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
-    initColor:setTouchEnabled(false)
     self:addChild(initColor)
     self.introviews[#self.introviews + 1] = initColor
 
 	--显示贝贝的LOGO  显示2个按钮
-	local splogo = cc.Sprite:create("image/login/icon.png")
-	splogo:setAnchorPoint(0.5,0.5)
-	splogo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.75)
-	self:addChild(splogo)
-	self.introviews[#self.introviews + 1] = splogo
+	-- local splogo = cc.Sprite:create("image/login/icon.png")
+	-- splogo:setAnchorPoint(0.5,0.5)
+	-- splogo:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.75)
+	-- self:addChild(splogo)
+	-- self.introviews[#self.introviews + 1] = splogo
 
-	local spslogan = cc.Sprite:create("image/login/slogan.png")
-	spslogan:setAnchorPoint(0.5,0.5)
-	spslogan:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.55)
-	self:addChild(spslogan)
-	self.introviews[#self.introviews + 1] = spslogan
+	-- local spslogan = cc.Sprite:create("image/login/slogan.png")
+	-- spslogan:setAnchorPoint(0.5,0.5)
+	-- spslogan:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.55)
+	-- self:addChild(spslogan)
+	-- self.introviews[#self.introviews + 1] = spslogan
 
 	-- local btnRegister = ccui.Button:create("image/login/button_on.png","image/login/button_down.png")
 	-- btnRegister:setAnchorPoint(0.5,0.5)
@@ -922,13 +921,11 @@ function RegisterAccountView:showIntroView()
 	-- self:addChild(btnRegister)
 	-- self.introviews[#self.introviews + 1] = btnRegister
 
-	local btnLogin = ccui.Button:create("image/login/button_on.png","image/login/button_down.png")
+	local btnLogin = ccui.Button:create("image/login/enterUp.png","image/login/enterDown.png")
 	btnLogin:setAnchorPoint(0.5,0.5)
 	btnLogin:setTitleFontSize(30)
 	btnLogin:addTouchEventListener(handler(self, self.onIntroLoginTouch))
-	btnLogin:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT*0.30)
-	-- btnLogin:setTitleText("试玩一下")
-	btnLogin:setTitleText("开始游戏")
+	btnLogin:setPosition(615 - 127, 365)
 	self:addChild(btnLogin)
 	self.introviews[#self.introviews + 1] = btnLogin
 end
