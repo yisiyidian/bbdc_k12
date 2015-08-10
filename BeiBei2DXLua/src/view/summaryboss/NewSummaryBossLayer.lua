@@ -1,42 +1,34 @@
-require("cocos.init")
-require("common.global")
-
 local NewSummaryBossLayer = class("NewSummaryBossLayer", function ()
     return cc.Layer:create()
 end)
 
 function NewSummaryBossLayer.create(unit)
-	local layer = NewSummaryBossLayer.new(unit)
-	return layer
+    local layer = NewSummaryBossLayer.new(unit)
+    return layer
 end
 
 function NewSummaryBossLayer:ctor(unit)
+    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     if unit == 0 then
         AnalyticsSummaryStep(s_summary_enterTryGame)
     end
-    --s_SCENE:removeAllPopups()
-	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-	--设置关卡信息
-	self:initStageInfo(unit)
-	--添加小女孩
-	self:initBackground()
-	--ready go 之后添加boss
-	s_SCENE:callFuncWithDelay(1.5,function()
-        --添加音乐
+    self.unit = unit
+
+    self:initStageInfo()
+    self:initBackground()
+    s_SCENE:callFuncWithDelay(1.5,function()
         playMusic(s_sound_Get_Outside,true)
-        --加boss
-		self:initBoss()
-	end)
-    --boss下落后增加椰子
+        self:initBoss()
+    end)
     s_SCENE:callFuncWithDelay(1.8,function ()
-        self:initMat()
+        self:creatMat()
     end)
 
     local function update(delta)
         if self.gameStart and not self.gameOver and not self.gamePaused then 
             self.useTime = self.useTime + delta
 
-            if self.tutorialStep == 1 then
+            if (self.tutorialStep == 0 and self.finishTrying == true) or self.tutorialStep == 1 then
                 self.changeBtnTime = self.changeBtnTime + delta
                 --第二次划词引导
                 if self.changeBtnTime > self.totalTime / 2 then
@@ -57,59 +49,9 @@ function NewSummaryBossLayer:ctor(unit)
         self:scheduleUpdateWithPriorityLua(update, 0)
     end
 end
---第二次划词引导
-function NewSummaryBossLayer:secondWordTutorial()
-    --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-    self.mat.forceFail()
-    self.gamePaused = true
-    self.changeBtnTime = 0
-    --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-    local curtain = require('view.summaryboss.Curtain').create()
-    self:addChild(curtain,2)
-    self.boss:setLocalZOrder(3)
-    local hint = cc.Sprite:create('image/guide/yindao_background_boss.png')
-    hint:setPosition(curtain:getContentSize().width / 2 - 50 , 870)
-    curtain:addChild(hint)
-    local label = cc.Label:createWithSystemFont('怪兽抓到贝贝就完蛋了！','',36)
-    label:setColor(cc.c3b(0,0,0))
-    label:setPosition(hint:getContentSize().width/2,hint:getContentSize().height * 0.25)
-    hint:addChild(label)
-    --self.girl:setLocalZOrder(3)
-    cc.Director:getInstance():getActionManager():pauseTarget(self.boss)
-    curtain.remove = function()
-        --s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-        --self.gamePaused = false
-        self.invisibleMat:setVisible(true)
-        self.mat:setVisible(false)
-        self.boss:setLocalZOrder(0)
-        --self.girl:setLocalZOrder(0)
-        curtain:removeFromParent()
-    end
-end
---换词引导
-function NewSummaryBossLayer:changeWordTutorial()
-    self.gamePaused = true
-    self.changeBtn:setLocalZOrder(2)
-    local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1][4],self.boss,self.firstTimeToChange,self.unit.unitID)
-    self:addChild(hintBoard,5)
-    self.hintChangeBtn = hintBoard
-    
-    hintBoard.hintOver = function (  )
-        s_CURRENT_USER.needBossChangeWordTutorial = 1
-        saveUserToServer({['needBossChangeWordTutorial']=s_CURRENT_USER.needBossChangeWordTutorial})
-        self.firstTimeToChange = false
-        hintBoard:removeFromParent()
-        self.gamePaused = false
-        self.changeBtn:setLocalZOrder(0)
-        table.insert(self.wordList,self.wordList[1])
-        if #self.wordList > 1 then
-            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-        end
-        self:resetMat()
-    end
-end
 
-function NewSummaryBossLayer:initStageInfo(unit)
+function NewSummaryBossLayer:initStageInfo()
+    self.finishTrying = s_CURRENT_USER.finishTrying
     --游戏开始的标志
     self.gameStart = false
     --游戏结束的标志
@@ -119,11 +61,10 @@ function NewSummaryBossLayer:initStageInfo(unit)
     --是否加过道具
     self.useItem = false
     --单元
-    self.oldUnit = unit
-    self.unit = unit
+    self.oldUnit = self.unit
     --是否是试玩
     self.isTrying = false
-    if unit == 0 then
+    if self.unit == 0 then
         self.isTrying = true
         self.oldUnit = nil
         self.unit = nil
@@ -132,16 +73,18 @@ function NewSummaryBossLayer:initStageInfo(unit)
     --是否是重玩
     self.isReplay = true
     --总时间
-    self.totalTime = 20--math.ceil(self.totalBlood / 14) * 15
+    self.totalTime = 20
     --剩余时间
     self.leftTime = self.totalTime
+    local timeConfig = {2,1.8,1.6,1.4,1.2}
+    self.timeConfig = timeConfig
     --花费时间
     self.useTime = 0
-	--单词
-	self.wordList = self:initWordList()
-	--总词数
-	self.maxCount = #self.wordList
-	--boss血量
+    --单词
+    self.wordList = self:initWordList()
+    --总词数
+    self.maxCount = #self.wordList
+    --boss血量
     self.totalBlood = 0
     for i = 1,#self.wordList do
         self.totalBlood = self.totalBlood + string.len(self.wordList[i][1]) * 2
@@ -153,7 +96,6 @@ function NewSummaryBossLayer:initStageInfo(unit)
     self.hintChangeBtn = nil
     --是否首次换词
     self.firstTimeToChange = (s_CURRENT_USER.needBossChangeWordTutorial == 0)
-    print('firstTimeToChange',tostring(self.firstTimeToChange))
     --椰子的行列数
     self.mat_length = 4
     --生词数
@@ -173,8 +115,8 @@ function NewSummaryBossLayer:initStageInfo(unit)
 end
 
 function NewSummaryBossLayer:initWordList()
-	-- 取词
-	local unit = self.unit
+    -- 取词
+    local unit = self.unit
     local wordList = {}
     if unit == nil then
         self.isReplay = false   
@@ -228,14 +170,6 @@ function NewSummaryBossLayer:initWordList()
         list = nil
     end
 
-    --第一关时间加倍
-    local timeConfig = {2,1.8,1.6,1.4,1.2}
-    self.timeConfig = timeConfig
-
-    if self.unit.unitID <= #timeConfig then
-        self.totalTime = self.totalTime * timeConfig[self.unit.unitID]
-    end
-
     -- 打乱取词
     for i = 1, #wordList do
         local randomIndex = math.random(1,#wordList)
@@ -244,14 +178,12 @@ function NewSummaryBossLayer:initWordList()
         wordList[randomIndex] = tmp     
     end
 
-    print_lua_table(wordList)
-
     return wordList
 end
 
 function NewSummaryBossLayer:initBackground()
-	--添加背景
-	local blueBack = cc.LayerColor:create(cc.c4b(52, 177, 240, 255), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
+    --添加背景
+    local blueBack = cc.LayerColor:create(cc.c4b(52, 177, 240, 255), s_RIGHT_X - s_LEFT_X, s_DESIGN_HEIGHT)
     blueBack:setPosition(-s_DESIGN_OFFSET_WIDTH, 0)
     self:addChild(blueBack)
     --背景动画
@@ -314,15 +246,15 @@ function NewSummaryBossLayer:initBackground()
         end)
     end)
 
-	--添加girl
-	local girl = require("view.summaryboss.Girl").create()
-	girl:setPosition(s_DESIGN_WIDTH * 0.05, s_DESIGN_HEIGHT * 0.76)
-	self:addChild(girl,1)
-	girl:setAnimation("normal")
-	--小女孩的动作有：win,lose,right,wrong,normal,afraid
-	self.girl = girl
-	--readyGo动画
-	local readyGoFile = "spine/summaryboss/readygo_diyiguan"
+    --添加girl
+    local girl = require("view.summaryboss.Girl").create()
+    girl:setPosition(s_DESIGN_WIDTH * 0.05, s_DESIGN_HEIGHT * 0.76)
+    self:addChild(girl,1)
+    girl:setAnimation("normal")
+    --小女孩的动作有：win,lose,right,wrong,normal,afraid
+    self.girl = girl
+    --readyGo动画
+    local readyGoFile = "spine/summaryboss/readygo_diyiguan"
     local readyGo = sp.SkeletonAnimation:create(string.format("%s.json",readyGoFile),string.format("%s.atlas",readyGoFile),1)
     readyGo:setPosition(s_DESIGN_WIDTH * 0.5, s_DESIGN_HEIGHT * 0.5)
     readyGo:addAnimation(0,'animation',false)
@@ -339,27 +271,25 @@ function NewSummaryBossLayer:initBackground()
 end
 
 function NewSummaryBossLayer:initBoss()
-	local boss = require("view.summaryboss.Boss").create()
-	boss:setPosition(s_DESIGN_WIDTH * 0.65, s_DESIGN_HEIGHT * 1.15)
-	self:addChild(boss,1)
-	self.boss = boss
+    local boss = require("view.summaryboss.Boss").create()
+    boss:setPosition(s_DESIGN_WIDTH * 0.65, s_DESIGN_HEIGHT * 1.15)
+    self:addChild(boss,1)
+    self.boss = boss
     boss:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.6, s_DESIGN_HEIGHT * 0.75 + 20))))
-	--过关失败
+    --过关失败
     if not self.isTrying then
-	    boss.bossWin = function ()
-    		if self.currentBlood > 0 then
-                -- self.isLose = true
+        boss.bossWin = function ()
+            if self.currentBlood > 0 then
                 self:gameOverFunc(false)   
                 if s_CURRENT_USER.summaryStep < s_summary_failFirstLevel then
                     s_CURRENT_USER:setSummaryStep(s_summary_failFirstLevel)
                     AnalyticsSummaryStep(s_summary_failFirstLevel)
                 end
             end
-    	end
+        end
     end
     --boss靠近
     boss.bossClose = function (  )
-        --self.girl:setAnimation("afraid")
         self:screenBlink()
     end
     --boss远离
@@ -371,26 +301,49 @@ function NewSummaryBossLayer:initBoss()
     end
 end
 
+function NewSummaryBossLayer:creatMat()
+    if self.mat == nil then
+        self:initMat()
+        if (self.tutorialStep == 1 and self.finishTrying == false) or (self.tutorialStep <= 1 and self.finishTrying == true) then 
+            self:initMat(false)
+        end
+        return  
+    end
+
+    local remove = cc.CallFunc:create(function() 
+        if self.mat ~= nil then
+            self.mat:removeFromParent()
+        end
+        if self.invisibleMat ~= nil then
+            self.invisibleMat:removeFromParent()
+        end
+        self.mat = nil
+        self.invisibleMat = nil
+        
+        self:initMat()
+        if (self.tutorialStep == 1 and self.finishTrying == false) or (self.tutorialStep <= 1 and self.finishTrying == true) then 
+            self:initMat(false)
+        end 
+    end,{})
+    self.mat:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7)),remove))
+    if self.invisibleMat ~= nil then
+        self.mat:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7))))
+    end
+end
+
 function NewSummaryBossLayer:initMat(visible)
-	local mat = require("view.summaryboss.Mat").create(self,self.tutorialStep < 1 or (visible ~= nil and not visible) or (self.isTrying and self.wordList[1][1] == 'apple'),"coconut_dark")
+    local isNewPlayer =  (self.isTrying and self.wordList[1][1] == 'apple') or (self.tutorialStep < 1 and self.finishTrying == false)
+    local mat = require("view.summaryboss.Mat").create(self,isNewPlayer,"coconut_dark")
     mat:setPosition(s_DESIGN_WIDTH/2, 150)
     self:addChild(mat,1)
-    --总时间
-        print('----------------')
-    print('boss word',self.wordList[1][1])
-    print('----------------') 
-    self.totalTime = (4 * #self.wordList[1][1] + 10) * self.timeConfig[self.unit.unitID]
-    --剩余时间
-    self.leftTime = self.totalTime
-    -- if self.tutorialStep == 0 then
-    --     cc.Director:getInstance():getActionManager():pauseTarget(self.boss)
-    -- end
+
+    self:resetTime()
+
     if visible ~= nil and not visible then
         self.invisibleMat = mat
         mat:setVisible(false)
     else
         self.mat = mat
-        --提示的螃蟹
         s_SCENE:callFuncWithDelay(0.7,function (  )
             self:initCrab()
         end)
@@ -402,17 +355,13 @@ function NewSummaryBossLayer:initMat(visible)
     end
     --划对单词后
     mat.success = function(stack)
-        if self.tutorialStep == 1 then
+        self.resetCount = self.resetCount + 1
+
+        if self.tutorialStep < 2 then
             self.tutorialStep = self.tutorialStep + 1
             self.gamePaused = false
         end
-        if self.tutorialStep < 2 then
-            self.tutorialStep = self.tutorialStep + 1
-            -- if not self.isTrying then
-            --     s_CURRENT_USER:setGuideStep(self.tutorialStep + 13)
-            -- end
-        end
-        --self:initGuideInfo()
+
         self.changeBtnTime = 0
         if s_CURRENT_USER.summaryStep < s_summary_doFirstWord and self.isTrying ~= true then
             s_CURRENT_USER:setSummaryStep(s_summary_doFirstWord)
@@ -430,8 +379,7 @@ function NewSummaryBossLayer:initMat(visible)
                 self.rightWordList = self.rightWordList..'||'..self.wordList[1][4]
             end
         end
-        --print(self.rightWordList)
-        --子弹打boss
+
         local delaytime = 0
         for i = 1, #stack do
             local bullet = stack[i]:getChildByName("bullet")
@@ -460,7 +408,6 @@ function NewSummaryBossLayer:initMat(visible)
                 damage_label:setPosition(randP)
                 self.currentBlood = self.currentBlood - 2
                 self.boss:setBlood(self.currentBlood,self.totalBlood)
-                --damage_label:setOpacity(0)
                 local action1 = cc.Spawn:create(cc.MoveBy:create(0.2,cc.p(0,30)),cc.FadeOut:create(0.2))
                 local action2 = cc.CallFunc:create(function (  )
                     damage_label:removeFromParent()
@@ -476,43 +423,19 @@ function NewSummaryBossLayer:initMat(visible)
             AnalyticsSummaryStep(s_summary_successFirstLevel)
         end
         s_SCENE:callFuncWithDelay(0.2 *math.pow(#stack,0.8) + 0.5,function ()
-            --print('self.currentBlood',self.currentBlood)
             if self.currentBlood > 0 then
                 if self.girl.isAfraid then
                     playMusic(s_sound_Get_Outside)
                 end
                 table.remove(self.wordList,1)
-                self.totalTime = (4 * #self.wordList[1][1] + 10) * self.timeConfig[self.unit.unitID]
-                --剩余时间
-                self.leftTime = self.totalTime
+                self:resetTime()
                 self.boss:goBack(self.totalTime)
-                self:resetMat()
+                self.crab:moveOut()
+                self:creatMat()
             else
                 self:gameOverFunc(true)
             end
         end)
-	end
-end
---重置mat
-function NewSummaryBossLayer:resetMat()
-    self.resetCount = self.resetCount + 1
-    self.crab:moveOut()
-    local remove = cc.CallFunc:create(function() 
-        self.mat:removeFromParent()
-        if self.invisibleMat ~= nil then
-            self.invisibleMat:removeFromParent()
-        end
-        self.mat = nil
-        self.invisibleMat = nil
-        
-        self:initMat()
-        if self.tutorialStep == 1 then
-            self:initMat(false)
-        end
-    end,{})
-    self.mat:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7)),remove))
-    if self.invisibleMat ~= nil then
-        self.mat:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7))))
     end
 end
 
@@ -575,7 +498,8 @@ function NewSummaryBossLayer:addChangeBtn()
                 if #self.wordList > 1 then
                     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                     table.insert(self.wordList,self.wordList[1])
-                    self:resetMat()
+                    self.crab:moveOut()
+                    self:creatMat()
                 end
             end
             
@@ -604,7 +528,7 @@ function NewSummaryBossLayer:screenBlink()
 end
 
 function NewSummaryBossLayer:gameOverFunc(win)
-	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     self.gameOver = true
     self.blink:stopAllActions()
     if self.isTrying then
@@ -613,7 +537,7 @@ function NewSummaryBossLayer:gameOverFunc(win)
         s_SCENE:replaceGameLayer(storyLayer)
         return
     end
-	if win then
+    if win then
         if self.tutorialStep >= 2 then
             if s_CURRENT_USER.guideStep < s_guide_step_second then
                 s_CURRENT_USER:setGuideStep(s_guide_step_second)
@@ -639,8 +563,8 @@ function NewSummaryBossLayer:gameOverFunc(win)
             s_LocalDatabaseManager.addRightWord(list,self.unit.unitID)
         end
         self.boss:fly()
-		self.girl:setAnimation("win")
-	else
+        self.girl:setAnimation("win")
+    else
         local timeout = cc.Sprite:create('image/summarybossscene/lose/timeover_h5_zongjieboss.png')
         timeout:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 3 / 2)
         self:addChild(timeout,100)
@@ -650,15 +574,75 @@ function NewSummaryBossLayer:gameOverFunc(win)
                                             ,cc.CallFunc:create(function (  )
                                                 timeout:removeFromParent()
                                             end)))
-		self.girl:setAnimation("lose")
-	end
-	--游戏结束界面
-	s_SCENE:callFuncWithDelay(2,function ()
+        self.girl:setAnimation("lose")
+    end
+    --游戏结束界面
+    s_SCENE:callFuncWithDelay(2,function ()
         s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
         local alter = require("view.summaryboss.SummaryBossAlter").create(self,win,true)
         alter:setPosition(0,0)
         self:addChild(alter,1000)
     end)
+end
+
+function NewSummaryBossLayer:resetTime()
+    if self.unit ~= nil and self.unit.unitID ~= nil and self.unit.unitID >= 0 and self.unit.unitID <= 5 then
+        self.totalTime = (4 * #self.wordList[1][1] + 10) * self.timeConfig[self.unit.unitID]
+    end
+    self.leftTime = self.totalTime
+end
+
+--第二次划词引导
+function NewSummaryBossLayer:secondWordTutorial()
+    --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+    self.mat.forceFail()
+    self.gamePaused = true
+    self.changeBtnTime = 0
+    --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+    local curtain = require('view.summaryboss.Curtain').create()
+    self:addChild(curtain,2)
+    self.boss:setLocalZOrder(3)
+    local hint = cc.Sprite:create('image/guide/yindao_background_boss.png')
+    hint:setPosition(curtain:getContentSize().width / 2 - 50 , 870)
+    curtain:addChild(hint)
+    local label = cc.Label:createWithSystemFont('怪兽抓到贝贝就完蛋了！','',36)
+    label:setColor(cc.c3b(0,0,0))
+    label:setPosition(hint:getContentSize().width/2,hint:getContentSize().height * 0.25)
+    hint:addChild(label)
+    --self.girl:setLocalZOrder(3)
+    cc.Director:getInstance():getActionManager():pauseTarget(self.boss)
+    curtain.remove = function()
+        --s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+        --self.gamePaused = false
+        self.invisibleMat:setVisible(true)
+        self.mat:setVisible(false)
+        self.boss:setLocalZOrder(0)
+        --self.girl:setLocalZOrder(0)
+        curtain:removeFromParent()
+    end
+end
+--换词引导
+function NewSummaryBossLayer:changeWordTutorial()
+    self.gamePaused = true
+    self.changeBtn:setLocalZOrder(2)
+    local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1][4],self.boss,self.firstTimeToChange,self.unit.unitID)
+    self:addChild(hintBoard,5)
+    self.hintChangeBtn = hintBoard
+    
+    hintBoard.hintOver = function (  )
+        s_CURRENT_USER.needBossChangeWordTutorial = 1
+        saveUserToServer({['needBossChangeWordTutorial']=s_CURRENT_USER.needBossChangeWordTutorial})
+        self.firstTimeToChange = false
+        hintBoard:removeFromParent()
+        self.gamePaused = false
+        self.changeBtn:setLocalZOrder(0)
+        table.insert(self.wordList,self.wordList[1])
+        if #self.wordList > 1 then
+            s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+        end
+        self.crab:moveOut()
+        self:creatMat()
+    end
 end
 
 
