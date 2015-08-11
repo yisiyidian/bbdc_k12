@@ -129,45 +129,13 @@ function NewSummaryBossLayer:initWordList()
     end
     print_lua_table(self.unit.wrongWordList)
     for i = 1,#self.unit.wrongWordList do
-        local list = split(self.unit.wrongWordList[i],' ')
-        -- print_lua_table(list)
         wordList[i] = {}
         --wordList[i][1]表示这个词组的第一个单词，如果不是词组则取单词本身，【2】表示词组剩余部分,[3]表示词组以空格分隔，【4】表示词组以 分隔
-        local temp = split(list[1],'-')
-        wordList[i][1] = temp[1]
-
-        if temp[1] == self.unit.wrongWordList[i] then 
-            -- 这是单词
-            wordList[i][1] = temp[1]
-            wordList[i][2] = ""
-        elseif temp[1] == list[1] then
-            -- 词组，不带－
-            wordList[i][1] = temp[1]
-            wordList[i][2] = ""
-            for k,v in pairs(list) do
-                if k >= 2 then
-                    wordList[i][2] = " ".. wordList[i][2]..list[k]
-                end
-            end
+        if isWord(self.unit.wrongWordList[i]) == true then
+            wordList[i] = {self.unit.wrongWordList[i],"","",self.unit.wrongWordList[i]}
         else
-            -- 词组，带－
-            wordList[i][1] = temp[1]
-            wordList[i][2] = ""
-            for k,v in pairs(temp) do
-                if k >= 2 then
-                    wordList[i][2] = "-".. wordList[i][2]..temp[k]
-                end
-            end
-            for k,v in pairs(list) do
-                if k >= 2 then
-                    wordList[i][2] = " ".. wordList[i][2]..list[k]
-                end
-            end
+            wordList[i] = self:getWordGroupArray(self.unit.wrongWordList[i])
         end
-
-        wordList[i][3] = wordList[i][1]..wordList[i][2]
-        wordList[i][4] = self.unit.wrongWordList[i]
-        list = nil
     end
 
     -- 打乱取词
@@ -505,7 +473,7 @@ function NewSummaryBossLayer:addChangeBtn()
                 self.firstTimeToChange = false
                 if #self.wordList > 1 then
                     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-                    table.insert(self.wordList,self.wordList[1])
+                    self:addWrongWordToEnd()
                     self.crab:moveOut()
                     self:creatMat()
                 end
@@ -644,7 +612,7 @@ function NewSummaryBossLayer:changeWordTutorial()
         self.firstTimeToChange = false
         hintBoard:removeFromParent()
         -- self.changeBtn:setLocalZOrder(0)
-        table.insert(self.wordList,self.wordList[1])
+        self:addWrongWordToEnd()
         if #self.wordList > 1 then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
         end
@@ -660,6 +628,36 @@ function NewSummaryBossLayer:changeWordTutorial()
     end, function ()
 
     end)
+end
+
+function NewSummaryBossLayer:addWrongWordToEnd()
+    if self.wordList ~= nil then
+        local word = self.wordList[1] 
+        table.remove(self.wordList,1)
+        self.wordList[#self.wordList + 1] = word 
+    end
+end
+
+function NewSummaryBossLayer:getWordGroupArray(wordGroup)
+    local len = 0
+    local wordTable = {}
+    local array = {}
+    for k=1,#wordGroup do
+        table.insert(wordTable,string.sub(wordGroup,k,k))
+    end
+    for k=1,#wordGroup do
+        local num = string.byte(wordTable[k])
+        if num < 65 or (num > 90 and num < 97 ) or num > 122 then
+            len = k
+        end
+        if len > 0 then
+            array[1] = string.sub(wordGroup,1,len-1)
+            array[2] = string.sub(wordGroup,len,#wordGroup)
+            array[3] = array[1] .. "" .. array[2]
+            array[4] = wordGroup
+            return array
+        end
+    end
 end
 
 
