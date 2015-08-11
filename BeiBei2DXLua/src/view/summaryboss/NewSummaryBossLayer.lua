@@ -587,7 +587,7 @@ function NewSummaryBossLayer:gameOverFunc(win)
 end
 
 function NewSummaryBossLayer:resetTime()
-    if self.unit ~= nil and self.unit.unitID ~= nil and self.unit.unitID >= 0 and self.unit.unitID <= 5 then
+    if self.unit ~= nil and self.unit.unitID ~= nil then
         self.totalTime = (4 * #self.wordList[1][1] + 10) * self.timeConfig[self.unit.unitID]
     end
     self.leftTime = self.totalTime
