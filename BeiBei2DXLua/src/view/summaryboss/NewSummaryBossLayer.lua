@@ -233,7 +233,7 @@ function NewSummaryBossLayer:initBackground()
     end
     pauseBtn:addTouchEventListener(pauseScene)
 
-    s_SCENE:callFuncWithDelay(2,function ()
+    s_SCENE:callFuncWithDelay(5,function ()
         onAndroidKeyPressed(pauseBtn, function ()
             local isPopup = s_SCENE.popupLayer:getChildren()
             if #isPopup == 0 then
@@ -485,7 +485,7 @@ function NewSummaryBossLayer:addChangeBtn()
 
             onAndroidKeyPressed(hintBoard, function ()
                 local isPopup = s_SCENE.popupLayer:getChildren()
-                if #isPopup == 0 then
+                if #isPopup ~= 0 then
                     hintBoard.hintOver()
                 end
             end, function ()
@@ -493,6 +493,7 @@ function NewSummaryBossLayer:addChangeBtn()
             end)
             
             hintBoard.hintOver = function (  )
+                hintBoard:removeFromParent()
                 self.firstTimeToChange = false
                 self.gamePaused = false
                 if #self.wordList > 1 then
@@ -626,8 +627,8 @@ function NewSummaryBossLayer:changeWordTutorial()
     self.gamePaused = true
     self.changeBtn:setLocalZOrder(2)
     local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1][4],self.boss,self.firstTimeToChange,self.unit.unitID)
-    self:addChild(hintBoard,5)
-    self.hintChangeBtn = hintBoard
+    s_SCENE.popupLayer:addChild(hintBoard)
+    -- self.hintChangeBtn = hintBoard
     
     hintBoard.hintOver = function (  )
         s_CURRENT_USER.needBossChangeWordTutorial = 1
@@ -635,7 +636,7 @@ function NewSummaryBossLayer:changeWordTutorial()
         self.firstTimeToChange = false
         hintBoard:removeFromParent()
         self.gamePaused = false
-        self.changeBtn:setLocalZOrder(0)
+        -- self.changeBtn:setLocalZOrder(0)
         table.insert(self.wordList,self.wordList[1])
         if #self.wordList > 1 then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
@@ -643,6 +644,15 @@ function NewSummaryBossLayer:changeWordTutorial()
         self.crab:moveOut()
         self:creatMat()
     end
+
+    onAndroidKeyPressed(hintBoard, function ()
+        local isPopup = s_SCENE.popupLayer:getChildren()
+        if #isPopup ~= 0 then
+            hintBoard.hintOver()
+        end
+    end, function ()
+
+    end)
 end
 
 
