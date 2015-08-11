@@ -237,6 +237,7 @@ function NewSummaryBossLayer:initBackground()
         onAndroidKeyPressed(pauseBtn, function ()
             local isPopup = s_SCENE.popupLayer:getChildren()
             if #isPopup == 0 then
+                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                 if not self.gamePaused then 
                     createPausePopup()
                 end
@@ -302,6 +303,13 @@ function NewSummaryBossLayer:initBoss()
 end
 
 function NewSummaryBossLayer:creatMat()
+    local delay = cc.DelayTime:create(1)
+    local func = cc.CallFunc:create(function ( ... )
+        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+        self.gamePaused = false
+    end)
+    self:runAction(cc.Sequence:create(delay,func))
+    
     if self.mat == nil then
         self:initMat()
         if (self.tutorialStep == 1 and self.finishTrying == false) or (self.tutorialStep <= 1 and self.finishTrying == true) then 
@@ -495,7 +503,6 @@ function NewSummaryBossLayer:addChangeBtn()
             hintBoard.hintOver = function (  )
                 hintBoard:removeFromParent()
                 self.firstTimeToChange = false
-                self.gamePaused = false
                 if #self.wordList > 1 then
                     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                     table.insert(self.wordList,self.wordList[1])
@@ -587,7 +594,8 @@ function NewSummaryBossLayer:gameOverFunc(win)
 end
 
 function NewSummaryBossLayer:resetTime()
-    if self.unit ~= nil and self.unit.unitID ~= nil then
+    self.totalTime = 4 * #self.wordList[1][1] + 10
+    if self.unit ~= nil and self.unit.unitID ~= nil and self.unit.unitID >= 1 and self.unit.unitID <= 5 then
         self.totalTime = (4 * #self.wordList[1][1] + 10) * self.timeConfig[self.unit.unitID]
     end
     self.leftTime = self.totalTime
@@ -635,7 +643,6 @@ function NewSummaryBossLayer:changeWordTutorial()
         saveUserToServer({['needBossChangeWordTutorial']=s_CURRENT_USER.needBossChangeWordTutorial})
         self.firstTimeToChange = false
         hintBoard:removeFromParent()
-        self.gamePaused = false
         -- self.changeBtn:setLocalZOrder(0)
         table.insert(self.wordList,self.wordList[1])
         if #self.wordList > 1 then
