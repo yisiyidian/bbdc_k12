@@ -33,12 +33,6 @@ local function main()
     -- avoid memory leak
     collectgarbage("setpause", 100)
     collectgarbage("setstepmul", 5000)
-
-    -- addSkipBackupAttributeToItemAtPath
-    local soundStoreDirInIOS = cc.FileUtils:getInstance():getWritablePath().."BookSounds"
-    local customClass = CustomClass:create()
-    local result = customClass:addSkipBackupAttributeToItemAtPath(soundStoreDirInIOS)
-    print("addSkipBackupAttributeToItemAtPath msg is : " .. result)
     
     cc.Director:getInstance():setDisplayStats(false)
 
@@ -55,6 +49,13 @@ local function main()
     cc.FileUtils:getInstance():addSearchPath(cc.FileUtils:getInstance():getWritablePath())
     require("cocos.init")
     require("mobdebug").start() --start zerobrain debugging
+
+    -- addSkipBackupAttributeToItemAtPath
+    -- local soundStoreDirInIOS = cc.FileUtils:getInstance():getWritablePath().."BookSounds"
+    local soundStoreDirInIOS = cc.FileUtils:getInstance():getWritablePath()
+    local customClass = CustomClass:create()
+    local result = customClass:addSkipBackupAttributeToItemAtPath(soundStoreDirInIOS)
+    print("addSkipBackupAttributeToItemAtPath msg is : " .. result)
 
     local HotUpdateController = require("hu.HotUpdateController")
     HotUpdateController.init()
