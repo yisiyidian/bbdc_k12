@@ -2,23 +2,20 @@
 --------------------------------
 -- @module ProtocolShare
 -- @extend PluginProtocol
--- @parent_module plugin
 
 --------------------------------
--- brief share result callback
--- @function [parent=#ProtocolShare] onShareResult 
+-- share information
+-- @function [parent=#ProtocolShare] share 
 -- @param self
--- @param #int ret
--- @param #char msg
+-- @param #table info{key(str)=value(str), ..}
+-- @param The info of share, contains key:
+-- @param SharedText                	The text need to share-- @param 
+-- @param SharedImagePath				The full path of image file need to share (optinal)
         
 --------------------------------
--- brief config the share developer info<br>
--- param devInfo This parameter is the info of developer,<br>
--- different plugin have different format<br>
--- warning Must invoke this interface before other interfaces.<br>
--- And invoked only once.
--- @function [parent=#ProtocolShare] configDeveloperInfo 
+-- set the result listener
+-- @function [parent=#ProtocolShare] setResultListener 
 -- @param self
--- @param #map_table devInfo
+-- @param #function function of listener callback
         
 return nil

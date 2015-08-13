@@ -2,23 +2,36 @@
 --------------------------------
 -- @module ProtocolIAP
 -- @extend PluginProtocol
--- @parent_module plugin
 
 --------------------------------
--- brief pay result callback
--- @function [parent=#ProtocolIAP] onPayResult 
+-- get plugin id
+-- @function [parent=#ProtocolIAP] getPluginId 
 -- @param self
--- @param #int ret
--- @param #char msg
+-- @return string#string ret (return value: string)
         
 --------------------------------
--- brief config the developer info<br>
--- param devInfo This parameter is the info of developer,<br>
--- different plugin have different format<br>
--- warning Must invoke this interface before other interfaces.<br>
--- And invoked only once.
--- @function [parent=#ProtocolIAP] configDeveloperInfo 
+-- get order id
+-- @function [parent=#ProtocolIAP] getOrderId 
 -- @param self
--- @param #map_table devInfo
+-- @return string#string ret (return value: string)
+        
+--------------------------------
+-- change the state of paying
+-- @function [parent=#ProtocolIAP] resetPayState 
+-- @param self
+        
+--------------------------------
+-- pay for product
+-- @function [parent=#ProtocolIAP] payForProduct 
+-- @param #table info, The info of product, must contains key:
+-- @param productName         The name of product
+-- @param productPrice        The price of product(must can be parse to float)
+-- @param productDesc         The description of product
+        
+--------------------------------
+-- set the result listener
+-- @function [parent=#ProtocolIAP] setResultListener 
+-- @param self
+-- @param #function function of listener callback
         
 return nil

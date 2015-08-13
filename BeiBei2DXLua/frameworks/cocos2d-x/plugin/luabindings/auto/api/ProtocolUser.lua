@@ -2,36 +2,52 @@
 --------------------------------
 -- @module ProtocolUser
 -- @extend PluginProtocol
--- @parent_module plugin
 
 --------------------------------
--- brief config the application info<br>
--- param devInfo This parameter is the info of aplication,<br>
--- different plugin have different format<br>
--- warning Must invoke this interface before other interfaces.<br>
--- And invoked only once.
--- @function [parent=#ProtocolUser] configDeveloperInfo 
--- @param self
--- @param #map_table devInfo
-        
---------------------------------
--- 
--- @function [parent=#ProtocolUser] isLoggedIn 
+-- Check whether the user logined or not
+-- @function [parent=#ProtocolUser] isLogined 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
--- brief Get session ID<br>
--- return If user logined, return value is session ID;<br>
--- else return value is empty string.
--- @function [parent=#ProtocolUser] getSessionID 
+-- Get user ID
+-- @function [parent=#ProtocolUser] getUserID 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
--- brief get Access Token
--- @function [parent=#ProtocolUser] getAccessToken 
+-- Check function the plugin support or not
+-- @function [parent=#ProtocolUser] isFunctionSupported
+-- @param self
+-- @param #string name, the name of plugin
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- get pListener The callback object for user result
+-- @function [parent=#ProtocolUser] getActionListener 
+-- @param self
+-- @return UserActionListener#UserActionListener ret (return value: anysdk.UserActionListener)
+        
+--------------------------------
+-- User login
+-- @overload self, server_id, oauthLoginServer
+-- @overload self, server_id         
+-- @overload self        
+-- @function [parent=#ProtocolUser] login
+-- @param self
+-- @param #string server_id
+-- @param #string oauthLoginServer
+
+--------------------------------
+-- Get plugin ID
+-- @function [parent=#ProtocolUser] getPluginId 
 -- @param self
 -- @return string#string ret (return value: string)
+        
+--------------------------------
+-- set the result listener
+-- @function [parent=#ProtocolUser] setActionListener 
+-- @param self
+-- @param #function function of listener callback
         
 return nil
