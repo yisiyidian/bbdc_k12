@@ -2,46 +2,58 @@
 --------------------------------
 -- @module ProtocolAds
 -- @extend PluginProtocol
--- @parent_module plugin
 
 --------------------------------
--- brief show adview<br>
--- param info The information of adview will be shown<br>
--- Pay attention to the subclass definition<br>
--- param pos The position where the adview be shown.
+-- show adsview
 -- @function [parent=#ProtocolAds] showAds 
 -- @param self
--- @param #map_table info
--- @param #int pos
+-- @param #number adtype
+-- @param #number adIndex
         
 --------------------------------
--- brief Hide the adview<br>
--- param info The information of adview will be hided
+-- hide adsview
 -- @function [parent=#ProtocolAds] hideAds 
 -- @param self
--- @param #map_table info
+-- @param #number adtype
+-- @param #number adIndex
         
 --------------------------------
--- brief Query the points of player
+-- preloadAds adsview
+-- @function [parent=#ProtocolAds] preloadAds 
+-- @param self
+-- @param #number adtype
+-- @param #number adIndex
+        
+--------------------------------
+-- Query the points of player
 -- @function [parent=#ProtocolAds] queryPoints 
 -- @param self
+-- @return float#float ret (return value: float)
         
 --------------------------------
--- brief Spend the points.<br>
--- Use this method to notify server spend points.<br>
--- param points Need spend number of points
+-- Spend the points. Use this method to notify server spend points.
 -- @function [parent=#ProtocolAds] spendPoints 
 -- @param self
--- @param #int points
+-- @param #int points, points Need spend number of points
         
 --------------------------------
--- brief config the application info<br>
--- param devInfo This parameter is the info of aplication,<br>
--- different plugin have different format<br>
--- warning Must invoke this interface before other interfaces.<br>
--- And invoked only once.
--- @function [parent=#ProtocolAds] configDeveloperInfo 
+-- get pListener The callback object for Ads result
+-- @function [parent=#ProtocolAds] getAdsListener 
 -- @param self
--- @param #map_table devInfo
+-- @return AdsListener#AdsListener ret (return value: anysdk.AdsListener)
+        
+--------------------------------
+-- Check function the plugin support or not
+-- @function [parent=#ProtocolAds] isAdTypeSupported 
+-- @param self
+-- @param #number type, the type of Ads
+-- @return bool#bool ret (return value: bool)
+
+--------------------------------
+-- set the Ads listener
+-- @for set the Ads listener callback
+-- @function [parent=#ProtocolAds] setAdsListener 
+-- @param self
+-- @param #function function of listener callback
         
 return nil

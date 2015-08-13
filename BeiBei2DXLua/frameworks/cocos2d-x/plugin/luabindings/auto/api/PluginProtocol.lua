@@ -1,30 +1,76 @@
 
 --------------------------------
 -- @module PluginProtocol
--- @parent_module plugin
 
 --------------------------------
--- brief plug-in info methods(name, version, SDK version)
+-- get plugin name
 -- @function [parent=#PluginProtocol] getPluginName 
 -- @param self
--- @return char#char ret (return value: char)
+-- @return char#char ret (return value: string)
         
 --------------------------------
--- 
+-- get the version of plugin
 -- @function [parent=#PluginProtocol] getPluginVersion 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
--- 
+-- set plugin name
+-- @function [parent=#PluginProtocol] setPluginName 
+-- @param self
+-- @param #char name, the name of plugin
+        
+--------------------------------
+-- get the version of sdk
 -- @function [parent=#PluginProtocol] getSDKVersion 
 -- @param self
 -- @return string#string ret (return value: string)
         
 --------------------------------
--- brief switch debug plug-in on/off
+-- switch debug plug-in on/off
 -- @function [parent=#PluginProtocol] setDebugMode 
 -- @param self
--- @param #bool bDebug
+-- @param #bool bDebug, the value of on/off
+-- @deprecated
+
+--------------------------------
+-- methods for reflections
+-- @function [parent=#PluginProtocol] callFuncWithParam 
+-- @methods for reflections
+-- @param self
+-- @param #string funcName, function name
+-- @param #anysdk.PluginParam param,....; or [anysdk.PluginParam]. (some PluginParams)
+
+--------------------------------
+-- methods for reflections
+-- @function [parent=#PluginProtocol] callStringFuncWithParam 
+-- @methods for reflections
+-- @param self
+-- @param #string funcName, function name
+-- @param #anysdk.PluginParam param,....; or [anysdk.PluginParam]. (some PluginParams)
+
+--------------------------------
+-- methods for reflections
+-- @function [parent=#PluginProtocol] callIntFuncWithParam 
+-- @methods for reflections
+-- @param self
+-- @param #string funcName, function name
+-- @param #anysdk.PluginParam param,....; or [anysdk.PluginParam]. (some PluginParams)
+
+--------------------------------
+-- methods for reflections
+-- @function [parent=#PluginProtocol] callBoolFuncWithParam 
+-- @methods for reflections
+-- @param self
+-- @param #string funcName, function name
+-- @param #anysdk.PluginParam param,....; or [anysdk.PluginParam]. (some PluginParams)
+
+--------------------------------
+-- methods for reflections
+-- @function [parent=#PluginProtocol] callFloatFuncWithParam 
+-- @methods for reflections
+-- @param self
+-- @param #string funcName, function name
+-- @param #anysdk.PluginParam param,....; or [anysdk.PluginParam]. (some PluginParams)
         
 return nil

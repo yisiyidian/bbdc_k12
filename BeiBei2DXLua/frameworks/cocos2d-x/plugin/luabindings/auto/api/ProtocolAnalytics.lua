@@ -2,66 +2,60 @@
 --------------------------------
 -- @module ProtocolAnalytics
 -- @extend PluginProtocol
--- @parent_module plugin
 
 --------------------------------
--- brief Track an event begin.<br>
--- param eventId The identity of event
+-- Track an event begin.
 -- @function [parent=#ProtocolAnalytics] logTimedEventBegin 
 -- @param self
--- @param #char eventId
+-- @param #char eventId, The identity of event
         
 --------------------------------
--- brief log an error<br>
--- param errorId The identity of error<br>
--- param message Extern message for the error
+-- log an error
 -- @function [parent=#ProtocolAnalytics] logError 
 -- @param self
--- @param #char errorId
--- @param #char message
+-- @param #char errorId, The identity of error
+-- @param #char message, Extern message for the error
         
 --------------------------------
--- brief Whether to catch uncaught exceptions to server.<br>
--- warning This interface only worked on android.
+-- Whether to catch uncaught exceptions to server.
 -- @function [parent=#ProtocolAnalytics] setCaptureUncaughtException 
 -- @param self
 -- @param #bool enabled
         
 --------------------------------
--- brief Set the timeout for expiring a session.<br>
--- param millis In milliseconds as the unit of time.<br>
--- note It must be invoked before calling startSession.
+-- Set the timeout for expiring a session.
 -- @function [parent=#ProtocolAnalytics] setSessionContinueMillis 
 -- @param self
--- @param #long millis
+-- @param #long millis, In milliseconds as the unit of time.
         
 --------------------------------
--- brief log an event.<br>
--- param eventId The identity of event<br>
--- param paramMap Extern parameters of the event, use NULL if not needed.
--- @function [parent=#ProtocolAnalytics] logEvent 
--- @param self
--- @param #char eventId
--- @param #map_table paramMap
-        
---------------------------------
--- brief Start a new session.<br>
--- param appKey The identity of the application.
+-- Start a new session.
 -- @function [parent=#ProtocolAnalytics] startSession 
 -- @param self
--- @param #char appKey
         
 --------------------------------
--- brief Stop a session.<br>
--- warning This interface only worked on android
+-- Check function the plugin support or not
+-- @function [parent=#ProtocolAnalytics] isFunctionSupported
+-- @param self
+-- @param #string name, the name of plugin
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- Stop a session.
 -- @function [parent=#ProtocolAnalytics] stopSession 
 -- @param self
         
 --------------------------------
--- brief Track an event end.<br>
--- param eventId The identity of event
+-- Track an event begin.
 -- @function [parent=#ProtocolAnalytics] logTimedEventEnd 
 -- @param self
--- @param #char eventId
+-- @param #char char
+        
+--------------------------------
+-- log an event.
+-- @function [parent=#ProtocolAnalytics] logEvent 
+-- @param self
+-- @param #char char
+-- @param #{key(str), value(str)}
         
 return nil

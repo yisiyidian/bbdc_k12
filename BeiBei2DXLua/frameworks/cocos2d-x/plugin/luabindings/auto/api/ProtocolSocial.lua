@@ -2,27 +2,51 @@
 --------------------------------
 -- @module ProtocolSocial
 -- @extend PluginProtocol
--- @parent_module plugin
 
 --------------------------------
--- 
+-- show the id of Leaderboard page
 -- @function [parent=#ProtocolSocial] showLeaderboard 
 -- @param self
--- @param #char leaderboardID
+-- @param #string leaderboardID
         
 --------------------------------
--- 
+-- user signOut
+-- @function [parent=#ProtocolSocial] signOut 
+-- @param self
+        
+--------------------------------
+-- show the page of achievements
 -- @function [parent=#ProtocolSocial] showAchievements 
 -- @param self
         
 --------------------------------
--- brief config the share developer info<br>
--- param devInfo This parameter is the info of developer,<br>
--- different plugin have different format<br>
--- warning Must invoke this interface before other interfaces.<br>
--- And invoked only once.
--- @function [parent=#ProtocolSocial] configDeveloperInfo 
+-- user signIn
+-- @function [parent=#ProtocolSocial] signIn 
 -- @param self
--- @param #map_table devInfo
+        
+--------------------------------
+-- submit the score
+-- @function [parent=#ProtocolSocial] submitScore 
+-- @param self
+-- @param #string leaderboardID
+-- @param #long score, the score
+        
+--------------------------------
+-- get pListener The callback object for social result
+-- @function [parent=#ProtocolSocial] getListener 
+-- @param self
+-- @return SocialListener#SocialListener ret (return value: anysdk.SocialListener)
+        
+--------------------------------
+-- set the result listener
+-- @function [parent=#ProtocolSocial] setListener 
+-- @param self
+-- @param #function function of listener callback
+        
+--------------------------------
+-- methods of achievement feature
+-- @function [parent=#ProtocolSocial] unlockAchievement 
+-- @param self
+-- @param #table {key(str)=value(str), ..}
         
 return nil

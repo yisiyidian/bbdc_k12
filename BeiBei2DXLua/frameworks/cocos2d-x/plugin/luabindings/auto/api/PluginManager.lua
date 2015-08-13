@@ -1,30 +1,31 @@
 
 --------------------------------
 -- @module PluginManager
--- @parent_module plugin
 
 --------------------------------
---  unload the plugin by name 
+-- unload the plugin by name and type
 -- @function [parent=#PluginManager] unloadPlugin 
 -- @param self
--- @param #char name
+-- @param #char name, the name of plugin
+-- @param #int type, the type of plugin
         
 --------------------------------
---  load the plugin by name 
+-- load the plugin by name and type
 -- @function [parent=#PluginManager] loadPlugin 
 -- @param self
--- @param #char name
--- @return plugin::PluginProtocol#plugin::PluginProtocol ret (return value: cc.plugin::PluginProtocol)
+-- @param #char name, the name of plugin
+-- @param #int type, the type of plugin
+-- @return PluginProtocol#PluginProtocol ret (return value: anysdk.PluginProtocol)
         
 --------------------------------
---  Destory the instance of PluginManager 
--- @function [parent=#PluginManager] end 
+-- Destory the instance of PluginManager
+-- @function [parent=#PluginManager] endManager 
 -- @param self
         
 --------------------------------
---  Get singleton of PluginManager 
+-- Get singleton of PluginManager
 -- @function [parent=#PluginManager] getInstance 
 -- @param self
--- @return plugin::PluginManager#plugin::PluginManager ret (return value: cc.plugin::PluginManager)
+-- @return PluginManager#PluginManager ret (return value: anysdk.PluginManager)
         
 return nil
