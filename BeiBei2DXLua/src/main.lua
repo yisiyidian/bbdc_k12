@@ -51,11 +51,14 @@ local function main()
     require("mobdebug").start() --start zerobrain debugging
 
     -- addSkipBackupAttributeToItemAtPath
-    -- local soundStoreDirInIOS = cc.FileUtils:getInstance():getWritablePath().."BookSounds"
-    local soundStoreDirInIOS = cc.FileUtils:getInstance():getWritablePath()
-    local customClass = CustomClass:create()
-    local result = customClass:addSkipBackupAttributeToItemAtPath(soundStoreDirInIOS)
-    print("addSkipBackupAttributeToItemAtPath msg is : " .. result)
+    if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+        -- nothing to do
+    else
+        local soundStoreDirInIOS = cc.FileUtils:getInstance():getWritablePath()
+        local customClass = CustomClass:create()
+        local result = customClass:addSkipBackupAttributeToItemAtPath(soundStoreDirInIOS)
+        print("addSkipBackupAttributeToItemAtPath msg is : " .. result)
+    end
 
     local HotUpdateController = require("hu.HotUpdateController")
     HotUpdateController.init()
