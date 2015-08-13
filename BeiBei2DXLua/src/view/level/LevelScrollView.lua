@@ -18,9 +18,11 @@ function LevelScrollView:ctor()
 	self.scrollTopLock = false  -- 用于控制滚动到上方时是否添加新的LevelItem
 	-- 记录当前书最多和当前screenID
 	self.info['maxScreenId'] = self:getBookMaxScreenID()
-	--self.info['activeScreenId'] = self:getBookActiveScreenID()
-	self.info['activeScreenId'] = 3 -- test
+	self.info['activeScreenId'] = self:getBookActiveScreenID()
+	--self.info['activeScreenId'] = 3 -- test
 	self.info['curScreenId'] = self.info['activeScreenId']  -- 记录当前显示在屏幕中的 cur screen Id
+	-- 初始化活跃屏区间
+	self.info['startScreenId'] = 1
 	-- 初始化添加当前Item 和 云层
 	self:initScrollView()
 	-- 初始化ScrollView属性
@@ -54,7 +56,7 @@ function LevelScrollView:initScrollView()
 	    	self.info['screen'..self.info['nextScreenId']] = LevelItem.create(self.info['nextScreenId'])
 	    	self.info['screen'..self.info['nextScreenId']]:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, 0))
 	    	self.info['screen'..self.info['curScreenId']]:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, s_DESIGN_HEIGHT))
-	    	self:addChild(self.info['screen'..self.info['curScreenId']])
+	    	self:addChild(self.info['screen'..self.info['nextScreenId']])
 	    	screenCount = 2
 	    end
 	else
@@ -64,6 +66,8 @@ function LevelScrollView:initScrollView()
     	self.info['screen'..self.info['preScreenId']]:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, s_DESIGN_HEIGHT))
     	self.info['screen'..self.info['curScreenId']]:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, 0))
     	self:addChild(self.info['screen'..self.info['preScreenId']])
+
+    	self.info['startScreenId'] = self.info['preScreenId']  -- 初始化开始屏id
     	screenCount = 2
     	-- 判断当前屏下方是否显示下一屏 (每两屏一次云层)
 	    if self.info['curScreenId'] < self.info['maxScreenId'] and self.info['curScreenId'] % 2 == 1 then
@@ -173,6 +177,9 @@ function LevelScrollView:addScrollListener()
 					    	self.info['screen'..self.info['preScreenId']]:setPosition(cc.p((s_DESIGN_WIDTH-level_item_width) / 2, (self.info['screenCount']-1)*s_DESIGN_HEIGHT))
 					    	self:addChild(self.info['screen'..self.info['preScreenId']])
 
+					    	-- 更新开始屏id
+					    	self.info['startScreenId'] = self.info['preScreenId']
+
 							self:setInnerContainerSize(cc.size(level_item_width, self.info['screenCount'] * s_DESIGN_HEIGHT))
 							self:callFuncWithDelay(2.0, function()
 			                    scrollTopLock = false
@@ -217,6 +224,33 @@ function LevelScrollView:getBookMaxScreenID()
 		totalScreenCount = 1 + math.ceil((bookMaxLevelId - 4) / 5)
 	end
 	return totalScreenCount
+end
+
+-- 获取指定LevelId所在的screenId
+function LevelScrollView:getScreenIdOfLevelId(levelId)
+	if levelId <= 4 then 
+		return 1
+	else
+		local screenId = math.ceil((levelId - 4) / 5.0) + 1
+		return screenId
+	end
+end
+
+-- 将指定的关卡滚动到屏幕中央
+function LevelScrollView:scrollViewToLevel(levelId, scrollTime)
+	-- 锁定屏幕操作
+	s_SCENE.touchEventBlockLayer.lockTouch()
+    self:callFuncWithDelay(0.3, function()
+        s_SCENE.touchEventBlockLayer.unlockTouch()
+    end)
+    local targetScreenId = self:getScreenIdOfLevelId(levelId)
+    print('targetScreenID:'..targetScreenId)
+    local percent = (targetScreenId-self.info['startScreenId'])*1.0 / self.info['screenCount']
+    if levelId <= 4 then
+
+    else 
+
+	end 
 end
 
 -- 读取配置，为每个资源实例化对象
