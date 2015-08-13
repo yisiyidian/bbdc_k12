@@ -27,7 +27,8 @@ typedef enum
 	kPayInitSuccess,/**< enum value is callback of succeeding in initing sdk . */
 	kPayInitFail,/**< enum value is callback of failing to init sdk . */
 	kPayNowPaying,/**< enum value is callback of paying now . */
-	kPayRechareSuccess,/**< enum value is callback of  succeeding in recharging. */
+	kPayRechargeSuccess,/**< enum value is callback of  succeeding in recharging. */
+    kPayExtension = 30000 /**< enum value is  extension code . */
 } PayResultCode;
 /** @brief RequestResultCode enum, with inline docs */
 typedef enum
@@ -88,6 +89,8 @@ public:
     @wraning Must invoke this interface before payForProduct.
     */
     virtual void setResultListener(PayResultListener* pListener) = 0;
+
+    virtual  PayResultListener* getPayListener() = 0 ;
 
     /**
      @brief get plugin id

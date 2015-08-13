@@ -19,7 +19,7 @@ function Store.init()
         local oauthLoginServer = "http://oauth.anysdk.com/api/User/LoginOauth/"
         local agent = AgentManager:getInstance()
         agent:init(appKey,appSecret,privateKey,oauthLoginServer)
-        agent:loadALLPlugin()
+        agent:loadALLPlugins()
 
         AnalyticsChannel(agent:getChannelId())
     end
