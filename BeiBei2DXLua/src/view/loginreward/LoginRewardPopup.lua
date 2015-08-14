@@ -263,6 +263,12 @@ function LoginRewardPopup:ctor()
     end, function ()
 
     end)
+
+    -- if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
+    --     print("WWWWWXXXXXX")
+    --     cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.html?time=0&wordlist=apple', '我完成这些单词只用了秒，你能做到吗？', '贝贝单词－根本停不下来')
+    --     print("WWWWWXXXXXX")
+    -- end
     
 end
 
