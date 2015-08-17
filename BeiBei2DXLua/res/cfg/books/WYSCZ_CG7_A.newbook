@@ -1,628 +1,628 @@
-1	hello	Starter Module 1_1	5	int.你好	1
-1	class	Starter Module 1_1	5	n.班级	1
-1	my	Starter Module 1_1	5	adj.我的	1
-2	name	Starter Module 1_2	5	n.名字	1
-2	is	Starter Module 1_2	5	v.是	1
-2	Miss	Starter Module 1_2	5	abbr.小姐	1
-2	good	Starter Module 1_2	5	adj.好的	1
-2	morning	Starter Module 1_2	5	n.早晨	1
-2	good morning	Starter Module 1_2	5	早上好	0
-2	afternoon	Starter Module 1_2	5	n.下午	1
-2	good afternoon	Starter Module 1_2	5	下午好	0
-2	goodbye	Starter Module 1_2	5	int.再见	1
-2	I	Starter Module 1_2	5	pron.我	1
-2	am	Starter Module 1_2	5	是	1
-3	I am	Starter Module 1_3	5	我是	0
-3	Mr	Starter Module 1_3	5	abbr.先生	1
-3	what	Starter Module 1_3	5	pron.什么	1
-3	your	Starter Module 1_3	5	pron.你的	1
-3	please	Starter Module 1_3	5	int.请	1
-3	sorry	Starter Module 1_3	5	adj.对不起	1
-3	can	Starter Module 1_3	5	aux.能	1
-3	you	Starter Module 1_3	5	pron.你	1
-3	spell	Starter Module 1_3	5	v.拼写	0
-3	it	Starter Module 1_3	5	pron.它	1
-3	yes	Starter Module 1_3	5	adj.是的	1
-4	thank	Starter Module 1_4	5	vt.感谢	1
-4	how	Starter Module 1_4	5	adv.怎样	1
-4	are	Starter Module 1_4	5	v.是	1
-4	fine	Starter Module 1_4	5	adj.很好的	1
-4	thanks	Starter Module 1_4	5	谢谢	0
-4	Mrs	Starter Module 1_4	5	abbr.夫人	0
-4	too	Starter Module 1_4	5	adv.也	1
-4	this	Starter Module 1_4	5	pron.这	1
-4	she	Starter Module 1_4	5	pron.她	1
-4	teacher	Starter Module 1_4	5	n.老师	1
-4	friend	Starter Module 1_4	5	n.朋友	1
-5	her	Starter Module 1_5	5	pron.她的	1
-5	his	Starter Module 1_5	5	pron.他的	1
-5	nice	Starter Module 1_5	5	adj.美好的	1
-5	to	Starter Module 1_5	5	prep.构成动词不定式	1
-5	meet	Starter Module 1_5	5	vt.遇见	1
-5	time	Starter Module 1_5	5	n.时间	1
-5	go	Starter Module 1_5	5	vi.走	1
-5	now	Starter Module 1_5	5	n.现在	1
-5	bye	Starter Module 1_5	5	再见	1
-5	see	Starter Module 1_5	5	vt.看见	1
-5	tomorrow	Starter Module 1_5	5	adv.明天	1
-6	sit	Starter Module 2_1	5	vt.坐	1
-6	down	Starter Module 2_1	5	adj.向下	1
-6	sit down	Starter Module 2_1	5	坐下	0
-6	open	Starter Module 2_1	5	vt.打开	1
-6	book	Starter Module 2_1	5	n.书	1
-6	listen	Starter Module 2_1	5	v.听	1
-6	draw	Starter Module 2_1	5	v.绘画	1
-6	put	Starter Module 2_1	5	v.放	1
-6	up	Starter Module 2_1	5	adv.向上	1
-7	hand	Starter Module 2_2	5	n.手	1
-7	stand	Starter Module 2_2	5	n.&v.站立	1
-7	stand up	Starter Module 2_2	5	起立	0
-7	close	Starter Module 2_2	5	vt.关闭	1
-7	new	Starter Module 2_2	5	adj.新的	1
-7	student	Starter Module 2_2	5	n.学生	0
-7	here	Starter Module 2_2	5	adv.这里	1
-7	in	Starter Module 2_2	5	prep.在...里面	1
-7	one	Starter Module 2_2	5	num.一	0
-8	two	Starter Module 2_3	5	num.二	0
-8	three	Starter Module 2_3	5	num.三	0
-8	four	Starter Module 2_3	5	num.四	0
-8	five	Starter Module 2_3	5	num.五	0
-8	six	Starter Module 2_3	5	num.六	0
-8	seven	Starter Module 2_3	5	num.七	0
-8	eight	Starter Module 2_3	5	num.八	0
-8	nine	Starter Module 2_3	5	num.九	0
-8	ten	Starter Module 2_3	5	num.十	0
-9	telephone	Starter Module 2_4	5	n.电话	0
-9	number	Starter Module 2_4	5	n.号码	0
-9	old	Starter Module 2_4	5	adj....年龄的	1
-9	how old	Starter Module 2_4	5	多大	0
-9	twelve	Starter Module 2_4	5	num.十二	0
-9	eleven	Starter Module 2_4	5	num.十一	0
-9	thirteen	Starter Module 2_4	5	num.十三	0
-9	fourteen	Starter Module 2_4	5	num.十四	0
-9	fifteen	Starter Module 2_4	5	num.十五	0
-10	sixteen	Starter Module 2_5	5	num.十六	0
-10	seventeen	Starter Module 2_5	5	num.十七	0
-10	eighteen	Starter Module 2_5	5	num.十八	0
-10	nineteen	Starter Module 2_5	5	num.十九	0
-10	twenty	Starter Module 2_5	5	num.二十	0
-10	boy	Starter Module 2_5	5	n.男孩	1
-10	girl	Starter Module 2_5	5	n.女孩	1
-10	desk	Starter Module 2_5	5	n.桌子	1
-10	chair	Starter Module 2_5	5	n.椅子	1
-10	bag	Starter Module 2_5	5	n.包	1
-11	in	Starter Module 3_1	4	prep.使用（某种语言）	1
-11	English	Starter Module 3_1	4	n&adj.英语	1
-11	in English	Starter Module 3_1	4	用英语	0
-11	a	Starter Module 3_1	4	art.一个	1
-11	write	Starter Module 3_1	4	v.写	1
-11	on	Starter Module 3_1	4	prep.在...上	1
-11	the	Starter Module 3_1	4	art.定代词	1
-11	blackboard	Starter Module 3_1	4	n.黑板	1
-11	OK	Starter Module 3_1	4	adj.行	0
-11	pen	Starter Module 3_1	4	n.笔	1
-12	no	Starter Module 3_2	4	n.&adv.不	1
-12	pencil	Starter Module 3_2	4	n.铅笔	1
-12	do	Starter Module 3_2	4	v.构成疑问句和否定句助词	1
-12	bird	Starter Module 3_2	4	n.鸟	1
-12	cat	Starter Module 3_2	4	n.猫	1
-12	dog	Starter Module 3_2	4	n.狗	1
-12	flower	Starter Module 3_2	4	n.花	1
-12	help	Starter Module 3_2	4	vt.帮助	1
-12	me	Starter Module 3_2	4	pron.（宾格）我	1
-12	of	Starter Module 3_2	4	prep....的	1
-13	course	Starter Module 3_3	4	n.当然	0
-13	of course	Starter Module 3_3	4	是的	0
-13	classroom	Starter Module 3_3	4	n.教室	0
-13	know	Starter Module 3_3	4	vt.知道	1
-13	say	Starter Module 3_3	4	vt.说	1
-13	that	Starter Module 3_3	4	pron.那	1
-13	again	Starter Module 3_3	4	adv.再次	1
-13	welcome	Starter Module 3_3	4	vt.受欢迎的	1
-13	You're welcome	Starter Module 3_3	4	不用谢	0
-13	black	Starter Module 3_3	4	adj.黑色的	1
-14	white	Starter Module 3_4	4	adj.白色的	1
-14	blue	Starter Module 3_4	4	adj.蓝色的	1
-14	green	Starter Module 3_4	4	adj.绿色的	1
-14	yellow	Starter Module 3_4	4	adj.黄色的	1
-14	red	Starter Module 3_4	4	adj.红色的	1
-14	brown	Starter Module 3_4	4	adj.棕色的	1
-14	orange	Starter Module 3_4	4	adj.&n.橘黄色的	1
-14	colour	Starter Module 3_4	4	n.颜色	1
-14	and	Starter Module 3_4	4	conj.和	1
-15	day	Starter Module 4_1	3	n.一天	1
-15	today	Starter Module 4_1	3	n.今天	1
-15	Monday	Starter Module 4_1	3	n.星期一	0
-15	Tuesday	Starter Module 4_1	3	n.星期二	0
-15	Wednesday	Starter Module 4_1	3	n.星期三	0
-15	Thursday	Starter Module 4_1	3	n.星期四	0
-15	Friday	Starter Module 4_1	3	n.星期五	0
-15	Saturday	Starter Module 4_1	3	n.星期六	0
-15	Sunday	Starter Module 4_1	3	n.星期天	0
-15	birthday	Starter Module 4_1	3	n.生日	1
-15	favourite	Starter Module 4_1	3	adj.最喜爱的	1
-16	spring	Starter Module 4_2	3	n.春天	1
-16	summer	Starter Module 4_2	3	n.夏天	1
-16	autumn	Starter Module 4_2	3	n.秋天	1
-16	winter	Starter Module 4_2	3	n.冬天	1
-16	warm	Starter Module 4_2	3	adj.暖和的	1
-16	hot	Starter Module 4_2	3	adj.热的	1
-16	cool	Starter Module 4_2	3	adj.凉快的	1
-16	cold	Starter Module 4_2	3	adj.冷的	1
-16	weather	Starter Module 4_2	3	n.天气	1
-16	like	Starter Module 4_2	3	prep.像	1
-16	London	Starter Module 4_2	3	n.伦敦	0
-17	basketball	Starter Module 4_3	3	n.篮球	1
-17	football	Starter Module 4_3	3	n.足球	1
-17	swimming	Starter Module 4_3	3	n.游泳	0
-17	table tennis	Starter Module 4_3	3	乒乓球	0
-17	sport	Starter Module 4_3	3	n.运动	1
-17	let	Starter Module 4_3	3	vt.让	1
-17	us	Starter Module 4_3	3	pron.(宾格)我们	1
-17	let us	Starter Module 4_3	3	让我们	0
-17	play	Starter Module 4_3	3	n.&v.玩耍	1
-17	after	Starter Module 4_3	3	conj.在...后	1
-17	school	Starter Module 4_3	3	n.学校	1
-17	idea	Starter Module 4_3	3	n.想法	1
-18	Chinese	Module 1_1	3	n&adj.中国人	1
-18	from	Module 1_1	3	prep.来自	1
-18	where	Module 1_1	3	adv.在哪里	1
-18	year	Module 1_1	3	n.年	1
-18	about	Module 1_1	3	prep.大约	1
-18	What about ...	Module 1_1	3	...怎么样？	0
-18	Ms	Module 1_1	3	abbr.女士	1
-18	America	Module 1_1	3	n.美国	0
-18	not	Module 1_1	3	adv.不是	1
-19	England	Module 1_2	3	n&adj.英格兰	0
-19	hi	Module 1_2	3	int.嘿	1
-19	American	Module 1_2	3	n&adj.美国人	0
-19	our	Module 1_2	3	pron.我们的	1
-19	grade	Module 1_2	3	n.年级	0
-19	he	Module 1_2	3	pron.他	1
-19	China	Module 1_2	3	n.中国	1
-19	everyone	Module 1_2	3	pron.每人	0
-19	capital	Module 1_2	3	n.首都	0
-20	but	Module 1_3	3	conj.但是	1
-20	very	Module 1_3	3	adv.很	1
-20	big	Module 1_3	3	adj.大的	1
-20	city	Module 1_3	3	n.城市	1
-20	small	Module 1_3	3	adj.小的	1
-20	first	Module 1_3	3	adv.第一的	0
-20	first name	Module 1_3	3	名字	0
-20	last	Module 1_3	3	adj.最后的	0
-20	last name	Module 1_3	3	姓	0
-20	all	Module 1_3	3	adj.&n.全体	1
-21	aunt	Module 2_1	5	n.姨母	1
-21	brother	Module 2_1	5	n.兄弟	1
-21	cousin	Module 2_1	5	n.堂（表）兄弟姐妹	1
-21	daughter	Module 2_1	5	n.女儿	0
-21	family	Module 2_1	5	n.家庭	1
-21	father	Module 2_1	5	n.爸爸	1
-21	grandfather	Module 2_1	5	n.祖父	1
-21	grandmother	Module 2_1	5	n.祖母	1
-21	grandparent	Module 2_1	5	n.祖父母	0
-21	mother	Module 2_1	5	n.母亲	1
-21	parent	Module 2_1	5	n.父母亲	1
-22	sister	Module 2_2	5	n.姐妹	1
-22	son	Module 2_2	5	n.儿子	0
-22	uncle	Module 2_2	5	n.叔叔	1
-22	photo	Module 2_2	5	n.照片	1
-22	these	Module 2_2	5	pron.这些	1
-22	they	Module 2_2	5	pron.他们	1
-22	mum	Module 2_2	5	n.妈妈	1
-22	left	Module 2_2	5	adj.&n.左边	1
-22	on the left	Module 2_2	5	在左边	0
-22	dad	Module 2_2	5	n.爸爸	1
-22	right	Module 2_2	5	adj.&n.右边	1
-23	on the right	Module 2_3	5	在右边	0
-23	who	Module 2_3	5	pron.谁	1
-23	woman	Module 2_3	5	n.妇女	1
-23	next	Module 2_3	5	adj.&adv.下一步	1
-23	next to	Module 2_3	5	在...旁边	0
-23	husband	Module 2_3	5	n.丈夫	0
-23	front	Module 2_3	5	n.前面	0
-23	in front of	Module 2_3	5	在...前面	0
-23	those	Module 2_3	5	pron.那些	1
-23	bus	Module 2_3	5	n.公共汽车	1
-23	station	Module 2_3	5	n.站	0
-24	hospital	Module 2_4	5	n.医院	1
-24	hotel	Module 2_4	5	n.饭店	0
-24	police	Module 2_4	5	n.警察	1
-24	theatre	Module 2_4	5	n.剧院	0
-24	actor	Module 2_4	5	n.演员	0
-24	driver	Module 2_4	5	n.司机	1
-24	manager	Module 2_4	5	n.经理	0
-24	nurse	Module 2_4	5	n.护士	1
-24	policeman	Module 2_4	5	n.男警察	0
-24	we	Module 2_4	5	pron.我们	1
-24	an	Module 2_4	5	art.一个	1
-25	job	Module 2_5	5	n.工作	0
-25	at	Module 2_5	5	prep.在...	1
-25	same	Module 2_5	5	adj.相同的	0
-25	doctor	Module 2_5	5	n.医生	1
-25	farm	Module 2_5	5	n.农场	1
-25	worker	Module 2_5	5	n.工人	1
-25	man	Module 2_5	5	n.男人	1
-25	shop	Module 2_5	5	n.商店	1
-25	its	Module 2_5	5	pron.它的	1
-25	their	Module 2_5	5	adj.他们的	1
-26	computer	Module 3_1	4	n.计算机	1
-26	furniture	Module 3_1	4	n.家具	0
-26	map	Module 3_1	4	n.地图	1
-26	picture	Module 3_1	4	n.图片	1
-26	television	Module 3_1	4	n.电视	0
-26	wall	Module 3_1	4	n.墙	0
-26	thirty	Module 3_1	4	num.三十	0
-26	forty	Module 3_1	4	num.四十	0
-26	fifty	Module 3_1	4	num.五十	0
-26	sixty	Module 3_1	4	num.六十	0
-27	seventy	Module 3_2	4	num.七十	0
-27	eighty	Module 3_2	4	num.八十	0
-27	ninety	Module 3_2	4	num.九十	0
-27	really	Module 3_2	4	adv.真正地	0
-27	many	Module 3_2	4	n.许多	1
-27	how many	Module 3_2	4	多少	0
-27	there	Module 3_2	4	adv.（用于引导句子的主语）	1
-27	lot	Module 3_2	4	adv.大量	0
-27	a lot of	Module 3_2	4	大量的	0
-27	oh	Module 3_2	4	int.唉	0
-28	any	Module 3_3	4	adj.任何一个	1
-28	world	Module 3_3	4	n.世界	0
-28	tree	Module 3_3	4	n.树	1
-28	building	Module 3_3	4	n.建筑物	0
-28	hall	Module 3_3	4	n.大厅	0
-28	dining hall	Module 3_3	4	饭厅	0
-28	gate	Module 3_3	4	n.大门	0
-28	library	Module 3_3	4	n.图书馆	1
-28	office	Module 3_3	4	n.办公室	0
-28	playground	Module 3_3	4	n.操场	1
-29	science	Module 3_4	4	n.科学	1
-29	lab	Module 3_4	4	n.实验室	0
-29	behind	Module 3_4	4	adv.在...后面	1
-29	between	Module 3_4	4	adv.在...之间	1
-29	middle	Module 3_4	4	n.中间	0
-29	near	Module 3_4	4	prep.靠近	1
-29	with	Module 3_4	4	prep.与...在一起	1
-29	for	Module 3_4	4	prep.为	1
-29	room	Module 3_4	4	n.房间	1
-30	food	Module 4_1	7	n.食物	1
-30	drink	Module 4_1	7	n.饮料	1
-30	candy	Module 4_1	7	n.糖果	1
-30	fruit	Module 4_1	7	n.水果	1
-30	meat	Module 4_1	7	n.肉	0
-30	vegetable	Module 4_1	7	n.蔬菜	1
-30	apple	Module 4_1	7	n.苹果	1
-30	bean	Module 4_1	7	n.豆	0
-30	beef	Module 4_1	7	n.牛肉	0
-30	carrot	Module 4_1	7	n.胡萝卜	0
-31	chicken	Module 4_2	7	n.鸡肉	1
-31	chocolate	Module 4_2	7	n.巧克力	0
-31	coffee	Module 4_2	7	n.咖啡	0
-31	cola	Module 4_2	7	n.可乐	0
-31	juice	Module 4_2	7	n.果汁	1
-31	milk	Module 4_2	7	n.牛奶	1
-31	potato	Module 4_2	7	n.马铃薯	1
-31	tea	Module 4_2	7	n.茶	1
-31	tomato	Module 4_2	7	n.西红柿	1
-31	water	Module 4_2	7	n.水	1
-32	shop	Module 4_3	7	v.购物	1
-32	go shopping	Module 4_3	7	去买东西	0
-32	have	Module 4_3	7	v.有	1
-32	get	Module 4_3	7	vt.得到	1
-32	have got	Module 4_3	7	有	0
-32	some	Module 4_3	7	adj.一些	1
-32	much	Module 4_3	7	adj.许多的	1
-32	too much	Module 4_3	7	太多	0
-32	kind	Module 4_3	7	n.种类	1
-32	lots of	Module 4_3	7	大量	0
-33	so	Module 4_4	7	conj.因此	0
-33	How about ...	Module 4_4	7	...好么？	0
-33	has	Module 4_4	7	v.有（第三人称单数）	1
-33	bad	Module 4_4	7	adj.坏的	1
-33	healthy	Module 4_4	7	adj.健康的	1
-33	delicious	Module 4_4	7	adj.美味的	0
-33	bread	Module 4_4	7	n.面包	1
-33	fish	Module 4_4	7	n.鱼肉	1
-33	hamburger	Module 4_4	7	n.汉堡包	0
-33	ice cream	Module 4_4	7	冰激凌	1
-34	noodle	Module 4_5	7	n.面条	1
-34	rice	Module 4_5	7	n.米	1
-34	sugar	Module 4_5	7	n.糖	0
-34	eat	Module 4_5	7	vt.吃	1
-34	child	Module 4_5	7	n.儿童	1
-34	be good for	Module 4_5	7	对...有帮助	0
-34	sweet	Module 4_5	7	adj.甜的	0
-34	be bad for	Module 4_5	7	对...有害的	0
-34	right	Module 4_5	7	adj.正确的	1
-34	egg	Module 4_5	7	n.蛋	1
-35	eye	Module 4_6	7	n.眼睛	1
-35	cheese	Module 4_6	7	n.奶酪	0
-35	tooth	Module 4_6	7	n.牙齿	0
-35	bit	Module 4_6	7	n.一点	0
-35	a bit	Module 4_6	7	稍微	0
-35	tired	Module 4_6	7	adj.劳累的	1
-35	soup	Module 4_6	7	n.汤	1
-35	important	Module 4_6	7	adj.重要的	0
-35	remember	Module 4_6	7	vt.记住	0
-35	well	Module 4_6	7	adv.好地	1
-36	stay	Module 4_7	7	v.&n.保持	0
-36	fat	Module 4_7	7	adj.肥胖的	0
-36	get fat	Module 4_7	7	发胖	0
-36	or	Module 4_7	7	conj.或者	1
-36	breakfast	Module 4_7	7	n.早饭	1
-36	every	Module 4_7	7	adj.每个	1
-36	lunch	Module 4_7	7	n.午饭	1
-36	home	Module 4_7	7	n.家	1
-36	dinner	Module 4_7	7	n.晚饭	1
-36	banana	Module 4_7	7	n.香蕉	1
-36	buy	Module 4_7	7	vt.买	1
-37	half	Module  5_1	5	adj.&n.一半	1
-37	past	Module  5_1	5	n.晚于	0
-37	o'clock	Module  5_1	5	...点钟	0
-37	to	Module  5_1	5	prep.距离整点...	1
-37	art	Module  5_1	5	n.艺术	1
-37	geography	Module  5_1	5	n.地理	0
-37	history	Module  5_1	5	n.历史	0
-37	IT	Module  5_1	5	abbr.信息技术	0
-37	maths	Module  5_1	5	n.数学	1
-38	PE	Module  5_2	5	n.体育	1
-38	lesson	Module  5_2	5	n.一节课	1
-38	then	Module  5_2	5	adv.然后	1
-38	like	Module  5_2	5	vt.喜欢	1
-38	difficult	Module  5_2	5	adj.困难的	1
-38	love	Module  5_2	5	vt.&n.爱	1
-38	subject	Module  5_2	5	n.科目	1
-38	because	Module  5_2	5	conj.因为	0
-38	interesting	Module  5_2	5	adj.有趣的	1
-39	talk	Module  5_3	5	n.&v.谈话	1
-39	begin	Module  5_3	5	vt.开始	1
-39	when	Module  5_3	5	conj.什么时候	1
-39	go to school	Module  5_3	5	上学	0
-39	weekday	Module  5_3	5	n.工作日	0
-39	get up	Module  5_3	5	起床	0
-39	have breakfast	Module  5_3	5	吃早餐	0
-39	house	Module  5_3	5	n.房子	1
-39	start	Module  5_3	5	n.&v.开始	0
-40	work	Module  5_4	5	n.&v.工作	1
-40	break	Module  5_4	5	n.课间休息	0
-40	have lunch	Module  5_4	5	吃午餐	0
-40	go home	Module  5_4	5	回家	0
-40	evening	Module  5_4	5	n.晚上	1
-40	watch	Module  5_4	5	v.看	1
-40	have dinner	Module  5_4	5	吃晚餐	0
-40	do	Module  5_4	5	v.做	1
-40	homework	Module  5_4	5	n.家庭作业	0
-41	bed	Module  5_5	5	n.床	1
-41	go to bed	Module  5_5	5	上床睡觉	0
-41	sleep	Module  5_5	5	v.睡觉	1
-41	go to sleep	Module  5_5	5	入睡	0
-41	park	Module  5_5	5	n.公园	1
-41	busy	Module  5_5	5	adj.忙的	1
-41	wash	Module  5_5	5	v.洗	1
-41	face	Module  5_5	5	n.脸	1
-41	minute	Module  5_5	5	n.分钟	1
-42	grandma	Revision module A_1	1	n.祖母	1
-42	grandpa	Revision module A_1	1	n.祖父	1
-42	him	Revision module A_1	1	pron.(宾格)他	1
-42	want	Revision module A_1	1	vi.想要	1
-42	make	Revision module A_1	1	vt.制作	1
-42	kitchen	Revision module A_1	1	n.厨房	1
-42	farmer	Revision module A_1	1	n.农民	1
-42	week	Revision module A_1	1	n.星期	1
-42	read	Revision module A_1	1	vt.阅读	1
-42	story	Revision module A_1	1	n.故事	1
-42	live	Revision module A_1	1	v.生活	1
-43	bear	Module6_1	6	n.熊	0
-43	elephant	Module6_1	6	n.大象	1
-43	giraffe	Module6_1	6	n.长颈鹿	0
-43	lion	Module6_1	6	n.狮子	0
-43	monkey	Module6_1	6	n.猴子	1
-43	panda	Module6_1	6	n.熊猫	1
-43	tiger	Module6_1	6	n.老虎	1
-43	zebra	Module6_1	6	n.斑马	0
-43	zoo	Module6_1	6	n.动物园	1
-43	guide	Module6_1	6	n.导游	0
-44	animal	Module6_2	6	n.动物	1
-44	such	Module6_2	6	adj.这样的	0
-44	as	Module6_2	6	adv.像...一样	0
-44	such as	Module6_2	6	比如	0
-44	come	Module6_2	6	vi.来	1
-44	come from	Module6_2	6	来自	0
-44	different	Module6_2	6	adj.不同的	0
-44	country	Module6_2	6	n.国家	0
-44	other	Module6_2	6	adj.其他的	0
-44	dangerous	Module6_2	6	adj.危险的	0
-45	ugh	Module6_3	6	int.啊	0
-45	also	Module6_3	6	adv.也	1
-45	plant	Module6_3	6	n.植物	1
-45	look	Module6_3	6	v.看	1
-45	look at	Module6_3	6	看	0
-45	tall	Module6_3	6	adj.高的	1
-45	sure	Module6_3	6	adv.当然	0
-45	bamboo	Module6_3	6	n.竹子	0
-45	cute	Module6_3	6	adj.可爱的	0
-45	shall	Module6_3	6	vt....好吗?	0
-46	them	Module6_4	6	pron.(宾格)他们	1
-46	which	Module6_4	6	pron.哪一个	0
-46	over	Module6_4	6	prep.在...的上方	0
-46	there	Module6_4	6	adv.在那里	1
-46	over there	Module6_4	6	在那边	0
-46	funny	Module6_4	6	adj.有趣的	0
-46	call	Module6_4	6	v.称呼...为	1
-46	Africa	Module6_4	6	n.非洲	0
-46	Asia	Module6_4	6	n.亚洲	0
-46	Europe	Module6_4	6	n.欧洲	0
-47	little	Module6_5	6	adj.极少量的	1
-47	a little	Module6_5	6	少量	0
-47	only	Module6_5	6	adv.仅仅	0
-47	about	Module6_5	6	prep.大约	1
-47	kilo	Module6_5	6	n.千克	0
-47	as well as	Module6_5	6	并且	0
-47	people	Module6_5	6	n.人们	1
-47	all over the world	Module6_5	6	全世界	0
-47	Africa	Module6_5	6	n&adj.非洲的	0
-47	leaf	Module6_5	6	n.叶子	0
-48	grass	Module6_6	6	n.草	1
-48	large	Module6_6	6	adj.大的、巨大的	0
-48	usually	Module6_6	6	adv.通常	0
-48	alone	Module6_6	6	adv.独自地	0
-48	be good at	Module6_6	6	擅长	0
-48	strong	Module6_6	6	adj.强壮的	1
-48	catch	Module6_6	6	vt.抓住	0
-48	many kinds of	Module6_6	6	许多种类	0
-48	even	Module6_6	6	adv.甚至	0
-49	keyboard	Module7_1	4	n.键盘	0
-49	mouse	Module7_1	4	n.鼠标	0
-49	screen	Module7_1	4	n.屏幕	0
-49	connect	Module7_1	4	vt.连接	0
-49	turn	Module7_1	4	vt.转动	1
-49	turn on	Module7_1	4	打开	0
-49	learn	Module7_1	4	vt.学	0
-49	document	Module7_1	4	n.文件	0
-49	click	Module7_1	4	n.点击	0
-49	use	Module7_1	4	n.使用	1
-50	save	Module7_2	4	vt.保存	0
-50	box	Module7_2	4	n.盒子	1
-50	finally	Module7_2	4	adv.最后	0
-50	print	Module7_2	4	vt.打印	0
-50	paper	Module7_2	4	n.纸	0
-50	share	Module7_2	4	vt.分享	0
-50	Australia	Module7_2	4	n.澳大利亚	0
-50	company	Module7_2	4	n.公司	0
-50	often	Module7_2	4	adv.经常	1
-50	customer	Module7_2	4	n.顾客	0
-51	Internet	Module7_3	4	n.因特网	0
-51	check	Module7_3	4	vt.检查	0
-51	train	Module7_3	4	n.火车	1
-51	travel	Module7_3	4	n.旅行	1
-51	plan	Module7_3	4	n.&v.计划	0
-51	ticket	Module7_3	4	n.票	0
-51	music	Module7_3	4	n.音乐	1
-51	movie	Module7_3	4	n.电影	0
-51	night	Module7_3	4	n.夜晚	1
-51	search	Module7_3	4	v.搜寻	0
-52	search for	Module7_4	4	搜寻	0
-52	information	Module7_4	4	n.信息	0
-52	email	Module7_4	4	n.电子邮件	1
-52	send	Module7_4	4	vt.发送	0
-52	game	Module7_4	4	n.游戏	1
-52	sometimes	Module7_4	4	adv.有时候	1
-52	cinema	Module7_4	4	n.电影院	1
-52	clothes	Module7_4	4	n.衣服（总称）	1
-52	visit	Module7_4	4	n.&v.探望	1
-52	holiday	Module7_4	4	n.假日	1
-53	card	Module8_1	4	n.卡片	1
-53	party	Module8_1	4	n.晚会	1
-53	present	Module8_1	4	n.礼物	0
-53	would	Module8_1	4	aux.愿意	0
-53	always	Module8_1	4	adv.总是	1
-53	great	Module8_1	4	adj.太好了	1
-53	cake	Module8_1	4	n.蛋糕	1
-53	never	Module8_1	4	adv.从不	0
-53	special	Module8_1	4	adj.特别的	0
-53	cut	Module8_1	4	vt.切	0
-54	give	Module8_2	4	vt.给	1
-54	sing	Module8_2	4	vt.唱	1
-54	happy	Module8_2	4	adj.高兴的	1
-54	secret	Module8_2	4	n.秘密	0
-54	ha ha	Module8_2	4	哈哈	0
-54	CD	Module8_2	4	n.光盘	0
-54	concert	Module8_2	4	n.音乐会	0
-54	magazine	Module8_2	4	n.杂志	0
-54	scarf	Module8_2	4	n.围巾	0
-54	silk	Module8_2	4	n.丝绸	0
-55	dress	Module8_3	4	n.连衣裙	1
-55	T-shirt	Module8_3	4	n.T恤衫	0
-55	choose	Module8_3	4	vt.选择	0
-55	exercise	Module8_3	4	n.练习	1
-55	wear	Module8_3	4	vt.穿	1
-55	expensive	Module8_3	4	adj.昂贵的	0
-55	shoe	Module8_3	4	n.鞋	1
-55	spend	Module8_3	4	v.花费	0
-55	money	Module8_3	4	n.钱	0
-55	film	Module8_3	4	n.电影	1
-56	song	Module8_4	4	n.歌曲	1
-56	match	Module8_4	4	n.比赛	0
-56	weekend	Module8_4	4	n.周末	0
-56	at weekends	Module8_4	4	在周末	0
-56	dear	Module8_4	4	adj.亲爱的	1
-56	hear	Module8_4	4	vt.听见	1
-56	hear from	Module8_4	4	收到...的来信	0
-56	afraid	Module8_4	4	adj.害怕的	1
-56	I'm afraid	Module8_4	4	恐怕	0
-56	cannot	Module8_4	4	不能	0
-57	postcard	Module9_1	3	n.明信片	0
-57	call	Module9_1	3	v.打电话	1
-57	lie	Module9_1	3	v.躺	0
-57	sun	Module9_1	3	n.太阳	1
-57	line	Module9_1	3	n.列	0
-57	take	Module9_1	3	vt.拿	1
-57	take photos	Module9_1	3	拍照	0
-57	wait	Module9_1	3	vt.等待	1
-57	wait for	Module9_1	3	等待	0
-57	walk	Module9_1	3	vi.行走	1
-57	trip	Module9_1	3	n.旅行	0
-58	few	Module9_2	3	adj.很少（可数名词）	0
-58	a few	Module9_2	3	一些	0
-58	sale	Module9_2	3	n.卖	0
-58	on sale	Module9_2	3	正在出售	0
-58	enjoy	Module9_2	3	vt.享受...的乐趣	0
-58	anyway	Module9_2	3	adv.无论如何	0
-58	back	Module9_2	3	adv.向后	1
-58	go back	Module9_2	3	回去	0
-58	drive	Module9_2	3	v.驾驶	0
-58	off	Module9_2	3	prep.下（车)	0
-58	get off	Module9_2	3	下（车)	0
-59	hot dog	Module9_3	3	热狗	0
-59	leave	Module9_3	3	v.离开	0
-59	restaurant	Module9_3	3	n.饭店	0
-59	moment	Module9_3	3	n.时刻	0
-59	place	Module9_3	3	n.地点	1
-59	thing	Module9_3	3	n.事情	0
-59	most	Module9_3	3	adv.&adj.大部分	0
-59	still	Module9_3	3	adv.仍然	0
-59	star	Module9_3	3	n.星	1
-59	run	Module9_3	3	vi.跑	1
-59	study	Module9_3	3	vi.&n.学习	1
-60	lantern	Module 10_1	4	n.灯笼	0
-60	dragon	Module 10_1	4	n.龙	0
-60	dance	Module 10_1	4	vi.跳舞	1
-60	clean	Module 10_1	4	adj.&n.干净的	1
-60	sweep	Module 10_1	4	vt.打扫	0
-60	floor	Module 10_1	4	n.地板	1
-60	cook	Module 10_1	4	vi.烹调	1
-60	meal	Module 10_1	4	n.一餐	0
-60	speak	Module 10_1	4	vt.说话	1
-60	happen	Module 10_1	4	vi.发生	0
-61	ready	Module 10_2	4	adj.准备好的	0
-61	get ready for	Module 10_2	4	为...做好准备	0
-61	festival	Module 10_2	4	n.节日	0
-61	quite	Module 10_2	4	adv.十分	0
-61	at the moment	Module 10_2	4	此刻	0
-61	beautiful	Module 10_2	4	adj.漂亮的	0
-61	at work	Module 10_2	4	在工作	0
-61	away	Module 10_2	4	adv.在安全的地方	0
-61	put away	Module 10_2	4	收起	0
-61	hard	Module 10_2	4	adj.&adv.困难的	0
-62	join	Module 10_3	4	v.参加	0
-62	hurry	Module 10_3	4	n.&v.赶快	0
-62	hurry up	Module 10_3	4	赶快	0
-62	Christmas	Module 10_3	4	n.圣诞节	0
-62	February	Module 10_3	4	n.二月	0
-62	January	Module 10_3	4	n.一月	0
-62	before	Module 10_3	4	prep.在...之前	1
-62	sweep away	Module 10_3	4	扫去	0
-62	luck	Module 10_3	4	n.运气	0
-62	table	Module 10_3	4	n.桌子	1
-63	celebrate	Module 10_4	4	vt.庆祝	0
-63	traditional	Module 10_4	4	adj.传统的	0
-63	dumpling	Module 10_4	4	n.饺子	0
-63	programme	Module 10_4	4	n.节目	0
-63	sweater	Module 10_4	4	n.毛线衣	1
-63	coat	Module 10_4	4	n.外套	1
-63	mean	Module 10_4	4	v.意味着	0
-63	lucky	Module 10_4	4	adj.幸运的	0
-63	merry	Module 10_4	4	adj.愉快的	0
-63	Merry Christmas	Module 10_4	4	圣诞快乐	0
-63	tell	Module 10_4	4	vt.讲	1
-64	think	Revision module B_1	1	vt.想	1
+1	hello	Starter Module 1_1	10	int.你好	1
+1	class	Starter Module 1_1	10	n.班级	1
+1	my	Starter Module 1_1	10	adj.我的	1
+2	name	Starter Module 1_2	10	n.名字	1
+2	is	Starter Module 1_2	10	v.是	1
+2	Miss	Starter Module 1_2	10	abbr.小姐	1
+2	good	Starter Module 1_2	10	adj.好的	1
+2	morning	Starter Module 1_2	10	n.早晨	1
+3	good morning	Starter Module 1_3	10	早上好	0
+3	afternoon	Starter Module 1_3	10	n.下午	1
+3	good afternoon	Starter Module 1_3	10	下午好	0
+3	goodbye	Starter Module 1_3	10	int.再见	1
+3	I	Starter Module 1_3	10	pron.我	1
+4	am	Starter Module 1_4	10	是	1
+4	I am	Starter Module 1_4	10	我是	0
+4	Mr	Starter Module 1_4	10	abbr.先生	1
+4	what	Starter Module 1_4	10	pron.什么	1
+4	your	Starter Module 1_4	10	pron.你的	1
+5	please	Starter Module 1_5	10	int.请	1
+5	sorry	Starter Module 1_5	10	adj.对不起	1
+5	can	Starter Module 1_5	10	aux.能	1
+5	you	Starter Module 1_5	10	pron.你	1
+5	spell	Starter Module 1_5	10	v.拼写	0
+6	it	Starter Module 1_6	10	pron.它	1
+6	yes	Starter Module 1_6	10	adj.是的	1
+6	thank	Starter Module 1_6	10	vt.感谢	1
+6	how	Starter Module 1_6	10	adv.怎样	1
+6	are	Starter Module 1_6	10	v.是	1
+7	fine	Starter Module 1_7	10	adj.很好的	1
+7	thanks	Starter Module 1_7	10	谢谢	0
+7	Mrs	Starter Module 1_7	10	abbr.夫人	0
+7	too	Starter Module 1_7	10	adv.也	1
+7	this	Starter Module 1_7	10	pron.这	1
+8	she	Starter Module 1_8	10	pron.她	1
+8	teacher	Starter Module 1_8	10	n.老师	1
+8	friend	Starter Module 1_8	10	n.朋友	1
+8	her	Starter Module 1_8	10	pron.她的	1
+8	his	Starter Module 1_8	10	pron.他的	1
+9	nice	Starter Module 1_9	10	adj.美好的	1
+9	to	Starter Module 1_9	10	prep.构成动词不定式	1
+9	meet	Starter Module 1_9	10	vt.遇见	1
+9	time	Starter Module 1_9	10	n.时间	1
+9	go	Starter Module 1_9	10	vi.走	1
+10	now	Starter Module 1_10	10	n.现在	1
+10	bye	Starter Module 1_10	10	再见	1
+10	see	Starter Module 1_10	10	vt.看见	1
+10	tomorrow	Starter Module 1_10	10	adv.明天	1
+11	sit	Starter Module 2_1	9	vt.坐	1
+11	down	Starter Module 2_1	9	adj.向下	1
+11	sit down	Starter Module 2_1	9	坐下	0
+11	open	Starter Module 2_1	9	vt.打开	1
+11	book	Starter Module 2_1	9	n.书	1
+12	listen	Starter Module 2_2	9	v.听	1
+12	draw	Starter Module 2_2	9	v.绘画	1
+12	put	Starter Module 2_2	9	v.放	1
+12	up	Starter Module 2_2	9	adv.向上	1
+12	hand	Starter Module 2_2	9	n.手	1
+13	stand	Starter Module 2_3	9	n.&v.站立	1
+13	stand up	Starter Module 2_3	9	起立	0
+13	close	Starter Module 2_3	9	vt.关闭	1
+13	new	Starter Module 2_3	9	adj.新的	1
+13	student	Starter Module 2_3	9	n.学生	0
+14	here	Starter Module 2_4	9	adv.这里	1
+14	in	Starter Module 2_4	9	prep.在...里面	1
+14	one	Starter Module 2_4	9	num.一	0
+14	two	Starter Module 2_4	9	num.二	0
+14	three	Starter Module 2_4	9	num.三	0
+15	four	Starter Module 2_5	9	num.四	0
+15	five	Starter Module 2_5	9	num.五	0
+15	six	Starter Module 2_5	9	num.六	0
+15	seven	Starter Module 2_5	9	num.七	0
+15	eight	Starter Module 2_5	9	num.八	0
+16	nine	Starter Module 2_6	9	num.九	0
+16	ten	Starter Module 2_6	9	num.十	0
+16	telephone	Starter Module 2_6	9	n.电话	0
+16	number	Starter Module 2_6	9	n.号码	0
+16	old	Starter Module 2_6	9	adj....年龄的	1
+17	how old	Starter Module 2_7	9	多大	0
+17	twelve	Starter Module 2_7	9	num.十二	0
+17	eleven	Starter Module 2_7	9	num.十一	0
+17	thirteen	Starter Module 2_7	9	num.十三	0
+17	fourteen	Starter Module 2_7	9	num.十四	0
+18	fifteen	Starter Module 2_8	9	num.十五	0
+18	sixteen	Starter Module 2_8	9	num.十六	0
+18	seventeen	Starter Module 2_8	9	num.十七	0
+18	eighteen	Starter Module 2_8	9	num.十八	0
+18	nineteen	Starter Module 2_8	9	num.十九	0
+19	twenty	Starter Module 2_9	9	num.二十	0
+19	boy	Starter Module 2_9	9	n.男孩	1
+19	girl	Starter Module 2_9	9	n.女孩	1
+19	desk	Starter Module 2_9	9	n.桌子	1
+19	chair	Starter Module 2_9	9	n.椅子	1
+19	bag	Starter Module 2_9	9	n.包	1
+20	in	Starter Module 3_1	8	prep.使用（某种语言）	1
+20	English	Starter Module 3_1	8	n&adj.英语	1
+20	in English	Starter Module 3_1	8	用英语	0
+20	a	Starter Module 3_1	8	art.一个	1
+20	write	Starter Module 3_1	8	v.写	1
+21	on	Starter Module 3_2	8	prep.在...上	1
+21	the	Starter Module 3_2	8	art.定代词	1
+21	blackboard	Starter Module 3_2	8	n.黑板	1
+21	OK	Starter Module 3_2	8	adj.行	0
+21	pen	Starter Module 3_2	8	n.笔	1
+22	no	Starter Module 3_3	8	n.&adv.不	1
+22	pencil	Starter Module 3_3	8	n.铅笔	1
+22	do	Starter Module 3_3	8	v.构成疑问句和否定句助词	1
+22	bird	Starter Module 3_3	8	n.鸟	1
+22	cat	Starter Module 3_3	8	n.猫	1
+23	dog	Starter Module 3_4	8	n.狗	1
+23	flower	Starter Module 3_4	8	n.花	1
+23	help	Starter Module 3_4	8	vt.帮助	1
+23	me	Starter Module 3_4	8	pron.（宾格）我	1
+23	of	Starter Module 3_4	8	prep....的	1
+24	course	Starter Module 3_5	8	n.当然	0
+24	of course	Starter Module 3_5	8	是的	0
+24	classroom	Starter Module 3_5	8	n.教室	0
+24	know	Starter Module 3_5	8	vt.知道	1
+24	say	Starter Module 3_5	8	vt.说	1
+25	that	Starter Module 3_6	8	pron.那	1
+25	again	Starter Module 3_6	8	adv.再次	1
+25	welcome	Starter Module 3_6	8	vt.受欢迎的	1
+25	You're welcome	Starter Module 3_6	8	不用谢	0
+25	black	Starter Module 3_6	8	adj.黑色的	1
+26	white	Starter Module 3_7	8	adj.白色的	1
+26	blue	Starter Module 3_7	8	adj.蓝色的	1
+26	green	Starter Module 3_7	8	adj.绿色的	1
+26	yellow	Starter Module 3_7	8	adj.黄色的	1
+26	red	Starter Module 3_7	8	adj.红色的	1
+27	brown	Starter Module 3_8	8	adj.棕色的	1
+27	orange	Starter Module 3_8	8	adj.&n.橘黄色的	1
+27	colour	Starter Module 3_8	8	n.颜色	1
+27	and	Starter Module 3_8	8	conj.和	1
+28	day	Starter Module 4_1	7	n.一天	1
+28	today	Starter Module 4_1	7	n.今天	1
+28	Monday	Starter Module 4_1	7	n.星期一	0
+28	Tuesday	Starter Module 4_1	7	n.星期二	0
+28	Wednesday	Starter Module 4_1	7	n.星期三	0
+29	Thursday	Starter Module 4_2	7	n.星期四	0
+29	Friday	Starter Module 4_2	7	n.星期五	0
+29	Saturday	Starter Module 4_2	7	n.星期六	0
+29	Sunday	Starter Module 4_2	7	n.星期天	0
+29	birthday	Starter Module 4_2	7	n.生日	1
+30	favourite	Starter Module 4_3	7	adj.最喜爱的	1
+30	spring	Starter Module 4_3	7	n.春天	1
+30	summer	Starter Module 4_3	7	n.夏天	1
+30	autumn	Starter Module 4_3	7	n.秋天	1
+30	winter	Starter Module 4_3	7	n.冬天	1
+31	warm	Starter Module 4_4	7	adj.暖和的	1
+31	hot	Starter Module 4_4	7	adj.热的	1
+31	cool	Starter Module 4_4	7	adj.凉快的	1
+31	cold	Starter Module 4_4	7	adj.冷的	1
+31	weather	Starter Module 4_4	7	n.天气	1
+32	like	Starter Module 4_5	7	prep.像	1
+32	London	Starter Module 4_5	7	n.伦敦	0
+32	basketball	Starter Module 4_5	7	n.篮球	1
+32	football	Starter Module 4_5	7	n.足球	1
+32	swimming	Starter Module 4_5	7	n.游泳	0
+33	table tennis	Starter Module 4_6	7	乒乓球	0
+33	sport	Starter Module 4_6	7	n.运动	1
+33	let	Starter Module 4_6	7	vt.让	1
+33	us	Starter Module 4_6	7	pron.(宾格)我们	1
+33	let us	Starter Module 4_6	7	让我们	0
+34	play	Starter Module 4_7	7	n.&v.玩耍	1
+34	after	Starter Module 4_7	7	conj.在...后	1
+34	school	Starter Module 4_7	7	n.学校	1
+34	idea	Starter Module 4_7	7	n.想法	1
+35	Chinese	Module 1_1	6	n&adj.中国人	1
+35	from	Module 1_1	6	prep.来自	1
+35	where	Module 1_1	6	adv.在哪里	1
+35	year	Module 1_1	6	n.年	1
+35	about	Module 1_1	6	prep.大约	1
+36	What about ...	Module 1_2	6	...怎么样？	0
+36	Ms	Module 1_2	6	abbr.女士	1
+36	America	Module 1_2	6	n.美国	0
+36	not	Module 1_2	6	adv.不是	1
+36	England	Module 1_2	6	n&adj.英格兰	0
+37	hi	Module 1_3	6	int.嘿	1
+37	American	Module 1_3	6	n&adj.美国人	0
+37	our	Module 1_3	6	pron.我们的	1
+37	grade	Module 1_3	6	n.年级	0
+37	he	Module 1_3	6	pron.他	1
+38	China	Module 1_4	6	n.中国	1
+38	everyone	Module 1_4	6	pron.每人	0
+38	capital	Module 1_4	6	n.首都	0
+38	but	Module 1_4	6	conj.但是	1
+38	very	Module 1_4	6	adv.很	1
+39	big	Module 1_5	6	adj.大的	1
+39	city	Module 1_5	6	n.城市	1
+39	small	Module 1_5	6	adj.小的	1
+39	first	Module 1_5	6	adv.第一的	0
+40	first name	Module 1_6	6	名字	0
+40	last	Module 1_6	6	adj.最后的	0
+40	last name	Module 1_6	6	姓	0
+40	all	Module 1_6	6	adj.&n.全体	1
+41	aunt	Module 2_1	11	n.姨母	1
+41	brother	Module 2_1	11	n.兄弟	1
+41	cousin	Module 2_1	11	n.堂（表）兄弟姐妹	1
+41	daughter	Module 2_1	11	n.女儿	0
+41	family	Module 2_1	11	n.家庭	1
+42	father	Module 2_2	11	n.爸爸	1
+42	grandfather	Module 2_2	11	n.祖父	1
+42	grandmother	Module 2_2	11	n.祖母	1
+42	grandparent	Module 2_2	11	n.祖父母	0
+42	mother	Module 2_2	11	n.母亲	1
+43	parent	Module 2_3	11	n.父母亲	1
+43	sister	Module 2_3	11	n.姐妹	1
+43	son	Module 2_3	11	n.儿子	0
+43	uncle	Module 2_3	11	n.叔叔	1
+43	photo	Module 2_3	11	n.照片	1
+44	these	Module 2_4	11	pron.这些	1
+44	they	Module 2_4	11	pron.他们	1
+44	mum	Module 2_4	11	n.妈妈	1
+44	left	Module 2_4	11	adj.&n.左边	1
+44	on the left	Module 2_4	11	在左边	0
+45	dad	Module 2_5	11	n.爸爸	1
+45	right	Module 2_5	11	adj.&n.右边	1
+45	on the right	Module 2_5	11	在右边	0
+45	who	Module 2_5	11	pron.谁	1
+45	woman	Module 2_5	11	n.妇女	1
+46	next	Module 2_6	11	adj.&adv.下一步	1
+46	next to	Module 2_6	11	在...旁边	0
+46	husband	Module 2_6	11	n.丈夫	0
+46	front	Module 2_6	11	n.前面	0
+46	in front of	Module 2_6	11	在...前面	0
+47	those	Module 2_7	11	pron.那些	1
+47	bus	Module 2_7	11	n.公共汽车	1
+47	station	Module 2_7	11	n.站	0
+47	hospital	Module 2_7	11	n.医院	1
+47	hotel	Module 2_7	11	n.饭店	0
+48	police	Module 2_8	11	n.警察	1
+48	theatre	Module 2_8	11	n.剧院	0
+48	actor	Module 2_8	11	n.演员	0
+48	driver	Module 2_8	11	n.司机	1
+48	manager	Module 2_8	11	n.经理	0
+49	nurse	Module 2_9	11	n.护士	1
+49	policeman	Module 2_9	11	n.男警察	0
+49	we	Module 2_9	11	pron.我们	1
+49	an	Module 2_9	11	art.一个	1
+49	job	Module 2_9	11	n.工作	0
+50	at	Module 2_10	11	prep.在...	1
+50	same	Module 2_10	11	adj.相同的	0
+50	doctor	Module 2_10	11	n.医生	1
+50	farm	Module 2_10	11	n.农场	1
+50	worker	Module 2_10	11	n.工人	1
+51	man	Module 2_11	11	n.男人	1
+51	shop	Module 2_11	11	n.商店	1
+51	its	Module 2_11	11	pron.它的	1
+51	their	Module 2_11	11	adj.他们的	1
+52	computer	Module 3_1	8	n.计算机	1
+52	furniture	Module 3_1	8	n.家具	0
+52	map	Module 3_1	8	n.地图	1
+52	picture	Module 3_1	8	n.图片	1
+52	television	Module 3_1	8	n.电视	0
+53	wall	Module 3_2	8	n.墙	0
+53	thirty	Module 3_2	8	num.三十	0
+53	forty	Module 3_2	8	num.四十	0
+53	fifty	Module 3_2	8	num.五十	0
+53	sixty	Module 3_2	8	num.六十	0
+54	seventy	Module 3_3	8	num.七十	0
+54	eighty	Module 3_3	8	num.八十	0
+54	ninety	Module 3_3	8	num.九十	0
+54	really	Module 3_3	8	adv.真正地	0
+54	many	Module 3_3	8	n.许多	1
+55	how many	Module 3_4	8	多少	0
+55	there	Module 3_4	8	adv.（用于引导句子的主语）	1
+55	lot	Module 3_4	8	adv.大量	0
+55	a lot of	Module 3_4	8	大量的	0
+55	oh	Module 3_4	8	int.唉	0
+56	any	Module 3_5	8	adj.任何一个	1
+56	world	Module 3_5	8	n.世界	0
+56	tree	Module 3_5	8	n.树	1
+56	building	Module 3_5	8	n.建筑物	0
+56	hall	Module 3_5	8	n.大厅	0
+57	dining hall	Module 3_6	8	饭厅	0
+57	gate	Module 3_6	8	n.大门	0
+57	library	Module 3_6	8	n.图书馆	1
+57	office	Module 3_6	8	n.办公室	0
+57	playground	Module 3_6	8	n.操场	1
+58	science	Module 3_7	8	n.科学	1
+58	lab	Module 3_7	8	n.实验室	0
+58	behind	Module 3_7	8	adv.在...后面	1
+58	between	Module 3_7	8	adv.在...之间	1
+58	middle	Module 3_7	8	n.中间	0
+59	near	Module 3_8	8	prep.靠近	1
+59	with	Module 3_8	8	prep.与...在一起	1
+59	for	Module 3_8	8	prep.为	1
+59	room	Module 3_8	8	n.房间	1
+60	food	Module 4_1	14	n.食物	1
+60	drink	Module 4_1	14	n.饮料	1
+60	candy	Module 4_1	14	n.糖果	1
+60	fruit	Module 4_1	14	n.水果	1
+60	meat	Module 4_1	14	n.肉	0
+61	vegetable	Module 4_2	14	n.蔬菜	1
+61	apple	Module 4_2	14	n.苹果	1
+61	bean	Module 4_2	14	n.豆	0
+61	beef	Module 4_2	14	n.牛肉	0
+61	carrot	Module 4_2	14	n.胡萝卜	0
+62	chicken	Module 4_3	14	n.鸡肉	1
+62	chocolate	Module 4_3	14	n.巧克力	0
+62	coffee	Module 4_3	14	n.咖啡	0
+62	cola	Module 4_3	14	n.可乐	0
+62	juice	Module 4_3	14	n.果汁	1
+63	milk	Module 4_4	14	n.牛奶	1
+63	potato	Module 4_4	14	n.马铃薯	1
+63	tea	Module 4_4	14	n.茶	1
+63	tomato	Module 4_4	14	n.西红柿	1
+63	water	Module 4_4	14	n.水	1
+64	shop	Module 4_5	14	v.购物	1
+64	go shopping	Module 4_5	14	去买东西	0
+64	have	Module 4_5	14	v.有	1
+64	get	Module 4_5	14	vt.得到	1
+64	have got	Module 4_5	14	有	0
+65	some	Module 4_6	14	adj.一些	1
+65	much	Module 4_6	14	adj.许多的	1
+65	too much	Module 4_6	14	太多	0
+65	kind	Module 4_6	14	n.种类	1
+65	lots of	Module 4_6	14	大量	0
+66	so	Module 4_7	14	conj.因此	0
+66	How about ...	Module 4_7	14	...好么？	0
+66	has	Module 4_7	14	v.有（第三人称单数）	1
+66	bad	Module 4_7	14	adj.坏的	1
+66	healthy	Module 4_7	14	adj.健康的	1
+67	delicious	Module 4_8	14	adj.美味的	0
+67	bread	Module 4_8	14	n.面包	1
+67	fish	Module 4_8	14	n.鱼肉	1
+67	hamburger	Module 4_8	14	n.汉堡包	0
+67	ice cream	Module 4_8	14	冰激凌	1
+68	noodle	Module 4_9	14	n.面条	1
+68	rice	Module 4_9	14	n.米	1
+68	sugar	Module 4_9	14	n.糖	0
+68	eat	Module 4_9	14	vt.吃	1
+68	child	Module 4_9	14	n.儿童	1
+69	be good for	Module 4_10	14	对...有帮助	0
+69	sweet	Module 4_10	14	adj.甜的	0
+69	be bad for	Module 4_10	14	对...有害的	0
+69	right	Module 4_10	14	adj.正确的	1
+69	egg	Module 4_10	14	n.蛋	1
+70	eye	Module 4_11	14	n.眼睛	1
+70	cheese	Module 4_11	14	n.奶酪	0
+70	tooth	Module 4_11	14	n.牙齿	0
+70	bit	Module 4_11	14	n.一点	0
+70	a bit	Module 4_11	14	稍微	0
+71	tired	Module 4_12	14	adj.劳累的	1
+71	soup	Module 4_12	14	n.汤	1
+71	important	Module 4_12	14	adj.重要的	0
+71	remember	Module 4_12	14	vt.记住	0
+71	well	Module 4_12	14	adv.好地	1
+72	stay	Module 4_13	14	v.&n.保持	0
+72	fat	Module 4_13	14	adj.肥胖的	0
+72	get fat	Module 4_13	14	发胖	0
+72	or	Module 4_13	14	conj.或者	1
+72	breakfast	Module 4_13	14	n.早饭	1
+73	every	Module 4_14	14	adj.每个	1
+73	lunch	Module 4_14	14	n.午饭	1
+73	home	Module 4_14	14	n.家	1
+73	dinner	Module 4_14	14	n.晚饭	1
+73	banana	Module 4_14	14	n.香蕉	1
+73	buy	Module 4_14	14	vt.买	1
+74	half	Module  5_1	9	adj.&n.一半	1
+74	past	Module  5_1	9	n.晚于	0
+74	o'clock	Module  5_1	9	...点钟	0
+74	to	Module  5_1	9	prep.距离整点...	1
+74	art	Module  5_1	9	n.艺术	1
+75	geography	Module  5_2	9	n.地理	0
+75	history	Module  5_2	9	n.历史	0
+75	IT	Module  5_2	9	abbr.信息技术	0
+75	maths	Module  5_2	9	n.数学	1
+75	PE	Module  5_2	9	n.体育	1
+76	lesson	Module  5_3	9	n.一节课	1
+76	then	Module  5_3	9	adv.然后	1
+76	like	Module  5_3	9	vt.喜欢	1
+76	difficult	Module  5_3	9	adj.困难的	1
+76	love	Module  5_3	9	vt.&n.爱	1
+77	subject	Module  5_4	9	n.科目	1
+77	because	Module  5_4	9	conj.因为	0
+77	interesting	Module  5_4	9	adj.有趣的	1
+77	talk	Module  5_4	9	n.&v.谈话	1
+77	begin	Module  5_4	9	vt.开始	1
+78	when	Module  5_5	9	conj.什么时候	1
+78	go to school	Module  5_5	9	上学	0
+78	weekday	Module  5_5	9	n.工作日	0
+78	get up	Module  5_5	9	起床	0
+78	have breakfast	Module  5_5	9	吃早餐	0
+79	house	Module  5_6	9	n.房子	1
+79	start	Module  5_6	9	n.&v.开始	0
+79	work	Module  5_6	9	n.&v.工作	1
+79	break	Module  5_6	9	n.课间休息	0
+79	have lunch	Module  5_6	9	吃午餐	0
+80	go home	Module  5_7	9	回家	0
+80	evening	Module  5_7	9	n.晚上	1
+80	watch	Module  5_7	9	v.看	1
+80	have dinner	Module  5_7	9	吃晚餐	0
+80	do	Module  5_7	9	v.做	1
+81	homework	Module  5_8	9	n.家庭作业	0
+81	bed	Module  5_8	9	n.床	1
+81	go to bed	Module  5_8	9	上床睡觉	0
+81	sleep	Module  5_8	9	v.睡觉	1
+81	go to sleep	Module  5_8	9	入睡	0
+82	park	Module  5_9	9	n.公园	1
+82	busy	Module  5_9	9	adj.忙的	1
+82	wash	Module  5_9	9	v.洗	1
+82	face	Module  5_9	9	n.脸	1
+82	minute	Module  5_9	9	n.分钟	1
+83	grandma	Revision module A_1	2	n.祖母	1
+83	grandpa	Revision module A_1	2	n.祖父	1
+83	him	Revision module A_1	2	pron.(宾格)他	1
+83	want	Revision module A_1	2	vi.想要	1
+83	make	Revision module A_1	2	vt.制作	1
+83	kitchen	Revision module A_1	2	n.厨房	1
+84	farmer	Revision module A_2	2	n.农民	1
+84	week	Revision module A_2	2	n.星期	1
+84	read	Revision module A_2	2	vt.阅读	1
+84	story	Revision module A_2	2	n.故事	1
+84	live	Revision module A_2	2	v.生活	1
+85	bear	Module6_1	12	n.熊	0
+85	elephant	Module6_1	12	n.大象	1
+85	giraffe	Module6_1	12	n.长颈鹿	0
+85	lion	Module6_1	12	n.狮子	0
+85	monkey	Module6_1	12	n.猴子	1
+86	panda	Module6_2	12	n.熊猫	1
+86	tiger	Module6_2	12	n.老虎	1
+86	zebra	Module6_2	12	n.斑马	0
+86	zoo	Module6_2	12	n.动物园	1
+86	guide	Module6_2	12	n.导游	0
+87	animal	Module6_3	12	n.动物	1
+87	such	Module6_3	12	adj.这样的	0
+87	as	Module6_3	12	adv.像...一样	0
+87	such as	Module6_3	12	比如	0
+87	come	Module6_3	12	vi.来	1
+88	come from	Module6_4	12	来自	0
+88	different	Module6_4	12	adj.不同的	0
+88	country	Module6_4	12	n.国家	0
+88	other	Module6_4	12	adj.其他的	0
+88	dangerous	Module6_4	12	adj.危险的	0
+89	ugh	Module6_5	12	int.啊	0
+89	also	Module6_5	12	adv.也	1
+89	plant	Module6_5	12	n.植物	1
+89	look	Module6_5	12	v.看	1
+89	look at	Module6_5	12	看	0
+90	tall	Module6_6	12	adj.高的	1
+90	sure	Module6_6	12	adv.当然	0
+90	bamboo	Module6_6	12	n.竹子	0
+90	cute	Module6_6	12	adj.可爱的	0
+90	shall	Module6_6	12	vt....好吗?	0
+91	them	Module6_7	12	pron.(宾格)他们	1
+91	which	Module6_7	12	pron.哪一个	0
+91	over	Module6_7	12	prep.在...的上方	0
+91	there	Module6_7	12	adv.在那里	1
+91	over there	Module6_7	12	在那边	0
+92	funny	Module6_8	12	adj.有趣的	0
+92	call	Module6_8	12	v.称呼...为	1
+92	Africa	Module6_8	12	n.非洲	0
+92	Asia	Module6_8	12	n.亚洲	0
+92	Europe	Module6_8	12	n.欧洲	0
+93	little	Module6_9	12	adj.极少量的	1
+93	a little	Module6_9	12	少量	0
+93	only	Module6_9	12	adv.仅仅	0
+93	about	Module6_9	12	prep.大约	1
+93	kilo	Module6_9	12	n.千克	0
+94	as well as	Module6_10	12	并且	0
+94	people	Module6_10	12	n.人们	1
+94	all over the world	Module6_10	12	全世界	0
+94	Africa	Module6_10	12	n&adj.非洲的	0
+94	leaf	Module6_10	12	n.叶子	0
+95	grass	Module6_11	12	n.草	1
+95	large	Module6_11	12	adj.大的、巨大的	0
+95	usually	Module6_11	12	adv.通常	0
+95	alone	Module6_11	12	adv.独自地	0
+95	be good at	Module6_11	12	擅长	0
+96	strong	Module6_12	12	adj.强壮的	1
+96	catch	Module6_12	12	vt.抓住	0
+96	many kinds of	Module6_12	12	许多种类	0
+96	even	Module6_12	12	adv.甚至	0
+97	keyboard	Module7_1	8	n.键盘	0
+97	mouse	Module7_1	8	n.鼠标	0
+97	screen	Module7_1	8	n.屏幕	0
+97	connect	Module7_1	8	vt.连接	0
+97	turn	Module7_1	8	vt.转动	1
+98	turn on	Module7_2	8	打开	0
+98	learn	Module7_2	8	vt.学	0
+98	document	Module7_2	8	n.文件	0
+98	click	Module7_2	8	n.点击	0
+98	use	Module7_2	8	n.使用	1
+99	save	Module7_3	8	vt.保存	0
+99	box	Module7_3	8	n.盒子	1
+99	finally	Module7_3	8	adv.最后	0
+99	print	Module7_3	8	vt.打印	0
+99	paper	Module7_3	8	n.纸	0
+100	share	Module7_4	8	vt.分享	0
+100	Australia	Module7_4	8	n.澳大利亚	0
+100	company	Module7_4	8	n.公司	0
+100	often	Module7_4	8	adv.经常	1
+100	customer	Module7_4	8	n.顾客	0
+101	Internet	Module7_5	8	n.因特网	0
+101	check	Module7_5	8	vt.检查	0
+101	train	Module7_5	8	n.火车	1
+101	travel	Module7_5	8	n.旅行	1
+101	plan	Module7_5	8	n.&v.计划	0
+102	ticket	Module7_6	8	n.票	0
+102	music	Module7_6	8	n.音乐	1
+102	movie	Module7_6	8	n.电影	0
+102	night	Module7_6	8	n.夜晚	1
+102	search	Module7_6	8	v.搜寻	0
+103	search for	Module7_7	8	搜寻	0
+103	information	Module7_7	8	n.信息	0
+103	email	Module7_7	8	n.电子邮件	1
+103	send	Module7_7	8	vt.发送	0
+103	game	Module7_7	8	n.游戏	1
+104	sometimes	Module7_8	8	adv.有时候	1
+104	cinema	Module7_8	8	n.电影院	1
+104	clothes	Module7_8	8	n.衣服（总称）	1
+104	visit	Module7_8	8	n.&v.探望	1
+104	holiday	Module7_8	8	n.假日	1
+105	card	Module8_1	8	n.卡片	1
+105	party	Module8_1	8	n.晚会	1
+105	present	Module8_1	8	n.礼物	0
+105	would	Module8_1	8	aux.愿意	0
+105	always	Module8_1	8	adv.总是	1
+106	great	Module8_2	8	adj.太好了	1
+106	cake	Module8_2	8	n.蛋糕	1
+106	never	Module8_2	8	adv.从不	0
+106	special	Module8_2	8	adj.特别的	0
+106	cut	Module8_2	8	vt.切	0
+107	give	Module8_3	8	vt.给	1
+107	sing	Module8_3	8	vt.唱	1
+107	happy	Module8_3	8	adj.高兴的	1
+107	secret	Module8_3	8	n.秘密	0
+107	ha ha	Module8_3	8	哈哈	0
+108	CD	Module8_4	8	n.光盘	0
+108	concert	Module8_4	8	n.音乐会	0
+108	magazine	Module8_4	8	n.杂志	0
+108	scarf	Module8_4	8	n.围巾	0
+108	silk	Module8_4	8	n.丝绸	0
+109	dress	Module8_5	8	n.连衣裙	1
+109	T-shirt	Module8_5	8	n.T恤衫	0
+109	choose	Module8_5	8	vt.选择	0
+109	exercise	Module8_5	8	n.练习	1
+109	wear	Module8_5	8	vt.穿	1
+110	expensive	Module8_6	8	adj.昂贵的	0
+110	shoe	Module8_6	8	n.鞋	1
+110	spend	Module8_6	8	v.花费	0
+110	money	Module8_6	8	n.钱	0
+110	film	Module8_6	8	n.电影	1
+111	song	Module8_7	8	n.歌曲	1
+111	match	Module8_7	8	n.比赛	0
+111	weekend	Module8_7	8	n.周末	0
+111	at weekends	Module8_7	8	在周末	0
+111	dear	Module8_7	8	adj.亲爱的	1
+112	hear	Module8_8	8	vt.听见	1
+112	hear from	Module8_8	8	收到...的来信	0
+112	afraid	Module8_8	8	adj.害怕的	1
+112	I'm afraid	Module8_8	8	恐怕	0
+112	cannot	Module8_8	8	不能	0
+113	postcard	Module9_1	7	n.明信片	0
+113	call	Module9_1	7	v.打电话	1
+113	lie	Module9_1	7	v.躺	0
+113	sun	Module9_1	7	n.太阳	1
+113	line	Module9_1	7	n.列	0
+114	take	Module9_2	7	vt.拿	1
+114	take photos	Module9_2	7	拍照	0
+114	wait	Module9_2	7	vt.等待	1
+114	wait for	Module9_2	7	等待	0
+114	walk	Module9_2	7	vi.行走	1
+115	trip	Module9_3	7	n.旅行	0
+115	few	Module9_3	7	adj.很少（可数名词）	0
+115	a few	Module9_3	7	一些	0
+115	sale	Module9_3	7	n.卖	0
+115	on sale	Module9_3	7	正在出售	0
+116	enjoy	Module9_4	7	vt.享受...的乐趣	0
+116	anyway	Module9_4	7	adv.无论如何	0
+116	back	Module9_4	7	adv.向后	1
+116	go back	Module9_4	7	回去	0
+116	drive	Module9_4	7	v.驾驶	0
+117	off	Module9_5	7	prep.下（车)	0
+117	get off	Module9_5	7	下（车)	0
+117	hot dog	Module9_5	7	热狗	0
+117	leave	Module9_5	7	v.离开	0
+117	restaurant	Module9_5	7	n.饭店	0
+118	moment	Module9_6	7	n.时刻	0
+118	place	Module9_6	7	n.地点	1
+118	thing	Module9_6	7	n.事情	0
+118	most	Module9_6	7	adv.&adj.大部分	0
+119	still	Module9_7	7	adv.仍然	0
+119	star	Module9_7	7	n.星	1
+119	run	Module9_7	7	vi.跑	1
+119	study	Module9_7	7	vi.&n.学习	1
+120	lantern	Module 10_1	8	n.灯笼	0
+120	dragon	Module 10_1	8	n.龙	0
+120	dance	Module 10_1	8	vi.跳舞	1
+120	clean	Module 10_1	8	adj.&n.干净的	1
+120	sweep	Module 10_1	8	vt.打扫	0
+121	floor	Module 10_2	8	n.地板	1
+121	cook	Module 10_2	8	vi.烹调	1
+121	meal	Module 10_2	8	n.一餐	0
+121	speak	Module 10_2	8	vt.说话	1
+121	happen	Module 10_2	8	vi.发生	0
+122	ready	Module 10_3	8	adj.准备好的	0
+122	get ready for	Module 10_3	8	为...做好准备	0
+122	festival	Module 10_3	8	n.节日	0
+122	quite	Module 10_3	8	adv.十分	0
+122	at the moment	Module 10_3	8	此刻	0
+123	beautiful	Module 10_4	8	adj.漂亮的	0
+123	at work	Module 10_4	8	在工作	0
+123	away	Module 10_4	8	adv.在安全的地方	0
+123	put away	Module 10_4	8	收起	0
+123	hard	Module 10_4	8	adj.&adv.困难的	0
+124	join	Module 10_5	8	v.参加	0
+124	hurry	Module 10_5	8	n.&v.赶快	0
+124	hurry up	Module 10_5	8	赶快	0
+124	Christmas	Module 10_5	8	n.圣诞节	0
+124	February	Module 10_5	8	n.二月	0
+125	January	Module 10_6	8	n.一月	0
+125	before	Module 10_6	8	prep.在...之前	1
+125	sweep away	Module 10_6	8	扫去	0
+125	luck	Module 10_6	8	n.运气	0
+125	table	Module 10_6	8	n.桌子	1
+126	celebrate	Module 10_7	8	vt.庆祝	0
+126	traditional	Module 10_7	8	adj.传统的	0
+126	dumpling	Module 10_7	8	n.饺子	0
+126	programme	Module 10_7	8	n.节目	0
+126	sweater	Module 10_7	8	n.毛线衣	1
+127	coat	Module 10_8	8	n.外套	1
+127	mean	Module 10_8	8	v.意味着	0
+127	lucky	Module 10_8	8	adj.幸运的	0
+127	merry	Module 10_8	8	adj.愉快的	0
+127	Merry Christmas	Module 10_8	8	圣诞快乐	0
+127	tell	Module 10_8	8	vt.讲	1
+128	think	Revision module B_1	1	vt.想	1

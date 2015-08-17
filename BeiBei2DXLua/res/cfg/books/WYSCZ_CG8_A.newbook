@@ -1,320 +1,320 @@
-1	pair	Module 1_1	5	n.一对	1
-1	correct	Module 1_1	5	adj.&v.改正	1
-1	spelling	Module 1_1	5	n.拼写	1
-2	word	Module 1_2	5	n.词	2
-2	practise	Module 1_2	5	n.&v.练习	1
-2	match	Module 1_2	5	n.&v.使相配	1
-2	meaning	Module 1_2	5	n.意义	1
-2	complete	Module 1_2	5	vt.使完全	1
-2	sentence	Module 1_2	5	n.句子	1
-2	dictionary	Module 1_2	5	n.词典	1
-2	grammar	Module 1_2	5	n.语法	1
-2	letter	Module 1_2	5	n.字母	1
-2	look up	Module 1_2	5	查	1
-3	mistake	Module 1_3	5	n.错误	1
-3	make a mistake	Module 1_3	5	犯错误	1
-3	understand	Module 1_3	5	vt.理解	1
-3	advice	Module 1_3	5	n.建议	1
-3	should	Module 1_3	5	aux.应该	1
-3	possible	Module 1_3	5	adj.可能的	1
-3	write down	Module 1_3	5	写下	1
-3	notebook	Module 1_3	5	n.笔记本	1
-3	forget	Module 1_3	5	vt.忘	1
-3	pronounce	Module 1_3	5	vt.发...的音	1
-4	aloud	Module 1_4	5	adv.大声地	1
-4	radio	Module 1_4	5	n.广播	1
-4	pronunciation	Module 1_4	5	n.发音	1
-4	key	Module 1_4	5	adj.关键性的	1
-4	main	Module 1_4	5	adj.主要的	1
-4	excellent	Module 1_4	5	adj.优秀的	1
-4	agree	Module 1_4	5	vt.赞同	1
-4	agree with sb.	Module 1_4	5	同意某人	1
-4	vocabulary	Module 1_4	5	n.词汇	1
-4	ask for	Module 1_4	5	请求	1
-5	improve	Module 1_5	5	vt.改进	1
-5	basic	Module 1_5	5	adj.主要的	1
-5	time	Module 1_5	5	n.次	1
-5	advise	Module 1_5	5	vt.建议	1
-5	shy	Module 1_5	5	adj.羞怯的	1
-5	conversation	Module 1_5	5	n.谈话	1
-5	quickly	Module 1_5	5	adv.快地	1
-5	natural	Module 1_5	5	adj.合理的	1
-5	suggest	Module 1_5	5	vt.建议	1
-5	place	Module 1_5	5	v.放置	1
-6	hill	Module 2_1	2	n.小山	1
-6	population	Module 2_1	2	n.人口	1
-6	wide	Module 2_1	2	adj.宽的	1
-6	million	Module 2_1	2	n.百万	1
-6	pretty	Module 2_1	2	adv.相当地	1
-6	pretty good	Module 2_1	2	相当好	1
-6	than	Module 2_1	2	conj.比	1
-6	get	Module 2_1	2	vt.变成	1
-6	north	Module 2_1	2	adj.&n.&adv.北	1
-6	south	Module 2_1	2	adj.&n.&adv.南	1
-6	west	Module 2_1	2	adj.&n.&adv.西	1
-7	home town	Module 2_2	2	故乡	1
-7	especially	Module 2_2	2	adv.尤其	1
-7	be famous for	Module 2_2	2	因...而闻名	1
-7	university	Module 2_2	2	n.大学	1
-7	island	Module 2_2	2	n.岛	1
-7	area	Module 2_2	2	n.地区	1
-7	low	Module 2_2	2	adj.矮的	1
-7	mountain	Module 2_2	2	n.山	1
-7	countryside	Module 2_2	2	n.农村地区	1
-7	umbrella	Module 2_2	2	n.雨伞	2
-8	baseball	Module 3_1	5	n.棒球	1
-8	volleyball	Module 3_1	5	n.排球	1
-8	boring	Module 3_1	5	adj.烦人的	1
-8	exciting	Module 3_1	5	adj.令人激动的	1
-8	relaxing	Module 3_1	5	adj.使人放松的	1
-8	score	Module 3_1	5	n.得分	1
-8	already	Module 3_1	5	adv.已经	1
-8	matter	Module 3_1	5	n.问题	1
-8	What's the matter	Module 3_1	5	怎么了?	1
-8	hurt	Module 3_1	5	vt.受伤	1
-9	enjoyable	Module 3_2	5	adj.令人愉快的	1
-9	Olympics	Module 3_2	5	n.奥林匹克运动会	1
-9	stadium	Module 3_2	5	n.体育场	1
-9	miss	Module 3_2	5	v.未击中	1
-9	mind	Module 3_2	5	v.介意	1
-9	plenty	Module 3_2	5	n.丰富	1
-9	plenty of	Module 3_2	5	大量	1
-9	beat	Module 3_2	5	vt.打败	1
-9	careless	Module 3_2	5	adj.粗心的	1
-9	cheer ... on	Module 3_2	5	用欢呼声激励	1
-10	coach	Module 3_3	5	n.教练	1
-10	fan club	Module 3_3	5	球迷俱乐部	1
-10	against	Module 3_3	5	prep.对	1
-10	train	Module 3_3	5	n.&v.训练	1
-10	practice	Module 3_3	5	n.练习	1
-10	warm	Module 3_3	5	v.使暖和	1
-10	warm up	Module 3_3	5	热身	1
-10	usual	Module 3_3	5	adj.通常的	1
-10	better	Module 3_3	5	adj.更好的	1
-10	after-school	Module 3_3	5	adj.课外的	0
-11	pleased	Module 3_4	5	adj.满足的	1
-11	pass	Module 3_4	5	vt.传递	1
-11	pity	Module 3_4	5	n.可惜	1
-11	chance	Module 3_4	5	n.机会	1
-11	loudly	Module 3_4	5	adv.响亮地	1
-11	confident	Module 3_4	5	adj.自信的	0
-11	road	Module 3_4	5	n.路	1
-11	accident	Module 3_4	5	n.交通事故	1
-11	except	Module 3_4	5	vt.除...之外	1
-11	choice	Module 3_4	5	n.选择	1
-11	classmate	Module 3_4	5	n.同班同学	1
-12	far	Module 3_5	5	adv.&adj.远	2
-12	far from	Module 3_5	5	远离	1
-12	close	Module 3_5	5	adj.接近的	1
-12	crowded	Module 3_5	5	adj.拥挤的	1
-12	all the time	Module 3_5	5	一直	1
-12	journey	Module 3_5	5	n.旅行	1
-12	book	Module 3_5	5	v.预订	1
-12	park	Module 3_5	5	v.停放车	1
-12	outside	Module 3_5	5	adv.在...之外	1
-12	however	Module 3_5	5	adv.然而	1
-12	cost	Module 3_5	5	vi.&n.花费	1
-13	actress	Module 5_1	2	n.女演员	1
-13	teahouse	Module 5_1	2	n.茶馆	1
-13	offer	Module 5_1	2	n.提议	1
-13	end	Module 5_1	2	n.结束	1
-13	in the end	Module 5_1	2	最后	1
-13	no idea	Module 5_1	2	不知道	1
-13	scene	Module 5_1	2	n.一幕	1
-13	show	Module 5_1	2	v.展示	1
-13	common	Module 5_1	2	adj.普通的	1
-14	twentieth	Module 5_2	2	n.第二十	1
-14	describe	Module 5_2	2	vt.描写	1
-14	society	Module 5_2	2	n.社会	1
-14	head teacher	Module 5_2	2	校长	1
-14	college	Module 5_2	2	n.大学	1
-14	novel	Module 5_2	2	n.小说	1
-14	name	Module 5_2	2	n.给...取名	1
-14	not ... any more	Module 5_2	2	不再...	1
-14	magic	Module 5_2	2	n.魔术的	1
-15	snake	Module 6_1	3	n.蛇	1
-15	neck	Module 6_1	3	n.颈	1
-15	thin	Module 6_1	3	adj.薄的	2
-15	danger	Module 6_1	3	n.危险	1
-15	in danger	Module 6_1	3	处于危险中	1
-15	at last	Module 6_1	3	最后	1
-15	interested	Module 6_1	3	adj.感兴趣的	1
-15	allow	Module 6_1	3	vt.允许	1
-15	think of	Module 6_1	3	想到	1
-15	protect	Module 6_1	3	v.保护	1
-15	wild	Module 6_1	3	adj.&n.野生的	1
-16	grow	Module 6_2	3	vt.生长	1
-16	here is ...	Module 6_2	3	（介绍某人或物）下面	1
-16	enough	Module 6_2	3	adj.足够的	1
-16	peace	Module 6_2	3	n.和平	1
-16	in peace	Module 6_2	3	和平地	1
-16	notice	Module 6_2	3	n.布告	1
-16	not only ... but also ...	Module 6_2	3	不仅...而且...	1
-16	raise	Module 6_2	3	vt.进入...里面	1
-16	research	Module 6_2	3	n.研究	1
-16	baby	Module 6_2	3	n.婴儿	2
-16	situation	Module 6_2	3	n.情况	1
-17	scientist	Module 6_3	3	n.科学家	1
-17	produce	Module 6_3	3	vt.生育	1
-17	southwest	Module 6_3	3	n&adj.西南	1
-17	in order to	Module 6_3	3	为了	1
-17	government	Module 6_3	3	n.政府	1
-17	set	Module 6_3	3	v.设置	1
-17	set up	Module 6_3	3	开办	1
-17	nature	Module 6_3	3	n.大自然	1
-17	nature park	Module 6_3	3	自然公园	1
-17	develop	Module 6_3	3	vt.研制	1
-17	feed	Module 6_3	3	vt.喂养	1
-17	symbol	Module 6_3	3	n.象征	1
-18	fall	Module 7_1	2	v.下落	1
-18	follow	Module 7_1	2	vt.跟随	1
-18	hole	Module 7_1	2	n.洞	1
-18	try	Module 7_1	2	n.兔	1
-18	ssh	Module 7_1	2	嘘	0
-18	certainly	Module 7_1	2	adv.地面	1
-18	tea party	Module 7_1	2	茶会	1
-18	twice	Module 7_1	2	adv.两次	1
-18	once or twice	Module 7_1	2	偶尔	1
-19	suddenly	Module 7_2	2	adv.突然地	1
-19	pink	Module 7_2	2	adj.&n.粉红色的	1
-19	pocket	Module 7_2	2	n.衣袋	1
-19	field	Module 7_2	2	n.牧场	1
-19	think about	Module 7_2	2	考虑一下	1
-19	deep	Module 7_2	2	adj.深的	1
-19	while	Module 7_2	2	conj.当...的时候	1
-19	land	Module 7_2	2	n.降落到地面	1
-19	dry	Module 7_2	2	adj.干的	1
-20	pale	Module 8_1	2	adj.苍白的	1
-20	appear	Module 8_1	2	vi.出现	1
-20	round	Module 8_1	2	n.转到另一边	1
-20	corner	Module 8_1	2	n.拐角	1
-20	hit	Module 8_1	2	v.碰撞	1
-20	glad	Module 8_1	2	adj.高兴的	1
-20	one of ...	Module 8_1	2	...之一	1
-20	fall off...	Module 8_1	2	从...跌落	1
-20	risk	Module 8_1	2	n.某事	1
-20	attention	Module 8_1	2	n.注意力	1
-20	pay attention	Module 8_1	2	注意	1
-21	side	Module 8_2	2	n.侧面	1
-21	side by side	Module 8_2	2	并排地	1
-21	bite	Module 8_2	2	v.咬	1
-21	climb	Module 8_2	2	vt.爬	1
-21	hide	Module 8_2	2	vt.躲	1
-21	throw	Module 8_2	2	v.扔	1
-21	fridge	Module 8_2	2	n.冰箱	1
-21	pain	Module 8_2	2	n.痛	1
-21	worse	Module 8_2	2	adj.更糟的	1
-21	medicine	Module 8_2	2	n.药	1
-22	noise	Module 9_1	2	n.噪音	1
-22	prepare	Module 9_1	2	vt.准备	1
-22	notes	Module 9_1	2	n.笔记	1
-22	report	Module 9_1	2	vt.&n.报告	1
-22	grow	Module 9_1	2	vt.增长	1
-22	huge	Module 9_1	2	adj.巨大的	1
-22	cause	Module 9_1	2	vt.引起	1
-22	problem	Module 9_1	2	n.问题	1
-22	increase	Module 9_1	2	v.增大	1
-22	birth	Module 9_1	2	n.出生	1
-22	Why not ...	Module 9_1	2	为什么不...呢?	1
-22	fifth	Module 9_1	2	n.第五	1
-23	hang on	Module 9_2	2	稍等	1
-23	flat	Module 9_2	2	n.公寓	1
-23	rubbish	Module 9_2	2	n.垃圾	1
-23	quiet	Module 9_2	2	adj.寂静的	1
-23	local	Module 9_2	2	adj.当地的	1
-23	close down	Module 9_2	2	关闭	1
-23	pupil	Module 9_2	2	n.学生	2
-23	pollution	Module 9_2	2	n.从...出发	1
-23	public	Module 9_2	2	adj.公共的	1
-23	service	Module 9_2	2	n.在...上方	1
-23	solve	Module 9_2	2	v.解决问题	1
-24	cloud	Module 10_1	3	n.云	1
-24	shower	Module 10_1	3	vi.阵雨	1
-24	snow	Module 10_1	3	n.雪	2
-24	storm	Module 10_1	3	n.暴风雨	1
-24	cloudy	Module 10_1	3	adj.多云的	2
-24	rainy	Module 10_1	3	adj.多雨的	1
-24	snowy	Module 10_1	3	adj.多雪的	1
-24	sunny	Module 10_1	3	adj.沿着...而去；向上	2
-24	windy	Module 10_1	3	adj.多风的	2
-24	skate	Module 10_1	3	v.滑冰	1
-25	thick	Module 10_2	3	adj.厚的	1
-25	ice	Module 10_2	3	n.冰	1
-25	joke	Module 10_2	3	n.&v.笑话	1
-25	might	Module 10_2	3	aux.可能	1
-25	temperature	Module 10_2	3	n.温度	1
-25	minus	Module 10_2	3	prep.负的	1
-25	degree	Module 10_2	3	n.度	1
-25	although	Module 10_2	3	conj.然而	1
-25	wet	Module 10_2	3	adj.湿的	1
-25	neither	Module 10_2	3	adj.也不	1
-26	terrible	Module 10_3	3	adj.可怕的	1
-26	wish	Module 10_3	3	n.&v.但愿	1
-26	probably	Module 10_3	3	adv.或许	1
-26	come on	Module 10_3	3	好的	1
-26	mile	Module 10_3	3	n.英里	1
-26	round	Module 10_3	3	adv.围绕地	1
-26	northwest	Module 10_3	3	n&adj.西北	1
-26	southeast	Module 10_3	3	n&adj.东南	1
-26	from time to time	Module 10_3	3	有时	1
-27	cap	Module 11_1	3	n.帽子	2
-27	chess	Module 11_1	3	n.国际象棋	1
-27	set	Module 11_1	3	n.一套	1
-27	a chess set	Module 11_1	3	一副国际象棋	1
-27	chopstick	Module 11_1	3	n.筷子	1
-27	toy	Module 11_1	3	n.玩具	2
-27	video	Module 11_1	3	adj.视频的	1
-27	video game	Module 11_1	3	电子游戏	1
-27	gift	Module 11_1	3	n.礼物	1
-27	surprise	Module 11_1	3	vt.&n.惊奇	1
-28	immediately	Module 11_2	3	adv.立刻	1
-28	difference	Module 11_2	3	n.差别	1
-28	accept	Module 11_2	3	vt.接受	1
-28	tradition	Module 11_2	3	n.传统习俗	1
-28	example	Module 11_2	3	n.例子	1
-28	for example	Module 11_2	3	在...上	1
-28	must	Module 11_2	3	aux.必须	1
-28	month	Module 11_2	3	n.月	2
-28	serious	Module 11_2	3	adj.认真严肃的	1
-28	taste	Module 11_2	3	vi.有...的味道	1
-29	experience	Module 11_3	3	n.经历	1
-29	stay	Module 11_3	3	n.&v.逗留	1
-29	someone	Module 11_3	3	pron.某人	1
-29	for the first time	Module 11_3	3	采摘	1
-29	sandwich	Module 11_3	3	n.三明治	1
-29	chip	Module 11_3	3	n.炸土豆条	0
-29	fish and chips	Module 11_3	3	炸鱼加炸薯条	0
-29	onto	Module 11_3	3	prep.到...之上	0
-29	gentleman	Module 11_3	3	n.先生	1
-29	shoulder	Module 11_3	3	n.朝向	1
-30	broken	Module 12_1	3	adj.破碎的	1
-30	glass	Module 12_1	3	n.玻璃	1
-30	stairs	Module 12_1	3	n.楼梯	1
-30	aid	Module 12_1	3	n.救助	1
-30	first aid	Module 12_1	3	急救	1
-30	medical	Module 12_1	3	adj.医学的	1
-30	imagine	Module 12_1	3	vt.想象	1
-30	bottom	Module 12_1	3	n.底部	1
-30	at the bottom of	Module 12_1	3	在...的底部	1
-30	wrong	Module 12_1	3	adj.&adv.错误的	2
-31	What's wrong with ...	Module 12_2	3	破碎地	1
-31	trouble	Module 12_2	3	n.问题	1
-31	lift	Module 12_2	3	vt.举起	1
-31	lift up	Module 12_2	3	抬起	1
-31	harmful	Module 12_2	3	adj.有害的	1
-31	drop	Module 12_2	3	v.使落下	1
-31	training	Module 12_2	3	n.训练	1
-31	make sure	Module 12_2	3	确保	1
-31	cover	Module 12_2	3	v.&n.盖	1
-31	earthquake	Module 12_2	3	n.地震	1
-32	warn	Module 12_3	3	vt.警告	1
-32	inside	Module 12_3	3	prep.在里面	1
-32	under	Module 12_3	3	prep.在...正下方	2
-32	window	Module 12_3	3	n.窗	2
-32	keep	Module 12_3	3	vt.保持	1
-32	clear	Module 12_3	3	adj.清除	1
-32	keep clear of	Module 12_3	3	不和...接触	1
-32	calm	Module 12_3	3	adj.镇静的	1
-32	brave	Module 12_3	3	adj.勇敢的	1
-32	helpful	Module 12_3	3	adj.有用的	1
-32	power	Module 12_3	3	n.电	1
+1	pair	Module 1_1	9	n.一对	1
+1	correct	Module 1_1	9	adj.&v.改正	1
+1	spelling	Module 1_1	9	n.拼写	1
+2	word	Module 1_2	9	n.词	2
+2	practise	Module 1_2	9	n.&v.练习	1
+2	match	Module 1_2	9	n.&v.使相配	1
+2	meaning	Module 1_2	9	n.意义	1
+2	complete	Module 1_2	9	vt.使完全	1
+3	sentence	Module 1_3	9	n.句子	1
+3	dictionary	Module 1_3	9	n.词典	1
+3	grammar	Module 1_3	9	n.语法	1
+3	letter	Module 1_3	9	n.字母	1
+3	look up	Module 1_3	9	查	1
+4	mistake	Module 1_4	9	n.错误	1
+4	make a mistake	Module 1_4	9	犯错误	1
+4	understand	Module 1_4	9	vt.理解	1
+4	advice	Module 1_4	9	n.建议	1
+4	should	Module 1_4	9	aux.应该	1
+5	possible	Module 1_5	9	adj.可能的	1
+5	write down	Module 1_5	9	写下	1
+5	notebook	Module 1_5	9	n.笔记本	1
+5	forget	Module 1_5	9	vt.忘	1
+5	pronounce	Module 1_5	9	vt.发...的音	1
+6	aloud	Module 1_6	9	adv.大声地	1
+6	radio	Module 1_6	9	n.广播	1
+6	pronunciation	Module 1_6	9	n.发音	1
+6	key	Module 1_6	9	adj.关键性的	1
+6	main	Module 1_6	9	adj.主要的	1
+7	excellent	Module 1_7	9	adj.优秀的	1
+7	agree	Module 1_7	9	vt.赞同	1
+7	agree with sb.	Module 1_7	9	同意某人	1
+7	vocabulary	Module 1_7	9	n.词汇	1
+7	ask for	Module 1_7	9	请求	1
+8	improve	Module 1_8	9	vt.改进	1
+8	basic	Module 1_8	9	adj.主要的	1
+8	time	Module 1_8	9	n.次	1
+8	advise	Module 1_8	9	vt.建议	1
+8	shy	Module 1_8	9	adj.羞怯的	1
+9	conversation	Module 1_9	9	n.谈话	1
+9	quickly	Module 1_9	9	adv.快地	1
+9	natural	Module 1_9	9	adj.合理的	1
+9	suggest	Module 1_9	9	vt.建议	1
+9	place	Module 1_9	9	v.放置	1
+10	hill	Module 2_1	4	n.小山	1
+10	population	Module 2_1	4	n.人口	1
+10	wide	Module 2_1	4	adj.宽的	1
+10	million	Module 2_1	4	n.百万	1
+10	pretty	Module 2_1	4	adv.相当地	1
+11	pretty good	Module 2_2	4	相当好	1
+11	than	Module 2_2	4	conj.比	1
+11	get	Module 2_2	4	vt.变成	1
+11	north	Module 2_2	4	adj.&n.&adv.北	1
+11	south	Module 2_2	4	adj.&n.&adv.南	1
+12	west	Module 2_3	4	adj.&n.&adv.西	1
+12	home town	Module 2_3	4	故乡	1
+12	especially	Module 2_3	4	adv.尤其	1
+12	be famous for	Module 2_3	4	因...而闻名	1
+12	university	Module 2_3	4	n.大学	1
+13	island	Module 2_4	4	n.岛	1
+13	area	Module 2_4	4	n.地区	1
+13	low	Module 2_4	4	adj.矮的	1
+13	mountain	Module 2_4	4	n.山	1
+13	countryside	Module 2_4	4	n.农村地区	1
+13	umbrella	Module 2_4	4	n.雨伞	2
+14	baseball	Module 3_1	10	n.棒球	1
+14	volleyball	Module 3_1	10	n.排球	1
+14	boring	Module 3_1	10	adj.烦人的	1
+14	exciting	Module 3_1	10	adj.令人激动的	1
+14	relaxing	Module 3_1	10	adj.使人放松的	1
+15	score	Module 3_2	10	n.得分	1
+15	already	Module 3_2	10	adv.已经	1
+15	matter	Module 3_2	10	n.问题	1
+15	What's the matter	Module 3_2	10	怎么了?	1
+15	hurt	Module 3_2	10	vt.受伤	1
+16	enjoyable	Module 3_3	10	adj.令人愉快的	1
+16	Olympics	Module 3_3	10	n.奥林匹克运动会	1
+16	stadium	Module 3_3	10	n.体育场	1
+16	miss	Module 3_3	10	v.未击中	1
+16	mind	Module 3_3	10	v.介意	1
+17	plenty	Module 3_4	10	n.丰富	1
+17	plenty of	Module 3_4	10	大量	1
+17	beat	Module 3_4	10	vt.打败	1
+17	careless	Module 3_4	10	adj.粗心的	1
+17	cheer ... on	Module 3_4	10	用欢呼声激励	1
+18	coach	Module 3_5	10	n.教练	1
+18	fan club	Module 3_5	10	球迷俱乐部	1
+18	against	Module 3_5	10	prep.对	1
+18	train	Module 3_5	10	n.&v.训练	1
+18	practice	Module 3_5	10	n.练习	1
+19	warm	Module 3_6	10	v.使暖和	1
+19	warm up	Module 3_6	10	热身	1
+19	usual	Module 3_6	10	adj.通常的	1
+19	better	Module 3_6	10	adj.更好的	1
+19	after-school	Module 3_6	10	adj.课外的	0
+20	pleased	Module 3_7	10	adj.满足的	1
+20	pass	Module 3_7	10	vt.传递	1
+20	pity	Module 3_7	10	n.可惜	1
+20	chance	Module 3_7	10	n.机会	1
+20	loudly	Module 3_7	10	adv.响亮地	1
+21	confident	Module 3_8	10	adj.自信的	0
+21	road	Module 3_8	10	n.路	1
+21	accident	Module 3_8	10	n.交通事故	1
+21	except	Module 3_8	10	vt.除...之外	1
+21	choice	Module 3_8	10	n.选择	1
+22	classmate	Module 3_9	10	n.同班同学	1
+22	far	Module 3_9	10	adv.&adj.远	2
+22	far from	Module 3_9	10	远离	1
+22	close	Module 3_9	10	adj.接近的	1
+22	crowded	Module 3_9	10	adj.拥挤的	1
+22	all the time	Module 3_9	10	一直	1
+23	journey	Module 3_10	10	n.旅行	1
+23	book	Module 3_10	10	v.预订	1
+23	park	Module 3_10	10	v.停放车	1
+23	outside	Module 3_10	10	adv.在...之外	1
+23	however	Module 3_10	10	adv.然而	1
+23	cost	Module 3_10	10	vi.&n.花费	1
+24	actress	Module 5_1	4	n.女演员	1
+24	teahouse	Module 5_1	4	n.茶馆	1
+24	offer	Module 5_1	4	n.提议	1
+24	end	Module 5_1	4	n.结束	1
+24	in the end	Module 5_1	4	最后	1
+25	no idea	Module 5_2	4	不知道	1
+25	scene	Module 5_2	4	n.一幕	1
+25	show	Module 5_2	4	v.展示	1
+25	common	Module 5_2	4	adj.普通的	1
+25	twentieth	Module 5_2	4	n.第二十	1
+26	describe	Module 5_3	4	vt.描写	1
+26	society	Module 5_3	4	n.社会	1
+26	head teacher	Module 5_3	4	校长	1
+26	college	Module 5_3	4	n.大学	1
+27	novel	Module 5_4	4	n.小说	1
+27	name	Module 5_4	4	n.给...取名	1
+27	not ... any more	Module 5_4	4	不再...	1
+27	magic	Module 5_4	4	n.魔术的	1
+28	snake	Module 6_1	7	n.蛇	1
+28	neck	Module 6_1	7	n.颈	1
+28	thin	Module 6_1	7	adj.薄的	2
+28	danger	Module 6_1	7	n.危险	1
+28	in danger	Module 6_1	7	处于危险中	1
+29	at last	Module 6_2	7	最后	1
+29	interested	Module 6_2	7	adj.感兴趣的	1
+29	allow	Module 6_2	7	vt.允许	1
+29	think of	Module 6_2	7	想到	1
+29	protect	Module 6_2	7	v.保护	1
+30	wild	Module 6_3	7	adj.&n.野生的	1
+30	grow	Module 6_3	7	vt.生长	1
+30	here is ...	Module 6_3	7	（介绍某人或物）下面	1
+30	enough	Module 6_3	7	adj.足够的	1
+30	peace	Module 6_3	7	n.和平	1
+31	in peace	Module 6_4	7	和平地	1
+31	notice	Module 6_4	7	n.布告	1
+31	not only ... but also ...	Module 6_4	7	不仅...而且...	1
+31	raise	Module 6_4	7	vt.进入...里面	1
+31	research	Module 6_4	7	n.研究	1
+32	baby	Module 6_5	7	n.婴儿	2
+32	situation	Module 6_5	7	n.情况	1
+32	scientist	Module 6_5	7	n.科学家	1
+32	produce	Module 6_5	7	vt.生育	1
+32	southwest	Module 6_5	7	n&adj.西南	1
+33	in order to	Module 6_6	7	为了	1
+33	government	Module 6_6	7	n.政府	1
+33	set	Module 6_6	7	v.设置	1
+33	set up	Module 6_6	7	开办	1
+33	nature	Module 6_6	7	n.大自然	1
+34	nature park	Module 6_7	7	自然公园	1
+34	develop	Module 6_7	7	vt.研制	1
+34	feed	Module 6_7	7	vt.喂养	1
+34	symbol	Module 6_7	7	n.象征	1
+35	fall	Module 7_1	4	v.下落	1
+35	follow	Module 7_1	4	vt.跟随	1
+35	hole	Module 7_1	4	n.洞	1
+35	try	Module 7_1	4	n.兔	1
+35	ssh	Module 7_1	4	嘘	0
+36	certainly	Module 7_2	4	adv.地面	1
+36	tea party	Module 7_2	4	茶会	1
+36	twice	Module 7_2	4	adv.两次	1
+36	once or twice	Module 7_2	4	偶尔	1
+36	suddenly	Module 7_2	4	adv.突然地	1
+37	pink	Module 7_3	4	adj.&n.粉红色的	1
+37	pocket	Module 7_3	4	n.衣袋	1
+37	field	Module 7_3	4	n.牧场	1
+37	think about	Module 7_3	4	考虑一下	1
+38	deep	Module 7_4	4	adj.深的	1
+38	while	Module 7_4	4	conj.当...的时候	1
+38	land	Module 7_4	4	n.降落到地面	1
+38	dry	Module 7_4	4	adj.干的	1
+39	pale	Module 8_1	4	adj.苍白的	1
+39	appear	Module 8_1	4	vi.出现	1
+39	round	Module 8_1	4	n.转到另一边	1
+39	corner	Module 8_1	4	n.拐角	1
+39	hit	Module 8_1	4	v.碰撞	1
+40	glad	Module 8_2	4	adj.高兴的	1
+40	one of ...	Module 8_2	4	...之一	1
+40	fall off...	Module 8_2	4	从...跌落	1
+40	risk	Module 8_2	4	n.某事	1
+40	attention	Module 8_2	4	n.注意力	1
+41	pay attention	Module 8_3	4	注意	1
+41	side	Module 8_3	4	n.侧面	1
+41	side by side	Module 8_3	4	并排地	1
+41	bite	Module 8_3	4	v.咬	1
+41	climb	Module 8_3	4	vt.爬	1
+42	hide	Module 8_4	4	vt.躲	1
+42	throw	Module 8_4	4	v.扔	1
+42	fridge	Module 8_4	4	n.冰箱	1
+42	pain	Module 8_4	4	n.痛	1
+42	worse	Module 8_4	4	adj.更糟的	1
+42	medicine	Module 8_4	4	n.药	1
+43	noise	Module 9_1	5	n.噪音	1
+43	prepare	Module 9_1	5	vt.准备	1
+43	notes	Module 9_1	5	n.笔记	1
+43	report	Module 9_1	5	vt.&n.报告	1
+43	grow	Module 9_1	5	vt.增长	1
+44	huge	Module 9_2	5	adj.巨大的	1
+44	cause	Module 9_2	5	vt.引起	1
+44	problem	Module 9_2	5	n.问题	1
+44	increase	Module 9_2	5	v.增大	1
+44	birth	Module 9_2	5	n.出生	1
+45	Why not ...	Module 9_3	5	为什么不...呢?	1
+45	fifth	Module 9_3	5	n.第五	1
+45	hang on	Module 9_3	5	稍等	1
+45	flat	Module 9_3	5	n.公寓	1
+45	rubbish	Module 9_3	5	n.垃圾	1
+46	quiet	Module 9_4	5	adj.寂静的	1
+46	local	Module 9_4	5	adj.当地的	1
+46	close down	Module 9_4	5	关闭	1
+46	pupil	Module 9_4	5	n.学生	2
+47	pollution	Module 9_5	5	n.从...出发	1
+47	public	Module 9_5	5	adj.公共的	1
+47	service	Module 9_5	5	n.在...上方	1
+47	solve	Module 9_5	5	v.解决问题	1
+48	cloud	Module 10_1	6	n.云	1
+48	shower	Module 10_1	6	vi.阵雨	1
+48	snow	Module 10_1	6	n.雪	2
+48	storm	Module 10_1	6	n.暴风雨	1
+48	cloudy	Module 10_1	6	adj.多云的	2
+49	rainy	Module 10_2	6	adj.多雨的	1
+49	snowy	Module 10_2	6	adj.多雪的	1
+49	sunny	Module 10_2	6	adj.沿着...而去；向上	2
+49	windy	Module 10_2	6	adj.多风的	2
+49	skate	Module 10_2	6	v.滑冰	1
+50	thick	Module 10_3	6	adj.厚的	1
+50	ice	Module 10_3	6	n.冰	1
+50	joke	Module 10_3	6	n.&v.笑话	1
+50	might	Module 10_3	6	aux.可能	1
+50	temperature	Module 10_3	6	n.温度	1
+51	minus	Module 10_4	6	prep.负的	1
+51	degree	Module 10_4	6	n.度	1
+51	although	Module 10_4	6	conj.然而	1
+51	wet	Module 10_4	6	adj.湿的	1
+51	neither	Module 10_4	6	adj.也不	1
+52	terrible	Module 10_5	6	adj.可怕的	1
+52	wish	Module 10_5	6	n.&v.但愿	1
+52	probably	Module 10_5	6	adv.或许	1
+52	come on	Module 10_5	6	好的	1
+52	mile	Module 10_5	6	n.英里	1
+53	round	Module 10_6	6	adv.围绕地	1
+53	northwest	Module 10_6	6	n&adj.西北	1
+53	southeast	Module 10_6	6	n&adj.东南	1
+53	from time to time	Module 10_6	6	有时	1
+54	cap	Module 11_1	6	n.帽子	2
+54	chess	Module 11_1	6	n.国际象棋	1
+54	set	Module 11_1	6	n.一套	1
+54	a chess set	Module 11_1	6	一副国际象棋	1
+54	chopstick	Module 11_1	6	n.筷子	1
+55	toy	Module 11_2	6	n.玩具	2
+55	video	Module 11_2	6	adj.视频的	1
+55	video game	Module 11_2	6	电子游戏	1
+55	gift	Module 11_2	6	n.礼物	1
+55	surprise	Module 11_2	6	vt.&n.惊奇	1
+56	immediately	Module 11_3	6	adv.立刻	1
+56	difference	Module 11_3	6	n.差别	1
+56	accept	Module 11_3	6	vt.接受	1
+56	tradition	Module 11_3	6	n.传统习俗	1
+56	example	Module 11_3	6	n.例子	1
+57	for example	Module 11_4	6	在...上	1
+57	must	Module 11_4	6	aux.必须	1
+57	month	Module 11_4	6	n.月	2
+57	serious	Module 11_4	6	adj.认真严肃的	1
+57	taste	Module 11_4	6	vi.有...的味道	1
+58	experience	Module 11_5	6	n.经历	1
+58	stay	Module 11_5	6	n.&v.逗留	1
+58	someone	Module 11_5	6	pron.某人	1
+58	for the first time	Module 11_5	6	采摘	1
+58	sandwich	Module 11_5	6	n.三明治	1
+59	chip	Module 11_6	6	n.炸土豆条	0
+59	fish and chips	Module 11_6	6	炸鱼加炸薯条	0
+59	onto	Module 11_6	6	prep.到...之上	0
+59	gentleman	Module 11_6	6	n.先生	1
+59	shoulder	Module 11_6	6	n.朝向	1
+60	broken	Module 12_1	6	adj.破碎的	1
+60	glass	Module 12_1	6	n.玻璃	1
+60	stairs	Module 12_1	6	n.楼梯	1
+60	aid	Module 12_1	6	n.救助	1
+60	first aid	Module 12_1	6	急救	1
+61	medical	Module 12_2	6	adj.医学的	1
+61	imagine	Module 12_2	6	vt.想象	1
+61	bottom	Module 12_2	6	n.底部	1
+61	at the bottom of	Module 12_2	6	在...的底部	1
+61	wrong	Module 12_2	6	adj.&adv.错误的	2
+62	What's wrong with ...	Module 12_3	6	破碎地	1
+62	trouble	Module 12_3	6	n.问题	1
+62	lift	Module 12_3	6	vt.举起	1
+62	lift up	Module 12_3	6	抬起	1
+62	harmful	Module 12_3	6	adj.有害的	1
+63	drop	Module 12_4	6	v.使落下	1
+63	training	Module 12_4	6	n.训练	1
+63	make sure	Module 12_4	6	确保	1
+63	cover	Module 12_4	6	v.&n.盖	1
+63	earthquake	Module 12_4	6	n.地震	1
+64	warn	Module 12_5	6	vt.警告	1
+64	inside	Module 12_5	6	prep.在里面	1
+64	under	Module 12_5	6	prep.在...正下方	2
+64	window	Module 12_5	6	n.窗	2
+64	keep	Module 12_5	6	vt.保持	1
+65	clear	Module 12_6	6	adj.清除	1
+65	keep clear of	Module 12_6	6	不和...接触	1
+65	calm	Module 12_6	6	adj.镇静的	1
+65	brave	Module 12_6	6	adj.勇敢的	1
+65	helpful	Module 12_6	6	adj.有用的	1
+65	power	Module 12_6	6	n.电	1

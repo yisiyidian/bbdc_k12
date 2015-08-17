@@ -1,91 +1,91 @@
-1	younger	unit 1_1	3	adj.更年轻的	1
-1	older	unit 1_1	3	adj.更年长的	1
-1	taller	unit 1_1	3	adj.更高的	1
-2	shorter	unit 1_2	3	adj.更矮的	1
-2	longer	unit 1_2	3	adj.更长的	1
-2	thinner	unit 1_2	3	adj.更瘦的	1
-2	heavier	unit 1_2	3	adj.更重的	1
-2	bigger	unit 1_2	3	adj.更大的	1
-2	smaller	unit 1_2	3	adj.更小的	1
-2	stronger	unit 1_2	3	adj.更强壮的	1
-2	dinosaur	unit 1_2	3	n.恐龙	0
-2	hall	unit 1_2	3	n.大厅	0
-3	metre	unit 1_3	3	n.<英>米	0
-3	than	unit 1_3	3	conj.&prep比	0
-3	both	unit 1_3	3	pron.两个都	0
-3	kilogram	unit 1_3	3	n.千克	0
-3	countryside	unit 1_3	3	n.乡村	0
-3	lower	unit 1_3	3	v.更低地	0
-3	shadow	unit 1_3	3	n.阴影	0
-3	smarter	unit 1_3	3	adj.更聪明的	0
-3	become	unit 1_3	3	vt.变得	0
-4	clean	unit 2_1	2	vt.（过去式）打扫	1
-4	stay	unit 2_1	2	vi.（过去式）停留	1
-4	washed	unit 2_1	2	vt.（过去式）洗	1
-4	watch	unit 2_1	2	vt.（过去式）看	1
-4	had	unit 2_1	2	vt.（过去式）患病	1
-4	had a cold	unit 2_1	2	感冒	1
-4	slept	unit 2_1	2	vi.（过去式）睡觉	1
-4	read	unit 2_1	2	vt.（过去式）读	1
-4	saw	unit 2_1	2	vt.（过去式）看见	1
-4	last	unit 2_1	2	adj.最近的	1
-4	yesterday	unit 2_1	2	n.昨天	1
-4	before	unit 2_1	2	prep.在...之前	1
-5	drank	unit 2_2	2	vt.（过去式）喝	0
-5	show	unit 2_2	2	v.&n.演出	0
-5	magazine	unit 2_2	2	n.杂志	0
-5	better	unit 2_2	2	adj.更好的	0
-5	faster	unit 2_2	2	adj.更快的	0
-5	hotel	unit 2_2	2	n.旅馆	0
-5	fixed	unit 2_2	2	vt.（过去式）修理	0
-5	broken	unit 2_2	2	adj.破损的	0
-5	lamp	unit 2_2	2	n.台灯	0
-5	loud	unit 2_2	2	adj.喧闹的	0
-5	enjoy	unit 2_2	2	vt.享受...乐趣	0
-5	stay	unit 2_2	2	n.暂住	0
-6	went	unit3_1	2	vi.（过去式）去	1
-6	camp	unit3_1	2	n.野营	1
-6	went camping	unit3_1	2	（过去式）去野营	1
-6	fish	unit3_1	2	v.钓鱼	1
-6	went fishing	unit3_1	2	去钓鱼	1
-6	rode	unit3_1	2	vt.（过去式）骑	1
-6	hurt	unit3_1	2	v.（过去式）使受伤	1
-6	ate	unit3_1	2	vt.（过去式）吃	1
-6	took	unit3_1	2	vt.（过去式）拍照	1
-6	took pictures	unit3_1	2	照相	1
-6	bought	unit3_1	2	vt.（过去式）买	1
-6	gift	unit3_1	2	n.礼物	1
-7	fell	unit3_2	2	vi.（过去式）摔倒	0
-7	off	unit3_2	2	prep.从...落下	0
-7	Labour Day	unit3_2	2	劳动节	0
-7	mule	unit3_2	2	n.骡子	0
-7	Turpan	unit3_2	2	n.吐鲁番	0
-7	could	unit3_2	2	aux.（过去式）能	0
-7	till	unit3_2	2	conj.直到	0
-7	beach	unit3_2	2	n.海滩	0
-7	basket	unit3_2	2	n.篮	0
-7	part	unit3_2	2	n.角色	0
-7	lick	unit3_2	2	vt.（过去式）舔	0
-7	laughed	unit3_2	2	vi.（过去式）笑	0
-8	dining hall	unit4_1	2	饭厅	1
-8	grass	unit4_1	2	n.草坪	1
-8	gym	unit4_1	2	n.体育馆	1
-8	ago	unit4_1	2	adv.以前	1
-8	cycling	unit4_1	2	n.骑自行车运动	1
-8	go cycling	unit4_1	2	去骑自行车	1
-8	ice-skate	unit4_1	2	vi.滑冰	1
-8	badminton	unit4_1	2	n.羽毛球运动	1
-8	star	unit4_1	2	n.星	0
-8	easy	unit4_1	2	adj.容易的	0
-8	look up	unit4_1	2	查阅	0
-9	Internet	unit4_2	2	n.互联网	0
-9	different	unit4_2	2	adj.不同的	0
-9	active	unit4_2	2	adj.积极的	0
-9	race	unit4_2	2	v.赛跑	0
-9	nothing	unit4_2	2	pron.没有什么	0
-9	thought	unit4_2	2	v.（过去式）想	0
-9	felt	unit4_2	2	v.（过去式）感觉	0
-9	cheetah	unit4_2	2	n.猎豹	0
-9	trip	unit4_2	2	v.绊倒	0
-9	woke	unit4_2	2	vi.（过去式）醒	0
-9	dream	unit4_2	2	n.梦	0
+1	younger	unit 1_1	5	adj.更年轻的	1
+1	older	unit 1_1	5	adj.更年长的	1
+1	taller	unit 1_1	5	adj.更高的	1
+2	shorter	unit 1_2	5	adj.更矮的	1
+2	longer	unit 1_2	5	adj.更长的	1
+2	thinner	unit 1_2	5	adj.更瘦的	1
+2	heavier	unit 1_2	5	adj.更重的	1
+2	bigger	unit 1_2	5	adj.更大的	1
+3	smaller	unit 1_3	5	adj.更小的	1
+3	stronger	unit 1_3	5	adj.更强壮的	1
+3	dinosaur	unit 1_3	5	n.恐龙	0
+3	hall	unit 1_3	5	n.大厅	0
+3	metre	unit 1_3	5	n.<英>米	0
+4	than	unit 1_4	5	conj.&prep比	0
+4	both	unit 1_4	5	pron.两个都	0
+4	kilogram	unit 1_4	5	n.千克	0
+4	countryside	unit 1_4	5	n.乡村	0
+5	lower	unit 1_5	5	v.更低地	0
+5	shadow	unit 1_5	5	n.阴影	0
+5	smarter	unit 1_5	5	adj.更聪明的	0
+5	become	unit 1_5	5	vt.变得	0
+6	clean	unit 2_1	5	vt.（过去式）打扫	1
+6	stay	unit 2_1	5	vi.（过去式）停留	1
+6	washed	unit 2_1	5	vt.（过去式）洗	1
+6	watch	unit 2_1	5	vt.（过去式）看	1
+6	had	unit 2_1	5	vt.（过去式）患病	1
+7	had a cold	unit 2_2	5	感冒	1
+7	slept	unit 2_2	5	vi.（过去式）睡觉	1
+7	read	unit 2_2	5	vt.（过去式）读	1
+7	saw	unit 2_2	5	vt.（过去式）看见	1
+7	last	unit 2_2	5	adj.最近的	1
+8	yesterday	unit 2_3	5	n.昨天	1
+8	before	unit 2_3	5	prep.在...之前	1
+8	drank	unit 2_3	5	vt.（过去式）喝	0
+8	show	unit 2_3	5	v.&n.演出	0
+8	magazine	unit 2_3	5	n.杂志	0
+9	better	unit 2_4	5	adj.更好的	0
+9	faster	unit 2_4	5	adj.更快的	0
+9	hotel	unit 2_4	5	n.旅馆	0
+9	fixed	unit 2_4	5	vt.（过去式）修理	0
+9	broken	unit 2_4	5	adj.破损的	0
+10	lamp	unit 2_5	5	n.台灯	0
+10	loud	unit 2_5	5	adj.喧闹的	0
+10	enjoy	unit 2_5	5	vt.享受...乐趣	0
+10	stay	unit 2_5	5	n.暂住	0
+11	went	unit3_1	5	vi.（过去式）去	1
+11	camp	unit3_1	5	n.野营	1
+11	went camping	unit3_1	5	（过去式）去野营	1
+11	fish	unit3_1	5	v.钓鱼	1
+11	went fishing	unit3_1	5	去钓鱼	1
+12	rode	unit3_2	5	vt.（过去式）骑	1
+12	hurt	unit3_2	5	v.（过去式）使受伤	1
+12	ate	unit3_2	5	vt.（过去式）吃	1
+12	took	unit3_2	5	vt.（过去式）拍照	1
+12	took pictures	unit3_2	5	照相	1
+13	bought	unit3_3	5	vt.（过去式）买	1
+13	gift	unit3_3	5	n.礼物	1
+13	fell	unit3_3	5	vi.（过去式）摔倒	0
+13	off	unit3_3	5	prep.从...落下	0
+13	Labour Day	unit3_3	5	劳动节	0
+14	mule	unit3_4	5	n.骡子	0
+14	Turpan	unit3_4	5	n.吐鲁番	0
+14	could	unit3_4	5	aux.（过去式）能	0
+14	till	unit3_4	5	conj.直到	0
+14	beach	unit3_4	5	n.海滩	0
+15	basket	unit3_5	5	n.篮	0
+15	part	unit3_5	5	n.角色	0
+15	lick	unit3_5	5	vt.（过去式）舔	0
+15	laughed	unit3_5	5	vi.（过去式）笑	0
+16	dining hall	unit4_1	4	饭厅	1
+16	grass	unit4_1	4	n.草坪	1
+16	gym	unit4_1	4	n.体育馆	1
+16	ago	unit4_1	4	adv.以前	1
+16	cycling	unit4_1	4	n.骑自行车运动	1
+16	go cycling	unit4_1	4	去骑自行车	1
+17	ice-skate	unit4_2	4	vi.滑冰	1
+17	badminton	unit4_2	4	n.羽毛球运动	1
+17	star	unit4_2	4	n.星	0
+17	easy	unit4_2	4	adj.容易的	0
+17	look up	unit4_2	4	查阅	0
+17	Internet	unit4_2	4	n.互联网	0
+18	different	unit4_3	4	adj.不同的	0
+18	active	unit4_3	4	adj.积极的	0
+18	race	unit4_3	4	v.赛跑	0
+18	nothing	unit4_3	4	pron.没有什么	0
+18	thought	unit4_3	4	v.（过去式）想	0
+19	felt	unit4_4	4	v.（过去式）感觉	0
+19	cheetah	unit4_4	4	n.猎豹	0
+19	trip	unit4_4	4	v.绊倒	0
+19	woke	unit4_4	4	vi.（过去式）醒	0
+19	dream	unit4_4	4	n.梦	0

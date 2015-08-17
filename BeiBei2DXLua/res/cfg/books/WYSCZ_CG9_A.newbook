@@ -1,380 +1,380 @@
-1	man-made	Module 1_1	4	adj.人造的	0
-1	natural	Module 1_1	4	adj.大自然的	1
-1	wonder	Module 1_1	4	n.奇观	1
-2	discussion	Module 1_2	4	n.讨论	1
-2	eastern	Module 1_2	4	adj.在东边的	1
-2	though	Module 1_2	4	conj.虽然	1
-2	loud	Module 1_2	4	adj.响亮的	1
-2	wow	Module 1_2	4	int.呀	0
-2	opinion	Module 1_2	4	n.看法	1
-2	in one's opinion	Module 1_2	4	按某人的意见	1
-2	more than	Module 1_2	4	超过	1
-2	electricity	Module 1_2	4	n.电	1
-3	millions of	Module 1_3	4	大量的	1
-3	below	Module 1_3	4	adv.在下面	1
-3	shine	Module 1_3	4	vi.照耀	1
-3	sign	Module 1_3	4	n.标志	1
-3	silent	Module 1_3	4	adj.寂静的	1
-3	silver	Module 1_3	4	adj.银灰色的	1
-3	sky	Module 1_3	4	n.天空	1
-3	grey	Module 1_3	4	adj.灰色的	1
-3	go through	Module 1_3	4	穿过	1
-4	beside	Module 1_4	4	prep.在...旁边	2
-4	reply	Module 1_4	4	vt.&n.回答	1
-4	clear	Module 1_4	4	v.烟雾开始消失	1
-4	fall away	Module 1_4	4	突然向下倾斜	1
-4	stream	Module 1_4	4	n.小河	1
-4	nearly	Module 1_4	4	adv.几乎	1
-4	on top of	Module 1_4	4	在...上面	1
-4	canyon	Module 1_4	4	n.峡谷	0
-4	remain	Module 1_4	4	v.留下	1
-4	by	Module 1_4	4	prep.在...旁边	2
-5	found	Module 2_1	3	vt.创立	1
-5	since then	Module 2_1	3	从那以后	1
-5	flag	Module 2_1	3	n.旗	1
-5	until	Module 2_1	3	prep.直到...为止	1
-5	off	Module 2_1	3	prep.不上课	1
-5	all kinds of	Module 2_1	3	各种各样的	1
-5	vacation	Module 2_1	3	n.假期	1
-5	take a vacation	Module 2_1	3	去度假	1
-5	season	Module 2_1	3	n.节期	2
-5	kid	Module 2_1	3	n.小孩	2
-5	have fun	Module 2_1	3	玩得高兴	1
-6	band	Module 2_2	3	n.乐队	1
-6	UK	Module 2_2	3	n.英国	1
-6	as soon as	Module 2_2	3	一...就...	1
-6	sixth	Module 2_2	3	n.第六	1
-6	seventh	Module 2_2	3	n.第七	1
-6	eighth	Module 2_2	3	n.第八	1
-6	ninth	Module 2_2	3	n.第九	1
-6	tenth	Module 2_2	3	n.第十	1
-6	twelfth	Module 2_2	3	n.第十二	1
-6	twentieth	Module 2_2	3	n.第二十	1
-6	among	Module 2_2	3	prep.在...之中	1
-7	speech	Module 2_3	3	n.演说	1
-7	pioneer	Module 2_3	3	n.开拓者	1
-7	grow	Module 2_3	3	vt.种植	1
-7	corn	Module 2_3	3	n.谷物	1
-7	following	Module 2_3	3	adj.接着的	1
-7	lay	Module 2_3	3	vt.摆放	1
-7	lay the table	Module 2_3	3	摆放餐桌	1
-7	over	Module 2_3	3	prep.完了的	1
-7	dish	Module 2_3	3	n.盘	1
-7	parade	Module 2_3	3	n.游行	0
-7	ourselves	Module 2_3	3	pron.我们自己	1
-8	including	Module 3_1	4	prep.包含	1
-8	medal	Module 3_1	4	n.奖牌	1
-8	attend	Module 3_1	4	vt.出席	1
-8	abroad	Module 3_1	4	adv.在国外	1
-8	once again	Module 3_1	4	再一次	1
-8	doctor	Module 3_1	4	n.博士	2
-8	degree	Module 3_1	4	n.学位	1
-8	whatever	Module 3_1	4	pron.无论什么	1
-8	give up	Module 3_1	4	放弃	1
-9	amazing	Module 3_2	4	adj.惊人的	1
-9	will	Module 3_2	4	aux.意志	1
-9	victory	Module 3_2	4	n.成功	1
-9	simply	Module 3_2	4	adv.简单地	1
-9	Canadian	Module 3_2	4	n&adj.加拿大的	1
-9	sick	Module 3_2	4	adj.生病的	1
-9	soldier	Module 3_2	4	n.军人	1
-9	treat	Module 3_2	4	v.治疗	1
-9	war	Module 3_2	4	n.战争	1
-10	wound	Module 3_3	4	n.伤	1
-10	die for	Module 3_3	4	为...而死	1
-10	wounded	Module 3_3	4	adj.受伤的	0
-10	realise	Module 3_3	4	v.了解	1
-10	dying	Module 3_3	4	adj.垂死的	1
-10	care	Module 3_3	4	n.&v.照顾	1
-10	take care of	Module 3_3	4	照顾	1
-10	tool	Module 3_3	4	n.工具	1
-10	invention	Module 3_3	4	n.发明	1
-11	at that time	Module 3_4	4	那时候	1
-11	on one's own	Module 3_4	4	独自一人	1
-11	useful	Module 3_4	4	adj.有用的	1
-11	rest	Module 3_4	4	vt.&n.休息	1
-11	himself	Module 3_4	4	pron.他自己	1
-11	manage	Module 3_4	4	vt.做成	1
-11	operation	Module 3_4	4	n.手术	1
-11	continue	Module 3_4	4	vt.继续	1
-11	die of	Module 3_4	4	死于...	1
-11	Canada	Module 3_4	4	n.加拿大	1
-12	platform	Module 4_1	3	n.月台	1
-12	meeting	Module 4_1	3	n.会议	1
-12	miss	Module 4_1	3	v.错过	1
-12	shut	Module 4_1	3	v.关上	1
-12	lock	Module 4_1	3	n.&v.锁	1
-12	simple	Module 4_1	3	adj.简单的	1
-12	anybody	Module 4_1	3	pron.任何人	1
-12	clock	Module 4_1	3	n.钟	2
-12	ring	Module 4_1	3	v.鸣响	1
-12	passenger	Module 4_1	3	n.乘客	1
-12	address	Module 4_1	3	n.地址	1
-13	text	Module 4_2	3	n.文本	1
-13	text message	Module 4_2	3	短信	1
-13	couple	Module 4_2	3	n.一对	1
-13	a couple of	Module 4_2	3	两个	1
-13	actually	Module 4_2	3	adv.事实上	0
-13	manage	Module 4_2	3	vt.管理	1
-13	unhappy	Module 4_2	3	adj.不高兴的	1
-13	turn off	Module 4_2	3	关掉	1
-13	order	Module 4_2	3	n.&v.命令	1
-13	be worried about	Module 4_2	3	担心	1
-13	business	Module 4_2	3	n.工作	1
-14	on business	Module 4_3	3	出差	1
-14	sofa	Module 4_3	3	n.沙发	1
-14	snack	Module 4_3	3	n.点心	0
-14	midnight	Module 4_3	3	n.午夜	1
-14	wake up	Module 4_3	3	醒来	1
-14	hand in	Module 4_3	3	提交	1
-14	empty	Module 4_3	3	adj.空的	1
-14	unable	Module 4_3	3	adj.不能做某事的	1
-14	all day long	Module 4_3	3	整天	1
-14	burn	Module 4_3	3	vt.烧焦	1
-14	cup	Module 4_3	3	n.杯子	1
-14	task	Module 4_3	3	n.任务	1
-15	upstairs	Module 5_1	3	adj.&adv.在楼上	1
-15	exhibition	Module 5_1	3	n.展览	1
-15	rule	Module 5_1	3	n.规则	1
-15	against the rules	Module 5_1	3	违反规定	1
-15	in trouble	Module 5_1	3	遇上麻烦	1
-15	tail	Module 5_1	3	n.尾巴	1
-15	rope	Module 5_1	3	n.粗绳	1
-15	entry	Module 5_1	3	n.进入权	1
-15	No entry	Module 5_1	3	禁止入内	1
-15	no good	Module 5_1	3	不合适的	1
-16	no wonder	Module 5_2	3	难怪	1
-16	missing	Module 5_2	3	adj.找不到的	1
-16	downstairs	Module 5_2	3	adj.&adv.在楼下	1
-16	punish	Module 5_2	3	v.惩罚	1
-16	communications	Module 5_2	3	n.通信	1
-16	physics	Module 5_2	3	n.物理学	1
-16	chemistry	Module 5_2	3	n.化学	1
-16	dig	Module 5_2	3	v.挖掘	1
-16	coal	Module 5_2	3	n.煤	1
-16	energy	Module 5_2	3	n.能量	1
-17	X-ray	Module 5_3	3	n.X射线	1
-17	experiment	Module 5_3	3	n.实验	1
-17	sand	Module 5_3	3	n.沙	1
-17	control	Module 5_3	3	n.操控	1
-17	truck	Module 5_3	3	n.卡车	1
-17	wheel	Module 5_3	3	n.轮子	1
-17	compare ... with ...	Module 5_3	3	比较...与...	1
-17	of all ages	Module 5_3	3	所有年龄段的	1
-17	whole	Module 5_3	3	adj.全部的	1
-18	deal	Module 6_1	3	v.协议	1
-18	exam	Module 6_1	3	n.考试	1
-18	fail	Module 6_1	3	vi.未能及格	1
-18	guitar	Module 6_1	3	n.吉他	1
-18	instrument	Module 6_1	3	n.乐器	1
-18	musical	Module 6_1	3	adj.音乐的	1
-18	habit	Module 6_1	3	n.习惯	1
-18	get into the habit of	Module 6_1	3	养成...的习惯	1
-18	schoolwork	Module 6_1	3	n.功课	0
-18	volunteer	Module 6_1	3	n.志愿者	1
-18	necessary	Module 6_1	3	adj.必要的	1
-19	shame	Module 6_2	3	n.可惜	1
-19	instead	Module 6_2	3	adv.代替	1
-19	instead of	Module 6_2	3	而不是	1
-19	community	Module 6_2	3	n.社区	1
-19	knowledge	Module 6_2	3	n.知识	1
-19	point	Module 6_2	3	n.观点	1
-19	consider	Module 6_2	3	vt.考虑	1
-19	last word	Module 6_2	3	最后一句话	1
-19	come round	Module 6_2	3	拜访	1
-19	reason	Module 6_2	3	n.原因	1
-19	try out	Module 6_2	3	试用	1
-20	angry	Module 6_3	3	adj.愤怒的	2
-20	no longer	Module 6_3	3	不再	1
-20	be angry with sb	Module 6_3	3	生某人的气	1
-20	repair	Module 6_3	3	vi.修理	1
-20	truth	Module 6_3	3	n.事实	1
-20	least	Module 6_3	3	adj.最少	1
-20	at least	Module 6_3	3	至少	1
-20	honest	Module 6_3	3	adj.诚实的	1
-20	apologise	Module 6_3	3	vi.道歉	1
-20	bill	Module 6_3	3	n.账单	1
-20	pocket money	Module 6_3	3	零用钱	1
-21	discuss	Module 7_1	3	vt.讨论	1
-21	thinker	Module 7_1	3	n.思想家	0
-21	wise	Module 7_1	3	adj.明智的	1
-21	review	Module 7_1	3	vt.评论	1
-21	influence	Module 7_1	3	vt.&n.影响	1
-21	sense	Module 7_1	3	n.意义	1
-21	make sense	Module 7_1	3	有意义	1
-21	by the way	Module 7_1	3	顺便提一下	1
-21	suppose	Module 7_1	3	vt.猜想	1
-22	well-known	Module 7_2	3	adj.著名的	1
-22	adventure	Module 7_2	3	n.冒险	1
-22	get into trouble	Module 7_2	3	遇上麻烦	1
-22	run away	Module 7_2	3	逃走	1
-22	escape	Module 7_2	3	vt.逃离	1
-22	cave	Module 7_2	3	n.洞穴	1
-22	dead	Module 7_2	3	adj.死的	1
-22	for a time	Module 7_2	3	一小段时间	1
-22	neighbour	Module 7_2	3	n.邻居	1
-23	funeral	Module 7_3	3	n.葬礼	1
-23	surprised	Module 7_3	3	adj.惊奇的	1
-23	alive	Module 7_3	3	adj.活着的	1
-23	southern	Module 7_3	3	adj.南方的	1
-23	state	Module 7_3	3	n.州	1
-23	pay for	Module 7_3	3	为...付出代价	1
-23	action	Module 7_3	3	n.举止	1
-23	everyday	Module 7_3	3	adj.日常的	1
-23	dialogue	Module 7_3	3	n.对话	1
-24	stand for	Module 8_1	3	代表	1
-24	memory	Module 8_1	3	n.记忆	1
-24	point	Module 8_1	3	n.比分	1
-24	decision	Module 8_1	3	n.决定	1
-24	excuse	Module 8_1	3	n.借口	1
-24	noon	Module 8_1	3	n.中午	1
-24	seat	Module 8_1	3	n.座椅	1
-24	no way	Module 8_1	3	决不	1
-24	fair	Module 8_1	3	adj.公平的	1
-24	kick	Module 8_1	3	vt.踢	1
-25	mad	Module 8_2	3	adj.生气的	1
-25	sportsman	Module 8_2	3	n.运动员	0
-25	high jump	Module 8_2	3	跳高	1
-25	ability	Module 8_2	3	n.能力	1
-25	hurdling	Module 8_2	3	n.跨栏赛跑	0
-25	sportswoman	Module 8_2	3	n.女运动员	0
-25	race	Module 8_2	3	n.赛跑	1
-25	record	Module 8_2	3	n.记录	1
-25	method	Module 8_2	3	n.方法	1
-25	hurdle	Module 8_2	3	n.跨栏赛跑	0
-26	Japan	Module 8_3	3	n.日本	1
-26	break	Module 8_3	3	v.打破	1
-26	sports person	Module 8_3	3	运动员	0
-26	Asian	Module 8_3	3	n&adj.亚洲的	1
-26	suffer	Module 8_3	3	v.遭受	1
-26	suffer from	Module 8_3	3	受折磨	1
-26	first place	Module 8_3	3	第一名	1
-26	stop sb from doing sth.	Module 8_3	3	阻止某人做某事	1
-26	courage	Module 8_3	3	n.勇气	1
-26	pride	Module 8_3	3	n.自豪感	1
-26	take pride in	Module 8_3	3	感到自豪	1
-27	borrow	Module 9_1	4	v.借入	1
-27	put up	Module 9_1	4	张贴	1
-27	website	Module 9_1	4	n.网站	1
-27	mail	Module 9_1	4	n.邮件	1
-27	textbook	Module 9_1	4	n.教科书	1
-27	mainly	Module 9_1	4	adv.主要地	1
-27	thousands of	Module 9_1	4	成千上万	1
-27	page	Module 9_1	4	n.页	1
-27	electronic	Module 9_1	4	adj.电子的	1
-28	technology	Module 9_2	4	n.科技	1
-28	powerful	Module 9_2	4	adj.有影响力的	1
-28	memory	Module 9_2	4	n.存储量	1
-28	full	Module 9_2	4	adj.満的	1
-28	fix	Module 9_2	4	vt.修补	1
-28	instruction	Module 9_2	4	n.说明书	1
-28	lend	Module 9_2	4	vt.借出	1
-28	properly	Module 9_2	4	adv.合适地	1
-28	look through	Module 9_2	4	快速阅读	1
-29	printing	Module 9_3	4	n.印刷	1
-29	at a time	Module 9_3	4	每次	1
-29	by hand	Module 9_3	4	用手	1
-29	development	Module 9_3	4	n.发展	1
-29	trade	Module 9_3	4	n.交易	1
-29	result	Module 9_3	4	v.产生结果	1
-29	spread	Module 9_3	4	v.蔓延	1
-29	in a way	Module 9_3	4	从某一角度	1
-29	compare ... to ...	Module 9_3	4	把...比作	1
-30	introduction	Module 9_4	4	n.引进	1
-30	amount	Module 9_4	4	n.数量	1
-30	store	Module 9_4	4	n.存储	1
-30	varied	Module 9_4	4	adj.各种各样的	0
-30	form	Module 9_4	4	n.形态	1
-30	connection	Module 9_4	4	n.电话连接	1
-30	single	Module 9_4	4	adj.单个的	1
-30	direction	Module 9_4	4	n.方向	1
-30	replace	Module 9_4	4	vt.替换	1
-30	wait and see	Module 9_4	4	等着瞧	1
-31	here we go	Module 10_1	4	我们这就看看	1
-31	central	Module 10_1	4	adj.中心的	1
-31	according to	Module 10_1	4	根据	1
-31	magical	Module 10_1	4	adj.神奇的	1
-31	height	Module 10_1	4	n.高度	1
-31	sailing boat	Module 10_1	4	帆船	1
-31	northeast	Module 10_1	4	n.在东北的	1
-31	sheep	Module 10_1	4	n.羊	2
-31	hat	Module 10_1	4	n.帽子	1
-32	keep	Module 10_2	4	vt.保持	1
-32	keep ... away	Module 10_2	4	(使)避开	1
-32	fly	Module 10_2	4	n.苍蝇	2
-32	scissors	Module 10_2	4	n.剪刀	1
-32	cut ... off	Module 10_2	4	把...剪掉	1
-32	wool	Module 10_2	4	n.羊毛	1
-32	diary	Module 10_2	4	n.日记	1
-32	keep a diary	Module 10_2	4	写日记	1
-32	hate	Module 10_2	4	vt.憎恨	1
-33	ant	Module 10_3	4	n.蚂蚁	1
-33	brush	Module 10_3	4	v.刷	1
-33	brush ... off	Module 10_3	4	把...刷掉	1
-33	at the time	Module 10_3	4	那时	1
-33	be surprised at	Module 10_3	4	对...感到惊奇	1
-33	period	Module 10_3	4	n.阶段	1
-33	spirit	Module 10_3	4	n.精神	1
-33	relationship	Module 10_3	4	n.关系	1
-33	relative	Module 10_3	4	n.亲戚	1
-34	ham	Module 10_4	4	n.火腿	1
-34	salad	Module 10_4	4	n.色拉	1
-34	grape	Module 10_4	4	n.葡萄	1
-34	surf	Module 10_4	4	n.冲浪	1
-34	kangaroo	Module 10_4	4	n.袋鼠	1
-34	riding	Module 10_4	4	n.骑马	1
-34	lazy	Module 10_4	4	adj.懒惰的	1
-34	ride	Module 10_4	4	vt.骑马	1
-35	bet	Module 11_1	3	n.打赌	0
-35	you bet	Module 11_1	3	当然	0
-35	the thing is	Module 11_1	3	答案是	1
-35	general	Module 11_1	3	adj.整体的	1
-35	standard	Module 11_1	3	n.标准	1
-35	feeling	Module 11_1	3	n.感觉	1
-35	difficulty	Module 11_1	3	n.困难	1
-35	subject	Module 11_1	3	n.主题	2
-36	add	Module 11_2	3	vt.添加	1
-36	recently	Module 11_2	3	adv.最近	1
-36	menu	Module 11_2	3	n.菜单	1
-36	be in with a chance	Module 11_2	3	有可能	1
-36	tonight	Module 11_2	3	n.今晚	1
-36	read out	Module 11_2	3	朗读	1
-36	winner	Module 11_2	3	n.获胜者	1
-36	compared with	Module 11_2	3	(与...)相比	1
-37	even though	Module 11_3	3	即使	1
-37	rush	Module 11_3	3	vi.冲	1
-37	blouse	Module 11_3	3	n.女衬衫	1
-37	skirt	Module 11_3	3	n.裙子	2
-37	protect ... against ...	Module 11_3	3	保护...免受...	1
-37	singer	Module 11_3	3	n.歌手	1
-37	congratulations	Module 11_3	3	n.祝贺	1
-37	headmaster	Module 11_3	3	n.男校长	1
-37	present	Module 11_3	3	v.授予	1
-38	factory	Module 12_1	3	n.工厂	1
-38	pollute	Module 12_1	3	v.污染	1
-38	recycle	Module 12_1	3	vt.回收利用	1
-38	waste	Module 12_1	3	vt.废料	1
-38	enemy	Module 12_1	3	n.敌人	1
-38	crop	Module 12_1	3	n.庄稼	1
-38	kill	Module 12_1	3	v.杀死	1
-38	oil	Module 12_1	3	n.石油	1
-38	less	Module 12_1	3	adj.较少的	1
-39	hopeless	Module 12_2	3	adj.无望的	1
-39	china	Module 12_2	3	n.瓷器	0
-39	divide	Module 12_2	3	vt.分开	1
-39	plastic	Module 12_2	3	adj.&n.塑料	1
-39	policy	Module 12_2	3	n.政策	1
-39	reuse	Module 12_2	3	v.再次使用	1
-39	bottle	Module 12_2	3	n.瓶	1
-39	throw away	Module 12_2	3	扔掉	1
-39	repeat	Module 12_2	3	n.重说	1
-40	reduce	Module 12_3	3	vt.减少	1
-40	cloth	Module 12_3	3	n.布	1
-40	ton	Module 12_3	3	n.吨	1
-40	tons of	Module 12_3	3	许多	1
-40	rubber	Module 12_3	3	n.橡胶	1
-40	recycling	Module 12_3	3	n.回收利用	0
-40	rapid	Module 12_3	3	adj.快速的	1
-40	step	Module 12_3	3	n.步骤	1
-40	grandson	Module 12_3	3	n.孙子	1
-40	granddaughter	Module 12_3	3	n.孙女	1
+1	man-made	Module 1_1	7	adj.人造的	0
+1	natural	Module 1_1	7	adj.大自然的	1
+1	wonder	Module 1_1	7	n.奇观	1
+2	discussion	Module 1_2	7	n.讨论	1
+2	eastern	Module 1_2	7	adj.在东边的	1
+2	though	Module 1_2	7	conj.虽然	1
+2	loud	Module 1_2	7	adj.响亮的	1
+2	wow	Module 1_2	7	int.呀	0
+3	opinion	Module 1_3	7	n.看法	1
+3	in one's opinion	Module 1_3	7	按某人的意见	1
+3	more than	Module 1_3	7	超过	1
+3	electricity	Module 1_3	7	n.电	1
+3	millions of	Module 1_3	7	大量的	1
+4	below	Module 1_4	7	adv.在下面	1
+4	shine	Module 1_4	7	vi.照耀	1
+4	sign	Module 1_4	7	n.标志	1
+4	silent	Module 1_4	7	adj.寂静的	1
+4	silver	Module 1_4	7	adj.银灰色的	1
+5	sky	Module 1_5	7	n.天空	1
+5	grey	Module 1_5	7	adj.灰色的	1
+5	go through	Module 1_5	7	穿过	1
+5	beside	Module 1_5	7	prep.在...旁边	2
+5	reply	Module 1_5	7	vt.&n.回答	1
+6	clear	Module 1_6	7	v.烟雾开始消失	1
+6	fall away	Module 1_6	7	突然向下倾斜	1
+6	stream	Module 1_6	7	n.小河	1
+6	nearly	Module 1_6	7	adv.几乎	1
+7	on top of	Module 1_7	7	在...上面	1
+7	canyon	Module 1_7	7	n.峡谷	0
+7	remain	Module 1_7	7	v.留下	1
+7	by	Module 1_7	7	prep.在...旁边	2
+8	found	Module 2_1	7	vt.创立	1
+8	since then	Module 2_1	7	从那以后	1
+8	flag	Module 2_1	7	n.旗	1
+8	until	Module 2_1	7	prep.直到...为止	1
+8	off	Module 2_1	7	prep.不上课	1
+9	all kinds of	Module 2_2	7	各种各样的	1
+9	vacation	Module 2_2	7	n.假期	1
+9	take a vacation	Module 2_2	7	去度假	1
+9	season	Module 2_2	7	n.节期	2
+9	kid	Module 2_2	7	n.小孩	2
+10	have fun	Module 2_3	7	玩得高兴	1
+10	band	Module 2_3	7	n.乐队	1
+10	UK	Module 2_3	7	n.英国	1
+10	as soon as	Module 2_3	7	一...就...	1
+10	sixth	Module 2_3	7	n.第六	1
+11	seventh	Module 2_4	7	n.第七	1
+11	eighth	Module 2_4	7	n.第八	1
+11	ninth	Module 2_4	7	n.第九	1
+11	tenth	Module 2_4	7	n.第十	1
+11	twelfth	Module 2_4	7	n.第十二	1
+12	twentieth	Module 2_5	7	n.第二十	1
+12	among	Module 2_5	7	prep.在...之中	1
+12	speech	Module 2_5	7	n.演说	1
+12	pioneer	Module 2_5	7	n.开拓者	1
+12	grow	Module 2_5	7	vt.种植	1
+13	corn	Module 2_6	7	n.谷物	1
+13	following	Module 2_6	7	adj.接着的	1
+13	lay	Module 2_6	7	vt.摆放	1
+13	lay the table	Module 2_6	7	摆放餐桌	1
+14	over	Module 2_7	7	prep.完了的	1
+14	dish	Module 2_7	7	n.盘	1
+14	parade	Module 2_7	7	n.游行	0
+14	ourselves	Module 2_7	7	pron.我们自己	1
+15	including	Module 3_1	7	prep.包含	1
+15	medal	Module 3_1	7	n.奖牌	1
+15	attend	Module 3_1	7	vt.出席	1
+15	abroad	Module 3_1	7	adv.在国外	1
+15	once again	Module 3_1	7	再一次	1
+16	doctor	Module 3_2	7	n.博士	2
+16	degree	Module 3_2	7	n.学位	1
+16	whatever	Module 3_2	7	pron.无论什么	1
+16	give up	Module 3_2	7	放弃	1
+16	amazing	Module 3_2	7	adj.惊人的	1
+17	will	Module 3_3	7	aux.意志	1
+17	victory	Module 3_3	7	n.成功	1
+17	simply	Module 3_3	7	adv.简单地	1
+17	Canadian	Module 3_3	7	n&adj.加拿大的	1
+17	sick	Module 3_3	7	adj.生病的	1
+18	soldier	Module 3_4	7	n.军人	1
+18	treat	Module 3_4	7	v.治疗	1
+18	war	Module 3_4	7	n.战争	1
+18	wound	Module 3_4	7	n.伤	1
+18	die for	Module 3_4	7	为...而死	1
+19	wounded	Module 3_5	7	adj.受伤的	0
+19	realise	Module 3_5	7	v.了解	1
+19	dying	Module 3_5	7	adj.垂死的	1
+19	care	Module 3_5	7	n.&v.照顾	1
+19	take care of	Module 3_5	7	照顾	1
+20	tool	Module 3_6	7	n.工具	1
+20	invention	Module 3_6	7	n.发明	1
+20	at that time	Module 3_6	7	那时候	1
+20	on one's own	Module 3_6	7	独自一人	1
+20	useful	Module 3_6	7	adj.有用的	1
+20	rest	Module 3_6	7	vt.&n.休息	1
+21	himself	Module 3_7	7	pron.他自己	1
+21	manage	Module 3_7	7	vt.做成	1
+21	operation	Module 3_7	7	n.手术	1
+21	continue	Module 3_7	7	vt.继续	1
+21	die of	Module 3_7	7	死于...	1
+21	Canada	Module 3_7	7	n.加拿大	1
+22	platform	Module 4_1	7	n.月台	1
+22	meeting	Module 4_1	7	n.会议	1
+22	miss	Module 4_1	7	v.错过	1
+22	shut	Module 4_1	7	v.关上	1
+22	lock	Module 4_1	7	n.&v.锁	1
+23	simple	Module 4_2	7	adj.简单的	1
+23	anybody	Module 4_2	7	pron.任何人	1
+23	clock	Module 4_2	7	n.钟	2
+23	ring	Module 4_2	7	v.鸣响	1
+23	passenger	Module 4_2	7	n.乘客	1
+24	address	Module 4_3	7	n.地址	1
+24	text	Module 4_3	7	n.文本	1
+24	text message	Module 4_3	7	短信	1
+24	couple	Module 4_3	7	n.一对	1
+24	a couple of	Module 4_3	7	两个	1
+25	actually	Module 4_4	7	adv.事实上	0
+25	manage	Module 4_4	7	vt.管理	1
+25	unhappy	Module 4_4	7	adj.不高兴的	1
+25	turn off	Module 4_4	7	关掉	1
+25	order	Module 4_4	7	n.&v.命令	1
+26	be worried about	Module 4_5	7	担心	1
+26	business	Module 4_5	7	n.工作	1
+26	on business	Module 4_5	7	出差	1
+26	sofa	Module 4_5	7	n.沙发	1
+26	snack	Module 4_5	7	n.点心	0
+27	midnight	Module 4_6	7	n.午夜	1
+27	wake up	Module 4_6	7	醒来	1
+27	hand in	Module 4_6	7	提交	1
+27	empty	Module 4_6	7	adj.空的	1
+27	unable	Module 4_6	7	adj.不能做某事的	1
+28	all day long	Module 4_7	7	整天	1
+28	burn	Module 4_7	7	vt.烧焦	1
+28	cup	Module 4_7	7	n.杯子	1
+28	task	Module 4_7	7	n.任务	1
+29	upstairs	Module 5_1	6	adj.&adv.在楼上	1
+29	exhibition	Module 5_1	6	n.展览	1
+29	rule	Module 5_1	6	n.规则	1
+29	against the rules	Module 5_1	6	违反规定	1
+29	in trouble	Module 5_1	6	遇上麻烦	1
+30	tail	Module 5_2	6	n.尾巴	1
+30	rope	Module 5_2	6	n.粗绳	1
+30	entry	Module 5_2	6	n.进入权	1
+30	No entry	Module 5_2	6	禁止入内	1
+30	no good	Module 5_2	6	不合适的	1
+31	no wonder	Module 5_3	6	难怪	1
+31	missing	Module 5_3	6	adj.找不到的	1
+31	downstairs	Module 5_3	6	adj.&adv.在楼下	1
+31	punish	Module 5_3	6	v.惩罚	1
+31	communications	Module 5_3	6	n.通信	1
+32	physics	Module 5_4	6	n.物理学	1
+32	chemistry	Module 5_4	6	n.化学	1
+32	dig	Module 5_4	6	v.挖掘	1
+32	coal	Module 5_4	6	n.煤	1
+32	energy	Module 5_4	6	n.能量	1
+33	X-ray	Module 5_5	6	n.X射线	1
+33	experiment	Module 5_5	6	n.实验	1
+33	sand	Module 5_5	6	n.沙	1
+33	control	Module 5_5	6	n.操控	1
+33	truck	Module 5_5	6	n.卡车	1
+34	wheel	Module 5_6	6	n.轮子	1
+34	compare ... with ...	Module 5_6	6	比较...与...	1
+34	of all ages	Module 5_6	6	所有年龄段的	1
+34	whole	Module 5_6	6	adj.全部的	1
+35	deal	Module 6_1	7	v.协议	1
+35	exam	Module 6_1	7	n.考试	1
+35	fail	Module 6_1	7	vi.未能及格	1
+35	guitar	Module 6_1	7	n.吉他	1
+35	instrument	Module 6_1	7	n.乐器	1
+36	musical	Module 6_2	7	adj.音乐的	1
+36	habit	Module 6_2	7	n.习惯	1
+36	get into the habit of	Module 6_2	7	养成...的习惯	1
+36	schoolwork	Module 6_2	7	n.功课	0
+36	volunteer	Module 6_2	7	n.志愿者	1
+37	necessary	Module 6_3	7	adj.必要的	1
+37	shame	Module 6_3	7	n.可惜	1
+37	instead	Module 6_3	7	adv.代替	1
+37	instead of	Module 6_3	7	而不是	1
+37	community	Module 6_3	7	n.社区	1
+38	knowledge	Module 6_4	7	n.知识	1
+38	point	Module 6_4	7	n.观点	1
+38	consider	Module 6_4	7	vt.考虑	1
+38	last word	Module 6_4	7	最后一句话	1
+38	come round	Module 6_4	7	拜访	1
+39	reason	Module 6_5	7	n.原因	1
+39	try out	Module 6_5	7	试用	1
+39	angry	Module 6_5	7	adj.愤怒的	2
+39	no longer	Module 6_5	7	不再	1
+39	be angry with sb	Module 6_5	7	生某人的气	1
+40	repair	Module 6_6	7	vi.修理	1
+40	truth	Module 6_6	7	n.事实	1
+40	least	Module 6_6	7	adj.最少	1
+40	at least	Module 6_6	7	至少	1
+41	honest	Module 6_7	7	adj.诚实的	1
+41	apologise	Module 6_7	7	vi.道歉	1
+41	bill	Module 6_7	7	n.账单	1
+41	pocket money	Module 6_7	7	零用钱	1
+42	discuss	Module 7_1	5	vt.讨论	1
+42	thinker	Module 7_1	5	n.思想家	0
+42	wise	Module 7_1	5	adj.明智的	1
+42	review	Module 7_1	5	vt.评论	1
+42	influence	Module 7_1	5	vt.&n.影响	1
+43	sense	Module 7_2	5	n.意义	1
+43	make sense	Module 7_2	5	有意义	1
+43	by the way	Module 7_2	5	顺便提一下	1
+43	suppose	Module 7_2	5	vt.猜想	1
+43	well-known	Module 7_2	5	adj.著名的	1
+44	adventure	Module 7_3	5	n.冒险	1
+44	get into trouble	Module 7_3	5	遇上麻烦	1
+44	run away	Module 7_3	5	逃走	1
+44	escape	Module 7_3	5	vt.逃离	1
+44	cave	Module 7_3	5	n.洞穴	1
+45	dead	Module 7_4	5	adj.死的	1
+45	for a time	Module 7_4	5	一小段时间	1
+45	neighbour	Module 7_4	5	n.邻居	1
+45	funeral	Module 7_4	5	n.葬礼	1
+45	surprised	Module 7_4	5	adj.惊奇的	1
+45	alive	Module 7_4	5	adj.活着的	1
+46	southern	Module 7_5	5	adj.南方的	1
+46	state	Module 7_5	5	n.州	1
+46	pay for	Module 7_5	5	为...付出代价	1
+46	action	Module 7_5	5	n.举止	1
+46	everyday	Module 7_5	5	adj.日常的	1
+46	dialogue	Module 7_5	5	n.对话	1
+47	stand for	Module 8_1	6	代表	1
+47	memory	Module 8_1	6	n.记忆	1
+47	point	Module 8_1	6	n.比分	1
+47	decision	Module 8_1	6	n.决定	1
+47	excuse	Module 8_1	6	n.借口	1
+48	noon	Module 8_2	6	n.中午	1
+48	seat	Module 8_2	6	n.座椅	1
+48	no way	Module 8_2	6	决不	1
+48	fair	Module 8_2	6	adj.公平的	1
+48	kick	Module 8_2	6	vt.踢	1
+49	mad	Module 8_3	6	adj.生气的	1
+49	sportsman	Module 8_3	6	n.运动员	0
+49	high jump	Module 8_3	6	跳高	1
+49	ability	Module 8_3	6	n.能力	1
+49	hurdling	Module 8_3	6	n.跨栏赛跑	0
+50	sportswoman	Module 8_4	6	n.女运动员	0
+50	race	Module 8_4	6	n.赛跑	1
+50	record	Module 8_4	6	n.记录	1
+50	method	Module 8_4	6	n.方法	1
+50	hurdle	Module 8_4	6	n.跨栏赛跑	0
+51	Japan	Module 8_5	6	n.日本	1
+51	break	Module 8_5	6	v.打破	1
+51	sports person	Module 8_5	6	运动员	0
+51	Asian	Module 8_5	6	n&adj.亚洲的	1
+51	suffer	Module 8_5	6	v.遭受	1
+52	suffer from	Module 8_6	6	受折磨	1
+52	first place	Module 8_6	6	第一名	1
+52	stop sb from doing sth.	Module 8_6	6	阻止某人做某事	1
+52	courage	Module 8_6	6	n.勇气	1
+52	pride	Module 8_6	6	n.自豪感	1
+52	take pride in	Module 8_6	6	感到自豪	1
+53	borrow	Module 9_1	7	v.借入	1
+53	put up	Module 9_1	7	张贴	1
+53	website	Module 9_1	7	n.网站	1
+53	mail	Module 9_1	7	n.邮件	1
+53	textbook	Module 9_1	7	n.教科书	1
+54	mainly	Module 9_2	7	adv.主要地	1
+54	thousands of	Module 9_2	7	成千上万	1
+54	page	Module 9_2	7	n.页	1
+54	electronic	Module 9_2	7	adj.电子的	1
+54	technology	Module 9_2	7	n.科技	1
+55	powerful	Module 9_3	7	adj.有影响力的	1
+55	memory	Module 9_3	7	n.存储量	1
+55	full	Module 9_3	7	adj.満的	1
+55	fix	Module 9_3	7	vt.修补	1
+55	instruction	Module 9_3	7	n.说明书	1
+56	lend	Module 9_4	7	vt.借出	1
+56	properly	Module 9_4	7	adv.合适地	1
+56	look through	Module 9_4	7	快速阅读	1
+56	printing	Module 9_4	7	n.印刷	1
+56	at a time	Module 9_4	7	每次	1
+57	by hand	Module 9_5	7	用手	1
+57	development	Module 9_5	7	n.发展	1
+57	trade	Module 9_5	7	n.交易	1
+57	result	Module 9_5	7	v.产生结果	1
+57	spread	Module 9_5	7	v.蔓延	1
+58	in a way	Module 9_6	7	从某一角度	1
+58	compare ... to ...	Module 9_6	7	把...比作	1
+58	introduction	Module 9_6	7	n.引进	1
+58	amount	Module 9_6	7	n.数量	1
+58	store	Module 9_6	7	n.存储	1
+58	varied	Module 9_6	7	adj.各种各样的	0
+59	form	Module 9_7	7	n.形态	1
+59	connection	Module 9_7	7	n.电话连接	1
+59	single	Module 9_7	7	adj.单个的	1
+59	direction	Module 9_7	7	n.方向	1
+59	replace	Module 9_7	7	vt.替换	1
+59	wait and see	Module 9_7	7	等着瞧	1
+60	here we go	Module 10_1	7	我们这就看看	1
+60	central	Module 10_1	7	adj.中心的	1
+60	according to	Module 10_1	7	根据	1
+60	magical	Module 10_1	7	adj.神奇的	1
+60	height	Module 10_1	7	n.高度	1
+61	sailing boat	Module 10_2	7	帆船	1
+61	northeast	Module 10_2	7	n.在东北的	1
+61	sheep	Module 10_2	7	n.羊	2
+61	hat	Module 10_2	7	n.帽子	1
+61	keep	Module 10_2	7	vt.保持	1
+62	keep ... away	Module 10_3	7	(使)避开	1
+62	fly	Module 10_3	7	n.苍蝇	2
+62	scissors	Module 10_3	7	n.剪刀	1
+62	cut ... off	Module 10_3	7	把...剪掉	1
+62	wool	Module 10_3	7	n.羊毛	1
+63	diary	Module 10_4	7	n.日记	1
+63	keep a diary	Module 10_4	7	写日记	1
+63	hate	Module 10_4	7	vt.憎恨	1
+63	ant	Module 10_4	7	n.蚂蚁	1
+63	brush	Module 10_4	7	v.刷	1
+64	brush ... off	Module 10_5	7	把...刷掉	1
+64	at the time	Module 10_5	7	那时	1
+64	be surprised at	Module 10_5	7	对...感到惊奇	1
+64	period	Module 10_5	7	n.阶段	1
+64	spirit	Module 10_5	7	n.精神	1
+65	relationship	Module 10_6	7	n.关系	1
+65	relative	Module 10_6	7	n.亲戚	1
+65	ham	Module 10_6	7	n.火腿	1
+65	salad	Module 10_6	7	n.色拉	1
+65	grape	Module 10_6	7	n.葡萄	1
+66	surf	Module 10_7	7	n.冲浪	1
+66	kangaroo	Module 10_7	7	n.袋鼠	1
+66	riding	Module 10_7	7	n.骑马	1
+66	lazy	Module 10_7	7	adj.懒惰的	1
+66	ride	Module 10_7	7	vt.骑马	1
+67	bet	Module 11_1	5	n.打赌	0
+67	you bet	Module 11_1	5	当然	0
+67	the thing is	Module 11_1	5	答案是	1
+67	general	Module 11_1	5	adj.整体的	1
+67	standard	Module 11_1	5	n.标准	1
+68	feeling	Module 11_2	5	n.感觉	1
+68	difficulty	Module 11_2	5	n.困难	1
+68	subject	Module 11_2	5	n.主题	2
+68	add	Module 11_2	5	vt.添加	1
+68	recently	Module 11_2	5	adv.最近	1
+69	menu	Module 11_3	5	n.菜单	1
+69	be in with a chance	Module 11_3	5	有可能	1
+69	tonight	Module 11_3	5	n.今晚	1
+69	read out	Module 11_3	5	朗读	1
+69	winner	Module 11_3	5	n.获胜者	1
+70	compared with	Module 11_4	5	(与...)相比	1
+70	even though	Module 11_4	5	即使	1
+70	rush	Module 11_4	5	vi.冲	1
+70	blouse	Module 11_4	5	n.女衬衫	1
+70	skirt	Module 11_4	5	n.裙子	2
+71	protect ... against ...	Module 11_5	5	保护...免受...	1
+71	singer	Module 11_5	5	n.歌手	1
+71	congratulations	Module 11_5	5	n.祝贺	1
+71	headmaster	Module 11_5	5	n.男校长	1
+71	present	Module 11_5	5	v.授予	1
+72	factory	Module 12_1	6	n.工厂	1
+72	pollute	Module 12_1	6	v.污染	1
+72	recycle	Module 12_1	6	vt.回收利用	1
+72	waste	Module 12_1	6	vt.废料	1
+72	enemy	Module 12_1	6	n.敌人	1
+73	crop	Module 12_2	6	n.庄稼	1
+73	kill	Module 12_2	6	v.杀死	1
+73	oil	Module 12_2	6	n.石油	1
+73	less	Module 12_2	6	adj.较少的	1
+73	hopeless	Module 12_2	6	adj.无望的	1
+74	china	Module 12_3	6	n.瓷器	0
+74	divide	Module 12_3	6	vt.分开	1
+74	plastic	Module 12_3	6	adj.&n.塑料	1
+74	policy	Module 12_3	6	n.政策	1
+74	reuse	Module 12_3	6	v.再次使用	1
+75	bottle	Module 12_4	6	n.瓶	1
+75	throw away	Module 12_4	6	扔掉	1
+75	repeat	Module 12_4	6	n.重说	1
+75	reduce	Module 12_4	6	vt.减少	1
+75	cloth	Module 12_4	6	n.布	1
+76	ton	Module 12_5	6	n.吨	1
+76	tons of	Module 12_5	6	许多	1
+76	rubber	Module 12_5	6	n.橡胶	1
+76	recycling	Module 12_5	6	n.回收利用	0
+77	rapid	Module 12_6	6	adj.快速的	1
+77	step	Module 12_6	6	n.步骤	1
+77	grandson	Module 12_6	6	n.孙子	1
+77	granddaughter	Module 12_6	6	n.孙女	1

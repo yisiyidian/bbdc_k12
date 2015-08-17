@@ -1,190 +1,190 @@
-1	enjoyable	Unit 1_1	7	adj.有乐趣的	1
-1	experience	Unit 1_1	7	n.经历	1
-1	assembly	Unit 1_1	7	n.集会	0
-2	headmaster	Unit 1_2	7	n.校长	1
-2	earn	Unit 1_2	7	vt.获得	1
-2	respect	Unit 1_2	7	vt.尊敬	1
-2	devote	Unit 1_2	7	vt.致力于	1
-2	literature	Unit 1_2	7	n.文学	1
-2	average	Unit 1_2	7	adj.平均的	1
-2	struggle	Unit 1_2	7	v.奋斗	1
-2	challenging	Unit 1_2	7	adj.具有挑战性的	1
-2	encouragement	Unit 1_2	7	n.鼓励	1
-3	cooking	Unit 1_3	7	n.做饭	1
-3	for free	Unit 1_3	7	免费	1
-3	extra	Unit 1_3	7	adj.额外的	1
-3	fond	Unit 1_3	7	adj.喜爱的	1
-3	be fond of	Unit 1_3	7	喜爱	1
-3	Spanish	Unit 1_3	7	n.西班牙语	1
-3	sculpture	Unit 1_3	7	n.雕像	1
-3	dessert	Unit 1_3	7	n.甜点	1
-3	look back on	Unit 1_3	7	回忆	1
-4	satisfaction	Unit 1_4	7	n.满意	1
-4	surf	Unit 1_4	7	n.冲浪	0
-4	academic	Unit 1_4	7	adj.学业的	1
-4	exchange	Unit 1_4	7	vt.交换	1
-4	former	Unit 1_4	7	adj.以前的	1
-4	graduate	Unit 1_4	7	v.&n.毕业	1
-4	fluent	Unit 1_4	7	adj.流利的	1
-4	painting	Unit 1_4	7	n.绘画	1
-4	donate	Unit 1_4	7	vt.捐赠	1
-5	kindness	Unit 1_5	7	n.善意	1
-5	splendid	Unit 1_5	7	adj.极佳的	1
-5	independent	Unit 1_5	7	adj.独立的	1
-5	make use of	Unit 1_5	7	利用	1
-5	title	Unit 1_5	7	n.题目	1
-5	dynasty	Unit 1_5	7	n.朝代	1
-5	somehow	Unit 1_5	7	adv.不知怎么地	1
-5	recent	Unit 1_5	7	adj.最近的	1
-5	professor	Unit 1_5	7	n.教授	1
-6	inform	Unit 1_6	7	vt.通知	1
-6	opening hours	Unit 1_6	7	开放时间	1
-6	run	Unit 1_6	7	vi.管理	1
-6	host	Unit 1_6	7	v.主人	1
-6	approve	Unit 1_6	7	vt.赞成	1
-6	charge	Unit 1_6	7	n.负责	1
-6	in charge of	Unit 1_6	7	负责	1
-6	schoolmate	Unit 1_6	7	n.同学	1
-6	broadcast	Unit 1_6	7	n.广播	1
-7	preparation	Unit 1_7	7	n.准备	1
-7	event	Unit 1_7	7	n.事件	1
-7	outing	Unit 1_7	7	n.短途旅行	1
-7	graduation	Unit 1_7	7	n.毕业	1
-7	poet	Unit 1_7	7	n.诗人	1
-7	generation	Unit 1_7	7	n.一代	1
-7	literary	Unit 1_7	7	adj.文学的	1
-7	select	Unit 1_7	7	adj.选择	1
-7	courtyard	Unit 1_7	7	n.庭院	1
-7	composition	Unit 1_7	7	n.作品	1
-8	act	Unit 2_1	7	n.一幕	1
-8	curtain	Unit 2_1	7	n.窗帘	1
-8	can't wait to do something	Unit 2_1	7	迫不及待地做某事	1
-8	soccer	Unit 2_1	7	n.足球	1
-8	frightened	Unit 2_1	7	adj.受惊的	1
-8	be supposed to	Unit 2_1	7	应该...	1
-8	bend	Unit 2_1	7	v.弯曲	1
-8	starve	Unit 2_1	7	v.挨饿	1
-8	cash	Unit 2_1	7	n.现金	1
-8	garbage	Unit 2_1	7	n.垃圾	1
-9	pizza	Unit 2_2	7	n.比萨饼	0
-9	sink	Unit 2_2	7	v.&n.下沉；水槽	1
-9	garbage can	Unit 2_2	7	垃圾桶	1
-9	adult	Unit 2_2	7	n.成年人	1
-9	tolerate	Unit 2_2	7	v.容忍	1
-9	behavior	Unit 2_2	7	n.行为	1
-9	teenager	Unit 2_2	7	n.青少年	1
-9	fault	Unit 2_2	7	n.过错	1
-9	scene	Unit 2_2	7	n.场景	1
-9	upset	Unit 2_2	7	v.&adj.使不高兴	1
-10	defend	Unit 2_3	7	vt.辩解	1
-10	emergency	Unit 2_3	7	n.突发事件	1
-10	anyhow	Unit 2_3	7	adv.尽管如此	1
-10	deserve	Unit 2_3	7	vt.值得	1
-10	explanation	Unit 2_3	7	n.解释	1
-10	clinic	Unit 2_3	7	n.诊所	1
-10	hard	Unit 2_3	7	adj.苛刻的	1
-10	be hard on	Unit 2_3	7	对...苛刻	1
-10	now that	Unit 2_3	7	既然	1
-10	rude	Unit 2_3	7	adj.粗鲁的	1
-11	sigh	Unit 2_4	7	v.叹气	1
-11	bicycle	Unit 2_4	7	n.自行车	1
-11	hardworking	Unit 2_4	7	adj.工作努力的	1
-11	stay up	Unit 2_4	7	熬夜	1
-11	handle	Unit 2_4	7	vt.处理	1
-11	error	Unit 2_4	7	n.错误	1
-11	mix up	Unit 2_4	7	混淆	1
-11	guidance	Unit 2_4	7	n.指导	1
-11	as if	Unit 2_4	7	好像	1
-11	insist	Unit 2_4	7	v.坚持	1
-12	insist on	Unit 2_5	7	坚持	1
-12	DVD	Unit 2_5	7	数字多功能光碟	1
-12	cafe	Unit 2_5	7	n.咖啡馆	1
-12	Internet cafe	Unit 2_5	7	网吧	1
-12	chat	Unit 2_5	7	v.聊天	1
-12	at present	Unit 2_5	7	现在	1
-12	argument	Unit 2_5	7	n.争吵	1
-12	freedom	Unit 2_5	7	n.自由	1
-12	worried	Unit 2_5	7	adj.担心的	1
-12	harm	Unit 2_5	7	n.&vt.伤害	1
-13	foolish	Unit 2_6	7	adj.愚蠢的	1
-13	patience	Unit 2_6	7	n.耐心	1
-13	selfish	Unit 2_6	7	adj.自私的	1
-13	distant	Unit 2_6	7	adj.遥远的	1
-13	annoyed	Unit 2_6	7	adj.愤怒的	1
-13	forbid	Unit 2_6	7	vt.禁止	1
-13	adolescence	Unit 2_6	7	n.青春期	1
-13	along with	Unit 2_6	7	与...一起	1
-13	misunderstand	Unit 2_6	7	v.误解	1
-13	normal	Unit 2_6	7	adj.正常的	1
-14	confused	Unit 2_7	7	adj.困惑的	1
-14	physical	Unit 2_7	7	adj.身体的	1
-14	psychological	Unit 2_7	7	adj.心理的	0
-14	tend	Unit 2_7	7	vi.趋向	1
-14	limit	Unit 2_7	7	n.极限	1
-14	wisdom	Unit 2_7	7	n.智慧	1
-14	independence	Unit 2_7	7	n.独立	1
-14	balance	Unit 2_7	7	n.平衡	1
-14	last	Unit 2_7	7	v.持续	1
-14	challenge	Unit 2_7	7	n.挑战	1
-15	work out	Unit 3_1	6	锻炼	1
-15	slim	Unit 3_1	6	adj.苗条的	1
-15	figure	Unit 3_1	6	n.体形；数字	1
-15	ashamed	Unit 3_1	6	adj.惭愧的	1
-15	weight-loss	Unit 3_1	6	n.减肥	1
-15	pill	Unit 3_1	6	n.药丸	1
-15	kilogram	Unit 3_1	6	n.千克	1
-15	work	Unit 3_1	6	vi.奏效	1
-15	energetic	Unit 3_1	6	adj.精力充沛的	1
-15	recover	Unit 3_1	6	vi.复原	1
-16	liver	Unit 3_2	6	n.肝脏	0
-16	failure	Unit 3_2	6	n.失败	1
-16	contain	Unit 3_2	6	vt.包含	1
-16	chemical	Unit 3_2	6	adj.化学的	1
-16	treatment	Unit 3_2	6	n.治疗	1
-16	painful	Unit 3_2	6	adj.痛苦的	1
-16	damage	Unit 3_2	6	n.&v.损害	1
-16	attractive	Unit 3_2	6	adj.有吸引力的	1
-16	embarrassed	Unit 3_2	6	adj.尴尬的	1
-16	pressure	Unit 3_2	6	n.压力	1
-17	overweight	Unit 3_3	6	adj.肥胖的	1
-17	diet	Unit 3_3	6	n.节食	1
-17	go on a diet	Unit 3_3	6	节食	1
-17	prefer	Unit 3_3	6	vt.更喜欢	1
-17	waist	Unit 3_3	6	n.腰	1
-17	suffer	Unit 3_3	6	vt.受苦	1
-17	athlete	Unit 3_3	6	n.运动员	1
-17	effect	Unit 3_3	6	n.效果	1
-17	side effect	Unit 3_3	6	副作用	1
-17	fall out	Unit 3_3	6	脱落	1
-18	affect	Unit 3_4	6	vt.影响	1
-18	achievement	Unit 3_4	6	n.成就	1
-18	post	Unit 3_4	6	n.帖子	1
-18	membership	Unit 3_4	6	n.会员资格	0
-18	including	Unit 3_4	6	prep.包括	1
-18	branch	Unit 3_4	6	n.分支	1
-18	downtown	Unit 3_4	6	n.&ad.在市中心	1
-18	freeway	Unit 3_4	6	n.高速公路	1
-18	midnight	Unit 3_4	6	n.午夜	1
-18	equipment	Unit 3_4	6	n.器材	1
-19	get into shape	Unit 3_5	6	强身健体	1
-19	make the most of	Unit 3_5	6	充分利用	1
-19	marathon	Unit 3_5	6	n.马拉松赛跑	1
-19	expert	Unit 3_5	6	n.专家	1
-19	chip	Unit 3_5	6	n.薯条	0
-19	sadness	Unit 3_5	6	n.悲伤	1
-19	comfort	Unit 3_5	6	n.舒适	1
-19	useless	Unit 3_5	6	adj.无用的	1
-19	in the long term	Unit 3_5	6	从长远角度看	1
-19	approximately	Unit 3_5	6	adv.大约	1
-19	skip	Unit 3_5	6	n.跳过	1
-20	properly	Unit 3_6	6	adv.适当地	1
-20	mostly	Unit 3_6	6	adv.主要地	1
-20	system	Unit 3_6	6	n.系统	1
-20	skin	Unit 3_6	6	n.皮肤	1
-20	count	Unit 3_6	6	v.数数	1
-20	peaceful	Unit 3_6	6	adj.平静的	1
-20	concentrate	Unit 3_6	6	vt.集中	1
-20	amount	Unit 3_6	6	n.数量	1
-20	as a matter of fact	Unit 3_6	6	事实上	1
-20	loss	Unit 3_6	6	n.损失	1
-20	gain	Unit 3_6	6	n.&vt.获得	1
+1	enjoyable	Unit 1_1	12	adj.有乐趣的	1
+1	experience	Unit 1_1	12	n.经历	1
+1	assembly	Unit 1_1	12	n.集会	0
+2	headmaster	Unit 1_2	12	n.校长	1
+2	earn	Unit 1_2	12	vt.获得	1
+2	respect	Unit 1_2	12	vt.尊敬	1
+2	devote	Unit 1_2	12	vt.致力于	1
+2	literature	Unit 1_2	12	n.文学	1
+3	average	Unit 1_3	12	adj.平均的	1
+3	struggle	Unit 1_3	12	v.奋斗	1
+3	challenging	Unit 1_3	12	adj.具有挑战性的	1
+3	encouragement	Unit 1_3	12	n.鼓励	1
+3	cooking	Unit 1_3	12	n.做饭	1
+4	for free	Unit 1_4	12	免费	1
+4	extra	Unit 1_4	12	adj.额外的	1
+4	fond	Unit 1_4	12	adj.喜爱的	1
+4	be fond of	Unit 1_4	12	喜爱	1
+4	Spanish	Unit 1_4	12	n.西班牙语	1
+5	sculpture	Unit 1_5	12	n.雕像	1
+5	dessert	Unit 1_5	12	n.甜点	1
+5	look back on	Unit 1_5	12	回忆	1
+5	satisfaction	Unit 1_5	12	n.满意	1
+5	surf	Unit 1_5	12	n.冲浪	0
+6	academic	Unit 1_6	12	adj.学业的	1
+6	exchange	Unit 1_6	12	vt.交换	1
+6	former	Unit 1_6	12	adj.以前的	1
+6	graduate	Unit 1_6	12	v.&n.毕业	1
+6	fluent	Unit 1_6	12	adj.流利的	1
+7	painting	Unit 1_7	12	n.绘画	1
+7	donate	Unit 1_7	12	vt.捐赠	1
+7	kindness	Unit 1_7	12	n.善意	1
+7	splendid	Unit 1_7	12	adj.极佳的	1
+7	independent	Unit 1_7	12	adj.独立的	1
+8	make use of	Unit 1_8	12	利用	1
+8	title	Unit 1_8	12	n.题目	1
+8	dynasty	Unit 1_8	12	n.朝代	1
+8	somehow	Unit 1_8	12	adv.不知怎么地	1
+8	recent	Unit 1_8	12	adj.最近的	1
+9	professor	Unit 1_9	12	n.教授	1
+9	inform	Unit 1_9	12	vt.通知	1
+9	opening hours	Unit 1_9	12	开放时间	1
+9	run	Unit 1_9	12	vi.管理	1
+9	host	Unit 1_9	12	v.主人	1
+10	approve	Unit 1_10	12	vt.赞成	1
+10	charge	Unit 1_10	12	n.负责	1
+10	in charge of	Unit 1_10	12	负责	1
+10	schoolmate	Unit 1_10	12	n.同学	1
+10	broadcast	Unit 1_10	12	n.广播	1
+11	preparation	Unit 1_11	12	n.准备	1
+11	event	Unit 1_11	12	n.事件	1
+11	outing	Unit 1_11	12	n.短途旅行	1
+11	graduation	Unit 1_11	12	n.毕业	1
+11	poet	Unit 1_11	12	n.诗人	1
+12	generation	Unit 1_12	12	n.一代	1
+12	literary	Unit 1_12	12	adj.文学的	1
+12	select	Unit 1_12	12	adj.选择	1
+12	courtyard	Unit 1_12	12	n.庭院	1
+12	composition	Unit 1_12	12	n.作品	1
+13	act	Unit 2_1	14	n.一幕	1
+13	curtain	Unit 2_1	14	n.窗帘	1
+13	can't wait to do something	Unit 2_1	14	迫不及待地做某事	1
+13	soccer	Unit 2_1	14	n.足球	1
+13	frightened	Unit 2_1	14	adj.受惊的	1
+14	be supposed to	Unit 2_2	14	应该...	1
+14	bend	Unit 2_2	14	v.弯曲	1
+14	starve	Unit 2_2	14	v.挨饿	1
+14	cash	Unit 2_2	14	n.现金	1
+14	garbage	Unit 2_2	14	n.垃圾	1
+15	pizza	Unit 2_3	14	n.比萨饼	0
+15	sink	Unit 2_3	14	v.&n.下沉；水槽	1
+15	garbage can	Unit 2_3	14	垃圾桶	1
+15	adult	Unit 2_3	14	n.成年人	1
+15	tolerate	Unit 2_3	14	v.容忍	1
+16	behavior	Unit 2_4	14	n.行为	1
+16	teenager	Unit 2_4	14	n.青少年	1
+16	fault	Unit 2_4	14	n.过错	1
+16	scene	Unit 2_4	14	n.场景	1
+16	upset	Unit 2_4	14	v.&adj.使不高兴	1
+17	defend	Unit 2_5	14	vt.辩解	1
+17	emergency	Unit 2_5	14	n.突发事件	1
+17	anyhow	Unit 2_5	14	adv.尽管如此	1
+17	deserve	Unit 2_5	14	vt.值得	1
+17	explanation	Unit 2_5	14	n.解释	1
+18	clinic	Unit 2_6	14	n.诊所	1
+18	hard	Unit 2_6	14	adj.苛刻的	1
+18	be hard on	Unit 2_6	14	对...苛刻	1
+18	now that	Unit 2_6	14	既然	1
+18	rude	Unit 2_6	14	adj.粗鲁的	1
+19	sigh	Unit 2_7	14	v.叹气	1
+19	bicycle	Unit 2_7	14	n.自行车	1
+19	hardworking	Unit 2_7	14	adj.工作努力的	1
+19	stay up	Unit 2_7	14	熬夜	1
+19	handle	Unit 2_7	14	vt.处理	1
+20	error	Unit 2_8	14	n.错误	1
+20	mix up	Unit 2_8	14	混淆	1
+20	guidance	Unit 2_8	14	n.指导	1
+20	as if	Unit 2_8	14	好像	1
+20	insist	Unit 2_8	14	v.坚持	1
+21	insist on	Unit 2_9	14	坚持	1
+21	DVD	Unit 2_9	14	数字多功能光碟	1
+21	cafe	Unit 2_9	14	n.咖啡馆	1
+21	Internet cafe	Unit 2_9	14	网吧	1
+21	chat	Unit 2_9	14	v.聊天	1
+22	at present	Unit 2_10	14	现在	1
+22	argument	Unit 2_10	14	n.争吵	1
+22	freedom	Unit 2_10	14	n.自由	1
+22	worried	Unit 2_10	14	adj.担心的	1
+22	harm	Unit 2_10	14	n.&vt.伤害	1
+23	foolish	Unit 2_11	14	adj.愚蠢的	1
+23	patience	Unit 2_11	14	n.耐心	1
+23	selfish	Unit 2_11	14	adj.自私的	1
+23	distant	Unit 2_11	14	adj.遥远的	1
+23	annoyed	Unit 2_11	14	adj.愤怒的	1
+24	forbid	Unit 2_12	14	vt.禁止	1
+24	adolescence	Unit 2_12	14	n.青春期	1
+24	along with	Unit 2_12	14	与...一起	1
+24	misunderstand	Unit 2_12	14	v.误解	1
+24	normal	Unit 2_12	14	adj.正常的	1
+25	confused	Unit 2_13	14	adj.困惑的	1
+25	physical	Unit 2_13	14	adj.身体的	1
+25	psychological	Unit 2_13	14	adj.心理的	0
+25	tend	Unit 2_13	14	vi.趋向	1
+25	limit	Unit 2_13	14	n.极限	1
+26	wisdom	Unit 2_14	14	n.智慧	1
+26	independence	Unit 2_14	14	n.独立	1
+26	balance	Unit 2_14	14	n.平衡	1
+26	last	Unit 2_14	14	v.持续	1
+26	challenge	Unit 2_14	14	n.挑战	1
+27	work out	Unit 3_1	12	锻炼	1
+27	slim	Unit 3_1	12	adj.苗条的	1
+27	figure	Unit 3_1	12	n.体形；数字	1
+27	ashamed	Unit 3_1	12	adj.惭愧的	1
+27	weight-loss	Unit 3_1	12	n.减肥	1
+28	pill	Unit 3_2	12	n.药丸	1
+28	kilogram	Unit 3_2	12	n.千克	1
+28	work	Unit 3_2	12	vi.奏效	1
+28	energetic	Unit 3_2	12	adj.精力充沛的	1
+28	recover	Unit 3_2	12	vi.复原	1
+29	liver	Unit 3_3	12	n.肝脏	0
+29	failure	Unit 3_3	12	n.失败	1
+29	contain	Unit 3_3	12	vt.包含	1
+29	chemical	Unit 3_3	12	adj.化学的	1
+29	treatment	Unit 3_3	12	n.治疗	1
+30	painful	Unit 3_4	12	adj.痛苦的	1
+30	damage	Unit 3_4	12	n.&v.损害	1
+30	attractive	Unit 3_4	12	adj.有吸引力的	1
+30	embarrassed	Unit 3_4	12	adj.尴尬的	1
+30	pressure	Unit 3_4	12	n.压力	1
+31	overweight	Unit 3_5	12	adj.肥胖的	1
+31	diet	Unit 3_5	12	n.节食	1
+31	go on a diet	Unit 3_5	12	节食	1
+31	prefer	Unit 3_5	12	vt.更喜欢	1
+31	waist	Unit 3_5	12	n.腰	1
+32	suffer	Unit 3_6	12	vt.受苦	1
+32	athlete	Unit 3_6	12	n.运动员	1
+32	effect	Unit 3_6	12	n.效果	1
+32	side effect	Unit 3_6	12	副作用	1
+32	fall out	Unit 3_6	12	脱落	1
+33	affect	Unit 3_7	12	vt.影响	1
+33	achievement	Unit 3_7	12	n.成就	1
+33	post	Unit 3_7	12	n.帖子	1
+33	membership	Unit 3_7	12	n.会员资格	0
+33	including	Unit 3_7	12	prep.包括	1
+34	branch	Unit 3_8	12	n.分支	1
+34	downtown	Unit 3_8	12	n.&ad.在市中心	1
+34	freeway	Unit 3_8	12	n.高速公路	1
+34	midnight	Unit 3_8	12	n.午夜	1
+34	equipment	Unit 3_8	12	n.器材	1
+35	get into shape	Unit 3_9	12	强身健体	1
+35	make the most of	Unit 3_9	12	充分利用	1
+35	marathon	Unit 3_9	12	n.马拉松赛跑	1
+35	expert	Unit 3_9	12	n.专家	1
+35	chip	Unit 3_9	12	n.薯条	0
+36	sadness	Unit 3_10	12	n.悲伤	1
+36	comfort	Unit 3_10	12	n.舒适	1
+36	useless	Unit 3_10	12	adj.无用的	1
+36	in the long term	Unit 3_10	12	从长远角度看	1
+36	approximately	Unit 3_10	12	adv.大约	1
+37	skip	Unit 3_11	12	n.跳过	1
+37	properly	Unit 3_11	12	adv.适当地	1
+37	mostly	Unit 3_11	12	adv.主要地	1
+37	system	Unit 3_11	12	n.系统	1
+37	skin	Unit 3_11	12	n.皮肤	1
+37	count	Unit 3_11	12	v.数数	1
+38	peaceful	Unit 3_12	12	adj.平静的	1
+38	concentrate	Unit 3_12	12	vt.集中	1
+38	amount	Unit 3_12	12	n.数量	1
+38	as a matter of fact	Unit 3_12	12	事实上	1
+38	loss	Unit 3_12	12	n.损失	1
+38	gain	Unit 3_12	12	n.&vt.获得	1

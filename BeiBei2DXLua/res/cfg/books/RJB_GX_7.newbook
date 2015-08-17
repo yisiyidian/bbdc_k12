@@ -1,359 +1,359 @@
-1	disability	Unit 1_1	9	n.伤残	1
-1	disabled	Unit 1_1	9	adj.伤残的	1
-1	hearing	Unit 1_1	9	n.听力	1
-2	eyesight	Unit 1_2	9	n.视力	1
-2	syndrome	Unit 1_2	9	n.综合病征	0
-2	infantile paralysis	Unit 1_2	9	小儿麻痹	0
-2	lap	Unit 1_2	9	n.跑道的一圈	1
-2	ambition	Unit 1_2	9	n.雄心	1
-2	ambitious	Unit 1_2	9	adj.有雄心的	1
-2	dictation	Unit 1_2	9	n.口授	1
-2	noisy	Unit 1_2	9	n.吵闹的	1
-2	suitable	Unit 1_2	9	adj.适合的	1
-3	entry	Unit 1_3	9	n.项目	1
-3	beneficial	Unit 1_3	9	adj.有益的	1
-3	in other words	Unit 1_3	9	换句话说	1
-3	clumsy	Unit 1_3	9	adj.笨拙的	1
-3	bump	Unit 1_3	9	vi.碰撞	0
-3	outgoing	Unit 1_3	9	adj.外向的	1
-3	adapt	Unit 1_3	9	v.使适应	1
-3	adapt to	Unit 1_3	9	适合	1
-3	bench	Unit 1_3	9	n.长凳	1
-4	cut out	Unit 1_4	9	切去	1
-4	microscope	Unit 1_4	9	n.显微镜	1
-4	out of breath	Unit 1_4	9	上气不接下气	1
-4	absence	Unit 1_4	9	n.缺席	1
-4	fellow	Unit 1_4	9	adj.&n.同伴的	1
-4	annoy	Unit 1_4	9	vt.使...不悦	1
-4	annoyed	Unit 1_4	9	adj.颇为生气的	1
-4	annoyance	Unit 1_4	9	n.烦恼	0
-4	all in all	Unit 1_4	9	总而言之	1
-5	firm	Unit 1_5	9	n.&adj.公司	1
-5	software	Unit 1_5	9	n.软件	1
-5	sit around	Unit 1_5	9	闲坐着	1
-5	as well as	Unit 1_5	9	和	1
-5	parrot	Unit 1_5	9	n.鹦鹉	1
-5	tank	Unit 1_5	9	n.大容器	1
-5	tortoise	Unit 1_5	9	n.陆龟	1
-5	in many ways	Unit 1_5	9	在很多方面	1
-5	psychology	Unit 1_5	9	n.心理学	1
-6	psychologically	Unit 1_6	9	adv.心理学地	1
-6	make fun of	Unit 1_6	9	取笑	1
-6	encouragement	Unit 1_6	9	n.鼓励	1
-6	conduct	Unit 1_6	9	n.&vt.行为	1
-6	mainstream	Unit 1_6	9	n.主流	0
-6	fulfilling	Unit 1_6	9	adj.令人满意的	0
-6	never mind	Unit 1_6	9	不必担心	1
-6	politics	Unit 1_6	9	n.政治学	1
-6	abolish	Unit 1_6	9	vt.废除	1
-7	abolition	Unit 1_7	9	n.废除	0
-7	resign	Unit 1_7	9	v.辞职	1
-7	slavery	Unit 1_7	9	n.奴隶制	1
-7	literature	Unit 1_7	9	n.文学作品	1
-7	companion	Unit 1_7	9	n.同伴	1
-7	assistance	Unit 1_7	9	n.协助	1
-7	congratulate	Unit 1_7	9	vt.庆贺	1
-7	congratulation	Unit 1_7	9	n.祝贺	1
-7	bowling	Unit 1_7	9	n.保龄球	1
-7	graduation	Unit 1_7	9	n.毕业	1
-8	certificate	Unit 1_8	9	n.证书	1
-8	all the best	Unit 1_8	9	（口语）一切顺利	1
-8	architect	Unit 1_8	9	n.建筑师	1
-8	adequate	Unit 1_8	9	adj.足够的	1
-8	access	Unit 1_8	9	n.方法	1
-8	accessible	Unit 1_8	9	adj.可接近的	1
-8	wheelchair	Unit 1_8	9	n.轮椅	0
-8	handy	Unit 1_8	9	adj.方便的	1
-8	earphone	Unit 1_8	9	n.耳机	0
-8	impair	Unit 1_8	9	vt.削弱	0
-9	row	Unit 1_9	9	n.&v.一行	1
-9	basement	Unit 1_9	9	n.地下室	1
-9	outwards	Unit 1_9	9	adv.向外	1
-9	exit	Unit 1_9	9	n.出口	1
-9	meet with	Unit 1_9	9	遇到	1
-9	approval	Unit 1_9	9	n.赞成	1
-9	dignity	Unit 1_9	9	n.尊严	1
-9	profit	Unit 1_9	9	n.收益	1
-9	italics	Unit 1_9	9	n.（pl）斜体字	0
-9	community	Unit 1_9	9	n.社区	1
-10	household	Unit 2_1	7	adj.&n.家庭的	0
-10	fiction	Unit 2_1	7	n.小说	1
-10	desire	Unit 2_1	7	n.&vt.渴望	1
-10	satisfaction	Unit 2_1	7	n.满意	1
-10	test	Unit 2_1	7	out试验	1
-10	bonus	Unit 2_1	7	n.额外津贴	1
-10	alarm	Unit 2_1	7	vt.&n.使警觉	1
-10	alarmed	Unit 2_1	7	adj.担心的	1
-10	apron	Unit 2_1	7	n.围裙	1
-10	sympathy	Unit 2_1	7	n.同情心	1
-11	overweight	Unit 2_2	7	adj.超重的	1
-11	elegant	Unit 2_2	7	adj.优雅的	1
-11	favour	Unit 2_2	7	n.&vt.喜爱	1
-11	pile	Unit 2_2	7	n.&v.堆	1
-11	scan	Unit 2_2	7	vt.细看	1
-11	fingernail	Unit 2_2	7	n.手指甲	1
-11	absurd	Unit 2_2	7	adj.荒谬的	1
-11	haircut	Unit 2_2	7	n.发型	1
-11	makeup	Unit 2_2	7	n.化妆品	0
-11	accompany	Unit 2_2	7	vt.陪伴	1
-12	cushion	Unit 2_3	7	n.软垫	1
-12	bedding	Unit 2_3	7	n.寝具	1
-12	necklace	Unit 2_3	7	n.项链	1
-12	clerk	Unit 2_3	7	n.售货员	1
-12	counter	Unit 2_3	7	n.柜台	1
-12	ring	Unit 2_3	7	up给...打电话	1
-12	turn around	Unit 2_3	7	转向	1
-12	awful	Unit 2_3	7	adj.极坏的	1
-12	affair	Unit 2_3	7	n.事务	1
-12	armchair	Unit 2_3	7	n.扶手椅	1
-13	declare	Unit 2_4	7	vt.宣布	1
-13	cuisine	Unit 2_4	7	n.烹饪风味	1
-13	envy	Unit 2_4	7	vt.忌妒	1
-13	leave...alone	Unit 2_4	7	不管	1
-13	digital	Unit 2_4	7	adj.数字的	1
-13	mailbox	Unit 2_4	7	n.（美）邮筒	1
-13	state	Unit 2_4	7	vt.陈述	1
-13	aside	Unit 2_4	7	adv.在一边	1
-13	set aside	Unit 2_4	7	将...放在一边	1
-13	grand	Unit 2_4	7	adj.大的	1
-14	alphabetical	Unit 2_5	7	adj.字母的	0
-14	receiver	Unit 2_5	7	n.收件人	1
-14	in all	Unit 2_5	7	一共	1
-14	affection	Unit 2_5	7	n.喜爱	1
-14	bound	Unit 2_5	7	adj.一定的	1
-14	be bound to	Unit 2_5	7	一定做...	1
-14	biography	Unit 2_5	7	n.传记	1
-14	holy	Unit 2_5	7	adj.神的	1
-14	imagination	Unit 2_5	7	n.想象	0
-14	transfusion	Unit 2_5	7	n.输血	0
-15	part-time	Unit 2_6	7	adj.兼职的	1
-15	master's degree	Unit 2_6	7	硕士学位	0
-15	staff	Unit 2_6	7	n.全体员工	1
-15	navy	Unit 2_6	7	n.海军	1
-15	junior	Unit 2_6	7	adj.&n.较年幼的	1
-15	PhD	Unit 2_6	7	哲学博士学位	0
-15	biochemistry	Unit 2_6	7	n.生物化学	1
-15	Boston	Unit 2_6	7	n.波士顿	0
-15	talent	Unit 2_6	7	n.天才	1
-16	chapter	Unit 2_7	7	n.篇	1
-16	empire	Unit 2_7	7	n.帝国	0
-16	theoretical	Unit 2_7	7	adj.理论的	1
-16	framework	Unit 2_7	7	n.框架	1
-16	thinking	Unit 2_7	7	n.思想	1
-16	divorce	Unit 2_7	7	n.&vt离婚	1
-16	obey	Unit 2_7	7	v.服从	1
-16	disobey	Unit 2_7	7	v.不服从	1
-16	assessment	Unit 2_7	7	n.评价	1
-17	snorkel	Unit 3_1	7	vi.&n.戴潜水通气管潜泳	0
-17	aquarium	Unit 3_1	7	n.水族馆	0
-17	anecdote	Unit 3_1	7	n.轶事	1
-17	baleen	Unit 3_1	7	n.鲸须	0
-17	baleen whale	Unit 3_1	7	须鲸	0
-17	annual	Unit 3_1	7	adj.&n.每年的	1
-17	migration	Unit 3_1	7	n.迁徙	0
-17	witness	Unit 3_1	7	vt.&n.当场见到	1
-17	accommodation	Unit 3_1	7	n.住所	1
-17	shore	Unit 3_1	7	n.岸	1
-17	offshore	Unit 3_1	7	ad.近海	1
-18	opposite	Unit 3_2	7	prep.&adj.在...对面；相对的	1
-18	yell	Unit 3_2	7	vi.&n.大叫	1
-18	pause	Unit 3_2	7	vi.&n.暂停	1
-18	oar	Unit 3_2	7	n.桨	0
-18	telescope	Unit 3_2	7	n.望远镜	1
-18	teamwork	Unit 3_2	7	n.协作	1
-18	blow-hole	Unit 3_2	7	n.鼻孔	0
-18	dive	Unit 3_2	7	vi.&n.跳水	1
-18	flee	Unit 3_2	7	v.逃避	1
-18	harpoon	Unit 3_2	7	n.鱼叉	0
-18	drag	Unit 3_2	7	vt.拖	1
-19	depth	Unit 3_3	7	n.深度	1
-19	meantime	Unit 3_3	7	adv.其间	0
-19	in the meantime	Unit 3_3	7	在此期间	0
-19	lip	Unit 3_3	7	n.一片嘴唇	1
-19	overboard	Unit 3_3	7	adv.越过船舷进入水中	0
-19	urge	Unit 3_3	7	vt.催促	1
-19	abandon	Unit 3_3	7	vt.放弃	1
-19	shark	Unit 3_3	7	n.鲨鱼	1
-19	help ... out	Unit 3_3	7	帮助某人摆脱困境或危难	1
-19	relationship	Unit 3_3	7	n.关系	1
-19	conservation	Unit 3_3	7	n.保存	1
-20	iceberg	Unit 3_4	7	n.冰山	0
-20	jog	Unit 3_4	7	v.慢跑	1
-20	seaside	Unit 3_4	7	n.&adj.海边的	1
-20	net	Unit 3_4	7	n.网	1
-20	target	Unit 3_4	7	n.目标	1
-20	tide	Unit 3_4	7	n.潮	1
-20	drift net	Unit 3_4	7	n.流网	0
-20	dimension	Unit 3_4	7	n.维数	1
-20	reflect	Unit 3_4	7	v.思考	1
-20	pure	Unit 3_4	7	adj.纯的	1
-20	cell	Unit 3_4	7	n.细胞	1
-21	aware	Unit 3_5	7	adj.意识到的	1
-21	be aware of	Unit 3_5	7	对...知道	1
-21	vivid	Unit 3_5	7	adj.生动的	1
-21	neat	Unit 3_5	7	adj.（口）好的	1
-21	seaweed	Unit 3_5	7	n.海草	1
-21	narrow	Unit 3_5	7	adj.狭窄的	1
-21	flashlight	Unit 3_5	7	n.闪光信号灯	1
-21	upside down	Unit 3_5	7	上下翻转	1
-21	suck	Unit 3_5	7	v.吮吸	1
-21	sea-slug	Unit 3_5	7	n.海蛞蝓	0
-22	turtle	Unit 3_6	7	n.海龟	0
-22	eel	Unit 3_6	7	n.鳗	0
-22	sharp	Unit 3_6	7	adj.锐利的	1
-22	tasty	Unit 3_6	7	adj.好吃的	1
-22	giant	Unit 3_6	7	adj.&n.巨人的	0
-22	clam	Unit 3_6	7	n.蛤	0
-22	grey	Unit 3_6	7	adj.&n.灰色的	1
-22	scare	Unit 3_6	7	v.恐吓	1
-22	be scared to death	Unit 3_6	7	吓死了	1
-22	shallow	Unit 3_6	7	adj.浅的	1
-23	steep	Unit 3_7	7	adj.陡峭的	1
-23	boundary	Unit 3_7	7	n.界限	1
-23	Antarctic	Unit 3_7	7	adj.南极的	1
-23	the Antarctic	Unit 3_7	7	南极洲	1
-23	awesome	Unit 3_7	7	adj.使人敬畏的	1
-23	leap	Unit 3_7	7	v.&n.跳	0
-23	seal	Unit 3_7	7	n.海豹	1
-23	refund	Unit 3_7	7	vt.&n.退还	0
-23	pension	Unit 3_7	7	n.养老金	1
-23	pensioner	Unit 3_7	7	n.领取养老金者	1
-24	airmail	Unit 4_1	8	n.航空邮件	1
-24	fortnight	Unit 4_1	8	n.两星期	1
-24	hear from	Unit 4_1	8	接到...的信	1
-24	be dying to	Unit 4_1	8	极想	1
-24	roof	Unit 4_1	8	n.屋顶	1
-24	muddy	Unit 4_1	8	adj.泥泞的	1
-24	textbook	Unit 4_1	8	n.教科书	1
-24	concept	Unit 4_1	8	n.观念	1
-24	bucket	Unit 4_1	8	n.水桶	0
-25	the other day	Unit 4_2	8	不久前的一天	1
-25	weekly	Unit 4_2	8	ad.每周	1
-25	bubble	Unit 4_2	8	vi.起泡	0
-25	relevant	Unit 4_2	8	adj.有关的	1
-25	remote	Unit 4_2	8	adj.遥远的	1
-25	ridge	Unit 4_2	8	n.山脊	0
-25	weed	Unit 4_2	8	n.&v.杂草	1
-25	hut	Unit 4_2	8	n.棚屋	0
-25	rectangle	Unit 4_2	8	n.矩形	1
-26	rectangular	Unit 4_3	8	adj.长方形的	1
-26	adjust	Unit 4_3	8	v.调整	1
-26	platform	Unit 4_3	8	n.台	1
-26	broom	Unit 4_3	8	n.扫帚	1
-26	tin	Unit 4_3	8	n.锡	1
-26	jar	Unit 4_3	8	n.罐	1
-26	sniff	Unit 4_3	8	v.嗅	1
-26	participate	Unit 4_3	8	vi.参与	1
-26	interpreter	Unit 4_3	8	n.作口译的人	1
-27	grill	Unit 4_4	8	n.&v.烤架	1
-27	dry out	Unit 4_4	8	完全变干	1
-27	leftover	Unit 4_4	8	n.&adj.剩余物	0
-27	evil	Unit 4_4	8	adj.&n.邪恶的	0
-27	dry up	Unit 4_4	8	干涸	1
-27	otherwise	Unit 4_4	8	conj.&adv.否则	1
-27	privilege	Unit 4_4	8	n.特权	1
-27	paperwork	Unit 4_4	8	n.文书工作	1
-27	arrangement	Unit 4_4	8	n.安排	1
-28	toast	Unit 4_5	8	vt.&n.烤	1
-28	comb	Unit 4_5	8	n.&v.梳子	1
-28	astronaut	Unit 4_5	8	n.宇航员	1
-28	angle	Unit 4_5	8	n.角	1
-28	catalogue	Unit 4_5	8	n.目录	1
-28	donate	Unit 4_5	8	vt.捐赠	1
-28	voluntary	Unit 4_5	8	adj.自愿的	1
-28	in need	Unit 4_5	8	在困难中	1
-28	purchase	Unit 4_5	8	vt.&n.买	1
-29	anniversary	Unit 4_6	8	n.周年纪念（日）	1
-29	seed	Unit 4_6	8	n.种子	1
-29	seedling	Unit 4_6	8	n.秧苗	0
-29	vaccination	Unit 4_6	8	n.接种疫苗	0
-29	loan	Unit 4_6	8	n.贷款	0
-29	sew	Unit 4_6	8	v.（用针线）缝	1
-29	sewing machine	Unit 4_6	8	缝纫机	1
-29	supplement	Unit 4_6	8	n.增补的事物	0
-29	ox	Unit 4_6	8	n.公牛	1
-29	plough	Unit 4_6	8	vi.（犁）地	0
-30	trunk	Unit 4_7	8	n.树干	1
-30	trunk library	Unit 4_7	8	箱式（柜式）图书馆	1
-30	tractor	Unit 4_7	8	n.拖拉机	1
-30	Kenya	Unit 4_7	8	n.肯尼亚	1
-30	Bangladesh	Unit 4_7	8	n.孟加拉国	0
-30	click	Unit 4_7	8	v.&n.使发出咔嗒声	1
-30	tailor	Unit 4_7	8	n.&v.裁缝	1
-30	Tanzania	Unit 4_7	8	n.坦桑尼亚	0
-30	economic	Unit 4_7	8	adj.经济的	0
-30	political	Unit 4_7	8	adj.政治的	1
-31	Nepal	Unit 4_8	8	n.尼泊尔	0
-31	Uganda	Unit 4_8	8	n.乌干达	0
-31	distribute	Unit 4_8	8	vt.分配	1
-31	distribution	Unit 4_8	8	n.分配	1
-31	financial	Unit 4_8	8	adj.财务的	0
-31	security	Unit 4_8	8	n.安全	1
-31	operate	Unit 4_8	8	v.工作	1
-31	Sudan	Unit 4_8	8	n.苏丹	0
-31	clinic	Unit 4_8	8	n.门诊部	1
-31	Malawi	Unit 4_8	8	n.马拉维	0
-32	adjust to	Unit 5_1	6	适应	1
-32	keep it up	Unit 5_1	6	保持优秀成绩	1
-32	fit in	Unit 5_1	6	相适应	1
-32	motherland	Unit 5_1	6	n.祖国	1
-32	visa	Unit 5_1	6	n.签证	1
-32	queue	Unit 5_1	6	n.&vi.队列	1
-32	cafeteria	Unit 5_1	6	n.自助食堂	1
-32	lecture	Unit 5_1	6	n.&vi.演讲	1
-32	qualification	Unit 5_1	6	n.资格	1
-32	preparation	Unit 5_1	6	n.准备	1
-32	recommend	Unit 5_1	6	vt.推荐	1
-33	shopkeeper	Unit 5_2	6	n.店主	1
-33	idiom	Unit 5_2	6	n.习语	1
-33	comfort	Unit 5_2	6	n.&vt.舒适	1
-33	substitute	Unit 5_2	6	n.&vt.代替者	1
-33	academic	Unit 5_2	6	adj.学校的	1
-33	requirement	Unit 5_2	6	n.需要	1
-33	essay	Unit 5_2	6	n.文章	1
-33	tutor	Unit 5_2	6	n.导师	1
-33	revise	Unit 5_2	6	vt.复查	0
-33	revision	Unit 5_2	6	n.复查	1
-33	draft	Unit 5_2	6	n.&vt.草稿	1
-34	numb	Unit 5_3	6	adj.麻木的	1
-34	acknowledge	Unit 5_3	6	vt.承认	1
-34	as far as one is concerned	Unit 5_3	6	就...而言	1
-34	contradict	Unit 5_3	6	vt.反驳	1
-34	autonomous	Unit 5_3	6	adj.自主的	1
-34	occupy	Unit 5_3	6	vt.占用	1
-34	be occupied with	Unit 5_3	6	忙着做...	1
-34	enterprise	Unit 5_3	6	n.事业	1
-34	apology	Unit 5_3	6	n.道谦	1
-34	seminar	Unit 5_3	6	n.研讨会	1
-34	videophone	Unit 5_3	6	n.可视电话	1
-35	Rugby	Unit 5_4	6	n.（英式）橄榄球	1
-35	bachelor	Unit 5_4	6	n.获学士学位的人	1
-35	bachelor's degree	Unit 5_4	6	学士学位	1
-35	routine	Unit 5_4	6	n.&adj.常规	1
-35	minibus	Unit 5_4	6	n.小型公共汽车	1
-35	optional	Unit 5_4	6	adj.可选择的	1
-35	day in and day out	Unit 5_4	6	日复一日	1
-35	cage	Unit 5_4	6	n.鸟笼	1
-35	bark	Unit 5_4	6	vi.&n.吠叫	1
-35	battery	Unit 5_4	6	n.电池	1
-35	site	Unit 5_4	6	n.地方	0
-36	drill	Unit 5_5	6	v.&n.钻	1
-36	oilfield	Unit 5_5	6	n.油田	1
-36	the Andes	Unit 5_5	6	安第斯山脉	0
-36	Peru	Unit 5_5	6	n.秘鲁	0
-36	agent	Unit 5_5	6	n.代理人	1
-36	travel agent	Unit 5_5	6	旅行代办人	1
-36	geographical	Unit 5_5	6	adj.地理学的	0
-36	parallel	Unit 5_5	6	adj.平行的	1
-36	Lake Titicaca	Unit 5_5	6	的的喀喀湖	0
-36	abundant	Unit 5_5	6	adj.丰富的	1
-37	Inca	Unit 5_6	6	印加帝国	0
-37	govern	Unit 5_6	6	v.统治	1
-37	onwards	Unit 5_6	6	adv.向前地	0
-37	destination	Unit 5_6	6	n.目的地	1
-37	inn	Unit 5_6	6	n.客栈	1
-37	out of the question	Unit 5_6	6	不可能的	1
-37	hike	Unit 5_6	6	vi.&n.远足	0
-37	tomb	Unit 5_6	6	n.坟墓	1
-37	the Amazon	Unit 5_6	6	亚马孙河热带丛林	0
-37	settle in	Unit 5_6	6	安顿下来	1
+1	disability	Unit 1_1	16	n.伤残	1
+1	disabled	Unit 1_1	16	adj.伤残的	1
+1	hearing	Unit 1_1	16	n.听力	1
+2	eyesight	Unit 1_2	16	n.视力	1
+2	syndrome	Unit 1_2	16	n.综合病征	0
+2	infantile paralysis	Unit 1_2	16	小儿麻痹	0
+2	lap	Unit 1_2	16	n.跑道的一圈	1
+2	ambition	Unit 1_2	16	n.雄心	1
+3	ambitious	Unit 1_3	16	adj.有雄心的	1
+3	dictation	Unit 1_3	16	n.口授	1
+3	noisy	Unit 1_3	16	n.吵闹的	1
+3	suitable	Unit 1_3	16	adj.适合的	1
+3	entry	Unit 1_3	16	n.项目	1
+4	beneficial	Unit 1_4	16	adj.有益的	1
+4	in other words	Unit 1_4	16	换句话说	1
+4	clumsy	Unit 1_4	16	adj.笨拙的	1
+4	bump	Unit 1_4	16	vi.碰撞	0
+4	outgoing	Unit 1_4	16	adj.外向的	1
+5	adapt	Unit 1_5	16	v.使适应	1
+5	adapt to	Unit 1_5	16	适合	1
+5	bench	Unit 1_5	16	n.长凳	1
+5	cut out	Unit 1_5	16	切去	1
+5	microscope	Unit 1_5	16	n.显微镜	1
+6	out of breath	Unit 1_6	16	上气不接下气	1
+6	absence	Unit 1_6	16	n.缺席	1
+6	fellow	Unit 1_6	16	adj.&n.同伴的	1
+6	annoy	Unit 1_6	16	vt.使...不悦	1
+6	annoyed	Unit 1_6	16	adj.颇为生气的	1
+7	annoyance	Unit 1_7	16	n.烦恼	0
+7	all in all	Unit 1_7	16	总而言之	1
+7	firm	Unit 1_7	16	n.&adj.公司	1
+7	software	Unit 1_7	16	n.软件	1
+7	sit around	Unit 1_7	16	闲坐着	1
+8	as well as	Unit 1_8	16	和	1
+8	parrot	Unit 1_8	16	n.鹦鹉	1
+8	tank	Unit 1_8	16	n.大容器	1
+8	tortoise	Unit 1_8	16	n.陆龟	1
+8	in many ways	Unit 1_8	16	在很多方面	1
+9	psychology	Unit 1_9	16	n.心理学	1
+9	psychologically	Unit 1_9	16	adv.心理学地	1
+9	make fun of	Unit 1_9	16	取笑	1
+9	encouragement	Unit 1_9	16	n.鼓励	1
+9	conduct	Unit 1_9	16	n.&vt.行为	1
+10	mainstream	Unit 1_10	16	n.主流	0
+10	fulfilling	Unit 1_10	16	adj.令人满意的	0
+10	never mind	Unit 1_10	16	不必担心	1
+10	politics	Unit 1_10	16	n.政治学	1
+10	abolish	Unit 1_10	16	vt.废除	1
+11	abolition	Unit 1_11	16	n.废除	0
+11	resign	Unit 1_11	16	v.辞职	1
+11	slavery	Unit 1_11	16	n.奴隶制	1
+11	literature	Unit 1_11	16	n.文学作品	1
+11	companion	Unit 1_11	16	n.同伴	1
+12	assistance	Unit 1_12	16	n.协助	1
+12	congratulate	Unit 1_12	16	vt.庆贺	1
+12	congratulation	Unit 1_12	16	n.祝贺	1
+12	bowling	Unit 1_12	16	n.保龄球	1
+12	graduation	Unit 1_12	16	n.毕业	1
+13	certificate	Unit 1_13	16	n.证书	1
+13	all the best	Unit 1_13	16	（口语）一切顺利	1
+13	architect	Unit 1_13	16	n.建筑师	1
+13	adequate	Unit 1_13	16	adj.足够的	1
+13	access	Unit 1_13	16	n.方法	1
+14	accessible	Unit 1_14	16	adj.可接近的	1
+14	wheelchair	Unit 1_14	16	n.轮椅	0
+14	handy	Unit 1_14	16	adj.方便的	1
+14	earphone	Unit 1_14	16	n.耳机	0
+14	impair	Unit 1_14	16	vt.削弱	0
+15	row	Unit 1_15	16	n.&v.一行	1
+15	basement	Unit 1_15	16	n.地下室	1
+15	outwards	Unit 1_15	16	adv.向外	1
+15	exit	Unit 1_15	16	n.出口	1
+15	meet with	Unit 1_15	16	遇到	1
+16	approval	Unit 1_16	16	n.赞成	1
+16	dignity	Unit 1_16	16	n.尊严	1
+16	profit	Unit 1_16	16	n.收益	1
+16	italics	Unit 1_16	16	n.（pl）斜体字	0
+16	community	Unit 1_16	16	n.社区	1
+17	household	Unit 2_1	14	adj.&n.家庭的	0
+17	fiction	Unit 2_1	14	n.小说	1
+17	desire	Unit 2_1	14	n.&vt.渴望	1
+17	satisfaction	Unit 2_1	14	n.满意	1
+17	test	Unit 2_1	14	out试验	1
+18	bonus	Unit 2_2	14	n.额外津贴	1
+18	alarm	Unit 2_2	14	vt.&n.使警觉	1
+18	alarmed	Unit 2_2	14	adj.担心的	1
+18	apron	Unit 2_2	14	n.围裙	1
+18	sympathy	Unit 2_2	14	n.同情心	1
+19	overweight	Unit 2_3	14	adj.超重的	1
+19	elegant	Unit 2_3	14	adj.优雅的	1
+19	favour	Unit 2_3	14	n.&vt.喜爱	1
+19	pile	Unit 2_3	14	n.&v.堆	1
+19	scan	Unit 2_3	14	vt.细看	1
+20	fingernail	Unit 2_4	14	n.手指甲	1
+20	absurd	Unit 2_4	14	adj.荒谬的	1
+20	haircut	Unit 2_4	14	n.发型	1
+20	makeup	Unit 2_4	14	n.化妆品	0
+20	accompany	Unit 2_4	14	vt.陪伴	1
+21	cushion	Unit 2_5	14	n.软垫	1
+21	bedding	Unit 2_5	14	n.寝具	1
+21	necklace	Unit 2_5	14	n.项链	1
+21	clerk	Unit 2_5	14	n.售货员	1
+21	counter	Unit 2_5	14	n.柜台	1
+22	ring	Unit 2_6	14	up给...打电话	1
+22	turn around	Unit 2_6	14	转向	1
+22	awful	Unit 2_6	14	adj.极坏的	1
+22	affair	Unit 2_6	14	n.事务	1
+22	armchair	Unit 2_6	14	n.扶手椅	1
+23	declare	Unit 2_7	14	vt.宣布	1
+23	cuisine	Unit 2_7	14	n.烹饪风味	1
+23	envy	Unit 2_7	14	vt.忌妒	1
+23	leave...alone	Unit 2_7	14	不管	1
+23	digital	Unit 2_7	14	adj.数字的	1
+24	mailbox	Unit 2_8	14	n.（美）邮筒	1
+24	state	Unit 2_8	14	vt.陈述	1
+24	aside	Unit 2_8	14	adv.在一边	1
+24	set aside	Unit 2_8	14	将...放在一边	1
+24	grand	Unit 2_8	14	adj.大的	1
+25	alphabetical	Unit 2_9	14	adj.字母的	0
+25	receiver	Unit 2_9	14	n.收件人	1
+25	in all	Unit 2_9	14	一共	1
+25	affection	Unit 2_9	14	n.喜爱	1
+25	bound	Unit 2_9	14	adj.一定的	1
+26	be bound to	Unit 2_10	14	一定做...	1
+26	biography	Unit 2_10	14	n.传记	1
+26	holy	Unit 2_10	14	adj.神的	1
+26	imagination	Unit 2_10	14	n.想象	0
+26	transfusion	Unit 2_10	14	n.输血	0
+27	part-time	Unit 2_11	14	adj.兼职的	1
+27	master's degree	Unit 2_11	14	硕士学位	0
+27	staff	Unit 2_11	14	n.全体员工	1
+27	navy	Unit 2_11	14	n.海军	1
+27	junior	Unit 2_11	14	adj.&n.较年幼的	1
+28	PhD	Unit 2_12	14	哲学博士学位	0
+28	biochemistry	Unit 2_12	14	n.生物化学	1
+28	Boston	Unit 2_12	14	n.波士顿	0
+28	talent	Unit 2_12	14	n.天才	1
+28	chapter	Unit 2_12	14	n.篇	1
+29	empire	Unit 2_13	14	n.帝国	0
+29	theoretical	Unit 2_13	14	adj.理论的	1
+29	framework	Unit 2_13	14	n.框架	1
+29	thinking	Unit 2_13	14	n.思想	1
+30	divorce	Unit 2_14	14	n.&vt离婚	1
+30	obey	Unit 2_14	14	v.服从	1
+30	disobey	Unit 2_14	14	v.不服从	1
+30	assessment	Unit 2_14	14	n.评价	1
+31	snorkel	Unit 3_1	15	vi.&n.戴潜水通气管潜泳	0
+31	aquarium	Unit 3_1	15	n.水族馆	0
+31	anecdote	Unit 3_1	15	n.轶事	1
+31	baleen	Unit 3_1	15	n.鲸须	0
+31	baleen whale	Unit 3_1	15	须鲸	0
+32	annual	Unit 3_2	15	adj.&n.每年的	1
+32	migration	Unit 3_2	15	n.迁徙	0
+32	witness	Unit 3_2	15	vt.&n.当场见到	1
+32	accommodation	Unit 3_2	15	n.住所	1
+32	shore	Unit 3_2	15	n.岸	1
+33	offshore	Unit 3_3	15	ad.近海	1
+33	opposite	Unit 3_3	15	prep.&adj.在...对面；相对的	1
+33	yell	Unit 3_3	15	vi.&n.大叫	1
+33	pause	Unit 3_3	15	vi.&n.暂停	1
+33	oar	Unit 3_3	15	n.桨	0
+34	telescope	Unit 3_4	15	n.望远镜	1
+34	teamwork	Unit 3_4	15	n.协作	1
+34	blow-hole	Unit 3_4	15	n.鼻孔	0
+34	dive	Unit 3_4	15	vi.&n.跳水	1
+34	flee	Unit 3_4	15	v.逃避	1
+35	harpoon	Unit 3_5	15	n.鱼叉	0
+35	drag	Unit 3_5	15	vt.拖	1
+35	depth	Unit 3_5	15	n.深度	1
+35	meantime	Unit 3_5	15	adv.其间	0
+35	in the meantime	Unit 3_5	15	在此期间	0
+36	lip	Unit 3_6	15	n.一片嘴唇	1
+36	overboard	Unit 3_6	15	adv.越过船舷进入水中	0
+36	urge	Unit 3_6	15	vt.催促	1
+36	abandon	Unit 3_6	15	vt.放弃	1
+36	shark	Unit 3_6	15	n.鲨鱼	1
+37	help ... out	Unit 3_7	15	帮助某人摆脱困境或危难	1
+37	relationship	Unit 3_7	15	n.关系	1
+37	conservation	Unit 3_7	15	n.保存	1
+37	iceberg	Unit 3_7	15	n.冰山	0
+37	jog	Unit 3_7	15	v.慢跑	1
+38	seaside	Unit 3_8	15	n.&adj.海边的	1
+38	net	Unit 3_8	15	n.网	1
+38	target	Unit 3_8	15	n.目标	1
+38	tide	Unit 3_8	15	n.潮	1
+38	drift net	Unit 3_8	15	n.流网	0
+39	dimension	Unit 3_9	15	n.维数	1
+39	reflect	Unit 3_9	15	v.思考	1
+39	pure	Unit 3_9	15	adj.纯的	1
+39	cell	Unit 3_9	15	n.细胞	1
+39	aware	Unit 3_9	15	adj.意识到的	1
+40	be aware of	Unit 3_10	15	对...知道	1
+40	vivid	Unit 3_10	15	adj.生动的	1
+40	neat	Unit 3_10	15	adj.（口）好的	1
+40	seaweed	Unit 3_10	15	n.海草	1
+40	narrow	Unit 3_10	15	adj.狭窄的	1
+41	flashlight	Unit 3_11	15	n.闪光信号灯	1
+41	upside down	Unit 3_11	15	上下翻转	1
+41	suck	Unit 3_11	15	v.吮吸	1
+41	sea-slug	Unit 3_11	15	n.海蛞蝓	0
+41	turtle	Unit 3_11	15	n.海龟	0
+42	eel	Unit 3_12	15	n.鳗	0
+42	sharp	Unit 3_12	15	adj.锐利的	1
+42	tasty	Unit 3_12	15	adj.好吃的	1
+42	giant	Unit 3_12	15	adj.&n.巨人的	0
+42	clam	Unit 3_12	15	n.蛤	0
+43	grey	Unit 3_13	15	adj.&n.灰色的	1
+43	scare	Unit 3_13	15	v.恐吓	1
+43	be scared to death	Unit 3_13	15	吓死了	1
+43	shallow	Unit 3_13	15	adj.浅的	1
+43	steep	Unit 3_13	15	adj.陡峭的	1
+44	boundary	Unit 3_14	15	n.界限	1
+44	Antarctic	Unit 3_14	15	adj.南极的	1
+44	the Antarctic	Unit 3_14	15	南极洲	1
+44	awesome	Unit 3_14	15	adj.使人敬畏的	1
+44	leap	Unit 3_14	15	v.&n.跳	0
+45	seal	Unit 3_15	15	n.海豹	1
+45	refund	Unit 3_15	15	vt.&n.退还	0
+45	pension	Unit 3_15	15	n.养老金	1
+45	pensioner	Unit 3_15	15	n.领取养老金者	1
+46	airmail	Unit 4_1	15	n.航空邮件	1
+46	fortnight	Unit 4_1	15	n.两星期	1
+46	hear from	Unit 4_1	15	接到...的信	1
+46	be dying to	Unit 4_1	15	极想	1
+46	roof	Unit 4_1	15	n.屋顶	1
+47	muddy	Unit 4_2	15	adj.泥泞的	1
+47	textbook	Unit 4_2	15	n.教科书	1
+47	concept	Unit 4_2	15	n.观念	1
+47	bucket	Unit 4_2	15	n.水桶	0
+47	the other day	Unit 4_2	15	不久前的一天	1
+48	weekly	Unit 4_3	15	ad.每周	1
+48	bubble	Unit 4_3	15	vi.起泡	0
+48	relevant	Unit 4_3	15	adj.有关的	1
+48	remote	Unit 4_3	15	adj.遥远的	1
+48	ridge	Unit 4_3	15	n.山脊	0
+49	weed	Unit 4_4	15	n.&v.杂草	1
+49	hut	Unit 4_4	15	n.棚屋	0
+49	rectangle	Unit 4_4	15	n.矩形	1
+49	rectangular	Unit 4_4	15	adj.长方形的	1
+49	adjust	Unit 4_4	15	v.调整	1
+50	platform	Unit 4_5	15	n.台	1
+50	broom	Unit 4_5	15	n.扫帚	1
+50	tin	Unit 4_5	15	n.锡	1
+50	jar	Unit 4_5	15	n.罐	1
+50	sniff	Unit 4_5	15	v.嗅	1
+51	participate	Unit 4_6	15	vi.参与	1
+51	interpreter	Unit 4_6	15	n.作口译的人	1
+51	grill	Unit 4_6	15	n.&v.烤架	1
+51	dry out	Unit 4_6	15	完全变干	1
+51	leftover	Unit 4_6	15	n.&adj.剩余物	0
+52	evil	Unit 4_7	15	adj.&n.邪恶的	0
+52	dry up	Unit 4_7	15	干涸	1
+52	otherwise	Unit 4_7	15	conj.&adv.否则	1
+52	privilege	Unit 4_7	15	n.特权	1
+52	paperwork	Unit 4_7	15	n.文书工作	1
+53	arrangement	Unit 4_8	15	n.安排	1
+53	toast	Unit 4_8	15	vt.&n.烤	1
+53	comb	Unit 4_8	15	n.&v.梳子	1
+53	astronaut	Unit 4_8	15	n.宇航员	1
+53	angle	Unit 4_8	15	n.角	1
+54	catalogue	Unit 4_9	15	n.目录	1
+54	donate	Unit 4_9	15	vt.捐赠	1
+54	voluntary	Unit 4_9	15	adj.自愿的	1
+54	in need	Unit 4_9	15	在困难中	1
+54	purchase	Unit 4_9	15	vt.&n.买	1
+55	anniversary	Unit 4_10	15	n.周年纪念（日）	1
+55	seed	Unit 4_10	15	n.种子	1
+55	seedling	Unit 4_10	15	n.秧苗	0
+55	vaccination	Unit 4_10	15	n.接种疫苗	0
+55	loan	Unit 4_10	15	n.贷款	0
+56	sew	Unit 4_11	15	v.（用针线）缝	1
+56	sewing machine	Unit 4_11	15	缝纫机	1
+56	supplement	Unit 4_11	15	n.增补的事物	0
+56	ox	Unit 4_11	15	n.公牛	1
+56	plough	Unit 4_11	15	vi.（犁）地	0
+57	trunk	Unit 4_12	15	n.树干	1
+57	trunk library	Unit 4_12	15	箱式（柜式）图书馆	1
+57	tractor	Unit 4_12	15	n.拖拉机	1
+57	Kenya	Unit 4_12	15	n.肯尼亚	1
+57	Bangladesh	Unit 4_12	15	n.孟加拉国	0
+58	click	Unit 4_13	15	v.&n.使发出咔嗒声	1
+58	tailor	Unit 4_13	15	n.&v.裁缝	1
+58	Tanzania	Unit 4_13	15	n.坦桑尼亚	0
+58	economic	Unit 4_13	15	adj.经济的	0
+58	political	Unit 4_13	15	adj.政治的	1
+59	Nepal	Unit 4_14	15	n.尼泊尔	0
+59	Uganda	Unit 4_14	15	n.乌干达	0
+59	distribute	Unit 4_14	15	vt.分配	1
+59	distribution	Unit 4_14	15	n.分配	1
+59	financial	Unit 4_14	15	adj.财务的	0
+60	security	Unit 4_15	15	n.安全	1
+60	operate	Unit 4_15	15	v.工作	1
+60	Sudan	Unit 4_15	15	n.苏丹	0
+60	clinic	Unit 4_15	15	n.门诊部	1
+60	Malawi	Unit 4_15	15	n.马拉维	0
+61	adjust to	Unit 5_1	13	适应	1
+61	keep it up	Unit 5_1	13	保持优秀成绩	1
+61	fit in	Unit 5_1	13	相适应	1
+61	motherland	Unit 5_1	13	n.祖国	1
+61	visa	Unit 5_1	13	n.签证	1
+62	queue	Unit 5_2	13	n.&vi.队列	1
+62	cafeteria	Unit 5_2	13	n.自助食堂	1
+62	lecture	Unit 5_2	13	n.&vi.演讲	1
+62	qualification	Unit 5_2	13	n.资格	1
+62	preparation	Unit 5_2	13	n.准备	1
+63	recommend	Unit 5_3	13	vt.推荐	1
+63	shopkeeper	Unit 5_3	13	n.店主	1
+63	idiom	Unit 5_3	13	n.习语	1
+63	comfort	Unit 5_3	13	n.&vt.舒适	1
+63	substitute	Unit 5_3	13	n.&vt.代替者	1
+64	academic	Unit 5_4	13	adj.学校的	1
+64	requirement	Unit 5_4	13	n.需要	1
+64	essay	Unit 5_4	13	n.文章	1
+64	tutor	Unit 5_4	13	n.导师	1
+64	revise	Unit 5_4	13	vt.复查	0
+65	revision	Unit 5_5	13	n.复查	1
+65	draft	Unit 5_5	13	n.&vt.草稿	1
+65	numb	Unit 5_5	13	adj.麻木的	1
+65	acknowledge	Unit 5_5	13	vt.承认	1
+65	as far as one is concerned	Unit 5_5	13	就...而言	1
+66	contradict	Unit 5_6	13	vt.反驳	1
+66	autonomous	Unit 5_6	13	adj.自主的	1
+66	occupy	Unit 5_6	13	vt.占用	1
+66	be occupied with	Unit 5_6	13	忙着做...	1
+66	enterprise	Unit 5_6	13	n.事业	1
+67	apology	Unit 5_7	13	n.道谦	1
+67	seminar	Unit 5_7	13	n.研讨会	1
+67	videophone	Unit 5_7	13	n.可视电话	1
+67	Rugby	Unit 5_7	13	n.（英式）橄榄球	1
+67	bachelor	Unit 5_7	13	n.获学士学位的人	1
+68	bachelor's degree	Unit 5_8	13	学士学位	1
+68	routine	Unit 5_8	13	n.&adj.常规	1
+68	minibus	Unit 5_8	13	n.小型公共汽车	1
+68	optional	Unit 5_8	13	adj.可选择的	1
+68	day in and day out	Unit 5_8	13	日复一日	1
+69	cage	Unit 5_9	13	n.鸟笼	1
+69	bark	Unit 5_9	13	vi.&n.吠叫	1
+69	battery	Unit 5_9	13	n.电池	1
+69	site	Unit 5_9	13	n.地方	0
+69	drill	Unit 5_9	13	v.&n.钻	1
+70	oilfield	Unit 5_10	13	n.油田	1
+70	the Andes	Unit 5_10	13	安第斯山脉	0
+70	Peru	Unit 5_10	13	n.秘鲁	0
+70	agent	Unit 5_10	13	n.代理人	1
+70	travel agent	Unit 5_10	13	旅行代办人	1
+71	geographical	Unit 5_11	13	adj.地理学的	0
+71	parallel	Unit 5_11	13	adj.平行的	1
+71	Lake Titicaca	Unit 5_11	13	的的喀喀湖	0
+71	abundant	Unit 5_11	13	adj.丰富的	1
+71	Inca	Unit 5_11	13	印加帝国	0
+72	govern	Unit 5_12	13	v.统治	1
+72	onwards	Unit 5_12	13	adv.向前地	0
+72	destination	Unit 5_12	13	n.目的地	1
+72	inn	Unit 5_12	13	n.客栈	1
+72	out of the question	Unit 5_12	13	不可能的	1
+73	hike	Unit 5_13	13	vi.&n.远足	0
+73	tomb	Unit 5_13	13	n.坟墓	1
+73	the Amazon	Unit 5_13	13	亚马孙河热带丛林	0
+73	settle in	Unit 5_13	13	安顿下来	1

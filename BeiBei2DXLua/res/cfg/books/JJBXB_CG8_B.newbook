@@ -1,473 +1,473 @@
-1	shower	Unit 1_1	6	vi.淋浴	1
-1	thunderstorm	Unit 1_1	6	n.雷雨	0
-1	thunder	Unit 1_1	6	n.雷	0
-2	sunrise	Unit 1_2	6	n.日出	0
-2	sunset	Unit 1_2	6	n.日落	0
-2	rise	Unit 1_2	6	v.升起	1
-2	set	Unit 1_2	6	v.落沉	0
-2	exact	Unit 1_2	6	adj.精确的	0
-2	neither	Unit 1_2	6	pron.&ad.都不	1
-2	nor	Unit 1_2	6	conj.也不	1
-2	boot	Unit 1_2	6	n.靴子	0
-2	jasmine	Unit 1_2	6	n.茉莉	0
-2	blossom	Unit 1_2	6	n.开花	0
-2	sunshine	Unit 1_2	6	n.阳光	0
-3	Tai Chi	Unit 1_3	6	n.太极	0
-3	swing	Unit 1_3	6	n.摇摆	0
-3	melt	Unit 1_3	6	v.融化	0
-3	hillside	Unit 1_3	6	n.山坡	0
-3	wind	Unit 1_3	6	n.风	1
-3	gently	Unit 1_3	6	adv.温柔地	0
-3	budding	Unit 1_3	6	adj.正发芽的	0
-3	nearly	Unit 1_3	6	adv.几乎	1
-3	millimetre	Unit 1_3	6	n.毫米	0
-3	plenty	Unit 1_3	6	n.丰富	1
-3	anytime	Unit 1_3	6	adv.在任何时候	0
-4	babysit	Unit 1_4	6	vi.照顾婴儿	0
-4	bar	Unit 1_4	6	n.门闩	0
-4	instead	Unit 1_4	6	adv.代替	1
-4	push	Unit 1_4	6	vt.&n.推	1
-4	soccer	Unit 1_4	6	n.足球	0
-4	shall	Unit 1_4	6	aux.将	1
-4	rabbit	Unit 1_4	6	n.兔子	1
-4	low	Unit 1_4	6	adj.低的	1
-4	below	Unit 1_4	6	prep.&adv.在...下面	1
-4	zero	Unit 1_4	6	num.零	1
-4	until	Unit 1_4	6	prep.直到...为止	1
-5	groundhog	Unit 1_5	6	n.土拨鼠	0
-5	bush	Unit 1_5	6	n.灌木	0
-5	weather report	Unit 1_5	6	天气预报	1
-5	be scared of	Unit 1_5	6	害怕	1
-5	neither ... nor ...	Unit 1_5	6	既不...也不...	1
-5	winter jasmine	Unit 1_5	6	迎春花	1
-5	play on the swing	Unit 1_5	6	荡秋千	1
-5	a field trip	Unit 1_5	6	野外旅游	1
-5	one by one	Unit 1_5	6	一个接一个	1
-5	long for	Unit 1_5	6	渴望	1
-5	all year round	Unit 1_5	6	一年到头	1
-6	plenty of	Unit 1_6	6	许多	1
-6	hundreds of	Unit 1_6	6	数百的	1
-6	turn around	Unit 1_6	6	转身	1
-6	monkey bar	Unit 1_6	6	攀爬架	1
-6	hold on	Unit 1_6	6	抓住	1
-6	come down	Unit 1_6	6	下来	1
-6	give ... a push	Unit 1_6	6	推...一下	1
-6	as ... as ...	Unit 1_6	6	和...一样	1
-6	below zero	Unit 1_6	6	零下	1
-6	not ... until ...	Unit 1_6	6	直到...才...	1
-7	hole	Unit 2_1	7	n.洞	1
-7	large	Unit 2_1	7	adj.巨大的	1
-7	root	Unit 2_1	7	n.根	0
-7	seedling	Unit 2_1	7	n.幼苗	0
-7	cover	Unit 2_1	7	v.覆盖	1
-7	fill	Unit 2_1	7	vt.充满	1
-7	dirt	Unit 2_1	7	n.泥土	0
-7	pack	Unit 2_1	7	n.堆积	0
-7	dust	Unit 2_1	7	n.沙土	0
-7	storm	Unit 2_1	7	n.暴风雨	1
-8	dirty	Unit 2_2	7	adj.肮脏的	1
-8	northern	Unit 2_2	7	adj.北方的	1
-8	bottom	Unit 2_2	7	n.底部	1
-8	pleasant	Unit 2_2	7	adj.使人愉快的	0
-8	shade	Unit 2_2	7	n.阴凉处	0
-8	fulfill	Unit 2_2	7	vt.达到	0
-8	basic	Unit 2_2	7	adj.基本的	1
-8	soil	Unit 2_2	7	n.土	0
-8	channel	Unit 2_2	7	n.频道	0
-8	gardener	Unit 2_2	7	n.园丁	0
-9	log	Unit 2_3	7	n.登录	0
-9	consider	Unit 2_3	7	vt.仔细考虑	1
-9	sunlight	Unit 2_3	7	n.阳光	0
-9	test	Unit 2_3	7	n.测验	1
-9	compost	Unit 2_3	7	n.混合肥料	0
-9	dry	Unit 2_3	7	adj.&vt.干的	1
-9	nearby	Unit 2_3	7	ad.在附近	0
-9	squirrel	Unit 2_3	7	n.松鼠	0
-9	fence	Unit 2_3	7	n.栅栏	0
-9	purpose	Unit 2_3	7	n.目的	1
-10	egret	Unit 2_4	7	n.白鹭	0
-10	eastern	Unit 2_4	7	adj.东方的	1
-10	shy	Unit 2_4	7	adj.害羞的	1
-10	tightly	Unit 2_4	7	adv.紧紧地	0
-10	fossil	Unit 2_4	7	n.化石	0
-10	southwest	Unit 2_4	7	n.&adj.西南的	0
-10	living	Unit 2_4	7	adj.活着的	0
-10	agriculture	Unit 2_4	7	n.农业	0
-10	seed	Unit 2_4	7	n.种子	0
-10	pot	Unit 2_4	7	n.盆	0
-11	sprout	Unit 2_5	7	n.发芽	0
-11	stem	Unit 2_5	7	n.茎	0
-11	bud	Unit 2_5	7	n.芽	0
-11	carefully	Unit 2_5	7	adv.仔细地	0
-11	yard	Unit 2_5	7	n.院子	1
-11	fill ... with ...	Unit 2_5	7	用...填满	1
-11	by the way	Unit 2_5	7	顺便说一下	1
-11	dust storm	Unit 2_5	7	沙尘暴	1
-11	turn into	Unit 2_5	7	变成	1
-11	for sure	Unit 2_5	7	肯定地	1
-12	in the bottom of ...	Unit 2_6	7	在...底部	1
-12	It's pleasant to do ...	Unit 2_6	7	做...很愉快	1
-12	take energy from ...	Unit 2_6	7	从...获得能量	1
-12	in a word	Unit 2_6	7	总之	1
-12	TV channel	Unit 2_6	7	电视频道	1
-12	have fun doing	Unit 2_6	7	做...有趣	1
-12	log onto	Unit 2_6	7	登录	1
-12	make sure	Unit 2_6	7	确信	1
-12	keep ... away from	Unit 2_6	7	使...远离	1
-12	best of all	Unit 2_6	7	更好的是	1
-13	eastern Asia	Unit 2_7	7	东亚	1
-13	close up	Unit 2_7	7	合起来	1
-13	open up	Unit 2_7	7	张开	1
-13	When it comes to ...	Unit 2_7	7	当提到	1
-13	along with	Unit 2_7	7	和...一起	1
-13	in the middle of	Unit 2_7	7	在...中间	1
-13	a living fossil	Unit 2_7	7	一个活化石	1
-13	at the top of ...	Unit 2_7	7	在...顶端	1
-13	a flower bud	Unit 2_7	7	花骨朵	1
-13	look after	Unit 2_7	7	照顾	1
-14	scare	Unit 3_1	7	vt.惊吓	0
-14	doorbell	Unit 3_1	7	n.门铃	0
-14	scream	Unit 3_1	7	v.尖声喊叫	0
-14	tiny	Unit 3_1	7	adj.微小的	1
-14	sofa	Unit 3_1	7	n.长沙发	1
-14	vacation	Unit 3_1	7	n.假期	1
-14	gentle	Unit 3_1	7	adj.温和的	0
-14	loyal	Unit 3_1	7	adj.忠诚的	0
-14	long-eared	Unit 3_1	7	adj.长耳的	0
-14	jerboa	Unit 3_1	7	n.跳鼠	0
-15	mouse	Unit 3_2	7	n.老鼠	1
-15	kiwi	Unit 3_2	7	n.几维	0
-15	lay	Unit 3_2	7	vt.产	1
-15	long-nosed	Unit 3_2	7	adj.长鼻子的	0
-15	eggplant	Unit 3_2	7	n.茄子	0
-15	shake	Unit 3_2	7	v.摇动	1
-15	flap	Unit 3_2	7	n.鼓翼而飞	0
-15	avoid	Unit 3_2	7	v.避开	1
-15	danger	Unit 3_2	7	n.危险	1
-15	dangerous	Unit 3_2	7	adj.危险的	1
-16	mainly	Unit 3_3	7	adv.主要地	0
-16	bamboo	Unit 3_3	7	n.竹子	1
-16	giraffe	Unit 3_3	7	n.长颈鹿	1
-16	escape	Unit 3_3	7	v.逃脱	0
-16	fierce	Unit 3_3	7	adj.凶猛的	0
-16	protect	Unit 3_3	7	vt.保护	1
-16	fool	Unit 3_3	7	n.愚人	0
-16	century	Unit 3_3	7	n.世纪	1
-16	fur	Unit 3_3	7	n.毛	0
-16	symbol	Unit 3_3	7	n.标志	0
-17	courage	Unit 3_4	7	n.勇气	1
-17	brave	Unit 3_4	7	adj.勇敢的	1
-17	chain	Unit 3_4	7	n.链子	0
-17	balance	Unit 3_4	7	n.&v.平衡	0
-17	reason	Unit 3_4	7	n.原因	1
-17	disappear	Unit 3_4	7	vi.消失	0
-17	kill	Unit 3_4	7	v.杀死	1
-17	cut	Unit 3_4	7	vt.砍	1
-17	decrease	Unit 3_4	7	v.使...变小	0
-17	friendship	Unit 3_4	7	n.友情	1
-18	rhino	Unit 3_5	7	n.犀牛	0
-18	skin	Unit 3_5	7	n.皮	0
-18	warn	Unit 3_5	7	vt.警告	1
-18	insect	Unit 3_5	7	n.昆虫	0
-18	relationship	Unit 3_5	7	n.关系	1
-18	survive	Unit 3_5	7	vt.生存	0
-18	mzee	Unit 3_5	7	n.老人	0
-18	hippo	Unit 3_5	7	n.河马	0
-18	tortoise	Unit 3_5	7	n.龟	0
-19	truly	Unit 3_6	7	adv.真正	0
-19	boundary	Unit 3_6	7	n.分界线	0
-19	on a vacation	Unit 3_6	7	度假	1
-19	be afraid of	Unit 3_6	7	害怕	1
-19	be famous of	Unit 3_6	7	因...而出名	1
-19	up to	Unit 3_6	7	多达	1
-19	instead of	Unit 3_6	7	用...代替	1
-19	wait a minute	Unit 3_6	7	等一下	1
-19	You're joking aren't you	Unit 3_6	7	你们在开玩笑，不是吗？	1
-20	April Fools' Day	Unit 3_7	7	愚人节	1
-20	at the beginning of ...	Unit 3_7	7	在...之初	1
-20	drop to	Unit 3_7	7	下降到	1
-20	food chain	Unit 3_7	7	食物链	1
-20	in balance	Unit 3_7	7	保持平衡	1
-20	in danger	Unit 3_7	7	处于危险状态	1
-20	cut down	Unit 3_7	7	砍倒；减少	1
-20	as well	Unit 3_7	7	也	1
-20	touch one's heart	Unit 3_7	7	打动某人	1
-21	technology	Unit 4_1	5	n.技术	1
-21	desktop	Unit 4_1	5	n.台式电脑	0
-21	tablet	Unit 4_1	5	n.平板电脑	0
-21	keyboard	Unit 4_1	5	n.键盘	1
-21	invitation	Unit 4_1	5	n.邀请	0
-21	industry	Unit 4_1	5	n.工业	1
-21	laptop	Unit 4_1	5	n.笔记本电脑	0
-21	Easter	Unit 4_1	5	n.复活节	0
-21	enter	Unit 4_1	5	vt.进入	1
-21	key	Unit 4_1	5	n.钥匙	1
-22	search	Unit 4_2	5	v.搜索	1
-22	topic	Unit 4_2	5	n.话题	0
-22	depend	Unit 4_2	5	vi.依靠	1
-22	bunny	Unit 4_2	5	n.兔子	0
-22	hide	Unit 4_2	5	vt.隐藏	1
-22	press	Unit 4_2	5	n.印刷机	0
-22	appear	Unit 4_2	5	vi.出现	1
-22	modern	Unit 4_2	5	adj.现代的	1
-22	electronic	Unit 4_2	5	adj.电子的	1
-22	sell	Unit 4_2	5	v.卖	1
-23	receive	Unit 4_3	5	vt.收到	1
-23	cancer	Unit 4_3	5	n.癌症	0
-23	blessing	Unit 4_3	5	n.祝福	0
-23	pyramid	Unit 4_3	5	n.金字塔	0
-23	Egypt	Unit 4_3	5	n.埃及	0
-23	advantage	Unit 4_3	5	n.优势	1
-23	disadvantage	Unit 4_3	5	n.缺点	0
-23	simple	Unit 4_3	5	adj.简单的	1
-23	coin	Unit 4_3	5	n.硬币	1
-23	cause	Unit 4_3	5	vt.造成	1
-24	less	Unit 4_4	5	adj.更少的	1
-24	aside	Unit 4_4	5	adv.&prep.除...之外	0
-24	attack	Unit 4_4	5	vt.袭击	0
-24	web	Unit 4_4	5	n.网络	0
-24	steal	Unit 4_4	5	vt.偷盗	1
-24	banking	Unit 4_4	5	n.银行业	0
-24	properly	Unit 4_4	5	adv.正确地	0
-24	search engine	Unit 4_4	5	搜索引擎	1
-24	depend on	Unit 4_4	5	依靠	1
-24	Easter Bunny	Unit 4_4	5	复活节兔子	1
-25	pass on	Unit 4_5	5	传递	1
-25	by hand	Unit 4_5	5	用手	1
-25	pringting press	Unit 4_5	5	印刷机	1
-25	keep on	Unit 4_5	5	继续	1
-25	in seconds	Unit 4_5	5	在很短的时间内	1
-25	far away	Unit 4_5	5	遥远	1
-25	Every coin has two sides	Unit 4_5	5	事物都有两面性	1
-25	aside from	Unit 4_5	5	除此之外	1
-25	take up	Unit 4_5	5	占用	1
-25	set up a time	Unit 4_5	5	约个时间	1
-26	pay	Unit 5_1	6	vt.付	1
-26	bake	Unit 5_1	6	vt.烘	0
-26	dollar	Unit 5_1	6	n.美元	1
-26	sixteen	Unit 5_1	6	num.十六	1
-26	advertising	Unit 5_1	6	n.广告活动	0
-26	poster	Unit 5_1	6	n.海报	0
-26	cheap	Unit 5_1	6	adj.便宜的	1
-26	pocket	Unit 5_1	6	n.口袋	1
-26	desk-cycle	Unit 5_1	6	n.自行车桌	0
-26	tie	Unit 5_1	6	vt.系	1
-27	while	Unit 5_2	6	conj.在...期间	1
-27	afford	Unit 5_2	6	vt.买得起	1
-27	cent	Unit 5_2	6	n.分	1
-27	everyday	Unit 5_2	6	adj.每天的	1
-27	ladder	Unit 5_2	6	n.梯子	0
-27	position	Unit 5_2	6	n.位置	0
-27	congratulate	Unit 5_2	6	vt.祝贺	0
-27	including	Unit 5_2	6	包括	0
-27	account	Unit 5_2	6	n.账目	0
-27	husband	Unit 5_2	6	n.丈夫	1
-28	gate	Unit 5_3	6	n.大门	1
-28	appreciate	Unit 5_3	6	vt.感激	0
-28	honesty	Unit 5_3	6	n.诚实	0
-28	trusting	Unit 5_3	6	adj.信任的	0
-28	honest	Unit 5_3	6	adj.诚实的	1
-28	value	Unit 5_3	6	n.价值	1
-28	motto	Unit 5_3	6	n.座佑铭	0
-28	trust	Unit 5_3	6	vt.相信	1
-28	battle	Unit 5_3	6	n.战斗	0
-28	create	Unit 5_3	6	vt.创作	1
-29	ad	Unit 5_4	6	abbr.广告	0
-29	customer	Unit 5_4	6	n.顾客	1
-29	already	Unit 5_4	6	adv.已经	1
-29	similar	Unit 5_4	6	adj.相像的	1
-29	sample	Unit 5_4	6	n.样品	0
-29	offer	Unit 5_4	6	v.&n.提供	1
-29	shine	Unit 5_4	6	vi.发光	1
-29	quality	Unit 5_4	6	n.质量	0
-29	surely	Unit 5_4	6	adv.当然	0
-29	succeed	Unit 5_4	6	vi.成功	1
-30	crazy	Unit 5_5	6	adj.疯狂的	1
-30	baker	Unit 5_5	6	n.面包师傅	0
-30	make money	Unit 5_5	6	挣钱	1
-30	come up to	Unit 5_5	6	走近	1
-30	pay for	Unit 5_5	6	付款	1
-30	for sale	Unit 5_5	6	待售	1
-30	go over to	Unit 5_5	6	从一处到另一处	1
-30	What is it for	Unit 5_5	6	它是干什么用的？	1
-30	I'm afraid I can't afford it	Unit 5_5	6	我恐怕买不起	1
-31	move up	Unit 5_6	6	提升	1
-31	beef up	Unit 5_6	6	加强	1
-31	be surprised to ...	Unit 5_6	6	惊讶于...	1
-31	push a product	Unit 5_6	6	推销产品	1
-31	stand out	Unit 5_6	6	出色	1
-31	catch one's eye	Unit 5_6	6	吸引某人的目光	1
-31	have an interest in	Unit 5_6	6	在...方面有兴趣	1
-31	sell out of	Unit 5_6	6	售空	1
-31	less than	Unit 5_6	6	少于	1
-32	champion	Unit 6_1	5	n.冠军	0
-32	relative	Unit 6_1	5	n.亲戚	1
-32	thick	Unit 6_1	5	adj.厚的	1
-32	photograph	Unit 6_1	5	n.照片	1
-32	lift	Unit 6_1	5	vt.举起	1
-32	weigh	Unit 6_1	5	v.有...重	1
-32	kilo	Unit 6_1	5	pref.千克	1
-32	several	Unit 6_1	5	adj.三个以上	1
-32	BC	Unit 6_1	5	abbr.公元前	0
-32	athlete	Unit 6_1	5	n.运动员	0
-32	compete	Unit 6_1	5	v.竞争	0
-33	Olympia	Unit 6_2	5	n.奥林匹亚	0
-33	married	Unit 6_2	5	adj.结婚的	0
-33	host	Unit 6_2	5	v.主持	0
-33	Olympic	Unit 6_2	5	adj.奥林匹克运动会的	0
-33	amazed	Unit 6_2	5	adj.惊奇的	0
-33	spirit	Unit 6_2	5	n.精神	1
-33	represent	Unit 6_2	5	vt.代表	0
-33	continent	Unit 6_2	5	n.洲	0
-33	America	Unit 6_2	5	n.美洲	1
-33	torch	Unit 6_2	5	n.火炬	0
-33	peace	Unit 6_2	5	n.和平	1
-34	slogan	Unit 6_3	5	n.标语	0
-34	reflect	Unit 6_3	5	v.显示	0
-34	mascot	Unit 6_3	5	n.吉祥物	0
-34	feature	Unit 6_3	5	n.特征	0
-34	fairly	Unit 6_3	5	adv.公平合理地	0
-34	defeat	Unit 6_3	5	vt.战胜	0
-34	gold	Unit 6_3	5	n.&adj.金	1
-34	medal	Unit 6_3	5	n.奖牌	0
-34	influence	Unit 6_3	5	vt.&n.影响	1
-34	Brazil	Unit 6_3	5	n.巴西	0
-34	diving	Unit 6_3	5	v.跳水	0
-35	badminton	Unit 6_4	5	n.羽毛球	0
-35	coach	Unit 6_4	5	n.教练	1
-35	rope	Unit 6_4	5	n.绳	1
-35	sit-up	Unit 6_4	5	仰卧起坐	0
-35	push-up	Unit 6_4	5	俯卧撑	0
-35	race	Unit 6_4	5	n.赛跑	1
-35	result	Unit 6_4	5	n.结果	1
-35	none	Unit 6_4	5	pron.一个也没有	1
-35	twentieth	Unit 6_4	5	n.&adj.第二十	1
-35	stand on one foot	Unit 6_4	5	一只脚站立	1
-35	set a new world record	Unit 6_4	5	创造一项新的世界记录	1
-36	break a record	Unit 6_5	5	打破记录	1
-36	compete against ...	Unit 6_5	5	与...竞争	1
-36	every four years	Unit 6_5	5	每四年	1
-36	Good point	Unit 6_5	5	说得好	1
-36	take place	Unit 6_5	5	发生	1
-36	be amazed at ...	Unit 6_5	5	惊讶于...	1
-36	stand for	Unit 6_5	5	代表	1
-36	dream team	Unit 6_5	5	梦之队	1
-36	have an influence on	Unit 6_5	5	对...有影响	1
-36	time after time	Unit 6_5	5	多次	1
-37	population	Unit 7_1	6	n.人口	1
-37	abroad	Unit 7_1	6	ad.到国外	1
-37	Japan	Unit 7_1	6	n.日本	1
-37	Japanese	Unit 7_1	6	n.&adj.日本人	1
-37	Antarctica	Unit 7_1	6	n.南极洲	0
-37	island	Unit 7_1	6	n.岛	1
-37	Pacific	Unit 7_1	6	adj.太平洋	1
-37	planet	Unit 7_1	6	n.行星	1
-37	billion	Unit 7_1	6	n.十亿	0
-37	total	Unit 7_1	6	adj.总计	1
-38	increase	Unit 7_2	6	v.增加	1
-38	surface	Unit 7_2	6	n.表面	1
-38	Indian	Unit 7_2	6	n.&adj.印度人；印度的	1
-38	Atlantic	Unit 7_2	6	n.大西洋	0
-38	Arctic	Unit 7_2	6	adj.北极的	0
-38	British	Unit 7_2	6	adj.英国的	1
-38	washroom	Unit 7_2	6	n.盥洗室	0
-38	bathroom	Unit 7_2	6	n.浴室	1
-38	spell	Unit 7_2	6	v.拼写	1
-38	pronunciation	Unit 7_2	6	n.发音	1
-39	grammar	Unit 7_3	6	n.语法	1
-39	translate	Unit 7_3	6	vt.翻译	1
-39	American	Unit 7_3	6	adj.美国的	1
-39	Australian	Unit 7_3	6	n.&adj.澳大利亚（人）的	1
-39	pronounce	Unit 7_3	6	vt.发音	1
-39	greet	Unit 7_3	6	vt.欢迎	0
-39	European	Unit 7_3	6	n.&adj.欧洲（人）的	1
-39	kiss	Unit 7_3	6	vt.&n.吻	1
-39	cheek	Unit 7_3	6	n.脸颊	0
-39	nod	Unit 7_3	6	n.点头	1
-40	thumbs-up	Unit 7_4	6	翘拇指	0
-40	polite	Unit 7_4	6	adj.有礼貌的	1
-40	lip	Unit 7_4	6	n.嘴唇	0
-40	rude	Unit 7_4	6	adj.粗鲁的	0
-40	Italian	Unit 7_4	6	n.&adj.意大利(人)的	0
-40	prepare	Unit 7_4	6	vt.准备	1
-40	Amazon	Unit 7_4	6	n.亚马逊河	0
-40	rainforest	Unit 7_4	6	n.雨林	0
-40	Turkey	Unit 7_4	6	n.土耳其	0
-40	Nile	Unit 7_4	6	n.尼罗河	0
-41	Sahara Desert	Unit 7_5	6	n.撒哈拉沙漠	0
-41	pride	Unit 7_5	6	n.引以自豪的事物	1
-41	million	Unit 7_5	6	n.百万	0
-41	Square	Unit 7_5	6	n.平方；广场	1
-41	Rocky	Unit 7_5	6	adj.落基山脉	0
-41	Spanish	Unit 7_5	6	n.&adj.西班牙(人)的	0
-41	Mexican	Unit 7_5	6	n.&adj.墨西哥（人）的	0
-41	in total	Unit 7_5	6	总计	1
-41	one third	Unit 7_5	6	三分之一	1
-41	be covered with ...	Unit 7_5	6	被...覆盖	1
-42	two thirds	Unit 7_6	6	三分之二	1
-42	ring up	Unit 7_6	6	给...打电话	1
-42	go up	Unit 7_6	6	上升	1
-42	in different ways	Unit 7_6	6	用不同的方式	1
-42	shake hands	Unit 7_6	6	握手	1
-42	be known for ...	Unit 7_6	6	因...而众所周知	1
-42	in recent years	Unit 7_6	6	在最近一些年里	1
-42	square kilometre	Unit 7_6	6	平方千米	1
-42	The Great Lakes	Unit 7_6	6	北美四大湖	1
-43	schoolyard	Unit 8_1	6	n校园	0
-43	attention	Unit 8_1	6	n.注意	1
-43	rubbish	Unit 8_1	6	n.垃圾	1
-43	garbage	Unit 8_1	6	n.垃圾	0
-43	pollution	Unit 8_1	6	n.污染	1
-43	explain	Unit 8_1	6	vt.解释	1
-43	reduce	Unit 8_1	6	vt.减少	0
-43	reusable	Unit 8_1	6	adj.可重复使用的	0
-43	least	Unit 8_1	6	adj.最少的	1
-43	pollute	Unit 8_1	6	v.污染	1
-44	skip	Unit 8_2	6	n.&v.跳跃	0
-44	packaging	Unit 8_2	6	n.包装	0
-44	leaky	Unit 8_2	6	adj.渗漏的	0
-44	waste	Unit 8_2	6	vt.浪费	1
-44	litre	Unit 8_2	6	n.公升	0
-44	sink	Unit 8_2	6	n.水槽	0
-44	electricity	Unit 8_2	6	n.电	0
-44	shut	Unit 8_2	6	vt.关上	1
-44	sort	Unit 8_2	6	n.分类	0
-44	empty	Unit 8_2	6	adj.空的	1
-45	metal	Unit 8_3	6	n.金属	0
-45	plastic	Unit 8_3	6	adj.塑料的	0
-45	recycle	Unit 8_3	6	vt.回收再用	0
-45	amount	Unit 8_3	6	n.量	0
-45	litter	Unit 8_3	6	n.垃圾	1
-45	leak	Unit 8_3	6	v.漏	0
-45	tap	Unit 8_3	6	n.龙头	0
-45	beer	Unit 8_3	6	n.啤酒	0
-45	truck	Unit 8_3	6	n.货车	1
-45	recycling	Unit 8_3	6	n.回收利用	0
-46	factory	Unit 8_4	6	n.工厂	1
-46	unlike	Unit 8_4	6	prep.不像	0
-46	bee	Unit 8_4	6	n.蜜蜂	0
-46	ant	Unit 8_4	6	n.蚂蚁	1
-46	dove	Unit 8_4	6	n.鸽子	0
-46	die	Unit 8_4	6	v.死	1
-46	dead	Unit 8_4	6	adj.死的	1
-46	species	Unit 8_4	6	n.物种	0
-46	respect	Unit 8_4	6	vt.尊敬	0
-46	used	Unit 8_4	6	adj.用过的	1
-47	divide	Unit 8_5	6	vt.分开	1
-47	pile	Unit 8_5	6	n.堆	0
-47	seat	Unit 8_5	6	n.座位	1
-47	lid	Unit 8_5	6	n.盖子	0
-47	ton	Unit 8_5	6	n.吨	1
-47	duty	Unit 8_5	6	n.责任	0
-47	clean up	Unit 8_5	6	打扫	1
-47	draw one's attention	Unit 8_5	6	引起...的注意	1
-47	pick up	Unit 8_5	6	拣起	1
-48	a bit of	Unit 8_6	6	一点儿	1
-48	throw away	Unit 8_6	6	扔掉	1
-48	shut down	Unit 8_6	6	关闭	1
-48	again and again	Unit 8_6	6	再三地	1
-48	start out	Unit 8_6	6	启程	1
-48	live off	Unit 8_6	6	以...为生	1
-48	die off	Unit 8_6	6	相继死去	1
-48	divide ... into ...	Unit 8_6	6	把...分成...	1
-48	It's one's duty to ...	Unit 8_6	6	...是某人的职责	1
+1	shower	Unit 1_1	12	vi.淋浴	1
+1	thunderstorm	Unit 1_1	12	n.雷雨	0
+1	thunder	Unit 1_1	12	n.雷	0
+2	sunrise	Unit 1_2	12	n.日出	0
+2	sunset	Unit 1_2	12	n.日落	0
+2	rise	Unit 1_2	12	v.升起	1
+2	set	Unit 1_2	12	v.落沉	0
+2	exact	Unit 1_2	12	adj.精确的	0
+3	neither	Unit 1_3	12	pron.&ad.都不	1
+3	nor	Unit 1_3	12	conj.也不	1
+3	boot	Unit 1_3	12	n.靴子	0
+3	jasmine	Unit 1_3	12	n.茉莉	0
+3	blossom	Unit 1_3	12	n.开花	0
+4	sunshine	Unit 1_4	12	n.阳光	0
+4	Tai Chi	Unit 1_4	12	n.太极	0
+4	swing	Unit 1_4	12	n.摇摆	0
+4	melt	Unit 1_4	12	v.融化	0
+4	hillside	Unit 1_4	12	n.山坡	0
+5	wind	Unit 1_5	12	n.风	1
+5	gently	Unit 1_5	12	adv.温柔地	0
+5	budding	Unit 1_5	12	adj.正发芽的	0
+5	nearly	Unit 1_5	12	adv.几乎	1
+5	millimetre	Unit 1_5	12	n.毫米	0
+6	plenty	Unit 1_6	12	n.丰富	1
+6	anytime	Unit 1_6	12	adv.在任何时候	0
+6	babysit	Unit 1_6	12	vi.照顾婴儿	0
+6	bar	Unit 1_6	12	n.门闩	0
+6	instead	Unit 1_6	12	adv.代替	1
+7	push	Unit 1_7	12	vt.&n.推	1
+7	soccer	Unit 1_7	12	n.足球	0
+7	shall	Unit 1_7	12	aux.将	1
+7	rabbit	Unit 1_7	12	n.兔子	1
+7	low	Unit 1_7	12	adj.低的	1
+8	below	Unit 1_8	12	prep.&adv.在...下面	1
+8	zero	Unit 1_8	12	num.零	1
+8	until	Unit 1_8	12	prep.直到...为止	1
+8	groundhog	Unit 1_8	12	n.土拨鼠	0
+8	bush	Unit 1_8	12	n.灌木	0
+9	weather report	Unit 1_9	12	天气预报	1
+9	be scared of	Unit 1_9	12	害怕	1
+9	neither ... nor ...	Unit 1_9	12	既不...也不...	1
+9	winter jasmine	Unit 1_9	12	迎春花	1
+9	play on the swing	Unit 1_9	12	荡秋千	1
+10	a field trip	Unit 1_10	12	野外旅游	1
+10	one by one	Unit 1_10	12	一个接一个	1
+10	long for	Unit 1_10	12	渴望	1
+10	all year round	Unit 1_10	12	一年到头	1
+10	plenty of	Unit 1_10	12	许多	1
+11	hundreds of	Unit 1_11	12	数百的	1
+11	turn around	Unit 1_11	12	转身	1
+11	monkey bar	Unit 1_11	12	攀爬架	1
+11	hold on	Unit 1_11	12	抓住	1
+11	come down	Unit 1_11	12	下来	1
+12	give ... a push	Unit 1_12	12	推...一下	1
+12	as ... as ...	Unit 1_12	12	和...一样	1
+12	below zero	Unit 1_12	12	零下	1
+12	not ... until ...	Unit 1_12	12	直到...才...	1
+13	hole	Unit 2_1	14	n.洞	1
+13	large	Unit 2_1	14	adj.巨大的	1
+13	root	Unit 2_1	14	n.根	0
+13	seedling	Unit 2_1	14	n.幼苗	0
+13	cover	Unit 2_1	14	v.覆盖	1
+14	fill	Unit 2_2	14	vt.充满	1
+14	dirt	Unit 2_2	14	n.泥土	0
+14	pack	Unit 2_2	14	n.堆积	0
+14	dust	Unit 2_2	14	n.沙土	0
+14	storm	Unit 2_2	14	n.暴风雨	1
+15	dirty	Unit 2_3	14	adj.肮脏的	1
+15	northern	Unit 2_3	14	adj.北方的	1
+15	bottom	Unit 2_3	14	n.底部	1
+15	pleasant	Unit 2_3	14	adj.使人愉快的	0
+15	shade	Unit 2_3	14	n.阴凉处	0
+16	fulfill	Unit 2_4	14	vt.达到	0
+16	basic	Unit 2_4	14	adj.基本的	1
+16	soil	Unit 2_4	14	n.土	0
+16	channel	Unit 2_4	14	n.频道	0
+16	gardener	Unit 2_4	14	n.园丁	0
+17	log	Unit 2_5	14	n.登录	0
+17	consider	Unit 2_5	14	vt.仔细考虑	1
+17	sunlight	Unit 2_5	14	n.阳光	0
+17	test	Unit 2_5	14	n.测验	1
+17	compost	Unit 2_5	14	n.混合肥料	0
+18	dry	Unit 2_6	14	adj.&vt.干的	1
+18	nearby	Unit 2_6	14	ad.在附近	0
+18	squirrel	Unit 2_6	14	n.松鼠	0
+18	fence	Unit 2_6	14	n.栅栏	0
+18	purpose	Unit 2_6	14	n.目的	1
+19	egret	Unit 2_7	14	n.白鹭	0
+19	eastern	Unit 2_7	14	adj.东方的	1
+19	shy	Unit 2_7	14	adj.害羞的	1
+19	tightly	Unit 2_7	14	adv.紧紧地	0
+19	fossil	Unit 2_7	14	n.化石	0
+20	southwest	Unit 2_8	14	n.&adj.西南的	0
+20	living	Unit 2_8	14	adj.活着的	0
+20	agriculture	Unit 2_8	14	n.农业	0
+20	seed	Unit 2_8	14	n.种子	0
+20	pot	Unit 2_8	14	n.盆	0
+21	sprout	Unit 2_9	14	n.发芽	0
+21	stem	Unit 2_9	14	n.茎	0
+21	bud	Unit 2_9	14	n.芽	0
+21	carefully	Unit 2_9	14	adv.仔细地	0
+21	yard	Unit 2_9	14	n.院子	1
+22	fill ... with ...	Unit 2_10	14	用...填满	1
+22	by the way	Unit 2_10	14	顺便说一下	1
+22	dust storm	Unit 2_10	14	沙尘暴	1
+22	turn into	Unit 2_10	14	变成	1
+22	for sure	Unit 2_10	14	肯定地	1
+23	in the bottom of ...	Unit 2_11	14	在...底部	1
+23	It's pleasant to do ...	Unit 2_11	14	做...很愉快	1
+23	take energy from ...	Unit 2_11	14	从...获得能量	1
+23	in a word	Unit 2_11	14	总之	1
+23	TV channel	Unit 2_11	14	电视频道	1
+24	have fun doing	Unit 2_12	14	做...有趣	1
+24	log onto	Unit 2_12	14	登录	1
+24	make sure	Unit 2_12	14	确信	1
+24	keep ... away from	Unit 2_12	14	使...远离	1
+24	best of all	Unit 2_12	14	更好的是	1
+25	eastern Asia	Unit 2_13	14	东亚	1
+25	close up	Unit 2_13	14	合起来	1
+25	open up	Unit 2_13	14	张开	1
+25	When it comes to ...	Unit 2_13	14	当提到	1
+25	along with	Unit 2_13	14	和...一起	1
+26	in the middle of	Unit 2_14	14	在...中间	1
+26	a living fossil	Unit 2_14	14	一个活化石	1
+26	at the top of ...	Unit 2_14	14	在...顶端	1
+26	a flower bud	Unit 2_14	14	花骨朵	1
+26	look after	Unit 2_14	14	照顾	1
+27	scare	Unit 3_1	13	vt.惊吓	0
+27	doorbell	Unit 3_1	13	n.门铃	0
+27	scream	Unit 3_1	13	v.尖声喊叫	0
+27	tiny	Unit 3_1	13	adj.微小的	1
+27	sofa	Unit 3_1	13	n.长沙发	1
+28	vacation	Unit 3_2	13	n.假期	1
+28	gentle	Unit 3_2	13	adj.温和的	0
+28	loyal	Unit 3_2	13	adj.忠诚的	0
+28	long-eared	Unit 3_2	13	adj.长耳的	0
+28	jerboa	Unit 3_2	13	n.跳鼠	0
+29	mouse	Unit 3_3	13	n.老鼠	1
+29	kiwi	Unit 3_3	13	n.几维	0
+29	lay	Unit 3_3	13	vt.产	1
+29	long-nosed	Unit 3_3	13	adj.长鼻子的	0
+29	eggplant	Unit 3_3	13	n.茄子	0
+30	shake	Unit 3_4	13	v.摇动	1
+30	flap	Unit 3_4	13	n.鼓翼而飞	0
+30	avoid	Unit 3_4	13	v.避开	1
+30	danger	Unit 3_4	13	n.危险	1
+30	dangerous	Unit 3_4	13	adj.危险的	1
+31	mainly	Unit 3_5	13	adv.主要地	0
+31	bamboo	Unit 3_5	13	n.竹子	1
+31	giraffe	Unit 3_5	13	n.长颈鹿	1
+31	escape	Unit 3_5	13	v.逃脱	0
+31	fierce	Unit 3_5	13	adj.凶猛的	0
+32	protect	Unit 3_6	13	vt.保护	1
+32	fool	Unit 3_6	13	n.愚人	0
+32	century	Unit 3_6	13	n.世纪	1
+32	fur	Unit 3_6	13	n.毛	0
+32	symbol	Unit 3_6	13	n.标志	0
+33	courage	Unit 3_7	13	n.勇气	1
+33	brave	Unit 3_7	13	adj.勇敢的	1
+33	chain	Unit 3_7	13	n.链子	0
+33	balance	Unit 3_7	13	n.&v.平衡	0
+33	reason	Unit 3_7	13	n.原因	1
+34	disappear	Unit 3_8	13	vi.消失	0
+34	kill	Unit 3_8	13	v.杀死	1
+34	cut	Unit 3_8	13	vt.砍	1
+34	decrease	Unit 3_8	13	v.使...变小	0
+34	friendship	Unit 3_8	13	n.友情	1
+35	rhino	Unit 3_9	13	n.犀牛	0
+35	skin	Unit 3_9	13	n.皮	0
+35	warn	Unit 3_9	13	vt.警告	1
+35	insect	Unit 3_9	13	n.昆虫	0
+35	relationship	Unit 3_9	13	n.关系	1
+36	survive	Unit 3_10	13	vt.生存	0
+36	mzee	Unit 3_10	13	n.老人	0
+36	hippo	Unit 3_10	13	n.河马	0
+36	tortoise	Unit 3_10	13	n.龟	0
+36	truly	Unit 3_10	13	adv.真正	0
+37	boundary	Unit 3_11	13	n.分界线	0
+37	on a vacation	Unit 3_11	13	度假	1
+37	be afraid of	Unit 3_11	13	害怕	1
+37	be famous of	Unit 3_11	13	因...而出名	1
+37	up to	Unit 3_11	13	多达	1
+38	instead of	Unit 3_12	13	用...代替	1
+38	wait a minute	Unit 3_12	13	等一下	1
+38	You're joking aren't you	Unit 3_12	13	你们在开玩笑，不是吗？	1
+38	April Fools' Day	Unit 3_12	13	愚人节	1
+38	at the beginning of ...	Unit 3_12	13	在...之初	1
+38	drop to	Unit 3_12	13	下降到	1
+39	food chain	Unit 3_13	13	食物链	1
+39	in balance	Unit 3_13	13	保持平衡	1
+39	in danger	Unit 3_13	13	处于危险状态	1
+39	cut down	Unit 3_13	13	砍倒；减少	1
+39	as well	Unit 3_13	13	也	1
+39	touch one's heart	Unit 3_13	13	打动某人	1
+40	technology	Unit 4_1	10	n.技术	1
+40	desktop	Unit 4_1	10	n.台式电脑	0
+40	tablet	Unit 4_1	10	n.平板电脑	0
+40	keyboard	Unit 4_1	10	n.键盘	1
+40	invitation	Unit 4_1	10	n.邀请	0
+41	industry	Unit 4_2	10	n.工业	1
+41	laptop	Unit 4_2	10	n.笔记本电脑	0
+41	Easter	Unit 4_2	10	n.复活节	0
+41	enter	Unit 4_2	10	vt.进入	1
+41	key	Unit 4_2	10	n.钥匙	1
+42	search	Unit 4_3	10	v.搜索	1
+42	topic	Unit 4_3	10	n.话题	0
+42	depend	Unit 4_3	10	vi.依靠	1
+42	bunny	Unit 4_3	10	n.兔子	0
+42	hide	Unit 4_3	10	vt.隐藏	1
+43	press	Unit 4_4	10	n.印刷机	0
+43	appear	Unit 4_4	10	vi.出现	1
+43	modern	Unit 4_4	10	adj.现代的	1
+43	electronic	Unit 4_4	10	adj.电子的	1
+43	sell	Unit 4_4	10	v.卖	1
+44	receive	Unit 4_5	10	vt.收到	1
+44	cancer	Unit 4_5	10	n.癌症	0
+44	blessing	Unit 4_5	10	n.祝福	0
+44	pyramid	Unit 4_5	10	n.金字塔	0
+44	Egypt	Unit 4_5	10	n.埃及	0
+45	advantage	Unit 4_6	10	n.优势	1
+45	disadvantage	Unit 4_6	10	n.缺点	0
+45	simple	Unit 4_6	10	adj.简单的	1
+45	coin	Unit 4_6	10	n.硬币	1
+45	cause	Unit 4_6	10	vt.造成	1
+46	less	Unit 4_7	10	adj.更少的	1
+46	aside	Unit 4_7	10	adv.&prep.除...之外	0
+46	attack	Unit 4_7	10	vt.袭击	0
+46	web	Unit 4_7	10	n.网络	0
+46	steal	Unit 4_7	10	vt.偷盗	1
+47	banking	Unit 4_8	10	n.银行业	0
+47	properly	Unit 4_8	10	adv.正确地	0
+47	search engine	Unit 4_8	10	搜索引擎	1
+47	depend on	Unit 4_8	10	依靠	1
+47	Easter Bunny	Unit 4_8	10	复活节兔子	1
+48	pass on	Unit 4_9	10	传递	1
+48	by hand	Unit 4_9	10	用手	1
+48	pringting press	Unit 4_9	10	印刷机	1
+48	keep on	Unit 4_9	10	继续	1
+48	in seconds	Unit 4_9	10	在很短的时间内	1
+49	far away	Unit 4_10	10	遥远	1
+49	Every coin has two sides	Unit 4_10	10	事物都有两面性	1
+49	aside from	Unit 4_10	10	除此之外	1
+49	take up	Unit 4_10	10	占用	1
+49	set up a time	Unit 4_10	10	约个时间	1
+50	pay	Unit 5_1	12	vt.付	1
+50	bake	Unit 5_1	12	vt.烘	0
+50	dollar	Unit 5_1	12	n.美元	1
+50	sixteen	Unit 5_1	12	num.十六	1
+50	advertising	Unit 5_1	12	n.广告活动	0
+51	poster	Unit 5_2	12	n.海报	0
+51	cheap	Unit 5_2	12	adj.便宜的	1
+51	pocket	Unit 5_2	12	n.口袋	1
+51	desk-cycle	Unit 5_2	12	n.自行车桌	0
+51	tie	Unit 5_2	12	vt.系	1
+52	while	Unit 5_3	12	conj.在...期间	1
+52	afford	Unit 5_3	12	vt.买得起	1
+52	cent	Unit 5_3	12	n.分	1
+52	everyday	Unit 5_3	12	adj.每天的	1
+52	ladder	Unit 5_3	12	n.梯子	0
+53	position	Unit 5_4	12	n.位置	0
+53	congratulate	Unit 5_4	12	vt.祝贺	0
+53	including	Unit 5_4	12	包括	0
+53	account	Unit 5_4	12	n.账目	0
+53	husband	Unit 5_4	12	n.丈夫	1
+54	gate	Unit 5_5	12	n.大门	1
+54	appreciate	Unit 5_5	12	vt.感激	0
+54	honesty	Unit 5_5	12	n.诚实	0
+54	trusting	Unit 5_5	12	adj.信任的	0
+54	honest	Unit 5_5	12	adj.诚实的	1
+55	value	Unit 5_6	12	n.价值	1
+55	motto	Unit 5_6	12	n.座佑铭	0
+55	trust	Unit 5_6	12	vt.相信	1
+55	battle	Unit 5_6	12	n.战斗	0
+55	create	Unit 5_6	12	vt.创作	1
+56	ad	Unit 5_7	12	abbr.广告	0
+56	customer	Unit 5_7	12	n.顾客	1
+56	already	Unit 5_7	12	adv.已经	1
+56	similar	Unit 5_7	12	adj.相像的	1
+56	sample	Unit 5_7	12	n.样品	0
+57	offer	Unit 5_8	12	v.&n.提供	1
+57	shine	Unit 5_8	12	vi.发光	1
+57	quality	Unit 5_8	12	n.质量	0
+57	surely	Unit 5_8	12	adv.当然	0
+57	succeed	Unit 5_8	12	vi.成功	1
+58	crazy	Unit 5_9	12	adj.疯狂的	1
+58	baker	Unit 5_9	12	n.面包师傅	0
+58	make money	Unit 5_9	12	挣钱	1
+58	come up to	Unit 5_9	12	走近	1
+58	pay for	Unit 5_9	12	付款	1
+59	for sale	Unit 5_10	12	待售	1
+59	go over to	Unit 5_10	12	从一处到另一处	1
+59	What is it for	Unit 5_10	12	它是干什么用的？	1
+59	I'm afraid I can't afford it	Unit 5_10	12	我恐怕买不起	1
+59	move up	Unit 5_10	12	提升	1
+60	beef up	Unit 5_11	12	加强	1
+60	be surprised to ...	Unit 5_11	12	惊讶于...	1
+60	push a product	Unit 5_11	12	推销产品	1
+60	stand out	Unit 5_11	12	出色	1
+61	catch one's eye	Unit 5_12	12	吸引某人的目光	1
+61	have an interest in	Unit 5_12	12	在...方面有兴趣	1
+61	sell out of	Unit 5_12	12	售空	1
+61	less than	Unit 5_12	12	少于	1
+62	champion	Unit 6_1	11	n.冠军	0
+62	relative	Unit 6_1	11	n.亲戚	1
+62	thick	Unit 6_1	11	adj.厚的	1
+62	photograph	Unit 6_1	11	n.照片	1
+62	lift	Unit 6_1	11	vt.举起	1
+63	weigh	Unit 6_2	11	v.有...重	1
+63	kilo	Unit 6_2	11	pref.千克	1
+63	several	Unit 6_2	11	adj.三个以上	1
+63	BC	Unit 6_2	11	abbr.公元前	0
+63	athlete	Unit 6_2	11	n.运动员	0
+64	compete	Unit 6_3	11	v.竞争	0
+64	Olympia	Unit 6_3	11	n.奥林匹亚	0
+64	married	Unit 6_3	11	adj.结婚的	0
+64	host	Unit 6_3	11	v.主持	0
+64	Olympic	Unit 6_3	11	adj.奥林匹克运动会的	0
+65	amazed	Unit 6_4	11	adj.惊奇的	0
+65	spirit	Unit 6_4	11	n.精神	1
+65	represent	Unit 6_4	11	vt.代表	0
+65	continent	Unit 6_4	11	n.洲	0
+65	America	Unit 6_4	11	n.美洲	1
+66	torch	Unit 6_5	11	n.火炬	0
+66	peace	Unit 6_5	11	n.和平	1
+66	slogan	Unit 6_5	11	n.标语	0
+66	reflect	Unit 6_5	11	v.显示	0
+66	mascot	Unit 6_5	11	n.吉祥物	0
+67	feature	Unit 6_6	11	n.特征	0
+67	fairly	Unit 6_6	11	adv.公平合理地	0
+67	defeat	Unit 6_6	11	vt.战胜	0
+67	gold	Unit 6_6	11	n.&adj.金	1
+67	medal	Unit 6_6	11	n.奖牌	0
+68	influence	Unit 6_7	11	vt.&n.影响	1
+68	Brazil	Unit 6_7	11	n.巴西	0
+68	diving	Unit 6_7	11	v.跳水	0
+68	badminton	Unit 6_7	11	n.羽毛球	0
+68	coach	Unit 6_7	11	n.教练	1
+69	rope	Unit 6_8	11	n.绳	1
+69	sit-up	Unit 6_8	11	仰卧起坐	0
+69	push-up	Unit 6_8	11	俯卧撑	0
+69	race	Unit 6_8	11	n.赛跑	1
+69	result	Unit 6_8	11	n.结果	1
+70	none	Unit 6_9	11	pron.一个也没有	1
+70	twentieth	Unit 6_9	11	n.&adj.第二十	1
+70	stand on one foot	Unit 6_9	11	一只脚站立	1
+70	set a new world record	Unit 6_9	11	创造一项新的世界记录	1
+70	break a record	Unit 6_9	11	打破记录	1
+71	compete against ...	Unit 6_10	11	与...竞争	1
+71	every four years	Unit 6_10	11	每四年	1
+71	Good point	Unit 6_10	11	说得好	1
+71	take place	Unit 6_10	11	发生	1
+71	be amazed at ...	Unit 6_10	11	惊讶于...	1
+72	stand for	Unit 6_11	11	代表	1
+72	dream team	Unit 6_11	11	梦之队	1
+72	have an influence on	Unit 6_11	11	对...有影响	1
+72	time after time	Unit 6_11	11	多次	1
+73	population	Unit 7_1	12	n.人口	1
+73	abroad	Unit 7_1	12	ad.到国外	1
+73	Japan	Unit 7_1	12	n.日本	1
+73	Japanese	Unit 7_1	12	n.&adj.日本人	1
+73	Antarctica	Unit 7_1	12	n.南极洲	0
+74	island	Unit 7_2	12	n.岛	1
+74	Pacific	Unit 7_2	12	adj.太平洋	1
+74	planet	Unit 7_2	12	n.行星	1
+74	billion	Unit 7_2	12	n.十亿	0
+74	total	Unit 7_2	12	adj.总计	1
+75	increase	Unit 7_3	12	v.增加	1
+75	surface	Unit 7_3	12	n.表面	1
+75	Indian	Unit 7_3	12	n.&adj.印度人；印度的	1
+75	Atlantic	Unit 7_3	12	n.大西洋	0
+75	Arctic	Unit 7_3	12	adj.北极的	0
+76	British	Unit 7_4	12	adj.英国的	1
+76	washroom	Unit 7_4	12	n.盥洗室	0
+76	bathroom	Unit 7_4	12	n.浴室	1
+76	spell	Unit 7_4	12	v.拼写	1
+76	pronunciation	Unit 7_4	12	n.发音	1
+77	grammar	Unit 7_5	12	n.语法	1
+77	translate	Unit 7_5	12	vt.翻译	1
+77	American	Unit 7_5	12	adj.美国的	1
+77	Australian	Unit 7_5	12	n.&adj.澳大利亚（人）的	1
+77	pronounce	Unit 7_5	12	vt.发音	1
+78	greet	Unit 7_6	12	vt.欢迎	0
+78	European	Unit 7_6	12	n.&adj.欧洲（人）的	1
+78	kiss	Unit 7_6	12	vt.&n.吻	1
+78	cheek	Unit 7_6	12	n.脸颊	0
+78	nod	Unit 7_6	12	n.点头	1
+79	thumbs-up	Unit 7_7	12	翘拇指	0
+79	polite	Unit 7_7	12	adj.有礼貌的	1
+79	lip	Unit 7_7	12	n.嘴唇	0
+79	rude	Unit 7_7	12	adj.粗鲁的	0
+79	Italian	Unit 7_7	12	n.&adj.意大利(人)的	0
+80	prepare	Unit 7_8	12	vt.准备	1
+80	Amazon	Unit 7_8	12	n.亚马逊河	0
+80	rainforest	Unit 7_8	12	n.雨林	0
+80	Turkey	Unit 7_8	12	n.土耳其	0
+80	Nile	Unit 7_8	12	n.尼罗河	0
+81	Sahara Desert	Unit 7_9	12	n.撒哈拉沙漠	0
+81	pride	Unit 7_9	12	n.引以自豪的事物	1
+81	million	Unit 7_9	12	n.百万	0
+81	Square	Unit 7_9	12	n.平方；广场	1
+81	Rocky	Unit 7_9	12	adj.落基山脉	0
+82	Spanish	Unit 7_10	12	n.&adj.西班牙(人)的	0
+82	Mexican	Unit 7_10	12	n.&adj.墨西哥（人）的	0
+82	in total	Unit 7_10	12	总计	1
+82	one third	Unit 7_10	12	三分之一	1
+82	be covered with ...	Unit 7_10	12	被...覆盖	1
+83	two thirds	Unit 7_11	12	三分之二	1
+83	ring up	Unit 7_11	12	给...打电话	1
+83	go up	Unit 7_11	12	上升	1
+83	in different ways	Unit 7_11	12	用不同的方式	1
+83	shake hands	Unit 7_11	12	握手	1
+84	be known for ...	Unit 7_12	12	因...而众所周知	1
+84	in recent years	Unit 7_12	12	在最近一些年里	1
+84	square kilometre	Unit 7_12	12	平方千米	1
+84	The Great Lakes	Unit 7_12	12	北美四大湖	1
+85	schoolyard	Unit 8_1	12	n校园	0
+85	attention	Unit 8_1	12	n.注意	1
+85	rubbish	Unit 8_1	12	n.垃圾	1
+85	garbage	Unit 8_1	12	n.垃圾	0
+85	pollution	Unit 8_1	12	n.污染	1
+86	explain	Unit 8_2	12	vt.解释	1
+86	reduce	Unit 8_2	12	vt.减少	0
+86	reusable	Unit 8_2	12	adj.可重复使用的	0
+86	least	Unit 8_2	12	adj.最少的	1
+86	pollute	Unit 8_2	12	v.污染	1
+87	skip	Unit 8_3	12	n.&v.跳跃	0
+87	packaging	Unit 8_3	12	n.包装	0
+87	leaky	Unit 8_3	12	adj.渗漏的	0
+87	waste	Unit 8_3	12	vt.浪费	1
+87	litre	Unit 8_3	12	n.公升	0
+88	sink	Unit 8_4	12	n.水槽	0
+88	electricity	Unit 8_4	12	n.电	0
+88	shut	Unit 8_4	12	vt.关上	1
+88	sort	Unit 8_4	12	n.分类	0
+88	empty	Unit 8_4	12	adj.空的	1
+89	metal	Unit 8_5	12	n.金属	0
+89	plastic	Unit 8_5	12	adj.塑料的	0
+89	recycle	Unit 8_5	12	vt.回收再用	0
+89	amount	Unit 8_5	12	n.量	0
+89	litter	Unit 8_5	12	n.垃圾	1
+90	leak	Unit 8_6	12	v.漏	0
+90	tap	Unit 8_6	12	n.龙头	0
+90	beer	Unit 8_6	12	n.啤酒	0
+90	truck	Unit 8_6	12	n.货车	1
+90	recycling	Unit 8_6	12	n.回收利用	0
+91	factory	Unit 8_7	12	n.工厂	1
+91	unlike	Unit 8_7	12	prep.不像	0
+91	bee	Unit 8_7	12	n.蜜蜂	0
+91	ant	Unit 8_7	12	n.蚂蚁	1
+91	dove	Unit 8_7	12	n.鸽子	0
+92	die	Unit 8_8	12	v.死	1
+92	dead	Unit 8_8	12	adj.死的	1
+92	species	Unit 8_8	12	n.物种	0
+92	respect	Unit 8_8	12	vt.尊敬	0
+92	used	Unit 8_8	12	adj.用过的	1
+93	divide	Unit 8_9	12	vt.分开	1
+93	pile	Unit 8_9	12	n.堆	0
+93	seat	Unit 8_9	12	n.座位	1
+93	lid	Unit 8_9	12	n.盖子	0
+93	ton	Unit 8_9	12	n.吨	1
+94	duty	Unit 8_10	12	n.责任	0
+94	clean up	Unit 8_10	12	打扫	1
+94	draw one's attention	Unit 8_10	12	引起...的注意	1
+94	pick up	Unit 8_10	12	拣起	1
+94	a bit of	Unit 8_10	12	一点儿	1
+95	throw away	Unit 8_11	12	扔掉	1
+95	shut down	Unit 8_11	12	关闭	1
+95	again and again	Unit 8_11	12	再三地	1
+95	start out	Unit 8_11	12	启程	1
+96	live off	Unit 8_12	12	以...为生	1
+96	die off	Unit 8_12	12	相继死去	1
+96	divide ... into ...	Unit 8_12	12	把...分成...	1
+96	It's one's duty to ...	Unit 8_12	12	...是某人的职责	1

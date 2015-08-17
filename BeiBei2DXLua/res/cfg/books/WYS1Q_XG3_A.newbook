@@ -1,81 +1,81 @@
-1	use	Module 1_1	2	n.&v.使用	1
-1	chopsticks	Module 1_1	2	n.筷子	0
-1	want	Module 1_1	2	vi.想要	1
-2	hungry	Module 1_2	2	adj.饥饿的	1
-2	mess	Module 1_2	2	n.肮脏	0
-2	hard	Module 1_2	2	adj.困难的	0
-2	knife	Module 1_2	2	n.刀	0
-2	fork	Module 1_2	2	n.叉	0
-2	a knife and fork	Module 1_2	2	一副刀叉	0
-2	easy	Module 1_2	2	adj.容易的	1
-2	hamburger	Module 1_2	2	n.汉堡包	0
-2	chips	Module 1_2	2	n.炸薯条	0
-2	grass	Module 1_2	2	n.草	1
-2	food	Module 1_2	2	n.食物	1
-2	fast food	Module 1_2	2	快餐	0
-3	make	Module 2_1	1	vt.制作	1
-3	cake	Module 2_1	1	n.蛋糕	1
-3	mum	Module 2_1	1	n.妈妈	1
-3	dad	Module 2_1	1	n.爸爸	1
-3	quiet	Module 2_1	1	adj.安静的	0
-3	water	Module 2_1	1	n.水	1
-3	lovely	Module 2_1	1	adj.可爱的	1
-4	naughty	Module 3_1	1	adj.淘气的	0
-4	paper	Module 3_1	1	adj.纸做的	0
-4	boat	Module 3_1	1	n.小船	1
-4	dragon boat	Module 3_1	1	龙舟	0
-4	people	Module 3_1	1	n.人	1
-4	row	Module 3_1	1	vt.划船	0
-4	lake	Module 3_1	1	n.湖	1
-4	feed	Module 3_1	1	vt.喂	0
-4	bread	Module 3_1	1	n.面包	1
-4	get out	Module 3_1	1	走开	0
-5	far	Module 4_1	1	ad.远	1
-5	fast	Module 4_1	1	ad.快	1
-5	winner	Module 4_1	1	n.胜利者	0
-5	can't	Module 4_1	1	不能	0
-5	slow	Module 4_1	1	adj.慢的	1
-5	fly	Module 4_1	1	vi.飞	1
-5	koala	Module 4_1	1	n.树袋熊	0
-5	climb	Module 4_1	1	vt.爬	0
-5	cry	Module 4_1	1	n.哭	1
-6	drink	Module 5_1	1	n.一杯饮料	1
-6	shop	Module 5_1	1	n.商店	1
-6	go out	Module 5_1	1	外出	0
-6	thanks	Module 5_1	1	n.&int.谢谢	1
-6	library	Module 5_1	1	n.图书馆	1
-6	worry	Module 5_1	1	n.&v.担心	1
-7	have got	Module 6_1	1	有	0
-7	careful	Module 6_1	1	adj.小心	0
-7	wash	Module 6_1	1	v.洗	1
-7	has got	Module 6_1	1	有	0
-7	pear	Module 6_1	1	n.梨	0
-7	peach	Module 6_1	1	n.桃子	0
-8	headache	Module 7_1	1	n.头痛	0
-8	stomachache	Module 7_1	1	n.胃痛	0
-8	test	Module 7_1	1	n.考试	0
-8	Friday	Module 7_1	1	n.星期五	0
-8	clever	Module 7_1	1	adj.聪明	1
-8	cold	Module 7_1	1	n.感冒	1
-8	class	Module 7_1	1	n.课	1
-8	begin	Module 7_1	1	vt.开始	1
-8	cough	Module 7_1	1	n.咳嗽	0
-9	bring	Module 8_1	1	vt.带来	1
-9	umbrella	Module 8_1	1	n.雨伞	1
-9	get	Module 8_1	1	vt.拿	1
-9	which	Module 8_1	1	pron.哪一个	0
-9	broken	Module 8_1	1	adj.损坏的	0
-10	long jump	Module 9_1	1	跳远	0
-10	make friends	Module 9_1	1	交朋友	0
-10	sports day	Module 9_1	1	运动日	0
-10	high	Module 9_1	1	adj.高的	1
-10	high jump	Module 9_1	1	跳高	0
-10	race	Module 9_1	1	n.赛跑	0
-10	run a race	Module 9_1	1	参加赛跑	0
-10	star	Module 9_1	1	n.星	1
-10	uncle	Module 9_1	1	n.叔父	1
-11	airport	Module 10_1	1	n.飞机场	0
-11	sea	Module 10_1	1	n.大海	0
-11	visit	Module 10_1	1	v.拜访	1
-11	Saturday	Module 10_1	1	n.星期六	0
-11	film	Module 10_1	1	n.电影	1
+1	use	Module 1_1	3	n.&v.使用	1
+1	chopsticks	Module 1_1	3	n.筷子	0
+1	want	Module 1_1	3	vi.想要	1
+2	hungry	Module 1_2	3	adj.饥饿的	1
+2	mess	Module 1_2	3	n.肮脏	0
+2	hard	Module 1_2	3	adj.困难的	0
+2	knife	Module 1_2	3	n.刀	0
+2	fork	Module 1_2	3	n.叉	0
+2	a knife and fork	Module 1_2	3	一副刀叉	0
+3	easy	Module 1_3	3	adj.容易的	1
+3	hamburger	Module 1_3	3	n.汉堡包	0
+3	chips	Module 1_3	3	n.炸薯条	0
+3	grass	Module 1_3	3	n.草	1
+3	food	Module 1_3	3	n.食物	1
+3	fast food	Module 1_3	3	快餐	0
+4	make	Module 2_1	1	vt.制作	1
+4	cake	Module 2_1	1	n.蛋糕	1
+4	mum	Module 2_1	1	n.妈妈	1
+4	dad	Module 2_1	1	n.爸爸	1
+4	quiet	Module 2_1	1	adj.安静的	0
+4	water	Module 2_1	1	n.水	1
+4	lovely	Module 2_1	1	adj.可爱的	1
+5	naughty	Module 3_1	2	adj.淘气的	0
+5	paper	Module 3_1	2	adj.纸做的	0
+5	boat	Module 3_1	2	n.小船	1
+5	dragon boat	Module 3_1	2	龙舟	0
+5	people	Module 3_1	2	n.人	1
+6	row	Module 3_2	2	vt.划船	0
+6	lake	Module 3_2	2	n.湖	1
+6	feed	Module 3_2	2	vt.喂	0
+6	bread	Module 3_2	2	n.面包	1
+6	get out	Module 3_2	2	走开	0
+7	far	Module 4_1	2	ad.远	1
+7	fast	Module 4_1	2	ad.快	1
+7	winner	Module 4_1	2	n.胜利者	0
+7	can't	Module 4_1	2	不能	0
+7	slow	Module 4_1	2	adj.慢的	1
+8	fly	Module 4_2	2	vi.飞	1
+8	koala	Module 4_2	2	n.树袋熊	0
+8	climb	Module 4_2	2	vt.爬	0
+8	cry	Module 4_2	2	n.哭	1
+9	drink	Module 5_1	1	n.一杯饮料	1
+9	shop	Module 5_1	1	n.商店	1
+9	go out	Module 5_1	1	外出	0
+9	thanks	Module 5_1	1	n.&int.谢谢	1
+9	library	Module 5_1	1	n.图书馆	1
+9	worry	Module 5_1	1	n.&v.担心	1
+10	have got	Module 6_1	1	有	0
+10	careful	Module 6_1	1	adj.小心	0
+10	wash	Module 6_1	1	v.洗	1
+10	has got	Module 6_1	1	有	0
+10	pear	Module 6_1	1	n.梨	0
+10	peach	Module 6_1	1	n.桃子	0
+11	headache	Module 7_1	2	n.头痛	0
+11	stomachache	Module 7_1	2	n.胃痛	0
+11	test	Module 7_1	2	n.考试	0
+11	Friday	Module 7_1	2	n.星期五	0
+11	clever	Module 7_1	2	adj.聪明	1
+12	cold	Module 7_2	2	n.感冒	1
+12	class	Module 7_2	2	n.课	1
+12	begin	Module 7_2	2	vt.开始	1
+12	cough	Module 7_2	2	n.咳嗽	0
+13	bring	Module 8_1	1	vt.带来	1
+13	umbrella	Module 8_1	1	n.雨伞	1
+13	get	Module 8_1	1	vt.拿	1
+13	which	Module 8_1	1	pron.哪一个	0
+13	broken	Module 8_1	1	adj.损坏的	0
+14	long jump	Module 9_1	2	跳远	0
+14	make friends	Module 9_1	2	交朋友	0
+14	sports day	Module 9_1	2	运动日	0
+14	high	Module 9_1	2	adj.高的	1
+14	high jump	Module 9_1	2	跳高	0
+15	race	Module 9_2	2	n.赛跑	0
+15	run a race	Module 9_2	2	参加赛跑	0
+15	star	Module 9_2	2	n.星	1
+15	uncle	Module 9_2	2	n.叔父	1
+16	airport	Module 10_1	1	n.飞机场	0
+16	sea	Module 10_1	1	n.大海	0
+16	visit	Module 10_1	1	v.拜访	1
+16	Saturday	Module 10_1	1	n.星期六	0
+16	film	Module 10_1	1	n.电影	1

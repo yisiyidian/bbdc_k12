@@ -1,297 +1,297 @@
-1	attract	unit 5 Topic 1_1	5	v.吸引	0
-1	a great number of	unit 5 Topic 1_1	5	许多	0
-1	fetch	unit 5 Topic 1_1	5	vt.拿来	0
-2	introduce	unit 5 Topic 1_2	5	vt.介绍	1
-2	detail	unit 5 Topic 1_2	5	n.详情	0
-2	strange	unit 5 Topic 1_2	5	adj.奇怪的	1
-2	pine	unit 5 Topic 1_2	5	n.松树	0
-2	lie in	unit 5 Topic 1_2	5	位于	0
-2	length	unit 5 Topic 1_2	5	n.长度	0
-2	waterfall	unit 5 Topic 1_2	5	n.瀑布	0
-2	height	unit 5 Topic 1_2	5	n.高度	1
-2	grand	unit 5 Topic 1_2	5	adj.壮丽的	0
-2	imperial	unit 5 Topic 1_2	5	adj.帝国的	0
-2	carve	unit 5 Topic 1_2	5	vt.刻	0
-3	stone	unit 5 Topic 1_3	5	n.石头	1
-3	guard	unit 5 Topic 1_3	5	vt.&n.守卫	1
-3	heaven	unit 5 Topic 1_3	5	n.天堂	0
-3	comment	unit 5 Topic 1_3	5	n.&v.评论	0
-3	responsibility	unit 5 Topic 1_3	5	n.责任	0
-3	gradually	unit 5 Topic 1_3	5	adv.逐步地	0
-3	marble	unit 5 Topic 1_3	5	n.大理石	0
-3	entire	unit 5 Topic 1_3	5	adj.全部的	0
-3	branch	unit 5 Topic 1_3	5	n.支线	0
-3	construction	unit 5 Topic 1_3	5	n.建筑	0
-3	state	unit 5 Topic 1_3	5	n.状态	1
-4	remain	unit 5 Topic 1_4	5	v.&n.剩余	1
-4	brick	unit 5 Topic 1_4	5	n.砖	0
-4	separate	unit 5 Topic 1_4	5	v.分开	1
-4	enemy	unit 5 Topic 1_4	5	n.敌人	1
-4	expect	unit 5 Topic 1_4	5	v.预料	1
-4	treasure	unit 5 Topic 1_4	5	n.珍宝	1
-4	civilization	unit 5 Topic 1_4	5	n.文明	0
-4	suppose	unit 5 Topic 1_4	5	vt.假定	1
-4	attraction	unit 5 Topic 1_4	5	n.吸引力	0
-4	be famous for	unit 5 Topic 1_4	5	因...而著名	0
-4	major	unit 5 Topic 1_4	5	adj.主要的	0
-5	cocoa	unit 5 Topic 1_5	5	n.可可饮料	0
-5	porcelain	unit 5 Topic 1_5	5	n.瓷	0
-5	export	unit 5 Topic 1_5	5	n.&vt.出口	0
-5	mild	unit 5 Topic 1_5	5	adj.温和的	0
-5	unique	unit 5 Topic 1_5	5	adj.独特的	0
-5	include	unit 5 Topic 1_5	5	v.包含	1
-5	topic	unit 5 Topic 1_5	5	n.话题	0
-5	world-famous	unit 5 Topic 1_5	5	adj.举世闻名的	0
-5	firewood	unit 5 Topic 1_5	5	n.木柴	0
-5	sauce	unit 5 Topic 1_5	5	n.酱	0
-5	vinegar	unit 5 Topic 1_5	5	n.醋	0
-6	pioneer	unit 5 Topic 2_1	6	n.先锋	1
-6	B.C.	unit 5 Topic 2_1	6	公元前	0
-6	thinker	unit 5 Topic 2_1	6	n.思想家	0
-6	wise	unit 5 Topic 2_1	6	adj.明智的	1
-6	kindness	unit 5 Topic 2_1	6	n.仁慈	0
-6	philosopher	unit 5 Topic 2_1	6	n.哲学家	0
-6	influence	unit 5 Topic 2_1	6	vt.&n.影响	1
-6	whom	unit 5 Topic 2_1	6	pron.谁	1
-6	pass away	unit 5 Topic 2_1	6	去世	0
-6	unite	unit 5 Topic 2_1	6	v.统一	0
-7	defeat	unit 5 Topic 2_2	6	vt.击败	0
-7	set	unit 5 Topic 2_2	6	v.建立	0
-7	empire	unit 5 Topic 2_2	6	n.帝国	0
-7	forever	unit 5 Topic 2_2	6	adv.永远	0
-7	come to an end	unit 5 Topic 2_2	6	结束	0
-7	captain	unit 5 Topic 2_2	6	n.船长	0
-7	lead	unit 5 Topic 2_2	6	v.率领	1
-7	compass	unit 5 Topic 2_2	6	n.指南针	0
-7	sailing	unit 5 Topic 2_2	6	n.航行	0
-7	sail	unit 5 Topic 2_2	6	vt.航行	0
-8	coast	unit 5 Topic 2_3	6	n.海岸	1
-8	unfortunately	unit 5 Topic 2_3	6	adv.不幸地	0
-8	birth	unit 5 Topic 2_3	6	n.出生	1
-8	trade	unit 5 Topic 2_3	6	n.贸易	1
-8	missile	unit 5 Topic 2_3	6	n.导弹	0
-8	graduation	unit 5 Topic 2_3	6	n.毕业	0
-8	university	unit 5 Topic 2_3	6	n.大学	1
-8	Pacific Ocean	unit 5 Topic 2_3	6	n.太平洋	1
-8	further	unit 5 Topic 2_3	6	adj.进一步的	0
-8	degree	unit 5 Topic 2_3	6	n.学位	1
-9	aerospace	unit 5 Topic 2_4	6	n.航空航天工业	0
-9	graduate	unit 5 Topic 2_4	6	n.毕业	0
-9	researcher	unit 5 Topic 2_4	6	n.研究员	0
-9	theory	unit 5 Topic 2_4	6	n.理论	0
-9	motherland	unit 5 Topic 2_4	6	n.祖国	0
-9	blank	unit 5 Topic 2_4	6	n.空白	0
-9	institute	unit 5 Topic 2_4	6	n.机构	0
-9	charge	unit 5 Topic 2_4	6	n.主管	0
-9	in charge of	unit 5 Topic 2_4	6	掌管	0
-9	spacecraft	unit 5 Topic 2_4	6	n.宇宙飞船	0
-10	related	unit 5 Topic 2_5	6	相关的	0
-10	youth	unit 5 Topic 2_5	6	n.青年	0
-10	devotion	unit 5 Topic 2_5	6	n.奉献	0
-10	express	unit 5 Topic 2_5	6	vt.表达	1
-10	career	unit 5 Topic 2_5	6	n.事业	0
-10	destination	unit 5 Topic 2_5	6	n.目的地	0
-10	hybrid rice	unit 5 Topic 2_5	6	杂交水稻	0
-10	gunpowder	unit 5 Topic 2_5	6	n.火药	0
-10	printing	unit 5 Topic 2_5	6	n.印刷	0
-11	sailor	unit 5 Topic 2_6	6	n.水手	0
-11	discovery	unit 5 Topic 2_6	6	n.发现	1
-11	firework	unit 5 Topic 2_6	6	n.烟花	0
-11	Arab	unit 5 Topic 2_6	6	n&adj.阿拉伯人	0
-11	eastern	unit 5 Topic 2_6	6	adj.东方的	1
-11	bark	unit 5 Topic 2_6	6	n.狗叫	0
-11	rag	unit 5 Topic 2_6	6	n.破布	0
-11	clay	unit 5 Topic 2_6	6	n.黏土	0
-11	ink	unit 5 Topic 2_6	6	n.墨水	0
-12	hang	unit 5 Topic 3_1	6	vt.悬挂	1
-12	description	unit 5 Topic 3_1	6	n.形容	0
-12	Australian	unit 5 Topic 3_1	6	n&adj.澳大利亚人	1
-12	below	unit 5 Topic 3_1	6	prep.在...下面	1
-12	harbor	unit 5 Topic 3_1	6	n.港口	0
-12	leader	unit 5 Topic 3_1	6	n.领导者	1
-12	exhibition	unit 5 Topic 3_1	6	n.展览	0
-12	lean	unit 5 Topic 3_1	6	n.&v.倾斜	0
-12	private	unit 5 Topic 3_1	6	adj.私人的	1
-13	president	unit 5 Topic 3_2	6	n.总统	1
-13	ring out	unit 5 Topic 3_2	6	发出清脆的响声	0
-13	radium	unit 5 Topic 3_2	6	n.镭	0
-13	prize	unit 5 Topic 3_2	6	n.奖	1
-13	lifetime	unit 5 Topic 3_2	6	n.一生	0
-13	telegraph	unit 5 Topic 3_2	6	n.电报	0
-13	photographic	unit 5 Topic 3_2	6	adj.摄影的	0
-13	duty	unit 5 Topic 3_2	6	n.责任	0
-13	neither	unit 5 Topic 3_2	6	adv.&pron.两者都不	1
-14	nor	unit 5 Topic 3_3	6	conj.也不	1
-14	neither ... or ...	unit 5 Topic 3_3	6	既不...也不...	0
-14	remarry	unit 5 Topic 3_3	6	v.再婚	0
-14	stepmother	unit 5 Topic 3_3	6	n.继母	0
-14	license	unit 5 Topic 3_3	6	n.许可证	0
-14	lawyer	unit 5 Topic 3_3	6	n.律师	0
-14	trust	unit 5 Topic 3_3	6	vi.信任	1
-14	highly	unit 5 Topic 3_3	6	adv.很	0
-14	politician	unit 5 Topic 3_3	6	n.政治家	0
-15	elect	unit 5 Topic 3_4	6	v.选举	0
-15	Civil War	unit 5 Topic 3_4	6	内战	0
-15	break out	unit 5 Topic 3_4	6	爆发	0
-15	union	unit 5 Topic 3_4	6	n.联邦	0
-15	slave	unit 5 Topic 3_4	6	n.奴隶	0
-15	get rid of	unit 5 Topic 3_4	6	丢弃	0
-15	set free	unit 5 Topic 3_4	6	释放	0
-15	shoot	unit 5 Topic 3_4	6	vt.开	0
-15	break up	unit 5 Topic 3_4	6	拆开	0
-16	unit	unit 5 Topic 3_5	6	n.单元	1
-16	walker	unit 5 Topic 3_5	6	n.步行者	0
-16	backwards	unit 5 Topic 3_5	6	adv.向后	0
-16	concern	unit 5 Topic 3_5	6	vt.担心	0
-16	content	unit 5 Topic 3_5	6	adj.&n.满意的	0
-16	failure	unit 5 Topic 3_5	6	n.失败	0
-16	brief	unit 5 Topic 3_5	6	adj.简单的	0
-16	achievement	unit 5 Topic 3_5	6	n.功绩	0
-16	Egyptian	unit 5 Topic 3_5	6	n&adj.埃及的	0
-17	pyramid	unit 5 Topic 3_6	6	n.金字塔	0
-17	tomb	unit 5 Topic 3_6	6	n.坟墓	0
-17	complete	unit 5 Topic 3_6	6	vt.结束	1
-17	A.D.	unit 5 Topic 3_6	6	abbr.公元	0
-17	scientific	unit 5 Topic 3_6	6	adj.科学的	0
-17	ton	unit 5 Topic 3_6	6	n.吨	1
-17	fix	unit 5 Topic 3_6	6	vt.修理	1
-17	tool	unit 5 Topic 3_6	6	n.工具	1
-17	mystery	unit 5 Topic 3_6	6	n.奥秘	0
-17	completion	unit 5 Topic 3_6	6	n.完成	0
-18	graze	review of unit 5_1	1	v.放牧	0
-18	make fun of	review of unit 5_1	1	嘲弄	0
-18	wolf	review of unit 5_1	1	n.狼	0
-18	iron	review of unit 5_1	1	adj.坚强的	0
-18	glory	review of unit 5_1	1	n.荣誉	0
-18	peasant	review of unit 5_1	1	n.农民	0
-18	battle	review of unit 5_1	1	n.战斗	0
-18	battlefield	review of unit 5_1	1	n.战场	0
-18	memory	review of unit 5_1	1	n.记忆	0
-18	in memory of	review of unit 5_1	1	纪念	0
-18	romantic	review of unit 5_1	1	adj.浪漫的	0
-18	tale	review of unit 5_1	1	n.故事	0
-18	home and abroad	review of unit 5_1	1	国内外	0
-18	scenery	review of unit 5_1	1	n.景色	0
-19	would rather than	unit 6 Topic 1_1	3	宁愿	0
-19	actress	unit 6 Topic 1_1	3	n.女演员	1
-19	charming	unit 6 Topic 1_1	3	adj.令人着迷的	0
-19	educational	unit 6 Topic 1_1	3	教育的	0
-19	science fiction	unit 6 Topic 1_1	3	科幻小说	0
-19	tragedy	unit 6 Topic 1_1	3	n.悲剧	0
-19	documentary	unit 6 Topic 1_1	3	n.纪录片	0
-19	comedy	unit 6 Topic 1_1	3	n.喜剧	0
-19	ending	unit 6 Topic 1_1	3	n.结尾	0
-19	drawing	unit 6 Topic 1_1	3	n.绘画	0
-19	mission	unit 6 Topic 1_1	3	n.使命	0
-20	adventure	unit 6 Topic 1_2	3	n.冒险经历	0
-20	mysterious	unit 6 Topic 1_2	3	adj.神秘的	0
-20	crew	unit 6 Topic 1_2	3	n.全体工作人员	0
-20	rescue	unit 6 Topic 1_2	3	n.援救	0
-20	award	unit 6 Topic 1_2	3	n.奖	0
-20	ceremony	unit 6 Topic 1_2	3	n.典礼	0
-20	motion	unit 6 Topic 1_2	3	n.运动	0
-20	director	unit 6 Topic 1_2	3	n.导演	1
-20	general	unit 6 Topic 1_2	3	adj.大体的	1
-20	footstep	unit 6 Topic 1_2	3	n.足迹	0
-20	talented	unit 6 Topic 1_2	3	adj.有才能的	0
-21	take up	unit 6 Topic 1_3	3	占据	0
-21	coach	unit 6 Topic 1_3	3	n.教练	1
-21	formally	unit 6 Topic 1_3	3	adv.正式地	0
-21	rather than	unit 6 Topic 1_3	3	而不是	0
-21	organize	unit 6 Topic 1_3	3	vi.组织	0
-21	aim	unit 6 Topic 1_3	3	n.目的	0
-21	advance	unit 6 Topic 1_3	3	n.&v.发展	0
-21	as is known to all	unit 6 Topic 1_3	3	众所周知	0
-21	therefore	unit 6 Topic 1_3	3	adv.因此	0
-21	violence	unit 6 Topic 1_3	3	n.暴力	0
-21	violent	unit 6 Topic 1_3	3	adj.暴力的	0
-22	literature	unit 6 Topic 2_1	4	n.文字	0
-22	classic	unit 6 Topic 2_1	4	adj.典型的	0
-22	in one's view	unit 6 Topic 2_1	4	在某人看来	0
-22	overcome	unit 6 Topic 2_1	4	vt.克服	0
-22	statement	unit 6 Topic 2_1	4	n.陈述	0
-22	literary	unit 6 Topic 2_1	4	adj.文学的	0
-22	society	unit 6 Topic 2_1	4	n.社团	1
-22	moving	unit 6 Topic 2_1	4	adj.感人的	0
-22	poetry	unit 6 Topic 2_1	4	n.诗歌	0
-22	poet	unit 6 Topic 2_1	4	n.诗人	0
-23	playwright	unit 6 Topic 2_2	4	n.剧作家	0
-23	drama	unit 6 Topic 2_2	4	n.戏剧	0
-23	scene	unit 6 Topic 2_2	4	n.场面	0
-23	kiss	unit 6 Topic 2_2	4	vt.&n.吻	1
-23	masterpiece	unit 6 Topic 2_2	4	n.代表作	0
-23	district	unit 6 Topic 2_2	4	n.地区	0
-23	unlike	unit 6 Topic 2_2	4	prep.不像	0
-23	rainbow	unit 6 Topic 2_2	4	n.虹	0
-23	inspiration	unit 6 Topic 2_2	4	n.灵感	0
-23	eventually	unit 6 Topic 2_2	4	adv.最后	0
-24	golden	unit 6 Topic 2_3	4	adj.金色的	0
-24	monk	unit 6 Topic 2_3	4	n.修道士	0
-24	narrator	unit 6 Topic 2_3	4	n.叙述者	0
-24	husband	unit 6 Topic 2_3	4	n.丈夫	1
-24	precious	unit 6 Topic 2_3	4	adj.宝贵的	0
-24	possession	unit 6 Topic 2_3	4	n.个人财产	0
-24	wealth	unit 6 Topic 2_3	4	n.财产	1
-24	chain	unit 6 Topic 2_3	4	n.一系列	0
-24	sudden	unit 6 Topic 2_3	4	adj.突然的	1
-24	all of a sudden	unit 6 Topic 2_3	4	突然	0
-25	cut off	unit 6 Topic 2_4	4	切断	0
-25	live through	unit 6 Topic 2_4	4	经历...而幸存	0
-25	possibly	unit 6 Topic 2_4	4	adv.可能	0
-25	comb	unit 6 Topic 2_4	4	n.&v.梳子	0
-25	jeweled	unit 6 Topic 2_4	4	adj.镶有宝石的	0
-25	rim	unit 6 Topic 2_4	4	n.边沿	0
-25	long for	unit 6 Topic 2_4	4	渴望	0
-25	hunt	unit 6 Topic 2_4	4	v.搜寻	0
-25	at present	unit 6 Topic 2_4	4	目前	0
-25	couple	unit 6 Topic 2_4	4	n.两人	1
-25	the couple	unit 6 Topic 2_4	4	夫妻	0
-26	first of all	unit 6 Topic 3_1	2	首先	0
-26	exchange	unit 6 Topic 3_1	2	vt.交换	0
-26	chalk	unit 6 Topic 3_1	2	n.粉笔	1
-26	dozen	unit 6 Topic 3_1	2	n.十二个	0
-26	dozens of	unit 6 Topic 3_1	2	很多	0
-26	excellence	unit 6 Topic 3_1	2	n.优秀	0
-26	valuable	unit 6 Topic 3_1	2	adj.很有价值的	1
-26	bottom	unit 6 Topic 3_1	2	n.&adj.底	1
-26	unforgettable	unit 6 Topic 3_1	2	adj.难以忘怀的	0
-26	joy	unit 6 Topic 3_1	2	n.高兴	0
-26	royal	unit 6 Topic 3_1	2	adj.女王的	0
-26	recall	unit 6 Topic 3_1	2	v.回忆起	0
-27	competition	unit 6 Topic 3_2	2	n.比赛	1
-27	custom	unit 6 Topic 3_2	2	n.风俗	0
-27	principal	unit 6 Topic 3_2	2	adj.首要的	0
-27	diploma	unit 6 Topic 3_2	2	n.毕业文凭	0
-27	congratulate	unit 6 Topic 3_2	2	vt.祝贺	0
-27	possibility	unit 6 Topic 3_2	2	n.机会	0
-27	thankful	unit 6 Topic 3_2	2	adj.感谢的	0
-27	in a hurry	unit 6 Topic 3_2	2	匆忙地	0
-27	hug	unit 6 Topic 3_2	2	v.拥抱	0
-27	in time	unit 6 Topic 3_2	2	及时	0
-27	promise	unit 6 Topic 3_2	2	v.许诺	1
-27	conclude	unit 6 Topic 3_2	2	vt.推断出	0
-28	pound	review of unit 5-6_1	3	n.英磅	1
-28	absent	review of unit 5-6_1	3	adj.缺席的	1
-28	alive	review of unit 5-6_1	3	adj.活着的	1
-28	sharply	review of unit 5-6_1	3	adv.急剧地	0
-28	asleep	review of unit 5-6_1	3	adj.睡着的	1
-28	awake	review of unit 5-6_1	3	adj.醒着的	1
-28	ant	review of unit 5-6_1	3	n.蚂蚁	1
-28	hard-working	review of unit 5-6_1	3	adj.工作努力的	0
-29	unless	review of unit 5-6_2	3	conj.除非	1
-29	truth	review of unit 5-6_2	3	n.真相	1
-29	operate	review of unit 5-6_2	3	vi.操作	0
-29	instruction	review of unit 5-6_2	3	n.用法说明	1
-29	northwestern	review of unit 5-6_2	3	西北的	0
-29	flow	review of unit 5-6_2	3	vi.流	0
-29	appearance	review of unit 5-6_2	3	n.出现	0
-29	muddy	review of unit 5-6_2	3	adj.多泥的	0
-30	idiom	review of unit 5-6_3	3	n.习语	0
-30	argument	review of unit 5-6_3	3	n.争吵	0
-30	slap	review of unit 5-6_3	3	v.打	0
-30	till	review of unit 5-6_3	3	conj.直到...为止	0
-30	mud	review of unit 5-6_3	3	n.泥	0
-30	sink	review of unit 5-6_3	3	vi.下沉	0
-30	reply	review of unit 5-6_3	3	vt.回答	1
-30	erase	review of unit 5-6_3	3	v.擦掉	0
-30	response	review of unit 5-6_3	3	n.反应	0
+1	attract	unit 5 Topic 1_1	10	v.吸引	0
+1	a great number of	unit 5 Topic 1_1	10	许多	0
+1	fetch	unit 5 Topic 1_1	10	vt.拿来	0
+2	introduce	unit 5 Topic 1_2	10	vt.介绍	1
+2	detail	unit 5 Topic 1_2	10	n.详情	0
+2	strange	unit 5 Topic 1_2	10	adj.奇怪的	1
+2	pine	unit 5 Topic 1_2	10	n.松树	0
+2	lie in	unit 5 Topic 1_2	10	位于	0
+3	length	unit 5 Topic 1_3	10	n.长度	0
+3	waterfall	unit 5 Topic 1_3	10	n.瀑布	0
+3	height	unit 5 Topic 1_3	10	n.高度	1
+3	grand	unit 5 Topic 1_3	10	adj.壮丽的	0
+3	imperial	unit 5 Topic 1_3	10	adj.帝国的	0
+4	carve	unit 5 Topic 1_4	10	vt.刻	0
+4	stone	unit 5 Topic 1_4	10	n.石头	1
+4	guard	unit 5 Topic 1_4	10	vt.&n.守卫	1
+4	heaven	unit 5 Topic 1_4	10	n.天堂	0
+4	comment	unit 5 Topic 1_4	10	n.&v.评论	0
+5	responsibility	unit 5 Topic 1_5	10	n.责任	0
+5	gradually	unit 5 Topic 1_5	10	adv.逐步地	0
+5	marble	unit 5 Topic 1_5	10	n.大理石	0
+5	entire	unit 5 Topic 1_5	10	adj.全部的	0
+5	branch	unit 5 Topic 1_5	10	n.支线	0
+6	construction	unit 5 Topic 1_6	10	n.建筑	0
+6	state	unit 5 Topic 1_6	10	n.状态	1
+6	remain	unit 5 Topic 1_6	10	v.&n.剩余	1
+6	brick	unit 5 Topic 1_6	10	n.砖	0
+6	separate	unit 5 Topic 1_6	10	v.分开	1
+7	enemy	unit 5 Topic 1_7	10	n.敌人	1
+7	expect	unit 5 Topic 1_7	10	v.预料	1
+7	treasure	unit 5 Topic 1_7	10	n.珍宝	1
+7	civilization	unit 5 Topic 1_7	10	n.文明	0
+7	suppose	unit 5 Topic 1_7	10	vt.假定	1
+8	attraction	unit 5 Topic 1_8	10	n.吸引力	0
+8	be famous for	unit 5 Topic 1_8	10	因...而著名	0
+8	major	unit 5 Topic 1_8	10	adj.主要的	0
+8	cocoa	unit 5 Topic 1_8	10	n.可可饮料	0
+8	porcelain	unit 5 Topic 1_8	10	n.瓷	0
+9	export	unit 5 Topic 1_9	10	n.&vt.出口	0
+9	mild	unit 5 Topic 1_9	10	adj.温和的	0
+9	unique	unit 5 Topic 1_9	10	adj.独特的	0
+9	include	unit 5 Topic 1_9	10	v.包含	1
+9	topic	unit 5 Topic 1_9	10	n.话题	0
+10	world-famous	unit 5 Topic 1_10	10	adj.举世闻名的	0
+10	firewood	unit 5 Topic 1_10	10	n.木柴	0
+10	sauce	unit 5 Topic 1_10	10	n.酱	0
+10	vinegar	unit 5 Topic 1_10	10	n.醋	0
+11	pioneer	unit 5 Topic 2_1	12	n.先锋	1
+11	B.C.	unit 5 Topic 2_1	12	公元前	0
+11	thinker	unit 5 Topic 2_1	12	n.思想家	0
+11	wise	unit 5 Topic 2_1	12	adj.明智的	1
+11	kindness	unit 5 Topic 2_1	12	n.仁慈	0
+12	philosopher	unit 5 Topic 2_2	12	n.哲学家	0
+12	influence	unit 5 Topic 2_2	12	vt.&n.影响	1
+12	whom	unit 5 Topic 2_2	12	pron.谁	1
+12	pass away	unit 5 Topic 2_2	12	去世	0
+12	unite	unit 5 Topic 2_2	12	v.统一	0
+13	defeat	unit 5 Topic 2_3	12	vt.击败	0
+13	set	unit 5 Topic 2_3	12	v.建立	0
+13	empire	unit 5 Topic 2_3	12	n.帝国	0
+13	forever	unit 5 Topic 2_3	12	adv.永远	0
+13	come to an end	unit 5 Topic 2_3	12	结束	0
+14	captain	unit 5 Topic 2_4	12	n.船长	0
+14	lead	unit 5 Topic 2_4	12	v.率领	1
+14	compass	unit 5 Topic 2_4	12	n.指南针	0
+14	sailing	unit 5 Topic 2_4	12	n.航行	0
+14	sail	unit 5 Topic 2_4	12	vt.航行	0
+15	coast	unit 5 Topic 2_5	12	n.海岸	1
+15	unfortunately	unit 5 Topic 2_5	12	adv.不幸地	0
+15	birth	unit 5 Topic 2_5	12	n.出生	1
+15	trade	unit 5 Topic 2_5	12	n.贸易	1
+15	missile	unit 5 Topic 2_5	12	n.导弹	0
+16	graduation	unit 5 Topic 2_6	12	n.毕业	0
+16	university	unit 5 Topic 2_6	12	n.大学	1
+16	Pacific Ocean	unit 5 Topic 2_6	12	n.太平洋	1
+16	further	unit 5 Topic 2_6	12	adj.进一步的	0
+16	degree	unit 5 Topic 2_6	12	n.学位	1
+17	aerospace	unit 5 Topic 2_7	12	n.航空航天工业	0
+17	graduate	unit 5 Topic 2_7	12	n.毕业	0
+17	researcher	unit 5 Topic 2_7	12	n.研究员	0
+17	theory	unit 5 Topic 2_7	12	n.理论	0
+17	motherland	unit 5 Topic 2_7	12	n.祖国	0
+18	blank	unit 5 Topic 2_8	12	n.空白	0
+18	institute	unit 5 Topic 2_8	12	n.机构	0
+18	charge	unit 5 Topic 2_8	12	n.主管	0
+18	in charge of	unit 5 Topic 2_8	12	掌管	0
+18	spacecraft	unit 5 Topic 2_8	12	n.宇宙飞船	0
+19	related	unit 5 Topic 2_9	12	相关的	0
+19	youth	unit 5 Topic 2_9	12	n.青年	0
+19	devotion	unit 5 Topic 2_9	12	n.奉献	0
+19	express	unit 5 Topic 2_9	12	vt.表达	1
+19	career	unit 5 Topic 2_9	12	n.事业	0
+20	destination	unit 5 Topic 2_10	12	n.目的地	0
+20	hybrid rice	unit 5 Topic 2_10	12	杂交水稻	0
+20	gunpowder	unit 5 Topic 2_10	12	n.火药	0
+20	printing	unit 5 Topic 2_10	12	n.印刷	0
+20	sailor	unit 5 Topic 2_10	12	n.水手	0
+21	discovery	unit 5 Topic 2_11	12	n.发现	1
+21	firework	unit 5 Topic 2_11	12	n.烟花	0
+21	Arab	unit 5 Topic 2_11	12	n&adj.阿拉伯人	0
+21	eastern	unit 5 Topic 2_11	12	adj.东方的	1
+22	bark	unit 5 Topic 2_12	12	n.狗叫	0
+22	rag	unit 5 Topic 2_12	12	n.破布	0
+22	clay	unit 5 Topic 2_12	12	n.黏土	0
+22	ink	unit 5 Topic 2_12	12	n.墨水	0
+23	hang	unit 5 Topic 3_1	11	vt.悬挂	1
+23	description	unit 5 Topic 3_1	11	n.形容	0
+23	Australian	unit 5 Topic 3_1	11	n&adj.澳大利亚人	1
+23	below	unit 5 Topic 3_1	11	prep.在...下面	1
+23	harbor	unit 5 Topic 3_1	11	n.港口	0
+24	leader	unit 5 Topic 3_2	11	n.领导者	1
+24	exhibition	unit 5 Topic 3_2	11	n.展览	0
+24	lean	unit 5 Topic 3_2	11	n.&v.倾斜	0
+24	private	unit 5 Topic 3_2	11	adj.私人的	1
+24	president	unit 5 Topic 3_2	11	n.总统	1
+25	ring out	unit 5 Topic 3_3	11	发出清脆的响声	0
+25	radium	unit 5 Topic 3_3	11	n.镭	0
+25	prize	unit 5 Topic 3_3	11	n.奖	1
+25	lifetime	unit 5 Topic 3_3	11	n.一生	0
+25	telegraph	unit 5 Topic 3_3	11	n.电报	0
+26	photographic	unit 5 Topic 3_4	11	adj.摄影的	0
+26	duty	unit 5 Topic 3_4	11	n.责任	0
+26	neither	unit 5 Topic 3_4	11	adv.&pron.两者都不	1
+26	nor	unit 5 Topic 3_4	11	conj.也不	1
+26	neither ... or ...	unit 5 Topic 3_4	11	既不...也不...	0
+27	remarry	unit 5 Topic 3_5	11	v.再婚	0
+27	stepmother	unit 5 Topic 3_5	11	n.继母	0
+27	license	unit 5 Topic 3_5	11	n.许可证	0
+27	lawyer	unit 5 Topic 3_5	11	n.律师	0
+27	trust	unit 5 Topic 3_5	11	vi.信任	1
+28	highly	unit 5 Topic 3_6	11	adv.很	0
+28	politician	unit 5 Topic 3_6	11	n.政治家	0
+28	elect	unit 5 Topic 3_6	11	v.选举	0
+28	Civil War	unit 5 Topic 3_6	11	内战	0
+28	break out	unit 5 Topic 3_6	11	爆发	0
+29	union	unit 5 Topic 3_7	11	n.联邦	0
+29	slave	unit 5 Topic 3_7	11	n.奴隶	0
+29	get rid of	unit 5 Topic 3_7	11	丢弃	0
+29	set free	unit 5 Topic 3_7	11	释放	0
+29	shoot	unit 5 Topic 3_7	11	vt.开	0
+30	break up	unit 5 Topic 3_8	11	拆开	0
+30	unit	unit 5 Topic 3_8	11	n.单元	1
+30	walker	unit 5 Topic 3_8	11	n.步行者	0
+30	backwards	unit 5 Topic 3_8	11	adv.向后	0
+30	concern	unit 5 Topic 3_8	11	vt.担心	0
+31	content	unit 5 Topic 3_9	11	adj.&n.满意的	0
+31	failure	unit 5 Topic 3_9	11	n.失败	0
+31	brief	unit 5 Topic 3_9	11	adj.简单的	0
+31	achievement	unit 5 Topic 3_9	11	n.功绩	0
+31	Egyptian	unit 5 Topic 3_9	11	n&adj.埃及的	0
+32	pyramid	unit 5 Topic 3_10	11	n.金字塔	0
+32	tomb	unit 5 Topic 3_10	11	n.坟墓	0
+32	complete	unit 5 Topic 3_10	11	vt.结束	1
+32	A.D.	unit 5 Topic 3_10	11	abbr.公元	0
+32	scientific	unit 5 Topic 3_10	11	adj.科学的	0
+33	ton	unit 5 Topic 3_11	11	n.吨	1
+33	fix	unit 5 Topic 3_11	11	vt.修理	1
+33	tool	unit 5 Topic 3_11	11	n.工具	1
+33	mystery	unit 5 Topic 3_11	11	n.奥秘	0
+33	completion	unit 5 Topic 3_11	11	n.完成	0
+34	graze	review of unit 5_1	3	v.放牧	0
+34	make fun of	review of unit 5_1	3	嘲弄	0
+34	wolf	review of unit 5_1	3	n.狼	0
+34	iron	review of unit 5_1	3	adj.坚强的	0
+34	glory	review of unit 5_1	3	n.荣誉	0
+35	peasant	review of unit 5_2	3	n.农民	0
+35	battle	review of unit 5_2	3	n.战斗	0
+35	battlefield	review of unit 5_2	3	n.战场	0
+35	memory	review of unit 5_2	3	n.记忆	0
+35	in memory of	review of unit 5_2	3	纪念	0
+36	romantic	review of unit 5_3	3	adj.浪漫的	0
+36	tale	review of unit 5_3	3	n.故事	0
+36	home and abroad	review of unit 5_3	3	国内外	0
+36	scenery	review of unit 5_3	3	n.景色	0
+37	would rather than	unit 6 Topic 1_1	7	宁愿	0
+37	actress	unit 6 Topic 1_1	7	n.女演员	1
+37	charming	unit 6 Topic 1_1	7	adj.令人着迷的	0
+37	educational	unit 6 Topic 1_1	7	教育的	0
+37	science fiction	unit 6 Topic 1_1	7	科幻小说	0
+38	tragedy	unit 6 Topic 1_2	7	n.悲剧	0
+38	documentary	unit 6 Topic 1_2	7	n.纪录片	0
+38	comedy	unit 6 Topic 1_2	7	n.喜剧	0
+38	ending	unit 6 Topic 1_2	7	n.结尾	0
+38	drawing	unit 6 Topic 1_2	7	n.绘画	0
+39	mission	unit 6 Topic 1_3	7	n.使命	0
+39	adventure	unit 6 Topic 1_3	7	n.冒险经历	0
+39	mysterious	unit 6 Topic 1_3	7	adj.神秘的	0
+39	crew	unit 6 Topic 1_3	7	n.全体工作人员	0
+39	rescue	unit 6 Topic 1_3	7	n.援救	0
+40	award	unit 6 Topic 1_4	7	n.奖	0
+40	ceremony	unit 6 Topic 1_4	7	n.典礼	0
+40	motion	unit 6 Topic 1_4	7	n.运动	0
+40	director	unit 6 Topic 1_4	7	n.导演	1
+40	general	unit 6 Topic 1_4	7	adj.大体的	1
+41	footstep	unit 6 Topic 1_5	7	n.足迹	0
+41	talented	unit 6 Topic 1_5	7	adj.有才能的	0
+41	take up	unit 6 Topic 1_5	7	占据	0
+41	coach	unit 6 Topic 1_5	7	n.教练	1
+41	formally	unit 6 Topic 1_5	7	adv.正式地	0
+42	rather than	unit 6 Topic 1_6	7	而不是	0
+42	organize	unit 6 Topic 1_6	7	vi.组织	0
+42	aim	unit 6 Topic 1_6	7	n.目的	0
+42	advance	unit 6 Topic 1_6	7	n.&v.发展	0
+43	as is known to all	unit 6 Topic 1_7	7	众所周知	0
+43	therefore	unit 6 Topic 1_7	7	adv.因此	0
+43	violence	unit 6 Topic 1_7	7	n.暴力	0
+43	violent	unit 6 Topic 1_7	7	adj.暴力的	0
+44	literature	unit 6 Topic 2_1	8	n.文字	0
+44	classic	unit 6 Topic 2_1	8	adj.典型的	0
+44	in one's view	unit 6 Topic 2_1	8	在某人看来	0
+44	overcome	unit 6 Topic 2_1	8	vt.克服	0
+44	statement	unit 6 Topic 2_1	8	n.陈述	0
+45	literary	unit 6 Topic 2_2	8	adj.文学的	0
+45	society	unit 6 Topic 2_2	8	n.社团	1
+45	moving	unit 6 Topic 2_2	8	adj.感人的	0
+45	poetry	unit 6 Topic 2_2	8	n.诗歌	0
+45	poet	unit 6 Topic 2_2	8	n.诗人	0
+46	playwright	unit 6 Topic 2_3	8	n.剧作家	0
+46	drama	unit 6 Topic 2_3	8	n.戏剧	0
+46	scene	unit 6 Topic 2_3	8	n.场面	0
+46	kiss	unit 6 Topic 2_3	8	vt.&n.吻	1
+46	masterpiece	unit 6 Topic 2_3	8	n.代表作	0
+47	district	unit 6 Topic 2_4	8	n.地区	0
+47	unlike	unit 6 Topic 2_4	8	prep.不像	0
+47	rainbow	unit 6 Topic 2_4	8	n.虹	0
+47	inspiration	unit 6 Topic 2_4	8	n.灵感	0
+47	eventually	unit 6 Topic 2_4	8	adv.最后	0
+48	golden	unit 6 Topic 2_5	8	adj.金色的	0
+48	monk	unit 6 Topic 2_5	8	n.修道士	0
+48	narrator	unit 6 Topic 2_5	8	n.叙述者	0
+48	husband	unit 6 Topic 2_5	8	n.丈夫	1
+48	precious	unit 6 Topic 2_5	8	adj.宝贵的	0
+49	possession	unit 6 Topic 2_6	8	n.个人财产	0
+49	wealth	unit 6 Topic 2_6	8	n.财产	1
+49	chain	unit 6 Topic 2_6	8	n.一系列	0
+49	sudden	unit 6 Topic 2_6	8	adj.突然的	1
+49	all of a sudden	unit 6 Topic 2_6	8	突然	0
+50	cut off	unit 6 Topic 2_7	8	切断	0
+50	live through	unit 6 Topic 2_7	8	经历...而幸存	0
+50	possibly	unit 6 Topic 2_7	8	adv.可能	0
+50	comb	unit 6 Topic 2_7	8	n.&v.梳子	0
+50	jeweled	unit 6 Topic 2_7	8	adj.镶有宝石的	0
+51	rim	unit 6 Topic 2_8	8	n.边沿	0
+51	long for	unit 6 Topic 2_8	8	渴望	0
+51	hunt	unit 6 Topic 2_8	8	v.搜寻	0
+51	at present	unit 6 Topic 2_8	8	目前	0
+51	couple	unit 6 Topic 2_8	8	n.两人	1
+51	the couple	unit 6 Topic 2_8	8	夫妻	0
+52	first of all	unit 6 Topic 3_1	5	首先	0
+52	exchange	unit 6 Topic 3_1	5	vt.交换	0
+52	chalk	unit 6 Topic 3_1	5	n.粉笔	1
+52	dozen	unit 6 Topic 3_1	5	n.十二个	0
+52	dozens of	unit 6 Topic 3_1	5	很多	0
+53	excellence	unit 6 Topic 3_2	5	n.优秀	0
+53	valuable	unit 6 Topic 3_2	5	adj.很有价值的	1
+53	bottom	unit 6 Topic 3_2	5	n.&adj.底	1
+53	unforgettable	unit 6 Topic 3_2	5	adj.难以忘怀的	0
+53	joy	unit 6 Topic 3_2	5	n.高兴	0
+54	royal	unit 6 Topic 3_3	5	adj.女王的	0
+54	recall	unit 6 Topic 3_3	5	v.回忆起	0
+54	competition	unit 6 Topic 3_3	5	n.比赛	1
+54	custom	unit 6 Topic 3_3	5	n.风俗	0
+54	principal	unit 6 Topic 3_3	5	adj.首要的	0
+55	diploma	unit 6 Topic 3_4	5	n.毕业文凭	0
+55	congratulate	unit 6 Topic 3_4	5	vt.祝贺	0
+55	possibility	unit 6 Topic 3_4	5	n.机会	0
+55	thankful	unit 6 Topic 3_4	5	adj.感谢的	0
+55	in a hurry	unit 6 Topic 3_4	5	匆忙地	0
+56	hug	unit 6 Topic 3_5	5	v.拥抱	0
+56	in time	unit 6 Topic 3_5	5	及时	0
+56	promise	unit 6 Topic 3_5	5	v.许诺	1
+56	conclude	unit 6 Topic 3_5	5	vt.推断出	0
+57	pound	review of unit 5-6_1	5	n.英磅	1
+57	absent	review of unit 5-6_1	5	adj.缺席的	1
+57	alive	review of unit 5-6_1	5	adj.活着的	1
+57	sharply	review of unit 5-6_1	5	adv.急剧地	0
+57	asleep	review of unit 5-6_1	5	adj.睡着的	1
+58	awake	review of unit 5-6_2	5	adj.醒着的	1
+58	ant	review of unit 5-6_2	5	n.蚂蚁	1
+58	hard-working	review of unit 5-6_2	5	adj.工作努力的	0
+58	unless	review of unit 5-6_2	5	conj.除非	1
+58	truth	review of unit 5-6_2	5	n.真相	1
+59	operate	review of unit 5-6_3	5	vi.操作	0
+59	instruction	review of unit 5-6_3	5	n.用法说明	1
+59	northwestern	review of unit 5-6_3	5	西北的	0
+59	flow	review of unit 5-6_3	5	vi.流	0
+59	appearance	review of unit 5-6_3	5	n.出现	0
+60	muddy	review of unit 5-6_4	5	adj.多泥的	0
+60	idiom	review of unit 5-6_4	5	n.习语	0
+60	argument	review of unit 5-6_4	5	n.争吵	0
+60	slap	review of unit 5-6_4	5	v.打	0
+60	till	review of unit 5-6_4	5	conj.直到...为止	0
+61	mud	review of unit 5-6_5	5	n.泥	0
+61	sink	review of unit 5-6_5	5	vi.下沉	0
+61	reply	review of unit 5-6_5	5	vt.回答	1
+61	erase	review of unit 5-6_5	5	v.擦掉	0
+61	response	review of unit 5-6_5	5	n.反应	0

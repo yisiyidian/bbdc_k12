@@ -8,85 +8,85 @@
 2	astronaut	Unit1_2	2	n.宇航员	1
 2	engineer	Unit1_2	2	n.工程师	1
 2	pop	Unit1_2	2	adj.流行的	1
-3	form	Unit2_1	1	n.表格	1
-3	violin	Unit2_1	1	n.小提琴	1
-3	chance	Unit2_1	1	n.机会	1
-3	band	Unit2_1	1	n.乐队	1
-3	next	Unit2_1	1	adj.下次的	1
-3	be interested in	Unit2_1	1	对...有兴趣	1
-3	piano	Unit2_1	1	n.钢琴	1
-3	silly	Unit2_1	1	adj.蠢的	1
-3	child	Unit2_1	1	n.孩子	1
-4	guest	Unit3_1	1	n.客人	1
-4	arrive at	Unit3_1	1	到达	1
-4	parcel	Unit3_1	1	n.包裹	1
-4	rack	Unit3_1	1	n.托架	1
-4	disc	Unit3_1	1	n.盘片	1
-4	blow	Unit3_1	1	vt.吹	1
-4	blew	Unit3_1	1	vi.吹（过去式）	1
-4	around	Unit3_1	1	prep.在...周围	1
-4	stop	Unit3_1	1	v.停止	1
-4	stopped	Unit3_1	1	vt.停止（过去式）	1
-5	shine	Unit4_1	1	vi.照耀	1
-5	shone	Unit4_1	1	vi.照耀（过去式）	1
-5	earth	Unit4_1	1	n.地球	1
-5	comfortable	Unit4_1	1	adj.舒适的	1
-5	heat	Unit4_1	1	n.热	1
-5	become	Unit4_1	1	vt.变成	1
-5	became	Unit4_1	1	vt.变成（过去式）	0
-5	air	Unit4_1	1	n.空气	1
-5	raindrop	Unit4_1	1	n.雨滴	1
-5	a kind of	Unit4_1	1	一种	1
-6	visit	Unit5_1	1	n.&v.访问	1
-6	century	Unit5_1	1	n.世纪	1
-6	thousand	Unit5_1	1	num.千	1
-6	true	Unit5_1	1	adj.真的	1
-6	begin	Unit5_1	1	vt.开始	1
-6	began	Unit5_1	1	vt.开始（过去式）	0
-6	Social Studies	Unit5_1	1	品社课	1
-6	Computer Science	Unit5_1	1	计算机课	1
-6	Arts and Crafts	Unit5_1	1	工艺美术课	1
-7	spend	Unit6_1	1	v.度过	1
-7	spent	Unit6_1	1	v.度过（过去式）	1
-7	terrible	Unit6_1	1	adj.糟糕的	1
-7	wait	Unit6_1	1	v.等候	1
-7	at last	Unit6_1	1	最后	1
-7	forecast	Unit6_1	1	v.&n.预报	1
-7	most	Unit6_1	1	adj.大部分的	1
-7	bright	Unit6_1	1	adj.明亮的	1
-7	piece	Unit6_1	1	n.片	1
-7	part	Unit6_1	1	n.部分	1
-8	museum	Unit7_1	1	n.博物馆	1
-8	Chinese knot	Unit7_1	1	中国结	1
-8	silk	Unit7_1	1	n.丝绸	1
-8	view	Unit7_1	1	n.风景	1
-8	modern	Unit7_1	1	adj.现代的	1
-8	maglev	Unit7_1	1	n.磁悬浮	1
-8	foreigner	Unit7_1	1	n.外国人	1
-9	uniform	Unit8_1	1	n.制服	1
-9	wear	Unit8_1	1	vt.穿	1
-9	wore	Unit8_1	1	vt.穿，戴（过去式）	1
-9	agree	Unit8_1	1	vt.同意	1
-9	dining room	Unit8_1	1	餐厅	1
-9	keep	Unit8_1	1	vt.保持	1
-9	kept	Unit8_1	1	vt.保持（过去式）	1
-9	duty	Unit8_1	1	n.值日	1
-9	because	Unit8_1	1	conj.因为	1
-9	quiet	Unit8_1	1	adj.安静的	1
-10	fried rice	Unit9_1	1	炒饭	1
-10	bun	Unit9_1	1	n.小圆面包	1
-10	delicious	Unit9_1	1	adj.美味的	1
-10	dumpling	Unit9_1	1	n.饺子	1
-10	sticky rice	Unit9_1	1	糯米	1
-10	steamed bread	Unit9_1	1	馒头	1
-10	soup	Unit9_1	1	n.汤	1
-10	crab	Unit9_1	1	n.螃蟹	1
-11	world	Unit10_1	1	n.世界	1
-11	different	Unit10_1	1	adj.不同的	1
-11	exam	Unit10_1	1	n.考试	1
-11	trip	Unit10_1	1	n.旅行	1
-11	popular	Unit10_1	1	adj.流行的	1
-11	abroad	Unit10_1	1	adv.在国外	1
-11	spaceship	Unit10_1	1	n.宇宙飞船	1
-11	hope	Unit10_1	1	n.&v.希望	1
-11	wonderful	Unit10_1	1	adj.精彩的	1
+3	form	Unit2_1	2	n.表格	1
+3	violin	Unit2_1	2	n.小提琴	1
+3	chance	Unit2_1	2	n.机会	1
+3	band	Unit2_1	2	n.乐队	1
+3	next	Unit2_1	2	adj.下次的	1
+4	be interested in	Unit2_2	2	对...有兴趣	1
+4	piano	Unit2_2	2	n.钢琴	1
+4	silly	Unit2_2	2	adj.蠢的	1
+4	child	Unit2_2	2	n.孩子	1
+5	guest	Unit3_1	2	n.客人	1
+5	arrive at	Unit3_1	2	到达	1
+5	parcel	Unit3_1	2	n.包裹	1
+5	rack	Unit3_1	2	n.托架	1
+5	disc	Unit3_1	2	n.盘片	1
+6	blow	Unit3_2	2	vt.吹	1
+6	blew	Unit3_2	2	vi.吹（过去式）	1
+6	around	Unit3_2	2	prep.在...周围	1
+6	stop	Unit3_2	2	v.停止	1
+6	stopped	Unit3_2	2	vt.停止（过去式）	1
+7	shine	Unit4_1	2	vi.照耀	1
+7	shone	Unit4_1	2	vi.照耀（过去式）	1
+7	earth	Unit4_1	2	n.地球	1
+7	comfortable	Unit4_1	2	adj.舒适的	1
+7	heat	Unit4_1	2	n.热	1
+8	become	Unit4_2	2	vt.变成	1
+8	became	Unit4_2	2	vt.变成（过去式）	0
+8	air	Unit4_2	2	n.空气	1
+8	raindrop	Unit4_2	2	n.雨滴	1
+8	a kind of	Unit4_2	2	一种	1
+9	visit	Unit5_1	2	n.&v.访问	1
+9	century	Unit5_1	2	n.世纪	1
+9	thousand	Unit5_1	2	num.千	1
+9	true	Unit5_1	2	adj.真的	1
+9	begin	Unit5_1	2	vt.开始	1
+10	began	Unit5_2	2	vt.开始（过去式）	0
+10	Social Studies	Unit5_2	2	品社课	1
+10	Computer Science	Unit5_2	2	计算机课	1
+10	Arts and Crafts	Unit5_2	2	工艺美术课	1
+11	spend	Unit6_1	2	v.度过	1
+11	spent	Unit6_1	2	v.度过（过去式）	1
+11	terrible	Unit6_1	2	adj.糟糕的	1
+11	wait	Unit6_1	2	v.等候	1
+11	at last	Unit6_1	2	最后	1
+12	forecast	Unit6_2	2	v.&n.预报	1
+12	most	Unit6_2	2	adj.大部分的	1
+12	bright	Unit6_2	2	adj.明亮的	1
+12	piece	Unit6_2	2	n.片	1
+12	part	Unit6_2	2	n.部分	1
+13	museum	Unit7_1	1	n.博物馆	1
+13	Chinese knot	Unit7_1	1	中国结	1
+13	silk	Unit7_1	1	n.丝绸	1
+13	view	Unit7_1	1	n.风景	1
+13	modern	Unit7_1	1	adj.现代的	1
+13	maglev	Unit7_1	1	n.磁悬浮	1
+13	foreigner	Unit7_1	1	n.外国人	1
+14	uniform	Unit8_1	2	n.制服	1
+14	wear	Unit8_1	2	vt.穿	1
+14	wore	Unit8_1	2	vt.穿，戴（过去式）	1
+14	agree	Unit8_1	2	vt.同意	1
+14	dining room	Unit8_1	2	餐厅	1
+15	keep	Unit8_2	2	vt.保持	1
+15	kept	Unit8_2	2	vt.保持（过去式）	1
+15	duty	Unit8_2	2	n.值日	1
+15	because	Unit8_2	2	conj.因为	1
+15	quiet	Unit8_2	2	adj.安静的	1
+16	fried rice	Unit9_1	2	炒饭	1
+16	bun	Unit9_1	2	n.小圆面包	1
+16	delicious	Unit9_1	2	adj.美味的	1
+16	dumpling	Unit9_1	2	n.饺子	1
+17	sticky rice	Unit9_2	2	糯米	1
+17	steamed bread	Unit9_2	2	馒头	1
+17	soup	Unit9_2	2	n.汤	1
+17	crab	Unit9_2	2	n.螃蟹	1
+18	world	Unit10_1	2	n.世界	1
+18	different	Unit10_1	2	adj.不同的	1
+18	exam	Unit10_1	2	n.考试	1
+18	trip	Unit10_1	2	n.旅行	1
+18	popular	Unit10_1	2	adj.流行的	1
+19	abroad	Unit10_2	2	adv.在国外	1
+19	spaceship	Unit10_2	2	n.宇宙飞船	1
+19	hope	Unit10_2	2	n.&v.希望	1
+19	wonderful	Unit10_2	2	adj.精彩的	1

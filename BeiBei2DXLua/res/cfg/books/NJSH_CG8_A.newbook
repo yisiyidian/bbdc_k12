@@ -1,233 +1,233 @@
-1	baseball	Unit1_1	3	n.棒球运动	1
-1	title	Unit1_1	3	n.标题	1
-1	corner	Unit1_1	3	n.角	1
-2	metre	Unit1_2	3	n.米	1
-2	own	Unit1_2	3	vt.拥有	1
-2	nearby	Unit1_2	3	adv.在附近	1
-2	college	Unit1_2	3	n.学院	1
-2	university	Unit1_2	3	n.大学	1
-2	accountant	Unit1_2	3	n.会计	0
-2	during	Unit1_2	3	prep.在...期间	1
-2	keen	Unit1_2	3	adj.喜爱	1
-2	be keen on	Unit1_2	3	对...着迷	1
-2	ski	Unit1_2	3	vt.滑雪	0
-2	table tennis	Unit1_2	3	乒乓球运动	1
-3	best	Unit1_3	3	adj.最好的	1
-3	physics	Unit1_3	3	n.物理学	1
-3	ambition	Unit1_3	3	n.志向	1
-3	maybe	Unit1_3	3	adv.可能	1
-3	enclose	Unit1_3	3	vt.随函附上	0
-3	height	Unit1_3	3	n.高度	1
-3	dream	Unit1_3	3	v.&n.梦想	1
-3	probably	Unit1_3	3	adv.大概	1
-3	tie	Unit1_3	3	vt.领带	1
-3	roof	Unit1_3	3	n.屋顶	1
-4	similar	Unit2_1	3	adj.相像的	1
-4	be similar to	Unit2_1	3	与...相类似的	1
-4	expect	Unit2_1	3	v.预料	1
-4	business	Unit2_1	3	n.生意	1
-4	whizz-kid	Unit2_1	3	n.神童	0
-4	successful	Unit2_1	3	adj.成功的	1
-4	put on	Unit2_1	3	穿上	1
-4	luckily	Unit2_1	3	adv.幸运地	1
-4	popular	Unit2_1	3	adj.受欢迎的	1
-4	responsible	Unit2_1	3	adj.有责任	1
-4	be responsible for	Unit2_1	3	对...负责	1
-5	sale	Unit2_2	3	n.&v.销售	1
-5	client	Unit2_2	3	n.委托人	1
-5	boring	Unit2_2	3	adj.没趣的	1
-5	simple	Unit2_2	3	adj.简单的	1
-5	achieve	Unit2_2	3	vt.达到	1
-5	fail	Unit2_2	3	v.&n.不及格	1
-5	exam	Unit2_2	3	n.考试	1
-5	return	Unit2_2	3	vt.返回	1
-5	attend	Unit2_2	3	vt.出席	1
-5	assist	Unit2_2	3	vt.帮助	0
-5	continue	Unit2_2	3	vt.继续做	1
-6	seldom	Unit2_3	3	adv.很少	0
-6	usual	Unit2_3	3	adj.通常的	1
-6	repeat	Unit2_3	3	n.重复	1
-6	explain	Unit2_3	3	vt.解释	1
-6	energy	Unit2_3	3	n.能量	1
-6	cell	Unit2_3	3	n.细胞	1
-6	force	Unit2_3	3	n.力	1
-6	heat	Unit2_3	3	n.热	1
-6	physical	Unit2_3	3	adj.身体的	1
-6	article	Unit2_3	3	n.文章	1
-7	ever	Unit3_1	3	adv.从来	1
-7	argue	Unit3_1	3	vt.争论	1
-7	deal with	Unit3_1	3	处理	1
-7	trouble	Unit3_1	3	n.困难	1
-7	unusual	Unit3_1	3	adj.不寻常的	1
-7	happen to	Unit3_1	3	遇到	1
-7	argument	Unit3_1	3	n.争论	1
-7	hold out	Unit3_1	3	递出东西	1
-7	crowd	Unit3_1	3	n.人群	1
-7	stare	Unit3_1	3	vt.盯着看	1
-7	through	Unit3_1	3	prep.穿过	1
-8	quietly	Unit3_2	3	adv.轻轻地	1
-8	be going on	Unit3_2	3	发生	1
-8	steal	Unit3_2	3	vt.偷	1
-8	purse	Unit3_2	3	n.（尤指女用）钱包	0
-8	postcard	Unit3_2	3	n.明信片	1
-8	gone	Unit3_2	3	adj.走了	0
-8	gate	Unit3_2	3	n.大门	1
-8	aboard	Unit3_2	3	adv.上船	0
-8	go after	Unit3_2	3	追赶某人	1
-8	strange	Unit3_2	3	adj.奇怪的	1
-8	be afraid of	Unit3_2	3	害怕	1
-9	dial	Unit3_3	3	vi.拨（号）	0
-9	theft	Unit3_3	3	n.偷	0
-9	detail	Unit3_3	3	n.资料，细节	1
-9	put ... down	Unit3_3	3	放下	1
-9	get off	Unit3_3	3	下车	1
-9	worried	Unit3_3	3	adj.担心的	1
-9	well done	Unit3_3	3	干得好	1
-9	realize	Unit3_3	3	vt.意识到	1
-9	fight	Unit3_3	3	n.打架	1
-9	rather	Unit3_3	3	adv.相当	1
-9	downstairs	Unit3_3	3	adv.在楼下	1
-10	divide	Unit4_1	4	vt.除以	1
-10	degree	Unit4_1	4	n.度	1
-10	especially	Unit4_1	4	adv.市场	1
-10	calculate	Unit4_1	4	vt.计算	1
-10	brain	Unit4_1	4	n.脑	1
-10	part	Unit4_1	4	n.部分	1
-10	language	Unit4_1	4	n.语言	1
-10	nearly	Unit4_1	4	adv.几乎	1
-10	system	Unit4_1	4	n.系统	1
-11	invent	Unit4_2	4	v.发明	1
-11	develop	Unit4_2	4	vt.发展	1
-11	invention	Unit4_2	4	n.发明物	1
-11	abacus	Unit4_2	4	n.算盘	0
-11	accurate	Unit4_2	4	adj.正确无误的	1
-11	electronic	Unit4_2	4	adj.电子的	1
-11	calculator	Unit4_2	4	n.计算器	1
-11	subtract	Unit4_2	4	vt.减	0
-11	multiply	Unit4_2	4	vt.乘	0
-12	percentage	Unit4_3	4	n.百分比	0
-12	square root	Unit4_3	4	平方根	0
-12	powerful	Unit4_3	4	adj.很强力的	1
-12	in a flash	Unit4_3	4	转瞬间	1
-12	calculation	Unit4_3	4	n.计算	1
-12	whole	Unit4_3	4	adj.全部的	1
-12	lifetime	Unit4_3	4	n.一生	1
-12	against	Unit4_3	4	prep.与...相比	1
-12	living	Unit4_3	4	adj.活的	1
-13	human	Unit4_4	4	adj.人的	1
-13	following	Unit4_4	4	adj.下列的	1
-13	amazing	Unit4_4	4	adj.令人惊奇的	1
-13	lightning	Unit4_4	4	n.闪电	0
-13	like lightning	Unit4_4	4	闪电般地	0
-13	program	Unit4_4	4	v.编写程序	0
-13	power	Unit4_4	4	n.能量	1
-13	complete	Unit4_4	4	vt.使完整	1
-13	check	Unit4_4	4	vt.检查	1
-14	Africa	Unit5_1	4	n.非洲	1
-14	Europe	Unit5_1	4	n.欧洲	1
-14	fierce	Unit5_1	4	adj.凶猛的	1
-14	though	Unit5_1	4	conj.虽然	1
-14	look up	Unit5_1	4	查阅	1
-14	encyclopaedia	Unit5_1	4	n.百科全书	0
-14	dinosaur	Unit5_1	4	n.恐龙	0
-14	exist	Unit5_1	4	v.存在	1
-14	even	Unit5_1	4	adv.甚至	1
-15	harmless	Unit5_2	4	adj.无害的	1
-15	harmful	Unit5_2	4	adj.有害的	1
-15	die out	Unit5_2	4	灭绝	1
-15	nobody	Unit5_2	4	pron.没有人	1
-15	know about	Unit5_2	4	了解	1
-15	skeleton	Unit5_2	4	n.骨骼	0
-15	footprint	Unit5_2	4	n.脚印	0
-15	leave ... behind	Unit5_2	4	遗留	1
-15	thinker	Unit5_2	4	n.思想家	1
-16	Greece	Unit5_3	4	n.希腊	1
-16	as ... as possible	Unit5_3	4	尽可能地	1
-16	jar	Unit5_3	4	n.罐子	1
-16	amusement park	Unit5_3	4	游乐场	1
-16	create	Unit5_3	4	vt.创造	1
-16	character	Unit5_3	4	n.人物	1
-16	mail	Unit5_3	4	n.邮件	1
-16	real	Unit5_3	4	adj.真实的	1
-16	while	Unit5_3	4	conj.与...同时	1
-17	cause	Unit5_4	4	vt.引起	1
-17	harm	Unit5_4	4	n.伤害	1
-17	believe	Unit5_4	4	vi.相信	1
-17	die of	Unit5_4	4	死于...	1
-17	disease	Unit5_4	4	n.疾病	1
-17	government	Unit5_4	4	n.政府	1
-17	repair	Unit5_4	4	vi.修理	1
-17	fee	Unit5_4	4	n.费用	1
-17	journey	Unit5_4	4	n.旅行	1
-18	captain	Unit6_1	4	n.船长	1
-18	take place	Unit6_1	4	发生	1
-18	in trouble	Unit6_1	4	陷入困境	1
-18	navigator	Unit6_1	4	n.驾驶员	0
-18	lost	Unit6_1	4	adj.迷路的	1
-18	run out of	Unit6_1	4	用尽	1
-18	unexplored	Unit6_1	4	adj.无人涉足的	1
-18	bring down	Unit6_1	4	使着陆	1
-18	valley	Unit6_1	4	n.山谷	1
-18	close to	Unit6_1	4	离...很近	1
-19	cliff	Unit6_2	4	n.悬崖	0
-19	rock	Unit6_2	4	n.岩石	1
-19	storey	Unit6_2	4	n.楼层	0
-19	approach	Unit6_2	4	v.靠近	1
-19	monster	Unit6_2	4	n.怪物	0
-19	clearly	Unit6_2	4	adv.明显地	1
-19	partly	Unit6_2	4	adv.部分地	1
-19	kangaroo	Unit6_2	4	n.袋鼠	0
-19	giant	Unit6_2	4	adj.巨大的	0
-19	except	Unit6_2	4	vt.除了	1
-20	single	Unit6_3	4	adj.单个的	1
-20	roar	Unit6_3	4	n.&v.吼叫	0
-20	blood	Unit6_3	4	n.血	1
-20	alien	Unit6_3	4	n.外星人	0
-20	steel	Unit6_3	4	n.钢	1
-20	rat	Unit6_3	4	n.老鼠	0
-20	trap	Unit6_3	4	n.捕鼠器	1
-20	magnet	Unit6_3	4	n.磁铁	0
-20	cage	Unit6_3	4	n.笼子	0
-20	peace	Unit6_3	4	n.和平	1
-21	in peace	Unit6_4	4	和平地	1
-21	in pieces	Unit6_4	4	成为碎片	1
-21	favour	Unit6_4	4	n.恩惠	1
-21	do ... a favour	Unit6_4	4	帮...的忙	1
-21	trust	Unit6_4	4	vi.信任	1
-21	offer	Unit6_4	4	v.给予	1
-21	frighten	Unit6_4	4	v.使惊吓	1
-21	crew	Unit6_4	4	n.全体工作人员	1
-21	arrange	Unit6_4	4	vt.安排	1
-21	below	Unit6_4	4	adv.在下面	1
-22	per	Unit7_1	3	prep.每	1
-22	escape	Unit7_1	3	vt.逃走	1
-22	escape from	Unit7_1	3	逃跑、逃走、逃出	1
-22	kill	Unit7_1	3	v.杀死	1
-22	lie	Unit7_1	3	vi.躺	1
-22	fall asleep	Unit7_1	3	入睡	1
-22	snore	Unit7_1	3	v.打鼾	0
-22	laser	Unit7_1	3	n.激光	0
-22	torch	Unit7_1	3	n.手电筒	0
-22	case	Unit7_1	3	n.盒	1
-22	attract	Unit7_1	3	v.吸引	0
-23	interrupt	Unit7_2	3	vt.插嘴	1
-23	moment	Unit7_2	3	n.瞬间	1
-23	aim	Unit7_2	3	v.瞄准	1
-23	aim at	Unit7_2	3	瞄准	1
-23	beam	Unit7_2	3	n.光线	0
-23	hit	Unit7_2	3	n.&v.击中	1
-23	attack	Unit7_2	3	vt.&n.攻击	1
-23	damage	Unit7_2	3	n.&v.破坏	1
-23	finished	Unit7_2	3	adj.完蛋	1
-23	make sure	Unit7_2	3	确保	1
-23	whisper	Unit7_2	3	vt.低语	1
-24	be done for	Unit7_3	3	处境艰难	1
-24	panic	Unit7_3	3	v.（使）惊慌失措	0
-24	freedom	Unit7_3	3	n.自由	1
-24	figure	Unit7_3	3	n.轮廓	1
-24	silently	Unit7_3	3	adv.悄悄地	1
-24	search	Unit7_3	3	v.搜查	1
-24	crash	Unit7_3	3	v.猛撞	1
-24	base	Unit7_3	3	n.基地	1
-24	petrol	Unit7_3	3	n.汽油	1
-24	decide	Unit7_3	3	vt.决定	1
+1	baseball	Unit1_1	5	n.棒球运动	1
+1	title	Unit1_1	5	n.标题	1
+1	corner	Unit1_1	5	n.角	1
+2	metre	Unit1_2	5	n.米	1
+2	own	Unit1_2	5	vt.拥有	1
+2	nearby	Unit1_2	5	adv.在附近	1
+2	college	Unit1_2	5	n.学院	1
+2	university	Unit1_2	5	n.大学	1
+3	accountant	Unit1_3	5	n.会计	0
+3	during	Unit1_3	5	prep.在...期间	1
+3	keen	Unit1_3	5	adj.喜爱	1
+3	be keen on	Unit1_3	5	对...着迷	1
+3	ski	Unit1_3	5	vt.滑雪	0
+4	table tennis	Unit1_4	5	乒乓球运动	1
+4	best	Unit1_4	5	adj.最好的	1
+4	physics	Unit1_4	5	n.物理学	1
+4	ambition	Unit1_4	5	n.志向	1
+4	maybe	Unit1_4	5	adv.可能	1
+5	enclose	Unit1_5	5	vt.随函附上	0
+5	height	Unit1_5	5	n.高度	1
+5	dream	Unit1_5	5	v.&n.梦想	1
+5	probably	Unit1_5	5	adv.大概	1
+5	tie	Unit1_5	5	vt.领带	1
+5	roof	Unit1_5	5	n.屋顶	1
+6	similar	Unit2_1	6	adj.相像的	1
+6	be similar to	Unit2_1	6	与...相类似的	1
+6	expect	Unit2_1	6	v.预料	1
+6	business	Unit2_1	6	n.生意	1
+6	whizz-kid	Unit2_1	6	n.神童	0
+7	successful	Unit2_2	6	adj.成功的	1
+7	put on	Unit2_2	6	穿上	1
+7	luckily	Unit2_2	6	adv.幸运地	1
+7	popular	Unit2_2	6	adj.受欢迎的	1
+7	responsible	Unit2_2	6	adj.有责任	1
+8	be responsible for	Unit2_3	6	对...负责	1
+8	sale	Unit2_3	6	n.&v.销售	1
+8	client	Unit2_3	6	n.委托人	1
+8	boring	Unit2_3	6	adj.没趣的	1
+8	simple	Unit2_3	6	adj.简单的	1
+9	achieve	Unit2_4	6	vt.达到	1
+9	fail	Unit2_4	6	v.&n.不及格	1
+9	exam	Unit2_4	6	n.考试	1
+9	return	Unit2_4	6	vt.返回	1
+9	attend	Unit2_4	6	vt.出席	1
+10	assist	Unit2_5	6	vt.帮助	0
+10	continue	Unit2_5	6	vt.继续做	1
+10	seldom	Unit2_5	6	adv.很少	0
+10	usual	Unit2_5	6	adj.通常的	1
+10	repeat	Unit2_5	6	n.重复	1
+10	explain	Unit2_5	6	vt.解释	1
+11	energy	Unit2_6	6	n.能量	1
+11	cell	Unit2_6	6	n.细胞	1
+11	force	Unit2_6	6	n.力	1
+11	heat	Unit2_6	6	n.热	1
+11	physical	Unit2_6	6	adj.身体的	1
+11	article	Unit2_6	6	n.文章	1
+12	ever	Unit3_1	7	adv.从来	1
+12	argue	Unit3_1	7	vt.争论	1
+12	deal with	Unit3_1	7	处理	1
+12	trouble	Unit3_1	7	n.困难	1
+12	unusual	Unit3_1	7	adj.不寻常的	1
+13	happen to	Unit3_2	7	遇到	1
+13	argument	Unit3_2	7	n.争论	1
+13	hold out	Unit3_2	7	递出东西	1
+13	crowd	Unit3_2	7	n.人群	1
+13	stare	Unit3_2	7	vt.盯着看	1
+14	through	Unit3_3	7	prep.穿过	1
+14	quietly	Unit3_3	7	adv.轻轻地	1
+14	be going on	Unit3_3	7	发生	1
+14	steal	Unit3_3	7	vt.偷	1
+14	purse	Unit3_3	7	n.（尤指女用）钱包	0
+15	postcard	Unit3_4	7	n.明信片	1
+15	gone	Unit3_4	7	adj.走了	0
+15	gate	Unit3_4	7	n.大门	1
+15	aboard	Unit3_4	7	adv.上船	0
+15	go after	Unit3_4	7	追赶某人	1
+16	strange	Unit3_5	7	adj.奇怪的	1
+16	be afraid of	Unit3_5	7	害怕	1
+16	dial	Unit3_5	7	vi.拨（号）	0
+16	theft	Unit3_5	7	n.偷	0
+16	detail	Unit3_5	7	n.资料，细节	1
+17	put ... down	Unit3_6	7	放下	1
+17	get off	Unit3_6	7	下车	1
+17	worried	Unit3_6	7	adj.担心的	1
+17	well done	Unit3_6	7	干得好	1
+18	realize	Unit3_7	7	vt.意识到	1
+18	fight	Unit3_7	7	n.打架	1
+18	rather	Unit3_7	7	adv.相当	1
+18	downstairs	Unit3_7	7	adv.在楼下	1
+19	divide	Unit4_1	7	vt.除以	1
+19	degree	Unit4_1	7	n.度	1
+19	especially	Unit4_1	7	adv.市场	1
+19	calculate	Unit4_1	7	vt.计算	1
+19	brain	Unit4_1	7	n.脑	1
+20	part	Unit4_2	7	n.部分	1
+20	language	Unit4_2	7	n.语言	1
+20	nearly	Unit4_2	7	adv.几乎	1
+20	system	Unit4_2	7	n.系统	1
+20	invent	Unit4_2	7	v.发明	1
+21	develop	Unit4_3	7	vt.发展	1
+21	invention	Unit4_3	7	n.发明物	1
+21	abacus	Unit4_3	7	n.算盘	0
+21	accurate	Unit4_3	7	adj.正确无误的	1
+21	electronic	Unit4_3	7	adj.电子的	1
+22	calculator	Unit4_4	7	n.计算器	1
+22	subtract	Unit4_4	7	vt.减	0
+22	multiply	Unit4_4	7	vt.乘	0
+22	percentage	Unit4_4	7	n.百分比	0
+22	square root	Unit4_4	7	平方根	0
+23	powerful	Unit4_5	7	adj.很强力的	1
+23	in a flash	Unit4_5	7	转瞬间	1
+23	calculation	Unit4_5	7	n.计算	1
+23	whole	Unit4_5	7	adj.全部的	1
+23	lifetime	Unit4_5	7	n.一生	1
+24	against	Unit4_6	7	prep.与...相比	1
+24	living	Unit4_6	7	adj.活的	1
+24	human	Unit4_6	7	adj.人的	1
+24	following	Unit4_6	7	adj.下列的	1
+24	amazing	Unit4_6	7	adj.令人惊奇的	1
+25	lightning	Unit4_7	7	n.闪电	0
+25	like lightning	Unit4_7	7	闪电般地	0
+25	program	Unit4_7	7	v.编写程序	0
+25	power	Unit4_7	7	n.能量	1
+25	complete	Unit4_7	7	vt.使完整	1
+25	check	Unit4_7	7	vt.检查	1
+26	Africa	Unit5_1	7	n.非洲	1
+26	Europe	Unit5_1	7	n.欧洲	1
+26	fierce	Unit5_1	7	adj.凶猛的	1
+26	though	Unit5_1	7	conj.虽然	1
+26	look up	Unit5_1	7	查阅	1
+27	encyclopaedia	Unit5_2	7	n.百科全书	0
+27	dinosaur	Unit5_2	7	n.恐龙	0
+27	exist	Unit5_2	7	v.存在	1
+27	even	Unit5_2	7	adv.甚至	1
+27	harmless	Unit5_2	7	adj.无害的	1
+28	harmful	Unit5_3	7	adj.有害的	1
+28	die out	Unit5_3	7	灭绝	1
+28	nobody	Unit5_3	7	pron.没有人	1
+28	know about	Unit5_3	7	了解	1
+28	skeleton	Unit5_3	7	n.骨骼	0
+29	footprint	Unit5_4	7	n.脚印	0
+29	leave ... behind	Unit5_4	7	遗留	1
+29	thinker	Unit5_4	7	n.思想家	1
+29	Greece	Unit5_4	7	n.希腊	1
+29	as ... as possible	Unit5_4	7	尽可能地	1
+30	jar	Unit5_5	7	n.罐子	1
+30	amusement park	Unit5_5	7	游乐场	1
+30	create	Unit5_5	7	vt.创造	1
+30	character	Unit5_5	7	n.人物	1
+30	mail	Unit5_5	7	n.邮件	1
+31	real	Unit5_6	7	adj.真实的	1
+31	while	Unit5_6	7	conj.与...同时	1
+31	cause	Unit5_6	7	vt.引起	1
+31	harm	Unit5_6	7	n.伤害	1
+31	believe	Unit5_6	7	vi.相信	1
+32	die of	Unit5_7	7	死于...	1
+32	disease	Unit5_7	7	n.疾病	1
+32	government	Unit5_7	7	n.政府	1
+32	repair	Unit5_7	7	vi.修理	1
+32	fee	Unit5_7	7	n.费用	1
+32	journey	Unit5_7	7	n.旅行	1
+33	captain	Unit6_1	8	n.船长	1
+33	take place	Unit6_1	8	发生	1
+33	in trouble	Unit6_1	8	陷入困境	1
+33	navigator	Unit6_1	8	n.驾驶员	0
+33	lost	Unit6_1	8	adj.迷路的	1
+34	run out of	Unit6_2	8	用尽	1
+34	unexplored	Unit6_2	8	adj.无人涉足的	1
+34	bring down	Unit6_2	8	使着陆	1
+34	valley	Unit6_2	8	n.山谷	1
+34	close to	Unit6_2	8	离...很近	1
+35	cliff	Unit6_3	8	n.悬崖	0
+35	rock	Unit6_3	8	n.岩石	1
+35	storey	Unit6_3	8	n.楼层	0
+35	approach	Unit6_3	8	v.靠近	1
+35	monster	Unit6_3	8	n.怪物	0
+36	clearly	Unit6_4	8	adv.明显地	1
+36	partly	Unit6_4	8	adv.部分地	1
+36	kangaroo	Unit6_4	8	n.袋鼠	0
+36	giant	Unit6_4	8	adj.巨大的	0
+36	except	Unit6_4	8	vt.除了	1
+37	single	Unit6_5	8	adj.单个的	1
+37	roar	Unit6_5	8	n.&v.吼叫	0
+37	blood	Unit6_5	8	n.血	1
+37	alien	Unit6_5	8	n.外星人	0
+37	steel	Unit6_5	8	n.钢	1
+38	rat	Unit6_6	8	n.老鼠	0
+38	trap	Unit6_6	8	n.捕鼠器	1
+38	magnet	Unit6_6	8	n.磁铁	0
+38	cage	Unit6_6	8	n.笼子	0
+38	peace	Unit6_6	8	n.和平	1
+39	in peace	Unit6_7	8	和平地	1
+39	in pieces	Unit6_7	8	成为碎片	1
+39	favour	Unit6_7	8	n.恩惠	1
+39	do ... a favour	Unit6_7	8	帮...的忙	1
+39	trust	Unit6_7	8	vi.信任	1
+40	offer	Unit6_8	8	v.给予	1
+40	frighten	Unit6_8	8	v.使惊吓	1
+40	crew	Unit6_8	8	n.全体工作人员	1
+40	arrange	Unit6_8	8	vt.安排	1
+40	below	Unit6_8	8	adv.在下面	1
+41	per	Unit7_1	6	prep.每	1
+41	escape	Unit7_1	6	vt.逃走	1
+41	escape from	Unit7_1	6	逃跑、逃走、逃出	1
+41	kill	Unit7_1	6	v.杀死	1
+41	lie	Unit7_1	6	vi.躺	1
+42	fall asleep	Unit7_2	6	入睡	1
+42	snore	Unit7_2	6	v.打鼾	0
+42	laser	Unit7_2	6	n.激光	0
+42	torch	Unit7_2	6	n.手电筒	0
+42	case	Unit7_2	6	n.盒	1
+43	attract	Unit7_3	6	v.吸引	0
+43	interrupt	Unit7_3	6	vt.插嘴	1
+43	moment	Unit7_3	6	n.瞬间	1
+43	aim	Unit7_3	6	v.瞄准	1
+43	aim at	Unit7_3	6	瞄准	1
+44	beam	Unit7_4	6	n.光线	0
+44	hit	Unit7_4	6	n.&v.击中	1
+44	attack	Unit7_4	6	vt.&n.攻击	1
+44	damage	Unit7_4	6	n.&v.破坏	1
+44	finished	Unit7_4	6	adj.完蛋	1
+45	make sure	Unit7_5	6	确保	1
+45	whisper	Unit7_5	6	vt.低语	1
+45	be done for	Unit7_5	6	处境艰难	1
+45	panic	Unit7_5	6	v.（使）惊慌失措	0
+45	freedom	Unit7_5	6	n.自由	1
+45	figure	Unit7_5	6	n.轮廓	1
+46	silently	Unit7_6	6	adv.悄悄地	1
+46	search	Unit7_6	6	v.搜查	1
+46	crash	Unit7_6	6	v.猛撞	1
+46	base	Unit7_6	6	n.基地	1
+46	petrol	Unit7_6	6	n.汽油	1
+46	decide	Unit7_6	6	vt.决定	1

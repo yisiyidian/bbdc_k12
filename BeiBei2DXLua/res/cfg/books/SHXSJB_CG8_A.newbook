@@ -1,284 +1,284 @@
-1	main	unit 1 Topic 1_1	4	adj.主要的	1
-1	unit	unit 1 Topic 1_1	4	n.单位	1
-1	main unit	unit 1 Topic 1_1	4	主机	0
-2	monitor	unit 1 Topic 1_2	4	n.显示器	1
-2	keyboard	unit 1 Topic 1_2	4	n.键盘	0
-2	mouse	unit 1 Topic 1_2	4	n.鼠标	1
-2	electronic	unit 1 Topic 1_2	4	adj.电子的	1
-2	type in	unit 1 Topic 1_2	4	输入	1
-2	process	unit 1 Topic 1_2	4	n.&vt.加工	1
-2	do word processing	unit 1 Topic 1_2	4	进行文字处理	0
-2	control	unit 1 Topic 1_2	4	n.控制	1
-2	ought	unit 1 Topic 1_2	4	aux应当	1
-3	ought to	unit 1 Topic 1_3	4	应当	1
-3	get familiar with	unit 1 Topic 1_3	4	熟悉	1
-3	able	unit 1 Topic 1_3	4	adj.有能力的	1
-3	be able to	unit 1 Topic 1_3	4	能 ...	1
-3	download	unit 1 Topic 1_3	4	v.下载	0
-3	online	unit 1 Topic 1_3	4	n.联机的	0
-3	online shopping	unit 1 Topic 1_3	4	网上购物	0
-3	advantage	unit 1 Topic 1_3	4	n.优点	1
-3	allow	unit 1 Topic 1_3	4	vt.允许	1
-4	stop ... From doing ...	unit 1 Topic 1_4	4	阻止某人做某事	1
-4	relax	unit 1 Topic 1_4	4	vi.放松	1
-4	help ... with ...	unit 1 Topic 1_4	4	帮助某人做某事	1
-4	disadvantage	unit 1 Topic 1_4	4	n.缺点	0
-4	invention	unit 1 Topic 1_4	4	n.发明	1
-4	connect	unit 1 Topic 1_4	4	vt.连接	1
-4	be connected to	unit 1 Topic 1_4	4	与 ... 连接在一起	0
-4	enable	unit 1 Topic 1_4	4	vt.使能够	1
-4	envelope	unit 1 Topic 1_4	4	n.信封	1
-4	order	unit 1 Topic 1_4	4	v.&n.订购	1
-5	robot	unit 1 Topic 2_1	3	n.机器人	1
-5	tidy	unit 1 Topic 2_1	3	vt.&adj.整洁的	0
-5	tidy up	unit 1 Topic 2_1	3	整理	0
-5	prepare	unit 1 Topic 2_1	3	vt.准备	1
-5	dangerous	unit 1 Topic 2_1	3	adj.危险的	1
-5	make the bed	unit 1 Topic 2_1	3	铺床	1
-5	perform	unit 1 Topic 2_1	3	v.进行	1
-5	operation	unit 1 Topic 2_1	3	n.操作	1
-5	perform an operation	unit 1 Topic 2_1	3	动手术	1
-5	home-help	unit 1 Topic 2_1	3	家务佣人	0
-6	be different from	unit 1 Topic 2_2	3	与 ... 不同	1
-6	machine	unit 1 Topic 2_2	3	n.机器	1
-6	nothing	unit 1 Topic 2_2	3	pron.没有东西	1
-6	with pleasure	unit 1 Topic 2_2	3	adv.高兴地	1
-6	difference	unit 1 Topic 2_2	3	n.差别	1
-6	housework	unit 1 Topic 2_2	3	n.家务	1
-6	somebody	unit 1 Topic 2_2	3	pron.某人	1
-6	memory	unit 1 Topic 2_2	3	n.记忆	1
-6	fantastic	unit 1 Topic 2_2	3	adj.好极了	0
-6	factory	unit 1 Topic 2_2	3	n.工厂	1
-7	anybody	unit 1 Topic 2_3	3	pron.任何人	1
-7	nobody	unit 1 Topic 2_3	3	pron.没有任何人	1
-7	everybody	unit 1 Topic 2_3	3	pron.每人	1
-7	model	unit 1 Topic 2_3	3	n.款式	1
-7	efficient	unit 1 Topic 2_3	3	adj.效率高的	0
-7	industrial	unit 1 Topic 2_3	3	adj.工业的	1
-7	dusty	unit 1 Topic 2_3	3	adj.多尘的	0
-7	medical	unit 1 Topic 2_3	3	adj.医学的	1
-7	practise	unit 1 Topic 2_3	3	n.练习	1
-8	TV set	unit 1 Topic 3_1	3	电视机	1
-8	household	unit 1 Topic 3_1	3	adj.家庭的	1
-8	appliance	unit 1 Topic 3_1	3	n.用具	0
-8	washing machine	unit 1 Topic 3_1	3	洗衣机	1
-8	digital	unit 1 Topic 3_1	3	adj.数码的	0
-8	remote	unit 1 Topic 3_1	3	adj.远的	0
-8	remote control	unit 1 Topic 3_1	3	遥控器	0
-8	vacuum	unit 1 Topic 3_1	3	n.&adj.真空的	0
-8	cleaner	unit 1 Topic 3_1	3	n.清洁器	1
-8	fridge	unit 1 Topic 3_1	3	n.冰箱	1
-9	microwave	unit 1 Topic 3_2	3	n.&adj.微波	0
-9	oven	unit 1 Topic 3_2	3	n.炉灶	1
-9	toaster	unit 1 Topic 3_2	3	n.烘烤机	0
-9	DVD player	unit 1 Topic 3_2	3	光碟播放机	1
-9	dishwasher	unit 1 Topic 3_2	3	n.洗碟机	0
-9	inch	unit 1 Topic 3_2	3	n.英寸	1
-9	a piece of cake	unit 1 Topic 3_2	3	容易的事情	1
-9	the same as	unit 1 Topic 3_2	3	与 ... 同样	1
-9	press	unit 1 Topic 3_2	3	vt.压	1
-9	turn on	unit 1 Topic 3_2	3	打开	1
-10	select	unit 1 Topic 3_3	3	v.选择	1
-10	turn up	unit 1 Topic 3_3	3	调高	1
-10	turn down	unit 1 Topic 3_3	3	调低	1
-10	volume	unit 1 Topic 3_3	3	n.音量	1
-10	turn off	unit 1 Topic 3_3	3	关闭	1
-10	pound	unit 1 Topic 3_3	3	n.英镑	1
-10	fan	unit 1 Topic 3_3	3	n.风扇	1
-10	way of life	unit 1 Topic 3_3	3	生活方式	1
-10	by hand	unit 1 Topic 3_3	3	手工	1
-10	certain	unit 1 Topic 3_3	3	adj.确定的	1
-11	culture	unit 2 Topic 1_1	2	n.文化	1
-11	custom	unit 2 Topic 1_1	2	n.风俗	0
-11	shake hands with	unit 2 Topic 1_1	2	与 ... 握手	1
-11	painting	unit 2 Topic 1_1	2	n.绘画	1
-11	Chinese painting	unit 2 Topic 1_1	2	n.国画	1
-11	communicate	unit 2 Topic 1_1	2	vi.交流	1
-11	polite	unit 2 Topic 1_1	2	adj.有礼貌的	1
-11	local	unit 2 Topic 1_1	2	adj.当地的	1
-11	lovely	unit 2 Topic 1_1	2	adj.可爱的	1
-11	since	unit 2 Topic 1_1	2	conj.自从 ... 以来	1
-12	pleased	unit 2 Topic 1_2	2	adj.高兴的	1
-12	roommate	unit 2 Topic 1_2	2	n.室友	1
-12	lecture	unit 2 Topic 1_2	2	n.讲座	1
-12	English-speaking	unit 2 Topic 1_2	2	adj.说英语的	1
-12	necessary	unit 2 Topic 1_2	2	adj.必要的	1
-12	wine	unit 2 Topic 1_2	2	n.葡萄酒	1
-12	be busy doing sth.	unit 2 Topic 1_2	2	忙于做某事	1
-12	receive	unit 2 Topic 1_2	2	vt.收到	1
-12	response	unit 2 Topic 1_2	2	n.&vt.回答	1
-12	in response to	unit 2 Topic 1_2	2	作为对 ... 的答复	1
-13	eat out	unit 2 Topic 2_1	4	外出吃饭	1
-13	starter	unit 2 Topic 2_1	4	n.第一道菜	0
-13	soup	unit 2 Topic 2_1	4	n.汤	1
-13	onion	unit 2 Topic 2_1	4	n.洋葱	0
-13	waiter	unit 2 Topic 2_1	4	n.侍者	1
-13	course	unit 2 Topic 2_1	4	n.一道菜	1
-13	main course	unit 2 Topic 2_1	4	主菜	1
-13	waitress	unit 2 Topic 2_1	4	n.女服务员	0
-13	take somebody's order	unit 2 Topic 2_1	4	记录某人点的菜	1
-14	steak	unit 2 Topic 2_2	4	n.牛排	1
-14	speciality	unit 2 Topic 2_2	4	n.特色菜	0
-14	madam	unit 2 Topic 2_2	4	n.夫人	1
-14	dessert	unit 2 Topic 2_2	4	n.甜食	0
-14	pie	unit 2 Topic 2_2	4	n.馅饼	1
-14	apple pie	unit 2 Topic 2_2	4	苹果酱馅饼	1
-14	so ... that	unit 2 Topic 2_2	4	如此 ... 以致	1
-14	menu	unit 2 Topic 2_2	4	n.菜单	1
-14	rare	unit 2 Topic 2_2	4	adj.煎得嫩的	1
-15	well-done	unit 2 Topic 2_3	4	adj.煮得透的	1
-15	salt	unit 2 Topic 2_3	4	n.&adj.咸味的	1
-15	bill	unit 2 Topic 2_3	4	n.账单	1
-15	Dutch	unit 2 Topic 2_3	4	各自付费的	0
-15	go Dutch	unit 2 Topic 2_3	4	各人付各人的账	0
-15	service	unit 2 Topic 2_3	4	n.服务	1
-15	charge	unit 2 Topic 2_3	4	n.收费	1
-15	service charge	unit 2 Topic 2_3	4	服务费	1
-15	tip	unit 2 Topic 2_3	4	n.小费	1
-16	surely	unit 2 Topic 2_4	4	adv.当然	1
-16	below	unit 2 Topic 2_4	4	adv.在 ... 下面	1
-16	hardly	unit 2 Topic 2_4	4	adv.几乎不	1
-16	noisy	unit 2 Topic 2_4	4	adj.嘈杂的	1
-16	be true for	unit 2 Topic 2_4	4	对 ... 适用	0
-16	pack	unit 2 Topic 2_4	4	n.打包	0
-16	snack	unit 2 Topic 2_4	4	n.小吃	0
-16	snack bar	unit 2 Topic 2_4	4	点心店	0
-16	chain	unit 2 Topic 2_4	4	n.链条	0
-16	such as	unit 2 Topic 2_4	4	例如	1
-17	common	unit 3 Topic 1_1	3	adj.共同的	1
-17	idiom	unit 3 Topic 1_1	3	n.习语	0
-17	body	unit 3 Topic 1_1	3	n.身体	1
-17	part	unit 3 Topic 1_1	3	n.部分	1
-17	lip	unit 3 Topic 1_1	3	n.嘴唇	1
-17	arm	unit 3 Topic 1_1	3	n.手臂	1
-17	thumb	unit 3 Topic 1_1	3	n.拇指	0
-17	attentively	unit 3 Topic 1_1	3	adv.注意地	1
-17	as soon as	unit 3 Topic 1_1	3	一 ... 就 ...	1
-17	with the help of	unit 3 Topic 1_1	3	在 ... 的帮助下	1
-17	meaning	unit 3 Topic 1_1	3	n.意思	1
-18	listener	unit 3 Topic 1_2	3	n.听众	1
-18	express	unit 3 Topic 1_2	3	vt.表达	1
-18	vividly	unit 3 Topic 1_2	3	adv.生动地	0
-18	ring	unit 3 Topic 1_2	3	n.响	1
-18	joke	unit 3 Topic 1_2	3	n.笑话	1
-18	recite	unit 3 Topic 1_2	3	vt.背诵	0
-18	heart	unit 3 Topic 1_2	3	n.心	1
-18	by heart	unit 3 Topic 1_2	3	靠记忆	1
-18	be careful	unit 3 Topic 1_2	3	小心一点	1
-18	never mind	unit 3 Topic 1_2	3	没关系	1
-18	pardon	unit 3 Topic 1_2	3	n.对不起	1
-19	loudly	unit 3 Topic 1_3	3	adv.大声地	1
-19	silk	unit 3 Topic 1_3	3	n.&adj.丝	0
-19	body	unit 3 Topic 1_3	3	n.肢体语言	1
-19	gesture	unit 3 Topic 1_3	3	n.&v.手势	1
-19	be quiet	unit 3 Topic 1_3	3	安静一点	1
-19	trouble	unit 3 Topic 1_3	3	n.烦恼	1
-19	circle	unit 3 Topic 1_3	3	n.圆	1
-19	as	unit 3 Topic 1_3	3	prep.作为	1
-19	south	unit 3 Topic 1_3	3	n.南方	1
-19	South American	unit 3 Topic 1_3	3	南美洲的	1
-20	exhibition	unit 3 Topic 2_1	2	n.展览会	1
-20	treasure	unit 3 Topic 2_1	2	n.财宝	0
-20	calligraphy	unit 3 Topic 2_1	2	n.书法	0
-20	hit	unit 3 Topic 2_1	2	n.&v.成功而风靡一时的事物或人物	1
-20	dynasty	unit 3 Topic 2_1	2	n.朝代	0
-20	priceless	unit 3 Topic 2_1	2	adj.贵重的	1
-20	open to the public	unit 3 Topic 2_1	2	向公众开放	1
-20	booking office	unit 3 Topic 2_1	2	售票处	1
-20	as well	unit 3 Topic 2_1	2	也	1
-20	until	unit 3 Topic 2_1	2	prep.直到	1
-20	entrance	unit 3 Topic 2_1	2	n.入口处	1
-20	till	unit 3 Topic 2_1	2	conj.直到	1
-21	concert	unit 3 Topic 2_2	2	n.音乐会	1
-21	global	unit 3 Topic 2_2	2	adj.全球的	1
-21	the mid-nineteenth century	unit 3 Topic 2_2	2	19世纪中叶	1
-21	exchange	unit 3 Topic 2_2	2	vt.交换	1
-21	economy	unit 3 Topic 2_2	2	n.经济	1
-21	in order to	unit 3 Topic 2_2	2	为了 ...	1
-21	pride	unit 3 Topic 2_2	2	n.骄傲	1
-21	exhibit	unit 3 Topic 2_2	2	vt.展出	1
-21	product	unit 3 Topic 2_2	2	n.产品	1
-21	inside	unit 3 Topic 2_2	2	prep.在 ... 里面	1
-21	top-class	unit 3 Topic 2_2	2	adj.顶级的	0
-22	wonder	unit 3 Topic 3_1	3	n.想知道	1
-22	Egypt	unit 3 Topic 3_1	3	n.埃及	0
-22	Egyptian	unit 3 Topic 3_1	3	adj.埃及的	0
-22	king	unit 3 Topic 3_1	3	n.国王	1
-22	death	unit 3 Topic 3_1	3	n.死亡	1
-22	cover	unit 3 Topic 3_1	3	v.覆盖	1
-22	cover an area of	unit 3 Topic 3_1	3	占地 ...	1
-22	side	unit 3 Topic 3_1	3	n.旁边	1
-22	foot	unit 3 Topic 3_1	3	n.英尺	1
-22	be made up of	unit 3 Topic 3_1	3	由 ... 组成	1
-22	weigh	unit 3 Topic 3_1	3	vt.重	1
-23	ton	unit 3 Topic 3_2	3	n.吨	1
-23	thousands of	unit 3 Topic 3_2	3	数千	1
-23	without	unit 3 Topic 3_2	3	prep.没有	1
-23	BC	unit 3 Topic 3_2	3	公元前	1
-23	complete	unit 3 Topic 3_2	3	vt.完全的	1
-23	protect	unit 3 Topic 3_2	3	保护	1
-23	alive	unit 3 Topic 3_2	3	adj.活着的	1
-23	keep ... alive	unit 3 Topic 3_2	3	使 ... 活着	0
-23	to this day	unit 3 Topic 3_2	3	至今	0
-23	length	unit 3 Topic 3_2	3	n.长度	1
-23	height	unit 3 Topic 3_2	3	n.高度	1
-24	material	unit 3 Topic 3_3	3	n.材料	1
-24	deep	unit 3 Topic 3_3	3	adj.深的	1
-24	mile	unit 3 Topic 3_3	3	n.英里	1
-24	tour guide	unit 3 Topic 3_3	3	导游	1
-24	separate	unit 3 Topic 3_3	3	v.分隔	1
-24	in fact	unit 3 Topic 3_3	3	事实上	1
-24	continue	unit 3 Topic 3_3	3	vt.继续	1
-24	reach	unit 3 Topic 3_3	3	vt.达到	1
-24	world-famous	unit 3 Topic 3_3	3	世界著名的	0
-24	wisdom	unit 3 Topic 3_3	3	n.智慧	1
-25	agricultural	unit 4 Topic 1_1	2	adj.农业的	0
-25	agricultural park	unit 4 Topic 1_1	2	农业园区	0
-25	greenhouse	unit 4 Topic 1_1	2	n.温室	1
-25	orchard	unit 4 Topic 1_1	2	n.果园	0
-25	vegetable field	unit 4 Topic 1_1	2	菜地	1
-25	eggplant	unit 4 Topic 1_1	2	n.茄子	1
-25	carrot	unit 4 Topic 1_1	2	n.胡萝卜	0
-25	spinach	unit 4 Topic 1_1	2	n.菠菜	0
-25	peach	unit 4 Topic 1_1	2	n.桃	1
-25	organic	unit 4 Topic 1_1	2	adj.有机的	0
-25	organic vegetable	unit 4 Topic 1_1	2	有机肥料培植的蔬菜	0
-25	hear of	unit 4 Topic 1_1	2	听说	1
-26	chemical	unit 4 Topic 1_2	2	adj.化学的	1
-26	biology	unit 4 Topic 1_2	2	n.生物学	0
-26	variety	unit 4 Topic 1_2	2	n.种类	1
-26	varieties of	unit 4 Topic 1_2	2	种类繁多的	1
-26	whether	unit 4 Topic 1_2	2	conj.是否	1
-26	melon	unit 4 Topic 1_2	2	n.瓜	1
-26	amazing	unit 4 Topic 1_2	2	adj.令人吃惊的	1
-26	natural	unit 4 Topic 1_2	2	adj.自然的	1
-26	preserve	unit 4 Topic 1_2	2	vt.保留	1
-26	tell ... from	unit 4 Topic 1_2	2	分辨	1
-26	grapefruit	unit 4 Topic 1_2	2	柚子	0
-26	learn ... from	unit 4 Topic 1_2	2	向 ... 学习	1
-27	pet	unit 4 Topic 2_1	3	n.宠物	1
-27	keep a pet	unit 4 Topic 2_1	3	饲养宠物	1
-27	debate	unit 4 Topic 2_1	3	n.争论	1
-27	favour	unit 4 Topic 2_1	3	n.赞同	1
-27	in favour of	unit 4 Topic 2_1	3	赞成	1
-27	lonely	unit 4 Topic 2_1	3	adj.寂寞的	1
-27	keep ... Company	unit 4 Topic 2_1	3	陪伴某人	1
-27	walk a dog	unit 4 Topic 2_1	3	遛狗	1
-27	danger	unit 4 Topic 2_1	3	n.危险	0
-28	in danger	unit 4 Topic 2_2	3	处于危险中	0
-28	argue	unit 4 Topic 2_2	3	vt.争论	1
-28	friendly	unit 4 Topic 2_2	3	adj.友好的	1
-28	be friendly to	unit 4 Topic 2_2	3	对 ... 很友好	1
-28	recent	unit 4 Topic 2_2	3	adj.最近的	1
-28	addition	unit 4 Topic 2_2	3	n.加	1
-28	in addition	unit 4 Topic 2_2	3	此外	1
-28	problem	unit 4 Topic 2_2	3	n.问题	1
-28	brave	unit 4 Topic 2_2	3	adj.勇敢的	1
-29	owner	unit 4 Topic 2_3	3	n.所有人	1
-29	raise	unit 4 Topic 2_3	3	vt.提高	1
-29	treat	unit 4 Topic 2_3	3	v.款待	1
-29	treat ... as	unit 4 Topic 2_3	3	把 ... 看作	1
-29	earthquake	unit 4 Topic 2_3	3	n.地震	0
-29	in honour of	unit 4 Topic 2_3	3	为纪念 ...	0
-29	bury	unit 4 Topic 2_3	3	vt.埋	0
-29	attack	unit 4 Topic 2_3	3	vt.攻击	1
+1	main	unit 1 Topic 1_1	7	adj.主要的	1
+1	unit	unit 1 Topic 1_1	7	n.单位	1
+1	main unit	unit 1 Topic 1_1	7	主机	0
+2	monitor	unit 1 Topic 1_2	7	n.显示器	1
+2	keyboard	unit 1 Topic 1_2	7	n.键盘	0
+2	mouse	unit 1 Topic 1_2	7	n.鼠标	1
+2	electronic	unit 1 Topic 1_2	7	adj.电子的	1
+2	type in	unit 1 Topic 1_2	7	输入	1
+3	process	unit 1 Topic 1_3	7	n.&vt.加工	1
+3	do word processing	unit 1 Topic 1_3	7	进行文字处理	0
+3	control	unit 1 Topic 1_3	7	n.控制	1
+3	ought	unit 1 Topic 1_3	7	aux应当	1
+3	ought to	unit 1 Topic 1_3	7	应当	1
+4	get familiar with	unit 1 Topic 1_4	7	熟悉	1
+4	able	unit 1 Topic 1_4	7	adj.有能力的	1
+4	be able to	unit 1 Topic 1_4	7	能 ...	1
+4	download	unit 1 Topic 1_4	7	v.下载	0
+4	online	unit 1 Topic 1_4	7	n.联机的	0
+5	online shopping	unit 1 Topic 1_5	7	网上购物	0
+5	advantage	unit 1 Topic 1_5	7	n.优点	1
+5	allow	unit 1 Topic 1_5	7	vt.允许	1
+5	stop ... From doing ...	unit 1 Topic 1_5	7	阻止某人做某事	1
+5	relax	unit 1 Topic 1_5	7	vi.放松	1
+6	help ... with ...	unit 1 Topic 1_6	7	帮助某人做某事	1
+6	disadvantage	unit 1 Topic 1_6	7	n.缺点	0
+6	invention	unit 1 Topic 1_6	7	n.发明	1
+6	connect	unit 1 Topic 1_6	7	vt.连接	1
+7	be connected to	unit 1 Topic 1_7	7	与 ... 连接在一起	0
+7	enable	unit 1 Topic 1_7	7	vt.使能够	1
+7	envelope	unit 1 Topic 1_7	7	n.信封	1
+7	order	unit 1 Topic 1_7	7	v.&n.订购	1
+8	robot	unit 1 Topic 2_1	6	n.机器人	1
+8	tidy	unit 1 Topic 2_1	6	vt.&adj.整洁的	0
+8	tidy up	unit 1 Topic 2_1	6	整理	0
+8	prepare	unit 1 Topic 2_1	6	vt.准备	1
+8	dangerous	unit 1 Topic 2_1	6	adj.危险的	1
+9	make the bed	unit 1 Topic 2_2	6	铺床	1
+9	perform	unit 1 Topic 2_2	6	v.进行	1
+9	operation	unit 1 Topic 2_2	6	n.操作	1
+9	perform an operation	unit 1 Topic 2_2	6	动手术	1
+9	home-help	unit 1 Topic 2_2	6	家务佣人	0
+10	be different from	unit 1 Topic 2_3	6	与 ... 不同	1
+10	machine	unit 1 Topic 2_3	6	n.机器	1
+10	nothing	unit 1 Topic 2_3	6	pron.没有东西	1
+10	with pleasure	unit 1 Topic 2_3	6	adv.高兴地	1
+10	difference	unit 1 Topic 2_3	6	n.差别	1
+11	housework	unit 1 Topic 2_4	6	n.家务	1
+11	somebody	unit 1 Topic 2_4	6	pron.某人	1
+11	memory	unit 1 Topic 2_4	6	n.记忆	1
+11	fantastic	unit 1 Topic 2_4	6	adj.好极了	0
+11	factory	unit 1 Topic 2_4	6	n.工厂	1
+12	anybody	unit 1 Topic 2_5	6	pron.任何人	1
+12	nobody	unit 1 Topic 2_5	6	pron.没有任何人	1
+12	everybody	unit 1 Topic 2_5	6	pron.每人	1
+12	model	unit 1 Topic 2_5	6	n.款式	1
+12	efficient	unit 1 Topic 2_5	6	adj.效率高的	0
+13	industrial	unit 1 Topic 2_6	6	adj.工业的	1
+13	dusty	unit 1 Topic 2_6	6	adj.多尘的	0
+13	medical	unit 1 Topic 2_6	6	adj.医学的	1
+13	practise	unit 1 Topic 2_6	6	n.练习	1
+14	TV set	unit 1 Topic 3_1	6	电视机	1
+14	household	unit 1 Topic 3_1	6	adj.家庭的	1
+14	appliance	unit 1 Topic 3_1	6	n.用具	0
+14	washing machine	unit 1 Topic 3_1	6	洗衣机	1
+14	digital	unit 1 Topic 3_1	6	adj.数码的	0
+15	remote	unit 1 Topic 3_2	6	adj.远的	0
+15	remote control	unit 1 Topic 3_2	6	遥控器	0
+15	vacuum	unit 1 Topic 3_2	6	n.&adj.真空的	0
+15	cleaner	unit 1 Topic 3_2	6	n.清洁器	1
+15	fridge	unit 1 Topic 3_2	6	n.冰箱	1
+16	microwave	unit 1 Topic 3_3	6	n.&adj.微波	0
+16	oven	unit 1 Topic 3_3	6	n.炉灶	1
+16	toaster	unit 1 Topic 3_3	6	n.烘烤机	0
+16	DVD player	unit 1 Topic 3_3	6	光碟播放机	1
+16	dishwasher	unit 1 Topic 3_3	6	n.洗碟机	0
+17	inch	unit 1 Topic 3_4	6	n.英寸	1
+17	a piece of cake	unit 1 Topic 3_4	6	容易的事情	1
+17	the same as	unit 1 Topic 3_4	6	与 ... 同样	1
+17	press	unit 1 Topic 3_4	6	vt.压	1
+17	turn on	unit 1 Topic 3_4	6	打开	1
+18	select	unit 1 Topic 3_5	6	v.选择	1
+18	turn up	unit 1 Topic 3_5	6	调高	1
+18	turn down	unit 1 Topic 3_5	6	调低	1
+18	volume	unit 1 Topic 3_5	6	n.音量	1
+18	turn off	unit 1 Topic 3_5	6	关闭	1
+19	pound	unit 1 Topic 3_6	6	n.英镑	1
+19	fan	unit 1 Topic 3_6	6	n.风扇	1
+19	way of life	unit 1 Topic 3_6	6	生活方式	1
+19	by hand	unit 1 Topic 3_6	6	手工	1
+19	certain	unit 1 Topic 3_6	6	adj.确定的	1
+20	culture	unit 2 Topic 1_1	4	n.文化	1
+20	custom	unit 2 Topic 1_1	4	n.风俗	0
+20	shake hands with	unit 2 Topic 1_1	4	与 ... 握手	1
+20	painting	unit 2 Topic 1_1	4	n.绘画	1
+20	Chinese painting	unit 2 Topic 1_1	4	n.国画	1
+21	communicate	unit 2 Topic 1_2	4	vi.交流	1
+21	polite	unit 2 Topic 1_2	4	adj.有礼貌的	1
+21	local	unit 2 Topic 1_2	4	adj.当地的	1
+21	lovely	unit 2 Topic 1_2	4	adj.可爱的	1
+21	since	unit 2 Topic 1_2	4	conj.自从 ... 以来	1
+22	pleased	unit 2 Topic 1_3	4	adj.高兴的	1
+22	roommate	unit 2 Topic 1_3	4	n.室友	1
+22	lecture	unit 2 Topic 1_3	4	n.讲座	1
+22	English-speaking	unit 2 Topic 1_3	4	adj.说英语的	1
+22	necessary	unit 2 Topic 1_3	4	adj.必要的	1
+23	wine	unit 2 Topic 1_4	4	n.葡萄酒	1
+23	be busy doing sth.	unit 2 Topic 1_4	4	忙于做某事	1
+23	receive	unit 2 Topic 1_4	4	vt.收到	1
+23	response	unit 2 Topic 1_4	4	n.&vt.回答	1
+23	in response to	unit 2 Topic 1_4	4	作为对 ... 的答复	1
+24	eat out	unit 2 Topic 2_1	7	外出吃饭	1
+24	starter	unit 2 Topic 2_1	7	n.第一道菜	0
+24	soup	unit 2 Topic 2_1	7	n.汤	1
+24	onion	unit 2 Topic 2_1	7	n.洋葱	0
+24	waiter	unit 2 Topic 2_1	7	n.侍者	1
+25	course	unit 2 Topic 2_2	7	n.一道菜	1
+25	main course	unit 2 Topic 2_2	7	主菜	1
+25	waitress	unit 2 Topic 2_2	7	n.女服务员	0
+25	take somebody's order	unit 2 Topic 2_2	7	记录某人点的菜	1
+25	steak	unit 2 Topic 2_2	7	n.牛排	1
+26	speciality	unit 2 Topic 2_3	7	n.特色菜	0
+26	madam	unit 2 Topic 2_3	7	n.夫人	1
+26	dessert	unit 2 Topic 2_3	7	n.甜食	0
+26	pie	unit 2 Topic 2_3	7	n.馅饼	1
+26	apple pie	unit 2 Topic 2_3	7	苹果酱馅饼	1
+27	so ... that	unit 2 Topic 2_4	7	如此 ... 以致	1
+27	menu	unit 2 Topic 2_4	7	n.菜单	1
+27	rare	unit 2 Topic 2_4	7	adj.煎得嫩的	1
+27	well-done	unit 2 Topic 2_4	7	adj.煮得透的	1
+27	salt	unit 2 Topic 2_4	7	n.&adj.咸味的	1
+28	bill	unit 2 Topic 2_5	7	n.账单	1
+28	Dutch	unit 2 Topic 2_5	7	各自付费的	0
+28	go Dutch	unit 2 Topic 2_5	7	各人付各人的账	0
+28	service	unit 2 Topic 2_5	7	n.服务	1
+28	charge	unit 2 Topic 2_5	7	n.收费	1
+29	service charge	unit 2 Topic 2_6	7	服务费	1
+29	tip	unit 2 Topic 2_6	7	n.小费	1
+29	surely	unit 2 Topic 2_6	7	adv.当然	1
+29	below	unit 2 Topic 2_6	7	adv.在 ... 下面	1
+29	hardly	unit 2 Topic 2_6	7	adv.几乎不	1
+29	noisy	unit 2 Topic 2_6	7	adj.嘈杂的	1
+30	be true for	unit 2 Topic 2_7	7	对 ... 适用	0
+30	pack	unit 2 Topic 2_7	7	n.打包	0
+30	snack	unit 2 Topic 2_7	7	n.小吃	0
+30	snack bar	unit 2 Topic 2_7	7	点心店	0
+30	chain	unit 2 Topic 2_7	7	n.链条	0
+30	such as	unit 2 Topic 2_7	7	例如	1
+31	common	unit 3 Topic 1_1	6	adj.共同的	1
+31	idiom	unit 3 Topic 1_1	6	n.习语	0
+31	body	unit 3 Topic 1_1	6	n.身体	1
+31	part	unit 3 Topic 1_1	6	n.部分	1
+31	lip	unit 3 Topic 1_1	6	n.嘴唇	1
+32	arm	unit 3 Topic 1_2	6	n.手臂	1
+32	thumb	unit 3 Topic 1_2	6	n.拇指	0
+32	attentively	unit 3 Topic 1_2	6	adv.注意地	1
+32	as soon as	unit 3 Topic 1_2	6	一 ... 就 ...	1
+32	with the help of	unit 3 Topic 1_2	6	在 ... 的帮助下	1
+33	meaning	unit 3 Topic 1_3	6	n.意思	1
+33	listener	unit 3 Topic 1_3	6	n.听众	1
+33	express	unit 3 Topic 1_3	6	vt.表达	1
+33	vividly	unit 3 Topic 1_3	6	adv.生动地	0
+33	ring	unit 3 Topic 1_3	6	n.响	1
+34	joke	unit 3 Topic 1_4	6	n.笑话	1
+34	recite	unit 3 Topic 1_4	6	vt.背诵	0
+34	heart	unit 3 Topic 1_4	6	n.心	1
+34	by heart	unit 3 Topic 1_4	6	靠记忆	1
+34	be careful	unit 3 Topic 1_4	6	小心一点	1
+35	never mind	unit 3 Topic 1_5	6	没关系	1
+35	pardon	unit 3 Topic 1_5	6	n.对不起	1
+35	loudly	unit 3 Topic 1_5	6	adv.大声地	1
+35	silk	unit 3 Topic 1_5	6	n.&adj.丝	0
+35	body	unit 3 Topic 1_5	6	n.肢体语言	1
+35	gesture	unit 3 Topic 1_5	6	n.&v.手势	1
+36	be quiet	unit 3 Topic 1_6	6	安静一点	1
+36	trouble	unit 3 Topic 1_6	6	n.烦恼	1
+36	circle	unit 3 Topic 1_6	6	n.圆	1
+36	as	unit 3 Topic 1_6	6	prep.作为	1
+36	south	unit 3 Topic 1_6	6	n.南方	1
+36	South American	unit 3 Topic 1_6	6	南美洲的	1
+37	exhibition	unit 3 Topic 2_1	5	n.展览会	1
+37	treasure	unit 3 Topic 2_1	5	n.财宝	0
+37	calligraphy	unit 3 Topic 2_1	5	n.书法	0
+37	hit	unit 3 Topic 2_1	5	n.&v.成功而风靡一时的事物或人物	1
+37	dynasty	unit 3 Topic 2_1	5	n.朝代	0
+38	priceless	unit 3 Topic 2_2	5	adj.贵重的	1
+38	open to the public	unit 3 Topic 2_2	5	向公众开放	1
+38	booking office	unit 3 Topic 2_2	5	售票处	1
+38	as well	unit 3 Topic 2_2	5	也	1
+38	until	unit 3 Topic 2_2	5	prep.直到	1
+39	entrance	unit 3 Topic 2_3	5	n.入口处	1
+39	till	unit 3 Topic 2_3	5	conj.直到	1
+39	concert	unit 3 Topic 2_3	5	n.音乐会	1
+39	global	unit 3 Topic 2_3	5	adj.全球的	1
+39	the mid-nineteenth century	unit 3 Topic 2_3	5	19世纪中叶	1
+40	exchange	unit 3 Topic 2_4	5	vt.交换	1
+40	economy	unit 3 Topic 2_4	5	n.经济	1
+40	in order to	unit 3 Topic 2_4	5	为了 ...	1
+40	pride	unit 3 Topic 2_4	5	n.骄傲	1
+41	exhibit	unit 3 Topic 2_5	5	vt.展出	1
+41	product	unit 3 Topic 2_5	5	n.产品	1
+41	inside	unit 3 Topic 2_5	5	prep.在 ... 里面	1
+41	top-class	unit 3 Topic 2_5	5	adj.顶级的	0
+42	wonder	unit 3 Topic 3_1	6	n.想知道	1
+42	Egypt	unit 3 Topic 3_1	6	n.埃及	0
+42	Egyptian	unit 3 Topic 3_1	6	adj.埃及的	0
+42	king	unit 3 Topic 3_1	6	n.国王	1
+42	death	unit 3 Topic 3_1	6	n.死亡	1
+43	cover	unit 3 Topic 3_2	6	v.覆盖	1
+43	cover an area of	unit 3 Topic 3_2	6	占地 ...	1
+43	side	unit 3 Topic 3_2	6	n.旁边	1
+43	foot	unit 3 Topic 3_2	6	n.英尺	1
+43	be made up of	unit 3 Topic 3_2	6	由 ... 组成	1
+44	weigh	unit 3 Topic 3_3	6	vt.重	1
+44	ton	unit 3 Topic 3_3	6	n.吨	1
+44	thousands of	unit 3 Topic 3_3	6	数千	1
+44	without	unit 3 Topic 3_3	6	prep.没有	1
+44	BC	unit 3 Topic 3_3	6	公元前	1
+45	complete	unit 3 Topic 3_4	6	vt.完全的	1
+45	protect	unit 3 Topic 3_4	6	保护	1
+45	alive	unit 3 Topic 3_4	6	adj.活着的	1
+45	keep ... alive	unit 3 Topic 3_4	6	使 ... 活着	0
+45	to this day	unit 3 Topic 3_4	6	至今	0
+46	length	unit 3 Topic 3_5	6	n.长度	1
+46	height	unit 3 Topic 3_5	6	n.高度	1
+46	material	unit 3 Topic 3_5	6	n.材料	1
+46	deep	unit 3 Topic 3_5	6	adj.深的	1
+46	mile	unit 3 Topic 3_5	6	n.英里	1
+46	tour guide	unit 3 Topic 3_5	6	导游	1
+47	separate	unit 3 Topic 3_6	6	v.分隔	1
+47	in fact	unit 3 Topic 3_6	6	事实上	1
+47	continue	unit 3 Topic 3_6	6	vt.继续	1
+47	reach	unit 3 Topic 3_6	6	vt.达到	1
+47	world-famous	unit 3 Topic 3_6	6	世界著名的	0
+47	wisdom	unit 3 Topic 3_6	6	n.智慧	1
+48	agricultural	unit 4 Topic 1_1	5	adj.农业的	0
+48	agricultural park	unit 4 Topic 1_1	5	农业园区	0
+48	greenhouse	unit 4 Topic 1_1	5	n.温室	1
+48	orchard	unit 4 Topic 1_1	5	n.果园	0
+48	vegetable field	unit 4 Topic 1_1	5	菜地	1
+49	eggplant	unit 4 Topic 1_2	5	n.茄子	1
+49	carrot	unit 4 Topic 1_2	5	n.胡萝卜	0
+49	spinach	unit 4 Topic 1_2	5	n.菠菜	0
+49	peach	unit 4 Topic 1_2	5	n.桃	1
+49	organic	unit 4 Topic 1_2	5	adj.有机的	0
+50	organic vegetable	unit 4 Topic 1_3	5	有机肥料培植的蔬菜	0
+50	hear of	unit 4 Topic 1_3	5	听说	1
+50	chemical	unit 4 Topic 1_3	5	adj.化学的	1
+50	biology	unit 4 Topic 1_3	5	n.生物学	0
+50	variety	unit 4 Topic 1_3	5	n.种类	1
+51	varieties of	unit 4 Topic 1_4	5	种类繁多的	1
+51	whether	unit 4 Topic 1_4	5	conj.是否	1
+51	melon	unit 4 Topic 1_4	5	n.瓜	1
+51	amazing	unit 4 Topic 1_4	5	adj.令人吃惊的	1
+51	natural	unit 4 Topic 1_4	5	adj.自然的	1
+52	preserve	unit 4 Topic 1_5	5	vt.保留	1
+52	tell ... from	unit 4 Topic 1_5	5	分辨	1
+52	grapefruit	unit 4 Topic 1_5	5	柚子	0
+52	learn ... from	unit 4 Topic 1_5	5	向 ... 学习	1
+53	pet	unit 4 Topic 2_1	5	n.宠物	1
+53	keep a pet	unit 4 Topic 2_1	5	饲养宠物	1
+53	debate	unit 4 Topic 2_1	5	n.争论	1
+53	favour	unit 4 Topic 2_1	5	n.赞同	1
+53	in favour of	unit 4 Topic 2_1	5	赞成	1
+54	lonely	unit 4 Topic 2_2	5	adj.寂寞的	1
+54	keep ... Company	unit 4 Topic 2_2	5	陪伴某人	1
+54	walk a dog	unit 4 Topic 2_2	5	遛狗	1
+54	danger	unit 4 Topic 2_2	5	n.危险	0
+54	in danger	unit 4 Topic 2_2	5	处于危险中	0
+55	argue	unit 4 Topic 2_3	5	vt.争论	1
+55	friendly	unit 4 Topic 2_3	5	adj.友好的	1
+55	be friendly to	unit 4 Topic 2_3	5	对 ... 很友好	1
+55	recent	unit 4 Topic 2_3	5	adj.最近的	1
+55	addition	unit 4 Topic 2_3	5	n.加	1
+56	in addition	unit 4 Topic 2_4	5	此外	1
+56	problem	unit 4 Topic 2_4	5	n.问题	1
+56	brave	unit 4 Topic 2_4	5	adj.勇敢的	1
+56	owner	unit 4 Topic 2_4	5	n.所有人	1
+56	raise	unit 4 Topic 2_4	5	vt.提高	1
+57	treat	unit 4 Topic 2_5	5	v.款待	1
+57	treat ... as	unit 4 Topic 2_5	5	把 ... 看作	1
+57	earthquake	unit 4 Topic 2_5	5	n.地震	0
+57	in honour of	unit 4 Topic 2_5	5	为纪念 ...	0
+57	bury	unit 4 Topic 2_5	5	vt.埋	0
+57	attack	unit 4 Topic 2_5	5	vt.攻击	1

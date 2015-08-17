@@ -1,248 +1,248 @@
-1	hearing	Unit 1_1	9	n.听力	1
-1	raised	Unit 1_1	9	adj.凸起的	1
-1	dot	Unit 1_1	9	n.点	1
-2	sign	Unit 1_2	9	n.符号	0
-2	confuse	Unit 1_2	9	vt.使迷惑	1
-2	vase	Unit 1_2	9	n.花瓶	1
-2	fog	Unit 1_2	9	n.雾	1
-2	mist	Unit 1_2	9	n.薄雾	1
-2	forecast	Unit 1_2	9	vt.&n.预测	1
-2	conductor	Unit 1_2	9	n.售票员	1
-2	fare	Unit 1_2	9	n.车费	1
-2	foggy	Unit 1_2	9	adj.有雾的	1
-2	observe	Unit 1_2	9	v.观察	1
-3	overcoat	Unit 1_3	9	n.长大衣	1
-3	glance	Unit 1_3	9	vi.瞥一眼	1
-3	nowhere	Unit 1_3	9	adv.无处	1
-3	footstep	Unit 1_3	9	n.脚步	1
-3	wherever	Unit 1_3	9	adv.无论哪里	1
-3	in sight	Unit 1_3	9	在视力范围之内	1
-3	narrow	Unit 1_3	9	adj.狭窄的	1
-3	approach	Unit 1_3	9	v.&n.靠近	1
-3	wish for	Unit 1_3	9	盼望	1
-3	darkness	Unit 1_3	9	n.黑暗	1
-4	hesitate	Unit 1_4	9	vi.&vt.犹豫	1
-4	reach out	Unit 1_4	9	伸出	1
-4	grasp	Unit 1_4	9	v.抓紧	1
-4	stare	Unit 1_4	9	vt.凝视	1
-4	beard	Unit 1_4	9	n.胡须	1
-4	watch out for	Unit 1_4	9	留心	1
-4	crossroads	Unit 1_4	9	n.十字路口	1
-4	anxious	Unit 1_4	9	adj.焦虑	1
-4	firmly	Unit 1_4	9	adv.牢牢地	1
-4	grateful	Unit 1_4	9	adj.感激的	1
-5	helper	Unit 1_5	9	n.帮助者	1
-5	aid	Unit 1_5	9	n.帮助	1
-5	relief	Unit 1_5	9	n.轻松	1
-5	lorry	Unit 1_5	9	n.卡车	1
-5	pavement	Unit 1_5	9	n.人行道	1
-5	reduce	Unit 1_5	9	vt.减少	1
-5	volunteer	Unit 1_5	9	n.志愿者	1
-5	sniff	Unit 1_5	9	v.嗅	1
-5	analyse	Unit 1_5	9	vt.分析	1
-5	recognize	Unit 1_5	9	vt.辨认出	1
-6	puzzle	Unit 1_6	9	n.&vt.使困惑	1
-6	ignore	Unit 1_6	9	vt.忽视	1
-6	pole	Unit 1_6	9	n.地级	1
-6	the North Pole	Unit 1_6	9	北极	1
-6	boot	Unit 1_6	9	n.靴子	1
-6	sweat	Unit 1_6	9	v.&n.汗水	1
-6	distance	Unit 1_6	9	n.距离	1
-6	thunder	Unit 1_6	9	n.雷	1
-6	lightning	Unit 1_6	9	n.闪电	1
-6	triangle	Unit 1_6	9	n.三角形	1
-7	wave	Unit 1_7	9	n.&v.波浪	1
-7	overhead	Unit 1_7	9	adv.在头上方	1
-7	tap	Unit 1_7	9	v.轻拍	1
-7	suit	Unit 1_7	9	n.&v.套装	1
-7	attach	Unit 1_7	9	v.使连在一起	1
-7	disability	Unit 1_7	9	n.缺陷	1
-7	hopeful	Unit 1_7	9	adj.抱有希望的	1
-7	whisper	Unit 1_7	9	vt.小声说	1
-7	bite	Unit 1_7	9	v.咬	1
-7	shark	Unit 1_7	9	n.鲨鱼	1
-8	jaw	Unit 1_8	9	n.颌	1
-8	bull	Unit 1_8	9	n.公牛	0
-8	contrary	Unit 1_8	9	adj.&n.相反的	1
-8	flesh	Unit 1_8	9	n.肉	1
-8	jewellery	Unit 1_8	9	n.珠宝	1
-8	attract	Unit 1_8	9	v.吸引	1
-8	calm	Unit 1_8	9	adj.镇静的	1
-8	panic	Unit 1_8	9	n.恐慌	1
-8	fist	Unit 1_8	9	n.拳头	1
-9	likely	Unit 1_9	9	adj.可能的	1
-9	pigeon	Unit 1_9	9	n.鸽子	0
-9	soldier	Unit 1_9	9	n.士兵	1
-9	roll	Unit 1_9	9	vi.&vt.滚动	1
-9	roll up	Unit 1_9	9	卷起来	1
-9	loose	Unit 1_9	9	adj.&v.松动的	1
-9	employ	Unit 1_9	9	v.雇用	1
-9	compass	Unit 1_9	9	n.罗盘	1
-9	unlike	Unit 1_9	9	prep.不像	1
-10	be made up of	Unit 2_1	8	由...组成	1
-10	vocabulary	Unit 2_1	8	n.词汇	1
-10	nowadays	Unit 2_1	8	adv.现在	1
-10	Celtic	Unit 2_1	8	n.凯尔特语	0
-10	Germanic	Unit 2_1	8	adj.日耳曼语的	0
-10	mainland	Unit 2_1	8	n.大陆	1
-10	Angle	Unit 2_1	8	n.盎格鲁人	0
-10	Saxon	Unit 2_1	8	n.撒克逊人	0
-10	occupy	Unit 2_1	8	vt.占用	1
-10	consist	Unit 2_1	8	vi.组成	1
-10	consist of	Unit 2_1	8	由...组成	1
-11	mixture	Unit 2_2	8	n.混合	1
-11	name after	Unit 2_2	8	以...命名	1
-11	aside	Unit 2_2	8	adv.除...之外	1
-11	aside from	Unit 2_2	8	除...之外	1
-11	Viking	Unit 2_2	8	n.维京人	0
-11	official	Unit 2_2	8	adj.官方的	1
-11	phrase	Unit 2_2	8	n.词组	1
-11	contribution	Unit 2_2	8	n.贡献	1
-11	Norman	Unit 2_2	8	n&adj.诺曼人	0
-11	defeat	Unit 2_2	8	vt.击败	1
-11	take control of	Unit 2_2	8	控制	1
-12	the Norman Conquest	Unit 2_3	8	诺曼征服	0
-12	lead to	Unit 2_3	8	导致	1
-12	replace	Unit 2_3	8	vt.代替	1
-12	entire	Unit 2_3	8	adj.整个的	1
-12	servant	Unit 2_3	8	n.仆人	1
-12	raise	Unit 2_3	8	vt.举起	1
-12	therefore	Unit 2_3	8	adv.因此	1
-12	mutton	Unit 2_3	8	n.羊肉	1
-12	bacon	Unit 2_3	8	n.熏猪肉	1
-12	plural	Unit 2_3	8	adj.复数形式	0
-12	high-class	Unit 2_3	8	adj.上层社会的	1
-13	mother tongue	Unit 2_4	8	母语	1
-13	the Renaissance	Unit 2_4	8	n.文艺复兴	0
-13	Latin	Unit 2_4	8	n&adj.拉丁语	0
-13	Greek	Unit 2_4	8	n&adj.希腊语的	0
-13	process	Unit 2_4	8	n.过程	1
-13	distinction	Unit 2_4	8	n.区别	1
-13	spelling	Unit 2_4	8	n.拼写	1
-13	accent	Unit 2_4	8	n.口音	1
-13	concern	Unit 2_4	8	vt.使担忧	1
-13	ban	Unit 2_4	8	v.禁止	1
-13	pure	Unit 2_4	8	adj.纯的	1
-14	unique	Unit 2_5	8	adj.独特的	1
-14	access	Unit 2_5	8	vt.&n.进入	1
-14	character	Unit 2_5	8	n.文字符号	1
-14	bark	Unit 2_5	8	n.&v.狗叫	1
-14	racial	Unit 2_5	8	adj.种族的	1
-14	gentle	Unit 2_5	8	adj.温柔的	1
-14	embarrass	Unit 2_5	8	vt.使尴尬	1
-14	backwards	Unit 2_5	8	adv.向后	1
-14	conclusion	Unit 2_5	8	n.结论	1
-14	custom	Unit 2_5	8	n.风俗	1
-15	interrupt	Unit 2_6	8	vt.打断	1
-15	mistaken	Unit 2_6	8	adj.错误的	1
-15	ought to	Unit 2_6	8	应当	1
-15	differ	Unit 2_6	8	vi.相异	1
-15	differ from	Unit 2_6	8	和...不同	1
-15	alphabet	Unit 2_6	8	n.字母表	1
-15	stand for	Unit 2_6	8	代表	1
-15	deed	Unit 2_6	8	n.行为	1
-15	writing	Unit 2_6	8	n.文字	1
-15	hunt	Unit 2_6	8	v.打猎	1
-16	appearance	Unit 2_7	8	n.外观	1
-16	represent	Unit 2_7	8	vt.代表	1
-16	drawing	Unit 2_7	8	n.绘画	1
-16	as a whole	Unit 2_7	8	作为整体	1
-16	combine	Unit 2_7	8	vi.组合	1
-16	distinguish	Unit 2_7	8	vt.区分	1
-16	indicate	Unit 2_7	8	v.显示	1
-16	shortcoming	Unit 2_7	8	n.缺点	1
-16	ink	Unit 2_7	8	n.墨水	1
-16	eyesight	Unit 2_7	8	n.视力	1
-17	press	Unit 2_8	8	vt.挤压	1
-17	wire	Unit 2_8	8	n.金属丝	1
-17	convenient	Unit 2_8	8	adj.方便的	1
-17	battle	Unit 2_8	8	n.战斗	1
-17	pattern	Unit 2_8	8	n.图案	1
-17	drag	Unit 2_8	8	v.拖	1
-17	practical	Unit 2_8	8	adj.实用的	1
-17	thus	Unit 2_8	8	adv.因此	1
-17	typewriter	Unit 2_8	8	n.打字机	1
-17	version	Unit 2_8	8	n.版本	1
-18	civilization	Unit 3_1	8	n.文明	1
-18	lecture	Unit 3_1	8	n.讲座	1
-18	found	Unit 3_1	8	vt.兴建	1
-18	BC	Unit 3_1	8	abbr.公元前	1
-18	Roman	Unit 3_1	8	n&adj.罗马人	0
-18	take over	Unit 3_1	8	接管	1
-18	volcano	Unit 3_1	8	n.火山	1
-18	AD	Unit 3_1	8	abbr.公元	1
-18	erupt	Unit 3_1	8	v.爆发	1
-18	lava	Unit 3_1	8	n.熔岩	0
-19	ash	Unit 3_2	8	n.灰	1
-19	pour	Unit 3_2	8	vt.涌流	1
-19	unfortunate	Unit 3_2	8	adj.不幸的	1
-19	mud	Unit 3_2	8	n.泥浆	1
-19	decorate	Unit 3_2	8	vt.装饰	1
-19	flee	Unit 3_2	8	vi.逃避	1
-19	researcher	Unit 3_2	8	n.研究者	1
-19	true-to-life	Unit 3_2	8	adj.逼真的	1
-19	disaster	Unit 3_2	8	n.灾难	1
-19	destroy	Unit 3_2	8	vt.毁坏	1
-20	commercial	Unit 3_3	8	adj.商业的	1
-20	wealthy	Unit 3_3	8	adj.富有的	1
-20	gradually	Unit 3_3	8	adv.渐渐地	1
-20	sandstorm	Unit 3_3	8	n.沙尘暴	1
-20	scholar	Unit 3_3	8	n.学者	1
-20	cultural	Unit 3_3	8	adj.文化的	1
-20	institute	Unit 3_3	8	n.机构	1
-20	ruin	Unit 3_3	8	n.&v.毁坏	1
-20	remains	Unit 3_3	8	n.遗物	1
-20	beneath	Unit 3_3	8	prep.在...之下	1
-21	pot	Unit 3_4	8	n.罐	1
-21	material	Unit 3_4	8	n.&adj.材料	1
-21	document	Unit 3_4	8	n.文件	1
-21	workshop	Unit 3_4	8	n.作坊	0
-21	explode	Unit 3_4	8	vt.爆炸	1
-21	nearby	Unit 3_4	8	adj.在附近	1
-21	extreme	Unit 3_4	8	adj.极端的	1
-21	complain	Unit 3_4	8	vi.抱怨	0
-21	bone	Unit 3_4	8	n.骨头	1
-21	wooden	Unit 3_4	8	adj.木制的	1
-22	leather	Unit 3_5	8	adj.皮革的	1
-22	historical	Unit 3_5	8	adj.历史的	0
-22	solution	Unit 3_5	8	n.解决办法	0
-22	expression	Unit 3_5	8	n.表达	1
-22	audience	Unit 3_5	8	n.观众	1
-22	cave	Unit 3_5	8	n.洞穴	1
-22	ceremony	Unit 3_5	8	n.仪式	1
-22	republic	Unit 3_5	8	n.共和国	1
-22	chairman	Unit 3_5	8	n.主席	1
-22	pearl	Unit 3_5	8	n.珍珠	0
-23	harbor	Unit 3_6	8	n.港口	1
-23	navy	Unit 3_6	8	n.海军	1
-23	powerful	Unit 3_6	8	adj.强有力的	1
-23	airfield	Unit 3_6	8	n.机场	1
-23	bomb	Unit 3_6	8	n.轰炸炸弹	1
-23	sailor	Unit 3_6	8	n.水手	1
-23	fortunate	Unit 3_6	8	adj.幸运的	1
-23	aircraft	Unit 3_6	8	n.飞机	1
-23	carrier	Unit 3_6	8	n.航空母舰	1
-23	declare	Unit 3_6	8	vt.宣布	1
-23	in memory of	Unit 3_6	8	纪念	1
-24	memorial	Unit 3_7	8	n.&adj.纪念碑	1
-24	educate	Unit 3_7	8	v.教育	1
-24	statue	Unit 3_7	8	n.雕塑	1
-24	no doubt	Unit 3_7	8	无疑	1
-24	rise up against	Unit 3_7	8	起义	1
-24	troop	Unit 3_7	8	n.军队	1
-24	stand in one's path	Unit 3_7	8	阻碍	1
-24	march	Unit 3_7	8	vi.前进	1
-24	glory	Unit 3_7	8	n.辉煌	1
-24	ahead	Unit 3_7	8	adv.在前面	1
-24	come down with	Unit 3_7	8	患	1
-25	vast	Unit 3_8	8	adj.巨大的	1
-25	philosophy	Unit 3_8	8	n.哲学	0
-25	salary	Unit 3_8	8	n.薪金	1
-25	aware	Unit 3_8	8	adj.意识到的	1
-25	basis	Unit 3_8	8	n.基础	1
-25	court	Unit 3_8	8	n.法院	1
-25	god	Unit 3_8	8	n.神	1
-25	corrupt	Unit 3_8	8	v.&adj.使腐化	1
-25	trial	Unit 3_8	8	n.审讯	1
-25	judge	Unit 3_8	8	n.法官	1
-25	poison	Unit 3_8	8	n.毒药	1
+1	hearing	Unit 1_1	17	n.听力	1
+1	raised	Unit 1_1	17	adj.凸起的	1
+1	dot	Unit 1_1	17	n.点	1
+2	sign	Unit 1_2	17	n.符号	0
+2	confuse	Unit 1_2	17	vt.使迷惑	1
+2	vase	Unit 1_2	17	n.花瓶	1
+2	fog	Unit 1_2	17	n.雾	1
+2	mist	Unit 1_2	17	n.薄雾	1
+3	forecast	Unit 1_3	17	vt.&n.预测	1
+3	conductor	Unit 1_3	17	n.售票员	1
+3	fare	Unit 1_3	17	n.车费	1
+3	foggy	Unit 1_3	17	adj.有雾的	1
+3	observe	Unit 1_3	17	v.观察	1
+4	overcoat	Unit 1_4	17	n.长大衣	1
+4	glance	Unit 1_4	17	vi.瞥一眼	1
+4	nowhere	Unit 1_4	17	adv.无处	1
+4	footstep	Unit 1_4	17	n.脚步	1
+4	wherever	Unit 1_4	17	adv.无论哪里	1
+5	in sight	Unit 1_5	17	在视力范围之内	1
+5	narrow	Unit 1_5	17	adj.狭窄的	1
+5	approach	Unit 1_5	17	v.&n.靠近	1
+5	wish for	Unit 1_5	17	盼望	1
+5	darkness	Unit 1_5	17	n.黑暗	1
+6	hesitate	Unit 1_6	17	vi.&vt.犹豫	1
+6	reach out	Unit 1_6	17	伸出	1
+6	grasp	Unit 1_6	17	v.抓紧	1
+6	stare	Unit 1_6	17	vt.凝视	1
+6	beard	Unit 1_6	17	n.胡须	1
+7	watch out for	Unit 1_7	17	留心	1
+7	crossroads	Unit 1_7	17	n.十字路口	1
+7	anxious	Unit 1_7	17	adj.焦虑	1
+7	firmly	Unit 1_7	17	adv.牢牢地	1
+7	grateful	Unit 1_7	17	adj.感激的	1
+8	helper	Unit 1_8	17	n.帮助者	1
+8	aid	Unit 1_8	17	n.帮助	1
+8	relief	Unit 1_8	17	n.轻松	1
+8	lorry	Unit 1_8	17	n.卡车	1
+8	pavement	Unit 1_8	17	n.人行道	1
+9	reduce	Unit 1_9	17	vt.减少	1
+9	volunteer	Unit 1_9	17	n.志愿者	1
+9	sniff	Unit 1_9	17	v.嗅	1
+9	analyse	Unit 1_9	17	vt.分析	1
+9	recognize	Unit 1_9	17	vt.辨认出	1
+10	puzzle	Unit 1_10	17	n.&vt.使困惑	1
+10	ignore	Unit 1_10	17	vt.忽视	1
+10	pole	Unit 1_10	17	n.地级	1
+10	the North Pole	Unit 1_10	17	北极	1
+10	boot	Unit 1_10	17	n.靴子	1
+11	sweat	Unit 1_11	17	v.&n.汗水	1
+11	distance	Unit 1_11	17	n.距离	1
+11	thunder	Unit 1_11	17	n.雷	1
+11	lightning	Unit 1_11	17	n.闪电	1
+11	triangle	Unit 1_11	17	n.三角形	1
+12	wave	Unit 1_12	17	n.&v.波浪	1
+12	overhead	Unit 1_12	17	adv.在头上方	1
+12	tap	Unit 1_12	17	v.轻拍	1
+12	suit	Unit 1_12	17	n.&v.套装	1
+12	attach	Unit 1_12	17	v.使连在一起	1
+13	disability	Unit 1_13	17	n.缺陷	1
+13	hopeful	Unit 1_13	17	adj.抱有希望的	1
+13	whisper	Unit 1_13	17	vt.小声说	1
+13	bite	Unit 1_13	17	v.咬	1
+13	shark	Unit 1_13	17	n.鲨鱼	1
+14	jaw	Unit 1_14	17	n.颌	1
+14	bull	Unit 1_14	17	n.公牛	0
+14	contrary	Unit 1_14	17	adj.&n.相反的	1
+14	flesh	Unit 1_14	17	n.肉	1
+14	jewellery	Unit 1_14	17	n.珠宝	1
+15	attract	Unit 1_15	17	v.吸引	1
+15	calm	Unit 1_15	17	adj.镇静的	1
+15	panic	Unit 1_15	17	n.恐慌	1
+15	fist	Unit 1_15	17	n.拳头	1
+15	likely	Unit 1_15	17	adj.可能的	1
+16	pigeon	Unit 1_16	17	n.鸽子	0
+16	soldier	Unit 1_16	17	n.士兵	1
+16	roll	Unit 1_16	17	vi.&vt.滚动	1
+16	roll up	Unit 1_16	17	卷起来	1
+17	loose	Unit 1_17	17	adj.&v.松动的	1
+17	employ	Unit 1_17	17	v.雇用	1
+17	compass	Unit 1_17	17	n.罗盘	1
+17	unlike	Unit 1_17	17	prep.不像	1
+18	be made up of	Unit 2_1	17	由...组成	1
+18	vocabulary	Unit 2_1	17	n.词汇	1
+18	nowadays	Unit 2_1	17	adv.现在	1
+18	Celtic	Unit 2_1	17	n.凯尔特语	0
+18	Germanic	Unit 2_1	17	adj.日耳曼语的	0
+19	mainland	Unit 2_2	17	n.大陆	1
+19	Angle	Unit 2_2	17	n.盎格鲁人	0
+19	Saxon	Unit 2_2	17	n.撒克逊人	0
+19	occupy	Unit 2_2	17	vt.占用	1
+19	consist	Unit 2_2	17	vi.组成	1
+20	consist of	Unit 2_3	17	由...组成	1
+20	mixture	Unit 2_3	17	n.混合	1
+20	name after	Unit 2_3	17	以...命名	1
+20	aside	Unit 2_3	17	adv.除...之外	1
+20	aside from	Unit 2_3	17	除...之外	1
+21	Viking	Unit 2_4	17	n.维京人	0
+21	official	Unit 2_4	17	adj.官方的	1
+21	phrase	Unit 2_4	17	n.词组	1
+21	contribution	Unit 2_4	17	n.贡献	1
+21	Norman	Unit 2_4	17	n&adj.诺曼人	0
+22	defeat	Unit 2_5	17	vt.击败	1
+22	take control of	Unit 2_5	17	控制	1
+22	the Norman Conquest	Unit 2_5	17	诺曼征服	0
+22	lead to	Unit 2_5	17	导致	1
+22	replace	Unit 2_5	17	vt.代替	1
+23	entire	Unit 2_6	17	adj.整个的	1
+23	servant	Unit 2_6	17	n.仆人	1
+23	raise	Unit 2_6	17	vt.举起	1
+23	therefore	Unit 2_6	17	adv.因此	1
+23	mutton	Unit 2_6	17	n.羊肉	1
+24	bacon	Unit 2_7	17	n.熏猪肉	1
+24	plural	Unit 2_7	17	adj.复数形式	0
+24	high-class	Unit 2_7	17	adj.上层社会的	1
+24	mother tongue	Unit 2_7	17	母语	1
+24	the Renaissance	Unit 2_7	17	n.文艺复兴	0
+25	Latin	Unit 2_8	17	n&adj.拉丁语	0
+25	Greek	Unit 2_8	17	n&adj.希腊语的	0
+25	process	Unit 2_8	17	n.过程	1
+25	distinction	Unit 2_8	17	n.区别	1
+25	spelling	Unit 2_8	17	n.拼写	1
+26	accent	Unit 2_9	17	n.口音	1
+26	concern	Unit 2_9	17	vt.使担忧	1
+26	ban	Unit 2_9	17	v.禁止	1
+26	pure	Unit 2_9	17	adj.纯的	1
+26	unique	Unit 2_9	17	adj.独特的	1
+27	access	Unit 2_10	17	vt.&n.进入	1
+27	character	Unit 2_10	17	n.文字符号	1
+27	bark	Unit 2_10	17	n.&v.狗叫	1
+27	racial	Unit 2_10	17	adj.种族的	1
+27	gentle	Unit 2_10	17	adj.温柔的	1
+28	embarrass	Unit 2_11	17	vt.使尴尬	1
+28	backwards	Unit 2_11	17	adv.向后	1
+28	conclusion	Unit 2_11	17	n.结论	1
+28	custom	Unit 2_11	17	n.风俗	1
+28	interrupt	Unit 2_11	17	vt.打断	1
+29	mistaken	Unit 2_12	17	adj.错误的	1
+29	ought to	Unit 2_12	17	应当	1
+29	differ	Unit 2_12	17	vi.相异	1
+29	differ from	Unit 2_12	17	和...不同	1
+29	alphabet	Unit 2_12	17	n.字母表	1
+30	stand for	Unit 2_13	17	代表	1
+30	deed	Unit 2_13	17	n.行为	1
+30	writing	Unit 2_13	17	n.文字	1
+30	hunt	Unit 2_13	17	v.打猎	1
+30	appearance	Unit 2_13	17	n.外观	1
+31	represent	Unit 2_14	17	vt.代表	1
+31	drawing	Unit 2_14	17	n.绘画	1
+31	as a whole	Unit 2_14	17	作为整体	1
+31	combine	Unit 2_14	17	vi.组合	1
+31	distinguish	Unit 2_14	17	vt.区分	1
+32	indicate	Unit 2_15	17	v.显示	1
+32	shortcoming	Unit 2_15	17	n.缺点	1
+32	ink	Unit 2_15	17	n.墨水	1
+32	eyesight	Unit 2_15	17	n.视力	1
+32	press	Unit 2_15	17	vt.挤压	1
+33	wire	Unit 2_16	17	n.金属丝	1
+33	convenient	Unit 2_16	17	adj.方便的	1
+33	battle	Unit 2_16	17	n.战斗	1
+33	pattern	Unit 2_16	17	n.图案	1
+33	drag	Unit 2_16	17	v.拖	1
+34	practical	Unit 2_17	17	adj.实用的	1
+34	thus	Unit 2_17	17	adv.因此	1
+34	typewriter	Unit 2_17	17	n.打字机	1
+34	version	Unit 2_17	17	n.版本	1
+35	civilization	Unit 3_1	17	n.文明	1
+35	lecture	Unit 3_1	17	n.讲座	1
+35	found	Unit 3_1	17	vt.兴建	1
+35	BC	Unit 3_1	17	abbr.公元前	1
+35	Roman	Unit 3_1	17	n&adj.罗马人	0
+36	take over	Unit 3_2	17	接管	1
+36	volcano	Unit 3_2	17	n.火山	1
+36	AD	Unit 3_2	17	abbr.公元	1
+36	erupt	Unit 3_2	17	v.爆发	1
+36	lava	Unit 3_2	17	n.熔岩	0
+37	ash	Unit 3_3	17	n.灰	1
+37	pour	Unit 3_3	17	vt.涌流	1
+37	unfortunate	Unit 3_3	17	adj.不幸的	1
+37	mud	Unit 3_3	17	n.泥浆	1
+37	decorate	Unit 3_3	17	vt.装饰	1
+38	flee	Unit 3_4	17	vi.逃避	1
+38	researcher	Unit 3_4	17	n.研究者	1
+38	true-to-life	Unit 3_4	17	adj.逼真的	1
+38	disaster	Unit 3_4	17	n.灾难	1
+38	destroy	Unit 3_4	17	vt.毁坏	1
+39	commercial	Unit 3_5	17	adj.商业的	1
+39	wealthy	Unit 3_5	17	adj.富有的	1
+39	gradually	Unit 3_5	17	adv.渐渐地	1
+39	sandstorm	Unit 3_5	17	n.沙尘暴	1
+39	scholar	Unit 3_5	17	n.学者	1
+40	cultural	Unit 3_6	17	adj.文化的	1
+40	institute	Unit 3_6	17	n.机构	1
+40	ruin	Unit 3_6	17	n.&v.毁坏	1
+40	remains	Unit 3_6	17	n.遗物	1
+40	beneath	Unit 3_6	17	prep.在...之下	1
+41	pot	Unit 3_7	17	n.罐	1
+41	material	Unit 3_7	17	n.&adj.材料	1
+41	document	Unit 3_7	17	n.文件	1
+41	workshop	Unit 3_7	17	n.作坊	0
+41	explode	Unit 3_7	17	vt.爆炸	1
+42	nearby	Unit 3_8	17	adj.在附近	1
+42	extreme	Unit 3_8	17	adj.极端的	1
+42	complain	Unit 3_8	17	vi.抱怨	0
+42	bone	Unit 3_8	17	n.骨头	1
+42	wooden	Unit 3_8	17	adj.木制的	1
+43	leather	Unit 3_9	17	adj.皮革的	1
+43	historical	Unit 3_9	17	adj.历史的	0
+43	solution	Unit 3_9	17	n.解决办法	0
+43	expression	Unit 3_9	17	n.表达	1
+43	audience	Unit 3_9	17	n.观众	1
+44	cave	Unit 3_10	17	n.洞穴	1
+44	ceremony	Unit 3_10	17	n.仪式	1
+44	republic	Unit 3_10	17	n.共和国	1
+44	chairman	Unit 3_10	17	n.主席	1
+44	pearl	Unit 3_10	17	n.珍珠	0
+45	harbor	Unit 3_11	17	n.港口	1
+45	navy	Unit 3_11	17	n.海军	1
+45	powerful	Unit 3_11	17	adj.强有力的	1
+45	airfield	Unit 3_11	17	n.机场	1
+45	bomb	Unit 3_11	17	n.轰炸炸弹	1
+46	sailor	Unit 3_12	17	n.水手	1
+46	fortunate	Unit 3_12	17	adj.幸运的	1
+46	aircraft	Unit 3_12	17	n.飞机	1
+46	carrier	Unit 3_12	17	n.航空母舰	1
+46	declare	Unit 3_12	17	vt.宣布	1
+47	in memory of	Unit 3_13	17	纪念	1
+47	memorial	Unit 3_13	17	n.&adj.纪念碑	1
+47	educate	Unit 3_13	17	v.教育	1
+47	statue	Unit 3_13	17	n.雕塑	1
+47	no doubt	Unit 3_13	17	无疑	1
+48	rise up against	Unit 3_14	17	起义	1
+48	troop	Unit 3_14	17	n.军队	1
+48	stand in one's path	Unit 3_14	17	阻碍	1
+48	march	Unit 3_14	17	vi.前进	1
+48	glory	Unit 3_14	17	n.辉煌	1
+49	ahead	Unit 3_15	17	adv.在前面	1
+49	come down with	Unit 3_15	17	患	1
+49	vast	Unit 3_15	17	adj.巨大的	1
+49	philosophy	Unit 3_15	17	n.哲学	0
+49	salary	Unit 3_15	17	n.薪金	1
+50	aware	Unit 3_16	17	adj.意识到的	1
+50	basis	Unit 3_16	17	n.基础	1
+50	court	Unit 3_16	17	n.法院	1
+50	god	Unit 3_16	17	n.神	1
+51	corrupt	Unit 3_17	17	v.&adj.使腐化	1
+51	trial	Unit 3_17	17	n.审讯	1
+51	judge	Unit 3_17	17	n.法官	1
+51	poison	Unit 3_17	17	n.毒药	1

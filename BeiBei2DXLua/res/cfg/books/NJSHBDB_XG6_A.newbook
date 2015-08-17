@@ -1,332 +1,332 @@
-1	age	Module1 Unit1_1	3	n.年龄	1
-1	always	Module1 Unit1_1	3	adv.总是	1
-1	estate	Module1 Unit1_1	3	n.房产	1
-2	family	Module1 Unit1_2	3	n.家庭	1
-2	meet	Module1 Unit1_2	3	vt.遇见	1
-2	member	Module1 Unit1_2	3	n.成员	1
-2	never	Module1 Unit1_2	3	adv.从来没有	1
-2	number	Module1 Unit1_2	3	n.数量	1
-2	only	Module1 Unit1_2	3	adv.仅仅	1
-2	right	Module1 Unit1_2	3	adj.正确的	1
-2	sometimes	Module1 Unit1_2	3	adv.有时	1
-2	than	Module1 Unit1_2	3	prep.比	1
-2	time for bed	Module1 Unit1_2	3	该睡觉了	1
-3	usually	Module1 Unit1_3	3	adv.通常	1
-3	young	Module1 Unit1_3	3	adj.年轻的	1
-3	was	Module1 Unit1_3	3	v.是（be第一人称单数过去式）	1
-3	been	Module1 Unit1_3	3	v.是（be过去分词）	1
-3	gave	Module1 Unit1_3	3	vt.给予；赠送（give过去式）	1
-3	given	Module1 Unit1_3	3	vt.给予；赠送（give过去分词）	1
-3	had	Module1 Unit1_3	3	vt.有，拥有（have过去式）	1
-3	knew	Module1 Unit1_3	3	vt.知道；了解（know过去式）	1
-3	known	Module1 Unit1_3	3	vt.知道；了解（know过去分词）	1
-3	said	Module1 Unit1_3	3	vt.说（say过去式，过去分词）	1
-4	after	Module1 Unit2_1	2	prep.&adv.在...之后	1
-4	after school	Module1 Unit2_1	2	放学以后	1
-4	centimetre	Module1 Unit2_1	2	n.厘米	1
-4	cycle	Module1 Unit2_1	2	v.骑自行车	1
-4	dress up	Module1 Unit2_1	2	打扮	1
-4	each other	Module1 Unit2_1	2	彼此	1
-4	housing estate	Module1 Unit2_1	2	物业小区	1
-4	heavy	Module1 Unit2_1	2	adj.重的	1
-4	height	Module1 Unit2_1	2	n.高度	1
-4	how	Module1 Unit2_1	2	adv.怎样	1
-4	how about	Module1 Unit2_1	2	...怎么样	1
-5	just	Module1 Unit2_2	2	adv.刚才	1
-5	kilogramme	Module1 Unit2_2	2	n.公斤	1
-5	like	Module1 Unit2_2	2	prep.&vt.喜欢	1
-5	puppy	Module1 Unit2_2	2	n.小狗	1
-5	share	Module1 Unit2_2	2	vt.分享	1
-5	skate	Module1 Unit2_2	2	v.溜冰	1
-5	together	Module1 Unit2_2	2	adv.一起	1
-5	weekend	Module1 Unit2_2	2	n.周末	1
-5	at the weekend	Module1 Unit2_2	2	在周末	1
-5	weight	Module1 Unit2_2	2	n.重量	1
-6	area	Module1 Unit3_1	3	n.地方	1
-6	ferry	Module1 Unit3_1	3	n.渡船	1
-6	get to	Module1 Unit3_1	3	到达	1
-6	loudly	Module1 Unit3_1	3	adv.大声地	1
-6	love	Module1 Unit3_1	3	vt.爱，热爱	1
-6	museum	Module1 Unit3_1	3	n.博物馆	1
-6	nut	Module1 Unit3_1	3	n.坚果	1
-6	pitch	Module1 Unit3_1	3	n.程度	1
-6	quickly	Module1 Unit3_1	3	adv.迅速地	1
-7	quietly	Module1 Unit3_2	3	adv.安静地	1
-7	slowly	Module1 Unit3_2	3	adv.缓慢地	1
-7	soon	Module1 Unit3_2	3	adv.不久	1
-7	space	Module1 Unit3_2	3	n.空间	1
-7	take transport	Module1 Unit3_2	3	vt.乘坐（交通工具）	1
-7	take photograph	Module1 Unit3_2	3	vt.照（相）	1
-7	tomorrow	Module1 Unit3_2	3	n.&adv.明天	1
-7	underground	Module1 Unit3_2	3	adj.地下的	1
-7	yesterday	Module1 Unit3_2	3	n.&adv.昨天	1
-8	ate	Module1 Unit3_3	3	vt.吃（eat过去式）	1
-8	flew	Module1 Unit3_3	3	vi.飞（fly过去式）	1
-8	flown	Module1 Unit3_3	3	vi.飞（fly过去分词）	1
-8	went	Module1 Unit3_3	3	vi.去（go过去式）	1
-8	gone	Module1 Unit3_3	3	vi.去（go过去分词）	1
-8	sang	Module1 Unit3_3	3	vt.唱歌（sing过去式）	1
-8	sung	Module1 Unit3_3	3	vt.唱歌（sing过去分词）	1
-8	swam	Module1 Unit3_3	3	vi.游泳（swim过去式）	1
-8	swum	Module1 Unit3_3	3	vi.游泳（swim过去分词）	1
-8	took	Module1 Unit3_3	3	vt.带；乘坐；照相（take过去式）	1
-9	astronaut	Module2 Unit1_1	1	n.宇航员	1
-9	fire-engine	Module2 Unit1_1	1	n.消防车	1
-9	job	Module2 Unit1_1	1	n.（一份）工作	1
-9	make	Module2 Unit1_1	1	vt.制作	1
-9	plane	Module2 Unit1_1	1	n.飞机	1
-9	put out	Module2 Unit1_1	1	消除	1
-9	safe	Module2 Unit1_1	1	adj.安全的	1
-9	spacecraft	Module2 Unit1_1	1	n.宇宙飞船	1
-9	teach	Module2 Unit1_1	1	vt.教书	1
-10	address	Module2 Unit2_1	1	n.地址	1
-10	kindergarten	Module2 Unit2_1	1	n.幼儿园	1
-10	room	Module2 Unit2_1	1	n.房间	1
-10	tennis court	Module2 Unit2_1	1	网球场	1
-10	top	Module2 Unit2_1	1	n.&adj.顶部	1
-11	along	Module2 Unit3_1	2	adv.向前	1
-11	bus-stop	Module2 Unit3_1	2	n.公共汽车站	1
-11	crossing	Module2 Unit3_1	2	n.十字路口	1
-11	crowded	Module2 Unit3_1	2	adj.拥挤的	1
-11	on foot	Module2 Unit3_1	2	步行	1
-11	get off	Module2 Unit3_1	2	下车	1
-11	get on	Module2 Unit3_1	2	上车	1
-11	lamp post	Module2 Unit3_1	2	灯柱	1
-11	leave	Module2 Unit3_1	2	v.离开	1
-11	litter bin	Module2 Unit3_1	2	垃圾箱	1
-11	a lot of	Module2 Unit3_1	2	大量	1
-12	minibus	Module2 Unit3_2	2	n.小型公共汽车	1
-12	minute	Module2 Unit3_2	2	n.分钟	1
-12	pavement	Module2 Unit3_2	2	n.（英）人行道	1
-12	post box	Module2 Unit3_2	2	邮箱	1
-12	traffic	Module2 Unit3_2	2	n.红绿灯；交通	1
-12	traffic jam	Module2 Unit3_2	2	交通阻塞	1
-12	tram-stop	Module2 Unit3_2	2	n.电车站	1
-12	did	Module2 Unit3_2	2	vt.做（do过去式）	1
-12	saw	Module2 Unit3_2	2	vt.看见（see过去式）	1
-12	seen	Module2 Unit3_2	2	vt.看见（see过去分词）	1
-13	across	Mdule2 Unit4_1	1	adv.&prep.横过	1
-13	left	Mdule2 Unit4_1	1	n.&adj.左边	1
-13	park	Mdule2 Unit4_1	1	n.公园	1
-13	right	Mdule2 Unit4_1	1	adj.权利	1
-13	turn	Mdule2 Unit4_1	1	vt.旋转	1
-13	way	Mdule2 Unit4_1	1	n.路线	1
-13	on one's way to	Mdule2 Unit4_1	1	在...的路上	1
-13	wrong	Mdule2 Unit4_1	1	adj.错误的	1
-13	zebra crossing	Mdule2 Unit4_1	1	斑马线	1
-14	also	Module3 Unit1_1	2	adv.也	1
-14	can	Module3 Unit1_1	2	aux.可能	1
-14	carton	Module3 Unit1_1	2	n.纸盒	1
-14	cheese	Module3 Unit1_1	2	n.奶酪	1
-14	come on	Module3 Unit1_1	2	来吧	1
-14	crab	Module3 Unit1_1	2	n.螃蟹	1
-14	dairy product	Module3 Unit1_1	2	乳制品	1
-14	fridge	Module3 Unit1_1	2	n.冰箱	1
-14	frozen	Module3 Unit1_1	2	vi.结冰（frize的过去分词）	1
-14	lemonade	Module3 Unit1_1	2	n.柠檬水	1
-14	lettuce	Module3 Unit1_1	2	n.莴苣	1
-14	onion	Module3 Unit1_1	2	n.洋葱	1
-15	packet	Module3 Unit1_2	2	n.小包裹	1
-15	peach	Module3 Unit1_2	2	n.桃子	1
-15	product	Module3 Unit1_2	2	n.产品	1
-15	section	Module3 Unit1_2	2	n.部分	1
-15	snacks	Module3 Unit1_2	2	n.小吃	1
-15	spend	Module3 Unit1_2	2	v.度过；花费（钱，时间等)	1
-15	squid	Module3 Unit1_2	2	n.鱿鱼	1
-15	steak	Module3 Unit1_2	2	n.牛排	1
-15	tomato	Module3 Unit1_2	2	n.西红柿	1
-15	bought	Module3 Unit1_2	2	vt.买（buy过去式）	1
-15	spent	Module3 Unit1_2	2	vt.度过；花费（spend过去式，过去分词）	1
-16	cereal	Module3 Unit2_1	2	n.谷类食物	1
-16	chicken wing	Module3 Unit2_1	2	鸡翅	1
-16	choose	Module3 Unit2_1	2	vt.选择，挑选	1
-16	ever	Module3 Unit2_1	2	adv.曾经	1
-16	favourite	Module3 Unit2_1	2	adj.喜爱的	1
-16	fried	Module3 Unit2_1	2	adj.油煎的	1
-16	hamburger	Module3 Unit2_1	2	n.汉堡包	1
-16	hot-dog	Module3 Unit2_1	2	n.热狗	1
-16	list	Module3 Unit2_1	2	n.一览表	1
-17	menu	Module3 Unit2_2	2	n.菜单	1
-17	pancake	Module3 Unit2_2	2	n.薄煎饼	1
-17	salad	Module3 Unit2_2	2	n.沙拉	1
-17	soup	Module3 Unit2_2	2	n.汤	1
-17	soya milk	Module3 Unit2_2	2	豆浆	1
-17	sundae	Module3 Unit2_2	2	n.圣代冰淇淋	1
-17	sushi	Module3 Unit2_2	2	n.寿司	1
-17	toast	Module3 Unit2_2	2	n.&v.烤面包	1
-17	eaten	Module3 Unit2_2	2	vt.吃（eat过去分词）	1
-18	another	Module3 Unit3_1	2	adj.另一	1
-18	bad	Module3 Unit3_1	2	adj.坏的	1
-18	diet	Module3 Unit3_1	2	n.饮食	1
-18	enough	Module3 Unit3_1	2	adj.足够的	1
-18	fish finger	Module3 Unit3_1	2	炸鱼条	1
-18	ham	Module3 Unit3_1	2	n.火腿	1
-18	hard	Module3 Unit3_1	2	adv.努力地	1
-18	healthy	Module3 Unit3_1	2	adj.健康的	1
-18	little	Module3 Unit3_1	2	adj.小的	1
-18	a little	Module3 Unit3_1	2	一点	1
-19	page	Module3 Unit3_2	2	n.页，页码	1
-19	a piece of	Module3 Unit3_2	2	一块	1
-19	pizza	Module3 Unit3_2	2	n.披萨	1
-19	plate	Module3 Unit3_2	2	n.盘子	1
-19	plenty of	Module3 Unit3_2	2	很多的	1
-19	a slice of	Module3 Unit3_2	2	一片	1
-19	soft drink	Module3 Unit3_2	2	清凉饮料	1
-19	think	Module3 Unit3_2	2	vt.认为，思考	1
-19	unhealthy	Module3 Unit3_2	2	adj.不健康的	1
-19	yoghurt	Module3 Unit3_2	2	n.酸奶	1
-20	Australia	Module3 Unit4_1	2	n.澳大利亚	1
-20	Canada	Module3 Unit4_1	2	n.加拿大	1
-20	come from	Module3 Unit4_1	2	来自	1
-20	each	Module3 Unit4_1	2	pron.&ad.每人	1
-20	Japan	Module3 Unit4_1	2	n.日本	1
-20	lay the table	Module3 Unit4_1	2	摆饭桌	1
-20	mix	Module3 Unit4_1	2	vt.混合；搅拌	1
-20	mixture	Module3 Unit4_1	2	n.混合物	1
-20	New Zealand	Module3 Unit4_1	2	新西兰	1
-21	oven	Module3 Unit4_2	2	n.烤箱	1
-21	peel	Module3 Unit4_2	2	v.剥，削	1
-21	go shopping	Module3 Unit4_2	2	(去）购物	1
-21	Thailand	Module3 Unit4_2	2	n.泰国	1
-21	tin	Module3 Unit4_2	2	n.（英）罐头	1
-21	USA	Module3 Unit4_2	2	n.美国	1
-21	put	Module3 Unit4_2	2	vt.放（put过去式，过去分词）	1
-21	made	Module3 Unit4_2	2	vt.做；制作；使得（make过去式，过去分词）	1
-22	around	Module4 Unit1_1	2	prep.在...周围	1
-22	arrive	Module4 Unit1_1	2	vi.到达	1
-22	back	Module4 Unit1_1	2	adv.回（原处）	1
-22	basketball	Module4 Unit1_1	2	n.篮球	1
-22	play basketball	Module4 Unit1_1	2	打篮球	1
-22	buddha	Module4 Unit1_1	2	n.佛	1
-22	compass	Module4 Unit1_1	2	n.罗盘；指南针	1
-22	east	Module4 Unit1_1	2	n.东方的	1
-22	end	Module4 Unit1_1	2	vt.结束；终点	1
-22	except	Module4 Unit1_1	2	prep.除...以外	1
-23	leap year	Module4 Unit1_2	2	闰年	1
-23	map	Module4 Unit1_2	2	n.地图	1
-23	needle	Module4 Unit1_2	2	n.针	1
-23	noon	Module4 Unit1_2	2	n.中午	1
-23	north	Module4 Unit1_2	2	adj.北方的	1
-23	railway	Module4 Unit1_2	2	n.铁路	1
-23	rest	Module4 Unit1_2	2	n.&v.休息	1
-23	south	Module4 Unit1_2	2	adj.南方的	1
-23	start	Module4 Unit1_2	2	n.&v.开始	1
-23	west	Module4 Unit1_2	2	adj.西方的	1
-24	brochure	Module4 Unit2_1	2	n.资料手册	1
-24	holiday brochure	Module4 Unit2_1	2	度假手册	1
-24	Chinese New Year	Module4 Unit2_1	2	中国的新年	1
-24	clothes	Module4 Unit2_1	2	n.衣服	1
-24	enough	Module4 Unit2_1	2	adj.足够的	1
-24	fish	Module4 Unit2_1	2	n.鱼	1
-24	forecast	Module4 Unit2_1	2	n.&v.预报	1
-24	hotel	Module4 Unit2_1	2	n.旅馆	1
-24	how long	Module4 Unit2_1	2	多久	1
-24	relative	Module4 Unit2_1	2	n.7adj.亲属	1
-24	river	Module4 Unit2_1	2	n.河流	1
-25	sandal	Module4 Unit2_2	2	n.凉鞋	1
-25	shorts	Module4 Unit2_2	2	n.短裤	1
-25	snow	Module4 Unit2_2	2	n.&v.雪	1
-25	snowy	Module4 Unit2_2	2	adj.下雪的	1
-25	stay	Module4 Unit2_2	2	n.停留	1
-25	thanks	Module4 Unit2_2	2	n.&int.谢谢	1
-25	then	Module4 Unit2_2	2	adv.&conj.然后	1
-25	ticket	Module4 Unit2_2	2	n.票；券	1
-25	go on a trip	Module4 Unit2_2	2	旅行	1
-25	when	Module4 Unit2_2	2	conj.当...的时候	1
-25	will	Module4 Unit2_2	2	aux.将，会	1
-26	Christmas	Module4 Unit3_1	1	n.圣诞节	1
-26	decoration	Module4 Unit3_1	1	n.装饰	1
-26	dumpling	Module4 Unit3_1	1	n.饺子	1
-26	festival	Module4 Unit3_1	1	n.节日	1
-26	market	Module4 Unit3_1	1	n.市场	1
-26	mooncake	Module4 Unit3_1	1	n.月饼	1
-26	paint	Module4 Unit3_1	1	n.油漆	1
-26	race	Module4 Unit3_1	1	n.种族	1
-26	special	Module4 Unit3_1	1	adj.特别的	1
-26	thousand	Module4 Unit3_1	1	num.一千	1
-26	thousands of	Module4 Unit3_1	1	几千	1
-27	camp	Module4 Unit4_1	2	n.营地	1
-27	cinema	Module4 Unit4_1	2	n.电影院	1
-27	collect	Module4 Unit4_1	2	vt.收集	1
-27	collect stamps	Module4 Unit4_1	2	集邮	1
-27	jump	Module4 Unit4_1	2	n.&v.跳跃，跳	1
-27	high jump	Module4 Unit4_1	2	跳高	1
-27	model	Module4 Unit4_1	2	n.模型	1
-27	sew	Module4 Unit4_1	2	vt.缝制	1
-28	sport	Module4 Unit4_2	2	n.运动	1
-28	stamp	Module4 Unit4_2	2	n.邮票	1
-28	table-tennis	Module4 Unit4_2	2	n.乒乓球	1
-28	video	Module4 Unit4_2	2	n.录像，视频	1
-28	done	Module4 Unit4_2	2	vt.做（do过去分词）	1
-28	drawn	Module4 Unit4_2	2	vt.画画（draw过去分词）	1
-28	read	Module4 Unit4_2	2	vt.阅读（read过去分词）	1
-28	written	Module4 Unit4_2	2	vt.写，写字（write过去分词)	1
-29	against	Module5 Unit1_1	2	prep.对着	1
-29	bear	Module5 Unit1_1	2	vt.承受	1
-29	be born	Module5 Unit1_1	2	出生	1
-29	feather	Module5 Unit1_1	2	n.羽毛	1
-29	few	Module5 Unit1_1	2	adj.不多，少数	1
-29	a few	Module5 Unit1_1	2	一点	1
-29	fight	Module5 Unit1_1	2	n.打仗	1
-29	length	Module5 Unit1_1	2	n.长度	1
-29	pin	Module5 Unit1_1	2	n.大头针	1
-30	quite	Module5 Unit1_2	2	adv.完全	1
-30	run away	Module5 Unit1_2	2	逃跑	1
-30	sword	Module5 Unit1_2	2	n.剑，刀	1
-30	think	Module5 Unit1_2	2	vt.想	1
-30	think of	Module5 Unit1_2	2	考虑	1
-30	weigh	Module5 Unit1_2	2	vt.重...（若干）	1
-30	ran	Module5 Unit1_2	2	vi.跑，逃跑（run过去式）	1
-30	run	Module5 Unit1_2	2	vi.跑，逃跑（run过去分词）	1
-31	barbecue	Module5 Unit2_1	2	n.烤肉野餐	1
-31	because	Module5 Unit2_1	2	conj.因为	1
-31	begin	Module5 Unit2_1	2	vt.开始	1
-31	boot	Module5 Unit2_1	2	n.靴，长筒靴	1
-31	exciting	Module5 Unit2_1	2	adj.令人激动的	1
-31	frightening	Module5 Unit2_1	2	adj.可怕的	1
-31	interesting	Module5 Unit2_1	2	adj.有趣的	1
-31	laugh	Module5 Unit2_1	2	vt.笑	1
-31	lie	Module5 Unit2_1	2	n.谎言	1
-31	more	Module5 Unit2_1	2	adv.更多的	1
-31	heavy rain	Module5 Unit2_1	2	大雨	1
-32	sandcastle	Module5 Unit2_2	2	n.沙堡	1
-32	snowman	Module5 Unit2_2	2	n.雪人	1
-32	star	Module5 Unit2_2	2	n.星	1
-32	have a swim	Module5 Unit2_2	2	游泳	1
-32	take off clothes	Module5 Unit2_2	2	脱下（衣服）	1
-32	tell	Module5 Unit2_2	2	vt.告诉，讲述	1
-32	turn	Module5 Unit2_2	2	vt.翻转	1
-32	wonderful	Module5 Unit2_2	2	adj.精彩的	1
-32	told	Module5 Unit2_2	2	vt.告诉，讲述（tell过去式,过去分词）	1
-32	had	Module5 Unit2_2	2	v.有（have过去分词）	1
-33	airport	Module5 Unit3_1	2	n.飞机场	1
-33	builder	Module5 Unit3_1	2	n.建筑工人，建筑师	1
-33	change	Module5 Unit3_1	2	v.&n.改变；零钱	1
-33	city	Module5 Unit3_1	2	n.城市	1
-33	factory	Module5 Unit3_1	2	n.工厂	1
-33	fishing	Module5 Unit3_1	2	n.钓鱼，捕鱼	1
-33	harbour	Module5 Unit3_1	2	n.港口，港湾	1
-33	history	Module5 Unit3_1	2	n.历史	1
-33	hundreds of	Module5 Unit3_1	2	几百	1
-33	million	Module5 Unit3_1	2	num.百万	1
-34	more than	Module5 Unit3_2	2	超出	1
-34	next	Module5 Unit3_2	2	adj.接下来	1
-34	other	Module5 Unit3_2	2	adj.别人	1
-34	story	Module5 Unit3_2	2	n.故事	1
-34	town	Module5 Unit3_2	2	n.城镇	1
-34	village	Module5 Unit3_2	2	n.村庄	1
-34	worker	Module5 Unit3_2	2	n.工人	1
-34	were	Module5 Unit3_2	2	v.是（be第二人称过去式）	1
-34	been	Module5 Unit3_2	2	v.是（be过去分词）	1
-34	left	Module5 Unit3_2	2	v.离开（leave过去式，过去分词）	1
-35	about	Module5 Unit4_1	1	prep.关于	1
-35	adult	Module5 Unit4_1	1	n.成年人	1
-35	child	Module5 Unit4_1	1	n.孩子	1
-35	learn	Module5 Unit4_1	1	vt.学习	1
-35	primary school	Module5 Unit4_1	1	小学	1
-35	secondary school	Module5 Unit4_1	1	中学	1
-35	teenager	Module5 Unit4_1	1	n.青少年	1
-35	work	Module5 Unit4_1	1	n.&v.工作	1
-35	drank	Module5 Unit4_1	1	vt.喝（drink过去式）	1
-35	drunk	Module5 Unit4_1	1	vt.喝（drink过去分词）	1
-35	slept	Module5 Unit4_1	1	vi.睡觉（sleep过去式,过去分词）	1
+1	age	Module1 Unit1_1	5	n.年龄	1
+1	always	Module1 Unit1_1	5	adv.总是	1
+1	estate	Module1 Unit1_1	5	n.房产	1
+2	family	Module1 Unit1_2	5	n.家庭	1
+2	meet	Module1 Unit1_2	5	vt.遇见	1
+2	member	Module1 Unit1_2	5	n.成员	1
+2	never	Module1 Unit1_2	5	adv.从来没有	1
+2	number	Module1 Unit1_2	5	n.数量	1
+3	only	Module1 Unit1_3	5	adv.仅仅	1
+3	right	Module1 Unit1_3	5	adj.正确的	1
+3	sometimes	Module1 Unit1_3	5	adv.有时	1
+3	than	Module1 Unit1_3	5	prep.比	1
+3	time for bed	Module1 Unit1_3	5	该睡觉了	1
+4	usually	Module1 Unit1_4	5	adv.通常	1
+4	young	Module1 Unit1_4	5	adj.年轻的	1
+4	was	Module1 Unit1_4	5	v.是（be第一人称单数过去式）	1
+4	been	Module1 Unit1_4	5	v.是（be过去分词）	1
+4	gave	Module1 Unit1_4	5	vt.给予；赠送（give过去式）	1
+5	given	Module1 Unit1_5	5	vt.给予；赠送（give过去分词）	1
+5	had	Module1 Unit1_5	5	vt.有，拥有（have过去式）	1
+5	knew	Module1 Unit1_5	5	vt.知道；了解（know过去式）	1
+5	known	Module1 Unit1_5	5	vt.知道；了解（know过去分词）	1
+5	said	Module1 Unit1_5	5	vt.说（say过去式，过去分词）	1
+6	after	Module1 Unit2_1	4	prep.&adv.在...之后	1
+6	after school	Module1 Unit2_1	4	放学以后	1
+6	centimetre	Module1 Unit2_1	4	n.厘米	1
+6	cycle	Module1 Unit2_1	4	v.骑自行车	1
+6	dress up	Module1 Unit2_1	4	打扮	1
+7	each other	Module1 Unit2_2	4	彼此	1
+7	housing estate	Module1 Unit2_2	4	物业小区	1
+7	heavy	Module1 Unit2_2	4	adj.重的	1
+7	height	Module1 Unit2_2	4	n.高度	1
+7	how	Module1 Unit2_2	4	adv.怎样	1
+8	how about	Module1 Unit2_3	4	...怎么样	1
+8	just	Module1 Unit2_3	4	adv.刚才	1
+8	kilogramme	Module1 Unit2_3	4	n.公斤	1
+8	like	Module1 Unit2_3	4	prep.&vt.喜欢	1
+8	puppy	Module1 Unit2_3	4	n.小狗	1
+9	share	Module1 Unit2_4	4	vt.分享	1
+9	skate	Module1 Unit2_4	4	v.溜冰	1
+9	together	Module1 Unit2_4	4	adv.一起	1
+9	weekend	Module1 Unit2_4	4	n.周末	1
+9	at the weekend	Module1 Unit2_4	4	在周末	1
+9	weight	Module1 Unit2_4	4	n.重量	1
+10	area	Module1 Unit3_1	6	n.地方	1
+10	ferry	Module1 Unit3_1	6	n.渡船	1
+10	get to	Module1 Unit3_1	6	到达	1
+10	loudly	Module1 Unit3_1	6	adv.大声地	1
+10	love	Module1 Unit3_1	6	vt.爱，热爱	1
+11	museum	Module1 Unit3_2	6	n.博物馆	1
+11	nut	Module1 Unit3_2	6	n.坚果	1
+11	pitch	Module1 Unit3_2	6	n.程度	1
+11	quickly	Module1 Unit3_2	6	adv.迅速地	1
+11	quietly	Module1 Unit3_2	6	adv.安静地	1
+12	slowly	Module1 Unit3_3	6	adv.缓慢地	1
+12	soon	Module1 Unit3_3	6	adv.不久	1
+12	space	Module1 Unit3_3	6	n.空间	1
+12	take transport	Module1 Unit3_3	6	vt.乘坐（交通工具）	1
+12	take photograph	Module1 Unit3_3	6	vt.照（相）	1
+13	tomorrow	Module1 Unit3_4	6	n.&adv.明天	1
+13	underground	Module1 Unit3_4	6	adj.地下的	1
+13	yesterday	Module1 Unit3_4	6	n.&adv.昨天	1
+13	ate	Module1 Unit3_4	6	vt.吃（eat过去式）	1
+13	flew	Module1 Unit3_4	6	vi.飞（fly过去式）	1
+14	flown	Module1 Unit3_5	6	vi.飞（fly过去分词）	1
+14	went	Module1 Unit3_5	6	vi.去（go过去式）	1
+14	gone	Module1 Unit3_5	6	vi.去（go过去分词）	1
+14	sang	Module1 Unit3_5	6	vt.唱歌（sing过去式）	1
+15	sung	Module1 Unit3_6	6	vt.唱歌（sing过去分词）	1
+15	swam	Module1 Unit3_6	6	vi.游泳（swim过去式）	1
+15	swum	Module1 Unit3_6	6	vi.游泳（swim过去分词）	1
+15	took	Module1 Unit3_6	6	vt.带；乘坐；照相（take过去式）	1
+16	astronaut	Module2 Unit1_1	2	n.宇航员	1
+16	fire-engine	Module2 Unit1_1	2	n.消防车	1
+16	job	Module2 Unit1_1	2	n.（一份）工作	1
+16	make	Module2 Unit1_1	2	vt.制作	1
+16	plane	Module2 Unit1_1	2	n.飞机	1
+17	put out	Module2 Unit1_2	2	消除	1
+17	safe	Module2 Unit1_2	2	adj.安全的	1
+17	spacecraft	Module2 Unit1_2	2	n.宇宙飞船	1
+17	teach	Module2 Unit1_2	2	vt.教书	1
+18	address	Module2 Unit2_1	1	n.地址	1
+18	kindergarten	Module2 Unit2_1	1	n.幼儿园	1
+18	room	Module2 Unit2_1	1	n.房间	1
+18	tennis court	Module2 Unit2_1	1	网球场	1
+18	top	Module2 Unit2_1	1	n.&adj.顶部	1
+19	along	Module2 Unit3_1	4	adv.向前	1
+19	bus-stop	Module2 Unit3_1	4	n.公共汽车站	1
+19	crossing	Module2 Unit3_1	4	n.十字路口	1
+19	crowded	Module2 Unit3_1	4	adj.拥挤的	1
+19	on foot	Module2 Unit3_1	4	步行	1
+20	get off	Module2 Unit3_2	4	下车	1
+20	get on	Module2 Unit3_2	4	上车	1
+20	lamp post	Module2 Unit3_2	4	灯柱	1
+20	leave	Module2 Unit3_2	4	v.离开	1
+20	litter bin	Module2 Unit3_2	4	垃圾箱	1
+21	a lot of	Module2 Unit3_3	4	大量	1
+21	minibus	Module2 Unit3_3	4	n.小型公共汽车	1
+21	minute	Module2 Unit3_3	4	n.分钟	1
+21	pavement	Module2 Unit3_3	4	n.（英）人行道	1
+21	post box	Module2 Unit3_3	4	邮箱	1
+22	traffic	Module2 Unit3_4	4	n.红绿灯；交通	1
+22	traffic jam	Module2 Unit3_4	4	交通阻塞	1
+22	tram-stop	Module2 Unit3_4	4	n.电车站	1
+22	did	Module2 Unit3_4	4	vt.做（do过去式）	1
+22	saw	Module2 Unit3_4	4	vt.看见（see过去式）	1
+22	seen	Module2 Unit3_4	4	vt.看见（see过去分词）	1
+23	across	Mdule2 Unit4_1	2	adv.&prep.横过	1
+23	left	Mdule2 Unit4_1	2	n.&adj.左边	1
+23	park	Mdule2 Unit4_1	2	n.公园	1
+23	right	Mdule2 Unit4_1	2	adj.权利	1
+23	turn	Mdule2 Unit4_1	2	vt.旋转	1
+24	way	Mdule2 Unit4_2	2	n.路线	1
+24	on one's way to	Mdule2 Unit4_2	2	在...的路上	1
+24	wrong	Mdule2 Unit4_2	2	adj.错误的	1
+24	zebra crossing	Mdule2 Unit4_2	2	斑马线	1
+25	also	Module3 Unit1_1	5	adv.也	1
+25	can	Module3 Unit1_1	5	aux.可能	1
+25	carton	Module3 Unit1_1	5	n.纸盒	1
+25	cheese	Module3 Unit1_1	5	n.奶酪	1
+25	come on	Module3 Unit1_1	5	来吧	1
+26	crab	Module3 Unit1_2	5	n.螃蟹	1
+26	dairy product	Module3 Unit1_2	5	乳制品	1
+26	fridge	Module3 Unit1_2	5	n.冰箱	1
+26	frozen	Module3 Unit1_2	5	vi.结冰（frize的过去分词）	1
+26	lemonade	Module3 Unit1_2	5	n.柠檬水	1
+27	lettuce	Module3 Unit1_3	5	n.莴苣	1
+27	onion	Module3 Unit1_3	5	n.洋葱	1
+27	packet	Module3 Unit1_3	5	n.小包裹	1
+27	peach	Module3 Unit1_3	5	n.桃子	1
+27	product	Module3 Unit1_3	5	n.产品	1
+28	section	Module3 Unit1_4	5	n.部分	1
+28	snacks	Module3 Unit1_4	5	n.小吃	1
+28	spend	Module3 Unit1_4	5	v.度过；花费（钱，时间等)	1
+28	squid	Module3 Unit1_4	5	n.鱿鱼	1
+29	steak	Module3 Unit1_5	5	n.牛排	1
+29	tomato	Module3 Unit1_5	5	n.西红柿	1
+29	bought	Module3 Unit1_5	5	vt.买（buy过去式）	1
+29	spent	Module3 Unit1_5	5	vt.度过；花费（spend过去式，过去分词）	1
+30	cereal	Module3 Unit2_1	4	n.谷类食物	1
+30	chicken wing	Module3 Unit2_1	4	鸡翅	1
+30	choose	Module3 Unit2_1	4	vt.选择，挑选	1
+30	ever	Module3 Unit2_1	4	adv.曾经	1
+30	favourite	Module3 Unit2_1	4	adj.喜爱的	1
+31	fried	Module3 Unit2_2	4	adj.油煎的	1
+31	hamburger	Module3 Unit2_2	4	n.汉堡包	1
+31	hot-dog	Module3 Unit2_2	4	n.热狗	1
+31	list	Module3 Unit2_2	4	n.一览表	1
+31	menu	Module3 Unit2_2	4	n.菜单	1
+32	pancake	Module3 Unit2_3	4	n.薄煎饼	1
+32	salad	Module3 Unit2_3	4	n.沙拉	1
+32	soup	Module3 Unit2_3	4	n.汤	1
+32	soya milk	Module3 Unit2_3	4	豆浆	1
+33	sundae	Module3 Unit2_4	4	n.圣代冰淇淋	1
+33	sushi	Module3 Unit2_4	4	n.寿司	1
+33	toast	Module3 Unit2_4	4	n.&v.烤面包	1
+33	eaten	Module3 Unit2_4	4	vt.吃（eat过去分词）	1
+34	another	Module3 Unit3_1	4	adj.另一	1
+34	bad	Module3 Unit3_1	4	adj.坏的	1
+34	diet	Module3 Unit3_1	4	n.饮食	1
+34	enough	Module3 Unit3_1	4	adj.足够的	1
+34	fish finger	Module3 Unit3_1	4	炸鱼条	1
+35	ham	Module3 Unit3_2	4	n.火腿	1
+35	hard	Module3 Unit3_2	4	adv.努力地	1
+35	healthy	Module3 Unit3_2	4	adj.健康的	1
+35	little	Module3 Unit3_2	4	adj.小的	1
+35	a little	Module3 Unit3_2	4	一点	1
+36	page	Module3 Unit3_3	4	n.页，页码	1
+36	a piece of	Module3 Unit3_3	4	一块	1
+36	pizza	Module3 Unit3_3	4	n.披萨	1
+36	plate	Module3 Unit3_3	4	n.盘子	1
+36	plenty of	Module3 Unit3_3	4	很多的	1
+37	a slice of	Module3 Unit3_4	4	一片	1
+37	soft drink	Module3 Unit3_4	4	清凉饮料	1
+37	think	Module3 Unit3_4	4	vt.认为，思考	1
+37	unhealthy	Module3 Unit3_4	4	adj.不健康的	1
+37	yoghurt	Module3 Unit3_4	4	n.酸奶	1
+38	Australia	Module3 Unit4_1	3	n.澳大利亚	1
+38	Canada	Module3 Unit4_1	3	n.加拿大	1
+38	come from	Module3 Unit4_1	3	来自	1
+38	each	Module3 Unit4_1	3	pron.&ad.每人	1
+38	Japan	Module3 Unit4_1	3	n.日本	1
+38	lay the table	Module3 Unit4_1	3	摆饭桌	1
+39	mix	Module3 Unit4_2	3	vt.混合；搅拌	1
+39	mixture	Module3 Unit4_2	3	n.混合物	1
+39	New Zealand	Module3 Unit4_2	3	新西兰	1
+39	oven	Module3 Unit4_2	3	n.烤箱	1
+39	peel	Module3 Unit4_2	3	v.剥，削	1
+39	go shopping	Module3 Unit4_2	3	(去）购物	1
+40	Thailand	Module3 Unit4_3	3	n.泰国	1
+40	tin	Module3 Unit4_3	3	n.（英）罐头	1
+40	USA	Module3 Unit4_3	3	n.美国	1
+40	put	Module3 Unit4_3	3	vt.放（put过去式，过去分词）	1
+40	made	Module3 Unit4_3	3	vt.做；制作；使得（make过去式，过去分词）	1
+41	around	Module4 Unit1_1	4	prep.在...周围	1
+41	arrive	Module4 Unit1_1	4	vi.到达	1
+41	back	Module4 Unit1_1	4	adv.回（原处）	1
+41	basketball	Module4 Unit1_1	4	n.篮球	1
+41	play basketball	Module4 Unit1_1	4	打篮球	1
+42	buddha	Module4 Unit1_2	4	n.佛	1
+42	compass	Module4 Unit1_2	4	n.罗盘；指南针	1
+42	east	Module4 Unit1_2	4	n.东方的	1
+42	end	Module4 Unit1_2	4	vt.结束；终点	1
+42	except	Module4 Unit1_2	4	prep.除...以外	1
+43	leap year	Module4 Unit1_3	4	闰年	1
+43	map	Module4 Unit1_3	4	n.地图	1
+43	needle	Module4 Unit1_3	4	n.针	1
+43	noon	Module4 Unit1_3	4	n.中午	1
+43	north	Module4 Unit1_3	4	adj.北方的	1
+44	railway	Module4 Unit1_4	4	n.铁路	1
+44	rest	Module4 Unit1_4	4	n.&v.休息	1
+44	south	Module4 Unit1_4	4	adj.南方的	1
+44	start	Module4 Unit1_4	4	n.&v.开始	1
+44	west	Module4 Unit1_4	4	adj.西方的	1
+45	brochure	Module4 Unit2_1	4	n.资料手册	1
+45	holiday brochure	Module4 Unit2_1	4	度假手册	1
+45	Chinese New Year	Module4 Unit2_1	4	中国的新年	1
+45	clothes	Module4 Unit2_1	4	n.衣服	1
+45	enough	Module4 Unit2_1	4	adj.足够的	1
+45	fish	Module4 Unit2_1	4	n.鱼	1
+46	forecast	Module4 Unit2_2	4	n.&v.预报	1
+46	hotel	Module4 Unit2_2	4	n.旅馆	1
+46	how long	Module4 Unit2_2	4	多久	1
+46	relative	Module4 Unit2_2	4	n.7adj.亲属	1
+46	river	Module4 Unit2_2	4	n.河流	1
+46	sandal	Module4 Unit2_2	4	n.凉鞋	1
+47	shorts	Module4 Unit2_3	4	n.短裤	1
+47	snow	Module4 Unit2_3	4	n.&v.雪	1
+47	snowy	Module4 Unit2_3	4	adj.下雪的	1
+47	stay	Module4 Unit2_3	4	n.停留	1
+47	thanks	Module4 Unit2_3	4	n.&int.谢谢	1
+48	then	Module4 Unit2_4	4	adv.&conj.然后	1
+48	ticket	Module4 Unit2_4	4	n.票；券	1
+48	go on a trip	Module4 Unit2_4	4	旅行	1
+48	when	Module4 Unit2_4	4	conj.当...的时候	1
+48	will	Module4 Unit2_4	4	aux.将，会	1
+49	Christmas	Module4 Unit3_1	2	n.圣诞节	1
+49	decoration	Module4 Unit3_1	2	n.装饰	1
+49	dumpling	Module4 Unit3_1	2	n.饺子	1
+49	festival	Module4 Unit3_1	2	n.节日	1
+49	market	Module4 Unit3_1	2	n.市场	1
+49	mooncake	Module4 Unit3_1	2	n.月饼	1
+50	paint	Module4 Unit3_2	2	n.油漆	1
+50	race	Module4 Unit3_2	2	n.种族	1
+50	special	Module4 Unit3_2	2	adj.特别的	1
+50	thousand	Module4 Unit3_2	2	num.一千	1
+50	thousands of	Module4 Unit3_2	2	几千	1
+51	camp	Module4 Unit4_1	3	n.营地	1
+51	cinema	Module4 Unit4_1	3	n.电影院	1
+51	collect	Module4 Unit4_1	3	vt.收集	1
+51	collect stamps	Module4 Unit4_1	3	集邮	1
+51	jump	Module4 Unit4_1	3	n.&v.跳跃，跳	1
+52	high jump	Module4 Unit4_2	3	跳高	1
+52	model	Module4 Unit4_2	3	n.模型	1
+52	sew	Module4 Unit4_2	3	vt.缝制	1
+52	sport	Module4 Unit4_2	3	n.运动	1
+52	stamp	Module4 Unit4_2	3	n.邮票	1
+53	table-tennis	Module4 Unit4_3	3	n.乒乓球	1
+53	video	Module4 Unit4_3	3	n.录像，视频	1
+53	done	Module4 Unit4_3	3	vt.做（do过去分词）	1
+53	drawn	Module4 Unit4_3	3	vt.画画（draw过去分词）	1
+53	read	Module4 Unit4_3	3	vt.阅读（read过去分词）	1
+53	written	Module4 Unit4_3	3	vt.写，写字（write过去分词)	1
+54	against	Module5 Unit1_1	3	prep.对着	1
+54	bear	Module5 Unit1_1	3	vt.承受	1
+54	be born	Module5 Unit1_1	3	出生	1
+54	feather	Module5 Unit1_1	3	n.羽毛	1
+54	few	Module5 Unit1_1	3	adj.不多，少数	1
+54	a few	Module5 Unit1_1	3	一点	1
+55	fight	Module5 Unit1_2	3	n.打仗	1
+55	length	Module5 Unit1_2	3	n.长度	1
+55	pin	Module5 Unit1_2	3	n.大头针	1
+55	quite	Module5 Unit1_2	3	adv.完全	1
+55	run away	Module5 Unit1_2	3	逃跑	1
+55	sword	Module5 Unit1_2	3	n.剑，刀	1
+56	think	Module5 Unit1_3	3	vt.想	1
+56	think of	Module5 Unit1_3	3	考虑	1
+56	weigh	Module5 Unit1_3	3	vt.重...（若干）	1
+56	ran	Module5 Unit1_3	3	vi.跑，逃跑（run过去式）	1
+56	run	Module5 Unit1_3	3	vi.跑，逃跑（run过去分词）	1
+57	barbecue	Module5 Unit2_1	4	n.烤肉野餐	1
+57	because	Module5 Unit2_1	4	conj.因为	1
+57	begin	Module5 Unit2_1	4	vt.开始	1
+57	boot	Module5 Unit2_1	4	n.靴，长筒靴	1
+57	exciting	Module5 Unit2_1	4	adj.令人激动的	1
+58	frightening	Module5 Unit2_2	4	adj.可怕的	1
+58	interesting	Module5 Unit2_2	4	adj.有趣的	1
+58	laugh	Module5 Unit2_2	4	vt.笑	1
+58	lie	Module5 Unit2_2	4	n.谎言	1
+58	more	Module5 Unit2_2	4	adv.更多的	1
+59	heavy rain	Module5 Unit2_3	4	大雨	1
+59	sandcastle	Module5 Unit2_3	4	n.沙堡	1
+59	snowman	Module5 Unit2_3	4	n.雪人	1
+59	star	Module5 Unit2_3	4	n.星	1
+59	have a swim	Module5 Unit2_3	4	游泳	1
+60	take off clothes	Module5 Unit2_4	4	脱下（衣服）	1
+60	tell	Module5 Unit2_4	4	vt.告诉，讲述	1
+60	turn	Module5 Unit2_4	4	vt.翻转	1
+60	wonderful	Module5 Unit2_4	4	adj.精彩的	1
+60	told	Module5 Unit2_4	4	vt.告诉，讲述（tell过去式,过去分词）	1
+60	had	Module5 Unit2_4	4	v.有（have过去分词）	1
+61	airport	Module5 Unit3_1	4	n.飞机场	1
+61	builder	Module5 Unit3_1	4	n.建筑工人，建筑师	1
+61	change	Module5 Unit3_1	4	v.&n.改变；零钱	1
+61	city	Module5 Unit3_1	4	n.城市	1
+61	factory	Module5 Unit3_1	4	n.工厂	1
+62	fishing	Module5 Unit3_2	4	n.钓鱼，捕鱼	1
+62	harbour	Module5 Unit3_2	4	n.港口，港湾	1
+62	history	Module5 Unit3_2	4	n.历史	1
+62	hundreds of	Module5 Unit3_2	4	几百	1
+62	million	Module5 Unit3_2	4	num.百万	1
+63	more than	Module5 Unit3_3	4	超出	1
+63	next	Module5 Unit3_3	4	adj.接下来	1
+63	other	Module5 Unit3_3	4	adj.别人	1
+63	story	Module5 Unit3_3	4	n.故事	1
+63	town	Module5 Unit3_3	4	n.城镇	1
+64	village	Module5 Unit3_4	4	n.村庄	1
+64	worker	Module5 Unit3_4	4	n.工人	1
+64	were	Module5 Unit3_4	4	v.是（be第二人称过去式）	1
+64	been	Module5 Unit3_4	4	v.是（be过去分词）	1
+64	left	Module5 Unit3_4	4	v.离开（leave过去式，过去分词）	1
+65	about	Module5 Unit4_1	2	prep.关于	1
+65	adult	Module5 Unit4_1	2	n.成年人	1
+65	child	Module5 Unit4_1	2	n.孩子	1
+65	learn	Module5 Unit4_1	2	vt.学习	1
+65	primary school	Module5 Unit4_1	2	小学	1
+65	secondary school	Module5 Unit4_1	2	中学	1
+66	teenager	Module5 Unit4_2	2	n.青少年	1
+66	work	Module5 Unit4_2	2	n.&v.工作	1
+66	drank	Module5 Unit4_2	2	vt.喝（drink过去式）	1
+66	drunk	Module5 Unit4_2	2	vt.喝（drink过去分词）	1
+66	slept	Module5 Unit4_2	2	vi.睡觉（sleep过去式,过去分词）	1

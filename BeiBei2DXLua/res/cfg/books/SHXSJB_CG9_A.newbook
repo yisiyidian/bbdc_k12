@@ -1,233 +1,233 @@
-1	by air	unit 1 Topic 1_1	3	乘飞机	1
-1	airline	unit 1 Topic 1_1	3	n.航线	1
-1	flight	unit 1 Topic 1_1	3	n.飞行	1
-2	BA	unit 1 Topic 1_2	3	英国航空公司	0
-2	luggage	unit 1 Topic 1_2	3	n.行李	1
-2	for free	unit 1 Topic 1_2	3	免费地	1
-2	board	unit 1 Topic 1_2	3	v.登	0
-2	boarding pass	unit 1 Topic 1_2	3	登机牌	0
-2	economy	unit 1 Topic 1_2	3	n.经济	1
-2	boarding gate	unit 1 Topic 1_2	3	登机口	0
-2	go economy	unit 1 Topic 1_2	3	乘经济舱	1
-2	ticket office	unit 1 Topic 1_2	3	n.售票处	1
-2	single	unit 1 Topic 1_2	3	n.&adj.单程票	1
-2	return	unit 1 Topic 1_2	3	vt.来回票	1
-3	passport	unit 1 Topic 1_3	3	n.护照	1
-3	confirm	unit 1 Topic 1_3	3	v.确认	1
-3	in advance	unit 1 Topic 1_3	3	提前	1
-3	fare	unit 1 Topic 1_3	3	n.车费	1
-3	apologize	unit 1 Topic 1_3	3	v.道歉	1
-3	Europe	unit 1 Topic 1_3	3	n.欧洲	1
-3	coast	unit 1 Topic 1_3	3	n.海岸	1
-3	ocean	unit 1 Topic 1_3	3	n.洋	1
-3	mountainous	unit 1 Topic 1_3	3	adj.多山的	0
-3	region	unit 1 Topic 1_3	3	n.地区	1
-3	sometime	unit 1 Topic 1_3	3	adj.在某一时候	0
-4	delay	unit 1 Topic 2_1	2	n.&v.推迟	1
-4	fog	unit 1 Topic 2_1	2	n.雾	1
-4	arrival	unit 1 Topic 2_1	2	n.到达	1
-4	delighted	unit 1 Topic 2_1	2	adj.高兴的	1
-4	expect	unit 1 Topic 2_1	2	v.期待	1
-4	fetch	unit 1 Topic 2_1	2	vt.取	1
-4	major	unit 1 Topic 2_1	2	adj.主修的	1
-4	traveler	unit 1 Topic 2_1	2	n.旅客	1
-5	experience	unit 1 Topic 2_2	2	n.经历	1
-5	overseas	unit 1 Topic 2_2	2	adj.&adv.在海外	0
-5	rather than	unit 1 Topic 2_2	2	与其 ...	1
-5	tourism	unit 1 Topic 2_2	2	n.旅游	0
-5	friendliness	unit 1 Topic 2_2	2	n.友好	0
-5	Pacific	unit 1 Topic 2_2	2	adj.太平洋的	1
-5	the Pacific	unit 1 Topic 2_2	2	太平洋	1
-5	Pacific Islands	unit 1 Topic 2_2	2	太平洋诸岛屿	1
-6	airmail	unit 2 Topic 1_1	2	n.航空邮件	1
-6	postage	unit 2 Topic 1_1	2	n.邮费	0
-6	surface mail	unit 2 Topic 1_1	2	平寄邮件	0
-6	express	unit 2 Topic 1_1	2	adj.&vt.高速的	1
-6	express mail	unit 2 Topic 1_1	2	特快专递	1
-6	urgent	unit 2 Topic 1_1	2	adj.紧迫的	1
-6	fill out	unit 2 Topic 1_1	2	填写	1
-6	receipt	unit 2 Topic 1_1	2	n.收据	0
-6	depend	unit 2 Topic 1_1	2	vi.依靠	1
-6	depend on	unit 2 Topic 1_1	2	视 ... 而定	1
-6	sailing	unit 2 Topic 1_1	2	n.航行	1
-7	schedule	unit 2 Topic 1_2	2	n.时间表	0
-7	sailing schedule	unit 2 Topic 1_2	2	航班日程安排	0
-7	cent	unit 2 Topic 1_2	2	n.美分	1
-7	receiver	unit 2 Topic 1_2	2	n.收受者	1
-7	gentleman	unit 2 Topic 1_2	2	n.绅士	0
-7	go up to	unit 2 Topic 1_2	2	走上前去	1
-7	boyfriend	unit 2 Topic 1_2	2	男朋友	1
-7	look for	unit 2 Topic 1_2	2	寻找	1
-7	penny	unit 2 Topic 1_2	2	n.便士	1
-7	sender	unit 2 Topic 1_2	2	n.发送人	1
-7	appear	unit 2 Topic 1_2	2	vi.出现	1
-8	architect	unit 2 Topic 2_1	2	n.建筑师	0
-8	establish	unit 2 Topic 2_1	2	v.建立	1
-8	succeed	unit 2 Topic 2_1	2	vt.成功	1
-8	competition	unit 2 Topic 2_1	2	n.竞争	1
-8	responsible	unit 2 Topic 2_1	2	adj.负责任的	1
-8	be responsible for	unit 2 Topic 2_1	2	负责 ...	1
-8	rebuild	unit 2 Topic 2_1	2	v.重建	1
-8	permanent	unit 2 Topic 2_1	2	adj.永久的	1
-8	Mars	unit 2 Topic 2_1	2	n.火星	1
-9	consider	unit 2 Topic 2_2	2	vt.考虑	1
-9	fund	unit 2 Topic 2_2	2	n.为 ... 提供资金	0
-9	congratulation	unit 2 Topic 2_2	2	n.祝贺	0
-9	organization	unit 2 Topic 2_2	2	n.组织	1
-9	income	unit 2 Topic 2_2	2	n.收入	1
-9	present	unit 2 Topic 2_2	2	n.展示	1
-9	general	unit 2 Topic 2_2	2	adj.一般的	1
-9	drama	unit 2 Topic 2_2	2	n.戏	1
-9	classical	unit 2 Topic 2_2	2	adj.古典的	1
-10	electrical	unit 2 Topic 3_1	3	adj.电的	1
-10	keen	unit 2 Topic 3_1	3	adj.强烈的	1
-10	desire	unit 2 Topic 3_1	3	n.愿望	1
-10	settle	unit 2 Topic 3_1	3	vt.定居	1
-10	citizen	unit 2 Topic 3_1	3	n.公民	1
-10	public speaking	unit 2 Topic 3_1	3	演说	1
-10	for	unit 2 Topic 3_1	3	prep.因为	1
-10	educate	unit 2 Topic 3_1	3	v.教育	0
-11	lead	unit 2 Topic 3_2	3	v.引导	1
-11	spread	unit 2 Topic 3_2	3	v.传开	1
-11	throughout	unit 2 Topic 3_2	3	adv.遍及	1
-11	image	unit 2 Topic 3_2	3	n.图像	1
-11	pave	unit 2 Topic 3_2	3	v.铺	0
-11	pave the way for	unit 2 Topic 3_2	3	为 ... 铺平道路	0
-11	mobile	unit 2 Topic 3_2	3	adj.移动式的	1
-11	mobile phone	unit 2 Topic 3_2	3	移动电话	1
-12	anywhere	unit 2 Topic 3_3	3	adv.任何地方	1
-12	expert	unit 2 Topic 3_3	3	n.专家	1
-12	access	unit 2 Topic 3_3	3	vt.进入	0
-12	get access to	unit 2 Topic 3_3	3	有接近 ... 的机会和权利	0
-12	PC	unit 2 Topic 3_3	3	n.个人电脑	1
-12	source	unit 2 Topic 3_3	3	n.源	1
-12	network	unit 2 Topic 3_3	3	n.网络	1
-12	apply	unit 2 Topic 3_3	3	vt.申请	1
-12	apply for	unit 2 Topic 3_3	3	申请	1
-13	salt	unit 3 Topic 1_1	3	n.盐	1
-13	resource	unit 3 Topic 1_1	3	n.资源	1
-13	industry	unit 3 Topic 1_1	3	n.工业	1
-13	everyday	unit 3 Topic 1_1	3	adj.每天的	1
-13	task	unit 3 Topic 1_1	3	n.任务	1
-13	limited	unit 3 Topic 1_1	3	adj.有限的	1
-13	be covered with	unit 3 Topic 1_1	3	被 ... 覆盖着	1
-13	daily	unit 3 Topic 1_1	3	adj.每日的	1
-13	precious	unit 3 Topic 1_1	3	adj.贵重的	0
-13	liquid	unit 3 Topic 1_1	3	n.&adj.液体	0
-14	tap	unit 3 Topic 1_2	3	n.龙头	1
-14	shower	unit 3 Topic 1_2	3	vi.&n.淋浴	1
-14	take a shower	unit 3 Topic 1_2	3	洗淋浴	1
-14	fix	unit 3 Topic 1_2	3	vt.修理	1
-14	leaky	unit 3 Topic 1_2	3	adj.漏的	0
-14	pour	unit 3 Topic 1_2	3	vt.倒	1
-14	prevent	unit 3 Topic 1_2	3	v.阻止	1
-14	flood	unit 3 Topic 1_2	3	n.洪水	1
-14	bathe	unit 3 Topic 1_2	3	v.洗澡	0
-14	gentle	unit 3 Topic 1_2	3	adj.和蔼的	1
-15	powerful	unit 3 Topic 1_3	3	adj.强大的	1
-15	destructive	unit 3 Topic 1_3	3	adj.破坏性的	1
-15	flash	unit 3 Topic 1_3	3	n.突发的	0
-15	flash flood	unit 3 Topic 1_3	3	骤发的洪水	0
-15	wash away	unit 3 Topic 1_3	3	冲走	1
-15	killer	unit 3 Topic 1_3	3	n.杀人者	1
-15	crop	unit 3 Topic 1_3	3	n.农作物	1
-15	frequent	unit 3 Topic 1_3	3	adj.频繁的	1
-15	disaster	unit 3 Topic 1_3	3	n.灾难	1
-15	occur	unit 3 Topic 1_3	3	vi.发生	0
-16	homeless	unit 3 Topic 2_1	3	adj.无家可归的	1
-16	victim	unit 3 Topic 2_1	3	n.受害者	0
-16	the Red Cross	unit 3 Topic 2_1	3	红十字会	1
-16	period	unit 3 Topic 2_1	3	n.学时	1
-16	PowerPoint	unit 3 Topic 2_1	3	n.演示文稿	0
-16	whole	unit 3 Topic 2_1	3	adj.&n.全部的	1
-16	Chile	unit 3 Topic 2_1	3	n.智利	0
-16	predict	unit 3 Topic 2_1	3	v.预言	1
-16	at present	unit 3 Topic 2_1	3	目前	1
-17	injured	unit 3 Topic 2_2	3	受伤的	1
-17	situation	unit 3 Topic 2_2	3	n.情况	1
-17	hunger	unit 3 Topic 2_2	3	n.饿	1
-17	suffer	unit 3 Topic 2_2	3	vt.遭受	1
-17	illness	unit 3 Topic 2_2	3	n.疾病	1
-17	banker	unit 3 Topic 2_2	3	n.银行家	0
-17	on business	unit 3 Topic 2_2	3	因公	1
-17	battle	unit 3 Topic 2_2	3	n.战役	1
-17	lack	unit 3 Topic 2_2	3	vt.缺乏	1
-18	for lack of	unit 3 Topic 2_3	3	由于缺乏	1
-18	immediately	unit 3 Topic 2_3	3	adv.立刻	1
-18	gather	unit 3 Topic 2_3	3	vt.召集	1
-18	wounded	unit 3 Topic 2_3	3	adj.&n.受伤的	1
-18	church	unit 3 Topic 2_3	3	n.教堂	1
-18	call on	unit 3 Topic 2_3	3	号召	1
-18	brilliant	unit 3 Topic 2_3	3	adj.卓越的	0
-18	peace	unit 3 Topic 2_3	3	n.和平	1
-19	commute	unit 3 Topic 3_1	2	vi.乘车或驾车上下班	0
-19	shorten	unit 3 Topic 3_1	2	v.弄短	1
-19	come down	unit 3 Topic 3_1	2	下来	1
-19	wise	unit 3 Topic 3_1	2	adj.英明的	1
-19	punctual	unit 3 Topic 3_1	2	adj.守时的	0
-19	nuisance	unit 3 Topic 3_1	2	n.讨厌的东西	0
-19	tuned	unit 3 Topic 3_1	2	调好电台的	0
-19	stay tuned	unit 3 Topic 3_1	2	继续收听	0
-19	parking lot	unit 3 Topic 3_1	2	停车场	1
-19	reduce	unit 3 Topic 3_1	2	vt.减少	1
-19	assembly	unit 3 Topic 3_1	2	n.装配	0
-20	assembly line	unit 3 Topic 3_2	2	装配线	0
-20	carriage	unit 3 Topic 3_2	2	n.马车	0
-20	thanks to	unit 3 Topic 3_2	2	幸亏	1
-20	automobile	unit 3 Topic 3_2	2	n.汽车	1
-20	speed	unit 3 Topic 3_2	2	n.&vt.加速	1
-20	speed up	unit 3 Topic 3_2	2	加快速度	1
-20	production	unit 3 Topic 3_2	2	n.生产	1
-20	hero	unit 3 Topic 3_2	2	n.英雄	1
-20	wheel	unit 3 Topic 3_2	2	n.轮	1
-20	pace	unit 3 Topic 3_2	2	n.步子	1
-21	name-brand	unit 4 Topic 1_1	3	adj.名牌的	0
-21	pay attention to	unit 4 Topic 1_1	3	注意 ...	1
-21	show off	unit 4 Topic 1_1	3	炫耀	1
-21	orderly	unit 4 Topic 1_1	3	adj.整齐的	0
-21	attitude	unit 4 Topic 1_1	3	n.态度	1
-21	compete	unit 4 Topic 1_1	3	v.竞争	1
-21	compete with	unit 4 Topic 1_1	3	与 ... 相竞争	1
-21	based on	unit 4 Topic 1_1	3	以 ... 为根据	1
-21	concentrate	unit 4 Topic 1_1	3	vt.集中	1
-22	concentrate on	unit 4 Topic 1_2	3	全神贯注于	1
-22	behave	unit 4 Topic 1_2	3	vt.表现	1
-22	identify	unit 4 Topic 1_2	3	vt.认出	1
-22	cancel	unit 4 Topic 1_2	3	vt.取消	1
-22	require	unit 4 Topic 1_2	3	v.要求	1
-22	uneasy	unit 4 Topic 1_2	3	adj.不自在的	1
-22	get tired of	unit 4 Topic 1_2	3	对 ... 感到厌倦	1
-22	wealth	unit 4 Topic 1_2	3	n.财富	1
-22	satisfied	unit 4 Topic 1_2	3	adj.满意的	1
-23	be satisfied with	unit 4 Topic 1_3	3	对 ... 感到满意	1
-23	point out	unit 4 Topic 1_3	3	指出	1
-23	behavior	unit 4 Topic 1_3	3	n.行为	1
-23	casual	unit 4 Topic 1_3	3	adj.日常便服的	1
-23	be made of	unit 4 Topic 1_3	3	用 ... 制成	1
-23	go well with	unit 4 Topic 1_3	3	与 ... 很协调	1
-23	freedom	unit 4 Topic 1_3	3	n.自由	1
-23	whatever	unit 4 Topic 1_3	3	pron.不管什么	1
-23	jeans	unit 4 Topic 1_3	3	n.牛仔裤	1
-23	impress	unit 4 Topic 1_3	3	vt.给 ... 深刻印象	1
-24	coin	unit 4 Topic 2_1	2	n.硬币	1
-24	piggy	unit 4 Topic 2_1	2	adj.似猪的	0
-24	piggy bank	unit 4 Topic 2_1	2	储蓄罐	0
-24	credit	unit 4 Topic 2_1	2	n.信誉	1
-24	credit card	unit 4 Topic 2_1	2	信用卡	1
-24	savings	unit 4 Topic 2_1	2	n.储蓄金	1
-24	pocket	unit 4 Topic 2_1	2	n.&adj.衣袋	1
-24	pocket money	unit 4 Topic 2_1	2	零花钱	1
-24	allowance	unit 4 Topic 2_1	2	n.津贴	1
-24	so far	unit 4 Topic 2_1	2	迄今为止	1
-24	independence	unit 4 Topic 2_1	2	n.独立	0
-25	unnecessary	unit 4 Topic 2_2	2	adj.不必要的	1
-25	gun	unit 4 Topic 2_2	2	n.枪	1
-25	budget	unit 4 Topic 2_2	2	n.预算	0
-25	make a budget	unit 4 Topic 2_2	2	做预算	0
-25	hunt	unit 4 Topic 2_2	2	v.猎取	1
-25	wild	unit 4 Topic 2_2	2	adj.野的	1
-25	handle	unit 4 Topic 2_2	2	vt.操作	0
-25	explorer	unit 4 Topic 2_2	2	n.探险者	0
-25	probably	unit 4 Topic 2_2	2	adv.大概	0
-25	check	unit 4 Topic 2_2	2	n.支票	0
-25	by check	unit 4 Topic 2_2	2	用支票	0
+1	by air	unit 1 Topic 1_1	5	乘飞机	1
+1	airline	unit 1 Topic 1_1	5	n.航线	1
+1	flight	unit 1 Topic 1_1	5	n.飞行	1
+2	BA	unit 1 Topic 1_2	5	英国航空公司	0
+2	luggage	unit 1 Topic 1_2	5	n.行李	1
+2	for free	unit 1 Topic 1_2	5	免费地	1
+2	board	unit 1 Topic 1_2	5	v.登	0
+2	boarding pass	unit 1 Topic 1_2	5	登机牌	0
+2	economy	unit 1 Topic 1_2	5	n.经济	1
+3	boarding gate	unit 1 Topic 1_3	5	登机口	0
+3	go economy	unit 1 Topic 1_3	5	乘经济舱	1
+3	ticket office	unit 1 Topic 1_3	5	n.售票处	1
+3	single	unit 1 Topic 1_3	5	n.&adj.单程票	1
+3	return	unit 1 Topic 1_3	5	vt.来回票	1
+3	passport	unit 1 Topic 1_3	5	n.护照	1
+4	confirm	unit 1 Topic 1_4	5	v.确认	1
+4	in advance	unit 1 Topic 1_4	5	提前	1
+4	fare	unit 1 Topic 1_4	5	n.车费	1
+4	apologize	unit 1 Topic 1_4	5	v.道歉	1
+4	Europe	unit 1 Topic 1_4	5	n.欧洲	1
+5	coast	unit 1 Topic 1_5	5	n.海岸	1
+5	ocean	unit 1 Topic 1_5	5	n.洋	1
+5	mountainous	unit 1 Topic 1_5	5	adj.多山的	0
+5	region	unit 1 Topic 1_5	5	n.地区	1
+5	sometime	unit 1 Topic 1_5	5	adj.在某一时候	0
+6	delay	unit 1 Topic 2_1	3	n.&v.推迟	1
+6	fog	unit 1 Topic 2_1	3	n.雾	1
+6	arrival	unit 1 Topic 2_1	3	n.到达	1
+6	delighted	unit 1 Topic 2_1	3	adj.高兴的	1
+6	expect	unit 1 Topic 2_1	3	v.期待	1
+7	fetch	unit 1 Topic 2_2	3	vt.取	1
+7	major	unit 1 Topic 2_2	3	adj.主修的	1
+7	traveler	unit 1 Topic 2_2	3	n.旅客	1
+7	experience	unit 1 Topic 2_2	3	n.经历	1
+7	overseas	unit 1 Topic 2_2	3	adj.&adv.在海外	0
+8	rather than	unit 1 Topic 2_3	3	与其 ...	1
+8	tourism	unit 1 Topic 2_3	3	n.旅游	0
+8	friendliness	unit 1 Topic 2_3	3	n.友好	0
+8	Pacific	unit 1 Topic 2_3	3	adj.太平洋的	1
+8	the Pacific	unit 1 Topic 2_3	3	太平洋	1
+8	Pacific Islands	unit 1 Topic 2_3	3	太平洋诸岛屿	1
+9	airmail	unit 2 Topic 1_1	4	n.航空邮件	1
+9	postage	unit 2 Topic 1_1	4	n.邮费	0
+9	surface mail	unit 2 Topic 1_1	4	平寄邮件	0
+9	express	unit 2 Topic 1_1	4	adj.&vt.高速的	1
+9	express mail	unit 2 Topic 1_1	4	特快专递	1
+9	urgent	unit 2 Topic 1_1	4	adj.紧迫的	1
+10	fill out	unit 2 Topic 1_2	4	填写	1
+10	receipt	unit 2 Topic 1_2	4	n.收据	0
+10	depend	unit 2 Topic 1_2	4	vi.依靠	1
+10	depend on	unit 2 Topic 1_2	4	视 ... 而定	1
+10	sailing	unit 2 Topic 1_2	4	n.航行	1
+10	schedule	unit 2 Topic 1_2	4	n.时间表	0
+11	sailing schedule	unit 2 Topic 1_3	4	航班日程安排	0
+11	cent	unit 2 Topic 1_3	4	n.美分	1
+11	receiver	unit 2 Topic 1_3	4	n.收受者	1
+11	gentleman	unit 2 Topic 1_3	4	n.绅士	0
+11	go up to	unit 2 Topic 1_3	4	走上前去	1
+12	boyfriend	unit 2 Topic 1_4	4	男朋友	1
+12	look for	unit 2 Topic 1_4	4	寻找	1
+12	penny	unit 2 Topic 1_4	4	n.便士	1
+12	sender	unit 2 Topic 1_4	4	n.发送人	1
+12	appear	unit 2 Topic 1_4	4	vi.出现	1
+13	architect	unit 2 Topic 2_1	4	n.建筑师	0
+13	establish	unit 2 Topic 2_1	4	v.建立	1
+13	succeed	unit 2 Topic 2_1	4	vt.成功	1
+13	competition	unit 2 Topic 2_1	4	n.竞争	1
+13	responsible	unit 2 Topic 2_1	4	adj.负责任的	1
+14	be responsible for	unit 2 Topic 2_2	4	负责 ...	1
+14	rebuild	unit 2 Topic 2_2	4	v.重建	1
+14	permanent	unit 2 Topic 2_2	4	adj.永久的	1
+14	Mars	unit 2 Topic 2_2	4	n.火星	1
+14	consider	unit 2 Topic 2_2	4	vt.考虑	1
+15	fund	unit 2 Topic 2_3	4	n.为 ... 提供资金	0
+15	congratulation	unit 2 Topic 2_3	4	n.祝贺	0
+15	organization	unit 2 Topic 2_3	4	n.组织	1
+15	income	unit 2 Topic 2_3	4	n.收入	1
+16	present	unit 2 Topic 2_4	4	n.展示	1
+16	general	unit 2 Topic 2_4	4	adj.一般的	1
+16	drama	unit 2 Topic 2_4	4	n.戏	1
+16	classical	unit 2 Topic 2_4	4	adj.古典的	1
+17	electrical	unit 2 Topic 3_1	5	adj.电的	1
+17	keen	unit 2 Topic 3_1	5	adj.强烈的	1
+17	desire	unit 2 Topic 3_1	5	n.愿望	1
+17	settle	unit 2 Topic 3_1	5	vt.定居	1
+17	citizen	unit 2 Topic 3_1	5	n.公民	1
+18	public speaking	unit 2 Topic 3_2	5	演说	1
+18	for	unit 2 Topic 3_2	5	prep.因为	1
+18	educate	unit 2 Topic 3_2	5	v.教育	0
+18	lead	unit 2 Topic 3_2	5	v.引导	1
+18	spread	unit 2 Topic 3_2	5	v.传开	1
+19	throughout	unit 2 Topic 3_3	5	adv.遍及	1
+19	image	unit 2 Topic 3_3	5	n.图像	1
+19	pave	unit 2 Topic 3_3	5	v.铺	0
+19	pave the way for	unit 2 Topic 3_3	5	为 ... 铺平道路	0
+19	mobile	unit 2 Topic 3_3	5	adj.移动式的	1
+20	mobile phone	unit 2 Topic 3_4	5	移动电话	1
+20	anywhere	unit 2 Topic 3_4	5	adv.任何地方	1
+20	expert	unit 2 Topic 3_4	5	n.专家	1
+20	access	unit 2 Topic 3_4	5	vt.进入	0
+20	get access to	unit 2 Topic 3_4	5	有接近 ... 的机会和权利	0
+21	PC	unit 2 Topic 3_5	5	n.个人电脑	1
+21	source	unit 2 Topic 3_5	5	n.源	1
+21	network	unit 2 Topic 3_5	5	n.网络	1
+21	apply	unit 2 Topic 3_5	5	vt.申请	1
+21	apply for	unit 2 Topic 3_5	5	申请	1
+22	salt	unit 3 Topic 1_1	6	n.盐	1
+22	resource	unit 3 Topic 1_1	6	n.资源	1
+22	industry	unit 3 Topic 1_1	6	n.工业	1
+22	everyday	unit 3 Topic 1_1	6	adj.每天的	1
+22	task	unit 3 Topic 1_1	6	n.任务	1
+23	limited	unit 3 Topic 1_2	6	adj.有限的	1
+23	be covered with	unit 3 Topic 1_2	6	被 ... 覆盖着	1
+23	daily	unit 3 Topic 1_2	6	adj.每日的	1
+23	precious	unit 3 Topic 1_2	6	adj.贵重的	0
+23	liquid	unit 3 Topic 1_2	6	n.&adj.液体	0
+24	tap	unit 3 Topic 1_3	6	n.龙头	1
+24	shower	unit 3 Topic 1_3	6	vi.&n.淋浴	1
+24	take a shower	unit 3 Topic 1_3	6	洗淋浴	1
+24	fix	unit 3 Topic 1_3	6	vt.修理	1
+24	leaky	unit 3 Topic 1_3	6	adj.漏的	0
+25	pour	unit 3 Topic 1_4	6	vt.倒	1
+25	prevent	unit 3 Topic 1_4	6	v.阻止	1
+25	flood	unit 3 Topic 1_4	6	n.洪水	1
+25	bathe	unit 3 Topic 1_4	6	v.洗澡	0
+25	gentle	unit 3 Topic 1_4	6	adj.和蔼的	1
+26	powerful	unit 3 Topic 1_5	6	adj.强大的	1
+26	destructive	unit 3 Topic 1_5	6	adj.破坏性的	1
+26	flash	unit 3 Topic 1_5	6	n.突发的	0
+26	flash flood	unit 3 Topic 1_5	6	骤发的洪水	0
+26	wash away	unit 3 Topic 1_5	6	冲走	1
+27	killer	unit 3 Topic 1_6	6	n.杀人者	1
+27	crop	unit 3 Topic 1_6	6	n.农作物	1
+27	frequent	unit 3 Topic 1_6	6	adj.频繁的	1
+27	disaster	unit 3 Topic 1_6	6	n.灾难	1
+27	occur	unit 3 Topic 1_6	6	vi.发生	0
+28	homeless	unit 3 Topic 2_1	5	adj.无家可归的	1
+28	victim	unit 3 Topic 2_1	5	n.受害者	0
+28	the Red Cross	unit 3 Topic 2_1	5	红十字会	1
+28	period	unit 3 Topic 2_1	5	n.学时	1
+28	PowerPoint	unit 3 Topic 2_1	5	n.演示文稿	0
+29	whole	unit 3 Topic 2_2	5	adj.&n.全部的	1
+29	Chile	unit 3 Topic 2_2	5	n.智利	0
+29	predict	unit 3 Topic 2_2	5	v.预言	1
+29	at present	unit 3 Topic 2_2	5	目前	1
+29	injured	unit 3 Topic 2_2	5	受伤的	1
+30	situation	unit 3 Topic 2_3	5	n.情况	1
+30	hunger	unit 3 Topic 2_3	5	n.饿	1
+30	suffer	unit 3 Topic 2_3	5	vt.遭受	1
+30	illness	unit 3 Topic 2_3	5	n.疾病	1
+30	banker	unit 3 Topic 2_3	5	n.银行家	0
+31	on business	unit 3 Topic 2_4	5	因公	1
+31	battle	unit 3 Topic 2_4	5	n.战役	1
+31	lack	unit 3 Topic 2_4	5	vt.缺乏	1
+31	for lack of	unit 3 Topic 2_4	5	由于缺乏	1
+31	immediately	unit 3 Topic 2_4	5	adv.立刻	1
+32	gather	unit 3 Topic 2_5	5	vt.召集	1
+32	wounded	unit 3 Topic 2_5	5	adj.&n.受伤的	1
+32	church	unit 3 Topic 2_5	5	n.教堂	1
+32	call on	unit 3 Topic 2_5	5	号召	1
+32	brilliant	unit 3 Topic 2_5	5	adj.卓越的	0
+32	peace	unit 3 Topic 2_5	5	n.和平	1
+33	commute	unit 3 Topic 3_1	4	vi.乘车或驾车上下班	0
+33	shorten	unit 3 Topic 3_1	4	v.弄短	1
+33	come down	unit 3 Topic 3_1	4	下来	1
+33	wise	unit 3 Topic 3_1	4	adj.英明的	1
+33	punctual	unit 3 Topic 3_1	4	adj.守时的	0
+34	nuisance	unit 3 Topic 3_2	4	n.讨厌的东西	0
+34	tuned	unit 3 Topic 3_2	4	调好电台的	0
+34	stay tuned	unit 3 Topic 3_2	4	继续收听	0
+34	parking lot	unit 3 Topic 3_2	4	停车场	1
+34	reduce	unit 3 Topic 3_2	4	vt.减少	1
+35	assembly	unit 3 Topic 3_3	4	n.装配	0
+35	assembly line	unit 3 Topic 3_3	4	装配线	0
+35	carriage	unit 3 Topic 3_3	4	n.马车	0
+35	thanks to	unit 3 Topic 3_3	4	幸亏	1
+35	automobile	unit 3 Topic 3_3	4	n.汽车	1
+36	speed	unit 3 Topic 3_4	4	n.&vt.加速	1
+36	speed up	unit 3 Topic 3_4	4	加快速度	1
+36	production	unit 3 Topic 3_4	4	n.生产	1
+36	hero	unit 3 Topic 3_4	4	n.英雄	1
+36	wheel	unit 3 Topic 3_4	4	n.轮	1
+36	pace	unit 3 Topic 3_4	4	n.步子	1
+37	name-brand	unit 4 Topic 1_1	6	adj.名牌的	0
+37	pay attention to	unit 4 Topic 1_1	6	注意 ...	1
+37	show off	unit 4 Topic 1_1	6	炫耀	1
+37	orderly	unit 4 Topic 1_1	6	adj.整齐的	0
+37	attitude	unit 4 Topic 1_1	6	n.态度	1
+38	compete	unit 4 Topic 1_2	6	v.竞争	1
+38	compete with	unit 4 Topic 1_2	6	与 ... 相竞争	1
+38	based on	unit 4 Topic 1_2	6	以 ... 为根据	1
+38	concentrate	unit 4 Topic 1_2	6	vt.集中	1
+38	concentrate on	unit 4 Topic 1_2	6	全神贯注于	1
+39	behave	unit 4 Topic 1_3	6	vt.表现	1
+39	identify	unit 4 Topic 1_3	6	vt.认出	1
+39	cancel	unit 4 Topic 1_3	6	vt.取消	1
+39	require	unit 4 Topic 1_3	6	v.要求	1
+39	uneasy	unit 4 Topic 1_3	6	adj.不自在的	1
+40	get tired of	unit 4 Topic 1_4	6	对 ... 感到厌倦	1
+40	wealth	unit 4 Topic 1_4	6	n.财富	1
+40	satisfied	unit 4 Topic 1_4	6	adj.满意的	1
+40	be satisfied with	unit 4 Topic 1_4	6	对 ... 感到满意	1
+40	point out	unit 4 Topic 1_4	6	指出	1
+41	behavior	unit 4 Topic 1_5	6	n.行为	1
+41	casual	unit 4 Topic 1_5	6	adj.日常便服的	1
+41	be made of	unit 4 Topic 1_5	6	用 ... 制成	1
+41	go well with	unit 4 Topic 1_5	6	与 ... 很协调	1
+42	freedom	unit 4 Topic 1_6	6	n.自由	1
+42	whatever	unit 4 Topic 1_6	6	pron.不管什么	1
+42	jeans	unit 4 Topic 1_6	6	n.牛仔裤	1
+42	impress	unit 4 Topic 1_6	6	vt.给 ... 深刻印象	1
+43	coin	unit 4 Topic 2_1	4	n.硬币	1
+43	piggy	unit 4 Topic 2_1	4	adj.似猪的	0
+43	piggy bank	unit 4 Topic 2_1	4	储蓄罐	0
+43	credit	unit 4 Topic 2_1	4	n.信誉	1
+43	credit card	unit 4 Topic 2_1	4	信用卡	1
+43	savings	unit 4 Topic 2_1	4	n.储蓄金	1
+44	pocket	unit 4 Topic 2_2	4	n.&adj.衣袋	1
+44	pocket money	unit 4 Topic 2_2	4	零花钱	1
+44	allowance	unit 4 Topic 2_2	4	n.津贴	1
+44	so far	unit 4 Topic 2_2	4	迄今为止	1
+44	independence	unit 4 Topic 2_2	4	n.独立	0
+44	unnecessary	unit 4 Topic 2_2	4	adj.不必要的	1
+45	gun	unit 4 Topic 2_3	4	n.枪	1
+45	budget	unit 4 Topic 2_3	4	n.预算	0
+45	make a budget	unit 4 Topic 2_3	4	做预算	0
+45	hunt	unit 4 Topic 2_3	4	v.猎取	1
+45	wild	unit 4 Topic 2_3	4	adj.野的	1
+46	handle	unit 4 Topic 2_4	4	vt.操作	0
+46	explorer	unit 4 Topic 2_4	4	n.探险者	0
+46	probably	unit 4 Topic 2_4	4	adv.大概	0
+46	check	unit 4 Topic 2_4	4	n.支票	0
+46	by check	unit 4 Topic 2_4	4	用支票	0

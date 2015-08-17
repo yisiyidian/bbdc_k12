@@ -1,116 +1,116 @@
-1	running	Unit 1_1	2	n.跑步	1
-1	basketball	Unit 1_1	2	n.篮球	1
-1	roller skating	Unit 1_1	2	滑旱冰	1
-2	jumping rope	Unit 1_2	2	跳绳	1
-2	ping-pong	Unit 1_2	2	n.乒乓球	1
-2	What about ...	Unit 1_2	2	...怎么样？	1
-2	interesting	Unit 1_2	2	adj.有趣的	1
-2	often	Unit 1_2	2	adv.经常	1
-2	be good at	Unit 1_2	2	擅长	1
-2	late	Unit 1_2	2	adj.晚	0
-2	swim	Unit 1_2	2	v.游泳	0
-2	friend	Unit 1_2	2	n.朋友	0
-2	father	Unit 1_2	2	n.父亲	0
-2	get up	Unit 1_2	2	起床	0
-3	visit one's grandparents	Unit 2_1	2	看望祖父母	1
-3	go to a drawing club	Unit 2_1	2	去绘画俱乐部	1
-3	climb a hill	Unit 2_1	2	爬山	1
-3	pick fruit	Unit 2_1	2	采摘水果	1
-3	play computer games	Unit 2_1	2	玩电脑游戏	1
-3	go fishing	Unit 2_1	2	钓鱼	1
-3	go to the cinema	Unit 2_1	2	看电影	1
-3	on the weekend	Unit 2_1	2	在周末	1
-3	fun	Unit 2_1	2	n.有趣的	1
-3	always	Unit 2_1	2	adv.总是	0
-3	step	Unit 2_1	2	v.踩	0
-4	paint	Unit 2_2	2	n.颜料	0
-4	evening	Unit 2_2	2	n.傍晚	0
-4	dirty	Unit 2_2	2	adj.脏的	0
-4	their	Unit 2_2	2	pron.他们的	0
-4	house	Unit 2_2	2	n.房子	0
-4	poor	Unit 2_2	2	adj.贫穷的	0
-4	hope	Unit 2_2	2	n.&v.希望	0
-4	so	Unit 2_2	2	conj.那么	0
-4	Saturday	Unit 2_2	2	n.星期六	0
-4	near	Unit 2_2	2	prep.靠近	0
-4	day	Unit 2_2	2	n.白天	0
-5	usually	Unit 3_1	2	adv.通常	1
-5	by bus	Unit 3_1	2	乘公交车	1
-5	by boat	Unit 3_1	2	乘小船	1
-5	by ship	Unit 3_1	2	乘轮船	1
-5	by car	Unit 3_1	2	乘小汽车	1
-5	by taxi	Unit 3_1	2	乘出租车	1
-5	by bike	Unit 3_1	2	骑自行车	1
-5	on foot	Unit 3_1	2	步行	1
-5	by school bus	Unit 3_1	2	乘校车	1
-5	by subway	Unit 3_1	2	乘地铁	1
-5	by plane	Unit 3_1	2	乘飞机	1
-5	by train	Unit 3_1	2	乘火车	1
-6	garden	Unit 3_2	2	n.花园	0
-6	meeting place	Unit 3_2	2	集合地点	0
-6	gate	Unit 3_2	2	n.大门	0
-6	transportation	Unit 3_2	2	n.交通	0
-6	film	Unit 3_2	2	n.电影	0
-6	earth	Unit 3_2	2	n.地球	0
-6	snow	Unit 3_2	2	n.雪	0
-6	theatre	Unit 3_2	2	n.剧场	0
-6	come	Unit 3_2	2	vi.来	0
-6	enjoy	Unit 3_2	2	vt.欣赏	0
-6	park	Unit 3_2	2	n.公园	0
-6	apple	Unit 3_2	2	n.苹果	0
-7	pen	Unit 4_1	2	n.钢笔	1
-7	knife	Unit 4_1	2	n.小刀	1
-7	eraser	Unit 4_1	2	n.橡皮	1
-7	crayon	Unit 4_1	2	n.蜡笔	1
-7	scissors	Unit 4_1	2	n.剪刀	1
-7	glue stick	Unit 4_1	2	胶棒	1
-7	paper	Unit 4_1	2	n.纸	1
-7	use	Unit 4_1	2	v.使用	1
-7	please	Unit 4_1	2	int.请	1
-7	find	Unit 4_1	2	vt.找到	0
-8	Informaion Centre	Unit 4_2	2	咨询中心	0
-8	Excuse me	Unit 4_2	2	打扰一下	0
-8	phone	Unit 4_2	2	n.电话	0
-8	dad	Unit 4_2	2	n.爸爸	0
-8	hamburger	Unit 4_2	2	n.汉堡包	0
-8	ruler	Unit 4_2	2	n.尺子	0
-8	pencil	Unit 4_2	2	n.铅笔	0
-8	schoolbag	Unit 4_2	2	n.书包	0
-8	shop	Unit 4_2	2	n.商店	0
-9	climb on the window ledge	Unit 5_1	1	爬窗台	1
-9	dangerous	Unit 5_1	1	adj.危险的	1
-9	play with fire	Unit 5_1	1	玩火	1
-9	Be careful	Unit 5_1	1	当心	1
-9	run down the stairs	Unit 5_1	1	跑下楼梯	1
-9	sidewalk	Unit 5_1	1	人行道	1
-9	wait for	Unit 5_1	1	等待	1
-9	safe	Unit 5_1	1	adj.安全的	1
-9	stop	Unit 5_1	1	v.停	0
-9	street	Unit 5_1	1	n.街道	0
-9	safety rule	Unit 5_1	1	安全规则	0
-9	green	Unit 5_1	1	adj.&n.绿色（的）	0
-9	red	Unit 5_1	1	adj.&n.红色（的）	0
-9	play football	Unit 5_1	1	踢足球	0
-10	nurse	Unit 6_1	2	n.护士	1
-10	cook	Unit 6_1	2	n.厨师	1
-10	doctor	Unit 6_1	2	n.医生	1
-10	bus driver	Unit 6_1	2	公交司机	1
-10	police officer	Unit 6_1	2	警官	1
-10	taxi driver	Unit 6_1	2	出租司机	1
-10	farmer	Unit 6_1	2	n.农民	1
-10	worker	Unit 6_1	2	n.工人	1
-10	in the future	Unit 6_1	2	将来	1
-10	great	Unit 6_1	2	adj.好极了	0
-10	job	Unit 6_1	2	n.工作	0
-10	sick	Unit 6_1	2	adj.有病的	0
-11	people	Unit 6_2	2	n.人们	0
-11	teach	Unit 6_2	2	vt.教	0
-11	just	Unit 6_2	2	adv.只是	0
-11	myself	Unit 6_2	2	pron.我自己	0
-11	sound	Unit 6_2	2	n.听起来	0
-11	Monday	Unit 6_2	2	n.星期一	0
-11	Tuesday	Unit 6_2	2	n.星期二	0
-11	Wednesday	Unit 6_2	2	n.星期三	0
-11	Thursday	Unit 6_2	2	n.星期四	0
-11	Friday	Unit 6_2	2	n.星期五	0
-11	teacher	Unit 6_2	2	n.老师	0
+1	running	Unit 1_1	3	n.跑步	1
+1	basketball	Unit 1_1	3	n.篮球	1
+1	roller skating	Unit 1_1	3	滑旱冰	1
+2	jumping rope	Unit 1_2	3	跳绳	1
+2	ping-pong	Unit 1_2	3	n.乒乓球	1
+2	What about ...	Unit 1_2	3	...怎么样？	1
+2	interesting	Unit 1_2	3	adj.有趣的	1
+2	often	Unit 1_2	3	adv.经常	1
+2	be good at	Unit 1_2	3	擅长	1
+3	late	Unit 1_3	3	adj.晚	0
+3	swim	Unit 1_3	3	v.游泳	0
+3	friend	Unit 1_3	3	n.朋友	0
+3	father	Unit 1_3	3	n.父亲	0
+3	get up	Unit 1_3	3	起床	0
+4	visit one's grandparents	Unit 2_1	4	看望祖父母	1
+4	go to a drawing club	Unit 2_1	4	去绘画俱乐部	1
+4	climb a hill	Unit 2_1	4	爬山	1
+4	pick fruit	Unit 2_1	4	采摘水果	1
+4	play computer games	Unit 2_1	4	玩电脑游戏	1
+4	go fishing	Unit 2_1	4	钓鱼	1
+5	go to the cinema	Unit 2_2	4	看电影	1
+5	on the weekend	Unit 2_2	4	在周末	1
+5	fun	Unit 2_2	4	n.有趣的	1
+5	always	Unit 2_2	4	adv.总是	0
+5	step	Unit 2_2	4	v.踩	0
+5	paint	Unit 2_2	4	n.颜料	0
+6	evening	Unit 2_3	4	n.傍晚	0
+6	dirty	Unit 2_3	4	adj.脏的	0
+6	their	Unit 2_3	4	pron.他们的	0
+6	house	Unit 2_3	4	n.房子	0
+6	poor	Unit 2_3	4	adj.贫穷的	0
+7	hope	Unit 2_4	4	n.&v.希望	0
+7	so	Unit 2_4	4	conj.那么	0
+7	Saturday	Unit 2_4	4	n.星期六	0
+7	near	Unit 2_4	4	prep.靠近	0
+7	day	Unit 2_4	4	n.白天	0
+8	usually	Unit 3_1	5	adv.通常	1
+8	by bus	Unit 3_1	5	乘公交车	1
+8	by boat	Unit 3_1	5	乘小船	1
+8	by ship	Unit 3_1	5	乘轮船	1
+8	by car	Unit 3_1	5	乘小汽车	1
+9	by taxi	Unit 3_2	5	乘出租车	1
+9	by bike	Unit 3_2	5	骑自行车	1
+9	on foot	Unit 3_2	5	步行	1
+9	by school bus	Unit 3_2	5	乘校车	1
+9	by subway	Unit 3_2	5	乘地铁	1
+10	by plane	Unit 3_3	5	乘飞机	1
+10	by train	Unit 3_3	5	乘火车	1
+10	garden	Unit 3_3	5	n.花园	0
+10	meeting place	Unit 3_3	5	集合地点	0
+10	gate	Unit 3_3	5	n.大门	0
+11	transportation	Unit 3_4	5	n.交通	0
+11	film	Unit 3_4	5	n.电影	0
+11	earth	Unit 3_4	5	n.地球	0
+11	snow	Unit 3_4	5	n.雪	0
+11	theatre	Unit 3_4	5	n.剧场	0
+12	come	Unit 3_5	5	vi.来	0
+12	enjoy	Unit 3_5	5	vt.欣赏	0
+12	park	Unit 3_5	5	n.公园	0
+12	apple	Unit 3_5	5	n.苹果	0
+13	pen	Unit 4_1	4	n.钢笔	1
+13	knife	Unit 4_1	4	n.小刀	1
+13	eraser	Unit 4_1	4	n.橡皮	1
+13	crayon	Unit 4_1	4	n.蜡笔	1
+13	scissors	Unit 4_1	4	n.剪刀	1
+14	glue stick	Unit 4_2	4	胶棒	1
+14	paper	Unit 4_2	4	n.纸	1
+14	use	Unit 4_2	4	v.使用	1
+14	please	Unit 4_2	4	int.请	1
+14	find	Unit 4_2	4	vt.找到	0
+15	Informaion Centre	Unit 4_3	4	咨询中心	0
+15	Excuse me	Unit 4_3	4	打扰一下	0
+15	phone	Unit 4_3	4	n.电话	0
+15	dad	Unit 4_3	4	n.爸爸	0
+15	hamburger	Unit 4_3	4	n.汉堡包	0
+16	ruler	Unit 4_4	4	n.尺子	0
+16	pencil	Unit 4_4	4	n.铅笔	0
+16	schoolbag	Unit 4_4	4	n.书包	0
+16	shop	Unit 4_4	4	n.商店	0
+17	climb on the window ledge	Unit 5_1	3	爬窗台	1
+17	dangerous	Unit 5_1	3	adj.危险的	1
+17	play with fire	Unit 5_1	3	玩火	1
+17	Be careful	Unit 5_1	3	当心	1
+17	run down the stairs	Unit 5_1	3	跑下楼梯	1
+18	sidewalk	Unit 5_2	3	人行道	1
+18	wait for	Unit 5_2	3	等待	1
+18	safe	Unit 5_2	3	adj.安全的	1
+18	stop	Unit 5_2	3	v.停	0
+18	street	Unit 5_2	3	n.街道	0
+19	safety rule	Unit 5_3	3	安全规则	0
+19	green	Unit 5_3	3	adj.&n.绿色（的）	0
+19	red	Unit 5_3	3	adj.&n.红色（的）	0
+19	play football	Unit 5_3	3	踢足球	0
+20	nurse	Unit 6_1	5	n.护士	1
+20	cook	Unit 6_1	5	n.厨师	1
+20	doctor	Unit 6_1	5	n.医生	1
+20	bus driver	Unit 6_1	5	公交司机	1
+20	police officer	Unit 6_1	5	警官	1
+21	taxi driver	Unit 6_2	5	出租司机	1
+21	farmer	Unit 6_2	5	n.农民	1
+21	worker	Unit 6_2	5	n.工人	1
+21	in the future	Unit 6_2	5	将来	1
+21	great	Unit 6_2	5	adj.好极了	0
+22	job	Unit 6_3	5	n.工作	0
+22	sick	Unit 6_3	5	adj.有病的	0
+22	people	Unit 6_3	5	n.人们	0
+22	teach	Unit 6_3	5	vt.教	0
+22	just	Unit 6_3	5	adv.只是	0
+23	myself	Unit 6_4	5	pron.我自己	0
+23	sound	Unit 6_4	5	n.听起来	0
+23	Monday	Unit 6_4	5	n.星期一	0
+23	Tuesday	Unit 6_4	5	n.星期二	0
+24	Wednesday	Unit 6_5	5	n.星期三	0
+24	Thursday	Unit 6_5	5	n.星期四	0
+24	Friday	Unit 6_5	5	n.星期五	0
+24	teacher	Unit 6_5	5	n.老师	0

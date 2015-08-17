@@ -1,191 +1,191 @@
-1	well-dressed	Unit 1_1	4	adj.穿着讲究的	1
-1	glance	Unit 1_1	4	vi.匆匆一看	1
-1	sigh	Unit 1_1	4	vt.叹气	1
-2	senior	Unit 1_2	4	adj.级别高的	1
-2	employee	Unit 1_2	4	n.职员	1
-2	prefer	Unit 1_2	4	vt.更喜欢	1
-2	communicate	Unit 1_2	4	vi.交流	1
-2	gesture	Unit 1_2	4	n.手势	1
-2	expression	Unit 1_2	4	n.表情	1
-2	appearance	Unit 1_2	4	n.外貌	1
-2	impression	Unit 1_2	4	n.印象	1
-2	downwards	Unit 1_2	4	adv.向下地	0
-2	assistance	Unit 1_2	4	n.帮助	1
-3	without hesitation	Unit 1_3	4	毫不犹豫	1
-3	remark	Unit 1_3	4	n.评论	1
-3	remind	Unit 1_3	4	v.提醒	1
-3	eye contact	Unit 1_3	4	目光接触	1
-3	signal	Unit 1_3	4	n.信号	1
-3	hostility	Unit 1_3	4	n.敌意	0
-3	boredom	Unit 1_3	4	n.无聊	1
-3	confusion	Unit 1_3	4	n.困惑	1
-3	maintain	Unit 1_3	4	vt.保持	1
-3	consider	Unit 1_3	4	vt.认为，考虑	1
-4	lack of	Unit 1_4	4	缺少	1
-4	last	Unit 1_4	4	v.持续	1
-4	avoid	Unit 1_4	4	v.避免	1
-4	respect	Unit 1_4	4	vt.尊敬	1
-4	authority	Unit 1_4	4	n.权力	1
-4	in authority	Unit 1_4	4	掌权的	1
-4	concentration	Unit 1_4	4	n.专心	1
-4	subtle	Unit 1_4	4	adj.微妙的	0
-4	stare	Unit 1_4	4	vi.盯着看	1
-4	rude	Unit 1_4	4	adj.粗鲁的	1
-5	hairstyle	Unit 2_1	4	n.发型	0
-5	suit	Unit 2_1	4	vt.适合	1
-5	guarantee	Unit 2_1	4	vt.保证	1
-5	on top of the world	Unit 2_1	4	高兴到极点	1
-5	expert	Unit 2_1	4	n.专家	1
-5	curl	Unit 2_1	4	n.卷发	1
-5	angle	Unit 2_1	4	n.棱角	1
-5	balanced	Unit 2_1	4	adj.均衡的	1
-5	in addition	Unit 2_1	4	此外	1
-6	shampoo	Unit 2_2	4	n.洗发剂	1
-6	effective	Unit 2_2	4	adj.有效的	1
-6	conditioner	Unit 2_2	4	n.护发素	0
-6	normal	Unit 2_2	4	adj.正常的	1
-6	apply	Unit 2_2	4	vt.使用	1
-6	wet	Unit 2_2	4	v.把...弄湿	1
-6	squeeze	Unit 2_2	4	vt.挤	1
-6	squeeze out	Unit 2_2	4	挤出	1
-6	comb	Unit 2_2	4	n.梳子	1
-7	damage	Unit 2_3	4	n.&v.损害	1
-7	loosen	Unit 2_3	4	vt.使变松	1
-7	dirt	Unit 2_3	4	n.灰尘	1
-7	hairdryer	Unit 2_3	4	n.吹风机	0
-7	overuse	Unit 2_3	4	vt.&n.过度使用	1
-7	bald	Unit 2_3	4	adj.秃顶的	1
-7	ensure	Unit 2_3	4	vt.保证	1
-7	pay attention to	Unit 2_3	4	注意	1
-7	protein	Unit 2_3	4	n.蛋白质	1
-8	adequate	Unit 2_4	4	adj.足够的	1
-8	dairy product	Unit 2_4	4	乳制品	1
-8	stress	Unit 2_4	4	n.精神压力	1
-8	rob ... of	Unit 2_4	4	夺去	1
-8	remedy	Unit 2_4	4	n.治疗方法	1
-8	rinse	Unit 2_4	4	vt.冲洗掉	0
-8	regularly	Unit 2_4	4	adv.经常	1
-8	rub	Unit 2_4	4	vt.搓	1
-9	twist	Unit 3_1	3	n.盘旋	1
-9	construction	Unit 3_1	3	n.建造	1
-9	magnificent	Unit 3_1	3	adj.宏伟的	1
-9	structure	Unit 3_1	3	n.建筑物	1
-9	base	Unit 3_1	3	n.基础	1
-9	include	Unit 3_1	3	v.包括	1
-9	gallery	Unit 3_1	3	n.陈列室	1
-9	bronze ware	Unit 3_1	3	青铜器	0
-9	sculpture	Unit 3_1	3	n.雕塑	0
-9	calligraphy	Unit 3_1	3	n.书法	0
-10	seal	Unit 3_2	3	n.印章	0
-10	historical	Unit 3_2	3	adj.历史的	1
-10	civilization	Unit 3_2	3	n.文明	1
-10	preserve	Unit 3_2	3	vt.保护	1
-10	admit	Unit 3_2	3	vt.准许进入	1
-10	scenery	Unit 3_2	3	n.风景	1
-10	landscape	Unit 3_2	3	n.风景	1
-10	attract	Unit 3_2	3	v.吸引	1
-10	reflection	Unit 3_2	3	n.映像	0
-10	remains	Unit 3_2	3	n.遗迹	0
-11	abandon	Unit 3_3	3	vt.遗弃	1
-11	access	Unit 3_3	3	vt.&n.进入	1
-11	stadium	Unit 3_3	3	n.运动场	1
-11	hold	Unit 3_3	3	vt.容纳	1
-11	empire	Unit 3_3	3	n.帝国	1
-11	ruin	Unit 3_3	3	n.废墟	1
-11	fall into ruin	Unit 3_3	3	成为废墟	1
-11	stand	Unit 3_3	3	n.看台	1
-11	overlook	Unit 3_3	3	v.俯瞰	1
-11	tomb	Unit 3_3	3	n.坟墓	1
-11	wonder	Unit 3_3	3	n.奇迹	1
-12	studio	Unit 4_1	3	n.演播室	1
-12	film	Unit 4_1	3	vt.拍摄	1
-12	director	Unit 4_1	3	n.导演	1
-12	contestant	Unit 4_1	3	n.参赛者	0
-12	whisper	Unit 4_1	3	vt.低语	1
-12	faint	Unit 4_1	3	n.&v.昏厥	1
-12	gasp	Unit 4_1	3	n.喘着气说	1
-12	cameraman	Unit 4_1	3	n.摄影师	0
-12	seat	Unit 4_1	3	vt.使坐下	1
-12	rush forward	Unit 4_1	3	冲上前去	1
-13	powder	Unit 4_2	3	n.抹粉	1
-13	cue	Unit 4_2	3	n.提示	0
-13	clap	Unit 4_2	3	vt.拍手	1
-13	boom	Unit 4_2	3	v.用低音说	0
-13	quiz	Unit 4_2	3	n.智力竞赛	1
-13	terrific	Unit 4_2	3	adj.极好的	1
-13	ahead of	Unit 4_2	3	领先	1
-13	tense	Unit 4_2	3	adj.紧张的	1
-13	beat	Unit 4_2	3	vt.战胜	1
-13	keep still	Unit 4_2	3	静止不动	1
-14	trend	Unit 4_3	3	n.趋势	1
-14	surround	Unit 4_3	3	vt.环绕	1
-14	achieve	Unit 4_3	3	vt.获得	1
-14	suspend	Unit 4_3	3	v.悬挂	1
-14	stereo	Unit 4_3	3	adj.立体声的	1
-14	arrange	Unit 4_3	3	vt.布置	1
-14	viewer	Unit 4_3	3	n.电视观众	1
-14	digital	Unit 4_3	3	adj.数码的	1
-14	cigarette lighter	Unit 4_3	3	打火机	0
-14	record	Unit 4_3	3	vt.将...录下	1
-14	cassette	Unit 4_3	3	n.盒式磁带	1
-15	mixed grill	Unit 5_1	3	烤杂排	0
-15	steak	Unit 5_1	3	n.牛排	1
-15	pork chop	Unit 5_1	3	猪排	0
-15	sound	Unit 5_1	3	vi.听起来好像	1
-15	vegetarian	Unit 5_1	3	n.素食者	1
-15	influence	Unit 5_1	3	vt.&n.影响	1
-15	astronaut	Unit 5_1	3	n.航天员	1
-15	crowd	Unit 5_1	3	n.&v.聚集	1
-15	tiny	Unit 5_1	3	adj.极小的	1
-15	pepper	Unit 5_1	3	n.胡椒粉	1
-16	grow	Unit 5_2	3	vt.种植	1
-16	instead of	Unit 5_2	3	代替	1
-16	cattle	Unit 5_2	3	n.牛	1
-16	appetite	Unit 5_2	3	n.食欲	1
-16	contain	Unit 5_2	3	vt.包含	1
-16	vitamin	Unit 5_2	3	n.维生素	1
-16	mineral	Unit 5_2	3	adj.&n.矿物质	1
-16	pesticide	Unit 5_2	3	n.杀虫剂	0
-16	source	Unit 5_2	3	n.来源	1
-16	energy	Unit 5_2	3	n.精力	1
-17	variety	Unit 5_3	3	n.多种多样	1
-17	advise	Unit 5_3	3	vt.建议	1
-17	cheeseburger	Unit 5_3	3	n.干酪汉堡包	0
-17	milkshake	Unit 5_3	3	n.奶昔	0
-17	increase	Unit 5_3	3	v.增加	1
-17	heart attack	Unit 5_3	3	心脏病发作	0
-17	intelligent	Unit 5_3	3	adj.聪颖的	1
-17	decide on	Unit 5_3	3	选定	1
-17	tell ... from	Unit 5_3	3	区分	1
-18	agriculture	Unit 6_1	3	n.农业	1
-18	farming	Unit 6_1	3	n.务农	1
-18	farm	Unit 6_1	3	n.&v.务农；农场	1
-18	natural	Unit 6_1	3	adj.自然的	1
-18	zone	Unit 6_1	3	n.地区	1
-18	nourish	Unit 6_1	3	v.滋养	0
-18	mixture	Unit 6_1	3	n.混合物	1
-18	fertilizer	Unit 6_1	3	n.肥料	1
-18	make the best use of	Unit 6_1	3	充分利用	1
-18	experimental	Unit 6_1	3	adj.实验性的	1
-18	facility	Unit 6_1	3	n.场所	0
-19	enterprise	Unit 6_2	3	n.公司	1
-19	involve	Unit 6_2	3	vt.包括	1
-19	profitable	Unit 6_2	3	adj.盈利的	1
-19	chemical	Unit 6_2	3	adj.化学品	1
-19	prove	Unit 6_2	3	v.证明	1
-19	economic	Unit 6_2	3	adj.经济的	1
-19	benefit	Unit 6_2	3	n.&vt.利益；有利于	1
-19	used to	Unit 6_2	3	过去常常	1
-19	backward	Unit 6_2	3	adj.落后的	1
-19	amazed	Unit 6_2	3	adj.惊讶的	1
-19	high-tech	Unit 6_2	3	adj.高科技的	1
-20	weight	Unit 6_3	3	n.重量	1
-20	cancer	Unit 6_3	3	n.癌症	1
-20	account for	Unit 6_3	3	解释	1
-20	moderation	Unit 6_3	3	适度	1
-20	in contrast to	Unit 6_3	3	相比之下	1
-20	soya	Unit 6_3	3	n.大豆食物	0
-20	in comparison	Unit 6_3	3	与...相比	1
-20	experience	Unit 6_3	3	vt.经受	1
-20	fortunately	Unit 6_3	3	adv.幸运地	1
-20	be aware of	Unit 6_3	3	意识到	1
+1	well-dressed	Unit 1_1	7	adj.穿着讲究的	1
+1	glance	Unit 1_1	7	vi.匆匆一看	1
+1	sigh	Unit 1_1	7	vt.叹气	1
+2	senior	Unit 1_2	7	adj.级别高的	1
+2	employee	Unit 1_2	7	n.职员	1
+2	prefer	Unit 1_2	7	vt.更喜欢	1
+2	communicate	Unit 1_2	7	vi.交流	1
+2	gesture	Unit 1_2	7	n.手势	1
+3	expression	Unit 1_3	7	n.表情	1
+3	appearance	Unit 1_3	7	n.外貌	1
+3	impression	Unit 1_3	7	n.印象	1
+3	downwards	Unit 1_3	7	adv.向下地	0
+3	assistance	Unit 1_3	7	n.帮助	1
+4	without hesitation	Unit 1_4	7	毫不犹豫	1
+4	remark	Unit 1_4	7	n.评论	1
+4	remind	Unit 1_4	7	v.提醒	1
+4	eye contact	Unit 1_4	7	目光接触	1
+4	signal	Unit 1_4	7	n.信号	1
+5	hostility	Unit 1_5	7	n.敌意	0
+5	boredom	Unit 1_5	7	n.无聊	1
+5	confusion	Unit 1_5	7	n.困惑	1
+5	maintain	Unit 1_5	7	vt.保持	1
+5	consider	Unit 1_5	7	vt.认为，考虑	1
+6	lack of	Unit 1_6	7	缺少	1
+6	last	Unit 1_6	7	v.持续	1
+6	avoid	Unit 1_6	7	v.避免	1
+6	respect	Unit 1_6	7	vt.尊敬	1
+6	authority	Unit 1_6	7	n.权力	1
+7	in authority	Unit 1_7	7	掌权的	1
+7	concentration	Unit 1_7	7	n.专心	1
+7	subtle	Unit 1_7	7	adj.微妙的	0
+7	stare	Unit 1_7	7	vi.盯着看	1
+7	rude	Unit 1_7	7	adj.粗鲁的	1
+8	hairstyle	Unit 2_1	7	n.发型	0
+8	suit	Unit 2_1	7	vt.适合	1
+8	guarantee	Unit 2_1	7	vt.保证	1
+8	on top of the world	Unit 2_1	7	高兴到极点	1
+8	expert	Unit 2_1	7	n.专家	1
+9	curl	Unit 2_2	7	n.卷发	1
+9	angle	Unit 2_2	7	n.棱角	1
+9	balanced	Unit 2_2	7	adj.均衡的	1
+9	in addition	Unit 2_2	7	此外	1
+9	shampoo	Unit 2_2	7	n.洗发剂	1
+10	effective	Unit 2_3	7	adj.有效的	1
+10	conditioner	Unit 2_3	7	n.护发素	0
+10	normal	Unit 2_3	7	adj.正常的	1
+10	apply	Unit 2_3	7	vt.使用	1
+10	wet	Unit 2_3	7	v.把...弄湿	1
+11	squeeze	Unit 2_4	7	vt.挤	1
+11	squeeze out	Unit 2_4	7	挤出	1
+11	comb	Unit 2_4	7	n.梳子	1
+11	damage	Unit 2_4	7	n.&v.损害	1
+11	loosen	Unit 2_4	7	vt.使变松	1
+12	dirt	Unit 2_5	7	n.灰尘	1
+12	hairdryer	Unit 2_5	7	n.吹风机	0
+12	overuse	Unit 2_5	7	vt.&n.过度使用	1
+12	bald	Unit 2_5	7	adj.秃顶的	1
+12	ensure	Unit 2_5	7	vt.保证	1
+13	pay attention to	Unit 2_6	7	注意	1
+13	protein	Unit 2_6	7	n.蛋白质	1
+13	adequate	Unit 2_6	7	adj.足够的	1
+13	dairy product	Unit 2_6	7	乳制品	1
+13	stress	Unit 2_6	7	n.精神压力	1
+14	rob ... of	Unit 2_7	7	夺去	1
+14	remedy	Unit 2_7	7	n.治疗方法	1
+14	rinse	Unit 2_7	7	vt.冲洗掉	0
+14	regularly	Unit 2_7	7	adv.经常	1
+14	rub	Unit 2_7	7	vt.搓	1
+15	twist	Unit 3_1	6	n.盘旋	1
+15	construction	Unit 3_1	6	n.建造	1
+15	magnificent	Unit 3_1	6	adj.宏伟的	1
+15	structure	Unit 3_1	6	n.建筑物	1
+15	base	Unit 3_1	6	n.基础	1
+16	include	Unit 3_2	6	v.包括	1
+16	gallery	Unit 3_2	6	n.陈列室	1
+16	bronze ware	Unit 3_2	6	青铜器	0
+16	sculpture	Unit 3_2	6	n.雕塑	0
+16	calligraphy	Unit 3_2	6	n.书法	0
+17	seal	Unit 3_3	6	n.印章	0
+17	historical	Unit 3_3	6	adj.历史的	1
+17	civilization	Unit 3_3	6	n.文明	1
+17	preserve	Unit 3_3	6	vt.保护	1
+17	admit	Unit 3_3	6	vt.准许进入	1
+18	scenery	Unit 3_4	6	n.风景	1
+18	landscape	Unit 3_4	6	n.风景	1
+18	attract	Unit 3_4	6	v.吸引	1
+18	reflection	Unit 3_4	6	n.映像	0
+18	remains	Unit 3_4	6	n.遗迹	0
+19	abandon	Unit 3_5	6	vt.遗弃	1
+19	access	Unit 3_5	6	vt.&n.进入	1
+19	stadium	Unit 3_5	6	n.运动场	1
+19	hold	Unit 3_5	6	vt.容纳	1
+19	empire	Unit 3_5	6	n.帝国	1
+20	ruin	Unit 3_6	6	n.废墟	1
+20	fall into ruin	Unit 3_6	6	成为废墟	1
+20	stand	Unit 3_6	6	n.看台	1
+20	overlook	Unit 3_6	6	v.俯瞰	1
+20	tomb	Unit 3_6	6	n.坟墓	1
+20	wonder	Unit 3_6	6	n.奇迹	1
+21	studio	Unit 4_1	6	n.演播室	1
+21	film	Unit 4_1	6	vt.拍摄	1
+21	director	Unit 4_1	6	n.导演	1
+21	contestant	Unit 4_1	6	n.参赛者	0
+21	whisper	Unit 4_1	6	vt.低语	1
+22	faint	Unit 4_2	6	n.&v.昏厥	1
+22	gasp	Unit 4_2	6	n.喘着气说	1
+22	cameraman	Unit 4_2	6	n.摄影师	0
+22	seat	Unit 4_2	6	vt.使坐下	1
+22	rush forward	Unit 4_2	6	冲上前去	1
+23	powder	Unit 4_3	6	n.抹粉	1
+23	cue	Unit 4_3	6	n.提示	0
+23	clap	Unit 4_3	6	vt.拍手	1
+23	boom	Unit 4_3	6	v.用低音说	0
+23	quiz	Unit 4_3	6	n.智力竞赛	1
+24	terrific	Unit 4_4	6	adj.极好的	1
+24	ahead of	Unit 4_4	6	领先	1
+24	tense	Unit 4_4	6	adj.紧张的	1
+24	beat	Unit 4_4	6	vt.战胜	1
+24	keep still	Unit 4_4	6	静止不动	1
+25	trend	Unit 4_5	6	n.趋势	1
+25	surround	Unit 4_5	6	vt.环绕	1
+25	achieve	Unit 4_5	6	vt.获得	1
+25	suspend	Unit 4_5	6	v.悬挂	1
+25	stereo	Unit 4_5	6	adj.立体声的	1
+26	arrange	Unit 4_6	6	vt.布置	1
+26	viewer	Unit 4_6	6	n.电视观众	1
+26	digital	Unit 4_6	6	adj.数码的	1
+26	cigarette lighter	Unit 4_6	6	打火机	0
+26	record	Unit 4_6	6	vt.将...录下	1
+26	cassette	Unit 4_6	6	n.盒式磁带	1
+27	mixed grill	Unit 5_1	6	烤杂排	0
+27	steak	Unit 5_1	6	n.牛排	1
+27	pork chop	Unit 5_1	6	猪排	0
+27	sound	Unit 5_1	6	vi.听起来好像	1
+27	vegetarian	Unit 5_1	6	n.素食者	1
+28	influence	Unit 5_2	6	vt.&n.影响	1
+28	astronaut	Unit 5_2	6	n.航天员	1
+28	crowd	Unit 5_2	6	n.&v.聚集	1
+28	tiny	Unit 5_2	6	adj.极小的	1
+28	pepper	Unit 5_2	6	n.胡椒粉	1
+29	grow	Unit 5_3	6	vt.种植	1
+29	instead of	Unit 5_3	6	代替	1
+29	cattle	Unit 5_3	6	n.牛	1
+29	appetite	Unit 5_3	6	n.食欲	1
+29	contain	Unit 5_3	6	vt.包含	1
+30	vitamin	Unit 5_4	6	n.维生素	1
+30	mineral	Unit 5_4	6	adj.&n.矿物质	1
+30	pesticide	Unit 5_4	6	n.杀虫剂	0
+30	source	Unit 5_4	6	n.来源	1
+30	energy	Unit 5_4	6	n.精力	1
+31	variety	Unit 5_5	6	n.多种多样	1
+31	advise	Unit 5_5	6	vt.建议	1
+31	cheeseburger	Unit 5_5	6	n.干酪汉堡包	0
+31	milkshake	Unit 5_5	6	n.奶昔	0
+31	increase	Unit 5_5	6	v.增加	1
+32	heart attack	Unit 5_6	6	心脏病发作	0
+32	intelligent	Unit 5_6	6	adj.聪颖的	1
+32	decide on	Unit 5_6	6	选定	1
+32	tell ... from	Unit 5_6	6	区分	1
+33	agriculture	Unit 6_1	6	n.农业	1
+33	farming	Unit 6_1	6	n.务农	1
+33	farm	Unit 6_1	6	n.&v.务农；农场	1
+33	natural	Unit 6_1	6	adj.自然的	1
+33	zone	Unit 6_1	6	n.地区	1
+34	nourish	Unit 6_2	6	v.滋养	0
+34	mixture	Unit 6_2	6	n.混合物	1
+34	fertilizer	Unit 6_2	6	n.肥料	1
+34	make the best use of	Unit 6_2	6	充分利用	1
+34	experimental	Unit 6_2	6	adj.实验性的	1
+35	facility	Unit 6_3	6	n.场所	0
+35	enterprise	Unit 6_3	6	n.公司	1
+35	involve	Unit 6_3	6	vt.包括	1
+35	profitable	Unit 6_3	6	adj.盈利的	1
+35	chemical	Unit 6_3	6	adj.化学品	1
+36	prove	Unit 6_4	6	v.证明	1
+36	economic	Unit 6_4	6	adj.经济的	1
+36	benefit	Unit 6_4	6	n.&vt.利益；有利于	1
+36	used to	Unit 6_4	6	过去常常	1
+36	backward	Unit 6_4	6	adj.落后的	1
+37	amazed	Unit 6_5	6	adj.惊讶的	1
+37	high-tech	Unit 6_5	6	adj.高科技的	1
+37	weight	Unit 6_5	6	n.重量	1
+37	cancer	Unit 6_5	6	n.癌症	1
+37	account for	Unit 6_5	6	解释	1
+37	moderation	Unit 6_5	6	适度	1
+38	in contrast to	Unit 6_6	6	相比之下	1
+38	soya	Unit 6_6	6	n.大豆食物	0
+38	in comparison	Unit 6_6	6	与...相比	1
+38	experience	Unit 6_6	6	vt.经受	1
+38	fortunately	Unit 6_6	6	adv.幸运地	1
+38	be aware of	Unit 6_6	6	意识到	1

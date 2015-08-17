@@ -1,383 +1,383 @@
-1	past	Unit1_1	5	n.过去	1
-1	present	Unit1_1	5	n.现在	1
-1	just	Unit1_1	5	adv.刚才	1
-2	used to	Unit1_2	5	曾经	1
-2	since	Unit1_2	5	prep.自...以来	1
-2	ever	Unit1_2	5	adv.曾经	1
-2	northern	Unit1_2	5	adj.北方的	1
-2	married	Unit1_2	5	adj.已婚的	1
-2	wife	Unit1_2	5	n.妻子	1
-2	block	Unit1_2	5	n.街区	1
-2	over	Unit1_2	5	prep.在...期间	1
-2	turn ... into	Unit1_2	5	把...变成...	1
-2	pollution	Unit1_2	5	n.污染	1
-3	factory	Unit1_3	5	n.工厂	1
-3	waste	Unit1_3	5	vt.废料	1
-3	realize	Unit1_3	5	vt.意识到;实现	1
-3	improve	Unit1_3	5	vt.改进	0
-3	situation	Unit1_3	5	n.情况	1
-3	in some ways	Unit1_3	5	在某种程度上	1
-3	impossible	Unit1_3	5	adj.不可能的	1
-3	before	Unit1_3	5	adv.以前	1
-3	lonely	Unit1_3	5	adj.孤独的	1
-3	from time to time	Unit1_3	5	不时	1
-4	anyway	Unit1_4	5	adv.尽管	1
-4	husband	Unit1_4	5	n.丈夫	1
-4	interview	Unit1_4	5	vi.采访	1
-4	all one's life	Unit1_4	5	一生	1
-4	yet	Unit1_4	5	adv.还	1
-4	recently	Unit1_4	5	adv.最近	1
-4	environment	Unit1_4	5	n.环境	1
-4	transport	Unit1_4	5	n.交通车辆	0
-4	condition	Unit1_4	5	n.条件	1
-4	return	Unit1_4	5	vt.返回	1
-5	last	Unit1_5	5	adv.最后	1
-5	abroad	Unit1_5	5	adv.到国外	1
-5	primary	Unit1_5	5	adj.初级的	1
-5	keep in touch with	Unit1_5	5	保持联系	1
-5	communicate	Unit1_5	5	vi.交流	1
-5	communication	Unit1_5	5	n.交流	1
-5	exactly	Unit1_5	5	adv.正是	1
-5	get used to	Unit1_5	5	习惯于	1
-5	narrow	Unit1_5	5	adj.狭窄的	0
-5	open space	Unit1_5	5	开阔的空地	1
-6	travelling	Unit2_1	4	n.旅行	1
-6	hey	Unit2_1	4	int.嘿	0
-6	miss	Unit2_1	4	v.想念	1
-6	fantastic	Unit2_1	4	adj.极好的	1
-6	indoor	Unit2_1	4	adj.室内的	0
-6	roller coaster	Unit2_1	4	过山车	0
-6	speed	Unit2_1	4	n.速度	1
-6	ride	Unit2_1	4	vt.乘坐	1
-6	cartoon	Unit2_1	4	n.卡通片	1
-6	character	Unit2_1	4	n.人物	0
-7	such	Unit2_2	4	adj.这样的	1
-7	such as	Unit2_2	4	例如	1
-7	parade	Unit2_2	4	n.游行	0
-7	magic	Unit2_2	4	n.魔法	1
-7	pie	Unit2_2	4	n.派	1
-7	feel	Unit2_2	4	vt.感觉到	1
-7	couple	Unit2_2	4	n.两人	1
-7	a couple of	Unit2_2	4	几个	1
-7	at the end of	Unit2_2	4	在...末尾	1
-7	castle	Unit2_2	4	n.城堡	0
-8	sand	Unit2_3	4	n.沙	1
-8	over	Unit2_3	4	prep.结束	1
-8	marry	Unit2_3	4	vt.结婚	1
-8	dead	Unit2_3	4	adj.死的	1
-8	beauty	Unit2_3	4	n.美丽	0
-8	seaside	Unit2_3	4	adj.海边的	0
-8	theme park	Unit2_3	4	主题公园	0
-8	sailing	Unit2_3	4	n.帆船运动	0
-8	except	Unit2_3	4	prep.除了...以外	1
-8	view	Unit2_3	4	n.景色	0
-9	mountain	Unit2_4	4	n.高山	1
-9	business	Unit2_4	4	n.商业	1
-9	on business	Unit2_4	4	出差	1
-9	direct	Unit2_4	4	adj.直达的	1
-9	flight	Unit2_4	4	n.航班	0
-9	point	Unit2_4	4	n.要点	1
-9	detail	Unit2_4	4	n.细节	0
-9	delicious	Unit2_4	4	adj.美味的	1
-9	seafood	Unit2_4	4	n.海鲜	0
-9	airport	Unit2_4	4	n.机场	1
-9	relative	Unit2_4	4	n.亲戚	1
-10	online	Unit3_1	6	n.在线的	0
-10	programme	Unit3_1	6	节目	1
-10	remote  control	Unit3_1	6	遥控器	0
-10	ah	Unit3_1	6	int.啊	0
-10	channel	Unit3_1	6	n.频道	0
-10	keyboard	Unit3_1	6	n.鍵盘	1
-10	unit	Unit3_1	6	n.单位	1
-10	main unit	Unit3_1	6	主机	1
-10	mouse	Unit3_1	6	n.鼠标	1
-11	screen	Unit3_2	6	n.显示屏	1
-11	word processing	Unit3_2	6	文字处理	0
-11	receive	Unit3_2	6	vt.收到	1
-11	guide	Unit3_2	6	n.导游	1
-11	icon	Unit3_2	6	n.图标	0
-11	click	Unit3_2	6	v.&n.点击	0
-11	Asia	Unit3_2	6	n.亚洲	1
-11	Africa	Unit3_2	6	n.非洲	1
-11	Europe	Unit3_2	6	n.欧洲	1
-12	America	Unit3_3	6	n.美洲	1
-12	world-famous	Unit3_3	6	adj.世界著名的	1
-12	trade	Unit3_3	6	n.贸易	1
-12	southern	Unit3_3	6	adj.南方的	1
-12	international	Unit3_3	6	adj.国际的	1
-12	gather	Unit3_3	6	vt.聚集	0
-12	huge	Unit3_3	6	adj.巨大的	1
-12	darkness	Unit3_3	6	n.黑暗	0
-12	island	Unit3_3	6	n.岛屿	1
-13	several	Unit3_4	6	adj.几个	1
-13	lawn	Unit3_4	6	n.草坪	0
-13	relax	Unit3_4	6	vi.放松	1
-13	hard	Unit3_4	6	adj.辛苦的	1
-13	musical	Unit3_4	6	n.音乐剧	0
-13	so much for sth	Unit3_4	6	关于...就讲这么多	1
-13	bottom	Unit3_4	6	n.底	1
-13	pick	Unit3_4	6	vt.挑选	1
-13	play	Unit3_4	6	n.戏剧	1
-14	website	Unit3_5	6	n.网站	1
-14	dream	Unit3_5	6	n.&v.做梦	1
-14	dream of	Unit3_5	6	梦想	1
-14	passport	Unit3_5	6	n.护照	1
-14	coast	Unit3_5	6	n.海岸	1
-14	sail	Unit3_5	6	n.帆	0
-14	Australian	Unit3_5	6	n&adj.澳大利亚的	1
-14	opposite	Unit3_5	6	n.对立的人	1
-14	mind	Unit3_5	6	v.介意	1
-14	print	Unit3_5	6	vt.打印	1
-15	pleasure	Unit3_6	6	n.高兴	1
-15	my pleasure	Unit3_6	6	不客气	1
-15	book	Unit3_6	6	v.预订	1
-15	England	Unit3_6	6	n.英格兰	1
-15	queen	Unit3_6	6	n.女王	1
-15	ruler	Unit3_6	6	n.统治者	1
-15	pound	Unit3_6	6	n.英镑	1
-15	be made up of	Unit3_6	6	由...组成	1
-15	European	Unit3_6	6	adj.欧洲的	1
-15	dollar	Unit3_6	6	n.美元	1
-16	read	Unit4_1	6	n.读物	1
-16	cooking	Unit4_1	6	n.烹饪	1
-16	novel	Unit4_1	6	n.小说	0
-16	Germany	Unit4_1	6	n.德国	1
-16	knowledge	Unit4_1	6	n.知识	1
-16	spare	Unit4_1	6	adj.空闲的	1
-16	French	Unit4_1	6	n&adj.法国的	1
-16	writer	Unit4_1	6	n.作者	1
-16	ugly	Unit4_1	6	adj.丑陋的	1
-17	touch	Unit4_2	6	vt.触动	1
-17	against	Unit4_2	6	prep.紧靠	1
-17	be tired out	Unit4_2	6	筋疲力尽	1
-17	tie	Unit4_2	6	vt.捆	1
-17	over	Unit4_2	6	vt.从一边到另一边	1
-17	stomach	Unit4_2	6	n.胃	1
-17	until	Unit4_2	6	prep.直到...为止	1
-17	finger	Unit4_2	6	n.手指	1
-17	tiny	Unit4_2	6	adj.极小的	1
-18	fall over	Unit4_3	6	摔倒	1
-18	continue	Unit4_3	6	vt.继续	1
-18	either	Unit4_3	6	conj.（否定句中）也	1
-18	manage	Unit4_3	6	vt.设法完成	1
-18	lift	Unit4_3	6	vt.举起	1
-18	army	Unit4_3	6	n.大批	1
-18	must	Unit4_3	6	aux.一定	1
-18	unable	Unit4_3	6	adj.不能的	1
-18	shoulder	Unit4_3	6	n.肩膀	1
-19	hand	Unit4_4	6	v.交	1
-19	hand in	Unit4_4	6	上交	1
-19	and so on	Unit4_4	6	...等等	1
-19	review	Unit4_4	6	vt.评论	1
-19	return	Unit4_4	6	vt.归还	1
-19	on time	Unit4_4	6	准时	1
-19	renew	Unit4_4	6	vt.更新	0
-19	series	Unit4_4	6	n.一系列	0
-19	publishing house	Unit4_4	6	出版社	0
-20	refuse	Unit4_5	6	vt.拒绝	1
-20	publish	Unit4_5	6	v.出版	0
-20	so far	Unit4_5	6	到目前为止	1
-20	success	Unit4_5	6	n.成功	1
-20	translate	Unit4_5	6	vt.翻译	1
-20	sales	Unit4_5	6	n.[复]销售量	1
-20	copy	Unit4_5	6	n.副本	1
-20	Canadian	Unit4_5	6	加拿大的	1
-20	at a time	Unit4_5	6	每次	1
-20	online	Unit4_5	6	adj.在线	0
-21	sail	Unit4_6	6	vt.航行	0
-21	hidden	Unit4_6	6	adj.隐藏的	0
-21	confidence	Unit4_6	6	n.信心	0
-21	experience	Unit4_6	6	n.经历	1
-21	advice	Unit4_6	6	n.建议	1
-21	librarian	Unit4_6	6	n.图书管理员	0
-21	habit	Unit4_6	6	n.习惯	1
-21	classical	Unit4_6	6	adj.古典的	0
-21	opposite	Unit4_6	6	prep.在...对面	1
-21	open up	Unit4_6	6	开启	1
-22	manners	Unit5_1	6	n.礼仪	0
-22	eh	Unit5_1	6	int.嗯	0
-22	cut in on	Unit5_1	6	打断	1
-22	politely	Unit5_1	6	adv.礼貌地	1
-22	litter	Unit5_1	6	n.垃圾	1
-22	tap	Unit5_1	6	n.水龙头	0
-22	run	Unit5_1	6	vi.流动	1
-22	pick	Unit5_1	6	vt.采	1
-22	obey	Unit5_1	6	vt.遵守	0
-22	queue	Unit5_1	6	n.排队等候	0
-23	turn	Unit5_2	6	n.轮流	1
-23	proper	Unit5_2	6	adj.正确的	1
-23	greet	Unit5_2	6	vt.问候	0
-23	shake sb's hand	Unit5_2	6	与某人握手	1
-23	kiss	Unit5_2	6	vt.亲吻	1
-23	close	Unit5_2	6	vt.亲密的	1
-23	conversation	Unit5_2	6	n.交谈	1
-23	avoid	Unit5_2	6	v.避免	1
-23	subject	Unit5_2	6	n.话题	1
-23	behave	Unit5_2	6	vt.表现	0
-24	public	Unit5_3	6	n.民众	1
-24	in public	Unit5_3	6	公开地	1
-24	push	Unit5_3	6	n.推	1
-24	push in	Unit5_3	6	(=<美>cut in)插队	1
-24	bump	Unit5_3	6	v.撞	0
-24	in one's way	Unit5_3	6	挡住某人的路	1
-24	touch	Unit5_3	6	vt.触摸	1
-24	excuse	Unit5_3	6	n.原谅	1
-24	excuse me	Unit5_3	6	劳驾	1
-24	till	Unit5_3	6	conj.到...时	1
-25	as well as	Unit5_4	6	也	1
-25	loudly	Unit5_4	6	adv.大声地	1
-25	as	Unit5_4	6	prep.正如	1
-25	saying	Unit5_4	6	n.谚语	0
-25	Roman	Unit5_4	6	n.罗马人	0
-25	by accident	Unit5_4	6	偶然	1
-25	discussion	Unit5_4	6	n.讨论	1
-25	express	Unit5_4	6	vt.表达	1
-25	public	Unit5_4	6	adj.公共的	1
-25	explain	Unit5_4	6	vt.解释	1
-26	keep sb from sth	Unit5_5	6	保护	1
-26	warn	Unit5_5	6	vt.警告	1
-26	parking	Unit5_5	6	n.停车	1
-26	litter	Unit5_5	6	v.乱丢杂物	1
-26	successful	Unit5_5	6	adj.成功的	1
-26	sometime	Unit5_5	6	adj.在某时	1
-26	soon after	Unit5_5	6	不久以后	1
-26	risk	Unit5_5	6	v.冒险做	1
-26	worm	Unit5_5	6	n.软体虫	0
-26	pain	Unit5_5	6	n.痛	1
-27	gain	Unit5_6	6	v.收获	0
-27	indeed	Unit5_6	6	adv.真正地	0
-27	practice	Unit5_6	6	n.练习	1
-27	candle	Unit5_6	6	n.蜡烛	1
-27	purpose	Unit5_6	6	n.目的	1
-27	content	Unit5_6	6	n.内容	0
-27	conclusion	Unit5_6	6	n.总结	0
-27	guest	Unit5_6	6	n.客人	1
-27	host	Unit5_6	6	v.&n.主人	0
-27	above all	Unit5_6	6	首要的是	1
-27	impolite	Unit5_6	6	adj.不礼貌的	1
-28	train	Unit6_1	4	n.训练	1
-28	the Olympic Games	Unit6_1	4	奥林匹克运动会	1
-28	support	Unit6_1	4	n.支持	1
-28	meaningful	Unit6_1	4	adj.有意义的	1
-28	blind	Unit6_1	4	adj.瞎的	1
-28	deaf	Unit6_1	4	adj.聋的	1
-28	disabled	Unit6_1	4	adj.残疾的	0
-28	elderly	Unit6_1	4	adj.年老的	1
-28	homeless	Unit6_1	4	adj.无家可归的	1
-28	volunteer	Unit6_1	4	v.志愿做	0
-28	expect	Unit6_1	4	v.期待	1
-29	adult	Unit6_2	4	adj.成年人	0
-29	intellectual	Unit6_2	4	adj.智力的	1
-29	disability	Unit6_2	4	n.缺陷	0
-29	chance	Unit6_2	4	n.机会	1
-29	event	Unit6_2	4	n.比赛项目	0
-29	similar	Unit6_2	4	adj.类似的	1
-29	give up	Unit6_2	4	放弃	1
-29	necessary	Unit6_2	4	adj.必须的	1
-29	training	Unit6_2	4	n.培训	1
-29	task	Unit6_2	4	n.任务	1
-29	athlete	Unit6_2	4	n.运动员	0
-30	coach	Unit6_3	4	n.教练	1
-30	gold	Unit6_3	4	n.黄金	1
-30	silver	Unit6_3	4	n.银	1
-30	confident	Unit6_3	4	adj.自信的	0
-30	background	Unit6_3	4	n.背景	1
-30	closely	Unit6_3	4	adv.密切地	1
-30	achieve	Unit6_3	4	vt.达到	1
-30	prize	Unit6_3	4	n.奖赏	1
-30	donate	Unit6_3	4	vt.捐献	0
-30	charity	Unit6_3	4	n.慈善	0
-30	organization	Unit6_3	4	n.组织	0
-31	one-to-one	Unit6_4	4	adv.一对一地	1
-31	blood	Unit6_4	4	n.血	1
-31	south-west	Unit6_4	4	n.西南方	1
-31	north-west	Unit6_4	4	n.西北方	1
-31	project	Unit6_4	4	n.项目	1
-31	introduction	Unit6_4	4	n.介绍	1
-31	disease	Unit6_4	4	n.疾病	0
-31	operation	Unit6_4	4	n.手术	0
-31	give a helping hand	Unit6_4	4	帮助	1
-31	survivor	Unit6_4	4	n.幸存者	0
-32	especially	Unit7_1	4	adv.尤其	1
-32	basic	Unit7_1	4	adj.基本的	1
-32	education	Unit7_1	4	n.教育	1
-32	equal	Unit7_1	4	adj.平等的	0
-32	right	Unit7_1	4	n.权利	1
-32	spread	Unit7_1	4	v.扩散	1
-32	interviewer	Unit7_1	4	n.采访者	1
-32	blindness	Unit7_1	4	n.失明	1
-32	mostly	Unit7_1	4	adv.主要地	0
-32	case	Unit7_1	4	n.案例	0
-33	cure	Unit7_2	4	vt.治愈	0
-33	medical	Unit7_2	4	adj.医学的	1
-33	treatment	Unit7_2	4	n.治疗	0
-33	patient	Unit7_2	4	n.病人	1
-33	afford	Unit7_2	4	vt.买得起	1
-33	go to hospital	Unit7_2	4	去看病	1
-33	on board	Unit7_2	4	在飞机上	1
-33	operate	Unit7_2	4	vi.做手术	0
-33	proud	Unit7_2	4	adj.自豪的	1
-33	reader	Unit7_2	4	n.读者	1
-34	medicine	Unit7_3	4	n.药	1
-34	develop	Unit7_3	4	vt.发展	1
-34	treat	Unit7_3	4	n&v.治疗	1
-34	carry on	Unit7_3	4	继续开展	1
-34	leaflet	Unit7_3	4	n.传单	0
-34	hand out	Unit7_3	4	分发	1
-34	hold	Unit7_3	4	vt.举行	1
-34	set	Unit7_3	4	v.建立	1
-34	set up	Unit7_3	4	设立	1
-34	including	Unit7_3	4	prep.包括	0
-35	war	Unit7_4	4	n.战争	1
-35	organize	Unit7_4	4	v.组织	0
-35	pale	Unit7_4	4	adj.苍白的	1
-35	matter	Unit7_4	4	n.事情	1
-35	check	Unit7_4	4	vt.检查	1
-35	secretary	Unit7_4	4	n.秘书	1
-35	make up one's mind	Unit7_4	4	决定	1
-35	India	Unit7_4	4	n.印度	1
-35	officer	Unit7_4	4	n.官员	1
-36	dig	Unit8_1	4	v.挖	1
-36	serious	Unit8_1	4	adj.严肃的	1
-36	breadfruit	Unit8_1	4	n.面包果	0
-36	reduce	Unit8_1	4	vt.减少	0
-36	turn off	Unit8_1	4	关上	1
-36	recycle	Unit8_1	4	v.回收利用	0
-36	wise	Unit8_1	4	adj.明智的	1
-36	plastic	Unit8_1	4	n.塑料	0
-36	separate	Unit8_1	4	v.分开	1
-36	recycling	Unit8_1	4	n.回收利用	0
-36	allow	Unit8_1	4	vt.允许	1
-37	cut down	Unit8_2	4	砍倒	1
-37	punish	Unit8_2	4	v.处罚	1
-37	fine	Unit8_2	4	n.罚款	1
-37	limit	Unit8_2	4	n.限制	0
-37	depend	Unit8_2	4	vi.依靠	1
-37	depend on	Unit8_2	4	依靠	1
-37	rich	Unit8_2	4	adj.富有的	1
-37	resource	Unit8_2	4	n.资源	0
-37	wisely	Unit8_2	4	adv.明智地	1
-37	run out	Unit8_2	4	用完	1
-37	produce	Unit8_2	4	vt.产生	1
-38	difference	Unit8_3	4	n.差异	1
-38	make a difference to	Unit8_3	4	有影响	1
-38	poster	Unit8_3	4	n.海报	0
-38	display	Unit8_3	4	n.&v.展示	0
-38	pollute	Unit8_3	4	v.污染	1
-38	harm	Unit8_3	4	n.伤害	0
-38	living	Unit8_3	4	adj.活着的	1
-38	survey	Unit8_3	4	n.调查	1
-38	empty	Unit8_3	4	adj.空的	1
-38	dust	Unit8_3	4	n.灰尘	0
-38	harmful	Unit8_3	4	adj.有害的	1
-39	soil	Unit8_4	4	n.土壤	0
-39	in place	Unit8_4	4	在正确位置	1
-39	coal	Unit8_4	4	n.煤	1
-39	oil	Unit8_4	4	n.石油	1
-39	gas	Unit8_4	4	n.气体	0
-39	form	Unit8_4	4	n.形成	1
-39	carelessly	Unit8_4	4	adv.粗心地	1
-39	reuse	Unit8_4	4	v.再使用	0
-39	simple	Unit8_4	4	adj.简单的	1
-39	step	Unit8_4	4	n.步骤	1
-39	power	Unit8_4	4	n.力量	0
+1	past	Unit1_1	9	n.过去	1
+1	present	Unit1_1	9	n.现在	1
+1	just	Unit1_1	9	adv.刚才	1
+2	used to	Unit1_2	9	曾经	1
+2	since	Unit1_2	9	prep.自...以来	1
+2	ever	Unit1_2	9	adv.曾经	1
+2	northern	Unit1_2	9	adj.北方的	1
+2	married	Unit1_2	9	adj.已婚的	1
+3	wife	Unit1_3	9	n.妻子	1
+3	block	Unit1_3	9	n.街区	1
+3	over	Unit1_3	9	prep.在...期间	1
+3	turn ... into	Unit1_3	9	把...变成...	1
+3	pollution	Unit1_3	9	n.污染	1
+4	factory	Unit1_4	9	n.工厂	1
+4	waste	Unit1_4	9	vt.废料	1
+4	realize	Unit1_4	9	vt.意识到;实现	1
+4	improve	Unit1_4	9	vt.改进	0
+4	situation	Unit1_4	9	n.情况	1
+5	in some ways	Unit1_5	9	在某种程度上	1
+5	impossible	Unit1_5	9	adj.不可能的	1
+5	before	Unit1_5	9	adv.以前	1
+5	lonely	Unit1_5	9	adj.孤独的	1
+5	from time to time	Unit1_5	9	不时	1
+6	anyway	Unit1_6	9	adv.尽管	1
+6	husband	Unit1_6	9	n.丈夫	1
+6	interview	Unit1_6	9	vi.采访	1
+6	all one's life	Unit1_6	9	一生	1
+6	yet	Unit1_6	9	adv.还	1
+7	recently	Unit1_7	9	adv.最近	1
+7	environment	Unit1_7	9	n.环境	1
+7	transport	Unit1_7	9	n.交通车辆	0
+7	condition	Unit1_7	9	n.条件	1
+7	return	Unit1_7	9	vt.返回	1
+8	last	Unit1_8	9	adv.最后	1
+8	abroad	Unit1_8	9	adv.到国外	1
+8	primary	Unit1_8	9	adj.初级的	1
+8	keep in touch with	Unit1_8	9	保持联系	1
+8	communicate	Unit1_8	9	vi.交流	1
+9	communication	Unit1_9	9	n.交流	1
+9	exactly	Unit1_9	9	adv.正是	1
+9	get used to	Unit1_9	9	习惯于	1
+9	narrow	Unit1_9	9	adj.狭窄的	0
+9	open space	Unit1_9	9	开阔的空地	1
+10	travelling	Unit2_1	8	n.旅行	1
+10	hey	Unit2_1	8	int.嘿	0
+10	miss	Unit2_1	8	v.想念	1
+10	fantastic	Unit2_1	8	adj.极好的	1
+10	indoor	Unit2_1	8	adj.室内的	0
+11	roller coaster	Unit2_2	8	过山车	0
+11	speed	Unit2_2	8	n.速度	1
+11	ride	Unit2_2	8	vt.乘坐	1
+11	cartoon	Unit2_2	8	n.卡通片	1
+11	character	Unit2_2	8	n.人物	0
+12	such	Unit2_3	8	adj.这样的	1
+12	such as	Unit2_3	8	例如	1
+12	parade	Unit2_3	8	n.游行	0
+12	magic	Unit2_3	8	n.魔法	1
+12	pie	Unit2_3	8	n.派	1
+13	feel	Unit2_4	8	vt.感觉到	1
+13	couple	Unit2_4	8	n.两人	1
+13	a couple of	Unit2_4	8	几个	1
+13	at the end of	Unit2_4	8	在...末尾	1
+13	castle	Unit2_4	8	n.城堡	0
+14	sand	Unit2_5	8	n.沙	1
+14	over	Unit2_5	8	prep.结束	1
+14	marry	Unit2_5	8	vt.结婚	1
+14	dead	Unit2_5	8	adj.死的	1
+14	beauty	Unit2_5	8	n.美丽	0
+15	seaside	Unit2_6	8	adj.海边的	0
+15	theme park	Unit2_6	8	主题公园	0
+15	sailing	Unit2_6	8	n.帆船运动	0
+15	except	Unit2_6	8	prep.除了...以外	1
+15	view	Unit2_6	8	n.景色	0
+16	mountain	Unit2_7	8	n.高山	1
+16	business	Unit2_7	8	n.商业	1
+16	on business	Unit2_7	8	出差	1
+16	direct	Unit2_7	8	adj.直达的	1
+16	flight	Unit2_7	8	n.航班	0
+17	point	Unit2_8	8	n.要点	1
+17	detail	Unit2_8	8	n.细节	0
+17	delicious	Unit2_8	8	adj.美味的	1
+17	seafood	Unit2_8	8	n.海鲜	0
+17	airport	Unit2_8	8	n.机场	1
+17	relative	Unit2_8	8	n.亲戚	1
+18	online	Unit3_1	11	n.在线的	0
+18	programme	Unit3_1	11	节目	1
+18	remote  control	Unit3_1	11	遥控器	0
+18	ah	Unit3_1	11	int.啊	0
+18	channel	Unit3_1	11	n.频道	0
+19	keyboard	Unit3_2	11	n.鍵盘	1
+19	unit	Unit3_2	11	n.单位	1
+19	main unit	Unit3_2	11	主机	1
+19	mouse	Unit3_2	11	n.鼠标	1
+19	screen	Unit3_2	11	n.显示屏	1
+20	word processing	Unit3_3	11	文字处理	0
+20	receive	Unit3_3	11	vt.收到	1
+20	guide	Unit3_3	11	n.导游	1
+20	icon	Unit3_3	11	n.图标	0
+20	click	Unit3_3	11	v.&n.点击	0
+21	Asia	Unit3_4	11	n.亚洲	1
+21	Africa	Unit3_4	11	n.非洲	1
+21	Europe	Unit3_4	11	n.欧洲	1
+21	America	Unit3_4	11	n.美洲	1
+21	world-famous	Unit3_4	11	adj.世界著名的	1
+22	trade	Unit3_5	11	n.贸易	1
+22	southern	Unit3_5	11	adj.南方的	1
+22	international	Unit3_5	11	adj.国际的	1
+22	gather	Unit3_5	11	vt.聚集	0
+22	huge	Unit3_5	11	adj.巨大的	1
+23	darkness	Unit3_6	11	n.黑暗	0
+23	island	Unit3_6	11	n.岛屿	1
+23	several	Unit3_6	11	adj.几个	1
+23	lawn	Unit3_6	11	n.草坪	0
+23	relax	Unit3_6	11	vi.放松	1
+24	hard	Unit3_7	11	adj.辛苦的	1
+24	musical	Unit3_7	11	n.音乐剧	0
+24	so much for sth	Unit3_7	11	关于...就讲这么多	1
+24	bottom	Unit3_7	11	n.底	1
+24	pick	Unit3_7	11	vt.挑选	1
+25	play	Unit3_8	11	n.戏剧	1
+25	website	Unit3_8	11	n.网站	1
+25	dream	Unit3_8	11	n.&v.做梦	1
+25	dream of	Unit3_8	11	梦想	1
+25	passport	Unit3_8	11	n.护照	1
+26	coast	Unit3_9	11	n.海岸	1
+26	sail	Unit3_9	11	n.帆	0
+26	Australian	Unit3_9	11	n&adj.澳大利亚的	1
+26	opposite	Unit3_9	11	n.对立的人	1
+26	mind	Unit3_9	11	v.介意	1
+27	print	Unit3_10	11	vt.打印	1
+27	pleasure	Unit3_10	11	n.高兴	1
+27	my pleasure	Unit3_10	11	不客气	1
+27	book	Unit3_10	11	v.预订	1
+27	England	Unit3_10	11	n.英格兰	1
+28	queen	Unit3_11	11	n.女王	1
+28	ruler	Unit3_11	11	n.统治者	1
+28	pound	Unit3_11	11	n.英镑	1
+28	be made up of	Unit3_11	11	由...组成	1
+28	European	Unit3_11	11	adj.欧洲的	1
+28	dollar	Unit3_11	11	n.美元	1
+29	read	Unit4_1	11	n.读物	1
+29	cooking	Unit4_1	11	n.烹饪	1
+29	novel	Unit4_1	11	n.小说	0
+29	Germany	Unit4_1	11	n.德国	1
+29	knowledge	Unit4_1	11	n.知识	1
+30	spare	Unit4_2	11	adj.空闲的	1
+30	French	Unit4_2	11	n&adj.法国的	1
+30	writer	Unit4_2	11	n.作者	1
+30	ugly	Unit4_2	11	adj.丑陋的	1
+30	touch	Unit4_2	11	vt.触动	1
+31	against	Unit4_3	11	prep.紧靠	1
+31	be tired out	Unit4_3	11	筋疲力尽	1
+31	tie	Unit4_3	11	vt.捆	1
+31	over	Unit4_3	11	vt.从一边到另一边	1
+31	stomach	Unit4_3	11	n.胃	1
+32	until	Unit4_4	11	prep.直到...为止	1
+32	finger	Unit4_4	11	n.手指	1
+32	tiny	Unit4_4	11	adj.极小的	1
+32	fall over	Unit4_4	11	摔倒	1
+32	continue	Unit4_4	11	vt.继续	1
+33	either	Unit4_5	11	conj.（否定句中）也	1
+33	manage	Unit4_5	11	vt.设法完成	1
+33	lift	Unit4_5	11	vt.举起	1
+33	army	Unit4_5	11	n.大批	1
+33	must	Unit4_5	11	aux.一定	1
+34	unable	Unit4_6	11	adj.不能的	1
+34	shoulder	Unit4_6	11	n.肩膀	1
+34	hand	Unit4_6	11	v.交	1
+34	hand in	Unit4_6	11	上交	1
+34	and so on	Unit4_6	11	...等等	1
+35	review	Unit4_7	11	vt.评论	1
+35	return	Unit4_7	11	vt.归还	1
+35	on time	Unit4_7	11	准时	1
+35	renew	Unit4_7	11	vt.更新	0
+35	series	Unit4_7	11	n.一系列	0
+36	publishing house	Unit4_8	11	出版社	0
+36	refuse	Unit4_8	11	vt.拒绝	1
+36	publish	Unit4_8	11	v.出版	0
+36	so far	Unit4_8	11	到目前为止	1
+36	success	Unit4_8	11	n.成功	1
+37	translate	Unit4_9	11	vt.翻译	1
+37	sales	Unit4_9	11	n.[复]销售量	1
+37	copy	Unit4_9	11	n.副本	1
+37	Canadian	Unit4_9	11	加拿大的	1
+37	at a time	Unit4_9	11	每次	1
+38	online	Unit4_10	11	adj.在线	0
+38	sail	Unit4_10	11	vt.航行	0
+38	hidden	Unit4_10	11	adj.隐藏的	0
+38	confidence	Unit4_10	11	n.信心	0
+38	experience	Unit4_10	11	n.经历	1
+39	advice	Unit4_11	11	n.建议	1
+39	librarian	Unit4_11	11	n.图书管理员	0
+39	habit	Unit4_11	11	n.习惯	1
+39	classical	Unit4_11	11	adj.古典的	0
+39	opposite	Unit4_11	11	prep.在...对面	1
+39	open up	Unit4_11	11	开启	1
+40	manners	Unit5_1	12	n.礼仪	0
+40	eh	Unit5_1	12	int.嗯	0
+40	cut in on	Unit5_1	12	打断	1
+40	politely	Unit5_1	12	adv.礼貌地	1
+40	litter	Unit5_1	12	n.垃圾	1
+41	tap	Unit5_2	12	n.水龙头	0
+41	run	Unit5_2	12	vi.流动	1
+41	pick	Unit5_2	12	vt.采	1
+41	obey	Unit5_2	12	vt.遵守	0
+41	queue	Unit5_2	12	n.排队等候	0
+42	turn	Unit5_3	12	n.轮流	1
+42	proper	Unit5_3	12	adj.正确的	1
+42	greet	Unit5_3	12	vt.问候	0
+42	shake sb's hand	Unit5_3	12	与某人握手	1
+42	kiss	Unit5_3	12	vt.亲吻	1
+43	close	Unit5_4	12	vt.亲密的	1
+43	conversation	Unit5_4	12	n.交谈	1
+43	avoid	Unit5_4	12	v.避免	1
+43	subject	Unit5_4	12	n.话题	1
+43	behave	Unit5_4	12	vt.表现	0
+44	public	Unit5_5	12	n.民众	1
+44	in public	Unit5_5	12	公开地	1
+44	push	Unit5_5	12	n.推	1
+44	push in	Unit5_5	12	(=<美>cut in)插队	1
+44	bump	Unit5_5	12	v.撞	0
+45	in one's way	Unit5_6	12	挡住某人的路	1
+45	touch	Unit5_6	12	vt.触摸	1
+45	excuse	Unit5_6	12	n.原谅	1
+45	excuse me	Unit5_6	12	劳驾	1
+45	till	Unit5_6	12	conj.到...时	1
+46	as well as	Unit5_7	12	也	1
+46	loudly	Unit5_7	12	adv.大声地	1
+46	as	Unit5_7	12	prep.正如	1
+46	saying	Unit5_7	12	n.谚语	0
+46	Roman	Unit5_7	12	n.罗马人	0
+47	by accident	Unit5_8	12	偶然	1
+47	discussion	Unit5_8	12	n.讨论	1
+47	express	Unit5_8	12	vt.表达	1
+47	public	Unit5_8	12	adj.公共的	1
+47	explain	Unit5_8	12	vt.解释	1
+48	keep sb from sth	Unit5_9	12	保护	1
+48	warn	Unit5_9	12	vt.警告	1
+48	parking	Unit5_9	12	n.停车	1
+48	litter	Unit5_9	12	v.乱丢杂物	1
+48	successful	Unit5_9	12	adj.成功的	1
+49	sometime	Unit5_10	12	adj.在某时	1
+49	soon after	Unit5_10	12	不久以后	1
+49	risk	Unit5_10	12	v.冒险做	1
+49	worm	Unit5_10	12	n.软体虫	0
+49	pain	Unit5_10	12	n.痛	1
+50	gain	Unit5_11	12	v.收获	0
+50	indeed	Unit5_11	12	adv.真正地	0
+50	practice	Unit5_11	12	n.练习	1
+50	candle	Unit5_11	12	n.蜡烛	1
+50	purpose	Unit5_11	12	n.目的	1
+51	content	Unit5_12	12	n.内容	0
+51	conclusion	Unit5_12	12	n.总结	0
+51	guest	Unit5_12	12	n.客人	1
+51	host	Unit5_12	12	v.&n.主人	0
+51	above all	Unit5_12	12	首要的是	1
+51	impolite	Unit5_12	12	adj.不礼貌的	1
+52	train	Unit6_1	9	n.训练	1
+52	the Olympic Games	Unit6_1	9	奥林匹克运动会	1
+52	support	Unit6_1	9	n.支持	1
+52	meaningful	Unit6_1	9	adj.有意义的	1
+52	blind	Unit6_1	9	adj.瞎的	1
+53	deaf	Unit6_2	9	adj.聋的	1
+53	disabled	Unit6_2	9	adj.残疾的	0
+53	elderly	Unit6_2	9	adj.年老的	1
+53	homeless	Unit6_2	9	adj.无家可归的	1
+53	volunteer	Unit6_2	9	v.志愿做	0
+54	expect	Unit6_3	9	v.期待	1
+54	adult	Unit6_3	9	adj.成年人	0
+54	intellectual	Unit6_3	9	adj.智力的	1
+54	disability	Unit6_3	9	n.缺陷	0
+54	chance	Unit6_3	9	n.机会	1
+55	event	Unit6_4	9	n.比赛项目	0
+55	similar	Unit6_4	9	adj.类似的	1
+55	give up	Unit6_4	9	放弃	1
+55	necessary	Unit6_4	9	adj.必须的	1
+55	training	Unit6_4	9	n.培训	1
+56	task	Unit6_5	9	n.任务	1
+56	athlete	Unit6_5	9	n.运动员	0
+56	coach	Unit6_5	9	n.教练	1
+56	gold	Unit6_5	9	n.黄金	1
+56	silver	Unit6_5	9	n.银	1
+57	confident	Unit6_6	9	adj.自信的	0
+57	background	Unit6_6	9	n.背景	1
+57	closely	Unit6_6	9	adv.密切地	1
+57	achieve	Unit6_6	9	vt.达到	1
+57	prize	Unit6_6	9	n.奖赏	1
+58	donate	Unit6_7	9	vt.捐献	0
+58	charity	Unit6_7	9	n.慈善	0
+58	organization	Unit6_7	9	n.组织	0
+58	one-to-one	Unit6_7	9	adv.一对一地	1
+58	blood	Unit6_7	9	n.血	1
+59	south-west	Unit6_8	9	n.西南方	1
+59	north-west	Unit6_8	9	n.西北方	1
+59	project	Unit6_8	9	n.项目	1
+59	introduction	Unit6_8	9	n.介绍	1
+60	disease	Unit6_9	9	n.疾病	0
+60	operation	Unit6_9	9	n.手术	0
+60	give a helping hand	Unit6_9	9	帮助	1
+60	survivor	Unit6_9	9	n.幸存者	0
+61	especially	Unit7_1	8	adv.尤其	1
+61	basic	Unit7_1	8	adj.基本的	1
+61	education	Unit7_1	8	n.教育	1
+61	equal	Unit7_1	8	adj.平等的	0
+61	right	Unit7_1	8	n.权利	1
+62	spread	Unit7_2	8	v.扩散	1
+62	interviewer	Unit7_2	8	n.采访者	1
+62	blindness	Unit7_2	8	n.失明	1
+62	mostly	Unit7_2	8	adv.主要地	0
+62	case	Unit7_2	8	n.案例	0
+63	cure	Unit7_3	8	vt.治愈	0
+63	medical	Unit7_3	8	adj.医学的	1
+63	treatment	Unit7_3	8	n.治疗	0
+63	patient	Unit7_3	8	n.病人	1
+63	afford	Unit7_3	8	vt.买得起	1
+64	go to hospital	Unit7_4	8	去看病	1
+64	on board	Unit7_4	8	在飞机上	1
+64	operate	Unit7_4	8	vi.做手术	0
+64	proud	Unit7_4	8	adj.自豪的	1
+64	reader	Unit7_4	8	n.读者	1
+65	medicine	Unit7_5	8	n.药	1
+65	develop	Unit7_5	8	vt.发展	1
+65	treat	Unit7_5	8	n&v.治疗	1
+65	carry on	Unit7_5	8	继续开展	1
+65	leaflet	Unit7_5	8	n.传单	0
+66	hand out	Unit7_6	8	分发	1
+66	hold	Unit7_6	8	vt.举行	1
+66	set	Unit7_6	8	v.建立	1
+66	set up	Unit7_6	8	设立	1
+66	including	Unit7_6	8	prep.包括	0
+67	war	Unit7_7	8	n.战争	1
+67	organize	Unit7_7	8	v.组织	0
+67	pale	Unit7_7	8	adj.苍白的	1
+67	matter	Unit7_7	8	n.事情	1
+67	check	Unit7_7	8	vt.检查	1
+68	secretary	Unit7_8	8	n.秘书	1
+68	make up one's mind	Unit7_8	8	决定	1
+68	India	Unit7_8	8	n.印度	1
+68	officer	Unit7_8	8	n.官员	1
+69	dig	Unit8_1	9	v.挖	1
+69	serious	Unit8_1	9	adj.严肃的	1
+69	breadfruit	Unit8_1	9	n.面包果	0
+69	reduce	Unit8_1	9	vt.减少	0
+69	turn off	Unit8_1	9	关上	1
+70	recycle	Unit8_2	9	v.回收利用	0
+70	wise	Unit8_2	9	adj.明智的	1
+70	plastic	Unit8_2	9	n.塑料	0
+70	separate	Unit8_2	9	v.分开	1
+70	recycling	Unit8_2	9	n.回收利用	0
+71	allow	Unit8_3	9	vt.允许	1
+71	cut down	Unit8_3	9	砍倒	1
+71	punish	Unit8_3	9	v.处罚	1
+71	fine	Unit8_3	9	n.罚款	1
+71	limit	Unit8_3	9	n.限制	0
+72	depend	Unit8_4	9	vi.依靠	1
+72	depend on	Unit8_4	9	依靠	1
+72	rich	Unit8_4	9	adj.富有的	1
+72	resource	Unit8_4	9	n.资源	0
+72	wisely	Unit8_4	9	adv.明智地	1
+73	run out	Unit8_5	9	用完	1
+73	produce	Unit8_5	9	vt.产生	1
+73	difference	Unit8_5	9	n.差异	1
+73	make a difference to	Unit8_5	9	有影响	1
+73	poster	Unit8_5	9	n.海报	0
+74	display	Unit8_6	9	n.&v.展示	0
+74	pollute	Unit8_6	9	v.污染	1
+74	harm	Unit8_6	9	n.伤害	0
+74	living	Unit8_6	9	adj.活着的	1
+74	survey	Unit8_6	9	n.调查	1
+75	empty	Unit8_7	9	adj.空的	1
+75	dust	Unit8_7	9	n.灰尘	0
+75	harmful	Unit8_7	9	adj.有害的	1
+75	soil	Unit8_7	9	n.土壤	0
+75	in place	Unit8_7	9	在正确位置	1
+76	coal	Unit8_8	9	n.煤	1
+76	oil	Unit8_8	9	n.石油	1
+76	gas	Unit8_8	9	n.气体	0
+76	form	Unit8_8	9	n.形成	1
+76	carelessly	Unit8_8	9	adv.粗心地	1
+77	reuse	Unit8_9	9	v.再使用	0
+77	simple	Unit8_9	9	adj.简单的	1
+77	step	Unit8_9	9	n.步骤	1
+77	power	Unit8_9	9	n.力量	0

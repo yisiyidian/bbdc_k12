@@ -1,283 +1,283 @@
-1	bookworm	Unit1_1	9	n.书虫	1
-1	poetry	Unit1_1	9	n.诗歌	1
-1	drama	Unit1_1	9	n.戏剧	0
-2	fiction	Unit1_2	9	n.小说	1
-2	antique	Unit1_2	9	adj.古董	1
-2	characteristic	Unit1_2	9	n.典型的	1
-2	novelist	Unit1_2	9	n.小说家	1
-2	chapter	Unit1_2	9	n.章	1
-2	opera	Unit1_2	9	n.歌剧	1
-2	soap opera	Unit1_2	9	肥皂剧	1
-2	author	Unit1_2	9	n.作者	1
-2	abuse	Unit1_2	9	v.虐待	1
-2	cemetery	Unit1_2	9	n.墓地	0
-3	desperate	Unit1_3	9	adj.绝望的	1
-3	criminal	Unit1_3	9	adj.罪犯	1
-3	tension	Unit1_3	9	n.紧张气氛	1
-3	twist	Unit1_3	9	n.转折	1
-3	plot	Unit1_3	9	n.故事情节	1
-3	generous	Unit1_3	9	adj.慷慨的	1
-3	vain	Unit1_3	9	adj.虚荣的	1
-3	rigid	Unit1_3	9	adj.死板的	1
-3	civil	Unit1_3	9	adj.有教养的	1
-3	bent	Unit1_3	9	adj.弯曲的	1
-4	bent on doing sth	Unit1_4	9	决心做某事	1
-4	theme	Unit1_4	9	n.主题	1
-4	violent	Unit1_4	9	adj.暴力的	1
-4	on the run	Unit1_4	9	躲避	1
-4	painter	Unit1_4	9	n.画家	1
-4	live up to	Unit1_4	9	达到	1
-4	workhouse	Unit1_4	9	n.劳动救济所	0
-4	millionaire	Unit1_4	9	n.百万富翁	1
-4	vice	Unit1_4	9	n.恶行	1
-4	reform	Unit1_4	9	n.改革	1
-5	violence	Unit1_5	9	n.暴力	1
-5	resist	Unit1_5	9	v.反抗	1
-5	reunite	Unit1_5	9	v.再联合	1
-5	home-made	Unit1_5	9	adj.自制的	1
-5	bind	Unit1_5	9	vt.捆	0
-5	spin	Unit1_5	9	v.快速旋转	1
-5	sneaker	Unit1_5	9	n.运动鞋	1
-5	pin	Unit1_5	9	n.钉住	1
-5	worn out	Unit1_5	9	精疲力尽的	1
-5	envelope	Unit1_5	9	n.信封	1
-6	brand new	Unit1_6	9	全新的	1
-6	spit	Unit1_6	9	v.吐唾沫	1
-6	chest	Unit1_6	9	n.胸部	1
-6	attic	Unit1_6	9	n.阁楼	0
-6	modern-day	Unit1_6	9	adj.现代的	1
-6	stepmother	Unit1_6	9	n.继母	1
-6	stepsister	Unit1_6	9	n.异父姊妹	1
-6	rag	Unit1_6	9	n.破布	1
-6	Ireland	Unit1_6	9	n.爱尔兰	1
-7	rescue	Unit1_7	9	n.&v.救援	1
-7	come to one's rescue	Unit1_7	9	救援某人	1
-7	wrap	Unit1_7	9	vt.包	0
-7	Scotland	Unit1_7	9	n.苏格兰	1
-7	supreme	Unit1_7	9	adj.最高的	1
-7	reputation	Unit1_7	9	n.名誉	1
-7	debt	Unit1_7	9	n.债务	1
-7	holy	Unit1_7	9	adj.神圣的	1
-7	widow	Unit1_7	9	n.遗孀	1
-8	monument	Unit1_8	9	n.纪念碑	1
-8	adore	Unit1_8	9	v.热爱	1
-8	romantic	Unit1_8	9	adj.浪漫的	0
-8	touch on	Unit1_8	9	谈及	1
-8	intend	Unit1_8	9	v.打算	1
-8	be intended to do sth	Unit1_8	9	目的是做某事	1
-8	paragraph	Unit1_8	9	n.段落	1
-8	rhyme	Unit1_8	9	n.押韵	1
-8	melodie	Unit1_8	9	n.<旧>乐曲	0
-9	tune	Unit1_9	9	n.曲调	1
-9	in tune	Unit1_9	9	音调准确	1
-9	thou	Unit1_9	9	pron.<旧>你	0
-9	thee	Unit1_9	9	pron.<旧>你	0
-9	farewell	Unit1_9	9	n.再见	0
-9	spring	Unit1_9	9	v.跳	1
-9	bonnie	Unit1_9	9	adj.<方言>漂亮的	0
-9	lass	Unit1_9	9	n.<方言>女孩	0
-9	melt	Unit1_9	9	v.融化	0
-10	universal	Unit2_1	7	adj.全世界的	1
-10	jazz	Unit2_1	7	n.爵士乐	1
-10	string	Unit2_1	7	n.弦	1
-10	cast	Unit2_1	7	v.选派角色	1
-10	butterfly	Unit2_1	7	n.蝴蝶	1
-10	awesome	Unit2_1	7	adj.极好的	1
-10	stubborn	Unit2_1	7	adj.固执的	1
-10	princess	Unit2_1	7	n.公主	0
-10	condemn	Unit2_1	7	vt.谴责	1
-10	be condemned to	Unit2_1	7	被处以刑罚	1
-10	dare	Unit2_1	7	vi.敢于	1
-11	ask for sb's hand in marriage	Unit2_2	7	求婚	1
-11	disturbing	Unit2_2	7	adj.令人不安的	1
-11	fall in love	Unit2_2	7	相爱	1
-11	at first sight	Unit2_2	7	初次见面	1
-11	unwilling	Unit2_2	7	adj.不情愿	1
-11	seize	Unit2_2	7	vt.抓住	1
-11	demand	Unit2_2	7	v.&n.要求	1
-11	grab	Unit2_2	7	vt.抓住	0
-11	evident	Unit2_2	7	adj.清楚的	1
-11	scold	Unit2_2	7	v.训斥	1
-11	merciful	Unit2_2	7	adj.仁慈的	1
-12	dawn	Unit2_3	7	n.黎明	1
-12	deadline	Unit2_3	7	n.最后期限	1
-12	unite	Unit2_3	7	v.联合	1
-12	grand	Unit2_3	7	adj.宏大的	1
-12	broken	Unit2_3	7	adj.破损的	1
-12	broken heart	Unit2_3	7	破碎的心	1
-12	opportunity	Unit2_3	7	n.机遇	0
-12	unemployment	Unit2_3	7	n.失业	1
-12	personnel	Unit2_3	7	n.人事部门	1
-12	department	Unit2_3	7	n.部	1
-12	personnel department	Unit2_3	7	人事部门	1
-13	chorus	Unit2_4	7	n.合唱团	1
-13	sore	Unit2_4	7	adj.酸痛的	0
-13	throat	Unit2_4	7	n.咽喉	1
-13	composer	Unit2_4	7	n.作曲者	0
-13	motherland	Unit2_4	7	n.祖国	1
-13	Austria	Unit2_4	7	n.奥地利	1
-13	tutor	Unit2_4	7	n.指导教师	1
-13	symphony	Unit2_4	7	n.交响乐	1
-13	bachelor	Unit2_4	7	n.单身汉	1
-13	flute	Unit2_4	7	n.长笛	0
-13	kindergarten	Unit2_4	7	n.幼儿园	1
-14	folk	Unit2_5	7	adj.民间的	1
-14	folk song	Unit2_5	7	民歌	1
-14	ballet	Unit2_5	7	n.芭蕾舞剧	1
-14	swan	Unit2_5	7	n.天鹅	0
-14	album	Unit2_5	7	n.音乐专辑	1
-14	collection	Unit2_5	7	n.作品集	1
-14	chart	Unit2_5	7	n.图表	1
-14	the charts	Unit2_5	7	唱片排行搒	1
-14	blues	Unit2_5	7	n.蓝调	0
-14	root	Unit2_5	7	n.根	1
-15	slavery	Unit2_6	7	n.奴隶身份	1
-15	tendency	Unit2_6	7	n.倾向	1
-15	format	Unit2_6	7	n.形式	1
-15	spring up	Unit2_6	7	突然兴起	1
-15	trumpet	Unit2_6	7	n.小号	0
-15	liberty	Unit2_6	7	n.自由	1
-15	rock and roll	Unit2_6	7	摇滚乐	1
-15	gradual	Unit2_6	7	adj.逐渐的	1
-15	decline	Unit2_6	7	v.衰落	1
-15	trend	Unit2_6	7	n.趋势	1
-16	rhythm	Unit2_7	7	n.节奏	0
-16	rhythm and blues	Unit2_7	7	节奏布鲁斯	0
-16	rattle	Unit2_7	7	vi.发出咔嗒声	0
-16	comet	Unit2_7	7	n.彗星	0
-16	band	Unit2_7	7	n.乐队	1
-16	seek	Unit2_7	7	n.&v.寻找	1
-16	prejudice	Unit2_7	7	n.偏见	1
-16	discrimination	Unit2_7	7	n.歧视	1
-16	scream	Unit2_7	7	v.尖叫	1
-16	break up	Unit2_7	7	解散	1
-17	mural	Unit3_1	6	adj.壁画	0
-17	still life	Unit3_1	6	静物画	1
-17	abstract	Unit3_1	6	n.抽象的	1
-17	Spain	Unit3_1	6	n.西班牙	1
-17	birthplace	Unit3_1	6	n.出生地	1
-17	architecture	Unit3_1	6	n.建筑	1
-17	output	Unit3_1	6	n.产量	1
-17	medium	Unit3_1	6	n.媒介	1
-17	Cubism	Unit3_1	6	n.立体主义	0
-17	acute	Unit3_1	6	adj.锐角的	1
-17	acute angle	Unit3_1	6	锐角	1
-18	cube	Unit3_2	6	n.立方体	1
-18	rectangle	Unit3_2	6	n.长方形	1
-18	consensus	Unit3_2	6	n.共识	1
-18	calculate	Unit3_2	6	vt.计算	1
-18	helicopter	Unit3_2	6	n.直升机	1
-18	tank	Unit3_2	6	n.坦克	1
-18	Impressionism	Unit3_2	6	n.印象派	0
-18	shadow	Unit3_2	6	n.阴影	1
-18	water lily	Unit3_2	6	睡莲	0
-18	pond	Unit3_2	6	n.池塘	1
-18	Impressionist Movement	Unit3_2	6	印象主义运动	0
-19	oil painting	Unit3_3	6	油画	1
-19	starry	Unit3_3	6	adj.布满星星的	1
-19	commit	Unit3_3	6	v.犯罪	1
-19	being	Unit3_3	6	n.生物	1
-19	reward	Unit3_3	6	vt.回报	1
-19	agent	Unit3_3	6	n.代理人	1
-19	franc	Unit3_3	6	n.法郎	1
-19	upwards of	Unit3_3	6	在...以上	1
-19	be off to	Unit3_3	6	动身去...	1
-19	gallery	Unit3_3	6	n.画廊	1
-19	changeable	Unit3_3	6	adj.多变的	1
-20	ankle	Unit3_4	6	n.踝	1
-20	suite	Unit3_4	6	n.套房	1
-20	accommodation	Unit3_4	6	n.住处	1
-20	dormitory	Unit3_4	6	n.集体宿舍	1
-20	canal	Unit3_4	6	n.运河	1
-20	passer-by	Unit3_4	6	n.路人	1
-20	souvenir	Unit3_4	6	n.纪念物	1
-20	admission	Unit3_4	6	n.进入权	1
-20	scenery	Unit3_4	6	n.风景	1
-20	scholarship	Unit3_4	6	n.奖学金	1
-20	cloth	Unit3_4	6	n.布料	1
-21	slice	Unit3_5	6	n.薄片	1
-21	apron	Unit3_5	6	n.围裙	1
-21	chef	Unit3_5	6	n.厨师	1
-21	seaweed	Unit3_5	6	n.海藻	1
-21	cut up	Unit3_5	6	切碎	1
-21	onion	Unit3_5	6	n.洋葱	1
-21	pineapple	Unit3_5	6	n.菠萝	1
-21	eggplant	Unit3_5	6	n.茄子	1
-21	seashell	Unit3_5	6	n.海贝壳	1
-21	lay out	Unit3_5	6	布置	1
-22	pillow	Unit3_6	6	n.枕头	1
-22	disgusting	Unit3_6	6	adj.令人厌恶的	1
-22	aluminium	Unit3_6	6	n.铝	1
-22	spray	Unit3_6	6	vt.喷	1
-22	paintbrush	Unit3_6	6	n.画笔	1
-22	tin	Unit3_6	6	n.罐子	1
-22	dip	Unit3_6	6	n.&v.浸	1
-22	wrinkle	Unit3_6	6	n.起皱纹	1
-22	cut something out of sth	Unit3_6	6	剪出	1
-22	have a go at	Unit3_6	6	试一试	1
-23	dragon	Unit4_1	7	n.龙	0
-23	representative	Unit4_1	7	n.&adj.代表	1
-23	spokesman	Unit4_1	7	n.发言人	1
-23	criterion	Unit4_1	7	n.标准	1
-23	finance	Unit4_1	7	n.金融	1
-23	in defence of	Unit4_1	7	防卫	1
-23	restriction	Unit4_1	7	n.限制	1
-23	deliberately	Unit4_1	7	adv.故意的	1
-23	boycott	Unit4_1	7	vt.&n.抵制	1
-24	hatch	Unit4_2	7	v.策划	1
-24	sponsor	Unit4_2	7	n.赞助者	1
-24	modest	Unit4_2	7	adj.谦虚的	1
-24	expose	Unit4_2	7	vt.暴露	1
-24	contradict	Unit4_2	7	vt.反驳	1
-24	resemble	Unit4_2	7	v.看起来像	1
-24	edge	Unit4_2	7	n.边缘	1
-24	broad	Unit4_2	7	adj.宽阔的	1
-24	overlook	Unit4_2	7	v.忽略	1
-25	entry	Unit4_3	7	n.进入	1
-25	preference	Unit4_3	7	n.偏爱	1
-25	top-ranking	Unit4_3	7	adj.最高等级的	1
-25	swift	Unit4_3	7	adj.迅速的	1
-25	laundry	Unit4_3	7	n.洗衣服	1
-25	maid	Unit4_3	7	n.女仆	1
-25	disappointment	Unit4_3	7	n.失望	1
-25	formal	Unit4_3	7	adj.正式的	0
-25	tiresome	Unit4_3	7	adj.讨厌的	1
-26	script	Unit4_4	7	n.脚本	0
-26	shoot	Unit4_4	7	vt.拍摄	1
-26	sincere	Unit4_4	7	adj.真诚的	1
-26	congratulation	Unit4_4	7	n.祝贺	1
-26	screenwriter	Unit4_4	7	n.编剧	1
-26	full-length	Unit4_4	7	adj.足本的	1
-26	robbery	Unit4_4	7	n.抢劫	1
-26	anecdote	Unit4_4	7	n.逸事	1
-26	biography	Unit4_4	7	n.传记	1
-27	accumulate	Unit4_5	7	vt.积累	1
-27	popcorn	Unit4_5	7	n.爆米花	1
-27	salty	Unit4_5	7	adj.咸的	1
-27	tense	Unit4_5	7	adj.令人紧张的	1
-27	thriller	Unit4_5	7	n.惊险电影	1
-27	paramount	Unit4_5	7	adj.至为重要的	0
-27	touchstone	Unit4_5	7	n.试金石	0
-27	conquer	Unit4_5	7	vt.征服	0
-27	concubine	Unit4_5	7	n.妾	0
-27	lantern	Unit4_5	7	n.灯笼	1
-28	philosopher	Unit4_6	7	n.哲学家	1
-28	fantasy	Unit4_6	7	n.幻想	1
-28	scar	Unit4_6	7	n.伤疤	1
-28	forehead	Unit4_6	7	n.前额	1
-28	wizard	Unit4_6	7	n.男巫	0
-28	witch	Unit4_6	7	n.女巫	0
-28	evil	Unit4_6	7	adj.邪恶的	0
-28	institution	Unit4_6	7	n.机构	1
-28	parallel	Unit4_6	7	adj.平行的	1
-28	curriculum	Unit4_6	7	n.全部课程	1
-29	contradictory	Unit4_7	7	adj.相互矛盾的	1
-29	partner	Unit4_7	7	n.伙伴	1
-29	fierce	Unit4_7	7	adj.激烈的	1
-29	zoom	Unit4_7	7	n.快速移动	1
-29	broom	Unit4_7	7	n.扫把	1
-29	dizzy	Unit4_7	7	adj.头晕目眩的	1
-29	attraction	Unit4_7	7	n.吸引	1
-29	show off	Unit4_7	7	炫耀	1
-29	disappoint	Unit4_7	7	vt.使失望	1
-29	give thought to	Unit4_7	7	认真考虑	1
+1	bookworm	Unit1_1	16	n.书虫	1
+1	poetry	Unit1_1	16	n.诗歌	1
+1	drama	Unit1_1	16	n.戏剧	0
+2	fiction	Unit1_2	16	n.小说	1
+2	antique	Unit1_2	16	adj.古董	1
+2	characteristic	Unit1_2	16	n.典型的	1
+2	novelist	Unit1_2	16	n.小说家	1
+2	chapter	Unit1_2	16	n.章	1
+3	opera	Unit1_3	16	n.歌剧	1
+3	soap opera	Unit1_3	16	肥皂剧	1
+3	author	Unit1_3	16	n.作者	1
+3	abuse	Unit1_3	16	v.虐待	1
+3	cemetery	Unit1_3	16	n.墓地	0
+4	desperate	Unit1_4	16	adj.绝望的	1
+4	criminal	Unit1_4	16	adj.罪犯	1
+4	tension	Unit1_4	16	n.紧张气氛	1
+4	twist	Unit1_4	16	n.转折	1
+4	plot	Unit1_4	16	n.故事情节	1
+5	generous	Unit1_5	16	adj.慷慨的	1
+5	vain	Unit1_5	16	adj.虚荣的	1
+5	rigid	Unit1_5	16	adj.死板的	1
+5	civil	Unit1_5	16	adj.有教养的	1
+5	bent	Unit1_5	16	adj.弯曲的	1
+6	bent on doing sth	Unit1_6	16	决心做某事	1
+6	theme	Unit1_6	16	n.主题	1
+6	violent	Unit1_6	16	adj.暴力的	1
+6	on the run	Unit1_6	16	躲避	1
+6	painter	Unit1_6	16	n.画家	1
+7	live up to	Unit1_7	16	达到	1
+7	workhouse	Unit1_7	16	n.劳动救济所	0
+7	millionaire	Unit1_7	16	n.百万富翁	1
+7	vice	Unit1_7	16	n.恶行	1
+7	reform	Unit1_7	16	n.改革	1
+8	violence	Unit1_8	16	n.暴力	1
+8	resist	Unit1_8	16	v.反抗	1
+8	reunite	Unit1_8	16	v.再联合	1
+8	home-made	Unit1_8	16	adj.自制的	1
+8	bind	Unit1_8	16	vt.捆	0
+9	spin	Unit1_9	16	v.快速旋转	1
+9	sneaker	Unit1_9	16	n.运动鞋	1
+9	pin	Unit1_9	16	n.钉住	1
+9	worn out	Unit1_9	16	精疲力尽的	1
+9	envelope	Unit1_9	16	n.信封	1
+10	brand new	Unit1_10	16	全新的	1
+10	spit	Unit1_10	16	v.吐唾沫	1
+10	chest	Unit1_10	16	n.胸部	1
+10	attic	Unit1_10	16	n.阁楼	0
+10	modern-day	Unit1_10	16	adj.现代的	1
+11	stepmother	Unit1_11	16	n.继母	1
+11	stepsister	Unit1_11	16	n.异父姊妹	1
+11	rag	Unit1_11	16	n.破布	1
+11	Ireland	Unit1_11	16	n.爱尔兰	1
+11	rescue	Unit1_11	16	n.&v.救援	1
+12	come to one's rescue	Unit1_12	16	救援某人	1
+12	wrap	Unit1_12	16	vt.包	0
+12	Scotland	Unit1_12	16	n.苏格兰	1
+12	supreme	Unit1_12	16	adj.最高的	1
+12	reputation	Unit1_12	16	n.名誉	1
+13	debt	Unit1_13	16	n.债务	1
+13	holy	Unit1_13	16	adj.神圣的	1
+13	widow	Unit1_13	16	n.遗孀	1
+13	monument	Unit1_13	16	n.纪念碑	1
+13	adore	Unit1_13	16	v.热爱	1
+14	romantic	Unit1_14	16	adj.浪漫的	0
+14	touch on	Unit1_14	16	谈及	1
+14	intend	Unit1_14	16	v.打算	1
+14	be intended to do sth	Unit1_14	16	目的是做某事	1
+14	paragraph	Unit1_14	16	n.段落	1
+15	rhyme	Unit1_15	16	n.押韵	1
+15	melodie	Unit1_15	16	n.<旧>乐曲	0
+15	tune	Unit1_15	16	n.曲调	1
+15	in tune	Unit1_15	16	音调准确	1
+15	thou	Unit1_15	16	pron.<旧>你	0
+16	thee	Unit1_16	16	pron.<旧>你	0
+16	farewell	Unit1_16	16	n.再见	0
+16	spring	Unit1_16	16	v.跳	1
+16	bonnie	Unit1_16	16	adj.<方言>漂亮的	0
+16	lass	Unit1_16	16	n.<方言>女孩	0
+16	melt	Unit1_16	16	v.融化	0
+17	universal	Unit2_1	15	adj.全世界的	1
+17	jazz	Unit2_1	15	n.爵士乐	1
+17	string	Unit2_1	15	n.弦	1
+17	cast	Unit2_1	15	v.选派角色	1
+17	butterfly	Unit2_1	15	n.蝴蝶	1
+18	awesome	Unit2_2	15	adj.极好的	1
+18	stubborn	Unit2_2	15	adj.固执的	1
+18	princess	Unit2_2	15	n.公主	0
+18	condemn	Unit2_2	15	vt.谴责	1
+18	be condemned to	Unit2_2	15	被处以刑罚	1
+19	dare	Unit2_3	15	vi.敢于	1
+19	ask for sb's hand in marriage	Unit2_3	15	求婚	1
+19	disturbing	Unit2_3	15	adj.令人不安的	1
+19	fall in love	Unit2_3	15	相爱	1
+19	at first sight	Unit2_3	15	初次见面	1
+20	unwilling	Unit2_4	15	adj.不情愿	1
+20	seize	Unit2_4	15	vt.抓住	1
+20	demand	Unit2_4	15	v.&n.要求	1
+20	grab	Unit2_4	15	vt.抓住	0
+20	evident	Unit2_4	15	adj.清楚的	1
+21	scold	Unit2_5	15	v.训斥	1
+21	merciful	Unit2_5	15	adj.仁慈的	1
+21	dawn	Unit2_5	15	n.黎明	1
+21	deadline	Unit2_5	15	n.最后期限	1
+21	unite	Unit2_5	15	v.联合	1
+22	grand	Unit2_6	15	adj.宏大的	1
+22	broken	Unit2_6	15	adj.破损的	1
+22	broken heart	Unit2_6	15	破碎的心	1
+22	opportunity	Unit2_6	15	n.机遇	0
+22	unemployment	Unit2_6	15	n.失业	1
+23	personnel	Unit2_7	15	n.人事部门	1
+23	department	Unit2_7	15	n.部	1
+23	personnel department	Unit2_7	15	人事部门	1
+23	chorus	Unit2_7	15	n.合唱团	1
+23	sore	Unit2_7	15	adj.酸痛的	0
+24	throat	Unit2_8	15	n.咽喉	1
+24	composer	Unit2_8	15	n.作曲者	0
+24	motherland	Unit2_8	15	n.祖国	1
+24	Austria	Unit2_8	15	n.奥地利	1
+24	tutor	Unit2_8	15	n.指导教师	1
+25	symphony	Unit2_9	15	n.交响乐	1
+25	bachelor	Unit2_9	15	n.单身汉	1
+25	flute	Unit2_9	15	n.长笛	0
+25	kindergarten	Unit2_9	15	n.幼儿园	1
+25	folk	Unit2_9	15	adj.民间的	1
+26	folk song	Unit2_10	15	民歌	1
+26	ballet	Unit2_10	15	n.芭蕾舞剧	1
+26	swan	Unit2_10	15	n.天鹅	0
+26	album	Unit2_10	15	n.音乐专辑	1
+26	collection	Unit2_10	15	n.作品集	1
+27	chart	Unit2_11	15	n.图表	1
+27	the charts	Unit2_11	15	唱片排行搒	1
+27	blues	Unit2_11	15	n.蓝调	0
+27	root	Unit2_11	15	n.根	1
+27	slavery	Unit2_11	15	n.奴隶身份	1
+28	tendency	Unit2_12	15	n.倾向	1
+28	format	Unit2_12	15	n.形式	1
+28	spring up	Unit2_12	15	突然兴起	1
+28	trumpet	Unit2_12	15	n.小号	0
+28	liberty	Unit2_12	15	n.自由	1
+29	rock and roll	Unit2_13	15	摇滚乐	1
+29	gradual	Unit2_13	15	adj.逐渐的	1
+29	decline	Unit2_13	15	v.衰落	1
+29	trend	Unit2_13	15	n.趋势	1
+29	rhythm	Unit2_13	15	n.节奏	0
+30	rhythm and blues	Unit2_14	15	节奏布鲁斯	0
+30	rattle	Unit2_14	15	vi.发出咔嗒声	0
+30	comet	Unit2_14	15	n.彗星	0
+30	band	Unit2_14	15	n.乐队	1
+30	seek	Unit2_14	15	n.&v.寻找	1
+31	prejudice	Unit2_15	15	n.偏见	1
+31	discrimination	Unit2_15	15	n.歧视	1
+31	scream	Unit2_15	15	v.尖叫	1
+31	break up	Unit2_15	15	解散	1
+32	mural	Unit3_1	13	adj.壁画	0
+32	still life	Unit3_1	13	静物画	1
+32	abstract	Unit3_1	13	n.抽象的	1
+32	Spain	Unit3_1	13	n.西班牙	1
+32	birthplace	Unit3_1	13	n.出生地	1
+33	architecture	Unit3_2	13	n.建筑	1
+33	output	Unit3_2	13	n.产量	1
+33	medium	Unit3_2	13	n.媒介	1
+33	Cubism	Unit3_2	13	n.立体主义	0
+33	acute	Unit3_2	13	adj.锐角的	1
+34	acute angle	Unit3_3	13	锐角	1
+34	cube	Unit3_3	13	n.立方体	1
+34	rectangle	Unit3_3	13	n.长方形	1
+34	consensus	Unit3_3	13	n.共识	1
+34	calculate	Unit3_3	13	vt.计算	1
+35	helicopter	Unit3_4	13	n.直升机	1
+35	tank	Unit3_4	13	n.坦克	1
+35	Impressionism	Unit3_4	13	n.印象派	0
+35	shadow	Unit3_4	13	n.阴影	1
+35	water lily	Unit3_4	13	睡莲	0
+36	pond	Unit3_5	13	n.池塘	1
+36	Impressionist Movement	Unit3_5	13	印象主义运动	0
+36	oil painting	Unit3_5	13	油画	1
+36	starry	Unit3_5	13	adj.布满星星的	1
+36	commit	Unit3_5	13	v.犯罪	1
+37	being	Unit3_6	13	n.生物	1
+37	reward	Unit3_6	13	vt.回报	1
+37	agent	Unit3_6	13	n.代理人	1
+37	franc	Unit3_6	13	n.法郎	1
+37	upwards of	Unit3_6	13	在...以上	1
+38	be off to	Unit3_7	13	动身去...	1
+38	gallery	Unit3_7	13	n.画廊	1
+38	changeable	Unit3_7	13	adj.多变的	1
+38	ankle	Unit3_7	13	n.踝	1
+38	suite	Unit3_7	13	n.套房	1
+39	accommodation	Unit3_8	13	n.住处	1
+39	dormitory	Unit3_8	13	n.集体宿舍	1
+39	canal	Unit3_8	13	n.运河	1
+39	passer-by	Unit3_8	13	n.路人	1
+39	souvenir	Unit3_8	13	n.纪念物	1
+40	admission	Unit3_9	13	n.进入权	1
+40	scenery	Unit3_9	13	n.风景	1
+40	scholarship	Unit3_9	13	n.奖学金	1
+40	cloth	Unit3_9	13	n.布料	1
+40	slice	Unit3_9	13	n.薄片	1
+41	apron	Unit3_10	13	n.围裙	1
+41	chef	Unit3_10	13	n.厨师	1
+41	seaweed	Unit3_10	13	n.海藻	1
+41	cut up	Unit3_10	13	切碎	1
+41	onion	Unit3_10	13	n.洋葱	1
+42	pineapple	Unit3_11	13	n.菠萝	1
+42	eggplant	Unit3_11	13	n.茄子	1
+42	seashell	Unit3_11	13	n.海贝壳	1
+42	lay out	Unit3_11	13	布置	1
+42	pillow	Unit3_11	13	n.枕头	1
+43	disgusting	Unit3_12	13	adj.令人厌恶的	1
+43	aluminium	Unit3_12	13	n.铝	1
+43	spray	Unit3_12	13	vt.喷	1
+43	paintbrush	Unit3_12	13	n.画笔	1
+43	tin	Unit3_12	13	n.罐子	1
+44	dip	Unit3_13	13	n.&v.浸	1
+44	wrinkle	Unit3_13	13	n.起皱纹	1
+44	cut something out of sth	Unit3_13	13	剪出	1
+44	have a go at	Unit3_13	13	试一试	1
+45	dragon	Unit4_1	13	n.龙	0
+45	representative	Unit4_1	13	n.&adj.代表	1
+45	spokesman	Unit4_1	13	n.发言人	1
+45	criterion	Unit4_1	13	n.标准	1
+45	finance	Unit4_1	13	n.金融	1
+46	in defence of	Unit4_2	13	防卫	1
+46	restriction	Unit4_2	13	n.限制	1
+46	deliberately	Unit4_2	13	adv.故意的	1
+46	boycott	Unit4_2	13	vt.&n.抵制	1
+46	hatch	Unit4_2	13	v.策划	1
+47	sponsor	Unit4_3	13	n.赞助者	1
+47	modest	Unit4_3	13	adj.谦虚的	1
+47	expose	Unit4_3	13	vt.暴露	1
+47	contradict	Unit4_3	13	vt.反驳	1
+47	resemble	Unit4_3	13	v.看起来像	1
+48	edge	Unit4_4	13	n.边缘	1
+48	broad	Unit4_4	13	adj.宽阔的	1
+48	overlook	Unit4_4	13	v.忽略	1
+48	entry	Unit4_4	13	n.进入	1
+48	preference	Unit4_4	13	n.偏爱	1
+49	top-ranking	Unit4_5	13	adj.最高等级的	1
+49	swift	Unit4_5	13	adj.迅速的	1
+49	laundry	Unit4_5	13	n.洗衣服	1
+49	maid	Unit4_5	13	n.女仆	1
+49	disappointment	Unit4_5	13	n.失望	1
+50	formal	Unit4_6	13	adj.正式的	0
+50	tiresome	Unit4_6	13	adj.讨厌的	1
+50	script	Unit4_6	13	n.脚本	0
+50	shoot	Unit4_6	13	vt.拍摄	1
+50	sincere	Unit4_6	13	adj.真诚的	1
+51	congratulation	Unit4_7	13	n.祝贺	1
+51	screenwriter	Unit4_7	13	n.编剧	1
+51	full-length	Unit4_7	13	adj.足本的	1
+51	robbery	Unit4_7	13	n.抢劫	1
+51	anecdote	Unit4_7	13	n.逸事	1
+52	biography	Unit4_8	13	n.传记	1
+52	accumulate	Unit4_8	13	vt.积累	1
+52	popcorn	Unit4_8	13	n.爆米花	1
+52	salty	Unit4_8	13	adj.咸的	1
+52	tense	Unit4_8	13	adj.令人紧张的	1
+53	thriller	Unit4_9	13	n.惊险电影	1
+53	paramount	Unit4_9	13	adj.至为重要的	0
+53	touchstone	Unit4_9	13	n.试金石	0
+53	conquer	Unit4_9	13	vt.征服	0
+53	concubine	Unit4_9	13	n.妾	0
+54	lantern	Unit4_10	13	n.灯笼	1
+54	philosopher	Unit4_10	13	n.哲学家	1
+54	fantasy	Unit4_10	13	n.幻想	1
+54	scar	Unit4_10	13	n.伤疤	1
+54	forehead	Unit4_10	13	n.前额	1
+55	wizard	Unit4_11	13	n.男巫	0
+55	witch	Unit4_11	13	n.女巫	0
+55	evil	Unit4_11	13	adj.邪恶的	0
+55	institution	Unit4_11	13	n.机构	1
+55	parallel	Unit4_11	13	adj.平行的	1
+56	curriculum	Unit4_12	13	n.全部课程	1
+56	contradictory	Unit4_12	13	adj.相互矛盾的	1
+56	partner	Unit4_12	13	n.伙伴	1
+56	fierce	Unit4_12	13	adj.激烈的	1
+56	zoom	Unit4_12	13	n.快速移动	1
+57	broom	Unit4_13	13	n.扫把	1
+57	dizzy	Unit4_13	13	adj.头晕目眩的	1
+57	attraction	Unit4_13	13	n.吸引	1
+57	show off	Unit4_13	13	炫耀	1
+57	disappoint	Unit4_13	13	vt.使失望	1
+57	give thought to	Unit4_13	13	认真考虑	1

@@ -1,226 +1,226 @@
-1	a glass of	Unit 1_1	2	一杯	1
-1	cherry	Unit 1_1	2	n.樱桃	1
-1	crunchy	Unit 1_1	2	adj.爽脆的	0
-2	grape	Unit 1_2	2	n.葡萄	1
-2	juice	Unit 1_2	2	n.果汁	1
-2	not ... at all	Unit 1_2	2	一点也不	0
-2	plum	Unit 1_2	2	n.梅子	1
-2	strawberry	Unit 1_2	2	n.草莓	1
-2	vine	Unit 1_2	2	n.葡萄藤	0
-2	want	Unit 1_2	2	vi.想要	0
-2	watermelon	Unit 1_2	2	n.西瓜	1
-2	yum	Unit 1_2	2	int.(表示味道非常好）	0
-3	all	Unit 2_1	2	adj.所有	0
-3	another	Unit 2_1	2	pron.&prep.另一个	0
-3	blind	Unit 2_1	2	adj.盲的	0
-3	blunt	Unit 2_1	2	adj.钝的	1
-3	floor	Unit 2_1	2	n.地板	0
-3	hard	Unit 2_1	2	adj.硬的	1
-3	key	Unit 2_1	2	n.钥匙	0
-3	knife	Unit 2_1	2	n.刀	1
-3	lost-property office	Unit 2_1	2	失物招领处	0
-3	pencil	Unit 2_1	2	n.铅笔	1
-3	pencil case	Unit 2_1	2	铅笔盒	1
-4	purse	Unit 2_2	2	n.钱包	0
-4	rough	Unit 2_2	2	adj.粗糙的	1
-4	sand	Unit 2_2	2	n.沙	0
-4	sharp	Unit 2_2	2	adj.锋利的	1
-4	smooth	Unit 2_2	2	adj.光滑的	1
-4	soft	Unit 2_2	2	adj.柔软的	1
-4	something	Unit 2_2	2	pron.某物	0
-4	take off	Unit 2_2	2	脱下	0
-4	thick	Unit 2_2	2	adj.厚的	1
-4	thin	Unit 2_2	2	adj.薄的	1
-4	whose	Unit 2_2	2	pron.谁的	0
-5	again	Unit 3_1	2	adv.又；再	0
-5	also	Unit 3_1	2	adv.也	0
-5	at noon	Unit 3_1	2	在中午	1
-5	away	Unit 3_1	2	adv.离开	0
-5	back	Unit 3_1	2	adv.向后	0
-5	bench	Unit 3_1	2	n.长椅	1
-5	bite	Unit 3_1	2	n.咬	0
-5	deer	Unit 3_1	2	n.鹿	0
-5	follow	Unit 3_1	2	vt.跟随	0
-5	get down	Unit 3_1	2	落下	1
-5	grow	Unit 3_1	2	vt.变得；成长	0
-5	high	Unit 3_1	2	adj.高的	1
-6	hill	Unit 3_2	2	n.小山	1
-6	lawn	Unit 3_2	2	n.草坪	1
-6	like	Unit 3_2	2	vt.像	0
-6	path	Unit 3_2	2	n.小路	1
-6	rise	Unit 3_2	2	v.升起	1
-6	shadow	Unit 3_2	2	n.影子	1
-6	stay	Unit 3_2	2	n.&v.停留	0
-6	the sun	Unit 3_2	2	太阳	1
-6	tea	Unit 3_2	2	n.茶	0
-6	tear	Unit 3_2	2	n.眼泪	0
-6	wait	Unit 3_2	2	n.&v.等待	0
-7	ask	Unit 4_1	2	vt.问	0
-7	before	Unit 4_1	2	prep.在...之前	0
-7	club	Unit 4_1	2	n.俱乐部	1
-7	enjoy	Unit 4_1	2	vt.享受...的乐趣	0
-7	exercise	Unit 4_1	2	n.&v.运动	0
-7	fun	Unit 4_1	2	adj.有趣的	0
-7	healthy	Unit 4_1	2	adj.健康的	0
-7	join	Unit 4_1	2	v.参加	1
-7	make	Unit 4_1	2	vt.制造	0
-7	notice	Unit 4_1	2	n.通知	0
-7	play badminton	Unit 4_1	2	打羽毛球	1
-7	play basketball	Unit 4_1	2	打篮球	1
-8	play football	Unit 4_2	2	踢足球	1
-8	play table tennis	Unit 4_2	2	打乒乓球	1
-8	play volleyball	Unit 4_2	2	打排球	1
-8	poster	Unit 4_2	2	n.海报	1
-8	remember	Unit 4_2	2	vt.记得	0
-8	sport	Unit 4_2	2	n.体育运动	1
-8	sure	Unit 4_2	2	adv.一定	0
-8	swimming goggles	Unit 4_2	2	泳镜	0
-8	swimming pool	Unit 4_2	2	游泳池	0
-8	swimsuit	Unit 4_2	2	n.泳衣	0
-8	too	Unit 4_2	2	adv.也	0
-8	warm-up	Unit 4_2	2	n.准备活动	0
-9	angry	Unit 5_1	2	adj.生气的	0
-9	basket	Unit 5_1	2	n.篮子	0
-9	bone	Unit 5_1	2	n.骨头	1
-9	bowl	Unit 5_1	2	n.碗	0
-9	cat food	Unit 5_1	2	猫粮	1
-9	catch	Unit 5_1	2	vt.抓住	0
-9	cute	Unit 5_1	2	adj.可爱的	1
-9	dog food	Unit 5_1	2	狗粮	1
-9	fish	Unit 5_1	2	n.鱼	1
-10	goat	Unit 5_2	2	n.山羊	0
-10	hole	Unit 5_2	2	n.洞	0
-10	large	Unit 5_2	2	adj.大的	0
-10	onto	Unit 5_2	2	prep.向	0
-10	parrot	Unit 5_2	2	n.鹦鹉	1
-10	shake	Unit 5_2	2	vi.摇动	0
-10	sleep	Unit 5_2	2	v.睡觉	0
-10	tortoise	Unit 5_2	2	n.乌龟	1
-10	wake up	Unit 5_2	2	醒来	0
-11	about	Unit 6_1	2	prep.关于	0
-11	bathroom	Unit 6_1	2	n.卫生间	1
-11	bedroom	Unit 6_1	2	n.卧室	1
-11	bedtime	Unit 6_1	2	n.就寝时间	0
-11	chat	Unit 6_1	2	vt.聊天	0
-11	cook	Unit 6_1	2	v.烹饪	0
-11	dinner	Unit 6_1	2	n.正餐	1
-11	fairy tale	Unit 6_1	2	童话	0
-11	go swimming	Unit 6_1	2	去游泳	0
-11	have a holiday	Unit 6_1	2	度假	0
-11	have a look	Unit 6_1	2	看一看	0
-11	homework	Unit 6_1	2	n.作业	1
-12	interesting	Unit 6_2	2	adj.有趣的	0
-12	kitchen	Unit 6_2	2	n.厨房	1
-12	light	Unit 6_2	2	n.灯	0
-12	living room	Unit 6_2	2	客厅	1
-12	model plane	Unit 6_2	2	飞机模型	1
-12	noise	Unit 6_2	2	n.噪音	0
-12	star	Unit 6_2	2	n.星星	0
-12	themselves	Unit 6_2	2	pron.他们自己	0
-12	turn off	Unit 6_2	2	关掉	0
-12	wash	Unit 6_2	2	v.洗	1
-12	watch TV	Unit 6_2	2	看电视	1
-13	awake	Unit 7_1	2	adj.醒着的	0
-13	bell	Unit 7_1	2	n.铃	1
-13	careful	Unit 7_1	2	adj.当心	0
-13	cry	Unit 7_1	2	n.哭	0
-13	door bell	Unit 7_1	2	门铃	0
-13	fly away	Unit 7_1	2	飞走	0
-13	have a bath	Unit 7_1	2	洗澡	0
-13	have a nap	Unit 7_1	2	小睡	0
-13	loud	Unit 7_1	2	adj.响亮的	1
-14	noisy	Unit 7_2	2	adj.吵闹的	1
-14	puzzled	Unit 7_2	2	adj.迷惑不解的	0
-14	quiet	Unit 7_2	2	adj.安静的	1
-14	ring	Unit 7_2	2	v.响起铃声	1
-14	sound	Unit 7_2	2	n.声音	1
-14	square	Unit 7_2	2	n.正方形	0
-14	television	Unit 7_2	2	n.电视	1
-14	unhappy	Unit 7_2	2	adj.不高兴的	0
-14	week	Unit 7_2	2	n.周	0
-15	a quarter past seven	Unit 8_1	2	七点十五分	1
-15	a quarter to eight	Unit 8_1	2	七点四十五分	1
-15	all the way	Unit 8_1	2	自始至终	0
-15	battery	Unit 8_1	2	n.电池	0
-15	brush	Unit 8_1	2	n.刷	0
-15	brush my teeth	Unit 8_1	2	刷牙	1
-15	cartoon	Unit 8_1	2	n.动画片	0
-15	doze	Unit 8_1	2	v.小睡	0
-15	finish	Unit 8_1	2	vi.完成	0
-15	from	Unit 8_1	2	prep.从...来	0
-15	get up	Unit 8_1	2	起床	1
-15	half past seven	Unit 8_1	2	七点半	1
-16	haave breakfast	Unit 8_2	2	吃早餐	1
-16	have dinner	Unit 8_2	2	吃正餐	0
-16	last night	Unit 8_2	2	昨天晚上	0
-16	late	Unit 8_2	2	adj.迟到的	0
-16	owl	Unit 8_2	2	n.猫头鹰	0
-16	puzzle	Unit 8_2	2	n.拼图游戏	0
-16	seven o'clock	Unit 8_2	2	七点钟	1
-16	sofa	Unit 8_2	2	n.沙发	0
-16	start	Unit 8_2	2	n.开始	0
-16	tomorrow	Unit 8_2	2	n.&adv.明天	0
-16	wash my face	Unit 8_2	2	洗脸	1
-17	a little	Unit 9_1	3	有点	0
-17	activity	Unit 9_1	3	n.活动	0
-17	always	Unit 9_1	3	adv.总是	1
-17	at weekends	Unit 9_1	3	在周末	1
-17	bow	Unit 9_1	3	vi.鞠躬	0
-17	Chinese chess	Unit 9_1	3	象棋	1
-17	clever	Unit 9_1	3	adj.聪明的	0
-17	Friday	Unit 9_1	3	n.星期五	1
-17	get	Unit 9_1	3	vt.给...拿来	0
-18	have a good time	Unit 9_2	3	玩得高兴独家	0
-18	in the middle of	Unit 9_2	3	在...中间	0
-18	kind	Unit 9_2	3	adj.友善的	0
-18	meeting	Unit 9_2	3	n.会议	0
-18	Monday	Unit 9_2	3	n.星期一	1
-18	never	Unit 9_2	3	adv.从不	1
-18	often	Unit 9_2	3	adv.经常	1
-18	really	Unit 9_2	3	adv.确定	0
-18	Saturday	Unit 9_2	3	n.星期六	1
-19	show	Unit 9_3	3	v.表演	0
-19	shy	Unit 9_3	3	adj.害羞的	0
-19	smile	Unit 9_3	3	n.微笑	0
-19	sometimes	Unit 9_3	3	adv.有时候	1
-19	Sunday	Unit 9_3	3	n.星期日	1
-19	Thursday	Unit 9_3	3	n.星期四	1
-19	Tuesday	Unit 9_3	3	n.星期二	1
-19	usually	Unit 9_3	3	adv.通常	1
-19	Wednesday	Unit 9_3	3	n.星期三	1
-19	while	Unit 9_3	3	conj.然而	0
-20	drum	Unit 10_1	1	n.鼓	1
-20	be full of	Unit 10_1	1	充满	0
-20	gold	Unit 10_1	1	n.金子	0
-20	mouse	Unit 10_1	1	n.老鼠	0
-20	music	Unit 10_1	1	n.音乐	1
-20	piano	Unit 10_1	1	n.钢琴	1
-20	piper	Unit 10_1	1	n.吹笛子的人	0
-20	triangle	Unit 10_1	1	n.三角铁	1
-20	violin	Unit 10_1	1	n.小提琴	1
-21	colourful	Unit 11_1	2	adj.色彩缤纷的	0
-21	down	Unit 11_1	2	adj.向下	0
-21	dragon boat race	Unit 11_1	2	龙舟赛	0
-21	dumpling	Unit 11_1	2	n.饺子	0
-21	during	Unit 11_1	2	prep.在...期间	0
-21	festival	Unit 11_1	2	n.节日	1
-21	fireworks	Unit 11_1	2	n.烟花表演	0
-21	important	Unit 11_1	2	adj.重要的	0
-21	money	Unit 11_1	2	n.钱	0
-22	New Year's Eve	Unit 11_2	2	除夕	0
-22	red envelope	Unit 11_2	2	红包	0
-22	relative	Unit 11_2	2	n.亲戚	0
-22	rice dumpling	Unit 11_2	2	粽子	1
-22	the Double Ninth Festival	Unit 11_2	2	重阳节	1
-22	the Dragon Boat Festival	Unit 11_2	2	端午节	1
-22	the Mid-autumn Festival	Unit 11_2	2	中秋节	1
-22	the Spring Festival	Unit 11_2	2	春节	1
-22	traditional	Unit 11_2	2	adj.传统的	0
-23	drive ... away	Unit 12_1	1	把...赶走	0
-23	duckling	Unit 12_1	1	n.小鸭子	1
-23	heavy	Unit 12_1	1	adj.重的	0
-23	lonely	Unit 12_1	1	adj.孤独的	0
-23	nest	Unit 12_1	1	n.巢	1
-23	swan	Unit 12_1	1	n.天鹅	1
-23	ugly	Unit 12_1	1	adj.丑的	0
-23	worm	Unit 12_1	1	n.虫子	0
+1	a glass of	Unit 1_1	3	一杯	1
+1	cherry	Unit 1_1	3	n.樱桃	1
+1	crunchy	Unit 1_1	3	adj.爽脆的	0
+2	grape	Unit 1_2	3	n.葡萄	1
+2	juice	Unit 1_2	3	n.果汁	1
+2	not ... at all	Unit 1_2	3	一点也不	0
+2	plum	Unit 1_2	3	n.梅子	1
+2	strawberry	Unit 1_2	3	n.草莓	1
+3	vine	Unit 1_3	3	n.葡萄藤	0
+3	want	Unit 1_3	3	vi.想要	0
+3	watermelon	Unit 1_3	3	n.西瓜	1
+3	yum	Unit 1_3	3	int.(表示味道非常好）	0
+4	all	Unit 2_1	4	adj.所有	0
+4	another	Unit 2_1	4	pron.&prep.另一个	0
+4	blind	Unit 2_1	4	adj.盲的	0
+4	blunt	Unit 2_1	4	adj.钝的	1
+4	floor	Unit 2_1	4	n.地板	0
+4	hard	Unit 2_1	4	adj.硬的	1
+5	key	Unit 2_2	4	n.钥匙	0
+5	knife	Unit 2_2	4	n.刀	1
+5	lost-property office	Unit 2_2	4	失物招领处	0
+5	pencil	Unit 2_2	4	n.铅笔	1
+5	pencil case	Unit 2_2	4	铅笔盒	1
+5	purse	Unit 2_2	4	n.钱包	0
+6	rough	Unit 2_3	4	adj.粗糙的	1
+6	sand	Unit 2_3	4	n.沙	0
+6	sharp	Unit 2_3	4	adj.锋利的	1
+6	smooth	Unit 2_3	4	adj.光滑的	1
+6	soft	Unit 2_3	4	adj.柔软的	1
+7	something	Unit 2_4	4	pron.某物	0
+7	take off	Unit 2_4	4	脱下	0
+7	thick	Unit 2_4	4	adj.厚的	1
+7	thin	Unit 2_4	4	adj.薄的	1
+7	whose	Unit 2_4	4	pron.谁的	0
+8	again	Unit 3_1	5	adv.又；再	0
+8	also	Unit 3_1	5	adv.也	0
+8	at noon	Unit 3_1	5	在中午	1
+8	away	Unit 3_1	5	adv.离开	0
+8	back	Unit 3_1	5	adv.向后	0
+9	bench	Unit 3_2	5	n.长椅	1
+9	bite	Unit 3_2	5	n.咬	0
+9	deer	Unit 3_2	5	n.鹿	0
+9	follow	Unit 3_2	5	vt.跟随	0
+9	get down	Unit 3_2	5	落下	1
+10	grow	Unit 3_3	5	vt.变得；成长	0
+10	high	Unit 3_3	5	adj.高的	1
+10	hill	Unit 3_3	5	n.小山	1
+10	lawn	Unit 3_3	5	n.草坪	1
+10	like	Unit 3_3	5	vt.像	0
+11	path	Unit 3_4	5	n.小路	1
+11	rise	Unit 3_4	5	v.升起	1
+11	shadow	Unit 3_4	5	n.影子	1
+11	stay	Unit 3_4	5	n.&v.停留	0
+12	the sun	Unit 3_5	5	太阳	1
+12	tea	Unit 3_5	5	n.茶	0
+12	tear	Unit 3_5	5	n.眼泪	0
+12	wait	Unit 3_5	5	n.&v.等待	0
+13	ask	Unit 4_1	5	vt.问	0
+13	before	Unit 4_1	5	prep.在...之前	0
+13	club	Unit 4_1	5	n.俱乐部	1
+13	enjoy	Unit 4_1	5	vt.享受...的乐趣	0
+13	exercise	Unit 4_1	5	n.&v.运动	0
+14	fun	Unit 4_2	5	adj.有趣的	0
+14	healthy	Unit 4_2	5	adj.健康的	0
+14	join	Unit 4_2	5	v.参加	1
+14	make	Unit 4_2	5	vt.制造	0
+14	notice	Unit 4_2	5	n.通知	0
+15	play badminton	Unit 4_3	5	打羽毛球	1
+15	play basketball	Unit 4_3	5	打篮球	1
+15	play football	Unit 4_3	5	踢足球	1
+15	play table tennis	Unit 4_3	5	打乒乓球	1
+15	play volleyball	Unit 4_3	5	打排球	1
+16	poster	Unit 4_4	5	n.海报	1
+16	remember	Unit 4_4	5	vt.记得	0
+16	sport	Unit 4_4	5	n.体育运动	1
+16	sure	Unit 4_4	5	adv.一定	0
+16	swimming goggles	Unit 4_4	5	泳镜	0
+17	swimming pool	Unit 4_5	5	游泳池	0
+17	swimsuit	Unit 4_5	5	n.泳衣	0
+17	too	Unit 4_5	5	adv.也	0
+17	warm-up	Unit 4_5	5	n.准备活动	0
+18	angry	Unit 5_1	4	adj.生气的	0
+18	basket	Unit 5_1	4	n.篮子	0
+18	bone	Unit 5_1	4	n.骨头	1
+18	bowl	Unit 5_1	4	n.碗	0
+18	cat food	Unit 5_1	4	猫粮	1
+19	catch	Unit 5_2	4	vt.抓住	0
+19	cute	Unit 5_2	4	adj.可爱的	1
+19	dog food	Unit 5_2	4	狗粮	1
+19	fish	Unit 5_2	4	n.鱼	1
+19	goat	Unit 5_2	4	n.山羊	0
+20	hole	Unit 5_3	4	n.洞	0
+20	large	Unit 5_3	4	adj.大的	0
+20	onto	Unit 5_3	4	prep.向	0
+20	parrot	Unit 5_3	4	n.鹦鹉	1
+21	shake	Unit 5_4	4	vi.摇动	0
+21	sleep	Unit 5_4	4	v.睡觉	0
+21	tortoise	Unit 5_4	4	n.乌龟	1
+21	wake up	Unit 5_4	4	醒来	0
+22	about	Unit 6_1	5	prep.关于	0
+22	bathroom	Unit 6_1	5	n.卫生间	1
+22	bedroom	Unit 6_1	5	n.卧室	1
+22	bedtime	Unit 6_1	5	n.就寝时间	0
+22	chat	Unit 6_1	5	vt.聊天	0
+23	cook	Unit 6_2	5	v.烹饪	0
+23	dinner	Unit 6_2	5	n.正餐	1
+23	fairy tale	Unit 6_2	5	童话	0
+23	go swimming	Unit 6_2	5	去游泳	0
+23	have a holiday	Unit 6_2	5	度假	0
+24	have a look	Unit 6_3	5	看一看	0
+24	homework	Unit 6_3	5	n.作业	1
+24	interesting	Unit 6_3	5	adj.有趣的	0
+24	kitchen	Unit 6_3	5	n.厨房	1
+24	light	Unit 6_3	5	n.灯	0
+25	living room	Unit 6_4	5	客厅	1
+25	model plane	Unit 6_4	5	飞机模型	1
+25	noise	Unit 6_4	5	n.噪音	0
+25	star	Unit 6_4	5	n.星星	0
+26	themselves	Unit 6_5	5	pron.他们自己	0
+26	turn off	Unit 6_5	5	关掉	0
+26	wash	Unit 6_5	5	v.洗	1
+26	watch TV	Unit 6_5	5	看电视	1
+27	awake	Unit 7_1	4	adj.醒着的	0
+27	bell	Unit 7_1	4	n.铃	1
+27	careful	Unit 7_1	4	adj.当心	0
+27	cry	Unit 7_1	4	n.哭	0
+27	door bell	Unit 7_1	4	门铃	0
+28	fly away	Unit 7_2	4	飞走	0
+28	have a bath	Unit 7_2	4	洗澡	0
+28	have a nap	Unit 7_2	4	小睡	0
+28	loud	Unit 7_2	4	adj.响亮的	1
+28	noisy	Unit 7_2	4	adj.吵闹的	1
+29	puzzled	Unit 7_3	4	adj.迷惑不解的	0
+29	quiet	Unit 7_3	4	adj.安静的	1
+29	ring	Unit 7_3	4	v.响起铃声	1
+29	sound	Unit 7_3	4	n.声音	1
+30	square	Unit 7_4	4	n.正方形	0
+30	television	Unit 7_4	4	n.电视	1
+30	unhappy	Unit 7_4	4	adj.不高兴的	0
+30	week	Unit 7_4	4	n.周	0
+31	a quarter past seven	Unit 8_1	5	七点十五分	1
+31	a quarter to eight	Unit 8_1	5	七点四十五分	1
+31	all the way	Unit 8_1	5	自始至终	0
+31	battery	Unit 8_1	5	n.电池	0
+31	brush	Unit 8_1	5	n.刷	0
+32	brush my teeth	Unit 8_2	5	刷牙	1
+32	cartoon	Unit 8_2	5	n.动画片	0
+32	doze	Unit 8_2	5	v.小睡	0
+32	finish	Unit 8_2	5	vi.完成	0
+32	from	Unit 8_2	5	prep.从...来	0
+33	get up	Unit 8_3	5	起床	1
+33	half past seven	Unit 8_3	5	七点半	1
+33	haave breakfast	Unit 8_3	5	吃早餐	1
+33	have dinner	Unit 8_3	5	吃正餐	0
+33	last night	Unit 8_3	5	昨天晚上	0
+34	late	Unit 8_4	5	adj.迟到的	0
+34	owl	Unit 8_4	5	n.猫头鹰	0
+34	puzzle	Unit 8_4	5	n.拼图游戏	0
+34	seven o'clock	Unit 8_4	5	七点钟	1
+35	sofa	Unit 8_5	5	n.沙发	0
+35	start	Unit 8_5	5	n.开始	0
+35	tomorrow	Unit 8_5	5	n.&adv.明天	0
+35	wash my face	Unit 8_5	5	洗脸	1
+36	a little	Unit 9_1	6	有点	0
+36	activity	Unit 9_1	6	n.活动	0
+36	always	Unit 9_1	6	adv.总是	1
+36	at weekends	Unit 9_1	6	在周末	1
+36	bow	Unit 9_1	6	vi.鞠躬	0
+37	Chinese chess	Unit 9_2	6	象棋	1
+37	clever	Unit 9_2	6	adj.聪明的	0
+37	Friday	Unit 9_2	6	n.星期五	1
+37	get	Unit 9_2	6	vt.给...拿来	0
+37	have a good time	Unit 9_2	6	玩得高兴独家	0
+38	in the middle of	Unit 9_3	6	在...中间	0
+38	kind	Unit 9_3	6	adj.友善的	0
+38	meeting	Unit 9_3	6	n.会议	0
+38	Monday	Unit 9_3	6	n.星期一	1
+38	never	Unit 9_3	6	adv.从不	1
+39	often	Unit 9_4	6	adv.经常	1
+39	really	Unit 9_4	6	adv.确定	0
+39	Saturday	Unit 9_4	6	n.星期六	1
+39	show	Unit 9_4	6	v.表演	0
+39	shy	Unit 9_4	6	adj.害羞的	0
+40	smile	Unit 9_5	6	n.微笑	0
+40	sometimes	Unit 9_5	6	adv.有时候	1
+40	Sunday	Unit 9_5	6	n.星期日	1
+40	Thursday	Unit 9_5	6	n.星期四	1
+41	Tuesday	Unit 9_6	6	n.星期二	1
+41	usually	Unit 9_6	6	adv.通常	1
+41	Wednesday	Unit 9_6	6	n.星期三	1
+41	while	Unit 9_6	6	conj.然而	0
+42	drum	Unit 10_1	2	n.鼓	1
+42	be full of	Unit 10_1	2	充满	0
+42	gold	Unit 10_1	2	n.金子	0
+42	mouse	Unit 10_1	2	n.老鼠	0
+42	music	Unit 10_1	2	n.音乐	1
+43	piano	Unit 10_2	2	n.钢琴	1
+43	piper	Unit 10_2	2	n.吹笛子的人	0
+43	triangle	Unit 10_2	2	n.三角铁	1
+43	violin	Unit 10_2	2	n.小提琴	1
+44	colourful	Unit 11_1	4	adj.色彩缤纷的	0
+44	down	Unit 11_1	4	adj.向下	0
+44	dragon boat race	Unit 11_1	4	龙舟赛	0
+44	dumpling	Unit 11_1	4	n.饺子	0
+44	during	Unit 11_1	4	prep.在...期间	0
+45	festival	Unit 11_2	4	n.节日	1
+45	fireworks	Unit 11_2	4	n.烟花表演	0
+45	important	Unit 11_2	4	adj.重要的	0
+45	money	Unit 11_2	4	n.钱	0
+45	New Year's Eve	Unit 11_2	4	除夕	0
+46	red envelope	Unit 11_3	4	红包	0
+46	relative	Unit 11_3	4	n.亲戚	0
+46	rice dumpling	Unit 11_3	4	粽子	1
+46	the Double Ninth Festival	Unit 11_3	4	重阳节	1
+47	the Dragon Boat Festival	Unit 11_4	4	端午节	1
+47	the Mid-autumn Festival	Unit 11_4	4	中秋节	1
+47	the Spring Festival	Unit 11_4	4	春节	1
+47	traditional	Unit 11_4	4	adj.传统的	0
+48	drive ... away	Unit 12_1	2	把...赶走	0
+48	duckling	Unit 12_1	2	n.小鸭子	1
+48	heavy	Unit 12_1	2	adj.重的	0
+48	lonely	Unit 12_1	2	adj.孤独的	0
+49	nest	Unit 12_2	2	n.巢	1
+49	swan	Unit 12_2	2	n.天鹅	1
+49	ugly	Unit 12_2	2	adj.丑的	0
+49	worm	Unit 12_2	2	n.虫子	0

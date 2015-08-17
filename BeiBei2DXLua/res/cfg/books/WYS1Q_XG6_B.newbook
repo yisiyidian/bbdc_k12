@@ -6,86 +6,86 @@
 2	cent	Module 1_2	2	n.美分	0
 2	enjoy	Module 1_2	2	vt.享用	0
 2	meal	Module 1_2	2	n.餐	0
-3	later	Module 2_1	1	adv.后来	0
-3	to go	Module 2_1	1	剩余	0
-3	dark	Module 2_1	1	adj.黑暗的	0
-3	cloud	Module 2_1	1	n.云	0
-3	Oh dear	Module 2_1	1	天哪	0
-3	dry	Module 2_1	1	adj.干的	0
-3	stay	Module 2_1	1	v.保持	0
-3	cloudy	Module 2_1	1	adj.多云的	1
-4	close	Module 3_1	1	vt.合上	1
-4	quickly	Module 3_1	1	adv.快地	0
-4	left	Module 3_1	1	v.丢下（过去式）	0
-4	shine	Module 3_1	1	vi.发光	0
-4	cry	Module 3_1	1	vi.喊	1
-5	thing	Module 4_1	1	n.东西	0
-5	need	Module 4_1	1	v.需要	0
-5	grab	Module 4_1	1	vt.抓住	0
-5	balloon	Module 4_1	1	n.气球	0
-5	fly away	Module 4_1	1	飞走	0
-5	stairs	Module 4_1	1	n.楼梯	0
-6	telephone	Module 5_1	1	n.电话	0
-6	ring	Module 5_1	1	v.响	0
-6	bell	Module 5_1	1	n.门铃	0
-6	bark	Module 5_1	1	n.狗吠	0
-6	arrive	Module 5_1	1	vi.到达	0
-6	hardly	Module 5_1	1	adv.几乎不	0
-6	raincoat	Module 5_1	1	n.雨衣	0
-6	tunnel	Module 5_1	1	n.隧道	0
-7	home	Module 6_1	1	n.家	1
-7	earth	Module 6_1	1	n.地球	0
-7	space	Module 6_1	1	n.太空	0
-7	travel	Module 6_1	1	n.&v.旅行	1
-7	interested	Module 6_1	1	adj.感兴趣的	1
-7	be interested in	Module 6_1	1	对...感兴趣	0
-7	spaceship	Module 6_1	1	n.宇宙飞船	0
-7	surprised	Module 6_1	1	adj.惊奇的	0
-7	made	Module 6_1	1	vt.做（过去式）	1
-7	model	Module 6_1	1	n.模型	0
-7	taikonaut	Module 6_1	1	n.太空人	0
-7	national	Module 6_1	1	adj.国家的	0
-7	flag	Module 6_1	1	n.旗	0
-7	seed	Module 6_1	1	n.种子	0
-8	flew	Module 7_1	1	vi.飞（过去式）	1
-8	spent	Module 7_1	1	vt.度过（过去式）	0
-8	video	Module 7_1	1	n.录像	0
-8	someday	Module 7_1	1	adv.有朝一日	0
-8	born	Module 7_1	1	vt.出生（过去分词）	0
-8	illness	Module 7_1	1	n.病	0
-8	round	Module 7_1	1	n.在...各处	0
-8	all over the world	Module 7_1	1	全世界	0
-9	cup	Module 8_1	1	n.杯子	0
-9	classmate	Module 8_1	1	n.同班同学	0
-9	baseball	Module 8_1	1	n.棒球	0
-9	brought	Module 8_1	1	vt.带来（过去式）	1
-9	more	Module 8_1	1	adj.更强烈的	0
-9	mistake	Module 8_1	1	n.错误	0
-9	make mistakes	Module 8_1	1	犯错误	0
-9	word	Module 8_1	1	n.单词	1
-10	wish	Module 9_1	1	n.&v.愿望	0
-10	best wishes	Module 9_1	1	最美好的祝愿	0
-10	luck	Module 9_1	1	n.运气	0
-10	primary	Module 9_1	1	adj.初级的	0
-10	primary school	Module 9_1	1	小学	0
-10	keep	Module 9_1	1	vt.保留	0
-10	forever	Module 9_1	1	adv.永远	0
-10	joy	Module 9_1	1	n.乐趣	0
-10	future	Module 9_1	1	n.未来	0
-10	taught	Module 9_1	1	vt.教（过去式）	0
-10	wonderful	Module 9_1	1	adj.极好的	1
-10	happiness	Module 9_1	1	n.幸福	1
-11	middle	Module 10_1	1	n.&adj.中部的；中间	0
-11	middle school	Module 10_1	1	中学	0
-11	speech	Module 10_1	1	n.演说	0
-11	September	Module 10_1	1	n.九月	0
-11	excited	Module 10_1	1	adj.激动的	0
-11	geography	Module 10_1	1	n.地理	0
-11	same	Module 10_1	1	adj.相同的	0
-11	at the same time	Module 10_1	1	同时	0
-11	little	Module 10_1	1	adj.极少量的	1
-11	keep on	Module 10_1	1	保持	0
-11	sometime	Module 10_1	1	adv.某个时候	0
-11	each other	Module 10_1	1	互相	0
-11	chemistry	Module 10_1	1	n.化学	0
-11	physics	Module 10_1	1	n.物理	0
+3	later	Module 2_1	2	adv.后来	0
+3	to go	Module 2_1	2	剩余	0
+3	dark	Module 2_1	2	adj.黑暗的	0
+3	cloud	Module 2_1	2	n.云	0
+4	Oh dear	Module 2_2	2	天哪	0
+4	dry	Module 2_2	2	adj.干的	0
+4	stay	Module 2_2	2	v.保持	0
+4	cloudy	Module 2_2	2	adj.多云的	1
+5	close	Module 3_1	1	vt.合上	1
+5	quickly	Module 3_1	1	adv.快地	0
+5	left	Module 3_1	1	v.丢下（过去式）	0
+5	shine	Module 3_1	1	vi.发光	0
+5	cry	Module 3_1	1	vi.喊	1
+6	thing	Module 4_1	1	n.东西	0
+6	need	Module 4_1	1	v.需要	0
+6	grab	Module 4_1	1	vt.抓住	0
+6	balloon	Module 4_1	1	n.气球	0
+6	fly away	Module 4_1	1	飞走	0
+6	stairs	Module 4_1	1	n.楼梯	0
+7	telephone	Module 5_1	2	n.电话	0
+7	ring	Module 5_1	2	v.响	0
+7	bell	Module 5_1	2	n.门铃	0
+7	bark	Module 5_1	2	n.狗吠	0
+8	arrive	Module 5_2	2	vi.到达	0
+8	hardly	Module 5_2	2	adv.几乎不	0
+8	raincoat	Module 5_2	2	n.雨衣	0
+8	tunnel	Module 5_2	2	n.隧道	0
+9	home	Module 6_1	3	n.家	1
+9	earth	Module 6_1	3	n.地球	0
+9	space	Module 6_1	3	n.太空	0
+9	travel	Module 6_1	3	n.&v.旅行	1
+9	interested	Module 6_1	3	adj.感兴趣的	1
+10	be interested in	Module 6_2	3	对...感兴趣	0
+10	spaceship	Module 6_2	3	n.宇宙飞船	0
+10	surprised	Module 6_2	3	adj.惊奇的	0
+10	made	Module 6_2	3	vt.做（过去式）	1
+10	model	Module 6_2	3	n.模型	0
+11	taikonaut	Module 6_3	3	n.太空人	0
+11	national	Module 6_3	3	adj.国家的	0
+11	flag	Module 6_3	3	n.旗	0
+11	seed	Module 6_3	3	n.种子	0
+12	flew	Module 7_1	2	vi.飞（过去式）	1
+12	spent	Module 7_1	2	vt.度过（过去式）	0
+12	video	Module 7_1	2	n.录像	0
+12	someday	Module 7_1	2	adv.有朝一日	0
+13	born	Module 7_2	2	vt.出生（过去分词）	0
+13	illness	Module 7_2	2	n.病	0
+13	round	Module 7_2	2	n.在...各处	0
+13	all over the world	Module 7_2	2	全世界	0
+14	cup	Module 8_1	2	n.杯子	0
+14	classmate	Module 8_1	2	n.同班同学	0
+14	baseball	Module 8_1	2	n.棒球	0
+14	brought	Module 8_1	2	vt.带来（过去式）	1
+15	more	Module 8_2	2	adj.更强烈的	0
+15	mistake	Module 8_2	2	n.错误	0
+15	make mistakes	Module 8_2	2	犯错误	0
+15	word	Module 8_2	2	n.单词	1
+16	wish	Module 9_1	2	n.&v.愿望	0
+16	best wishes	Module 9_1	2	最美好的祝愿	0
+16	luck	Module 9_1	2	n.运气	0
+16	primary	Module 9_1	2	adj.初级的	0
+16	primary school	Module 9_1	2	小学	0
+16	keep	Module 9_1	2	vt.保留	0
+17	forever	Module 9_2	2	adv.永远	0
+17	joy	Module 9_2	2	n.乐趣	0
+17	future	Module 9_2	2	n.未来	0
+17	taught	Module 9_2	2	vt.教（过去式）	0
+17	wonderful	Module 9_2	2	adj.极好的	1
+17	happiness	Module 9_2	2	n.幸福	1
+18	middle	Module 10_1	3	n.&adj.中部的；中间	0
+18	middle school	Module 10_1	3	中学	0
+18	speech	Module 10_1	3	n.演说	0
+18	September	Module 10_1	3	n.九月	0
+18	excited	Module 10_1	3	adj.激动的	0
+19	geography	Module 10_2	3	n.地理	0
+19	same	Module 10_2	3	adj.相同的	0
+19	at the same time	Module 10_2	3	同时	0
+19	little	Module 10_2	3	adj.极少量的	1
+19	keep on	Module 10_2	3	保持	0
+20	sometime	Module 10_3	3	adv.某个时候	0
+20	each other	Module 10_3	3	互相	0
+20	chemistry	Module 10_3	3	n.化学	0
+20	physics	Module 10_3	3	n.物理	0

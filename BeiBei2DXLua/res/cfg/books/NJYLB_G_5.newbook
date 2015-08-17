@@ -1,227 +1,227 @@
-1	betray	Unit1_1	8	vt.背叛	1
-1	quiz	Unit1_1	8	n.小测验	1
-1	pretend	Unit1_1	8	vt.假装	1
-2	cheerful	Unit1_2	8	adj.愉快的	1
-2	washroom	Unit1_2	8	n.洗手间	1
-2	admit	Unit1_2	8	vt.承认；允许进入	1
-2	beg	Unit1_2	8	v.乞讨	1
-2	swear	Unit1_2	8	v.发誓	1
-2	spy	Unit1_2	8	n.间谍	1
-2	spy on	Unit1_2	8	暗中监视	1
-2	truly	Unit1_2	8	adv.真诚地	1
-2	forgive	Unit1_2	8	vt.原谅	1
-2	sincerely	Unit1_2	8	adv.真诚地	1
-3	childhood	Unit1_3	8	n.童年	1
-3	superb	Unit1_3	8	adj.极佳的	1
-3	focus	Unit1_3	8	v.集中注意力于...	1
-3	pace	Unit1_3	8	n.步伐	1
-3	keep pace with	Unit1_3	8	(与...)步调一致	1
-3	manner	Unit1_3	8	n.举止	1
-3	horrible	Unit1_3	8	adj.糟糕的	1
-3	guilty	Unit1_3	8	adj.内疚的	1
-3	cruel	Unit1_3	8	adj.残忍的	1
-3	remark	Unit1_3	8	n.&v.评论	1
-4	dislike	Unit1_4	8	v.&n.不喜欢	1
-4	argue	Unit1_4	8	vt.争论	1
-4	awkward	Unit1_4	8	adj.令人尴尬的	1
-4	apologize	Unit1_4	8	v.道歉	1
-4	quarrel	Unit1_4	8	n.争吵	1
-4	sensitive	Unit1_4	8	adj.敏感的	1
-4	athletic	Unit1_4	8	adj.擅长运动的	1
-4	envy	Unit1_4	8	vt.忌妒	1
-4	blame	Unit1_4	8	vt.责备	1
-4	gifted	Unit1_4	8	adj.有天赋的	1
-5	disagreement	Unit1_5	8	n.分歧	1
-5	before long	Unit1_5	8	不久	1
-5	mailbox	Unit1_5	8	n.邮箱	1
-5	algebra	Unit1_5	8	n.代数	1
-5	arithmetic	Unit1_5	8	n.算术	1
-5	Easter	Unit1_5	8	n.复活节	1
-5	amusement	Unit1_5	8	n.娱乐	1
-5	amusement park	Unit1_5	8	游乐场	1
-5	circus	Unit1_5	8	n.马戏团	1
-5	online	Unit1_5	8	ad.在线	0
-6	identity	Unit1_6	8	n.身份	1
-6	absurd	Unit1_6	8	adj.荒唐的	1
-6	hopeless	Unit1_6	8	adj.无望的	1
-6	overcome	Unit1_6	8	vt.克服	1
-6	get through	Unit1_6	8	接通	1
-6	acquaintance	Unit1_6	8	n.熟人	1
-6	twin	Unit1_6	8	n.双胞胎之一	1
-6	apartment	Unit1_6	8	n.公寓套房	1
-6	topic	Unit1_6	8	n.话题	1
-6	attitude	Unit1_6	8	n.态度	1
-7	anchor	Unit1_7	8	v.&n使稳固；主播	1
-7	be based on	Unit1_7	8	以...为基础	1
-7	cautious	Unit1_7	8	adj.小心的	1
-7	eager	Unit1_7	8	adj.热切的	1
-7	worldwide	Unit1_7	8	adj.全世界的	1
-7	adolescent	Unit1_7	8	adj.青少年	1
-7	respond	Unit1_7	8	vi.回应	1
-7	pause	Unit1_7	8	n.暂停	1
-7	regardless	Unit1_7	8	adv.不顾	1
-7	regardless of	Unit1_7	8	不管	1
-8	security	Unit1_8	8	n.安全	1
-8	end up	Unit1_8	8	最后成为	1
-8	waiting room	Unit1_8	8	候车室	1
-8	rely	Unit1_8	8	v.依靠	1
-8	rely on	Unit1_8	8	依靠	1
-8	trolleybus	Unit1_8	8	n.无轨电车	1
-8	revision	Unit1_8	8	n.修订	1
-8	thanks to	Unit1_8	8	幸亏	1
-8	committed	Unit1_8	8	adj.尽心尽力的	1
-8	mercy	Unit1_8	8	n.仁慈	1
-8	apology	Unit1_8	8	n.道歉	1
-9	economy	Unit2_1	8	n.经济	0
-9	spokeswoman	Unit2_1	8	n.女发言人	1
-9	consultant	Unit2_1	8	n.顾问	1
-9	debate	Unit2_1	8	n.辩论	1
-9	open the floor	Unit2_1	8	自由发言	1
-9	flow	Unit2_1	8	vi.流	1
-9	billion	Unit2_1	8	n.十亿	0
-9	duty	Unit2_1	8	n.责任	1
-9	cut back on	Unit2_1	8	减少	1
-9	production	Unit2_1	8	n.产量	1
-10	recycle	Unit2_2	8	vt.回收利用	1
-10	pipe	Unit2_2	8	n.管子	1
-10	greedy	Unit2_2	8	adj.贪婪的	1
-10	businessman	Unit2_2	8	n.商界人员	1
-10	responsibility	Unit2_2	8	n.责任	1
-10	belief	Unit2_2	8	n.新年	1
-10	environmental	Unit2_2	8	adj.环境的	1
-10	operate	Unit2_2	8	vi.动手术	1
-10	credit	Unit2_2	8	n.信用	1
-10	quantity	Unit2_2	8	n.数量	1
-11	raw	Unit2_3	8	adj.原始的	1
-11	raw material	Unit2_3	8	原材料	1
-11	seafood	Unit2_3	8	n.海鲜	1
-11	willing	Unit2_3	8	adj.愿意的	1
-11	tax	Unit2_3	8	n.税	1
-11	goods	Unit2_3	8	n.商品	1
-11	pump	Unit2_3	8	n.泵	1
-11	use up	Unit2_3	8	用尽	1
-11	run out of	Unit2_3	8	用完	1
-11	madam	Unit2_3	8	n.女士	1
-12	arrival	Unit2_4	8	n.到来	1
-12	clean up	Unit2_4	8	打扫干净	1
-12	arrest	Unit2_4	8	n.逮捕	1
-12	illegally	Unit2_4	8	adv.非法地	1
-12	customs	Unit2_4	8	n.海关	1
-12	feather	Unit2_4	8	n.羽毛	1
-12	tortoise	Unit2_4	8	n.陆龟	1
-12	blanket	Unit2_4	8	n.毯子	1
-12	impress	Unit2_4	8	vt.使印象深刻	1
-12	clap	Unit2_4	8	vt.鼓掌	1
-13	economic	Unit2_5	8	adj.经济的	0
-13	conflict	Unit2_5	8	n.冲突	1
-13	queue	Unit2_5	8	n.队	1
-13	queue up	Unit2_5	8	排队等候	1
-13	desertification	Unit2_5	8	n.沙漠化	0
-13	crop	Unit2_5	8	n.庄稼	1
-13	fence	Unit2_5	8	n.篱笆	1
-13	soil	Unit2_5	8	n.土壤	1
-13	bush	Unit2_5	8	n.灌木	1
-13	decrease	Unit2_5	8	vt.减少	1
-14	drill	Unit2_6	8	n.钻孔	1
-14	measure	Unit2_6	8	n.&v.措施；测量	1
-14	administration	Unit2_6	8	n.管理部门	1
-14	satellite	Unit2_6	8	n.人造卫星	1
-14	pick out	Unit2_6	8	找出	1
-14	typhoon	Unit2_6	8	n.台风	1
-14	flood	Unit2_6	8	n.洪水	1
-14	range	Unit2_6	8	n.范围	1
-14	illegal	Unit2_6	8	adj.违法的	1
-14	under way	Unit2_6	8	进行中	1
-15	conservation	Unit2_7	8	n.保护	1
-15	with regard to	Unit2_7	8	关于	1
-15	appreciate	Unit2_7	8	vt.欣赏	1
-15	climate	Unit2_7	8	n.气候	1
-15	low-carbon	Unit2_7	8	adj.低碳的	1
-15	carbon	Unit2_7	8	n.碳	1
-15	dioxide	Unit2_7	8	n.二氧化物	1
-15	carbon dioxide	Unit2_7	8	二氧化碳	1
-15	let off	Unit2_7	8	排放	1
-15	vehicle	Unit2_7	8	n.车辆	1
-15	petrol	Unit2_7	8	n.汽油	1
-16	engine	Unit2_8	8	n.发动机	1
-16	electrical	Unit2_8	8	adj.电的	1
-16	plant	Unit2_8	8	n.工厂	1
-16	fuel	Unit2_8	8	n.燃料	1
-16	consume	Unit2_8	8	vt.消费	1
-16	particular	Unit2_8	8	adj.特指的	1
-16	in particular	Unit2_8	8	尤其	1
-16	absorb	Unit2_8	8	v.吸收	1
-16	oxygen	Unit2_8	8	n.氧气	1
-16	decade	Unit2_8	8	n.十年	1
-16	do one's part	Unit2_8	8	尽自己的职责	1
-17	clone	Unit3_1	7	v.克隆	1
-17	embryo	Unit3_1	7	n.胚胎	0
-17	on the one hand ... on the other hand ...	Unit3_1	7	一方面...另一方面...	1
-17	tissue	Unit3_1	7	n.（生物）组织;纸巾	1
-17	toy with	Unit3_1	7	戏弄	1
-17	real-life	Unit3_1	7	adj.真实的	1
-17	monster	Unit3_1	7	n.怪物	0
-17	exact	Unit3_1	7	adj.精确的	1
-17	cell	Unit3_1	7	n.细胞	1
-17	mammal	Unit3_1	7	n.哺乳动物	0
-18	Scottish	Unit3_2	7	adj.苏格兰的	0
-18	intention	Unit3_2	7	n.意图	1
-18	anxiety	Unit3_2	7	n.忧虑	1
-18	saleswoman	Unit3_2	7	n.女售货员	1
-18	adopt	Unit3_2	7	v.收养	1
-18	legal	Unit3_2	7	adj.合法的	1
-18	push ahead with	Unit3_2	7	义无反顾地进行	1
-18	Italian	Unit3_2	7	n.意大利人	0
-18	physician	Unit3_2	7	n.医师	1
-18	goat	Unit3_2	7	n.山羊	1
-19	consequence	Unit3_3	7	n.结果	1
-19	harvest	Unit3_3	7	n.收获	1
-19	for sale	Unit3_3	7	供出售	1
-19	transform	Unit3_3	7	vt.变形	1
-19	concept	Unit3_3	7	n.概念	1
-19	crime	Unit3_3	7	n.罪	1
-19	fellow	Unit3_3	7	n.同事	1
-19	profession	Unit3_3	7	n.职业	1
-19	radiation	Unit3_3	7	n.辐射	1
-19	breakthrough	Unit3_3	7	n.突破	1
-20	original	Unit3_4	7	adj.起初的	1
-20	judgement	Unit3_4	7	n.评价	1
-20	get burnt out	Unit3_4	7	耗尽体力	1
-20	relation	Unit3_4	7	n.关系	1
-20	public relations	Unit3_4	7	公共关系	1
-20	follow in one's footsteps	Unit3_4	7	效仿某人	1
-20	conduct	Unit3_4	7	v.实施	1
-20	majority	Unit3_4	7	n.多数	1
-20	summary	Unit3_4	7	n.总结	1
-20	consideration	Unit3_4	7	n.仔细考虑	1
-21	take ... into consideration	Unit3_5	7	认真考虑	1
-21	hunger	Unit3_5	7	n.饥饿	1
-21	tasty	Unit3_5	7	adj.美味的	1
-21	nutrition	Unit3_5	7	n.营养	1
-21	ordinary	Unit3_5	7	adj.普通的	1
-21	reliable	Unit3_5	7	adj.可信赖的	1
-21	accurate	Unit3_5	7	adj.准确的	1
-21	brief	Unit3_5	7	adj.简洁的	1
-21	actual	Unit3_5	7	adj.真实的	1
-21	confirm	Unit3_5	7	v.证实	1
-22	agriculture	Unit3_6	7	n.农业	1
-22	channel	Unit3_6	7	n.隧道	1
-22	favour	Unit3_6	7	n.&v.赞同；恩惠	1
-22	in favour of	Unit3_6	7	赞同	1
-22	point of view	Unit3_6	7	观点	1
-22	catastrophe	Unit3_6	7	n.灾难	1
-22	resource	Unit3_6	7	n.资源	0
-22	acre	Unit3_6	7	n.英亩	1
-22	rainforest	Unit3_6	7	n.雨林	1
-22	income	Unit3_6	7	n.收益	1
-23	genetics	Unit3_7	7	n.遗传学	0
-23	frighten	Unit3_7	7	v.使惊吓	1
-23	modify	Unit3_7	7	vt.调整	0
-23	genetically modified	Unit3_7	7	转基因的	1
-23	insert	Unit3_7	7	vt.插入	1
-23	DNA	Unit3_7	7	abbr.脱氧核糖核酸	0
-23	pest	Unit3_7	7	n.害虫	1
-23	profit	Unit3_7	7	n.&v.利润；获益	1
-23	chain	Unit3_7	7	n.一系列	1
-23	food chain	Unit3_7	7	食物链	1
-23	permission	Unit3_7	7	n.准许	1
+1	betray	Unit1_1	15	vt.背叛	1
+1	quiz	Unit1_1	15	n.小测验	1
+1	pretend	Unit1_1	15	vt.假装	1
+2	cheerful	Unit1_2	15	adj.愉快的	1
+2	washroom	Unit1_2	15	n.洗手间	1
+2	admit	Unit1_2	15	vt.承认；允许进入	1
+2	beg	Unit1_2	15	v.乞讨	1
+2	swear	Unit1_2	15	v.发誓	1
+3	spy	Unit1_3	15	n.间谍	1
+3	spy on	Unit1_3	15	暗中监视	1
+3	truly	Unit1_3	15	adv.真诚地	1
+3	forgive	Unit1_3	15	vt.原谅	1
+3	sincerely	Unit1_3	15	adv.真诚地	1
+4	childhood	Unit1_4	15	n.童年	1
+4	superb	Unit1_4	15	adj.极佳的	1
+4	focus	Unit1_4	15	v.集中注意力于...	1
+4	pace	Unit1_4	15	n.步伐	1
+4	keep pace with	Unit1_4	15	(与...)步调一致	1
+5	manner	Unit1_5	15	n.举止	1
+5	horrible	Unit1_5	15	adj.糟糕的	1
+5	guilty	Unit1_5	15	adj.内疚的	1
+5	cruel	Unit1_5	15	adj.残忍的	1
+5	remark	Unit1_5	15	n.&v.评论	1
+6	dislike	Unit1_6	15	v.&n.不喜欢	1
+6	argue	Unit1_6	15	vt.争论	1
+6	awkward	Unit1_6	15	adj.令人尴尬的	1
+6	apologize	Unit1_6	15	v.道歉	1
+6	quarrel	Unit1_6	15	n.争吵	1
+7	sensitive	Unit1_7	15	adj.敏感的	1
+7	athletic	Unit1_7	15	adj.擅长运动的	1
+7	envy	Unit1_7	15	vt.忌妒	1
+7	blame	Unit1_7	15	vt.责备	1
+7	gifted	Unit1_7	15	adj.有天赋的	1
+8	disagreement	Unit1_8	15	n.分歧	1
+8	before long	Unit1_8	15	不久	1
+8	mailbox	Unit1_8	15	n.邮箱	1
+8	algebra	Unit1_8	15	n.代数	1
+8	arithmetic	Unit1_8	15	n.算术	1
+9	Easter	Unit1_9	15	n.复活节	1
+9	amusement	Unit1_9	15	n.娱乐	1
+9	amusement park	Unit1_9	15	游乐场	1
+9	circus	Unit1_9	15	n.马戏团	1
+9	online	Unit1_9	15	ad.在线	0
+10	identity	Unit1_10	15	n.身份	1
+10	absurd	Unit1_10	15	adj.荒唐的	1
+10	hopeless	Unit1_10	15	adj.无望的	1
+10	overcome	Unit1_10	15	vt.克服	1
+10	get through	Unit1_10	15	接通	1
+11	acquaintance	Unit1_11	15	n.熟人	1
+11	twin	Unit1_11	15	n.双胞胎之一	1
+11	apartment	Unit1_11	15	n.公寓套房	1
+11	topic	Unit1_11	15	n.话题	1
+11	attitude	Unit1_11	15	n.态度	1
+12	anchor	Unit1_12	15	v.&n使稳固；主播	1
+12	be based on	Unit1_12	15	以...为基础	1
+12	cautious	Unit1_12	15	adj.小心的	1
+12	eager	Unit1_12	15	adj.热切的	1
+12	worldwide	Unit1_12	15	adj.全世界的	1
+13	adolescent	Unit1_13	15	adj.青少年	1
+13	respond	Unit1_13	15	vi.回应	1
+13	pause	Unit1_13	15	n.暂停	1
+13	regardless	Unit1_13	15	adv.不顾	1
+13	regardless of	Unit1_13	15	不管	1
+14	security	Unit1_14	15	n.安全	1
+14	end up	Unit1_14	15	最后成为	1
+14	waiting room	Unit1_14	15	候车室	1
+14	rely	Unit1_14	15	v.依靠	1
+14	rely on	Unit1_14	15	依靠	1
+15	trolleybus	Unit1_15	15	n.无轨电车	1
+15	revision	Unit1_15	15	n.修订	1
+15	thanks to	Unit1_15	15	幸亏	1
+15	committed	Unit1_15	15	adj.尽心尽力的	1
+15	mercy	Unit1_15	15	n.仁慈	1
+15	apology	Unit1_15	15	n.道歉	1
+16	economy	Unit2_1	16	n.经济	0
+16	spokeswoman	Unit2_1	16	n.女发言人	1
+16	consultant	Unit2_1	16	n.顾问	1
+16	debate	Unit2_1	16	n.辩论	1
+16	open the floor	Unit2_1	16	自由发言	1
+17	flow	Unit2_2	16	vi.流	1
+17	billion	Unit2_2	16	n.十亿	0
+17	duty	Unit2_2	16	n.责任	1
+17	cut back on	Unit2_2	16	减少	1
+17	production	Unit2_2	16	n.产量	1
+18	recycle	Unit2_3	16	vt.回收利用	1
+18	pipe	Unit2_3	16	n.管子	1
+18	greedy	Unit2_3	16	adj.贪婪的	1
+18	businessman	Unit2_3	16	n.商界人员	1
+18	responsibility	Unit2_3	16	n.责任	1
+19	belief	Unit2_4	16	n.新年	1
+19	environmental	Unit2_4	16	adj.环境的	1
+19	operate	Unit2_4	16	vi.动手术	1
+19	credit	Unit2_4	16	n.信用	1
+19	quantity	Unit2_4	16	n.数量	1
+20	raw	Unit2_5	16	adj.原始的	1
+20	raw material	Unit2_5	16	原材料	1
+20	seafood	Unit2_5	16	n.海鲜	1
+20	willing	Unit2_5	16	adj.愿意的	1
+20	tax	Unit2_5	16	n.税	1
+21	goods	Unit2_6	16	n.商品	1
+21	pump	Unit2_6	16	n.泵	1
+21	use up	Unit2_6	16	用尽	1
+21	run out of	Unit2_6	16	用完	1
+21	madam	Unit2_6	16	n.女士	1
+22	arrival	Unit2_7	16	n.到来	1
+22	clean up	Unit2_7	16	打扫干净	1
+22	arrest	Unit2_7	16	n.逮捕	1
+22	illegally	Unit2_7	16	adv.非法地	1
+22	customs	Unit2_7	16	n.海关	1
+23	feather	Unit2_8	16	n.羽毛	1
+23	tortoise	Unit2_8	16	n.陆龟	1
+23	blanket	Unit2_8	16	n.毯子	1
+23	impress	Unit2_8	16	vt.使印象深刻	1
+23	clap	Unit2_8	16	vt.鼓掌	1
+24	economic	Unit2_9	16	adj.经济的	0
+24	conflict	Unit2_9	16	n.冲突	1
+24	queue	Unit2_9	16	n.队	1
+24	queue up	Unit2_9	16	排队等候	1
+24	desertification	Unit2_9	16	n.沙漠化	0
+25	crop	Unit2_10	16	n.庄稼	1
+25	fence	Unit2_10	16	n.篱笆	1
+25	soil	Unit2_10	16	n.土壤	1
+25	bush	Unit2_10	16	n.灌木	1
+25	decrease	Unit2_10	16	vt.减少	1
+26	drill	Unit2_11	16	n.钻孔	1
+26	measure	Unit2_11	16	n.&v.措施；测量	1
+26	administration	Unit2_11	16	n.管理部门	1
+26	satellite	Unit2_11	16	n.人造卫星	1
+26	pick out	Unit2_11	16	找出	1
+27	typhoon	Unit2_12	16	n.台风	1
+27	flood	Unit2_12	16	n.洪水	1
+27	range	Unit2_12	16	n.范围	1
+27	illegal	Unit2_12	16	adj.违法的	1
+27	under way	Unit2_12	16	进行中	1
+28	conservation	Unit2_13	16	n.保护	1
+28	with regard to	Unit2_13	16	关于	1
+28	appreciate	Unit2_13	16	vt.欣赏	1
+28	climate	Unit2_13	16	n.气候	1
+28	low-carbon	Unit2_13	16	adj.低碳的	1
+29	carbon	Unit2_14	16	n.碳	1
+29	dioxide	Unit2_14	16	n.二氧化物	1
+29	carbon dioxide	Unit2_14	16	二氧化碳	1
+29	let off	Unit2_14	16	排放	1
+29	vehicle	Unit2_14	16	n.车辆	1
+30	petrol	Unit2_15	16	n.汽油	1
+30	engine	Unit2_15	16	n.发动机	1
+30	electrical	Unit2_15	16	adj.电的	1
+30	plant	Unit2_15	16	n.工厂	1
+30	fuel	Unit2_15	16	n.燃料	1
+30	consume	Unit2_15	16	vt.消费	1
+31	particular	Unit2_16	16	adj.特指的	1
+31	in particular	Unit2_16	16	尤其	1
+31	absorb	Unit2_16	16	v.吸收	1
+31	oxygen	Unit2_16	16	n.氧气	1
+31	decade	Unit2_16	16	n.十年	1
+31	do one's part	Unit2_16	16	尽自己的职责	1
+32	clone	Unit3_1	14	v.克隆	1
+32	embryo	Unit3_1	14	n.胚胎	0
+32	on the one hand ... on the other hand ...	Unit3_1	14	一方面...另一方面...	1
+32	tissue	Unit3_1	14	n.（生物）组织;纸巾	1
+32	toy with	Unit3_1	14	戏弄	1
+33	real-life	Unit3_2	14	adj.真实的	1
+33	monster	Unit3_2	14	n.怪物	0
+33	exact	Unit3_2	14	adj.精确的	1
+33	cell	Unit3_2	14	n.细胞	1
+33	mammal	Unit3_2	14	n.哺乳动物	0
+34	Scottish	Unit3_3	14	adj.苏格兰的	0
+34	intention	Unit3_3	14	n.意图	1
+34	anxiety	Unit3_3	14	n.忧虑	1
+34	saleswoman	Unit3_3	14	n.女售货员	1
+34	adopt	Unit3_3	14	v.收养	1
+35	legal	Unit3_4	14	adj.合法的	1
+35	push ahead with	Unit3_4	14	义无反顾地进行	1
+35	Italian	Unit3_4	14	n.意大利人	0
+35	physician	Unit3_4	14	n.医师	1
+35	goat	Unit3_4	14	n.山羊	1
+36	consequence	Unit3_5	14	n.结果	1
+36	harvest	Unit3_5	14	n.收获	1
+36	for sale	Unit3_5	14	供出售	1
+36	transform	Unit3_5	14	vt.变形	1
+36	concept	Unit3_5	14	n.概念	1
+37	crime	Unit3_6	14	n.罪	1
+37	fellow	Unit3_6	14	n.同事	1
+37	profession	Unit3_6	14	n.职业	1
+37	radiation	Unit3_6	14	n.辐射	1
+37	breakthrough	Unit3_6	14	n.突破	1
+38	original	Unit3_7	14	adj.起初的	1
+38	judgement	Unit3_7	14	n.评价	1
+38	get burnt out	Unit3_7	14	耗尽体力	1
+38	relation	Unit3_7	14	n.关系	1
+38	public relations	Unit3_7	14	公共关系	1
+39	follow in one's footsteps	Unit3_8	14	效仿某人	1
+39	conduct	Unit3_8	14	v.实施	1
+39	majority	Unit3_8	14	n.多数	1
+39	summary	Unit3_8	14	n.总结	1
+39	consideration	Unit3_8	14	n.仔细考虑	1
+40	take ... into consideration	Unit3_9	14	认真考虑	1
+40	hunger	Unit3_9	14	n.饥饿	1
+40	tasty	Unit3_9	14	adj.美味的	1
+40	nutrition	Unit3_9	14	n.营养	1
+40	ordinary	Unit3_9	14	adj.普通的	1
+41	reliable	Unit3_10	14	adj.可信赖的	1
+41	accurate	Unit3_10	14	adj.准确的	1
+41	brief	Unit3_10	14	adj.简洁的	1
+41	actual	Unit3_10	14	adj.真实的	1
+41	confirm	Unit3_10	14	v.证实	1
+42	agriculture	Unit3_11	14	n.农业	1
+42	channel	Unit3_11	14	n.隧道	1
+42	favour	Unit3_11	14	n.&v.赞同；恩惠	1
+42	in favour of	Unit3_11	14	赞同	1
+42	point of view	Unit3_11	14	观点	1
+43	catastrophe	Unit3_12	14	n.灾难	1
+43	resource	Unit3_12	14	n.资源	0
+43	acre	Unit3_12	14	n.英亩	1
+43	rainforest	Unit3_12	14	n.雨林	1
+43	income	Unit3_12	14	n.收益	1
+44	genetics	Unit3_13	14	n.遗传学	0
+44	frighten	Unit3_13	14	v.使惊吓	1
+44	modify	Unit3_13	14	vt.调整	0
+44	genetically modified	Unit3_13	14	转基因的	1
+44	insert	Unit3_13	14	vt.插入	1
+45	DNA	Unit3_14	14	abbr.脱氧核糖核酸	0
+45	pest	Unit3_14	14	n.害虫	1
+45	profit	Unit3_14	14	n.&v.利润；获益	1
+45	chain	Unit3_14	14	n.一系列	1
+45	food chain	Unit3_14	14	食物链	1
+45	permission	Unit3_14	14	n.准许	1

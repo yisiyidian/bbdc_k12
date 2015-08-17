@@ -1,217 +1,217 @@
-1	German	unit 1_1	3	adj.德国的	1
-1	blog	unit 1_1	3	n.博客	0
-1	grammar	unit 1_1	3	n.语法	1
-2	sound	unit 1_2	3	n.声音	1
-2	complete	unit 1_2	3	vt.完成	1
-2	hobby	unit 1_2	3	n.爱好	1
-2	country	unit 1_2	3	n.国家	1
-2	age	unit 1_2	3	n.年龄	1
-2	dream	unit 1_2	3	n.梦想	1
-2	everyone	unit 1_2	3	pron.人人	1
-2	Germany	unit 1_2	3	n.德国	1
-2	mountain	unit 1_2	3	n.山	1
-2	elder	unit 1_2	3	adj.年长的	1
-2	friendly	unit 1_2	3	adj.友好的	1
-2	engineer	unit 1_2	3	n.工程师	1
-3	world	unit 1_3	3	n.世界	1
-3	Japan	unit 1_3	3	n.日本	1
-3	flat	unit 1_3	3	n.公寓	1
-3	yourself	unit 1_3	3	pron.你自己	1
-3	US	unit 1_3	3	pron.美国	1
-3	close to	unit 1_3	3	接近	1
-3	go to school	unit 1_3	3	去上学	1
-3	be good at	unit 1_3	3	擅长	1
-3	make friends with	unit 1_3	3	和...交朋友	1
-3	all over	unit 1_3	3	遍及	1
-3	would like to	unit 1_3	3	愿意	1
-4	daily	unit 2_1	3	adj.日常的	1
-4	article	unit 2_1	3	n.文章	1
-4	never	unit 2_1	3	adv.从不	1
-4	table tennis	unit 2_1	3	乒乓球	1
-4	ride	unit 2_1	3	vt.骑	1
-4	usually	unit 2_1	3	adv.通常地	1
-4	so	unit 2_1	3	conj.因此	1
-4	seldom	unit 2_1	3	adv.很少	1
-5	Geography	unit 2_2	3	n.地理	1
-5	break	unit 2_2	3	v.休息	1
-5	bell	unit 2_2	3	n.钟	1
-5	ring	unit 2_2	3	v.响起铃声	1
-5	end	unit 2_2	3	vt.结束	1
-5	band	unit 2_2	3	n.乐队	1
-5	practice	unit 2_2	3	n.练习	1
-5	together	unit 2_2	3	adv.在一起	1
-6	market	unit 2_3	3	n.市场	1
-6	guitar	unit 2_3	3	n.吉它	1
-6	grade	unit 2_3	3	n.年级	1
-6	junior high school	unit 2_3	3	初级中学	1
-6	on foot	unit 2_3	3	步行	1
-6	take part in	unit 2_3	3	参加	1
-6	have a good time	unit 2_3	3	过得愉快	1
-6	go to bed	unit 2_3	3	去睡觉	1
-6	get up	unit 2_3	3	起床	1
-7	Earth	unit 3_1	3	n.地球	1
-7	quiz	unit 3_1	3	n.知识竞赛	1
-7	pattern	unit 3_1	3	n.模式	1
-7	protect	unit 3_1	3	v.保护	1
-7	report	unit 3_1	3	vt.&n.报告	1
-7	part	unit 3_1	3	n.部分	1
-7	land	unit 3_1	3	n.陆地	1
-7	field	unit 3_1	3	n.田野	1
-7	large	unit 3_1	3	adj.大的	1
-7	provide	unit 3_1	3	vi.提供	1
-8	pollution	unit 3_2	3	n.污染	1
-8	burn	unit 3_2	3	vt.燃烧	1
-8	energy	unit 3_2	3	n.能量	1
-8	pollute	unit 3_2	3	v.污染	1
-8	into	unit 3_2	3	prep.到...里面	1
-8	ground	unit 3_2	3	n.地面	1
-8	kill	unit 3_2	3	v.杀死	1
-8	must	unit 3_2	3	aux.必须	1
-8	important	unit 3_2	3	adj.重要的	1
-8	fact	unit 3_2	3	n.事实	1
-9	kilometer	unit 3_3	3	n.千米	1
-9	own	unit 3_3	3	adj.自己的	1
-9	catch	unit 3_3	3	vt.捕捉	1
-9	few	unit 3_3	3	adj.很少	1
-9	away	unit 3_3	3	adv.去别处	1
-9	problem	unit 3_3	3	n.问题	1
-9	provide ... with ...	unit 3_3	3	为...提供...	1
-9	put ... into ...	unit 3_3	3	把...倒入...	1
-9	throw away	unit 3_3	3	扔掉	1
-10	Australia	unit 4_1	3	n.澳大利亚	1
-10	footprint	unit 4_1	3	n.脚印	1
-10	wet	unit 4_1	3	adj.湿的	1
-10	puddle	unit 4_1	3	n.水坑	0
-10	kick	unit 4_1	3	vt.踢	1
-10	town	unit 4_1	3	n.镇	1
-10	blow	unit 4_1	3	vt.吹	1
-10	everything	unit 4_1	3	pron.所有事物	1
-11	trip	unit 4_2	3	n.旅行	1
-11	shine	unit 4_2	3	vi.照耀	1
-11	brightly	unit 4_2	3	adv.明亮地	1
-11	picnic	unit 4_2	3	n.野餐	1
-11	dry	unit 4_2	3	adj.干的	1
-11	snowy	unit 4_2	3	adj.下雪多的	1
-11	spend	unit 4_2	3	v.花	1
-11	relative	unit 4_2	3	adj.亲戚	1
-12	during	unit 4_3	3	prep.在...期间	1
-12	grandparent	unit 4_3	3	n.祖父母	1
-12	packet	unit 4_3	3	n.小包装纸袋	0
-12	take a trip	unit 4_3	3	去旅行	1
-12	go on a picnic	unit 4_3	3	去野餐	1
-12	make snowmen	unit 4_3	3	堆雪人	1
-12	fly kites	unit 4_3	3	放风筝	1
-12	go swimming	unit 4_3	3	去游泳	1
-12	have a picnic	unit 4_3	3	野餐	1
-13	diary	unit 5_1	3	n.日记	1
-13	space	unit 5_1	3	n.太空	1
-13	spaceship	unit 5_1	3	n.宇宙飞船	1
-13	spacesuit	unit 5_1	3	n.宇航服	1
-13	nervous	unit 5_1	3	adj.紧张的	1
-13	leave	unit 5_1	3	v.离开	1
-13	gravity	unit 5_1	3	n.重力	0
-13	able	unit 5_1	3	adj.能	1
-13	float	unit 5_1	3	n.&v.漂浮	0
-13	tie	unit 5_1	3	vt.系	1
-14	ourselves	unit 5_2	3	pron.我们自己	1
-14	without	unit 5_2	3	prep.没有	1
-14	weak	unit 5_2	3	adj.虚弱的	1
-14	breathe	unit 5_2	3	vi.呼吸	1
-14	if	unit 5_2	3	conj.如果	1
-14	camera	unit 5_2	3	n.照相机	1
-14	work	unit 5_2	3	v.运转	1
-14	garden	unit 5_2	3	n.花园	1
-14	rock	unit 5_2	3	n.岩石	1
-14	postcard	unit 5_2	3	n.明信片	1
-15	machine	unit 5_3	3	n.机器	1
-15	return	unit 5_3	3	vt.返回	1
-15	more than	unit 5_3	3	多于	1
-15	be able to	unit 5_3	3	能够	1
-15	have to	unit 5_3	3	不得不	1
-15	so that	unit 5_3	3	以便	1
-15	take photos	unit 5_3	3	拍照	1
-15	as ... as	unit 5_3	3	像...一样	1
-15	that is	unit 5_3	3	也就是说	1
-15	such as	unit 5_3	3	例如	1
-16	Asia	unit 6_1	3	n.亚洲	1
-16	guide	unit 6_1	3	vt.指南	1
-16	area	unit 6_1	3	n.地域	1
-16	traditional	unit 6_1	3	adj.传统的	1
-16	modern	unit 6_1	3	adj.现代的	1
-16	sightseeing	unit 6_1	3	n.观光	1
-16	centre	unit 6_1	3	n.中心	1
-16	fountain	unit 6_1	3	n.喷泉	0
-16	building	unit 6_1	3	n.建筑	1
-17	just	unit 6_2	3	adv.正好	1
-17	across	unit 6_2	3	prep.在...对面	1
-17	light	unit 6_2	3	v.照亮	1
-17	direction	unit 6_2	3	n.方向	1
-17	natural	unit 6_2	3	adj.自然的	1
-17	beauty	unit 6_2	3	n.美	1
-17	bridge	unit 6_2	3	n.桥	1
-17	pond	unit 6_2	3	n.池塘	1
-17	snack	unit 6_2	3	n.小吃	0
-18	outside	unit 6_3	3	prep.在...外面	1
-18	dumpling	unit 6_3	3	n.饺子	1
-18	temple	unit 6_3	3	n.庙	0
-18	travel guide	unit 6_3	3	旅游手册	1
-18	place of interest	unit 6_3	3	名胜	1
-18	in the centre of	unit 6_3	3	在...的中心	1
-18	light up	unit 6_3	3	点亮	1
-18	in the north-west of	unit 6_3	3	在...的西北部	1
-19	fair	unit 7_1	3	n.展览会	1
-19	photography	unit 7_1	3	n.摄影	0
-19	rocket	unit 7_1	3	n.火箭	1
-19	solar	unit 7_1	3	adj.太阳的	0
-19	power	unit 7_1	3	n.能量	1
-19	attend	unit 7_1	3	vt.参加	1
-19	teach	unit 7_1	3	vt.教	1
-19	launch	unit 7_1	3	n.&v.发射	0
-20	disappear	unit 7_2	3	vi.消失	1
-20	surprised	unit 7_2	3	adj.吃惊的	1
-20	another	unit 7_2	3	adj.又一	1
-20	amazing	unit 7_2	3	adj.令人大为惊奇的	1
-20	skill	unit 7_2	3	n.技术	1
-20	boring	unit 7_2	3	adj.令人厌倦的	1
-20	headline	unit 7_2	3	n.大字标题	1
-20	information	unit 7_2	3	n.消息	1
-21	ant	unit 7_3	3	n.蚂蚁	1
-21	butterfly	unit 7_3	3	n.蝴蝶	1
-21	bee	unit 7_3	3	n.蜜蜂	1
-21	recent	unit 7_3	3	adj.近来的	1
-21	learn about	unit 7_3	3	学习	1
-21	all the way	unit 7_3	3	自始至终	1
-21	of course	unit 7_3	3	当然	1
-21	remote control	unit 7_3	3	遥控器	1
-21	look up	unit 7_3	3	查阅	1
-22	unusual	unit 8_1	3	adj.与众不同的	1
-22	interview	unit 8_1	3	vi.采访	1
-22	model	unit 8_1	3	n.模型	1
-22	stamp	unit 8_1	3	n.邮票	1
-22	doorbell	unit 8_1	3	n.门铃	1
-22	front	unit 8_1	3	adj.前面的	1
-22	silver	unit 8_1	3	adj.银色的	1
-22	push	unit 8_1	3	v.推	1
-22	soon	unit 8_1	3	adv.不久	1
-22	grandson	unit 8_1	3	n.孙子	1
-23	granddaughter	unit 8_2	3	n.孙女	1
-23	newspaper	unit 8_2	3	n.报纸	1
-23	inside	unit 8_2	3	adv.向里面	1
-23	everywhere	unit 8_2	3	adv.到处	1
-23	follow	unit 8_2	3	vt.跟随	1
-23	hardly	unit 8_2	3	adv.几乎不	1
-23	space	unit 8_2	3	n.空间	1
-23	free	unit 8_2	3	adj.空闲的	1
-23	should	unit 8_2	3	aux.应该	1
-23	sentence	unit 8_2	3	n.句子	1
-24	magazine	unit 8_3	3	n.杂志	1
-24	something	unit 8_3	3	pron.某物	1
-24	really	unit 8_3	3	adv.确实	1
-24	anything	unit 8_3	3	pron.任何事物	1
-24	ago	unit 8_3	3	adv.以前	1
-24	UK	unit 8_3	3	abbr.英国	1
-24	over	unit 8_3	3	prep.多于	1
-24	living room	unit 8_3	3	起居室	1
-24	be bad for	unit 8_3	3	对...有害的	1
-24	be interested in	unit 8_3	3	对...感兴趣	1
-24	work of art	unit 8_3	3	艺术作品	1
+1	German	unit 1_1	6	adj.德国的	1
+1	blog	unit 1_1	6	n.博客	0
+1	grammar	unit 1_1	6	n.语法	1
+2	sound	unit 1_2	6	n.声音	1
+2	complete	unit 1_2	6	vt.完成	1
+2	hobby	unit 1_2	6	n.爱好	1
+2	country	unit 1_2	6	n.国家	1
+2	age	unit 1_2	6	n.年龄	1
+3	dream	unit 1_3	6	n.梦想	1
+3	everyone	unit 1_3	6	pron.人人	1
+3	Germany	unit 1_3	6	n.德国	1
+3	mountain	unit 1_3	6	n.山	1
+3	elder	unit 1_3	6	adj.年长的	1
+4	friendly	unit 1_4	6	adj.友好的	1
+4	engineer	unit 1_4	6	n.工程师	1
+4	world	unit 1_4	6	n.世界	1
+4	Japan	unit 1_4	6	n.日本	1
+4	flat	unit 1_4	6	n.公寓	1
+5	yourself	unit 1_5	6	pron.你自己	1
+5	US	unit 1_5	6	pron.美国	1
+5	close to	unit 1_5	6	接近	1
+5	go to school	unit 1_5	6	去上学	1
+6	be good at	unit 1_6	6	擅长	1
+6	make friends with	unit 1_6	6	和...交朋友	1
+6	all over	unit 1_6	6	遍及	1
+6	would like to	unit 1_6	6	愿意	1
+7	daily	unit 2_1	5	adj.日常的	1
+7	article	unit 2_1	5	n.文章	1
+7	never	unit 2_1	5	adv.从不	1
+7	table tennis	unit 2_1	5	乒乓球	1
+7	ride	unit 2_1	5	vt.骑	1
+8	usually	unit 2_2	5	adv.通常地	1
+8	so	unit 2_2	5	conj.因此	1
+8	seldom	unit 2_2	5	adv.很少	1
+8	Geography	unit 2_2	5	n.地理	1
+8	break	unit 2_2	5	v.休息	1
+9	bell	unit 2_3	5	n.钟	1
+9	ring	unit 2_3	5	v.响起铃声	1
+9	end	unit 2_3	5	vt.结束	1
+9	band	unit 2_3	5	n.乐队	1
+9	practice	unit 2_3	5	n.练习	1
+10	together	unit 2_4	5	adv.在一起	1
+10	market	unit 2_4	5	n.市场	1
+10	guitar	unit 2_4	5	n.吉它	1
+10	grade	unit 2_4	5	n.年级	1
+10	junior high school	unit 2_4	5	初级中学	1
+11	on foot	unit 2_5	5	步行	1
+11	take part in	unit 2_5	5	参加	1
+11	have a good time	unit 2_5	5	过得愉快	1
+11	go to bed	unit 2_5	5	去睡觉	1
+11	get up	unit 2_5	5	起床	1
+12	Earth	unit 3_1	6	n.地球	1
+12	quiz	unit 3_1	6	n.知识竞赛	1
+12	pattern	unit 3_1	6	n.模式	1
+12	protect	unit 3_1	6	v.保护	1
+12	report	unit 3_1	6	vt.&n.报告	1
+13	part	unit 3_2	6	n.部分	1
+13	land	unit 3_2	6	n.陆地	1
+13	field	unit 3_2	6	n.田野	1
+13	large	unit 3_2	6	adj.大的	1
+13	provide	unit 3_2	6	vi.提供	1
+14	pollution	unit 3_3	6	n.污染	1
+14	burn	unit 3_3	6	vt.燃烧	1
+14	energy	unit 3_3	6	n.能量	1
+14	pollute	unit 3_3	6	v.污染	1
+14	into	unit 3_3	6	prep.到...里面	1
+15	ground	unit 3_4	6	n.地面	1
+15	kill	unit 3_4	6	v.杀死	1
+15	must	unit 3_4	6	aux.必须	1
+15	important	unit 3_4	6	adj.重要的	1
+15	fact	unit 3_4	6	n.事实	1
+16	kilometer	unit 3_5	6	n.千米	1
+16	own	unit 3_5	6	adj.自己的	1
+16	catch	unit 3_5	6	vt.捕捉	1
+16	few	unit 3_5	6	adj.很少	1
+16	away	unit 3_5	6	adv.去别处	1
+17	problem	unit 3_6	6	n.问题	1
+17	provide ... with ...	unit 3_6	6	为...提供...	1
+17	put ... into ...	unit 3_6	6	把...倒入...	1
+17	throw away	unit 3_6	6	扔掉	1
+18	Australia	unit 4_1	5	n.澳大利亚	1
+18	footprint	unit 4_1	5	n.脚印	1
+18	wet	unit 4_1	5	adj.湿的	1
+18	puddle	unit 4_1	5	n.水坑	0
+18	kick	unit 4_1	5	vt.踢	1
+19	town	unit 4_2	5	n.镇	1
+19	blow	unit 4_2	5	vt.吹	1
+19	everything	unit 4_2	5	pron.所有事物	1
+19	trip	unit 4_2	5	n.旅行	1
+19	shine	unit 4_2	5	vi.照耀	1
+20	brightly	unit 4_3	5	adv.明亮地	1
+20	picnic	unit 4_3	5	n.野餐	1
+20	dry	unit 4_3	5	adj.干的	1
+20	snowy	unit 4_3	5	adj.下雪多的	1
+20	spend	unit 4_3	5	v.花	1
+21	relative	unit 4_4	5	adj.亲戚	1
+21	during	unit 4_4	5	prep.在...期间	1
+21	grandparent	unit 4_4	5	n.祖父母	1
+21	packet	unit 4_4	5	n.小包装纸袋	0
+21	take a trip	unit 4_4	5	去旅行	1
+22	go on a picnic	unit 4_5	5	去野餐	1
+22	make snowmen	unit 4_5	5	堆雪人	1
+22	fly kites	unit 4_5	5	放风筝	1
+22	go swimming	unit 4_5	5	去游泳	1
+22	have a picnic	unit 4_5	5	野餐	1
+23	diary	unit 5_1	6	n.日记	1
+23	space	unit 5_1	6	n.太空	1
+23	spaceship	unit 5_1	6	n.宇宙飞船	1
+23	spacesuit	unit 5_1	6	n.宇航服	1
+23	nervous	unit 5_1	6	adj.紧张的	1
+24	leave	unit 5_2	6	v.离开	1
+24	gravity	unit 5_2	6	n.重力	0
+24	able	unit 5_2	6	adj.能	1
+24	float	unit 5_2	6	n.&v.漂浮	0
+24	tie	unit 5_2	6	vt.系	1
+25	ourselves	unit 5_3	6	pron.我们自己	1
+25	without	unit 5_3	6	prep.没有	1
+25	weak	unit 5_3	6	adj.虚弱的	1
+25	breathe	unit 5_3	6	vi.呼吸	1
+25	if	unit 5_3	6	conj.如果	1
+26	camera	unit 5_4	6	n.照相机	1
+26	work	unit 5_4	6	v.运转	1
+26	garden	unit 5_4	6	n.花园	1
+26	rock	unit 5_4	6	n.岩石	1
+26	postcard	unit 5_4	6	n.明信片	1
+27	machine	unit 5_5	6	n.机器	1
+27	return	unit 5_5	6	vt.返回	1
+27	more than	unit 5_5	6	多于	1
+27	be able to	unit 5_5	6	能够	1
+27	have to	unit 5_5	6	不得不	1
+28	so that	unit 5_6	6	以便	1
+28	take photos	unit 5_6	6	拍照	1
+28	as ... as	unit 5_6	6	像...一样	1
+28	that is	unit 5_6	6	也就是说	1
+28	such as	unit 5_6	6	例如	1
+29	Asia	unit 6_1	5	n.亚洲	1
+29	guide	unit 6_1	5	vt.指南	1
+29	area	unit 6_1	5	n.地域	1
+29	traditional	unit 6_1	5	adj.传统的	1
+29	modern	unit 6_1	5	adj.现代的	1
+30	sightseeing	unit 6_2	5	n.观光	1
+30	centre	unit 6_2	5	n.中心	1
+30	fountain	unit 6_2	5	n.喷泉	0
+30	building	unit 6_2	5	n.建筑	1
+30	just	unit 6_2	5	adv.正好	1
+31	across	unit 6_3	5	prep.在...对面	1
+31	light	unit 6_3	5	v.照亮	1
+31	direction	unit 6_3	5	n.方向	1
+31	natural	unit 6_3	5	adj.自然的	1
+31	beauty	unit 6_3	5	n.美	1
+32	bridge	unit 6_4	5	n.桥	1
+32	pond	unit 6_4	5	n.池塘	1
+32	snack	unit 6_4	5	n.小吃	0
+32	outside	unit 6_4	5	prep.在...外面	1
+32	dumpling	unit 6_4	5	n.饺子	1
+33	temple	unit 6_5	5	n.庙	0
+33	travel guide	unit 6_5	5	旅游手册	1
+33	place of interest	unit 6_5	5	名胜	1
+33	in the centre of	unit 6_5	5	在...的中心	1
+33	light up	unit 6_5	5	点亮	1
+33	in the north-west of	unit 6_5	5	在...的西北部	1
+34	fair	unit 7_1	5	n.展览会	1
+34	photography	unit 7_1	5	n.摄影	0
+34	rocket	unit 7_1	5	n.火箭	1
+34	solar	unit 7_1	5	adj.太阳的	0
+34	power	unit 7_1	5	n.能量	1
+35	attend	unit 7_2	5	vt.参加	1
+35	teach	unit 7_2	5	vt.教	1
+35	launch	unit 7_2	5	n.&v.发射	0
+35	disappear	unit 7_2	5	vi.消失	1
+35	surprised	unit 7_2	5	adj.吃惊的	1
+36	another	unit 7_3	5	adj.又一	1
+36	amazing	unit 7_3	5	adj.令人大为惊奇的	1
+36	skill	unit 7_3	5	n.技术	1
+36	boring	unit 7_3	5	adj.令人厌倦的	1
+36	headline	unit 7_3	5	n.大字标题	1
+37	information	unit 7_4	5	n.消息	1
+37	ant	unit 7_4	5	n.蚂蚁	1
+37	butterfly	unit 7_4	5	n.蝴蝶	1
+37	bee	unit 7_4	5	n.蜜蜂	1
+37	recent	unit 7_4	5	adj.近来的	1
+38	learn about	unit 7_5	5	学习	1
+38	all the way	unit 7_5	5	自始至终	1
+38	of course	unit 7_5	5	当然	1
+38	remote control	unit 7_5	5	遥控器	1
+38	look up	unit 7_5	5	查阅	1
+39	unusual	unit 8_1	6	adj.与众不同的	1
+39	interview	unit 8_1	6	vi.采访	1
+39	model	unit 8_1	6	n.模型	1
+39	stamp	unit 8_1	6	n.邮票	1
+39	doorbell	unit 8_1	6	n.门铃	1
+40	front	unit 8_2	6	adj.前面的	1
+40	silver	unit 8_2	6	adj.银色的	1
+40	push	unit 8_2	6	v.推	1
+40	soon	unit 8_2	6	adv.不久	1
+40	grandson	unit 8_2	6	n.孙子	1
+41	granddaughter	unit 8_3	6	n.孙女	1
+41	newspaper	unit 8_3	6	n.报纸	1
+41	inside	unit 8_3	6	adv.向里面	1
+41	everywhere	unit 8_3	6	adv.到处	1
+41	follow	unit 8_3	6	vt.跟随	1
+42	hardly	unit 8_4	6	adv.几乎不	1
+42	space	unit 8_4	6	n.空间	1
+42	free	unit 8_4	6	adj.空闲的	1
+42	should	unit 8_4	6	aux.应该	1
+42	sentence	unit 8_4	6	n.句子	1
+43	magazine	unit 8_5	6	n.杂志	1
+43	something	unit 8_5	6	pron.某物	1
+43	really	unit 8_5	6	adv.确实	1
+43	anything	unit 8_5	6	pron.任何事物	1
+43	ago	unit 8_5	6	adv.以前	1
+44	UK	unit 8_6	6	abbr.英国	1
+44	over	unit 8_6	6	prep.多于	1
+44	living room	unit 8_6	6	起居室	1
+44	be bad for	unit 8_6	6	对...有害的	1
+44	be interested in	unit 8_6	6	对...感兴趣	1
+44	work of art	unit 8_6	6	艺术作品	1

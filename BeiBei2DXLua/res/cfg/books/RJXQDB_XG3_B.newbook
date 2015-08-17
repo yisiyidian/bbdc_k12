@@ -8,77 +8,77 @@
 2	computer class	Unit 1_2	2	计算机课	1
 2	we	Unit 1_2	2	pron.我们	0
 2	that	Unit 1_2	2	pron.那	0
-3	classroom	Unit 2_1	1	n.教室	1
-3	library	Unit 2_1	1	n.图书馆	1
-3	toilet	Unit 2_1	1	n.洗手间，厕所	1
-3	playground	Unit 2_1	1	n.操场	1
-3	first	Unit 2_1	1	n.&adj.第一的	1
-3	second	Unit 2_1	1	n.&adj.第二的	1
-3	third	Unit 2_1	1	n.&adj.第三的	1
-3	floor	Unit 2_1	1	n.层	1
-3	room	Unit 2_1	1	n.房间	0
-3	our	Unit 2_1	1	pron.我们的	0
-3	they	Unit 2_1	1	pron.他们	0
-3	chair	Unit 2_1	1	n.椅子	0
-3	desk	Unit 2_1	1	n.书桌	0
-3	background	Unit 2_1	1	n.黑板	0
-4	afterschool	Unit 3_1	2	放学后	1
-4	play sports	Unit 3_1	2	做运动	1
-4	draw pictures	Unit 3_1	2	画画	1
-4	play chess	Unit 3_1	2	下棋	1
-4	dance	Unit 3_1	2	vi.跳舞	1
-4	sing songs	Unit 3_1	2	唱歌	1
-4	read books	Unit 3_1	2	读书	1
-4	really	Unit 3_1	2	adv.确实	0
-4	tomorrow	Unit 3_1	2	n.&adv.明天	0
-5	wake up	Unit 3_2	2	叫醒	0
-5	be back	Unit 3_2	2	回来	0
-5	play football	Unit 3_2	2	踢足球	0
-5	fly a kite	Unit 3_2	2	放风筝	0
-5	ride a bike	Unit 3_2	2	骑自行车	0
-5	swim	Unit 3_2	2	v.游泳	0
-5	make a model plane	Unit 3_2	2	做飞机模型	0
-5	make s snowman	Unit 3_2	2	堆雪人	0
-6	family	Unit 4_1	2	n.家庭	1
-6	uncle	Unit 4_1	2	n.叔叔	1
-6	aunt	Unit 4_1	2	n.阿姨	1
-6	cousin	Unit 4_1	2	n.堂兄弟	1
-6	handsome	Unit 4_1	2	adj.英俊的	1
-6	beautiful	Unit 4_1	2	adj.美丽的	1
-6	lost	Unit 4_1	2	v.遗失	0
-6	water bottle	Unit 4_1	2	水瓶	0
-6	know	Unit 4_1	2	vt.知道	0
-7	OK	Unit 4_2	2	adj.好的	0
-7	much	Unit 4_2	2	adv.非常	0
-7	welcome	Unit 4_2	2	adj.受欢迎的	0
-7	grandfather	Unit 4_2	2	n.祖父	0
-7	grandmother	Unit 4_2	2	n.祖母	0
-7	father	Unit 4_2	2	n.爸爸	0
-7	mother	Unit 4_2	2	n.妈妈	0
-7	brother	Unit 4_2	2	n.兄弟	0
-7	sister	Unit 4_2	2	n.姐妹	0
-8	cooking dinner	Unit 5_1	1	正在做饭	1
-8	walking the dog	Unit 5_1	1	正在遛狗	1
-8	watering the plants	Unit 5_1	1	正在给植物浇水	1
-8	cleaning the room	Unit 5_1	1	正在打扫房间	1
-8	listening to music	Unit 5_1	1	正在听音乐	1
-8	watching TV	Unit 5_1	1	正在看电视	1
-8	feeding the fish	Unit 5_1	1	正在喂鱼	1
-8	play with	Unit 5_1	1	与...玩耍	0
-8	in one hour	Unit 5_1	1	一小时之后	0
-8	everyone	Unit 5_1	1	pron.每人	0
-8	children	Unit 5_1	1	n.孩子们	0
-8	run	Unit 5_1	1	vi.跑	0
-9	home	Unit 6_1	1	n.家庭	1
-9	bedroom	Unit 6_1	1	n.卧室	1
-9	living room	Unit 6_1	1	客厅	1
-9	bathroom	Unit 6_1	1	n.浴室	1
-9	dinning room	Unit 6_1	1	餐厅	1
-9	study	Unit 6_1	1	n.书房	1
-9	kitchen	Unit 6_1	1	n.厨房	1
-9	for rent	Unit 6_1	1	供出租	0
-9	sofa	Unit 6_1	1	n.沙发	0
-9	light	Unit 6_1	1	n.灯	0
-9	bed	Unit 6_1	1	n.床	0
-9	door	Unit 6_1	1	n.门	0
-9	box	Unit 6_1	1	n.箱子；盒子	0
+3	classroom	Unit 2_1	3	n.教室	1
+3	library	Unit 2_1	3	n.图书馆	1
+3	toilet	Unit 2_1	3	n.洗手间，厕所	1
+3	playground	Unit 2_1	3	n.操场	1
+3	first	Unit 2_1	3	n.&adj.第一的	1
+4	second	Unit 2_2	3	n.&adj.第二的	1
+4	third	Unit 2_2	3	n.&adj.第三的	1
+4	floor	Unit 2_2	3	n.层	1
+4	room	Unit 2_2	3	n.房间	0
+4	our	Unit 2_2	3	pron.我们的	0
+5	they	Unit 2_3	3	pron.他们	0
+5	chair	Unit 2_3	3	n.椅子	0
+5	desk	Unit 2_3	3	n.书桌	0
+5	background	Unit 2_3	3	n.黑板	0
+6	afterschool	Unit 3_1	3	放学后	1
+6	play sports	Unit 3_1	3	做运动	1
+6	draw pictures	Unit 3_1	3	画画	1
+6	play chess	Unit 3_1	3	下棋	1
+6	dance	Unit 3_1	3	vi.跳舞	1
+6	sing songs	Unit 3_1	3	唱歌	1
+7	read books	Unit 3_2	3	读书	1
+7	really	Unit 3_2	3	adv.确实	0
+7	tomorrow	Unit 3_2	3	n.&adv.明天	0
+7	wake up	Unit 3_2	3	叫醒	0
+7	be back	Unit 3_2	3	回来	0
+7	play football	Unit 3_2	3	踢足球	0
+8	fly a kite	Unit 3_3	3	放风筝	0
+8	ride a bike	Unit 3_3	3	骑自行车	0
+8	swim	Unit 3_3	3	v.游泳	0
+8	make a model plane	Unit 3_3	3	做飞机模型	0
+8	make s snowman	Unit 3_3	3	堆雪人	0
+9	family	Unit 4_1	4	n.家庭	1
+9	uncle	Unit 4_1	4	n.叔叔	1
+9	aunt	Unit 4_1	4	n.阿姨	1
+9	cousin	Unit 4_1	4	n.堂兄弟	1
+9	handsome	Unit 4_1	4	adj.英俊的	1
+10	beautiful	Unit 4_2	4	adj.美丽的	1
+10	lost	Unit 4_2	4	v.遗失	0
+10	water bottle	Unit 4_2	4	水瓶	0
+10	know	Unit 4_2	4	vt.知道	0
+10	OK	Unit 4_2	4	adj.好的	0
+11	much	Unit 4_3	4	adv.非常	0
+11	welcome	Unit 4_3	4	adj.受欢迎的	0
+11	grandfather	Unit 4_3	4	n.祖父	0
+11	grandmother	Unit 4_3	4	n.祖母	0
+12	father	Unit 4_4	4	n.爸爸	0
+12	mother	Unit 4_4	4	n.妈妈	0
+12	brother	Unit 4_4	4	n.兄弟	0
+12	sister	Unit 4_4	4	n.姐妹	0
+13	cooking dinner	Unit 5_1	2	正在做饭	1
+13	walking the dog	Unit 5_1	2	正在遛狗	1
+13	watering the plants	Unit 5_1	2	正在给植物浇水	1
+13	cleaning the room	Unit 5_1	2	正在打扫房间	1
+13	listening to music	Unit 5_1	2	正在听音乐	1
+13	watching TV	Unit 5_1	2	正在看电视	1
+14	feeding the fish	Unit 5_2	2	正在喂鱼	1
+14	play with	Unit 5_2	2	与...玩耍	0
+14	in one hour	Unit 5_2	2	一小时之后	0
+14	everyone	Unit 5_2	2	pron.每人	0
+14	children	Unit 5_2	2	n.孩子们	0
+14	run	Unit 5_2	2	vi.跑	0
+15	home	Unit 6_1	3	n.家庭	1
+15	bedroom	Unit 6_1	3	n.卧室	1
+15	living room	Unit 6_1	3	客厅	1
+15	bathroom	Unit 6_1	3	n.浴室	1
+16	dinning room	Unit 6_2	3	餐厅	1
+16	study	Unit 6_2	3	n.书房	1
+16	kitchen	Unit 6_2	3	n.厨房	1
+16	for rent	Unit 6_2	3	供出租	0
+17	sofa	Unit 6_3	3	n.沙发	0
+17	light	Unit 6_3	3	n.灯	0
+17	bed	Unit 6_3	3	n.床	0
+17	door	Unit 6_3	3	n.门	0
+17	box	Unit 6_3	3	n.箱子；盒子	0

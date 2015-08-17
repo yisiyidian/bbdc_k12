@@ -1,104 +1,104 @@
-1	my	Unit 1_1	2	pron.我的	1
-1	your	Unit 1_1	2	pron.你的	1
-1	name	Unit 1_1	2	n.名字	1
-2	new	Unit 1_2	2	adj.新的	1
-2	year	Unit 1_2	2	n.年	1
-2	old	Unit 1_2	2	adj.年老的	1
-2	how old	Unit 1_2	2	多大	0
-2	class	Unit 1_2	2	n.班级	0
-2	grade	Unit 1_2	2	n.年纪	0
-2	age	Unit 1_2	2	n.年龄	0
-2	dear	Unit 1_2	2	adj.亲爱的	0
-3	body	Unit 2_1	2	n.身体	1
-3	head	Unit 2_1	2	n.头	1
-3	hair	Unit 2_1	2	n.头发	1
-3	arm	Unit 2_1	2	n.胳膊	1
-3	hand	Unit 2_1	2	n.手	1
-3	leg	Unit 2_1	2	n.腿	1
-3	foot	Unit 2_1	2	n.脚	1
-3	feet	Unit 2_1	2	n.脚（复数）	0
-3	the matter	Unit 2_1	2	困难	0
-3	hurt	Unit 2_1	2	vt.疼痛	0
-3	help	Unit 2_1	2	vt.帮助	0
-3	bad	Unit 2_1	2	adj.坏的	0
-4	bite	Unit 2_2	2	v.咬	0
-4	tongue	Unit 2_2	2	n.舌头	0
-4	kick	Unit 2_2	2	vt.踢	0
-4	morning	Unit 2_2	2	n.早晨	0
-4	afternoon	Unit 2_2	2	n.下午	0
-4	summary	Unit 2_2	2	n.总结	0
-4	face	Unit 2_2	2	n.脸	0
-4	eye	Unit 2_2	2	n.眼睛	0
-4	nose	Unit 2_2	2	n.鼻子	0
-4	mouth	Unit 2_2	2	n.嘴巴	0
-4	ear	Unit 2_2	2	n.耳朵	0
-5	bread	Unit 3_1	2	n.面包	1
-5	cake	Unit 3_1	2	n.蛋糕	1
-5	fruit	Unit 3_1	2	n.水果	1
-5	ice-cream	Unit 3_1	2	n.冰激凌	1
-5	potato	Unit 3_1	2	n.土豆	1
-5	tomato	Unit 3_1	2	n.西红柿	1
-5	meat	Unit 3_1	2	n.肉	1
-5	for	Unit 3_1	2	prep.当作	0
-5	shopping list	Unit 3_1	2	购物单	0
-6	cola	Unit 3_2	2	n.可乐	0
-6	buy	Unit 3_2	2	vt.买	0
-6	rice	Unit 3_2	2	n.米饭	0
-6	noodles	Unit 3_2	2	n.面条	0
-6	vegetables	Unit 3_2	2	n.蔬菜	0
-6	fish	Unit 3_2	2	n.鱼肉	0
-6	chicken	Unit 3_2	2	n.鸡肉	0
-6	egg	Unit 3_2	2	n.鸡蛋	0
-7	duck	Unit 4_1	2	n.鸭子	1
-7	chicken	Unit 4_1	2	n.小鸡	1
-7	rabbit	Unit 4_1	2	n.兔子	1
-7	pet	Unit 4_1	2	n.宠物	1
-7	snake	Unit 4_1	2	n.蛇	1
-7	turtle	Unit 4_1	2	n.海龟	1
-7	small	Unit 4_1	2	adj.小的	1
-7	long	Unit 4_1	2	adj.长的	1
-7	look for	Unit 4_1	2	寻找	0
-7	tail	Unit 4_1	2	n.尾巴	0
-8	dance	Unit 4_2	2	vi.跳舞	0
-8	cat	Unit 4_2	2	n.猫	0
-8	dog	Unit 4_2	2	n.狗	0
-8	bird	Unit 4_2	2	n.鸟	0
-8	fish	Unit 4_2	2	n.鱼	0
-8	monkey	Unit 4_2	2	n.猴子	0
-8	tiger	Unit 4_2	2	n.老虎	0
-8	big	Unit 4_2	2	adj.大的	0
-8	short	Unit 4_2	2	adj.短的	0
-9	cap	Unit 5_1	2	n.帽子	1
-9	coat	Unit 5_1	2	n.大衣	1
-9	shoes	Unit 5_1	2	n.鞋	1
-9	sweater	Unit 5_1	2	n.毛衣	1
-9	jacket	Unit 5_1	2	n.夹克衫	1
-9	gloves	Unit 5_1	2	n.手套	1
-9	trousers	Unit 5_1	2	n.裤子	1
-9	should	Unit 5_1	2	aux.应该	0
-9	wear	Unit 5_1	2	vt.穿	0
-10	week	Unit 5_2	2	n.星期	0
-10	soon	Unit 5_2	2	adv.很快	0
-10	look forward to	Unit 5_2	2	期待	0
-10	T-shirt	Unit 5_2	2	n.T恤衫	0
-10	shorts	Unit 5_2	2	n.短裤	0
-10	socks	Unit 5_2	2	n.短袜	0
-10	skirt	Unit 5_2	2	n.裙子	0
-10	dress	Unit 5_2	2	n.连衣裙	0
-10	shirt	Unit 5_2	2	n.衬衫	0
-11	January	Unit6_1	2	n.一月	1
-11	February	Unit6_1	2	n.二月	1
-11	March	Unit6_1	2	n.三月	1
-11	April	Unit6_1	2	n.四月	1
-11	May	Unit6_1	2	n.五月	1
-11	June	Unit6_1	2	n.六月	1
-11	July	Unit6_1	2	n.七月	1
-11	August	Unit6_1	2	n.八月	1
-12	September	Unit6_2	2	n.九月	1
-12	October	Unit6_2	2	n.十月	1
-12	November	Unit6_2	2	n.十一月	1
-12	December	Unit6_2	2	n.十二月	1
-12	birthday	Unit6_2	2	n.生日	0
-12	first	Unit6_2	2	n.&adv.第一	0
-12	party	Unit6_2	2	n.聚会	0
-12	delicious	Unit6_2	2	adj.美味的	0
+1	my	Unit 1_1	3	pron.我的	1
+1	your	Unit 1_1	3	pron.你的	1
+1	name	Unit 1_1	3	n.名字	1
+2	new	Unit 1_2	3	adj.新的	1
+2	year	Unit 1_2	3	n.年	1
+2	old	Unit 1_2	3	adj.年老的	1
+2	how old	Unit 1_2	3	多大	0
+3	class	Unit 1_3	3	n.班级	0
+3	grade	Unit 1_3	3	n.年纪	0
+3	age	Unit 1_3	3	n.年龄	0
+3	dear	Unit 1_3	3	adj.亲爱的	0
+4	body	Unit 2_1	5	n.身体	1
+4	head	Unit 2_1	5	n.头	1
+4	hair	Unit 2_1	5	n.头发	1
+4	arm	Unit 2_1	5	n.胳膊	1
+4	hand	Unit 2_1	5	n.手	1
+5	leg	Unit 2_2	5	n.腿	1
+5	foot	Unit 2_2	5	n.脚	1
+5	feet	Unit 2_2	5	n.脚（复数）	0
+5	the matter	Unit 2_2	5	困难	0
+5	hurt	Unit 2_2	5	vt.疼痛	0
+6	help	Unit 2_3	5	vt.帮助	0
+6	bad	Unit 2_3	5	adj.坏的	0
+6	bite	Unit 2_3	5	v.咬	0
+6	tongue	Unit 2_3	5	n.舌头	0
+6	kick	Unit 2_3	5	vt.踢	0
+7	morning	Unit 2_4	5	n.早晨	0
+7	afternoon	Unit 2_4	5	n.下午	0
+7	summary	Unit 2_4	5	n.总结	0
+7	face	Unit 2_4	5	n.脸	0
+8	eye	Unit 2_5	5	n.眼睛	0
+8	nose	Unit 2_5	5	n.鼻子	0
+8	mouth	Unit 2_5	5	n.嘴巴	0
+8	ear	Unit 2_5	5	n.耳朵	0
+9	bread	Unit 3_1	3	n.面包	1
+9	cake	Unit 3_1	3	n.蛋糕	1
+9	fruit	Unit 3_1	3	n.水果	1
+9	ice-cream	Unit 3_1	3	n.冰激凌	1
+9	potato	Unit 3_1	3	n.土豆	1
+9	tomato	Unit 3_1	3	n.西红柿	1
+10	meat	Unit 3_2	3	n.肉	1
+10	for	Unit 3_2	3	prep.当作	0
+10	shopping list	Unit 3_2	3	购物单	0
+10	cola	Unit 3_2	3	n.可乐	0
+10	buy	Unit 3_2	3	vt.买	0
+10	rice	Unit 3_2	3	n.米饭	0
+11	noodles	Unit 3_3	3	n.面条	0
+11	vegetables	Unit 3_3	3	n.蔬菜	0
+11	fish	Unit 3_3	3	n.鱼肉	0
+11	chicken	Unit 3_3	3	n.鸡肉	0
+11	egg	Unit 3_3	3	n.鸡蛋	0
+12	duck	Unit 4_1	4	n.鸭子	1
+12	chicken	Unit 4_1	4	n.小鸡	1
+12	rabbit	Unit 4_1	4	n.兔子	1
+12	pet	Unit 4_1	4	n.宠物	1
+12	snake	Unit 4_1	4	n.蛇	1
+13	turtle	Unit 4_2	4	n.海龟	1
+13	small	Unit 4_2	4	adj.小的	1
+13	long	Unit 4_2	4	adj.长的	1
+13	look for	Unit 4_2	4	寻找	0
+13	tail	Unit 4_2	4	n.尾巴	0
+14	dance	Unit 4_3	4	vi.跳舞	0
+14	cat	Unit 4_3	4	n.猫	0
+14	dog	Unit 4_3	4	n.狗	0
+14	bird	Unit 4_3	4	n.鸟	0
+14	fish	Unit 4_3	4	n.鱼	0
+15	monkey	Unit 4_4	4	n.猴子	0
+15	tiger	Unit 4_4	4	n.老虎	0
+15	big	Unit 4_4	4	adj.大的	0
+15	short	Unit 4_4	4	adj.短的	0
+16	cap	Unit 5_1	4	n.帽子	1
+16	coat	Unit 5_1	4	n.大衣	1
+16	shoes	Unit 5_1	4	n.鞋	1
+16	sweater	Unit 5_1	4	n.毛衣	1
+16	jacket	Unit 5_1	4	n.夹克衫	1
+17	gloves	Unit 5_2	4	n.手套	1
+17	trousers	Unit 5_2	4	n.裤子	1
+17	should	Unit 5_2	4	aux.应该	0
+17	wear	Unit 5_2	4	vt.穿	0
+17	week	Unit 5_2	4	n.星期	0
+18	soon	Unit 5_3	4	adv.很快	0
+18	look forward to	Unit 5_3	4	期待	0
+18	T-shirt	Unit 5_3	4	n.T恤衫	0
+18	shorts	Unit 5_3	4	n.短裤	0
+19	socks	Unit 5_4	4	n.短袜	0
+19	skirt	Unit 5_4	4	n.裙子	0
+19	dress	Unit 5_4	4	n.连衣裙	0
+19	shirt	Unit 5_4	4	n.衬衫	0
+20	January	Unit6_1	3	n.一月	1
+20	February	Unit6_1	3	n.二月	1
+20	March	Unit6_1	3	n.三月	1
+20	April	Unit6_1	3	n.四月	1
+20	May	Unit6_1	3	n.五月	1
+21	June	Unit6_2	3	n.六月	1
+21	July	Unit6_2	3	n.七月	1
+21	August	Unit6_2	3	n.八月	1
+21	September	Unit6_2	3	n.九月	1
+21	October	Unit6_2	3	n.十月	1
+22	November	Unit6_3	3	n.十一月	1
+22	December	Unit6_3	3	n.十二月	1
+22	birthday	Unit6_3	3	n.生日	0
+22	first	Unit6_3	3	n.&adv.第一	0
+22	party	Unit6_3	3	n.聚会	0
+22	delicious	Unit6_3	3	adj.美味的	0

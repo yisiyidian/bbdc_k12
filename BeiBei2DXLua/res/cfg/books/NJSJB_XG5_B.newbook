@@ -1,150 +1,150 @@
-1	prince	Unit 1_1	3	n.王子	1
-1	fairy	Unit 1_1	3	n.仙女	1
-1	why	Unit 1_1	3	adv.为什么	1
-2	because	Unit 1_2	3	conj.因为	1
-2	clothes	Unit 1_2	3	n.衣服	1
-2	let	Unit 1_2	3	vt.让	1
-2	put on	Unit 1_2	3	穿上	1
-2	before	Unit 1_2	3	prep.在...以前	1
-2	have to	Unit 1_2	3	不得不	1
-2	try on	Unit 1_2	3	试穿	1
-2	fit	Unit 1_2	3	v.合身	1
-3	take off	Unit 1_3	3	脱下	1
-3	mushroom	Unit 1_3	3	n.蘑菇	1
-3	late	Unit 1_3	3	adj.迟的	1
-3	pick	Unit 1_3	3	vt.摘	1
-3	understand	Unit 1_3	3	vt.理解	1
-3	be bad for	Unit 1_3	3	有害的	1
-3	leave ... behind	Unit 1_3	3	留下	1
-4	far from	Unit 2_1	2	离...远	1
-4	moon	Unit 2_1	2	n.月亮	1
-4	street	Unit 2_1	2	n.街道	1
-4	near	Unit 2_1	2	prep.在...附近	1
-4	city	Unit 2_1	2	n.城市	1
-4	by ...	Unit 2_1	2	乘	1
-4	bus	Unit 2_1	2	n.公共汽车	1
-4	on foot	Unit 2_1	2	步行	1
-4	metro	Unit 2_1	2	n.地铁	1
-5	taxi	Unit 2_2	2	n.出租车	1
-5	bike	Unit 2_2	2	n.自行车	1
-5	plane	Unit 2_2	2	n.飞机	1
-5	ship	Unit 2_2	2	n.轮船	1
-5	train	Unit 2_2	2	n.火车	1
-5	ride	Unit 2_2	2	vt.骑车	1
-5	show	Unit 2_2	2	v.给...看	1
-5	young	Unit 2_2	2	adj.年幼的	1
-5	basket	Unit 2_2	2	n.篮子	1
-6	ask the way	Unit 3_1	3	问路	1
-6	get to	Unit 3_1	3	到达	1
-6	take	Unit 3_1	3	vt.搭乘	1
-6	get on	Unit 3_1	3	上车	1
-6	get off	Unit 3_1	3	下车	1
-6	walk	Unit 3_1	3	vi.步行	1
-6	bookshop	Unit 3_1	3	n.书店	1
-6	next to	Unit 3_1	3	在...旁边	1
-7	sun	Unit 3_2	3	n.太阳	1
-7	ask ... for help	Unit 3_2	3	向...求助	1
-7	excuse me	Unit 3_2	3	劳驾	1
-7	along	Unit 3_2	3	prep.沿着	1
-7	turn right	Unit 3_2	3	向右转	1
-7	traffic light	Unit 3_2	3	交通灯	1
-7	on your right	Unit 3_2	3	在你的右侧	1
-7	cinema	Unit 3_2	3	n.电影院	1
-8	hospital	Unit 3_3	3	n.医院	1
-8	shop	Unit 3_3	3	n.商店	1
-8	zoo	Unit 3_3	3	n.动物园	1
-8	turn left	Unit 3_3	3	向左转	1
-8	supermarket	Unit 3_3	3	n.超市	1
-8	film	Unit 3_3	3	n.电影	1
-8	stop	Unit 3_3	3	v.车站	1
-8	full	Unit 3_3	3	adj.满的	1
-8	over	Unit 3_3	3	adv.结束了	1
-9	see the doctor	Unit 4_1	2	看病	1
-9	feel	Unit 4_1	2	vt.感觉	1
-9	check	Unit 4_1	2	vt.检查	1
-9	should	Unit 4_1	2	aux.应该	1
-9	have a rest	Unit 4_1	2	休息	1
-9	take medicine	Unit 4_1	2	吃药	1
-9	drink water	Unit 4_1	2	喝水	1
-9	toothache	Unit 4_1	2	n.牙疼	1
-10	dentist	Unit 4_2	2	n.牙医	1
-10	anything	Unit 4_2	2	pron.任何东西	1
-10	brush one's teeth	Unit 4_2	2	刷牙	1
-10	bedtime	Unit 4_2	2	n.就寝时间	1
-10	giraffe	Unit 4_2	2	n.长颈鹿	1
-10	point at	Unit 4_2	2	指向	1
-10	neck	Unit 4_2	2	n.脖子	1
-11	parent	Unit 5_1	1	n.父或母	1
-11	clean	Unit 5_1	1	vt.洗	1
-11	cook	Unit 5_1	1	vi.烧	1
-11	sweep the floor	Unit 5_1	1	扫地	1
-11	busy	Unit 5_1	1	adj.忙	1
-11	wash the dishes	Unit 5_1	1	洗碗	1
-11	make the bed	Unit 5_1	1	整理床铺	1
-11	grow	Unit 5_1	1	vt.种植	1
-11	garden	Unit 5_1	1	n.花园	1
-11	sweet	Unit 5_1	1	adj.甜的	1
-11	pest	Unit 5_1	1	n.害虫	1
-11	ladybird	Unit 5_1	1	n.瓢虫	1
-11	go away	Unit 5_1	1	离开	1
-12	game	Unit 6_1	2	n.比赛	1
-12	smell	Unit 6_1	2	vt.闻起来	1
-12	meat	Unit 6_1	2	n.肉	1
-12	vegetable	Unit 6_1	2	n.蔬菜	1
-12	tomato	Unit 6_1	2	n.西红柿	1
-12	potato	Unit 6_1	2	n.土豆	1
-12	I can't wait	Unit 6_1	2	我等不及了	1
-12	look for	Unit 6_1	2	寻找	1
-12	ready	Unit 6_1	2	adj.准备好	1
-13	yummy	Unit 6_2	2	adj.好吃的	1
-13	love	Unit 6_2	2	vt.喜爱	1
-13	bread	Unit 6_2	2	n.面包	1
-13	win	Unit 6_2	2	vi.获胜	1
-13	yeah	Unit 6_2	2	int.太好了	1
-13	angry	Unit 6_2	2	adj.生气的	1
-13	spot	Unit 6_2	2	n.斑	1
-13	catch	Unit 6_2	2	vt.抓	1
-13	drive ... away	Unit 6_2	2	赶走	1
-14	festival	Unit 7_1	3	n.节日	1
-14	Spring Festival	Unit 7_1	3	春节	1
-14	January	Unit 7_1	3	n.一月	1
-14	February	Unit 7_1	3	n.二月	1
-14	call	Unit 7_1	3	v.叫作	1
-14	Chinese New Year	Unit 7_1	3	中国农历新年	1
-14	get together	Unit 7_1	3	团聚	1
-14	dumpling	Unit 7_1	3	n.饺子	1
-14	Dragon Boat Festival	Unit 7_1	3	端午节	1
-15	May	Unit 7_2	3	n.五月	1
-15	June	Unit 7_2	3	n.六月	1
-15	dragon boat race	Unit 7_2	3	赛龙舟	1
-15	place	Unit 7_2	3	n.地方	1
-15	rice dumpling	Unit 7_2	3	粽子	1
-15	Mid-Autumn Festival	Unit 7_2	3	中秋节	1
-15	September	Unit 7_2	3	九月	1
-15	October	Unit 7_2	3	n.十月	1
-15	moon cake	Unit 7_2	3	月饼	1
-16	Double Ninth Festival	Unit 7_3	3	重阳节	1
-16	November	Unit 7_3	3	n.十一月	1
-16	old	Unit 7_3	3	adj.老的	1
-16	mountain	Unit 7_3	3	n.山	1
-16	rice cake	Unit 7_3	3	重阳糕	1
-16	Mother's Day	Unit 7_3	3	母亲节	1
-16	Father's Day	Unit 7_3	3	父亲节	1
-16	favourite	Unit 7_3	3	adj.最喜欢的	1
-17	birthday	Unit 8_1	2	n.生日	1
-17	eleventh	Unit 8_1	2	n.&adj.第十一	1
-17	eighth	Unit 8_1	2	n.&adj.第八	1
-17	April	Unit 8_1	2	n.四月	1
-17	together	Unit 8_1	2	adv.一起	1
-17	game	Unit 8_1	2	n.游戏	1
-17	March	Unit 8_1	2	n.三月	1
-17	July	Unit 8_1	2	n.七月	1
-17	August	Unit 8_1	2	n.八月	1
-18	December	Unit 8_2	2	n.十二月	1
-18	hero	Unit 8_2	2	n.英雄	1
-18	play	Unit 8_2	2	n.戏	1
-18	number	Unit 8_2	2	n.数字	1
-18	password	Unit 8_2	2	n.密码	1
-18	answer	Unit 8_2	2	n.答案	1
-18	start	Unit 8_2	2	n.&v.开始	1
-18	fight	Unit 8_2	2	n.&v.打架	1
+1	prince	Unit 1_1	4	n.王子	1
+1	fairy	Unit 1_1	4	n.仙女	1
+1	why	Unit 1_1	4	adv.为什么	1
+2	because	Unit 1_2	4	conj.因为	1
+2	clothes	Unit 1_2	4	n.衣服	1
+2	let	Unit 1_2	4	vt.让	1
+2	put on	Unit 1_2	4	穿上	1
+2	before	Unit 1_2	4	prep.在...以前	1
+3	have to	Unit 1_3	4	不得不	1
+3	try on	Unit 1_3	4	试穿	1
+3	fit	Unit 1_3	4	v.合身	1
+3	take off	Unit 1_3	4	脱下	1
+3	mushroom	Unit 1_3	4	n.蘑菇	1
+4	late	Unit 1_4	4	adj.迟的	1
+4	pick	Unit 1_4	4	vt.摘	1
+4	understand	Unit 1_4	4	vt.理解	1
+4	be bad for	Unit 1_4	4	有害的	1
+4	leave ... behind	Unit 1_4	4	留下	1
+5	far from	Unit 2_1	4	离...远	1
+5	moon	Unit 2_1	4	n.月亮	1
+5	street	Unit 2_1	4	n.街道	1
+5	near	Unit 2_1	4	prep.在...附近	1
+5	city	Unit 2_1	4	n.城市	1
+6	by ...	Unit 2_2	4	乘	1
+6	bus	Unit 2_2	4	n.公共汽车	1
+6	on foot	Unit 2_2	4	步行	1
+6	metro	Unit 2_2	4	n.地铁	1
+6	taxi	Unit 2_2	4	n.出租车	1
+7	bike	Unit 2_3	4	n.自行车	1
+7	plane	Unit 2_3	4	n.飞机	1
+7	ship	Unit 2_3	4	n.轮船	1
+7	train	Unit 2_3	4	n.火车	1
+8	ride	Unit 2_4	4	vt.骑车	1
+8	show	Unit 2_4	4	v.给...看	1
+8	young	Unit 2_4	4	adj.年幼的	1
+8	basket	Unit 2_4	4	n.篮子	1
+9	ask the way	Unit 3_1	5	问路	1
+9	get to	Unit 3_1	5	到达	1
+9	take	Unit 3_1	5	vt.搭乘	1
+9	get on	Unit 3_1	5	上车	1
+9	get off	Unit 3_1	5	下车	1
+10	walk	Unit 3_2	5	vi.步行	1
+10	bookshop	Unit 3_2	5	n.书店	1
+10	next to	Unit 3_2	5	在...旁边	1
+10	sun	Unit 3_2	5	n.太阳	1
+10	ask ... for help	Unit 3_2	5	向...求助	1
+11	excuse me	Unit 3_3	5	劳驾	1
+11	along	Unit 3_3	5	prep.沿着	1
+11	turn right	Unit 3_3	5	向右转	1
+11	traffic light	Unit 3_3	5	交通灯	1
+11	on your right	Unit 3_3	5	在你的右侧	1
+12	cinema	Unit 3_4	5	n.电影院	1
+12	hospital	Unit 3_4	5	n.医院	1
+12	shop	Unit 3_4	5	n.商店	1
+12	zoo	Unit 3_4	5	n.动物园	1
+12	turn left	Unit 3_4	5	向左转	1
+13	supermarket	Unit 3_5	5	n.超市	1
+13	film	Unit 3_5	5	n.电影	1
+13	stop	Unit 3_5	5	v.车站	1
+13	full	Unit 3_5	5	adj.满的	1
+13	over	Unit 3_5	5	adv.结束了	1
+14	see the doctor	Unit 4_1	3	看病	1
+14	feel	Unit 4_1	3	vt.感觉	1
+14	check	Unit 4_1	3	vt.检查	1
+14	should	Unit 4_1	3	aux.应该	1
+14	have a rest	Unit 4_1	3	休息	1
+15	take medicine	Unit 4_2	3	吃药	1
+15	drink water	Unit 4_2	3	喝水	1
+15	toothache	Unit 4_2	3	n.牙疼	1
+15	dentist	Unit 4_2	3	n.牙医	1
+15	anything	Unit 4_2	3	pron.任何东西	1
+16	brush one's teeth	Unit 4_3	3	刷牙	1
+16	bedtime	Unit 4_3	3	n.就寝时间	1
+16	giraffe	Unit 4_3	3	n.长颈鹿	1
+16	point at	Unit 4_3	3	指向	1
+16	neck	Unit 4_3	3	n.脖子	1
+17	parent	Unit 5_1	3	n.父或母	1
+17	clean	Unit 5_1	3	vt.洗	1
+17	cook	Unit 5_1	3	vi.烧	1
+17	sweep the floor	Unit 5_1	3	扫地	1
+18	busy	Unit 5_2	3	adj.忙	1
+18	wash the dishes	Unit 5_2	3	洗碗	1
+18	make the bed	Unit 5_2	3	整理床铺	1
+18	grow	Unit 5_2	3	vt.种植	1
+19	garden	Unit 5_3	3	n.花园	1
+19	sweet	Unit 5_3	3	adj.甜的	1
+19	pest	Unit 5_3	3	n.害虫	1
+19	ladybird	Unit 5_3	3	n.瓢虫	1
+19	go away	Unit 5_3	3	离开	1
+20	game	Unit 6_1	4	n.比赛	1
+20	smell	Unit 6_1	4	vt.闻起来	1
+20	meat	Unit 6_1	4	n.肉	1
+20	vegetable	Unit 6_1	4	n.蔬菜	1
+20	tomato	Unit 6_1	4	n.西红柿	1
+21	potato	Unit 6_2	4	n.土豆	1
+21	I can't wait	Unit 6_2	4	我等不及了	1
+21	look for	Unit 6_2	4	寻找	1
+21	ready	Unit 6_2	4	adj.准备好	1
+21	yummy	Unit 6_2	4	adj.好吃的	1
+22	love	Unit 6_3	4	vt.喜爱	1
+22	bread	Unit 6_3	4	n.面包	1
+22	win	Unit 6_3	4	vi.获胜	1
+22	yeah	Unit 6_3	4	int.太好了	1
+23	angry	Unit 6_4	4	adj.生气的	1
+23	spot	Unit 6_4	4	n.斑	1
+23	catch	Unit 6_4	4	vt.抓	1
+23	drive ... away	Unit 6_4	4	赶走	1
+24	festival	Unit 7_1	5	n.节日	1
+24	Spring Festival	Unit 7_1	5	春节	1
+24	January	Unit 7_1	5	n.一月	1
+24	February	Unit 7_1	5	n.二月	1
+24	call	Unit 7_1	5	v.叫作	1
+25	Chinese New Year	Unit 7_2	5	中国农历新年	1
+25	get together	Unit 7_2	5	团聚	1
+25	dumpling	Unit 7_2	5	n.饺子	1
+25	Dragon Boat Festival	Unit 7_2	5	端午节	1
+25	May	Unit 7_2	5	n.五月	1
+26	June	Unit 7_3	5	n.六月	1
+26	dragon boat race	Unit 7_3	5	赛龙舟	1
+26	place	Unit 7_3	5	n.地方	1
+26	rice dumpling	Unit 7_3	5	粽子	1
+26	Mid-Autumn Festival	Unit 7_3	5	中秋节	1
+27	September	Unit 7_4	5	九月	1
+27	October	Unit 7_4	5	n.十月	1
+27	moon cake	Unit 7_4	5	月饼	1
+27	Double Ninth Festival	Unit 7_4	5	重阳节	1
+27	November	Unit 7_4	5	n.十一月	1
+28	old	Unit 7_5	5	adj.老的	1
+28	mountain	Unit 7_5	5	n.山	1
+28	rice cake	Unit 7_5	5	重阳糕	1
+28	Mother's Day	Unit 7_5	5	母亲节	1
+28	Father's Day	Unit 7_5	5	父亲节	1
+28	favourite	Unit 7_5	5	adj.最喜欢的	1
+29	birthday	Unit 8_1	3	n.生日	1
+29	eleventh	Unit 8_1	3	n.&adj.第十一	1
+29	eighth	Unit 8_1	3	n.&adj.第八	1
+29	April	Unit 8_1	3	n.四月	1
+29	together	Unit 8_1	3	adv.一起	1
+29	game	Unit 8_1	3	n.游戏	1
+30	March	Unit 8_2	3	n.三月	1
+30	July	Unit 8_2	3	n.七月	1
+30	August	Unit 8_2	3	n.八月	1
+30	December	Unit 8_2	3	n.十二月	1
+30	hero	Unit 8_2	3	n.英雄	1
+30	play	Unit 8_2	3	n.戏	1
+31	number	Unit 8_3	3	n.数字	1
+31	password	Unit 8_3	3	n.密码	1
+31	answer	Unit 8_3	3	n.答案	1
+31	start	Unit 8_3	3	n.&v.开始	1
+31	fight	Unit 8_3	3	n.&v.打架	1

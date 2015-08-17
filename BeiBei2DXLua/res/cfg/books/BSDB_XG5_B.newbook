@@ -1,88 +1,88 @@
-1	backpack	Unit7_1	3	n.背包	1
-1	either	Unit7_1	3	conj.也	1
-1	finally	Unit7_1	3	adv.最终	1
-2	find	Unit7_2	3	vt.找到	1
-2	Germany	Unit7_2	3	n.德国	1
-2	get	Unit7_2	3	vt.得到	1
-2	give	Unit7_2	3	vt.给	1
-2	go away	Unit7_2	3	离开	1
-2	go home	Unit7_2	3	回家	1
-2	hers	Unit7_2	3	pron.她的（所有物）	1
-2	his	Unit7_2	3	pron.他的（所有物）	1
-3	meet	Unit7_3	3	vt.迎接	1
-3	mine	Unit7_3	3	pron.我的（所有物）	1
-3	ours	Unit7_3	3	pron.我们的（所有物）	1
-3	quickly	Unit7_3	3	adv.快	1
-3	suitcase	Unit7_3	3	n.小提箱	1
-3	theirs	Unit7_3	3	pron.他们的（所有物）	1
-3	trip	Unit7_3	3	n.旅行	1
-3	yours	Unit7_3	3	pron.你(们）的（所有物）	1
-4	believe	Unit 8_1	2	v.相信	1
-4	Children's Day	Unit 8_1	2	儿童节	1
-4	concert	Unit 8_1	2	n.音乐会	1
-4	drum	Unit 8_1	2	n.鼓	1
-4	flute	Unit 8_1	2	n.笛	1
-4	guitar	Unit 8_1	2	n.吉他	1
-4	kid	Unit 8_1	2	v.开玩笑	1
-4	music	Unit 8_1	2	n.音乐	1
-5	piano	Unit 8_2	2	n.钢琴	1
-5	play the piano	Unit 8_2	2	弹钢琴	1
-5	program	Unit 8_2	2	n.节目单	1
-5	really	Unit 8_2	2	adv.真正地	1
-5	start	Unit 8_2	2	n.&v.开始	1
-5	tonight	Unit 8_2	2	n.今晚	1
-5	violin	Unit 8_2	2	n.小提琴	1
-6	row	Unit 9_1	2	n.排	1
-6	team	Unit 9_1	2	n.队	1
-6	basketball	Unit 9_1	2	n.篮球	1
-6	badminton	Unit 9_1	2	n.羽毛球	1
-6	table tennis	Unit 9_1	2	乒乓球	1
-6	tennis	Unit 9_1	2	n.网球	1
-6	volleyball	Unit 9_1	2	n.排球	1
-6	goalkeeper	Unit 9_1	2	n.守门员	1
-6	goal	Unit 9_1	2	n.进球	1
-7	sports star	Unit 9_2	2	运动明星	1
-7	score	Unit 9_2	2	n.比分	1
-7	at the same time	Unit 9_2	2	同时	1
-7	at last	Unit 9_2	2	最后	1
-7	corner kick	Unit 9_2	2	角球	1
-7	field	Unit 9_2	2	n.球场	1
-7	cheer for	Unit 9_2	2	加油	1
-7	fall	Unit 9_2	2	v.落下	1
-7	up and down	Unit 9_2	2	上下	1
-8	boring	Unit 10_1	1	adj.无聊的	1
-8	buy	Unit 10_1	1	vt.买	1
-8	colorful	Unit 10_1	1	adj.多彩的	1
-8	dictionary	Unit 10_1	1	n.字典	1
-8	difficult	Unit 10_1	1	adj.困难的	1
-8	exciting	Unit 10_1	1	adj.令人激动的	1
-8	expensive	Unit 10_1	1	adj.昂贵的	1
-8	interesting	Unit 10_1	1	adj.有趣的	1
-8	picture	Unit 10_1	1	n.图片	1
-8	story	Unit 10_1	1	n.故事	1
-9	a liter of milk	Unit 11_1	2	一升牛奶	1
-9	ask	Unit 11_1	2	vt.问	1
-9	add	Unit 11_1	2	vt.加	1
-9	bake	Unit 11_1	2	vt.烘烤	1
-9	break	Unit 11_1	2	v.打碎	1
-9	butter	Unit 11_1	2	n.黄油	1
-9	change	Unit 11_1	2	v.更改	1
-9	cookbook	Unit 11_1	2	n.菜谱	1
-9	flour	Unit 11_1	2	n.面粉	1
-9	guess	Unit 11_1	2	n.&v.猜测	1
-9	knife	Unit 11_1	2	n.小刀	1
-10	mix	Unit 11_2	2	vt.混合	1
-10	need	Unit 11_2	2	n.&v.需要	1
-10	plate	Unit 11_2	2	n.盘子	1
-10	pour	Unit 11_2	2	v.倾倒	1
-10	puzzled	Unit 11_2	2	adj.疑惑的	1
-10	recipe	Unit 11_2	2	n.烹饪方法	1
-10	salt	Unit 11_2	2	n.盐	1
-10	shout	Unit 11_2	2	v.喊叫	1
-10	step	Unit 11_2	2	n.步骤	1
-10	sugar	Unit 11_2	2	n.糖	1
-10	tell	Unit 11_2	2	vt.告诉	1
-11	eat out	Unit 12_1	1	外出吃饭	1
-11	hate	Unit 12_1	1	vt.讨厌	1
-11	try out	Unit 12_1	1	尝试	1
-11	walk through	Unit 12_1	1	走过	1
+1	backpack	Unit7_1	4	n.背包	1
+1	either	Unit7_1	4	conj.也	1
+1	finally	Unit7_1	4	adv.最终	1
+2	find	Unit7_2	4	vt.找到	1
+2	Germany	Unit7_2	4	n.德国	1
+2	get	Unit7_2	4	vt.得到	1
+2	give	Unit7_2	4	vt.给	1
+2	go away	Unit7_2	4	离开	1
+3	go home	Unit7_3	4	回家	1
+3	hers	Unit7_3	4	pron.她的（所有物）	1
+3	his	Unit7_3	4	pron.他的（所有物）	1
+3	meet	Unit7_3	4	vt.迎接	1
+3	mine	Unit7_3	4	pron.我的（所有物）	1
+4	ours	Unit7_4	4	pron.我们的（所有物）	1
+4	quickly	Unit7_4	4	adv.快	1
+4	suitcase	Unit7_4	4	n.小提箱	1
+4	theirs	Unit7_4	4	pron.他们的（所有物）	1
+4	trip	Unit7_4	4	n.旅行	1
+4	yours	Unit7_4	4	pron.你(们）的（所有物）	1
+5	believe	Unit 8_1	3	v.相信	1
+5	Children's Day	Unit 8_1	3	儿童节	1
+5	concert	Unit 8_1	3	n.音乐会	1
+5	drum	Unit 8_1	3	n.鼓	1
+5	flute	Unit 8_1	3	n.笛	1
+6	guitar	Unit 8_2	3	n.吉他	1
+6	kid	Unit 8_2	3	v.开玩笑	1
+6	music	Unit 8_2	3	n.音乐	1
+6	piano	Unit 8_2	3	n.钢琴	1
+6	play the piano	Unit 8_2	3	弹钢琴	1
+7	program	Unit 8_3	3	n.节目单	1
+7	really	Unit 8_3	3	adv.真正地	1
+7	start	Unit 8_3	3	n.&v.开始	1
+7	tonight	Unit 8_3	3	n.今晚	1
+7	violin	Unit 8_3	3	n.小提琴	1
+8	row	Unit 9_1	4	n.排	1
+8	team	Unit 9_1	4	n.队	1
+8	basketball	Unit 9_1	4	n.篮球	1
+8	badminton	Unit 9_1	4	n.羽毛球	1
+8	table tennis	Unit 9_1	4	乒乓球	1
+9	tennis	Unit 9_2	4	n.网球	1
+9	volleyball	Unit 9_2	4	n.排球	1
+9	goalkeeper	Unit 9_2	4	n.守门员	1
+9	goal	Unit 9_2	4	n.进球	1
+9	sports star	Unit 9_2	4	运动明星	1
+10	score	Unit 9_3	4	n.比分	1
+10	at the same time	Unit 9_3	4	同时	1
+10	at last	Unit 9_3	4	最后	1
+10	corner kick	Unit 9_3	4	角球	1
+11	field	Unit 9_4	4	n.球场	1
+11	cheer for	Unit 9_4	4	加油	1
+11	fall	Unit 9_4	4	v.落下	1
+11	up and down	Unit 9_4	4	上下	1
+12	boring	Unit 10_1	2	adj.无聊的	1
+12	buy	Unit 10_1	2	vt.买	1
+12	colorful	Unit 10_1	2	adj.多彩的	1
+12	dictionary	Unit 10_1	2	n.字典	1
+12	difficult	Unit 10_1	2	adj.困难的	1
+13	exciting	Unit 10_2	2	adj.令人激动的	1
+13	expensive	Unit 10_2	2	adj.昂贵的	1
+13	interesting	Unit 10_2	2	adj.有趣的	1
+13	picture	Unit 10_2	2	n.图片	1
+13	story	Unit 10_2	2	n.故事	1
+14	a liter of milk	Unit 11_1	4	一升牛奶	1
+14	ask	Unit 11_1	4	vt.问	1
+14	add	Unit 11_1	4	vt.加	1
+14	bake	Unit 11_1	4	vt.烘烤	1
+14	break	Unit 11_1	4	v.打碎	1
+14	butter	Unit 11_1	4	n.黄油	1
+15	change	Unit 11_2	4	v.更改	1
+15	cookbook	Unit 11_2	4	n.菜谱	1
+15	flour	Unit 11_2	4	n.面粉	1
+15	guess	Unit 11_2	4	n.&v.猜测	1
+15	knife	Unit 11_2	4	n.小刀	1
+15	mix	Unit 11_2	4	vt.混合	1
+16	need	Unit 11_3	4	n.&v.需要	1
+16	plate	Unit 11_3	4	n.盘子	1
+16	pour	Unit 11_3	4	v.倾倒	1
+16	puzzled	Unit 11_3	4	adj.疑惑的	1
+16	recipe	Unit 11_3	4	n.烹饪方法	1
+17	salt	Unit 11_4	4	n.盐	1
+17	shout	Unit 11_4	4	v.喊叫	1
+17	step	Unit 11_4	4	n.步骤	1
+17	sugar	Unit 11_4	4	n.糖	1
+17	tell	Unit 11_4	4	vt.告诉	1
+18	eat out	Unit 12_1	1	外出吃饭	1
+18	hate	Unit 12_1	1	vt.讨厌	1
+18	try out	Unit 12_1	1	尝试	1
+18	walk through	Unit 12_1	1	走过	1

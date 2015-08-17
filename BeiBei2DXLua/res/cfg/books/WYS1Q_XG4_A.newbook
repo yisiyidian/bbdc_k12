@@ -17,98 +17,98 @@
 4	what	Module 3_1	1	pron.多么	1
 4	boring	Module 3_1	1	adj.无聊的	0
 4	day	Module 3_1	1	n.一天	1
-5	invent	Module 4_1	1	v.发明	0
-5	paper	Module 4_1	1	n.纸	0
-5	important	Module 4_1	1	adj.重要的	0
-5	printing	Module 4_1	1	n.印刷术	0
-5	print	Module 4_1	1	vt.印刷	0
-5	right	Module 4_1	1	adj.正确的	1
-5	between	Module 4_1	1	prep.在...之间	1
-5	bicycle	Module 4_1	1	n.自行车	1
-5	mouse	Module 4_1	1	n.老鼠	0
-5	beside	Module 4_1	1	prep.在...旁边	1
-5	man	Module 4_1	1	n.男人	1
-6	went	Module 5_1	3	vi.去（过去式）	1
-6	saw	Module 5_1	3	vt.看见（过去式）	1
-6	trip	Module 5_1	3	n.旅行	0
-6	took	Module 5_1	3	vt.需要花费（过去式）	1
-6	fifty	Module 5_1	3	num.五十	0
-6	minute	Module 5_1	3	n.分钟	1
-6	top	Module 5_1	3	n.顶部	0
-6	mountain	Module 5_1	3	n.山	0
-7	ate	Module 5_2	3	vt.吃（过去式）	1
-7	candy	Module 5_2	3	n.糖果	1
-7	plant	Module 5_2	3	n.植物	1
-7	had	Module 5_2	3	vt.度过（过去式）	1
-7	have a good time	Module 5_2	3	过得愉快	0
-7	bought	Module 5_2	3	vt.买（过去式）	1
-7	wore	Module 5_2	3	vt.穿（过去式）	1
-7	go on a trip	Module 5_2	3	去旅游	0
-8	ice	Module 5_3	3	n.冰	0
-8	at first	Module 5_3	3	起初	0
-8	fell	Module 5_3	3	vi.掉下（过去式）	0
-8	fall over	Module 5_3	3	摔倒	0
-8	hurt	Module 5_3	3	vt.是受伤	0
-8	a lot	Module 5_3	3	在很大程度上	0
-8	able	Module 5_3	3	adj.聪明能干的	0
-8	be able to	Module 5_3	3	能够	0
-8	skate	Module 5_3	3	v.滑冰	0
-9	become	Module 6_1	2	vt.变成	0
-9	gold	Module 6_1	2	n.金子	0
-9	ago	Module 6_1	2	adv.以前	0
-9	long ago	Module 6_1	2	很久以前	0
-9	magic	Module 6_1	2	n.有魔力的	0
-9	paintbrush	Module 6_1	2	n.画笔	0
-9	woman	Module 6_1	2	n.女性	1
-9	became	Module 6_1	2	vt.变成（过去式）	0
-9	real	Module 6_1	2	adj.真实的	0
-10	bad	Module 6_2	2	adj.坏的	1
-10	took	Module 6_2	2	vt.拿走（过去式）	1
-10	away	Module 6_2	2	adv.离去	0
-10	leaves	Module 6_2	2	n.树叶（复数）	0
-10	only	Module 6_2	2	adv.只	0
-10	painting	Module 6_2	2	n.画	0
-10	angry	Module 6_2	2	adj.生气的	1
-10	said	Module 6_2	2	vt.说（过去式）	1
-11	doll	Module 7_1	1	n.玩偶	0
-11	matter	Module 7_1	1	n.事情	0
-11	lost	Module 7_1	1	vt.丢失（过去式）	0
-11	found	Module 7_1	1	vt.发现	1
-11	key	Module 7_1	1	n.钥匙	0
-11	look for	Module 7_1	1	寻找	0
-12	when	Module 8_1	1	adv.&pron.什么时候	1
-12	came	Module 8_1	1	vi.来	1
-12	competition	Module 8_1	1	n.比赛	0
-12	won	Module 8_1	1	vt.赢（过去式）	0
-12	gold	Module 8_1	1	adj.金制的	0
-12	cup	Module 8_1	1	n.奖杯	0
-12	flute	Module 8_1	1	n.长笛	0
-12	practice	Module 8_1	1	n.&v.练习	0
-12	took	Module 8_1	1	vt.拍摄（过去式）	1
-12	look	Module 8_1	1	v.看上去...	1
-12	a lot	Module 8_1	1	经常	0
-13	happen	Module 9_1	1	vi.发生	0
-13	fall off	Module 9_1	1	从...跌落	0
-13	bike ride	Module 9_1	1	骑自行车	0
-13	thirsty	Module 9_1	1	adj.渴的	0
-13	water	Module 9_1	1	n.水	1
-13	watermelon	Module 9_1	1	n.西瓜	0
-13	carried	Module 9_1	1	vt.拿（过去式）	0
-13	bump	Module 9_1	1	v.碰	0
-13	hurt	Module 9_1	1	vt.使受伤	0
-13	knee	Module 9_1	1	n.膝盖	0
-13	cut	Module 9_1	1	vt.切（过去式）	0
-13	finger	Module 9_1	1	n.手指	0
-14	early	Module 10_1	1	adv.早	1
-14	every	Module 10_1	1	adj.每个	1
-14	during	Module 10_1	1	prep.在...期间	0
-14	computer game	Module 10_1	1	计算机游戏	0
-14	take	Module 10_1	1	vt.服药	1
-14	medicine	Module 10_1	1	n.药	0
-14	a lot of	Module 10_1	1	许多的	0
-14	exercise	Module 10_1	1	n.锻炼	1
-14	healthy	Module 10_1	1	adj.健康的	1
-14	juice	Module 10_1	1	n.果汁	1
-14	before	Module 10_1	1	prep.在...之前	1
-14	after	Module 10_1	1	prep.在...之后	1
-14	toilet	Module 10_1	1	n.厕所	1
+5	invent	Module 4_1	2	v.发明	0
+5	paper	Module 4_1	2	n.纸	0
+5	important	Module 4_1	2	adj.重要的	0
+5	printing	Module 4_1	2	n.印刷术	0
+5	print	Module 4_1	2	vt.印刷	0
+5	right	Module 4_1	2	adj.正确的	1
+6	between	Module 4_2	2	prep.在...之间	1
+6	bicycle	Module 4_2	2	n.自行车	1
+6	mouse	Module 4_2	2	n.老鼠	0
+6	beside	Module 4_2	2	prep.在...旁边	1
+6	man	Module 4_2	2	n.男人	1
+7	went	Module 5_1	5	vi.去（过去式）	1
+7	saw	Module 5_1	5	vt.看见（过去式）	1
+7	trip	Module 5_1	5	n.旅行	0
+7	took	Module 5_1	5	vt.需要花费（过去式）	1
+7	fifty	Module 5_1	5	num.五十	0
+8	minute	Module 5_2	5	n.分钟	1
+8	top	Module 5_2	5	n.顶部	0
+8	mountain	Module 5_2	5	n.山	0
+8	ate	Module 5_2	5	vt.吃（过去式）	1
+8	candy	Module 5_2	5	n.糖果	1
+9	plant	Module 5_3	5	n.植物	1
+9	had	Module 5_3	5	vt.度过（过去式）	1
+9	have a good time	Module 5_3	5	过得愉快	0
+9	bought	Module 5_3	5	vt.买（过去式）	1
+9	wore	Module 5_3	5	vt.穿（过去式）	1
+10	go on a trip	Module 5_4	5	去旅游	0
+10	ice	Module 5_4	5	n.冰	0
+10	at first	Module 5_4	5	起初	0
+10	fell	Module 5_4	5	vi.掉下（过去式）	0
+10	fall over	Module 5_4	5	摔倒	0
+11	hurt	Module 5_5	5	vt.是受伤	0
+11	a lot	Module 5_5	5	在很大程度上	0
+11	able	Module 5_5	5	adj.聪明能干的	0
+11	be able to	Module 5_5	5	能够	0
+11	skate	Module 5_5	5	v.滑冰	0
+12	become	Module 6_1	3	vt.变成	0
+12	gold	Module 6_1	3	n.金子	0
+12	ago	Module 6_1	3	adv.以前	0
+12	long ago	Module 6_1	3	很久以前	0
+12	magic	Module 6_1	3	n.有魔力的	0
+12	paintbrush	Module 6_1	3	n.画笔	0
+13	woman	Module 6_2	3	n.女性	1
+13	became	Module 6_2	3	vt.变成（过去式）	0
+13	real	Module 6_2	3	adj.真实的	0
+13	bad	Module 6_2	3	adj.坏的	1
+13	took	Module 6_2	3	vt.拿走（过去式）	1
+13	away	Module 6_2	3	adv.离去	0
+14	leaves	Module 6_3	3	n.树叶（复数）	0
+14	only	Module 6_3	3	adv.只	0
+14	painting	Module 6_3	3	n.画	0
+14	angry	Module 6_3	3	adj.生气的	1
+14	said	Module 6_3	3	vt.说（过去式）	1
+15	doll	Module 7_1	1	n.玩偶	0
+15	matter	Module 7_1	1	n.事情	0
+15	lost	Module 7_1	1	vt.丢失（过去式）	0
+15	found	Module 7_1	1	vt.发现	1
+15	key	Module 7_1	1	n.钥匙	0
+15	look for	Module 7_1	1	寻找	0
+16	when	Module 8_1	2	adv.&pron.什么时候	1
+16	came	Module 8_1	2	vi.来	1
+16	competition	Module 8_1	2	n.比赛	0
+16	won	Module 8_1	2	vt.赢（过去式）	0
+16	gold	Module 8_1	2	adj.金制的	0
+16	cup	Module 8_1	2	n.奖杯	0
+17	flute	Module 8_2	2	n.长笛	0
+17	practice	Module 8_2	2	n.&v.练习	0
+17	took	Module 8_2	2	vt.拍摄（过去式）	1
+17	look	Module 8_2	2	v.看上去...	1
+17	a lot	Module 8_2	2	经常	0
+18	happen	Module 9_1	2	vi.发生	0
+18	fall off	Module 9_1	2	从...跌落	0
+18	bike ride	Module 9_1	2	骑自行车	0
+18	thirsty	Module 9_1	2	adj.渴的	0
+18	water	Module 9_1	2	n.水	1
+18	watermelon	Module 9_1	2	n.西瓜	0
+19	carried	Module 9_2	2	vt.拿（过去式）	0
+19	bump	Module 9_2	2	v.碰	0
+19	hurt	Module 9_2	2	vt.使受伤	0
+19	knee	Module 9_2	2	n.膝盖	0
+19	cut	Module 9_2	2	vt.切（过去式）	0
+19	finger	Module 9_2	2	n.手指	0
+20	early	Module 10_1	3	adv.早	1
+20	every	Module 10_1	3	adj.每个	1
+20	during	Module 10_1	3	prep.在...期间	0
+20	computer game	Module 10_1	3	计算机游戏	0
+21	take	Module 10_2	3	vt.服药	1
+21	medicine	Module 10_2	3	n.药	0
+21	a lot of	Module 10_2	3	许多的	0
+21	exercise	Module 10_2	3	n.锻炼	1
+22	healthy	Module 10_3	3	adj.健康的	1
+22	juice	Module 10_3	3	n.果汁	1
+22	before	Module 10_3	3	prep.在...之前	1
+22	after	Module 10_3	3	prep.在...之后	1
+22	toilet	Module 10_3	3	n.厕所	1

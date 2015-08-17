@@ -1,500 +1,500 @@
-1	Canada	Unit 1_1	7	n.加拿大	1
-1	thanks	Unit 1_1	7	n&int.谢谢	0
-1	four	Unit 1_1	7	num.四	1
-2	five	Unit 1_2	7	num.五	1
-2	over	Unit 1_2	7	prep.在那边	1
-2	homeroom	Unit 1_2	7	n.年级教室	0
-2	student	Unit 1_2	7	n.学生	1
-2	classmate	Unit 1_2	7	n.同班同学	1
-2	visiting	Unit 1_2	7	adj.访问的	0
-2	show	Unit 1_2	7	v.指示	1
-2	around	Unit 1_2	7	prep.在附近	1
-2	classroom	Unit 1_2	7	n.教室	1
-3	office	Unit 1_3	7	n.办公室	1
-3	plan	Unit 1_3	7	n.计划	1
-3	fun	Unit 1_3	7	n.有趣的事	1
-3	lab	Unit 1_3	7	n.实验室	1
-3	eraser	Unit 1_3	7	n.橡皮擦	1
-3	guess	Unit 1_3	7	n.猜测	1
-3	first	Unit 1_3	7	adv.首先	1
-3	wall	Unit 1_3	7	n.墙	1
-3	may	Unit 1_3	7	aux.可能	1
-4	excuse	Unit 1_4	7	n.原谅	1
-4	OK	Unit 1_4	7	adj.好	1
-4	borrow	Unit 1_4	7	v.借	1
-4	two	Unit 1_4	7	num.二	1
-4	three	Unit 1_4	7	num.三	1
-4	store	Unit 1_4	7	n.商店	1
-4	later	Unit 1_4	7	adj.后来	1
-4	thing	Unit 1_4	7	n.事情	1
-4	need	Unit 1_4	7	v.需要	1
-5	list	Unit 1_5	7	n.列表	1
-5	ten	Unit 1_5	7	num.十	1
-5	six	Unit 1_5	7	n.六	1
-5	seven	Unit 1_5	7	num.七	1
-5	one	Unit 1_5	7	n.一	1
-5	nine	Unit 1_5	7	num.九	1
-5	eight	Unit 1_5	7	num.八	1
-5	be from ...	Unit 1_5	7	来自...	1
-5	What's your name	Unit 1_5	7	你叫什么名字?	1
-6	My name is ...	Unit 1_6	7	我叫...	1
-6	I'm ...	Unit 1_6	7	我是...	0
-6	How are you	Unit 1_6	7	你好吗?	1
-6	I'm fine and you	Unit 1_6	7	我很好。你呢?	1
-6	Nice to meet you too	Unit 1_6	7	见到你也很高兴	1
-6	Good morning	Unit 1_6	7	早上好	1
-6	over there	Unit 1_6	7	在那里	1
-6	homeroom teacher	Unit 1_6	7	指导教师	1
-6	visiting student	Unit 1_6	7	访问生	1
-6	show ... around	Unit 1_6	7	带领...参观	1
-7	have lessons	Unit 1_7	7	上课	1
-7	play sports	Unit 1_7	7	进行体育运动	1
-7	have fun	Unit 1_7	7	玩得愉快	1
-7	guessmg game	Unit 1_7	7	猜谜游戏	1
-7	Excuse me May I have ...	Unit 1_7	7	抱歉，我可以借...好吗?	1
-7	Here you are	Unit 1_7	7	给你	1
-7	You're welcome	Unit 1_7	7	不客气	1
-7	See you later	Unit 1_7	7	再见	1
-7	What about ...	Unit 1_7	7	...怎么样?	1
-7	shopping list	Unit 1_7	7	购物单	1
-8	sure	Unit 2_1	6	ad.当然	1
-8	blouse	Unit 2_1	6	n.女衬衫	1
-8	really	Unit 2_1	6	adv.真正地	1
-8	pink	Unit 2_1	6	adj.粉色的	1
-8	paint	Unit 2_1	6	n.&v.画;颜料	1
-8	mix	Unit 2_1	6	vt.混合	1
-8	rain bow	Unit 2_1	6	n.彩虹	0
-8	purple	Unit 2_1	6	adj.紫色的	1
-8	out	Unit 2_1	6	adj.在外面	1
-9	sky	Unit 2_2	6	n.天空	1
-9	scarf	Unit 2_2	6	n.围巾	1
-9	glove	Unit 2_2	6	n.手套	1
-9	maybe	Unit 2_2	6	adv.也许	1
-9	just	Unit 2_2	6	adv.恰恰	1
-9	catch	Unit 2_2	6	vt.抓住	1
-9	ready	Unit 2_2	6	adj.准备好的	1
-9	dinosaur	Unit 2_2	6	n.恐龙	0
-9	T-shirt	Unit 2_2	6	n.短袖汗衫	1
-10	jacket	Unit 2_3	6	n.夹克	1
-10	forget	Unit 2_3	6	vt.忘记	1
-10	hat	Unit 2_3	6	n.帽子	1
-10	pants	Unit 2_3	6	n.裤子	0
-10	colourful	Unit 2_3	6	adj.丰富多彩的	0
-10	so	Unit 2_3	6	conj.非常	1
-10	bright	Unit 2_3	6	adj.明亮的	1
-10	world	Unit 2_3	6	n.世界	1
-10	report	Unit 2_3	6	vt.&n.报告	1
-11	traditional	Unit 2_4	6	adj.传统的	1
-11	wow	Unit 2_4	6	int.哇	0
-11	sari	Unit 2_4	6	n.莎丽	0
-11	India	Unit 2_4	6	n.印度	1
-11	uniform	Unit 2_4	6	n.制服	0
-11	pretty	Unit 2_4	6	adj.漂亮的	1
-11	centre	Unit 2_4	6	n.中心	1
-11	Saturday	Unit 2_4	6	n.星期六	1
-11	will	Unit 2_4	6	aux.将要	1
-12	pair	Unit 2_5	6	n.双	1
-12	light blue	Unit 2_5	6	浅蓝	1
-12	Good afternoon	Unit 2_5	6	下午好	1
-12	How about ...	Unit 2_5	6	...怎么样?	1
-12	look at ...	Unit 2_5	6	看...	1
-12	How many colours do you see	Unit 2_5	6	你能看到多少种颜色?	1
-12	come out	Unit 2_5	6	出现	1
-12	in the sky	Unit 2_5	6	在天空中	1
-12	just right	Unit 2_5	6	正好	1
-12	catch a cold	Unit 2_5	6	感冒	1
-13	be ready for ...	Unit 2_6	6	准备去...	1
-13	go back	Unit 2_6	6	回去	1
-13	put on	Unit 2_6	6	穿上	1
-13	go well with	Unit 2_6	6	协调	1
-13	take ... all out of	Unit 2_6	6	把所有的...取出	1
-13	look so pretty	Unit 2_6	6	看上去很漂亮	1
-13	in black and white	Unit 2_6	6	身穿黑白相间的衣服	1
-13	go shopping	Unit 2_6	6	去购物	1
-13	at the shopping centre	Unit 2_6	6	在购物中心	1
-13	a pair of	Unit 2_6	6	一双	1
-14	part	Unit 3_1	6	n.部分	1
-14	feeling	Unit 3_1	6	n.感觉	1
-14	robot	Unit 3_1	6	n.机器人	1
-14	camera	Unit 3_1	6	n.照相机	1
-14	smell	Unit 3_1	6	vi.闻起来	1
-14	finger	Unit 3_1	6	n.手指	1
-14	player	Unit 3_1	6	n.选手	1
-14	homework	Unit 3_1	6	n.家庭作业	1
-14	singer	Unit 3_1	6	n.歌手	0
-14	question	Unit 3_1	6	n.问题	1
-15	sick	Unit 3_2	6	adj.病的	1
-15	scared	Unit 3_2	6	adj.恐惧的	0
-15	smile	Unit 3_2	6	n.微笑	1
-15	wave	Unit 3_2	6	v.挥手	0
-15	mean	Unit 3_2	6	v.&adj.意思是；刻薄的	1
-15	metre	Unit 3_2	6	n.米	1
-15	bit	Unit 3_2	6	n.少量	1
-15	against	Unit 3_2	6	prep.反对	1
-15	tail	Unit 3_2	6	n.尾巴	1
-15	flat	Unit 3_2	6	ad.水平地	0
-16	upon	Unit 3_3	6	prep.在...上面	1
-16	ground	Unit 3_3	6	n.地面	1
-16	oh	Unit 3_3	6	int.哦	0
-16	hurt	Unit 3_3	6	adj.&vt.痛的；伤害	1
-16	donut	Unit 3_3	6	n.面包圈	0
-16	enough	Unit 3_3	6	ad.足够的（地）	1
-16	laugh	Unit 3_3	6	vt.笑	1
-16	stomachache	Unit 3_3	6	n.肚子痛	1
-16	better	Unit 3_3	6	ad.更好的（地）	1
-16	Dr	Unit 3_3	6	abbr.医生	0
-17	matter	Unit 3_4	6	n.问题	1
-17	headache	Unit 3_4	6	n.头痛	1
-17	medicine	Unit 3_4	6	n.药	1
-17	stay	Unit 3_4	6	n.停留	1
-17	rest	Unit 3_4	6	vt.休息	1
-17	different	Unit 3_4	6	adj.不同的	1
-17	cute	Unit 3_4	6	adj.逗人喜爱的	1
-17	twelve	Unit 3_4	6	adj.十二	1
-17	blond	Unit 3_4	6	adj.金色的	0
-17	thirteen	Unit 3_4	6	num.十三	1
-18	almost	Unit 3_5	6	adv.几乎	1
-18	funny	Unit 3_5	6	adj.可笑的	1
-18	glass	Unit 3_5	6	n.玻璃	1
-18	play with	Unit 3_5	6	和...一起玩	1
-18	listen to	Unit 3_5	6	听...	1
-18	wave one's hand	Unit 3_5	6	挥手	1
-18	see red	Unit 3_5	6	火冒三丈	1
-18	How tall is he	Unit 3_5	6	他多高?	1
-18	He is ... metres tall.	Unit 3_5	6	他身高...米	0
-18	a bit	Unit 3_5	6	有点儿	1
-19	How tall are you	Unit 3_6	6	你多高?	1
-19	I'm ... metres tall	Unit 3_6	6	我身高...米	0
-19	stand against	Unit 3_6	6	靠着...站	1
-19	How do you feel	Unit 3_6	6	你感觉怎么样?	1
-19	I feel ...	Unit 3_6	6	我感觉...	0
-19	What's wrong	Unit 3_6	6	怎么了?	1
-19	see a doctor	Unit 3_6	6	看医生	1
-19	Are you OK	Unit 3_6	6	你还好吗?	1
-19	I have a stomachache	Unit 3_6	6	我肚子痛	1
-19	I have a headache	Unit 3_6	6	我头痛	1
-20	restaurant	Unit 4_1	7	n.餐馆	1
-20	fifteen	Unit 4_1	7	num.十五	1
-20	cereal	Unit 4_1	7	adj.谷类食物	0
-20	would	Unit 4_1	7	aux.将;愿意	1
-20	salad	Unit 4_1	7	n.色拉	1
-20	sugar	Unit 4_1	7	n.糖	1
-20	delicious	Unit 4_1	7	adj.美味的	1
-20	cup	Unit 4_1	7	n.杯子	1
-20	full	Unit 4_1	7	adj.满的	1
-20	cookie	Unit 4_1	7	n.饼干	1
-21	chocolate	Unit 4_2	7	n.巧克力	1
-21	everything	Unit 4_2	7	pron.一切事物	1
-21	meat	Unit 4_2	7	n.肉	1
-21	job	Unit 4_2	7	n.工作	1
-21	market	Unit 4_2	7	n.市场	1
-21	grape	Unit 4_2	7	n.葡萄	1
-21	carrot	Unit 4_2	7	n.胡萝卜	1
-21	cabbage	Unit 4_2	7	n.洋白菜	0
-21	watermelon	Unit 4_2	7	n.西瓜	1
-21	sweet	Unit 4_2	7	adj.酣的	1
-22	pear	Unit 4_3	7	n.梨	1
-22	waitress	Unit 4_3	7	n.女服务员	0
-22	order	Unit 4_3	7	n.点	1
-22	fourteen	Unit 4_3	7	num.十四	1
-22	eleven	Unit 4_3	7	num.十一	1
-22	beef	Unit 4_3	7	n.牛肉	1
-22	dumpling	Unit 4_3	7	n.饺子	1
-22	something	Unit 4_3	7	pron.某事	1
-22	problem	Unit 4_3	7	n.问题	1
-22	menu	Unit 4_3	7	n.菜单	1
-23	can	Unit 4_4	7	n.金属罐	0
-23	coke	Unit 4_4	7	n.可乐	0
-23	bottle	Unit 4_4	7	n.瓶	1
-23	corner	Unit 4_4	7	n.角落	1
-23	money	Unit 4_4	7	n.钱	1
-23	clerk	Unit 4_4	7	n.店员	0
-23	fridge	Unit 4_4	7	n.冰箱	1
-23	twenty	Unit 4_4	7	num.二十	1
-23	pass	Unit 4_4	7	vt.经过	1
-23	away	Unit 4_4	7	adv.离开	1
-24	sandwich	Unit 4_5	7	n.三明治	1
-24	takeout	Unit 4_5	7	n.外卖食品	0
-24	tip	Unit 4_5	7	n.提示	0
-24	only	Unit 4_5	7	adv.仅仅	1
-24	P.S.	Unit 4_5	7	附言	0
-24	Time for ...	Unit 4_5	7	是...的时间了	1
-24	What's for breakfast	Unit 4_5	7	早饭有什么?	1
-24	What would you like	Unit 4_5	7	你想要什么?	1
-24	I'd like ...	Unit 4_5	7	我想要...	0
-24	a glass of ...	Unit 4_5	7	一玻璃杯...	1
-25	a cup of ...	Unit 4_6	7	一杯...	1
-25	have to	Unit 4_6	7	不得不	1
-25	Do you want to come with me	Unit 4_6	7	你想跟我一起去吗?	1
-25	be full of ...	Unit 4_6	7	充满...	1
-25	What would you like to buy	Unit 4_6	7	你想买什么?	1
-25	write down	Unit 4_6	7	写下来	1
-25	Good job	Unit 4_6	7	做得好	1
-25	Are you ready to order	Unit 4_6	7	准备好点餐了吗?	1
-25	How much is ...	Unit 4_6	7	...多少钱?	1
-25	Would you like ...	Unit 4_6	7	你想要...吗?	1
-25	No problem	Unit 4_6	7	没问题	1
-26	a can of ...	Unit 4_7	7	一听...	1
-26	a bottle of ...	Unit 4_7	7	一瓶...	1
-26	corner store	Unit 4_7	7	便利店	1
-26	Can I help you	Unit 4_7	7	你想要点什么?	1
-26	Let me see	Unit 4_7	7	让我想想	1
-26	take down	Unit 4_7	7	拿下	1
-26	pass around	Unit 4_7	7	分发	1
-26	be away	Unit 4_7	7	离开	1
-26	get enough rest	Unit 4_7	7	得到充足的休息	1
-26	watch TV	Unit 4_7	7	看电视	1
-26	every day	Unit 4_7	7	每天	1
-27	member	Unit 5_1	6	n.成员	1
-27	son	Unit 5_1	6	n.儿子	1
-27	daughter	Unit 5_1	6	n.女儿	1
-27	drive	Unit 5_1	6	v.驾驶	1
-27	policeman	Unit 5_1	6	n.警察	1
-27	radio	Unit 5_1	6	n.收音机	1
-27	businessman	Unit 5_1	6	n.商人	0
-27	weekend	Unit 5_1	6	n.周末	1
-27	together	Unit 5_1	6	adv.一起	1
-28	others	Unit 5_2	6	pron.其他人	0
-28	hard	Unit 5_2	6	adj.努力	1
-28	bedroom	Unit 5_2	6	n.卧室	1
-28	dictionary	Unit 5_2	6	n.字典	1
-28	front	Unit 5_2	6	n.正面	1
-28	above	Unit 5_2	6	prep.在...之上	1
-28	thirty	Unit 5_2	6	num.三十	1
-28	picnic	Unit 5_2	6	n.野餐	1
-28	carry	Unit 5_2	6	v.搬运	1
-29	basket	Unit 5_3	6	n.篮	1
-29	tablecloth	Unit 5_3	6	n.桌布	0
-29	lot	Unit 5_3	6	n.&adv.许多	1
-29	quiet	Unit 5_3	6	adj.安静的	1
-29	paper	Unit 5_3	6	n.纸	1
-29	inside	Unit 5_3	6	prep.在...里面	1
-29	poem	Unit 5_3	6	n.诗	1
-29	rose	Unit 5_3	6	n.玫瑰	1
-29	riddle	Unit 5_3	6	n.谜语	0
-30	present	Unit 5_4	6	n.礼物	1
-30	soft	Unit 5_4	6	adj.软的	1
-30	woof	Unit 5_4	6	n.汪汪	0
-30	set	Unit 5_4	6	v.摆放	1
-30	What does she do	Unit 5_4	6	她是什么职业?	1
-30	She is a ...	Unit 5_4	6	她是一个...	0
-30	talk on the police radio	Unit 5_4	6	用警用对讲机交谈	1
-30	walk to school	Unit 5_4	6	走着去上学	1
-30	on weekends	Unit 5_4	6	在周末	1
-31	play football	Unit 5_5	6	踢足球	1
-31	be close to ...	Unit 5_5	6	与...亲近	1
-31	be ready to ...	Unit 5_5	6	准备好做...	1
-31	work hard at school	Unit 5_5	6	努力学习	1
-31	in front of ...	Unit 5_5	6	在...前面	1
-31	How old is he	Unit 5_5	6	他(她）多大了?	1
-31	He is ... years old	Unit 5_5	6	他（她）...岁	1
-31	How old are you	Unit 5_5	6	你多大了?	1
-31	I'm ... years old	Unit 5_5	6	我...岁	0
-31	go on a picnic	Unit 5_5	6	去野餐	1
-32	a basket of ...	Unit 5_6	6	一篮子...	1
-32	lots of ...	Unit 5_6	6	许多...	1
-32	look out	Unit 5_6	6	小心	1
-32	have a birthday party	Unit 5_6	6	举行生日聚会	1
-32	make a birthday card	Unit 5_6	6	制做生日卡片	1
-32	on the front of ...	Unit 5_6	6	在(...的)正面	1
-32	Happy Birthday	Unit 5_6	6	生日快乐	1
-32	set the table	Unit 5_6	6	摆放餐具	1
-32	pick sb up	Unit 5_6	6	开车接某人	1
-32	drive sb home	Unit 5_6	6	接某人回家	1
-33	bookstore	Unit 6_1	7	n.书店	0
-33	ride	Unit 6_1	7	vt.骑	1
-33	broken	Unit 6_1	7	adj.坏的	0
-33	off	Unit 6_1	7	prep.离开；关上	1
-33	lost	Unit 6_1	7	adj.迷路的	0
-33	lady	Unit 6_1	7	n.女士	1
-33	straight	Unit 6_1	7	adj.直的	1
-33	traffic	Unit 6_1	7	n.交通	1
-33	luck	Unit 6_1	7	n.幸运	1
-33	fresh	Unit 6_1	7	adj.新鲜的	1
-34	follow	Unit 6_2	7	vt.跟随	1
-34	count	Unit 6_2	7	v.数	1
-34	forty	Unit 6_2	7	num.四十	1
-34	fifty	Unit 6_2	7	num.五十	1
-34	sixty	Unit 6_2	7	n.六十	1
-34	seventy	Unit 6_2	7	num.七十	1
-34	eighty	Unit 6_2	7	num.八十	1
-34	ninety	Unit 6_2	7	num.九十	1
-34	hundred	Unit 6_2	7	n.百	1
-34	dream	Unit 6_2	7	n.做梦	1
-35	noise	Unit 6_3	7	n.噪音	1
-35	lion	Unit 6_3	7	n.狮子	1
-35	lonely	Unit 6_3	7	adj.孤独的	1
-35	miss	Unit 6_3	7	v.想念	1
-35	forest	Unit 6_3	7	n.森林	1
-35	course	Unit 6_3	7	n.过程	1
-35	countryside	Unit 6_3	7	n.乡村	1
-35	feed	Unit 6_3	7	vt.喂养	1
-35	pick	Unit 6_3	7	vt.选择	1
-35	friendly	Unit 6_3	7	adj.友好的	1
-36	quickly	Unit 6_4	7	adv.迅速	0
-36	moo	Unit 6_4	7	哞	0
-36	museum	Unit 6_4	7	n.博物馆	1
-36	hall	Unit 6_4	7	n.走廊	1
-36	famous	Unit 6_4	7	adj.著名的	1
-36	painting	Unit 6_4	7	n.绘画	0
-36	boring	Unit 6_4	7	adj.无聊的	1
-36	war	Unit 6_4	7	n.战争	1
-36	learn	Unit 6_4	7	vt.学习	1
-36	history	Unit 6_4	7	n.历史	1
-37	area	Unit 6_5	7	n.区域	1
-37	gift	Unit 6_5	7	n.礼物	1
-37	movie	Unit 6_5	7	n.电影	1
-37	theatre	Unit 6_5	7	n.电影院	1
-37	kung fu	Unit 6_5	7	n.中国功夫	0
-37	price	Unit 6_5	7	n.价格	1
-37	hero	Unit 6_5	7	n.英雄	1
-37	save	Unit 6_5	7	vt.解救；节省	1
-37	airport	Unit 6_5	7	n.飞机场	1
-37	hotel	Unit 6_5	7	n.旅馆	1
-38	magic	Unit 6_6	7	n.魔术的	1
-38	fight	Unit 6_6	7	n.打架	1
-38	How can we get there	Unit 6_6	7	我们怎样才能到那里?	1
-38	get off	Unit 6_6	7	下车	1
-38	get lost	Unit 6_6	7	迷路	1
-38	on the way to	Unit 6_6	7	在去...的路上	1
-38	look for	Unit 6_6	7	寻找	1
-38	Go down this street.Turn left at the traffic lights	Unit 6_6	7	沿着这条路往前走，在交通信号灯处左拐	1
-38	Good luck	Unit 6_6	7	祝你好运	1
-38	May I help you	Unit 6_6	7	请问要我帮忙吗?	1
-39	next to	Unit 6_7	7	紧邻	1
-39	No problem	Unit 6_7	7	没问题	1
-39	What can I do for you	Unit 6_7	7	有什么事?我能帮你做什么吗?	1
-39	I will take it	Unit 6_7	7	我买了	1
-39	go to the zoo	Unit 6_7	7	去动物园	1
-39	make noises	Unit 6_7	7	吵闹	1
-39	of course	Unit 6_7	7	当然	1
-39	on the farm	Unit 6_7	7	在农场	1
-39	Come on	Unit 6_7	7	来吧	1
-39	by bike	Unit 6_7	7	骑自行车	1
-39	find out	Unit 6_7	7	找出	1
-40	Monday	Unit 7_1	7	n.星期一	1
-40	rainy	Unit 7_1	7	adj.多雨的	1
-40	Tuesday	Unit 7_1	7	n.星期二	1
-40	outside	Unit 7_1	7	adv.在外面	1
-40	Wednesday	Unit 7_1	7	n.星期三	1
-40	Thursday	Unit 7_1	7	n.星期四	1
-40	snowy	Unit 7_1	7	adj.多雪的	1
-40	skate	Unit 7_1	7	v.滑冰	1
-40	mark	Unit 7_1	7	n.标记	1
-40	calendar	Unit 7_1	7	n.日历	1
-41	December	Unit 7_2	7	n.十二月	1
-41	best	Unit 7_2	7	ad.最好的（地）	1
-41	Friday	Unit 7_2	7	n.星期五	1
-41	Christmas	Unit 7_2	7	n.圣诞节	1
-41	eve	Unit 7_2	7	n.傍晚	0
-41	Sunday	Unit 7_2	7	n.星期日	1
-41	sale	Unit 7_2	7	n.出售	1
-41	midnight	Unit 7_2	7	n.午夜	0
-41	date	Unit 7_2	7	n.日期	1
-41	January	Unit 7_2	7	n.一月	1
-42	March	Unit 7_3	7	n.三月	1
-42	April	Unit 7_3	7	n.四月	1
-42	June	Unit 7_3	7	n.六月	1
-42	second	Unit 7_3	7	n.第二	1
-42	February	Unit 7_3	7	n.二月	1
-42	third	Unit 7_3	7	n.&adj.第三	1
-42	fifth	Unit 7_3	7	n.&adj.第五	1
-42	May	Unit 7_3	7	n.五月	1
-42	sixth	Unit 7_3	7	n.第六	1
-42	August	Unit 7_3	7	n.八月	1
-43	September	Unit 7_4	7	n.九月	1
-43	November	Unit 7_4	7	n.十一月	1
-43	leap	Unit 7_4	7	n.跳	0
-43	seventh	Unit 7_4	7	n.&adj.第七	1
-43	July	Unit 7_4	7	n.七月	1
-43	eighth	Unit 7_4	7	n.&adj.第八	1
-43	ninth	Unit 7_4	7	n.&adj.第九	1
-43	tenth	Unit 7_4	7	n.&adj.第十	1
-43	October	Unit 7_4	7	n.十月	1
-43	eleventh	Unit 7_4	7	n.&adj.第十一	0
-44	twelfth	Unit 7_5	7	n.&adj.第十二	0
-44	present	Unit 7_5	7	n.呈现	1
-44	international	Unit 7_5	7	adj.国际的	1
-44	national	Unit 7_5	7	adj.国家的	1
-44	festival	Unit 7_5	7	n.节日	1
-44	usually	Unit 7_5	7	adv.通常地	1
-44	during	Unit 7_5	7	prep.在...期间	1
-44	Mountain	Unit 7_5	7	n.山	1
-44	climb	Unit 7_5	7	vt.爬	1
-44	excited	Unit 7_5	7	adj.兴奋的	1
-45	beach	Unit 7_6	7	n.沙滩	1
-45	Australia	Unit 7_6	7	n.澳大利亚	1
-45	hope	Unit 7_6	7	n.希望	1
-45	yours	Unit 7_6	7	pron.你的	1
-45	How is the weather	Unit 7_6	7	天气怎么样?天气...	1
-45	have a good time	Unit 7_6	7	玩得高兴	1
-45	go skating	Unit 7_6	7	去溜冰	1
-45	big sales	Unit 7_6	7	大优惠	1
-45	Happy New Year	Unit 7_6	7	新年快乐	1
-45	Boxing Day	Unit 7_6	7	节礼日	1
-45	count down	Unit 7_6	7	倒计时	1
-46	What's the date	Unit 7_7	7	今天几号?	1
-46	Sports Day	Unit 7_7	7	运动会	1
-46	leap year	Unit 7_7	7	闰年	1
-46	International Workers' Day	Unit 7_7	7	国际劳动节	1
-46	Teachers' Day	Unit 7_7	7	教师节	1
-46	National Day	Unit 7_7	7	国庆节	1
-46	the Spring Festival	Unit 7_7	7	春节	1
-46	New Year's Day	Unit 7_7	7	元旦	1
-46	What do you like to do on holidays	Unit 7_7	7	你假期喜欢做什么?	1
-46	watch a movie	Unit 7_7	7	看电影	1
-46	go mountain climbing	Unit 7_7	7	去爬山	1
-47	direction	Unit 8_1	5	n.方向	1
-47	north	Unit 8_1	5	n.&ad.北方	1
-47	south	Unit 8_1	5	n.&ad.南方	1
-47	east	Unit 8_1	5	n.&ad.东方	1
-47	west	Unit 8_1	5	n.&ad.西方	1
-47	point	Unit 8_1	5	v.指	1
-47	country	Unit 8_1	5	n.国家	1
-47	New Zealand	Unit 8_1	5	n.新西兰	0
-47	grandparent	Unit 8_1	5	n.祖父母	1
-47	southeast	Unit 8_1	5	n.东南	0
-47	U.S.	Unit 8_1	5	n.美国	1
-48	soon	Unit 8_2	5	adv.不久	1
-48	invite	Unit 8_2	5	vt.邀请	1
-48	everyone	Unit 8_2	5	pron.每个人	1
-48	hey	Unit 8_2	5	int.嘿	0
-48	Sydney	Unit 8_2	5	n.悉尼	0
-48	London	Unit 8_2	5	n.伦敦	1
-48	capital	Unit 8_2	5	n.首都	1
-48	U.K.	Unit 8_2	5	n.英国	1
-48	language	Unit 8_2	5	n.语言	1
-48	else	Unit 8_2	5	ad.其他	1
-48	flag	Unit 8_2	5	n.旗帜	1
-49	palace	Unit 8_3	5	n.宫殿	1
-49	The Palace Museum	Unit 8_3	5	故宫	0
-49	lovely	Unit 8_3	5	adj.可爱的	1
-49	French	Unit 8_3	5	n.法语	1
-49	leaf	Unit 8_3	5	n.叶子	1
-49	beaver	Unit 8_3	5	n.海狸	0
-49	waterfall	Unit 8_3	5	n.瀑布	0
-49	stripe	Unit 8_3	5	n.条	0
-49	eagle	Unit 8_3	5	n.鹰	0
-49	statue	Unit 8_3	5	n.雕像	0
-49	liberty	Unit 8_3	5	n.自由	0
-50	Statue of Liberty	Unit 8_4	5	自由女神像	0
-50	New York	Unit 8_4	5	n.纽约	0
-50	same	Unit 8_4	5	adj.一样的	1
-50	as	Unit 8_4	5	prep.作为	1
-50	Big Ben	Unit 8_4	5	n.大本钟	0
-50	tower	Unit 8_4	5	n.塔	1
-50	kangaroo	Unit 8_4	5	n.袋鼠	0
-50	opera	Unit 8_4	5	n.歌剧	0
-50	Sydney Opera House	Unit 8_4	5	悉尼歌剧院	0
-50	Africa	Unit 8_4	5	n.非洲	1
-50	Singapore	Unit 8_4	5	n.新加坡	0
-51	South Africa	Unit 8_5	5	南非	0
-51	each	Unit 8_5	5	adj.每个	1
-51	Thank you for inviting me	Unit 8_5	5	谢谢你邀请我	1
-51	a lot of	Unit 8_5	5	许多	1
-51	come from	Unit 8_5	5	来自...	1
-51	the same ... as ...	Unit 8_5	5	和...一样	1
-51	in the comer	Unit 8_5	5	在角落	1
-51	English-speaking countries	Unit 8_5	5	说英语的国家	1
-51	all over the world	Unit 8_5	5	全世界	1
-51	a list of ...	Unit 8_5	5	...的清单	1
+1	Canada	Unit 1_1	12	n.加拿大	1
+1	thanks	Unit 1_1	12	n&int.谢谢	0
+1	four	Unit 1_1	12	num.四	1
+2	five	Unit 1_2	12	num.五	1
+2	over	Unit 1_2	12	prep.在那边	1
+2	homeroom	Unit 1_2	12	n.年级教室	0
+2	student	Unit 1_2	12	n.学生	1
+2	classmate	Unit 1_2	12	n.同班同学	1
+3	visiting	Unit 1_3	12	adj.访问的	0
+3	show	Unit 1_3	12	v.指示	1
+3	around	Unit 1_3	12	prep.在附近	1
+3	classroom	Unit 1_3	12	n.教室	1
+3	office	Unit 1_3	12	n.办公室	1
+4	plan	Unit 1_4	12	n.计划	1
+4	fun	Unit 1_4	12	n.有趣的事	1
+4	lab	Unit 1_4	12	n.实验室	1
+4	eraser	Unit 1_4	12	n.橡皮擦	1
+4	guess	Unit 1_4	12	n.猜测	1
+5	first	Unit 1_5	12	adv.首先	1
+5	wall	Unit 1_5	12	n.墙	1
+5	may	Unit 1_5	12	aux.可能	1
+5	excuse	Unit 1_5	12	n.原谅	1
+5	OK	Unit 1_5	12	adj.好	1
+6	borrow	Unit 1_6	12	v.借	1
+6	two	Unit 1_6	12	num.二	1
+6	three	Unit 1_6	12	num.三	1
+6	store	Unit 1_6	12	n.商店	1
+6	later	Unit 1_6	12	adj.后来	1
+7	thing	Unit 1_7	12	n.事情	1
+7	need	Unit 1_7	12	v.需要	1
+7	list	Unit 1_7	12	n.列表	1
+7	ten	Unit 1_7	12	num.十	1
+7	six	Unit 1_7	12	n.六	1
+8	seven	Unit 1_8	12	num.七	1
+8	one	Unit 1_8	12	n.一	1
+8	nine	Unit 1_8	12	num.九	1
+8	eight	Unit 1_8	12	num.八	1
+8	be from ...	Unit 1_8	12	来自...	1
+9	What's your name	Unit 1_9	12	你叫什么名字?	1
+9	My name is ...	Unit 1_9	12	我叫...	1
+9	I'm ...	Unit 1_9	12	我是...	0
+9	How are you	Unit 1_9	12	你好吗?	1
+9	I'm fine and you	Unit 1_9	12	我很好。你呢?	1
+10	Nice to meet you too	Unit 1_10	12	见到你也很高兴	1
+10	Good morning	Unit 1_10	12	早上好	1
+10	over there	Unit 1_10	12	在那里	1
+10	homeroom teacher	Unit 1_10	12	指导教师	1
+10	visiting student	Unit 1_10	12	访问生	1
+11	show ... around	Unit 1_11	12	带领...参观	1
+11	have lessons	Unit 1_11	12	上课	1
+11	play sports	Unit 1_11	12	进行体育运动	1
+11	have fun	Unit 1_11	12	玩得愉快	1
+11	guessmg game	Unit 1_11	12	猜谜游戏	1
+12	Excuse me May I have ...	Unit 1_12	12	抱歉，我可以借...好吗?	1
+12	Here you are	Unit 1_12	12	给你	1
+12	You're welcome	Unit 1_12	12	不客气	1
+12	See you later	Unit 1_12	12	再见	1
+12	What about ...	Unit 1_12	12	...怎么样?	1
+12	shopping list	Unit 1_12	12	购物单	1
+13	sure	Unit 2_1	11	ad.当然	1
+13	blouse	Unit 2_1	11	n.女衬衫	1
+13	really	Unit 2_1	11	adv.真正地	1
+13	pink	Unit 2_1	11	adj.粉色的	1
+13	paint	Unit 2_1	11	n.&v.画;颜料	1
+14	mix	Unit 2_2	11	vt.混合	1
+14	rain bow	Unit 2_2	11	n.彩虹	0
+14	purple	Unit 2_2	11	adj.紫色的	1
+14	out	Unit 2_2	11	adj.在外面	1
+14	sky	Unit 2_2	11	n.天空	1
+15	scarf	Unit 2_3	11	n.围巾	1
+15	glove	Unit 2_3	11	n.手套	1
+15	maybe	Unit 2_3	11	adv.也许	1
+15	just	Unit 2_3	11	adv.恰恰	1
+15	catch	Unit 2_3	11	vt.抓住	1
+16	ready	Unit 2_4	11	adj.准备好的	1
+16	dinosaur	Unit 2_4	11	n.恐龙	0
+16	T-shirt	Unit 2_4	11	n.短袖汗衫	1
+16	jacket	Unit 2_4	11	n.夹克	1
+16	forget	Unit 2_4	11	vt.忘记	1
+17	hat	Unit 2_5	11	n.帽子	1
+17	pants	Unit 2_5	11	n.裤子	0
+17	colourful	Unit 2_5	11	adj.丰富多彩的	0
+17	so	Unit 2_5	11	conj.非常	1
+17	bright	Unit 2_5	11	adj.明亮的	1
+18	world	Unit 2_6	11	n.世界	1
+18	report	Unit 2_6	11	vt.&n.报告	1
+18	traditional	Unit 2_6	11	adj.传统的	1
+18	wow	Unit 2_6	11	int.哇	0
+18	sari	Unit 2_6	11	n.莎丽	0
+19	India	Unit 2_7	11	n.印度	1
+19	uniform	Unit 2_7	11	n.制服	0
+19	pretty	Unit 2_7	11	adj.漂亮的	1
+19	centre	Unit 2_7	11	n.中心	1
+19	Saturday	Unit 2_7	11	n.星期六	1
+20	will	Unit 2_8	11	aux.将要	1
+20	pair	Unit 2_8	11	n.双	1
+20	light blue	Unit 2_8	11	浅蓝	1
+20	Good afternoon	Unit 2_8	11	下午好	1
+20	How about ...	Unit 2_8	11	...怎么样?	1
+21	look at ...	Unit 2_9	11	看...	1
+21	How many colours do you see	Unit 2_9	11	你能看到多少种颜色?	1
+21	come out	Unit 2_9	11	出现	1
+21	in the sky	Unit 2_9	11	在天空中	1
+21	just right	Unit 2_9	11	正好	1
+22	catch a cold	Unit 2_10	11	感冒	1
+22	be ready for ...	Unit 2_10	11	准备去...	1
+22	go back	Unit 2_10	11	回去	1
+22	put on	Unit 2_10	11	穿上	1
+22	go well with	Unit 2_10	11	协调	1
+23	take ... all out of	Unit 2_11	11	把所有的...取出	1
+23	look so pretty	Unit 2_11	11	看上去很漂亮	1
+23	in black and white	Unit 2_11	11	身穿黑白相间的衣服	1
+23	go shopping	Unit 2_11	11	去购物	1
+23	at the shopping centre	Unit 2_11	11	在购物中心	1
+23	a pair of	Unit 2_11	11	一双	1
+24	part	Unit 3_1	12	n.部分	1
+24	feeling	Unit 3_1	12	n.感觉	1
+24	robot	Unit 3_1	12	n.机器人	1
+24	camera	Unit 3_1	12	n.照相机	1
+24	smell	Unit 3_1	12	vi.闻起来	1
+25	finger	Unit 3_2	12	n.手指	1
+25	player	Unit 3_2	12	n.选手	1
+25	homework	Unit 3_2	12	n.家庭作业	1
+25	singer	Unit 3_2	12	n.歌手	0
+25	question	Unit 3_2	12	n.问题	1
+26	sick	Unit 3_3	12	adj.病的	1
+26	scared	Unit 3_3	12	adj.恐惧的	0
+26	smile	Unit 3_3	12	n.微笑	1
+26	wave	Unit 3_3	12	v.挥手	0
+26	mean	Unit 3_3	12	v.&adj.意思是；刻薄的	1
+27	metre	Unit 3_4	12	n.米	1
+27	bit	Unit 3_4	12	n.少量	1
+27	against	Unit 3_4	12	prep.反对	1
+27	tail	Unit 3_4	12	n.尾巴	1
+27	flat	Unit 3_4	12	ad.水平地	0
+28	upon	Unit 3_5	12	prep.在...上面	1
+28	ground	Unit 3_5	12	n.地面	1
+28	oh	Unit 3_5	12	int.哦	0
+28	hurt	Unit 3_5	12	adj.&vt.痛的；伤害	1
+28	donut	Unit 3_5	12	n.面包圈	0
+29	enough	Unit 3_6	12	ad.足够的（地）	1
+29	laugh	Unit 3_6	12	vt.笑	1
+29	stomachache	Unit 3_6	12	n.肚子痛	1
+29	better	Unit 3_6	12	ad.更好的（地）	1
+29	Dr	Unit 3_6	12	abbr.医生	0
+30	matter	Unit 3_7	12	n.问题	1
+30	headache	Unit 3_7	12	n.头痛	1
+30	medicine	Unit 3_7	12	n.药	1
+30	stay	Unit 3_7	12	n.停留	1
+30	rest	Unit 3_7	12	vt.休息	1
+31	different	Unit 3_8	12	adj.不同的	1
+31	cute	Unit 3_8	12	adj.逗人喜爱的	1
+31	twelve	Unit 3_8	12	adj.十二	1
+31	blond	Unit 3_8	12	adj.金色的	0
+31	thirteen	Unit 3_8	12	num.十三	1
+32	almost	Unit 3_9	12	adv.几乎	1
+32	funny	Unit 3_9	12	adj.可笑的	1
+32	glass	Unit 3_9	12	n.玻璃	1
+32	play with	Unit 3_9	12	和...一起玩	1
+32	listen to	Unit 3_9	12	听...	1
+33	wave one's hand	Unit 3_10	12	挥手	1
+33	see red	Unit 3_10	12	火冒三丈	1
+33	How tall is he	Unit 3_10	12	他多高?	1
+33	He is ... metres tall.	Unit 3_10	12	他身高...米	0
+33	a bit	Unit 3_10	12	有点儿	1
+34	How tall are you	Unit 3_11	12	你多高?	1
+34	I'm ... metres tall	Unit 3_11	12	我身高...米	0
+34	stand against	Unit 3_11	12	靠着...站	1
+34	How do you feel	Unit 3_11	12	你感觉怎么样?	1
+34	I feel ...	Unit 3_11	12	我感觉...	0
+35	What's wrong	Unit 3_12	12	怎么了?	1
+35	see a doctor	Unit 3_12	12	看医生	1
+35	Are you OK	Unit 3_12	12	你还好吗?	1
+35	I have a stomachache	Unit 3_12	12	我肚子痛	1
+35	I have a headache	Unit 3_12	12	我头痛	1
+36	restaurant	Unit 4_1	14	n.餐馆	1
+36	fifteen	Unit 4_1	14	num.十五	1
+36	cereal	Unit 4_1	14	adj.谷类食物	0
+36	would	Unit 4_1	14	aux.将;愿意	1
+36	salad	Unit 4_1	14	n.色拉	1
+37	sugar	Unit 4_2	14	n.糖	1
+37	delicious	Unit 4_2	14	adj.美味的	1
+37	cup	Unit 4_2	14	n.杯子	1
+37	full	Unit 4_2	14	adj.满的	1
+37	cookie	Unit 4_2	14	n.饼干	1
+38	chocolate	Unit 4_3	14	n.巧克力	1
+38	everything	Unit 4_3	14	pron.一切事物	1
+38	meat	Unit 4_3	14	n.肉	1
+38	job	Unit 4_3	14	n.工作	1
+38	market	Unit 4_3	14	n.市场	1
+39	grape	Unit 4_4	14	n.葡萄	1
+39	carrot	Unit 4_4	14	n.胡萝卜	1
+39	cabbage	Unit 4_4	14	n.洋白菜	0
+39	watermelon	Unit 4_4	14	n.西瓜	1
+39	sweet	Unit 4_4	14	adj.酣的	1
+40	pear	Unit 4_5	14	n.梨	1
+40	waitress	Unit 4_5	14	n.女服务员	0
+40	order	Unit 4_5	14	n.点	1
+40	fourteen	Unit 4_5	14	num.十四	1
+40	eleven	Unit 4_5	14	num.十一	1
+41	beef	Unit 4_6	14	n.牛肉	1
+41	dumpling	Unit 4_6	14	n.饺子	1
+41	something	Unit 4_6	14	pron.某事	1
+41	problem	Unit 4_6	14	n.问题	1
+41	menu	Unit 4_6	14	n.菜单	1
+42	can	Unit 4_7	14	n.金属罐	0
+42	coke	Unit 4_7	14	n.可乐	0
+42	bottle	Unit 4_7	14	n.瓶	1
+42	corner	Unit 4_7	14	n.角落	1
+42	money	Unit 4_7	14	n.钱	1
+43	clerk	Unit 4_8	14	n.店员	0
+43	fridge	Unit 4_8	14	n.冰箱	1
+43	twenty	Unit 4_8	14	num.二十	1
+43	pass	Unit 4_8	14	vt.经过	1
+43	away	Unit 4_8	14	adv.离开	1
+44	sandwich	Unit 4_9	14	n.三明治	1
+44	takeout	Unit 4_9	14	n.外卖食品	0
+44	tip	Unit 4_9	14	n.提示	0
+44	only	Unit 4_9	14	adv.仅仅	1
+44	P.S.	Unit 4_9	14	附言	0
+45	Time for ...	Unit 4_10	14	是...的时间了	1
+45	What's for breakfast	Unit 4_10	14	早饭有什么?	1
+45	What would you like	Unit 4_10	14	你想要什么?	1
+45	I'd like ...	Unit 4_10	14	我想要...	0
+45	a glass of ...	Unit 4_10	14	一玻璃杯...	1
+46	a cup of ...	Unit 4_11	14	一杯...	1
+46	have to	Unit 4_11	14	不得不	1
+46	Do you want to come with me	Unit 4_11	14	你想跟我一起去吗?	1
+46	be full of ...	Unit 4_11	14	充满...	1
+46	What would you like to buy	Unit 4_11	14	你想买什么?	1
+47	write down	Unit 4_12	14	写下来	1
+47	Good job	Unit 4_12	14	做得好	1
+47	Are you ready to order	Unit 4_12	14	准备好点餐了吗?	1
+47	How much is ...	Unit 4_12	14	...多少钱?	1
+47	Would you like ...	Unit 4_12	14	你想要...吗?	1
+48	No problem	Unit 4_13	14	没问题	1
+48	a can of ...	Unit 4_13	14	一听...	1
+48	a bottle of ...	Unit 4_13	14	一瓶...	1
+48	corner store	Unit 4_13	14	便利店	1
+48	Can I help you	Unit 4_13	14	你想要点什么?	1
+48	Let me see	Unit 4_13	14	让我想想	1
+49	take down	Unit 4_14	14	拿下	1
+49	pass around	Unit 4_14	14	分发	1
+49	be away	Unit 4_14	14	离开	1
+49	get enough rest	Unit 4_14	14	得到充足的休息	1
+49	watch TV	Unit 4_14	14	看电视	1
+49	every day	Unit 4_14	14	每天	1
+50	member	Unit 5_1	11	n.成员	1
+50	son	Unit 5_1	11	n.儿子	1
+50	daughter	Unit 5_1	11	n.女儿	1
+50	drive	Unit 5_1	11	v.驾驶	1
+50	policeman	Unit 5_1	11	n.警察	1
+51	radio	Unit 5_2	11	n.收音机	1
+51	businessman	Unit 5_2	11	n.商人	0
+51	weekend	Unit 5_2	11	n.周末	1
+51	together	Unit 5_2	11	adv.一起	1
+51	others	Unit 5_2	11	pron.其他人	0
+52	hard	Unit 5_3	11	adj.努力	1
+52	bedroom	Unit 5_3	11	n.卧室	1
+52	dictionary	Unit 5_3	11	n.字典	1
+52	front	Unit 5_3	11	n.正面	1
+52	above	Unit 5_3	11	prep.在...之上	1
+53	thirty	Unit 5_4	11	num.三十	1
+53	picnic	Unit 5_4	11	n.野餐	1
+53	carry	Unit 5_4	11	v.搬运	1
+53	basket	Unit 5_4	11	n.篮	1
+53	tablecloth	Unit 5_4	11	n.桌布	0
+54	lot	Unit 5_5	11	n.&adv.许多	1
+54	quiet	Unit 5_5	11	adj.安静的	1
+54	paper	Unit 5_5	11	n.纸	1
+54	inside	Unit 5_5	11	prep.在...里面	1
+54	poem	Unit 5_5	11	n.诗	1
+55	rose	Unit 5_6	11	n.玫瑰	1
+55	riddle	Unit 5_6	11	n.谜语	0
+55	present	Unit 5_6	11	n.礼物	1
+55	soft	Unit 5_6	11	adj.软的	1
+55	woof	Unit 5_6	11	n.汪汪	0
+56	set	Unit 5_7	11	v.摆放	1
+56	What does she do	Unit 5_7	11	她是什么职业?	1
+56	She is a ...	Unit 5_7	11	她是一个...	0
+56	talk on the police radio	Unit 5_7	11	用警用对讲机交谈	1
+56	walk to school	Unit 5_7	11	走着去上学	1
+57	on weekends	Unit 5_8	11	在周末	1
+57	play football	Unit 5_8	11	踢足球	1
+57	be close to ...	Unit 5_8	11	与...亲近	1
+57	be ready to ...	Unit 5_8	11	准备好做...	1
+57	work hard at school	Unit 5_8	11	努力学习	1
+58	in front of ...	Unit 5_9	11	在...前面	1
+58	How old is he	Unit 5_9	11	他(她）多大了?	1
+58	He is ... years old	Unit 5_9	11	他（她）...岁	1
+58	How old are you	Unit 5_9	11	你多大了?	1
+58	I'm ... years old	Unit 5_9	11	我...岁	0
+59	go on a picnic	Unit 5_10	11	去野餐	1
+59	a basket of ...	Unit 5_10	11	一篮子...	1
+59	lots of ...	Unit 5_10	11	许多...	1
+59	look out	Unit 5_10	11	小心	1
+59	have a birthday party	Unit 5_10	11	举行生日聚会	1
+60	make a birthday card	Unit 5_11	11	制做生日卡片	1
+60	on the front of ...	Unit 5_11	11	在(...的)正面	1
+60	Happy Birthday	Unit 5_11	11	生日快乐	1
+60	set the table	Unit 5_11	11	摆放餐具	1
+60	pick sb up	Unit 5_11	11	开车接某人	1
+60	drive sb home	Unit 5_11	11	接某人回家	1
+61	bookstore	Unit 6_1	14	n.书店	0
+61	ride	Unit 6_1	14	vt.骑	1
+61	broken	Unit 6_1	14	adj.坏的	0
+61	off	Unit 6_1	14	prep.离开；关上	1
+61	lost	Unit 6_1	14	adj.迷路的	0
+62	lady	Unit 6_2	14	n.女士	1
+62	straight	Unit 6_2	14	adj.直的	1
+62	traffic	Unit 6_2	14	n.交通	1
+62	luck	Unit 6_2	14	n.幸运	1
+62	fresh	Unit 6_2	14	adj.新鲜的	1
+63	follow	Unit 6_3	14	vt.跟随	1
+63	count	Unit 6_3	14	v.数	1
+63	forty	Unit 6_3	14	num.四十	1
+63	fifty	Unit 6_3	14	num.五十	1
+63	sixty	Unit 6_3	14	n.六十	1
+64	seventy	Unit 6_4	14	num.七十	1
+64	eighty	Unit 6_4	14	num.八十	1
+64	ninety	Unit 6_4	14	num.九十	1
+64	hundred	Unit 6_4	14	n.百	1
+64	dream	Unit 6_4	14	n.做梦	1
+65	noise	Unit 6_5	14	n.噪音	1
+65	lion	Unit 6_5	14	n.狮子	1
+65	lonely	Unit 6_5	14	adj.孤独的	1
+65	miss	Unit 6_5	14	v.想念	1
+65	forest	Unit 6_5	14	n.森林	1
+66	course	Unit 6_6	14	n.过程	1
+66	countryside	Unit 6_6	14	n.乡村	1
+66	feed	Unit 6_6	14	vt.喂养	1
+66	pick	Unit 6_6	14	vt.选择	1
+66	friendly	Unit 6_6	14	adj.友好的	1
+67	quickly	Unit 6_7	14	adv.迅速	0
+67	moo	Unit 6_7	14	哞	0
+67	museum	Unit 6_7	14	n.博物馆	1
+67	hall	Unit 6_7	14	n.走廊	1
+67	famous	Unit 6_7	14	adj.著名的	1
+68	painting	Unit 6_8	14	n.绘画	0
+68	boring	Unit 6_8	14	adj.无聊的	1
+68	war	Unit 6_8	14	n.战争	1
+68	learn	Unit 6_8	14	vt.学习	1
+68	history	Unit 6_8	14	n.历史	1
+69	area	Unit 6_9	14	n.区域	1
+69	gift	Unit 6_9	14	n.礼物	1
+69	movie	Unit 6_9	14	n.电影	1
+69	theatre	Unit 6_9	14	n.电影院	1
+69	kung fu	Unit 6_9	14	n.中国功夫	0
+70	price	Unit 6_10	14	n.价格	1
+70	hero	Unit 6_10	14	n.英雄	1
+70	save	Unit 6_10	14	vt.解救；节省	1
+70	airport	Unit 6_10	14	n.飞机场	1
+70	hotel	Unit 6_10	14	n.旅馆	1
+71	magic	Unit 6_11	14	n.魔术的	1
+71	fight	Unit 6_11	14	n.打架	1
+71	How can we get there	Unit 6_11	14	我们怎样才能到那里?	1
+71	get off	Unit 6_11	14	下车	1
+71	get lost	Unit 6_11	14	迷路	1
+72	on the way to	Unit 6_12	14	在去...的路上	1
+72	look for	Unit 6_12	14	寻找	1
+72	Go down this street.Turn left at the traffic lights	Unit 6_12	14	沿着这条路往前走，在交通信号灯处左拐	1
+72	Good luck	Unit 6_12	14	祝你好运	1
+72	May I help you	Unit 6_12	14	请问要我帮忙吗?	1
+73	next to	Unit 6_13	14	紧邻	1
+73	No problem	Unit 6_13	14	没问题	1
+73	What can I do for you	Unit 6_13	14	有什么事?我能帮你做什么吗?	1
+73	I will take it	Unit 6_13	14	我买了	1
+73	go to the zoo	Unit 6_13	14	去动物园	1
+74	make noises	Unit 6_14	14	吵闹	1
+74	of course	Unit 6_14	14	当然	1
+74	on the farm	Unit 6_14	14	在农场	1
+74	Come on	Unit 6_14	14	来吧	1
+74	by bike	Unit 6_14	14	骑自行车	1
+74	find out	Unit 6_14	14	找出	1
+75	Monday	Unit 7_1	14	n.星期一	1
+75	rainy	Unit 7_1	14	adj.多雨的	1
+75	Tuesday	Unit 7_1	14	n.星期二	1
+75	outside	Unit 7_1	14	adv.在外面	1
+75	Wednesday	Unit 7_1	14	n.星期三	1
+76	Thursday	Unit 7_2	14	n.星期四	1
+76	snowy	Unit 7_2	14	adj.多雪的	1
+76	skate	Unit 7_2	14	v.滑冰	1
+76	mark	Unit 7_2	14	n.标记	1
+76	calendar	Unit 7_2	14	n.日历	1
+77	December	Unit 7_3	14	n.十二月	1
+77	best	Unit 7_3	14	ad.最好的（地）	1
+77	Friday	Unit 7_3	14	n.星期五	1
+77	Christmas	Unit 7_3	14	n.圣诞节	1
+77	eve	Unit 7_3	14	n.傍晚	0
+78	Sunday	Unit 7_4	14	n.星期日	1
+78	sale	Unit 7_4	14	n.出售	1
+78	midnight	Unit 7_4	14	n.午夜	0
+78	date	Unit 7_4	14	n.日期	1
+78	January	Unit 7_4	14	n.一月	1
+79	March	Unit 7_5	14	n.三月	1
+79	April	Unit 7_5	14	n.四月	1
+79	June	Unit 7_5	14	n.六月	1
+79	second	Unit 7_5	14	n.第二	1
+79	February	Unit 7_5	14	n.二月	1
+80	third	Unit 7_6	14	n.&adj.第三	1
+80	fifth	Unit 7_6	14	n.&adj.第五	1
+80	May	Unit 7_6	14	n.五月	1
+80	sixth	Unit 7_6	14	n.第六	1
+80	August	Unit 7_6	14	n.八月	1
+81	September	Unit 7_7	14	n.九月	1
+81	November	Unit 7_7	14	n.十一月	1
+81	leap	Unit 7_7	14	n.跳	0
+81	seventh	Unit 7_7	14	n.&adj.第七	1
+81	July	Unit 7_7	14	n.七月	1
+82	eighth	Unit 7_8	14	n.&adj.第八	1
+82	ninth	Unit 7_8	14	n.&adj.第九	1
+82	tenth	Unit 7_8	14	n.&adj.第十	1
+82	October	Unit 7_8	14	n.十月	1
+82	eleventh	Unit 7_8	14	n.&adj.第十一	0
+83	twelfth	Unit 7_9	14	n.&adj.第十二	0
+83	present	Unit 7_9	14	n.呈现	1
+83	international	Unit 7_9	14	adj.国际的	1
+83	national	Unit 7_9	14	adj.国家的	1
+83	festival	Unit 7_9	14	n.节日	1
+84	usually	Unit 7_10	14	adv.通常地	1
+84	during	Unit 7_10	14	prep.在...期间	1
+84	Mountain	Unit 7_10	14	n.山	1
+84	climb	Unit 7_10	14	vt.爬	1
+84	excited	Unit 7_10	14	adj.兴奋的	1
+85	beach	Unit 7_11	14	n.沙滩	1
+85	Australia	Unit 7_11	14	n.澳大利亚	1
+85	hope	Unit 7_11	14	n.希望	1
+85	yours	Unit 7_11	14	pron.你的	1
+85	How is the weather	Unit 7_11	14	天气怎么样?天气...	1
+86	have a good time	Unit 7_12	14	玩得高兴	1
+86	go skating	Unit 7_12	14	去溜冰	1
+86	big sales	Unit 7_12	14	大优惠	1
+86	Happy New Year	Unit 7_12	14	新年快乐	1
+86	Boxing Day	Unit 7_12	14	节礼日	1
+87	count down	Unit 7_13	14	倒计时	1
+87	What's the date	Unit 7_13	14	今天几号?	1
+87	Sports Day	Unit 7_13	14	运动会	1
+87	leap year	Unit 7_13	14	闰年	1
+87	International Workers' Day	Unit 7_13	14	国际劳动节	1
+87	Teachers' Day	Unit 7_13	14	教师节	1
+88	National Day	Unit 7_14	14	国庆节	1
+88	the Spring Festival	Unit 7_14	14	春节	1
+88	New Year's Day	Unit 7_14	14	元旦	1
+88	What do you like to do on holidays	Unit 7_14	14	你假期喜欢做什么?	1
+88	watch a movie	Unit 7_14	14	看电影	1
+88	go mountain climbing	Unit 7_14	14	去爬山	1
+89	direction	Unit 8_1	11	n.方向	1
+89	north	Unit 8_1	11	n.&ad.北方	1
+89	south	Unit 8_1	11	n.&ad.南方	1
+89	east	Unit 8_1	11	n.&ad.东方	1
+89	west	Unit 8_1	11	n.&ad.西方	1
+90	point	Unit 8_2	11	v.指	1
+90	country	Unit 8_2	11	n.国家	1
+90	New Zealand	Unit 8_2	11	n.新西兰	0
+90	grandparent	Unit 8_2	11	n.祖父母	1
+90	southeast	Unit 8_2	11	n.东南	0
+91	U.S.	Unit 8_3	11	n.美国	1
+91	soon	Unit 8_3	11	adv.不久	1
+91	invite	Unit 8_3	11	vt.邀请	1
+91	everyone	Unit 8_3	11	pron.每个人	1
+91	hey	Unit 8_3	11	int.嘿	0
+92	Sydney	Unit 8_4	11	n.悉尼	0
+92	London	Unit 8_4	11	n.伦敦	1
+92	capital	Unit 8_4	11	n.首都	1
+92	U.K.	Unit 8_4	11	n.英国	1
+92	language	Unit 8_4	11	n.语言	1
+93	else	Unit 8_5	11	ad.其他	1
+93	flag	Unit 8_5	11	n.旗帜	1
+93	palace	Unit 8_5	11	n.宫殿	1
+93	The Palace Museum	Unit 8_5	11	故宫	0
+93	lovely	Unit 8_5	11	adj.可爱的	1
+94	French	Unit 8_6	11	n.法语	1
+94	leaf	Unit 8_6	11	n.叶子	1
+94	beaver	Unit 8_6	11	n.海狸	0
+94	waterfall	Unit 8_6	11	n.瀑布	0
+94	stripe	Unit 8_6	11	n.条	0
+95	eagle	Unit 8_7	11	n.鹰	0
+95	statue	Unit 8_7	11	n.雕像	0
+95	liberty	Unit 8_7	11	n.自由	0
+95	Statue of Liberty	Unit 8_7	11	自由女神像	0
+95	New York	Unit 8_7	11	n.纽约	0
+96	same	Unit 8_8	11	adj.一样的	1
+96	as	Unit 8_8	11	prep.作为	1
+96	Big Ben	Unit 8_8	11	n.大本钟	0
+96	tower	Unit 8_8	11	n.塔	1
+96	kangaroo	Unit 8_8	11	n.袋鼠	0
+97	opera	Unit 8_9	11	n.歌剧	0
+97	Sydney Opera House	Unit 8_9	11	悉尼歌剧院	0
+97	Africa	Unit 8_9	11	n.非洲	1
+97	Singapore	Unit 8_9	11	n.新加坡	0
+97	South Africa	Unit 8_9	11	南非	0
+98	each	Unit 8_10	11	adj.每个	1
+98	Thank you for inviting me	Unit 8_10	11	谢谢你邀请我	1
+98	a lot of	Unit 8_10	11	许多	1
+98	come from	Unit 8_10	11	来自...	1
+98	the same ... as ...	Unit 8_10	11	和...一样	1
+99	in the comer	Unit 8_11	11	在角落	1
+99	English-speaking countries	Unit 8_11	11	说英语的国家	1
+99	all over the world	Unit 8_11	11	全世界	1
+99	a list of ...	Unit 8_11	11	...的清单	1

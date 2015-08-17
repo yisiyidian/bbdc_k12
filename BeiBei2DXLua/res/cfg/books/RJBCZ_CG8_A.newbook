@@ -1,425 +1,425 @@
-1	anyone	Unit 1_1	6	pron.任何人	1
-1	anywhere	Unit 1_1	6	adv.在任何地方	1
-1	wonderful	Unit 1_1	6	adj.精彩的	1
-2	few	Unit 1_2	6	adj.不多	1
-2	quite a few	Unit 1_2	6	相当多	0
-2	most	Unit 1_2	6	adv.&n.最多	1
-2	something	Unit 1_2	6	pron.某事	1
-2	nothing	Unit 1_2	6	pron.没有什么	1
-2	everyone	Unit 1_2	6	pron.每人	1
-2	of course	Unit 1_2	6	当然	0
-2	myself	Unit 1_2	6	pron.我自己	1
-2	yourself	Unit 1_2	6	pron.你自己	1
-3	hen	Unit 1_3	6	n.母鸡	1
-3	pig	Unit 1_3	6	n.猪	1
-3	seem	Unit 1_3	6	vi.好像	1
-3	bored	Unit 1_3	6	adj.厌倦的	1
-3	someone	Unit 1_3	6	pron.某人	1
-3	diary	Unit 1_3	6	n.日记	1
-3	enjoyable	Unit 1_3	6	adj.令人愉快的	1
-3	activity	Unit 1_3	6	n.活动	1
-3	decide	Unit 1_3	6	vt.决定	1
-4	try	Unit 1_4	6	n.&v.尝试	1
-4	paragliding	Unit 1_4	6	n.滑翔伞运动	0
-4	feel like	Unit 1_4	6	感觉像；喜欢	0
-4	bird	Unit 1_4	6	n.鸟	1
-4	bicycle	Unit 1_4	6	n.自行车	1
-4	building	Unit 1_4	6	n.建筑物	1
-4	trader	Unit 1_4	6	n.商人	1
-4	wonder	Unit 1_4	6	v.想知道	1
-4	difference	Unit 1_4	6	n.差别	1
-5	top	Unit 1_5	6	n.顶部	1
-5	wait	Unit 1_5	6	vt.等候	1
-5	umbrella	Unit 1_5	6	n.伞	1
-5	wet	Unit 1_5	6	adj.湿的	1
-5	because of	Unit 1_5	6	因为	0
-5	below	Unit 1_5	6	prep.在...下面	1
-5	enough	Unit 1_5	6	adj.&adv.足够的	1
-5	hungry	Unit 1_5	6	adj.饥饿的	1
-5	as	Unit 1_5	6	adv.&prep.像...一样	1
-6	hill	Unit 1_6	6	n.小山	1
-6	duck	Unit 1_6	6	n.鸭	1
-6	dislike	Unit 1_6	6	v.&n.不喜爱	1
-6	Central Park	Unit 1_6	6	中央公园	0
-6	Huangguoshu Waterfall	Unit 1_6	6	黄果树瀑布	0
-6	Hong  Kong	Unit 1_6	6	香港	0
-6	Malaysia	Unit 1_6	6	马来西亚	0
-6	Malaysian	Unit 1_6	6	马来西亚的	0
-6	Tian'anmen  Square	Unit 1_6	6	天安门广场	0
-6	the  Palace	Unit 1_6	6	故宫博物院	0
-7	housework	Unit 2_1	4	n.家务劳动	1
-7	hardly	Unit 2_1	4	adv.几乎不	1
-7	ever	Unit 2_1	4	adv.曾经	1
-7	hardly ever	Unit 2_1	4	几乎从不	0
-7	once	Unit 2_1	4	adv.一次	1
-7	twice	Unit 2_1	4	adv.两次	1
-7	Internet	Unit 2_1	4	n.互联网	1
-7	program	Unit 2_1	4	n.节目	1
-7	full	Unit 2_1	4	adj.满的	1
-7	swing	Unit 2_1	4	n.&v.摆动	1
-7	swing dance	Unit 2_1	4	摇摆舞	0
-8	maybe	Unit 2_2	4	adv.可能	1
-8	least	Unit 2_2	4	adj.&adv.&n.最少的	1
-8	at least	Unit 2_2	4	至少	0
-8	junk	Unit 2_2	4	n.无用的东西	0
-8	junk food	Unit 2_2	4	垃圾食品	0
-8	coffee	Unit 2_2	4	n.咖啡	1
-8	health	Unit 2_2	4	n.健康	1
-8	result	Unit 2_2	4	n.结果	1
-8	percent	Unit 2_2	4	adj.百分之...	1
-8	online	Unit 2_2	4	n.&adj.在线	1
-8	television	Unit 2_2	4	n.电视机	1
-9	although	Unit 2_3	4	conj.虽然	1
-9	through	Unit 2_3	4	prep.穿过	1
-9	mind	Unit 2_3	4	n.头脑	1
-9	body	Unit 2_3	4	n.身体	1
-9	such	Unit 2_3	4	adj.这样的	1
-9	such as	Unit 2_3	4	例如	0
-9	together	Unit 2_3	4	adv.在一起	1
-9	die	Unit 2_3	4	v.死亡	1
-9	writer	Unit 2_3	4	n.作者	1
-9	dentist	Unit 2_3	4	n.牙科医生	1
-10	magazine	Unit 2_4	4	n.杂志	1
-10	however	Unit 2_4	4	adv.然而	1
-10	than	Unit 2_4	4	conj.比	1
-10	more than	Unit 2_4	4	多于	0
-10	almost	Unit 2_4	4	adv.几乎	1
-10	none	Unit 2_4	4	pron.没有一个	1
-10	less	Unit 2_4	4	adj.较少	1
-10	less than	Unit 2_4	4	少于	0
-10	point	Unit 2_4	4	n.&v.点	1
-10	American Teenager	Unit 2_4	4	《美国青少年》	0
-11	outgoing	Unit 3_1	4	adj.外向的	1
-11	both	Unit 3_1	4	pron.两个都	1
-11	better	Unit 3_1	4	adj.&adv.较好的	1
-11	loudly	Unit 3_1	4	adv.大声地	1
-11	quietly	Unit 3_1	4	adj.安静地	1
-11	hard-working	Unit 3_1	4	adj.工作努力的	1
-11	competition	Unit 3_1	4	n.比赛	1
-11	fantastic	Unit 3_1	4	adj.极好的	1
-11	which	Unit 3_1	4	pron.哪一个	1
-11	clearly	Unit 3_1	4	adv.清楚地	1
-11	win	Unit 3_1	4	vi.获胜	1
-12	though	Unit 3_2	4	conj.虽然	1
-12	talented	Unit 3_2	4	adj.有才能的	1
-12	truly	Unit 3_2	4	adv.真正	1
-12	care	Unit 3_2	4	n.&v.在意	1
-12	care about	Unit 3_2	4	关心	0
-12	laugh	Unit 3_2	4	vt.笑	1
-12	serious	Unit 3_2	4	adj.严肃的	1
-12	mirror	Unit 3_2	4	n.镜子	1
-12	kid	Unit 3_2	4	n.小孩	1
-12	as long as	Unit 3_2	4	只要	0
-12	necessary	Unit 3_2	4	adj.必需的	1
-13	be different from	Unit 3_3	4	与...不同	0
-13	bring out	Unit 3_3	4	使显现	0
-13	grade	Unit 3_3	4	n.成绩等级	1
-13	should	Unit 3_3	4	aux.应该	1
-13	the same as	Unit 3_3	4	和...相同	0
-13	saying	Unit 3_3	4	n.谚语	1
-13	reach	Unit 3_3	4	vt.到达	1
-13	hand	Unit 3_3	4	n.手	1
-13	touch	Unit 3_3	4	vt.触摸	1
-13	heart	Unit 3_3	4	n.心脏	1
-13	fact	Unit 3_3	4	n.事实	1
-14	in fact	Unit 3_4	4	事实上	0
-14	break	Unit 3_4	4	v.使破	1
-14	arm	Unit 3_4	4	n.手臂	1
-14	share	Unit 3_4	4	vt.分享	1
-14	loud	Unit 3_4	4	adj.响亮的	1
-14	similar	Unit 3_4	4	adj.类似的	1
-14	be similar to	Unit 3_4	4	与...类似的	0
-14	primary	Unit 3_4	4	adj.最初的	1
-14	primary school	Unit 3_4	4	小学	0
-14	information	Unit 3_4	4	n.信息	1
-15	theater	Unit 4_1	5	n.戏院	1
-15	comfortable	Unit 4_1	5	adj.舒适的	1
-15	seat	Unit 4_1	5	n.座位	1
-15	screen	Unit 4_1	5	n.屏幕	1
-15	close	Unit 4_1	5	vt.接近	1
-15	ticket	Unit 4_1	5	n.票	1
-15	worst	Unit 4_1	5	adj.&adv.最差的	1
-15	cheaply	Unit 4_1	5	adv.便宜地	1
-15	song	Unit 4_1	5	n.歌	1
-16	DJ	Unit 4_2	5	n.音乐节目主持人	0
-16	choose	Unit 4_2	5	vt.选择	1
-16	carefully	Unit 4_2	5	adv.小心地	1
-16	reporter	Unit 4_2	5	n.记者	1
-16	so far	Unit 4_2	5	到目前为止	0
-16	fresh	Unit 4_2	5	adj.新鲜的	1
-16	comfortably	Unit 4_2	5	adv.舒服地	1
-16	worse	Unit 4_2	5	adj.&adv.更差的	1
-16	service	Unit 4_2	5	n.服务	1
-17	pretty	Unit 4_3	5	adj.&adv.相当	1
-17	menu	Unit 4_3	5	n.菜单	1
-17	act	Unit 4_3	5	vi.扮演	1
-17	meal	Unit 4_3	5	n.餐	1
-17	creative	Unit 4_3	5	adj.有创造力的	1
-17	performer	Unit 4_3	5	n.表演者	0
-17	talent	Unit 4_3	5	n.天资	1
-17	have ... in  common	Unit 4_3	5	有相同特征	0
-17	magician	Unit 4_3	5	n.魔术师	1
-18	all kinds of	Unit 4_4	5	各种类型的	0
-18	beautifully	Unit 4_4	5	adv.漂亮地	1
-18	be up to	Unit 4_4	5	是...的职责	0
-18	role	Unit 4_4	5	n.角色	1
-18	play a role	Unit 4_4	5	发挥作用	0
-18	winner	Unit 4_4	5	n.获胜者	1
-18	prize	Unit 4_4	5	n.奖	1
-18	everybody	Unit 4_4	5	pron.每人	1
-18	make up	Unit 4_4	5	编造	0
-19	example	Unit 4_5	5	n.范例	1
-19	for example	Unit 4_5	5	例如	0
-19	poor	Unit 4_5	5	adj.贫穷的	1
-19	seriously	Unit 4_5	5	adv.严重地	1
-19	take ... seriously	Unit 4_5	5	认真对待...	0
-19	give	Unit 4_5	5	vt.给	1
-19	crowded	Unit 4_5	5	拥挤的	0
-19	American Idol	Unit 4_5	5	美国偶像	0
-19	American's Got Talent	Unit 4_5	5	美国达人秀	0
-19	China's Got Talent	Unit 4_5	5	中国达人秀	0
-20	sitcom	Unit 5_1	4	n.情景喜剧	0
-20	news	Unit 5_1	4	n.新闻	1
-20	soap opera	Unit 5_1	4	肥皂剧	0
-20	mind	Unit 5_1	4	v.介意	1
-20	stand	Unit 5_1	4	v.站立	1
-20	educational	Unit 5_1	4	adj.教育的	1
-20	plan	Unit 5_1	4	n.&v.计划	1
-20	hope	Unit 5_1	4	n.&v.希望	1
-20	find out	Unit 5_1	4	查明	0
-20	discussion	Unit 5_1	4	n.讨论	1
-20	happen	Unit 5_1	4	vi.发生	1
-21	expect	Unit 5_2	4	v.期待	1
-21	joke	Unit 5_2	4	n.笑话	1
-21	comedy	Unit 5_2	4	n.喜剧	0
-21	meaningless	Unit 5_2	4	adj.毫无意义的	1
-21	action	Unit 5_2	4	n.行动	1
-21	action movie	Unit 5_2	4	动作影片	0
-21	cartoon	Unit 5_2	4	n.动画片	1
-21	culture	Unit 5_2	4	n.文化	1
-21	famous	Unit 5_2	4	adj.著名的	1
-21	appear	Unit 5_2	4	vi.出现	1
-21	become	Unit 5_2	4	vt.变成	1
-22	rich	Unit 5_3	4	adj.富有的	1
-22	successful	Unit 5_3	4	adj.获得成功的	1
-22	might	Unit 5_3	4	aux.可能	1
-22	main	Unit 5_3	4	adj.主要的	1
-22	reason	Unit 5_3	4	n.原因	1
-22	common	Unit 5_3	4	adj.普通的	1
-22	film	Unit 5_3	4	n.电影	1
-22	unlucky	Unit 5_3	4	adj.不幸的	1
-22	lose	Unit 5_3	4	vt.失去	1
-22	girlfriend	Unit 5_3	4	n.女朋友	0
-23	ready	Unit 5_4	4	adj.准备好的	1
-23	be ready to	Unit 5_4	4	准备好	0
-23	character	Unit 5_4	4	n.角色	0
-23	simple	Unit 5_4	4	adj.简单的	1
-23	dress up	Unit 5_4	4	装扮	0
-23	take sb's place	Unit 5_4	4	代替	0
-23	army	Unit 5_4	4	n.陆军	1
-23	do a good job	Unit 5_4	4	干得好	0
-23	Hollywood	Unit 5_4	4	n.好莱坞	0
-23	the Hollywood Walk of Fame	Unit 5_4	4	好莱坞星光大道	0
-24	grow up	Unit 6_1	5	长大	0
-24	computer programmer	Unit 6_1	5	计算机程序设计员	0
-24	cook	Unit 6_1	5	vi.烹饪	1
-24	doctor	Unit 6_1	5	n.医生	1
-24	engineer	Unit 6_1	5	n.工程师	1
-24	violinist	Unit 6_1	5	n.小提琴手	1
-24	driver	Unit 6_1	5	n.驾驶员	1
-24	pilot	Unit 6_1	5	n.飞行员	1
-24	pianist	Unit 6_1	5	n.钢琴家	1
-25	scientist	Unit 6_2	5	n.科学家	1
-25	be sure about	Unit 6_2	5	确信	0
-25	make sure	Unit 6_2	5	确保	0
-25	college	Unit 6_2	5	n.学院	1
-25	education	Unit 6_2	5	n.教育	1
-25	medicine	Unit 6_2	5	n.药	1
-25	university	Unit 6_2	5	n.大学	1
-25	London	Unit 6_2	5	n.伦敦	1
-25	article	Unit 6_2	5	n.文章	1
-26	send	Unit 6_3	5	vt.发送	1
-26	resolution	Unit 6_3	5	n.决心	0
-26	team	Unit 6_3	5	n.队	1
-26	make the soccer team	Unit 6_3	5	成为足球队的一员	0
-26	foreign	Unit 6_3	5	adj.外国的	1
-26	able	Unit 6_3	5	adj.能够	1
-26	be able to	Unit 6_3	5	能够做某事	0
-26	question	Unit 6_3	5	n.提问	1
-26	meaning	Unit 6_3	5	n.意义	1
-27	discuss	Unit 6_4	5	vt.讨论	1
-27	promise	Unit 6_4	5	v.承诺	1
-27	beginning	Unit 6_4	5	n.开头	1
-27	at the beginning of	Unit 6_4	5	在...开始	0
-27	improve	Unit 6_4	5	vt.改进	1
-27	write down	Unit 6_4	5	写下	0
-27	physical	Unit 6_4	5	adj.身体的	1
-27	themselves	Unit 6_4	5	pron.他们自己	1
-27	have to do with	Unit 6_4	5	关于	0
-28	self-improvement	Unit 6_5	5	n.自我改进	0
-28	take up	Unit 6_5	5	学着做	0
-28	hobby	Unit 6_5	5	n.业余爱好	1
-28	weekly	Unit 6_5	5	adj.&adv.每周的	1
-28	schoolwork	Unit 6_5	5	n.学校作业	1
-28	own	Unit 6_5	5	adj.自己的	1
-28	personal	Unit 6_5	5	adj.私人的	1
-28	relationship	Unit 6_5	5	n.关系	1
-28	The Old Man and the Sea	Unit 6_5	5	《老人与海》	0
-29	paper	Unit 7_1	4	n.纸	1
-29	pollution	Unit 7_1	4	n.污染	1
-29	prediction	Unit 7_1	4	n.预言	0
-29	future	Unit 7_1	4	n.将来	1
-29	pollute	Unit 7_1	4	v.污染	1
-29	environment	Unit 7_1	4	n.环境	1
-29	planet	Unit 7_1	4	n.行星	1
-29	earth	Unit 7_1	4	n.地球	1
-29	plant	Unit 7_1	4	v.&n.植物	1
-29	part	Unit 7_1	4	n.部分	1
-29	play part	Unit 7_1	4	参与	0
-30	peace	Unit 7_2	4	n.和平	1
-30	sea	Unit 7_2	4	n.海	1
-30	build	Unit 7_2	4	vt.建筑	1
-30	sky	Unit 7_2	4	n.天空	1
-30	astronaut	Unit 7_2	4	n.宇航员	0
-30	apartment	Unit 7_2	4	n.公寓	1
-30	rocket	Unit 7_2	4	n.火箭	0
-30	space	Unit 7_2	4	n.太空	1
-30	space station	Unit 7_2	4	太空站	0
-30	human	Unit 7_2	4	n.人	1
-30	servant	Unit 7_2	4	n.仆人	0
-31	dangerous	Unit 7_3	4	adj.有危险的	1
-31	already	Unit 7_3	4	adv.已经	1
-31	factory	Unit 7_3	4	n.工厂	1
-31	over and over again	Unit 7_3	4	多次	0
-31	believe	Unit 7_3	4	vi.相信	1
-31	disagree	Unit 7_3	4	v.不同意	1
-31	even	Unit 7_3	4	adv.甚至	1
-31	agree	Unit 7_3	4	vt.同意	1
-31	hundreds of	Unit 7_3	4	成百上千的	0
-31	shape	Unit 7_3	4	n.形状	1
-31	fall	Unit 7_3	4	v.&n.掉落	1
-32	fall down	Unit 7_4	4	跌倒	0
-32	inside	Unit 7_4	4	prep.在...里面	1
-32	look for	Unit 7_4	4	寻找	0
-32	possible	Unit 7_4	4	adj.可能的	1
-32	impossible	Unit 7_4	4	adj.不可能的	1
-32	side	Unit 7_4	4	n.一方	1
-32	probably	Unit 7_4	4	adv.很可能	1
-32	during	Unit 7_4	4	prep.在...期间	1
-32	holiday	Unit 7_4	4	n.假期	1
-32	word	Unit 7_4	4	n.单词	1
-33	shake	Unit 8_1	4	vi.摇动	1
-33	milk shake	Unit 8_1	4	奶昔	0
-33	blender	Unit 8_1	4	n.事物搅拌器	0
-33	turn on	Unit 8_1	4	打开	0
-33	peel	Unit 8_1	4	v.剥皮	0
-33	pour	Unit 8_1	4	vt.倒出	1
-33	yogurt	Unit 8_1	4	n.酸奶	1
-33	honey	Unit 8_1	4	n.蜂蜜	1
-33	watermelon	Unit 8_1	4	n.西瓜	1
-33	spoon	Unit 8_1	4	勺	1
-34	pot	Unit 8_2	4	n.锅	0
-34	add	Unit 8_2	4	vt.增加	1
-34	finally	Unit 8_2	4	adv.最后	1
-34	salt	Unit 8_2	4	n.食盐	1
-34	sugar	Unit 8_2	4	n.食糖	1
-34	cheese	Unit 8_2	4	n.奶酪	1
-34	popcorn	Unit 8_2	4	n.爆米花	0
-34	corn	Unit 8_2	4	n.玉米	1
-34	machine	Unit 8_2	4	n.机器	1
-34	dig	Unit 8_2	4	v.掘	1
-35	hole	Unit 8_3	4	n.洞	1
-35	sandwich	Unit 8_3	4	n.三明治	1
-35	butter	Unit 8_3	4	n.黄油	1
-35	turkey	Unit 8_3	4	n.火鸡	0
-35	lettuce	Unit 8_3	4	n.莴苣	0
-35	piece	Unit 8_3	4	n.片	1
-35	Thanksgiving	Unit 8_3	4	n.感恩节	0
-35	traditional	Unit 8_3	4	adj.传统的	1
-35	autumn	Unit 8_3	4	n.秋天	1
-35	traveler	Unit 8_3	4	n.旅行者	1
-36	England	Unit 8_4	4	n.英格兰	1
-36	celebrate	Unit 8_4	4	vt.庆祝	1
-36	mix	Unit 8_4	4	vt.混合	1
-36	pepper	Unit 8_4	4	n.甜椒	1
-36	fill	Unit 8_4	4	vt.（使）充满	1
-36	oven	Unit 8_4	4	n.烤箱	0
-36	plate	Unit 8_4	4	n.盘子	1
-36	cover	Unit 8_4	4	v.&n.遮盖	1
-36	gravy	Unit 8_4	4	n.肉汁	0
-36	serve	Unit 8_4	4	v.服务	1
-36	temperature	Unit 8_4	4	n.温度	1
-37	prepare	Unit 9_1	4	vt.把...准备好	1
-37	prepare for	Unit 9_1	4	为...做准备	0
-37	exam	Unit 9_1	4	n.考试	1
-37	flu	Unit 9_1	4	n.流行性感冒	1
-37	available	Unit 9_1	4	adj.可获得的	1
-37	another time	Unit 9_1	4	其他时间	0
-37	until	Unit 9_1	4	prep.直到...为止	1
-37	hang	Unit 9_1	4	vt.悬挂	1
-37	hang out	Unit 9_1	4	闲逛	0
-37	catch	Unit 9_1	4	vt.抓住	1
-37	invite	Unit 9_1	4	vt.邀请	1
-38	accept	Unit 9_2	4	vt.接受	1
-38	refuse	Unit 9_2	4	vt.拒绝	1
-38	the day before yesterday	Unit 9_2	4	前天	0
-38	the day after tomorrow	Unit 9_2	4	后天	0
-38	weekday	Unit 9_2	4	n.工作日	1
-38	look after	Unit 9_2	4	照料	0
-38	invitation	Unit 9_2	4	n.邀请	1
-38	turn down	Unit 9_2	4	拒绝	0
-38	reply	Unit 9_2	4	vt.回答	1
-38	forward	Unit 9_2	4	vt.&adv.向前	1
-38	delete	Unit 9_2	4	vt.删除	1
-39	print	Unit 9_3	4	vt.打印	1
-39	sad	Unit 9_3	4	adj.悲哀的	1
-39	goodbye	Unit 9_3	4	int.再见	1
-39	take a trip	Unit 9_3	4	去旅行	0
-39	glad	Unit 9_3	4	adj.高兴	1
-39	help out	Unit 9_3	4	分担工作	0
-39	preparation	Unit 9_3	4	n.准备	1
-39	glue	Unit 9_3	4	n.胶水	1
-39	without	Unit 9_3	4	prep.没有	1
-39	surprised	Unit 9_3	4	adj.惊奇的	1
-40	look forward to	Unit 9_4	4	盼望	0
-40	hear from	Unit 9_4	4	接到信	0
-40	housewarming	Unit 9_4	4	乔迁聚会	0
-40	opening	Unit 9_4	4	n.开幕式	1
-40	concert	Unit 9_4	4	n.音乐会	1
-40	headmaster	Unit 9_4	4	n.校长	0
-40	event	Unit 9_4	4	n.大事	1
-40	guest	Unit 9_4	4	n.客人	1
-40	calendar	Unit 9_4	4	n.日历	1
-40	daytime	Unit 9_4	4	n.白天	1
-41	meeting	Unit 10_1	3	n.会议	1
-41	video	Unit 10_1	3	n.录像带	1
-41	organize	Unit 10_1	3	vi.组织	1
-41	potato	Unit 10_1	3	n.炸土豆片	0
-41	chocolate	Unit 10_1	3	n.巧克力	1
-41	upset	Unit 10_1	3	adj.难过	1
-41	taxi	Unit 10_1	3	n.出租汽车	1
-41	advice	Unit 10_1	3	n.建议	1
-41	travel	Unit 10_1	3	n.旅行	1
-41	agent	Unit 10_1	3	n.代理人	0
-41	expert	Unit 10_1	3	n.专家	0
-42	keep ... to oneself	Unit 10_2	3	保守秘密	0
-42	teenager	Unit 10_2	3	n.青少年	1
-42	normal	Unit 10_2	3	adj.正常的	1
-42	unless	Unit 10_2	3	conj.除非	1
-42	certainly	Unit 10_2	3	adv.肯定	1
-42	wallet	Unit 10_2	3	n.钱包	1
-42	mile	Unit 10_2	3	n.英里	1
-42	angry	Unit 10_2	3	adj.生气的	1
-42	understanding	Unit 10_2	3	adj.善解人意的	1
-42	careless	Unit 10_2	3	adj.粗心的	1
-42	mistake	Unit 10_2	3	n.错误	1
-43	himself	Unit 10_3	3	pron.他自己	1
-43	careful	Unit 10_3	3	adj.小心的	1
-43	advise	Unit 10_3	3	vt.劝告	1
-43	solve	Unit 10_3	3	v.解决	1
-43	step	Unit 10_3	3	n.步	1
-43	trust	Unit 10_3	3	vi.相信	1
-43	experience	Unit 10_3	3	n.经验	1
-43	in half	Unit 10_3	3	分成两半	0
-43	halfway	Unit 10_3	3	adv.在中途	0
-43	else	Unit 10_3	3	adj.别的	1
+1	anyone	Unit 1_1	10	pron.任何人	1
+1	anywhere	Unit 1_1	10	adv.在任何地方	1
+1	wonderful	Unit 1_1	10	adj.精彩的	1
+2	few	Unit 1_2	10	adj.不多	1
+2	quite a few	Unit 1_2	10	相当多	0
+2	most	Unit 1_2	10	adv.&n.最多	1
+2	something	Unit 1_2	10	pron.某事	1
+2	nothing	Unit 1_2	10	pron.没有什么	1
+3	everyone	Unit 1_3	10	pron.每人	1
+3	of course	Unit 1_3	10	当然	0
+3	myself	Unit 1_3	10	pron.我自己	1
+3	yourself	Unit 1_3	10	pron.你自己	1
+3	hen	Unit 1_3	10	n.母鸡	1
+4	pig	Unit 1_4	10	n.猪	1
+4	seem	Unit 1_4	10	vi.好像	1
+4	bored	Unit 1_4	10	adj.厌倦的	1
+4	someone	Unit 1_4	10	pron.某人	1
+4	diary	Unit 1_4	10	n.日记	1
+5	enjoyable	Unit 1_5	10	adj.令人愉快的	1
+5	activity	Unit 1_5	10	n.活动	1
+5	decide	Unit 1_5	10	vt.决定	1
+5	try	Unit 1_5	10	n.&v.尝试	1
+5	paragliding	Unit 1_5	10	n.滑翔伞运动	0
+6	feel like	Unit 1_6	10	感觉像；喜欢	0
+6	bird	Unit 1_6	10	n.鸟	1
+6	bicycle	Unit 1_6	10	n.自行车	1
+6	building	Unit 1_6	10	n.建筑物	1
+6	trader	Unit 1_6	10	n.商人	1
+7	wonder	Unit 1_7	10	v.想知道	1
+7	difference	Unit 1_7	10	n.差别	1
+7	top	Unit 1_7	10	n.顶部	1
+7	wait	Unit 1_7	10	vt.等候	1
+7	umbrella	Unit 1_7	10	n.伞	1
+8	wet	Unit 1_8	10	adj.湿的	1
+8	because of	Unit 1_8	10	因为	0
+8	below	Unit 1_8	10	prep.在...下面	1
+8	enough	Unit 1_8	10	adj.&adv.足够的	1
+8	hungry	Unit 1_8	10	adj.饥饿的	1
+9	as	Unit 1_9	10	adv.&prep.像...一样	1
+9	hill	Unit 1_9	10	n.小山	1
+9	duck	Unit 1_9	10	n.鸭	1
+9	dislike	Unit 1_9	10	v.&n.不喜爱	1
+9	Central Park	Unit 1_9	10	中央公园	0
+10	Huangguoshu Waterfall	Unit 1_10	10	黄果树瀑布	0
+10	Hong  Kong	Unit 1_10	10	香港	0
+10	Malaysia	Unit 1_10	10	马来西亚	0
+10	Malaysian	Unit 1_10	10	马来西亚的	0
+10	Tian'anmen  Square	Unit 1_10	10	天安门广场	0
+10	the  Palace	Unit 1_10	10	故宫博物院	0
+11	housework	Unit 2_1	8	n.家务劳动	1
+11	hardly	Unit 2_1	8	adv.几乎不	1
+11	ever	Unit 2_1	8	adv.曾经	1
+11	hardly ever	Unit 2_1	8	几乎从不	0
+11	once	Unit 2_1	8	adv.一次	1
+12	twice	Unit 2_2	8	adv.两次	1
+12	Internet	Unit 2_2	8	n.互联网	1
+12	program	Unit 2_2	8	n.节目	1
+12	full	Unit 2_2	8	adj.满的	1
+12	swing	Unit 2_2	8	n.&v.摆动	1
+13	swing dance	Unit 2_3	8	摇摆舞	0
+13	maybe	Unit 2_3	8	adv.可能	1
+13	least	Unit 2_3	8	adj.&adv.&n.最少的	1
+13	at least	Unit 2_3	8	至少	0
+13	junk	Unit 2_3	8	n.无用的东西	0
+14	junk food	Unit 2_4	8	垃圾食品	0
+14	coffee	Unit 2_4	8	n.咖啡	1
+14	health	Unit 2_4	8	n.健康	1
+14	result	Unit 2_4	8	n.结果	1
+14	percent	Unit 2_4	8	adj.百分之...	1
+15	online	Unit 2_5	8	n.&adj.在线	1
+15	television	Unit 2_5	8	n.电视机	1
+15	although	Unit 2_5	8	conj.虽然	1
+15	through	Unit 2_5	8	prep.穿过	1
+15	mind	Unit 2_5	8	n.头脑	1
+16	body	Unit 2_6	8	n.身体	1
+16	such	Unit 2_6	8	adj.这样的	1
+16	such as	Unit 2_6	8	例如	0
+16	together	Unit 2_6	8	adv.在一起	1
+16	die	Unit 2_6	8	v.死亡	1
+17	writer	Unit 2_7	8	n.作者	1
+17	dentist	Unit 2_7	8	n.牙科医生	1
+17	magazine	Unit 2_7	8	n.杂志	1
+17	however	Unit 2_7	8	adv.然而	1
+17	than	Unit 2_7	8	conj.比	1
+17	more than	Unit 2_7	8	多于	0
+18	almost	Unit 2_8	8	adv.几乎	1
+18	none	Unit 2_8	8	pron.没有一个	1
+18	less	Unit 2_8	8	adj.较少	1
+18	less than	Unit 2_8	8	少于	0
+18	point	Unit 2_8	8	n.&v.点	1
+18	American Teenager	Unit 2_8	8	《美国青少年》	0
+19	outgoing	Unit 3_1	9	adj.外向的	1
+19	both	Unit 3_1	9	pron.两个都	1
+19	better	Unit 3_1	9	adj.&adv.较好的	1
+19	loudly	Unit 3_1	9	adv.大声地	1
+19	quietly	Unit 3_1	9	adj.安静地	1
+20	hard-working	Unit 3_2	9	adj.工作努力的	1
+20	competition	Unit 3_2	9	n.比赛	1
+20	fantastic	Unit 3_2	9	adj.极好的	1
+20	which	Unit 3_2	9	pron.哪一个	1
+20	clearly	Unit 3_2	9	adv.清楚地	1
+21	win	Unit 3_3	9	vi.获胜	1
+21	though	Unit 3_3	9	conj.虽然	1
+21	talented	Unit 3_3	9	adj.有才能的	1
+21	truly	Unit 3_3	9	adv.真正	1
+21	care	Unit 3_3	9	n.&v.在意	1
+22	care about	Unit 3_4	9	关心	0
+22	laugh	Unit 3_4	9	vt.笑	1
+22	serious	Unit 3_4	9	adj.严肃的	1
+22	mirror	Unit 3_4	9	n.镜子	1
+22	kid	Unit 3_4	9	n.小孩	1
+23	as long as	Unit 3_5	9	只要	0
+23	necessary	Unit 3_5	9	adj.必需的	1
+23	be different from	Unit 3_5	9	与...不同	0
+23	bring out	Unit 3_5	9	使显现	0
+23	grade	Unit 3_5	9	n.成绩等级	1
+24	should	Unit 3_6	9	aux.应该	1
+24	the same as	Unit 3_6	9	和...相同	0
+24	saying	Unit 3_6	9	n.谚语	1
+24	reach	Unit 3_6	9	vt.到达	1
+24	hand	Unit 3_6	9	n.手	1
+25	touch	Unit 3_7	9	vt.触摸	1
+25	heart	Unit 3_7	9	n.心脏	1
+25	fact	Unit 3_7	9	n.事实	1
+25	in fact	Unit 3_7	9	事实上	0
+25	break	Unit 3_7	9	v.使破	1
+26	arm	Unit 3_8	9	n.手臂	1
+26	share	Unit 3_8	9	vt.分享	1
+26	loud	Unit 3_8	9	adj.响亮的	1
+26	similar	Unit 3_8	9	adj.类似的	1
+27	be similar to	Unit 3_9	9	与...类似的	0
+27	primary	Unit 3_9	9	adj.最初的	1
+27	primary school	Unit 3_9	9	小学	0
+27	information	Unit 3_9	9	n.信息	1
+28	theater	Unit 4_1	9	n.戏院	1
+28	comfortable	Unit 4_1	9	adj.舒适的	1
+28	seat	Unit 4_1	9	n.座位	1
+28	screen	Unit 4_1	9	n.屏幕	1
+28	close	Unit 4_1	9	vt.接近	1
+29	ticket	Unit 4_2	9	n.票	1
+29	worst	Unit 4_2	9	adj.&adv.最差的	1
+29	cheaply	Unit 4_2	9	adv.便宜地	1
+29	song	Unit 4_2	9	n.歌	1
+29	DJ	Unit 4_2	9	n.音乐节目主持人	0
+30	choose	Unit 4_3	9	vt.选择	1
+30	carefully	Unit 4_3	9	adv.小心地	1
+30	reporter	Unit 4_3	9	n.记者	1
+30	so far	Unit 4_3	9	到目前为止	0
+30	fresh	Unit 4_3	9	adj.新鲜的	1
+31	comfortably	Unit 4_4	9	adv.舒服地	1
+31	worse	Unit 4_4	9	adj.&adv.更差的	1
+31	service	Unit 4_4	9	n.服务	1
+31	pretty	Unit 4_4	9	adj.&adv.相当	1
+31	menu	Unit 4_4	9	n.菜单	1
+32	act	Unit 4_5	9	vi.扮演	1
+32	meal	Unit 4_5	9	n.餐	1
+32	creative	Unit 4_5	9	adj.有创造力的	1
+32	performer	Unit 4_5	9	n.表演者	0
+32	talent	Unit 4_5	9	n.天资	1
+33	have ... in  common	Unit 4_6	9	有相同特征	0
+33	magician	Unit 4_6	9	n.魔术师	1
+33	all kinds of	Unit 4_6	9	各种类型的	0
+33	beautifully	Unit 4_6	9	adv.漂亮地	1
+33	be up to	Unit 4_6	9	是...的职责	0
+34	role	Unit 4_7	9	n.角色	1
+34	play a role	Unit 4_7	9	发挥作用	0
+34	winner	Unit 4_7	9	n.获胜者	1
+34	prize	Unit 4_7	9	n.奖	1
+34	everybody	Unit 4_7	9	pron.每人	1
+35	make up	Unit 4_8	9	编造	0
+35	example	Unit 4_8	9	n.范例	1
+35	for example	Unit 4_8	9	例如	0
+35	poor	Unit 4_8	9	adj.贫穷的	1
+35	seriously	Unit 4_8	9	adv.严重地	1
+36	take ... seriously	Unit 4_9	9	认真对待...	0
+36	give	Unit 4_9	9	vt.给	1
+36	crowded	Unit 4_9	9	拥挤的	0
+36	American Idol	Unit 4_9	9	美国偶像	0
+36	American's Got Talent	Unit 4_9	9	美国达人秀	0
+36	China's Got Talent	Unit 4_9	9	中国达人秀	0
+37	sitcom	Unit 5_1	8	n.情景喜剧	0
+37	news	Unit 5_1	8	n.新闻	1
+37	soap opera	Unit 5_1	8	肥皂剧	0
+37	mind	Unit 5_1	8	v.介意	1
+37	stand	Unit 5_1	8	v.站立	1
+38	educational	Unit 5_2	8	adj.教育的	1
+38	plan	Unit 5_2	8	n.&v.计划	1
+38	hope	Unit 5_2	8	n.&v.希望	1
+38	find out	Unit 5_2	8	查明	0
+38	discussion	Unit 5_2	8	n.讨论	1
+39	happen	Unit 5_3	8	vi.发生	1
+39	expect	Unit 5_3	8	v.期待	1
+39	joke	Unit 5_3	8	n.笑话	1
+39	comedy	Unit 5_3	8	n.喜剧	0
+39	meaningless	Unit 5_3	8	adj.毫无意义的	1
+40	action	Unit 5_4	8	n.行动	1
+40	action movie	Unit 5_4	8	动作影片	0
+40	cartoon	Unit 5_4	8	n.动画片	1
+40	culture	Unit 5_4	8	n.文化	1
+40	famous	Unit 5_4	8	adj.著名的	1
+41	appear	Unit 5_5	8	vi.出现	1
+41	become	Unit 5_5	8	vt.变成	1
+41	rich	Unit 5_5	8	adj.富有的	1
+41	successful	Unit 5_5	8	adj.获得成功的	1
+41	might	Unit 5_5	8	aux.可能	1
+42	main	Unit 5_6	8	adj.主要的	1
+42	reason	Unit 5_6	8	n.原因	1
+42	common	Unit 5_6	8	adj.普通的	1
+42	film	Unit 5_6	8	n.电影	1
+42	unlucky	Unit 5_6	8	adj.不幸的	1
+43	lose	Unit 5_7	8	vt.失去	1
+43	girlfriend	Unit 5_7	8	n.女朋友	0
+43	ready	Unit 5_7	8	adj.准备好的	1
+43	be ready to	Unit 5_7	8	准备好	0
+43	character	Unit 5_7	8	n.角色	0
+43	simple	Unit 5_7	8	adj.简单的	1
+44	dress up	Unit 5_8	8	装扮	0
+44	take sb's place	Unit 5_8	8	代替	0
+44	army	Unit 5_8	8	n.陆军	1
+44	do a good job	Unit 5_8	8	干得好	0
+44	Hollywood	Unit 5_8	8	n.好莱坞	0
+44	the Hollywood Walk of Fame	Unit 5_8	8	好莱坞星光大道	0
+45	grow up	Unit 6_1	9	长大	0
+45	computer programmer	Unit 6_1	9	计算机程序设计员	0
+45	cook	Unit 6_1	9	vi.烹饪	1
+45	doctor	Unit 6_1	9	n.医生	1
+45	engineer	Unit 6_1	9	n.工程师	1
+46	violinist	Unit 6_2	9	n.小提琴手	1
+46	driver	Unit 6_2	9	n.驾驶员	1
+46	pilot	Unit 6_2	9	n.飞行员	1
+46	pianist	Unit 6_2	9	n.钢琴家	1
+46	scientist	Unit 6_2	9	n.科学家	1
+47	be sure about	Unit 6_3	9	确信	0
+47	make sure	Unit 6_3	9	确保	0
+47	college	Unit 6_3	9	n.学院	1
+47	education	Unit 6_3	9	n.教育	1
+47	medicine	Unit 6_3	9	n.药	1
+48	university	Unit 6_4	9	n.大学	1
+48	London	Unit 6_4	9	n.伦敦	1
+48	article	Unit 6_4	9	n.文章	1
+48	send	Unit 6_4	9	vt.发送	1
+48	resolution	Unit 6_4	9	n.决心	0
+49	team	Unit 6_5	9	n.队	1
+49	make the soccer team	Unit 6_5	9	成为足球队的一员	0
+49	foreign	Unit 6_5	9	adj.外国的	1
+49	able	Unit 6_5	9	adj.能够	1
+49	be able to	Unit 6_5	9	能够做某事	0
+50	question	Unit 6_6	9	n.提问	1
+50	meaning	Unit 6_6	9	n.意义	1
+50	discuss	Unit 6_6	9	vt.讨论	1
+50	promise	Unit 6_6	9	v.承诺	1
+50	beginning	Unit 6_6	9	n.开头	1
+51	at the beginning of	Unit 6_7	9	在...开始	0
+51	improve	Unit 6_7	9	vt.改进	1
+51	write down	Unit 6_7	9	写下	0
+51	physical	Unit 6_7	9	adj.身体的	1
+51	themselves	Unit 6_7	9	pron.他们自己	1
+52	have to do with	Unit 6_8	9	关于	0
+52	self-improvement	Unit 6_8	9	n.自我改进	0
+52	take up	Unit 6_8	9	学着做	0
+52	hobby	Unit 6_8	9	n.业余爱好	1
+52	weekly	Unit 6_8	9	adj.&adv.每周的	1
+53	schoolwork	Unit 6_9	9	n.学校作业	1
+53	own	Unit 6_9	9	adj.自己的	1
+53	personal	Unit 6_9	9	adj.私人的	1
+53	relationship	Unit 6_9	9	n.关系	1
+53	The Old Man and the Sea	Unit 6_9	9	《老人与海》	0
+54	paper	Unit 7_1	9	n.纸	1
+54	pollution	Unit 7_1	9	n.污染	1
+54	prediction	Unit 7_1	9	n.预言	0
+54	future	Unit 7_1	9	n.将来	1
+54	pollute	Unit 7_1	9	v.污染	1
+55	environment	Unit 7_2	9	n.环境	1
+55	planet	Unit 7_2	9	n.行星	1
+55	earth	Unit 7_2	9	n.地球	1
+55	plant	Unit 7_2	9	v.&n.植物	1
+55	part	Unit 7_2	9	n.部分	1
+56	play part	Unit 7_3	9	参与	0
+56	peace	Unit 7_3	9	n.和平	1
+56	sea	Unit 7_3	9	n.海	1
+56	build	Unit 7_3	9	vt.建筑	1
+56	sky	Unit 7_3	9	n.天空	1
+57	astronaut	Unit 7_4	9	n.宇航员	0
+57	apartment	Unit 7_4	9	n.公寓	1
+57	rocket	Unit 7_4	9	n.火箭	0
+57	space	Unit 7_4	9	n.太空	1
+57	space station	Unit 7_4	9	太空站	0
+58	human	Unit 7_5	9	n.人	1
+58	servant	Unit 7_5	9	n.仆人	0
+58	dangerous	Unit 7_5	9	adj.有危险的	1
+58	already	Unit 7_5	9	adv.已经	1
+58	factory	Unit 7_5	9	n.工厂	1
+59	over and over again	Unit 7_6	9	多次	0
+59	believe	Unit 7_6	9	vi.相信	1
+59	disagree	Unit 7_6	9	v.不同意	1
+59	even	Unit 7_6	9	adv.甚至	1
+59	agree	Unit 7_6	9	vt.同意	1
+60	hundreds of	Unit 7_7	9	成百上千的	0
+60	shape	Unit 7_7	9	n.形状	1
+60	fall	Unit 7_7	9	v.&n.掉落	1
+60	fall down	Unit 7_7	9	跌倒	0
+60	inside	Unit 7_7	9	prep.在...里面	1
+61	look for	Unit 7_8	9	寻找	0
+61	possible	Unit 7_8	9	adj.可能的	1
+61	impossible	Unit 7_8	9	adj.不可能的	1
+61	side	Unit 7_8	9	n.一方	1
+62	probably	Unit 7_9	9	adv.很可能	1
+62	during	Unit 7_9	9	prep.在...期间	1
+62	holiday	Unit 7_9	9	n.假期	1
+62	word	Unit 7_9	9	n.单词	1
+63	shake	Unit 8_1	8	vi.摇动	1
+63	milk shake	Unit 8_1	8	奶昔	0
+63	blender	Unit 8_1	8	n.事物搅拌器	0
+63	turn on	Unit 8_1	8	打开	0
+63	peel	Unit 8_1	8	v.剥皮	0
+64	pour	Unit 8_2	8	vt.倒出	1
+64	yogurt	Unit 8_2	8	n.酸奶	1
+64	honey	Unit 8_2	8	n.蜂蜜	1
+64	watermelon	Unit 8_2	8	n.西瓜	1
+64	spoon	Unit 8_2	8	勺	1
+65	pot	Unit 8_3	8	n.锅	0
+65	add	Unit 8_3	8	vt.增加	1
+65	finally	Unit 8_3	8	adv.最后	1
+65	salt	Unit 8_3	8	n.食盐	1
+65	sugar	Unit 8_3	8	n.食糖	1
+66	cheese	Unit 8_4	8	n.奶酪	1
+66	popcorn	Unit 8_4	8	n.爆米花	0
+66	corn	Unit 8_4	8	n.玉米	1
+66	machine	Unit 8_4	8	n.机器	1
+66	dig	Unit 8_4	8	v.掘	1
+67	hole	Unit 8_5	8	n.洞	1
+67	sandwich	Unit 8_5	8	n.三明治	1
+67	butter	Unit 8_5	8	n.黄油	1
+67	turkey	Unit 8_5	8	n.火鸡	0
+67	lettuce	Unit 8_5	8	n.莴苣	0
+68	piece	Unit 8_6	8	n.片	1
+68	Thanksgiving	Unit 8_6	8	n.感恩节	0
+68	traditional	Unit 8_6	8	adj.传统的	1
+68	autumn	Unit 8_6	8	n.秋天	1
+68	traveler	Unit 8_6	8	n.旅行者	1
+69	England	Unit 8_7	8	n.英格兰	1
+69	celebrate	Unit 8_7	8	vt.庆祝	1
+69	mix	Unit 8_7	8	vt.混合	1
+69	pepper	Unit 8_7	8	n.甜椒	1
+69	fill	Unit 8_7	8	vt.（使）充满	1
+70	oven	Unit 8_8	8	n.烤箱	0
+70	plate	Unit 8_8	8	n.盘子	1
+70	cover	Unit 8_8	8	v.&n.遮盖	1
+70	gravy	Unit 8_8	8	n.肉汁	0
+70	serve	Unit 8_8	8	v.服务	1
+70	temperature	Unit 8_8	8	n.温度	1
+71	prepare	Unit 9_1	8	vt.把...准备好	1
+71	prepare for	Unit 9_1	8	为...做准备	0
+71	exam	Unit 9_1	8	n.考试	1
+71	flu	Unit 9_1	8	n.流行性感冒	1
+71	available	Unit 9_1	8	adj.可获得的	1
+72	another time	Unit 9_2	8	其他时间	0
+72	until	Unit 9_2	8	prep.直到...为止	1
+72	hang	Unit 9_2	8	vt.悬挂	1
+72	hang out	Unit 9_2	8	闲逛	0
+72	catch	Unit 9_2	8	vt.抓住	1
+73	invite	Unit 9_3	8	vt.邀请	1
+73	accept	Unit 9_3	8	vt.接受	1
+73	refuse	Unit 9_3	8	vt.拒绝	1
+73	the day before yesterday	Unit 9_3	8	前天	0
+73	the day after tomorrow	Unit 9_3	8	后天	0
+74	weekday	Unit 9_4	8	n.工作日	1
+74	look after	Unit 9_4	8	照料	0
+74	invitation	Unit 9_4	8	n.邀请	1
+74	turn down	Unit 9_4	8	拒绝	0
+74	reply	Unit 9_4	8	vt.回答	1
+75	forward	Unit 9_5	8	vt.&adv.向前	1
+75	delete	Unit 9_5	8	vt.删除	1
+75	print	Unit 9_5	8	vt.打印	1
+75	sad	Unit 9_5	8	adj.悲哀的	1
+75	goodbye	Unit 9_5	8	int.再见	1
+76	take a trip	Unit 9_6	8	去旅行	0
+76	glad	Unit 9_6	8	adj.高兴	1
+76	help out	Unit 9_6	8	分担工作	0
+76	preparation	Unit 9_6	8	n.准备	1
+76	glue	Unit 9_6	8	n.胶水	1
+77	without	Unit 9_7	8	prep.没有	1
+77	surprised	Unit 9_7	8	adj.惊奇的	1
+77	look forward to	Unit 9_7	8	盼望	0
+77	hear from	Unit 9_7	8	接到信	0
+77	housewarming	Unit 9_7	8	乔迁聚会	0
+77	opening	Unit 9_7	8	n.开幕式	1
+78	concert	Unit 9_8	8	n.音乐会	1
+78	headmaster	Unit 9_8	8	n.校长	0
+78	event	Unit 9_8	8	n.大事	1
+78	guest	Unit 9_8	8	n.客人	1
+78	calendar	Unit 9_8	8	n.日历	1
+78	daytime	Unit 9_8	8	n.白天	1
+79	meeting	Unit 10_1	6	n.会议	1
+79	video	Unit 10_1	6	n.录像带	1
+79	organize	Unit 10_1	6	vi.组织	1
+79	potato	Unit 10_1	6	n.炸土豆片	0
+79	chocolate	Unit 10_1	6	n.巧克力	1
+80	upset	Unit 10_2	6	adj.难过	1
+80	taxi	Unit 10_2	6	n.出租汽车	1
+80	advice	Unit 10_2	6	n.建议	1
+80	travel	Unit 10_2	6	n.旅行	1
+80	agent	Unit 10_2	6	n.代理人	0
+81	expert	Unit 10_3	6	n.专家	0
+81	keep ... to oneself	Unit 10_3	6	保守秘密	0
+81	teenager	Unit 10_3	6	n.青少年	1
+81	normal	Unit 10_3	6	adj.正常的	1
+81	unless	Unit 10_3	6	conj.除非	1
+82	certainly	Unit 10_4	6	adv.肯定	1
+82	wallet	Unit 10_4	6	n.钱包	1
+82	mile	Unit 10_4	6	n.英里	1
+82	angry	Unit 10_4	6	adj.生气的	1
+82	understanding	Unit 10_4	6	adj.善解人意的	1
+83	careless	Unit 10_5	6	adj.粗心的	1
+83	mistake	Unit 10_5	6	n.错误	1
+83	himself	Unit 10_5	6	pron.他自己	1
+83	careful	Unit 10_5	6	adj.小心的	1
+83	advise	Unit 10_5	6	vt.劝告	1
+83	solve	Unit 10_5	6	v.解决	1
+84	step	Unit 10_6	6	n.步	1
+84	trust	Unit 10_6	6	vi.相信	1
+84	experience	Unit 10_6	6	n.经验	1
+84	in half	Unit 10_6	6	分成两半	0
+84	halfway	Unit 10_6	6	adv.在中途	0
+84	else	Unit 10_6	6	adj.别的	1

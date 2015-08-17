@@ -1,395 +1,395 @@
-1	technology	Unit1_1	10	adj.科技	1
-1	future	Unit1_1	10	n.未来	1
-1	electronic	Unit1_1	10	n.电子的	1
-2	pocket	Unit1_2	10	n.口袋	1
-2	keyboard	Unit1_2	10	n.键盘	1
-2	smart phone	Unit1_2	10	n.智能手机	1
-2	robot	Unit1_2	10	n.机器人	1
-2	telephone	Unit1_2	10	n.电话	1
-2	screen	Unit1_2	10	adj.屏幕	1
-2	touchscreen	Unit1_2	10	n.触摸屏	1
-2	smart	Unit1_2	10	n.智能的	1
-2	ID	Unit1_2	10	n.身份证明	1
-2	mark	Unit1_2	10	n.记号	1
-3	e-book	Unit1_3	10	n.电子书	1
-3	invention	Unit1_3	10	n.发明	1
-3	product	Unit1_3	10	n.产品	1
-3	development	Unit1_3	10	adj.发展	1
-3	software	Unit1_3	10	n.软件	0
-3	traditional	Unit1_3	10	adj.传统的	1
-3	LCD	Unit1_3	10	n.液晶显示器	1
-3	already	Unit1_3	10	adv.已经	1
-3	store	Unit1_3	10	n.百货商店	1
-3	progress	Unit1_3	10	n.进步	1
-4	closely	Unit1_4	10	adv.密切地	1
-4	system	Unit1_4	10	n.系统	1
-4	allow	Unit1_4	10	v.允许	1
-4	teach	Unit1_4	10	n.教	1
-4	come true	Unit1_4	10	实现	1
-4	card	Unit1_4	10	n.卡片	1
-4	make use of	Unit1_4	10	n.使用	1
-4	book	Unit1_4	10	n.&v.预定	1
-4	ticket	Unit1_4	10	adj.票	1
-4	chat	Unit1_4	10	n.&v.聊天	0
-5	medical	Unit1_5	10	n.医疗的	1
-5	professor	Unit1_5	10	vt.教授	0
-5	president	Unit1_5	10	n.总统	1
-5	connect	Unit1_5	10	v.连接	1
-5	e-ticket	Unit1_5	10	n.电子票	1
-5	elderly	Unit1_5	10	adj.年纪较大的	1
-5	social	Unit1_5	10	adj.社会的	1
-5	media	Unit1_5	10	n.传媒	0
-5	social media	Unit1_5	10	n.社群媒体	1
-5	ill	Unit1_5	10	adj.有病	1
-6	X-ray	Unit1_6	10	n.X射线检查	1
-6	in person	Unit1_6	10	adv.亲自	1
-6	opinion	Unit1_6	10	n.意见	0
-6	almost	Unit1_6	10	adv.几乎	1
-6	company	Unit1_6	10	n.公司	0
-6	choice	Unit1_6	10	n.选择	1
-6	whole	Unit1_6	10	adj.全部的	1
-6	fixed	Unit1_6	10	adj.固定的	1
-6	develop	Unit1_6	10	v.发展	1
-6	present	Unit1_6	10	adj.现在的	1
-7	on the other hand	Unit1_7	10	另一方面	1
-7	increasing	Unit1_7	10	adj.渐增的	1
-7	sell	Unit1_7	10	v.出售	1
-7	service	Unit1_7	10	n.服务	1
-7	instead	Unit1_7	10	prep.反而	1
-7	instead of	Unit1_7	10	代替	1
-7	imagine	Unit1_7	10	v.想象	1
-7	college	Unit1_7	10	n.学院	1
-7	manager	Unit1_7	10	n.经理	1
-7	purpose	Unit1_7	10	n.目的	1
-8	compare	Unit1_8	10	v.比较	1
-8	require	Unit1_8	10	v.需要	1
-8	include	Unit1_8	10	v.包括	1
-8	decision-making	Unit1_8	10	做决策	1
-8	problem-solving	Unit1_8	10	adj.&n.解决问题	1
-8	express	Unit1_8	10	v.表达	1
-8	at the same time	Unit1_8	10	同时	1
-8	listener	Unit1_8	10	n.倾听者	1
-8	plan	Unit1_8	10	n.计划	1
-9	decision	Unit1_9	10	n.决定	1
-9	deal	Unit1_9	10	v.协议	1
-9	deal with	Unit1_9	10	adv.处理	1
-9	situation	Unit1_9	10	n.情况	1
-9	rather	Unit1_9	10	adv.相反	0
-9	rather than	Unit1_9	10	而不是	1
-9	work from home	Unit1_9	10	在家工作	1
-9	conclusion	Unit1_9	10	n.结论	0
-9	spare	Unit1_9	10	adj.空闲的	1
-10	introduction	Unit1_10	10	n.介绍	1
-10	successful	Unit1_10	10	adj.获得成功的	1
-10	businessman	Unit1_10	10	n.商界人士	1
-10	set	Unit1_10	10	v.放置	1
-10	set up	Unit1_10	10	建立	1
-10	surf	Unit1_10	10	v.浏览	0
-10	net	Unit1_10	10	n.网	0
-10	according to	Unit1_10	10	根据	1
-10	pool	Unit1_10	10	n.游泳池	1
-11	blog	Unit2_1	7	n.博客	0
-11	face-to-face	Unit2_1	7	adj.面对面的	1
-11	sign	Unit2_1	7	n.手势	1
-11	sign language	Unit2_1	7	手势语	1
-11	text message	Unit2_1	7	短信	1
-11	ant	Unit2_1	7	n.蚂蚁	1
-11	wag	Unit2_1	7	n.&v.摇	0
-11	tail	Unit2_1	7	n.尾巴	1
-11	interested	Unit2_1	7	adj.感兴趣的	1
-11	missing	Unit2_1	7	vt.失踪的	1
-12	landmine	Unit2_2	7	n.地雷	0
-12	discover	Unit2_2	7	v.发现	1
-12	frog	Unit2_2	7	n.蛙	0
-12	insect	Unit2_2	7	n.昆虫	0
-12	gentleman	Unit2_2	7	n.绅士	1
-12	invite	Unit2_2	7	v.邀请	1
-12	lady	Unit2_2	7	n.女士	1
-12	as well	Unit2_2	7	也	1
-12	mad	Unit2_2	7	adj.很生气的	1
-12	area	Unit2_2	7	n.地区	1
-13	knowledge	Unit2_3	7	n.知识	1
-13	since	Unit2_3	7	conj.自...以来	1
-13	bark	Unit2_3	7	vt.&n.狗吠	0
-13	trainer	Unit2_3	7	n.教练员	1
-13	hide	Unit2_3	7	v.躲藏	1
-13	culture	Unit2_3	7	n.文化	1
-13	decorate	Unit2_3	7	v.装饰	0
-13	themselves	Unit2_3	7	pron.他们自己	1
-13	formal	Unit2_3	7	adj.正式的	0
-13	perhaps	Unit2_3	7	adv.大概	1
-14	anybody	Unit2_4	7	pron.任何人	1
-14	shy	Unit2_4	7	adj.羞怯的	1
-14	correct	Unit2_4	7	adj.正确的	1
-14	adult	Unit2_4	7	n.成年人	0
-14	though	Unit2_4	7	prep.即使	1
-14	treat	Unit2_4	7	v.对待	1
-14	myself	Unit2_4	7	pron.我自己	1
-14	ourselves	Unit2_4	7	pron.我们自己	1
-14	yourself	Unit2_4	7	pron.你自己	1
-14	yourselves	Unit2_4	7	pron.你们自己	1
-15	himself	Unit2_5	7	pron.他自己	1
-15	herself	Unit2_5	7	pron.她自己	1
-15	itself	Unit2_5	7	pron.它自己	1
-15	local	Unit2_5	7	adj.当地的	1
-15	generation	Unit2_5	7	n.一代	0
-15	teenager	Unit2_5	7	n.青少年	0
-15	American	Unit2_5	7	adj.&n.美国的	1
-15	teenage	Unit2_5	7	n.青少年的	0
-15	increase	Unit2_5	7	v.增长	1
-15	rapidly	Unit2_5	7	adv.迅速地	1
-16	monthly	Unit2_6	7	adv.每月的	1
-16	per	Unit2_6	7	prep.每	0
-16	end	Unit2_6	7	n.结尾	1
-16	at the end of	Unit2_6	7	在...结尾	1
-16	value	Unit2_6	7	n.价值	1
-16	private	Unit2_6	7	adj.私人的	1
-16	convenient	Unit2_6	7	adj.便利的	0
-16	such	Unit2_6	7	adj.这样的	1
-16	such as	Unit2_6	7	例如	1
-16	lead to	Unit2_6	7	导致	1
-17	against	Unit2_7	7	prep.&adj.反对	1
-17	law	Unit2_7	7	n.法律	1
-17	deliver	Unit2_7	7	v.递送	0
-17	urgent	Unit2_7	7	adj.紧急的	0
-17	telegram	Unit2_7	7	n.电报	0
-17	inconvenient	Unit2_7	7	adj.不方便的	0
-17	granny	Unit2_7	7	n.奶奶	0
-17	wherever	Unit2_7	7	adv.&conj.在任何地方	1
-17	interrupt	Unit2_7	7	v.打扰	0
-17	especially	Unit2_7	7	adv.特别	1
-18	Thanksgiving	Unit3_1	6	n.感恩节	0
-18	dragon	Unit3_1	6	n.龙	0
-18	Dragon Boat Festival	Unit3_1	6	n.端午节	1
-18	Mid-Autumn Festival	Unit3_1	6	n.中秋节	1
-18	firework	Unit3_1	6	n.烟花	0
-18	eve	Unit3_1	6	n.前夜	0
-18	decoration	Unit3_1	6	n.装饰品	0
-18	luck	Unit3_1	6	n.运气	1
-18	tofu	Unit3_1	6	n.豆腐	0
-18	fry	Unit3_1	6	v.油炸	0
-19	peace	Unit3_2	6	n.和平	1
-19	fact	Unit3_2	6	n.事实	1
-19	wish	Unit3_2	6	n.&v.祝愿	1
-19	midnight	Unit3_2	6	n.午夜	0
-19	million	Unit3_2	6	n.一百万	0
-19	millions of	Unit3_2	6	大量	1
-19	bright	Unit3_2	6	adj.明亮的	1
-19	cheer	Unit3_2	6	n.欢呼	1
-19	picnic	Unit3_2	6	n.野餐	1
-19	bean	Unit3_2	6	n.豆	1
-20	biscuit	Unit3_3	6	n.饼干	1
-20	corn	Unit3_3	6	n.玉米	1
-20	fork	Unit3_3	6	n.餐叉	1
-20	knife	Unit3_3	6	n.刀	1
-20	plate	Unit3_3	6	n.盘子	0
-20	sausage	Unit3_3	6	n.香肠	0
-20	spoon	Unit3_3	6	n.勺	1
-20	strawberry	Unit3_3	6	v.草莓	1
-20	a couple of	Unit3_3	6	几个	1
-20	remind	Unit3_3	6	v.提醒	0
-21	uniform	Unit3_4	6	n.制服	0
-21	gate	Unit3_4	6	n.大门	1
-21	deadline	Unit3_4	6	n.最后期限	0
-21	turkey	Unit3_4	6	n.火鸡	0
-21	pumpkin	Unit3_4	6	n.南瓜	0
-21	pie	Unit3_4	6	n.馅饼	1
-21	nearly	Unit3_4	6	adv.几乎	1
-21	expect	Unit3_4	6	v.期待	1
-21	oven	Unit3_4	6	n.烤箱	0
-22	heat	Unit3_5	6	n.&v.加热	1
-22	voice	Unit3_5	6	n.说话声	1
-22	failure	Unit3_5	6	n.失败	1
-22	worried	Unit3_5	6	adj.担忧的	1
-22	pizza	Unit3_5	6	n.比萨饼	0
-22	nothing	Unit3_5	6	n.&pron.没有什么	1
-22	awful	Unit3_5	6	adj.极讨厌的	1
-22	forward	Unit3_5	6	adv.向前	0
-22	look forward to	Unit3_5	6	期望	1
-23	sweet	Unit3_6	6	vt.&n.甜的	1
-23	salty	Unit3_6	6	adj.咸的	1
-23	prefer	Unit3_6	6	v.更喜欢	0
-23	beat	Unit3_6	6	n.敲击	1
-23	enjoyable	Unit3_6	6	adj.令人愉快的	1
-23	lantern	Unit3_6	6	n.灯笼	1
-23	riddle	Unit3_6	6	n.谜	0
-23	mooncake	Unit3_6	6	n.月饼	1
-23	starfruit	Unit3_6	6	n.杨桃	0
-24	difficulty	Unit4_1	6	n.困难	1
-24	unhappy	Unit4_1	6	adj.不快乐的	1
-24	advise	Unit4_1	6	v.建议	1
-24	lonely	Unit4_1	6	adj.孤单的	1
-24	relaxed	Unit4_1	6	adj.放松的	1
-24	satisfied	Unit4_1	6	adj.满意的	1
-24	upset	Unit4_1	6	adj.难过的	0
-24	offer	Unit4_1	6	v.提供	1
-24	control	Unit4_1	6	v.&n.控制	1
-24	mood	Unit4_1	6	n.情绪	0
-25	stupid	Unit4_2	6	adj.愚蠢的	1
-25	manage	Unit4_2	6	v.完成	1
-25	from time to time	Unit4_2	6	偶尔	1
-25	everyday	Unit4_2	6	adj.每天的	1
-25	break the ice	Unit4_2	6	打破僵局	1
-25	stranger	Unit4_2	6	n.陌生人	1
-25	unless	Unit4_2	6	conj.除非	1
-25	trust	Unit4_2	6	vt.相信	1
-25	achieve	Unit4_2	6	v.达到	1
-25	produce	Unit4_2	6	v.生产	1
-26	spirit	Unit4_3	6	n.精神	1
-26	unhealthy	Unit4_3	6	adj.不健康的	1
-26	succeed	Unit4_3	6	v.成功	1
-26	stick to	Unit4_3	6	坚持	1
-26	fail	Unit4_3	6	v.失败	1
-26	even though	Unit4_3	6	即使	1
-26	honest	Unit4_3	6	vt.诚实的	1
-26	quarrel	Unit4_3	6	n.争吵	0
-26	forgive	Unit4_3	6	n.原谅	0
-26	impolite	Unit4_3	6	adj.不礼貌的	1
-27	circle	Unit4_4	6	v.&n.圆圈	1
-27	amount	Unit4_4	6	v.数量	0
-27	article	Unit4_4	6	n.文章	1
-27	attract	Unit4_4	6	v.吸引	0
-27	suppose	Unit4_4	6	v.设想	1
-27	limit	Unit4_4	6	n.限制	0
-27	somewhere	Unit4_4	6	adv.在某处	1
-27	gap	Unit4_4	6	n.间隔	0
-27	generation gap	Unit4_4	6	代沟	1
-27	housework	Unit4_4	6	n.家务劳动	1
-28	add	Unit4_5	6	vi.增加	1
-28	on one's own	Unit4_5	6	独自	1
-28	enter	Unit4_5	6	vt.进入	1
-28	password	Unit4_5	6	n.密码	0
-28	praise	Unit4_5	6	n.赞扬	1
-28	lazy	Unit4_5	6	adj.懒惰的	1
-28	strict	Unit4_5	6	adj.严格的	1
-28	care	Unit4_5	6	n.&v.关心	1
-28	care about	Unit4_5	6	关心	1
-28	boss	Unit4_5	6	n.老板	1
-28	grow up	Unit4_5	6	长大	1
-29	pretty	Unit4_6	6	adv.漂亮的	1
-29	except	Unit4_6	6	prep.除...之外	1
-29	mess	Unit4_6	6	n.杂乱	1
-29	whenever	Unit4_6	6	adv.无论何时	1
-29	fair	Unit4_6	6	adj.公平的	1
-29	get along with	Unit4_6	6	和...相处	1
-29	positive	Unit4_6	6	adj.积极乐观的	0
-29	sympathy	Unit4_6	6	n.同情	0
-29	greeting	Unit4_6	6	n.打招呼	0
-29	signature	Unit4_6	6	n.签字	0
-29	scold	Unit4_6	6	v.批评	0
-30	memorable	Unit5_1	5	adj.难忘的	0
-30	influence	Unit5_1	5	n.影响	1
-30	confident	Unit5_1	5	adj.自信的	0
-30	poem	Unit5_1	5	n.诗	1
-30	mention	Unit5_1	5	v.提到	1
-30	pity	Unit5_1	5	n.遗憾	1
-30	thousands of	Unit5_1	5	成千上万的	1
-30	happiness	Unit5_1	5	n.幸福	1
-30	mostly	Unit5_1	5	adv.主要地	1
-30	childhood	Unit5_1	5	n.童年	0
-31	count	Unit5_2	5	vt.计数	1
-31	fill	Unit5_2	5	v.填满	1
-31	judge	Unit5_2	5	v.判断	0
-31	good-looking	Unit5_2	5	adj.漂亮的	1
-31	great-grandpa	Unit5_2	5	n.曾祖父	1
-31	prime minister	Unit5_2	5	n.首相	1
-31	war	Unit5_2	5	n.战争	1
-31	curtain	Unit5_2	5	n.窗帘	0
-31	German	Unit5_2	5	adj.德国的	1
-31	bomb	Unit5_2	5	vt.炸弹	0
-32	luckily	Unit5_3	5	adv.幸运地	1
-32	marry	Unit5_3	5	n.结婚	1
-32	great-grandma	Unit5_3	5	n.曾祖母	1
-32	army	Unit5_3	5	n.军队	1
-32	enemy	Unit5_3	5	n.敌人	1
-32	available	Unit5_3	5	adj.可获得的	0
-32	machine	Unit5_3	5	n.机器	1
-32	air conditioner	Unit5_3	5	n.空调	1
-32	cooker	Unit5_3	5	n.炊具	1
-32	dishwasher	Unit5_3	5	n.洗碗机	1
-33	record player	Unit5_4	5	唱机	1
-33	tiny	Unit5_4	5	adj.极小的	1
-33	central	Unit5_4	5	adj.中央的	1
-33	central heating	Unit5_4	5	中央供暖	1
-33	wet	Unit5_4	5	adj.潮的	1
-33	used to	Unit5_4	5	过去常常	1
-33	mainly	Unit5_4	5	adv.主要地	1
-33	round	Unit5_4	5	n.&adj.圆形的	1
-33	come round	Unit5_4	5	短暂拜访	1
-33	lemon	Unit5_4	5	n.柠檬	1
-34	second-hand	Unit5_5	5	adj.二手的	1
-34	weekday	Unit5_5	5	n.工作日	1
-34	theatre	Unit5_5	5	n.剧院	1
-34	unforgettable	Unit5_5	5	adj.难以忘怀的	1
-34	run into	Unit5_5	5	撞上	1
-34	bleed	Unit5_5	5	n.流血	0
-34	frightened	Unit5_5	5	adj.受惊的	0
-34	pain	Unit5_5	5	n.疼痛	1
-34	ambulance	Unit5_5	5	n.救护车	0
-34	take care of	Unit5_5	5	照顾	1
-35	detective	Unit6_1	7	n.侦探	0
-35	British	Unit6_1	7	abj.英国的	1
-35	observe	Unit6_1	7	n.观察	0
-35	humourous	Unit6_1	7	adj.滑稽有趣的	1
-35	degree	Unit6_1	7	n.程度	1
-35	detective story	Unit6_1	7	n.侦探小说	1
-35	wise	Unit6_1	7	adj.充满智慧的	1
-35	solution	Unit6_1	7	n.解决办法	0
-35	unclear	Unit6_1	7	adj.不清楚的	1
-36	clue	Unit6_2	7	n.线索	0
-36	mystery	Unit6_2	7	n.神秘的事物	0
-36	setting	Unit6_2	7	n.情节背景	0
-36	hall	Unit6_2	7	n.门厅	1
-36	truth	Unit6_2	7	n.真相	1
-36	parlour	Unit6_2	7	n.客厅	0
-36	lord	Unit6_2	7	n.大人	0
-36	least	Unit6_2	7	adj.最少	1
-36	at least	Unit6_2	7	至少	1
-37	dead	Unit6_3	7	adv.死的	1
-37	pass away	Unit6_3	7	过世	1
-37	recently	Unit6_3	7	pron.最近	1
-37	doubt	Unit6_3	7	v.&n.怀疑	1
-37	nobody	Unit6_3	7	pron.没人	1
-37	whether	Unit6_3	7	n.是否	1
-37	alive	Unit6_3	7	adj.活着的	1
-37	death	Unit6_3	7	vt.死亡	0
-37	reappear	Unit6_3	7	v.再次出现	1
-38	claim	Unit6_4	7	n.宣称	0
-38	valuable	Unit6_4	7	adj.贵重的	1
-38	inheritance	Unit6_4	7	n.遗产	0
-38	impossible	Unit6_4	7	adj.不可能的	1
-38	ahead	Unit6_4	7	adv.向前面	0
-38	thirsty	Unit6_4	7	adj.渴的	1
-38	sadly	Unit6_4	7	adv.不幸地	1
-38	a little	Unit6_4	7	少量	1
-38	sleeve	Unit6_4	7	n.袖子	0
-39	silk	Unit6_5	7	n.丝绸	1
-39	evidence	Unit6_5	7	n.证据	0
-39	create	Unit6_5	7	vt.创作	1
-39	billion	Unit6_5	7	n.十亿	0
-39	translate	Unit6_5	7	v.翻译	1
-39	the West End of London	Unit6_5	7	n.伦敦西区	1
-39	actress	Unit6_5	7	n.女演员	1
-39	perform	Unit6_5	7	n.表演	0
-39	wealthy	Unit6_5	7	n.富有的	1
-39	pupil	Unit6_5	7	n.小学生	1
-40	education	Unit6_6	7	n.教育	1
-40	cleverly	Unit6_6	7	adv.聪明地	1
-40	guilty	Unit6_6	7	adj.感到内疚的	0
-40	fear	Unit6_6	7	n.&v.惧怕	1
-40	intelligence	Unit6_6	7	n.智力	0
-40	crime	Unit6_6	7	n.犯罪活动	0
-40	career	Unit6_6	7	n.生涯	0
-40	print	Unit6_6	7	n.打印	1
-40	sale	Unit6_6	7	n.销售量	1
-40	fiction	Unit6_6	7	n.小说	0
-41	murder	Unit6_7	7	n.谋杀	0
-41	dressmaker	Unit6_7	7	n.裁缝	1
-41	murderer	Unit6_7	7	n.杀人凶手	0
-41	calm	Unit6_7	7	n.沉着的	0
-41	pin	Unit6_7	7	adj.胸针	0
-41	policeman	Unit6_7	7	n.警察	1
-41	heroine	Unit6_7	7	n.女英雄	0
-41	ending	Unit6_7	7	n.结局	1
-41	surprising	Unit6_7	7	adj.令人吃惊的	1
-41	case	Unit6_7	7	n.案件	0
+1	technology	Unit1_1	18	adj.科技	1
+1	future	Unit1_1	18	n.未来	1
+1	electronic	Unit1_1	18	n.电子的	1
+2	pocket	Unit1_2	18	n.口袋	1
+2	keyboard	Unit1_2	18	n.键盘	1
+2	smart phone	Unit1_2	18	n.智能手机	1
+2	robot	Unit1_2	18	n.机器人	1
+2	telephone	Unit1_2	18	n.电话	1
+3	screen	Unit1_3	18	adj.屏幕	1
+3	touchscreen	Unit1_3	18	n.触摸屏	1
+3	smart	Unit1_3	18	n.智能的	1
+3	ID	Unit1_3	18	n.身份证明	1
+3	mark	Unit1_3	18	n.记号	1
+4	e-book	Unit1_4	18	n.电子书	1
+4	invention	Unit1_4	18	n.发明	1
+4	product	Unit1_4	18	n.产品	1
+4	development	Unit1_4	18	adj.发展	1
+4	software	Unit1_4	18	n.软件	0
+5	traditional	Unit1_5	18	adj.传统的	1
+5	LCD	Unit1_5	18	n.液晶显示器	1
+5	already	Unit1_5	18	adv.已经	1
+5	store	Unit1_5	18	n.百货商店	1
+5	progress	Unit1_5	18	n.进步	1
+6	closely	Unit1_6	18	adv.密切地	1
+6	system	Unit1_6	18	n.系统	1
+6	allow	Unit1_6	18	v.允许	1
+6	teach	Unit1_6	18	n.教	1
+6	come true	Unit1_6	18	实现	1
+7	card	Unit1_7	18	n.卡片	1
+7	make use of	Unit1_7	18	n.使用	1
+7	book	Unit1_7	18	n.&v.预定	1
+7	ticket	Unit1_7	18	adj.票	1
+7	chat	Unit1_7	18	n.&v.聊天	0
+8	medical	Unit1_8	18	n.医疗的	1
+8	professor	Unit1_8	18	vt.教授	0
+8	president	Unit1_8	18	n.总统	1
+8	connect	Unit1_8	18	v.连接	1
+8	e-ticket	Unit1_8	18	n.电子票	1
+9	elderly	Unit1_9	18	adj.年纪较大的	1
+9	social	Unit1_9	18	adj.社会的	1
+9	media	Unit1_9	18	n.传媒	0
+9	social media	Unit1_9	18	n.社群媒体	1
+9	ill	Unit1_9	18	adj.有病	1
+10	X-ray	Unit1_10	18	n.X射线检查	1
+10	in person	Unit1_10	18	adv.亲自	1
+10	opinion	Unit1_10	18	n.意见	0
+10	almost	Unit1_10	18	adv.几乎	1
+10	company	Unit1_10	18	n.公司	0
+11	choice	Unit1_11	18	n.选择	1
+11	whole	Unit1_11	18	adj.全部的	1
+11	fixed	Unit1_11	18	adj.固定的	1
+11	develop	Unit1_11	18	v.发展	1
+11	present	Unit1_11	18	adj.现在的	1
+12	on the other hand	Unit1_12	18	另一方面	1
+12	increasing	Unit1_12	18	adj.渐增的	1
+12	sell	Unit1_12	18	v.出售	1
+12	service	Unit1_12	18	n.服务	1
+12	instead	Unit1_12	18	prep.反而	1
+13	instead of	Unit1_13	18	代替	1
+13	imagine	Unit1_13	18	v.想象	1
+13	college	Unit1_13	18	n.学院	1
+13	manager	Unit1_13	18	n.经理	1
+13	purpose	Unit1_13	18	n.目的	1
+14	compare	Unit1_14	18	v.比较	1
+14	require	Unit1_14	18	v.需要	1
+14	include	Unit1_14	18	v.包括	1
+14	decision-making	Unit1_14	18	做决策	1
+14	problem-solving	Unit1_14	18	adj.&n.解决问题	1
+15	express	Unit1_15	18	v.表达	1
+15	at the same time	Unit1_15	18	同时	1
+15	listener	Unit1_15	18	n.倾听者	1
+15	plan	Unit1_15	18	n.计划	1
+15	decision	Unit1_15	18	n.决定	1
+16	deal	Unit1_16	18	v.协议	1
+16	deal with	Unit1_16	18	adv.处理	1
+16	situation	Unit1_16	18	n.情况	1
+16	rather	Unit1_16	18	adv.相反	0
+16	rather than	Unit1_16	18	而不是	1
+17	work from home	Unit1_17	18	在家工作	1
+17	conclusion	Unit1_17	18	n.结论	0
+17	spare	Unit1_17	18	adj.空闲的	1
+17	introduction	Unit1_17	18	n.介绍	1
+17	successful	Unit1_17	18	adj.获得成功的	1
+17	businessman	Unit1_17	18	n.商界人士	1
+18	set	Unit1_18	18	v.放置	1
+18	set up	Unit1_18	18	建立	1
+18	surf	Unit1_18	18	v.浏览	0
+18	net	Unit1_18	18	n.网	0
+18	according to	Unit1_18	18	根据	1
+18	pool	Unit1_18	18	n.游泳池	1
+19	blog	Unit2_1	14	n.博客	0
+19	face-to-face	Unit2_1	14	adj.面对面的	1
+19	sign	Unit2_1	14	n.手势	1
+19	sign language	Unit2_1	14	手势语	1
+19	text message	Unit2_1	14	短信	1
+20	ant	Unit2_2	14	n.蚂蚁	1
+20	wag	Unit2_2	14	n.&v.摇	0
+20	tail	Unit2_2	14	n.尾巴	1
+20	interested	Unit2_2	14	adj.感兴趣的	1
+20	missing	Unit2_2	14	vt.失踪的	1
+21	landmine	Unit2_3	14	n.地雷	0
+21	discover	Unit2_3	14	v.发现	1
+21	frog	Unit2_3	14	n.蛙	0
+21	insect	Unit2_3	14	n.昆虫	0
+21	gentleman	Unit2_3	14	n.绅士	1
+22	invite	Unit2_4	14	v.邀请	1
+22	lady	Unit2_4	14	n.女士	1
+22	as well	Unit2_4	14	也	1
+22	mad	Unit2_4	14	adj.很生气的	1
+22	area	Unit2_4	14	n.地区	1
+23	knowledge	Unit2_5	14	n.知识	1
+23	since	Unit2_5	14	conj.自...以来	1
+23	bark	Unit2_5	14	vt.&n.狗吠	0
+23	trainer	Unit2_5	14	n.教练员	1
+23	hide	Unit2_5	14	v.躲藏	1
+24	culture	Unit2_6	14	n.文化	1
+24	decorate	Unit2_6	14	v.装饰	0
+24	themselves	Unit2_6	14	pron.他们自己	1
+24	formal	Unit2_6	14	adj.正式的	0
+24	perhaps	Unit2_6	14	adv.大概	1
+25	anybody	Unit2_7	14	pron.任何人	1
+25	shy	Unit2_7	14	adj.羞怯的	1
+25	correct	Unit2_7	14	adj.正确的	1
+25	adult	Unit2_7	14	n.成年人	0
+25	though	Unit2_7	14	prep.即使	1
+26	treat	Unit2_8	14	v.对待	1
+26	myself	Unit2_8	14	pron.我自己	1
+26	ourselves	Unit2_8	14	pron.我们自己	1
+26	yourself	Unit2_8	14	pron.你自己	1
+26	yourselves	Unit2_8	14	pron.你们自己	1
+27	himself	Unit2_9	14	pron.他自己	1
+27	herself	Unit2_9	14	pron.她自己	1
+27	itself	Unit2_9	14	pron.它自己	1
+27	local	Unit2_9	14	adj.当地的	1
+27	generation	Unit2_9	14	n.一代	0
+28	teenager	Unit2_10	14	n.青少年	0
+28	American	Unit2_10	14	adj.&n.美国的	1
+28	teenage	Unit2_10	14	n.青少年的	0
+28	increase	Unit2_10	14	v.增长	1
+28	rapidly	Unit2_10	14	adv.迅速地	1
+29	monthly	Unit2_11	14	adv.每月的	1
+29	per	Unit2_11	14	prep.每	0
+29	end	Unit2_11	14	n.结尾	1
+29	at the end of	Unit2_11	14	在...结尾	1
+29	value	Unit2_11	14	n.价值	1
+30	private	Unit2_12	14	adj.私人的	1
+30	convenient	Unit2_12	14	adj.便利的	0
+30	such	Unit2_12	14	adj.这样的	1
+30	such as	Unit2_12	14	例如	1
+30	lead to	Unit2_12	14	导致	1
+31	against	Unit2_13	14	prep.&adj.反对	1
+31	law	Unit2_13	14	n.法律	1
+31	deliver	Unit2_13	14	v.递送	0
+31	urgent	Unit2_13	14	adj.紧急的	0
+31	telegram	Unit2_13	14	n.电报	0
+32	inconvenient	Unit2_14	14	adj.不方便的	0
+32	granny	Unit2_14	14	n.奶奶	0
+32	wherever	Unit2_14	14	adv.&conj.在任何地方	1
+32	interrupt	Unit2_14	14	v.打扰	0
+32	especially	Unit2_14	14	adv.特别	1
+33	Thanksgiving	Unit3_1	11	n.感恩节	0
+33	dragon	Unit3_1	11	n.龙	0
+33	Dragon Boat Festival	Unit3_1	11	n.端午节	1
+33	Mid-Autumn Festival	Unit3_1	11	n.中秋节	1
+33	firework	Unit3_1	11	n.烟花	0
+34	eve	Unit3_2	11	n.前夜	0
+34	decoration	Unit3_2	11	n.装饰品	0
+34	luck	Unit3_2	11	n.运气	1
+34	tofu	Unit3_2	11	n.豆腐	0
+34	fry	Unit3_2	11	v.油炸	0
+35	peace	Unit3_3	11	n.和平	1
+35	fact	Unit3_3	11	n.事实	1
+35	wish	Unit3_3	11	n.&v.祝愿	1
+35	midnight	Unit3_3	11	n.午夜	0
+35	million	Unit3_3	11	n.一百万	0
+36	millions of	Unit3_4	11	大量	1
+36	bright	Unit3_4	11	adj.明亮的	1
+36	cheer	Unit3_4	11	n.欢呼	1
+36	picnic	Unit3_4	11	n.野餐	1
+36	bean	Unit3_4	11	n.豆	1
+37	biscuit	Unit3_5	11	n.饼干	1
+37	corn	Unit3_5	11	n.玉米	1
+37	fork	Unit3_5	11	n.餐叉	1
+37	knife	Unit3_5	11	n.刀	1
+37	plate	Unit3_5	11	n.盘子	0
+38	sausage	Unit3_6	11	n.香肠	0
+38	spoon	Unit3_6	11	n.勺	1
+38	strawberry	Unit3_6	11	v.草莓	1
+38	a couple of	Unit3_6	11	几个	1
+38	remind	Unit3_6	11	v.提醒	0
+39	uniform	Unit3_7	11	n.制服	0
+39	gate	Unit3_7	11	n.大门	1
+39	deadline	Unit3_7	11	n.最后期限	0
+39	turkey	Unit3_7	11	n.火鸡	0
+39	pumpkin	Unit3_7	11	n.南瓜	0
+40	pie	Unit3_8	11	n.馅饼	1
+40	nearly	Unit3_8	11	adv.几乎	1
+40	expect	Unit3_8	11	v.期待	1
+40	oven	Unit3_8	11	n.烤箱	0
+40	heat	Unit3_8	11	n.&v.加热	1
+41	voice	Unit3_9	11	n.说话声	1
+41	failure	Unit3_9	11	n.失败	1
+41	worried	Unit3_9	11	adj.担忧的	1
+41	pizza	Unit3_9	11	n.比萨饼	0
+41	nothing	Unit3_9	11	n.&pron.没有什么	1
+42	awful	Unit3_10	11	adj.极讨厌的	1
+42	forward	Unit3_10	11	adv.向前	0
+42	look forward to	Unit3_10	11	期望	1
+42	sweet	Unit3_10	11	vt.&n.甜的	1
+42	salty	Unit3_10	11	adj.咸的	1
+42	prefer	Unit3_10	11	v.更喜欢	0
+43	beat	Unit3_11	11	n.敲击	1
+43	enjoyable	Unit3_11	11	adj.令人愉快的	1
+43	lantern	Unit3_11	11	n.灯笼	1
+43	riddle	Unit3_11	11	n.谜	0
+43	mooncake	Unit3_11	11	n.月饼	1
+43	starfruit	Unit3_11	11	n.杨桃	0
+44	difficulty	Unit4_1	12	n.困难	1
+44	unhappy	Unit4_1	12	adj.不快乐的	1
+44	advise	Unit4_1	12	v.建议	1
+44	lonely	Unit4_1	12	adj.孤单的	1
+44	relaxed	Unit4_1	12	adj.放松的	1
+45	satisfied	Unit4_2	12	adj.满意的	1
+45	upset	Unit4_2	12	adj.难过的	0
+45	offer	Unit4_2	12	v.提供	1
+45	control	Unit4_2	12	v.&n.控制	1
+45	mood	Unit4_2	12	n.情绪	0
+46	stupid	Unit4_3	12	adj.愚蠢的	1
+46	manage	Unit4_3	12	v.完成	1
+46	from time to time	Unit4_3	12	偶尔	1
+46	everyday	Unit4_3	12	adj.每天的	1
+46	break the ice	Unit4_3	12	打破僵局	1
+47	stranger	Unit4_4	12	n.陌生人	1
+47	unless	Unit4_4	12	conj.除非	1
+47	trust	Unit4_4	12	vt.相信	1
+47	achieve	Unit4_4	12	v.达到	1
+47	produce	Unit4_4	12	v.生产	1
+48	spirit	Unit4_5	12	n.精神	1
+48	unhealthy	Unit4_5	12	adj.不健康的	1
+48	succeed	Unit4_5	12	v.成功	1
+48	stick to	Unit4_5	12	坚持	1
+48	fail	Unit4_5	12	v.失败	1
+49	even though	Unit4_6	12	即使	1
+49	honest	Unit4_6	12	vt.诚实的	1
+49	quarrel	Unit4_6	12	n.争吵	0
+49	forgive	Unit4_6	12	n.原谅	0
+49	impolite	Unit4_6	12	adj.不礼貌的	1
+50	circle	Unit4_7	12	v.&n.圆圈	1
+50	amount	Unit4_7	12	v.数量	0
+50	article	Unit4_7	12	n.文章	1
+50	attract	Unit4_7	12	v.吸引	0
+50	suppose	Unit4_7	12	v.设想	1
+51	limit	Unit4_8	12	n.限制	0
+51	somewhere	Unit4_8	12	adv.在某处	1
+51	gap	Unit4_8	12	n.间隔	0
+51	generation gap	Unit4_8	12	代沟	1
+51	housework	Unit4_8	12	n.家务劳动	1
+52	add	Unit4_9	12	vi.增加	1
+52	on one's own	Unit4_9	12	独自	1
+52	enter	Unit4_9	12	vt.进入	1
+52	password	Unit4_9	12	n.密码	0
+52	praise	Unit4_9	12	n.赞扬	1
+53	lazy	Unit4_10	12	adj.懒惰的	1
+53	strict	Unit4_10	12	adj.严格的	1
+53	care	Unit4_10	12	n.&v.关心	1
+53	care about	Unit4_10	12	关心	1
+53	boss	Unit4_10	12	n.老板	1
+54	grow up	Unit4_11	12	长大	1
+54	pretty	Unit4_11	12	adv.漂亮的	1
+54	except	Unit4_11	12	prep.除...之外	1
+54	mess	Unit4_11	12	n.杂乱	1
+54	whenever	Unit4_11	12	adv.无论何时	1
+54	fair	Unit4_11	12	adj.公平的	1
+55	get along with	Unit4_12	12	和...相处	1
+55	positive	Unit4_12	12	adj.积极乐观的	0
+55	sympathy	Unit4_12	12	n.同情	0
+55	greeting	Unit4_12	12	n.打招呼	0
+55	signature	Unit4_12	12	n.签字	0
+55	scold	Unit4_12	12	v.批评	0
+56	memorable	Unit5_1	10	adj.难忘的	0
+56	influence	Unit5_1	10	n.影响	1
+56	confident	Unit5_1	10	adj.自信的	0
+56	poem	Unit5_1	10	n.诗	1
+56	mention	Unit5_1	10	v.提到	1
+57	pity	Unit5_2	10	n.遗憾	1
+57	thousands of	Unit5_2	10	成千上万的	1
+57	happiness	Unit5_2	10	n.幸福	1
+57	mostly	Unit5_2	10	adv.主要地	1
+57	childhood	Unit5_2	10	n.童年	0
+58	count	Unit5_3	10	vt.计数	1
+58	fill	Unit5_3	10	v.填满	1
+58	judge	Unit5_3	10	v.判断	0
+58	good-looking	Unit5_3	10	adj.漂亮的	1
+58	great-grandpa	Unit5_3	10	n.曾祖父	1
+59	prime minister	Unit5_4	10	n.首相	1
+59	war	Unit5_4	10	n.战争	1
+59	curtain	Unit5_4	10	n.窗帘	0
+59	German	Unit5_4	10	adj.德国的	1
+59	bomb	Unit5_4	10	vt.炸弹	0
+60	luckily	Unit5_5	10	adv.幸运地	1
+60	marry	Unit5_5	10	n.结婚	1
+60	great-grandma	Unit5_5	10	n.曾祖母	1
+60	army	Unit5_5	10	n.军队	1
+60	enemy	Unit5_5	10	n.敌人	1
+61	available	Unit5_6	10	adj.可获得的	0
+61	machine	Unit5_6	10	n.机器	1
+61	air conditioner	Unit5_6	10	n.空调	1
+61	cooker	Unit5_6	10	n.炊具	1
+61	dishwasher	Unit5_6	10	n.洗碗机	1
+62	record player	Unit5_7	10	唱机	1
+62	tiny	Unit5_7	10	adj.极小的	1
+62	central	Unit5_7	10	adj.中央的	1
+62	central heating	Unit5_7	10	中央供暖	1
+62	wet	Unit5_7	10	adj.潮的	1
+63	used to	Unit5_8	10	过去常常	1
+63	mainly	Unit5_8	10	adv.主要地	1
+63	round	Unit5_8	10	n.&adj.圆形的	1
+63	come round	Unit5_8	10	短暂拜访	1
+63	lemon	Unit5_8	10	n.柠檬	1
+64	second-hand	Unit5_9	10	adj.二手的	1
+64	weekday	Unit5_9	10	n.工作日	1
+64	theatre	Unit5_9	10	n.剧院	1
+64	unforgettable	Unit5_9	10	adj.难以忘怀的	1
+64	run into	Unit5_9	10	撞上	1
+65	bleed	Unit5_10	10	n.流血	0
+65	frightened	Unit5_10	10	adj.受惊的	0
+65	pain	Unit5_10	10	n.疼痛	1
+65	ambulance	Unit5_10	10	n.救护车	0
+65	take care of	Unit5_10	10	照顾	1
+66	detective	Unit6_1	13	n.侦探	0
+66	British	Unit6_1	13	abj.英国的	1
+66	observe	Unit6_1	13	n.观察	0
+66	humourous	Unit6_1	13	adj.滑稽有趣的	1
+66	degree	Unit6_1	13	n.程度	1
+67	detective story	Unit6_2	13	n.侦探小说	1
+67	wise	Unit6_2	13	adj.充满智慧的	1
+67	solution	Unit6_2	13	n.解决办法	0
+67	unclear	Unit6_2	13	adj.不清楚的	1
+67	clue	Unit6_2	13	n.线索	0
+68	mystery	Unit6_3	13	n.神秘的事物	0
+68	setting	Unit6_3	13	n.情节背景	0
+68	hall	Unit6_3	13	n.门厅	1
+68	truth	Unit6_3	13	n.真相	1
+68	parlour	Unit6_3	13	n.客厅	0
+69	lord	Unit6_4	13	n.大人	0
+69	least	Unit6_4	13	adj.最少	1
+69	at least	Unit6_4	13	至少	1
+69	dead	Unit6_4	13	adv.死的	1
+69	pass away	Unit6_4	13	过世	1
+70	recently	Unit6_5	13	pron.最近	1
+70	doubt	Unit6_5	13	v.&n.怀疑	1
+70	nobody	Unit6_5	13	pron.没人	1
+70	whether	Unit6_5	13	n.是否	1
+70	alive	Unit6_5	13	adj.活着的	1
+71	death	Unit6_6	13	vt.死亡	0
+71	reappear	Unit6_6	13	v.再次出现	1
+71	claim	Unit6_6	13	n.宣称	0
+71	valuable	Unit6_6	13	adj.贵重的	1
+71	inheritance	Unit6_6	13	n.遗产	0
+72	impossible	Unit6_7	13	adj.不可能的	1
+72	ahead	Unit6_7	13	adv.向前面	0
+72	thirsty	Unit6_7	13	adj.渴的	1
+72	sadly	Unit6_7	13	adv.不幸地	1
+72	a little	Unit6_7	13	少量	1
+73	sleeve	Unit6_8	13	n.袖子	0
+73	silk	Unit6_8	13	n.丝绸	1
+73	evidence	Unit6_8	13	n.证据	0
+73	create	Unit6_8	13	vt.创作	1
+73	billion	Unit6_8	13	n.十亿	0
+74	translate	Unit6_9	13	v.翻译	1
+74	the West End of London	Unit6_9	13	n.伦敦西区	1
+74	actress	Unit6_9	13	n.女演员	1
+74	perform	Unit6_9	13	n.表演	0
+74	wealthy	Unit6_9	13	n.富有的	1
+75	pupil	Unit6_10	13	n.小学生	1
+75	education	Unit6_10	13	n.教育	1
+75	cleverly	Unit6_10	13	adv.聪明地	1
+75	guilty	Unit6_10	13	adj.感到内疚的	0
+75	fear	Unit6_10	13	n.&v.惧怕	1
+76	intelligence	Unit6_11	13	n.智力	0
+76	crime	Unit6_11	13	n.犯罪活动	0
+76	career	Unit6_11	13	n.生涯	0
+76	print	Unit6_11	13	n.打印	1
+76	sale	Unit6_11	13	n.销售量	1
+77	fiction	Unit6_12	13	n.小说	0
+77	murder	Unit6_12	13	n.谋杀	0
+77	dressmaker	Unit6_12	13	n.裁缝	1
+77	murderer	Unit6_12	13	n.杀人凶手	0
+77	calm	Unit6_12	13	n.沉着的	0
+78	pin	Unit6_13	13	adj.胸针	0
+78	policeman	Unit6_13	13	n.警察	1
+78	heroine	Unit6_13	13	n.女英雄	0
+78	ending	Unit6_13	13	n.结局	1
+78	surprising	Unit6_13	13	adj.令人吃惊的	1
+78	case	Unit6_13	13	n.案件	0

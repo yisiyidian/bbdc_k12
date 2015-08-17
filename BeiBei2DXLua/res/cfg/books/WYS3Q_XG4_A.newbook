@@ -1,146 +1,146 @@
-1	straight	Module 1_1	3	adv.直地	0
-1	go straight on	Module 1_1	3	直着走	0
-1	left	Module 1_1	3	n.&adj.左边	1
-2	right	Module 1_2	3	n.&adj.右边	1
-2	lost	Module 1_2	3	adj.迷路的	0
-2	live	Module 1_2	3	v.居住	1
-2	No.	Module 1_2	3	abbr.第...号	0
-2	street	Module 1_2	3	n.街道	1
-2	excuse me	Module 1_2	3	对不起	0
-2	turn left	Module 1_2	3	向左转	0
-2	turn right	Module 1_2	3	向右转	0
-2	next to	Module 1_2	3	紧靠...旁边	0
-2	supermarket	Module 1_2	3	n.超市	1
-3	beside	Module 1_3	3	prep.在...旁边	1
-3	cinema	Module 1_3	3	n.电影院	1
-3	so much	Module 1_3	3	十分	0
-3	You're welcome	Module 1_3	3	不客气	1
-3	station	Module 1_3	3	n.车站	0
-3	train	Module 1_3	3	n.火车	1
-3	hill	Module 1_3	3	n.小山	0
-3	near	Module 1_3	3	adv.接近	1
-3	house	Module 1_3	3	n.房屋	1
-4	read	Module 2_1	1	vt.阅读	1
-4	running	Module 2_1	1	n.跑步	0
-4	these	Module 2_1	1	pron.这些	1
-4	picture	Module 2_1	1	n.照片	1
-4	take	Module 2_1	1	vt.拍摄	1
-4	take pictures	Module 2_1	1	照相	0
-4	children	Module 2_1	1	n.孩子们	1
-4	listen	Module 2_1	1	v.听	1
-4	listen to	Module 2_1	1	听	0
-4	talk	Module 2_1	1	n.&v.说话	1
-4	talk to	Module 2_1	1	和...交谈	0
-4	China	Module 2_1	1	n.中国	1
-5	kid	Module 3_1	3	n.小孩	1
-5	get on	Module 3_1	3	上车	0
-5	can	Module 3_1	3	aux.能够	1
-5	see	Module 3_1	3	vt.看到	1
-5	lots of	Module 3_1	3	许多	0
-5	interesting	Module 3_1	3	adj.有趣的	1
-5	thing	Module 3_1	3	n.东西	0
-5	people	Module 3_1	3	n.人	1
-6	row	Module 3_2	3	vt.划船	0
-6	dragon	Module 3_2	3	n.龙	0
-6	boat	Module 3_2	3	n.船	1
-6	dragon boat	Module 3_2	3	龙舟	0
-6	men	Module 3_2	3	n.男人（复数）	1
-6	between	Module 3_2	3	prep.在...之间	1
-6	chess	Module 3_2	3	n.国际象棋	0
-6	play chess	Module 3_2	3	下国际象棋	0
-7	drink	Module 3_3	3	v.喝	1
-7	soya milk	Module 3_3	3	豆浆	0
-7	clock	Module 3_3	3	n.钟	1
-7	hungry	Module 3_3	3	adj.饥饿的	1
-7	Me too	Module 3_3	3	我也一样	0
-7	draw	Module 3_3	3	v.画	1
-7	jump	Module 3_3	3	n.跳	1
-7	sing	Module 3_3	3	vt.唱歌	1
-7	dance	Module 3_3	3	vi.跳舞	1
-8	want	Module 4_1	2	viC89.想要	1
-8	some	Module 4_1	2	adj.一些	1
-8	juice	Module 4_1	2	n.果汁	1
-8	ice	Module 4_1	2	n.冰	0
-8	also	Module 4_1	2	adv.也	1
-8	food	Module 4_1	2	n.食物	1
-8	fast food	Module 4_1	2	快餐	0
-8	make	Module 4_1	2	vt.制作	1
-9	tomato	Module 4_2	2	n.番茄	1
-9	egg	Module 4_2	2	n.鸡蛋	1
-9	potato	Module 4_2	2	n.马铃薯	1
-9	How much ...	Module 4_2	2	...多少钱？	0
-9	flower	Module 4_2	2	n.花	1
-9	dumpling	Module 4_2	2	n.水饺	0
-9	help	Module 4_2	2	vt.帮助	1
-9	buy	Module 4_2	2	vt.买	1
-10	run	Module 5_1	1	vi.跑	1
-10	fast	Module 5_1	1	adv.快速地	1
-10	sky	Module 5_1	1	n.天	0
-10	high	Module 5_1	1	adj.高的	1
-10	winner	Module 5_1	1	n.获胜者	0
-10	far	Module 5_1	1	adj.远	1
-10	afraid	Module 5_1	1	adj.恐怕	1
-10	strong	Module 5_1	1	adj.健壮的	1
-10	star	Module 5_1	1	n.明星	1
-11	sweets	Module 6_1	1	n.糖果	0
-11	soup	Module 6_1	1	n.汤	1
-11	sorry	Module 6_1	1	adj.对不起	1
-11	bread	Module 6_1	1	n.面包	1
-11	dark	Module 6_1	1	adj.黒暗的	0
-11	well	Module 6_1	1	adv.唔	0
-11	turn on	Module 6_1	1	打开	0
-11	light	Module 6_1	1	n.灯	1
-11	Halloween	Module 6_1	1	n.万圣节前夕	0
-11	trick or treat	Module 6_1	1	不请吃就捣蛋	0
-11	give	Module 6_1	1	vt.给	1
-11	come in	Module 6_1	1	请进	0
-11	of course	Module 6_1	1	当然	0
-12	there is	Module 7_1	1	有	0
-12	horse	Module 7_1	1	n.马	1
-12	there are	Module 7_1	1	有	0
-12	have a look	Module 7_1	1	看一看	1
-12	sheep	Module 7_1	1	n.绵羊	1
-12	vegetable	Module 7_1	1	n.蔬菜	1
-12	climb	Module 7_1	1	vt.爬	0
-12	face	Module 7_1	1	n.脸	1
-12	fruit	Module 7_1	1	n.水果	1
-12	chicken	Module 7_1	1	n.鸡	1
-12	bear	Module 7_1	1	n.熊	1
-12	pig	Module 7_1	1	n.猪	1
-13	visit	Module 8_1	1	n.&v.参观	1
-13	tomorrow	Module 8_1	1	n.&adv.明天	1
-13	plane	Module 8_1	1	n.飞机	1
-13	get up	Module 8_1	1	起床	0
-13	o'clock	Module 8_1	1	...点钟	0
-13	from	Module 8_1	1	prep.来自	1
-13	sea	Module 8_1	1	n.大海	0
-13	swimsuit	Module 8_1	1	n.游泳衣	0
-13	sock	Module 8_1	1	n.短袜	1
-13	fish	Module 8_1	1	n.钓鱼	1
-13	hooray	Module 8_1	1	int.好	0
-14	sports day	Module 9_1	1	运动日	0
-14	win	Module 9_1	1	vi.胜利	0
-14	month	Module 9_1	1	n.月	1
-14	hundred	Module 9_1	1	n.一百	0
-14	metre	Module 9_1	1	n.米	0
-14	every	Module 9_1	1	adj.每个	1
-14	day	Module 9_1	1	n.一天	1
-14	luck	Module 9_1	1	n.运气	0
-14	good luck	Module 9_1	1	祝你好运	0
-14	come on	Module 9_1	1	加油	0
-14	high jump	Module 9_1	1	跳高	0
-14	long jump	Module 9_1	1	跳远	0
-14	How about ...	Module 9_1	1	...怎么样？	0
-14	subject	Module 9_1	1	n.学科	1
-15	family	Module 10_1	1	n.家	1
-15	dinner	Module 10_1	1	n.晚餐	0
-15	year	Module 10_1	1	n.年份	1
-15	New Year	Module 10_1	1	新年	0
-15	Chinese	Module 10_1	1	n.中国的	1
-15	festival	Module 10_1	1	n.节日	0
-15	the Spring Festival	Module 10_1	1	春节	0
-15	I see	Module 10_1	1	我明白了	0
-15	peanut	Module 10_1	1	n.花生	0
-15	merry	Module 10_1	1	adj.愉快的	0
-15	Christmas	Module 10_1	1	n.圣诞节	0
-15	Merry Christmas	Module 10_1	1	圣诞快乐	0
+1	straight	Module 1_1	5	adv.直地	0
+1	go straight on	Module 1_1	5	直着走	0
+1	left	Module 1_1	5	n.&adj.左边	1
+2	right	Module 1_2	5	n.&adj.右边	1
+2	lost	Module 1_2	5	adj.迷路的	0
+2	live	Module 1_2	5	v.居住	1
+2	No.	Module 1_2	5	abbr.第...号	0
+2	street	Module 1_2	5	n.街道	1
+3	excuse me	Module 1_3	5	对不起	0
+3	turn left	Module 1_3	5	向左转	0
+3	turn right	Module 1_3	5	向右转	0
+3	next to	Module 1_3	5	紧靠...旁边	0
+3	supermarket	Module 1_3	5	n.超市	1
+4	beside	Module 1_4	5	prep.在...旁边	1
+4	cinema	Module 1_4	5	n.电影院	1
+4	so much	Module 1_4	5	十分	0
+4	You're welcome	Module 1_4	5	不客气	1
+4	station	Module 1_4	5	n.车站	0
+5	train	Module 1_5	5	n.火车	1
+5	hill	Module 1_5	5	n.小山	0
+5	near	Module 1_5	5	adv.接近	1
+5	house	Module 1_5	5	n.房屋	1
+6	read	Module 2_1	2	vt.阅读	1
+6	running	Module 2_1	2	n.跑步	0
+6	these	Module 2_1	2	pron.这些	1
+6	picture	Module 2_1	2	n.照片	1
+6	take	Module 2_1	2	vt.拍摄	1
+6	take pictures	Module 2_1	2	照相	0
+7	children	Module 2_2	2	n.孩子们	1
+7	listen	Module 2_2	2	v.听	1
+7	listen to	Module 2_2	2	听	0
+7	talk	Module 2_2	2	n.&v.说话	1
+7	talk to	Module 2_2	2	和...交谈	0
+7	China	Module 2_2	2	n.中国	1
+8	kid	Module 3_1	5	n.小孩	1
+8	get on	Module 3_1	5	上车	0
+8	can	Module 3_1	5	aux.能够	1
+8	see	Module 3_1	5	vt.看到	1
+8	lots of	Module 3_1	5	许多	0
+9	interesting	Module 3_2	5	adj.有趣的	1
+9	thing	Module 3_2	5	n.东西	0
+9	people	Module 3_2	5	n.人	1
+9	row	Module 3_2	5	vt.划船	0
+9	dragon	Module 3_2	5	n.龙	0
+10	boat	Module 3_3	5	n.船	1
+10	dragon boat	Module 3_3	5	龙舟	0
+10	men	Module 3_3	5	n.男人（复数）	1
+10	between	Module 3_3	5	prep.在...之间	1
+10	chess	Module 3_3	5	n.国际象棋	0
+11	play chess	Module 3_4	5	下国际象棋	0
+11	drink	Module 3_4	5	v.喝	1
+11	soya milk	Module 3_4	5	豆浆	0
+11	clock	Module 3_4	5	n.钟	1
+11	hungry	Module 3_4	5	adj.饥饿的	1
+12	Me too	Module 3_5	5	我也一样	0
+12	draw	Module 3_5	5	v.画	1
+12	jump	Module 3_5	5	n.跳	1
+12	sing	Module 3_5	5	vt.唱歌	1
+12	dance	Module 3_5	5	vi.跳舞	1
+13	want	Module 4_1	3	viC89.想要	1
+13	some	Module 4_1	3	adj.一些	1
+13	juice	Module 4_1	3	n.果汁	1
+13	ice	Module 4_1	3	n.冰	0
+13	also	Module 4_1	3	adv.也	1
+14	food	Module 4_2	3	n.食物	1
+14	fast food	Module 4_2	3	快餐	0
+14	make	Module 4_2	3	vt.制作	1
+14	tomato	Module 4_2	3	n.番茄	1
+14	egg	Module 4_2	3	n.鸡蛋	1
+15	potato	Module 4_3	3	n.马铃薯	1
+15	How much ...	Module 4_3	3	...多少钱？	0
+15	flower	Module 4_3	3	n.花	1
+15	dumpling	Module 4_3	3	n.水饺	0
+15	help	Module 4_3	3	vt.帮助	1
+15	buy	Module 4_3	3	vt.买	1
+16	run	Module 5_1	2	vi.跑	1
+16	fast	Module 5_1	2	adv.快速地	1
+16	sky	Module 5_1	2	n.天	0
+16	high	Module 5_1	2	adj.高的	1
+16	winner	Module 5_1	2	n.获胜者	0
+17	far	Module 5_2	2	adj.远	1
+17	afraid	Module 5_2	2	adj.恐怕	1
+17	strong	Module 5_2	2	adj.健壮的	1
+17	star	Module 5_2	2	n.明星	1
+18	sweets	Module 6_1	3	n.糖果	0
+18	soup	Module 6_1	3	n.汤	1
+18	sorry	Module 6_1	3	adj.对不起	1
+18	bread	Module 6_1	3	n.面包	1
+19	dark	Module 6_2	3	adj.黒暗的	0
+19	well	Module 6_2	3	adv.唔	0
+19	turn on	Module 6_2	3	打开	0
+19	light	Module 6_2	3	n.灯	1
+20	Halloween	Module 6_3	3	n.万圣节前夕	0
+20	trick or treat	Module 6_3	3	不请吃就捣蛋	0
+20	give	Module 6_3	3	vt.给	1
+20	come in	Module 6_3	3	请进	0
+20	of course	Module 6_3	3	当然	0
+21	there is	Module 7_1	2	有	0
+21	horse	Module 7_1	2	n.马	1
+21	there are	Module 7_1	2	有	0
+21	have a look	Module 7_1	2	看一看	1
+21	sheep	Module 7_1	2	n.绵羊	1
+21	vegetable	Module 7_1	2	n.蔬菜	1
+22	climb	Module 7_2	2	vt.爬	0
+22	face	Module 7_2	2	n.脸	1
+22	fruit	Module 7_2	2	n.水果	1
+22	chicken	Module 7_2	2	n.鸡	1
+22	bear	Module 7_2	2	n.熊	1
+22	pig	Module 7_2	2	n.猪	1
+23	visit	Module 8_1	2	n.&v.参观	1
+23	tomorrow	Module 8_1	2	n.&adv.明天	1
+23	plane	Module 8_1	2	n.飞机	1
+23	get up	Module 8_1	2	起床	0
+23	o'clock	Module 8_1	2	...点钟	0
+23	from	Module 8_1	2	prep.来自	1
+24	sea	Module 8_2	2	n.大海	0
+24	swimsuit	Module 8_2	2	n.游泳衣	0
+24	sock	Module 8_2	2	n.短袜	1
+24	fish	Module 8_2	2	n.钓鱼	1
+24	hooray	Module 8_2	2	int.好	0
+25	sports day	Module 9_1	3	运动日	0
+25	win	Module 9_1	3	vi.胜利	0
+25	month	Module 9_1	3	n.月	1
+25	hundred	Module 9_1	3	n.一百	0
+25	metre	Module 9_1	3	n.米	0
+26	every	Module 9_2	3	adj.每个	1
+26	day	Module 9_2	3	n.一天	1
+26	luck	Module 9_2	3	n.运气	0
+26	good luck	Module 9_2	3	祝你好运	0
+26	come on	Module 9_2	3	加油	0
+27	high jump	Module 9_3	3	跳高	0
+27	long jump	Module 9_3	3	跳远	0
+27	How about ...	Module 9_3	3	...怎么样？	0
+27	subject	Module 9_3	3	n.学科	1
+28	family	Module 10_1	2	n.家	1
+28	dinner	Module 10_1	2	n.晚餐	0
+28	year	Module 10_1	2	n.年份	1
+28	New Year	Module 10_1	2	新年	0
+28	Chinese	Module 10_1	2	n.中国的	1
+28	festival	Module 10_1	2	n.节日	0
+29	the Spring Festival	Module 10_2	2	春节	0
+29	I see	Module 10_2	2	我明白了	0
+29	peanut	Module 10_2	2	n.花生	0
+29	merry	Module 10_2	2	adj.愉快的	0
+29	Christmas	Module 10_2	2	n.圣诞节	0
+29	Merry Christmas	Module 10_2	2	圣诞快乐	0

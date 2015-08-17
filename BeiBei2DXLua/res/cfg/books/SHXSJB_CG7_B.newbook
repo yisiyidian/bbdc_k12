@@ -1,289 +1,289 @@
-1	sunny	unit 1 Topic 1_1	3	adj.晴朗的	1
-1	windy	unit 1 Topic 1_1	3	adj.有风的	1
-1	wet	unit 1 Topic 1_1	3	adj.湿的	1
-2	temperature	unit 1 Topic 1_2	3	n.温度	1
-2	low	unit 1 Topic 1_2	3	adj.低的	1
-2	high	unit 1 Topic 1_2	3	adj.高的	1
-2	Celsius	unit 1 Topic 1_2	3	n.&adj.摄氏	0
-2	degree	unit 1 Topic 1_2	3	n.度	1
-2	snowy	unit 1 Topic 1_2	3	adj.下雪的	1
-2	all the time	unit 1 Topic 1_2	3	一直	1
-2	sauna	unit 1 Topic 1_2	3	n.桑拿浴	0
-2	report	unit 1 Topic 1_2	3	vt.&n.预报	1
-3	foggy	unit 1 Topic 1_3	3	adj.有雾的	0
-3	cycle	unit 1 Topic 1_3	3	n.&vt.循环	1
-3	fall	unit 1 Topic 1_3	3	v.&n.落下	1
-3	vapour	unit 1 Topic 1_3	3	n.蒸汽	0
-3	blow	unit 1 Topic 1_3	3	vt.风吹	1
-3	grow	unit 1 Topic 1_3	3	vt.种植	1
-3	shine	unit 1 Topic 1_3	3	vi.照耀	1
-3	sea	unit 1 Topic 1_3	3	n.海	1
-4	bloom	unit 1 Topic 2_1	3	n.开花	0
-4	ski	unit 1 Topic 2_1	3	vi.滑雪	0
-4	snowman	unit 1 Topic 2_1	3	雪人	1
-4	sandcastle	unit 1 Topic 2_1	3	沙堡	0
-4	at the beach	unit 1 Topic 2_1	3	在海滨	1
-4	blow away	unit 1 Topic 2_1	3	吹走	1
-4	fallen leaf	unit 1 Topic 2_1	3	落叶	1
-4	outdoor	unit 1 Topic 2_1	3	adj.室外的	1
-5	outing	unit 1 Topic 2_2	3	n.郊游	1
-5	go for an outing	unit 1 Topic 2_2	3	去郊游	1
-5	neither	unit 1 Topic 2_2	3	adv.都不	1
-5	shop window	unit 1 Topic 2_2	3	商店橱窗	1
-5	overcoat	unit 1 Topic 2_2	3	n.大衣	0
-5	blouse	unit 1 Topic 2_2	3	n.女衬衫	0
-5	T-shirt	unit 1 Topic 2_2	3	n.T恤衫	1
-5	shorts	unit 1 Topic 2_2	3	n.短裤	1
-6	sweater	unit 1 Topic 2_3	3	n.套衫	0
-6	sandal	unit 1 Topic 2_3	3	n.凉鞋	0
-6	glove	unit 1 Topic 2_3	3	n.手套	0
-6	indoor	unit 1 Topic 2_3	3	adj.室内的	1
-6	New Zealand	unit 1 Topic 2_3	3	新西兰	0
-6	down	unit 1 Topic 2_3	3	adj.羽绒	0
-6	down jacket	unit 1 Topic 2_3	3	羽绒滑雪衫	0
-6	swimsuit	unit 1 Topic 2_3	3	n.游泳衣	0
-6	swimming shorts	unit 1 Topic 2_3	3	游泳裤	1
-7	surface	unit 1 Topic 3_1	3	n.表面	1
-7	land	unit 1 Topic 3_1	3	n.陆地	1
-7	desert	unit 1 Topic 3_1	3	n.沙漠	1
-7	planet	unit 1 Topic 3_1	3	n.行星	0
-7	move around	unit 1 Topic 3_1	3	绕行	1
-7	set	unit 1 Topic 3_1	3	v.放	1
-7	well done	unit 1 Topic 3_1	3	干得好	1
-7	have a good knowledge of	unit 1 Topic 3_1	3	熟悉	1
-8	all the year round	unit 1 Topic 3_2	3	一年到头	1
-8	the Yangtze	unit 1 Topic 3_2	3	扬子江	1
-8	itself	unit 1 Topic 3_2	3	pron.它自己	1
-8	space travel	unit 1 Topic 3_2	3	太空旅行	1
-8	space station	unit 1 Topic 3_2	3	宇宙空间站	1
-8	experiment	unit 1 Topic 3_2	3	n.实验	1
-8	do an experiment	unit 1 Topic 3_2	3	做实验	1
-8	base	unit 1 Topic 3_2	3	n.基地	1
-9	at the same time	unit 1 Topic 3_3	3	同时	1
-9	own	unit 1 Topic 3_3	3	adj.自己的	1
-9	oxygen	unit 1 Topic 3_3	3	n.氧气	0
-9	supply	unit 1 Topic 3_3	3	vt.供给	0
-9	water supply	unit 1 Topic 3_3	3	供水	0
-9	spacesuit	unit 1 Topic 3_3	3	n.宇航服	0
-9	in this way	unit 1 Topic 3_3	3	这样	1
-9	make a trip	unit 1 Topic 3_3	3	旅行	1
-9	even	unit 1 Topic 3_3	3	adv.甚至	1
-10	patient	unit 2 Topic 1_1	3	n.病人	1
-10	stomachache	unit 2 Topic 1_1	3	n.胃痛	0
-10	headache	unit 2 Topic 1_1	3	n.头痛	1
-10	cold	unit 2 Topic 1_1	3	n.&adj.感冒	1
-10	sore	unit 2 Topic 1_1	3	adj.疼痛的	0
-10	throat	unit 2 Topic 1_1	3	n.喉咙	0
-10	fever	unit 2 Topic 1_1	3	n.&v.发烧	1
-10	take one's temperature	unit 2 Topic 1_1	3	给 ... 量体温	0
-10	too ... to	unit 2 Topic 1_1	3	太 ... 以致不能	1
-10	weak	unit 2 Topic 1_1	3	adj.虚弱	1
-11	had better	unit 2 Topic 1_2	3	还是 ... 好	1
-11	go to hospital	unit 2 Topic 1_2	3	到医院看病	1
-11	examine	unit 2 Topic 1_2	3	vt.检查	1
-11	medicine	unit 2 Topic 1_2	3	n.药	1
-11	tablet	unit 2 Topic 1_2	3	n.药片	0
-11	plenty	unit 2 Topic 1_2	3	n.&adj.丰富的	1
-11	plenty of	unit 2 Topic 1_2	3	大量的 ...	1
-11	rest	unit 2 Topic 1_2	3	vt.&n.休息	1
-11	take a rest	unit 2 Topic 1_2	3	休息一下	1
-11	herself	unit 2 Topic 1_2	3	pron.她自己	1
-12	ourselves	unit 2 Topic 1_3	3	pron.我们自己	1
-12	themselves	unit 2 Topic 1_3	3	pron.他们自己	1
-12	advice	unit 2 Topic 1_3	3	n.劝告	1
-12	give advice to ...	unit 2 Topic 1_3	3	给某人忠告	1
-12	take somebody's advice	unit 2 Topic 1_3	3	遵照某人的嘱咐	1
-12	cough	unit 2 Topic 1_3	3	n.咳嗽	1
-12	all day long	unit 2 Topic 1_3	3	整天	0
-12	toothache	unit 2 Topic 1_3	3	n.牙痛	1
-12	flu	unit 2 Topic 1_3	3	n.流行性感冒	1
-12	worry	unit 2 Topic 1_3	3	n.担心	0
-12	advise	unit 2 Topic 1_3	3	vt.劝告	0
-13	diet	unit 2 Topic 2_1	3	n.日常饮食	1
-13	overweight	unit 2 Topic 2_1	3	adj.超重	0
-13	go on a diet	unit 2 Topic 2_1	3	实行节食	1
-13	fond	unit 2 Topic 2_1	3	adj.喜爱的	1
-13	be fond of	unit 2 Topic 2_1	3	喜欢	1
-13	prefer	unit 2 Topic 2_1	3	vt.宁可	1
-13	prefer ... to	unit 2 Topic 2_1	3	比起 ... 来更喜欢 ...	1
-13	junk	unit 2 Topic 2_1	3	n.废料	0
-13	unhealthy	unit 2 Topic 2_1	3	adj.不健康的	1
-14	fried	unit 2 Topic 2_2	3	adj.油炸的	1
-14	instead of	unit 2 Topic 2_2	3	代替	1
-14	gosh	unit 2 Topic 2_2	3	天哪	0
-14	seafood	unit 2 Topic 2_2	3	n.海产食品	0
-14	not ... at all	unit 2 Topic 2_2	3	一点也不	1
-14	post	unit 2 Topic 2_2	3	n.&vt.邮政	1
-14	habit	unit 2 Topic 2_2	3	n.习惯	1
-14	thirsty	unit 2 Topic 2_2	3	adj.渴的	0
-14	score	unit 2 Topic 2_2	3	n.分数	0
-15	balanced	unit 2 Topic 2_3	3	adj.平衡的	1
-15	grain	unit 2 Topic 2_3	3	n.谷物	1
-15	energy	unit 2 Topic 2_3	3	n.精力	1
-15	dairy	unit 2 Topic 2_3	3	n.&adj.牛奶公司	0
-15	yogurt	unit 2 Topic 2_3	3	n.酸乳	0
-15	however	unit 2 Topic 2_3	3	adv.不管怎样	1
-15	cause	unit 2 Topic 2_3	3	vt.&n.引起	1
-15	pyramid	unit 2 Topic 2_3	3	n.锥形物	0
-15	sugar	unit 2 Topic 2_3	3	n.糖	1
-15	cheese	unit 2 Topic 2_3	3	n.奶酪	1
-16	fitness	unit 2 Topic 3_1	2	n.健康	0
-16	fail	unit 2 Topic 3_1	2	vi.失败	1
-16	upset	unit 2 Topic 3_1	2	adj.心烦的	1
-16	weight	unit 2 Topic 3_1	2	n.重	0
-16	lose weight	unit 2 Topic 3_1	2	减轻体重	0
-16	fit	unit 2 Topic 3_1	2	v.&adj.健康的	1
-16	ad	unit 2 Topic 3_1	2	abbr.广告	0
-16	either	unit 2 Topic 3_1	2	pron.也	1
-16	good for ...	unit 2 Topic 3_1	2	干得好	1
-16	kilogram	unit 2 Topic 3_1	2	n.公斤	1
-16	high jump	unit 2 Topic 3_1	2	跳高	1
-16	in somebody's opinion	unit 2 Topic 3_1	2	据某人看来	1
-17	discussion	unit 2 Topic 3_2	2	n.讨论	1
-17	keep fit	unit 2 Topic 3_2	2	保持健康	1
-17	finally	unit 2 Topic 3_2	2	adv.最后	1
-17	athletic	unit 2 Topic 3_2	2	adj.运动的	0
-17	surprise	unit 2 Topic 3_2	2	vt.惊奇	1
-17	be surprised at	unit 2 Topic 3_2	2	感到惊奇	1
-17	wow	unit 2 Topic 3_2	2	哇	0
-17	laugh	unit 2 Topic 3_2	2	vt.笑	1
-17	soon after	unit 2 Topic 3_2	2	此后不久	0
-17	pass	unit 2 Topic 3_2	2	vt.经过	1
-17	sincerely	unit 2 Topic 3_2	2	adv.忠实地	0
-17	Yours sincerely	unit 2 Topic 3_2	2	谨上	0
-18	lawyer	unit 3 Topic 1_1	3	n.律师	1
-18	diplomat	unit 3 Topic 1_1	3	n.外交家	0
-18	bank	unit 3 Topic 1_1	3	n.银行	1
-18	clerk	unit 3 Topic 1_1	3	n.职员	0
-18	player	unit 3 Topic 1_1	3	n.运动员	1
-18	sociable	unit 3 Topic 1_1	3	adj.好交际的	0
-18	knowledgeable	unit 3 Topic 1_1	3	adj.有丰富知识的	0
-18	hardworking	unit 3 Topic 1_1	3	adj.努力工作的	1
-18	grow up	unit 3 Topic 1_1	3	成长	1
-18	if	unit 3 Topic 1_1	3	conj.如果	1
-18	excellent	unit 3 Topic 1_1	3	adj.优秀的	1
-19	business	unit 3 Topic 1_2	3	n.商业	1
-19	start a business	unit 3 Topic 1_2	3	开业	1
-19	graduate	unit 3 Topic 1_2	3	vt.大学毕业	1
-19	exactly	unit 3 Topic 1_2	3	adv.精确地	1
-19	graduation	unit 3 Topic 1_2	3	n.毕业	1
-19	sell	unit 3 Topic 1_2	3	v.卖	1
-19	wave	unit 3 Topic 1_2	3	v.&n.招手	1
-19	pay	unit 3 Topic 1_2	3	vt.支付	1
-19	businessman	unit 3 Topic 1_2	3	n.商人	0
-19	businesswoman	unit 3 Topic 1_2	3	n.女商人	0
-19	fireman	unit 3 Topic 1_2	3	n.消防队员	1
-20	put out	unit 3 Topic 1_3	3	扑灭	1
-20	type	unit 3 Topic 1_3	3	n.用打字机打印	0
-20	fax	unit 3 Topic 1_3	3	n.&v.传真	0
-20	take care of	unit 3 Topic 1_3	3	照顾	1
-20	serve	unit 3 Topic 1_3	3	v.为 ... 服务	1
-20	possible	unit 3 Topic 1_3	3	adj.可能的	1
-20	donate	unit 3 Topic 1_3	3	vt.捐赠	1
-20	college	unit 3 Topic 1_3	3	n.学院	1
-20	among	unit 3 Topic 1_3	3	prep.在 ... 中间	1
-20	interpreter	unit 3 Topic 1_3	3	n.口译员	0
-20	outstanding	unit 3 Topic 1_3	3	adj.杰出的	0
-21	software	unit 3 Topic 2_1	2	n.软件	1
-21	Microsoft	unit 3 Topic 2_1	2	美国微软公司	0
-21	dream	unit 3 Topic 2_1	2	n.梦	1
-21	come true	unit 3 Topic 2_1	2	实现	1
-21	set up	unit 3 Topic 2_1	2	建立	1
-21	although	unit 3 Topic 2_1	2	conj.虽然	1
-21	millionaire	unit 3 Topic 2_1	2	n.亿万富翁	0
-21	ordinary	unit 3 Topic 2_1	2	adj.普通的	1
-21	educator	unit 3 Topic 2_1	2	n.教育工作者	0
-21	blind	unit 3 Topic 2_1	2	adj.瞎的	1
-21	deaf	unit 3 Topic 2_1	2	adj.聋的	0
-21	inventor	unit 3 Topic 2_1	2	n.发明家	1
-22	invent	unit 3 Topic 2_2	2	v.发明	1
-22	problem	unit 3 Topic 2_2	2	n.问题	1
-22	such	unit 3 Topic 2_2	2	adj.&adv.如此的	1
-22	handsome	unit 3 Topic 2_2	2	adj.英俊的	0
-22	choice	unit 3 Topic 2_2	2	n.选择	1
-22	openly	unit 3 Topic 2_2	2	adv.公开地	0
-22	describe	unit 3 Topic 2_2	2	vt.描写	0
-22	take out	unit 3 Topic 2_2	2	取得	1
-22	while	unit 3 Topic 2_2	2	conj.&n.在 ... 时候	1
-22	against	unit 3 Topic 2_2	2	prep.反对	1
-22	spirit	unit 3 Topic 2_2	2	n.精神	1
-22	chance	unit 3 Topic 2_2	2	n.机会	1
-23	stage	unit 4 Topic 1_1	3	n.舞台	1
-23	comic	unit 4 Topic 1_1	3	n.&adj.滑稽的	0
-23	dialogue	unit 4 Topic 1_1	3	n.对话	1
-23	comic dialogue	unit 4 Topic 1_1	3	相声	0
-23	humorous	unit 4 Topic 1_1	3	adj.幽默的	1
-23	encore	unit 4 Topic 1_1	3	int再来一个	0
-23	item	unit 4 Topic 1_1	3	n.项目	1
-23	audience	unit 4 Topic 1_1	3	n.观众	1
-23	clap	unit 4 Topic 1_1	3	vt.拍手	0
-23	hall	unit 4 Topic 1_1	3	n.会堂	1
-24	give ... a hand	unit 4 Topic 1_2	3	助某人一臂之力	1
-24	guest	unit 4 Topic 1_2	3	n.客人	1
-24	guest star	unit 4 Topic 1_2	3	特邀明星	1
-24	pop	unit 4 Topic 1_2	3	adj.通俗的	1
-24	onto	unit 4 Topic 1_2	3	prep.到 ... 上面	1
-24	voice	unit 4 Topic 1_2	3	n.嗓音	1
-24	costume	unit 4 Topic 1_2	3	n.服饰	0
-24	neither ... nor ...	unit 4 Topic 1_2	3	既不 ... 也不 ...	1
-24	free	unit 4 Topic 1_2	3	adj.空闲的	1
-24	actor	unit 4 Topic 1_2	3	n.男演员	1
-25	chorus	unit 4 Topic 1_3	3	n.合唱	0
-25	piano solo	unit 4 Topic 1_3	3	钢琴独奏	1
-25	amusing	unit 4 Topic 1_3	3	adj.有趣的	1
-25	dull	unit 4 Topic 1_3	3	adj.愚笨的	1
-25	boring	unit 4 Topic 1_3	3	adj.令人厌烦的	1
-25	act as	unit 4 Topic 1_3	3	扮演	1
-25	announce	unit 4 Topic 1_3	3	vt.宣布	1
-25	award	unit 4 Topic 1_3	3	vt.奖品	1
-25	closing speech	unit 4 Topic 1_3	3	闭幕辞	1
-26	long jump	unit 4 Topic 2_1	3	跳远	1
-26	dash	unit 4 Topic 2_1	3	n.短跑	0
-26	medal	unit 4 Topic 2_1	3	n.奖牌	0
-26	gold medal	unit 4 Topic 2_1	3	金牌	0
-26	champion	unit 4 Topic 2_1	3	n.冠军	0
-26	event	unit 4 Topic 2_1	3	n.大事	1
-26	field event	unit 4 Topic 2_1	3	田赛项目	1
-26	track	unit 4 Topic 2_1	3	n.跑道	1
-26	track event	unit 4 Topic 2_1	3	径赛项目	1
-27	record	unit 4 Topic 2_2	3	n.记录	1
-27	break the record	unit 4 Topic 2_2	3	打破记录	1
-27	congratulate	unit 4 Topic 2_2	3	vt.祝贺	0
-27	go on	unit 4 Topic 2_2	3	进行	1
-27	final	unit 4 Topic 2_2	3	adj.最后的	1
-27	likely	unit 4 Topic 2_2	3	adj.有可能的	1
-27	enter	unit 4 Topic 2_2	3	v.进入	1
-27	enter for	unit 4 Topic 2_2	3	报名参加	1
-27	luck	unit 4 Topic 2_2	3	n.运气	1
-28	do one's best	unit 4 Topic 2_3	3	尽力	1
-28	cheer	unit 4 Topic 2_3	3	n.欢呼	1
-28	quite	unit 4 Topic 2_3	3	adv.相当	1
-28	success	unit 4 Topic 2_3	3	n.成功	1
-28	encourage	unit 4 Topic 2_3	3	v.鼓励	1
-28	at first	unit 4 Topic 2_3	3	起先	1
-28	drop	unit 4 Topic 2_3	3	n.&vi.掉落	1
-28	pick up	unit 4 Topic 2_3	3	拾起	1
-28	practise	unit 4 Topic 2_3	3	练习	1
-29	the World Cup	unit 4 Topic 3_1	2	世界杯	1
-29	Italy	unit 4 Topic 3_1	2	意大利	0
-29	Italian	unit 4 Topic 3_1	2	意大利人	0
-29	live	unit 4 Topic 3_1	2	v.&adj.现场直播的	1
-29	broadcast	unit 4 Topic 3_1	2	n.广播	0
-29	live broadcast	unit 4 Topic 3_1	2	现场直播	0
-29	penalty	unit 4 Topic 3_1	2	n.处罚	0
-29	kick	unit 4 Topic 3_1	2	vt.踢	1
-29	take a penalty kick	unit 4 Topic 3_1	2	罚点球	0
-29	goal	unit 4 Topic 3_1	2	n.球门	1
-29	score a goal	unit 4 Topic 3_1	2	进一球	1
-29	golden	unit 4 Topic 3_1	2	adj.金的	1
-30	Golden Ball Award	unit 4 Topic 3_2	2	金球奖	0
-30	captain	unit 4 Topic 3_2	2	n.队长	1
-30	championship	unit 4 Topic 3_2	2	n.冠军称号	0
-30	beat	unit 4 Topic 3_2	2	vt.打	1
-30	especially	unit 4 Topic 3_2	2	adv.特别	1
-30	red card	unit 4 Topic 3_2	2	红牌	1
-30	take place	unit 4 Topic 3_2	2	发生	1
-30	end up	unit 4 Topic 3_2	2	结束	1
-30	round	unit 4 Topic 3_2	2	一轮	1
-30	team spirit	unit 4 Topic 3_2	2	团队精神	1
-30	attract	unit 4 Topic 3_2	2	v.吸引	1
+1	sunny	unit 1 Topic 1_1	4	adj.晴朗的	1
+1	windy	unit 1 Topic 1_1	4	adj.有风的	1
+1	wet	unit 1 Topic 1_1	4	adj.湿的	1
+2	temperature	unit 1 Topic 1_2	4	n.温度	1
+2	low	unit 1 Topic 1_2	4	adj.低的	1
+2	high	unit 1 Topic 1_2	4	adj.高的	1
+2	Celsius	unit 1 Topic 1_2	4	n.&adj.摄氏	0
+2	degree	unit 1 Topic 1_2	4	n.度	1
+2	snowy	unit 1 Topic 1_2	4	adj.下雪的	1
+3	all the time	unit 1 Topic 1_3	4	一直	1
+3	sauna	unit 1 Topic 1_3	4	n.桑拿浴	0
+3	report	unit 1 Topic 1_3	4	vt.&n.预报	1
+3	foggy	unit 1 Topic 1_3	4	adj.有雾的	0
+3	cycle	unit 1 Topic 1_3	4	n.&vt.循环	1
+3	fall	unit 1 Topic 1_3	4	v.&n.落下	1
+4	vapour	unit 1 Topic 1_4	4	n.蒸汽	0
+4	blow	unit 1 Topic 1_4	4	vt.风吹	1
+4	grow	unit 1 Topic 1_4	4	vt.种植	1
+4	shine	unit 1 Topic 1_4	4	vi.照耀	1
+4	sea	unit 1 Topic 1_4	4	n.海	1
+5	bloom	unit 1 Topic 2_1	5	n.开花	0
+5	ski	unit 1 Topic 2_1	5	vi.滑雪	0
+5	snowman	unit 1 Topic 2_1	5	雪人	1
+5	sandcastle	unit 1 Topic 2_1	5	沙堡	0
+5	at the beach	unit 1 Topic 2_1	5	在海滨	1
+6	blow away	unit 1 Topic 2_2	5	吹走	1
+6	fallen leaf	unit 1 Topic 2_2	5	落叶	1
+6	outdoor	unit 1 Topic 2_2	5	adj.室外的	1
+6	outing	unit 1 Topic 2_2	5	n.郊游	1
+6	go for an outing	unit 1 Topic 2_2	5	去郊游	1
+7	neither	unit 1 Topic 2_3	5	adv.都不	1
+7	shop window	unit 1 Topic 2_3	5	商店橱窗	1
+7	overcoat	unit 1 Topic 2_3	5	n.大衣	0
+7	blouse	unit 1 Topic 2_3	5	n.女衬衫	0
+7	T-shirt	unit 1 Topic 2_3	5	n.T恤衫	1
+8	shorts	unit 1 Topic 2_4	5	n.短裤	1
+8	sweater	unit 1 Topic 2_4	5	n.套衫	0
+8	sandal	unit 1 Topic 2_4	5	n.凉鞋	0
+8	glove	unit 1 Topic 2_4	5	n.手套	0
+8	indoor	unit 1 Topic 2_4	5	adj.室内的	1
+9	New Zealand	unit 1 Topic 2_5	5	新西兰	0
+9	down	unit 1 Topic 2_5	5	adj.羽绒	0
+9	down jacket	unit 1 Topic 2_5	5	羽绒滑雪衫	0
+9	swimsuit	unit 1 Topic 2_5	5	n.游泳衣	0
+9	swimming shorts	unit 1 Topic 2_5	5	游泳裤	1
+10	surface	unit 1 Topic 3_1	5	n.表面	1
+10	land	unit 1 Topic 3_1	5	n.陆地	1
+10	desert	unit 1 Topic 3_1	5	n.沙漠	1
+10	planet	unit 1 Topic 3_1	5	n.行星	0
+10	move around	unit 1 Topic 3_1	5	绕行	1
+11	set	unit 1 Topic 3_2	5	v.放	1
+11	well done	unit 1 Topic 3_2	5	干得好	1
+11	have a good knowledge of	unit 1 Topic 3_2	5	熟悉	1
+11	all the year round	unit 1 Topic 3_2	5	一年到头	1
+11	the Yangtze	unit 1 Topic 3_2	5	扬子江	1
+12	itself	unit 1 Topic 3_3	5	pron.它自己	1
+12	space travel	unit 1 Topic 3_3	5	太空旅行	1
+12	space station	unit 1 Topic 3_3	5	宇宙空间站	1
+12	experiment	unit 1 Topic 3_3	5	n.实验	1
+12	do an experiment	unit 1 Topic 3_3	5	做实验	1
+13	base	unit 1 Topic 3_4	5	n.基地	1
+13	at the same time	unit 1 Topic 3_4	5	同时	1
+13	own	unit 1 Topic 3_4	5	adj.自己的	1
+13	oxygen	unit 1 Topic 3_4	5	n.氧气	0
+13	supply	unit 1 Topic 3_4	5	vt.供给	0
+14	water supply	unit 1 Topic 3_5	5	供水	0
+14	spacesuit	unit 1 Topic 3_5	5	n.宇航服	0
+14	in this way	unit 1 Topic 3_5	5	这样	1
+14	make a trip	unit 1 Topic 3_5	5	旅行	1
+14	even	unit 1 Topic 3_5	5	adv.甚至	1
+15	patient	unit 2 Topic 1_1	6	n.病人	1
+15	stomachache	unit 2 Topic 1_1	6	n.胃痛	0
+15	headache	unit 2 Topic 1_1	6	n.头痛	1
+15	cold	unit 2 Topic 1_1	6	n.&adj.感冒	1
+15	sore	unit 2 Topic 1_1	6	adj.疼痛的	0
+16	throat	unit 2 Topic 1_2	6	n.喉咙	0
+16	fever	unit 2 Topic 1_2	6	n.&v.发烧	1
+16	take one's temperature	unit 2 Topic 1_2	6	给 ... 量体温	0
+16	too ... to	unit 2 Topic 1_2	6	太 ... 以致不能	1
+16	weak	unit 2 Topic 1_2	6	adj.虚弱	1
+17	had better	unit 2 Topic 1_3	6	还是 ... 好	1
+17	go to hospital	unit 2 Topic 1_3	6	到医院看病	1
+17	examine	unit 2 Topic 1_3	6	vt.检查	1
+17	medicine	unit 2 Topic 1_3	6	n.药	1
+17	tablet	unit 2 Topic 1_3	6	n.药片	0
+18	plenty	unit 2 Topic 1_4	6	n.&adj.丰富的	1
+18	plenty of	unit 2 Topic 1_4	6	大量的 ...	1
+18	rest	unit 2 Topic 1_4	6	vt.&n.休息	1
+18	take a rest	unit 2 Topic 1_4	6	休息一下	1
+18	herself	unit 2 Topic 1_4	6	pron.她自己	1
+19	ourselves	unit 2 Topic 1_5	6	pron.我们自己	1
+19	themselves	unit 2 Topic 1_5	6	pron.他们自己	1
+19	advice	unit 2 Topic 1_5	6	n.劝告	1
+19	give advice to ...	unit 2 Topic 1_5	6	给某人忠告	1
+19	take somebody's advice	unit 2 Topic 1_5	6	遵照某人的嘱咐	1
+20	cough	unit 2 Topic 1_6	6	n.咳嗽	1
+20	all day long	unit 2 Topic 1_6	6	整天	0
+20	toothache	unit 2 Topic 1_6	6	n.牙痛	1
+20	flu	unit 2 Topic 1_6	6	n.流行性感冒	1
+20	worry	unit 2 Topic 1_6	6	n.担心	0
+20	advise	unit 2 Topic 1_6	6	vt.劝告	0
+21	diet	unit 2 Topic 2_1	6	n.日常饮食	1
+21	overweight	unit 2 Topic 2_1	6	adj.超重	0
+21	go on a diet	unit 2 Topic 2_1	6	实行节食	1
+21	fond	unit 2 Topic 2_1	6	adj.喜爱的	1
+21	be fond of	unit 2 Topic 2_1	6	喜欢	1
+22	prefer	unit 2 Topic 2_2	6	vt.宁可	1
+22	prefer ... to	unit 2 Topic 2_2	6	比起 ... 来更喜欢 ...	1
+22	junk	unit 2 Topic 2_2	6	n.废料	0
+22	unhealthy	unit 2 Topic 2_2	6	adj.不健康的	1
+22	fried	unit 2 Topic 2_2	6	adj.油炸的	1
+23	instead of	unit 2 Topic 2_3	6	代替	1
+23	gosh	unit 2 Topic 2_3	6	天哪	0
+23	seafood	unit 2 Topic 2_3	6	n.海产食品	0
+23	not ... at all	unit 2 Topic 2_3	6	一点也不	1
+23	post	unit 2 Topic 2_3	6	n.&vt.邮政	1
+24	habit	unit 2 Topic 2_4	6	n.习惯	1
+24	thirsty	unit 2 Topic 2_4	6	adj.渴的	0
+24	score	unit 2 Topic 2_4	6	n.分数	0
+24	balanced	unit 2 Topic 2_4	6	adj.平衡的	1
+24	grain	unit 2 Topic 2_4	6	n.谷物	1
+25	energy	unit 2 Topic 2_5	6	n.精力	1
+25	dairy	unit 2 Topic 2_5	6	n.&adj.牛奶公司	0
+25	yogurt	unit 2 Topic 2_5	6	n.酸乳	0
+25	however	unit 2 Topic 2_5	6	adv.不管怎样	1
+26	cause	unit 2 Topic 2_6	6	vt.&n.引起	1
+26	pyramid	unit 2 Topic 2_6	6	n.锥形物	0
+26	sugar	unit 2 Topic 2_6	6	n.糖	1
+26	cheese	unit 2 Topic 2_6	6	n.奶酪	1
+27	fitness	unit 2 Topic 3_1	5	n.健康	0
+27	fail	unit 2 Topic 3_1	5	vi.失败	1
+27	upset	unit 2 Topic 3_1	5	adj.心烦的	1
+27	weight	unit 2 Topic 3_1	5	n.重	0
+27	lose weight	unit 2 Topic 3_1	5	减轻体重	0
+28	fit	unit 2 Topic 3_2	5	v.&adj.健康的	1
+28	ad	unit 2 Topic 3_2	5	abbr.广告	0
+28	either	unit 2 Topic 3_2	5	pron.也	1
+28	good for ...	unit 2 Topic 3_2	5	干得好	1
+28	kilogram	unit 2 Topic 3_2	5	n.公斤	1
+29	high jump	unit 2 Topic 3_3	5	跳高	1
+29	in somebody's opinion	unit 2 Topic 3_3	5	据某人看来	1
+29	discussion	unit 2 Topic 3_3	5	n.讨论	1
+29	keep fit	unit 2 Topic 3_3	5	保持健康	1
+29	finally	unit 2 Topic 3_3	5	adv.最后	1
+30	athletic	unit 2 Topic 3_4	5	adj.运动的	0
+30	surprise	unit 2 Topic 3_4	5	vt.惊奇	1
+30	be surprised at	unit 2 Topic 3_4	5	感到惊奇	1
+30	wow	unit 2 Topic 3_4	5	哇	0
+30	laugh	unit 2 Topic 3_4	5	vt.笑	1
+31	soon after	unit 2 Topic 3_5	5	此后不久	0
+31	pass	unit 2 Topic 3_5	5	vt.经过	1
+31	sincerely	unit 2 Topic 3_5	5	adv.忠实地	0
+31	Yours sincerely	unit 2 Topic 3_5	5	谨上	0
+32	lawyer	unit 3 Topic 1_1	7	n.律师	1
+32	diplomat	unit 3 Topic 1_1	7	n.外交家	0
+32	bank	unit 3 Topic 1_1	7	n.银行	1
+32	clerk	unit 3 Topic 1_1	7	n.职员	0
+32	player	unit 3 Topic 1_1	7	n.运动员	1
+33	sociable	unit 3 Topic 1_2	7	adj.好交际的	0
+33	knowledgeable	unit 3 Topic 1_2	7	adj.有丰富知识的	0
+33	hardworking	unit 3 Topic 1_2	7	adj.努力工作的	1
+33	grow up	unit 3 Topic 1_2	7	成长	1
+33	if	unit 3 Topic 1_2	7	conj.如果	1
+34	excellent	unit 3 Topic 1_3	7	adj.优秀的	1
+34	business	unit 3 Topic 1_3	7	n.商业	1
+34	start a business	unit 3 Topic 1_3	7	开业	1
+34	graduate	unit 3 Topic 1_3	7	vt.大学毕业	1
+34	exactly	unit 3 Topic 1_3	7	adv.精确地	1
+35	graduation	unit 3 Topic 1_4	7	n.毕业	1
+35	sell	unit 3 Topic 1_4	7	v.卖	1
+35	wave	unit 3 Topic 1_4	7	v.&n.招手	1
+35	pay	unit 3 Topic 1_4	7	vt.支付	1
+35	businessman	unit 3 Topic 1_4	7	n.商人	0
+36	businesswoman	unit 3 Topic 1_5	7	n.女商人	0
+36	fireman	unit 3 Topic 1_5	7	n.消防队员	1
+36	put out	unit 3 Topic 1_5	7	扑灭	1
+36	type	unit 3 Topic 1_5	7	n.用打字机打印	0
+36	fax	unit 3 Topic 1_5	7	n.&v.传真	0
+37	take care of	unit 3 Topic 1_6	7	照顾	1
+37	serve	unit 3 Topic 1_6	7	v.为 ... 服务	1
+37	possible	unit 3 Topic 1_6	7	adj.可能的	1
+37	donate	unit 3 Topic 1_6	7	vt.捐赠	1
+38	college	unit 3 Topic 1_7	7	n.学院	1
+38	among	unit 3 Topic 1_7	7	prep.在 ... 中间	1
+38	interpreter	unit 3 Topic 1_7	7	n.口译员	0
+38	outstanding	unit 3 Topic 1_7	7	adj.杰出的	0
+39	software	unit 3 Topic 2_1	5	n.软件	1
+39	Microsoft	unit 3 Topic 2_1	5	美国微软公司	0
+39	dream	unit 3 Topic 2_1	5	n.梦	1
+39	come true	unit 3 Topic 2_1	5	实现	1
+39	set up	unit 3 Topic 2_1	5	建立	1
+40	although	unit 3 Topic 2_2	5	conj.虽然	1
+40	millionaire	unit 3 Topic 2_2	5	n.亿万富翁	0
+40	ordinary	unit 3 Topic 2_2	5	adj.普通的	1
+40	educator	unit 3 Topic 2_2	5	n.教育工作者	0
+40	blind	unit 3 Topic 2_2	5	adj.瞎的	1
+41	deaf	unit 3 Topic 2_3	5	adj.聋的	0
+41	inventor	unit 3 Topic 2_3	5	n.发明家	1
+41	invent	unit 3 Topic 2_3	5	v.发明	1
+41	problem	unit 3 Topic 2_3	5	n.问题	1
+41	such	unit 3 Topic 2_3	5	adj.&adv.如此的	1
+42	handsome	unit 3 Topic 2_4	5	adj.英俊的	0
+42	choice	unit 3 Topic 2_4	5	n.选择	1
+42	openly	unit 3 Topic 2_4	5	adv.公开地	0
+42	describe	unit 3 Topic 2_4	5	vt.描写	0
+42	take out	unit 3 Topic 2_4	5	取得	1
+43	while	unit 3 Topic 2_5	5	conj.&n.在 ... 时候	1
+43	against	unit 3 Topic 2_5	5	prep.反对	1
+43	spirit	unit 3 Topic 2_5	5	n.精神	1
+43	chance	unit 3 Topic 2_5	5	n.机会	1
+44	stage	unit 4 Topic 1_1	6	n.舞台	1
+44	comic	unit 4 Topic 1_1	6	n.&adj.滑稽的	0
+44	dialogue	unit 4 Topic 1_1	6	n.对话	1
+44	comic dialogue	unit 4 Topic 1_1	6	相声	0
+44	humorous	unit 4 Topic 1_1	6	adj.幽默的	1
+45	encore	unit 4 Topic 1_2	6	int再来一个	0
+45	item	unit 4 Topic 1_2	6	n.项目	1
+45	audience	unit 4 Topic 1_2	6	n.观众	1
+45	clap	unit 4 Topic 1_2	6	vt.拍手	0
+45	hall	unit 4 Topic 1_2	6	n.会堂	1
+46	give ... a hand	unit 4 Topic 1_3	6	助某人一臂之力	1
+46	guest	unit 4 Topic 1_3	6	n.客人	1
+46	guest star	unit 4 Topic 1_3	6	特邀明星	1
+46	pop	unit 4 Topic 1_3	6	adj.通俗的	1
+46	onto	unit 4 Topic 1_3	6	prep.到 ... 上面	1
+47	voice	unit 4 Topic 1_4	6	n.嗓音	1
+47	costume	unit 4 Topic 1_4	6	n.服饰	0
+47	neither ... nor ...	unit 4 Topic 1_4	6	既不 ... 也不 ...	1
+47	free	unit 4 Topic 1_4	6	adj.空闲的	1
+47	actor	unit 4 Topic 1_4	6	n.男演员	1
+48	chorus	unit 4 Topic 1_5	6	n.合唱	0
+48	piano solo	unit 4 Topic 1_5	6	钢琴独奏	1
+48	amusing	unit 4 Topic 1_5	6	adj.有趣的	1
+48	dull	unit 4 Topic 1_5	6	adj.愚笨的	1
+48	boring	unit 4 Topic 1_5	6	adj.令人厌烦的	1
+49	act as	unit 4 Topic 1_6	6	扮演	1
+49	announce	unit 4 Topic 1_6	6	vt.宣布	1
+49	award	unit 4 Topic 1_6	6	vt.奖品	1
+49	closing speech	unit 4 Topic 1_6	6	闭幕辞	1
+50	long jump	unit 4 Topic 2_1	5	跳远	1
+50	dash	unit 4 Topic 2_1	5	n.短跑	0
+50	medal	unit 4 Topic 2_1	5	n.奖牌	0
+50	gold medal	unit 4 Topic 2_1	5	金牌	0
+50	champion	unit 4 Topic 2_1	5	n.冠军	0
+51	event	unit 4 Topic 2_2	5	n.大事	1
+51	field event	unit 4 Topic 2_2	5	田赛项目	1
+51	track	unit 4 Topic 2_2	5	n.跑道	1
+51	track event	unit 4 Topic 2_2	5	径赛项目	1
+51	record	unit 4 Topic 2_2	5	n.记录	1
+52	break the record	unit 4 Topic 2_3	5	打破记录	1
+52	congratulate	unit 4 Topic 2_3	5	vt.祝贺	0
+52	go on	unit 4 Topic 2_3	5	进行	1
+52	final	unit 4 Topic 2_3	5	adj.最后的	1
+52	likely	unit 4 Topic 2_3	5	adj.有可能的	1
+53	enter	unit 4 Topic 2_4	5	v.进入	1
+53	enter for	unit 4 Topic 2_4	5	报名参加	1
+53	luck	unit 4 Topic 2_4	5	n.运气	1
+53	do one's best	unit 4 Topic 2_4	5	尽力	1
+53	cheer	unit 4 Topic 2_4	5	n.欢呼	1
+53	quite	unit 4 Topic 2_4	5	adv.相当	1
+54	success	unit 4 Topic 2_5	5	n.成功	1
+54	encourage	unit 4 Topic 2_5	5	v.鼓励	1
+54	at first	unit 4 Topic 2_5	5	起先	1
+54	drop	unit 4 Topic 2_5	5	n.&vi.掉落	1
+54	pick up	unit 4 Topic 2_5	5	拾起	1
+54	practise	unit 4 Topic 2_5	5	练习	1
+55	the World Cup	unit 4 Topic 3_1	5	世界杯	1
+55	Italy	unit 4 Topic 3_1	5	意大利	0
+55	Italian	unit 4 Topic 3_1	5	意大利人	0
+55	live	unit 4 Topic 3_1	5	v.&adj.现场直播的	1
+55	broadcast	unit 4 Topic 3_1	5	n.广播	0
+56	live broadcast	unit 4 Topic 3_2	5	现场直播	0
+56	penalty	unit 4 Topic 3_2	5	n.处罚	0
+56	kick	unit 4 Topic 3_2	5	vt.踢	1
+56	take a penalty kick	unit 4 Topic 3_2	5	罚点球	0
+56	goal	unit 4 Topic 3_2	5	n.球门	1
+57	score a goal	unit 4 Topic 3_3	5	进一球	1
+57	golden	unit 4 Topic 3_3	5	adj.金的	1
+57	Golden Ball Award	unit 4 Topic 3_3	5	金球奖	0
+57	captain	unit 4 Topic 3_3	5	n.队长	1
+57	championship	unit 4 Topic 3_3	5	n.冠军称号	0
+58	beat	unit 4 Topic 3_4	5	vt.打	1
+58	especially	unit 4 Topic 3_4	5	adv.特别	1
+58	red card	unit 4 Topic 3_4	5	红牌	1
+58	take place	unit 4 Topic 3_4	5	发生	1
+59	end up	unit 4 Topic 3_5	5	结束	1
+59	round	unit 4 Topic 3_5	5	一轮	1
+59	team spirit	unit 4 Topic 3_5	5	团队精神	1
+59	attract	unit 4 Topic 3_5	5	v.吸引	1

@@ -1,484 +1,484 @@
-1	trip	Unit 1_1	8	n.旅行	1
-1	silk	Unit 1_1	8	n.&adj.丝绸	1
-1	road	Unit 1_1	8	n.路	1
-2	lead	Unit 1_2	8	v.带领	1
-2	note	Unit 1_2	8	n.笔记	1
-2	chance	Unit 1_2	8	n.机会	1
-2	send	Unit 1_2	8	vt.送	1
-2	news	Unit 1_2	8	n.新闻	1
-2	exciting	Unit 1_2	8	adj.使人激动的	1
-2	along	Unit 1_2	8	prep.沿着...	1
-2	kilometer	Unit 1_2	8	n.千米	1
-2	special	Unit 1_2	8	adj.特殊的	1
-3	culture	Unit 1_3	8	n.文化	1
-3	arrive	Unit 1_3	8	vi.到达	1
-3	leave	Unit 1_3	8	v.离开	1
-3	hit	Unit 1_3	8	n.击中	1
-3	ancient	Unit 1_3	8	adj.古代的	1
-3	drum	Unit 1_3	8	n.鼓	0
-3	ring	Unit 1_3	8	n.响	1
-3	bell	Unit 1_3	8	n.钟	1
-3	enjoy	Unit 1_3	8	vt.享受...乐趣	1
-4	dish	Unit 1_4	8	n.菜肴	1
-4	tour	Unit 1_4	8	n.旅游	1
-4	guide	Unit 1_4	8	vt.导游	1
-4	pit	Unit 1_4	8	n.坑	0
-4	move	Unit 1_4	8	vt.移动	1
-4	sign	Unit 1_4	8	n.记号	0
-4	group	Unit 1_4	8	n.组	1
-4	bridge	Unit 1_4	8	n.桥梁	1
-4	cross	Unit 1_4	8	v.横穿	1
-5	wide	Unit 1_5	8	adj.宽的	1
-5	cheese	Unit 1_5	8	n.酪	0
-5	another	Unit 1_5	8	adj.另一个	1
-5	amazing	Unit 1_5	8	adj.惊奇的	0
-5	main	Unit 1_5	8	adj.主要的	1
-5	sand	Unit 1_5	8	n.沙	1
-5	cave	Unit 1_5	8	n.洞窟	0
-5	believe	Unit 1_5	8	vi.相信	1
-5	camel	Unit 1_5	8	n.骆驼	0
-6	sir	Unit 1_6	8	n.先生	1
-6	safe	Unit 1_6	8	adj.安全的	1
-6	fall	Unit 1_6	8	v.落下	1
-6	onto	Unit 1_6	8	prep.到...上面	0
-6	diary	Unit 1_6	8	n.日记	1
-6	last	Unit 1_6	8	adj.最后的	1
-6	clothing	Unit 1_6	8	n.衣物	0
-6	nest	Unit 1_6	8	n.巢	0
-6	few	Unit 1_6	8	adj.很少的	1
-7	building	Unit 1_7	8	n.建筑物	0
-7	hold	Unit 1_7	8	vt.举行	1
-7	Olympics	Unit 1_7	8	n.奥林匹克竞赛	1
-7	thousand	Unit 1_7	8	adj.千	1
-7	instrument	Unit 1_7	8	n.乐器	1
-7	someday	Unit 1_7	8	adv.将来有一天	0
-7	guess what	Unit 1_7	8	猜猜看	1
-7	learn about	Unit 1_7	8	学习	1
-7	How far is it from ... to ...	Unit 1_7	8	从...到...多远？	1
-7	climb up	Unit 1_7	8	爬上	1
-8	No photos	Unit 1_8	8	禁止拍照	1
-8	go for a walk	Unit 1_8	8	散步	1
-8	take a picture	Unit 1_8	8	照相	1
-8	take a tour	Unit 1_8	8	参观	1
-8	be famous as	Unit 1_8	8	作为...而出名	1
-8	on one's way to	Unit 1_8	8	某人在去...的路上	1
-8	fall off	Unit 1_8	8	跌落	1
-8	all right	Unit 1_8	8	可以的	1
-8	a few	Unit 1_8	8	一些	1
-8	thousands of	Unit 1_8	8	数以千计的	1
-9	project	Unit 2_1	7	n.计划	1
-9	interest	Unit 2_1	7	n.兴趣	1
-9	still	Unit 2_1	7	ad.仍旧；静止的	1
-9	anywhere	Unit 2_1	7	adv.任何地方	1
-9	joke	Unit 2_1	7	n.玩笑	1
-9	Italy	Unit 2_1	7	n.意大利	0
-9	age	Unit 2_1	7	n.年龄	1
-9	goods	Unit 2_1	7	n.商品	0
-9	Europe	Unit 2_1	7	n.欧洲	1
-9	Asia	Unit 2_1	7	n.亚洲	1
-10	journey	Unit 2_2	7	n.旅行	1
-10	king	Unit 2_2	7	n.国王	1
-10	coal	Unit 2_2	7	n.煤	1
-10	discover	Unit 2_2	7	vt.发现	1
-10	invent	Unit 2_2	7	vt.发明	1
-10	other	Unit 2_2	7	adj.别的	1
-10	describe	Unit 2_2	7	vt.描述	1
-10	build	Unit 2_2	7	vt.建造	1
-10	ago	Unit 2_2	7	adv.以前	1
-10	army	Unit 2_2	7	n.军队	1
-11	clay	Unit 2_3	7	n.黏土	0
-11	soldier	Unit 2_3	7	n.士兵	0
-11	important	Unit 2_3	7	adj.重要的	1
-11	tool	Unit 2_3	7	n.工具	1
-11	desert	Unit 2_3	7	n.沙漠	0
-11	more	Unit 2_3	7	adv.更多	1
-11	realize	Unit 2_3	7	vt.认识到	1
-11	rich	Unit 2_3	7	adj.丰富的	1
-11	western	Unit 2_3	7	n.西方的	1
-11	violin	Unit 2_3	7	n.小提琴	1
-12	dancer	Unit 2_4	7	n.跳舞的人	0
-12	online	Unit 2_4	7	adj.在线的	1
-12	especially	Unit 2_4	7	adv.尤其	1
-12	treasure	Unit 2_4	7	n.宝物	1
-12	end	Unit 2_4	7	n.末端	1
-12	product	Unit 2_4	7	n.产品	1
-12	worth	Unit 2_4	7	adj.&n.值得的；价值	1
-12	hand-made	Unit 2_4	7	adj.手工的	0
-12	taste	Unit 2_4	7	vi.尝起来	1
-12	true	Unit 2_4	7	adj.真正的	1
-13	supper	Unit 2_5	7	n.晚餐	0
-13	once	Unit 2_5	7	adv.曾经	1
-13	blog	Unit 2_5	7	n.博客	0
-13	experience	Unit 2_5	7	n.经历	1
-13	alive	Unit 2_5	7	adj.活着的	1
-13	own	Unit 2_5	7	adj.自己的	1
-13	should	Unit 2_5	7	aux.应该	1
-13	anyone	Unit 2_5	7	pron.任何人	1
-13	suggestion	Unit 2_5	7	n.建议	1
-14	yum	Unit 2_6	7	int.好吃	0
-14	places of interest	Unit 2_6	7	名胜古迹	1
-14	talk about	Unit 2_6	7	谈论	1
-14	make a joke	Unit 2_6	7	开玩笑	1
-14	work on	Unit 2_6	7	从事于...	1
-14	at the age of ...	Unit 2_6	7	在...岁时	1
-14	be new to	Unit 2_6	7	对...陌生	1
-14	try one's best	Unit 2_6	7	尽力	1
-14	a long time ago	Unit 2_6	7	很久以前	1
-15	Well done	Unit 2_7	7	做得好	1
-15	a little bit	Unit 2_7	7	一点点	1
-15	make ... from ...	Unit 2_7	7	用...制作	1
-15	think about	Unit 2_7	7	考虑	1
-15	can't wait to do	Unit 2_7	7	迫不及待要做某事	1
-15	play music	Unit 2_7	7	演奏音乐	1
-15	I hope so	Unit 2_7	7	我希望如此	1
-15	take part in	Unit 2_7	7	参加	1
-15	get back	Unit 2_7	7	回来	1
-16	life	Unit 3_1	6	n.生活	1
-16	term	Unit 3_1	6	n.学期	1
-16	start	Unit 3_1	6	n.开始	1
-16	finish	Unit 3_1	6	vt.完成	1
-16	twice	Unit 3_1	6	adv.两次	1
-16	win	Unit 3_1	6	v.赢得	1
-16	yeah	Unit 3_1	6	int.对	0
-16	social	Unit 3_1	6	adj.社会的	1
-16	shop	Unit 3_1	6	n.手工艺课	0
-16	myself	Unit 3_1	6	pron.我自己	1
-16	middle	Unit 3_1	6	n.中等的	1
-17	grade	Unit 3_2	6	n.年级	1
-17	wood	Unit 3_2	6	n.木材	0
-17	print	Unit 3_2	6	vt.印刷	1
-17	guitar	Unit 3_2	6	n.吉他	1
-17	fair	Unit 3_2	6	n.展览会	1
-17	worm	Unit 3_2	6	n.蠕虫	0
-17	silk worm	Unit 3_2	6	蚕	0
-17	difference	Unit 3_2	6	n.差别	1
-17	village	Unit 3_2	6	n.村庄	1
-17	education	Unit 3_2	6	n.教育	0
-17	yourself	Unit 3_2	6	pron.你自己	1
-18	drop	Unit 3_3	6	vt.放弃	1
-18	possible	Unit 3_3	6	adj.可能的	1
-18	never	Unit 3_3	6	adv.从来没有	1
-18	future	Unit 3_3	6	n.未来	1
-18	Riverside High School	Unit 3_3	6	河畔中学	0
-18	terrible	Unit 3_3	6	adj.可怕的	1
-18	happen	Unit 3_3	6	vi.发生	1
-18	lose	Unit 3_3	6	vt.失去	1
-18	fire	Unit 3_3	6	n.火	1
-18	raise	Unit 3_3	6	vt.筹募	1
-18	prize	Unit 3_3	6	n.奖赏	1
-19	video	Unit 3_4	6	n.录像	1
-19	piece	Unit 3_4	6	n.片	1
-19	visitor	Unit 3_4	6	n.参观者	1
-19	teach	Unit 3_4	6	vt.教	1
-19	quite	Unit 3_4	6	adv.十分	1
-19	nervous	Unit 3_4	6	adj.不安的	1
-19	comfortable	Unit 3_4	6	adj.舒服的	1
-19	relaxed	Unit 3_4	6	adj.轻松的	0
-19	helpful	Unit 3_4	6	adj.有帮助的	1
-19	How is ... going	Unit 3_4	6	...怎么样？	1
-19	sports meet	Unit 3_4	6	运动会	1
-20	twice a week	Unit 3_5	6	一周两次	1
-20	twice a year	Unit 3_5	6	一年两次	1
-20	long jump	Unit 3_5	6	跳远	1
-20	high jump	Unit 3_5	6	跳高	1
-20	be good at	Unit 3_5	6	擅长	1
-20	social studies	Unit 3_5	6	社会科学	1
-20	by oneself	Unit 3_5	6	独立地	1
-20	on one's own	Unit 3_5	6	单独	1
-20	make a difference	Unit 3_5	6	有作用	1
-20	give up	Unit 3_5	6	放弃	1
-21	drop out of school	Unit 3_6	6	退学	1
-21	in the future	Unit 3_6	6	将来	1
-21	come up with	Unit 3_6	6	想出	1
-21	car wath	Unit 3_6	6	洗车	1
-21	cookie sale	Unit 3_6	6	卖饼干	1
-21	win first prize	Unit 3_6	6	赢得一等奖	1
-21	be interested in	Unit 3_6	6	对...感兴趣	1
-21	a piece of	Unit 3_6	6	一片/张	1
-21	different kinds of	Unit 3_6	6	不同种类的	1
-21	move from ... to ...	Unit 3_6	6	从...移动到...	1
-22	activity	Unit 4_1	7	n.活动	1
-22	volleyball	Unit 4_1	7	n.排球	1
-22	practice	Unit 4_1	7	n.练习	1
-22	chess	Unit 4_1	7	n.国际象棋	1
-22	club	Unit 4_1	7	n.俱乐部	1
-22	volunteer	Unit 4_1	7	n.志愿者	0
-22	bingo	Unit 4_1	7	n.宾戈游戏	0
-22	both	Unit 4_1	7	pron.二者	1
-22	nothing	Unit 4_1	7	pron.无物	1
-22	join	Unit 4_1	7	v.参加	1
-23	improve	Unit 4_2	7	vt.提高	1
-23	thinking	Unit 4_2	7	n.思想的	0
-23	skill	Unit 4_2	7	n.技能	1
-23	challenge	Unit 4_2	7	n.挑战	0
-23	meeting	Unit 4_2	7	n.会议	1
-23	act	Unit 4_2	7	vi.扮演	1
-23	useful	Unit 4_2	7	adj.有用的	1
-23	role	Unit 4_2	7	n.角色	1
-23	team	Unit 4_2	7	n.组	1
-23	shape	Unit 4_2	7	n.形状	1
-24	level	Unit 4_3	7	n.水平	1
-24	pool	Unit 4_3	7	n.小池	1
-24	type	Unit 4_3	7	n.类型	0
-24	following	Unit 4_3	7	adj.接着的	0
-24	which	Unit 4_3	7	pron.哪一个	1
-24	circle	Unit 4_3	7	n.圆	1
-24	add	Unit 4_3	7	vt.加	1
-24	score	Unit 4_3	7	n.得分	1
-24	relax	Unit 4_3	7	vi.放松	1
-24	free	Unit 4_3	7	adj.自由的	1
-25	mind	Unit 4_4	7	n.思想	1
-25	active	Unit 4_4	7	adj.积极的	1
-25	quietly	Unit 4_4	7	adj.安静地	0
-25	must	Unit 4_4	7	aux.必须	1
-25	without	Unit 4_4	7	prep.没有	1
-25	bored	Unit 4_4	7	adj.无聊的	1
-25	example	Unit 4_4	7	n.范例	1
-25	hurry	Unit 4_4	7	n.赶紧	1
-25	somewhere	Unit 4_4	7	adv.在某处	1
-25	actually	Unit 4_4	7	adv.真实地	0
-26	cooking	Unit 4_5	7	n.烹调	0
-26	surf	Unit 4_5	7	n.冲浪	0
-26	internet	Unit 4_5	7	n.因特网	1
-26	housework	Unit 4_5	7	n.家务劳动	1
-26	phone	Unit 4_5	7	n.电话	1
-26	bookworm	Unit 4_5	7	n.书迷	0
-26	anything	Unit 4_5	7	pron.任何事物	1
-26	grocery	Unit 4_5	7	n.杂货	0
-26	expensive	Unit 4_5	7	adj.昂贵的	1
-26	yummy	Unit 4_5	7	adj.好吃的	0
-27	everybody	Unit 4_6	7	pron.每人	1
-27	come over	Unit 4_6	7	过来	1
-27	do well in ...	Unit 4_6	7	在...方面做得好	1
-27	make friends	Unit 4_6	7	交朋友	1
-27	at the same time	Unit 4_6	7	同时	1
-27	enjoy doing ...	Unit 4_6	7	享受...	1
-27	stay in shape	Unit 4_6	7	保持体型	1
-27	add up ...	Unit 4_6	7	把...加起来	1
-27	in one's free time	Unit 4_6	7	在某人的闲暇时间	1
-27	play an instument	Unit 4_6	7	弹奏乐器	1
-28	go on a trip	Unit 4_7	7	旅游	1
-28	for example	Unit 4_7	7	例如	1
-28	have lunch	Unit 4_7	7	吃午饭	1
-28	in a hurry to do ...	Unit 4_7	7	匆忙做...	1
-28	sulf the Internet	Unit 4_7	7	网上冲浪	1
-28	help ... with ...	Unit 4_7	7	帮助...做...	1
-28	I would love ...	Unit 4_7	7	我想...	1
-28	on the phone	Unit 4_7	7	在通电话	1
-28	have a great weekend	Unit 4_7	7	周末玩得愉快	1
-28	take a bus	Unit 4_7	7	乘公共汽车	1
-28	It's ... away from ...	Unit 4_7	7	从...到...有多长时间	1
-29	foreign	Unit 5_1	6	adj.外国的	1
-29	could	Unit 5_1	6	aux.能够	1
-29	loudly	Unit 5_1	6	adv.大声地	0
-29	understand	Unit 5_1	6	vt.理解	1
-29	cartoon	Unit 5_1	6	n.动画片	1
-29	Canadian	Unit 5_1	6	n.加拿大人	1
-29	Russia	Unit 5_1	6	n.俄罗斯	1
-29	reply	Unit 5_1	6	vt.答复	1
-29	competition	Unit 5_1	6	n.竞赛	1
-29	proud	Unit 5_1	6	adj.自豪的	1
-30	such	Unit 5_2	6	adj.这样的	1
-30	letter	Unit 5_2	6	n.字母	1
-30	exactly	Unit 5_2	6	adv.确切地	1
-30	fact	Unit 5_2	6	n.事实	1
-30	sentence	Unit 5_2	6	n.句子	1
-30	quick	Unit 5_2	6	adj.快的	1
-30	fox	Unit 5_2	6	n.狐狸	0
-30	lazy	Unit 5_2	6	adj.懒惰的	1
-30	forwards	Unit 5_2	6	adv.向前	0
-30	backwards	Unit 5_2	6	adv.向后	0
-31	therein	Unit 5_3	6	adv.在那里	0
-31	even	Unit 5_3	6	adv.甚至	1
-31	dig	Unit 5_3	6	v.挖	1
-31	Hong Kong	Unit 5_3	6	n.香港	0
-31	storybook	Unit 5_3	6	n.故事书	0
-31	magazine	Unit 5_3	6	n.杂志	1
-31	newspaper	Unit 5_3	6	n.报纸	1
-31	mistake	Unit 5_3	6	n.错误	1
-31	silly	Unit 5_3	6	adj.愚蠢的	1
-31	oops	Unit 5_3	6	int.哎呦	0
-32	article	Unit 5_4	6	n.文章	1
-32	opportunity	Unit 5_4	6	n.机会	0
-32	knowledge	Unit 5_4	6	n.知识	1
-32	communicate	Unit 5_4	6	vi.交流	1
-32	connect	Unit 5_4	6	vt.连接	1
-32	pal	Unit 5_4	6	n.朋友	0
-32	introduce	Unit 5_4	6	vt.介绍	1
-32	have a good talk	Unit 5_4	6	谈得很好	1
-32	Good for you	Unit 5_4	6	干得好	1
-33	be proud of ...	Unit 5_5	6	为...感到骄傲	1
-33	in fact	Unit 5_5	6	事实上	1
-33	dig in	Unit 5_5	6	开始认真工作	1
-33	look up	Unit 5_5	6	查找	1
-33	enjoy oneself	Unit 5_5	6	玩得痛快	1
-33	after class	Unit 5_5	6	课下	1
-33	be afraid to do ...	Unit 5_5	6	害怕做...	1
-33	make a mistake	Unit 5_5	6	犯（一个）错误	1
-33	laugh at	Unit 5_5	6	嘲笑	1
-34	right now	Unit 5_6	6	现在	1
-34	a good knowledge of	Unit 5_6	6	通晓	1
-34	communicate with ...	Unit 5_6	6	与...交流	1
-34	ask for	Unit 5_6	6	寻求帮助	1
-34	connect ... with ...	Unit 5_6	6	把...和...联系起来	1
-34	help ... do	Unit 5_6	6	帮助...做	1
-34	play chess	Unit 5_6	6	下象棋	1
-34	try to do ...	Unit 5_6	6	努力做	1
-34	look forward to ...	Unit 5_6	6	期待...	1
-35	strange	Unit 6_1	5	adj.奇怪的	1
-35	notice	Unit 6_1	5	n.注意到	1
-35	wild	Unit 6_1	5	adj.野生的	0
-35	wake	Unit 6_1	5	v.醒	1
-35	surprised	Unit 6_1	5	adj.感到惊讶的	0
-35	become	Unit 6_1	5	vi.成为	1
-35	dark	Unit 6_1	5	adj.黑暗的	1
-35	ski	Unit 6_1	5	v.滑雪	0
-35	snowball	Unit 6_1	5	n.雪球	0
-35	research	Unit 6_1	5	n.研究	1
-35	website	Unit 6_1	5	n.网站	1
-36	hill	Unit 6_2	5	n.小山	1
-36	ice	Unit 6_2	5	n.冰	1
-36	snowman	Unit 6_2	5	n.雪人	0
-36	clear	Unit 6_2	5	adj.清澈的	1
-36	temperature	Unit 6_2	5	n.温度	1
-36	pie	Unit 6_2	5	n.馅饼	1
-36	clap	Unit 6_2	5	vt.拍手	0
-36	happily	Unit 6_2	5	adv.幸福地	0
-36	maple	Unit 6_2	5	n.枫树	0
-36	syrup	Unit 6_2	5	n.糖浆	0
-36	goose	Unit 6_2	5	n.鹅	0
-37	honk	Unit 6_3	5	n.鹅声	0
-37	cloud	Unit 6_3	5	n.云	1
-37	wet	Unit 6_3	5	adj.湿的	1
-37	surfing	Unit 6_3	5	n.冲浪运动	0
-37	mate	Unit 6_3	5	n.伙伴	0
-37	reach	Unit 6_3	5	vt.到达	1
-37	degree	Unit 6_3	5	n.度数	1
-37	sea	Unit 6_3	5	n.海洋	1
-37	surfboard	Unit 6_3	5	n.冲浪板	0
-37	popular	Unit 6_3	5	adj.流行的	1
-37	surfer	Unit 6_3	5	n.冲浪者	0
-38	everywhere	Unit 6_4	5	adv.到处	1
-38	strawberry	Unit 6_4	5	n.草莓	1
-38	wake up	Unit 6_4	5	醒来	1
-38	go away	Unit 6_4	5	消失	1
-38	go swimming	Unit 6_4	5	去游泳	1
-38	go skiing	Unit 6_4	5	去滑雪	1
-38	go skating	Unit 6_4	5	去滑冰	1
-38	have snowball fights	Unit 6_4	5	打雪仗	1
-38	Good work	Unit 6_4	5	做得好	1
-38	wait for	Unit 6_4	5	等待	1
-39	do some research	Unit 6_5	5	做研究	1
-39	get ... toghther	Unit 6_5	5	召集...	1
-39	It is a great season for ...	Unit 6_5	5	这是...的好季节。	1
-39	It's one's turn to ...	Unit 6_5	5	轮到某人做...	1
-39	play catch	Unit 6_5	5	玩传球游戏	1
-39	maple syrup	Unit 6_5	5	枫糖浆	1
-39	have a picnic	Unit 6_5	5	野餐	1
-39	G'day mates	Unit 6_5	5	朋友们好	1
-39	be different from	Unit 6_5	5	与...不同	1
-39	ride the waves	Unit 6_5	5	冲浪	1
-40	truth	Unit 7_1	6	n.真相；真理	1
-40	decide	Unit 7_1	6	vt.决定	1
-40	change	Unit 7_1	6	v.改变	1
-40	habit	Unit 7_1	6	n.习惯	1
-40	usual	Unit 7_1	6	adj.通常的	1
-40	health	Unit 7_1	6	n.健康	1
-40	saying	Unit 7_1	6	n.俗语	0
-40	awful	Unit 7_1	6	adj.可怕的	1
-40	remember	Unit 7_1	6	vt.记得	1
-40	information	Unit 7_1	6	n.信息	1
-41	keep	Unit 7_2	6	vt.保持	1
-41	brain	Unit 7_2	6	n.脑	1
-41	ping-pong	Unit 7_2	6	n.乒乓球	0
-41	success	Unit 7_2	6	n.成功	1
-41	event	Unit 7_2	6	n.大事	0
-41	throw	Unit 7_2	6	vt.扔	1
-41	winner	Unit 7_2	6	n.获胜者	1
-41	teammate	Unit 7_2	6	n.队友	0
-41	outdoors	Unit 7_2	6	adv.在户外	0
-41	weight	Unit 7_2	6	n.重量	1
-42	couch	Unit 7_3	6	n.长沙发椅	0
-42	air	Unit 7_3	6	n.空气	1
-42	lucky	Unit 7_3	6	adj.幸运的	1
-42	side	Unit 7_3	6	n.边	1
-42	nation	Unit 7_3	6	n.国家	0
-42	hunt	Unit 7_3	6	v.打猎	0
-42	spend	Unit 7_3	6	v.用	1
-42	natural	Unit 7_3	6	adj.自然的	1
-42	Pow-wow	Unit 7_3	6	n.帕瓦	0
-42	step	Unit 7_3	6	n.步骤	1
-43	towards	Unit 7_4	6	prep.向	0
-43	brush	Unit 7_4	6	n.刷	0
-43	tooth	Unit 7_4	6	n.牙齿	1
-43	organized	Unit 7_4	6	adj.有组织的	0
-43	mess	Unit 7_4	6	n.杂乱	1
-43	develop	Unit 7_4	6	vt.发展	1
-43	to tell you the truth	Unit 7_4	6	说实话	1
-43	as usual	Unit 7_4	6	像往常一样	1
-43	have a dream	Unit 7_4	6	做梦	1
-43	stay healthy	Unit 7_4	6	保持健康	1
-44	get some exercise	Unit 7_5	6	锻炼	1
-44	get in the way	Unit 7_5	6	妨碍；挡道	1
-44	used to	Unit 7_5	6	过去常常	1
-44	worry about ...	Unit 7_5	6	担心...	1
-44	not ... any more	Unit 7_5	6	不再...	1
-44	put on weight	Unit 7_5	6	体重增加	1
-44	couch potato	Unit 7_5	6	沙发土豆	1
-44	get out	Unit 7_5	6	出去	1
-44	in the sun	Unit 7_5	6	在阳光下	1
-44	on one's side	Unit 7_5	6	站在某人一边	1
-45	go fishing	Unit 7_6	6	去钓鱼	1
-45	go hunting	Unit 7_6	6	去捕猎	1
-45	at that time	Unit 7_6	6	那时	1
-45	make a fire	Unit 7_6	6	生火	1
-45	get up	Unit 7_6	6	起床	1
-45	spend ... doing ...	Unit 7_6	6	花费...做...	1
-45	make one's bed	Unit 7_6	6	整理床铺	1
-45	lead the way to	Unit 7_6	6	引领	1
-45	a few times	Unit 7_6	6	几次	1
-46	final	Unit 8_1	5	adj.最终的	0
-46	exam	Unit 8_1	5	n.考试	1
-46	tennis	Unit 8_1	5	n.网球	1
-46	rights	Unit 8_1	5	n.权利	0
-46	care	Unit 8_1	5	n.关心	1
-46	pet	Unit 8_1	5	n.宠物	1
-46	puppy	Unit 8_1	5	n.小狗	0
-46	rocket	Unit 8_1	5	n.火箭	0
-46	alone	Unit 8_1	5	ad.独自	1
-47	field	Unit 8_2	5	n.领域	1
-47	luckily	Unit 8_2	5	adv.幸运地	0
-47	baseball	Unit 8_2	5	n.棒球	1
-47	snack	Unit 8_2	5	n.点心	0
-47	pop	Unit 8_2	5	n.汽水	1
-47	if	Unit 8_2	5	conj.如果	1
-47	ever	Unit 8_2	5	adv.曾经	1
-47	root	Unit 8_2	5	n.加油	0
-47	toot	Unit 8_2	5	n.&v.嘟嘟	0
-48	shame	Unit 8_3	5	n.羞愧	1
-48	noon	Unit 8_3	5	n.中午	1
-48	hamburger	Unit 8_3	5	n.汉堡包	1
-48	nature	Unit 8_3	5	n.大自然	1
-48	wish	Unit 8_3	5	n.&v.希望	1
-48	Germany	Unit 8_3	5	n.德国	1
-48	university	Unit 8_3	5	n.大学	1
-48	organize	Unit 8_3	5	vt.组织	1
-48	camp	Unit 8_3	5	n.露营	1
-49	share	Unit 8_4	5	vt.分享	1
-49	take an exam	Unit 8_4	5	参加考试	1
-49	play basketball	Unit 8_4	5	打篮球	1
-49	play tennis	Unit 8_4	5	打网球	1
-49	play volleyball	Unit 8_4	5	打排球	1
-49	take care of	Unit 8_4	5	照顾	1
-49	move away	Unit 8_4	5	搬走	1
-49	leave ... alone	Unit 8_4	5	不管	1
-49	walk the dog	Unit 8_4	5	带狗散步	1
-50	play against ...	Unit 8_5	5	与...比赛	1
-50	take ... out	Unit 8_5	5	带...出去	1
-50	root for ...	Unit 8_5	5	为...加油	1
-50	at noon	Unit 8_5	5	在中午	1
-50	have a party	Unit 8_5	5	举办聚会	1
-50	take lessons	Unit 8_5	5	上课	1
-50	keep doing ...	Unit 8_5	5	继续做...	1
-50	summer camp	Unit 8_5	5	夏令营	1
-50	share with ...	Unit 8_5	5	与...分享...	1
+1	trip	Unit 1_1	14	n.旅行	1
+1	silk	Unit 1_1	14	n.&adj.丝绸	1
+1	road	Unit 1_1	14	n.路	1
+2	lead	Unit 1_2	14	v.带领	1
+2	note	Unit 1_2	14	n.笔记	1
+2	chance	Unit 1_2	14	n.机会	1
+2	send	Unit 1_2	14	vt.送	1
+2	news	Unit 1_2	14	n.新闻	1
+3	exciting	Unit 1_3	14	adj.使人激动的	1
+3	along	Unit 1_3	14	prep.沿着...	1
+3	kilometer	Unit 1_3	14	n.千米	1
+3	special	Unit 1_3	14	adj.特殊的	1
+3	culture	Unit 1_3	14	n.文化	1
+4	arrive	Unit 1_4	14	vi.到达	1
+4	leave	Unit 1_4	14	v.离开	1
+4	hit	Unit 1_4	14	n.击中	1
+4	ancient	Unit 1_4	14	adj.古代的	1
+4	drum	Unit 1_4	14	n.鼓	0
+5	ring	Unit 1_5	14	n.响	1
+5	bell	Unit 1_5	14	n.钟	1
+5	enjoy	Unit 1_5	14	vt.享受...乐趣	1
+5	dish	Unit 1_5	14	n.菜肴	1
+5	tour	Unit 1_5	14	n.旅游	1
+6	guide	Unit 1_6	14	vt.导游	1
+6	pit	Unit 1_6	14	n.坑	0
+6	move	Unit 1_6	14	vt.移动	1
+6	sign	Unit 1_6	14	n.记号	0
+6	group	Unit 1_6	14	n.组	1
+7	bridge	Unit 1_7	14	n.桥梁	1
+7	cross	Unit 1_7	14	v.横穿	1
+7	wide	Unit 1_7	14	adj.宽的	1
+7	cheese	Unit 1_7	14	n.酪	0
+7	another	Unit 1_7	14	adj.另一个	1
+8	amazing	Unit 1_8	14	adj.惊奇的	0
+8	main	Unit 1_8	14	adj.主要的	1
+8	sand	Unit 1_8	14	n.沙	1
+8	cave	Unit 1_8	14	n.洞窟	0
+8	believe	Unit 1_8	14	vi.相信	1
+9	camel	Unit 1_9	14	n.骆驼	0
+9	sir	Unit 1_9	14	n.先生	1
+9	safe	Unit 1_9	14	adj.安全的	1
+9	fall	Unit 1_9	14	v.落下	1
+9	onto	Unit 1_9	14	prep.到...上面	0
+10	diary	Unit 1_10	14	n.日记	1
+10	last	Unit 1_10	14	adj.最后的	1
+10	clothing	Unit 1_10	14	n.衣物	0
+10	nest	Unit 1_10	14	n.巢	0
+10	few	Unit 1_10	14	adj.很少的	1
+11	building	Unit 1_11	14	n.建筑物	0
+11	hold	Unit 1_11	14	vt.举行	1
+11	Olympics	Unit 1_11	14	n.奥林匹克竞赛	1
+11	thousand	Unit 1_11	14	adj.千	1
+11	instrument	Unit 1_11	14	n.乐器	1
+12	someday	Unit 1_12	14	adv.将来有一天	0
+12	guess what	Unit 1_12	14	猜猜看	1
+12	learn about	Unit 1_12	14	学习	1
+12	How far is it from ... to ...	Unit 1_12	14	从...到...多远？	1
+12	climb up	Unit 1_12	14	爬上	1
+13	No photos	Unit 1_13	14	禁止拍照	1
+13	go for a walk	Unit 1_13	14	散步	1
+13	take a picture	Unit 1_13	14	照相	1
+13	take a tour	Unit 1_13	14	参观	1
+13	be famous as	Unit 1_13	14	作为...而出名	1
+14	on one's way to	Unit 1_14	14	某人在去...的路上	1
+14	fall off	Unit 1_14	14	跌落	1
+14	all right	Unit 1_14	14	可以的	1
+14	a few	Unit 1_14	14	一些	1
+14	thousands of	Unit 1_14	14	数以千计的	1
+15	project	Unit 2_1	13	n.计划	1
+15	interest	Unit 2_1	13	n.兴趣	1
+15	still	Unit 2_1	13	ad.仍旧；静止的	1
+15	anywhere	Unit 2_1	13	adv.任何地方	1
+15	joke	Unit 2_1	13	n.玩笑	1
+16	Italy	Unit 2_2	13	n.意大利	0
+16	age	Unit 2_2	13	n.年龄	1
+16	goods	Unit 2_2	13	n.商品	0
+16	Europe	Unit 2_2	13	n.欧洲	1
+16	Asia	Unit 2_2	13	n.亚洲	1
+17	journey	Unit 2_3	13	n.旅行	1
+17	king	Unit 2_3	13	n.国王	1
+17	coal	Unit 2_3	13	n.煤	1
+17	discover	Unit 2_3	13	vt.发现	1
+17	invent	Unit 2_3	13	vt.发明	1
+18	other	Unit 2_4	13	adj.别的	1
+18	describe	Unit 2_4	13	vt.描述	1
+18	build	Unit 2_4	13	vt.建造	1
+18	ago	Unit 2_4	13	adv.以前	1
+18	army	Unit 2_4	13	n.军队	1
+19	clay	Unit 2_5	13	n.黏土	0
+19	soldier	Unit 2_5	13	n.士兵	0
+19	important	Unit 2_5	13	adj.重要的	1
+19	tool	Unit 2_5	13	n.工具	1
+19	desert	Unit 2_5	13	n.沙漠	0
+20	more	Unit 2_6	13	adv.更多	1
+20	realize	Unit 2_6	13	vt.认识到	1
+20	rich	Unit 2_6	13	adj.丰富的	1
+20	western	Unit 2_6	13	n.西方的	1
+20	violin	Unit 2_6	13	n.小提琴	1
+21	dancer	Unit 2_7	13	n.跳舞的人	0
+21	online	Unit 2_7	13	adj.在线的	1
+21	especially	Unit 2_7	13	adv.尤其	1
+21	treasure	Unit 2_7	13	n.宝物	1
+21	end	Unit 2_7	13	n.末端	1
+22	product	Unit 2_8	13	n.产品	1
+22	worth	Unit 2_8	13	adj.&n.值得的；价值	1
+22	hand-made	Unit 2_8	13	adj.手工的	0
+22	taste	Unit 2_8	13	vi.尝起来	1
+22	true	Unit 2_8	13	adj.真正的	1
+23	supper	Unit 2_9	13	n.晚餐	0
+23	once	Unit 2_9	13	adv.曾经	1
+23	blog	Unit 2_9	13	n.博客	0
+23	experience	Unit 2_9	13	n.经历	1
+23	alive	Unit 2_9	13	adj.活着的	1
+24	own	Unit 2_10	13	adj.自己的	1
+24	should	Unit 2_10	13	aux.应该	1
+24	anyone	Unit 2_10	13	pron.任何人	1
+24	suggestion	Unit 2_10	13	n.建议	1
+24	yum	Unit 2_10	13	int.好吃	0
+25	places of interest	Unit 2_11	13	名胜古迹	1
+25	talk about	Unit 2_11	13	谈论	1
+25	make a joke	Unit 2_11	13	开玩笑	1
+25	work on	Unit 2_11	13	从事于...	1
+25	at the age of ...	Unit 2_11	13	在...岁时	1
+26	be new to	Unit 2_12	13	对...陌生	1
+26	try one's best	Unit 2_12	13	尽力	1
+26	a long time ago	Unit 2_12	13	很久以前	1
+26	Well done	Unit 2_12	13	做得好	1
+26	a little bit	Unit 2_12	13	一点点	1
+26	make ... from ...	Unit 2_12	13	用...制作	1
+27	think about	Unit 2_13	13	考虑	1
+27	can't wait to do	Unit 2_13	13	迫不及待要做某事	1
+27	play music	Unit 2_13	13	演奏音乐	1
+27	I hope so	Unit 2_13	13	我希望如此	1
+27	take part in	Unit 2_13	13	参加	1
+27	get back	Unit 2_13	13	回来	1
+28	life	Unit 3_1	13	n.生活	1
+28	term	Unit 3_1	13	n.学期	1
+28	start	Unit 3_1	13	n.开始	1
+28	finish	Unit 3_1	13	vt.完成	1
+28	twice	Unit 3_1	13	adv.两次	1
+29	win	Unit 3_2	13	v.赢得	1
+29	yeah	Unit 3_2	13	int.对	0
+29	social	Unit 3_2	13	adj.社会的	1
+29	shop	Unit 3_2	13	n.手工艺课	0
+29	myself	Unit 3_2	13	pron.我自己	1
+30	middle	Unit 3_3	13	n.中等的	1
+30	grade	Unit 3_3	13	n.年级	1
+30	wood	Unit 3_3	13	n.木材	0
+30	print	Unit 3_3	13	vt.印刷	1
+30	guitar	Unit 3_3	13	n.吉他	1
+31	fair	Unit 3_4	13	n.展览会	1
+31	worm	Unit 3_4	13	n.蠕虫	0
+31	silk worm	Unit 3_4	13	蚕	0
+31	difference	Unit 3_4	13	n.差别	1
+31	village	Unit 3_4	13	n.村庄	1
+32	education	Unit 3_5	13	n.教育	0
+32	yourself	Unit 3_5	13	pron.你自己	1
+32	drop	Unit 3_5	13	vt.放弃	1
+32	possible	Unit 3_5	13	adj.可能的	1
+32	never	Unit 3_5	13	adv.从来没有	1
+33	future	Unit 3_6	13	n.未来	1
+33	Riverside High School	Unit 3_6	13	河畔中学	0
+33	terrible	Unit 3_6	13	adj.可怕的	1
+33	happen	Unit 3_6	13	vi.发生	1
+33	lose	Unit 3_6	13	vt.失去	1
+34	fire	Unit 3_7	13	n.火	1
+34	raise	Unit 3_7	13	vt.筹募	1
+34	prize	Unit 3_7	13	n.奖赏	1
+34	video	Unit 3_7	13	n.录像	1
+34	piece	Unit 3_7	13	n.片	1
+35	visitor	Unit 3_8	13	n.参观者	1
+35	teach	Unit 3_8	13	vt.教	1
+35	quite	Unit 3_8	13	adv.十分	1
+35	nervous	Unit 3_8	13	adj.不安的	1
+35	comfortable	Unit 3_8	13	adj.舒服的	1
+36	relaxed	Unit 3_9	13	adj.轻松的	0
+36	helpful	Unit 3_9	13	adj.有帮助的	1
+36	How is ... going	Unit 3_9	13	...怎么样？	1
+36	sports meet	Unit 3_9	13	运动会	1
+36	twice a week	Unit 3_9	13	一周两次	1
+37	twice a year	Unit 3_10	13	一年两次	1
+37	long jump	Unit 3_10	13	跳远	1
+37	high jump	Unit 3_10	13	跳高	1
+37	be good at	Unit 3_10	13	擅长	1
+37	social studies	Unit 3_10	13	社会科学	1
+38	by oneself	Unit 3_11	13	独立地	1
+38	on one's own	Unit 3_11	13	单独	1
+38	make a difference	Unit 3_11	13	有作用	1
+38	give up	Unit 3_11	13	放弃	1
+38	drop out of school	Unit 3_11	13	退学	1
+39	in the future	Unit 3_12	13	将来	1
+39	come up with	Unit 3_12	13	想出	1
+39	car wath	Unit 3_12	13	洗车	1
+39	cookie sale	Unit 3_12	13	卖饼干	1
+39	win first prize	Unit 3_12	13	赢得一等奖	1
+40	be interested in	Unit 3_13	13	对...感兴趣	1
+40	a piece of	Unit 3_13	13	一片/张	1
+40	different kinds of	Unit 3_13	13	不同种类的	1
+40	move from ... to ...	Unit 3_13	13	从...移动到...	1
+41	activity	Unit 4_1	14	n.活动	1
+41	volleyball	Unit 4_1	14	n.排球	1
+41	practice	Unit 4_1	14	n.练习	1
+41	chess	Unit 4_1	14	n.国际象棋	1
+41	club	Unit 4_1	14	n.俱乐部	1
+42	volunteer	Unit 4_2	14	n.志愿者	0
+42	bingo	Unit 4_2	14	n.宾戈游戏	0
+42	both	Unit 4_2	14	pron.二者	1
+42	nothing	Unit 4_2	14	pron.无物	1
+42	join	Unit 4_2	14	v.参加	1
+43	improve	Unit 4_3	14	vt.提高	1
+43	thinking	Unit 4_3	14	n.思想的	0
+43	skill	Unit 4_3	14	n.技能	1
+43	challenge	Unit 4_3	14	n.挑战	0
+43	meeting	Unit 4_3	14	n.会议	1
+44	act	Unit 4_4	14	vi.扮演	1
+44	useful	Unit 4_4	14	adj.有用的	1
+44	role	Unit 4_4	14	n.角色	1
+44	team	Unit 4_4	14	n.组	1
+44	shape	Unit 4_4	14	n.形状	1
+45	level	Unit 4_5	14	n.水平	1
+45	pool	Unit 4_5	14	n.小池	1
+45	type	Unit 4_5	14	n.类型	0
+45	following	Unit 4_5	14	adj.接着的	0
+45	which	Unit 4_5	14	pron.哪一个	1
+46	circle	Unit 4_6	14	n.圆	1
+46	add	Unit 4_6	14	vt.加	1
+46	score	Unit 4_6	14	n.得分	1
+46	relax	Unit 4_6	14	vi.放松	1
+46	free	Unit 4_6	14	adj.自由的	1
+47	mind	Unit 4_7	14	n.思想	1
+47	active	Unit 4_7	14	adj.积极的	1
+47	quietly	Unit 4_7	14	adj.安静地	0
+47	must	Unit 4_7	14	aux.必须	1
+47	without	Unit 4_7	14	prep.没有	1
+48	bored	Unit 4_8	14	adj.无聊的	1
+48	example	Unit 4_8	14	n.范例	1
+48	hurry	Unit 4_8	14	n.赶紧	1
+48	somewhere	Unit 4_8	14	adv.在某处	1
+48	actually	Unit 4_8	14	adv.真实地	0
+49	cooking	Unit 4_9	14	n.烹调	0
+49	surf	Unit 4_9	14	n.冲浪	0
+49	internet	Unit 4_9	14	n.因特网	1
+49	housework	Unit 4_9	14	n.家务劳动	1
+49	phone	Unit 4_9	14	n.电话	1
+50	bookworm	Unit 4_10	14	n.书迷	0
+50	anything	Unit 4_10	14	pron.任何事物	1
+50	grocery	Unit 4_10	14	n.杂货	0
+50	expensive	Unit 4_10	14	adj.昂贵的	1
+50	yummy	Unit 4_10	14	adj.好吃的	0
+51	everybody	Unit 4_11	14	pron.每人	1
+51	come over	Unit 4_11	14	过来	1
+51	do well in ...	Unit 4_11	14	在...方面做得好	1
+51	make friends	Unit 4_11	14	交朋友	1
+51	at the same time	Unit 4_11	14	同时	1
+52	enjoy doing ...	Unit 4_12	14	享受...	1
+52	stay in shape	Unit 4_12	14	保持体型	1
+52	add up ...	Unit 4_12	14	把...加起来	1
+52	in one's free time	Unit 4_12	14	在某人的闲暇时间	1
+52	play an instument	Unit 4_12	14	弹奏乐器	1
+53	go on a trip	Unit 4_13	14	旅游	1
+53	for example	Unit 4_13	14	例如	1
+53	have lunch	Unit 4_13	14	吃午饭	1
+53	in a hurry to do ...	Unit 4_13	14	匆忙做...	1
+53	sulf the Internet	Unit 4_13	14	网上冲浪	1
+54	help ... with ...	Unit 4_14	14	帮助...做...	1
+54	I would love ...	Unit 4_14	14	我想...	1
+54	on the phone	Unit 4_14	14	在通电话	1
+54	have a great weekend	Unit 4_14	14	周末玩得愉快	1
+54	take a bus	Unit 4_14	14	乘公共汽车	1
+54	It's ... away from ...	Unit 4_14	14	从...到...有多长时间	1
+55	foreign	Unit 5_1	11	adj.外国的	1
+55	could	Unit 5_1	11	aux.能够	1
+55	loudly	Unit 5_1	11	adv.大声地	0
+55	understand	Unit 5_1	11	vt.理解	1
+55	cartoon	Unit 5_1	11	n.动画片	1
+56	Canadian	Unit 5_2	11	n.加拿大人	1
+56	Russia	Unit 5_2	11	n.俄罗斯	1
+56	reply	Unit 5_2	11	vt.答复	1
+56	competition	Unit 5_2	11	n.竞赛	1
+56	proud	Unit 5_2	11	adj.自豪的	1
+57	such	Unit 5_3	11	adj.这样的	1
+57	letter	Unit 5_3	11	n.字母	1
+57	exactly	Unit 5_3	11	adv.确切地	1
+57	fact	Unit 5_3	11	n.事实	1
+57	sentence	Unit 5_3	11	n.句子	1
+58	quick	Unit 5_4	11	adj.快的	1
+58	fox	Unit 5_4	11	n.狐狸	0
+58	lazy	Unit 5_4	11	adj.懒惰的	1
+58	forwards	Unit 5_4	11	adv.向前	0
+58	backwards	Unit 5_4	11	adv.向后	0
+59	therein	Unit 5_5	11	adv.在那里	0
+59	even	Unit 5_5	11	adv.甚至	1
+59	dig	Unit 5_5	11	v.挖	1
+59	Hong Kong	Unit 5_5	11	n.香港	0
+59	storybook	Unit 5_5	11	n.故事书	0
+60	magazine	Unit 5_6	11	n.杂志	1
+60	newspaper	Unit 5_6	11	n.报纸	1
+60	mistake	Unit 5_6	11	n.错误	1
+60	silly	Unit 5_6	11	adj.愚蠢的	1
+60	oops	Unit 5_6	11	int.哎呦	0
+61	article	Unit 5_7	11	n.文章	1
+61	opportunity	Unit 5_7	11	n.机会	0
+61	knowledge	Unit 5_7	11	n.知识	1
+61	communicate	Unit 5_7	11	vi.交流	1
+61	connect	Unit 5_7	11	vt.连接	1
+62	pal	Unit 5_8	11	n.朋友	0
+62	introduce	Unit 5_8	11	vt.介绍	1
+62	have a good talk	Unit 5_8	11	谈得很好	1
+62	Good for you	Unit 5_8	11	干得好	1
+62	be proud of ...	Unit 5_8	11	为...感到骄傲	1
+63	in fact	Unit 5_9	11	事实上	1
+63	dig in	Unit 5_9	11	开始认真工作	1
+63	look up	Unit 5_9	11	查找	1
+63	enjoy oneself	Unit 5_9	11	玩得痛快	1
+63	after class	Unit 5_9	11	课下	1
+64	be afraid to do ...	Unit 5_10	11	害怕做...	1
+64	make a mistake	Unit 5_10	11	犯（一个）错误	1
+64	laugh at	Unit 5_10	11	嘲笑	1
+64	right now	Unit 5_10	11	现在	1
+64	a good knowledge of	Unit 5_10	11	通晓	1
+64	communicate with ...	Unit 5_10	11	与...交流	1
+65	ask for	Unit 5_11	11	寻求帮助	1
+65	connect ... with ...	Unit 5_11	11	把...和...联系起来	1
+65	help ... do	Unit 5_11	11	帮助...做	1
+65	play chess	Unit 5_11	11	下象棋	1
+65	try to do ...	Unit 5_11	11	努力做	1
+65	look forward to ...	Unit 5_11	11	期待...	1
+66	strange	Unit 6_1	11	adj.奇怪的	1
+66	notice	Unit 6_1	11	n.注意到	1
+66	wild	Unit 6_1	11	adj.野生的	0
+66	wake	Unit 6_1	11	v.醒	1
+66	surprised	Unit 6_1	11	adj.感到惊讶的	0
+67	become	Unit 6_2	11	vi.成为	1
+67	dark	Unit 6_2	11	adj.黑暗的	1
+67	ski	Unit 6_2	11	v.滑雪	0
+67	snowball	Unit 6_2	11	n.雪球	0
+67	research	Unit 6_2	11	n.研究	1
+68	website	Unit 6_3	11	n.网站	1
+68	hill	Unit 6_3	11	n.小山	1
+68	ice	Unit 6_3	11	n.冰	1
+68	snowman	Unit 6_3	11	n.雪人	0
+68	clear	Unit 6_3	11	adj.清澈的	1
+69	temperature	Unit 6_4	11	n.温度	1
+69	pie	Unit 6_4	11	n.馅饼	1
+69	clap	Unit 6_4	11	vt.拍手	0
+69	happily	Unit 6_4	11	adv.幸福地	0
+69	maple	Unit 6_4	11	n.枫树	0
+70	syrup	Unit 6_5	11	n.糖浆	0
+70	goose	Unit 6_5	11	n.鹅	0
+70	honk	Unit 6_5	11	n.鹅声	0
+70	cloud	Unit 6_5	11	n.云	1
+70	wet	Unit 6_5	11	adj.湿的	1
+71	surfing	Unit 6_6	11	n.冲浪运动	0
+71	mate	Unit 6_6	11	n.伙伴	0
+71	reach	Unit 6_6	11	vt.到达	1
+71	degree	Unit 6_6	11	n.度数	1
+71	sea	Unit 6_6	11	n.海洋	1
+72	surfboard	Unit 6_7	11	n.冲浪板	0
+72	popular	Unit 6_7	11	adj.流行的	1
+72	surfer	Unit 6_7	11	n.冲浪者	0
+72	everywhere	Unit 6_7	11	adv.到处	1
+72	strawberry	Unit 6_7	11	n.草莓	1
+73	wake up	Unit 6_8	11	醒来	1
+73	go away	Unit 6_8	11	消失	1
+73	go swimming	Unit 6_8	11	去游泳	1
+73	go skiing	Unit 6_8	11	去滑雪	1
+73	go skating	Unit 6_8	11	去滑冰	1
+74	have snowball fights	Unit 6_9	11	打雪仗	1
+74	Good work	Unit 6_9	11	做得好	1
+74	wait for	Unit 6_9	11	等待	1
+74	do some research	Unit 6_9	11	做研究	1
+74	get ... toghther	Unit 6_9	11	召集...	1
+75	It is a great season for ...	Unit 6_10	11	这是...的好季节。	1
+75	It's one's turn to ...	Unit 6_10	11	轮到某人做...	1
+75	play catch	Unit 6_10	11	玩传球游戏	1
+75	maple syrup	Unit 6_10	11	枫糖浆	1
+76	have a picnic	Unit 6_11	11	野餐	1
+76	G'day mates	Unit 6_11	11	朋友们好	1
+76	be different from	Unit 6_11	11	与...不同	1
+76	ride the waves	Unit 6_11	11	冲浪	1
+77	truth	Unit 7_1	12	n.真相；真理	1
+77	decide	Unit 7_1	12	vt.决定	1
+77	change	Unit 7_1	12	v.改变	1
+77	habit	Unit 7_1	12	n.习惯	1
+77	usual	Unit 7_1	12	adj.通常的	1
+78	health	Unit 7_2	12	n.健康	1
+78	saying	Unit 7_2	12	n.俗语	0
+78	awful	Unit 7_2	12	adj.可怕的	1
+78	remember	Unit 7_2	12	vt.记得	1
+78	information	Unit 7_2	12	n.信息	1
+79	keep	Unit 7_3	12	vt.保持	1
+79	brain	Unit 7_3	12	n.脑	1
+79	ping-pong	Unit 7_3	12	n.乒乓球	0
+79	success	Unit 7_3	12	n.成功	1
+79	event	Unit 7_3	12	n.大事	0
+80	throw	Unit 7_4	12	vt.扔	1
+80	winner	Unit 7_4	12	n.获胜者	1
+80	teammate	Unit 7_4	12	n.队友	0
+80	outdoors	Unit 7_4	12	adv.在户外	0
+80	weight	Unit 7_4	12	n.重量	1
+81	couch	Unit 7_5	12	n.长沙发椅	0
+81	air	Unit 7_5	12	n.空气	1
+81	lucky	Unit 7_5	12	adj.幸运的	1
+81	side	Unit 7_5	12	n.边	1
+81	nation	Unit 7_5	12	n.国家	0
+82	hunt	Unit 7_6	12	v.打猎	0
+82	spend	Unit 7_6	12	v.用	1
+82	natural	Unit 7_6	12	adj.自然的	1
+82	Pow-wow	Unit 7_6	12	n.帕瓦	0
+82	step	Unit 7_6	12	n.步骤	1
+83	towards	Unit 7_7	12	prep.向	0
+83	brush	Unit 7_7	12	n.刷	0
+83	tooth	Unit 7_7	12	n.牙齿	1
+83	organized	Unit 7_7	12	adj.有组织的	0
+83	mess	Unit 7_7	12	n.杂乱	1
+84	develop	Unit 7_8	12	vt.发展	1
+84	to tell you the truth	Unit 7_8	12	说实话	1
+84	as usual	Unit 7_8	12	像往常一样	1
+84	have a dream	Unit 7_8	12	做梦	1
+84	stay healthy	Unit 7_8	12	保持健康	1
+85	get some exercise	Unit 7_9	12	锻炼	1
+85	get in the way	Unit 7_9	12	妨碍；挡道	1
+85	used to	Unit 7_9	12	过去常常	1
+85	worry about ...	Unit 7_9	12	担心...	1
+85	not ... any more	Unit 7_9	12	不再...	1
+86	put on weight	Unit 7_10	12	体重增加	1
+86	couch potato	Unit 7_10	12	沙发土豆	1
+86	get out	Unit 7_10	12	出去	1
+86	in the sun	Unit 7_10	12	在阳光下	1
+86	on one's side	Unit 7_10	12	站在某人一边	1
+87	go fishing	Unit 7_11	12	去钓鱼	1
+87	go hunting	Unit 7_11	12	去捕猎	1
+87	at that time	Unit 7_11	12	那时	1
+87	make a fire	Unit 7_11	12	生火	1
+87	get up	Unit 7_11	12	起床	1
+88	spend ... doing ...	Unit 7_12	12	花费...做...	1
+88	make one's bed	Unit 7_12	12	整理床铺	1
+88	lead the way to	Unit 7_12	12	引领	1
+88	a few times	Unit 7_12	12	几次	1
+89	final	Unit 8_1	9	adj.最终的	0
+89	exam	Unit 8_1	9	n.考试	1
+89	tennis	Unit 8_1	9	n.网球	1
+89	rights	Unit 8_1	9	n.权利	0
+89	care	Unit 8_1	9	n.关心	1
+90	pet	Unit 8_2	9	n.宠物	1
+90	puppy	Unit 8_2	9	n.小狗	0
+90	rocket	Unit 8_2	9	n.火箭	0
+90	alone	Unit 8_2	9	ad.独自	1
+90	field	Unit 8_2	9	n.领域	1
+91	luckily	Unit 8_3	9	adv.幸运地	0
+91	baseball	Unit 8_3	9	n.棒球	1
+91	snack	Unit 8_3	9	n.点心	0
+91	pop	Unit 8_3	9	n.汽水	1
+91	if	Unit 8_3	9	conj.如果	1
+92	ever	Unit 8_4	9	adv.曾经	1
+92	root	Unit 8_4	9	n.加油	0
+92	toot	Unit 8_4	9	n.&v.嘟嘟	0
+92	shame	Unit 8_4	9	n.羞愧	1
+92	noon	Unit 8_4	9	n.中午	1
+93	hamburger	Unit 8_5	9	n.汉堡包	1
+93	nature	Unit 8_5	9	n.大自然	1
+93	wish	Unit 8_5	9	n.&v.希望	1
+93	Germany	Unit 8_5	9	n.德国	1
+93	university	Unit 8_5	9	n.大学	1
+94	organize	Unit 8_6	9	vt.组织	1
+94	camp	Unit 8_6	9	n.露营	1
+94	share	Unit 8_6	9	vt.分享	1
+94	take an exam	Unit 8_6	9	参加考试	1
+94	play basketball	Unit 8_6	9	打篮球	1
+95	play tennis	Unit 8_7	9	打网球	1
+95	play volleyball	Unit 8_7	9	打排球	1
+95	take care of	Unit 8_7	9	照顾	1
+95	move away	Unit 8_7	9	搬走	1
+95	leave ... alone	Unit 8_7	9	不管	1
+96	walk the dog	Unit 8_8	9	带狗散步	1
+96	play against ...	Unit 8_8	9	与...比赛	1
+96	take ... out	Unit 8_8	9	带...出去	1
+96	root for ...	Unit 8_8	9	为...加油	1
+96	at noon	Unit 8_8	9	在中午	1
+97	have a party	Unit 8_9	9	举办聚会	1
+97	take lessons	Unit 8_9	9	上课	1
+97	keep doing ...	Unit 8_9	9	继续做...	1
+97	summer camp	Unit 8_9	9	夏令营	1
+97	share with ...	Unit 8_9	9	与...分享...	1

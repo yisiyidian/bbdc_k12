@@ -1,235 +1,235 @@
-1	brush	Unit 1_1	3	n.毛笔	1
-1	crayon	Unit 1_1	3	n.蜡笔	1
-1	fall onto	Unit 1_1	3	掉到...上面	0
-2	glue	Unit 1_2	3	n.胶水	1
-2	hers	Unit 1_2	3	pron.她的（名词性物主代词）	0
-2	his	Unit 1_2	3	pron.他的	0
-2	magnet	Unit 1_2	3	n.磁铁	0
-2	mess	Unit 1_2	3	n.杂乱	0
-2	mine	Unit 1_2	3	pron.我的（名词性物主代词）	0
-2	nail	Unit 1_2	3	n.钉子	0
-2	notebook	Unit 1_2	3	n.笔记本	1
-2	ours	Unit 1_2	3	pron.我们的（名词性物主代词）	0
-2	paints	Unit 1_2	3	n.绘画颜料	1
-3	put	Unit 1_3	3	vt.放	1
-3	school bag	Unit 1_3	3	书包	1
-3	stick to	Unit 1_3	3	粘住	0
-3	tape	Unit 1_3	3	n.胶带	1
-3	theirs	Unit 1_3	3	pron.他们的（名词性物主代词）	0
-3	think	Unit 1_3	3	vt.想	0
-3	tidy up	Unit 1_3	3	收拾；整理	0
-3	workshop	Unit 1_3	3	n.车间	0
-3	yours	Unit 1_3	3	pron.你的（名词性物主代词）	0
-4	be born	Unit 2_1	2	出生	0
-4	caterpillar	Unit 2_1	2	n.毛虫	1
-4	chicken	Unit 2_1	2	n.鸡	1
-4	cocoon	Unit 2_1	2	n.茧	1
-4	duckling	Unit 2_1	2	n.小鸭	1
-4	egg	Unit 2_1	2	n.卵	1
-4	fly	Unit 2_1	2	n.苍蝇	0
-4	grow	Unit 2_1	2	vt.生长	1
-5	lay eggs	Unit 2_2	2	产卵	0
-5	moth	Unit 2_2	2	n.蛾	0
-5	puppy	Unit 2_2	2	n.小狗	1
-5	silk	Unit 2_2	2	n.（蚕）丝	0
-5	silkworm	Unit 2_2	2	n.蚕	0
-5	was	Unit 2_2	2	v.（am,is的过去式）	1
-5	were	Unit 2_2	2	v.（are的过去式）	1
-5	wing	Unit 2_2	2	n.翅膀	0
-6	another	Unit 3_1	2	adj.又一	1
-6	clock	Unit 3_1	2	n.钟	1
-6	drill	Unit 3_1	2	n.钻机	1
-6	enjoy	Unit 3_1	2	vt.享受...的乐趣	0
-6	everything	Unit 3_1	2	pron.一切	0
-6	heard	Unit 3_1	2	vt.（过去式）听	1
-6	kingdom	Unit 3_1	2	n.王国	0
-6	lorry	Unit 3_1	2	n.卡车	1
-6	loudly	Unit 3_1	2	adv.大声地	0
-7	motorbike	Unit 3_2	2	n.摩托车	1
-7	noise	Unit 3_2	2	n.噪音	1
-7	outside	Unit 3_2	2	adv.外面	1
-7	pop group	Unit 3_2	2	流行音乐团体	0
-7	quickly	Unit 3_2	2	adv.安静地	0
-7	sat	Unit 3_2	2	vi.（过去式）坐	1
-7	shout	Unit 3_2	2	vi.叫喊；呼喊	0
-7	sleep	Unit 3_2	2	v.睡觉	1
-7	world	Unit 3_2	2	n.世界	0
-8	bean	Unit 4_1	3	n.豆	1
-8	beef	Unit 4_1	3	n.牛肉	1
-8	cabbage	Unit 4_1	3	n.卷心菜	1
-8	carrot	Unit 4_1	3	n.胡萝卜	1
-8	did	Unit 4_1	3	vt.（do的过去式）做	1
-8	drink	Unit 4_1	3	n.饮料	1
-8	eat	Unit 4_1	3	vt.吃	1
-8	fast	Unit 4_1	3	adj.快的	0
-8	fish	Unit 4_1	3	n.鱼；鱼肉	1
-9	fruit	Unit 4_2	3	n.水果	1
-9	guess	Unit 4_2	3	n.&v.猜测	0
-9	had	Unit 4_2	3	vt.（have,has的过去式）有	1
-9	happen	Unit 4_2	3	vi.发生	0
-9	healthy	Unit 4_2	3	adj.健康的	1
-9	keep ... away	Unit 4_2	3	不让接近某人（或某物）	1
-9	kill	Unit 4_2	3	v.杀死	0
-9	listen	Unit 4_2	3	v.听从	0
-9	meat	Unit 4_2	3	n.肉	1
-10	milk	Unit 4_3	3	n.牛奶	1
-10	pork	Unit 4_3	3	n.猪肉	1
-10	potato	Unit 4_3	3	n.土豆	1
-10	princess	Unit 4_3	3	n.公主	1
-10	rice	Unit 4_3	3	n.米饭	1
-10	safe	Unit 4_3	3	adj.安全的	0
-10	tomato	Unit 4_3	3	n.番茄	1
-10	unhealthy	Unit 4_3	3	adj.不健康的	0
-10	vegetable	Unit 4_3	3	n.蔬菜	1
-11	adult	Unit 5_1	2	adj.成年人	0
-11	dwarf	Unit 5_1	2	n.小矮人	0
-11	entrance	Unit 5_1	2	n.入口（处）	1
-11	exit	Unit 5_1	2	n.出口	1
-11	fair	Unit 5_1	2	adj.美丽的	0
-11	fall asleep	Unit 5_1	2	入睡	0
-11	film	Unit 5_1	2	n.电影；影片	1
-11	find out	Unit 5_1	2	找出；发现	0
-11	funny	Unit 5_1	2	adj.有趣的	1
-11	minute	Unit 5_1	2	n.分钟	0
-11	on	Unit 5_1	2	prep.正在放映	0
-12	quick	Unit 5_2	2	adj.迅速的	0
-12	run away	Unit 5_2	2	逃跑	0
-12	seat	Unit 5_2	2	n.座位	1
-12	see a film	Unit 5_2	2	看电影	1
-12	Snow White	Unit 5_2	2	《白雪公主》	0
-12	start	Unit 5_2	2	n.&v.开始	0
-12	ticket	Unit 5_2	2	n.票	1
-12	ticket office	Unit 5_2	2	售票处	1
-12	Toy Story	Unit 5_2	2	《玩具总动员》	0
-12	wake up	Unit 5_2	2	唤醒	0
-13	Art	Unit 6_1	2	n.（学科）美术	1
-13	break	Unit 6_1	2	v.间歇	0
-13	carefully	Unit 6_1	2	adv.仔细地	0
-13	Chinese	Unit 6_1	2	n.（学科）语文	1
-13	class	Unit 6_1	2	n.课；班级	1
-13	colour	Unit 6_1	2	vt.给...着色	0
-13	dot	Unit 6_1	2	n.点	0
-13	English	Unit 6_1	2	n.（学科）英语	1
-13	IT	Unit 6_1	2	n.（学科）信息技术	1
-13	line	Unit 6_1	2	n.线	0
-14	lunch break	Unit 6_2	2	午休	0
-14	Maths	Unit 6_2	2	n.（学科）数学	1
-14	maybe	Unit 6_2	2	adv.也许	0
-14	Music	Unit 6_2	2	n.（学科）音乐	1
-14	nothing	Unit 6_2	2	pron.没有什么	0
-14	PE	Unit 6_2	2	n.（学科）体育	1
-14	rain	Unit 6_2	2	n.雨	1
-14	subject	Unit 6_2	2	n.科目	1
-14	time table	Unit 6_2	2	时间表；课程表	0
-15	become	Unit 7_1	2	vt.成为；变成	0
-15	bookshelf	Unit 7_1	2	n.书架	1
-15	drop	Unit 7_1	2	v.（故意）使落下	0
-15	follow	Unit 7_1	2	vt.跟随	0
-15	in the middle of	Unit 7_1	2	在...中间	0
-15	leave	Unit 7_1	2	v.留下	0
-15	lost	Unit 7_1	2	adj.迷路的	0
-15	mean	Unit 7_1	2	v.意味着	0
-16	park keeper	Unit 7_2	2	公园管理员	0
-16	sign	Unit 7_2	2	n.指示牌	1
-16	smoking	Unit 7_2	2	n.吸烟	1
-16	stepmother	Unit 7_2	2	n.继母	0
-16	swimming	Unit 7_2	2	n.游泳	1
-16	telephone	Unit 7_2	2	n.电话	1
-16	walk	Unit 7_2	2	vi.牵着（动物）走	1
-17	ago	Unit 8_1	2	adv.以前	0
-17	built	Unit 8_1	2	vt.（过去式）建造	0
-17	cloud	Unit 8_1	2	n.云	1
-17	comfortable	Unit 8_1	2	adj.舒服的	0
-17	cut	Unit 8_1	2	vt.（过去式）切割	0
-17	degree	Unit 8_1	2	n.度	1
-17	enjoy oneself	Unit 8_1	2	过得快活	0
-17	fog	Unit 8_1	2	n.雾	1
-17	foggy	Unit 8_1	2	adj.有雾的	1
-17	grew	Unit 8_1	2	vi.（过去式）生长	0
-17	make	Unit 8_1	2	vt.使；让	1
-18	snow	Unit 8_2	2	n.雪；雪花	1
-18	snowy	Unit 8_2	2	adj.下雪多的	1
-18	storm	Unit 8_2	2	n.暴风雨	1
-18	stormy	Unit 8_2	2	adj.有暴风雨的	1
-18	temperature	Unit 8_2	2	n.温度	0
-18	tomorrow	Unit 8_2	2	adv.（在）明天	0
-18	tonight	Unit 8_2	2	adv.（在）今晚	0
-18	typhoon	Unit 8_2	2	n.台风	0
-18	weather	Unit 8_2	2	n.天气；气象	1
-18	yesterday	Unit 8_2	2	adv.（在）昨天	1
-19	bed	Unit 9_1	2	n.床	1
-19	country	Unit 9_1	2	n.国家	0
-19	cupboard	Unit 9_1	2	n.橱柜	1
-19	cushion	Unit 9_1	2	n.坐垫	1
-19	fisherman	Unit 9_1	2	n.渔民	0
-19	furniture	Unit 9_1	2	n.家具	1
-19	give	Unit 9_1	2	vt.给	1
-19	history	Unit 9_1	2	n.历史	0
-19	lamp	Unit 9_1	2	n.灯	1
-19	later	Unit 9_1	2	adv.以后	0
-19	mirror	Unit 9_1	2	n.镜子	1
-20	move	Unit 9_2	2	vt.移动	1
-20	next	Unit 9_2	2	adj.下一个	1
-20	shelf	Unit 9_2	2	n.架子	0
-20	sofa	Unit 9_2	2	n.沙发	1
-20	surprise	Unit 9_2	2	n.惊喜	0
-20	surprised	Unit 9_2	2	adj.惊讶的	0
-20	town	Unit 9_2	2	n.城镇	0
-20	village	Unit 9_2	2	n.乡村	0
-20	wall	Unit 9_2	2	n.墙	1
-20	window	Unit 9_2	2	n.窗	1
-21	art museum	Unit 10_1	3	美术博物馆	1
-21	beautifully	Unit 10_1	3	优美地	0
-21	Beijing Opera	Unit 10_1	3	京剧	0
-21	bought	Unit 10_1	3	vt.（过去式）买	0
-21	bug	Unit 10_1	3	n.小昆虫；虫子	0
-21	car museum	Unit 10_1	3	汽车博物馆	1
-21	culture	Unit 10_1	3	n.文化	0
-21	dance	Unit 10_1	3	vi.跳舞	1
-21	famous	Unit 10_1	3	adj.著名的	0
-22	history museum	Unit 10_2	3	历史博物馆	1
-22	human	Unit 10_2	3	n.人类	0
-22	insect museum	Unit 10_2	3	昆虫博物馆	1
-22	learnt	Unit 10_2	3	vt.（learn的过去式）	0
-22	love	Unit 10_2	3	vt.喜欢；喜爱	0
-22	Mona Lisa	Unit 10_2	3	《蒙娜丽莎》	0
-22	painting	Unit 10_2	3	n.油画	0
-22	Paris	Unit 10_2	3	n.巴黎	0
-22	perform	Unit 10_2	3	v.表演	1
-23	prince	Unit 10_3	3	n.王子	0
-23	railway museum	Unit 10_3	3	铁路博物馆	1
-23	really	Unit 10_3	3	adv.非常；极其	1
-23	saw	Unit 10_3	3	vt.（过去式）看	0
-23	science museum	Unit 10_3	3	科学博物馆	1
-23	The Louvre Museum	Unit 10_3	3	卢浮宫	0
-23	thousand	Unit 10_3	3	n.千	0
-23	trip	Unit 10_3	3	n.旅程	0
-23	ugly	Unit 10_3	3	adj.丑陋的	0
-23	useful	Unit 10_3	3	adj.有用的	1
-24	candle	Unit 11_1	2	n.蜡烛	0
-24	Christmas	Unit 11_1	2	n.圣诞节	1
-24	Easter	Unit 11_1	2	n.复活节	1
-24	fancy-dress	Unit 11_1	2	n.化装舞会	0
-24	find	Unit 11_1	2	vt.找到	1
-24	go trick-or-treating	Unit 11_1	2	玩“不给糖就捣蛋”	0
-24	Halloween	Unit 11_1	2	n.万圣节	1
-24	hide	Unit 11_1	2	vt.藏	1
-24	holiday	Unit 11_1	2	n.节日	1
-25	hunt	Unit 11_2	2	v.寻找	0
-25	jack-o'-lantern	Unit 11_2	2	n.南瓜灯	0
-25	monster	Unit 11_2	2	n.怪物	0
-25	play a trick	Unit 11_2	2	搞恶作剧	0
-25	present	Unit 11_2	2	n.礼物	1
-25	pumpkin	Unit 11_2	2	n.南瓜	0
-25	Thanksgiving	Unit 11_2	2	n.感恩节	1
-25	turkey	Unit 11_2	2	n.火鸡	0
-26	at last	Unit 12_1	1	终于	0
-26	break down	Unit 12_1	1	推倒	0
-26	build	Unit 12_1	1	v.建造	0
-26	castle	Unit 12_1	1	n.城堡	1
-26	ever	Unit 12_1	1	adv.曾经	0
-26	forever	Unit 12_1	1	adv.永远	0
-26	from then on	Unit 12_1	1	从那时起	0
-26	giant	Unit 12_1	1	n.巨人	1
-26	have a good time	Unit 12_1	1	玩得愉快	0
-26	put up	Unit 12_1	1	张贴	0
+1	brush	Unit 1_1	5	n.毛笔	1
+1	crayon	Unit 1_1	5	n.蜡笔	1
+1	fall onto	Unit 1_1	5	掉到...上面	0
+2	glue	Unit 1_2	5	n.胶水	1
+2	hers	Unit 1_2	5	pron.她的（名词性物主代词）	0
+2	his	Unit 1_2	5	pron.他的	0
+2	magnet	Unit 1_2	5	n.磁铁	0
+2	mess	Unit 1_2	5	n.杂乱	0
+3	mine	Unit 1_3	5	pron.我的（名词性物主代词）	0
+3	nail	Unit 1_3	5	n.钉子	0
+3	notebook	Unit 1_3	5	n.笔记本	1
+3	ours	Unit 1_3	5	pron.我们的（名词性物主代词）	0
+3	paints	Unit 1_3	5	n.绘画颜料	1
+4	put	Unit 1_4	5	vt.放	1
+4	school bag	Unit 1_4	5	书包	1
+4	stick to	Unit 1_4	5	粘住	0
+4	tape	Unit 1_4	5	n.胶带	1
+4	theirs	Unit 1_4	5	pron.他们的（名词性物主代词）	0
+5	think	Unit 1_5	5	vt.想	0
+5	tidy up	Unit 1_5	5	收拾；整理	0
+5	workshop	Unit 1_5	5	n.车间	0
+5	yours	Unit 1_5	5	pron.你的（名词性物主代词）	0
+6	be born	Unit 2_1	3	出生	0
+6	caterpillar	Unit 2_1	3	n.毛虫	1
+6	chicken	Unit 2_1	3	n.鸡	1
+6	cocoon	Unit 2_1	3	n.茧	1
+6	duckling	Unit 2_1	3	n.小鸭	1
+7	egg	Unit 2_2	3	n.卵	1
+7	fly	Unit 2_2	3	n.苍蝇	0
+7	grow	Unit 2_2	3	vt.生长	1
+7	lay eggs	Unit 2_2	3	产卵	0
+7	moth	Unit 2_2	3	n.蛾	0
+8	puppy	Unit 2_3	3	n.小狗	1
+8	silk	Unit 2_3	3	n.（蚕）丝	0
+8	silkworm	Unit 2_3	3	n.蚕	0
+8	was	Unit 2_3	3	v.（am,is的过去式）	1
+8	were	Unit 2_3	3	v.（are的过去式）	1
+8	wing	Unit 2_3	3	n.翅膀	0
+9	another	Unit 3_1	4	adj.又一	1
+9	clock	Unit 3_1	4	n.钟	1
+9	drill	Unit 3_1	4	n.钻机	1
+9	enjoy	Unit 3_1	4	vt.享受...的乐趣	0
+9	everything	Unit 3_1	4	pron.一切	0
+10	heard	Unit 3_2	4	vt.（过去式）听	1
+10	kingdom	Unit 3_2	4	n.王国	0
+10	lorry	Unit 3_2	4	n.卡车	1
+10	loudly	Unit 3_2	4	adv.大声地	0
+10	motorbike	Unit 3_2	4	n.摩托车	1
+11	noise	Unit 3_3	4	n.噪音	1
+11	outside	Unit 3_3	4	adv.外面	1
+11	pop group	Unit 3_3	4	流行音乐团体	0
+11	quickly	Unit 3_3	4	adv.安静地	0
+12	sat	Unit 3_4	4	vi.（过去式）坐	1
+12	shout	Unit 3_4	4	vi.叫喊；呼喊	0
+12	sleep	Unit 3_4	4	v.睡觉	1
+12	world	Unit 3_4	4	n.世界	0
+13	bean	Unit 4_1	5	n.豆	1
+13	beef	Unit 4_1	5	n.牛肉	1
+13	cabbage	Unit 4_1	5	n.卷心菜	1
+13	carrot	Unit 4_1	5	n.胡萝卜	1
+13	did	Unit 4_1	5	vt.（do的过去式）做	1
+14	drink	Unit 4_2	5	n.饮料	1
+14	eat	Unit 4_2	5	vt.吃	1
+14	fast	Unit 4_2	5	adj.快的	0
+14	fish	Unit 4_2	5	n.鱼；鱼肉	1
+14	fruit	Unit 4_2	5	n.水果	1
+15	guess	Unit 4_3	5	n.&v.猜测	0
+15	had	Unit 4_3	5	vt.（have,has的过去式）有	1
+15	happen	Unit 4_3	5	vi.发生	0
+15	healthy	Unit 4_3	5	adj.健康的	1
+15	keep ... away	Unit 4_3	5	不让接近某人（或某物）	1
+16	kill	Unit 4_4	5	v.杀死	0
+16	listen	Unit 4_4	5	v.听从	0
+16	meat	Unit 4_4	5	n.肉	1
+16	milk	Unit 4_4	5	n.牛奶	1
+16	pork	Unit 4_4	5	n.猪肉	1
+16	potato	Unit 4_4	5	n.土豆	1
+17	princess	Unit 4_5	5	n.公主	1
+17	rice	Unit 4_5	5	n.米饭	1
+17	safe	Unit 4_5	5	adj.安全的	0
+17	tomato	Unit 4_5	5	n.番茄	1
+17	unhealthy	Unit 4_5	5	adj.不健康的	0
+17	vegetable	Unit 4_5	5	n.蔬菜	1
+18	adult	Unit 5_1	4	adj.成年人	0
+18	dwarf	Unit 5_1	4	n.小矮人	0
+18	entrance	Unit 5_1	4	n.入口（处）	1
+18	exit	Unit 5_1	4	n.出口	1
+18	fair	Unit 5_1	4	adj.美丽的	0
+19	fall asleep	Unit 5_2	4	入睡	0
+19	film	Unit 5_2	4	n.电影；影片	1
+19	find out	Unit 5_2	4	找出；发现	0
+19	funny	Unit 5_2	4	adj.有趣的	1
+19	minute	Unit 5_2	4	n.分钟	0
+20	on	Unit 5_3	4	prep.正在放映	0
+20	quick	Unit 5_3	4	adj.迅速的	0
+20	run away	Unit 5_3	4	逃跑	0
+20	seat	Unit 5_3	4	n.座位	1
+20	see a film	Unit 5_3	4	看电影	1
+21	Snow White	Unit 5_4	4	《白雪公主》	0
+21	start	Unit 5_4	4	n.&v.开始	0
+21	ticket	Unit 5_4	4	n.票	1
+21	ticket office	Unit 5_4	4	售票处	1
+21	Toy Story	Unit 5_4	4	《玩具总动员》	0
+21	wake up	Unit 5_4	4	唤醒	0
+22	Art	Unit 6_1	4	n.（学科）美术	1
+22	break	Unit 6_1	4	v.间歇	0
+22	carefully	Unit 6_1	4	adv.仔细地	0
+22	Chinese	Unit 6_1	4	n.（学科）语文	1
+22	class	Unit 6_1	4	n.课；班级	1
+23	colour	Unit 6_2	4	vt.给...着色	0
+23	dot	Unit 6_2	4	n.点	0
+23	English	Unit 6_2	4	n.（学科）英语	1
+23	IT	Unit 6_2	4	n.（学科）信息技术	1
+23	line	Unit 6_2	4	n.线	0
+24	lunch break	Unit 6_3	4	午休	0
+24	Maths	Unit 6_3	4	n.（学科）数学	1
+24	maybe	Unit 6_3	4	adv.也许	0
+24	Music	Unit 6_3	4	n.（学科）音乐	1
+24	nothing	Unit 6_3	4	pron.没有什么	0
+25	PE	Unit 6_4	4	n.（学科）体育	1
+25	rain	Unit 6_4	4	n.雨	1
+25	subject	Unit 6_4	4	n.科目	1
+25	time table	Unit 6_4	4	时间表；课程表	0
+26	become	Unit 7_1	3	vt.成为；变成	0
+26	bookshelf	Unit 7_1	3	n.书架	1
+26	drop	Unit 7_1	3	v.（故意）使落下	0
+26	follow	Unit 7_1	3	vt.跟随	0
+26	in the middle of	Unit 7_1	3	在...中间	0
+27	leave	Unit 7_2	3	v.留下	0
+27	lost	Unit 7_2	3	adj.迷路的	0
+27	mean	Unit 7_2	3	v.意味着	0
+27	park keeper	Unit 7_2	3	公园管理员	0
+27	sign	Unit 7_2	3	n.指示牌	1
+28	smoking	Unit 7_3	3	n.吸烟	1
+28	stepmother	Unit 7_3	3	n.继母	0
+28	swimming	Unit 7_3	3	n.游泳	1
+28	telephone	Unit 7_3	3	n.电话	1
+28	walk	Unit 7_3	3	vi.牵着（动物）走	1
+29	ago	Unit 8_1	4	adv.以前	0
+29	built	Unit 8_1	4	vt.（过去式）建造	0
+29	cloud	Unit 8_1	4	n.云	1
+29	comfortable	Unit 8_1	4	adj.舒服的	0
+29	cut	Unit 8_1	4	vt.（过去式）切割	0
+30	degree	Unit 8_2	4	n.度	1
+30	enjoy oneself	Unit 8_2	4	过得快活	0
+30	fog	Unit 8_2	4	n.雾	1
+30	foggy	Unit 8_2	4	adj.有雾的	1
+30	grew	Unit 8_2	4	vi.（过去式）生长	0
+31	make	Unit 8_3	4	vt.使；让	1
+31	snow	Unit 8_3	4	n.雪；雪花	1
+31	snowy	Unit 8_3	4	adj.下雪多的	1
+31	storm	Unit 8_3	4	n.暴风雨	1
+31	stormy	Unit 8_3	4	adj.有暴风雨的	1
+32	temperature	Unit 8_4	4	n.温度	0
+32	tomorrow	Unit 8_4	4	adv.（在）明天	0
+32	tonight	Unit 8_4	4	adv.（在）今晚	0
+32	typhoon	Unit 8_4	4	n.台风	0
+32	weather	Unit 8_4	4	n.天气；气象	1
+32	yesterday	Unit 8_4	4	adv.（在）昨天	1
+33	bed	Unit 9_1	4	n.床	1
+33	country	Unit 9_1	4	n.国家	0
+33	cupboard	Unit 9_1	4	n.橱柜	1
+33	cushion	Unit 9_1	4	n.坐垫	1
+33	fisherman	Unit 9_1	4	n.渔民	0
+34	furniture	Unit 9_2	4	n.家具	1
+34	give	Unit 9_2	4	vt.给	1
+34	history	Unit 9_2	4	n.历史	0
+34	lamp	Unit 9_2	4	n.灯	1
+34	later	Unit 9_2	4	adv.以后	0
+35	mirror	Unit 9_3	4	n.镜子	1
+35	move	Unit 9_3	4	vt.移动	1
+35	next	Unit 9_3	4	adj.下一个	1
+35	shelf	Unit 9_3	4	n.架子	0
+35	sofa	Unit 9_3	4	n.沙发	1
+36	surprise	Unit 9_4	4	n.惊喜	0
+36	surprised	Unit 9_4	4	adj.惊讶的	0
+36	town	Unit 9_4	4	n.城镇	0
+36	village	Unit 9_4	4	n.乡村	0
+36	wall	Unit 9_4	4	n.墙	1
+36	window	Unit 9_4	4	n.窗	1
+37	art museum	Unit 10_1	6	美术博物馆	1
+37	beautifully	Unit 10_1	6	优美地	0
+37	Beijing Opera	Unit 10_1	6	京剧	0
+37	bought	Unit 10_1	6	vt.（过去式）买	0
+37	bug	Unit 10_1	6	n.小昆虫；虫子	0
+38	car museum	Unit 10_2	6	汽车博物馆	1
+38	culture	Unit 10_2	6	n.文化	0
+38	dance	Unit 10_2	6	vi.跳舞	1
+38	famous	Unit 10_2	6	adj.著名的	0
+38	history museum	Unit 10_2	6	历史博物馆	1
+39	human	Unit 10_3	6	n.人类	0
+39	insect museum	Unit 10_3	6	昆虫博物馆	1
+39	learnt	Unit 10_3	6	vt.（learn的过去式）	0
+39	love	Unit 10_3	6	vt.喜欢；喜爱	0
+39	Mona Lisa	Unit 10_3	6	《蒙娜丽莎》	0
+40	painting	Unit 10_4	6	n.油画	0
+40	Paris	Unit 10_4	6	n.巴黎	0
+40	perform	Unit 10_4	6	v.表演	1
+40	prince	Unit 10_4	6	n.王子	0
+40	railway museum	Unit 10_4	6	铁路博物馆	1
+41	really	Unit 10_5	6	adv.非常；极其	1
+41	saw	Unit 10_5	6	vt.（过去式）看	0
+41	science museum	Unit 10_5	6	科学博物馆	1
+41	The Louvre Museum	Unit 10_5	6	卢浮宫	0
+42	thousand	Unit 10_6	6	n.千	0
+42	trip	Unit 10_6	6	n.旅程	0
+42	ugly	Unit 10_6	6	adj.丑陋的	0
+42	useful	Unit 10_6	6	adj.有用的	1
+43	candle	Unit 11_1	3	n.蜡烛	0
+43	Christmas	Unit 11_1	3	n.圣诞节	1
+43	Easter	Unit 11_1	3	n.复活节	1
+43	fancy-dress	Unit 11_1	3	n.化装舞会	0
+43	find	Unit 11_1	3	vt.找到	1
+43	go trick-or-treating	Unit 11_1	3	玩“不给糖就捣蛋”	0
+44	Halloween	Unit 11_2	3	n.万圣节	1
+44	hide	Unit 11_2	3	vt.藏	1
+44	holiday	Unit 11_2	3	n.节日	1
+44	hunt	Unit 11_2	3	v.寻找	0
+44	jack-o'-lantern	Unit 11_2	3	n.南瓜灯	0
+44	monster	Unit 11_2	3	n.怪物	0
+45	play a trick	Unit 11_3	3	搞恶作剧	0
+45	present	Unit 11_3	3	n.礼物	1
+45	pumpkin	Unit 11_3	3	n.南瓜	0
+45	Thanksgiving	Unit 11_3	3	n.感恩节	1
+45	turkey	Unit 11_3	3	n.火鸡	0
+46	at last	Unit 12_1	2	终于	0
+46	break down	Unit 12_1	2	推倒	0
+46	build	Unit 12_1	2	v.建造	0
+46	castle	Unit 12_1	2	n.城堡	1
+46	ever	Unit 12_1	2	adv.曾经	0
+47	forever	Unit 12_2	2	adv.永远	0
+47	from then on	Unit 12_2	2	从那时起	0
+47	giant	Unit 12_2	2	n.巨人	1
+47	have a good time	Unit 12_2	2	玩得愉快	0
+47	put up	Unit 12_2	2	张贴	0

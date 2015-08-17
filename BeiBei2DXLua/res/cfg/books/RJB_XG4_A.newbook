@@ -1,84 +1,84 @@
-1	classroom	Unit1_1	2	n.教室	1
-1	window	Unit1_1	2	n.窗户	1
-1	blackboard	Unit1_1	2	n.黑板	1
-2	light	Unit1_2	2	n.电灯	1
-2	picture	Unit1_2	2	n.图画	1
-2	door	Unit1_2	2	n.门	1
-2	teacher's desk	Unit1_2	2	讲台	1
-2	computer	Unit1_2	2	n.计算机	1
-2	fan	Unit1_2	2	n.风扇	1
-2	wall	Unit1_2	2	n.墙壁	1
-2	floor	Unit1_2	2	n.地板	1
-2	really	Unit1_2	2	adv.真的	1
-2	near	Unit1_2	2	prep.&ad.距离近	1
-2	TV	Unit1_2	2	abbr.电视	1
-2	clean	Unit1_2	2	v.打扫	0
-2	help	Unit1_2	2	vt.帮助	0
-3	schoolbag	Unit2_1	1	n.书包	1
-3	maths book	Unit2_1	1	数学书	1
-3	English book	Unit2_1	1	英语书	1
-3	Chinese book	Unit2_1	1	语文书	1
-3	storybook	Unit2_1	1	n.故事书	1
-3	candy	Unit2_1	1	n.糖果	1
-3	notebook	Unit2_1	1	n.笔记本	1
-3	toy	Unit2_1	1	n.玩具	1
-3	key	Unit2_1	1	n.钥匙	1
-3	wow	Unit2_1	1	int.哇	0
-3	lost	Unit2_1	1	adj.丢失（过去式）	0
-3	so much	Unit2_1	1	非常地	0
-3	cute	Unit2_1	1	adj.可爱的	0
-4	strong	Unit3_1	1	adj.强壮的	1
-4	friendly	Unit3_1	1	adj.友好的	1
-4	quiet	Unit3_1	1	adj.安静的	1
-4	hair	Unit3_1	1	n.头发	1
-4	shoe	Unit3_1	1	n.鞋	1
-4	glasses	Unit3_1	1	n.眼镜	1
-4	his	Unit3_1	1	pron.他的	0
-4	or	Unit3_1	1	conj.或者	0
-4	right	Unit3_1	1	adj.正确的	0
-4	hat	Unit3_1	1	n.帽子	0
-4	her	Unit3_1	1	pron.她的	0
-5	bedroom	Unit4_1	1	n.卧室	1
-5	living room	Unit4_1	1	客厅	1
-5	study	Unit4_1	1	n.书房	1
-5	kitchen	Unit4_1	1	n.厨房	1
-5	bathroom	Unit4_1	1	n.浴室	1
-5	bed	Unit4_1	1	n.床	1
-5	phone	Unit4_1	1	n.电话	1
-5	table	Unit4_1	1	n.桌子	1
-5	sofa	Unit4_1	1	n.长沙发	1
-5	fridge	Unit4_1	1	n.冰箱	1
-5	find	Unit4_1	1	vt.找到	0
-5	them	Unit4_1	1	pron.他们	0
-6	beef	Unit5_1	2	n.牛肉	1
-6	chicken	Unit5_1	2	n.鸡肉	1
-6	noodles	Unit5_1	2	n.面条	1
-6	soup	Unit5_1	2	n.汤	1
-6	vegetable	Unit5_1	2	n.蔬菜	1
-6	chopsticks	Unit5_1	2	n.筷子	1
-6	bowl	Unit5_1	2	n.碗	1
-6	fork	Unit5_1	2	n.餐叉	1
-7	knife	Unit5_2	2	n.刀	1
-7	spoon	Unit5_2	2	n.勺	1
-7	dinner	Unit5_2	2	n.正餐	0
-7	ready	Unit5_2	2	adj.准备好	0
-7	help yourself	Unit5_2	2	为自己取用	0
-7	pass	Unit5_2	2	vt.给	0
-7	try	Unit5_2	2	v.试	0
-8	parents	Unit6_1	2	n.父母	1
-8	cousin	Unit6_1	2	n.同辈表亲	1
-8	uncle	Unit6_1	2	n.舅父	1
-8	aunt	Unit6_1	2	n.姑母	1
-8	baby brother	Unit6_1	2	婴儿小弟弟	1
-8	doctor	Unit6_1	2	n.医生	1
-8	cook	Unit6_1	2	n.厨师	1
-8	driver	Unit6_1	2	n.司机	1
-8	farmer	Unit6_1	2	n.农民	1
-9	nurse	Unit6_2	2	n.护士	1
-9	people	Unit6_2	2	n.人们	0
-9	but	Unit6_2	2	conj.但是	0
-9	little	Unit6_2	2	adj.小的	0
-9	puppy	Unit6_2	2	n.小狗	0
-9	football player	Unit6_2	2	足球运动员	0
-9	job	Unit6_2	2	n.工作	0
-9	basketball	Unit6_2	2	n.篮球	0
+1	classroom	Unit1_1	4	n.教室	1
+1	window	Unit1_1	4	n.窗户	1
+1	blackboard	Unit1_1	4	n.黑板	1
+2	light	Unit1_2	4	n.电灯	1
+2	picture	Unit1_2	4	n.图画	1
+2	door	Unit1_2	4	n.门	1
+2	teacher's desk	Unit1_2	4	讲台	1
+3	computer	Unit1_3	4	n.计算机	1
+3	fan	Unit1_3	4	n.风扇	1
+3	wall	Unit1_3	4	n.墙壁	1
+3	floor	Unit1_3	4	n.地板	1
+4	really	Unit1_4	4	adv.真的	1
+4	near	Unit1_4	4	prep.&ad.距离近	1
+4	TV	Unit1_4	4	abbr.电视	1
+4	clean	Unit1_4	4	v.打扫	0
+4	help	Unit1_4	4	vt.帮助	0
+5	schoolbag	Unit2_1	3	n.书包	1
+5	maths book	Unit2_1	3	数学书	1
+5	English book	Unit2_1	3	英语书	1
+5	Chinese book	Unit2_1	3	语文书	1
+6	storybook	Unit2_2	3	n.故事书	1
+6	candy	Unit2_2	3	n.糖果	1
+6	notebook	Unit2_2	3	n.笔记本	1
+6	toy	Unit2_2	3	n.玩具	1
+7	key	Unit2_3	3	n.钥匙	1
+7	wow	Unit2_3	3	int.哇	0
+7	lost	Unit2_3	3	adj.丢失（过去式）	0
+7	so much	Unit2_3	3	非常地	0
+7	cute	Unit2_3	3	adj.可爱的	0
+8	strong	Unit3_1	2	adj.强壮的	1
+8	friendly	Unit3_1	2	adj.友好的	1
+8	quiet	Unit3_1	2	adj.安静的	1
+8	hair	Unit3_1	2	n.头发	1
+8	shoe	Unit3_1	2	n.鞋	1
+8	glasses	Unit3_1	2	n.眼镜	1
+9	his	Unit3_2	2	pron.他的	0
+9	or	Unit3_2	2	conj.或者	0
+9	right	Unit3_2	2	adj.正确的	0
+9	hat	Unit3_2	2	n.帽子	0
+9	her	Unit3_2	2	pron.她的	0
+10	bedroom	Unit4_1	2	n.卧室	1
+10	living room	Unit4_1	2	客厅	1
+10	study	Unit4_1	2	n.书房	1
+10	kitchen	Unit4_1	2	n.厨房	1
+10	bathroom	Unit4_1	2	n.浴室	1
+10	bed	Unit4_1	2	n.床	1
+11	phone	Unit4_2	2	n.电话	1
+11	table	Unit4_2	2	n.桌子	1
+11	sofa	Unit4_2	2	n.长沙发	1
+11	fridge	Unit4_2	2	n.冰箱	1
+11	find	Unit4_2	2	vt.找到	0
+11	them	Unit4_2	2	pron.他们	0
+12	beef	Unit5_1	3	n.牛肉	1
+12	chicken	Unit5_1	3	n.鸡肉	1
+12	noodles	Unit5_1	3	n.面条	1
+12	soup	Unit5_1	3	n.汤	1
+12	vegetable	Unit5_1	3	n.蔬菜	1
+13	chopsticks	Unit5_2	3	n.筷子	1
+13	bowl	Unit5_2	3	n.碗	1
+13	fork	Unit5_2	3	n.餐叉	1
+13	knife	Unit5_2	3	n.刀	1
+13	spoon	Unit5_2	3	n.勺	1
+14	dinner	Unit5_3	3	n.正餐	0
+14	ready	Unit5_3	3	adj.准备好	0
+14	help yourself	Unit5_3	3	为自己取用	0
+14	pass	Unit5_3	3	vt.给	0
+14	try	Unit5_3	3	v.试	0
+15	parents	Unit6_1	3	n.父母	1
+15	cousin	Unit6_1	3	n.同辈表亲	1
+15	uncle	Unit6_1	3	n.舅父	1
+15	aunt	Unit6_1	3	n.姑母	1
+15	baby brother	Unit6_1	3	婴儿小弟弟	1
+15	doctor	Unit6_1	3	n.医生	1
+16	cook	Unit6_2	3	n.厨师	1
+16	driver	Unit6_2	3	n.司机	1
+16	farmer	Unit6_2	3	n.农民	1
+16	nurse	Unit6_2	3	n.护士	1
+16	people	Unit6_2	3	n.人们	0
+16	but	Unit6_2	3	conj.但是	0
+17	little	Unit6_3	3	adj.小的	0
+17	puppy	Unit6_3	3	n.小狗	0
+17	football player	Unit6_3	3	足球运动员	0
+17	job	Unit6_3	3	n.工作	0
+17	basketball	Unit6_3	3	n.篮球	0

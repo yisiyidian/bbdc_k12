@@ -1,360 +1,360 @@
-1	oh	Unit 1_1	3	int.哦	1
-1	e-dog	Unit 1_1	3	n.电子狗	0
-1	master	Unit 1_1	3	n.主人	0
-2	grade	Unit 1_2	3	n.年级	1
-2	student	Unit 1_2	3	n.学生	1
-2	reading	Unit 1_2	3	n.阅读	1
-2	classmate	Unit 1_2	3	n.同班同学	1
-2	after school	Unit 1_2	3	放学后	1
-2	slim	Unit 1_2	3	adj.苗条的	0
-2	be good at	Unit 1_2	3	擅长于	1
-2	over there	Unit 1_2	3	在那边	1
-2	classroom	Unit 1_2	3	n.教室	1
-2	dancing	Unit 1_2	3	n.跳舞	1
-3	swimming	Unit 1_3	3	n.游泳	1
-3	age	Unit 1_3	3	n.年龄	1
-3	looks	Unit 1_3	3	n.相貌	0
-3	cute	Unit 1_3	3	adj.可爱的	1
-3	hobby	Unit 1_3	3	n.业余爱好	1
-3	glad	Unit 1_3	3	adj.高兴的	1
-3	everyone	Unit 1_3	3	pron.每人	1
-3	come from	Unit 1_3	3	来自	1
-3	glasses	Unit 1_3	3	n.[复]眼镜	1
-4	walking	Unit 2_1	3	n.散步	1
-4	really	Unit 2_1	3	adv.的确	1
-4	bowl	Unit 2_1	3	n.碗	1
-4	time	Unit 2_1	3	n.次	1
-4	tennis	Unit 2_1	3	n.网球	1
-4	volleyball	Unit 2_1	3	n.排球	1
-4	enjoy	Unit 2_1	3	v.欣赏	1
-4	go swimming	Unit 2_1	3	去游泳	1
-4	player	Unit 2_1	3	n.运动员	1
-4	member	Unit 2_1	3	adj.成员	1
-5	club	Unit 2_2	3	n.俱乐部	1
-5	free	Unit 2_2	3	adj.空闲的	1
-5	hope	Unit 2_2	3	n.&v.希望	1
-5	dream	Unit 2_2	3	n.&v.梦想	1
-5	true	Unit 2_2	3	adj.真的	1
-5	come true	Unit 2_2	3	变为现实	1
-5	drawing	Unit 2_2	3	n.画画	1
-5	weekend	Unit 2_2	3	n.周末	1
-5	at weekends	Unit 2_2	3	在周末	1
-5	of course	Unit 2_2	3	当然	1
-6	shop	Unit 2_3	3	v.购物	1
-6	table tennis	Unit 2_3	3	乒乓球	1
-6	else	Unit 2_3	3	adv.另外	1
-6	a lot of	Unit 2_3	3	许多	1
-6	fun	Unit 2_3	3	n.乐趣	1
-6	team	Unit 2_3	3	n.队	1
-6	talk about	Unit 2_3	3	谈论	1
-6	match	Unit 2_3	3	n.比赛	1
-6	hero	Unit 2_3	3	n.英雄	1
-7	which	Unit 3_1	5	pron.哪一个	1
-7	best	Unit 3_1	5	n.最好地	1
-7	so	Unit 3_1	5	n.因此	1
-7	biology	Unit 3_1	5	n.生物	0
-7	geography	Unit 3_1	5	n.地理	1
-7	history	Unit 3_1	5	n.历史	1
-7	date	Unit 3_1	5	n.日期	1
-7	meeting	Unit 3_1	5	n.会议	1
-7	o'clock	Unit 3_1	5	...点钟	1
-7	OK	Unit 3_1	5	int.好	1
-8	gate	Unit 3_2	5	n.大门	1
-8	so	Unit 3_2	5	adv.如此	1
-8	show	Unit 3_2	5	v.带	1
-8	around	Unit 3_2	5	adv.到处	1
-8	show somebody around	Unit 3_2	5	领某人参观	1
-8	front	Unit 3_2	5	n.前面	1
-8	in front of	Unit 3_2	5	在...前面	1
-8	building	Unit 3_2	5	n.建筑物	1
-8	ground	Unit 3_2	5	n.地	1
-8	ground floor	Unit 3_2	5	英：底层	1
-9	bright	Unit 3_3	5	adj.明亮的	1
-9	modern	Unit 3_3	5	adj.现代的	1
-9	hall	Unit 3_3	5	n.礼堂	1
-9	diary	Unit 3_3	5	n.日记	1
-9	look at	Unit 3_3	5	看一看	1
-9	wall	Unit 3_3	5	n.墙	1
-9	let me see	Unit 3_3	5	让我想想	1
-9	after class	Unit 3_3	5	下课后	1
-9	pardon	Unit 3_3	5	n.&vt.请再说一遍	1
-9	phone	Unit 3_3	5	n.电话	1
-10	on thephone	Unit 3_4	5	通电话	1
-10	from ... to ...	Unit 3_4	5	从...到...	1
-10	take	Unit 3_4	5	v.需要...时间	1
-10	get up	Unit 3_4	5	起床	1
-10	go to school	Unit 3_4	5	去上学	1
-10	a.m.	Unit 3_4	5	abbr.上午	1
-10	p.m.	Unit 3_4	5	abbr.下午	1
-10	reading room	Unit 3_4	5	阅览室	1
-10	only	Unit 3_4	5	adv.只	1
-10	sure	Unit 3_4	5	当然	1
-10	kind	Unit 3_4	5	n.种类	1
-11	all kinds of	Unit 3_5	5	各种各样的	1
-11	borrow	Unit 3_5	5	v.借	1
-11	borrow ... from ...	Unit 3_5	5	向...借...	1
-11	letter	Unit 3_5	5	信	1
-11	few	Unit 3_5	5	adj.&n.不多	1
-11	a few	Unit 3_5	5	一些	1
-11	away	Unit 3_5	5	adv.离开	1
-11	far away from	Unit 3_5	5	远离	1
-11	on foot	Unit 3_5	5	走路	1
-11	best	Unit 3_5	5	最好的	1
-11	all the best	Unit 3_5	5	一切顺利	1
-12	wake	Unit 4_1	5	v.醒来	1
-12	wake up	Unit 4_1	5	醒来	1
-12	shall	Unit 4_1	5	aux.(表示提出或征求意见)	1
-12	hill	Unit 4_1	5	n.小山	1
-12	seldom	Unit 4_1	5	adv.很少	1
-12	out	Unit 4_1	5	adv.出来	1
-12	go out	Unit 4_1	5	出去	1
-12	have breakfast	Unit 4_1	5	吃早饭	1
-12	have lunch	Unit 4_1	5	吃中饭	0
-12	have dinner	Unit 4_1	5	吃晚饭	0
-13	need	Unit 4_2	5	v.需要	1
-13	rest	Unit 4_2	5	n.休息	1
-13	just	Unit 4_2	5	adv.只是	1
-13	have fun	Unit 4_2	5	玩得高兴	1
-13	have lessons	Unit 4_2	5	上课	1
-13	after-school	Unit 4_2	5	adj.课外的	1
-13	activity	Unit 4_2	5	n.活动	1
-13	homework	Unit 4_2	5	n.家庭作业	1
-13	go to bed	Unit 4_2	5	去睡觉	1
-13	usually	Unit 4_2	5	adv.通常	1
-14	never	Unit 4_3	5	adv.从不	1
-14	be late for	Unit 4_3	5	迟到	1
-14	start	Unit 4_3	5	n.&v.开始	1
-14	quarter	Unit 4_3	5	n.一刻钟	1
-14	past	Unit 4_3	5	晚于	1
-14	in the morning	Unit 4_3	5	在上午	1
-14	in the afternoon	Unit 4_3	5	在下午	0
-14	in the evening	Unit 4_3	5	在晚上	0
-14	first	Unit 4_3	5	adv.首先	1
-14	chat	Unit 4_3	5	n.&v.聊天	0
-15	each	Unit 4_4	5	adj.每人	1
-15	other	Unit 4_4	5	adj.另外	1
-15	each other	Unit 4_4	5	互相	1
-15	practice	Unit 4_4	5	n.练习	1
-15	have a good time	Unit 4_4	5	过得愉快	1
-15	wish	Unit 4_4	5	v&n.希望	1
-15	would	Unit 4_4	5	aux.表示客气地建议或邀请	1
-15	would like	Unit 4_4	5	想	1
-15	life	Unit 4_4	5	n.生活	1
-15	roller skating	Unit 4_4	5	溜旱冰	0
-15	wish	Unit 4_4	5	n.&v.希望	1
-16	luck	Unit 4_5	5	n.好运	1
-16	museum	Unit 4_5	5	n.博物馆	1
-16	twice	Unit 4_5	5	adv.两次	1
-16	picnic	Unit 4_5	5	v.野餐	1
-16	once	Unit 4_5	5	adv.一次	1
-16	dislike	Unit 4_5	5	v.不喜爱	0
-16	reason	Unit 4_5	5	n.原因	1
-16	ready	Unit 4_5	5	vt.准备好	1
-16	get ready for	Unit 4_5	5	为...准备好	1
-16	learn	Unit 4_5	5	v.学习	1
-16	world	Unit 4_5	5	n.世界	1
-17	celebrate	Unit 5_1	5	n.庆祝	1
-17	guess	Unit 5_1	5	v.猜	1
-17	dress	Unit 5_1	5	v.穿着	1
-17	dress up	Unit 5_1	5	装扮	1
-17	as	Unit 5_1	5	prep.作为	1
-17	ghost	Unit 5_1	5	n.鬼	0
-17	Christmas	Unit 5_1	5	n.圣诞节	1
-17	festival	Unit 5_1	5	n.节日	1
-17	because	Unit 5_1	5	conj.因为	1
-17	present	Unit 5_1	5	n.礼物	1
-17	together	Unit 5_1	5	adv.在一起	1
-18	get together	Unit 5_2	5	聚会	1
-18	moon cake	Unit 5_2	5	月饼	1
-18	full	Unit 5_2	5	adj.满的	1
-18	USA	Unit 5_2	5	abbr.美国	1
-18	mask	Unit 5_2	5	n.面具	0
-18	paint	Unit 5_2	5	n.用颜料涂	1
-18	pumpkin	Unit 5_2	5	n.南瓜	0
-18	lantern	Unit 5_2	5	n.灯笼	0
-18	when	Unit 5_2	5	conj.当...时候	1
-18	inside	Unit 5_2	5	adv.在里面	1
-18	knock	Unit 5_2	5	v.敲	1
-19	knock on the door	Unit 5_3	5	敲门	1
-19	shout	Unit 5_3	5	v.大声说	1
-19	trick or treat	Unit 5_3	5	不招待，就使坏	0
-19	if	Unit 5_3	5	conj.如果	1
-19	treat	Unit 5_3	5	n.招待	1
-19	trick	Unit 5_3	5	n.诡计	0
-19	special	Unit 5_3	5	adj.特殊的	1
-19	question	Unit 5_3	5	n.问题	1
-19	dumpling	Unit 5_3	5	n.汤圆，饺子	1
-19	rice dumpling	Unit 5_3	5	粽子	1
-19	grandparent	Unit 5_3	5	n.祖父母	1
-20	other	Unit 5_4	5	adj.另外	1
-20	thing	Unit 5_4	5	n.东西	1
-20	lion	Unit 5_4	5	n.狮子	1
-20	lion dance	Unit 5_4	5	狮子舞	1
-20	firework	Unit 5_4	5	n.烟火	0
-20	find out	Unit 5_4	5	n.发现	1
-20	more	Unit 5_4	5	adj&adv.更多	1
-20	radio	Unit 5_4	5	n.无线电广播	1
-20	take photos	Unit 5_4	5	拍照	1
-20	at night	Unit 5_4	5	在夜里	1
-21	show	Unit 5_5	5	n.&v.演出	1
-21	seem	Unit 5_5	5	vi.好像	1
-21	different	Unit 5_5	5	adj.不同的	1
-21	around	Unit 5_5	5	adv.围绕	1
-21	important	Unit 5_5	5	adj.重要的	1
-21	most	Unit 5_5	5	adv&adj.大多数	1
-21	off	Unit 5_5	5	prep.脱离	1
-21	let off	Unit 5_5	5	使爆炸	1
-21	packet	Unit 5_5	5	n.小包	0
-21	red packet	Unit 5_5	5	红包	0
-22	lifestyle	Unit 6_1	5	n.生活方式	0
-22	noon	Unit 6_1	5	n.正午	1
-22	hamburger	Unit 6_1	5	n.汉堡包	1
-22	keep	Unit 6_1	5	v.保持	1
-22	lemon	Unit 6_1	5	n.柠檬	1
-22	watermelon	Unit 6_1	5	n.西瓜	1
-22	chocolate	Unit 6_1	5	n.巧克力	1
-22	beef	Unit 6_1	5	n.牛肉	1
-22	carrot	Unit 6_1	5	n.胡萝卜	1
-22	pork	Unit 6_1	5	n.猪肉	0
-23	sweet	Unit 6_2	5	n.糖果	1
-23	meat	Unit 6_2	5	n.肉	1
-23	snack	Unit 6_2	5	n.小吃	0
-23	health	Unit 6_2	5	n.健康	1
-23	fit	Unit 6_2	5	adj.健康的	1
-23	keep fit	Unit 6_2	5	保持健康	1
-23	meal	Unit 6_2	5	n.一餐	1
-23	pear	Unit 6_2	5	n.梨	1
-23	sugar	Unit 6_2	5	n.食糖	1
-23	tooth	Unit 6_2	5	n.牙齿	1
-24	computer game	Unit 6_3	5	电脑游戏	1
-24	cola	Unit 6_3	5	n.可乐饮料	0
-24	change	Unit 6_3	5	n.&v.改变	1
-24	plan	Unit 6_3	5	n.&v.打算	1
-24	pool	Unit 6_3	5	n.水池	1
-24	swimming pool	Unit 6_3	5	游泳池	1
-24	piece	Unit 6_3	5	n.块	1
-24	a piece of	Unit 6_3	5	一块	1
-24	glass	Unit 6_3	5	n.玻璃杯	1
-24	plate	Unit 6_3	5	n.盘子	0
-25	salt	Unit 6_4	5	n.盐	1
-25	cup	Unit 6_4	5	n.茶杯	1
-25	kilo	Unit 6_4	5	n.千克	0
-25	carton	Unit 6_4	5	n.盒	0
-25	bottle	Unit 6_4	5	n.瓶子	1
-25	less	Unit 6_4	5	adj.较少	1
-25	than	Unit 6_4	5	conj.比	1
-25	less than	Unit 6_4	5	少于	1
-25	more than	Unit 6_4	5	多于	1
-25	take a walk	Unit 6_4	5	散步	1
-25	total	Unit 6_4	5	adj.总的	1
-26	number	Unit 6_5	5	n.数	1
-26	score	Unit 6_5	5	v.得分	1
-26	point	Unit 6_5	5	n.分数	1
-26	more	Unit 6_5	5	adv.更多	1
-26	order	Unit 6_5	5	v.点菜	1
-26	menu	Unit 6_5	5	n.菜单	1
-26	bean	Unit 6_5	5	n.豆	1
-26	all right	Unit 6_5	5	行了	1
-26	taste	Unit 6_5	5	v.有...的味道	1
-26	energy	Unit 6_5	5	n.能量	0
-26	whole	Unit 6_5	5	adj.整个的	1
-27	shopping	Unit 7_1	5	n.购物	1
-27	mall	Unit 7_1	5	n.大型购物中心	1
-27	down	Unit 7_1	5	adv.向下	1
-27	hate	Unit 7_1	5	v.讨厌	1
-27	well	Unit 7_1	5	adv.好吧	1
-27	money	Unit 7_1	5	n.钱	1
-27	wallet	Unit 7_1	5	n.钱包	1
-27	carry	Unit 7_1	5	v.拿	1
-27	bookshop	Unit 7_1	5	n.书店	1
-27	gift	Unit 7_1	5	n.礼物	1
-28	CD	Unit 7_2	5	abbr.光盘	0
-28	sure	Unit 7_2	5	adj.肯定	1
-28	maybe	Unit 7_2	5	adv.也许	1
-28	be interested in	Unit 7_2	5	对...感兴趣	1
-28	stamp	Unit 7_2	5	n.邮票	1
-28	collect	Unit 7_2	5	n.&vt.收集	1
-28	you're welcome	Unit 7_2	5	不用谢	1
-28	shopkeeper	Unit 7_2	5	n.店主	0
-28	just a minute	Unit 7_2	5	稍等片刻	1
-28	take alook	Unit 7_2	5	看一看	1
-29	cost	Unit 7_3	5	v.值	1
-29	cheap	Unit 7_3	5	adj.便宜的	1
-29	last	Unit 7_3	5	adj.上一个	1
-29	hair clip	Unit 7_3	5	发卡	0
-29	match	Unit 7_3	5	v.与...相配	1
-29	pink	Unit 7_3	5	adj.粉红色的	1
-29	pretty	Unit 7_3	5	adj.漂亮的	1
-29	enough	Unit 7_3	5	adj.足够	1
-29	change	Unit 7_3	5	n.零头	1
-29	different from	Unit 7_3	5	与...不同	1
-30	paper	Unit 7_4	5	n.纸	1
-30	item	Unit 7_4	5	n.项目	0
-30	T-shirt	Unit 7_4	5	n.T恤衫	1
-30	most	Unit 7_4	5	adv.最大	1
-30	poor	Unit 7_4	5	adj.贫穷的	1
-30	area	Unit 7_4	5	n.地区	1
-30	pocket	Unit 7_4	5	n.口袋	1
-30	pocket money	Unit 7_4	5	零花钱	1
-30	pair	Unit 7_4	5	n.双	1
-30	a pair of	Unit 7_4	5	一双	1
-30	size	Unit 7_4	5	n.尺码	1
-31	try on	Unit 7_5	5	试穿	1
-31	fit	Unit 7_5	5	v.适合	1
-31	expensive	Unit 7_5	5	adj.昂贵的	1
-31	another	Unit 7_5	5	adj.别的	1
-31	price	Unit 7_5	5	n.价格	1
-31	fit	Unit 7_5	5	v.合适	1
-31	large	Unit 7_5	5	adj.大的	1
-31	note	Unit 7_5	5	n.笔记	1
-31	bus stop	Unit 7_5	5	n.公共汽车站	1
-31	restaurant	Unit 7_5	5	n.餐馆	1
-31	top	Unit 7_5	5	adj.最高的	1
-32	fashion	Unit 8_1	5	v.时尚	0
-32	think about	Unit 8_1	5	考虑	1
-32	spend	Unit 8_1	5	v.度过	1
-32	lazy	Unit 8_1	5	adj.懒惰的	1
-32	blouse	Unit 8_1	5	n.（女式）衬衫	1
-32	tie	Unit 8_1	5	n.领带	1
-32	lend	Unit 8_1	5	n.借给	1
-32	lady	Unit 8_1	5	n.女士	1
-32	gentleman	Unit 8_1	5	n.先生	1
-32	style	Unit 8_1	5	n.风格	0
-33	trainer	Unit 8_2	5	n.<英>运动鞋	0
-33	comfortable	Unit 8_2	5	adj.舒适的	1
-33	popular	Unit 8_2	5	adj.受欢迎的	1
-33	among	Unit 8_2	5	prep.在...中	1
-33	purple	Unit 8_2	5	adj.紫色的	1
-33	grey	Unit 8_2	5	adj.灰色的	1
-33	smart	Unit 8_2	5	adj.精干的	1
-33	cool	Unit 8_2	5	adj.酷的	1
-33	cotton	Unit 8_2	5	n.棉	0
-33	scarf	Unit 8_2	5	n.围巾	1
-34	both	Unit 8_3	5	pron.两个	1
-34	jeans	Unit 8_3	5	n.牛仔裤	0
-34	silk	Unit 8_3	5	n.丝	1
-34	wool	Unit 8_3	5	n.羊毛	0
-34	boot	Unit 8_3	5	n.靴子	0
-34	both ... and ...	Unit 8_3	5	...和...都	1
-34	be made of	Unit 8_3	5	由...制成	1
-34	write to	Unit 8_3	5	写信给	1
-34	wait for	Unit 8_3	5	等候	1
-34	look for	Unit 8_3	5	寻找	1
-35	lie	Unit 8_4	5	v.躺	1
-35	go for something	Unit 8_4	5	去从事	1
-35	fit	Unit 8_4	5	adj.适合的	1
-35	fit for	Unit 8_4	5	适合于	1
-35	think of	Unit 8_4	5	认为	1
-35	glove	Unit 8_4	5	n.手套	1
-35	leather	Unit 8_4	5	n.皮革	0
-35	soft	Unit 8_4	5	adj.柔软的	1
-35	smooth	Unit 8_4	5	adj.光滑的	1
-36	lovely	Unit 8_5	5	adj.可爱的	1
-36	hat	Unit 8_5	5	n.帽子	1
-36	jacket	Unit 8_5	5	n.夹克衫	1
-36	feature	Unit 8_5	5	n.特征	0
-36	include	Unit 8_5	5	vt.包括	1
-36	material	Unit 8_5	5	n.材料	0
-36	design	Unit 8_5	5	n.&v.设计	0
-36	model	Unit 8_5	5	n.模特	1
-36	dark	Unit 8_5	5	adj.深色的	1
+1	oh	Unit 1_1	5	int.哦	1
+1	e-dog	Unit 1_1	5	n.电子狗	0
+1	master	Unit 1_1	5	n.主人	0
+2	grade	Unit 1_2	5	n.年级	1
+2	student	Unit 1_2	5	n.学生	1
+2	reading	Unit 1_2	5	n.阅读	1
+2	classmate	Unit 1_2	5	n.同班同学	1
+2	after school	Unit 1_2	5	放学后	1
+3	slim	Unit 1_3	5	adj.苗条的	0
+3	be good at	Unit 1_3	5	擅长于	1
+3	over there	Unit 1_3	5	在那边	1
+3	classroom	Unit 1_3	5	n.教室	1
+3	dancing	Unit 1_3	5	n.跳舞	1
+4	swimming	Unit 1_4	5	n.游泳	1
+4	age	Unit 1_4	5	n.年龄	1
+4	looks	Unit 1_4	5	n.相貌	0
+4	cute	Unit 1_4	5	adj.可爱的	1
+4	hobby	Unit 1_4	5	n.业余爱好	1
+5	glad	Unit 1_5	5	adj.高兴的	1
+5	everyone	Unit 1_5	5	pron.每人	1
+5	come from	Unit 1_5	5	来自	1
+5	glasses	Unit 1_5	5	n.[复]眼镜	1
+6	walking	Unit 2_1	6	n.散步	1
+6	really	Unit 2_1	6	adv.的确	1
+6	bowl	Unit 2_1	6	n.碗	1
+6	time	Unit 2_1	6	n.次	1
+6	tennis	Unit 2_1	6	n.网球	1
+7	volleyball	Unit 2_2	6	n.排球	1
+7	enjoy	Unit 2_2	6	v.欣赏	1
+7	go swimming	Unit 2_2	6	去游泳	1
+7	player	Unit 2_2	6	n.运动员	1
+7	member	Unit 2_2	6	adj.成员	1
+8	club	Unit 2_3	6	n.俱乐部	1
+8	free	Unit 2_3	6	adj.空闲的	1
+8	hope	Unit 2_3	6	n.&v.希望	1
+8	dream	Unit 2_3	6	n.&v.梦想	1
+8	true	Unit 2_3	6	adj.真的	1
+9	come true	Unit 2_4	6	变为现实	1
+9	drawing	Unit 2_4	6	n.画画	1
+9	weekend	Unit 2_4	6	n.周末	1
+9	at weekends	Unit 2_4	6	在周末	1
+9	of course	Unit 2_4	6	当然	1
+10	shop	Unit 2_5	6	v.购物	1
+10	table tennis	Unit 2_5	6	乒乓球	1
+10	else	Unit 2_5	6	adv.另外	1
+10	a lot of	Unit 2_5	6	许多	1
+10	fun	Unit 2_5	6	n.乐趣	1
+11	team	Unit 2_6	6	n.队	1
+11	talk about	Unit 2_6	6	谈论	1
+11	match	Unit 2_6	6	n.比赛	1
+11	hero	Unit 2_6	6	n.英雄	1
+12	which	Unit 3_1	10	pron.哪一个	1
+12	best	Unit 3_1	10	n.最好地	1
+12	so	Unit 3_1	10	n.因此	1
+12	biology	Unit 3_1	10	n.生物	0
+12	geography	Unit 3_1	10	n.地理	1
+13	history	Unit 3_2	10	n.历史	1
+13	date	Unit 3_2	10	n.日期	1
+13	meeting	Unit 3_2	10	n.会议	1
+13	o'clock	Unit 3_2	10	...点钟	1
+13	OK	Unit 3_2	10	int.好	1
+14	gate	Unit 3_3	10	n.大门	1
+14	so	Unit 3_3	10	adv.如此	1
+14	show	Unit 3_3	10	v.带	1
+14	around	Unit 3_3	10	adv.到处	1
+14	show somebody around	Unit 3_3	10	领某人参观	1
+15	front	Unit 3_4	10	n.前面	1
+15	in front of	Unit 3_4	10	在...前面	1
+15	building	Unit 3_4	10	n.建筑物	1
+15	ground	Unit 3_4	10	n.地	1
+15	ground floor	Unit 3_4	10	英：底层	1
+16	bright	Unit 3_5	10	adj.明亮的	1
+16	modern	Unit 3_5	10	adj.现代的	1
+16	hall	Unit 3_5	10	n.礼堂	1
+16	diary	Unit 3_5	10	n.日记	1
+16	look at	Unit 3_5	10	看一看	1
+17	wall	Unit 3_6	10	n.墙	1
+17	let me see	Unit 3_6	10	让我想想	1
+17	after class	Unit 3_6	10	下课后	1
+17	pardon	Unit 3_6	10	n.&vt.请再说一遍	1
+17	phone	Unit 3_6	10	n.电话	1
+18	on thephone	Unit 3_7	10	通电话	1
+18	from ... to ...	Unit 3_7	10	从...到...	1
+18	take	Unit 3_7	10	v.需要...时间	1
+18	get up	Unit 3_7	10	起床	1
+18	go to school	Unit 3_7	10	去上学	1
+19	a.m.	Unit 3_8	10	abbr.上午	1
+19	p.m.	Unit 3_8	10	abbr.下午	1
+19	reading room	Unit 3_8	10	阅览室	1
+19	only	Unit 3_8	10	adv.只	1
+19	sure	Unit 3_8	10	当然	1
+20	kind	Unit 3_9	10	n.种类	1
+20	all kinds of	Unit 3_9	10	各种各样的	1
+20	borrow	Unit 3_9	10	v.借	1
+20	borrow ... from ...	Unit 3_9	10	向...借...	1
+20	letter	Unit 3_9	10	信	1
+20	few	Unit 3_9	10	adj.&n.不多	1
+21	a few	Unit 3_10	10	一些	1
+21	away	Unit 3_10	10	adv.离开	1
+21	far away from	Unit 3_10	10	远离	1
+21	on foot	Unit 3_10	10	走路	1
+21	best	Unit 3_10	10	最好的	1
+21	all the best	Unit 3_10	10	一切顺利	1
+22	wake	Unit 4_1	10	v.醒来	1
+22	wake up	Unit 4_1	10	醒来	1
+22	shall	Unit 4_1	10	aux.(表示提出或征求意见)	1
+22	hill	Unit 4_1	10	n.小山	1
+22	seldom	Unit 4_1	10	adv.很少	1
+23	out	Unit 4_2	10	adv.出来	1
+23	go out	Unit 4_2	10	出去	1
+23	have breakfast	Unit 4_2	10	吃早饭	1
+23	have lunch	Unit 4_2	10	吃中饭	0
+23	have dinner	Unit 4_2	10	吃晚饭	0
+24	need	Unit 4_3	10	v.需要	1
+24	rest	Unit 4_3	10	n.休息	1
+24	just	Unit 4_3	10	adv.只是	1
+24	have fun	Unit 4_3	10	玩得高兴	1
+24	have lessons	Unit 4_3	10	上课	1
+25	after-school	Unit 4_4	10	adj.课外的	1
+25	activity	Unit 4_4	10	n.活动	1
+25	homework	Unit 4_4	10	n.家庭作业	1
+25	go to bed	Unit 4_4	10	去睡觉	1
+25	usually	Unit 4_4	10	adv.通常	1
+26	never	Unit 4_5	10	adv.从不	1
+26	be late for	Unit 4_5	10	迟到	1
+26	start	Unit 4_5	10	n.&v.开始	1
+26	quarter	Unit 4_5	10	n.一刻钟	1
+26	past	Unit 4_5	10	晚于	1
+27	in the morning	Unit 4_6	10	在上午	1
+27	in the afternoon	Unit 4_6	10	在下午	0
+27	in the evening	Unit 4_6	10	在晚上	0
+27	first	Unit 4_6	10	adv.首先	1
+27	chat	Unit 4_6	10	n.&v.聊天	0
+28	each	Unit 4_7	10	adj.每人	1
+28	other	Unit 4_7	10	adj.另外	1
+28	each other	Unit 4_7	10	互相	1
+28	practice	Unit 4_7	10	n.练习	1
+28	have a good time	Unit 4_7	10	过得愉快	1
+29	wish	Unit 4_8	10	v&n.希望	1
+29	would	Unit 4_8	10	aux.表示客气地建议或邀请	1
+29	would like	Unit 4_8	10	想	1
+29	life	Unit 4_8	10	n.生活	1
+29	roller skating	Unit 4_8	10	溜旱冰	0
+30	wish	Unit 4_9	10	n.&v.希望	1
+30	luck	Unit 4_9	10	n.好运	1
+30	museum	Unit 4_9	10	n.博物馆	1
+30	twice	Unit 4_9	10	adv.两次	1
+30	picnic	Unit 4_9	10	v.野餐	1
+30	once	Unit 4_9	10	adv.一次	1
+31	dislike	Unit 4_10	10	v.不喜爱	0
+31	reason	Unit 4_10	10	n.原因	1
+31	ready	Unit 4_10	10	vt.准备好	1
+31	get ready for	Unit 4_10	10	为...准备好	1
+31	learn	Unit 4_10	10	v.学习	1
+31	world	Unit 4_10	10	n.世界	1
+32	celebrate	Unit 5_1	11	n.庆祝	1
+32	guess	Unit 5_1	11	v.猜	1
+32	dress	Unit 5_1	11	v.穿着	1
+32	dress up	Unit 5_1	11	装扮	1
+32	as	Unit 5_1	11	prep.作为	1
+33	ghost	Unit 5_2	11	n.鬼	0
+33	Christmas	Unit 5_2	11	n.圣诞节	1
+33	festival	Unit 5_2	11	n.节日	1
+33	because	Unit 5_2	11	conj.因为	1
+33	present	Unit 5_2	11	n.礼物	1
+34	together	Unit 5_3	11	adv.在一起	1
+34	get together	Unit 5_3	11	聚会	1
+34	moon cake	Unit 5_3	11	月饼	1
+34	full	Unit 5_3	11	adj.满的	1
+34	USA	Unit 5_3	11	abbr.美国	1
+35	mask	Unit 5_4	11	n.面具	0
+35	paint	Unit 5_4	11	n.用颜料涂	1
+35	pumpkin	Unit 5_4	11	n.南瓜	0
+35	lantern	Unit 5_4	11	n.灯笼	0
+35	when	Unit 5_4	11	conj.当...时候	1
+36	inside	Unit 5_5	11	adv.在里面	1
+36	knock	Unit 5_5	11	v.敲	1
+36	knock on the door	Unit 5_5	11	敲门	1
+36	shout	Unit 5_5	11	v.大声说	1
+36	trick or treat	Unit 5_5	11	不招待，就使坏	0
+37	if	Unit 5_6	11	conj.如果	1
+37	treat	Unit 5_6	11	n.招待	1
+37	trick	Unit 5_6	11	n.诡计	0
+37	special	Unit 5_6	11	adj.特殊的	1
+37	question	Unit 5_6	11	n.问题	1
+38	dumpling	Unit 5_7	11	n.汤圆，饺子	1
+38	rice dumpling	Unit 5_7	11	粽子	1
+38	grandparent	Unit 5_7	11	n.祖父母	1
+38	other	Unit 5_7	11	adj.另外	1
+38	thing	Unit 5_7	11	n.东西	1
+39	lion	Unit 5_8	11	n.狮子	1
+39	lion dance	Unit 5_8	11	狮子舞	1
+39	firework	Unit 5_8	11	n.烟火	0
+39	find out	Unit 5_8	11	n.发现	1
+39	more	Unit 5_8	11	adj&adv.更多	1
+40	radio	Unit 5_9	11	n.无线电广播	1
+40	take photos	Unit 5_9	11	拍照	1
+40	at night	Unit 5_9	11	在夜里	1
+40	show	Unit 5_9	11	n.&v.演出	1
+40	seem	Unit 5_9	11	vi.好像	1
+41	different	Unit 5_10	11	adj.不同的	1
+41	around	Unit 5_10	11	adv.围绕	1
+41	important	Unit 5_10	11	adj.重要的	1
+41	most	Unit 5_10	11	adv&adj.大多数	1
+42	off	Unit 5_11	11	prep.脱离	1
+42	let off	Unit 5_11	11	使爆炸	1
+42	packet	Unit 5_11	11	n.小包	0
+42	red packet	Unit 5_11	11	红包	0
+43	lifestyle	Unit 6_1	10	n.生活方式	0
+43	noon	Unit 6_1	10	n.正午	1
+43	hamburger	Unit 6_1	10	n.汉堡包	1
+43	keep	Unit 6_1	10	v.保持	1
+43	lemon	Unit 6_1	10	n.柠檬	1
+44	watermelon	Unit 6_2	10	n.西瓜	1
+44	chocolate	Unit 6_2	10	n.巧克力	1
+44	beef	Unit 6_2	10	n.牛肉	1
+44	carrot	Unit 6_2	10	n.胡萝卜	1
+44	pork	Unit 6_2	10	n.猪肉	0
+45	sweet	Unit 6_3	10	n.糖果	1
+45	meat	Unit 6_3	10	n.肉	1
+45	snack	Unit 6_3	10	n.小吃	0
+45	health	Unit 6_3	10	n.健康	1
+45	fit	Unit 6_3	10	adj.健康的	1
+46	keep fit	Unit 6_4	10	保持健康	1
+46	meal	Unit 6_4	10	n.一餐	1
+46	pear	Unit 6_4	10	n.梨	1
+46	sugar	Unit 6_4	10	n.食糖	1
+46	tooth	Unit 6_4	10	n.牙齿	1
+47	computer game	Unit 6_5	10	电脑游戏	1
+47	cola	Unit 6_5	10	n.可乐饮料	0
+47	change	Unit 6_5	10	n.&v.改变	1
+47	plan	Unit 6_5	10	n.&v.打算	1
+47	pool	Unit 6_5	10	n.水池	1
+48	swimming pool	Unit 6_6	10	游泳池	1
+48	piece	Unit 6_6	10	n.块	1
+48	a piece of	Unit 6_6	10	一块	1
+48	glass	Unit 6_6	10	n.玻璃杯	1
+48	plate	Unit 6_6	10	n.盘子	0
+49	salt	Unit 6_7	10	n.盐	1
+49	cup	Unit 6_7	10	n.茶杯	1
+49	kilo	Unit 6_7	10	n.千克	0
+49	carton	Unit 6_7	10	n.盒	0
+49	bottle	Unit 6_7	10	n.瓶子	1
+50	less	Unit 6_8	10	adj.较少	1
+50	than	Unit 6_8	10	conj.比	1
+50	less than	Unit 6_8	10	少于	1
+50	more than	Unit 6_8	10	多于	1
+50	take a walk	Unit 6_8	10	散步	1
+51	total	Unit 6_9	10	adj.总的	1
+51	number	Unit 6_9	10	n.数	1
+51	score	Unit 6_9	10	v.得分	1
+51	point	Unit 6_9	10	n.分数	1
+51	more	Unit 6_9	10	adv.更多	1
+51	order	Unit 6_9	10	v.点菜	1
+52	menu	Unit 6_10	10	n.菜单	1
+52	bean	Unit 6_10	10	n.豆	1
+52	all right	Unit 6_10	10	行了	1
+52	taste	Unit 6_10	10	v.有...的味道	1
+52	energy	Unit 6_10	10	n.能量	0
+52	whole	Unit 6_10	10	adj.整个的	1
+53	shopping	Unit 7_1	10	n.购物	1
+53	mall	Unit 7_1	10	n.大型购物中心	1
+53	down	Unit 7_1	10	adv.向下	1
+53	hate	Unit 7_1	10	v.讨厌	1
+53	well	Unit 7_1	10	adv.好吧	1
+54	money	Unit 7_2	10	n.钱	1
+54	wallet	Unit 7_2	10	n.钱包	1
+54	carry	Unit 7_2	10	v.拿	1
+54	bookshop	Unit 7_2	10	n.书店	1
+54	gift	Unit 7_2	10	n.礼物	1
+55	CD	Unit 7_3	10	abbr.光盘	0
+55	sure	Unit 7_3	10	adj.肯定	1
+55	maybe	Unit 7_3	10	adv.也许	1
+55	be interested in	Unit 7_3	10	对...感兴趣	1
+55	stamp	Unit 7_3	10	n.邮票	1
+56	collect	Unit 7_4	10	n.&vt.收集	1
+56	you're welcome	Unit 7_4	10	不用谢	1
+56	shopkeeper	Unit 7_4	10	n.店主	0
+56	just a minute	Unit 7_4	10	稍等片刻	1
+56	take alook	Unit 7_4	10	看一看	1
+57	cost	Unit 7_5	10	v.值	1
+57	cheap	Unit 7_5	10	adj.便宜的	1
+57	last	Unit 7_5	10	adj.上一个	1
+57	hair clip	Unit 7_5	10	发卡	0
+57	match	Unit 7_5	10	v.与...相配	1
+58	pink	Unit 7_6	10	adj.粉红色的	1
+58	pretty	Unit 7_6	10	adj.漂亮的	1
+58	enough	Unit 7_6	10	adj.足够	1
+58	change	Unit 7_6	10	n.零头	1
+58	different from	Unit 7_6	10	与...不同	1
+59	paper	Unit 7_7	10	n.纸	1
+59	item	Unit 7_7	10	n.项目	0
+59	T-shirt	Unit 7_7	10	n.T恤衫	1
+59	most	Unit 7_7	10	adv.最大	1
+59	poor	Unit 7_7	10	adj.贫穷的	1
+60	area	Unit 7_8	10	n.地区	1
+60	pocket	Unit 7_8	10	n.口袋	1
+60	pocket money	Unit 7_8	10	零花钱	1
+60	pair	Unit 7_8	10	n.双	1
+60	a pair of	Unit 7_8	10	一双	1
+61	size	Unit 7_9	10	n.尺码	1
+61	try on	Unit 7_9	10	试穿	1
+61	fit	Unit 7_9	10	v.适合	1
+61	expensive	Unit 7_9	10	adj.昂贵的	1
+61	another	Unit 7_9	10	adj.别的	1
+61	price	Unit 7_9	10	n.价格	1
+62	fit	Unit 7_10	10	v.合适	1
+62	large	Unit 7_10	10	adj.大的	1
+62	note	Unit 7_10	10	n.笔记	1
+62	bus stop	Unit 7_10	10	n.公共汽车站	1
+62	restaurant	Unit 7_10	10	n.餐馆	1
+62	top	Unit 7_10	10	adj.最高的	1
+63	fashion	Unit 8_1	10	v.时尚	0
+63	think about	Unit 8_1	10	考虑	1
+63	spend	Unit 8_1	10	v.度过	1
+63	lazy	Unit 8_1	10	adj.懒惰的	1
+63	blouse	Unit 8_1	10	n.（女式）衬衫	1
+64	tie	Unit 8_2	10	n.领带	1
+64	lend	Unit 8_2	10	n.借给	1
+64	lady	Unit 8_2	10	n.女士	1
+64	gentleman	Unit 8_2	10	n.先生	1
+64	style	Unit 8_2	10	n.风格	0
+65	trainer	Unit 8_3	10	n.<英>运动鞋	0
+65	comfortable	Unit 8_3	10	adj.舒适的	1
+65	popular	Unit 8_3	10	adj.受欢迎的	1
+65	among	Unit 8_3	10	prep.在...中	1
+65	purple	Unit 8_3	10	adj.紫色的	1
+66	grey	Unit 8_4	10	adj.灰色的	1
+66	smart	Unit 8_4	10	adj.精干的	1
+66	cool	Unit 8_4	10	adj.酷的	1
+66	cotton	Unit 8_4	10	n.棉	0
+66	scarf	Unit 8_4	10	n.围巾	1
+67	both	Unit 8_5	10	pron.两个	1
+67	jeans	Unit 8_5	10	n.牛仔裤	0
+67	silk	Unit 8_5	10	n.丝	1
+67	wool	Unit 8_5	10	n.羊毛	0
+67	boot	Unit 8_5	10	n.靴子	0
+68	both ... and ...	Unit 8_6	10	...和...都	1
+68	be made of	Unit 8_6	10	由...制成	1
+68	write to	Unit 8_6	10	写信给	1
+68	wait for	Unit 8_6	10	等候	1
+68	look for	Unit 8_6	10	寻找	1
+69	lie	Unit 8_7	10	v.躺	1
+69	go for something	Unit 8_7	10	去从事	1
+69	fit	Unit 8_7	10	adj.适合的	1
+69	fit for	Unit 8_7	10	适合于	1
+69	think of	Unit 8_7	10	认为	1
+70	glove	Unit 8_8	10	n.手套	1
+70	leather	Unit 8_8	10	n.皮革	0
+70	soft	Unit 8_8	10	adj.柔软的	1
+70	smooth	Unit 8_8	10	adj.光滑的	1
+70	lovely	Unit 8_8	10	adj.可爱的	1
+71	hat	Unit 8_9	10	n.帽子	1
+71	jacket	Unit 8_9	10	n.夹克衫	1
+71	feature	Unit 8_9	10	n.特征	0
+71	include	Unit 8_9	10	vt.包括	1
+72	material	Unit 8_10	10	n.材料	0
+72	design	Unit 8_10	10	n.&v.设计	0
+72	model	Unit 8_10	10	n.模特	1
+72	dark	Unit 8_10	10	adj.深色的	1

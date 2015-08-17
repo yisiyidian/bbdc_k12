@@ -1,223 +1,223 @@
-1	fast	Unit 1_1	6	n.禁食期	0
-1	raise	Unit 1_1	6	vt.筹募	1
-1	fund	Unit 1_1	6	n.资金	1
-2	World Vision	Unit 1_2	6	世界宣明会	0
-2	shocking	Unit 1_2	6	adj.令人气愤的	1
-2	famine	Unit 1_2	6	n.饥荒	0
-2	senior	Unit 1_2	6	n.毕业班学生	1
-2	starve	Unit 1_2	6	v.挨饿	1
-2	donation	Unit 1_2	6	n.捐赠物	1
-2	collect	Unit 1_2	6	vt.募捐	1
-2	donate	Unit 1_2	6	vt.捐赠	1
-2	generous	Unit 1_2	6	adj.慷慨的	1
-2	freshman	Unit 1_2	6	n.新生	0
-3	funfair	Unit 1_3	6	n.露天游乐场	1
-3	forecast	Unit 1_3	6	vt.预测	1
-3	stall	Unit 1_3	6	n.货摊	1
-3	in aid of	Unit 1_3	6	为了帮助某人/某事物	1
-3	appeal	Unit 1_3	6	v.呼吁	1
-3	brilliant	Unit 1_3	6	adj.巧妙的	1
-3	crowded	Unit 1_3	6	adj.拥挤的	1
-3	portrait-sketching	Unit 1_3	6	adj.素描肖像的	0
-3	karaoke	Unit 1_3	6	n.卡拉OK	0
-3	calculate	Unit 1_3	6	vt.预测	1
-4	walkathon	Unit 1_4	6	n.健走马拉松	0
-4	alumni	Unit 1_4	6	n.校友	0
-4	home	Unit 1_4	6	n.到正确的位置	0
-4	purchase	Unit 1_4	6	n.&v.购买	1
-4	IT	Unit 1_4	6	abbr.信息技术	0
-4	finance	Unit 1_4	6	n.给...提供资金	1
-4	sophomore	Unit 1_4	6	n.二年级学生	0
-4	proceeds	Unit 1_4	6	n.收入	0
-4	come to	Unit 1_4	6	合计	1
-4	astonished	Unit 1_4	6	adj.十分吃惊的	1
-5	pick up	Unit 1_5	6	(碰巧）买到	1
-5	souvenir	Unit 1_5	6	n.纪念物	0
-5	lasting	Unit 1_5	6	adj.继续存在的	1
-5	drive	Unit 1_5	6	v.有组织的努力	0
-5	extensively	Unit 1_5	6	adv.广泛地	1
-5	pint	Unit 1_5	6	n.品脱	1
-5	play a role in	Unit 1_5	6	发挥作用	1
-5	trucking	Unit 1_5	6	n.货车运输业	1
-5	recognize	Unit 1_5	6	vt.承认，辨认	1
-5	virtually	Unit 1_5	6	adv.几乎	0
-6	critical	Unit 1_6	6	adj.极重要的	0
-6	on hand	Unit 1_6	6	现有	1
-6	absolutely	Unit 1_6	6	adv.绝对地	1
-6	substitute	Unit 1_6	6	n.代替者	1
-6	pair with	Unit 1_6	6	使成对	0
-6	due to	Unit 1_6	6	由于	1
-6	ongoing	Unit 1_6	6	adj.持续存在的	0
-6	precious	Unit 1_6	6	adj.珍贵的	1
-6	sacrifice	Unit 1_6	6	n.&v.牺牲	1
-7	well-argued	Unit 2_1	5	adj.论证充分的	1
-7	motion	Unit 2_1	5	n.提议	1
-7	refute	Unit 2_1	5	vt.驳斥	0
-7	argument	Unit 2_1	5	n.论点	1
-7	propose	Unit 2_1	5	v.提议	1
-7	servant	Unit 2_1	5	n.仆人	1
-7	status	Unit 2_1	5	n.地位	1
-7	confine	Unit 2_1	5	v.限制	0
-7	commit suicide	Unit 2_1	5	自杀	0
-8	cling	Unit 2_2	5	v.抓紧	0
-8	mention	Unit 2_2	5	vt.提到	1
-8	manual	Unit 2_2	5	adj.手工的	0
-8	manual labour	Unit 2_2	5	手工劳动	0
-8	statistics	Unit 2_2	5	n.统计数据	0
-8	life expectancy	Unit 2_2	5	预期寿命	0
-8	weightlifting	Unit 2_2	5	n.举重	1
-8	pay ... a compliment	Unit 2_2	5	称赞	1
-8	superior	Unit 2_2	5	adj.更好的	1
-9	concede	Unit 2_3	5	vt.承认	0
-9	working	Unit 2_3	5	adj.有工作的	1
-9	non-working	Unit 2_3	5	adj.无工作的	1
-9	work out	Unit 2_3	5	计划	1
-9	priority	Unit 2_3	5	n.优先事项	0
-9	burden	Unit 2_3	5	n.负担	1
-9	point out	Unit 2_3	5	指出	1
-9	discrimination	Unit 2_3	5	n.歧视	0
-9	resource	Unit 2_3	5	n.资源	1
-10	play one's part	Unit 2_4	5	参与	1
-10	urge	Unit 2_4	5	vt.敦促	1
-10	vote	Unit 2_4	5	v.投票	1
-10	proposition	Unit 2_4	5	n.提议	1
-10	puberty	Unit 2_4	5	n.青春期	0
-10	phase	Unit 2_4	5	n.阶段	0
-10	head	Unit 2_4	5	v.朝...行进	1
-10	adulthood	Unit 2_4	5	n.成年	1
-10	responsibility	Unit 2_4	5	n.责任	1
-10	deepen	Unit 2_4	5	v.(声音)变低沉	1
-11	pimple	Unit 2_5	5	n.粉刺	0
-11	see-saw	Unit 2_5	5	v.摇摆不定	0
-11	hormone	Unit 2_5	5	n.激素	0
-11	adolescent	Unit 2_5	5	adj.青少年	0
-11	insecure	Unit 2_5	5	adj.缺乏信心的	1
-11	reluctant	Unit 2_5	5	adj.勉强的	1
-11	cope	Unit 2_5	5	v.处理	1
-11	sensible	Unit 2_5	5	adj.理智的	1
-11	risky	Unit 2_5	5	adj.有危险的	1
-11	lifelong	Unit 2_5	5	adj.终身的	1
-12	strait	Unit 3_1	6	n.海峡	1
-12	the Strait of Malacca	Unit 3_1	6	马六甲海峡	0
-12	luxurious	Unit 3_1	6	adj.非常舒适的	0
-12	acre	Unit 3_1	6	n.英亩	0
-12	beachfront	Unit 3_1	6	n.海岸	1
-12	whirlpool	Unit 3_1	6	n.涡流浴池	0
-12	cuisine	Unit 3_1	6	n.饭菜	0
-12	windsurfing	Unit 3_1	6	n.帆板运动	0
-12	water skiing	Unit 3_1	6	n.水撬	0
-12	arcade	Unit 3_1	6	n.拱廊	0
-13	bet	Unit 3_2	6	n.打赌	1
-13	promote	Unit 3_2	6	v.提升	1
-13	a couple of	Unit 3_2	6	几个	1
-13	enclosed	Unit 3_2	6	adj.随函附上的	1
-13	coach	Unit 3_2	6	n.长途客车	1
-13	overseas	Unit 3_2	6	ad.到海外	1
-13	take up	Unit 3_2	6	开始学	1
-13	coach	Unit 3_2	6	n.教练	1
-13	annoying	Unit 3_2	6	adj.使人恼怒的	1
-13	parasailing	Unit 3_2	6	n.水上拖伞运动	0
-14	have a go at	Unit 3_3	6	尝试	1
-14	put up with	Unit 3_3	6	忍受	1
-14	stand up for	Unit 3_3	6	支持	1
-14	parachute	Unit 3_3	6	n.降落伞	0
-14	nervous	Unit 3_3	6	adj.焦虑不安的	1
-14	put off	Unit 3_3	6	推迟	1
-14	excursion	Unit 3_3	6	n.短途旅行	1
-14	dozen	Unit 3_3	6	n.一打	1
-14	dozens of	Unit 3_3	6	许多	1
-14	tame	Unit 3_3	6	adj.驯服的	1
-15	flu	Unit 3_4	6	n.流行性感冒	1
-15	get over	Unit 3_4	6	恢复	1
-15	get together	Unit 3_4	6	聚会	1
-15	ecotourism	Unit 3_4	6	n.生态旅游	0
-15	term	Unit 3_4	6	n.术语	1
-15	era	Unit 3_4	6	n.时代	0
-15	consciousness	Unit 3_4	6	n.神志清醒	1
-15	typically	Unit 3_4	6	adv.通常地	1
-15	heritage	Unit 3_4	6	n.遗产	1
-15	primary	Unit 3_4	6	adj.首要的	1
-16	attraction	Unit 3_5	6	n.有趣的地方	1
-16	take into consideration	Unit 3_5	6	将...考虑进去	1
-16	ecology	Unit 3_5	6	n.生态	1
-16	conservation	Unit 3_5	6	n.保护	1
-16	preservation	Unit 3_5	6	n.保护	1
-16	form	Unit 3_5	6	n.形成	1
-16	declare	Unit 3_5	6	vt.宣布	1
-16	bird-watching	Unit 3_5	6	n.观鸟	1
-16	hiking	Unit 3_5	6	n.徒步旅行	0
-16	photography	Unit 3_5	6	n.摄影	1
-17	mountaineering	Unit 3_6	6	n.登山运动	0
-17	various	Unit 3_6	6	adj.各种各样的	1
-17	annual	Unit 3_6	6	adj.一年一度的	1
-17	greenwashing	Unit 3_6	6	n.绿色伪装	0
-17	profit	Unit 3_6	6	n.获利	1
-17	reserve	Unit 3_6	6	n.自然保护区	1
-17	absorb	Unit 3_6	6	v.吸收	1
-17	rural	Unit 3_6	6	adj.农村的	1
-17	rich in	Unit 3_6	6	富含...的	1
-17	ecological	Unit 3_6	6	adj.生态的	1
-17	destination	Unit 3_6	6	n.目的地	1
-18	groom	Unit 4_1	6	n.新郎	1
-18	registry	Unit 4_1	6	n.登记处	1
-18	registry office	Unit 4_1	6	登记处	1
-18	gown	Unit 4_1	6	n.女礼服	0
-18	costly	Unit 4_1	6	adj.昂贵的	1
-18	hire	Unit 4_1	6	vt.租	1
-18	outfit	Unit 4_1	6	n.全套服装	1
-18	dinner jacket	Unit 4_1	6	晚礼服上装	1
-18	bridesmaid	Unit 4_1	6	n.伴娘	0
-18	bouquet	Unit 4_1	6	n.花束	0
-18	bunch	Unit 4_1	6	n.一束	1
-19	evil	Unit 4_2	6	adj.恶魔的	1
-19	spirit	Unit 4_2	6	n.鬼怪	1
-19	fragrant	Unit 4_2	6	adj.芳香的	0
-19	florist	Unit 4_2	6	n.花商	0
-19	stationery	Unit 4_2	6	n.文具	1
-19	album	Unit 4_2	6	n.簿册	1
-19	consult	Unit 4_2	6	v.咨询	1
-19	specialist	Unit 4_2	6	n.专家	1
-19	printer	Unit 4_2	6	n.印刷商	1
-19	book	Unit 4_2	6	vt.预订	1
-19	limousine	Unit 4_2	6	n.大型豪车	0
-20	reception	Unit 4_3	6	n.欢迎会	1
-20	reserve	Unit 4_3	6	vt.预订	1
-20	afterwards	Unit 4_3	6	adv.以后,后来	1
-20	resist	Unit 4_3	6	v.抗拒	1
-20	temptation	Unit 4_3	6	n.引诱	1
-20	photographer	Unit 4_3	6	n.摄影者	1
-20	specialize	Unit 4_3	6	vi.专攻	1
-20	view	Unit 4_3	6	n.景观	1
-20	avenue	Unit 4_3	6	n.街道	1
-20	personalize	Unit 4_3	6	v.个性化	0
-20	chauffeur	Unit 4_3	6	n.司机	0
-21	consultation	Unit 4_4	6	n.咨询	1
-21	Thanksgiving	Unit 4_4	6	n.感恩节	1
-21	reunion	Unit 4_4	6	n.重聚	1
-21	the Pilgrims	Unit 4_4	6	n.清教徒	0
-21	Plymouth	Unit 4_4	6	n.普利茅斯	0
-21	Massachusetts	Unit 4_4	6	n.马萨诸塞州	0
-21	settler	Unit 4_4	6	n.移民	1
-21	folk	Unit 4_4	6	n.人们	1
-21	set aside	Unit 4_4	6	留出	1
-21	highway	Unit 4_4	6	n.公路	1
-22	shut down	Unit 4_5	6	关闭	1
-22	indoors	Unit 4_5	6	adv.在室内	1
-22	dine	Unit 4_5	6	v.进餐	1
-22	turkey	Unit 4_5	6	n.火鸡	1
-22	stuffing	Unit 4_5	6	n.填料	0
-22	gravy	Unit 4_5	6	n.肉汁	0
-22	cranberry	Unit 4_5	6	n.越橘	0
-22	sauce	Unit 4_5	6	n.调味汁	1
-22	cranberry sauce	Unit 4_5	6	越橘调味汁	0
-22	mashed potatoes	Unit 4_5	6	土豆泥	0
-23	fare	Unit 4_6	6	n.饭菜	1
-23	overflow	Unit 4_6	6	n.漫出	1
-23	brisk	Unit 4_6	6	adj.令人爽快的	0
-23	parade	Unit 4_6	6	n.&v.游行	1
-23	nibble	Unit 4_6	6	n.&v.小口咬	0
-23	reunite	Unit 4_6	6	v.使团圆	1
-23	thankful	Unit 4_6	6	adj.感谢的	1
-23	occasion	Unit 4_6	6	n.时刻	1
-23	entire	Unit 4_6	6	adj.全部的	1
-23	togetherness	Unit 4_6	6	n.和睦团结	1
+1	fast	Unit 1_1	11	n.禁食期	0
+1	raise	Unit 1_1	11	vt.筹募	1
+1	fund	Unit 1_1	11	n.资金	1
+2	World Vision	Unit 1_2	11	世界宣明会	0
+2	shocking	Unit 1_2	11	adj.令人气愤的	1
+2	famine	Unit 1_2	11	n.饥荒	0
+2	senior	Unit 1_2	11	n.毕业班学生	1
+2	starve	Unit 1_2	11	v.挨饿	1
+3	donation	Unit 1_3	11	n.捐赠物	1
+3	collect	Unit 1_3	11	vt.募捐	1
+3	donate	Unit 1_3	11	vt.捐赠	1
+3	generous	Unit 1_3	11	adj.慷慨的	1
+3	freshman	Unit 1_3	11	n.新生	0
+4	funfair	Unit 1_4	11	n.露天游乐场	1
+4	forecast	Unit 1_4	11	vt.预测	1
+4	stall	Unit 1_4	11	n.货摊	1
+4	in aid of	Unit 1_4	11	为了帮助某人/某事物	1
+4	appeal	Unit 1_4	11	v.呼吁	1
+5	brilliant	Unit 1_5	11	adj.巧妙的	1
+5	crowded	Unit 1_5	11	adj.拥挤的	1
+5	portrait-sketching	Unit 1_5	11	adj.素描肖像的	0
+5	karaoke	Unit 1_5	11	n.卡拉OK	0
+5	calculate	Unit 1_5	11	vt.预测	1
+6	walkathon	Unit 1_6	11	n.健走马拉松	0
+6	alumni	Unit 1_6	11	n.校友	0
+6	home	Unit 1_6	11	n.到正确的位置	0
+6	purchase	Unit 1_6	11	n.&v.购买	1
+6	IT	Unit 1_6	11	abbr.信息技术	0
+7	finance	Unit 1_7	11	n.给...提供资金	1
+7	sophomore	Unit 1_7	11	n.二年级学生	0
+7	proceeds	Unit 1_7	11	n.收入	0
+7	come to	Unit 1_7	11	合计	1
+7	astonished	Unit 1_7	11	adj.十分吃惊的	1
+8	pick up	Unit 1_8	11	(碰巧）买到	1
+8	souvenir	Unit 1_8	11	n.纪念物	0
+8	lasting	Unit 1_8	11	adj.继续存在的	1
+8	drive	Unit 1_8	11	v.有组织的努力	0
+8	extensively	Unit 1_8	11	adv.广泛地	1
+9	pint	Unit 1_9	11	n.品脱	1
+9	play a role in	Unit 1_9	11	发挥作用	1
+9	trucking	Unit 1_9	11	n.货车运输业	1
+9	recognize	Unit 1_9	11	vt.承认，辨认	1
+9	virtually	Unit 1_9	11	adv.几乎	0
+10	critical	Unit 1_10	11	adj.极重要的	0
+10	on hand	Unit 1_10	11	现有	1
+10	absolutely	Unit 1_10	11	adv.绝对地	1
+10	substitute	Unit 1_10	11	n.代替者	1
+10	pair with	Unit 1_10	11	使成对	0
+11	due to	Unit 1_11	11	由于	1
+11	ongoing	Unit 1_11	11	adj.持续存在的	0
+11	precious	Unit 1_11	11	adj.珍贵的	1
+11	sacrifice	Unit 1_11	11	n.&v.牺牲	1
+12	well-argued	Unit 2_1	9	adj.论证充分的	1
+12	motion	Unit 2_1	9	n.提议	1
+12	refute	Unit 2_1	9	vt.驳斥	0
+12	argument	Unit 2_1	9	n.论点	1
+12	propose	Unit 2_1	9	v.提议	1
+13	servant	Unit 2_2	9	n.仆人	1
+13	status	Unit 2_2	9	n.地位	1
+13	confine	Unit 2_2	9	v.限制	0
+13	commit suicide	Unit 2_2	9	自杀	0
+13	cling	Unit 2_2	9	v.抓紧	0
+14	mention	Unit 2_3	9	vt.提到	1
+14	manual	Unit 2_3	9	adj.手工的	0
+14	manual labour	Unit 2_3	9	手工劳动	0
+14	statistics	Unit 2_3	9	n.统计数据	0
+14	life expectancy	Unit 2_3	9	预期寿命	0
+15	weightlifting	Unit 2_4	9	n.举重	1
+15	pay ... a compliment	Unit 2_4	9	称赞	1
+15	superior	Unit 2_4	9	adj.更好的	1
+15	concede	Unit 2_4	9	vt.承认	0
+15	working	Unit 2_4	9	adj.有工作的	1
+16	non-working	Unit 2_5	9	adj.无工作的	1
+16	work out	Unit 2_5	9	计划	1
+16	priority	Unit 2_5	9	n.优先事项	0
+16	burden	Unit 2_5	9	n.负担	1
+16	point out	Unit 2_5	9	指出	1
+17	discrimination	Unit 2_6	9	n.歧视	0
+17	resource	Unit 2_6	9	n.资源	1
+17	play one's part	Unit 2_6	9	参与	1
+17	urge	Unit 2_6	9	vt.敦促	1
+17	vote	Unit 2_6	9	v.投票	1
+18	proposition	Unit 2_7	9	n.提议	1
+18	puberty	Unit 2_7	9	n.青春期	0
+18	phase	Unit 2_7	9	n.阶段	0
+18	head	Unit 2_7	9	v.朝...行进	1
+18	adulthood	Unit 2_7	9	n.成年	1
+19	responsibility	Unit 2_8	9	n.责任	1
+19	deepen	Unit 2_8	9	v.(声音)变低沉	1
+19	pimple	Unit 2_8	9	n.粉刺	0
+19	see-saw	Unit 2_8	9	v.摇摆不定	0
+19	hormone	Unit 2_8	9	n.激素	0
+19	adolescent	Unit 2_8	9	adj.青少年	0
+20	insecure	Unit 2_9	9	adj.缺乏信心的	1
+20	reluctant	Unit 2_9	9	adj.勉强的	1
+20	cope	Unit 2_9	9	v.处理	1
+20	sensible	Unit 2_9	9	adj.理智的	1
+20	risky	Unit 2_9	9	adj.有危险的	1
+20	lifelong	Unit 2_9	9	adj.终身的	1
+21	strait	Unit 3_1	12	n.海峡	1
+21	the Strait of Malacca	Unit 3_1	12	马六甲海峡	0
+21	luxurious	Unit 3_1	12	adj.非常舒适的	0
+21	acre	Unit 3_1	12	n.英亩	0
+21	beachfront	Unit 3_1	12	n.海岸	1
+22	whirlpool	Unit 3_2	12	n.涡流浴池	0
+22	cuisine	Unit 3_2	12	n.饭菜	0
+22	windsurfing	Unit 3_2	12	n.帆板运动	0
+22	water skiing	Unit 3_2	12	n.水撬	0
+22	arcade	Unit 3_2	12	n.拱廊	0
+23	bet	Unit 3_3	12	n.打赌	1
+23	promote	Unit 3_3	12	v.提升	1
+23	a couple of	Unit 3_3	12	几个	1
+23	enclosed	Unit 3_3	12	adj.随函附上的	1
+23	coach	Unit 3_3	12	n.长途客车	1
+24	overseas	Unit 3_4	12	ad.到海外	1
+24	take up	Unit 3_4	12	开始学	1
+24	coach	Unit 3_4	12	n.教练	1
+24	annoying	Unit 3_4	12	adj.使人恼怒的	1
+24	parasailing	Unit 3_4	12	n.水上拖伞运动	0
+25	have a go at	Unit 3_5	12	尝试	1
+25	put up with	Unit 3_5	12	忍受	1
+25	stand up for	Unit 3_5	12	支持	1
+25	parachute	Unit 3_5	12	n.降落伞	0
+25	nervous	Unit 3_5	12	adj.焦虑不安的	1
+26	put off	Unit 3_6	12	推迟	1
+26	excursion	Unit 3_6	12	n.短途旅行	1
+26	dozen	Unit 3_6	12	n.一打	1
+26	dozens of	Unit 3_6	12	许多	1
+26	tame	Unit 3_6	12	adj.驯服的	1
+27	flu	Unit 3_7	12	n.流行性感冒	1
+27	get over	Unit 3_7	12	恢复	1
+27	get together	Unit 3_7	12	聚会	1
+27	ecotourism	Unit 3_7	12	n.生态旅游	0
+27	term	Unit 3_7	12	n.术语	1
+28	era	Unit 3_8	12	n.时代	0
+28	consciousness	Unit 3_8	12	n.神志清醒	1
+28	typically	Unit 3_8	12	adv.通常地	1
+28	heritage	Unit 3_8	12	n.遗产	1
+28	primary	Unit 3_8	12	adj.首要的	1
+29	attraction	Unit 3_9	12	n.有趣的地方	1
+29	take into consideration	Unit 3_9	12	将...考虑进去	1
+29	ecology	Unit 3_9	12	n.生态	1
+29	conservation	Unit 3_9	12	n.保护	1
+29	preservation	Unit 3_9	12	n.保护	1
+30	form	Unit 3_10	12	n.形成	1
+30	declare	Unit 3_10	12	vt.宣布	1
+30	bird-watching	Unit 3_10	12	n.观鸟	1
+30	hiking	Unit 3_10	12	n.徒步旅行	0
+30	photography	Unit 3_10	12	n.摄影	1
+31	mountaineering	Unit 3_11	12	n.登山运动	0
+31	various	Unit 3_11	12	adj.各种各样的	1
+31	annual	Unit 3_11	12	adj.一年一度的	1
+31	greenwashing	Unit 3_11	12	n.绿色伪装	0
+31	profit	Unit 3_11	12	n.获利	1
+32	reserve	Unit 3_12	12	n.自然保护区	1
+32	absorb	Unit 3_12	12	v.吸收	1
+32	rural	Unit 3_12	12	adj.农村的	1
+32	rich in	Unit 3_12	12	富含...的	1
+32	ecological	Unit 3_12	12	adj.生态的	1
+32	destination	Unit 3_12	12	n.目的地	1
+33	groom	Unit 4_1	13	n.新郎	1
+33	registry	Unit 4_1	13	n.登记处	1
+33	registry office	Unit 4_1	13	登记处	1
+33	gown	Unit 4_1	13	n.女礼服	0
+33	costly	Unit 4_1	13	adj.昂贵的	1
+34	hire	Unit 4_2	13	vt.租	1
+34	outfit	Unit 4_2	13	n.全套服装	1
+34	dinner jacket	Unit 4_2	13	晚礼服上装	1
+34	bridesmaid	Unit 4_2	13	n.伴娘	0
+34	bouquet	Unit 4_2	13	n.花束	0
+35	bunch	Unit 4_3	13	n.一束	1
+35	evil	Unit 4_3	13	adj.恶魔的	1
+35	spirit	Unit 4_3	13	n.鬼怪	1
+35	fragrant	Unit 4_3	13	adj.芳香的	0
+35	florist	Unit 4_3	13	n.花商	0
+36	stationery	Unit 4_4	13	n.文具	1
+36	album	Unit 4_4	13	n.簿册	1
+36	consult	Unit 4_4	13	v.咨询	1
+36	specialist	Unit 4_4	13	n.专家	1
+36	printer	Unit 4_4	13	n.印刷商	1
+37	book	Unit 4_5	13	vt.预订	1
+37	limousine	Unit 4_5	13	n.大型豪车	0
+37	reception	Unit 4_5	13	n.欢迎会	1
+37	reserve	Unit 4_5	13	vt.预订	1
+37	afterwards	Unit 4_5	13	adv.以后,后来	1
+38	resist	Unit 4_6	13	v.抗拒	1
+38	temptation	Unit 4_6	13	n.引诱	1
+38	photographer	Unit 4_6	13	n.摄影者	1
+38	specialize	Unit 4_6	13	vi.专攻	1
+38	view	Unit 4_6	13	n.景观	1
+39	avenue	Unit 4_7	13	n.街道	1
+39	personalize	Unit 4_7	13	v.个性化	0
+39	chauffeur	Unit 4_7	13	n.司机	0
+39	consultation	Unit 4_7	13	n.咨询	1
+39	Thanksgiving	Unit 4_7	13	n.感恩节	1
+40	reunion	Unit 4_8	13	n.重聚	1
+40	the Pilgrims	Unit 4_8	13	n.清教徒	0
+40	Plymouth	Unit 4_8	13	n.普利茅斯	0
+40	Massachusetts	Unit 4_8	13	n.马萨诸塞州	0
+40	settler	Unit 4_8	13	n.移民	1
+41	folk	Unit 4_9	13	n.人们	1
+41	set aside	Unit 4_9	13	留出	1
+41	highway	Unit 4_9	13	n.公路	1
+41	shut down	Unit 4_9	13	关闭	1
+41	indoors	Unit 4_9	13	adv.在室内	1
+42	dine	Unit 4_10	13	v.进餐	1
+42	turkey	Unit 4_10	13	n.火鸡	1
+42	stuffing	Unit 4_10	13	n.填料	0
+42	gravy	Unit 4_10	13	n.肉汁	0
+42	cranberry	Unit 4_10	13	n.越橘	0
+43	sauce	Unit 4_11	13	n.调味汁	1
+43	cranberry sauce	Unit 4_11	13	越橘调味汁	0
+43	mashed potatoes	Unit 4_11	13	土豆泥	0
+43	fare	Unit 4_11	13	n.饭菜	1
+43	overflow	Unit 4_11	13	n.漫出	1
+44	brisk	Unit 4_12	13	adj.令人爽快的	0
+44	parade	Unit 4_12	13	n.&v.游行	1
+44	nibble	Unit 4_12	13	n.&v.小口咬	0
+44	reunite	Unit 4_12	13	v.使团圆	1
+45	thankful	Unit 4_13	13	adj.感谢的	1
+45	occasion	Unit 4_13	13	n.时刻	1
+45	entire	Unit 4_13	13	adj.全部的	1
+45	togetherness	Unit 4_13	13	n.和睦团结	1

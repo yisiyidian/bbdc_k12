@@ -18,70 +18,70 @@
 4	headmaster	Unit3_1	1	n.校长	1
 4	monitor	Unit3_1	1	n.班长	1
 4	friend	Unit3_1	1	n.朋友	1
-5	Barbie Doll	Unit4_1	1	芭比娃娃	1
-5	teddy bear	Unit4_1	1	泰迪熊	1
-5	picture book	Unit4_1	1	图画书	1
-5	storybook	Unit4_1	1	n.故事书	1
-5	take a walk	Unit4_1	1	散步	1
-5	give	Unit4_1	1	vt.给...	1
-5	me	Unit4_1	1	pron.我	1
-5	please	Unit4_1	1	int.请	1
-6	sandwich	Unit5_1	1	n.三明治	1
-6	bread	Unit5_1	1	n.面包	1
-6	noodle	Unit5_1	1	n.面条	1
-6	hamburger	Unit5_1	1	n.汉堡包	1
-6	huge	Unit5_1	1	adj.巨大的	1
-6	want	Unit5_1	1	vi.想要	1
-6	ice-cream	Unit5_1	1	n.冰淇淋	1
-7	Sunday	Unit6_1	1	n.星期天	1
-7	Monday	Unit6_1	1	n.星期一	1
-7	Tuesday	Unit6_1	1	n.星期二	1
-7	Wednesday	Unit6_1	1	n.星期三	1
-7	Thursday	Unit6_1	1	n.星期四	1
-7	Friday	Unit6_1	1	n.星期五	1
-7	Saturday	Unit6_1	1	n.星期六	1
-7	today	Unit6_1	1	n.今天	1
-8	shout	Unit7_1	1	v.喊	1
-8	feed	Unit7_1	1	vt.喂	1
-8	paint	Unit7_1	1	v.刷	1
-8	touch	Unit7_1	1	vt.碰	1
-8	excuse	Unit7_1	1	v.原谅	1
-8	smoke	Unit7_1	1	v.吸烟	1
-8	sign	Unit7_1	1	n.标记	1
-8	don't	Unit7_1	1	不要...	1
-9	towel	Unit8_1	1	n.毛巾	1
-9	soap	Unit8_1	1	n.肥皂	1
-9	tooth-brush	Unit8_1	1	n.牙刷	1
-9	tooth-paste	Unit8_1	1	n.牙膏	1
-10	grape	Unit9_1	1	n.葡萄	1
-10	date	Unit9_1	1	n.枣子	1
-10	melon	Unit9_1	1	n.瓜	1
-10	lemon	Unit9_1	1	n.柠檬	1
-10	run	Unit9_1	1	vi.赛跑	1
-10	have a race	Unit9_1	1	赛跑	1
-10	ready	Unit9_1	1	adj.预备	1
-10	winner	Unit9_1	1	n.胜者	1
-10	run	Unit9_1	1	vi.跑	1
-11	grapefruit	Unit10_1	1	n.葡萄柚	1
-11	plum	Unit10_1	1	n.李子	1
-11	lichee	Unit10_1	1	n.荔枝	1
-11	strawberry	Unit10_1	1	n.草莓	1
-11	mango	Unit10_1	1	n.芒果	1
-11	side	Unit10_1	1	n.边	1
-11	pull	Unit10_1	1	v.拉	1
-11	team	Unit10_1	1	n.小队	1
-12	ant	Unit11_1	1	n.蚂蚁	1
-12	spider	Unit11_1	1	n.蜘蛛	1
-12	butterfly	Unit11_1	1	n.蝴蝶	1
-12	dragonfly	Unit11_1	1	n.蜻蜓	1
-12	help	Unit11_1	1	vt.帮助	1
-12	fly	Unit11_1	1	vt.飞	1
-12	cockroach	Unit11_1	1	n.蟑螂	1
-12	have	Unit11_1	1	v.有	1
-13	shark	Unit12_1	1	n.鲨鱼	1
-13	whale	Unit12_1	1	n.鲸	1
-13	seal	Unit12_1	1	n.海豹	1
-13	dolphin	Unit12_1	1	n.海豚	1
-13	sea horse	Unit12_1	1	n.海马	1
-13	their	Unit12_1	1	pron.他们的	1
-13	there are	Unit12_1	1	有（表存在的句型）	1
+5	Barbie Doll	Unit4_1	2	芭比娃娃	1
+5	teddy bear	Unit4_1	2	泰迪熊	1
+5	picture book	Unit4_1	2	图画书	1
+5	storybook	Unit4_1	2	n.故事书	1
+6	take a walk	Unit4_2	2	散步	1
+6	give	Unit4_2	2	vt.给...	1
+6	me	Unit4_2	2	pron.我	1
+6	please	Unit4_2	2	int.请	1
+7	sandwich	Unit5_1	1	n.三明治	1
+7	bread	Unit5_1	1	n.面包	1
+7	noodle	Unit5_1	1	n.面条	1
+7	hamburger	Unit5_1	1	n.汉堡包	1
+7	huge	Unit5_1	1	adj.巨大的	1
+7	want	Unit5_1	1	vi.想要	1
+7	ice-cream	Unit5_1	1	n.冰淇淋	1
+8	Sunday	Unit6_1	2	n.星期天	1
+8	Monday	Unit6_1	2	n.星期一	1
+8	Tuesday	Unit6_1	2	n.星期二	1
+8	Wednesday	Unit6_1	2	n.星期三	1
+9	Thursday	Unit6_2	2	n.星期四	1
+9	Friday	Unit6_2	2	n.星期五	1
+9	Saturday	Unit6_2	2	n.星期六	1
+9	today	Unit6_2	2	n.今天	1
+10	shout	Unit7_1	2	v.喊	1
+10	feed	Unit7_1	2	vt.喂	1
+10	paint	Unit7_1	2	v.刷	1
+10	touch	Unit7_1	2	vt.碰	1
+11	excuse	Unit7_2	2	v.原谅	1
+11	smoke	Unit7_2	2	v.吸烟	1
+11	sign	Unit7_2	2	n.标记	1
+11	don't	Unit7_2	2	不要...	1
+12	towel	Unit8_1	1	n.毛巾	1
+12	soap	Unit8_1	1	n.肥皂	1
+12	tooth-brush	Unit8_1	1	n.牙刷	1
+12	tooth-paste	Unit8_1	1	n.牙膏	1
+13	grape	Unit9_1	2	n.葡萄	1
+13	date	Unit9_1	2	n.枣子	1
+13	melon	Unit9_1	2	n.瓜	1
+13	lemon	Unit9_1	2	n.柠檬	1
+13	run	Unit9_1	2	vi.赛跑	1
+14	have a race	Unit9_2	2	赛跑	1
+14	ready	Unit9_2	2	adj.预备	1
+14	winner	Unit9_2	2	n.胜者	1
+14	run	Unit9_2	2	vi.跑	1
+15	grapefruit	Unit10_1	2	n.葡萄柚	1
+15	plum	Unit10_1	2	n.李子	1
+15	lichee	Unit10_1	2	n.荔枝	1
+15	strawberry	Unit10_1	2	n.草莓	1
+16	mango	Unit10_2	2	n.芒果	1
+16	side	Unit10_2	2	n.边	1
+16	pull	Unit10_2	2	v.拉	1
+16	team	Unit10_2	2	n.小队	1
+17	ant	Unit11_1	2	n.蚂蚁	1
+17	spider	Unit11_1	2	n.蜘蛛	1
+17	butterfly	Unit11_1	2	n.蝴蝶	1
+17	dragonfly	Unit11_1	2	n.蜻蜓	1
+18	help	Unit11_2	2	vt.帮助	1
+18	fly	Unit11_2	2	vt.飞	1
+18	cockroach	Unit11_2	2	n.蟑螂	1
+18	have	Unit11_2	2	v.有	1
+19	shark	Unit12_1	1	n.鲨鱼	1
+19	whale	Unit12_1	1	n.鲸	1
+19	seal	Unit12_1	1	n.海豹	1
+19	dolphin	Unit12_1	1	n.海豚	1
+19	sea horse	Unit12_1	1	n.海马	1
+19	their	Unit12_1	1	pron.他们的	1
+19	there are	Unit12_1	1	有（表存在的句型）	1

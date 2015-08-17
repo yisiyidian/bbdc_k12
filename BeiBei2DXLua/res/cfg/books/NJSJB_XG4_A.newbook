@@ -1,120 +1,120 @@
-1	like	Unit 1_1	2	vt.喜欢	1
-1	dog	Unit 1_1	2	n.狗	1
-1	animal	Unit 1_1	2	n.动物	1
-2	cat	Unit 1_2	2	n.猫	1
-2	cute	Unit 1_2	2	adj.可爱的	1
-2	panda	Unit 1_2	2	n.熊猫	1
-2	fat	Unit 1_2	2	adj.胖的	1
-2	elephant	Unit 1_2	2	n.大象	1
-2	horse	Unit 1_2	2	n.马	1
-2	lion	Unit 1_2	2	n.狮子	1
-2	monkey	Unit 1_2	2	n.猴子	1
-2	tiger	Unit 1_2	2	n.老虎	1
-2	have	Unit 1_2	2	v.有	1
-3	Let's ...	Unit 2_1	2	咱们...	1
-3	make	Unit 2_1	2	vt.做	1
-3	fruit	Unit 2_1	2	n.水果	1
-3	salad	Unit 2_1	2	n.色拉	1
-3	pineapple	Unit 2_1	2	n.菠萝	1
-3	mango	Unit 2_1	2	n.芒果	1
-3	any	Unit 2_1	2	adj.任何的	1
-3	banana	Unit 2_1	2	n.香蕉	1
-4	some	Unit 2_2	2	adj.&pron一些	1
-4	grape	Unit 2_2	2	n.葡萄	1
-4	Thanks	Unit 2_2	2	int.谢谢	1
-4	our	Unit 2_2	2	pron.我们的	1
-4	cool	Unit 2_2	2	adj.酷	1
-4	wonderful	Unit 2_2	2	adj.精彩的	1
-4	how many	Unit 2_2	2	多少	1
-5	thirteen	Unit 3_1	2	num.十三	1
-5	sticker	Unit 3_1	2	n.贴纸	1
-5	can	Unit 3_1	2	aux.能	1
-5	have a look	Unit 3_1	2	看一看	1
-5	very	Unit 3_1	2	adv.很	1
-5	fifteen	Unit 3_1	2	num.十五	1
-5	sure	Unit 3_1	2	adv.当然	1
-5	fourteen	Unit 3_1	2	num.十四	1
-5	sixteen	Unit 3_1	2	num.十六	1
-6	seventeen	Unit 3_2	2	num.十七	1
-6	eighteen	Unit 3_2	2	num.十八	1
-6	nineteen	Unit 3_2	2	num.十九	1
-6	play	Unit 3_2	2	v.玩	1
-6	many	Unit 3_2	2	pron.许多	1
-6	box	Unit 3_2	2	n.盒子	1
-6	table tennis	Unit 3_2	2	乒乓球	1
-6	but	Unit 3_2	2	conj.但是	1
-6	do	Unit 3_2	2	v.做	1
-7	basketball	Unit 4_1	1	n.篮球	1
-7	well	Unit 4_1	1	adv.好	1
-7	have a try	Unit 4_1	1	试一试	1
-7	yeah	Unit 4_1	1	adv.是的	1
-7	football	Unit 4_1	1	n.足球	1
-7	jump	Unit 4_1	1	n.&v.跳	1
-7	skate	Unit 4_1	1	n.&v.溜冰	1
-7	swim	Unit 4_1	1	n.&v.游泳	1
-7	quack	Unit 4_1	1	n.呱呱声	1
-7	tweet	Unit 4_1	1	n.叽喳声	1
-7	fly	Unit 4_1	1	vt.飞	1
-7	ouch	Unit 4_1	1	int.哎呦	1
-7	sad	Unit 4_1	1	adj.难过的	1
-7	either	Unit 4_1	1	pron.也	1
-8	home	Unit 5_1	1	n.家	1
-8	bedroom	Unit 5_1	1	n.卧室	1
-8	living room	Unit 5_1	1	客厅	1
-8	sofa	Unit 5_1	1	n.沙发	1
-8	come	Unit 5_1	1	vi.来	1
-8	kitchen	Unit 5_1	1	n.厨房	1
-8	clock	Unit 5_1	1	n.钟	1
-8	fridge	Unit 5_1	1	n.冰箱	1
-8	table	Unit 5_1	1	n.桌子	1
-8	bathroom	Unit 5_1	1	n.卫生间	1
-8	How are you	Unit 5_1	1	你好吗？	1
-8	hungry	Unit 5_1	1	adj.饿的	1
-8	What would you like	Unit 5_1	1	你想要什么？	1
-8	I'd like ...	Unit 5_1	1	我想要...	1
-9	at	Unit 6_1	2	prep.在	1
-9	snack bar	Unit 6_1	2	小吃店	1
-9	hamburger	Unit 6_1	2	n.汉堡包	1
-9	a glass of	Unit 6_1	2	一杯	1
-9	noodles	Unit 6_1	2	n.面条	1
-9	dad	Unit 6_1	2	n.爸爸	1
-9	sandwich	Unit 6_1	2	n.三明治	1
-9	a cup of	Unit 6_1	2	一杯	1
-9	coffee	Unit 6_1	2	n.咖啡	1
-10	Anything else	Unit 6_2	2	还要其他东西吗？	1
-10	tea	Unit 6_2	2	n.茶	1
-10	juice	Unit 6_2	2	n.果汁	1
-10	rice	Unit 6_2	2	n.米饭	1
-10	Me too	Unit 6_2	2	我也是	1
-10	fish	Unit 6_2	2	n.鱼	1
-10	Can I help you	Unit 6_2	2	我能帮你吗？	1
-10	big	Unit 6_2	2	adj.大的	1
-11	how much	Unit 7_1	2	多少钱	1
-11	shoe	Unit 7_1	2	n.鞋子	1
-11	yuan	Unit 7_1	2	n.元	1
-11	sock	Unit 7_1	2	n.袜子	1
-11	umbrella	Unit 7_1	2	n.伞	1
-11	only	Unit 7_1	2	adv.只有	1
-11	twenty-eight	Unit 7_1	2	num.二十八	1
-11	Well done	Unit 7_1	2	好样的	1
-11	fan	Unit 7_1	2	n.扇子	1
-12	twenty	Unit 7_2	2	num.二十	1
-12	thirty	Unit 7_2	2	num.三十	1
-12	forty	Unit 7_2	2	num.四十	1
-12	fifty	Unit 7_2	2	num.五十	1
-12	forty-five	Unit 7_2	2	num.四十五	1
-12	her	Unit 7_2	2	pron.她的	1
-12	tail	Unit 7_2	2	n.尾巴	1
-12	long	Unit 7_2	2	adj.长的	1
-13	hair	Unit 8_1	1	n.头发	1
-13	eye	Unit 8_1	1	n.眼睛	1
-13	nose	Unit 8_1	1	n.鼻子	1
-13	mouth	Unit 8_1	1	n.嘴巴	1
-13	small	Unit 8_1	1	adj.小的	1
-13	his	Unit 8_1	1	pron.他的	1
-13	short	Unit 8_1	1	adj.矮的	1
-13	ear	Unit 8_1	1	n.耳朵	1
-13	king	Unit 8_1	1	n.国王	1
-13	thin	Unit 8_1	1	adj.瘦的	1
-13	tall	Unit 8_1	1	adj.高的	1
-13	snowman	Unit 8_1	1	n.雪人	1
+1	like	Unit 1_1	3	vt.喜欢	1
+1	dog	Unit 1_1	3	n.狗	1
+1	animal	Unit 1_1	3	n.动物	1
+2	cat	Unit 1_2	3	n.猫	1
+2	cute	Unit 1_2	3	adj.可爱的	1
+2	panda	Unit 1_2	3	n.熊猫	1
+2	fat	Unit 1_2	3	adj.胖的	1
+2	elephant	Unit 1_2	3	n.大象	1
+3	horse	Unit 1_3	3	n.马	1
+3	lion	Unit 1_3	3	n.狮子	1
+3	monkey	Unit 1_3	3	n.猴子	1
+3	tiger	Unit 1_3	3	n.老虎	1
+3	have	Unit 1_3	3	v.有	1
+4	Let's ...	Unit 2_1	3	咱们...	1
+4	make	Unit 2_1	3	vt.做	1
+4	fruit	Unit 2_1	3	n.水果	1
+4	salad	Unit 2_1	3	n.色拉	1
+4	pineapple	Unit 2_1	3	n.菠萝	1
+5	mango	Unit 2_2	3	n.芒果	1
+5	any	Unit 2_2	3	adj.任何的	1
+5	banana	Unit 2_2	3	n.香蕉	1
+5	some	Unit 2_2	3	adj.&pron一些	1
+5	grape	Unit 2_2	3	n.葡萄	1
+6	Thanks	Unit 2_3	3	int.谢谢	1
+6	our	Unit 2_3	3	pron.我们的	1
+6	cool	Unit 2_3	3	adj.酷	1
+6	wonderful	Unit 2_3	3	adj.精彩的	1
+6	how many	Unit 2_3	3	多少	1
+7	thirteen	Unit 3_1	4	num.十三	1
+7	sticker	Unit 3_1	4	n.贴纸	1
+7	can	Unit 3_1	4	aux.能	1
+7	have a look	Unit 3_1	4	看一看	1
+7	very	Unit 3_1	4	adv.很	1
+8	fifteen	Unit 3_2	4	num.十五	1
+8	sure	Unit 3_2	4	adv.当然	1
+8	fourteen	Unit 3_2	4	num.十四	1
+8	sixteen	Unit 3_2	4	num.十六	1
+8	seventeen	Unit 3_2	4	num.十七	1
+9	eighteen	Unit 3_3	4	num.十八	1
+9	nineteen	Unit 3_3	4	num.十九	1
+9	play	Unit 3_3	4	v.玩	1
+9	many	Unit 3_3	4	pron.许多	1
+10	box	Unit 3_4	4	n.盒子	1
+10	table tennis	Unit 3_4	4	乒乓球	1
+10	but	Unit 3_4	4	conj.但是	1
+10	do	Unit 3_4	4	v.做	1
+11	basketball	Unit 4_1	3	n.篮球	1
+11	well	Unit 4_1	3	adv.好	1
+11	have a try	Unit 4_1	3	试一试	1
+11	yeah	Unit 4_1	3	adv.是的	1
+11	football	Unit 4_1	3	n.足球	1
+12	jump	Unit 4_2	3	n.&v.跳	1
+12	skate	Unit 4_2	3	n.&v.溜冰	1
+12	swim	Unit 4_2	3	n.&v.游泳	1
+12	quack	Unit 4_2	3	n.呱呱声	1
+12	tweet	Unit 4_2	3	n.叽喳声	1
+13	fly	Unit 4_3	3	vt.飞	1
+13	ouch	Unit 4_3	3	int.哎呦	1
+13	sad	Unit 4_3	3	adj.难过的	1
+13	either	Unit 4_3	3	pron.也	1
+14	home	Unit 5_1	3	n.家	1
+14	bedroom	Unit 5_1	3	n.卧室	1
+14	living room	Unit 5_1	3	客厅	1
+14	sofa	Unit 5_1	3	n.沙发	1
+14	come	Unit 5_1	3	vi.来	1
+15	kitchen	Unit 5_2	3	n.厨房	1
+15	clock	Unit 5_2	3	n.钟	1
+15	fridge	Unit 5_2	3	n.冰箱	1
+15	table	Unit 5_2	3	n.桌子	1
+15	bathroom	Unit 5_2	3	n.卫生间	1
+16	How are you	Unit 5_3	3	你好吗？	1
+16	hungry	Unit 5_3	3	adj.饿的	1
+16	What would you like	Unit 5_3	3	你想要什么？	1
+16	I'd like ...	Unit 5_3	3	我想要...	1
+17	at	Unit 6_1	3	prep.在	1
+17	snack bar	Unit 6_1	3	小吃店	1
+17	hamburger	Unit 6_1	3	n.汉堡包	1
+17	a glass of	Unit 6_1	3	一杯	1
+17	noodles	Unit 6_1	3	n.面条	1
+17	dad	Unit 6_1	3	n.爸爸	1
+18	sandwich	Unit 6_2	3	n.三明治	1
+18	a cup of	Unit 6_2	3	一杯	1
+18	coffee	Unit 6_2	3	n.咖啡	1
+18	Anything else	Unit 6_2	3	还要其他东西吗？	1
+18	tea	Unit 6_2	3	n.茶	1
+18	juice	Unit 6_2	3	n.果汁	1
+19	rice	Unit 6_3	3	n.米饭	1
+19	Me too	Unit 6_3	3	我也是	1
+19	fish	Unit 6_3	3	n.鱼	1
+19	Can I help you	Unit 6_3	3	我能帮你吗？	1
+19	big	Unit 6_3	3	adj.大的	1
+20	how much	Unit 7_1	3	多少钱	1
+20	shoe	Unit 7_1	3	n.鞋子	1
+20	yuan	Unit 7_1	3	n.元	1
+20	sock	Unit 7_1	3	n.袜子	1
+20	umbrella	Unit 7_1	3	n.伞	1
+20	only	Unit 7_1	3	adv.只有	1
+21	twenty-eight	Unit 7_2	3	num.二十八	1
+21	Well done	Unit 7_2	3	好样的	1
+21	fan	Unit 7_2	3	n.扇子	1
+21	twenty	Unit 7_2	3	num.二十	1
+21	thirty	Unit 7_2	3	num.三十	1
+21	forty	Unit 7_2	3	num.四十	1
+22	fifty	Unit 7_3	3	num.五十	1
+22	forty-five	Unit 7_3	3	num.四十五	1
+22	her	Unit 7_3	3	pron.她的	1
+22	tail	Unit 7_3	3	n.尾巴	1
+22	long	Unit 7_3	3	adj.长的	1
+23	hair	Unit 8_1	2	n.头发	1
+23	eye	Unit 8_1	2	n.眼睛	1
+23	nose	Unit 8_1	2	n.鼻子	1
+23	mouth	Unit 8_1	2	n.嘴巴	1
+23	small	Unit 8_1	2	adj.小的	1
+23	his	Unit 8_1	2	pron.他的	1
+24	short	Unit 8_2	2	adj.矮的	1
+24	ear	Unit 8_2	2	n.耳朵	1
+24	king	Unit 8_2	2	n.国王	1
+24	thin	Unit 8_2	2	adj.瘦的	1
+24	tall	Unit 8_2	2	adj.高的	1
+24	snowman	Unit 8_2	2	n.雪人	1

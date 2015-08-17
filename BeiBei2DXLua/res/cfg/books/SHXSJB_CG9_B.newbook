@@ -1,133 +1,133 @@
-1	in common with	unit 1 Topic 1_1	3	与 ... 有共同之处	1
-1	warm-hearted	unit 1 Topic 1_1	3	adj.热心的	0
-1	generous	unit 1 Topic 1_1	3	adj.大方的	0
-2	log	unit 1 Topic 1_2	3	n.登录	1
-2	log on	unit 1 Topic 1_2	3	登录	1
-2	pain	unit 1 Topic 1_2	3	n.痛	1
-2	get along	unit 1 Topic 1_2	3	相处得好	1
-2	honest	unit 1 Topic 1_2	3	adj.诚实的	1
-2	reliable	unit 1 Topic 1_2	3	adj.可靠的	1
-2	whenever	unit 1 Topic 1_2	3	adv.无论什么时候	1
-2	give ... a helping hand	unit 1 Topic 1_2	3	助某人一臂之力	1
-2	friendship	unit 1 Topic 1_2	3	n.友谊	1
-2	respect	unit 1 Topic 1_2	3	vt.尊敬	1
-2	support	unit 1 Topic 1_2	3	n.支持	1
-2	modest	unit 1 Topic 1_2	3	adj.谦虚的	1
-3	promise	unit 1 Topic 1_3	3	v.承诺	1
-3	bat	unit 1 Topic 1_3	3	n.蝙蝠	1
-3	on one's side	unit 1 Topic 1_3	3	站在某一方	0
-3	fight	unit 1 Topic 1_3	3	n.打架	1
-3	wing	unit 1 Topic 1_3	3	n.翅膀	1
-3	defeat	unit 1 Topic 1_3	3	vt.击败	1
-3	sharp	unit 1 Topic 1_3	3	adj.锋利的	1
-3	to make matters worse	unit 1 Topic 1_3	3	使情况更糟的是	0
-3	indeed	unit 1 Topic 1_3	3	adv.的确	1
-3	belong	unit 1 Topic 1_3	3	vi.属于	1
-3	make peace	unit 1 Topic 1_3	3	和解	0
-4	volunteer	unit 1 Topic 2_1	3	n.志愿	1
-4	contribute	unit 1 Topic 2_1	3	vi.贡献	1
-4	community	unit 1 Topic 2_1	3	n.社区	1
-4	elderly	unit 1 Topic 2_1	3	adj.近老年的	1
-4	after-school	unit 1 Topic 2_1	3	adj.课余的	1
-4	care centre	unit 1 Topic 2_1	3	托管中心	1
-4	league	unit 1 Topic 2_1	3	n.同盟	0
-4	call	unit 1 Topic 2_1	3	v.号召	1
-4	behalf	unit 1 Topic 2_1	3	n.利益	0
-4	on behalf of	unit 1 Topic 2_1	3	代表 ...	0
-5	aim	unit 1 Topic 2_2	3	v.旨在	1
-5	gain	unit 1 Topic 2_2	3	n.获得	1
-5	promote	unit 1 Topic 2_2	3	v.促进	1
-5	personal	unit 1 Topic 2_2	3	adj.私人的	1
-5	at the end of	unit 1 Topic 2_2	3	在 ... 结尾	1
-5	put off	unit 1 Topic 2_2	3	推迟	1
-5	wealthy	unit 1 Topic 2_2	3	adj.富有的	1
-5	look down on	unit 1 Topic 2_2	3	瞧不起	1
-5	insist	unit 1 Topic 2_2	3	vt.坚持	1
-5	insist on	unit 1 Topic 2_2	3	坚持	1
-6	nursing	unit 1 Topic 2_3	3	n.护理	1
-6	condition	unit 1 Topic 2_3	3	n.条件	1
-6	once	unit 1 Topic 2_3	3	conj.一旦	1
-6	disease	unit 1 Topic 2_3	3	n.疾病	1
-6	demand	unit 1 Topic 2_3	3	v.要求	1
-6	in great demand	unit 1 Topic 2_3	3	需求很大	1
-6	equipment	unit 1 Topic 2_3	3	n.设备	1
-6	kiss	unit 1 Topic 2_3	3	vt.&n.吻	1
-6	set an example for	unit 1 Topic 2_3	3	为 ... 作出榜样	1
-7	cherry	unit 1 Topic 3_1	4	n.樱桃	0
-7	swing	unit 1 Topic 3_1	4	n.挥舞	0
-7	hatchet	unit 1 Topic 3_1	4	n.短柄斧	0
-7	chop	unit 1 Topic 3_1	4	n.砍	0
-7	leaf	unit 1 Topic 3_1	4	n.叶子	1
-7	branch	unit 1 Topic 3_1	4	n.树枝	1
-7	believe	unit 1 Topic 3_1	4	vi.信仰	1
-7	honesty	unit 1 Topic 3_1	4	n.诚实	1
-7	truth	unit 1 Topic 3_1	4	n.事实	1
-8	what if	unit 1 Topic 3_2	4	如果 ... 将会怎么样	1
-8	punish	unit 1 Topic 3_2	4	v.惩罚	1
-8	go around	unit 1 Topic 3_2	4	四处走动	1
-8	pause	unit 1 Topic 3_2	4	n.暂停	1
-8	breath	unit 1 Topic 3_2	4	n.呼吸	1
-8	draw a deep breath	unit 1 Topic 3_2	4	吸口气	1
-8	back away	unit 1 Topic 3_2	4	后退	0
-8	hold out	unit 1 Topic 3_2	4	伸出	1
-8	duty	unit 1 Topic 3_2	4	n.义务	1
-9	on duty	unit 1 Topic 3_3	4	值班	1
-9	cooperation	unit 1 Topic 3_3	4	n.合作	0
-9	modesty	unit 1 Topic 3_3	4	n.谦虚	1
-9	farm	unit 1 Topic 3_3	4	n.农场	1
-9	farm work	unit 1 Topic 3_3	4	农活	1
-9	cheat	unit 1 Topic 3_3	4	vt.&n.欺骗	1
-9	right	unit 1 Topic 3_3	4	adj.权利	1
-9	adult	unit 1 Topic 3_3	4	adj.成年人	1
-9	part-time	unit 1 Topic 3_3	4	adj.兼职的	1
-10	get married	unit 1 Topic 3_4	4	结婚	1
-10	go along with	unit 1 Topic 3_4	4	相随	1
-10	no longer	unit 1 Topic 3_4	4	不再	1
-10	rely	unit 1 Topic 3_4	4	v.依赖	1
-10	rely on	unit 1 Topic 3_4	4	依赖	1
-10	tax	unit 1 Topic 3_4	4	n.税	1
-10	income tax	unit 1 Topic 3_4	4	所得税	1
-10	enter into	unit 1 Topic 3_4	4	进入	1
-10	understanding	unit 1 Topic 3_4	4	n.&adj.理解	1
-10	society	unit 1 Topic 3_4	4	n.社会	1
-11	replace	unit 2 Topic 1_1	2	vt.代替	1
-11	adopt	unit 2 Topic 1_1	2	v.采纳	1
-11	envy	unit 2 Topic 1_1	2	vt.羡慕	1
-11	in charge of	unit 2 Topic 1_1	2	负责	1
-11	actually	unit 2 Topic 1_1	2	adv.实际上	1
-11	etc	unit 2 Topic 1_1	2	等等	1
-11	seem	unit 2 Topic 1_1	2	vi.好像是	1
-11	in detail	unit 2 Topic 1_1	2	详细地	1
-11	camera	unit 2 Topic 1_1	2	n.照相机	1
-11	video camera	unit 2 Topic 1_1	2	摄像机	1
-11	repair	unit 2 Topic 1_1	2	vi.修理	1
-12	physical	unit 2 Topic 1_2	2	adj.物理的	1
-12	physical exercise	unit 2 Topic 1_2	2	体育锻炼	1
-12	recorder	unit 2 Topic 1_2	2	n.录音机	1
-12	tape recorder	unit 2 Topic 1_2	2	盒式录音机	1
-12	construct	unit 2 Topic 1_2	2	vt.建造	1
-12	note	unit 2 Topic 1_2	2	n.注意	1
-12	contrast	unit 2 Topic 1_2	2	n.成对比	1
-12	farmland	unit 2 Topic 1_2	2	n.农田	1
-12	commuter	unit 2 Topic 1_2	2	n.乘车上下班的人	0
-12	livable	unit 2 Topic 1_2	2	adj.适于居住的	0
-13	clone	unit 2 Topic 2_1	2	v.克隆	0
-13	be short of	unit 2 Topic 2_1	2	缺乏	1
-13	gene	unit 2 Topic 2_1	2	n.基因	0
-13	warming	unit 2 Topic 2_1	2	n.暖和	1
-13	global warming	unit 2 Topic 2_1	2	全球性气候变暖	1
-13	prediction	unit 2 Topic 2_1	2	n.预言	0
-13	cure	unit 2 Topic 2_1	2	vt.治愈	1
-13	intelligent	unit 2 Topic 2_1	2	adj.聪明的	0
-13	shortage	unit 2 Topic 2_1	2	n.不足	0
-13	domestic	unit 2 Topic 2_1	2	adj.本国的	0
-14	export	unit 2 Topic 2_2	2	vt.出口	1
-14	drug	unit 2 Topic 2_2	2	n.药	1
-14	rocket	unit 2 Topic 2_2	2	n.火箭	0
-14	body bank	unit 2 Topic 2_2	2	人体器官库	1
-14	shape	unit 2 Topic 2_2	2	n.形状	1
-14	in the shape of	unit 2 Topic 2_2	2	呈 ... 的形状	1
-14	steel	unit 2 Topic 2_2	2	n.钢	1
-14	exist	unit 2 Topic 2_2	2	v.存在	1
-14	retire	unit 2 Topic 2_2	2	v.退休	1
-14	at the age of	unit 2 Topic 2_2	2	在 ... 的年龄	1
+1	in common with	unit 1 Topic 1_1	6	与 ... 有共同之处	1
+1	warm-hearted	unit 1 Topic 1_1	6	adj.热心的	0
+1	generous	unit 1 Topic 1_1	6	adj.大方的	0
+2	log	unit 1 Topic 1_2	6	n.登录	1
+2	log on	unit 1 Topic 1_2	6	登录	1
+2	pain	unit 1 Topic 1_2	6	n.痛	1
+2	get along	unit 1 Topic 1_2	6	相处得好	1
+2	honest	unit 1 Topic 1_2	6	adj.诚实的	1
+3	reliable	unit 1 Topic 1_3	6	adj.可靠的	1
+3	whenever	unit 1 Topic 1_3	6	adv.无论什么时候	1
+3	give ... a helping hand	unit 1 Topic 1_3	6	助某人一臂之力	1
+3	friendship	unit 1 Topic 1_3	6	n.友谊	1
+3	respect	unit 1 Topic 1_3	6	vt.尊敬	1
+4	support	unit 1 Topic 1_4	6	n.支持	1
+4	modest	unit 1 Topic 1_4	6	adj.谦虚的	1
+4	promise	unit 1 Topic 1_4	6	v.承诺	1
+4	bat	unit 1 Topic 1_4	6	n.蝙蝠	1
+4	on one's side	unit 1 Topic 1_4	6	站在某一方	0
+5	fight	unit 1 Topic 1_5	6	n.打架	1
+5	wing	unit 1 Topic 1_5	6	n.翅膀	1
+5	defeat	unit 1 Topic 1_5	6	vt.击败	1
+5	sharp	unit 1 Topic 1_5	6	adj.锋利的	1
+6	to make matters worse	unit 1 Topic 1_6	6	使情况更糟的是	0
+6	indeed	unit 1 Topic 1_6	6	adv.的确	1
+6	belong	unit 1 Topic 1_6	6	vi.属于	1
+6	make peace	unit 1 Topic 1_6	6	和解	0
+7	volunteer	unit 1 Topic 2_1	6	n.志愿	1
+7	contribute	unit 1 Topic 2_1	6	vi.贡献	1
+7	community	unit 1 Topic 2_1	6	n.社区	1
+7	elderly	unit 1 Topic 2_1	6	adj.近老年的	1
+7	after-school	unit 1 Topic 2_1	6	adj.课余的	1
+8	care centre	unit 1 Topic 2_2	6	托管中心	1
+8	league	unit 1 Topic 2_2	6	n.同盟	0
+8	call	unit 1 Topic 2_2	6	v.号召	1
+8	behalf	unit 1 Topic 2_2	6	n.利益	0
+8	on behalf of	unit 1 Topic 2_2	6	代表 ...	0
+9	aim	unit 1 Topic 2_3	6	v.旨在	1
+9	gain	unit 1 Topic 2_3	6	n.获得	1
+9	promote	unit 1 Topic 2_3	6	v.促进	1
+9	personal	unit 1 Topic 2_3	6	adj.私人的	1
+9	at the end of	unit 1 Topic 2_3	6	在 ... 结尾	1
+10	put off	unit 1 Topic 2_4	6	推迟	1
+10	wealthy	unit 1 Topic 2_4	6	adj.富有的	1
+10	look down on	unit 1 Topic 2_4	6	瞧不起	1
+10	insist	unit 1 Topic 2_4	6	vt.坚持	1
+10	insist on	unit 1 Topic 2_4	6	坚持	1
+11	nursing	unit 1 Topic 2_5	6	n.护理	1
+11	condition	unit 1 Topic 2_5	6	n.条件	1
+11	once	unit 1 Topic 2_5	6	conj.一旦	1
+11	disease	unit 1 Topic 2_5	6	n.疾病	1
+11	demand	unit 1 Topic 2_5	6	v.要求	1
+12	in great demand	unit 1 Topic 2_6	6	需求很大	1
+12	equipment	unit 1 Topic 2_6	6	n.设备	1
+12	kiss	unit 1 Topic 2_6	6	vt.&n.吻	1
+12	set an example for	unit 1 Topic 2_6	6	为 ... 作出榜样	1
+13	cherry	unit 1 Topic 3_1	7	n.樱桃	0
+13	swing	unit 1 Topic 3_1	7	n.挥舞	0
+13	hatchet	unit 1 Topic 3_1	7	n.短柄斧	0
+13	chop	unit 1 Topic 3_1	7	n.砍	0
+13	leaf	unit 1 Topic 3_1	7	n.叶子	1
+14	branch	unit 1 Topic 3_2	7	n.树枝	1
+14	believe	unit 1 Topic 3_2	7	vi.信仰	1
+14	honesty	unit 1 Topic 3_2	7	n.诚实	1
+14	truth	unit 1 Topic 3_2	7	n.事实	1
+14	what if	unit 1 Topic 3_2	7	如果 ... 将会怎么样	1
+15	punish	unit 1 Topic 3_3	7	v.惩罚	1
+15	go around	unit 1 Topic 3_3	7	四处走动	1
+15	pause	unit 1 Topic 3_3	7	n.暂停	1
+15	breath	unit 1 Topic 3_3	7	n.呼吸	1
+15	draw a deep breath	unit 1 Topic 3_3	7	吸口气	1
+16	back away	unit 1 Topic 3_4	7	后退	0
+16	hold out	unit 1 Topic 3_4	7	伸出	1
+16	duty	unit 1 Topic 3_4	7	n.义务	1
+16	on duty	unit 1 Topic 3_4	7	值班	1
+16	cooperation	unit 1 Topic 3_4	7	n.合作	0
+17	modesty	unit 1 Topic 3_5	7	n.谦虚	1
+17	farm	unit 1 Topic 3_5	7	n.农场	1
+17	farm work	unit 1 Topic 3_5	7	农活	1
+17	cheat	unit 1 Topic 3_5	7	vt.&n.欺骗	1
+17	right	unit 1 Topic 3_5	7	adj.权利	1
+18	adult	unit 1 Topic 3_6	7	adj.成年人	1
+18	part-time	unit 1 Topic 3_6	7	adj.兼职的	1
+18	get married	unit 1 Topic 3_6	7	结婚	1
+18	go along with	unit 1 Topic 3_6	7	相随	1
+18	no longer	unit 1 Topic 3_6	7	不再	1
+18	rely	unit 1 Topic 3_6	7	v.依赖	1
+19	rely on	unit 1 Topic 3_7	7	依赖	1
+19	tax	unit 1 Topic 3_7	7	n.税	1
+19	income tax	unit 1 Topic 3_7	7	所得税	1
+19	enter into	unit 1 Topic 3_7	7	进入	1
+19	understanding	unit 1 Topic 3_7	7	n.&adj.理解	1
+19	society	unit 1 Topic 3_7	7	n.社会	1
+20	replace	unit 2 Topic 1_1	4	vt.代替	1
+20	adopt	unit 2 Topic 1_1	4	v.采纳	1
+20	envy	unit 2 Topic 1_1	4	vt.羡慕	1
+20	in charge of	unit 2 Topic 1_1	4	负责	1
+20	actually	unit 2 Topic 1_1	4	adv.实际上	1
+21	etc	unit 2 Topic 1_2	4	等等	1
+21	seem	unit 2 Topic 1_2	4	vi.好像是	1
+21	in detail	unit 2 Topic 1_2	4	详细地	1
+21	camera	unit 2 Topic 1_2	4	n.照相机	1
+21	video camera	unit 2 Topic 1_2	4	摄像机	1
+22	repair	unit 2 Topic 1_3	4	vi.修理	1
+22	physical	unit 2 Topic 1_3	4	adj.物理的	1
+22	physical exercise	unit 2 Topic 1_3	4	体育锻炼	1
+22	recorder	unit 2 Topic 1_3	4	n.录音机	1
+22	tape recorder	unit 2 Topic 1_3	4	盒式录音机	1
+23	construct	unit 2 Topic 1_4	4	vt.建造	1
+23	note	unit 2 Topic 1_4	4	n.注意	1
+23	contrast	unit 2 Topic 1_4	4	n.成对比	1
+23	farmland	unit 2 Topic 1_4	4	n.农田	1
+23	commuter	unit 2 Topic 1_4	4	n.乘车上下班的人	0
+23	livable	unit 2 Topic 1_4	4	adj.适于居住的	0
+24	clone	unit 2 Topic 2_1	4	v.克隆	0
+24	be short of	unit 2 Topic 2_1	4	缺乏	1
+24	gene	unit 2 Topic 2_1	4	n.基因	0
+24	warming	unit 2 Topic 2_1	4	n.暖和	1
+24	global warming	unit 2 Topic 2_1	4	全球性气候变暖	1
+25	prediction	unit 2 Topic 2_2	4	n.预言	0
+25	cure	unit 2 Topic 2_2	4	vt.治愈	1
+25	intelligent	unit 2 Topic 2_2	4	adj.聪明的	0
+25	shortage	unit 2 Topic 2_2	4	n.不足	0
+25	domestic	unit 2 Topic 2_2	4	adj.本国的	0
+26	export	unit 2 Topic 2_3	4	vt.出口	1
+26	drug	unit 2 Topic 2_3	4	n.药	1
+26	rocket	unit 2 Topic 2_3	4	n.火箭	0
+26	body bank	unit 2 Topic 2_3	4	人体器官库	1
+26	shape	unit 2 Topic 2_3	4	n.形状	1
+27	in the shape of	unit 2 Topic 2_4	4	呈 ... 的形状	1
+27	steel	unit 2 Topic 2_4	4	n.钢	1
+27	exist	unit 2 Topic 2_4	4	v.存在	1
+27	retire	unit 2 Topic 2_4	4	v.退休	1
+27	at the age of	unit 2 Topic 2_4	4	在 ... 的年龄	1

@@ -1,127 +1,127 @@
-1	flight	Module 1_1	2	n.航班	1
-1	because of	Module 1_1	2	因为	1
-1	direct	Module 1_1	2	adj.径直地	1
-2	pilot	Module 1_2	2	n.飞行员	1
-2	succeed	Module 1_2	2	vt.成功	1
-2	as long as	Module 1_2	2	只要	1
-2	school-leaver	Module 1_2	2	n.毕业生	0
-2	exactly	Module 1_2	2	adv.确切地	1
-2	take care	Module 1_2	2	多保重	1
-2	sir	Module 1_2	2	n.先生	1
-2	officer	Module 1_2	2	n.军官	1
-2	stupid	Module 1_2	2	adj.笨的	1
-2	take off	Module 1_2	2	脱去	1
-2	jacket	Module 1_2	2	n.短上衣	1
-3	ours	Module 2_1	1	pron.我们的	1
-3	tie	Module 2_1	1	vt.领带	1
-3	row	Module 2_1	1	n.一排	1
-3	pool	Module 2_1	1	n.水池	1
-3	pass	Module 2_1	1	vt.通过	1
-3	secondary	Module 2_1	1	adj.中等的	0
-3	secondary school	Module 2_1	1	中学	0
-3	absent	Module 2_1	1	adj.缺席的	1
-3	bell	Module 2_1	1	n.铃	1
-4	wealthy	Module 3_1	2	adj.富有的	1
-4	fear	Module 3_1	2	vt.害怕	1
-4	used to	Module 3_1	2	过去常常	1
-4	wealth	Module 3_1	2	n.财富	1
-4	double	Module 3_1	2	n.&v.使加倍	1
-4	seldom	Module 3_1	2	adv.很少地	1
-4	spare	Module 3_1	2	adj.空余的	1
-4	spare time	Module 3_1	2	业余时间	1
-4	speak up	Module 3_1	2	大声说	1
-4	deaf	Module 3_1	2	adj.聋的	1
-4	tiny	Module 3_1	2	adj.微小的	1
-5	electric	Module 3_2	2	adj.用电的	0
-5	light	Module 3_2	2	n.电灯	1
-5	candle	Module 3_2	2	n.蜡烛	1
-5	postman	Module 3_2	2	n.邮递员	1
-5	cold	Module 3_2	2	adj.&n.寒冷	1
-5	heat	Module 3_2	2	n.高温	1
-5	full-time	Module 3_2	2	adj.全职的	1
-5	role	Module 3_2	2	n.角色	1
-5	education	Module 3_2	2	n.教育	1
-5	transport	Module 3_2	2	n.交通	1
-6	set off	Module 4_1	3	出发	1
-6	sock	Module 4_1	3	n.短袜	1
-6	whenever	Module 4_1	3	adv.无论什么时候	1
-6	proper	Module 4_1	3	adj.合适的	1
-6	edge	Module 4_1	3	n.边缘	1
-6	yourself	Module 4_1	3	pron.你自己	1
-6	go off	Module 4_1	3	离开	1
-6	starve	Module 4_1	3	v.挨饿	1
-6	go	Module 4_1	3	n.努力	1
-7	in one go	Module 4_2	3	一口气	1
-7	rock	Module 4_2	3	n.岩	1
-7	rock climbing	Module 4_2	3	攀岩	1
-7	stone	Module 4_2	3	n.石头	1
-7	fairly	Module 4_2	3	adj.相当	1
-7	smooth	Module 4_2	3	adj.光滑的	1
-7	straight	Module 4_2	3	adj.直的	1
-7	tent	Module 4_2	3	n.帐篷	1
-7	fall	Module 4_2	3	v.进入某种状态	1
-8	fall asleep	Module 4_3	3	入睡	1
-8	hang	Module 4_3	3	vt.悬挂	1
-8	sudden	Module 4_3	3	adj.突然的	1
-8	gun	Module 4_3	3	n.枪	1
-8	soft	Module 4_3	3	adj.软的	1
-8	still	Module 4_3	3	adj.静止的	1
-8	wood	Module 4_3	3	n.树林	1
-8	blood	Module 4_3	3	n.血	1
-9	catch up	Module 5_1	1	赶上	1
-9	agreement	Module 5_1	1	n.协议	1
-9	blind	Module 5_1	1	adj.失明的	1
-9	ouch	Module 5_1	1	int.哎哟	1
-9	call off	Module 5_1	1	取消	1
-9	thanks to	Module 5_1	1	多亏	1
-9	health care	Module 5_1	1	医疗保健	1
-9	expect	Module 5_1	1	v.预料	1
-9	require	Module 5_1	1	v.需要	1
-9	physical	Module 5_1	1	adj.身体的	1
-9	effort	Module 5_1	1	n.力气	1
-9	once in a while	Module 5_1	1	偶尔	1
-9	harm	Module 5_1	1	n.&v.损害	1
-10	invitation	Module 6_1	2	n.邀请	1
-10	calendar	Module 6_1	2	n.日历	1
-10	balloon	Module 6_1	2	n.气球	1
-10	paint	Module 6_1	2	n.绘画	1
-10	heat	Module 6_1	2	n.&v.使变热	1
-10	heat up	Module 6_1	2	使变热	1
-10	knife	Module 6_1	2	n.餐刀	1
-10	fork	Module 6_1	2	n.餐叉	1
-10	spoon	Module 6_1	2	n.匙	1
-10	cheeseburger	Module 6_1	2	n.干酪汉堡包	0
-11	Italian	Module 6_2	2	n&adj.意大利的	1
-11	Western	Module 6_2	2	n.西方人	1
-11	West	Module 6_2	2	n.西方	1
-11	serve	Module 6_2	2	v.服侍...进餐	1
-11	similar	Module 6_2	2	adj.相似的	1
-11	wing	Module 6_2	2	n.翅膀	1
-11	lady	Module 6_2	2	n.女士	1
-11	gentleman	Module 6_2	2	n.先生	1
-11	help yourself	Module 6_2	2	请自便	1
-11	cross	Module 6_2	2	v.生气的	1
-12	achieve	Module7_1	1	vt.成功	1
-12	including	Module7_1	1	prep.包括	1
-12	speaker	Module7_1	1	n.说某语言的人	1
-12	boss	Module7_1	1	n.老板	1
-12	secretary	Module7_1	1	n.秘书	1
-12	quarter	Module7_1	1	n.四分之一	1
-12	industry	Module7_1	1	n.制造业	1
-12	zero	Module7_1	1	num.零	1
-12	Indian	Module7_1	1	n&adj.印度人	1
-13	handbag	Module 8_1	2	n.小提包	1
-13	beat	Module 8_1	2	vt.节拍	1
-13	pardon	Module 8_1	2	n.对不起	1
-13	intend	Module 8_1	2	v.计划	1
-13	fetch	Module 8_1	2	vt.取来	1
-13	pancake	Module 8_1	2	n.薄烤饼	1
-13	rose	Module 8_1	2	n.玫瑰	1
-13	laugh at	Module 8_1	2	嘲笑	1
-14	kindness	Module 8_2	2	n.好意	1
-14	give up	Module 8_2	2	放弃	1
-14	try one's best	Module 8_2	2	尽某人最大的努力	1
-14	disappointed	Module 8_2	2	adj.失望的	1
-14	bedside	Module 8_2	2	n.床边	1
-14	note	Module 8_2	2	n.便条	1
-14	whom	Module 8_2	2	pron.那个人	1
+1	flight	Module 1_1	3	n.航班	1
+1	because of	Module 1_1	3	因为	1
+1	direct	Module 1_1	3	adj.径直地	1
+2	pilot	Module 1_2	3	n.飞行员	1
+2	succeed	Module 1_2	3	vt.成功	1
+2	as long as	Module 1_2	3	只要	1
+2	school-leaver	Module 1_2	3	n.毕业生	0
+2	exactly	Module 1_2	3	adv.确切地	1
+2	take care	Module 1_2	3	多保重	1
+3	sir	Module 1_3	3	n.先生	1
+3	officer	Module 1_3	3	n.军官	1
+3	stupid	Module 1_3	3	adj.笨的	1
+3	take off	Module 1_3	3	脱去	1
+3	jacket	Module 1_3	3	n.短上衣	1
+4	ours	Module 2_1	2	pron.我们的	1
+4	tie	Module 2_1	2	vt.领带	1
+4	row	Module 2_1	2	n.一排	1
+4	pool	Module 2_1	2	n.水池	1
+4	pass	Module 2_1	2	vt.通过	1
+5	secondary	Module 2_2	2	adj.中等的	0
+5	secondary school	Module 2_2	2	中学	0
+5	absent	Module 2_2	2	adj.缺席的	1
+5	bell	Module 2_2	2	n.铃	1
+6	wealthy	Module 3_1	4	adj.富有的	1
+6	fear	Module 3_1	4	vt.害怕	1
+6	used to	Module 3_1	4	过去常常	1
+6	wealth	Module 3_1	4	n.财富	1
+6	double	Module 3_1	4	n.&v.使加倍	1
+7	seldom	Module 3_2	4	adv.很少地	1
+7	spare	Module 3_2	4	adj.空余的	1
+7	spare time	Module 3_2	4	业余时间	1
+7	speak up	Module 3_2	4	大声说	1
+7	deaf	Module 3_2	4	adj.聋的	1
+8	tiny	Module 3_3	4	adj.微小的	1
+8	electric	Module 3_3	4	adj.用电的	0
+8	light	Module 3_3	4	n.电灯	1
+8	candle	Module 3_3	4	n.蜡烛	1
+8	postman	Module 3_3	4	n.邮递员	1
+9	cold	Module 3_4	4	adj.&n.寒冷	1
+9	heat	Module 3_4	4	n.高温	1
+9	full-time	Module 3_4	4	adj.全职的	1
+9	role	Module 3_4	4	n.角色	1
+9	education	Module 3_4	4	n.教育	1
+9	transport	Module 3_4	4	n.交通	1
+10	set off	Module 4_1	5	出发	1
+10	sock	Module 4_1	5	n.短袜	1
+10	whenever	Module 4_1	5	adv.无论什么时候	1
+10	proper	Module 4_1	5	adj.合适的	1
+10	edge	Module 4_1	5	n.边缘	1
+11	yourself	Module 4_2	5	pron.你自己	1
+11	go off	Module 4_2	5	离开	1
+11	starve	Module 4_2	5	v.挨饿	1
+11	go	Module 4_2	5	n.努力	1
+11	in one go	Module 4_2	5	一口气	1
+12	rock	Module 4_3	5	n.岩	1
+12	rock climbing	Module 4_3	5	攀岩	1
+12	stone	Module 4_3	5	n.石头	1
+12	fairly	Module 4_3	5	adj.相当	1
+12	smooth	Module 4_3	5	adj.光滑的	1
+13	straight	Module 4_4	5	adj.直的	1
+13	tent	Module 4_4	5	n.帐篷	1
+13	fall	Module 4_4	5	v.进入某种状态	1
+13	fall asleep	Module 4_4	5	入睡	1
+13	hang	Module 4_4	5	vt.悬挂	1
+14	sudden	Module 4_5	5	adj.突然的	1
+14	gun	Module 4_5	5	n.枪	1
+14	soft	Module 4_5	5	adj.软的	1
+14	still	Module 4_5	5	adj.静止的	1
+14	wood	Module 4_5	5	n.树林	1
+14	blood	Module 4_5	5	n.血	1
+15	catch up	Module 5_1	3	赶上	1
+15	agreement	Module 5_1	3	n.协议	1
+15	blind	Module 5_1	3	adj.失明的	1
+15	ouch	Module 5_1	3	int.哎哟	1
+16	call off	Module 5_2	3	取消	1
+16	thanks to	Module 5_2	3	多亏	1
+16	health care	Module 5_2	3	医疗保健	1
+16	expect	Module 5_2	3	v.预料	1
+17	require	Module 5_3	3	v.需要	1
+17	physical	Module 5_3	3	adj.身体的	1
+17	effort	Module 5_3	3	n.力气	1
+17	once in a while	Module 5_3	3	偶尔	1
+17	harm	Module 5_3	3	n.&v.损害	1
+18	invitation	Module 6_1	4	n.邀请	1
+18	calendar	Module 6_1	4	n.日历	1
+18	balloon	Module 6_1	4	n.气球	1
+18	paint	Module 6_1	4	n.绘画	1
+18	heat	Module 6_1	4	n.&v.使变热	1
+19	heat up	Module 6_2	4	使变热	1
+19	knife	Module 6_2	4	n.餐刀	1
+19	fork	Module 6_2	4	n.餐叉	1
+19	spoon	Module 6_2	4	n.匙	1
+19	cheeseburger	Module 6_2	4	n.干酪汉堡包	0
+20	Italian	Module 6_3	4	n&adj.意大利的	1
+20	Western	Module 6_3	4	n.西方人	1
+20	West	Module 6_3	4	n.西方	1
+20	serve	Module 6_3	4	v.服侍...进餐	1
+20	similar	Module 6_3	4	adj.相似的	1
+21	wing	Module 6_4	4	n.翅膀	1
+21	lady	Module 6_4	4	n.女士	1
+21	gentleman	Module 6_4	4	n.先生	1
+21	help yourself	Module 6_4	4	请自便	1
+21	cross	Module 6_4	4	v.生气的	1
+22	achieve	Module7_1	2	vt.成功	1
+22	including	Module7_1	2	prep.包括	1
+22	speaker	Module7_1	2	n.说某语言的人	1
+22	boss	Module7_1	2	n.老板	1
+22	secretary	Module7_1	2	n.秘书	1
+23	quarter	Module7_2	2	n.四分之一	1
+23	industry	Module7_2	2	n.制造业	1
+23	zero	Module7_2	2	num.零	1
+23	Indian	Module7_2	2	n&adj.印度人	1
+24	handbag	Module 8_1	3	n.小提包	1
+24	beat	Module 8_1	3	vt.节拍	1
+24	pardon	Module 8_1	3	n.对不起	1
+24	intend	Module 8_1	3	v.计划	1
+24	fetch	Module 8_1	3	vt.取来	1
+25	pancake	Module 8_2	3	n.薄烤饼	1
+25	rose	Module 8_2	3	n.玫瑰	1
+25	laugh at	Module 8_2	3	嘲笑	1
+25	kindness	Module 8_2	3	n.好意	1
+25	give up	Module 8_2	3	放弃	1
+26	try one's best	Module 8_3	3	尽某人最大的努力	1
+26	disappointed	Module 8_3	3	adj.失望的	1
+26	bedside	Module 8_3	3	n.床边	1
+26	note	Module 8_3	3	n.便条	1
+26	whom	Module 8_3	3	pron.那个人	1

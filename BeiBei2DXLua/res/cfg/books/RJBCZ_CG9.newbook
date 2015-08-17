@@ -1,595 +1,595 @@
-1	textbook	Unitl_1	4	n.教科书	1
-1	conversation	Unitl_1	4	n.谈话	1
-1	aloud	Unitl_1	4	adv.大声地	1
-2	pronunciation	Unitl_2	4	n.发音	1
-2	sentence	Unitl_2	4	n.句子	1
-2	patient	Unitl_2	4	n.&adj.病人	1
-2	expression	Unitl_2	4	n.表达方式	1
-2	discover	Unitl_2	4	vt.发现	1
-2	secret	Unitl_2	4	n.&adj.秘密	1
-2	look up	Unitl_2	4	查阅；抬头看	0
-2	grammar	Unitl_2	4	n.语法	1
-2	repeat	Unitl_2	4	n.&v.重复	1
-2	note	Unitl_2	4	n.&v.笔记	1
-2	pal	Unitl_2	4	n.朋友	0
-3	pattern	Unitl_3	4	n.模式	0
-3	physics	Unitl_3	4	n.物理	1
-3	chemistry	Unitl_3	4	n.化学	1
-3	partner	Unitl_3	4	n.搭档	1
-3	memorize	Unitl_3	4	v.记忆	0
-3	pronounce	Unitl_3	4	vt.发音	1
-3	increase	Unitl_3	4	v.增加	1
-3	speed	Unitl_3	4	n.速度	1
-3	born	Unitl_3	4	vt.&adj.出生	1
-3	be born with	Unitl_3	4	天生具有	0
-3	ability	Unitl_3	4	n.能力	1
-4	create	Unitl_4	4	vt.创造	1
-4	brain	Unitl_4	4	n.大脑	1
-4	active	Unitl_4	4	adj.活跃的	1
-4	attention	Unitl_4	4	n.注意	1
-4	pay attention to	Unitl_4	4	注意	0
-4	connect	Unitl_4	4	vt.连接	1
-4	connect ... with	Unitl_4	4	把...和...连接或联系起来	0
-4	overnight	Unitl_4	4	n.一夜之间	0
-4	review	Unitl_4	4	vt.回顾	1
-4	knowledge	Unitl_4	4	n.知识	1
-4	lifelong	Unitl_4	4	adj.终身的	0
-4	wisely	Unitl_4	4	adv.明智地	1
-5	mooncake	Unit2_1	4	月饼	0
-5	lantern	Unit2_1	4	n.灯笼	0
-5	stranger	Unit2_1	4	n.陌生人	1
-5	relative	Unit2_1	4	adj.亲属	1
-5	put on	Unit2_1	4	增加（体重）	0
-5	pound	Unit2_1	4	n.磅	1
-5	folk	Unit2_1	4	adj.民间的	0
-5	goddess	Unit2_1	4	n.女神	0
-5	whoever	Unit2_1	4	adv.无论谁	0
-5	steal	Unit2_1	4	vt.偷	1
-5	lay	Unit2_1	4	vt.放置	1
-6	lay out	Unit2_2	4	摆开	0
-6	dessert	Unit2_2	4	n.甜点	1
-6	garden	Unit2_2	4	n.花园	1
-6	tradition	Unit2_2	4	n.传统	0
-6	admire	Unit2_2	4	vt.欣赏	1
-6	tie	Unit2_2	4	n.&vt.领带	1
-6	haunted	Unit2_2	4	adj.闹鬼的	0
-6	ghost	Unit2_2	4	n.鬼	0
-6	trick	Unit2_2	4	n.花招	0
-6	treat	Unit2_2	4	v.招待	1
-6	spider	Unit2_2	4	n.蜘蛛	0
-7	Christmas	Unit2_3	4	圣诞节	1
-7	lie	Unit2_3	4	n.平躺	1
-7	novel	Unit2_3	4	n.小说	1
-7	eve	Unit2_3	4	n.前夕	0
-7	dead	Unit2_3	4	adj.死的	1
-7	business	Unit2_3	4	n.商业	1
-7	punish	Unit2_3	4	v.处罚	1
-7	warn	Unit2_3	4	vt.警告	1
-7	end up	Unit2_3	4	最终成为	0
-7	present	Unit2_3	4	n.&adj.礼物	1
-8	warmth	Unit2_4	4	n.温暖	1
-8	spread	Unit2_4	4	v.传播	1
-8	Macao	Unit2_4	4	n.澳门	0
-8	Water Festival	Unit2_4	4	泼水节	0
-8	Mid-Autumn	Unit2_4	4	n.中秋节	0
-8	Mother's Day	Unit2_4	4	母亲节	0
-8	Father's Day	Unit2_4	4	父亲节	0
-8	Halloween	Unit2_4	4	n.万圣节前夕	0
-8	A Christmas Carol	Unit2_4	4	《圣诞换歌》	0
-8	Easter	Unit2_4	4	n.复活节	0
-9	restroom	Unit3_1	4	洗手间	1
-9	stamp	Unit3_1	4	n.邮票	1
-9	bookstore	Unit3_1	4	n.书店	0
-9	beside	Unit3_1	4	prep.在旁边	1
-9	postcard	Unit3_1	4	n.明信片	1
-9	pardon	Unit3_1	4	n.请再说一遍	1
-9	washroom	Unit3_1	4	n.洗手间	0
-9	bathroom	Unit3_1	4	n.浴室	1
-9	normally	Unit3_1	4	adv.通常	0
-9	rush	Unit3_1	4	vi.仓促	1
-10	suggest	Unit3_2	4	vt.建议	1
-10	pass by	Unit3_2	4	路过	0
-10	staff	Unit3_2	4	n.管理人员	0
-10	grape	Unit3_2	4	n.葡萄	1
-10	central	Unit3_2	4	adj.中心的	1
-10	nearby	Unit3_2	4	adj.&adv.附近的	0
-10	pardon me	Unit3_2	4	请再说一遍	0
-10	mail	Unit3_2	4	n.&v.邮件	1
-10	east	Unit3_2	4	n.东方的	1
-10	fascinating	Unit3_2	4	adj.迷人的	0
-11	inexpensive	Unit3_3	4	adj.不昂贵的	0
-11	uncrowded	Unit3_3	4	adj.不拥挤的	0
-11	convenient	Unit3_3	4	adj.便利的	1
-11	mall	Unit3_3	4	n.商场	0
-11	clerk	Unit3_3	4	n.职员	0
-11	corner	Unit3_3	4	n.拐角	1
-11	politely	Unit3_3	4	adv.礼貌地	1
-11	request	Unit3_3	4	n.要求	1
-11	direction	Unit3_3	4	n.方向	1
-11	correct	Unit3_3	4	adj.正确的	1
-12	polite	Unit3_4	4	adj.有礼貌的	1
-12	direct	Unit3_4	4	adj.直接的	1
-12	speaker	Unit3_4	4	n.讲...语言的人	1
-12	whom	Unit3_4	4	pron.谁	1
-12	impolite	Unit3_4	4	adj.不礼貌的	1
-12	address	Unit3_4	4	n.地址	1
-12	underground	Unit3_4	4	adj.&n.地下的	1
-12	parking lot	Unit3_4	4	停车场	0
-12	course	Unit3_4	4	n.课程	1
-12	Italian	Unit3_4	4	n&adj.意大利的	0
-13	humorous	Unin4_1	4	adj.有幽默感的	1
-13	silent	Unin4_1	4	adj.沉默的	1
-13	helpful	Unin4_1	4	adj.有帮助的	1
-13	from time to time	Unin4_1	4	时常	0
-13	score	Unin4_1	4	n.得分	1
-13	background	Unin4_1	4	n.背景	1
-13	interview	Unin4_1	4	vi.采访	1
-13	Asian	Unin4_1	4	亚洲的	1
-13	deal	Unin4_1	4	v.对付	0
-13	deal with	Unin4_1	4	应对	0
-14	shyness	Unin4_2	4	n.害羞	0
-14	dare	Unin4_2	4	vi.敢于	1
-14	crowd	Unin4_2	4	n.人群	0
-14	ton	Unin4_2	4	n.吨	1
-14	private	Unin4_2	4	adj.私人的	1
-14	guard	Unin4_2	4	vt.&n.守卫	1
-14	require	Unin4_2	4	v.需要	1
-14	European	Unin4_2	4	n&adj.欧洲人	1
-14	African	Unin4_2	4	n&adj.非洲的	1
-14	British	Unin4_2	4	n&adj.英国的	1
-15	speech	Unin4_3	4	n.讲话	1
-15	public	Unin4_3	4	adj.&n.公开的	1
-15	in public	Unin4_3	4	公开地	0
-15	ant	Unin4_3	4	n.蚂蚁	1
-15	insect	Unin4_3	4	n.昆虫	0
-15	influence	Unin4_3	4	vt.影响	1
-15	seldom	Unin4_3	4	adv.很少	1
-15	proud	Unin4_3	4	adj.自豪的	1
-15	be proud of	Unin4_3	4	为...骄傲	0
-15	absent	Unin4_3	4	adj.缺席	1
-16	fail	Unin4_4	4	vi.失败	1
-16	examination	Unin4_4	4	n.考试	1
-16	boarding school	Unin4_4	4	寄宿学校	0
-16	in person	Unin4_4	4	亲自	0
-16	exactly	Unin4_4	4	adv.确切地	1
-16	pride	Unin4_4	4	n.自豪	1
-16	take pride in	Unin4_4	4	为...感到自豪	1
-16	general	Unin4_4	4	adj.普遍的	1
-16	introduction	Unin4_4	4	n.介绍	1
-17	chopsticks	Unit5_1	5	n.筷子	1
-17	coin	Unit5_1	5	n.硬币	1
-17	fork	Unit5_1	5	n.餐叉	1
-17	blouse	Unit5_1	5	n.衬衫	1
-17	sliver	Unit5_1	5	n.&adj.银	1
-17	glass	Unit5_1	5	n.玻璃	1
-17	cotton	Unit5_1	5	n.棉花	1
-17	steel	Unit5_1	5	n.钢	1
-17	fair	Unit5_1	5	adj.展览会	1
-17	environmental	Unit5_1	5	adj.自然环境的	0
-18	grass	Unit5_2	5	n.草	1
-18	leaf	Unit5_2	5	n.叶	1
-18	produce	Unit5_2	5	vt.生产	1
-18	widely	Unit5_2	5	adj.广泛地	1
-18	be known for	Unit5_2	5	以...闻名	0
-18	process	Unit5_2	5	n.&v.过程	1
-18	pack	Unit5_2	5	n.包装	0
-18	product	Unit5_2	5	n.产品	1
-18	France	Unit5_2	5	n.法国	1
-18	no matter	Unit5_2	5	不论	0
-19	local	Unit5_3	5	adj.当地的	1
-19	brand	Unit5_3	5	n.品牌	0
-19	avoid	Unit5_3	5	v.避免	1
-19	handbag	Unit5_3	5	n.小手提包	1
-19	mobile	Unit5_3	5	adj.可移动的	1
-19	everyday	Unit5_3	5	adj.每天的	1
-19	boss	Unit5_3	5	n.老板	1
-19	Germany	Unit5_3	5	n.德国	1
-19	surface	Unit5_3	5	n.表面	1
-19	material	Unit5_3	5	n.材料	1
-20	traffic	Unit5_4	5	n.交通	1
-20	postman	Unit5_4	5	n.邮递员	1
-20	cap	Unit5_4	5	n.帽子	1
-20	glove	Unit5_4	5	n.手套	1
-20	international	Unit5_4	5	adj.国际的	1
-20	competitor	Unit5_4	5	n.竞争者	0
-20	its	Unit5_4	5	pron.它的	1
-20	form	Unit5_4	5	n.形式	1
-20	clay	Unit5_4	5	n.黏土	0
-20	celebration	Unit5_4	5	n.庆典	0
-21	balloon	Unit5_5	5	n.气球	1
-21	scissors	Unit5_5	5	n.剪刀	1
-21	lively	Unit5_5	5	adj.生气勃勃的	1
-21	fairy	Unit5_5	5	n.童话故事	0
-21	historical	Unit5_5	5	adj.历史的	0
-21	heat	Unit5_5	5	n.&v.热	1
-21	polish	Unit5_5	5	n.&v.润色	0
-21	complete	Unit5_5	5	vt.完成	1
-21	Korea	Unit5_5	5	n.朝鲜	0
-21	Switzerland	Unit5_5	5	n.瑞士	0
-22	heel	Unit6_1	5	n.鞋跟	0
-22	electricity	Unit6_1	5	n.电	0
-22	scoop	Unit6_1	5	n.勺	0
-22	style	Unit6_1	5	n.样式	1
-22	project	Unit6_1	5	n.项目	1
-22	pleasure	Unit6_1	5	n.高兴	1
-22	zipper	Unit6_1	5	n.拉链	0
-22	daily	Unit6_1	5	adj.每日的	1
-22	have a point	Unit6_1	5	有道理	0
-22	website	Unit6_1	5	n.网站	1
-22	pioneer	Unit6_1	5	n.先锋	1
-23	list	Unit6_2	5	n.列表	1
-23	mention	Unit6_2	5	vt.提到	1
-23	accidental	Unit6_2	5	adj.偶然的	0
-23	by accident	Unit6_2	5	偶然	0
-23	nearly	Unit6_2	5	adv.几乎	1
-23	ruler	Unit6_2	5	n.统治者	1
-23	boil	Unit6_2	5	v.煮沸	1
-23	smell	Unit6_2	5	n.&vt.气味	1
-23	saint	Unit6_2	5	n.圣人	0
-23	national	Unit6_2	5	adj.国家的	1
-23	trade	Unit6_2	5	n.&v.贸易	1
-24	take place	Unit6_3	5	发生	0
-24	doubt	Unit6_3	5	n.疑惑	1
-24	without doubt	Unit6_3	5	毫无疑问	0
-24	fridge	Unit6_3	5	n.冰箱	1
-24	low	Unit6_3	5	adj.低的	1
-24	somebody	Unit6_3	5	pron.某人	1
-24	translate	Unit6_3	5	vt.翻译	1
-24	lock	Unit6_3	5	v.&n.锁上	1
-24	earthquake	Unit6_3	5	n.地震	1
-24	sudden	Unit6_3	5	n.&adj.突然	1
-24	all of a sudden	Unit6_3	5	突然	0
-25	bell	Unit6_4	5	n.钟	1
-25	biscuit	Unit6_4	5	n.饼干	1
-25	cookie	Unit6_4	5	n.曲奇饼	1
-25	instrument	Unit6_4	5	n.仪器	1
-25	crispy	Unit6_4	5	脆的	0
-25	salty	Unit6_4	5	adj.咸的	0
-25	sour	Unit6_4	5	adj.酸的	1
-25	by mistake	Unit6_4	5	错误地	0
-25	customer	Unit6_4	5	n.顾客	1
-25	Canadian	Unit6_4	5	n&adj.加拿大的	1
-25	divide	Unit6_4	5	vt.分开	1
-26	divide ... into	Unit6_5	5	把...分开	0
-26	popularity	Unit6_5	5	n.受欢迎	0
-26	basket	Unit6_5	5	n.篮	1
-26	the Olympics	Unit6_5	5	奥林匹克运动会	1
-26	not only ... but also ...	Unit6_5	5	不但...而且...	0
-26	look up to	Unit6_5	5	钦佩	0
-26	hero	Unit6_5	5	n.英雄	1
-26	professional	Unit6_5	5	adj.职业的	0
-26	Berlin	Unit6_5	5	柏林	0
-26	NBA	Unit6_5	5	国家篮球协会（美国职业篮球联赛）	0
-27	smoke	Unit7_1	3	v.&n.吸烟	1
-27	pierce	Unit7_1	3	v.刺破	0
-27	license	Unit7_1	3	n.证	1
-27	safety	Unit7_1	3	n.安全	1
-27	part-time	Unit7_1	3	adj.兼职的	0
-27	earring	Unit7_1	3	n.耳环	0
-27	flash	Unit7_1	3	n.闪光	0
-27	tiny	Unit7_1	3	adj.极小的	1
-27	cry	Unit7_1	3	n.哭	1
-27	field	Unit7_1	3	n.田野	1
-28	hug	Unit7_2	3	v.拥抱	1
-28	lift	Unit7_2	3	vt.&n.举起	1
-28	talk back	Unit7_2	3	回嘴	0
-28	awful	Unit7_2	3	adj.很坏的	1
-28	teen	Unit7_2	3	n.青少年	0
-28	regret	Unit7_2	3	n.感到遗憾	1
-28	poem	Unit7_2	3	n.诗	1
-28	community	Unit7_2	3	n.社区	1
-28	keep ... away from	Unit7_2	3	避免接近	0
-28	chance	Unit7_2	3	n.机会	1
-29	make one's own decision	Unit7_3	3	自己做决定	0
-29	manage	Unit7_3	3	vt.应付	1
-29	society	Unit7_3	3	n.社会	1
-29	educate	Unit7_3	3	v.教育	1
-29	get in the way of	Unit7_3	3	挡...的路	0
-29	enter	Unit7_3	3	vi.进来	1
-29	support	Unit7_3	3	n.支持	1
-29	choice	Unit7_3	3	n.选择	1
-29	Picasso	Unit7_3	3	毕加索	0
-30	truck	Unit8_1	4	n.卡车	1
-30	rabbit	Unit8_1	4	n.兔	1
-30	whose	Unit8_1	4	pron.谁的	1
-30	attend	Unit8_1	4	vt.出席	1
-30	valuable	Unit8_1	4	adj.宝贵的	1
-30	pink	Unit8_1	4	adj.&n.粉红色的	1
-30	picnic	Unit8_1	4	n.野餐	1
-30	anybody	Unit8_1	4	pron.任何人	1
-30	happening	Unit8_1	4	事件	0
-30	noise	Unit8_1	4	n.噪音	1
-31	policeman	Unit8_2	4	n.男警察	1
-31	wolf	Unit8_2	4	n.狼	1
-31	uneasy	Unit8_2	4	adj.不安的	0
-31	laboratory	Unit8_2	4	n.实验室	1
-31	coat	Unit8_2	4	n.外套	1
-31	sleepy	Unit8_2	4	adj.困倦的	1
-31	land	Unit8_2	4	n.着陆	1
-31	alien	Unit8_2	4	n.外星人	0
-31	run after	Unit8_2	4	追逐	0
-31	suit	Unit8_2	4	v.西服	1
-32	express	Unit8_3	4	vt.表达	1
-32	circle	Unit8_3	4	n.&v.圆圈	1
-32	Britain	Unit8_3	4	n.大不列颠	1
-32	mystery	Unit8_3	4	n.奥秘	0
-32	receive	Unit8_3	4	vt.接受	1
-32	historian	Unit8_3	4	n.历史学家	0
-32	leader	Unit8_3	4	n.领导	1
-32	midsummer	Unit8_3	4	n.仲夏	0
-32	medical	Unit8_3	4	adj.医疗的	1
-32	purpose	Unit8_3	4	n.目的	1
-33	prevent	Unit8_4	4	v.阻止	1
-33	energy	Unit8_4	4	n.精力	1
-33	position	Unit8_4	4	n.位置	1
-33	burial	Unit8_4	4	n.埋葬	0
-33	honor	Unit8_4	4	n.尊重	0
-33	ancestor	Unit8_4	4	n.祖宗	0
-33	victory	Unit8_4	4	n.胜利	1
-33	enemy	Unit8_4	4	n.敌人	1
-33	period	Unit8_4	4	n.时期	1
-33	hard-working	Unit8_4	4	adj.工作努力的	1
-33	Stonehenge	Unit8_4	4	n.巨石阵	0
-34	prefer	Unit9_1	4	vt.更喜欢	1
-34	lyrics	Unit9_1	4	n.歌词(复数）	0
-34	Australian	Unit9_1	4	n&adj.澳大利亚的	1
-34	electronic	Unit9_1	4	adj.电子的	1
-34	suppose	Unit9_1	4	vt.推断	1
-34	smooth	Unit9_1	4	adj.平滑的	1
-34	spare	Unit9_1	4	adj.空闲的	1
-34	case	Unit9_1	4	n.情况	1
-34	in that case	Unit9_1	4	既然那样	0
-34	war	Unit9_1	4	n.战争	1
-34	director	Unit9_1	4	n.导演	1
-35	stick	Unit9_2	4	vt.粘贴	1
-35	stick to	Unit9_2	4	坚持	0
-35	down	Unit9_2	4	adj.悲哀	1
-35	dialogue	Unit9_2	4	n.对话	1
-35	ending	Unit9_2	4	n.结尾	0
-35	documentary	Unit9_2	4	n.纪录片	0
-35	drama	Unit9_2	4	n.戏	0
-35	plenty	Unit9_2	4	n.大量	1
-35	plenty of	Unit9_2	4	大量	0
-35	shut	Unit9_2	4	v.关闭	1
-35	shut off	Unit9_2	4	关闭	0
-36	superhero	Unit9_3	4	n.超级英雄	0
-36	once in a while	Unit9_3	4	偶尔地	0
-36	intelligent	Unit9_3	4	adj.有才智的	0
-36	sense	Unit9_3	4	n.&v.感觉	1
-36	pain	Unit9_3	4	n.痛苦	1
-36	reflect	Unit9_3	4	v.反映	1
-36	moving	Unit9_3	4	adj.动人的	0
-36	perform	Unit9_3	4	v.表演	1
-36	lifetime	Unit9_3	4	n.一生	0
-36	pity	Unit9_3	4	n.遗憾	1
-36	total	Unit9_3	4	n.&adj.总的	1
-37	in total	Unit9_4	4	总共	0
-37	master	Unit9_4	4	n.&v.大师	1
-37	praise	Unit9_4	4	vt.表扬	1
-37	recall	Unit9_4	4	v.回忆起	0
-37	wound	Unit9_4	4	伤	1
-37	painful	Unit9_4	4	adj.令人痛苦的	1
-37	World War II	Unit9_4	4	第二次世界大战	0
-37	Kung Fu Panda	Unit9_4	4	《功夫熊猫》	0
-37	Titanic	Unit9_4	4	adj.《泰坦尼克号》	0
-37	March of the Penguins	Unit9_4	4	《帝企鹅日记》	0
-37	Spider-Man	Unit9_4	4	n.《蜘蛛侠》	0
-38	custom	Unit10_1	4	n.风俗	0
-38	bow	Unit10_1	4	v.鞠躬	0
-38	kiss	Unit10_1	4	vt.&n.亲吻	1
-38	greet	Unit10_1	4	vt.和...打招呼	1
-38	relaxed	Unit10_1	4	adj.放松的	1
-38	value	Unit10_1	4	n.价值	1
-38	drop by	Unit10_1	4	顺便访问	0
-38	capital	Unit10_1	4	n.首都	1
-38	after all	Unit10_1	4	毕竟	0
-38	noon	Unit10_1	4	n.中午	1
-39	mad	Unit10_2	4	adj.疯的	1
-39	get mad	Unit10_2	4	大动肝火	0
-39	effort	Unit10_2	4	n.努力	0
-39	make an effort	Unit10_2	4	作出努力	0
-39	passport	Unit10_2	4	n.护照	1
-39	clean ... off	Unit10_2	4	把...擦掉	0
-39	chalk	Unit10_2	4	n.粉笔	1
-39	blackboard	Unit10_2	4	n.黑板	1
-39	northern	Unit10_2	4	adj.北方的	1
-39	coast	Unit10_2	4	n.海岸	1
-40	season	Unit10_3	4	n.季节	1
-40	knock	Unit10_3	4	v.敲	1
-40	eastern	Unit10_3	4	adj.东方的	1
-40	take off	Unit10_3	4	脱下	0
-40	worth	Unit10_3	4	adj.值得	1
-40	manner	Unit10_3	4	n.礼仪	1
-40	empty	Unit10_3	4	adj.空的	1
-40	basic	Unit10_3	4	adj.基本的	1
-40	exchange	Unit10_3	4	vt.交换	1
-40	go out of one's way	Unit10_3	4	格外努力	0
-41	make ... feel at home	Unit10_4	4	使...感到宾至如归	0
-41	teenage	Unit10_4	4	adj.青少年的	0
-41	granddaughter	Unit10_4	4	n.孙女	1
-41	behave	Unit10_4	4	vt.表现	1
-41	except	Unit10_4	4	vt.除...之外	1
-41	elbow	Unit10_4	4	n.肘	0
-41	gradually	Unit10_4	4	adv.逐步地	0
-41	get used to	Unit10_4	4	习惯于	0
-41	suggestion	Unit10_4	4	n.建议	1
-41	Brazil	Unit10_4	4	n.巴西	0
-41	Mexico	Unit10_4	4	n.墨西哥	0
-42	rather	Unit11_1	5	adv.相当	0
-42	would rather	Unit11_1	5	宁愿	0
-42	drive	Unit11_1	5	v.迫使	1
-42	drive sb crazy	Unit11_1	5	使人发疯	0
-42	the more ... the more	Unit11_1	5	越...越...	0
-42	lately	Unit11_1	5	adv.最近	0
-42	be friends with sb.	Unit11_1	5	成为某人的朋友	0
-42	leave out	Unit11_1	5	不包括	0
-42	friendship	Unit11_1	5	n.友谊	1
-42	king	Unit11_1	5	n.国王	1
-43	power	Unit11_2	5	n.力量	1
-43	prime	Unit11_2	5	adj.首要的	0
-43	minister	Unit11_2	5	n.大臣	0
-43	prime minister	Unit11_2	5	首相	0
-43	banker	Unit11_2	5	n.银行家	1
-43	fame	Unit11_2	5	n.名声	0
-43	pale	Unit11_2	5	adj.苍白的	1
-43	queen	Unit11_2	5	n.王后	1
-43	call in	Unit11_2	5	召来	0
-43	examine	Unit11_2	5	vt.检查	1
-44	nor	Unit11_3	5	conj.也不	1
-44	neither ... nor	Unit11_3	5	既不...也不...	0
-44	palace	Unit11_3	5	n.宫殿	1
-44	wealth	Unit11_3	5	n.财富	1
-44	to start with	Unit11_3	5	起初	0
-44	grey	Unit11_3	5	adj.灰色的	1
-44	lemon	Unit11_3	5	n.柠檬	1
-44	uncomfortable	Unit11_3	5	adj.使人不舒服的	1
-44	weight	Unit11_3	5	n.重量	1
-44	shoulder	Unit11_3	5	n.肩	1
-45	goal	Unit11_4	5	n.目标	1
-45	let ... down	Unit11_4	5	使失望	0
-45	coach	Unit11_4	5	n.教练	1
-45	kick	Unit11_4	5	vt.踢	1
-45	kick sb off	Unit11_4	5	开除某人	0
-45	be hard on sb.	Unit11_4	5	对某人苛刻	0
-45	besides	Unit11_4	5	prep.而且	0
-45	teammate	Unit11_4	5	n.队友	0
-45	courage	Unit11_4	5	n.勇气	1
-46	rather than	Unit11_5	5	而不是	0
-46	guy	Unit11_5	5	n.家伙	0
-46	pull	Unit11_5	5	v.拉	1
-46	pull together	Unit11_5	5	齐心协力	0
-46	relief	Unit11_5	5	n.轻松	0
-46	nod	Unit11_5	5	n.&v.点头	1
-46	agreement	Unit11_5	5	n.一致	1
-46	fault	Unit11_5	5	n.过失	0
-46	disappoint	Unit11_5	5	vt.使失望	1
-47	unexpected	Unit12_1	4	adj.出乎意料的	1
-47	by the time...	Unit12_1	4	在...以前	0
-47	backpack	Unit12_1	4	n.背包	1
-47	oversleep	Unit12_1	4	v.睡过头	1
-47	ring	Unit12_1	4	v.铃鸣	1
-47	give ... a lift	Unit12_1	4	捎...一程	0
-47	block	Unit12_1	4	n.街区	1
-47	in line with	Unit12_1	4	成一排	0
-47	worker	Unit12_1	4	n.工作者	1
-47	stare	Unit12_1	4	vt.盯着看	0
-47	disbelief	Unit12_1	4	n.不信	0
-48	above	Unit12_2	4	prep.在上面	1
-48	burn	Unit12_2	4	vt.着火	1
-48	burning	Unit12_2	4	adj.着火的	0
-48	alive	Unit12_2	4	adj.活着	1
-48	airport	Unit12_2	4	n.机场	1
-48	till	Unit12_2	4	conj.到	1
-48	west	Unit12_2	4	adj.&n.&adv.向西	1
-48	cream	Unit12_2	4	n.奶油	1
-48	workday	Unit12_2	4	n.工作日	0
-48	pie	Unit12_2	4	n.果馅饼	1
-48	show up	Unit12_2	4	露面	0
-49	bean	Unit12_3	4	n.豆	1
-49	market	Unit12_3	4	n.市场	1
-49	by the end of	Unit12_3	4	在...以前	0
-49	fool	Unit12_3	4	n.蠢人	1
-49	costume	Unit12_3	4	n.服装	0
-49	embarrassed	Unit12_3	4	adj.窘迫的	0
-49	costume party	Unit12_3	4	化装舞会	0
-49	announce	Unit12_3	4	vt.宣布	0
-49	spaghetti	Unit12_3	4	n.意大利面条	0
-49	hoax	Unit12_3	4	v.骗局	0
-49	sell out	Unit12_3	4	卖光	0
-50	discovery	Unit12_4	4	n.发现	1
-50	lady	Unit12_4	4	n.女士	1
-50	cancel	Unit12_4	4	vt.取消	1
-50	officer	Unit12_4	4	n.军官	1
-50	believable	Unit12_4	4	adj.可相信的	1
-50	disappear	Unit12_4	4	vi.消失	1
-50	embarrassing	Unit12_4	4	adj.使人害羞的	0
-50	New Zealand	Unit12_4	4	n.新西兰	0
-50	Italy	Unit12_4	4	n.意大利	0
-50	Mars	Unit12_4	4	n.火星	0
-51	litter	Unit13_1	4	n.垃圾	1
-51	bottom	Unit13_1	4	n.底部	1
-51	fisherman	Unit13_1	4	n.渔民	1
-51	coal	Unit13_1	4	n.煤	1
-51	ugly	Unit13_1	4	adj.丑陋的	1
-51	advantage	Unit13_1	4	n.优点	1
-51	cost	Unit13_1	4	vi.花费	1
-51	wooden	Unit13_1	4	adj.木制的	1
-51	plastic	Unit13_1	4	adj.&n.塑料的	1
-51	take away	Unit13_1	4	外卖食物	0
-51	bin	Unit13_1	4	n.垃圾箱	0
-52	shark	Unit13_2	4	n.鲨鱼	0
-52	fin	Unit13_2	4	n.鳍	0
-52	cruel	Unit13_2	4	adj.残酷的	1
-52	harmful	Unit13_2	4	adj.有害的	1
-52	be harmful to	Unit13_2	4	对...有害	0
-52	at the top of	Unit13_2	4	在...顶部或顶端	0
-52	chain	Unit13_2	4	n.链子	1
-52	ecosystem	Unit13_2	4	n.生态系统	0
-52	industry	Unit13_2	4	n.工业	1
-52	law	Unit13_2	4	n.法律	1
-52	take part in	Unit13_2	4	参加	0
-53	turn off	Unit13_3	4	关掉	0
-53	reusable	Unit13_3	4	adj.可重复使用的	0
-53	afford	Unit13_3	4	vt.承担得起	1
-53	pay for	Unit13_3	4	付费	0
-53	take action	Unit13_3	4	采取行动	0
-53	transportation	Unit13_3	4	n.运输业	0
-53	recycle	Unit13_3	4	vt.回收利用	1
-53	napkin	Unit13_3	4	n.餐巾	0
-53	throw away	Unit13_3	4	扔掉	0
-53	put sth to good use	Unit13_3	4	好好利用某物	0
-53	pull ... down	Unit13_3	4	摧毁	0
-54	upside down	Unit13_4	4	n.上下颠倒	0
-54	gate	Unit13_4	4	n.大门	1
-54	bottle	Unit13_4	4	n.瓶	1
-54	president	Unit13_4	4	n.主席	1
-54	inspiration	Unit13_4	4	n.灵感	0
-54	iron	Unit13_4	4	n.铁	0
-54	work	Unit13_4	4	n.作品	1
-54	metal	Unit13_4	4	n.金属	1
-54	creativity	Unit13_4	4	n.创造力	0
-54	Wild Aid	Unit13_4	4	野生救援协会	0
-55	survey	Unit14_1	4	n.调查	1
-55	standard	Unit14_1	4	n.标准	1
-55	row	Unit14_1	4	n.一列	1
-55	in a row	Unit14_1	4	连续几次地	0
-55	keyboard	Unit14_1	4	n.键盘	1
-55	method	Unit14_1	4	n.方法	1
-55	instruction	Unit14_1	4	n.指示	1
-55	double	Unit14_1	4	n.&v.加倍	1
-55	shall	Unit14_1	4	vt.将要	1
-55	look back at	Unit14_1	4	回首	0
-55	overcome	Unit14_1	4	vt.克服	1
-56	make a mess	Unit14_2	4	弄得一团糟	0
-56	graduate	Unit14_2	4	vt.毕业	0
-56	keep one's cool	Unit14_2	4	沉住气	0
-56	caring	Unit14_2	4	adj.体贴人的	1
-56	ours	Unit14_2	4	pron.我们的	1
-56	senior	Unit14_2	4	adj.级别高的	1
-56	senior high school	Unit14_2	4	高中	0
-56	text	Unit14_2	4	n.课文	1
-56	go by	Unit14_2	4	时间逝去	0
-56	level	Unit14_2	4	n.水平	1
-56	degree	Unit14_2	4	n.学位	1
-57	manager	Unit14_3	4	n.经理	1
-57	believe in	Unit14_3	4	信任	0
-57	gentleman	Unit14_3	4	n.先生	1
-57	graduation	Unit14_3	4	n.毕业	0
-57	ceremony	Unit14_3	4	n.典礼	0
-57	first of all	Unit14_3	4	首先	0
-57	congratulate	Unit14_3	4	vt.祝贺	1
-57	thirsty	Unit14_3	4	adj.口渴的	1
-57	be thirsty for	Unit14_3	4	渴望	0
-57	thankful	Unit14_3	4	adj.感谢	1
-57	be thankful to sb	Unit14_3	4	对某人心存感激	0
-58	lastly	Unit14_4	4	adv.最后	0
-58	task	Unit14_4	4	n.任务	1
-58	ahead	Unit14_4	4	adv.向前面	1
-58	ahead of	Unit14_4	4	在...前面	0
-58	along with	Unit14_4	4	连同	0
-58	responsible	Unit14_4	4	adj.有责任心的	0
-58	be responsible for	Unit14_4	4	负责人	0
-58	separate	Unit14_4	4	v.&adj.分离的	1
-58	set out	Unit14_4	4	出发	0
-58	separate from	Unit14_4	4	分离	0
-58	wing	Unit14_4	4	n.翅膀	1
+1	textbook	Unitl_1	8	n.教科书	1
+1	conversation	Unitl_1	8	n.谈话	1
+1	aloud	Unitl_1	8	adv.大声地	1
+2	pronunciation	Unitl_2	8	n.发音	1
+2	sentence	Unitl_2	8	n.句子	1
+2	patient	Unitl_2	8	n.&adj.病人	1
+2	expression	Unitl_2	8	n.表达方式	1
+2	discover	Unitl_2	8	vt.发现	1
+3	secret	Unitl_3	8	n.&adj.秘密	1
+3	look up	Unitl_3	8	查阅；抬头看	0
+3	grammar	Unitl_3	8	n.语法	1
+3	repeat	Unitl_3	8	n.&v.重复	1
+3	note	Unitl_3	8	n.&v.笔记	1
+4	pal	Unitl_4	8	n.朋友	0
+4	pattern	Unitl_4	8	n.模式	0
+4	physics	Unitl_4	8	n.物理	1
+4	chemistry	Unitl_4	8	n.化学	1
+4	partner	Unitl_4	8	n.搭档	1
+5	memorize	Unitl_5	8	v.记忆	0
+5	pronounce	Unitl_5	8	vt.发音	1
+5	increase	Unitl_5	8	v.增加	1
+5	speed	Unitl_5	8	n.速度	1
+5	born	Unitl_5	8	vt.&adj.出生	1
+6	be born with	Unitl_6	8	天生具有	0
+6	ability	Unitl_6	8	n.能力	1
+6	create	Unitl_6	8	vt.创造	1
+6	brain	Unitl_6	8	n.大脑	1
+6	active	Unitl_6	8	adj.活跃的	1
+7	attention	Unitl_7	8	n.注意	1
+7	pay attention to	Unitl_7	8	注意	0
+7	connect	Unitl_7	8	vt.连接	1
+7	connect ... with	Unitl_7	8	把...和...连接或联系起来	0
+7	overnight	Unitl_7	8	n.一夜之间	0
+8	review	Unitl_8	8	vt.回顾	1
+8	knowledge	Unitl_8	8	n.知识	1
+8	lifelong	Unitl_8	8	adj.终身的	0
+8	wisely	Unitl_8	8	adv.明智地	1
+9	mooncake	Unit2_1	8	月饼	0
+9	lantern	Unit2_1	8	n.灯笼	0
+9	stranger	Unit2_1	8	n.陌生人	1
+9	relative	Unit2_1	8	adj.亲属	1
+9	put on	Unit2_1	8	增加（体重）	0
+10	pound	Unit2_2	8	n.磅	1
+10	folk	Unit2_2	8	adj.民间的	0
+10	goddess	Unit2_2	8	n.女神	0
+10	whoever	Unit2_2	8	adv.无论谁	0
+10	steal	Unit2_2	8	vt.偷	1
+11	lay	Unit2_3	8	vt.放置	1
+11	lay out	Unit2_3	8	摆开	0
+11	dessert	Unit2_3	8	n.甜点	1
+11	garden	Unit2_3	8	n.花园	1
+11	tradition	Unit2_3	8	n.传统	0
+12	admire	Unit2_4	8	vt.欣赏	1
+12	tie	Unit2_4	8	n.&vt.领带	1
+12	haunted	Unit2_4	8	adj.闹鬼的	0
+12	ghost	Unit2_4	8	n.鬼	0
+12	trick	Unit2_4	8	n.花招	0
+13	treat	Unit2_5	8	v.招待	1
+13	spider	Unit2_5	8	n.蜘蛛	0
+13	Christmas	Unit2_5	8	圣诞节	1
+13	lie	Unit2_5	8	n.平躺	1
+13	novel	Unit2_5	8	n.小说	1
+14	eve	Unit2_6	8	n.前夕	0
+14	dead	Unit2_6	8	adj.死的	1
+14	business	Unit2_6	8	n.商业	1
+14	punish	Unit2_6	8	v.处罚	1
+14	warn	Unit2_6	8	vt.警告	1
+15	end up	Unit2_7	8	最终成为	0
+15	present	Unit2_7	8	n.&adj.礼物	1
+15	warmth	Unit2_7	8	n.温暖	1
+15	spread	Unit2_7	8	v.传播	1
+15	Macao	Unit2_7	8	n.澳门	0
+15	Water Festival	Unit2_7	8	泼水节	0
+16	Mid-Autumn	Unit2_8	8	n.中秋节	0
+16	Mother's Day	Unit2_8	8	母亲节	0
+16	Father's Day	Unit2_8	8	父亲节	0
+16	Halloween	Unit2_8	8	n.万圣节前夕	0
+16	A Christmas Carol	Unit2_8	8	《圣诞换歌》	0
+16	Easter	Unit2_8	8	n.复活节	0
+17	restroom	Unit3_1	8	洗手间	1
+17	stamp	Unit3_1	8	n.邮票	1
+17	bookstore	Unit3_1	8	n.书店	0
+17	beside	Unit3_1	8	prep.在旁边	1
+17	postcard	Unit3_1	8	n.明信片	1
+18	pardon	Unit3_2	8	n.请再说一遍	1
+18	washroom	Unit3_2	8	n.洗手间	0
+18	bathroom	Unit3_2	8	n.浴室	1
+18	normally	Unit3_2	8	adv.通常	0
+18	rush	Unit3_2	8	vi.仓促	1
+19	suggest	Unit3_3	8	vt.建议	1
+19	pass by	Unit3_3	8	路过	0
+19	staff	Unit3_3	8	n.管理人员	0
+19	grape	Unit3_3	8	n.葡萄	1
+19	central	Unit3_3	8	adj.中心的	1
+20	nearby	Unit3_4	8	adj.&adv.附近的	0
+20	pardon me	Unit3_4	8	请再说一遍	0
+20	mail	Unit3_4	8	n.&v.邮件	1
+20	east	Unit3_4	8	n.东方的	1
+20	fascinating	Unit3_4	8	adj.迷人的	0
+21	inexpensive	Unit3_5	8	adj.不昂贵的	0
+21	uncrowded	Unit3_5	8	adj.不拥挤的	0
+21	convenient	Unit3_5	8	adj.便利的	1
+21	mall	Unit3_5	8	n.商场	0
+21	clerk	Unit3_5	8	n.职员	0
+22	corner	Unit3_6	8	n.拐角	1
+22	politely	Unit3_6	8	adv.礼貌地	1
+22	request	Unit3_6	8	n.要求	1
+22	direction	Unit3_6	8	n.方向	1
+22	correct	Unit3_6	8	adj.正确的	1
+23	polite	Unit3_7	8	adj.有礼貌的	1
+23	direct	Unit3_7	8	adj.直接的	1
+23	speaker	Unit3_7	8	n.讲...语言的人	1
+23	whom	Unit3_7	8	pron.谁	1
+23	impolite	Unit3_7	8	adj.不礼貌的	1
+24	address	Unit3_8	8	n.地址	1
+24	underground	Unit3_8	8	adj.&n.地下的	1
+24	parking lot	Unit3_8	8	停车场	0
+24	course	Unit3_8	8	n.课程	1
+24	Italian	Unit3_8	8	n&adj.意大利的	0
+25	humorous	Unin4_1	8	adj.有幽默感的	1
+25	silent	Unin4_1	8	adj.沉默的	1
+25	helpful	Unin4_1	8	adj.有帮助的	1
+25	from time to time	Unin4_1	8	时常	0
+25	score	Unin4_1	8	n.得分	1
+26	background	Unin4_2	8	n.背景	1
+26	interview	Unin4_2	8	vi.采访	1
+26	Asian	Unin4_2	8	亚洲的	1
+26	deal	Unin4_2	8	v.对付	0
+26	deal with	Unin4_2	8	应对	0
+27	shyness	Unin4_3	8	n.害羞	0
+27	dare	Unin4_3	8	vi.敢于	1
+27	crowd	Unin4_3	8	n.人群	0
+27	ton	Unin4_3	8	n.吨	1
+27	private	Unin4_3	8	adj.私人的	1
+28	guard	Unin4_4	8	vt.&n.守卫	1
+28	require	Unin4_4	8	v.需要	1
+28	European	Unin4_4	8	n&adj.欧洲人	1
+28	African	Unin4_4	8	n&adj.非洲的	1
+28	British	Unin4_4	8	n&adj.英国的	1
+29	speech	Unin4_5	8	n.讲话	1
+29	public	Unin4_5	8	adj.&n.公开的	1
+29	in public	Unin4_5	8	公开地	0
+29	ant	Unin4_5	8	n.蚂蚁	1
+29	insect	Unin4_5	8	n.昆虫	0
+30	influence	Unin4_6	8	vt.影响	1
+30	seldom	Unin4_6	8	adv.很少	1
+30	proud	Unin4_6	8	adj.自豪的	1
+30	be proud of	Unin4_6	8	为...骄傲	0
+30	absent	Unin4_6	8	adj.缺席	1
+31	fail	Unin4_7	8	vi.失败	1
+31	examination	Unin4_7	8	n.考试	1
+31	boarding school	Unin4_7	8	寄宿学校	0
+31	in person	Unin4_7	8	亲自	0
+31	exactly	Unin4_7	8	adv.确切地	1
+32	pride	Unin4_8	8	n.自豪	1
+32	take pride in	Unin4_8	8	为...感到自豪	1
+32	general	Unin4_8	8	adj.普遍的	1
+32	introduction	Unin4_8	8	n.介绍	1
+33	chopsticks	Unit5_1	10	n.筷子	1
+33	coin	Unit5_1	10	n.硬币	1
+33	fork	Unit5_1	10	n.餐叉	1
+33	blouse	Unit5_1	10	n.衬衫	1
+33	sliver	Unit5_1	10	n.&adj.银	1
+34	glass	Unit5_2	10	n.玻璃	1
+34	cotton	Unit5_2	10	n.棉花	1
+34	steel	Unit5_2	10	n.钢	1
+34	fair	Unit5_2	10	adj.展览会	1
+34	environmental	Unit5_2	10	adj.自然环境的	0
+35	grass	Unit5_3	10	n.草	1
+35	leaf	Unit5_3	10	n.叶	1
+35	produce	Unit5_3	10	vt.生产	1
+35	widely	Unit5_3	10	adj.广泛地	1
+35	be known for	Unit5_3	10	以...闻名	0
+36	process	Unit5_4	10	n.&v.过程	1
+36	pack	Unit5_4	10	n.包装	0
+36	product	Unit5_4	10	n.产品	1
+36	France	Unit5_4	10	n.法国	1
+36	no matter	Unit5_4	10	不论	0
+37	local	Unit5_5	10	adj.当地的	1
+37	brand	Unit5_5	10	n.品牌	0
+37	avoid	Unit5_5	10	v.避免	1
+37	handbag	Unit5_5	10	n.小手提包	1
+37	mobile	Unit5_5	10	adj.可移动的	1
+38	everyday	Unit5_6	10	adj.每天的	1
+38	boss	Unit5_6	10	n.老板	1
+38	Germany	Unit5_6	10	n.德国	1
+38	surface	Unit5_6	10	n.表面	1
+38	material	Unit5_6	10	n.材料	1
+39	traffic	Unit5_7	10	n.交通	1
+39	postman	Unit5_7	10	n.邮递员	1
+39	cap	Unit5_7	10	n.帽子	1
+39	glove	Unit5_7	10	n.手套	1
+39	international	Unit5_7	10	adj.国际的	1
+40	competitor	Unit5_8	10	n.竞争者	0
+40	its	Unit5_8	10	pron.它的	1
+40	form	Unit5_8	10	n.形式	1
+40	clay	Unit5_8	10	n.黏土	0
+40	celebration	Unit5_8	10	n.庆典	0
+41	balloon	Unit5_9	10	n.气球	1
+41	scissors	Unit5_9	10	n.剪刀	1
+41	lively	Unit5_9	10	adj.生气勃勃的	1
+41	fairy	Unit5_9	10	n.童话故事	0
+41	historical	Unit5_9	10	adj.历史的	0
+42	heat	Unit5_10	10	n.&v.热	1
+42	polish	Unit5_10	10	n.&v.润色	0
+42	complete	Unit5_10	10	vt.完成	1
+42	Korea	Unit5_10	10	n.朝鲜	0
+42	Switzerland	Unit5_10	10	n.瑞士	0
+43	heel	Unit6_1	11	n.鞋跟	0
+43	electricity	Unit6_1	11	n.电	0
+43	scoop	Unit6_1	11	n.勺	0
+43	style	Unit6_1	11	n.样式	1
+43	project	Unit6_1	11	n.项目	1
+44	pleasure	Unit6_2	11	n.高兴	1
+44	zipper	Unit6_2	11	n.拉链	0
+44	daily	Unit6_2	11	adj.每日的	1
+44	have a point	Unit6_2	11	有道理	0
+44	website	Unit6_2	11	n.网站	1
+45	pioneer	Unit6_3	11	n.先锋	1
+45	list	Unit6_3	11	n.列表	1
+45	mention	Unit6_3	11	vt.提到	1
+45	accidental	Unit6_3	11	adj.偶然的	0
+45	by accident	Unit6_3	11	偶然	0
+46	nearly	Unit6_4	11	adv.几乎	1
+46	ruler	Unit6_4	11	n.统治者	1
+46	boil	Unit6_4	11	v.煮沸	1
+46	smell	Unit6_4	11	n.&vt.气味	1
+46	saint	Unit6_4	11	n.圣人	0
+47	national	Unit6_5	11	adj.国家的	1
+47	trade	Unit6_5	11	n.&v.贸易	1
+47	take place	Unit6_5	11	发生	0
+47	doubt	Unit6_5	11	n.疑惑	1
+47	without doubt	Unit6_5	11	毫无疑问	0
+48	fridge	Unit6_6	11	n.冰箱	1
+48	low	Unit6_6	11	adj.低的	1
+48	somebody	Unit6_6	11	pron.某人	1
+48	translate	Unit6_6	11	vt.翻译	1
+48	lock	Unit6_6	11	v.&n.锁上	1
+49	earthquake	Unit6_7	11	n.地震	1
+49	sudden	Unit6_7	11	n.&adj.突然	1
+49	all of a sudden	Unit6_7	11	突然	0
+49	bell	Unit6_7	11	n.钟	1
+49	biscuit	Unit6_7	11	n.饼干	1
+50	cookie	Unit6_8	11	n.曲奇饼	1
+50	instrument	Unit6_8	11	n.仪器	1
+50	crispy	Unit6_8	11	脆的	0
+50	salty	Unit6_8	11	adj.咸的	0
+50	sour	Unit6_8	11	adj.酸的	1
+51	by mistake	Unit6_9	11	错误地	0
+51	customer	Unit6_9	11	n.顾客	1
+51	Canadian	Unit6_9	11	n&adj.加拿大的	1
+51	divide	Unit6_9	11	vt.分开	1
+51	divide ... into	Unit6_9	11	把...分开	0
+52	popularity	Unit6_10	11	n.受欢迎	0
+52	basket	Unit6_10	11	n.篮	1
+52	the Olympics	Unit6_10	11	奥林匹克运动会	1
+52	not only ... but also ...	Unit6_10	11	不但...而且...	0
+52	look up to	Unit6_10	11	钦佩	0
+53	hero	Unit6_11	11	n.英雄	1
+53	professional	Unit6_11	11	adj.职业的	0
+53	Berlin	Unit6_11	11	柏林	0
+53	NBA	Unit6_11	11	国家篮球协会（美国职业篮球联赛）	0
+54	smoke	Unit7_1	6	v.&n.吸烟	1
+54	pierce	Unit7_1	6	v.刺破	0
+54	license	Unit7_1	6	n.证	1
+54	safety	Unit7_1	6	n.安全	1
+54	part-time	Unit7_1	6	adj.兼职的	0
+55	earring	Unit7_2	6	n.耳环	0
+55	flash	Unit7_2	6	n.闪光	0
+55	tiny	Unit7_2	6	adj.极小的	1
+55	cry	Unit7_2	6	n.哭	1
+55	field	Unit7_2	6	n.田野	1
+56	hug	Unit7_3	6	v.拥抱	1
+56	lift	Unit7_3	6	vt.&n.举起	1
+56	talk back	Unit7_3	6	回嘴	0
+56	awful	Unit7_3	6	adj.很坏的	1
+56	teen	Unit7_3	6	n.青少年	0
+57	regret	Unit7_4	6	n.感到遗憾	1
+57	poem	Unit7_4	6	n.诗	1
+57	community	Unit7_4	6	n.社区	1
+57	keep ... away from	Unit7_4	6	避免接近	0
+57	chance	Unit7_4	6	n.机会	1
+58	make one's own decision	Unit7_5	6	自己做决定	0
+58	manage	Unit7_5	6	vt.应付	1
+58	society	Unit7_5	6	n.社会	1
+58	educate	Unit7_5	6	v.教育	1
+58	get in the way of	Unit7_5	6	挡...的路	0
+59	enter	Unit7_6	6	vi.进来	1
+59	support	Unit7_6	6	n.支持	1
+59	choice	Unit7_6	6	n.选择	1
+59	Picasso	Unit7_6	6	毕加索	0
+60	truck	Unit8_1	8	n.卡车	1
+60	rabbit	Unit8_1	8	n.兔	1
+60	whose	Unit8_1	8	pron.谁的	1
+60	attend	Unit8_1	8	vt.出席	1
+60	valuable	Unit8_1	8	adj.宝贵的	1
+61	pink	Unit8_2	8	adj.&n.粉红色的	1
+61	picnic	Unit8_2	8	n.野餐	1
+61	anybody	Unit8_2	8	pron.任何人	1
+61	happening	Unit8_2	8	事件	0
+61	noise	Unit8_2	8	n.噪音	1
+62	policeman	Unit8_3	8	n.男警察	1
+62	wolf	Unit8_3	8	n.狼	1
+62	uneasy	Unit8_3	8	adj.不安的	0
+62	laboratory	Unit8_3	8	n.实验室	1
+62	coat	Unit8_3	8	n.外套	1
+63	sleepy	Unit8_4	8	adj.困倦的	1
+63	land	Unit8_4	8	n.着陆	1
+63	alien	Unit8_4	8	n.外星人	0
+63	run after	Unit8_4	8	追逐	0
+63	suit	Unit8_4	8	v.西服	1
+64	express	Unit8_5	8	vt.表达	1
+64	circle	Unit8_5	8	n.&v.圆圈	1
+64	Britain	Unit8_5	8	n.大不列颠	1
+64	mystery	Unit8_5	8	n.奥秘	0
+64	receive	Unit8_5	8	vt.接受	1
+65	historian	Unit8_6	8	n.历史学家	0
+65	leader	Unit8_6	8	n.领导	1
+65	midsummer	Unit8_6	8	n.仲夏	0
+65	medical	Unit8_6	8	adj.医疗的	1
+65	purpose	Unit8_6	8	n.目的	1
+66	prevent	Unit8_7	8	v.阻止	1
+66	energy	Unit8_7	8	n.精力	1
+66	position	Unit8_7	8	n.位置	1
+66	burial	Unit8_7	8	n.埋葬	0
+66	honor	Unit8_7	8	n.尊重	0
+67	ancestor	Unit8_8	8	n.祖宗	0
+67	victory	Unit8_8	8	n.胜利	1
+67	enemy	Unit8_8	8	n.敌人	1
+67	period	Unit8_8	8	n.时期	1
+67	hard-working	Unit8_8	8	adj.工作努力的	1
+67	Stonehenge	Unit8_8	8	n.巨石阵	0
+68	prefer	Unit9_1	9	vt.更喜欢	1
+68	lyrics	Unit9_1	9	n.歌词(复数）	0
+68	Australian	Unit9_1	9	n&adj.澳大利亚的	1
+68	electronic	Unit9_1	9	adj.电子的	1
+68	suppose	Unit9_1	9	vt.推断	1
+69	smooth	Unit9_2	9	adj.平滑的	1
+69	spare	Unit9_2	9	adj.空闲的	1
+69	case	Unit9_2	9	n.情况	1
+69	in that case	Unit9_2	9	既然那样	0
+69	war	Unit9_2	9	n.战争	1
+70	director	Unit9_3	9	n.导演	1
+70	stick	Unit9_3	9	vt.粘贴	1
+70	stick to	Unit9_3	9	坚持	0
+70	down	Unit9_3	9	adj.悲哀	1
+70	dialogue	Unit9_3	9	n.对话	1
+71	ending	Unit9_4	9	n.结尾	0
+71	documentary	Unit9_4	9	n.纪录片	0
+71	drama	Unit9_4	9	n.戏	0
+71	plenty	Unit9_4	9	n.大量	1
+71	plenty of	Unit9_4	9	大量	0
+72	shut	Unit9_5	9	v.关闭	1
+72	shut off	Unit9_5	9	关闭	0
+72	superhero	Unit9_5	9	n.超级英雄	0
+72	once in a while	Unit9_5	9	偶尔地	0
+72	intelligent	Unit9_5	9	adj.有才智的	0
+73	sense	Unit9_6	9	n.&v.感觉	1
+73	pain	Unit9_6	9	n.痛苦	1
+73	reflect	Unit9_6	9	v.反映	1
+73	moving	Unit9_6	9	adj.动人的	0
+73	perform	Unit9_6	9	v.表演	1
+74	lifetime	Unit9_7	9	n.一生	0
+74	pity	Unit9_7	9	n.遗憾	1
+74	total	Unit9_7	9	n.&adj.总的	1
+74	in total	Unit9_7	9	总共	0
+74	master	Unit9_7	9	n.&v.大师	1
+75	praise	Unit9_8	9	vt.表扬	1
+75	recall	Unit9_8	9	v.回忆起	0
+75	wound	Unit9_8	9	伤	1
+75	painful	Unit9_8	9	adj.令人痛苦的	1
+75	World War II	Unit9_8	9	第二次世界大战	0
+76	Kung Fu Panda	Unit9_9	9	《功夫熊猫》	0
+76	Titanic	Unit9_9	9	adj.《泰坦尼克号》	0
+76	March of the Penguins	Unit9_9	9	《帝企鹅日记》	0
+76	Spider-Man	Unit9_9	9	n.《蜘蛛侠》	0
+77	custom	Unit10_1	8	n.风俗	0
+77	bow	Unit10_1	8	v.鞠躬	0
+77	kiss	Unit10_1	8	vt.&n.亲吻	1
+77	greet	Unit10_1	8	vt.和...打招呼	1
+77	relaxed	Unit10_1	8	adj.放松的	1
+78	value	Unit10_2	8	n.价值	1
+78	drop by	Unit10_2	8	顺便访问	0
+78	capital	Unit10_2	8	n.首都	1
+78	after all	Unit10_2	8	毕竟	0
+78	noon	Unit10_2	8	n.中午	1
+79	mad	Unit10_3	8	adj.疯的	1
+79	get mad	Unit10_3	8	大动肝火	0
+79	effort	Unit10_3	8	n.努力	0
+79	make an effort	Unit10_3	8	作出努力	0
+79	passport	Unit10_3	8	n.护照	1
+80	clean ... off	Unit10_4	8	把...擦掉	0
+80	chalk	Unit10_4	8	n.粉笔	1
+80	blackboard	Unit10_4	8	n.黑板	1
+80	northern	Unit10_4	8	adj.北方的	1
+80	coast	Unit10_4	8	n.海岸	1
+81	season	Unit10_5	8	n.季节	1
+81	knock	Unit10_5	8	v.敲	1
+81	eastern	Unit10_5	8	adj.东方的	1
+81	take off	Unit10_5	8	脱下	0
+81	worth	Unit10_5	8	adj.值得	1
+82	manner	Unit10_6	8	n.礼仪	1
+82	empty	Unit10_6	8	adj.空的	1
+82	basic	Unit10_6	8	adj.基本的	1
+82	exchange	Unit10_6	8	vt.交换	1
+82	go out of one's way	Unit10_6	8	格外努力	0
+83	make ... feel at home	Unit10_7	8	使...感到宾至如归	0
+83	teenage	Unit10_7	8	adj.青少年的	0
+83	granddaughter	Unit10_7	8	n.孙女	1
+83	behave	Unit10_7	8	vt.表现	1
+83	except	Unit10_7	8	vt.除...之外	1
+84	elbow	Unit10_8	8	n.肘	0
+84	gradually	Unit10_8	8	adv.逐步地	0
+84	get used to	Unit10_8	8	习惯于	0
+84	suggestion	Unit10_8	8	n.建议	1
+84	Brazil	Unit10_8	8	n.巴西	0
+84	Mexico	Unit10_8	8	n.墨西哥	0
+85	rather	Unit11_1	10	adv.相当	0
+85	would rather	Unit11_1	10	宁愿	0
+85	drive	Unit11_1	10	v.迫使	1
+85	drive sb crazy	Unit11_1	10	使人发疯	0
+85	the more ... the more	Unit11_1	10	越...越...	0
+86	lately	Unit11_2	10	adv.最近	0
+86	be friends with sb.	Unit11_2	10	成为某人的朋友	0
+86	leave out	Unit11_2	10	不包括	0
+86	friendship	Unit11_2	10	n.友谊	1
+86	king	Unit11_2	10	n.国王	1
+87	power	Unit11_3	10	n.力量	1
+87	prime	Unit11_3	10	adj.首要的	0
+87	minister	Unit11_3	10	n.大臣	0
+87	prime minister	Unit11_3	10	首相	0
+87	banker	Unit11_3	10	n.银行家	1
+88	fame	Unit11_4	10	n.名声	0
+88	pale	Unit11_4	10	adj.苍白的	1
+88	queen	Unit11_4	10	n.王后	1
+88	call in	Unit11_4	10	召来	0
+88	examine	Unit11_4	10	vt.检查	1
+89	nor	Unit11_5	10	conj.也不	1
+89	neither ... nor	Unit11_5	10	既不...也不...	0
+89	palace	Unit11_5	10	n.宫殿	1
+89	wealth	Unit11_5	10	n.财富	1
+89	to start with	Unit11_5	10	起初	0
+90	grey	Unit11_6	10	adj.灰色的	1
+90	lemon	Unit11_6	10	n.柠檬	1
+90	uncomfortable	Unit11_6	10	adj.使人不舒服的	1
+90	weight	Unit11_6	10	n.重量	1
+90	shoulder	Unit11_6	10	n.肩	1
+91	goal	Unit11_7	10	n.目标	1
+91	let ... down	Unit11_7	10	使失望	0
+91	coach	Unit11_7	10	n.教练	1
+91	kick	Unit11_7	10	vt.踢	1
+91	kick sb off	Unit11_7	10	开除某人	0
+92	be hard on sb.	Unit11_8	10	对某人苛刻	0
+92	besides	Unit11_8	10	prep.而且	0
+92	teammate	Unit11_8	10	n.队友	0
+92	courage	Unit11_8	10	n.勇气	1
+92	rather than	Unit11_8	10	而不是	0
+93	guy	Unit11_9	10	n.家伙	0
+93	pull	Unit11_9	10	v.拉	1
+93	pull together	Unit11_9	10	齐心协力	0
+93	relief	Unit11_9	10	n.轻松	0
+94	nod	Unit11_10	10	n.&v.点头	1
+94	agreement	Unit11_10	10	n.一致	1
+94	fault	Unit11_10	10	n.过失	0
+94	disappoint	Unit11_10	10	vt.使失望	1
+95	unexpected	Unit12_1	9	adj.出乎意料的	1
+95	by the time...	Unit12_1	9	在...以前	0
+95	backpack	Unit12_1	9	n.背包	1
+95	oversleep	Unit12_1	9	v.睡过头	1
+95	ring	Unit12_1	9	v.铃鸣	1
+96	give ... a lift	Unit12_2	9	捎...一程	0
+96	block	Unit12_2	9	n.街区	1
+96	in line with	Unit12_2	9	成一排	0
+96	worker	Unit12_2	9	n.工作者	1
+96	stare	Unit12_2	9	vt.盯着看	0
+97	disbelief	Unit12_3	9	n.不信	0
+97	above	Unit12_3	9	prep.在上面	1
+97	burn	Unit12_3	9	vt.着火	1
+97	burning	Unit12_3	9	adj.着火的	0
+97	alive	Unit12_3	9	adj.活着	1
+98	airport	Unit12_4	9	n.机场	1
+98	till	Unit12_4	9	conj.到	1
+98	west	Unit12_4	9	adj.&n.&adv.向西	1
+98	cream	Unit12_4	9	n.奶油	1
+98	workday	Unit12_4	9	n.工作日	0
+99	pie	Unit12_5	9	n.果馅饼	1
+99	show up	Unit12_5	9	露面	0
+99	bean	Unit12_5	9	n.豆	1
+99	market	Unit12_5	9	n.市场	1
+99	by the end of	Unit12_5	9	在...以前	0
+100	fool	Unit12_6	9	n.蠢人	1
+100	costume	Unit12_6	9	n.服装	0
+100	embarrassed	Unit12_6	9	adj.窘迫的	0
+100	costume party	Unit12_6	9	化装舞会	0
+100	announce	Unit12_6	9	vt.宣布	0
+101	spaghetti	Unit12_7	9	n.意大利面条	0
+101	hoax	Unit12_7	9	v.骗局	0
+101	sell out	Unit12_7	9	卖光	0
+101	discovery	Unit12_7	9	n.发现	1
+101	lady	Unit12_7	9	n.女士	1
+102	cancel	Unit12_8	9	vt.取消	1
+102	officer	Unit12_8	9	n.军官	1
+102	believable	Unit12_8	9	adj.可相信的	1
+102	disappear	Unit12_8	9	vi.消失	1
+103	embarrassing	Unit12_9	9	adj.使人害羞的	0
+103	New Zealand	Unit12_9	9	n.新西兰	0
+103	Italy	Unit12_9	9	n.意大利	0
+103	Mars	Unit12_9	9	n.火星	0
+104	litter	Unit13_1	9	n.垃圾	1
+104	bottom	Unit13_1	9	n.底部	1
+104	fisherman	Unit13_1	9	n.渔民	1
+104	coal	Unit13_1	9	n.煤	1
+104	ugly	Unit13_1	9	adj.丑陋的	1
+105	advantage	Unit13_2	9	n.优点	1
+105	cost	Unit13_2	9	vi.花费	1
+105	wooden	Unit13_2	9	adj.木制的	1
+105	plastic	Unit13_2	9	adj.&n.塑料的	1
+105	take away	Unit13_2	9	外卖食物	0
+106	bin	Unit13_3	9	n.垃圾箱	0
+106	shark	Unit13_3	9	n.鲨鱼	0
+106	fin	Unit13_3	9	n.鳍	0
+106	cruel	Unit13_3	9	adj.残酷的	1
+106	harmful	Unit13_3	9	adj.有害的	1
+107	be harmful to	Unit13_4	9	对...有害	0
+107	at the top of	Unit13_4	9	在...顶部或顶端	0
+107	chain	Unit13_4	9	n.链子	1
+107	ecosystem	Unit13_4	9	n.生态系统	0
+107	industry	Unit13_4	9	n.工业	1
+108	law	Unit13_5	9	n.法律	1
+108	take part in	Unit13_5	9	参加	0
+108	turn off	Unit13_5	9	关掉	0
+108	reusable	Unit13_5	9	adj.可重复使用的	0
+108	afford	Unit13_5	9	vt.承担得起	1
+109	pay for	Unit13_6	9	付费	0
+109	take action	Unit13_6	9	采取行动	0
+109	transportation	Unit13_6	9	n.运输业	0
+109	recycle	Unit13_6	9	vt.回收利用	1
+109	napkin	Unit13_6	9	n.餐巾	0
+110	throw away	Unit13_7	9	扔掉	0
+110	put sth to good use	Unit13_7	9	好好利用某物	0
+110	pull ... down	Unit13_7	9	摧毁	0
+110	upside down	Unit13_7	9	n.上下颠倒	0
+110	gate	Unit13_7	9	n.大门	1
+111	bottle	Unit13_8	9	n.瓶	1
+111	president	Unit13_8	9	n.主席	1
+111	inspiration	Unit13_8	9	n.灵感	0
+111	iron	Unit13_8	9	n.铁	0
+112	work	Unit13_9	9	n.作品	1
+112	metal	Unit13_9	9	n.金属	1
+112	creativity	Unit13_9	9	n.创造力	0
+112	Wild Aid	Unit13_9	9	野生救援协会	0
+113	survey	Unit14_1	9	n.调查	1
+113	standard	Unit14_1	9	n.标准	1
+113	row	Unit14_1	9	n.一列	1
+113	in a row	Unit14_1	9	连续几次地	0
+113	keyboard	Unit14_1	9	n.键盘	1
+114	method	Unit14_2	9	n.方法	1
+114	instruction	Unit14_2	9	n.指示	1
+114	double	Unit14_2	9	n.&v.加倍	1
+114	shall	Unit14_2	9	vt.将要	1
+114	look back at	Unit14_2	9	回首	0
+115	overcome	Unit14_3	9	vt.克服	1
+115	make a mess	Unit14_3	9	弄得一团糟	0
+115	graduate	Unit14_3	9	vt.毕业	0
+115	keep one's cool	Unit14_3	9	沉住气	0
+115	caring	Unit14_3	9	adj.体贴人的	1
+116	ours	Unit14_4	9	pron.我们的	1
+116	senior	Unit14_4	9	adj.级别高的	1
+116	senior high school	Unit14_4	9	高中	0
+116	text	Unit14_4	9	n.课文	1
+116	go by	Unit14_4	9	时间逝去	0
+117	level	Unit14_5	9	n.水平	1
+117	degree	Unit14_5	9	n.学位	1
+117	manager	Unit14_5	9	n.经理	1
+117	believe in	Unit14_5	9	信任	0
+117	gentleman	Unit14_5	9	n.先生	1
+118	graduation	Unit14_6	9	n.毕业	0
+118	ceremony	Unit14_6	9	n.典礼	0
+118	first of all	Unit14_6	9	首先	0
+118	congratulate	Unit14_6	9	vt.祝贺	1
+118	thirsty	Unit14_6	9	adj.口渴的	1
+119	be thirsty for	Unit14_7	9	渴望	0
+119	thankful	Unit14_7	9	adj.感谢	1
+119	be thankful to sb	Unit14_7	9	对某人心存感激	0
+119	lastly	Unit14_7	9	adv.最后	0
+119	task	Unit14_7	9	n.任务	1
+120	ahead	Unit14_8	9	adv.向前面	1
+120	ahead of	Unit14_8	9	在...前面	0
+120	along with	Unit14_8	9	连同	0
+120	responsible	Unit14_8	9	adj.有责任心的	0
+120	be responsible for	Unit14_8	9	负责人	0
+121	separate	Unit14_9	9	v.&adj.分离的	1
+121	set out	Unit14_9	9	出发	0
+121	separate from	Unit14_9	9	分离	0
+121	wing	Unit14_9	9	n.翅膀	1

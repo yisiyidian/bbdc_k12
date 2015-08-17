@@ -1,212 +1,212 @@
-1	stair	Unit1_1	4	n.楼梯	0
-1	at a time	Unit1_1	4	每次	1
-1	plain	Unit1_1	4	n.平原	0
-2	no longer	Unit1_2	4	不再	1
-2	Troy	Unit1_2	4	n.特洛伊	0
-2	beyond	Unit1_2	4	prep.在...较远的一边	1
-2	Greek	Unit1_2	4	n.希腊人	0
-2	capture	Unit1_2	4	n.&vt.攻占	0
-2	wheel	Unit1_2	4	n.轮子	1
-2	Trojan	Unit1_2	4	n.特洛伊人	0
-2	drag	Unit1_2	4	v.	1
-3	citizen	Unit1_3	4	n.公民	1
-3	joke	Unit1_3	4	n.笑话	1
-3	enemy	Unit1_3	4	n.敌人	1
-3	securely	Unit1_3	4	adv.牢牢地	1
-3	go to sleep	Unit1_3	4	入睡	1
-3	including	Unit1_3	4	prep.包括...在内	0
-3	midnight	Unit1_3	4	n.午夜	1
-3	except for	Unit1_3	4	除...之外	1
-4	army	Unit1_4	4	n.军队	1
-4	darkness	Unit1_4	4	n.黑暗	1
-4	seize	Unit1_4	4	vt.捉拿	0
-4	success	Unit1_4	4	n.成功	1
-4	fit	Unit1_4	4	v.适合	1
-4	refuse	Unit1_4	4	vt.拒绝	1
-4	manage	Unit1_4	4	vt.完成	1
-4	come on	Unit1_4	4	得了吧	1
-4	independent	Unit1_4	4	adj.独立的	1
-5	pole	Unit2_1	3	n.杆子	1
-5	cormorant	Unit2_1	3	n.鸬鹚	0
-5	elderly	Unit2_1	3	adj.上了年纪的	1
-5	control	Unit2_1	3	n.&v.控制	1
-5	raft	Unit2_1	3	n.木排	0
-5	underwater	Unit2_1	3	adv.在水下	1
-5	up to	Unit2_1	3	至多有	1
-5	require	Unit2_1	3	v.需要	1
-5	rod	Unit2_1	3	n.杆	0
-6	set off	Unit2_2	3	出发	1
-6	bamboo	Unit2_2	3	n.竹子	0
-6	reach	Unit2_2	3	vt.到达	1
-6	so that	Unit2_2	3	为了	1
-6	swallow	Unit2_2	3	v.吞下	0
-6	up and down	Unit2_2	3	起伏	1
-6	bang	Unit2_2	3	v.&n.砸	0
-6	at night	Unit2_2	3	在夜晚	1
-6	hang	Unit2_2	3	vt.悬挂	1
-7	remove	Unit2_3	3	vt.移走	1
-7	rest	Unit2_3	3	vt.&n.休息	1
-7	traditional	Unit2_3	3	adj.传统的	1
-7	skill	Unit2_3	3	n.技能	1
-7	skin	Unit2_3	3	n.皮肤	1
-7	mention	Unit2_3	3	vt.提到	1
-7	straight	Unit2_3	3	adj.直的	1
-7	situation	Unit2_3	3	n.场景	1
-7	imagine	Unit2_3	3	vt.想象	1
-8	from side to side	Unit3_1	3	从左到右	1
-8	opinion	Unit3_1	3	n.想法	1
-8	cute	Unit3_1	3	adj.可爱的	0
-8	grow up	Unit3_1	3	长大	1
-8	responsibility	Unit3_1	3	n.责任	1
-8	according to	Unit3_1	3	根据	1
-8	death	Unit3_1	3	n.死	1
-8	care for	Unit3_1	3	关爱	1
-8	respect	Unit3_1	3	vt.&n.尊重	1
-8	faithfully	Unit3_1	3	adv.忠诚地	1
-8	in one's opinion	Unit3_1	3	依某人的看法	1
-9	mess	Unit3_2	3	n.杂乱	1
-9	fur	Unit3_2	3	n.毛皮	0
-9	result	Unit3_2	3	n.结果	1
-9	as a result	Unit3_2	3	因此	1
-9	bite	Unit3_2	3	v.咬	1
-9	what's more	Unit3_2	3	而且	1
-9	extremely	Unit3_2	3	adv.极其	1
-9	unhappy	Unit3_2	3	adj.悲伤的	1
-9	clean out	Unit3_2	3	打扫	1
-9	right now	Unit3_2	3	马上	1
-9	surprised	Unit3_2	3	adj.惊讶的	1
-10	shocked	Unit3_3	3	adj.震惊的	1
-10	salary	Unit3_3	3	n.薪水	1
-10	certain	Unit3_3	3	adj.一定的	1
-10	goldfish	Unit3_3	3	n.金鱼	1
-10	right away	Unit3_3	3	立即	1
-10	apologize	Unit3_3	3	v.道歉	1
-10	make a complaint	Unit3_3	3	投诉	1
-10	be wrong with	Unit3_3	3	有问题	1
-10	review	Unit3_3	3	vt.评论	1
-10	not only ... but also ...	Unit3_3	3	不但...而且	1
-11	screen	Unit4_1	4	n.屏幕	1
-11	recognize	Unit4_1	4	vt.认识	1
-11	desktop	Unit4_1	4	n.台式电脑	1
-11	laptop	Unit4_1	4	n.便携式电脑	0
-11	palmtop	Unit4_1	4	n.掌上电脑	0
-11	tiny	Unit4_1	4	adj.微小的	1
-11	unaware	Unit4_1	4	adj.未察觉	1
-11	be unaware of	Unit4_1	4	未察觉	1
-11	depend	Unit4_1	4	vi.依赖	1
-12	depend on	Unit4_2	4	依赖	1
-12	common	Unit4_2	4	adj.常见的	1
-12	common knowledge	Unit4_2	4	常识	1
-12	rarely	Unit4_2	4	adv.罕有	1
-12	print	Unit4_2	4	vt.打印	1
-12	importantly	Unit4_2	4	adv.重要地	1
-12	operate	Unit4_2	4	vi.操作	1
-12	aeroplane	Unit4_2	4	n.飞机	1
-12	spaceship	Unit4_2	4	n.宇宙飞船	0
-13	for the time being	Unit4_3	4	暂时	1
-13	meaning	Unit4_3	4	n.意义	1
-13	command	Unit4_3	4	n.命令	1
-13	CD-ROM	Unit4_3	4	n.只读光盘	1
-13	DVD-ROM	Unit4_3	4	n.数字只读光盘	1
-13	writing	Unit4_3	4	n.文章	1
-13	aware	Unit4_3	4	adj.意识到	1
-13	order	Unit4_3	4	v.订购	1
-13	blank	Unit4_3	4	adj.空白的	1
-14	supply	Unit4_4	4	n.供应量	1
-14	contact	Unit4_4	4	v.联系人	1
-14	reference	Unit4_4	4	n.参考	1
-14	quantity	Unit4_4	4	n.数量	1
-14	length	Unit4_4	4	n.长度	1
-14	seat	Unit4_4	4	n.座位	1
-14	peak	Unit4_4	4	n.山顶	1
-14	court	Unit4_4	4	n.公寓大楼	1
-14	distance	Unit4_4	4	n.距离	1
-15	memory	Unit5_1	3	n.记忆力	1
-15	mind	Unit5_1	3	n.头脑	1
-15	short-term	Unit5_1	3	adj.短期的	1
-15	long-term	Unit5_1	3	adj.长期的	1
-15	go wrong	Unit5_1	3	出毛病	1
-15	essential	Unit5_1	3	adj.必不可少的	1
-15	injure	Unit5_1	3	v.伤害	1
-15	afterwards	Unit5_1	3	adv.后来	1
-15	be angry with	Unit5_1	3	对...发怒	1
-15	basic	Unit5_1	3	adj.基础的	0
-16	link	Unit5_2	3	vt.联系	1
-16	method	Unit5_2	3	n.方法	1
-16	link method	Unit5_2	3	联想法	1
-16	memorize	Unit5_2	3	v.记住	0
-16	colourful	Unit5_2	3	adj.丰富多彩的	1
-16	mile	Unit5_2	3	n.英里	1
-16	playing card	Unit5_2	3	纸牌	1
-16	spider	Unit5_2	3	n.蜘蛛	0
-16	dramatic	Unit5_2	3	adj.激动人心的	1
-16	opening	Unit5_2	3	n.开幕式	1
-17	ceremony	Unit5_3	3	n.仪式	1
-17	Olympic	Unit5_3	3	adj.奥林匹克运动会的	0
-17	the Olympic Games	Unit5_3	3	奥运会	0
-17	wonder	Unit5_3	3	v.想知道	1
-17	goal	Unit5_3	3	v.进球得分	1
-17	mark	Unit5_3	3	n.分数	1
-17	excuse	Unit5_3	3	n.excuse	1
-17	break down	Unit5_3	3	出故障	1
-17	had better	Unit5_3	3	最好	1
-18	crime	Unit6_1	3	n.罪行	1
-18	detective	Unit6_1	3	n.侦探	1
-18	innocent	Unit6_1	3	adj.无辜的	11
-18	recent	Unit6_1	3	adj.近来的	1
-18	case	Unit6_1	3	n.案件	1
-18	purchase	Unit6_1	3	v.购买	1
-18	safe	Unit6_1	3	adj.保险箱	1
-18	clue	Unit6_1	3	n.线索	0
-18	earring	Unit6_1	3	n.耳环	1
-18	mud	Unit6_1	3	n.泥浆	0
-19	spotlessly	Unit6_2	3	adv.一尘不染地	1
-19	deny	Unit6_2	3	vt.否认	1
-19	necklace	Unit6_2	3	n.项链	0
-19	proof	Unit6_2	3	n.&v.证据	1
-19	conclusion	Unit6_2	3	n.推论	1
-19	jump to conclusions	Unit6_2	3	贸然断定	1
-19	admit	Unit6_2	3	vt.承认	1
-19	suspect	Unit6_2	3	vt.嫌疑犯	1
-19	spotless	Unit6_2	3	adj.非常洁净的	1
-19	break into	Unit6_2	3	强行闯入	1
-20	insurance	Unit6_3	3	n.保险箱	1
-20	as well	Unit6_3	3	也	1
-20	jail	Unit6_3	3	n.监狱	0
-20	behind bars	Unit6_3	3	坐牢	1
-20	guilty	Unit6_3	3	adj.犯了罪的	1
-20	discover	Unit6_3	3	vt.发现	1
-20	arrest	Unit6_3	3	v.&n.逮捕	1
-20	pause	Unit6_3	3	n.停顿	1
-20	mystery	Unit6_3	3	n.神秘的事物	1
-20	murder	Unit6_3	3	谋杀	1
-21	affect	Unit7_1	3	vt.影响	1
-21	comic strip	Unit7_1	3	连环漫画	0
-21	robbery	Unit7_1	3	n.抢劫	1
-21	kidnap	Unit7_1	3	v.绑架	0
-21	plot	Unit7_1	3	n.故事情节	1
-21	personality	Unit7_1	3	n.个性	1
-21	script	Unit7_1	3	n.剧本	0
-21	border	Unit7_1	3	n.边界	1
-21	variety	Unit7_1	3	n.变化	1
-21	mainly	Unit7_1	3	adv.总体上	1
-22	bubble	Unit7_2	3	n.泡	0
-22	speech	Unit7_2	3	n.演说	1
-22	thought	Unit7_2	3	n.思想	1
-22	text	Unit7_2	3	n.文本	1
-22	effect	Unit7_2	3	n.效果	1
-22	excitement	Unit7_2	3	n.兴奋	1
-22	vary	Unit7_2	3	vt.改变	0
-22	scenery	Unit7_2	3	n.布景	0
-22	come to life	Unit7_2	3	变的更生动	1
-22	serious	Unit7_2	3	adj.严肃的	1
-23	row	Unit7_3	3	n.一列	1
-23	point	Unit7_3	3	n.时刻	1
-23	emotion	Unit7_3	3	n.情绪	1
-23	stress	Unit7_3	3	n.重音	1
-23	recently	Unit7_3	3	adv.最近	1
-23	confident	Unit7_3	3	adj.自信的	1
-23	burst	Unit7_3	3	n.&v.突然出现	1
-23	burst out doing	Unit7_3	3	突然开始	1
-23	pale	Unit7_3	3	adj.苍白的	1
-23	forecast	Unit7_3	3	v.&n.预报	1
+1	stair	Unit1_1	6	n.楼梯	0
+1	at a time	Unit1_1	6	每次	1
+1	plain	Unit1_1	6	n.平原	0
+2	no longer	Unit1_2	6	不再	1
+2	Troy	Unit1_2	6	n.特洛伊	0
+2	beyond	Unit1_2	6	prep.在...较远的一边	1
+2	Greek	Unit1_2	6	n.希腊人	0
+2	capture	Unit1_2	6	n.&vt.攻占	0
+3	wheel	Unit1_3	6	n.轮子	1
+3	Trojan	Unit1_3	6	n.特洛伊人	0
+3	drag	Unit1_3	6	v.	1
+3	citizen	Unit1_3	6	n.公民	1
+3	joke	Unit1_3	6	n.笑话	1
+4	enemy	Unit1_4	6	n.敌人	1
+4	securely	Unit1_4	6	adv.牢牢地	1
+4	go to sleep	Unit1_4	6	入睡	1
+4	including	Unit1_4	6	prep.包括...在内	0
+4	midnight	Unit1_4	6	n.午夜	1
+5	except for	Unit1_5	6	除...之外	1
+5	army	Unit1_5	6	n.军队	1
+5	darkness	Unit1_5	6	n.黑暗	1
+5	seize	Unit1_5	6	vt.捉拿	0
+5	success	Unit1_5	6	n.成功	1
+6	fit	Unit1_6	6	v.适合	1
+6	refuse	Unit1_6	6	vt.拒绝	1
+6	manage	Unit1_6	6	vt.完成	1
+6	come on	Unit1_6	6	得了吧	1
+6	independent	Unit1_6	6	adj.独立的	1
+7	pole	Unit2_1	5	n.杆子	1
+7	cormorant	Unit2_1	5	n.鸬鹚	0
+7	elderly	Unit2_1	5	adj.上了年纪的	1
+7	control	Unit2_1	5	n.&v.控制	1
+7	raft	Unit2_1	5	n.木排	0
+8	underwater	Unit2_2	5	adv.在水下	1
+8	up to	Unit2_2	5	至多有	1
+8	require	Unit2_2	5	v.需要	1
+8	rod	Unit2_2	5	n.杆	0
+8	set off	Unit2_2	5	出发	1
+9	bamboo	Unit2_3	5	n.竹子	0
+9	reach	Unit2_3	5	vt.到达	1
+9	so that	Unit2_3	5	为了	1
+9	swallow	Unit2_3	5	v.吞下	0
+9	up and down	Unit2_3	5	起伏	1
+10	bang	Unit2_4	5	v.&n.砸	0
+10	at night	Unit2_4	5	在夜晚	1
+10	hang	Unit2_4	5	vt.悬挂	1
+10	remove	Unit2_4	5	vt.移走	1
+10	rest	Unit2_4	5	vt.&n.休息	1
+10	traditional	Unit2_4	5	adj.传统的	1
+11	skill	Unit2_5	5	n.技能	1
+11	skin	Unit2_5	5	n.皮肤	1
+11	mention	Unit2_5	5	vt.提到	1
+11	straight	Unit2_5	5	adj.直的	1
+11	situation	Unit2_5	5	n.场景	1
+11	imagine	Unit2_5	5	vt.想象	1
+12	from side to side	Unit3_1	6	从左到右	1
+12	opinion	Unit3_1	6	n.想法	1
+12	cute	Unit3_1	6	adj.可爱的	0
+12	grow up	Unit3_1	6	长大	1
+12	responsibility	Unit3_1	6	n.责任	1
+13	according to	Unit3_2	6	根据	1
+13	death	Unit3_2	6	n.死	1
+13	care for	Unit3_2	6	关爱	1
+13	respect	Unit3_2	6	vt.&n.尊重	1
+13	faithfully	Unit3_2	6	adv.忠诚地	1
+14	in one's opinion	Unit3_3	6	依某人的看法	1
+14	mess	Unit3_3	6	n.杂乱	1
+14	fur	Unit3_3	6	n.毛皮	0
+14	result	Unit3_3	6	n.结果	1
+14	as a result	Unit3_3	6	因此	1
+15	bite	Unit3_4	6	v.咬	1
+15	what's more	Unit3_4	6	而且	1
+15	extremely	Unit3_4	6	adv.极其	1
+15	unhappy	Unit3_4	6	adj.悲伤的	1
+15	clean out	Unit3_4	6	打扫	1
+16	right now	Unit3_5	6	马上	1
+16	surprised	Unit3_5	6	adj.惊讶的	1
+16	shocked	Unit3_5	6	adj.震惊的	1
+16	salary	Unit3_5	6	n.薪水	1
+16	certain	Unit3_5	6	adj.一定的	1
+16	goldfish	Unit3_5	6	n.金鱼	1
+17	right away	Unit3_6	6	立即	1
+17	apologize	Unit3_6	6	v.道歉	1
+17	make a complaint	Unit3_6	6	投诉	1
+17	be wrong with	Unit3_6	6	有问题	1
+17	review	Unit3_6	6	vt.评论	1
+17	not only ... but also ...	Unit3_6	6	不但...而且	1
+18	screen	Unit4_1	7	n.屏幕	1
+18	recognize	Unit4_1	7	vt.认识	1
+18	desktop	Unit4_1	7	n.台式电脑	1
+18	laptop	Unit4_1	7	n.便携式电脑	0
+18	palmtop	Unit4_1	7	n.掌上电脑	0
+19	tiny	Unit4_2	7	adj.微小的	1
+19	unaware	Unit4_2	7	adj.未察觉	1
+19	be unaware of	Unit4_2	7	未察觉	1
+19	depend	Unit4_2	7	vi.依赖	1
+19	depend on	Unit4_2	7	依赖	1
+20	common	Unit4_3	7	adj.常见的	1
+20	common knowledge	Unit4_3	7	常识	1
+20	rarely	Unit4_3	7	adv.罕有	1
+20	print	Unit4_3	7	vt.打印	1
+20	importantly	Unit4_3	7	adv.重要地	1
+21	operate	Unit4_4	7	vi.操作	1
+21	aeroplane	Unit4_4	7	n.飞机	1
+21	spaceship	Unit4_4	7	n.宇宙飞船	0
+21	for the time being	Unit4_4	7	暂时	1
+21	meaning	Unit4_4	7	n.意义	1
+22	command	Unit4_5	7	n.命令	1
+22	CD-ROM	Unit4_5	7	n.只读光盘	1
+22	DVD-ROM	Unit4_5	7	n.数字只读光盘	1
+22	writing	Unit4_5	7	n.文章	1
+22	aware	Unit4_5	7	adj.意识到	1
+23	order	Unit4_6	7	v.订购	1
+23	blank	Unit4_6	7	adj.空白的	1
+23	supply	Unit4_6	7	n.供应量	1
+23	contact	Unit4_6	7	v.联系人	1
+23	reference	Unit4_6	7	n.参考	1
+24	quantity	Unit4_7	7	n.数量	1
+24	length	Unit4_7	7	n.长度	1
+24	seat	Unit4_7	7	n.座位	1
+24	peak	Unit4_7	7	n.山顶	1
+24	court	Unit4_7	7	n.公寓大楼	1
+24	distance	Unit4_7	7	n.距离	1
+25	memory	Unit5_1	6	n.记忆力	1
+25	mind	Unit5_1	6	n.头脑	1
+25	short-term	Unit5_1	6	adj.短期的	1
+25	long-term	Unit5_1	6	adj.长期的	1
+25	go wrong	Unit5_1	6	出毛病	1
+26	essential	Unit5_2	6	adj.必不可少的	1
+26	injure	Unit5_2	6	v.伤害	1
+26	afterwards	Unit5_2	6	adv.后来	1
+26	be angry with	Unit5_2	6	对...发怒	1
+26	basic	Unit5_2	6	adj.基础的	0
+27	link	Unit5_3	6	vt.联系	1
+27	method	Unit5_3	6	n.方法	1
+27	link method	Unit5_3	6	联想法	1
+27	memorize	Unit5_3	6	v.记住	0
+27	colourful	Unit5_3	6	adj.丰富多彩的	1
+28	mile	Unit5_4	6	n.英里	1
+28	playing card	Unit5_4	6	纸牌	1
+28	spider	Unit5_4	6	n.蜘蛛	0
+28	dramatic	Unit5_4	6	adj.激动人心的	1
+28	opening	Unit5_4	6	n.开幕式	1
+29	ceremony	Unit5_5	6	n.仪式	1
+29	Olympic	Unit5_5	6	adj.奥林匹克运动会的	0
+29	the Olympic Games	Unit5_5	6	奥运会	0
+29	wonder	Unit5_5	6	v.想知道	1
+29	goal	Unit5_5	6	v.进球得分	1
+30	mark	Unit5_6	6	n.分数	1
+30	excuse	Unit5_6	6	n.excuse	1
+30	break down	Unit5_6	6	出故障	1
+30	had better	Unit5_6	6	最好	1
+31	crime	Unit6_1	6	n.罪行	1
+31	detective	Unit6_1	6	n.侦探	1
+31	innocent	Unit6_1	6	adj.无辜的	11
+31	recent	Unit6_1	6	adj.近来的	1
+31	case	Unit6_1	6	n.案件	1
+32	purchase	Unit6_2	6	v.购买	1
+32	safe	Unit6_2	6	adj.保险箱	1
+32	clue	Unit6_2	6	n.线索	0
+32	earring	Unit6_2	6	n.耳环	1
+32	mud	Unit6_2	6	n.泥浆	0
+33	spotlessly	Unit6_3	6	adv.一尘不染地	1
+33	deny	Unit6_3	6	vt.否认	1
+33	necklace	Unit6_3	6	n.项链	0
+33	proof	Unit6_3	6	n.&v.证据	1
+33	conclusion	Unit6_3	6	n.推论	1
+34	jump to conclusions	Unit6_4	6	贸然断定	1
+34	admit	Unit6_4	6	vt.承认	1
+34	suspect	Unit6_4	6	vt.嫌疑犯	1
+34	spotless	Unit6_4	6	adj.非常洁净的	1
+34	break into	Unit6_4	6	强行闯入	1
+35	insurance	Unit6_5	6	n.保险箱	1
+35	as well	Unit6_5	6	也	1
+35	jail	Unit6_5	6	n.监狱	0
+35	behind bars	Unit6_5	6	坐牢	1
+35	guilty	Unit6_5	6	adj.犯了罪的	1
+36	discover	Unit6_6	6	vt.发现	1
+36	arrest	Unit6_6	6	v.&n.逮捕	1
+36	pause	Unit6_6	6	n.停顿	1
+36	mystery	Unit6_6	6	n.神秘的事物	1
+36	murder	Unit6_6	6	谋杀	1
+37	affect	Unit7_1	6	vt.影响	1
+37	comic strip	Unit7_1	6	连环漫画	0
+37	robbery	Unit7_1	6	n.抢劫	1
+37	kidnap	Unit7_1	6	v.绑架	0
+37	plot	Unit7_1	6	n.故事情节	1
+38	personality	Unit7_2	6	n.个性	1
+38	script	Unit7_2	6	n.剧本	0
+38	border	Unit7_2	6	n.边界	1
+38	variety	Unit7_2	6	n.变化	1
+38	mainly	Unit7_2	6	adv.总体上	1
+39	bubble	Unit7_3	6	n.泡	0
+39	speech	Unit7_3	6	n.演说	1
+39	thought	Unit7_3	6	n.思想	1
+39	text	Unit7_3	6	n.文本	1
+39	effect	Unit7_3	6	n.效果	1
+40	excitement	Unit7_4	6	n.兴奋	1
+40	vary	Unit7_4	6	vt.改变	0
+40	scenery	Unit7_4	6	n.布景	0
+40	come to life	Unit7_4	6	变的更生动	1
+40	serious	Unit7_4	6	adj.严肃的	1
+41	row	Unit7_5	6	n.一列	1
+41	point	Unit7_5	6	n.时刻	1
+41	emotion	Unit7_5	6	n.情绪	1
+41	stress	Unit7_5	6	n.重音	1
+41	recently	Unit7_5	6	adv.最近	1
+42	confident	Unit7_6	6	adj.自信的	1
+42	burst	Unit7_6	6	n.&v.突然出现	1
+42	burst out doing	Unit7_6	6	突然开始	1
+42	pale	Unit7_6	6	adj.苍白的	1
+42	forecast	Unit7_6	6	v.&n.预报	1

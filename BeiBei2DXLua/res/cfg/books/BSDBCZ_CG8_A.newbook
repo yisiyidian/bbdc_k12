@@ -1,402 +1,402 @@
-1	programme	Unit1_1	8	节目	1
-1	cartoon	Unit1_1	8	n.动画片	1
-1	nature	Unit1_1	8	n.自然	1
-2	vacation	Unit1_2	8	n.假期	1
-2	reviewer	Unit1_2	8	n.评论者	1
-2	score	Unit1_2	8	n.得分	1
-2	result	Unit1_2	8	n.结果	1
-2	movie	Unit1_2	8	n.电影	1
-2	actor	Unit1_2	8	n.演员	1
-2	fantastic	Unit1_2	8	adj.极好的	1
-2	earn	Unit1_2	8	vt.挣钱	0
-2	adopt	Unit1_2	8	v.收养	0
-2	deaf	Unit1_2	8	adj.聋的	1
-3	moving	Unit1_3	8	adj.令人感动的	1
-3	dinosaur	Unit1_3	8	n.恐龙	0
-3	die	Unit1_3	8	v.死	1
-3	climate	Unit1_3	8	n.气候	0
-3	channel	Unit1_3	8	n.电视频道	0
-3	bored	Unit1_3	8	adj.厌倦的	1
-3	interview	Unit1_3	8	v.采访	1
-3	character	Unit1_3	8	n.性格	0
-3	conversation	Unit1_3	8	n.谈话	1
-3	grammar	Unit1_3	8	n.语法	1
-4	passage	Unit1_4	8	n.章节	1
-4	pronunciation	Unit1_4	8	n.发音	1
-4	vocabulary	Unit1_4	8	n.词汇	0
-4	quite	Unit1_4	8	adv.相当	1
-4	rule	Unit1_4	8	n.规则	1
-4	experience	Unit1_4	8	n.经验	1
-4	carefully	Unit1_4	8	adv.仔细地	1
-4	take notes	Unit1_4	8	记笔记	1
-4	field	Unit1_4	8	n.田地	1
-4	extremely	Unit1_4	8	adv.极其	0
-5	fit	Unit1_5	8	v.适合	1
-5	agree	Unit1_5	8	vt.同意	1
-5	certainly	Unit1_5	8	adv.当然	1
-5	pass	Unit1_5	8	vt.传球	1
-5	goal	Unit1_5	8	n.目标	0
-5	kick	Unit1_5	8	v.踢	1
-5	basket	Unit1_5	8	n.篮子	1
-5	foul	Unit1_5	8	adj.&v.犯规	0
-5	kid	Unit1_5	8	n.开玩笑	1
-5	call	Unit1_5	8	v.&n.电话	1
-6	terrible	Unit1_6	8	adj.可怕的	1
-6	shame	Unit1_6	8	n.令人遗憾的事	1
-6	What a shame	Unit1_6	8	真遗憾	1
-6	should	Unit1_6	8	aux.应该	1
-6	complain	Unit1_6	8	v.抱怨	0
-6	hit	Unit1_6	8	n.打	1
-6	court	Unit1_6	8	n.球场	0
-6	form	Unit1_6	8	n.形式	1
-6	win	Unit1_6	8	v.赢	1
-6	break	Unit1_6	8	v.弄破	1
-7	prize	Unit1_7	8	n.奖	1
-7	lose	Unit1_7	8	v.遗失	1
-7	fall	Unit1_7	8	v.&n.跌倒	1
-7	magic	Unit1_7	8	n.魔法	1
-7	tortoise	Unit1_7	8	n.乌龟	0
-7	run after	Unit1_7	8	追逐	1
-7	deer	Unit1_7	8	n.鹿	0
-7	sky	Unit1_7	8	n.天空	1
-7	whale	Unit1_7	8	n.鲸	0
-8	ocean	Unit1_8	8	n.大海	0
-8	photographer	Unit1_8	8	n.拍照者	1
-8	cameraman	Unit1_8	8	n.摄影师	1
-8	host	Unit1_8	8	v.&n.主人	0
-8	explain	Unit1_8	8	v.解释	1
-8	habit	Unit1_8	8	n.习惯	1
-8	scenery	Unit1_8	8	n.风景，景色	0
-8	explanation	Unit1_8	8	n.说明	1
-8	continue	Unit1_8	8	v.持续	1
-9	play	Unit2_1	9	n.戏剧	1
-9	experiment	Unit2_1	9	n.实验	0
-9	musical	Unit2_1	9	adj.音乐的	1
-9	instrument	Unit2_1	9	n.乐器	1
-9	teamwork	Unit2_1	9	n.协同工作	1
-9	bottle	Unit2_1	9	n.瓶子	1
-9	camera	Unit2_1	9	n.照相机	1
-9	chopsticks	Unit2_1	9	n.筷子	1
-9	glue	Unit2_1	9	n.胶水	1
-9	metal	Unit2_1	9	n.金属	0
-10	paper	Unit2_2	9	n.纸	1
-10	plastic	Unit2_2	9	adj.塑料	0
-10	wood	Unit2_2	9	n.木头	1
-10	material	Unit2_2	9	n.材料	0
-10	object	Unit2_2	9	n.物品	1
-10	build	Unit2_2	9	v.建筑	1
-10	describe	Unit2_2	9	vt.描述	1
-10	video	Unit2_2	9	n.录像	1
-10	second	Unit2_2	9	n.&adj.秒	1
-10	possible	Unit2_2	9	adj.可能	1
-11	return	Unit2_3	9	v.&n.还回	1
-11	on time	Unit2_3	9	准时	1
-11	seat	Unit2_3	9	n.座位	1
-11	exam	Unit2_3	9	n.考试	1
-11	together	Unit2_3	9	adv.在一起	1
-11	politely	Unit2_3	9	adv.有礼貌地	1
-11	role	Unit2_3	9	n.角色	1
-11	question	Unit2_3	9	n.提问	1
-11	discussion	Unit2_3	9	n.讨论	1
-11	research	Unit2_3	9	n.研究	1
-12	alone	Unit2_4	9	adj.&adv.独自	1
-12	share	Unit2_4	9	vt.分享	1
-12	anyone	Unit2_4	9	pron.任何人	1
-12	mind	Unit2_4	9	n.&v.介意	1
-12	hate	Unit2_4	9	v.讨厌	1
-12	sound	Unit2_4	9	n.&v.声音	1
-12	crazy	Unit2_4	9	adj.疯狂的	1
-12	stick	Unit2_4	9	v.&n.棍	1
-12	argue	Unit2_4	9	v.&n.争论	0
-12	choose	Unit2_4	9	vt.选择	1
-13	suggest	Unit2_5	9	vt.建议	1
-13	excellent	Unit2_5	9	adj.优秀的	1
-13	poor	Unit2_5	9	adj.贫穷的	1
-13	participate	Unit2_5	9	vi.参与	0
-13	task	Unit2_5	9	n.任务	1
-13	stand	Unit2_5	9	n.容忍	1
-13	speech	Unit2_5	9	n.演讲	1
-13	give speeches	Unit2_5	9	发表演讲	1
-13	special	Unit2_5	9	adj.特殊的	1
-13	last	Unit2_5	9	adj.持续	1
-14	couple	Unit2_6	9	n.夫妻	1
-14	on holiday	Unit2_6	9	在度假	1
-14	resort	Unit2_6	9	n.旅游胜地	0
-14	take a walk	Unit2_6	9	散步	1
-14	shake	Unit2_6	9	v.&n.摇动	1
-14	completely	Unit2_6	9	adv.彻底地，完全地	1
-14	earthquake	Unit2_6	9	n.地震	1
-14	one by one	Unit2_6	9	逐个地	1
-14	dark	Unit2_6	9	adj.黑暗的	1
-14	heavily	Unit2_6	9	adv.超出一般规模地	1
-15	moment	Unit2_7	9	n.片刻	0
-15	at that moment	Unit2_7	9	正在那时	1
-15	decide	Unit2_7	9	v.决定	1
-15	call for one's attention	Unit2_7	9	让...注意	1
-15	until	Unit2_7	9	prep.&conj.直到	1
-15	ruin	Unit2_7	9	n.废墟	0
-15	look for	Unit2_7	9	寻找	1
-15	blanket	Unit2_7	9	n.毯子	0
-15	enough	Unit2_7	9	adj.足够的	1
-15	divide	Unit2_7	9	v.分开	1
-16	collect	Unit2_8	9	vt.收集	1
-16	flashlight	Unit2_8	9	n.手电筒	0
-16	flash	Unit2_8	9	n.闪耀	0
-16	journey	Unit2_8	9	n.旅行	1
-16	encourage	Unit2_8	9	v.鼓励	1
-16	support	Unit2_8	9	n.支持	1
-16	safely	Unit2_8	9	adv.安全地	1
-16	lucky	Unit2_8	9	adj.幸运的	1
-16	hope	Unit2_8	9	n.希望	1
-16	solve	Unit2_8	9	v.解决	1
-17	problem	Unit2_9	9	n.问题	1
-17	into	Unit2_9	9	prep.到......里面	1
-17	astronaut	Unit2_9	9	n.宇航员	0
-17	several	Unit2_9	9	adj.几个	1
-17	everybody	Unit2_9	9	pron.每人	1
-17	cooperate	Unit2_9	9	vi.合作	0
-17	puzzle	Unit2_9	9	n.谜	0
-17	discuss	Unit2_9	9	vt.讨论	1
-17	band	Unit2_9	9	n.乐队	0
-18	high jump	Unit3_1	6	n.跳高	1
-18	long jump	Unit3_1	6	n.跳远	1
-18	popular	Unit3_1	6	adj.受欢迎的	1
-18	push-up	Unit3_1	6	n.俯卧撑	1
-18	sit-up	Unit3_1	6	n.仰卧起坐	1
-18	race	Unit3_1	6	n.赛跑	1
-18	rope	Unit3_1	6	n.绳	1
-18	after-class	Unit3_1	6	adj.课下的	1
-18	record	Unit3_1	6	n.纪录	1
-18	break the record	Unit3_1	6	打破纪录	1
-19	bit	Unit3_2	6	n.少量	1
-19	a bit	Unit3_2	6	稍微	1
-19	sick	Unit3_2	6	adj.生病的	1
-19	active	Unit3_2	6	adj.活跃的	1
-19	joke	Unit3_2	6	n.开玩笑	1
-19	joke around	Unit3_2	6	开玩笑	1
-19	weak	Unit3_2	6	adj.弱的	1
-19	size	Unit3_2	6	n.大小	1
-19	average	Unit3_2	6	adj.平均的	0
-19	Olympic	Unit3_2	6	adj.奥林匹克运动会的	1
-20	diving	Unit3_3	6	n.跳水	0
-20	gymnastics	Unit3_3	6	n.体操	0
-20	horse-riding	Unit3_3	6	n.骑马	1
-20	weightlifting	Unit3_3	6	n.举重	1
-20	athlete	Unit3_3	6	n.运动员	0
-20	horse-rider	Unit3_3	6	n.骑马者	1
-20	compete	Unit3_3	6	v.竞争	1
-20	at the age of...	Unit3_3	6	在...岁的时候	1
-20	national	Unit3_3	6	adj.国家的	1
-20	champion	Unit3_3	6	n.冠军	0
-21	gymnast	Unit3_4	6	n.体操运动员	0
-21	diver	Unit3_4	6	n.跳水运动员	0
-21	medal	Unit3_4	6	n.奖牌	0
-21	competition	Unit3_4	6	n.竞争	1
-21	metre	Unit3_4	6	n.米	1
-21	gold	Unit3_4	6	adj.金	1
-21	weightlifter	Unit3_4	6	n.举重运动员	1
-21	runner	Unit3_4	6	n.赛跑的人	1
-21	expedition	Unit3_4	6	n.探险	0
-22	pole	Unit3_5	6	n.极	0
-22	explorer	Unit3_5	6	n.探险者	0
-22	north	Unit3_5	6	adj.北部的	1
-22	worst	Unit3_5	6	adj.最差的	1
-22	accident	Unit3_5	6	n.意外	0
-22	prepare	Unit3_5	6	v.准备	1
-22	artificial	Unit3_5	6	adj.人工的	0
-22	careful	Unit3_5	6	adj.仔细的	1
-22	ice	Unit3_5	6	n.冰	1
-23	better	Unit3_6	6	adj.较好的	1
-23	worse	Unit3_6	6	adj.更差的	1
-23	arrive	Unit3_6	6	vi.到达	1
-23	arrive at	Unit3_6	6	到达	1
-23	brave	Unit3_6	6	adj.勇敢的	1
-23	success	Unit3_6	6	n.成功	1
-23	pull-up	Unit3_6	6	n.引体向上	1
-23	event	Unit3_6	6	n.比赛项目	0
-23	jumper	Unit3_6	6	n.跳跃者	1
-24	health	Unit4_1	6	n.健康	1
-24	cough	Unit4_1	6	n.咳嗽	1
-24	fever	Unit4_1	6	n.发烧	1
-24	headache	Unit4_1	6	n.头痛	1
-24	runny	Unit4_1	6	adj.流鼻涕的	0
-24	sore	Unit4_1	6	adj.疼痛的	0
-24	throat	Unit4_1	6	n.咽喉	0
-24	stomachache	Unit4_1	6	胃痛	1
-24	toothache	Unit4_1	6	n.牙痛	1
-24	plenty	Unit4_1	6	n.大量	1
-25	plenty of	Unit4_2	6	许多	1
-25	dentist	Unit4_2	6	n.牙医	0
-25	matter	Unit4_2	6	n.问题	1
-25	temperature	Unit4_2	6	n.体温	1
-25	deep	Unit4_2	6	adj.深的	1
-25	breath	Unit4_2	6	n.一次呼吸的空气	0
-25	flu	Unit4_2	6	n.流行感冒	0
-25	serious	Unit4_2	6	adj.严重的	1
-25	twice	Unit4_2	6	adv.两次	1
-25	note	Unit4_2	6	n.笔记	1
-26	patient	Unit4_3	6	n.病人	1
-26	date	Unit4_3	6	n.日期	1
-26	symptom	Unit4_3	6	n.症状	0
-26	treatment	Unit4_3	6	n.治疗	1
-26	cold	Unit4_3	6	adj.感冒	1
-26	once	Unit4_3	6	adv.一次	1
-26	advice	Unit4_3	6	n.建议	1
-26	sleepy	Unit4_3	6	adj.困倦的	1
-26	harmful	Unit4_3	6	adj.有害的	1
-26	for example	Unit4_3	6	例如	1
-27	bird flu	Unit4_4	6	n.禽流感	1
-27	sneeze	Unit4_4	6	n.打喷嚏	0
-27	soap	Unit4_4	6	n.肥皂	0
-27	time	Unit4_4	6	n.时间	1
-27	air	Unit4_4	6	n.空气	1
-27	earphone	Unit4_4	6	n.耳机	1
-27	volume	Unit4_4	6	n.音量	0
-27	harm	Unit4_4	6	n.伤害	0
-27	care	Unit4_4	6	n.照顾	1
-27	wonder	Unit4_4	6	n.想知道	1
-28	bone	Unit4_5	6	n.骨头	0
-28	blood	Unit4_5	6	n.血	1
-28	hold	Unit4_5	6	vt.拿着	1
-28	although	Unit4_5	6	adv.&adj.&prep.尽管	1
-28	outside	Unit4_5	6	adv.&adj.&prep.在...外面	1
-28	inside	Unit4_5	6	prep.在...里面	1
-28	nutrient	Unit4_5	6	adj.营养	0
-28	waste	Unit4_5	6	vt.浪费	1
-28	calcium	Unit4_5	6	n.钙	0
-29	solid	Unit4_6	6	adj.坚硬的	0
-29	vitamin	Unit4_6	6	n.维生素	0
-29	stair	Unit4_6	6	n.楼梯	0
-29	lunchtime	Unit4_6	6	n.午餐时间	1
-29	ping-pong	Unit4_6	6	n.乒乓球	0
-29	less	Unit4_6	6	adj.较少的	1
-29	letter	Unit4_6	6	n.字母	1
-29	blank	Unit4_6	6	adj.&n.空白处	0
-29	potato chip	Unit4_6	6	薯片	1
-30	protect	Unit5_1	7	v.保护	1
-30	environment	Unit5_1	7	n.环境	1
-30	recycle	Unit5_1	7	vt.回收利用	0
-30	save	Unit5_1	7	vt.节约	1
-30	electricity	Unit5_1	7	n.电	0
-30	off	Unit5_1	7	prep.离开	1
-30	turn off	Unit5_1	7	关掉	1
-30	community	Unit5_1	7	n.社区	1
-30	similar	Unit5_1	7	adj.相似的	1
-30	ever	Unit5_1	7	adv.曾经	1
-31	volunteer	Unit5_2	7	n.志愿者	0
-31	helper	Unit5_2	7	n.帮手	1
-31	complete	Unit5_2	7	vt.&adj.完成	1
-31	clean up	Unit5_2	7	清扫	1
-31	seem	Unit5_2	7	v.看起来	1
-31	can	Unit5_2	7	aux.金属罐	1
-31	piece	Unit5_2	7	n.块	1
-31	finished	Unit5_2	7	adj.完成	1
-31	litter	Unit5_2	7	v.乱扔	1
-31	put up	Unit5_2	7	张贴	1
-32	notice	Unit5_3	7	n.通告	1
-32	request	Unit5_3	7	n.&v.请求	0
-32	reply	Unit5_3	7	vt.回答	1
-32	fight	Unit5_3	7	n.打架	1
-32	laugh at	Unit5_3	7	嘲笑	1
-32	polite	Unit5_3	7	adj.有礼貌的	1
-32	avoid	Unit5_3	7	v.避免	1
-32	actually	Unit5_3	7	adv.事实上	0
-32	step	Unit5_3	7	n.一步	1
-32	without	Unit5_3	7	prep.缺乏	1
-33	lead	Unit5_4	7	v.带路	1
-33	dare	Unit5_4	7	vi.敢于	0
-33	textbook	Unit5_4	7	n.教科书	1
-33	copy	Unit5_4	7	v.复制	1
-33	appear	Unit5_4	7	vi.出现	1
-33	surprise	Unit5_4	7	vt.使惊奇	1
-33	from then on	Unit5_4	7	从那以后	1
-33	present	Unit5_4	7	n.礼物	1
-33	public	Unit5_4	7	adj.公共的	1
-33	in public	Unit5_4	7	公开地	1
-34	garden	Unit5_5	7	n.花园	1
-34	lie	Unit5_5	7	n.平躺	1
-34	hero	Unit5_5	7	n.英雄	1
-34	tsunami	Unit5_5	7	n.海啸	0
-34	Christmas	Unit5_5	7	n.圣诞节	1
-34	bubble	Unit5_5	7	n.冒泡	0
-34	at once	Unit5_5	7	立刻	1
-34	shout	Unit5_5	7	n.呼叫	1
-34	warn	Unit5_5	7	vt.警告	1
-35	hotel	Unit5_6	7	n.旅馆	1
-35	because of	Unit5_6	7	因为	1
-35	guest	Unit5_6	7	n.客人	1
-35	kill	Unit5_6	7	v.杀死	1
-35	thousand	Unit5_6	7	adj.千	1
-35	empty	Unit5_6	7	adj.空的	1
-35	shake hands	Unit5_6	7	握手	1
-35	show...around	Unit5_6	7	带...参观	1
-35	to one's surprise	Unit5_6	7	使某人惊奇的是	1
-36	delicious	Unit5_7	7	adj.美味的	1
-36	dream	Unit5_7	7	n.梦	1
-36	bear	Unit5_7	7	n.忍受	1
-36	teddy bear	Unit5_7	7	n.玩具熊	1
-36	gift	Unit5_7	7	n.礼物	1
-36	sunglasses	Unit5_7	7	n.太阳镜	1
-36	get on	Unit5_7	7	上车	1
-36	statue	Unit5_7	7	n.雕塑	0
-36	title	Unit5_7	7	n.题目	0
-37	unexplained	Unit6_1	5	adj.原因不详的	1
-37	monster	Unit6_1	5	n.怪物	0
-37	UFO	Unit6_1	5	n.不明飞行物	0
-37	unusual	Unit6_1	5	adj.不寻常的	1
-37	strange	Unit6_1	5	adj.奇怪的	1
-37	creature	Unit6_1	5	n.生物	0
-37	natural	Unit6_1	5	adj.自然的	1
-37	sense	Unit6_1	5	n.感觉	1
-37	smell	Unit6_1	5	v.&n.闻到	1
-38	taste	Unit6_2	5	v.&n.尝	1
-38	touch	Unit6_2	5	vt.摸	1
-38	amazing	Unit6_2	5	adj.令人惊奇的	0
-38	relax	Unit6_2	5	v.放松	1
-38	disappear	Unit6_2	5	vi.消失	1
-38	search	Unit6_2	5	v.搜索	1
-38	yard	Unit6_2	5	n.院子	1
-38	fence	Unit6_2	5	n.围栏	0
-38	strangely	Unit6_2	5	adv.奇怪地	1
-39	noise	Unit6_3	5	n.吵闹声	1
-39	wake	Unit6_3	5	v.醒来	1
-39	hairy	Unit6_3	5	adj.多毛的	1
-39	scary	Unit6_3	5	恐怖的	0
-39	scared	Unit6_3	5	adj.害怕的	0
-39	throw	Unit6_3	5	n.扔	1
-39	newspaper	Unit6_3	5	n.报纸	1
-39	sailor	Unit6_3	5	n.水手	0
-39	row	Unit6_3	5	n.一排	1
-40	boat	Unit6_4	5	n.小船	1
-40	toward	Unit6_4	5	prep.朝	1
-40	dive	Unit6_4	5	n.潜水	0
-40	side	Unit6_4	5	n.一边	1
-40	imaginary	Unit6_4	5	adj.想象中的	1
-40	might	Unit6_4	5	aux.可能	1
-40	right now	Unit6_4	5	现在	1
-40	prove	Unit6_4	5	v.证明	0
-40	brain	Unit6_4	5	n.脑	1
-41	asleep	Unit6_5	5	adj.睡着的	1
-41	probably	Unit6_5	5	adv.很可能	1
-41	human	Unit6_5	5	n.人	1
-41	common	Unit6_5	5	adj.普通的	1
-41	realise	Unit6_5	5	v.意识到	1
-41	radio	Unit6_5	5	n.无线电广播	1
-41	pyjama	Unit6_5	5	n.睡衣裤	0
-41	in fact	Unit6_5	5	事实上	1
-41	wake up	Unit6_5	5	叫醒	1
-42	France	Places and Names_1	2	n.法国	1
-42	Germany	Places and Names_1	2	n.德国	1
-42	the Pyramids	Places and Names_1	2	n.金字塔	1
-42	the Temple of Heaven	Places and Names_1	2	n.天坛	1
-42	Japan	Places and Names_1	2	n.日本	1
-42	Russia	Places and Names_1	2	n.俄罗斯	1
-42	Brazil	Places and Names_1	2	n.巴西	1
-42	the North Pole	Places and Names_1	2	n.北极	1
-43	the South Pole	Places and Names_2	2	n.南极	1
-43	Maikhao Beach	Places and Names_2	2	n.麦拷海滩	1
-43	Thailand	Places and Names_2	2	n.泰国	1
-43	Bigfoot	Places and Names_2	2	n.大脚怪	1
-43	Loch Ness Monster	Places and Names_2	2	n.尼斯湖水怪	1
-43	Scotland	Places and Names_2	2	n.苏格兰	1
-43	the Atlantic Ocean	Places and Names_2	2	n.大西洋	1
+1	programme	Unit1_1	15	节目	1
+1	cartoon	Unit1_1	15	n.动画片	1
+1	nature	Unit1_1	15	n.自然	1
+2	vacation	Unit1_2	15	n.假期	1
+2	reviewer	Unit1_2	15	n.评论者	1
+2	score	Unit1_2	15	n.得分	1
+2	result	Unit1_2	15	n.结果	1
+2	movie	Unit1_2	15	n.电影	1
+3	actor	Unit1_3	15	n.演员	1
+3	fantastic	Unit1_3	15	adj.极好的	1
+3	earn	Unit1_3	15	vt.挣钱	0
+3	adopt	Unit1_3	15	v.收养	0
+3	deaf	Unit1_3	15	adj.聋的	1
+4	moving	Unit1_4	15	adj.令人感动的	1
+4	dinosaur	Unit1_4	15	n.恐龙	0
+4	die	Unit1_4	15	v.死	1
+4	climate	Unit1_4	15	n.气候	0
+4	channel	Unit1_4	15	n.电视频道	0
+5	bored	Unit1_5	15	adj.厌倦的	1
+5	interview	Unit1_5	15	v.采访	1
+5	character	Unit1_5	15	n.性格	0
+5	conversation	Unit1_5	15	n.谈话	1
+5	grammar	Unit1_5	15	n.语法	1
+6	passage	Unit1_6	15	n.章节	1
+6	pronunciation	Unit1_6	15	n.发音	1
+6	vocabulary	Unit1_6	15	n.词汇	0
+6	quite	Unit1_6	15	adv.相当	1
+6	rule	Unit1_6	15	n.规则	1
+7	experience	Unit1_7	15	n.经验	1
+7	carefully	Unit1_7	15	adv.仔细地	1
+7	take notes	Unit1_7	15	记笔记	1
+7	field	Unit1_7	15	n.田地	1
+7	extremely	Unit1_7	15	adv.极其	0
+8	fit	Unit1_8	15	v.适合	1
+8	agree	Unit1_8	15	vt.同意	1
+8	certainly	Unit1_8	15	adv.当然	1
+8	pass	Unit1_8	15	vt.传球	1
+8	goal	Unit1_8	15	n.目标	0
+9	kick	Unit1_9	15	v.踢	1
+9	basket	Unit1_9	15	n.篮子	1
+9	foul	Unit1_9	15	adj.&v.犯规	0
+9	kid	Unit1_9	15	n.开玩笑	1
+9	call	Unit1_9	15	v.&n.电话	1
+10	terrible	Unit1_10	15	adj.可怕的	1
+10	shame	Unit1_10	15	n.令人遗憾的事	1
+10	What a shame	Unit1_10	15	真遗憾	1
+10	should	Unit1_10	15	aux.应该	1
+10	complain	Unit1_10	15	v.抱怨	0
+11	hit	Unit1_11	15	n.打	1
+11	court	Unit1_11	15	n.球场	0
+11	form	Unit1_11	15	n.形式	1
+11	win	Unit1_11	15	v.赢	1
+11	break	Unit1_11	15	v.弄破	1
+12	prize	Unit1_12	15	n.奖	1
+12	lose	Unit1_12	15	v.遗失	1
+12	fall	Unit1_12	15	v.&n.跌倒	1
+12	magic	Unit1_12	15	n.魔法	1
+12	tortoise	Unit1_12	15	n.乌龟	0
+13	run after	Unit1_13	15	追逐	1
+13	deer	Unit1_13	15	n.鹿	0
+13	sky	Unit1_13	15	n.天空	1
+13	whale	Unit1_13	15	n.鲸	0
+13	ocean	Unit1_13	15	n.大海	0
+14	photographer	Unit1_14	15	n.拍照者	1
+14	cameraman	Unit1_14	15	n.摄影师	1
+14	host	Unit1_14	15	v.&n.主人	0
+14	explain	Unit1_14	15	v.解释	1
+15	habit	Unit1_15	15	n.习惯	1
+15	scenery	Unit1_15	15	n.风景，景色	0
+15	explanation	Unit1_15	15	n.说明	1
+15	continue	Unit1_15	15	v.持续	1
+16	play	Unit2_1	18	n.戏剧	1
+16	experiment	Unit2_1	18	n.实验	0
+16	musical	Unit2_1	18	adj.音乐的	1
+16	instrument	Unit2_1	18	n.乐器	1
+16	teamwork	Unit2_1	18	n.协同工作	1
+17	bottle	Unit2_2	18	n.瓶子	1
+17	camera	Unit2_2	18	n.照相机	1
+17	chopsticks	Unit2_2	18	n.筷子	1
+17	glue	Unit2_2	18	n.胶水	1
+17	metal	Unit2_2	18	n.金属	0
+18	paper	Unit2_3	18	n.纸	1
+18	plastic	Unit2_3	18	adj.塑料	0
+18	wood	Unit2_3	18	n.木头	1
+18	material	Unit2_3	18	n.材料	0
+18	object	Unit2_3	18	n.物品	1
+19	build	Unit2_4	18	v.建筑	1
+19	describe	Unit2_4	18	vt.描述	1
+19	video	Unit2_4	18	n.录像	1
+19	second	Unit2_4	18	n.&adj.秒	1
+19	possible	Unit2_4	18	adj.可能	1
+20	return	Unit2_5	18	v.&n.还回	1
+20	on time	Unit2_5	18	准时	1
+20	seat	Unit2_5	18	n.座位	1
+20	exam	Unit2_5	18	n.考试	1
+20	together	Unit2_5	18	adv.在一起	1
+21	politely	Unit2_6	18	adv.有礼貌地	1
+21	role	Unit2_6	18	n.角色	1
+21	question	Unit2_6	18	n.提问	1
+21	discussion	Unit2_6	18	n.讨论	1
+21	research	Unit2_6	18	n.研究	1
+22	alone	Unit2_7	18	adj.&adv.独自	1
+22	share	Unit2_7	18	vt.分享	1
+22	anyone	Unit2_7	18	pron.任何人	1
+22	mind	Unit2_7	18	n.&v.介意	1
+22	hate	Unit2_7	18	v.讨厌	1
+23	sound	Unit2_8	18	n.&v.声音	1
+23	crazy	Unit2_8	18	adj.疯狂的	1
+23	stick	Unit2_8	18	v.&n.棍	1
+23	argue	Unit2_8	18	v.&n.争论	0
+23	choose	Unit2_8	18	vt.选择	1
+24	suggest	Unit2_9	18	vt.建议	1
+24	excellent	Unit2_9	18	adj.优秀的	1
+24	poor	Unit2_9	18	adj.贫穷的	1
+24	participate	Unit2_9	18	vi.参与	0
+24	task	Unit2_9	18	n.任务	1
+25	stand	Unit2_10	18	n.容忍	1
+25	speech	Unit2_10	18	n.演讲	1
+25	give speeches	Unit2_10	18	发表演讲	1
+25	special	Unit2_10	18	adj.特殊的	1
+25	last	Unit2_10	18	adj.持续	1
+26	couple	Unit2_11	18	n.夫妻	1
+26	on holiday	Unit2_11	18	在度假	1
+26	resort	Unit2_11	18	n.旅游胜地	0
+26	take a walk	Unit2_11	18	散步	1
+26	shake	Unit2_11	18	v.&n.摇动	1
+27	completely	Unit2_12	18	adv.彻底地，完全地	1
+27	earthquake	Unit2_12	18	n.地震	1
+27	one by one	Unit2_12	18	逐个地	1
+27	dark	Unit2_12	18	adj.黑暗的	1
+27	heavily	Unit2_12	18	adv.超出一般规模地	1
+28	moment	Unit2_13	18	n.片刻	0
+28	at that moment	Unit2_13	18	正在那时	1
+28	decide	Unit2_13	18	v.决定	1
+28	call for one's attention	Unit2_13	18	让...注意	1
+28	until	Unit2_13	18	prep.&conj.直到	1
+29	ruin	Unit2_14	18	n.废墟	0
+29	look for	Unit2_14	18	寻找	1
+29	blanket	Unit2_14	18	n.毯子	0
+29	enough	Unit2_14	18	adj.足够的	1
+29	divide	Unit2_14	18	v.分开	1
+30	collect	Unit2_15	18	vt.收集	1
+30	flashlight	Unit2_15	18	n.手电筒	0
+30	flash	Unit2_15	18	n.闪耀	0
+30	journey	Unit2_15	18	n.旅行	1
+30	encourage	Unit2_15	18	v.鼓励	1
+31	support	Unit2_16	18	n.支持	1
+31	safely	Unit2_16	18	adv.安全地	1
+31	lucky	Unit2_16	18	adj.幸运的	1
+31	hope	Unit2_16	18	n.希望	1
+31	solve	Unit2_16	18	v.解决	1
+32	problem	Unit2_17	18	n.问题	1
+32	into	Unit2_17	18	prep.到......里面	1
+32	astronaut	Unit2_17	18	n.宇航员	0
+32	several	Unit2_17	18	adj.几个	1
+32	everybody	Unit2_17	18	pron.每人	1
+33	cooperate	Unit2_18	18	vi.合作	0
+33	puzzle	Unit2_18	18	n.谜	0
+33	discuss	Unit2_18	18	vt.讨论	1
+33	band	Unit2_18	18	n.乐队	0
+34	high jump	Unit3_1	11	n.跳高	1
+34	long jump	Unit3_1	11	n.跳远	1
+34	popular	Unit3_1	11	adj.受欢迎的	1
+34	push-up	Unit3_1	11	n.俯卧撑	1
+34	sit-up	Unit3_1	11	n.仰卧起坐	1
+35	race	Unit3_2	11	n.赛跑	1
+35	rope	Unit3_2	11	n.绳	1
+35	after-class	Unit3_2	11	adj.课下的	1
+35	record	Unit3_2	11	n.纪录	1
+35	break the record	Unit3_2	11	打破纪录	1
+36	bit	Unit3_3	11	n.少量	1
+36	a bit	Unit3_3	11	稍微	1
+36	sick	Unit3_3	11	adj.生病的	1
+36	active	Unit3_3	11	adj.活跃的	1
+36	joke	Unit3_3	11	n.开玩笑	1
+37	joke around	Unit3_4	11	开玩笑	1
+37	weak	Unit3_4	11	adj.弱的	1
+37	size	Unit3_4	11	n.大小	1
+37	average	Unit3_4	11	adj.平均的	0
+37	Olympic	Unit3_4	11	adj.奥林匹克运动会的	1
+38	diving	Unit3_5	11	n.跳水	0
+38	gymnastics	Unit3_5	11	n.体操	0
+38	horse-riding	Unit3_5	11	n.骑马	1
+38	weightlifting	Unit3_5	11	n.举重	1
+38	athlete	Unit3_5	11	n.运动员	0
+39	horse-rider	Unit3_6	11	n.骑马者	1
+39	compete	Unit3_6	11	v.竞争	1
+39	at the age of...	Unit3_6	11	在...岁的时候	1
+39	national	Unit3_6	11	adj.国家的	1
+39	champion	Unit3_6	11	n.冠军	0
+40	gymnast	Unit3_7	11	n.体操运动员	0
+40	diver	Unit3_7	11	n.跳水运动员	0
+40	medal	Unit3_7	11	n.奖牌	0
+40	competition	Unit3_7	11	n.竞争	1
+40	metre	Unit3_7	11	n.米	1
+41	gold	Unit3_8	11	adj.金	1
+41	weightlifter	Unit3_8	11	n.举重运动员	1
+41	runner	Unit3_8	11	n.赛跑的人	1
+41	expedition	Unit3_8	11	n.探险	0
+41	pole	Unit3_8	11	n.极	0
+42	explorer	Unit3_9	11	n.探险者	0
+42	north	Unit3_9	11	adj.北部的	1
+42	worst	Unit3_9	11	adj.最差的	1
+42	accident	Unit3_9	11	n.意外	0
+42	prepare	Unit3_9	11	v.准备	1
+43	artificial	Unit3_10	11	adj.人工的	0
+43	careful	Unit3_10	11	adj.仔细的	1
+43	ice	Unit3_10	11	n.冰	1
+43	better	Unit3_10	11	adj.较好的	1
+43	worse	Unit3_10	11	adj.更差的	1
+43	arrive	Unit3_10	11	vi.到达	1
+44	arrive at	Unit3_11	11	到达	1
+44	brave	Unit3_11	11	adj.勇敢的	1
+44	success	Unit3_11	11	n.成功	1
+44	pull-up	Unit3_11	11	n.引体向上	1
+44	event	Unit3_11	11	n.比赛项目	0
+44	jumper	Unit3_11	11	n.跳跃者	1
+45	health	Unit4_1	12	n.健康	1
+45	cough	Unit4_1	12	n.咳嗽	1
+45	fever	Unit4_1	12	n.发烧	1
+45	headache	Unit4_1	12	n.头痛	1
+45	runny	Unit4_1	12	adj.流鼻涕的	0
+46	sore	Unit4_2	12	adj.疼痛的	0
+46	throat	Unit4_2	12	n.咽喉	0
+46	stomachache	Unit4_2	12	胃痛	1
+46	toothache	Unit4_2	12	n.牙痛	1
+46	plenty	Unit4_2	12	n.大量	1
+47	plenty of	Unit4_3	12	许多	1
+47	dentist	Unit4_3	12	n.牙医	0
+47	matter	Unit4_3	12	n.问题	1
+47	temperature	Unit4_3	12	n.体温	1
+47	deep	Unit4_3	12	adj.深的	1
+48	breath	Unit4_4	12	n.一次呼吸的空气	0
+48	flu	Unit4_4	12	n.流行感冒	0
+48	serious	Unit4_4	12	adj.严重的	1
+48	twice	Unit4_4	12	adv.两次	1
+48	note	Unit4_4	12	n.笔记	1
+49	patient	Unit4_5	12	n.病人	1
+49	date	Unit4_5	12	n.日期	1
+49	symptom	Unit4_5	12	n.症状	0
+49	treatment	Unit4_5	12	n.治疗	1
+49	cold	Unit4_5	12	adj.感冒	1
+50	once	Unit4_6	12	adv.一次	1
+50	advice	Unit4_6	12	n.建议	1
+50	sleepy	Unit4_6	12	adj.困倦的	1
+50	harmful	Unit4_6	12	adj.有害的	1
+50	for example	Unit4_6	12	例如	1
+51	bird flu	Unit4_7	12	n.禽流感	1
+51	sneeze	Unit4_7	12	n.打喷嚏	0
+51	soap	Unit4_7	12	n.肥皂	0
+51	time	Unit4_7	12	n.时间	1
+51	air	Unit4_7	12	n.空气	1
+52	earphone	Unit4_8	12	n.耳机	1
+52	volume	Unit4_8	12	n.音量	0
+52	harm	Unit4_8	12	n.伤害	0
+52	care	Unit4_8	12	n.照顾	1
+52	wonder	Unit4_8	12	n.想知道	1
+53	bone	Unit4_9	12	n.骨头	0
+53	blood	Unit4_9	12	n.血	1
+53	hold	Unit4_9	12	vt.拿着	1
+53	although	Unit4_9	12	adv.&adj.&prep.尽管	1
+53	outside	Unit4_9	12	adv.&adj.&prep.在...外面	1
+54	inside	Unit4_10	12	prep.在...里面	1
+54	nutrient	Unit4_10	12	adj.营养	0
+54	waste	Unit4_10	12	vt.浪费	1
+54	calcium	Unit4_10	12	n.钙	0
+54	solid	Unit4_10	12	adj.坚硬的	0
+55	vitamin	Unit4_11	12	n.维生素	0
+55	stair	Unit4_11	12	n.楼梯	0
+55	lunchtime	Unit4_11	12	n.午餐时间	1
+55	ping-pong	Unit4_11	12	n.乒乓球	0
+56	less	Unit4_12	12	adj.较少的	1
+56	letter	Unit4_12	12	n.字母	1
+56	blank	Unit4_12	12	adj.&n.空白处	0
+56	potato chip	Unit4_12	12	薯片	1
+57	protect	Unit5_1	13	v.保护	1
+57	environment	Unit5_1	13	n.环境	1
+57	recycle	Unit5_1	13	vt.回收利用	0
+57	save	Unit5_1	13	vt.节约	1
+57	electricity	Unit5_1	13	n.电	0
+58	off	Unit5_2	13	prep.离开	1
+58	turn off	Unit5_2	13	关掉	1
+58	community	Unit5_2	13	n.社区	1
+58	similar	Unit5_2	13	adj.相似的	1
+58	ever	Unit5_2	13	adv.曾经	1
+59	volunteer	Unit5_3	13	n.志愿者	0
+59	helper	Unit5_3	13	n.帮手	1
+59	complete	Unit5_3	13	vt.&adj.完成	1
+59	clean up	Unit5_3	13	清扫	1
+59	seem	Unit5_3	13	v.看起来	1
+60	can	Unit5_4	13	aux.金属罐	1
+60	piece	Unit5_4	13	n.块	1
+60	finished	Unit5_4	13	adj.完成	1
+60	litter	Unit5_4	13	v.乱扔	1
+60	put up	Unit5_4	13	张贴	1
+61	notice	Unit5_5	13	n.通告	1
+61	request	Unit5_5	13	n.&v.请求	0
+61	reply	Unit5_5	13	vt.回答	1
+61	fight	Unit5_5	13	n.打架	1
+61	laugh at	Unit5_5	13	嘲笑	1
+62	polite	Unit5_6	13	adj.有礼貌的	1
+62	avoid	Unit5_6	13	v.避免	1
+62	actually	Unit5_6	13	adv.事实上	0
+62	step	Unit5_6	13	n.一步	1
+62	without	Unit5_6	13	prep.缺乏	1
+63	lead	Unit5_7	13	v.带路	1
+63	dare	Unit5_7	13	vi.敢于	0
+63	textbook	Unit5_7	13	n.教科书	1
+63	copy	Unit5_7	13	v.复制	1
+63	appear	Unit5_7	13	vi.出现	1
+64	surprise	Unit5_8	13	vt.使惊奇	1
+64	from then on	Unit5_8	13	从那以后	1
+64	present	Unit5_8	13	n.礼物	1
+64	public	Unit5_8	13	adj.公共的	1
+64	in public	Unit5_8	13	公开地	1
+65	garden	Unit5_9	13	n.花园	1
+65	lie	Unit5_9	13	n.平躺	1
+65	hero	Unit5_9	13	n.英雄	1
+65	tsunami	Unit5_9	13	n.海啸	0
+65	Christmas	Unit5_9	13	n.圣诞节	1
+66	bubble	Unit5_10	13	n.冒泡	0
+66	at once	Unit5_10	13	立刻	1
+66	shout	Unit5_10	13	n.呼叫	1
+66	warn	Unit5_10	13	vt.警告	1
+66	hotel	Unit5_10	13	n.旅馆	1
+67	because of	Unit5_11	13	因为	1
+67	guest	Unit5_11	13	n.客人	1
+67	kill	Unit5_11	13	v.杀死	1
+67	thousand	Unit5_11	13	adj.千	1
+67	empty	Unit5_11	13	adj.空的	1
+68	shake hands	Unit5_12	13	握手	1
+68	show...around	Unit5_12	13	带...参观	1
+68	to one's surprise	Unit5_12	13	使某人惊奇的是	1
+68	delicious	Unit5_12	13	adj.美味的	1
+68	dream	Unit5_12	13	n.梦	1
+68	bear	Unit5_12	13	n.忍受	1
+69	teddy bear	Unit5_13	13	n.玩具熊	1
+69	gift	Unit5_13	13	n.礼物	1
+69	sunglasses	Unit5_13	13	n.太阳镜	1
+69	get on	Unit5_13	13	上车	1
+69	statue	Unit5_13	13	n.雕塑	0
+69	title	Unit5_13	13	n.题目	0
+70	unexplained	Unit6_1	9	adj.原因不详的	1
+70	monster	Unit6_1	9	n.怪物	0
+70	UFO	Unit6_1	9	n.不明飞行物	0
+70	unusual	Unit6_1	9	adj.不寻常的	1
+70	strange	Unit6_1	9	adj.奇怪的	1
+71	creature	Unit6_2	9	n.生物	0
+71	natural	Unit6_2	9	adj.自然的	1
+71	sense	Unit6_2	9	n.感觉	1
+71	smell	Unit6_2	9	v.&n.闻到	1
+71	taste	Unit6_2	9	v.&n.尝	1
+72	touch	Unit6_3	9	vt.摸	1
+72	amazing	Unit6_3	9	adj.令人惊奇的	0
+72	relax	Unit6_3	9	v.放松	1
+72	disappear	Unit6_3	9	vi.消失	1
+72	search	Unit6_3	9	v.搜索	1
+73	yard	Unit6_4	9	n.院子	1
+73	fence	Unit6_4	9	n.围栏	0
+73	strangely	Unit6_4	9	adv.奇怪地	1
+73	noise	Unit6_4	9	n.吵闹声	1
+73	wake	Unit6_4	9	v.醒来	1
+74	hairy	Unit6_5	9	adj.多毛的	1
+74	scary	Unit6_5	9	恐怖的	0
+74	scared	Unit6_5	9	adj.害怕的	0
+74	throw	Unit6_5	9	n.扔	1
+74	newspaper	Unit6_5	9	n.报纸	1
+75	sailor	Unit6_6	9	n.水手	0
+75	row	Unit6_6	9	n.一排	1
+75	boat	Unit6_6	9	n.小船	1
+75	toward	Unit6_6	9	prep.朝	1
+75	dive	Unit6_6	9	n.潜水	0
+76	side	Unit6_7	9	n.一边	1
+76	imaginary	Unit6_7	9	adj.想象中的	1
+76	might	Unit6_7	9	aux.可能	1
+76	right now	Unit6_7	9	现在	1
+76	prove	Unit6_7	9	v.证明	0
+77	brain	Unit6_8	9	n.脑	1
+77	asleep	Unit6_8	9	adj.睡着的	1
+77	probably	Unit6_8	9	adv.很可能	1
+77	human	Unit6_8	9	n.人	1
+77	common	Unit6_8	9	adj.普通的	1
+78	realise	Unit6_9	9	v.意识到	1
+78	radio	Unit6_9	9	n.无线电广播	1
+78	pyjama	Unit6_9	9	n.睡衣裤	0
+78	in fact	Unit6_9	9	事实上	1
+78	wake up	Unit6_9	9	叫醒	1
+79	France	Places and Names_1	3	n.法国	1
+79	Germany	Places and Names_1	3	n.德国	1
+79	the Pyramids	Places and Names_1	3	n.金字塔	1
+79	the Temple of Heaven	Places and Names_1	3	n.天坛	1
+79	Japan	Places and Names_1	3	n.日本	1
+80	Russia	Places and Names_2	3	n.俄罗斯	1
+80	Brazil	Places and Names_2	3	n.巴西	1
+80	the North Pole	Places and Names_2	3	n.北极	1
+80	the South Pole	Places and Names_2	3	n.南极	1
+80	Maikhao Beach	Places and Names_2	3	n.麦拷海滩	1
+81	Thailand	Places and Names_3	3	n.泰国	1
+81	Bigfoot	Places and Names_3	3	n.大脚怪	1
+81	Loch Ness Monster	Places and Names_3	3	n.尼斯湖水怪	1
+81	Scotland	Places and Names_3	3	n.苏格兰	1
+81	the Atlantic Ocean	Places and Names_3	3	n.大西洋	1

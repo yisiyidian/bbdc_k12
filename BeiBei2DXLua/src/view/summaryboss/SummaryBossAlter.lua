@@ -1,7 +1,8 @@
 
 local MissionConfig  = require("model.mission.MissionConfig")
-
+local SharePopupController = require("popup.SharePopupController")
 local Button                = require("view.button.longButtonInStudy")
+
 
 local ENTRANCE_WORD_LIBRARY = false
 local ENTRANCE_NORMAL = true
@@ -15,7 +16,10 @@ function SummaryBossAlter.create(bossLayer,win,entrance)
     local layer = SummaryBossAlter.new()
     layer.wordCount = bossLayer.maxCount
     layer.win = win
+    -- 这个名字起的真好，我竟无言以对
+    -- 这个wordlist是关卡结束时的最后一个词！！！！！
     layer.wordList = bossLayer.wordList
+    -- 这个名字起的真好，我竟无言以对
     layer.bossLayer = bossLayer
 
     layer.entrance = entrance
@@ -252,6 +256,31 @@ function SummaryBossAlter:addTime()
 end
 
 function SummaryBossAlter:win1(entrance)
+
+    SharePopupController:ctor()
+
+    print("test test test")
+    -- 注意词组
+    print_lua_table(self.bossLayer.unit.wrongWordList)
+    print(self.bossLayer.useTime)
+    print_lua_table(s_CURRENT_USER.logInDatas)
+     --     if firstWeek.Monday > 0 then
+     --    dayInWeekBegin = 1
+     -- elseif firstWeek.Tuesday > 0 then
+     --    dayInWeekBegin = 2
+     -- elseif firstWeek.Wednesday > 0 then
+     --    dayInWeekBegin = 3
+     -- elseif firstWeek.Thursday > 0 then
+     --    dayInWeekBegin = 4
+     -- elseif firstWeek.Friday > 0 then
+     --    dayInWeekBegin = 5
+     -- elseif firstWeek.Saturday > 0 then
+     --    dayInWeekBegin = 6
+     -- elseif firstWeek.Sunday > 0 then
+     --    dayInWeekBegin = 7
+     -- end
+     -- 第二天之后（含）每天一次
+     print_lua_table(self.bossLayer.unit)
 
     print("书籍",s_CURRENT_USER.bookKey)
     print("单元",self.bossLayer.unit.unitID)

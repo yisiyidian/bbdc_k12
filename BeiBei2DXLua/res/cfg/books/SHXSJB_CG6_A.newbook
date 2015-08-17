@@ -1,248 +1,248 @@
-1	gate	unit 1 Topic 1_1	3	n.大门	1
-1	junior	unit 1 Topic 1_1	3	adj.年少的	0
-1	junior high school	unit 1 Topic 1_1	3	初级中学	0
-2	monitor	unit 1 Topic 1_2	3	n.班长	1
-2	come on	unit 1 Topic 1_2	3	快点	1
-2	conversation	unit 1 Topic 1_2	3	n.会话	0
-2	married	unit 1 Topic 1_2	3	adj.已婚的	0
-2	money	unit 1 Topic 1_2	3	n.钱	1
-2	make money	unit 1 Topic 1_2	3	赚钱	0
-2	introduce	unit 1 Topic 1_2	3	vt.介绍	0
-2	call	unit 1 Topic 1_2	3	v.称呼	1
-3	corner	unit 1 Topic 1_3	3	n.角落	1
-3	English Corner	unit 1 Topic 1_3	3	英语角	1
-3	talk	unit 1 Topic 1_3	3	vi.&vt.&n.交谈	1
-3	in English	unit 1 Topic 1_3	3	用英语	1
-3	after school	unit 1 Topic 1_3	3	放学后	1
-3	make friends with	unit 1 Topic 1_3	3	与...交朋友	1
-3	for the first time	unit 1 Topic 1_3	3	第一次	0
-4	each	unit 1 Topic 2_1	4	adj.&adv.&pron.各自的	1
-4	other	unit 1 Topic 2_1	4	adj.&pron其他的	1
-4	each other	unit 1 Topic 2_1	4	相互	1
-4	family name	unit 1 Topic 2_1	4	姓	1
-4	given	unit 1 Topic 2_1	4	adj.给予的	1
-4	given name	unit 1 Topic 2_1	4	名字	1
-4	first name	unit 1 Topic 2_1	4	名字	1
-4	last name	unit 1 Topic 2_1	4	姓	1
-4	nationality	unit 1 Topic 2_1	4	n.国籍	1
-5	subject	unit 1 Topic 2_2	4	n.学科	1
-5	address	unit 1 Topic 2_2	4	n.地址	1
-5	telephone	unit 1 Topic 2_2	4	n.电话	1
-5	number	unit 1 Topic 2_2	4	n.数字	1
-5	price	unit 1 Topic 2_2	4	n.价格	1
-5	age	unit 1 Topic 2_2	4	n.年龄	1
-5	e-mail	unit 1 Topic 2_2	4	n.电子邮件	1
-5	e-mail address	unit 1 Topic 2_2	4	电子邮件信箱	1
-5	welcome party	unit 1 Topic 2_2	4	欢迎会	1
-6	Australia	unit 1 Topic 2_3	4	n.澳大利亚	0
-6	help...with...	unit 1 Topic 2_3	4	帮助某人做某事	1
-6	touch	unit 1 Topic 2_3	4	vt.&vi.&n.接触	0
-6	keep in touch with	unit 1 Topic 2_3	4	与...保持联系	0
-6	of course	unit 1 Topic 2_3	4	当然	1
-6	Australian	unit 1 Topic 2_3	4	n&adj.澳大利亚的	0
-6	British	unit 1 Topic 2_3	4	n&adj.英国的	1
-6	country	unit 1 Topic 2_3	4	n.国家	1
-6	Sydney	unit 1 Topic 2_3	4	n.悉尼	0
-7	study	unit 1 Topic 2_4	4	vi.&vt.&n.学习	1
-7	maths	unit 1 Topic 2_4	4	n.数学	1
-7	favourite	unit 1 Topic 2_4	4	adj.&n.特别喜爱的	1
-7	surf	unit 1 Topic 2_4	4	vi.&vt.&n.冲浪	0
-7	Internet	unit 1 Topic 2_4	4	n.因特网	0
-7	surf the Internet	unit 1 Topic 2_4	4	浏览因特网	0
-7	hometown	unit 1 Topic 2_4	4	n.家乡	1
-7	activity	unit 1 Topic 2_4	4	n.活动	0
-7	after-school activity	unit 1 Topic 2_4	4	课外活动	0
-8	husband	unit 1 Topic 3_1	3	n.丈夫	1
-8	wife	unit 1 Topic 3_1	3	n.妻子	1
-8	parent	unit 1 Topic 3_1	3	n.父母	1
-8	child	unit 1 Topic 3_1	3	n.孩子	1
-8	uncle	unit 1 Topic 3_1	3	n.伯父	1
-8	aunt	unit 1 Topic 3_1	3	n.伯母	1
-8	cousin	unit 1 Topic 3_1	3	n.堂、表兄弟姐妹	0
-8	grandfather	unit 1 Topic 3_1	3	n.祖父	1
-8	grandmother	unit 1 Topic 3_1	3	n.祖母	1
-8	only	unit 1 Topic 3_1	3	adj.&adv.唯一的	1
-8	only child	unit 1 Topic 3_1	3	独生子女	1
-9	like	unit 1 Topic 3_2	3	prep.&vt.像	1
-9	dark	unit 1 Topic 3_2	3	adj.黑色的	1
-9	slim	unit 1 Topic 3_2	3	adj.苗条的	0
-9	fair	unit 1 Topic 3_2	3	adj.公平的	1
-9	pretty	unit 1 Topic 3_2	3	adj.&adv.漂亮的	1
-9	manager	unit 1 Topic 3_2	3	n.经理	1
-9	company	unit 1 Topic 3_2	3	n.公司	1
-9	university	unit 1 Topic 3_2	3	n.大学	1
-9	person	unit 1 Topic 3_2	3	n.人	1
-9	appearance	unit 1 Topic 3_2	3	n.外貌	0
-9	at the back	unit 1 Topic 3_2	3	在后面	1
-10	engineer	unit 1 Topic 3_3	3	n.工程师	1
-10	artist	unit 1 Topic 3_3	3	n.艺术节	1
-10	secretary	unit 1 Topic 3_3	3	n.秘书	0
-10	between	unit 1 Topic 3_3	3	adv.在...中间	1
-10	London	unit 1 Topic 3_3	3	n.伦敦	1
-10	computer	unit 1 Topic 3_3	3	n.计算机	1
-10	Net-pal	unit 1 Topic 3_3	3	n.网友	0
-10	good-looking	unit 1 Topic 3_3	3	adj.好看的	0
-10	both	unit 1 Topic 3_3	3	pron.两者...	1
-10	cute	unit 1 Topic 3_3	3	adj.娇小可爱的	0
-11	music room	unit 2 Topic 1_1	2	音乐室	1
-11	quarter	unit 2 Topic 1_1	2	n.一刻钟	1
-11	another	unit 2 Topic 1_1	2	adj.&pron又一的	1
-11	by the way	unit 2 Topic 1_1	2	顺便说一句	1
-11	after class	unit 2 Topic 1_1	2	课后	1
-11	usually	unit 2 Topic 1_1	2	adv.通常	1
-11	minute	unit 2 Topic 1_1	2	n.分钟	1
-11	fun	unit 2 Topic 1_1	2	n.有趣的事物	1
-11	get off	unit 2 Topic 1_1	2	下	1
-11	get to	unit 2 Topic 1_1	2	到达	1
-11	go over	unit 2 Topic 1_1	2	复习	1
-11	how long	unit 2 Topic 1_1	2	多久	1
-12	exercise	unit 2 Topic 1_2	2	vt.&vi.&n.运动	1
-12	eye exercises	unit 2 Topic 1_2	2	眼保健操	1
-12	morning exercises	unit 2 Topic 1_2	2	早操	1
-12	cafeteria	unit 2 Topic 1_2	2	n.食堂	0
-12	before	unit 2 Topic 1_2	2	prep.&conj.&adv.在...以前	1
-12	always	unit 2 Topic 1_2	2	adv.总是	1
-12	newspaper	unit 2 Topic 1_2	2	n.报纸	1
-12	wall newspaper	unit 2 Topic 1_2	2	墙报	1
-12	Home for the Aged	unit 2 Topic 1_2	2	老人福利院	0
-12	feel	unit 2 Topic 1_2	2	vt.&vi.&n.感到	1
-12	because	unit 2 Topic 1_2	2	conj.因为	1
-13	keep	unit 2 Topic 2_1	3	vt.保持	1
-13	quiet	unit 2 Topic 2_1	3	adj.安静的	1
-13	keep quiet	unit 2 Topic 2_1	3	保持安静	1
-13	reading room	unit 2 Topic 2_1	3	阅览室	1
-13	on time	unit 2 Topic 2_1	3	准时	1
-13	hand in	unit 2 Topic 2_1	3	上交	0
-13	need	unit 2 Topic 2_1	3	vi.&vt.&n.需要	1
-13	leave	unit 2 Topic 2_1	3	vi.&vt.&n.离开	1
-13	international	unit 2 Topic 2_1	3	adj.国际的	1
-13	everyone	unit 2 Topic 2_1	3	pron.每人	1
-14	absent	unit 2 Topic 2_2	3	adj.缺席的	0
-14	ill	unit 2 Topic 2_2	3	adj.生病的	1
-14	maybe	unit 2 Topic 2_2	3	adv.也许	1
-14	seat	unit 2 Topic 2_2	3	n.座位	1
-14	observe	unit 2 Topic 2_2	3	vt遵守	0
-14	rule	unit 2 Topic 2_2	3	n.规章	1
-14	will	unit 2 Topic 2_2	3	aux.要	1
-14	turn off	unit 2 Topic 2_2	3	关上	1
-14	light	unit 2 Topic 2_2	3	n.灯	1
-14	return	unit 2 Topic 2_2	3	vt.归还	1
-15	magazine	unit 2 Topic 2_3	3	n.杂志	1
-15	afraid	unit 2 Topic 2_3	3	adj.害怕的	1
-15	I'm afraid not	unit 2 Topic 2_3	3	恐怕不行	1
-15	out of	unit 2 Topic 2_3	3	从...里面出来	1
-15	near	unit 2 Topic 2_3	3	prep.在...附近	1
-15	meal	unit 2 Topic 2_3	3	n.一餐	1
-15	empty	unit 2 Topic 2_3	3	adj.空的	1
-15	here and there	unit 2 Topic 2_3	3	到处	0
-15	put up	unit 2 Topic 2_3	3	张贴	0
-15	waste	unit 2 Topic 2_3	3	vt.浪费	1
-16	show	unit 2 Topic 3_1	3	vt.给...看	1
-16	around	unit 2 Topic 3_1	3	prep.环绕	1
-16	show...around	unit 2 Topic 3_1	3	带领某人参观...	1
-16	dormitory	unit 2 Topic 3_1	3	n.宿舍	0
-16	next to	unit 2 Topic 3_1	3	靠近...旁边	1
-16	clinic	unit 2 Topic 3_1	3	n.医务室	0
-16	grade	unit 2 Topic 3_1	3	n.年级	1
-16	senior	unit 2 Topic 3_1	3	adj.高级的	1
-16	language	unit 2 Topic 3_1	3	n.语言	1
-17	lab	unit 2 Topic 3_2	3	n.实验室	1
-17	language lab	unit 2 Topic 3_2	3	n.语言实验室	1
-17	lift	unit 2 Topic 3_2	3	vt.电梯	1
-17	take a lift	unit 2 Topic 3_2	3	乘电梯	1
-17	computer room	unit 2 Topic 3_2	3	电脑房	1
-17	modern	unit 2 Topic 3_2	3	adj.现代的	1
-17	on the left	unit 2 Topic 3_2	3	在左边	1
-17	on the right	unit 2 Topic 3_2	3	在右边	1
-17	sofa	unit 2 Topic 3_2	3	n.沙发	0
-18	coffee table	unit 2 Topic 3_3	3	咖啡茶几	1
-18	beautiful	unit 2 Topic 3_3	3	adj.美丽的	1
-18	also	unit 2 Topic 3_3	3	adv.也	1
-18	project	unit 2 Topic 3_3	3	n.作业	1
-18	gym	unit 2 Topic 3_3	3	n.健身房	0
-18	campus	unit 2 Topic 3_3	3	n.校园	0
-18	on the campus	unit 2 Topic 3_3	3	在校园里	0
-18	walk	unit 2 Topic 3_3	3	vi.&n.步行	1
-18	ten minutes' walk	unit 2 Topic 3_3	3	10分钟的步行路程	1
-19	kiwi fruit	unit 3 Topic 1_1	3	猕猴桃	0
-19	pork	unit 3 Topic 1_1	3	n.猪肉	0
-19	chicken	unit 3 Topic 1_1	3	n.鸡	1
-19	noodle	unit 3 Topic 1_1	3	n.面条	1
-19	potato	unit 3 Topic 1_1	3	n.土豆	1
-19	tomato	unit 3 Topic 1_1	3	n.西红柿	1
-19	cola	unit 3 Topic 1_1	3	n.可乐	0
-19	tea	unit 3 Topic 1_1	3	n.茶	1
-19	beer	unit 3 Topic 1_1	3	n.啤酒	1
-19	beef	unit 3 Topic 1_1	3	n.牛肉	1
-19	mushroom	unit 3 Topic 1_1	3	n.蘑菇	0
-20	vegetable	unit 3 Topic 1_2	3	n.蔬菜	1
-20	shrimp	unit 3 Topic 1_2	3	n.小虾	0
-20	delicious	unit 3 Topic 1_2	3	adj.鲜美的	0
-20	care for	unit 3 Topic 1_2	3	喜欢	1
-20	ugh	unit 3 Topic 1_2	3	int啊	0
-20	hate	unit 3 Topic 1_2	3	vt.恨	1
-20	taste	unit 3 Topic 1_2	3	n.&vt.&vi.味道	1
-20	terrible	unit 3 Topic 1_2	3	adj.可怕的	1
-20	cabbage	unit 3 Topic 1_2	3	n.卷心菜	1
-20	pizza	unit 3 Topic 1_2	3	n.比萨饼	1
-20	be good for	unit 3 Topic 1_2	3	有益于	1
-21	health	unit 3 Topic 1_3	3	n.健康	1
-21	be bad for	unit 3 Topic 1_3	3	有害于	1
-21	tooth	unit 3 Topic 1_3	3	n.牙齿	1
-21	sweet	unit 3 Topic 1_3	3	adj.甜的	1
-21	interest	unit 3 Topic 1_3	3	n.&vt.兴趣	1
-21	be interested in	unit 3 Topic 1_3	3	对...感兴趣	1
-21	Western	unit 3 Topic 1_3	3	n.西方国家的	0
-21	cut	unit 3 Topic 1_3	3	vt.切	1
-21	cut...into small pieces	unit 3 Topic 1_3	3	把...切成小块	1
-21	fry	unit 3 Topic 1_3	3	vt.油煎	1
-21	boil	unit 3 Topic 1_3	3	v.&n.煮沸	1
-22	discuss	unit 3 Topic 2_1	3	n.&vt.讨论	1
-22	snack	unit 3 Topic 2_1	3	n.快餐	1
-22	hamburger	unit 3 Topic 2_1	3	n.汉堡包	0
-22	chicken leg	unit 3 Topic 2_1	3	n.鸡腿	1
-22	chip	unit 3 Topic 2_1	3	n.薄片	1
-22	potato	unit 3 Topic 2_1	3	n.炸薯条	1
-22	salad	unit 3 Topic 2_1	3	n.色拉	1
-22	roll	unit 3 Topic 2_1	3	n.圆形物	0
-22	restaurant	unit 3 Topic 2_1	3	n.饭店	1
-23	fast food restaurant	unit 3 Topic 2_2	3	快餐店	1
-23	would	unit 3 Topic 2_2	3	aux.将会	0
-23	few	unit 3 Topic 2_2	3	adj.&n.&pron.少数的	1
-23	a few	unit 3 Topic 2_2	3	几个	1
-23	little	unit 3 Topic 2_2	3	adj.小	1
-23	a little	unit 3 Topic 2_2	3	一点儿	1
-23	chicken burger	unit 3 Topic 2_2	3	n.鸡肉汉堡	0
-23	altogether	unit 3 Topic 2_2	3	adv.总计	0
-23	order	unit 3 Topic 2_2	3	n.命令	1
-24	server	unit 3 Topic 2_3	3	n.服务员	0
-24	eat in	unit 3 Topic 2_3	3	在店内吃	0
-24	take away	unit 3 Topic 2_3	3	拿走	1
-24	all over the world	unit 3 Topic 2_3	3	遍及全世界	1
-24	expensive	unit 3 Topic 2_3	3	adj.昂贵的	1
-24	bright	unit 3 Topic 2_3	3	adj.明亮的	1
-24	quickly	unit 3 Topic 2_3	3	adv.迅速地	1
-24	and so on	unit 3 Topic 2_3	3	等等	1
-24	dumpling	unit 3 Topic 2_3	3	n.汤团	0
-24	fat	unit 3 Topic 2_3	3	n.&adj.脂肪	1
-25	New Year	unit 3 Topic 3_1	2	新年	1
-25	New Year's Day	unit 3 Topic 3_1	2	元旦	1
-25	next	unit 3 Topic 3_1	2	adj.&adv.下一个的	1
-25	Monday	unit 3 Topic 3_1	2	n.星期一	1
-25	idea	unit 3 Topic 3_1	2	n.主意	1
-25	join	unit 3 Topic 3_1	2	v.加入	1
-25	shall	unit 3 Topic 3_1	2	aux.将	1
-25	bring	unit 3 Topic 3_1	2	vt.拿来	1
-25	roast	unit 3 Topic 3_1	2	n.烤	0
-25	smoke	unit 3 Topic 3_1	2	v.烟	1
-25	smoked	unit 3 Topic 3_1	2	烟薰的	0
-26	cucumber	unit 3 Topic 3_2	2	n.黄瓜	0
-26	movie	unit 3 Topic 3_2	2	n.电影	1
-26	go to a movie	unit 3 Topic 3_2	2	去看电影	1
-26	anyone	unit 3 Topic 3_2	2	pron.任何人	1
-26	picnic	unit 3 Topic 3_2	2	n.野餐	1
-26	century	unit 3 Topic 3_2	2	n.世纪	0
-26	weekend	unit 3 Topic 3_2	2	n.周末	1
-26	healthy	unit 3 Topic 3_2	2	adj.健康的	1
-26	look forward to	unit 3 Topic 3_2	2	期待	0
-26	have a good time	unit 3 Topic 3_2	2	玩得开心	1
+1	gate	unit 1 Topic 1_1	4	n.大门	1
+1	junior	unit 1 Topic 1_1	4	adj.年少的	0
+1	junior high school	unit 1 Topic 1_1	4	初级中学	0
+2	monitor	unit 1 Topic 1_2	4	n.班长	1
+2	come on	unit 1 Topic 1_2	4	快点	1
+2	conversation	unit 1 Topic 1_2	4	n.会话	0
+2	married	unit 1 Topic 1_2	4	adj.已婚的	0
+2	money	unit 1 Topic 1_2	4	n.钱	1
+3	make money	unit 1 Topic 1_3	4	赚钱	0
+3	introduce	unit 1 Topic 1_3	4	vt.介绍	0
+3	call	unit 1 Topic 1_3	4	v.称呼	1
+3	corner	unit 1 Topic 1_3	4	n.角落	1
+3	English Corner	unit 1 Topic 1_3	4	英语角	1
+4	talk	unit 1 Topic 1_4	4	vi.&vt.&n.交谈	1
+4	in English	unit 1 Topic 1_4	4	用英语	1
+4	after school	unit 1 Topic 1_4	4	放学后	1
+4	make friends with	unit 1 Topic 1_4	4	与...交朋友	1
+4	for the first time	unit 1 Topic 1_4	4	第一次	0
+5	each	unit 1 Topic 2_1	7	adj.&adv.&pron.各自的	1
+5	other	unit 1 Topic 2_1	7	adj.&pron其他的	1
+5	each other	unit 1 Topic 2_1	7	相互	1
+5	family name	unit 1 Topic 2_1	7	姓	1
+5	given	unit 1 Topic 2_1	7	adj.给予的	1
+6	given name	unit 1 Topic 2_2	7	名字	1
+6	first name	unit 1 Topic 2_2	7	名字	1
+6	last name	unit 1 Topic 2_2	7	姓	1
+6	nationality	unit 1 Topic 2_2	7	n.国籍	1
+6	subject	unit 1 Topic 2_2	7	n.学科	1
+7	address	unit 1 Topic 2_3	7	n.地址	1
+7	telephone	unit 1 Topic 2_3	7	n.电话	1
+7	number	unit 1 Topic 2_3	7	n.数字	1
+7	price	unit 1 Topic 2_3	7	n.价格	1
+7	age	unit 1 Topic 2_3	7	n.年龄	1
+8	e-mail	unit 1 Topic 2_4	7	n.电子邮件	1
+8	e-mail address	unit 1 Topic 2_4	7	电子邮件信箱	1
+8	welcome party	unit 1 Topic 2_4	7	欢迎会	1
+8	Australia	unit 1 Topic 2_4	7	n.澳大利亚	0
+8	help...with...	unit 1 Topic 2_4	7	帮助某人做某事	1
+9	touch	unit 1 Topic 2_5	7	vt.&vi.&n.接触	0
+9	keep in touch with	unit 1 Topic 2_5	7	与...保持联系	0
+9	of course	unit 1 Topic 2_5	7	当然	1
+9	Australian	unit 1 Topic 2_5	7	n&adj.澳大利亚的	0
+9	British	unit 1 Topic 2_5	7	n&adj.英国的	1
+10	country	unit 1 Topic 2_6	7	n.国家	1
+10	Sydney	unit 1 Topic 2_6	7	n.悉尼	0
+10	study	unit 1 Topic 2_6	7	vi.&vt.&n.学习	1
+10	maths	unit 1 Topic 2_6	7	n.数学	1
+10	favourite	unit 1 Topic 2_6	7	adj.&n.特别喜爱的	1
+11	surf	unit 1 Topic 2_7	7	vi.&vt.&n.冲浪	0
+11	Internet	unit 1 Topic 2_7	7	n.因特网	0
+11	surf the Internet	unit 1 Topic 2_7	7	浏览因特网	0
+11	hometown	unit 1 Topic 2_7	7	n.家乡	1
+11	activity	unit 1 Topic 2_7	7	n.活动	0
+11	after-school activity	unit 1 Topic 2_7	7	课外活动	0
+12	husband	unit 1 Topic 3_1	6	n.丈夫	1
+12	wife	unit 1 Topic 3_1	6	n.妻子	1
+12	parent	unit 1 Topic 3_1	6	n.父母	1
+12	child	unit 1 Topic 3_1	6	n.孩子	1
+12	uncle	unit 1 Topic 3_1	6	n.伯父	1
+13	aunt	unit 1 Topic 3_2	6	n.伯母	1
+13	cousin	unit 1 Topic 3_2	6	n.堂、表兄弟姐妹	0
+13	grandfather	unit 1 Topic 3_2	6	n.祖父	1
+13	grandmother	unit 1 Topic 3_2	6	n.祖母	1
+13	only	unit 1 Topic 3_2	6	adj.&adv.唯一的	1
+14	only child	unit 1 Topic 3_3	6	独生子女	1
+14	like	unit 1 Topic 3_3	6	prep.&vt.像	1
+14	dark	unit 1 Topic 3_3	6	adj.黑色的	1
+14	slim	unit 1 Topic 3_3	6	adj.苗条的	0
+14	fair	unit 1 Topic 3_3	6	adj.公平的	1
+15	pretty	unit 1 Topic 3_4	6	adj.&adv.漂亮的	1
+15	manager	unit 1 Topic 3_4	6	n.经理	1
+15	company	unit 1 Topic 3_4	6	n.公司	1
+15	university	unit 1 Topic 3_4	6	n.大学	1
+15	person	unit 1 Topic 3_4	6	n.人	1
+16	appearance	unit 1 Topic 3_5	6	n.外貌	0
+16	at the back	unit 1 Topic 3_5	6	在后面	1
+16	engineer	unit 1 Topic 3_5	6	n.工程师	1
+16	artist	unit 1 Topic 3_5	6	n.艺术节	1
+16	secretary	unit 1 Topic 3_5	6	n.秘书	0
+16	between	unit 1 Topic 3_5	6	adv.在...中间	1
+17	London	unit 1 Topic 3_6	6	n.伦敦	1
+17	computer	unit 1 Topic 3_6	6	n.计算机	1
+17	Net-pal	unit 1 Topic 3_6	6	n.网友	0
+17	good-looking	unit 1 Topic 3_6	6	adj.好看的	0
+17	both	unit 1 Topic 3_6	6	pron.两者...	1
+17	cute	unit 1 Topic 3_6	6	adj.娇小可爱的	0
+18	music room	unit 2 Topic 1_1	5	音乐室	1
+18	quarter	unit 2 Topic 1_1	5	n.一刻钟	1
+18	another	unit 2 Topic 1_1	5	adj.&pron又一的	1
+18	by the way	unit 2 Topic 1_1	5	顺便说一句	1
+18	after class	unit 2 Topic 1_1	5	课后	1
+19	usually	unit 2 Topic 1_2	5	adv.通常	1
+19	minute	unit 2 Topic 1_2	5	n.分钟	1
+19	fun	unit 2 Topic 1_2	5	n.有趣的事物	1
+19	get off	unit 2 Topic 1_2	5	下	1
+19	get to	unit 2 Topic 1_2	5	到达	1
+20	go over	unit 2 Topic 1_3	5	复习	1
+20	how long	unit 2 Topic 1_3	5	多久	1
+20	exercise	unit 2 Topic 1_3	5	vt.&vi.&n.运动	1
+20	eye exercises	unit 2 Topic 1_3	5	眼保健操	1
+20	morning exercises	unit 2 Topic 1_3	5	早操	1
+21	cafeteria	unit 2 Topic 1_4	5	n.食堂	0
+21	before	unit 2 Topic 1_4	5	prep.&conj.&adv.在...以前	1
+21	always	unit 2 Topic 1_4	5	adv.总是	1
+21	newspaper	unit 2 Topic 1_4	5	n.报纸	1
+22	wall newspaper	unit 2 Topic 1_5	5	墙报	1
+22	Home for the Aged	unit 2 Topic 1_5	5	老人福利院	0
+22	feel	unit 2 Topic 1_5	5	vt.&vi.&n.感到	1
+22	because	unit 2 Topic 1_5	5	conj.因为	1
+23	keep	unit 2 Topic 2_1	6	vt.保持	1
+23	quiet	unit 2 Topic 2_1	6	adj.安静的	1
+23	keep quiet	unit 2 Topic 2_1	6	保持安静	1
+23	reading room	unit 2 Topic 2_1	6	阅览室	1
+23	on time	unit 2 Topic 2_1	6	准时	1
+24	hand in	unit 2 Topic 2_2	6	上交	0
+24	need	unit 2 Topic 2_2	6	vi.&vt.&n.需要	1
+24	leave	unit 2 Topic 2_2	6	vi.&vt.&n.离开	1
+24	international	unit 2 Topic 2_2	6	adj.国际的	1
+24	everyone	unit 2 Topic 2_2	6	pron.每人	1
+25	absent	unit 2 Topic 2_3	6	adj.缺席的	0
+25	ill	unit 2 Topic 2_3	6	adj.生病的	1
+25	maybe	unit 2 Topic 2_3	6	adv.也许	1
+25	seat	unit 2 Topic 2_3	6	n.座位	1
+25	observe	unit 2 Topic 2_3	6	vt遵守	0
+26	rule	unit 2 Topic 2_4	6	n.规章	1
+26	will	unit 2 Topic 2_4	6	aux.要	1
+26	turn off	unit 2 Topic 2_4	6	关上	1
+26	light	unit 2 Topic 2_4	6	n.灯	1
+26	return	unit 2 Topic 2_4	6	vt.归还	1
+27	magazine	unit 2 Topic 2_5	6	n.杂志	1
+27	afraid	unit 2 Topic 2_5	6	adj.害怕的	1
+27	I'm afraid not	unit 2 Topic 2_5	6	恐怕不行	1
+27	out of	unit 2 Topic 2_5	6	从...里面出来	1
+27	near	unit 2 Topic 2_5	6	prep.在...附近	1
+28	meal	unit 2 Topic 2_6	6	n.一餐	1
+28	empty	unit 2 Topic 2_6	6	adj.空的	1
+28	here and there	unit 2 Topic 2_6	6	到处	0
+28	put up	unit 2 Topic 2_6	6	张贴	0
+28	waste	unit 2 Topic 2_6	6	vt.浪费	1
+29	show	unit 2 Topic 3_1	5	vt.给...看	1
+29	around	unit 2 Topic 3_1	5	prep.环绕	1
+29	show...around	unit 2 Topic 3_1	5	带领某人参观...	1
+29	dormitory	unit 2 Topic 3_1	5	n.宿舍	0
+29	next to	unit 2 Topic 3_1	5	靠近...旁边	1
+30	clinic	unit 2 Topic 3_2	5	n.医务室	0
+30	grade	unit 2 Topic 3_2	5	n.年级	1
+30	senior	unit 2 Topic 3_2	5	adj.高级的	1
+30	language	unit 2 Topic 3_2	5	n.语言	1
+30	lab	unit 2 Topic 3_2	5	n.实验室	1
+31	language lab	unit 2 Topic 3_3	5	n.语言实验室	1
+31	lift	unit 2 Topic 3_3	5	vt.电梯	1
+31	take a lift	unit 2 Topic 3_3	5	乘电梯	1
+31	computer room	unit 2 Topic 3_3	5	电脑房	1
+31	modern	unit 2 Topic 3_3	5	adj.现代的	1
+32	on the left	unit 2 Topic 3_4	5	在左边	1
+32	on the right	unit 2 Topic 3_4	5	在右边	1
+32	sofa	unit 2 Topic 3_4	5	n.沙发	0
+32	coffee table	unit 2 Topic 3_4	5	咖啡茶几	1
+32	beautiful	unit 2 Topic 3_4	5	adj.美丽的	1
+32	also	unit 2 Topic 3_4	5	adv.也	1
+33	project	unit 2 Topic 3_5	5	n.作业	1
+33	gym	unit 2 Topic 3_5	5	n.健身房	0
+33	campus	unit 2 Topic 3_5	5	n.校园	0
+33	on the campus	unit 2 Topic 3_5	5	在校园里	0
+33	walk	unit 2 Topic 3_5	5	vi.&n.步行	1
+33	ten minutes' walk	unit 2 Topic 3_5	5	10分钟的步行路程	1
+34	kiwi fruit	unit 3 Topic 1_1	7	猕猴桃	0
+34	pork	unit 3 Topic 1_1	7	n.猪肉	0
+34	chicken	unit 3 Topic 1_1	7	n.鸡	1
+34	noodle	unit 3 Topic 1_1	7	n.面条	1
+34	potato	unit 3 Topic 1_1	7	n.土豆	1
+35	tomato	unit 3 Topic 1_2	7	n.西红柿	1
+35	cola	unit 3 Topic 1_2	7	n.可乐	0
+35	tea	unit 3 Topic 1_2	7	n.茶	1
+35	beer	unit 3 Topic 1_2	7	n.啤酒	1
+35	beef	unit 3 Topic 1_2	7	n.牛肉	1
+36	mushroom	unit 3 Topic 1_3	7	n.蘑菇	0
+36	vegetable	unit 3 Topic 1_3	7	n.蔬菜	1
+36	shrimp	unit 3 Topic 1_3	7	n.小虾	0
+36	delicious	unit 3 Topic 1_3	7	adj.鲜美的	0
+36	care for	unit 3 Topic 1_3	7	喜欢	1
+37	ugh	unit 3 Topic 1_4	7	int啊	0
+37	hate	unit 3 Topic 1_4	7	vt.恨	1
+37	taste	unit 3 Topic 1_4	7	n.&vt.&vi.味道	1
+37	terrible	unit 3 Topic 1_4	7	adj.可怕的	1
+37	cabbage	unit 3 Topic 1_4	7	n.卷心菜	1
+38	pizza	unit 3 Topic 1_5	7	n.比萨饼	1
+38	be good for	unit 3 Topic 1_5	7	有益于	1
+38	health	unit 3 Topic 1_5	7	n.健康	1
+38	be bad for	unit 3 Topic 1_5	7	有害于	1
+38	tooth	unit 3 Topic 1_5	7	n.牙齿	1
+39	sweet	unit 3 Topic 1_6	7	adj.甜的	1
+39	interest	unit 3 Topic 1_6	7	n.&vt.兴趣	1
+39	be interested in	unit 3 Topic 1_6	7	对...感兴趣	1
+39	Western	unit 3 Topic 1_6	7	n.西方国家的	0
+40	cut	unit 3 Topic 1_7	7	vt.切	1
+40	cut...into small pieces	unit 3 Topic 1_7	7	把...切成小块	1
+40	fry	unit 3 Topic 1_7	7	vt.油煎	1
+40	boil	unit 3 Topic 1_7	7	v.&n.煮沸	1
+41	discuss	unit 3 Topic 2_1	6	n.&vt.讨论	1
+41	snack	unit 3 Topic 2_1	6	n.快餐	1
+41	hamburger	unit 3 Topic 2_1	6	n.汉堡包	0
+41	chicken leg	unit 3 Topic 2_1	6	n.鸡腿	1
+41	chip	unit 3 Topic 2_1	6	n.薄片	1
+42	potato	unit 3 Topic 2_2	6	n.炸薯条	1
+42	salad	unit 3 Topic 2_2	6	n.色拉	1
+42	roll	unit 3 Topic 2_2	6	n.圆形物	0
+42	restaurant	unit 3 Topic 2_2	6	n.饭店	1
+42	fast food restaurant	unit 3 Topic 2_2	6	快餐店	1
+43	would	unit 3 Topic 2_3	6	aux.将会	0
+43	few	unit 3 Topic 2_3	6	adj.&n.&pron.少数的	1
+43	a few	unit 3 Topic 2_3	6	几个	1
+43	little	unit 3 Topic 2_3	6	adj.小	1
+43	a little	unit 3 Topic 2_3	6	一点儿	1
+44	chicken burger	unit 3 Topic 2_4	6	n.鸡肉汉堡	0
+44	altogether	unit 3 Topic 2_4	6	adv.总计	0
+44	order	unit 3 Topic 2_4	6	n.命令	1
+44	server	unit 3 Topic 2_4	6	n.服务员	0
+44	eat in	unit 3 Topic 2_4	6	在店内吃	0
+45	take away	unit 3 Topic 2_5	6	拿走	1
+45	all over the world	unit 3 Topic 2_5	6	遍及全世界	1
+45	expensive	unit 3 Topic 2_5	6	adj.昂贵的	1
+45	bright	unit 3 Topic 2_5	6	adj.明亮的	1
+46	quickly	unit 3 Topic 2_6	6	adv.迅速地	1
+46	and so on	unit 3 Topic 2_6	6	等等	1
+46	dumpling	unit 3 Topic 2_6	6	n.汤团	0
+46	fat	unit 3 Topic 2_6	6	n.&adj.脂肪	1
+47	New Year	unit 3 Topic 3_1	4	新年	1
+47	New Year's Day	unit 3 Topic 3_1	4	元旦	1
+47	next	unit 3 Topic 3_1	4	adj.&adv.下一个的	1
+47	Monday	unit 3 Topic 3_1	4	n.星期一	1
+47	idea	unit 3 Topic 3_1	4	n.主意	1
+48	join	unit 3 Topic 3_2	4	v.加入	1
+48	shall	unit 3 Topic 3_2	4	aux.将	1
+48	bring	unit 3 Topic 3_2	4	vt.拿来	1
+48	roast	unit 3 Topic 3_2	4	n.烤	0
+48	smoke	unit 3 Topic 3_2	4	v.烟	1
+49	smoked	unit 3 Topic 3_3	4	烟薰的	0
+49	cucumber	unit 3 Topic 3_3	4	n.黄瓜	0
+49	movie	unit 3 Topic 3_3	4	n.电影	1
+49	go to a movie	unit 3 Topic 3_3	4	去看电影	1
+49	anyone	unit 3 Topic 3_3	4	pron.任何人	1
+50	picnic	unit 3 Topic 3_4	4	n.野餐	1
+50	century	unit 3 Topic 3_4	4	n.世纪	0
+50	weekend	unit 3 Topic 3_4	4	n.周末	1
+50	healthy	unit 3 Topic 3_4	4	adj.健康的	1
+50	look forward to	unit 3 Topic 3_4	4	期待	0
+50	have a good time	unit 3 Topic 3_4	4	玩得开心	1

@@ -1,364 +1,364 @@
-1	realistic	Unit 1_1	8	adj.现实主义的	0
-1	abstract	Unit 1_1	8	adj.&n.抽象的	1
-1	sculpture	Unit 1_1	8	n.雕塑	1
-2	sculptor	Unit 1_2	8	n.雕刻家	0
-2	gallery	Unit 1_2	8	n.美术陈列室	1
-2	faith	Unit 1_2	8	n.信任	1
-2	faithfully	Unit 1_2	8	adv.忠实地	1
-2	consequently	Unit 1_2	8	adv.所以	0
-2	aim	Unit 1_2	8	n.&vi.&vt.目标	1
-2	conventional	Unit 1_2	8	adj.常规的	1
-2	typical	Unit 1_2	8	adj.典型的	1
-2	evident	Unit 1_2	8	adj.明显的	1
-2	renaissance	Unit 1_2	8	n.新生	0
-3	adopt	Unit 1_3	8	vt.采用	1
-3	humanistic	Unit 1_3	8	adj.人道主义的	0
-3	possess	Unit 1_3	8	vt.拥有	1
-3	possession	Unit 1_3	8	n.所有	1
-3	superb	Unit 1_3	8	adj.卓越的	1
-3	perspective	Unit 1_3	8	n.透视画法	0
-3	technique	Unit 1_3	8	n.技术	1
-3	coincidence	Unit 1_3	8	n.巧合	1
-3	by coincidence	Unit 1_3	8	巧合地	1
-3	masterpiece	Unit 1_3	8	n.杰作	0
-4	impressionism	Unit 1_4	8	n.印象主义	0
-4	impressionist	Unit 1_4	8	adj.&n.印象派的	0
-4	post-impressionist	Unit 1_4	8	adj.&n.后印象派的	0
-4	a great deal	Unit 1_4	8	大量	1
-4	shadow	Unit 1_4	8	n.阴影	1
-4	ridiculous	Unit 1_4	8	adj.荒谬的	1
-4	controversial	Unit 1_4	8	adj.争论的	1
-4	attempt	Unit 1_4	8	n.&vt.努力	1
-4	on the other hand	Unit 1_4	8	另一方面	1
-4	predict	Unit 1_4	8	vt.预言	1
-5	landscape	Unit 1_5	8	n.风景	0
-5	specific	Unit 1_5	8	adj.确切的	1
-5	figure	Unit 1_5	8	n.画像	1
-5	clay	Unit 1_5	8	n.黏土	1
-5	critic	Unit 1_5	8	n.评论家	0
-5	bronze	Unit 1_5	8	n.青铜	0
-5	marble	Unit 1_5	8	n.大理石	1
-5	carve	Unit 1_5	8	vt.雕刻	1
-5	delicate	Unit 1_5	8	adj.脆弱的	1
-5	canvas	Unit 1_5	8	n.帆布	0
-6	allergic	Unit 1_6	8	adj.过敏性的	1
-6	effectively	Unit 1_6	8	adv.有效地	0
-6	exhibition	Unit 1_6	8	n.展览	1
-6	aggressive	Unit 1_6	8	adj.敢作敢为的	1
-6	scholar	Unit 1_6	8	n.学者	1
-6	flesh	Unit 1_6	8	n.肉	1
-6	in the flesh	Unit 1_6	8	活着的	1
-6	geometry	Unit 1_6	8	n.几何学	1
-6	bunch	Unit 1_6	8	n.束	1
-6	avenue	Unit 1_6	8	n.林荫道	1
-7	preference	Unit 1_7	8	n.喜爱	1
-7	display	Unit 1_7	8	v.&n.展示	0
-7	appeal	Unit 1_7	8	vi.&vt.&n.有感染力	1
-7	appeal to	Unit 1_7	8	有吸引力	1
-7	fragile	Unit 1_7	8	adj.精细的	1
-7	circular	Unit 1_7	8	adj.圆形的	0
-7	metropolitan	Unit 1_7	8	adj.主要都市的	0
-7	reputation	Unit 1_7	8	n.名声	1
-7	civilization	Unit 1_7	8	n.文明	1
-8	Egypt	Unit 1_8	8	n.埃及	1
-8	Egyptian	Unit 1_8	8	adj.埃及的	1
-8	visual	Unit 1_8	8	adj.视觉的	1
-8	fragrant	Unit 1_8	8	adj.香的	1
-8	contemporary	Unit 1_8	8	adj.当代的	1
-8	permanent	Unit 1_8	8	adj.永久的	1
-8	district	Unit 1_8	8	n.区	1
-8	committee	Unit 1_8	8	n.委员会	1
-8	signature	Unit 1_8	8	n.署名	1
-9	poetry	Unit 2_1	7	n.诗	0
-9	tick	Unit 2_1	7	vt.给...标记号	1
-9	rhyme	Unit 2_1	7	n.&vi.&vt.韵	1
-9	convey	Unit 2_1	7	vt.传达	1
-9	emotion	Unit 2_1	7	n.情感	0
-9	nursery	Unit 2_1	7	n.托儿所	1
-9	nursery rhyme	Unit 2_1	7	童谣	1
-9	concrete	Unit 2_1	7	adj.具体的	1
-9	repetition	Unit 2_1	7	n.重复	0
-9	contradictory	Unit 2_1	7	adj.引起矛盾的	1
-10	hush	Unit 2_2	7	vi.&vt.(使某人)安静下来	0
-10	mockingbird	Unit 2_2	7	n.嘲鸫	0
-10	diamond	Unit 2_2	7	n.钻石	1
-10	brass	Unit 2_2	7	n.黄铜	0
-10	billy-goat	Unit 2_2	7	n.公山羊	0
-10	flexible	Unit 2_2	7	adj.灵活的	1
-10	pattern	Unit 2_2	7	n.模式	1
-10	squire	Unit 2_2	7	n.乡绅	0
-10	cottage	Unit 2_2	7	n.村舍	1
-10	coffin	Unit 2_2	7	n.棺材	0
-11	sparrow	Unit 2_3	7	n.麻雀	1
-11	kitten	Unit 2_3	7	n.小猫	0
-11	take it easy	Unit 2_3	7	轻松	1
-11	run out of	Unit 2_3	7	用完	1
-11	cinquain	Unit 2_3	7	n.五行诗	0
-11	be made up of	Unit 2_3	7	由...构成	1
-11	tease	Unit 2_3	7	vi.&vt.取笑	1
-11	salty	Unit 2_3	7	adj.含盐的	1
-11	droop	Unit 2_3	7	vi.低垂	0
-11	dread	Unit 2_3	7	vi.&vt.害怕	0
-12	endless	Unit 2_4	7	adj.无穷的	1
-12	haiku	Unit 2_4	7	n.俳句	0
-12	syllable	Unit 2_4	7	n.音节	0
-12	minimum	Unit 2_4	7	n.最低限度	1
-12	translation	Unit 2_4	7	n.翻译	1
-12	branch	Unit 2_4	7	n.枝条	1
-12	melt	Unit 2_4	7	v.&n.溶化	0
-12	brimful	Unit 2_4	7	adj.盈满的	0
-12	in particular	Unit 2_4	7	尤其	1
-12	eventually	Unit 2_4	7	adv.最后	1
-13	await	Unit 2_5	7	vt.等候	0
-13	transform	Unit 2_5	7	vi.&vt.转化	1
-13	revolve	Unit 2_5	7	vi.&vt.(使)旋转	0
-13	utter	Unit 2_5	7	vt.说	0
-13	sorrow	Unit 2_5	7	n.悲伤	1
-13	bare	Unit 2_5	7	adj.&n.赤裸的	1
-13	librarian	Unit 2_5	7	n.图书馆馆长	1
-13	forever	Unit 2_5	7	adv.永远	1
-13	stem	Unit 2_5	7	n.茎	0
-13	cement	Unit 2_5	7	n.水泥	0
-14	section	Unit 2_6	7	n.部分	1
-14	appropriate	Unit 2_6	7	adj.适当的	1
-14	exchange	Unit 2_6	7	n.&vi.&vt.交换	1
-14	diploma	Unit 2_6	7	n.毕业文凭	1
-14	sponsor	Unit 2_6	7	n.&vt.赞助人	1
-14	blank	Unit 2_6	7	n.&adj.空白	1
-14	compass	Unit 2_6	7	n.指南针	1
-14	bride	Unit 2_6	7	n.新娘	1
-14	bridegroom	Unit 2_6	7	n.新郎	1
-14	championship	Unit 2_6	7	n.冠军称号	1
-15	rhythmic	Unit 2_7	7	adj.有节奏的	0
-15	darkness	Unit 2_7	7	n.黑暗	1
-15	warmth	Unit 2_7	7	n.暖和	1
-15	try out	Unit 2_7	7	测试	1
-15	scholarship	Unit 2_7	7	n.奖学金	1
-15	pianist	Unit 2_7	7	n.钢琴家	1
-15	violinist	Unit 2_7	7	n.小提琴演奏者	1
-15	let out	Unit 2_7	7	发出	1
-15	load	Unit 2_7	7	n.负担	1
-16	cigarette	Unit 3_1	8	n.香烟	1
-16	alcohol	Unit 3_1	8	n.酒	1
-16	alcoholic	Unit 3_1	8	adj.酒精的	1
-16	abuse	Unit 3_1	8	n.&vt.滥用	1
-16	fitness	Unit 3_1	8	n.健康	0
-16	sexual	Unit 3_1	8	adj.性的	0
-16	stress	Unit 3_1	8	n.&vt.压力	1
-16	stressful	Unit 3_1	8	adj.产生压力的	0
-16	obesity	Unit 3_1	8	n.(过度)肥胖	0
-16	adolescent	Unit 3_1	8	n.&adj.青少年	1
-17	adolescence	Unit 3_2	8	n.青春期	1
-17	ban	Unit 3_2	8	vt.&n.禁止	1
-17	due	Unit 3_2	8	adj.欠款的	1
-17	due to	Unit 3_2	8	由于...	1
-17	tough	Unit 3_2	8	adj.困难的	1
-17	addicted	Unit 3_2	8	adj.入了迷的	1
-17	addicted to	Unit 3_2	8	对...有瘾	1
-17	nicotine	Unit 3_2	8	n.尼古丁	0
-17	accustom	Unit 3_2	8	vt.使习惯于	1
-17	accustomed	Unit 3_2	8	adj.惯常的	1
-18	accustomed to	Unit 3_3	8	习惯于...	1
-18	withdrawal	Unit 3_3	8	n.收回	1
-18	bad-tempered	Unit 3_3	8	adj.脾气暴躁的	0
-18	automatic	Unit 3_3	8	adj.无意识的	1
-18	automatically	Unit 3_3	8	adv.无意识地	1
-18	mental	Unit 3_3	8	adj.精神的	1
-18	mentally	Unit 3_3	8	adv.精神上	1
-18	quit	Unit 3_3	8	vt.停止(做某事)	1
-18	effect	Unit 3_3	8	n.结果	1
-18	lung	Unit 3_3	8	n.肺	1
-19	pregnant	Unit 3_4	8	adj.怀孕的	1
-19	abnormal	Unit 3_4	8	adj.畸形的	1
-19	breathless	Unit 3_4	8	adj.气喘吁吁的	1
-19	unfit	Unit 3_4	8	adj.不健康的	1
-19	strengthen	Unit 3_4	8	vt.&vi.加强	1
-19	resolve	Unit 3_4	8	n.决心	0
-19	decide on	Unit 3_4	8	对...作出决定	1
-19	packet	Unit 3_4	8	n.小包	1
-19	feel like doing	Unit 3_4	8	想要(做)...	1
-19	relaxation	Unit 3_4	8	n.放松，松弛	0
-20	desperate	Unit 3_5	8	adj.绝望的，拼命的	1
-20	chemist	Unit 3_5	8	n.药剂师	1
-20	gum	Unit 3_5	8	n.树胶	0
-20	chewing gum	Unit 3_5	8	口香糖	0
-20	disappointed	Unit 3_5	8	adj.失望的	1
-20	weaken	Unit 3_5	8	vi.&vt.(对某事的决心)动摇	0
-20	ashamed	Unit 3_5	8	adj.感到惭愧或羞耻的	1
-20	comprehension	Unit 3_5	8	n.理解	1
-20	in spite of	Unit 3_5	8	不顾	1
-20	take risks	Unit 3_5	8	冒险	1
-21	get into	Unit 3_6	8	陷入	1
-21	etc	Unit 3_6	8	adv.诸如此类的事物	1
-21	appendix	Unit 3_6	8	n.附录	1
-21	illegal	Unit 3_6	8	adj.不合法的	1
-21	pill	Unit 3_6	8	n.药丸	1
-21	robbery	Unit 3_6	8	n.抢劫	0
-21	slippery	Unit 3_6	8	adj.滑的	0
-21	HIV	Unit 3_6	8	abbr.艾滋病病毒	0
-21	AIDS	Unit 3_6	8	abbr.艾滋病	0
-21	at risk	Unit 3_6	8	处境危险	1
-22	SARS	Unit 3_7	8	abbr.非典型性肺炎	0
-22	immune	Unit 3_7	8	adj.有免疫力的	0
-22	survival	Unit 3_7	8	n.幸存	1
-22	sex	Unit 3_7	8	n.性	1
-22	fluid	Unit 3_7	8	n.液体	0
-22	inject	Unit 3_7	8	vt.注射	0
-22	injection	Unit 3_7	8	n.注射	0
-22	needle	Unit 3_7	8	n.针	1
-22	spill	Unit 3_7	8	vi.&vt.溢出	0
-22	male	Unit 3_7	8	adj.&n.男性的	1
-23	female	Unit 3_8	8	adj.&n.女性的	1
-23	condom	Unit 3_8	8	n.避孕套	0
-23	homosexual	Unit 3_8	8	n.&adj.同性恋	0
-23	prejudice	Unit 3_8	8	n.偏见	1
-23	judgement	Unit 3_8	8	n.看法	1
-23	disco	Unit 3_8	8	n.迪斯科舞会	0
-23	abortion	Unit 3_8	8	n.流产	1
-23	cigar	Unit 3_8	8	n.雪茄烟	1
-23	embarrassed	Unit 3_8	8	adj.尴尬的	1
-23	awkward	Unit 3_8	8	adj.局促不安的	1
-24	consume	Unit 4_1	8	vt.消费	1
-24	renewable	Unit 4_1	8	adj.能再生的	0
-24	greenhouse	Unit 4_1	8	n.温室	0
-24	Fahrenheit	Unit 4_1	8	adj.&n.华氏的	0
-24	come sbout	Unit 4_1	8	发生	1
-24	graph	Unit 4_1	8	n.图表	1
-24	random	Unit 4_1	8	adj.胡乱的	1
-24	phenomenon	Unit 4_1	8	n.现象	1
-24	subscribe	Unit 4_1	8	vi.&vt.同意	1
-25	subscribe to	Unit 4_2	8	同意	1
-25	fossil	Unit 4_2	8	n.化石	0
-25	fuel	Unit 4_2	8	n.燃料	1
-25	byproduct	Unit 4_2	8	n.副产品	0
-25	methane	Unit 4_2	8	n.甲烷	0
-25	Celsius	Unit 4_2	8	adj.摄氏的	0
-25	quantity	Unit 4_2	8	n.量	1
-25	quantities of	Unit 4_2	8	大量的	1
-25	tend	Unit 4_2	8	vi.&vt.趋向	1
-26	go up	Unit 4_3	8	上升	1
-26	measurement	Unit 4_3	8	n.衡量	0
-26	per	Unit 4_3	8	prep.每	1
-26	data	Unit 4_3	8	n.资料	1
-26	result in	Unit 4_3	8	导致	1
-26	trend	Unit 4_3	8	n.趋势	1
-26	catastrophe	Unit 4_3	8	n.大灾难	1
-26	flood	Unit 4_3	8	n.洪水	1
-26	drought	Unit 4_3	8	n.旱灾	0
-27	famine	Unit 4_4	8	n.饱荒	0
-27	oppose	Unit 4_4	8	vt.反对	1
-27	opposed	Unit 4_4	8	adj.反对的	1
-27	be opposed to	Unit 4_4	8	反对...	1
-27	mild	Unit 4_4	8	adj.温和的	1
-27	environmental	Unit 4_4	8	adj.环境的	0
-27	environmentalist	Unit 4_4	8	n.环境保护论者	0
-27	consequence	Unit 4_4	8	n.结果	1
-27	state	Unit 4_4	8	vt.陈述	1
-28	range	Unit 4_5	8	n.种类	1
-28	even if	Unit 4_5	8	即使	1
-28	keep on	Unit 4_5	8	继续	1
-28	glance	Unit 4_5	8	vi.&n.看一下	1
-28	steady	Unit 4_5	8	adj.平稳的	1
-28	steadily	Unit 4_5	8	adv.平稳地	1
-28	tendency	Unit 4_5	8	n.倾向	1
-28	widespread	Unit 4_5	8	adj.分布广的	1
-28	on the whole	Unit 4_5	8	大体上	1
-29	economical	Unit 4_6	8	adj.节约的	0
-29	hectare	Unit 4_6	8	n.公顷	0
-29	average	Unit 4_6	8	adj.平均的	1
-29	existence	Unit 4_6	8	n.生存	1
-29	outer	Unit 4_6	8	adj.外部的	1
-29	on behalf of	Unit 4_6	8	代表...一方	1
-29	individual	Unit 4_6	8	n.&adj.个人	0
-29	advocate	Unit 4_6	8	vt.拥护	1
-29	commitment	Unit 4_6	8	n.承诺	1
-29	put up with	Unit 4_6	8	忍受	1
-30	pollution	Unit 4_7	8	n.污染	1
-30	growth	Unit 4_7	8	n.增长	1
-30	electrical	Unit 4_7	8	adj.电的	1
-30	appliance	Unit 4_7	8	n.用具	0
-30	so long as	Unit 4_7	8	只要	1
-30	casual	Unit 4_7	8	adj.随便的	1
-30	and so on	Unit 4_7	8	等等	1
-30	motor	Unit 4_7	8	n.发动机	1
-30	can	Unit 4_7	8	n.容器	1
-30	circumstance	Unit 4_7	8	n.环境	1
-31	microwave	Unit 4_8	8	n.微波炉	1
-31	refresh	Unit 4_8	8	v.使恢复	1
-31	educator	Unit 4_8	8	n.教育工作者	1
-31	contribution	Unit 4_8	8	n.贡献	1
-31	imperative	Unit 4_8	8	n.祈使语气	0
-31	heading	Unit 4_8	8	n.标题	0
-31	slogan	Unit 4_8	8	n.标语	0
-31	presentation	Unit 4_8	8	n.显示	1
-31	nuclear	Unit 4_8	8	adj.核的	1
-31	disagreement	Unit 4_8	8	n.分歧	1
-32	diagram	Unit 5_1	7	n.图解	1
-32	volcano	Unit 5_1	7	n.火山	1
-32	volcanic	Unit 5_1	7	adj.火山的	0
-32	volcanology	Unit 5_1	7	n.火山学	0
-32	volcanologist	Unit 5_1	7	n.火山学家	0
-32	erupt	Unit 5_1	7	vi.爆发	1
-32	eruption	Unit 5_1	7	n.火山爆发	1
-32	ash	Unit 5_1	7	n.灰	1
-32	crater	Unit 5_1	7	n.火山口	0
-32	lava	Unit 5_1	7	n.熔岩	0
-33	hurricane	Unit 5_2	7	n.飓风	1
-33	questionnaire	Unit 5_2	7	n.问卷	1
-33	alongside	Unit 5_2	7	adv.&prep.在旁边	1
-33	equipment	Unit 5_2	7	n.设备	1
-33	appoint	Unit 5_2	7	vt.任命	1
-33	observatory	Unit 5_2	7	n.观象台	0
-33	database	Unit 5_2	7	n.数据库	1
-33	evaluate	Unit 5_2	7	vt.评估	1
-33	burn to the ground	Unit 5_2	7	全部焚毁	1
-33	wave	Unit 5_2	7	n.&vi.波浪	1
-34	molten	Unit 5_3	7	adj.熔化的	0
-34	fountain	Unit 5_3	7	vi.&vt.&n.泉水般地喷出或涌出	1
-34	absolute	Unit 5_3	7	adj.绝对的	1
-34	absolutely	Unit 5_3	7	adv.绝对地	1
-34	spaceman	Unit 5_3	7	n.宇航员	0
-34	suit	Unit 5_3	7	n.&vt.一套外衣	1
-34	helmet	Unit 5_3	7	n.头盔	1
-34	boot	Unit 5_3	7	n.靴子	1
-34	make one's way	Unit 5_3	7	前往	1
-34	potential	Unit 5_3	7	n.&adj.潜在性	1
-35	actual	Unit 5_4	7	adj.实在的	1
-35	geology	Unit 5_4	7	n.地质学	1
-35	sample	Unit 5_4	7	n.样品	1
-35	candidate	Unit 5_4	7	n.候选人	1
-35	threat	Unit 5_4	7	n.恐吓	1
-35	bungalow	Unit 5_4	7	n.平房	1
-35	tornado	Unit 5_4	7	n.龙卷风	1
-35	typhoon	Unit 5_4	7	n.台风	1
-35	thunderstorm	Unit 5_4	7	n.雷暴	1
-35	precious	Unit 5_4	7	adj.贵重的	1
-36	novelist	Unit 5_5	7	n.小说家	1
-36	fog	Unit 5_5	7	n.雾	1
-36	document	Unit 5_5	7	n.文件	1
-36	rainbow	Unit 5_5	7	n.彩虹	1
-36	uncomfortable	Unit 5_5	7	adj.不舒服的	1
-36	balcony	Unit 5_5	7	n.阳台	1
-36	unconscious	Unit 5_5	7	adj.失去知觉的	1
-36	shoot	Unit 5_5	7	vt.射中	1
-36	shot	Unit 5_5	7	n.射击	1
-36	tremble	Unit 5_5	7	vi.摇晃	1
-37	sweat	Unit 5_6	7	n.&vi.汗	1
-37	anxious	Unit 5_6	7	adj.忧虑的	1
-37	anxiety	Unit 5_6	7	n.担心	1
-37	panic	Unit 5_6	7	vi.&vt.&n.惊慌	1
-37	tsunami	Unit 5_6	7	n.海啸	0
-37	glance through	Unit 5_6	7	匆匆看一遍	1
-37	Manchu	Unit 5_6	7	adj.&n.满族的	0
-37	vary from ... to ...	Unit 5_6	7	由...到...不等	1
-37	diverse	Unit 5_6	7	adj.多种多样的	1
-37	diversity	Unit 5_6	7	n.多种多样	0
-38	crane	Unit 5_7	7	n.鹤	0
-38	leopard	Unit 5_7	7	n.豹	0
-38	spectacular	Unit 5_7	7	adj.引人入胜的	0
-38	bathe	Unit 5_7	7	vi.洗澡	1
-38	arouse	Unit 5_7	7	vt.激发	0
-38	appreciation	Unit 5_7	7	n.欣赏	1
-38	peak	Unit 5_7	7	n.山顶	0
-38	persuasion	Unit 5_7	7	n.信服	0
-38	guarantee	Unit 5_7	7	vt.&n.保证	1
+1	realistic	Unit 1_1	15	adj.现实主义的	0
+1	abstract	Unit 1_1	15	adj.&n.抽象的	1
+1	sculpture	Unit 1_1	15	n.雕塑	1
+2	sculptor	Unit 1_2	15	n.雕刻家	0
+2	gallery	Unit 1_2	15	n.美术陈列室	1
+2	faith	Unit 1_2	15	n.信任	1
+2	faithfully	Unit 1_2	15	adv.忠实地	1
+2	consequently	Unit 1_2	15	adv.所以	0
+3	aim	Unit 1_3	15	n.&vi.&vt.目标	1
+3	conventional	Unit 1_3	15	adj.常规的	1
+3	typical	Unit 1_3	15	adj.典型的	1
+3	evident	Unit 1_3	15	adj.明显的	1
+3	renaissance	Unit 1_3	15	n.新生	0
+4	adopt	Unit 1_4	15	vt.采用	1
+4	humanistic	Unit 1_4	15	adj.人道主义的	0
+4	possess	Unit 1_4	15	vt.拥有	1
+4	possession	Unit 1_4	15	n.所有	1
+4	superb	Unit 1_4	15	adj.卓越的	1
+5	perspective	Unit 1_5	15	n.透视画法	0
+5	technique	Unit 1_5	15	n.技术	1
+5	coincidence	Unit 1_5	15	n.巧合	1
+5	by coincidence	Unit 1_5	15	巧合地	1
+5	masterpiece	Unit 1_5	15	n.杰作	0
+6	impressionism	Unit 1_6	15	n.印象主义	0
+6	impressionist	Unit 1_6	15	adj.&n.印象派的	0
+6	post-impressionist	Unit 1_6	15	adj.&n.后印象派的	0
+6	a great deal	Unit 1_6	15	大量	1
+6	shadow	Unit 1_6	15	n.阴影	1
+7	ridiculous	Unit 1_7	15	adj.荒谬的	1
+7	controversial	Unit 1_7	15	adj.争论的	1
+7	attempt	Unit 1_7	15	n.&vt.努力	1
+7	on the other hand	Unit 1_7	15	另一方面	1
+7	predict	Unit 1_7	15	vt.预言	1
+8	landscape	Unit 1_8	15	n.风景	0
+8	specific	Unit 1_8	15	adj.确切的	1
+8	figure	Unit 1_8	15	n.画像	1
+8	clay	Unit 1_8	15	n.黏土	1
+8	critic	Unit 1_8	15	n.评论家	0
+9	bronze	Unit 1_9	15	n.青铜	0
+9	marble	Unit 1_9	15	n.大理石	1
+9	carve	Unit 1_9	15	vt.雕刻	1
+9	delicate	Unit 1_9	15	adj.脆弱的	1
+9	canvas	Unit 1_9	15	n.帆布	0
+10	allergic	Unit 1_10	15	adj.过敏性的	1
+10	effectively	Unit 1_10	15	adv.有效地	0
+10	exhibition	Unit 1_10	15	n.展览	1
+10	aggressive	Unit 1_10	15	adj.敢作敢为的	1
+10	scholar	Unit 1_10	15	n.学者	1
+11	flesh	Unit 1_11	15	n.肉	1
+11	in the flesh	Unit 1_11	15	活着的	1
+11	geometry	Unit 1_11	15	n.几何学	1
+11	bunch	Unit 1_11	15	n.束	1
+11	avenue	Unit 1_11	15	n.林荫道	1
+12	preference	Unit 1_12	15	n.喜爱	1
+12	display	Unit 1_12	15	v.&n.展示	0
+12	appeal	Unit 1_12	15	vi.&vt.&n.有感染力	1
+12	appeal to	Unit 1_12	15	有吸引力	1
+12	fragile	Unit 1_12	15	adj.精细的	1
+13	circular	Unit 1_13	15	adj.圆形的	0
+13	metropolitan	Unit 1_13	15	adj.主要都市的	0
+13	reputation	Unit 1_13	15	n.名声	1
+13	civilization	Unit 1_13	15	n.文明	1
+13	Egypt	Unit 1_13	15	n.埃及	1
+14	Egyptian	Unit 1_14	15	adj.埃及的	1
+14	visual	Unit 1_14	15	adj.视觉的	1
+14	fragrant	Unit 1_14	15	adj.香的	1
+14	contemporary	Unit 1_14	15	adj.当代的	1
+15	permanent	Unit 1_15	15	adj.永久的	1
+15	district	Unit 1_15	15	n.区	1
+15	committee	Unit 1_15	15	n.委员会	1
+15	signature	Unit 1_15	15	n.署名	1
+16	poetry	Unit 2_1	14	n.诗	0
+16	tick	Unit 2_1	14	vt.给...标记号	1
+16	rhyme	Unit 2_1	14	n.&vi.&vt.韵	1
+16	convey	Unit 2_1	14	vt.传达	1
+16	emotion	Unit 2_1	14	n.情感	0
+17	nursery	Unit 2_2	14	n.托儿所	1
+17	nursery rhyme	Unit 2_2	14	童谣	1
+17	concrete	Unit 2_2	14	adj.具体的	1
+17	repetition	Unit 2_2	14	n.重复	0
+17	contradictory	Unit 2_2	14	adj.引起矛盾的	1
+18	hush	Unit 2_3	14	vi.&vt.(使某人)安静下来	0
+18	mockingbird	Unit 2_3	14	n.嘲鸫	0
+18	diamond	Unit 2_3	14	n.钻石	1
+18	brass	Unit 2_3	14	n.黄铜	0
+18	billy-goat	Unit 2_3	14	n.公山羊	0
+19	flexible	Unit 2_4	14	adj.灵活的	1
+19	pattern	Unit 2_4	14	n.模式	1
+19	squire	Unit 2_4	14	n.乡绅	0
+19	cottage	Unit 2_4	14	n.村舍	1
+19	coffin	Unit 2_4	14	n.棺材	0
+20	sparrow	Unit 2_5	14	n.麻雀	1
+20	kitten	Unit 2_5	14	n.小猫	0
+20	take it easy	Unit 2_5	14	轻松	1
+20	run out of	Unit 2_5	14	用完	1
+20	cinquain	Unit 2_5	14	n.五行诗	0
+21	be made up of	Unit 2_6	14	由...构成	1
+21	tease	Unit 2_6	14	vi.&vt.取笑	1
+21	salty	Unit 2_6	14	adj.含盐的	1
+21	droop	Unit 2_6	14	vi.低垂	0
+21	dread	Unit 2_6	14	vi.&vt.害怕	0
+22	endless	Unit 2_7	14	adj.无穷的	1
+22	haiku	Unit 2_7	14	n.俳句	0
+22	syllable	Unit 2_7	14	n.音节	0
+22	minimum	Unit 2_7	14	n.最低限度	1
+22	translation	Unit 2_7	14	n.翻译	1
+23	branch	Unit 2_8	14	n.枝条	1
+23	melt	Unit 2_8	14	v.&n.溶化	0
+23	brimful	Unit 2_8	14	adj.盈满的	0
+23	in particular	Unit 2_8	14	尤其	1
+23	eventually	Unit 2_8	14	adv.最后	1
+24	await	Unit 2_9	14	vt.等候	0
+24	transform	Unit 2_9	14	vi.&vt.转化	1
+24	revolve	Unit 2_9	14	vi.&vt.(使)旋转	0
+24	utter	Unit 2_9	14	vt.说	0
+24	sorrow	Unit 2_9	14	n.悲伤	1
+25	bare	Unit 2_10	14	adj.&n.赤裸的	1
+25	librarian	Unit 2_10	14	n.图书馆馆长	1
+25	forever	Unit 2_10	14	adv.永远	1
+25	stem	Unit 2_10	14	n.茎	0
+25	cement	Unit 2_10	14	n.水泥	0
+26	section	Unit 2_11	14	n.部分	1
+26	appropriate	Unit 2_11	14	adj.适当的	1
+26	exchange	Unit 2_11	14	n.&vi.&vt.交换	1
+26	diploma	Unit 2_11	14	n.毕业文凭	1
+26	sponsor	Unit 2_11	14	n.&vt.赞助人	1
+27	blank	Unit 2_12	14	n.&adj.空白	1
+27	compass	Unit 2_12	14	n.指南针	1
+27	bride	Unit 2_12	14	n.新娘	1
+27	bridegroom	Unit 2_12	14	n.新郎	1
+27	championship	Unit 2_12	14	n.冠军称号	1
+28	rhythmic	Unit 2_13	14	adj.有节奏的	0
+28	darkness	Unit 2_13	14	n.黑暗	1
+28	warmth	Unit 2_13	14	n.暖和	1
+28	try out	Unit 2_13	14	测试	1
+28	scholarship	Unit 2_13	14	n.奖学金	1
+29	pianist	Unit 2_14	14	n.钢琴家	1
+29	violinist	Unit 2_14	14	n.小提琴演奏者	1
+29	let out	Unit 2_14	14	发出	1
+29	load	Unit 2_14	14	n.负担	1
+30	cigarette	Unit 3_1	16	n.香烟	1
+30	alcohol	Unit 3_1	16	n.酒	1
+30	alcoholic	Unit 3_1	16	adj.酒精的	1
+30	abuse	Unit 3_1	16	n.&vt.滥用	1
+30	fitness	Unit 3_1	16	n.健康	0
+31	sexual	Unit 3_2	16	adj.性的	0
+31	stress	Unit 3_2	16	n.&vt.压力	1
+31	stressful	Unit 3_2	16	adj.产生压力的	0
+31	obesity	Unit 3_2	16	n.(过度)肥胖	0
+31	adolescent	Unit 3_2	16	n.&adj.青少年	1
+32	adolescence	Unit 3_3	16	n.青春期	1
+32	ban	Unit 3_3	16	vt.&n.禁止	1
+32	due	Unit 3_3	16	adj.欠款的	1
+32	due to	Unit 3_3	16	由于...	1
+32	tough	Unit 3_3	16	adj.困难的	1
+33	addicted	Unit 3_4	16	adj.入了迷的	1
+33	addicted to	Unit 3_4	16	对...有瘾	1
+33	nicotine	Unit 3_4	16	n.尼古丁	0
+33	accustom	Unit 3_4	16	vt.使习惯于	1
+33	accustomed	Unit 3_4	16	adj.惯常的	1
+34	accustomed to	Unit 3_5	16	习惯于...	1
+34	withdrawal	Unit 3_5	16	n.收回	1
+34	bad-tempered	Unit 3_5	16	adj.脾气暴躁的	0
+34	automatic	Unit 3_5	16	adj.无意识的	1
+34	automatically	Unit 3_5	16	adv.无意识地	1
+35	mental	Unit 3_6	16	adj.精神的	1
+35	mentally	Unit 3_6	16	adv.精神上	1
+35	quit	Unit 3_6	16	vt.停止(做某事)	1
+35	effect	Unit 3_6	16	n.结果	1
+35	lung	Unit 3_6	16	n.肺	1
+36	pregnant	Unit 3_7	16	adj.怀孕的	1
+36	abnormal	Unit 3_7	16	adj.畸形的	1
+36	breathless	Unit 3_7	16	adj.气喘吁吁的	1
+36	unfit	Unit 3_7	16	adj.不健康的	1
+36	strengthen	Unit 3_7	16	vt.&vi.加强	1
+37	resolve	Unit 3_8	16	n.决心	0
+37	decide on	Unit 3_8	16	对...作出决定	1
+37	packet	Unit 3_8	16	n.小包	1
+37	feel like doing	Unit 3_8	16	想要(做)...	1
+37	relaxation	Unit 3_8	16	n.放松，松弛	0
+38	desperate	Unit 3_9	16	adj.绝望的，拼命的	1
+38	chemist	Unit 3_9	16	n.药剂师	1
+38	gum	Unit 3_9	16	n.树胶	0
+38	chewing gum	Unit 3_9	16	口香糖	0
+38	disappointed	Unit 3_9	16	adj.失望的	1
+39	weaken	Unit 3_10	16	vi.&vt.(对某事的决心)动摇	0
+39	ashamed	Unit 3_10	16	adj.感到惭愧或羞耻的	1
+39	comprehension	Unit 3_10	16	n.理解	1
+39	in spite of	Unit 3_10	16	不顾	1
+39	take risks	Unit 3_10	16	冒险	1
+40	get into	Unit 3_11	16	陷入	1
+40	etc	Unit 3_11	16	adv.诸如此类的事物	1
+40	appendix	Unit 3_11	16	n.附录	1
+40	illegal	Unit 3_11	16	adj.不合法的	1
+40	pill	Unit 3_11	16	n.药丸	1
+41	robbery	Unit 3_12	16	n.抢劫	0
+41	slippery	Unit 3_12	16	adj.滑的	0
+41	HIV	Unit 3_12	16	abbr.艾滋病病毒	0
+41	AIDS	Unit 3_12	16	abbr.艾滋病	0
+41	at risk	Unit 3_12	16	处境危险	1
+42	SARS	Unit 3_13	16	abbr.非典型性肺炎	0
+42	immune	Unit 3_13	16	adj.有免疫力的	0
+42	survival	Unit 3_13	16	n.幸存	1
+42	sex	Unit 3_13	16	n.性	1
+42	fluid	Unit 3_13	16	n.液体	0
+43	inject	Unit 3_14	16	vt.注射	0
+43	injection	Unit 3_14	16	n.注射	0
+43	needle	Unit 3_14	16	n.针	1
+43	spill	Unit 3_14	16	vi.&vt.溢出	0
+43	male	Unit 3_14	16	adj.&n.男性的	1
+44	female	Unit 3_15	16	adj.&n.女性的	1
+44	condom	Unit 3_15	16	n.避孕套	0
+44	homosexual	Unit 3_15	16	n.&adj.同性恋	0
+44	prejudice	Unit 3_15	16	n.偏见	1
+44	judgement	Unit 3_15	16	n.看法	1
+45	disco	Unit 3_16	16	n.迪斯科舞会	0
+45	abortion	Unit 3_16	16	n.流产	1
+45	cigar	Unit 3_16	16	n.雪茄烟	1
+45	embarrassed	Unit 3_16	16	adj.尴尬的	1
+45	awkward	Unit 3_16	16	adj.局促不安的	1
+46	consume	Unit 4_1	15	vt.消费	1
+46	renewable	Unit 4_1	15	adj.能再生的	0
+46	greenhouse	Unit 4_1	15	n.温室	0
+46	Fahrenheit	Unit 4_1	15	adj.&n.华氏的	0
+46	come sbout	Unit 4_1	15	发生	1
+47	graph	Unit 4_2	15	n.图表	1
+47	random	Unit 4_2	15	adj.胡乱的	1
+47	phenomenon	Unit 4_2	15	n.现象	1
+47	subscribe	Unit 4_2	15	vi.&vt.同意	1
+47	subscribe to	Unit 4_2	15	同意	1
+48	fossil	Unit 4_3	15	n.化石	0
+48	fuel	Unit 4_3	15	n.燃料	1
+48	byproduct	Unit 4_3	15	n.副产品	0
+48	methane	Unit 4_3	15	n.甲烷	0
+48	Celsius	Unit 4_3	15	adj.摄氏的	0
+49	quantity	Unit 4_4	15	n.量	1
+49	quantities of	Unit 4_4	15	大量的	1
+49	tend	Unit 4_4	15	vi.&vt.趋向	1
+49	go up	Unit 4_4	15	上升	1
+49	measurement	Unit 4_4	15	n.衡量	0
+50	per	Unit 4_5	15	prep.每	1
+50	data	Unit 4_5	15	n.资料	1
+50	result in	Unit 4_5	15	导致	1
+50	trend	Unit 4_5	15	n.趋势	1
+50	catastrophe	Unit 4_5	15	n.大灾难	1
+51	flood	Unit 4_6	15	n.洪水	1
+51	drought	Unit 4_6	15	n.旱灾	0
+51	famine	Unit 4_6	15	n.饱荒	0
+51	oppose	Unit 4_6	15	vt.反对	1
+51	opposed	Unit 4_6	15	adj.反对的	1
+52	be opposed to	Unit 4_7	15	反对...	1
+52	mild	Unit 4_7	15	adj.温和的	1
+52	environmental	Unit 4_7	15	adj.环境的	0
+52	environmentalist	Unit 4_7	15	n.环境保护论者	0
+52	consequence	Unit 4_7	15	n.结果	1
+53	state	Unit 4_8	15	vt.陈述	1
+53	range	Unit 4_8	15	n.种类	1
+53	even if	Unit 4_8	15	即使	1
+53	keep on	Unit 4_8	15	继续	1
+53	glance	Unit 4_8	15	vi.&n.看一下	1
+54	steady	Unit 4_9	15	adj.平稳的	1
+54	steadily	Unit 4_9	15	adv.平稳地	1
+54	tendency	Unit 4_9	15	n.倾向	1
+54	widespread	Unit 4_9	15	adj.分布广的	1
+54	on the whole	Unit 4_9	15	大体上	1
+55	economical	Unit 4_10	15	adj.节约的	0
+55	hectare	Unit 4_10	15	n.公顷	0
+55	average	Unit 4_10	15	adj.平均的	1
+55	existence	Unit 4_10	15	n.生存	1
+55	outer	Unit 4_10	15	adj.外部的	1
+56	on behalf of	Unit 4_11	15	代表...一方	1
+56	individual	Unit 4_11	15	n.&adj.个人	0
+56	advocate	Unit 4_11	15	vt.拥护	1
+56	commitment	Unit 4_11	15	n.承诺	1
+56	put up with	Unit 4_11	15	忍受	1
+57	pollution	Unit 4_12	15	n.污染	1
+57	growth	Unit 4_12	15	n.增长	1
+57	electrical	Unit 4_12	15	adj.电的	1
+57	appliance	Unit 4_12	15	n.用具	0
+57	so long as	Unit 4_12	15	只要	1
+58	casual	Unit 4_13	15	adj.随便的	1
+58	and so on	Unit 4_13	15	等等	1
+58	motor	Unit 4_13	15	n.发动机	1
+58	can	Unit 4_13	15	n.容器	1
+58	circumstance	Unit 4_13	15	n.环境	1
+59	microwave	Unit 4_14	15	n.微波炉	1
+59	refresh	Unit 4_14	15	v.使恢复	1
+59	educator	Unit 4_14	15	n.教育工作者	1
+59	contribution	Unit 4_14	15	n.贡献	1
+59	imperative	Unit 4_14	15	n.祈使语气	0
+60	heading	Unit 4_15	15	n.标题	0
+60	slogan	Unit 4_15	15	n.标语	0
+60	presentation	Unit 4_15	15	n.显示	1
+60	nuclear	Unit 4_15	15	adj.核的	1
+60	disagreement	Unit 4_15	15	n.分歧	1
+61	diagram	Unit 5_1	14	n.图解	1
+61	volcano	Unit 5_1	14	n.火山	1
+61	volcanic	Unit 5_1	14	adj.火山的	0
+61	volcanology	Unit 5_1	14	n.火山学	0
+61	volcanologist	Unit 5_1	14	n.火山学家	0
+62	erupt	Unit 5_2	14	vi.爆发	1
+62	eruption	Unit 5_2	14	n.火山爆发	1
+62	ash	Unit 5_2	14	n.灰	1
+62	crater	Unit 5_2	14	n.火山口	0
+62	lava	Unit 5_2	14	n.熔岩	0
+63	hurricane	Unit 5_3	14	n.飓风	1
+63	questionnaire	Unit 5_3	14	n.问卷	1
+63	alongside	Unit 5_3	14	adv.&prep.在旁边	1
+63	equipment	Unit 5_3	14	n.设备	1
+63	appoint	Unit 5_3	14	vt.任命	1
+64	observatory	Unit 5_4	14	n.观象台	0
+64	database	Unit 5_4	14	n.数据库	1
+64	evaluate	Unit 5_4	14	vt.评估	1
+64	burn to the ground	Unit 5_4	14	全部焚毁	1
+64	wave	Unit 5_4	14	n.&vi.波浪	1
+65	molten	Unit 5_5	14	adj.熔化的	0
+65	fountain	Unit 5_5	14	vi.&vt.&n.泉水般地喷出或涌出	1
+65	absolute	Unit 5_5	14	adj.绝对的	1
+65	absolutely	Unit 5_5	14	adv.绝对地	1
+65	spaceman	Unit 5_5	14	n.宇航员	0
+66	suit	Unit 5_6	14	n.&vt.一套外衣	1
+66	helmet	Unit 5_6	14	n.头盔	1
+66	boot	Unit 5_6	14	n.靴子	1
+66	make one's way	Unit 5_6	14	前往	1
+66	potential	Unit 5_6	14	n.&adj.潜在性	1
+67	actual	Unit 5_7	14	adj.实在的	1
+67	geology	Unit 5_7	14	n.地质学	1
+67	sample	Unit 5_7	14	n.样品	1
+67	candidate	Unit 5_7	14	n.候选人	1
+67	threat	Unit 5_7	14	n.恐吓	1
+68	bungalow	Unit 5_8	14	n.平房	1
+68	tornado	Unit 5_8	14	n.龙卷风	1
+68	typhoon	Unit 5_8	14	n.台风	1
+68	thunderstorm	Unit 5_8	14	n.雷暴	1
+68	precious	Unit 5_8	14	adj.贵重的	1
+69	novelist	Unit 5_9	14	n.小说家	1
+69	fog	Unit 5_9	14	n.雾	1
+69	document	Unit 5_9	14	n.文件	1
+69	rainbow	Unit 5_9	14	n.彩虹	1
+69	uncomfortable	Unit 5_9	14	adj.不舒服的	1
+70	balcony	Unit 5_10	14	n.阳台	1
+70	unconscious	Unit 5_10	14	adj.失去知觉的	1
+70	shoot	Unit 5_10	14	vt.射中	1
+70	shot	Unit 5_10	14	n.射击	1
+70	tremble	Unit 5_10	14	vi.摇晃	1
+71	sweat	Unit 5_11	14	n.&vi.汗	1
+71	anxious	Unit 5_11	14	adj.忧虑的	1
+71	anxiety	Unit 5_11	14	n.担心	1
+71	panic	Unit 5_11	14	vi.&vt.&n.惊慌	1
+71	tsunami	Unit 5_11	14	n.海啸	0
+72	glance through	Unit 5_12	14	匆匆看一遍	1
+72	Manchu	Unit 5_12	14	adj.&n.满族的	0
+72	vary from ... to ...	Unit 5_12	14	由...到...不等	1
+72	diverse	Unit 5_12	14	adj.多种多样的	1
+72	diversity	Unit 5_12	14	n.多种多样	0
+73	crane	Unit 5_13	14	n.鹤	0
+73	leopard	Unit 5_13	14	n.豹	0
+73	spectacular	Unit 5_13	14	adj.引人入胜的	0
+73	bathe	Unit 5_13	14	vi.洗澡	1
+73	arouse	Unit 5_13	14	vt.激发	0
+74	appreciation	Unit 5_14	14	n.欣赏	1
+74	peak	Unit 5_14	14	n.山顶	0
+74	persuasion	Unit 5_14	14	n.信服	0
+74	guarantee	Unit 5_14	14	vt.&n.保证	1

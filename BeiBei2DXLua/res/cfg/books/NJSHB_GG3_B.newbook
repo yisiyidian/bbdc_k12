@@ -1,192 +1,192 @@
-1	hemisphere	Unit 1_1	5	n.半球	0
-1	adaptable	Unit 1_1	5	adj.能适应的	1
-1	plain	Unit 1_1	5	n.平原	1
-2	the Arctic	Unit 1_2	5	北极	1
-2	resemble	Unit 1_2	5	v.像	1
-2	domestic	Unit 1_2	5	adj.驯养的	1
-2	prey on	Unit 1_2	5	捕食	0
-2	mammal	Unit 1_2	5	n.哺乳动物	0
-2	moose	Unit 1_2	5	n.驼鹿	0
-2	gorge on	Unit 1_2	5	贪婪地吃	0
-2	pack	Unit 1_2	5	n.一群	1
-2	bear	Unit 1_2	5	n.生育	1
-3	cub	Unit 1_3	5	n.幼兽	0
-3	fierce	Unit 1_3	5	adj.凶猛的	1
-3	proof	Unit 1_3	5	n.证据	1
-3	indeed	Unit 1_3	5	adv.的确	1
-3	livestock	Unit 1_3	5	n.牲畜	0
-3	threaten	Unit 1_3	5	vt.威胁	1
-3	extinction	Unit 1_3	5	n.灭绝	1
-3	initiate	Unit 1_3	5	vt.开始	0
-3	objective	Unit 1_3	5	n.目标	1
-4	habitat	Unit 1_4	5	n.生活环境	0
-4	positive	Unit 1_4	5	adj.积极的	1
-4	orang-utan	Unit 1_4	5	n.猩猩	0
-4	jungle	Unit 1_4	5	n.热带丛林	1
-4	race	Unit 1_4	5	n.人种	1
-4	confirm	Unit 1_4	5	v.证实	1
-4	species	Unit 1_4	5	n.物种	1
-4	ape	Unit 1_4	5	n.类人猿	0
-4	come into contact with	Unit 1_4	5	与...接触	1
-5	consequently	Unit 1_5	5	adv.因此	1
-5	advance	Unit 1_5	5	n.进步	1
-5	the wild	Unit 1_5	5	自然环境	1
-5	be to blame	Unit 1_5	5	负有责任	1
-5	decline	Unit 1_5	5	v.减少	1
-5	smuggle	Unit 1_5	5	v.走私	0
-5	serve as	Unit 1_5	5	可用作	1
-5	existence	Unit 1_5	5	n.存在	1
-5	dramatic	Unit 1_5	5	adj.突然的	1
-6	dolphin	Unit 2_1	5	n.海豚	1
-6	cling to sth	Unit 2_1	5	v.抓紧	1
-6	pray for sth	Unit 2_1	5	v.祷告	1
-6	approach	Unit 2_1	5	v.靠近	1
-6	drive away	Unit 2_1	5	使离去	1
-6	coastguard	Unit 2_1	5	n.海岸警卫队	1
-6	locate	Unit 2_1	5	vt.定位	1
-6	befriend	Unit 2_1	5	v.待人如友	0
-6	tow	Unit 2_1	5	n.拖	0
-7	penalty	Unit 2_2	5	n.惩罚	0
-7	complicated	Unit 2_2	5	adj.复杂的	1
-7	set of sth	Unit 2_2	5	n.一组	1
-7	sonar	Unit 2_2	5	n.声纳	0
-7	seek out	Unit 2_2	5	挑选	1
-7	voluntarily	Unit 2_2	5	adv.自愿地	1
-7	unconditional	Unit 2_2	5	adj.无条件的	1
-7	repay	Unit 2_2	5	v.报答	0
-7	intended	Unit 2_2	5	adj.预期的	1
-8	prey	Unit 2_3	5	n.猎物	0
-8	enlightened	Unit 2_3	5	adj.开明的	0
-8	severe	Unit 2_3	5	adj.极为恶劣的	1
-8	depression	Unit 2_3	5	n.抑郁症	1
-8	sympathetic	Unit 2_3	5	adj.表示同情地	1
-8	enthusiast	Unit 2_3	5	n.爱好者	0
-8	supernatural	Unit 2_3	5	adj.超自然的	1
-8	extreme	Unit 2_3	5	adj.极度的	1
-8	crew	Unit 2_3	5	n.全体人员	1
-9	navy	Unit 2_4	5	n.海军	1
-9	witness	Unit 2_4	5	n.目击	1
-9	anchor	Unit 2_4	5	n.锚	0
-9	fascinated	Unit 2_4	5	adj.入迷的	1
-9	given	Unit 2_4	5	adj.考虑到	0
-9	extremely	Unit 2_4	5	adv.极其	1
-9	jaw	Unit 2_4	5	n.口部	1
-9	sight	Unit 2_4	5	n.看到	1
-9	predator	Unit 2_4	5	n.捕食性动物	0
-10	demonstrate	Unit 2_5	5	vt.表达	1
-10	incredible	Unit 2_5	5	adj.不能相信的	1
-10	live off	Unit 2_5	5	以食为生	1
-10	plankton	Unit 2_5	5	n.浮游	0
-10	flexible	Unit 2_5	5	adj.柔韧的	1
-10	cartilage	Unit 2_5	5	n.软骨	0
-10	hatch	Unit 2_5	5	n.孵出	1
-10	live	Unit 2_5	5	v.活的	1
-10	marine	Unit 2_5	5	n.海洋的	0
-11	vocation	Unit 3_1	5	n.职业	1
-11	autobiographical	Unit 3_1	5	adj.自传性的	0
-11	rough it	Unit 3_1	5	暂时艰难	0
-11	momentous	Unit 3_1	5	adj.重大的	0
-11	shift for oneself	Unit 3_1	5	独立谋生	1
-11	gain	Unit 3_1	5	n.获得	1
-11	livelihood	Unit 3_1	5	n.生活	0
-11	dazzle	Unit 3_1	5	v.使惊叹	0
-11	grocery	Unit 3_1	5	n.杂货店	1
-11	tiresome	Unit 3_1	5	adj.烦人的	1
-12	bother	Unit 3_2	5	vt.使烦恼	1
-12	private	Unit 3_2	5	adj.私人的	1
-12	mill	Unit 3_2	5	n.工厂	1
-12	amount to	Unit 3_2	5	等于	1
-12	mining	Unit 3_2	5	n.采矿	1
-12	descend	Unit 3_2	5	vt.下来	0
-12	shaft	Unit 3_2	5	n.矿井	0
-12	pick	Unit 3_2	5	vt.鹤嘴锄	0
-12	shovel	Unit 3_2	5	n.铲	0
-12	toss	Unit 3_2	5	n.扔	0
-13	land	Unit 3_3	5	n.使降落	1
-13	cabin	Unit 3_3	5	n.棚屋	1
-13	misery	Unit 3_3	5	n.痛苦	1
-13	amuse	Unit 3_3	5	v.提供娱乐	1
-13	territory	Unit 3_3	5	n.准州	1
-13	in print	Unit 3_3	5	已刊印	1
-13	eureka	Unit 3_3	5	int.我发现了	0
-13	fortune	Unit 3_3	5	n.财富	1
-13	enter upon	Unit 3_3	5	开始	1
-13	publication	Unit 3_3	5	n.出版	1
-14	in a nutshell	Unit 3_4	5	简而言之	1
-14	bore	Unit 3_4	5	vbl.使厌烦	1
-14	bare	Unit 3_4	5	adj.空的	1
-14	wagon	Unit 3_4	5	n.四轮马车	1
-14	renew	Unit 3_4	5	vt.重新开始	1
-14	sensational	Unit 3_4	5	adj.轰动性的	0
-14	wretched	Unit 3_4	5	adj.极坏的	0
-14	drag	Unit 3_4	5	v.行进	1
-14	hostile	Unit 3_4	5	adj.敌对的	0
-14	rough	Unit 3_4	5	adj.令人不悦的	0
-15	legitimate	Unit 3_5	5	adj.合理的	0
-15	furnish	Unit 3_5	5	vt.供应	1
-15	commendation	Unit 3_5	5	n.称赞	0
-15	compensate	Unit 3_5	5	vt.补偿	0
-15	financially	Unit 3_5	5	adv.经济上	1
-15	two-way	Unit 3_5	5	adj.双行的	1
-15	passion	Unit 3_5	5	n.强烈情感	1
-15	reward	Unit 3_5	5	vt.回报	1
-15	risk-free	Unit 3_5	5	adj.没有风险的	1
-15	figure out	Unit 3_5	5	搞清楚	1
-15	internal	Unit 3_5	5	adj.内心的	0
-16	expo	Unit 4_1	6	n.博览会	0
-16	industrialist	Unit 4_1	6	n.实业家	0
-16	exhibitor	Unit 4_1	6	n.参展商	1
-16	profession	Unit 4_1	6	n.专业	1
-16	representative	Unit 4_1	6	adj.代表	1
-16	institution	Unit 4_1	6	n.机构	0
-16	miss out on	Unit 4_1	6	错失机会	1
-16	expertise	Unit 4_1	6	n.专长	0
-16	intend	Unit 4_1	6	v.想要	1
-16	prospectus	Unit 4_1	6	n.简介	0
-17	field	Unit 4_2	6	n.领域	1
-17	take after	Unit 4_2	6	像父母	1
-17	scholarship	Unit 4_2	6	n.奖学金	1
-17	aim to do sth	Unit 4_2	6	v.力争	1
-17	feature	Unit 4_2	6	n.特点	1
-17	seminar	Unit 4_2	6	n.研讨会	0
-17	outline	Unit 4_2	6	n.&v.概括	1
-17	respective	Unit 4_2	6	adj.各自的	1
-17	get across	Unit 4_2	6	讲清楚	1
-17	retrain	Unit 4_2	6	v.再培训	0
-18	available	Unit 4_3	6	adj.在手边	1
-18	dead-end	Unit 4_3	6	n.绝境	0
-18	intention	Unit 4_3	6	n.意图	1
-18	prospective	Unit 4_3	6	adj.预期的	0
-18	employer	Unit 4_3	6	n.雇主	1
-18	frankly	Unit 4_3	6	adv.坦白地	1
-18	normally	Unit 4_3	6	adv.平常	1
-18	squash	Unit 4_3	6	n.拥挤环境	0
-18	make up for	Unit 4_3	6	弥补	1
-18	discomfort	Unit 4_3	6	n.痛苦	1
-19	entry	Unit 4_4	6	n.进入	0
-19	vacancy	Unit 4_4	6	n.空缺	0
-19	ambition	Unit 4_4	6	n.志向	1
-19	jump-start	Unit 4_4	6	v.全力以赴	0
-19	drive	Unit 4_4	6	n.干劲	0
-19	post	Unit 4_4	6	n.职位	1
-19	innovatively	Unit 4_4	6	adv.创新地	0
-19	human resources	Unit 4_4	6	人力资源部	1
-19	application	Unit 4_4	6	n.申请	1
-20	base ... in	Unit 4_5	6	以...为总部	1
-20	secretarial	Unit 4_5	6	adj.秘书的	0
-20	interpret	Unit 4_5	6	v.口译	1
-20	candidate	Unit 4_5	6	n.应聘者	1
-20	standard	Unit 4_5	6	n.标准	1
-20	advanced	Unit 4_5	6	adj.高等的	1
-20	presentation	Unit 4_5	6	n.展示会	1
-20	spreadsheet	Unit 4_5	6	n.报表	1
-20	corporate	Unit 4_5	6	adj.公司的	0
-21	memo	Unit 4_6	6	n.备忘录	1
-21	position	Unit 4_6	6	n.职位	1
-21	enthusiastic	Unit 4_6	6	adj.热情的	1
-21	previous	Unit 4_6	6	adj.先前的	1
-21	identify	Unit 4_6	6	vt.找到	1
-21	negotiate	Unit 4_6	6	vt.协商	1
-21	contract	Unit 4_6	6	n.合同	1
-21	self-motivated	Unit 4_6	6	adj.甘愿苦干的	1
-21	competitive	Unit 4_6	6	adj.努力竞争的	1
+1	hemisphere	Unit 1_1	8	n.半球	0
+1	adaptable	Unit 1_1	8	adj.能适应的	1
+1	plain	Unit 1_1	8	n.平原	1
+2	the Arctic	Unit 1_2	8	北极	1
+2	resemble	Unit 1_2	8	v.像	1
+2	domestic	Unit 1_2	8	adj.驯养的	1
+2	prey on	Unit 1_2	8	捕食	0
+2	mammal	Unit 1_2	8	n.哺乳动物	0
+3	moose	Unit 1_3	8	n.驼鹿	0
+3	gorge on	Unit 1_3	8	贪婪地吃	0
+3	pack	Unit 1_3	8	n.一群	1
+3	bear	Unit 1_3	8	n.生育	1
+3	cub	Unit 1_3	8	n.幼兽	0
+4	fierce	Unit 1_4	8	adj.凶猛的	1
+4	proof	Unit 1_4	8	n.证据	1
+4	indeed	Unit 1_4	8	adv.的确	1
+4	livestock	Unit 1_4	8	n.牲畜	0
+4	threaten	Unit 1_4	8	vt.威胁	1
+5	extinction	Unit 1_5	8	n.灭绝	1
+5	initiate	Unit 1_5	8	vt.开始	0
+5	objective	Unit 1_5	8	n.目标	1
+5	habitat	Unit 1_5	8	n.生活环境	0
+5	positive	Unit 1_5	8	adj.积极的	1
+6	orang-utan	Unit 1_6	8	n.猩猩	0
+6	jungle	Unit 1_6	8	n.热带丛林	1
+6	race	Unit 1_6	8	n.人种	1
+6	confirm	Unit 1_6	8	v.证实	1
+6	species	Unit 1_6	8	n.物种	1
+7	ape	Unit 1_7	8	n.类人猿	0
+7	come into contact with	Unit 1_7	8	与...接触	1
+7	consequently	Unit 1_7	8	adv.因此	1
+7	advance	Unit 1_7	8	n.进步	1
+7	the wild	Unit 1_7	8	自然环境	1
+8	be to blame	Unit 1_8	8	负有责任	1
+8	decline	Unit 1_8	8	v.减少	1
+8	smuggle	Unit 1_8	8	v.走私	0
+8	serve as	Unit 1_8	8	可用作	1
+8	existence	Unit 1_8	8	n.存在	1
+8	dramatic	Unit 1_8	8	adj.突然的	1
+9	dolphin	Unit 2_1	9	n.海豚	1
+9	cling to sth	Unit 2_1	9	v.抓紧	1
+9	pray for sth	Unit 2_1	9	v.祷告	1
+9	approach	Unit 2_1	9	v.靠近	1
+9	drive away	Unit 2_1	9	使离去	1
+10	coastguard	Unit 2_2	9	n.海岸警卫队	1
+10	locate	Unit 2_2	9	vt.定位	1
+10	befriend	Unit 2_2	9	v.待人如友	0
+10	tow	Unit 2_2	9	n.拖	0
+10	penalty	Unit 2_2	9	n.惩罚	0
+11	complicated	Unit 2_3	9	adj.复杂的	1
+11	set of sth	Unit 2_3	9	n.一组	1
+11	sonar	Unit 2_3	9	n.声纳	0
+11	seek out	Unit 2_3	9	挑选	1
+11	voluntarily	Unit 2_3	9	adv.自愿地	1
+12	unconditional	Unit 2_4	9	adj.无条件的	1
+12	repay	Unit 2_4	9	v.报答	0
+12	intended	Unit 2_4	9	adj.预期的	1
+12	prey	Unit 2_4	9	n.猎物	0
+12	enlightened	Unit 2_4	9	adj.开明的	0
+13	severe	Unit 2_5	9	adj.极为恶劣的	1
+13	depression	Unit 2_5	9	n.抑郁症	1
+13	sympathetic	Unit 2_5	9	adj.表示同情地	1
+13	enthusiast	Unit 2_5	9	n.爱好者	0
+13	supernatural	Unit 2_5	9	adj.超自然的	1
+14	extreme	Unit 2_6	9	adj.极度的	1
+14	crew	Unit 2_6	9	n.全体人员	1
+14	navy	Unit 2_6	9	n.海军	1
+14	witness	Unit 2_6	9	n.目击	1
+14	anchor	Unit 2_6	9	n.锚	0
+15	fascinated	Unit 2_7	9	adj.入迷的	1
+15	given	Unit 2_7	9	adj.考虑到	0
+15	extremely	Unit 2_7	9	adv.极其	1
+15	jaw	Unit 2_7	9	n.口部	1
+15	sight	Unit 2_7	9	n.看到	1
+16	predator	Unit 2_8	9	n.捕食性动物	0
+16	demonstrate	Unit 2_8	9	vt.表达	1
+16	incredible	Unit 2_8	9	adj.不能相信的	1
+16	live off	Unit 2_8	9	以食为生	1
+16	plankton	Unit 2_8	9	n.浮游	0
+17	flexible	Unit 2_9	9	adj.柔韧的	1
+17	cartilage	Unit 2_9	9	n.软骨	0
+17	hatch	Unit 2_9	9	n.孵出	1
+17	live	Unit 2_9	9	v.活的	1
+17	marine	Unit 2_9	9	n.海洋的	0
+18	vocation	Unit 3_1	10	n.职业	1
+18	autobiographical	Unit 3_1	10	adj.自传性的	0
+18	rough it	Unit 3_1	10	暂时艰难	0
+18	momentous	Unit 3_1	10	adj.重大的	0
+18	shift for oneself	Unit 3_1	10	独立谋生	1
+19	gain	Unit 3_2	10	n.获得	1
+19	livelihood	Unit 3_2	10	n.生活	0
+19	dazzle	Unit 3_2	10	v.使惊叹	0
+19	grocery	Unit 3_2	10	n.杂货店	1
+19	tiresome	Unit 3_2	10	adj.烦人的	1
+20	bother	Unit 3_3	10	vt.使烦恼	1
+20	private	Unit 3_3	10	adj.私人的	1
+20	mill	Unit 3_3	10	n.工厂	1
+20	amount to	Unit 3_3	10	等于	1
+20	mining	Unit 3_3	10	n.采矿	1
+21	descend	Unit 3_4	10	vt.下来	0
+21	shaft	Unit 3_4	10	n.矿井	0
+21	pick	Unit 3_4	10	vt.鹤嘴锄	0
+21	shovel	Unit 3_4	10	n.铲	0
+21	toss	Unit 3_4	10	n.扔	0
+22	land	Unit 3_5	10	n.使降落	1
+22	cabin	Unit 3_5	10	n.棚屋	1
+22	misery	Unit 3_5	10	n.痛苦	1
+22	amuse	Unit 3_5	10	v.提供娱乐	1
+22	territory	Unit 3_5	10	n.准州	1
+23	in print	Unit 3_6	10	已刊印	1
+23	eureka	Unit 3_6	10	int.我发现了	0
+23	fortune	Unit 3_6	10	n.财富	1
+23	enter upon	Unit 3_6	10	开始	1
+23	publication	Unit 3_6	10	n.出版	1
+24	in a nutshell	Unit 3_7	10	简而言之	1
+24	bore	Unit 3_7	10	vbl.使厌烦	1
+24	bare	Unit 3_7	10	adj.空的	1
+24	wagon	Unit 3_7	10	n.四轮马车	1
+24	renew	Unit 3_7	10	vt.重新开始	1
+25	sensational	Unit 3_8	10	adj.轰动性的	0
+25	wretched	Unit 3_8	10	adj.极坏的	0
+25	drag	Unit 3_8	10	v.行进	1
+25	hostile	Unit 3_8	10	adj.敌对的	0
+25	rough	Unit 3_8	10	adj.令人不悦的	0
+26	legitimate	Unit 3_9	10	adj.合理的	0
+26	furnish	Unit 3_9	10	vt.供应	1
+26	commendation	Unit 3_9	10	n.称赞	0
+26	compensate	Unit 3_9	10	vt.补偿	0
+26	financially	Unit 3_9	10	adv.经济上	1
+27	two-way	Unit 3_10	10	adj.双行的	1
+27	passion	Unit 3_10	10	n.强烈情感	1
+27	reward	Unit 3_10	10	vt.回报	1
+27	risk-free	Unit 3_10	10	adj.没有风险的	1
+27	figure out	Unit 3_10	10	搞清楚	1
+27	internal	Unit 3_10	10	adj.内心的	0
+28	expo	Unit 4_1	11	n.博览会	0
+28	industrialist	Unit 4_1	11	n.实业家	0
+28	exhibitor	Unit 4_1	11	n.参展商	1
+28	profession	Unit 4_1	11	n.专业	1
+28	representative	Unit 4_1	11	adj.代表	1
+29	institution	Unit 4_2	11	n.机构	0
+29	miss out on	Unit 4_2	11	错失机会	1
+29	expertise	Unit 4_2	11	n.专长	0
+29	intend	Unit 4_2	11	v.想要	1
+29	prospectus	Unit 4_2	11	n.简介	0
+30	field	Unit 4_3	11	n.领域	1
+30	take after	Unit 4_3	11	像父母	1
+30	scholarship	Unit 4_3	11	n.奖学金	1
+30	aim to do sth	Unit 4_3	11	v.力争	1
+30	feature	Unit 4_3	11	n.特点	1
+31	seminar	Unit 4_4	11	n.研讨会	0
+31	outline	Unit 4_4	11	n.&v.概括	1
+31	respective	Unit 4_4	11	adj.各自的	1
+31	get across	Unit 4_4	11	讲清楚	1
+31	retrain	Unit 4_4	11	v.再培训	0
+32	available	Unit 4_5	11	adj.在手边	1
+32	dead-end	Unit 4_5	11	n.绝境	0
+32	intention	Unit 4_5	11	n.意图	1
+32	prospective	Unit 4_5	11	adj.预期的	0
+32	employer	Unit 4_5	11	n.雇主	1
+33	frankly	Unit 4_6	11	adv.坦白地	1
+33	normally	Unit 4_6	11	adv.平常	1
+33	squash	Unit 4_6	11	n.拥挤环境	0
+33	make up for	Unit 4_6	11	弥补	1
+33	discomfort	Unit 4_6	11	n.痛苦	1
+34	entry	Unit 4_7	11	n.进入	0
+34	vacancy	Unit 4_7	11	n.空缺	0
+34	ambition	Unit 4_7	11	n.志向	1
+34	jump-start	Unit 4_7	11	v.全力以赴	0
+34	drive	Unit 4_7	11	n.干劲	0
+35	post	Unit 4_8	11	n.职位	1
+35	innovatively	Unit 4_8	11	adv.创新地	0
+35	human resources	Unit 4_8	11	人力资源部	1
+35	application	Unit 4_8	11	n.申请	1
+35	base ... in	Unit 4_8	11	以...为总部	1
+36	secretarial	Unit 4_9	11	adj.秘书的	0
+36	interpret	Unit 4_9	11	v.口译	1
+36	candidate	Unit 4_9	11	n.应聘者	1
+36	standard	Unit 4_9	11	n.标准	1
+36	advanced	Unit 4_9	11	adj.高等的	1
+37	presentation	Unit 4_10	11	n.展示会	1
+37	spreadsheet	Unit 4_10	11	n.报表	1
+37	corporate	Unit 4_10	11	adj.公司的	0
+37	memo	Unit 4_10	11	n.备忘录	1
+37	position	Unit 4_10	11	n.职位	1
+37	enthusiastic	Unit 4_10	11	adj.热情的	1
+38	previous	Unit 4_11	11	adj.先前的	1
+38	identify	Unit 4_11	11	vt.找到	1
+38	negotiate	Unit 4_11	11	vt.协商	1
+38	contract	Unit 4_11	11	n.合同	1
+38	self-motivated	Unit 4_11	11	adj.甘愿苦干的	1
+38	competitive	Unit 4_11	11	adj.努力竞争的	1

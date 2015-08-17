@@ -8,116 +8,116 @@
 2	chocolate	Unit1_2	2	n.巧克力	1
 2	beautiful	Unit1_2	2	adj.漂亮的	1
 2	open	Unit1_2	2	vt.打开	1
-3	lab	Unit2_1	1	n.实验室	1
-3	office	Unit2_1	1	n.办公室	1
-3	classroom	Unit2_1	1	n.教室	1
-3	toilet	Unit2_1	1	n.厕所	1
-3	clinic	Unit2_1	1	n.医务室	1
-3	garden	Unit2_1	1	n.花园	1
-3	playground	Unit2_1	1	n.操场	1
-3	computer	Unit2_1	1	n.电脑	1
-3	computer room	Unit2_1	1	计算机房	1
-4	egg roll	Unit3_1	1	蛋卷	1
-4	water	Unit3_1	1	n.水	1
-4	cake	Unit3_1	1	n.蛋糕	1
-4	orange juice	Unit3_1	1	橘子汁	1
-4	bread	Unit3_1	1	n.面包	1
-4	candy	Unit3_1	1	n.糖果	1
-4	crisp	Unit3_1	1	n.薯片	1
-4	apple pie	Unit3_1	1	苹果派	1
-4	picnic	Unit3_1	1	n.野餐	1
-4	need	Unit3_1	1	v.需要	1
-4	money	Unit3_1	1	n.钱	1
-5	o'clock	Unit4_1	1	...点钟	1
-5	half	Unit4_1	1	adj.半	1
-5	past	Unit4_1	1	n.超过	1
-5	quarter	Unit4_1	1	n.四分之一	1
-5	twenty	Unit4_1	1	num.20	1
-5	thirty-five	Unit4_1	1	num.35	1
-5	video game	Unit4_1	1	电子游戏	1
-5	early	Unit4_1	1	adj.早的	1
-5	go to bed	Unit4_1	1	去睡觉	1
-5	work	Unit4_1	1	n.&v.工作	1
-6	first	Unit5_1	1	n.&adj.第一	1
-6	second	Unit5_1	1	n.&adj.第二	1
-6	third	Unit5_1	1	n.&adj.第三	1
-6	fifth	Unit5_1	1	n.&adj.第五	1
-6	sixth	Unit5_1	1	n.&adj.第六	1
-6	seventh	Unit5_1	1	n.&adj.第七	1
-6	eighth	Unit5_1	1	n.&adj.第八	1
-6	ninth	Unit5_1	1	n.&adj.第九	1
-6	tenth	Unit5_1	1	n.&adj.第十	1
-6	eleventh	Unit5_1	1	n.&adj.第十一	1
-6	twelfth	Unit5_1	1	n.&adj.第十二	1
-6	when	Unit5_1	1	adv.&pron.什么时候	1
-6	birthday	Unit5_1	1	n.生日	1
-6	than	Unit5_1	1	conj.比	1
-7	in	Unit6_1	1	prep.在...里面	0
-7	on	Unit6_1	1	prep.在...上面	1
-7	under	Unit6_1	1	prep.在...下面	1
-7	near	Unit6_1	1	prep.在...旁	1
-7	between	Unit6_1	1	prep.在...之间	1
-7	beside	Unit6_1	1	prep.在...旁边	1
-7	behind	Unit6_1	1	prep.在...后面	1
-7	in front of	Unit6_1	1	在...前面	1
-7	toy	Unit6_1	1	n.玩具	1
-7	train	Unit6_1	1	n.火车	1
-7	motorbike	Unit6_1	1	n.摩托车	0
-7	rocket	Unit6_1	1	n.火箭	0
-8	blouse	Unit7_1	1	n.女式衬衫	1
-8	tie	Unit7_1	1	n.领带	1
-8	jeans	Unit7_1	1	n.牛仔裤	1
-8	coat	Unit7_1	1	n.外套	1
-8	shorts	Unit7_1	1	n.短裤	1
-8	gloves	Unit7_1	1	n.手套	1
-8	socks	Unit7_1	1	n.短袜子	1
-8	belt	Unit7_1	1	n.皮带	1
-8	high jump	Unit7_1	1	跳高	1
-8	sports meet	Unit7_1	1	运动会	0
-8	pretty	Unit7_1	1	adj.漂亮的	1
-8	sneaker	Unit7_1	1	n.运动鞋	0
-9	cabbage	Unit8_1	1	n.卷心菜	1
-9	sweet potato	Unit8_1	1	红薯	1
-9	sausage	Unit8_1	1	n.火腿肠	1
-9	pork	Unit8_1	1	n.猪肉	1
-9	chicken	Unit8_1	1	n.鸡肉	1
-9	eggplant	Unit8_1	1	n.茄子	1
-9	pea	Unit8_1	1	n.豌豆	1
-9	onion	Unit8_1	1	n.洋葱	1
-10	big	Unit9_1	1	adj.大的	1
-10	small	Unit9_1	1	adj.小的	1
-10	thin	Unit9_1	1	adj.瘦的	1
-10	fat	Unit9_1	1	adj.胖的	1
-10	hard	Unit9_1	1	adj.硬的	1
-10	soft	Unit9_1	1	adj.柔软的	1
-10	smooth	Unit9_1	1	adj.平滑的	1
-10	rough	Unit9_1	1	adj.粗糙的	1
-10	weak	Unit9_1	1	adj.弱的	1
-10	strong	Unit9_1	1	adj.强壮的	1
-10	little	Unit9_1	1	adj.小的	1
-10	forest	Unit9_1	1	n.森林	0
-10	follow me	Unit9_1	1	跟我来	0
-10	silly	Unit9_1	1	adj.蠢笨的	1
-11	feed a bird	Unit10_1	1	喂鸟	1
-11	climb a hill	Unit10_1	1	爬山	1
-11	walk a dog	Unit10_1	1	遛狗	1
-11	fly a kite	Unit10_1	1	放风筝	1
-11	go boating	Unit10_1	1	去划船	1
-11	go cycling	Unit10_1	1	去骑自行车	1
-11	go swimming	Unit10_1	1	去游泳	1
-11	go fishing	Unit10_1	1	去钓鱼	1
-11	go to the cinema	Unit10_1	1	去看电影	1
-11	movie	Unit10_1	1	n.影片	1
-12	fen	Unit11_1	1	n.分	1
-12	jiao	Unit11_1	1	n.角	1
-12	yuan	Unit11_1	1	n.元	1
-12	hundred	Unit11_1	1	num.百	1
-12	buy	Unit11_1	1	vt.买	1
-12	altogether	Unit11_1	1	adv.总共	0
-13	ant	Unit12_1	1	n.蚂蚁	1
-13	bee	Unit12_1	1	n.蜜蜂	1
-13	dragonfly	Unit12_1	1	n.蜻蜓	1
-13	ladybird	Unit12_1	1	n.七星瓢虫	1
-13	cockroach	Unit12_1	1	n.蟑螂	1
-13	butterfly	Unit12_1	1	n.蝴蝶	1
-13	wing	Unit12_1	1	n.翅膀	1
+3	lab	Unit2_1	2	n.实验室	1
+3	office	Unit2_1	2	n.办公室	1
+3	classroom	Unit2_1	2	n.教室	1
+3	toilet	Unit2_1	2	n.厕所	1
+3	clinic	Unit2_1	2	n.医务室	1
+4	garden	Unit2_2	2	n.花园	1
+4	playground	Unit2_2	2	n.操场	1
+4	computer	Unit2_2	2	n.电脑	1
+4	computer room	Unit2_2	2	计算机房	1
+5	egg roll	Unit3_1	2	蛋卷	1
+5	water	Unit3_1	2	n.水	1
+5	cake	Unit3_1	2	n.蛋糕	1
+5	orange juice	Unit3_1	2	橘子汁	1
+5	bread	Unit3_1	2	n.面包	1
+5	candy	Unit3_1	2	n.糖果	1
+6	crisp	Unit3_2	2	n.薯片	1
+6	apple pie	Unit3_2	2	苹果派	1
+6	picnic	Unit3_2	2	n.野餐	1
+6	need	Unit3_2	2	v.需要	1
+6	money	Unit3_2	2	n.钱	1
+7	o'clock	Unit4_1	2	...点钟	1
+7	half	Unit4_1	2	adj.半	1
+7	past	Unit4_1	2	n.超过	1
+7	quarter	Unit4_1	2	n.四分之一	1
+7	twenty	Unit4_1	2	num.20	1
+8	thirty-five	Unit4_2	2	num.35	1
+8	video game	Unit4_2	2	电子游戏	1
+8	early	Unit4_2	2	adj.早的	1
+8	go to bed	Unit4_2	2	去睡觉	1
+8	work	Unit4_2	2	n.&v.工作	1
+9	first	Unit5_1	3	n.&adj.第一	1
+9	second	Unit5_1	3	n.&adj.第二	1
+9	third	Unit5_1	3	n.&adj.第三	1
+9	fifth	Unit5_1	3	n.&adj.第五	1
+9	sixth	Unit5_1	3	n.&adj.第六	1
+10	seventh	Unit5_2	3	n.&adj.第七	1
+10	eighth	Unit5_2	3	n.&adj.第八	1
+10	ninth	Unit5_2	3	n.&adj.第九	1
+10	tenth	Unit5_2	3	n.&adj.第十	1
+10	eleventh	Unit5_2	3	n.&adj.第十一	1
+11	twelfth	Unit5_3	3	n.&adj.第十二	1
+11	when	Unit5_3	3	adv.&pron.什么时候	1
+11	birthday	Unit5_3	3	n.生日	1
+11	than	Unit5_3	3	conj.比	1
+12	in	Unit6_1	2	prep.在...里面	0
+12	on	Unit6_1	2	prep.在...上面	1
+12	under	Unit6_1	2	prep.在...下面	1
+12	near	Unit6_1	2	prep.在...旁	1
+12	between	Unit6_1	2	prep.在...之间	1
+12	beside	Unit6_1	2	prep.在...旁边	1
+13	behind	Unit6_2	2	prep.在...后面	1
+13	in front of	Unit6_2	2	在...前面	1
+13	toy	Unit6_2	2	n.玩具	1
+13	train	Unit6_2	2	n.火车	1
+13	motorbike	Unit6_2	2	n.摩托车	0
+13	rocket	Unit6_2	2	n.火箭	0
+14	blouse	Unit7_1	2	n.女式衬衫	1
+14	tie	Unit7_1	2	n.领带	1
+14	jeans	Unit7_1	2	n.牛仔裤	1
+14	coat	Unit7_1	2	n.外套	1
+14	shorts	Unit7_1	2	n.短裤	1
+14	gloves	Unit7_1	2	n.手套	1
+15	socks	Unit7_2	2	n.短袜子	1
+15	belt	Unit7_2	2	n.皮带	1
+15	high jump	Unit7_2	2	跳高	1
+15	sports meet	Unit7_2	2	运动会	0
+15	pretty	Unit7_2	2	adj.漂亮的	1
+15	sneaker	Unit7_2	2	n.运动鞋	0
+16	cabbage	Unit8_1	2	n.卷心菜	1
+16	sweet potato	Unit8_1	2	红薯	1
+16	sausage	Unit8_1	2	n.火腿肠	1
+16	pork	Unit8_1	2	n.猪肉	1
+17	chicken	Unit8_2	2	n.鸡肉	1
+17	eggplant	Unit8_2	2	n.茄子	1
+17	pea	Unit8_2	2	n.豌豆	1
+17	onion	Unit8_2	2	n.洋葱	1
+18	big	Unit9_1	3	adj.大的	1
+18	small	Unit9_1	3	adj.小的	1
+18	thin	Unit9_1	3	adj.瘦的	1
+18	fat	Unit9_1	3	adj.胖的	1
+18	hard	Unit9_1	3	adj.硬的	1
+19	soft	Unit9_2	3	adj.柔软的	1
+19	smooth	Unit9_2	3	adj.平滑的	1
+19	rough	Unit9_2	3	adj.粗糙的	1
+19	weak	Unit9_2	3	adj.弱的	1
+19	strong	Unit9_2	3	adj.强壮的	1
+20	little	Unit9_3	3	adj.小的	1
+20	forest	Unit9_3	3	n.森林	0
+20	follow me	Unit9_3	3	跟我来	0
+20	silly	Unit9_3	3	adj.蠢笨的	1
+21	feed a bird	Unit10_1	2	喂鸟	1
+21	climb a hill	Unit10_1	2	爬山	1
+21	walk a dog	Unit10_1	2	遛狗	1
+21	fly a kite	Unit10_1	2	放风筝	1
+21	go boating	Unit10_1	2	去划船	1
+22	go cycling	Unit10_2	2	去骑自行车	1
+22	go swimming	Unit10_2	2	去游泳	1
+22	go fishing	Unit10_2	2	去钓鱼	1
+22	go to the cinema	Unit10_2	2	去看电影	1
+22	movie	Unit10_2	2	n.影片	1
+23	fen	Unit11_1	1	n.分	1
+23	jiao	Unit11_1	1	n.角	1
+23	yuan	Unit11_1	1	n.元	1
+23	hundred	Unit11_1	1	num.百	1
+23	buy	Unit11_1	1	vt.买	1
+23	altogether	Unit11_1	1	adv.总共	0
+24	ant	Unit12_1	1	n.蚂蚁	1
+24	bee	Unit12_1	1	n.蜜蜂	1
+24	dragonfly	Unit12_1	1	n.蜻蜓	1
+24	ladybird	Unit12_1	1	n.七星瓢虫	1
+24	cockroach	Unit12_1	1	n.蟑螂	1
+24	butterfly	Unit12_1	1	n.蝴蝶	1
+24	wing	Unit12_1	1	n.翅膀	1

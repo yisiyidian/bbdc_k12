@@ -1,301 +1,301 @@
-1	refrigerator	Unit 1_1	6	n.冰箱	1
-1	grasp	Unit 1_1	6	n.抓住	1
-1	yell	Unit 1_1	6	vt.大叫	0
-2	towel	Unit 1_2	6	n.毛巾	1
-2	mop	Unit 1_2	6	n.拖把	1
-2	backyard	Unit 1_2	6	n.后院	1
-2	lip	Unit 1_2	6	n.口	1
-2	nourish	Unit 1_2	6	v.培养	1
-2	tragedy	Unit 1_2	6	n.悲剧	1
-2	sorrow	Unit 1_2	6	n.悲哀	1
-2	admirable	Unit 1_2	6	adj.令人敬佩的	1
-2	mob	Unit 1_2	6	n.一大群人	1
-2	a sea of	Unit 1_2	6	大量	1
-3	yell at	Unit 1_3	6	对...大叫	1
-3	a pool of	Unit 1_3	6	一汪	1
-3	sort of	Unit 1_3	6	有点	1
-3	put a price on	Unit 1_3	6	给...标价	1
-3	have faith in	Unit 1_3	6	坚信	1
-3	whip	Unit 1_3	6	n.鞭子	1
-3	pillow	Unit 1_3	6	n.枕头	1
-3	genius	Unit 1_3	6	n.天才	1
-3	schoolmaster	Unit 1_3	6	n.(英国，尤指私立学校)教师	0
-3	peer	Unit 1_3	6	vi.&n.相同年龄的人	1
-4	occasionally	Unit 1_4	6	adv.偶然地	1
-4	adolescence	Unit 1_4	6	n.青春期	0
-4	adolescent	Unit 1_4	6	adj.青少年	0
-4	specifically	Unit 1_4	6	adv.具体地	1
-4	bear	Unit 1_4	6	n.具有	1
-4	timid	Unit 1_4	6	adj.胆小的	1
-4	frankness	Unit 1_4	6	n.坦率	1
-4	capability	Unit 1_4	6	n.能力	1
-4	extreme	Unit 1_4	6	adj.极端	1
-4	laziness	Unit 1_4	6	n.懒惰	1
-5	objective	Unit 1_5	6	adj.目标	1
-5	instructor	Unit 1_5	6	n.教师	1
-5	regarding	Unit 1_5	6	prep.关于	1
-5	guidance	Unit 1_5	6	n.指导	1
-5	rebel	Unit 1_5	6	n.造反	1
-5	political	Unit 1_5	6	adj.政治的	1
-5	idealistic	Unit 1_5	6	adj.理想主义的	0
-5	conventional	Unit 1_5	6	adj.守旧的	0
-5	boastful	Unit 1_5	6	adj.夸耀的	1
-5	plastic	Unit 1_5	6	adj.有塑性的	1
-6	educator	Unit 1_6	6	n.教育者	1
-6	kill time	Unit 1_6	6	消磨时光	1
-6	for fear that	Unit 1_6	6	生怕	1
-6	pocket money	Unit 1_6	6	零用钱	1
-6	bear in mind	Unit 1_6	6	记住	1
-6	to some degree	Unit 1_6	6	在某种程度上	1
-6	a good amount of	Unit 1_6	6	许多	1
-6	plastic age	Unit 1_6	6	可塑性时期	1
-6	fall on	Unit 1_6	6	落在...身上	1
-7	paradox	Unit 2_1	5	n.自相矛盾的人或物	0
-7	golden	Unit 2_1	5	adj.黄金的	1
-7	embrace	Unit 2_1	5	n.接受	0
-7	protective	Unit 2_1	5	adj.保护的	1
-7	bound	Unit 2_1	5	n.一定...	1
-7	weave	Unit 2_1	5	v.构成；编织	1
-7	timeless	Unit 2_1	5	adj.永恒的	1
-7	dim	Unit 2_1	5	adj.使模糊	1
-7	dust	Unit 2_1	5	n.尘土	1
-7	ash	Unit 2_1	5	n.灰	1
-8	wisdom	Unit 2_2	5	n.智慧	1
-8	fairness	Unit 2_2	5	n.正直	1
-8	imperfection	Unit 2_2	5	n.缺点	0
-8	glorious	Unit 2_2	5	adj.灿烂的	1
-8	let go of	Unit 2_2	5	放松	1
-8	be bound to	Unit 2_2	5	一定会...	1
-8	live on	Unit 2_2	5	继续活着	1
-8	teenage	Unit 2_2	5	adj.青少年的	1
-8	depression	Unit 2_2	5	n.沮丧	1
-8	cope	Unit 2_2	5	vi.应付	1
-9	anxiety	Unit 2_3	5	n.忧虑	1
-9	emotional	Unit 2_3	5	adj.感情的	1
-9	fashionable	Unit 2_3	5	adj.流行的	1
-9	lung	Unit 2_3	5	n.肺	1
-9	treatment	Unit 2_3	5	n.治疗	1
-9	cigarette	Unit 2_3	5	n.香烟	1
-9	moreover	Unit 2_3	5	adv.再者，而且	1
-9	haste	Unit 2_3	5	n.急速	1
-9	object	Unit 2_3	5	n.不赞成	1
-9	criticism	Unit 2_3	5	n.批评	1
-10	condemn	Unit 2_4	5	vt.谴责	1
-10	hatred	Unit 2_4	5	n.痛恨	1
-10	ridicule	Unit 2_4	5	n.嘲笑	0
-10	tolerance	Unit 2_4	5	n.容忍	1
-10	patient	Unit 2_4	5	n.有耐心的	1
-10	just	Unit 2_4	5	adj.公正的	1
-10	approval	Unit 2_4	5	n.赞成	1
-10	service	Unit 2_4	5	n.服务	1
-10	promptly	Unit 2_4	5	adv.迅速地	1
-10	guilt	Unit 2_4	5	n.内疚	1
-10	apology	Unit 2_4	5	n.道歉	1
-11	painful	Unit 2_5	5	adj.痛的	1
-11	dusty	Unit 2_5	5	adj.布满灰尘的	1
-11	come down with	Unit 2_5	5	染上...病	1
-11	heart attack	Unit 2_5	5	心脏病	1
-11	on condition that	Unit 2_5	5	在...的条件下	1
-11	drop off	Unit 2_5	5	留下	1
-11	lose track of	Unit 2_5	5	失去联系	1
-11	show up	Unit 2_5	5	露面	1
-11	a rush of	Unit 2_5	5	一阵	1
-11	confess to	Unit 2_5	5	供认	1
-11	let down	Unit 2_5	5	使失望	1
-12	Mars	Unit 3_1	5	n.火星	0
-12	mariner	Unit 3_1	5	n.水手	0
-12	transmit	Unit 3_1	5	vt.传送	1
-12	close-up	Unit 3_1	5	n.特写镜头	0
-12	exploration	Unit 3_1	5	n.探测	1
-12	volcano	Unit 3_1	5	n.火山	1
-12	spaceship	Unit 3_1	5	n.宇宙飞船	1
-12	mission	Unit 3_1	5	n.重要任务	1
-12	fundamental	Unit 3_1	5	adj.基本的	1
-12	intention	Unit 3_1	5	n.意向	1
-13	process	Unit 3_2	5	n.过程	1
-13	lander	Unit 3_2	5	n.登陆舱	1
-13	organism	Unit 3_2	5	n.有机体	0
-13	apparent	Unit 3_2	5	adj.显而易见的	1
-13	deceptive	Unit 3_2	5	adj.靠不住的	0
-13	astronomer	Unit 3_2	5	n.天文学家	1
-13	finances	Unit 3_2	5	n.资金	1
-13	colony	Unit 3_2	5	n.殖民地	0
-13	the solar system	Unit 3_2	5	太阳系	1
-13	so to speak	Unit 3_2	5	可以说	1
-14	the robot lander	Unit 3_3	5	机器人登陆器	1
-14	give off	Unit 3_3	5	释放出	1
-14	living organism	Unit 3_3	5	生物	1
-14	a distant cousin	Unit 3_3	5	远房堂兄弟姐妹	1
-14	the Mariner Four	Unit 3_3	5	“水于四号”太空船	0
-14	the Mariner Nine	Unit 3_3	5	“水手九号”太空船	0
-14	Mount Qomolangma	Unit 3_3	5	珠穆朗玛峰	0
-14	Viking Spaceship	Unit 3_3	5	“海盗号”宇宙飞船	0
-14	comet	Unit 3_3	5	n.彗星	0
-14	orbit	Unit 3_3	5	n.轨道	1
-15	fiction	Unit 3_4	5	n.小说	1
-15	disastrous	Unit 3_4	5	adj.灾难性的	1
-15	slim	Unit 3_4	5	adj.微小的	1
-15	evolve	Unit 3_4	5	vt.演化	1
-15	eggshell	Unit 3_4	5	n.蛋壳	1
-15	layer	Unit 3_4	5	n.层	1
-15	rotation	Unit 3_4	5	n.旋转	0
-15	eclipse	Unit 3_4	5	n.食	0
-15	astronomy	Unit 3_4	5	n.天文学	1
-15	obscure	Unit 3_4	5	adj.模糊的	1
-15	heavenly	Unit 3_4	5	adj.天上的	1
-16	lunar	Unit 3_5	5	adj.月的	0
-16	battle	Unit 3_5	5	n.战役	1
-16	phase	Unit 3_5	5	n.阶段	0
-16	shadow	Unit 3_5	5	n.遮蔽	1
-16	disc	Unit 3_5	5	n.太阳表面	1
-16	calculation	Unit 3_5	5	n.计算	1
-16	lunar eclipse	Unit 3_5	5	月食	1
-16	solar eclipse	Unit 3_5	5	日食	1
-16	a small portion of	Unit 3_5	5	一小部分	1
-16	Europa	Unit 3_5	5	n.木卫二	0
-16	Jupiter	Unit 3_5	5	n.木星	0
-17	rocket	Unit 4_1	6	n.火箭	1
-17	capsule	Unit 4_1	6	n.太空舱	0
-17	sum	Unit 4_1	6	n.和	1
-17	superpower	Unit 4_1	6	n.超级大国	1
-17	man	Unit 4_1	6	n.为...配备人员	1
-17	defeat	Unit 4_1	6	vt.战胜	1
-17	shuttle	Unit 4_1	6	n.航天飞机	0
-17	blast	Unit 4_1	6	n.爆炸	0
-17	emergence	Unit 4_1	6	n.出现	1
-17	achievement	Unit 4_1	6	n.成就	1
-18	boundlessness	Unit 4_2	6	n.无穷	1
-18	unbelievably	Unit 4_2	6	adv.令人难以置信地	1
-18	unmanned	Unit 4_2	6	adj.无人操作的	1
-18	discipline	Unit 4_2	6	n.学科	1
-18	electronics	Unit 4_2	6	n.电子学	1
-18	long-range carrier rocket	Unit 4_2	6	远程运载火箭	1
-18	atomic weapon	Unit 4_2	6	核武器	1
-18	space capsule	Unit 4_2	6	太空舱	1
-18	set out	Unit 4_2	6	出发	1
-18	get over	Unit 4_2	6	克服	1
-19	space shuttle	Unit 4_3	6	航天飞机	1
-19	blast off	Unit 4_3	6	点火起飞	1
-19	communications satellite	Unit 4_3	6	通信卫星	1
-19	the USSR	Unit 4_3	6	苏联	0
-19	spacesuit	Unit 4_3	6	n.太空服	0
-19	parachute	Unit 4_3	6	n.降落伞	0
-19	altitude	Unit 4_3	6	n.高度	0
-19	jazz	Unit 4_3	6	n.爵士乐	1
-19	bachelor	Unit 4_3	6	n.学士	0
-19	pilot	Unit 4_3	6	n.飞行员	1
-20	module	Unit 4_4	6	n.舱	0
-20	malfunction	Unit 4_4	6	n.故障	0
-20	fatal	Unit 4_4	6	adj.致命的	1
-20	spin	Unit 4_4	6	v.旋转	1
-20	splashdown	Unit 4_4	6	n.在海中溅落	1
-20	considerably	Unit 4_4	6	adv.相当	1
-20	grace	Unit 4_4	6	n.优美	1
-20	commander	Unit 4_4	6	n.司令官	1
-20	rocky	Unit 4_4	6	adj.布满岩石的	1
-20	privacy	Unit 4_4	6	n.隐私	1
-21	philosophic	Unit 4_5	6	adj.哲学的	1
-21	poetic	Unit 4_5	6	adj.诗歌的	1
-21	unwise	Unit 4_5	6	adj.愚笨的	1
-21	stamp	Unit 4_5	6	n.贴邮票	1
-21	investment	Unit 4_5	6	n.投资	1
-21	questionable	Unit 4_5	6	adj.可疑的	1
-21	the command module	Unit 4_5	6	指挥舱	1
-21	active duty	Unit 4_5	6	服现役	1
-21	jazz band	Unit 4_5	6	爵士乐队	1
-21	make ends meet	Unit 4_5	6	勉强维持生活	1
-22	bachelor's degree	Unit 4_6	6	学士学位	1
-22	beyond the reach of	Unit 4_6	6	超出...能力所及	1
-22	be through with	Unit 4_6	6	结束...	1
-22	die away	Unit 4_6	6	渐消	1
-22	keep a sharp eye on	Unit 4_6	6	密切注视	1
-22	Jiuquan Satellite Launch Centre	Unit 4_6	6	酒泉卫星发射中心	0
-22	Korea	Unit 4_6	6	n.韩国	0
-22	the Air Force	Unit 4_6	6	空军	0
-22	the Challenger disaster	Unit 4_6	6	“挑战者号”航天飞机灾难	0
-23	campus	Unit 5_1	4	n.大学校园	1
-23	adviser	Unit 5_1	4	n.顾问	1
-23	adjust	Unit 5_1	4	vt.调整	1
-23	participate	Unit 5_1	4	vi.参与	1
-23	staff	Unit 5_1	4	n.全体职员	1
-23	distraction	Unit 5_1	4	n.分心的事情	0
-23	newness	Unit 5_1	4	n.新奇	1
-23	memorization	Unit 5_1	4	n.记住	1
-23	elapse	Unit 5_1	4	vi.&n.流逝	0
-23	noted	Unit 5_1	4	adj.著名的	1
-23	inspirational	Unit 5_1	4	adj.令人鼓舞的	1
-24	unknown	Unit 5_2	4	adj.不为人知的	1
-24	broaden	Unit 5_2	4	v.放宽	1
-24	preparation	Unit 5_2	4	n.准备工作	1
-24	occupational	Unit 5_2	4	adj.职业的	1
-24	compel	Unit 5_2	4	v.强迫	1
-24	major	Unit 5_2	4	adj.专业	1
-24	get the most out of	Unit 5_2	4	最有效地使用	1
-24	cut off	Unit 5_2	4	切断	1
-24	specialist	Unit 5_2	4	n.专家	1
-24	refresh	Unit 5_2	4	vt.刷新	1
-24	enhance	Unit 5_2	4	vt.增加	1
-25	assess	Unit 5_3	4	vt.评价	1
-25	measurement	Unit 5_3	4	n.测量	1
-25	theoretical	Unit 5_3	4	adj.理沦的	1
-25	progressive	Unit 5_3	4	adj.循序渐进的	1
-25	ignorance	Unit 5_3	4	n.无知	1
-25	strive	Unit 5_3	4	v.努力	1
-25	awaken	Unit 5_3	4	v.激发	1
-25	load	Unit 5_3	4	n.装载物	1
-25	steadily	Unit 5_3	4	adv.稳定地	1
-25	billionaire	Unit 5_3	4	n.亿万富翁	1
-25	foster	Unit 5_3	4	adj.培养	1
-26	fulfill	Unit 5_4	4	vt.履行	1
-26	acquire	Unit 5_4	4	vt.获得	1
-26	distinguish	Unit 5_4	4	vt.辨别	1
-26	vice	Unit 5_4	4	n.恶行	1
-26	virtue	Unit 5_4	4	n.德行	1
-26	cooperatively	Unit 5_4	4	adv.合作地	1
-26	era	Unit 5_4	4	n.时代	1
-26	keep up to date	Unit 5_4	4	赶上时代	1
-26	the era of information	Unit 5_4	4	信息时代	1
-26	set one's goal for life	Unit 5_4	4	确定生活目标	1
-27	uncommon	Unit 6_1	4	adj.不寻常的	1
-27	forehead	Unit 6_1	4	n.前额	1
-27	bury	Unit 6_1	4	vt.掩埋	1
-27	mindless	Unit 6_1	4	adj.没头脑的	1
-27	dead-end	Unit 6_1	4	adj.工资低而且无出路的	1
-27	suck	Unit 6_1	4	v.吸	1
-27	covers	Unit 6_1	4	n.床单	1
-27	composed	Unit 6_1	4	adj.镇静的	0
-27	depressed	Unit 6_1	4	adj.沮丧的	1
-27	temporary	Unit 6_1	4	adj.临时的	1
-27	uniform	Unit 6_1	4	n.制服	1
-28	sew	Unit 6_2	4	vt.缝	1
-28	supply	Unit 6_2	4	vt.提供	1
-28	unhurried	Unit 6_2	4	adj.从容不迫的	1
-28	vend	Unit 6_2	4	v.卖	0
-28	spotless	Unit 6_2	4	adj.干净的	1
-28	gossip	Unit 6_2	4	n.闲聊	1
-28	devotion	Unit 6_2	4	n.挚爱	1
-28	bury oneself in	Unit 6_2	4	专心致力于...	1
-28	catch one's eye	Unit 6_2	4	引起某人注意	1
-28	vending machine	Unit 6_2	4	自动贩卖机	1
-28	show sb up	Unit 6_2	4	超过；使难堪	1
-29	set one's standard	Unit 6_3	4	提出...标准	1
-29	recommendation	Unit 6_3	4	n.推荐信	1
-29	applicant	Unit 6_3	4	n.申请人	1
-29	administrative	Unit 6_3	4	adj.管理的	1
-29	graduation	Unit 6_3	4	n.毕业	1
-29	uncertainty	Unit 6_3	4	n.不确知	1
-29	summarize	Unit 6_3	4	vt.概述	1
-29	dizzy	Unit 6_3	4	adj.迷惑的	1
-29	self-assessment	Unit 6_3	4	n.自我评价	1
-29	quiz	Unit 6_3	4	n.小测验	1
-29	programme	Unit 6_3	4	v.给计算机输入程序	1
-30	satisfying	Unit 6_4	4	adj.令人满意的	1
-30	narrow	Unit 6_4	4	adj.使变窄	0
-30	tick	Unit 6_4	4	vt.勾号	1
-30	environmental	Unit 6_4	4	adj.生态环境的	1
-30	protection	Unit 6_4	4	n.保护	1
-30	production	Unit 6_4	4	n.成果	1
-30	burn one's bridges	Unit 6_4	4	自断退路	1
-30	make no mistake	Unit 6_4	4	毫无疑问	1
-30	hang out	Unit 6_4	4	闲逛	1
-30	What makes you tick	Unit 6_4	4	做...的动机是什么	1
+1	refrigerator	Unit 1_1	11	n.冰箱	1
+1	grasp	Unit 1_1	11	n.抓住	1
+1	yell	Unit 1_1	11	vt.大叫	0
+2	towel	Unit 1_2	11	n.毛巾	1
+2	mop	Unit 1_2	11	n.拖把	1
+2	backyard	Unit 1_2	11	n.后院	1
+2	lip	Unit 1_2	11	n.口	1
+2	nourish	Unit 1_2	11	v.培养	1
+3	tragedy	Unit 1_3	11	n.悲剧	1
+3	sorrow	Unit 1_3	11	n.悲哀	1
+3	admirable	Unit 1_3	11	adj.令人敬佩的	1
+3	mob	Unit 1_3	11	n.一大群人	1
+3	a sea of	Unit 1_3	11	大量	1
+4	yell at	Unit 1_4	11	对...大叫	1
+4	a pool of	Unit 1_4	11	一汪	1
+4	sort of	Unit 1_4	11	有点	1
+4	put a price on	Unit 1_4	11	给...标价	1
+4	have faith in	Unit 1_4	11	坚信	1
+5	whip	Unit 1_5	11	n.鞭子	1
+5	pillow	Unit 1_5	11	n.枕头	1
+5	genius	Unit 1_5	11	n.天才	1
+5	schoolmaster	Unit 1_5	11	n.(英国，尤指私立学校)教师	0
+5	peer	Unit 1_5	11	vi.&n.相同年龄的人	1
+6	occasionally	Unit 1_6	11	adv.偶然地	1
+6	adolescence	Unit 1_6	11	n.青春期	0
+6	adolescent	Unit 1_6	11	adj.青少年	0
+6	specifically	Unit 1_6	11	adv.具体地	1
+6	bear	Unit 1_6	11	n.具有	1
+7	timid	Unit 1_7	11	adj.胆小的	1
+7	frankness	Unit 1_7	11	n.坦率	1
+7	capability	Unit 1_7	11	n.能力	1
+7	extreme	Unit 1_7	11	adj.极端	1
+7	laziness	Unit 1_7	11	n.懒惰	1
+8	objective	Unit 1_8	11	adj.目标	1
+8	instructor	Unit 1_8	11	n.教师	1
+8	regarding	Unit 1_8	11	prep.关于	1
+8	guidance	Unit 1_8	11	n.指导	1
+8	rebel	Unit 1_8	11	n.造反	1
+9	political	Unit 1_9	11	adj.政治的	1
+9	idealistic	Unit 1_9	11	adj.理想主义的	0
+9	conventional	Unit 1_9	11	adj.守旧的	0
+9	boastful	Unit 1_9	11	adj.夸耀的	1
+9	plastic	Unit 1_9	11	adj.有塑性的	1
+10	educator	Unit 1_10	11	n.教育者	1
+10	kill time	Unit 1_10	11	消磨时光	1
+10	for fear that	Unit 1_10	11	生怕	1
+10	pocket money	Unit 1_10	11	零用钱	1
+10	bear in mind	Unit 1_10	11	记住	1
+11	to some degree	Unit 1_11	11	在某种程度上	1
+11	a good amount of	Unit 1_11	11	许多	1
+11	plastic age	Unit 1_11	11	可塑性时期	1
+11	fall on	Unit 1_11	11	落在...身上	1
+12	paradox	Unit 2_1	10	n.自相矛盾的人或物	0
+12	golden	Unit 2_1	10	adj.黄金的	1
+12	embrace	Unit 2_1	10	n.接受	0
+12	protective	Unit 2_1	10	adj.保护的	1
+12	bound	Unit 2_1	10	n.一定...	1
+13	weave	Unit 2_2	10	v.构成；编织	1
+13	timeless	Unit 2_2	10	adj.永恒的	1
+13	dim	Unit 2_2	10	adj.使模糊	1
+13	dust	Unit 2_2	10	n.尘土	1
+13	ash	Unit 2_2	10	n.灰	1
+14	wisdom	Unit 2_3	10	n.智慧	1
+14	fairness	Unit 2_3	10	n.正直	1
+14	imperfection	Unit 2_3	10	n.缺点	0
+14	glorious	Unit 2_3	10	adj.灿烂的	1
+14	let go of	Unit 2_3	10	放松	1
+15	be bound to	Unit 2_4	10	一定会...	1
+15	live on	Unit 2_4	10	继续活着	1
+15	teenage	Unit 2_4	10	adj.青少年的	1
+15	depression	Unit 2_4	10	n.沮丧	1
+15	cope	Unit 2_4	10	vi.应付	1
+16	anxiety	Unit 2_5	10	n.忧虑	1
+16	emotional	Unit 2_5	10	adj.感情的	1
+16	fashionable	Unit 2_5	10	adj.流行的	1
+16	lung	Unit 2_5	10	n.肺	1
+16	treatment	Unit 2_5	10	n.治疗	1
+17	cigarette	Unit 2_6	10	n.香烟	1
+17	moreover	Unit 2_6	10	adv.再者，而且	1
+17	haste	Unit 2_6	10	n.急速	1
+17	object	Unit 2_6	10	n.不赞成	1
+17	criticism	Unit 2_6	10	n.批评	1
+18	condemn	Unit 2_7	10	vt.谴责	1
+18	hatred	Unit 2_7	10	n.痛恨	1
+18	ridicule	Unit 2_7	10	n.嘲笑	0
+18	tolerance	Unit 2_7	10	n.容忍	1
+18	patient	Unit 2_7	10	n.有耐心的	1
+19	just	Unit 2_8	10	adj.公正的	1
+19	approval	Unit 2_8	10	n.赞成	1
+19	service	Unit 2_8	10	n.服务	1
+19	promptly	Unit 2_8	10	adv.迅速地	1
+19	guilt	Unit 2_8	10	n.内疚	1
+20	apology	Unit 2_9	10	n.道歉	1
+20	painful	Unit 2_9	10	adj.痛的	1
+20	dusty	Unit 2_9	10	adj.布满灰尘的	1
+20	come down with	Unit 2_9	10	染上...病	1
+20	heart attack	Unit 2_9	10	心脏病	1
+20	on condition that	Unit 2_9	10	在...的条件下	1
+21	drop off	Unit 2_10	10	留下	1
+21	lose track of	Unit 2_10	10	失去联系	1
+21	show up	Unit 2_10	10	露面	1
+21	a rush of	Unit 2_10	10	一阵	1
+21	confess to	Unit 2_10	10	供认	1
+21	let down	Unit 2_10	10	使失望	1
+22	Mars	Unit 3_1	10	n.火星	0
+22	mariner	Unit 3_1	10	n.水手	0
+22	transmit	Unit 3_1	10	vt.传送	1
+22	close-up	Unit 3_1	10	n.特写镜头	0
+22	exploration	Unit 3_1	10	n.探测	1
+23	volcano	Unit 3_2	10	n.火山	1
+23	spaceship	Unit 3_2	10	n.宇宙飞船	1
+23	mission	Unit 3_2	10	n.重要任务	1
+23	fundamental	Unit 3_2	10	adj.基本的	1
+23	intention	Unit 3_2	10	n.意向	1
+24	process	Unit 3_3	10	n.过程	1
+24	lander	Unit 3_3	10	n.登陆舱	1
+24	organism	Unit 3_3	10	n.有机体	0
+24	apparent	Unit 3_3	10	adj.显而易见的	1
+24	deceptive	Unit 3_3	10	adj.靠不住的	0
+25	astronomer	Unit 3_4	10	n.天文学家	1
+25	finances	Unit 3_4	10	n.资金	1
+25	colony	Unit 3_4	10	n.殖民地	0
+25	the solar system	Unit 3_4	10	太阳系	1
+25	so to speak	Unit 3_4	10	可以说	1
+26	the robot lander	Unit 3_5	10	机器人登陆器	1
+26	give off	Unit 3_5	10	释放出	1
+26	living organism	Unit 3_5	10	生物	1
+26	a distant cousin	Unit 3_5	10	远房堂兄弟姐妹	1
+26	the Mariner Four	Unit 3_5	10	“水于四号”太空船	0
+27	the Mariner Nine	Unit 3_6	10	“水手九号”太空船	0
+27	Mount Qomolangma	Unit 3_6	10	珠穆朗玛峰	0
+27	Viking Spaceship	Unit 3_6	10	“海盗号”宇宙飞船	0
+27	comet	Unit 3_6	10	n.彗星	0
+27	orbit	Unit 3_6	10	n.轨道	1
+28	fiction	Unit 3_7	10	n.小说	1
+28	disastrous	Unit 3_7	10	adj.灾难性的	1
+28	slim	Unit 3_7	10	adj.微小的	1
+28	evolve	Unit 3_7	10	vt.演化	1
+28	eggshell	Unit 3_7	10	n.蛋壳	1
+29	layer	Unit 3_8	10	n.层	1
+29	rotation	Unit 3_8	10	n.旋转	0
+29	eclipse	Unit 3_8	10	n.食	0
+29	astronomy	Unit 3_8	10	n.天文学	1
+29	obscure	Unit 3_8	10	adj.模糊的	1
+30	heavenly	Unit 3_9	10	adj.天上的	1
+30	lunar	Unit 3_9	10	adj.月的	0
+30	battle	Unit 3_9	10	n.战役	1
+30	phase	Unit 3_9	10	n.阶段	0
+30	shadow	Unit 3_9	10	n.遮蔽	1
+30	disc	Unit 3_9	10	n.太阳表面	1
+31	calculation	Unit 3_10	10	n.计算	1
+31	lunar eclipse	Unit 3_10	10	月食	1
+31	solar eclipse	Unit 3_10	10	日食	1
+31	a small portion of	Unit 3_10	10	一小部分	1
+31	Europa	Unit 3_10	10	n.木卫二	0
+31	Jupiter	Unit 3_10	10	n.木星	0
+32	rocket	Unit 4_1	12	n.火箭	1
+32	capsule	Unit 4_1	12	n.太空舱	0
+32	sum	Unit 4_1	12	n.和	1
+32	superpower	Unit 4_1	12	n.超级大国	1
+32	man	Unit 4_1	12	n.为...配备人员	1
+33	defeat	Unit 4_2	12	vt.战胜	1
+33	shuttle	Unit 4_2	12	n.航天飞机	0
+33	blast	Unit 4_2	12	n.爆炸	0
+33	emergence	Unit 4_2	12	n.出现	1
+33	achievement	Unit 4_2	12	n.成就	1
+34	boundlessness	Unit 4_3	12	n.无穷	1
+34	unbelievably	Unit 4_3	12	adv.令人难以置信地	1
+34	unmanned	Unit 4_3	12	adj.无人操作的	1
+34	discipline	Unit 4_3	12	n.学科	1
+34	electronics	Unit 4_3	12	n.电子学	1
+35	long-range carrier rocket	Unit 4_4	12	远程运载火箭	1
+35	atomic weapon	Unit 4_4	12	核武器	1
+35	space capsule	Unit 4_4	12	太空舱	1
+35	set out	Unit 4_4	12	出发	1
+35	get over	Unit 4_4	12	克服	1
+36	space shuttle	Unit 4_5	12	航天飞机	1
+36	blast off	Unit 4_5	12	点火起飞	1
+36	communications satellite	Unit 4_5	12	通信卫星	1
+36	the USSR	Unit 4_5	12	苏联	0
+36	spacesuit	Unit 4_5	12	n.太空服	0
+37	parachute	Unit 4_6	12	n.降落伞	0
+37	altitude	Unit 4_6	12	n.高度	0
+37	jazz	Unit 4_6	12	n.爵士乐	1
+37	bachelor	Unit 4_6	12	n.学士	0
+37	pilot	Unit 4_6	12	n.飞行员	1
+38	module	Unit 4_7	12	n.舱	0
+38	malfunction	Unit 4_7	12	n.故障	0
+38	fatal	Unit 4_7	12	adj.致命的	1
+38	spin	Unit 4_7	12	v.旋转	1
+38	splashdown	Unit 4_7	12	n.在海中溅落	1
+39	considerably	Unit 4_8	12	adv.相当	1
+39	grace	Unit 4_8	12	n.优美	1
+39	commander	Unit 4_8	12	n.司令官	1
+39	rocky	Unit 4_8	12	adj.布满岩石的	1
+39	privacy	Unit 4_8	12	n.隐私	1
+40	philosophic	Unit 4_9	12	adj.哲学的	1
+40	poetic	Unit 4_9	12	adj.诗歌的	1
+40	unwise	Unit 4_9	12	adj.愚笨的	1
+40	stamp	Unit 4_9	12	n.贴邮票	1
+40	investment	Unit 4_9	12	n.投资	1
+41	questionable	Unit 4_10	12	adj.可疑的	1
+41	the command module	Unit 4_10	12	指挥舱	1
+41	active duty	Unit 4_10	12	服现役	1
+41	jazz band	Unit 4_10	12	爵士乐队	1
+41	make ends meet	Unit 4_10	12	勉强维持生活	1
+42	bachelor's degree	Unit 4_11	12	学士学位	1
+42	beyond the reach of	Unit 4_11	12	超出...能力所及	1
+42	be through with	Unit 4_11	12	结束...	1
+42	die away	Unit 4_11	12	渐消	1
+42	keep a sharp eye on	Unit 4_11	12	密切注视	1
+43	Jiuquan Satellite Launch Centre	Unit 4_12	12	酒泉卫星发射中心	0
+43	Korea	Unit 4_12	12	n.韩国	0
+43	the Air Force	Unit 4_12	12	空军	0
+43	the Challenger disaster	Unit 4_12	12	“挑战者号”航天飞机灾难	0
+44	campus	Unit 5_1	9	n.大学校园	1
+44	adviser	Unit 5_1	9	n.顾问	1
+44	adjust	Unit 5_1	9	vt.调整	1
+44	participate	Unit 5_1	9	vi.参与	1
+44	staff	Unit 5_1	9	n.全体职员	1
+45	distraction	Unit 5_2	9	n.分心的事情	0
+45	newness	Unit 5_2	9	n.新奇	1
+45	memorization	Unit 5_2	9	n.记住	1
+45	elapse	Unit 5_2	9	vi.&n.流逝	0
+45	noted	Unit 5_2	9	adj.著名的	1
+46	inspirational	Unit 5_3	9	adj.令人鼓舞的	1
+46	unknown	Unit 5_3	9	adj.不为人知的	1
+46	broaden	Unit 5_3	9	v.放宽	1
+46	preparation	Unit 5_3	9	n.准备工作	1
+46	occupational	Unit 5_3	9	adj.职业的	1
+47	compel	Unit 5_4	9	v.强迫	1
+47	major	Unit 5_4	9	adj.专业	1
+47	get the most out of	Unit 5_4	9	最有效地使用	1
+47	cut off	Unit 5_4	9	切断	1
+47	specialist	Unit 5_4	9	n.专家	1
+48	refresh	Unit 5_5	9	vt.刷新	1
+48	enhance	Unit 5_5	9	vt.增加	1
+48	assess	Unit 5_5	9	vt.评价	1
+48	measurement	Unit 5_5	9	n.测量	1
+48	theoretical	Unit 5_5	9	adj.理沦的	1
+49	progressive	Unit 5_6	9	adj.循序渐进的	1
+49	ignorance	Unit 5_6	9	n.无知	1
+49	strive	Unit 5_6	9	v.努力	1
+49	awaken	Unit 5_6	9	v.激发	1
+49	load	Unit 5_6	9	n.装载物	1
+50	steadily	Unit 5_7	9	adv.稳定地	1
+50	billionaire	Unit 5_7	9	n.亿万富翁	1
+50	foster	Unit 5_7	9	adj.培养	1
+50	fulfill	Unit 5_7	9	vt.履行	1
+50	acquire	Unit 5_7	9	vt.获得	1
+51	distinguish	Unit 5_8	9	vt.辨别	1
+51	vice	Unit 5_8	9	n.恶行	1
+51	virtue	Unit 5_8	9	n.德行	1
+51	cooperatively	Unit 5_8	9	adv.合作地	1
+52	era	Unit 5_9	9	n.时代	1
+52	keep up to date	Unit 5_9	9	赶上时代	1
+52	the era of information	Unit 5_9	9	信息时代	1
+52	set one's goal for life	Unit 5_9	9	确定生活目标	1
+53	uncommon	Unit 6_1	9	adj.不寻常的	1
+53	forehead	Unit 6_1	9	n.前额	1
+53	bury	Unit 6_1	9	vt.掩埋	1
+53	mindless	Unit 6_1	9	adj.没头脑的	1
+53	dead-end	Unit 6_1	9	adj.工资低而且无出路的	1
+54	suck	Unit 6_2	9	v.吸	1
+54	covers	Unit 6_2	9	n.床单	1
+54	composed	Unit 6_2	9	adj.镇静的	0
+54	depressed	Unit 6_2	9	adj.沮丧的	1
+54	temporary	Unit 6_2	9	adj.临时的	1
+55	uniform	Unit 6_3	9	n.制服	1
+55	sew	Unit 6_3	9	vt.缝	1
+55	supply	Unit 6_3	9	vt.提供	1
+55	unhurried	Unit 6_3	9	adj.从容不迫的	1
+55	vend	Unit 6_3	9	v.卖	0
+56	spotless	Unit 6_4	9	adj.干净的	1
+56	gossip	Unit 6_4	9	n.闲聊	1
+56	devotion	Unit 6_4	9	n.挚爱	1
+56	bury oneself in	Unit 6_4	9	专心致力于...	1
+56	catch one's eye	Unit 6_4	9	引起某人注意	1
+57	vending machine	Unit 6_5	9	自动贩卖机	1
+57	show sb up	Unit 6_5	9	超过；使难堪	1
+57	set one's standard	Unit 6_5	9	提出...标准	1
+57	recommendation	Unit 6_5	9	n.推荐信	1
+57	applicant	Unit 6_5	9	n.申请人	1
+58	administrative	Unit 6_6	9	adj.管理的	1
+58	graduation	Unit 6_6	9	n.毕业	1
+58	uncertainty	Unit 6_6	9	n.不确知	1
+58	summarize	Unit 6_6	9	vt.概述	1
+58	dizzy	Unit 6_6	9	adj.迷惑的	1
+59	self-assessment	Unit 6_7	9	n.自我评价	1
+59	quiz	Unit 6_7	9	n.小测验	1
+59	programme	Unit 6_7	9	v.给计算机输入程序	1
+59	satisfying	Unit 6_7	9	adj.令人满意的	1
+59	narrow	Unit 6_7	9	adj.使变窄	0
+60	tick	Unit 6_8	9	vt.勾号	1
+60	environmental	Unit 6_8	9	adj.生态环境的	1
+60	protection	Unit 6_8	9	n.保护	1
+60	production	Unit 6_8	9	n.成果	1
+61	burn one's bridges	Unit 6_9	9	自断退路	1
+61	make no mistake	Unit 6_9	9	毫无疑问	1
+61	hang out	Unit 6_9	9	闲逛	1
+61	What makes you tick	Unit 6_9	9	做...的动机是什么	1

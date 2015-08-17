@@ -1,229 +1,229 @@
-1	encyclopaedia	unit 1_1	4	n.百科全书	0
-1	human	unit 1_1	4	adj.人的	1
-1	dinosaur	unit 1_1	4	n.恐龙	1
-2	Italian	unit 1_2	4	n.意大利人	0
-2	inventor	unit 1_2	4	n.发明家	1
-2	musician	unit 1_2	4	n.音乐家	1
-2	scientist	unit 1_2	4	n.科学家	1
-2	born	unit 1_2	4	vt.出生	1
-2	countryside	unit 1_2	4	n.乡村	1
-2	intelligence	unit 1_2	4	n.才智	1
-2	artistic	unit 1_2	4	adj.有艺术天赋的	0
-3	ability	unit 1_3	4	n.才能	1
-3	perhaps	unit 1_3	4	adv.可能	1
-3	invention	unit 1_3	4	n.发明	1
-3	notebook	unit 1_3	4	n.笔记本	1
-3	include	unit 1_3	4	v.包含	1
-3	even	unit 1_3	4	adv.甚至	1
-3	however	unit 1_3	4	adv.然而	1
-3	suddenly	unit 1_3	4	adv.突然	1
-4	nobody	unit 1_4	4	pron.没有人	1
-4	fossil	unit 1_4	4	adj.化石	0
-4	win	unit 1_4	4	vi.获胜	1
-4	dollar	unit 1_4	4	n.美元	1
-4	in the countryside	unit 1_4	4	在乡村	1
-4	human being	unit 1_4	4	n.人	1
-4	die out	unit 1_4	4	灭绝	1
-4	find out	unit 1_4	4	弄清	1
-4	go for a walk	unit 1_4	4	去散步	1
-5	number	unit 2_1	3	n.数字	1
-5	instruction	unit 2_1	3	n.指示	1
-5	check	unit 2_1	3	vt.检查	1
-5	gram	unit 2_1	3	n.克	1
-5	son	unit 2_1	3	n.儿子	1
-5	chess	unit 2_1	3	n.国际象棋	1
-5	India	unit 2_1	3	n.印度	1
-5	wise	unit 2_1	3	adj.充满智慧的	1
-5	challenge	unit 2_1	3	v.向...挑战	1
-6	promise	unit 2_2	3	v.许诺	1
-6	prize	unit 2_2	3	n.奖赏	1
-6	grain	unit 2_2	3	n.谷粒	1
-6	chessboard	unit 2_2	3	n.棋盘	1
-6	double	unit 2_2	3	v.使加倍	1
-6	amount	unit 2_2	3	n.数量	1
-6	rest	unit 2_2	3	n.剩余部分	1
-6	gold	unit 2_2	3	adj.金子	1
-6	instead	unit 2_2	3	adv.代替	1
-7	realize	unit 2_3	3	vt.意识到	1
-7	copy	unit 2_3	3	vt.抄写	1
-7	correctly	unit 2_3	3	adv.正确地	1
-7	traffic	unit 2_3	3	n.交通	1
-7	accident	unit 2_3	3	n.事故	1
-7	a long time ago	unit 2_3	3	很早以前	1
-7	challenge ... to ...	unit 2_3	3	向...挑战	1
-7	and so on	unit 2_3	3	...等等	1
-7	copy down	unit 2_3	3	抄写	1
-8	order	unit 3_1	3	v.订购	1
-8	compare	unit 3_1	3	vt.比较	1
-8	monitor	unit 3_1	3	n.显示器	1
-8	speaker	unit 3_1	3	n.扬声器	1
-8	main unit	unit 3_1	3	主机	1
-8	keyboard	unit 3_1	3	n.键盘	1
-8	mouse	unit 3_1	3	n.鼠标	1
-8	type	unit 3_1	3	v.打字	1
-8	brain	unit 3_1	3	n.脑	1
-8	control	unit 3_1	3	n.&v.控制	1
-9	expensive	unit 3_2	3	adj.昂贵的	1
-9	tiny	unit 3_2	3	adj.极小的	1
-9	depend	unit 3_2	3	vi.依靠	1
-9	calculate	unit 3_2	3	vt.计算	0
-9	speed	unit 3_2	3	n.速度	1
-9	operate	unit 3_2	3	vi.操作	1
-9	railway	unit 3_2	3	n.铁路系统	1
-9	company	unit 3_2	3	n.公司	1
-9	price	unit 3_2	3	n.价格	1
-9	total	unit 3_2	3	n.&v.总额	1
-10	inch	unit 3_3	3	n.英寸	1
-10	sell	unit 3_3	3	vi.出售	1
-10	popular	unit 3_3	3	adj.受欢迎的	1
-10	work	unit 3_3	3	n.&v.从事...工作	1
-10	be unaware of	unit 3_3	3	没意识到	1
-10	depend on	unit 3_3	3	依靠	1
-10	in addition	unit 3_3	3	除...以外	1
-10	grand total	unit 3_3	3	总计	1
-10	look forward to	unit 3_3	3	盼望	1
-11	advertisement	unit 4_1	3	n.广告	1
-11	funny	unit 4_1	3	adj.好笑的	1
-11	create	unit 4_1	3	vt.创造	1
-11	telephone	unit 4_1	3	n.电话机	1
-11	wheel	unit 4_1	3	n.车轮	1
-11	comfortable	unit 4_1	3	adj.舒适的	1
-11	carriage	unit 4_1	3	n.四轮马车	1
-11	century	unit 4_1	3	n.世纪	1
-11	passenger	unit 4_1	3	n.乘客	1
-11	invent	unit 4_1	3	v.发明	1
-12	practical	unit 4_2	3	adj.实用的	1
-12	since	unit 4_2	3	conj.&prep.从...以后	1
-12	distance	unit 4_2	3	n.距离	1
-12	mobile phone	unit 4_2	3	移动电话	1
-12	anytime	unit 4_2	3	adv.在任何时候	1
-12	develop	unit 4_2	3	vt.开发	1
-12	lamp	unit 4_2	3	n.灯	1
-12	candle	unit 4_2	3	n.蜡烛	1
-12	daytime	unit 4_2	3	n.白天	1
-12	dust	unit 4_2	3	n.灰尘	1
-13	special	unit 4_3	3	adj.特殊的	1
-13	wing	unit 4_3	3	n.翅膀	1
-13	introduction	unit 4_3	3	n.引言	1
-13	instead	unit 4_3	3	adv.代替	1
-13	petrol	unit 4_3	3	n.汽油	1
-13	since	unit 4_3	3	conj.自那以来	1
-13	keep in touch with	unit 4_3	3	与...保持联系	1
-13	in the daytime	unit 4_3	3	在白天	1
-13	keep ... off	unit 4_3	3	使...不接近	1
-13	at the same time	unit 4_3	3	同时	1
-14	educational	unit 5_1	2	adj.有关教育的	1
-14	exchange	unit 5_1	2	vt.&n.交流	1
-14	culture	unit 5_1	2	n.文化	1
-14	host	unit 5_1	2	n.主人	1
-14	local	unit 5_1	2	adj.当地的	1
-14	British	unit 5_1	2	adj.英国的	1
-14	glad	unit 5_1	2	adj.高兴的	1
-14	guest	unit 5_1	2	n.客人	1
-14	chopstick	unit 5_1	2	n.筷子	1
-14	weekday	unit 5_1	2	n.工作日	1
-14	tour	unit 5_1	2	vt.在...旅游	1
-14	fantastic	unit 5_1	2	adj.极好的	1
-15	experience	unit 5_2	2	n.经历	1
-15	t'ai chi	unit 5_2	2	n.太极	0
-15	already	unit 5_2	2	adv.已经	1
-15	introduce	unit 5_2	2	vt.使...初次了解...	1
-15	success	unit 5_2	2	n.成功	1
-15	yet	unit 5_2	2	adv.尚未	1
-15	respect	unit 5_2	2	vt.&n.尊重	1
-15	at first	unit 5_2	2	起初	1
-15	so far	unit 5_2	2	到目前为止	1
-15	a bit of	unit 5_2	2	小量	1
-15	introduce ... to ...	unit 5_2	2	使...初次了解...	1
-15	come over to ...	unit 5_2	2	从...到...	1
-16	ancient	unit 6_1	4	adj.古代的	1
-16	Trojan	unit 6_1	4	adj&n.特洛伊的	0
-16	war	unit 6_1	4	n.战争	1
-16	understand	unit 6_1	4	vt.理解	1
-16	difference	unit 6_1	4	n.差别	1
-16	pyramid	unit 6_1	4	n.金字塔	0
-16	captain	unit 6_1	4	n.首领	1
-16	Greek	unit 6_1	4	n.希腊人	0
-16	capture	unit 6_1	4	v.用武力夺取	0
-17	soldier	unit 6_2	4	n.士兵	1
-17	huge	unit 6_2	4	adj.巨大的	1
-17	pull	unit 6_2	4	v.拖	1
-17	main	unit 6_2	4	adj.主要的	1
-17	celebrate	unit 6_2	4	vt.庆祝	1
-17	stupid	unit 6_2	4	adj.笨的	1
-17	midnight	unit 6_2	4	n.午夜	1
-17	empty	unit 6_2	4	adj.空的	1
-17	except	unit 6_2	4	vt.除...之外	1
-18	secret	unit 6_3	4	adj.秘密的	1
-18	side	unit 6_3	4	n.侧面	1
-18	quietly	unit 6_3	4	adv.安静地	1
-18	army	unit 6_3	4	n.陆军部队	1
-18	enter	unit 6_3	4	vi.进入	1
-18	succeed	unit 6_3	4	vt.达到目的	1
-18	trick	unit 6_3	4	n.计谋	1
-18	prince	unit 6_3	4	n.王子	1
-18	queen	unit 6_3	4	n.王后	1
-19	steal	unit 6_4	4	vt.偷	1
-19	punish	unit 6_4	4	v.处罚	1
-19	scene	unit 6_4	4	n.场	1
-19	sir	unit 6_4	4	n.先生	1
-19	act out	unit 6_4	4	将...表演出来	1
-19	make jokes about	unit 6_4	4	拿...开玩笑	1
-19	except for	unit 6_4	4	除...之外	1
-19	be full of	unit 6_4	4	有大量的	1
-19	in the end	unit 6_4	4	最后	1
-19	come on	unit 6_4	4	加油	1
-20	memory	unit 7_1	3	n.记忆	1
-20	corner	unit 7_1	3	n.角	1
-20	lose	unit 7_1	3	vt.失去	1
-20	improve	unit 7_1	3	vt.改进	1
-20	mention	unit 7_1	3	vt.提到	1
-20	method	unit 7_1	3	n.方法	1
-20	spelling	unit 7_1	3	n.拼写	1
-20	mind	unit 7_1	3	n.头脑	1
-21	silly	unit 7_2	3	adj.可笑的	1
-21	mile	unit 7_2	3	n.英里	1
-21	letter	unit 7_2	3	n.字母	1
-21	worth	unit 7_2	3	adj.值得	1
-21	spell	unit 7_2	3	v.拼写	1
-21	unless	unit 7_2	3	conj.除非	1
-21	trouble	unit 7_2	3	n.困难	1
-21	list	unit 7_2	3	n.清单	1
-22	step	unit 7_3	3	n.步骤	1
-22	cycle	unit 7_3	3	n.循环	1
-22	similar	unit 7_3	3	adj.类似的	1
-22	note	unit 7_3	3	n.纸币	1
-22	wallet	unit 7_3	3	n.钱包	1
-22	basket	unit 7_3	3	n.篮	1
-22	manager	unit 7_3	3	n.经理	1
-22	take out	unit 7_3	3	提取	1
-22	pour out	unit 7_3	3	涌出	1
-23	speech	unit 8_1	3	n.演说	1
-23	notice	unit 8_1	3	n.通告	1
-23	competition	unit 8_1	3	n.比赛	1
-23	treasure	unit 8_1	3	n.珍宝	1
-23	text	unit 8_1	3	n.文本	1
-23	chance	unit 8_1	3	n.机会	1
-23	confidently	unit 8_1	3	adv.自信地	1
-23	topic	unit 8_1	3	n.话题	1
-23	winner	unit 8_1	3	n.优胜者	1
-23	advise	unit 8_1	3	vt.建议	1
-24	several	unit 8_2	3	pron.几个	1
-24	opinion	unit 8_2	3	n.意见	1
-24	whole	unit 8_2	3	adj.整个的	1
-24	suggestion	unit 8_2	3	n.建议	1
-24	communicate	unit 8_2	3	vi.沟通	1
-24	whenever	unit 8_2	3	adv.在任何...的时候	1
-24	rich	unit 8_2	3	adj.富有的	1
-24	poor	unit 8_2	3	adj.贫穷的	1
-24	hide	unit 8_2	3	vt.藏	1
-24	attack	unit 8_2	3	vt.袭击	1
-25	shy	unit 8_3	3	adj.羞怯的	1
-25	else	unit 8_3	3	adj.其他的	1
-25	choose	unit 8_3	3	vt.选择	1
-25	treasure hunt	unit 8_3	3	寻宝游戏	1
-25	in public	unit 8_3	3	公开地	1
-25	put on	unit 8_3	3	上演	1
-25	in my opinion	unit 8_3	3	依我看	1
-25	above all	unit 8_3	3	最重要的是	1
-25	look out	unit 8_3	3	小心	1
+1	encyclopaedia	unit 1_1	6	n.百科全书	0
+1	human	unit 1_1	6	adj.人的	1
+1	dinosaur	unit 1_1	6	n.恐龙	1
+2	Italian	unit 1_2	6	n.意大利人	0
+2	inventor	unit 1_2	6	n.发明家	1
+2	musician	unit 1_2	6	n.音乐家	1
+2	scientist	unit 1_2	6	n.科学家	1
+2	born	unit 1_2	6	vt.出生	1
+3	countryside	unit 1_3	6	n.乡村	1
+3	intelligence	unit 1_3	6	n.才智	1
+3	artistic	unit 1_3	6	adj.有艺术天赋的	0
+3	ability	unit 1_3	6	n.才能	1
+3	perhaps	unit 1_3	6	adv.可能	1
+4	invention	unit 1_4	6	n.发明	1
+4	notebook	unit 1_4	6	n.笔记本	1
+4	include	unit 1_4	6	v.包含	1
+4	even	unit 1_4	6	adv.甚至	1
+4	however	unit 1_4	6	adv.然而	1
+5	suddenly	unit 1_5	6	adv.突然	1
+5	nobody	unit 1_5	6	pron.没有人	1
+5	fossil	unit 1_5	6	adj.化石	0
+5	win	unit 1_5	6	vi.获胜	1
+5	dollar	unit 1_5	6	n.美元	1
+6	in the countryside	unit 1_6	6	在乡村	1
+6	human being	unit 1_6	6	n.人	1
+6	die out	unit 1_6	6	灭绝	1
+6	find out	unit 1_6	6	弄清	1
+6	go for a walk	unit 1_6	6	去散步	1
+7	number	unit 2_1	5	n.数字	1
+7	instruction	unit 2_1	5	n.指示	1
+7	check	unit 2_1	5	vt.检查	1
+7	gram	unit 2_1	5	n.克	1
+7	son	unit 2_1	5	n.儿子	1
+8	chess	unit 2_2	5	n.国际象棋	1
+8	India	unit 2_2	5	n.印度	1
+8	wise	unit 2_2	5	adj.充满智慧的	1
+8	challenge	unit 2_2	5	v.向...挑战	1
+8	promise	unit 2_2	5	v.许诺	1
+9	prize	unit 2_3	5	n.奖赏	1
+9	grain	unit 2_3	5	n.谷粒	1
+9	chessboard	unit 2_3	5	n.棋盘	1
+9	double	unit 2_3	5	v.使加倍	1
+9	amount	unit 2_3	5	n.数量	1
+10	rest	unit 2_4	5	n.剩余部分	1
+10	gold	unit 2_4	5	adj.金子	1
+10	instead	unit 2_4	5	adv.代替	1
+10	realize	unit 2_4	5	vt.意识到	1
+10	copy	unit 2_4	5	vt.抄写	1
+10	correctly	unit 2_4	5	adv.正确地	1
+11	traffic	unit 2_5	5	n.交通	1
+11	accident	unit 2_5	5	n.事故	1
+11	a long time ago	unit 2_5	5	很早以前	1
+11	challenge ... to ...	unit 2_5	5	向...挑战	1
+11	and so on	unit 2_5	5	...等等	1
+11	copy down	unit 2_5	5	抄写	1
+12	order	unit 3_1	6	v.订购	1
+12	compare	unit 3_1	6	vt.比较	1
+12	monitor	unit 3_1	6	n.显示器	1
+12	speaker	unit 3_1	6	n.扬声器	1
+12	main unit	unit 3_1	6	主机	1
+13	keyboard	unit 3_2	6	n.键盘	1
+13	mouse	unit 3_2	6	n.鼠标	1
+13	type	unit 3_2	6	v.打字	1
+13	brain	unit 3_2	6	n.脑	1
+13	control	unit 3_2	6	n.&v.控制	1
+14	expensive	unit 3_3	6	adj.昂贵的	1
+14	tiny	unit 3_3	6	adj.极小的	1
+14	depend	unit 3_3	6	vi.依靠	1
+14	calculate	unit 3_3	6	vt.计算	0
+14	speed	unit 3_3	6	n.速度	1
+15	operate	unit 3_4	6	vi.操作	1
+15	railway	unit 3_4	6	n.铁路系统	1
+15	company	unit 3_4	6	n.公司	1
+15	price	unit 3_4	6	n.价格	1
+15	total	unit 3_4	6	n.&v.总额	1
+16	inch	unit 3_5	6	n.英寸	1
+16	sell	unit 3_5	6	vi.出售	1
+16	popular	unit 3_5	6	adj.受欢迎的	1
+16	work	unit 3_5	6	n.&v.从事...工作	1
+16	be unaware of	unit 3_5	6	没意识到	1
+17	depend on	unit 3_6	6	依靠	1
+17	in addition	unit 3_6	6	除...以外	1
+17	grand total	unit 3_6	6	总计	1
+17	look forward to	unit 3_6	6	盼望	1
+18	advertisement	unit 4_1	6	n.广告	1
+18	funny	unit 4_1	6	adj.好笑的	1
+18	create	unit 4_1	6	vt.创造	1
+18	telephone	unit 4_1	6	n.电话机	1
+18	wheel	unit 4_1	6	n.车轮	1
+19	comfortable	unit 4_2	6	adj.舒适的	1
+19	carriage	unit 4_2	6	n.四轮马车	1
+19	century	unit 4_2	6	n.世纪	1
+19	passenger	unit 4_2	6	n.乘客	1
+19	invent	unit 4_2	6	v.发明	1
+20	practical	unit 4_3	6	adj.实用的	1
+20	since	unit 4_3	6	conj.&prep.从...以后	1
+20	distance	unit 4_3	6	n.距离	1
+20	mobile phone	unit 4_3	6	移动电话	1
+20	anytime	unit 4_3	6	adv.在任何时候	1
+21	develop	unit 4_4	6	vt.开发	1
+21	lamp	unit 4_4	6	n.灯	1
+21	candle	unit 4_4	6	n.蜡烛	1
+21	daytime	unit 4_4	6	n.白天	1
+21	dust	unit 4_4	6	n.灰尘	1
+22	special	unit 4_5	6	adj.特殊的	1
+22	wing	unit 4_5	6	n.翅膀	1
+22	introduction	unit 4_5	6	n.引言	1
+22	instead	unit 4_5	6	adv.代替	1
+22	petrol	unit 4_5	6	n.汽油	1
+23	since	unit 4_6	6	conj.自那以来	1
+23	keep in touch with	unit 4_6	6	与...保持联系	1
+23	in the daytime	unit 4_6	6	在白天	1
+23	keep ... off	unit 4_6	6	使...不接近	1
+23	at the same time	unit 4_6	6	同时	1
+24	educational	unit 5_1	5	adj.有关教育的	1
+24	exchange	unit 5_1	5	vt.&n.交流	1
+24	culture	unit 5_1	5	n.文化	1
+24	host	unit 5_1	5	n.主人	1
+24	local	unit 5_1	5	adj.当地的	1
+25	British	unit 5_2	5	adj.英国的	1
+25	glad	unit 5_2	5	adj.高兴的	1
+25	guest	unit 5_2	5	n.客人	1
+25	chopstick	unit 5_2	5	n.筷子	1
+25	weekday	unit 5_2	5	n.工作日	1
+26	tour	unit 5_3	5	vt.在...旅游	1
+26	fantastic	unit 5_3	5	adj.极好的	1
+26	experience	unit 5_3	5	n.经历	1
+26	t'ai chi	unit 5_3	5	n.太极	0
+26	already	unit 5_3	5	adv.已经	1
+27	introduce	unit 5_4	5	vt.使...初次了解...	1
+27	success	unit 5_4	5	n.成功	1
+27	yet	unit 5_4	5	adv.尚未	1
+27	respect	unit 5_4	5	vt.&n.尊重	1
+27	at first	unit 5_4	5	起初	1
+28	so far	unit 5_5	5	到目前为止	1
+28	a bit of	unit 5_5	5	小量	1
+28	introduce ... to ...	unit 5_5	5	使...初次了解...	1
+28	come over to ...	unit 5_5	5	从...到...	1
+29	ancient	unit 6_1	7	adj.古代的	1
+29	Trojan	unit 6_1	7	adj&n.特洛伊的	0
+29	war	unit 6_1	7	n.战争	1
+29	understand	unit 6_1	7	vt.理解	1
+29	difference	unit 6_1	7	n.差别	1
+30	pyramid	unit 6_2	7	n.金字塔	0
+30	captain	unit 6_2	7	n.首领	1
+30	Greek	unit 6_2	7	n.希腊人	0
+30	capture	unit 6_2	7	v.用武力夺取	0
+30	soldier	unit 6_2	7	n.士兵	1
+31	huge	unit 6_3	7	adj.巨大的	1
+31	pull	unit 6_3	7	v.拖	1
+31	main	unit 6_3	7	adj.主要的	1
+31	celebrate	unit 6_3	7	vt.庆祝	1
+31	stupid	unit 6_3	7	adj.笨的	1
+32	midnight	unit 6_4	7	n.午夜	1
+32	empty	unit 6_4	7	adj.空的	1
+32	except	unit 6_4	7	vt.除...之外	1
+32	secret	unit 6_4	7	adj.秘密的	1
+32	side	unit 6_4	7	n.侧面	1
+33	quietly	unit 6_5	7	adv.安静地	1
+33	army	unit 6_5	7	n.陆军部队	1
+33	enter	unit 6_5	7	vi.进入	1
+33	succeed	unit 6_5	7	vt.达到目的	1
+33	trick	unit 6_5	7	n.计谋	1
+34	prince	unit 6_6	7	n.王子	1
+34	queen	unit 6_6	7	n.王后	1
+34	steal	unit 6_6	7	vt.偷	1
+34	punish	unit 6_6	7	v.处罚	1
+34	scene	unit 6_6	7	n.场	1
+34	sir	unit 6_6	7	n.先生	1
+35	act out	unit 6_7	7	将...表演出来	1
+35	make jokes about	unit 6_7	7	拿...开玩笑	1
+35	except for	unit 6_7	7	除...之外	1
+35	be full of	unit 6_7	7	有大量的	1
+35	in the end	unit 6_7	7	最后	1
+35	come on	unit 6_7	7	加油	1
+36	memory	unit 7_1	5	n.记忆	1
+36	corner	unit 7_1	5	n.角	1
+36	lose	unit 7_1	5	vt.失去	1
+36	improve	unit 7_1	5	vt.改进	1
+36	mention	unit 7_1	5	vt.提到	1
+37	method	unit 7_2	5	n.方法	1
+37	spelling	unit 7_2	5	n.拼写	1
+37	mind	unit 7_2	5	n.头脑	1
+37	silly	unit 7_2	5	adj.可笑的	1
+37	mile	unit 7_2	5	n.英里	1
+38	letter	unit 7_3	5	n.字母	1
+38	worth	unit 7_3	5	adj.值得	1
+38	spell	unit 7_3	5	v.拼写	1
+38	unless	unit 7_3	5	conj.除非	1
+38	trouble	unit 7_3	5	n.困难	1
+39	list	unit 7_4	5	n.清单	1
+39	step	unit 7_4	5	n.步骤	1
+39	cycle	unit 7_4	5	n.循环	1
+39	similar	unit 7_4	5	adj.类似的	1
+39	note	unit 7_4	5	n.纸币	1
+40	wallet	unit 7_5	5	n.钱包	1
+40	basket	unit 7_5	5	n.篮	1
+40	manager	unit 7_5	5	n.经理	1
+40	take out	unit 7_5	5	提取	1
+40	pour out	unit 7_5	5	涌出	1
+41	speech	unit 8_1	6	n.演说	1
+41	notice	unit 8_1	6	n.通告	1
+41	competition	unit 8_1	6	n.比赛	1
+41	treasure	unit 8_1	6	n.珍宝	1
+41	text	unit 8_1	6	n.文本	1
+42	chance	unit 8_2	6	n.机会	1
+42	confidently	unit 8_2	6	adv.自信地	1
+42	topic	unit 8_2	6	n.话题	1
+42	winner	unit 8_2	6	n.优胜者	1
+42	advise	unit 8_2	6	vt.建议	1
+43	several	unit 8_3	6	pron.几个	1
+43	opinion	unit 8_3	6	n.意见	1
+43	whole	unit 8_3	6	adj.整个的	1
+43	suggestion	unit 8_3	6	n.建议	1
+43	communicate	unit 8_3	6	vi.沟通	1
+44	whenever	unit 8_4	6	adv.在任何...的时候	1
+44	rich	unit 8_4	6	adj.富有的	1
+44	poor	unit 8_4	6	adj.贫穷的	1
+44	hide	unit 8_4	6	vt.藏	1
+44	attack	unit 8_4	6	vt.袭击	1
+45	shy	unit 8_5	6	adj.羞怯的	1
+45	else	unit 8_5	6	adj.其他的	1
+45	choose	unit 8_5	6	vt.选择	1
+45	treasure hunt	unit 8_5	6	寻宝游戏	1
+45	in public	unit 8_5	6	公开地	1
+46	put on	unit 8_6	6	上演	1
+46	in my opinion	unit 8_6	6	依我看	1
+46	above all	unit 8_6	6	最重要的是	1
+46	look out	unit 8_6	6	小心	1

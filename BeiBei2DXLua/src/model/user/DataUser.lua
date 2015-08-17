@@ -137,6 +137,14 @@ function DataUser:ctor()
     --已选过的书
     self.bookList                          = ''
     self.finishTrying                      = false
+
+    self.shareThirdRecord                  = false 
+    -- 第三种分享面板 false 没有打开 true 已经打开过
+    self.shareDateRecord                   = 0
+    -- 第二种分享面板的时间戳
+    self.shareFirsRecord                   = false
+    -- 第一种面板弹出标志false 没有打开 true 已经打开过
+
 end
 
 function DataUser:addBookList(bookKey)

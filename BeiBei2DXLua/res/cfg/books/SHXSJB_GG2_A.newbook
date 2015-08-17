@@ -1,398 +1,398 @@
-1	solid	Unit 1_1	5	adj.固体的	1
-1	ethnic	Unit 1_1	5	adj.种族的	0
-1	immigrant	Unit 1_1	5	n.移民	1
-2	vast	Unit 1_2	5	adj.巨大的	1
-2	well-being	Unit 1_2	5	n.健康	0
-2	unprocessed	Unit 1_2	5	adj.未加工的	0
-2	preservative	Unit 1_2	5	n.防腐剂	0
-2	vegetarian	Unit 1_2	5	n.素食者	1
-2	burger	Unit 1_2	5	n.(非正式)汉堡包	0
-2	pizza	Unit 1_2	5	n.比萨饼	1
-2	rush	Unit 1_2	5	vi.冲进	1
-2	health food	Unit 1_2	5	健康食品	1
-2	be well-known for	Unit 1_2	5	因...而著名	1
-3	physical well-being	Unit 1_3	5	身体健康	1
-3	lunch break	Unit 1_3	5	午餐休息	1
-3	in a short time	Unit 1_3	5	很快	1
-3	even if	Unit 1_3	5	即使	1
-3	rush through	Unit 1_3	5	匆匆完成	1
-3	California	Unit 1_3	5	n.加利福尼亚州	0
-3	custom	Unit 1_3	5	n.风俗	1
-3	lemon	Unit 1_3	5	n.柠檬	1
-3	roast	Unit 1_3	5	n.烤制的	1
-3	steak	Unit 1_3	5	n.厚片的肉或鱼	1
-4	accidentally	Unit 1_4	5	adv.偶然地	1
-4	preservation	Unit 1_4	5	n.保护	1
-4	peel	Unit 1_4	5	n.剥...的皮	1
-4	stir	Unit 1_4	5	n.搅拌	1
-4	pasta	Unit 1_4	5	n.意大利面食	0
-4	flavourful	Unit 1_4	5	adj.美味的	1
-4	sauce	Unit 1_4	5	n.酱汁	1
-4	flavour	Unit 1_4	5	n.风味	1
-4	appetizer	Unit 1_4	5	n.开胃菜	0
-4	tortilla	Unit 1_4	5	n.玉米薄饼	0
-5	mold	Unit 1_5	5	n.模制	1
-5	fry	Unit 1_5	5	vt.油炸	1
-5	spice	Unit 1_5	5	n.香料	0
-5	curry	Unit 1_5	5	n.咖喱	0
-5	horizon	Unit 1_5	5	n.视野	1
-5	in season	Unit 1_5	5	旺季	1
-5	all the year round	Unit 1_5	5	一年到头	1
-5	for sure	Unit 1_5	5	确实	1
-5	peel ... off	Unit 1_5	5	剥...的皮	1
-5	expand one's horizons	Unit 1_5	5	开阔视野	1
-6	consume	Unit 2_1	6	vt.消耗	1
-6	originate	Unit 2_1	6	vt.起源于	1
-6	scientific	Unit 2_1	6	adj.科学的	1
-6	serving	Unit 2_1	6	n.一份	0
-6	claim	Unit 2_1	6	vt.声称	1
-6	effective	Unit 2_1	6	adj.有效的	1
-6	cancer	Unit 2_1	6	n.癌	1
-6	deadly	Unit 2_1	6	adj.致命的	1
-6	interfere	Unit 2_1	6	vi.妨碍	0
-7	absorption	Unit 2_2	6	n.吸收	1
-7	iron	Unit 2_2	6	n.铁	1
-7	teapot	Unit 2_2	6	n.茶壶	1
-7	jasmine	Unit 2_2	6	n.茉莉	0
-7	digestion	Unit 2_2	6	n.消化	1
-7	teabag	Unit 2_2	6	n.袋泡茶	1
-7	mug	Unit 2_2	6	n.大杯	0
-7	time-honoured	Unit 2_2	6	adj.因古老而受敬仰的	0
-7	socialize	Unit 2_2	6	v.交际	1
-8	teahouse	Unit 2_3	6	n.茶馆	1
-8	powdered	Unit 2_3	6	adj.粉末状的	1
-8	favour	Unit 2_3	6	n.喜爱	1
-8	green tea	Unit 2_3	6	绿茶	1
-8	black tea	Unit 2_3	6	红茶	1
-8	along with	Unit 2_3	6	同...一起	1
-8	be aware of	Unit 2_3	6	意识到	1
-8	interfere with	Unit 2_3	6	干扰	0
-8	loose tea	Unit 2_3	6	茶叶	1
-9	tea ceremony	Unit 2_4	6	茶道	1
-9	date back to	Unit 2_4	6	追溯到...	1
-9	set up	Unit 2_4	6	设立	1
-9	Christ	Unit 2_4	6	n.耶稣基督	0
-9	draught	Unit 2_4	6	n.从容器中汲出的(啤酒)	0
-9	pump	Unit 2_4	6	n.泵	1
-9	menu	Unit 2_4	6	n.菜单	1
-9	controversy	Unit 2_4	6	n.争论	0
-9	poison	Unit 2_4	6	n.毒药	1
-10	forbid	Unit 2_5	6	vt.禁止	1
-10	spring	Unit 2_5	6	n.跳	1
-10	dose	Unit 2_5	6	n.剂量	0
-10	poisonous	Unit 2_5	6	adj.有毒的	1
-10	moderately	Unit 2_5	6	adv.适量地	1
-10	caffeine	Unit 2_5	6	n.咖啡因	0
-10	stimulating	Unit 2_5	6	adj.刺激的	1
-10	vessel	Unit 2_5	6	n.血管	0
-10	pulse	Unit 2_5	6	n.脉搏	1
-10	stimulate	Unit 2_5	6	vt.刺激	1
-11	worthwhile	Unit 2_6	6	adj.值得的	0
-11	imagination	Unit 2_6	6	n.想象	1
-11	furthermore	Unit 2_6	6	adv.此外	1
-11	hook	Unit 2_6	6	n.&v.钩住	1
-11	draught beer	Unit 2_6	6	生啤	1
-11	be with somebody	Unit 2_6	6	赞成某人	1
-11	spring up	Unit 2_6	6	迅速或突然生长	1
-11	by no means	Unit 2_6	6	决不	1
-11	act on	Unit 2_6	6	对...起作用	1
-11	get hooked on	Unit 2_6	6	沉溺于	1
-12	determined	Unit 3_1	4	adj.决意的	1
-12	ring	Unit 3_1	4	n.拳击场	0
-12	experienced	Unit 3_1	4	adj.有经验的	1
-12	stubbornly	Unit 3_1	4	adv.顽固地	0
-12	frightening	Unit 3_1	4	adj.令人恐惧的	1
-12	clinch	Unit 3_1	4	vt.扭成一团	0
-12	trick	Unit 3_1	4	n.诡计	1
-12	round	Unit 3_1	4	n.回合	1
-12	bend	Unit 3_1	4	v.弯腰	1
-12	helplessly	Unit 3_1	4	adv.无助地	1
-12	mercy	Unit 3_1	4	n.仁慈	1
-13	jaw	Unit 3_2	4	n.下巴	1
-13	count	Unit 3_2	4	v.&n.计数	1
-13	referee	Unit 3_2	4	n.裁判	0
-13	unwillingly	Unit 3_2	4	adv.不情愿地	1
-13	glove	Unit 3_2	4	n.手套	1
-13	unattended	Unit 3_2	4	adj.无人管的	1
-13	at the cost of	Unit 3_2	4	以...为代价	1
-13	at the last instant	Unit 3_2	4	在最后一瞬间	1
-13	throw all caution to the winds	Unit 3_2	4	不顾一切	0
-13	by the dozen	Unit 3_2	4	大批	1
-13	at somebody's mercy	Unit 3_2	4	听任摆布	1
-14	catch somebody off his guard	Unit 3_3	4	攻其不备	0
-14	all-round	Unit 3_3	4	adj.全能的	0
-14	foul	Unit 3_3	4	adj.犯规	1
-14	sound	Unit 3_3	4	n.稳健的	0
-14	Brazilian	Unit 3_3	4	adj.巴西的	1
-14	kid	Unit 3_3	4	n.小孩	1
-14	coach	Unit 3_3	4	n.教练	1
-14	junior	Unit 3_3	4	adj.青少年的	1
-14	league	Unit 3_3	4	n.联合会	1
-14	tournament	Unit 3_3	4	n.锦标赛	1
-14	discipline	Unit 3_3	4	n.纪律	1
-15	final	Unit 3_4	4	adj.最后的	1
-15	rent	Unit 3_4	4	v.租	1
-15	score	Unit 3_4	4	n.得分	1
-15	fan	Unit 3_4	4	n.狂热爱好者	1
-15	storm	Unit 3_4	4	n.拥进	1
-15	in a row	Unit 3_4	4	连续	1
-15	lose heart	Unit 3_4	4	灰心	1
-15	odd jobs	Unit 3_4	4	零活	1
-15	apartment house	Unit 3_4	4	公寓大楼	1
-15	for good	Unit 3_4	4	永远	1
-15	Sweden	Unit 3_4	4	n.瑞典	0
-16	Olympic	Unit 4_1	5	adj.奥林匹克运动会的	1
-16	scale	Unit 4_1	5	n.规模	1
-16	Roman	Unit 4_1	5	adj.罗马的	1
-16	emperor	Unit 4_1	5	n.皇帝	1
-16	separate	Unit 4_1	5	v.不同的	1
-16	dive	Unit 4_1	5	n.跳水	1
-16	gymnastics	Unit 4_1	5	n.体操	1
-16	skate	Unit 4_1	5	v.溜冰	1
-16	ski	Unit 4_1	5	vt.滑雪	1
-17	gold	Unit 4_2	5	adj.黄金	1
-17	weight	Unit 4_2	5	n.重量	1
-17	determination	Unit 4_2	5	n.决心	1
-17	peak	Unit 4_2	5	n.顶峰	1
-17	amaze	Unit 4_2	5	vt.使大为惊讶	0
-17	touch	Unit 4_2	5	vt.触摸	1
-17	weakling	Unit 4_2	5	n.虚弱的人	0
-17	continuous	Unit 4_2	5	adj.连续的	1
-17	understandable	Unit 4_2	5	可理解的	1
-18	the Olympics	Unit 4_3	5	奥运会	1
-18	in terms of	Unit 4_3	5	就...来说	1
-18	Summer Games	Unit 4_3	5	夏季奥运会	1
-18	Winter Games	Unit 4_3	5	冬季奥运会	1
-18	bring ... to an end	Unit 4_3	5	结束	1
-18	track and field	Unit 4_3	5	田径	1
-18	stand for	Unit 4_3	5	代表	1
-18	will power	Unit 4_3	5	意志力	1
-18	weight lifting	Unit 4_3	5	举重	1
-19	at the turn of	Unit 4_4	5	在...之交时	1
-19	Olympia	Unit 4_4	5	n.奥林匹亚	0
-19	Greece	Unit 4_4	5	n.希腊	0
-19	hockey	Unit 4_4	5	n.曲棍球	0
-19	soccer	Unit 4_4	5	n.足球	1
-19	equal	Unit 4_4	5	adj.与...相等	1
-19	cricket	Unit 4_4	5	n.板球	1
-19	rugby	Unit 4_4	5	n.橄榄球	1
-19	criminal	Unit 4_4	5	adj.犯人	1
-20	willing	Unit 4_5	5	adj.愿意帮忙的	1
-20	ice hockey	Unit 4_5	5	冰上曲棍球	1
-20	water sports	Unit 4_5	5	水上运动	1
-20	indoor sports	Unit 4_5	5	室内运动	1
-20	the medals table	Unit 4_5	5	奖牌榜	1
-20	per head	Unit 4_5	5	每人	1
-20	to help somebody out	Unit 4_5	5	帮助某人解决困难	1
-20	as a result	Unit 4_5	5	因此	1
-20	Cycling Tour de France	Unit 4_5	5	环法自行车赛	0
-20	Wimbledon Tennis Tournament	Unit 4_5	5	温布尔登网球锦标赛	0
-21	rifle	Unit 5_1	6	n.步枪	0
-21	thrill	Unit 5_1	6	n.&v.使激动	0
-21	bush	Unit 5_1	6	n.灌木丛	1
-21	beauty	Unit 5_1	6	n.美	1
-21	filter	Unit 5_1	6	n.渗透，过滤	0
-21	pack	Unit 5_1	6	n.打包裹	1
-21	thermos	Unit 5_1	6	n.保温瓶	0
-21	sandwich	Unit 5_1	6	n.三明治	1
-21	trail	Unit 5_1	6	n.痕迹	0
-21	fresh	Unit 5_1	6	adj.新的	1
-22	puppy	Unit 5_2	6	n.小狗	1
-22	horn	Unit 5_2	6	n.角	1
-22	scratch	Unit 5_2	6	vt.轻搔	1
-22	practically	Unit 5_2	6	adj.几乎	0
-22	poke	Unit 5_2	6	n.不断地拨弄	0
-22	tremble	Unit 5_2	6	n.战栗	1
-22	wrapping	Unit 5_2	6	n.包装纸	1
-22	slam	Unit 5_2	6	n.砰的声音	0
-22	be crazy about	Unit 5_2	6	热衷于...	1
-22	late in the fall	Unit 5_2	6	深秋	1
-23	head for	Unit 5_3	6	朝...进发	1
-23	settle down	Unit 5_3	6	安顿下来	1
-23	in one's prime	Unit 5_3	6	正在壮年	1
-23	walk right up to	Unit 5_3	6	朝...径直走来	1
-23	bamboo	Unit 5_3	6	n.竹子	1
-23	shoot	Unit 5_3	6	vt.射击；发芽	1
-23	fur	Unit 5_3	6	n.毛皮	1
-23	calm	Unit 5_3	6	adj.安详的	1
-23	chimpanzee	Unit 5_3	6	n.黑猩猩	0
-23	involvement	Unit 5_3	6	n.参与	1
-24	simply	Unit 5_4	6	adv.仅仅	1
-24	chimp	Unit 5_4	6	n.黑猩猩	0
-24	ape	Unit 5_4	6	n.类人猿	1
-24	passion	Unit 5_4	6	n.激情	1
-24	race	Unit 5_4	6	n.竞赛	1
-24	daring	Unit 5_4	6	adj.勇气	0
-24	curiosity	Unit 5_4	6	n.好奇心	1
-24	inspire	Unit 5_4	6	vt.鼓舞	1
-24	stuff	Unit 5_4	6	n.塞满	0
-24	toy	Unit 5_4	6	n.玩具	1
-25	insect	Unit 5_5	6	n.昆虫	0
-25	renowned	Unit 5_5	6	adj.有名的	0
-25	anthropologist	Unit 5_5	6	n.人类学家	0
-25	research	Unit 5_5	6	n.研究	1
-25	project	Unit 5_5	6	n.项目	1
-25	ant	Unit 5_5	6	n.蚂蚁	1
-25	grief	Unit 5_5	6	n.悲痛	1
-25	breakthrough	Unit 5_5	6	n.突破	1
-25	special	Unit 5_5	6	adj.特别节目	0
-26	bamboo shoot	Unit 5_6	6	竹笋	1
-26	at will	Unit 5_6	6	随意	1
-26	behave oneself	Unit 5_6	6	举止规矩	1
-26	bring somebody to safety	Unit 5_6	6	使...安全	1
-26	break new ground	Unit 5_6	6	开辟新天地	1
-26	a wide range of	Unit 5_6	6	一系列	1
-26	TV special	Unit 5_6	6	电视特别节目	1
-26	Oxford	Unit 5_6	6	n.牛津	0
-26	Oxford University	Unit 5_6	6	牛津大学	0
-27	tourism	Unit 6_1	4	n.旅游业	1
-27	recreation	Unit 6_1	4	n.娱乐	0
-27	overfish	Unit 6_1	4	v.过度捕捞	1
-27	circulate	Unit 6_1	4	vi.循环	0
-27	chain	Unit 6_1	4	n.链条	1
-27	limit	Unit 6_1	4	n.限度	1
-27	tropical	Unit 6_1	4	adj.热带的	0
-27	coral	Unit 6_1	4	adj.珊瑚	0
-27	reef	Unit 6_1	4	n.暗礁	0
-27	shellfish	Unit 6_1	4	n.水生贝壳类动物	0
-27	diver	Unit 6_1	4	n.潜水员	1
-28	souvenir	Unit 6_2	4	n.纪念物	1
-28	dump	Unit 6_2	4	n.倾倒	1
-28	pollutant	Unit 6_2	4	n.污染物	0
-28	pile	Unit 6_2	4	n.堆起	1
-28	long-term	Unit 6_2	4	adj.长远的	1
-28	solution	Unit 6_2	4	n.解决办法	1
-28	regulation	Unit 6_2	4	n.规则	1
-28	enforce	Unit 6_2	4	vt.强制执行	0
-28	patrol	Unit 6_2	4	n.巡逻	1
-28	the food chain	Unit 6_2	4	食物链	1
-28	continental shelf	Unit 6_2	4	大陆架	1
-29	pile up	Unit 6_3	4	堆积	1
-29	astronaut	Unit 6_3	4	n.宇航员	1
-29	protective	Unit 6_3	4	adj.保护性的	1
-29	heal	Unit 6_3	4	vt.治愈	1
-29	victim	Unit 6_3	4	n.受害者	1
-29	survival	Unit 6_3	4	n.幸存	1
-29	surface	Unit 6_3	4	n.表面	1
-29	recent	Unit 6_3	4	adj.近来的	1
-29	recycle	Unit 6_3	4	vt.使再循环	1
-29	forestry	Unit 6_3	4	n.林业	0
-29	list	Unit 6_3	4	n.列表	1
-30	flood	Unit 6_4	4	n.洪水	1
-30	soil	Unit 6_4	4	n.土壤	1
-30	absorb	Unit 6_4	4	vt.吸收	1
-30	melt	Unit 6_4	4	vt.溶化	1
-30	vacation	Unit 6_4	4	n.假期	1
-30	mankind	Unit 6_4	4	n.人类	1
-30	mature	Unit 6_4	4	adj.成熟的	1
-30	take up	Unit 6_4	4	占据	1
-30	break out	Unit 6_4	4	爆发	1
-30	Russia	Unit 6_4	4	n.俄罗斯	0
-31	cater	Unit 7_1	6	vi.迎合	1
-31	groceries	Unit 7_1	6	n.食品杂货	0
-31	convenience	Unit 7_1	6	n.方便	1
-31	merchandiser	Unit 7_1	6	n.商人	0
-31	big-ticket	Unit 7_1	6	adj.高价的	0
-31	mall	Unit 7_1	6	n.购物中心	0
-31	outlet	Unit 7_1	6	n.直销店	1
-31	checkout	Unit 7_1	6	n.收银台	1
-31	lane	Unit 7_1	6	n.通道	1
-31	goods	Unit 7_1	6	n.货物	1
-32	barcode	Unit 7_2	6	n.条形码	0
-32	glue	Unit 7_2	6	n.胶水	1
-32	advertise	Unit 7_2	6	vi.做广告	1
-32	double-check	Unit 7_2	6	n.复查	1
-32	marvel	Unit 7_2	6	n.惊叹	0
-32	honesty	Unit 7_2	6	n.诚实	1
-32	compose	Unit 7_2	6	vt.构成	1
-32	pants	Unit 7_2	6	n.裤子	1
-32	receipt	Unit 7_2	6	n.收据	1
-32	momentary	Unit 7_2	6	adj.一时的	1
-33	cater to	Unit 7_3	6	满足...	1
-33	convenience store	Unit 7_3	6	便利店	1
-33	a one-stop shop	Unit 7_3	6	“一站式”商店	1
-33	check out	Unit 7_3	6	结账	1
-33	out of curiosity	Unit 7_3	6	出于好奇	1
-33	get ... for free	Unit 7_3	6	免费取得	1
-33	marvel at	Unit 7_3	6	惊叹于...	0
-33	be composed of	Unit 7_3	6	由...组成	1
-33	as long as	Unit 7_3	6	只要	1
-33	take advantage of	Unit 7_3	6	利用	1
-34	ring true	Unit 7_4	6	听起来真实	1
-34	Walmart	Unit 7_4	6	n.沃尔玛公司	0
-34	billion	Unit 7_4	6	n.十亿	1
-34	purchase	Unit 7_4	6	n.购买物	1
-34	consideration	Unit 7_4	6	n.思考	1
-34	discount	Unit 7_4	6	n.折扣	1
-34	cash	Unit 7_4	6	n.现金	1
-34	catalogue	Unit 7_4	6	n.目录	1
-34	consumer	Unit 7_4	6	n.消费者	1
-34	repairman	Unit 7_4	6	n.修补工	1
-35	sole	Unit 7_5	6	adj.鞋底	1
-35	partially	Unit 7_5	6	adv.部分地	1
-35	mighty	Unit 7_5	6	adj.强有力的	1
-35	stockroom	Unit 7_5	6	n.仓库	1
-35	pained	Unit 7_5	6	adj.痛苦的	1
-35	navy	Unit 7_5	6	n.海军	1
-35	combat	Unit 7_5	6	n.战斗	0
-35	gunboat	Unit 7_5	6	n.炮舰	0
-35	footwear	Unit 7_5	6	n.鞋类	1
-35	slogan	Unit 7_5	6	n.广告语	1
-36	search engine	Unit 7_6	6	搜索引擎	1
-36	credit card	Unit 7_6	6	信用卡	1
-36	take ... into consideration	Unit 7_6	6	把...考虑在内	1
-36	catalogue shopping	Unit 7_6	6	目录购物	1
-36	as usual	Unit 7_6	6	如平常	1
-36	beyond repair	Unit 7_6	6	无法修补	1
-36	run across	Unit 7_6	6	偶然遇见	1
-36	to one's name	Unit 7_6	6	属于...的	1
-36	in a second	Unit 7_6	6	立刻	1
-36	live up to	Unit 7_6	6	实践	1
-36	Instant Shoe Service Repair Shop	Unit 7_6	6	快速修鞋店	0
-37	economic	Unit 8_1	5	adj.经济的	1
-37	direct	Unit 8_1	5	adj.直接的	1
-37	billboard	Unit 8_1	5	n.广告板/牌	1
-37	poster	Unit 8_1	5	n.海报	1
-37	advertiser	Unit 8_1	5	n.广告者	1
-37	celebrity	Unit 8_1	5	n.名人	0
-37	quote	Unit 8_1	5	n.引用	1
-37	truthful	Unit 8_1	5	adj.真实的	1
-37	spoil	Unit 8_1	5	v.搞坏	1
-38	by means of	Unit 8_2	5	用	1
-38	direct mail	Unit 8_2	5	直接邮寄广告	1
-38	to a great extent	Unit 8_2	5	在很大程度上	1
-38	first of all	Unit 8_2	5	首先	1
-38	take ... into account	Unit 8_2	5	重视	1
-38	fall ill	Unit 8_2	5	生病	1
-38	make use of	Unit 8_2	5	利用	1
-38	back up	Unit 8_2	5	支持	1
-38	be related to	Unit 8_2	5	同...有联系	1
-39	Kodak	Unit 8_3	5	n.柯达	0
-39	Nike	Unit 8_3	5	n.耐克	0
-39	Coca Cola	Unit 8_3	5	可口可乐	0
-39	McDonald's	Unit 8_3	5	麦当劳	0
-39	funeral	Unit 8_3	5	n.葬礼	1
-39	bottled	Unit 8_3	5	adj.瓶装的	1
-39	garbage	Unit 8_3	5	n.垃圾	1
-39	reasonable	Unit 8_3	5	adj.理性的	1
-39	manufacturer	Unit 8_3	5	n.制造商	1
-40	satisfactory	Unit 8_4	5	adj.令人满意的	1
-40	assure	Unit 8_4	5	vt.保证	1
-40	smooth	Unit 8_4	5	adj.平稳的	1
-40	smart	Unit 8_4	5	adj.钾能化的	1
-40	routine	Unit 8_4	5	n.常规	1
-40	coffeemaker	Unit 8_4	5	n.咖啡壶	1
-40	module	Unit 8_4	5	n.组件，模块	0
-40	demo	Unit 8_4	5	n.演示	1
-40	unequalled	Unit 8_4	5	adj.无与伦比的	1
-40	brand-new	Unit 8_4	5	adj.崭新的	1
-41	luxurious	Unit 8_5	5	adj.豪华的	1
-41	minibus	Unit 8_5	5	n.小型公共汽车	1
-41	saving	Unit 8_5	5	n.节省	1
-41	interstate	Unit 8_5	5	adj.州际的	0
-41	take over	Unit 8_5	5	接管	1
-41	thanks to	Unit 8_5	5	由于	1
-41	shut off	Unit 8_5	5	关掉	1
-41	by mistake	Unit 8_5	5	错误地	1
-41	up to	Unit 8_5	5	多达	1
-41	Forbidden City	Unit 8_5	5	故宫	0
+1	solid	Unit 1_1	9	adj.固体的	1
+1	ethnic	Unit 1_1	9	adj.种族的	0
+1	immigrant	Unit 1_1	9	n.移民	1
+2	vast	Unit 1_2	9	adj.巨大的	1
+2	well-being	Unit 1_2	9	n.健康	0
+2	unprocessed	Unit 1_2	9	adj.未加工的	0
+2	preservative	Unit 1_2	9	n.防腐剂	0
+2	vegetarian	Unit 1_2	9	n.素食者	1
+3	burger	Unit 1_3	9	n.(非正式)汉堡包	0
+3	pizza	Unit 1_3	9	n.比萨饼	1
+3	rush	Unit 1_3	9	vi.冲进	1
+3	health food	Unit 1_3	9	健康食品	1
+3	be well-known for	Unit 1_3	9	因...而著名	1
+4	physical well-being	Unit 1_4	9	身体健康	1
+4	lunch break	Unit 1_4	9	午餐休息	1
+4	in a short time	Unit 1_4	9	很快	1
+4	even if	Unit 1_4	9	即使	1
+4	rush through	Unit 1_4	9	匆匆完成	1
+5	California	Unit 1_5	9	n.加利福尼亚州	0
+5	custom	Unit 1_5	9	n.风俗	1
+5	lemon	Unit 1_5	9	n.柠檬	1
+5	roast	Unit 1_5	9	n.烤制的	1
+5	steak	Unit 1_5	9	n.厚片的肉或鱼	1
+6	accidentally	Unit 1_6	9	adv.偶然地	1
+6	preservation	Unit 1_6	9	n.保护	1
+6	peel	Unit 1_6	9	n.剥...的皮	1
+6	stir	Unit 1_6	9	n.搅拌	1
+6	pasta	Unit 1_6	9	n.意大利面食	0
+7	flavourful	Unit 1_7	9	adj.美味的	1
+7	sauce	Unit 1_7	9	n.酱汁	1
+7	flavour	Unit 1_7	9	n.风味	1
+7	appetizer	Unit 1_7	9	n.开胃菜	0
+7	tortilla	Unit 1_7	9	n.玉米薄饼	0
+8	mold	Unit 1_8	9	n.模制	1
+8	fry	Unit 1_8	9	vt.油炸	1
+8	spice	Unit 1_8	9	n.香料	0
+8	curry	Unit 1_8	9	n.咖喱	0
+8	horizon	Unit 1_8	9	n.视野	1
+9	in season	Unit 1_9	9	旺季	1
+9	all the year round	Unit 1_9	9	一年到头	1
+9	for sure	Unit 1_9	9	确实	1
+9	peel ... off	Unit 1_9	9	剥...的皮	1
+9	expand one's horizons	Unit 1_9	9	开阔视野	1
+10	consume	Unit 2_1	11	vt.消耗	1
+10	originate	Unit 2_1	11	vt.起源于	1
+10	scientific	Unit 2_1	11	adj.科学的	1
+10	serving	Unit 2_1	11	n.一份	0
+10	claim	Unit 2_1	11	vt.声称	1
+11	effective	Unit 2_2	11	adj.有效的	1
+11	cancer	Unit 2_2	11	n.癌	1
+11	deadly	Unit 2_2	11	adj.致命的	1
+11	interfere	Unit 2_2	11	vi.妨碍	0
+11	absorption	Unit 2_2	11	n.吸收	1
+12	iron	Unit 2_3	11	n.铁	1
+12	teapot	Unit 2_3	11	n.茶壶	1
+12	jasmine	Unit 2_3	11	n.茉莉	0
+12	digestion	Unit 2_3	11	n.消化	1
+12	teabag	Unit 2_3	11	n.袋泡茶	1
+13	mug	Unit 2_4	11	n.大杯	0
+13	time-honoured	Unit 2_4	11	adj.因古老而受敬仰的	0
+13	socialize	Unit 2_4	11	v.交际	1
+13	teahouse	Unit 2_4	11	n.茶馆	1
+13	powdered	Unit 2_4	11	adj.粉末状的	1
+14	favour	Unit 2_5	11	n.喜爱	1
+14	green tea	Unit 2_5	11	绿茶	1
+14	black tea	Unit 2_5	11	红茶	1
+14	along with	Unit 2_5	11	同...一起	1
+14	be aware of	Unit 2_5	11	意识到	1
+15	interfere with	Unit 2_6	11	干扰	0
+15	loose tea	Unit 2_6	11	茶叶	1
+15	tea ceremony	Unit 2_6	11	茶道	1
+15	date back to	Unit 2_6	11	追溯到...	1
+15	set up	Unit 2_6	11	设立	1
+16	Christ	Unit 2_7	11	n.耶稣基督	0
+16	draught	Unit 2_7	11	n.从容器中汲出的(啤酒)	0
+16	pump	Unit 2_7	11	n.泵	1
+16	menu	Unit 2_7	11	n.菜单	1
+16	controversy	Unit 2_7	11	n.争论	0
+17	poison	Unit 2_8	11	n.毒药	1
+17	forbid	Unit 2_8	11	vt.禁止	1
+17	spring	Unit 2_8	11	n.跳	1
+17	dose	Unit 2_8	11	n.剂量	0
+17	poisonous	Unit 2_8	11	adj.有毒的	1
+18	moderately	Unit 2_9	11	adv.适量地	1
+18	caffeine	Unit 2_9	11	n.咖啡因	0
+18	stimulating	Unit 2_9	11	adj.刺激的	1
+18	vessel	Unit 2_9	11	n.血管	0
+18	pulse	Unit 2_9	11	n.脉搏	1
+19	stimulate	Unit 2_10	11	vt.刺激	1
+19	worthwhile	Unit 2_10	11	adj.值得的	0
+19	imagination	Unit 2_10	11	n.想象	1
+19	furthermore	Unit 2_10	11	adv.此外	1
+19	hook	Unit 2_10	11	n.&v.钩住	1
+20	draught beer	Unit 2_11	11	生啤	1
+20	be with somebody	Unit 2_11	11	赞成某人	1
+20	spring up	Unit 2_11	11	迅速或突然生长	1
+20	by no means	Unit 2_11	11	决不	1
+20	act on	Unit 2_11	11	对...起作用	1
+20	get hooked on	Unit 2_11	11	沉溺于	1
+21	determined	Unit 3_1	9	adj.决意的	1
+21	ring	Unit 3_1	9	n.拳击场	0
+21	experienced	Unit 3_1	9	adj.有经验的	1
+21	stubbornly	Unit 3_1	9	adv.顽固地	0
+21	frightening	Unit 3_1	9	adj.令人恐惧的	1
+22	clinch	Unit 3_2	9	vt.扭成一团	0
+22	trick	Unit 3_2	9	n.诡计	1
+22	round	Unit 3_2	9	n.回合	1
+22	bend	Unit 3_2	9	v.弯腰	1
+22	helplessly	Unit 3_2	9	adv.无助地	1
+23	mercy	Unit 3_3	9	n.仁慈	1
+23	jaw	Unit 3_3	9	n.下巴	1
+23	count	Unit 3_3	9	v.&n.计数	1
+23	referee	Unit 3_3	9	n.裁判	0
+23	unwillingly	Unit 3_3	9	adv.不情愿地	1
+24	glove	Unit 3_4	9	n.手套	1
+24	unattended	Unit 3_4	9	adj.无人管的	1
+24	at the cost of	Unit 3_4	9	以...为代价	1
+24	at the last instant	Unit 3_4	9	在最后一瞬间	1
+24	throw all caution to the winds	Unit 3_4	9	不顾一切	0
+25	by the dozen	Unit 3_5	9	大批	1
+25	at somebody's mercy	Unit 3_5	9	听任摆布	1
+25	catch somebody off his guard	Unit 3_5	9	攻其不备	0
+25	all-round	Unit 3_5	9	adj.全能的	0
+25	foul	Unit 3_5	9	adj.犯规	1
+26	sound	Unit 3_6	9	n.稳健的	0
+26	Brazilian	Unit 3_6	9	adj.巴西的	1
+26	kid	Unit 3_6	9	n.小孩	1
+26	coach	Unit 3_6	9	n.教练	1
+26	junior	Unit 3_6	9	adj.青少年的	1
+27	league	Unit 3_7	9	n.联合会	1
+27	tournament	Unit 3_7	9	n.锦标赛	1
+27	discipline	Unit 3_7	9	n.纪律	1
+27	final	Unit 3_7	9	adj.最后的	1
+27	rent	Unit 3_7	9	v.租	1
+28	score	Unit 3_8	9	n.得分	1
+28	fan	Unit 3_8	9	n.狂热爱好者	1
+28	storm	Unit 3_8	9	n.拥进	1
+28	in a row	Unit 3_8	9	连续	1
+28	lose heart	Unit 3_8	9	灰心	1
+29	odd jobs	Unit 3_9	9	零活	1
+29	apartment house	Unit 3_9	9	公寓大楼	1
+29	for good	Unit 3_9	9	永远	1
+29	Sweden	Unit 3_9	9	n.瑞典	0
+30	Olympic	Unit 4_1	9	adj.奥林匹克运动会的	1
+30	scale	Unit 4_1	9	n.规模	1
+30	Roman	Unit 4_1	9	adj.罗马的	1
+30	emperor	Unit 4_1	9	n.皇帝	1
+30	separate	Unit 4_1	9	v.不同的	1
+31	dive	Unit 4_2	9	n.跳水	1
+31	gymnastics	Unit 4_2	9	n.体操	1
+31	skate	Unit 4_2	9	v.溜冰	1
+31	ski	Unit 4_2	9	vt.滑雪	1
+31	gold	Unit 4_2	9	adj.黄金	1
+32	weight	Unit 4_3	9	n.重量	1
+32	determination	Unit 4_3	9	n.决心	1
+32	peak	Unit 4_3	9	n.顶峰	1
+32	amaze	Unit 4_3	9	vt.使大为惊讶	0
+32	touch	Unit 4_3	9	vt.触摸	1
+33	weakling	Unit 4_4	9	n.虚弱的人	0
+33	continuous	Unit 4_4	9	adj.连续的	1
+33	understandable	Unit 4_4	9	可理解的	1
+33	the Olympics	Unit 4_4	9	奥运会	1
+33	in terms of	Unit 4_4	9	就...来说	1
+34	Summer Games	Unit 4_5	9	夏季奥运会	1
+34	Winter Games	Unit 4_5	9	冬季奥运会	1
+34	bring ... to an end	Unit 4_5	9	结束	1
+34	track and field	Unit 4_5	9	田径	1
+34	stand for	Unit 4_5	9	代表	1
+35	will power	Unit 4_6	9	意志力	1
+35	weight lifting	Unit 4_6	9	举重	1
+35	at the turn of	Unit 4_6	9	在...之交时	1
+35	Olympia	Unit 4_6	9	n.奥林匹亚	0
+35	Greece	Unit 4_6	9	n.希腊	0
+36	hockey	Unit 4_7	9	n.曲棍球	0
+36	soccer	Unit 4_7	9	n.足球	1
+36	equal	Unit 4_7	9	adj.与...相等	1
+36	cricket	Unit 4_7	9	n.板球	1
+36	rugby	Unit 4_7	9	n.橄榄球	1
+37	criminal	Unit 4_8	9	adj.犯人	1
+37	willing	Unit 4_8	9	adj.愿意帮忙的	1
+37	ice hockey	Unit 4_8	9	冰上曲棍球	1
+37	water sports	Unit 4_8	9	水上运动	1
+37	indoor sports	Unit 4_8	9	室内运动	1
+38	the medals table	Unit 4_9	9	奖牌榜	1
+38	per head	Unit 4_9	9	每人	1
+38	to help somebody out	Unit 4_9	9	帮助某人解决困难	1
+38	as a result	Unit 4_9	9	因此	1
+38	Cycling Tour de France	Unit 4_9	9	环法自行车赛	0
+38	Wimbledon Tennis Tournament	Unit 4_9	9	温布尔登网球锦标赛	0
+39	rifle	Unit 5_1	12	n.步枪	0
+39	thrill	Unit 5_1	12	n.&v.使激动	0
+39	bush	Unit 5_1	12	n.灌木丛	1
+39	beauty	Unit 5_1	12	n.美	1
+39	filter	Unit 5_1	12	n.渗透，过滤	0
+40	pack	Unit 5_2	12	n.打包裹	1
+40	thermos	Unit 5_2	12	n.保温瓶	0
+40	sandwich	Unit 5_2	12	n.三明治	1
+40	trail	Unit 5_2	12	n.痕迹	0
+40	fresh	Unit 5_2	12	adj.新的	1
+41	puppy	Unit 5_3	12	n.小狗	1
+41	horn	Unit 5_3	12	n.角	1
+41	scratch	Unit 5_3	12	vt.轻搔	1
+41	practically	Unit 5_3	12	adj.几乎	0
+41	poke	Unit 5_3	12	n.不断地拨弄	0
+42	tremble	Unit 5_4	12	n.战栗	1
+42	wrapping	Unit 5_4	12	n.包装纸	1
+42	slam	Unit 5_4	12	n.砰的声音	0
+42	be crazy about	Unit 5_4	12	热衷于...	1
+42	late in the fall	Unit 5_4	12	深秋	1
+43	head for	Unit 5_5	12	朝...进发	1
+43	settle down	Unit 5_5	12	安顿下来	1
+43	in one's prime	Unit 5_5	12	正在壮年	1
+43	walk right up to	Unit 5_5	12	朝...径直走来	1
+43	bamboo	Unit 5_5	12	n.竹子	1
+44	shoot	Unit 5_6	12	vt.射击；发芽	1
+44	fur	Unit 5_6	12	n.毛皮	1
+44	calm	Unit 5_6	12	adj.安详的	1
+44	chimpanzee	Unit 5_6	12	n.黑猩猩	0
+44	involvement	Unit 5_6	12	n.参与	1
+45	simply	Unit 5_7	12	adv.仅仅	1
+45	chimp	Unit 5_7	12	n.黑猩猩	0
+45	ape	Unit 5_7	12	n.类人猿	1
+45	passion	Unit 5_7	12	n.激情	1
+45	race	Unit 5_7	12	n.竞赛	1
+46	daring	Unit 5_8	12	adj.勇气	0
+46	curiosity	Unit 5_8	12	n.好奇心	1
+46	inspire	Unit 5_8	12	vt.鼓舞	1
+46	stuff	Unit 5_8	12	n.塞满	0
+46	toy	Unit 5_8	12	n.玩具	1
+47	insect	Unit 5_9	12	n.昆虫	0
+47	renowned	Unit 5_9	12	adj.有名的	0
+47	anthropologist	Unit 5_9	12	n.人类学家	0
+47	research	Unit 5_9	12	n.研究	1
+47	project	Unit 5_9	12	n.项目	1
+48	ant	Unit 5_10	12	n.蚂蚁	1
+48	grief	Unit 5_10	12	n.悲痛	1
+48	breakthrough	Unit 5_10	12	n.突破	1
+48	special	Unit 5_10	12	adj.特别节目	0
+48	bamboo shoot	Unit 5_10	12	竹笋	1
+49	at will	Unit 5_11	12	随意	1
+49	behave oneself	Unit 5_11	12	举止规矩	1
+49	bring somebody to safety	Unit 5_11	12	使...安全	1
+49	break new ground	Unit 5_11	12	开辟新天地	1
+50	a wide range of	Unit 5_12	12	一系列	1
+50	TV special	Unit 5_12	12	电视特别节目	1
+50	Oxford	Unit 5_12	12	n.牛津	0
+50	Oxford University	Unit 5_12	12	牛津大学	0
+51	tourism	Unit 6_1	9	n.旅游业	1
+51	recreation	Unit 6_1	9	n.娱乐	0
+51	overfish	Unit 6_1	9	v.过度捕捞	1
+51	circulate	Unit 6_1	9	vi.循环	0
+51	chain	Unit 6_1	9	n.链条	1
+52	limit	Unit 6_2	9	n.限度	1
+52	tropical	Unit 6_2	9	adj.热带的	0
+52	coral	Unit 6_2	9	adj.珊瑚	0
+52	reef	Unit 6_2	9	n.暗礁	0
+52	shellfish	Unit 6_2	9	n.水生贝壳类动物	0
+53	diver	Unit 6_3	9	n.潜水员	1
+53	souvenir	Unit 6_3	9	n.纪念物	1
+53	dump	Unit 6_3	9	n.倾倒	1
+53	pollutant	Unit 6_3	9	n.污染物	0
+53	pile	Unit 6_3	9	n.堆起	1
+54	long-term	Unit 6_4	9	adj.长远的	1
+54	solution	Unit 6_4	9	n.解决办法	1
+54	regulation	Unit 6_4	9	n.规则	1
+54	enforce	Unit 6_4	9	vt.强制执行	0
+54	patrol	Unit 6_4	9	n.巡逻	1
+55	the food chain	Unit 6_5	9	食物链	1
+55	continental shelf	Unit 6_5	9	大陆架	1
+55	pile up	Unit 6_5	9	堆积	1
+55	astronaut	Unit 6_5	9	n.宇航员	1
+55	protective	Unit 6_5	9	adj.保护性的	1
+56	heal	Unit 6_6	9	vt.治愈	1
+56	victim	Unit 6_6	9	n.受害者	1
+56	survival	Unit 6_6	9	n.幸存	1
+56	surface	Unit 6_6	9	n.表面	1
+56	recent	Unit 6_6	9	adj.近来的	1
+57	recycle	Unit 6_7	9	vt.使再循环	1
+57	forestry	Unit 6_7	9	n.林业	0
+57	list	Unit 6_7	9	n.列表	1
+57	flood	Unit 6_7	9	n.洪水	1
+57	soil	Unit 6_7	9	n.土壤	1
+58	absorb	Unit 6_8	9	vt.吸收	1
+58	melt	Unit 6_8	9	vt.溶化	1
+58	vacation	Unit 6_8	9	n.假期	1
+58	mankind	Unit 6_8	9	n.人类	1
+59	mature	Unit 6_9	9	adj.成熟的	1
+59	take up	Unit 6_9	9	占据	1
+59	break out	Unit 6_9	9	爆发	1
+59	Russia	Unit 6_9	9	n.俄罗斯	0
+60	cater	Unit 7_1	12	vi.迎合	1
+60	groceries	Unit 7_1	12	n.食品杂货	0
+60	convenience	Unit 7_1	12	n.方便	1
+60	merchandiser	Unit 7_1	12	n.商人	0
+60	big-ticket	Unit 7_1	12	adj.高价的	0
+61	mall	Unit 7_2	12	n.购物中心	0
+61	outlet	Unit 7_2	12	n.直销店	1
+61	checkout	Unit 7_2	12	n.收银台	1
+61	lane	Unit 7_2	12	n.通道	1
+61	goods	Unit 7_2	12	n.货物	1
+62	barcode	Unit 7_3	12	n.条形码	0
+62	glue	Unit 7_3	12	n.胶水	1
+62	advertise	Unit 7_3	12	vi.做广告	1
+62	double-check	Unit 7_3	12	n.复查	1
+62	marvel	Unit 7_3	12	n.惊叹	0
+63	honesty	Unit 7_4	12	n.诚实	1
+63	compose	Unit 7_4	12	vt.构成	1
+63	pants	Unit 7_4	12	n.裤子	1
+63	receipt	Unit 7_4	12	n.收据	1
+63	momentary	Unit 7_4	12	adj.一时的	1
+64	cater to	Unit 7_5	12	满足...	1
+64	convenience store	Unit 7_5	12	便利店	1
+64	a one-stop shop	Unit 7_5	12	“一站式”商店	1
+64	check out	Unit 7_5	12	结账	1
+64	out of curiosity	Unit 7_5	12	出于好奇	1
+65	get ... for free	Unit 7_6	12	免费取得	1
+65	marvel at	Unit 7_6	12	惊叹于...	0
+65	be composed of	Unit 7_6	12	由...组成	1
+65	as long as	Unit 7_6	12	只要	1
+65	take advantage of	Unit 7_6	12	利用	1
+66	ring true	Unit 7_7	12	听起来真实	1
+66	Walmart	Unit 7_7	12	n.沃尔玛公司	0
+66	billion	Unit 7_7	12	n.十亿	1
+66	purchase	Unit 7_7	12	n.购买物	1
+66	consideration	Unit 7_7	12	n.思考	1
+67	discount	Unit 7_8	12	n.折扣	1
+67	cash	Unit 7_8	12	n.现金	1
+67	catalogue	Unit 7_8	12	n.目录	1
+67	consumer	Unit 7_8	12	n.消费者	1
+67	repairman	Unit 7_8	12	n.修补工	1
+68	sole	Unit 7_9	12	adj.鞋底	1
+68	partially	Unit 7_9	12	adv.部分地	1
+68	mighty	Unit 7_9	12	adj.强有力的	1
+68	stockroom	Unit 7_9	12	n.仓库	1
+68	pained	Unit 7_9	12	adj.痛苦的	1
+69	navy	Unit 7_10	12	n.海军	1
+69	combat	Unit 7_10	12	n.战斗	0
+69	gunboat	Unit 7_10	12	n.炮舰	0
+69	footwear	Unit 7_10	12	n.鞋类	1
+69	slogan	Unit 7_10	12	n.广告语	1
+70	search engine	Unit 7_11	12	搜索引擎	1
+70	credit card	Unit 7_11	12	信用卡	1
+70	take ... into consideration	Unit 7_11	12	把...考虑在内	1
+70	catalogue shopping	Unit 7_11	12	目录购物	1
+70	as usual	Unit 7_11	12	如平常	1
+71	beyond repair	Unit 7_12	12	无法修补	1
+71	run across	Unit 7_12	12	偶然遇见	1
+71	to one's name	Unit 7_12	12	属于...的	1
+71	in a second	Unit 7_12	12	立刻	1
+71	live up to	Unit 7_12	12	实践	1
+71	Instant Shoe Service Repair Shop	Unit 7_12	12	快速修鞋店	0
+72	economic	Unit 8_1	9	adj.经济的	1
+72	direct	Unit 8_1	9	adj.直接的	1
+72	billboard	Unit 8_1	9	n.广告板/牌	1
+72	poster	Unit 8_1	9	n.海报	1
+72	advertiser	Unit 8_1	9	n.广告者	1
+73	celebrity	Unit 8_2	9	n.名人	0
+73	quote	Unit 8_2	9	n.引用	1
+73	truthful	Unit 8_2	9	adj.真实的	1
+73	spoil	Unit 8_2	9	v.搞坏	1
+73	by means of	Unit 8_2	9	用	1
+74	direct mail	Unit 8_3	9	直接邮寄广告	1
+74	to a great extent	Unit 8_3	9	在很大程度上	1
+74	first of all	Unit 8_3	9	首先	1
+74	take ... into account	Unit 8_3	9	重视	1
+74	fall ill	Unit 8_3	9	生病	1
+75	make use of	Unit 8_4	9	利用	1
+75	back up	Unit 8_4	9	支持	1
+75	be related to	Unit 8_4	9	同...有联系	1
+75	Kodak	Unit 8_4	9	n.柯达	0
+75	Nike	Unit 8_4	9	n.耐克	0
+76	Coca Cola	Unit 8_5	9	可口可乐	0
+76	McDonald's	Unit 8_5	9	麦当劳	0
+76	funeral	Unit 8_5	9	n.葬礼	1
+76	bottled	Unit 8_5	9	adj.瓶装的	1
+76	garbage	Unit 8_5	9	n.垃圾	1
+77	reasonable	Unit 8_6	9	adj.理性的	1
+77	manufacturer	Unit 8_6	9	n.制造商	1
+77	satisfactory	Unit 8_6	9	adj.令人满意的	1
+77	assure	Unit 8_6	9	vt.保证	1
+77	smooth	Unit 8_6	9	adj.平稳的	1
+78	smart	Unit 8_7	9	adj.钾能化的	1
+78	routine	Unit 8_7	9	n.常规	1
+78	coffeemaker	Unit 8_7	9	n.咖啡壶	1
+78	module	Unit 8_7	9	n.组件，模块	0
+78	demo	Unit 8_7	9	n.演示	1
+79	unequalled	Unit 8_8	9	adj.无与伦比的	1
+79	brand-new	Unit 8_8	9	adj.崭新的	1
+79	luxurious	Unit 8_8	9	adj.豪华的	1
+79	minibus	Unit 8_8	9	n.小型公共汽车	1
+79	saving	Unit 8_8	9	n.节省	1
+79	interstate	Unit 8_8	9	adj.州际的	0
+80	take over	Unit 8_9	9	接管	1
+80	thanks to	Unit 8_9	9	由于	1
+80	shut off	Unit 8_9	9	关掉	1
+80	by mistake	Unit 8_9	9	错误地	1
+80	up to	Unit 8_9	9	多达	1
+80	Forbidden City	Unit 8_9	9	故宫	0

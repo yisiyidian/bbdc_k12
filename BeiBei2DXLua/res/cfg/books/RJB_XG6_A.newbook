@@ -1,140 +1,140 @@
-1	science	Unit1_1	3	n.科学	1
-1	museum	Unit1_1	3	n.博物馆	1
-1	post office	Unit1_1	3	邮局	1
-2	bookstore	Unit1_2	3	n.书店	1
-2	cinema	Unit1_2	3	n.电影院	1
-2	hospital	Unit1_2	3	n.医院	1
-2	crossing	Unit1_2	3	n.十字路口	1
-2	turn	Unit1_2	3	n.&vt.转弯	1
-2	left	Unit1_2	3	n.&ad.左	1
-2	straight	Unit1_2	3	adj.笔直地	1
-2	right	Unit1_2	3	n.&ad.右	1
-2	ask	Unit1_2	3	vt.问	0
-2	sir	Unit1_2	3	n.先生	0
-3	interesting	Unit1_3	3	adj.有趣的	0
-3	Italian	Unit1_3	3	n.&adj.意大利（人）的	0
-3	restaurant	Unit1_3	3	n.餐馆	0
-3	pizza	Unit1_3	3	n.比萨饼	0
-3	get	Unit1_3	3	vi.到达	0
-3	gave	Unit1_3	3	vt.（过去式）提供	0
-3	feature	Unit1_3	3	n.特点	0
-3	follow	Unit1_3	3	vt.跟着	0
-3	far	Unit1_3	3	adj.较远的	0
-3	tell	Unit1_3	3	vt.告诉	0
-4	on foot	Unit2_1	3	步行	1
-4	by	Unit2_1	3	prep.乘	1
-4	bus	Unit2_1	3	n.公共汽车	1
-4	plane	Unit2_1	3	n.飞机	1
-4	taxi	Unit2_1	3	n.出租汽车	1
-4	ship	Unit2_1	3	n.船	1
-4	subway	Unit2_1	3	n.地铁	1
-4	train	Unit2_1	3	n.火车	1
-4	slow	Unit2_1	3	ad.慢的	1
-5	down	Unit2_2	3	prep.&v.&ad.减少	1
-5	slow down	Unit2_2	3	慢下来	1
-5	stop	Unit2_2	3	v.停下	1
-5	Mrs	Unit2_2	3	abbr.夫人	0
-5	early	Unit2_2	3	ad.早到的	0
-5	helmet	Unit2_2	3	n.头盔	0
-5	must	Unit2_2	3	aux.必须	0
-5	wear	Unit2_2	3	v.戴	0
-5	attention	Unit2_2	3	n.注意	0
-6	pay attention to	Unit2_3	3	注意	0
-6	traffic	Unit2_3	3	n.交通	0
-6	traffic lights	Unit2_3	3	交通信号灯	0
-6	Germany	Unit2_3	3	n.德国	0
-6	sled	Unit2_3	3	n.雪橇	0
-6	fast	Unit2_3	3	adj.快的	0
-6	ferry	Unit2_3	3	n.轮渡	0
-6	Scotland	Unit2_3	3	n.苏格兰	0
-7	visit	Unit 3_1	3	n./v.拜访	1
-7	film	Unit 3_1	3	n.电影	1
-7	see a film	Unit 3_1	3	看电影	1
-7	trip	Unit 3_1	3	n.旅行	1
-7	take a trip	Unit 3_1	3	去旅行	1
-7	supermarket	Unit 3_1	3	n.超市	1
-7	go to the supermarket	Unit 3_1	3	去超市	1
-7	evening	Unit 3_1	3	n.晚上	1
-7	tonight	Unit 3_1	3	adv.在今晚	1
-8	tomorrow	Unit 3_2	3	adv.明天	1
-8	next week	Unit 3_2	3	下周	1
-8	dictionary	Unit 3_2	3	n.词典	1
-8	comic	Unit 3_2	3	adj.滑稽的	1
-8	comic book	Unit 3_2	3	连环画册	1
-8	word	Unit 3_2	3	n.单词	1
-8	word book	Unit 3_2	3	单词书	1
-8	postcard	Unit 3_2	3	n.明信片	1
-8	lesson	Unit 3_2	3	n.课	0
-9	space	Unit 3_3	3	n.太空	0
-9	travel	Unit 3_3	3	n.旅行	0
-9	half	Unit 3_3	3	n.一半	0
-9	price	Unit 3_3	3	n.价格	0
-9	Mid-Autumn Festival	Unit 3_3	3	中秋节	0
-9	together	Unit 3_3	3	adv.一起	0
-9	get together	Unit 3_3	3	聚会	0
-9	mooncake	Unit 3_3	3	n.月饼	0
-9	poem	Unit 3_3	3	n.诗	0
-9	moon	Unit 3_3	3	n.月亮	0
-10	studies	Unit 4_1	1	vt.（第三人称单数）学习	1
-10	puzzle	Unit 4_1	1	n.谜	1
-10	hiking	Unit 4_1	1	n.远足	1
-10	pen pal	Unit 4_1	1	笔友	0
-10	hobby	Unit 4_1	1	n.业余爱好	0
-10	jasmine	Unit 4_1	1	n.茉莉	0
-10	idea	Unit 4_1	1	n.想法	0
-10	amazing	Unit 4_1	1	adj.令人惊奇的	0
-10	shall	Unit 4_1	1	aux.表示征求意见	0
-10	goal	Unit 4_1	1	n.射门	0
-10	join	Unit 4_1	1	vi.加入	0
-10	club	Unit 4_1	1	n.俱乐部	0
-10	share	Unit 4_1	1	vt.分享	0
-11	factory	Unit 5_1	2	n.工厂	1
-11	worker	Unit 5_1	2	n.工人	1
-11	postman	Unit 5_1	2	n.邮递员	1
-11	businessman	Unit 5_1	2	n.商人	1
-11	police officer	Unit 5_1	2	警察	1
-11	fisherman	Unit 5_1	2	n.渔民	1
-11	scientist	Unit 5_1	2	n.科学家	1
-11	pilot	Unit 5_1	2	n.飞行员	1
-11	coach	Unit 5_1	2	n.教练	1
-11	country	Unit 5_1	2	n.国家	0
-11	head teacher	Unit 5_1	2	校长	0
-12	sea	Unit 5_2	2	n.大海	0
-12	stay	Unit 5_2	2	v.保持	0
-12	university	Unit 5_2	2	n.大学	0
-12	gym	Unit 5_2	2	n.体育馆	0
-12	if	Unit 5_2	2	conj.如果	0
-12	reporter	Unit 5_2	2	n.记者	0
-12	use	Unit 5_2	2	n.&v.使用	0
-12	type	Unit 5_2	2	n.打字	0
-12	quickly	Unit 5_2	2	adv.迅速地	0
-12	secretary	Unit 5_2	2	n.秘书	0
-13	angry	Unit 6_1	3	adj.生气的	1
-13	afraid	Unit 6_1	3	adj.害怕	1
-13	sad	Unit 6_1	3	adj.难过的	1
-13	worried	Unit 6_1	3	adj.担心的	1
-13	happy	Unit 6_1	3	adj.高兴的	1
-13	see a doctor	Unit 6_1	3	看病	1
-13	wear	Unit 6_1	3	vt.穿	1
-13	more	Unit 6_1	3	adv.更多的	1
-13	deep	Unit 6_1	3	adj.深的	1
-13	breath	Unit 6_1	3	n.呼吸	1
-14	take a deep breath	Unit 6_2	3	深吸一口气	1
-14	count	Unit 6_2	3	v.数数	1
-14	count to ten	Unit 6_2	3	数到十	1
-14	chase	Unit 6_2	3	n.&v.追赶	0
-14	mice	Unit 6_2	3	n.老鼠(复数）	0
-14	bad	Unit 6_2	3	adj.邪恶的	0
-14	hurt	Unit 6_2	3	vt.使受伤	0
-14	ill	Unit 6_2	3	adj.有病的	0
-14	feel	Unit 6_2	3	vt.觉得	0
-14	well	Unit 6_2	3	adv.健康	0
-15	sit	Unit 6_3	3	vi.坐	0
-15	grass	Unit 6_3	3	n.草坪	0
-15	hear	Unit 6_3	3	vt.听见	0
-15	ant	Unit 6_3	3	n.蚂蚁	0
-15	worry	Unit 6_3	3	n.担心	0
-15	stuck	Unit 6_3	3	v.陷住	0
-15	mud	Unit 6_3	3	n.泥	0
-15	pull	Unit 6_3	3	v.拉	0
-15	everyone	Unit 6_3	3	n.&pron.每人	0
+1	science	Unit1_1	5	n.科学	1
+1	museum	Unit1_1	5	n.博物馆	1
+1	post office	Unit1_1	5	邮局	1
+2	bookstore	Unit1_2	5	n.书店	1
+2	cinema	Unit1_2	5	n.电影院	1
+2	hospital	Unit1_2	5	n.医院	1
+2	crossing	Unit1_2	5	n.十字路口	1
+2	turn	Unit1_2	5	n.&vt.转弯	1
+3	left	Unit1_3	5	n.&ad.左	1
+3	straight	Unit1_3	5	adj.笔直地	1
+3	right	Unit1_3	5	n.&ad.右	1
+3	ask	Unit1_3	5	vt.问	0
+3	sir	Unit1_3	5	n.先生	0
+4	interesting	Unit1_4	5	adj.有趣的	0
+4	Italian	Unit1_4	5	n.&adj.意大利（人）的	0
+4	restaurant	Unit1_4	5	n.餐馆	0
+4	pizza	Unit1_4	5	n.比萨饼	0
+4	get	Unit1_4	5	vi.到达	0
+5	gave	Unit1_5	5	vt.（过去式）提供	0
+5	feature	Unit1_5	5	n.特点	0
+5	follow	Unit1_5	5	vt.跟着	0
+5	far	Unit1_5	5	adj.较远的	0
+5	tell	Unit1_5	5	vt.告诉	0
+6	on foot	Unit2_1	5	步行	1
+6	by	Unit2_1	5	prep.乘	1
+6	bus	Unit2_1	5	n.公共汽车	1
+6	plane	Unit2_1	5	n.飞机	1
+6	taxi	Unit2_1	5	n.出租汽车	1
+7	ship	Unit2_2	5	n.船	1
+7	subway	Unit2_2	5	n.地铁	1
+7	train	Unit2_2	5	n.火车	1
+7	slow	Unit2_2	5	ad.慢的	1
+7	down	Unit2_2	5	prep.&v.&ad.减少	1
+8	slow down	Unit2_3	5	慢下来	1
+8	stop	Unit2_3	5	v.停下	1
+8	Mrs	Unit2_3	5	abbr.夫人	0
+8	early	Unit2_3	5	ad.早到的	0
+8	helmet	Unit2_3	5	n.头盔	0
+9	must	Unit2_4	5	aux.必须	0
+9	wear	Unit2_4	5	v.戴	0
+9	attention	Unit2_4	5	n.注意	0
+9	pay attention to	Unit2_4	5	注意	0
+9	traffic	Unit2_4	5	n.交通	0
+10	traffic lights	Unit2_5	5	交通信号灯	0
+10	Germany	Unit2_5	5	n.德国	0
+10	sled	Unit2_5	5	n.雪橇	0
+10	fast	Unit2_5	5	adj.快的	0
+10	ferry	Unit2_5	5	n.轮渡	0
+10	Scotland	Unit2_5	5	n.苏格兰	0
+11	visit	Unit 3_1	6	n./v.拜访	1
+11	film	Unit 3_1	6	n.电影	1
+11	see a film	Unit 3_1	6	看电影	1
+11	trip	Unit 3_1	6	n.旅行	1
+11	take a trip	Unit 3_1	6	去旅行	1
+12	supermarket	Unit 3_2	6	n.超市	1
+12	go to the supermarket	Unit 3_2	6	去超市	1
+12	evening	Unit 3_2	6	n.晚上	1
+12	tonight	Unit 3_2	6	adv.在今晚	1
+12	tomorrow	Unit 3_2	6	adv.明天	1
+13	next week	Unit 3_3	6	下周	1
+13	dictionary	Unit 3_3	6	n.词典	1
+13	comic	Unit 3_3	6	adj.滑稽的	1
+13	comic book	Unit 3_3	6	连环画册	1
+13	word	Unit 3_3	6	n.单词	1
+14	word book	Unit 3_4	6	单词书	1
+14	postcard	Unit 3_4	6	n.明信片	1
+14	lesson	Unit 3_4	6	n.课	0
+14	space	Unit 3_4	6	n.太空	0
+14	travel	Unit 3_4	6	n.旅行	0
+15	half	Unit 3_5	6	n.一半	0
+15	price	Unit 3_5	6	n.价格	0
+15	Mid-Autumn Festival	Unit 3_5	6	中秋节	0
+15	together	Unit 3_5	6	adv.一起	0
+16	get together	Unit 3_6	6	聚会	0
+16	mooncake	Unit 3_6	6	n.月饼	0
+16	poem	Unit 3_6	6	n.诗	0
+16	moon	Unit 3_6	6	n.月亮	0
+17	studies	Unit 4_1	3	vt.（第三人称单数）学习	1
+17	puzzle	Unit 4_1	3	n.谜	1
+17	hiking	Unit 4_1	3	n.远足	1
+17	pen pal	Unit 4_1	3	笔友	0
+18	hobby	Unit 4_2	3	n.业余爱好	0
+18	jasmine	Unit 4_2	3	n.茉莉	0
+18	idea	Unit 4_2	3	n.想法	0
+18	amazing	Unit 4_2	3	adj.令人惊奇的	0
+19	shall	Unit 4_3	3	aux.表示征求意见	0
+19	goal	Unit 4_3	3	n.射门	0
+19	join	Unit 4_3	3	vi.加入	0
+19	club	Unit 4_3	3	n.俱乐部	0
+19	share	Unit 4_3	3	vt.分享	0
+20	factory	Unit 5_1	4	n.工厂	1
+20	worker	Unit 5_1	4	n.工人	1
+20	postman	Unit 5_1	4	n.邮递员	1
+20	businessman	Unit 5_1	4	n.商人	1
+20	police officer	Unit 5_1	4	警察	1
+21	fisherman	Unit 5_2	4	n.渔民	1
+21	scientist	Unit 5_2	4	n.科学家	1
+21	pilot	Unit 5_2	4	n.飞行员	1
+21	coach	Unit 5_2	4	n.教练	1
+21	country	Unit 5_2	4	n.国家	0
+22	head teacher	Unit 5_3	4	校长	0
+22	sea	Unit 5_3	4	n.大海	0
+22	stay	Unit 5_3	4	v.保持	0
+22	university	Unit 5_3	4	n.大学	0
+22	gym	Unit 5_3	4	n.体育馆	0
+23	if	Unit 5_4	4	conj.如果	0
+23	reporter	Unit 5_4	4	n.记者	0
+23	use	Unit 5_4	4	n.&v.使用	0
+23	type	Unit 5_4	4	n.打字	0
+23	quickly	Unit 5_4	4	adv.迅速地	0
+23	secretary	Unit 5_4	4	n.秘书	0
+24	angry	Unit 6_1	6	adj.生气的	1
+24	afraid	Unit 6_1	6	adj.害怕	1
+24	sad	Unit 6_1	6	adj.难过的	1
+24	worried	Unit 6_1	6	adj.担心的	1
+24	happy	Unit 6_1	6	adj.高兴的	1
+25	see a doctor	Unit 6_2	6	看病	1
+25	wear	Unit 6_2	6	vt.穿	1
+25	more	Unit 6_2	6	adv.更多的	1
+25	deep	Unit 6_2	6	adj.深的	1
+25	breath	Unit 6_2	6	n.呼吸	1
+26	take a deep breath	Unit 6_3	6	深吸一口气	1
+26	count	Unit 6_3	6	v.数数	1
+26	count to ten	Unit 6_3	6	数到十	1
+26	chase	Unit 6_3	6	n.&v.追赶	0
+26	mice	Unit 6_3	6	n.老鼠(复数）	0
+27	bad	Unit 6_4	6	adj.邪恶的	0
+27	hurt	Unit 6_4	6	vt.使受伤	0
+27	ill	Unit 6_4	6	adj.有病的	0
+27	feel	Unit 6_4	6	vt.觉得	0
+27	well	Unit 6_4	6	adv.健康	0
+28	sit	Unit 6_5	6	vi.坐	0
+28	grass	Unit 6_5	6	n.草坪	0
+28	hear	Unit 6_5	6	vt.听见	0
+28	ant	Unit 6_5	6	n.蚂蚁	0
+28	worry	Unit 6_5	6	n.担心	0
+29	stuck	Unit 6_6	6	v.陷住	0
+29	mud	Unit 6_6	6	n.泥	0
+29	pull	Unit 6_6	6	v.拉	0
+29	everyone	Unit 6_6	6	n.&pron.每人	0

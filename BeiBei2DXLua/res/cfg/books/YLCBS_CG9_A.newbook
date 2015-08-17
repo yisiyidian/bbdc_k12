@@ -1,438 +1,438 @@
-1	eat up	Unit1_1	7	吃光	1
-1	creative	Unit1_1	7	adj.有创造力的	0
-1	curious	Unit1_1	7	adj.好奇的	0
-2	energetic	Unit1_2	7	adj.精力充沛的	0
-2	modest	Unit1_2	7	adj.谦虚的	0
-2	organized	Unit1_2	7	adj.有条理的	0
-2	order	Unit1_2	7	n.顺序	1
-2	keep ... in order	Unit1_2	7	使...保持井然有序	1
-2	show off	Unit1_2	7	炫耀	1
-2	grammar	Unit1_2	7	n.语法	1
-2	come up with	Unit1_2	7	想出	1
-2	neither	Unit1_2	7	adv.两者之一不	1
-2	nor	Unit1_2	7	conj.也不	1
-2	neither ... nor ...	Unit1_2	7	既不...也不...	1
-3	accountant	Unit1_3	7	n.会计	0
-3	born	Unit1_3	7	adj.天生的	1
-3	impress	Unit1_3	7	vt.给...留下印象	0
-3	sculpture	Unit1_3	7	n.雕塑	0
-3	praise	Unit1_3	7	vt.赞扬	1
-3	sales department	Unit1_3	7	销售部	0
-3	general	Unit1_3	7	adj.总的	1
-3	race	Unit1_3	7	n.竞赛	1
-3	either ... or ...	Unit1_3	7	不是...就是...	1
-3	lead	Unit1_3	7	v.领先地位	1
-3	take the lead	Unit1_3	7	处于领先地位	1
-4	fall behind	Unit1_4	7	落后	1
-4	challenge	Unit1_4	7	n.挑战	0
-4	chief	Unit1_4	7	adj.主要的	0
-4	high-speed	Unit1_4	7	adj.高速的	1
-4	connect	Unit1_4	7	vt.连接	1
-4	connect to	Unit1_4	7	与...相连	1
-4	miss	Unit1_4	7	n.过失	1
-4	as good as	Unit1_4	7	和...几乎一样	1
-4	attention	Unit1_4	7	n.注意	1
-4	pay attention to	Unit1_4	7	注意	1
-4	standard	Unit1_4	7	n.标准	1
-5	pioneer	Unit1_5	7	n.先锋	1
-5	surgeon	Unit1_5	7	n.外科大夫	0
-5	carelessness	Unit1_5	7	n.粗心	1
-5	extra	Unit1_5	7	adj.额外的	0
-5	devote	Unit1_5	7	vt.把...贡献	0
-5	respect	Unit1_5	7	vt.尊敬	0
-5	suitable	Unit1_5	7	adj.合适的	0
-5	partner	Unit1_5	7	n.搭档	0
-5	impatient	Unit1_5	7	adj.不耐烦的	1
-5	think twice about sth	Unit1_5	7	三思而行	1
-5	do the dishes	Unit1_5	7	洗碗	1
-6	lunar	Unit1_6	7	adj.月球的	0
-6	calendar	Unit1_6	7	n.日历	1
-6	animal sign	Unit1_6	7	生肖	1
-6	represent	Unit1_6	7	vt.代表	0
-6	appear	Unit1_6	7	vi.出现	1
-6	fixed	Unit1_6	7	adj.固定的	1
-6	cycle	Unit1_6	7	n.循环	0
-6	powerful	Unit1_6	7	adj.强大的	0
-6	lively	Unit1_6	7	adj.活泼的	1
-6	practical	Unit1_6	7	adj.实际的	0
-7	loyal	Unit1_7	7	adj.忠诚的	0
-7	in all	Unit1_7	7	总共	1
-7	star sign	Unit1_7	7	星座	1
-7	divide	Unit1_7	7	vt.分开	1
-7	divide ... into ...	Unit1_7	7	把...分成...	1
-7	shape	Unit1_7	7	n.使成形	1
-7	speech	Unit1_7	7	n.演说	1
-7	monitor	Unit1_7	7	n.班长	0
-7	position	Unit1_7	7	n.位置	0
-7	agree with sb	Unit1_7	7	同意某人	1
-8	indigo	Unit2_1	5	n.靛蓝	0
-8	violet	Unit2_1	5	n.紫罗兰色	0
-8	rainbow	Unit2_1	5	n.彩虹	0
-8	mood	Unit2_1	5	n.心情	0
-8	influence	Unit2_1	5	vt.影响	1
-8	whether	Unit2_1	5	conj.是否	1
-8	characteristic	Unit2_1	5	n.特征	0
-8	calm	Unit2_1	5	adj.平静的	0
-8	relaxed	Unit2_1	5	adj.放松的	0
-8	peace	Unit2_1	5	n.安宁	1
-9	sadness	Unit2_2	5	n.悲哀	1
-9	purity	Unit2_2	5	n.纯浩	0
-9	wedding	Unit2_2	5	n.婚礼	0
-9	prefer	Unit2_2	5	vt.更喜欢	0
-9	create	Unit2_2	5	vt.创造	1
-9	feeling	Unit2_2	5	n.感受	1
-9	cheer up	Unit2_2	5	使振作起来	1
-9	remind	Unit2_2	5	v.提醒	0
-9	wisdom	Unit2_2	5	n.智慧	0
-9	as	Unit2_2	5	adv.因为	1
-10	envy	Unit2_3	5	conj.妒忌	0
-10	green with envy	Unit2_3	5	妒忌的	0
-10	require	Unit2_3	5	v.要求	1
-10	strength	Unit2_3	5	n.力量	0
-10	heat	Unit2_3	5	n.热	1
-10	difficulty	Unit2_3	5	n.困难	1
-10	have difficulty in doing sth	Unit2_3	5	做某事费劲	1
-10	decision	Unit2_3	5	n.决定	1
-10	relationship	Unit2_3	5	n.关系	1
-10	certainly	Unit2_3	5	adv.必定地	1
-11	everyday	Unit2_4	5	adj.每天的	1
-11	personal	Unit2_4	5	adj.个人的	1
-11	suit	Unit2_4	5	v.适合	0
-11	celebration	Unit2_4	5	n.庆祝	0
-11	ancient	Unit2_4	5	adj.古老的	1
-11	therapy	Unit2_4	5	n.疗法	0
-11	discover	Unit2_4	5	vt.发现	1
-11	teens	Unit2_4	5	n.[复]十几岁	0
-11	promise	Unit2_4	5	v.承诺	1
-11	or	Unit2_4	5	conj.否则	1
-12	work	Unit2_5	5	vi.奏效	1
-12	practise	Unit2_5	5	v.从事；练习	1
-12	stressed	Unit2_5	5	adj.紧张的	0
-12	suggest	Unit2_5	5	vt.建议	1
-12	would rather	Unit2_5	5	宁愿	1
-12	trust	Unit2_5	5	n.信任	1
-12	calm	Unit2_5	5	adj.平静	0
-12	warmth	Unit2_5	5	n.温暧	0
-12	handbag	Unit2_5	5	n.手提包	1
-12	match	Unit2_5	5	v.相配	1
-12	balance	Unit2_5	5	vt.使...平衡	1
-13	teenage	Unit3_1	5	adj.青少年的	0
-13	mark	Unit3_1	5	n.分数	1
-13	mad	Unit3_1	5	adj.发疯的	1
-13	drive sb mad	Unit3_1	5	使人受不了	1
-13	exam	Unit3_1	5	n.考试	0
-13	perhaps	Unit3_1	5	adv.可能	1
-13	deal	Unit3_1	5	v.处理	1
-13	deal with	Unit3_1	5	处理	1
-13	choice	Unit3_1	5	n.选择	1
-13	but	Unit3_1	5	conj.除...外	1
-14	stay up	Unit3_2	5	熬夜	1
-14	awake	Unit3_2	5	adj.醒着的	1
-14	hardly	Unit3_2	5	adv.几乎不	1
-14	imagine	Unit3_2	5	vt.想象	1
-14	doubt	Unit3_2	5	n.怀疑	1
-14	worth	Unit3_2	5	adj.值得	1
-14	be worth doing sth	Unit3_2	5	值得做某事	1
-14	suggestion	Unit3_2	5	n.建议	1
-14	cause	Unit3_2	5	n.原因	1
-14	strict	Unit3_2	5	adj.严格的	1
-15	be strict with sb	Unit3_3	5	对某人要求严格	1
-15	stay out	Unit3_3	5	待在户外	1
-15	schoolwork	Unit3_3	5	课业	1
-15	valuable	Unit3_3	5	adj.宝贵的	1
-15	friendship	Unit3_3	5	n.友谊	1
-15	list	Unit3_3	5	n.清单	1
-15	work out	Unit3_3	5	算出	1
-15	according to	Unit3_3	5	根据	1
-15	whom	Unit3_3	5	pron.谁	1
-15	silence	Unit3_3	5	n.安静	1
-16	worry	Unit3_4	5	n.担心	1
-16	method	Unit3_4	5	n.方法	1
-16	solve	Unit3_4	5	v.解决	1
-16	dictionary	Unit3_4	5	n.字典	1
-16	youth worker	Unit3_4	5	青少年辅导员	0
-16	reply	Unit3_4	5	vt.答复	1
-16	chemistry	Unit3_4	5	n.化学	1
-16	laugh at	Unit3_4	5	嘲笑	1
-16	bookworm	Unit3_4	5	n.书虫	0
-16	progress	Unit3_4	5	n.进步	1
-17	worried	Unit3_5	5	adj.担心的	1
-17	go over	Unit3_5	5	复习	1
-17	aloud	Unit3_5	5	adv.大声地	1
-17	pronounce	Unit3_5	5	vt.发音	1
-17	correctly	Unit3_5	5	adv.正确地	1
-17	pronunciation	Unit3_5	5	n.发音	1
-17	mention	Unit3_5	5	vt.提及	1
-17	don't mention it	Unit3_5	5	不客气	1
-17	stress	Unit3_5	5	n.精神压力	0
-17	be of sb's age	Unit3_5	5	与...同龄的	1
-18	on one's mind	Unit4_1	6	挂在心上	1
-18	time	Unit4_1	6	n.时期	1
-18	whenever	Unit4_1	6	adv.无论何时	1
-18	through	Unit4_1	6	prep.以	1
-18	as soon as	Unit4_1	6	—...就	1
-18	deal	Unit4_1	6	n.很多	1
-18	a great deal of	Unit4_1	6	大量	1
-18	junior high	Unit4_1	6	<美>初级中学	0
-18	try out for sth	Unit4_1	6	参加...选拔	1
-18	lose heart	Unit4_1	6	泄气	1
-19	score	Unit4_2	6	v.&n.得分	1
-19	senior high	Unit4_2	6	髙级中学	0
-19	stand	Unit4_2	6	n.看台	0
-19	change one's mind	Unit4_2	6	改变主意	1
-19	leader	Unit4_2	6	n.领导者	1
-19	name	Unit4_2	6	v.命名	1
-19	university	Unit4_2	6	n.大学	1
-19	simply	Unit4_2	6	adv.仅仅	1
-19	junior college	Unit4_2	6	n.两年制专科学校	0
-19	national	Unit4_2	6	adj.国家的	1
-20	championship	Unit4_3	6	n.锦标赛	0
-20	succeed	Unit4_3	6	vt.成功	1
-20	succeed in doing sth	Unit4_3	6	成功地做某事	1
-20	scholarship	Unit4_3	6	n.奖学金	0
-20	although	Unit4_3	6	conj.尽管	1
-20	graduate	Unit4_3	6	vt.毕业	0
-20	force	Unit4_3	6	n.&v.强迫	1
-20	league	Unit4_3	6	n.联盟	0
-20	remain	Unit4_3	6	v.保持不变	1
-20	take notice of	Unit4_3	6	注意	1
-21	achievement	Unit4_4	6	n.成就	1
-21	prove	Unit4_4	6	v.证明	0
-21	matter	Unit4_4	6	n.要紧	1
-21	career	Unit4_4	6	n.生涯	0
-21	against	Unit4_4	6	prep.与...相反	1
-21	break out	Unit4_4	6	爆发	1
-21	record	Unit4_4	6	n.记录	1
-21	symbol	Unit4_4	6	n.象征	0
-21	victory	Unit4_4	6	n.胜利	1
-21	spirit	Unit4_4	6	n.将神	1
-22	Jew	Unit4_5	6	n.犹太人	0
-22	go into hiding	Unit4_5	6	躲藏起来	1
-22	Nazi	Unit4_5	6	adj.纳粹的	0
-22	die of	Unit4_5	6	死于	1
-22	German	Unit4_5	6	n&adj.德国的	1
-22	Nazi	Unit4_5	6	n.纳粹分子	0
-22	thought	Unit4_5	6	n.想法	1
-22	survive	Unit4_5	6	vt.幸存	0
-22	admire	Unit4_5	6	vt.钦佩	0
-23	courage	Unit4_6	6	n.勇气	1
-23	in fear of one's life	Unit4_6	6	为生命安全担扰	1
-23	unusual	Unit4_6	6	adj.不寻常的	1
-23	cell	Unit4_6	6	n.细胞	0
-23	cancer	Unit4_6	6	n.癌症	0
-23	surprise	Unit4_6	6	vt.惊奇	1
-23	to one's surprise	Unit4_6	6	令某人惊奇的是	1
-23	research	Unit4_6	6	n.研究	1
-23	death	Unit4_6	6	n.死	0
-24	pleasant	Unit5_1	5	adj.令人愉快的	0
-24	drama	Unit5_1	5	n.戏剧	0
-24	photography	Unit5_1	5	n.照相术	0
-24	art form	Unit5_1	5	艺术形式	1
-24	pop	Unit5_1	5	n.流行音乐	1
-24	musical	Unit5_1	5	adj.音乐的	0
-24	talent	Unit5_1	5	n.天赋	0
-24	boundary	Unit5_1	5	n.边界	0
-24	medal	Unit5_1	5	n.奖牌	0
-24	present	Unit5_1	5	n.颁发	1
-24	winner	Unit5_1	5	n.获胜者	1
-25	composer	Unit5_2	5	n.作曲家	0
-25	central	Unit5_2	5	adj.中心的	1
-25	instrument	Unit5_2	5	n.乐器	1
-25	common	Unit5_2	5	adj.常见的	1
-25	object	Unit5_2	5	n.物品	1
-25	stone	Unit5_2	5	n.石头	1
-25	musician	Unit5_2	5	n.音乐家	1
-25	be famous for	Unit5_2	5	因...而著名	1
-25	be known for	Unit5_2	5	因...广为所知	0
-25	control	Unit5_2	5	n.&v.控制	1
-25	flow	Unit5_2	5	vi.流动	0
-26	successfully	Unit5_3	5	adv.成功地	1
-26	traditional	Unit5_3	5	adj.传统的	1
-26	bell	Unit5_3	5	n.铃	1
-26	though	Unit5_3	5	conj.虽然	1
-26	dividing line	Unit5_3	5	分界线	1
-26	highly	Unit5_3	5	adv.高度地	1
-26	breath	Unit5_3	5	n.呼吸	0
-26	out of breath	Unit5_3	5	上气不接下气	0
-26	last	Unit5_3	5	v.持续	1
-26	concert	Unit5_3	5	n.音乐会	1
-26	folk	Unit5_3	5	n.民间音乐	0
-27	country music	Unit5_4	5	乡村音乐	1
-27	jazz	Unit5_4	5	n.爵士乐	0
-27	rock	Unit5_4	5	n.摇滚乐	0
-27	country	Unit5_4	5	n.乡下	1
-27	cowboy	Unit5_4	5	n.牛仔	1
-27	guitar	Unit5_4	5	n.吉他	1
-27	lasting	Unit5_4	5	adj.持久的	1
-27	value	Unit5_4	5	n.价值	1
-27	drum	Unit5_4	5	n.鼓	0
-27	African	Unit5_4	5	n&adj.非洲的	1
-27	American	Unit5_4	5	n.美国人	1
-28	African American	Unit5_5	5	美国黑人	1
-28	make up	Unit5_5	5	编	1
-28	local colour	Unit5_5	5	地方特色	1
-28	tonight	Unit5_5	5	n.今晚	1
-28	literature	Unit5_5	5	n.文学	0
-28	praise	Unit5_5	5	vt.赞扬	1
-28	gift	Unit5_5	5	n.天赋	1
-28	have a gift for	Unit5_5	5	对...有天赋	1
-28	mark	Unit5_5	5	n.污点	1
-28	have a gift for	Unit5_5	5	对...有天赋	1
-29	done	Unit6_1	5	完毕	1
-29	chat show	Unit6_1	5	访谈节目	1
-29	comedy	Unit6_1	5	n.喜剧	0
-29	documentary	Unit6_1	5	n.记录片	0
-29	drama series	Unit6_1	5	系列剧	0
-29	game show	Unit6_1	5	游戏表演	1
-29	real-life	Unit6_1	5	真实生活的	1
-29	dialogue	Unit6_1	5	n.对话	1
-29	round-up	Unit6_1	5	概要	0
-30	up-to-date	Unit6_2	5	adj.最新的	1
-30	fan	Unit6_2	5	n.迷	1
-30	a number of	Unit6_2	5	一些	1
-30	coming	Unit6_2	5	adj.即将来临的	1
-30	cover	Unit6_2	5	vt.报道	1
-30	live	Unit6_2	5	n.现场直播	1
-30	Asian	Unit6_2	5	n&adj.亚洲的	1
-30	vote	Unit6_2	5	v.投票	0
-30	music video	Unit6_2	5	音乐视频	1
-31	announce	Unit6_3	5	vt.宣布	0
-31	text message	Unit6_3	5	短信	1
-31	murder	Unit6_3	5	vt.谋杀	0
-31	murderer	Unit6_3	5	n.杀人犯	0
-31	horror	Unit6_3	5	n.恐怖	0
-31	direct	Unit6_3	5	v.导演	1
-31	director	Unit6_3	5	n.导演	1
-31	wealthy	Unit6_3	5	adj.富有的	1
-31	mystery	Unit6_3	5	n.神秘	0
-32	might	Unit6_4	5	aux.可能	1
-32	scared	Unit6_4	5	adj.害怕	0
-32	unless	Unit6_4	5	conj.除非	1
-32	animal-lover	Unit6_4	5	n.喜欢动物的人	1
-32	scene	Unit6_4	5	n.景象	0
-32	latest	Unit6_4	5	adj.最新的	1
-32	record	Unit6_4	5	n.录制	1
-32	attack	Unit6_4	5	vt.攻击	0
-32	polar bear	Unit6_4	5	北极熊	0
-33	male	Unit6_5	5	adj.雄性的	0
-33	studio	Unit6_5	5	n.摄影棚	0
-33	minibus	Unit6_5	5	n.小型公共汽车	0
-33	view	Unit6_5	5	n.观看	0
-33	silly	Unit6_5	5	adj.傻的	1
-33	waste	Unit6_5	5	vt.浪费	1
-33	twin	Unit6_5	5	n.双胞胎之一	0
-33	burglar	Unit6_5	5	n.入室窃贼	0
-33	gun	Unit6_5	5	n.枪	1
-34	superstar	Unit7_1	6	n.超级明星	0
-34	in your dreams	Unit7_1	6	你做梦	1
-34	so ... that	Unit7_1	6	如此...以至于	1
-34	action film	Unit7_1	6	动作片	1
-34	romantic	Unit7_1	6	adj.浪漫的	0
-34	science fiction	Unit7_1	6	科幻电影	0
-34	western	Unit7_1	6	n.西部电影	1
-34	industry	Unit7_1	6	n.工业	1
-34	such ... that	Unit7_1	6	如此...以至于	1
-35	storyteller	Unit7_2	6	n.讲故事的人	1
-35	script	Unit7_2	6	n.剧本	0
-35	all-time	Unit7_2	6	adj.一向的	1
-35	actress	Unit7_2	6	n.女演员	1
-35	loss	Unit7_2	6	n.丧失	0
-35	humanitarian	Unit7_2	6	n.人道主义者	0
-35	ballet	Unit7_2	6	n.芭蕾舞	0
-35	dancer	Unit7_2	6	n.舞蹈者	1
-35	charm	Unit7_2	6	n.魅力	0
-36	catch one's attention	Unit7_3	6	吸引某人的注意	1
-36	insist	Unit7_3	6	vt.坚持	0
-36	lead	Unit7_3	6	v.主角	1
-36	role	Unit7_3	6	n.角色	1
-36	base	Unit7_3	6	n.以...为基础	0
-36	major	Unit7_3	6	adj.主要的	0
-36	mark	Unit7_3	6	n.&v.标志	1
-36	play the role of	Unit7_3	6	扮演...的角色	1
-36	princess	Unit7_3	6	n.公主	0
-37	lifetime	Unit7_4	6	n.终身	1
-37	nomination	Unit7_4	6	n.提名	0
-37	final	Unit7_4	6	adj.最终的	1
-37	appearance	Unit7_4	6	n.出现	0
-37	angel	Unit7_4	6	n.天使	0
-37	beyond	Unit7_4	6	prep.超出	0
-37	effort	Unit7_4	6	n.努力	0
-37	pass away	Unit7_4	6	去世	1
-37	peacefully	Unit7_4	6	adv.宁静地	1
-38	Attractive	Unit7_5	6	adj.有吸引力的	0
-38	rush hour	Unit7_5	6	交通高峰期	1
-38	park	Unit7_5	6	v.停车	1
-38	car park	Unit7_5	6	停车场	1
-38	row	Unit7_5	6	n.一排	1
-38	amazed	Unit7_5	6	adj.大为惊奇	0
-38	mistake	Unit7_5	6	n.误以为	1
-38	mistake ... for ...	Unit7_5	6	把...误认为...	1
-38	kung fu	Unit7_5	6	n.功夫	1
-39	DVD	Unit7_6	6	n.数码影碟	1
-39	actor	Unit7_6	6	n.演员	1
-39	dinosaur	Unit7_6	6	n.恐龙	0
-39	fall in love with sb	Unit7_6	6	爱上某人	1
-39	special offer	Unit7_6	6	特价优惠	1
-39	cancel	Unit7_6	6	vt.取消	1
-39	neither	Unit7_6	6	conj.也不	1
-39	stupid	Unit7_6	6	adj.愚蠢的	1
-39	stuntman	Unit7_6	6	n.特技替身演员	0
-39	consider	Unit7_6	6	vt.考虑	1
-40	detective	Unit8_1	6	n.侦探	0
-40	clue	Unit8_1	6	n.线索	0
-40	missing	Unit8_1	6	adj.缺少的	1
-40	murder	Unit8_1	6	vt.谋杀	0
-40	suspect	Unit8_1	6	vt.犯罪嫌疑人	0
-40	medium	Unit8_1	6	adj.中等的	0
-40	untidy	Unit8_1	6	adj.不整洁的	1
-40	guilty	Unit8_1	6	adj.有罪的	0
-40	truth	Unit8_1	6	n.事实	1
-40	guess	Unit8_1	6	v.&n.猜	1
-41	lie	Unit8_2	6	n.&v.说谎	1
-41	confirm	Unit8_2	6	v.证实	0
-41	victim	Unit8_2	6	n.受害者	0
-41	crime	Unit8_2	6	n.犯罪活动	0
-41	somewhere	Unit8_2	6	adv.在某处	1
-41	contact	Unit8_2	6	v.联系	0
-41	wound	Unit8_2	6	v.使...受伤	1
-41	bleed	Unit8_2	6	vi.流血	0
-41	enemy	Unit8_2	6	n.仇人	1
-41	single	Unit8_2	6	adj.单身的	1
-42	well-paid	Unit8_3	6	adj.收入高的	0
-42	charge	Unit8_3	6	n.指控	0
-42	break into	Unit8_3	6	强行闯入	1
-42	system	Unit8_3	6	n.系统	0
-42	suppose	Unit8_3	6	vt.假定	1
-42	only	Unit8_3	6	adv.仅有的	1
-42	witness	Unit8_3	6	n.目击者	0
-42	report	Unit8_3	6	vt.报告	1
-42	breathe	Unit8_3	6	vi.呼吸	0
-42	heavily	Unit8_3	6	adv.沉重地	1
-43	reward	Unit8_4	6	n.报酬	0
-43	arrest	Unit8_4	6	n.逮捕	0
-43	couple	Unit8_4	6	n.夫妇	1
-43	fingerprint	Unit8_4	6	n.指纹	0
-43	probably	Unit8_4	6	adv.大概	1
-43	criminal	Unit8_4	6	adj.犯罪的	0
-43	female	Unit8_4	6	adj.女性的	0
-43	boss	Unit8_4	6	n.老板	1
-43	commit	Unit8_4	6	v.犯罪	0
-43	turn out	Unit8_4	6	原来是	1
-44	have nothing to do with	Unit8_5	6	与...无关	1
-44	hurry	Unit8_5	6	n.&v.急忙	1
-44	in a hurry	Unit8_5	6	急忙	1
-44	kidnapping	Unit8_5	6	n.绑架	0
-44	wealth	Unit8_5	6	n.财富	1
-44	prison	Unit8_5	6	n.监狱	0
-44	in prison	Unit8_5	6	坐牢	0
-44	kidnap	Unit8_5	6	v.绑架	0
-44	safety	Unit8_5	6	n.安全	1
-45	lock	Unit8_6	6	n.锁	1
-45	shut	Unit8_6	6	n.关上	1
-45	guard	Unit8_6	6	vt.&n.守卫	1
-45	guard against sth	Unit8_6	6	防范	1
-45	necklace	Unit8_6	6	n.项链	0
-45	theft	Unit8_6	6	n.偷窃	0
-45	get along with	Unit8_6	6	与...和睦相处	1
-45	jewellery	Unit8_6	6	n.[总称]珠宝	0
-45	steal	Unit8_6	6	vt.偷	1
+1	eat up	Unit1_1	14	吃光	1
+1	creative	Unit1_1	14	adj.有创造力的	0
+1	curious	Unit1_1	14	adj.好奇的	0
+2	energetic	Unit1_2	14	adj.精力充沛的	0
+2	modest	Unit1_2	14	adj.谦虚的	0
+2	organized	Unit1_2	14	adj.有条理的	0
+2	order	Unit1_2	14	n.顺序	1
+2	keep ... in order	Unit1_2	14	使...保持井然有序	1
+3	show off	Unit1_3	14	炫耀	1
+3	grammar	Unit1_3	14	n.语法	1
+3	come up with	Unit1_3	14	想出	1
+3	neither	Unit1_3	14	adv.两者之一不	1
+3	nor	Unit1_3	14	conj.也不	1
+4	neither ... nor ...	Unit1_4	14	既不...也不...	1
+4	accountant	Unit1_4	14	n.会计	0
+4	born	Unit1_4	14	adj.天生的	1
+4	impress	Unit1_4	14	vt.给...留下印象	0
+4	sculpture	Unit1_4	14	n.雕塑	0
+5	praise	Unit1_5	14	vt.赞扬	1
+5	sales department	Unit1_5	14	销售部	0
+5	general	Unit1_5	14	adj.总的	1
+5	race	Unit1_5	14	n.竞赛	1
+5	either ... or ...	Unit1_5	14	不是...就是...	1
+6	lead	Unit1_6	14	v.领先地位	1
+6	take the lead	Unit1_6	14	处于领先地位	1
+6	fall behind	Unit1_6	14	落后	1
+6	challenge	Unit1_6	14	n.挑战	0
+6	chief	Unit1_6	14	adj.主要的	0
+7	high-speed	Unit1_7	14	adj.高速的	1
+7	connect	Unit1_7	14	vt.连接	1
+7	connect to	Unit1_7	14	与...相连	1
+7	miss	Unit1_7	14	n.过失	1
+7	as good as	Unit1_7	14	和...几乎一样	1
+8	attention	Unit1_8	14	n.注意	1
+8	pay attention to	Unit1_8	14	注意	1
+8	standard	Unit1_8	14	n.标准	1
+8	pioneer	Unit1_8	14	n.先锋	1
+8	surgeon	Unit1_8	14	n.外科大夫	0
+9	carelessness	Unit1_9	14	n.粗心	1
+9	extra	Unit1_9	14	adj.额外的	0
+9	devote	Unit1_9	14	vt.把...贡献	0
+9	respect	Unit1_9	14	vt.尊敬	0
+9	suitable	Unit1_9	14	adj.合适的	0
+10	partner	Unit1_10	14	n.搭档	0
+10	impatient	Unit1_10	14	adj.不耐烦的	1
+10	think twice about sth	Unit1_10	14	三思而行	1
+10	do the dishes	Unit1_10	14	洗碗	1
+10	lunar	Unit1_10	14	adj.月球的	0
+11	calendar	Unit1_11	14	n.日历	1
+11	animal sign	Unit1_11	14	生肖	1
+11	represent	Unit1_11	14	vt.代表	0
+11	appear	Unit1_11	14	vi.出现	1
+11	fixed	Unit1_11	14	adj.固定的	1
+12	cycle	Unit1_12	14	n.循环	0
+12	powerful	Unit1_12	14	adj.强大的	0
+12	lively	Unit1_12	14	adj.活泼的	1
+12	practical	Unit1_12	14	adj.实际的	0
+12	loyal	Unit1_12	14	adj.忠诚的	0
+13	in all	Unit1_13	14	总共	1
+13	star sign	Unit1_13	14	星座	1
+13	divide	Unit1_13	14	vt.分开	1
+13	divide ... into ...	Unit1_13	14	把...分成...	1
+13	shape	Unit1_13	14	n.使成形	1
+14	speech	Unit1_14	14	n.演说	1
+14	monitor	Unit1_14	14	n.班长	0
+14	position	Unit1_14	14	n.位置	0
+14	agree with sb	Unit1_14	14	同意某人	1
+15	indigo	Unit2_1	10	n.靛蓝	0
+15	violet	Unit2_1	10	n.紫罗兰色	0
+15	rainbow	Unit2_1	10	n.彩虹	0
+15	mood	Unit2_1	10	n.心情	0
+15	influence	Unit2_1	10	vt.影响	1
+16	whether	Unit2_2	10	conj.是否	1
+16	characteristic	Unit2_2	10	n.特征	0
+16	calm	Unit2_2	10	adj.平静的	0
+16	relaxed	Unit2_2	10	adj.放松的	0
+16	peace	Unit2_2	10	n.安宁	1
+17	sadness	Unit2_3	10	n.悲哀	1
+17	purity	Unit2_3	10	n.纯浩	0
+17	wedding	Unit2_3	10	n.婚礼	0
+17	prefer	Unit2_3	10	vt.更喜欢	0
+17	create	Unit2_3	10	vt.创造	1
+18	feeling	Unit2_4	10	n.感受	1
+18	cheer up	Unit2_4	10	使振作起来	1
+18	remind	Unit2_4	10	v.提醒	0
+18	wisdom	Unit2_4	10	n.智慧	0
+18	as	Unit2_4	10	adv.因为	1
+19	envy	Unit2_5	10	conj.妒忌	0
+19	green with envy	Unit2_5	10	妒忌的	0
+19	require	Unit2_5	10	v.要求	1
+19	strength	Unit2_5	10	n.力量	0
+19	heat	Unit2_5	10	n.热	1
+20	difficulty	Unit2_6	10	n.困难	1
+20	have difficulty in doing sth	Unit2_6	10	做某事费劲	1
+20	decision	Unit2_6	10	n.决定	1
+20	relationship	Unit2_6	10	n.关系	1
+20	certainly	Unit2_6	10	adv.必定地	1
+21	everyday	Unit2_7	10	adj.每天的	1
+21	personal	Unit2_7	10	adj.个人的	1
+21	suit	Unit2_7	10	v.适合	0
+21	celebration	Unit2_7	10	n.庆祝	0
+21	ancient	Unit2_7	10	adj.古老的	1
+22	therapy	Unit2_8	10	n.疗法	0
+22	discover	Unit2_8	10	vt.发现	1
+22	teens	Unit2_8	10	n.[复]十几岁	0
+22	promise	Unit2_8	10	v.承诺	1
+22	or	Unit2_8	10	conj.否则	1
+23	work	Unit2_9	10	vi.奏效	1
+23	practise	Unit2_9	10	v.从事；练习	1
+23	stressed	Unit2_9	10	adj.紧张的	0
+23	suggest	Unit2_9	10	vt.建议	1
+23	would rather	Unit2_9	10	宁愿	1
+24	trust	Unit2_10	10	n.信任	1
+24	calm	Unit2_10	10	adj.平静	0
+24	warmth	Unit2_10	10	n.温暧	0
+24	handbag	Unit2_10	10	n.手提包	1
+24	match	Unit2_10	10	v.相配	1
+24	balance	Unit2_10	10	vt.使...平衡	1
+25	teenage	Unit3_1	10	adj.青少年的	0
+25	mark	Unit3_1	10	n.分数	1
+25	mad	Unit3_1	10	adj.发疯的	1
+25	drive sb mad	Unit3_1	10	使人受不了	1
+25	exam	Unit3_1	10	n.考试	0
+26	perhaps	Unit3_2	10	adv.可能	1
+26	deal	Unit3_2	10	v.处理	1
+26	deal with	Unit3_2	10	处理	1
+26	choice	Unit3_2	10	n.选择	1
+26	but	Unit3_2	10	conj.除...外	1
+27	stay up	Unit3_3	10	熬夜	1
+27	awake	Unit3_3	10	adj.醒着的	1
+27	hardly	Unit3_3	10	adv.几乎不	1
+27	imagine	Unit3_3	10	vt.想象	1
+27	doubt	Unit3_3	10	n.怀疑	1
+28	worth	Unit3_4	10	adj.值得	1
+28	be worth doing sth	Unit3_4	10	值得做某事	1
+28	suggestion	Unit3_4	10	n.建议	1
+28	cause	Unit3_4	10	n.原因	1
+28	strict	Unit3_4	10	adj.严格的	1
+29	be strict with sb	Unit3_5	10	对某人要求严格	1
+29	stay out	Unit3_5	10	待在户外	1
+29	schoolwork	Unit3_5	10	课业	1
+29	valuable	Unit3_5	10	adj.宝贵的	1
+29	friendship	Unit3_5	10	n.友谊	1
+30	list	Unit3_6	10	n.清单	1
+30	work out	Unit3_6	10	算出	1
+30	according to	Unit3_6	10	根据	1
+30	whom	Unit3_6	10	pron.谁	1
+30	silence	Unit3_6	10	n.安静	1
+31	worry	Unit3_7	10	n.担心	1
+31	method	Unit3_7	10	n.方法	1
+31	solve	Unit3_7	10	v.解决	1
+31	dictionary	Unit3_7	10	n.字典	1
+31	youth worker	Unit3_7	10	青少年辅导员	0
+32	reply	Unit3_8	10	vt.答复	1
+32	chemistry	Unit3_8	10	n.化学	1
+32	laugh at	Unit3_8	10	嘲笑	1
+32	bookworm	Unit3_8	10	n.书虫	0
+32	progress	Unit3_8	10	n.进步	1
+33	worried	Unit3_9	10	adj.担心的	1
+33	go over	Unit3_9	10	复习	1
+33	aloud	Unit3_9	10	adv.大声地	1
+33	pronounce	Unit3_9	10	vt.发音	1
+33	correctly	Unit3_9	10	adv.正确地	1
+34	pronunciation	Unit3_10	10	n.发音	1
+34	mention	Unit3_10	10	vt.提及	1
+34	don't mention it	Unit3_10	10	不客气	1
+34	stress	Unit3_10	10	n.精神压力	0
+34	be of sb's age	Unit3_10	10	与...同龄的	1
+35	on one's mind	Unit4_1	12	挂在心上	1
+35	time	Unit4_1	12	n.时期	1
+35	whenever	Unit4_1	12	adv.无论何时	1
+35	through	Unit4_1	12	prep.以	1
+35	as soon as	Unit4_1	12	—...就	1
+36	deal	Unit4_2	12	n.很多	1
+36	a great deal of	Unit4_2	12	大量	1
+36	junior high	Unit4_2	12	<美>初级中学	0
+36	try out for sth	Unit4_2	12	参加...选拔	1
+36	lose heart	Unit4_2	12	泄气	1
+37	score	Unit4_3	12	v.&n.得分	1
+37	senior high	Unit4_3	12	髙级中学	0
+37	stand	Unit4_3	12	n.看台	0
+37	change one's mind	Unit4_3	12	改变主意	1
+37	leader	Unit4_3	12	n.领导者	1
+38	name	Unit4_4	12	v.命名	1
+38	university	Unit4_4	12	n.大学	1
+38	simply	Unit4_4	12	adv.仅仅	1
+38	junior college	Unit4_4	12	n.两年制专科学校	0
+38	national	Unit4_4	12	adj.国家的	1
+39	championship	Unit4_5	12	n.锦标赛	0
+39	succeed	Unit4_5	12	vt.成功	1
+39	succeed in doing sth	Unit4_5	12	成功地做某事	1
+39	scholarship	Unit4_5	12	n.奖学金	0
+39	although	Unit4_5	12	conj.尽管	1
+40	graduate	Unit4_6	12	vt.毕业	0
+40	force	Unit4_6	12	n.&v.强迫	1
+40	league	Unit4_6	12	n.联盟	0
+40	remain	Unit4_6	12	v.保持不变	1
+40	take notice of	Unit4_6	12	注意	1
+41	achievement	Unit4_7	12	n.成就	1
+41	prove	Unit4_7	12	v.证明	0
+41	matter	Unit4_7	12	n.要紧	1
+41	career	Unit4_7	12	n.生涯	0
+41	against	Unit4_7	12	prep.与...相反	1
+42	break out	Unit4_8	12	爆发	1
+42	record	Unit4_8	12	n.记录	1
+42	symbol	Unit4_8	12	n.象征	0
+42	victory	Unit4_8	12	n.胜利	1
+42	spirit	Unit4_8	12	n.将神	1
+43	Jew	Unit4_9	12	n.犹太人	0
+43	go into hiding	Unit4_9	12	躲藏起来	1
+43	Nazi	Unit4_9	12	adj.纳粹的	0
+43	die of	Unit4_9	12	死于	1
+43	German	Unit4_9	12	n&adj.德国的	1
+44	Nazi	Unit4_10	12	n.纳粹分子	0
+44	thought	Unit4_10	12	n.想法	1
+44	survive	Unit4_10	12	vt.幸存	0
+44	admire	Unit4_10	12	vt.钦佩	0
+44	courage	Unit4_10	12	n.勇气	1
+45	in fear of one's life	Unit4_11	12	为生命安全担扰	1
+45	unusual	Unit4_11	12	adj.不寻常的	1
+45	cell	Unit4_11	12	n.细胞	0
+45	cancer	Unit4_11	12	n.癌症	0
+46	surprise	Unit4_12	12	vt.惊奇	1
+46	to one's surprise	Unit4_12	12	令某人惊奇的是	1
+46	research	Unit4_12	12	n.研究	1
+46	death	Unit4_12	12	n.死	0
+47	pleasant	Unit5_1	11	adj.令人愉快的	0
+47	drama	Unit5_1	11	n.戏剧	0
+47	photography	Unit5_1	11	n.照相术	0
+47	art form	Unit5_1	11	艺术形式	1
+47	pop	Unit5_1	11	n.流行音乐	1
+48	musical	Unit5_2	11	adj.音乐的	0
+48	talent	Unit5_2	11	n.天赋	0
+48	boundary	Unit5_2	11	n.边界	0
+48	medal	Unit5_2	11	n.奖牌	0
+48	present	Unit5_2	11	n.颁发	1
+49	winner	Unit5_3	11	n.获胜者	1
+49	composer	Unit5_3	11	n.作曲家	0
+49	central	Unit5_3	11	adj.中心的	1
+49	instrument	Unit5_3	11	n.乐器	1
+49	common	Unit5_3	11	adj.常见的	1
+50	object	Unit5_4	11	n.物品	1
+50	stone	Unit5_4	11	n.石头	1
+50	musician	Unit5_4	11	n.音乐家	1
+50	be famous for	Unit5_4	11	因...而著名	1
+50	be known for	Unit5_4	11	因...广为所知	0
+51	control	Unit5_5	11	n.&v.控制	1
+51	flow	Unit5_5	11	vi.流动	0
+51	successfully	Unit5_5	11	adv.成功地	1
+51	traditional	Unit5_5	11	adj.传统的	1
+51	bell	Unit5_5	11	n.铃	1
+52	though	Unit5_6	11	conj.虽然	1
+52	dividing line	Unit5_6	11	分界线	1
+52	highly	Unit5_6	11	adv.高度地	1
+52	breath	Unit5_6	11	n.呼吸	0
+52	out of breath	Unit5_6	11	上气不接下气	0
+53	last	Unit5_7	11	v.持续	1
+53	concert	Unit5_7	11	n.音乐会	1
+53	folk	Unit5_7	11	n.民间音乐	0
+53	country music	Unit5_7	11	乡村音乐	1
+53	jazz	Unit5_7	11	n.爵士乐	0
+54	rock	Unit5_8	11	n.摇滚乐	0
+54	country	Unit5_8	11	n.乡下	1
+54	cowboy	Unit5_8	11	n.牛仔	1
+54	guitar	Unit5_8	11	n.吉他	1
+54	lasting	Unit5_8	11	adj.持久的	1
+55	value	Unit5_9	11	n.价值	1
+55	drum	Unit5_9	11	n.鼓	0
+55	African	Unit5_9	11	n&adj.非洲的	1
+55	American	Unit5_9	11	n.美国人	1
+55	African American	Unit5_9	11	美国黑人	1
+56	make up	Unit5_10	11	编	1
+56	local colour	Unit5_10	11	地方特色	1
+56	tonight	Unit5_10	11	n.今晚	1
+56	literature	Unit5_10	11	n.文学	0
+56	praise	Unit5_10	11	vt.赞扬	1
+57	gift	Unit5_11	11	n.天赋	1
+57	have a gift for	Unit5_11	11	对...有天赋	1
+57	mark	Unit5_11	11	n.污点	1
+57	have a gift for	Unit5_11	11	对...有天赋	1
+58	done	Unit6_1	9	完毕	1
+58	chat show	Unit6_1	9	访谈节目	1
+58	comedy	Unit6_1	9	n.喜剧	0
+58	documentary	Unit6_1	9	n.记录片	0
+58	drama series	Unit6_1	9	系列剧	0
+59	game show	Unit6_2	9	游戏表演	1
+59	real-life	Unit6_2	9	真实生活的	1
+59	dialogue	Unit6_2	9	n.对话	1
+59	round-up	Unit6_2	9	概要	0
+59	up-to-date	Unit6_2	9	adj.最新的	1
+60	fan	Unit6_3	9	n.迷	1
+60	a number of	Unit6_3	9	一些	1
+60	coming	Unit6_3	9	adj.即将来临的	1
+60	cover	Unit6_3	9	vt.报道	1
+60	live	Unit6_3	9	n.现场直播	1
+61	Asian	Unit6_4	9	n&adj.亚洲的	1
+61	vote	Unit6_4	9	v.投票	0
+61	music video	Unit6_4	9	音乐视频	1
+61	announce	Unit6_4	9	vt.宣布	0
+61	text message	Unit6_4	9	短信	1
+62	murder	Unit6_5	9	vt.谋杀	0
+62	murderer	Unit6_5	9	n.杀人犯	0
+62	horror	Unit6_5	9	n.恐怖	0
+62	direct	Unit6_5	9	v.导演	1
+62	director	Unit6_5	9	n.导演	1
+63	wealthy	Unit6_6	9	adj.富有的	1
+63	mystery	Unit6_6	9	n.神秘	0
+63	might	Unit6_6	9	aux.可能	1
+63	scared	Unit6_6	9	adj.害怕	0
+63	unless	Unit6_6	9	conj.除非	1
+64	animal-lover	Unit6_7	9	n.喜欢动物的人	1
+64	scene	Unit6_7	9	n.景象	0
+64	latest	Unit6_7	9	adj.最新的	1
+64	record	Unit6_7	9	n.录制	1
+64	attack	Unit6_7	9	vt.攻击	0
+65	polar bear	Unit6_8	9	北极熊	0
+65	male	Unit6_8	9	adj.雄性的	0
+65	studio	Unit6_8	9	n.摄影棚	0
+65	minibus	Unit6_8	9	n.小型公共汽车	0
+65	view	Unit6_8	9	n.观看	0
+66	silly	Unit6_9	9	adj.傻的	1
+66	waste	Unit6_9	9	vt.浪费	1
+66	twin	Unit6_9	9	n.双胞胎之一	0
+66	burglar	Unit6_9	9	n.入室窃贼	0
+66	gun	Unit6_9	9	n.枪	1
+67	superstar	Unit7_1	11	n.超级明星	0
+67	in your dreams	Unit7_1	11	你做梦	1
+67	so ... that	Unit7_1	11	如此...以至于	1
+67	action film	Unit7_1	11	动作片	1
+67	romantic	Unit7_1	11	adj.浪漫的	0
+68	science fiction	Unit7_2	11	科幻电影	0
+68	western	Unit7_2	11	n.西部电影	1
+68	industry	Unit7_2	11	n.工业	1
+68	such ... that	Unit7_2	11	如此...以至于	1
+68	storyteller	Unit7_2	11	n.讲故事的人	1
+69	script	Unit7_3	11	n.剧本	0
+69	all-time	Unit7_3	11	adj.一向的	1
+69	actress	Unit7_3	11	n.女演员	1
+69	loss	Unit7_3	11	n.丧失	0
+69	humanitarian	Unit7_3	11	n.人道主义者	0
+70	ballet	Unit7_4	11	n.芭蕾舞	0
+70	dancer	Unit7_4	11	n.舞蹈者	1
+70	charm	Unit7_4	11	n.魅力	0
+70	catch one's attention	Unit7_4	11	吸引某人的注意	1
+70	insist	Unit7_4	11	vt.坚持	0
+71	lead	Unit7_5	11	v.主角	1
+71	role	Unit7_5	11	n.角色	1
+71	base	Unit7_5	11	n.以...为基础	0
+71	major	Unit7_5	11	adj.主要的	0
+71	mark	Unit7_5	11	n.&v.标志	1
+72	play the role of	Unit7_6	11	扮演...的角色	1
+72	princess	Unit7_6	11	n.公主	0
+72	lifetime	Unit7_6	11	n.终身	1
+72	nomination	Unit7_6	11	n.提名	0
+72	final	Unit7_6	11	adj.最终的	1
+73	appearance	Unit7_7	11	n.出现	0
+73	angel	Unit7_7	11	n.天使	0
+73	beyond	Unit7_7	11	prep.超出	0
+73	effort	Unit7_7	11	n.努力	0
+73	pass away	Unit7_7	11	去世	1
+74	peacefully	Unit7_8	11	adv.宁静地	1
+74	Attractive	Unit7_8	11	adj.有吸引力的	0
+74	rush hour	Unit7_8	11	交通高峰期	1
+74	park	Unit7_8	11	v.停车	1
+74	car park	Unit7_8	11	停车场	1
+75	row	Unit7_9	11	n.一排	1
+75	amazed	Unit7_9	11	adj.大为惊奇	0
+75	mistake	Unit7_9	11	n.误以为	1
+75	mistake ... for ...	Unit7_9	11	把...误认为...	1
+75	kung fu	Unit7_9	11	n.功夫	1
+76	DVD	Unit7_10	11	n.数码影碟	1
+76	actor	Unit7_10	11	n.演员	1
+76	dinosaur	Unit7_10	11	n.恐龙	0
+76	fall in love with sb	Unit7_10	11	爱上某人	1
+76	special offer	Unit7_10	11	特价优惠	1
+77	cancel	Unit7_11	11	vt.取消	1
+77	neither	Unit7_11	11	conj.也不	1
+77	stupid	Unit7_11	11	adj.愚蠢的	1
+77	stuntman	Unit7_11	11	n.特技替身演员	0
+77	consider	Unit7_11	11	vt.考虑	1
+78	detective	Unit8_1	12	n.侦探	0
+78	clue	Unit8_1	12	n.线索	0
+78	missing	Unit8_1	12	adj.缺少的	1
+78	murder	Unit8_1	12	vt.谋杀	0
+78	suspect	Unit8_1	12	vt.犯罪嫌疑人	0
+79	medium	Unit8_2	12	adj.中等的	0
+79	untidy	Unit8_2	12	adj.不整洁的	1
+79	guilty	Unit8_2	12	adj.有罪的	0
+79	truth	Unit8_2	12	n.事实	1
+79	guess	Unit8_2	12	v.&n.猜	1
+80	lie	Unit8_3	12	n.&v.说谎	1
+80	confirm	Unit8_3	12	v.证实	0
+80	victim	Unit8_3	12	n.受害者	0
+80	crime	Unit8_3	12	n.犯罪活动	0
+80	somewhere	Unit8_3	12	adv.在某处	1
+81	contact	Unit8_4	12	v.联系	0
+81	wound	Unit8_4	12	v.使...受伤	1
+81	bleed	Unit8_4	12	vi.流血	0
+81	enemy	Unit8_4	12	n.仇人	1
+81	single	Unit8_4	12	adj.单身的	1
+82	well-paid	Unit8_5	12	adj.收入高的	0
+82	charge	Unit8_5	12	n.指控	0
+82	break into	Unit8_5	12	强行闯入	1
+82	system	Unit8_5	12	n.系统	0
+82	suppose	Unit8_5	12	vt.假定	1
+83	only	Unit8_6	12	adv.仅有的	1
+83	witness	Unit8_6	12	n.目击者	0
+83	report	Unit8_6	12	vt.报告	1
+83	breathe	Unit8_6	12	vi.呼吸	0
+83	heavily	Unit8_6	12	adv.沉重地	1
+84	reward	Unit8_7	12	n.报酬	0
+84	arrest	Unit8_7	12	n.逮捕	0
+84	couple	Unit8_7	12	n.夫妇	1
+84	fingerprint	Unit8_7	12	n.指纹	0
+84	probably	Unit8_7	12	adv.大概	1
+85	criminal	Unit8_8	12	adj.犯罪的	0
+85	female	Unit8_8	12	adj.女性的	0
+85	boss	Unit8_8	12	n.老板	1
+85	commit	Unit8_8	12	v.犯罪	0
+85	turn out	Unit8_8	12	原来是	1
+86	have nothing to do with	Unit8_9	12	与...无关	1
+86	hurry	Unit8_9	12	n.&v.急忙	1
+86	in a hurry	Unit8_9	12	急忙	1
+86	kidnapping	Unit8_9	12	n.绑架	0
+86	wealth	Unit8_9	12	n.财富	1
+87	prison	Unit8_10	12	n.监狱	0
+87	in prison	Unit8_10	12	坐牢	0
+87	kidnap	Unit8_10	12	v.绑架	0
+87	safety	Unit8_10	12	n.安全	1
+87	lock	Unit8_10	12	n.锁	1
+88	shut	Unit8_11	12	n.关上	1
+88	guard	Unit8_11	12	vt.&n.守卫	1
+88	guard against sth	Unit8_11	12	防范	1
+88	necklace	Unit8_11	12	n.项链	0
+89	theft	Unit8_12	12	n.偷窃	0
+89	get along with	Unit8_12	12	与...和睦相处	1
+89	jewellery	Unit8_12	12	n.[总称]珠宝	0
+89	steal	Unit8_12	12	vt.偷	1

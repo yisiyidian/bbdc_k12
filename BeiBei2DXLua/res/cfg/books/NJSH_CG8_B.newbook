@@ -1,238 +1,238 @@
-1	average	Unit1_1	4	adj.平均的	1
-1	item	Unit1_1	4	n.一件物品	1
-1	product	Unit1_1	4	n.产品	1
-2	fighter	Unit1_2	4	n.战士	1
-2	fact	Unit1_2	4	n.事实	1
-2	scientist	Unit1_2	4	n.科学家	1
-2	interested	Unit1_2	4	adj.感兴趣的	1
-2	be interested in	Unit1_2	4	对...感兴趣	1
-2	notebook	Unit1_2	4	n.笔记本	1
-2	suppose	Unit1_2	4	vt.认为	1
-2	breathe	Unit1_2	4	vi.呼吸	1
-2	pure	Unit1_2	4	adj.纯净的	1
-2	gas	Unit1_2	4	n.气体	1
-2	release	Unit1_2	4	n.氧	0
-3	hectare	Unit1_3	4	n.公顷	0
-3	produce	Unit1_3	4	vt.产生	1
-3	alive	Unit1_3	4	adj.活着	1
-3	as well as	Unit1_3	4	也	1
-3	natural	Unit1_3	4	adj.自然的	1
-3	air conditioner	Unit1_3	4	空调	0
-3	warn	Unit1_3	4	vt.&n.警告	1
-3	protect	Unit1_3	4	v.保护	1
-3	chemical	Unit1_3	4	n.化学品	1
-3	nasty	Unit1_3	4	adj.令人厌恶的	0
-3	join	Unit1_3	4	v.连接	1
-4	communicate	Unit1_4	4	vi.沟通	1
-4	one another	Unit1_4	4	互相	1
-4	burn	Unit1_4	4	vt.烧毁	1
-4	replace	Unit1_4	4	vt.替换	1
-4	hardly	Unit1_4	4	adv.几乎不	1
-4	destroy	Unit1_4	4	vt.摧毁	1
-4	exchange	Unit1_4	4	vt.交流	1
-4	nature	Unit1_4	4	n.大自然	1
-4	main	Unit1_4	4	adj.主要的	1
-4	lorry	Unit1_4	4	n.卡车	1
-5	daily	Unit2_1	3	adv.每天	1
-5	amount	Unit2_1	3	n.数量	1
-5	increase	Unit2_1	3	v.增加	1
-5	remain	Unit2_1	3	v.保持不变	1
-5	symbol	Unit2_1	3	n.符号	1
-5	washbasin	Unit2_1	3	n.洗脸盆	1
-5	vanish	Unit2_1	3	vi.突然消失	0
-5	drain	Unit2_1	3	n.下水道	0
-5	impatient	Unit2_1	3	adj.不耐烦的	0
-5	obey	Unit2_1	3	vt.服从	1
-5	faint	Unit2_1	3	adj.微弱的	0
-6	float	Unit2_2	3	v.漂	1
-6	comfortably	Unit2_2	3	adv.舒服地	1
-6	relax	Unit2_2	3	vi.休息	1
-6	clean up	Unit2_2	3	净化	1
-6	puzzled	Unit2_2	3	adj.困惑	0
-6	treatment	Unit2_2	3	n.处理加工	1
-6	works	Unit2_2	3	n.工厂	1
-6	thorough	Unit2_2	3	adj.彻底的	1
-6	cleaning	Unit2_2	3	n.清洁	1
-6	pipe	Unit2_2	3	n.管道	1
-6	until	Unit2_2	3	prep.直到...为止	1
-7	sewage	Unit2_3	3	n.污水	0
-7	sewage plant	Unit2_3	3	污水处理厂	0
-7	pump	Unit2_3	3	vt.用泵输送	1
-7	precious	Unit2_3	3	adj.宝贵的	0
-7	liquid	Unit2_3	3	n.液体	0
-7	rest	Unit2_3	3	v.&n.休息	1
-7	ordinary	Unit2_3	3	adj.普通的	1
-7	manufacture	Unit2_3	3	vt.大量生产	1
-7	equipment	Unit2_3	3	n.器材	1
-7	tool	Unit2_3	3	n.工具	1
-7	chart	Unit2_3	3	n.图表	1
-8	servant	Unit3_1	3	n.仆人	1
-8	electricity	Unit3_1	3	n.电	1
-8	trick	Unit3_1	3	n.哄骗	1
-8	foolish	Unit3_1	3	adj.愚蠢的	1
-8	wire	Unit3_1	3	n.金属丝	1
-8	meter	Unit3_1	3	n.计量表	0
-8	measure	Unit3_1	3	v.测量	1
-8	bill	Unit3_1	3	n.账单	1
-8	monthly	Unit3_1	3	adv.每月一次	1
-8	in a way	Unit3_1	3	在某种程度上	1
-8	explanation	Unit3_1	3	n.解释	1
-9	careful	Unit3_2	3	adj.小心的	1
-9	be careful with	Unit3_2	3	小心对待	1
-9	scratch	Unit3_2	3	vt.挠	0
-9	invisible	Unit3_2	3	adj.看不见的	0
-9	bulb	Unit3_2	3	n.电灯泡	0
-9	connect to	Unit3_2	3	连接	1
-9	bury	Unit3_2	3	vt.埋藏	0
-9	power station	Unit3_2	3	发电厂	1
-9	politely	Unit3_2	3	adv.有礼貌地	1
-9	grin	Unit3_2	3	n.&v.露齿而笑	0
-9	contain	Unit3_2	3	vt.包含	1
-10	clear	Unit3_3	3	adj.明白清楚的	1
-10	iron	Unit3_3	3	n.熨斗	1
-10	switch	Unit3_3	3	v.开或关	1
-10	off	Unit3_3	3	adv.不连接	1
-10	switch off	Unit3_3	3	关（电灯等）	1
-10	lock	Unit3_3	3	vt.锁上	1
-10	test	Unit3_3	3	n.&v.试验	1
-10	encourage	Unit3_3	3	v.鼓励	1
-10	behave	Unit3_3	3	vt.表现	1
-10	polite	Unit3_3	3	adj.有礼貌的	1
-10	staff	Unit3_3	3	n.全体职工	1
-10	customer	Unit3_3	3	n.顾客	1
-11	passage	Unit4_1	4	n.章节	1
-11	term	Unit4_1	4	n.学期	1
-11	publish	Unit4_1	4	vt.出版	1
-11	elect	Unit4_1	4	v.选举	1
-11	chief	Unit4_1	4	adj.主要的	1
-11	editor	Unit4_1	4	n.编辑	0
-11	suggest	Unit4_1	4	vt.建议	1
-11	experience	Unit4_1	4	n.经验	1
-11	take charge of	Unit4_1	4	主观	1
-11	ought to	Unit4_1	4	应该	1
-12	talk ... over	Unit4_2	4	详谈	1
-12	reader	Unit4_2	4	n.读者	1
-12	consider	Unit4_2	4	vt.仔细考虑	1
-12	briefly	Unit4_2	4	adv.短暂地	1
-12	whether	Unit4_2	4	conj.是否	1
-12	a bit	Unit4_2	4	有点	1
-12	decision	Unit4_2	4	n.决定	1
-12	make a decision	Unit4_2	4	做出决定	1
-12	conclude	Unit4_2	4	vt.结束	0
-12	monitor	Unit4_2	4	n.班长	1
-13	choice	Unit4_3	4	n.入选者	1
-13	agree on	Unit4_3	4	一致同意	1
-13	youth	Unit4_3	4	n.青年	1
-13	in all	Unit4_3	4	总共	1
-13	talent	Unit4_3	4	n.天才	1
-13	gather	Unit4_3	4	vt.聚集	1
-13	congratulation	Unit4_3	4	n.祝贺	1
-13	deserve	Unit4_3	4	vt.值得	1
-13	delighted	Unit4_3	4	adj.高兴的	1
-14	shame	Unit4_4	4	n.羞耻	1
-14	record	Unit4_4	4	n.&v.记录	1
-14	president	Unit4_4	4	n.总统	1
-14	team	Unit4_4	4	n.队	1
-14	design	Unit4_4	4	vt.设计	1
-14	feature	Unit4_4	4	n.专题特写	1
-14	complain	Unit4_4	4	vi.抱怨	1
-14	committee	Unit4_4	4	n.委员会	1
-14	prize	Unit4_4	4	n.奖品	1
-15	sight	Unit5_1	3	n.视力	1
-15	soul	Unit5_1	3	n.灵魂	1
-15	balance	Unit5_1	3	n.平衡能力	1
-15	line	Unit5_1	3	n.线条	1
-15	belong to	Unit5_1	3	属于	1
-15	drama	Unit5_1	3	n.戏剧性事件	1
-15	as soon as	Unit5_1	3	一...就	1
-15	reception	Unit5_1	3	n.接待处	0
-15	exclaim	Unit5_1	3	v.呼喊	0
-15	bark	Unit5_1	3	n.吠叫	0
-15	at once	Unit5_1	3	立刻马上	1
-16	guest	Unit5_2	3	n.客人	1
-16	lead	Unit5_2	3	v.带领	1
-16	personally	Unit5_2	3	adv.亲自	1
-16	sensible	Unit5_2	3	adj.明智的	0
-16	describe	Unit5_2	3	vt.描述	1
-16	alarm	Unit5_2	3	n.警报器	1
-16	fire alarm	Unit5_2	3	火警报警器	1
-16	go off	Unit5_2	3	突然发出巨响	1
-16	surface	Unit5_2	3	n.表面	1
-16	dead	Unit5_2	3	adj.不运作的	0
-16	cough	Unit5_2	3	n.&v.咳嗽	1
-17	seem	Unit5_3	3	vi.好像	1
-17	wave	Unit5_3	3	v.挥手	1
-17	save one's life	Unit5_3	3	挽救某人的性命	1
-17	lend	Unit5_3	3	vt.借出	1
-17	event	Unit5_3	3	n.重要事情	1
-17	take care	Unit5_3	3	小心	1
-17	mind	Unit5_3	3	v.介意	1
-17	look out	Unit5_3	3	当心	1
-17	watch out	Unit5_3	3	留神	1
-17	label	Unit5_3	3	n.标签	1
-17	harbour	Unit5_3	3	n.港口	1
-18	defeat	Unit6_1	3	vt.击败	1
-18	wine	Unit6_1	3	n.葡萄酒	1
-18	adult	Unit6_1	3	n.成年人	1
-18	France	Unit6_1	3	n.法国	0
-18	now that	Unit6_1	3	既然	1
-18	abroad	Unit6_1	3	adv.在国外	1
-18	Paris	Unit6_1	3	n.巴黎	0
-18	destination	Unit6_1	3	n.目的地	0
-18	world-famous	Unit6_1	3	adj.举世闻名的	1
-18	landmark	Unit6_1	3	n.地标	1
-18	such as	Unit6_1	3	例如	1
-19	tree-lined	Unit6_2	3	adj.绿树成行的	1
-19	attraction	Unit6_2	3	n.有吸引力的事物	1
-19	go on to do sth	Unit6_2	3	接着做另一事	1
-19	enable	Unit6_2	3	v.使能够	1
-19	agricultural	Unit6_2	3	adj.农业的	0
-19	region	Unit6_2	3	n.地区	1
-19	wheat	Unit6_2	3	n.小麦	0
-19	sunflower	Unit6_2	3	n.向日葵	1
-19	vineyard	Unit6_2	3	n.葡萄园	0
-19	excellent	Unit6_2	3	adj.优秀的	1
-19	scenic	Unit6_2	3	adj.风景优美的	0
-20	castle	Unit6_3	3	n.城堡	1
-20	queen	Unit6_3	3	n.女王	1
-20	influence	Unit6_3	3	vt.影响	1
-20	in some ways	Unit6_3	3	在某些方面	1
-20	French	Unit6_3	3	adj.法国的	0
-20	cheese	Unit6_3	3	n.奶酪	1
-20	leader	Unit6_3	3	n.领导者	1
-20	culture	Unit6_3	3	n.文化	1
-20	further	Unit6_3	3	adj.使...进一步	0
-20	concert	Unit6_3	3	n.音乐会	1
-20	throughout	Unit6_3	3	adv.各处	1
-20	level	Unit6_3	3	n.楼层	1
-21	site	Unit7_1	3	n.建筑工地	1
-21	at work	Unit7_1	3	在工作	1
-21	crane	Unit7_1	3	n.起重机	0
-21	narrow	Unit7_1	3	adj.狭窄的	1
-21	plank	Unit7_1	3	n.板条	0
-21	scared	Unit7_1	3	adj.害怕	0
-21	verse	Unit7_1	3	n.诗节	0
-21	on one's own	Unit7_1	3	独立地	1
-21	pleased	Unit7_1	3	adj.高兴的	1
-21	be pleased with	Unit7_1	3	对...感到高兴，满意	1
-22	attention	Unit7_2	3	n.注意力	0
-22	pay attention to	Unit7_2	3	注意	0
-22	scold	Unit7_2	3	v.训斥	0
-22	detention	Unit7_2	3	n.放学后留校	0
-22	chat	Unit7_2	3	vt.闲聊	0
-22	alone	Unit7_2	3	adj.&adv.独自	1
-22	author	Unit7_2	3	n.作者	1
-22	pretend	Unit7_2	3	vt.假装	1
-22	score	Unit7_2	3	n.评分	1
-22	thank goodness	Unit7_2	3	谢天谢地	1
-23	concern	Unit7_3	3	vt.&n.关切	1
-23	accept	Unit7_3	3	vt.接受	1
-23	reject	Unit7_3	3	v.拒绝接受	1
-23	feel like	Unit7_3	3	想做某事	1
-23	express	Unit7_3	3	vt.表达	1
-23	pain	Unit7_3	3	n.疼痛	1
-23	medicine	Unit7_3	3	n.药	1
-23	generous	Unit7_3	3	adj.慷慨的	1
-23	fair	Unit7_3	3	adj.公平的	1
-23	honest	Unit7_3	3	adj.诚实的	1
-23	patient	Unit7_3	3	adj.有耐心的	1
+1	average	Unit1_1	7	adj.平均的	1
+1	item	Unit1_1	7	n.一件物品	1
+1	product	Unit1_1	7	n.产品	1
+2	fighter	Unit1_2	7	n.战士	1
+2	fact	Unit1_2	7	n.事实	1
+2	scientist	Unit1_2	7	n.科学家	1
+2	interested	Unit1_2	7	adj.感兴趣的	1
+2	be interested in	Unit1_2	7	对...感兴趣	1
+3	notebook	Unit1_3	7	n.笔记本	1
+3	suppose	Unit1_3	7	vt.认为	1
+3	breathe	Unit1_3	7	vi.呼吸	1
+3	pure	Unit1_3	7	adj.纯净的	1
+3	gas	Unit1_3	7	n.气体	1
+4	release	Unit1_4	7	n.氧	0
+4	hectare	Unit1_4	7	n.公顷	0
+4	produce	Unit1_4	7	vt.产生	1
+4	alive	Unit1_4	7	adj.活着	1
+4	as well as	Unit1_4	7	也	1
+5	natural	Unit1_5	7	adj.自然的	1
+5	air conditioner	Unit1_5	7	空调	0
+5	warn	Unit1_5	7	vt.&n.警告	1
+5	protect	Unit1_5	7	v.保护	1
+5	chemical	Unit1_5	7	n.化学品	1
+6	nasty	Unit1_6	7	adj.令人厌恶的	0
+6	join	Unit1_6	7	v.连接	1
+6	communicate	Unit1_6	7	vi.沟通	1
+6	one another	Unit1_6	7	互相	1
+6	burn	Unit1_6	7	vt.烧毁	1
+6	replace	Unit1_6	7	vt.替换	1
+7	hardly	Unit1_7	7	adv.几乎不	1
+7	destroy	Unit1_7	7	vt.摧毁	1
+7	exchange	Unit1_7	7	vt.交流	1
+7	nature	Unit1_7	7	n.大自然	1
+7	main	Unit1_7	7	adj.主要的	1
+7	lorry	Unit1_7	7	n.卡车	1
+8	daily	Unit2_1	7	adv.每天	1
+8	amount	Unit2_1	7	n.数量	1
+8	increase	Unit2_1	7	v.增加	1
+8	remain	Unit2_1	7	v.保持不变	1
+8	symbol	Unit2_1	7	n.符号	1
+9	washbasin	Unit2_2	7	n.洗脸盆	1
+9	vanish	Unit2_2	7	vi.突然消失	0
+9	drain	Unit2_2	7	n.下水道	0
+9	impatient	Unit2_2	7	adj.不耐烦的	0
+9	obey	Unit2_2	7	vt.服从	1
+10	faint	Unit2_3	7	adj.微弱的	0
+10	float	Unit2_3	7	v.漂	1
+10	comfortably	Unit2_3	7	adv.舒服地	1
+10	relax	Unit2_3	7	vi.休息	1
+10	clean up	Unit2_3	7	净化	1
+11	puzzled	Unit2_4	7	adj.困惑	0
+11	treatment	Unit2_4	7	n.处理加工	1
+11	works	Unit2_4	7	n.工厂	1
+11	thorough	Unit2_4	7	adj.彻底的	1
+11	cleaning	Unit2_4	7	n.清洁	1
+12	pipe	Unit2_5	7	n.管道	1
+12	until	Unit2_5	7	prep.直到...为止	1
+12	sewage	Unit2_5	7	n.污水	0
+12	sewage plant	Unit2_5	7	污水处理厂	0
+12	pump	Unit2_5	7	vt.用泵输送	1
+13	precious	Unit2_6	7	adj.宝贵的	0
+13	liquid	Unit2_6	7	n.液体	0
+13	rest	Unit2_6	7	v.&n.休息	1
+13	ordinary	Unit2_6	7	adj.普通的	1
+14	manufacture	Unit2_7	7	vt.大量生产	1
+14	equipment	Unit2_7	7	n.器材	1
+14	tool	Unit2_7	7	n.工具	1
+14	chart	Unit2_7	7	n.图表	1
+15	servant	Unit3_1	7	n.仆人	1
+15	electricity	Unit3_1	7	n.电	1
+15	trick	Unit3_1	7	n.哄骗	1
+15	foolish	Unit3_1	7	adj.愚蠢的	1
+15	wire	Unit3_1	7	n.金属丝	1
+16	meter	Unit3_2	7	n.计量表	0
+16	measure	Unit3_2	7	v.测量	1
+16	bill	Unit3_2	7	n.账单	1
+16	monthly	Unit3_2	7	adv.每月一次	1
+16	in a way	Unit3_2	7	在某种程度上	1
+17	explanation	Unit3_3	7	n.解释	1
+17	careful	Unit3_3	7	adj.小心的	1
+17	be careful with	Unit3_3	7	小心对待	1
+17	scratch	Unit3_3	7	vt.挠	0
+17	invisible	Unit3_3	7	adj.看不见的	0
+18	bulb	Unit3_4	7	n.电灯泡	0
+18	connect to	Unit3_4	7	连接	1
+18	bury	Unit3_4	7	vt.埋藏	0
+18	power station	Unit3_4	7	发电厂	1
+18	politely	Unit3_4	7	adv.有礼貌地	1
+19	grin	Unit3_5	7	n.&v.露齿而笑	0
+19	contain	Unit3_5	7	vt.包含	1
+19	clear	Unit3_5	7	adj.明白清楚的	1
+19	iron	Unit3_5	7	n.熨斗	1
+19	switch	Unit3_5	7	v.开或关	1
+20	off	Unit3_6	7	adv.不连接	1
+20	switch off	Unit3_6	7	关（电灯等）	1
+20	lock	Unit3_6	7	vt.锁上	1
+20	test	Unit3_6	7	n.&v.试验	1
+20	encourage	Unit3_6	7	v.鼓励	1
+21	behave	Unit3_7	7	vt.表现	1
+21	polite	Unit3_7	7	adj.有礼貌的	1
+21	staff	Unit3_7	7	n.全体职工	1
+21	customer	Unit3_7	7	n.顾客	1
+22	passage	Unit4_1	8	n.章节	1
+22	term	Unit4_1	8	n.学期	1
+22	publish	Unit4_1	8	vt.出版	1
+22	elect	Unit4_1	8	v.选举	1
+22	chief	Unit4_1	8	adj.主要的	1
+23	editor	Unit4_2	8	n.编辑	0
+23	suggest	Unit4_2	8	vt.建议	1
+23	experience	Unit4_2	8	n.经验	1
+23	take charge of	Unit4_2	8	主观	1
+23	ought to	Unit4_2	8	应该	1
+24	talk ... over	Unit4_3	8	详谈	1
+24	reader	Unit4_3	8	n.读者	1
+24	consider	Unit4_3	8	vt.仔细考虑	1
+24	briefly	Unit4_3	8	adv.短暂地	1
+24	whether	Unit4_3	8	conj.是否	1
+25	a bit	Unit4_4	8	有点	1
+25	decision	Unit4_4	8	n.决定	1
+25	make a decision	Unit4_4	8	做出决定	1
+25	conclude	Unit4_4	8	vt.结束	0
+25	monitor	Unit4_4	8	n.班长	1
+26	choice	Unit4_5	8	n.入选者	1
+26	agree on	Unit4_5	8	一致同意	1
+26	youth	Unit4_5	8	n.青年	1
+26	in all	Unit4_5	8	总共	1
+26	talent	Unit4_5	8	n.天才	1
+27	gather	Unit4_6	8	vt.聚集	1
+27	congratulation	Unit4_6	8	n.祝贺	1
+27	deserve	Unit4_6	8	vt.值得	1
+27	delighted	Unit4_6	8	adj.高兴的	1
+27	shame	Unit4_6	8	n.羞耻	1
+28	record	Unit4_7	8	n.&v.记录	1
+28	president	Unit4_7	8	n.总统	1
+28	team	Unit4_7	8	n.队	1
+28	design	Unit4_7	8	vt.设计	1
+29	feature	Unit4_8	8	n.专题特写	1
+29	complain	Unit4_8	8	vi.抱怨	1
+29	committee	Unit4_8	8	n.委员会	1
+29	prize	Unit4_8	8	n.奖品	1
+30	sight	Unit5_1	7	n.视力	1
+30	soul	Unit5_1	7	n.灵魂	1
+30	balance	Unit5_1	7	n.平衡能力	1
+30	line	Unit5_1	7	n.线条	1
+30	belong to	Unit5_1	7	属于	1
+31	drama	Unit5_2	7	n.戏剧性事件	1
+31	as soon as	Unit5_2	7	一...就	1
+31	reception	Unit5_2	7	n.接待处	0
+31	exclaim	Unit5_2	7	v.呼喊	0
+31	bark	Unit5_2	7	n.吠叫	0
+32	at once	Unit5_3	7	立刻马上	1
+32	guest	Unit5_3	7	n.客人	1
+32	lead	Unit5_3	7	v.带领	1
+32	personally	Unit5_3	7	adv.亲自	1
+32	sensible	Unit5_3	7	adj.明智的	0
+33	describe	Unit5_4	7	vt.描述	1
+33	alarm	Unit5_4	7	n.警报器	1
+33	fire alarm	Unit5_4	7	火警报警器	1
+33	go off	Unit5_4	7	突然发出巨响	1
+33	surface	Unit5_4	7	n.表面	1
+34	dead	Unit5_5	7	adj.不运作的	0
+34	cough	Unit5_5	7	n.&v.咳嗽	1
+34	seem	Unit5_5	7	vi.好像	1
+34	wave	Unit5_5	7	v.挥手	1
+34	save one's life	Unit5_5	7	挽救某人的性命	1
+35	lend	Unit5_6	7	vt.借出	1
+35	event	Unit5_6	7	n.重要事情	1
+35	take care	Unit5_6	7	小心	1
+35	mind	Unit5_6	7	v.介意	1
+36	look out	Unit5_7	7	当心	1
+36	watch out	Unit5_7	7	留神	1
+36	label	Unit5_7	7	n.标签	1
+36	harbour	Unit5_7	7	n.港口	1
+37	defeat	Unit6_1	7	vt.击败	1
+37	wine	Unit6_1	7	n.葡萄酒	1
+37	adult	Unit6_1	7	n.成年人	1
+37	France	Unit6_1	7	n.法国	0
+37	now that	Unit6_1	7	既然	1
+38	abroad	Unit6_2	7	adv.在国外	1
+38	Paris	Unit6_2	7	n.巴黎	0
+38	destination	Unit6_2	7	n.目的地	0
+38	world-famous	Unit6_2	7	adj.举世闻名的	1
+38	landmark	Unit6_2	7	n.地标	1
+39	such as	Unit6_3	7	例如	1
+39	tree-lined	Unit6_3	7	adj.绿树成行的	1
+39	attraction	Unit6_3	7	n.有吸引力的事物	1
+39	go on to do sth	Unit6_3	7	接着做另一事	1
+39	enable	Unit6_3	7	v.使能够	1
+40	agricultural	Unit6_4	7	adj.农业的	0
+40	region	Unit6_4	7	n.地区	1
+40	wheat	Unit6_4	7	n.小麦	0
+40	sunflower	Unit6_4	7	n.向日葵	1
+40	vineyard	Unit6_4	7	n.葡萄园	0
+41	excellent	Unit6_5	7	adj.优秀的	1
+41	scenic	Unit6_5	7	adj.风景优美的	0
+41	castle	Unit6_5	7	n.城堡	1
+41	queen	Unit6_5	7	n.女王	1
+41	influence	Unit6_5	7	vt.影响	1
+42	in some ways	Unit6_6	7	在某些方面	1
+42	French	Unit6_6	7	adj.法国的	0
+42	cheese	Unit6_6	7	n.奶酪	1
+42	leader	Unit6_6	7	n.领导者	1
+42	culture	Unit6_6	7	n.文化	1
+43	further	Unit6_7	7	adj.使...进一步	0
+43	concert	Unit6_7	7	n.音乐会	1
+43	throughout	Unit6_7	7	adv.各处	1
+43	level	Unit6_7	7	n.楼层	1
+44	site	Unit7_1	6	n.建筑工地	1
+44	at work	Unit7_1	6	在工作	1
+44	crane	Unit7_1	6	n.起重机	0
+44	narrow	Unit7_1	6	adj.狭窄的	1
+44	plank	Unit7_1	6	n.板条	0
+45	scared	Unit7_2	6	adj.害怕	0
+45	verse	Unit7_2	6	n.诗节	0
+45	on one's own	Unit7_2	6	独立地	1
+45	pleased	Unit7_2	6	adj.高兴的	1
+45	be pleased with	Unit7_2	6	对...感到高兴，满意	1
+46	attention	Unit7_3	6	n.注意力	0
+46	pay attention to	Unit7_3	6	注意	0
+46	scold	Unit7_3	6	v.训斥	0
+46	detention	Unit7_3	6	n.放学后留校	0
+46	chat	Unit7_3	6	vt.闲聊	0
+47	alone	Unit7_4	6	adj.&adv.独自	1
+47	author	Unit7_4	6	n.作者	1
+47	pretend	Unit7_4	6	vt.假装	1
+47	score	Unit7_4	6	n.评分	1
+47	thank goodness	Unit7_4	6	谢天谢地	1
+48	concern	Unit7_5	6	vt.&n.关切	1
+48	accept	Unit7_5	6	vt.接受	1
+48	reject	Unit7_5	6	v.拒绝接受	1
+48	feel like	Unit7_5	6	想做某事	1
+48	express	Unit7_5	6	vt.表达	1
+49	pain	Unit7_6	6	n.疼痛	1
+49	medicine	Unit7_6	6	n.药	1
+49	generous	Unit7_6	6	adj.慷慨的	1
+49	fair	Unit7_6	6	adj.公平的	1
+49	honest	Unit7_6	6	adj.诚实的	1
+49	patient	Unit7_6	6	adj.有耐心的	1
