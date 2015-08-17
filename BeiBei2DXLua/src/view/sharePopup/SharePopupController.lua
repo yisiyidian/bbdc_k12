@@ -78,7 +78,7 @@ function SharePopupController:init()
 	-- 是同一天，更新每天的记录
 	self.shareFirstRecord = s_CURRENT_USER.shareFirstRecord
 	if not self.shareFirstRecord then
-		self.shareFirstRecord = true
+		s_CURRENT_USER.shareFirstRecord = true
 		saveUserToServer({['shareFirstRecord']=s_CURRENT_USER.shareFirstRecord})
 		AnalyticsShareFirstPopup()
 	end
