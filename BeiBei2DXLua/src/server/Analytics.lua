@@ -23,6 +23,31 @@ function AnalyticsChannel(channelId)
         print('Analytics', getAnalyticsPrefix() .. 'Channel', channelId); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'Channel', channelId)
     end
 end
+----------------------------------------------------------------------------------------
+-- 分享面板打点
+function AnalyticsShareFirstPopup()
+    print('Analytics', getAnalyticsPrefix() .. 'ShareFirstPopup', 'popup'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ShareFirstPopup', 'popup')
+end
+
+function AnalyticsShareFirstPopupClick()
+    print('Analytics', getAnalyticsPrefix() .. 'ShareFirstPopup', 'click'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ShareFirstPopup', 'click')
+end
+
+function AnalyticsShareSecondPopup()
+    print('Analytics', getAnalyticsPrefix() .. 'ShareSecondPopup', 'popup'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ShareSecondPopup', 'popup')
+end
+
+function AnalyticsShareSecondPopupClick()
+    print('Analytics', getAnalyticsPrefix() .. 'ShareSecondPopup', 'click'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ShareSecondPopup', 'click')
+end
+
+function AnalyticsShareThirdPopup()
+    print('Analytics', getAnalyticsPrefix() .. 'ShareThirdPopup', 'popup'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ShareThirdPopup', 'popup')
+end
+
+function AnalyticsShareThirdPopupClick()
+    print('Analytics', getAnalyticsPrefix() .. 'ShareThirdPopup', 'click'); cx.CXAnalytics:logEventAndLabel(getAnalyticsPrefix() .. 'ShareThirdPopup', 'click')
+end
 
 ----------------------------------------------------------------------------------------
 -- 原版本180的一级引导

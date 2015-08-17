@@ -140,10 +140,14 @@ function DataUser:ctor()
 
     self.shareThirdRecord                  = false 
     -- 第三种分享面板 false 没有打开 true 已经打开过
-    self.shareDateRecord                   = 0
+    self.shareSecondRecord                 = 0
     -- 第二种分享面板的时间戳
-    self.shareFirsRecord                   = false
+    self.shareFirstRecord                  = false
     -- 第一种面板弹出标志false 没有打开 true 已经打开过
+
+    self.shareFirstPopupNumberEveryDay     = 0
+    -- 第一种面板每天最多弹三次
+    self.shareFirstPopupDateRecord         = 0
 
 end
 

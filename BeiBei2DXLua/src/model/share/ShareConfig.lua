@@ -9,9 +9,11 @@ SHARE_TYPE_FIRST_LEVEL 	= "SHARE_TYPE_FIRST_LEVEL"
 
 local ShareConfig = {}
 
-ShareConfig.Score = {
-	[1] = 60,
-	[2] = 70,
-	[3] = 80,
-	[4] = 90,
+ShareConfig.score = {
+	[1] = 90,
+	[2] = 80,
+	[3] = 70,
+	[4] = 60,
 }
+
+return ShareConfig

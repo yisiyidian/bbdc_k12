@@ -1,6 +1,6 @@
 
 local MissionConfig  = require("model.mission.MissionConfig")
-local SharePopupController = require("popup.SharePopupController")
+local SharePopupController = require("view.sharePopup.SharePopupController")
 local Button                = require("view.button.longButtonInStudy")
 
 
@@ -257,30 +257,12 @@ end
 
 function SummaryBossAlter:win1(entrance)
 
-    SharePopupController:ctor()
-
-    print("test test test")
-    -- 注意词组
-    print_lua_table(self.bossLayer.unit.wrongWordList)
-    print(self.bossLayer.useTime)
-    print_lua_table(s_CURRENT_USER.logInDatas)
-     --     if firstWeek.Monday > 0 then
-     --    dayInWeekBegin = 1
-     -- elseif firstWeek.Tuesday > 0 then
-     --    dayInWeekBegin = 2
-     -- elseif firstWeek.Wednesday > 0 then
-     --    dayInWeekBegin = 3
-     -- elseif firstWeek.Thursday > 0 then
-     --    dayInWeekBegin = 4
-     -- elseif firstWeek.Friday > 0 then
-     --    dayInWeekBegin = 5
-     -- elseif firstWeek.Saturday > 0 then
-     --    dayInWeekBegin = 6
-     -- elseif firstWeek.Sunday > 0 then
-     --    dayInWeekBegin = 7
-     -- end
-     -- 第二天之后（含）每天一次
-     print_lua_table(self.bossLayer.unit)
+    local table = {}
+    table.unitID = self.bossLayer.unit.unitID
+    table.wordList = self.bossLayer.unit.wrongWordList
+    table.time = self.bossLayer.useTime
+    table.loginData = s_CURRENT_USER.logInDatas
+    SharePopupController:ctor(table)
 
     print("书籍",s_CURRENT_USER.bookKey)
     print("单元",self.bossLayer.unit.unitID)
