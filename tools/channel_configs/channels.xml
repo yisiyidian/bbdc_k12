@@ -197,8 +197,8 @@
         isQQShareAvailable="true"
 
         WXPkg="com.beibei.wordmaster.baidu" WXName="贝贝单词-百度"
-        WXAppID="wxa888fafd83912e2c"
-        WXAppSecret="8c8b62b5764b44af2b09e4e62cf44119"
+        WXAppID="wxb1dafe8fc84ec6db"
+        WXAppSecret="d10b96329691df2c3ef7c77092b3a11e"
         WXSignature="47424d9b8a7d88432ed09f9e113693d0"
 
         umengAppName="贝贝单词-android"
@@ -211,7 +211,7 @@
         leanCloudAppID="8jh1ek1ade25xwhhr87bqmamosrh6ji6ylhpje4xqjs0t2yu"
         leanCloudAppKey="s8t54w7mrpl71s83ew6agjyud9h4z3852ve32eqfd5ic3rwo"
 
-        QQPkgName="com.beibei.wordmaster.other"
+        QQPkgName="com.beibei.wordmaster.tencentmyapp"
         QQName="贝贝单词"
         QQAppID="1103783596"
         QQAppKey="n7vXdt6eDIggSsa6"
@@ -219,8 +219,8 @@
         isQQShareAvailable="true"
 
         WXPkg="com.beibei.wordmaster.other" WXName="贝贝单词-other"
-        WXAppID="wx49c2b3477c310163"
-        WXAppSecret="5e534deacc1b2a9f04bd9bf84fb20bc2"
+        WXAppID="wx7280d0a8c7c842ec"
+        WXAppSecret="825f037c9a30e77a30a3ebb0154e697a"
         WXSignature="47424d9b8a7d88432ed09f9e113693d0"
 
         umengAppName="贝贝单词-android"

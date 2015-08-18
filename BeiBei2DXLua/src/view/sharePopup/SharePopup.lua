@@ -109,7 +109,9 @@ function SharePopup:shareFunc(sender, eventType)
 		return
 	end
 
-	--根据type 
+    cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.html?time=1&wordlist=apple', '描述', '贝贝单词－根本停不下来')
+
+
 	if self.func ~= nil then self:func() end
     s_CURRENT_USER:addBeans(10)
     saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
