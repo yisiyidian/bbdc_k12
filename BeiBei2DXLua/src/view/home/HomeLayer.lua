@@ -518,7 +518,7 @@ function HomeLayer:onTouchEnded(touch,event)
             end) 
         end
 
-    elseif location.y >  s_DESIGN_HEIGHT-280 and (math.abs(location.y - start_y) < 10 and math.abs(location.x - start_x) < 10) and self.viewIndex == 1 then
+    elseif location.y >  s_DESIGN_HEIGHT-280 and (math.abs(location.y - start_y) < 10 and math.abs(location.x - start_x) < 10) and self.view == "home" then
         --print('self.isDataShow')
         self.isDataShow = false
         self:setButtonEnabled(true)
@@ -661,6 +661,7 @@ function HomeLayer:changeViewToFriendOrShop(destination)
 
     destinationLayer.backToHome = handler(self,
         function(self)
+            self.view = 'home'
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2 ,s_DESIGN_HEIGHT/2))
             self.backColor:runAction(action1)

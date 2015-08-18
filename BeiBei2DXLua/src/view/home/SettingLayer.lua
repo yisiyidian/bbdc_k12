@@ -101,6 +101,8 @@ function SettingLayer:initUI()
     self.btncall3 = handler(self, self.onLoginTouch)
 
     self:updateView()
+
+    touchBackgroundClosePopup(self,self.backGround,function ( ... )s_SCENE:removeAllPopups() end)
 end
 
 --更新显示数据
