@@ -145,6 +145,9 @@ function DataUser:ctor()
     self.shareFirstRecord                  = false
     -- 第一种面板弹出标志false 没有打开 true 已经打开过
 
+    self.sharePopupController              = false
+    -- 第一次满足条件什么都不弹出
+
     self.shareFirstPopupNumberEveryDay     = 0
     -- 第一种面板每天最多弹三次
     self.shareFirstPopupDateRecord         = 0

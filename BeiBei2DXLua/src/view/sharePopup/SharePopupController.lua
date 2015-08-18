@@ -28,6 +28,12 @@ function SharePopupController:ctor(array)
 end
 
 function SharePopupController:init()
+	if not s_CURRENT_USER.sharePopupController then
+		s_CURRENT_USER.sharePopupController = true
+		saveUserToServer({['sharePopupController']=s_CURRENT_USER.sharePopupController})
+		return
+	end
+
 	-- 第三种分享类型
 	self.shareThirdRecord = s_CURRENT_USER.shareThirdRecord
 	if not self.shareThirdRecord then
