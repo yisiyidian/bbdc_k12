@@ -596,7 +596,7 @@ function HomeLayer:onBtnRewardTouch(sender,eventType)
         playSound(s_sound_buttonEffect)
     elseif eventType == ccui.TouchEventType.ended then
         local Loginreward = require("view.loginreward.LoginRewardPopup")
-        local loginreward = Loginreward:create()
+        local loginreward = Loginreward.create()
         s_SCENE:popup(loginreward)
     end
 end
