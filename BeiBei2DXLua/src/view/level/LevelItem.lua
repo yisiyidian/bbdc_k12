@@ -56,6 +56,33 @@ function LevelItem:initViewFromConfig(screenId)
 	end
 end
 
+-- 播放解锁关卡的动画
+function LevelItem:plotUnlockLevelAnimation(levelId)
+    local lockSprite = self:getChildByName('lock'..levelId)
+    local lockLayer = self:getChildByName('lockLayer'..levelId)
+    local action1 = cc.MoveBy:create(0.1, cc.p(-5,0))
+    local action2 = cc.MoveBy:create(0.1, cc.p(10,0))
+    local action3 = cc.MoveBy:create(0.1, cc.p(-10, 0))
+    local action4 = cc.Repeat:create(cc.Sequence:create(action2, action3),2)
+    local action5 = cc.MoveBy:create(0.1, cc.p(5,0))  
+    local action6 = cc.FadeOut:create(0.1)
+    local action = cc.Sequence:create(action1, action4, action5, action6, nil)
+    if lockSprite ~= nil then
+        lockSprite:runAction(action)
+    end
+
+    local action7 = cc.DelayTime:create(0.6)
+    local action8 = cc.FadeOut:create(0.1)
+    if lockLayer ~= nil then
+        lockLayer:runAction(cc.Sequence:create(action7, action8))
+    end
+    if lockSprite ~= nil or lockLayer ~= nil then
+        s_SCENE:callFuncWithDelay(0.7,function()
+            self:plotDecorationOfLevel(levelId-0)
+        end)
+    end
+end
+
 -- 获取该Item存储的levelId 范围
 function LevelItem:getLevelIdRange()
 	--print('ID range:start max')

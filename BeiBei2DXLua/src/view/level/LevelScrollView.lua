@@ -34,6 +34,11 @@ function LevelScrollView:ctor()
     self:setPosition(cc.p(0, 0))
     -- 添加底层的Bounce
     self:addBottomBounce()
+
+    -- 初始化位置
+    self:callFuncWithDelay(0.1, function()
+    	self:scrollViewToLevel(self.info['activeScreenId'],0)
+    end)
 end
 
 -- 滚动时动态更新ScorllView
@@ -245,12 +250,21 @@ function LevelScrollView:scrollViewToLevel(levelId, scrollTime)
     end)
     local targetScreenId = self:getScreenIdOfLevelId(levelId)
     print('targetScreenID:'..targetScreenId)
-    local percent = (targetScreenId-self.info['startScreenId'])*1.0 / self.info['screenCount']
+    local percent = (targetScreenId-self.info['startScreenId'])*100.0 / self.info['screenCount']
     if levelId <= 4 then
-
+    	if levelId == 3 then 
+    		percent = percent + 60.0 / self.info['screenCount']
+    	end 
     else 
 
 	end 
+	if scrollTime - 0 == 0 then
+		--print('scrollTime:'..scrollTime)
+        self:scrollToPercentVertical(percent,scrollTime,false)
+    else
+        self:scrollToPercentVertical(percent,scrollTime,true)
+    end
+    self:setInertiaScrollEnabled(true)
 end
 
 -- 读取配置，为每个资源实例化对象
