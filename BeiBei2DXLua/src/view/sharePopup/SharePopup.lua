@@ -109,12 +109,28 @@ function SharePopup:shareFunc(sender, eventType)
 		return
 	end
 
+	math.randomseed(tostring(os.time()):reverse():sub(1, 6)) 
+
+	print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	if self.type == SHARE_TYPE_TIME then
-    	cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.php', '我击败了'..tostring(self.score)..'的玩家，你也来试试把！------点击开始游戏', '贝贝单词－根本停不下来')
+		local randomNum = math.random(1,#ShareConfig.normalTitle)
+		local per = self.score..'%'
+		local title = string.format(ShareConfig.normalTitle[randomNum],per)
+		print(title)
+    	cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.php', title, '贝贝单词－根本停不下来')
 	elseif self.type == SHARE_TYPE_DATE then
-    	cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.php', '我第'..tostring(self.time)..'天玩贝贝单词，你也来试试吗！------点击开始游戏', '贝贝单词－根本停不下来')
+		local num = self.time
+		if self.time >= #ShareConfig.dateTitle then
+			num = #ShareConfig.dateTitle
+		end
+		local title = string.format(ShareConfig.dateTitle[num],self.time,self.score)
+		print(title)
+    	cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.php', title, '贝贝单词－根本停不下来')
 	elseif self.type == SHARE_TYPE_FIRST_LEVEL then
-    	cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.php', '发现边玩边背单词的好app，你也来试试？------点击开始游戏', '贝贝单词－根本停不下来')
+		local randomNum = math.random(1,#ShareConfig.finishGuideTitle)
+		local title = ShareConfig.finishGuideTitle[randomNum]
+		print(title)
+    	cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.php', title, '贝贝单词－根本停不下来')
 	end 
 
 	if self.func ~= nil then self:func() end

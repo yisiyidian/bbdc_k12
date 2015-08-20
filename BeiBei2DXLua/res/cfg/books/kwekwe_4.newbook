@@ -1,0 +1,407 @@
+1	about	1_1	5	adv.大约	1
+1	space	1_1	5	n.空间,太空	1
+1	above	1_1	5	prep.&ad.在上面	1
+2	earth	1_2	5	n.地球,泥土	1
+2	system	1_2	5	n.系统	1
+2	pilot	1_2	5	n.飞行员	1
+2	without	1_2	5	prep.没有	1
+2	difficulty	1_2	5	n.困难	1
+3	satellite	1_3	5	n.卫星	1
+3	world	1_3	5	n.世界(人),领域,俗	1
+3	traveler	1_3	5	n. 旅行者	1
+3	easily	1_3	5	adv.容易地	1
+3	tell	1_3	5	vt.告诉	1
+4	these	1_4	5	pron. 这些	1
+4	global	1_4	5	adj.全球的	1
+4	positioning	1_4	5	n. 定位	1
+4	from ... to ...	1_4	5	从...到...	1
+5	also	1_5	5	adv.也	1
+5	be made up of	1_5	5	由...组成	1
+5	be short for	1_5	5	是...的简略形式	1
+5	lose one's way	1_5	5	迷路	1
+6	talent	2_1	1	n. 人才；才能	1
+6	different	2_1	1	adj.不同的	1
+6	club	2_1	1	n.棍棒；俱乐部	1
+6	skill	2_1	1	n.技能	1
+6	meaning	2_1	1	n.意义,意思	1
+6	underlined	2_1	1	adj. 下划线的	1
+7	won	3_1	4	vt. 赢得（win过去式）	1
+7	gold medal	3_1	4	金奖	1
+7	Vancouver	3_1	4	n. 温哥华	1
+7	dream	3_1	4	n.&v.梦想	1
+7	only	3_1	4	ad.唯一的,仅仅	1
+8	come true	3_2	4	成为现实	1
+8	Olympics	3_2	4	n. 奥运会	1
+8	winter	3_2	4	n.冬天	1
+8	hope	3_2	4	v. 希望	1
+8	at the age of	3_2	4	在...岁时	1
+9	poor	3_3	4	adj.贫穷的	1
+9	work hard	3_3	4	努力工作	1
+9	cost	3_3	4	n.成本，花费	1
+9	a pair of	3_3	4	一双	1
+9	bought	3_3	4	v. 买（buy过去式）	1
+10	make a living	3_4	4	谋生	1
+10	gave	3_4	4	give的过去式	1
+10	lottery ticket	3_4	4	彩票	1
+10	award	3_4	4	vt.&n.授予，奖励	1
+10	be born	3_4	4	出生	1
+11	love	4_1	4	vt.热爱	1
+11	fisherman	4_1	4	n.渔夫	1
+11	boat	4_1	4	n.船	1
+11	make a living	4_1	4	谋生	1
+11	until	4_1	4	prep.&conj.直到...	1
+11	drove	4_1	4	v. 驾驶（drive过去式）	1
+12	left	4_2	4	adj.&n.左边(的)	1
+12	before	4_2	4	prep.&conj.在...之前	1
+12	stay out	4_2	4	待在外面	1
+12	weather	4_2	4	n.天气	1
+12	bad	4_2	4	adj.坏的	1
+12	embarrass	4_2	4	vt.使...困窘	1
+13	work hard	4_3	4	努力工作	1
+13	came	4_3	4	come的过去式	1
+13	thought	4_3	4	n.想法	1
+13	felt	4_3	4	v.感到(feel的过去式)	1
+13	got	4_3	4	v. 得到，明白（get过去式）	1
+14	remember	4_4	4	v.记得	1
+14	usual	4_4	4	adj.通常的	1
+14	said	4_4	4	say的过去式）	1
+14	start	4_4	4	v.出发,起动	1
+14	be filled with	4_4	4	充满	1
+15	new	5_1	2	adj.新的	1
+15	student	5_1	2	n.学生	1
+15	same	5_1	2	adj.同样的	1
+15	twins	5_1	2	n. 双胞胎	1
+15	look after	5_1	2	照顾	1
+16	both	5_2	2	ad.&pron.二者都	1
+16	Middle School	5_2	2	初中	1
+16	grade	5_2	2	n. 年级；成绩	1
+16	age	5_2	2	n.年龄	1
+17	kept	6_1	4	v. 保持（keep的过去式）	1
+17	took	6_1	4	v. 拿（take过去式）	1
+17	quietly	6_1	4	adv.安静地	1
+17	put out of	6_1	4	赶走	1
+17	went	6_1	4	go的过去式	1
+18	hiding	6_2	4	n. 躲藏处	1
+18	behind	6_2	4	prep.&ad.在后面	1
+18	throw out	6_2	4	扔出去	1
+18	began	6_2	4	v. 开始（begin过去式）	1
+18	flown	6_2	4	fly的过去分词	1
+19	whistle	6_3	4	n.&v.（吹）口哨	1
+19	fly away	6_3	4	飞走	1
+19	wanted	6_3	4	adj. 受通缉的( want过去分词 )	1
+19	once	6_3	4	adv.曾经	1
+19	perhaps	6_3	4	adv.也许	1
+20	it's one's turn	6_4	4	轮到某人	1
+20	put on	6_4	4	穿上；上演	1
+20	come back	6_4	4	回来	1
+20	go over	6_4	4	复习	1
+20	be afraid of	6_4	4	害怕	1
+21	could	7_1	4	aux.can的过去式	1
+21	along	7_1	4	prep.沿着	1
+21	died	7_1	4	v. 死亡（die的过去式）	1
+21	in the world	7_1	4	世界上	1
+21	money	7_1	4	n.钱	1
+22	sick	7_2	4	adj.恶心的,有病的	1
+22	look after	7_2	4	照顾	1
+22	a lot of	7_2	4	许多	1
+22	had	7_2	4	v. have的过去式	1
+22	certainly	7_2	4	adv.当然	1
+23	have to	7_3	4	不得不	1
+23	come true	7_3	4	成为现实	1
+23	such	7_3	4	adj.&pron.如此	1
+23	interesting	7_3	4	adj.有趣的	1
+23	among	7_3	4	prep.在...之中	1
+24	famous	7_4	4	adj.著名的	1
+24	seen	7_4	4	v. 看见；理解（see的过去分词）	1
+24	never	7_4	4	adv.绝不	1
+24	most	7_4	4	ad.最多	1
+24	film	7_4	4	n.电影	1
+24	same	7_4	4	adj.同样的	1
+25	room	8_1	2	n.房间；空间	1
+25	bookcase	8_1	2	n.书柜	1
+25	picture	8_1	2	n.图片	1
+25	family	8_1	2	n.家庭	1
+25	wall	8_1	2	n.墙壁	1
+25	chair	8_1	2	n.椅子	1
+26	soccer	8_2	2	n.英式足球	1
+26	floor	8_2	2	n.地面	1
+26	computer	8_2	2	n.计算机	1
+26	tape	8_2	2	n.录像带	1
+26	behind	8_2	2	prep.&ad.在后面	1
+26	under	8_2	2	prep.在...下	1
+27	before	9_1	5	prep.&conj.在...之前	1
+27	left	9_1	5	adj.&n.左边(的)	1
+27	meet	9_1	5	n.集会	1
+27	told	9_1	5	v. 告诉（tell过去式）	1
+27	had better	9_1	5	最好	1
+28	knew	9_2	5	v. 知道（know过去式）	1
+28	sat	9_2	5	v. 坐（sit过去式）	1
+28	be on time	9_2	5	准时	1
+28	because	9_2	5	conj.因为	1
+28	began	9_2	5	v. 开始（begin过去式）	1
+29	near	9_3	5	ad.&prep.靠近	1
+29	enjoy oneself	9_3	5	玩得开心	1
+29	there	9_3	5	adv.在那里	1
+29	delicious	9_3	5	adj.美味的	1
+29	thought	9_3	5	n.想法	1
+30	gave	9_4	5	give的过去式	1
+30	hour	9_4	5	n.小时	1
+30	waiter	9_4	5	n.侍者	1
+30	arrive	9_4	5	vi.到达	1
+31	have an idea	9_5	5	有个想法	1
+31	language	9_5	5	n. 语言	1
+31	culture	9_5	5	n.文化	1
+31	check	9_5	5	vt.检查核对	1
+32	all	10_1	4	adj.&pron.全部的	1
+32	puzzled	10_1	4	adj. 困惑的	1
+32	lazy	10_1	4	adj.懒惰的	1
+32	quote	10_1	4	n.引用	1
+32	Confucius	10_1	4	n. 孔子	1
+32	come from	10_1	4	来自	1
+33	philosopher	10_2	4	n.哲学家	1
+33	state	10_2	4	n.州;状态	1
+33	county	10_2	4	n.郡,县	1
+33	birthplace	10_2	4	n. 出生地	1
+33	died	10_2	4	v. 死亡（die的过去式）	1
+33	history	10_2	4	n.历史	1
+34	poetry	10_3	4	n.诗歌	1
+34	as	10_3	4	prep.作为	1
+34	around	10_3	4	prep&adv.大约；在周围	1
+34	at the age of	10_3	4	在...岁时	1
+34	whole	10_3	4	adj.整个的	1
+35	basic idea	10_4	4	基本想法	1
+35	spread	10_4	4	n.&v.传播,伸展	1
+35	foreigner	10_4	4	n.外国人	1
+35	learn about	10_4	4	了解	1
+35	culture	10_4	4	n.文化	1
+36	Einstein	11_1	4	n. 爱因斯坦	1
+36	street	11_1	4	n.街道	1
+36	New York	11_1	4	纽约	1
+36	met	11_1	4	v.遇见（meet过去式）	1
+36	said	11_1	4	say的过去式）	1
+37	should	11_2	4	aux.应该	1
+37	coat	11_2	4	n.外套	1
+37	sweater	11_2	4	n.毛衣	1
+37	answer	11_2	4	v.&n.回答；答案	1
+37	matter	11_2	4	n.事件,物质	1
+38	nobody	11_3	4	pron.没有人	1
+38	after	11_3	4	conj.&prep.在...之后	1
+38	a few	11_3	4	一些（后跟可数名词）	1
+38	became	11_3	4	v. 变得（become过去式）	1
+38	famous	11_3	4	adj.著名的	1
+39	scientist	11_4	4	n.科学家	1
+39	wore	11_4	4	v. 穿，戴（wear过去式）	1
+39	again	11_4	4	adv.又,再	1
+39	need	11_4	4	n.&v.需要	1
+39	everyone	11_4	4	pron.每人	1
+40	said	12_1	4	say的过去式）	1
+40	saw	12_1	4	v.看见(see过去式)	1
+40	in front of	12_1	4	在...前面	1
+40	one of	12_1	4	之一	1
+40	invite	12_1	4	vt.邀请	1
+40	did	12_1	4	do的过去式	1
+41	one of	12_2	4	之一	1
+41	together	12_2	4	adv.一起	1
+41	wealth	12_2	4	n.财富	1
+41	success	12_2	4	n.成功	1
+41	husband	12_2	4	n.丈夫	1
+41	news	12_2	4	n.新闻	1
+42	daughter-in-law	12_3	4	儿媳妇	1
+42	sound	12_3	4	n.声音	1
+42	be full of	12_3	4	充满	1
+42	parents	12_3	4	n. 父母	1
+42	go out	12_3	4	出去；（灯）熄灭	1
+43	get up	12_4	4	起身，起床	1
+43	one ... the other	12_4	4	（两者中）一个...另一个...	1
+43	wallet	12_4	4	n.皮夹	1
+43	brown	12_4	4	adj.&n.棕色(的)	1
+43	surprise	12_4	4	n.&v.惊讶；使惊奇	1
+44	nature	13_1	5	n.自然；本性	1
+44	forest	13_1	5	n.森林	1
+44	law	13_1	5	n.规律	1
+44	other	13_1	5	adj.其他的	1
+44	happily	13_1	5	adv. 快乐地	1
+45	run away	13_2	5	跑开	1
+45	say to oneself	13_2	5	自言自语	1
+45	hunter	13_2	5	n.猎人	1
+45	was	13_2	5	be的单数过去式	1
+45	told	13_2	5	v. 告诉（tell过去式）	1
+46	most	13_3	5	ad.最多	1
+46	whole	13_3	5	adj.整个的	1
+46	worm	13_3	5	n.蠕虫	1
+46	balanced	13_3	5	adj.均衡的	1
+46	again	13_3	5	adv.又,再	1
+47	together	13_4	5	adv.一起	1
+47	special	13_4	5	adj.特别的	1
+47	be tired of	13_4	5	厌倦...	1
+47	haze	13_4	5	n.薄雾	1
+48	parents	13_5	5	n. 父母	1
+48	way	13_5	5	n.方法,道路	1
+48	keep	13_5	5	v.保持	1
+48	all of	13_5	5	所有的	1
+49	England	14_1	2	n. 英格兰；英国	1
+49	also	14_1	2	adv.也	1
+49	a little	14_1	2	一些（后跟不可数名词）	1
+49	study	14_1	2	n.学习,研究	1
+49	work	14_1	2	v.&n.工作；作品	1
+49	factory	14_1	2	n.工厂	1
+50	near	14_2	2	ad.&prep.靠近	1
+50	worker	14_2	2	n.工人	1
+50	which	14_2	2	pron.哪个	1
+50	right	14_2	2	adj.正确的；右面的	1
+50	well	14_2	2	n.井	1
+51	drive	15_1	5	v.开车;驱使	1
+51	each day	15_1	5	每天	1
+51	down	15_1	5	ad.向下的	1
+51	main	15_1	5	adj.主要的	1
+51	over	15_1	5	prep.在...上面	1
+52	line	15_2	5	n.行,列	1
+52	wait for	15_2	5	等待	1
+52	at the end of	15_2	5	在...末尾	1
+52	nothing	15_2	5	pron.什么也没有	1
+52	trash	15_2	5	n.垃圾	1
+53	weed	15_3	5	n.杂草	1
+53	several	15_3	5	adj.&pron几个,若干	1
+53	clean up	15_3	5	清理	1
+53	all	15_3	5	adj.&pron.全部的	1
+53	were	15_3	5	are的过去式	1
+54	quickly	15_4	5	adv.迅速	1
+54	plant	15_4	5	v. 种植	1
+54	during	15_4	5	prep.在...期间	1
+54	made	15_4	5	v. 做（make过去式）	1
+55	became	15_5	5	v. 变得（become过去式）	1
+55	difference	15_5	5	n.差异	1
+55	best of all	15_5	5	最好的	1
+55	beggar	15_5	5	n.乞丐	1
+56	around	16_1	5	prep&adv.大约；在周围	1
+56	ate	16_1	5	v. 吃（eat过去式）	1
+56	climb	16_1	5	攀登	1
+56	took	16_1	5	v. 拿（take过去式）	1
+56	shadow	16_1	5	n.阴影	1
+57	take a nap	16_2	5	小睡一会	1
+57	grow up	16_2	5	成长	1
+57	left	16_2	5	adj.&n.左边(的)	1
+57	return	16_2	5	n.返回,归还	1
+57	cut off	16_2	5	切断	1
+58	build	16_3	5	v.建造	1
+58	branch	16_3	5	n.分支,树枝	1
+58	have to	16_3	5	不得不	1
+58	sad	16_3	5	adj.悲哀的	1
+58	lonely	16_3	5	adj.寂寞的,荒凉的	1
+59	go sailing	16_4	5	去航海	1
+59	show up	16_4	5	出现	1
+59	far away	16_4	5	远离	1
+59	trunk	16_4	5	n.树干；(汽车)行李箱	1
+60	relax	16_5	5	v.放松	1
+60	dying	16_5	5	adj.垂死的	1
+60	tear	16_5	5	n.眼泪	1
+60	reply	16_5	5	v.&n.答复	1
+61	look out	17_1	4	向外看；小心	1
+61	saw	17_1	4	v.看见(see过去式)	1
+61	hamburger	17_1	4	n.汉堡包	1
+61	breakfast	17_1	4	n.早餐	1
+61	remember	17_1	4	v.记得	1
+62	always	17_2	4	adv.总是	1
+62	wait	17_2	4	v.等候	1
+62	before	17_2	4	prep.&conj.在...之前	1
+62	heard	17_2	4	v. 听到（hear过去式）	1
+62	quiet	17_2	4	adj.安静的	1
+63	miaow	17_3	4	vi.&n. 猫叫	1
+63	listen	17_3	4	vi.听	1
+63	learn	17_3	4	v.学习,了解	1
+63	hour	17_3	4	n.小时	1
+63	woof	17_3	4	n. 纬线；织物	1
+64	thought	17_4	4	n.想法	1
+64	run out	17_4	4	消耗完	1
+64	finished	17_4	4	adj. 完结的（finish过去分词）	1
+64	second	17_4	4	n.秒	1
+64	language	17_4	4	n. 语言	1
+65	town	18_1	5	n.城镇	1
+65	sold	18_1	5	v. 卖（sell过去式）	1
+65	town	18_1	5	n.城镇	1
+65	jewelry	18_1	5	n.珠宝类	1
+65	thief	18_1	5	n.贼	1
+66	stole	18_2	5	v. 偷窃（steal过去式）	1
+66	decide to do	18_2	5	决定做	1
+66	try to do	18_2	5	试图做...	1
+66	camera	18_2	5	n.照相机	1
+66	fix up	18_2	5	修理	1
+67	in front of	18_3	5	在...前面	1
+67	so that	18_3	5	以便，为了...	1
+67	something	18_3	5	pron.某事	1
+67	touch	18_3	5	n.&v.接触,联系	1
+67	put out	18_3	5	扑灭	1
+68	a few	18_4	5	一些（后跟可数名词）	1
+68	later	18_4	5	adj.后面的	1
+68	worth	18_4	5	adj.值得的	1
+68	twice	18_4	5	adv.两次	1
+69	month	18_5	5	n.月	1
+69	pass	18_5	5	v. 通过	1
+69	nearer	18_5	5	adj. 较近的	1
+69	novel	18_5	5	adj.新奇的	1
+70	excellent	19_1	4	adj.优秀的	1
+70	shortcoming	19_1	4	n.缺点	1
+70	get up	19_1	4	起身，起床	1
+70	early	19_1	4	ad.早	1
+70	until	19_1	4	prep.&conj.直到...	1
+71	holiday	19_2	4	n.假期	1
+71	be late for	19_2	4	迟到	1
+71	alarm clock	19_2	4	闹钟	1
+71	bought	19_2	4	v. 买（buy过去式）	1
+71	from then on	19_2	4	从那时起	1
+72	hear	19_3	4	vt.听到	1
+72	ring	19_3	4	n.环,戒指；铃声	1
+72	set	19_3	4	n.一套	1
+72	forget to do sth	19_3	4	忘记去做	1
+72	the next morning	19_3	4	第二天早上	1
+73	found	19_4	4	vt.创办	1
+73	be hurried to do sth	19_4	4	匆忙做...	1
+73	wake up	19_4	4	醒来	1
+73	wait for	19_4	4	等待	1
+73	told	19_4	4	v. 告诉（tell过去式）	1
+74	last summer	20_1	5	去年夏天	1
+74	trip	20_1	5	n.短途旅行	1
+74	New York	20_1	5	纽约	1
+74	excited	20_1	5	adj.兴奋的	1
+74	arrive at	20_1	5	到达	1
+75	hotel	20_2	5	n.旅馆	1
+75	handbag	20_2	5	n.手提包	1
+75	look for	20_2	5	寻找	1
+75	carefully	20_2	5	adv.仔细地	1
+75	find	20_2	5	v.发现	1
+76	had	20_3	5	v. have的过去式	1
+76	hundred	20_3	5	n.百	1
+76	them	20_3	5	pron.他/她/它们(宾格）	1
+76	place	20_3	5	n.地方	1
+76	change	20_3	5	n.变化,零钱	1
+77	on one's way back	20_4	5	在回来路上	1
+77	cheese	20_4	5	n.奶酪	1
+77	manager	20_4	5	n.经理	1
+77	except for	20_4	5	除了	1
+77	knew	20_4	5	v. 知道（know过去式）	1
+78	included	20_5	5	adj.包括的（include过去分词）	1
+78	tourist	20_5	5	n.旅游者	1
+78	a place of interest	20_5	5	名胜古迹	1
+78	in fact	20_5	5	事实上	1
+78	ate	20_5	5	v. 吃（eat过去式）	1
+79	long long ago	21_1	4	很久以前	1
+79	spear	21_1	4	n.矛	1
+79	shield	21_1	4	n.盾	1
+79	market	21_1	4	n.市场	1
+79	goods	21_1	4	n.货物	1
+80	quickly	21_2	4	adv.迅速	1
+80	in praise of	21_2	4	赞扬	1
+80	so ... that	21_2	4	如此...以至于	1
+80	strongest	21_2	4	adj. 最强壮的	1
+80	loud	21_2	4	ad.大声的/地	1
+81	nothing	21_3	4	pron.什么也没有	1
+81	pierce	21_3	4	v.刺穿	1
+81	also	21_3	4	adv.也	1
+81	anything	21_3	4	pron.任何事	1
+81	at this time	21_3	4	这时，这次	1
+82	weapon	21_4	4	n.武器	1
+82	happen	21_4	4	vi.发生	1
+82	it is impossible for	21_4	4	对...是不可能的	1
+82	sharp	21_4	4	adj.锋利的	1
+82	would	21_4	4	aux.将要(will过去式)	1
+82	if	21_4	4	conj.如果；是否	1
