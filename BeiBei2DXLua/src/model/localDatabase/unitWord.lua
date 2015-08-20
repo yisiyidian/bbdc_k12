@@ -442,6 +442,7 @@ function M.initUnitInfo(unitID)
 end
 
 function M.updateUnitState(unitID)
+    print('in update unit state:'..unitID)
     if unitID == nil then
         return 
     end
