@@ -23,6 +23,7 @@ end
 
 --初始化UI
 function TaskView:initUI()
+	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	--创建任务背景图片
 	local background = cc.Sprite:create("image/guide/taskBackground.png")
 	background:setPosition(s_DESIGN_WIDTH/2,s_DESIGN_HEIGHT/2)
@@ -117,6 +118,11 @@ function TaskView:initUI()
 	self:TodayTaskComplete()
 
 	self:resetView()
+	
+
+	touchBackgroundClosePopup(self,self.background,function() 
+			self:closeFunc() 
+	end)
 
 	onAndroidKeyPressed(self,function ()
         local isPopup = s_SCENE.popupLayer:getChildren()
@@ -124,9 +130,22 @@ function TaskView:initUI()
 			self:closeFunc()
         end
     end, function ()end)
+
+    local delayTime = cc.DelayTime:create(0.5)
+    local func = cc.CallFunc:create(function ( ... )
+        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+    end)
+    self:runAction(cc.Sequence:create(delayTime,func))
+
+    self.closeMark = false
 end
 
 function TaskView:closeFunc()
+	if self.closeMark then
+		return 
+	end
+	self.closeMark = true
+
 	self.closeButton:setTouchEnabled(false)
 
 	local action1 = cc.FadeOut:create(0.5)
@@ -134,14 +153,22 @@ function TaskView:closeFunc()
 	local action3 = cc.MoveTo:create(0.5,cc.p(s_RIGHT_X - 500, -400))
 	local action4 = cc.CallFunc:create(function ()
 									    s_SCENE:removeAllPopups()
-										end,{})
+										end)
 	local action5 = cc.Spawn:create(action1,action2,action3)
 	local action6 = cc.CallFunc:create(function ()
 		if self.callBox ~= nil then
 			self.callBox()
 		end
 	end)
-	self:runAction(cc.Sequence:create(action5,action4,action6))            
+	local action7 = cc.DelayTime:create(0.1)
+	self:runAction(cc.Sequence:create(action5,action6,action7,action4))     
+
+	-- s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+	-- local delayTime = cc.DelayTime:create(1)
+ --    local func = cc.CallFunc:create(function ( ... )
+ --        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+ --    end)
+ --    self:runAction(cc.Sequence:create(delayTime,func))       
 end
 
 --今日任务全部完成
@@ -356,7 +383,7 @@ function TaskView:clickGoTaskButton(sender,eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
-	self:CloseClick(nil,ccui.TouchEventType.ended)
+	self:closeFunc()
 	--跳转到对应的界面
 	local taskId = self.taskID
 	if taskId == "2-1" then --完善个人信息
