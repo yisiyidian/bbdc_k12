@@ -152,6 +152,9 @@ function DataUser:ctor()
     -- 第一种面板每天最多弹三次
     self.shareFirstPopupDateRecord         = 0
 
+    self.sharePopupRecord                  = 0
+    -- 每天最多分享一次，记录时间
+
 end
 
 function DataUser:addBookList(bookKey)

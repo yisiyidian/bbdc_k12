@@ -110,8 +110,6 @@ function SharePopup:shareFunc(sender, eventType)
 	end
 
 	math.randomseed(tostring(os.time()):reverse():sub(1, 6)) 
-
-	print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 	if self.type == SHARE_TYPE_TIME then
 		local randomNum = math.random(1,#ShareConfig.normalTitle)
 		local per = self.score..'%'
@@ -132,6 +130,8 @@ function SharePopup:shareFunc(sender, eventType)
 		print(title)
     	cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.php', title, '贝贝单词－根本停不下来')
 	end 
+
+	
 
 	if self.func ~= nil then self:func() end
     s_CURRENT_USER:addBeans(10)

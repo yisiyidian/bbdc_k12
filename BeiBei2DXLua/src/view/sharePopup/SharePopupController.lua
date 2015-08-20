@@ -96,6 +96,12 @@ function SharePopupController:createPopup()
 		return 
 	end
 
+	self.sharePopupRecord = s_CURRENT_USER.sharePopupRecord
+	if  is2TimeInSameDay(self.sharePopupRecord,os.time()) then
+		print("今天分享过了 不分享")
+		return 
+	end
+
 	if self.popupType == SHARE_TYPE_TIME then
 		local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics),self.time,self.score)
 		s_SCENE:popup(sharePopup)
@@ -119,6 +125,12 @@ function SharePopupController:analytics()
 	end	
 	if self.popupType == SHARE_TYPE_FIRST_LEVEL then
 		AnalyticsShareThirdPopupClick()
+	end
+
+	self.sharePopupRecord = s_CURRENT_USER.sharePopupRecord
+	if not is2TimeInSameDay(self.sharePopupRecord,os.time()) then
+		s_CURRENT_USER.sharePopupRecord = os.time()
+		saveUserToServer({['sharePopupRecord']=s_CURRENT_USER.sharePopupRecord})
 	end
 end
 
