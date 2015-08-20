@@ -121,7 +121,7 @@ function SharePopup:shareFunc(sender, eventType)
 		if self.time >= #ShareConfig.dateTitle then
 			num = #ShareConfig.dateTitle
 		end
-		local title = string.format(ShareConfig.dateTitle[num],self.time,self.score)
+		local title = string.format(ShareConfig.dateTitle[num],self.score)
 		print(title)
     	cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.php', title, '贝贝单词－根本停不下来')
 	elseif self.type == SHARE_TYPE_FIRST_LEVEL then
