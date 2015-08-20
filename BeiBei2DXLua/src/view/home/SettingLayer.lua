@@ -281,6 +281,8 @@ function SettingLayer:onFollowTouch( sender,eventType )
     layer:addChild(back)
 
     s_SCENE:popup(layer)
+
+    touchBackgroundClosePopup(layer,back,function() s_SCENE:removeAllPopups() end)
 end
 
 --关闭事件回调

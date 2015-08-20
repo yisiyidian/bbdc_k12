@@ -12,7 +12,6 @@ local SummaryBossAlter = class("SummaryBossAlter", function()
 end)
 
 function SummaryBossAlter.create(bossLayer,win,entrance)
-
     local layer = SummaryBossAlter.new()
     layer.wordCount = bossLayer.maxCount
     layer.win = win
@@ -56,11 +55,6 @@ function SummaryBossAlter.create(bossLayer,win,entrance)
         -- boss失败的后的标志，非凡用
         s_game_fail_state = 1
         cc.SimpleAudioEngine:getInstance():stopMusic()
-
-        -- s_SCENE:callFuncWithDelay(0.3,function()
-        --     -- win sound
-        --     playSound(s_sound_fail)
-        -- end)
     end
 
     return layer

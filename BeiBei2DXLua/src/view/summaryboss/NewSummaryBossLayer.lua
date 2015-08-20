@@ -556,6 +556,7 @@ function NewSummaryBossLayer:gameOverFunc(win)
         self.girl:setAnimation("lose")
     end
     --游戏结束界面
+    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     s_SCENE:callFuncWithDelay(2,function ()
         s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
         local alter = require("view.summaryboss.SummaryBossAlter").create(self,win,true)
