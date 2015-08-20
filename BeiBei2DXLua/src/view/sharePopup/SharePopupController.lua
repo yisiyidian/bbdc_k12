@@ -102,18 +102,25 @@ function SharePopupController:createPopup()
 		return 
 	end
 
-	if self.popupType == SHARE_TYPE_TIME then
-		local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics),self.time,self.score)
-		s_SCENE:popup(sharePopup)
-	end
-	if self.popupType == SHARE_TYPE_DATE then
-		local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics),self.days,s_LocalDatabaseManager.getTotalStudyWordsNumByBookKey(s_CURRENT_USER.bookKey))
-		s_SCENE:popup(sharePopup)
-	end	
-	if self.popupType == SHARE_TYPE_FIRST_LEVEL then
-		local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics))
-		s_SCENE:popup(sharePopup)
-	end
+	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+	local delay = cc.DelayTime:create(1)
+	local func = cc.CallFunc:create(function ( ... )
+		if self.popupType == SHARE_TYPE_TIME then
+			local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics),self.time,self.score)
+			s_SCENE:popup(sharePopup)
+		end
+		if self.popupType == SHARE_TYPE_DATE then
+			local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics),self.days,s_LocalDatabaseManager.getTotalStudyWordsNumByBookKey(s_CURRENT_USER.bookKey))
+			s_SCENE:popup(sharePopup)
+		end	
+		if self.popupType == SHARE_TYPE_FIRST_LEVEL then
+			local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics))
+			s_SCENE:popup(sharePopup)
+		end
+		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+	end)
+	self:runAction(cc.Sequence:create(delay,func))
+
 end
 
 function SharePopupController:analytics()

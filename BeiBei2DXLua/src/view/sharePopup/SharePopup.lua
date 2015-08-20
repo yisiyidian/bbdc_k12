@@ -20,8 +20,12 @@ function SharePopup:ctor(type,func,time,score)
 end
 
 function SharePopup:init()
+	local mark = false
+	--因为有时间延迟的动作 ，用于禁止时间重复触发
+	self.mark = mark
+
 	local back = cc.Sprite:create("image/sharePopup/first_share_popup.png")
-    back:setPosition(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2)
+    back:setPosition(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2 * 3)
     self.back = back 
     self:addChild(self.back)
 	
@@ -45,7 +49,7 @@ function SharePopup:init()
 
     local closeButton = ccui.Button:create("image/sharePopup/close_button_normal.png","image/sharePopup/close_button_click.png","")
     closeButton:setPosition(self.back:getContentSize().width / 2  , 0 )
-    closeButton:addTouchEventListener(handler(self,self.closeFunc))
+    closeButton:addTouchEventListener(handler(self,self.closeListener))
     self.closeButton = closeButton
     self.back:addChild(self.closeButton)
 
@@ -59,6 +63,8 @@ function SharePopup:init()
 
     onAndroidKeyPressed(self,function() self:closeFunc() end, function ()end)
 	touchBackgroundClosePopup(self,self.back,function() self:closeFunc() end)
+
+	self.back:runAction(cc.EaseBackOut:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2))))
 end
 
 function SharePopup:reset()
@@ -96,12 +102,25 @@ function SharePopup:reset()
 	end
 end
 
-function SharePopup:closeFunc(sender, eventType)
+function SharePopup:closeListener(sender, eventType)
 	if eventType ~= ccui.TouchEventType.ended then
 		return
 	end
 
-	s_SCENE:removeAllPopups() 
+ 	self:closeFunc()
+end
+
+function SharePopup:closeFunc()
+	if self.mark then
+		return 
+	end
+	self.mark = true
+
+	local action1 = cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2 * 3)))
+	local action2 = cc.CallFunc:create(function ( ... )
+		s_SCENE:removeAllPopups()
+	end)
+	self.mark:runAction(cc.Sequence:create(action1,action2))
 end
 
 function SharePopup:shareFunc(sender, eventType)
