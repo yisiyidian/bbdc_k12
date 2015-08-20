@@ -661,13 +661,15 @@ function HomeLayer:changeViewToFriendOrShop(destination)
 
     destinationLayer.backToHome = handler(self,
         function(self)
-            self.view = 'home'
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
             local action1 = cc.MoveTo:create(0.5, cc.p(s_DESIGN_WIDTH/2 ,s_DESIGN_HEIGHT/2))
             self.backColor:runAction(action1)
             local action2 = cc.MoveTo:create(0.5, cc.p(bigWidth ,s_DESIGN_HEIGHT/2))
             local action3 = cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)
-            local action4 = cc.CallFunc:create(function() destinationLayer:removeFromParent() end)
+            local action4 = cc.CallFunc:create(function() 
+                destinationLayer:removeFromParent() 
+                self.view = 'home' 
+                end)
             destinationLayer:runAction(cc.Sequence:create(action2, action3,action4))
     end)
 end
