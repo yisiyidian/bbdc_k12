@@ -605,6 +605,7 @@ function ChapterLayer:onTaskBoxTouch(sender,eventType)
     if eventType ~= ccui.TouchEventType.ended then
         return
     end
+    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     -- print("触摸箱子-------")
     --箱子停止抖动
     self.boxButton:stopAllActions()
@@ -612,6 +613,11 @@ function ChapterLayer:onTaskBoxTouch(sender,eventType)
     self.boxButton:setBright(false)
     --不可点击
     self.boxButton:setTouchEnabled(false)
+    local delayTime = cc.DelayTime:create(0.5)
+    local func = cc.CallFunc:create(function ( ... )
+        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+    end)
+    self:runAction(cc.Sequence:create(delayTime,func))
     local taskview = TaskView.new(handler(self,self.callBox),handler(self, self.updateBean))
     s_SCENE:popup(taskview)
 end

@@ -75,6 +75,8 @@ function SmallAlter.create(info)
     -- local eventDispatcher = main:getEventDispatcher()
     -- eventDispatcher:addEventListenerWithSceneGraphPriority(listener, main)
 
+    touchBackgroundClosePopup(main,back,function() main.close() end)
+
     return main    
 end
 

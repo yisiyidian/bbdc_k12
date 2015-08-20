@@ -41,8 +41,14 @@ function Crab:hint()
 end
 
 function Crab:moveIn()
+    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	local appear = cc.EaseBackOut:create(cc.MoveBy:create(0.5,cc.p(0,s_DESIGN_HEIGHT * 0.2)))
 	self.crab:runAction(appear)
+    local delay = cc.DelayTime:create(0.5)
+    local func = cc.CallFunc:create(function ()
+        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+    end)
+    self.crab:runAction(cc.Sequence:create(delay,func))
 end
 
 function Crab:moveOut()

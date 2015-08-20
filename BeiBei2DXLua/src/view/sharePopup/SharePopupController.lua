@@ -91,18 +91,36 @@ function SharePopupController:init()
 end
 
 function SharePopupController:createPopup()
-	if self.popupType == SHARE_TYPE_TIME then
-		local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics),self.time,self.score)
-		s_SCENE:popup(sharePopup)
+	if BUILD_TARGET == BUILD_TARGET_DEBUG then
+		print("debug 不分享")
+		return 
 	end
-	if self.popupType == SHARE_TYPE_DATE then
-		local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics),self.days)
-		s_SCENE:popup(sharePopup)
-	end	
-	if self.popupType == SHARE_TYPE_FIRST_LEVEL then
-		local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics))
-		s_SCENE:popup(sharePopup)
+
+	self.sharePopupRecord = s_CURRENT_USER.sharePopupRecord
+	if  is2TimeInSameDay(self.sharePopupRecord,os.time()) then
+		print("今天分享过了 不分享")
+		return 
 	end
+
+	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+	local delay = cc.DelayTime:create(1)
+	local func = cc.CallFunc:create(function ( ... )
+		if self.popupType == SHARE_TYPE_TIME then
+			local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics),self.time,self.score)
+			s_SCENE:popup(sharePopup)
+		end
+		if self.popupType == SHARE_TYPE_DATE then
+			local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics),self.days,s_LocalDatabaseManager.getTotalStudyWordsNumByBookKey(s_CURRENT_USER.bookKey))
+			s_SCENE:popup(sharePopup)
+		end	
+		if self.popupType == SHARE_TYPE_FIRST_LEVEL then
+			local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics))
+			s_SCENE:popup(sharePopup)
+		end
+		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+	end)
+	self:runAction(cc.Sequence:create(delay,func))
+
 end
 
 function SharePopupController:analytics()
@@ -114,6 +132,12 @@ function SharePopupController:analytics()
 	end	
 	if self.popupType == SHARE_TYPE_FIRST_LEVEL then
 		AnalyticsShareThirdPopupClick()
+	end
+
+	self.sharePopupRecord = s_CURRENT_USER.sharePopupRecord
+	if not is2TimeInSameDay(self.sharePopupRecord,os.time()) then
+		s_CURRENT_USER.sharePopupRecord = os.time()
+		saveUserToServer({['sharePopupRecord']=s_CURRENT_USER.sharePopupRecord})
 	end
 end
 
@@ -145,15 +169,7 @@ function SharePopupController:countDays()
 	end
 	return days
 end
--- 对应超过人数百分比
--- 所有考察单词总长度*2+单词数*7
--- 60~70
--- 所有考察单词总长度*2+单词数*6
--- 70~80
--- 所有考察单词总长度*2+单词数*5
--- 80~90
--- 所有考察单词总长度*2+单词数*4
--- 90~100
+
 function SharePopupController:getScore()
 	local function getLength(word)
 		local len = 0
@@ -178,13 +194,13 @@ function SharePopupController:getScore()
 
 	local score = 0
 	math.randomseed(tostring(os.time()):reverse():sub(1, 6))  
-	if self.time <= wordNumber * 4  + wordLength * 2 then
+	if self.time <= wordNumber * 3  + wordLength then
 		score = math.random(ShareConfig.score[1],ShareConfig.score[1]+10)
-	elseif self.time <= wordNumber * 5  + wordLength * 2 then
+	elseif self.time <= wordNumber * 4  + wordLength then
 		score = math.random(ShareConfig.score[2],ShareConfig.score[2]+10)
-	elseif self.time <= wordNumber * 6  + wordLength * 2 then
+	elseif self.time <= wordNumber * 5  + wordLength then
 		score = math.random(ShareConfig.score[3],ShareConfig.score[3]+10)
-	elseif self.time <= wordNumber * 7  + wordLength * 2 then
+	elseif self.time <= wordNumber * 6  + wordLength then
 		score = math.random(ShareConfig.score[4],ShareConfig.score[4]+10)
 	end
 	return score

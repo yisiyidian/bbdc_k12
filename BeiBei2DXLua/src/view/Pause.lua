@@ -230,7 +230,10 @@ function Pause:onMusicOff()
     end
 end
 
-function createPauseLayerWhenTestOrBoss()   
+function createPauseLayerWhenTestOrBoss()  
+    if s_SCENE == nil then
+        return 
+    end 
     if s_SCENE.gameLayerState == s_test_game_state
     or s_SCENE.gameLayerState == s_review_boss_game_state
     or s_SCENE.gameLayerState == s_summary_boss_game_state then 
