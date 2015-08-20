@@ -327,7 +327,9 @@ function NewSummaryBossLayer:initMat(visible)
     --划错单词后
     mat.fail = function (  )
         self.girl:setAnimation("wrong")
-        self.crab:shake()
+        if self.crab ~= nil and self.crab.shake ~= nil then
+            self.crab:shake()
+        end
     end
     --划对单词后
     mat.success = function(stack)
