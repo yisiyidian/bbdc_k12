@@ -91,6 +91,11 @@ function SharePopupController:init()
 end
 
 function SharePopupController:createPopup()
+	if BUILD_TARGET == BUILD_TARGET_DEBUG then
+		print("debug 不分享")
+		return 
+	end
+
 	if self.popupType == SHARE_TYPE_TIME then
 		local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics),self.time,self.score)
 		s_SCENE:popup(sharePopup)
