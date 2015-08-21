@@ -207,11 +207,12 @@ public void shareURLToWeiXin(final String url, final String title, final String 
 				WXMediaMessage msg = new WXMediaMessage();
 				msg.mediaObject = webObj;
 				
-				// Bitmap bmp = BitmapFactory.decodeFile("Icon-72.png");
-				// final int THUMB_SIZE = 128;
-				// Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, THUMB_SIZE, THUMB_SIZE, true);
-				// bmp.recycle();
-				// msg.thumbData = Util.bmpToByteArray(thumbBmp, true);
+				 Bitmap bmp = BitmapFactory.decodeFile("Icon-72.png");
+				 final int THUMB_SIZE = 300;
+				 Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, THUMB_SIZE, THUMB_SIZE, true);
+				 bmp.recycle();
+				 msg.setThumbImage(thumbBmp);
+				 
 				msg.title = title;
 				msg.description = desc;
 				

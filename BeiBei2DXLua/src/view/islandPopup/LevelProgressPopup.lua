@@ -132,7 +132,7 @@ function LevelProgressPopup:createSummary(index)
             --self:callFuncWithDelay(0.5, function()
                 local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
                 local summaryBossLayer = SummaryBossLayer.create(self.unit)
-                s_CorePlayManager.currentUnitID = self.unit
+                s_CorePlayManager.currentUnitID = self.unit.unitID
 
                 s_SCENE:replaceGameLayer(summaryBossLayer) 
                 self:callFuncWithDelay(0.2,function()

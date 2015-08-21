@@ -103,8 +103,7 @@ function SharePopupController:createPopup()
 	end
 
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-	local delay = cc.DelayTime:create(1)
-	local func = cc.CallFunc:create(function ( ... )
+	local func = function ()
 		if self.popupType == SHARE_TYPE_TIME then
 			local sharePopup = SharePopup.create(self.popupType,handler(self,self.analytics),self.time,self.score)
 			s_SCENE:popup(sharePopup)
@@ -118,8 +117,11 @@ function SharePopupController:createPopup()
 			s_SCENE:popup(sharePopup)
 		end
 		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-	end)
-	self:runAction(cc.Sequence:create(delay,func))
+	end
+
+	s_SCENE:callFuncWithDelay(0.5,function ()
+		func()
+    end)
 
 end
 
