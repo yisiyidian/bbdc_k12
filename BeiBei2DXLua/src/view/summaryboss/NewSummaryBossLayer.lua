@@ -445,7 +445,9 @@ function NewSummaryBossLayer:addChangeBtn()
             local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1][4],self.boss,self.firstTimeToChange,self.unit.unitID)
             s_SCENE.popupLayer:addChild(hintBoard)
 
-            onAndroidKeyPressed(hintBoard, function ()
+
+            s_SCENE:callFuncWithDelay(0.5,function ()
+                onAndroidKeyPressed(hintBoard, function ()
                 local isPopup = s_SCENE.popupLayer:getChildren()
                 if #isPopup ~= 0 then
                     hintBoard.hintOver()
@@ -453,6 +455,9 @@ function NewSummaryBossLayer:addChangeBtn()
             end, function ()
 
             end)
+
+            end)
+
             
             hintBoard.hintOver = function (  )
                 hintBoard:removeFromParent()
