@@ -8,7 +8,7 @@ function NewSummaryBossLayer.create(unit)
 end
 
 function NewSummaryBossLayer:ctor(unit)
-    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+    --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     if unit == 0 then
         AnalyticsSummaryStep(s_summary_enterTryGame)
     end

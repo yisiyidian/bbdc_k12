@@ -97,12 +97,12 @@ function ChapterLayer:ctor()
     -- scroll to current chapter level
     -- local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
     local progress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)
-    local taskIndex = self:getActiveTaskIndex()
+    --local taskIndex = self:getActiveTaskIndex()
     if s_game_fail_state == 1 then
         self:scrollLevelLayer(s_game_fail_level_index, 0)
         s_game_fail_state = 0
-    elseif taskIndex >= 0 then
-        self:scrollLevelLayer(taskIndex, 0)
+    --elseif taskIndex >= 0 then
+    --    self:scrollLevelLayer(taskIndex, 0)
     else
         self:scrollLevelLayer(progress, 0)
     end
@@ -251,6 +251,7 @@ function ChapterLayer:checkUnlockLevel()
     -- check state
     local bossList = s_LocalDatabaseManager.getAllUnitInfo()
     print('---BOSS list')
+
     print_lua_table(bossList)
     --------------------- last level ------------------------ 某本书学习完成时的逻辑
     local bookMaxUnitID = s_LocalDatabaseManager.getBookMaxUnitID(s_CURRENT_USER.bookKey)
@@ -330,6 +331,7 @@ function ChapterLayer:checkUnlockLevel()
     -- check max unit ID
     local oldProgress = s_CURRENT_USER.levelInfo:getLevelInfo(s_CURRENT_USER.bookKey)+0
     local currentProgress = s_CURRENT_USER.levelInfo:computeCurrentProgress() + 0
+    print('oldProgress:'..oldProgress..',current:'..currentProgress)
     s_CURRENT_USER.levelInfo:updateDataToServer()  -- update book progress
     -- 解锁大关卡
     if currentProgress % s_islands_per_page == 0 and currentProgress > 0 and currentProgress - oldProgress > 0 then       
