@@ -56,7 +56,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     local fakeTouchMoved
     local onTouchEnded
 
-    local main_word = word
+    main.main_word = word
     local main_m    = m
     local main_n    = n
 
@@ -93,7 +93,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     local charaster_set_filtered = {}
     for i = 1, 26 do
         local char = string.char(96+i)
-        if string.find(main_word, char) == nil then
+        if string.find(main.main_word, char) == nil then
             table.insert(charaster_set_filtered, char)
         end
     end
@@ -106,7 +106,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     --local main_logic_mat = {{1,2,3,4},{8,7,6,5},{9,10,11,12},{16,15,14,13}}
     -- print_lua_table(main_logic_mat)
     -- print('map time = ',os.clock() - time1)
-    local randomStartIndex = math.random(1, main_m*main_n-string.len(main_word)+1)
+    local randomStartIndex = math.random(1, main_m*main_n-string.len(main.main_word)+1)
 
     local main_mat = {}
     local firstFlipNode = nil
@@ -115,8 +115,8 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         for j = 1, main_n do
             local diff = main_logic_mat[i][j] - randomStartIndex
             local node
-            if diff >= 0 and diff < string.len(main_word) then
-                node = FlipNode.create(spineName, string.sub(main_word,diff+1,diff+1), i, j)
+            if diff >= 0 and diff < string.len(main.main_word) then
+                node = FlipNode.create(spineName, string.sub(main.main_word,diff+1,diff+1), i, j)
                 node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
                 main:addChild(node,1) 
 
@@ -176,6 +176,111 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         end
     end
 
+    main.changeToGuideMode = function (text)
+        for i = 1, main_m do
+            for j = 1, main_n do
+                main_mat[i][j]:removeFromParent()
+            end
+        end
+        for i = 1, main_m do
+        main_mat[i] = {}
+        for j = 1, main_n do
+            local diff = main_logic_mat[i][j] - randomStartIndex
+            local node
+            if diff >= 0 and diff < string.len(main.main_word) then
+                node = FlipNode.create(spineName, string.sub(main.main_word,diff+1,diff+1), i, j)
+                node:setPosition(left+gap*(i-1), bottom+gap*(j-1))
+                main:addChild(node,1) 
+
+                --add bullet 
+                bullet = NodeBulletAnimation.create()
+                bullet:setPosition(node:getContentSize().width / 2,node:getContentSize().height / 2)
+                bullet:setName("bullet")
+                bullet:setVisible(false)
+                node:addChild(bullet)
+
+                local tmp = {}
+                tmp.x = i
+                tmp.y = j
+                main.answerPath[diff+1] = tmp
+            else
+                local randomIndex = math.random(1, #charaster_set_filtered)
+                node = FlipNode.create(spineName, charaster_set_filtered[randomIndex], i, j)
+
+                node:setPosition(320, -1136)
+                main:addChild(node)
+
+                local tmp_sprite = cc.Sprite:create("image/coconut_font.png")
+                tmp_sprite:setPosition(left+gap*(i-1), bottom+gap*(j-1))
+                --tmp_sprite:setOpacity(120)
+                main:addChild(tmp_sprite)
+
+                if text == 'normal' then
+                    tmp_sprite:setScale(0)
+                    tmp_sprite:runAction(cc.Sequence:create(cc.DelayTime:create(0.1 * (3 + i - j)),cc.ScaleTo:create(0.1, 1)))
+                end
+
+                local tmp_label = cc.Label:createWithTTF(charaster_set_filtered[randomIndex],'font/CenturyGothic.ttf',60)
+                tmp_label:setColor(cc.c3b(20,20,20))
+                --tmp_label:setOpacity(120)
+                tmp_label:setPosition(tmp_sprite:getContentSize().width/2 + 3, tmp_sprite:getContentSize().height/2 + 3)
+                tmp_sprite:addChild(tmp_label) 
+            end
+            main_mat[i][j] = node
+            if text == 'normal' then
+                node:setScale(0)
+                node:runAction(cc.Sequence:create(cc.DelayTime:create(0.1 * (3 + i - j)),cc.ScaleTo:create(0.1, 1)))
+            end
+
+
+            if diff == 0 then
+                firstFlipNode = node
+                firstFlipNode.firstStyle()
+                if not isNewPlayerModel then
+                    main:runAction(cc.Sequence:create(cc.DelayTime:create(1.2),cc.CallFunc:create(function (  )
+                        local action1 = cc.ScaleTo:create(0.5,1.05)
+                        local action2 = cc.ScaleTo:create(0.5,0.95)
+                        local action3 = cc.Sequence:create(action1,action2)
+                        firstFlipNode:runAction(cc.RepeatForever:create(action3))
+                    end,{})))
+                end
+            end
+        end
+    end
+        local time = 0
+        if text == 'normal' then time = 1.2 end
+            s_SCENE:callFuncWithDelay(time,function (  )
+            if bosslayer.tutorialStep == 0 then
+                cc.Director:getInstance():getActionManager():pauseTarget(bosslayer.boss)
+            end
+                    
+            local hintBoard = cc.Sprite:create('image/guide/yindao_background_yellow.png')
+            hintBoard:setPosition(0.5 * s_DESIGN_WIDTH,0.72 * s_DESIGN_HEIGHT - 180)
+            main:addChild(hintBoard,1)
+            hintBoard:setName('board')
+            local str
+            if bosslayer.isTrying then
+                str = 'boss过来啦，快划词'
+            elseif bosslayer.tutorialStep == 0 then
+                str = '把牌子上对应的英文划出来'
+            else
+                str = '这个词应该是'..word
+            end
+            local label = cc.Label:createWithSystemFont(str,'',36)
+            label:setPosition(hintBoard:getContentSize().width / 2,hintBoard:getContentSize().height/2)
+            hintBoard:addChild(label)
+            label:setColor(cc.c3b(0,0,0))
+            main.guidePoint()
+            main.cocoAnimation()   
+            main.finger_action()
+            firstFlipNode:stopAllActions()
+            local curtain = cc.LayerColor:create(cc.c4b(0,0,0,150),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
+            main:addChild(curtain)
+            curtain:setPosition(s_LEFT_X,-150)
+            curtain:setName("curtain")
+        end)
+    end
+
     local function guidePath()
         local actionList = {}
         for i = 1, #main.answerPath do
@@ -198,7 +303,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         main:addChild(finger,1) 
 
         local action0 = cc.DelayTime:create(0.5)
-        local action2 = cc.DelayTime:create(1 + 0.3 * string.len(main_word))
+        local action2 = cc.DelayTime:create(1 + 0.3 * string.len(main.main_word))
         local action3 = cc.DelayTime:create(0.2)
 
         main:runAction(cc.RepeatForever:create(cc.Sequence:create(
@@ -240,7 +345,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
             table.insert(pointList,point)
 
             local action0 = cc.DelayTime:create(0.5 + i/20)
-            local action2 = cc.DelayTime:create(1 + 0.3 * string.len(main_word) - i/20)
+            local action2 = cc.DelayTime:create(1 + 0.3 * string.len(main.main_word) - i/20)
             local action3 = cc.DelayTime:create(0.2)
 
             main:runAction(cc.RepeatForever:create(cc.Sequence:create(action0,
@@ -276,7 +381,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         for i = 1, #main.answerPath do
             local node = main_mat[main.answerPath[i].x][main.answerPath[i].y]
             local action0 = cc.DelayTime:create(0.5 + 0.3 * i)
-            local action2 = cc.DelayTime:create(1.2 + 0.3 * string.len(main_word) - 0.3 * i)
+            local action2 = cc.DelayTime:create(1.2 + 0.3 * string.len(main.main_word) - 0.3 * i)
 
             main:runAction(cc.RepeatForever:create(cc.Sequence:create(action0,
                 cc.CallFunc:create(function ()
@@ -296,39 +401,6 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
                 end)
             )))
         end
-    end
-    
-    if isNewPlayerModel == true then
-        s_SCENE:callFuncWithDelay(1.2,function (  )
-            if bosslayer.tutorialStep == 0 then
-                cc.Director:getInstance():getActionManager():pauseTarget(bosslayer.boss)
-            end
-                    
-            local hintBoard = cc.Sprite:create('image/guide/yindao_background_yellow.png')
-            hintBoard:setPosition(0.5 * s_DESIGN_WIDTH,0.72 * s_DESIGN_HEIGHT - 180)
-            main:addChild(hintBoard,1)
-            hintBoard:setName('board')
-            local str
-            if bosslayer.isTrying then
-                str = 'boss过来啦，快划词'
-            elseif bosslayer.tutorialStep == 0 then
-                str = '把牌子上对应的英文划出来'
-            else
-                str = '这个词应该是'..word
-            end
-            local label = cc.Label:createWithSystemFont(str,'',36)
-            label:setPosition(hintBoard:getContentSize().width / 2,hintBoard:getContentSize().height/2)
-            hintBoard:addChild(label)
-            label:setColor(cc.c3b(0,0,0))
-            main.guidePoint()
-            main.cocoAnimation()   
-            main.finger_action()
-            firstFlipNode:stopAllActions()
-            local curtain = cc.LayerColor:create(cc.c4b(0,0,0,150),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
-            main:addChild(curtain)
-            curtain:setPosition(s_LEFT_X,-150)
-            curtain:setName("curtain")
-        end)
     end
 
     local guideLineLayer = GuideLine:createLayer(main)
@@ -558,7 +630,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
         checkTouchLocation(location)
 
         if onNode then
-            if isGuide and isNewPlayerModel then
+            if isGuide and isNewPlayerModel or main:getChildByName("curtain") ~= nil then
                stopAllGuide()
             end
 
@@ -719,7 +791,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
             selectWord = selectWord .. selectStack[i].main_character_content
         end
 
-        if selectWord == main_word then
+        if selectWord == main.main_word then
             successFunction()
         else
             failFunction()
@@ -727,7 +799,7 @@ function Mat.create(bosslayer, isNewPlayerModel, spineName)
     end
 
     successFunction = function ()
-        if isNewPlayerModel then
+        if isNewPlayerModel or main:getChildByName("curtain") ~= nil then
             director:getActionManager():resumeTarget(bosslayer.boss)
             main:removeChildByName("curtain")
         end

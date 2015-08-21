@@ -280,50 +280,34 @@ function NewSummaryBossLayer:creatMat()
     
     if self.mat == nil then
         self:initMat()
-        if (self.tutorialStep == 1 and self.finishTrying == false) or (self.tutorialStep <= 1 and self.finishTrying == true) then 
-            self:initMat(false)
-        end
-        return  
+        return
     end
 
-    local remove = cc.CallFunc:create(function() 
+    local removeMat = cc.CallFunc:create(function() 
         if self.mat ~= nil then
             self.mat:removeFromParent()
         end
-        if self.invisibleMat ~= nil then
-            self.invisibleMat:removeFromParent()
-        end
         self.mat = nil
-        self.invisibleMat = nil
-        
         self:initMat()
-        if (self.tutorialStep == 1 and self.finishTrying == false) or (self.tutorialStep <= 1 and self.finishTrying == true) then 
-            self:initMat(false)
-        end 
     end,{})
-    self.mat:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7)),remove))
-    if self.invisibleMat ~= nil then
-        self.mat:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7))))
-    end
+    self.mat:runAction(cc.Sequence:create(cc.DelayTime:create(0.5),cc.MoveBy:create(0.5,cc.p(0,-s_DESIGN_HEIGHT*0.7)),removeMat))
 end
 
-function NewSummaryBossLayer:initMat(visible)
+function NewSummaryBossLayer:initMat()
     local isNewPlayer =  (self.isTrying and self.wordList[1][1] == 'apple') or (self.tutorialStep < 1 and self.finishTrying == false)
     local mat = require("view.summaryboss.Mat").create(self,isNewPlayer,"coconut_dark")
+    if isNewPlayer then
+        mat:changeToGuideMode('normal')
+    end
     mat:setPosition(s_DESIGN_WIDTH/2, 150)
     self:addChild(mat,1)
 
     self:resetTime()
 
-    if visible ~= nil and not visible then
-        self.invisibleMat = mat
-        mat:setVisible(false)
-    else
-        self.mat = mat
-        s_SCENE:callFuncWithDelay(0.7,function (  )
-            self:initCrab()
-        end)
-    end 
+    self.mat = mat
+    s_SCENE:callFuncWithDelay(0.7,function (  )
+        self:initCrab()
+    end)
     --划错单词后
     mat.fail = function (  )
         self.girl:setAnimation("wrong")
@@ -595,8 +579,7 @@ function NewSummaryBossLayer:secondWordTutorial()
     curtain.remove = function()
         --s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
         --self.gamePaused = false
-        self.invisibleMat:setVisible(true)
-        self.mat:setVisible(false)
+        self.mat:changeToGuideMode("special")
         self.boss:setLocalZOrder(0)
         --self.girl:setLocalZOrder(0)
         curtain:removeFromParent()
