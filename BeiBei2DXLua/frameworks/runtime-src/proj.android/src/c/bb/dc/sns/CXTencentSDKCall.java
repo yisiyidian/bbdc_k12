@@ -19,6 +19,8 @@ import c.bb.dc.BBNDK;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.LogInCallback;
+import com.beibei.wordmaster.AppActivity;
+import com.beibei.wordmaster.R;
 import com.tencent.connect.UserInfo;
 import com.tencent.connect.common.Constants;
 import com.tencent.connect.share.QQShare;
@@ -207,12 +209,14 @@ public void shareURLToWeiXin(final String url, final String title, final String 
 				WXMediaMessage msg = new WXMediaMessage();
 				msg.mediaObject = webObj;
 				
-				 Bitmap bmp = BitmapFactory.decodeFile("Icon-72.png");
-				 final int THUMB_SIZE = 300;
-				 Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, THUMB_SIZE, THUMB_SIZE, true);
-				 bmp.recycle();
+	            Bitmap bitmap  = BitmapFactory.decodeResource(AppActivity.getContext().getResources(), R.drawable.icon);
+				 Bitmap thumbBmp = Bitmap.createScaledBitmap(bitmap, 300, 300, true);
+//				 Bitmap bmp = BitmapFactory.decodeFile(desc);
+//				 final int THUMB_SIZE = 300;
+//				 Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, THUMB_SIZE, THUMB_SIZE, true);
+				 bitmap.recycle();
 				 msg.setThumbImage(thumbBmp);
-				 
+			 
 				msg.title = title;
 				msg.description = desc;
 				

@@ -133,10 +133,14 @@ function ShopLayer.create()
         end
     end
 
+    local view = 'shop'
     onAndroidKeyPressed(layer, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()
         if #isPopup == 0 then
-            layer.backToHome()
+            if view == 'shop' then
+                layer.backToHome()
+                view = 'home'
+            end
         end
     end, function ()
 
