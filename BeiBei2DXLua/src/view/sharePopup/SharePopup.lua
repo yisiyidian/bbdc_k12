@@ -120,7 +120,7 @@ function SharePopup:closeFunc()
 	local action2 = cc.CallFunc:create(function ( ... )
 		s_SCENE:removeAllPopups()
 	end)
-	self.mark:runAction(cc.Sequence:create(action1,action2))
+	self.back:runAction(cc.Sequence:create(action1,action2))
 end
 
 function SharePopup:shareFunc(sender, eventType)

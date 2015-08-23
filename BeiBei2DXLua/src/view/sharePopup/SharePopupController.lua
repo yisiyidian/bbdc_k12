@@ -119,7 +119,7 @@ function SharePopupController:createPopup()
 		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 	end
 
-	s_SCENE:callFuncWithDelay(0.5,function ()
+	s_SCENE:callFuncWithDelay(1.5,function ()
 		func()
     end)
 
@@ -137,7 +137,7 @@ function SharePopupController:analytics()
 	end
 
 	self.sharePopupRecord = s_CURRENT_USER.sharePopupRecord
-	if not is2TimeInSameDay(self.sharePopupRecord,os.time()) then
+	if not is2TimeInSameDay(self.sharePopupRecord,os.time()) and self.popupType == SHARE_TYPE_TIME then
 		s_CURRENT_USER.sharePopupRecord = os.time()
 		saveUserToServer({['sharePopupRecord']=s_CURRENT_USER.sharePopupRecord})
 	end

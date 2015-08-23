@@ -8,12 +8,13 @@ function NewSummaryBossLayer.create(unit)
 end
 
 function NewSummaryBossLayer:ctor(unit)
-    --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     if unit == 0 then
         AnalyticsSummaryStep(s_summary_enterTryGame)
     end
     self.unit = unit
-
+    self.showBoss = false
+    self.showMat = false
     self:initStageInfo()
     self:initBackground()
     s_SCENE:callFuncWithDelay(1.5,function()
@@ -22,6 +23,7 @@ function NewSummaryBossLayer:ctor(unit)
     end)
     s_SCENE:callFuncWithDelay(1.8,function ()
         self:creatMat()
+        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     end)
 
     local function update(delta)
@@ -201,19 +203,21 @@ function NewSummaryBossLayer:initBackground()
     end
     pauseBtn:addTouchEventListener(pauseScene)
 
-    s_SCENE:callFuncWithDelay(5,function ()
-        onAndroidKeyPressed(pauseBtn, function ()
-            local isPopup = s_SCENE.popupLayer:getChildren()
-            if #isPopup == 0 then
-                s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-                if not self.gamePaused then 
-                    createPausePopup()
-                end
-            end
-        end, function ()
 
-        end)
+    onAndroidKeyPressed(self, function ()
+        local isPopup = s_SCENE.popupLayer:getChildren()
+        if #isPopup == 0 then
+            s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+            if not self.gamePaused then
+                createPausePopup()
+            end
+        end
+    end, function ()
+
     end)
+        
+
+
 
     --添加girl
     local girl = require("view.summaryboss.Girl").create()
@@ -271,13 +275,6 @@ function NewSummaryBossLayer:initBoss()
 end
 
 function NewSummaryBossLayer:creatMat()
-    local delay = cc.DelayTime:create(1)
-    local func = cc.CallFunc:create(function ( ... )
-        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-        self.gamePaused = false
-    end)
-    self:runAction(cc.Sequence:create(delay,func))
-    
     if self.mat == nil then
         self:initMat()
         return
@@ -447,6 +444,9 @@ function NewSummaryBossLayer:addChangeBtn()
 
 
             s_SCENE:callFuncWithDelay(0.5,function ()
+                if tolua.isnull(hintBoard) then
+                    return
+                end
                 onAndroidKeyPressed(hintBoard, function ()
                 local isPopup = s_SCENE.popupLayer:getChildren()
                 if #isPopup ~= 0 then
@@ -465,8 +465,14 @@ function NewSummaryBossLayer:addChangeBtn()
                 if #self.wordList > 1 then
                     s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
                     self:addWrongWordToEnd()
-                    self.crab:moveOut()
+                    if not tolua.isnull(self.crab) then
+                        self.crab:moveOut()
+                    end
                     self:creatMat()
+                    cc.Director:getInstance():getActionManager():resumeTarget(self.boss)
+                    s_SCENE:callFuncWithDelay(0.2 ,function ()
+                        self.gamePaused = false
+                        end)
                 end
             end
             
@@ -607,12 +613,22 @@ function NewSummaryBossLayer:changeWordTutorial()
         self:addWrongWordToEnd()
         if #self.wordList > 1 then
             s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+        end            
+        if not tolua.isnull(self.crab) then
+            self.crab:moveOut()
         end
-        self.crab:moveOut()
         self:creatMat()
+
+        cc.Director:getInstance():getActionManager():resumeTarget(self.boss)
+        s_SCENE:callFuncWithDelay(0.2 ,function ( ... )
+             self.gamePaused = false
+        end)
     end
 
     onAndroidKeyPressed(hintBoard, function ()
+        if tolua.isnull(hintBoard) then
+            return
+        end
         local isPopup = s_SCENE.popupLayer:getChildren()
         if #isPopup ~= 0 then
             hintBoard.hintOver()

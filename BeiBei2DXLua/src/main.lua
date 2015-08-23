@@ -11,8 +11,9 @@ function __G__TRACKBACK__(msg)
     cclog("LUA ERROR: " .. tostring(msg) .. "\n")
     cclog(debug.traceback())
     cclog("----------------------------------------")
-    saveLuaError("LUA ERROR: " .. tostring(msg) .. '. ' .. tostring(debug.traceback()))
-    LUA_ERROR = LUA_ERROR .. '\n' .. tostring(msg) .. '\n' .. tostring(debug.traceback())
+    local newMsg,_ = string.gsub(tostring(msg),":",":\n")
+    saveLuaError("LUA ERROR: " .. newMsg .. '. ' .. tostring(debug.traceback()))
+    LUA_ERROR = LUA_ERROR .. '\n' .. newMsg .. '\n' .. tostring(debug.traceback())
     return msg
 end
 
@@ -36,8 +37,8 @@ local function main()
     
     cc.Director:getInstance():setDisplayStats(false)
 
-    app_version_debug   = 219000
-    app_version_release = 219000
+    app_version_debug   = 220000
+    app_version_release = 220000
 
     g_userName = nil
     g_userPassword = nil

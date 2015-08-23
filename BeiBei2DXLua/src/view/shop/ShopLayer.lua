@@ -133,14 +133,25 @@ function ShopLayer.create()
         end
     end
 
-    onAndroidKeyPressed(layer, function ()
-        local isPopup = s_SCENE.popupLayer:getChildren()
-        if #isPopup == 0 then
-            layer.backToHome()
-        end
-    end, function ()
+    local view = 'shop'
+    local delay = cc.DelayTime:create(1)
+    local func = cc.CallFunc:create(function ()
+        onAndroidKeyPressed(layer, function ()
+            local isPopup = s_SCENE.popupLayer:getChildren()
+            if #isPopup == 0 then
+                if view == 'shop' then
+                    layer.backToHome()
+                    view = 'home'
+                end
+            end
+        end, function ()
 
+        end)
     end)
+
+
+    layer:runAction(cc.Sequence:create(delay,func))
+
     
     return layer
 end
