@@ -184,11 +184,11 @@ function ChapterLayer:getActiveTaskIndex()
     print('-------getActiveTaskIndex----------')
     print_lua_table(bossList)
     local taskIndex = -2
-    for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 4 < 0 then
-            taskIndex = bossID - 1
-        end
-    end    
+    -- for bossID, bossInfo in pairs(bossList) do
+    --     if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 4 < 0 then
+    --         taskIndex = bossID - 1
+    --     end
+    -- end    
     return taskIndex
 end
 
@@ -203,10 +203,10 @@ function ChapterLayer:initActiveChapterRange()
     local progressIndex = progress
     local progressState = 0
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 4 < 0 then
-            taskIndex = bossID - 1
-            taskState = bossInfo["unitState"] 
-        end
+        -- if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 4 < 0 then
+        --     taskIndex = bossID - 1
+        --     taskState = bossInfo["unitState"] 
+        -- end
         if (progressIndex + 1) == bossID then
             progressState = bossInfo["unitState"]
         end
@@ -319,10 +319,10 @@ function ChapterLayer:checkUnlockLevel()
     local progressIndex = progress
     local progressState = 0
     for bossID, bossInfo in pairs(bossList) do
-        if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 5 < 0 then
-            taskIndex = bossID - 1
-            taskState = bossInfo["unitState"]
-        end
+        -- if bossInfo["coolingDay"] - 0 == 0 and bossInfo["unitState"] - 1 >= 0 and taskIndex == -2 and bossInfo["unitState"] - 5 < 0 then
+        --     taskIndex = bossID - 1
+        --     taskState = bossInfo["unitState"]
+        -- end
         if (progressIndex + 1) == bossID then
             progressState = bossInfo["unitState"]
         end

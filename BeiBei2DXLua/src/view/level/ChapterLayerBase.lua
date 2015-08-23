@@ -108,7 +108,7 @@ function ChapterLayerBase:plotUnlockLevelAnimation(levelKey)
         s_SCENE:callFuncWithDelay(0.7,function()
             self:plotDecorationOfLevel(levelIndex-0)
         end)
-        s_SCENE:callFuncWithDelay(1.5, function()
+        s_SCENE:callFuncWithDelay(1.8, function()
             self:addPopup(levelIndex-0)
         end)
     end
