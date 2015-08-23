@@ -123,7 +123,6 @@ function EducationSelect:ctor()
 
 
     if s_CURRENT_USER.usertype ~= USER_TYPE_BIND then
-        s_CURRENT_USER.guideStep = 0
         self:popupAccountBind()
         return
     else

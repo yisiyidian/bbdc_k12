@@ -393,7 +393,7 @@ function HomeLayer:ctor()
     onAndroidKeyPressed(self, function ()
         local isPopup = s_SCENE.popupLayer:getChildren()
         if self.view ~= "home" and #isPopup == 0 then
-            self.view = "home"
+
         elseif self.isDataShow == true and #isPopup == 0 then
             self.isDataShow = false
             self:setButtonEnabled(true)

@@ -153,7 +153,7 @@ function DataUser:ctor()
     self.shareFirstPopupDateRecord         = 0
 
     self.sharePopupRecord                  = 0
-    -- 每天最多分享一次，记录时间
+    -- 第一种每天最多分享一次，记录时间
 
 end
 
