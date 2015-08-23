@@ -135,7 +135,7 @@ function LevelProgressPopup:createSummary(index)
                 s_CorePlayManager.currentUnitID = self.unit.unitID
 
                 s_SCENE:replaceGameLayer(summaryBossLayer) 
-                self:callFuncWithDelay(0.2,function()
+                self:callFuncWithDelay(0.1,function()
                     s_SCENE:removeAllPopups() 
                 end) 
             --end)
@@ -143,8 +143,12 @@ function LevelProgressPopup:createSummary(index)
             --return
         else
                 showProgressHUD('', true)    
-                s_SCENE:removeAllPopups() 
+                --s_SCENE:removeAllPopups() 
+
                 s_CorePlayManager.initTotalUnitPlay() -- 之前没有boss 
+                self:callFuncWithDelay(0.1,function()
+                    s_SCENE:removeAllPopups() 
+                end) 
         end
 
         --local taskIndex = -2
