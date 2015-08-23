@@ -168,6 +168,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("levelIndex"..levelIndex)
+    print("currentProgress:"..currentProgress)
     print("currentTaskBossIndex"..currentTaskBossIndex)
     print("levelState"..levelState)
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -185,6 +186,7 @@ function ChapterLayerBase:plotDecorationOfLevel(levelIndex)
     -- else
     -- if false then
     --if levelState == 0 or (levelState >= 1 and levelState <= 4 and levelIndex == currentTaskBossIndex) then
+    --if currentProgress == levelIndex+1 then
     if levelState == 0 then
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
         summaryboss:setPosition(levelPosition.x-100,levelPosition.y-50)
