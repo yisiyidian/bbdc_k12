@@ -94,12 +94,17 @@ function WordCardRender:PlaySound(sender,eventType)
         return
     end
     -- 动画
+    s_SCENE.touchEventBlockLayer.lockTouch()
     self.first:runAction(self:PlaySoundAnimation(0.2))
     self.second:runAction(self:PlaySoundAnimation(0.4)) 
     self.third:runAction(self:PlaySoundAnimation(0.6))
-
     playWordSound(self.word)
-    print("playsound")
+    print("playsound")  
+    local delay = cc.DelayTime:create(0.6)
+    local func = cc.CallFunc:create(function (  )
+        s_SCENE.touchEventBlockLayer.unlockTouch()
+    end)  
+    self.third:runAction(cc.Sequence:create(delay,func))
 end
 
 function WordCardRender:setData()
