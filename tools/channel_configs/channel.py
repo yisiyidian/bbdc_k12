@@ -387,7 +387,7 @@ public class AppVersionInfo {
 
 # ---------------------------------------------------------------------------------
 
-def setupAndroidProject(channelAndroid, manifestSrc, manifestDst, androidProjSrcPath, AppActivitySrc, AppActivityName, BBPushNotificationServiceSrc, BBPushNotificationServiceDst, MyProgressDialogSrc, MyProgressDialogDsc):
+def setupAndroidProject(channelAndroid, manifestSrc, manifestDst, androidProjSrcPath, AppActivitySrc, AppActivityName, BBPushNotificationServiceSrc, BBPushNotificationServiceDst, MyProgressDialogSrc, MyProgressDialogDsc, CXTencentSDKCallSRC, CXTencentSDKCallDRC):
     # androidManifest ------------------------------------------------
     manifestRaw = open(manifestSrc).read()
     manifestNew = manifestRaw.replace('com.beibei.wordmaster', channelAndroid.packageName)
@@ -427,6 +427,12 @@ def setupAndroidProject(channelAndroid, manifestSrc, manifestDst, androidProjSrc
     rawJavaStr = open(MyProgressDialogSrc).read()
     newJavaStr = rawJavaStr.replace('com.beibei.wordmaster', channelAndroid.packageName)
     newAppActivityJava = open(MyProgressDialogDsc, 'w')
+    newAppActivityJava.write(newJavaStr)
+    newAppActivityJava.close()
+
+    rawJavaStr = open(CXTencentSDKCallSRC).read()
+    newJavaStr = rawJavaStr.replace('com.beibei.wordmaster', channelAndroid.packageName)
+    newAppActivityJava = open(CXTencentSDKCallDRC, 'w')
     newAppActivityJava.write(newJavaStr)
     newAppActivityJava.close()
 
@@ -470,6 +476,8 @@ if __name__ == "__main__":
     _BBPushNotificationServiceDsc = sys.argv[14]
     _MyProgressDialogSrc = sys.argv[15]
     _MyProgressDialogDsc = sys.argv[16]
+    _CXTencentSDKCallSRC = sys.argv[17]
+    _CXTencentSDKCallDRC = sys.argv[18]
 
     # ---------------------------------------------------------------------------------
 
@@ -489,4 +497,4 @@ if __name__ == "__main__":
     createObjectiveCCodes(_ver, TEST_SERVER, buildTarget, channeliOS, _objc)
     createJavaCodes(_ver, TEST_SERVER, buildTarget, channelAndroid, _java, allChannelConfigurations)
 
-    setupAndroidProject(channelAndroid, _manifestSrc, _manifestDst, _androidProjSrcPath, _AppActivitySrc, _AppActivityName, _BBPushNotificationServiceSrc, _BBPushNotificationServiceDsc, _MyProgressDialogSrc, _MyProgressDialogDsc)
+    setupAndroidProject(channelAndroid, _manifestSrc, _manifestDst, _androidProjSrcPath, _AppActivitySrc, _AppActivityName, _BBPushNotificationServiceSrc, _BBPushNotificationServiceDsc, _MyProgressDialogSrc, _MyProgressDialogDsc, _CXTencentSDKCallSRC, _CXTencentSDKCallDRC)

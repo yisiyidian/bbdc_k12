@@ -272,7 +272,7 @@ function SettingLayer:onFollowTouch( sender,eventType )
     closeButton:addTouchEventListener(close_button_clicked)
     back:addChild(closeButton)
 
-    local label2 = cc.Label:createWithSystemFont("V2.2.1","",25)
+    local label2 = cc.Label:createWithSystemFont("V2.2.0","",25)
     label2:setColor(cc.c4b(36,61,78,255))
     label2:setPosition(back:getContentSize().width/2+45, back:getContentSize().height/2+75)
     info:addChild(label2)

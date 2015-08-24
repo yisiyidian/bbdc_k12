@@ -91,10 +91,10 @@ function SharePopupController:init()
 end
 
 function SharePopupController:createPopup()
-	-- if BUILD_TARGET == BUILD_TARGET_DEBUG then
-	-- 	print("debug 不分享")
-	-- 	return 
-	-- end
+	if BUILD_TARGET == BUILD_TARGET_DEBUG then
+		print("debug 不分享")
+		return 
+	end
 
 	self.sharePopupRecord = s_CURRENT_USER.sharePopupRecord
 	if  is2TimeInSameDay(self.sharePopupRecord,os.time()) then
