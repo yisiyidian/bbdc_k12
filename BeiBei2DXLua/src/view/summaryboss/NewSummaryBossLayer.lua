@@ -339,7 +339,10 @@ function NewSummaryBossLayer:initMat()
             end
         end
 
-        local delaytime = 0
+        -- local delaytime = #self.wordList[1][4] / 15
+        -- if delaytime > 0.5 then delaytime = 0.5 end
+        -- delaytime = 0
+        local time = 0
         for i = 1, #stack do
             local bullet = stack[i]:getChildByName("bullet")
             bullet:setVisible(true)
@@ -348,13 +351,16 @@ function NewSummaryBossLayer:initMat()
             local bulletPos = cc.p(stack[i]:getPosition())
             
             bossPos = cc.p(bossPos.x - bulletPos.x, bossPos.y - 150 - bulletPos.y)
-            local time = math.sqrt(bossPos.x * bossPos.x + bossPos.y * bossPos.y) / (1200*(1 + i * 0.1))
-            if time > 0.5 then
-                time = 0.5
+            if time == 0 then
+                time = math.sqrt(bossPos.x * bossPos.x + bossPos.y * bossPos.y) / (1200*(1 + i * 0.0))
             end
-            if delaytime < time then
-                delaytime = time
-            end
+            -- if time > 0.5 then
+            --     time = 0.5
+            -- end
+            -- if delaytime < time then
+            --     delaytime = time
+            -- end
+
             local delay = cc.DelayTime:create(0.2 *math.pow(i,0.8))
             local hit = cc.MoveBy:create(time,bossPos)
             local hide = cc.Hide:create()
@@ -381,7 +387,7 @@ function NewSummaryBossLayer:initMat()
             s_CURRENT_USER:setSummaryStep(s_summary_successFirstLevel)
             AnalyticsSummaryStep(s_summary_successFirstLevel)
         end
-        s_SCENE:callFuncWithDelay(0.2 *math.pow(#stack,0.8) + 0.5,function ()
+        s_SCENE:callFuncWithDelay(0.2 *math.pow(#stack,0.8) + time,function ()
             if self.currentBlood > 0 then
                 if self.girl.isAfraid then
                     playMusic(s_sound_Get_Outside)
