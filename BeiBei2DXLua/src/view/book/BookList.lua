@@ -2,8 +2,8 @@
 
 local list  = {}
 
-list[1]	= { key = 'BICBSKGB_XG1_A',	name = '北京版课改-一年级下册',	word = 1000,	music = '10M'	,type = 'primary',}
-list[2]	= { key = 'BICBSKGB_XG1_B',	name = '北京版课改-一年级上册',	word = 1000,	music = '10M'	,type = 'primary',}
+list[1]	= { key = 'BICBSKGB_XG1_A',	name = '北京版课改-一年级上册',	word = 1000,	music = '10M'	,type = 'primary',}
+list[2]	= { key = 'BICBSKGB_XG1_B',	name = '北京版课改-一年级下册',	word = 1000,	music = '10M'	,type = 'primary',}
 list[3]	= { key = 'BICBSKGB_XG2_A',	name = '北京版课改-二年级上册',	word = 1000,	music = '10M'	,type = 'primary',}
 list[4]	= { key = 'BICBSKGB_XG2_B',	name = '北京版课改-二年级下册',	word = 1000,	music = '10M'	,type = 'primary',}
 list[5]	= { key = 'BICBSKGB_XG3_A',	name = '北京版课改-三年级上册',	word = 1000,	music = '10M'	,type = 'primary',}
