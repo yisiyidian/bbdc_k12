@@ -14,6 +14,8 @@ function MatView.create()
 end
 
 function MatView:ctor()
+	self.locationX = 56 - 55
+	self.locationY = 200 - 55
 	self.size = cc.p(0,0)
 	-- 每个砖块大小
 	self.coco = {}
@@ -186,7 +188,7 @@ function MatView:resetUI()
 			local cocoView = CocoView.create()
 			self.coco[i][j] = cocoView 
 			self.back:addChild(self.coco[i][j])
-			self.coco[i][j]:setPosition(cc.p(i * 120 -40,j * 120))	 
+			self.coco[i][j]:setPosition(cc.p(self.locationX + i * 110 ,self.locationY + j * 110))	 
 			self.coco[i][j].letter = string.char(math.random(100,120))
 			if self.mat[i][j] == 5 then
 				self.coco[i][j].color = math.random(1,1000)%5
@@ -203,10 +205,12 @@ function MatView:resetUI()
 
 	-- 获取参数
 	local length = string.len(MatController.word[MatController.index][1])
-	math.randomseed(os.time())
+	math.randomseed(tostring(os.time()):reverse():sub(1, 6)) 
 
 	-- 是否反向
 	local random = math.random(1,2)
+	print(MatController.word[MatController.index][1])
+	print(random)
 	-- 获取第一条路径
 	self.path = PathController:getPath(length)
 	local temp = {}
@@ -223,8 +227,11 @@ function MatView:resetUI()
 	-- 重新绘制砖块
 	for k,v in pairs(self.path) do
 		self.coco[self.path[k].x][self.path[k].y].letter = string.sub(MatController.word[MatController.index][1],k,k) 
+		if k == 1 then
+			self.coco[self.path[k].x][self.path[k].y].isFisrt = true
+		end
 		self.coco[self.path[k].x][self.path[k].y]:resetView()
-		-- print(string.sub(MatController.word[1],k,k)..self.path[k].x..self.path[k].y)
+		print(string.sub(MatController.word[MatController.index][1],k,k)..self.path[k].x..self.path[k].y)
 	end
 	-- print(MatController.word[1])
 
@@ -234,8 +241,11 @@ function MatView:resetUI()
 	-- 重新绘制砖块
 	for k,v in pairs(self.path2) do
 		self.coco[self.path2[k].x][self.path2[k].y].letter = string.sub(MatController.word[MatController.index][1],k,k) 
+		if k == 1 then
+			self.coco[self.path2[k].x][self.path2[k].y].isFisrt = true
+		end
 		self.coco[self.path2[k].x][self.path2[k].y]:resetView()
-		-- print(string.sub(MatController.word[1],k,k)..self.path2[k].x..self.path2[k].y)
+		print(string.sub(MatController.word[MatController.index][1],k,k)..self.path2[k].x..self.path2[k].y)
 	end
 	local word = MatController.word[MatController.index][3]
 	self:resetChineseLabel(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall)
@@ -246,40 +256,40 @@ function MatView:resetUI()
 end
 
 function MatView:runAct()
-	for i=1,5 do
-		for j=1,5 do
-			local t1 = cc.DelayTime:create(0.2*i/5)
-			local r1 = cc.RotateBy:create(0.2*j/5,30)
-			local r2 = cc.RotateBy:create(0.2*j/5,-60)
-			local r3 = cc.RotateBy:create(0.2*j/5,30)
-			self.coco[i][j]:runAction(cc.Sequence:create(r1,r2,r3))
-		end
-	end
+	-- for i=1,5 do
+	-- 	for j=1,5 do
+	-- 		local t1 = cc.DelayTime:create(0.2*i/5)
+	-- 		local r1 = cc.RotateBy:create(0.2*j/5,30)
+	-- 		local r2 = cc.RotateBy:create(0.2*j/5,-60)
+	-- 		local r3 = cc.RotateBy:create(0.2*j/5,30)
+	-- 		self.coco[i][j]:runAction(cc.Sequence:create(r1,r2,r3))
+	-- 	end
+	-- end
 end
 
 function MatView:letterTip()
-	-- 首字母提示
-	for i=1,5 do
-		for j=1,5 do
-			if self.coco[i][j].letter == string.sub(MatController.word[MatController.index][1],1,1) then
-				self.coco[i][j].touchState = 2
-			end
-			self.coco[i][j]:resetView()
-		end
-	end
+	-- -- 首字母提示
+	-- for i=1,5 do
+	-- 	for j=1,5 do
+	-- 		if self.coco[i][j].letter == string.sub(MatController.word[MatController.index][1],1,1) then
+	-- 			self.coco[i][j].touchState = 2
+	-- 		end
+	-- 		self.coco[i][j]:resetView()
+	-- 	end
+	-- end
 
-	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
-	local delayAction =  cc.DelayTime:create(1)
-	local runAction = cc.CallFunc:create(function ( ... )
-		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-		for i=1,5 do
-			for j=1,5 do
-				self.coco[i][j].touchState = 1
-				self.coco[i][j]:resetView()
-			end
-		end
-	end)
-	self:runAction(cc.Sequence:create(delayAction,runAction))
+	-- s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+	-- local delayAction =  cc.DelayTime:create(1)
+	-- local runAction = cc.CallFunc:create(function ( ... )
+	-- 	s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+	-- 	for i=1,5 do
+	-- 		for j=1,5 do
+	-- 			self.coco[i][j].touchState = 1
+	-- 			self.coco[i][j]:resetView()
+	-- 		end
+	-- 	end
+	-- end)
+	-- self:runAction(cc.Sequence:create(delayAction,runAction))
 end
 
 function MatView:dropFunc(callback)

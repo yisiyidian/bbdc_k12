@@ -15,6 +15,8 @@ end
 function CocoView:ctor()
 	-- 元素状态 1 静止 2 按下 3 划过
 	self.touchState = 1
+	-- 首字母 标示
+	self.isFisrt = false
 	-- 字母
 	self.letter = ""
 	-- 红0 绿1 黄2 蓝3 橙4 
@@ -30,7 +32,7 @@ function CocoView:initUI()
 	-- 用于滑动的砖块 下层
     local downSprite = cc.Sprite:create()
     downSprite:ignoreAnchorPointForPosition(false)
-    downSprite:setAnchorPoint(0.5,0.5)
+    downSprite:setAnchorPoint(0,0)
     self.downSprite = downSprite
     self:addChild(self.downSprite)
 	-- 用于滑动的砖块 上层 可移动
@@ -61,11 +63,9 @@ function CocoView:resetView()
 	-- self。color用数字来区别颜色
 	-- 如果是按下状态，touchState =2或3，颜色特殊
 	-- 按下状态不同，砖块上层元素移动位置
-	self.downSprite:setTexture("image/playmodel/wordButton_downside.png")
+	self.downSprite:setTexture("image/playmodel/dishNormal.png")
 	local contentsizeX = self.downSprite:getContentSize().width
 	local contentsizeY = self.downSprite:getContentSize().height
-	self:setContentSize(contentsizeX,contentsizeY)
-	self.downSprite:setPosition(contentsizeX/2,contentsizeY/2)
 	self.colorPoint:setTexture("image/playmodel/point.png")
 
 	if self.color % 5 == 0 then
@@ -81,19 +81,23 @@ function CocoView:resetView()
 	end	
 
 	if self.touchState == 1 then 
-		self.upSprite:setTexture("image/playmodel/wordButton_upside.png")
-		self:setContentSize(contentsizeX,contentsizeY)
-		self.upSprite:setPosition(contentsizeX/2,contentsizeY/2 + 10)
+		self.downSprite:setTexture("image/playmodel/dishNormal.png")
 	elseif self.touchState == 2 then
-		self.upSprite:setTexture("image/playmodel/wordButton_downside1.png")
-		self:setContentSize(contentsizeX,contentsizeY)
-		self.upSprite:setPosition(contentsizeX/2,contentsizeY/2)
+		self.downSprite:setTexture("image/playmodel/dishShake.png")
 		self.colorPoint:setColor(cc.c4b(255,221,84,255))
 	elseif self.touchState == 3 then
-		self.upSprite:setTexture("image/playmodel/wordButton_downside1.png")
-		self:setContentSize(contentsizeX,contentsizeY)
-		self.upSprite:setPosition(contentsizeX/2,contentsizeY/2 + 5)
+		self.downSprite:setTexture("image/playmodel/dishShake.png")
 		self.colorPoint:setColor(cc.c4b(255,221,84,255))
+	end
+
+	if self.isFisrt then
+		if self.touchState == 1 then 
+			self.downSprite:setTexture("image/playmodel/firstNormal.png")
+		elseif self.touchState == 2 then
+			self.downSprite:setTexture("image/playmodel/firstShake.png")
+		elseif self.touchState == 3 then
+			self.downSprite:setTexture("image/playmodel/firstShake.png")
+		end
 	end
 
 	self.colorPoint:setPosition(contentsizeX - 5,contentsizeY - 5)
