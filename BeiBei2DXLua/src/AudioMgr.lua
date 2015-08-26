@@ -28,7 +28,7 @@ end
 function playSound(filename)
     if db.isSoundOn() then
         local localPath = cc.FileUtils:getInstance():fullPathForFilename(filename)
-        cc.SimpleAudioEngine:getInstance():setEffectsVolume(1.0)
+        cc.SimpleAudioEngine:getInstance():setEffectsVolume(5.0)
         if cc.FileUtils:getInstance():isFileExist(localPath) then
             cc.SimpleAudioEngine:getInstance():playEffect(localPath)
         end
