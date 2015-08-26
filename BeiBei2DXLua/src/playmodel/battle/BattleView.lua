@@ -28,17 +28,15 @@ function BattleView:initUI()
 	local boss = s_BattleManager.bossList
 	for i = 1,#boss do
 		if s_BattleManager.currentBossIndex == i then
-			boss[i].ui:setPosition(s_DESIGN_WIDTH / 2 - 100,s_DESIGN_HEIGHT * 0.8)
+			boss[i].ui:setPosition(s_DESIGN_WIDTH / 2 ,s_DESIGN_HEIGHT * 0.8 + 20)
 			self:addChild(boss[i].ui)
 		else
-			boss[i].ui:setPosition(s_DESIGN_WIDTH / 2 - 100,s_DESIGN_HEIGHT * 0.8 + 400)
+			boss[i].ui:setPosition(s_DESIGN_WIDTH / 2 ,s_DESIGN_HEIGHT * 0.8 + 420)
 			self:addChild(boss[i].ui)
 		end
 	end
 
-	local pet = s_BattleManager.petList
-	pet[1].ui:setPosition(336,110)
-	self:addChild(pet[1].ui)
+
 
 	local function update(delta)
 		s_BattleManager:updateTime(delta)
@@ -47,6 +45,11 @@ function BattleView:initUI()
 
     local MatView = require("playmodel.newmat.MatView").create()
 	self:addChild(MatView)
+
+	local pet = s_BattleManager.petList
+	pet[1].ui:setPosition(336,110)
+	self:addChild(pet[1].ui)
+	
 	--显示关卡信息
 	self:showStageInfo()
 	--暂停按钮

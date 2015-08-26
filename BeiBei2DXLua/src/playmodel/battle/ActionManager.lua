@@ -40,7 +40,7 @@ end
 
 -- boss受到攻击，动画
 function bossAttackedAnimation(target)
-	target:setAnimation(0,'a3',false)
+	-- target:setAnimation(0,'a3',false)
 end
 
 return ActionManager

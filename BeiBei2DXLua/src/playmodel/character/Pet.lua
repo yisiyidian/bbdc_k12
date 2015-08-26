@@ -15,10 +15,10 @@ function Pet:listNotify()
 end
 
 function Pet:handleNotification(notify,data)
-	print("self.colorIndex")
-	print(self.colorIndex)
-	print("data")
-	print_lua_table(data)
+	-- print("self.colorIndex")
+	-- print(self.colorIndex)
+	-- print("data")
+	-- print_lua_table(data)
     if notify == RIGHT then
 		if data[self.colorIndex] > 0 then
 			s_BattleManager.petSource[self.colorIndex] = s_BattleManager.petSource[self.colorIndex] + data[self.colorIndex] 

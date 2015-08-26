@@ -53,31 +53,11 @@ function MatView:initUI()
 	-- 布景
 
 	-- 划词显示
-	local wordsprite = ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(27.49,0,27.51,74))
-	wordsprite:setPosition(cc.p(s_DESIGN_WIDTH /2,770))
-	wordsprite:setAnchorPoint(0.5,0.5)
-	self.wordsprite = wordsprite
-	self:addChild(self.wordsprite)
-
-	local wordlabel = cc.Label:createWithSystemFont("","",25)
-    wordlabel:ignoreAnchorPointForPosition(false)
-    wordlabel:setAnchorPoint(0.5,0.5)
-    wordlabel:setColor(cc.c4b(0,0,0,255))
-    self.wordlabel = wordlabel
-    self.wordsprite:addChild(self.wordlabel)
-
-    local chinesesprite = ccui.Scale9Sprite:create("image/playmodel/chinesedisplay.png",cc.rect(0,0,235,60),cc.rect(105.49,0,105.51,60))
-	chinesesprite:setPosition(cc.p(s_DESIGN_WIDTH /2,700))
-	chinesesprite:setAnchorPoint(0.5,0.5)
-	self.chinesesprite = chinesesprite
-	self:addChild(self.chinesesprite)
-
-	local chineselabel = cc.Label:createWithSystemFont("","",25)
-    chineselabel:ignoreAnchorPointForPosition(false)
-    chineselabel:setAnchorPoint(0.5,0.5)
-    chineselabel:setColor(cc.c4b(0,0,0,255))
-    self.chineselabel = chineselabel
-    self.chinesesprite:addChild(self.chineselabel)
+	-- local wordsprite = ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(27.49,0,27.51,74))
+	-- wordsprite:setPosition(cc.p(s_DESIGN_WIDTH /2,770))
+	-- wordsprite:setAnchorPoint(0.5,0.5)
+	-- self.wordsprite = wordsprite
+	-- self:addChild(self.wordsprite)
 
     local changeButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,"换词")
 	changeButton:setPosition(cc.p(s_DESIGN_WIDTH *0.9,700))
@@ -120,7 +100,7 @@ function MatView:initUI()
     amButton.color = cc.c4b(0,0,0,255)
     amButton:resetUI()
 	self.amButton = amButton
-	self:addChild(self.amButton)
+	-- self:addChild(self.amButton)
 
 	self.amButton.func = function ()
 		s_CURRENT_USER.isSoundAm = 1 - s_CURRENT_USER.isSoundAm	
@@ -134,6 +114,36 @@ function MatView:initUI()
 		self.amButton:resetUI()
 	end
 
+	local blackboard = cc.Sprite:create("image/playmodel/blackboard.png")
+	blackboard:setPosition(cc.p(318,840))
+    blackboard:ignoreAnchorPointForPosition(false)
+    blackboard:setAnchorPoint(0.5,0.5)
+	self.blackboard = blackboard
+	self:addChild(self.blackboard)
+
+	local wave = cc.Sprite:create("image/playmodel/wave.png")
+	wave:setPosition(cc.p(blackboard:getContentSize().width/2,-5))
+    wave:ignoreAnchorPointForPosition(false)
+    wave:setAnchorPoint(0.5,0.5)
+	self.wave = wave
+	self.blackboard:addChild(self.wave)
+
+	local chineselabel = cc.Label:createWithSystemFont("","",22)
+	chineselabel:setPosition(cc.p(blackboard:getContentSize().width/2,blackboard:getContentSize().height * 0.7))
+    chineselabel:ignoreAnchorPointForPosition(false)
+    chineselabel:setAnchorPoint(0.5,0.5)
+    chineselabel:setColor(cc.c4b(255,255,255,255))
+    self.chineselabel = chineselabel
+    self.blackboard:addChild(self.chineselabel)
+
+    local wordlabel = cc.Label:createWithSystemFont("","",25)
+    wordlabel:setPosition(cc.p(blackboard:getContentSize().width/2,blackboard:getContentSize().height * 0.4))
+    wordlabel:ignoreAnchorPointForPosition(false)
+    wordlabel:setAnchorPoint(0.5,0.5)
+    wordlabel:setColor(cc.c4b(0,0,0,255))
+    self.wordlabel = wordlabel
+    self.blackboard:addChild(self.wordlabel)
+
 	-- ui填充
 	self:resetUI()
 	self:resetWordLabel("")
@@ -143,32 +153,32 @@ end
 
 -- 重置英文划词
 function MatView:resetWordLabel(string)
-	local length = countLength(string)
-	local len = string.len(string)
-	if len == 0 or string == "" then
-		self.wordsprite:setVisible(false)
-	else
-		self.wordsprite:setVisible(true)
-		self.wordsprite:setContentSize(length * 7 + 60 ,74)
-	end
+	-- local length = countLength(string)
+	-- local len = string.len(string)
+	-- if len == 0 or string == "" then
+	-- 	self.wordsprite:setVisible(false)
+	-- else
+	-- 	self.wordsprite:setVisible(true)
+	-- 	self.wordsprite:setContentSize(length * 7 + 60 ,74)
+	-- end
 
 	self.wordlabel:setString(string)
-	self.wordlabel:setPosition(self.wordsprite:getContentSize().width/2,self.wordsprite:getContentSize().height/2)
+	-- self.wordlabel:setPosition(self.wordsprite:getContentSize().width/2,self.wordsprite:getContentSize().height/2)
 end
 
 -- 重置汉语意思
 function MatView:resetChineseLabel(string)
-	local length = countLength(string)
-	local len = string.len(string)
-	if len == 0 or string == "" then
-		self.chinesesprite:setVisible(false)
-	else
-		self.chinesesprite:setVisible(true)
-		self.chinesesprite:setContentSize(length * 7 + 60 ,60)
-	end
+	-- local length = countLength(string)
+	-- local len = string.len(string)
+	-- if len == 0 or string == "" then
+	-- 	self.chinesesprite:setVisible(false)
+	-- else
+	-- 	self.chinesesprite:setVisible(true)
+	-- 	self.chinesesprite:setContentSize(length * 7 + 60 ,60)
+	-- end
 
 	self.chineselabel:setString(string)
-	self.chineselabel:setPosition(self.chinesesprite:getContentSize().width/2,self.chinesesprite:getContentSize().height/2)
+	-- self.chineselabel:setPosition(self.chinesesprite:getContentSize().width/2,self.chinesesprite:getContentSize().height/2)
 end
 
 function MatView:resetUI()
@@ -298,7 +308,7 @@ function MatView:dropFunc(callback)
 	for i=1,5 do
 		for j=1,10 do
 			if self.coco[i][j].touchState ~= 1 then
-				local chilli = cc.Sprite:create("image/playmodel/chilliNormal.png")
+				local chilli = cc.Sprite:create("image/playmodel/chilliShake.png")
 				chilli:setPosition(self.locationX + i * 110 ,self.locationY + j * 110)
 				self.back:addChild(chilli)
 

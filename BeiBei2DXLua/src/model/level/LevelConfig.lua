@@ -33,9 +33,9 @@ LevelConfig.WordConfig = {
 }
 
 LevelConfig.PointConfig = {
-	[1] = {1,1,1,1,1},
-	[2] = {1,1,1,1,1},
-	[3] = {1,1,1,1,1},
+	[1] = {10,0,0,0,0},
+	[2] = {10,0,0,0,0},
+	[3] = {10,0,0,0,0},
 }
 
 LevelConfig.LimitConfig = {

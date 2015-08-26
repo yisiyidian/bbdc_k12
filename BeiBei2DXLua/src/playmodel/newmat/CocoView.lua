@@ -13,7 +13,7 @@ function CocoView.create()
 end
 
 function CocoView:ctor()
-	-- 元素状态 1 静止 2 按下 3 划过
+	-- 元素状态 1 静止 2 按下 3 划过 0 不显示
 	self.touchState = 1
 	-- 首字母 标示
 	self.isFisrt = false
@@ -42,7 +42,7 @@ function CocoView:initUI()
     self.collectItem = collectItem
     self.downSprite:addChild(self.collectItem)
     -- 字母
-    local label = cc.Label:createWithSystemFont("","",35)
+    local label = cc.Label:createWithTTF("",'font/ArialRoundedBold.ttf',55)
     label:ignoreAnchorPointForPosition(false)
     label:setAnchorPoint(0.5,0.5)
     label:setColor(cc.c4b(0,0,0,255))
@@ -77,6 +77,8 @@ function CocoView:resetView()
 	elseif self.touchState == 3 then
 		self.downSprite:setTexture("image/playmodel/dishShake.png")
 		self.collectItem:setTexture("image/playmodel/chilliPress.png")
+	elseif self.touchState == 0 then 
+		self.collectItem:setVisible(false)
 	end
 
 	if self.isFisrt then
@@ -92,6 +94,9 @@ function CocoView:resetView()
 	self.collectItem:setPosition(contentsizeX/2,contentsizeY/2)
 	self.label:setString(self.letter)
 	self.label:setPosition(contentsizeX/2,contentsizeY/2)
+	if self.letter == 'g' or self.letter == 'j' or self.letter == 'p' or self.letter == 'q' or self.letter == 'y' then
+		self.label:setPosition(contentsizeX/2,contentsizeY/2  + 3)
+	end
 end
 
 return CocoView
