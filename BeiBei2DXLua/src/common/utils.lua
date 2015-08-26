@@ -548,3 +548,9 @@ function countLength(text)
     return temp
 end
 
+function printline(text)
+    print("_____________________________")
+    print(text)
+    print("_____________________________")
+end
+
