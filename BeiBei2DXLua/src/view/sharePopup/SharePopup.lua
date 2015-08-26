@@ -53,7 +53,7 @@ function SharePopup:init()
     self.closeButton = closeButton
     self.back:addChild(self.closeButton)
 
-    local shareButton = ccui.Button:create("image/sharePopup/share_button_normal.png","image/sharePopup/share_button_click.png","")
+    local shareButton = ccui.Button:create()
     shareButton:setPosition(self.back:getContentSize().width / 2  , 0 )
     shareButton:addTouchEventListener(handler(self,self.shareFunc))
     self.shareButton = shareButton
@@ -70,10 +70,16 @@ end
 function SharePopup:reset()
 	if self.type == SHARE_TYPE_TIME then
 		self.back:setTexture("image/sharePopup/first_share_popup.png")
+		self.shareButton:loadTextureNormal("image/sharePopup/first_normal.png")
+		self.shareButton:loadTexturePressed("image/sharePopup/first_press.png")
 	elseif self.type == SHARE_TYPE_DATE then
 		self.back:setTexture("image/sharePopup/second_share_popup.png")
+		self.shareButton:loadTextureNormal("image/sharePopup/second_normal.png")
+		self.shareButton:loadTexturePressed("image/sharePopup/second_press.png")
 	elseif self.type == SHARE_TYPE_FIRST_LEVEL then
 		self.back:setTexture("image/sharePopup/third_share_popup.png")
+		self.shareButton:loadTextureNormal("image/sharePopup/third_normal.png")
+		self.shareButton:loadTexturePressed("image/sharePopup/third_press.png")
 	end
 
 	self.closeButton:setPosition(548,576)
@@ -98,7 +104,7 @@ function SharePopup:reset()
 		self.string1:setString(self.time)
 		self.string1:setColor(cc.c4b(255,0,0,255))
 		self.string1:setSystemFontSize(40)
-		self.string1:setPosition(359,374)
+		self.string1:setPosition(385,374)
 	end
 end
 
