@@ -209,8 +209,8 @@ function MatView:resetUI()
 
 	-- 是否反向
 	local random = math.random(1,2)
-	print(MatController.word[MatController.index][1])
-	print(random)
+	-- print(MatController.word[MatController.index][1])
+	-- print(random)
 	-- 获取第一条路径
 	self.path = PathController:getPath(length)
 	local temp = {}
@@ -231,7 +231,7 @@ function MatView:resetUI()
 			self.coco[self.path[k].x][self.path[k].y].isFisrt = true
 		end
 		self.coco[self.path[k].x][self.path[k].y]:resetView()
-		print(string.sub(MatController.word[MatController.index][1],k,k)..self.path[k].x..self.path[k].y)
+		-- print(string.sub(MatController.word[MatController.index][1],k,k)..self.path[k].x..self.path[k].y)
 	end
 	-- print(MatController.word[1])
 
@@ -245,7 +245,7 @@ function MatView:resetUI()
 			self.coco[self.path2[k].x][self.path2[k].y].isFisrt = true
 		end
 		self.coco[self.path2[k].x][self.path2[k].y]:resetView()
-		print(string.sub(MatController.word[MatController.index][1],k,k)..self.path2[k].x..self.path2[k].y)
+		-- print(string.sub(MatController.word[MatController.index][1],k,k)..self.path2[k].x..self.path2[k].y)
 	end
 	local word = MatController.word[MatController.index][3]
 	self:resetChineseLabel(s_LocalDatabaseManager.getWordInfoFromWordName(word).wordMeaningSmall)
