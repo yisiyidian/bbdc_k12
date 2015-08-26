@@ -54,12 +54,12 @@ function BattleView:initUI()
 	self:showStageInfo()
 	--暂停按钮
 	s_SCENE.popupLayer.layerpaused = false 
-    local pauseBtn = ccui.Button:create("res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png","res/image/button/pauseButtonWhite.png")
+    local pauseBtn = ccui.Button:create("image/playmodel/pauseNormal.png","image/playmodel/pausePress.png","")
     pauseBtn:ignoreAnchorPointForPosition(false)
-    pauseBtn:setAnchorPoint(1,1)
+    pauseBtn:setAnchorPoint(0.5,0.5)
     s_SCENE.popupLayer.pauseBtn = pauseBtn
     self:addChild(pauseBtn,1)
-    pauseBtn:setPosition(s_RIGHT_X, s_DESIGN_HEIGHT)
+    pauseBtn:setPosition(595,1091)
 
     local function pauseScene(sender,eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -81,9 +81,12 @@ function BattleView:initUI()
 end
 
 function BattleView:showStageInfo()
-	local back = cc.LayerColor:create(cc.c4b(255,255,255,150),200,110)
-	back:setPosition(0,950)
+	local back = cc.LayerColor:create(cc.c4b(255,255,255,0),s_DESIGN_WIDTH,300)
+	back:setPosition(0,s_DESIGN_HEIGHT)
+	back:ignoreAnchorPointForPosition(false)
+	back:setAnchorPoint(0,1)
 	self:addChild(back)
+
 	local label_boss = cc.Label:createWithSystemFont('boss:'..(s_BattleManager.currentBossIndex - 1)..'/'..#s_BattleManager.bossList,'',28)
 	label_boss:setColor(cc.c3b(0,0,0))
 	label_boss:setPosition(back:getContentSize().width / 2,100)
@@ -94,10 +97,16 @@ function BattleView:showStageInfo()
 	label_collect:setPosition(back:getContentSize().width / 2,70)
 	back:addChild(label_collect)
 
-	local label_time = cc.Label:createWithSystemFont('','',28)
+	local limitSprite = cc.Sprite:create("image/playmodel/limit.png")
+	limitSprite:ignoreAnchorPointForPosition(false)
+	limitSprite:setAnchorPoint(0.5,1)
+	limitSprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height)
+	back:addChild(limitSprite)
+
+	local label_time = cc.Label:createWithSystemFont('','',20)
 	label_time:setColor(cc.c3b(0,0,0))
-	label_time:setPosition(back:getContentSize().width / 2,40)
-	back:addChild(label_time)
+	label_time:setPosition(limitSprite:getContentSize().width / 2,limitSprite:getContentSize().height / 2)
+	limitSprite:addChild(label_time)
 
 	local label_wordCount = cc.Label:createWithSystemFont('','',28)
 	label_wordCount:setColor(cc.c3b(0,0,0))
@@ -109,9 +118,9 @@ function BattleView:showStageInfo()
 		label_collect:setString('collection:'..s_BattleManager.currentCollect[1]..s_BattleManager.currentCollect[2]..s_BattleManager.currentCollect[3]..s_BattleManager.currentCollect[4]..s_BattleManager.currentCollect[5])
 		if s_BattleManager.stageType == 'time' then
 			local time = s_BattleManager.totalTime - s_BattleManager.currentTime
-			label_time:setString('time left:'..math.floor(time / 60)..':'..math.floor(time % 60))
+			label_time:setString('限时:'..math.floor(time / 60)..':'..math.floor(time % 60))
 		else
-			label_time:setString('step:'..(s_BattleManager.totalStep - s_BattleManager.currentStep))
+			label_time:setString('限步:'..(s_BattleManager.totalStep - s_BattleManager.currentStep))
 		end
 	end
 

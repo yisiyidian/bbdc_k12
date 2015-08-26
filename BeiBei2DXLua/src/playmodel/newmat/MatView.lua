@@ -59,19 +59,14 @@ function MatView:initUI()
 	-- self.wordsprite = wordsprite
 	-- self:addChild(self.wordsprite)
 
-    local changeButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,"换词")
-	changeButton:setPosition(cc.p(s_DESIGN_WIDTH *0.9,700))
+    local changeButton = ccui.Button:create("image/playmodel/changeNormal.png","image/playmodel/changePress.png","")
+	changeButton:setPosition(cc.p(595,1024))
     changeButton:ignoreAnchorPointForPosition(false)
     changeButton:setAnchorPoint(0.5,0.5)
     changeButton.color = cc.c4b(0,0,0,255)
-    changeButton:resetUI()
 	self.changeButton = changeButton
 	self:addChild(self.changeButton)
-
-
-	self.changeButton.func = function ()
-		MatController:changeFunc()
-	end
+	self.changeButton:addTouchEventListener(handler(self,self.clickChange))
 
 	local tipButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,"提示")
 	tipButton:setPosition(cc.p(s_DESIGN_WIDTH *0.1,700))
@@ -80,7 +75,7 @@ function MatView:initUI()
     tipButton.color = cc.c4b(0,0,0,255)
     tipButton:resetUI()
 	self.tipButton = tipButton
-	self:addChild(self.tipButton)
+	-- self:addChild(self.tipButton)
 
 	self.tipButton.func = function ()
 		self:letterTip()
@@ -133,6 +128,7 @@ function MatView:initUI()
     chineselabel:ignoreAnchorPointForPosition(false)
     chineselabel:setAnchorPoint(0.5,0.5)
     chineselabel:setColor(cc.c4b(255,255,255,255))
+	chineselabel:enableOutline(cc.c4b(255,255,255,255),1)
     self.chineselabel = chineselabel
     self.blackboard:addChild(self.chineselabel)
 
@@ -141,6 +137,7 @@ function MatView:initUI()
     wordlabel:ignoreAnchorPointForPosition(false)
     wordlabel:setAnchorPoint(0.5,0.5)
     wordlabel:setColor(cc.c4b(0,0,0,255))
+    wordlabel:enableOutline(cc.c4b(255,255,255,255),1)
     self.wordlabel = wordlabel
     self.blackboard:addChild(self.wordlabel)
 
@@ -149,6 +146,14 @@ function MatView:initUI()
 	self:resetWordLabel("")
 	-- 触摸事件
 	self:touchFunc()
+end
+
+function MatView:clickChange(sender,event)
+    if event ~= ccui.TouchEventType.ended then
+        return 
+    end
+
+	MatController:changeFunc()
 end
 
 -- 重置英文划词
