@@ -4,6 +4,7 @@ CharacterConfig['2'] = {characterType = 'pet',colorIndex = 1,level = 1,blood = 1
 CharacterConfig['3'] = {characterType = 'pet',colorIndex = 2,level = 1,blood = 100, skillID = 2, file = 'image/playmodel/endpopup/greenPet.png',skillFile = 'image/playmodel/endpopup/greenball.png'}
 CharacterConfig['4'] = {characterType = 'pet',colorIndex = 3,level = 1,blood = 100, skillID = 1, file = 'image/playmodel/endpopup/yellowPet.png',skillFile = 'image/playmodel/endpopup/yellowball.png'}
 CharacterConfig['5'] = {characterType = 'pet',colorIndex = 4,level = 1,blood = 100, skillID = 2, file = 'image/playmodel/endpopup/bluePet.png',skillFile = 'image/playmodel/endpopup/blueball.png'}
-CharacterConfig['6'] = {characterType = 'pet',colorIndex = 5,level = 1,blood = 100, skillID = 1, file = 'image/playmodel/endpopup/orangePet.png',skillFile = 'image/playmodel/endpopup/orangeball.png'}
+CharacterConfig['6'] = {characterType = 'pet',colorIndex = 5,level = 1,blood = 100, skillID = 1, file = 'image/playmodel/pet6.png',skillFile = 'image/playmodel/endpopup/orangeball.png'}
+
 
 return CharacterConfig

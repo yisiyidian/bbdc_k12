@@ -35,25 +35,19 @@ function CocoView:initUI()
     downSprite:setAnchorPoint(0,0)
     self.downSprite = downSprite
     self:addChild(self.downSprite)
-	-- 用于滑动的砖块 上层 可移动
-    local upSprite = cc.Sprite:create()
-    upSprite:ignoreAnchorPointForPosition(false)
-    upSprite:setAnchorPoint(0.5,0.5)
-    self.upSprite = upSprite
-    self.downSprite:addChild(self.upSprite)
-    -- 元素上的彩点
-    local colorPoint = cc.Sprite:create()
-    colorPoint:ignoreAnchorPointForPosition(false)
-    colorPoint:setAnchorPoint(0.5,0.5)
-    self.colorPoint = colorPoint
-    self.upSprite:addChild(self.colorPoint)
+    -- 收集性质的元素
+    local collectItem = cc.Sprite:create()
+    collectItem:ignoreAnchorPointForPosition(false)
+    collectItem:setAnchorPoint(0.5,0.5)
+    self.collectItem = collectItem
+    self.downSprite:addChild(self.collectItem)
     -- 字母
     local label = cc.Label:createWithSystemFont("","",35)
     label:ignoreAnchorPointForPosition(false)
     label:setAnchorPoint(0.5,0.5)
     label:setColor(cc.c4b(0,0,0,255))
     self.label = label
-    self.upSprite:addChild(self.label)
+    self.downSprite:addChild(self.label)
     -- 绘制
     self:resetView()
 end
@@ -66,28 +60,23 @@ function CocoView:resetView()
 	self.downSprite:setTexture("image/playmodel/dishNormal.png")
 	local contentsizeX = self.downSprite:getContentSize().width
 	local contentsizeY = self.downSprite:getContentSize().height
-	self.colorPoint:setTexture("image/playmodel/point.png")
 
 	if self.color % 5 == 0 then
-		self.colorPoint:setColor(cc.c4b(105,202,18,255))
-	elseif self.color % 5 == 1 then
-		self.colorPoint:setColor(cc.c4b(255,64,0,255))
-	elseif self.color % 5 == 2 then
-		self.colorPoint:setColor(cc.c4b(255,228,0,255))
-	elseif self.color % 5 == 3 then
-		self.colorPoint:setColor(cc.c4b(61,191,243,255))
-	elseif self.color % 5 == 4 then
-		self.colorPoint:setColor(cc.c4b(255,145,1,255))
+		self.collectItem:setTexture("image/playmodel/chilliNormal.png")
 	end	
+
+	if self.isFisrt then
+		self.collectItem:setTexture("image/playmodel/chilliFirst.png")
+	end
 
 	if self.touchState == 1 then 
 		self.downSprite:setTexture("image/playmodel/dishNormal.png")
 	elseif self.touchState == 2 then
 		self.downSprite:setTexture("image/playmodel/dishShake.png")
-		self.colorPoint:setColor(cc.c4b(255,221,84,255))
+		self.collectItem:setTexture("image/playmodel/chilliPress.png")
 	elseif self.touchState == 3 then
 		self.downSprite:setTexture("image/playmodel/dishShake.png")
-		self.colorPoint:setColor(cc.c4b(255,221,84,255))
+		self.collectItem:setTexture("image/playmodel/chilliPress.png")
 	end
 
 	if self.isFisrt then
@@ -100,7 +89,7 @@ function CocoView:resetView()
 		end
 	end
 
-	self.colorPoint:setPosition(contentsizeX - 5,contentsizeY - 5)
+	self.collectItem:setPosition(contentsizeX/2,contentsizeY/2)
 	self.label:setString(self.letter)
 	self.label:setPosition(contentsizeX/2,contentsizeY/2)
 end

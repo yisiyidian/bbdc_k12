@@ -191,7 +191,7 @@ function MatView:resetUI()
 			self.coco[i][j]:setPosition(cc.p(self.locationX + i * 110 ,self.locationY + j * 110))	 
 			self.coco[i][j].letter = string.char(math.random(100,120))
 			if self.mat[i][j] == 5 then
-				self.coco[i][j].color = math.random(1,1000)%5
+				self.coco[i][j].color = 0
 			else
 				self.coco[i][j].color = self.mat[i][j]
 			end
@@ -298,25 +298,13 @@ function MatView:dropFunc(callback)
 	for i=1,5 do
 		for j=1,10 do
 			if self.coco[i][j].touchState ~= 1 then
-				local point = cc.Sprite:create("image/playmodel/point.png")
-				point:setPosition(i * 120 -40,j * 120)
-				local color = self.coco[i][j].color
-				if color == 0 then
-					point:setColor(cc.c4b(105,202,18,255))
-				elseif color == 1 then
-					point:setColor(cc.c4b(255,64,0,255))
-				elseif color  == 2 then
-					point:setColor(cc.c4b(255,228,0,255))
-				elseif color  == 3 then
-					point:setColor(cc.c4b(61,191,243,255))
-				elseif color  == 4 then
-					point:setColor(cc.c4b(255,145,1,255))
-				end
-				self.back:addChild(point)
+				local chilli = cc.Sprite:create("image/playmodel/chilliNormal.png")
+				chilli:setPosition(self.locationX + i * 110 ,self.locationY + j * 110)
+				self.back:addChild(chilli)
 
 				local px,py
-				px,py = s_BattleManager.petList[color + 1].ui:getPosition()
-				point:runAction(cc.MoveTo:create(0.4,cc.p(px,py)))
+				px,py = s_BattleManager.petList[1].ui:getPosition()
+				chilli:runAction(cc.MoveTo:create(0.4,cc.p(px,py)))
 			end
 		end
 	end

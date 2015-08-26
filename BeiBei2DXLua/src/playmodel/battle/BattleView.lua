@@ -37,10 +37,8 @@ function BattleView:initUI()
 	end
 
 	local pet = s_BattleManager.petList
-	for i = 1,#pet do
-		pet[i].ui:setPosition(s_DESIGN_WIDTH * (5.5 - i) / 5,s_DESIGN_HEIGHT * 0.75)
-		self:addChild(pet[i].ui)
-	end
+	pet[1].ui:setPosition(336,110)
+	self:addChild(pet[1].ui)
 
 	local function update(delta)
 		s_BattleManager:updateTime(delta)

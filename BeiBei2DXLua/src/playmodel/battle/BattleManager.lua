@@ -102,7 +102,7 @@ function BattleManager:battleBegan()
 	--创建boss
 	self:createBoss(LevelConfig.BossConfig[self.index])
 	--创建pet
-	self:createPet({'2','3','4','5','6'})
+	self:createPet({'6'})
 end
 --战斗结束
 function BattleManager:battleEnded(win)
