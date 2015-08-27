@@ -121,6 +121,16 @@ function MatController:updateArr(p,coco)
 		temp = temp..MatController.currentCoco[k].letter
 	end
 	MatController.MatView:resetWordLabel(temp..MatController.word[MatController.index][2])
+
+	MatController:updateLine()
+end
+
+function MatController:updateLine()
+	MatController.MatView.guideLine.List = {}
+	for i = 1,#MatController.arr do
+		MatController.MatView.guideLine.List[i] = cc.p(MatController.currentCoco[i]:getPositionX(),MatController.currentCoco[i]:getPositionY())
+	end
+	MatController.MatView:updateLine()
 end
 
 -- 判断事件
@@ -212,6 +222,7 @@ function MatController:judgeFunc()
 	-- 重置所有的序列
 	MatController.arr = {}
 	MatController.currentCoco = {}
+	MatController:updateLine()
 end
 
 -- 扩充一关的单词

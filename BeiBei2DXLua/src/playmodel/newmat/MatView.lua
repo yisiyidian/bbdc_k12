@@ -68,46 +68,46 @@ function MatView:initUI()
 	self:addChild(self.changeButton)
 	self.changeButton:addTouchEventListener(handler(self,self.clickChange))
 
-	local tipButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,"提示")
-	tipButton:setPosition(cc.p(s_DESIGN_WIDTH *0.1,700))
-    tipButton:ignoreAnchorPointForPosition(false)
-    tipButton:setAnchorPoint(0.5,0.5)
-    tipButton.color = cc.c4b(0,0,0,255)
-    tipButton:resetUI()
-	self.tipButton = tipButton
+	-- local tipButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,"提示")
+	-- tipButton:setPosition(cc.p(s_DESIGN_WIDTH *0.1,700))
+ --    tipButton:ignoreAnchorPointForPosition(false)
+ --    tipButton:setAnchorPoint(0.5,0.5)
+ --    tipButton.color = cc.c4b(0,0,0,255)
+ --    tipButton:resetUI()
+	-- self.tipButton = tipButton
 	-- self:addChild(self.tipButton)
 
-	self.tipButton.func = function ()
-		self:letterTip()
-	end
+	-- self.tipButton.func = function ()
+	-- 	self:letterTip()
+	-- end
 
-	local changeLabel = ""
-	if s_CURRENT_USER.isSoundAm == 0 then
-		changeLabel = "英"
-	else
-		changeLabel = "美"
-	end
+	-- local changeLabel = ""
+	-- if s_CURRENT_USER.isSoundAm == 0 then
+	-- 	changeLabel = "英"
+	-- else
+	-- 	changeLabel = "美"
+	-- end
 
-	local amButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,changeLabel)
-	amButton:setPosition(cc.p(s_DESIGN_WIDTH *0.1,1075))
-    amButton:ignoreAnchorPointForPosition(false)
-    amButton:setAnchorPoint(0.5,0.5)
-    amButton.color = cc.c4b(0,0,0,255)
-    amButton:resetUI()
-	self.amButton = amButton
+	-- local amButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,changeLabel)
+	-- amButton:setPosition(cc.p(s_DESIGN_WIDTH *0.1,1075))
+ --    amButton:ignoreAnchorPointForPosition(false)
+ --    amButton:setAnchorPoint(0.5,0.5)
+ --    amButton.color = cc.c4b(0,0,0,255)
+ --    amButton:resetUI()
+	-- self.amButton = amButton
 	-- self:addChild(self.amButton)
 
-	self.amButton.func = function ()
-		s_CURRENT_USER.isSoundAm = 1 - s_CURRENT_USER.isSoundAm	
-		saveUserToServer({['isSoundAm']=s_CURRENT_USER.isSoundAm})
-		if s_CURRENT_USER.isSoundAm == 0 then
-			changeLabel = "英"
-		else
-			changeLabel = "美"
-		end
-		self.amButton.text = changeLabel
-		self.amButton:resetUI()
-	end
+	-- self.amButton.func = function ()
+	-- 	s_CURRENT_USER.isSoundAm = 1 - s_CURRENT_USER.isSoundAm	
+	-- 	saveUserToServer({['isSoundAm']=s_CURRENT_USER.isSoundAm})
+	-- 	if s_CURRENT_USER.isSoundAm == 0 then
+	-- 		changeLabel = "英"
+	-- 	else
+	-- 		changeLabel = "美"
+	-- 	end
+	-- 	self.amButton.text = changeLabel
+	-- 	self.amButton:resetUI()
+	-- end
 
 	local blackboard = cc.Sprite:create("image/playmodel/blackboard.png")
 	blackboard:setPosition(cc.p(318,840))
@@ -141,11 +141,19 @@ function MatView:initUI()
     self.wordlabel = wordlabel
     self.blackboard:addChild(self.wordlabel)
 
+	local GuideLine = require("playmodel.newmat.GuideLine")
+    local guideLine = GuideLine.create()
+    self.guideLine = guideLine
+    self:addChild(self.guideLine,2)
 	-- ui填充
 	self:resetUI()
 	self:resetWordLabel("")
 	-- 触摸事件
 	self:touchFunc()
+end
+
+function MatView:updateLine()
+	self.guideLine:updateView()
 end
 
 function MatView:clickChange(sender,event)
@@ -326,10 +334,10 @@ function MatView:dropFunc(callback)
 
 	for i=1,5 do
 		for j=1,10 do
-			if self.coco[i][j]:getPositionY() - 120 * self.coco[i][j].drop <= self.coco[i][5]:getPositionY() then
+			if self.coco[i][j]:getPositionY() - 110 * self.coco[i][j].drop <= self.coco[i][5]:getPositionY() then
 				self.coco[i][j]:setVisible(true)
 			end
-			self.coco[i][j]:runAction(cc.MoveBy:create(0.4,cc.p(0,-120 * self.coco[i][j].drop)))
+			self.coco[i][j]:runAction(cc.MoveBy:create(0.4,cc.p(0,-110 * self.coco[i][j].drop)))
 		end
 	end
 

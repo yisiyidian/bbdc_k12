@@ -12,7 +12,7 @@ function Observer:listNotify()
 end
 
 function Observer:register()
-	print("ObserverController.register(self)")
+	-- print("ObserverController.register(self)")
 	ObserverController.register(self)
 end
 

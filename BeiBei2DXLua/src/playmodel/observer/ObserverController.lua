@@ -6,8 +6,8 @@ ObserverController.observerArr = {}
 function ObserverController.register(observer)
 	--TODO
 	local notifyArr = observer:listNotify()
-	print("########")
-	print(#notifyArr)
+	-- print("########")
+	-- print(#notifyArr)
 	local tempObsArr = nil
 	for k,v in pairs(notifyArr) do
 		-- (v,observer)
