@@ -87,15 +87,55 @@ function BattleView:showStageInfo()
 	back:setAnchorPoint(0,1)
 	self:addChild(back)
 
-	local label_boss = cc.Label:createWithSystemFont('boss:'..(s_BattleManager.currentBossIndex - 1)..'/'..#s_BattleManager.bossList,'',28)
-	label_boss:setColor(cc.c3b(0,0,0))
-	label_boss:setPosition(back:getContentSize().width / 2,100)
-	back:addChild(label_boss)
+	local bossStatistics = cc.Sprite:create("image/playmodel/bossNum.png")
+	bossStatistics:setPosition(20,255)
+	back:addChild(bossStatistics)
 
-	local label_collect = cc.Label:createWithSystemFont('collection:','',28)
-	label_collect:setColor(cc.c3b(0,0,0))
-	label_collect:setPosition(back:getContentSize().width / 2,70)
-	back:addChild(label_collect)
+	local itemStatistics = cc.Sprite:create("image/playmodel/chilliNum.png")
+	itemStatistics:setPosition(20,190)
+	back:addChild(itemStatistics)
+
+	local wordStatistics = cc.Sprite:create("image/playmodel/wordNum.png")
+	wordStatistics:setPosition(20,125)
+	back:addChild(wordStatistics)
+
+	local label_boss = cc.Label:createWithSystemFont((#s_BattleManager.bossList - s_BattleManager.currentBossIndex + 1),'',30)
+	label_boss:setColor(cc.c4b(255,255,255,255))
+	label_boss:setPosition(137,bossStatistics:getContentSize().height *0.4)
+	label_boss:enableOutline(cc.c4b(0,0,0,255),1)
+	bossStatistics:addChild(label_boss)
+
+	local bossComplete = cc.Sprite:create("image/playmodel/complete.png") 
+	bossComplete:setPosition(137,bossStatistics:getContentSize().height *0.4)
+	bossStatistics:addChild(bossComplete)
+	bossComplete:setVisible(false)
+
+	---------------------------------------------------------
+
+	local label_collect = cc.Label:createWithSystemFont("",'',30)
+	label_collect:setColor(cc.c4b(255,255,255,255))
+	label_collect:setPosition(137,itemStatistics:getContentSize().height *0.4)
+	label_collect:enableOutline(cc.c4b(0,0,0,255),1)
+	itemStatistics:addChild(label_collect)
+
+	local itemComplete = cc.Sprite:create("image/playmodel/complete.png") 
+	itemComplete:setPosition(137,itemStatistics:getContentSize().height *0.4)
+	itemStatistics:addChild(itemComplete)
+	itemComplete:setVisible(false)
+
+	---------------------------------------------------------	
+	local label_wordCount = cc.Label:createWithSystemFont("",'',30)
+	label_wordCount:setColor(cc.c4b(255,255,255,255))
+	label_wordCount:setPosition(137,wordStatistics:getContentSize().height *0.4)
+	label_wordCount:enableOutline(cc.c4b(0,0,0,255),1)
+	wordStatistics:addChild(label_wordCount)
+
+	local wordComplete = cc.Sprite:create("image/playmodel/complete.png") 
+	wordComplete:setPosition(137,wordStatistics:getContentSize().height *0.4)
+	wordStatistics:addChild(wordComplete)
+	wordComplete:setVisible(false)
+
+	---------------------------------------------------------
 
 	local limitSprite = cc.Sprite:create("image/playmodel/limit.png")
 	limitSprite:ignoreAnchorPointForPosition(false)
@@ -103,19 +143,31 @@ function BattleView:showStageInfo()
 	limitSprite:setPosition(back:getContentSize().width / 2,back:getContentSize().height)
 	back:addChild(limitSprite)
 
-	local label_time = cc.Label:createWithSystemFont('','',20)
+	local label_time = cc.Label:createWithSystemFont('','',25)
 	label_time:setColor(cc.c3b(0,0,0))
 	label_time:setPosition(limitSprite:getContentSize().width / 2,limitSprite:getContentSize().height / 2)
+	label_time:enableOutline(cc.c4b(255,255,255,255),1)
 	limitSprite:addChild(label_time)
 
-	local label_wordCount = cc.Label:createWithSystemFont('','',28)
-	label_wordCount:setColor(cc.c3b(0,0,0))
-	label_wordCount:setPosition(back:getContentSize().width / 2,10)
-	back:addChild(label_wordCount)
 	local function update(delta)
-		label_boss:setString('boss:'..(s_BattleManager.currentBossIndex - 1)..'/'..#s_BattleManager.bossList)
-		label_wordCount:setString('wordCount:'..s_BattleManager.currentWordCount..'/'..s_BattleManager.totalWordCount)
-		label_collect:setString('collection:'..s_BattleManager.currentCollect[1]..s_BattleManager.currentCollect[2]..s_BattleManager.currentCollect[3]..s_BattleManager.currentCollect[4]..s_BattleManager.currentCollect[5])
+		label_boss:setString(#s_BattleManager.bossList - s_BattleManager.currentBossIndex + 1)
+		if (#s_BattleManager.bossList - s_BattleManager.currentBossIndex + 1) <= 1 and s_BattleManager.bossList[s_BattleManager.currentBossIndex].blood <= 0 then
+			label_boss:setVisible(false)
+			bossComplete:setVisible(true)
+		end
+
+		label_wordCount:setString(s_BattleManager.totalWordCount - s_BattleManager.currentWordCount)
+		if (s_BattleManager.totalWordCount - s_BattleManager.currentWordCount) <= 0 then
+			label_wordCount:setVisible(false)
+			wordComplete:setVisible(true)
+		end
+
+		label_collect:setString(s_BattleManager.totalCollect[1] - s_BattleManager.currentCollect[1])
+		if (s_BattleManager.totalCollect[1] - s_BattleManager.currentCollect[1]) <= 0 then
+			label_collect:setVisible(false)
+			itemComplete:setVisible(true)
+		end
+
 		if s_BattleManager.stageType == 'time' then
 			local time = s_BattleManager.totalTime - s_BattleManager.currentTime
 			label_time:setString('限时:'..math.floor(time / 60)..':'..math.floor(time % 60))

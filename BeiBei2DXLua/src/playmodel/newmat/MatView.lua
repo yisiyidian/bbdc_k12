@@ -136,7 +136,7 @@ function MatView:initUI()
     wordlabel:setPosition(cc.p(blackboard:getContentSize().width/2,blackboard:getContentSize().height * 0.4))
     wordlabel:ignoreAnchorPointForPosition(false)
     wordlabel:setAnchorPoint(0.5,0.5)
-    wordlabel:setColor(cc.c4b(0,0,0,255))
+    wordlabel:setColor(cc.c4b(255,255,0,255))
     wordlabel:enableOutline(cc.c4b(255,255,255,255),1)
     self.wordlabel = wordlabel
     self.blackboard:addChild(self.wordlabel)

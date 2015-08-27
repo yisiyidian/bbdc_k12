@@ -39,9 +39,9 @@ LevelConfig.PointConfig = {
 }
 
 LevelConfig.LimitConfig = {
-	[1] = {LevelConfig.STEP,10},
+	[1] = {LevelConfig.STEP,20},
 	[2] = {LevelConfig.TIME,100},
-	[3] = {LevelConfig.STEP,10},
+	[3] = {LevelConfig.STEP,20},
 }
 
 LevelConfig.RewardConfig = {
