@@ -369,14 +369,8 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
     --     rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
     --     button:addChild(rewardNumber)
     -- end
-    if hasCheckedIn or self.bossLayer.oldUnit ~= nil then
-        --print('self:addWinLabel(win_back)')
-        self:addWinLabel(win_back)
-    else
-        s_SCENE:callFuncWithDelay(0,function (  )
-            self:addWinLabel(win_back)
-        end)
-    end
+
+    self:addWinLabel(win_back)
 
     onAndroidKeyPressed(self, function ()
         s_HUD_LAYER:removeChildByName('missionCompleteCircle')

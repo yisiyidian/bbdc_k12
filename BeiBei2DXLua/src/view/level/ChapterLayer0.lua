@@ -98,14 +98,20 @@ function ChapterLayer0:loadResource()
     self:createObjectForResource(Chapter0ResTable['leftIsland'])
 --    self:createObjectForResource(Chapter0ResTable['rightIsland'])
     -- plot boat
-    local boat1 = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
-    boat1:addAnimation(0, 'animation', true)
-    boat1:setPosition(250, 2330)
-    self:addChild(boat1, 140)
-    local boat2 = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
-    boat2:addAnimation(0, 'animation', true)
-    boat2:setPosition(550, 690)
-    self:addChild(boat2, 140)
+
+    ---------------------------
+    -- 沉船是几个意思？
+    -- 沉船是几个意思？
+    -- 沉船是几个意思？
+    ---------------------------
+    -- local boat1 = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
+    -- boat1:addAnimation(0, 'animation', true)
+    -- boat1:setPosition(250, 2330)
+    -- self:addChild(boat1, 140)
+    -- local boat2 = sp.SkeletonAnimation:create('spine/boat_xuanxiaoguan1.json', 'spine/boat_xuanxiaoguan1.atlas',1)
+    -- boat2:addAnimation(0, 'animation', true)
+    -- boat2:setPosition(550, 690)
+    -- self:addChild(boat2, 140)
 
     -- whales
     local whale1 = sp.SkeletonAnimation:create('spine/chapterlevel/jingyu.json', 'spine/chapterlevel/jingyu.atlas',1)
