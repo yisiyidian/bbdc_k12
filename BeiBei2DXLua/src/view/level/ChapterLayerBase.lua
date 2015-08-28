@@ -105,15 +105,17 @@ function ChapterLayerBase:plotUnlockLevelAnimation(levelKey)
         lockLayer:runAction(cc.Sequence:create(action7, action8))
     end
     if lockSprite ~= nil or lockLayer ~= nil then
-        s_SCENE:callFuncWithDelay(0.7,function()
-            if not tolua.isnull(self) and not tolua.isnull(self.plotDecorationOfLevel) then
+        self:callFuncWithDelay(0.7,function()
+            print('unlock next level')
+
+            --if not tolua.isnull(self) and not tolua.isnull(self.plotDecorationOfLevel) then
                 self:plotDecorationOfLevel(levelIndex-0)
-            end
+            --end
         end)
-        s_SCENE:callFuncWithDelay(2.0, function()
-            if not tolua.isnull(self) and not tolua.isnull(self.addPopup) then
+        self:callFuncWithDelay(2.0, function()
+            --if not tolua.isnull(self) and not tolua.isnull(self.addPopup) then
                 self:addPopup(levelIndex-0)
-            end
+            --end
         end)
     end
 end
