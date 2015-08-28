@@ -100,7 +100,7 @@ function BattleManager:battleBegan()
 	self:initInfo()
 	self.gameBegan = true
 	--创建boss
-	self:createBoss(LevelConfig.BossConfig[self.index])
+	self:createBoss(LevelConfig.BossConfig[self.index%2 + 1])
 	--创建pet
 	self:createPet({'6'})
 end

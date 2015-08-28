@@ -186,8 +186,8 @@ function MatController:judgeFunc()
 		for k,v in pairs(MatController.currentCoco) do
 			MatController.currentCoco[k].touchState = 0
 			MatController.currentCoco[k]:resetView()
-			MatController.currentCoco[k]:runAction(cc.MoveBy:create(0.4,cc.p(0,-800)))
-			MatController.currentCoco[k]:runAction(cc.RotateBy:create(0.4,math.random(360,720)))
+			-- MatController.currentCoco[k]:runAction(cc.MoveBy:create(0.4,cc.p(0,-800)))
+			-- MatController.currentCoco[k]:runAction(cc.RotateBy:create(0.4,math.random(360,720)))
 		end
 	else
 		-- 播放划错的音效
