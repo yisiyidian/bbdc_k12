@@ -30,9 +30,20 @@ function StartPopup:initUI()
     self:addChild(self.back)
 
     -- 标题模块---------------------------------------------
-    --todo 书籍配置没合并 做不了
-    local levelName = cc.Label:create()
-    local levelNum = cc.Label:create()
+    --todo 
+    local levelName = cc.Label:createWithSystemFont("","",22)
+    levelName:setPosition(0,0)
+    levelName:ignoreAnchorPointForPosition(false)
+    levelName:setAnchorPoint(0.5,0.5)
+    self.levelName = levelName
+    self.back:addChild(self.levelName)
+
+    local levelNum = cc.Label:createWithSystemFont("","",22)
+    levelNum:setPosition(0,0)
+    levelNum:ignoreAnchorPointForPosition(false)
+    levelNum:setAnchorPoint(0.5,0.5)
+    self.levelNum = levelNum
+    self.back:addChild(self.levelNum)
 
     -- 目标模块---------------------------------------------
     -- 目前写死 等待配置文件
@@ -172,6 +183,18 @@ function StartPopup:resetUI()
 
     -------------------------------
 
+    self.levelName:setString("单元")
+    self.levelName:setPosition(303,870)
+    self.levelName:setSystemFontSize(50)
+    self.levelName:setColor(cc.c4b(255,255,255,255))
+    self.levelName:enableOutline(cc.c4b(0,0,0,255),2)
+
+    self.levelNum:setString(self.islandIndex)
+    self.levelNum:setPosition(303,830)
+    self.levelNum:setSystemFontSize(30)
+    self.levelNum:setColor(cc.c4b(255,255,255,255))
+    self.levelNum:enableOutline(cc.c4b(0,0,0,255),2)
+    -------------------------------
     self.boss:setTexture("image/playmodel/endpopup/boss.png")
     self.boss:setPosition(173,693)
 
