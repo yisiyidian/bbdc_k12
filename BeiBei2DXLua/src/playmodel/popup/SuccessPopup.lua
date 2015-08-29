@@ -179,69 +179,6 @@ function SuccessPopup:initUI()
     self.back:addChild(self.shareBtn)
     self.shareBtn:addTouchEventListener(handler(self,self.shareTouch))
 
-    -- -- 序号背景
-    -- local titleSprite = cc.Sprite:create() 
-    -- titleSprite:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
-    -- titleSprite:ignoreAnchorPointForPosition(false)
-    -- titleSprite:setAnchorPoint(0.5,0.5)
-    -- self.titleSprite = titleSprite
-    -- self.back:addChild(self.titleSprite)
-
-    -- -- 小岛序号
-    -- local islandIndexLabel = cc.Label:createWithSystemFont("","",25)
-    -- islandIndexLabel:ignoreAnchorPointForPosition(false)
-    -- islandIndexLabel:setAnchorPoint(0.5,0.5)
-    -- islandIndexLabel:setColor(cc.c4b(0,0,0,255))
-    -- self.islandIndexLabel = islandIndexLabel
-    -- self.titleSprite:addChild(self.islandIndexLabel)
-
-    -- -- 标题
-    -- local titleLabel = cc.Label:createWithSystemFont("","",25)
-    -- titleLabel:ignoreAnchorPointForPosition(false)
-    -- titleLabel:setAnchorPoint(0.5,0.5)
-    -- titleLabel:setColor(cc.c4b(0,0,0,255))
-    -- self.titleLabel = titleLabel
-    -- self.titleSprite:addChild(self.titleLabel)
-
-    -- -- 宠物配置
-    -- local petLabel = cc.Label:createWithSystemFont("","",25)
-    -- petLabel:ignoreAnchorPointForPosition(false)
-    -- petLabel:setAnchorPoint(0.5,0.5)
-    -- petLabel:setColor(cc.c4b(0,0,0,255))
-    -- self.petLabel = petLabel
-    -- self.back:addChild(self.petLabel)
-
-    -- -- 获得奖励
-    -- local rewardLabel = cc.Label:createWithSystemFont("","",25)
-    -- rewardLabel:ignoreAnchorPointForPosition(false)
-    -- rewardLabel:setAnchorPoint(0.5,0.5)
-    -- rewardLabel:setColor(cc.c4b(0,0,0,255))
-    -- self.rewardLabel = rewardLabel
-    -- self.back:addChild(self.rewardLabel)
-
-    -- -- 宠物蛋
-    -- local eggLabel = cc.Label:createWithSystemFont("","",25)
-    -- eggLabel:ignoreAnchorPointForPosition(false)
-    -- eggLabel:setAnchorPoint(0.5,0.5)
-    -- eggLabel:setColor(cc.c4b(0,0,0,255))
-    -- self.eggLabel = eggLabel
-    -- self.back:addChild(self.eggLabel)
-
-    -- -- 分割线
-    -- local line1 = cc.Sprite:create() 
-    -- line1:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
-    -- line1:ignoreAnchorPointForPosition(false)
-    -- line1:setAnchorPoint(0.5,0.5)
-    -- self.line1 = line1
-    -- self.back:addChild(self.line1)
-
-    -- local line2 = cc.Sprite:create() 
-    -- line2:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
-    -- line2:ignoreAnchorPointForPosition(false)
-    -- line2:setAnchorPoint(0.5,0.5)
-    -- self.line2 = line2
-    -- self.back:addChild(self.line2)
-
     --关闭按钮---------------------------------------------
     local closeBtn = ccui.Button:create()
     closeBtn:setPosition(0,0)
@@ -282,7 +219,7 @@ function SuccessPopup:resetUI()
     -----关卡名---------------------------------------
 
     self.level:setString('Unit '..self.islandIndex)
-    self.level:setPosition(self.width / 2,770)
+    self.level:setPosition(self.width / 2 + 5,782)
     self.level:setColor(cc.c4b(255,255,255,255))
     self.level:enableOutline(cc.c4b(32,120,162,255),3)
 
@@ -294,28 +231,28 @@ function SuccessPopup:resetUI()
      -------奖励---------------------------------- 
 
     self.starReward:setTexture("image/playmodel/endpopup/starReward.png")
-    self.starReward:setPosition(173,510)
+    self.starReward:setPosition(170,510)
 
     self.starNum:setFntFile('font/CourierStd-Bold.fnt')
     self.starNum:setString("3")
-    self.starNum:setPosition(173, 450)
-    self.starNum:setColor(cc.c4b(112,109,94))
+    self.starNum:setPosition(170, 450)
+    self.starNum:setColor(cc.c4b(112,109,94,255))
     
     self.beanReward:setTexture("image/playmodel/endpopup/beanReward.png")
-    self.beanReward:setPosition(303,510)
+    self.beanReward:setPosition(300,510)
 
     self.beanNum:setFntFile('font/CourierStd-Bold.fnt')
     self.beanNum:setString("3")
-    self.beanNum:setPosition(303, 450)
-    self.beanNum:setColor(cc.c4b(112,109,94))
+    self.beanNum:setPosition(300, 450)
+    self.beanNum:setColor(cc.c4b(112,109,94,255))
 
     self.diamondReward:setTexture("image/playmodel/endpopup/diamondReward.png")
-    self.diamondReward:setPosition(433,510)
+    self.diamondReward:setPosition(430,510)
 
     self.diamondNum:setFntFile('font/CourierStd-Bold.fnt')
     self.diamondNum:setString("3")
-    self.diamondNum:setPosition(433, 450)
-    self.diamondNum:setColor(cc.c4b(112,109,94))
+    self.diamondNum:setPosition(430, 450)
+    self.diamondNum:setColor(cc.c4b(112,109,94,255))
 
     -------锅---------------------------------- 
 
@@ -332,13 +269,13 @@ function SuccessPopup:resetUI()
     self.yellowChilli:setPosition(165,330)
 
     --下一关--------------------------------------
-    self.nextBtn:setPosition(187,143)
+    self.nextBtn:setPosition(173,135)
     self.nextBtn:loadTextureNormal("image/playmodel/endpopup/nextNormal.png")
     self.nextBtn:loadTexturePressed("image/playmodel/endpopup/nextPress.png") 
 
 
     --分享--------------------------------------
-    self.shareBtn:setPosition(430,143)
+    self.shareBtn:setPosition(416,135)
     self.shareBtn:loadTextureNormal("image/playmodel/endpopup/shareNormal.png")
     self.shareBtn:loadTexturePressed("image/playmodel/endpopup/sharePress.png")
     
@@ -348,93 +285,6 @@ function SuccessPopup:resetUI()
     self.closeBtn:loadTextureNormal("image/playmodel/endpopup/closeNormal.png")
     self.closeBtn:loadTexturePressed("image/playmodel/endpopup/closePress.png")    
 
---     self.titleLabel:setString("通关")
---     self.titleLabel:setPosition(self.titleSprite:getContentSize().width/ 2 , self.titleSprite:getContentSize().height * 0.3)
-
---     -- 我的阵容
---     -- ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～ 
---     -- 需要更改
---     self.petLabel:setString("我的阵容")
---     self.petLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.8)
-
---     self.itemList = {
---     {"red","1"},
---     {"red","1"},
---     {"red","1"},
--- }
-    
---     if self.petView ~= nil then
---         self.petView:removeFromParent()
---     end
---     local petView = PetView.new(self.itemList,self.back:getContentSize().width)
---     petView:setPosition(0 , self.back:getContentSize().height * 0.65)
---     self.petView = petView
---     self.back:addChild(self.petView)
-
---     self.line1:setTexture("image/playmodel/endpopup/line.png")
---     self.line1:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.63)
-
---     self.rewardLabel:setString("关卡奖励")
---     self.rewardLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.6)
-
-
---     -- 获得奖励
---     -- ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
---     -- 需要更改
---     self.rewardList = {
---     {"dimamond","1"},
---     {"dimamond","1"},
---     {"dimamond","1"},
--- }
-    
---     if self.itemView ~= nil then
---         self.itemView:removeFromParent()
---     end
---     local itemView = ItemView.new(self.rewardList,self.back:getContentSize().width)
---     itemView:setPosition(0 , self.back:getContentSize().height * 0.5)
---     self.itemView = itemView
---     self.back:addChild(self.itemView)
-
---     self.line2:setTexture("image/playmodel/endpopup/line.png")
---     self.line2:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.48)
-
-
---     self.eggLabel:setString("额外奖励")
---     self.eggLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.45)
-
---     -- 获得奖励
---     -- ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
---     -- 需要更改
-    
---     for i=1,3 do
---         local petSprite = cc.Sprite:create("image/playmodel/endpopup/egg1.png")
---         petSprite:setPosition(self.back:getContentSize().width * 0.25 * i , self.back:getContentSize().height * 0.35)
---         petSprite:ignoreAnchorPointForPosition(false)
---         petSprite:setAnchorPoint(0.5,0.5)
---         self.back:addChild(petSprite)
---     end
-
---     if self.exerciseBtn ~= nil then
---         self.exerciseBtn:removeFromParent()
---     end
---     local exerciseBtn = Button.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,"训练场")
---     exerciseBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.2)
---     self.exerciseBtn = exerciseBtn
---     self.back:addChild(self.exerciseBtn)
---     self.exerciseBtn.func = function ()
-
---     end
-
---     if self.shareBtn ~= nil then
---         self.shareBtn:removeFromParent()
---     end
---     local shareBtn = Button.new("image/playmodel/endpopup/redButton_1.png","image/playmodel/endpopup/redButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,"分享")
---     shareBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.09)
---     self.shareBtn = shareBtn
---     self.back:addChild(self.shareBtn)
---     self.shareBtn.func = function ()
-
---     end
 end
 
 function SuccessPopup:shareTouch(sender,event)

@@ -180,68 +180,69 @@ end
 
 function StartPopup:resetUI()
     self.back:setTexture("image/playmodel/endpopup/board.png")
+    self.width = self.back:getContentSize().width
 
     -------------------------------
 
     self.levelName:setString("单元")
-    self.levelName:setPosition(303,870)
+    self.levelName:setPosition(self.width /2 + 10,865)
     self.levelName:setSystemFontSize(50)
     self.levelName:setColor(cc.c4b(255,255,255,255))
     self.levelName:enableOutline(cc.c4b(0,0,0,255),2)
 
     self.levelNum:setString(self.islandIndex)
-    self.levelNum:setPosition(303,830)
+    self.levelNum:setPosition(self.width /2 + 10,825)
     self.levelNum:setSystemFontSize(30)
     self.levelNum:setColor(cc.c4b(255,255,255,255))
     self.levelNum:enableOutline(cc.c4b(0,0,0,255),2)
     -------------------------------
     self.boss:setTexture("image/playmodel/endpopup/boss.png")
-    self.boss:setPosition(173,693)
+    self.boss:setPosition(self.width /2 - 130,693)
 
     self.bossNum:setFntFile('font/CourierStd-Bold.fnt')
     self.bossNum:setString("3")
-    self.bossNum:setPosition(173, 645)
+    self.bossNum:setPosition(self.width /2 - 130, 645)
 
     self.item:setTexture("image/playmodel/endpopup/item.png")
-    self.item:setPosition(303,693)
+    self.item:setPosition(self.width /2,693)
 
     self.itemNum:setFntFile('font/CourierStd-Bold.fnt')
     self.itemNum:setString("10")
-    self.itemNum:setPosition(303, 645)
+    self.itemNum:setPosition(self.width /2, 645)
 
     self.word:setTexture("image/playmodel/endpopup/word.png")
-    self.word:setPosition(433,693)
+    self.word:setPosition(self.width /2 + 130,693)
 
     self.wordNum:setFntFile('font/CourierStd-Bold.fnt')
     self.wordNum:setString("10")
-    self.wordNum:setPosition(433, 645)
+    self.wordNum:setPosition(self.width /2 + 130, 645)
 
     ----------------------------
     if self.type == "time" then
         self.limitCondition:setString("限时关卡:")
-        self.limitCondition:setPosition(188,578)
+        self.limitCondition:setPosition(240,578)
         self.limitCondition:enableOutline(cc.c4b(255,255,255,255),1)
         self.alarmClock:setTexture("image/playmodel/endpopup/clock.png")
-        self.alarmClock:setPosition(126,449)
+        self.alarmClock:setPosition(190,460)
         self.limitNum:setString(s_BattleManager.totalTime)
-        self.limitNum:setPosition(286,494)
+        self.limitNum:setPosition(self.width /2,494)
         self.limitNum:enableOutline(cc.c4b(255,255,255,255),1)
         self.sec:setString("秒")
         self.sec:enableOutline(cc.c4b(255,255,255,255),1)
-        self.sec:setPosition(400,477)
+        self.sec:setPosition(self.width /2 + 110,477)
     elseif self.type == "step" then
         self.limitCondition:setString("限步关卡:")
-        self.limitCondition:setPosition(188,578)
+        self.limitCondition:setPosition(240,578)
         self.limitCondition:enableOutline(cc.c4b(255,255,255,255),1)
         self.limitNum:setString(s_BattleManager.totalStep)
-        self.limitNum:setPosition(296,494)
+        self.limitNum:setPosition(self.width /2,494)
     end
 
     ---------------------------------------------
     self.pet:setTexture("image/playmodel/endpopup/pet.png")
-    self.pet:setPosition(300,317)
+    self.pet:setPosition(self.width /2,317)
     ---------------------------------------------
-    self.startBtn:setPosition(250,138)
+    self.startBtn:setPosition(315,138)
     self.startBtn:loadTextureNormal("image/playmodel/endpopup/startNormal.png")
     self.startBtn:loadTexturePressed("image/playmodel/endpopup/startPress.png")
 
@@ -251,113 +252,16 @@ function StartPopup:resetUI()
     self.star:setPosition(345,40)
     self.star:setTexture("image/playmodel/endpopup/star.png")
     ---------------------------------------------
-    self.wordBtn:setPosition(492,138)
+    self.wordBtn:setPosition(555,138)
     self.wordBtn:loadTextureNormal("image/playmodel/endpopup/libNormal.png")
     self.wordBtn:loadTexturePressed("image/playmodel/endpopup/libPress.png")   
 
     self.bean:setPosition(75,40)
     self.bean:setTexture("image/playmodel/endpopup/bean.png")
     ---------------------------------------------
-    self.closeBtn:setPosition(542,836)
+    self.closeBtn:setPosition(610,836)
     self.closeBtn:loadTextureNormal("image/playmodel/endpopup/closeNormal.png")
     self.closeBtn:loadTexturePressed("image/playmodel/endpopup/closePress.png")  
-
-
-    ---------------------------------------------
---     self.titleSprite:setTexture("image/playmodel/endpopup/title.png")
---     self.titleSprite:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
-    
---     local titleString = string.gsub('Unit '..s_BookUnitName[s_CURRENT_USER.bookKey][''..tonumber(self.islandIndex)],"_","-")
---     self.islandIndexLabel:setString(titleString)
---     self.islandIndexLabel:setPosition(self.titleSprite:getContentSize().width/ 2 , self.titleSprite:getContentSize().height * 0.7)
-    
---     if self.type == "time" then
---         self.titleLabel:setString("限时关卡")
---     elseif self.type == "step" then
---         self.titleLabel:setString("限步关卡")
---     end
-
---     self.titleLabel:setPosition(self.titleSprite:getContentSize().width/ 2 , self.titleSprite:getContentSize().height * 0.3)
-
---     -- ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
---     -- 这里少做了宠物配置更改，以及纪录宠物小队的配置
---     -- ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
---     for i=1,5 do
---         local texture = ""
---         if i == 1 then
---             texture = "image/playmodel/endpopup/orangePet.png"
---         elseif i == 2 then
---             texture = "image/playmodel/endpopup/redPet.png"
---         elseif i == 3 then   
---             texture = "image/playmodel/endpopup/yellowPet.png"    
---         elseif i == 4 then
---             texture = "image/playmodel/endpopup/greenPet.png"
---         elseif i == 5 then   
---             texture = "image/playmodel/endpopup/bluePet.png" 
---         end
---         local sprite = cc.Sprite:create(texture)
---         sprite:setPosition(self.back:getContentSize().width / 6 * i,self.back:getContentSize().height * 0.7)
---         self.back:addChild(sprite)
---     end
-
-
---     self.line1:setTexture("image/playmodel/endpopup/line.png")
---     self.line1:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.65)
-
---     self.missionLabel:setString("001")
---     self.missionLabel:setFntFile('font/CourierStd-Bold.fnt')
---     self.missionLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.6)
-
---     -- 关卡目标
---     -- 最多3种
---     self.itemList = {
---     -- {"boss","3"},
---     -- {"red",''..s_BattleManager.totalCollect},
--- }
-    
---     if self.itemView ~= nil then
---         self.itemView:removeFromParent()
---     end
---     local itemView = ItemView.new(self.itemList,self.back:getContentSize().width)
---     itemView:setPosition(0 , self.back:getContentSize().height * 0.5)
---     self.itemView = itemView
---     self.back:addChild(self.itemView)
-
---     self.line2:setTexture("image/playmodel/endpopup/line.png")
---     self.line2:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.45)
-
-
---     self.limitLabel:setString("关卡限制")
---     self.limitLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.4)
-
---     local string = ""
---     if self.type == "step" then
---         string = s_BattleManager.totalStep.."步"
---     elseif self.type == "time" then
---         string = s_BattleManager.totalTime.."秒"
---     end
-
---     self.timeOrStep:setString(string)
---     self.timeOrStep:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.3)
-
---     if self.exerciseBtn ~= nil then
---         self.exerciseBtn:removeFromParent()
---     end
---     local exerciseBtn = Button.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,"训练场")
---     exerciseBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.2)
---     self.exerciseBtn = exerciseBtn
---     self.back:addChild(self.exerciseBtn)
---     self.exerciseBtn.func = function ()
-
---     end
---     if self.startBtn ~= nil then
---         self.startBtn:removeFromParent()
---     end
---     local startBtn = Button.new("image/playmodel/endpopup/redButton_1.png","image/playmodel/endpopup/redButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,"开始挑战")
---     startBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.09)
---     self.startBtn = startBtn
---     self.back:addChild(self.startBtn)
-
 
 end
 

@@ -138,7 +138,22 @@ function BattleManager:battleEnded(win)
 	else 
 		print('lose')
 		self.wrongList[#self.wrongList + 1] = self:getLastWord()
-		local gameEndPopup = require('playmodel.popup.FailPopup').new(self.unit.unitID,self.stageType)
+		local itemList = {}
+		itemList[1] = #s_BattleManager.bossList - s_BattleManager.currentBossIndex + 1
+		if s_BattleManager.bossList[s_BattleManager.currentBossIndex].blood <= 0 then
+			itemList[1] = 0
+		end
+
+		itemList[2] = s_BattleManager.totalCollect[1] - s_BattleManager.currentCollect[1]
+		if s_BattleManager.totalCollect[1] - s_BattleManager.currentCollect[1] <= 0 then
+			itemList[2] = 0
+		end
+
+		itemList[3] = s_BattleManager.totalWordCount - s_BattleManager.currentWordCount
+		if s_BattleManager.totalWordCount - s_BattleManager.currentWordCount <= 0 then
+			itemList[3] = 0
+		end 
+		local gameEndPopup = require('playmodel.popup.FailPopup').new(self.unit.unitID,self.stageType,itemList,self.wrongList)
 		s_SCENE:popup(gameEndPopup)
 	end
 end

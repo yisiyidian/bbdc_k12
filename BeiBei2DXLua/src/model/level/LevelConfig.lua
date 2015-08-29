@@ -27,9 +27,9 @@ LevelConfig.BossConfig = {
 }
 
 LevelConfig.WordConfig = {
-	[1] = 10,
-	[2] = 10,
-	[3] = 10,
+	[1] = 2,
+	[2] = 2,
+	[3] = 2,
 }
 
 LevelConfig.PointConfig = {
@@ -39,7 +39,7 @@ LevelConfig.PointConfig = {
 }
 
 LevelConfig.LimitConfig = {
-	[1] = {LevelConfig.STEP,20},
+	[1] = {LevelConfig.STEP,5},
 	[2] = {LevelConfig.TIME,100},
 	[3] = {LevelConfig.STEP,20},
 }

@@ -8,6 +8,8 @@
 local ItemView = require("playmodel.item.ItemView")
 local WordView = require("playmodel.item.WordView")
 local Button = require("playmodel.item.Button")
+local LevelConfig = require('model.level.LevelConfig') 
+
 local FailPopup = class ("FailPopup",function ()
 	return cc.Layer:create()
 end)
@@ -20,6 +22,8 @@ function FailPopup:ctor(islandIndex,type,itemList,wordList)
 	self.type = type
     self.itemList = itemList
     self.wordList = wordList
+
+    self.needItem = {#LevelConfig.BossConfig[islandIndex%2 + 1], LevelConfig.PointConfig[islandIndex%2 + 1][1],LevelConfig.WordConfig[islandIndex%2 + 1],}
 
 	self:initUI()
 end
@@ -35,178 +39,313 @@ function FailPopup:initUI()
     self.back = back
     self:addChild(self.back)
 
-    -- 上部显示编号的精灵
-    local titleSprite = cc.Sprite:create() 
-    titleSprite:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
-    titleSprite:ignoreAnchorPointForPosition(false)
-    titleSprite:setAnchorPoint(0.5,0.5)
-    self.titleSprite = titleSprite
-    self.back:addChild(self.titleSprite)
+    -- 失败
+    local label1 = cc.Sprite:create()
+    label1:setPosition(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2)
+    label1:ignoreAnchorPointForPosition(false)
+    label1:setAnchorPoint(0.5,0.5)
+    self.label1 = label1
+    self.back:addChild(self.label1,3)
 
-    -- 小岛序号
-    local islandIndexLabel = cc.Label:createWithSystemFont("","",25)
-    islandIndexLabel:ignoreAnchorPointForPosition(false)
-    islandIndexLabel:setAnchorPoint(0.5,0.5)
-    islandIndexLabel:setColor(cc.c4b(0,0,0,255))
-    self.islandIndexLabel = islandIndexLabel
-    self.titleSprite:addChild(self.islandIndexLabel)
+    local label2 = cc.Sprite:create()
+    label2:setPosition(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2)
+    label2:ignoreAnchorPointForPosition(false)
+    label2:setAnchorPoint(0.5,0.5)
+    self.label2 = label2
+    self.back:addChild(self.label2,3)
 
-    -- 标题
-    local titleLabel = cc.Label:createWithSystemFont("","",25)
-    titleLabel:ignoreAnchorPointForPosition(false)
-    titleLabel:setAnchorPoint(0.5,0.5)
-    titleLabel:setColor(cc.c4b(0,0,0,255))
-    self.titleLabel = titleLabel
-    self.titleSprite:addChild(self.titleLabel)
+    local label3 = cc.Sprite:create()
+    label3:setPosition(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2)
+    label3:ignoreAnchorPointForPosition(false)
+    label3:setAnchorPoint(0.5,0.5)
+    self.label3 = label3
+    self.back:addChild(self.label3,3)
 
-    -- 失败了
-    local unfinishLabel = cc.Label:createWithSystemFont("","",25)
-    unfinishLabel:ignoreAnchorPointForPosition(false)
-    unfinishLabel:setAnchorPoint(0.5,0.5)
-    unfinishLabel:setColor(cc.c4b(0,0,0,255))
-    self.unfinishLabel = unfinishLabel
-    self.back:addChild(self.unfinishLabel)
+    local label4 = cc.Sprite:create()
+    label4:setPosition(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2)
+    label4:ignoreAnchorPointForPosition(false)
+    label4:setAnchorPoint(0.5,0.5)
+    self.label4 = label4
+    self.back:addChild(self.label4,3)
 
-    -- 词错了
-    local unknowLabel = cc.Label:createWithSystemFont("","",25)
-    unknowLabel:ignoreAnchorPointForPosition(false)
-    unknowLabel:setAnchorPoint(0.5,0.5)
-    unknowLabel:setColor(cc.c4b(0,0,0,255))
-    self.unknowLabel = unknowLabel
-    self.back:addChild(self.unknowLabel)
+        -- 关卡显示
+    local level = cc.Label:createWithSystemFont("","",27)
+    level:setPosition(s_DESIGN_WIDTH/ 2 , s_DESIGN_HEIGHT / 2)
+    level:ignoreAnchorPointForPosition(false)
+    level:setAnchorPoint(0.5,0.5)
+    self.level = level
+    self.back:addChild(self.level)
 
-    -- 分割线
-    local line = cc.Sprite:create() 
-    line:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
-    line:ignoreAnchorPointForPosition(false)
-    line:setAnchorPoint(0.5,0.5)
-    self.line = line
-    self.back:addChild(self.line)
+        -- 目标模块---------------------------------------------
+    -- 目前写死 等待配置文件
+    local boss = cc.Sprite:create()
+    boss:setPosition(0,0)
+    boss:ignoreAnchorPointForPosition(false)
+    boss:setAnchorPoint(0.5,0.5)
+    self.boss = boss
+    self.back:addChild(self.boss)
+
+    local bossNum = cc.Label:createWithSystemFont("",'',30)
+    bossNum:setPosition(0,0)
+    bossNum:ignoreAnchorPointForPosition(false)
+    bossNum:setAnchorPoint(0.5,0.5)
+    self.bossNum = bossNum
+    self.back:addChild(self.bossNum)
+
+    local item = cc.Sprite:create()
+    item:setPosition(0,0)
+    item:ignoreAnchorPointForPosition(false)
+    item:setAnchorPoint(0.5,0.5)
+    self.item = item
+    self.back:addChild(self.item)
+
+    local itemNum = cc.Label:createWithSystemFont("",'',30)
+    itemNum:setPosition(0,0)
+    itemNum:ignoreAnchorPointForPosition(false)
+    itemNum:setAnchorPoint(0.5,0.5)
+    self.itemNum = itemNum
+    self.back:addChild(self.itemNum)
+
+    local word = cc.Sprite:create()
+    word:setPosition(0,0)
+    word:ignoreAnchorPointForPosition(false)
+    word:setAnchorPoint(0.5,0.5)
+    self.word = word
+    self.back:addChild(self.word)
+
+    local wordNum = cc.Label:createWithSystemFont("",'',30)
+    wordNum:setPosition(0,0)
+    wordNum:ignoreAnchorPointForPosition(false)
+    wordNum:setAnchorPoint(0.5,0.5)
+    self.wordNum = wordNum
+    self.back:addChild(self.wordNum)
+
+    local bossComplete = cc.Sprite:create("image/playmodel/complete.png") 
+    self.bossComplete = bossComplete
+    self.back:addChild(self.bossComplete)
+    self.bossComplete:setVisible(false)
+
+    local itemComplete = cc.Sprite:create("image/playmodel/complete.png") 
+    self.itemComplete = itemComplete
+    self.back:addChild(self.itemComplete)
+    self.itemComplete:setVisible(false)
+
+    local wordComplete = cc.Sprite:create("image/playmodel/complete.png") 
+    self.wordComplete = wordComplete
+    self.back:addChild(self.wordComplete)
+    self.wordComplete:setVisible(false)
 
     -- 回调函数
     self.callBack = function ()
     end
 
-    self:resetUI()
-
-    -- 关闭按钮
-    local closeBtn = Button.new("image/playmodel/endpopup/closeButton_2.png","image/playmodel/endpopup/closeButton_1.png","image/playmodel/endpopup/closeButton_shadow.png",9,"")
-    closeBtn:setPosition(self.back:getContentSize().width * 0.9 , self.back:getContentSize().height * 0.9)
+    --关闭按钮---------------------------------------------
+    local closeBtn = ccui.Button:create()
+    closeBtn:setPosition(0,0)
+    closeBtn:ignoreAnchorPointForPosition(false)
+    closeBtn:setAnchorPoint(0.5,0.5)
     self.closeBtn = closeBtn
     self.back:addChild(self.closeBtn)
-    self.closeBtn.func = function ()
-        s_SCENE:removeAllPopups()
-        s_BattleManager:leaveBattleView()
-    end
+    self.closeBtn:addTouchEventListener(handler(self,self.closePopup))
+
+
+    --词库按钮---------------------------------------------
+    local wordBtn = ccui.Button:create()
+    wordBtn:setPosition(0,0)
+    wordBtn:ignoreAnchorPointForPosition(false)
+    wordBtn:setAnchorPoint(0.5,0.5)
+    self.wordBtn = wordBtn
+    self.back:addChild(self.wordBtn)
+    self.wordBtn:addTouchEventListener(handler(self,self.enterLib))
+
+
+    --更多机会---------------------------------------------
+    local moreBtn = ccui.Button:create()
+    moreBtn:setPosition(0,0)
+    moreBtn:ignoreAnchorPointForPosition(false)
+    moreBtn:setAnchorPoint(0.5,0.5)
+    self.moreBtn = moreBtn
+    self.back:addChild(self.moreBtn)
+    self.moreBtn:addTouchEventListener(handler(self,self.startWithMore))
+
+    local dianmond = cc.Sprite:create()
+    self.dianmond = dianmond
+    self.moreBtn:addChild(self.dianmond)
+
+    --更多机会---------------------------------------------
+    local restartBtn = ccui.Button:create()
+    restartBtn:setPosition(0,0)
+    restartBtn:ignoreAnchorPointForPosition(false)
+    restartBtn:setAnchorPoint(0.5,0.5)
+    self.restartBtn = restartBtn
+    self.back:addChild(self.restartBtn)
+    self.restartBtn:addTouchEventListener(handler(self,self.restart))
+
+    local heart = cc.Sprite:create()
+    self.heart = heart
+    self.restartBtn:addChild(self.heart)
+
+    self:resetUI()
 end
 
 function FailPopup:resetUI()
-    self.back:setTexture("image/playmodel/endpopup/broad.png")
+    self.back:setTexture("image/playmodel/endpopup/failure.png")
+    self.width = self.back:getContentSize().width
 
-    self.titleSprite:setTexture("image/playmodel/endpopup/title.png")
-    self.titleSprite:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.9)
-
-    -- 小岛编号 1-1
-    local titleString = string.gsub('Unit '..s_BookUnitName[s_CURRENT_USER.bookKey][''..tonumber(self.islandIndex)],"_","-")
-    self.islandIndexLabel:setString(titleString)
-    self.islandIndexLabel:setPosition(self.titleSprite:getContentSize().width/ 2 , self.titleSprite:getContentSize().height * 0.7)
-
-    -- 目前的类型 限制划词的步数 限制关卡的时间
     if self.type == "time" then
-        self.titleLabel:setString("时间用完了")
-    elseif self.type == "step" then
-        self.titleLabel:setString("机会用完了")
+        self.label1:setTexture("image/playmodel/endpopup/shi.png")
+        self.label1:setPosition(self.width / 2,851)
+
+        self.label2:setTexture("image/playmodel/endpopup/jian.png")
+        self.label2:setPosition(self.width / 2,851)
+
+        self.label3:setTexture("image/playmodel/endpopup/yong.png")
+        self.label3:setPosition(self.width / 2,851)
+
+        self.label4:setTexture("image/playmodel/endpopup/jin.png")
+        self.label4:setPosition(self.width / 2,851)
+    else
+        self.label1:setTexture("image/playmodel/endpopup/bu.png")
+        self.label1:setPosition(self.width / 2,851)
+
+        self.label2:setTexture("image/playmodel/endpopup/shu.png")
+        self.label2:setPosition(self.width / 2,851)
+
+        self.label3:setTexture("image/playmodel/endpopup/yong.png")
+        self.label3:setPosition(self.width / 2,851)
+
+        self.label4:setTexture("image/playmodel/endpopup/jin.png")
+        self.label4:setPosition(self.width / 2,851)
     end
 
-    self.titleLabel:setPosition(self.titleSprite:getContentSize().width/ 2 , self.titleSprite:getContentSize().height * 0.3)
+    -----关卡名---------------------------------------
 
-    self.unfinishLabel:setString("任务目标未完成")
-    self.unfinishLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.8)
+    self.level:setString('Unit '..self.islandIndex)
+    self.level:setPosition(self.width / 2 + 5,770)
+    self.level:setColor(cc.c4b(255,255,255,255))
+    self.level:enableOutline(cc.c4b(32,120,162,255),3)
 
-    -- 目前最多只会显示3种
-    self.itemList = {
-    {"boss","1/2"},
-    {"dimamond","1/2"},
-    {"red","1/2"},
-}
+    ------item-----------------------
+
+    self.boss:setTexture("image/playmodel/endpopup/boss.png")
+    self.boss:setPosition(self.width /2 - 130,663)
+
+    -- self.bossNum:setFntFile('font/CourierStd-Bold.fnt')
+    self.bossNum:setPosition(self.width /2 - 130, 615)
+    self.bossNum:setColor(cc.c4b(112,109,94,255))
+    if self.itemList[1] > 0 then
+        self.bossNum:setString((self.needItem[1] - self.itemList[1]).."/"..self.needItem[1])
+    else
+        self.bossComplete:setVisible(true)
+        self.bossComplete:setPosition(self.width /2 - 130, 615)
+    end
+
+    self.item:setTexture("image/playmodel/endpopup/item.png")
+    self.item:setPosition(self.width /2,663)
+
+    -- self.itemNum:setFntFile('font/CourierStd-Bold.fnt')
+    self.itemNum:setPosition(self.width /2, 615)
+    self.itemNum:setColor(cc.c4b(112,109,94,255))
+    if self.itemList[2] > 0 then
+        self.itemNum:setString((self.needItem[2] - self.itemList[2]).."/"..self.needItem[2])
+    else
+        self.itemComplete:setVisible(true)
+        self.itemComplete:setPosition(self.width /2, 615)
+    end
     
-    if self.itemView ~= nil then
-        self.itemView:removeFromParent()
+    self.word:setTexture("image/playmodel/endpopup/word.png")
+    self.word:setPosition(self.width /2 + 130,663)
+
+    -- self.wordNum:setFntFile('font/CourierStd-Bold.fnt')
+    self.wordNum:setPosition(self.width /2 + 130, 615)
+    self.wordNum:setColor(cc.c4b(112,109,94,255))
+    if self.itemList[3] > 0 then
+        self.wordNum:setString((self.needItem[3] - self.itemList[3]).."/"..self.needItem[3])
+    else
+        self.wordComplete:setVisible(true)
+        self.wordComplete:setPosition(self.width /2 + 130,  615)
     end
-    local itemView = ItemView.new(self.itemList,self.back:getContentSize().width)
-    itemView:setPosition(0 , self.back:getContentSize().height * 0.7)
-    self.itemView = itemView
-    self.back:addChild(self.itemView)
 
-    self.line:setTexture("image/playmodel/endpopup/line.png")
-    self.line:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.65)
+    self:addWrongWord()
 
-    self.unknowLabel:setString("不会的单词")
-    self.unknowLabel:setPosition(self.back:getContentSize().width/ 2 , self.back:getContentSize().height * 0.6)
 
-    -- 目前最多只会显示3个
-    self.wordList = {
-    {"dimamond",3},
-    {"dimamond",3},
-    {"dimamond",3},
-}
+        --关闭--------------------------------------
+    self.closeBtn:setPosition(568,840)
+    self.closeBtn:loadTextureNormal("image/playmodel/endpopup/closeNormal.png")
+    self.closeBtn:loadTexturePressed("image/playmodel/endpopup/closePress.png")  
+
+    ---词库-------------------------------------------
+    self.wordBtn:setPosition(182,260)
+    self.wordBtn:loadTextureNormal("image/playmodel/endpopup/faillibNormal.png")
+    self.wordBtn:loadTexturePressed("image/playmodel/endpopup/faillibPress.png")   
     
-    if self.wordView ~= nil then
-        self.wordView:removeFromParent()
-    end
-
-    local wordView = WordView.new(self.wordList,200)
-    wordView:setPosition(100 , self.back:getContentSize().height * 0.4)
-    self.wordView = wordView
-    self.back:addChild(self.wordView)
-
-    if self.exerciseBtn ~= nil then
-        self.exerciseBtn:removeFromParent()
-    end
-    local exerciseBtn = Button.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,"训练场")
-    exerciseBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.35)
-    self.exerciseBtn = exerciseBtn
-    self.back:addChild(self.exerciseBtn)
-    self.exerciseBtn.func = function ()
-
-    end
-
-    if self.addChanceBtn ~= nil then
-        self.addChanceBtn:removeFromParent()
-    end
-
-    local text = ""
+    ---更多机会-------------------------------------------
+    self.moreBtn:setPosition(410,260)
     if self.type == "time" then
-        text = "时间用完了"
-    elseif self.type == "step" then
-        text = "机会用完了"
+        self.moreBtn:loadTextureNormal("image/playmodel/endpopup/addTimeNormal.png")
+        self.moreBtn:loadTexturePressed("image/playmodel/endpopup/addTimePress.png") 
+    else
+        self.moreBtn:loadTextureNormal("image/playmodel/endpopup/addStepNormal.png")
+        self.moreBtn:loadTexturePressed("image/playmodel/endpopup/addStepPress.png") 
     end
 
-    local addChanceBtn = Button.new("image/playmodel/endpopup/blueButton_1.png","image/playmodel/endpopup/blueButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,text)
-    addChanceBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.22)
-    self.addChanceBtn = addChanceBtn
-    self.back:addChild(self.addChanceBtn)
-    self.addChanceBtn.func = function ()
-        self.callBack()
-        s_SCENE:removeAllPopups()
-        s_BattleManager:oneMoreChance()
-    end
+    self.dianmond:setTexture("image/playmodel/endpopup/bdiamond.png")
+    self.dianmond:setPosition(94,134)
+    ---重开-------------------------------------------
+    self.restartBtn:setPosition(298,130)
+    self.restartBtn:loadTextureNormal("image/playmodel/endpopup/restartNormal.png")
+    self.restartBtn:loadTexturePressed("image/playmodel/endpopup/restartPress.png")  
 
-    self.addChanceBtn:addSprite("image/playmodel/endpopup/Diamond.png",10)
-
-    if self.restartBtn ~= nil then
-        self.restartBtn:removeFromParent()
-    end
-    local restartBtn = Button.new("image/playmodel/endpopup/redButton_1.png","image/playmodel/endpopup/redButton_2.png","image/playmodel/endpopup/longButton_shadow.png",9,"重新开始")
-    restartBtn:setPosition(self.back:getContentSize().width * 0.5 , self.back:getContentSize().height * 0.09)
-    self.restartBtn = restartBtn
-    self.back:addChild(self.restartBtn)
-    self.restartBtn.func = function ()
-        s_SCENE:removeAllPopups()
-        s_BattleManager:restartBattle()
-    end
-    self.restartBtn:addSprite("image/playmodel/endpopup/heart01.png")
+    self.heart:setTexture("image/playmodel/endpopup/bheart.png")
+    self.heart:setPosition(357,67)
 end
 
+function FailPopup:closePopup(sender,event)
+    if event ~= ccui.TouchEventType.ended then
+        return 
+    end
+
+    s_SCENE:removeAllPopups()
+    s_BattleManager:leaveBattleView()
+end
+
+function FailPopup:addWrongWord()
+    for i=#self.wordList,1,-1 do
+        if #self.wordList - i >= 3 then return end
+        local word = cc.Label:createWithSystemFont(self.wordList[i],'',30)
+        word:setColor(cc.c4b(112,109,94,255))
+        word:enableOutline(cc.c4b(0,0,0,255),1)
+        word:setPosition(self.width /2, 500 - (#self.wordList - i) * 33 )
+        self.back:addChild(word)
+        if #self.wordList - i == 0 then word:setColor(cc.c4b(255,0,0,255)) word:enableOutline(cc.c4b(255,0,0,255),1)end 
+
+    end
+end
+
+function FailPopup:enterLib(sender,event)
+    if event ~= ccui.TouchEventType.ended then
+        return 
+    end
+
+    printline("没有词库")
+end
+
+function FailPopup:startWithMore(sender,event)
+    if event ~= ccui.TouchEventType.ended then
+        self.dianmond:setTexture("image/playmodel/endpopup/bdiamond.png")
+        return 
+    end
+
+    self.dianmond:setTexture("image/playmodel/endpopup/sdiamond.png")
+end
+
+function FailPopup:restart(sender,event)
+    if event ~= ccui.TouchEventType.ended then
+        self.heart:setTexture("image/playmodel/endpopup/bheart.png")
+        return 
+    end
+
+    self.heart:setTexture("image/playmodel/endpopup/sheart.png")
+end
 
 return FailPopup
