@@ -23,7 +23,7 @@ function SplashView.create()
 end
 
 function SplashView:setOnFinished(func)
-    local fadeOut = cc.FadeOut:create(0.2)
+    local fadeOut = cc.FadeOut:create(1.5)
     local callback = cc.CallFunc:create(func)
     local seq = cc.Sequence:create(fadeOut, callback)
     self:runAction(seq)
