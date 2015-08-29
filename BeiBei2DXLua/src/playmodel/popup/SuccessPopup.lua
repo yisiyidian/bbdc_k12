@@ -451,7 +451,7 @@ function SuccessPopup:startNextGame(sender,event)
     end
 
     s_SCENE:removeAllPopups()
-    s_CorePlayManager.enterLevelLayer()
+    s_BattleManager:leaveBattleView()
 end
 
 function SuccessPopup:closePopup(sender,event)
@@ -460,7 +460,7 @@ function SuccessPopup:closePopup(sender,event)
     end
 
     s_SCENE:removeAllPopups()
-    s_CorePlayManager.enterLevelLayer()
+    s_BattleManager:leaveBattleView()
 end
 
 

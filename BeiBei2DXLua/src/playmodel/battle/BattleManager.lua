@@ -8,13 +8,15 @@ local ActionManager = require('playmodel.battle.ActionManager')
 local LevelConfig = require('model.level.LevelConfig')
 
 function BattleManager:listNotify()
-	return {ATTACK,RIGHT}
+	return {ATTACK,RIGHT,WRONG}
 end
 
 --override
 function BattleManager:handleNotification(notify,data)
 	if notify == RIGHT then
 		self:addStepWithCollect(data)
+	elseif notify == WRONG then
+		self.wrongList[#self.wrongList+1] = data
 	end
 end
 
@@ -28,6 +30,7 @@ function BattleManager:initInfo()
 	self.attack = 0
 	self.bossList = {}
 	self.petList = {}
+	self.wrongList = {}
 	self.currentBossIndex = 0
 	self.currentBoss = nil
 end
@@ -111,7 +114,6 @@ function BattleManager:battleEnded(win)
 	self.gameEnded = true
 	self.win = win
 	if win then            
-
 		s_CURRENT_USER:addBeans(3) --获取贝贝豆
 		saveUserToServer({[DataUser.BEANSKEY] = s_CURRENT_USER[DataUser.BEANSKEY]}) --同步到
 		print('win')
@@ -135,6 +137,7 @@ function BattleManager:battleEnded(win)
 		s_SCENE:popup(gameEndPopup)
 	else 
 		print('lose')
+		self.wrongList[#self.wrongList + 1] = self:getLastWord()
 		local gameEndPopup = require('playmodel.popup.FailPopup').new(self.unit.unitID,self.stageType)
 		s_SCENE:popup(gameEndPopup)
 	end
@@ -300,6 +303,11 @@ function BattleManager:checkWordCount()
 		return true
 	end
 	return false
+end
+
+--获取结束时的单词
+function BattleManager:getLastWord()
+	return self.view.MatView:getLastWord()
 end
 
 return BattleManager

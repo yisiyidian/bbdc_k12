@@ -44,7 +44,8 @@ function BattleView:initUI()
 	self:scheduleUpdateWithPriorityLua(update,0)
 
     local MatView = require("playmodel.newmat.MatView").create()
-	self:addChild(MatView)
+    self.MatView = MatView
+	self:addChild(self.MatView)
 
 	local pet = s_BattleManager.petList
 	pet[1].ui:setPosition(336,110)

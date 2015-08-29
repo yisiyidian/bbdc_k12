@@ -52,13 +52,6 @@ function MatView:initUI()
 	self:addChild(self.back)
 	-- 布景
 
-	-- 划词显示
-	-- local wordsprite = ccui.Scale9Sprite:create("image/mat/circle.png",cc.rect(0,0,79,74),cc.rect(27.49,0,27.51,74))
-	-- wordsprite:setPosition(cc.p(s_DESIGN_WIDTH /2,770))
-	-- wordsprite:setAnchorPoint(0.5,0.5)
-	-- self.wordsprite = wordsprite
-	-- self:addChild(self.wordsprite)
-
     local changeButton = ccui.Button:create("image/playmodel/changeNormal.png","image/playmodel/changePress.png","")
 	changeButton:setPosition(cc.p(595,1024))
     changeButton:ignoreAnchorPointForPosition(false)
@@ -67,47 +60,6 @@ function MatView:initUI()
 	self.changeButton = changeButton
 	self:addChild(self.changeButton)
 	self.changeButton:addTouchEventListener(handler(self,self.clickChange))
-
-	-- local tipButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,"提示")
-	-- tipButton:setPosition(cc.p(s_DESIGN_WIDTH *0.1,700))
- --    tipButton:ignoreAnchorPointForPosition(false)
- --    tipButton:setAnchorPoint(0.5,0.5)
- --    tipButton.color = cc.c4b(0,0,0,255)
- --    tipButton:resetUI()
-	-- self.tipButton = tipButton
-	-- self:addChild(self.tipButton)
-
-	-- self.tipButton.func = function ()
-	-- 	self:letterTip()
-	-- end
-
-	-- local changeLabel = ""
-	-- if s_CURRENT_USER.isSoundAm == 0 then
-	-- 	changeLabel = "英"
-	-- else
-	-- 	changeLabel = "美"
-	-- end
-
-	-- local amButton = longButtonInStudy.create("image/playmodel/changeWordButton_downside.png","image/playmodel/changeWordButton_upside.png",5,changeLabel)
-	-- amButton:setPosition(cc.p(s_DESIGN_WIDTH *0.1,1075))
- --    amButton:ignoreAnchorPointForPosition(false)
- --    amButton:setAnchorPoint(0.5,0.5)
- --    amButton.color = cc.c4b(0,0,0,255)
- --    amButton:resetUI()
-	-- self.amButton = amButton
-	-- self:addChild(self.amButton)
-
-	-- self.amButton.func = function ()
-	-- 	s_CURRENT_USER.isSoundAm = 1 - s_CURRENT_USER.isSoundAm	
-	-- 	saveUserToServer({['isSoundAm']=s_CURRENT_USER.isSoundAm})
-	-- 	if s_CURRENT_USER.isSoundAm == 0 then
-	-- 		changeLabel = "英"
-	-- 	else
-	-- 		changeLabel = "美"
-	-- 	end
-	-- 	self.amButton.text = changeLabel
-	-- 	self.amButton:resetUI()
-	-- end
 
 	local blackboard = cc.Sprite:create("image/playmodel/blackboard.png")
 	blackboard:setPosition(cc.p(318,840))
@@ -145,11 +97,32 @@ function MatView:initUI()
     local guideLine = GuideLine.create()
     self.guideLine = guideLine
     self:addChild(self.guideLine,2)
+
+    local showWord = cc.Label:createWithTTF("",'font/ArialRoundedBold.ttf',55)
+    showWord:setPosition(cc.p(blackboard:getContentSize().width/2,blackboard:getContentSize().height * 0.4))
+    showWord:ignoreAnchorPointForPosition(false)
+    showWord:setAnchorPoint(0.5,0.5)
+    showWord:setColor(cc.c4b(255,255,255,255))
+    self.showWord = showWord
+    self.blackboard:addChild(self.showWord)
 	-- ui填充
 	self:resetUI()
 	self:resetWordLabel("")
 	-- 触摸事件
 	self:touchFunc()
+end
+
+function MatView:getLastWord()
+	return MatController.word[MatController.index][3]
+end
+
+function MatView:showWordAfterRight()
+	self.wordlabel:setVisible(false)
+	local word = self.wordlabel:getString()
+	self.showWord:setVisible(true)
+	self.showWord:enableGlow(cc.c4b(255,255,255,255))
+	self.showWord:setString(word)
+	self.showWord:runAction(cc.Sequence:create(cc.ScaleTo:create(0.2,1.2),cc.ScaleTo:create(0.2,1)))
 end
 
 function MatView:updateLine()
@@ -174,7 +147,8 @@ function MatView:resetWordLabel(string)
 	-- 	self.wordsprite:setVisible(true)
 	-- 	self.wordsprite:setContentSize(length * 7 + 60 ,74)
 	-- end
-
+	self.wordlabel:setVisible(true)
+	self.showWord:setVisible(false)
 	self.wordlabel:setString(string)
 	-- self.wordlabel:setPosition(self.wordsprite:getContentSize().width/2,self.wordsprite:getContentSize().height/2)
 end
@@ -315,7 +289,7 @@ function MatView:letterTip()
 	-- self:runAction(cc.Sequence:create(delayAction,runAction))
 end
 
-function MatView:dropFunc(callback)
+function MatView:dropFunc(bool)
 	-- 掉落事件
 	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	for i=1,5 do
@@ -328,6 +302,14 @@ function MatView:dropFunc(callback)
 				local px,py
 				px,py = s_BattleManager.petList[1].ui:getPosition()
 				chilli:runAction(cc.MoveTo:create(0.4,cc.p(px,py)))
+
+				local letter = cc.Label:createWithTTF(self.coco[i][j].letter,'font/ArialRoundedBold.ttf',55)
+				letter:setPosition(self.locationX + i * 110 ,self.locationY + j * 110)
+				self.back:addChild(letter,10)
+
+				local px,py
+				px,py = self.blackboard:getPosition()
+				letter:runAction(cc.MoveTo:create(0.5,cc.p(px,py)))
 			end
 		end
 	end
@@ -350,6 +332,12 @@ function MatView:dropFunc(callback)
 	local delay = cc.DelayTime:create(0.5)
 	self:runAction(cc.Sequence:create(delay,cc.CallFunc:create(self.resetUI)))
 
+	--显示单词
+	if bool then
+		local delay = cc.DelayTime:create(0.4)
+		self:runAction(cc.Sequence:create(delay,cc.CallFunc:create(self.showWordAfterRight)))
+	end
+	
 	-- 解锁
 	local delay = cc.DelayTime:create(0.6)
 	self:runAction(cc.Sequence:create(delay,cc.CallFunc:create(s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch)))

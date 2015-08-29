@@ -173,15 +173,14 @@ function MatController:judgeFunc()
 		-- print("划词正确")
 		-- print("这个词是"..temp)
 		s_BattleManager:addWordCount()
-		function MatController:callback()
-			MatController:sendNotification("RIGHT",attackList)
-		end
+		MatController:sendNotification("RIGHT",attackList)
 
 		-- print_lua_table(attackList)
 		-- print("congratulation!!!!!!!!!!!!!!!")
 		-- 下滑动作
-		MatController.MatView:dropFunc(MatController.callback)
+		MatController.MatView:dropFunc(true)
 		MatController.index = MatController.index + 1
+		
 		-- 下滑动作
 		for k,v in pairs(MatController.currentCoco) do
 			MatController.currentCoco[k].touchState = 0
@@ -194,6 +193,7 @@ function MatController:judgeFunc()
 		playSound(s_sound_learn_false)
 		s_BattleManager:addStepWithCollect({0,0,0,0,0})
 		-- print("划错了")
+		MatController:sendNotification("WRONG",MatController.word[MatController.index][3])
 		print("要划的词是"..MatController.word[MatController.index][3])
 		-- print("你划的词是"..temp)
 		-- 复原砖块状态
@@ -297,8 +297,9 @@ function MatController:changeFunc()
 	if #MatController.currentCoco ~= 0 then
 		return 
 	end
+	MatController:sendNotification("WRONG",MatController.word[MatController.index][3])
 	s_BattleManager:addStepWithCollect({0,0,0,0,0})
-	MatController.MatView:dropFunc()
+	MatController.MatView:dropFunc(false)
 	MatController.index = MatController.index + 1
 end
 

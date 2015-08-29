@@ -179,7 +179,7 @@ function StartPopup:initUI()
 end
 
 function StartPopup:resetUI()
-    self.back:setTexture("image/playmodel/endpopup/broad.png")
+    self.back:setTexture("image/playmodel/endpopup/board.png")
 
     -------------------------------
 
