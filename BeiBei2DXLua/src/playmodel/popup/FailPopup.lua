@@ -168,9 +168,9 @@ function FailPopup:initUI()
     self.back:addChild(self.moreBtn)
     self.moreBtn:addTouchEventListener(handler(self,self.startWithMore))
 
-    local dianmond = cc.Sprite:create()
-    self.dianmond = dianmond
-    self.moreBtn:addChild(self.dianmond)
+    local diamond = cc.Sprite:create()
+    self.diamond = diamond
+    self.moreBtn:addChild(self.diamond)
 
     --更多机会---------------------------------------------
     local restartBtn = ccui.Button:create()
@@ -289,15 +289,31 @@ function FailPopup:resetUI()
         self.moreBtn:loadTexturePressed("image/playmodel/endpopup/addStepPress.png") 
     end
 
-    self.dianmond:setTexture("image/playmodel/endpopup/bdiamond.png")
-    self.dianmond:setPosition(94,134)
+    self.diamond:setTexture("image/playmodel/endpopup/bdiamond.png")
+    self.diamond:setPosition(165,75)
+
+    local diamondNum = cc.Label:createWithSystemFont("10",'',25)
+    diamondNum:setPosition(self.diamond:getContentSize().width / 2,self.diamond:getContentSize().height / 2 + 2)
+    diamondNum:ignoreAnchorPointForPosition(false)
+    diamondNum:setAnchorPoint(0.5,0.5)
+    diamondNum:setColor(cc.c4b(90,31,82,255))
+    self.diamondNum = diamondNum
+    self.diamond:addChild(self.diamondNum)
     ---重开-------------------------------------------
     self.restartBtn:setPosition(298,130)
     self.restartBtn:loadTextureNormal("image/playmodel/endpopup/restartNormal.png")
     self.restartBtn:loadTexturePressed("image/playmodel/endpopup/restartPress.png")  
 
     self.heart:setTexture("image/playmodel/endpopup/bheart.png")
-    self.heart:setPosition(357,67)
+    self.heart:setPosition(357,75)
+
+    local heartNum = cc.Label:createWithSystemFont("-1",'',36)
+    heartNum:setPosition(self.heart:getContentSize().width / 2,self.heart:getContentSize().height / 2)
+    heartNum:ignoreAnchorPointForPosition(false)
+    heartNum:setAnchorPoint(0.5,0.5)
+    heartNum:setColor(cc.c4b(255,255,255,255))
+    self.heartNum = heartNum
+    self.heart:addChild(self.heartNum)
 end
 
 function FailPopup:closePopup(sender,event)
@@ -332,20 +348,24 @@ end
 
 function FailPopup:startWithMore(sender,event)
     if event ~= ccui.TouchEventType.ended then
-        self.dianmond:setTexture("image/playmodel/endpopup/bdiamond.png")
+        self.diamond:setTexture("image/playmodel/endpopup/sdiamond.png")
+        self.diamondNum:setPosition(self.diamond:getContentSize().width / 2,self.diamond:getContentSize().height / 2 + 2)
         return 
     end
 
-    self.dianmond:setTexture("image/playmodel/endpopup/sdiamond.png")
+    self.diamond:setTexture("image/playmodel/endpopup/bdiamond.png")
+    self.diamondNum:setPosition(self.diamond:getContentSize().width / 2,self.diamond:getContentSize().height / 2 + 2)
 end
 
 function FailPopup:restart(sender,event)
     if event ~= ccui.TouchEventType.ended then
-        self.heart:setTexture("image/playmodel/endpopup/bheart.png")
+        self.heart:setTexture("image/playmodel/endpopup/sheart.png")
+        self.heartNum:setPosition(self.heart:getContentSize().width / 2,self.heart:getContentSize().height / 2)
         return 
     end
 
-    self.heart:setTexture("image/playmodel/endpopup/sheart.png")
+    self.heart:setTexture("image/playmodel/endpopup/bheart.png")
+    self.heartNum:setPosition(self.heart:getContentSize().width / 2,self.heart:getContentSize().height / 2)
 end
 
 return FailPopup
