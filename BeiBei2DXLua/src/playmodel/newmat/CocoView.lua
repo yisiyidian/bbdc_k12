@@ -1,7 +1,7 @@
 --砖块元素
 local CocoView = class("CocoView", function()
 	local layer = ccui.Layout:create()
-	layer:setContentSize(cc.size(120,120))
+	layer:setContentSize(cc.size(100,100))
 	layer:ignoreAnchorPointForPosition(false)
 	layer:setAnchorPoint(0.5,0.5)
 	return layer

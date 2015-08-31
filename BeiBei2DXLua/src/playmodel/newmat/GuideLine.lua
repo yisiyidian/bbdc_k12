@@ -39,7 +39,7 @@ function GuideLine:updateView()
 	end
 
 	for i=1,#pListX - 1 do
-		local position = cc.p(pListX[i]/2 + pListX[i+1]/2 - 10,     pListY[i]/2 + pListY[i+1]/2)
+		local position = cc.p(pListX[i]/2 + pListX[i+1]/2 ,     pListY[i]/2 + pListY[i+1]/2 + 10)
 		local sprite = cc.Sprite:create("image/playmodel/rightArrow.png")
 		sprite:setPosition(position)
 		self.layer:addChild(sprite,2)

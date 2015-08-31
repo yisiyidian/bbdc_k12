@@ -71,6 +71,7 @@ function MatController:updateArr(p,coco)
 				table.remove(MatController.currentCoco,#MatController.currentCoco)
 
 				-- 播放点击砖块的音效
+				print("minus")
 				if #MatController.arr >= 7 then
 					playSound(slideCoco[7])
 				else
@@ -89,6 +90,7 @@ function MatController:updateArr(p,coco)
 		MatController.arr[#MatController.arr + 1] = p
 		MatController.currentCoco[#MatController.currentCoco + 1] = coco
 
+		print("add")
 		-- 播放点击砖块的音效
 		if #MatController.arr >= 7 then
 			playSound(slideCoco[7])

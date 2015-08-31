@@ -22,6 +22,9 @@ function Pet:handleNotification(notify,data)
     if notify == RIGHT then
 		if data[self.colorIndex] > 0 then
 			s_BattleManager.petSource[self.colorIndex] = s_BattleManager.petSource[self.colorIndex] + data[self.colorIndex] 
+			if s_BattleManager.bossList[s_BattleManager.currentBossIndex].blood <= 0 then
+				return 
+			end
 			self:releaseSkill(data[self.colorIndex])
 			-- 给宠物汇集能量的音效
 			-- ～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～

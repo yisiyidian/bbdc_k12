@@ -62,7 +62,7 @@ function MatView:initUI()
 	self.changeButton:addTouchEventListener(handler(self,self.clickChange))
 
 	local blackboard = cc.Sprite:create("image/playmodel/blackboard.png")
-	blackboard:setPosition(cc.p(318,840))
+	blackboard:setPosition(cc.p(318,855))
     blackboard:ignoreAnchorPointForPosition(false)
     blackboard:setAnchorPoint(0.5,0.5)
 	self.blackboard = blackboard
@@ -184,7 +184,7 @@ function MatView:resetUI()
 		for j=1,10 do
 			local cocoView = CocoView.create()
 			self.coco[i][j] = cocoView 
-			self.back:addChild(self.coco[i][j])
+			self.back:addChild(self.coco[i][j],11-j)
 			self.coco[i][j]:setPosition(cc.p(self.locationX + i * 110 ,self.locationY + j * 110))	 
 			self.coco[i][j].letter = string.char(math.random(100,120))
 			if self.mat[i][j] == 5 then
@@ -310,13 +310,15 @@ function MatView:dropFunc(bool)
 				local px,py
 				px,py = self.blackboard:getPosition()
 				letter:runAction(cc.MoveTo:create(0.5,cc.p(px,py)))
+
+				self.coco[i][j]:setVisible(false)
 			end
 		end
 	end
 
 	for i=1,5 do
 		for j=1,10 do
-			if self.coco[i][j]:getPositionY() - 110 * self.coco[i][j].drop <= self.coco[i][5]:getPositionY() then
+			if self.coco[i][j]:getPositionY() - 110 * self.coco[i][j].drop <= self.coco[i][5]:getPositionY() and j > 5 then
 				self.coco[i][j]:setVisible(true)
 			end
 			self.coco[i][j]:runAction(cc.MoveBy:create(0.4,cc.p(0,-110 * self.coco[i][j].drop)))

@@ -289,11 +289,8 @@ function FailPopup:resetUI()
         self.moreBtn:loadTexturePressed("image/playmodel/endpopup/addStepPress.png") 
     end
 
-    self.diamond:setTexture("image/playmodel/endpopup/bdiamond.png")
-    self.diamond:setPosition(165,75)
-
     local diamondNum = cc.Label:createWithSystemFont("10",'',25)
-    diamondNum:setPosition(self.diamond:getContentSize().width / 2,self.diamond:getContentSize().height / 2 + 2)
+    diamondNum:setPosition(167,77)
     diamondNum:ignoreAnchorPointForPosition(false)
     diamondNum:setAnchorPoint(0.5,0.5)
     diamondNum:setColor(cc.c4b(90,31,82,255))
@@ -304,11 +301,8 @@ function FailPopup:resetUI()
     self.restartBtn:loadTextureNormal("image/playmodel/endpopup/restartNormal.png")
     self.restartBtn:loadTexturePressed("image/playmodel/endpopup/restartPress.png")  
 
-    self.heart:setTexture("image/playmodel/endpopup/bheart.png")
-    self.heart:setPosition(357,75)
-
     local heartNum = cc.Label:createWithSystemFont("-1",'',36)
-    heartNum:setPosition(self.heart:getContentSize().width / 2,self.heart:getContentSize().height / 2)
+    heartNum:setPosition(357,76)
     heartNum:ignoreAnchorPointForPosition(false)
     heartNum:setAnchorPoint(0.5,0.5)
     heartNum:setColor(cc.c4b(255,255,255,255))
@@ -343,22 +337,14 @@ function FailPopup:enterLib(sender,event)
         return 
     end
 
-
-
-
-
     printline("没有词库")
 end
 
 function FailPopup:startWithMore(sender,event)
     if event ~= ccui.TouchEventType.ended then
-        self.diamond:setTexture("image/playmodel/endpopup/sdiamond.png")
-        self.diamondNum:setPosition(self.diamond:getContentSize().width / 2,self.diamond:getContentSize().height / 2 + 2)
         return 
     end
-
-    self.diamond:setTexture("image/playmodel/endpopup/bdiamond.png")
-    self.diamondNum:setPosition(self.diamond:getContentSize().width / 2,self.diamond:getContentSize().height / 2 + 2)        
+      
     self.callBack()
     s_SCENE:removeAllPopups()
     s_BattleManager:oneMoreChance()
@@ -366,13 +352,9 @@ end
 
 function FailPopup:restart(sender,event)
     if event ~= ccui.TouchEventType.ended then
-        self.heart:setTexture("image/playmodel/endpopup/sheart.png")
-        self.heartNum:setPosition(self.heart:getContentSize().width / 2,self.heart:getContentSize().height / 2)
         return 
     end
-
-    self.heart:setTexture("image/playmodel/endpopup/bheart.png")
-    self.heartNum:setPosition(self.heart:getContentSize().width / 2,self.heart:getContentSize().height / 2)        
+       
     s_SCENE:removeAllPopups()
     s_BattleManager:restartBattle()
 end
