@@ -207,7 +207,7 @@ function StartPopup:resetUI()
     self.item:setPosition(self.width /2,693)
 
     self.itemNum:setFntFile('font/CourierStd-Bold.fnt')
-    self.itemNum:setString("10")
+    self.itemNum:setString("20")
     self.itemNum:setPosition(self.width /2, 645)
 
     self.word:setTexture("image/playmodel/endpopup/word.png")

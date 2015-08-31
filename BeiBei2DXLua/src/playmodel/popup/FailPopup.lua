@@ -343,6 +343,10 @@ function FailPopup:enterLib(sender,event)
         return 
     end
 
+
+
+
+
     printline("没有词库")
 end
 
@@ -354,7 +358,10 @@ function FailPopup:startWithMore(sender,event)
     end
 
     self.diamond:setTexture("image/playmodel/endpopup/bdiamond.png")
-    self.diamondNum:setPosition(self.diamond:getContentSize().width / 2,self.diamond:getContentSize().height / 2 + 2)
+    self.diamondNum:setPosition(self.diamond:getContentSize().width / 2,self.diamond:getContentSize().height / 2 + 2)        
+    self.callBack()
+    s_SCENE:removeAllPopups()
+    s_BattleManager:oneMoreChance()
 end
 
 function FailPopup:restart(sender,event)
@@ -365,7 +372,9 @@ function FailPopup:restart(sender,event)
     end
 
     self.heart:setTexture("image/playmodel/endpopup/bheart.png")
-    self.heartNum:setPosition(self.heart:getContentSize().width / 2,self.heart:getContentSize().height / 2)
+    self.heartNum:setPosition(self.heart:getContentSize().width / 2,self.heart:getContentSize().height / 2)        
+    s_SCENE:removeAllPopups()
+    s_BattleManager:restartBattle()
 end
 
 return FailPopup

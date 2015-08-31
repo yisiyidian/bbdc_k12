@@ -21,25 +21,25 @@ LevelConfig.STEP = 'step'
 LevelConfig.TIME = 'time'
 
 LevelConfig.BossConfig = {
-	[1] = {"1","1",},
-	[2] = {"1","1",},
-	[3] = {"1","1",},
+	[1] = {"1","1","1",},
+	[2] = {"1","1","1",},
+	[3] = {"1","1","1",},
 }
 
 LevelConfig.WordConfig = {
-	[1] = 2,
-	[2] = 2,
-	[3] = 2,
+	[1] = 10,
+	[2] = 10,
+	[3] = 10,
 }
 
 LevelConfig.PointConfig = {
-	[1] = {2,0,0,0,0},
-	[2] = {2,0,0,0,0},
-	[3] = {2,0,0,0,0},
+	[1] = {20,0,0,0,0},
+	[2] = {20,0,0,0,0},
+	[3] = {20,0,0,0,0},
 }
 
 LevelConfig.LimitConfig = {
-	[1] = {LevelConfig.STEP,5},
+	[1] = {LevelConfig.STEP,20},
 	[2] = {LevelConfig.TIME,100},
 	[3] = {LevelConfig.STEP,20},
 }
