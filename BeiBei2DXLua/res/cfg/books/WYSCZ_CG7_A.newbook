@@ -619,10 +619,10 @@
 126	dumpling	Module 10_7	8	n.饺子	0
 126	programme	Module 10_7	8	n.节目	0
 126	sweater	Module 10_7	8	n.毛线衣	1
-127	coat	Module 10_8	8	n.外套	1
+126	coat	Module 10_7	8	n.外套	1
 127	mean	Module 10_8	8	v.意味着	0
 127	lucky	Module 10_8	8	adj.幸运的	0
 127	merry	Module 10_8	8	adj.愉快的	0
 127	Merry Christmas	Module 10_8	8	圣诞快乐	0
 127	tell	Module 10_8	8	vt.讲	1
-128	think	Revision module B_1	1	vt.想	1
+127	think	Module 10_8	8	vt.想	1

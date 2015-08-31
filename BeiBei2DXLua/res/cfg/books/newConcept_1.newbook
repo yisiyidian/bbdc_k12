@@ -194,13 +194,13 @@
 41	spoon	Lesson 22_3	3	勺子	1
 42	on	Lesson 23_1	1	prep.在...之上	1
 42	shelf	Lesson 23_1	1	n.架子	1
-43	desk	Lesson 24_1	2	n.课桌	1
+42	desk	Lesson 23_1	1	n.课桌	1
 43	table	Lesson 24_1	2	n.桌子	1
 43	plate	Lesson 24_1	2	n.盘子	1
 43	cupboard	Lesson 24_1	2	n.食厨	1
 43	cigarette	Lesson 24_1	2	n.香烟	1
 43	television	Lesson 24_1	2	n.电视机	1
-44	floor	Lesson 24_2	2	n.地板	1
+43	floor	Lesson 24_1	2	n.地板	1
 44	dressing table	Lesson 24_2	2	梳妆台	1
 44	magazine	Lesson 24_2	2	n.杂志	1
 44	bed	Lesson 24_2	2	n.床	1
@@ -217,7 +217,7 @@
 46	of	Lesson 25_2	2	prep.属于...的	1
 46	room	Lesson 25_2	2	n.房间	1
 46	cup	Lesson 25_2	2	n.杯子	1
-46	in the middle of	Lesson 25_2	2	在...中间	1
+47	in the middle of	Lesson 26_1	1	在...中间	1
 47	where	Lesson 26_1	1	adv.在哪里	1
 47	in	Lesson 26_1	1	prep.在...里	1
 48	living room	Lesson 27_1	2	客厅	1
@@ -229,765 +229,765 @@
 49	wall	Lesson 27_2	2	n.墙	1
 49	near the window	Lesson 27_2	2	靠近窗	1
 49	on the wall	Lesson 27_2	2	在墙上	1
-50	trousers	Lesson 28_1	1	n.（复数）长裤	1
-51	shut	Lesson 29_1	2	v.关门	1
-51	bedroom	Lesson 29_1	2	n.卧室	1
-51	untidy	Lesson 29_1	2	adj.乱	1
-51	must	Lesson 29_1	2	aux.必须	1
-51	open	Lesson 29_1	2	v.&adj.打开	1
-51	air	Lesson 29_1	2	n.使...通风	1
-52	put	Lesson 29_2	2	v.放置	1
-52	clothes	Lesson 29_2	2	n.衣服	1
-52	wardrobe	Lesson 29_2	2	n.衣柜	1
-52	dust	Lesson 29_2	2	v.掸掉灰尘	1
-52	sweep	Lesson 29_2	2	v.扫	1
-52	make the bed	Lesson 29_2	2	铺床	1
-53	empty	Lesson 30_1	1	v.倒空	1
-53	read	Lesson 30_1	1	vt.读	1
-53	sharpen	Lesson 30_1	1	v.削尖	1
-53	put on	Lesson 30_1	1	穿上	1
-53	take off	Lesson 30_1	1	脱掉	1
-53	turn on	Lesson 30_1	1	开	1
-53	turn off	Lesson 30_1	1	关	1
-54	garden	Lesson 31_1	2	n.花园	1
-54	under	Lesson 31_1	2	prep.在...之下	1
-54	tree	Lesson 31_1	2	n.树	1
-54	climb	Lesson 31_1	2	vt.爬	1
-54	who	Lesson 31_1	2	pron.谁	1
-54	run	Lesson 31_1	2	vi.跑	1
-55	grass	Lesson 31_2	2	n.草	1
-55	after	Lesson 31_2	2	prep.在...之后	1
-55	across	Lesson 31_2	2	prep.横过	1
-55	cat	Lesson 31_2	2	n.猫	1
-55	run after	Lesson 31_2	2	追逐	1
-56	type	Lesson 32_1	2	v.打字	1
-56	letter	Lesson 32_1	2	n.信	1
-56	basket	Lesson 32_1	2	n.篮子	1
-56	eat	Lesson 32_1	2	vt.吃	1
-56	bone	Lesson 32_1	2	n.骨头	1
-56	clean	Lesson 32_1	2	adj.&v.清洗	1
-57	tooth	Lesson 32_2	2	n.牙齿	1
-57	cook	Lesson 32_2	2	v.做饭菜	1
-57	milk	Lesson 32_2	2	n.牛奶	1
-57	meal	Lesson 32_2	2	n.饭	1
-57	drink	Lesson 32_2	2	v.喝	1
-57	tap	Lesson 32_2	2	n.水龙头	1
-58	day	Lesson 33_1	3	n.日子	1
-58	cloud	Lesson 33_1	3	n.云	1
-58	sky	Lesson 33_1	3	n.天空	1
-58	sun	Lesson 33_1	3	n.太阳	1
-58	shine	Lesson 33_1	3	v.照耀	1
-59	with	Lesson 33_2	3	prep.和...在一起	1
-59	family	Lesson 33_2	3	n.家庭	1
-59	walk	Lesson 33_2	3	vi.走路	1
-59	over	Lesson 33_2	3	prep.跨越	1
-59	bridge	Lesson 33_2	3	n.桥	1
-60	boat	Lesson 33_3	3	n.船	1
-60	river	Lesson 33_3	3	n.河	1
-60	ship	Lesson 33_3	3	n.轮船	1
-60	aeroplane	Lesson 33_3	3	n.飞机	1
-60	fly	Lesson 33_3	3	v.飞	1
-60	some clouds	Lesson 33_3	3	几朵云	1
-61	sleep	Lesson 34_1	1	v.睡觉	1
-61	shave	Lesson 34_1	1	v.刮脸	1
-61	cry	Lesson 34_1	1	v.哭	1
-61	wash	Lesson 34_1	1	v.洗	1
-61	wait	Lesson 34_1	1	v.等	1
-61	jump	Lesson 34_1	1	v.跳	1
-62	photograph	Lesson 35_1	3	n.照片	1
-62	village	Lesson 35_1	3	n.村庄	1
-62	valley	Lesson 35_1	3	n.山谷	1
-62	between	Lesson 35_1	3	prep.在...之间	1
-62	hill	Lesson 35_1	3	n.小山	1
-63	another	Lesson 35_2	3	det.另一个	1
-63	wife	Lesson 35_2	3	n.妻子	1
-63	along	Lesson 35_2	3	prep.沿着	1
-63	bank	Lesson 35_2	3	n.河岸	1
-63	water	Lesson 35_2	3	n.水	1
-64	swim	Lesson 35_3	3	v.游泳	1
-64	building	Lesson 35_3	3	n.大楼	1
-64	park	Lesson 35_3	3	n.公园	1
-64	into	Lesson 35_3	3	prep.进入	1
-64	out of	Lesson 35_3	3	从里向外	1
-65	beside	Lesson 36_1	1	prep.在...旁	1
-65	off	Lesson 36_1	1	prep.离开	1
-66	work	Lesson 37_1	2	v.工作	1
-66	hard	Lesson 37_1	2	adv.努力地	1
-66	make	Lesson 37_1	2	v.做	1
-66	bookcase	Lesson 37_1	2	n.书橱	1
-66	hammer	Lesson 37_1	2	n.锤子	1
-67	paint	Lesson 37_2	2	v.上漆	1
-67	pink	Lesson 37_2	2	adj.&n.粉红色	1
-67	favourite	Lesson 37_2	2	adj.最喜欢的	1
-67	be going to	Lesson 37_2	2	打算	1
-68	homework	Lesson 38_1	1	n.作业	1
-68	listen	Lesson 38_1	1	v.听	1
-68	dish	Lesson 38_1	1	n.盘子	1
-69	front	Lesson 39_1	2	n.前面	1
-69	in front of	Lesson 39_1	2	在...之前	1
-69	careful	Lesson 39_1	2	adj.小心的	1
-69	vase	Lesson 39_1	2	n.花瓶	1
-70	drop	Lesson 39_2	2	v.掉下	1
-70	flower	Lesson 39_2	2	n.花	1
-70	do with	Lesson 39_2	2	处理	1
-70	be careful	Lesson 39_2	2	小心点	1
-71	show	Lesson 40_1	1	v.给...看	1
-71	send	Lesson 40_1	1	v.送给	1
-71	take	Lesson 40_1	1	v.带给	1
-72	cheese	Lesson 41_1	3	n.乳酪	1
-72	bread	Lesson 41_1	3	n.面包	1
-72	soap	Lesson 41_1	3	n.肥皂	1
-72	chocolate	Lesson 41_1	3	n.巧克力	1
-72	sugar	Lesson 41_1	3	n.糖	1
-73	coffee	Lesson 41_2	3	n.咖啡	1
-73	tea	Lesson 41_2	3	n.茶	1
-73	tobacco	Lesson 41_2	3	n.烟草	1
-73	a piece of	Lesson 41_2	3	一张	1
-73	a loaf of	Lesson 41_2	3	一条	1
-74	a bar of	Lesson 41_3	3	一块	1
-74	a bottle of	Lesson 41_3	3	一瓶	1
-74	a pound of	Lesson 41_3	3	一磅	1
-74	half a pound of	Lesson 41_3	3	半磅	1
-74	a quarter of	Lesson 41_3	3	四分之一	1
-74	a tin of	Lesson 41_3	3	一罐	1
-75	bird	Lesson 42_1	1	n.鸟	1
-75	any	Lesson 42_1	1	det.一些	1
-75	some	Lesson 42_1	1	det.一些	1
-76	of course	Lesson 43_1	2	当然	1
-76	kettle	Lesson 43_1	2	n.水壶	1
-76	behind	Lesson 43_1	2	prep.在...后面	1
-76	teapot	Lesson 43_1	2	n.茶壶	1
-76	now	Lesson 43_1	2	adv.现在	1
-77	find	Lesson 43_2	2	v.找到	1
-77	boil	Lesson 43_2	2	v.沸腾	1
-77	make the tea	Lesson 43_2	2	沏茶	1
-77	over there	Lesson 43_2	2	在那边	1
-77	hurry up	Lesson 43_2	2	赶快	1
-78	can	Lesson 45_1	1	aux.能够	1
-78	boss	Lesson 45_1	1	n.老板	1
-78	minute	Lesson 45_1	1	n.分钟	1
-78	ask	Lesson 45_1	1	v.请求	1
-78	handwriting	Lesson 45_1	1	n.书写	1
-78	terrible	Lesson 45_1	1	adj.糟糕的	1
-78	next door	Lesson 45_1	1	隔壁	1
-79	lift	Lesson 46_1	1	v.拿起	1
-79	cake	Lesson 46_1	1	n.饼	1
-79	biscuit	Lesson 46_1	1	n.饼干	1
-80	like	Lesson 47_1	1	v.喜欢	1
-80	want	Lesson 47_1	1	v.想	1
-80	black coffee	Lesson 47_1	1	不加伴侣的咖啡	1
-80	white coffee	Lesson 47_1	1	加牛奶的咖啡	1
-81	fresh	Lesson 48_1	3	adj.新鲜的	1
-81	egg	Lesson 48_1	3	n.鸡蛋	1
-81	butter	Lesson 48_1	3	n.黄油	1
-81	pure	Lesson 48_1	3	adj.纯净的	1
-81	honey	Lesson 48_1	3	n.蜂蜜	1
-82	ripe	Lesson 48_2	3	adj.成熟的	1
-82	banana	Lesson 48_2	3	n.香蕉	1
-82	jam	Lesson 48_2	3	n.果酱	1
-82	sweet	Lesson 48_2	3	adj.甜的	1
-82	orange	Lesson 48_2	3	adj.橙	1
-83	Scotch Whisky	Lesson 48_3	3	苏格兰威士忌	0
-83	choice	Lesson 48_3	3	adj.上等的	1
-83	apple	Lesson 48_3	3	n.苹果	1
-83	wine	Lesson 48_3	3	n.酒	1
-83	beer	Lesson 48_3	3	n.啤酒	1
-83	blackboard	Lesson 48_3	3	n.黑板	1
-84	butcher	Lesson 49_1	2	n.卖肉者	1
-84	meat	Lesson 49_1	2	n.食用肉	1
-84	beef	Lesson 49_1	2	n.牛肉	1
-84	lamb	Lesson 49_1	2	n.羔羊肉	1
-84	husband	Lesson 49_1	2	n.丈夫	1
-84	steak	Lesson 49_1	2	n.牛排	1
-85	mince	Lesson 49_2	2	v.肉馅	1
-85	chicken	Lesson 49_2	2	n.鸡	1
-85	tell	Lesson 49_2	2	v.告诉	1
-85	truth	Lesson 49_2	2	n.实情	1
-85	either	Lesson 49_2	2	adv.也（用于否定句）	1
-86	tomato	Lesson 50_1	2	n.西红柿	1
-86	potato	Lesson 50_1	2	n.土豆	1
-86	cabbage	Lesson 50_1	2	n.卷心菜	1
-86	lettuce	Lesson 50_1	2	n.莴苣	1
-86	pea	Lesson 50_1	2	n.豌豆	1
-87	bean	Lesson 50_2	2	n.豆角	1
-87	pear	Lesson 50_2	2	n.梨	1
-87	grape	Lesson 50_2	2	n.葡萄	1
-87	peach	Lesson 50_2	2	n.桃	1
-88	Greece	Lesson 51_1	5	希腊	0
-88	climate	Lesson 51_1	5	n.气候	1
-88	country	Lesson 51_1	5	n.国家	1
-88	pleasant	Lesson 51_1	5	adj.宜人的	1
-88	weather	Lesson 51_1	5	n.天气	1
-89	spring	Lesson 51_2	5	n.春季	1
-89	windy	Lesson 51_2	5	adj.有风的	1
-89	warm	Lesson 51_2	5	adj.温暖的	1
-89	rain	Lesson 51_2	5	v.下雨	1
-89	sometimes	Lesson 51_2	5	adv.有时	1
-90	summer	Lesson 51_3	5	n.夏天	1
-90	autumn	Lesson 51_3	5	n.秋天	1
-90	winter	Lesson 51_3	5	n.冬天	1
-90	snow	Lesson 51_3	5	v.下雪	1
-90	January	Lesson 51_3	5	n.1月	1
-91	February	Lesson 51_4	5	n.2月	1
-91	March	Lesson 51_4	5	n.3月	1
-91	April	Lesson 51_4	5	n.4月	1
-91	May	Lesson 51_4	5	n.5月	1
-91	June	Lesson 51_4	5	n.6月	1
-92	July	Lesson 51_5	5	n.7月	1
-92	August	Lesson 51_5	5	n.8月	1
-92	September	Lesson 51_5	5	n.9月	1
-92	October	Lesson 51_5	5	n.10月	1
-92	November	Lesson 51_5	5	n.11月	1
-92	December	Lesson 51_5	5	n.12月	1
-93	the U.S.	Lesson 52_1	2	美国	1
-93	Brazil	Lesson 52_1	2	n.巴西	0
-93	Holland	Lesson 52_1	2	n.荷兰	0
-93	England	Lesson 52_1	2	n.英国	1
-93	France	Lesson 52_1	2	n.法国	1
-93	Germany	Lesson 52_1	2	n.德国	1
-94	Italy	Lesson 52_2	2	n.意大利	1
-94	Norway	Lesson 52_2	2	n.挪威	0
-94	Russia	Lesson 52_2	2	n.俄罗斯	0
-94	Spain	Lesson 52_2	2	n.西班牙	0
-94	Sweden	Lesson 52_2	2	n.瑞典	0
-95	mild	Lesson 53_1	3	adj.温和的	1
-95	always	Lesson 53_1	3	adv.总是	1
-95	north	Lesson 53_1	3	n.北方	1
-95	east	Lesson 53_1	3	n.东方	1
-95	wet	Lesson 53_1	3	adj.潮湿的	1
-95	west	Lesson 53_1	3	n.西方	1
-96	south	Lesson 53_2	3	n.南方	1
-96	season	Lesson 53_2	3	n.季节	1
-96	best	Lesson 53_2	3	adv.最	1
-96	night	Lesson 53_2	3	n.夜晚	1
-96	rise	Lesson 53_2	3	v.升起	1
-96	early	Lesson 53_2	3	adv.早	1
-97	set	Lesson 53_3	3	v.太阳落下去	1
-97	late	Lesson 53_3	3	adv.晚	1
-97	interesting	Lesson 53_3	3	adj.有趣的	1
-97	subject	Lesson 53_3	3	n.话题	1
-97	conversation	Lesson 53_3	3	n.谈话	1
-98	Australia	Lesson 54_1	4	n.澳大利亚	0
-98	Australian	Lesson 54_1	4	n.澳大利亚人	0
-98	Austria	Lesson 54_1	4	n.奥地利	0
-98	Austrian	Lesson 54_1	4	n.奥地利人	0
-98	Canada	Lesson 54_1	4	n.加拿大	1
-99	Canadian	Lesson 54_2	4	n.加拿大人	0
-99	China	Lesson 54_2	4	n.中国	1
-99	Finland	Lesson 54_2	4	n.芬兰	0
-99	Finnish	Lesson 54_2	4	n.芬兰人	0
-99	India	Lesson 54_2	4	n.印度	1
-100	Indian	Lesson 54_3	4	n.印度人	0
-100	Japan	Lesson 54_3	4	n.日本	1
-100	Nigeria	Lesson 54_3	4	n.尼日利亚	0
-100	Nigerian	Lesson 54_3	4	n.尼日利亚人	0
-100	Turkey	Lesson 54_3	4	n.土耳其	0
-101	Turkish	Lesson 54_4	4	n.土耳其人	0
-101	Korea	Lesson 54_4	4	n.韩国	0
-101	Polish	Lesson 54_4	4	n.波兰人	0
-101	Poland	Lesson 54_4	4	n.波兰	0
-101	Thai	Lesson 54_4	4	n.泰国人	0
-101	Thailand	Lesson 54_4	4	n.泰国	0
-102	live	Lesson 55_1	3	v.住	1
-102	stay	Lesson 55_1	3	v.呆在	1
-102	home	Lesson 55_1	3	n.&adv.家	1
-102	housework	Lesson 55_1	3	n.家务	1
-103	lunch	Lesson 55_2	3	n.午饭	1
-103	afternoon	Lesson 55_2	3	n.下午	1
-103	usually	Lesson 55_2	3	adv.通常	1
-103	together	Lesson 55_2	3	adv.一起	1
-104	evening	Lesson 55_3	3	n.晚上	1
-104	arrive	Lesson 55_3	3	vi.到达	1
-104	night	Lesson 55_3	3	n.夜间	1
-104	go to school	Lesson 55_3	3	上学	1
-104	at night	Lesson 55_3	3	在夜里	1
-105	o'clock	Lesson 57_1	1	adv.点钟	1
-105	shop	Lesson 57_1	1	n.商店	1
-105	moment	Lesson 57_1	1	n.片刻	1
-106	envelope	Lesson 59_1	2	n.信封	1
-106	writing paper	Lesson 59_1	2	信纸	1
-106	shop assistant	Lesson 59_1	2	售货员	1
-106	size	Lesson 59_1	2	n.尺寸	1
-107	pad	Lesson 59_2	2	n.信笺薄	1
-107	glue	Lesson 59_2	2	n.胶水	1
-107	chalk	Lesson 59_2	2	n.粉笔	1
-107	change	Lesson 59_2	2	n.零钱	1
-108	feel	Lesson 61_1	3	v.感觉	1
-108	look	Lesson 61_1	3	vi.看	1
-108	must	Lesson 61_1	3	aux.必须	1
-108	call	Lesson 61_1	3	v.叫	1
-109	doctor	Lesson 61_2	3	n.医生	1
-109	telephone	Lesson 61_2	3	n.电话	1
-109	remember	Lesson 61_2	3	v.记得	1
-109	mouth	Lesson 61_2	3	n.嘴	1
-110	tongue	Lesson 61_3	3	n.舌头	1
-110	bad	Lesson 61_3	3	adj.坏的	1
-110	cold	Lesson 61_3	3	n.感冒	1
-110	news	Lesson 61_3	3	n.消息	1
-110	have a bad cold	Lesson 61_3	3	得了重感冒	1
-111	headache	Lesson 62_1	2	n.头痛	1
-111	aspirin	Lesson 62_1	2	n.阿司匹林	0
-111	earache	Lesson 62_1	2	n.耳痛	1
-111	toothache	Lesson 62_1	2	n.牙痛	1
-111	dentist	Lesson 62_1	2	n.牙医	1
-111	stomachache	Lesson 62_1	2	n.胃痛	1
-112	medicine	Lesson 62_2	2	n.药	1
-112	temperature	Lesson 62_2	2	n.温度	1
-112	flu	Lesson 62_2	2	n.流行性感冒	1
-112	measles	Lesson 62_2	2	n.麻疹	1
-112	mumps	Lesson 62_2	2	n.腮腺炎	0
-112	have a temperature	Lesson 62_2	2	发烧	1
-113	better	Lesson 63_1	2	adj.形容词well的比较级	1
-113	certainly	Lesson 63_1	2	adv.当然	1
-113	get up	Lesson 63_1	2	起床	1
-113	yet	Lesson 63_1	2	adv.还	1
-113	rich	Lesson 63_1	2	adj.油腻的	1
-114	food	Lesson 63_2	2	n.食物	1
-114	remain	Lesson 63_2	2	vi.&n.保持	1
-114	come upstairs	Lesson 63_2	2	上楼	1
-114	get up	Lesson 63_2	2	起床	1
-114	each day	Lesson 63_2	2	每天	1
-115	play	Lesson 64_1	2	v.玩	1
-115	match	Lesson 64_1	2	n.火柴	1
-115	talk	Lesson 64_1	2	v.谈话	1
-115	library	Lesson 64_1	2	n.图书馆	1
-115	drive	Lesson 64_1	2	v.开车	1
-115	so	Lesson 64_1	2	adv.如此地	1
-116	quickly	Lesson 64_2	2	adv.快地	1
-116	lean out of	Lesson 64_2	2	身体探出	1
-116	break	Lesson 64_2	2	v.打破	1
-116	noise	Lesson 64_2	2	n.喧闹声	1
-116	play with matches	Lesson 64_2	2	玩火柴	1
-116	make a noise	Lesson 64_2	2	弄出噪声	1
-117	Dad	Lesson 65_1	2	n.爸爸	1
-117	key	Lesson 65_1	2	n.钥匙	1
-117	baby	Lesson 65_1	2	n.婴儿	1
-117	hear	Lesson 65_1	2	v.听见	1
-118	enjoy	Lesson 65_2	2	v.玩得快活	1
-118	yourself	Lesson 65_2	2	pron.你自己	1
-118	ourselves	Lesson 65_2	2	pron.我们自己	1
-118	mum	Lesson 65_2	2	n.妈妈	1
-119	myself	Lesson 66_1	1	pron.我自己	1
-119	themselves	Lesson 66_1	1	pron.他们自己	1
-119	himself	Lesson 66_1	1	pron.他自己	1
-119	herself	Lesson 66_1	1	pron.她自己	1
-120	greengrocer	Lesson 67_1	3	n.蔬菜水果零售商	1
-120	absent	Lesson 67_1	3	adj.缺席的	1
-120	Monday	Lesson 67_1	3	n.星期一	1
-120	Tuesday	Lesson 67_1	3	n.星期二	1
-120	Wednesday	Lesson 67_1	3	n.星期三	1
-121	Thursday	Lesson 67_2	3	n.星期四	1
-121	keep	Lesson 67_2	3	v.处于（状况）	1
-121	spend	Lesson 67_2	3	v.度过	1
-121	weekend	Lesson 67_2	3	n.周末	1
-121	Friday	Lesson 67_2	3	n.星期五	1
-122	Saturday	Lesson 67_3	3	n.星期六	1
-122	Sunday	Lesson 67_3	3	n.星期日	1
-122	country	Lesson 67_3	3	n.乡村	1
-122	lucky	Lesson 67_3	3	adj.幸运的	1
-123	church	Lesson 68_1	1	n.教堂	1
-123	dairy	Lesson 68_1	1	n.乳品店	1
-123	baker	Lesson 68_1	1	n.面包师傅	1
-123	grocer	Lesson 68_1	1	n.食品杂货商	1
-124	year	Lesson 69_1	3	n.年	1
-124	race	Lesson 69_1	3	n.比赛	1
-124	town	Lesson 69_1	3	n.城镇	1
-124	crowd	Lesson 69_1	3	n.人群	1
-125	stand	Lesson 69_2	3	v.站立	1
-125	exciting	Lesson 69_2	3	adj.使人激动的	1
-125	just	Lesson 69_2	3	adv.正好	1
-125	finish	Lesson 69_2	3	vi.结尾	1
-126	winner	Lesson 69_3	3	n.获胜者	1
-126	behind	Lesson 69_3	3	prep.在...之后	1
-126	way	Lesson 69_3	3	n.路途	1
-126	hundreds of	Lesson 69_3	3	数以百计的	1
-126	on the way	Lesson 69_3	3	在...的途中	1
-127	stationer	Lesson 70_1	1	n.文具商	1
-127	Denmark	Lesson 70_1	1	n.丹麦	0
-128	awful	Lesson 71_1	2	adj.让人讨厌的	1
-128	telephone	Lesson 71_1	2	n.&v.打电话	1
-128	time	Lesson 71_1	2	n.次	1
-128	answer	Lesson 71_1	2	v.接	1
-128	last	Lesson 71_1	2	adj.最后的	1
-129	phone	Lesson 71_2	2	n.电话	1
-129	again	Lesson 71_2	2	adv.又一次的	1
-129	say	Lesson 71_2	2	v.说	1
-129	yesterday afternoon	Lesson 71_2	2	昨天晚上	1
-129	last night	Lesson 71_2	2	昨夜	1
-130	week	Lesson 73_1	3	n.周	1
-130	London	Lesson 73_1	3	n.伦敦	1
-130	suddenly	Lesson 73_1	3	adv.突然地	1
-130	bus stop	Lesson 73_1	3	公共汽车车站	1
-131	smile	Lesson 73_2	3	v.微笑	1
-131	pleasantly	Lesson 73_2	3	adv.愉快地	1
-131	understand	Lesson 73_2	3	v.懂	1
-131	speak	Lesson 73_2	3	v.讲	1
-132	hand	Lesson 73_3	3	n.手	1
-132	pocket	Lesson 73_3	3	n.衣袋	1
-132	phrasebook	Lesson 73_3	3	n.短语手册	1
-132	phrase	Lesson 73_3	3	n.短语	1
-132	slowly	Lesson 73_3	3	adv.缓慢地	1
-133	hurriedly	Lesson 74_1	1	adv.匆忙地	1
-133	cut	Lesson 74_1	1	v.割	1
-133	thirstily	Lesson 74_1	1	adv.口渴地	1
-133	go	Lesson 74_1	1	v.走	1
-133	greet	Lesson 74_1	1	v.问候	1
-134	ago	Lesson 75_1	2	adv.以前	1
-134	buy	Lesson 75_1	2	v.买	1
-134	pair	Lesson 75_1	2	n.双	1
-134	fashion	Lesson 75_1	2	n.流行式样	1
-134	uncomfortable	Lesson 75_1	2	adj.不舒服的	1
-135	wear	Lesson 75_2	2	v.&n.穿着	1
-135	a month ago	Lesson 75_2	2	一个月前	1
-135	in fashion	Lesson 75_2	2	流行的	1
-135	I'm afraid	Lesson 75_2	2	我恐怕	1
-136	appointment	Lesson 77_1	1	n.约会	1
-136	urgent	Lesson 77_1	1	adj.紧急的	1
-136	till	Lesson 77_1	1	prep.直到...为止	1
-137	shopping	Lesson 79_1	2	n.购物	1
-137	list	Lesson 79_1	2	n.单子	1
-137	vegetable	Lesson 79_1	2	n.蔬菜	1
-137	need	Lesson 79_1	2	v.需要	1
-137	hope	Lesson 79_1	2	v.&n.希望	1
-138	thing	Lesson 79_2	2	n.事情	1
-138	money	Lesson 79_2	2	n.钱	1
-138	make a shopping list	Lesson 79_2	2	写一张采购清单	1
-138	a lot of	Lesson 79_2	2	许多	1
-139	groceries	Lesson 80_1	1	n.食品杂货	1
-139	fruit	Lesson 80_1	1	n.水果	1
-139	stationery	Lesson 80_1	1	n.文具	1
-139	newsagent	Lesson 80_1	1	n.报刊零售人	1
-139	chemist	Lesson 80_1	1	n.药剂师	1
-140	bath	Lesson 81_1	1	n.洗澡	1
-140	nearly	Lesson 81_1	1	adv.几乎	1
-140	ready	Lesson 81_1	1	adj.准备好的	1
-140	dinner	Lesson 81_1	1	n.正餐	1
-140	restaurant	Lesson 81_1	1	n.饭馆	1
-140	roast	Lesson 81_1	1	adj.烤的	1
-140	have a bath	Lesson 81_1	1	洗澡	1
-141	breakfast	Lesson 82_1	1	n.早饭	1
-141	haircut	Lesson 82_1	1	n.理发	1
-141	party	Lesson 82_1	1	n.聚会	1
-141	holiday	Lesson 82_1	1	n.假日	1
-142	mess	Lesson 83_1	2	n.杂乱	1
-142	pack	Lesson 83_1	2	v.打包	1
-142	suitcase	Lesson 83_1	2	n.手提箱	1
-142	leave	Lesson 83_1	2	v.离开	1
-142	already	Lesson 83_1	2	adv.已经	1
-143	excuse the mess	Lesson 83_2	2	乱七八糟	1
-143	have a holiday	Lesson 83_2	2	度假	1
-143	have lunch	Lesson 83_2	2	吃午饭	1
-143	stay at home	Lesson 83_2	2	呆在家里	1
-144	Paris	Lesson 85_1	2	n.巴黎	1
-144	cinema	Lesson 85_1	2	n.电影院	1
-144	film	Lesson 85_1	2	n.电影	1
-144	beautiful	Lesson 85_1	2	adj.漂亮的	1
-144	city	Lesson 85_1	2	n.城市	1
-145	never	Lesson 85_2	2	adv.从来没有	1
-145	ever	Lesson 85_2	2	adv.在任何时候	1
-145	have been to	Lesson 85_2	2	到过	1
-145	what's on	Lesson 85_2	2	上演什么	1
-145	all the time	Lesson 85_2	2	一直	1
-146	attendant	Lesson 87_1	2	n.接待员	1
-146	bring	Lesson 87_1	2	v.带来	1
-146	garage	Lesson 87_1	2	n.车库	1
-146	crash	Lesson 87_1	2	v.碰撞	1
-147	lamp	Lesson 87_2	2	n.灯杆	1
-147	repair	Lesson 87_2	2	v.修理	1
-147	try	Lesson 87_2	2	v.努力	1
-147	drive into	Lesson 87_2	2	撞到	1
-148	believe	Lesson 89_1	3	v.相信	1
-148	may	Lesson 89_1	3	aux.可以	1
-148	how long	Lesson 89_1	3	多长	1
-148	since	Lesson 89_1	3	prep.自从	1
-148	why	Lesson 89_1	3	adv.为什么	1
-149	sell	Lesson 89_2	3	v.卖	1
-149	because	Lesson 89_2	3	conj.因为	1
-149	retire	Lesson 89_2	3	v.&n.退休	1
-149	cost	Lesson 89_2	3	v.&n.花费	1
-149	pound	Lesson 89_2	3	n.英镑	1
-150	worth	Lesson 89_3	3	adj.&prep.值...钱	1
-150	penny	Lesson 89_3	3	n.便士	1
-150	for sale	Lesson 89_3	3	供出售	1
-150	have the last word	Lesson 89_3	3	最后拍板	1
-151	still	Lesson 91_1	1	adv.还	1
-151	move	Lesson 91_1	1	v.搬家	1
-151	miss	Lesson 91_1	1	v.想念	1
-151	neighbour	Lesson 91_1	1	n.邻居	1
-151	person	Lesson 91_1	1	n.人	1
-151	people	Lesson 91_1	1	n.人们	1
-151	poor	Lesson 91_1	1	adj.可怜的	1
-152	pilot	Lesson 93_1	1	n.飞行员	1
-152	return	Lesson 93_1	1	v.返回	1
-152	New York	Lesson 93_1	1	n.纽约	1
-152	Tokyo	Lesson 93_1	1	n.东京	1
-152	Madrid	Lesson 93_1	1	n.马德里	0
-152	fly	Lesson 93_1	1	v.飞行	1
-152	next-door neighbour	Lesson 93_1	1	隔壁邻居	1
-153	Athens	Lesson 94_1	2	n.雅典	0
-153	Berlin	Lesson 94_1	2	n.柏林	0
-153	Bombay	Lesson 94_1	2	n.孟买	0
-153	Geneva	Lesson 94_1	2	n.日内瓦	0
-153	Moscow	Lesson 94_1	2	n.莫斯科	0
-154	Rome	Lesson 94_2	2	n.罗马	1
-154	Seoul	Lesson 94_2	2	n.首尔	0
-154	Stockholm	Lesson 94_2	2	n.斯德哥尔摩	0
-154	Sydney	Lesson 94_2	2	n.悉尼	1
-155	return	Lesson 95_1	2	n.往返	1
-155	train	Lesson 95_1	2	n.火车	1
-155	platform	Lesson 95_1	2	n.站台	1
-155	plenty	Lesson 95_1	2	n.大量	1
-155	bar	Lesson 95_1	2	n.酒吧	1
-155	station	Lesson 95_1	2	n.车站	1
-156	porter	Lesson 95_2	2	n.乘务员	1
-156	catch	Lesson 95_2	2	v.赶上	1
-156	miss	Lesson 95_2	2	v.错过	1
-156	return ticket	Lesson 95_2	2	往返票	1
-156	next door to ...	Lesson 95_2	2	与...相邻	1
-156	in five hours' time	Lesson 95_2	2	5小时之后	1
-157	leave	Lesson 97_1	2	v.遗留	1
-157	describe	Lesson 97_1	2	vt.描述	1
-157	zip	Lesson 97_1	2	n.拉链	1
-157	label	Lesson 97_1	2	n.标签	1
-157	handle	Lesson 97_1	2	vt.提手	1
-158	address	Lesson 97_2	2	n.地址	1
-158	pence	Lesson 97_2	2	n.penny的复数形式	1
-158	belong	Lesson 97_2	2	vi.属于	1
-158	the other day	Lesson 97_2	2	几天前	1
-159	ow	Lesson 99_1	3	int.哎哟	1
-159	slip	Lesson 99_1	3	v.&n.滑倒	1
-159	fall	Lesson 99_1	3	v.落下	1
-159	downstairs	Lesson 99_1	3	adv.下楼	1
-159	hurt	Lesson 99_1	3	v.伤	1
-160	back	Lesson 99_2	3	n.背	1
-160	stand up	Lesson 99_2	3	起立	1
-160	help	Lesson 99_2	3	v.&n.帮助	1
-160	at once	Lesson 99_2	3	立即	1
-160	sure	Lesson 99_2	3	adj.一定的	1
-161	X-ray	Lesson 99_3	3	n.X光透视	1
-161	fell downstairs	Lesson 99_3	3	从楼梯上摔下来	1
-161	try and stand up	Lesson 99_3	3	试着站起来	1
-161	let me help you	Lesson 99_3	3	让我来帮你	1
-162	licence	Lesson 100_1	1	n.执照	1
-163	Scotland	Lesson 101_1	2	n.苏格兰	1
-163	card	Lesson 101_1	2	n.明信片	1
-163	youth	Lesson 101_1	2	n.青年	1
-163	hostel	Lesson 101_1	2	n.招待所	1
-164	association	Lesson 101_2	2	n.协会	1
-164	soon	Lesson 101_2	2	adv.不久	1
-164	write	Lesson 101_2	2	v.写	1
-164	speak up	Lesson 101_2	2	大声地说	1
-165	exam	Lesson 103_1	4	n.考试	1
-165	pass	Lesson 103_1	4	v.及格	1
-165	mathematics	Lesson 103_1	4	n.数学	1
-165	question	Lesson 103_1	4	n.问题	1
-165	easy	Lesson 103_1	4	adj.容易的	1
-166	enough	Lesson 103_2	4	adv.足够地	1
-166	paper	Lesson 103_2	4	n.考卷	1
-166	fail	Lesson 103_2	4	v.未及格	1
-166	answer	Lesson 103_2	4	v.&回答	1
-166	mark	Lesson 103_2	4	n.分数	1
-167	rest	Lesson 103_3	4	n.其他的东西	1
-167	difficult	Lesson 103_3	4	adj.困难的	1
-167	hate	Lesson 103_3	4	v.讨厌	1
-167	low	Lesson 103_3	4	adj.低的	1
-167	cheer	Lesson 103_3	4	v.振作	1
-168	guy	Lesson 103_4	4	n.家伙	1
-168	top	Lesson 103_4	4	n.上方	1
-168	how about	Lesson 103_4	4	怎么样	1
-168	cheer up	Lesson 103_4	4	振作起来	1
-169	clever	Lesson 104_1	2	adj.聪明的	1
-169	stupid	Lesson 104_1	2	adj.笨的	1
-169	cheap	Lesson 104_1	2	adj.便宜的	1
-169	expensive	Lesson 104_1	2	adj.贵的	1
-169	fresh	Lesson 104_1	2	adj.新鲜的	1
-169	stale	Lesson 104_1	2	adj.不新鲜的	1
-170	low	Lesson 104_2	2	adj.低的	1
-170	loud	Lesson 104_2	2	adj.大声的	1
-170	high	Lesson 104_2	2	adj.高的	1
-170	hard	Lesson 104_2	2	adj.硬的	1
-170	soft	Lesson 104_2	2	adj.软的	1
-170	sour	Lesson 104_2	2	adj.酸的	1
-171	spell	Lesson 105_1	1	v.拼写	1
-171	intelligent	Lesson 105_1	1	adj.聪明的	1
-171	mistake	Lesson 105_1	1	n.错误	1
-171	present	Lesson 105_1	1	n.礼物	1
-171	dictionary	Lesson 105_1	1	n.词典	1
-171	full of	Lesson 105_1	1	充满了...	1
-172	carry	Lesson 106_1	2	v.带	1
-172	keep	Lesson 106_1	2	v.保存	1
-172	correct	Lesson 106_1	2	v.改正	1
-172	madam	Lesson 106_1	2	n.夫人	1
-172	smart	Lesson 106_1	2	adj.漂亮的	1
-173	as well	Lesson 106_2	2	同样	1
-173	suit	Lesson 106_2	2	v.适于	1
-173	pretty	Lesson 106_2	2	adj.漂亮的	1
-173	would you like	Lesson 106_2	2	你愿意...	1
-174	idea	Lesson 109_1	2	n.主意	1
-174	a little	Lesson 109_1	2	少许（不可数名词前）	1
-174	teaspoonful	Lesson 109_1	2	n.一满茶匙	1
-174	less	Lesson 109_1	2	adj.较少的	1
-174	a few	Lesson 109_1	2	几个（可数名词前）	1
-175	pity	Lesson 109_2	2	n.遗憾	1
-175	instead	Lesson 109_2	2	adv.代替	1
-175	what a pity	Lesson 109_2	2	真遗憾	1
-175	advice	Lesson 109_2	2	n.建议	1
-176	most	Lesson 110_1	1	adj.&adv.最多的	1
-176	least	Lesson 110_1	1	adj.最小的	1
-176	best	Lesson 110_1	1	adj.最好的	1
-176	worse	Lesson 110_1	1	adj.更坏的	1
-176	worst	Lesson 110_1	1	adj.最坏的	1
-177	model	Lesson 111_1	1	n.型号	1
-177	afford	Lesson 111_1	1	v.付得起	1
-177	deposit	Lesson 111_1	1	v.预付定金	1
-177	instalment	Lesson 111_1	1	n.分期付款	1
-177	price	Lesson 111_1	1	n.价格	1
-177	millionaire	Lesson 111_1	1	n.百万富翁	1
-177	buy ... on instalment	Lesson 111_1	1	以分期付款的方式购买	1
-178	conductor	Lesson 113_1	2	n.售票员	1
-178	fare	Lesson 113_1	2	n.车费	1
-178	change	Lesson 113_1	2	v.兑换	1
-178	note	Lesson 113_1	2	n.纸币	1
-178	passenger	Lesson 113_1	2	n.乘客	1
-179	none	Lesson 113_2	2	pron.没有任何东西	1
-179	neither	Lesson 113_2	2	conj.也不	1
-179	get off	Lesson 113_2	2	下车	1
-179	tramp	Lesson 113_2	2	n.流浪汉	1
-179	except	Lesson 113_2	2	prep.除...外	1
-180	anyone	Lesson 115_1	2	pron.任何人	1
-180	knock	Lesson 115_1	2	v.敲	1
-180	everything	Lesson 115_1	2	pron.一切事情	1
-180	quiet	Lesson 115_1	2	adj.安静的	1
-180	impossible	Lesson 115_1	2	adj.不可能的	1
-180	invite	Lesson 115_1	2	v.邀请	1
-181	anything	Lesson 115_2	2	pron.任何东西	1
-181	nothing	Lesson 115_2	2	pron.什么也没有	1
-181	lemonade	Lesson 115_2	2	n.柠檬水	1
-181	joke	Lesson 115_2	2	v.开玩笑	1
-181	there's none left	Lesson 115_2	2	一点儿有没有剩下	1
-182	asleep	Lesson 116_1	1	adj.睡觉	1
-182	glasses	Lesson 116_1	1	眼镜	1
-183	dining room	Lesson 117_1	1	饭厅	1
-183	coin	Lesson 117_1	1	n.硬币	1
-183	mouth	Lesson 117_1	1	n.嘴	1
-183	swallow	Lesson 117_1	1	v.吞下	1
-183	later	Lesson 117_1	1	adv.后来	1
-183	toilet	Lesson 117_1	1	n.厕所	1
-183	later that morning	Lesson 117_1	1	那天上午晚些时候	1
-184	story	Lesson 119_1	2	n.故事	1
-184	happen	Lesson 119_1	2	v.发生	1
-184	thief	Lesson 119_1	2	n.贼	1
-184	enter	Lesson 119_1	2	v.进入	1
-184	dark	Lesson 119_1	2	adj.黑暗的	1
-185	torch	Lesson 119_2	2	n.手电筒	1
-185	voice	Lesson 119_2	2	n.声音	1
-185	parrot	Lesson 119_2	2	n.鹦鹉	1
-185	what's up	Lesson 119_2	2	有什么事	1
-185	go back to sleep	Lesson 119_2	2	继续睡觉	1
-186	customer	Lesson 121_1	1	n.顾客	1
-186	forget	Lesson 121_1	1	v.忘记	1
-186	manager	Lesson 121_1	1	n.经理	1
-186	serve	Lesson 121_1	1	v.照应	1
-186	counter	Lesson 121_1	1	n.柜台	1
-186	recognize	Lesson 121_1	1	v.认出	1
-187	road	Lesson 122_1	1	n.路	1
-188	during	Lesson 123_1	2	prep.在...期间	1
-188	trip	Lesson 123_1	2	n.旅行	1
-188	travel	Lesson 123_1	2	v.&n.旅行	1
-188	offer	Lesson 123_1	2	v.提供	1
-189	job	Lesson 123_2	2	n.工作	1
-189	guess	Lesson 123_2	2	v.猜	1
-189	grow	Lesson 123_2	2	v.让...生长	1
-189	beard	Lesson 123_2	2	n.胡子	1
-190	kitten	Lesson 124_1	1	n.小猫	1
-191	water	Lesson 125_1	2	v.浇水	1
-191	terribly	Lesson 125_1	2	adv.非常	1
-191	dry	Lesson 125_1	2	adj.干燥的	1
-191	nuisance	Lesson 125_1	2	n.讨厌的东西或人	1
-191	mean	Lesson 125_1	2	v.意味着	1
-192	surprise	Lesson 125_2	2	n.惊奇	1
-192	have to	Lesson 125_2	2	不得不	1
-192	what a nuisance	Lesson 125_2	2	真讨厌	1
-192	by myself	Lesson 125_2	2	我自己	1
-193	immediately	Lesson 126_1	1	adv.立即地	1
-194	famous	Lesson 127_1	1	adj.著名的	1
-194	actress	Lesson 127_1	1	n.女演员	1
-194	at least	Lesson 127_1	1	至少	1
-194	actor	Lesson 127_1	1	n.男演员	1
-194	read	Lesson 127_1	1	v.通过阅读得知	1
-195	wave	Lesson 129_1	2	v.招手	1
-195	track	Lesson 129_1	2	n.跑道	1
-195	mile	Lesson 129_1	2	n.英里	1
-195	overtake	Lesson 129_1	2	v.从后面超越	1
-195	speed limit	Lesson 129_1	2	限速	1
-195	dream	Lesson 129_1	2	v.做梦	1
-196	sign	Lesson 129_2	2	n.标记	1
-196	driving licence	Lesson 129_2	2	驾驶执照	1
-196	charge	Lesson 129_2	2	n.罚款	1
-196	darling	Lesson 129_2	2	adj.亲爱的	1
-196	take one's advice	Lesson 129_2	2	听从劝告	1
-197	Egypt	Lesson 131_1	1	n.埃及	1
-197	abroad	Lesson 131_1	1	n.&adv.国外	1
-197	worry	Lesson 131_1	1	n.&v.担忧	1
-197	look after	Lesson 131_1	1	照看	1
-197	in the end	Lesson 131_1	1	最后	1
-198	reporter	Lesson 133_1	1	n.记者	1
-198	sensational	Lesson 133_1	1	adj.爆炸性的	1
-198	mink coat	Lesson 133_1	1	貂皮大衣	1
-198	I wonder why	Lesson 133_1	1	我很想知道为什么	1
-199	future	Lesson 135_1	1	adj.未来的	1
-199	get married	Lesson 135_1	1	结婚	1
-199	hotel	Lesson 135_1	1	n.饭店	1
-199	latest	Lesson 135_1	1	adj.最新的	1
-199	introduce	Lesson 135_1	1	v.介绍	1
-200	football	Lesson 137_1	1	n.足球	1
-200	pool	Lesson 137_1	1	n.赌注	1
-200	win	Lesson 137_1	1	v.赢	1
-200	world	Lesson 137_1	1	n.世界	1
-200	poor	Lesson 137_1	1	adj.贫穷的	1
-200	depend	Lesson 137_1	1	v.依靠	1
-200	depend on	Lesson 137_1	1	取决于	1
-201	extra	Lesson 139_1	1	adj.额外的	1
-201	overseas	Lesson 139_1	1	adj.海外的	1
-201	engineering	Lesson 139_1	1	n.工程	1
-201	company	Lesson 139_1	1	n.公司	1
-201	line	Lesson 139_1	1	n.线路	1
-201	by the way	Lesson 139_1	1	顺便	1
-202	excited	Lesson 141_1	3	adj.兴奋的	1
-202	get on	Lesson 141_1	3	登上	1
-202	middle-aged	Lesson 141_1	3	adj.中年的	1
-202	opposite	Lesson 141_1	3	prep.在...对面	1
-202	curiously	Lesson 141_1	3	adv.好奇地	1
-203	funny	Lesson 141_2	3	adj.可笑的	1
-203	powder	Lesson 141_2	3	n.香粉	1
-203	compact	Lesson 141_2	3	n.带镜的化妆盒	1
-203	kindly	Lesson 141_2	3	adv.和蔼地	1
-203	ugly	Lesson 141_2	3	adj.丑陋的	1
-204	amused	Lesson 141_3	3	adj.有趣的	1
-204	smile	Lesson 141_3	3	n.&v.微笑	1
-204	embarrassed	Lesson 141_3	3	尴尬的	1
-204	be dressed in	Lesson 141_3	3	穿戴...	1
-204	make myself beautiful	Lesson 141_3	3	把自己打扮漂亮	1
-205	worried	Lesson 142_1	1	adj.担心	1
-205	regularly	Lesson 142_1	1	adv.经常地	1
-206	surround	Lesson 143_1	4	vt.包围	1
-206	wood	Lesson 143_1	4	n.树林	1
-206	beauty spot	Lesson 143_1	4	风景点	1
-206	hundred	Lesson 143_1	4	n.百	1
-206	city	Lesson 143_1	4	n.城市	1
-207	through	Lesson 143_2	4	prep.穿过	1
-207	visitor	Lesson 143_2	4	n.参观者	1
-207	tidy	Lesson 143_2	4	adj.整齐的	1
-207	litter	Lesson 143_2	4	n.杂乱的东西	1
-207	litter basket	Lesson 143_2	4	废物筐	1
-208	place	Lesson 143_3	4	v.放	1
-208	throw	Lesson 143_3	4	v.扔	1
-208	rubbish	Lesson 143_3	4	n.垃圾	1
-208	count	Lesson 143_3	4	v.数	1
-208	cover	Lesson 143_3	4	v.覆盖	1
-209	piece	Lesson 143_4	4	n.碎片	1
-209	tyre	Lesson 143_4	4	n.轮胎	1
-209	rusty	Lesson 143_4	4	adj.生锈的	1
-209	among	Lesson 143_4	4	prep.在...之间	1
-209	prosecute	Lesson 143_4	4	v.依法处置	1
-209	be covered with ...	Lesson 143_4	4	覆盖...	1
+49	trousers	Lesson 27_2	2	n.（复数）长裤	1
+50	shut	Lesson 29_1	2	v.关门	1
+50	bedroom	Lesson 29_1	2	n.卧室	1
+50	untidy	Lesson 29_1	2	adj.乱	1
+50	must	Lesson 29_1	2	aux.必须	1
+50	open	Lesson 29_1	2	v.&adj.打开	1
+50	air	Lesson 29_1	2	n.使...通风	1
+51	put	Lesson 29_2	2	v.放置	1
+51	clothes	Lesson 29_2	2	n.衣服	1
+51	wardrobe	Lesson 29_2	2	n.衣柜	1
+51	dust	Lesson 29_2	2	v.掸掉灰尘	1
+51	sweep	Lesson 29_2	2	v.扫	1
+51	make the bed	Lesson 29_2	2	铺床	1
+52	empty	Lesson 30_1	1	v.倒空	1
+52	read	Lesson 30_1	1	vt.读	1
+52	sharpen	Lesson 30_1	1	v.削尖	1
+52	put on	Lesson 30_1	1	穿上	1
+52	take off	Lesson 30_1	1	脱掉	1
+52	turn on	Lesson 30_1	1	开	1
+52	turn off	Lesson 30_1	1	关	1
+53	garden	Lesson 31_1	2	n.花园	1
+53	under	Lesson 31_1	2	prep.在...之下	1
+53	tree	Lesson 31_1	2	n.树	1
+53	climb	Lesson 31_1	2	vt.爬	1
+53	who	Lesson 31_1	2	pron.谁	1
+53	run	Lesson 31_1	2	vi.跑	1
+54	grass	Lesson 31_2	2	n.草	1
+54	after	Lesson 31_2	2	prep.在...之后	1
+54	across	Lesson 31_2	2	prep.横过	1
+54	cat	Lesson 31_2	2	n.猫	1
+54	run after	Lesson 31_2	2	追逐	1
+55	type	Lesson 32_1	2	v.打字	1
+55	letter	Lesson 32_1	2	n.信	1
+55	basket	Lesson 32_1	2	n.篮子	1
+55	eat	Lesson 32_1	2	vt.吃	1
+55	bone	Lesson 32_1	2	n.骨头	1
+55	clean	Lesson 32_1	2	adj.&v.清洗	1
+56	tooth	Lesson 32_2	2	n.牙齿	1
+56	cook	Lesson 32_2	2	v.做饭菜	1
+56	milk	Lesson 32_2	2	n.牛奶	1
+56	meal	Lesson 32_2	2	n.饭	1
+56	drink	Lesson 32_2	2	v.喝	1
+56	tap	Lesson 32_2	2	n.水龙头	1
+57	day	Lesson 33_1	3	n.日子	1
+57	cloud	Lesson 33_1	3	n.云	1
+57	sky	Lesson 33_1	3	n.天空	1
+57	sun	Lesson 33_1	3	n.太阳	1
+57	shine	Lesson 33_1	3	v.照耀	1
+58	with	Lesson 33_2	3	prep.和...在一起	1
+58	family	Lesson 33_2	3	n.家庭	1
+58	walk	Lesson 33_2	3	vi.走路	1
+58	over	Lesson 33_2	3	prep.跨越	1
+58	bridge	Lesson 33_2	3	n.桥	1
+59	boat	Lesson 33_3	3	n.船	1
+59	river	Lesson 33_3	3	n.河	1
+59	ship	Lesson 33_3	3	n.轮船	1
+59	aeroplane	Lesson 33_3	3	n.飞机	1
+59	fly	Lesson 33_3	3	v.飞	1
+59	some clouds	Lesson 33_3	3	几朵云	1
+60	sleep	Lesson 34_1	1	v.睡觉	1
+60	shave	Lesson 34_1	1	v.刮脸	1
+60	cry	Lesson 34_1	1	v.哭	1
+60	wash	Lesson 34_1	1	v.洗	1
+60	wait	Lesson 34_1	1	v.等	1
+60	jump	Lesson 34_1	1	v.跳	1
+61	photograph	Lesson 35_1	3	n.照片	1
+61	village	Lesson 35_1	3	n.村庄	1
+61	valley	Lesson 35_1	3	n.山谷	1
+61	between	Lesson 35_1	3	prep.在...之间	1
+61	hill	Lesson 35_1	3	n.小山	1
+62	another	Lesson 35_2	3	det.另一个	1
+62	wife	Lesson 35_2	3	n.妻子	1
+62	along	Lesson 35_2	3	prep.沿着	1
+62	bank	Lesson 35_2	3	n.河岸	1
+62	water	Lesson 35_2	3	n.水	1
+63	swim	Lesson 35_3	3	v.游泳	1
+63	building	Lesson 35_3	3	n.大楼	1
+63	park	Lesson 35_3	3	n.公园	1
+63	into	Lesson 35_3	3	prep.进入	1
+63	out of	Lesson 35_3	3	从里向外	1
+64	beside	Lesson 36_1	1	prep.在...旁	1
+64	off	Lesson 36_1	1	prep.离开	1
+64	work	Lesson 36_1	1	v.工作	1
+65	hard	Lesson 37_1	2	adv.努力地	1
+65	make	Lesson 37_1	2	v.做	1
+65	bookcase	Lesson 37_1	2	n.书橱	1
+65	hammer	Lesson 37_1	2	n.锤子	1
+66	paint	Lesson 37_2	2	v.上漆	1
+66	pink	Lesson 37_2	2	adj.&n.粉红色	1
+66	favourite	Lesson 37_2	2	adj.最喜欢的	1
+66	be going to	Lesson 37_2	2	打算	1
+67	homework	Lesson 38_1	1	n.作业	1
+67	listen	Lesson 38_1	1	v.听	1
+67	dish	Lesson 38_1	1	n.盘子	1
+68	front	Lesson 39_1	2	n.前面	1
+68	in front of	Lesson 39_1	2	在...之前	1
+68	careful	Lesson 39_1	2	adj.小心的	1
+68	vase	Lesson 39_1	2	n.花瓶	1
+69	drop	Lesson 39_2	2	v.掉下	1
+69	flower	Lesson 39_2	2	n.花	1
+69	do with	Lesson 39_2	2	处理	1
+69	be careful	Lesson 39_2	2	小心点	1
+70	show	Lesson 40_1	1	v.给...看	1
+70	send	Lesson 40_1	1	v.送给	1
+70	take	Lesson 40_1	1	v.带给	1
+71	cheese	Lesson 41_1	3	n.乳酪	1
+71	bread	Lesson 41_1	3	n.面包	1
+71	soap	Lesson 41_1	3	n.肥皂	1
+71	chocolate	Lesson 41_1	3	n.巧克力	1
+71	sugar	Lesson 41_1	3	n.糖	1
+72	coffee	Lesson 41_2	3	n.咖啡	1
+72	tea	Lesson 41_2	3	n.茶	1
+72	tobacco	Lesson 41_2	3	n.烟草	1
+72	a piece of	Lesson 41_2	3	一张	1
+72	a loaf of	Lesson 41_2	3	一条	1
+73	a bar of	Lesson 41_3	3	一块	1
+73	a bottle of	Lesson 41_3	3	一瓶	1
+73	a pound of	Lesson 41_3	3	一磅	1
+73	half a pound of	Lesson 41_3	3	半磅	1
+73	a quarter of	Lesson 41_3	3	四分之一	1
+73	a tin of	Lesson 41_3	3	一罐	1
+74	bird	Lesson 42_1	1	n.鸟	1
+74	any	Lesson 42_1	1	det.一些	1
+74	some	Lesson 42_1	1	det.一些	1
+75	of course	Lesson 43_1	2	当然	1
+75	kettle	Lesson 43_1	2	n.水壶	1
+75	behind	Lesson 43_1	2	prep.在...后面	1
+75	teapot	Lesson 43_1	2	n.茶壶	1
+75	now	Lesson 43_1	2	adv.现在	1
+76	find	Lesson 43_2	2	v.找到	1
+76	boil	Lesson 43_2	2	v.沸腾	1
+76	make the tea	Lesson 43_2	2	沏茶	1
+76	over there	Lesson 43_2	2	在那边	1
+76	hurry up	Lesson 43_2	2	赶快	1
+77	can	Lesson 45_1	1	aux.能够	1
+77	boss	Lesson 45_1	1	n.老板	1
+77	minute	Lesson 45_1	1	n.分钟	1
+77	ask	Lesson 45_1	1	v.请求	1
+77	handwriting	Lesson 45_1	1	n.书写	1
+77	terrible	Lesson 45_1	1	adj.糟糕的	1
+77	next door	Lesson 45_1	1	隔壁	1
+78	lift	Lesson 46_1	1	v.拿起	1
+78	cake	Lesson 46_1	1	n.饼	1
+78	biscuit	Lesson 46_1	1	n.饼干	1
+79	like	Lesson 47_1	1	v.喜欢	1
+79	want	Lesson 47_1	1	v.想	1
+79	black coffee	Lesson 47_1	1	不加伴侣的咖啡	1
+79	white coffee	Lesson 47_1	1	加牛奶的咖啡	1
+80	fresh	Lesson 48_1	3	adj.新鲜的	1
+80	egg	Lesson 48_1	3	n.鸡蛋	1
+80	butter	Lesson 48_1	3	n.黄油	1
+80	pure	Lesson 48_1	3	adj.纯净的	1
+80	honey	Lesson 48_1	3	n.蜂蜜	1
+81	ripe	Lesson 48_2	3	adj.成熟的	1
+81	banana	Lesson 48_2	3	n.香蕉	1
+81	jam	Lesson 48_2	3	n.果酱	1
+81	sweet	Lesson 48_2	3	adj.甜的	1
+81	orange	Lesson 48_2	3	adj.橙	1
+82	Scotch Whisky	Lesson 48_3	3	苏格兰威士忌	0
+82	choice	Lesson 48_3	3	adj.上等的	1
+82	apple	Lesson 48_3	3	n.苹果	1
+82	wine	Lesson 48_3	3	n.酒	1
+82	beer	Lesson 48_3	3	n.啤酒	1
+82	blackboard	Lesson 48_3	3	n.黑板	1
+83	butcher	Lesson 49_1	2	n.卖肉者	1
+83	meat	Lesson 49_1	2	n.食用肉	1
+83	beef	Lesson 49_1	2	n.牛肉	1
+83	lamb	Lesson 49_1	2	n.羔羊肉	1
+83	husband	Lesson 49_1	2	n.丈夫	1
+83	steak	Lesson 49_1	2	n.牛排	1
+84	mince	Lesson 49_2	2	v.肉馅	1
+84	chicken	Lesson 49_2	2	n.鸡	1
+84	tell	Lesson 49_2	2	v.告诉	1
+84	truth	Lesson 49_2	2	n.实情	1
+84	either	Lesson 49_2	2	adv.也（用于否定句）	1
+85	tomato	Lesson 50_1	2	n.西红柿	1
+85	potato	Lesson 50_1	2	n.土豆	1
+85	cabbage	Lesson 50_1	2	n.卷心菜	1
+85	lettuce	Lesson 50_1	2	n.莴苣	1
+85	pea	Lesson 50_1	2	n.豌豆	1
+86	bean	Lesson 50_2	2	n.豆角	1
+86	pear	Lesson 50_2	2	n.梨	1
+86	grape	Lesson 50_2	2	n.葡萄	1
+86	peach	Lesson 50_2	2	n.桃	1
+87	Greece	Lesson 51_1	5	希腊	0
+87	climate	Lesson 51_1	5	n.气候	1
+87	country	Lesson 51_1	5	n.国家	1
+87	pleasant	Lesson 51_1	5	adj.宜人的	1
+87	weather	Lesson 51_1	5	n.天气	1
+88	spring	Lesson 51_2	5	n.春季	1
+88	windy	Lesson 51_2	5	adj.有风的	1
+88	warm	Lesson 51_2	5	adj.温暖的	1
+88	rain	Lesson 51_2	5	v.下雨	1
+88	sometimes	Lesson 51_2	5	adv.有时	1
+89	summer	Lesson 51_3	5	n.夏天	1
+89	autumn	Lesson 51_3	5	n.秋天	1
+89	winter	Lesson 51_3	5	n.冬天	1
+89	snow	Lesson 51_3	5	v.下雪	1
+89	January	Lesson 51_3	5	n.1月	1
+90	February	Lesson 51_4	5	n.2月	1
+90	March	Lesson 51_4	5	n.3月	1
+90	April	Lesson 51_4	5	n.4月	1
+90	May	Lesson 51_4	5	n.5月	1
+90	June	Lesson 51_4	5	n.6月	1
+91	July	Lesson 51_5	5	n.7月	1
+91	August	Lesson 51_5	5	n.8月	1
+91	September	Lesson 51_5	5	n.9月	1
+91	October	Lesson 51_5	5	n.10月	1
+91	November	Lesson 51_5	5	n.11月	1
+91	December	Lesson 51_5	5	n.12月	1
+92	the U.S.	Lesson 52_1	2	美国	1
+92	Brazil	Lesson 52_1	2	n.巴西	0
+92	Holland	Lesson 52_1	2	n.荷兰	0
+92	England	Lesson 52_1	2	n.英国	1
+92	France	Lesson 52_1	2	n.法国	1
+92	Germany	Lesson 52_1	2	n.德国	1
+93	Italy	Lesson 52_2	2	n.意大利	1
+93	Norway	Lesson 52_2	2	n.挪威	0
+93	Russia	Lesson 52_2	2	n.俄罗斯	0
+93	Spain	Lesson 52_2	2	n.西班牙	0
+93	Sweden	Lesson 52_2	2	n.瑞典	0
+94	mild	Lesson 53_1	3	adj.温和的	1
+94	always	Lesson 53_1	3	adv.总是	1
+94	north	Lesson 53_1	3	n.北方	1
+94	east	Lesson 53_1	3	n.东方	1
+94	wet	Lesson 53_1	3	adj.潮湿的	1
+94	west	Lesson 53_1	3	n.西方	1
+95	south	Lesson 53_2	3	n.南方	1
+95	season	Lesson 53_2	3	n.季节	1
+95	best	Lesson 53_2	3	adv.最	1
+95	night	Lesson 53_2	3	n.夜晚	1
+95	rise	Lesson 53_2	3	v.升起	1
+95	early	Lesson 53_2	3	adv.早	1
+96	set	Lesson 53_3	3	v.太阳落下去	1
+96	late	Lesson 53_3	3	adv.晚	1
+96	interesting	Lesson 53_3	3	adj.有趣的	1
+96	subject	Lesson 53_3	3	n.话题	1
+96	conversation	Lesson 53_3	3	n.谈话	1
+97	Australia	Lesson 54_1	4	n.澳大利亚	0
+97	Australian	Lesson 54_1	4	n.澳大利亚人	0
+97	Austria	Lesson 54_1	4	n.奥地利	0
+97	Austrian	Lesson 54_1	4	n.奥地利人	0
+97	Canada	Lesson 54_1	4	n.加拿大	1
+98	Canadian	Lesson 54_2	4	n.加拿大人	0
+98	China	Lesson 54_2	4	n.中国	1
+98	Finland	Lesson 54_2	4	n.芬兰	0
+98	Finnish	Lesson 54_2	4	n.芬兰人	0
+98	India	Lesson 54_2	4	n.印度	1
+99	Indian	Lesson 54_3	4	n.印度人	0
+99	Japan	Lesson 54_3	4	n.日本	1
+99	Nigeria	Lesson 54_3	4	n.尼日利亚	0
+99	Nigerian	Lesson 54_3	4	n.尼日利亚人	0
+99	Turkey	Lesson 54_3	4	n.土耳其	0
+100	Turkish	Lesson 54_4	4	n.土耳其人	0
+100	Korea	Lesson 54_4	4	n.韩国	0
+100	Polish	Lesson 54_4	4	n.波兰人	0
+100	Poland	Lesson 54_4	4	n.波兰	0
+100	Thai	Lesson 54_4	4	n.泰国人	0
+100	Thailand	Lesson 54_4	4	n.泰国	0
+101	live	Lesson 55_1	3	v.住	1
+101	stay	Lesson 55_1	3	v.呆在	1
+101	home	Lesson 55_1	3	n.&adv.家	1
+101	housework	Lesson 55_1	3	n.家务	1
+102	lunch	Lesson 55_2	3	n.午饭	1
+102	afternoon	Lesson 55_2	3	n.下午	1
+102	usually	Lesson 55_2	3	adv.通常	1
+102	together	Lesson 55_2	3	adv.一起	1
+103	evening	Lesson 55_3	3	n.晚上	1
+103	arrive	Lesson 55_3	3	vi.到达	1
+103	night	Lesson 55_3	3	n.夜间	1
+103	go to school	Lesson 55_3	3	上学	1
+103	at night	Lesson 55_3	3	在夜里	1
+104	o'clock	Lesson 57_1	1	adv.点钟	1
+104	shop	Lesson 57_1	1	n.商店	1
+104	moment	Lesson 57_1	1	n.片刻	1
+105	envelope	Lesson 59_1	2	n.信封	1
+105	writing paper	Lesson 59_1	2	信纸	1
+105	shop assistant	Lesson 59_1	2	售货员	1
+105	size	Lesson 59_1	2	n.尺寸	1
+106	pad	Lesson 59_2	2	n.信笺薄	1
+106	glue	Lesson 59_2	2	n.胶水	1
+106	chalk	Lesson 59_2	2	n.粉笔	1
+106	change	Lesson 59_2	2	n.零钱	1
+107	feel	Lesson 61_1	3	v.感觉	1
+107	look	Lesson 61_1	3	vi.看	1
+107	must	Lesson 61_1	3	aux.必须	1
+107	call	Lesson 61_1	3	v.叫	1
+108	doctor	Lesson 61_2	3	n.医生	1
+108	telephone	Lesson 61_2	3	n.电话	1
+108	remember	Lesson 61_2	3	v.记得	1
+108	mouth	Lesson 61_2	3	n.嘴	1
+109	tongue	Lesson 61_3	3	n.舌头	1
+109	bad	Lesson 61_3	3	adj.坏的	1
+109	cold	Lesson 61_3	3	n.感冒	1
+109	news	Lesson 61_3	3	n.消息	1
+109	have a bad cold	Lesson 61_3	3	得了重感冒	1
+110	headache	Lesson 62_1	2	n.头痛	1
+110	aspirin	Lesson 62_1	2	n.阿司匹林	0
+110	earache	Lesson 62_1	2	n.耳痛	1
+110	toothache	Lesson 62_1	2	n.牙痛	1
+110	dentist	Lesson 62_1	2	n.牙医	1
+110	stomachache	Lesson 62_1	2	n.胃痛	1
+111	medicine	Lesson 62_2	2	n.药	1
+111	temperature	Lesson 62_2	2	n.温度	1
+111	flu	Lesson 62_2	2	n.流行性感冒	1
+111	measles	Lesson 62_2	2	n.麻疹	1
+111	mumps	Lesson 62_2	2	n.腮腺炎	0
+111	have a temperature	Lesson 62_2	2	发烧	1
+112	better	Lesson 63_1	2	adj.形容词well的比较级	1
+112	certainly	Lesson 63_1	2	adv.当然	1
+112	get up	Lesson 63_1	2	起床	1
+112	yet	Lesson 63_1	2	adv.还	1
+112	rich	Lesson 63_1	2	adj.油腻的	1
+113	food	Lesson 63_2	2	n.食物	1
+113	remain	Lesson 63_2	2	vi.&n.保持	1
+113	come upstairs	Lesson 63_2	2	上楼	1
+113	get up	Lesson 63_2	2	起床	1
+113	each day	Lesson 63_2	2	每天	1
+114	play	Lesson 64_1	2	v.玩	1
+114	match	Lesson 64_1	2	n.火柴	1
+114	talk	Lesson 64_1	2	v.谈话	1
+114	library	Lesson 64_1	2	n.图书馆	1
+114	drive	Lesson 64_1	2	v.开车	1
+114	so	Lesson 64_1	2	adv.如此地	1
+115	quickly	Lesson 64_2	2	adv.快地	1
+115	lean out of	Lesson 64_2	2	身体探出	1
+115	break	Lesson 64_2	2	v.打破	1
+115	noise	Lesson 64_2	2	n.喧闹声	1
+115	play with matches	Lesson 64_2	2	玩火柴	1
+115	make a noise	Lesson 64_2	2	弄出噪声	1
+116	Dad	Lesson 65_1	2	n.爸爸	1
+116	key	Lesson 65_1	2	n.钥匙	1
+116	baby	Lesson 65_1	2	n.婴儿	1
+116	hear	Lesson 65_1	2	v.听见	1
+117	enjoy	Lesson 65_2	2	v.玩得快活	1
+117	yourself	Lesson 65_2	2	pron.你自己	1
+117	ourselves	Lesson 65_2	2	pron.我们自己	1
+117	mum	Lesson 65_2	2	n.妈妈	1
+118	myself	Lesson 66_1	1	pron.我自己	1
+118	themselves	Lesson 66_1	1	pron.他们自己	1
+118	himself	Lesson 66_1	1	pron.他自己	1
+118	herself	Lesson 66_1	1	pron.她自己	1
+119	greengrocer	Lesson 67_1	3	n.蔬菜水果零售商	1
+119	absent	Lesson 67_1	3	adj.缺席的	1
+119	Monday	Lesson 67_1	3	n.星期一	1
+119	Tuesday	Lesson 67_1	3	n.星期二	1
+119	Wednesday	Lesson 67_1	3	n.星期三	1
+120	Thursday	Lesson 67_2	3	n.星期四	1
+120	keep	Lesson 67_2	3	v.处于（状况）	1
+120	spend	Lesson 67_2	3	v.度过	1
+120	weekend	Lesson 67_2	3	n.周末	1
+120	Friday	Lesson 67_2	3	n.星期五	1
+121	Saturday	Lesson 67_3	3	n.星期六	1
+121	Sunday	Lesson 67_3	3	n.星期日	1
+121	country	Lesson 67_3	3	n.乡村	1
+121	lucky	Lesson 67_3	3	adj.幸运的	1
+122	church	Lesson 68_1	1	n.教堂	1
+122	dairy	Lesson 68_1	1	n.乳品店	1
+122	baker	Lesson 68_1	1	n.面包师傅	1
+122	grocer	Lesson 68_1	1	n.食品杂货商	1
+123	year	Lesson 69_1	3	n.年	1
+123	race	Lesson 69_1	3	n.比赛	1
+123	town	Lesson 69_1	3	n.城镇	1
+123	crowd	Lesson 69_1	3	n.人群	1
+124	stand	Lesson 69_2	3	v.站立	1
+124	exciting	Lesson 69_2	3	adj.使人激动的	1
+124	just	Lesson 69_2	3	adv.正好	1
+124	finish	Lesson 69_2	3	vi.结尾	1
+125	winner	Lesson 69_3	3	n.获胜者	1
+125	behind	Lesson 69_3	3	prep.在...之后	1
+125	way	Lesson 69_3	3	n.路途	1
+125	hundreds of	Lesson 69_3	3	数以百计的	1
+125	on the way	Lesson 69_3	3	在...的途中	1
+126	stationer	Lesson 70_1	1	n.文具商	1
+126	Denmark	Lesson 70_1	1	n.丹麦	0
+126	awful	Lesson 70_1	1	adj.让人讨厌的	1
+127	telephone	Lesson 71_1	2	n.&v.打电话	1
+127	time	Lesson 71_1	2	n.次	1
+127	answer	Lesson 71_1	2	v.接	1
+127	last	Lesson 71_1	2	adj.最后的	1
+127	phone	Lesson 71_1	2	n.电话	1
+128	again	Lesson 71_2	2	adv.又一次的	1
+128	say	Lesson 71_2	2	v.说	1
+128	yesterday afternoon	Lesson 71_2	2	昨天晚上	1
+128	last night	Lesson 71_2	2	昨夜	1
+129	week	Lesson 73_1	3	n.周	1
+129	London	Lesson 73_1	3	n.伦敦	1
+129	suddenly	Lesson 73_1	3	adv.突然地	1
+129	bus stop	Lesson 73_1	3	公共汽车车站	1
+130	smile	Lesson 73_2	3	v.微笑	1
+130	pleasantly	Lesson 73_2	3	adv.愉快地	1
+130	understand	Lesson 73_2	3	v.懂	1
+130	speak	Lesson 73_2	3	v.讲	1
+131	hand	Lesson 73_3	3	n.手	1
+131	pocket	Lesson 73_3	3	n.衣袋	1
+131	phrasebook	Lesson 73_3	3	n.短语手册	1
+131	phrase	Lesson 73_3	3	n.短语	1
+131	slowly	Lesson 73_3	3	adv.缓慢地	1
+132	hurriedly	Lesson 74_1	1	adv.匆忙地	1
+132	cut	Lesson 74_1	1	v.割	1
+132	thirstily	Lesson 74_1	1	adv.口渴地	1
+132	go	Lesson 74_1	1	v.走	1
+132	greet	Lesson 74_1	1	v.问候	1
+133	ago	Lesson 75_1	2	adv.以前	1
+133	buy	Lesson 75_1	2	v.买	1
+133	pair	Lesson 75_1	2	n.双	1
+133	fashion	Lesson 75_1	2	n.流行式样	1
+133	uncomfortable	Lesson 75_1	2	adj.不舒服的	1
+134	wear	Lesson 75_2	2	v.&n.穿着	1
+134	a month ago	Lesson 75_2	2	一个月前	1
+134	in fashion	Lesson 75_2	2	流行的	1
+134	I'm afraid	Lesson 75_2	2	我恐怕	1
+135	appointment	Lesson 77_1	1	n.约会	1
+135	urgent	Lesson 77_1	1	adj.紧急的	1
+135	till	Lesson 77_1	1	prep.直到...为止	1
+136	shopping	Lesson 79_1	2	n.购物	1
+136	list	Lesson 79_1	2	n.单子	1
+136	vegetable	Lesson 79_1	2	n.蔬菜	1
+136	need	Lesson 79_1	2	v.需要	1
+136	hope	Lesson 79_1	2	v.&n.希望	1
+137	thing	Lesson 79_2	2	n.事情	1
+137	money	Lesson 79_2	2	n.钱	1
+137	make a shopping list	Lesson 79_2	2	写一张采购清单	1
+137	a lot of	Lesson 79_2	2	许多	1
+138	groceries	Lesson 80_1	1	n.食品杂货	1
+138	fruit	Lesson 80_1	1	n.水果	1
+138	stationery	Lesson 80_1	1	n.文具	1
+138	newsagent	Lesson 80_1	1	n.报刊零售人	1
+138	chemist	Lesson 80_1	1	n.药剂师	1
+139	bath	Lesson 81_1	1	n.洗澡	1
+139	nearly	Lesson 81_1	1	adv.几乎	1
+139	ready	Lesson 81_1	1	adj.准备好的	1
+139	dinner	Lesson 81_1	1	n.正餐	1
+139	restaurant	Lesson 81_1	1	n.饭馆	1
+139	roast	Lesson 81_1	1	adj.烤的	1
+139	have a bath	Lesson 81_1	1	洗澡	1
+140	breakfast	Lesson 82_1	1	n.早饭	1
+140	haircut	Lesson 82_1	1	n.理发	1
+140	party	Lesson 82_1	1	n.聚会	1
+140	holiday	Lesson 82_1	1	n.假日	1
+141	mess	Lesson 83_1	2	n.杂乱	1
+141	pack	Lesson 83_1	2	v.打包	1
+141	suitcase	Lesson 83_1	2	n.手提箱	1
+141	leave	Lesson 83_1	2	v.离开	1
+141	already	Lesson 83_1	2	adv.已经	1
+142	excuse the mess	Lesson 83_2	2	乱七八糟	1
+142	have a holiday	Lesson 83_2	2	度假	1
+142	have lunch	Lesson 83_2	2	吃午饭	1
+142	stay at home	Lesson 83_2	2	呆在家里	1
+143	Paris	Lesson 85_1	2	n.巴黎	1
+143	cinema	Lesson 85_1	2	n.电影院	1
+143	film	Lesson 85_1	2	n.电影	1
+143	beautiful	Lesson 85_1	2	adj.漂亮的	1
+143	city	Lesson 85_1	2	n.城市	1
+144	never	Lesson 85_2	2	adv.从来没有	1
+144	ever	Lesson 85_2	2	adv.在任何时候	1
+144	have been to	Lesson 85_2	2	到过	1
+144	what's on	Lesson 85_2	2	上演什么	1
+144	all the time	Lesson 85_2	2	一直	1
+145	attendant	Lesson 87_1	2	n.接待员	1
+145	bring	Lesson 87_1	2	v.带来	1
+145	garage	Lesson 87_1	2	n.车库	1
+145	crash	Lesson 87_1	2	v.碰撞	1
+146	lamp	Lesson 87_2	2	n.灯杆	1
+146	repair	Lesson 87_2	2	v.修理	1
+146	try	Lesson 87_2	2	v.努力	1
+146	drive into	Lesson 87_2	2	撞到	1
+147	believe	Lesson 89_1	3	v.相信	1
+147	may	Lesson 89_1	3	aux.可以	1
+147	how long	Lesson 89_1	3	多长	1
+147	since	Lesson 89_1	3	prep.自从	1
+147	why	Lesson 89_1	3	adv.为什么	1
+148	sell	Lesson 89_2	3	v.卖	1
+148	because	Lesson 89_2	3	conj.因为	1
+148	retire	Lesson 89_2	3	v.&n.退休	1
+148	cost	Lesson 89_2	3	v.&n.花费	1
+148	pound	Lesson 89_2	3	n.英镑	1
+149	worth	Lesson 89_3	3	adj.&prep.值...钱	1
+149	penny	Lesson 89_3	3	n.便士	1
+149	for sale	Lesson 89_3	3	供出售	1
+149	have the last word	Lesson 89_3	3	最后拍板	1
+150	still	Lesson 91_1	1	adv.还	1
+150	move	Lesson 91_1	1	v.搬家	1
+150	miss	Lesson 91_1	1	v.想念	1
+150	neighbour	Lesson 91_1	1	n.邻居	1
+150	person	Lesson 91_1	1	n.人	1
+150	people	Lesson 91_1	1	n.人们	1
+150	poor	Lesson 91_1	1	adj.可怜的	1
+151	pilot	Lesson 93_1	1	n.飞行员	1
+151	return	Lesson 93_1	1	v.返回	1
+151	New York	Lesson 93_1	1	n.纽约	1
+151	Tokyo	Lesson 93_1	1	n.东京	1
+151	Madrid	Lesson 93_1	1	n.马德里	0
+151	fly	Lesson 93_1	1	v.飞行	1
+151	next-door neighbour	Lesson 93_1	1	隔壁邻居	1
+152	Athens	Lesson 94_1	2	n.雅典	0
+152	Berlin	Lesson 94_1	2	n.柏林	0
+152	Bombay	Lesson 94_1	2	n.孟买	0
+152	Geneva	Lesson 94_1	2	n.日内瓦	0
+152	Moscow	Lesson 94_1	2	n.莫斯科	0
+153	Rome	Lesson 94_2	2	n.罗马	1
+153	Seoul	Lesson 94_2	2	n.首尔	0
+153	Stockholm	Lesson 94_2	2	n.斯德哥尔摩	0
+153	Sydney	Lesson 94_2	2	n.悉尼	1
+154	return	Lesson 95_1	2	n.往返	1
+154	train	Lesson 95_1	2	n.火车	1
+154	platform	Lesson 95_1	2	n.站台	1
+154	plenty	Lesson 95_1	2	n.大量	1
+154	bar	Lesson 95_1	2	n.酒吧	1
+154	station	Lesson 95_1	2	n.车站	1
+155	porter	Lesson 95_2	2	n.乘务员	1
+155	catch	Lesson 95_2	2	v.赶上	1
+155	miss	Lesson 95_2	2	v.错过	1
+155	return ticket	Lesson 95_2	2	往返票	1
+155	next door to ...	Lesson 95_2	2	与...相邻	1
+155	in five hours' time	Lesson 95_2	2	5小时之后	1
+156	leave	Lesson 97_1	2	v.遗留	1
+156	describe	Lesson 97_1	2	vt.描述	1
+156	zip	Lesson 97_1	2	n.拉链	1
+156	label	Lesson 97_1	2	n.标签	1
+156	handle	Lesson 97_1	2	vt.提手	1
+157	address	Lesson 97_2	2	n.地址	1
+157	pence	Lesson 97_2	2	n.penny的复数形式	1
+157	belong	Lesson 97_2	2	vi.属于	1
+157	the other day	Lesson 97_2	2	几天前	1
+158	ow	Lesson 99_1	3	int.哎哟	1
+158	slip	Lesson 99_1	3	v.&n.滑倒	1
+158	fall	Lesson 99_1	3	v.落下	1
+158	downstairs	Lesson 99_1	3	adv.下楼	1
+158	hurt	Lesson 99_1	3	v.伤	1
+159	back	Lesson 99_2	3	n.背	1
+159	stand up	Lesson 99_2	3	起立	1
+159	help	Lesson 99_2	3	v.&n.帮助	1
+159	at once	Lesson 99_2	3	立即	1
+159	sure	Lesson 99_2	3	adj.一定的	1
+160	X-ray	Lesson 99_3	3	n.X光透视	1
+160	fell downstairs	Lesson 99_3	3	从楼梯上摔下来	1
+160	try and stand up	Lesson 99_3	3	试着站起来	1
+160	let me help you	Lesson 99_3	3	让我来帮你	1
+161	licence	Lesson 101_1	2	n.执照	1
+161	Scotland	Lesson 101_1	2	n.苏格兰	1
+161	card	Lesson 101_1	2	n.明信片	1
+161	youth	Lesson 101_1	2	n.青年	1
+161	hostel	Lesson 101_1	2	n.招待所	1
+162	association	Lesson 101_2	2	n.协会	1
+162	soon	Lesson 101_2	2	adv.不久	1
+162	write	Lesson 101_2	2	v.写	1
+162	speak up	Lesson 101_2	2	大声地说	1
+163	exam	Lesson 103_1	4	n.考试	1
+163	pass	Lesson 103_1	4	v.及格	1
+163	mathematics	Lesson 103_1	4	n.数学	1
+163	question	Lesson 103_1	4	n.问题	1
+163	easy	Lesson 103_1	4	adj.容易的	1
+164	enough	Lesson 103_2	4	adv.足够地	1
+164	paper	Lesson 103_2	4	n.考卷	1
+164	fail	Lesson 103_2	4	v.未及格	1
+164	answer	Lesson 103_2	4	v.&回答	1
+164	mark	Lesson 103_2	4	n.分数	1
+165	rest	Lesson 103_3	4	n.其他的东西	1
+165	difficult	Lesson 103_3	4	adj.困难的	1
+165	hate	Lesson 103_3	4	v.讨厌	1
+165	low	Lesson 103_3	4	adj.低的	1
+165	cheer	Lesson 103_3	4	v.振作	1
+166	guy	Lesson 103_4	4	n.家伙	1
+166	top	Lesson 103_4	4	n.上方	1
+166	how about	Lesson 103_4	4	怎么样	1
+166	cheer up	Lesson 103_4	4	振作起来	1
+167	clever	Lesson 104_1	2	adj.聪明的	1
+167	stupid	Lesson 104_1	2	adj.笨的	1
+167	cheap	Lesson 104_1	2	adj.便宜的	1
+167	expensive	Lesson 104_1	2	adj.贵的	1
+167	fresh	Lesson 104_1	2	adj.新鲜的	1
+167	stale	Lesson 104_1	2	adj.不新鲜的	1
+168	low	Lesson 104_2	2	adj.低的	1
+168	loud	Lesson 104_2	2	adj.大声的	1
+168	high	Lesson 104_2	2	adj.高的	1
+168	hard	Lesson 104_2	2	adj.硬的	1
+168	soft	Lesson 104_2	2	adj.软的	1
+168	sour	Lesson 104_2	2	adj.酸的	1
+169	spell	Lesson 105_1	1	v.拼写	1
+169	intelligent	Lesson 105_1	1	adj.聪明的	1
+169	mistake	Lesson 105_1	1	n.错误	1
+169	present	Lesson 105_1	1	n.礼物	1
+169	dictionary	Lesson 105_1	1	n.词典	1
+169	full of	Lesson 105_1	1	充满了...	1
+170	carry	Lesson 106_1	2	v.带	1
+170	keep	Lesson 106_1	2	v.保存	1
+170	correct	Lesson 106_1	2	v.改正	1
+170	madam	Lesson 106_1	2	n.夫人	1
+170	smart	Lesson 106_1	2	adj.漂亮的	1
+171	as well	Lesson 106_2	2	同样	1
+171	suit	Lesson 106_2	2	v.适于	1
+171	pretty	Lesson 106_2	2	adj.漂亮的	1
+171	would you like	Lesson 106_2	2	你愿意...	1
+172	idea	Lesson 109_1	2	n.主意	1
+172	a little	Lesson 109_1	2	少许（不可数名词前）	1
+172	teaspoonful	Lesson 109_1	2	n.一满茶匙	1
+172	less	Lesson 109_1	2	adj.较少的	1
+172	a few	Lesson 109_1	2	几个（可数名词前）	1
+173	pity	Lesson 109_2	2	n.遗憾	1
+173	instead	Lesson 109_2	2	adv.代替	1
+173	what a pity	Lesson 109_2	2	真遗憾	1
+173	advice	Lesson 109_2	2	n.建议	1
+174	most	Lesson 110_1	1	adj.&adv.最多的	1
+174	least	Lesson 110_1	1	adj.最小的	1
+174	best	Lesson 110_1	1	adj.最好的	1
+174	worse	Lesson 110_1	1	adj.更坏的	1
+174	worst	Lesson 110_1	1	adj.最坏的	1
+175	model	Lesson 111_1	1	n.型号	1
+175	afford	Lesson 111_1	1	v.付得起	1
+175	deposit	Lesson 111_1	1	v.预付定金	1
+175	instalment	Lesson 111_1	1	n.分期付款	1
+175	price	Lesson 111_1	1	n.价格	1
+175	millionaire	Lesson 111_1	1	n.百万富翁	1
+175	buy ... on instalment	Lesson 111_1	1	以分期付款的方式购买	1
+176	conductor	Lesson 113_1	2	n.售票员	1
+176	fare	Lesson 113_1	2	n.车费	1
+176	change	Lesson 113_1	2	v.兑换	1
+176	note	Lesson 113_1	2	n.纸币	1
+176	passenger	Lesson 113_1	2	n.乘客	1
+177	none	Lesson 113_2	2	pron.没有任何东西	1
+177	neither	Lesson 113_2	2	conj.也不	1
+177	get off	Lesson 113_2	2	下车	1
+177	tramp	Lesson 113_2	2	n.流浪汉	1
+177	except	Lesson 113_2	2	prep.除...外	1
+178	anyone	Lesson 115_1	2	pron.任何人	1
+178	knock	Lesson 115_1	2	v.敲	1
+178	everything	Lesson 115_1	2	pron.一切事情	1
+178	quiet	Lesson 115_1	2	adj.安静的	1
+178	impossible	Lesson 115_1	2	adj.不可能的	1
+179	invite	Lesson 115_2	2	v.邀请	1
+179	anything	Lesson 115_2	2	pron.任何东西	1
+179	nothing	Lesson 115_2	2	pron.什么也没有	1
+179	lemonade	Lesson 115_2	2	n.柠檬水	1
+179	joke	Lesson 115_2	2	v.开玩笑	1
+180	there's none left	Lesson 116_1	1	一点儿有没有剩下	1
+180	asleep	Lesson 116_1	1	adj.睡觉	1
+180	glasses	Lesson 116_1	1	眼镜	1
+181	dining room	Lesson 117_1	1	饭厅	1
+181	coin	Lesson 117_1	1	n.硬币	1
+181	mouth	Lesson 117_1	1	n.嘴	1
+181	swallow	Lesson 117_1	1	v.吞下	1
+181	later	Lesson 117_1	1	adv.后来	1
+181	toilet	Lesson 117_1	1	n.厕所	1
+181	later that morning	Lesson 117_1	1	那天上午晚些时候	1
+182	story	Lesson 119_1	2	n.故事	1
+182	happen	Lesson 119_1	2	v.发生	1
+182	thief	Lesson 119_1	2	n.贼	1
+182	enter	Lesson 119_1	2	v.进入	1
+182	dark	Lesson 119_1	2	adj.黑暗的	1
+183	torch	Lesson 119_2	2	n.手电筒	1
+183	voice	Lesson 119_2	2	n.声音	1
+183	parrot	Lesson 119_2	2	n.鹦鹉	1
+183	what's up	Lesson 119_2	2	有什么事	1
+183	go back to sleep	Lesson 119_2	2	继续睡觉	1
+184	customer	Lesson 121_1	1	n.顾客	1
+184	forget	Lesson 121_1	1	v.忘记	1
+184	manager	Lesson 121_1	1	n.经理	1
+184	serve	Lesson 121_1	1	v.照应	1
+184	counter	Lesson 121_1	1	n.柜台	1
+184	recognize	Lesson 121_1	1	v.认出	1
+184	road	Lesson 121_1	1	n.路	1
+185	during	Lesson 123_1	2	prep.在...期间	1
+185	trip	Lesson 123_1	2	n.旅行	1
+185	travel	Lesson 123_1	2	v.&n.旅行	1
+185	offer	Lesson 123_1	2	v.提供	1
+185	job	Lesson 123_1	2	n.工作	1
+186	guess	Lesson 123_2	2	v.猜	1
+186	grow	Lesson 123_2	2	v.让...生长	1
+186	beard	Lesson 123_2	2	n.胡子	1
+186	kitten	Lesson 123_2	2	n.小猫	1
+187	water	Lesson 125_1	2	v.浇水	1
+187	terribly	Lesson 125_1	2	adv.非常	1
+187	dry	Lesson 125_1	2	adj.干燥的	1
+187	nuisance	Lesson 125_1	2	n.讨厌的东西或人	1
+187	mean	Lesson 125_1	2	v.意味着	1
+188	surprise	Lesson 125_2	2	n.惊奇	1
+188	have to	Lesson 125_2	2	不得不	1
+188	what a nuisance	Lesson 125_2	2	真讨厌	1
+188	by myself	Lesson 125_2	2	我自己	1
+188	immediately	Lesson 125_2	2	adv.立即地	1
+189	famous	Lesson 127_1	1	adj.著名的	1
+189	actress	Lesson 127_1	1	n.女演员	1
+189	at least	Lesson 127_1	1	至少	1
+189	actor	Lesson 127_1	1	n.男演员	1
+189	read	Lesson 127_1	1	v.通过阅读得知	1
+190	wave	Lesson 129_1	2	v.招手	1
+190	track	Lesson 129_1	2	n.跑道	1
+190	mile	Lesson 129_1	2	n.英里	1
+190	overtake	Lesson 129_1	2	v.从后面超越	1
+190	speed limit	Lesson 129_1	2	限速	1
+190	dream	Lesson 129_1	2	v.做梦	1
+191	sign	Lesson 129_2	2	n.标记	1
+191	driving licence	Lesson 129_2	2	驾驶执照	1
+191	charge	Lesson 129_2	2	n.罚款	1
+191	darling	Lesson 129_2	2	adj.亲爱的	1
+191	take one's advice	Lesson 129_2	2	听从劝告	1
+192	Egypt	Lesson 131_1	1	n.埃及	1
+192	abroad	Lesson 131_1	1	n.&adv.国外	1
+192	worry	Lesson 131_1	1	n.&v.担忧	1
+192	look after	Lesson 131_1	1	照看	1
+192	in the end	Lesson 131_1	1	最后	1
+193	reporter	Lesson 133_1	1	n.记者	1
+193	sensational	Lesson 133_1	1	adj.爆炸性的	1
+193	mink coat	Lesson 133_1	1	貂皮大衣	1
+193	I wonder why	Lesson 133_1	1	我很想知道为什么	1
+194	future	Lesson 135_1	1	adj.未来的	1
+194	get married	Lesson 135_1	1	结婚	1
+194	hotel	Lesson 135_1	1	n.饭店	1
+194	latest	Lesson 135_1	1	adj.最新的	1
+194	introduce	Lesson 135_1	1	v.介绍	1
+195	football	Lesson 137_1	1	n.足球	1
+195	pool	Lesson 137_1	1	n.赌注	1
+195	win	Lesson 137_1	1	v.赢	1
+195	world	Lesson 137_1	1	n.世界	1
+195	poor	Lesson 137_1	1	adj.贫穷的	1
+195	depend	Lesson 137_1	1	v.依靠	1
+195	depend on	Lesson 137_1	1	取决于	1
+196	extra	Lesson 139_1	1	adj.额外的	1
+196	overseas	Lesson 139_1	1	adj.海外的	1
+196	engineering	Lesson 139_1	1	n.工程	1
+196	company	Lesson 139_1	1	n.公司	1
+196	line	Lesson 139_1	1	n.线路	1
+196	by the way	Lesson 139_1	1	顺便	1
+197	excited	Lesson 141_1	3	adj.兴奋的	1
+197	get on	Lesson 141_1	3	登上	1
+197	middle-aged	Lesson 141_1	3	adj.中年的	1
+197	opposite	Lesson 141_1	3	prep.在...对面	1
+197	curiously	Lesson 141_1	3	adv.好奇地	1
+198	funny	Lesson 141_2	3	adj.可笑的	1
+198	powder	Lesson 141_2	3	n.香粉	1
+198	compact	Lesson 141_2	3	n.带镜的化妆盒	1
+198	kindly	Lesson 141_2	3	adv.和蔼地	1
+198	ugly	Lesson 141_2	3	adj.丑陋的	1
+199	amused	Lesson 141_3	3	adj.有趣的	1
+199	smile	Lesson 141_3	3	n.&v.微笑	1
+199	embarrassed	Lesson 141_3	3	尴尬的	1
+199	be dressed in	Lesson 141_3	3	穿戴...	1
+200	make myself beautiful	Lesson 142_1	1	把自己打扮漂亮	1
+200	worried	Lesson 142_1	1	adj.担心	1
+200	regularly	Lesson 142_1	1	adv.经常地	1
+201	surround	Lesson 143_1	4	vt.包围	1
+201	wood	Lesson 143_1	4	n.树林	1
+201	beauty spot	Lesson 143_1	4	风景点	1
+201	hundred	Lesson 143_1	4	n.百	1
+201	city	Lesson 143_1	4	n.城市	1
+202	through	Lesson 143_2	4	prep.穿过	1
+202	visitor	Lesson 143_2	4	n.参观者	1
+202	tidy	Lesson 143_2	4	adj.整齐的	1
+202	litter	Lesson 143_2	4	n.杂乱的东西	1
+202	litter basket	Lesson 143_2	4	废物筐	1
+203	place	Lesson 143_3	4	v.放	1
+203	throw	Lesson 143_3	4	v.扔	1
+203	rubbish	Lesson 143_3	4	n.垃圾	1
+203	count	Lesson 143_3	4	v.数	1
+203	cover	Lesson 143_3	4	v.覆盖	1
+204	piece	Lesson 143_4	4	n.碎片	1
+204	tyre	Lesson 143_4	4	n.轮胎	1
+204	rusty	Lesson 143_4	4	adj.生锈的	1
+204	among	Lesson 143_4	4	prep.在...之间	1
+204	prosecute	Lesson 143_4	4	v.依法处置	1
+204	be covered with ...	Lesson 143_4	4	覆盖...	1

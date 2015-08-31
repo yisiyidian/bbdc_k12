@@ -241,199 +241,199 @@
 49	up	Module 6_8	8	adv.沿着...而去；向上	0
 49	down	Module 6_8	8	adj.沿着	0
 49	stop	Module 6_8	8	n.车站	1
-50	horse	Revision Module A_1	1	n.马	1
-51	born	Module 7_1	5	vt.出生	0
-51	strict	Module 7_1	5	adj.严格的	0
-51	friendly	Module 7_1	5	adj.友好的	0
-51	primary	Module 7_1	5	adj.初等的	0
-51	primary school	Module 7_1	5	小学	0
-52	town	Module 7_2	5	n.城镇	0
-52	US	Module 7_2	5	abbr.美国	0
-52	hey	Module 7_2	5	int.嘿	0
-52	village	Module 7_2	5	n.村庄	0
-52	nice	Module 7_2	5	adj.友好的	0
-53	good	Module 7_3	5	adj.好的	0
-53	difficult	Module 7_3	5	adj.难对付的	0
-53	bathroom	Module 7_3	5	n.浴室	0
-53	bedroom	Module 7_3	5	n.卧室	0
-53	garden	Module 7_3	5	n.花园	0
-54	living room	Module 7_4	5	起居室	0
-54	east	Module 7_4	5	n.&adj.东面的	0
-54	coast	Module 7_4	5	n.海岸	0
-54	ago	Module 7_4	5	adv.以前	0
-54	store	Module 7_4	5	n.商店	0
-54	movie theater	Module 7_4	5	电影院	0
-55	bored	Module 7_5	5	adj.厌烦的	0
-55	president	Module 7_5	5	n.总统	0
-55	comfortable	Module 7_5	5	adj.舒适的	0
-55	lake	Module 7_5	5	n.湖	1
-55	last	Module 7_5	5	adj.最近过去的	0
-55	yesterday	Module 7_5	5	n.昨天	1
-56	hair	Module 8_1	8	n.头发	0
-56	gold	Module 8_1	8	n.金色	0
-56	forest	Module 8_1	8	n.森林	0
-56	once	Module 8_1	8	adv.一次	0
-56	upon	Module 8_1	8	prep.在...上	0
-57	once upon a time	Module 8_2	8	从前	0
-57	decide	Module 8_2	8	vt.决定	0
-57	go for a walk	Module 8_2	8	散步	0
-57	basket	Module 8_2	8	n.篮子	0
-57	notice	Module 8_2	8	v.注意到	0
-58	all alone	Module 8_3	8	独自一人的	0
-58	dark	Module 8_3	8	adj.黑暗的	0
-58	pick	Module 8_3	8	vt.采摘	0
-58	pick up	Module 8_3	8	拿起	0
-58	soon	Module 8_3	8	adv.立刻	0
-59	lost	Module 8_4	8	adj.迷路的	0
-59	around	Module 8_4	8	prep.环绕着	0
-59	little	Module 8_4	8	adj.小的	0
-59	towards	Module 8_4	8	prep.朝向	0
-59	knock	Module 8_4	8	n.敲	0
-60	door	Module 8_5	8	n.门	1
-60	answer	Module 8_5	8	vt.回答	1
-60	push	Module 8_5	8	n.&v.推	0
-60	enter	Module 8_5	8	vi.进入	0
-60	bowl	Module 8_5	8	n.碗	0
-61	hungry	Module 8_6	8	adj.饥饿的	1
-61	right	Module 8_6	8	adj.合适的	1
-61	finish	Module 8_6	8	vi.吃完	0
-61	either	Module 8_6	8	pron.也不	0
-61	piece	Module 8_6	8	n.碎片	0
-62	in pieces	Module 8_7	8	破碎地	0
-62	asleep	Module 8_7	8	adj.睡着的	0
-62	return	Module 8_7	8	vt.返回	0
-62	cry	Module 8_7	8	n.&v.哭	1
-62	at first	Module 8_7	8	起初	0
-63	point	Module 8_8	8	v.指向	0
-63	point at	Module 8_8	8	指着...	0
-63	shout	Module 8_8	8	n.大声喊	0
-63	jump	Module 8_8	8	n.跳	1
-63	without	Module 8_8	8	prep.无	0
-63	part	Module 8_8	8	n.部分	0
-64	March	Module 9_1	7	n.3月	0
-64	April	Module 9_1	7	n.4月	0
-64	June	Module 9_1	7	n.6月	0
-64	Women's Day	Module 9_1	7	妇女节	0
-64	National Day	Module 9_1	7	国庆节	0
-65	Children's Day	Module 9_2	7	儿童节	0
-65	July	Module 9_2	7	n.7月	0
-65	August	Module 9_2	7	n.8月	0
-65	September	Module 9_2	7	n.9月	0
-65	October	Module 9_2	7	n.10月	0
-66	November	Module 9_3	7	n.11月	0
-66	December	Module 9_3	7	n.12月	0
-66	writer	Module 9_3	7	n.作家	0
-66	find out	Module 9_3	7	发现	0
-66	real	Module 9_3	7	adj.真实的	0
-67	at the age of	Module 9_4	7	在...岁时	0
-67	newspaper	Module 9_4	7	n.报纸	0
-67	exact	Module 9_4	7	adj.准确的	0
-67	date	Module 9_4	7	n.日期	0
-67	become	Module 9_4	7	vt.成为	0
-68	play	Module 9_5	7	n.剧本	0
-68	poem	Module 9_5	7	n.诗歌	0
-68	marry	Module 9_5	7	vt.结婚	0
-68	successful	Module 9_5	7	adj.成功的	0
-68	work	Module 9_5	7	n.作品	0
-69	build	Module 9_6	7	vt.建造	0
-69	on	Module 9_6	7	prep.在...河边	0
-69	fire	Module 9_6	7	n.火	0
-69	die	Module 9_6	7	v.死	0
-70	rich	Module 9_7	7	adj.富有的	0
-70	language	Module 9_7	7	n.语言	0
-70	around the world	Module 9_7	7	世界各地	0
-70	young	Module 9_7	7	adj.年轻的	1
-71	Pacific	Module 10_1	3	adj.太平洋的	0
-71	so	Module 10_1	3	adv.那么	0
-71	guess	Module 10_1	3	n.&v.猜	0
-71	excited	Module 10_1	3	adj.激动的	0
-71	wow	Module 10_1	3	哇	0
-72	arrive	Module 10_2	3	vi.到达	0
-72	relax	Module 10_2	3	vi.放松	0
-72	world-famous	Module 10_2	3	adj.举世闻名的	0
-72	French	Module 10_2	3	n&adj.法国的	0
-72	sell	Module 10_2	3	vi.卖	0
-73	top	Module 10_3	3	n.顶端	0
-73	till	Module 10_3	3	conj.直到...为止	0
-73	light	Module 10_3	3	n.电灯	0
-73	on	Module 10_3	3	adj.在使用中	0
-73	wonderful	Module 10_3	3	adj.绝妙的	1
-73	palace	Module 10_3	3	n.宫殿	0
-74	bow	Module 11_1	9	鞠躬	0
-74	kiss	Module 11_1	9	vt.&n.吻	0
-74	shake	Module 11_1	9	vi.摇晃	0
-74	shake hands	Module 11_1	9	握手	0
-74	smile	Module 11_1	9	n.&v.微笑	0
-75	British	Module 11_2	9	n&adj.英国的	0
-75	German	Module 11_2	9	n&adj.德国人	0
-75	Japanese	Module 11_2	9	n&adj.日本人	0
-75	Russian	Module 11_2	9	n&adj.俄罗斯人	0
-75	visitor	Module 11_2	9	n.游客	0
-76	Russia	Module 11_3	9	n.俄罗斯	0
-76	what	Module 11_3	9	pron.什么	0
-76	nod	Module 11_3	9	n.点头	0
-76	head	Module 11_3	9	n.头	1
-76	hug	Module 11_3	9	v.拥抱	0
-77	each	Module 11_4	9	adj.各个	0
-77	each other	Module 11_4	9	互相	0
-77	India	Module 11_4	9	n.印度	0
-77	together	Module 11_4	9	adv.一起	0
-77	Maori	Module 11_4	9	adj.毛利人的	0
-78	touch	Module 11_5	9	vt.触摸	0
-78	nose	Module 11_5	9	n.鼻子	1
-78	finger	Module 11_5	9	n.手指	0
-78	foot	Module 11_5	9	n.脚	1
-78	knee	Module 11_5	9	n.膝盖	0
-79	leg	Module 11_6	9	n.腿	1
-79	mouth	Module 11_6	9	n.嘴	1
-79	body	Module 11_6	9	n.身体	1
-79	foreign	Module 11_6	9	adj.外国的	0
-79	North American	Module 11_6	9	北美人	0
-80	personal	Module 11_7	9	adj.个人的	0
-80	arm	Module 11_7	9	n.手臂	1
-80	arm in arm	Module 11_7	9	臂挽臂地	0
-80	South American	Module 11_7	9	南美人	0
-80	hold	Module 11_7	9	vt.握着	0
-81	move	Module 11_8	9	vt.移动	0
-81	Britain	Module 11_8	9	n.不列颠	0
-81	not at all	Module 11_8	9	一点也不	0
-81	polite	Module 11_8	9	adj.礼貌的	0
-81	somewhere	Module 11_8	9	adv.某处	0
-82	wave	Module 11_9	9	n.挥手	0
-82	fact	Module 11_9	9	n.事实	0
-82	in fact	Module 11_9	9	事实上	0
-82	rude	Module 11_9	9	adj.粗鲁的	0
-82	bring	Module 11_9	9	vt.带来	1
-83	lively	Module 12_1	6	adj.活泼的	0
-83	modern	Module 12_1	6	adj.现代的	0
-83	noisy	Module 12_1	6	adj.吵闹的	0
-83	pop	Module 12_1	6	adj.流行的	0
-83	rock	Module 12_1	6	n.摇滚乐	0
-84	sound	Module 12_2	6	n.声音	0
-84	violin	Module 12_2	6	n.小提琴	0
-84	western	Module 12_2	6	adj.西方的	0
-84	hmm	Module 12_2	6	嗯	0
-84	by	Module 12_2	6	prep.被	0
-85	through	Module 12_3	6	prep.穿过	0
-85	both	Module 12_3	6	pron.两个	0
-85	opera	Module 12_3	6	n.歌剧	0
-85	voice	Module 12_3	6	n.声音	0
-85	drum	Module 12_3	6	n.鼓	0
-86	believe	Module 12_4	6	vi.相信	0
-86	musician	Module 12_4	6	n.音乐家	0
-86	centre	Module 12_4	6	n.中心	0
-86	European	Module 12_4	6	adj.欧洲的	0
-86	classical	Module 12_4	6	adj.经典的	0
-87	century	Module 12_5	6	n.世纪	0
-87	composer	Module 12_5	6	n.作曲家	0
-87	elder	Module 12_5	6	adj.年长的	0
-87	waltz	Module 12_5	6	n.华尔兹舞	0
-87	dance music	Module 12_5	6	舞曲	0
-88	another	Module 12_6	6	adj.又一个	0
-88	piece	Module 12_6	6	n.作品	0
-88	poor	Module 12_6	6	adj.贫穷的	0
-88	perfect	Module 12_6	6	adj.完美的	0
-88	sad	Module 12_6	6	adj.令人悲伤的	1
-89	slow	Revision Module B_1	1	adj.慢的	1
-89	feel	Revision Module B_1	1	vt.感觉	1
-89	ship	Revision Module B_1	1	n.船	1
+49	horse	Module 6_8	8	n.马	1
+50	born	Module 7_1	5	vt.出生	0
+50	strict	Module 7_1	5	adj.严格的	0
+50	friendly	Module 7_1	5	adj.友好的	0
+50	primary	Module 7_1	5	adj.初等的	0
+50	primary school	Module 7_1	5	小学	0
+51	town	Module 7_2	5	n.城镇	0
+51	US	Module 7_2	5	abbr.美国	0
+51	hey	Module 7_2	5	int.嘿	0
+51	village	Module 7_2	5	n.村庄	0
+51	nice	Module 7_2	5	adj.友好的	0
+52	good	Module 7_3	5	adj.好的	0
+52	difficult	Module 7_3	5	adj.难对付的	0
+52	bathroom	Module 7_3	5	n.浴室	0
+52	bedroom	Module 7_3	5	n.卧室	0
+52	garden	Module 7_3	5	n.花园	0
+53	living room	Module 7_4	5	起居室	0
+53	east	Module 7_4	5	n.&adj.东面的	0
+53	coast	Module 7_4	5	n.海岸	0
+53	ago	Module 7_4	5	adv.以前	0
+53	store	Module 7_4	5	n.商店	0
+53	movie theater	Module 7_4	5	电影院	0
+54	bored	Module 7_5	5	adj.厌烦的	0
+54	president	Module 7_5	5	n.总统	0
+54	comfortable	Module 7_5	5	adj.舒适的	0
+54	lake	Module 7_5	5	n.湖	1
+54	last	Module 7_5	5	adj.最近过去的	0
+54	yesterday	Module 7_5	5	n.昨天	1
+55	hair	Module 8_1	8	n.头发	0
+55	gold	Module 8_1	8	n.金色	0
+55	forest	Module 8_1	8	n.森林	0
+55	once	Module 8_1	8	adv.一次	0
+55	upon	Module 8_1	8	prep.在...上	0
+56	once upon a time	Module 8_2	8	从前	0
+56	decide	Module 8_2	8	vt.决定	0
+56	go for a walk	Module 8_2	8	散步	0
+56	basket	Module 8_2	8	n.篮子	0
+56	notice	Module 8_2	8	v.注意到	0
+57	all alone	Module 8_3	8	独自一人的	0
+57	dark	Module 8_3	8	adj.黑暗的	0
+57	pick	Module 8_3	8	vt.采摘	0
+57	pick up	Module 8_3	8	拿起	0
+57	soon	Module 8_3	8	adv.立刻	0
+58	lost	Module 8_4	8	adj.迷路的	0
+58	around	Module 8_4	8	prep.环绕着	0
+58	little	Module 8_4	8	adj.小的	0
+58	towards	Module 8_4	8	prep.朝向	0
+58	knock	Module 8_4	8	n.敲	0
+59	door	Module 8_5	8	n.门	1
+59	answer	Module 8_5	8	vt.回答	1
+59	push	Module 8_5	8	n.&v.推	0
+59	enter	Module 8_5	8	vi.进入	0
+59	bowl	Module 8_5	8	n.碗	0
+60	hungry	Module 8_6	8	adj.饥饿的	1
+60	right	Module 8_6	8	adj.合适的	1
+60	finish	Module 8_6	8	vi.吃完	0
+60	either	Module 8_6	8	pron.也不	0
+60	piece	Module 8_6	8	n.碎片	0
+61	in pieces	Module 8_7	8	破碎地	0
+61	asleep	Module 8_7	8	adj.睡着的	0
+61	return	Module 8_7	8	vt.返回	0
+61	cry	Module 8_7	8	n.&v.哭	1
+61	at first	Module 8_7	8	起初	0
+62	point	Module 8_8	8	v.指向	0
+62	point at	Module 8_8	8	指着...	0
+62	shout	Module 8_8	8	n.大声喊	0
+62	jump	Module 8_8	8	n.跳	1
+62	without	Module 8_8	8	prep.无	0
+62	part	Module 8_8	8	n.部分	0
+63	March	Module 9_1	7	n.3月	0
+63	April	Module 9_1	7	n.4月	0
+63	June	Module 9_1	7	n.6月	0
+63	Women's Day	Module 9_1	7	妇女节	0
+63	National Day	Module 9_1	7	国庆节	0
+64	Children's Day	Module 9_2	7	儿童节	0
+64	July	Module 9_2	7	n.7月	0
+64	August	Module 9_2	7	n.8月	0
+64	September	Module 9_2	7	n.9月	0
+64	October	Module 9_2	7	n.10月	0
+65	November	Module 9_3	7	n.11月	0
+65	December	Module 9_3	7	n.12月	0
+65	writer	Module 9_3	7	n.作家	0
+65	find out	Module 9_3	7	发现	0
+65	real	Module 9_3	7	adj.真实的	0
+66	at the age of	Module 9_4	7	在...岁时	0
+66	newspaper	Module 9_4	7	n.报纸	0
+66	exact	Module 9_4	7	adj.准确的	0
+66	date	Module 9_4	7	n.日期	0
+66	become	Module 9_4	7	vt.成为	0
+67	play	Module 9_5	7	n.剧本	0
+67	poem	Module 9_5	7	n.诗歌	0
+67	marry	Module 9_5	7	vt.结婚	0
+67	successful	Module 9_5	7	adj.成功的	0
+67	work	Module 9_5	7	n.作品	0
+68	build	Module 9_6	7	vt.建造	0
+68	on	Module 9_6	7	prep.在...河边	0
+68	fire	Module 9_6	7	n.火	0
+68	die	Module 9_6	7	v.死	0
+69	rich	Module 9_7	7	adj.富有的	0
+69	language	Module 9_7	7	n.语言	0
+69	around the world	Module 9_7	7	世界各地	0
+69	young	Module 9_7	7	adj.年轻的	1
+70	Pacific	Module 10_1	3	adj.太平洋的	0
+70	so	Module 10_1	3	adv.那么	0
+70	guess	Module 10_1	3	n.&v.猜	0
+70	excited	Module 10_1	3	adj.激动的	0
+70	wow	Module 10_1	3	哇	0
+71	arrive	Module 10_2	3	vi.到达	0
+71	relax	Module 10_2	3	vi.放松	0
+71	world-famous	Module 10_2	3	adj.举世闻名的	0
+71	French	Module 10_2	3	n&adj.法国的	0
+71	sell	Module 10_2	3	vi.卖	0
+72	top	Module 10_3	3	n.顶端	0
+72	till	Module 10_3	3	conj.直到...为止	0
+72	light	Module 10_3	3	n.电灯	0
+72	on	Module 10_3	3	adj.在使用中	0
+72	wonderful	Module 10_3	3	adj.绝妙的	1
+72	palace	Module 10_3	3	n.宫殿	0
+73	bow	Module 11_1	9	鞠躬	0
+73	kiss	Module 11_1	9	vt.&n.吻	0
+73	shake	Module 11_1	9	vi.摇晃	0
+73	shake hands	Module 11_1	9	握手	0
+73	smile	Module 11_1	9	n.&v.微笑	0
+74	British	Module 11_2	9	n&adj.英国的	0
+74	German	Module 11_2	9	n&adj.德国人	0
+74	Japanese	Module 11_2	9	n&adj.日本人	0
+74	Russian	Module 11_2	9	n&adj.俄罗斯人	0
+74	visitor	Module 11_2	9	n.游客	0
+75	Russia	Module 11_3	9	n.俄罗斯	0
+75	what	Module 11_3	9	pron.什么	0
+75	nod	Module 11_3	9	n.点头	0
+75	head	Module 11_3	9	n.头	1
+75	hug	Module 11_3	9	v.拥抱	0
+76	each	Module 11_4	9	adj.各个	0
+76	each other	Module 11_4	9	互相	0
+76	India	Module 11_4	9	n.印度	0
+76	together	Module 11_4	9	adv.一起	0
+76	Maori	Module 11_4	9	adj.毛利人的	0
+77	touch	Module 11_5	9	vt.触摸	0
+77	nose	Module 11_5	9	n.鼻子	1
+77	finger	Module 11_5	9	n.手指	0
+77	foot	Module 11_5	9	n.脚	1
+77	knee	Module 11_5	9	n.膝盖	0
+78	leg	Module 11_6	9	n.腿	1
+78	mouth	Module 11_6	9	n.嘴	1
+78	body	Module 11_6	9	n.身体	1
+78	foreign	Module 11_6	9	adj.外国的	0
+78	North American	Module 11_6	9	北美人	0
+79	personal	Module 11_7	9	adj.个人的	0
+79	arm	Module 11_7	9	n.手臂	1
+79	arm in arm	Module 11_7	9	臂挽臂地	0
+79	South American	Module 11_7	9	南美人	0
+79	hold	Module 11_7	9	vt.握着	0
+80	move	Module 11_8	9	vt.移动	0
+80	Britain	Module 11_8	9	n.不列颠	0
+80	not at all	Module 11_8	9	一点也不	0
+80	polite	Module 11_8	9	adj.礼貌的	0
+80	somewhere	Module 11_8	9	adv.某处	0
+81	wave	Module 11_9	9	n.挥手	0
+81	fact	Module 11_9	9	n.事实	0
+81	in fact	Module 11_9	9	事实上	0
+81	rude	Module 11_9	9	adj.粗鲁的	0
+81	bring	Module 11_9	9	vt.带来	1
+82	lively	Module 12_1	6	adj.活泼的	0
+82	modern	Module 12_1	6	adj.现代的	0
+82	noisy	Module 12_1	6	adj.吵闹的	0
+82	pop	Module 12_1	6	adj.流行的	0
+82	rock	Module 12_1	6	n.摇滚乐	0
+83	sound	Module 12_2	6	n.声音	0
+83	violin	Module 12_2	6	n.小提琴	0
+83	western	Module 12_2	6	adj.西方的	0
+83	hmm	Module 12_2	6	嗯	0
+83	by	Module 12_2	6	prep.被	0
+84	through	Module 12_3	6	prep.穿过	0
+84	both	Module 12_3	6	pron.两个	0
+84	opera	Module 12_3	6	n.歌剧	0
+84	voice	Module 12_3	6	n.声音	0
+84	drum	Module 12_3	6	n.鼓	0
+85	believe	Module 12_4	6	vi.相信	0
+85	musician	Module 12_4	6	n.音乐家	0
+85	centre	Module 12_4	6	n.中心	0
+85	European	Module 12_4	6	adj.欧洲的	0
+85	classical	Module 12_4	6	adj.经典的	0
+86	century	Module 12_5	6	n.世纪	0
+86	composer	Module 12_5	6	n.作曲家	0
+86	elder	Module 12_5	6	adj.年长的	0
+86	waltz	Module 12_5	6	n.华尔兹舞	0
+86	dance music	Module 12_5	6	舞曲	0
+87	another	Module 12_6	6	adj.又一个	0
+87	piece	Module 12_6	6	n.作品	0
+87	poor	Module 12_6	6	adj.贫穷的	0
+87	perfect	Module 12_6	6	adj.完美的	0
+87	sad	Module 12_6	6	adj.令人悲伤的	1
+88	slow	Revision Module B_1	1	adj.慢的	1
+88	feel	Revision Module B_1	1	vt.感觉	1
+88	ship	Revision Module B_1	1	n.船	1
