@@ -2,7 +2,7 @@
 	"packageUrl" : "http://123.56.84.196/BookSoundBag/",
 	"remoteManifestUrl" : "http://123.56.84.196/BookSoundBag/book_sound_NJSZB_CG9_A_server.manifest",
 	"remoteVersionUrl" : "http://123.56.84.196/BookSoundBag/book_sound_NJSZB_CG9_A_version.manifest",
-	"version" : "1.9.9",
+	"version" : "2.0.0",
 	"engineVersion" : "3.3 rc2",
 	"assets" : {
 		"NJSZB_CG9_A.zip" : {

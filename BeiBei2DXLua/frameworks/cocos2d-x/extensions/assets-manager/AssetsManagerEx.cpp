@@ -348,6 +348,17 @@ bool AssetsManagerEx::decompress(const std::string &zip)
         }
         else
         {
+            std::string dir = basename(fullPath);
+            if(!_fileUtils->isDirectoryExist(dir)) {
+                if(!_fileUtils->createDirectory(dir)) {
+                    // Failed to create directory
+                    CCLOG("AssetsManagerEx : can not create directory %s\n", fullPath.c_str());
+                    unzClose(zipfile);
+                    return false;
+                }
+                
+            }
+
             // Entry is a file, so extract it.
             // Open current file.
             if (unzOpenCurrentFile(zipfile) != UNZ_OK)
