@@ -114,7 +114,11 @@ function ChapterLayerBase:plotUnlockLevelAnimation(levelKey)
         end)
         self:callFuncWithDelay(2.0, function()
             --if not tolua.isnull(self) and not tolua.isnull(self.addPopup) then
+            print('user guide step')
+            print(s_CURRENT_USER.guideStep)
+            if s_CURRENT_USER.guideStep - s_guide_step_bag6 >= 0 then
                 self:addPopup(levelIndex-0)
+            end
             --end
         end)
     end
