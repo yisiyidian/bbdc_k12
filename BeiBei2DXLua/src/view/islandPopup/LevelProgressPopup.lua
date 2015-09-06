@@ -98,7 +98,7 @@ function LevelProgressPopup:createSummary(index)
 
     local function button_func(  )
         playSound(s_sound_buttonEffect) 
-
+        s_lastLevelOfEachBook[s_CURRENT_USER.bookKey] = self.index
         if s_CURRENT_USER.guideStep <= s_guide_step_enterCard then  
             local SmallAlterWithOneButton = require("view.alter.SmallAlterWithOneButton")
             local smallAlter = SmallAlterWithOneButton.create("请先跟着引导点击词库")

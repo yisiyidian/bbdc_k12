@@ -104,7 +104,14 @@ function ChapterLayer:ctor()
     --elseif taskIndex >= 0 then
     --    self:scrollLevelLayer(taskIndex, 0)
     else
-        self:scrollLevelLayer(progress, 0)
+        -- 获取上次点击的关卡号
+        if progress - s_lastLevelOfEachBook[s_CURRENT_USER.bookKey] <= 1 then
+            self:scrollLevelLayer(progress, 0)
+        else
+            print('-----scroll-----')
+            print(s_lastLevelOfEachBook[s_CURRENT_USER.bookKey])
+            self:scrollLevelLayer(s_lastLevelOfEachBook[s_CURRENT_USER.bookKey]+0, 0)
+        end
     end
 
 

@@ -118,6 +118,16 @@ function HomeLayer:ctor()
     self.offlineTipFriend = offlineTipFriend
     self:addChild(offlineTipHome,2)
     self:addChild(offlineTipFriend,2)
+
+    -- 初始化关卡上次点击索引的信息
+    if #s_lastLevelOfEachBook == 0 then
+        for i, v in ipairs(g_BOOKKEYS) do
+            s_lastLevelOfEachBook[v] = s_CURRENT_USER.levelInfo:getLevelInfo(v)
+        end
+    end
+    print('------s_lastLevelOfEachBook')
+    print_lua_table(s_lastLevelOfEachBook)
+
     -- --设置界面
     -- local setting_back = SettingLayer.new(self)
     -- setting_back:setPosition(0, s_DESIGN_HEIGHT/2)
