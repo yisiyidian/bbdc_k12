@@ -100,6 +100,7 @@ PLAY_WORD_SOUND_UNKNOWN = 'PLAY_WORD_SOUND_UNKNOWN'
 -- 播放单词声音
 function playWordSound(word)
     if db.isSoundOn() then
+        word = string.lower(word)
         if not isWord(word) then 
            word = string.gsub(word," ","_")
         end
