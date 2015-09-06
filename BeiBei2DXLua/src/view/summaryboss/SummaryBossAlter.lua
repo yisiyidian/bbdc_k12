@@ -20,6 +20,14 @@ function SummaryBossAlter.create(bossLayer,win,entrance)
     layer.wordList = bossLayer.wordList
     -- 这个名字起的真好，我竟无言以对
     layer.bossLayer = bossLayer
+    layer.constWord = bossLayer.constWord
+    layer.stardandTime = 0
+
+    for i=1,#layer.constWord do
+        if layer.constWord[i][1] ~= nil then
+            layer.stardandTime = layer.stardandTime + #layer.constWord[i][1] * 1.3
+        end
+    end
 
     layer.entrance = entrance
     layer.needToAddBean = win
@@ -416,12 +424,12 @@ function SummaryBossAlter:addWinLabel(win_back)
     been_number:setVisible(false)
 
     local title = cc.Sprite:create('image/summarybossscene/title_shengli_study.png')
-    title:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.92)
+    title:setPosition(s_DESIGN_WIDTH / 2,1068)
     self:addChild(title)
 
     local right_label = cc.Label:createWithSystemFont('答对         单词','',32)
     right_label:setColor(cc.c3b(70,136,158))
-    right_label:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.92 - 100)
+    right_label:setPosition(s_DESIGN_WIDTH / 2,870)
     self:addChild(right_label)
     local word_count = 0
     local word_count_label = cc.Label:createWithSystemFont(string.format('%d',word_count),'',48)
@@ -432,8 +440,19 @@ function SummaryBossAlter:addWinLabel(win_back)
 
     local time_label = cc.Label:createWithSystemFont('耗时       分钟         秒','',32)
     time_label:setColor(cc.c3b(70,136,158))
-    time_label:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.92 - 170)
+    time_label:setPosition(s_DESIGN_WIDTH / 2,804)
     self:addChild(time_label)   
+
+    local defeat_label = cc.Label:createWithSystemFont('超过了              的用户','',32)
+    defeat_label:setColor(cc.c3b(70,136,158))
+    defeat_label:setPosition(s_DESIGN_WIDTH / 2,735)
+    self:addChild(defeat_label)  
+
+    local defeat_count = 0
+    local defeat_count_label = cc.Label:createWithSystemFont(string.format('%d',defeat_count),'',48)
+    defeat_count_label:setPosition(defeat_label:getPositionX(),defeat_label:getPositionY() + 2)
+    defeat_count_label:setColor(cc.c3b(82,190,17))
+    self:addChild(defeat_count_label)
 
     local min_count = 0
     local sec_count = 0
@@ -454,9 +473,9 @@ function SummaryBossAlter:addWinLabel(win_back)
         self:addChild(bean_back[i],1)
         bean_back[i]:setVisible(false)
     end
-    bean_back[1]:setPosition(s_DESIGN_WIDTH / 2 - 100,s_DESIGN_HEIGHT * 0.67)
-    bean_back[2]:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.67 + 30)
-    bean_back[3]:setPosition(s_DESIGN_WIDTH / 2 + 100,s_DESIGN_HEIGHT * 0.67)
+    bean_back[1]:setPosition(s_DESIGN_WIDTH / 2 - 100,s_DESIGN_HEIGHT * 0.83)
+    bean_back[2]:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.83 + 30)
+    bean_back[3]:setPosition(s_DESIGN_WIDTH / 2 + 100,s_DESIGN_HEIGHT * 0.83)
 
     if self.needToAddBean then
         been_number:setVisible(true)
@@ -464,12 +483,21 @@ function SummaryBossAlter:addWinLabel(win_back)
             bean_back[i]:setVisible(true)
         end
     end
+
+    local showTime = self:getRatio(self.bossLayer.useTime,self.stardandTime)
+
     local function update(delta)
         --print('delta='..delta)
         if word_count < self.bossLayer.maxCount then
             word_count = word_count + 1
             word_count_label:setString(string.format('%d',word_count))
         end
+
+        if defeat_count < showTime then
+            defeat_count = defeat_count + 1
+            defeat_count_label:setString(string.format('%d',defeat_count).."%")
+        end
+
         if min_count < math.floor(self.bossLayer.useTime/60) then
             min_count = min_count + 1
             min_count_label:setString(string.format('%d',min_count))
@@ -482,7 +510,8 @@ function SummaryBossAlter:addWinLabel(win_back)
             -- end
             sec_count_label:setString(string.format('%d',sec_count))
         end
-        if word_count == self.bossLayer.maxCount and min_count == math.floor(self.bossLayer.useTime/60) and sec_count >= math.floor(self.bossLayer.useTime%60) then
+
+        if word_count == self.bossLayer.maxCount and defeat_count_label == showTime and min_count == math.floor(self.bossLayer.useTime/60) and sec_count >= math.floor(self.bossLayer.useTime%60) then
             if self.needToAddBean then
                 for i = 1,3 do
                     local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')
@@ -545,8 +574,14 @@ function SummaryBossAlter:addWinLabel(win_back)
 
     end
     self:scheduleUpdateWithPriorityLua(update, 0)
+end
 
-
+function SummaryBossAlter:getRatio(userTime,goalTime)
+    if userTime < goalTime then
+        return 100
+    else
+        return 100 * math.ceil(math.exp(-1 * 0.01 * (userTime - goalTime)))
+    end
 end
 
 return SummaryBossAlter

@@ -84,6 +84,7 @@ function NewSummaryBossLayer:initStageInfo()
     self.useTime = 0
     --单词
     self.wordList = self:initWordList()
+    self.constWord = self:initWordList()
     --总词数
     self.maxCount = #self.wordList
     --boss血量
