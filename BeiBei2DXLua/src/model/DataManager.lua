@@ -331,6 +331,7 @@ end
 
 -- book -------------------------------------------------------------------
 
+-- 单词配置newbook的行数比单词数多一行
 function DataManager.loadBooks()
     local time = os.clock()
     --local jsonObj = loadJsonFile(s_books)
@@ -345,7 +346,7 @@ function DataManager.loadBooks()
         local lines = split(content, "\n")
         local book = MetaBook.create(data.key,
                                     data.name,
-                                    #lines,
+                                    #lines - 1,
                                     data.music,
                                     data.type)
         DataManager.books[data.key] = book
