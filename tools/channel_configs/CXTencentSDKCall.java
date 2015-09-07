@@ -134,6 +134,17 @@ public class CXTencentSDKCall {
 	    mTencent.shareToQQ(mActivity, params, new ShareImageToQQFriendListener());
 	}
 	
+	public void shareURLToQQFriend(final String path, final String title, final String desc) {
+		final Bundle params   = new Bundle();
+		params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_DEFAULT);
+		params.putString(QQShare.SHARE_TO_QQ_TITLE, title);
+		params.putString(QQShare.SHARE_TO_QQ_SUMMARY,  desc);
+		    params.putString(QQShare.SHARE_TO_QQ_TARGET_URL,    path);
+		    params.putString(QQShare.SHARE_TO_QQ_IMAGE_URL,   "http://yisiyidian.com/doubi/html5/logo.jpg");
+		    params.putString(QQShare.SHARE_TO_QQ_APP_NAME,    "贝贝单词");            
+		    mTencent.shareToQQ(mActivity,   params, new ShareURLToQQFriendListener());
+	}
+	
 	public void shareImageToWeiXin(final String path, final String title, final String desc) {
 
             	
@@ -186,7 +197,7 @@ public class CXTencentSDKCall {
 
 	}
 	
-public void shareURLToWeiXin(final String url, final String title, final String desc) {
+	public void shareURLToWeiXin(final String url, final String title, final String desc) {
 
             	
 				// File file = new File(url);
@@ -324,6 +335,38 @@ public void shareURLToWeiXin(final String url, final String title, final String 
 	
 	// ------------------------------------------------------------------------------
 	class ShareImageToQQFriendListener implements IUiListener {
+
+		@Override
+		public void onCancel() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void onComplete(Object arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void onError(final UiError error) {
+			mActivity.runOnUiThread(new Runnable() {
+
+				@Override
+				public void run() {
+					new AlertDialog.Builder(mActivity)							
+							.setMessage(error.errorMessage)
+							.setNegativeButton("CLOSE", null)
+							.create()
+							.show();
+				}
+
+			});
+		}
+			
+	}
+	
+	class ShareURLToQQFriendListener implements IUiListener {
 
 		@Override
 		public void onCancel() {

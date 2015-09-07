@@ -41,8 +41,11 @@
         
 --------------------------------
 -- 
--- @function [parent=#CXUtils] shutDownApp 
+-- @function [parent=#CXUtils] shareURLToQQFriend 
 -- @param self
+-- @param #string path
+-- @param #string title
+-- @param #string desc
         
 --------------------------------
 -- 
@@ -72,6 +75,11 @@
 -- @param #string url
 -- @param #string title
 -- @param #string desc
+        
+--------------------------------
+-- 
+-- @function [parent=#CXUtils] shutDownApp 
+-- @param self
         
 --------------------------------
 -- 

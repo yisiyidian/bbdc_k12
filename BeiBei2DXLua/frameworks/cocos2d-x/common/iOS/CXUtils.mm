@@ -17,6 +17,13 @@ void CXUtils::shareImageToQQFriend(const std::string& path, const std::string& t
                                                     desc:[NSString stringWithUTF8String:desc.c_str()]];
 }
 
+void CXUtils::shareURLToQQFriend(const std::string& path, const std::string& title, const std::string& desc) {
+    [[CXTencentSDKCall getInstance] shareURLToQQFriend:[NSString stringWithUTF8String:path.c_str()]
+                                                   title:[NSString stringWithUTF8String:title.c_str()]
+                                                    desc:[NSString stringWithUTF8String:desc.c_str()]];
+}
+
+
 void CXUtils::shareImageToWeiXin(const std::string& path, const std::string& title, const std::string& desc) {
     
     WXMediaMessage *message = [WXMediaMessage message];
