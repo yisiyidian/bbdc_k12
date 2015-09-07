@@ -1,5 +1,7 @@
 -- 设计文档
 -- https://docs.google.com/document/d/1FEHzKtwvVpyNebCRsNrW98pvs52sbQ2Ks3LpNxI1BF0/edit#
+-- 计算公式更新
+-- 2015年09月07日09:46:57
 
 local ShareConfig = require("model.share.ShareConfig")
 -- 载入配置
@@ -195,16 +197,8 @@ function SharePopupController:getScore()
 	end
 
 	local score = 0
-	math.randomseed(tostring(os.time()):reverse():sub(1, 6))  
-	if self.time <= wordNumber * 3  + wordLength then
-		score = math.random(ShareConfig.score[1],ShareConfig.score[1]+10)
-	elseif self.time <= wordNumber * 4  + wordLength then
-		score = math.random(ShareConfig.score[2],ShareConfig.score[2]+10)
-	elseif self.time <= wordNumber * 5  + wordLength then
-		score = math.random(ShareConfig.score[3],ShareConfig.score[3]+10)
-	elseif self.time <= wordNumber * 6  + wordLength then
-		score = math.random(ShareConfig.score[4],ShareConfig.score[4]+10)
-	end
+	local SummaryBossAlter = require("view.summaryboss.SummaryBossAlter")
+	score = SummaryBossAlter:getRatio(self.time,wordLength * 1.3)   
 	return score
 end
 
