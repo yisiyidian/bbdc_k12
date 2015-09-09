@@ -72,13 +72,13 @@ end
 function WordCardRender:updataView()
     if self.index == 1 then
         self.text:setSystemFontSize(40)
-        self:PlayAnimation(self.text,0.7)
-        self:runAction(cc.Sequence:create(cc.DelayTime:create(0.7),cc.CallFunc:create(function ()
+        self:PlayAnimation(self.text,2)
+        self:runAction(cc.Sequence:create(cc.DelayTime:create(1),cc.CallFunc:create(function ()
             self:PlaySoundCall()
         end)))
     elseif self.index == 2 then
         self.text:setSystemFontSize(55)
-        self:PlayAnimation(self.text,1.6)
+        self:PlayAnimation(self.text,2.8)
     elseif self.index == 3 then
         self.text:setDimensions(0,0)
         self.text:setSystemFontSize(35)
@@ -89,12 +89,12 @@ function WordCardRender:updataView()
         -- playWordBtn:setOpacity(0)
         -- self.playWordBtn = playWordBtn
         -- self:addChild(self.playWordBtn)
-        self:PlayAnimation(self.text,2.8)
+        self:PlayAnimation(self.text,4)
         -- self:PlayAnimation(playWordBtn,2.8)
     elseif self.index == 4 then
         self.text:setSystemFontSize(27)
         self:setContentSize(cc.size(500,150))
-        self:PlayAnimation(self.text,4)
+        self:PlayAnimation(self.text,5.4)
     end
 
     if self.index == 4 then
