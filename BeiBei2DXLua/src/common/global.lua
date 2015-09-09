@@ -132,7 +132,7 @@ local function _initServer()
     
     -- user base server
     s_UserBaseServer          = reloadModule('server.UserBaseServer')
-s_HttpRequestClient       = reloadModule('server.HttpRequestClient')
+    s_HttpRequestClient       = reloadModule('server.HttpRequestClient')
 
     reloadModule('server.Analytics')
 end
