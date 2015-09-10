@@ -58,15 +58,6 @@ function IntroLayer.create(directOnLogin)
         end
     end
 
-    -- if IS_SNS_QQ_LOGIN_AVAILABLE and isOnline then
-    --     local button_qq = ccui.Button:create()
-    --     button_qq:loadTextures("image/button/button_white2_denglu.png", "", "")
-    --     button_qq:addTouchEventListener(button_qq_clicked)
-    --     button_qq:setPosition(s_DESIGN_WIDTH/2, 590)
-    --     button_qq:setTitleFontSize(36)
-    --     button_qq:setTitleText("QQ登陆")
-    --     intro:addChild(button_qq)
-    -- end
     -- 游客登陆按钮
     local button_visitor = ccui.Button:create()
     button_visitor:loadTextures("image/button/button_login_2.png", "", "")

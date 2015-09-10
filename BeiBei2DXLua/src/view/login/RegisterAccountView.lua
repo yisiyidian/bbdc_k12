@@ -928,6 +928,27 @@ function RegisterAccountView:showIntroView()
 	btnLogin:setPosition(615 - 127, 365)
 	self:addChild(btnLogin)
 	self.introviews[#self.introviews + 1] = btnLogin
+
+	local function button_qq_clicked(sender, eventType)
+	    if eventType == ccui.TouchEventType.ended then
+	        -- playSound(s_sound_buttonEffect)
+	        s_SCENE:logInByQQ()
+	    end
+	end
+
+	local isOnline = s_SERVER.isNetworkConnectedWhenInited()
+	print(tostring(isOnline),'IS_SNS_QQ_LOGIN_AVAILABLE',tostring(IS_SNS_QQ_LOGIN_AVAILABLE))
+	if IS_SNS_QQ_LOGIN_AVAILABLE and isOnline then
+		
+        local button_qq = ccui.Button:create()
+        button_qq:loadTextures("image/button/button_white2_denglu.png", "", "")
+        button_qq:addTouchEventListener(button_qq_clicked)
+        button_qq:setPosition(s_DESIGN_WIDTH/2, 590)
+        button_qq:setTitleFontSize(36)
+        button_qq:setTitleText("QQ登陆")
+        self:addChild(button_qq)
+        self.introviews[#self.introviews + 1] = button_qq
+    end
 end
 
 function RegisterAccountView:onIntroLoginTouch( sender,eventType)
