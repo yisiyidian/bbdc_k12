@@ -415,10 +415,10 @@ end
 -- scroll self.listView to show the specific chapter and level
 function ChapterLayer:scrollLevelLayer(levelIndex, scrollTime)
         print('enter scrollLevelLayer...levelIndex:'..levelIndex)
-        s_SCENE.touchEventBlockLayer.lockTouch()
-        self:callFuncWithDelay(0.3, function()
-            s_SCENE.touchEventBlockLayer.unlockTouch()
-        end)
+        -- s_SCENE.touchEventBlockLayer.lockTouch()
+        -- self:callFuncWithDelay(0.3, function()
+        --     s_SCENE.touchEventBlockLayer.unlockTouch()
+        -- end)
         if levelIndex <= 1 then
             return
         end
