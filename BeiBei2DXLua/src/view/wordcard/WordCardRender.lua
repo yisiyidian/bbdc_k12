@@ -72,29 +72,28 @@ end
 function WordCardRender:updataView()
     if self.index == 1 then
         self.text:setSystemFontSize(40)
-        self:PlayAnimation(self.text,2)
+        self:PlayAnimation(self.text,0.2)
         self:runAction(cc.Sequence:create(cc.DelayTime:create(1),cc.CallFunc:create(function ()
             self:PlaySoundCall()
         end)))
     elseif self.index == 2 then
         self.text:setSystemFontSize(55)
-        self:PlayAnimation(self.text,2.8)
+        self:PlayAnimation(self.text,0.9)
     elseif self.index == 3 then
         self.text:setDimensions(0,0)
         self.text:setSystemFontSize(35)
-        -- local playWordBtn = ccui.Button:create("image/islandPopup/soundNormal.png","image/islandPopup/soundPress.png","")
-        -- playWordBtn:setPosition(80 + self.text:getContentSize().width + 80,(self:getContentSize().height + 60 )/ 2)
-        -- playWordBtn:addTouchEventListener(handler(self,self.PlaySound))
-        -- playWordBtn:setScale(1.5)
-        -- playWordBtn:setOpacity(0)
-        -- self.playWordBtn = playWordBtn
-        -- self:addChild(self.playWordBtn)
-        self:PlayAnimation(self.text,4)
-        -- self:PlayAnimation(playWordBtn,2.8)
+        local playWordBtn = cc.Sprite:create("image/islandPopup/soundNormal.png")
+        playWordBtn:setPosition(80 + self.text:getContentSize().width + 80,(self:getContentSize().height + 60 )/ 2)
+        playWordBtn:setScale(1.5)
+        playWordBtn:setOpacity(0)
+        self.playWordBtn = playWordBtn
+        self:addChild(self.playWordBtn)
+        self:PlayAnimation(self.text,1.6)
+        self:PlayAnimation(playWordBtn,1.6)
     elseif self.index == 4 then
         self.text:setSystemFontSize(27)
         self:setContentSize(cc.size(500,150))
-        self:PlayAnimation(self.text,5.4)
+        self:PlayAnimation(self.text,2.3)
     end
 
     if self.index == 4 then
@@ -108,10 +107,10 @@ function WordCardRender:updataView()
 end
 
 function WordCardRender:setViewVisible()
-    -- if self.index == 3 then
-    --     self.playWordBtn:stopAllActions()
-    --     self.playWordBtn:runAction(cc.FadeIn:create(0))
-    -- end
+    if self.index == 3 then
+        self.playWordBtn:stopAllActions()
+        self.playWordBtn:runAction(cc.FadeIn:create(0))
+    end
     self.text:stopAllActions()
     self.text:runAction(cc.FadeIn:create(0))
 end
