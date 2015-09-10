@@ -140,7 +140,7 @@ function SharePopup:shareFunc(sender, eventType)
 		local per = self.score..'%'
 		local title = string.format(ShareConfig.normalTitle[randomNum],per)
 		print(title)
-    	cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.php', title, '贝贝单词－根本停不下来')
+    	cx.CXUtils:getInstance():shareURLToQQFriend('http://yisiyidian.com/doubi/html5/index.php', title, '贝贝单词－根本停不下来')
 	elseif self.type == SHARE_TYPE_DATE then
 		local num = self.time
 		if self.time >= #ShareConfig.dateTitle then
@@ -148,12 +148,12 @@ function SharePopup:shareFunc(sender, eventType)
 		end
 		local title = string.format(ShareConfig.dateTitle[num],self.score)
 		print(title)
-    	cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.php', title, '贝贝单词－根本停不下来')
+    	cx.CXUtils:getInstance():shareURLToQQFriend('http://yisiyidian.com/doubi/html5/index.php', title, '贝贝单词－根本停不下来')
 	elseif self.type == SHARE_TYPE_FIRST_LEVEL then
 		local randomNum = math.random(1,#ShareConfig.finishGuideTitle)
 		local title = ShareConfig.finishGuideTitle[randomNum]
 		print(title)
-    	cx.CXUtils:getInstance():shareURLToWeiXin('http://yisiyidian.com/doubi/html5/index.php', title, '贝贝单词－根本停不下来')
+    	cx.CXUtils:getInstance():shareURLToQQFriend('http://yisiyidian.com/doubi/html5/index.php', title, '贝贝单词－根本停不下来')
 	end 
 
 	

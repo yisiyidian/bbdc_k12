@@ -165,6 +165,7 @@ s_guide_step_bag7 = 22
 -- 引导结束
 s_guide_step_over = 100
 
+
 local AppScene = class("AppScene", function()
     return cc.Scene:create()
 end)

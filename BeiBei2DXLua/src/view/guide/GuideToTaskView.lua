@@ -8,6 +8,8 @@ local GuideToTaskView = class("GuideToTaskView",function ()
 	return layer
 end)
 
+local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
+
 function GuideToTaskView.create()
     local layer = GuideToTaskView.new()
     return layer
@@ -222,7 +224,7 @@ function GuideToTaskView:resetPopup()
 	local action1 = cc.DelayTime:create(0)
 	local action2 = cc.CallFunc:create(function ()
 		if self.index == 5 then
-			local action1 = cc.MoveTo:create(0.1,cc.p(s_DESIGN_WIDTH /2,s_DESIGN_HEIGHT * 0.45))
+			local action1 = cc.MoveTo:create(0.1,cc.p(bigWidth /2,s_DESIGN_HEIGHT * 0.45))
 			local action2 = cc.ScaleTo:create(0.1,1)
 			local action = cc.Sequence:create(action1,action2)
 			self.pop:runAction(action)

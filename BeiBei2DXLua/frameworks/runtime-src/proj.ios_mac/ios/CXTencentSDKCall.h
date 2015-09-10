@@ -74,5 +74,5 @@
 - (void)logout;
 
 - (void)shareImageToQQFriend:(NSString*)path title:(NSString*)title desc:(NSString*)desc;
-
+- (void)shareURLToQQFriend:(NSString*)path title:(NSString*)title desc:(NSString*)desc;
 @end

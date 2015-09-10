@@ -4,13 +4,13 @@
 --{["guide_id"] = 引导的步骤
 -- pos=label出现的位置	
 -- desc=label显示的文字}, 			
-
+local bigWidth = s_DESIGN_WIDTH+2*s_DESIGN_OFFSET_WIDTH
 local GuideConfig = {}
 
 GuideConfig.data = {
 	{["guide_id"] = 1,	pos=cc.p(s_DESIGN_WIDTH *0.5,1050)	,desc="请选择合适你的年级"					,color="white"			}, 			
 	{["guide_id"] = 2,	pos=cc.p(s_DESIGN_WIDTH *0.6,1050)	,desc="请选择合适你的书籍"					,color="white"			}, 	
-	{["guide_id"] = 3,	pos=cc.p(s_DESIGN_WIDTH / 2,200)	,desc="点击上方按钮进入游戏"				,color="yellow"			},
+	{["guide_id"] = 3,	pos=cc.p(bigWidth / 2,200)	,desc="点击上方按钮进入游戏"				,color="yellow"			},
 	{["guide_id"] = 4,	pos=cc.p(s_DESIGN_WIDTH / 2,1000)	,desc="boss过来啦，快划词"				,color="yellow"			},
 	{["guide_id"] = 5,	pos=cc.p(s_DESIGN_WIDTH / 2,600)	,desc="是时候来一场真正的战斗了"			,color="yellow"			,bb="bb"},
 	{["guide_id"] = 6,	pos=cc.p(s_DESIGN_WIDTH *0.6,650)	,desc=""								,color="blue1"			},

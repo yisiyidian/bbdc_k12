@@ -104,7 +104,14 @@ function ChapterLayer:ctor()
     --elseif taskIndex >= 0 then
     --    self:scrollLevelLayer(taskIndex, 0)
     else
-        self:scrollLevelLayer(progress, 0)
+        -- 获取上次点击的关卡号
+        if progress - s_lastLevelOfEachBook[s_CURRENT_USER.bookKey] <= 1 then
+            self:scrollLevelLayer(progress, 0)
+        else
+            print('-----scroll-----')
+            print(s_lastLevelOfEachBook[s_CURRENT_USER.bookKey])
+            self:scrollLevelLayer(s_lastLevelOfEachBook[s_CURRENT_USER.bookKey]+0, 0)
+        end
     end
 
 
@@ -126,7 +133,7 @@ function ChapterLayer:ctor()
 
         s_CorePlayManager.enterGuideScene(5,self.backColor)
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
-        summaryboss:setPosition(310,725)
+        summaryboss:setPosition(310 + s_DESIGN_OFFSET_WIDTH,725)
         summaryboss:setAnchorPoint(1,1)
         summaryboss:addAnimation(0, 'jianxiao', true)
         summaryboss:setScale(0.9)

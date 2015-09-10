@@ -20,6 +20,14 @@ function SummaryBossAlter.create(bossLayer,win,entrance)
     layer.wordList = bossLayer.wordList
     -- 这个名字起的真好，我竟无言以对
     layer.bossLayer = bossLayer
+    layer.constWord = bossLayer.constWord
+    layer.stardandTime = 0
+
+    for i=1,#layer.constWord do
+        if layer.constWord[i][1] ~= nil then
+            layer.stardandTime = layer.stardandTime + #layer.constWord[i][1] * 1.3
+        end
+    end
 
     layer.entrance = entrance
     layer.needToAddBean = win
@@ -416,12 +424,12 @@ function SummaryBossAlter:addWinLabel(win_back)
     been_number:setVisible(false)
 
     local title = cc.Sprite:create('image/summarybossscene/title_shengli_study.png')
-    title:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.92)
+    title:setPosition(s_DESIGN_WIDTH / 2,1068)
     self:addChild(title)
 
     local right_label = cc.Label:createWithSystemFont('答对         单词','',32)
     right_label:setColor(cc.c3b(70,136,158))
-    right_label:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.92 - 100)
+    right_label:setPosition(s_DESIGN_WIDTH / 2,870)
     self:addChild(right_label)
     local word_count = 0
     local word_count_label = cc.Label:createWithSystemFont(string.format('%d',word_count),'',48)
@@ -432,8 +440,19 @@ function SummaryBossAlter:addWinLabel(win_back)
 
     local time_label = cc.Label:createWithSystemFont('耗时       分钟         秒','',32)
     time_label:setColor(cc.c3b(70,136,158))
-    time_label:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.92 - 170)
+    time_label:setPosition(s_DESIGN_WIDTH / 2,804)
     self:addChild(time_label)   
+
+    local defeat_label = cc.Label:createWithSystemFont('超过了              的用户','',32)
+    defeat_label:setColor(cc.c3b(70,136,158))
+    defeat_label:setPosition(s_DESIGN_WIDTH / 2,735)
+    self:addChild(defeat_label)  
+
+    local defeat_count = 0
+    local defeat_count_label = cc.Label:createWithSystemFont(string.format('%d',defeat_count),'',48)
+    defeat_count_label:setPosition(defeat_label:getPositionX(),defeat_label:getPositionY() + 2)
+    defeat_count_label:setColor(cc.c3b(82,190,17))
+    self:addChild(defeat_count_label)
 
     local min_count = 0
     local sec_count = 0
@@ -454,9 +473,9 @@ function SummaryBossAlter:addWinLabel(win_back)
         self:addChild(bean_back[i],1)
         bean_back[i]:setVisible(false)
     end
-    bean_back[1]:setPosition(s_DESIGN_WIDTH / 2 - 100,s_DESIGN_HEIGHT * 0.67)
-    bean_back[2]:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.67 + 30)
-    bean_back[3]:setPosition(s_DESIGN_WIDTH / 2 + 100,s_DESIGN_HEIGHT * 0.67)
+    bean_back[1]:setPosition(s_DESIGN_WIDTH / 2 - 100,s_DESIGN_HEIGHT * 0.83)
+    bean_back[2]:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT * 0.83 + 30)
+    bean_back[3]:setPosition(s_DESIGN_WIDTH / 2 + 100,s_DESIGN_HEIGHT * 0.83)
 
     if self.needToAddBean then
         been_number:setVisible(true)
@@ -464,12 +483,21 @@ function SummaryBossAlter:addWinLabel(win_back)
             bean_back[i]:setVisible(true)
         end
     end
+
+    local showTime = self:getRatio(self.bossLayer.useTime,self.stardandTime)
+
     local function update(delta)
         --print('delta='..delta)
         if word_count < self.bossLayer.maxCount then
             word_count = word_count + 1
             word_count_label:setString(string.format('%d',word_count))
         end
+
+        if defeat_count < showTime then
+            defeat_count = defeat_count + 1
+            defeat_count_label:setString(string.format('%d',defeat_count).."%")
+        end
+
         if min_count < math.floor(self.bossLayer.useTime/60) then
             min_count = min_count + 1
             min_count_label:setString(string.format('%d',min_count))
@@ -482,52 +510,9 @@ function SummaryBossAlter:addWinLabel(win_back)
             -- end
             sec_count_label:setString(string.format('%d',sec_count))
         end
-        if word_count == self.bossLayer.maxCount and min_count == math.floor(self.bossLayer.useTime/60) and sec_count >= math.floor(self.bossLayer.useTime%60) then
-            if self.needToAddBean then
-                for i = 1,3 do
-                    local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')
-                    bean:setPosition(bean_back[i]:getContentSize().width / 2,bean_back[i]:getContentSize().height / 2 + 10)
-                    bean_back[i]:addChild(bean)
-                    bean:setOpacity(0)
-                    bean:setScale(3)
-                    local action1 = cc.DelayTime:create(0.3 * i)
-                    local action2 = cc.EaseSineIn:create(cc.ScaleTo:create(0.3,1))
-                    local action3 = cc.FadeIn:create(0.3)
-                    bean:runAction(cc.Sequence:create(action1,cc.Spawn:create(action2,action3)))
-                end
-                local shine = cc.Sprite:create('image/summarybossscene/shine_complete_studys.png')
-                shine:setOpacity(0)
-                shine:setPosition(bean_back[2]:getPositionX(),bean_back[2]:getPositionY())
-                self:addChild(shine)
-                local fadeInOut = cc.Sequence:create(cc.FadeTo:create(1,255 * 0.7),cc.FadeOut:create(1))
-                shine:runAction(cc.Spawn:create(fadeInOut,cc.RotateBy:create(2,360)))
-                for i = 1,3 do
-                    local action1 = cc.DelayTime:create(2 + 0.3 * i)
-                    local action2 = cc.EaseSineIn:create(cc.MoveTo:create(0.3,cc.p(beans:getPosition())))
-                    local action3 = cc.ScaleTo:create(0.3,0)
-                    local action4 = cc.CallFunc:create(function (  )
-                        been_number:setString(s_CURRENT_USER:getBeans() - 3 + i)
-                        if i == 3 then
-                            if self.bossLayer.useTime < 0 then
-                                local wordList = self.bossLayer.unit.wrongWordList[1]
-                                 for i = 2,#self.bossLayer.unit.wrongWordList do
-                                     wordList = wordList..'|'..self.bossLayer.unit.wrongWordList[i]
-                                 end
-                                local shareBoard = require('view.summaryboss.ShareBoard').create(self.bossLayer.useTime,wordList)
-                                s_SCENE.popupLayer:addChild(shareBoard)
-                            end
-                        end
-                    end,{})
-                    local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')
-                    bean:setPosition(bean_back[i]:getPositionX(),bean_back[i]:getPositionY() + 10)
-                    self:addChild(bean,2)
-                    bean:setVisible(false)
-                    bean:runAction(cc.Sequence:create(cc.DelayTime:create(1.2),cc.Show:create()))
-                    bean:runAction(cc.Sequence:create(action1,cc.Sequence:create(action2,action3),action4))
-                    
-                    
-                end
-            else
+
+        if word_count == self.bossLayer.maxCount and defeat_count_label == showTime and min_count == math.floor(self.bossLayer.useTime/60) and sec_count >= math.floor(self.bossLayer.useTime%60) then
+            if not self.needToAddBean then
                if self.bossLayer.useTime < 0 then
                     local wordList = self.bossLayer.unit.wrongWordList[1]
                      for i = 2,#self.bossLayer.unit.wrongWordList do
@@ -547,6 +532,55 @@ function SummaryBossAlter:addWinLabel(win_back)
     self:scheduleUpdateWithPriorityLua(update, 0)
 
 
+    for i = 1,3 do
+        local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')
+        bean:setPosition(bean_back[i]:getContentSize().width / 2,bean_back[i]:getContentSize().height / 2 + 10)
+        bean_back[i]:addChild(bean)
+        bean:setOpacity(0)
+        bean:setScale(3)
+        local action1 = cc.DelayTime:create(0.3 * i)
+        local action2 = cc.EaseSineIn:create(cc.ScaleTo:create(0.3,1))
+        local action3 = cc.FadeIn:create(0.3)
+        bean:runAction(cc.Sequence:create(action1,cc.Spawn:create(action2,action3)))
+    end
+    local shine = cc.Sprite:create('image/summarybossscene/shine_complete_studys.png')
+    shine:setOpacity(0)
+    shine:setPosition(bean_back[2]:getPositionX(),bean_back[2]:getPositionY())
+    self:addChild(shine)
+    local fadeInOut = cc.Sequence:create(cc.FadeTo:create(1,255 * 0.7),cc.FadeOut:create(1))
+    shine:runAction(cc.Spawn:create(fadeInOut,cc.RotateBy:create(2,360)))
+    for i = 1,3 do
+        local action1 = cc.DelayTime:create(2 + 0.3 * i)
+        local action2 = cc.EaseSineIn:create(cc.MoveTo:create(0.3,cc.p(beans:getPosition())))
+        local action3 = cc.ScaleTo:create(0.3,0)
+        local action4 = cc.CallFunc:create(function (  )
+            been_number:setString(s_CURRENT_USER:getBeans() - 3 + i)
+            if i == 3 then
+                if self.bossLayer.useTime < 0 then
+                    local wordList = self.bossLayer.unit.wrongWordList[1]
+                     for i = 2,#self.bossLayer.unit.wrongWordList do
+                         wordList = wordList..'|'..self.bossLayer.unit.wrongWordList[i]
+                     end
+                    local shareBoard = require('view.summaryboss.ShareBoard').create(self.bossLayer.useTime,wordList)
+                    s_SCENE.popupLayer:addChild(shareBoard)
+                end
+            end
+        end,{})
+        local bean = cc.Sprite:create('image/summarybossscene/been_complete_studys.png')
+        bean:setPosition(bean_back[i]:getPositionX(),bean_back[i]:getPositionY() + 10)
+        self:addChild(bean,2)
+        bean:setVisible(false)
+        bean:runAction(cc.Sequence:create(cc.DelayTime:create(1.2),cc.Show:create()))
+        bean:runAction(cc.Sequence:create(action1,cc.Sequence:create(action2,action3),action4))
+    end
+end
+
+function SummaryBossAlter:getRatio(userTime,goalTime)
+    if userTime < goalTime then
+        return 100
+    else
+        return 100 * math.ceil(math.exp(-1 * 0.01 * (userTime - goalTime)))
+    end
 end
 
 return SummaryBossAlter

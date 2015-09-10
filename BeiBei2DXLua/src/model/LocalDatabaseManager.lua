@@ -113,7 +113,7 @@ function LocalDataBaseManager.getWordInfoFromWordName(word)
         if raw == nil then
           print("s_WordDictionaryDatabase.allwords nil:"..word)
         end
-        print("IS_DEVELOPMENT_MODE:"..tostring(IS_DEVELOPMENT_MODE))
+        -- print("IS_DEVELOPMENT_MODE:"..tostring(IS_DEVELOPMENT_MODE))
         
         -- 如果是词组，没有信息，直接返回
         if isWord(word) == false then

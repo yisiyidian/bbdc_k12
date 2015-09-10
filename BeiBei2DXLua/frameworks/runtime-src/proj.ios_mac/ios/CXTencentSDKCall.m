@@ -199,11 +199,21 @@ static CXTencentSDKCall *g_instance = nil;
 }
 
 - (void)shareImageToQQFriend:(NSString*)path title:(NSString*)title desc:(NSString*)desc {
+    
     NSData* data = [NSData dataWithContentsOfFile:path];
     
     QQApiImageObject* img = [QQApiImageObject objectWithData:data previewImageData:data title:title description:desc];
     SendMessageToQQReq* req = [SendMessageToQQReq reqWithContent:img];
     
+    QQApiSendResultCode sent = [QQApiInterface sendReq:req];
+    [self handleSendResult:sent];
+}
+
+- (void)shareURLToQQFriend:(NSString*)path title:(NSString*)title desc:(NSString*)desc {
+    NSString *utf8String = path;
+    NSString *previewImageUrl = @"http://yisiyidian.com/doubi/html5/logo.jpg";
+    QQApiNewsObject *newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:utf8String] title:title description:desc previewImageURL:[NSURL URLWithString:previewImageUrl]];
+    SendMessageToQQReq* req = [SendMessageToQQReq reqWithContent:newsObj];
     QQApiSendResultCode sent = [QQApiInterface sendReq:req];
     [self handleSendResult:sent];
 }

@@ -369,6 +369,10 @@ function O2OController.loadConfigs()
     time = os.clock()
     print('load unit time',os.clock() - time)
     print('load book unit name')
+
+    -- 记录每个关卡上次点击的序号
+    s_lastLevelOfEachBook = {}
+
     --print_lua_table(s_BookUnitName)
     -- print_lua_table(s_BookUnitWord['primary_1'])
 
