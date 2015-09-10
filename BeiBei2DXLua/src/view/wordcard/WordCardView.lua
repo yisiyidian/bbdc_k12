@@ -13,13 +13,20 @@ end
 function WordCardView:ctor(index)
 	self.index = index
 	self.listView = nil 
-	-- 用于显示词库
+	self.wordIndex = 1
+	-- 小岛编号 注意加1
+	self.islandIndex = tonumber(self.index) + 1
+	self.unit = s_LocalDatabaseManager.getUnitInfo(self.islandIndex)
+	self.showRender = {}
+	self.renders = {}
+	self.time = 0
+
 	self:initUI()
 	-- 初始化UI
 end
 
 function WordCardView:initUI()
-	local backPopup = cc.Sprite:create("image/islandPopup/unit_words_bg.png")
+	local backPopup = cc.Sprite:create("image/islandPopup/wordPopup.png")
     backPopup:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT / 2 - 10)
     self.backPopup = backPopup
     self:addChild(self.backPopup)
@@ -28,96 +35,159 @@ function WordCardView:initUI()
     local backPopupWidth = backPopup:getContentSize().width
     local backPopupHeight = backPopup:getContentSize().height
 
-    -- 提示信息
-    local text = cc.Label:createWithSystemFont("挑战前先看看吧","",32)
-    text:setColor(cc.c4b(255,255,255,255))
-    text:setPosition(backPopupWidth/2,backPopupHeight* 0.93)
- 	self.text = text
-    self.backPopup:addChild(self.text)
+    local title = cc.Label:createWithSystemFont("1/"..#self.unit.wrongWordList,"",50)
+    title:setPosition(self.backPopup:getContentSize().width/2, self.backPopup:getContentSize().height - 75)
+    title:setColor(cc.c3b(255,255,255))
+    self.title = title
+    self.backPopup:addChild(self.title)
+
+    local close_Click = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            sender:setTouchEnabled(false)
+            self.listView:stopAllActions()
+            self.layout:stopAllActions()
+            s_SCENE:removeAllPopups()
+            s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch() --放开点击
+        end
+    end
+    --加入关闭按钮
+    local close_button = ccui.Button:create("image/islandPopup/closeNormal.png","image/islandPopup/closePress.png","")
+    close_button:setPosition(self.backPopup:getContentSize().width - 40,self.backPopup:getContentSize().height - 40)
+    close_button:addTouchEventListener(close_Click)
+    self.backPopup:addChild(close_button)
+
+    local layout = cc.Sprite:create("image/islandPopup/wordLayout.png")
+    layout:setContentSize(backPopupWidth - 10,445)
+    layout:setPosition(0,272)
+    layout:ignoreAnchorPointForPosition(false)
+    layout:setAnchorPoint(0,0)
+    self.layout = layout
+    self.backPopup:addChild(self.layout)
 
    	--单词信息
-    local listView = ccui.ScrollView:create()
+    local listView = ccui.ListView:create()
     listView:setDirection(ccui.ScrollViewDir.vertical)
     listView:setBounceEnabled(false)
     listView:setTouchEnabled(true)
-    listView:setContentSize(backPopupWidth,backPopupHeight* 0.75)
+    listView:setContentSize(backPopupWidth - 10,365)
     listView:removeAllChildren()
-    listView:setPosition(0,80)
-    self.backPopup:addChild(listView)
+    listView:setPosition(0,20)
+    self.layout:addChild(listView)
     self.listView = listView
+	self.listView:addTouchEventListener(handler(self,self.scrollViewEvent))
 
-    -- 返回按钮
-    local returnButton = ccui.Button:create("image/islandPopup/unit_words_back.png","image/islandPopup/unit_words_back_button.png","")
-	returnButton:addTouchEventListener(handler(self,self.ReturnClick))
-	self.returnButton = returnButton
-	self.returnButton:setPosition(75,backPopupHeight - 65)
-	self.backPopup:addChild(self.returnButton)
+	local go_button = ccui.Button:create("image/islandPopup/goNormal.png","image/islandPopup/goPress.png","")
+    go_button:addTouchEventListener(handler(self,self.goClick))
+    go_button:setPosition(self.backPopup:getContentSize().width * 0.8, self.backPopup:getContentSize().height * 0.13)
+    self.backPopup:addChild(go_button)
 
-	-- 添加引导
-	local delayTime = cc.DelayTime:create(3)
-	local action = cc.CallFunc:create(function ()
-		if s_CURRENT_USER.guideStep == s_guide_step_enterPopup and self.returnButton ~= nil then
-	        s_CorePlayManager.enterGuideScene(7,self)
-	        s_CURRENT_USER:setGuideStep(s_guide_step_enterCard) 
-
-	        local guideFingerView = require("view.guide.GuideFingerView").create()
-	        guideFingerView:setPosition(self.returnButton:getContentSize().width,-20)
-	        self.returnButton:addChild(guideFingerView,2)
-    	end
-    end)
-	self:runAction(cc.Sequence:create(delayTime,action))
-
+	self:createTabBtn()
 	--渲染列表
 	self:resetView()
 
+	if s_CURRENT_USER.guideStep <= s_guide_step_enterCard and s_CURRENT_USER.guideStep > s_guide_step_enterLevel then
+        s_CURRENT_USER:setGuideStep(s_guide_step_returnPopup) 
+    end
+
+    local function update(delta)
+		self.time = self.time - delta
+    end
+    self:scheduleUpdateWithPriorityLua(update, 0)
+
 	onAndroidKeyPressed(self,function() self:CloseFunc() end, function ()end)
-	touchBackgroundClosePopup(self,self.backPopup,function() self:CloseFunc() end)
+	-- touchBackgroundClosePopup(self,self.backPopup,function() self:CloseFunc() end)
 end
 
-function WordCardView:resetView()
-	-- 小岛编号 注意加1
-	self.islandIndex = tonumber(self.index) + 1
-	self.unit = s_LocalDatabaseManager.getUnitInfo(self.islandIndex)
-	self.wordList = {}
-	for i = 1 ,#self.unit.wrongWordList do
-        table.insert(self.wordList,self.unit.wrongWordList[i])
-    end
-	-- 显示的单词
-	self.meaningList = {}
-	for i=1,#self.wordList do
-		local temp = s_BookUnitWordMeaning[s_CURRENT_USER.bookKey][tostring(self.islandIndex)][self.wordList[i]]
-		self.meaningList[#self.meaningList + 1] = temp
+function WordCardView:resetView(dir)
+	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+	self:RunAction(dir)
+	if self.listView ~= nil then
+		self.listView:removeAllChildren()
 	end
-	-- 显示的释义
+
+	if self.showView ~= nil then
+		self.showRender = {}
+	end 
+
+	if self.renders ~= nil then
+		self.renders = {}
+	end
+
+	self.showRender = self:createTable()
 	local render = nil 
 	local renders = {} 
-	local innerHeight = self.backPopup:getContentSize().height * 0.75
-	local renderheight = 120
-	self.listView:removeAllChildren()
+	local innerHeight = 365
+	local renderheight = {}
 
 	-- 填充信息
-	for i = 1,#self.wordList do
-		render = WordCardRender.new(self.wordList[i],self.meaningList[i])
-	    render:setData()
+	for i = 1,#self.showRender do
+		render = WordCardRender.new(self.showRender[i],i)
+	    renderheight[i] = render:setData()
+	    render.PlaySoundCall = function ()
+		    self:playFunc()
+	    end
+	    render:ignoreAnchorPointForPosition(false)
+	    render:setAnchorPoint(0.5,0)
 		renders[#renders + 1] = render 
+		self.renders[#self.renders + 1] = render
 		self.listView:addChild(render)
 	end
 
 	-- 第一个单词高度信息
-	if innerHeight < renderheight * #self.wordList then
-		innerHeight = renderheight * #self.wordList
+	local totalheight = 0
+	for i=1,#renderheight do
+		totalheight = totalheight + renderheight[i]
+	end
+
+	if innerHeight < totalheight  then
+		innerHeight = totalheight 
 		self:createSlider()
 	end
 
 	-- 调整高度
-	local tlen = innerHeight - renderheight
+	local tlen = innerHeight
+	local i = 0
 	for _,rd in pairs(renders) do
+		i = i + 1	
+		tlen = tlen - renderheight[i]
 		rd:setPosition(0,tlen)
-		tlen = tlen - renderheight	
 	end
 
 	-- 容器高度
-	self.listView:setInnerContainerSize(cc.size(self.backPopup:getContentSize().width,renderheight * #self.wordList))
+	self.listView:scrollToTop(0.1,true)
+	self.listView:setInnerContainerSize(cc.size(self.backPopup:getContentSize().width,totalheight + 100))
+	self.listView:setSwallowTouches(false)
+	self:runAction(cc.Sequence:create(cc.DelayTime:create(2),cc.CallFunc:create(function ()
+		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+	end)))
+	self:autoChange(3.5)
+end
+
+function WordCardView:RunAction(dir)
+	if self.layout == nil or dir == nil then
+		return
+	end
+	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+	local num = 0
+	if dir > 0 then
+		num = -600
+	elseif dir < 0 then
+		num = 600
+	end
+	local move = cc.MoveBy:create(0.2,cc.p(num,0))
+	local miss = cc.CallFunc:create(function ()
+		self.layout:setVisible(false)
+	end)
+	local fadeout = cc.FadeOut:create(0.1)
+	local place = cc.Place:create(cc.p(0,272))
+	local come = cc.CallFunc:create(function ()
+		self.layout:setVisible(true)
+		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+	end)
+	local fadein = cc.FadeIn:create(0.3)
+	local se = cc.Sequence:create(move,miss,place,come)
+	self.layout:runAction(se)
+
 end
 
 function WordCardView:ReturnClick(sender,eventType)
@@ -125,49 +195,260 @@ function WordCardView:ReturnClick(sender,eventType)
 		return
 	end
 	playSound(s_sound_buttonEffect)
-	print("return Button")
+	-- print("return Button")
 	self:CloseFunc()
 end
 
 -- 滚动条创建
 function WordCardView:createSlider()
-	local slider = cc.Sprite:create("image/islandPopup/unit_words_scrollbar_bg.png")
-    slider:setPosition(self.backPopup:getContentSize().width * 0.9,self.backPopup:getContentSize().height * 0.8)
-    slider:ignoreAnchorPointForPosition(false)
-    slider:setAnchorPoint(0.5,1)
-    self.slider = slider
-    self.backPopup:addChild(self.slider)
+	-- local slider = cc.Sprite:create("image/islandPopup/unit_words_scrollbar_bg.png")
+ --    slider:setPosition(self.backPopup:getContentSize().width * 0.9,485)
+ --    slider:setScale(1,0.8)
+ --    slider:ignoreAnchorPointForPosition(false)
+ --    slider:setAnchorPoint(0.5,0.5)
+ --    self.slider = slider
+ --    self.backPopup:addChild(self.slider)
 
-    local bar = cc.Sprite:create("image/islandPopup/unit_words_loudspeaker_scrollbar.png")
-    bar:setPosition(self.slider:getContentSize().width * 0.5,self.slider:getContentSize().height)
-    bar:ignoreAnchorPointForPosition(false)
-    bar:setAnchorPoint(0.5,1)
-    self.bar = bar
-    self.slider:addChild(self.bar)
+ --    local bar = cc.Sprite:create("image/islandPopup/unit_words_loudspeaker_scrollbar.png")
+ --    bar:setPosition(self.slider:getContentSize().width * 0.5,self.slider:getContentSize().height)
+ --    bar:ignoreAnchorPointForPosition(false)
+ --    bar:setAnchorPoint(0.5,1)
+ --    self.bar = bar
+ --    self.slider:addChild(self.bar)
 
-    local maxh = 1
-    local function update(delta)
-        local h = -self.listView:getInnerContainer():getPositionY()
-        if h > maxh then
-        	maxh = h
-        end
-        local percent = h / maxh
-        local height = self.slider:getContentSize().height * percent
-        self.bar:setAnchorPoint(0.5,percent)
-        self.bar:setPositionY(height)
-    end
+    -- local maxh = 1
+    -- local function update(delta)
+    --     local h = -self.listView:getInnerContainer():getPositionY()
+    --     if h > maxh then
+    --     	maxh = h
+    --     end
+    --     local percent = h / maxh
+    --     local height = self.slider:getContentSize().height * percent
+    --     self.bar:setAnchorPoint(0.5,percent)
+    --     self.bar:setPositionY(height)
+    -- end
 
-    self:scheduleUpdateWithPriorityLua(update, 0)
+    -- self:scheduleUpdateWithPriorityLua(update, 0)
 end
 
 -- 返回事件
 function WordCardView:CloseFunc()
+    local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5)))
     local remove = cc.CallFunc:create(function() 
-       	local LevelProgressPopup = require("view.islandPopup.LevelProgressPopup")
-  	  	local levelProgressPopup = LevelProgressPopup.create(self.index)
-    	s_SCENE:popup(levelProgressPopup)
+        self.listView:stopAllActions()
+        self.layout:stopAllActions()
+        s_SCENE:removeAllPopups()
+        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     end)
-    self.backPopup:runAction(cc.Sequence:create(remove))
+    self.backPopup:runAction(cc.Sequence:create(move,remove))
+end
+
+function WordCardView:createTable()
+	LocalDataBaseManager = require('model.LocalDatabaseManager')
+	local table = {}
+
+	table[1] = s_BookUnitWordMeaning[s_CURRENT_USER.bookKey][tostring(self.islandIndex)][self.unit.wrongWordList[self.wordIndex]]
+	table[2] = self.unit.wrongWordList[self.wordIndex]
+	table[3] = LocalDataBaseManager.getWordInfoFromWordName(self.unit.wrongWordList[self.wordIndex]).wordSoundMarkEn
+	table[4] = LocalDataBaseManager.getWordInfoFromWordName(self.unit.wrongWordList[self.wordIndex]).sentenceEn..'\n'..LocalDataBaseManager.getWordInfoFromWordName(self.unit.wrongWordList[self.wordIndex]).sentenceCn
+
+	return table
+end
+
+function WordCardView:createTabBtn()
+	self.wordChangeBtn = {}
+	self.label = {}
+	for i=1,#self.unit.wrongWordList do
+		local btn = cc.Sprite:create("image/islandPopup/changeBtnNormal.png")
+		if #self.unit.wrongWordList <= 5 then
+			btn:setPosition(40 + i * 60, self.backPopup:getContentSize().height * 0.13)
+		end
+		if #self.unit.wrongWordList > 5 then
+			if i <= 5 then
+				btn:setPosition(40 + i * 60, self.backPopup:getContentSize().height * 0.13 + 45)
+			else
+				btn:setPosition(40 + i%5 * 60, self.backPopup:getContentSize().height * 0.13 - 25)
+			end
+		end
+		local label = cc.Label:createWithSystemFont(string.sub(self.unit.wrongWordList[i],1,1),"",36)
+	    label:setColor(cc.c4b(255,255,255,255))
+	    label:setPosition(btn:getContentSize().width / 2 ,35)
+    	btn:addChild(label)
+		if i == 1 then
+			btn:setTexture("image/islandPopup/changeBtnPress.png")
+			label:setPosition(26,30)
+		end
+
+    	self.label[#self.label + 1] = label
+		self.wordChangeBtn[#self.wordChangeBtn + 1] = btn
+		self.backPopup:addChild(self.wordChangeBtn[#self.wordChangeBtn])
+	end
+
+	local touchBeginPointX = 0
+	local touchBeginPointY = 0
+	local touchEndPointX = 0
+	local touchEndPointY = 0
+	local touchStop = false
+
+	local onTouchBegan = function(touch, event)
+		touchBeginPointX = self.backPopup:convertToNodeSpace(touch:getLocation()).x
+		touchBeginPointY = self.backPopup:convertToNodeSpace(touch:getLocation()).y
+		touchStop = false
+        return true  
+    end
+
+    local onTouchMoved = function(touch, event)
+	    self.backPopup:stopAllActions()
+
+		touchEndPointX = self.backPopup:convertToNodeSpace(touch:getLocation()).x
+		touchEndPointY = self.backPopup:convertToNodeSpace(touch:getLocation()).y
+
+		if touchEndPointX - touchBeginPointX >= 200 and not touchStop then
+			self.wordIndex = self.wordIndex - 1
+			if self.wordIndex == 0 then
+				self.wordIndex = #self.unit.wrongWordList
+			end
+    		self:resetChange()
+			self:resetView(-1)
+			touchStop = true
+		elseif touchEndPointX - touchBeginPointX <= -200 and not touchStop then
+			self.wordIndex = self.wordIndex % #self.unit.wrongWordList + 1
+    		self:resetChange()
+			self:resetView(1)
+			touchStop = true
+		end
+    end
+    
+    local onTouchEnded = function(touch, event)
+    	self:changeBtnState(touch)
+    	self:touchFunc(touch)
+    end
+    
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(false)
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )
+    listener:registerScriptHandler(onTouchMoved,cc.Handler.EVENT_TOUCH_MOVED )    
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = self.backPopup:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self.backPopup)  
+
+end
+
+function WordCardView:changeBtnState(touch)
+    local location = self.backPopup:convertToNodeSpace(touch:getLocation())
+    for i=1,#self.wordChangeBtn do
+	    if cc.rectContainsPoint(self.wordChangeBtn[i]:getBoundingBox(),location) then
+	    	local temp = i - self.wordIndex 
+			self.wordIndex = i
+    		self:resetChange()
+			self:resetView(temp)
+	    end
+    end
+end
+
+function WordCardView:resetChange()
+    for i=1,#self.wordChangeBtn do
+		self.wordChangeBtn[i]:setTexture("image/islandPopup/changeBtnNormal.png")
+		self.label[i]:setPosition(26,35)
+    end
+	self.wordChangeBtn[self.wordIndex]:setTexture("image/islandPopup/changeBtnPress.png")
+	self.label[self.wordIndex]:setPosition(26,30)
+	self.title:setString(self.wordIndex..'/'..#self.unit.wrongWordList)
+end
+
+function WordCardView:touchFunc(touch)
+    local location = self.backPopup:convertToNodeSpace(touch:getLocation())
+    -- print_lua_table(location)
+    if cc.rectContainsPoint(cc.rect(0,262,500,722),location) then
+		for i=1,#self.renders do
+			self.renders[i]:setViewVisible()    	
+		end
+		self:playFunc()
+		self:autoChange(2.5)
+    end
+end
+
+function WordCardView:playFunc()
+	if self.time <= 0 then
+		playWordSound(self.unit.wrongWordList[self.wordIndex])
+		self.time = 1
+	end
+end
+
+
+
+function WordCardView:goClick(sender,eventType)
+    if eventType ~= ccui.TouchEventType.ended then
+        return
+    end
+
+    playSound(s_sound_buttonEffect) 
+    s_lastLevelOfEachBook[s_CURRENT_USER.bookKey] = self.index
+
+    if s_CURRENT_USER.summaryStep < s_summary_enterFirstLevel and tonumber(self.index) == 0 then
+        s_CURRENT_USER:setSummaryStep(s_summary_enterFirstLevel)
+        AnalyticsSummaryStep(s_summary_enterFirstLevel)
+    elseif s_CURRENT_USER.summaryStep < s_summary_enterSecondLevel and tonumber(self.index) == 1 then
+        s_CURRENT_USER:setSummaryStep(s_summary_enterSecondLevel)
+        AnalyticsSummaryStep(s_summary_enterSecondLevel)
+    end
+
+    self.islandIndex = tonumber(self.index) + 1
+    self.unit = s_LocalDatabaseManager.getUnitInfo(self.islandIndex)
+    local bossList = s_LocalDatabaseManager.getAllUnitInfo()
+    local maxID = s_LocalDatabaseManager.getMaxUnitID()
+    -- print('Self.unit.unitID:'..self.unit.unitID..',maxID:'..maxID)
+    if self.unit.unitID < maxID then
+        s_game_fail_level_index = self.unit.unitID - 1
+
+        showProgressHUD('', true)
+            local SummaryBossLayer = require('view.summaryboss.NewSummaryBossLayer')
+            local summaryBossLayer = SummaryBossLayer.create(self.unit)
+            s_CorePlayManager.currentUnitID = self.unit.unitID
+
+            s_SCENE:replaceGameLayer(summaryBossLayer) 
+            self:callFuncWithDelay(0.1,function()
+                s_SCENE:removeAllPopups() 
+            end) 
+    else
+        showProgressHUD('', true)    
+        s_CorePlayManager.initTotalUnitPlay()
+        self:callFuncWithDelay(0.1,function()
+            s_SCENE:removeAllPopups() 
+        end) 
+    end 
+end
+
+function WordCardView:autoChange(time)
+	self.backPopup:stopAllActions()
+	local delay = cc.DelayTime:create(time)
+	local func = cc.CallFunc:create(function ()
+		self.wordIndex = self.wordIndex % #self.unit.wrongWordList + 1
+		self:resetChange()
+		self:resetView(1)
+	end)
+	local se = cc.Sequence:create(delay,func)
+	self.backPopup:runAction(se)
+end
+
+function WordCardView:callFuncWithDelay(delay, func) 
+    local delayAction = cc.DelayTime:create(delay)
+    local callAction = cc.CallFunc:create(func)
+    local sequence = cc.Sequence:create(delayAction, callAction)
+    self:runAction(sequence)   
+end
+
+function WordCardView:scrollViewEvent(sender, eventType)
+	-- if eventType == ccui.TouchEventType.began then
+	-- 	return
+	-- end
+	-- for i=1,#self.renders do
+	-- 	self.renders[i]:setViewVisible()    	
+	-- end
+	-- if eventType == ccui.TouchEventType.ended then
+	-- 	playWordSound(self.unit.wrongWordList[self.wordIndex])
+	-- end
+	-- self:autoChange()
 end
 
 return WordCardView

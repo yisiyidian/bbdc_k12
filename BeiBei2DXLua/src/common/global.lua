@@ -1,8 +1,8 @@
 -- 2015年06月04日15:34:42
 -- 侯琪
 -- 版本号
-app_version_debug   = 220000
-app_version_release = 220000
+app_version_debug   = 222000
+app_version_release = 222000
 
 
 -- 初始化常量
@@ -132,7 +132,7 @@ local function _initServer()
     
     -- user base server
     s_UserBaseServer          = reloadModule('server.UserBaseServer')
-s_HttpRequestClient       = reloadModule('server.HttpRequestClient')
+    s_HttpRequestClient       = reloadModule('server.HttpRequestClient')
 
     reloadModule('server.Analytics')
 end

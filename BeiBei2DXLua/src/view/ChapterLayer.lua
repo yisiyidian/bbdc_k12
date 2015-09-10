@@ -133,7 +133,7 @@ function ChapterLayer:ctor()
 
         s_CorePlayManager.enterGuideScene(5,self.backColor)
         local summaryboss = sp.SkeletonAnimation:create("spine/klschongshangdaoxia.json","spine/klschongshangdaoxia.atlas",1)
-        summaryboss:setPosition(310,725)
+        summaryboss:setPosition(310 + s_DESIGN_OFFSET_WIDTH,725)
         summaryboss:setAnchorPoint(1,1)
         summaryboss:addAnimation(0, 'jianxiao', true)
         summaryboss:setScale(0.9)
