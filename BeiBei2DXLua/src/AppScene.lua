@@ -54,6 +54,13 @@ s_smalltutorial_complete_win = 100
 s_smalltutorial_complete_lose = 101
 s_smalltutorial_complete_timeout = 102
 
+--登陆
+local USER_START_TYPE_NEW         = 0
+local USER_START_TYPE_OLD         = 1
+local USER_START_TYPE_QQ          = 2
+local USER_START_TYPE_QQ_AUTHDATA = 3
+local LOADING_TEXTS = {'用户登录中 30%', '加载配置中 70%', '保存用户信息中 80%', '更新单词信息中 90%'}
+
 -- k12打点流程
 -- 进入输入用户名界面   0
 -- 进入输入密码界面    1
@@ -416,5 +423,57 @@ function AppScene:checkInOver(homeLayer)
     homeLayer:hideDataLayer()
     --s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
 end
+
+--登陆
+function AppScene:startLoadingData(userStartType, username, password)
+    local function onResponse(u, e, code)
+
+        if e == nil and s_CURRENT_USER.tutorialStep == 0 then 
+            AnalyticsTutorial(0)
+            AnalyticsSmallTutorial(0)
+        end
+
+        if e ~= nil then
+            onErrorHappend(e)
+            hideProgressHUD()
+        elseif s_CURRENT_USER.bookKey == '' then
+            s_CorePlayManager.enterEducationLayer()
+        else
+            -- s_SCENE:getDailyCheckIn()
+            -- s_SCENE:onUserServerDatasCompleted() 
+            s_O2OController.getUserDatasOnline()
+        end
+        
+    end
+
+    cc.Director:getInstance():getOpenGLView():setIMEKeyboardState(false)
+    -- showProgressHUD(LOADING_TEXTS[_TEXT_ID_USER])
+    if userStartType == USER_START_TYPE_OLD then 
+        s_UserBaseServer.logIn(username, password, onResponse)
+    elseif userStartType == USER_START_TYPE_QQ then 
+        s_UserBaseServer.onLogInByQQ(onResponse)
+    elseif userStartType == USER_START_TYPE_QQ_AUTHDATA then 
+        s_UserBaseServer.logInByQQAuthData(onResponse)
+    else
+        s_UserBaseServer.signUp(username, password, onResponse)
+    end
+end
+
+function AppScene:signUp(username, password)
+    self:startLoadingData(USER_START_TYPE_NEW, username, password)
+end
+
+function AppScene:logIn(username, password)
+    self:startLoadingData(USER_START_TYPE_OLD, username, password)
+end
+
+function AppScene:logInByQQ()
+    self:startLoadingData(USER_START_TYPE_QQ, nil, nil) 
+end
+
+function AppScene:logInByQQAuthData()
+    self:startLoadingData(USER_START_TYPE_QQ_AUTHDATA, nil, nil) 
+end
+
 
 return AppScene

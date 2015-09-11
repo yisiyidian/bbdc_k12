@@ -85,6 +85,7 @@ end
 -- 播放某个关卡解锁时的动画
 -- levelKey: 关卡key
 function ChapterLayerBase:plotUnlockLevelAnimation(levelKey)
+    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
     local levelIndex = string.sub(levelKey, 6)
     local lockSprite = self:getChildByName('lock'..levelIndex)
     local lockLayer = self:getChildByName('lockLayer'..levelIndex)
@@ -104,6 +105,9 @@ function ChapterLayerBase:plotUnlockLevelAnimation(levelKey)
     if lockLayer ~= nil then
         lockLayer:runAction(cc.Sequence:create(action7, action8))
     end
+    self:callFuncWithDelay(2.8, function()
+        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+    end)
     if lockSprite ~= nil or lockLayer ~= nil then
         self:callFuncWithDelay(0.7,function()
             print('unlock next level')
@@ -112,15 +116,16 @@ function ChapterLayerBase:plotUnlockLevelAnimation(levelKey)
                 self:plotDecorationOfLevel(levelIndex-0)
             --end
         end)
-        self:callFuncWithDelay(2.0, function()
-            --if not tolua.isnull(self) and not tolua.isnull(self.addPopup) then
-            print('user guide step')
-            print(s_CURRENT_USER.guideStep)
-            if s_CURRENT_USER.guideStep - s_guide_step_bag6 >= 0 then
-                self:addPopup(levelIndex-0)
-            end
-            --end
-        end)
+        if s_CURRENT_USER.guideStep - s_guide_step_bag6 >= 0 then
+            --s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+            self:callFuncWithDelay(2.0, function()
+                --if not tolua.isnull(self) and not tolua.isnull(self.addPopup) then
+                print('user guide step')
+                print(s_CURRENT_USER.guideStep)
+                    self:addPopup(levelIndex-0)
+                --end
+            end)
+        end
     end
 end
 
