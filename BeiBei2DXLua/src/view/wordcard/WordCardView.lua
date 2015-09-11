@@ -40,27 +40,17 @@ function WordCardView:initUI()
     title:setColor(cc.c3b(255,255,255))
     self.title = title
     self.backPopup:addChild(self.title)
-
-    local close_Click = function(sender, eventType)
-        if eventType == ccui.TouchEventType.ended then
-            sender:setTouchEnabled(false)
-            self.listView:stopAllActions()
-            self.layout:stopAllActions()
-            s_SCENE:removeAllPopups()
-            s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch() --放开点击
-        end
-    end
     --加入关闭按钮
     local close_button = ccui.Button:create("image/islandPopup/closeNormal.png","image/islandPopup/closePress.png","")
     close_button:setPosition(self.backPopup:getContentSize().width - 40,self.backPopup:getContentSize().height - 40)
-    close_button:addTouchEventListener(close_Click)
+    close_button:addTouchEventListener(handler(self,self.close_Click))
     self.backPopup:addChild(close_button)
 
     local layout = cc.Sprite:create("image/islandPopup/wordLayout.png")
     layout:setContentSize(backPopupWidth - 10,445)
-    layout:setPosition(0,272)
+    layout:setPosition(0 + layout:getContentSize().width /2,272 + layout:getContentSize().height /2)
     layout:ignoreAnchorPointForPosition(false)
-    layout:setAnchorPoint(0,0)
+    layout:setAnchorPoint(0.5,0.5)
     self.layout = layout
     self.backPopup:addChild(self.layout)
 
@@ -94,12 +84,12 @@ function WordCardView:initUI()
     end
     self:scheduleUpdateWithPriorityLua(update, 0)
 
+    self.exist = true
 	onAndroidKeyPressed(self,function() self:CloseFunc() end, function ()end)
 	-- touchBackgroundClosePopup(self,self.backPopup,function() self:CloseFunc() end)
 end
 
 function WordCardView:resetView(dir)
-	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
 	self:RunAction(dir)
 	if self.listView ~= nil then
 		self.listView:removeAllChildren()
@@ -157,17 +147,31 @@ function WordCardView:resetView(dir)
 	self.listView:scrollToTop(0.1,true)
 	self.listView:setInnerContainerSize(cc.size(self.backPopup:getContentSize().width,totalheight + 100))
 	self.listView:setSwallowTouches(false)
-	self:runAction(cc.Sequence:create(cc.DelayTime:create(2),cc.CallFunc:create(function ()
-		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
-	end)))
 	self:autoChange(3.5)
+
+	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch() 
+	self:callFuncWithDelay(0.1,function()
+	   	s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch() 
+	end)
+end
+
+function WordCardView:close_Click(sender, eventType)
+    if eventType == ccui.TouchEventType.ended then
+    	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch() 
+        sender:setTouchEnabled(false)
+        self:stopAction()
+        self:callFuncWithDelay(0.1,function()
+            s_SCENE:removeAllPopups() 
+           	s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch() 
+        end) 
+    end
 end
 
 function WordCardView:RunAction(dir)
 	if self.layout == nil or dir == nil then
 		return
 	end
-	s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+	-- self.listView:setDirection(ccui.ScrollViewDir.none)
 	local num = 0
 	if dir > 0 then
 		num = -600
@@ -177,15 +181,24 @@ function WordCardView:RunAction(dir)
 	local move = cc.MoveBy:create(0.2,cc.p(num,0))
 	local miss = cc.CallFunc:create(function ()
 		self.layout:setVisible(false)
+		self.layout:setOpacity(100)
 	end)
 	local fadeout = cc.FadeOut:create(0.1)
-	local place = cc.Place:create(cc.p(0,272))
+	local place = cc.Place:create(cc.p(0 + self.layout:getContentSize().width /2,272 + self.layout:getContentSize().height /2))
 	local come = cc.CallFunc:create(function ()
 		self.layout:setVisible(true)
-		s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+		self.layout:setColor(cc.c4b(255,255,255,255))
+		self.layout:setScale(1)
+	end)
+	local delay = cc.DelayTime:create(0.3)
+	local scroll = cc.CallFunc:create(function ()
+		self.listView:scrollToTop(0.1,true)		
+		self.layout:setOpacity(255)
+		-- self.listView:setDirection(ccui.ScrollViewDir.vertical)
+		-- self.listView:scrollToTop(0.01,true)
 	end)
 	local fadein = cc.FadeIn:create(0.3)
-	local se = cc.Sequence:create(move,miss,place,come)
+	local se = cc.Sequence:create(move,miss,place,come,scroll)
 	self.layout:runAction(se)
 
 end
@@ -233,12 +246,19 @@ end
 
 -- 返回事件
 function WordCardView:CloseFunc()
-    local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5)))
+	if not self.exist then
+		return
+	end
+	self:stopAction()
+	self.exist = false
+  	local move = cc.EaseBackIn:create(cc.MoveTo:create(0.3, cc.p(s_DESIGN_WIDTH / 2, s_DESIGN_HEIGHT * 1.5)))
     local remove = cc.CallFunc:create(function() 
         self.listView:stopAllActions()
         self.layout:stopAllActions()
-        s_SCENE:removeAllPopups()
-        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
+        self:callFuncWithDelay(0.1,function()
+            s_SCENE:removeAllPopups() 
+           	s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch() 
+        end) 
     end)
     self.backPopup:runAction(cc.Sequence:create(move,remove))
 end
@@ -293,7 +313,17 @@ function WordCardView:createTabBtn()
 	local onTouchBegan = function(touch, event)
 		touchBeginPointX = self.backPopup:convertToNodeSpace(touch:getLocation()).x
 		touchBeginPointY = self.backPopup:convertToNodeSpace(touch:getLocation()).y
-		touchStop = false
+		touchEndPointX = 0
+		touchEndPointY = 0
+		local location = self.backPopup:convertToNodeSpace(touch:getLocation())
+		if cc.rectContainsPoint(self.layout:getBoundingBox(),location) then
+			self.layout:setColor(cc.c4b(247,247,238,255))
+			self.layout:setScale(0.95)
+			touchStop = false
+		else
+			touchStop = true
+		end
+		
         return true  
     end
 
@@ -303,7 +333,9 @@ function WordCardView:createTabBtn()
 		touchEndPointX = self.backPopup:convertToNodeSpace(touch:getLocation()).x
 		touchEndPointY = self.backPopup:convertToNodeSpace(touch:getLocation()).y
 
-		if touchEndPointX - touchBeginPointX >= 200 and not touchStop then
+		local location = self.backPopup:convertToNodeSpace(touch:getLocation())
+
+		if touchEndPointX - touchBeginPointX >= 50 and not touchStop then
 			self.wordIndex = self.wordIndex - 1
 			if self.wordIndex == 0 then
 				self.wordIndex = #self.unit.wrongWordList
@@ -311,7 +343,7 @@ function WordCardView:createTabBtn()
     		self:resetChange()
 			self:resetView(-1)
 			touchStop = true
-		elseif touchEndPointX - touchBeginPointX <= -200 and not touchStop then
+		elseif touchEndPointX - touchBeginPointX <= -50 and not touchStop then
 			self.wordIndex = self.wordIndex % #self.unit.wrongWordList + 1
     		self:resetChange()
 			self:resetView(1)
@@ -320,7 +352,9 @@ function WordCardView:createTabBtn()
     end
     
     local onTouchEnded = function(touch, event)
-    	self:changeBtnState(touch)
+    	self.layout:setColor(cc.c4b(255,255,255,255))
+	    self.layout:setScale(1)
+	    self:changeBtnState(touch)
     	self:touchFunc(touch)
     end
     
@@ -339,6 +373,9 @@ function WordCardView:changeBtnState(touch)
     for i=1,#self.wordChangeBtn do
 	    if cc.rectContainsPoint(self.wordChangeBtn[i]:getBoundingBox(),location) then
 	    	local temp = i - self.wordIndex 
+	    	if temp == 0 then
+	    		return 
+	    	end
 			self.wordIndex = i
     		self:resetChange()
 			self:resetView(temp)
@@ -358,14 +395,20 @@ end
 
 function WordCardView:touchFunc(touch)
     local location = self.backPopup:convertToNodeSpace(touch:getLocation())
-    -- print_lua_table(location)
-    if cc.rectContainsPoint(cc.rect(0,262,500,722),location) then
+    if cc.rectContainsPoint(self.layout:getBoundingBox(),location) then
 		for i=1,#self.renders do
 			self.renders[i]:setViewVisible()    	
 		end
 		self:playFunc()
-		self:autoChange(2.5)
-    end
+    end		
+    self:autoChange(2.5)
+end
+
+function WordCardView:stopAction()
+	for i=1,#self.renders do
+		self.renders[i]:stopAllActions()
+	end
+	self.layout:stopAllActions()
 end
 
 function WordCardView:playFunc()
@@ -382,6 +425,12 @@ function WordCardView:goClick(sender,eventType)
         return
     end
 
+    self:stopAction()
+
+    self.listView:stopAllActions()
+    self.layout:stopAllActions()
+
+    sender:setTouchEnabled(false)
     playSound(s_sound_buttonEffect) 
     s_lastLevelOfEachBook[s_CURRENT_USER.bookKey] = self.index
 

@@ -421,6 +421,72 @@ function NewSummaryBossLayer:initCrab()
     if not self.isTrying then
         self:addChangeBtn()
     end
+
+    local onTouchBegan = function(touch, event)
+        return true  
+    end
+
+    local onTouchEnded = function(touch, event)
+        local location = self:convertToNodeSpace(touch:getLocation())
+        if cc.rectContainsPoint(cc.rect(190,50,440,150),location) and not tolua.isnull(self.crab) then
+            playWordSound(self.wordList[1][4])
+            self.ishited = true
+            if self.hintChangeBtn ~= nil and self.hintChangeBtn.hintOver ~= nil then
+                self.hintChangeBtn.hintOver()
+                self.hintChangeBtn = nil
+                --return
+            end
+            if self.resetCount < self.maxCount then
+                self.wrongWord = self.wrongWord + 1
+                --print('self.wrongWord',self.wrongWord)
+            end
+            
+            self.gamePaused = true
+            local hintBoard = require("view.summaryboss.HintWord").create(self.wordList[1][4],self.boss,self.firstTimeToChange,self.unit.unitID)
+            s_SCENE.popupLayer:addChild(hintBoard)
+
+
+            s_SCENE:callFuncWithDelay(0.5,function ()
+                if tolua.isnull(hintBoard) then
+                    return
+                end
+                onAndroidKeyPressed(hintBoard, function ()
+                local isPopup = s_SCENE.popupLayer:getChildren()
+                if #isPopup ~= 0 then
+                    hintBoard.hintOver()
+                end
+            end, function ()
+
+            end)
+
+            end)
+
+            
+            hintBoard.hintOver = function (  )
+                hintBoard:removeFromParent()
+                self.firstTimeToChange = false
+                if #self.wordList > 1 then
+                    s_TOUCH_EVENT_BLOCK_LAYER.lockTouch()
+                    self:addWrongWordToEnd()
+                    if not tolua.isnull(self.crab) then
+                        self.crab:moveOut()
+                    end
+                    self:creatMat()
+                    cc.Director:getInstance():getActionManager():resumeTarget(self.boss)
+                    s_SCENE:callFuncWithDelay(0.2 ,function ()
+                        self.gamePaused = false
+                        end)
+                end
+            end
+
+        end
+    end
+    local listener = cc.EventListenerTouchOneByOne:create()
+    listener:setSwallowTouches(false)
+    listener:registerScriptHandler(onTouchBegan,cc.Handler.EVENT_TOUCH_BEGAN )  
+    listener:registerScriptHandler(onTouchEnded,cc.Handler.EVENT_TOUCH_ENDED )
+    local eventDispatcher = self:getEventDispatcher()
+    eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self)
 end
 
 function NewSummaryBossLayer:addChangeBtn()

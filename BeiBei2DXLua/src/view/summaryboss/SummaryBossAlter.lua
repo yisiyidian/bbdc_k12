@@ -20,6 +20,7 @@ function SummaryBossAlter.create(bossLayer,win,entrance)
     layer.wordList = bossLayer.wordList
     -- 这个名字起的真好，我竟无言以对
     layer.bossLayer = bossLayer
+    layer.islandIndex = bossLayer.unit.unitID - 1
     layer.constWord = bossLayer.constWord
     layer.stardandTime = 0
 
@@ -55,11 +56,7 @@ function SummaryBossAlter.create(bossLayer,win,entrance)
             playMusic(s_sound_win,true)
         end)
     else    
-        if not bossLayer.useItem and s_CURRENT_USER:getBeans() >= 0 then
-            layer:lose(entrance)
-        else
-            layer:lose(entrance)
-        end
+        layer:lose(entrance,layer.islandIndex)
         -- boss失败的后的标志，非凡用
         s_game_fail_state = 1
         cc.SimpleAudioEngine:getInstance():stopMusic()
@@ -90,7 +87,7 @@ function SummaryBossAlter:ctor(  )
     self.listener:setSwallowTouches(true)
 end
 
-function SummaryBossAlter:lose(entrance)
+function SummaryBossAlter:lose(entrance,islandIndex)
     -- if s_CURRENT_USER.tutorialStep == s_tutorial_summary_boss then
     --     s_CURRENT_USER:setTutorialStep(s_tutorial_summary_boss + 1)
     --     s_CURRENT_USER:setTutorialSmallStep(s_smalltutorial_complete_timeout)
@@ -157,35 +154,38 @@ function SummaryBossAlter:lose(entrance)
     -- buyTimeBtn.button_front:addChild(rewardNumber)
 
 
-
+    local buytime = false
     local function button_buyTime_func()
-        playSound(s_sound_buttonEffect)
-        if s_CURRENT_USER:getBeans() >= 10 then
-            s_CURRENT_USER:addBeans(-10)
-            saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
-            local boss = self.bossLayer.boss
-            local distance = s_DESIGN_WIDTH * 0.6
-            self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
-            s_SCENE:callFuncWithDelay(0.3,function (  )
-                -- body
-                if self and not tolua.isnull(self) then
-                    local bg = self:getChildByName('background')
-                    if bg then
-                       bg:runAction(cc.FadeOut:create(1.0)) 
+        if not buytime then
+            buytime = true
+            playSound(s_sound_buttonEffect)
+            if s_CURRENT_USER:getBeans() >= 10 then
+                s_CURRENT_USER:addBeans(-10)
+                saveUserToServer({[DataUser.BEANSKEY]=s_CURRENT_USER[DataUser.BEANSKEY]})
+                local boss = self.bossLayer.boss
+                local distance = s_DESIGN_WIDTH * 0.6
+                self.loseBoard:runAction(cc.EaseBackIn:create(cc.MoveTo:create(0.3,cc.p(s_DESIGN_WIDTH * 0.5,s_DESIGN_HEIGHT * 1.5))))
+                s_SCENE:callFuncWithDelay(0.3,function (  )
+                    -- body
+                    if self and not tolua.isnull(self) then
+                        local bg = self:getChildByName('background')
+                        if bg then
+                           bg:runAction(cc.FadeOut:create(1.0)) 
+                        end
                     end
-                end
-                -- self:getChildByName('background'):runAction(cc.FadeOut:create(1.0))
-                if boss and not tolua.isnull(boss) then
-                    boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(distance , s_DESIGN_HEIGHT * 0.75 + 20)),cc.CallFunc:create(function (  )
-                        -- body
-                        self:removeChildByName('background')
-                        self:addTime()
-                    end)))
-                end
-            end)
-        else
-            local shopErrorAlter = require("view.shop.ShopErrorAlter").create()
-            s_SCENE:popup(shopErrorAlter)
+                    -- self:getChildByName('background'):runAction(cc.FadeOut:create(1.0))
+                    if boss and not tolua.isnull(boss) then
+                        boss:runAction(cc.Sequence:create(cc.MoveTo:create(1.0,cc.p(distance , s_DESIGN_HEIGHT * 0.75 + 20)),cc.CallFunc:create(function (  )
+                            -- body
+                            self:removeChildByName('background')
+                            self:addTime()
+                        end)))
+                    end
+                end)
+            else
+                local shopErrorAlter = require("view.shop.ShopErrorAlter").create()
+                s_SCENE:popup(shopErrorAlter)
+            end
         end
     end
 
@@ -205,15 +205,15 @@ function SummaryBossAlter:lose(entrance)
     continue:setPosition(self.loseBoard:getContentSize().width / 2 - 130,self.loseBoard:getContentSize().height * 0.25)
     self.loseBoard:addChild(continue)
 
-    local function backToLevelScene()
+    continue.func = function ()
         s_CorePlayManager.leaveSummaryModel(false)
         s_CorePlayManager.enterLevelLayer() 
         cc.SimpleAudioEngine:getInstance():stopAllEffects()
         playSound(s_sound_buttonEffect)
-    end
 
-    continue.func = function ()
-        backToLevelScene()
+        local WordCardView = require("view.wordcard.WordCardView")
+        local wordCardView = WordCardView.create(islandIndex)
+        s_SCENE:popup(wordCardView)
     end
 
     local again = Button.create("again","blue","再来一次")
@@ -576,10 +576,12 @@ function SummaryBossAlter:addWinLabel(win_back)
 end
 
 function SummaryBossAlter:getRatio(userTime,goalTime)
+    print (userTime)
+    print (goalTime)
     if userTime < goalTime then
         return 100
     else
-        return 100 * math.ceil(math.exp(-1 * 0.01 * (userTime - goalTime)))
+        return math.ceil(100 * math.exp(-1 * 0.01 * (userTime - goalTime)))
     end
 end
 

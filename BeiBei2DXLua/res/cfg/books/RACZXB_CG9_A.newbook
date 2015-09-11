@@ -140,7 +140,7 @@
 28	several	unit 2 Topic 1_1	8	pron.几个	1
 29	pour	unit 2 Topic 1_2	8	vt.倒出	0
 29	waste	unit 2 Topic 1_2	8	vt.&adj.废弃的	1
-29	villager	unit 2 Topic 1_2	8	n.村名	0
+29	villager	unit 2 Topic 1_2	8	n.村民	0
 29	destroy	unit 2 Topic 1_2	8	vt.摧毁	0
 29	cut down	unit 2 Topic 1_2	8	砍倒	0
 30	pollute	unit 2 Topic 1_3	8	v.污染	1
@@ -232,40 +232,39 @@
 46	give up	unit 2 Topic 3_2	10	放弃	0
 47	battery	unit 2 Topic 3_3	10	n.电池	0
 47	ought to	unit 2 Topic 3_3	10	应该	0
-47	shout off	unit 2 Topic 3_3	10	停止	0
 47	electricity	unit 2 Topic 3_3	10	n.电	0
 47	distance	unit 2 Topic 3_3	10	n.距离	0
-48	cloth	unit 2 Topic 3_4	10	n.布料	0
+47	cloth	unit 2 Topic 3_3	10	n.布料	0
 48	action	unit 2 Topic 3_4	10	n.行动	1
 48	after all	unit 2 Topic 3_4	10	毕竟	0
 48	acid rain	unit 2 Topic 3_4	10	n.酸雨	0
 48	nuclear	unit 2 Topic 3_4	10	adj.原子核的	0
-49	biogas	unit 2 Topic 3_5	10	沼气	0
+48	biogas	unit 2 Topic 3_4	10	沼气	0
 49	technology	unit 2 Topic 3_5	10	n.技术	1
 49	straw	unit 2 Topic 3_5	10	n.禾秆	0
 49	renewable	unit 2 Topic 3_5	10	adj.可更新的	0
 49	disadvantage	unit 2 Topic 3_5	10	n.不利因素	0
-50	process	unit 2 Topic 3_6	10	n.&v.步骤	0
+49	process	unit 2 Topic 3_5	10	n.&v.步骤	0
 50	require	unit 2 Topic 3_6	10	v.要求	1
 50	electric	unit 2 Topic 3_6	10	adj.电动的	0
 50	best-known	unit 2 Topic 3_6	10	adj.最知名的	0
 50	maglev train	unit 2 Topic 3_6	10	磁悬浮列车	0
-51	German	unit 2 Topic 3_7	10	n.德国人	1
+50	German	unit 2 Topic 3_6	10	n.德国人	1
 51	per	unit 2 Topic 3_7	10	prep.每	0
 51	wheel	unit 2 Topic 3_7	10	n.轮	1
 51	efficient	unit 2 Topic 3_7	10	adj.效率高的	0
 51	guide	unit 2 Topic 3_7	10	vt.向导	1
-52	path	unit 2 Topic 3_8	10	n.道路	0
+51	path	unit 2 Topic 3_7	10	n.道路	0
 52	steel	unit 2 Topic 3_8	10	n.钢	0
 52	wave	unit 2 Topic 3_8	10	v.&n.挥手	0
 52	deep	unit 2 Topic 3_8	10	adj.深的	1
 52	source	unit 2 Topic 3_8	10	n.来源	0
-53	run out	unit 2 Topic 3_9	10	用完	0
+52	run out	unit 2 Topic 3_8	10	用完	0
 53	worldwide	unit 2 Topic 3_9	10	adj.全世界	0
 53	sunlight	unit 2 Topic 3_9	10	n.阳光	0
 53	steam	unit 2 Topic 3_9	10	n.水蒸气	0
 53	remove	unit 2 Topic 3_9	10	vt.去除	0
-54	replace	unit 2 Topic 3_10	10	vt.代替	0
+53	replace	unit 2 Topic 3_9	10	vt.代替	0
 54	dry	unit 2 Topic 3_10	10	adj.&vt.干燥的	1
 54	insect	unit 2 Topic 3_10	10	n.昆虫	0
 54	bite	unit 2 Topic 3_10	10	v.咬	0

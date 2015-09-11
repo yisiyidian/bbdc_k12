@@ -23,55 +23,54 @@
 5	poet	Unit 1_5	16	n.诗人	1
 6	Columbus Day	Unit 1_6	16	哥伦布日	0
 6	arrival	Unit 1_6	16	n.到来	1
-6	Christopher Columbus	Unit 1_6	16	克利斯朵夫•哥伦布	0
 6	gain	Unit 1_6	16	n.获得	1
 6	independence	Unit 1_6	16	n.独立	1
-7	independent	Unit 1_7	16	adj.独立的	1
+6	independent	Unit 1_6	16	adj.独立的	1
 7	gather	Unit 1_7	16	vt.搜集	1
 7	agriculture	Unit 1_7	16	n.农业	1
 7	agricultural	Unit 1_7	16	adj.农业的	1
 7	award	Unit 1_7	16	vt.奖	1
-8	produce	Unit 1_8	16	vt.（农）产品	0
+7	produce	Unit 1_7	16	vt.（农）产品	0
 8	rooster	Unit 1_8	16	n.雄禽	1
 8	admire	Unit 1_8	16	vt.赞美	1
 8	energetic	Unit 1_8	16	adj.精力充沛的	1
 8	look forward to	Unit 1_8	16	期望	1
-9	carnival	Unit 1_9	16	n.狂欢节	0
+8	carnival	Unit 1_8	16	n.狂欢节	0
 9	lunar	Unit 1_9	16	adj.月的	0
 9	Easter	Unit 1_9	16	n.复活节	1
 9	parade	Unit 1_9	16	n.游行	0
 9	day and night	Unit 1_9	16	日夜	1
-10	clothing	Unit 1_10	16	n.衣服	1
+9	clothing	Unit 1_9	16	n.衣服	1
 10	Christian	Unit 1_10	16	n.基督徒	1
 10	Jesus	Unit 1_10	16	n.耶稣	1
 10	cherry	Unit 1_10	16	n.樱桃	1
 10	blossom	Unit 1_10	16	n.花	1
-11	as though	Unit 1_11	16	好像	1
+10	as though	Unit 1_10	16	好像	1
 11	have fun with	Unit 1_11	16	玩得开心	1
 11	custom	Unit 1_11	16	n.习惯	1
 11	worldwide	Unit 1_11	16	adj.遍及世界的	1
 11	rosebud	Unit 1_11	16	n.玫瑰花蕾	0
-12	fool	Unit 1_12	16	n.愚人	1
+11	fool	Unit 1_11	16	n.愚人	1
 12	necessity	Unit 1_12	16	n.必要性	1
 12	permission	Unit 1_12	16	n.许可	1
 12	prediction	Unit 1_12	16	n.预言	1
 12	fashion	Unit 1_12	16	n.样子	1
-13	parking	Unit 1_13	16	n.停放	1
+12	parking	Unit 1_12	16	n.停放	1
 13	parking lot	Unit 1_13	16	停车场	1
 13	Valentine's Day	Unit 1_13	16	情人节	0
 13	turn up	Unit 1_13	16	出现	1
 13	keep one's word	Unit 1_13	16	守信用	1
-14	hold one's breath	Unit 1_14	16	屏息	1
+13	hold one's breath	Unit 1_13	16	屏息	1
 14	apologize	Unit 1_14	16	v.道歉	1
 14	drown	Unit 1_14	16	vt.淹没	1
 14	sadness	Unit 1_14	16	n.悲伤	1
 14	obvious	Unit 1_14	16	adj.明显的	1
-15	wipe	Unit 1_15	16	n.擦	1
+14	wipe	Unit 1_14	16	n.擦	1
 15	weave	Unit 1_15	16	v.编织	1
 15	herd	Unit 1_15	16	n.牧群	1
 15	the Milky Way	Unit 1_15	16	银河	1
 15	magpie	Unit 1_15	16	n.喜鹊	1
-16	weep	Unit 1_16	16	n.哭泣	1
+15	weep	Unit 1_15	16	n.哭泣	1
 16	announcer	Unit 1_16	16	n.广播员	0
 16	set off	Unit 1_16	16	出发	1
 16	remind	Unit 1_16	16	v.提醒	1

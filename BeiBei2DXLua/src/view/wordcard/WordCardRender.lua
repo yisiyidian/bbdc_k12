@@ -83,7 +83,7 @@ function WordCardRender:updataView()
         self.text:setDimensions(0,0)
         self.text:setSystemFontSize(35)
         local playWordBtn = cc.Sprite:create("image/islandPopup/soundNormal.png")
-        playWordBtn:setPosition(80 + self.text:getContentSize().width + 80,(self:getContentSize().height + 60 )/ 2)
+        playWordBtn:setPosition(80 + self.text:getContentSize().width + 80,(self:getContentSize().height + 20 )/ 2)
         playWordBtn:setScale(1.5)
         playWordBtn:setOpacity(0)
         self.playWordBtn = playWordBtn
