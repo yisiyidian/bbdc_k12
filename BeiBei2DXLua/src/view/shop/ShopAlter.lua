@@ -18,6 +18,9 @@ function ShopAlter.create(itemId, location)
 
     local main = cc.Layer:create()
 
+    main.vip = function()
+    end
+
     local back
     if location == 'out' then
         back = cc.Sprite:create("image/shop/alter_back_out.png")
@@ -67,7 +70,8 @@ function ShopAlter.create(itemId, location)
                     end
                     local homeLayer = HomeLayer.create(true) 
                     s_SCENE:replaceGameLayer(homeLayer)
-                else   
+                else
+                    main.vip()
                     s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
                     local ShopAlter = require("view.shop.ShopAlter")
                     local shopAlter = ShopAlter.create(6, 'in')

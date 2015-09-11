@@ -76,6 +76,10 @@ function ShopLayer.create()
         backColor:addChild(shelf) 
     end
 
+    layer.vip1 = nil
+    layer.vip2 = nil
+    layer.vip3 = nil
+
     for i = 2, productNum do
         local x = s_DESIGN_WIDTH/2+150*(1-2*((i-1)%2))
         local y = bigHeight - height*(math.floor((i-2)/2))-435
@@ -83,6 +87,26 @@ function ShopLayer.create()
         local item_clicked = function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
                 local shopAlter = ShopAlter.create(i, 'in')
+                shopAlter.vip = function()
+                    if layer.vip1 ~= nil and layer.vip2 ~= nil and layer.vip3 ~= nil then
+                        layer.vip1:loadTextureNormal("image/shop/product6.png")
+                        layer.vip1:loadTexturePressed("image/shop/product6.png")
+                        layer.vip2:setVisible(false)
+                        layer.vip3:setVisible(false)
+                        
+                        local w = layer.vip1:getContentSize().width
+                        local h = layer.vip1:getContentSize().height
+
+                        local label = cc.Sprite:create("image/shop/label6.png")
+                        label:setPosition(w/2-10, h/2-40)
+                        layer.vip1:addChild(label)
+                    
+                        local item_name = cc.Label:createWithSystemFont('已购','',28)
+                        item_name:setColor(cc.c4b(0,0,0,255))
+                        item_name:setPosition(w/2-5, h/2-155)
+                        layer.vip1:addChild(item_name)
+                    end
+                end
                 s_SCENE:popup(shopAlter)
             end
         end
@@ -106,6 +130,13 @@ function ShopLayer.create()
             local been_small = cc.Sprite:create("image/shop/been_small.png")
             been_small:setPosition(40, item_name_back:getContentSize().height/2-5)
             item_name_back:addChild(been_small)
+
+            if i == 6 then
+                layer.vip1 = item
+                layer.vip2 = item_name
+                layer.vip3 = been_small
+            end
+
         else
             local item = ccui.Button:create("image/shop/product"..i..".png","image/shop/product"..i..".png","")
             item:setPosition(x, y+150)
