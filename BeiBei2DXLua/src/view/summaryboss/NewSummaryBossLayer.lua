@@ -422,13 +422,26 @@ function NewSummaryBossLayer:initCrab()
         self:addChangeBtn()
     end
 
+    local touchBeginX = 0
+    local touchBeginY = 0
+    local touchEndX = 0
+    local touchEndY = 0
+
     local onTouchBegan = function(touch, event)
+        touchBeginX = self:convertToNodeSpace(touch:getLocation()).x
+        touchBeginY = self:convertToNodeSpace(touch:getLocation()).y
+        touchEndX = 0
+        touchEndY = 0
         return true  
     end
 
     local onTouchEnded = function(touch, event)
         local location = self:convertToNodeSpace(touch:getLocation())
-        if cc.rectContainsPoint(cc.rect(190,50,440,150),location) and not tolua.isnull(self.crab) then
+        touchEndX = self:convertToNodeSpace(touch:getLocation()).x
+        touchEndY = self:convertToNodeSpace(touch:getLocation()).y
+
+
+        if cc.rectContainsPoint(cc.rect(190,50,440,150),location) and not tolua.isnull(self.crab) and math.abs(touchBeginX - touchEndX) < 20 and math.abs(touchBeginY - touchEndY) < 20 then
             playWordSound(self.wordList[1][4])
             self.ishited = true
             if self.hintChangeBtn ~= nil and self.hintChangeBtn.hintOver ~= nil then
@@ -494,6 +507,7 @@ function NewSummaryBossLayer:addChangeBtn()
     local changeBtn = ccui.Button:create('image/summarybossscene/hint_change_btn.png','image/summarybossscene/hint_change_btn_click.png')
     changeBtn:setPosition(s_DESIGN_WIDTH * 0.84,100)
     self:addChild(changeBtn,0)
+    changeBtn:setVisible(false)
     self.changeBtn = changeBtn
     changeBtn:setScale(0)
     changeBtn:runAction(cc.EaseBackOut:create(cc.ScaleTo:create(0.5,1)))
@@ -581,6 +595,7 @@ function NewSummaryBossLayer:gameOverFunc(win)
         local StoryLayer = require('view.level.StoryLayer')
         local storyLayer = StoryLayer.create(7)
         s_SCENE:replaceGameLayer(storyLayer)
+        s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
         return
     end
     if win then

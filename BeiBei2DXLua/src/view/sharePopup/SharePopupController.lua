@@ -199,6 +199,9 @@ function SharePopupController:getScore()
 	local score = 0
 	local SummaryBossAlter = require("view.summaryboss.SummaryBossAlter")
 	score = SummaryBossAlter:getRatio(self.time,wordLength * 1.3)   
+	if score <= 60 then
+		score = 0 
+	end
 	return score
 end
 

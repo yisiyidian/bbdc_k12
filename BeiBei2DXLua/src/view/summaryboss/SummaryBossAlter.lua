@@ -12,6 +12,8 @@ local SummaryBossAlter = class("SummaryBossAlter", function()
 end)
 
 function SummaryBossAlter.create(bossLayer,win,entrance)
+    s_SCENE:removeAllPopups()
+    s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch()
     local layer = SummaryBossAlter.new()
     layer.wordCount = bossLayer.maxCount
     layer.win = win
@@ -485,29 +487,39 @@ function SummaryBossAlter:addWinLabel(win_back)
     end
 
     local showTime = self:getRatio(self.bossLayer.useTime,self.stardandTime)
-
+    print("alter "..showTime)
+    local time = 0
     local function update(delta)
+        time = time + delta
         --print('delta='..delta)
         if word_count < self.bossLayer.maxCount then
-            word_count = word_count + 1
+            word_count = math.floor(self.bossLayer.maxCount * time /2)
+            if word_count >= self.bossLayer.maxCount then
+                word_count = self.bossLayer.maxCount
+            end
             word_count_label:setString(string.format('%d',word_count))
         end
 
         if defeat_count < showTime then
-            defeat_count = defeat_count + 1
+            defeat_count = math.floor(showTime * time /2)
+            if defeat_count >= showTime then
+                defeat_count = showTime
+            end
             defeat_count_label:setString(string.format('%d',defeat_count).."%")
         end
 
         if min_count < math.floor(self.bossLayer.useTime/60) then
-            min_count = min_count + 1
+            min_count = math.floor(self.bossLayer.useTime/60/2) * time
+            if min_count >= math.floor(self.bossLayer.useTime/60) then
+                min_count = math.floor(self.bossLayer.useTime/60)
+            end
             min_count_label:setString(string.format('%d',min_count))
         end
         if sec_count < math.floor(self.bossLayer.useTime%60) then
-            -- if 60 - sec_count > 1 then
-            --     sec_count = sec_count + 2
-            -- else
-            sec_count = sec_count + 1 
-            -- end
+            sec_count = math.floor(self.bossLayer.useTime%60/2) * time
+            if sec_count >= math.floor(self.bossLayer.useTime%60) then
+                sec_count = math.floor(self.bossLayer.useTime%60)
+            end
             sec_count_label:setString(string.format('%d',sec_count))
         end
 

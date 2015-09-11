@@ -36,7 +36,7 @@ function WordCardView:initUI()
     local backPopupHeight = backPopup:getContentSize().height
 
     local title = cc.Label:createWithSystemFont("1/"..#self.unit.wrongWordList,"",50)
-    title:setPosition(self.backPopup:getContentSize().width/2, self.backPopup:getContentSize().height - 75)
+    title:setPosition(self.backPopup:getContentSize().width/2, self.backPopup:getContentSize().height - 55)
     title:setColor(cc.c3b(255,255,255))
     self.title = title
     self.backPopup:addChild(self.title)
@@ -47,8 +47,7 @@ function WordCardView:initUI()
     self.backPopup:addChild(close_button)
 
     local layout = cc.Sprite:create("image/islandPopup/wordLayout.png")
-    layout:setContentSize(backPopupWidth - 10,445)
-    layout:setPosition(0 + layout:getContentSize().width /2,272 + layout:getContentSize().height /2)
+    layout:setPosition(0 + layout:getContentSize().width /2,220 + layout:getContentSize().height /2)
     layout:ignoreAnchorPointForPosition(false)
     layout:setAnchorPoint(0.5,0.5)
     self.layout = layout
@@ -59,7 +58,7 @@ function WordCardView:initUI()
     listView:setDirection(ccui.ScrollViewDir.vertical)
     listView:setBounceEnabled(false)
     listView:setTouchEnabled(true)
-    listView:setContentSize(backPopupWidth - 10,365)
+    listView:setContentSize(backPopupWidth - 10,570)
     listView:removeAllChildren()
     listView:setPosition(0,20)
     self.layout:addChild(listView)
@@ -68,7 +67,7 @@ function WordCardView:initUI()
 
 	local go_button = ccui.Button:create("image/islandPopup/goNormal.png","image/islandPopup/goPress.png","")
     go_button:addTouchEventListener(handler(self,self.goClick))
-    go_button:setPosition(self.backPopup:getContentSize().width * 0.8, self.backPopup:getContentSize().height * 0.13)
+    go_button:setPosition(self.backPopup:getContentSize().width * 0.8, self.backPopup:getContentSize().height * 0.1)
     self.backPopup:addChild(go_button)
 
 	self:createTabBtn()
@@ -106,7 +105,7 @@ function WordCardView:resetView(dir)
 	self.showRender = self:createTable()
 	local render = nil 
 	local renders = {} 
-	local innerHeight = 365
+	local innerHeight = 550
 	local renderheight = {}
 
 	-- 填充信息
@@ -177,14 +176,14 @@ function WordCardView:RunAction(dir)
 		num = -600
 	elseif dir < 0 then
 		num = 600
-	end
+	end		
+	self.layout:setOpacity(150)
 	local move = cc.MoveBy:create(0.2,cc.p(num,0))
 	local miss = cc.CallFunc:create(function ()
 		self.layout:setVisible(false)
-		self.layout:setOpacity(100)
 	end)
 	local fadeout = cc.FadeOut:create(0.1)
-	local place = cc.Place:create(cc.p(0 + self.layout:getContentSize().width /2,272 + self.layout:getContentSize().height /2))
+	local place = cc.Place:create(cc.p(0 + self.layout:getContentSize().width /2,220 + self.layout:getContentSize().height /2))
 	local come = cc.CallFunc:create(function ()
 		self.layout:setVisible(true)
 		self.layout:setColor(cc.c4b(255,255,255,255))
@@ -281,13 +280,13 @@ function WordCardView:createTabBtn()
 	for i=1,#self.unit.wrongWordList do
 		local btn = cc.Sprite:create("image/islandPopup/changeBtnNormal.png")
 		if #self.unit.wrongWordList <= 5 then
-			btn:setPosition(40 + i * 60, self.backPopup:getContentSize().height * 0.13)
+			btn:setPosition(40 + i * 60, self.backPopup:getContentSize().height * 0.1)
 		end
 		if #self.unit.wrongWordList > 5 then
 			if i <= 5 then
-				btn:setPosition(40 + i * 60, self.backPopup:getContentSize().height * 0.13 + 45)
+				btn:setPosition(40 + i * 60, self.backPopup:getContentSize().height * 0.1 + 45)
 			else
-				btn:setPosition(40 + i%5 * 60, self.backPopup:getContentSize().height * 0.13 - 25)
+				btn:setPosition(40 + i%5 * 60, self.backPopup:getContentSize().height * 0.1 - 25)
 			end
 		end
 		local label = cc.Label:createWithSystemFont(string.sub(self.unit.wrongWordList[i],1,1),"",36)
@@ -408,6 +407,7 @@ function WordCardView:stopAction()
 	for i=1,#self.renders do
 		self.renders[i]:stopAllActions()
 	end
+	self.listView:stopAllActions()
 	self.layout:stopAllActions()
 end
 

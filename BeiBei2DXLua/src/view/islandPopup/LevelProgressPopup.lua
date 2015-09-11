@@ -58,7 +58,7 @@ function LevelProgressPopup:initUI()
     --local titleString = string.gsub('Unit '..s_BookUnitName[s_CURRENT_USER.bookKey][''..tonumber(self.index) + 1],"_","-")
     local titleString = string.gsub(s_BookUnitName[s_CURRENT_USER.bookKey][''..tonumber(self.index) + 1],"_","-")
     local title = cc.Label:createWithSystemFont(titleString,"",50)
-    title:setPosition(self.background:getContentSize().width/2, self.background:getContentSize().height - 75)
+    title:setPosition(self.background:getContentSize().width/2, self.background:getContentSize().height - 55)
     title:setColor(cc.c3b(255,255,255))
     self.background:addChild(title)
 
@@ -79,7 +79,7 @@ function LevelProgressPopup:createSummary(index)
     --加入按钮
     local go_button = ccui.Button:create("image/islandPopup/goNormal.png","image/islandPopup/goPress.png","")
     go_button:addTouchEventListener(handler(self,self.goClick))
-    go_button:setPosition(self.background:getContentSize().width * 0.8, self.background:getContentSize().height * 0.13)
+    go_button:setPosition(self.background:getContentSize().width * 0.8, self.background:getContentSize().height * 0.1)
 
     local close_Click = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -116,7 +116,7 @@ function LevelProgressPopup:createSummary(index)
     end
     --加入 词库按钮
     local wordCard_button = ccui.Button:create("image/islandPopup/wordNormal.png","image/islandPopup/wordPress.png","")
-    wordCard_button:setPosition(self.background:getContentSize().width * 0.35, self.background:getContentSize().height * 0.13)
+    wordCard_button:setPosition(self.background:getContentSize().width * 0.35, self.background:getContentSize().height * 0.1)
     wordCard_button:addTouchEventListener(wordCard_Click)
     self.background:addChild(wordCard_button)
 
