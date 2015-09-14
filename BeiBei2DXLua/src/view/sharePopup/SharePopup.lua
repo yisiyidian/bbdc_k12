@@ -136,23 +136,16 @@ function SharePopup:shareFunc(sender, eventType)
 
 	math.randomseed(tostring(os.time()):reverse():sub(1, 6)) 
 	if self.type == SHARE_TYPE_TIME then
-		local randomNum = math.random(1,#ShareConfig.normalTitle)
 		local per = self.score..'%'
-		local title = string.format(ShareConfig.normalTitle[randomNum],per)
+		local title = string.format(ShareConfig.normalTitle[1],per)
 		print(title)
     	cx.CXUtils:getInstance():shareURLToQQFriend('http://yisiyidian.com/doubi/html5/index.php', title, '贝贝单词－根本停不下来')
 	elseif self.type == SHARE_TYPE_DATE then
-		-- local num = self.time
-		-- if self.time >= #ShareConfig.dateTitle then
-		-- 	num = #ShareConfig.dateTitle
-		-- end
-		local randomNum = math.random(1,#ShareConfig.dateTitle)
-		local title = ShareConfig.dateTitle[randomNum]
+		local title = ShareConfig.dateTitle[1]
 		print(title)
     	cx.CXUtils:getInstance():shareURLToQQFriend('http://yisiyidian.com/doubi/html5/index.php', title, '贝贝单词－根本停不下来')
 	elseif self.type == SHARE_TYPE_FIRST_LEVEL then
-		local randomNum = math.random(1,#ShareConfig.finishGuideTitle)
-		local title = ShareConfig.finishGuideTitle[randomNum]
+		local title = ShareConfig.finishGuideTitle[1]
 		print(title)
     	cx.CXUtils:getInstance():shareURLToQQFriend('http://yisiyidian.com/doubi/html5/index.php', title, '贝贝单词－根本停不下来')
 	end 
