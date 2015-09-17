@@ -155,6 +155,23 @@ function DataUser:ctor()
     self.sharePopupRecord                  = 0
     -- 第一种每天最多分享一次，记录时间
 
+
+    self.pkPlayer                          = ''
+    -- 记录pk的对手
+    self.pkPlayerSchool                    = ''
+    -- 记录pk的对手学校
+    self.pkTime                            = 0
+    -- 记录pk结束的时间  为0表示没有开始 或 已经出现过结算面板    
+    self.pkPlayerTime                      = 0
+    -- 记录对手用时                
+    self.pkMyTime                          = 0
+    -- 记录自己用时     
+    self.pkMyGrade                         = false
+    -- 记录自己的成绩
+    self.pkPlayerGrade                     = false
+    -- 记录对手的成绩
+    self.pkUnitID                          = 0
+    -- 记录pk的关卡
 end
 
 function DataUser:addBookList(bookKey)

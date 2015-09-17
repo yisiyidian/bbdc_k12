@@ -344,7 +344,10 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
         win_back:setPosition(s_DESIGN_WIDTH / 2,0)
     end
 
-    local function button_func()
+    local finClick = function (sender,eventType)
+        if eventType ~= ccui.TouchEventType.ended then
+            return
+        end        
         playSound(s_sound_buttonEffect)
         if not s_isCheckInAnimationDisplayed then
             if s_HUD_LAYER:getChildByName('missionCompleteCircle') ~= nil then
@@ -362,23 +365,35 @@ function SummaryBossAlter:win2(entrance,hasCheckedIn)
         end  
     end
 
-    local button = Button.create("long","blue","完成")
-    button:setPosition(s_DESIGN_WIDTH / 2 ,80)
-    self:addChild(button)
-    button.func = function ()
-        button_func()
+
+    local fin_button = ccui.Button:create("image/pk/finNormal.png","image/pk/finPress.png","")
+    fin_button:setPosition(200, 80)
+    fin_button:addTouchEventListener(finClick)
+    self:addChild(fin_button)
+
+    local pkClick = function (sender,eventType)
+        if eventType ~= ccui.TouchEventType.ended then
+            return
+        end        
+        playSound(s_sound_buttonEffect)
+
+        if s_CURRENT_USER.pkTime ~= 0 then
+            local WaitEndingLayer = require("view.summaryboss.WaitEndingLayer")
+            local waitEndingLayer = WaitEndingLayer.create()
+            s_SCENE:replaceGameLayer(waitEndingLayer)
+        else
+            local SearchLayer = require('view.summaryboss.SearchLayer')
+            local searchLayer = SearchLayer.create(self.bossLayer.unit,"other")
+            s_SCENE:replaceGameLayer(searchLayer) 
+        end
+
     end
 
-    -- if self.entrance == ENTRANCE_NORMAL then
+    local pk_button = ccui.Button:create("image/pk/pkNormal.png","image/pk/pkPress.png","")
+    pk_button:setPosition(500, 80)
+    pk_button:addTouchEventListener(pkClick)
+    self:addChild(pk_button)
 
-    --     local been_button = cc.Sprite:create("image/shop/been.png")
-    --     been_button:setPosition(button:getContentSize().width * 0.75, button:getContentSize().height/2)
-    --     button:addChild(been_button)
-
-    --     local rewardNumber = cc.Label:createWithSystemFont("+"..3,"",36)
-    --     rewardNumber:setPosition(button:getContentSize().width * 0.88,button:getContentSize().height * 0.5)
-    --     button:addChild(rewardNumber)
-    -- end
 
     self:addWinLabel(win_back)
 

@@ -77,9 +77,23 @@ end
 
 function LevelProgressPopup:createSummary(index)
     --加入按钮
+    local pk_button = ccui.Button:create("image/islandPopup/pkBtnNormal.png","image/islandPopup/pkBtnPress.png","")
+    pk_button:addTouchEventListener(handler(self,self.pkClick))
+    pk_button:setPosition(63, self.background:getContentSize().height * 0.1)
+    self.background:addChild(pk_button)
+
+    local maxID = s_LocalDatabaseManager.getMaxUnitID()
+    --if self.unit.coolingDay > 0 or self.unit.unitState >= 5 then
+    print('Self.unit.unitID:'..self.unit.unitID..',maxID:'..maxID)
+    if self.unit.unitState == 0 then
+        pk_button:setOpacity(20)
+    end
+
+
+
     local go_button = ccui.Button:create("image/islandPopup/goNormal.png","image/islandPopup/goPress.png","")
     go_button:addTouchEventListener(handler(self,self.goClick))
-    go_button:setPosition(self.background:getContentSize().width * 0.8, self.background:getContentSize().height * 0.1)
+    go_button:setPosition(467, self.background:getContentSize().height * 0.1)
 
     local close_Click = function(sender, eventType)
         if eventType == ccui.TouchEventType.ended then
@@ -116,7 +130,7 @@ function LevelProgressPopup:createSummary(index)
     end
     --加入 词库按钮
     local wordCard_button = ccui.Button:create("image/islandPopup/wordNormal.png","image/islandPopup/wordPress.png","")
-    wordCard_button:setPosition(self.background:getContentSize().width * 0.35, self.background:getContentSize().height * 0.1)
+    wordCard_button:setPosition(255, self.background:getContentSize().height * 0.1)
     wordCard_button:addTouchEventListener(wordCard_Click)
     self.background:addChild(wordCard_button)
 
@@ -147,6 +161,51 @@ function LevelProgressPopup:closeFunc()
     self.background:runAction(cc.Sequence:create(move,remove))
 end
 
+-- 点击pk按钮
+function LevelProgressPopup:pkClick(sender,eventType)
+    if eventType ~= ccui.TouchEventType.ended then
+        return
+    end
+
+    -- "您还没有通过该小岛，不能跟别的玩家pk"
+    if self.unit.unitState == 0 then
+        local SmallAlterWithOneButton = require("view.alter.SmallAlterWithOneButton")
+        local smallAlter = SmallAlterWithOneButton.create("您还没有通过该小岛，不能跟别的玩家pk")
+        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+        s_SCENE.popupLayer:addChild(smallAlter)
+        smallAlter.affirm = function ()
+            smallAlter:removeFromParent()
+        end
+        return
+    end
+
+    if s_CURRENT_USER.pkTime ~= 0 then
+        local WaitEndingLayer = require("view.summaryboss.WaitEndingLayer")
+        local waitEndingLayer = WaitEndingLayer.create()
+        s_SCENE:replaceGameLayer(waitEndingLayer)
+    else
+        local SearchLayer = require('view.summaryboss.SearchLayer')
+        local searchLayer = SearchLayer.create(self.unit,"normal")
+        s_SCENE:replaceGameLayer(searchLayer)
+    end
+ 
+
+    self:callFuncWithDelay(0.1,function()
+        s_SCENE:removeAllPopups() 
+    end) 
+    -- pk
+    -- local bossList = s_LocalDatabaseManager.getAllUnitInfo()
+    -- local maxID = s_LocalDatabaseManager.getMaxUnitID()
+    -- showProgressHUD('', true)
+    -- local PK = require('view.summaryboss.PK')
+    -- local pK = PK.create(self.unit)
+    -- s_SCENE:replaceGameLayer(pK) 
+    -- self:callFuncWithDelay(0.1,function()
+    --     s_SCENE:removeAllPopups() 
+    -- end) 
+end
+
+-- 点击go按钮
 function LevelProgressPopup:goClick(sender,eventType)
     if eventType ~= ccui.TouchEventType.ended then
         return

@@ -65,9 +65,23 @@ function WordCardView:initUI()
     self.listView = listView
 	self.listView:addTouchEventListener(handler(self,self.scrollViewEvent))
 
+
+	--加入按钮
+    local pk_button = ccui.Button:create("image/islandPopup/pkBtnNormal.png","image/islandPopup/pkBtnPress.png","")
+    pk_button:addTouchEventListener(handler(self,self.pkClick))
+    pk_button:setPosition(63, self.backPopup:getContentSize().height * 0.1)
+    self.backPopup:addChild(pk_button)
+
+    local maxID = s_LocalDatabaseManager.getMaxUnitID()
+    --if self.unit.coolingDay > 0 or self.unit.unitState >= 5 then
+    print('Self.unit.unitID:'..self.unit.unitID..',maxID:'..maxID)
+    if self.unit.unitState == 0 then
+        pk_button:setOpacity(20)
+    end
+
 	local go_button = ccui.Button:create("image/islandPopup/goNormal.png","image/islandPopup/goPress.png","")
     go_button:addTouchEventListener(handler(self,self.goClick))
-    go_button:setPosition(self.backPopup:getContentSize().width * 0.8, self.backPopup:getContentSize().height * 0.1)
+    go_button:setPosition(467, self.backPopup:getContentSize().height * 0.1)
     self.backPopup:addChild(go_button)
 
 	self:createTabBtn()
@@ -152,6 +166,42 @@ function WordCardView:resetView(dir)
 	self:callFuncWithDelay(0.1,function()
 	   	s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch() 
 	end)
+end
+
+-- 点击pk按钮
+function WordCardView:pkClick(sender,eventType)
+    if eventType ~= ccui.TouchEventType.ended then
+        return
+    end
+
+    -- "您还没有通过该小岛，不能跟别的玩家pk"
+    if self.unit.unitState == 0 then
+        local SmallAlterWithOneButton = require("view.alter.SmallAlterWithOneButton")
+        local smallAlter = SmallAlterWithOneButton.create("您还没有通过该小岛，不能跟别的玩家pk")
+        smallAlter:setPosition(s_DESIGN_WIDTH/2, s_DESIGN_HEIGHT/2)
+        s_SCENE.popupLayer:addChild(smallAlter)
+        smallAlter.affirm = function ()
+            smallAlter:removeFromParent()
+        end
+        return
+    end 
+
+    self:stopAction()
+
+    if s_CURRENT_USER.pkTime ~= 0 then
+        local WaitEndingLayer = require("view.summaryboss.WaitEndingLayer")
+        local waitEndingLayer = WaitEndingLayer.create()
+        s_SCENE:replaceGameLayer(waitEndingLayer)
+    else
+	    local SearchLayer = require('view.summaryboss.SearchLayer')
+	    local searchLayer = SearchLayer.create(self.unit,"word")
+	    s_SCENE:replaceGameLayer(searchLayer) 
+    end
+
+
+    self:callFuncWithDelay(0.1,function()
+        s_SCENE:removeAllPopups() 
+    end) 
 end
 
 function WordCardView:close_Click(sender, eventType)
@@ -254,7 +304,8 @@ function WordCardView:CloseFunc()
     local remove = cc.CallFunc:create(function() 
         self.listView:stopAllActions()
         self.layout:stopAllActions()
-        self:callFuncWithDelay(0.1,function()
+        self:callFuncWithDelay(0.1,function()    	
+        	self:stopAction()
             s_SCENE:removeAllPopups() 
            	s_TOUCH_EVENT_BLOCK_LAYER.unlockTouch() 
         end) 
@@ -280,13 +331,13 @@ function WordCardView:createTabBtn()
 	for i=1,#self.unit.wrongWordList do
 		local btn = cc.Sprite:create("image/islandPopup/changeBtnNormal.png")
 		if #self.unit.wrongWordList <= 5 then
-			btn:setPosition(40 + i * 60, self.backPopup:getContentSize().height * 0.1)
+			btn:setPosition(78 + i * 59, self.backPopup:getContentSize().height * 0.1)
 		end
 		if #self.unit.wrongWordList > 5 then
 			if i <= 5 then
-				btn:setPosition(40 + i * 60, self.backPopup:getContentSize().height * 0.1 + 45)
+				btn:setPosition(78 + i * 59, self.backPopup:getContentSize().height * 0.1 + 45)
 			else
-				btn:setPosition(40 + i%5 * 60, self.backPopup:getContentSize().height * 0.1 - 25)
+				btn:setPosition(78 + i%5 * 59, self.backPopup:getContentSize().height * 0.1 - 25)
 			end
 		end
 		local label = cc.Label:createWithSystemFont(string.sub(self.unit.wrongWordList[i],1,1),"",36)
@@ -409,6 +460,7 @@ function WordCardView:stopAction()
 	end
 	self.listView:stopAllActions()
 	self.layout:stopAllActions()
+	self.backPopup:stopAllActions()
 end
 
 function WordCardView:playFunc()

@@ -535,3 +535,10 @@ function isWord(word)
     -- print(string.byte("z").."z") 122
 end
 
+-- 延时函数
+function callWithDelay(node,delay,func)
+    local delayTime = cc.DelayTime:create(delay)
+    local call = cc.CallFunc:create(func)
+    node:runAction(cc.Sequence:create(delayTime,call))
+end
+
