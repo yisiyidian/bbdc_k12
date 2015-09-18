@@ -130,7 +130,7 @@ function ShareCheckIn:ctor()
 			self:addChild(black,-1)
 
 			local ShareBottom = require('view.share.ShareBottom')
-			local shareBottomLayer = ShareBottom.create(target)
+			local shareBottomLayer = ShareBottom.create(target,true)
 			self:addChild(shareBottomLayer)
 
 		end

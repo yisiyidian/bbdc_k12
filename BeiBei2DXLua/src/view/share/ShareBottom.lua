@@ -6,8 +6,9 @@ local ShareBottom = class('ShareBottom',function ()
 	return cc.Layer:create()
 end)
 
-function ShareBottom.create(target)
+function ShareBottom.create(target,close)
 	local layer = ShareBottom.new()
+	layer.close = close
 	layer.target = target
 	return layer
 end
@@ -130,15 +131,30 @@ function ShareBottom:ctor()
 
 	local function closeShare(sender,eventType)
 		if eventType == ccui.TouchEventType.ended then
-			local remove = cc.CallFunc:create(function ()
-				for i = 1, 4 do 
-					local png = string.format("share_sample%d.png",i)
-					local filename = string.format('%s%s',cc.FileUtils:getInstance():getWritablePath(),png)
-        			os.remove(filename)
-        		end
-				self:getParent():removeFromParent()
-			end)
-			bottom:runAction(remove)
+			if self.close then
+				local remove = cc.CallFunc:create(function ()
+					for i = 1, 4 do 
+						local png = string.format("share_sample%d.png",i)
+						local filename = string.format('%s%s',cc.FileUtils:getInstance():getWritablePath(),png)
+	        			os.remove(filename)
+	        		end
+					self:getParent():removeFromParent()
+				end)
+				bottom:runAction(remove)
+			else
+				self:getParent():shareEnd()
+				local remove = cc.CallFunc:create(function ()
+					for i = 1, 4 do 
+						local png = string.format("share_sample%d.png",i)
+						local filename = string.format('%s%s',cc.FileUtils:getInstance():getWritablePath(),png)
+	        			os.remove(filename)
+	        		end
+					self:removeFromParent()
+				end)
+				local move = cc.MoveBy:create(0.3,cc.p(0,-s_DESIGN_HEIGHT * 0.21))
+	            bottom:runAction(cc.Sequence:create(move,remove))
+			end
+			
 		end
 	end
 

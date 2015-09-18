@@ -1,4 +1,4 @@
---游戏主场景
+ --游戏主场景
 require("cocos.init")
 
 local GameLayer = require("layer.GameLayer")

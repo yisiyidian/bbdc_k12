@@ -36,7 +36,8 @@ end
 
 function PKEndingLayer:init()
 	local back = cc.Sprite:create()
-    back:setPosition((s_RIGHT_X - s_LEFT_X) / 2 , s_DESIGN_HEIGHT / 2)
+    back:setAnchorPoint(0.5,1)
+    back:setPosition((s_RIGHT_X - s_LEFT_X) / 2 , s_DESIGN_HEIGHT)
 	self.back = back
 	self:addChild(self.back)
 
@@ -210,14 +211,44 @@ function PKEndingLayer:addTop()
 end
 
 function PKEndingLayer:shareClick(sender,eventType)
-    if eventType == ccui.TouchEventType.began then
-        self:addTop()
-    end
-    if eventType == ccui.TouchEventType.ended then
-        local ShareDataInfo = require('view.share.ShareDataInfo')
-        local shareDataInfo = ShareDataInfo.create(self.target,0)
-        self:addChild(shareDataInfo)
-    end
+    -- if eventType == ccui.TouchEventType.began then
+    --     self:addTop()
+    -- end
+    -- if eventType == ccui.TouchEventType.ended then
+    --     local ShareDataInfo = require('view.share.ShareDataInfo')
+    --     local shareDataInfo = ShareDataInfo.create(self.target,0)
+    --     self:addChild(shareDataInfo)
+    -- end
+        if eventType == ccui.TouchEventType.began then
+            self.back:setPosition(s_DESIGN_WIDTH / 2 - s_LEFT_X,s_DESIGN_HEIGHT)
+            self.target:begin()
+            self.back:visit()
+            self.target:endToLua()
+            self.back:setPosition(s_DESIGN_WIDTH / 2,s_DESIGN_HEIGHT)
+            self.target:setVisible(false)
+        end
+        if eventType == ccui.TouchEventType.ended then
+            -- sender:setVisible(false)
+            -- close_button:setVisible(false)
+            self.back:runAction(cc.ScaleTo:create(0.3,0.78))
+
+            local black = cc.LayerColor:create(cc.c4b(0,0,0,128),s_RIGHT_X - s_LEFT_X,s_DESIGN_HEIGHT)
+            black:ignoreAnchorPointForPosition(false)
+            black:setAnchorPoint(0.5,0)
+            black:setPosition(s_DESIGN_WIDTH / 2,0)
+            self:addChild(black,-1)
+
+            local ShareBottom = require('view.share.ShareBottom')
+            local shareBottomLayer = ShareBottom.create(self.target,false)
+            self:addChild(shareBottomLayer)
+
+        end
+end
+
+function PKEndingLayer:shareEnd()
+    local scale = cc.ScaleTo:create(0.3,1)
+    self.back:runAction(cc.Sequence:create(scale))
+
 end
 
 function PKEndingLayer:resetData()
