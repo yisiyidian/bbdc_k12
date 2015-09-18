@@ -85,9 +85,8 @@ function MeetOpponentLayer:ctor(unit)
 
     local action = cc.Animate:create(animation)
     vs:runAction(cc.RepeatForever:create(action))
-
-    vs:setScale(2)
-    vs:runAction(cc.ScaleTo:create(0.5,1))
+    vs:setVisible(false)
+    self.vs = vs
 
 
  --    local v = cc.Sprite:create("image/islandPopup/v.png")
@@ -102,7 +101,14 @@ function MeetOpponentLayer:ctor(unit)
 
 	callWithDelay(self,2.5,self.enterPKScene)
     callWithDelay(self,2,self.runAnimation2)
+    callWithDelay(self,0.7,self.runAnimation3)
     self:runAnimation1()
+end
+
+function MeetOpponentLayer:runAnimation3()
+    self.vs:setVisible(true)
+    self.vs:setScale(3)
+    self.vs:runAction(cc.ScaleTo:create(0.25,1))
 end
 
 function MeetOpponentLayer:runAnimation1()
@@ -118,13 +124,13 @@ function MeetOpponentLayer:runAnimation1()
 end
 
 function MeetOpponentLayer:runAnimation2()
-    local move = cc.MoveTo:create(0.5,cc.p((s_RIGHT_X - s_LEFT_X)/2,s_DESIGN_HEIGHT +600))
-    local easeBounceIn = cc.EaseBounceIn:create(move)
-    self.red:runAction(easeBounceIn)
+    local move = cc.MoveTo:create(0.5,cc.p((s_RIGHT_X - s_LEFT_X)/2,s_DESIGN_HEIGHT +800))
+    local easeExponentialIn = cc.EaseExponentialIn:create(move)
+    self.red:runAction(easeExponentialIn)
 
-    local move = cc.MoveTo:create(0.5,cc.p((s_RIGHT_X - s_LEFT_X)/2,0 -600))
-    local easeBounceIn = cc.EaseBounceIn:create(move)
-    self.blue:runAction(easeBounceIn)
+    local move = cc.MoveTo:create(0.5,cc.p((s_RIGHT_X - s_LEFT_X)/2,0 -800))
+    local easeExponentialIn = cc.EaseExponentialIn:create(move)
+    self.blue:runAction(easeExponentialIn)
 end
 
 function MeetOpponentLayer:enterPKScene()
