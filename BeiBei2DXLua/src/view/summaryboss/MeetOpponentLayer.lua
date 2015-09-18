@@ -86,6 +86,9 @@ function MeetOpponentLayer:ctor(unit)
     local action = cc.Animate:create(animation)
     vs:runAction(cc.RepeatForever:create(action))
 
+    vs:setScale(2)
+    vs:runAction(cc.ScaleTo:create(0.5,1))
+
 
  --    local v = cc.Sprite:create("image/islandPopup/v.png")
 	-- v:setPosition((s_RIGHT_X - s_LEFT_X)/2 - 25,s_DESIGN_HEIGHT / 2 + 18)
