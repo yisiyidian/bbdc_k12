@@ -198,7 +198,7 @@ function SettingLayer:onChangeBookTouch(sender,eventType)
 	AnalyticsChangeBookBtn()
 	s_SCENE:removeAllPopups()
 	--选书
-	s_CorePlayManager.enterBookLayer(s_CURRENT_USER.bookKey)
+	s_CorePlayManager.enterEducationLayer("book")
     s_CURRENT_USER.showSettingLayer = 1
 end
 

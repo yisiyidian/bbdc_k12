@@ -149,12 +149,6 @@ function PKEndingLayer:init()
     self.beanCountLabel:ignoreAnchorPointForPosition(false)
     self.beanCountLabel:setPosition(self.beans:getContentSize().width * 0.65 , self.beans:getContentSize().height/2)
     self.beans:addChild(self.beanCountLabel)
-end
-
-function PKEndingLayer:goClick(sender,eventType)
-    if eventType ~= ccui.TouchEventType.ended then
-        return
-    end
 
     if self.win then
         s_CURRENT_USER:addBeans(10)
@@ -162,6 +156,12 @@ function PKEndingLayer:goClick(sender,eventType)
         local bean = s_CURRENT_USER:getBeans()
         self.beanCount = bean
         self.beanCountLabel:setString(bean)
+    end
+end
+
+function PKEndingLayer:goClick(sender,eventType)
+    if eventType ~= ccui.TouchEventType.ended then
+        return
     end
 
     s_CorePlayManager.enterLevelLayer()

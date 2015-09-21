@@ -135,6 +135,7 @@ function EducationSelect:ctor()
         s_CURRENT_USER:setGuideStep(s_guide_step_selectGrade) 
     end
 
+    
 
 end
 

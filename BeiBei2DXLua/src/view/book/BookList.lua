@@ -292,8 +292,8 @@ list[235]	= { key = 'YLCBS_CG9_B',	name = '牛津译林新版-九年级下册',	
 
 list[236]	= { key = 'cet4',	name = '四级',	word = 1000,	music = '10M'	,type = 'college',}
 list[237]	= { key = 'cet6',	name = '六级',	word = 1000,	music = '10M'	,type = 'college',}
-list[238]	= { key = 'gmat',	name = 'GMAT',	word = 1000,	music = '10M'	,type = 'more',}
-list[239]	= { key = 'gre',	name = 'GRE',	word = 1000,	music = '10M'	,type = 'more',}
+list[238]	= { key = 'gmat',	name = 'gmat',	word = 1000,	music = '10M'	,type = 'more',}
+list[239]	= { key = 'gre',	name = 'gre',	word = 1000,	music = '10M'	,type = 'more',}
 list[240]	= { key = 'gse',	name = '考研',	word = 1000,	music = '10M'	,type = 'college',}
 
 
@@ -304,11 +304,11 @@ list[244]	= { key = 'houhai_stage3',	name = '厚海原版英语3级',	word = 100
 list[245]	= { key = 'houhai_stage4',	name = '厚海原版英语4级',	word = 1000,	music = '10M'	,type = 'more',}
 list[246]	= { key = 'houhai_stage5',	name = '厚海原版英语5级',	word = 1000,	music = '10M'	,type = 'more',}
 
-list[247]	= { key = 'junior_1',	name = '初一（上）',	word = 1000,	music = '10M'	,type = 'more',}
-list[248]	= { key = 'junior_2',	name = '初一（下）',	word = 1000,	music = '10M'	,type = 'more',}
-list[249]	= { key = 'junior_3',	name = '初二（上）',	word = 1000,	music = '10M'	,type = 'more',}
-list[250]	= { key = 'junior_4',	name = '初二（下）',	word = 1000,	music = '10M'	,type = 'more',}
-list[251]	= { key = 'junior_5',	name = '初三',	word = 1000,	music = '10M'	,type = 'more',}
+list[247]	= { key = 'junior_1',	name = 'junior-初一（上）',	word = 1000,	music = '10M'	,type = 'more',}
+list[248]	= { key = 'junior_2',	name = 'junior-初一（下）',	word = 1000,	music = '10M'	,type = 'more',}
+list[249]	= { key = 'junior_3',	name = 'junior-初二（上）',	word = 1000,	music = '10M'	,type = 'more',}
+list[250]	= { key = 'junior_4',	name = 'junior-初二（下）',	word = 1000,	music = '10M'	,type = 'more',}
+list[251]	= { key = 'junior_5',	name = 'junior-初三',	word = 1000,	music = '10M'	,type = 'more',}
 
 
 list[252]	= { key = 'kwekwe',	name = 'kwekwe方法英语1',	word = 1000,	music = '10M'	,type = 'more',}
@@ -322,34 +322,34 @@ list[258]	= { key = 'newConcept_3',	name = '新概念3',	word = 1000,	music = '1
 list[259]	= { key = 'newConcept_4',	name = '新概念4',	word = 1000,	music = '10M'	,type = 'more',}
 
 
-list[260]	= { key = 'primary_1',	name = '三年级（上）',	word = 1000,	music = '10M'	,type = 'more',}
-list[261]	= { key = 'primary_2',	name = '三年级（下）',	word = 1000,	music = '10M'	,type = 'more',}
-list[262]	= { key = 'primary_3',	name = '四年级（上）',	word = 1000,	music = '10M'	,type = 'more',}
-list[263]	= { key = 'primary_4',	name = '四年级（下）',	word = 1000,	music = '10M'	,type = 'more',}
-list[264]	= { key = 'primary_5',	name = '五年级（上）',	word = 1000,	music = '10M'	,type = 'more',}
-list[265]	= { key = 'primary_6',	name = '五年级（下）',	word = 1000,	music = '10M'	,type = 'more',}
-list[266]	= { key = 'primary_7',	name = '六年级（上）',	word = 1000,	music = '10M'	,type = 'more',}
-list[267]	= { key = 'primary_8',	name = '六年级（下）',	word = 1000,	music = '10M'	,type = 'more',}
+list[260]	= { key = 'primary_1',	name = 'primary-三年级（上）',	word = 1000,	music = '10M'	,type = 'more',}
+list[261]	= { key = 'primary_2',	name = 'primary-三年级（下）',	word = 1000,	music = '10M'	,type = 'more',}
+list[262]	= { key = 'primary_3',	name = 'primary-四年级（上）',	word = 1000,	music = '10M'	,type = 'more',}
+list[263]	= { key = 'primary_4',	name = 'primary-四年级（下）',	word = 1000,	music = '10M'	,type = 'more',}
+list[264]	= { key = 'primary_5',	name = 'primary-五年级（上）',	word = 1000,	music = '10M'	,type = 'more',}
+list[265]	= { key = 'primary_6',	name = 'primary-五年级（下）',	word = 1000,	music = '10M'	,type = 'more',}
+list[266]	= { key = 'primary_7',	name = 'primary-六年级（上）',	word = 1000,	music = '10M'	,type = 'more',}
+list[267]	= { key = 'primary_8',	name = 'primary-六年级（下）',	word = 1000,	music = '10M'	,type = 'more',}
 
 
 list[268]	= { key = 'pro4',	name = '专四',	word = 1000,	music = '10M'	,type = 'college',}
 list[269]	= { key = 'pro8',	name = '专八',	word = 1000,	music = '10M'	,type = 'college',}
-list[270]	= { key = 'sat',	name = 'SAT',	word = 1000,	music = '10M'	,type = 'more',}
+list[270]	= { key = 'sat',	name = 'sat',	word = 1000,	music = '10M'	,type = 'more',}
 
 
-list[271]	= { key = 'senior_1',	name = '英语1',	word = 1000,	music = '10M'	,type = 'more',}
-list[272]	= { key = 'senior_2',	name = '英语2',	word = 1000,	music = '10M'	,type = 'more',}
-list[273]	= { key = 'senior_3',	name = '英语3',	word = 1000,	music = '10M'	,type = 'more',}
-list[274]	= { key = 'senior_4',	name = '英语4',	word = 1000,	music = '10M'	,type = 'more',}
-list[275]	= { key = 'senior_5',	name = '英语5',	word = 1000,	music = '10M'	,type = 'more',}
-list[276]	= { key = 'senior_6',	name = '英语6',	word = 1000,	music = '10M'	,type = 'more',}
-list[277]	= { key = 'senior_7',	name = '英语7',	word = 1000,	music = '10M'	,type = 'more',}
-list[278]	= { key = 'senior_8',	name = '英语8',	word = 1000,	music = '10M'	,type = 'more',}
-list[279]	= { key = 'senior_9',	name = '英语9',	word = 1000,	music = '10M'	,type = 'more',}
-list[280]	= { key = 'senior_10',	name = '英语10',	word = 1000,	music = '10M'	,type = 'more',}
-list[281]	= { key = 'senior_11',	name = '英语11',	word = 1000,	music = '10M'	,type = 'more',}
+list[271]	= { key = 'senior_1',	name = 'senior-英语1',	word = 1000,	music = '10M'	,type = 'more',}
+list[272]	= { key = 'senior_2',	name = 'senior-英语2',	word = 1000,	music = '10M'	,type = 'more',}
+list[273]	= { key = 'senior_3',	name = 'senior-英语3',	word = 1000,	music = '10M'	,type = 'more',}
+list[274]	= { key = 'senior_4',	name = 'senior-英语4',	word = 1000,	music = '10M'	,type = 'more',}
+list[275]	= { key = 'senior_5',	name = 'senior-英语5',	word = 1000,	music = '10M'	,type = 'more',}
+list[276]	= { key = 'senior_6',	name = 'senior-英语6',	word = 1000,	music = '10M'	,type = 'more',}
+list[277]	= { key = 'senior_7',	name = 'senior-英语7',	word = 1000,	music = '10M'	,type = 'more',}
+list[278]	= { key = 'senior_8',	name = 'senior-英语8',	word = 1000,	music = '10M'	,type = 'more',}
+list[279]	= { key = 'senior_9',	name = 'senior-英语9',	word = 1000,	music = '10M'	,type = 'more',}
+list[280]	= { key = 'senior_10',	name = 'senior-英语10',	word = 1000,	music = '10M'	,type = 'more',}
+list[281]	= { key = 'senior_11',	name = 'senior-英语11',	word = 1000,	music = '10M'	,type = 'more',}
 
-list[282]	= { key = 'toefl',	name = '托福',	word = 1000,	music = '10M'	,type = 'more',}
-list[283]	= { key = 'ielts',	name = '雅思',	word = 1000,	music = '10M'	,type = 'more',}
+list[282]	= { key = 'toefl',	name = 'toefl-托福',	word = 1000,	music = '10M'	,type = 'more',}
+list[283]	= { key = 'ielts',	name = 'ielts-雅思',	word = 1000,	music = '10M'	,type = 'more',}
 
 return list 

@@ -58,6 +58,7 @@ function DataUser:ctor()
     self.isSoundAm                         = 1 
 --    self.reviewBossTutorialStep            = 0 
     self.bookKey                           = ''
+    self.bookPub                           = ''
 
 --    self.energyLastCoolDownTime            = -1 
 --    self.energyCount                       = s_energyMaxCount

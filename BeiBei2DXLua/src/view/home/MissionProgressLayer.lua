@@ -38,6 +38,13 @@ function MissionProgressLayer.create(share,homelayer)
         if eventType ~= ccui.TouchEventType.ended then
             return
         end
+
+        -- if true then
+        --     local ChooseBookController = require("view.book.ChooseBookController")
+        --     local chooseBookController = ChooseBookController.create()
+        --     s_SCENE:replaceGameLayer(chooseBookController)
+        --     return
+        -- end
         sender:runAction(cc.FadeOut:create(0.5))
         playSound(s_sound_buttonEffect)
         MissionProgressLayer.getNotContainedInLocalDatas(function ()

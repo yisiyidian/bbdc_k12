@@ -264,10 +264,11 @@ function CorePlayManager.enterBookLayer(education)
     s_SCENE:replaceGameLayer(bookLayer)
 end
 
-function CorePlayManager.enterEducationLayer()
-    print("进入选择教育程度界面：EducationSelect.lua")
-    local educationLayer = EducationLayer.create()
-    s_SCENE:replaceGameLayer(educationLayer)
+function CorePlayManager.enterEducationLayer(stage)
+    print("进入选择教育程度界面：ChooseBookController.lua")
+    local ChooseBookController = require("view.book.ChooseBookController")
+    local chooseBookController = ChooseBookController.create(stage)
+    s_SCENE:replaceGameLayer(chooseBookController)
 end
 
 function CorePlayManager.enterDownloadLayer(bookKey)
