@@ -32,7 +32,7 @@ import java.util.Properties;
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;  
 
-
+import android.util.Log;
 
 // import android.app.AlertDialog;
 import android.content.Context;
@@ -51,6 +51,10 @@ import c.bb.dc.BBNDK;
 
 import com.anysdk.framework.PluginWrapper;
 import com.avos.avoscloud.AVAnalytics;
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVInstallation;
+import com.avos.avoscloud.PushService;
+import com.avos.avoscloud.SaveCallback;
 import com.umeng.analytics.MobclickAgent;
 import com.tencent.stat.MtaSDkException;
 import com.tencent.stat.StatConfig;
@@ -76,6 +80,19 @@ public class AppActivity extends Cocos2dxActivity {
 		AppVersionInfo.initServer(this);
         BBNDK.setup(getApplicationContext(), this, AppVersionInfo.WEIXIN_APP_ID);
 		
+        // 设置默认打开的 Activity
+	    PushService.setDefaultPushCallback(this, AppActivity.class);
+	    // 订阅频道，当该频道消息到来的时候，打开对应的 Activity
+	    PushService.subscribe(this, "public", AppActivity.class);
+        Log.d("AVInstallation", AVInstallation.getCurrentInstallation().getInstallationId());
+	    // 保存 installation 到服务器
+	    AVInstallation.getCurrentInstallation().saveInBackground(new SaveCallback() {
+	        @Override
+	        public void done(AVException e) {
+	        	AVInstallation.getCurrentInstallation().saveInBackground();
+	        }
+	    });
+        
 		AVAnalytics.trackAppOpened(getIntent());
 		AVAnalytics.enableCrashReport(this, true);
         String pkgName = getApplicationContext().getPackageName();
