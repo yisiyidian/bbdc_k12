@@ -507,9 +507,7 @@ function NewSummaryBossLayer:addChangeBtn()
     local changeBtn = ccui.Button:create('image/summarybossscene/hint_change_btn.png','image/summarybossscene/hint_change_btn_click.png')
     changeBtn:setPosition(s_DESIGN_WIDTH * 0.84,100)
     self:addChild(changeBtn,0)
-    changeBtn:setVisible(false)
     self.changeBtn = changeBtn
-    changeBtn:setScale(0)
     changeBtn:runAction(cc.EaseBackOut:create(cc.ScaleTo:create(0.5,1)))
     local function changeWord(sender,eventType)
         if eventType == ccui.TouchEventType.ended then

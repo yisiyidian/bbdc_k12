@@ -456,6 +456,7 @@ function SummaryBossAlter:addWinLabel(win_back)
     defeat_count_label:setColor(cc.c3b(82,190,17))
     self:addChild(defeat_count_label)
 
+    local time_count = 0
     local min_count = 0
     local sec_count = 0
     local min_count_label = cc.Label:createWithSystemFont(string.format('%d',min_count),'',48)
@@ -508,18 +509,14 @@ function SummaryBossAlter:addWinLabel(win_back)
             defeat_count_label:setString(string.format('%d',defeat_count).."%")
         end
 
-        if min_count < math.floor(self.bossLayer.useTime/60) then
-            min_count = math.floor(self.bossLayer.useTime/60/2) * time
-            if min_count >= math.floor(self.bossLayer.useTime/60) then
-                min_count = math.floor(self.bossLayer.useTime/60)
+        if time_count < self.bossLayer.useTime then
+            time_count = self.bossLayer.useTime / 2 * time
+            if time_count >= self.bossLayer.useTime then
+                time_count = self.bossLayer.useTime
             end
+            min_count = math.floor(time_count / 60)
+            sec_count = math.floor(time_count % 60)
             min_count_label:setString(string.format('%d',min_count))
-        end
-        if sec_count < math.floor(self.bossLayer.useTime%60) then
-            sec_count = math.floor(self.bossLayer.useTime%60/2) * time
-            if sec_count >= math.floor(self.bossLayer.useTime%60) then
-                sec_count = math.floor(self.bossLayer.useTime%60)
-            end
             sec_count_label:setString(string.format('%d',sec_count))
         end
 
