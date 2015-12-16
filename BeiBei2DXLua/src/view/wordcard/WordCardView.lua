@@ -269,7 +269,15 @@ function WordCardView:createTable()
 	table[1] = s_BookUnitWordMeaning[s_CURRENT_USER.bookKey][tostring(self.islandIndex)][self.unit.wrongWordList[self.wordIndex]]
 	table[2] = self.unit.wrongWordList[self.wordIndex]
 	table[3] = LocalDataBaseManager.getWordInfoFromWordName(self.unit.wrongWordList[self.wordIndex]).wordSoundMarkEn
-	table[4] = LocalDataBaseManager.getWordInfoFromWordName(self.unit.wrongWordList[self.wordIndex]).sentenceEn..'\n'..LocalDataBaseManager.getWordInfoFromWordName(self.unit.wrongWordList[self.wordIndex]).sentenceCn
+
+	local sentence = LocalDataBaseManager.getWordInfoFromWordName(self.unit.wrongWordList[self.wordIndex]).sentence
+	local array = {}
+	table[4] = ''
+	for i = 1,#sentence do
+		array[i] = {}
+		array[i] = split(sentence[i],"||")
+		table[4] = table[4]..array[i][2]..'\n'..array[i][3]..'\n'
+	end
 
 	return table
 end

@@ -17,11 +17,11 @@ local function creatWordLayout(word)
     local wordSoundMarkEn   = currentWord.wordSoundMarkEn
     local wordSoundMarkAm   = currentWord.wordSoundMarkAm
     local wordMeaningSmall  = currentWord.wordMeaningSmall
-    local wordMeaning       = currentWord.wordMeaning
-    local sentenceEn        = currentWord.sentenceEn
-    local sentenceCn        = currentWord.sentenceCn
-    local sentenceEn2       = currentWord.sentenceEn2
-    local sentenceCn2       = currentWord.sentenceCn2
+    -- local wordMeaning       = currentWord.wordMeaning
+    -- local sentenceEn        = currentWord.sentenceEn
+    -- local sentenceCn        = currentWord.sentenceCn
+    -- local sentenceEn2       = currentWord.sentenceEn2
+    -- local sentenceCn2       = currentWord.sentenceCn2
 
     local layout = ccui.Layout:create()
     layout:setContentSize(cc.size(545, 683))

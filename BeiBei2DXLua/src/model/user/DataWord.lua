@@ -19,11 +19,12 @@ function DataWord:ctor()
     self.wordSoundMarkEn    =   ''
     self.wordSoundMarkAm    =   ''
     self.wordMeaningSmall   =   ''
-    self.wordMeaning        =   ''
-    self.sentenceEn         =   ''
-    self.sentenceCn         =   ''
-    self.sentenceEn2        =   ''
-    self.sentenceCn2        =   ''
+    self.sentence           =   {}
+    -- self.wordMeaning        =   ''
+    -- self.sentenceEn         =   ''
+    -- self.sentenceCn         =   ''
+    -- self.sentenceEn2        =   ''
+    -- self.sentenceCn2        =   ''
 end
 
 return DataWord

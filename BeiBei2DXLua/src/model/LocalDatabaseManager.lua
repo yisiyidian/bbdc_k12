@@ -131,12 +131,13 @@ function LocalDataBaseManager.getWordInfoFromWordName(word)
             if IS_DEVELOPMENT_MODE then indexOffset = 1 end
             ret.wordSoundMarkEn    =   raw[1 + indexOffset]
             ret.wordSoundMarkAm    =   raw[2 + indexOffset]
-            ret.wordMeaningSmall   =   ""
-            ret.wordMeaning        =   raw[3 + indexOffset]
-            ret.sentenceEn         =   raw[4 + indexOffset]
-            ret.sentenceCn         =   raw[5 + indexOffset]
-            ret.sentenceEn2        =   ""
-            ret.sentenceCn2        =   ""
+            ret.wordMeaningSmall   =   raw[3 + indexOffset]
+            ret.sentence           =   split(raw[4 + indexOffset],"|||")
+            -- ret.wordMeaning        =   raw[3 + indexOffset]
+            -- ret.sentenceEn         =   raw[4 + indexOffset]
+            -- ret.sentenceCn         =   raw[5 + indexOffset]
+            -- ret.sentenceEn2        =   ""
+            -- ret.sentenceCn2        =   ""
         else
             print("-------------------")
             print("not get word!"..word)
