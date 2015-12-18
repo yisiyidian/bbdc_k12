@@ -277,6 +277,7 @@ function WordCardView:createTable()
 		array[i] = {}
 		array[i] = split(sentence[i],"||")
 		table[4] = table[4]..array[i][2]..'\n'..array[i][3]..'\n'
+		table[4] = string.gsub(table[4],'#','\n')
 	end
 
 	return table
