@@ -1,3 +1,4 @@
+require("common.global")
 local WordCardRender = require("view.wordcard.WordCardRender")
 -- 词库功能UI
 local WordCardView = class("WordCardView",function ()
@@ -273,11 +274,18 @@ function WordCardView:createTable()
 	local sentence = LocalDataBaseManager.getWordInfoFromWordName(self.unit.wrongWordList[self.wordIndex]).sentence
 	local array = {}
 	table[4] = ''
-	for i = 1,#sentence do
-		array[i] = {}
-		array[i] = split(sentence[i],"||")
-		table[4] = table[4]..array[i][2]..'\n'..array[i][3]..'\n'
-		table[4] = string.gsub(table[4],'#','\n')
+	if isWord(LocalDataBaseManager.getWordInfoFromWordName(self.unit.wrongWordList[self.wordIndex]).wordName) then 
+		for i = 1,#sentence do
+			array[i] = {}
+			array[i] = split(sentence[i],"||")
+			local en = split(array[i][2],"#")
+			local cn = split(array[i][3],"#")
+			local n = #en
+			if n > #cn then n = #cn end
+			for j = 1,n do
+				table[4] = table[4]..en[j]..'\n'..cn[j]..'\n'
+			end
+		end
 	end
 
 	return table
