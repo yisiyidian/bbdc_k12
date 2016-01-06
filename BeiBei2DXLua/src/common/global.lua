@@ -1,8 +1,8 @@
 -- 2015年06月04日15:34:42
 -- 侯琪
 -- 版本号
-app_version_debug   = 224000
-app_version_release = 224000
+app_version_debug   = 225000
+app_version_release = 225000
 
 
 -- 初始化常量
