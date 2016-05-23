@@ -68,8 +68,37 @@ function LoadingView.create()
         progressText:setString(str)
     end
     layer:scheduleUpdateWithPriorityLua(update, 0)
+
+    local back = cc.LayerColor:create(cc.c4b(0,0,0,150), background:getContentSize().width, background:getContentSize().height)
+    back:setPosition(0, 0)
+    background:addChild(back)
+
+    local backPopup = cc.Sprite:create('image/360.png')
+    backPopup:setPosition(background:getContentSize().width / 2,background:getContentSize().height / 2)
+    background:addChild(backPopup)
+
+    local button_clicked = function(sender, eventType)
+        if eventType == ccui.TouchEventType.ended then
+            print("click")
+            cc.Application:getInstance():openURL("http://mall.360.com/ac/badilong?utm_source=bbdc&utm_medium=inside");
+        end
+    end
+
+    local btn = ccui.Button:create("image/button/studyscene_blue_button.png","image/button/studyscene_blue_button.png","")
+    btn:setPosition(backPopup:getContentSize().width / 2,backPopup:getContentSize().height / 2 + 150)
+    backPopup:addChild(btn)
+    btn:addTouchEventListener(button_clicked)
+    btn:setOpacity(0)
+
     
     return layer
+end
+
+function LoadingView:setOnFinished(func)
+    local time = cc.DelayTime:create(3)
+    local callback = cc.CallFunc:create(func)
+    local seq = cc.Sequence:create(time, callback)
+    self:runAction(seq)
 end
 
 return LoadingView

@@ -61,7 +61,8 @@ function start.init()
             local LoadingView = require("view.LoadingView")
             local loadingView = LoadingView.create()
             scene.rootLayer:addChild(loadingView)
-            HotUpdateController.start()
+            loadingView.setOnFinished(HotUpdateController.start())
+            -- HotUpdateController.start()
         end
         if cc.Application:getInstance():getTargetPlatform() == cc.PLATFORM_OS_ANDROID then
             local SplashView = require("view.SplashView")
